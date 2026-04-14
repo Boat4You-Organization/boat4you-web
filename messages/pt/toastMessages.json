@@ -1,0 +1,13 @@
+{
+  "request-password-failed": "Falha na solicitação de senha",
+  "request-password-success": "Solicitação de senha bem-sucedida",
+  "login-success": "Login realizado com sucesso",
+  "login-failed": "Falha no login",
+  "userUpdated": "Usuário atualizado com sucesso",
+  "userUpdateFailed": "Falha na atualização do usuário",
+  "requestCancelBookingSuccess": "Solicitação de cancelamento da reserva bem-sucedida",
+  "requestCancelBookingFailed": "Falha na solicitação de cancelamento da reserva",
+  "linkCopied": "Link copiado para a área de transferência",
+  "reservationNumberCopied": "Número da reserva copiado para a área de transferência",
+  "reservationIdCopied": "Referência da reserva copiada para a área de transferência"
+}

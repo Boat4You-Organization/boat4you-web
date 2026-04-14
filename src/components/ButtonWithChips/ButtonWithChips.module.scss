@@ -1,0 +1,40 @@
+@use '@/styles/settings/variables' as *;
+@use '@/styles/utils/rem-calc' as *;
+@use '@/styles/mixins/breakpoints' as *;
+
+.rootButton {
+  &.customButton {
+    height: 100%;
+    justify-content: flex-start;
+    background-color: transparent;
+    border-radius: rem-calc(12);
+    font-weight: 500;
+    gap: rem-calc(8);
+    color: $black-500;
+    border-color: transparent;
+    align-self: stretch;
+    padding-block: 0;
+
+    &.isActive {
+      transition: background-color $animation-duration-normal ease-in-out;
+      background-color: $blue-100;
+    }
+
+    @include media(0, 'md') {
+      height: rem-calc(61);
+    }
+
+    .iconButton {
+      background-color: transparent;
+    }
+
+    &:hover {
+      transition: background-color $animation-duration-normal ease-in-out;
+      background-color: $blue-50;
+
+      @include media(0, 'md') {
+        background-color: transparent;
+      }
+    }
+  }
+}

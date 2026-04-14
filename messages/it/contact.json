@@ -1,0 +1,19 @@
+{
+  "hero": {
+    "title": "Hai bisogno di maggiori dettagli?<strong>Contattaci</strong>",
+    "description": "In <logo></logo> <companyName>Boat4You</companyName> pianifichiamo charter yacht che adorerai. Mediterraneo, Caraibi o nuove acque, i nostri esperti ti guidano dalla prima richiesta fino al largo. Condividi le tue date, la dimensione dell'equipaggio e la base di partenza. Ti invieremo opzioni su misura, prezzi chiari e semplici passi successivi."
+  },
+  "contact": {
+    "telephoneNumber": "Numero di Telefono",
+    "email": "Email",
+    "emergencyNumber": "Numero di Emergenza / Numero Telefonico Urgente",
+    "workingHours": "Orari di Lavoro",
+    "mondayToSunday": "Lunedì - Domenica 8:00 - 20:00 (CEST)"
+  },
+  "internationalSupport": {
+    "title": "Supporto Internazionale",
+    "usaOffice": "Ufficio USA",
+    "ukOffice": "Ufficio UK",
+    "croatiaHQ": "Numero Whatsapp"
+  }
+}

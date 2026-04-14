@@ -1,0 +1,19 @@
+@use '@/styles/settings/variables' as *;
+@use '@/styles/utils/rem-calc' as *;
+@use '@/styles/mixins/breakpoints' as *;
+
+.container {
+  cursor: pointer;
+  border: rem-calc(1) solid $black-200;
+  border-radius: rem-calc(12);
+  padding-right: rem-calc(12);
+  overflow: hidden;
+
+  &:hover {
+    border-color: $black-500;
+  }
+
+  &.active {
+    border-color: $blue-500;
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "title": "Cookies",
+  "description": "Wir verwenden Cookies, um Ihr Erlebnis noch besser zu machen!",
+  "mainTitle": "Cookie-Richtlinie",
+  "mainDescription": "Wir verwenden Cookies, um Ihr Erlebnis auf der Boat4You-Plattform zu verbessern, zu analysieren, wie Sie unsere Website nutzen, und unser Bootsbuchungssystem zu optimieren. Diese Cookies helfen uns, personalisierte Inhalte bereitzustellen und sicherzustellen, dass unsere Plattform optimal für Ihre Buchungsbedürfnisse funktioniert. Wir sammeln wesentliche Cookies für die Plattformfunktionalität, Analysedaten zur Verbesserung der Benutzererfahrung und Präferenzen zur Personalisierung Ihres Dashboards. Erfahren Sie mehr in unserer <link>Datenschutzerklärung</link>.",
+  "buttons": {
+    "accept": "Alle akzeptieren",
+    "reject": "Nur notwendige akzeptieren",
+    "manage": "Cookie-Einstellungen",
+    "save": "Einstellungen speichern"
+  },
+  "cookieList": {
+    "name": "Name",
+    "domain": "Domain",
+    "duration": "Dauer",
+    "description": "Beschreibung"
+  },
+  "necessary": {
+    "title": "Notwendige Cookies",
+    "description": "Diese Cookies sind erforderlich, damit unsere Website ordnungsgemäß funktioniert, und können nicht deaktiviert werden. Sie ermöglichen wesentliche Funktionen wie Formularsicherheit, Spracheinstellungen und grundlegende Website-Navigation. Sie können diese Cookies in Ihrem Browser blockieren, aber einige Teile der Website funktionieren möglicherweise nicht ordnungsgemäß. Diese Cookies speichern keine persönlich identifizierbaren Informationen."
+  },
+  "analytics": {
+    "title": "Analyse-Cookies",
+    "description": "Diese Cookies helfen uns zu verstehen, wie Besucher mit unserer Website interagieren, indem sie anonyme Informationen über Nutzungsmuster, beliebte Seiten und Verbesserungsbereiche sammeln. Wir verwenden diese Daten, um die Leistung unserer Plattform zu optimieren und die Benutzererfahrung für Kunden zu verbessern, die nach Bootsvermietungen suchen.",
+    "cookies": [
+      {
+        "name": "_ga",
+        "domain": "www.boat4you.com",
+        "duration": "400 Tage",
+        "description": "Google Analytics-Cookie, das eindeutige Benutzer unterscheidet und anonyme Daten über Website-Traffic, Benutzerinteraktionen und Trends sammelt, um uns bei der Verbesserung unserer Bootsbuchungsplattform und Benutzererfahrung zu helfen."
+      }
+    ]
+  },
+  "marketing": {
+    "title": "Marketing-Cookies",
+    "description": "Diese Cookies helfen uns, die Wirksamkeit unseres Marketings zu verstehen und potenzielle Kunden zu identifizieren, die an unserer Bootsvermietungsplattform interessiert sind. Wir verwenden sie, um Website-Interaktionen zu verfolgen und unsere Ansprache von Kunden zu verbessern, die Yachtcharter-Dienstleistungen suchen. Diese Cookies werden nur mit Ihrer Zustimmung geladen, und Sie können Ihre Zustimmung jederzeit widerrufen."
+  }
+}

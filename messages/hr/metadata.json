@@ -1,0 +1,53 @@
+{
+  "metadata": {
+    "base": {
+      "title": "Boat4You | Jednostavan i siguran najam brodova diljem svijeta",
+      "titleTemplate": "%s | Boat4You",
+      "description": "Pretražite i rezervirajte brodove u više od 90 zemalja. Jedrilice, katamarani, motorni brodovi – sa ili bez skipera. Najbolje cijene. Sigurna rezervacija. Podrška 24/7.",
+      "path": ""
+    },
+    "search": {
+      "title": "Pretražite jahte",
+      "description": "Pretražite i rezervirajte brodove na više od 100 lokacija. Jedrilice, katamarani, motorni brodovi – sa ili bez skipera. Najbolje cijene. Sigurna rezervacija. Podrška 24/7.",
+      "path": "/search"
+    },
+    "blog": {
+      "title": "Vodiči za najam jahti | Planiranje, itinerari, novosti | Boat4You",
+      "description": "Boat4You stručni vodiči za najam jahti donose inspiraciju i uvid u nautički odmor, kako odabrati pravi brod i kamo isploviti.",
+      "path": "/blog"
+    },
+    "aboutUs": {
+      "title": "Vaša globalna nautička avantura počinje ovdje",
+      "description": "U Boat4You pretvaramo vaše nautičke snove u nezaboravne avanture na najljepšim svjetskim morima.",
+      "path": "/about-us"
+    },
+    "contactUs": {
+      "title": "Kontaktirajte nas odmah",
+      "description": "U Boat4You strastveno stvaramo nezaboravna iskustva najma jahti.",
+      "path": "/contact-us"
+    },
+    "howWeWork": {
+      "title": "Rezervacija broda nikad nije bila jednostavnija",
+      "description": "U Boat4You vjerujemo da najam broda treba biti jednostavan i uzbudljiv poput samog putovanja.",
+      "path": "/how-we-work"
+    },
+    "faq": {
+      "title": "Rezervacija i dostupnost",
+      "description": "Pronađite brze odgovore o značajkama, postavkama, cijenama i podršci Boat4You platforme.",
+      "path": "/faq"
+    },
+    "termsAndConditions": {
+      "title": "Boat4You – Uvjeti korištenja",
+      "description": "Pregledajte uvjete korištenja Boat4You usluga, uključujući korisničke obveze, plaćanja i pravila računa.",
+      "path": "/terms-and-conditions"
+    },
+    "privacyPolicy": {
+      "title": "Pravila privatnosti",
+      "description": "Pročitajte kako Boat4You prikuplja, koristi i štiti vaše osobne podatke tijekom korištenja naše web stranice i usluga.",
+      "path": "/privacy-policy"
+    }
+  },
+  "boat": {
+    "forRent": "za najam"
+  }
+}

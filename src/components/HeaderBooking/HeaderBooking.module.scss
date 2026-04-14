@@ -1,0 +1,30 @@
+@use '@/styles/settings/variables' as *;
+@use '@/styles/utils/rem-calc' as *;
+
+.root {
+  &.container {
+    background-color: $white;
+    padding: rem-calc(16);
+    border-bottom: rem-calc(1) solid $black-200;
+
+    .header {
+      display: flex;
+      justify-content: center;
+      position: relative;
+
+      .backButton {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        color: $black-950;
+
+        &:disabled {
+          opacity: 0.3;
+          cursor: not-allowed;
+          pointer-events: none;
+        }
+      }
+    }
+  }
+}

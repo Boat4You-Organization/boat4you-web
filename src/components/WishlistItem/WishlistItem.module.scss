@@ -1,0 +1,59 @@
+@use '@/styles/settings/variables' as *;
+@use '@/styles/utils/rem-calc' as *;
+
+.containerWrapper {
+  width: 100%;
+
+  .root {
+    &.container {
+      display: flex;
+      align-items: center;
+      padding: rem-calc(16);
+      gap: rem-calc(16);
+      border-radius: rem-calc(12);
+      box-shadow: none;
+      transition: $animation-duration-fast background-color ease;
+      width: 100%;
+
+      &:hover:not(:has(.actions:hover)) {
+        background-color: $black-100;
+      }
+
+      &:active:not(:has(.actions:active)) {
+        background-color: $black-200;
+      }
+
+      &.mobile {
+        padding: 0;
+      }
+
+      .cardMedia {
+        position: relative;
+        width: rem-calc(104);
+        height: rem-calc(104);
+
+        .image {
+          border-radius: rem-calc(5);
+        }
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: rem-calc(0);
+        gap: rem-calc(4);
+
+        .title {
+          max-width: rem-calc(218);
+        }
+      }
+
+      .actions {
+        margin-left: auto;
+        align-self: flex-start;
+        padding: rem-calc(0);
+      }
+    }
+  }
+}

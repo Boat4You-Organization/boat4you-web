@@ -1,0 +1,20 @@
+@use '@/styles/utils/rem-calc' as *;
+@use '@/styles/mixins/breakpoints' as *;
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: rem-calc(520);
+  overflow: hidden;
+  border-radius: rem-calc(16);
+
+  @include media(0, 'md') {
+    height: rem-calc(389);
+  }
+
+  .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

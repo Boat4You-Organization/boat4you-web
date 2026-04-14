@@ -1,0 +1,20 @@
+@use '@/styles/settings/variables' as *;
+@use '@/styles/utils/rem-calc' as *;
+@use '@/styles/mixins/breakpoints' as *;
+
+.container {
+  color: $red-500;
+
+  &.success {
+    color: $green-500;
+  }
+
+  .text {
+    color: $red-500;
+
+    &.success {
+      margin-left: rem-calc(6);
+      color: $green-500;
+    }
+  }
+}

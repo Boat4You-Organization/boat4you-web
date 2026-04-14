@@ -1,0 +1,19 @@
+@use '@/styles/utils/rem-calc' as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: rem-calc(24);
+
+  &.horizontal {
+    flex-direction: row;
+    gap: rem-calc(12);
+  }
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: rem-calc(8);
+  text-decoration: none;
+}

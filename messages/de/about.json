@@ -1,0 +1,61 @@
+{
+  "hero": {
+    "title": "<strong>Ihr globales Segelabenteuer beginnt hier.</strong>",
+    "description": "Bei <logo></logo> <companyName>Boat4You</companyName> verwandeln Sie Reisepläne in echte Reisen auf den besten Gewässern der Welt. Wir sind aus mediterranen Wurzeln zu einer globalen Charter-Plattform herangewachsen. Sie erhalten **Expertenberatung**, **verifizierte Boote** und einen reibungslosen Buchungsablauf vom ersten Angebot bis zum Ablegen."
+  },
+  "stats": {
+    "title": "Wichtige vertrauensbildende Referenzen",
+    "description": "Unabhängige Beratung. Anbieterneutrale Empfehlungen, die zu Ihren Daten, Crewgröße und Budget passen.<br></br>Verifizierte Partner. Versicherungen, Lizenzen und Sicherheitsprüfungen sind bei unserem Team hinterlegt.<br></br>Transparente Preise. Klare Verträge. Keine versteckten Gebühren.<br></br>DSGVO-konform. Sichere Zahlungen. Datenschutz standardmäßig.<br></br>Echter Support. 24/7 Unterstützung vor, während und nach Ihrer Reise.",
+    "premiumYachtsFleet": "Premium-Yachten in unserer globalen Flotte",
+    "worldwideDestinations": "Weltweite Reiseziele",
+    "teamExperience": "Jahre kombinierter Teamerfahrung",
+    "customersServed": "Zufriedene Kunden betreut",
+    "charterPartners": "Verifizierte Charter-Partner"
+  },
+  "aboutUs": {
+    "title": "Wer wir sind",
+    "mainTitle": "Träume in Reisen verwandeln",
+    "description": "Wir glauben, dass Sie eine private Yacht verdienen, die sich anfühlt, als wäre sie für Ihre Woche gebaut worden. Unser Team verfügt über mehr als 20 Jahre Charter-Erfahrung mit lokalem Wissen in Europa, der Karibik und darüber hinaus. Wir prüfen Basen, testen Routen und weisen Crews ein, alles für Ihren maßgeschneiderten Segelurlaub. Sie erhalten ehrliche Beratung, keine Spekulationen."
+  },
+  "whyChooseUs": {
+    "title": "Warum Boat4You wählen",
+    "mainTitle": "Ihr unvergleichliches Yacht-Charter-Erlebnis beginnt hier",
+    "description": "Unser Engagement für Exzellenz unterscheidet uns in der wettbewerbsintensiven Yacht-Charter-Branche",
+    "features": {
+      "0": {
+        "title": "Bewährte globale Expertise",
+        "description": "Erfahrene Broker mit langjähriger Erfolgsbilanz in Kroatien, Griechenland, Italien, Spanien, Frankreich, der Türkei, BVI, Bahamas, Martinique und Grenada."
+      },
+      "1": {
+        "title": "Personalisierter Service",
+        "description": "Jede Reiseroute wird um Sie herum aufgebaut. Familienzeit, aktives Segeln, Essen und Wein oder ruhige Buchten. Sie bestimmen das Tempo."
+      },
+      "2": {
+        "title": "Kostenlose Reservierungen",
+        "description": "Optionen halten und Yachten ohne zusätzliche Buchungsgebühren vergleichen. Klare Fristen und Erinnerungen."
+      },
+      "3": {
+        "title": "Zugang zur Premium-Flotte",
+        "description": "Einrumpfboote, Katamarane, Motoryachten und Superyachten von vertrauenswürdigen Flotten. Jede Saison kommen neue Modelle hinzu."
+      },
+      "4": {
+        "title": "Sichere Buchung",
+        "description": "Treuhandzahlungen über zugelassene Gateways. DSGVO-konforme Handhabung Ihrer Daten."
+      },
+      "5": {
+        "title": "24/7 Support",
+        "description": "Menschen, keine Bots. Basiskontakte, Wetterprüfungen, Routenberatung und schnelle Antworten, wenn sich Pläne ändern."
+      }
+    }
+  },
+  "ourPromise": {
+    "title": "Unser Versprechen",
+    "mainTitle": "Hier beginnt ein Leben voller Erinnerungen: Unser Versprechen, alle Ihre Erwartungen zu übertreffen",
+    "description": "Ihr Komfort und Ihre Sicherheit stehen bei jeder Entscheidung im Vordergrund. Wir empfehlen Routen, die zu der von Ihnen gewünschten Woche passen, von Insel-Hopping auf den Kykladen bis zu Sandbänken auf den Exumas. Sie erhalten zuverlässige Boote, eine eingewiesene Crew und einen Plan, der unter realen Bedingungen funktioniert. Wir streben ein Ergebnis an. Sie steigen aus und sagen: Wir würden wieder mit Boat4You segeln."
+  },
+  "ourFleet": {
+    "title": "Wir haben das Boot, das Sie wollen, ",
+    "emphasizedTitle": "egal welcher Typ es ist",
+    "description": "Die beste Auswahl an Booten online zu den besten Preisen"
+  }
+}

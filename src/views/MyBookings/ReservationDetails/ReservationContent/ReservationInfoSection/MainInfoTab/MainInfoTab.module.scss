@@ -1,0 +1,26 @@
+@use '@/styles/settings/variables' as *;
+@use '@/styles/utils/rem-calc' as *;
+
+.container {
+  .rootDivider {
+    &.divider {
+      margin-block: rem-calc(32);
+      border-color: $black-200;
+    }
+  }
+
+  .link {
+    display: flex;
+    align-items: flex-start;
+    gap: rem-calc(8);
+    text-decoration: underline;
+    text-underline-offset: rem-calc(2);
+    text-decoration-color: $blue-500;
+    color: $blue-500;
+    margin-top: rem-calc(8);
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

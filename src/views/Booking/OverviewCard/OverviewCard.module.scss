@@ -1,0 +1,33 @@
+@use '@/styles/settings/variables' as *;
+@use '@/styles/utils/rem-calc' as *;
+@use '@/styles/mixins/breakpoints' as *;
+
+.container {
+  border: none;
+
+  @include media(sm) {
+    border: rem-calc(1) solid $black-200;
+    border-radius: rem-calc(10);
+    padding: rem-calc(24 16);
+  }
+
+  .link {
+    display: flex;
+    align-items: center;
+    gap: rem-calc(8);
+    color: $blue-500;
+    text-decoration: underline;
+  }
+
+  .divider {
+    width: 100vw;
+    height: rem-calc(12);
+    background-color: $black-100;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+
+    @include media(sm) {
+      display: none;
+    }
+  }
+}

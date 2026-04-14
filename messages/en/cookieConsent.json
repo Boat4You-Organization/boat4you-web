@@ -1,0 +1,38 @@
+{
+  "title": "Cookies",
+  "description": "We use cookies to make your experience even better!",
+  "mainTitle": "Cookie Policy",
+  "mainDescription": "We use cookies to enhance your experience on the Boat4You platform, analyze how you use our website, and improve our boat booking system. These cookies help us deliver personalized content and ensure our platform works optimally for your booking needs. We collect essential cookies for platform functionality, analytics data to improve user experience, and preferences to personalize your dashboard. Learn more about our <link>Privacy Policy</link>.",
+  "buttons": {
+    "accept": "Accept All",
+    "reject": "Accept Only Necessary",
+    "manage": "Cookies Settings",
+    "save": "Save Settings"
+  },
+  "cookieList": {
+    "name": "Name",
+    "domain": "Domain",
+    "duration": "Duration",
+    "description": "Description"
+  },
+  "necessary": {
+    "title": "Essential Cookies",
+    "description": "These cookies are necessary for our website to function properly and cannot be switched off. They enable essential functionality like form security, language settings, and basic website navigation. You can block these cookies in your browser, but some parts of the website may not work properly. These cookies do not store personally identifiable information."
+  },
+  "analytics": {
+    "title": "Analytics Cookies",
+    "description": "These cookies help us understand how visitors interact with our website by collecting anonymous information about usage patterns, popular pages, and areas for improvement. We use this data to optimize our platform performance and enhance the user experience for customers searching for boat rentals.",
+    "cookies": [
+      {
+        "name": "_ga",
+        "domain": "www.boat4you.com",
+        "duration": "400 days",
+        "description": "Google Analytics cookie that distinguishes unique users and collects anonymous data about website traffic, user interactions, and trends to help us improve our boat booking platform and user experience."
+      }
+    ]
+  },
+  "marketing": {
+    "title": "Marketing Cookies",
+    "description": "These cookies help us understand our marketing effectiveness and identify potential customers interested in our boat rental platform. We use them to track website interactions and improve our outreach to customers seeking yacht charter services. These cookies are only loaded with your consent and you can withdraw consent at any time."
+  }
+}

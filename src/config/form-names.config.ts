@@ -1,0 +1,9 @@
+export const LOGIN_FORM = 'login-form';
+export const SIGNUP_FORM = 'signup-form';
+export const BOAT_CALENDAR_FORM = 'boat-calendar-form';
+export const AVAILABILITY_TAB_FORM = 'availability-tab-form';
+export const REQUEST_PASSWORD_RESET_FORM = 'request-password-reset-form';
+export const PROFILE_FORM = 'profile-form';
+export const GENERAL_SEARCH_FORM = 'general-search-form';
+export const BOAT_INQUIRY_FORM = 'boat-inquiry-form';
+export const ADMIN_INQUIRY_FORM = 'admin-inquiry-form';

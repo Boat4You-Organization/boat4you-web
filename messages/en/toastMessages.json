@@ -1,0 +1,13 @@
+{
+  "request-password-failed": "Failed to request password",
+  "request-password-success": "Password request successful",
+  "login-success": "Login successful",
+  "login-failed": "Login failed",
+  "userUpdated": "User updated successfully",
+  "userUpdateFailed": "Failed to update user",
+  "requestCancelBookingSuccess": "Request to cancel booking successful",
+  "requestCancelBookingFailed": "Request to cancel booking failed",
+  "linkCopied": "Link copied to clipboard",
+  "reservationNumberCopied": "Reservation number copied to clipboard",
+  "reservationIdCopied": "Booking reference copied to clipboard"
+}

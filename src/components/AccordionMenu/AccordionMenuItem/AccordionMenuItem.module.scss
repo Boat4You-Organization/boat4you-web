@@ -1,0 +1,106 @@
+@use '@/styles/settings/variables' as *;
+@use '@/styles/utils/rem-calc' as *;
+@use '@/styles/mixins/breakpoints' as *;
+
+.root {
+  &.container {
+    border-top: transparent;
+
+    &:first-child {
+      border-top: rem-calc(1) solid $black-200;
+    }
+
+    .arrowWrapper {
+      height: rem-calc(42);
+      width: rem-calc(42);
+
+      .arrow {
+        color: $black-400;
+      }
+    }
+
+    .body {
+      h1 {
+        font-size: rem-calc(36);
+        font-weight: 700;
+        color: $blue-500;
+        margin-bottom: rem-calc(76);
+      }
+
+      h2 {
+        font-size: rem-calc(28);
+        font-weight: 700;
+        color: $black-950;
+        padding-block: rem-calc(48 24);
+      }
+
+      h3 {
+        font-size: rem-calc(22);
+        font-weight: 700;
+        color: $black-950;
+        padding-block: rem-calc(24);
+      }
+
+      p,
+      ul,
+      ol,
+      blockquote {
+        font-size: rem-calc(16);
+        padding-bottom: rem-calc(24);
+        overflow-wrap: break-word;
+        color: $black-800;
+        line-height: 130%;
+      }
+
+      ul {
+        padding-left: rem-calc(24);
+        list-style-type: disc;
+
+        li {
+          font-size: rem-calc(16);
+          color: $black-800;
+          line-height: 130%;
+          margin-bottom: rem-calc(4);
+
+          &::marker {
+            color: $black-800;
+          }
+        }
+      }
+
+      ol {
+        padding-left: rem-calc(24);
+        list-style-type: decimal;
+
+        li {
+          font-size: rem-calc(16);
+          color: $black-800;
+          line-height: 130%;
+          margin-bottom: rem-calc(8);
+
+          &::marker {
+            color: $black-800;
+          }
+        }
+      }
+
+      a {
+        font-weight: 700;
+        text-decoration: underline;
+      }
+    }
+
+    &.expanded {
+      border-top: rem-calc(1) solid $black-950;
+      border-color: $black-950;
+
+      .arrow {
+        color: $black-950;
+      }
+    }
+
+    &.expanded + &.expanded {
+      border-top: transparent;
+    }
+  }
+}

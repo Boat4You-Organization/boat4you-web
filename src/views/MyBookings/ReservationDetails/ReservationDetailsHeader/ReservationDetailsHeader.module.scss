@@ -1,0 +1,36 @@
+@use '@/styles/settings/variables' as *;
+@use '@/styles/utils/rem-calc' as *;
+@use '@/styles/mixins/breakpoints' as *;
+
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-block: rem-calc(27);
+  z-index: 1300;
+  width: 100%;
+  background-color: $white;
+  border-bottom: rem-calc(1) solid $black-200;
+
+  .header {
+    margin-inline: auto;
+    width: 100%;
+    max-width: rem-calc(1280);
+    padding-inline: rem-calc(32);
+
+    @include media(0, 'md') {
+      padding-inline: rem-calc(16);
+    }
+
+    .logoWrapper {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .spacer {
+      width: rem-calc(34);
+      height: rem-calc(34);
+    }
+  }
+}

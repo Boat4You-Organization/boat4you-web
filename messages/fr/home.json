@@ -1,0 +1,122 @@
+{
+  "hero": {
+    "title": "Réservez un yacht en",
+    "ctaTitle": "un seul clic.",
+    "description": "Louez votre yacht parfait en quelques clics seulement. Simple, rapide et sans stress — votre aventure de navigation de rêve commence ici."
+  },
+  "generalSearchBar": {
+    "whereAreYouGoing": "Où allez-vous ?",
+    "selectBoatType": "Sélectionner le type de bateau",
+    "where": "Où",
+    "searchLocations": "Rechercher des destinations",
+    "when": "Quand",
+    "choosedates": "Choisir les dates",
+    "withWhat": "Avec quoi",
+    "chooseBoat": "Choisir un bateau",
+    "chooseDestination": "Choisir la destination",
+    "chooseTransportation": "Choisir le transport",
+    "searchBoats": "Rechercher des bateaux",
+    "aroundCurrentLocation": "Around current location",
+    "locating": "Locating…",
+    "locationError": "Couldn't get your location"
+  },
+  "destinationsSection": {
+    "theWorldIs": "Meilleures destinations de",
+    "yours": "location de yachts",
+    "yachts": "yachts",
+    "destinations": {
+      "bahamas": "Bahamas",
+      "caribbean": "Caraïbes",
+      "croatia": "Croatie",
+      "france": "France",
+      "greece": "Grèce",
+      "italy": "Italie",
+      "martinique": "Martinique",
+      "montenegro": "Monténégro",
+      "seychelles": "Seychelles",
+      "spain": "Espagne",
+      "türkiye": "Turquie",
+      "virginIslandsBritish": "Îles Vierges britanniques",
+      "grenada": "Grenade"
+    }
+  },
+  "whyChooseUsSection": {
+    "whyChoose": "Pourquoi nous choisir comme votre <strong>fournisseur de charter professionnel</strong>",
+    "items": {
+      "competitivePricing": {
+        "title": "Prix compétitifs",
+        "description": "Les meilleurs tarifs sans frais cachés. Qualité premium à des prix imbattables."
+      },
+      "wideSelection": {
+        "title": "Large sélection",
+        "description": "Flotte diversifiée, des yachts de luxe aux voiliers pour toutes les occasions."
+      },
+      "securePayment": {
+        "title": "Paiement sécurisé",
+        "description": "Sécurité de niveau bancaire avec des passerelles de paiement fiables. Vos données sont protégées."
+      },
+      "trustedCustomerService": {
+        "title": "Service client de confiance",
+        "description": "Support d'experts 24h/24 et 7j/7 pour une réservation fluide et des expériences inoubliables."
+      }
+    }
+  },
+  "ourFleetSection": {
+    "getToKnow": "Nous avons le bateau que vous voulez, ",
+    "ourFleet": "peu importe le type",
+    "boatSelection": "La meilleure sélection de bateaux en ligne aux meilleurs prix",
+    "boat": "bateau",
+    "fleet": {
+      "catamarans": "Catamarans",
+      "gulets": "Goélettes",
+      "houseBoats": "Péniches",
+      "luxuryMotorYachts": "Yachts à moteur de luxe",
+      "motorboats": "Bateaux à moteur",
+      "motorYachts": "Yachts à moteur",
+      "motorSailors": "Voiliers à moteur",
+      "powerCatamarans": "Catamarans à moteur",
+      "sailingYachts": "Voiliers",
+      "miniCruisers": "Mini-croiseurs",
+      "trimarans": "Trimaran",
+      "rubberBoats": "Bateau pneumatique"
+    }
+  },
+  "chooseFromFiveHundredLocations": "Plus de 40 pays pour la location de bateaux et de yachts avec les meilleurs prix",
+  "riskFreeBooking": {
+    "riskFreeBooking": "Réservation sans risque",
+    "save15Now": "Économisez 15% maintenant",
+    "cancellingDescription": "L'annulation avec nous est entièrement sans risque et flexible. Nous offrons des politiques de remboursement généreuses pour protéger votre investissement."
+  },
+  "blogSection": {
+    "readAboutYour": "Idées pour vos prochaines ",
+    "nextHoliday": "vacances en voilier",
+    "discoverSecretSpots": "Découvrez des lieux secrets comme le font les locaux ; consultez nos conseils pour votre prochaine location de yacht."
+  },
+  "allDestinationsSection": {
+    "allOf": "Explorez nos ",
+    "ourDestinations": "lieux de navigation préférés",
+    "specialDeals": "Obtenez des offres spéciales et économisez de l'argent sur chaque réservation.",
+    "continents": {
+      "europe": "Europe",
+      "americas": "Amériques",
+      "asia": "Asie",
+      "africa": "Afrique",
+      "australia": "Australie"
+    }
+  },
+  "languageModal": {
+    "title": "Langue et devise",
+    "savePreferences": "Enregistrer les préférences",
+    "languageLabel": "Langue",
+    "currencyLabel": "Devise",
+    "languages": {
+      "en": "Anglais",
+      "fr": "Français",
+      "de": "Allemand",
+      "pt": "Portugais",
+      "it": "Italien",
+      "es": "Espagnol",
+      "hr": "Croate"
+    }
+  }
+}

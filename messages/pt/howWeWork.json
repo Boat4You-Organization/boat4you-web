@@ -1,0 +1,115 @@
+{
+  "hero": {
+    "title": "Reservar um barco nunca <strong>foi tão fácil.</strong>",
+    "description": "Na <logo></logo> <companyName>Boat4You</companyName>, mantemos o processo simples. Você nos diz onde e quando. Nós o conectamos com o iate e a tripulação certos. Croácia, Grécia, Itália, Espanha, Turquia ou Caribe. Cuidamos dos detalhes para que você aproveite a viagem."
+  },
+  "step": "Passo",
+  "steps": {
+    "step1": {
+      "title": "Descubra Seu Barco Perfeito",
+      "subtitle": "Explore nossa frota selecionada",
+      "items": {
+        "item1": "Busque por destino, tipo de barco ou datas de viagem.",
+        "item2": "Use filtros inteligentes para encontrar exatamente o que atende suas necessidades — de catamarãs de luxo a lanchas familiares.",
+        "item3": "Cada anúncio inclui detalhes verificados, preços transparentes, fotos reais e especificações completas."
+      },
+      "question": "Precisa de ajuda para escolher?",
+      "answer": "Nossos especialistas em charter estão a apenas um clique de distância. Ajudaremos você a comparar, recomendar opções e orientar se tiver dúvidas.",
+      "link": {
+        "text": "Navegar Nossa Frota"
+      }
+    },
+    "step2": {
+      "title": "Envie uma Consulta Gratuita",
+      "subtitle": "Sem compromisso, sem pressão",
+      "items": {
+        "item1": "Encontrou algo que você ama? Apenas clique em \"Solicitar Oferta\"",
+        "item2": "Nos conte suas datas, tamanho do grupo e preferências.",
+        "item3": "Você receberá ofertas personalizadas e a disponibilidade mais recente — frequentemente com descontos exclusivos!"
+      },
+      "question": "Opções flexíveis",
+      "answer": "Quer um skipper? Precisa de uma hostess? Procurando uma rota de ida? Personalizaremos seu charter para se adequar aos seus planos.",
+      "link": {
+        "text": "Entre em Contato"
+      }
+    },
+    "step3": {
+      "title": "Receba um Orçamento Personalizado",
+      "subtitle": "Preços claros. Sem custos ocultos.",
+      "items": {
+        "item1": "Um orçamento detalhado baseado no barco escolhido e extras",
+        "item2": "Informações transparentes sobre taxas, depósitos e serviços opcionais",
+        "item3": "Uma pessoa real orientando você pelos detalhes, não um robô"
+      },
+      "answer": "Acreditamos na clareza, não em letras miúdas."
+    },
+    "step4": {
+      "title": "Reserve Seu Barco",
+      "subtitle": "Garanta seu iate em apenas alguns cliques",
+      "items": {
+        "item1": "Quando estiver pronto, enviaremos um link de pagamento seguro.",
+        "item2": "Pague um depósito para confirmar sua reserva — geralmente 30-50% do preço do charter.",
+        "item3": "Seu barco é oficialmente seu!"
+      },
+      "answer": "Você receberá confirmação imediata e acesso ao seu painel de reservas."
+    },
+    "step5": {
+      "title": "Finalizar e Preparar",
+      "subtitle": "Antes da sua viagem:",
+      "items": {
+        "item1": "Pague o saldo (normalmente 4 semanas antes da partida)",
+        "item2": "Envie a lista da tripulação/passageiros",
+        "item3": "Forneceremos informações da base, detalhes de embarque e uma lista de bagagem"
+      },
+      "answer": "Tudo está cuidado — para que você possa relaxar e aguardar suas férias."
+    },
+    "step6": {
+      "title": "Zarpar",
+      "subtitle": "Bem-vindo a bordo!",
+      "items": {
+        "item1": "Encontre seu iate na marina",
+        "item2": "Faça check-in com a equipe da base (ou skipper, se incluído)",
+        "item3": "Passe por uma breve entrega e briefing de segurança"
+      },
+      "answer": "Daqui em diante, é tudo sobre sol, mar e navegação. Seja numa aventura com skipper ou navegando sozinho, estamos sempre a uma ligação de distância."
+    },
+    "step7": {
+      "title": "Após Sua Viagem",
+      "subtitle": "Processo de retorno tranquilo",
+      "items": {
+        "item1": "Check-out rápido e inspeção",
+        "item2": "Compartilhe feedback ou avaliações — adoramos ouvir de vocês!",
+        "item3": "Obtenha ajuda com sua próxima reserva (muitos clientes navegam conosco novamente!)"
+      }
+    }
+  },
+  "whyChooseUsSection": {
+    "whyChoose": "Por que escolher boat4you?",
+    "items": {
+      "verifiedBoatsOnly": {
+        "title": "Apenas Barcos Verificados",
+        "description": "Sem surpresas, apenas iates de primeira qualidade."
+      },
+      "localExpertise": {
+        "title": "Expertise Local",
+        "description": "Conhecemos as costas como a palma da nossa mão"
+      },
+      "realHumanSupport": {
+        "title": "Suporte Humano Real",
+        "description": "Antes, durante e depois da sua viagem"
+      },
+      "bestPriceGuarantee": {
+        "title": "Garantia de Melhor Preço",
+        "description": "Sempre preços justos, sem taxas de reserva"
+      }
+    }
+  },
+  "cta": {
+    "title": "Dúvidas? Vamos Conversar",
+    "description": "Precisa de conselhos? Quer falar com um especialista em charter? Nossa equipe está aqui para ajudar — chat ao vivo, email ou telefone.",
+    "cta": "Entre em Contato Agora"
+  },
+  "faq": {
+    "title": "Perguntas Frequentes"
+  }
+}

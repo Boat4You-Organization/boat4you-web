@@ -1,0 +1,19 @@
+{
+  "hero": {
+    "title": "Precisa de mais detalhes?<strong>Entre em contato</strong>",
+    "description": "Na <logo></logo> <companyName>Boat4You</companyName> planejamos charters de iates que você vai amar. Mediterrâneo, Caribe ou novas águas, nossos especialistas guiam você desde a primeira consulta até a soltura das amarras. Compartilhe suas datas, tamanho da tripulação e base de início. Enviamos opções personalizadas, preços claros e próximas etapas simples."
+  },
+  "contact": {
+    "telephoneNumber": "Número de Telefone",
+    "email": "Email",
+    "emergencyNumber": "Número de Emergência / Telefone Urgente",
+    "workingHours": "Horário de Funcionamento",
+    "mondayToSunday": "Segunda - Domingo 8h - 20h (CEST)"
+  },
+  "internationalSupport": {
+    "title": "Suporte Internacional",
+    "usaOffice": "Escritório EUA",
+    "ukOffice": "Escritório Reino Unido",
+    "croatiaHQ": "Número WhatsApp"
+  }
+}

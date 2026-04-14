@@ -1,0 +1,67 @@
+@use '@/styles/settings/variables' as *;
+@use '@/styles/utils/rem-calc' as *;
+@use '@/styles/mixins/breakpoints' as *;
+
+.wp-container {
+  .wp-caption {
+    margin-block: rem-calc(8);
+    height: rem-calc(458);
+    border-radius: rem-calc(16) !important;
+    overflow: hidden;
+    width: 100% !important;
+
+    &:last-child {
+      margin-block-end: 0;
+    }
+
+    img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+    }
+  }
+
+  .wp-caption-text {
+    display: none !important;
+    font-size: rem-calc(12) !important;
+  }
+
+  ul,
+  ol {
+    font-family: $primary-font-family;
+    color: $black-800;
+    display: flex;
+    flex-direction: column;
+    font-size: rem-calc(16);
+    font-weight: 500;
+    line-height: 170%;
+    list-style: disc;
+    padding-left: rem-calc(24);
+  }
+
+  table {
+    border-collapse: separate;
+    border-spacing: 0 rem-calc(16);
+    width: 100%;
+
+    td,
+    th {
+      vertical-align: top;
+    }
+  }
+
+  strong {
+    text-decoration: underline;
+  }
+
+  p + p {
+    margin-top: rem-calc(8);
+  }
+}
+
+.markdown {
+  display: flex;
+  flex-direction: column;
+  gap: rem-calc(24) !important;
+  margin-inline: auto;
+}

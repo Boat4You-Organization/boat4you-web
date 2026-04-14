@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(lsof -iTCP:3001 -sTCP:LISTEN)",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" http://localhost:3001 --max-time 3)",
+      "Bash(yarn dev:*)"
+    ]
+  }
+}

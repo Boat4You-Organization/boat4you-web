@@ -1,0 +1,19 @@
+{
+  "hero": {
+    "title": "Besoin de plus de détails ?<strong>Contactez-nous</strong>",
+    "description": "Chez <logo></logo> <companyName>Boat4You</companyName>, nous planifions des locations de yachts que vous adorerez. Méditerranée, Caraïbes ou nouvelles eaux, nos experts vous guident de la première demande jusqu'au départ des amarres. Partagez vos dates, la taille de votre équipage et votre base de départ. Nous vous enverrons des options sur mesure, des prix clairs et des étapes suivantes simples."
+  },
+  "contact": {
+    "telephoneNumber": "Numéro de téléphone",
+    "email": "E-mail",
+    "emergencyNumber": "Numéro d'urgence / Numéro de téléphone urgent",
+    "workingHours": "Heures d'ouverture",
+    "mondayToSunday": "Lundi - Dimanche 8h - 20h (CEST)"
+  },
+  "internationalSupport": {
+    "title": "Support international",
+    "usaOffice": "Bureau USA",
+    "ukOffice": "Bureau Royaume-Uni",
+    "croatiaHQ": "Numéro WhatsApp"
+  }
+}

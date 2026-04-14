@@ -1,0 +1,71 @@
+@use '@/styles/utils/rem-calc' as *;
+@use '@/styles/settings/variables' as *;
+@use '@/styles/mixins/breakpoints' as *;
+
+.root {
+  &.container {
+    margin-block: rem-calc(87 16);
+
+    @include media(sm) {
+      margin-block: rem-calc(92 40);
+    }
+
+    .form {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column-reverse;
+      gap: rem-calc(20);
+
+      &.lastStep {
+        flex-direction: column;
+      }
+
+      @include media(lg) {
+        flex-direction: row;
+        gap: rem-calc(20);
+
+        &.lastStep {
+          flex-direction: row;
+        }
+      }
+
+      .leftPanel {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: rem-calc(24);
+
+        @include media(lg) {
+          width: 33%;
+        }
+
+        .divider {
+          width: 100vw;
+          height: rem-calc(12);
+          background-color: $black-100;
+          margin-left: calc(-50vw + 50%);
+          margin-right: calc(-50vw + 50%);
+
+          @include media(sm) {
+            display: none;
+          }
+        }
+      }
+
+      .rightPanel {
+        width: 100%;
+        padding-bottom: rem-calc(48);
+
+        @include media(lg) {
+          width: 67%;
+        }
+
+        @include media(sm) {
+          border: rem-calc(1) solid $black-200;
+          border-radius: rem-calc(10);
+          padding: rem-calc(24);
+        }
+      }
+    }
+  }
+}

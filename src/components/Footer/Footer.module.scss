@@ -1,0 +1,32 @@
+@use '@/styles/settings/variables' as *;
+@use '@/styles/utils/rem-calc' as *;
+
+.root {
+  &.container {
+    position: relative;
+    background: linear-gradient(180deg, $black-100 2.87%, $white 40.8%);
+    color: $white;
+    padding-block: rem-calc(80 24);
+    padding-inline: 0;
+
+    .link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: rem-calc(8);
+      width: fit-content;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: rem-calc(16);
+      border-bottom-left-radius: rem-calc(24);
+      border-bottom-right-radius: rem-calc(24);
+      z-index: 1;
+      background-color: $white;
+    }
+  }
+}

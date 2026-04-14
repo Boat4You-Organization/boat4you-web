@@ -1,0 +1,33 @@
+@use '@/styles/settings/variables' as *;
+@use '@/styles/utils/rem-calc' as *;
+@use '@/styles/mixins/breakpoints' as *;
+
+.container {
+  .imageWrapper {
+    position: relative;
+    width: rem-calc(28);
+    height: rem-calc(28);
+
+    .image {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .iconsMobile {
+    display: none;
+
+    @include media(0, 'sm') {
+      display: flex;
+    }
+  }
+
+  .iconsDesktop {
+    display: flex;
+
+    @include media(0, 'sm') {
+      display: none;
+    }
+  }
+}

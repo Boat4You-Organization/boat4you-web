@@ -1,0 +1,38 @@
+{
+  "title": "Cookies",
+  "description": "Utilizziamo i cookie per rendere la tua esperienza ancora migliore!",
+  "mainTitle": "Politica sui Cookie",
+  "mainDescription": "Utilizziamo i cookie per migliorare la tua esperienza sulla piattaforma Boat4You, analizzare come utilizzi il nostro sito web e migliorare il nostro sistema di prenotazione barche. Questi cookie ci aiutano a fornire contenuti personalizzati e garantire che la nostra piattaforma funzioni in modo ottimale per le tue esigenze di prenotazione. Raccogliamo cookie essenziali per la funzionalità della piattaforma, dati analitici per migliorare l'esperienza utente e preferenze per personalizzare il tuo pannello. Scopri di più nella nostra <link>Informativa sulla Privacy</link>.",
+  "buttons": {
+    "accept": "Accetta tutto",
+    "reject": "Accetta solo i necessari",
+    "manage": "Impostazioni Cookie",
+    "save": "Salva impostazioni"
+  },
+  "cookieList": {
+    "name": "Nome",
+    "domain": "Dominio",
+    "duration": "Durata",
+    "description": "Descrizione"
+  },
+  "necessary": {
+    "title": "Cookie Essenziali",
+    "description": "Questi cookie sono necessari per il corretto funzionamento del nostro sito web e non possono essere disattivati. Abilitano funzionalità essenziali come la sicurezza dei moduli, le impostazioni della lingua e la navigazione di base del sito web. Puoi bloccare questi cookie nel tuo browser, ma alcune parti del sito web potrebbero non funzionare correttamente. Questi cookie non memorizzano informazioni personalmente identificabili."
+  },
+  "analytics": {
+    "title": "Cookie Analitici",
+    "description": "Questi cookie ci aiutano a capire come i visitatori interagiscono con il nostro sito web raccogliendo informazioni anonime sui modelli di utilizzo, sulle pagine più visitate e sulle aree di miglioramento. Utilizziamo questi dati per ottimizzare le prestazioni della nostra piattaforma e migliorare l'esperienza utente per i clienti che cercano noleggi di barche.",
+    "cookies": [
+      {
+        "name": "_ga",
+        "domain": "www.boat4you.com",
+        "duration": "400 giorni",
+        "description": "Cookie di Google Analytics che distingue gli utenti univoci e raccoglie dati anonimi sul traffico del sito web, sulle interazioni degli utenti e sulle tendenze per aiutarci a migliorare la nostra piattaforma di prenotazione barche e l'esperienza utente."
+      }
+    ]
+  },
+  "marketing": {
+    "title": "Cookie di Marketing",
+    "description": "Questi cookie ci aiutano a comprendere l'efficacia del nostro marketing e a identificare potenziali clienti interessati alla nostra piattaforma di noleggio barche. Li utilizziamo per tracciare le interazioni sul sito web e migliorare la nostra comunicazione con i clienti che cercano servizi di charter yacht. Questi cookie vengono caricati solo con il tuo consenso e puoi ritirare il consenso in qualsiasi momento."
+  }
+}

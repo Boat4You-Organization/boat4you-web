@@ -1,0 +1,53 @@
+{
+  "metadata": {
+    "base": {
+      "title": "Boat4You | Easy & Secure Boat Rentals Worldwide",
+      "titleTemplate": "%s | Boat4You",
+      "description": "Browse and book boats in 100+ countries. Sailing yachts, catamarans, motorboats – with or without skipper. Best prices. Secure booking. 24/7 support.",
+      "path": "/"
+    },
+    "search": {
+      "title": "Search for yachts",
+      "description": "Find and book your perfect yacht in just a few clicks. Simple, fast and stress-free — your dream sailing adventure starts here.",
+      "path": "/search"
+    },
+    "blog": {
+      "title": "Yacht Charter Guides | Planning, Itineraries, News | Boat4You",
+      "description": "Boat4You expert yacht charter guides provide inspiration and insight into a yachting holiday, how to pick the right boat and where to set sail.",
+      "path": "/blog"
+    },
+    "aboutUs": {
+      "title": "Your global sailing adventure starts here",
+      "description": "At Boat4You we transform your sailing dreams into unforgettable adventures across the world’s most spectacular waters.",
+      "path": "/about-us"
+    },
+    "contactUs": {
+      "title": "Contact us now",
+      "description": "At Boat4You we’re passionate about creating unforgettable yacht charter experiences.",
+      "path": "/contact-us"
+    },
+    "howWeWork": {
+      "title": "Booking a boat has never been easier",
+      "description": "At Boat4You we believe that renting a boat should feel as smooth and exciting as the journey itself.",
+      "path": "/how-we-work"
+    },
+    "faq": {
+      "title": "Booking & Availability",
+      "description": "Find quick answers about Boat4You features, setup, pricing, and support.",
+      "path": "/faq"
+    },
+    "termsAndConditions": {
+      "title": "Boat4You Terms and Conditions",
+      "description": "Review the terms and conditions for using Boat4You, including user responsibilities, payments, and account policies.",
+      "path": "/terms-and-conditions"
+    },
+    "privacyPolicy": {
+      "title": "Privacy Policy",
+      "description": "Read how Boat4You collects, uses, and protects your personal data while using our website and services.",
+      "path": "/privacy-policy"
+    }
+  },
+  "boat": {
+    "forRent": "for rent"
+  }
+}

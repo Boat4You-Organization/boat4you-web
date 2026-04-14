@@ -1,0 +1,125 @@
+'use server';
+
+import { revalidatePath } from 'next/cache';
+
+import { PATCH_REQUEST_PARAMETERS, POST_REQUEST_PARAMETERS } from '@/config/constants.config';
+import { ProfileFormValues, SignUpFormValues } from '@/config/form-models.config';
+import { ErrorModel } from '@/models/error.model';
+import { Currency, Language, UserModel } from '@/models/user.model';
+import { PayloadResponse } from '@/types/response.type';
+import { authHeaders } from '@/utils/static/tokenUtils';
+
+export interface UpdateUserParams {
+  id: number;
+  updateData: ProfileFormValues;
+  path: string;
+}
+export interface UpdateUserPreferencesParams {
+  id: number;
+  language: Language;
+  currency: Currency;
+  path: string;
+}
+
+export async function updateUser(params: UpdateUserParams): Promise<PayloadResponse<boolean>> {
+  const { id, updateData, path } = params;
+
+  try {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/users/${id}`, {
+      ...POST_REQUEST_PARAMETERS,
+      headers: {
+        ...POST_REQUEST_PARAMETERS.headers,
+        ...Object.fromEntries((await authHeaders()).entries()),
+      },
+      body: JSON.stringify(updateData),
+    });
+
+    if (!response.ok) {
+      const body: ErrorModel = await response.json();
+
+      return { payload: false, message: body.message };
+    }
+
+    revalidatePath(path);
+
+    return { payload: true };
+  } catch (error) {
+    return { payload: false, message: 'An unexpected error occurred while updating user data' };
+  }
+}
+
+export async function updateUserPreferences(params: UpdateUserPreferencesParams): Promise<PayloadResponse<boolean>> {
+  const { id, language, currency, path } = params;
+
+  try {
+    const queryParams = new URLSearchParams({ language, currency });
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/users/${id}/updatePreferences?${queryParams.toString()}`,
+      {
+        ...PATCH_REQUEST_PARAMETERS,
+        headers: {
+          ...PATCH_REQUEST_PARAMETERS.headers,
+          ...Object.fromEntries((await authHeaders()).entries()),
+        },
+      }
+    );
+
+    if (!response.ok) {
+      const body: ErrorModel = await response.json();
+
+      return { payload: false, message: body.message };
+    }
+
+    revalidatePath(path);
+
+    return { payload: true };
+  } catch (error) {
+    return {
+      payload: false,
+      message: 'An unexpected error occurred while updating user preferences',
+    };
+  }
+}
+
+export async function checkInviteCode(inviteCode: string): Promise<PayloadResponse<boolean>> {
+  try {
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/users/invite?inviteCode=${encodeURIComponent(inviteCode)}`
+    );
+
+    if (!response.ok) {
+      const body: ErrorModel = await response.json();
+
+      return { payload: false, message: body.message };
+    }
+
+    return { payload: true };
+  } catch (error) {
+    return { payload: false, message: 'An unexpected error occurred while checking invite code' };
+  }
+}
+
+export async function signUpUser(
+  inviteCode: string,
+  payload: Pick<SignUpFormValues, 'password'>
+): Promise<PayloadResponse<UserModel | null>> {
+  try {
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/users/invite?inviteCode=${encodeURIComponent(inviteCode)}`,
+      {
+        ...POST_REQUEST_PARAMETERS,
+        body: JSON.stringify(payload),
+      }
+    );
+
+    if (!response.ok) {
+      const body: ErrorModel = await response.json();
+
+      return { payload: null, message: body.message };
+    }
+
+    return { payload: await response.json() };
+  } catch (error) {
+    return { payload: null, message: 'An unexpected error occurred while signing up user' };
+  }
+}

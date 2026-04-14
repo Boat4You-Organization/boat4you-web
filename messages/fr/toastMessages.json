@@ -1,0 +1,13 @@
+{
+  "request-password-failed": "Échec de la demande de mot de passe",
+  "request-password-success": "Demande de mot de passe réussie",
+  "login-success": "Connexion réussie",
+  "login-failed": "Échec de la connexion",
+  "userUpdated": "Utilisateur modifié avec succès",
+  "userUpdateFailed": "Échec de la modification de l'utilisateur",
+  "requestCancelBookingSuccess": "Demande d'annulation de réservation réussie",
+  "requestCancelBookingFailed": "Échec de la demande d'annulation de réservation",
+  "linkCopied": "Lien copié dans le presse-papiers",
+  "reservationNumberCopied": "Numéro de réservation copié dans le presse-papiers",
+  "reservationIdCopied": "Référence de réservation copiée dans le presse-papiers"
+}

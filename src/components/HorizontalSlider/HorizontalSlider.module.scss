@@ -1,0 +1,27 @@
+@use '@/styles/utils/rem-calc' as *;
+
+.container {
+  margin-top: rem-calc(24);
+  overflow: visible;
+
+  &:global(.swiper) {
+    overflow: visible;
+  }
+}
+
+.containerAuto {
+  overflow: visible;
+
+  &:global(.swiper) {
+    overflow: visible;
+  }
+
+  .slide {
+    margin-right: rem-calc(20);
+    max-width: rem-calc(305);
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

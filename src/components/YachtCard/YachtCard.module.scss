@@ -1,0 +1,30 @@
+@use '@/styles/settings/variables' as *;
+@use '@/styles/utils/rem-calc' as *;
+
+.root {
+  &.container {
+    display: flex;
+    align-items: flex-start;
+    gap: rem-calc(16);
+    border-radius: rem-calc(12);
+    box-shadow: none;
+    width: 100%;
+
+    &.mobile {
+      padding: 0;
+    }
+
+    .image {
+      border-radius: rem-calc(5);
+      object-fit: cover;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: rem-calc(0);
+      gap: rem-calc(0);
+    }
+  }
+}

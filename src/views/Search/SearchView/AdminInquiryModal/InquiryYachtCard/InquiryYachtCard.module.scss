@@ -1,0 +1,26 @@
+@use '@/styles/utils/rem-calc' as *;
+@use '@/styles/mixins/breakpoints' as *;
+@use '@/styles/settings/variables' as *;
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: rem-calc(16);
+  border: rem-calc(1) solid $black-200;
+  border-radius: rem-calc(12);
+  padding: rem-calc(16);
+  position: relative;
+
+  @include media(0, 'sm') {
+    flex-direction: row-reverse;
+    align-items: flex-start;
+  }
+
+  .checkbox {
+    @include media(0, 'sm') {
+      position: absolute;
+      top: rem-calc(16);
+      right: rem-calc(16);
+    }
+  }
+}

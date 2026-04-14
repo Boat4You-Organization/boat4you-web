@@ -1,0 +1,19 @@
+{
+  "hero": {
+    "title": "Benötigen Sie weitere Details?<strong>Kontaktieren Sie uns</strong>",
+    "description": "Bei <logo></logo> <companyName>Boat4You</companyName> planen wir Yacht-Charter, die Sie lieben werden. Mittelmeer, Karibik oder neue Gewässer, unsere Experten begleiten Sie von der ersten Anfrage bis zum Ablegen. Teilen Sie uns Ihre Termine, Crewgröße und Startbasis mit. Wir senden Ihnen maßgeschneiderte Optionen, klare Preise und einfache nächste Schritte."
+  },
+  "contact": {
+    "telephoneNumber": "Telefonnummer",
+    "email": "E-Mail",
+    "emergencyNumber": "Notrufnummer / Dringende Telefonnummer",
+    "workingHours": "Arbeitszeiten",
+    "mondayToSunday": "Montag - Sonntag 8:00 - 20:00 Uhr (MESZ)"
+  },
+  "internationalSupport": {
+    "title": "Internationaler Support",
+    "usaOffice": "USA-Büro",
+    "ukOffice": "UK-Büro",
+    "croatiaHQ": "WhatsApp-Nummer"
+  }
+}

@@ -1,0 +1,30 @@
+import { hasLocale } from 'next-intl';
+import { getRequestConfig } from 'next-intl/server';
+
+import { routing } from './routing';
+
+type Locale = (typeof routing.locales)[number];
+
+export default getRequestConfig(async ({ requestLocale }) => {
+  const requested = await requestLocale;
+  const locale = hasLocale(routing.locales, requested) ? (requested as Locale) : routing.defaultLocale;
+
+  const messages = {
+    home: (await import(`../../messages/${locale}/home.json`)).default,
+    navigation: (await import(`../../messages/${locale}/navigation.json`)).default,
+    filters: (await import(`../../messages/${locale}/filters.json`)).default,
+    common: (await import(`../../messages/${locale}/common.json`)).default,
+    howWeWork: (await import(`../../messages/${locale}/howWeWork.json`)).default,
+    about: (await import(`../../messages/${locale}/about.json`)).default,
+    contact: (await import(`../../messages/${locale}/contact.json`)).default,
+    yacht: (await import(`../../messages/${locale}/yacht.json`)).default,
+    toastMessages: (await import(`../../messages/${locale}/toastMessages.json`)).default,
+    metadata: (await import(`../../messages/${locale}/metadata.json`)).default,
+    cookieConsent: (await import(`../../messages/${locale}/cookieConsent.json`)).default,
+  } as const;
+
+  return {
+    locale,
+    messages,
+  };
+});

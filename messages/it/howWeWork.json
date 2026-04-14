@@ -1,0 +1,115 @@
+{
+  "hero": {
+    "title": "Prenotare una barca non è mai <strong>stato così facile.</strong>",
+    "description": "In <logo></logo> <companyName>Boat4You</companyName> manteniamo il processo semplice. Tu ci dici dove e quando. Ti abbiniamo allo yacht e all'equipaggio giusti. Croazia, Grecia, Italia, Spagna, Turchia o Caraibi. Ci occupiamo dei dettagli in modo che tu possa goderti il viaggio."
+  },
+  "step": "Passaggio",
+  "steps": {
+    "step1": {
+      "title": "Scopri la Tua Barca Perfetta",
+      "subtitle": "Esplora la nostra flotta selezionata",
+      "items": {
+        "item1": "Cerca per destinazione, tipo di barca, o date di viaggio.",
+        "item2": "Usa filtri intelligenti per trovare esattamente ciò che si adatta alle tue esigenze — da catamarani di lusso a motoscafi per famiglie.",
+        "item3": "Ogni annuncio include dettagli verificati, prezzi trasparenti, foto reali e specifiche complete."
+      },
+      "question": "Hai bisogno di aiuto nella scelta?",
+      "answer": "I nostri specialisti charter sono a un click di distanza. Ti aiuteremo a confrontare, consigliare opzioni e guidarti se non sei sicuro.",
+      "link": {
+        "text": "Sfoglia la Nostra Flotta"
+      }
+    },
+    "step2": {
+      "title": "Invia una Richiesta Gratuita",
+      "subtitle": "Nessun impegno, nessuna pressione",
+      "items": {
+        "item1": "Hai trovato qualcosa che ti piace? Clicca semplicemente \"Richiedi Offerta\"",
+        "item2": "Comunicaci le tue date, dimensioni del gruppo e preferenze.",
+        "item3": "Riceverai offerte personalizzate e l'ultima disponibilità — spesso con sconti esclusivi!"
+      },
+      "question": "Opzioni flessibili",
+      "answer": "Vuoi uno skipper? Hai bisogno di una hostess? Cerchi una rotta a senso unico? Personalizzeremo il tuo charter per adattarlo ai tuoi piani.",
+      "link": {
+        "text": "Contattaci"
+      }
+    },
+    "step3": {
+      "title": "Ottieni un Preventivo Personalizzato",
+      "subtitle": "Prezzi chiari. Nessun costo nascosto.",
+      "items": {
+        "item1": "Un preventivo dettagliato basato sulla tua barca scelta ed extra",
+        "item2": "Informazioni trasparenti su tasse, depositi e servizi opzionali",
+        "item3": "Una persona reale che ti guida attraverso i dettagli, non un robot"
+      },
+      "answer": "Crediamo nella chiarezza, non nelle clausole scritte in piccolo."
+    },
+    "step4": {
+      "title": "Prenota la Tua Barca",
+      "subtitle": "Assicurati il tuo yacht con pochi click",
+      "items": {
+        "item1": "Quando sei pronto, ti invieremo un link di pagamento sicuro.",
+        "item2": "Paga un deposito per confermare la tua prenotazione — solitamente il 30-50% del prezzo charter.",
+        "item3": "La tua barca è ufficialmente tua!"
+      },
+      "answer": "Riceverai conferma immediata e accesso al tuo pannello di controllo delle prenotazioni."
+    },
+    "step5": {
+      "title": "Finalizza e Preparati",
+      "subtitle": "Prima del tuo viaggio:",
+      "items": {
+        "item1": "Paga il saldo (tipicamente 4 settimane prima della partenza)",
+        "item2": "Invia la lista equipaggio/passeggeri",
+        "item3": "Ti forniremo informazioni sulla base, dettagli di imbarco e una checklist per i bagagli"
+      },
+      "answer": "Tutto è curato — così puoi rilassarti e aspettare con ansia la tua vacanza."
+    },
+    "step6": {
+      "title": "Salpa",
+      "subtitle": "Benvenuto a bordo!",
+      "items": {
+        "item1": "Incontra il tuo yacht al marina",
+        "item2": "Fai il check-in con il team della base (o skipper, se incluso)",
+        "item3": "Segui un breve briefing di consegna e sicurezza"
+      },
+      "answer": "Da qui, è tutto sole, mare e navigazione. Che tu sia in un'avventura con skipper o navighi da solo, siamo sempre a una chiamata di distanza."
+    },
+    "step7": {
+      "title": "Dopo il Tuo Viaggio",
+      "subtitle": "Processo di rientro fluido",
+      "items": {
+        "item1": "Check-out rapido e ispezione",
+        "item2": "Condividi feedback o recensioni — amiamo sentirti!",
+        "item3": "Ricevi aiuto per la tua prossima prenotazione (molti clienti navigano di nuovo con noi!)"
+      }
+    }
+  },
+  "whyChooseUsSection": {
+    "whyChoose": "Perché scegliere boat4you?",
+    "items": {
+      "verifiedBoatsOnly": {
+        "title": "Solo Barche Verificate",
+        "description": "Nessuna sorpresa, solo yacht di alta qualità."
+      },
+      "localExpertise": {
+        "title": "Competenza Locale",
+        "description": "Conosciamo le coste come le nostre tasche"
+      },
+      "realHumanSupport": {
+        "title": "Supporto Umano Reale",
+        "description": "Prima, durante e dopo il tuo viaggio"
+      },
+      "bestPriceGuarantee": {
+        "title": "Garanzia Miglior Prezzo",
+        "description": "Prezzi sempre equi, nessuna commissione di prenotazione"
+      }
+    }
+  },
+  "cta": {
+    "title": "Domande? Parliamo",
+    "description": "Hai bisogno di consigli? Vuoi parlare con uno specialista charter? Il nostro team è qui per aiutare — chat dal vivo, email o telefono.",
+    "cta": "Contattaci Ora"
+  },
+  "faq": {
+    "title": "Domande Frequenti"
+  }
+}

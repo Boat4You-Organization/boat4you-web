@@ -1,0 +1,16 @@
+@use '@/styles/settings/variables' as *;
+@use '@/styles/utils/rem-calc' as *;
+@use '@/styles/mixins/breakpoints' as *;
+
+.root {
+  &.divider {
+    height: rem-calc(24);
+    width: rem-calc(1);
+    background-color: $black-200;
+    margin: auto rem-calc(16);
+
+    &.lastItem {
+      margin-right: 0;
+    }
+  }
+}

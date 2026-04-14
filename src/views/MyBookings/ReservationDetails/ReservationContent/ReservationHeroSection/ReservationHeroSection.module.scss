@@ -1,0 +1,21 @@
+@use '@/styles/settings/variables' as *;
+@use '@/styles/utils/rem-calc' as *;
+@use '@/styles/mixins/breakpoints' as *;
+
+.root {
+  &.container {
+    display: flex;
+    flex-direction: column;
+    gap: rem-calc(24);
+
+    @include media(0, 'md') {
+      padding-inline: 0;
+    }
+
+    .imageWrapper {
+      position: relative;
+      width: rem-calc(24);
+      height: rem-calc(16);
+    }
+  }
+}

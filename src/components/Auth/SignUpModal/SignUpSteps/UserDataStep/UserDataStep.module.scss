@@ -1,0 +1,6 @@
+@use '@/styles/settings/variables' as *;
+
+.link {
+  color: $blue-500;
+  text-decoration: underline;
+}

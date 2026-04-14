@@ -1,0 +1,61 @@
+{
+  "hero": {
+    "title": "<strong>Tu aventura náutica global comienza aquí.</strong>",
+    "description": "En <logo></logo> <companyName>Boat4You</companyName> conviertes planes de viaje en travesías reales en las mejores aguas del mundo. Crecimos desde raíces mediterráneas hasta convertirnos en una plataforma global de chárter. Obtienes **asesoramiento experto**, **embarcaciones verificadas** y un flujo de reserva fluido, desde el primer presupuesto hasta que sueltas amarras."
+  },
+  "stats": {
+    "title": "Credenciales clave para generar confianza",
+    "description": "Asesoramiento independiente. Recomendaciones neutrales del proveedor que se ajustan a tus fechas, tamaño de tripulación y presupuesto.<br></br>Socios verificados. Seguro, licencias y controles de seguridad en archivo con nuestro equipo.<br></br>Precios transparentes. Contratos claros. Sin tarifas ocultas.<br></br>Cumplimiento GDPR. Pagos seguros. Privacidad por defecto.<br></br>Soporte real. Asistencia 24/7 antes, durante y después de tu viaje.",
+    "premiumYachtsFleet": "Yates Premium en nuestra Flota Global",
+    "worldwideDestinations": "Destinos en Todo el Mundo",
+    "teamExperience": "Años de experiencia combinada del equipo",
+    "customersServed": "Clientes Satisfechos Atendidos",
+    "charterPartners": "Socios Charter Verificados"
+  },
+  "aboutUs": {
+    "title": "Quiénes somos",
+    "mainTitle": "Transformando Sueños en Travesías",
+    "description": "Creemos que mereces un yate privado que se sienta como si hubiera sido construido para tu semana. Nuestro equipo tiene más de 20 años de trabajo de chárter con conocimiento local en Europa, el Caribe y más allá. Auditamos bases, probamos rutas e informamos a las tripulaciones, todo para tus vacaciones de navegación hechas a medida. Obtienes una guía honesta, no conjeturas."
+  },
+  "whyChooseUs": {
+    "title": "Por qué elegir Boat4You",
+    "mainTitle": "Tu experiencia de chárter de yates inigualable comienza aquí",
+    "description": "Nuestro compromiso con la excelencia nos distingue en la industria competitiva del chárter de yates",
+    "features": {
+      "0": {
+        "title": "Experiencia global probada",
+        "description": "Brókers senior con largas trayectorias en Croacia, Grecia, Italia, España, Francia, Turquía, BVI, Bahamas, Martinica y Granada."
+      },
+      "1": {
+        "title": "Servicio personalizado",
+        "description": "Cada itinerario se construye a tu alrededor. Tiempo en familia, navegación activa, comida y vino, o calas tranquilas. Tú decides el ritmo."
+      },
+      "2": {
+        "title": "Reservas gratuitas",
+        "description": "Mantén opciones y compara yates sin tarifas de reserva adicionales. Plazos y recordatorios claros."
+      },
+      "3": {
+        "title": "Acceso a flota premium",
+        "description": "Monocascos, catamaranes, yates a motor y superyates de flotas de confianza. Nuevos lanzamientos añadidos cada temporada."
+      },
+      "4": {
+        "title": "Reserva segura",
+        "description": "Pagos en custodia a través de pasarelas aprobadas. Manejo de tus datos conforme a GDPR."
+      },
+      "5": {
+        "title": "Soporte 24/7",
+        "description": "Humanos, no bots. Contactos de base, revisiones meteorológicas, ayuda con rutas y respuestas rápidas cuando los planes cambian."
+      }
+    }
+  },
+  "ourPromise": {
+    "title": "Nuestra promesa",
+    "mainTitle": "Aquí es donde comienza una vida de recuerdos: Nuestra promesa de superar todas tus expectativas",
+    "description": "Tu comodidad y seguridad guían cada decisión. Recomendamos rutas que coinciden con la semana que deseas, desde saltos de isla en las Cícladas hasta bancos de arena en las Exumas. Obtienes barcos confiables, una tripulación informada y un plan que funciona en condiciones reales. Buscamos un único resultado. Que te bajes diciendo: Volveríamos a navegar con Boat4You."
+  },
+  "ourFleet": {
+    "title": "Tenemos el barco que quieres, ",
+    "emphasizedTitle": "no importa el tipo que sea",
+    "description": "La mejor selección de barcos online a los mejores precios"
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "hero": {
+    "title": "Rezervirajte jahtu u",
+    "ctaTitle": "jednom kliku.",
+    "description": "Unajmite savršenu jahtu u samo nekoliko klikova. Jednostavno, brzo i bez stresa — vaša morska avantura počinje ovdje."
+  },
+  "generalSearchBar": {
+    "whereAreYouGoing": "Gdje idete?",
+    "selectBoatType": "Odaberite vrste jahti",
+    "where": "Gdje",
+    "searchLocations": "Pretraži lokacije",
+    "when": "Kad",
+    "choosedates": "Odaberi datume",
+    "withWhat": "Tip",
+    "chooseBoat": "Odaberi brod",
+    "chooseDestination": "Odaberi Destinaciju",
+    "chooseTransportation": "Odaberi Prijevoz",
+    "searchBoats": " Pretraži brodove",
+    "aroundCurrentLocation": "Oko trenutne lokacije",
+    "locating": "Tražim lokaciju…",
+    "locationError": "Lokacija nije dostupna"
+  },
+  "destinationsSection": {
+    "theWorldIs": "Najbolje destinacije za",
+    "yours": "charter jahti",
+    "yachts": "jahta",
+    "destinations": {
+      "bahamas": "Bahami",
+      "caribbean": "Karibi",
+      "croatia": "Hrvatska",
+      "france": "Francuska",
+      "greece": "Grčka",
+      "italy": "Italija",
+      "martinique": "Martinik",
+      "montenegro": "Crna Gora",
+      "seychelles": "Sejšeli",
+      "spain": "Španjolska",
+      "türkiye": "Turska",
+      "virginIslandsBritish": "Britanski Djevičanski Otoci",
+      "grenada": "Grenada"
+    }
+  },
+  "whyChooseUsSection": {
+    "whyChoose": "Zašto odabrati nas kao vašeg <strong>profesionalnog charter providera</strong>",
+    "items": {
+      "competitivePricing": {
+        "title": "Konkurentne cijene",
+        "description": "Najbolje cijene bez skrivenih troškova. Vrhunska kvaliteta po nenadmašnim cijenama."
+      },
+      "wideSelection": {
+        "title": "Širok izbor",
+        "description": "Raznolika flota, od luksuznih jahti do jedrilica, za svaku priliku."
+      },
+      "securePayment": {
+        "title": "Sigurno plaćanje",
+        "description": "Sigurnost na razini banke uz pouzdane platne sustave. Vaši su podaci zaštićeni."
+      },
+      "trustedCustomerService": {
+        "title": "Pouzdana korisnička podrška",
+        "description": "Stručna podrška 24/7 za bezbrižnu rezervaciju i nezaboravna iskustva."
+      }
+    }
+  },
+  "ourFleetSection": {
+    "getToKnow": "Imamo brod koji želite, ",
+    "ourFleet": "bez obzira na vrstu",
+    "boatSelection": "Najbolji izbor brodova online po najpovoljnijim cijenama",
+    "boat": "brod",
+    "fleet": {
+      "catamarans": "Katamarani",
+      "gulets": "Guleti",
+      "houseBoats": "House Boats",
+      "luxuryMotorYachts": "Luksuzne motorne jahte",
+      "motorboats": "Motorni brodovi",
+      "motorYachts": "Motorne jahte",
+      "motorSailors": "Motorne jedrilice",
+      "powerCatamarans": "Motorni katamarani",
+      "sailingYachts": "Jedrilice",
+      "miniCruisers": "Mini Kruzeri",
+      "trimarans": "Trimarani",
+      "rubberBoats": "Gumeni čamci"
+    }
+  },
+  "chooseFromFiveHundredLocations": "Više od 40 zemalja za najam plovila i charter jahti po najboljim cijenama",
+  "riskFreeBooking": {
+    "riskFreeBooking": "Sigurno rezerviranje",
+    "save15Now": "Uštedite 15% sada",
+    "cancellingDescription": "Otkazivanje kod nas potpuno je bez rizika i fleksibilno. Nudimo izdašne politike povrata kako bismo zaštitili vašu investiciju."
+  },
+  "blogSection": {
+    "readAboutYour": "Ideje za vaše sljedeće ",
+    "nextHoliday": "jedriličarsko putovanje",
+    "discoverSecretSpots": "Otkrijte tajna mjesta kao lokalci; provjerite naše savjete za vaš sljedeći charter jahte."
+  },
+  "allDestinationsSection": {
+    "allOf": "Istražite naše ",
+    "ourDestinations": "omiljene destinacije za jedrenje",
+    "specialDeals": "Ostvarite posebne ponude i uštedite novac na svakoj rezervaciji.",
+    "continents": {
+      "europe": "Europa",
+      "americas": "Amerika",
+      "asia": "Azija",
+      "africa": "Afrika",
+      "australia": "Australija"
+    }
+  },
+  "languageModal": {
+    "title": "Jezik i valuta",
+    "savePreferences": "Spremi postavke",
+    "languageLabel": "Jezik",
+    "currencyLabel": "Valuta",
+    "languages": {
+      "en": "Engleski",
+      "fr": "Francuski",
+      "de": "Njemački",
+      "pt": "Portugalski",
+      "it": "Talijanski",
+      "es": "Španjolski",
+      "hr": "Hrvatski"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+@use '@/styles/settings/variables' as *;
+@use '@/styles/utils/rem-calc' as *;
+
+.root {
+  &.container {
+    position: relative;
+    overflow: hidden;
+    padding-inline: 0;
+
+    .overlay {
+      position: absolute;
+      right: 0;
+      z-index: 1;
+      background: linear-gradient(270deg, $white 9.5%, rgb(255 255 255 / 0%) 100%);
+      width: rem-calc(80);
+      min-height: 100%;
+      height: fit-content;
+      pointer-events: none;
+    }
+  }
+}

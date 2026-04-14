@@ -1,0 +1,13 @@
+{
+  "request-password-failed": "Richiesta password fallita",
+  "request-password-success": "Richiesta password riuscita",
+  "login-success": "Accesso riuscito",
+  "login-failed": "Accesso fallito",
+  "userUpdated": "Utente aggiornato con successo",
+  "userUpdateFailed": "Aggiornamento utente fallito",
+  "requestCancelBookingSuccess": "Richiesta di cancellazione prenotazione riuscita",
+  "requestCancelBookingFailed": "Richiesta di cancellazione prenotazione fallita",
+  "linkCopied": "Link copiato negli appunti",
+  "reservationNumberCopied": "Numero prenotazione copiato negli appunti",
+  "reservationIdCopied": "Riferimento prenotazione copiato negli appunti"
+}

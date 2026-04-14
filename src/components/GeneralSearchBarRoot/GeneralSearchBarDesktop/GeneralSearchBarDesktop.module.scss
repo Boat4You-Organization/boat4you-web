@@ -1,0 +1,7 @@
+@use '@/styles/utils/rem-calc' as *;
+
+.buttonWrapper {
+  padding: rem-calc(6);
+  display: flex;
+  align-items: stretch;
+}

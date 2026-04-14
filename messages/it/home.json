@@ -1,0 +1,122 @@
+{
+  "hero": {
+    "title": "Prenota uno yacht in",
+    "ctaTitle": "un clic.",
+    "description": "Noleggia il tuo yacht perfetto con pochi click. Facile, veloce e senza stress — la tua avventura di navigazione da sogno inizia qui."
+  },
+  "generalSearchBar": {
+    "whereAreYouGoing": "Dove stai andando?",
+    "selectBoatType": "Seleziona tipo di barca",
+    "where": "Dove",
+    "searchLocations": "Cerca località",
+    "when": "Quando",
+    "choosedates": "Scegli Date",
+    "withWhat": "Con Cosa",
+    "chooseBoat": "Scegli una barca",
+    "chooseDestination": "Scegli Destinazione",
+    "chooseTransportation": "Scegli Trasporto",
+    "searchBoats": "Cerca barche",
+    "aroundCurrentLocation": "Around current location",
+    "locating": "Locating…",
+    "locationError": "Couldn't get your location"
+  },
+  "destinationsSection": {
+    "theWorldIs": "Migliori destinazioni per",
+    "yours": "il noleggio yacht",
+    "yachts": "yacht",
+    "destinations": {
+      "bahamas": "Bahamas",
+      "caribbean": "Caraibi",
+      "croatia": "Croazia",
+      "france": "Francia",
+      "greece": "Grecia",
+      "italy": "Italia",
+      "martinique": "Martinica",
+      "montenegro": "Montenegro",
+      "seychelles": "Seychelles",
+      "spain": "Spagna",
+      "türkiye": "Turchia",
+      "virginIslandsBritish": "Isole Vergini (Britanniche)",
+      "grenada": "Grenada"
+    }
+  },
+  "whyChooseUsSection": {
+    "whyChoose": "Perché scegliere noi come tuo <strong>fornitore di charter professionale</strong>",
+    "items": {
+      "competitivePricing": {
+        "title": "Prezzi Competitivi",
+        "description": "Migliori tariffe senza costi nascosti. Qualità premium a prezzi imbattibili."
+      },
+      "wideSelection": {
+        "title": "Ampia Selezione",
+        "description": "Flotta diversificata da yacht di lusso a barche a vela per ogni occasione."
+      },
+      "securePayment": {
+        "title": "Pagamento Sicuro",
+        "description": "Sicurezza a livello bancario con gateway di pagamento affidabili. I tuoi dati sono al sicuro."
+      },
+      "trustedCustomerService": {
+        "title": "Servizio Clienti Affidabile",
+        "description": "Supporto esperto 24/7 per prenotazioni senza problemi ed esperienze indimenticabili."
+      }
+    }
+  },
+  "ourFleetSection": {
+    "getToKnow": "Abbiamo la barca che desideri, ",
+    "ourFleet": "non importa di che tipo sia",
+    "boatSelection": "La migliore selezione di barche online ai migliori prezzi",
+    "boat": "barca",
+    "fleet": {
+      "catamarans": "Catamarani",
+      "gulets": "Gulet",
+      "houseBoats": "Case Galleggianti",
+      "luxuryMotorYachts": "Yacht a Motore di Lusso",
+      "motorboats": "Motoscafi",
+      "motorYachts": "Yacht a Motore",
+      "motorSailors": "Motorsailer",
+      "powerCatamarans": "Catamarani a Motore",
+      "sailingYachts": "Yacht a Vela",
+      "miniCruisers": "Mini Cruiser",
+      "trimarans": "Trimarano",
+      "rubberBoats": "Gommone"
+    }
+  },
+  "chooseFromFiveHundredLocations": "Più di 40 paesi per il noleggio di barche e yacht con i migliori prezzi",
+  "riskFreeBooking": {
+    "riskFreeBooking": "Prenotazione senza rischi",
+    "save15Now": "Risparmia il 15% ora",
+    "cancellingDescription": "Cancellare con noi è completamente senza rischi e flessibile. Offriamo generose politiche di rimborso per proteggere il tuo investimento."
+  },
+  "blogSection": {
+    "readAboutYour": "Idee per la tua prossima ",
+    "nextHoliday": "vacanza in barca a vela",
+    "discoverSecretSpots": "Scopri luoghi segreti come fanno i locali; consulta i nostri consigli per il tuo prossimo noleggio yacht."
+  },
+  "allDestinationsSection": {
+    "allOf": "Esplora i nostri ",
+    "ourDestinations": "luoghi di navigazione preferiti",
+    "specialDeals": "Ottieni offerte speciali e risparmia denaro su ogni prenotazione.",
+    "continents": {
+      "europe": "Europa",
+      "americas": "Americhe",
+      "asia": "Asia",
+      "africa": "Africa",
+      "australia": "Australia"
+    }
+  },
+  "languageModal": {
+    "title": "Lingua e valuta",
+    "savePreferences": "Salva preferenze",
+    "languageLabel": "Lingua",
+    "currencyLabel": "Valuta",
+    "languages": {
+      "en": "Inglese",
+      "fr": "Francese",
+      "de": "Tedesco",
+      "pt": "Portoghese",
+      "it": "Italiano",
+      "es": "Spagnolo",
+      "hr": "Croato"
+    }
+  }
+}

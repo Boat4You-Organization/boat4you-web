@@ -1,0 +1,13 @@
+{
+  "request-password-failed": "Passwort-Anfrage fehlgeschlagen",
+  "request-password-success": "Passwort-Anfrage erfolgreich",
+  "login-success": "Anmeldung erfolgreich",
+  "login-failed": "Anmeldung fehlgeschlagen",
+  "userUpdated": "Benutzer erfolgreich aktualisiert",
+  "userUpdateFailed": "Benutzer-Aktualisierung fehlgeschlagen",
+  "requestCancelBookingSuccess": "Stornierungsanfrage erfolgreich",
+  "requestCancelBookingFailed": "Stornierungsanfrage fehlgeschlagen",
+  "linkCopied": "Link in die Zwischenablage kopiert",
+  "reservationNumberCopied": "Reservierungsnummer in die Zwischenablage kopiert",
+  "reservationIdCopied": "Buchungsreferenz in die Zwischenablage kopiert"
+}

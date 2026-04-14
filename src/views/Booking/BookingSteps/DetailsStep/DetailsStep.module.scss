@@ -1,0 +1,35 @@
+@use '@/styles/settings/variables' as *;
+@use '@/styles/utils/rem-calc' as *;
+@use '@/styles/mixins/breakpoints' as *;
+
+.container {
+  .card {
+    border: rem-calc(1) solid $blue-200;
+    border-radius: rem-calc(10);
+    background-color: $blue-50;
+    padding: rem-calc(16);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: rem-calc(8);
+
+    @include media(sm) {
+      flex-direction: row;
+      gap: rem-calc(24);
+      padding: rem-calc(24);
+    }
+
+    > *:last-child {
+      flex-shrink: 0;
+    }
+  }
+
+  .link {
+    display: flex;
+    align-items: center;
+    gap: rem-calc(8);
+    color: $blue-500;
+    text-decoration: underline;
+  }
+}

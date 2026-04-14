@@ -1,0 +1,122 @@
+{
+  "hero": {
+    "title": "Reserve um iate em",
+    "ctaTitle": "um clique.",
+    "description": "Alugue seu iate perfeito em apenas alguns cliques. Fácil, rápido e sem estresse — sua aventura de navegação dos sonhos começa aqui."
+  },
+  "generalSearchBar": {
+    "whereAreYouGoing": "Para onde você vai?",
+    "selectBoatType": "Selecionar tipo de barco",
+    "where": "Onde",
+    "searchLocations": "Buscar localizações",
+    "when": "Quando",
+    "choosedates": "Escolher Datas",
+    "withWhat": "Com o Quê",
+    "chooseBoat": "Escolher um barco",
+    "chooseDestination": "Escolher Destino",
+    "chooseTransportation": "Escolher Transporte",
+    "searchBoats": "Buscar barcos",
+    "aroundCurrentLocation": "Around current location",
+    "locating": "Locating…",
+    "locationError": "Couldn't get your location"
+  },
+  "destinationsSection": {
+    "theWorldIs": "Melhores destinos para",
+    "yours": "aluguel de iates",
+    "yachts": "iates",
+    "destinations": {
+      "bahamas": "Bahamas",
+      "caribbean": "Caribe",
+      "croatia": "Croácia",
+      "france": "França",
+      "greece": "Grécia",
+      "italy": "Itália",
+      "martinique": "Martinica",
+      "montenegro": "Montenegro",
+      "seychelles": "Seychelles",
+      "spain": "Espanha",
+      "türkiye": "Turquia",
+      "virginIslandsBritish": "Ilhas Virgens (Britânicas)",
+      "grenada": "Granada"
+    }
+  },
+  "whyChooseUsSection": {
+    "whyChoose": "Por que nos escolher como seu <strong>fornecedor profissional de charter</strong>",
+    "items": {
+      "competitivePricing": {
+        "title": "Preços Competitivos",
+        "description": "Melhores tarifas sem taxas ocultas. Qualidade premium a preços imbatíveis."
+      },
+      "wideSelection": {
+        "title": "Ampla Seleção",
+        "description": "Frota diversificada desde iates de luxo até veleiros para todas as ocasiões."
+      },
+      "securePayment": {
+        "title": "Pagamento Seguro",
+        "description": "Segurança de nível bancário com gateways de pagamento confiáveis. Seus dados estão seguros."
+      },
+      "trustedCustomerService": {
+        "title": "Atendimento ao Cliente Confiável",
+        "description": "Suporte especializado 24/7 para reservas perfeitas e experiências inesquecíveis."
+      }
+    }
+  },
+  "ourFleetSection": {
+    "getToKnow": "Temos o barco que você deseja, ",
+    "ourFleet": "não importa o tipo",
+    "boatSelection": "A melhor seleção de barcos online com os melhores preços",
+    "boat": "barco",
+    "fleet": {
+      "catamarans": "Catamarãs",
+      "gulets": "Gulets",
+      "houseBoats": "Casas Flutuantes",
+      "luxuryMotorYachts": "Iates Motor de Luxo",
+      "motorboats": "Lanchas",
+      "motorYachts": "Iates Motor",
+      "motorSailors": "Motor-Veleiros",
+      "powerCatamarans": "Catamarãs a Motor",
+      "sailingYachts": "Iates à Vela",
+      "miniCruisers": "Mini Cruzeiros",
+      "trimarans": "Trimarãs",
+      "rubberBoats": "Botes Infláveis"
+    }
+  },
+  "chooseFromFiveHundredLocations": "Mais de 40 países para aluguel de barcos e charter de iates com os melhores preços",
+  "riskFreeBooking": {
+    "riskFreeBooking": "Reserva sem risco",
+    "save15Now": "Economize 15% agora",
+    "cancellingDescription": "Cancelar conosco é totalmente sem risco e flexível. Oferecemos políticas generosas de reembolso para proteger seu investimento."
+  },
+  "blogSection": {
+    "readAboutYour": "Ideias para suas próximas ",
+    "nextHoliday": "férias de navegação",
+    "discoverSecretSpots": "Descubra lugares secretos como os locais; confira nossos conselhos para o seu próximo charter de iate."
+  },
+  "allDestinationsSection": {
+    "allOf": "Explore nossos ",
+    "ourDestinations": "lugares favoritos para navegar",
+    "specialDeals": "Obtenha ofertas especiais e economize dinheiro em cada reserva.",
+    "continents": {
+      "europe": "Europa",
+      "americas": "Américas",
+      "asia": "Ásia",
+      "africa": "África",
+      "australia": "Austrália"
+    }
+  },
+  "languageModal": {
+    "title": "Idioma e moeda",
+    "savePreferences": "Salvar preferências",
+    "languageLabel": "Idioma",
+    "currencyLabel": "Moeda",
+    "languages": {
+      "en": "Inglês",
+      "fr": "Francês",
+      "de": "Alemão",
+      "pt": "Português",
+      "it": "Italiano",
+      "es": "Espanhol",
+      "hr": "Croata"
+    }
+  }
+}

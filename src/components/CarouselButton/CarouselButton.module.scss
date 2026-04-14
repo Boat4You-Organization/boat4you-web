@@ -1,0 +1,31 @@
+@use '@/styles/settings/variables' as *;
+@use '@/styles/utils/rem-calc' as *;
+
+.root {
+  &.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: auto;
+    width: rem-calc(42);
+    height: rem-calc(42);
+    border-radius: 50%;
+    background-color: $black-100;
+    color: $black-600;
+
+    &:hover {
+      background-color: $black-200;
+      color: $black-800;
+    }
+
+    &:active {
+      background-color: $black-300;
+      color: $black-900;
+    }
+
+    &:disabled {
+      background-color: $black-100;
+      color: $black-200;
+    }
+  }
+}

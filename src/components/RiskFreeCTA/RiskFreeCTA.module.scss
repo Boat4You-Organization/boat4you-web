@@ -1,0 +1,54 @@
+@use '@/styles/utils/rem-calc' as *;
+@use '@/styles/settings/variables' as *;
+@use '@/styles/mixins/breakpoints' as *;
+
+.root {
+  &.containerWrapper {
+    padding: 0;
+
+    .container {
+      padding-block: rem-calc(42);
+
+      &.searchPage {
+        padding-block: rem-calc(24);
+        padding-inline: 0;
+      }
+
+      @include media(0, 'sm') {
+        padding-block: rem-calc(62 92);
+      }
+
+      .card {
+        background-color: $blue-50;
+        border-radius: rem-calc(12);
+        position: relative;
+
+        .content {
+          width: 100%;
+          max-width: rem-calc(506);
+
+          @include media(0, 'md') {
+            max-width: 100%;
+          }
+        }
+
+        .vector {
+          display: flex;
+          align-items: stretch;
+          justify-content: center;
+          height: 100%;
+
+          svg {
+            height: 100%;
+            max-width: rem-calc(503);
+
+            @include media(0, 'sm') {
+              max-width: 100%;
+              height: rem-calc(204);
+            }
+          }
+        }
+      }
+    }
+  }
+}

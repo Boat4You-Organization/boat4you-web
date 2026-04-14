@@ -1,0 +1,30 @@
+@use '@/styles/utils/rem-calc' as *;
+@use '@/styles/settings/variables' as *;
+@use '@/styles/mixins/breakpoints' as *;
+
+.container {
+  border-radius: rem-calc(10);
+  border: rem-calc(1) solid $black-200;
+  box-shadow: rem-calc(0 1 11 0) rgb(0 0 0 / 10%);
+  padding: rem-calc(16);
+  position: sticky;
+  height: fit-content;
+  top: rem-calc(122);
+
+  @include media(0, 'md') {
+    position: static;
+    border: none;
+    box-shadow: none;
+    padding-inline: 0;
+  }
+
+  .confirmationNumber {
+    background-color: $blue-50;
+    padding: rem-calc(16 26);
+    border-radius: rem-calc(10);
+
+    .copyButton {
+      background-color: $blue-50;
+    }
+  }
+}

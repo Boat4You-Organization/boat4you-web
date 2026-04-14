@@ -1,0 +1,39 @@
+@use '@/styles/utils/rem-calc' as *;
+@use '@/styles/settings/variables' as *;
+@use '@/styles/mixins/breakpoints' as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: rem-calc(24);
+
+  @include media('sm') {
+    flex-direction: row;
+    gap: rem-calc(54);
+  }
+
+  .step {
+    padding: rem-calc(6 8);
+    background-color: $blue-50;
+    border-radius: rem-calc(8);
+  }
+
+  .itemsContainer {
+    display: flex;
+    flex-direction: column;
+    padding-left: rem-calc(16);
+    position: relative;
+    margin-left: rem-calc(10);
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: rem-calc(4);
+      height: 100%;
+      background: $blue-100;
+    }
+  }
+}

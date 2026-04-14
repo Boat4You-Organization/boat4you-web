@@ -1,0 +1,37 @@
+@use '@/styles/settings/variables' as *;
+@use '@/styles/utils/rem-calc' as *;
+
+.root {
+  &.container {
+    display: flex;
+    align-items: flex-start;
+    gap: rem-calc(16);
+    width: 100%;
+
+    .cardMedia {
+      position: relative;
+      width: rem-calc(104);
+      height: rem-calc(104);
+      flex-shrink: 0;
+
+      .image {
+        border-radius: rem-calc(5);
+      }
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: rem-calc(0);
+
+      .link {
+        display: flex;
+        align-items: center;
+        gap: rem-calc(8);
+        color: $blue-500;
+        text-decoration: underline;
+      }
+    }
+  }
+}

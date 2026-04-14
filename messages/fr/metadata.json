@@ -1,0 +1,53 @@
+{
+  "metadata": {
+    "base": {
+      "title": "Boat4You | Location de Bateaux Facile & Sécurisée Mondiale",
+      "titleTemplate": "%s | Boat4You",
+      "description": "Parcourez et réservez des bateaux dans plus de 100 pays. Voiliers, catamarans, bateaux à moteur – avec ou sans skipper. Meilleurs prix. Réservation sécurisée. Support 24h/7j.",
+      "path": ""
+    },
+    "search": {
+      "title": "Recherche de yachts",
+      "description": "Louez votre yacht parfait en quelques clics seulement. Simple, rapide et sans stress — votre aventure nautique de rêve commence ici.",
+      "path": "/search"
+    },
+    "blog": {
+      "title": "Guides Location de Yacht | Planification, Itinéraires, Actualités",
+      "description": "Les guides experts de location de yacht Boat4You fournissent inspiration et conseils pour des vacances en yacht, comment choisir le bon bateau et où naviguer.",
+      "path": "/blog"
+    },
+    "aboutUs": {
+      "title": "Votre aventure maritime mondiale commence ici",
+      "description": "Chez Boat4You nous transformons vos rêves de navigation en aventures inoubliables à travers les eaux les plus spectaculaires du monde.",
+      "path": "/about-us"
+    },
+    "contactUs": {
+      "title": "Contactez-nous maintenant",
+      "description": "Chez Boat4You nous sommes passionnés par la création d'expériences de location de yacht inoubliables.",
+      "path": "/contact-us"
+    },
+    "howWeWork": {
+      "title": "Réserver un bateau n'a jamais été aussi facile",
+      "description": "Chez Boat4You nous croyons que louer un bateau doit être aussi fluide et excitant que le voyage lui-même.",
+      "path": "/how-we-work"
+    },
+    "faq": {
+      "title": "Réservation & Disponibilité",
+      "description": "Trouvez des réponses rapides sur les fonctionnalités de Boat4You, la configuration, les tarifs et le support.",
+      "path": "/faq"
+    },
+    "termsAndConditions": {
+      "title": "Conditions Générales Boat4You",
+      "description": "Consultez les conditions générales d'utilisation de Boat4You, y compris les responsabilités des utilisateurs, les paiements et les politiques de compte.",
+      "path": "/terms-and-conditions"
+    },
+    "privacyPolicy": {
+      "title": "Politique de Confidentialité",
+      "description": "Découvrez comment Boat4You collecte, utilise et protège vos données personnelles lors de l'utilisation de notre site web et de nos services.",
+      "path": "/privacy-policy"
+    }
+  },
+  "boat": {
+    "forRent": "à louer"
+  }
+}

@@ -1,0 +1,29 @@
+@use '@/styles/settings/variables' as *;
+@use '@/styles/utils/rem-calc' as *;
+
+.root {
+  &.container {
+    overflow: hidden;
+    cursor: pointer;
+
+    .imageWrapper {
+      position: relative;
+      aspect-ratio: 305 / 227;
+      border-radius: rem-calc(12);
+      overflow: hidden;
+
+      .image {
+        object-fit: cover;
+        transition: transform $animation-duration-normal ease;
+      }
+    }
+
+    &:hover .imageWrapper .image {
+      transform: scale(1.1);
+    }
+
+    .content {
+      padding: rem-calc(18 0 0 0);
+    }
+  }
+}

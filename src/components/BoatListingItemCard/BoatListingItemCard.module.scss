@@ -1,0 +1,109 @@
+@use '@/styles/settings/variables' as *;
+@use '@/styles/utils/rem-calc' as *;
+@use '@/styles/mixins/breakpoints' as *;
+
+.root {
+  &.container {
+    padding: rem-calc(16);
+    border: rem-calc(1) solid $black-200;
+    border-radius: rem-calc(10);
+    display: flex;
+    gap: rem-calc(16);
+    height: 100%;
+    transition: border-color $animation-duration-fast ease;
+
+    &.gridView {
+      flex-direction: column;
+    }
+
+    &:hover {
+      border-color: $black-950;
+    }
+
+    &:active {
+      border-color: $blue-500;
+    }
+
+    @include media(0, 'md') {
+      flex-direction: column;
+      gap: rem-calc(24);
+    }
+
+    .imageWrapper {
+      position: relative;
+      width: rem-calc(388);
+      height: rem-calc(268);
+
+      &.gridView {
+        width: 100%;
+      }
+
+      @include media(0, 'md') {
+        width: 100%;
+      }
+
+      .image {
+        object-fit: cover;
+        border-radius: rem-calc(10);
+        pointer-events: none;
+      }
+
+      .favoriteButton {
+        position: absolute;
+        top: rem-calc(12);
+        left: rem-calc(12);
+      }
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+      padding-bottom: 0;
+      flex: 1;
+
+      .icon {
+        color: $black-300;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        &:hover {
+          color: $black-950;
+        }
+      }
+
+      .actions {
+        display: flex;
+        justify-content: flex-end;
+        gap: rem-calc(12);
+
+        &.gridView {
+          margin-top: rem-calc(24);
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        @include media(0, 'md') {
+          margin-top: rem-calc(30);
+          flex-direction: column;
+          align-items: stretch;
+          gap: rem-calc(16);
+        }
+
+        .button {
+          width: auto;
+
+          &.fullwidth {
+            width: 100%;
+          }
+
+          @include media(0, 'md') {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

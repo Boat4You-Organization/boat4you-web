@@ -1,0 +1,12 @@
+@use '@/styles/utils/rem-calc' as *;
+@use '@/styles/mixins/breakpoints' as *;
+
+.container {
+  margin-top: rem-calc(192);
+  width: 100%;
+  max-width: rem-calc(846);
+
+  @include media(0, 'sm') {
+    margin-top: rem-calc(132);
+  }
+}

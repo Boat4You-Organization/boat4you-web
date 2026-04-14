@@ -1,0 +1,29 @@
+@use '@/styles/settings/variables' as *;
+@use '@/styles/utils/rem-calc' as *;
+@use '@/styles/mixins/breakpoints' as *;
+
+.imageWrapper {
+  position: relative;
+  width: rem-calc(80);
+  height: rem-calc(53);
+  overflow: hidden;
+  border-radius: rem-calc(5);
+
+  .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.countryWrapper {
+  position: relative;
+  width: rem-calc(28);
+  height: rem-calc(28);
+
+  .country {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}

@@ -1,0 +1,22 @@
+@use '@/styles/settings/variables' as *;
+@use '@/styles/utils/rem-calc' as *;
+@use '@/styles/mixins/breakpoints' as *;
+
+.container {
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+
+  .link {
+    padding-top: rem-calc(16);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .button {
+      margin: auto;
+      width: 100%;
+      max-width: rem-calc(360);
+    }
+  }
+}

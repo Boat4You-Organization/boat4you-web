@@ -1,0 +1,29 @@
+@use '@/styles/settings/variables' as *;
+@use '@/styles/utils/rem-calc' as *;
+@use '@/styles/mixins/breakpoints' as *;
+
+.container {
+  padding-top: rem-calc(172);
+
+  @include media(0, 'md') {
+    padding-top: rem-calc(138);
+  }
+
+  .imageWrapper {
+    min-width: 100%;
+    width: 100%;
+    height: rem-calc(458);
+
+    @include media(0, 'md') {
+      height: rem-calc(224);
+    }
+  }
+
+  .root {
+    &.divider {
+      margin-block: rem-calc(84);
+      border-color: $black-200;
+      border-width: rem-calc(1.5);
+    }
+  }
+}

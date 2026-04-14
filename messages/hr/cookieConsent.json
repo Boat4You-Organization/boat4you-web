@@ -1,0 +1,38 @@
+{
+  "title": "Kolačići",
+  "description": "Koristimo kolačiće kako bismo poboljšali vaše iskustvo!",
+  "mainTitle": "Cookie Policy",
+  "mainDescription": "Koristimo kolačiće kako bismo poboljšali vaše iskustvo na Boat4You platformi, analizirali korištenje naše web stranice i unaprijedili naš sustav za rezervaciju brodova. Ovi kolačići nam pomažu u pružanju personaliziranog sadržaja i osiguravaju da naša platforma radi optimalno za vaše potrebe. Prikupljamo nužne kolačiće za funkcionalnost platforme, analitičke podatke za poboljšanje korisničkog iskustva, te postavke za personalizaciju vašeg prikaza. Saznajte više o našoj <link>Politici privatnosti</link>.",
+  "buttons": {
+    "accept": "Prihvati sve",
+    "reject": "Prihvati samo nužne",
+    "manage": "Postavke kolačića",
+    "save": "Sačuvaj promjene"
+  },
+  "cookieList": {
+    "name": "Naziv",
+    "domain": "Domena",
+    "duration": "Trajanje",
+    "description": "Opis"
+  },
+  "necessary": {
+    "title": "Nužni kolačići",
+    "description": "Ovi kolačići su neophodni za pravilno funkcioniranje naše web stranice i ne mogu se isključiti. Omogućuju osnovnu funkcionalnost kao što su sigurnost obrazaca, jezične postavke i osnovna navigacija stranicom. Možete blokirati ove kolačiće u svom pregledniku, ali neki dijelovi web stranice možda neće raditi pravilno. Ovi kolačići ne pohranjuju osobne podatke koji vas mogu identificirati."
+  },
+  "analytics": {
+    "title": "Analitički kolačići",
+    "description": "Ovi kolačići nam pomažu razumjeti kako posjetitelji koriste našu web stranicu prikupljanjem anonimnih informacija o obrascima korištenja, popularnim stranicama i područjima za poboljšanje. Koristimo ove podatke za optimizaciju performansi naše platforme i poboljšanje korisničkog iskustva za korisnike koji traže brodove za najam.",
+    "cookies": [
+      {
+        "name": "_ga",
+        "domain": "www.boat4you.hr",
+        "duration": "400 dana",
+        "description": "Google Analytics kolačić koji razlikuje jedinstvene korisnike i prikuplja anonimne podatke o prometu na web stranici, interakcijama korisnika i trendovima kako bi nam pomogao poboljšati našu platformu za rezervaciju brodova i korisničko iskustvo."
+      }
+    ]
+  },
+  "marketing": {
+    "title": "Marketing kolačići",
+    "description": "Ovi kolačići nam pomažu razumjeti učinkovitost našeg marketinga i prepoznati potencijalne korisnike zainteresirane za našu platformu za rezervaciju brodova. Koristimo ih za praćenje interakcija na web stranici kako bismo poboljšali našu komunikaciju s korisnicima koji traže nautičke usluge. Ovi kolačići se učitavaju samo uz vašu privolu koju možete povući u bilo kojem trenutku."
+  }
+}

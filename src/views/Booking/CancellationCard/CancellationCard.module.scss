@@ -1,0 +1,23 @@
+@use '@/styles/settings/variables' as *;
+@use '@/styles/utils/rem-calc' as *;
+@use '@/styles/mixins/breakpoints' as *;
+
+.container {
+  border: none;
+  padding: rem-calc(48 0);
+
+  &.lastStep {
+    padding-block: rem-calc(0 48);
+  }
+
+  @include media(sm) {
+    border: rem-calc(1) solid $black-200;
+    border-radius: rem-calc(10);
+    padding: rem-calc(24 16);
+
+    &.compact {
+      padding: 0;
+      border: none;
+    }
+  }
+}

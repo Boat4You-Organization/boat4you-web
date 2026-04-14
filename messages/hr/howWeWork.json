@@ -1,0 +1,115 @@
+{
+  "hero": {
+    "title": "Rezervacija broda nikada <strong>nije bila lakša.</strong>",
+    "description": "U <logo></logo> <companyName>Boat4You</companyName> održavamo proces jednostavnim. Vi nam kažete gdje i kada. Mi vas povezujemo s pravom jahtom i posadom. Hrvatska, Grčka, Italija, Španjolska, Turska ili Karibi. Mi se brinemo za detalje kako biste vi uživali u putovanju."
+  },
+  "step": "Korak",
+  "steps": {
+    "step1": {
+      "title": "Otkrijte svoj savršen brod",
+      "subtitle": "Istražite našu odabranu flotu",
+      "items": {
+        "item1": "Pretražujte po destinaciji, tipu broda ili datumima putovanja.",
+        "item2": "Koristite pametne filtere da pronađete točno ono što vam odgovara — od luksuznih katamarana do obiteljskih motornih čamaca.",
+        "item3": "Svaki oglas uključuje provjerene detalje, transparentne cijene, stvarne fotografije i potpune specifikacije."
+      },
+      "question": "Trebate pomoć u odabiru?",
+      "answer": "Naši charter stručnjaci su samo klik udaljeni. Pomoći ćemo vam usporediti, preporučiti opcije i voditi vas ako niste sigurni.",
+      "link": {
+        "text": "Pregledajte našu flotu"
+      }
+    },
+    "step2": {
+      "title": "Pošaljite besplatan upit",
+      "subtitle": "Bez obveze, bez pritiska",
+      "items": {
+        "item1": "Pronašli ste nešto što volite? Samo kliknite \"Zatražite ponudu\"",
+        "item2": "Recite nam svoje datume, veličinu grupe i preferencije.",
+        "item3": "Dobit ćete personalizirane ponude i najnoviju dostupnost — često s ekskluzivnim popustima!"
+      },
+      "question": "Fleksibilne opcije",
+      "answer": "Želite skippera? Trebate hostesu? Tražite jednosmjernu rutu? Prilagodit ćemo vaš charter da odgovara vašim planovima.",
+      "link": {
+        "text": "Kontaktirajte nas"
+      }
+    },
+    "step3": {
+      "title": "Dobijte personaliziranu ponudu",
+      "subtitle": "Jasne cijene. Bez skrivenih troškova.",
+      "items": {
+        "item1": "Detaljna ponuda temeljena na vašem odabranom brodu i dodacima",
+        "item2": "Transparentne informacije o porezima, depozitima i opcionalnim uslugama",
+        "item3": "Prava osoba koja vas vodi kroz detalje, ne robot"
+      },
+      "answer": "Vjerujemo u jasnoću, ne u sitna slova."
+    },
+    "step4": {
+      "title": "Rezervirajte svoj brod",
+      "subtitle": "Osigurajte svoju jahtu u samo nekoliko klikova",
+      "items": {
+        "item1": "Kada ste spremni, poslat ćemo vam sigurnu poveznicu za plaćanje.",
+        "item2": "Platite depozit za potvrdu rezervacije — obično 30-50% cijene chartera.",
+        "item3": "Vaš brod je službeno vaš!"
+      },
+      "answer": "Dobit ćete trenutnu potvrdu i pristup vašoj nadzornoj ploči za rezervacije."
+    },
+    "step5": {
+      "title": "Finalizirajte i pripremite se",
+      "subtitle": "Prije vašeg putovanja:",
+      "items": {
+        "item1": "Platite ostatak (obično 4 tjedna prije polaska)",
+        "item2": "Predajte listu posade/putnika",
+        "item3": "Pružit ćemo vam informacije o bazi, detalje ukrcavanja i kontrolnu listu za pakiranje"
+      },
+      "answer": "Sve je riješeno — tako da se možete opustiti i veseliti se odmoru."
+    },
+    "step6": {
+      "title": "Zaplovite",
+      "subtitle": "Dobrodošli na brod!",
+      "items": {
+        "item1": "Upoznajte svoju jahtu u marini",
+        "item2": "Prijavite se kod tima u bazi (ili skippera, ako je uključen)",
+        "item3": "Prođite kroz kratku predaju i sigurnosnu prezentaciju"
+      },
+      "answer": "Odavde je sve o suncu, moru i jedrenju. Bilo da ste na skipper avanturi ili jedrite sami, uvijek smo samo poziv udaljeni."
+    },
+    "step7": {
+      "title": "Nakon vašeg putovanja",
+      "subtitle": "Gladak proces povratka",
+      "items": {
+        "item1": "Brza odjava i inspekcija",
+        "item2": "Podijelite povratne informacije ili recenzije — volimo čuti od vas!",
+        "item3": "Dobijte pomoć za vašu sljedeću rezervaciju (mnogi klijenti ponovno jedre s nama!)"
+      }
+    }
+  },
+  "whyChooseUsSection": {
+    "whyChoose": "Zašto odabrati boat4you?",
+    "items": {
+      "verifiedBoatsOnly": {
+        "title": "Samo provjereni brodovi",
+        "description": "Bez iznenađenja, samo vrhunske jahte."
+      },
+      "localExpertise": {
+        "title": "Lokalna stručnost",
+        "description": "Poznajemo obale kao dlan svoje ruke"
+      },
+      "realHumanSupport": {
+        "title": "Prava ljudska podrška",
+        "description": "Prije, tijekom i nakon vašeg putovanja"
+      },
+      "bestPriceGuarantee": {
+        "title": "Garancija najbolje cijene",
+        "description": "Uvijek poštene cijene, bez naknada za rezervaciju"
+      }
+    }
+  },
+  "cta": {
+    "title": "Imate pitanja? Razgovarajmo",
+    "description": "Trebate savjet? Želite razgovarati sa stručnjakom za najam brodova? Naš tim je tu da vam pomogne — putem chata, emaila ili telefona.",
+    "cta": "Kontaktirajte nas odmah"
+  },
+  "faq": {
+    "title": "Često postavljena pitanja"
+  }
+}

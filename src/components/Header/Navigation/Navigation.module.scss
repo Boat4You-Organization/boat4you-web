@@ -1,0 +1,18 @@
+@use '@/styles/settings/variables' as *;
+@use '@/styles/utils/rem-calc' as *;
+
+.link {
+  color: $black-950;
+  padding: rem-calc(8);
+  border-radius: rem-calc(5);
+  transition: $animation-duration-fast background-color ease;
+
+  &:hover {
+    background-color: $black-100;
+  }
+
+  &.active {
+    background-color: $blue-50;
+    color: $blue-500;
+  }
+}

@@ -1,0 +1,21 @@
+@use '@/styles/utils/rem-calc' as *;
+
+.container {
+  padding-block: rem-calc(68 62);
+
+  .grid {
+    width: 100%;
+    max-width: rem-calc(980);
+    margin-inline: auto;
+
+    .item {
+      display: flex;
+      justify-content: flex-start;
+      gap: rem-calc(16);
+
+      > *:first-child {
+        flex-shrink: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@use '@/styles/utils/rem-calc' as *;
+@use '@/styles/mixins/breakpoints' as *;
+
+.container {
+  padding-block: rem-calc(42);
+
+  @include media(0, 'sm') {
+    padding-block: rem-calc(92);
+  }
+
+  .overlay {
+    bottom: rem-calc(42);
+    height: rem-calc(473);
+
+    @include media(0, 'sm') {
+      bottom: rem-calc(92);
+    }
+  }
+}

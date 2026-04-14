@@ -1,0 +1,53 @@
+@use '@/styles/settings/variables' as *;
+@use '@/styles/utils/rem-calc' as *;
+@use '@/styles/mixins/breakpoints' as *;
+
+.root {
+  &.imageList {
+    .imageItem {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+
+      .image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        cursor: pointer;
+      }
+    }
+
+    .firstItem {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+
+    &.threeImagesLayout {
+      .imageItem {
+        &:nth-child(2) {
+          grid-column: span 2;
+          grid-row: span 1;
+        }
+
+        &:nth-child(3) {
+          grid-column: span 2;
+          grid-row: span 1;
+        }
+      }
+    }
+
+    @include media(0, 'sm') {
+      grid-template-columns: 1;
+
+      .imageItem {
+        display: none;
+      }
+
+      .firstItem {
+        grid-column: span 4;
+        grid-row: span 4;
+        display: block;
+      }
+    }
+  }
+}

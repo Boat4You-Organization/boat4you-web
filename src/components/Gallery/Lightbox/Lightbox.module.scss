@@ -1,0 +1,140 @@
+@use '@/styles/settings/variables' as *;
+@use '@/styles/utils/rem-calc' as *;
+@use '@/styles/mixins/breakpoints' as *;
+
+.container {
+  @include media(0, 'sm') {
+    overflow: auto;
+  }
+
+  .headerWrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-block: rem-calc(16);
+    z-index: 1400;
+    width: 100%;
+    background-color: $white;
+    border-bottom: rem-calc(1) solid $black-200;
+
+    .header {
+      margin: auto;
+      width: 100%;
+      max-width: rem-calc(1280);
+      padding-inline: rem-calc(24);
+
+      @include media(0, 'sm') {
+        padding-inline: rem-calc(16);
+      }
+
+      .iconsMobile {
+        display: none;
+
+        @include media(0, 'sm') {
+          display: flex;
+        }
+      }
+
+      .iconsDesktop {
+        display: flex;
+
+        @include media(0, 'sm') {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .sliderWrapper {
+    padding-block: rem-calc(116 38);
+    margin-inline: rem-calc(42);
+    margin-top: 0;
+
+    @include media(0, 'sm') {
+      margin-inline: rem-calc(0);
+    }
+
+    .imageWrapper {
+      position: relative;
+      height: calc(100dvh - rem-calc(236));
+      max-width: rem-calc(872);
+      margin: auto;
+      overflow: visible;
+
+      .image {
+        margin-block: auto;
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+        display: block;
+      }
+    }
+  }
+
+  .navigation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: rem-calc(1280);
+    padding-inline: rem-calc(24);
+
+    @include media(0, 'sm') {
+      padding-inline: rem-calc(38);
+    }
+  }
+
+  .thumbnailsWrapper {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: $white;
+    padding: rem-calc(24);
+    z-index: 1400;
+
+    .thumbnailsContainer {
+      max-width: rem-calc(1280);
+      margin: 0 auto;
+
+      .thumbnailSlider {
+        margin: 0;
+
+        .thumbnailSlide {
+          position: relative;
+          width: rem-calc(134);
+          height: rem-calc(90);
+          border-radius: rem-calc(16);
+          cursor: pointer;
+          border: rem-calc(2) solid transparent;
+          transition: border-color $animation-duration-fast ease;
+          padding: rem-calc(3);
+
+          @include media(0, 'sm') {
+            width: rem-calc(116);
+            height: rem-calc(78);
+          }
+
+          &.active {
+            border-color: $blue-500;
+          }
+
+          .box {
+            position: relative;
+            border-radius: rem-calc(16);
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+
+            .thumbnailImage {
+              height: 100%;
+              width: 100%;
+              object-fit: cover;
+            }
+          }
+        }
+      }
+    }
+  }
+}

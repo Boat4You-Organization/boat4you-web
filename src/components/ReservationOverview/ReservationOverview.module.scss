@@ -1,0 +1,64 @@
+@use '@/styles/utils/rem-calc' as *;
+@use '@/styles/settings/variables' as *;
+@use '@/styles/mixins/breakpoints' as *;
+
+.container {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem-calc(16);
+
+  &.paddingBottom {
+    padding-bottom: rem-calc(16);
+  }
+
+  @include media(0, 'sm') {
+    height: 100%;
+  }
+
+  .buttonWrapper {
+    width: 100%;
+    max-width: rem-calc(305);
+    align-self: flex-end;
+    margin-top: rem-calc(24);
+
+    @include media(0, 'sm') {
+      max-width: 100%;
+    }
+  }
+
+  .wrapper {
+    background-color: $blue-50;
+    padding-top: rem-calc(130);
+    width: 100%;
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: rem-calc(16);
+
+      .reservationCard {
+        display: flex;
+        justify-content: center;
+        background-color: $white;
+        padding: rem-calc(24);
+        border: rem-calc(1) solid $black-200;
+        border-radius: rem-calc(10);
+        width: 100%;
+
+        @include media(0, 'sm') {
+          flex-direction: column;
+        }
+      }
+
+      .contactCard {
+        padding: rem-calc(24);
+        border: rem-calc(1) solid $black-200;
+        background-color: $white;
+        border-radius: rem-calc(10);
+        width: 100%;
+      }
+    }
+  }
+}

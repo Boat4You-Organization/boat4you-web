@@ -1,0 +1,13 @@
+{
+  "request-password-failed": "Zahtjev za lozinkom nije uspio",
+  "request-password-success": "Zahtjev za lozinkom uspješan",
+  "login-success": "Prijava uspješna",
+  "login-failed": "Prijava nije uspjela",
+  "userUpdated": "Korisnik je uspješno ažuriran",
+  "userUpdateFailed": "Neuspješno ažuriranje korisnika",
+  "requestCancelBookingSuccess": "Zahtjev za otkazivanje rezervacije uspješan",
+  "requestCancelBookingFailed": "Zahtjev za otkazivanje rezervacije nije uspio",
+  "linkCopied": "Link je kopiran u međuspremnik",
+  "reservationNumberCopied": "Broj rezervacije je kopiran u međuspremnik",
+  "reservationIdCopied": "Referenca rezervacije kopirana u međuspremnik"
+}

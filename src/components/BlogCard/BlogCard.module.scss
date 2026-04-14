@@ -1,0 +1,31 @@
+@use '@/styles/settings/variables' as *;
+@use '@/styles/utils/rem-calc' as *;
+@use '@/styles/mixins/breakpoints' as *;
+
+.container {
+  &:hover {
+    .title {
+      text-decoration: underline;
+    }
+  }
+
+  .imageWrapper {
+    position: relative;
+    height: rem-calc(190);
+    max-width: 100%;
+    border-radius: rem-calc(12);
+    overflow: hidden;
+
+    &.blogWrapper {
+      @include media(0, 'md') {
+        height: rem-calc(108);
+      }
+    }
+
+    .image {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}

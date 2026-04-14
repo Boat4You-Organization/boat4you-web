@@ -1,0 +1,23 @@
+@use '@/styles/settings/variables' as *;
+@use '@/styles/utils/rem-calc' as *;
+@use '@/styles/mixins/breakpoints' as *;
+
+.root {
+  &.container {
+    background-color: $white;
+
+    &:global(.Mui-expanded) {
+      background-color: $black-100;
+    }
+
+    .summary {
+      padding: rem-calc(8 16);
+      flex-direction: row-reverse;
+      gap: rem-calc(12);
+    }
+
+    .details {
+      padding: rem-calc(0 16 8);
+    }
+  }
+}

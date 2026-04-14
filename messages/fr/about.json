@@ -1,0 +1,61 @@
+{
+  "hero": {
+    "title": "<strong>Votre aventure maritime mondiale commence ici.</strong>",
+    "description": "Chez <logo></logo> <companyName>Boat4You</companyName>, vous transformez vos projets de voyage en véritables traversées sur les meilleures eaux du monde. Nous avons grandi à partir de nos racines méditerranéennes pour devenir une plateforme de charter mondiale. Vous bénéficiez de **conseils d'experts**, de **bateaux vérifiés** et d'un processus de réservation fluide, du premier devis jusqu'au départ des amarres."
+  },
+  "stats": {
+    "title": "Références clés de confiance",
+    "description": "Conseils indépendants. Recommandations neutres par rapport aux fournisseurs qui correspondent à vos dates, à la taille de votre équipage et à votre budget.<br></br>Partenaires vérifiés. Assurance, licences et contrôles de sécurité enregistrés auprès de notre équipe.<br></br>Prix transparents. Contrats clairs. Pas de frais cachés.<br></br>Conforme au RGPD. Paiements sécurisés. Confidentialité par défaut.<br></br>Support réel. Assistance 24h/24, 7j/7 avant, pendant et après votre voyage.",
+    "premiumYachtsFleet": "Yachts Premium dans notre Flotte Mondiale",
+    "worldwideDestinations": "Destinations Mondiales",
+    "teamExperience": "Années d'expérience combinée de l'équipe",
+    "customersServed": "Clients Satisfaits Servis",
+    "charterPartners": "Partenaires de Location Vérifiés"
+  },
+  "aboutUs": {
+    "title": "Qui nous sommes",
+    "mainTitle": "Transformer les Rêves en Voyages",
+    "description": "Nous croyons que vous méritez un yacht privé qui donne l'impression d'avoir été construit pour votre semaine. Notre équipe a plus de 20 ans d'expérience en charter avec une connaissance locale en Europe, dans les Caraïbes et au-delà. Nous auditons les bases, testons les itinéraires et briefons les équipages, tout cela pour vos vacances en voilier sur mesure. Vous obtenez des conseils honnêtes, pas des suppositions."
+  },
+  "whyChooseUs": {
+    "title": "Pourquoi choisir Boat4You",
+    "mainTitle": "Votre expérience de location de yacht inégalée commence ici",
+    "description": "Notre engagement envers l'excellence nous distingue dans l'industrie compétitive de la location de yachts",
+    "features": {
+      "0": {
+        "title": "Expertise globale prouvée",
+        "description": "Courtiers seniors avec de longues années d'expérience en Croatie, Grèce, Italie, Espagne, France, Turquie, Îles Vierges britanniques, Bahamas, Martinique et Grenade."
+      },
+      "1": {
+        "title": "Service personnalisé",
+        "description": "Chaque itinéraire est construit autour de vous. Moments en famille, navigation active, gastronomie et vin, ou baies tranquilles. C'est vous qui décidez du rythme."
+      },
+      "2": {
+        "title": "Réservations gratuites",
+        "description": "Bloquez des options et comparez des yachts sans frais de réservation supplémentaires. Délais et rappels clairs."
+      },
+      "3": {
+        "title": "Accès à une flotte premium",
+        "description": "Monocoques, catamarans, yachts à moteur et superyachts de flottes de confiance. Nouveaux lancements ajoutés chaque saison."
+      },
+      "4": {
+        "title": "Réservation sécurisée",
+        "description": "Paiements séquestres via des passerelles approuvées. Traitement de vos données conforme au RGPD."
+      },
+      "5": {
+        "title": "Support 24/7",
+        "description": "Des humains, pas des robots. Contacts de base, vérifications météo, aide à l'itinéraire et réponses rapides lorsque les plans changent."
+      }
+    }
+  },
+  "ourPromise": {
+    "title": "Notre promesse",
+    "mainTitle": "C'est ici que commence une vie de souvenirs : Notre serment de dépasser toutes vos attentes",
+    "description": "Votre confort et votre sécurité guident chaque décision. Nous recommandons des itinéraires qui correspondent à la semaine que vous souhaitez, des sauts d'île dans les Cyclades aux bancs de sable aux Exumas. Vous obtenez des bateaux fiables, un équipage briefé et un plan qui fonctionne dans des conditions réelles. Nous visons un seul résultat. Que vous débarquiez en disant : Nous naviguerions à nouveau avec Boat4You."
+  },
+  "ourFleet": {
+    "title": "Nous avons le bateau que vous voulez, ",
+    "emphasizedTitle": "peu importe le type",
+    "description": "La meilleure sélection de bateaux en ligne aux meilleurs prix"
+  }
+}

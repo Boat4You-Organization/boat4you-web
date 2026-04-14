@@ -1,0 +1,26 @@
+@use '@/styles/settings/variables' as *;
+@use '@/styles/utils/rem-calc' as *;
+@use '@/styles/mixins/breakpoints' as *;
+
+.container {
+  position: relative;
+  width: 100%;
+  background-image: url('/icons/hero-background.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-bottom-left-radius: rem-calc(12);
+  border-bottom-right-radius: rem-calc(12);
+  margin-top: rem-calc(72);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-block: rem-calc(77);
+  color: $white;
+
+  @include media(0, 'md') {
+    background-image: url('/icons/hero-background-mobile.svg');
+    padding-block: rem-calc(64 148);
+  }
+}

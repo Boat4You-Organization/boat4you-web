@@ -1,0 +1,29 @@
+@use '@/styles/settings/variables' as *;
+@use '@/styles/utils/rem-calc' as *;
+@use '@/styles/mixins/breakpoints' as *;
+
+.container {
+  .arrowButtonsContainer {
+    display: flex;
+    gap: rem-calc(16);
+
+    @include media(0, 'sm') {
+      gap: rem-calc(8);
+    }
+
+    .arrowButton {
+      height: rem-calc(42);
+      width: rem-calc(42);
+    }
+  }
+
+  .swiper {
+    overflow: visible;
+
+    .slide {
+      width: fit-content;
+      min-width: rem-calc(180);
+      max-width: rem-calc(300);
+    }
+  }
+}

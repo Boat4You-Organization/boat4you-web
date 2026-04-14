@@ -1,0 +1,19 @@
+@use '@/styles/utils/rem-calc' as *;
+@use '@/styles/settings/variables' as *;
+
+.iconWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: rem-calc(124);
+  width: rem-calc(124);
+  background-color: $blue-50;
+  border-radius: 50%;
+}
+
+.searchButton {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

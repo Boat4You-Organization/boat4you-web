@@ -1,0 +1,7 @@
+@use '@/styles/settings/variables' as *;
+@use '@/styles/utils/rem-calc' as *;
+@use '@/styles/mixins/breakpoints' as *;
+
+.grid {
+  margin-top: rem-calc(84);
+}

@@ -1,0 +1,11 @@
+@use '@/styles/utils/rem-calc' as *;
+
+.root {
+  &.container {
+    padding-block: rem-calc(62 124);
+    display: flex;
+    flex-direction: column;
+    gap: rem-calc(24);
+    max-width: rem-calc(1064);
+  }
+}

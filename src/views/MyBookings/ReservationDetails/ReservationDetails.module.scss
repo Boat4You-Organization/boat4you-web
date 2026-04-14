@@ -1,0 +1,22 @@
+@use '@/styles/settings/variables' as *;
+@use '@/styles/utils/rem-calc' as *;
+@use '@/styles/mixins/breakpoints' as *;
+
+.root {
+  &.container {
+    @include media(0, 'sm') {
+      overflow: auto;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: row;
+      margin-top: rem-calc(122);
+
+      @include media(0, 'md') {
+        flex-direction: column-reverse;
+        gap: rem-calc(48);
+      }
+    }
+  }
+}

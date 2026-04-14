@@ -1,0 +1,19 @@
+{
+  "hero": {
+    "title": "Trebate više detalja?<strong>Kontaktirajte nas</strong>",
+    "description": "U <logo></logo> <companyName>Boat4You</companyName> planiramo charter jahti koje ćete voljeti. Mediteran, Karibi ili nove vode, naši stručnjaci vas vode od prve upite do isplovljavanja. Podijelite svoje datume, veličinu posade i početnu bazu. Šaljemo vam prilagođene opcije, jasne cijene i jednostavne sljedeće korake."
+  },
+  "contact": {
+    "telephoneNumber": "Telefonski broj",
+    "email": "Email",
+    "emergencyNumber": "Broj za hitne slučajeve",
+    "workingHours": "Radno vrijeme",
+    "mondayToSunday": "Ponedjeljak - Nedjelja 8AM - 8PM (CEST)"
+  },
+  "internationalSupport": {
+    "title": "Međunarodna podrška",
+    "usaOffice": "USA ured",
+    "ukOffice": "UK ured",
+    "croatiaHQ": "Whatsapp broj"
+  }
+}

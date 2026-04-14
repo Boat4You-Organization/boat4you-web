@@ -1,0 +1,11 @@
+@use '@/styles/settings/variables' as *;
+@use '@/styles/utils/rem-calc' as *;
+@use '@/styles/mixins/breakpoints' as *;
+
+.container {
+  width: 100%;
+
+  @include media('md', 'lg') {
+    width: 60%;
+  }
+}

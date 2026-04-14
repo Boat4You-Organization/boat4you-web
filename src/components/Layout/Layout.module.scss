@@ -1,0 +1,9 @@
+@use '@/styles/settings/variables' as *;
+
+.main {
+  min-height: 100vh;
+
+  &.showFooter {
+    background-color: $blue-50;
+  }
+}

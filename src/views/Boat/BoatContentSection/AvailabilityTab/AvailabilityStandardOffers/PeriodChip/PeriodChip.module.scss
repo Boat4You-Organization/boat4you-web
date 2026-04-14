@@ -1,0 +1,32 @@
+@use '@/styles/settings/variables' as *;
+@use '@/styles/utils/rem-calc' as *;
+
+.root {
+  &.container {
+    width: 100%;
+    padding: rem-calc(12 8);
+    cursor: pointer;
+    border-radius: rem-calc(12);
+
+    &:hover {
+      border-color: $blue-950;
+    }
+
+    &:active {
+      color: $blue-500;
+      border-color: $blue-500;
+      background-color: $blue-50;
+    }
+
+    &.reserved {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    &.active {
+      color: $blue-500;
+      border-color: $blue-500;
+      background-color: $blue-50;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "hero": {
+    "title": "<strong>La tua avventura velica globale inizia qui.</strong>",
+    "description": "Con <logo></logo> <companyName>Boat4You</companyName> trasformi i piani di viaggio in vere traversate sulle migliori acque del mondo. Siamo cresciuti dalle radici mediterranee fino a diventare una piattaforma di charter globale. Ottieni **consulenza esperta**, **barche verificate** e un flusso di prenotazione fluido, dal primo preventivo fino al largo."
+  },
+  "stats": {
+    "title": "Credenziali chiave per costruire fiducia",
+    "description": "Consulenza indipendente. Raccomandazioni neutrali rispetto ai fornitori che si adattano alle tue date, alla dimensione dell'equipaggio e al budget.<br></br>Partner verificati. Assicurazioni, licenze e controlli di sicurezza in archivio con il nostro team.<br></br>Prezzi trasparenti. Contratti chiari. Nessun costo nascosto.<br></br>Conforme al GDPR. Pagamenti sicuri. Privacy per impostazione predefinita.<br></br>Supporto reale. Assistenza 24/7 prima, durante e dopo il tuo viaggio.",
+    "premiumYachtsFleet": "Yacht Premium nella nostra Flotta Globale",
+    "worldwideDestinations": "Destinazioni in Tutto il Mondo",
+    "teamExperience": "Anni di esperienza combinata del team",
+    "customersServed": "Clienti Soddisfatti Serviti",
+    "charterPartners": "Partner Charter Verificati"
+  },
+  "aboutUs": {
+    "title": "Chi siamo",
+    "mainTitle": "Trasformiamo i Sogni in Viaggi",
+    "description": "Crediamo che tu meriti uno yacht privato che sembri costruito per la tua settimana. Il nostro team ha più di 20 anni di esperienza nel lavoro di charter con conoscenza locale in Europa, Caraibi e oltre. Controlliamo le basi, testiamo le rotte e informiamo gli equipaggi, tutto per la tua vacanza in barca a vela su misura. Ottieni una guida onesta, non supposizioni."
+  },
+  "whyChooseUs": {
+    "title": "Perché scegliere Boat4You",
+    "mainTitle": "La tua esperienza charter yacht impareggiabile inizia qui",
+    "description": "Il nostro impegno per l'eccellenza ci distingue nell'industria competitiva del charter yacht",
+    "features": {
+      "0": {
+        "title": "Esperienza globale comprovata",
+        "description": "Broker senior con una lunga esperienza in Croazia, Grecia, Italia, Spagna, Francia, Turchia, Isole Vergini Britanniche, Bahamas, Martinica e Grenada."
+      },
+      "1": {
+        "title": "Servizio personalizzato",
+        "description": "Ogni itinerario è costruito intorno a te. Tempo in famiglia, vela attiva, cibo e vino o baie tranquille. Decidi tu il ritmo."
+      },
+      "2": {
+        "title": "Prenotazioni gratuite",
+        "description": "Mantieni le opzioni e confronta gli yacht senza costi di prenotazione aggiuntivi. Scadenze e promemoria chiari."
+      },
+      "3": {
+        "title": "Accesso a flotta premium",
+        "description": "Monoscafi, catamarani, yacht a motore e superyacht da flotte fidate. Nuovi lanci aggiunti ogni stagione."
+      },
+      "4": {
+        "title": "Prenotazione sicura",
+        "description": "Pagamenti in escrow tramite gateway approvati. Gestione dei tuoi dati conforme al GDPR."
+      },
+      "5": {
+        "title": "Supporto 24/7",
+        "description": "Umani, non bot. Contatti della base, controlli meteo, aiuto con le rotte e risposte rapide quando i piani cambiano."
+      }
+    }
+  },
+  "ourPromise": {
+    "title": "La nostra promessa",
+    "mainTitle": "Qui inizia una vita di ricordi: Il nostro voto di superare tutte le tue aspettative",
+    "description": "Il tuo comfort e la tua sicurezza guidano ogni decisione. Raccomandiamo rotte che corrispondono alla settimana che desideri, dal 'saltellare' tra le isole delle Cicladi ai banchi di sabbia delle Exumas. Ottieni barche affidabili, un equipaggio informato e un piano che funziona in condizioni reali. Miriamo a un solo risultato. Che tu scenda a terra dicendo: Navigheremmo di nuovo con Boat4You."
+  },
+  "ourFleet": {
+    "title": "Abbiamo la barca che desideri, ",
+    "emphasizedTitle": "non importa di che tipo sia",
+    "description": "La migliore selezione di barche online ai migliori prezzi"
+  }
+}

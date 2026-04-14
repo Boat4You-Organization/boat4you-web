@@ -1,0 +1,9 @@
+@use '@/styles/utils/rem-calc' as *;
+
+.iconButtonRoot {
+  &.iconButton {
+    width: rem-calc(40);
+    height: rem-calc(40);
+    border-radius: rem-calc(8);
+  }
+}

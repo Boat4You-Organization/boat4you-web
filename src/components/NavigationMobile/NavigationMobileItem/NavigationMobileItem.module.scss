@@ -1,0 +1,36 @@
+@use '@/styles/settings/variables' as *;
+@use '@/styles/utils/rem-calc' as *;
+
+.root {
+  &.container {
+    padding: rem-calc(16);
+    cursor: pointer;
+
+    &:hover {
+      background-color: $black-100;
+      color: $black-950;
+    }
+
+    &.active {
+      background-color: $blue-50;
+      color: $blue-500;
+    }
+
+    .button {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0;
+
+      &:hover {
+        background-color: inherit;
+        color: inherit;
+      }
+
+      &:active {
+        background-color: inherit;
+        color: inherit;
+      }
+    }
+  }
+}

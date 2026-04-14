@@ -1,0 +1,19 @@
+{
+  "hero": {
+    "title": "¿Necesitas más detalles?<strong>Contáctanos</strong>",
+    "description": "En <logo></logo> <companyName>Boat4You</companyName> planeamos charters de yates que te encantarán. Mediterráneo, Caribe o nuevas aguas, nuestros expertos te guían desde la primera consulta hasta que sueltas amarras. Comparte tus fechas, tamaño de tripulación y base de inicio. Te enviaremos opciones a medida, precios claros y pasos siguientes sencillos."
+  },
+  "contact": {
+    "telephoneNumber": "Número de Teléfono",
+    "email": "Email",
+    "emergencyNumber": "Número de Emergencia / Número Telefónico Urgente",
+    "workingHours": "Horarios de Trabajo",
+    "mondayToSunday": "Lunes - Domingo 8AM - 8PM (CEST)"
+  },
+  "internationalSupport": {
+    "title": "Soporte Internacional",
+    "usaOffice": "Oficina USA",
+    "ukOffice": "Oficina UK",
+    "croatiaHQ": "Número Whatsapp"
+  }
+}

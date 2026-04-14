@@ -1,0 +1,18 @@
+@use '@/styles/settings/variables' as *;
+@use '@/styles/utils/rem-calc' as *;
+
+.root {
+  &.list {
+    gap: rem-calc(8);
+
+    .item {
+      cursor: pointer;
+      padding: rem-calc(16 12);
+      border-radius: rem-calc(12);
+
+      &.active {
+        background-color: $blue-50;
+      }
+    }
+  }
+}

@@ -1,0 +1,174 @@
+@use '@/styles/utils/rem-calc' as *;
+@use '@/styles/settings/variables' as *;
+@use '@/styles/mixins/breakpoints' as *;
+
+.labelContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: rem-calc(8);
+}
+
+.required {
+  color: $red-500;
+}
+
+.container {
+  display: flex;
+  gap: rem-calc(8);
+  align-items: stretch;
+  width: 100%;
+
+  @include media(0, sm) {
+    gap: rem-calc(8);
+  }
+}
+
+.autocomplete {
+  flex: 0 0 rem-calc(110);
+  min-width: rem-calc(110);
+  max-width: rem-calc(110);
+
+  @include media(0, sm) {
+    flex: 0 0 rem-calc(100);
+    min-width: rem-calc(100);
+    max-width: rem-calc(100);
+  }
+}
+
+.countrySelector {
+  :global(.MuiOutlinedInput-root) {
+    border-radius: rem-calc(10);
+    background-color: $white;
+    transition: all $animation-duration-fast $timing-function;
+
+    &.Mui-focused {
+      outline: rem-calc(2) solid $blue-500;
+      outline-offset: rem-calc(2);
+      box-shadow: rem-calc(0 0 8 0) $blue-500;
+    }
+
+    &.Mui-disabled {
+      background-color: $black-100;
+      cursor: not-allowed;
+    }
+  }
+
+  :global(.MuiOutlinedInput-input) {
+    padding: rem-calc(12);
+    font-size: rem-calc(14);
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  :global(.MuiAutocomplete-endAdornment) {
+    right: rem-calc(8);
+  }
+
+  :global(.MuiAutocomplete-popupIndicator) {
+    color: $black-500;
+    transition: transform $animation-duration-fast $timing-function;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+
+  :global(.MuiAutocomplete-popupIndicatorOpen) {
+    transform: rotate(180deg);
+  }
+}
+
+.chevronIcon {
+  display: block;
+}
+
+.phoneInput {
+  flex: 1;
+
+  :global(.MuiOutlinedInput-root) {
+    border-radius: rem-calc(10);
+    background-color: $white;
+    transition: all $animation-duration-fast $timing-function;
+
+    &.Mui-focused {
+      outline: rem-calc(2) solid $blue-500;
+      outline-offset: rem-calc(2);
+      box-shadow: rem-calc(0 0 8 0) $blue-500;
+    }
+
+    &.Mui-error {
+      border-color: $red-500;
+
+      &.Mui-focused {
+        outline-color: $red-500;
+      }
+    }
+
+    &.Mui-disabled {
+      background-color: $black-100;
+      cursor: not-allowed;
+    }
+  }
+
+  :global(.MuiOutlinedInput-input) {
+    padding: rem-calc(12);
+    font-size: rem-calc(14);
+  }
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: rem-calc(12);
+  padding: rem-calc(8 12);
+  cursor: pointer;
+  transition: background-color $animation-duration-fast $timing-function;
+
+  &:hover {
+    background-color: $black-100;
+  }
+}
+
+.flag {
+  font-size: rem-calc(20);
+  line-height: 1;
+}
+
+.countryName {
+  flex: 1;
+  font-size: rem-calc(14);
+  font-weight: 400;
+  color: $black-950;
+}
+
+.dialCode {
+  font-size: rem-calc(14);
+  font-weight: 500;
+  color: $black-500;
+}
+
+.dropdown {
+  :global(.MuiPaper-root) {
+    border-radius: rem-calc(10);
+    box-shadow: $box-shadow-menu;
+    margin-top: rem-calc(4);
+    width: auto !important;
+    min-width: rem-calc(320);
+    max-width: rem-calc(450);
+
+    @include media(0, sm) {
+      min-width: rem-calc(280);
+      max-width: 90vw;
+    }
+  }
+
+  :global(.MuiAutocomplete-listbox) {
+    max-height: rem-calc(300);
+    padding: rem-calc(8);
+  }
+
+  :global(.MuiAutocomplete-popper) {
+    width: auto !important;
+  }
+}

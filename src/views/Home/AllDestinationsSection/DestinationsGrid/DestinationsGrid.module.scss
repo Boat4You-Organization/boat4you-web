@@ -1,0 +1,43 @@
+@use '@/styles/utils/rem-calc' as *;
+@use '@/styles/settings/variables' as *;
+
+.container {
+  margin-top: rem-calc(24);
+
+  .itemWrapper {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+
+    .item {
+      width: 100%;
+      height: 100%;
+      padding: rem-calc(8);
+      border-radius: rem-calc(5);
+      gap: rem-calc(8);
+      display: flex;
+      justify-content: space-between;
+      color: $white;
+      cursor: pointer;
+      transition:
+        $animation-duration-fast background-color ease-in-out,
+        $animation-duration-fast color ease-in-out;
+
+      > svg {
+        flex-shrink: 0;
+        margin-left: auto;
+        align-self: center;
+      }
+
+      &:hover {
+        background-color: $blue-50;
+        color: $blue-300;
+      }
+
+      &:active {
+        background-color: $blue-100;
+        color: $blue-300;
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "hero": {
+    "title": "<strong>Your global sailing adventure starts here.</strong>",
+    "description": "At <logo></logo> <companyName>Boat4You</companyName> you turn travel plans into real voyages on the world’s best waters. We grew from Mediterranean roots into a global charter platform. You get expert advice, verified boats, and a smooth booking flow from first quote to lines off."
+  },
+  "stats": {
+    "title": "Key trust building credentials",
+    "description": "Independent advice. Vendor neutral recommendations that fit your dates, crew size, and budget.<br></br>Verified partners. Insurance, licenses, and safety checks on file with our team.<br></br>Transparent pricing. Clear contracts. No hidden fees.<br></br>GDPR compliant. Secure payments. Privacy by default.<br></br>Real support. 24,7 assistance before, during, and after your trip.",
+    "premiumYachtsFleet": "Premium Yachts in our Global Fleet",
+    "worldwideDestinations": "Worldwide Destinations",
+    "teamExperience": "Years of combined team experience",
+    "customersServed": "Happy Customers Served",
+    "charterPartners": "Verified Charter Partners"
+  },
+  "aboutUs": {
+    "title": "Who we are",
+    "mainTitle": "Transforming Dreams Into Voyages",
+    "description": "We believe you deserve a private yacht that feels like it was built for your week. Our team has mode than 20 years of charter work with local knowledge in Europe, the Caribbean, and beyond. We audit bases, test routes, and brief crews, all for your tailor-made sailing vacation. You get honest guidance, not guesswork."
+  },
+  "whyChooseUs": {
+    "title": "Why choose Boat4You",
+    "mainTitle": "Your unmatched yacht charter experience starts here",
+    "description": "Our commitment to excellence sets us apart in the competitive yacht charter industry",
+    "features": {
+      "0": {
+        "title": "Proven global expertise",
+        "description": "Senior brokers with long track records across Croatia, Greece, Italy, Spain, France, Turkey, BVI, Bahamas, Martinique, and Grenada."
+      },
+      "1": {
+        "title": "Personalised service",
+        "description": "Every itinerary is built around you. Family time, active sailing, food and wine, or quiet bays. You decide the pace."
+      },
+      "2": {
+        "title": "Free reservations",
+        "description": "Hold options and compare yachts without extra booking fees. Clear deadlines and reminders."
+      },
+      "3": {
+        "title": "Premium fleet access",
+        "description": "Monohulls, catamarans, motor yachts, and superyachts from trusted fleets. New launches added each season."
+      },
+      "4": {
+        "title": "Secure booking",
+        "description": "Escrowed payments through approved gateways. GDPR compliant handling of your data"
+      },
+      "5": {
+        "title": "24/7 support",
+        "description": "Humans, not bots. Base contacts, weather checks, routing help, and quick answers when plans change"
+      }
+    }
+  },
+  "ourPromise": {
+    "title": "Our promise",
+    "mainTitle": "This is where a lifetime of memories begins: Our Promise to Exceed All of Your Expectations",
+    "description": "Your comfort and safety lead every decision. We recommend routes that match the week you want, from island hops in the Cyclades to sandbars in the Exumas. You get reliable boats, a briefed crew, and a plan that works in real conditions. We aim for one outcome. You step off saying, we’d sail with Boat4You again."
+  },
+  "ourFleet": {
+    "title": "We have the boat you want, ",
+    "emphasizedTitle": "no matter what type it is",
+    "description": "The best selection of boats online at the best prices"
+  }
+}

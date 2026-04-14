@@ -1,0 +1,122 @@
+{
+  "hero": {
+    "title": "Buche eine Yacht in",
+    "ctaTitle": "einem Klick.",
+    "description": "Chartern Sie Ihre perfekte Yacht mit nur wenigen Klicks. Einfach, schnell und stressfrei — Ihr Traumsegelabenteuer beginnt hier."
+  },
+  "generalSearchBar": {
+    "whereAreYouGoing": "Wohin reisen Sie?",
+    "selectBoatType": "Bootstyp auswählen",
+    "where": "Wo",
+    "searchLocations": "Orte suchen",
+    "when": "Wann",
+    "choosedates": "Daten wählen",
+    "withWhat": "Womit",
+    "chooseBoat": "Boot auswählen",
+    "chooseDestination": "Reiseziel wählen",
+    "chooseTransportation": "Transport wählen",
+    "searchBoats": "Boote suchen",
+    "aroundCurrentLocation": "Around current location",
+    "locating": "Locating…",
+    "locationError": "Couldn't get your location"
+  },
+  "destinationsSection": {
+    "theWorldIs": "Beste Yachtcharter",
+    "yours": "Reiseziele",
+    "yachts": "Yachten",
+    "destinations": {
+      "bahamas": "Bahamas",
+      "caribbean": "Karibik",
+      "croatia": "Kroatien",
+      "france": "Frankreich",
+      "greece": "Griechenland",
+      "italy": "Italien",
+      "martinique": "Martinique",
+      "montenegro": "Montenegro",
+      "seychelles": "Seychellen",
+      "spain": "Spanien",
+      "türkiye": "Türkei",
+      "virginIslandsBritish": "Britische Jungferninseln",
+      "grenada": "Grenada"
+    }
+  },
+  "whyChooseUsSection": {
+    "whyChoose": "Warum uns als Ihr <strong>professioneller Charteranbieter</strong> wählen",
+    "items": {
+      "competitivePricing": {
+        "title": "Wettbewerbsfähige Preise",
+        "description": "Beste Tarife ohne versteckte Gebühren. Premium-Qualität zu unschlagbaren Preisen."
+      },
+      "wideSelection": {
+        "title": "Große Auswahl",
+        "description": "Vielfältige Flotte von Luxusyachten bis Segelbooten für jeden Anlass."
+      },
+      "securePayment": {
+        "title": "Sichere Zahlung",
+        "description": "Bank-Level-Sicherheit mit vertrauenswürdigen Zahlungsanbietern. Ihre Daten sind sicher."
+      },
+      "trustedCustomerService": {
+        "title": "Vertrauensvoller Kundenservice",
+        "description": "24/7 Expertenunterstützung für nahtlose Buchungen und unvergessliche Erlebnisse."
+      }
+    }
+  },
+  "ourFleetSection": {
+    "getToKnow": "Wir haben das Boot, das Sie wollen, ",
+    "ourFleet": "egal welcher Typ es ist",
+    "boatSelection": "Die beste Auswahl an Booten online zu den besten Preisen",
+    "boat": "Boot",
+    "fleet": {
+      "catamarans": "Katamarane",
+      "gulets": "Gulets",
+      "houseBoats": "Hausboote",
+      "luxuryMotorYachts": "Luxus-Motoryachten",
+      "motorboats": "Motorboote",
+      "motorYachts": "Motoryachten",
+      "motorSailors": "Motorsegler",
+      "powerCatamarans": "Motor-Katamarane",
+      "sailingYachts": "Segelyachten",
+      "miniCruisers": "Mini-Cruiser",
+      "trimarans": "Trimarane",
+      "rubberBoats": "Schlauchboote"
+    }
+  },
+  "chooseFromFiveHundredLocations": "Mehr als 40 Länder für Bootsverleih & Yachtcharter zu den besten Preisen",
+  "riskFreeBooking": {
+    "riskFreeBooking": "Risikofreie Buchung",
+    "save15Now": "Sparen Sie jetzt 15%",
+    "cancellingDescription": "Stornierungen bei uns sind völlig risikofrei und flexibel. Wir bieten großzügige Rückerstattungsrichtlinien zum Schutz Ihrer Investition."
+  },
+  "blogSection": {
+    "readAboutYour": "Ideen für Ihren nächsten ",
+    "nextHoliday": "Segelurlaub",
+    "discoverSecretSpots": "Entdecken Sie Geheimtipps wie die Einheimischen; sehen Sie sich unsere Ratschläge für Ihren nächsten Yachtcharter an."
+  },
+  "allDestinationsSection": {
+    "allOf": "Entdecken Sie unsere ",
+    "ourDestinations": "Lieblings-Segelziele",
+    "specialDeals": "Erhalten Sie Sonderangebote und sparen Sie Geld bei jeder Buchungsreservierung.",
+    "continents": {
+      "europe": "Europa",
+      "americas": "Amerika",
+      "asia": "Asien",
+      "africa": "Afrika",
+      "australia": "Australien"
+    }
+  },
+  "languageModal": {
+    "title": "Sprache und Währung",
+    "savePreferences": "Einstellungen speichern",
+    "languageLabel": "Sprache",
+    "currencyLabel": "Währung",
+    "languages": {
+      "en": "Englisch",
+      "fr": "Französisch",
+      "de": "Deutsch",
+      "pt": "Portugiesisch",
+      "it": "Italienisch",
+      "es": "Spanisch",
+      "hr": "Kroatisch"
+    }
+  }
+}

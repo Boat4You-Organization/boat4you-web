@@ -1,0 +1,41 @@
+@use '@/styles/settings/variables' as *;
+@use '@/styles/utils/rem-calc' as *;
+
+.root {
+  &.container {
+    border-radius: rem-calc(44);
+    background-color: $black-100;
+    color: $black-500;
+    padding-right: rem-calc(4);
+    cursor: pointer;
+    transition:
+      background-color $animation-duration-fast $timing-function,
+      color $animation-duration-fast $timing-function;
+
+    &:hover {
+      background-color: $black-200;
+      color: $black-600;
+    }
+
+    &:active {
+      background-color: $black-300;
+      color: $black-950;
+    }
+
+    .MuiChip-deleteIcon {
+      transition: color $animation-duration-fast $timing-function;
+      color: $black-400;
+
+      &:hover {
+        color: $black-500;
+      }
+    }
+
+    :global(.MuiChip-label) {
+      max-width: rem-calc(218);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+}

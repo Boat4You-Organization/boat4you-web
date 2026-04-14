@@ -1,0 +1,53 @@
+@use '@/styles/settings/variables' as *;
+@use '@/styles/utils/rem-calc' as *;
+@use '@/styles/mixins/breakpoints' as *;
+
+.container {
+  background-color: $blue-950;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: rem-calc(24);
+  border-bottom-left-radius: rem-calc(12);
+  border-bottom-right-radius: rem-calc(12);
+
+  @include media(0, 'lg') {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .root {
+    &.divider {
+      margin: 0 rem-calc(32);
+      width: rem-calc(1);
+      height: 100%;
+      background-color: $white;
+
+      @include media(0, 'lg') {
+        margin: rem-calc(32) 0;
+        border-color: $white;
+        width: 100%;
+        height: fit-content;
+        background-color: $white;
+      }
+    }
+  }
+
+  .button {
+    align-self: center;
+
+    @include media(0, 'lg') {
+      width: 100%;
+    }
+  }
+
+  .availabilityDate {
+    flex-direction: row;
+    width: fit-content;
+
+    @include media(0, 'lg') {
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+}

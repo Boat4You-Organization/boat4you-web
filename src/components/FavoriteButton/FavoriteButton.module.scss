@@ -1,0 +1,15 @@
+@use '@/styles/settings/variables' as *;
+
+.root {
+  &.container {
+    background-color: $white;
+
+    &.active {
+      background-color: $red-50;
+
+      &:active {
+        background-color: $red-200;
+      }
+    }
+  }
+}

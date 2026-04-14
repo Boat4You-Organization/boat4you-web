@@ -1,0 +1,65 @@
+name: Deploy to Production
+
+on: workflow_dispatch
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+          cache: 'yarn'
+
+      - name: Create .env file
+        run: |
+          echo "NEXT_PUBLIC_WORDPRESS_API_URL=${{ secrets.PRODUCTION_NEXT_PUBLIC_WORDPRESS_API_URL }}" > .env
+          echo "NEXT_PUBLIC_BOAT_WS_GAID=${{ secrets.PRODUCTION_NEXT_PUBLIC_BOAT_WS_GAID }}" >> .env
+          echo "NEXT_PUBLIC_BOAT_WS_API_URL=${{ secrets.PRODUCTION_NEXT_PUBLIC_BOAT_WS_API_URL }}" >> .env
+          echo "NEXT_PUBLIC_BASE_URL=${{ secrets.PRODUCTION_NEXT_PUBLIC_BASE_URL }}" >> .env
+          echo "NODEMAILER_USERNAME=${{ secrets.PRODUCTION_NODEMAILER_USERNAME }}" >> .env
+          echo "NODEMAILER_PASSWORD=${{ secrets.PRODUCTION_NODEMAILER_PASSWORD }}" >> .env
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Build application
+        run: yarn build
+
+      - name: Remove dev dependencies
+        run: |
+          rm -rf node_modules
+          yarn install --production --frozen-lockfile
+
+      - name: Package build artifacts
+        run: tar -czf deploy.tar.gz .next public src/posts package.json yarn.lock next.config.js next-env.d.ts .env node_modules
+
+      - name: Copy archive to server
+        uses: appleboy/scp-action@v1.0.0
+        with:
+          host: ${{ secrets.PRODUCTION_SSH_HOST }}
+          username: ${{ secrets.PRODUCTION_SSH_USERNAME }}
+          password: ${{ secrets.PRODUCTION_SSH_PASSWORD }}
+          port: ${{ secrets.PRODUCTION_SSH_PORT }}
+          source: deploy.tar.gz
+          target: /home/cusma1/nextapp
+
+      - name: Deploy on server
+        uses: appleboy/ssh-action@v1.2.5
+        with:
+          host: ${{ secrets.PRODUCTION_SSH_HOST }}
+          username: ${{ secrets.PRODUCTION_SSH_USERNAME }}
+          password: ${{ secrets.PRODUCTION_SSH_PASSWORD }}
+          port: ${{ secrets.PRODUCTION_SSH_PORT }}
+          script: |
+            cd /home/cusma1/nextapp
+            echo '${{ secrets.PRODUCTION_SSH_PASSWORD }}' | sudo -S systemctl stop nextapp
+            rm -rf .next node_modules public
+            tar -xzf deploy.tar.gz
+            rm deploy.tar.gz
+            echo '${{ secrets.PRODUCTION_SSH_PASSWORD }}' | sudo -S systemctl start nextapp

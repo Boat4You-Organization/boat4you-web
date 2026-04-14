@@ -1,0 +1,61 @@
+{
+  "hero": {
+    "title": "<strong>Vaša globalna nautička avantura počinje ovdje.</strong>",
+    "description": "U <logo></logo> <companyName>Boat4You</companyName> pretvarate putne planove u prava putovanja na najboljim svjetskim vodama. Izrasli smo iz mediteranskih korijena u globalnu charter platformu. Dobivate **stručne savjete**, **provjerene brodove** i nesmetan tijek rezervacije od prve ponude do isplovljavanja."
+  },
+  "stats": {
+    "title": "Ključne reference za povjerenje",
+    "description": "Neovisni savjeti. Preporuke neovisne o dobavljačima koje odgovaraju vašim datumima, veličini posade i budžetu.<br></br>Provjereni partneri. Osiguranje, licence i sigurnosne provjere u dosjeu našeg tima.<br></br>Transparentno određivanje cijena. Jasni ugovori. Bez skrivenih naknada.<br></br>Sukladno GDPR-u. Sigurna plaćanja. Privatnost po zadanim postavkama.<br></br>Prava podrška. 24/7 pomoć prije, tijekom i nakon vašeg putovanja.",
+    "premiumYachtsFleet": "Premium jahti u našoj globalnoj floti",
+    "worldwideDestinations": "Destinacija diljem svijeta",
+    "teamExperience": "Godina kombinovanog iskustva tima",
+    "customersServed": "Zadovoljnih klijenata opsluženo",
+    "charterPartners": "Provjerenih charter partnera"
+  },
+  "aboutUs": {
+    "title": "Tko smo mi",
+    "mainTitle": "Pretvaramo snove u putovanja",
+    "description": "Vjerujemo da zaslužujete privatnu jahtu koja se čini kao da je izgrađena za vaš tjedan. Naš tim ima više od 20 godina charter rada s lokalnim znanjem u Europi, Karibima i šire. Provjeravamo baze, testiramo rute i brifiramo posade, sve za vaše jedrenje po mjeri. Dobivate poštene smjernice, a ne nagađanja."
+  },
+  "whyChooseUs": {
+    "title": "Zašto odabrati Boat4You",
+    "mainTitle": "Vaše nenadmašno iskustvo najma jahte počinje ovdje",
+    "description": "Naša predanost izvrsnosti izdvaja nas u konkurentnoj industriji najma jahti",
+    "features": {
+      "0": {
+        "title": "Dokazana globalna stručnost",
+        "description": "Viši brokeri s dugim iskustvom u Hrvatskoj, Grčkoj, Italiji, Španjolskoj, Francuskoj, Turskoj, BVI, Bahamima, Martiniku i Grenadi."
+      },
+      "1": {
+        "title": "Personalizirani servis",
+        "description": "Svaki itinerar je izgrađen oko vas. Obiteljsko vrijeme, aktivno jedrenje, hrana i vino ili mirne uvale. Vi određujete tempo."
+      },
+      "2": {
+        "title": "Besplatne rezervacije",
+        "description": "Zadržite opcije i usporedite jahte bez dodatnih naknada za rezervaciju. Jasni rokovi i podsjetnici."
+      },
+      "3": {
+        "title": "Pristup premium floti",
+        "description": "Jednotrupci, katamarani, motorne jahte i superjahte iz pouzdanih flota. Novi modeli dodani svake sezone."
+      },
+      "4": {
+        "title": "Sigurna rezervacija",
+        "description": "Plaćanja u jamstvu putem odobrenih platnih sustava. Rukovanje vašim podacima u skladu s GDPR-om."
+      },
+      "5": {
+        "title": "24/7 podrška",
+        "description": "Ljudi, a ne botovi. Kontakti baza, provjere vremena, pomoć pri rutiranju i brzi odgovori kada se planovi promijene."
+      }
+    }
+  },
+  "ourPromise": {
+    "title": "Naše obećanje",
+    "mainTitle": "Život pun uspomena počinje ovdje: Naše obećanje da ćemo nadmašiti sva vaša očekivanja",
+    "description": "Vaša udobnost i sigurnost vode svaku odluku. Preporučujemo rute koje odgovaraju tjednu koji želite, od skakanja po otocima na Kikladima do pješčanih sprudova na Exumasu. Dobivate pouzdane brodove, brifiranu posadu i plan koji funkcionira u stvarnim uvjetima. Ciljamo na jedan rezultat. Da siđete s broda govoreći: Ponovno bismo jedrili s Boat4You."
+  },
+  "ourFleet": {
+    "title": "Imamo brod koji želite, ",
+    "emphasizedTitle": "bez obzira na vrstu",
+    "description": "Najbolji izbor brodova online po najpovoljnijim cijenama"
+  }
+}

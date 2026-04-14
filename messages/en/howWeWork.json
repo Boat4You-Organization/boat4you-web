@@ -1,0 +1,115 @@
+{
+  "hero": {
+    "title": "Booking a boat has never <strong>been easier.</strong>",
+    "description": "At <logo></logo> <companyName>Boat4You</companyName> we keep the process simple. You tell us where and when. We match you with the right yacht and crew. Croatia, Greece, Italy, Spain, Turkey, or the Caribbean. We handle the details so you enjoy the trip."
+  },
+  "step": "Step",
+  "steps": {
+    "step1": {
+      "title": "Discover Your Perfect Boat",
+      "subtitle": "Explore our curated fleet",
+      "items": {
+        "item1": "Search by destination, boat type, or travel dates.",
+        "item2": "Use smart filters to find exactly what suits your needs — from luxury catamarans to family-friendly motorboats.",
+        "item3": "Each listing includes verified details, transparent pricing, real photos, and full specifications."
+      },
+      "question": "Need help choosing?",
+      "answer": "Our charter specialists are just a click away. We'll help you compare, recommend options, and guide you if you're unsure.",
+      "link": {
+        "text": "Browse Our Fleet"
+      }
+    },
+    "step2": {
+      "title": "Send a Free Inquiry",
+      "subtitle": "No commitment, no pressure",
+      "items": {
+        "item1": "Found something you love? Just click \"Request Offer\"",
+        "item2": "Tell us your dates, group size, and preferences.",
+        "item3": "You'll receive personalized offers and the latest availability — often with exclusive discounts!"
+      },
+      "question": "Flexible options",
+      "answer": "Want a skipper? Need a hostess? Looking for a one-way route? We'll tailor your charter to fit your plans.",
+      "link": {
+        "text": "Get in Touch"
+      }
+    },
+    "step3": {
+      "title": "Get a Personalized Quote",
+      "subtitle": "Clear pricing. No hidden costs.",
+      "items": {
+        "item1": "A detailed quote based on your chosen boat and extras",
+        "item2": "Transparent info on taxes, deposits, and optional services",
+        "item3": "A real person guiding you through the details, not a robot"
+      },
+      "answer": "We believe in clarity, not fine print."
+    },
+    "step4": {
+      "title": "Reserve Your Boat",
+      "subtitle": "Secure your yacht in just a few clicks",
+      "items": {
+        "item1": "When you're ready, we'll send you a secure payment link.",
+        "item2": "Pay a deposit to confirm your booking — usually 30-50% of the charter price.",
+        "item3": "Your boat is officially yours!"
+      },
+      "answer": "You'll receive immediate confirmation and access to your reservation dashboard."
+    },
+    "step5": {
+      "title": "Finalize and Prepare",
+      "subtitle": "Before your trip:",
+      "items": {
+        "item1": "Pay the balance (typically 4 weeks before departure)",
+        "item2": "Submit crew/passenger list",
+        "item3": "We'll provide base information, embarkation details, and a packing checklist"
+      },
+      "answer": "Everything is taken care of — so you can relax and look forward to your holiday."
+    },
+    "step6": {
+      "title": "Set Sail",
+      "subtitle": "Welcome aboard!",
+      "items": {
+        "item1": "Meet your yacht at the marina",
+        "item2": "Check in with the base team (or skipper, if included)",
+        "item3": "Go through a short handover & safety briefing"
+      },
+      "answer": "From here, it's all about sun, sea, and sailing. Whether you're on a skippered adventure or sailing solo, we're always just a call away."
+    },
+    "step7": {
+      "title": "After Your Trip",
+      "subtitle": "Smooth return process",
+      "items": {
+        "item1": "Quick check-out and inspection",
+        "item2": "Share feedback or reviews — we love hearing from you!",
+        "item3": "Get help with your next booking (many clients sail with us again!)"
+      }
+    }
+  },
+  "whyChooseUsSection": {
+    "whyChoose": "Why choose boat4you?",
+    "items": {
+      "verifiedBoatsOnly": {
+        "title": "Verified Boats Only",
+        "description": "No surprises, just top-quality yachts."
+      },
+      "localExpertise": {
+        "title": "Local Expertise",
+        "description": "We know the coasts like the back of our hand"
+      },
+      "realHumanSupport": {
+        "title": "Real Human Support",
+        "description": "Before, during, and after your trip"
+      },
+      "bestPriceGuarantee": {
+        "title": "Best Price Guarantee",
+        "description": "Always fair pricing, no booking fees"
+      }
+    }
+  },
+  "cta": {
+    "title": "Questions? Lets Chat",
+    "description": "Need advice? Want to speak to a charter specialist? Our team is here to help — live chat, email, or phone.",
+    "cta": "Get in Touch Now"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions"
+  }
+}

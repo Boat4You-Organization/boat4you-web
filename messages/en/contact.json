@@ -1,0 +1,19 @@
+{
+  "hero": {
+    "title": "Need more details?<strong>Contact us</strong>",
+    "description": "At <logo></logo> <companyName>Boat4You</companyName> we plan yacht charters you will love. Mediterranean, Caribbean, or new waters, our experts guide you from first inquiry to lines off. Share your dates, crew size, and start base. We send tailored options, clear pricing, and simple next steps."
+  },
+  "contact": {
+    "telephoneNumber": "Telephone Number",
+    "email": "Email",
+    "emergencyNumber": "Emergency Number / Urgent Phone Number",
+    "workingHours": "Working Hours",
+    "mondayToSunday": "Monday - Sunday 8AM - 8PM (CEST)"
+  },
+  "internationalSupport": {
+    "title": "International Support",
+    "usaOffice": "USA Office",
+    "ukOffice": "UK Office",
+    "croatiaHQ": "Whatsapp Number"
+  }
+}

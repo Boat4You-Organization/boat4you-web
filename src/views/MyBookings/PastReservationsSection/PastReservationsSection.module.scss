@@ -1,0 +1,5 @@
+@use '@/styles/utils/rem-calc' as *;
+
+.container {
+  padding-block: rem-calc(84 48);
+}

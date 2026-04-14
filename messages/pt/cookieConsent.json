@@ -1,0 +1,38 @@
+{
+  "title": "Cookies",
+  "description": "Usamos cookies para tornar a sua experiência ainda melhor!",
+  "mainTitle": "Política de Cookies",
+  "mainDescription": "Utilizamos cookies para melhorar a sua experiência na plataforma Boat4You, analisar como utiliza o nosso website e melhorar o nosso sistema de reserva de barcos. Estes cookies ajudam-nos a fornecer conteúdo personalizado e garantir que a nossa plataforma funciona de forma ideal para as suas necessidades de reserva. Recolhemos cookies essenciais para a funcionalidade da plataforma, dados analíticos para melhorar a experiência do utilizador e preferências para personalizar o seu painel. Saiba mais na nossa <link>Política de Privacidade</link>.",
+  "buttons": {
+    "accept": "Aceitar tudo",
+    "reject": "Aceitar apenas os necessários",
+    "manage": "Definições de Cookies",
+    "save": "Guardar definições"
+  },
+  "cookieList": {
+    "name": "Nome",
+    "domain": "Domínio",
+    "duration": "Duração",
+    "description": "Descrição"
+  },
+  "necessary": {
+    "title": "Cookies Essenciais",
+    "description": "Estes cookies são necessários para o correto funcionamento do nosso website e não podem ser desativados. Permitem funcionalidades essenciais como a segurança de formulários, definições de idioma e navegação básica no website. Pode bloquear estes cookies no seu navegador, mas algumas partes do website poderão não funcionar corretamente. Estes cookies não armazenam informações pessoalmente identificáveis."
+  },
+  "analytics": {
+    "title": "Cookies Analíticos",
+    "description": "Estes cookies ajudam-nos a compreender como os visitantes interagem com o nosso website, recolhendo informações anónimas sobre padrões de utilização, páginas populares e áreas de melhoria. Utilizamos estes dados para otimizar o desempenho da nossa plataforma e melhorar a experiência do utilizador para clientes que procuram alugar barcos.",
+    "cookies": [
+      {
+        "name": "_ga",
+        "domain": "www.boat4you.com",
+        "duration": "400 dias",
+        "description": "Cookie do Google Analytics que distingue utilizadores únicos e recolhe dados anónimos sobre o tráfego do website, interações dos utilizadores e tendências para nos ajudar a melhorar a nossa plataforma de reserva de barcos e a experiência do utilizador."
+      }
+    ]
+  },
+  "marketing": {
+    "title": "Cookies de Marketing",
+    "description": "Estes cookies ajudam-nos a compreender a eficácia do nosso marketing e a identificar potenciais clientes interessados na nossa plataforma de aluguer de barcos. Utilizamo-los para acompanhar as interações no website e melhorar a nossa comunicação com clientes que procuram serviços de charter de iates. Estes cookies são carregados apenas com o seu consentimento e pode retirar o consentimento a qualquer momento."
+  }
+}

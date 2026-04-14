@@ -1,0 +1,58 @@
+@use '@/styles/settings/variables' as *;
+@use '@/styles/utils/rem-calc' as *;
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
+  position: relative;
+  margin-top: rem-calc(24);
+
+  .timelineItem {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    position: relative;
+
+    // &:last-child {
+    //   flex: 0 0 auto;
+    //   margin-left: auto;
+    // }
+
+    .timelineIconWrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: rem-calc(16);
+      width: 100%;
+
+      .connector {
+        flex: 1;
+        height: rem-calc(3);
+        display: flex;
+        flex-direction: row;
+        gap: rem-calc(10);
+
+        .line {
+          flex: 1;
+          min-width: rem-calc(4);
+          height: 100%;
+          background-color: $black-200;
+          border-radius: rem-calc(2);
+
+          &.active {
+            background-color: $green-500;
+          }
+        }
+      }
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      max-width: rem-calc(200);
+    }
+  }
+}

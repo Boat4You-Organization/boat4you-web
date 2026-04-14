@@ -1,0 +1,20 @@
+import { LANGUAGE_LABEL_MAP, Language } from '@/models/user.model';
+
+export type LocaleType = 'en' | 'hr' | 'fr' | 'de' | 'pt' | 'it' | 'es';
+
+export type Locale = {
+  id: Language;
+  label: string;
+};
+
+const locales: Locale[] = [
+  { id: Language.ENGLISH, label: LANGUAGE_LABEL_MAP[Language.ENGLISH] },
+  { id: Language.FRENCH, label: LANGUAGE_LABEL_MAP[Language.FRENCH] },
+  { id: Language.GERMAN, label: LANGUAGE_LABEL_MAP[Language.GERMAN] },
+  { id: Language.PORTUGUESE, label: LANGUAGE_LABEL_MAP[Language.PORTUGUESE] },
+  { id: Language.ITALIAN, label: LANGUAGE_LABEL_MAP[Language.ITALIAN] },
+  { id: Language.SPANISH, label: LANGUAGE_LABEL_MAP[Language.SPANISH] },
+  { id: Language.CROATIAN, label: LANGUAGE_LABEL_MAP[Language.CROATIAN] },
+];
+
+export default locales;

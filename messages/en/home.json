@@ -1,0 +1,122 @@
+{
+  "hero": {
+    "title": "Book a yacht in",
+    "ctaTitle": "one click.",
+    "description": "Charter your perfect yacht in just a few clicks. Easy, fast, and stress-free — your dream sailing adventure starts here."
+  },
+  "generalSearchBar": {
+    "whereAreYouGoing": "Where are you going?",
+    "selectBoatType": "Select boat type",
+    "where": "Where",
+    "searchLocations": "Search locations",
+    "when": "When",
+    "choosedates": "Choose Dates",
+    "withWhat": "With What",
+    "chooseBoat": "Choose a boat",
+    "chooseDestination": "Choose Destination",
+    "chooseTransportation": "Choose Transportation",
+    "searchBoats": " Search boats",
+    "aroundCurrentLocation": "Around current location",
+    "locating": "Locating…",
+    "locationError": "Couldn't get your location"
+  },
+  "destinationsSection": {
+    "theWorldIs": "Best yacht charter",
+    "yours": "destinations",
+    "yachts": "yachts",
+    "destinations": {
+      "bahamas": "Bahamas",
+      "caribbean": "Caribbean",
+      "croatia": "Croatia",
+      "france": "France",
+      "greece": "Greece",
+      "italy": "Italy",
+      "martinique": "Martinique",
+      "montenegro": "Montenegro",
+      "seychelles": "Seychelles",
+      "spain": "Spain",
+      "türkiye": "Türkiye",
+      "virginIslandsBritish": "Virgin Islands (British)",
+      "grenada": "Grenada"
+    }
+  },
+  "whyChooseUsSection": {
+    "whyChoose": "Why choose us as your <strong>professional charter provider</strong>",
+    "items": {
+      "competitivePricing": {
+        "title": "Competitive Pricing",
+        "description": "Best rates with no hidden fees. Premium quality at unbeatable prices."
+      },
+      "wideSelection": {
+        "title": "Wide Selection",
+        "description": "Diverse fleet from luxury yachts to sailing boats for every occasion."
+      },
+      "securePayment": {
+        "title": "Secure Payment",
+        "description": "Bank-level security with trusted payment gateways. Your data is safe."
+      },
+      "trustedCustomerService": {
+        "title": "Trusted Customer Service",
+        "description": "24/7 expert support for seamless booking and unforgettable experiences."
+      }
+    }
+  },
+  "ourFleetSection": {
+    "getToKnow": "We have the boat you want, ",
+    "ourFleet": "no matter what type it is",
+    "boatSelection": "The best selection of boats online at the best prices",
+    "boat": "boat",
+    "fleet": {
+      "catamarans": "Catamarans",
+      "gulets": "Gulets",
+      "houseBoats": "House Boats",
+      "luxuryMotorYachts": "Luxury Motor Yachts",
+      "motorboats": "Motorboats",
+      "motorYachts": "Motor Yachts",
+      "motorSailors": "Motor Sailors",
+      "powerCatamarans": "Power Catamarans",
+      "sailingYachts": "Sailing Yachts",
+      "miniCruisers": "Mini Cruisers",
+      "trimarans": "Trimaran",
+      "rubberBoats": "Rubber Boat"
+    }
+  },
+  "chooseFromFiveHundredLocations": "More than 40 countries for boat rental & yacht charter with best prices",
+  "riskFreeBooking": {
+    "riskFreeBooking": "Risk free booking",
+    "save15Now": "Save 15% now",
+    "cancellingDescription": "Cancelling with us is fully risk-free and flexible. We offer generous refund policies to protect your investment."
+  },
+  "blogSection": {
+    "readAboutYour": "Ideas for your next ",
+    "nextHoliday": "sailing vacation",
+    "discoverSecretSpots": "Discover secret spots like the locals do; check our advice for your next yacht charter."
+  },
+  "allDestinationsSection": {
+    "allOf": "Explore our ",
+    "ourDestinations": "favorite places to sail",
+    "specialDeals": "Get special deals and save money on every booking reservation.",
+    "continents": {
+      "europe": "Europe",
+      "americas": "Americas",
+      "asia": "Asia",
+      "africa": "Africa",
+      "australia": "Australia"
+    }
+  },
+  "languageModal": {
+    "title": "Language and currency",
+    "savePreferences": "Save preferences",
+    "languageLabel": "Language",
+    "currencyLabel": "Currency",
+    "languages": {
+      "en": "English",
+      "fr": "French",
+      "de": "German",
+      "pt": "Portuguese",
+      "it": "Italian",
+      "es": "Spanish",
+      "hr": "Croatian"
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "hero": {
+    "title": "<strong>Sua aventura global de navegação começa aqui.</strong>",
+    "description": "Na <logo></logo> <companyName>Boat4You</companyName>, você transforma planos de viagem em verdadeiras jornadas nas melhores águas do mundo. Crescemos com raízes mediterrâneas e nos tornamos uma plataforma global de charter. Você recebe **aconselhamento especializado**, **embarcações verificadas** e um fluxo de reserva suave, desde a primeira cotação até a soltura das amarras."
+  },
+  "stats": {
+    "title": "Principais credenciais de confiança",
+    "description": "Aconselhamento independente. Recomendações neutras de fornecedores que se ajustam às suas datas, tamanho da tripulação e orçamento.<br></br>Parceiros verificados. Seguro, licenças e verificações de segurança em arquivo com nossa equipe.<br></br>Preços transparentes. Contratos claros. Sem taxas ocultas.<br></br>Em conformidade com o GDPR. Pagamentos seguros. Privacidade por padrão.<br></br>Suporte real. Assistência 24/7 antes, durante e depois da sua viagem.",
+    "premiumYachtsFleet": "Iates Premium em nossa Frota Global",
+    "worldwideDestinations": "Destinos Mundiais",
+    "teamExperience": "Anos de experiência combinada da equipe",
+    "customersServed": "Clientes Satisfeitos Atendidos",
+    "charterPartners": "Parceiros de Charter Verificados"
+  },
+  "aboutUs": {
+    "title": "Quem somos",
+    "mainTitle": "Transformando Sonhos em Viagens",
+    "description": "Acreditamos que você merece um iate privado que pareça ter sido construído para a sua semana. Nossa equipe tem mais de 20 anos de experiência em charter com conhecimento local na Europa, no Caribe e além. Auditamos bases, testamos rotas e orientamos tripulações, tudo para as suas férias de navegação feitas sob medida. Você obtém orientação honesta, não suposições."
+  },
+  "whyChooseUs": {
+    "title": "Por que escolher Boat4You",
+    "mainTitle": "Sua experiência inigualável de charter de iate começa aqui",
+    "description": "Nosso compromisso com a excelência nos diferencia na indústria competitiva de charter de iates",
+    "features": {
+      "0": {
+        "title": "Expertise global comprovada",
+        "description": "Corretores seniores com longos históricos em Croácia, Grécia, Itália, Espanha, França, Turquia, Ilhas Virgens Britânicas (BVI), Bahamas, Martinica e Granada."
+      },
+      "1": {
+        "title": "Serviço personalizado",
+        "description": "Cada itinerário é construído em torno de você. Tempo em família, navegação ativa, comida e vinho, ou baías tranquilas. Você decide o ritmo."
+      },
+      "2": {
+        "title": "Reservas gratuitas",
+        "description": "Mantenha opções e compare iates sem taxas de reserva extras. Prazos e lembretes claros."
+      },
+      "3": {
+        "title": "Acesso a frota premium",
+        "description": "Monocascos, catamarãs, iates a motor e superiates de frotas confiáveis. Novos lançamentos adicionados a cada temporada."
+      },
+      "4": {
+        "title": "Reserva segura",
+        "description": "Pagamentos em garantia através de gateways aprovados. Tratamento dos seus dados em conformidade com o GDPR."
+      },
+      "5": {
+        "title": "Suporte 24/7",
+        "description": "Humanos, não bots. Contatos da base, verificações meteorológicas, ajuda com rotas e respostas rápidas quando os planos mudam."
+      }
+    }
+  },
+  "ourPromise": {
+    "title": "Nossa promessa",
+    "mainTitle": "É aqui que uma vida de memórias começa: Nosso juramento de superar todas as suas expectativas",
+    "description": "Seu conforto e segurança guiam cada decisão. Recomendamos rotas que combinam com a semana que você deseja, de 'pulos' entre ilhas nas Cíclades a bancos de areia nas Exumas. Você obtém barcos confiáveis, uma tripulação informada e um plano que funciona em condições reais. Buscamos um único resultado. Que você desembarque dizendo: 'Nós navegaríamos com a Boat4You novamente'."
+  },
+  "ourFleet": {
+    "title": "Temos o barco que você deseja, ",
+    "emphasizedTitle": "não importa o tipo",
+    "description": "A melhor seleção de barcos online com os melhores preços"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "metadata": {
+    "base": {
+      "title": "Boat4You | Aluguel de Barcos Fácil e Seguro no Mundo Todo",
+      "titleTemplate": "%s | Boat4You",
+      "description": "Navegue e reserve barcos em mais de 100 países. Veleiros, catamarãs, lanchas – com ou sem skipper. Melhores preços. Reserva segura. Suporte 24/7.",
+      "path": ""
+    },
+    "search": {
+      "title": "Buscar iates",
+      "description": "Alugue seu iate perfeito em apenas alguns cliques. Simples, rápido e sem estresse — sua aventura náutica dos sonhos começa aqui.",
+      "path": "/search"
+    },
+    "blog": {
+      "title": "Guias de Charter de Iates | Planejamento, Roteiros, Notícias | Boat4You",
+      "description": "Os guias especializados de charter de iates da Boat4You fornecem inspiração e informações sobre férias náuticas, como escolher o barco certo e onde navegar.",
+      "path": "/blog"
+    },
+    "aboutUs": {
+      "title": "Sua aventura global de navegação começa aqui",
+      "description": "Na Boat4You transformamos seus sonhos de navegação em aventuras inesquecíveis pelas águas mais espetaculares do mundo.",
+      "path": "/about-us"
+    },
+    "contactUs": {
+      "title": "Entre em contato agora",
+      "description": "Na Boat4You somos apaixonados por criar experiências inesquecíveis de charter de iates.",
+      "path": "/contact-us"
+    },
+    "howWeWork": {
+      "title": "Reservar um barco nunca foi tão fácil",
+      "description": "Na Boat4You acreditamos que alugar um barco deve ser tão suave e emocionante quanto a própria jornada.",
+      "path": "/how-we-work"
+    },
+    "faq": {
+      "title": "Reservas e Disponibilidade",
+      "description": "Encontre respostas rápidas sobre recursos, configuração, preços e suporte da Boat4You.",
+      "path": "/faq"
+    },
+    "termsAndConditions": {
+      "title": "Termos e Condições da Boat4You",
+      "description": "Revise os termos e condições para usar a Boat4You, incluindo responsabilidades do usuário, pagamentos e políticas de conta.",
+      "path": "/terms-and-conditions"
+    },
+    "privacyPolicy": {
+      "title": "Política de Privacidade",
+      "description": "Leia como a Boat4You coleta, usa e protege seus dados pessoais ao usar nosso site e serviços.",
+      "path": "/privacy-policy"
+    }
+  },
+  "boat": {
+    "forRent": "para alugar"
+  }
+}

@@ -1,0 +1,139 @@
+@use '@/styles/settings/variables' as *;
+@use '@/styles/utils/rem-calc' as *;
+@use '@/styles/mixins/breakpoints' as *;
+
+.root {
+  &.container {
+    background-color: $white;
+    overflow: hidden;
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: rem-calc(24);
+      padding: rem-calc(16);
+      transition: padding $animation-duration-fast ease;
+
+      &.expanded {
+        padding: rem-calc(24);
+      }
+
+      .logo {
+        flex-shrink: 0;
+      }
+
+      .searchSection {
+        position: relative;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+
+        .searchBoxWrapper {
+          width: rem-calc(460);
+          transition: width $animation-duration-fast $timing-function;
+          transform-origin: center;
+
+          &.expanded {
+            width: 100%;
+            max-width: rem-calc(802);
+          }
+
+          .searchBox {
+            width: 100%;
+            height: rem-calc(42);
+            border-radius: rem-calc(10);
+            border: rem-calc(1) solid $black-200;
+            box-shadow: rem-calc(0 1 11 0) rgb(0 0 0 / 10%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition:
+              height $animation-duration-fast $timing-function,
+              border-color $animation-duration-fast ease;
+            background-color: $white;
+            transform-origin: center;
+            overflow: hidden;
+
+            &.expanded {
+              height: rem-calc(60);
+            }
+
+            &:not(.expanded):hover {
+              border-color: $blue-500;
+            }
+
+            .form {
+              display: flex;
+              width: 100%;
+              pointer-events: none;
+
+              &.expanded {
+                pointer-events: auto;
+              }
+
+              .buttonWrapper {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: rem-calc(6);
+
+                .button {
+                  min-width: 0;
+                  width: rem-calc(30);
+                  height: rem-calc(30);
+                  transition:
+                    height $animation-duration-fast $timing-function,
+                    width $animation-duration-fast $timing-function;
+
+                  &.expanded {
+                    height: rem-calc(48);
+                    width: rem-calc(48);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .actions {
+        display: flex;
+        align-items: center;
+        gap: rem-calc(16);
+        flex-shrink: 0;
+
+        .iconButton {
+          padding-block: rem-calc(8);
+          border-radius: rem-calc(5);
+          transition: background-color $animation-duration-fast ease;
+
+          &:hover {
+            background-color: $black-100;
+          }
+        }
+      }
+    }
+  }
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgb(0 0 0 / 40%);
+  backdrop-filter: blur(rem-calc(6));
+  z-index: 999;
+  animation: fade-in $animation-duration-fast ease forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

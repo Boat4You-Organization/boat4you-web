@@ -1,0 +1,28 @@
+@use '@/styles/settings/variables' as *;
+@use '@/styles/utils/rem-calc' as *;
+@use '@/styles/mixins/breakpoints' as *;
+
+.root {
+  &.container {
+    padding: rem-calc(8 16);
+    background-color: $white;
+    border-bottom: rem-calc(1) solid $black-200;
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: rem-calc(8);
+      padding: 0;
+
+      .searchBar {
+        flex: 1;
+        width: 100%;
+        height: rem-calc(58);
+        border-radius: rem-calc(52);
+        box-shadow: rem-calc(0 1 13 0) rgb(0 0 0 / 10%);
+        cursor: pointer;
+      }
+    }
+  }
+}

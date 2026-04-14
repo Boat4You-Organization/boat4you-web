@@ -1,0 +1,22 @@
+@use '@/styles/utils/rem-calc' as *;
+@use '@/styles/settings/variables' as *;
+@use '@/styles/mixins/breakpoints' as *;
+
+.root {
+  &.container {
+    position: fixed;
+    bottom: rem-calc(24);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    padding: rem-calc(12 16);
+    border-radius: rem-calc(100);
+
+    @include media(0, 'sm') {
+      left: rem-calc(48);
+      right: rem-calc(48);
+      width: auto;
+      transform: none;
+    }
+  }
+}
