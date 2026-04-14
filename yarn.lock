@@ -2002,10 +2002,10 @@
   dependencies:
     tslib "^2.6.2"
 
-"@stripe/stripe-js@^7.8.0":
-  version "7.8.0"
-  resolved "https://registry.yarnpkg.com/@stripe/stripe-js/-/stripe-js-7.8.0.tgz#01390d31030f04b64a7ff13adcccbafd615c7b77"
-  integrity sha512-DNXRfYUgkZlrniQORbA/wH8CdFRhiBSE0R56gYU0V5vvpJ9WZwvGrz9tBAZmfq2aTgw6SK7mNpmTizGzLWVezw==
+"@stripe/stripe-js@^9.2.0":
+  version "9.2.0"
+  resolved "https://registry.yarnpkg.com/@stripe/stripe-js/-/stripe-js-9.2.0.tgz#2579b4c13ff2f1316c08e80b1bbec6dbb4d9b661"
+  integrity sha512-YSzLC0t6VS9MDdPTynSMqU8IxrItFUjkDORALFT6sSMR/XZ5Vgm3RDp/Gk7z727MC4A9s4MFVel0gF0c7+kdrg==
 
 "@swc/core-darwin-arm64@1.15.7":
   version "1.15.7"
