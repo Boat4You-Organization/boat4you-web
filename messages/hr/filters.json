@@ -26,5 +26,12 @@
   "engine": "Motor (kW)",
   "charterType": "Tip broda",
   "searchCharterType": "Pretražie tip broda",
-  "services": "Usluge"
+  "services": "Usluge",
+  "minLength": "Min duljina",
+  "maxLength": "Max duljina",
+  "beam": "Širina",
+  "fuelTank": "Spremnik goriva",
+  "waterTank": "Spremnik vode",
+  "length": "Duljina",
+  "newYacht": "Nova jahta"
 }

@@ -3,11 +3,11 @@
 
 .root {
   &.list {
-    gap: rem-calc(8);
+    gap: 0;
 
     .item {
       cursor: pointer;
-      padding: rem-calc(16 12);
+      padding: rem-calc(4 12);
       border-radius: rem-calc(12);
 
       &.active {

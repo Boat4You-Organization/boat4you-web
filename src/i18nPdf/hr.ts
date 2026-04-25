@@ -1,5 +1,6 @@
 const hr = {
   bookingReference: 'Referenca rezervacije',
+  confirmationNumber: 'Broj potvrde',
   reservationNumber: 'Rezervacija br.',
   date: 'Datum',
   customer: 'Kupac',

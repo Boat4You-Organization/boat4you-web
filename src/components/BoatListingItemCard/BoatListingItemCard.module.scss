@@ -24,22 +24,37 @@
       border-color: $blue-500;
     }
 
+    // On mobile keep the row layout (image left, content right) — the
+    // previous stacked-column layout made each card tall and wasted
+    // space. booking/boataround use this row density on phones.
     @include media(0, 'md') {
-      flex-direction: column;
-      gap: rem-calc(24);
+      flex-direction: row;
+      gap: rem-calc(12);
+      padding: rem-calc(12);
     }
 
     .imageWrapper {
       position: relative;
-      width: rem-calc(388);
-      height: rem-calc(268);
+      width: rem-calc(280);
+      align-self: stretch;     // fill full card height
+      min-height: rem-calc(200);
 
       &.gridView {
         width: 100%;
+        height: rem-calc(220);
+        align-self: auto;
       }
 
       @include media(0, 'md') {
-        width: 100%;
+        // ~40% of the card — leaves the right side for title + specs
+        // + price stack, matches competitor card density.
+        width: 40%;
+        min-width: rem-calc(110);
+        max-width: rem-calc(140);
+        height: auto;
+        min-height: rem-calc(140);
+        align-self: stretch;
+        flex-shrink: 0;
       }
 
       .image {
@@ -55,52 +70,76 @@
       }
     }
 
+    // Middle column: title + location + specs + amenities at top,
+    // price + CTA pushed to bottom-right but tightly packed (no huge gap).
     .content {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      width: 100%;
-      padding-bottom: 0;
+      gap: rem-calc(8);
       flex: 1;
+      min-width: 0;
+      padding-bottom: 0;
 
-      .icon {
-        color: $black-300;
-        display: flex;
-        align-items: center;
-        cursor: pointer;
+      // Shrink EVERYTHING on mobile so the row card fits narrow 60%
+      // right column without squishing text into vertical towers.
+      @include media(0, 'md') {
+        gap: rem-calc(4);
+        padding: 0 !important;
 
-        &:hover {
-          color: $black-950;
+        h3, h2, h1 {
+          font-size: rem-calc(15);
+          line-height: 1.2;
+        }
+
+        p, span, a {
+          font-size: rem-calc(12);
+          line-height: 1.25;
+        }
+
+        // Amenity + specs icons shrink to fit the narrow column.
+        svg {
+          width: rem-calc(14);
+          height: rem-calc(14);
+        }
+
+        // Flag icon override — it has its own explicit sizing.
+        img {
+          max-height: rem-calc(14);
         }
       }
 
-      .actions {
+      // Bottom-right block (price ABOVE button). Small top-padding instead
+      // of margin-top: auto so the card doesn't stretch vertically to fill
+      // the image height — keeps the card compact.
+      .priceBlock {
+        margin-top: rem-calc(12);
         display: flex;
-        justify-content: flex-end;
-        gap: rem-calc(12);
+        flex-direction: column;
+        align-items: flex-end;
+        gap: rem-calc(8);
 
         &.gridView {
-          margin-top: rem-calc(24);
-          flex-direction: column;
-          align-items: flex-start;
+          margin-top: rem-calc(16);
+          align-items: stretch;
+          gap: rem-calc(12);
         }
 
-        @include media(0, 'md') {
-          margin-top: rem-calc(30);
-          flex-direction: column;
-          align-items: stretch;
-          gap: rem-calc(16);
+        // Mobile row card: price is bottom-right of the content column,
+        // not full-width — stays compact, right-aligned, like boataround.
+        &.mobileStacked {
+          margin-top: auto;
+          align-items: flex-end;
+          gap: rem-calc(4);
         }
 
         .button {
-          width: auto;
+          white-space: nowrap;
+          min-width: rem-calc(140);
 
-          &.fullwidth {
-            width: 100%;
-          }
-
+          // Hide on mobile — entire card is a Link, the extra button
+          // just crowds the narrow 60% content column.
           @include media(0, 'md') {
-            width: 100%;
+            display: none;
           }
         }
       }

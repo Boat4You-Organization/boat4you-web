@@ -21,8 +21,8 @@ export const availabilityCardConfig: BookingInfo = {
       textColor: 'success',
     },
     {
-      title: 'Best price on the market',
-      tooltip: 'Best price on the market',
+      title: 'Lowest rate, guaranteed',
+      tooltip: 'Lowest rate, guaranteed',
       textColor: 'default',
     },
   ],

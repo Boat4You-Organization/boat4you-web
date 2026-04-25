@@ -8,6 +8,24 @@ import { MeasurementInfo, YachtFeatureModel } from './yacht-feature.model';
 import { YachtOfferModel } from './yacht-offer.model';
 import { YachtServiceModel } from './yacht-service.model';
 
+/**
+ * Per-offer availability status mirroring backend's OfferStatus enum.
+ * Values match the raw ordinals sent by the API. The card groups these
+ * into two user-facing badges (Available / Pre-reserved).
+ */
+export enum OfferStatus {
+  UNKNOWN = 'UNKNOWN',
+  FREE = 'FREE',
+  OPTION = 'OPTION',
+  OPTION_WAITING = 'OPTION_WAITING',
+  UNAVAILABLE = 'UNAVAILABLE',
+  RESERVED = 'RESERVED',
+  CANCELLED = 'CANCELLED',
+  SERVICE = 'SERVICE',
+  OPTION_EXPIRED = 'OPTION_EXPIRED',
+  INFO = 'INFO',
+}
+
 export enum CharterType {
   BAREBOAT = 'BAREBOAT',
   CRUISE = 'CRUISE',
@@ -143,11 +161,42 @@ export interface YachtModelShortInfo extends Pick<
   vesselType: VesselType;
   totalLocations: number;
   isOption: boolean;
+  /**
+   * Full offer status from backend — exposes all 10 states (FREE, OPTION,
+   * RESERVED, CANCELLED, SERVICE, OPTION_EXPIRED, INFO, UNAVAILABLE, etc.)
+   * so the card can render an accurate availability badge. Optional because
+   * the currently deployed backend only sends `isOption`.
+   */
+  offerStatus?: OfferStatus | null;
+  /** Final per-day price the customer pays, in EUR. */
   clientPriceEur: number;
   clientPriceInfo: PriceInfo;
+  /** Original list price (before discount), TOTAL for the booking period.
+   *  Optional — backend may not always return it. When present, the card
+   *  shows it crossed-out next to the discount badge. */
+  listPriceEur?: number | null;
+  listPriceInfo?: PriceInfo | null;
+  /** Number of charter days (date_to - date_from). Used to compute the
+   *  TOTAL displayed price ("Price for X days"). Falls back to 7 if missing. */
+  numberOfDays?: number | null;
   modelName: string;
   mainImageId: number;
   agencyName: string;
+  /**
+   * Top-N equipment label_codes (kebab-case, e.g. "air-conditioning", "dinghy")
+   * for this yacht, ordered by Equipment.filterOrder on the backend.
+   * Used to render real amenity icons on the card. Optional: legacy deploys
+   * don't populate this, in which case the card falls back to a demo pool.
+   */
+  amenityKeys?: string[] | null;
+  /**
+   * Start/end of the offer period that matched the user's search (±3 day flex
+   * window). When these differ from the user's requested dates the card shows
+   * a "Closest day" badge alongside the shifted period. Strings in ISO format
+   * (YYYY-MM-DD) from the backend's LocalDate serialization.
+   */
+  offerDateFrom?: string | null;
+  offerDateTo?: string | null;
 }
 
 export interface YachtModel

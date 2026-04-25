@@ -26,6 +26,10 @@ export interface SelectedExtras {
   unitPriceEur: number;
   unitPriceInfo: PriceInfo;
   key: string;
+  // Refined V1_57 payment classification — used by frontend to split the
+  // historical "Paid at marina" header into Advance / Marina / Included
+  // buckets. Falls back to legacy payableInBase grouping when null.
+  paymentType?: 'INCLUDED' | 'WITH_BOOKING' | 'ADVANCE_TO_OPERATOR' | 'ON_SITE' | null;
 }
 
 export interface YachtOfferModel {
@@ -40,8 +44,10 @@ export interface YachtOfferModel {
   totalPriceCalcInfo: PriceInfo;
   clientPricePerDayEur: number;
   clientPricePerDayInfo: PriceInfo;
+  numberOfDays?: number | null;
+  listPriceEur?: number | null;
+  listPriceInfo?: PriceInfo | null;
   status: Status;
-  obligatoryExtrasIds: number[];
   obligatoryExtrasKeys: string[];
   extras: YachtServiceModel[];
   locationFrom: LocationFromTo;

@@ -72,6 +72,7 @@ const OverviewStep = ({
         compact
         isLastStep={isLastStep}
         dateFrom={dateFrom}
+        securityDeposit={reservationData.securityDeposit}
       />
       <Divider
         sx={{

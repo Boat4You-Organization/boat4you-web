@@ -5,10 +5,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: rem-calc(8);
+  padding: rem-calc(6 8);
   border-radius: rem-calc(10);
   color: $black-950;
-  margin-bottom: rem-calc(4);
+  margin-bottom: rem-calc(1);
   cursor: pointer;
   transition: background-color $animation-duration-fast ease;
 

@@ -6,7 +6,11 @@ const typography: TypographyVariantsOptions = {
     fontSize: '62px',
     fontWeight: 500,
     '@media(max-width: 768px)': {
-      fontSize: '48px',
+      // Smaller hero copy on phones so the search card stays above the
+      // fold on 375×812 viewport — user feedback that the search wasn't
+      // immediately visible on mobile.
+      fontSize: '36px',
+      lineHeight: 1.15,
     },
   },
   h1: {

@@ -45,7 +45,14 @@ const PaymentTab = ({
     locale,
   });
 
-  const extrasPayableInBase = selectedExtras.filter(extra => extra.payableInBase);
+  // V1_57 split: items the partner expects bank-transferred to them BEFORE
+  // embarkation (APA, Skipper, Hostess, Cook, equipment rental) vs cash/card
+  // at the marina (fuel, transit log, mooring, tourist tax). Historically
+  // both groups read as "Paid at marina" which mis-led customers about APA.
+  // Fallback when paymentType is null: keep legacy "marina" bucket so
+  // un-backfilled rows stay visible.
+  const extrasInAdvance = selectedExtras.filter(extra => extra.payableInBase && extra.paymentType === 'ADVANCE_TO_OPERATOR');
+  const extrasOnSite = selectedExtras.filter(extra => extra.payableInBase && extra.paymentType !== 'ADVANCE_TO_OPERATOR');
   const extrasPayNow = selectedExtras.filter(extra => !extra.payableInBase);
 
   return (
@@ -67,12 +74,32 @@ const PaymentTab = ({
           </Typography>
         </Stack>
         <Stack gap={2} mt={2}>
-          {extrasPayableInBase.length > 0 && (
+          {extrasInAdvance.length > 0 && (
+            <>
+              <Typography variant="body1" fontWeight={700}>
+                {t('paidInAdvance')}
+              </Typography>
+              {extrasInAdvance.map((item, index) => (
+                // eslint-disable-next-line react/no-array-index-key
+                <Stack key={`adv-${index}`} direction="row" justifyContent="space-between" alignItems="center" gap={2}>
+                  <Typography variant="body1">{item.name}</Typography>
+                  <Typography variant="body1" whiteSpace="nowrap">
+                    {formatPriceWithCurrency({
+                      clientPriceEur: item.priceEur,
+                      clientPriceInfo: item.priceInfo,
+                      locale,
+                    })}
+                  </Typography>
+                </Stack>
+              ))}
+            </>
+          )}
+          {extrasOnSite.length > 0 && (
             <>
               <Typography variant="body1" fontWeight={700}>
                 {t('paidAtMarina')}
               </Typography>
-              {extrasPayableInBase.map((item, index) => (
+              {extrasOnSite.map((item, index) => (
                 // eslint-disable-next-line react/no-array-index-key
                 <Stack key={`base-${index}`} direction="row" justifyContent="space-between" alignItems="center" gap={2}>
                   <Typography variant="body1">{item.name}</Typography>

@@ -26,10 +26,22 @@ const BoatTypeContent = ({ maxDisplayedChips, onDeleteSingle }: BoatTypeContentP
   const currentBoatTypes = watch('boatTypes') || [];
   const t = useTranslations();
 
+  // Mirror the desktop picker (useBoatTypeAutocomplete.tsx). Trimaran, House
+  // boat and Rubber boat are deliberately excluded — we don't broker those.
+  // Enum still holds them so existing yachts keep rendering elsewhere.
   const options: AutocompleteOption[] = [
     { id: VesselType.CATAMARAN, icon: <Catamaran />, label: t(VESSEL_TYPE_LABEL_MAP[VesselType.CATAMARAN]) },
+    {
+      id: VesselType.SAILING_YACHT,
+      icon: <LuxurySailingYacht />,
+      label: t(VESSEL_TYPE_LABEL_MAP[VesselType.SAILING_YACHT]),
+    },
+    {
+      id: VesselType.POWER_CATAMARAN,
+      icon: <Catamaran />,
+      label: t(VESSEL_TYPE_LABEL_MAP[VesselType.POWER_CATAMARAN]),
+    },
     { id: VesselType.GULET, icon: <Gulet />, label: t(VESSEL_TYPE_LABEL_MAP[VesselType.GULET]) },
-    { id: VesselType.HOUSE_BOAT, icon: <Motorboat />, label: t(VESSEL_TYPE_LABEL_MAP[VesselType.HOUSE_BOAT]) },
     {
       id: VesselType.LUXURY_MOTOR_YACHT,
       icon: <LuxuryMotoryacht />,
@@ -39,18 +51,6 @@ const BoatTypeContent = ({ maxDisplayedChips, onDeleteSingle }: BoatTypeContentP
     { id: VesselType.MOTORBOAT, icon: <Motorboat />, label: t(VESSEL_TYPE_LABEL_MAP[VesselType.MOTORBOAT]) },
     { id: VesselType.MOTOR_YACHT, icon: <Motoryacht />, label: t(VESSEL_TYPE_LABEL_MAP[VesselType.MOTOR_YACHT]) },
     { id: VesselType.MOTORSAILER, icon: <MotorSailor />, label: t(VESSEL_TYPE_LABEL_MAP[VesselType.MOTORSAILER]) },
-    {
-      id: VesselType.POWER_CATAMARAN,
-      icon: <Catamaran />,
-      label: t(VESSEL_TYPE_LABEL_MAP[VesselType.POWER_CATAMARAN]),
-    },
-    { id: VesselType.RUBBER_BOAT, icon: <Motorboat />, label: t(VESSEL_TYPE_LABEL_MAP[VesselType.RUBBER_BOAT]) },
-    {
-      id: VesselType.SAILING_YACHT,
-      icon: <LuxurySailingYacht />,
-      label: t(VESSEL_TYPE_LABEL_MAP[VesselType.SAILING_YACHT]),
-    },
-    { id: VesselType.TRIMARAN, icon: <Catamaran />, label: t(VESSEL_TYPE_LABEL_MAP[VesselType.TRIMARAN]) },
   ];
 
   const handleAddBoatTypes = (option: AutocompleteOption) => {

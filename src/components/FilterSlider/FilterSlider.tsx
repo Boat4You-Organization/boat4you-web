@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useId, useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 
 import { Box, Slider, Typography } from '@mui/material';
 import { useSearchParams } from 'next/navigation';
@@ -39,7 +39,7 @@ const FilterSlider = ({
   const { setMultipleParams } = useQueryParams();
   const rawSearchParams = useSearchParams();
   const { searchResults } = useYachtStore();
-  const labelId = useId();
+  const labelId = `filter-slider-${minParamKey}`;
 
   const [range, setRange] = useState<[number, number]>(() => {
     const rawMin = rawSearchParams.get(minParamKey);

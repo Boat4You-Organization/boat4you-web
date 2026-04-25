@@ -2,6 +2,8 @@
 import { startTransition, useActionState, useEffect, useState } from 'react';
 import { useFormContext } from 'react-hook-form';
 
+import { Box } from '@mui/material';
+
 import { getLocations, getPopularLocations, PopularEntry } from '@/actions/locations.actions';
 import AutocompleteMultipleChip from '@/components/AutocompleteMultipleChip';
 import { AutocompleteOption } from '@/components/AutocompleteMultipleChip/AutocompleteMultipleChip';
@@ -34,6 +36,12 @@ interface UseLocationAutocompleteProps {
    * auto-advancing the user to the date picker, for example).
    */
   onLocationAdded?: () => void;
+  /**
+   * Keep the suggestions dropdown always visible (no focus required).
+   * Used in the mobile full-screen picker modal so recent + popular are
+   * shown as soon as the modal opens.
+   */
+  alwaysOpen?: boolean;
 }
 
 const RECENT_GROUP = 'Recent searches';
@@ -42,15 +50,33 @@ const SELECTED_GROUP = 'Selected';
 const CURRENT_LOCATION_ID = '__current_location__';
 
 const TAG_BY_TYPE: Record<LocationType, SearchOptionTag> = {
+  // Booking.com-inspired palette (primary blue / Genius gold / deals
+  // green) — clearly distinct from boataround's green/red and readable
+  // on a white background unlike the earlier blue950 country tag.
   [LocationType.MARINA]: { label: 'marina', color: colors.blue500 },
-  [LocationType.REGION]: { label: 'region', color: colors.green500 },
-  [LocationType.COUNTRY]: { label: 'country', color: colors.red500 },
+  [LocationType.REGION]: { label: 'region', color: colors.mandalay900 },
+  [LocationType.COUNTRY]: { label: 'country', color: colors.green500 },
 };
 
 // Always show the country flag — marinas, regions and countries all get the flag
 // of their country (FlagIcon gracefully falls back to a generic Location pin if
-// the country code is missing or invalid).
-const getLocationIcon = (location: LocationModel) => <FlagIcon countryCode={location.countryCode} />;
+// the country code is missing or invalid). The default FlagIcon wrapper is 28×28
+// (sized for hero / booking surfaces); in the dropdown we want the same visual
+// weight as the boat-type SVGs (20×20), so override the wrapper locally instead
+// of changing the global FlagIcon size.
+const getLocationIcon = (location: LocationModel) => (
+  <Box
+    sx={{
+      display: 'flex',
+      '& > div:first-of-type': {
+        width: 20,
+        height: 20,
+      },
+    }}
+  >
+    <FlagIcon countryCode={location.countryCode} />
+  </Box>
+);
 
 const transformLocationToOption = (
   location: LocationModel,
@@ -76,6 +102,7 @@ const useLocationAutocomplete = ({
   namesField = 'destinations',
   translations,
   onLocationAdded,
+  alwaysOpen = false,
 }: UseLocationAutocompleteProps) => {
   const [stateLocation, actionLocation] = useActionState(getLocations, undefined);
   const { setValue, getValues } = useFormContext();
@@ -164,6 +191,12 @@ const useLocationAutocomplete = ({
     );
   };
 
+  // Depend on the serialized list (string), not the array reference — consumers
+  // often pass a react-hook-form `watch('did')` here, which returns a new array
+  // reference every render. Using the reference would re-fire the server action
+  // on every parent render and, via setState, create an infinite POST loop.
+  const selectedValuesKey = (selectedValues || []).join(',');
+
   useEffect(() => {
     startTransition(() => {
       actionLocation({
@@ -171,7 +204,8 @@ const useLocationAutocomplete = ({
         selected: selectedValues,
       });
     });
-  }, [searchString, selectedValues]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchString, selectedValuesKey]);
 
   // Popular searches are fixed — fetch once on mount.
   useEffect(() => {
@@ -211,15 +245,22 @@ const useLocationAutocomplete = ({
     popularEntries.forEach(entry => popularMemberMap.set(entry.id, entry.members));
 
     const expandedIds: string[] = [];
+    // Remember which popular entry a member id expanded from, so we can
+    // surface that entry's displayLabel (e.g. "Split Region") rather than
+    // the raw backend location name ("Split"). Otherwise the user sees a
+    // different word than the one they tapped — confusing.
+    const popularLabelByMemberId = new Map<string, string>();
 
     selectedIds
       .filter(id => id !== CURRENT_LOCATION_ID)
       .forEach(id => {
         const groupMembers = popularMemberMap.get(id);
+        const popularEntry = popularEntries.find(e => e.id === id);
 
         if (groupMembers) {
           groupMembers.forEach(m => {
             if (!expandedIds.includes(m.id)) expandedIds.push(m.id);
+            if (popularEntry) popularLabelByMemberId.set(m.id, popularEntry.displayLabel);
           });
         } else if (!expandedIds.includes(id)) {
           expandedIds.push(id);
@@ -239,7 +280,8 @@ const useLocationAutocomplete = ({
       const location = pool.find(loc => loc.id === selectId);
 
       if (location) {
-        selectedLocationsName.push(location.name);
+        const popularLabel = popularLabelByMemberId.get(selectId);
+        selectedLocationsName.push(popularLabel ?? location.name);
 
         if (!previousIds.includes(selectId)) {
           newlyAdded.push(location);
@@ -308,7 +350,21 @@ const useLocationAutocomplete = ({
           push({
             id: entry.id,
             label: entry.displayLabel,
-            icon: <FlagIcon countryCode={entry.countryCode} />,
+            // Same 20×20 wrapper as getLocationIcon — matches the boat-type
+            // SVG size so both dropdowns read as the same visual weight.
+            icon: (
+              <Box
+                sx={{
+                  display: 'flex',
+                  '& > div:first-of-type': {
+                    width: 20,
+                    height: 20,
+                  },
+                }}
+              >
+                <FlagIcon countryCode={entry.countryCode} />
+              </Box>
+            ),
             group: POPULAR_GROUP,
             tag: TAG_BY_TYPE[entry.primaryType],
           });
@@ -354,6 +410,7 @@ const useLocationAutocomplete = ({
         icon={Location}
         onInputChange={handleInputChange}
         variant={isExpanded ? 'expanded' : 'compact'}
+        alwaysOpen={alwaysOpen}
         TextFieldProps={{
           variant: 'outlined',
           fullWidth: true,

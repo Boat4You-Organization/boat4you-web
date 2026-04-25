@@ -5,6 +5,8 @@
   "lowPrepayment": "Low prepayment",
   "highestPrice": "Highest price",
   "lowestPrice": "Lowest price",
+  "minLength": "Min length",
+  "maxLength": "Max length",
   "pricePerDay": "Price (per day)",
   "cabins": "Cabins",
   "people": "People",
@@ -27,5 +29,10 @@
   "charterType": "Charter Type",
   "searchCharterType": "Search Charter Type",
   "typeOfMainsail": "Type Of Main Sail",
-  "services": "Services"
+  "services": "Services",
+  "beam": "Beam",
+  "fuelTank": "Fuel tank",
+  "waterTank": "Water tank",
+  "length": "Length",
+  "newYacht": "New yacht"
 }

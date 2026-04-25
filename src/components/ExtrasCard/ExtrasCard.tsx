@@ -30,6 +30,8 @@ const ExtrasCard = ({
   unit,
   extraKey,
   isStartingPrice,
+  obligatory,
+  description,
 }: ExtrasCardProps) => {
   const { selectedOffer, selectedExtrasKeys } = useYachtStore();
   const { calculatePrice } = useYachtPriceCalculation();
@@ -39,7 +41,13 @@ const ExtrasCard = ({
   const locale = useLocale();
   const labelId = useId();
 
-  const isObligatoryExtras = selectedOffer?.obligatoryExtrasKeys.includes(extraKey);
+  // Offer-level `obligatoryExtrasKeys` is authoritative when present (it
+  // folds in per-period partner logic), but a chunk of synced yachts sends
+  // an empty array even when the item is obligatory at yacht level. Fall
+  // back to the per-extra `obligatory` flag so Captain/Chef/APA on crewed
+  // yachts don't silently flip to "optional".
+  const isObligatoryExtras =
+    selectedOffer?.obligatoryExtrasKeys.includes(extraKey) || obligatory === true;
   const isSelected = selectedExtrasKeys.includes(extraKey);
   const isDisabled = isObligatoryExtras || !selectedOffer;
 
@@ -96,10 +104,11 @@ const ExtrasCard = ({
     <Grid
       component="article"
       container
-      alignItems={{ xs: 'flex-start', lg: 'center' }}
-      borderRadius={3}
-      p={3}
-      spacing={2}
+      alignItems="center"
+      borderRadius={1.5}
+      px={2}
+      py={0.75}
+      spacing={1.5}
       onClick={handleContainerClick}
       className={clsx(styles.container, {
         [styles.selected]: isSelected,
@@ -107,7 +116,7 @@ const ExtrasCard = ({
         [styles.disabled]: !selectedOffer,
       })}
     >
-      <Grid ref={checkboxContainerRef} size={{ xs: 2, lg: 1 }}>
+      <Grid ref={checkboxContainerRef} size={{ xs: 1 }}>
         <Checkbox
           checked={isChecked}
           value={isChecked}
@@ -116,23 +125,34 @@ const ExtrasCard = ({
           slotProps={{ input: { 'aria-labelledby': labelId } }}
         />
       </Grid>
-      <Grid size={{ xs: 10, lg: 8 }}>
-        <Typography id={labelId} component="h3" variant="h4" color={colors.black950}>
+      <Grid size={{ xs: 7, lg: 8 }}>
+        <Typography id={labelId} component="h3" variant="body1" fontWeight={700} color={colors.black950}>
           {extras ? servicesT(extras.labelCode as YachtServiceExtrasKey) : name}
         </Typography>
-      </Grid>
-      <Grid size={{ xs: 12, lg: 3 }}>
-        <Stack direction="row" justifyContent="flex-end" alignItems="center" gap={1}>
-          <Typography variant="body1" color={colors.black500} textAlign="end">
-            {isStartingPrice && t('from')}
+        {description && (
+          <Typography
+            variant="body2"
+            color={colors.black500}
+            sx={{ fontSize: 12, mt: 0.25, whiteSpace: 'pre-line' }}
+          >
+            {description}
           </Typography>
-          <Typography color={colors.green500} component="p" variant="h2" textAlign="end">
+        )}
+      </Grid>
+      <Grid size={{ xs: 4, lg: 3 }}>
+        <Stack direction="row" justifyContent="flex-end" alignItems="baseline" gap={0.5} flexWrap="wrap">
+          {isStartingPrice && (
+            <Typography variant="body2" color={colors.black500}>
+              {t('from')}
+            </Typography>
+          )}
+          <Typography color={colors.black950} component="p" variant="body1" fontWeight={700}>
             {displayPrice}
           </Typography>
+          <Typography variant="body2" color={colors.black500}>
+            {t(UNIT_LABEL_MAP[unit])}
+          </Typography>
         </Stack>
-        <Typography variant="body1" color={colors.black500} textAlign="end" pt={0.5}>
-          {t(UNIT_LABEL_MAP[unit])}
-        </Typography>
       </Grid>
     </Grid>
   );

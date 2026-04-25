@@ -16,9 +16,12 @@ import { loadPaymentMethod, loadSelectedInstallment, setActiveStep } from '@/val
 import { useBookingStore } from '@/valtio/booking/booking.store';
 
 import styles from './Booking.module.scss';
+import BookingHero from './BookingHero';
+import BookingSummaryCard from './BookingSummaryCard';
 import DetailsStep from './BookingSteps/DetailsStep';
 import OverviewStep from './BookingSteps/OverviewStep';
 import PaymentStep from './BookingSteps/PaymentStep';
+import UnifiedPaymentStep from './BookingSteps/UnifiedPaymentStep';
 import CancellationCard from './CancellationCard';
 import OverviewCard from './OverviewCard';
 import PaymentPoliciesCard from './PaymentPoliciesCard';
@@ -26,10 +29,17 @@ import PriceBreakdownCard from './PriceBreakdownCard';
 
 interface BookingProps {
   isAdmin: boolean;
-  user: UserModel;
+  user: UserModel | null;
+  /**
+   * Forces the booking wizard to start at a specific step regardless of
+   * session storage. Driven by the page route:
+   *  - /enter-your-details → 0 (DetailsStep)
+   *  - /payment            → 1 (UnifiedPaymentStep)
+   */
+  initialStep?: number;
 }
 
-const Booking = ({ isAdmin, user }: BookingProps) => {
+const Booking = ({ isAdmin, user, initialStep = 0 }: BookingProps) => {
   const { activeStep } = useBookingStore();
   const [reservationData, setReservationData] = useState<ReservationData | null>(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -81,6 +91,14 @@ const Booking = ({ isAdmin, user }: BookingProps) => {
       return;
     }
 
+    // /payment requires a reservation that was already created in /enter-your-details.
+    // If the user lands there directly or session got cleared, send them back.
+    if (initialStep >= 1 && !savedReservationId) {
+      router.replace('/');
+
+      return;
+    }
+
     if (!savedReservationId) {
       setActiveStep(0);
       clearDataFromSessionStorage('activeStep');
@@ -93,9 +111,10 @@ const Booking = ({ isAdmin, user }: BookingProps) => {
       return;
     }
 
-    if (savedActiveStep !== null) {
-      setActiveStep(savedActiveStep);
-    }
+    // URL-driven step (prop from the route) takes precedence over saved state so
+    // navigating back to /enter-your-details always lands on step 0, and /payment
+    // always lands on step 1.
+    setActiveStep(initialStep);
 
     if (savedPaymentMethod) {
       loadPaymentMethod(savedPaymentMethod);
@@ -108,7 +127,7 @@ const Booking = ({ isAdmin, user }: BookingProps) => {
     }
 
     setIsLoading(false);
-  }, [router]);
+  }, [router, initialStep]);
 
   if (isLoading || !reservationData) {
     return (
@@ -123,8 +142,12 @@ const Booking = ({ isAdmin, user }: BookingProps) => {
       case 0:
         return <DetailsStep reservationData={reservationData} isAdmin={isAdmin} user={user} />;
       case 1:
-        return <PaymentStep reservationData={reservationData} />;
+        return <UnifiedPaymentStep reservationData={reservationData} />;
       case 2:
+        // Legacy 3-step wizard path — kept for admin/internal flows that still
+        // call handleNextStep() through to the overview. Guest + registered
+        // guests on the public site now use the unified step 1 screen and
+        // never reach this branch.
         return (
           <OverviewStep
             isLastStep={isLastStep}
@@ -141,12 +164,14 @@ const Booking = ({ isAdmin, user }: BookingProps) => {
 
   return (
     <Container maxWidth="xl" disableGutters classes={{ root: styles.root }} className={styles.container}>
+      {!isLastStep && <BookingHero reservationData={reservationData} />}
       <Stack className={cx(styles.form, { [styles.lastStep]: isLastStep })}>
         <Stack className={styles.leftPanel}>
           {isLastStep ? (
             <OverviewCard reservationData={reservationData} isLastStep={isLastStep} />
           ) : (
             <>
+              <BookingSummaryCard reservationData={reservationData} />
               <Box className={styles.divider} />
               <PriceBreakdownCard reservationData={reservationData} />
               <Box className={styles.divider} />
@@ -154,6 +179,7 @@ const Booking = ({ isAdmin, user }: BookingProps) => {
                 selectedExtrasInPrice={reservationData.selectedExtrasInPrice}
                 selectedExtrasAtBase={reservationData.selectedExtrasAtBase}
                 dateFrom={reservationData.dateFrom}
+                securityDeposit={reservationData.securityDeposit}
               />
               <Box className={styles.divider} />
               <CancellationCard dateFrom={reservationData.dateFrom} />

@@ -29,16 +29,18 @@ const OverviewCard = ({ reservationData, isLastStep }: OverviewCardProps) => {
   const startDate = dayjs(dateFrom);
   const endDate = dayjs(dateTo);
 
-  const googleMapsLink = generateGoogleMapsLink(locationFrom.name);
+  // Null-guard for yachts without a location (OSH/MMK legacy).
+  const pickUpLocationName = locationFrom?.name ?? '';
+  const googleMapsLink = pickUpLocationName ? generateGoogleMapsLink(pickUpLocationName) : '';
 
   return (
     <Box className={styles.container}>
       <YachtCard
-        mainImageId={mainImage.id}
+        mainImageId={mainImage?.id ?? 0}
         model={model}
         name={name}
-        locationCountryCode={locationFrom.countryCode}
-        locationName={locationFrom.name}
+        locationCountryCode={locationFrom?.countryCode ?? ''}
+        locationName={pickUpLocationName}
       >
         <Stack direction="row" alignItems="center" mt={1}>
           <StatusChip label="Multi Location" color="success" />
@@ -73,15 +75,17 @@ const OverviewCard = ({ reservationData, isLastStep }: OverviewCardProps) => {
               : '-'}
           </Typography>
         </Stack>
-        <Stack gap={1}>
-          <Typography variant="h4" component="h3">
-            {t('pickUpLocation')}
-          </Typography>
-          <Link href={googleMapsLink} target="_blank" className={styles.link}>
-            <Typography variant="body1">{locationFrom.name}</Typography>
-            <ExternalLink variant="secondary" />
-          </Link>
-        </Stack>
+        {pickUpLocationName && (
+          <Stack gap={1}>
+            <Typography variant="h4" component="h3">
+              {t('pickUpLocation')}
+            </Typography>
+            <Link href={googleMapsLink} target="_blank" className={styles.link}>
+              <Typography variant="body1">{pickUpLocationName}</Typography>
+              <ExternalLink variant="secondary" />
+            </Link>
+          </Stack>
+        )}
       </Stack>
       <Divider
         sx={{

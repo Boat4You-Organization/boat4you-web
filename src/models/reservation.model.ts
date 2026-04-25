@@ -36,7 +36,6 @@ export interface PaymentPhase {
   amount: number;
   paidOn: string;
   stripePaymentIntentId: string;
-  vivaTransactionId: string;
 }
 
 export interface ReservationShortInfo {
@@ -58,6 +57,11 @@ export interface ReservationShortInfo {
   locationToCountryCode: string;
   totalPrice: number;
   totalPriceInfo: PriceInfo;
+  // Pre-discount ("list") price from the external system. Present only when
+  // the offer had an ext_base_price strictly higher than the final total, so
+  // the card can render a strike-through and a discount badge.
+  listPrice?: number | null;
+  listPriceInfo?: PriceInfo | null;
   yachtSlug: string;
   cancellationRequestAt: string;
   agencyEmail: string;

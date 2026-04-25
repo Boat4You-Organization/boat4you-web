@@ -1,5 +1,6 @@
 import { SortDirection } from '@mui/material';
 
+import { YACHT_PAGE_SIZE } from '@/config/constants.config';
 import { YachtSearchParams } from '@/config/form-models.config';
 
 export interface PageableParams {
@@ -73,7 +74,7 @@ export const createYachtQueryParams = (values: YachtSearchParams): string => {
   const paramsForApi = { ...values, page: apiPage };
 
   if (paramsForApi.size == null) {
-    paramsForApi.size = 9;
+    paramsForApi.size = YACHT_PAGE_SIZE;
   }
 
   try {

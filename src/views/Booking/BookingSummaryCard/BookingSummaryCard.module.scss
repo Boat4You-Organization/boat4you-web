@@ -1,0 +1,9 @@
+@use '@/styles/utils/rem-calc' as *;
+@use '@/styles/settings/variables' as *;
+
+.card {
+  background: $white;
+  border: rem-calc(1) solid $black-200;
+  border-radius: rem-calc(12);
+  padding: rem-calc(20);
+}

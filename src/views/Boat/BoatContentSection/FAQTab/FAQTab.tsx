@@ -62,19 +62,26 @@ const FAQTab = ({ yacht }: FAQTabProps) => {
 
   return (
     <Stack component="section" direction="column" spacing={4} pt={4}>
-      {yacht.custom &&
-        (yacht.customDetails.hasBrochure ? (
-          <BrochureDownloadBox yachtName={yacht.name} onDownload={downloadBrochure} />
-        ) : (
-          <Divider
-            sx={{
-              '&.MuiDivider-root': {
-                borderColor: colors.black200,
-                my: 0,
-              },
-            }}
-          />
-        ))}
+      {/* Visual break before the FAQ block. Without it, the FAQ heading
+          butts up against the Extras table (or the description body for
+          non-custom yachts) and reads cramped. The brochure box already
+          provides its own framing, so we only show the rule when the box
+          isn't there. */}
+      {yacht.custom && yacht.customDetails.hasBrochure ? (
+        <BrochureDownloadBox yachtName={yacht.name} onDownload={downloadBrochure} />
+      ) : (
+        <Divider
+          sx={{
+            '&.MuiDivider-root': {
+              // Slightly darker than the in-tab `black200` separators so
+              // the FAQ section reads as a distinct block, not a row in
+              // the Extras table above it.
+              borderColor: colors.black300,
+              my: 0,
+            },
+          }}
+        />
+      )}
       <Stack component="section" direction="column" spacing={3}>
         <Typography
           component="h2"

@@ -113,6 +113,7 @@ const BoatMobileNavigation = ({ yacht }: BoatMobileNavigationProps) => {
       case 'price':
         return (
           <PriceDetailsContent
+            yacht={yacht}
             isCalculatedPrice={isCalculatedPrice}
             isSelectedOfferUnavailable={isSelectedOfferUnavailable}
           />

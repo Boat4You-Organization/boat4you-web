@@ -3,7 +3,6 @@ import { useLocale, useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import FlagIcon from '@/components/FlagIcon';
 import StatusChip from '@/components/StatusChip';
 import {
   RESERVATION_STATUS_COLOR_MAP,
@@ -14,6 +13,7 @@ import colors from '@/styles/themes/colors';
 import DateTime from '@/utils/static/DateTime';
 import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
 import { getBoatImageUrl } from '@/utils/static/imageUtils';
+import { toTitleCase } from '@/utils/static/toTitleCase';
 
 import styles from './PastReservationCard.module.scss';
 
@@ -28,12 +28,12 @@ const PastReservationCard = ({ reservation }: PastReservationCardProps) => {
     reservationId,
     reservationNumber,
     yachtName,
-    locationFrom,
-    locationToCountryCode,
     dateFrom,
     dateTo,
     totalPrice,
     totalPriceInfo,
+    listPrice,
+    listPriceInfo,
     yachtImage,
     modelName,
     cancellationRequestAt,
@@ -45,6 +45,18 @@ const PastReservationCard = ({ reservation }: PastReservationCardProps) => {
     clientPriceInfo: totalPriceInfo,
     locale,
   });
+
+  const showListPrice = typeof listPrice === 'number' && listPrice > totalPrice;
+  const discountPercent = showListPrice
+    ? Math.round(((listPrice! - totalPrice) / listPrice!) * 100)
+    : 0;
+  const formattedListPrice = showListPrice
+    ? formatPriceWithCurrency({
+        clientPriceEur: listPrice!,
+        clientPriceInfo: listPriceInfo ?? undefined,
+        locale,
+      })
+    : null;
 
   return (
     <Link href={`/my-bookings/${reservationId}`}>
@@ -74,36 +86,45 @@ const PastReservationCard = ({ reservation }: PastReservationCardProps) => {
               </Typography>
             </Stack>
             <Typography variant="h4" component="h3" mt={1}>
-              {modelName} | {yachtName}
+              {modelName} | {toTitleCase(yachtName)}
             </Typography>
-            <Stack direction="row" alignItems="center" gap={1} mt={0.5} display={{ xs: 'none', md: 'flex' }}>
-              <FlagIcon countryCode={locationToCountryCode} />
-              <Typography variant="body1">{locationFrom}</Typography>
-            </Stack>
             <Stack mt={1}>
               <Typography variant="body1">
-                {DateTime.formatShortWithoutDay(DateTime.date(dateFrom))} -{' '}
+                {DateTime.formatShortWithoutDay(DateTime.date(dateFrom))} →{' '}
                 {DateTime.formatShortWithoutDay(DateTime.date(dateTo))}
               </Typography>
             </Stack>
           </Stack>
           <Stack mt={{ xs: 0, md: 4 }}>
-            <Typography
-              component="p"
-              color={colors.green500}
-              sx={{
-                typography: {
-                  xs: 'body1',
-                  md: 'h2',
+            {showListPrice && (
+              <Stack direction="row" alignItems="center" gap={1}>
+                <Typography
+                  variant="body2"
+                  color={colors.black500}
+                  sx={{ textDecoration: 'line-through' }}
+                >
+                  {formattedListPrice}
+                </Typography>
+                <Typography variant="body2" color={colors.black950} fontWeight={800}>
+                  − {discountPercent}%
+                </Typography>
+              </Stack>
+            )}
+            <Stack direction="row" alignItems="baseline" gap={1} mt={0.25}>
+              <Typography variant="body2" color={colors.black600} sx={{ display: { xs: 'none', md: 'inline' } }}>
+                {t('totalPrice')}
+              </Typography>
+              <Typography
+                component="p"
+                color={colors.green500}
+                sx={{
+                  typography: { xs: 'body1', md: 'h2' },
                   fontWeight: '700 !important',
-                },
-              }}
-            >
-              {formattedPrice}
-            </Typography>
-            <Typography variant="body2" color={colors.black600} sx={{ display: { xs: 'none', md: 'block' } }}>
-              {t('totalPrice').toLowerCase()}
-            </Typography>
+                }}
+              >
+                {formattedPrice}
+              </Typography>
+            </Stack>
           </Stack>
         </CardContent>
       </Card>

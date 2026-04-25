@@ -31,6 +31,13 @@ const useModelAutocompleteMultiple = ({ manufacturerIds, selectedIds, onChange }
   const [searchString, setSearchString] = useState<string>('');
   const t = useTranslations('filters');
 
+  // Depend on the serialized list (string), not the array reference —
+  // `manufacturerIds` is `params.mfid` from `useQueryParams`, which can produce
+  // a new array reference on every parent render under Next.js 16 + Turbopack.
+  // Using the reference would re-fire the server action every render and,
+  // via setState, create an infinite POST loop.
+  const manufacturerIdsKey = manufacturerIds.join(',');
+
   useEffect(() => {
     startTransition(() => {
       actionModels({
@@ -39,7 +46,8 @@ const useModelAutocompleteMultiple = ({ manufacturerIds, selectedIds, onChange }
         pageable: { page: 0, size: MODELS_PAGE_SIZE },
       });
     });
-  }, [manufacturerIds, searchString, actionModels]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [manufacturerIdsKey, searchString, actionModels]);
 
   const selectedModels = useMemo(
     () =>

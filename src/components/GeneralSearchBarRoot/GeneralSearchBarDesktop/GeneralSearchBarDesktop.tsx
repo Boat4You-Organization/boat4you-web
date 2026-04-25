@@ -22,6 +22,7 @@ const GeneralSearchBarDesktop = () => {
   const { watch } = useFormContext<SearchBarFormValues>();
   const locations = watch('did');
   const startDate = watch('startDate');
+  const endDate = watch('endDate');
   const tHome = useTranslations('home');
   const tCommon = useTranslations('common');
 
@@ -53,7 +54,9 @@ const GeneralSearchBarDesktop = () => {
     (date: Dayjs): DateDisableReason => {
       if (date.isBefore(dayjs(), 'day')) return 'past';
 
-      if (startDate) {
+      // Constraints only apply while picking the end date. Once both are set
+      // the next click restarts the range — all future dates must be clickable.
+      if (startDate && !endDate) {
         if (date.isAfter(startDate) && date.isBefore(startDate.add(2, 'day'))) {
           return 'min_constraint';
         }
@@ -65,7 +68,7 @@ const GeneralSearchBarDesktop = () => {
 
       return 'none';
     },
-    [startDate]
+    [startDate, endDate]
   );
 
   return (

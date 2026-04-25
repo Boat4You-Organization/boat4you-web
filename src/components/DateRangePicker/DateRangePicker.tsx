@@ -110,7 +110,10 @@ const DateRangePicker = ({
 
       if (isUnavailable && !isChangeoverDay) return 'unavailable';
 
-      if (activeStartDate) {
+      // Range constraints (2-day min, 28-day max, and blocked-by-unavailable)
+      // only apply while picking the end date. Once both dates are set, the
+      // next click restarts the range, so future dates must stay clickable.
+      if (activeStartDate && !activeEndDate) {
         if (nextUnavailableDate && date.isAfter(nextUnavailableDate)) {
           return 'blocked_by_unavailable';
         }
@@ -126,7 +129,7 @@ const DateRangePicker = ({
 
       return 'none';
     },
-    [isBoatCalendar, activeStartDate, unavailableDatesSet, nextUnavailableDate]
+    [isBoatCalendar, activeStartDate, activeEndDate, unavailableDatesSet, nextUnavailableDate]
   );
 
   const handlePrevMonth = isUsingExternalStore

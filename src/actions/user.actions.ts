@@ -7,11 +7,23 @@ import { ProfileFormValues, SignUpFormValues } from '@/config/form-models.config
 import { ErrorModel } from '@/models/error.model';
 import { Currency, Language, UserModel } from '@/models/user.model';
 import { PayloadResponse } from '@/types/response.type';
-import { authHeaders } from '@/utils/static/tokenUtils';
+import { authFetch } from '@/utils/static/authFetch';
 
 export interface UpdateUserParams {
   id: number;
   updateData: ProfileFormValues;
+  path: string;
+}
+
+export interface UpdateMyProfileParams {
+  id: number;
+  name: string;
+  surname: string;
+  email: string;
+  phoneNumber?: string;
+  address?: string;
+  city?: string;
+  country?: string;
   path: string;
 }
 export interface UpdateUserPreferencesParams {
@@ -25,12 +37,8 @@ export async function updateUser(params: UpdateUserParams): Promise<PayloadRespo
   const { id, updateData, path } = params;
 
   try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/users/${id}`, {
+    const response = await authFetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/users/${id}`, {
       ...POST_REQUEST_PARAMETERS,
-      headers: {
-        ...POST_REQUEST_PARAMETERS.headers,
-        ...Object.fromEntries((await authHeaders()).entries()),
-      },
       body: JSON.stringify(updateData),
     });
 
@@ -48,20 +56,40 @@ export async function updateUser(params: UpdateUserParams): Promise<PayloadRespo
   }
 }
 
+// Self-service profile edit — only sends basic contact fields (name, surname,
+// email, phoneNumber). Unlike `updateUser` (which requires admin), this one
+// lets the logged-in user edit their own record.
+export async function updateMyProfile(params: UpdateMyProfileParams): Promise<PayloadResponse<boolean>> {
+  const { id, name, surname, email, phoneNumber, address, city, country, path } = params;
+
+  try {
+    const response = await authFetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/users/${id}/profile`, {
+      ...PATCH_REQUEST_PARAMETERS,
+      body: JSON.stringify({ name, surname, email, phoneNumber, address, city, country }),
+    });
+
+    if (!response.ok) {
+      const body: ErrorModel = await response.json();
+
+      return { payload: false, message: body.message };
+    }
+
+    revalidatePath(path);
+
+    return { payload: true };
+  } catch (error) {
+    return { payload: false, message: 'An unexpected error occurred while updating your profile' };
+  }
+}
+
 export async function updateUserPreferences(params: UpdateUserPreferencesParams): Promise<PayloadResponse<boolean>> {
   const { id, language, currency, path } = params;
 
   try {
     const queryParams = new URLSearchParams({ language, currency });
-    const response = await fetch(
+    const response = await authFetch(
       `${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/users/${id}/updatePreferences?${queryParams.toString()}`,
-      {
-        ...PATCH_REQUEST_PARAMETERS,
-        headers: {
-          ...PATCH_REQUEST_PARAMETERS.headers,
-          ...Object.fromEntries((await authHeaders()).entries()),
-        },
-      }
+      PATCH_REQUEST_PARAMETERS
     );
 
     if (!response.ok) {
@@ -121,5 +149,38 @@ export async function signUpUser(
     return { payload: await response.json() };
   } catch (error) {
     return { payload: null, message: 'An unexpected error occurred while signing up user' };
+  }
+}
+
+// Guest password setup after a successful booking — replaces the invite-code
+// flow when a guest has just finished paying and wants to create an account.
+// The reservation id + email pair proves ownership of the booking (the email
+// must match the one on the reservation, case-insensitive).
+export async function setPasswordForReservation(params: {
+  reservationId: number;
+  email: string;
+  password: string;
+}): Promise<PayloadResponse<boolean>> {
+  try {
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/users/set-password-for-reservation`,
+      {
+        ...POST_REQUEST_PARAMETERS,
+        body: JSON.stringify(params),
+      }
+    );
+
+    if (!response.ok) {
+      const body: ErrorModel = await response.json();
+
+      return { payload: false, message: body.message };
+    }
+
+    return { payload: true };
+  } catch (error) {
+    return {
+      payload: false,
+      message: 'An unexpected error occurred while setting your password',
+    };
   }
 }

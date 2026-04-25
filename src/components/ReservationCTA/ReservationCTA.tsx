@@ -117,10 +117,80 @@ const ReservationCTA = ({ reservationDetails }: ReservationCTAProps) => {
                 })}
               </Typography>
               {paymentPhases.length > 0 && (
-                <Stack direction="row" gap={1} mt={0.5}>
-                  <Typography variant="body1">{t('totalAmount')}</Typography>
-                  <StatusChip label={installmentDisplay} color={isFullyPaid ? 'success' : 'info'} />
-                </Stack>
+                <>
+                  {/* Heading for the installment list. Replaces the old
+                      "Total amount [1/2 installments]" chip — the per-row
+                      breakdown below already communicates progress, so the
+                      summary chip was redundant. */}
+                  <Typography variant="body1" fontWeight={700} mt={1.5}>
+                    {t('installments')}
+                  </Typography>
+                  {/* Per-installment breakdown — compact single-row-per-phase
+                      layout (status dot + label/date on left, amount on right).
+                      Strikethrough + green text marks paid installments so the
+                      customer sees instantly what's been covered vs remaining,
+                      without the two-line / chip sprawl of earlier iterations. */}
+                  <Stack mt={0.75} sx={{ border: `1px solid ${colors.black100}`, borderRadius: 1 }}>
+                    {[...paymentPhases]
+                      .sort((a, b) => (a.deadline > b.deadline ? 1 : -1))
+                      .map((phase, idx, arr) => {
+                        const paid = Boolean(phase.paidOn);
+                        const dateLabel = phase.deadline
+                          ? DateTime.formatHR(DateTime.date(phase.deadline))
+                          : '-';
+                        return (
+                          <Stack
+                            key={phase.id ?? idx}
+                            direction="row"
+                            justifyContent="space-between"
+                            alignItems="center"
+                            sx={{
+                              px: 1.25,
+                              py: 0.75,
+                              borderBottom: idx < arr.length - 1 ? `1px solid ${colors.black100}` : 'none',
+                              backgroundColor: paid ? colors.green50 : 'transparent',
+                            }}
+                          >
+                            <Stack direction="row" alignItems="center" gap={1} sx={{ minWidth: 0 }}>
+                              <Box
+                                sx={{
+                                  width: 8,
+                                  height: 8,
+                                  borderRadius: '50%',
+                                  flexShrink: 0,
+                                  backgroundColor: paid ? colors.green500 : colors.black300,
+                                }}
+                              />
+                              <Typography variant="body2" fontWeight={600} sx={{ whiteSpace: 'nowrap' }}>
+                                {idx + 1}.
+                              </Typography>
+                              <Typography
+                                variant="caption"
+                                color={colors.black500}
+                                sx={{ whiteSpace: 'nowrap' }}
+                              >
+                                {dateLabel}
+                              </Typography>
+                            </Stack>
+                            <Typography
+                              variant="body2"
+                              fontWeight={700}
+                              sx={{
+                                whiteSpace: 'nowrap',
+                                color: paid ? colors.green500 : colors.black950,
+                                textDecoration: paid ? 'line-through' : 'none',
+                              }}
+                            >
+                              {formatPriceWithCurrency({
+                                clientPriceEur: phase.amount,
+                                locale,
+                              })}
+                            </Typography>
+                          </Stack>
+                        );
+                      })}
+                  </Stack>
+                </>
               )}
             </Stack>
           </Stack>
@@ -161,11 +231,9 @@ const ReservationCTA = ({ reservationDetails }: ReservationCTAProps) => {
           <Button size="large" fullWidth onClick={handlePayNow} disabled={isLoading || isBookingEditable}>
             {t('payNow')}
           </Button>
-          {surchargePercentage > 0 && (
-            <Typography variant="body2" color={colors.black500} textAlign="center" fontSize={12}>
-              {t('cardSurchargeNotice', { percentage: String(surchargePercentage) })}
-            </Typography>
-          )}
+          {/* "+X% card surcharge" notice removed — it misled customers who
+              intended to pay by bank transfer (no surcharge). The per-method
+              fee breakdown lives inside the Pay-now modal. */}
         </Stack>
       )}
       <Divider
@@ -180,7 +248,7 @@ const ReservationCTA = ({ reservationDetails }: ReservationCTAProps) => {
 
   return (
     <Box className={styles.container} component="aside" aria-label="Reservation information">
-      {cancellationRequestAt && (
+      {cancellationRequestAt && status !== ReservationStatus.CANCELLED && (
         <Stack
           gap={2}
           sx={{
@@ -215,35 +283,20 @@ const ReservationCTA = ({ reservationDetails }: ReservationCTAProps) => {
       )}
       <Stack direction="column" spacing={2} className={styles.confirmationNumber}>
         <Stack direction="row" justifyContent="space-between" alignItems="center">
-          <Typography variant="body1">{t('bookingReference')}:</Typography>
+          <Typography variant="body1">{t('confirmationNumber')}:</Typography>
           <Stack direction="row" alignItems="center">
             <Typography variant="h4" color={colors.blue500}>
-              #{reservationId}
+              #{reservationNumber ?? reservationId}
             </Typography>
-            <IconButton onClick={handleCopyReservationId} className={styles.copyButton}>
+            <IconButton
+              onClick={reservationNumber ? handleCopyReservationNumber : handleCopyReservationId}
+              className={styles.copyButton}
+            >
               <Copy size={20} fill={colors.blue500} />
             </IconButton>
           </Stack>
         </Stack>
-        {reservationNumber && (
-          <Stack direction="row" justifyContent="space-between" alignItems="center">
-            <Typography variant="body1">{t('confirmationNumber')}:</Typography>
-            <Stack direction="row" alignItems="center">
-              <Typography variant="h4" color={colors.blue500}>
-                #{reservationNumber}
-              </Typography>
-              <IconButton onClick={handleCopyReservationNumber} className={styles.copyButton}>
-                <Copy size={20} fill={colors.blue500} />
-              </IconButton>
-            </Stack>
-          </Stack>
-        )}
       </Stack>
-      {!reservationNumber && (
-        <Typography variant="body2" color="text.secondary" mt={2}>
-          {t('confirmationNumberAfterPayment')}
-        </Typography>
-      )}
       {renderPaymentStatus()}
       <Stack gap={3} mt={3}>
         <Typography variant="h3" component="p" fontWeight={700}>

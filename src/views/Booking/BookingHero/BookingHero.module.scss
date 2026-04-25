@@ -1,0 +1,55 @@
+@use '@/styles/utils/rem-calc' as *;
+@use '@/styles/settings/variables' as *;
+@use '@/styles/mixins/breakpoints' as *;
+
+.hero {
+  padding: rem-calc(24);
+  background: $white;
+  border: rem-calc(1) solid $black-200;
+  border-radius: rem-calc(16);
+  margin-bottom: rem-calc(24);
+
+  @include media(0, 'sm') {
+    padding: rem-calc(16);
+  }
+
+  .mainImageWrapper {
+    position: relative;
+    flex: 1;
+    aspect-ratio: 4 / 3;
+    border-radius: rem-calc(12);
+    overflow: hidden;
+    min-height: rem-calc(260);
+
+    .mainImage {
+      object-fit: cover;
+    }
+  }
+
+  .thumbColumn {
+    width: rem-calc(120);
+    flex-shrink: 0;
+
+    @include media(0, 'sm') {
+      display: none;
+    }
+  }
+
+  .thumbWrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border-radius: rem-calc(10);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: scale(1.02);
+    }
+
+    .thumbImage {
+      object-fit: cover;
+    }
+  }
+}

@@ -20,13 +20,23 @@ interface ReservationOverviewProps {
   description: React.ReactNode;
   descriptionIcon: React.ElementType;
   reservationData: ReservationDetails;
-  linkTo: string;
-  linkToText: string;
+  /**
+   * Optional secondary-action link at the bottom of the overview. Pass both
+   * `linkTo` and `linkToText` to render the button; omit both to suppress it
+   * entirely (e.g. on the payment-success page we hide it for guests so the
+   * only next step is the "Create your account" CTA below).
+   */
+  linkTo?: string;
+  linkToText?: string;
   actionText?: string;
   actionColor?: ButtonProps['color'];
   onClick?: () => void;
   isLoading?: boolean;
   showContactCard?: boolean;
+  /** Optional content rendered in full-page width between the reservation
+   *  card and the "Contact the support" card — used on /payment-success to
+   *  surface the "Create your account" prompt as the next step. */
+  children?: React.ReactNode;
 }
 
 const ReservationOverview = ({
@@ -40,6 +50,7 @@ const ReservationOverview = ({
   actionColor = 'primary',
   onClick,
   showContactCard = false,
+  children,
 }: ReservationOverviewProps) => {
   const router = useRouter();
   const pahtname = usePathname();
@@ -59,6 +70,8 @@ const ReservationOverview = ({
   const isPaymentPending = pahtname.includes('/payment-pending');
 
   const handleRedirect = () => {
+    if (!linkTo) return;
+
     clearDataFromSessionStorage('reservationId');
     clearDataFromSessionStorage('activeStep');
     clearDataFromSessionStorage('selectedPaymentMethod');
@@ -67,6 +80,8 @@ const ReservationOverview = ({
 
     router.push(linkTo);
   };
+
+  const hasLink = Boolean(linkTo && linkToText);
 
   return (
     <Container
@@ -121,12 +136,15 @@ const ReservationOverview = ({
                 dateTo={dateTo}
               />
             </Stack>
-            <Box className={styles.buttonWrapper} sx={{ display: { xs: 'block', sm: 'none' } }}>
-              <Button size="large" onClick={handleRedirect} fullWidth endIcon={<ChevronRight size={24} />}>
-                {linkToText}
-              </Button>
-            </Box>
+            {hasLink && (
+              <Box className={styles.buttonWrapper} sx={{ display: { xs: 'block', sm: 'none' } }}>
+                <Button size="large" onClick={handleRedirect} fullWidth endIcon={<ChevronRight size={24} />}>
+                  {linkToText}
+                </Button>
+              </Box>
+            )}
           </Box>
+          {children}
           {showContactCard && (
             <Box className={styles.contactCard}>
               <Typography variant="h3" fontWeight={700}>
@@ -158,11 +176,13 @@ const ReservationOverview = ({
           )}
         </Box>
       </Box>
-      <Box className={styles.buttonWrapper} sx={{ display: { xs: 'none', sm: 'block' } }}>
-        <Button size="large" onClick={handleRedirect} fullWidth endIcon={<ChevronRight size={24} />}>
-          {linkToText}
-        </Button>
-      </Box>
+      {hasLink && (
+        <Box className={styles.buttonWrapper} sx={{ display: { xs: 'none', sm: 'block' } }}>
+          <Button size="large" onClick={handleRedirect} fullWidth endIcon={<ChevronRight size={24} />}>
+            {linkToText}
+          </Button>
+        </Box>
+      )}
     </Container>
   );
 };

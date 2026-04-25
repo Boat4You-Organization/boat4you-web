@@ -95,7 +95,7 @@ const useQueryParams = () => {
       amenities: [],
       services: [],
       page: PAGE_NUMBER,
-      sortBy: '',
+      sortBy: 'asc',
       sortDirection: 'asc' as SortDirection,
       yid: [],
       currency: Currency.EUR,
@@ -241,9 +241,17 @@ const useQueryParams = () => {
     return Array.isArray(value) ? value.length > 0 : value !== defaultValue;
   });
 
+  // Sync local state when URL actually changes. Depend on the serialized URL
+  // (string) instead of the `URLSearchParams` reference — in Next.js 16 +
+  // Turbopack, `useSearchParams()` can return a new object each render even
+  // when the URL hasn't changed, which would otherwise cause an infinite
+  // re-render loop (setParams → re-render → new ref → useEffect fires again).
+  const searchParamsKey = searchParams.toString();
+
   useEffect(() => {
     setParams(getParamsFromUrl());
-  }, [getParamsFromUrl]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchParamsKey]);
 
   return {
     params,
@@ -258,19 +266,28 @@ const useQueryParams = () => {
 
 export default useQueryParams;
 
+/**
+ * Maps the URL `sortBy` param to the matching tab index.
+ * Order must stay in sync with `boatsTabs` in `config/tabs.config.ts`:
+ *   0 → Recommended   (sortBy '')
+ *   1 → Lowest price  (sortBy 'asc')
+ *   2 → Highest price (sortBy 'desc')
+ *   3 → Min length    (sortBy 'lengthAsc')
+ *   4 → Max length    (sortBy 'lengthDesc')
+ */
 export const getTabValueFromParams = (sortBy: SortByValue): number => {
-  if (!sortBy) {
-    return 0;
-  }
-
   switch (sortBy) {
-    case 'lowestPrepayment':
+    case 'asc':
       return 1;
     case 'desc':
       return 2;
-    case 'asc':
+    case 'lengthAsc':
       return 3;
+    case 'lengthDesc':
+      return 4;
     default:
+      // includes '' (recommended) and legacy 'lowestPrepayment' which no
+      // longer has a dedicated tab — fall back to Recommended.
       return 0;
   }
 };

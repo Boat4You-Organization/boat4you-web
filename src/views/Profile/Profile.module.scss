@@ -1,5 +1,83 @@
 @use '@/styles/utils/rem-calc' as *;
+@use '@/styles/settings/variables' as *;
+@use '@/styles/mixins/breakpoints' as *;
 
 .container {
-  margin-top: rem-calc(120);
+  padding-block: rem-calc(48) rem-calc(96);
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  gap: rem-calc(20);
+  padding: rem-calc(28) rem-calc(32);
+  margin-bottom: rem-calc(32);
+  background: linear-gradient(135deg, #eef2ff 0%, #f5f7ff 100%);
+  border: rem-calc(1) solid #e4e9ff;
+  border-radius: rem-calc(16);
+
+  @include media(md) {
+    padding: rem-calc(32) rem-calc(40);
+  }
+}
+
+.avatar {
+  width: rem-calc(72) !important;
+  height: rem-calc(72) !important;
+  background-color: $blue-500 !important;
+  color: $white !important;
+  font-size: rem-calc(26) !important;
+  font-weight: 700 !important;
+  box-shadow: 0 rem-calc(4) rem-calc(12) rgba(89, 136, 255, 0.25);
+}
+
+.heroInfo {
+  display: flex;
+  flex-direction: column;
+  gap: rem-calc(2);
+  min-width: 0;
+}
+
+.heroEmail {
+  color: $black-600;
+  word-break: break-word;
+}
+
+.heroMeta {
+  color: $black-500;
+  font-size: rem-calc(13);
+  margin-top: rem-calc(4);
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: rem-calc(10);
+  margin-bottom: rem-calc(12);
+  margin-top: rem-calc(32);
+  padding-left: rem-calc(4);
+
+  svg {
+    color: $blue-500;
+  }
+}
+
+.sectionTitle {
+  font-size: rem-calc(13) !important;
+  font-weight: 700 !important;
+  letter-spacing: rem-calc(1);
+  text-transform: uppercase;
+  color: $black-600 !important;
+}
+
+.card {
+  border: rem-calc(1) solid $black-200 !important;
+  border-radius: rem-calc(14) !important;
+  background-color: $white;
+  padding: rem-calc(8) rem-calc(24);
+  box-shadow: 0 rem-calc(1) rem-calc(3) rgba(0, 0, 0, 0.04) !important;
+
+  @include media(md) {
+    padding: rem-calc(8) rem-calc(32);
+  }
 }

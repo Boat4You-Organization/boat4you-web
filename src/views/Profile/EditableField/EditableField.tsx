@@ -2,10 +2,8 @@
 
 import { type ReactNode } from 'react';
 
-import { Box, Button, Collapse, type SxProps, type Theme, Typography } from '@mui/material';
+import { Box, Button, Collapse, Stack, type SxProps, type Theme, Typography } from '@mui/material';
 import { useTranslations } from 'next-intl';
-
-import colors from '@/styles/themes/colors';
 
 import styles from './EditableField.module.scss';
 
@@ -14,6 +12,7 @@ type EditableFieldProps = {
   value: ReactNode;
   description: string;
   children: ReactNode;
+  icon?: ReactNode;
   onToggleEdit: () => void;
   isAnotherEditing?: boolean;
   isEditing: boolean;
@@ -26,6 +25,7 @@ const EditableField = ({
   value,
   description,
   children,
+  icon,
   sx,
   isEditing,
   onToggleEdit,
@@ -46,14 +46,13 @@ const EditableField = ({
       }}
     >
       <Box className={styles.header}>
-        <Box>
-          <Typography variant="h4" component="h2" fontWeight={700}>
-            {label}
+        {icon && <Box className={styles.iconWrapper}>{icon}</Box>}
+        <Stack className={styles.textBlock}>
+          <Typography className={styles.label}>{label}</Typography>
+          <Typography className={styles.value}>
+            {isEditing ? description : value || description}
           </Typography>
-          <Typography variant="body1" color={colors.black500} mt={1}>
-            {isEditing ? description : value}
-          </Typography>
-        </Box>
+        </Stack>
         <Button variant="text" onClick={onToggleEdit} className={styles.editButton}>
           {isEditing ? t('cancel') : t('edit')}
         </Button>

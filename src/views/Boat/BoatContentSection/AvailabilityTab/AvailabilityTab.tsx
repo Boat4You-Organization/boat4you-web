@@ -2,6 +2,7 @@ import { Divider, Grid, Stack, Typography } from '@mui/material';
 import dayjs from 'dayjs';
 import { useTranslations } from 'next-intl';
 
+import BoatLocationModal from '@/components/BoatLocationModal';
 import Form from '@/components/Forms/Form';
 import Availablity from '@/components/SvgIcons/Availablity';
 import Bulp from '@/components/SvgIcons/Bulp';
@@ -11,8 +12,8 @@ import { Status } from '@/models/yacht-offer.model';
 import { YachtModel } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
 import useQueryParams from '@/utils/hooks/useQueryParams';
+import useToggleState from '@/utils/hooks/useToggleState';
 import DateTime from '@/utils/static/DateTime';
-import { generateGoogleMapsLink } from '@/utils/static/googleMapsUtils';
 import { useYachtStore } from '@/valtio/yacht/yacht.store';
 import GoodToKnowItem from '@/views/Boat/BoatContentSection/GoodToKnowItem';
 
@@ -34,6 +35,7 @@ const AvailabilityTab = ({ yacht }: AvailabilityTabProps) => {
   const { params, setMultipleParams } = useQueryParams();
   const t = useTranslations('yacht');
   const tCommon = useTranslations('common');
+  const [isMapOpen, toggleMap] = useToggleState();
 
   const availableOffers = offersToDisplay.filter(offer => offer.status !== Status.UNAVAILABLE);
 
@@ -127,9 +129,12 @@ const AvailabilityTab = ({ yacht }: AvailabilityTabProps) => {
           <GoodToKnowItem title={tCommon('cancellationPolicy')} value={t('cancellationPolicyDescription')} />
           <GoodToKnowItem
             title={tCommon('pickUpLocation')}
-            value={yacht.location.name ?? ''}
-            link={generateGoogleMapsLink(yacht.location.name ?? '')}
+            value={yacht.location?.name ?? ''}
+            onClick={yacht.location?.name ? toggleMap : undefined}
           />
+          {yacht.location?.name && (
+            <BoatLocationModal open={isMapOpen} onClose={toggleMap} locationName={yacht.location.name} />
+          )}
         </Grid>
       </Stack>
     </Stack>

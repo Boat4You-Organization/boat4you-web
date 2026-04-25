@@ -18,7 +18,8 @@
     "searchBoats": " Search boats",
     "aroundCurrentLocation": "Around current location",
     "locating": "Locating…",
-    "locationError": "Couldn't get your location"
+    "locationError": "Couldn't get your location",
+    "selectYacht": "Select yacht"
   },
   "destinationsSection": {
     "theWorldIs": "Best yacht charter",

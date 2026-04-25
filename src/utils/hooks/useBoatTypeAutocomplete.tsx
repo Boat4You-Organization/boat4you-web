@@ -34,28 +34,32 @@ const useBoatTypeAutocomplete = ({ isExpanded = true, variant = 'expanded' }: Us
     setSearchString(value);
   };
 
+  // Curated list + display order agreed with product. Trimaran, House boat and
+  // Rubber boat are deliberately excluded from the picker (we don't broker those
+  // categories). The VesselType enum still carries them so existing yachts with
+  // those types keep rendering correctly on the boat detail / cards surfaces.
   const options: AutocompleteOption[] = [
     { id: VesselType.CATAMARAN, icon: <Catamaran />, label: t(VESSEL_TYPE_LABEL_MAP[VesselType.CATAMARAN]) },
+    {
+      id: VesselType.SAILING_YACHT,
+      icon: <LuxurySailingYacht />,
+      label: t(VESSEL_TYPE_LABEL_MAP[VesselType.SAILING_YACHT]),
+    },
+    {
+      id: VesselType.POWER_CATAMARAN,
+      icon: <Catamaran />,
+      label: t(VESSEL_TYPE_LABEL_MAP[VesselType.POWER_CATAMARAN]),
+    },
     { id: VesselType.GULET, icon: <Gulet />, label: t(VESSEL_TYPE_LABEL_MAP[VesselType.GULET]) },
     {
       id: VesselType.LUXURY_MOTOR_YACHT,
       icon: <LuxuryMotoryacht />,
       label: t(VESSEL_TYPE_LABEL_MAP[VesselType.LUXURY_MOTOR_YACHT]),
     },
+    { id: VesselType.MINI_CRUISER, icon: <MiniCruiser />, label: t(VESSEL_TYPE_LABEL_MAP[VesselType.MINI_CRUISER]) },
     { id: VesselType.MOTORBOAT, icon: <Motorboat />, label: t(VESSEL_TYPE_LABEL_MAP[VesselType.MOTORBOAT]) },
     { id: VesselType.MOTOR_YACHT, icon: <Motoryacht />, label: t(VESSEL_TYPE_LABEL_MAP[VesselType.MOTOR_YACHT]) },
     { id: VesselType.MOTORSAILER, icon: <MotorSailor />, label: t(VESSEL_TYPE_LABEL_MAP[VesselType.MOTORSAILER]) },
-    {
-      id: VesselType.POWER_CATAMARAN,
-      icon: <Catamaran />,
-      label: t(VESSEL_TYPE_LABEL_MAP[VesselType.POWER_CATAMARAN]),
-    },
-    {
-      id: VesselType.SAILING_YACHT,
-      icon: <LuxurySailingYacht />,
-      label: t(VESSEL_TYPE_LABEL_MAP[VesselType.SAILING_YACHT]),
-    },
-    { id: VesselType.MINI_CRUISER, icon: <MiniCruiser />, label: t(VESSEL_TYPE_LABEL_MAP[VesselType.MINI_CRUISER]) },
   ];
 
   const renderLocationInput: FormInputProps['renderInput'] = ({ field }) => (

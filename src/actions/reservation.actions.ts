@@ -11,8 +11,8 @@ import {
 } from '@/models/reservation.model';
 import { Currency } from '@/models/user.model';
 import { PayloadResponse } from '@/types/response.type';
+import { authFetch, hasAuthToken } from '@/utils/static/authFetch';
 import { createYachtQueryParams } from '@/utils/static/queryParams';
-import { authHeaders } from '@/utils/static/tokenUtils';
 
 export async function getUserReservations(
   locale: string = 'en',
@@ -25,11 +25,10 @@ export async function getUserReservations(
 
     const queryParams = createYachtQueryParams(paramsWithCurrency as YachtSearchParams);
 
-    const response = await fetch(
+    const response = await authFetch(
       `${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/secured/reservations/my-reservations${queryParams}`,
       {
         headers: {
-          ...Object.fromEntries((await authHeaders()).entries()),
           'Accept-Language': locale,
         },
       }
@@ -51,13 +50,8 @@ export async function getUserReservations(
 
 export async function getReservationDetails(id: number): Promise<PayloadResponse<ReservationDetails>> {
   try {
-    const response = await fetch(
-      `${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/secured/reservations/my-reservations/${id}`,
-      {
-        headers: {
-          ...Object.fromEntries((await authHeaders()).entries()),
-        },
-      }
+    const response = await authFetch(
+      `${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/secured/reservations/my-reservations/${id}`
     );
 
     if (!response.ok) {
@@ -92,26 +86,39 @@ export async function createReservation(
     selectedExtras: JSON.parse((data.get('selectedExtras') as string) || '[]'),
   };
 
+  // Logged-in customers go through /secured/ so the booking is attributed to
+  // their account; guests hit /public/ where the backend finds-or-creates a
+  // user from the email. authFetch transparently refreshes a stale access
+  // token before we ever consider falling back.
+  const hasAuth = await hasAuthToken();
+
+  const securedUrl = `${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/secured/reservations`;
+  const publicUrl = `${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/reservations`;
+  const requestInit = {
+    ...POST_REQUEST_PARAMETERS,
+    body: JSON.stringify(requestBody),
+  };
+
   try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/secured/reservations`, {
-      ...POST_REQUEST_PARAMETERS,
-      headers: {
-        ...Object.fromEntries((await authHeaders()).entries()),
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(requestBody),
-    });
+    let response = hasAuth ? await authFetch(securedUrl, requestInit) : await fetch(publicUrl, requestInit);
+
+    // Refresh failed too (or somehow else 401/403). Final defense: book as
+    // guest so the flow doesn't deadlock — backend matches by email.
+    if (hasAuth && (response.status === 401 || response.status === 403)) {
+      response = await fetch(publicUrl, requestInit);
+    }
 
     if (!response.ok) {
-      const body: ErrorModel = await response.json();
+      const body: ErrorModel = await response.json().catch(() => ({ message: `HTTP ${response.status}` }) as ErrorModel);
 
-      return { payload: null, message: body.message };
+      return { payload: null, message: body.message ?? `HTTP ${response.status}` };
     }
 
     return { payload: await response.json() };
   } catch (error) {
     return {
       payload: null,
+      message: error instanceof Error ? error.message : 'Reservation request failed',
     };
   }
 }
@@ -124,14 +131,10 @@ export async function cancelReservation(
   const specialRequest = formData.get('specialRequest');
 
   try {
-    const response = await fetch(
+    const response = await authFetch(
       `${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/secured/reservations/${reservationId}/cancel`,
       {
         ...POST_REQUEST_PARAMETERS,
-        headers: {
-          ...Object.fromEntries((await authHeaders()).entries()),
-          'Content-Type': 'application/json',
-        },
         body: JSON.stringify({ specialRequest }),
       }
     );
@@ -139,6 +142,64 @@ export async function cancelReservation(
     if (!response.ok) {
       const body: ErrorModel = await response.json();
 
+      return { payload: false, message: body.message };
+    }
+
+    return { payload: true };
+  } catch (error) {
+    return {
+      payload: false,
+      message: error instanceof Error ? error.message : 'An unexpected error occurred',
+    };
+  }
+}
+
+export interface YachtSwapInfo {
+  detectedAt: string;
+  previousYachtId: number;
+  previousYachtName: string | null;
+  newYachtId: number | null;
+  newYachtName: string | null;
+  action: 'LOGGED_ONLY' | 'AUTO_UPDATED' | 'MANUAL_REVIEW';
+  acknowledged: boolean;
+  notes: string | null;
+}
+
+export async function getYachtSwapInfo(
+  reservationId: number
+): Promise<PayloadResponse<YachtSwapInfo | null>> {
+  try {
+    const response = await authFetch(
+      `${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/secured/reservations/${reservationId}/yacht-swap`
+    );
+
+    if (response.status === 204) {
+      return { payload: null };
+    }
+
+    if (!response.ok) {
+      const body: ErrorModel = await response.json();
+      return { payload: null, message: body.message };
+    }
+
+    const payload = await response.json();
+    return { payload };
+  } catch (error) {
+    return { payload: null, message: 'An unexpected error occurred while fetching yacht-swap info' };
+  }
+}
+
+export async function acknowledgeYachtSwap(
+  reservationId: number
+): Promise<PayloadResponse<boolean>> {
+  try {
+    const response = await authFetch(
+      `${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/secured/reservations/${reservationId}/yacht-swap/acknowledge`,
+      POST_REQUEST_PARAMETERS
+    );
+
+    if (!response.ok) {
+      const body: ErrorModel = await response.json();
       return { payload: false, message: body.message };
     }
 
@@ -164,11 +225,10 @@ export async function calculatePaymentPhases(
       price,
     } as YachtSearchParams);
 
-    const response = await fetch(
+    const response = await authFetch(
       `${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/secured/reservations/paymentPhases${queryParams}`,
       {
         headers: {
-          ...Object.fromEntries((await authHeaders()).entries()),
           'Accept-Language': locale,
         },
       }

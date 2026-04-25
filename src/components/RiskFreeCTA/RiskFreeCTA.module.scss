@@ -15,7 +15,9 @@
       }
 
       @include media(0, 'sm') {
-        padding-block: rem-calc(62 92);
+        // Mobile compact — just 12px breathing room above/below the
+        // banner, not the old 62/92 stacked gap.
+        padding-block: rem-calc(12);
       }
 
       .card {
@@ -43,8 +45,11 @@
             max-width: rem-calc(503);
 
             @include media(0, 'sm') {
+              // Compact row on mobile — SVG stretches to the 33% grid
+              // column, capped so it doesn't dwarf the text.
               max-width: 100%;
-              height: rem-calc(204);
+              max-height: rem-calc(120);
+              height: auto;
             }
           }
         }

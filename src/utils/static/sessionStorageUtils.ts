@@ -1,4 +1,9 @@
-export type SessionStorageKey = 'reservationId' | 'activeStep' | 'selectedPaymentMethod' | 'selectedInstallment';
+export type SessionStorageKey =
+  | 'reservationId'
+  | 'reservationNumber'
+  | 'activeStep'
+  | 'selectedPaymentMethod'
+  | 'selectedInstallment';
 
 export const getDataFromSessionStorage = <T>(key: SessionStorageKey): T | null => {
   if (typeof window === 'undefined') {

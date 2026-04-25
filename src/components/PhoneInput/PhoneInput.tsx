@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import { Controller, type ControllerProps, type FieldError, type Validate, useFormContext } from 'react-hook-form';
 
-import Autocomplete from '@mui/material/Autocomplete';
+import Autocomplete, { createFilterOptions } from '@mui/material/Autocomplete';
 import Box from '@mui/material/Box';
 import FormControl from '@mui/material/FormControl';
 import FormHelperText from '@mui/material/FormHelperText';
@@ -32,6 +32,15 @@ const getDefaultCountry = (): PhoneCountry => {
 
   return defaultCountry || phoneCountries[0];
 };
+
+// MUI's default Autocomplete filter uses `getOptionLabel`, which we render as
+// "🇭🇷 +385" — so typing "cro" or "croatia" wouldn't match anything. This filter
+// searches the country name, ISO code, and dial code together.
+const countryFilter = createFilterOptions<PhoneCountry>({
+  matchFrom: 'any',
+  ignoreCase: true,
+  stringify: option => `${option.name} ${option.iso2Code} ${option.dialCode}`,
+});
 
 const detectUserCountry = async (): Promise<PhoneCountry> => {
   const response = await fetch('https://ipapi.co/json/');
@@ -143,20 +152,24 @@ export const PhoneInput = ({
               onChange={(_, newValue) => handleCountryChange(newValue, onChange)}
               options={phoneCountries}
               getOptionLabel={option => `${option.flag} ${option.dialCode}`}
+              filterOptions={countryFilter}
               popupIcon={<ChevronDown props={{ className: styles.chevronIcon }} size={20} />}
-              renderOption={(props, option) => (
-                <Box component="li" {...props} className={styles.option}>
-                  <Box component="span" className={styles.flag}>
-                    {option.flag}
+              renderOption={(props, option) => {
+                const { key, ...rest } = props as typeof props & { key?: React.Key };
+                return (
+                  <Box component="li" key={key} {...rest} className={styles.option}>
+                    <Box component="span" className={styles.flag}>
+                      {option.flag}
+                    </Box>
+                    <Box component="span" className={styles.countryName}>
+                      {option.name}
+                    </Box>
+                    <Box component="span" className={styles.dialCode}>
+                      {option.dialCode}
+                    </Box>
                   </Box>
-                  <Box component="span" className={styles.countryName}>
-                    {option.name}
-                  </Box>
-                  <Box component="span" className={styles.dialCode}>
-                    {option.dialCode}
-                  </Box>
-                </Box>
-              )}
+                );
+              }}
               renderInput={params => (
                 <TextField
                   {...params}

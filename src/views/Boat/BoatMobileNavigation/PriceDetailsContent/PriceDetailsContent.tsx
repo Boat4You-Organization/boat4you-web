@@ -7,17 +7,19 @@ import { useLocale, useTranslations } from 'next-intl';
 import { BoatCalendarFormValues } from '@/config/form-models.config';
 import { CURRENCY_SYMBOL_MAP, Currency } from '@/models/user.model';
 import { YachtServiceExtrasKey } from '@/models/yacht-service.model';
+import { YachtModel } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
 import DateTime from '@/utils/static/DateTime';
 import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
 import { useYachtStore } from '@/valtio/yacht/yacht.store';
 
 interface PriceDetailsContentProps {
+  yacht: YachtModel;
   isCalculatedPrice: boolean | null;
   isSelectedOfferUnavailable: boolean;
 }
 
-const PriceDetailsContent = ({ isCalculatedPrice, isSelectedOfferUnavailable }: PriceDetailsContentProps) => {
+const PriceDetailsContent = ({ yacht, isCalculatedPrice, isSelectedOfferUnavailable }: PriceDetailsContentProps) => {
   const { calculatedPrice } = useYachtStore();
   const { watch } = useFormContext<BoatCalendarFormValues>();
   const t = useTranslations('yacht');
@@ -116,31 +118,62 @@ const PriceDetailsContent = ({ isCalculatedPrice, isSelectedOfferUnavailable }: 
             })}
           </>
         )}
-        {(selectedExtrasAtBase?.length ?? 0) > 0 && (
-          <>
-            <Typography variant="body1" fontWeight={700} color={colors.blue500}>
-              {tCommon('paidAtMarina')}
-            </Typography>
-            {selectedExtrasAtBase?.map(({ id, name, priceEur, priceInfo, labelCode }) => {
-              const formattedPrice = formatPriceWithCurrency({
-                clientPriceEur: priceEur,
-                clientPriceInfo: priceInfo,
-                locale,
-              });
-
-              return (
-                <Stack key={`${name}-${id}`} direction="row" justifyContent="space-between" gap={4}>
-                  <Typography display="flex" flexDirection="row" variant="body1">
-                    {labelCode ? tServices(labelCode as YachtServiceExtrasKey) : name}
+        {(() => {
+          // V1_57 split — see PaymentTab.tsx for context
+          const inAdvance = (selectedExtrasAtBase || []).filter(e => e.paymentType === 'ADVANCE_TO_OPERATOR');
+          const onSite = (selectedExtrasAtBase || []).filter(e => e.paymentType !== 'ADVANCE_TO_OPERATOR');
+          // Refundable security deposit is yacht-level (not a partner extra)
+          // and always paid at the marina on handover — append it under the
+          // "Paid at marina" group so the recap lines up with the extras tab.
+          const showSecurityDeposit = yacht.securityDeposit > 0;
+          const renderRow = ({ id, name, priceEur, priceInfo, labelCode }: typeof inAdvance[number]) => {
+            const formattedPrice = formatPriceWithCurrency({
+              clientPriceEur: priceEur,
+              clientPriceInfo: priceInfo,
+              locale,
+            });
+            return (
+              <Stack key={`${name}-${id}`} direction="row" justifyContent="space-between" gap={4}>
+                <Typography display="flex" flexDirection="row" variant="body1">
+                  {labelCode ? tServices(labelCode as YachtServiceExtrasKey) : name}
+                </Typography>
+                <Typography variant="body1" whiteSpace="nowrap">
+                  {formattedPrice}
+                </Typography>
+              </Stack>
+            );
+          };
+          return (
+            <>
+              {inAdvance.length > 0 && (
+                <>
+                  <Typography variant="body1" fontWeight={700} color={colors.blue500}>
+                    {tCommon('paidInAdvance')}
                   </Typography>
-                  <Typography variant="body1" whiteSpace="nowrap">
-                    {formattedPrice}
+                  {inAdvance.map(renderRow)}
+                </>
+              )}
+              {(onSite.length > 0 || showSecurityDeposit) && (
+                <>
+                  <Typography variant="body1" fontWeight={700} color={colors.blue500}>
+                    {tCommon('paidAtMarina')}
                   </Typography>
-                </Stack>
-              );
-            })}
-          </>
-        )}
+                  {onSite.map(renderRow)}
+                  {showSecurityDeposit && (
+                    <Stack direction="row" justifyContent="space-between" gap={4}>
+                      <Typography display="flex" flexDirection="row" variant="body1">
+                        {tServices('refundable-security-deposit')}
+                      </Typography>
+                      <Typography variant="body1" whiteSpace="nowrap">
+                        {formatPriceWithCurrency({ clientPriceEur: yacht.securityDeposit, locale })}
+                      </Typography>
+                    </Stack>
+                  )}
+                </>
+              )}
+            </>
+          );
+        })()}
       </Stack>
     </Stack>
   );

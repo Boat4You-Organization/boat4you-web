@@ -5,6 +5,16 @@ import { useRouter } from 'next/navigation';
 
 import { PaymentMethod } from '@/config/paymentMethods.config';
 import { showToast } from '@/valtio/global/global.actions';
+import { useUserStore } from '@/valtio/user/user.store';
+import { getDataFromSessionStorage } from '@/utils/static/sessionStorageUtils';
+
+interface BookingContact {
+  name: string;
+  surname: string;
+  email: string;
+  phoneNumber: string;
+  specialRequest: string;
+}
 
 // Initialize once at module scope so the loader script is fetched a single time.
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_KEY || '');
@@ -14,6 +24,8 @@ interface UsePaymentSubmitParams {
   reservationId: string;
   payFullAmount?: boolean;
   paymentPhaseId?: number;
+  /** Stripe idempotency key generated once per /payment page mount. */
+  idempotencyKey?: string;
 }
 
 export const usePaymentSubmit = ({
@@ -21,13 +33,38 @@ export const usePaymentSubmit = ({
   reservationId,
   payFullAmount,
   paymentPhaseId,
+  idempotencyKey,
 }: UsePaymentSubmitParams) => {
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
+  const { user } = useUserStore();
 
   const handleSubmit = async () => {
     if (paymentMethod === PaymentMethod.BANK_TRANSFER) {
-      router.replace('/payment-pending');
+      // No hosted-payment handoff for bank transfer — the wire instructions
+      // already landed in the customer's inbox when the reservation was
+      // created (sendOptionCreatedEmail in the backend). Here we just park
+      // them on a page where they can pick up the booking.
+      //
+      //   • Logged-in customer → /my-bookings (they can see the pending row
+      //     and re-open the reference number any time).
+      //   • Guest → /signup?email=…&reservationId=… so they immediately set
+      //     a password and turn their PENDING account into REGISTERED. Same
+      //     flow the payment-success page uses for card guests.
+      if (user) {
+        router.replace('/my-bookings');
+
+        return;
+      }
+
+      const contact = getDataFromSessionStorage<BookingContact>('bookingContact');
+      const email = contact?.email ?? '';
+      const query = new URLSearchParams({
+        email,
+        reservationId: reservationId.toString(),
+      }).toString();
+
+      router.replace(`/signup?${query}`);
 
       return;
     }
@@ -42,6 +79,7 @@ export const usePaymentSubmit = ({
           reservationId,
           payFullAmount,
           paymentPhaseId,
+          idempotencyKey,
         }),
       });
 

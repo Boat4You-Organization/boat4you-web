@@ -21,6 +21,9 @@
 
   @include media(0, 'md') {
     background-image: url('/icons/hero-background-mobile.svg');
-    padding-block: rem-calc(64 148);
+    // Tightened from (64 148) — lifts the search card up so it's visible
+    // without scrolling on a 375×812 viewport alongside the reduced hero
+    // heading.
+    padding-block: rem-calc(32 96);
   }
 }

@@ -27,6 +27,10 @@ export interface UserModel {
   name: string;
   surname: string;
   email: string;
+  phoneNumber?: string;
+  address?: string;
+  city?: string;
+  country?: string;
   language: Language;
   currency: Currency;
   userStatus: UserStatus;

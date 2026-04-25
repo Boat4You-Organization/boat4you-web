@@ -3,12 +3,13 @@
 import React, { useCallback, useMemo } from 'react';
 import { useFormContext } from 'react-hook-form';
 
-import { Box, Button, Divider, InputAdornment, Stack, Typography } from '@mui/material';
+import { Box, Button, Divider, InputAdornment, Stack, Tooltip, Typography } from '@mui/material';
 import dayjs, { Dayjs } from 'dayjs';
 import { useLocale, useTranslations } from 'next-intl';
 
 import CircularProgress from '@/components/CircularProgress';
 import DateRangePicker from '@/components/DateRangePicker';
+import FlagIcon from '@/components/FlagIcon';
 import FormDateInput from '@/components/Forms/FormDateInput';
 import Calendar from '@/components/SvgIcons/Calendar';
 import { BoatCalendarFormValues } from '@/config/form-models.config';
@@ -25,6 +26,7 @@ import useToggleState from '@/utils/hooks/useToggleState';
 import { useYachtAvailability } from '@/utils/hooks/useYachtAvailability';
 import DateTime from '@/utils/static/DateTime';
 import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
+import { toTitleCase } from '@/utils/static/toTitleCase';
 import { handleNextMonth, handlePrevMonth, toggleBoatInquiryModalOpen } from '@/valtio/yacht/yacht.actions';
 import { useYachtStore } from '@/valtio/yacht/yacht.store';
 
@@ -193,14 +195,9 @@ const BoatCalendarForm = ({ yacht, variant }: BoatCalendarFormProps) => {
         ) : (
           <Stack>
             {hasValidDateSelection && isCalculatedPrice && !isSelectedOfferUnavailable ? (
-              <Stack direction="row" spacing={1} alignItems="end">
-                <Typography component="p" variant="h2" color={colors.green500}>
-                  {t('upTo')} {formattedClientPricePerDay}
-                </Typography>
-                <Typography variant="body1" color={colors.black600}>
-                  {t('perDay')}
-                </Typography>
-              </Stack>
+              <Typography component="p" variant="h3" fontWeight={700} color={colors.blue500}>
+                Ready to sail?
+              </Typography>
             ) : (
               <Stack p={2} borderRadius={2.5} sx={{ backgroundColor: colors.red50 }}>
                 <Typography variant="body1" color={colors.red500} textAlign="center">
@@ -253,19 +250,85 @@ const BoatCalendarForm = ({ yacht, variant }: BoatCalendarFormProps) => {
             </Typography>
           )}
           {hasValidDateSelection ? (
-            <Button
-              size="large"
-              fullWidth
-              onClick={handleReserveClick}
-              disabled={
-                variant === 'inner'
-                  ? !isCalculatedPrice ||
-                    (isSelectedOfferUnavailable && !isSelectedOfferOption && !yacht.custom && !inquireOnly)
-                  : false
+            <Tooltip
+              placement="top"
+              arrow
+              title={
+                <Box sx={{ p: 0.5 }}>
+                  <Typography variant="body1" fontWeight={700} color={colors.white}>
+                    {yacht.model} | {toTitleCase(yacht.name)}
+                  </Typography>
+                  {yacht.location && (
+                    <Stack direction="row" alignItems="center" gap={0.75} mt={0.5}>
+                      <FlagIcon countryCode={yacht.location.countryCode} />
+                      <Typography variant="body2" color={colors.white}>
+                        {yacht.location.name}
+                      </Typography>
+                    </Stack>
+                  )}
+                  <Stack mt={1.5} gap={0.5}>
+                    <Stack direction="row" justifyContent="space-between" gap={3}>
+                      <Typography variant="body2" color={colors.black300}>
+                        Total length of rental
+                      </Typography>
+                      <Typography variant="body2" fontWeight={700} color={colors.white}>
+                        {computedNumberOfDays} {daysText}
+                      </Typography>
+                    </Stack>
+                    <Stack direction="row" justifyContent="space-between" gap={3}>
+                      <Typography variant="body2" color={colors.black300}>
+                        Yacht pick-up
+                      </Typography>
+                      <Typography variant="body2" fontWeight={700} color={colors.white}>
+                        {startDate ? dayjs(startDate).format('D MMMM YYYY') : '-'}
+                      </Typography>
+                    </Stack>
+                    <Stack direction="row" justifyContent="space-between" gap={3}>
+                      <Typography variant="body2" color={colors.black300}>
+                        Yacht drop-off
+                      </Typography>
+                      <Typography variant="body2" fontWeight={700} color={colors.white}>
+                        {endDate ? dayjs(endDate).format('D MMMM YYYY') : '-'}
+                      </Typography>
+                    </Stack>
+                  </Stack>
+                  <Typography variant="body2" fontWeight={700} color={colors.blue400} mt={1.5}>
+                    Only takes 3 minutes to book it
+                  </Typography>
+                </Box>
               }
+              slotProps={{
+                tooltip: {
+                  sx: {
+                    bgcolor: colors.black950,
+                    color: colors.white,
+                    maxWidth: 'none',
+                    width: 320,
+                    p: 2,
+                    borderRadius: 1.5,
+                    '& .MuiTooltip-arrow': {
+                      color: colors.black950,
+                    },
+                  },
+                },
+              }}
             >
-              {variant === 'inner' && !isSelectedOfferOption && !inquireOnly ? t('reserve') : t('inquireNow')}
-            </Button>
+              <Box sx={{ width: '100%' }}>
+                <Button
+                  size="large"
+                  fullWidth
+                  onClick={handleReserveClick}
+                  disabled={
+                    variant === 'inner'
+                      ? !isCalculatedPrice ||
+                        (isSelectedOfferUnavailable && !isSelectedOfferOption && !yacht.custom && !inquireOnly)
+                      : false
+                  }
+                >
+                  {variant === 'inner' && !isSelectedOfferOption && !inquireOnly ? t('reserve') : t('inquireNow')}
+                </Button>
+              </Box>
+            </Tooltip>
           ) : (
             <Button size="large" fullWidth onClick={toggleModal}>
               {t('chooseDates')}
@@ -341,30 +404,63 @@ const BoatCalendarForm = ({ yacht, variant }: BoatCalendarFormProps) => {
                   })}
                 </>
               )}
-              {(selectedExtrasAtBase?.length ?? 0) > 0 && (
-                <>
-                  <Typography variant="body1" fontWeight={700} color={colors.blue500}>
-                    {tCommon('paidAtMarina')}
-                  </Typography>
-                  {selectedExtrasAtBase?.map(({ id, name, priceEur, priceInfo, labelCode }) => {
-                    const formattedPrice = formatPriceWithCurrency({
-                      clientPriceEur: priceEur,
-                      clientPriceInfo: priceInfo,
-                    });
-
-                    return (
-                      <Stack key={`${name}-${id}`} direction="row" justifyContent="space-between" gap={4}>
-                        <Typography display="flex" flexDirection="row" variant="body1">
-                          {labelCode ? tServices(labelCode as YachtServiceExtrasKey) : name}
+              {(() => {
+                // V1_57 split — see PaymentTab.tsx for context
+                const inAdvance = (selectedExtrasAtBase || []).filter(e => e.paymentType === 'ADVANCE_TO_OPERATOR');
+                const onSite = (selectedExtrasAtBase || []).filter(e => e.paymentType !== 'ADVANCE_TO_OPERATOR');
+                // Refundable security deposit is a yacht-level field, not a
+                // partner-sent extra — always shown under "Paid at marina"
+                // in the recap since it's held at pick-up (and refunded on
+                // return). Renders the primary amount; insured deposit (if
+                // any) is a separate optional extra handled elsewhere.
+                const showSecurityDeposit = yacht.securityDeposit > 0;
+                const renderRow = ({ id, name, priceEur, priceInfo, labelCode }: typeof inAdvance[number]) => {
+                  const formattedPrice = formatPriceWithCurrency({
+                    clientPriceEur: priceEur,
+                    clientPriceInfo: priceInfo,
+                  });
+                  return (
+                    <Stack key={`${name}-${id}`} direction="row" justifyContent="space-between" gap={4}>
+                      <Typography display="flex" flexDirection="row" variant="body1">
+                        {labelCode ? tServices(labelCode as YachtServiceExtrasKey) : name}
+                      </Typography>
+                      <Typography variant="body1" whiteSpace="nowrap">
+                        {formattedPrice}
+                      </Typography>
+                    </Stack>
+                  );
+                };
+                return (
+                  <>
+                    {inAdvance.length > 0 && (
+                      <>
+                        <Typography variant="body1" fontWeight={700} color={colors.blue500}>
+                          {tCommon('paidInAdvance')}
                         </Typography>
-                        <Typography variant="body1" whiteSpace="nowrap">
-                          {formattedPrice}
+                        {inAdvance.map(renderRow)}
+                      </>
+                    )}
+                    {(onSite.length > 0 || showSecurityDeposit) && (
+                      <>
+                        <Typography variant="body1" fontWeight={700} color={colors.blue500}>
+                          {tCommon('paidAtMarina')}
                         </Typography>
-                      </Stack>
-                    );
-                  })}
-                </>
-              )}
+                        {onSite.map(renderRow)}
+                        {showSecurityDeposit && (
+                          <Stack direction="row" justifyContent="space-between" gap={4}>
+                            <Typography display="flex" flexDirection="row" variant="body1">
+                              {tServices('refundable-security-deposit')}
+                            </Typography>
+                            <Typography variant="body1" whiteSpace="nowrap">
+                              {formatPriceWithCurrency({ clientPriceEur: yacht.securityDeposit })}
+                            </Typography>
+                          </Stack>
+                        )}
+                      </>
+                    )}
+                  </>
+                );
+              })()}
             </Stack>
           </Box>
         )}

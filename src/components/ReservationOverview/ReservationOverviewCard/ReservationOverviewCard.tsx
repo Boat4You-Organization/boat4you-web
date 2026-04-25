@@ -1,15 +1,17 @@
-import React from 'react';
+'use client';
 
-import { Card, CardContent, CardMedia, Stack, Typography } from '@mui/material';
+import React, { useState } from 'react';
+
+import { Box, Card, CardContent, CardMedia, Stack, Typography } from '@mui/material';
 import { useLocale, useTranslations } from 'next-intl';
 import Image from 'next/image';
-import Link from 'next/link';
 
+import BoatLocationModal from '@/components/BoatLocationModal';
 import FlagIcon from '@/components/FlagIcon';
 import ExternalLink from '@/components/SvgIcons/ExternalLink';
 import DateTime from '@/utils/static/DateTime';
-import { generateGoogleMapsLink } from '@/utils/static/googleMapsUtils';
 import { getBoatImageUrl } from '@/utils/static/imageUtils';
+import { toTitleCase } from '@/utils/static/toTitleCase';
 
 import styles from './ReservationOverviewCard.module.scss';
 
@@ -34,9 +36,15 @@ const ReservationOverviewCard = ({
 }: ReservationOverviewCardProps) => {
   const locale = useLocale();
   const t = useTranslations('common');
+  const [isMapOpen, setIsMapOpen] = useState(false);
+  const toggleMap = () => setIsMapOpen(prev => !prev);
 
   return (
-    <Card classes={{ root: styles.root }} elevation={0} className={styles.container}>
+    <>
+      {locationFrom && (
+        <BoatLocationModal open={isMapOpen} onClose={toggleMap} locationName={locationFrom} />
+      )}
+      <Card classes={{ root: styles.root }} elevation={0} className={styles.container}>
       <CardMedia className={styles.cardMedia}>
         <Image
           src={getBoatImageUrl(mainImage, 256)}
@@ -48,7 +56,7 @@ const ReservationOverviewCard = ({
       </CardMedia>
       <CardContent className={styles.content}>
         <Typography variant="h3" fontWeight={700} whiteSpace="wrap">
-          {model} | {name}
+          {model} | {toTitleCase(name)}
         </Typography>
         <Stack direction="row" alignItems="center" gap={1}>
           {locationFrom && (
@@ -71,14 +79,32 @@ const ReservationOverviewCard = ({
             {t('pickUpLocation')}
           </Typography>
           <Typography variant="body1">
-            <Link href={generateGoogleMapsLink(locationFrom)} target="_blank" className={styles.link}>
+            <Box
+              component="button"
+              type="button"
+              onClick={toggleMap}
+              disabled={!locationFrom}
+              className={styles.link}
+              sx={{
+                background: 'none',
+                border: 0,
+                padding: 0,
+                cursor: locationFrom ? 'pointer' : 'default',
+                font: 'inherit',
+                color: 'inherit',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: 0.5,
+              }}
+            >
               {locationFrom}
               <ExternalLink />
-            </Link>
+            </Box>
           </Typography>
         </Stack>
       </CardContent>
     </Card>
+    </>
   );
 };
 

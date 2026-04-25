@@ -7,10 +7,7 @@ import { ReservationData } from '@/types/reservation.type';
 import DateTime from '@/utils/static/DateTime';
 import { clearDataFromLocalStorage, saveDataToLocalStorage } from '@/utils/static/localStorageUtils';
 import { clearDataFromSessionStorage } from '@/utils/static/sessionStorageUtils';
-import { toggleLoginModal } from '@/valtio/auth/auth.actions';
 import { useYachtStore } from '@/valtio/yacht/yacht.store';
-
-import { useAuth } from './useAuth';
 
 interface UseReservationProps {
   yacht: YachtModel;
@@ -19,21 +16,18 @@ interface UseReservationProps {
 export const useReservation = ({ yacht }: UseReservationProps) => {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const { isAuthenticated } = useAuth();
   const { selectedExtrasKeys, selectedOffer, calculatedPrice } = useYachtStore();
 
-  const { name: yachtName, model, yachtImages, slug, agency, charterType } = yacht;
+  const { name: yachtName, model, yachtImages, slug, agency, charterType, vesselType, buildYear, maxPersons, berths, cabins, securityDeposit } = yacht;
   const { locationFrom } = selectedOffer ?? {};
   const mainImage = yachtImages.find(image => image.mainImage);
 
   const handleReservation = useCallback(
     (customOfferId?: number) => {
-      if (!isAuthenticated) {
-        toggleLoginModal();
-
-        return;
-      }
-
+      // Guest checkout: no login gate here. The /enter-your-details page accepts
+      // anonymous users and the backend has a /public/reservations endpoint that
+      // creates-or-finds the user by email at submit time. Logged-in users still
+      // go through the same flow with their data pre-filled.
       if (!calculatedPrice && !customOfferId) {
         return;
       }
@@ -70,6 +64,15 @@ export const useReservation = ({ yacht }: UseReservationProps) => {
         selectedExtrasAtBase: calculatedPrice?.selectedExtrasAtBase ?? [],
         charterType,
         savedAt: new Date().toISOString(),
+        checkin: yacht.defaultCheckin || selectedOffer?.checkin || null,
+        checkout: yacht.defaultCheckout || selectedOffer?.checkout || null,
+        vesselType,
+        buildYear,
+        maxPersons,
+        berths,
+        cabins,
+        yachtImages,
+        securityDeposit,
       };
 
       try {
@@ -82,7 +85,6 @@ export const useReservation = ({ yacht }: UseReservationProps) => {
       }
     },
     [
-      isAuthenticated,
       calculatedPrice,
       yachtName,
       locationFrom,

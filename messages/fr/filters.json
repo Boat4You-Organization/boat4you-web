@@ -27,5 +27,12 @@
   "charterType": "Type de location",
   "searchCharterType": "Rechercher le type de location",
   "typeOfMainsail": "Type de grand-voile",
-  "services": "Services"
+  "services": "Services",
+  "minLength": "Longueur min",
+  "maxLength": "Longueur max",
+  "beam": "Largeur",
+  "fuelTank": "Réservoir carburant",
+  "waterTank": "Réservoir eau",
+  "length": "Longueur",
+  "newYacht": "Nouveau yacht"
 }

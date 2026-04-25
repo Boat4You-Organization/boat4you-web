@@ -1,0 +1,67 @@
+@use '@/styles/utils/rem-calc' as *;
+@use '@/styles/settings/variables' as *;
+
+.row {
+  display: grid;
+  grid-template-columns: rem-calc(150) 1fr;
+  gap: rem-calc(20);
+  padding-block: rem-calc(20);
+  border-bottom: rem-calc(1) solid $black-100;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.rowLabel {
+  color: $black-600;
+  font-size: rem-calc(14) !important;
+}
+
+.rowValue {
+  font-size: rem-calc(15) !important;
+}
+
+.priceValue {
+  font-size: rem-calc(18) !important;
+  font-weight: 700 !important;
+  color: $black-950;
+}
+
+.phaseList {
+  display: flex;
+  flex-direction: column;
+  gap: rem-calc(16);
+}
+
+.phase {
+  display: flex;
+  align-items: flex-start;
+  gap: rem-calc(14);
+}
+
+.phaseDot {
+  flex-shrink: 0;
+  width: rem-calc(14);
+  height: rem-calc(14);
+  border-radius: 50%;
+  border: rem-calc(2) solid $blue-500;
+  background-color: $white;
+  margin-top: rem-calc(4);
+}
+
+.phaseDotActive {
+  background-color: $blue-500;
+}
+
+.phaseAmount {
+  font-size: rem-calc(15) !important;
+  font-weight: 700 !important;
+  color: $black-950;
+}
+
+.phaseDeadline {
+  font-size: rem-calc(13) !important;
+  color: $black-500;
+  margin-top: rem-calc(2) !important;
+}

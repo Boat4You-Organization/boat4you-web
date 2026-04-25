@@ -7,6 +7,7 @@ import { UserModel } from '@/models/user.model';
 import DateTime from '@/utils/static/DateTime';
 import { formatPrice } from '@/utils/static/formatNumber';
 import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
+import { toTitleCase } from '@/utils/static/toTitleCase';
 
 import {
   renderBuyerSection,
@@ -132,12 +133,15 @@ const ConfirmationPDF = ({ reservationDetails, user, locale }: ConfirmationPDFPr
           email,
           name: `${name} ${surname}`,
         })}
-        {renderReservationTitle({ title: t.bookingReference, reservationId: reservationId || '' })}
+        {renderReservationTitle({
+          title: t.confirmationNumber,
+          reservationId: reservationNumber || reservationId || '',
+        })}
         {renderServicesTable({
           title: t.details,
           locale,
           boatNameLabel: t.boatNameLabel,
-          boatName: `${modelName} | ${yachtName}`,
+          boatName: `${modelName} | ${toTitleCase(yachtName)}`,
           pickUpLabel: t.pickUp,
           pickUp: locationFrom,
           dateFromLabel: t.dateFromLabel,

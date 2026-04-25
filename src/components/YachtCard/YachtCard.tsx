@@ -5,6 +5,7 @@ import Image from 'next/image';
 
 import FlagIcon from '@/components/FlagIcon';
 import { getBoatImageUrl } from '@/utils/static/imageUtils';
+import { toTitleCase } from '@/utils/static/toTitleCase';
 
 import styles from './YachtCard.module.scss';
 
@@ -39,7 +40,7 @@ const YachtCard = ({
     </CardMedia>
     <CardContent className={styles.content}>
       <Typography variant="h3" fontWeight={700} whiteSpace="wrap">
-        {model} | {name}
+        {model} | {toTitleCase(name)}
       </Typography>
       {locationName && (
         <Stack direction="row" alignItems="flex-start" gap={1} mt={0.5}>

@@ -1,0 +1,61 @@
+@use '@/styles/utils/rem-calc' as *;
+@use '@/styles/settings/variables' as *;
+
+.container {
+  margin-top: rem-calc(48);
+  padding-top: rem-calc(32);
+  border-top: rem-calc(1) solid $black-200;
+  display: flex;
+  flex-direction: column;
+  gap: rem-calc(20);
+}
+
+.statsRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: rem-calc(12);
+  padding: rem-calc(24);
+  background: linear-gradient(135deg, rgba(40, 86, 255, 0.04) 0%, rgba(40, 86, 255, 0.01) 100%);
+  border-radius: rem-calc(12);
+  border: rem-calc(1) solid rgba(40, 86, 255, 0.08);
+}
+
+.statItem {
+  flex: 1;
+  min-width: rem-calc(80);
+}
+
+.verticalDivider {
+  display: none;
+  width: rem-calc(1);
+  height: rem-calc(40);
+  background: $black-200;
+  flex-shrink: 0;
+
+  @media (min-width: 600px) {
+    display: block;
+  }
+}
+
+.assuranceRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: rem-calc(16);
+  padding: rem-calc(18) rem-calc(24);
+  background: $white;
+  border: rem-calc(1) solid $black-200;
+  border-radius: rem-calc(12);
+
+  @media (min-width: 600px) {
+    gap: rem-calc(32);
+  }
+}
+
+.assuranceItem {
+  display: flex;
+  align-items: center;
+  gap: rem-calc(6);
+}

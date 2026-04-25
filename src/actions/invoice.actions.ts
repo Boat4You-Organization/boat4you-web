@@ -3,18 +3,16 @@
 import { ErrorModel } from '@/models/error.model';
 import { InvoiceModel } from '@/models/invoices.model';
 import { PayloadResponse } from '@/types/response.type';
+import { authFetch } from '@/utils/static/authFetch';
 import { createQueryParams } from '@/utils/static/queryParams';
-import { authHeaders } from '@/utils/static/tokenUtils';
 
 export async function getInvoiceByReservation(reservationId: number): Promise<PayloadResponse<InvoiceModel>> {
   try {
     const queryParams = createQueryParams({ reservationId });
 
-    const response = await fetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/secured/invoices${queryParams}`, {
-      headers: {
-        ...Object.fromEntries((await authHeaders()).entries()),
-      },
-    });
+    const response = await authFetch(
+      `${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/secured/invoices${queryParams}`,
+    );
 
     if (!response.ok) {
       const body: ErrorModel = await response.json();
@@ -35,11 +33,7 @@ export async function getInvoiceByReservation(reservationId: number): Promise<Pa
 
 export async function getInvoiceById(id: number): Promise<PayloadResponse<InvoiceModel>> {
   try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/secured/invoices/${id}`, {
-      headers: {
-        ...Object.fromEntries((await authHeaders()).entries()),
-      },
-    });
+    const response = await authFetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/secured/invoices/${id}`);
 
     if (!response.ok) {
       const body: ErrorModel = await response.json();

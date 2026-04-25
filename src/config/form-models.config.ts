@@ -55,6 +55,10 @@ export interface ProfileFormValues {
   name: string;
   surname: string;
   email: string;
+  phoneNumber: string;
+  address: string;
+  city: string;
+  country: string;
   password: string;
   language: Language;
   currency: Currency;

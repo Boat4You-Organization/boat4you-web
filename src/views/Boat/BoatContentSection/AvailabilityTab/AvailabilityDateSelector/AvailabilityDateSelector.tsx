@@ -25,7 +25,7 @@ interface AvailabilityDateSelectorProps {
 }
 
 const AvailabilityDateSelector = ({ yacht, onSubmit }: AvailabilityDateSelectorProps) => {
-  const { activeDate } = useYachtStore();
+  const { activeDate, selectedOffer } = useYachtStore();
   const t = useTranslations('common');
   const locale = useLocale();
   const [isModalOpen, toggleModal] = useToggleState();
@@ -112,24 +112,34 @@ const AvailabilityDateSelector = ({ yacht, onSubmit }: AvailabilityDateSelectorP
 
   return (
     <>
-      <Box p={4} className={styles.container}>
+      <Box px={3} py={2.5} className={styles.container}>
         <Stack className={styles.availabilityDate}>
-          <Stack direction="column" spacing={{ xs: 1, lg: 2 }}>
-            <Typography component="label" variant="body1" color={colors.blue300}>
+          <Stack direction="column" spacing={{ xs: 0.5, lg: 0.75 }}>
+            <Typography component="label" variant="body2" color={colors.blue300}>
               {t('startDate')}
             </Typography>
-            <Typography component="p" variant="h3" textTransform="capitalize" color={colors.white}>
+            <Typography component="p" variant="h4" textTransform="capitalize" color={colors.white}>
               {formStartDate ? DateTime.formatLong(formStartDate, locale) : '-'}
             </Typography>
+            {(yacht.defaultCheckin || selectedOffer?.checkin) && (
+              <Typography variant="body2" color={colors.blue300} sx={{ fontSize: 12 }}>
+                {t('pickUpTime')}: {yacht.defaultCheckin || selectedOffer?.checkin}
+              </Typography>
+            )}
           </Stack>
           <Divider classes={{ root: styles.root }} className={styles.divider} />
-          <Stack direction="column" spacing={2}>
-            <Typography component="label" variant="body1" color={colors.blue300}>
+          <Stack direction="column" spacing={0.75}>
+            <Typography component="label" variant="body2" color={colors.blue300}>
               {t('endDate')}
             </Typography>
-            <Typography component="p" variant="h3" textTransform="capitalize" color={colors.white}>
+            <Typography component="p" variant="h4" textTransform="capitalize" color={colors.white}>
               {formEndDate ? DateTime.formatLong(formEndDate, locale) : '-'}
             </Typography>
+            {(yacht.defaultCheckout || selectedOffer?.checkout) && (
+              <Typography variant="body2" color={colors.blue300} sx={{ fontSize: 12 }}>
+                {t('dropOffTime')}: {yacht.defaultCheckout || selectedOffer?.checkout}
+              </Typography>
+            )}
           </Stack>
         </Stack>
         <Button onClick={toggleModal} variant="containedInfo" size="medium" className={styles.button}>

@@ -35,6 +35,9 @@ export async function fetchYachts(
 
     const paramsWithCurrency = {
       ...restParams,
+      // Default listing sort is lowest-price-first. A URL param always wins —
+      // including sortBy='' which means the user picked "Recommended" on the tab.
+      sortBy: restParams.sortBy ?? 'asc',
       ...(boatTypes && { vesselType: boatTypes }),
       ...(currency && { currency }),
     };

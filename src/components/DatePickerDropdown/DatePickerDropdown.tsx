@@ -124,9 +124,10 @@ const DatePickerDropdown = <T extends FieldValues>({
         setValue(endDateFieldName, date as PathValue<T, typeof endDateFieldName>);
         setHoverDate(null);
 
-        if (!customBreakpoint) {
-          handleClose();
-        }
+        // Auto-close on range-complete on BOTH desktop and mobile so
+        // downstream auto-advance (e.g. opening the boat-type modal on
+        // mobile) sees a clean "dates picked + calendar gone" state.
+        handleClose();
       }
     },
     [startDate, endDate, setValue, startDateFieldName, endDateFieldName, customBreakpoint, handleClose]
@@ -173,16 +174,49 @@ const DatePickerDropdown = <T extends FieldValues>({
     </Stack>
   );
 
+  // Mobile: render a vertical list of the next N months starting from the
+  // current month. 6 months is enough for the typical booking window and
+  // half the DOM of 12 — noticeably snappier on low-end phones.
+  const MOBILE_MONTHS_AHEAD = 6;
+
+  // Build once per mount — `dayjs().startOf('month')` is stable for the
+  // session, no need to recompute every render.
+  const mobileMonths = React.useMemo(
+    () => Array.from({ length: MOBILE_MONTHS_AHEAD }, (_, i) => dayjs().startOf('month').add(i, 'month')),
+    []
+  );
+
   const renderCalendarContent = () => {
     const nextMonth = currentMonth.add(1, 'month');
     const showDualCalendar = !customBreakpoint;
 
+    if (customBreakpoint) {
+      return (
+        // `MuiDateCalendar` already renders its own month header — don't
+        // double it. Narrow padding + small gap so months sit clean.
+        <Stack direction="column" spacing={0.5} width="100%" px={2}>
+          {mobileMonths.map(month => (
+            <CustomDateCalendar
+              key={month.format('YYYY-MM')}
+              currentMonth={month}
+              startDate={startDate}
+              endDate={endDate}
+              onDayClick={handleDayClick}
+              hoverDate={hoverDate}
+              onDayHover={handleDayHover}
+              getDateDisableReason={getDateDisableReason}
+            />
+          ))}
+        </Stack>
+      );
+    }
+
     return (
       <Stack
-        direction={customBreakpoint ? 'column' : 'row'}
-        spacing={customBreakpoint ? 2 : 4}
-        paddingBlock={customBreakpoint ? 0 : 2}
-        paddingInline={customBreakpoint ? 0 : 4}
+        direction="row"
+        spacing={4}
+        paddingBlock={2}
+        paddingInline={4}
         width="100%"
         height="100%"
       >
@@ -281,8 +315,12 @@ const DatePickerDropdown = <T extends FieldValues>({
           anchorEl={anchorEl}
           open={open}
           onClose={handleClose}
-          anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
-          transformOrigin={{ vertical: 'top', horizontal: 'left' }}
+          // Center the 2-month popover under the date button. Default
+          // `left/left` anchored the 720px panel to the button's left edge,
+          // so it spilled rightward across the header. Centering keeps both
+          // months visible and balanced under the trigger.
+          anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+          transformOrigin={{ vertical: 'top', horizontal: 'center' }}
           sx={{
             marginTop: 1.5,
             '& .MuiMenu-list': {
@@ -305,6 +343,8 @@ const DatePickerDropdown = <T extends FieldValues>({
           onOpen={toggleModal}
           onClose={toggleModal}
           hideCancelButton
+          // Bottom-sheet (80dvh) — calendar sits lower on screen, home
+          // hero peeks through at the top, no visual "wall of white".
           customButton={
             <Button variant="contained" size="large" onClick={toggleModal} fullWidth>
               {t('common.selectDates')}

@@ -11,9 +11,11 @@ import colors from '@/styles/themes/colors';
 import useScrollSpy from '@/utils/hooks/useScrollSpy';
 import DateTime from '@/utils/static/DateTime';
 
+import AmenitiesTab from './AmenitiesTab';
 import CancellationTab from './CancellationTab';
 import DetailsTab from './DetailsTab';
 import FaqTab from './FaqTab';
+import GoodToKnowTab from './GoodToKnowTab';
 import MainInfoTab from './MainInfoTab';
 import PaymentTab from './PaymentTab';
 import styles from './ReservationInfoSection.module.scss';
@@ -38,8 +40,15 @@ const ReservationInfoSection = ({ reservationDetails, userCurrency }: Reservatio
     checkin,
     checkout,
     specialRequest,
+    numberOfDays: backendNumberOfDays,
   } = reservationDetails;
-  const numberOfDays = DateTime.daysBetween(DateTime.date(dateFrom), DateTime.date(dateTo));
+  // Prefer the backend-provided number (matches BookingSummaryCard on
+  // /enter-your-details); only fall back to the locally calculated span if
+  // the backend didn't populate it for legacy rows.
+  const numberOfDays =
+    backendNumberOfDays && backendNumberOfDays > 0
+      ? backendNumberOfDays
+      : DateTime.daysBetween(DateTime.date(dateFrom), DateTime.date(dateTo));
   const t = useTranslations('common');
 
   const activeSectionId = useScrollSpy(sectionIds, 0.2);
@@ -74,6 +83,7 @@ const ReservationInfoSection = ({ reservationDetails, userCurrency }: Reservatio
             locationFrom={locationFrom}
             defaultCheckin={checkin}
             defaultCheckout={checkout}
+            numberOfDays={numberOfDays}
             specialRequest={specialRequest}
           />
         );
@@ -82,9 +92,12 @@ const ReservationInfoSection = ({ reservationDetails, userCurrency }: Reservatio
         return <DetailsTab reservationDetails={reservationDetails} />;
 
       case 2:
-        return <CancellationTab dateFrom={dateFrom} />;
+        return <AmenitiesTab reservationDetails={reservationDetails} />;
 
       case 3:
+        return <CancellationTab dateFrom={dateFrom} />;
+
+      case 4:
         return (
           <PaymentTab
             selectedExtras={selectedExtras}
@@ -97,7 +110,10 @@ const ReservationInfoSection = ({ reservationDetails, userCurrency }: Reservatio
           />
         );
 
-      case 4:
+      case 5:
+        return <GoodToKnowTab />;
+
+      case 6:
         return <FaqTab />;
 
       default:

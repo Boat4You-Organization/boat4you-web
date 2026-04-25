@@ -27,5 +27,12 @@
   "charterType": "Tipo de Charter",
   "searchCharterType": "Buscar Tipo de Charter",
   "typeOfMainsail": "Tipo de Vela Principal",
-  "services": "Serviços"
+  "services": "Serviços",
+  "minLength": "Comprimento min",
+  "maxLength": "Comprimento max",
+  "beam": "Boca",
+  "fuelTank": "Tanque combustível",
+  "waterTank": "Tanque água",
+  "length": "Comprimento",
+  "newYacht": "Novo iate"
 }

@@ -1,19 +1,18 @@
-import { Box, Divider, Grid, Icon, Stack, Tooltip, Typography } from '@mui/material';
+import { Box, Divider, Grid, Stack, Typography } from '@mui/material';
 import cx from 'clsx';
 import { useLocale, useTranslations } from 'next-intl';
 
 import CircularProgress from '@/components/CircularProgress';
-import StatusChip from '@/components/StatusChip';
-import Information from '@/components/SvgIcons/Information';
-import YachtCard from '@/components/YachtCard';
+import TimelineCircleActive from '@/components/SvgIcons/TimelineCircleActive';
+import TimelineCircleDefault from '@/components/SvgIcons/TimelineCircleDefault';
 import { bankDetails } from '@/config/bank-details.config';
 import { PaymentMethod } from '@/config/paymentMethods.config';
 import { PaymentPhase } from '@/models/reservation.model';
-import { CHARTER_DESCRIPTION_LABEL_MAP, CHARTER_TYPE_LABEL_MAP } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
 import { ReservationData } from '@/types/reservation.type';
 import DateTime from '@/utils/static/DateTime';
 import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
+import { calculatePaymentPhases } from '@/utils/static/paymentPhases';
 
 import styles from './PriceBreakdownCard.module.scss';
 
@@ -37,15 +36,10 @@ const PriceBreakdownCard = ({
   reservationId,
 }: PriceBreakdownCardProps) => {
   const {
-    name,
-    model,
-    locationFrom,
-    mainImage,
     pricePerDayEur,
     pricePerDayInfo,
     totalPriceEur,
     totalPriceInfo,
-    charterType,
     dateFrom,
     dateTo,
   } = reservationData;
@@ -73,44 +67,9 @@ const PriceBreakdownCard = ({
 
   return (
     <Box className={cx(styles.container, { [styles.compact]: showCard, [styles.lastStep]: isLastStep })}>
-      {!showCard && (
-        <YachtCard
-          mainImageId={mainImage.id}
-          model={model}
-          name={name}
-          locationCountryCode={locationFrom.countryCode}
-          locationName={locationFrom.name}
-        >
-          <Stack mt={1} gap={1}>
-            {charterType.map((type, index) => (
-              // eslint-disable-next-line react/no-array-index-key
-              <Stack direction="row" alignItems="center" key={index} gap={0.5}>
-                <StatusChip label={t(CHARTER_TYPE_LABEL_MAP[type])} color="success" />
-                <Tooltip
-                  title={t(CHARTER_DESCRIPTION_LABEL_MAP[type])}
-                  placement="right-end"
-                  slotProps={{
-                    transition: { timeout: 0 },
-                  }}
-                >
-                  <Icon className={styles.icon}>
-                    <Information size={20} />
-                  </Icon>
-                </Tooltip>
-              </Stack>
-            ))}
-          </Stack>
-        </YachtCard>
-      )}
-      {!showCard && (
-        <Divider
-          sx={{
-            '&.MuiDivider-root': {
-              marginBlock: 3,
-            },
-          }}
-        />
-      )}
+      {/* Yacht identity card removed here — the BookingHero at the top of the
+          page already shows the yacht image, model, location and charter type
+          chip. Keeping it also here duplicated the same info in two places. */}
       {selectedPaymentMethod === PaymentMethod.BANK_TRANSFER && (
         <>
           <Box>
@@ -256,6 +215,70 @@ const PriceBreakdownCard = ({
           </Typography>
         </Stack>
       </Stack>
+
+      {/* Payment schedule — timeline with dots + connector (same as cancellation),
+          but each step shows the amount BOLD on top and the ordinal
+          instalment label + due date in GREEN below. Matches the Boataround
+          "5,031 € / 1st payment by 19 April 2026" pattern. */}
+      {paymentPhases.length === 0 && dateFrom && totalPriceEur > 0 && (
+        <>
+          <Divider sx={{ '&.MuiDivider-root': { marginBlock: 3 } }} />
+          <Typography variant="h3" component="h3" fontWeight={700} mb={3}>
+            {t('common.paymentSchedule')}
+          </Typography>
+          <Stack>
+            {calculatePaymentPhases(dateFrom, totalPriceEur).map((phase, index, arr) => {
+              const isLast = index === arr.length - 1;
+              const isActive = index === 0;
+              // Unicode superscripts (ˢᵀ ᴺᴰ ᴿᴰ) — matches the "1st / 2nd / 3rd"
+              // pattern without extra <sup> markup.
+              const ordinals = ['1ˢᵀ', '2ᴺᴰ', '3ᴿᴰ'];
+              const ordinal = ordinals[index] ?? `${index + 1}`;
+              const amount = formatPriceWithCurrency({
+                clientPriceEur: phase.amount,
+                clientPriceInfo: totalPriceInfo
+                  ? { amount: (phase.amount / totalPriceEur) * totalPriceInfo.amount, currency: totalPriceInfo.currency }
+                  : undefined,
+                locale,
+              });
+              const dateStr = DateTime.formatLongWithoutDay(phase.deadline, locale);
+
+              return (
+                <Stack
+                  // eslint-disable-next-line react/no-array-index-key
+                  key={index}
+                  direction="row"
+                  alignItems="flex-start"
+                  sx={{ minHeight: isLast ? 'auto' : 64 }}
+                >
+                  <Stack alignItems="center" sx={{ mr: 2 }}>
+                    {isActive ? <TimelineCircleActive /> : <TimelineCircleDefault />}
+                    {!isLast && (
+                      <Box
+                        sx={{
+                          width: 3,
+                          flex: 1,
+                          minHeight: 32,
+                          background: `repeating-linear-gradient(to bottom, ${colors.black200} 0 6px, transparent 6px 12px)`,
+                          my: 0.5,
+                        }}
+                      />
+                    )}
+                  </Stack>
+                  <Stack sx={{ pb: isLast ? 0 : 2 }}>
+                    <Typography variant="body1" fontWeight={700} color={colors.black950}>
+                      {amount}
+                    </Typography>
+                    <Typography variant="body2" color="success.main" fontWeight={600}>
+                      {ordinal} {t('common.installment')} {t('common.by')} {dateStr}
+                    </Typography>
+                  </Stack>
+                </Stack>
+              );
+            })}
+          </Stack>
+        </>
+      )}
     </Box>
   );
 };

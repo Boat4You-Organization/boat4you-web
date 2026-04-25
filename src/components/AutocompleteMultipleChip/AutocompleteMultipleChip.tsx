@@ -46,6 +46,13 @@ export interface AutocompleteMultipleChipProps {
   TextFieldProps?: TextFieldPropsType;
   variant?: 'expanded' | 'compact';
   valueField?: 'id' | 'label';
+  /**
+   * Force the dropdown to stay open regardless of focus state. Useful when
+   * the autocomplete is rendered inside a full-screen picker modal on
+   * mobile — the list of suggestions (recent / popular / search results)
+   * should be visible immediately without requiring a tap on the input.
+   */
+  alwaysOpen?: boolean;
 }
 
 const AutocompleteMultipleChip = ({
@@ -62,6 +69,7 @@ const AutocompleteMultipleChip = ({
   filteredOptions,
   variant = 'expanded',
   valueField = 'id',
+  alwaysOpen = false,
 }: AutocompleteMultipleChipProps) => {
   const [isFocused, setIsFocused] = useState(false);
   const [internalValue, setInternalValue] = useState<AutocompleteOption[]>([]);
@@ -135,6 +143,34 @@ const AutocompleteMultipleChip = ({
         '&:hover': {
           backgroundColor: internalValue.length === 0 ? colors.blue50 : 'transparent',
         },
+        // In full-screen mobile picker mode: kill every nested container
+        // that MUI Autocomplete adds (popper, paper, listbox). Targeting
+        // via descendant selectors so we win over both the default classes
+        // and any styles.paper class still wrapping the paper.
+        ...(alwaysOpen && {
+          '& .MuiAutocomplete-popper': {
+            position: 'static !important',
+            transform: 'none !important',
+            inset: 'unset !important',
+            width: '100% !important',
+            zIndex: 'auto !important',
+          },
+          '& .MuiAutocomplete-paper, & .MuiPaper-root': {
+            boxShadow: 'none !important',
+            borderRadius: '0 !important',
+            background: 'transparent !important',
+            margin: '0 !important',
+            border: 'none !important',
+            maxHeight: 'none !important',
+            overflow: 'visible !important',
+          },
+          '& .MuiAutocomplete-listbox': {
+            maxHeight: 'none !important',
+            overflow: 'visible !important',
+            padding: '0 !important',
+            background: 'transparent !important',
+          },
+        }),
       }}
     >
       <InputAdornment
@@ -142,7 +178,7 @@ const AutocompleteMultipleChip = ({
         sx={{
           position: 'absolute',
           left: 12,
-          top: '50%',
+          top: alwaysOpen ? '30px' : '50%',
           transform: 'translateY(-50%)',
           zIndex: 2,
           pointerEvents: 'none',
@@ -164,7 +200,7 @@ const AutocompleteMultipleChip = ({
           sx={{
             position: 'absolute',
             right: 12,
-            top: '50%',
+            top: alwaysOpen ? '30px' : '50%',
             transform: 'translateY(-50%)',
             zIndex: 2,
             cursor: 'pointer',
@@ -180,7 +216,11 @@ const AutocompleteMultipleChip = ({
           sx={{
             position: 'absolute',
             left: `${containerPaddingLeft + 8}px`,
-            top: '50%',
+            // `top: 50%` is centered on the FormControl. In alwaysOpen
+            // mode the popper renders inline so the container expands
+            // beyond just the input row, which would drop the placeholder
+            // over the suggestion list. Pin to half the input row height.
+            top: alwaysOpen ? '30px' : '50%',
             transform: 'translateY(-50%)',
             zIndex: 1,
             pointerEvents: 'none',
@@ -208,13 +248,58 @@ const AutocompleteMultipleChip = ({
         multiple
         disableClearable
         disableCloseOnSelect
+        {...(alwaysOpen
+          ? {
+              open: true,
+              disablePortal: true,
+              slotProps: {
+                // Full-screen mobile picker mode. Render the popper as a
+                // plain inline block — no floating positioning, no paper
+                // card, no independent listbox scroll. Items flow directly
+                // in the modal body so the whole screen scrolls as one.
+                popper: {
+                  sx: {
+                    position: 'static !important',
+                    width: '100% !important',
+                    transform: 'none !important',
+                    inset: 'unset !important',
+                    // Popper injects `will-change: transform` inline; that
+                    // alone creates a new stacking/scroll context in some
+                    // browsers. Neutralize it so the Paper flows inline.
+                    willChange: 'auto !important',
+                  },
+                },
+                paper: {
+                  sx: {
+                    boxShadow: 'none !important',
+                    borderRadius: '0 !important',
+                    margin: '0 !important',
+                    background: 'transparent !important',
+                    maxHeight: 'none !important',
+                    overflow: 'visible !important',
+                  },
+                },
+                // This is the UL that actually carries MUI's default
+                // `max-height: 40vh` + `overflow-y: auto`. Without these
+                // overrides the list sits in its own scroll inside the
+                // modal — exactly the nested-container bug we're fixing.
+                listbox: {
+                  sx: {
+                    maxHeight: 'none !important',
+                    overflow: 'visible !important',
+                    padding: '0 !important',
+                  },
+                },
+              },
+            }
+          : {})}
         limitTags={variant === 'compact' ? 0 : 2}
         groupBy={groupBy}
         forcePopupIcon={false}
         value={internalValue}
         options={optionsWithSelection}
         inputValue={inputValue}
-        classes={{ root: styles.root, paper: styles.paper }}
+        classes={{ root: styles.root, paper: alwaysOpen ? undefined : styles.paper }}
         onChange={handleChange}
         onInputChange={handleInputChange}
         isOptionEqualToValue={handleIsOptionEqualToValue}
@@ -302,6 +387,11 @@ const AutocompleteMultipleChip = ({
               inputProps={{
                 ...params.inputProps,
                 'aria-label': !label ? ariaLabel : undefined,
+                // MUI Autocomplete + Next.js 16 Turbopack generate different
+                // React useId() values SSR vs CSR, triggering a harmless
+                // hydration warning on the input's `id`. The DOM is otherwise
+                // correct on the client, so we just silence the noise.
+                suppressHydrationWarning: true,
               }}
             />
           );
@@ -338,9 +428,9 @@ const AutocompleteMultipleChip = ({
                 <Typography
                   component="div"
                   sx={{
-                    px: 1.5,
-                    pt: 1.5,
-                    pb: 0.5,
+                    px: 1,
+                    pt: 1,
+                    pb: 0.25,
                     fontSize: 12,
                     fontWeight: 600,
                     letterSpacing: 0.2,
@@ -363,7 +453,12 @@ const AutocompleteMultipleChip = ({
           },
           listbox: {
             sx: {
-              padding: 2,
+              padding: 0.75,
+              // Let the dropdown grow with content — no inner scroll. Mirrors
+              // Boataround UX where recent + popular lists expand the popper
+              // instead of introducing a nested scrollbar.
+              maxHeight: 'none',
+              overflow: 'visible',
             },
           },
           popper: {
@@ -372,6 +467,9 @@ const AutocompleteMultipleChip = ({
                 marginTop: '12px',
                 minWidth: '348px',
                 marginLeft: '-44px',
+                // Paper also carries a default max-height; match the listbox
+                // override so the whole popper can grow.
+                maxHeight: 'none',
               },
             },
             placement: 'bottom-start',

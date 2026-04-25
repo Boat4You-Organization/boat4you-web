@@ -19,10 +19,11 @@ import BoatListingItemCard from '@/components/BoatListingItemCard';
 import FloatingButton from '@/components/FloatingButton';
 import ListEmptyState from '@/components/ListEmptyState';
 import Pagination from '@/components/Pagination';
+import SeoTextSection from '@/components/SeoTextSection/SeoTextSection';
 import RiskFreeCTA from '@/components/RiskFreeCTA';
 import Grid from '@/components/SvgIcons/Grid';
 import List from '@/components/SvgIcons/List';
-import { PAGE_SIZE } from '@/config/constants.config';
+import { YACHT_PAGE_SIZE } from '@/config/constants.config';
 import { boatsTabs } from '@/config/tabs.config';
 import { InquiriesModel } from '@/models/inquiries.model';
 import { UserModel } from '@/models/user.model';
@@ -118,6 +119,7 @@ const BoatsSection = ({ data, user, inquiry }: BoatsSectionProps) => {
     (event: React.SyntheticEvent, newValue: number) => {
       const selectedTab = boatsTabs[newValue];
 
+      // Price sort needs concrete date range to compute per-day values server-side.
       if ((selectedTab === 'highestPrice' || selectedTab === 'lowestPrice') && (!params.startDate || !params.endDate)) {
         return;
       }
@@ -128,14 +130,17 @@ const BoatsSection = ({ data, user, inquiry }: BoatsSectionProps) => {
         case 'recommended':
           setParam('sortBy', '');
           break;
-        case 'lowPrepayment':
-          setParam('sortBy', 'lowestPrepayment');
-          break;
         case 'highestPrice':
           setParam('sortBy', 'desc');
           break;
         case 'lowestPrice':
           setParam('sortBy', 'asc');
+          break;
+        case 'minLength':
+          setParam('sortBy', 'lengthAsc');
+          break;
+        case 'maxLength':
+          setParam('sortBy', 'lengthDesc');
           break;
         default:
           break;
@@ -171,7 +176,10 @@ const BoatsSection = ({ data, user, inquiry }: BoatsSectionProps) => {
   }, [params.sortBy]);
 
   useEffect(() => {
-    if ((!params.startDate || !params.endDate) && (tabValue === 2 || tabValue === 3)) {
+    // Price-based tabs (Lowest price = 1, Highest price = 2) require a concrete
+    // date range. If the user clears dates, bounce them back to Recommended.
+    // Length tabs (3, 4) don't depend on dates so they stay as-is.
+    if ((!params.startDate || !params.endDate) && (tabValue === 1 || tabValue === 2)) {
       setTabValue(0);
       setParam('sortBy', '');
     }
@@ -297,9 +305,11 @@ const BoatsSection = ({ data, user, inquiry }: BoatsSectionProps) => {
           <Pagination
             page={params.page}
             onChange={handlePageChange}
-            count={data.page?.totalPages ?? Math.ceil(totalElements / PAGE_SIZE)}
+            count={data.page?.totalPages ?? Math.ceil(totalElements / YACHT_PAGE_SIZE)}
           />
         )}
+        {/* SEO block — long-form content below the listings for organic traffic. */}
+        <SeoTextSection destination={Array.isArray(params.destinations) ? params.destinations[0] : params.destinations} />
         {selectedYachtIds.length > 0 && (
           <FloatingButton selectedItems={selectedYachtIds.length} onClick={toggleAdminInquiryModalOpen} />
         )}

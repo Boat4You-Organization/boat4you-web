@@ -26,3 +26,24 @@ export async function getCardSurchargePercentage(): Promise<number> {
     return 0;
   }
 }
+
+/**
+ * Fetches the configured bank-transfer flat fee in EUR (0 if unset).
+ * Backend endpoint: GET /public/settings/bank-transfer-fee → { amountEur: "32.00" }
+ */
+export async function getBankTransferFee(): Promise<number> {
+  try {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/settings/bank-transfer-fee`, {
+      next: { revalidate: 300 },
+    });
+
+    if (!response.ok) return 0;
+
+    const data: { amountEur?: string } = await response.json();
+    const parsed = Number(data.amountEur);
+
+    return Number.isFinite(parsed) && parsed >= 0 ? parsed : 0;
+  } catch {
+    return 0;
+  }
+}

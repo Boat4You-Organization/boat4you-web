@@ -27,5 +27,12 @@
   "charterType": "Charter-Typ",
   "searchCharterType": "Charter-Typ suchen",
   "typeOfMainsail": "Typ des Großsegels",
-  "services": "Services"
+  "services": "Services",
+  "minLength": "Min Laenge",
+  "maxLength": "Max Laenge",
+  "beam": "Breite",
+  "fuelTank": "Kraftstofftank",
+  "waterTank": "Wassertank",
+  "length": "Länge",
+  "newYacht": "Neue Yacht"
 }

@@ -18,8 +18,8 @@ export const formatPriceWithCurrency = ({
 }: FormatPriceWithCurrencyOptions): string => {
   const formatAmount = (amount: number, currency: string) => {
     const formatter = new Intl.NumberFormat(locale, {
-      minimumFractionDigits: 2,
-      maximumFractionDigits: 2,
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0,
     });
     const formatted = formatter.format(amount);
     const symbol = CURRENCY_SYMBOL_MAP[currency as Currency] || currency;

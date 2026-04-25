@@ -1,4 +1,4 @@
-import { useCallback } from 'react';
+import { useCallback, useMemo } from 'react';
 
 import { ExpandMoreRounded } from '@mui/icons-material';
 import {
@@ -33,9 +33,19 @@ export interface AutocompleteMultipleProps {
   error?: string | undefined;
   sx?: SxProps<Theme>;
   disabled?: boolean;
+  /** Explicit stable DOM id. When omitted we derive a deterministic one from
+   *  `label` / `placeholder` so SSR and client hydration produce matching
+   *  attributes — MUI Autocomplete's internal `useId()` otherwise drifts
+   *  under Next.js 16 + Turbopack and React drops the entire search subtree
+   *  ("tree hydrated but some attributes… won't be patched up"). */
+  id?: string;
 }
 
+const slugify = (value: string) =>
+  value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+
 const AutocompleteMultiple = ({
+  id,
   value,
   options,
   onChange,
@@ -47,6 +57,10 @@ const AutocompleteMultiple = ({
   sx,
   disabled,
 }: AutocompleteMultipleProps) => {
+  const stableId = useMemo(
+    () => id ?? `autocomplete-${slugify(label || placeholder || 'field') || 'field'}`,
+    [id, label, placeholder],
+  );
   const handleChange = useCallback(
     (_: React.SyntheticEvent, newValue: SelectOption[]) => {
       onChange(newValue);
@@ -74,6 +88,7 @@ const AutocompleteMultiple = ({
     <FormControl fullWidth error={!!error}>
       {label && <FormLabel sx={{ mb: 1 }}>{label}</FormLabel>}
       <Autocomplete
+        id={stableId}
         multiple
         value={value}
         options={options}
@@ -104,7 +119,13 @@ const AutocompleteMultiple = ({
             </MenuItem>
           );
         }}
-        renderInput={params => <TextField {...params} placeholder={placeholder} error={!!error} />}
+        renderInput={params => (
+          // `id` override on TextField propagates down to the actual <input>,
+          // which is what React hydration compares. MUI Autocomplete's own
+          // `id` prop lives on the wrapper and still lets the internal input
+          // fall back to `useId()` — so we force a deterministic one here too.
+          <TextField {...params} id={`${stableId}-input`} placeholder={placeholder} error={!!error} />
+        )}
         sx={sx}
         disabled={disabled}
       />

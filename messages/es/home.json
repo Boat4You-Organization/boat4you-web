@@ -18,7 +18,8 @@
     "searchBoats": "Buscar barcos",
     "aroundCurrentLocation": "Around current location",
     "locating": "Locating…",
-    "locationError": "Couldn't get your location"
+    "locationError": "Couldn't get your location",
+    "selectYacht": "Seleccionar yate"
   },
   "destinationsSection": {
     "theWorldIs": "Mejores destinos para",

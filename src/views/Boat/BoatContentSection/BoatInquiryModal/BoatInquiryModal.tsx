@@ -115,11 +115,11 @@ const BoatInquiryModal = ({ isOpen, onOpen, onClose, yacht }: BoatInquiryModalPr
       }}
     >
       <YachtCard
-        mainImageId={yacht.yachtImages.filter(image => image.mainImage)[0].id}
+        mainImageId={yacht.yachtImages.filter(image => image.mainImage)[0]?.id ?? yacht.yachtImages[0]?.id}
         model={yacht.model}
         name={yacht.name}
-        locationCountryCode={yacht.location.countryCode}
-        locationName={yacht.location.name}
+        locationCountryCode={yacht.location?.countryCode ?? ''}
+        locationName={yacht.location?.name ?? ''}
       >
         <Stack display={{ xs: 'none', md: 'flex' }}>{renderDates()}</Stack>
       </YachtCard>

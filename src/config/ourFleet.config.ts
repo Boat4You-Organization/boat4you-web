@@ -1,5 +1,11 @@
 import { VesselType } from '@/models/yacht.model';
 
+// Config for the home "Our Fleet" slider. Curated to the 9 vessel types we
+// actually broker. Trimaran, House boat and Rubber boat are intentionally
+// omitted here — the OurFleetSectionSlider filters the backend `fleet` payload
+// through this map's keys so those types never render as cards. The enum
+// itself still carries all 12 values so existing yachts (cards, detail pages,
+// reservations) with Trimaran/Houseboat/Rubber keep rendering correctly.
 export const VESSEL_TYPE_CONFIG = {
   [VesselType.CATAMARAN]: {
     titleKey: 'fleet.catamarans',
@@ -9,6 +15,22 @@ export const VESSEL_TYPE_CONFIG = {
     },
     slug: VesselType.CATAMARAN,
   },
+  [VesselType.SAILING_YACHT]: {
+    titleKey: 'fleet.sailingYachts',
+    image: {
+      src: '/images/ourFleet/sailing-yacht.webp',
+      alt: 'fleet.sailingYachts',
+    },
+    slug: VesselType.SAILING_YACHT,
+  },
+  [VesselType.POWER_CATAMARAN]: {
+    titleKey: 'fleet.powerCatamarans',
+    image: {
+      src: '/images/ourFleet/power-catamaran.webp',
+      alt: 'fleet.powerCatamarans',
+    },
+    slug: VesselType.POWER_CATAMARAN,
+  },
   [VesselType.GULET]: {
     titleKey: 'fleet.gulets',
     image: {
@@ -16,14 +38,6 @@ export const VESSEL_TYPE_CONFIG = {
       alt: 'fleet.gulets',
     },
     slug: VesselType.GULET,
-  },
-  [VesselType.HOUSE_BOAT]: {
-    titleKey: 'fleet.houseBoats',
-    image: {
-      src: '/images/ourFleet/houseBoat.webp',
-      alt: 'fleet.houseBoats',
-    },
-    slug: VesselType.HOUSE_BOAT,
   },
   [VesselType.LUXURY_MOTOR_YACHT]: {
     titleKey: 'fleet.luxuryMotorYachts',
@@ -64,37 +78,5 @@ export const VESSEL_TYPE_CONFIG = {
       alt: 'fleet.motorSailors',
     },
     slug: VesselType.MOTORSAILER,
-  },
-  [VesselType.POWER_CATAMARAN]: {
-    titleKey: 'fleet.powerCatamarans',
-    image: {
-      src: '/images/ourFleet/power-catamaran.webp',
-      alt: 'fleet.powerCatamarans',
-    },
-    slug: VesselType.POWER_CATAMARAN,
-  },
-  [VesselType.SAILING_YACHT]: {
-    titleKey: 'fleet.sailingYachts',
-    image: {
-      src: '/images/ourFleet/sailing-yacht.webp',
-      alt: 'fleet.sailingYachts',
-    },
-    slug: VesselType.SAILING_YACHT,
-  },
-  [VesselType.TRIMARAN]: {
-    titleKey: 'fleet.trimarans',
-    image: {
-      src: '/images/ourFleet/trimaran.webp',
-      alt: 'fleet.trimarans',
-    },
-    slug: VesselType.TRIMARAN,
-  },
-  [VesselType.RUBBER_BOAT]: {
-    titleKey: 'fleet.rubberBoats',
-    image: {
-      src: '/images/ourFleet/rubber-boat.webp',
-      alt: 'fleet.rubberBoats',
-    },
-    slug: VesselType.RUBBER_BOAT,
   },
 } as const;

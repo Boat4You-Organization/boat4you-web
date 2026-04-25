@@ -8,8 +8,8 @@ import { Currency } from '@/models/user.model';
 import { PriceCalcDto } from '@/models/yacht-offer.model';
 import { YachtAvailability, YachtFleet, YachtModel } from '@/models/yacht.model';
 import { PayloadResponse } from '@/types/response.type';
+import { authFetch } from '@/utils/static/authFetch';
 import { createYachtQueryParams } from '@/utils/static/queryParams';
-import { authHeaders } from '@/utils/static/tokenUtils';
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
@@ -46,10 +46,15 @@ export async function getSingleYacth(
   language: string = 'en'
 ): Promise<YachtModel | null> {
   try {
-    const { ...filteredSearchParams } = searchParams;
+    // The detail endpoint expects dateFrom/dateTo, but URL search params are
+    // startDate/endDate (shared with the listing). Rename so the backend can
+    // actually find matching offers for the user's requested week.
+    const { startDate, endDate, ...filteredSearchParams } = searchParams;
 
     const paramsWithCurrency = {
       ...filteredSearchParams,
+      ...(startDate && { dateFrom: startDate }),
+      ...(endDate && { dateTo: endDate }),
       ...(currency && { currency }),
     };
 
@@ -228,11 +233,10 @@ export async function sendCustomOffer(state: any, formData: FormData): Promise<P
   };
 
   try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/admin/custom-offers`, {
+    const response = await authFetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/admin/custom-offers`, {
       ...POST_REQUEST_PARAMETERS,
       body: JSON.stringify(inquiryData),
       headers: {
-        ...Object.fromEntries((await authHeaders()).entries()),
         'Content-Type': 'application/json',
       },
     });
@@ -252,9 +256,8 @@ export async function sendCustomOffer(state: any, formData: FormData): Promise<P
 export async function getInquiry(id: number): Promise<InquiriesModel | null> {
   try {
     const url = `${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/admin/inquiries/${id}`;
-    const response = await fetch(url, {
+    const response = await authFetch(url, {
       headers: {
-        ...Object.fromEntries((await authHeaders()).entries()),
         'Content-Type': 'application/json',
       },
     });

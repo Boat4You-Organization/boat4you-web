@@ -33,6 +33,7 @@ export const OFFSET = 100;
 
 export const PAGE_NUMBER = 1;
 export const PAGE_SIZE = 9;
+export const YACHT_PAGE_SIZE = 19;
 export const BLOG_PAGE_SIZE = 12;
 
 export const DEFAULT_IMAGE = '/images/yacht-banner.webp';

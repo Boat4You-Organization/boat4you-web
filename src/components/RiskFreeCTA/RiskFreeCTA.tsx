@@ -1,7 +1,6 @@
-import { Button, Card, CardActions, CardContent, CardMedia, Container, Grid, Typography } from '@mui/material';
+import { Card, CardActions, CardContent, CardMedia, Container, Grid, Typography } from '@mui/material';
 import cx from 'clsx';
 import { useTranslations } from 'next-intl';
-import Link from 'next/link';
 
 import RiskFreeBookingVector from '@/components/SvgIcons/Vector/RiskFreeBookingVector';
 import colors from '@/styles/themes/colors';
@@ -25,38 +24,53 @@ const RiskFreeCTA = ({ searchPage, disableGutters }: RiskFreeCTAProps) => {
     >
       <Container maxWidth="xl" disableGutters className={cx(styles.container, { [styles.searchPage]: searchPage })}>
         <Card elevation={0} className={styles.card}>
-          <Grid container alignItems="stretch" direction={{ xs: 'column-reverse', md: 'row' }}>
+          {/* Row layout on ALL viewports (text left, illustration right) —
+              mobile previously stacked column-reverse which ate too much
+              vertical space. Now one compact horizontal banner. */}
+          <Grid container alignItems="stretch" direction="row">
             <Grid
               display="flex"
               flexDirection="column"
               alignSelf="center"
-              gap={1.5}
-              size={{ xs: 12, md: 7 }}
-              padding={{ xs: 2, md: searchPage ? 3 : 4 }}
+              gap={{ xs: 1, md: 1.5 }}
+              size={{ xs: 8, md: 7 }}
+              padding={{ xs: 1.5, md: searchPage ? 3 : 4 }}
             >
               <CardContent className={styles.content}>
                 <Typography
                   component="h2"
                   variant="hero"
                   fontWeight={800}
-                  fontSize={searchPage ? 32 : 62}
+                  fontSize={{ xs: 20, md: searchPage ? 32 : 62 }}
                   fontStyle="italic"
                   color={colors.blue500}
                 >
                   {t('riskFreeBooking')}
                 </Typography>
-                <Typography variant="body2" color={colors.black500} mt={1.5}>
+                <Typography
+                  variant="body2"
+                  color={colors.black500}
+                  mt={{ xs: 0.5, md: 1.5 }}
+                  sx={{ fontSize: { xs: 11, md: 14 }, lineHeight: 1.35 }}
+                >
                   {t('cancellingDescription')}
                 </Typography>
               </CardContent>
-              <CardActions>
-                <Link href="/search">
-                  <Button>{t('save15Now')}</Button>
-                </Link>
+              <CardActions sx={{ pt: { xs: 0, md: 1 }, px: { xs: 1, md: 2 } }}>
+                <Typography
+                  component="span"
+                  sx={{
+                    color: colors.blue500,
+                    fontWeight: 800,
+                    fontSize: { xs: 13, md: 16 },
+                  }}
+                >
+                  Save up to 47%
+                </Typography>
               </CardActions>
             </Grid>
 
-            <Grid size={{ xs: 12, md: 5 }} pl={{ xs: 1, md: 0 }}>
+            <Grid size={{ xs: 4, md: 5 }} pl={{ xs: 1, md: 0 }}>
               <CardMedia className={styles.vector}>
                 <RiskFreeBookingVector />
               </CardMedia>

@@ -12,11 +12,14 @@ import Layout from '@/components/Layout';
 import ReservationOverview from '@/components/ReservationOverview';
 import Information from '@/components/SvgIcons/Information';
 import { ReservationDetails } from '@/models/reservation.model';
+import { ReservationData } from '@/types/reservation.type';
+import { getDataFromLocalStorage } from '@/utils/static/localStorageUtils';
 import { getDataFromSessionStorage } from '@/utils/static/sessionStorageUtils';
 import ErrorPage from '@/views/ErrorPage';
 
 const PaymentPendingPage = () => {
   const [reservationData, setReservationData] = useState<ReservationDetails | null>(null);
+  const [guestFallback, setGuestFallback] = useState<ReservationData | null>(null);
   const [reservationId, setReservationId] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
   const router = useRouter();
@@ -47,10 +50,18 @@ const PaymentPendingPage = () => {
 
         if (result.payload) {
           setReservationData(result.payload);
+        } else {
+          // Guest flow: API call needs auth and won't return data. Read the
+          // reservation we just saved during the booking flow from
+          // localStorage so we can still show a meaningful "pre-reserved"
+          // confirmation card.
+          const saved = getDataFromLocalStorage<ReservationData>('yachtReservation');
+          if (saved) setGuestFallback(saved);
         }
       } catch (error) {
-        // eslint-disable-next-line no-console
-        console.error('Error fetching reservation data:', error);
+        // Network/auth error — try the local payload as above.
+        const saved = getDataFromLocalStorage<ReservationData>('yachtReservation');
+        if (saved) setGuestFallback(saved);
       } finally {
         setLoading(false);
       }
@@ -67,8 +78,42 @@ const PaymentPendingPage = () => {
     );
   }
 
+  // Guest path: we have the local reservation payload, not the full
+  // ReservationDetails from the API. Map the overlap so ReservationOverview
+  // still renders a coherent card.
   if (!reservationData || Object.keys(reservationData).length === 0) {
-    return <ErrorPage />;
+    if (!guestFallback) return <ErrorPage />;
+
+    const fallbackDetails = {
+      id: Number(reservationId) || 0,
+      yacht: {
+        name: guestFallback.name,
+        model: guestFallback.model,
+        buildYear: guestFallback.buildYear ?? 0,
+        mainImage: guestFallback.mainImage,
+        yachtImages: guestFallback.yachtImages ?? [],
+        location: {
+          name: guestFallback.locationFrom?.name ?? '',
+          countryCode: guestFallback.locationFrom?.countryCode ?? '',
+        },
+      },
+      offer: { dateFrom: guestFallback.dateFrom, dateTo: guestFallback.dateTo },
+    } as unknown as ReservationDetails;
+
+    return (
+      <Layout showFooter={false}>
+        <ReservationOverview
+          title={t('yourYachtHasBeenPreReserved')}
+          description={t('yourYachtHasBeenPreReservedDescription')}
+          descriptionIcon={Information}
+          reservationData={fallbackDetails}
+          linkTo="/"
+          linkToText={t('backToHome')}
+          onClick={() => router.push('/')}
+          showContactCard
+        />
+      </Layout>
+    );
   }
 
   return (

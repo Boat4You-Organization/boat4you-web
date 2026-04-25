@@ -27,5 +27,12 @@
   "charterType": "Tipo di Charter",
   "searchCharterType": "Cerca Tipo di Charter",
   "typeOfMainsail": "Tipo di Vela Maestra",
-  "services": "Servizi"
+  "services": "Servizi",
+  "minLength": "Lunghezza min",
+  "maxLength": "Lunghezza max",
+  "beam": "Larghezza",
+  "fuelTank": "Serbatoio carburante",
+  "waterTank": "Serbatoio acqua",
+  "length": "Lunghezza",
+  "newYacht": "Nuovo yacht"
 }

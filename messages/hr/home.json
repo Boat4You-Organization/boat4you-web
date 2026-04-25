@@ -18,7 +18,8 @@
     "searchBoats": " Pretraži brodove",
     "aroundCurrentLocation": "Oko trenutne lokacije",
     "locating": "Tražim lokaciju…",
-    "locationError": "Lokacija nije dostupna"
+    "locationError": "Lokacija nije dostupna",
+    "selectYacht": "Odaberi plovilo"
   },
   "destinationsSection": {
     "theWorldIs": "Najbolje destinacije za",

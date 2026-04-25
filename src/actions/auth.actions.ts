@@ -7,6 +7,7 @@ import { AuthKeys, POST_REQUEST_PARAMETERS, PUT_REQUEST_PARAMETERS } from '@/con
 import { ErrorModel } from '@/models/error.model';
 import { UserModel } from '@/models/user.model';
 import { PayloadResponse } from '@/types/response.type';
+import { authFetch } from '@/utils/static/authFetch';
 import { authHeaders } from '@/utils/static/tokenUtils';
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -95,10 +96,14 @@ export async function login(state: any, formData: FormData): Promise<LoginResult
     const data: LoginResponse = await response.json();
 
     const cookieStore = await cookies();
+    // `secure: true` blocks cookies over plain HTTP. In local dev we run on
+    // http://localhost:3000 and the browser silently drops the cookie, so
+    // the session never forms even though the API returned a valid token.
+    const isProd = process.env.NODE_ENV === 'production';
 
     cookieStore.set(AuthKeys.ACCESS_TOKEN, data.token, {
       httpOnly: true,
-      secure: true,
+      secure: isProd,
       maxAge: 60 * 60 * 24 * 7,
       sameSite: 'lax',
       path: '/',
@@ -106,20 +111,32 @@ export async function login(state: any, formData: FormData): Promise<LoginResult
 
     cookieStore.set(AuthKeys.REFRESH_TOKEN, data.refreshToken, {
       httpOnly: true,
-      secure: true,
+      secure: isProd,
       maxAge: 60 * 60 * 24 * 30,
       sameSite: 'lax',
       path: '/',
     });
 
+    // Fetch the user DIRECTLY with the fresh token. We can't use
+    // `getLoggedInUser()` here because `cookieStore.set()` isn't visible
+    // within the same server action tick — the new cookie only becomes
+    // readable on the NEXT request. Without this, `state.user` ends up
+    // undefined and the LoginModal useEffect never fires (no modal close,
+    // no toast, no setUser) — producing the "login does nothing" symptom.
     try {
-      const user = await getLoggedInUser();
+      const meResponse = await fetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/auth/me`, {
+        headers: {
+          Authorization: `Bearer ${data.token}`,
+        },
+      });
 
-      if (user) {
+      if (meResponse.ok) {
+        const user: UserModel = await meResponse.json();
+
         return { success: true, user };
       }
     } catch (userError) {
-      // Skip user fetch error
+      // Skip user fetch error — session is valid, just missing user data
     }
 
     return { success: true };
@@ -158,12 +175,8 @@ export async function logout(): Promise<{ success: boolean }> {
 
 export async function updatePassword(payload: UpdatePasswordParams): Promise<PayloadResponse<boolean>> {
   try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/auth/updatePassword`, {
+    const response = await authFetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/auth/updatePassword`, {
       ...POST_REQUEST_PARAMETERS,
-      headers: {
-        ...POST_REQUEST_PARAMETERS.headers,
-        ...Object.fromEntries((await authHeaders()).entries()),
-      },
       body: JSON.stringify(payload),
     });
 
@@ -295,10 +308,11 @@ export async function verifyEmail(state: any, formData: FormData): Promise<Login
     }
 
     const data: LoginResponse = await response.json();
+    const isProd = process.env.NODE_ENV === 'production';
 
     cookieStore.set(AuthKeys.ACCESS_TOKEN, data.token, {
       httpOnly: true,
-      secure: true,
+      secure: isProd,
       maxAge: 60 * 60 * 24 * 7,
       sameSite: 'lax',
       path: '/',
@@ -306,7 +320,7 @@ export async function verifyEmail(state: any, formData: FormData): Promise<Login
 
     cookieStore.set(AuthKeys.REFRESH_TOKEN, data.refreshToken, {
       httpOnly: true,
-      secure: true,
+      secure: isProd,
       maxAge: 60 * 60 * 24 * 30,
       sameSite: 'lax',
       path: '/',

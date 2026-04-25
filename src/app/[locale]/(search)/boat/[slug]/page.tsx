@@ -54,10 +54,11 @@ export async function generateMetadata({
   };
 
   const charterTypeLabel = getCharterTypeLabel(yacht.charterType[0]);
+  const locationSuffix = yacht.location?.name ? ` - ${yacht.location.name}` : '';
 
   return buildMetadata({
-    title: `${charterTypeLabel} ${yacht.model || ''} ${yacht.name || ''} ${tBoat('forRent')} - ${yacht.location.name}`,
-    description: `${charterTypeLabel} ${yacht.model || ''} ${yacht.name || ''} ${tBoat('forRent')} - ${yacht.location.name}. Best price guarantee. &#9989; Customer service. &#9989; No booking fees. &#9989;`,
+    title: `${charterTypeLabel} ${yacht.model || ''} ${yacht.name || ''} ${tBoat('forRent')}${locationSuffix}`,
+    description: `${charterTypeLabel} ${yacht.model || ''} ${yacht.name || ''} ${tBoat('forRent')}${locationSuffix}. Best price guarantee. &#9989; Customer service. &#9989; No booking fees. &#9989;`,
     path: `/boat/${yacht.slug}`,
     image: {
       src: yacht.yachtImages.find(el => el.mainImage)?.url,

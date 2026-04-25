@@ -14,6 +14,7 @@ import { DEFAULT_IMAGE } from '@/config/constants.config';
 import { YachtModel } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
 import copyToClipboard from '@/utils/static/copyToClipboard';
+import { toTitleCase } from '@/utils/static/toTitleCase';
 
 import styles from './BoatShareModal.module.scss';
 
@@ -59,23 +60,25 @@ const BoatShareModal = ({ open, onOpen, onClose, yacht }: BoatShareModalProps) =
         )}
         <Stack direction="column" spacing={0.5}>
           <Typography variant="h4" color={colors.black950}>
-            {yacht.model} | {yacht.name}
+            {yacht.model} | {toTitleCase(yacht.name)}
           </Typography>
-          <Stack direction="row" alignItems="center" spacing={1}>
-            <Box className={styles.countryWrapper}>
-              <Image
-                loading="lazy"
-                fill
-                sizes="auto"
-                src={`https://flagcdn.com/w80/${yacht.location.countryCode.toLowerCase()}.png`}
-                alt={`${yacht.location.countryCode} flag`}
-                className={styles.country}
-              />
-            </Box>
-            <Typography variant="body1" color={colors.black950}>
-              {yacht.location.name}
-            </Typography>
-          </Stack>
+          {yacht.location && (
+            <Stack direction="row" alignItems="center" spacing={1}>
+              <Box className={styles.countryWrapper}>
+                <Image
+                  loading="lazy"
+                  fill
+                  sizes="auto"
+                  src={`https://flagcdn.com/w80/${yacht.location.countryCode.toLowerCase()}.png`}
+                  alt={`${yacht.location.countryCode} flag`}
+                  className={styles.country}
+                />
+              </Box>
+              <Typography variant="body1" color={colors.black950}>
+                {yacht.location.name}
+              </Typography>
+            </Stack>
+          )}
         </Stack>
       </Stack>
       <Divider />

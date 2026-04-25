@@ -3,24 +3,69 @@
 @use '@/styles/mixins/breakpoints' as *;
 
 .container {
-  padding-block: rem-calc(24);
-  border-bottom: rem-calc(1) solid $black-200;
+  padding-block: rem-calc(20);
+  border-bottom: rem-calc(1) solid $black-100;
+
+  &:last-child {
+    border-bottom: none;
+  }
 
   .header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-
-    .editButton {
-      text-decoration: underline;
-      color: $black-950;
-    }
-  }
-
-  .action {
-    margin-top: rem-calc(32);
-    display: flex;
-    flex-direction: column;
     gap: rem-calc(16);
   }
+
+  .iconWrapper {
+    flex-shrink: 0;
+    width: rem-calc(38);
+    height: rem-calc(38);
+    border-radius: rem-calc(10);
+    background-color: #eef2ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $blue-500;
+  }
+
+  .textBlock {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .label {
+    font-size: rem-calc(14) !important;
+    font-weight: 600 !important;
+    color: $black-950;
+  }
+
+  .value {
+    font-size: rem-calc(14) !important;
+    color: $black-500;
+    margin-top: rem-calc(2) !important;
+    word-break: break-word;
+  }
+
+  .editButton {
+    text-decoration: none !important;
+    color: $blue-500 !important;
+    font-weight: 600 !important;
+    font-size: rem-calc(13) !important;
+    min-width: auto !important;
+    padding: rem-calc(4) rem-calc(10) !important;
+    border-radius: rem-calc(8) !important;
+
+    &:hover {
+      background-color: #eef2ff !important;
+    }
+  }
+}
+
+.action {
+  margin-top: rem-calc(16);
+  padding-left: rem-calc(54);
+  display: flex;
+  flex-direction: column;
+  gap: rem-calc(16);
 }

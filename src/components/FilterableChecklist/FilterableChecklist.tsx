@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Divider, List, ListItem, ListItemIcon, ListItemText, Stack } from '@mui/material';
+import { Box, Divider, List, ListItem, ListItemIcon, ListItemText, Stack } from '@mui/material';
 import cx from 'clsx';
 import { useTranslations } from 'next-intl';
 
@@ -104,11 +104,24 @@ const FilterableChecklist = ({
       >
         <ListItemIcon>{option.icon && option.icon}</ListItemIcon>
         <ListItemText primary={option.label} />
-        {isActive && (
-          <ListItemIcon>
-            <Check size={24} fill={colors.blue300} />
-          </ListItemIcon>
-        )}
+        {/* Always-visible checkbox on the right — empty square when
+            inactive, filled blue check when active. Matches competitor
+            pattern so users see their selection state without guessing. */}
+        <Box
+          sx={{
+            width: 22,
+            height: 22,
+            borderRadius: '4px',
+            border: `1.5px solid ${isActive ? colors.blue500 : colors.black300}`,
+            backgroundColor: isActive ? colors.blue500 : 'transparent',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            flexShrink: 0,
+          }}
+        >
+          {isActive && <Check size={16} fill={colors.white} />}
+        </Box>
       </ListItem>
     );
   };
@@ -116,7 +129,7 @@ const FilterableChecklist = ({
   const shouldGroup = groupBy || options.some(option => option.group);
 
   return (
-    <Stack direction="column" spacing={1} height="fit-content" overflow="hidden">
+    <Stack direction="column" spacing={1} height="fit-content" overflow="hidden" px={2}>
       {!hideSearch && (
         <SearchWithChips
           value={searchValue || ''}

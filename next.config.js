@@ -25,14 +25,29 @@ const nextConfig = {
     silenceDeprecations: ['legacy-js-api'],
   },
   images: {
+    // Local dev backend serves images with query strings (/public/image/123?width=800)
+    // which Next.js 16 image optimizer's remotePatterns rejects ("url parameter
+    // is not allowed") even with a matching host/port. Turning optimization off
+    // in dev renders <Image> as plain <img> — OK locally. In production the
+    // backend is behind api.boat4you.com with cleaner URLs so optimizer stays on.
+    unoptimized: process.env.NODE_ENV !== 'production',
     deviceSizes: [640, 750, 828, 1080, 1200, 1920],
     remotePatterns: [
+      // Backend dev serves images off http://localhost:8443. Next.js Image
+      // optimizer only matches the default port (80/443) unless we spell the
+      // port out explicitly — without this every /_next/image request for a
+      // yacht photo returns 400 and the search listings render blank.
       {
-        protocol: 'https',
+        protocol: 'http',
         hostname: 'localhost',
+        port: '8443',
       },
       {
         protocol: 'http',
+        hostname: 'localhost',
+      },
+      {
+        protocol: 'https',
         hostname: 'localhost',
       },
       {

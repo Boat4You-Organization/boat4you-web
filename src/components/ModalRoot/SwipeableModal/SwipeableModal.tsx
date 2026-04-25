@@ -32,6 +32,13 @@ interface SwipeableModalProps extends DialogProps {
   removePadding?: boolean;
   hideTitle?: boolean;
   hideDivider?: boolean;
+  /**
+   * When true, the modal takes the full viewport height (100dvh) with no
+   * top corner radius or drag puller — same feel as a native full-screen
+   * page. Used for flows that need to show long lists (e.g. destination
+   * search: recent + popular + search results).
+   */
+  fullScreen?: boolean;
 }
 
 const SwipeableModal = ({
@@ -56,6 +63,7 @@ const SwipeableModal = ({
   hideDivider = false,
   removePadding,
   hideTitle,
+  fullScreen = false,
   children,
 }: SwipeableModalProps) => {
   const t = useTranslations('common');
@@ -74,9 +82,10 @@ const SwipeableModal = ({
           zIndex: 1300,
         },
         '.MuiDrawer-paper ': {
-          borderTopLeftRadius: '12px',
-          borderTopRightRadius: '12px',
-          maxHeight: '80dvh',
+          borderTopLeftRadius: fullScreen ? 0 : '12px',
+          borderTopRightRadius: fullScreen ? 0 : '12px',
+          maxHeight: fullScreen ? '100dvh' : '80dvh',
+          height: fullScreen ? '100dvh' : 'auto',
           overflowY: 'hidden',
           position: 'fixed',
           bottom: 0,
@@ -87,7 +96,7 @@ const SwipeableModal = ({
         },
       }}
     >
-      <Box className={styles.puller} />
+      {!fullScreen && <Box className={styles.puller} />}
       {!hideTitle && (
         <Stack
           component="div"
@@ -132,7 +141,10 @@ const SwipeableModal = ({
           minHeight: 0,
 
           '@media (max-width: 768px)': {
-            padding: removePadding ? '0px' : '16px',
+            // Full-screen picker mode: edge-to-edge so list items span the
+            // whole viewport width. Vertical padding kept for breathing
+            // room between title and first item.
+            padding: fullScreen ? '8px 0' : removePadding ? '0px' : '16px',
           },
         }}
       >

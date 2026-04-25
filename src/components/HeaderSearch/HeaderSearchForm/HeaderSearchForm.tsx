@@ -33,6 +33,7 @@ const HeaderSearchForm = ({ isExpanded, translations }: HeaderSearchFormProps) =
   const { watch } = useFormContext<SearchBarFormValues>();
   const locations = watch('did');
   const startDate = watch('startDate');
+  const endDate = watch('endDate');
 
   const renderLocationInput = useLocationAutocomplete({
     isExpanded,
@@ -46,7 +47,11 @@ const HeaderSearchForm = ({ isExpanded, translations }: HeaderSearchFormProps) =
     (date: Dayjs): DateDisableReason => {
       if (date.isBefore(dayjs(), 'day')) return 'past';
 
-      if (startDate) {
+      // Constraints only apply while picking the end date (start set, end not yet).
+      // Once both dates are set the next click starts a new range, so no dates
+      // should be blocked — otherwise users can't re-pick a new start outside
+      // the old 28-day window.
+      if (startDate && !endDate) {
         if (date.isAfter(startDate) && date.isBefore(startDate.add(2, 'day'))) {
           return 'min_constraint';
         }
@@ -58,7 +63,7 @@ const HeaderSearchForm = ({ isExpanded, translations }: HeaderSearchFormProps) =
 
       return 'none';
     },
-    [startDate]
+    [startDate, endDate]
   );
 
   return (

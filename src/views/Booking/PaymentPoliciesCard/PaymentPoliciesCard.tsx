@@ -1,11 +1,9 @@
-import { Box, Divider, Stack, Typography } from '@mui/material';
+import { Box, Stack, Typography } from '@mui/material';
 import cx from 'clsx';
-import dayjs from 'dayjs';
 import { useLocale, useTranslations } from 'next-intl';
 
 import { SelectedExtras } from '@/models/yacht-offer.model';
 import { YachtServiceExtrasKey } from '@/models/yacht-service.model';
-import DateTime from '@/utils/static/DateTime';
 import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
 
 import styles from './PaymentPoliciesCard.module.scss';
@@ -13,15 +11,25 @@ import styles from './PaymentPoliciesCard.module.scss';
 interface PaymentPoliciesCardProps {
   selectedExtrasInPrice: SelectedExtras[];
   selectedExtrasAtBase: SelectedExtras[];
+  /** Kept for signature compatibility with callers (e.g. OverviewStep), no
+   *  longer used now that cancellation/policy copy lives elsewhere. */
   dateFrom: string;
+  /** Refundable security deposit (from yacht / reservation). Always paid
+   *  at the marina on handover — appended to the "Paid at marina" group
+   *  when > 0 so the booking recap mirrors the yacht page extras tab. */
+  securityDeposit?: number | null;
   compact?: boolean;
   isLastStep?: boolean;
 }
 
+// Keep the arg destructured so existing call sites don't need to change; the
+// `dateFrom` prop is intentionally unused here now.
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const PaymentPoliciesCard = ({
   selectedExtrasInPrice,
   selectedExtrasAtBase,
-  dateFrom,
+  dateFrom: _dateFrom,
+  securityDeposit,
   compact = false,
   isLastStep,
 }: PaymentPoliciesCardProps) => {
@@ -29,75 +37,92 @@ const PaymentPoliciesCard = ({
   const tServices = useTranslations('yacht.servicesList');
   const locale = useLocale();
 
-  const today = dayjs();
-  const reservationStartDate = dayjs(dateFrom);
-  const daysUntilReservation = DateTime.daysBetween(today, reservationStartDate);
-  const showFreeCancellation = daysUntilReservation >= 45;
-  const fiveDaysFromToday = today.add(5, 'day');
+  const hasPaidNow = (selectedExtrasInPrice?.length ?? 0) > 0;
+  const showSecurityDeposit = (securityDeposit ?? 0) > 0;
 
   return (
     <Box className={cx(styles.container, { [styles.compact]: compact, [styles.lastStep]: isLastStep })}>
-      <Stack gap={2}>
-        <Typography variant="h3" component="h2" fontWeight={700}>
-          {t('paymentPolicies')}
-        </Typography>
-        <Typography variant="body1">{t('100PercentBookingPrepayment')}</Typography>
-        {showFreeCancellation && (
-          <Typography variant="body1" fontWeight={700} color="success">
-            {t('cancelAndRescheduleForFreeBefore', { date: DateTime.formatLongWithoutDay(fiveDaysFromToday, locale) })}
-          </Typography>
-        )}
-        <Typography variant="body1">{t('bestPriceOnTheMarket')}</Typography>
-      </Stack>
-      <Divider
-        sx={{
-          '&.MuiDivider-root': {
-            marginBlock: 3,
-          },
-        }}
-      />
+      {/* Generic payment-policies copy removed:
+          - "100% booking prepayment" was WRONG after the phased payment rules
+            (now users pay in 2 or 3 instalments).
+          - "Cancel and reschedule for free" duplicated the CancellationCard.
+          - "Best price on the market" duplicated the BookingHero banner.
+          We keep only the Extras breakdown (Paid now / Paid in advance /
+          Paid at marina). Sections collapse when empty. */}
       <Stack gap={3}>
         <Typography variant="h3" component="p" fontWeight={700}>
           {t('extras')}
         </Typography>
-        <Stack gap={1}>
-          <Typography variant="body1" fontWeight={700}>
-            {t('paidNow')}
-          </Typography>
-          {selectedExtrasInPrice?.map(({ id, name, priceEur, priceInfo, labelCode }) => {
+        {hasPaidNow && (
+          <Stack gap={1}>
+            <Typography variant="body1" fontWeight={700}>
+              {t('paidNow')}
+            </Typography>
+            {selectedExtrasInPrice.map(({ id, name, priceEur, priceInfo, labelCode }) => {
+              const formattedPrice = formatPriceWithCurrency({
+                clientPriceEur: priceEur,
+                clientPriceInfo: priceInfo,
+                locale,
+              });
+
+              return (
+                <Stack key={id} direction="row" justifyContent="space-between" alignItems="center">
+                  {labelCode ? tServices(labelCode as YachtServiceExtrasKey) : name}
+                  <Typography variant="body1">{formattedPrice}</Typography>
+                </Stack>
+              );
+            })}
+          </Stack>
+        )}
+        {(() => {
+          // V1_57 split — same logic as PaymentTab.tsx. Items the partner
+          // bank-collects in advance (Skipper/Hostess/APA) vs cash at the
+          // marina (fuel/transit log/mooring/tourist tax). Security deposit
+          // joins "Paid at marina" — see prop description.
+          const inAdvance = (selectedExtrasAtBase || []).filter(e => e.paymentType === 'ADVANCE_TO_OPERATOR');
+          const onSite = (selectedExtrasAtBase || []).filter(e => e.paymentType !== 'ADVANCE_TO_OPERATOR');
+          const renderRow = ({ id, name, priceEur, priceInfo, labelCode }: typeof inAdvance[number]) => {
             const formattedPrice = formatPriceWithCurrency({
               clientPriceEur: priceEur,
               clientPriceInfo: priceInfo,
               locale,
             });
-
             return (
               <Stack key={id} direction="row" justifyContent="space-between" alignItems="center">
                 {labelCode ? tServices(labelCode as YachtServiceExtrasKey) : name}
                 <Typography variant="body1">{formattedPrice}</Typography>
               </Stack>
             );
-          })}
-        </Stack>
-        <Stack gap={1}>
-          <Typography variant="body1" fontWeight={700}>
-            {t('paidAtMarina')}
-          </Typography>
-          {selectedExtrasAtBase?.map(({ id, name, priceEur, priceInfo, labelCode }) => {
-            const formattedPrice = formatPriceWithCurrency({
-              clientPriceEur: priceEur,
-              clientPriceInfo: priceInfo,
-              locale,
-            });
-
-            return (
-              <Stack key={id} direction="row" justifyContent="space-between" alignItems="center">
-                {labelCode ? tServices(labelCode as YachtServiceExtrasKey) : name}
-                <Typography variant="body1">{formattedPrice}</Typography>
-              </Stack>
-            );
-          })}
-        </Stack>
+          };
+          return (
+            <>
+              {inAdvance.length > 0 && (
+                <Stack gap={1}>
+                  <Typography variant="body1" fontWeight={700}>
+                    {t('paidInAdvance')}
+                  </Typography>
+                  {inAdvance.map(renderRow)}
+                </Stack>
+              )}
+              {(onSite.length > 0 || showSecurityDeposit) && (
+                <Stack gap={1}>
+                  <Typography variant="body1" fontWeight={700}>
+                    {t('paidAtMarina')}
+                  </Typography>
+                  {onSite.map(renderRow)}
+                  {showSecurityDeposit && (
+                    <Stack direction="row" justifyContent="space-between" alignItems="center">
+                      {tServices('refundable-security-deposit')}
+                      <Typography variant="body1">
+                        {formatPriceWithCurrency({ clientPriceEur: securityDeposit as number, locale })}
+                      </Typography>
+                    </Stack>
+                  )}
+                </Stack>
+              )}
+            </>
+          );
+        })()}
       </Stack>
     </Box>
   );

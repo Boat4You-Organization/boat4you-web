@@ -1,5 +1,6 @@
 const de = {
   bookingReference: 'Buchungsreferenz',
+  confirmationNumber: 'Bestätigungsnummer',
   reservationNumber: 'Reservierung Nr.',
   date: 'Datum',
   customer: 'Kunde',

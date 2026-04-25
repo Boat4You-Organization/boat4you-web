@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { useFormContext } from 'react-hook-form';
 
 import { Box, Button, Stack, Typography } from '@mui/material';
@@ -27,6 +27,12 @@ const GeneralSearchBarMobile = () => {
   const { watch, setValue } = useFormContext<SearchBarFormValues>();
   const [isModalOpen, toggleModal] = useToggleState();
   const [modalVariant, setModalVariant] = useState<'destination' | 'boatType' | null>(null);
+  // Guided flow: destination confirm → calendar opens via `openSignal` bump →
+  // once user picks an end date, we auto-open the boat-type modal. Matches
+  // desktop's `handleLocationAdded` UX so mobile users don't have to find
+  // each step manually.
+  const [dateOpenSignal, setDateOpenSignal] = useState(0);
+  const autoAdvanceToBoatTypeRef = useRef(false);
 
   const t = useTranslations('home');
   const tGeneral = useTranslations();
@@ -35,6 +41,7 @@ const GeneralSearchBarMobile = () => {
   const destinationsName = watch('destinations');
   const boatTypes = watch('boatTypes') || [];
   const startDate = watch('startDate');
+  const endDate = watch('endDate');
 
   const handleDestinationOpen = () => {
     toggleModal();
@@ -50,6 +57,44 @@ const GeneralSearchBarMobile = () => {
     toggleModal();
     setModalVariant(null);
   };
+
+  // Last step of the guided flow — after the user picks a boat type,
+  // fire the search right away. Saves the extra tap on "Search boats"
+  // at the bottom of the form. Close modal first so the list of results
+  // isn't covered by the sheet.
+  const handleBoatTypeConfirm = () => {
+    handleModalClose();
+    requestAnimationFrame(() => {
+      const form = document.getElementById(GENERAL_SEARCH_FORM) as HTMLFormElement | null;
+      form?.requestSubmit();
+    });
+  };
+
+  // Confirm button inside destination modal: close modal + open calendar
+  // (via openSignal bump). Only advances if the user actually selected at
+  // least one destination — clicking without a pick just closes.
+  const handleDestinationConfirm = () => {
+    const hasDestination = (destinations || []).length > 0;
+    handleModalClose();
+    if (hasDestination) {
+      autoAdvanceToBoatTypeRef.current = true;
+      setDateOpenSignal(s => s + 1);
+    }
+  };
+
+  // When the user picks an end date during the guided flow, open the
+  // boat-type modal next. DatePickerDropdown closes its own modal on
+  // range-complete, so we let that finish before opening ours.
+  useEffect(() => {
+    if (!endDate || !autoAdvanceToBoatTypeRef.current) return;
+    autoAdvanceToBoatTypeRef.current = false;
+    const timer = setTimeout(() => {
+      setModalVariant('boatType');
+      toggleModal();
+    }, 250);
+    return () => clearTimeout(timer);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [endDate?.valueOf?.() ?? null]);
 
   const handleDestinationClear = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
@@ -99,7 +144,9 @@ const GeneralSearchBarMobile = () => {
     (date: Dayjs): DateDisableReason => {
       if (date.isBefore(dayjs(), 'day')) return 'past';
 
-      if (startDate) {
+      // Constraints only apply while picking the end date. Once both are set
+      // the next click restarts the range — all future dates must be clickable.
+      if (startDate && !endDate) {
         if (date.isAfter(startDate) && date.isBefore(startDate.add(2, 'day'))) {
           return 'min_constraint';
         }
@@ -111,13 +158,13 @@ const GeneralSearchBarMobile = () => {
 
       return 'none';
     },
-    [startDate]
+    [startDate, endDate]
   );
 
   const renderModalContent = () => {
     switch (modalVariant) {
       case 'destination':
-        return <DestinationContent onDeleteSingle={handleDeleteSingleDestination} />;
+        return <DestinationContent />;
       case 'boatType':
         return <BoatTypeContent onDeleteSingle={handleDeleteSingleBoatType} />;
       default:
@@ -154,6 +201,7 @@ const GeneralSearchBarMobile = () => {
               startDateFieldName="startDate"
               endDateFieldName="endDate"
               getDateDisableReason={getDateDisableReason}
+              openSignal={dateOpenSignal}
             />
           </Box>
           <Box flex={1} width={{ xs: 'auto', md: 278 }} minHeight="61px">
@@ -192,18 +240,31 @@ const GeneralSearchBarMobile = () => {
       </Stack>
       <ModalRoot
         title={
-          modalVariant === 'boatType'
-            ? t('generalSearchBar.chooseTransportation')
-            : t('generalSearchBar.chooseDestination')
+          modalVariant === 'boatType' ? t('generalSearchBar.selectYacht') : t('generalSearchBar.chooseDestination')
         }
         open={isModalOpen}
         onOpen={toggleModal}
         onClose={handleModalClose}
         hideCancelButton
+        // Destination uses full screen (long recent + popular + search
+        // results lists). Boat-type + calendar sit in a bottom sheet —
+        // compact content that shouldn't dominate the viewport.
+        fullScreenOnMobile={modalVariant === 'destination'}
         customButton={
-          <Button variant="contained" size="large" onClick={handleModalClose} fullWidth>
+          <Button
+            variant="contained"
+            size="large"
+            onClick={
+              modalVariant === 'destination'
+                ? handleDestinationConfirm
+                : modalVariant === 'boatType'
+                  ? handleBoatTypeConfirm
+                  : handleModalClose
+            }
+            fullWidth
+          >
             {modalVariant === 'boatType'
-              ? t('generalSearchBar.chooseTransportation')
+              ? t('generalSearchBar.selectYacht')
               : t('generalSearchBar.chooseDestination')}
           </Button>
         }

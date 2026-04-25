@@ -5,13 +5,15 @@ import { AuthKeys, POST_REQUEST_PARAMETERS } from './config/constants.config';
 import { routing } from './i18n/routing';
 
 const intlMiddleware = createIntlMiddleware(routing);
+// `/enter-your-details`, `/payment`, `/payment-pending`, `/payment-success` and
+// `/payment-cancelled` are all public — guests must be able to complete the
+// whole guest checkout flow (enter details → pay → confirmation) without an
+// authenticated session. Pages that need richer reservation data fetch it via
+// the authenticated API when possible, but gracefully fall back to the local
+// reservation payload for guests.
 const protectedRoutes = [
   '/my-profile',
   '/my-bookings',
-  '/enter-your-details',
-  '/payment-success',
-  '/payment-cancelled',
-  '/payment-pending',
   '/cancel-booking',
 ];
 

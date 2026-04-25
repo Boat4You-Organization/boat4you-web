@@ -28,6 +28,12 @@ interface ModalRootProps extends DialogProps {
   hideTitle?: boolean;
   hideCloseButton?: boolean;
   hideDivider?: boolean;
+  /**
+   * Mobile only. Render as full-viewport height modal (100dvh, no drag
+   * puller, no rounded top corners) instead of the default bottom-sheet
+   * with maxHeight 80dvh. Desktop ignores this prop.
+   */
+  fullScreenOnMobile?: boolean;
 }
 
 const ModalRoot = ({
@@ -43,6 +49,7 @@ const ModalRoot = ({
   hideDivider,
   confirmBtnText,
   cancelBtnText,
+  fullScreenOnMobile,
   children,
   ...props
 }: ModalRootProps) => {
@@ -63,6 +70,7 @@ const ModalRoot = ({
         hideDivider={hideDivider}
         confirmBtnText={confirmBtnText}
         cancelBtnText={cancelBtnText}
+        fullScreen={fullScreenOnMobile}
         {...props}
       >
         {children}

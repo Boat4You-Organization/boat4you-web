@@ -27,5 +27,12 @@
   "charterType": "Tipo de Charter",
   "searchCharterType": "Buscar Tipo de Charter",
   "typeOfMainsail": "Tipo de Vela Mayor",
-  "services": "Servicios"
+  "services": "Servicios",
+  "minLength": "Eslora min",
+  "maxLength": "Eslora max",
+  "beam": "Manga",
+  "fuelTank": "Depósito combustible",
+  "waterTank": "Depósito agua",
+  "length": "Eslora",
+  "newYacht": "Yate nuevo"
 }
