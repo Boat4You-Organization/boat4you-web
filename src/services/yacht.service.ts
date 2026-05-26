@@ -35,9 +35,13 @@ export async function fetchYachts(
 
     const paramsWithCurrency = {
       ...restParams,
-      // Default listing sort is lowest-price-first. A URL param always wins —
-      // including sortBy='' which means the user picked "Recommended" on the tab.
-      sortBy: restParams.sortBy ?? 'asc',
+      // Default sort is "Recommended" — backend treats empty/missing sortBy
+      // as the recommended-agency boost path. Earlier this defaulted to
+      // 'asc' (Lowest price) which silently bypassed the boost for any URL
+      // that didn't explicitly set sortBy. The tab UI already defaults to
+      // Recommended when sortBy is missing, so aligning the fetch default
+      // keeps tab + result list consistent.
+      sortBy: restParams.sortBy ?? '',
       ...(boatTypes && { vesselType: boatTypes }),
       ...(currency && { currency }),
     };
@@ -45,6 +49,13 @@ export async function fetchYachts(
     const queryParams = createYachtQueryParams(paramsWithCurrency);
 
     const response = await fetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/yachts${queryParams}`, {
+      // Yacht catalogue + offer state changes constantly (partner sync,
+      // dual-source dedup, manual price overrides). Cached SSR responses
+      // make the search page lag behind reality (e.g. a freshly-mapped
+      // Sardinia marina taking up to an hour to surface). Always go to
+      // the backend; the backend itself has its own short-window cache
+      // for the expensive joins.
+      cache: 'no-store',
       headers: {
         'Accept-Language': locale,
         'Content-Type': 'application/json',

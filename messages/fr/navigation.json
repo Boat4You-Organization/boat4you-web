@@ -8,6 +8,9 @@
     "profileSettings": "Paramètres du profil"
   },
   "footer": {
+    "network": {
+      "title": "Réseau"
+    },
     "company": {
       "title": "Entreprise",
       "destinations": "Destinations",

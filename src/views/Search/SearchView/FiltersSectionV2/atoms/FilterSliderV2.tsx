@@ -2,7 +2,7 @@
 
 import { Box } from '@mui/material';
 
-import { searchV2, searchV2Type } from '@/styles/themes/searchV2';
+import { searchV2 } from '@/styles/themes/searchV2';
 
 interface FilterSliderV2Props {
   /** Current selected value. */
@@ -139,11 +139,11 @@ const FilterSliderV2 = ({
         sx={{
           display: 'flex',
           justifyContent: 'space-between',
-          fontSize: 11,
           color: searchV2.inkSoft,
           mt: '7px',
-          ...searchV2Type.numericValue,
+          fontSize: 11,
           fontWeight: 400,
+          fontVariantNumeric: 'tabular-nums',
         }}
       >
         <span>{format ? format(min) : min}</span>

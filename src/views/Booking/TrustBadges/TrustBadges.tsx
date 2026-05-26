@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { LockOutlined, Sailing, SupportAgent, VerifiedUser } from '@mui/icons-material';
 import { Box, Stack, Typography } from '@mui/material';
 import { useTranslations } from 'next-intl';
 
+import AssuranceBadges from '@/components/AssuranceBadges';
 import colors from '@/styles/themes/colors';
 
 import styles from './TrustBadges.module.scss';
@@ -14,6 +14,9 @@ import styles from './TrustBadges.module.scss';
  * (boats, marinas, happy sailors) next to a payment-security line. Real numbers
  * build trust faster than slogans, and the compact row keeps the form above
  * it as the visual focus.
+ *
+ * The four-icon assurance strip below the stats lives in <AssuranceBadges />
+ * so the same row can also render in the site footer (variant="footer").
  */
 const TrustBadges = () => {
   const t = useTranslations('common');
@@ -23,13 +26,6 @@ const TrustBadges = () => {
     { value: '850+', label: t('statMarinas') },
     { value: '40,000+', label: t('statSailors') },
     { value: '4.8★', label: t('statRating') },
-  ];
-
-  const assurances = [
-    { Icon: LockOutlined, label: t('assuranceSSL') },
-    { Icon: SupportAgent, label: t('assurance247') },
-    { Icon: VerifiedUser, label: t('assuranceVerified') },
-    { Icon: Sailing, label: t('assuranceNoHidden') },
   ];
 
   return (
@@ -52,19 +48,9 @@ const TrustBadges = () => {
         ))}
       </Stack>
 
-      {/* Assurance row — separate white card with visible border and its own
-          padding so it reads as its own "box", breathing room from the stats
-          row above. */}
-      <Box className={styles.assuranceRow}>
-        {assurances.map(({ Icon, label }) => (
-          <Box key={label} className={styles.assuranceItem}>
-            <Icon sx={{ fontSize: 18, color: colors.green500 }} />
-            <Typography variant="body2" color={colors.black600} fontSize={12}>
-              {label}
-            </Typography>
-          </Box>
-        ))}
-      </Box>
+      {/* Assurance row — shared component (variant="card" = white card with
+          border, matching the original look). */}
+      <AssuranceBadges variant="card" />
     </Box>
   );
 };

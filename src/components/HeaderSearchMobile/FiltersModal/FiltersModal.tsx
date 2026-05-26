@@ -2,7 +2,7 @@ import { useTranslations } from 'next-intl';
 
 import SwipeableModal from '@/components/ModalRoot/SwipeableModal';
 import { CatalogueData, CatalogueFilters } from '@/models/catalogue.model';
-import FiltersSection from '@/views/Search/SearchView/FiltersSection';
+import FiltersSectionV2 from '@/views/Search/SearchView/FiltersSectionV2';
 
 interface FiltersModalProps {
   isOpen: boolean;
@@ -25,7 +25,7 @@ const FiltersModal = ({ isOpen, onOpen, onClose, catalogueData, catalogueFilters
       confirmBtnText={t('filters.close')}
       hideCancelButton
     >
-      <FiltersSection catalogueData={catalogueData} catalogueFilters={catalogueFilters} isMobile />
+      <FiltersSectionV2 catalogueData={catalogueData} catalogueFilters={catalogueFilters} isMobile />
     </SwipeableModal>
   );
 };

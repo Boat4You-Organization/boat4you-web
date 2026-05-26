@@ -102,6 +102,16 @@ const DetailsStep = ({ reservationData, isAdmin, user }: DetailsStepProps) => {
       if (state.payload.paymentPhases?.length) {
         saveDataToSessionStorage('paymentPhases', state.payload.paymentPhases);
       }
+      // Real option-expiry timestamp from the partner API (MMK
+      // `expirationDate` / NauSys `optionTill`). Drives the bank-transfer
+      // deadline banner so the customer sees the actual window — anywhere from
+      // ~24 h (last-minute charters) up to several days (charters months out).
+      // We deliberately do NOT fall back to a fixed 48 h: showing a longer
+      // window than the partner granted risks the customer paying after the
+      // option already lapsed and the yacht was rebooked.
+      if (state.payload.expiresAt) {
+        saveDataToSessionStorage('reservationExpiresAt', state.payload.expiresAt);
+      }
 
       // Admins skip the public payment screen — their action in the admin
       // panel represents an already-settled or manually-handled booking.

@@ -21,7 +21,7 @@ interface ReservationDetailsProps {
 const ReservationDetails = ({ reservationDetails, userCurrency }: ReservationDetailsProps) => {
   const { payNowModalOpen } = useReservationStore();
 
-  const { reservationId, paymentPhases, dateFrom } = reservationDetails;
+  const { reservationId, reservationNumber, paymentPhases, dateFrom } = reservationDetails;
 
   return (
     <>
@@ -30,6 +30,7 @@ const ReservationDetails = ({ reservationDetails, userCurrency }: ReservationDet
         onOpen={togglePayNowModal}
         onClose={togglePayNowModal}
         reservationId={reservationId}
+        reservationNumber={reservationNumber}
         paymentPhases={paymentPhases}
         dateFrom={dateFrom}
       />

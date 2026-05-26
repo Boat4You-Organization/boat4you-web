@@ -37,6 +37,8 @@ const LanguageModal = ({ isOpen, onOpen, onClose, user }: LanguageModalProps) =>
     { id: Language.ITALIAN, label: tHome('languageModal.languages.it') },
     { id: Language.SPANISH, label: tHome('languageModal.languages.es') },
     { id: Language.CROATIAN, label: tHome('languageModal.languages.hr') },
+    { id: Language.POLISH, label: tHome('languageModal.languages.pl') },
+    { id: Language.DUTCH, label: tHome('languageModal.languages.nl') },
   ];
 
   const handleLanguageSelect = (localeId: string) => {

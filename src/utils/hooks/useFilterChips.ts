@@ -5,6 +5,7 @@ import { useSearchParams } from 'next/navigation';
 
 import { CatalogueFilters } from '@/models/catalogue.model';
 import { CHARTER_TYPE_LABEL_MAP, MAIN_SAIL_TYPE_LABEL_MAP } from '@/models/yacht.model';
+import DateTime from '@/utils/static/DateTime';
 import { metersToFeet } from '@/utils/static/metersToFeet';
 
 import useQueryParams, { SearchParams } from './useQueryParams';
@@ -96,7 +97,7 @@ const useFilterChips = (catalogueFilters?: CatalogueFilters | null) => {
         minKey: 'minBuildYear',
         maxKey: 'maxBuildYear',
         minDefault: catalogueFilters?.minYear ?? 1926,
-        maxDefault: catalogueFilters?.maxYear ?? new Date().getFullYear(),
+        maxDefault: DateTime.getMaxBuildYear(catalogueFilters?.maxYear),
         translationKey: 'year',
         formatLabel: (min, max) => `${tFilters('year')}: ${min}-${max}`,
       },

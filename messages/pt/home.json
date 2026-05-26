@@ -1,8 +1,11 @@
 {
   "hero": {
-    "title": "Reserve um iate em",
+    "title": "Aluguer de iate em",
     "ctaTitle": "um clique.",
-    "description": "Alugue seu iate perfeito em apenas alguns cliques. Fácil, rápido e sem estresse — sua aventura de navegação dos sonhos começa aqui."
+    "description": "Alugue seu iate perfeito em apenas alguns cliques. Fácil, rápido e sem estresse — sua aventura de navegação dos sonhos começa aqui.",
+    "support": "Atendimento ao cliente excelente",
+    "yachtsCount": "{count} iates",
+    "marinasCount": "{count} marinas"
   },
   "generalSearchBar": {
     "whereAreYouGoing": "Para onde você vai?",
@@ -16,9 +19,9 @@
     "chooseDestination": "Escolher Destino",
     "chooseTransportation": "Escolher Transporte",
     "searchBoats": "Buscar barcos",
-    "aroundCurrentLocation": "Around current location",
-    "locating": "Locating…",
-    "locationError": "Couldn't get your location",
+    "aroundCurrentLocation": "Perto de mim",
+    "locating": "A localizar…",
+    "locationError": "Não foi possível obter a sua localização",
     "selectYacht": "Selecionar iate"
   },
   "destinationsSection": {
@@ -38,7 +41,26 @@
       "spain": "Espanha",
       "türkiye": "Turquia",
       "virginIslandsBritish": "Ilhas Virgens (Britânicas)",
-      "grenada": "Granada"
+      "grenada": "Granada",
+      "splitRegion": "Região de Split",
+      "ionianRegion": "Região Jónica"
+    },
+    "destinationsLocative": {
+      "bahamas": "Bahamas",
+      "caribbean": "Caribe",
+      "croatia": "Croácia",
+      "france": "França",
+      "greece": "Grécia",
+      "italy": "Itália",
+      "martinique": "Martinica",
+      "montenegro": "Montenegro",
+      "seychelles": "Seychelles",
+      "spain": "Espanha",
+      "türkiye": "Turquia",
+      "virginIslandsBritish": "Ilhas Virgens (Britânicas)",
+      "grenada": "Granada",
+      "splitRegion": "Região de Split",
+      "ionianRegion": "Região Jónica"
     }
   },
   "whyChooseUsSection": {
@@ -86,6 +108,7 @@
   "riskFreeBooking": {
     "riskFreeBooking": "Reserva sem risco",
     "save15Now": "Economize 15% agora",
+    "saveUpTo": "Poupe até 47%",
     "cancellingDescription": "Cancelar conosco é totalmente sem risco e flexível. Oferecemos políticas generosas de reembolso para proteger seu investimento."
   },
   "blogSection": {
@@ -117,7 +140,47 @@
       "pt": "Português",
       "it": "Italiano",
       "es": "Espanhol",
-      "hr": "Croata"
+      "hr": "Croata",
+      "pl": "Polaco",
+      "nl": "Holandês"
     }
+  },
+  "manufacturersSection": {
+    "title": "Fabricantes de iates mais populares",
+    "subtitle": "Navegue pelo catálogo por marca",
+    "preTitle": "Fabricantes de iates ",
+    "emphasizedTitle": "mais populares"
+  },
+  "faqSection": {
+    "title": "Perguntas frequentes",
+    "subtitle": "Tudo o que precisa de saber antes de reservar",
+    "questions": [
+      {
+        "q": "Como reservo um aluguer de iate na Boat4You?",
+        "a": "Escolha o destino e as datas, navegue pelos iates disponíveis e clique em Reservar no barco que pretende. Confirmamos a disponibilidade junto do parceiro, enviamos uma proposta de reserva e, assim que paga o sinal, o seu charter fica garantido. Todo o processo demora apenas alguns minutos."
+      },
+      {
+        "q": "Preciso de carta de marinheiro para alugar um iate?",
+        "a": "Para o aluguer sem skipper (bareboat) é necessária uma carta náutica reconhecida no país de aluguer – carta de marinheiro portuguesa, RYA Day Skipper, ICC ou equivalente. Se não tiver carta, pode mesmo assim reservar qualquer iate e adicionar um skipper no checkout."
+      },
+      {
+        "q": "O que está incluído no preço do aluguer bareboat?",
+        "a": "A tarifa base cobre o iate, o equipamento standard, o apoio da agência de aluguer e o seguro contra danos significativos. A limpeza final, o combustível, as taxas de marina fora da base, o transit log e a taxa turística são geralmente pagos à parte – em cada ficha de iate encontra os extras obrigatórios e opcionais listados de forma transparente."
+      },
+      {
+        "q": "Posso alugar um iate sem skipper?",
+        "a": "Sim. O aluguer bareboat está disponível na maioria dos iates do nosso catálogo, desde que pelo menos uma pessoa a bordo possua uma carta náutica válida e um certificado de operador de rádio VHF. Se ninguém no grupo tiver carta, pode alugar o mesmo iate com um skipper profissional mediante um suplemento diário."
+      },
+      {
+        "q": "Qual é a melhor altura para alugar um iate no Mediterranean?",
+        "a": "Maio, junho e setembro são a altura ideal – mar quente, ventos suaves, menos confusão e preços bastante mais baixos do que no auge da época em julho e agosto. Abril e outubro também funcionam para velejadores experientes que não se importam com um mar mais fresco e oferecem as tarifas semanais mais baixas do ano."
+      },
+      {
+        "q": "Posso cancelar a minha reserva?",
+        "a": "As condições de cancelamento variam consoante o iate – os termos exatos são apresentados em cada página de oferta antes do pagamento. No checkout oferecemos também um seguro de cancelamento opcional que reembolsa o custo do charter caso tenha de cancelar por um motivo coberto pela apólice. A caução reembolsável é sempre devolvida, salvo se o iate apresentar danos."
+      }
+    ],
+    "preTitle": "Perguntas ",
+    "emphasizedTitle": "frequentes"
   }
 }

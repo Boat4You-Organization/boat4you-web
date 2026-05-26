@@ -1,8 +1,11 @@
 {
   "hero": {
-    "title": "Reserva un yate en",
+    "title": "Alquiler de yates en",
     "ctaTitle": "un solo clic.",
-    "description": "Alquila tu yacht perfecto en solo unos clicks. Fácil, rápido y sin estrés — tu aventura de navegación soñada comienza aquí."
+    "description": "Alquila tu yacht perfecto en solo unos clicks. Fácil, rápido y sin estrés — tu aventura de navegación soñada comienza aquí.",
+    "support": "Excelente atención al cliente",
+    "yachtsCount": "{count} yates",
+    "marinasCount": "{count} puertos"
   },
   "generalSearchBar": {
     "whereAreYouGoing": "¿A dónde vas?",
@@ -16,15 +19,15 @@
     "chooseDestination": "Elegir Destino",
     "chooseTransportation": "Elegir Transporte",
     "searchBoats": "Buscar barcos",
-    "aroundCurrentLocation": "Around current location",
-    "locating": "Locating…",
-    "locationError": "Couldn't get your location",
+    "aroundCurrentLocation": "Cerca de mí",
+    "locating": "Localizando…",
+    "locationError": "No se pudo obtener tu ubicación",
     "selectYacht": "Seleccionar yate"
   },
   "destinationsSection": {
     "theWorldIs": "Mejores destinos para",
     "yours": "alquiler de yates",
-    "yachts": "yachts",
+    "yachts": "yates",
     "destinations": {
       "bahamas": "Bahamas",
       "caribbean": "Caribe",
@@ -38,7 +41,26 @@
       "spain": "España",
       "türkiye": "Turquía",
       "virginIslandsBritish": "Islas Vírgenes (Británicas)",
-      "grenada": "Granada"
+      "grenada": "Granada",
+      "splitRegion": "Región de Split",
+      "ionianRegion": "Región Jónica"
+    },
+    "destinationsLocative": {
+      "bahamas": "Bahamas",
+      "caribbean": "Caribe",
+      "croatia": "Croacia",
+      "france": "Francia",
+      "greece": "Grecia",
+      "italy": "Italia",
+      "martinique": "Martinica",
+      "montenegro": "Montenegro",
+      "seychelles": "Seychelles",
+      "spain": "España",
+      "türkiye": "Turquía",
+      "virginIslandsBritish": "Islas Vírgenes (Británicas)",
+      "grenada": "Granada",
+      "splitRegion": "Región de Split",
+      "ionianRegion": "Región Jónica"
     }
   },
   "whyChooseUsSection": {
@@ -86,6 +108,7 @@
   "riskFreeBooking": {
     "riskFreeBooking": "Reserva sin riesgo",
     "save15Now": "Ahorra 15% ahora",
+    "saveUpTo": "Ahorra hasta el 47%",
     "cancellingDescription": "Cancelar con nosotros es completamente sin riesgo y flexible. Ofrecemos políticas de reembolso generosas para proteger tu inversión."
   },
   "blogSection": {
@@ -117,7 +140,47 @@
       "pt": "Portugués",
       "it": "Italiano",
       "es": "Español",
-      "hr": "Croata"
+      "hr": "Croata",
+      "pl": "Polaco",
+      "nl": "Holandés"
     }
+  },
+  "manufacturersSection": {
+    "title": "Fabricantes de yates más populares",
+    "subtitle": "Explora el catálogo por marca",
+    "preTitle": "Fabricantes de yates ",
+    "emphasizedTitle": "más populares"
+  },
+  "faqSection": {
+    "title": "Preguntas frecuentes",
+    "subtitle": "Todo lo que necesitas saber antes de reservar",
+    "questions": [
+      {
+        "q": "¿Cómo reservo un alquiler de yate en Boat4You?",
+        "a": "Elige tu destino y fechas, explora los yates disponibles y haz clic en Reservar en el barco que te guste. Confirmamos la disponibilidad con el partner, te enviamos una propuesta de reserva y, en cuanto pagas la señal, tu charter queda confirmado. Todo el proceso lleva solo unos minutos."
+      },
+      {
+        "q": "¿Necesito titulación náutica para alquilar un yate?",
+        "a": "Para un charter sin patrón (bareboat) necesitas una titulación náutica reconocida en el país de alquiler, como el PER español, el RYA Day Skipper, el ICC o equivalente. Si no tienes titulación, puedes reservar igualmente cualquier yate y añadir un patrón en el checkout."
+      },
+      {
+        "q": "¿Qué incluye el precio del alquiler bareboat?",
+        "a": "La tarifa base cubre el yate, el equipamiento estándar, la asistencia de la agencia de alquiler y el seguro contra daños mayores. La limpieza final, el combustible, las tasas de amarre fuera de la marina base, el transit log y la tasa turística suelen pagarse aparte: en cada ficha de yate verás los extras obligatorios y opcionales detallados con total transparencia."
+      },
+      {
+        "q": "¿Puedo alquilar un yate sin patrón?",
+        "a": "Sí. El charter bareboat está disponible en la mayoría de los yates de nuestro catálogo, siempre que al menos una persona a bordo cuente con una titulación náutica vigente y el certificado de operador de radio VHF. Si nadie del grupo dispone de titulación, puedes alquilar el mismo yate con un patrón profesional pagando un suplemento diario."
+      },
+      {
+        "q": "¿Cuál es la mejor época para alquilar un yate en el Mediterranean?",
+        "a": "Mayo, junio y septiembre son los meses ideales: mar cálido, vientos suaves, menos masificación y precios sensiblemente más bajos que en plena temporada de julio y agosto. Abril y octubre también funcionan para navegantes con experiencia a quienes no les importa un mar más fresco, y ofrecen las tarifas semanales más bajas del año."
+      },
+      {
+        "q": "¿Puedo cancelar mi reserva?",
+        "a": "Las condiciones de cancelación varían según el yate y se muestran en cada ficha de oferta antes del pago. También ofrecemos un seguro de cancelación opcional en el checkout que te reembolsa el coste del charter si tienes que anular por una causa cubierta. La fianza reembolsable se devuelve siempre que el yate no presente daños."
+      }
+    ],
+    "preTitle": "Preguntas ",
+    "emphasizedTitle": "frecuentes"
   }
 }

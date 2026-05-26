@@ -2,11 +2,6 @@
   "name": "boat4you",
   "version": "0.0.1",
   "private": true,
-  "author": {
-    "name": "Workspace",
-    "email": "hello@workspace.hr",
-    "url": "https://workspace.hr"
-  },
   "scripts": {
     "prepare": "husky",
     "dev": "next dev",

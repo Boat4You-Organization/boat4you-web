@@ -12,7 +12,7 @@ import { LocaleType } from '@/config/locales.config';
 import { meta } from '@/config/meta';
 import { routing } from '@/i18n/routing';
 import '@/styles/index.scss';
-import { buildAlternateLanguages, getLocalizedJsonLd } from '@/utils/static/buildMetadata';
+import { buildAlternateLanguages, getLocalizedJsonLd, localizedUrl } from '@/utils/static/buildMetadata';
 
 import Providers from './providers';
 
@@ -20,6 +20,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: L
   const { locale } = await params;
 
   const t = await getTranslations({ locale, namespace: 'metadata' });
+  // Locale-aware root URL — non-EN locales get `/hr`, `/de`, … so canonical
+  // and openGraph point at the actually-rendered page, not the EN root.
+  const homeUrl = localizedUrl(locale as LocaleType, '/');
 
   return {
     metadataBase: new URL(meta.url),
@@ -29,7 +32,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: L
     },
     description: t(meta.description),
     alternates: {
-      canonical: meta.url,
+      canonical: homeUrl,
       languages: buildAlternateLanguages('/'),
     },
     authors: [{ name: meta.name, url: meta.url }],
@@ -37,7 +40,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: L
     robots: { index: true },
     openGraph: {
       type: 'website',
-      url: meta.url,
+      url: homeUrl,
       title: { default: t(meta.title), template: t(meta.titleTemplate) },
       description: t(meta.description),
       images: [{ url: `${meta.url}/meta/og-image.png`, width: 1200, height: 630, alt: meta.name }],

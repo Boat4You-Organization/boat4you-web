@@ -1,9 +1,9 @@
 {
   "metadata": {
     "base": {
-      "title": "Boat4You | Alquiler de Barcos Fácil y Seguro Mundial",
+      "title": "Alquiler de Yates y Barcos en el Mundo | Boat4You",
       "titleTemplate": "%s | Boat4You",
-      "description": "Explora y reserva barcos en más de 100 países. Yachts de vela, catamaranes, lanchas – con o sin patrón. Mejores precios. Reserva segura. Soporte 24/7.",
+      "description": "Alquila yates y barcos en más de 100 países. Veleros, catamaranes, lanchas. Mejores precios, soporte 24/7, reserva segura.",
       "path": ""
     },
     "search": {
@@ -12,7 +12,7 @@
       "path": "/search"
     },
     "blog": {
-      "title": "Guías Charter de Yachts | Planificación, Itinerarios, Noticias | Boat4You",
+      "title": "Guías Charter de Yachts | Planificación, Itinerarios, Noticias",
       "description": "Las guías expertas de charter de yachts de Boat4You proporcionan inspiración y conocimiento para unas vacaciones en yacht, cómo elegir el barco correcto y dónde zarpar.",
       "path": "/blog"
     },
@@ -37,7 +37,7 @@
       "path": "/faq"
     },
     "termsAndConditions": {
-      "title": "Términos y Condiciones Boat4You",
+      "title": "Términos y Condiciones",
       "description": "Revisa los términos y condiciones para usar Boat4You, incluyendo responsabilidades del usuario, pagos y políticas de cuenta.",
       "path": "/terms-and-conditions"
     },

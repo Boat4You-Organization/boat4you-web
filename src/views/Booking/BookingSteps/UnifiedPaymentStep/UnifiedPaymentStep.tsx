@@ -51,6 +51,12 @@ const UnifiedPaymentStep = ({ reservationData }: UnifiedPaymentStepProps) => {
   const reservationId = getDataFromSessionStorage<number>('reservationId');
   const reservationNumber = getDataFromSessionStorage<string>('reservationNumber');
   const contact = getDataFromSessionStorage<BookingContact>('bookingContact');
+  // Real partner option-expiry (MMK `expirationDate` / NauSys `optionTill`).
+  // Persisted by DetailsStep when the option was created. Drives the
+  // bank-transfer deadline banner — varies wildly: ~1 day for last-minute
+  // bookings, several days for long-lead. Showing the wrong window risks
+  // the customer paying after the partner already released the yacht.
+  const reservationExpiresAt = getDataFromSessionStorage<string>('reservationExpiresAt');
   // Customer-facing booking number for bank transfer reference / notices.
   // Falls back to the internal id for historical reservations that predate the
   // booking-number feature.
@@ -361,6 +367,36 @@ const UnifiedPaymentStep = ({ reservationData }: UnifiedPaymentStepProps) => {
           <Collapse in={selectedPaymentMethod === PaymentMethod.BANK_TRANSFER} unmountOnExit>
             <Divider />
             <Box sx={{ backgroundColor: colors.black100, px: 2.5, py: 1.5 }}>
+              {/* Option-expiry banner — sits ABOVE bank details so the deadline
+                  is the first thing the customer sees. Real partner timestamp
+                  only; if the partner returned null we surface a "we'll confirm
+                  by email" warning rather than inventing a number, since under-
+                  estimating the deadline is the dangerous direction (yacht
+                  already rebooked when the wire arrives). */}
+              {reservationExpiresAt ? (
+                (() => {
+                  const expiry = dayjs(reservationExpiresAt);
+                  const now = dayjs();
+                  const hoursLeft = expiry.diff(now, 'hour');
+                  const isUrgent = hoursLeft <= 24;
+                  return (
+                    <Alert
+                      severity={isUrgent ? 'error' : 'warning'}
+                      icon={false}
+                      sx={{ mb: 2, fontWeight: 600 }}
+                    >
+                      {t('optionExpiresOnNotice', {
+                        date: expiry.locale(locale).format('D MMMM YYYY'),
+                        time: expiry.format('HH:mm'),
+                      })}
+                    </Alert>
+                  );
+                })()
+              ) : (
+                <Alert severity="warning" icon={false} sx={{ mb: 2, fontWeight: 600 }}>
+                  {t('optionExpiryUnknownNotice')}
+                </Alert>
+              )}
               <Typography variant="body1" fontWeight={700} mb={1}>
                 {t('bankTransferInfo')}
               </Typography>

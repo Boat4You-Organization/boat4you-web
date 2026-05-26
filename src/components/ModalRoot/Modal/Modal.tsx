@@ -83,7 +83,7 @@ const Modal = ({
       {!hideTitle && (
         <DialogTitle component="div" display="flex" justifyContent="space-between" alignItems="center">
           {arrowBack && (
-            <IconButton size="large" onClick={onBack} sx={{ color: colors.black400 }}>
+            <IconButton aria-label="Back" size="large" onClick={onBack} sx={{ color: colors.black400 }}>
               <KeyboardBackspaceIcon />
             </IconButton>
           )}
@@ -100,7 +100,7 @@ const Modal = ({
           <Stack direction="row" alignItems="center" spacing={3}>
             {titleActions && <Box flex="none">{titleActions}</Box>}
             {!hideCloseButton && (
-              <IconButton size="large" onClick={onClose} sx={{ color: colors.black400 }}>
+              <IconButton aria-label="Close" size="large" onClick={onClose} sx={{ color: colors.black400 }}>
                 <CloseRounded />
               </IconButton>
             )}

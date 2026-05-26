@@ -95,7 +95,7 @@ const useQueryParams = () => {
       amenities: [],
       services: [],
       page: PAGE_NUMBER,
-      sortBy: 'asc',
+      sortBy: '',
       sortDirection: 'asc' as SortDirection,
       yid: [],
       currency: Currency.EUR,
@@ -163,7 +163,11 @@ const useQueryParams = () => {
       amenities: searchParams.get('amenities')?.split(',').filter(Boolean).map(Number) || defaultParams.amenities,
       services: searchParams.get('services')?.split(',').filter(Boolean).map(Number) || defaultParams.services,
       page: Number(searchParams.get('page')) || defaultParams.page,
-      sortBy: searchParams.get('sortBy') || defaultParams.sortBy,
+      // Empty string `sortBy=` in the URL is an intentional value (Recommended),
+      // not "missing". Use `??` to preserve it instead of falling back to the
+      // default — `||` would re-map '' to the default and cause a feedback loop
+      // with BoatsSection's "no dates → bounce sortBy" effect.
+      sortBy: searchParams.get('sortBy') ?? defaultParams.sortBy,
       sortDirection: (searchParams.get('sortDirection') as SortDirection) || defaultParams.sortDirection,
       yid: searchParams.get('yid')?.split(',').filter(Boolean).map(Number) || defaultParams.yid,
     };

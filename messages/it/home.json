@@ -1,8 +1,11 @@
 {
   "hero": {
-    "title": "Prenota uno yacht in",
+    "title": "Noleggio yacht in",
     "ctaTitle": "un clic.",
-    "description": "Noleggia il tuo yacht perfetto con pochi click. Facile, veloce e senza stress — la tua avventura di navigazione da sogno inizia qui."
+    "description": "Noleggia il tuo yacht perfetto con pochi click. Facile, veloce e senza stress — la tua avventura di navigazione da sogno inizia qui.",
+    "support": "Eccellente assistenza clienti",
+    "yachtsCount": "{count} yacht",
+    "marinasCount": "{count} porti"
   },
   "generalSearchBar": {
     "whereAreYouGoing": "Dove stai andando?",
@@ -16,9 +19,9 @@
     "chooseDestination": "Scegli Destinazione",
     "chooseTransportation": "Scegli Trasporto",
     "searchBoats": "Cerca barche",
-    "aroundCurrentLocation": "Around current location",
-    "locating": "Locating…",
-    "locationError": "Couldn't get your location",
+    "aroundCurrentLocation": "Vicino a me",
+    "locating": "Localizzazione…",
+    "locationError": "Impossibile ottenere la tua posizione",
     "selectYacht": "Seleziona yacht"
   },
   "destinationsSection": {
@@ -38,7 +41,26 @@
       "spain": "Spagna",
       "türkiye": "Turchia",
       "virginIslandsBritish": "Isole Vergini (Britanniche)",
-      "grenada": "Grenada"
+      "grenada": "Grenada",
+      "splitRegion": "Regione di Split",
+      "ionianRegion": "Regione Ionica"
+    },
+    "destinationsLocative": {
+      "bahamas": "Bahamas",
+      "caribbean": "Caraibi",
+      "croatia": "Croazia",
+      "france": "Francia",
+      "greece": "Grecia",
+      "italy": "Italia",
+      "martinique": "Martinica",
+      "montenegro": "Montenegro",
+      "seychelles": "Seychelles",
+      "spain": "Spagna",
+      "türkiye": "Turchia",
+      "virginIslandsBritish": "Isole Vergini (Britanniche)",
+      "grenada": "Grenada",
+      "splitRegion": "Regione di Split",
+      "ionianRegion": "Regione Ionica"
     }
   },
   "whyChooseUsSection": {
@@ -86,6 +108,7 @@
   "riskFreeBooking": {
     "riskFreeBooking": "Prenotazione senza rischi",
     "save15Now": "Risparmia il 15% ora",
+    "saveUpTo": "Risparmia fino al 47%",
     "cancellingDescription": "Cancellare con noi è completamente senza rischi e flessibile. Offriamo generose politiche di rimborso per proteggere il tuo investimento."
   },
   "blogSection": {
@@ -117,7 +140,47 @@
       "pt": "Portoghese",
       "it": "Italiano",
       "es": "Spagnolo",
-      "hr": "Croato"
+      "hr": "Croato",
+      "pl": "Polacco",
+      "nl": "Olandese"
     }
+  },
+  "manufacturersSection": {
+    "title": "Produttori di yacht più popolari",
+    "subtitle": "Sfoglia il catalogo per marca",
+    "preTitle": "Produttori di yacht ",
+    "emphasizedTitle": "più popolari"
+  },
+  "faqSection": {
+    "title": "Domande frequenti",
+    "subtitle": "Tutto quello che devi sapere prima di prenotare",
+    "questions": [
+      {
+        "q": "Come prenoto un noleggio yacht su Boat4You?",
+        "a": "Scegli la destinazione e le date, sfoglia gli yacht disponibili e clicca su Prenota sulla barca che preferisci. Confermiamo la disponibilità con il partner, ti inviamo una proposta di prenotazione e, non appena versi l'acconto, il tuo charter è confermato. L'intero processo richiede solo pochi minuti."
+      },
+      {
+        "q": "Serve la patente nautica per noleggiare uno yacht?",
+        "a": "Per il noleggio senza skipper (bareboat) è necessaria una patente nautica riconosciuta nel Paese di noleggio – patente nautica italiana entro o senza limiti, RYA Day Skipper, ICC o equivalente. Se non hai la patente puoi comunque prenotare qualsiasi yacht e aggiungere uno skipper al checkout."
+      },
+      {
+        "q": "Cosa è incluso nella tariffa di noleggio bareboat?",
+        "a": "La tariffa base copre lo yacht, la dotazione standard, l'assistenza dell'agenzia di noleggio e l'assicurazione contro i danni rilevanti. Pulizie finali, carburante, ormeggi fuori dalla marina di partenza, transit log e tassa di soggiorno sono di norma a parte – nella scheda di ogni yacht trovi gli extra obbligatori e opzionali elencati in modo trasparente."
+      },
+      {
+        "q": "Posso noleggiare uno yacht senza skipper?",
+        "a": "Sì. Il noleggio bareboat è disponibile sulla maggior parte degli yacht del nostro catalogo, a condizione che almeno una persona a bordo sia in possesso di una patente nautica valida e del certificato limitato di radiotelefonista (VHF). Se nessuno del gruppo ha la patente, puoi noleggiare lo stesso yacht con uno skipper professionista pagando un supplemento giornaliero."
+      },
+      {
+        "q": "Qual è il periodo migliore per noleggiare uno yacht nel Mediterranean?",
+        "a": "Maggio, giugno e settembre sono il periodo ideale – mare caldo, venti leggeri, meno affollamento e prezzi sensibilmente più bassi rispetto al picco di luglio e agosto. Aprile e ottobre sono adatti ai velisti esperti che non temono un mare più fresco, e offrono le tariffe settimanali più basse dell'anno."
+      },
+      {
+        "q": "Posso cancellare la prenotazione?",
+        "a": "Le condizioni di cancellazione variano a seconda dello yacht – i termini esatti sono indicati nella scheda di ogni offerta prima del pagamento. Al checkout offriamo anche un'assicurazione annullamento opzionale che rimborsa il costo del charter in caso di cancellazione per un motivo coperto. Il deposito cauzionale rimborsabile viene sempre restituito, salvo che lo yacht presenti danni."
+      }
+    ],
+    "preTitle": "Domande ",
+    "emphasizedTitle": "frequenti"
   }
 }

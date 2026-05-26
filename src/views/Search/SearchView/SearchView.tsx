@@ -11,7 +11,7 @@ import { CatalogueData } from '@/models/catalogue.model';
 import { Currency } from '@/models/user.model';
 
 import BoatsWrapper from './BoatsWrapper';
-import FiltersSection from './FiltersSection';
+import FiltersSectionV2 from './FiltersSectionV2';
 import { SearchResultsTransitionWrapper } from './SearchResultsTransitionWrapper';
 import { SearchTransitionProvider } from './SearchTransitionContext';
 import styles from './SearchView.module.scss';
@@ -44,7 +44,7 @@ const SearchView = async ({ searchParams }: SearchViewProps) => {
   return (
     <Container maxWidth="xl" disableGutters classes={{ root: styles.root }} className={styles.container}>
       <SearchTransitionProvider>
-        <FiltersSection catalogueData={catalogueData} catalogueFilters={catalogueFilters} />
+        <FiltersSectionV2 catalogueData={catalogueData} catalogueFilters={catalogueFilters} />
         <SearchResultsTransitionWrapper>
           <Suspense key={suspenseKey} fallback={<BoatsSection />}>
             <BoatsWrapper searchParams={searchParams} />

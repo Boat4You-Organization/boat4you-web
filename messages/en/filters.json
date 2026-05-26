@@ -1,5 +1,6 @@
 {
   "filterBy": "Filter By",
+  "sortBy": "Sort by",
   "activeFilters": "Active Filters",
   "recommended": "Recommended",
   "lowPrepayment": "Low prepayment",
@@ -34,5 +35,34 @@
   "fuelTank": "Fuel tank",
   "waterTank": "Water tank",
   "length": "Length",
-  "newYacht": "New yacht"
+  "newYacht": "New yacht",
+  "yachtType": "Yacht type",
+  "pricePerWeek": "Price per week",
+  "medianPrice": "median {amount}",
+  "peopleMaxGuests": "People (max guests)",
+  "guestsRange": "{min} – {max} guests",
+  "berthsRange": "{min} – {max} berths",
+  "yearBuilt": "Year built",
+  "toiletsRange": "{min} – {max} {count, plural, one {toilet} other {toilets}}",
+  "rentalType": "Rental type",
+  "bareboat": "Bareboat",
+  "skippered": "Skippered",
+  "manufacturerAndModel": "Manufacturer & model",
+  "classicMainsail": "Classic mainsail",
+  "rollingMainsail": "Rolling mainsail",
+  "enginePower": "Engine power",
+  "engineRangeHp": "{min} – {max} hp",
+  "yourSearch": "Your search",
+  "allDestinations": "All destinations",
+  "boatsAvailableLive": "boats available · live",
+  "dateRange": "{start} – {end}",
+  "nightsCount": "{count, plural, one {# night} other {# nights}}",
+  "vesselType": {
+    "sailing": "Sailing",
+    "catamaran": "Catamaran",
+    "motorboat": "Motorboat",
+    "motoryacht": "Motoryacht",
+    "gulet": "Gulet",
+    "powerCat": "Power cat"
+  }
 }

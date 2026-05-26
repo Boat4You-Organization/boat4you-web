@@ -8,6 +8,9 @@
     "profileSettings": "Postavke profila"
   },
   "footer": {
+    "network": {
+      "title": "Mreža"
+    },
     "company": {
       "title": "Tvrtka",
       "destinations": "Destinacije",

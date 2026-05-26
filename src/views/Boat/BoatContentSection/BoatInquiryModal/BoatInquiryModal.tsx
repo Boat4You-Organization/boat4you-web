@@ -160,7 +160,7 @@ const BoatInquiryModal = ({ isOpen, onOpen, onClose, yacht }: BoatInquiryModalPr
             name="phone"
             formLabel={t('inputPhoneNumber')}
             placeholder="(123) 456-7890"
-            validate={FormValidator.isValidPhoneNumber}
+            validate={FormValidator.all(validator.isNotEmpty, FormValidator.isValidPhoneNumber)}
           />
         </Stack>
         <Stack mt={3}>

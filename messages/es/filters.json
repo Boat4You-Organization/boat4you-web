@@ -1,5 +1,6 @@
 {
   "filterBy": "Filtrar Por",
+  "sortBy": "Ordenar por",
   "activeFilters": "Filtros Activos",
   "recommended": "Recomendado",
   "lowPrepayment": "Prepago bajo",
@@ -34,5 +35,34 @@
   "fuelTank": "Depósito combustible",
   "waterTank": "Depósito agua",
   "length": "Eslora",
-  "newYacht": "Yate nuevo"
+  "newYacht": "Yate nuevo",
+  "yachtType": "Tipo de yate",
+  "pricePerWeek": "Precio por semana",
+  "medianPrice": "mediana {amount}",
+  "peopleMaxGuests": "Personas (máx. invitados)",
+  "guestsRange": "{min} – {max} invitados",
+  "berthsRange": "{min} – {max} literas",
+  "yearBuilt": "Año de construcción",
+  "toiletsRange": "{min} – {max} {count, plural, one {baño} other {baños}}",
+  "rentalType": "Tipo de alquiler",
+  "bareboat": "Sin patrón",
+  "skippered": "Con patrón",
+  "manufacturerAndModel": "Fabricante y modelo",
+  "classicMainsail": "Mayor clásica",
+  "rollingMainsail": "Mayor enrollable",
+  "enginePower": "Potencia del motor",
+  "engineRangeHp": "{min} – {max} CV",
+  "yourSearch": "Tu búsqueda",
+  "allDestinations": "Todos los destinos",
+  "boatsAvailableLive": "barcos disponibles · en directo",
+  "dateRange": "{start} – {end}",
+  "nightsCount": "{count, plural, one {# noche} other {# noches}}",
+  "vesselType": {
+    "sailing": "Vela",
+    "catamaran": "Catamarán",
+    "motorboat": "Lancha",
+    "motoryacht": "Yate a motor",
+    "gulet": "Gulet",
+    "powerCat": "Power cat"
+  }
 }

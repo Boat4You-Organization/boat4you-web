@@ -1,9 +1,9 @@
 {
   "metadata": {
     "base": {
-      "title": "Boat4You | Jednostavan i siguran najam brodova diljem svijeta",
+      "title": "Najam jahti i brodova diljem svijeta | Boat4You",
       "titleTemplate": "%s | Boat4You",
-      "description": "Pretražite i rezervirajte brodove u više od 90 zemalja. Jedrilice, katamarani, motorni brodovi – sa ili bez skipera. Najbolje cijene. Sigurna rezervacija. Podrška 24/7.",
+      "description": "Najam jahti i brodova u 100+ zemalja. Jedrilice, katamarani, motorni brodovi. Najbolje cijene, 24/7 podrška, sigurna rezervacija.",
       "path": ""
     },
     "search": {
@@ -12,7 +12,7 @@
       "path": "/search"
     },
     "blog": {
-      "title": "Vodiči za najam jahti | Planiranje, itinerari, novosti | Boat4You",
+      "title": "Vodiči za najam jahti | Planiranje, itinerari, novosti",
       "description": "Boat4You stručni vodiči za najam jahti donose inspiraciju i uvid u nautički odmor, kako odabrati pravi brod i kamo isploviti.",
       "path": "/blog"
     },
@@ -37,7 +37,7 @@
       "path": "/faq"
     },
     "termsAndConditions": {
-      "title": "Boat4You – Uvjeti korištenja",
+      "title": "Uvjeti korištenja",
       "description": "Pregledajte uvjete korištenja Boat4You usluga, uključujući korisničke obveze, plaćanja i pravila računa.",
       "path": "/terms-and-conditions"
     },

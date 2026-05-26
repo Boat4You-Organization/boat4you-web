@@ -50,6 +50,8 @@ const LanguageCurrency = ({ language, currency, id }: LanguageCurrencyProps) => 
     { id: Language.ITALIAN, label: t('languageModal.languages.it') },
     { id: Language.SPANISH, label: t('languageModal.languages.es') },
     { id: Language.CROATIAN, label: t('languageModal.languages.hr') },
+    { id: Language.POLISH, label: t('languageModal.languages.pl') },
+    { id: Language.DUTCH, label: t('languageModal.languages.nl') },
   ];
 
   useEffect(() => {

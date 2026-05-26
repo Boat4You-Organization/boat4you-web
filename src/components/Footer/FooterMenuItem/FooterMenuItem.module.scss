@@ -1,3 +1,4 @@
+@use '@/styles/settings/variables' as *;
 @use '@/styles/utils/rem-calc' as *;
 
 .container {
@@ -16,4 +17,13 @@
   align-items: center;
   gap: rem-calc(8);
   text-decoration: none;
+  // Inherit colour to the Typography child via `color: inherit` on its
+  // sx — that way the `:hover` swap below cascades down without having
+  // to override MUI inline styles with `!important`.
+  color: $black-950;
+  transition: color 0.15s ease;
+
+  &:hover {
+    color: $blue-500;
+  }
 }

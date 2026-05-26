@@ -1,8 +1,11 @@
 {
   "hero": {
-    "title": "Réservez un yacht en",
+    "title": "Location de yacht en",
     "ctaTitle": "un seul clic.",
-    "description": "Louez votre yacht parfait en quelques clics seulement. Simple, rapide et sans stress — votre aventure de navigation de rêve commence ici."
+    "description": "Louez votre yacht parfait en quelques clics seulement. Simple, rapide et sans stress — votre aventure de navigation de rêve commence ici.",
+    "support": "Service client excellent",
+    "yachtsCount": "{count} yachts",
+    "marinasCount": "{count} marinas"
   },
   "generalSearchBar": {
     "whereAreYouGoing": "Où allez-vous ?",
@@ -16,9 +19,9 @@
     "chooseDestination": "Choisir la destination",
     "chooseTransportation": "Choisir le transport",
     "searchBoats": "Rechercher des bateaux",
-    "aroundCurrentLocation": "Around current location",
-    "locating": "Locating…",
-    "locationError": "Couldn't get your location",
+    "aroundCurrentLocation": "Près de moi",
+    "locating": "Localisation…",
+    "locationError": "Impossible d'obtenir votre position",
     "selectYacht": "Sélectionner le yacht"
   },
   "destinationsSection": {
@@ -38,7 +41,26 @@
       "spain": "Espagne",
       "türkiye": "Turquie",
       "virginIslandsBritish": "Îles Vierges britanniques",
-      "grenada": "Grenade"
+      "grenada": "Grenade",
+      "splitRegion": "Région de Split",
+      "ionianRegion": "Région Ionienne"
+    },
+    "destinationsLocative": {
+      "bahamas": "Bahamas",
+      "caribbean": "Caraïbes",
+      "croatia": "Croatie",
+      "france": "France",
+      "greece": "Grèce",
+      "italy": "Italie",
+      "martinique": "Martinique",
+      "montenegro": "Monténégro",
+      "seychelles": "Seychelles",
+      "spain": "Espagne",
+      "türkiye": "Turquie",
+      "virginIslandsBritish": "Îles Vierges britanniques",
+      "grenada": "Grenade",
+      "splitRegion": "Région de Split",
+      "ionianRegion": "Région Ionienne"
     }
   },
   "whyChooseUsSection": {
@@ -86,6 +108,7 @@
   "riskFreeBooking": {
     "riskFreeBooking": "Réservation sans risque",
     "save15Now": "Économisez 15% maintenant",
+    "saveUpTo": "Économisez jusqu'à 47%",
     "cancellingDescription": "L'annulation avec nous est entièrement sans risque et flexible. Nous offrons des politiques de remboursement généreuses pour protéger votre investissement."
   },
   "blogSection": {
@@ -117,7 +140,47 @@
       "pt": "Portugais",
       "it": "Italien",
       "es": "Espagnol",
-      "hr": "Croate"
+      "hr": "Croate",
+      "pl": "Polonais",
+      "nl": "Néerlandais"
     }
+  },
+  "manufacturersSection": {
+    "title": "Constructeurs de yachts les plus populaires",
+    "subtitle": "Parcourez le catalogue par marque",
+    "preTitle": "Constructeurs de yachts ",
+    "emphasizedTitle": "les plus populaires"
+  },
+  "faqSection": {
+    "title": "Questions fréquentes",
+    "subtitle": "Tout ce que vous devez savoir avant de réserver",
+    "questions": [
+      {
+        "q": "Comment réserver une location de yacht sur Boat4You ?",
+        "a": "Choisissez votre destination et vos dates, parcourez les yachts disponibles et cliquez sur Réserver pour le bateau qui vous plaît. Nous confirmons la disponibilité auprès du partenaire, vous envoyons une proposition de réservation et, dès le versement de l'acompte, votre location est confirmée. L'ensemble du processus ne prend que quelques minutes."
+      },
+      {
+        "q": "Faut-il un permis pour louer un yacht ?",
+        "a": "Pour une location sans skipper, vous devez disposer d'un permis bateau reconnu dans le pays de location – permis hauturier français, RYA Day Skipper, ICC ou équivalent. Si vous n'avez pas de permis, vous pouvez tout de même réserver n'importe quel yacht et ajouter un skipper au moment du paiement."
+      },
+      {
+        "q": "Que comprend le tarif de location sans skipper ?",
+        "a": "Le tarif de base couvre le yacht, l'équipement standard, l'assistance de l'agence de location et l'assurance contre les dommages importants. Le nettoyage final, le carburant, les frais de port hors marina d'origine, le transit log et la taxe de séjour sont généralement à régler séparément – chaque fiche yacht détaille de manière transparente les extras obligatoires et optionnels."
+      },
+      {
+        "q": "Puis-je louer un yacht sans skipper ?",
+        "a": "Oui. La location sans skipper est proposée sur la majorité des yachts de notre catalogue, à condition qu'au moins une personne à bord détienne un permis bateau valide et un certificat restreint de radiotéléphoniste (VHF). Si personne dans le groupe n'a de permis, vous pouvez louer le même yacht avec un skipper professionnel moyennant un supplément journalier."
+      },
+      {
+        "q": "Quelle est la meilleure période pour louer un yacht en Mediterranean ?",
+        "a": "Mai, juin et septembre sont la période idéale – mer chaude, vents légers, moins de monde et tarifs nettement plus avantageux qu'en pleine saison de juillet et août. Avril et octobre conviennent aussi aux marins expérimentés que la fraîcheur de la mer ne dérange pas, et offrent les tarifs hebdomadaires les plus bas de l'année."
+      },
+      {
+        "q": "Puis-je annuler ma réservation ?",
+        "a": "Les conditions d'annulation varient d'un yacht à l'autre – chaque fiche d'offre indique les modalités précises avant le paiement. Nous proposons également une assurance annulation optionnelle au checkout, qui rembourse le coût de la location en cas d'annulation pour un motif couvert. La caution remboursable est toujours restituée, sauf si le yacht présente des dommages."
+      }
+    ],
+    "preTitle": "Questions ",
+    "emphasizedTitle": "fréquentes"
   }
 }

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import {
@@ -55,11 +55,12 @@ interface PayNowModalProps {
   onOpen: () => void;
   onClose: () => void;
   reservationId: number;
+  reservationNumber?: string;
   paymentPhases: PaymentPhase[];
   dateFrom: string;
 }
 
-const PayNowModal = ({ isOpen, onClose, reservationId, paymentPhases }: PayNowModalProps) => {
+const PayNowModal = ({ isOpen, onClose, reservationId, reservationNumber, paymentPhases }: PayNowModalProps) => {
   const t = useTranslations('common');
   const locale = useLocale();
 
@@ -103,6 +104,20 @@ const PayNowModal = ({ isOpen, onClose, reservationId, paymentPhases }: PayNowMo
   // One idempotency key per modal open — protects against double-clicks
   // producing duplicate Stripe Sessions.
   const idempotencyKey = useMemo(() => crypto.randomUUID(), [isOpen]);
+
+  // Auto-scroll the bank transfer details into view once the user picks
+  // bank transfer — the IBAN block sits below the fold on most screens, and
+  // the customer would otherwise have to manually scroll down to copy it.
+  // Wait one tick past the MUI Collapse animation (~225ms default) so the
+  // panel is actually rendered before scrollIntoView measures it.
+  const bankInfoRef = useRef<HTMLDivElement | null>(null);
+  useEffect(() => {
+    if (paymentMethod !== PaymentMethod.BANK_TRANSFER) return;
+    const timer = setTimeout(() => {
+      bankInfoRef.current?.scrollIntoView({ behavior: 'smooth', block: 'end' });
+    }, 250);
+    return () => clearTimeout(timer);
+  }, [paymentMethod]);
 
   const baseDueNow = oldestUnpaid?.amount ?? 0;
   const cardFee = (baseDueNow * cardSurchargePercent) / 100;
@@ -355,7 +370,7 @@ const PayNowModal = ({ isOpen, onClose, reservationId, paymentPhases }: PayNowMo
           {/* Expandable account details */}
           <Collapse in={paymentMethod === PaymentMethod.BANK_TRANSFER} unmountOnExit>
             <Divider />
-            <Box sx={{ backgroundColor: colors.black100, px: 2.5, py: 1.5 }}>
+            <Box ref={bankInfoRef} sx={{ backgroundColor: colors.black100, px: 2.5, py: 1.5 }}>
               <Typography variant="body1" fontWeight={700} mb={1}>
                 {t('bankTransferInfo')}
               </Typography>
@@ -363,28 +378,38 @@ const PayNowModal = ({ isOpen, onClose, reservationId, paymentPhases }: PayNowMo
               {bankDetails.map(({ title, value }) => (
                 <BankDetailRow key={title} label={title} value={value} />
               ))}
-              <BankDetailRow label={t('paymentReference')} value={`#${reservationId}`} />
+              <BankDetailRow label={t('paymentReference')} value={`#${reservationNumber ?? reservationId}`} />
             </Box>
           </Collapse>
         </Box>
       </Stack>
 
-      {/* Pay now */}
-      <Stack alignItems="flex-end" gap={1}>
-        <Button
-          size="large"
-          onClick={handleSubmit}
-          disabled={isLoading}
-          sx={{ width: 260 }}
-          startIcon={<SecurePayement size={24} />}
-        >
-          {isLoading
-            ? t('processing')
-            : paymentMethod === PaymentMethod.BANK_TRANSFER
-              ? t('reserve')
-              : t('payNowAmount', { amount: fmt(methodAdjustedAmount) })}
-        </Button>
-      </Stack>
+      {/* Pay now / Reserve button — hidden for bank transfer on already-
+          confirmed reservations: the bank details above are everything the
+          customer needs, no DB action is required (the unpaid phase already
+          exists, payment is reconciled when funds arrive). The button is
+          still shown for:
+            • CREDIT_CARD (always, since clicking opens Stripe checkout), and
+            • BANK_TRANSFER on a fresh OPTION (clicking marks the reservation
+              and triggers the confirmation email — without that click the
+              option would expire). */}
+      {paymentMethod === PaymentMethod.BANK_TRANSFER && hasAnyPaid ? null : (
+        <Stack alignItems="flex-end" gap={1}>
+          <Button
+            size="large"
+            onClick={handleSubmit}
+            disabled={isLoading}
+            sx={{ width: 260 }}
+            startIcon={<SecurePayement size={24} />}
+          >
+            {isLoading
+              ? t('processing')
+              : paymentMethod === PaymentMethod.BANK_TRANSFER
+                ? t('reserve')
+                : t('payNowAmount', { amount: fmt(methodAdjustedAmount) })}
+          </Button>
+        </Stack>
+      )}
     </ModalRoot>
   );
 };

@@ -38,12 +38,13 @@ export const searchV2 = {
 } as const;
 
 /**
- * Typography tokens. Sidebar uses Inter / system stack (NOT the site's
- * default Raleway) per design handoff — body 13px, section labels
- * 11px uppercase tracked .14em.
+ * Typography tokens. Sidebar uses the site-wide Raleway stack so it visually
+ * matches the rest of the customer site (search results, header, footer).
+ * Original handoff specced Inter / system, but Mario flagged the font
+ * inconsistency on 2026-04-26 and we conformed to the existing brand.
  */
 export const searchV2Type = {
-  fontFamily: '-apple-system, BlinkMacSystemFont, "Inter", sans-serif',
+  fontFamily: 'Raleway, -apple-system, BlinkMacSystemFont, sans-serif',
   body: 13,
   sectionLabel: { fontSize: 10.5, letterSpacing: '0.14em', textTransform: 'uppercase' as const, fontWeight: 700 },
   groupTitle: { fontSize: 13, fontWeight: 700 },

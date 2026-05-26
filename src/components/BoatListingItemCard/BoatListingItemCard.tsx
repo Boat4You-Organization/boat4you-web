@@ -82,6 +82,7 @@ const BoatListingItemCard = ({
   numberOfDays,
   isOption,
   offerStatus,
+  custom,
   isGridView,
   mainImageId,
   modelName,
@@ -522,7 +523,11 @@ const BoatListingItemCard = ({
         {/* Single content column — info on top, price + CTA pushed to bottom-right */}
         <CardContent className={styles.content}>
           <Stack direction="row" alignItems="center" justifyContent="space-between">
-            <Typography variant="h3" fontWeight={700}>
+            <Typography
+              variant="h3"
+              fontWeight={700}
+              sx={isGridView ? { lineHeight: 1.3, minHeight: '2.6em' } : undefined}
+            >
               {displayModelName}
               {name ? ` | ${toTitleCase(name)}` : ''}
             </Typography>
@@ -538,6 +543,7 @@ const BoatListingItemCard = ({
               // wrapper (first child Box) to match the text line-height on
               // mobile so the flag sits centered with the marina name.
               sx={{
+                ...(isGridView ? { minHeight: '3em' } : {}),
                 '& > div:first-of-type': {
                   width: { xs: 16, md: 28 },
                   height: { xs: 16, md: 28 },
@@ -731,7 +737,26 @@ const BoatListingItemCard = ({
             </Stack>
             {/* Availability badge + Boat details button in one row */}
             <Stack direction="row" alignItems="center" gap={1}>
-              {isAvailable ? (
+              {custom ? (
+                // Custom (admin-managed) yacht — no offer rows, only a
+                // lowPrice placeholder. Inquiry-only flow, so swap the
+                // green Available badge for a blue "On request" cue.
+                <Box
+                  sx={{
+                    px: 1.25,
+                    py: 0.5,
+                    borderRadius: 1,
+                    backgroundColor: colors.blue50,
+                    color: colors.blue500,
+                    fontWeight: 700,
+                    fontSize: 12,
+                    whiteSpace: 'nowrap',
+                    border: `1px solid ${colors.blue500}`,
+                  }}
+                >
+                  {t('common.onRequest')}
+                </Box>
+              ) : isAvailable ? (
                 <Box
                   sx={{
                     px: 1.25,

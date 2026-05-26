@@ -4,6 +4,8 @@ import es from './es';
 import fr from './fr';
 import hr from './hr';
 import it from './it';
+import nl from './nl';
+import pl from './pl';
 import pt from './pt';
 
 export const i18n = {
@@ -13,6 +15,8 @@ export const i18n = {
   fr,
   hr,
   it,
+  nl,
+  pl,
   pt,
 };
 

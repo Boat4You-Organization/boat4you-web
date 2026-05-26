@@ -31,6 +31,8 @@ export interface UserModel {
   address?: string;
   city?: string;
   country?: string;
+  /** ISO yyyy-MM-dd; null/undefined when the user hasn't set their birthday. */
+  birthday?: string | null;
   language: Language;
   currency: Currency;
   userStatus: UserStatus;
@@ -45,6 +47,8 @@ export enum Language {
   ITALIAN = 'IT',
   SPANISH = 'ES',
   CROATIAN = 'HR',
+  POLISH = 'PL',
+  DUTCH = 'NL',
 }
 
 export const LANGUAGE_LABEL_MAP = {
@@ -55,6 +59,8 @@ export const LANGUAGE_LABEL_MAP = {
   [Language.ITALIAN]: 'Italian',
   [Language.SPANISH]: 'Spanish',
   [Language.CROATIAN]: 'Croatian',
+  [Language.POLISH]: 'Polish',
+  [Language.DUTCH]: 'Dutch',
 } as const;
 
 export const LANGUAGE_ARRAY = Object.values(Language);

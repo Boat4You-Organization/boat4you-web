@@ -19,6 +19,7 @@ import {
 } from '@/models/reservation.model';
 import colors from '@/styles/themes/colors';
 import DateTime from '@/utils/static/DateTime';
+import { getCancellationDisplayState } from '@/utils/static/cancellationUtils';
 import { toTitleCase } from '@/utils/static/toTitleCase';
 import {
   acknowledgeYachtSwap,
@@ -42,6 +43,7 @@ const ReservationHeroSection = ({ reservationDetails }: ReservationHeroSectionPr
     status,
     cancellationRequestAt,
     cancellationRequest,
+    cancellationRejectedAt,
     reservationId,
   } = reservationDetails;
   const t = useTranslations('common');
@@ -73,12 +75,22 @@ const ReservationHeroSection = ({ reservationDetails }: ReservationHeroSectionPr
 
   const showSwapBanner = Boolean(swapInfo) && !swapDismissed && !swapInfo?.acknowledged;
 
-  // A cancellation request is "pending admin review" while it has been sent
-  // AND the admin hasn't yet flipped status to CANCELLED. Once the admin
-  // approves (status → CANCELLED), we switch from the warning "awaiting"
-  // banner to the confirmation banner.
+  // A cancellation request can be in 3 states:
+  //   'pending'   — request sent, admin hasn't decided yet (warning banner).
+  //   'rejected'  — admin refused, still inside the 10-day visibility window
+  //                 (red banner + chip). Booking stays active.
+  //   'none'      — no request, decision long past, or booking already
+  //                 cancelled — the cancelled chip wins.
+  // After 10 days from rejection, the customer-side surface returns to
+  // pretending no request ever happened (Mario rule, 3.5.2026).
   const isCancelled = status === ReservationStatus.CANCELLED;
-  const hasPendingCancellationRequest = Boolean(cancellationRequestAt) && !isCancelled;
+  const cancelDisplayState = getCancellationDisplayState({
+    cancellationRequestAt,
+    cancellationRejectedAt,
+    isCancelled,
+  });
+  const hasPendingCancellationRequest = cancelDisplayState === 'pending';
+  const hasRejectedCancellationRequest = cancelDisplayState === 'rejected';
   const isConfirmedCancellation = Boolean(cancellationRequestAt) && isCancelled;
 
   // Agent-finalised cancellations (admin clicked Cancel in the back-office
@@ -90,6 +102,11 @@ const ReservationHeroSection = ({ reservationDetails }: ReservationHeroSectionPr
   const agentPrefix = '[AGENT]';
   // Legacy marker from an earlier iteration — treat the same way.
   const legacyAdminPrefix = '[ADMIN]';
+  // System auto-cancellation marker — set by OptionExpiryService when option
+  // expires + grace period passes without payment. Surfaces a different banner
+  // ("payment not received") so the customer understands WHY (and that no
+  // human action is required).
+  const systemPrefix = '[SYSTEM]';
   const agentMarkerLen = isCancelled && typeof cancellationRequest === 'string'
     ? (cancellationRequest.startsWith(agentPrefix)
         ? agentPrefix.length
@@ -97,11 +114,15 @@ const ReservationHeroSection = ({ reservationDetails }: ReservationHeroSectionPr
           ? legacyAdminPrefix.length
           : 0)
     : 0;
+  const systemMarkerLen = isCancelled && typeof cancellationRequest === 'string' && cancellationRequest.startsWith(systemPrefix)
+    ? systemPrefix.length
+    : 0;
   const isAgentCancelled = agentMarkerLen > 0;
+  const isSystemCancelled = systemMarkerLen > 0;
   const agentReason = isAgentCancelled ? cancellationRequest!.slice(agentMarkerLen).trim() : '';
-  // Hide the raw "[AGENT] …" marker from the customer-visible note so
-  // they never see the prefix string.
-  const customerFacingCancellationRequest = isAgentCancelled ? '' : cancellationRequest;
+  const systemReason = isSystemCancelled ? cancellationRequest!.slice(systemMarkerLen).trim() : '';
+  // Hide raw markers from the customer-visible note so they never see prefix strings.
+  const customerFacingCancellationRequest = (isAgentCancelled || isSystemCancelled) ? '' : cancellationRequest;
 
   return (
     <Container
@@ -118,6 +139,8 @@ const ReservationHeroSection = ({ reservationDetails }: ReservationHeroSectionPr
           </Typography>
           {hasPendingCancellationRequest ? (
             <StatusChip label={t('cancellationInProgress')} color="warning" />
+          ) : hasRejectedCancellationRequest ? (
+            <StatusChip label={t('cancellationRequestRejected')} color="error" />
           ) : (
             <StatusChip label={t(RESERVATION_STATUS_LABEL_MAP[status])} color={RESERVATION_STATUS_COLOR_MAP[status]} />
           )}
@@ -171,16 +194,25 @@ const ReservationHeroSection = ({ reservationDetails }: ReservationHeroSectionPr
           the generic "your request was approved" banner. */}
       {isConfirmedCancellation && (
         <Alert
-          severity={isAgentCancelled ? 'info' : 'success'}
+          severity={isSystemCancelled ? 'warning' : isAgentCancelled ? 'info' : 'success'}
           sx={{ mt: 2, alignItems: 'flex-start' }}
         >
           <Stack gap={0.5}>
             <Typography variant="body1" fontWeight={700}>
-              {isAgentCancelled
-                ? 'Your reservation has been cancelled by our agent'
-                : t('cancellationConfirmedTitle')}
+              {isSystemCancelled
+                ? 'Your reservation has been cancelled — payment not received'
+                : isAgentCancelled
+                  ? 'Your reservation has been cancelled by our agent'
+                  : t('cancellationConfirmedTitle')}
             </Typography>
-            {isAgentCancelled ? (
+            {isSystemCancelled ? (
+              <Typography variant="body2">
+                This booking was automatically cancelled on{' '}
+                {DateTime.formatLong(dayjs(cancellationRequestAt), locale)} because we did not
+                receive your payment within the option deadline. The yacht is now released and
+                may be booked by someone else. To reserve it again, please start a new booking.
+              </Typography>
+            ) : isAgentCancelled ? (
               <Typography variant="body2">
                 This booking was cancelled on{' '}
                 {DateTime.formatLong(dayjs(cancellationRequestAt), locale)}. A member of our team will
@@ -196,6 +228,11 @@ const ReservationHeroSection = ({ reservationDetails }: ReservationHeroSectionPr
             {isAgentCancelled && agentReason && (
               <Typography variant="body2" color={colors.black600} sx={{ mt: 0.5 }}>
                 <strong>Reason:</strong> {agentReason}
+              </Typography>
+            )}
+            {isSystemCancelled && systemReason && (
+              <Typography variant="body2" color={colors.black600} sx={{ mt: 0.5 }}>
+                <strong>Reason:</strong> {systemReason}
               </Typography>
             )}
           </Stack>

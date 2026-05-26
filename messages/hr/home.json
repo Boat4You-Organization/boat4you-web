@@ -1,8 +1,11 @@
 {
   "hero": {
-    "title": "Rezervirajte jahtu u",
+    "title": "Najam jahti u",
     "ctaTitle": "jednom kliku.",
-    "description": "Unajmite savršenu jahtu u samo nekoliko klikova. Jednostavno, brzo i bez stresa — vaša morska avantura počinje ovdje."
+    "description": "Unajmite savršenu jahtu u samo nekoliko klikova. Jednostavno, brzo i bez stresa — vaša morska avantura počinje ovdje.",
+    "support": "Vrhunska korisnička podrška",
+    "yachtsCount": "{count} jahti",
+    "marinasCount": "{count} marina"
   },
   "generalSearchBar": {
     "whereAreYouGoing": "Gdje idete?",
@@ -38,7 +41,26 @@
       "spain": "Španjolska",
       "türkiye": "Turska",
       "virginIslandsBritish": "Britanski Djevičanski Otoci",
-      "grenada": "Grenada"
+      "grenada": "Grenada",
+      "splitRegion": "Splitska regija",
+      "ionianRegion": "Jonska regija"
+    },
+    "destinationsLocative": {
+      "bahamas": "Bahamima",
+      "caribbean": "Karibima",
+      "croatia": "Hrvatskoj",
+      "france": "Francuskoj",
+      "greece": "Grčkoj",
+      "italy": "Italiji",
+      "martinique": "Martiniku",
+      "montenegro": "Crnoj Gori",
+      "seychelles": "Sejšelima",
+      "spain": "Španjolskoj",
+      "türkiye": "Turskoj",
+      "virginIslandsBritish": "Britanskim Djevičanskim otocima",
+      "grenada": "Grenadi",
+      "splitRegion": "Splitskoj regiji",
+      "ionianRegion": "Jonskoj regiji"
     }
   },
   "whyChooseUsSection": {
@@ -70,7 +92,7 @@
     "fleet": {
       "catamarans": "Katamarani",
       "gulets": "Guleti",
-      "houseBoats": "House Boats",
+      "houseBoats": "Plutajuće kuće",
       "luxuryMotorYachts": "Luksuzne motorne jahte",
       "motorboats": "Motorni brodovi",
       "motorYachts": "Motorne jahte",
@@ -86,6 +108,7 @@
   "riskFreeBooking": {
     "riskFreeBooking": "Sigurno rezerviranje",
     "save15Now": "Uštedite 15% sada",
+    "saveUpTo": "Uštedite do 47%",
     "cancellingDescription": "Otkazivanje kod nas potpuno je bez rizika i fleksibilno. Nudimo izdašne politike povrata kako bismo zaštitili vašu investiciju."
   },
   "blogSection": {
@@ -117,7 +140,47 @@
       "pt": "Portugalski",
       "it": "Talijanski",
       "es": "Španjolski",
-      "hr": "Hrvatski"
+      "hr": "Hrvatski",
+      "pl": "Poljski",
+      "nl": "Nizozemski"
     }
+  },
+  "manufacturersSection": {
+    "title": "Najpopularniji proizvođači jahti",
+    "subtitle": "Pretražite katalog po proizvođaču",
+    "preTitle": "Najpopularniji ",
+    "emphasizedTitle": "proizvođači jahti"
+  },
+  "faqSection": {
+    "title": "Često postavljana pitanja",
+    "subtitle": "Sve što trebate znati prije rezervacije",
+    "questions": [
+      {
+        "q": "Kako rezerviram najam jahte na Boat4You?",
+        "a": "Odaberite destinaciju i datume, pregledajte dostupne jahte i kliknite Rezerviraj na plovilu koje vam odgovara. Mi provjeravamo dostupnost kod partnera, šaljemo ponudu za rezervaciju, a čim uplatite akontaciju vaš najam je potvrđen. Cijeli postupak traje svega nekoliko minuta."
+      },
+      {
+        "q": "Trebam li skipersku licencu za najam jahte?",
+        "a": "Za najam bez skipera potrebna vam je važeća skiperska licenca koju priznaje država najma – hrvatska voditeljska licenca B, RYA Day Skipper, ICC ili ekvivalent. Ako nemate licencu, jahtu i dalje možete rezervirati i pri checkoutu dodati skipera."
+      },
+      {
+        "q": "Što je uključeno u cijenu najma bez skipera?",
+        "a": "Osnovna cijena pokriva samu jahtu, standardnu opremu, podršku charter agencije i osiguranje od većih šteta. Završno čišćenje, gorivo, vez izvan matične marine, transit log i boravišna pristojba u pravilu se plaćaju zasebno – na svakoj stranici jahte transparentno su navedeni obavezni i opcionalni dodaci."
+      },
+      {
+        "q": "Mogu li unajmiti jahtu bez skipera?",
+        "a": "Da. Najam bez skipera (bareboat) dostupan je za većinu jahti u našem katalogu, uz uvjet da barem jedna osoba na brodu ima važeću skipersku licencu i VHF radio licencu. Ako nitko u grupi nema licencu, istu jahtu možete unajmiti uz profesionalnog skipera za dodatnu dnevnu naknadu."
+      },
+      {
+        "q": "Kada je najbolje vrijeme za najam jahte na Mediterranean?",
+        "a": "Svibanj, lipanj i rujan su idealni – topla voda, lagani vjetrovi, manje gužve i znatno povoljnije cijene nego u špici sezone u srpnju i kolovozu. Travanj i listopad još uvijek dolaze u obzir za iskusnije jedriličare kojima ne smeta hladnije more, a nude najniže tjedne cijene u godini."
+      },
+      {
+        "q": "Mogu li otkazati rezervaciju?",
+        "a": "Uvjeti otkazivanja razlikuju se ovisno o jahti – točni uvjeti prikazani su na stranici ponude prije plaćanja. Pri checkoutu nudimo i opcionalno osiguranje od otkaza koje vam vraća iznos najma ako morate otkazati zbog razloga pokrivenog policom. Povratni depozit (kaucija) uvijek se vraća, osim ako je jahta oštećena."
+      }
+    ],
+    "preTitle": "Često postavljana ",
+    "emphasizedTitle": "pitanja"
   }
 }

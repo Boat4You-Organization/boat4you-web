@@ -1,5 +1,5 @@
 const Usa = ({ props }: { props?: React.SVGProps<SVGSVGElement> }) => (
-  <svg width="48" height="48" viewBox="00 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
     <g clipPath="url(#a)">
       <mask id="b" style={{ maskType: 'alpha' }} maskUnits="userSpaceOnUse" x="0" y="6" width="48" height="36">
         <path

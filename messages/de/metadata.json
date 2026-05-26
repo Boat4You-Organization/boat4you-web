@@ -1,9 +1,9 @@
 {
   "metadata": {
     "base": {
-      "title": "Boat4You | Einfache & Sichere Bootsvermietung Weltweit",
+      "title": "Yachtcharter & Bootsverleih Weltweit | Boat4You",
       "titleTemplate": "%s | Boat4You",
-      "description": "Durchsuchen und buchen Sie Boote in über 100 Ländern. Segelyachten, Katamarane, Motorboote – mit oder ohne Skipper. Beste Preise. Sichere Buchung. 24/7 Support.",
+      "description": "Yachten chartern & Boote mieten in über 100 Ländern. Segelyachten, Katamarane, Motorboote. Beste Preise, 24/7 Support, sichere Buchung.",
       "path": ""
     },
     "search": {
@@ -37,7 +37,7 @@
       "path": "/faq"
     },
     "termsAndConditions": {
-      "title": "Boat4You Geschäftsbedingungen",
+      "title": "Geschäftsbedingungen",
       "description": "Überprüfen Sie die Geschäftsbedingungen für die Nutzung von Boat4You, einschließlich Benutzerverantwortlichkeiten, Zahlungen und Kontorichtlinien.",
       "path": "/terms-and-conditions"
     },

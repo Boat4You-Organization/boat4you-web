@@ -1,9 +1,9 @@
 {
   "metadata": {
     "base": {
-      "title": "Boat4You | Location de Bateaux Facile & Sécurisée Mondiale",
+      "title": "Location de Yacht & Bateau dans le Monde | Boat4You",
       "titleTemplate": "%s | Boat4You",
-      "description": "Parcourez et réservez des bateaux dans plus de 100 pays. Voiliers, catamarans, bateaux à moteur – avec ou sans skipper. Meilleurs prix. Réservation sécurisée. Support 24h/7j.",
+      "description": "Louez yachts & bateaux dans 100+ pays. Voiliers, catamarans, bateaux à moteur. Meilleurs prix, support 24/7, réservation sécurisée.",
       "path": ""
     },
     "search": {
@@ -37,7 +37,7 @@
       "path": "/faq"
     },
     "termsAndConditions": {
-      "title": "Conditions Générales Boat4You",
+      "title": "Conditions Générales",
       "description": "Consultez les conditions générales d'utilisation de Boat4You, y compris les responsabilités des utilisateurs, les paiements et les politiques de compte.",
       "path": "/terms-and-conditions"
     },

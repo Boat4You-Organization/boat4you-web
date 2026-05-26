@@ -6,7 +6,7 @@ import {
   ReservationStatus,
 } from './reservation-status.model';
 import { YachtAmenitiesModel } from './yacht-amenities.model';
-import { Unit } from './yacht-service.model';
+import { Unit, YachtServiceModel } from './yacht-service.model';
 import { MainSailType, YachtImage } from './yacht.model';
 
 export { RESERVATION_STATUS_COLOR_MAP, RESERVATION_STATUS_LABEL_MAP, ReservationStatus };
@@ -64,6 +64,10 @@ export interface ReservationShortInfo {
   listPriceInfo?: PriceInfo | null;
   yachtSlug: string;
   cancellationRequestAt: string;
+  /** Set by admin when the cancellation request is refused (charter agency
+   *  policy doesn't allow it). Booking stays active. Customer's portal shows
+   *  a "cancellation not approved" banner with the admin's explanation. */
+  cancellationRejectedAt?: string | null;
   agencyEmail: string;
   agencyPhone: string;
 }
@@ -107,7 +111,31 @@ export interface ReservationDetails extends ReservationShortInfo {
   charterType: string;
   amenities?: YachtAmenitiesModel[];
   cancellationRequest?: string;
+  /** Admin's explanation when the cancellation request was rejected; rendered
+   *  alongside `cancellationRejectedAt` on the customer's booking detail. */
+  cancellationRejectedReason?: string | null;
   specialRequest?: string;
+  // Full yacht-extras catalogue (same source as boat-detail page ExtrasTab) so
+  // my-bookings can render obligatory extras + deposit insurance row even when
+  // `selectedExtras` is empty (fictitious bookings / partner sync gaps).
+  services?: YachtServiceModel[];
+  obligatoryExtrasKeys?: string[];
+  // Crew list link — partner-supplied (NauSys/MMK at confirmation) or
+  // admin-entered manually for fictitious bookings.
+  crewListUrl?: string | null;
+  // Admin-uploaded documents attached to the booking (PDF/DOC/DOCX). Customer
+  // downloads via /secured/reservations/my-reservations/{id}/documents/{docId}.
+  documents?: ReservationDocument[];
+}
+
+export interface ReservationDocument {
+  id: number;
+  reservationId: number;
+  filename: string;
+  contentType: string;
+  sizeBytes: number;
+  uploadedBy: number | null;
+  uploadedAt: string;
 }
 
 export interface CreateReservationResponse {

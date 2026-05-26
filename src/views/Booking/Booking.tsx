@@ -6,8 +6,10 @@ import { Box, Container, Stack } from '@mui/material';
 import cx from 'clsx';
 import { useRouter } from 'next/navigation';
 
+import { previewPaymentPhases } from '@/actions/reservation.actions';
 import CircularProgress from '@/components/CircularProgress';
 import { PaymentInstallment, PaymentMethod } from '@/config/paymentMethods.config';
+import { PaymentPhase } from '@/models/reservation.model';
 import { UserModel } from '@/models/user.model';
 import { ReservationData } from '@/types/reservation.type';
 import { clearDataFromLocalStorage, getDataFromLocalStorage } from '@/utils/static/localStorageUtils';
@@ -43,6 +45,8 @@ const Booking = ({ isAdmin, user, initialStep = 0 }: BookingProps) => {
   const { activeStep } = useBookingStore();
   const [reservationData, setReservationData] = useState<ReservationData | null>(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [previewPhases, setPreviewPhases] = useState<PaymentPhase[]>([]);
+  const [isLoadingPreviewPhases, setIsLoadingPreviewPhases] = useState(false);
   const router = useRouter();
   const isInitialMount = useRef(true);
 
@@ -129,6 +133,32 @@ const Booking = ({ isAdmin, user, initialStep = 0 }: BookingProps) => {
     setIsLoading(false);
   }, [router, initialStep]);
 
+  // Pull partner-aware payment phases (with B4Y discount applied) so the
+  // /enter-your-details Price breakdown shows the same schedule the customer
+  // will be billed against — instead of the client-side A/B/C fallback that
+  // ignores partner installment ratios.
+  useEffect(() => {
+    if (!reservationData) return;
+
+    const { yachtId, dateFrom, dateTo, totalPriceEur } = reservationData;
+    if (!yachtId || !dateFrom || !dateTo || !(totalPriceEur > 0)) return;
+
+    let cancelled = false;
+    setIsLoadingPreviewPhases(true);
+    previewPaymentPhases(yachtId, dateFrom, dateTo, totalPriceEur)
+      .then(({ payload }) => {
+        if (cancelled) return;
+        setPreviewPhases(payload ?? []);
+      })
+      .finally(() => {
+        if (!cancelled) setIsLoadingPreviewPhases(false);
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [reservationData]);
+
   if (isLoading || !reservationData) {
     return (
       <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
@@ -173,7 +203,11 @@ const Booking = ({ isAdmin, user, initialStep = 0 }: BookingProps) => {
             <>
               <BookingSummaryCard reservationData={reservationData} />
               <Box className={styles.divider} />
-              <PriceBreakdownCard reservationData={reservationData} />
+              <PriceBreakdownCard
+                reservationData={reservationData}
+                paymentPhases={previewPhases}
+                isLoadingPhases={isLoadingPreviewPhases}
+              />
               <Box className={styles.divider} />
               <PaymentPoliciesCard
                 selectedExtrasInPrice={reservationData.selectedExtrasInPrice}

@@ -247,3 +247,46 @@ export async function calculatePaymentPhases(
     return { payload: [], message: 'An unexpected error occurred while fetching payment phases' };
   }
 }
+
+/**
+ * Partner-aware payment-phase preview for the /enter-your-details screen,
+ * before any reservation has been created. Backend looks up the offer by
+ * (yachtId, dateFrom, dateTo) and applies partner-supplied installment ratios
+ * against `clientTotalPrice` (which already includes any B4Y agency discount).
+ *
+ * Falls back to A/B/C internal rules server-side when no offer matches —
+ * we still return phases so the UI never shows nothing.
+ *
+ * Public endpoint (no auth) so guest checkout works.
+ */
+export async function previewPaymentPhases(
+  yachtId: number,
+  dateFrom: string,
+  dateTo: string,
+  clientTotalPrice: number
+): Promise<PayloadResponse<PaymentPhase[]>> {
+  try {
+    const params = new URLSearchParams({
+      yachtId: yachtId.toString(),
+      dateFrom,
+      dateTo,
+      clientTotalPrice: clientTotalPrice.toString(),
+    });
+
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/reservations/payment-phases-preview?${params.toString()}`
+    );
+
+    if (!response.ok) {
+      const body: ErrorModel = await response.json();
+
+      return { payload: [], message: body.message };
+    }
+
+    const payload = await response.json();
+
+    return { payload };
+  } catch (error) {
+    return { payload: [], message: 'An unexpected error occurred while fetching payment phases preview' };
+  }
+}
