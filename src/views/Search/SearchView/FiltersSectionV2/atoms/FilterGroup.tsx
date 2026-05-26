@@ -29,6 +29,7 @@ interface FilterGroupProps {
  */
 const FilterGroup = ({ title, count, defaultOpen = true, children }: FilterGroupProps) => {
   const [open, setOpen] = useState(defaultOpen);
+
   return (
     <Box sx={{ py: '16px', borderBottom: `1px solid ${searchV2.line}` }}>
       <ButtonBase
@@ -65,10 +66,10 @@ const FilterGroup = ({ title, count, defaultOpen = true, children }: FilterGroup
             </Box>
           )}
         </Box>
-        {/* Chevron — flips when expanded. SVG so it inherits color
-            without dragging in MUI icons. */}
-        <Box
-          component="svg"
+        {/* Chevron — flips when expanded. Native <svg> so width/height
+            attributes apply (MUI Box wrap drops them on the floor and
+            the icon balloons to default 100×100). */}
+        <svg
           width="12"
           height="12"
           viewBox="0 0 24 24"
@@ -77,14 +78,15 @@ const FilterGroup = ({ title, count, defaultOpen = true, children }: FilterGroup
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
-          sx={{
+          style={{
             color: searchV2.inkSoft,
             transform: open ? 'rotate(180deg)' : 'none',
             transition: 'transform .15s ease',
+            flexShrink: 0,
           }}
         >
           <path d="m6 9 6 6 6-6" />
-        </Box>
+        </svg>
       </ButtonBase>
       <Collapse in={open} timeout="auto" unmountOnExit>
         <Box sx={{ mt: '12px' }}>{children}</Box>

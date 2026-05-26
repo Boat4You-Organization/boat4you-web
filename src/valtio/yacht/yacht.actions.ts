@@ -91,6 +91,10 @@ export const setSearchResults = (results: YachtModelShortInfo[]) => {
   yachtStore.searchResults = results;
 };
 
+export const setSearchTotalCount = (totalCount: number) => {
+  yachtStore.searchTotalCount = totalCount;
+};
+
 export const setselectedOffer = (offer: YachtOfferModel | null) => {
   yachtStore.selectedOffer = offer;
 };

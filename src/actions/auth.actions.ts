@@ -148,6 +148,135 @@ export async function login(state: any, formData: FormData): Promise<LoginResult
   }
 }
 
+/** Account info readout for /my-profile (member-since, last login, bookings, email verified). */
+export async function getMyAccountInfo(): Promise<{
+  memberSince: string;
+  lastLoginAt: string | null;
+  totalBookings: number;
+  emailVerified: boolean;
+} | null> {
+  try {
+    const response = await authFetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/users/me/account-info`, {
+      method: 'GET',
+    });
+
+    if (!response.ok) return null;
+
+    return await response.json();
+  } catch {
+    return null;
+  }
+}
+
+/** Resends the email-verification code to the logged-in user. */
+export async function resendMyVerification(): Promise<{ success: boolean; message?: string }> {
+  try {
+    const response = await authFetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/users/me/resend-verification`, {
+      method: 'POST',
+    });
+
+    if (!response.ok) {
+      let message = `Resend failed (HTTP ${response.status})`;
+
+      try {
+        const body = await response.json();
+
+        message = body?.message ?? message;
+      } catch {
+        /* ignore */
+      }
+
+      return { success: false, message };
+    }
+
+    return { success: true };
+  } catch (error) {
+    return { success: false, message: error instanceof Error ? error.message : 'Unexpected error' };
+  }
+}
+
+/**
+ * GDPR Article 20 — Right to Data Portability. Calls backend
+ * `GET /users/me/export` and triggers a browser download of the resulting
+ * JSON file (everything the system holds about the customer: profile,
+ * reservations, payment phases, custom offers, GDPR activity log).
+ */
+export async function downloadMyData(): Promise<{ success: boolean; message?: string }> {
+  try {
+    const response = await authFetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/users/me/export`, {
+      method: 'GET',
+    });
+
+    if (!response.ok) {
+      return { success: false, message: `Export failed (HTTP ${response.status})` };
+    }
+
+    // Server-side: stream the body back to the browser by re-emitting it as
+    // a Response. We can't return a Blob from a server action — instead pass
+    // the raw text and the filename header so the client wrapper can build
+    // the download URL there. (Implemented in `useDataExportDownload` hook
+    // on the client.)
+    const filename =
+      response.headers.get('content-disposition')?.match(/filename="?([^";]+)"?/)?.[1] ??
+      `boat4you-data-export-${Date.now()}.json`;
+    const body = await response.text();
+
+    return { success: true, message: JSON.stringify({ filename, body }) };
+  } catch (error) {
+    return {
+      success: false,
+      message: error instanceof Error ? error.message : 'Unexpected error',
+    };
+  }
+}
+
+/**
+ * GDPR right-to-erasure (Article 17). Calls backend `DELETE /users/me` which
+ * anonymizes PII (name/surname/email/phone/address → blanked or tombstoned),
+ * revokes auth tokens, drops role assignments, and stamps `deleted_at`.
+ *
+ * Reservation history (`reservation_flow.user_id` FK) is preserved so the
+ * agency keeps the financial/audit trail — only the customer identity is
+ * detached. After a 200 response we clear local cookies (the backend has
+ * already invalidated tokens, but the cookie still holds the now-stale JWT
+ * until we clear it).
+ */
+export async function deleteMyAccount(): Promise<{ success: boolean; message?: string }> {
+  const cookieStore = await cookies();
+
+  try {
+    const response = await authFetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/users/me`, {
+      method: 'DELETE',
+    });
+
+    if (!response.ok) {
+      let message = 'Failed to delete account';
+
+      try {
+        const body = await response.json();
+
+        message = body?.message ?? message;
+      } catch {
+        // ignore
+      }
+
+      return { success: false, message };
+    }
+  } catch (error) {
+    return {
+      success: false,
+      message: error instanceof Error ? error.message : 'Unexpected error',
+    };
+  }
+
+  cookieStore.delete(AuthKeys.ACCESS_TOKEN);
+  cookieStore.delete(AuthKeys.REFRESH_TOKEN);
+  cookieStore.delete(AuthKeys.USER_ID);
+  revalidatePath('/', 'layout');
+
+  return { success: true };
+}
+
 export async function logout(): Promise<{ success: boolean }> {
   const cookieStore = await cookies();
 

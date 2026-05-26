@@ -49,7 +49,9 @@ const SignUp = ({ inviteCode, reservationId, email }: SignUpProps) => {
     if (!inviteCode || isSubmitting) return;
 
     setIsSubmitting(true);
+
     const result = await signUpUser(inviteCode, { password: formValues.password });
+
     setIsSubmitting(false);
 
     if (result.payload) {
@@ -64,11 +66,13 @@ const SignUp = ({ inviteCode, reservationId, email }: SignUpProps) => {
     if (!reservationId || !email || isSubmitting) return;
 
     setIsSubmitting(true);
+
     const result = await setPasswordForReservation({
       reservationId,
       email,
       password: formValues.password,
     });
+
     setIsSubmitting(false);
 
     if (result.payload) {
@@ -77,6 +81,7 @@ const SignUp = ({ inviteCode, reservationId, email }: SignUpProps) => {
       // a token here to keep the flow aligned with the normal login path and
       // avoid a second security-sensitive code path.
       navigate.replace('/');
+
       return;
     }
 
@@ -141,6 +146,7 @@ const SignUp = ({ inviteCode, reservationId, email }: SignUpProps) => {
 
     const validateInviteCode = async () => {
       setIsCheckingInvite(true);
+
       const result = await checkInviteCode(inviteCode);
 
       setIsInviteValid(result.payload);

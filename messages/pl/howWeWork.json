@@ -1,0 +1,115 @@
+{
+  "hero": {
+    "title": "Rezerwacja łodzi nigdy nie była <strong>prostsza.</strong>",
+    "description": "W <logo></logo> <companyName>Boat4You</companyName> upraszczamy cały proces. Ty mówisz gdzie i kiedy. My dopasowujemy odpowiedni jacht i załogę. Chorwacja, Grecja, Włochy, Hiszpania, Turcja czy Karaiby. Zajmujemy się szczegółami, abyś mógł cieszyć się podróżą."
+  },
+  "step": "Krok",
+  "steps": {
+    "step1": {
+      "title": "Odkryj swoją idealną łódź",
+      "subtitle": "Przeglądaj naszą starannie dobraną flotę",
+      "items": {
+        "item1": "Szukaj według destynacji, typu łodzi lub dat podróży.",
+        "item2": "Korzystaj z inteligentnych filtrów, aby znaleźć dokładnie to, czego potrzebujesz — od luksusowych katamaranów po rodzinne motorówki.",
+        "item3": "Każda oferta zawiera zweryfikowane szczegóły, przejrzyste ceny, prawdziwe zdjęcia i pełne specyfikacje."
+      },
+      "question": "Potrzebujesz pomocy w wyborze?",
+      "answer": "Nasi specjaliści ds. czarteru są o jedno kliknięcie. Pomożemy porównać, zarekomendować opcje i poprowadzić, jeśli masz wątpliwości.",
+      "link": {
+        "text": "Przeglądaj naszą flotę"
+      }
+    },
+    "step2": {
+      "title": "Wyślij bezpłatne zapytanie",
+      "subtitle": "Bez zobowiązań, bez presji",
+      "items": {
+        "item1": "Znalazłeś coś, co Ci się podoba? Po prostu kliknij „Poproś o ofertę”",
+        "item2": "Podaj nam daty, wielkość grupy i preferencje.",
+        "item3": "Otrzymasz spersonalizowane oferty i najnowszą dostępność — często z ekskluzywnymi rabatami!"
+      },
+      "question": "Elastyczne opcje",
+      "answer": "Chcesz skippera? Potrzebujesz hostessy? Szukasz trasy w jedną stronę? Dostosujemy czarter do Twoich planów.",
+      "link": {
+        "text": "Skontaktuj się"
+      }
+    },
+    "step3": {
+      "title": "Otrzymaj spersonalizowaną wycenę",
+      "subtitle": "Jasne ceny. Bez ukrytych kosztów.",
+      "items": {
+        "item1": "Szczegółowa wycena oparta na wybranej łodzi i dodatkach",
+        "item2": "Przejrzyste informacje o podatkach, depozytach i opcjonalnych usługach",
+        "item3": "Prawdziwa osoba prowadząca przez szczegóły, nie robot"
+      },
+      "answer": "Wierzymy w jasność, a nie drobny druk."
+    },
+    "step4": {
+      "title": "Zarezerwuj łódź",
+      "subtitle": "Zabezpiecz swój jacht w kilku kliknięciach",
+      "items": {
+        "item1": "Gdy będziesz gotowy, wyślemy Ci bezpieczny link do płatności.",
+        "item2": "Wpłać zaliczkę, aby potwierdzić rezerwację — zwykle 30-50% ceny czarteru.",
+        "item3": "Twoja łódź jest oficjalnie Twoja!"
+      },
+      "answer": "Otrzymasz natychmiastowe potwierdzenie i dostęp do panelu rezerwacji."
+    },
+    "step5": {
+      "title": "Sfinalizuj i przygotuj się",
+      "subtitle": "Przed Twoją podróżą:",
+      "items": {
+        "item1": "Wpłać saldo (zwykle 4 tygodnie przed wyjazdem)",
+        "item2": "Prześlij listę załogi/pasażerów",
+        "item3": "Dostarczymy informacje o bazie, szczegóły zaokrętowania i listę rzeczy do spakowania"
+      },
+      "answer": "Wszystko jest załatwione — możesz się odprężyć i cieszyć przed wakacjami."
+    },
+    "step6": {
+      "title": "Wypłyń",
+      "subtitle": "Witamy na pokładzie!",
+      "items": {
+        "item1": "Spotkaj się ze swoim jachtem w marinie",
+        "item2": "Zamelduj się w zespole bazy (lub u skippera, jeśli wliczony)",
+        "item3": "Przejdź krótkie przekazanie i instruktaż bezpieczeństwa"
+      },
+      "answer": "Stąd liczy się tylko słońce, morze i żeglowanie. Niezależnie od tego, czy jesteś z kapitanem, czy płyniesz samodzielnie, jesteśmy o telefon."
+    },
+    "step7": {
+      "title": "Po podróży",
+      "subtitle": "Płynny proces zwrotu",
+      "items": {
+        "item1": "Szybkie wymeldowanie i kontrola",
+        "item2": "Podziel się opinią lub recenzją — uwielbiamy Cię słuchać!",
+        "item3": "Otrzymaj pomoc z następną rezerwacją (wielu klientów wraca do nas!)"
+      }
+    }
+  },
+  "whyChooseUsSection": {
+    "whyChoose": "Dlaczego Boat4You?",
+    "items": {
+      "verifiedBoatsOnly": {
+        "title": "Tylko zweryfikowane łodzie",
+        "description": "Bez niespodzianek, tylko jachty najwyższej jakości."
+      },
+      "localExpertise": {
+        "title": "Lokalna wiedza",
+        "description": "Znamy wybrzeża jak własną kieszeń"
+      },
+      "realHumanSupport": {
+        "title": "Prawdziwe wsparcie ludzi",
+        "description": "Przed, w trakcie i po Twojej podróży"
+      },
+      "bestPriceGuarantee": {
+        "title": "Gwarancja najlepszej ceny",
+        "description": "Zawsze uczciwe ceny, bez opłat za rezerwację"
+      }
+    }
+  },
+  "cta": {
+    "title": "Pytania? Porozmawiajmy",
+    "description": "Potrzebujesz porady? Chcesz porozmawiać ze specjalistą ds. czarteru? Nasz zespół chętnie pomoże — czat na żywo, e-mail lub telefon.",
+    "cta": "Skontaktuj się teraz"
+  },
+  "faq": {
+    "title": "Najczęściej zadawane pytania"
+  }
+}

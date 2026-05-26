@@ -775,7 +775,61 @@ understand this Policy, addressing issues with your account data, or
 fulfilling an individual rights request. Your privacy is important to
 us, and we are here to help.
 
-**Effective Date:** June 17, 2025.
+## Data Retention
+
+We keep different categories of data for different periods, in line with our
+legal obligations and the legitimate interests of running a charter brokerage:
+
+- **Account profile** (name, email, phone, address): kept while your account
+  is active. When you delete your account from the _My Profile_ page, your
+  personal data is anonymized within minutes (name → "Deleted User"; email
+  → tombstone address; phone, address, city, country → cleared).
+- **Booking records** (reservations, payment phases, charter dates,
+  confirmation numbers): kept for **10 years** after the last booking date,
+  to satisfy accounting and partner-agency reconciliation obligations. After
+  account deletion these records remain in our system, but they are no
+  longer linked to your identity.
+- **Payment metadata** (Stripe payment intent IDs, bank transfer references):
+  kept for **7 years** alongside the booking, as required by financial law.
+- **Authentication artefacts** (JWT tokens, refresh tokens, password reset
+  codes): purged immediately when you delete your account, when you log out,
+  or after their natural expiry (typically minutes to hours).
+- **GDPR activity log** (when you exercised access / portability / erasure
+  rights): kept alongside your user record for accountability under
+  Article 5(2). Anonymous after account deletion.
+- **Server access logs and request audit trails**: kept for **90 days** for
+  security incident analysis, then purged.
+
+## Marketing Communications
+
+We **do not send marketing newsletters or promotional emails**. Every email
+you receive from us is transactional — booking confirmations, payment
+reminders, cancellation notices, and similar operational messages directly
+tied to a reservation you made with us. There is no marketing opt-in to
+manage because there is nothing to opt in or out of.
+
+## Your Rights — Self-service
+
+You can exercise the following GDPR rights yourself, without contacting
+support:
+
+- **Right of access (Article 15)** + **Right to rectification (Article 16)**:
+  open _My Profile_ — every personal data point we hold is editable there.
+- **Right to data portability (Article 20)**: open _My Profile_ and use the
+  _Download my data_ button. You'll receive a JSON file containing your
+  profile, every reservation, every payment phase, and your GDPR activity
+  history.
+- **Right to erasure (Article 17)**: open _My Profile_ and use the _Delete
+  account_ button. Your personal data will be anonymized immediately.
+  Booking records remain (anonymized) for the legal retention period
+  described above.
+
+For any other request — restriction of processing, objection, or anything
+that requires human review — email support@boat4you.com and we will respond
+within the GDPR-mandated 30-day window.
+
+**Effective Date:** June 17, 2025. Updated May 1, 2026 with retention timeline,
+self-service rights, and confirmation of no marketing communications.
 
 This Privacy Policy is effective as of the date above and supersedes any
 prior versions.

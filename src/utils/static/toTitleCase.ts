@@ -14,13 +14,18 @@ const ROMAN_NUMERAL_RE = /^(?:[MDCLXVI]+)$/;
 
 export const toTitleCase = (value: string | null | undefined): string => {
   if (value == null) return '';
+
   return value
     .split(/(\s+)/)
     .map(part => {
       if (/^\s+$/.test(part)) return part;
+
       if (part.length === 0) return part;
+
       const upper = part.toUpperCase();
+
       if (ROMAN_NUMERAL_RE.test(upper) && upper.length >= 2) return upper;
+
       return part.charAt(0).toUpperCase() + part.slice(1).toLowerCase();
     })
     .join('');

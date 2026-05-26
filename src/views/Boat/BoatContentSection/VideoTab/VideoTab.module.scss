@@ -1,0 +1,19 @@
+@use '@/styles/settings/variables' as *;
+@use '@/styles/utils/rem-calc' as *;
+@use '@/styles/mixins/breakpoints' as *;
+
+.videoContainer {
+  height: rem-calc(537);
+  width: 100%;
+  border-radius: rem-calc(12);
+  overflow: hidden;
+
+  @include media(0, 'md') {
+    height: rem-calc(424);
+  }
+
+  .media {
+    height: 100%;
+    width: 100%;
+  }
+}

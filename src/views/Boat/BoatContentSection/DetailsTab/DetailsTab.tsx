@@ -1,20 +1,27 @@
 import React from 'react';
 
-import { Box, CardMedia, Divider, Grid, Stack, Typography } from '@mui/material';
+import { Box, Grid, Stack, Typography } from '@mui/material';
 import { useLocale, useTranslations } from 'next-intl';
 
-import { Beam, Cabin, Dimensions, Engine, Fuel, Mainsail, People, SingleBed, Toilet, WaterTank } from '@/components/SvgIcons/BoatFeatures';
+import {
+  Beam,
+  Cabin,
+  Dimensions,
+  Engine,
+  Fuel,
+  Mainsail,
+  People,
+  SingleBed,
+  Toilet,
+  WaterTank,
+} from '@/components/SvgIcons/BoatFeatures';
 import Calendar from '@/components/SvgIcons/Calendar';
 import Description from '@/components/SvgIcons/Description';
-import Video from '@/components/SvgIcons/Video';
 import { MeasurementInfo } from '@/models/yacht-feature.model';
 import { MAIN_SAIL_TYPE_LABEL_MAP, MainSailType, VESSEL_TYPE_LABEL_MAP, YachtModel } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
 import { useBoatEquipmentDescription } from '@/utils/hooks/useBoatEquipmentDescription';
-import getYouTubeEmbedUrl from '@/utils/static/getYoutubeEmbedUrlUtils';
 import { toTitleCase } from '@/utils/static/toTitleCase';
-
-import styles from './DetailsTab.module.scss';
 
 interface DetailsTabProps {
   yacht: YachtModel;
@@ -28,12 +35,18 @@ interface FeatureRow {
   badge?: string;
 }
 
-const formatMeasure = (info: MeasurementInfo | null | undefined, fallback: number | null | undefined): string | null => {
+const formatMeasure = (
+  info: MeasurementInfo | null | undefined,
+  fallback: number | null | undefined
+): string | null => {
   if (info && info.amount != null) {
     const unit = info.unit === 'METRE' ? 'm' : info.unit === 'FEET' ? 'ft' : '';
+
     return `${info.amount} ${unit}`.trim();
   }
+
   if (fallback != null) return `${fallback} m`;
+
   return null;
 };
 
@@ -53,7 +66,9 @@ const DetailsTab = ({ yacht }: DetailsTabProps) => {
   const displayName = yacht.name ? toTitleCase(yacht.name) : yacht.name;
   const countryName = (() => {
     const code = yacht.location?.countryCode;
+
     if (!code) return null;
+
     try {
       return new Intl.DisplayNames([locale], { type: 'region' }).of(code) ?? null;
     } catch {
@@ -70,103 +85,104 @@ const DetailsTab = ({ yacht }: DetailsTabProps) => {
   const currentYear = new Date().getFullYear();
   const isNewYacht = Boolean(yacht.buildYear && yacht.buildYear >= currentYear - 1);
 
-  const leftRowsRaw: (FeatureRow | null)[] = [
-    yacht.buildYear
-      ? {
-          key: 'year',
-          icon: Calendar,
-          label: t('filters.year'),
-          value: String(yacht.buildYear),
-          badge: isNewYacht ? t('filters.newYacht') : undefined,
-        }
-      : null,
-    yacht.cabins
-      ? {
-          key: 'cabins',
-          icon: Cabin,
-          label: t('filters.cabins'),
-          value: String(yacht.cabins),
-        }
-      : null,
-    yacht.berths
-      ? {
-          key: 'berths',
-          icon: SingleBed,
-          label: t('filters.berths'),
-          value: String(yacht.berths),
-        }
-      : null,
-    yacht.maxPersons
-      ? {
-          key: 'people',
-          icon: People,
-          label: t('filters.people'),
-          value: String(yacht.maxPersons),
-        }
-      : null,
-    yacht.wc
-      ? {
-          key: 'toilets',
-          icon: Toilet,
-          label: t('filters.toilets'),
-          value: String(yacht.wc),
-        }
-      : null,
-    yacht.mainSailType && yacht.mainSailType !== MainSailType.UNKNOWN
-      ? {
-          key: 'mainSail',
-          icon: Mainsail,
-          label: t('yacht.mainSailType'),
-          value: t(MAIN_SAIL_TYPE_LABEL_MAP[yacht.mainSailType]),
-        }
-      : null,
-  ];
-
   const beamValue = formatMeasure(yacht.beamInfo, yacht.beam);
   const lengthValue = formatMeasure(yacht.lengthInfo, yacht.length);
 
-  const rightRowsRaw: (FeatureRow | null)[] = [
-    lengthValue
-      ? {
-          key: 'length',
-          icon: Dimensions,
-          label: t('filters.length'),
-          value: lengthValue,
-        }
-      : null,
-    beamValue
-      ? {
-          key: 'beam',
-          icon: Beam,
-          label: t('filters.beam'),
-          value: beamValue,
-        }
-      : null,
-    yacht.fuelTank
-      ? {
-          key: 'fuelTank',
-          icon: Fuel,
-          label: t('filters.fuelTank'),
-          value: `${yacht.fuelTank} l`,
-        }
-      : null,
-    yacht.waterTank
-      ? {
-          key: 'waterTank',
-          icon: WaterTank,
-          label: t('filters.waterTank'),
-          value: `${yacht.waterTank} l`,
-        }
-      : null,
-    yacht.enginePower
-      ? {
-          key: 'engine',
-          icon: Engine,
-          label: t('filters.engine'),
-          value: `${yacht.enginePower} kW`,
-        }
-      : null,
-  ];
+  // External (partner-synced) yachts render the original 2-column feature
+  // grid below the description block — no "Guests" or "Specifications"
+  // sub-headers, just every populated spec interleaved across two columns.
+  // Custom yachts get a labelled 4+4 "Specifications" grid instead so the
+  // Cabins/Berths/Guests/Crew column reads as a clean accommodation
+  // summary; the right column carries the boat-itself specs and prefers
+  // customDetails.engineText over the kW numeric.
+  const leftRowsRaw: (FeatureRow | null)[] = yacht.custom
+    ? [
+        yacht.cabins ? { key: 'cabins', icon: Cabin, label: t('filters.cabins'), value: String(yacht.cabins) } : null,
+        yacht.berths
+          ? { key: 'berths', icon: SingleBed, label: t('filters.berths'), value: String(yacht.berths) }
+          : null,
+        yacht.maxPersons
+          ? { key: 'guests', icon: People, label: t('yacht.guests'), value: String(yacht.maxPersons) }
+          : null,
+        yacht.crewNumber && yacht.crewNumber > 0
+          ? { key: 'crew', icon: People, label: t('yacht.crew'), value: String(yacht.crewNumber) }
+          : null,
+      ]
+    : [
+        yacht.buildYear
+          ? {
+              key: 'year',
+              icon: Calendar,
+              label: t('filters.year'),
+              value: String(yacht.buildYear),
+              badge: isNewYacht ? t('filters.newYacht') : undefined,
+            }
+          : null,
+        yacht.cabins ? { key: 'cabins', icon: Cabin, label: t('filters.cabins'), value: String(yacht.cabins) } : null,
+        yacht.berths
+          ? { key: 'berths', icon: SingleBed, label: t('filters.berths'), value: String(yacht.berths) }
+          : null,
+        yacht.maxPersons
+          ? { key: 'people', icon: People, label: t('filters.people'), value: String(yacht.maxPersons) }
+          : null,
+        yacht.wc ? { key: 'toilets', icon: Toilet, label: t('filters.toilets'), value: String(yacht.wc) } : null,
+        yacht.mainSailType && yacht.mainSailType !== MainSailType.UNKNOWN
+          ? {
+              key: 'mainSail',
+              icon: Mainsail,
+              label: t('yacht.mainSailType'),
+              value: t(MAIN_SAIL_TYPE_LABEL_MAP[yacht.mainSailType]),
+            }
+          : null,
+      ];
+
+  const rightRowsRaw: (FeatureRow | null)[] = yacht.custom
+    ? [
+        yacht.buildYear
+          ? {
+              key: 'year',
+              icon: Calendar,
+              label: t('filters.year'),
+              value: String(yacht.buildYear),
+              badge: isNewYacht ? t('filters.newYacht') : undefined,
+            }
+          : null,
+        lengthValue ? { key: 'length', icon: Dimensions, label: t('filters.length'), value: lengthValue } : null,
+        beamValue ? { key: 'beam', icon: Beam, label: t('filters.beam'), value: beamValue } : null,
+        yacht.customDetails?.engineText
+          ? { key: 'engine', icon: Engine, label: t('filters.engine'), value: yacht.customDetails.engineText }
+          : yacht.enginePower
+            ? { key: 'engine', icon: Engine, label: t('filters.engine'), value: `${yacht.enginePower} kW` }
+            : null,
+        yacht.fuelTank
+          ? { key: 'fuelTank', icon: Fuel, label: t('filters.fuelTank'), value: `${yacht.fuelTank} l` }
+          : null,
+        yacht.waterTank
+          ? { key: 'waterTank', icon: WaterTank, label: t('filters.waterTank'), value: `${yacht.waterTank} l` }
+          : null,
+        yacht.wc ? { key: 'toilets', icon: Toilet, label: t('filters.toilets'), value: String(yacht.wc) } : null,
+        yacht.mainSailType && yacht.mainSailType !== MainSailType.UNKNOWN
+          ? {
+              key: 'mainSail',
+              icon: Mainsail,
+              label: t('yacht.mainSailType'),
+              value: t(MAIN_SAIL_TYPE_LABEL_MAP[yacht.mainSailType]),
+            }
+          : null,
+      ]
+    : [
+        lengthValue ? { key: 'length', icon: Dimensions, label: t('filters.length'), value: lengthValue } : null,
+        beamValue ? { key: 'beam', icon: Beam, label: t('filters.beam'), value: beamValue } : null,
+        yacht.fuelTank
+          ? { key: 'fuelTank', icon: Fuel, label: t('filters.fuelTank'), value: `${yacht.fuelTank} l` }
+          : null,
+        yacht.waterTank
+          ? { key: 'waterTank', icon: WaterTank, label: t('filters.waterTank'), value: `${yacht.waterTank} l` }
+          : null,
+        yacht.enginePower
+          ? { key: 'engine', icon: Engine, label: t('filters.engine'), value: `${yacht.enginePower} kW` }
+          : null,
+      ];
 
   const leftRows = leftRowsRaw.filter((r): r is FeatureRow => r !== null);
   const rightRows = rightRowsRaw.filter((r): r is FeatureRow => r !== null);
@@ -252,14 +268,14 @@ const DetailsTab = ({ yacht }: DetailsTabProps) => {
             {(yacht.maxPersons || yacht.cabins) && (
               <Typography variant="body1" color={colors.black500}>
                 <strong>{displayName}</strong> {t('yacht.canAccommodate')}
-                <strong>{yacht.maxPersons}</strong> {t('yacht.peopleIn')}{' '}
-                <strong>{yacht.cabins}</strong> {t('yacht.pillowIncluded')}
+                <strong>{yacht.maxPersons}</strong> {t('yacht.peopleIn')} <strong>{yacht.cabins}</strong>{' '}
+                {t('yacht.pillowIncluded')}
               </Typography>
             )}
             {yacht.wc && (
               <Typography variant="body1" color={colors.black500}>
-                {t(VESSEL_TYPE_LABEL_MAP[yacht.vesselType])} <strong>{displayName}</strong>{' '}
-                {t('yacht.offers')} <strong>{yacht.wc}</strong> {t('yacht.toiletsWithShower')}.
+                {t(VESSEL_TYPE_LABEL_MAP[yacht.vesselType])} <strong>{displayName}</strong> {t('yacht.offers')}{' '}
+                <strong>{yacht.wc}</strong> {t('yacht.toiletsWithShower')}.
               </Typography>
             )}
             {description && (
@@ -302,57 +318,49 @@ const DetailsTab = ({ yacht }: DetailsTabProps) => {
             {yacht.description}
           </Typography>
         )}
-        {yacht.custom && yacht.customDetails.priceDescription && (
-          <Typography variant="body1" color={colors.black500} whiteSpace="pre-line">
-            {yacht.customDetails.priceDescription}
-          </Typography>
-        )}
-        {(leftRows.length > 0 || rightRows.length > 0) && (
-          <Grid container columnSpacing={{ xs: 0, md: 8 }} rowSpacing={0} pt={1}>
-            <Grid size={{ xs: 12, md: 6 }}>
-              {leftRows.map((row, idx) => renderRow(row, idx === leftRows.length - 1))}
+        {/* priceDescription was here previously — moved to AmenitiesTab so
+            the High/Mid/Low season pricing block sits below the amenities
+            grid where users expect price-related details. */}
+        {/* Guests rows previously had their own header here — folded into
+            the Specifications grid below as the LEFT column (Cabins,
+            Berths, Guests, Crew). RIGHT carries the boat-itself specs
+            (Year, Length, Beam, Engine + remaining). */}
+        {(leftRows.length > 0 || rightRows.length > 0) &&
+          (yacht.custom ? (
+            // Custom yachts get a labelled "Specifications" header — the
+            // 4+4 grid is grouped semantically (accommodation vs boat-self)
+            // so the header tells users what they're looking at.
+            <Stack direction="column" spacing={2} pt={1}>
+              <Typography component="h3" variant="h4" fontWeight={700}>
+                {t('yacht.specifications')}
+              </Typography>
+              <Grid container columnSpacing={{ xs: 0, md: 8 }} rowSpacing={0}>
+                <Grid size={{ xs: 12, md: 6 }}>
+                  {leftRows.map((row, idx) => renderRow(row, idx === leftRows.length - 1))}
+                </Grid>
+                <Grid size={{ xs: 12, md: 6 }}>
+                  {rightRows.map((row, idx) => renderRow(row, idx === rightRows.length - 1))}
+                </Grid>
+              </Grid>
+            </Stack>
+          ) : (
+            // External (synced) yachts keep the original layout — flat
+            // 2-column feature grid below the description, no sub-header.
+            // Mario reverted this for non-custom listings after the
+            // labelled regroup made the partner-data view feel clunky.
+            <Grid container columnSpacing={{ xs: 0, md: 8 }} rowSpacing={0} pt={1}>
+              <Grid size={{ xs: 12, md: 6 }}>
+                {leftRows.map((row, idx) => renderRow(row, idx === leftRows.length - 1))}
+              </Grid>
+              <Grid size={{ xs: 12, md: 6 }}>
+                {rightRows.map((row, idx) => renderRow(row, idx === rightRows.length - 1))}
+              </Grid>
             </Grid>
-            <Grid size={{ xs: 12, md: 6 }}>
-              {rightRows.map((row, idx) => renderRow(row, idx === rightRows.length - 1))}
-            </Grid>
-          </Grid>
-        )}
+          ))}
       </Stack>
-      {yacht.custom && yacht.customDetails && yacht.customDetails.videoUrl && (
-        <>
-          <Divider
-            sx={{
-              '&.MuiDivider-root': {
-                borderColor: colors.black200,
-                my: 4,
-              },
-            }}
-          />
-          <Stack direction="column" spacing={3}>
-            <Typography
-              component="h2"
-              variant="h3"
-              fontWeight={700}
-              display="flex"
-              flexDirection="row"
-              alignItems="center"
-              gap={1}
-            >
-              <Video variant="secondary" size={32} /> {t('yacht.videoTitle')}
-            </Typography>
-            <Box className={styles.videoContainer}>
-              <CardMedia
-                component="iframe"
-                src={getYouTubeEmbedUrl(yacht.customDetails.videoUrl)}
-                title={`${yacht.name} video`}
-                allowFullScreen
-                className={styles.media}
-                sandbox="allow-scripts allow-same-origin allow-presentation"
-              />
-            </Box>
-          </Stack>
-        </>
-      )}
+      {/* Video block previously rendered here for custom yachts —
+          extracted to its own tab (VideoTab) between Good to know and FAQ
+          so users can jump straight to it from the tab bar. */}
     </Stack>
   );
 };

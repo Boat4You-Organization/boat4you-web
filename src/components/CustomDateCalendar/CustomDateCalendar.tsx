@@ -6,6 +6,10 @@ import 'dayjs/locale/en';
 import 'dayjs/locale/es';
 import 'dayjs/locale/fr';
 import 'dayjs/locale/hr';
+import 'dayjs/locale/it';
+import 'dayjs/locale/nl';
+import 'dayjs/locale/pl';
+import 'dayjs/locale/pt';
 import { useLocale } from 'next-intl';
 
 import CustomDay from '@/components/CustomDateCalendar/CustomDay';

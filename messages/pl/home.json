@@ -1,0 +1,186 @@
+{
+  "hero": {
+    "title": "Czarter jachtów w",
+    "ctaTitle": "jednym kliknięciu.",
+    "description": "Wynajmij idealny jacht w kilku kliknięciach. Łatwo, szybko i bez stresu — Twoja wymarzona przygoda żeglarska zaczyna się tutaj.",
+    "support": "Doskonała obsługa klienta",
+    "yachtsCount": "{count} jachtów",
+    "marinasCount": "{count} marin"
+  },
+  "generalSearchBar": {
+    "whereAreYouGoing": "Dokąd się wybierasz?",
+    "selectBoatType": "Wybierz typ łodzi",
+    "where": "Gdzie",
+    "searchLocations": "Szukaj lokalizacji",
+    "when": "Kiedy",
+    "choosedates": "Wybierz daty",
+    "withWhat": "Czym",
+    "chooseBoat": "Wybierz łódź",
+    "chooseDestination": "Wybierz destynację",
+    "chooseTransportation": "Wybierz transport",
+    "searchBoats": " Szukaj łodzi",
+    "aroundCurrentLocation": "Wokół bieżącej lokalizacji",
+    "locating": "Lokalizowanie…",
+    "locationError": "Nie udało się ustalić Twojej lokalizacji",
+    "selectYacht": "Wybierz jacht"
+  },
+  "destinationsSection": {
+    "theWorldIs": "Najlepsze destynacje",
+    "yours": "czarteru jachtów",
+    "yachts": "jachty",
+    "destinations": {
+      "bahamas": "Bahamy",
+      "caribbean": "Karaiby",
+      "croatia": "Chorwacja",
+      "france": "Francja",
+      "greece": "Grecja",
+      "italy": "Włochy",
+      "martinique": "Martynika",
+      "montenegro": "Czarnogóra",
+      "seychelles": "Seszele",
+      "spain": "Hiszpania",
+      "türkiye": "Turcja",
+      "virginIslandsBritish": "Brytyjskie Wyspy Dziewicze",
+      "grenada": "Grenada",
+      "splitRegion": "Region Splitu",
+      "ionianRegion": "Region Joński"
+    },
+    "destinationsLocative": {
+      "bahamas": "Bahamach",
+      "caribbean": "na Karaibach",
+      "croatia": "Chorwacji",
+      "france": "Francji",
+      "greece": "Grecji",
+      "italy": "Włoszech",
+      "martinique": "Martynice",
+      "montenegro": "Czarnogórze",
+      "seychelles": "Seszelach",
+      "spain": "Hiszpanii",
+      "türkiye": "Turcji",
+      "virginIslandsBritish": "Brytyjskich Wyspach Dziewiczych",
+      "grenada": "Grenadzie",
+      "splitRegion": "Regionie Splitu",
+      "ionianRegion": "Regionie Jońskim"
+    }
+  },
+  "whyChooseUsSection": {
+    "whyChoose": "Dlaczego wybrać nas jako Twojego <strong>profesjonalnego operatora czarteru</strong>",
+    "items": {
+      "competitivePricing": {
+        "title": "Konkurencyjne ceny",
+        "description": "Najlepsze stawki bez ukrytych opłat. Najwyższa jakość w niezrównanych cenach."
+      },
+      "wideSelection": {
+        "title": "Szeroki wybór",
+        "description": "Zróżnicowana flota — od luksusowych jachtów po żaglowe łodzie na każdą okazję."
+      },
+      "securePayment": {
+        "title": "Bezpieczne płatności",
+        "description": "Bezpieczeństwo na poziomie bankowym z zaufanymi bramkami płatniczymi. Twoje dane są chronione."
+      },
+      "trustedCustomerService": {
+        "title": "Zaufana obsługa klienta",
+        "description": "Eksperckie wsparcie 24/7 dla bezproblemowych rezerwacji i niezapomnianych doświadczeń."
+      }
+    }
+  },
+  "ourFleetSection": {
+    "getToKnow": "Mamy łódź, jakiej szukasz, ",
+    "ourFleet": "niezależnie od typu",
+    "boatSelection": "Najlepszy wybór łodzi online w najlepszych cenach",
+    "boat": "łódź",
+    "fleet": {
+      "catamarans": "Katamarany",
+      "gulets": "Guletty",
+      "houseBoats": "Łodzie mieszkalne",
+      "luxuryMotorYachts": "Luksusowe jachty motorowe",
+      "motorboats": "Łodzie motorowe",
+      "motorYachts": "Jachty motorowe",
+      "motorSailors": "Żaglowce motorowe",
+      "powerCatamarans": "Katamarany motorowe",
+      "sailingYachts": "Jachty żaglowe",
+      "miniCruisers": "Mini-rejsowce",
+      "trimarans": "Trimaran",
+      "rubberBoats": "Łódź gumowa"
+    }
+  },
+  "chooseFromFiveHundredLocations": "Ponad 40 krajów do wynajmu łodzi i czarteru jachtów w najlepszych cenach",
+  "riskFreeBooking": {
+    "riskFreeBooking": "Rezerwacja bez ryzyka",
+    "save15Now": "Zaoszczędź teraz 15%",
+    "saveUpTo": "Zaoszczędź do 47%",
+    "cancellingDescription": "Anulowanie u nas jest w pełni bezpieczne i elastyczne. Oferujemy hojne zasady zwrotu, aby chronić Twoją inwestycję."
+  },
+  "blogSection": {
+    "readAboutYour": "Pomysły na kolejne ",
+    "nextHoliday": "wakacje żeglarskie",
+    "discoverSecretSpots": "Odkryj tajemnicze miejsca jak miejscowi; sprawdź nasze porady dotyczące następnego czarteru jachtu."
+  },
+  "allDestinationsSection": {
+    "allOf": "Odkryj nasze ",
+    "ourDestinations": "ulubione miejsca do żeglowania",
+    "specialDeals": "Korzystaj ze specjalnych ofert i oszczędzaj na każdej rezerwacji.",
+    "continents": {
+      "europe": "Europa",
+      "americas": "Ameryki",
+      "asia": "Azja",
+      "africa": "Afryka",
+      "australia": "Australia"
+    }
+  },
+  "languageModal": {
+    "title": "Język i waluta",
+    "savePreferences": "Zapisz preferencje",
+    "languageLabel": "Język",
+    "currencyLabel": "Waluta",
+    "languages": {
+      "en": "Angielski",
+      "fr": "Francuski",
+      "de": "Niemiecki",
+      "pt": "Portugalski",
+      "it": "Włoski",
+      "es": "Hiszpański",
+      "hr": "Chorwacki",
+      "pl": "Polski",
+      "nl": "Holenderski"
+    }
+  },
+  "manufacturersSection": {
+    "title": "Najpopularniejsi producenci jachtów",
+    "subtitle": "Przeglądaj katalog według marki",
+    "preTitle": "Najpopularniejsi ",
+    "emphasizedTitle": "producenci jachtów"
+  },
+  "faqSection": {
+    "title": "Najczęściej zadawane pytania",
+    "subtitle": "Wszystko, co warto wiedzieć przed rezerwacją",
+    "questions": [
+      {
+        "q": "Jak zarezerwować czarter jachtu na Boat4You?",
+        "a": "Wybierz cel podróży i terminy, przejrzyj dostępne jachty i kliknij Rezerwuj przy interesującej Cię jednostce. Potwierdzamy dostępność u partnera, wysyłamy propozycję rezerwacji, a po wpłacie zaliczki Twój czarter jest potwierdzony. Cały proces zajmuje zaledwie kilka minut."
+      },
+      {
+        "q": "Czy do wyczarterowania jachtu potrzebny jest patent żeglarski?",
+        "a": "Do czarteru bez sternika (bareboat) konieczny jest patent żeglarski uznawany w kraju czarteru – polski patent jachtowego sternika morskiego, RYA Day Skipper, ICC lub równoważny. Jeśli nie masz patentu, nadal możesz zarezerwować dowolny jacht i dodać sternika podczas finalizacji rezerwacji."
+      },
+      {
+        "q": "Co jest wliczone w cenę czarteru bareboat?",
+        "a": "Cena bazowa obejmuje sam jacht, standardowe wyposażenie, wsparcie agencji czarterowej oraz ubezpieczenie od poważniejszych szkód. Sprzątanie końcowe, paliwo, opłaty portowe poza mariną macierzystą, transit log i opłata turystyczna są zwykle płatne osobno – na karcie każdego jachtu znajdziesz przejrzystą listę dodatków obowiązkowych i opcjonalnych."
+      },
+      {
+        "q": "Czy mogę wyczarterować jacht bez sternika?",
+        "a": "Tak. Czarter bareboat jest dostępny dla większości jachtów w naszym katalogu, pod warunkiem że co najmniej jedna osoba na pokładzie posiada ważny patent żeglarski oraz świadectwo operatora radiowego VHF. Jeśli nikt w załodze nie ma patentu, ten sam jacht można wynająć z profesjonalnym sternikiem za dodatkową opłatą dzienną."
+      },
+      {
+        "q": "Kiedy najlepiej wyczarterować jacht na Mediterranean?",
+        "a": "Maj, czerwiec i wrzesień to idealny moment – ciepłe morze, lekkie wiatry, mniej tłumów i wyraźnie niższe ceny niż w szczycie sezonu w lipcu i sierpniu. Kwiecień i październik również się sprawdzają dla doświadczonych żeglarzy, którym nie przeszkadza chłodniejsza woda – oferują najniższe stawki tygodniowe w roku."
+      },
+      {
+        "q": "Czy mogę anulować rezerwację?",
+        "a": "Warunki anulacji różnią się w zależności od jachtu – dokładne zasady wyświetlamy na stronie każdej oferty przed dokonaniem płatności. Na etapie finalizacji oferujemy też opcjonalne ubezpieczenie od kosztów rezygnacji, które zwraca koszt czarteru w przypadku anulacji z przyczyny objętej polisą. Zwrotna kaucja jest oddawana w całości, o ile jacht nie został uszkodzony."
+      }
+    ],
+    "preTitle": "Często zadawane ",
+    "emphasizedTitle": "pytania"
+  }
+}

@@ -4,7 +4,7 @@ import { useFormContext } from 'react-hook-form';
 
 import { Box } from '@mui/material';
 
-import { getLocations, getPopularLocations, PopularEntry } from '@/actions/locations.actions';
+import { PopularEntry, getLocations, getPopularLocations } from '@/actions/locations.actions';
 import AutocompleteMultipleChip from '@/components/AutocompleteMultipleChip';
 import { AutocompleteOption } from '@/components/AutocompleteMultipleChip/AutocompleteMultipleChip';
 import FlagIcon from '@/components/FlagIcon';
@@ -14,7 +14,7 @@ import Location from '@/components/SvgIcons/Location';
 import Target from '@/components/SvgIcons/Target';
 import { LocationModel } from '@/models/locations.model';
 import colors from '@/styles/themes/colors';
-import { LocationType, LOCATION_TYPE_LABEL_MAP } from '@/types/location.type';
+import { LOCATION_TYPE_LABEL_MAP, LocationType } from '@/types/location.type';
 import { PaginatedResponse } from '@/types/response.type';
 import useRecentSearches from '@/utils/hooks/useRecentSearches';
 
@@ -58,25 +58,46 @@ const TAG_BY_TYPE: Record<LocationType, SearchOptionTag> = {
   [LocationType.COUNTRY]: { label: 'country', color: colors.green500 },
 };
 
-// Always show the country flag — marinas, regions and countries all get the flag
-// of their country (FlagIcon gracefully falls back to a generic Location pin if
-// the country code is missing or invalid). The default FlagIcon wrapper is 28×28
-// (sized for hero / booking surfaces); in the dropdown we want the same visual
-// weight as the boat-type SVGs (20×20), so override the wrapper locally instead
-// of changing the global FlagIcon size.
-const getLocationIcon = (location: LocationModel) => (
-  <Box
-    sx={{
-      display: 'flex',
-      '& > div:first-of-type': {
-        width: 20,
-        height: 20,
-      },
-    }}
-  >
-    <FlagIcon countryCode={location.countryCode} />
-  </Box>
-);
+// Marinas and countries get a country flag; regions get the generic map pin
+// regardless of country_code. A flag next to "Split region" implied this row
+// was a country-specific entry, when in fact the dropdown already groups it
+// under "Region" + carries the smeđi `region` tag. The pin reads more like
+// "this is an area" and matches the MAP fallback users were already
+// rewarded with on legacy rows that lacked country_code.
+const getLocationIcon = (location: LocationModel) => {
+  if (location.locationType === LocationType.REGION) {
+    return (
+      <Box
+        sx={{
+          display: 'flex',
+          '& > div:first-of-type': {
+            width: 20,
+            height: 20,
+          },
+        }}
+      >
+        {/* FlagIcon with empty/invalid countryCode falls back to the
+            generic Location pin SVG — reuse that path so we keep one icon
+            component end-to-end. */}
+        <FlagIcon countryCode={null} />
+      </Box>
+    );
+  }
+
+  return (
+    <Box
+      sx={{
+        display: 'flex',
+        '& > div:first-of-type': {
+          width: 20,
+          height: 20,
+        },
+      }}
+    >
+      <FlagIcon countryCode={location.countryCode} />
+    </Box>
+  );
+};
 
 const transformLocationToOption = (
   location: LocationModel,
@@ -93,6 +114,57 @@ const transformLocationToOption = (
     group: isSelected ? SELECTED_GROUP : overrideGroup || baseGroup,
     tag: TAG_BY_TYPE[location.locationType],
   };
+};
+
+/**
+ * Collapse paired REGION duplicates that come from the legacy dual-source
+ * import (one row per provider per region — e.g. "Dubrovnik / Montenegro"
+ * with no country_code AND "Dubrovnik region" with HR). Both render in the
+ * autocomplete and confuse users.
+ *
+ * Strategy: bucket REGION rows by their first lowercase token (split on
+ * whitespace OR `/`); within each bucket prefer the row WITH a country_code.
+ * Those rows also carry the "<area> region" naming convention, which feeds
+ * the search-results H1 ("Catamaran charter in Split region") so the page
+ * title still reads as a region rather than a city. The map-pin icon is
+ * applied uniformly via getLocationIcon, so the visual treatment matches
+ * regardless of which row wins.
+ *
+ * Non-REGION rows pass through untouched.
+ */
+const dedupeRegionDuplicates = (locations: LocationModel[]): LocationModel[] => {
+  const primaryByKey = new Map<string, string>(); // key → location id we keep
+
+  for (const loc of locations) {
+    if (loc.locationType !== LocationType.REGION) continue;
+
+    const key = loc.name.toLowerCase().split(/[\s/]/).filter(Boolean)[0];
+
+    if (!key) continue;
+
+    const winnerId = primaryByKey.get(key);
+
+    if (!winnerId) {
+      primaryByKey.set(key, loc.id);
+      continue;
+    }
+
+    const winner = locations.find(l => l.id === winnerId);
+
+    if (winner && !winner.countryCode && loc.countryCode) {
+      primaryByKey.set(key, loc.id);
+    }
+  }
+
+  return locations.filter(loc => {
+    if (loc.locationType !== LocationType.REGION) return true;
+
+    const key = loc.name.toLowerCase().split(/[\s/]/).filter(Boolean)[0];
+
+    if (!key) return true;
+
+    return primaryByKey.get(key) === loc.id;
+  });
 };
 
 const useLocationAutocomplete = ({
@@ -159,6 +231,7 @@ const useLocationAutocomplete = ({
             filtered.forEach(loc => {
               if (!matches.find(m => m.id === loc.id)) matches.push(loc);
             });
+
             if (matches.length >= 5) break;
           }
 
@@ -260,6 +333,7 @@ const useLocationAutocomplete = ({
         if (groupMembers) {
           groupMembers.forEach(m => {
             if (!expandedIds.includes(m.id)) expandedIds.push(m.id);
+
             if (popularEntry) popularLabelByMemberId.set(m.id, popularEntry.displayLabel);
           });
         } else if (!expandedIds.includes(id)) {
@@ -275,13 +349,24 @@ const useLocationAutocomplete = ({
 
     const selectedLocationsName: string[] = [];
     const newlyAdded: LocationModel[] = [];
+    // Dedupe by display label so dual-source region pairs (Ionian + Ionian
+    // Islands → "Ionian Region", Split + Split region → "Split Region") show
+    // up as ONE chip in the search bar even though `did` keeps both backend
+    // ids so search hits both providers.
+    const seenLabels = new Set<string>();
 
     expandedIds.forEach(selectId => {
       const location = pool.find(loc => loc.id === selectId);
 
       if (location) {
         const popularLabel = popularLabelByMemberId.get(selectId);
-        selectedLocationsName.push(popularLabel ?? location.name);
+        const label = popularLabel ?? location.name;
+        const labelKey = label.toLowerCase();
+
+        if (!seenLabels.has(labelKey)) {
+          seenLabels.add(labelKey);
+          selectedLocationsName.push(label);
+        }
 
         if (!previousIds.includes(selectId)) {
           newlyAdded.push(location);
@@ -330,9 +415,38 @@ const useLocationAutocomplete = ({
         icon: <Target props={{ width: 20, height: 20 }} />,
       });
 
-      // 1. Previously selected items (pinned).
+      // 1. Previously selected items (pinned). For popular dual-source pairs
+      //    where every member id is currently selected, render ONE row using
+      //    the popular displayLabel + the primary member id — the autocomplete
+      //    chip then collapses to a single chip (e.g. "Ionian Region") instead
+      //    of two stacked rows ("Ionian" + "Ionian Islands"). The hidden
+      //    duplicate id is still in form `did`, so backend search keeps hitting
+      //    both providers; clearing the chip wipes the whole `did` value.
+      const popularSelectedMemberIds = new Set<string>();
+
+      popularEntries.forEach(entry => {
+        const memberIds = entry.members.map(m => m.id);
+        const allSelected = memberIds.length > 0 && memberIds.every(id => selectedSet.has(id));
+
+        if (!allSelected) return;
+
+        memberIds.forEach(id => popularSelectedMemberIds.add(id));
+
+        const primary = entry.members[0];
+
+        if (primary) {
+          push({
+            id: primary.id,
+            label: entry.displayLabel,
+            icon: getLocationIcon(primary),
+            group: SELECTED_GROUP,
+            tag: TAG_BY_TYPE[entry.primaryType],
+          });
+        }
+      });
+
       (stateLocation?.content || [])
-        .filter(loc => selectedSet.has(loc.id))
+        .filter(loc => selectedSet.has(loc.id) && !popularSelectedMemberIds.has(loc.id))
         .forEach(loc => push(transformLocationToOption(loc, true)));
 
       // 2. Recent searches — above popular, only when user actually has any.
@@ -373,14 +487,15 @@ const useLocationAutocomplete = ({
       return collected;
     }
 
-    // When the user is actively typing, show API search results (plus pinned selected).
-    (stateLocation?.content || [])
-      .filter(loc => selectedSet.has(loc.id))
-      .forEach(loc => push(transformLocationToOption(loc, true)));
+    // When the user is actively typing, show API search results (plus pinned
+    // selected). Run REGION dedup so paired duplicates from the dual-source
+    // import (e.g. "Dubrovnik / Montenegro" + "Dubrovnik region") collapse to
+    // one row.
+    const apiLocations = dedupeRegionDuplicates(stateLocation?.content || []);
 
-    (stateLocation?.content || [])
-      .filter(loc => !selectedSet.has(loc.id))
-      .forEach(loc => push(transformLocationToOption(loc, false)));
+    apiLocations.filter(loc => selectedSet.has(loc.id)).forEach(loc => push(transformLocationToOption(loc, true)));
+
+    apiLocations.filter(loc => !selectedSet.has(loc.id)).forEach(loc => push(transformLocationToOption(loc, false)));
 
     return collected;
   };

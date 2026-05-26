@@ -39,6 +39,56 @@ export async function getManufacturers(
   }
 }
 
+/**
+ * Top-N most popular manufacturers across the catalogue, joined with their
+ * yacht counts so the home-page link grid can render
+ * "Lagoon · 2,010 yachts / Bavaria · 1,994 yachts / …".
+ *
+ * Drives the SEO internal-link section that every charter aggregator
+ * (Boataround, SamBoat, etc.) places on the home page — long-tail brand
+ * queries ("Lagoon yacht charter", "Bavaria boat rental") collectively
+ * out-perform any single home-page block; the per-brand link earns Google
+ * crawl budget and link equity for filtered `/search?mfid=X` URLs.
+ *
+ * Composition:
+ *   1. `/public/yachts/distribution` (faceted counts) → byManufacturer map
+ *      `{ id: count }` — already covers the entire indexable catalogue
+ *   2. `/public/catalogue/manufacturers?size=400` → id + name lookup
+ *   3. Sort by count desc, slice top N, drop entries we couldn't name
+ *
+ * Cached 1 hour — manufacturer counts move slowly; refreshing on every
+ * home-page hit would burn the distribution endpoint unnecessarily.
+ */
+export type ManufacturerCount = { id: number; name: string; count: number };
+
+export async function getTopManufacturers(limit = 24): Promise<ManufacturerCount[]> {
+  const base = process.env.NEXT_PUBLIC_BOAT_WS_API_URL;
+  const REVALIDATE = 3600;
+
+  try {
+    const [distRes, mansRes] = await Promise.all([
+      fetch(`${base}/public/yachts/distribution`, { next: { revalidate: REVALIDATE } }),
+      fetch(`${base}/public/catalogue/manufacturers?size=400`, { next: { revalidate: REVALIDATE } }),
+    ]);
+
+    if (!distRes.ok || !mansRes.ok) return [];
+
+    const distJson = (await distRes.json()) as { byManufacturer?: Record<string, number> };
+    const mansJson = (await mansRes.json()) as PaginatedResponse<ManufacturerModel>;
+
+    const byManufacturer = distJson.byManufacturer || {};
+    const nameById = new Map<number, string>((mansJson.content || []).map(m => [m.id as number, m.name as string]));
+
+    return Object.entries(byManufacturer)
+      .map(([id, count]) => ({ id: Number(id), name: nameById.get(Number(id)) || '', count }))
+      .filter(m => m.name && m.count > 0)
+      .sort((a, b) => b.count - a.count)
+      .slice(0, limit);
+  } catch {
+    return [];
+  }
+}
+
 export async function getModels(
   prevState: ModelsActionState,
   params: {

@@ -1,0 +1,53 @@
+{
+  "metadata": {
+    "base": {
+      "title": "Czarter jachtów i wynajem łodzi na świecie | Boat4You",
+      "titleTemplate": "%s | Boat4You",
+      "description": "Czarter jachtów i wynajem łodzi w ponad 100 krajach. Żaglówki, katamarany, motorówki. Najlepsze ceny, wsparcie 24/7, bezpieczna rezerwacja.",
+      "path": "/"
+    },
+    "search": {
+      "title": "Wyszukaj jachty",
+      "description": "Znajdź i zarezerwuj idealny jacht w kilku kliknięciach. Prosto, szybko i bez stresu — Twoja wymarzona przygoda żeglarska zaczyna się tutaj.",
+      "path": "/search"
+    },
+    "blog": {
+      "title": "Przewodniki czarteru jachtów | Planowanie, trasy, aktualności",
+      "description": "Eksperckie przewodniki czarteru jachtów Boat4You dostarczają inspiracji i wglądu w żeglarskie wakacje — jak wybrać odpowiednią łódź i gdzie wypłynąć.",
+      "path": "/blog"
+    },
+    "aboutUs": {
+      "title": "Twoja globalna przygoda żeglarska zaczyna się tutaj",
+      "description": "W Boat4You przekształcamy Twoje żeglarskie marzenia w niezapomniane przygody na najpiękniejszych wodach świata.",
+      "path": "/about-us"
+    },
+    "contactUs": {
+      "title": "Skontaktuj się z nami teraz",
+      "description": "W Boat4You z pasją tworzymy niezapomniane doświadczenia czarteru jachtów.",
+      "path": "/contact-us"
+    },
+    "howWeWork": {
+      "title": "Rezerwacja łodzi nigdy nie była prostsza",
+      "description": "W Boat4You wierzymy, że wynajem łodzi powinien być tak płynny i ekscytujący jak sama podróż.",
+      "path": "/how-we-work"
+    },
+    "faq": {
+      "title": "Rezerwacja i dostępność",
+      "description": "Znajdź szybkie odpowiedzi dotyczące funkcji, konfiguracji, cen i wsparcia Boat4You.",
+      "path": "/faq"
+    },
+    "termsAndConditions": {
+      "title": "Regulamin",
+      "description": "Zapoznaj się z regulaminem korzystania z Boat4You, w tym z obowiązkami użytkowników, płatnościami i zasadami konta.",
+      "path": "/terms-and-conditions"
+    },
+    "privacyPolicy": {
+      "title": "Polityka prywatności",
+      "description": "Przeczytaj, jak Boat4You zbiera, wykorzystuje i chroni Twoje dane osobowe podczas korzystania z naszej strony i usług.",
+      "path": "/privacy-policy"
+    }
+  },
+  "boat": {
+    "forRent": "do wynajęcia"
+  }
+}

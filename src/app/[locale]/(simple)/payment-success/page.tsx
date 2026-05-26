@@ -67,11 +67,13 @@ const PaymentSuccessPage = () => {
           // /enter-your-details so the confirmation page still shows yacht +
           // pick-up info + totals.
           const saved = getDataFromLocalStorage<ReservationData>('yachtReservation');
+
           if (saved) setGuestFallback(saved);
           else setHasError(true);
         }
       } catch (error) {
         const saved = getDataFromLocalStorage<ReservationData>('yachtReservation');
+
         if (saved) setGuestFallback(saved);
         else setHasError(true);
       } finally {
@@ -96,7 +98,7 @@ const PaymentSuccessPage = () => {
   const overviewData =
     reservationData && Object.keys(reservationData).length > 0
       ? reservationData
-      : (({
+      : ({
           id: Number(reservationId) || 0,
           yacht: {
             name: guestFallback!.name,
@@ -117,7 +119,7 @@ const PaymentSuccessPage = () => {
           modelName: guestFallback!.model,
           locationFrom: guestFallback!.locationFrom?.name ?? '',
           locationFromCountryCode: guestFallback!.locationFrom?.countryCode ?? '',
-        } as unknown) as ReservationDetails);
+        } as unknown as ReservationDetails);
 
   const isGuest = !reservationData || Object.keys(reservationData).length === 0;
   // Carry the email + invite context forward into the signup flow. Guest users
@@ -182,9 +184,7 @@ const PaymentSuccessPage = () => {
   // there — no "Thank you for choosing us, Guest" — the comma + generic word
   // reads worse than just the brand thank-you line.
   const fullName = contact ? `${contact.name} ${contact.surname}`.trim() : '';
-  const thankYouLine = fullName
-    ? t('thankYouForChoosingUsNamed', { name: fullName })
-    : t('thankYouForChoosingUs');
+  const thankYouLine = fullName ? t('thankYouForChoosingUsNamed', { name: fullName }) : t('thankYouForChoosingUs');
 
   return (
     <Layout showFooter={false}>

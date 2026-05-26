@@ -1,8 +1,11 @@
 {
   "hero": {
-    "title": "Book a yacht in",
+    "title": "Yacht charter in",
     "ctaTitle": "one click.",
-    "description": "Charter your perfect yacht in just a few clicks. Easy, fast, and stress-free — your dream sailing adventure starts here."
+    "description": "Charter your perfect yacht in just a few clicks. Easy, fast, and stress-free — your dream sailing adventure starts here.",
+    "support": "Excellent customer support",
+    "yachtsCount": "{count} yachts",
+    "marinasCount": "{count} marinas"
   },
   "generalSearchBar": {
     "whereAreYouGoing": "Where are you going?",
@@ -38,7 +41,26 @@
       "spain": "Spain",
       "türkiye": "Türkiye",
       "virginIslandsBritish": "Virgin Islands (British)",
-      "grenada": "Grenada"
+      "grenada": "Grenada",
+      "splitRegion": "Split Region",
+      "ionianRegion": "Ionian Region"
+    },
+    "destinationsLocative": {
+      "bahamas": "Bahamas",
+      "caribbean": "Caribbean",
+      "croatia": "Croatia",
+      "france": "France",
+      "greece": "Greece",
+      "italy": "Italy",
+      "martinique": "Martinique",
+      "montenegro": "Montenegro",
+      "seychelles": "Seychelles",
+      "spain": "Spain",
+      "türkiye": "Türkiye",
+      "virginIslandsBritish": "Virgin Islands (British)",
+      "grenada": "Grenada",
+      "splitRegion": "Split Region",
+      "ionianRegion": "Ionian Region"
     }
   },
   "whyChooseUsSection": {
@@ -86,6 +108,7 @@
   "riskFreeBooking": {
     "riskFreeBooking": "Risk free booking",
     "save15Now": "Save 15% now",
+    "saveUpTo": "Save up to 47%",
     "cancellingDescription": "Cancelling with us is fully risk-free and flexible. We offer generous refund policies to protect your investment."
   },
   "blogSection": {
@@ -117,7 +140,47 @@
       "pt": "Portuguese",
       "it": "Italian",
       "es": "Spanish",
-      "hr": "Croatian"
+      "hr": "Croatian",
+      "pl": "Polish",
+      "nl": "Dutch"
     }
+  },
+  "manufacturersSection": {
+    "title": "Most popular yacht manufacturers",
+    "subtitle": "Browse the catalogue by brand",
+    "preTitle": "Most popular ",
+    "emphasizedTitle": "yacht manufacturers"
+  },
+  "faqSection": {
+    "title": "Frequently asked questions",
+    "subtitle": "Everything you need to know before you book",
+    "questions": [
+      {
+        "q": "How do I book a yacht charter on Boat4You?",
+        "a": "Pick your destination and dates, browse available yachts, and click Reserve on the boat you like. We confirm availability with the partner, send a booking proposal, and once you pay the deposit your charter is locked in. The whole flow takes a few minutes."
+      },
+      {
+        "q": "Do I need a sailing license to charter a yacht?",
+        "a": "For bareboat charter (without skipper) you need a sailing licence recognised by the country of charter — a Croatian boat licence, RYA Day Skipper, ICC, or equivalent. If you do not have a licence you can still book any yacht and add a skipper at checkout."
+      },
+      {
+        "q": "What is included in the bareboat charter rate?",
+        "a": "The base rate covers the yacht itself, standard equipment, charter agency support and insurance against major damage. End cleaning, fuel, mooring fees outside the home marina, transit log and tourist tax are usually paid separately — every yacht detail page lists the obligatory and optional extras transparently."
+      },
+      {
+        "q": "Can I charter a yacht without a skipper?",
+        "a": "Yes. Bareboat charter is available on most yachts in our catalogue, provided at least one person on board holds a valid sailing licence and a VHF radio licence. If no one in the group has a licence, you can rent the same yacht with a professional skipper for an additional daily fee."
+      },
+      {
+        "q": "When is the best time to charter a yacht in the Mediterranean?",
+        "a": "May, June and September are the sweet spot — warm sea, light winds, fewer crowds and noticeably lower prices than peak July and August. April and October still work for confident sailors who do not mind a cooler sea, and they offer the lowest weekly rates of the year."
+      },
+      {
+        "q": "Can I cancel my booking?",
+        "a": "Cancellation policies vary by yacht — every offer page shows the exact terms before you pay. We also offer optional cancellation insurance at checkout, which refunds your charter cost if you have to cancel for a covered reason. Refundable security deposit is always returned unless the yacht is damaged."
+      }
+    ],
+    "preTitle": "Frequently ",
+    "emphasizedTitle": "asked questions"
   }
 }

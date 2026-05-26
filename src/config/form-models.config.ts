@@ -59,6 +59,8 @@ export interface ProfileFormValues {
   address: string;
   city: string;
   country: string;
+  /** ISO yyyy-MM-dd. Empty string when the user hasn't set their birthday. */
+  birthday: string;
   password: string;
   language: Language;
   currency: Currency;
@@ -104,6 +106,8 @@ export interface YachtSearchParams {
   yid?: number[];
   did?: string[];
   boatTypes?: VesselType[];
+  /** Sitemap-only — restrict the result to a 2-letter country whitelist. */
+  countryCodes?: string[];
   currentDate?: string;
   reservationDateFrom?: string;
   price?: number;

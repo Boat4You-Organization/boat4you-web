@@ -1,0 +1,61 @@
+{
+  "hero": {
+    "title": "<strong>Twoja globalna przygoda żeglarska zaczyna się tutaj.</strong>",
+    "description": "W <logo></logo> <companyName>Boat4You</companyName> zamieniasz plany podróży w prawdziwe rejsy po najlepszych wodach świata. Z korzeni śródziemnomorskich wyrośliśmy na globalną platformę czarterową. Zyskujesz fachową radę, zweryfikowane łodzie i płynny proces rezerwacji od pierwszej wyceny aż do wypłynięcia."
+  },
+  "stats": {
+    "title": "Kluczowe atuty budujące zaufanie",
+    "description": "Niezależna porada. Neutralne rekomendacje dopasowane do Twoich dat, wielkości załogi i budżetu.<br></br>Zweryfikowani partnerzy. Ubezpieczenia, licencje i kontrole bezpieczeństwa zarejestrowane u naszego zespołu.<br></br>Przejrzyste ceny. Jasne umowy. Bez ukrytych opłat.<br></br>Zgodność z RODO. Bezpieczne płatności. Prywatność domyślnie.<br></br>Realne wsparcie. Pomoc 24/7 przed, w trakcie i po Twojej podróży.",
+    "premiumYachtsFleet": "Jachty Premium w naszej globalnej flocie",
+    "worldwideDestinations": "Destynacje na całym świecie",
+    "teamExperience": "Lata łącznego doświadczenia zespołu",
+    "customersServed": "Zadowoleni klienci",
+    "charterPartners": "Zweryfikowani partnerzy czarterowi"
+  },
+  "aboutUs": {
+    "title": "Kim jesteśmy",
+    "mainTitle": "Zamieniamy marzenia w rejsy",
+    "description": "Wierzymy, że zasługujesz na prywatny jacht, który będzie idealny na Twój tydzień. Nasz zespół ma ponad 20 lat doświadczenia w branży czarterowej, z lokalną wiedzą w Europie, na Karaibach i poza nimi. Audytujemy bazy, testujemy trasy i instruujemy załogi — wszystko dla Twoich szytych na miarę wakacji żeglarskich. Otrzymujesz uczciwe doradztwo, a nie zgadywankę."
+  },
+  "whyChooseUs": {
+    "title": "Dlaczego Boat4You",
+    "mainTitle": "Niezrównane doświadczenie czarteru jachtów zaczyna się tutaj",
+    "description": "Nasze zaangażowanie w doskonałość wyróżnia nas w konkurencyjnej branży czarteru jachtów",
+    "features": {
+      "0": {
+        "title": "Sprawdzona globalna wiedza",
+        "description": "Doświadczeni brokerzy z bogatym dorobkiem w Chorwacji, Grecji, Włoszech, Hiszpanii, Francji, Turcji, BVI, na Bahamach, Martynice i Grenadzie."
+      },
+      "1": {
+        "title": "Spersonalizowana obsługa",
+        "description": "Każda trasa jest dopasowana do Ciebie. Czas z rodziną, aktywne żeglarstwo, jedzenie i wino lub spokojne zatoki. Ty decydujesz o tempie."
+      },
+      "2": {
+        "title": "Bezpłatne rezerwacje",
+        "description": "Zarezerwuj opcje i porównuj jachty bez dodatkowych opłat. Jasne terminy i przypomnienia."
+      },
+      "3": {
+        "title": "Dostęp do floty premium",
+        "description": "Monokadłubowce, katamarany, jachty motorowe i superjachty od zaufanych flot. Nowości w każdym sezonie."
+      },
+      "4": {
+        "title": "Bezpieczna rezerwacja",
+        "description": "Płatności w depozycie przez zatwierdzone bramki płatnicze. Obsługa danych zgodna z RODO."
+      },
+      "5": {
+        "title": "Wsparcie 24/7",
+        "description": "Ludzie, nie boty. Kontakty z bazami, sprawdzanie pogody, pomoc w trasach i szybkie odpowiedzi, gdy plany się zmieniają."
+      }
+    }
+  },
+  "ourPromise": {
+    "title": "Nasza obietnica",
+    "mainTitle": "Tu zaczynają się wspomnienia na całe życie: nasza obietnica przekroczenia wszystkich Twoich oczekiwań",
+    "description": "Twój komfort i bezpieczeństwo są priorytetem każdej decyzji. Rekomendujemy trasy dopasowane do tygodnia, którego chcesz — od skoków po wyspach Cyklad po piaszczyste mielizny Exumas. Otrzymujesz niezawodne łodzie, poinstruowaną załogę i plan, który sprawdza się w rzeczywistych warunkach. Dążymy do jednego efektu — schodząc na ląd, mówisz: chętnie znów popłyniemy z Boat4You."
+  },
+  "ourFleet": {
+    "title": "Mamy łódź, jakiej chcesz, ",
+    "emphasizedTitle": "niezależnie od typu",
+    "description": "Najlepszy wybór łodzi online w najlepszych cenach"
+  }
+}

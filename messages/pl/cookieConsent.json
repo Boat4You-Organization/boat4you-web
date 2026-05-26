@@ -1,0 +1,38 @@
+{
+  "title": "Pliki cookie",
+  "description": "Używamy plików cookie, aby poprawić Twoje doświadczenie!",
+  "mainTitle": "Polityka plików cookie",
+  "mainDescription": "Używamy plików cookie, aby poprawić Twoje doświadczenie na platformie Boat4You, analizować sposób korzystania z naszej witryny i ulepszać nasz system rezerwacji łodzi. Te pliki cookie pomagają nam dostarczać spersonalizowane treści i zapewniają optymalne działanie naszej platformy. Zbieramy niezbędne pliki cookie do funkcjonowania platformy, dane analityczne w celu poprawy doświadczenia użytkownika oraz preferencje do personalizacji Twojego pulpitu. Dowiedz się więcej w naszej <link>Polityce prywatności</link>.",
+  "buttons": {
+    "accept": "Akceptuj wszystkie",
+    "reject": "Akceptuj tylko niezbędne",
+    "manage": "Ustawienia plików cookie",
+    "save": "Zapisz ustawienia"
+  },
+  "cookieList": {
+    "name": "Nazwa",
+    "domain": "Domena",
+    "duration": "Czas trwania",
+    "description": "Opis"
+  },
+  "necessary": {
+    "title": "Niezbędne pliki cookie",
+    "description": "Te pliki cookie są niezbędne do prawidłowego działania naszej strony i nie można ich wyłączyć. Umożliwiają podstawowe funkcje, takie jak bezpieczeństwo formularzy, ustawienia języka i podstawową nawigację. Możesz je zablokować w przeglądarce, ale niektóre części witryny mogą nie działać prawidłowo. Te pliki cookie nie przechowują danych umożliwiających identyfikację."
+  },
+  "analytics": {
+    "title": "Analityczne pliki cookie",
+    "description": "Te pliki cookie pomagają nam zrozumieć, jak odwiedzający korzystają z naszej witryny, zbierając anonimowe informacje o wzorcach użycia, popularnych stronach i obszarach do poprawy. Wykorzystujemy te dane do optymalizacji wydajności platformy i poprawy doświadczeń klientów szukających wynajmu łodzi.",
+    "cookies": [
+      {
+        "name": "_ga",
+        "domain": "www.boat4you.com",
+        "duration": "400 dni",
+        "description": "Plik cookie Google Analytics, który rozróżnia unikalnych użytkowników i zbiera anonimowe dane o ruchu w witrynie, interakcjach użytkowników i trendach, aby pomóc nam ulepszać naszą platformę rezerwacji łodzi i doświadczenie użytkownika."
+      }
+    ]
+  },
+  "marketing": {
+    "title": "Marketingowe pliki cookie",
+    "description": "Te pliki cookie pomagają nam zrozumieć skuteczność marketingu i zidentyfikować potencjalnych klientów zainteresowanych naszą platformą wynajmu łodzi. Używamy ich do śledzenia interakcji w witrynie i ulepszania naszych działań skierowanych do klientów poszukujących usług czarterowych jachtów. Te pliki cookie są ładowane wyłącznie po Twojej zgodzie i możesz wycofać zgodę w dowolnym momencie."
+  }
+}

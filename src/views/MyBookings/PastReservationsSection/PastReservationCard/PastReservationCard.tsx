@@ -8,9 +8,11 @@ import {
   RESERVATION_STATUS_COLOR_MAP,
   RESERVATION_STATUS_LABEL_MAP,
   ReservationShortInfo,
+  ReservationStatus,
 } from '@/models/reservation.model';
 import colors from '@/styles/themes/colors';
 import DateTime from '@/utils/static/DateTime';
+import { getCancellationDisplayState } from '@/utils/static/cancellationUtils';
 import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
 import { getBoatImageUrl } from '@/utils/static/imageUtils';
 import { toTitleCase } from '@/utils/static/toTitleCase';
@@ -37,6 +39,7 @@ const PastReservationCard = ({ reservation }: PastReservationCardProps) => {
     yachtImage,
     modelName,
     cancellationRequestAt,
+    cancellationRejectedAt,
   } = reservation;
   const locale = useLocale();
 
@@ -47,9 +50,7 @@ const PastReservationCard = ({ reservation }: PastReservationCardProps) => {
   });
 
   const showListPrice = typeof listPrice === 'number' && listPrice > totalPrice;
-  const discountPercent = showListPrice
-    ? Math.round(((listPrice! - totalPrice) / listPrice!) * 100)
-    : 0;
+  const discountPercent = showListPrice ? Math.round(((listPrice! - totalPrice) / listPrice!) * 100) : 0;
   const formattedListPrice = showListPrice
     ? formatPriceWithCurrency({
         clientPriceEur: listPrice!,
@@ -73,14 +74,28 @@ const PastReservationCard = ({ reservation }: PastReservationCardProps) => {
         <CardContent className={styles.content}>
           <Stack direction="column">
             <Stack direction="row" alignItems="flex-start" gap={1} flexWrap="wrap">
-              {cancellationRequestAt ? (
-                <StatusChip label={t('cancellationInProgress')} color="warning" />
-              ) : (
-                <StatusChip
-                  label={t(RESERVATION_STATUS_LABEL_MAP[status])}
-                  color={RESERVATION_STATUS_COLOR_MAP[status]}
-                />
-              )}
+              {(() => {
+                const cancelState = getCancellationDisplayState({
+                  cancellationRequestAt,
+                  cancellationRejectedAt,
+                  isCancelled: status === ReservationStatus.CANCELLED,
+                });
+
+                if (cancelState === 'pending') {
+                  return <StatusChip label={t('cancellationInProgress')} color="warning" />;
+                }
+
+                if (cancelState === 'rejected') {
+                  return <StatusChip label={t('cancellationRequestRejected')} color="error" />;
+                }
+
+                return (
+                  <StatusChip
+                    label={t(RESERVATION_STATUS_LABEL_MAP[status])}
+                    color={RESERVATION_STATUS_COLOR_MAP[status]}
+                  />
+                );
+              })()}
               <Typography variant="body1" color={colors.black500}>
                 {reservationNumber && `#${reservationNumber}`}
               </Typography>
@@ -98,11 +113,7 @@ const PastReservationCard = ({ reservation }: PastReservationCardProps) => {
           <Stack mt={{ xs: 0, md: 4 }}>
             {showListPrice && (
               <Stack direction="row" alignItems="center" gap={1}>
-                <Typography
-                  variant="body2"
-                  color={colors.black500}
-                  sx={{ textDecoration: 'line-through' }}
-                >
+                <Typography variant="body2" color={colors.black500} sx={{ textDecoration: 'line-through' }}>
                   {formattedListPrice}
                 </Typography>
                 <Typography variant="body2" color={colors.black950} fontWeight={800}>

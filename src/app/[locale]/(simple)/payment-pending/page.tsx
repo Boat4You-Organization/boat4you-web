@@ -56,11 +56,13 @@ const PaymentPendingPage = () => {
           // localStorage so we can still show a meaningful "pre-reserved"
           // confirmation card.
           const saved = getDataFromLocalStorage<ReservationData>('yachtReservation');
+
           if (saved) setGuestFallback(saved);
         }
       } catch (error) {
         // Network/auth error — try the local payload as above.
         const saved = getDataFromLocalStorage<ReservationData>('yachtReservation');
+
         if (saved) setGuestFallback(saved);
       } finally {
         setLoading(false);

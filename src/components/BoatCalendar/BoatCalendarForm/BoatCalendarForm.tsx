@@ -391,12 +391,24 @@ const BoatCalendarForm = ({ yacht, variant }: BoatCalendarFormProps) => {
                       clientPriceInfo: priceInfo,
                     });
 
+                    // Two-row layout: long descriptions wrap freely on the
+                    // first row, the price (with €) stays on its own line
+                    // right-aligned. Mario flagged that flex space-between
+                    // was squeezing the price into a narrow slot wide enough
+                    // for "560" but not for "560 €", so the symbol broke
+                    // onto a second visual line.
                     return (
-                      <Stack key={`${name}-${id}`} direction="row" justifyContent="space-between">
-                        <Typography display="flex" flexDirection="row" gap="4px" variant="body1">
+                      <Stack
+                        key={`${name}-${id}`}
+                        direction="row"
+                        justifyContent="space-between"
+                        alignItems="flex-start"
+                        gap={2}
+                      >
+                        <Typography variant="body1" sx={{ flex: 1, minWidth: 0 }}>
                           {labelCode ? tServices(labelCode as YachtServiceExtrasKey) : name}
                         </Typography>
-                        <Typography variant="body1" whiteSpace="nowrap">
+                        <Typography variant="body1" whiteSpace="nowrap" sx={{ flexShrink: 0 }}>
                           {formattedPrice}
                         </Typography>
                       </Stack>
@@ -414,22 +426,30 @@ const BoatCalendarForm = ({ yacht, variant }: BoatCalendarFormProps) => {
                 // return). Renders the primary amount; insured deposit (if
                 // any) is a separate optional extra handled elsewhere.
                 const showSecurityDeposit = yacht.securityDeposit > 0;
-                const renderRow = ({ id, name, priceEur, priceInfo, labelCode }: typeof inAdvance[number]) => {
+                const renderRow = ({ id, name, priceEur, priceInfo, labelCode }: (typeof inAdvance)[number]) => {
                   const formattedPrice = formatPriceWithCurrency({
                     clientPriceEur: priceEur,
                     clientPriceInfo: priceInfo,
                   });
+
                   return (
-                    <Stack key={`${name}-${id}`} direction="row" justifyContent="space-between" gap={4}>
-                      <Typography display="flex" flexDirection="row" variant="body1">
+                    <Stack
+                      key={`${name}-${id}`}
+                      direction="row"
+                      justifyContent="space-between"
+                      alignItems="flex-start"
+                      gap={2}
+                    >
+                      <Typography variant="body1" sx={{ flex: 1, minWidth: 0 }}>
                         {labelCode ? tServices(labelCode as YachtServiceExtrasKey) : name}
                       </Typography>
-                      <Typography variant="body1" whiteSpace="nowrap">
+                      <Typography variant="body1" whiteSpace="nowrap" sx={{ flexShrink: 0 }}>
                         {formattedPrice}
                       </Typography>
                     </Stack>
                   );
                 };
+
                 return (
                   <>
                     {inAdvance.length > 0 && (
@@ -447,11 +467,11 @@ const BoatCalendarForm = ({ yacht, variant }: BoatCalendarFormProps) => {
                         </Typography>
                         {onSite.map(renderRow)}
                         {showSecurityDeposit && (
-                          <Stack direction="row" justifyContent="space-between" gap={4}>
-                            <Typography display="flex" flexDirection="row" variant="body1">
+                          <Stack direction="row" justifyContent="space-between" alignItems="flex-start" gap={2}>
+                            <Typography variant="body1" sx={{ flex: 1, minWidth: 0 }}>
                               {tServices('refundable-security-deposit')}
                             </Typography>
-                            <Typography variant="body1" whiteSpace="nowrap">
+                            <Typography variant="body1" whiteSpace="nowrap" sx={{ flexShrink: 0 }}>
                               {formatPriceWithCurrency({ clientPriceEur: yacht.securityDeposit })}
                             </Typography>
                           </Stack>

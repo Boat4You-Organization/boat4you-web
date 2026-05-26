@@ -13,6 +13,7 @@ import {
   TextField,
   Theme,
   Typography,
+  createFilterOptions,
 } from '@mui/material';
 
 import Checkbox from '@/components/Checkbox';
@@ -33,6 +34,11 @@ export interface AutocompleteMultipleProps {
   error?: string | undefined;
   sx?: SxProps<Theme>;
   disabled?: boolean;
+  /** Per-option disabled predicate. Greys out (and prevents toggle of)
+   *  options for which it returns true — used by the search filter to
+   *  disable manufacturer / model entries with 0 yachts in the current
+   *  vessel-type / location / dates context. */
+  getOptionDisabled?: (option: SelectOption) => boolean;
   /** Explicit stable DOM id. When omitted we derive a deterministic one from
    *  `label` / `placeholder` so SSR and client hydration produce matching
    *  attributes — MUI Autocomplete's internal `useId()` otherwise drifts
@@ -42,7 +48,10 @@ export interface AutocompleteMultipleProps {
 }
 
 const slugify = (value: string) =>
-  value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+  value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
 
 const AutocompleteMultiple = ({
   id,
@@ -56,10 +65,11 @@ const AutocompleteMultiple = ({
   error,
   sx,
   disabled,
+  getOptionDisabled,
 }: AutocompleteMultipleProps) => {
   const stableId = useMemo(
     () => id ?? `autocomplete-${slugify(label || placeholder || 'field') || 'field'}`,
-    [id, label, placeholder],
+    [id, label, placeholder]
   );
   const handleChange = useCallback(
     (_: React.SyntheticEvent, newValue: SelectOption[]) => {
@@ -94,8 +104,23 @@ const AutocompleteMultiple = ({
         options={options}
         inputValue={inputValue}
         disableCloseOnSelect
+        openOnFocus
+        // Default substring filter (case-insensitive). No `limit` cap —
+        // post-cleanup the manufacturer list is ~240 entries which renders
+        // in <100ms; a hard cap was hiding tail letters (S-Z).
+        filterOptions={createFilterOptions({
+          matchFrom: 'any',
+          ignoreCase: true,
+          stringify: (opt: SelectOption) => opt.label,
+        })}
         popupIcon={<ExpandMoreRounded />}
         getOptionLabel={option => option.label}
+        getOptionDisabled={getOptionDisabled}
+        // ID is the only stable unique key — labels can collide (e.g. two
+        // manufacturers named "Bluegame" from separate API sources, or any
+        // future sync-ingest race). Defaulting to label as the key throws
+        // React's "Encountered two children with the same key" warning.
+        getOptionKey={option => option.id}
         isOptionEqualToValue={(option, selectedValue) => option.id === selectedValue.id}
         onChange={handleChange}
         onInputChange={handleInputChange}
@@ -108,12 +133,41 @@ const AutocompleteMultiple = ({
               maxWidth: '500px',
             },
           },
+          // Force dropdown to always open downwards. Default Popper flips
+          // upwards when there's not enough space below — Mario flagged
+          // this kao "ne želim prema gore". Disable flip + forcePlacement.
+          popper: {
+            placement: 'bottom-start',
+            modifiers: [
+              { name: 'flip', enabled: false },
+              { name: 'preventOverflow', options: { altAxis: false, padding: 0 } },
+            ],
+          },
+          listbox: {
+            sx: {
+              padding: 0,
+              '& .MuiAutocomplete-option': {
+                minHeight: 'unset !important',
+                paddingTop: '2px !important',
+                paddingBottom: '2px !important',
+              },
+            },
+          },
         }}
         renderOption={(props, option, { selected }) => {
           const { key, ...rest } = props;
 
           return (
-            <MenuItem key={key} {...rest}>
+            <MenuItem
+              key={key}
+              {...rest}
+              sx={{
+                py: '2px !important',
+                minHeight: 'unset !important',
+                '& .MuiCheckbox-root': { padding: '2px' },
+                '& .MuiSvgIcon-root': { fontSize: 18 },
+              }}
+            >
               <Checkbox checked={selected} />
               <Typography variant="body2">{option.label}</Typography>
             </MenuItem>
@@ -124,7 +178,16 @@ const AutocompleteMultiple = ({
           // which is what React hydration compares. MUI Autocomplete's own
           // `id` prop lives on the wrapper and still lets the internal input
           // fall back to `useId()` — so we force a deterministic one here too.
-          <TextField {...params} id={`${stableId}-input`} placeholder={placeholder} error={!!error} />
+          <TextField
+            {...params}
+            id={`${stableId}-input`}
+            placeholder={placeholder}
+            error={!!error}
+            sx={{
+              '& .MuiInputBase-input': { fontSize: 13 },
+              '& .MuiInputBase-input::placeholder': { fontSize: 13 },
+            }}
+          />
         )}
         sx={sx}
         disabled={disabled}

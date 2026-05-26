@@ -5,6 +5,56 @@ import DateTime from '@/utils/static/DateTime';
 
 dayjs.extend(isSameOrAfter);
 
+/**
+ * How long the customer keeps seeing the rejected-cancellation banner +
+ * status chip after the admin marks the request as refused. After this
+ * window the booking renders as a normal active booking — no banner, no
+ * chip, no leftover "in progress" pill on the list page. Mario rule
+ * (3.5.2026): "neka bude tako 10 dana i onda se vraca kao prije, da se
+ * vise ne vidi cancelation request — to je bilo, odbiveno i idemo dalje".
+ */
+const REJECTED_VISIBILITY_DAYS = 10;
+
+export type CancellationDisplayState = 'pending' | 'rejected' | 'none';
+
+export interface CancellationDisplayInput {
+  cancellationRequestAt?: string | null;
+  cancellationRejectedAt?: string | null;
+  /** True when the reservation itself is in the cancelled status. When
+   *  cancelled, the standard cancelled chip wins and we skip the
+   *  cancellation-request UI altogether. */
+  isCancelled?: boolean;
+}
+
+/**
+ * Resolves the customer-side cancellation surface state for a single
+ * reservation. Used in 4 places: ActiveReservationCard chip,
+ * PastReservationCard chip, ReservationHeroSection header chip + banner,
+ * ReservationCTA banner. Same input → same answer everywhere so detail
+ * page and list page can never disagree.
+ */
+export const getCancellationDisplayState = ({
+  cancellationRequestAt,
+  cancellationRejectedAt,
+  isCancelled,
+}: CancellationDisplayInput): CancellationDisplayState => {
+  if (isCancelled) return 'none';
+
+  if (!cancellationRequestAt) return 'none';
+
+  if (cancellationRejectedAt) {
+    const rejectedOn = dayjs(cancellationRejectedAt);
+
+    if (!rejectedOn.isValid()) return 'none';
+
+    const visibleUntil = rejectedOn.add(REJECTED_VISIBILITY_DAYS, 'day');
+
+    return dayjs().isBefore(visibleUntil) ? 'rejected' : 'none';
+  }
+
+  return 'pending';
+};
+
 export interface CancellationTimelineItem {
   date: string;
   text: string;

@@ -20,11 +20,14 @@ export interface UpdateMyProfileParams {
   name: string;
   surname: string;
   email: string;
-  phoneNumber?: string;
-  address?: string;
-  city?: string;
-  country?: string;
-  path: string;
+  phoneNumber?: string | null;
+  address?: string | null;
+  city?: string | null;
+  country?: string | null;
+  /** ISO yyyy-MM-dd. Backend accepts LocalDate; null/undefined leaves the
+   *  existing value untouched (PATCH semantics). */
+  birthday?: string | null;
+  path?: string;
 }
 export interface UpdateUserPreferencesParams {
   id: number;
@@ -60,12 +63,12 @@ export async function updateUser(params: UpdateUserParams): Promise<PayloadRespo
 // email, phoneNumber). Unlike `updateUser` (which requires admin), this one
 // lets the logged-in user edit their own record.
 export async function updateMyProfile(params: UpdateMyProfileParams): Promise<PayloadResponse<boolean>> {
-  const { id, name, surname, email, phoneNumber, address, city, country, path } = params;
+  const { id, name, surname, email, phoneNumber, address, city, country, birthday, path } = params;
 
   try {
     const response = await authFetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/users/${id}/profile`, {
       ...PATCH_REQUEST_PARAMETERS,
-      body: JSON.stringify({ name, surname, email, phoneNumber, address, city, country }),
+      body: JSON.stringify({ name, surname, email, phoneNumber, address, city, country, birthday }),
     });
 
     if (!response.ok) {
@@ -74,7 +77,7 @@ export async function updateMyProfile(params: UpdateMyProfileParams): Promise<Pa
       return { payload: false, message: body.message };
     }
 
-    revalidatePath(path);
+    if (path) revalidatePath(path);
 
     return { payload: true };
   } catch (error) {

@@ -54,12 +54,13 @@ const BoatMobileNavigation = ({ yacht }: BoatMobileNavigationProps) => {
   const isSelectedOfferOption = selectedOffer?.status === Status.OPTION;
   const isSelectedOfferUnavailable = selectedOffer?.status === Status.UNAVAILABLE;
   const isCalculatedPrice = calculatedPrice && Object.keys(calculatedPrice).length > 0;
+  const isInquireFlow = isSelectedOfferOption || yacht.custom || yacht.inquireOnly;
 
   const { handleReservation } = useReservation({ yacht });
   const locale = useLocale();
 
   const handleReservationClick = () => {
-    if (isSelectedOfferOption) {
+    if (isInquireFlow) {
       toggleBoatInquiryModalOpen();
 
       return;
@@ -139,7 +140,11 @@ const BoatMobileNavigation = ({ yacht }: BoatMobileNavigationProps) => {
             <Box className={styles.container}>
               <Stack direction="row" justifyContent="space-between">
                 <Typography variant="body1">{t('totalPrice')}</Typography>
-                {!isSelectedOfferUnavailable && !isCalculatedPrice ? (
+                {isInquireFlow ? (
+                  <Typography variant="h4" component="p" color={colors.green500}>
+                    {tYacht('priceOnInquiry')}
+                  </Typography>
+                ) : !isSelectedOfferUnavailable && !isCalculatedPrice ? (
                   <Typography variant="h4" component="p">
                     -
                   </Typography>
@@ -180,9 +185,9 @@ const BoatMobileNavigation = ({ yacht }: BoatMobileNavigationProps) => {
                   id={BOAT_CALENDAR_FORM}
                   fullWidth
                   onClick={handleReservationClick}
-                  disabled={!isCalculatedPrice || isSelectedOfferUnavailable}
+                  disabled={!isInquireFlow && (!isCalculatedPrice || isSelectedOfferUnavailable)}
                 >
-                  {isSelectedOfferOption ? tYacht('inquireNow') : tYacht('reserve')}
+                  {isInquireFlow ? tYacht('inquireNow') : tYacht('reserve')}
                 </Button>
               </Stack>
             </Box>

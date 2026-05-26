@@ -7,7 +7,13 @@ import styles from './FiltersSection.module.scss';
 
 const FiltersSection = () => (
   <Stack className={cx(styles.container)} sx={{ display: { xs: 'none', lg: 'flex' }, gap: 3 }}>
-    <Typography component="h2" variant="h4" color={colors.blue500}>
+    {/* Skeleton placeholder for the filters heading. Renders as <div> on
+        purpose — was previously <h2>, but a heading containing only a
+        <Skeleton> bar produces an empty <h2> in the SSR/loading HTML
+        snapshot Google bots can see, which counts as an empty heading
+        SEO-wise. The real H2 ("Why charter a yacht in {destination}?")
+        renders inside SeoTextSection once the page hydrates. */}
+    <Typography component="div" variant="h4" color={colors.blue500}>
       <Skeleton variant="text" width={100} height={22} />
     </Typography>
     {Array.from({ length: 6 }, (_, index) => (

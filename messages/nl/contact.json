@@ -1,0 +1,19 @@
+{
+  "hero": {
+    "title": "Meer informatie nodig?<strong>Neem contact op</strong>",
+    "description": "Bij <logo></logo> <companyName>Boat4You</companyName> regelen we jachtcharters waar je van houdt. Of het nu de Middellandse Zee, het Caribisch gebied of nieuwe wateren betreft, onze experts begeleiden je van de eerste aanvraag tot het uitvaren. Deel je data, bemanningsgrootte en vertrekhaven. Wij sturen op maat gemaakte opties, duidelijke prijzen en eenvoudige vervolgstappen."
+  },
+  "contact": {
+    "telephoneNumber": "Telefoonnummer",
+    "email": "E-mail",
+    "emergencyNumber": "Noodnummer / Urgent Telefoonnummer",
+    "workingHours": "Openingstijden",
+    "mondayToSunday": "Maandag - Zondag 8:00 - 20:00 (CEST)"
+  },
+  "internationalSupport": {
+    "title": "Internationale ondersteuning",
+    "usaOffice": "VS Kantoor",
+    "ukOffice": "VK Kantoor",
+    "croatiaHQ": "WhatsApp-nummer"
+  }
+}

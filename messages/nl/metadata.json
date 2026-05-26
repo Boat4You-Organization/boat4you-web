@@ -1,0 +1,53 @@
+{
+  "metadata": {
+    "base": {
+      "title": "Jachtcharter & Bootverhuur Wereldwijd | Boat4You",
+      "titleTemplate": "%s | Boat4You",
+      "description": "Charter jachten & huur boten in 100+ landen. Zeiljachten, catamarans, motorboten. Beste prijzen, 24/7 support, veilige boeking.",
+      "path": "/"
+    },
+    "search": {
+      "title": "Zoek jachten",
+      "description": "Vind en boek je perfecte jacht in een paar klikken. Eenvoudig, snel en zonder stress — je droomzeilavontuur begint hier.",
+      "path": "/search"
+    },
+    "blog": {
+      "title": "Jachtcharter-gidsen | Planning, routes, nieuws",
+      "description": "De jachtcharter-gidsen van Boat4You bieden inspiratie en inzicht in een zeilvakantie, hoe je de juiste boot kiest en waar je kunt uitvaren.",
+      "path": "/blog"
+    },
+    "aboutUs": {
+      "title": "Je wereldwijde zeilavontuur begint hier",
+      "description": "Bij Boat4You veranderen we je zeildromen in onvergetelijke avonturen op de mooiste wateren ter wereld.",
+      "path": "/about-us"
+    },
+    "contactUs": {
+      "title": "Neem nu contact op",
+      "description": "Bij Boat4You zijn we gepassioneerd over het creëren van onvergetelijke jachtcharter-ervaringen.",
+      "path": "/contact-us"
+    },
+    "howWeWork": {
+      "title": "Een boot boeken was nog nooit zo eenvoudig",
+      "description": "Bij Boat4You geloven we dat een boot huren net zo soepel en spannend moet voelen als de reis zelf.",
+      "path": "/how-we-work"
+    },
+    "faq": {
+      "title": "Boekingen & beschikbaarheid",
+      "description": "Vind snel antwoorden over Boat4You-functies, instellingen, prijzen en ondersteuning.",
+      "path": "/faq"
+    },
+    "termsAndConditions": {
+      "title": "Algemene voorwaarden",
+      "description": "Lees de algemene voorwaarden voor het gebruik van Boat4You, inclusief gebruikersverantwoordelijkheden, betalingen en accountbeleid.",
+      "path": "/terms-and-conditions"
+    },
+    "privacyPolicy": {
+      "title": "Privacybeleid",
+      "description": "Lees hoe Boat4You je persoonlijke gegevens verzamelt, gebruikt en beschermt tijdens het gebruik van onze website en diensten.",
+      "path": "/privacy-policy"
+    }
+  },
+  "boat": {
+    "forRent": "te huur"
+  }
+}

@@ -65,10 +65,19 @@ const PaymentPoliciesCard = ({
                 locale,
               });
 
+              // Two-column layout — description wraps freely on the left,
+              // price stays right-aligned on the first row, never wraps.
+              // `flex: 1, minWidth: 0` lets the description take all
+              // remaining width and wrap inside that column; `flexShrink: 0
+              // + whiteSpace: nowrap` keeps "560 €" intact in its own slot.
               return (
-                <Stack key={id} direction="row" justifyContent="space-between" alignItems="center">
-                  {labelCode ? tServices(labelCode as YachtServiceExtrasKey) : name}
-                  <Typography variant="body1">{formattedPrice}</Typography>
+                <Stack key={id} direction="row" justifyContent="space-between" alignItems="flex-start" gap={2}>
+                  <Typography variant="body1" sx={{ flex: 1, minWidth: 0 }}>
+                    {labelCode ? tServices(labelCode as YachtServiceExtrasKey) : name}
+                  </Typography>
+                  <Typography variant="body1" whiteSpace="nowrap" sx={{ flexShrink: 0 }}>
+                    {formattedPrice}
+                  </Typography>
                 </Stack>
               );
             })}
@@ -81,19 +90,25 @@ const PaymentPoliciesCard = ({
           // joins "Paid at marina" — see prop description.
           const inAdvance = (selectedExtrasAtBase || []).filter(e => e.paymentType === 'ADVANCE_TO_OPERATOR');
           const onSite = (selectedExtrasAtBase || []).filter(e => e.paymentType !== 'ADVANCE_TO_OPERATOR');
-          const renderRow = ({ id, name, priceEur, priceInfo, labelCode }: typeof inAdvance[number]) => {
+          const renderRow = ({ id, name, priceEur, priceInfo, labelCode }: (typeof inAdvance)[number]) => {
             const formattedPrice = formatPriceWithCurrency({
               clientPriceEur: priceEur,
               clientPriceInfo: priceInfo,
               locale,
             });
+
             return (
-              <Stack key={id} direction="row" justifyContent="space-between" alignItems="center">
-                {labelCode ? tServices(labelCode as YachtServiceExtrasKey) : name}
-                <Typography variant="body1">{formattedPrice}</Typography>
+              <Stack key={id} direction="row" justifyContent="space-between" alignItems="flex-start" gap={2}>
+                <Typography variant="body1" sx={{ flex: 1, minWidth: 0 }}>
+                  {labelCode ? tServices(labelCode as YachtServiceExtrasKey) : name}
+                </Typography>
+                <Typography variant="body1" whiteSpace="nowrap" sx={{ flexShrink: 0 }}>
+                  {formattedPrice}
+                </Typography>
               </Stack>
             );
           };
+
           return (
             <>
               {inAdvance.length > 0 && (
@@ -111,9 +126,11 @@ const PaymentPoliciesCard = ({
                   </Typography>
                   {onSite.map(renderRow)}
                   {showSecurityDeposit && (
-                    <Stack direction="row" justifyContent="space-between" alignItems="center">
-                      {tServices('refundable-security-deposit')}
-                      <Typography variant="body1">
+                    <Stack direction="row" justifyContent="space-between" alignItems="flex-start" gap={2}>
+                      <Typography variant="body1" sx={{ flex: 1, minWidth: 0 }}>
+                        {tServices('refundable-security-deposit')}
+                      </Typography>
+                      <Typography variant="body1" whiteSpace="nowrap" sx={{ flexShrink: 0 }}>
                         {formatPriceWithCurrency({ clientPriceEur: securityDeposit as number, locale })}
                       </Typography>
                     </Stack>

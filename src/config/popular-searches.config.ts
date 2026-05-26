@@ -53,12 +53,16 @@ export const POPULAR_SEARCHES: PopularSearchSpec[] = [
     displayLabel: 'Split Region',
     countryCode: 'HR',
     primaryType: LocationType.REGION,
-    // Backend `region` table stores this as "Split region" (lowercase "r").
-    // The exact-name match layer in pickMembersFromCandidates is
-    // case-insensitive but name-exact — using just "Split" mis-matched and
-    // fell back to the type-only layer which could pick any HR region.
-    // Search API (Greek API): also uses "Split region" lookup under the hood.
-    members: [{ name: 'Split region', locationType: LocationType.REGION, countryCode: 'HR' }],
+    // Dual-source region — MMK stores this as "Split" (region id=100, no
+    // country_code) while NauSYS stores it as "Split region" (id=5, HR).
+    // Picking only one returned yachts from a single provider; we want both
+    // pools to surface, so include both names. The FE dedupes the two rows
+    // in the autocomplete so the user sees one option but the click expands
+    // to both backend ids.
+    members: [
+      { name: 'Split', locationType: LocationType.REGION },
+      { name: 'Split region', locationType: LocationType.REGION, countryCode: 'HR' },
+    ],
   },
   {
     key: 'greece',
@@ -79,7 +83,10 @@ export const POPULAR_SEARCHES: PopularSearchSpec[] = [
     // all so yachts from both providers surface. Today it's a single record
     // (id=8, 29 locations) but the flag is kept as a safety net in case the
     // sync ever re-introduces per-provider duplicates.
-    members: [{ name: 'Ionian Islands', locationType: LocationType.REGION, countryCode: 'GR', all: true }],
+    members: [
+      { name: 'Ionian', locationType: LocationType.REGION, all: true },
+      { name: 'Ionian Islands', locationType: LocationType.REGION, countryCode: 'GR', all: true },
+    ],
   },
   {
     key: 'italy',

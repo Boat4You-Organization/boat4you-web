@@ -20,6 +20,7 @@ import useManufacturerAutocompleteMultiple from '@/utils/hooks/useManufacturersA
 import useModelAutocompleteMultiple from '@/utils/hooks/useModelAutocompleteMultiple';
 import useQueryParams from '@/utils/hooks/useQueryParams';
 import useServices from '@/utils/hooks/useServices';
+import DateTime from '@/utils/static/DateTime';
 import { metersToFeet } from '@/utils/static/metersToFeet';
 import { useUserStore } from '@/valtio/user/user.store';
 
@@ -220,7 +221,7 @@ const FiltersSection = ({ catalogueData, catalogueFilters, isMobile }: FiltersSe
         minParamKey="minBuildYear"
         maxParamKey="maxBuildYear"
         min={catalogueFilters?.minYear ?? 1926}
-        max={catalogueFilters?.maxYear ?? 2027}
+        max={DateTime.getMaxBuildYear(catalogueFilters?.maxYear)}
         title={t('year')}
       />
       <FilterSlider

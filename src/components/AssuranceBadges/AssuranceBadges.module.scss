@@ -1,0 +1,36 @@
+@use '@/styles/utils/rem-calc' as *;
+@use '@/styles/settings/variables' as *;
+
+// Card variant — white panel with border, used inside the booking flow.
+.cardRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: rem-calc(16);
+  padding: rem-calc(18) rem-calc(24);
+  background: $white;
+  border: rem-calc(1) solid $black-200;
+  border-radius: rem-calc(12);
+
+  @media (min-width: 600px) {
+    gap: rem-calc(32);
+  }
+}
+
+// Footer variant — sits in-line with the copyright in FooterBottomBar.
+// No chrome of its own (no border, no padding, no margin) so the row
+// reads as a horizontal continuation of the copyright. Wraps to its own
+// row on mobile via the parent's flex-wrap.
+.footerRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: rem-calc(16);
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: rem-calc(6);
+}

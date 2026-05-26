@@ -32,6 +32,8 @@ import DetailsTab from './DetailsTab';
 import ExtrasTab from './ExtrasTab';
 import FAQTab from './FAQTab';
 import GoodToKnowTab from './GoodToKnowTab';
+import PriceDetailsTab from './PriceDetailsTab';
+import VideoTab from './VideoTab';
 
 interface BoatContentSectionProps {
   yacht: YachtModel;
@@ -110,8 +112,12 @@ const BoatContentSection = ({ yacht }: BoatContentSectionProps) => {
         return <AvailabilityTab yacht={yacht} />;
       case 'extras':
         return <ExtrasTab yacht={yacht} />;
+      case 'priceDetails':
+        return <PriceDetailsTab yacht={yacht} />;
       case 'goodToKnow':
         return <GoodToKnowTab yacht={yacht} />;
+      case 'video':
+        return <VideoTab yacht={yacht} />;
       case 'faq':
         return <FAQTab yacht={yacht} />;
       default:

@@ -33,13 +33,16 @@ export const OFFSET = 100;
 
 export const PAGE_NUMBER = 1;
 export const PAGE_SIZE = 9;
-export const YACHT_PAGE_SIZE = 19;
+export const YACHT_PAGE_SIZE = 18;
 export const BLOG_PAGE_SIZE = 12;
 
 export const DEFAULT_IMAGE = '/images/yacht-banner.webp';
 
-export const MANUFACTURERS_PAGE_SIZE = 1000;
-export const MODELS_PAGE_SIZE = 1000;
+// Mora pokrivati cijelu manufacturer / model tablicu — Mario zatražio (27.4.2026)
+// "hardcode" listu da dropdown uvijek pokazuje sve brand-ove neovisno o filterima.
+// DB ima 1392 manufacturer-a (post-dedupe + Mario boataround insert).
+export const MANUFACTURERS_PAGE_SIZE = 2000;
+export const MODELS_PAGE_SIZE = 2000;
 
 export const TOTAL_PERIODS = 104;
 export const INITIAL_ITEMS_TO_FETCH = 4;

@@ -82,7 +82,14 @@ const AllDestinationsSection = ({ countries }: AllDestinationsSectionProps) => {
     <Container maxWidth="xl" component="section" disableGutters className={styles.container}>
       <Typography variant="h1" component="h2" color={colors.blue950}>
         {t('allDestinationsSection.allOf')}{' '}
-        <Typography variant="h1" component="span" fontStyle="italic" fontWeight={800} color={colors.blue500}>
+        <Typography
+          variant="h1"
+          component="span"
+          fontStyle="italic"
+          fontWeight={800}
+          color={colors.blue500}
+          sx={{ pl: '0.1em', wordBreak: 'break-word' }}
+        >
           {t('allDestinationsSection.ourDestinations')}
         </Typography>
       </Typography>

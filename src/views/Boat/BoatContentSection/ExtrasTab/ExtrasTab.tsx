@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-import { Grid, Stack, Typography } from '@mui/material';
+import { Box, Stack, Typography } from '@mui/material';
 import { useLocale, useTranslations } from 'next-intl';
 
 import Checkbox from '@/components/Checkbox';
@@ -39,17 +39,11 @@ const ExtrasTab = ({ yacht }: ExtrasTabProps) => {
   // security deposit is always appended to the obligatory group because
   // it comes from yacht-level fields, not the services list.
   const obligatoryKeys = selectedOffer?.obligatoryExtrasKeys || [];
-  const obligatoryServices = sortedServices.filter(
-    s => s.obligatory || obligatoryKeys.includes(s.key),
-  );
-  const optionalServices = sortedServices.filter(
-    s => !s.obligatory && !obligatoryKeys.includes(s.key),
-  );
+  const obligatoryServices = sortedServices.filter(s => s.obligatory || obligatoryKeys.includes(s.key));
+  const optionalServices = sortedServices.filter(s => !s.obligatory && !obligatoryKeys.includes(s.key));
 
   const securityDepositPrice =
-    yacht.securityDeposit > 0
-      ? formatPriceWithCurrency({ clientPriceEur: yacht.securityDeposit, locale })
-      : null;
+    yacht.securityDeposit > 0 ? formatPriceWithCurrency({ clientPriceEur: yacht.securityDeposit, locale }) : null;
 
   return (
     <Stack component="section" direction="column">
@@ -92,52 +86,63 @@ const ExtrasTab = ({ yacht }: ExtrasTabProps) => {
           //
           // Deposit insurance is a SEPARATE optional partner extra that
           // reduces the held amount — it stays in the normal list above.
-          <Grid
+          // Mirror the new ExtrasCard flex layout (Apr-2026 mobile fix) so this
+          // virtual obligatory row visually aligns with the partner-sent ones
+          // immediately above it. The previous MUI Grid wrapped the price
+          // column inconsistently on long descriptions — flex with fixed
+          // checkbox + flex-1 title + right-anchored vertical price stack
+          // gives a deterministic 3-column layout at every viewport.
+          <Box
             component="article"
-            container
-            alignItems="center"
-            borderRadius={1.5}
-            px={2}
-            py={0.75}
-            spacing={1.5}
             sx={{
-              // Match the obligatory ExtrasCard visual: white bg + bottom
-              // border + 0.7 opacity so the row blends seamlessly with the
-              // mandatory partner rows above it in the "Selected services"
-              // section (flagged by Mario 23.4.2026 — standalone styling
-              // read too bold vs adjacent rows).
+              display: 'flex',
+              alignItems: 'flex-start',
+              gap: { xs: 1.25, sm: 1.5 },
+              px: 2,
+              py: 1.5,
+              borderRadius: 1.5,
               backgroundColor: '#fff',
               borderBottom: `1px solid ${colors.black200}`,
               opacity: 0.7,
               cursor: 'not-allowed',
             }}
           >
-            <Grid size={{ xs: 1 }}>
+            <Box sx={{ flexShrink: 0, mt: '-2px' }}>
               <Checkbox checked value disabled />
-            </Grid>
-            <Grid size={{ xs: 7, lg: 8 }}>
-              <Typography component="h3" variant="body1" fontWeight={700} color={colors.black950}>
+            </Box>
+            <Box sx={{ flex: 1, minWidth: 0 }}>
+              <Typography
+                component="h3"
+                variant="body1"
+                fontWeight={700}
+                color={colors.black950}
+                sx={{ wordBreak: 'break-word' }}
+              >
                 {tServices('refundable-security-deposit')}
               </Typography>
-              <Typography
-                variant="body2"
-                color={colors.black500}
-                sx={{ fontSize: 12, mt: 0.25 }}
-              >
+              <Typography variant="body2" color={colors.black500} sx={{ fontSize: 12, mt: 0.25 }}>
                 {tCommon('refundableSecurityDepositDescription')}
               </Typography>
-            </Grid>
-            <Grid size={{ xs: 4, lg: 3 }}>
-              <Stack direction="row" justifyContent="flex-end" alignItems="baseline" gap={0.5} flexWrap="wrap">
-                <Typography color={colors.black950} component="p" variant="body1" fontWeight={700}>
-                  {securityDepositPrice}
-                </Typography>
-                <Typography variant="body2" color={colors.black500}>
-                  {tCommon('extrasUnits.perBooking')}
-                </Typography>
-              </Stack>
-            </Grid>
-          </Grid>
+            </Box>
+            <Stack
+              direction="column"
+              alignItems="flex-end"
+              sx={{ flexShrink: 0, textAlign: 'right', minWidth: { xs: 64, sm: 80 } }}
+            >
+              <Typography
+                color={colors.black950}
+                component="p"
+                variant="body1"
+                fontWeight={700}
+                sx={{ whiteSpace: 'nowrap' }}
+              >
+                {securityDepositPrice}
+              </Typography>
+              <Typography variant="body2" color={colors.black500} sx={{ fontSize: 12, mt: 0.25 }}>
+                {tCommon('extrasUnits.perBooking')}
+              </Typography>
+            </Stack>
+          </Box>
         )}
         {optionalServices.length > 0 && (
           <Typography

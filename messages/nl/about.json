@@ -1,0 +1,61 @@
+{
+  "hero": {
+    "title": "<strong>Je wereldwijde zeilavontuur begint hier.</strong>",
+    "description": "Bij <logo></logo> <companyName>Boat4You</companyName> verander je reisplannen in echte tochten op de mooiste wateren ter wereld. We zijn vanuit de Middellandse Zee uitgegroeid tot een wereldwijd charterplatform. Je krijgt deskundig advies, geverifieerde boten en een soepel boekingsproces van de eerste offerte tot het uitvaren."
+  },
+  "stats": {
+    "title": "Belangrijke vertrouwensreferenties",
+    "description": "Onafhankelijk advies. Leverancier-neutrale aanbevelingen die passen bij je data, bemanningsgrootte en budget.<br></br>Geverifieerde partners. Verzekering, licenties en veiligheidscontroles in ons dossier.<br></br>Transparante prijzen. Duidelijke contracten. Geen verborgen kosten.<br></br>AVG-conform. Veilige betalingen. Privacy als standaard.<br></br>Echte ondersteuning. 24/7 hulp voor, tijdens en na je reis.",
+    "premiumYachtsFleet": "Premium jachten in onze wereldwijde vloot",
+    "worldwideDestinations": "Bestemmingen wereldwijd",
+    "teamExperience": "Jaren gecombineerde teamervaring",
+    "customersServed": "Tevreden klanten geholpen",
+    "charterPartners": "Geverifieerde charterpartners"
+  },
+  "aboutUs": {
+    "title": "Wie wij zijn",
+    "mainTitle": "Dromen omzetten in tochten",
+    "description": "Wij geloven dat jij een privéjacht verdient dat aanvoelt alsof het gebouwd is voor jouw week. Ons team heeft meer dan 20 jaar charter-ervaring met lokale kennis in Europa, het Caribisch gebied en daarbuiten. We auditen bases, testen routes en briefen bemanningen — alles voor jouw zeilvakantie op maat. Je krijgt eerlijk advies, geen giswerk."
+  },
+  "whyChooseUs": {
+    "title": "Waarom Boat4You",
+    "mainTitle": "Je ongeëvenaarde jachtcharter-ervaring begint hier",
+    "description": "Onze toewijding aan kwaliteit onderscheidt ons in de competitieve jachtcharter-branche",
+    "features": {
+      "0": {
+        "title": "Bewezen wereldwijde expertise",
+        "description": "Ervaren brokers met een sterke staat van dienst in Kroatië, Griekenland, Italië, Spanje, Frankrijk, Turkije, BVI, de Bahama's, Martinique en Grenada."
+      },
+      "1": {
+        "title": "Persoonlijke service",
+        "description": "Elke route wordt op jou afgestemd. Familietijd, actief zeilen, eten en wijn, of rustige baaien. Jij bepaalt het tempo."
+      },
+      "2": {
+        "title": "Gratis reserveringen",
+        "description": "Opties vasthouden en jachten vergelijken zonder extra boekingskosten. Duidelijke deadlines en herinneringen."
+      },
+      "3": {
+        "title": "Toegang tot premium vloot",
+        "description": "Monohulls, catamarans, motorjachten en superjachten van vertrouwde vloten. Nieuwe lanceringen elk seizoen."
+      },
+      "4": {
+        "title": "Veilig boeken",
+        "description": "Escrow-betalingen via goedgekeurde gateways. AVG-conforme verwerking van je gegevens."
+      },
+      "5": {
+        "title": "24/7 ondersteuning",
+        "description": "Mensen, geen bots. Contacten met bases, weersverwachtingen, routehulp en snelle antwoorden als plannen veranderen."
+      }
+    }
+  },
+  "ourPromise": {
+    "title": "Onze belofte",
+    "mainTitle": "Hier beginnen herinneringen voor het leven: onze belofte om al je verwachtingen te overtreffen",
+    "description": "Jouw comfort en veiligheid staan centraal in elke beslissing. We bevelen routes aan die passen bij de week die je wilt, van eilandhoppen in de Cycladen tot zandbanken in de Exumas. Je krijgt betrouwbare boten, een gebriefte bemanning en een plan dat werkt in echte omstandigheden. We streven naar één resultaat: dat je van boord stapt en zegt: met Boat4You zouden we zo weer varen."
+  },
+  "ourFleet": {
+    "title": "We hebben de boot die je wilt, ",
+    "emphasizedTitle": "ongeacht het type",
+    "description": "De beste selectie boten online tegen de beste prijzen"
+  }
+}

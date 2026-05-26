@@ -38,7 +38,7 @@ const RiskFreeCTA = ({ searchPage, disableGutters }: RiskFreeCTAProps) => {
             >
               <CardContent className={styles.content}>
                 <Typography
-                  component="h2"
+                  component="p"
                   variant="hero"
                   fontWeight={800}
                   fontSize={{ xs: 20, md: searchPage ? 32 : 62 }}
@@ -65,7 +65,7 @@ const RiskFreeCTA = ({ searchPage, disableGutters }: RiskFreeCTAProps) => {
                     fontSize: { xs: 13, md: 16 },
                   }}
                 >
-                  Save up to 47%
+                  {t('saveUpTo')}
                 </Typography>
               </CardActions>
             </Grid>

@@ -13,6 +13,11 @@ interface YachtStore {
   boatInquiryModalOpen: boolean;
   adminInquiryModalOpen: boolean;
   searchResults: YachtModelShortInfo[];
+  /** Total candidate-set size for the current search (full count
+   *  across all pages, not just the page currently in `searchResults`).
+   *  Drives the V2 sidebar "live boats available" pill. Updated by the
+   *  results loader on every fetch — see setSearchTotalCount. */
+  searchTotalCount: number;
   selectedOffer: YachtOfferModel | null;
   offersToDisplay: YachtOfferModel[];
 }
@@ -28,6 +33,7 @@ export const yachtStore = proxy<YachtStore>({
   boatInquiryModalOpen: false,
   adminInquiryModalOpen: false,
   searchResults: [],
+  searchTotalCount: 0,
 });
 
 export const useYachtStore = () => useSnapshot(yachtStore) as YachtStore;

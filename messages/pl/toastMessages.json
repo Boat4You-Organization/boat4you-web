@@ -1,0 +1,13 @@
+{
+  "request-password-failed": "Nie udało się zażądać hasła",
+  "request-password-success": "Żądanie hasła wysłane pomyślnie",
+  "login-success": "Logowanie powiodło się",
+  "login-failed": "Logowanie nie powiodło się",
+  "userUpdated": "Użytkownik został pomyślnie zaktualizowany",
+  "userUpdateFailed": "Nie udało się zaktualizować użytkownika",
+  "requestCancelBookingSuccess": "Żądanie anulowania rezerwacji powiodło się",
+  "requestCancelBookingFailed": "Żądanie anulowania rezerwacji nie powiodło się",
+  "linkCopied": "Link skopiowany do schowka",
+  "reservationNumberCopied": "Numer rezerwacji skopiowany do schowka",
+  "reservationIdCopied": "Numer rezerwacji skopiowany do schowka"
+}

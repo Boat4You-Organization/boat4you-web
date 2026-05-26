@@ -1,0 +1,115 @@
+{
+  "hero": {
+    "title": "Een boot boeken was nog nooit <strong>zo eenvoudig.</strong>",
+    "description": "Bij <logo></logo> <companyName>Boat4You</companyName> houden we het proces simpel. Jij vertelt ons waar en wanneer. Wij koppelen je aan het juiste jacht en de juiste bemanning. Kroatië, Griekenland, Italië, Spanje, Turkije of het Caribisch gebied. Wij regelen de details zodat jij van de reis kunt genieten."
+  },
+  "step": "Stap",
+  "steps": {
+    "step1": {
+      "title": "Ontdek je perfecte boot",
+      "subtitle": "Verken onze zorgvuldig samengestelde vloot",
+      "items": {
+        "item1": "Zoek op bestemming, boottype of reisdata.",
+        "item2": "Gebruik slimme filters om precies te vinden wat bij je past — van luxe catamarans tot gezinsvriendelijke motorboten.",
+        "item3": "Elke vermelding bevat geverifieerde gegevens, transparante prijzen, echte foto's en volledige specificaties."
+      },
+      "question": "Hulp nodig bij het kiezen?",
+      "answer": "Onze charter-specialisten zijn slechts een klik verwijderd. We helpen je vergelijken, opties aanbevelen en begeleiden je als je twijfelt.",
+      "link": {
+        "text": "Bekijk onze vloot"
+      }
+    },
+    "step2": {
+      "title": "Stuur een gratis aanvraag",
+      "subtitle": "Geen verplichting, geen druk",
+      "items": {
+        "item1": "Iets gevonden dat je leuk vindt? Klik gewoon op „Offerte aanvragen”",
+        "item2": "Geef je data, groepsgrootte en voorkeuren door.",
+        "item3": "Je ontvangt persoonlijke aanbiedingen en de laatste beschikbaarheid — vaak met exclusieve kortingen!"
+      },
+      "question": "Flexibele opties",
+      "answer": "Wil je een schipper? Een hostess? Op zoek naar een enkele reis? We stemmen je charter af op jouw plannen.",
+      "link": {
+        "text": "Neem contact op"
+      }
+    },
+    "step3": {
+      "title": "Krijg een persoonlijke offerte",
+      "subtitle": "Heldere prijzen. Geen verborgen kosten.",
+      "items": {
+        "item1": "Een gedetailleerde offerte op basis van de gekozen boot en extra's",
+        "item2": "Transparante info over belastingen, borgsommen en optionele diensten",
+        "item3": "Een echt persoon begeleidt je door de details, geen robot"
+      },
+      "answer": "Wij geloven in duidelijkheid, niet in kleine lettertjes."
+    },
+    "step4": {
+      "title": "Reserveer je boot",
+      "subtitle": "Veiliger je jacht in een paar klikken",
+      "items": {
+        "item1": "Wanneer je er klaar voor bent, sturen we je een veilige betaallink.",
+        "item2": "Betaal een aanbetaling om je boeking te bevestigen — meestal 30-50% van de charterprijs.",
+        "item3": "Je boot is officieel van jou!"
+      },
+      "answer": "Je ontvangt direct een bevestiging en toegang tot je reserveringsdashboard."
+    },
+    "step5": {
+      "title": "Afronden en voorbereiden",
+      "subtitle": "Voor je reis:",
+      "items": {
+        "item1": "Betaal het saldo (meestal 4 weken voor vertrek)",
+        "item2": "Dien de bemanning-/passagierslijst in",
+        "item3": "Wij verstrekken informatie over de basis, inscheepdetails en een paklijst"
+      },
+      "answer": "Alles is geregeld — je kunt ontspannen en uitkijken naar je vakantie."
+    },
+    "step6": {
+      "title": "Ga aan boord",
+      "subtitle": "Welkom aan boord!",
+      "items": {
+        "item1": "Ontmoet je jacht in de jachthaven",
+        "item2": "Check in bij het basisteam (of de schipper, indien inbegrepen)",
+        "item3": "Doorloop een korte overdracht en veiligheidsbriefing"
+      },
+      "answer": "Vanaf hier draait alles om zon, zee en zeilen. Of je nu met een schipper bent of zelf zeilt, we zijn altijd telefonisch bereikbaar."
+    },
+    "step7": {
+      "title": "Na je reis",
+      "subtitle": "Soepele terugkeer",
+      "items": {
+        "item1": "Snelle uitcheck en inspectie",
+        "item2": "Deel feedback of beoordelingen — we horen graag van je!",
+        "item3": "Krijg hulp bij je volgende boeking (veel klanten varen opnieuw met ons!)"
+      }
+    }
+  },
+  "whyChooseUsSection": {
+    "whyChoose": "Waarom Boat4You?",
+    "items": {
+      "verifiedBoatsOnly": {
+        "title": "Alleen geverifieerde boten",
+        "description": "Geen verrassingen, alleen topkwaliteit jachten."
+      },
+      "localExpertise": {
+        "title": "Lokale expertise",
+        "description": "We kennen de kusten op ons duimpje"
+      },
+      "realHumanSupport": {
+        "title": "Echt menselijke ondersteuning",
+        "description": "Voor, tijdens en na je reis"
+      },
+      "bestPriceGuarantee": {
+        "title": "Beste prijsgarantie",
+        "description": "Altijd eerlijke prijzen, geen boekingskosten"
+      }
+    }
+  },
+  "cta": {
+    "title": "Vragen? Laten we praten",
+    "description": "Advies nodig? Wil je een charter-specialist spreken? Ons team staat klaar — live chat, e-mail of telefoon.",
+    "cta": "Neem nu contact op"
+  },
+  "faq": {
+    "title": "Veelgestelde vragen"
+  }
+}

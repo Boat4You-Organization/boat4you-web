@@ -10,12 +10,17 @@ interface UseManufacturerAutocompleteProps {
   selectedIds: number[];
   onChange: (value: SelectOption[]) => void;
   manufacturers: ManufacturerModel[];
+  /** Optional set of manufacturer IDs that have ≥ 1 yacht in the current
+   *  filter context. When provided, manufacturers absent from this set
+   *  render disabled (greyed out) in the dropdown. */
+  enabledIds?: Set<number>;
 }
 
 const useManufacturerAutocompleteMultiple = ({
   selectedIds,
   onChange,
   manufacturers,
+  enabledIds,
 }: UseManufacturerAutocompleteProps) => {
   const t = useTranslations('filters');
 
@@ -39,6 +44,7 @@ const useManufacturerAutocompleteMultiple = ({
       onChange={onChange}
       label={t('manufacturer')}
       placeholder={t('searchManufacturer')}
+      getOptionDisabled={enabledIds ? opt => !enabledIds.has(Number(opt.id)) : undefined}
     />
   );
 

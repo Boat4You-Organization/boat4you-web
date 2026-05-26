@@ -25,7 +25,7 @@ export interface PaymentPhase {
 export const calculatePaymentPhases = (
   reservationStartDate: string | Dayjs,
   totalPrice: number,
-  now: Dayjs = dayjs(),
+  now: Dayjs = dayjs()
 ): PaymentPhase[] => {
   const charterDate = dayjs(reservationStartDate);
 
@@ -57,6 +57,7 @@ export const calculatePaymentPhases = (
 
     const quarter = roundUp(0.25 * totalPrice);
     const half = roundUp(roundedTotal - 2 * quarter);
+
     return [
       { deadline: today, amount: quarter },
       { deadline: januaryDeadline, amount: quarter },
@@ -70,6 +71,7 @@ export const calculatePaymentPhases = (
 
 const fiftyFiftySplit = (now: Dayjs, monthBeforeCharter: Dayjs, roundedTotal: number): PaymentPhase[] => {
   const half = Math.ceil(0.5 * roundedTotal * 100) / 100;
+
   return [
     { deadline: now, amount: half },
     { deadline: monthBeforeCharter, amount: Math.ceil((roundedTotal - half) * 100) / 100 },

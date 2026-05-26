@@ -105,6 +105,31 @@ export const VESSEL_TYPE_LABEL_MAP_PLURAL = {
   [VesselType.RUBBER_BOAT]: 'common.rubberBoatPlural',
 } as const;
 
+/**
+ * Vessel-type form used inside the search-page H1 sentence — slots into
+ * "Najam {boatType} u {destination}" (HR), "Location de {boatType} à
+ * {destination}" (FR), etc. For locales that don't inflect nouns
+ * (EN/FR/IT/ES/PT/NL/DE) the per-locale value mirrors the nominative
+ * label. For HR/PL the per-locale value is the genitive form (e.g.
+ * HR `catamaranForRental: "katamarana"`) so the sentence reads as
+ * proper "rental of catamarans". Renamed from "Genitive" to keep it
+ * neutral for non-inflecting locales — they just see a singular noun.
+ */
+export const VESSEL_TYPE_LABEL_MAP_FOR_RENTAL = {
+  [VesselType.CATAMARAN]: 'common.catamaranForRental',
+  [VesselType.GULET]: 'common.guletForRental',
+  [VesselType.HOUSE_BOAT]: 'common.houseBoatForRental',
+  [VesselType.LUXURY_MOTOR_YACHT]: 'common.luxuryMotorYachtForRental',
+  [VesselType.MINI_CRUISER]: 'common.miniCruiserForRental',
+  [VesselType.MOTORBOAT]: 'common.motorboatForRental',
+  [VesselType.MOTOR_YACHT]: 'common.motorYachtForRental',
+  [VesselType.MOTORSAILER]: 'common.motorsailerForRental',
+  [VesselType.POWER_CATAMARAN]: 'common.powerCatamaranForRental',
+  [VesselType.SAILING_YACHT]: 'common.sailingYachtForRental',
+  [VesselType.TRIMARAN]: 'common.trimaranForRental',
+  [VesselType.RUBBER_BOAT]: 'common.rubberBoatForRental',
+} as const;
+
 export enum MainSailType {
   UNKNOWN = 'UNKNOWN',
   CLASSIC_SAIL = 'CLASSIC_SAIL',
@@ -147,6 +172,22 @@ export interface YachtCustomDetails {
   priceDescription: string;
   videoUrl: string;
   hasBrochure: boolean;
+  /**
+   * Free-text "Saloon and Cabins" amenities — admin pastes a multi-line
+   * list, AmenitiesTab splits on \n and renders each non-empty entry as
+   * a checkmark item. Replaces the predefined Equipment dropdown for
+   * custom yachts so owners' one-off specs (bed sizes, named brands…)
+   * make it onto the public page verbatim.
+   */
+  amenitiesText: string | null;
+  /** Free-text "Entertainment" toys block, same treatment. */
+  toysText: string | null;
+  /**
+   * Free-text engine descriptor — admin types verbatim ("2x Volvo IPS
+   * 1050"). DetailsTab renders this in the Engine row instead of
+   * "{enginePower} kW" when present.
+   */
+  engineText: string | null;
 }
 
 export interface YachtModelShortInfo extends Pick<
@@ -197,6 +238,12 @@ export interface YachtModelShortInfo extends Pick<
    */
   offerDateFrom?: string | null;
   offerDateTo?: string | null;
+  /**
+   * True for admin-managed (entry_type=2) yachts. Search card swaps the
+   * green "Available" badge for a blue "On request" label so users know
+   * they need to inquire instead of book directly.
+   */
+  custom?: boolean;
 }
 
 export interface YachtModel

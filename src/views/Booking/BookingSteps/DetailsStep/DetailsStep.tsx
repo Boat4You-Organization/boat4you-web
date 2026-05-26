@@ -77,7 +77,7 @@ const DetailsStep = ({ reservationData, isAdmin, user }: DetailsStepProps) => {
           countryCode: locationFrom?.countryCode ?? '',
         },
       }) as unknown as YachtModel,
-    [reservationData, model, name, locationFrom],
+    [reservationData, model, name, locationFrom]
   );
 
   const selectedExtrasKeys = reservationData
@@ -90,17 +90,30 @@ const DetailsStep = ({ reservationData, isAdmin, user }: DetailsStepProps) => {
   useEffect(() => {
     if (state?.payload && !state?.message) {
       saveDataToSessionStorage('reservationId', state.payload.id);
+
       // Customer-facing booking number (e.g. "100176/2026") — shown in bank
       // transfer payment reference, emails, and Stripe checkout instead of the
       // internal numeric id.
       if (state.payload.reservationNumber) {
         saveDataToSessionStorage('reservationNumber', state.payload.reservationNumber);
       }
+
       // Persist the backend-computed payment phases so /payment can render the
       // real schedule (matches what Stripe / bank transfer will charge) instead
       // of falling back to a client-side approximation.
       if (state.payload.paymentPhases?.length) {
         saveDataToSessionStorage('paymentPhases', state.payload.paymentPhases);
+      }
+
+      // Real option-expiry timestamp from the partner API (MMK
+      // `expirationDate` / NauSys `optionTill`). Drives the bank-transfer
+      // deadline banner so the customer sees the actual window — anywhere from
+      // ~24 h (last-minute charters) up to several days (charters months out).
+      // We deliberately do NOT fall back to a fixed 48 h: showing a longer
+      // window than the partner granted risks the customer paying after the
+      // option already lapsed and the yacht was rebooked.
+      if (state.payload.expiresAt) {
+        saveDataToSessionStorage('reservationExpiresAt', state.payload.expiresAt);
       }
 
       // Admins skip the public payment screen — their action in the admin

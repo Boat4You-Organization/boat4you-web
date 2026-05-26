@@ -27,16 +27,23 @@
     // On mobile keep the row layout (image left, content right) — the
     // previous stacked-column layout made each card tall and wasted
     // space. booking/boataround use this row density on phones.
+    // The `&.gridView` override is intentional: localStorage may still
+    // hold "grid" from earlier desktop use even though the toggle is
+    // hidden on mobile, so without this override the card stacks.
     @include media(0, 'md') {
       flex-direction: row;
       gap: rem-calc(12);
       padding: rem-calc(12);
+
+      &.gridView {
+        flex-direction: row;
+      }
     }
 
     .imageWrapper {
       position: relative;
       width: rem-calc(280);
-      align-self: stretch;     // fill full card height
+      align-self: stretch; // fill full card height
       min-height: rem-calc(200);
 
       &.gridView {
@@ -55,6 +62,17 @@
         min-height: rem-calc(140);
         align-self: stretch;
         flex-shrink: 0;
+
+        // Same override reason as on .container: stale "grid" in
+        // localStorage shouldn't force the image to full-width on phones.
+        &.gridView {
+          width: 40%;
+          min-width: rem-calc(110);
+          max-width: rem-calc(140);
+          height: auto;
+          min-height: rem-calc(140);
+          align-self: stretch;
+        }
       }
 
       .image {
@@ -86,12 +104,16 @@
         gap: rem-calc(4);
         padding: 0 !important;
 
-        h3, h2, h1 {
+        h3,
+        h2,
+        h1 {
           font-size: rem-calc(15);
           line-height: 1.2;
         }
 
-        p, span, a {
+        p,
+        span,
+        a {
           font-size: rem-calc(12);
           line-height: 1.25;
         }
@@ -136,10 +158,12 @@
           white-space: nowrap;
           min-width: rem-calc(140);
 
-          // Hide on mobile — entire card is a Link, the extra button
-          // just crowds the narrow 60% content column.
+          // On mobile keep the button visible (Mario asked for it back) but
+          // tighten the size so it fits inside the narrow 60% content column.
           @include media(0, 'md') {
-            display: none;
+            min-width: rem-calc(110);
+            font-size: rem-calc(12);
+            padding: rem-calc(6) rem-calc(10);
           }
         }
       }

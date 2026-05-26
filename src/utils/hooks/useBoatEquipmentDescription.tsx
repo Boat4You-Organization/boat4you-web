@@ -35,9 +35,13 @@ const UNCOUNTABLE_NOUNS = new Set([
 
 const needsNoArticle = (item: string): boolean => {
   const clean = item.toLowerCase().trim();
+
   if (UNCOUNTABLE_NOUNS.has(clean)) return true;
+
   if (/ing$/i.test(clean)) return true; // heating, lighting, cooling, plumbing, ...
+
   if (/s$/i.test(clean) && !PLURAL_SAFE_ALLOWLIST.test(clean)) return true; // winches, speakers
+
   return false;
 };
 
@@ -49,21 +53,26 @@ const prettifyLabel = (item: string): string =>
 
 const withArticle = (rawItem: string): string => {
   const item = prettifyLabel(rawItem);
+
   if (needsNoArticle(item)) return item;
+
   return `${A_VOWEL_SOUND.test(item) ? 'an' : 'a'} ${item}`;
 };
 
 const joinWithAnd = (items: string[]): string => {
   if (items.length === 0) return '';
+
   if (items.length === 1) return items[0];
+
   if (items.length === 2) return `${items[0]} and ${items[1]}`;
+
   return `${items.slice(0, -1).join(', ')} and ${items[items.length - 1]}`;
 };
 
 const equipmentByCategory = (
   yacht: YachtDescriptionSource,
   category: YachtEquipmentCategoryType,
-  amenitiesT: (key: string) => string,
+  amenitiesT: (key: string) => string
 ): string[] =>
   yacht.amenities
     ?.filter(amenity => amenity.equipment?.category === category)
@@ -83,10 +92,13 @@ export const useBoatEquipmentDescription = (): ((yacht: YachtDescriptionSource) 
     // outside GPS plotter." If no sail type, start directly with the
     // equipment list so grammar still reads.
     let sailType: string | null = null;
+
     if (yacht.mainSailType !== MainSailType.UNKNOWN) {
       const sailTypeKey = MAIN_SAIL_TYPE_LABEL_MAP[yacht.mainSailType];
+
       if (sailTypeKey) {
         const resolved = t(sailTypeKey);
+
         if (resolved && resolved !== sailTypeKey) sailType = resolved.toLowerCase();
       }
     }
@@ -94,24 +106,25 @@ export const useBoatEquipmentDescription = (): ((yacht: YachtDescriptionSource) 
     const navigationItems = equipmentByCategory(
       yacht,
       YachtEquipmentCategoryType.NAVIGATION_AND_SAFETY,
-      amenitiesT as (key: string) => string,
+      amenitiesT as (key: string) => string
     );
 
     const equipmentItems: string[] = [];
+
     if (sailType) equipmentItems.push(sailType);
+
     equipmentItems.push(...navigationItems);
 
     if (equipmentItems.length > 0) {
-      sentences.push(
-        `${t('yacht.boatEquipmentFeatures')} ${joinWithAnd(equipmentItems.map(withArticle))}`,
-      );
+      sentences.push(`${t('yacht.boatEquipmentFeatures')} ${joinWithAnd(equipmentItems.map(withArticle))}`);
     }
 
     const saloonItems = equipmentByCategory(
       yacht,
       YachtEquipmentCategoryType.ENTERTAINMENT,
-      amenitiesT as (key: string) => string,
+      amenitiesT as (key: string) => string
     );
+
     if (saloonItems.length > 0) {
       sentences.push(`${t('yacht.itAlsoBoasts')} ${joinWithAnd(saloonItems.map(withArticle))}`);
     }
@@ -119,12 +132,11 @@ export const useBoatEquipmentDescription = (): ((yacht: YachtDescriptionSource) 
     const galleyItems = equipmentByCategory(
       yacht,
       YachtEquipmentCategoryType.SALOON_AND_CABINS,
-      amenitiesT as (key: string) => string,
+      amenitiesT as (key: string) => string
     );
+
     if (galleyItems.length > 0) {
-      sentences.push(
-        `${t('yacht.fullyEquippedInclude')} ${joinWithAnd(galleyItems.map(withArticle))}`,
-      );
+      sentences.push(`${t('yacht.fullyEquippedInclude')} ${joinWithAnd(galleyItems.map(withArticle))}`);
     }
 
     return sentences.join('. ') + (sentences.length > 0 ? '.' : '');

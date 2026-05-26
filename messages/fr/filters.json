@@ -1,5 +1,6 @@
 {
   "filterBy": "Filtrer par",
+  "sortBy": "Trier par",
   "activeFilters": "Filtres actifs",
   "recommended": "Recommandé",
   "lowPrepayment": "Acompte faible",
@@ -34,5 +35,34 @@
   "fuelTank": "Réservoir carburant",
   "waterTank": "Réservoir eau",
   "length": "Longueur",
-  "newYacht": "Nouveau yacht"
+  "newYacht": "Nouveau yacht",
+  "yachtType": "Type de yacht",
+  "pricePerWeek": "Prix par semaine",
+  "medianPrice": "médiane {amount}",
+  "peopleMaxGuests": "Personnes (invités max.)",
+  "guestsRange": "{min} – {max} invités",
+  "berthsRange": "{min} – {max} couchettes",
+  "yearBuilt": "Année de construction",
+  "toiletsRange": "{min} – {max} {count, plural, one {toilette} other {toilettes}}",
+  "rentalType": "Type de location",
+  "bareboat": "Sans skipper",
+  "skippered": "Avec skipper",
+  "manufacturerAndModel": "Fabricant et modèle",
+  "classicMainsail": "Grand-voile classique",
+  "rollingMainsail": "Grand-voile enrouleur",
+  "enginePower": "Puissance moteur",
+  "engineRangeHp": "{min} – {max} ch",
+  "yourSearch": "Votre recherche",
+  "allDestinations": "Toutes les destinations",
+  "boatsAvailableLive": "bateaux disponibles · en direct",
+  "dateRange": "{start} – {end}",
+  "nightsCount": "{count, plural, one {# nuit} other {# nuits}}",
+  "vesselType": {
+    "sailing": "Voilier",
+    "catamaran": "Catamaran",
+    "motorboat": "Bateau à moteur",
+    "motoryacht": "Yacht à moteur",
+    "gulet": "Gulet",
+    "powerCat": "Power cat"
+  }
 }

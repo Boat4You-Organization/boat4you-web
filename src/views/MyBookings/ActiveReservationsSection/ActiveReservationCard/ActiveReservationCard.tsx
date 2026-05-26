@@ -17,10 +17,11 @@ import {
 } from '@/models/reservation.model';
 import colors from '@/styles/themes/colors';
 import DateTime from '@/utils/static/DateTime';
+import { getCancellationDisplayState } from '@/utils/static/cancellationUtils';
 import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
-import { toTitleCase } from '@/utils/static/toTitleCase';
 import { generateGoogleMapsLink } from '@/utils/static/googleMapsUtils';
 import { getBoatImageUrl } from '@/utils/static/imageUtils';
+import { toTitleCase } from '@/utils/static/toTitleCase';
 
 import styles from './ActiveReservationCard.module.scss';
 
@@ -46,6 +47,7 @@ const ActiveReservationCard = ({ reservation }: ActiveReservationCardProps) => {
     checkin,
     checkout,
     cancellationRequestAt,
+    cancellationRejectedAt,
   } = reservation;
   const router = useRouter();
   const locale = useLocale();
@@ -58,9 +60,7 @@ const ActiveReservationCard = ({ reservation }: ActiveReservationCardProps) => {
   });
 
   const showListPrice = typeof listPrice === 'number' && listPrice > totalPrice;
-  const discountPercent = showListPrice
-    ? Math.round(((listPrice! - totalPrice) / listPrice!) * 100)
-    : 0;
+  const discountPercent = showListPrice ? Math.round(((listPrice! - totalPrice) / listPrice!) * 100) : 0;
   const formattedListPrice = showListPrice
     ? formatPriceWithCurrency({
         clientPriceEur: listPrice!,
@@ -111,11 +111,28 @@ const ActiveReservationCard = ({ reservation }: ActiveReservationCardProps) => {
     >
       <CardContent className={styles.content}>
         <Stack direction="row" alignItems="center" gap={1} flexWrap="wrap">
-          {cancellationRequestAt && status !== ReservationStatus.CANCELLED ? (
-            <StatusChip label={t('cancellationInProgress')} color="warning" />
-          ) : (
-            <StatusChip label={t(RESERVATION_STATUS_LABEL_MAP[status])} color={RESERVATION_STATUS_COLOR_MAP[status]} />
-          )}
+          {(() => {
+            const cancelState = getCancellationDisplayState({
+              cancellationRequestAt,
+              cancellationRejectedAt,
+              isCancelled: status === ReservationStatus.CANCELLED,
+            });
+
+            if (cancelState === 'pending') {
+              return <StatusChip label={t('cancellationInProgress')} color="warning" />;
+            }
+
+            if (cancelState === 'rejected') {
+              return <StatusChip label={t('cancellationRequestRejected')} color="error" />;
+            }
+
+            return (
+              <StatusChip
+                label={t(RESERVATION_STATUS_LABEL_MAP[status])}
+                color={RESERVATION_STATUS_COLOR_MAP[status]}
+              />
+            );
+          })()}
           <StatusChip
             label={`${t('confirmationNumber')}: #${reservationNumber ?? reservationId}`}
             sx={{ '& .MuiChip-label': { color: colors.black600 } }}
@@ -178,11 +195,7 @@ const ActiveReservationCard = ({ reservation }: ActiveReservationCardProps) => {
           <Stack mt={{ xs: 2.5, md: 0 }} alignItems={{ xs: 'flex-start', md: 'flex-end' }}>
             {showListPrice && (
               <Stack direction="row" alignItems="center" gap={1}>
-                <Typography
-                  variant="body2"
-                  color={colors.black500}
-                  sx={{ textDecoration: 'line-through' }}
-                >
+                <Typography variant="body2" color={colors.black500} sx={{ textDecoration: 'line-through' }}>
                   {formattedListPrice}
                 </Typography>
                 <Typography variant="body2" color={colors.black950} fontWeight={800}>

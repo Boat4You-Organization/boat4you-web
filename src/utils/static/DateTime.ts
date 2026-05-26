@@ -5,6 +5,8 @@ import 'dayjs/locale/es';
 import 'dayjs/locale/fr';
 import 'dayjs/locale/hr';
 import 'dayjs/locale/it';
+import 'dayjs/locale/nl';
+import 'dayjs/locale/pl';
 import 'dayjs/locale/pt';
 import isBetweenPlugin from 'dayjs/plugin/isBetween';
 import isoWeek from 'dayjs/plugin/isoWeek';
@@ -36,6 +38,18 @@ dayjs.updateLocale('en', {
 
 export default class DateTime {
   public static now = () => dayjs();
+
+  // Max build year for the search "Year built" filter. Always at least
+  // currentYear + 1 so a 2027-build yacht is filterable even before
+  // 2027 starts (partners list new boats months ahead). When the
+  // catalogue meta-endpoint reports a yacht built later than that
+  // (e.g. 2028), use the catalogue value so the slider keeps growing
+  // automatically without a code change.
+  public static getMaxBuildYear = (catalogueMaxYear?: number | null): number => {
+    const currentYear = new Date().getFullYear();
+
+    return Math.max(catalogueMaxYear ?? 0, currentYear + 1);
+  };
 
   public static date = (date: string) => dayjs(date);
 

@@ -1,9 +1,9 @@
 {
   "metadata": {
     "base": {
-      "title": "Boat4You | Easy & Secure Boat Rentals Worldwide",
+      "title": "Yacht Charter & Boat Rental Worldwide | Boat4You",
       "titleTemplate": "%s | Boat4You",
-      "description": "Browse and book boats in 100+ countries. Sailing yachts, catamarans, motorboats – with or without skipper. Best prices. Secure booking. 24/7 support.",
+      "description": "Charter yachts & rent boats in 100+ countries. Sailing yachts, catamarans, motorboats. Best prices, 24/7 support, secure booking.",
       "path": "/"
     },
     "search": {
@@ -12,7 +12,7 @@
       "path": "/search"
     },
     "blog": {
-      "title": "Yacht Charter Guides | Planning, Itineraries, News | Boat4You",
+      "title": "Yacht Charter Guides | Planning, Itineraries, News",
       "description": "Boat4You expert yacht charter guides provide inspiration and insight into a yachting holiday, how to pick the right boat and where to set sail.",
       "path": "/blog"
     },
@@ -37,7 +37,7 @@
       "path": "/faq"
     },
     "termsAndConditions": {
-      "title": "Boat4You Terms and Conditions",
+      "title": "Terms and Conditions",
       "description": "Review the terms and conditions for using Boat4You, including user responsibilities, payments, and account policies.",
       "path": "/terms-and-conditions"
     },

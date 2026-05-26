@@ -1,7 +1,19 @@
 import { useEffect, useMemo, useState } from 'react';
 
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
-import { Alert, Box, Button, Collapse, Divider, IconButton, Link as MuiLink, Radio, Stack, Tooltip, Typography } from '@mui/material';
+import {
+  Alert,
+  Box,
+  Button,
+  Collapse,
+  Divider,
+  IconButton,
+  Link as MuiLink,
+  Radio,
+  Stack,
+  Tooltip,
+  Typography,
+} from '@mui/material';
 import dayjs from 'dayjs';
 import { useLocale, useTranslations } from 'next-intl';
 import NextLink from 'next/link';
@@ -51,6 +63,12 @@ const UnifiedPaymentStep = ({ reservationData }: UnifiedPaymentStepProps) => {
   const reservationId = getDataFromSessionStorage<number>('reservationId');
   const reservationNumber = getDataFromSessionStorage<string>('reservationNumber');
   const contact = getDataFromSessionStorage<BookingContact>('bookingContact');
+  // Real partner option-expiry (MMK `expirationDate` / NauSys `optionTill`).
+  // Persisted by DetailsStep when the option was created. Drives the
+  // bank-transfer deadline banner — varies wildly: ~1 day for last-minute
+  // bookings, several days for long-lead. Showing the wrong window risks
+  // the customer paying after the partner already released the yacht.
+  const reservationExpiresAt = getDataFromSessionStorage<string>('reservationExpiresAt');
   // Customer-facing booking number for bank transfer reference / notices.
   // Falls back to the internal id for historical reservations that predate the
   // booking-number feature.
@@ -104,10 +122,13 @@ const UnifiedPaymentStep = ({ reservationData }: UnifiedPaymentStepProps) => {
   const [cardSurchargePercent, setCardSurchargePercent] = useState<number>(0);
   const [bankFee, setBankFee] = useState<number>(0);
   const [bookingReviewOpen, setBookingReviewOpen] = useState(false);
+
   useEffect(() => {
     let cancelled = false;
+
     Promise.all([getCardSurchargePercentage(), getBankTransferFee()]).then(([pct, fee]) => {
       if (cancelled) return;
+
       setCardSurchargePercent(pct);
       setBankFee(fee);
     });
@@ -122,15 +143,13 @@ const UnifiedPaymentStep = ({ reservationData }: UnifiedPaymentStepProps) => {
   const cardAdjusted = baseDueNow + cardFee;
   const bankAdjusted = baseDueNow + bankFee;
 
-  const methodAdjustedAmount =
-    selectedPaymentMethod === PaymentMethod.BANK_TRANSFER ? bankAdjusted : cardAdjusted;
+  const methodAdjustedAmount = selectedPaymentMethod === PaymentMethod.BANK_TRANSFER ? bankAdjusted : cardAdjusted;
 
   const dueNowDeadline = paymentPhases[0]?.deadline ?? dayjs();
   const dateFormatter = (d: dayjs.Dayjs) => d.locale(locale).format('D MMMM YYYY');
   const fmt = (eur: number) => formatPriceWithCurrency({ clientPriceEur: eur, locale });
 
-  const cardBorder = (active: boolean) =>
-    active ? `2px solid ${colors.blue500}` : `1px solid ${colors.black200}`;
+  const cardBorder = (active: boolean) => (active ? `2px solid ${colors.blue500}` : `1px solid ${colors.black200}`);
 
   const handleCopy = async (value: string, label: string) => {
     try {
@@ -309,10 +328,7 @@ const UnifiedPaymentStep = ({ reservationData }: UnifiedPaymentStepProps) => {
             overflow: 'hidden',
           }}
         >
-          <Box
-            onClick={() => setPaymentMethod(PaymentMethod.BANK_TRANSFER)}
-            sx={{ p: 2, cursor: 'pointer' }}
-          >
+          <Box onClick={() => setPaymentMethod(PaymentMethod.BANK_TRANSFER)} sx={{ p: 2, cursor: 'pointer' }}>
             <Stack direction="row" alignItems="center" gap={1.5}>
               <Radio
                 checked={selectedPaymentMethod === PaymentMethod.BANK_TRANSFER}
@@ -361,6 +377,33 @@ const UnifiedPaymentStep = ({ reservationData }: UnifiedPaymentStepProps) => {
           <Collapse in={selectedPaymentMethod === PaymentMethod.BANK_TRANSFER} unmountOnExit>
             <Divider />
             <Box sx={{ backgroundColor: colors.black100, px: 2.5, py: 1.5 }}>
+              {/* Option-expiry banner — sits ABOVE bank details so the deadline
+                  is the first thing the customer sees. Real partner timestamp
+                  only; if the partner returned null we surface a "we'll confirm
+                  by email" warning rather than inventing a number, since under-
+                  estimating the deadline is the dangerous direction (yacht
+                  already rebooked when the wire arrives). */}
+              {reservationExpiresAt ? (
+                (() => {
+                  const expiry = dayjs(reservationExpiresAt);
+                  const now = dayjs();
+                  const hoursLeft = expiry.diff(now, 'hour');
+                  const isUrgent = hoursLeft <= 24;
+
+                  return (
+                    <Alert severity={isUrgent ? 'error' : 'warning'} icon={false} sx={{ mb: 2, fontWeight: 600 }}>
+                      {t('optionExpiresOnNotice', {
+                        date: expiry.locale(locale).format('D MMMM YYYY'),
+                        time: expiry.format('HH:mm'),
+                      })}
+                    </Alert>
+                  );
+                })()
+              ) : (
+                <Alert severity="warning" icon={false} sx={{ mb: 2, fontWeight: 600 }}>
+                  {t('optionExpiryUnknownNotice')}
+                </Alert>
+              )}
               <Typography variant="body1" fontWeight={700} mb={1}>
                 {t('bankTransferInfo')}
               </Typography>
@@ -368,9 +411,7 @@ const UnifiedPaymentStep = ({ reservationData }: UnifiedPaymentStepProps) => {
               {bankDetails.map(({ title, value }) => (
                 <BankDetailRow key={title} label={title} value={value} />
               ))}
-              {paymentReference && (
-                <BankDetailRow label={t('paymentReference')} value={paymentReference} />
-              )}
+              {paymentReference && <BankDetailRow label={t('paymentReference')} value={paymentReference} />}
               <Typography variant="body2" color={colors.black600} mt={1.5}>
                 {t('paymentReferenceNotice', { reservationNumber: paymentReference })}
               </Typography>

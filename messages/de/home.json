@@ -1,8 +1,11 @@
 {
   "hero": {
-    "title": "Buche eine Yacht in",
+    "title": "Yachtcharter in",
     "ctaTitle": "einem Klick.",
-    "description": "Chartern Sie Ihre perfekte Yacht mit nur wenigen Klicks. Einfach, schnell und stressfrei — Ihr Traumsegelabenteuer beginnt hier."
+    "description": "Chartern Sie Ihre perfekte Yacht mit nur wenigen Klicks. Einfach, schnell und stressfrei — Ihr Traumsegelabenteuer beginnt hier.",
+    "support": "Erstklassiger Kundenservice",
+    "yachtsCount": "{count} Yachten",
+    "marinasCount": "{count} Marinas"
   },
   "generalSearchBar": {
     "whereAreYouGoing": "Wohin reisen Sie?",
@@ -16,9 +19,9 @@
     "chooseDestination": "Reiseziel wählen",
     "chooseTransportation": "Transport wählen",
     "searchBoats": "Boote suchen",
-    "aroundCurrentLocation": "Around current location",
-    "locating": "Locating…",
-    "locationError": "Couldn't get your location",
+    "aroundCurrentLocation": "In meiner Umgebung",
+    "locating": "Standort wird ermittelt…",
+    "locationError": "Standort konnte nicht abgerufen werden",
     "selectYacht": "Yacht auswählen"
   },
   "destinationsSection": {
@@ -38,7 +41,26 @@
       "spain": "Spanien",
       "türkiye": "Türkei",
       "virginIslandsBritish": "Britische Jungferninseln",
-      "grenada": "Grenada"
+      "grenada": "Grenada",
+      "splitRegion": "Region Split",
+      "ionianRegion": "Ionische Region"
+    },
+    "destinationsLocative": {
+      "bahamas": "Bahamas",
+      "caribbean": "Karibik",
+      "croatia": "Kroatien",
+      "france": "Frankreich",
+      "greece": "Griechenland",
+      "italy": "Italien",
+      "martinique": "Martinique",
+      "montenegro": "Montenegro",
+      "seychelles": "Seychellen",
+      "spain": "Spanien",
+      "türkiye": "Türkei",
+      "virginIslandsBritish": "Britische Jungferninseln",
+      "grenada": "Grenada",
+      "splitRegion": "Region Split",
+      "ionianRegion": "Ionische Region"
     }
   },
   "whyChooseUsSection": {
@@ -86,6 +108,7 @@
   "riskFreeBooking": {
     "riskFreeBooking": "Risikofreie Buchung",
     "save15Now": "Sparen Sie jetzt 15%",
+    "saveUpTo": "Bis zu 47% sparen",
     "cancellingDescription": "Stornierungen bei uns sind völlig risikofrei und flexibel. Wir bieten großzügige Rückerstattungsrichtlinien zum Schutz Ihrer Investition."
   },
   "blogSection": {
@@ -117,7 +140,47 @@
       "pt": "Portugiesisch",
       "it": "Italienisch",
       "es": "Spanisch",
-      "hr": "Kroatisch"
+      "hr": "Kroatisch",
+      "pl": "Polnisch",
+      "nl": "Niederländisch"
     }
+  },
+  "manufacturersSection": {
+    "title": "Beliebteste Yachthersteller",
+    "subtitle": "Katalog nach Marken durchsuchen",
+    "preTitle": "Beliebteste ",
+    "emphasizedTitle": "Yachthersteller"
+  },
+  "faqSection": {
+    "title": "Häufig gestellte Fragen",
+    "subtitle": "Alles, was Sie vor der Buchung wissen müssen",
+    "questions": [
+      {
+        "q": "Wie buche ich einen Yachtcharter auf Boat4You?",
+        "a": "Wählen Sie Ihr Reiseziel und Ihre Reisedaten aus, durchstöbern Sie die verfügbaren Yachten und klicken Sie bei Ihrem Wunschboot auf Reservieren. Wir bestätigen die Verfügbarkeit beim Partner, senden Ihnen ein Buchungsangebot zu und sobald Sie die Anzahlung leisten, ist Ihr Charter fest gebucht. Der gesamte Vorgang dauert nur wenige Minuten."
+      },
+      {
+        "q": "Brauche ich einen Sportbootführerschein, um eine Yacht zu chartern?",
+        "a": "Für einen Bareboat-Charter (ohne Skipper) benötigen Sie einen im Chartergebiet anerkannten Bootsführerschein – etwa den kroatischen Küstenpatent, den RYA Day Skipper, das ICC oder einen gleichwertigen Nachweis. Falls Sie keinen Schein besitzen, können Sie jede Yacht trotzdem buchen und beim Checkout einen Skipper hinzubuchen."
+      },
+      {
+        "q": "Was ist im Bareboat-Charterpreis enthalten?",
+        "a": "Der Grundpreis umfasst die Yacht selbst, die Standardausrüstung, den Service der Charteragentur sowie eine Versicherung gegen größere Schäden. Endreinigung, Treibstoff, Liegegebühren außerhalb des Heimathafens, Transitlog und Kurtaxe werden in der Regel separat bezahlt – auf jeder Yachtseite finden Sie die obligatorischen und optionalen Extras transparent aufgelistet."
+      },
+      {
+        "q": "Kann ich eine Yacht ohne Skipper chartern?",
+        "a": "Ja. Bareboat-Charter ist bei den meisten Yachten in unserem Katalog möglich, sofern mindestens eine Person an Bord über einen gültigen Bootsführerschein und einen UKW-Funkschein verfügt. Hat niemand in der Crew einen Schein, können Sie dieselbe Yacht gegen einen Tagesaufpreis mit einem professionellen Skipper buchen."
+      },
+      {
+        "q": "Wann ist die beste Zeit für einen Yachtcharter im Mediterranean?",
+        "a": "Mai, Juni und September sind ideal – warmes Meer, leichte Winde, weniger Trubel und deutlich günstigere Preise als in der Hochsaison Juli und August. April und Oktober eignen sich für erfahrene Segler, die ein kühleres Meer nicht stört, und bieten die niedrigsten Wochenpreise des Jahres."
+      },
+      {
+        "q": "Kann ich meine Buchung stornieren?",
+        "a": "Die Stornierungsbedingungen unterscheiden sich je nach Yacht – die genauen Konditionen sehen Sie auf jeder Angebotsseite vor der Zahlung. Beim Checkout können Sie zudem optional eine Reiserücktrittsversicherung abschließen, die Ihre Charterkosten erstattet, wenn Sie aus einem versicherten Grund stornieren müssen. Die rückzahlbare Kaution wird stets erstattet, sofern die Yacht keine Schäden aufweist."
+      }
+    ],
+    "preTitle": "Häufig ",
+    "emphasizedTitle": "gestellte Fragen"
   }
 }

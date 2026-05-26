@@ -1,0 +1,12 @@
+@use '@/styles/utils/rem-calc' as *;
+@use '@/styles/mixins/breakpoints' as *;
+
+// Same vertical padding rhythm as AllDestinationsSection so the FAQ block
+// sits visually paired with the destinations / manufacturers list.
+.container {
+  padding-block: rem-calc(42 60);
+
+  @include media(0, 'sm') {
+    padding-block: rem-calc(92 60);
+  }
+}

@@ -1,0 +1,18 @@
+**/node_modules/**
+**/.next/**
+**/out/**
+**/build/**
+**/dist/**
+
+# static SEO content assets (raw HTML, not source code — should not be linted)
+public/seo-content/**
+
+# generated/cache
+**/tsconfig.tsbuildinfo
+**/yarn.lock
+**/package-lock.json
+**/*.min.js
+**/*.min.css
+
+# translations (JSON, machine-edited)
+messages/**/*.json

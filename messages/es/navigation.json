@@ -8,6 +8,9 @@
     "profileSettings": "Configuración de Perfil"
   },
   "footer": {
+    "network": {
+      "title": "Red"
+    },
     "company": {
       "title": "Empresa",
       "destinations": "Destinos",

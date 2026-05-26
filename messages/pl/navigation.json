@@ -1,0 +1,57 @@
+{
+  "mainNavigation": {
+    "faq": "FAQ",
+    "aboutUs": "O nas",
+    "blog": "Blog",
+    "contact": "Kontakt",
+    "myBookings": "Moje rezerwacje",
+    "profileSettings": "Ustawienia profilu"
+  },
+  "footer": {
+    "network": {
+      "title": "Sieć"
+    },
+    "company": {
+      "title": "Firma",
+      "destinations": "Destynacje",
+      "aboutUs": "O nas",
+      "faq": "FAQ",
+      "blog": "Blog",
+      "contact": "Kontakt",
+      "howWeWork": "Jak pracujemy"
+    },
+    "legal": {
+      "title": "Informacje prawne",
+      "termsAndConditions": "Regulamin",
+      "privacyPolicy": "Polityka prywatności",
+      "cookies": "Pliki cookie"
+    },
+    "getInTouch": {
+      "title": "Skontaktuj się",
+      "address": "Vrboran 37, 21000 Split",
+      "email": "help@boat4you.com",
+      "phone": "+385 98 360 398"
+    },
+    "socials": {
+      "title": "Media społecznościowe"
+    }
+  },
+  "navigationMobile": {
+    "about": {
+      "title": "Informacje",
+      "frequentlyAskedQuestions": "Najczęściej zadawane pytania",
+      "aboutUs": "O nas",
+      "blog": "Blog",
+      "contact": "Kontakt"
+    },
+    "preferences": {
+      "title": "Preferencje",
+      "favorites": "Ulubione",
+      "language": "Język",
+      "currency": "Waluta"
+    },
+    "profile": {
+      "title": "Profil"
+    }
+  }
+}

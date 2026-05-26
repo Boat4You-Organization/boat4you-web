@@ -42,21 +42,26 @@ const countryFilter = createFilterOptions<PhoneCountry>({
   stringify: option => `${option.name} ${option.iso2Code} ${option.dialCode}`,
 });
 
-const detectUserCountry = async (): Promise<PhoneCountry> => {
-  const response = await fetch('https://ipapi.co/json/');
-  const data = await response.json();
-  const countryCode = data.country_code;
+const detectUserCountry = (): Promise<PhoneCountry> =>
+  // ipapi.co is third-party — ad-blockers / privacy extensions / corporate
+  // proxies routinely block it. Some Chrome extensions even override
+  // window.fetch and throw synchronously *before* the await runs ("Failed
+  // to fetch" out of activeContent.js), which an `async` function leaks
+  // as an uncaught rejection that the Next.js dev overlay surfaces.
+  // Returning the chain instead of awaiting keeps every failure mode —
+  // sync throw, network error, non-OK status, malformed body — funneled
+  // through a single .catch that returns the default country.
+  Promise.resolve()
+    .then(() => fetch('https://ipapi.co/json/'))
+    .then(response => (response.ok ? response.json() : null))
+    .then((data: { country_code?: string } | null) => {
+      const countryCode = data?.country_code;
 
-  if (countryCode) {
-    const detectedCountry = phoneCountries.find(country => country.iso2Code === countryCode);
+      if (!countryCode) return getDefaultCountry();
 
-    if (detectedCountry) {
-      return detectedCountry;
-    }
-  }
-
-  return getDefaultCountry();
-};
+      return phoneCountries.find(country => country.iso2Code === countryCode) ?? getDefaultCountry();
+    })
+    .catch(() => getDefaultCountry());
 
 export const PhoneInput = ({
   name,
@@ -156,6 +161,7 @@ export const PhoneInput = ({
               popupIcon={<ChevronDown props={{ className: styles.chevronIcon }} size={20} />}
               renderOption={(props, option) => {
                 const { key, ...rest } = props as typeof props & { key?: React.Key };
+
                 return (
                   <Box component="li" key={key} {...rest} className={styles.option}>
                     <Box component="span" className={styles.flag}>

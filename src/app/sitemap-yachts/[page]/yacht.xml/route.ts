@@ -1,10 +1,17 @@
 import { NextRequest, NextResponse } from 'next/server';
 
+import { PROMOTED_COUNTRY_CODES } from '@/config/promoted-countries.config';
 import { routing } from '@/i18n/routing';
 import { YachtModelShortInfo } from '@/models/yacht.model';
 import { fetchYachts } from '@/services/yacht.service';
 
-const PAGE_SIZE = 500;
+const PROMOTED = Array.from(PROMOTED_COUNTRY_CODES);
+
+// Backend `/public/yachts` silently caps page size at 100 — passing 500
+// returned only the first 100 entries per page, dropping the other 80% of
+// the catalogue from the sitemap. Match the cap exactly so every yacht
+// emits exactly once across the paginated set.
+const PAGE_SIZE = 100;
 
 export const revalidate = 3600;
 
@@ -19,7 +26,7 @@ const XML_HEADERS = {
 
 export async function generateStaticParams() {
   try {
-    const data = await fetchYachts({ locations: [], page: 1, size: 1 });
+    const data = await fetchYachts({ locations: [], page: 1, size: 1, countryCodes: PROMOTED });
     const total = data.page?.totalElements ?? 0;
     const pages = Math.ceil(total / PAGE_SIZE);
 
@@ -38,10 +45,14 @@ export async function GET(request: NextRequest, { params }: { params: Promise<{ 
     const { page: pageParam } = await params;
     const page = parseInt(pageParam, 10);
 
+    // Push the promoted-country whitelist down to the backend so the page
+    // returns exactly PAGE_SIZE matching yachts (no client-side trim, no
+    // partially-empty pages). Mario decision 4.5.2026.
     const yachtsData = await fetchYachts({
       locations: [],
       page: page + 1,
       size: PAGE_SIZE,
+      countryCodes: PROMOTED,
     });
 
     if (!yachtsData.content || yachtsData.content.length === 0) {

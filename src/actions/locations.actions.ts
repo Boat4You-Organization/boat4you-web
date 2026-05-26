@@ -33,7 +33,14 @@ export async function getLocations(
 
   try {
     const queryParams = createQueryParams({ name, selected });
-    const response = await fetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/locations${queryParams}&size=100`);
+    // `cache: 'no-store'` — Next.js server-action default is force-cache, which
+    // memoised the autocomplete payload before regions like Paros / Mykonos
+    // existed in the DB. After the regions were added the dropdown still
+    // showed the stale list until the dev server was bounced; no-store keeps
+    // every call fresh so DB changes surface in the UI on next type.
+    const response = await fetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/locations${queryParams}&size=100`, {
+      cache: 'no-store',
+    });
 
     const jsonResponse: PaginatedResponse<LocationModel> = await response.json();
 
@@ -60,10 +67,9 @@ async function fetchLocationCandidates(
 
   try {
     const queryParams = createQueryParams({ name: searchName });
-    const response = await fetch(
-      `${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/locations${queryParams}&size=20`,
-      { next: { revalidate: 3600 } }
-    );
+    const response = await fetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/locations${queryParams}&size=20`, {
+      next: { revalidate: 3600 },
+    });
 
     const jsonResponse: PaginatedResponse<LocationModel> = await response.json();
     const candidates = jsonResponse.content || [];
@@ -101,9 +107,7 @@ function pickMembersFromCandidates(member: PopularSearchMember, candidates: Loca
   );
 
   const typeLayer = candidates.filter(
-    loc =>
-      loc.locationType === member.locationType &&
-      (!member.countryCode || loc.countryCode === member.countryCode)
+    loc => loc.locationType === member.locationType && (!member.countryCode || loc.countryCode === member.countryCode)
   );
 
   const countryLayer = candidates.filter(loc => !member.countryCode || loc.countryCode === member.countryCode);
@@ -210,6 +214,200 @@ export default async function getCountriesCount(): Promise<CountryCountModel[]> 
 
     return filterDisplayCountries(allCountries);
   } catch (error) {
+    return [];
+  }
+}
+
+/**
+ * Hero trust line stats — total yacht count + total distinct marinas.
+ * Mirrors the "27,102 yachts · 2,607 marinas" trust pills competitors
+ * (Boataround) place between the page H1 and the search bar.
+ *
+ * - yachts: drawn from `/public/yachts?size=1` page.totalElements
+ * - marinas: length of `/public/locations-count` (which today returns
+ *   marina-tier locations only — IDs all `l-*`)
+ *
+ * Both endpoints already exist; we read them in parallel and fail soft so
+ * a slow upstream doesn't push the whole hero into an error state.
+ * Cached for 5 minutes — stats move slowly enough that fresh-on-every-hit
+ * isn't worth the request volume.
+ */
+export type HeroStats = { yachts: number; marinas: number };
+
+export async function getHeroStats(): Promise<HeroStats> {
+  const base = process.env.NEXT_PUBLIC_BOAT_WS_API_URL;
+  const REVALIDATE = 300;
+
+  try {
+    const [yachtsRes, marinasRes] = await Promise.all([
+      fetch(`${base}/public/yachts?size=1`, { next: { revalidate: REVALIDATE } }),
+      fetch(`${base}/public/locations-count`, { next: { revalidate: REVALIDATE } }),
+    ]);
+    const [yachtsJson, marinasJson] = await Promise.all([
+      yachtsRes.ok ? yachtsRes.json() : { page: { totalElements: 0 } },
+      marinasRes.ok ? marinasRes.json() : [],
+    ]);
+
+    return {
+      yachts: yachtsJson?.page?.totalElements ?? 0,
+      marinas: Array.isArray(marinasJson) ? marinasJson.length : 0,
+    };
+  } catch {
+    return { yachts: 0, marinas: 0 };
+  }
+}
+
+/**
+ * Internal-link block for the bottom of `/search?destinations=X` pages.
+ * Boataround calls this "Our most popular destinations" — 10 anchor links
+ * to sub-destinations of the active country/region, each phrased
+ * differently ("yacht charter X", "X yacht charter", "rent boat X", …)
+ * so the block stacks long-tail keyword variations without looking like
+ * keyword stuffing. We mirror that pattern but vary phrasing per locale.
+ *
+ * Today's scope (MVP — Mario asked for one working example before
+ * expanding): country-level only. Calling this with a country code
+ * returns top regions of that country + a couple of high-volume marinas
+ * to fill out a 10-link block.
+ *
+ * Output: an array of `{ name, href, templateIdx }` objects. The
+ * `templateIdx` is a deterministic 0..N index — the renderer uses it to
+ * rotate phrasing templates so URL #3 reads differently from URL #4 even
+ * though they're the same component. Deterministic (not random) so SEO
+ * bots see stable text on every crawl.
+ */
+export interface PopularDestination {
+  /** Raw destination name as it appears in the location-count payload —
+   *  used both as the URL `?destinations=` value and as the template
+   *  placeholder. */
+  name: string;
+  /** Pre-built href for the next-level search results page, with the
+   *  active boat-type filter preserved. */
+  href: string;
+  /** 0..7 index into the locale's phrase template array. Stable per
+   *  destination (hash of name) so the same place always renders with
+   *  the same phrasing on subsequent crawls. */
+  templateIdx: number;
+}
+
+const POPULAR_DESTS_LIMIT = 10;
+const POPULAR_TEMPLATE_COUNT = 8;
+
+/**
+ * Cheap hash → 0..(POPULAR_TEMPLATE_COUNT-1). Used to assign each
+ * destination a stable phrase template across renders.
+ */
+const stableTemplateIdx = (s: string): number => {
+  let h = 0;
+
+  for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) | 0;
+
+  return Math.abs(h) % POPULAR_TEMPLATE_COUNT;
+};
+
+/**
+ * Build the popular-destinations block for a single country page.
+ * Returns an empty array on missing data so the caller can skip the
+ * render without an error path.
+ *
+ * @param countryCode  ISO country code (e.g. "HR"). Pulled from the
+ *                     URL's `did=c-X` segment + a country lookup; if the
+ *                     URL has no country filter, callers shouldn't call
+ *                     this.
+ * @param boatType     Active single-boat-type filter (preserved in the
+ *                     output hrefs so `Croatia + Catamaran` → links land
+ *                     on `Split Region + Catamaran` etc).
+ */
+export async function getPopularDestinationsForCountry(
+  countryCode: string,
+  boatType: string | null
+): Promise<PopularDestination[]> {
+  const base = process.env.NEXT_PUBLIC_BOAT_WS_API_URL;
+  const REVALIDATE = 600;
+
+  try {
+    const [regionsRes, marinasRes] = await Promise.all([
+      fetch(`${base}/public/regions?countryCode=${countryCode}`, { next: { revalidate: REVALIDATE } }),
+      fetch(`${base}/public/locations-count`, { next: { revalidate: REVALIDATE } }),
+    ]);
+
+    if (!regionsRes.ok) return [];
+
+    const regions = (await regionsRes.json()) as Array<{ id: string; name: string }>;
+    const marinas = marinasRes.ok
+      ? ((await marinasRes.json()) as Array<{ id: string; name: string; countryCode: string; yachtCount: number }>)
+      : [];
+
+    const boatTypeQuery = boatType ? `&boatTypes=${encodeURIComponent(boatType)}` : '';
+    // Regions first — they're the higher-tier sub-destinations and the
+    // ones a country page should funnel traffic to. Cap at 6 (typical
+    // country has 5-6 regions; we leave room for 4 marina links to round
+    // the block out to 10 entries).
+    const regionEntries: PopularDestination[] = regions.slice(0, 6).map(r => ({
+      name: r.name,
+      href: `/search?destinations=${encodeURIComponent(r.name)}&did=${encodeURIComponent(r.id)}${boatTypeQuery}`,
+      templateIdx: stableTemplateIdx(r.name),
+    }));
+
+    // Top-yacht-count marinas in this country fill the remaining slots
+    // (10 − region count). Skip any marina whose name was already used
+    // by a region entry (rare, but possible — e.g. "Split" marina vs
+    // "Split region").
+    const usedNames = new Set(regionEntries.map(r => r.name.toLowerCase()));
+    const marinaEntries: PopularDestination[] = marinas
+      .filter(m => m.countryCode === countryCode && !usedNames.has(m.name.toLowerCase()))
+      .sort((a, b) => b.yachtCount - a.yachtCount)
+      .slice(0, POPULAR_DESTS_LIMIT - regionEntries.length)
+      .map(m => ({
+        name: m.name,
+        href: `/search?destinations=${encodeURIComponent(m.name)}&did=${encodeURIComponent(m.id)}${boatTypeQuery}`,
+        templateIdx: stableTemplateIdx(m.name),
+      }));
+
+    return [...regionEntries, ...marinaEntries];
+  } catch {
+    return [];
+  }
+}
+
+/**
+ * Region-level variant of [getPopularDestinationsForCountry]. Powers
+ * the "Most popular destinations in {region}" block on URLs like
+ * `?destinations=Split+Region&did=r-5`. Backend filter (`regionId=`
+ * query param on `/locations-count`) returns only the marinas/cities
+ * inside that region — without the filter we'd dump all of Croatia.
+ *
+ * @param regionRealId  Numeric region id stripped from the `r-<id>`
+ *                      URL slug (e.g. r-5 → 5). Backend uses this as
+ *                      the `Region.id` in the JPA m2m join.
+ */
+export async function getPopularDestinationsForRegion(
+  regionRealId: string,
+  boatType: string | null
+): Promise<PopularDestination[]> {
+  const base = process.env.NEXT_PUBLIC_BOAT_WS_API_URL;
+  const REVALIDATE = 600;
+
+  try {
+    const res = await fetch(`${base}/public/locations-count?regionId=${encodeURIComponent(regionRealId)}`, {
+      next: { revalidate: REVALIDATE },
+    });
+
+    if (!res.ok) return [];
+
+    const locations = (await res.json()) as Array<{ id: string; name: string; yachtCount: number }>;
+
+    const boatTypeQuery = boatType ? `&boatTypes=${encodeURIComponent(boatType)}` : '';
+
+    return locations
+      .sort((a, b) => b.yachtCount - a.yachtCount)
+      .slice(0, POPULAR_DESTS_LIMIT)
+      .map(l => ({
+        name: l.name,
+        href: `/search?destinations=${encodeURIComponent(l.name)}&did=${encodeURIComponent(l.id)}${boatTypeQuery}`,
+        templateIdx: stableTemplateIdx(l.name),
+      }));
+  } catch {
     return [];
   }
 }

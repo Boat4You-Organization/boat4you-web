@@ -23,7 +23,7 @@ const useInvoiceDownload = ({ reservationDetails }: UseInvoiceDownloadProps): Us
   const [isDownloading, setIsDownloading] = React.useState(false);
 
   const getLocale = (lang: string): LocaleType => {
-    const supportedLocales: LocaleType[] = ['en', 'hr', 'fr', 'de', 'pt', 'it', 'es'];
+    const supportedLocales: LocaleType[] = ['en', 'hr', 'fr', 'de', 'pt', 'it', 'es', 'pl', 'nl'];
     const baseLocale = lang.split('-')[0] as LocaleType;
 
     return supportedLocales.includes(baseLocale) ? baseLocale : 'en';

@@ -14,7 +14,11 @@
       margin-top: rem-calc(122);
 
       @include media(0, 'md') {
-        flex-direction: column-reverse;
+        // Mobile: yacht hero + main info FIRST, sidebar (CTA) below.
+        // Was column-reverse — surfaced Cancel/Download/Total before the
+        // customer saw which yacht the booking is for. Mario rule (3.5.2026):
+        // mobile must lead with booking content, not utility.
+        flex-direction: column;
         gap: rem-calc(48);
       }
     }

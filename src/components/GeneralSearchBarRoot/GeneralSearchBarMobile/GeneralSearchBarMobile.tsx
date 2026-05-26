@@ -66,6 +66,7 @@ const GeneralSearchBarMobile = () => {
     handleModalClose();
     requestAnimationFrame(() => {
       const form = document.getElementById(GENERAL_SEARCH_FORM) as HTMLFormElement | null;
+
       form?.requestSubmit();
     });
   };
@@ -75,7 +76,9 @@ const GeneralSearchBarMobile = () => {
   // least one destination — clicking without a pick just closes.
   const handleDestinationConfirm = () => {
     const hasDestination = (destinations || []).length > 0;
+
     handleModalClose();
+
     if (hasDestination) {
       autoAdvanceToBoatTypeRef.current = true;
       setDateOpenSignal(s => s + 1);
@@ -87,11 +90,14 @@ const GeneralSearchBarMobile = () => {
   // range-complete, so we let that finish before opening ours.
   useEffect(() => {
     if (!endDate || !autoAdvanceToBoatTypeRef.current) return;
+
     autoAdvanceToBoatTypeRef.current = false;
+
     const timer = setTimeout(() => {
       setModalVariant('boatType');
       toggleModal();
     }, 250);
+
     return () => clearTimeout(timer);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [endDate?.valueOf?.() ?? null]);
@@ -263,9 +269,7 @@ const GeneralSearchBarMobile = () => {
             }
             fullWidth
           >
-            {modalVariant === 'boatType'
-              ? t('generalSearchBar.selectYacht')
-              : t('generalSearchBar.chooseDestination')}
+            {modalVariant === 'boatType' ? t('generalSearchBar.selectYacht') : t('generalSearchBar.chooseDestination')}
           </Button>
         }
       >

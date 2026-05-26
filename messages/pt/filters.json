@@ -1,5 +1,6 @@
 {
   "filterBy": "Filtrar Por",
+  "sortBy": "Ordenar por",
   "activeFilters": "Filtros Ativos",
   "recommended": "Recomendado",
   "lowPrepayment": "Pagamento antecipado baixo",
@@ -34,5 +35,34 @@
   "fuelTank": "Tanque combustível",
   "waterTank": "Tanque água",
   "length": "Comprimento",
-  "newYacht": "Novo iate"
+  "newYacht": "Novo iate",
+  "yachtType": "Tipo de iate",
+  "pricePerWeek": "Preço por semana",
+  "medianPrice": "mediana {amount}",
+  "peopleMaxGuests": "Pessoas (máx. hóspedes)",
+  "guestsRange": "{min} – {max} hóspedes",
+  "berthsRange": "{min} – {max} beliches",
+  "yearBuilt": "Ano de construção",
+  "toiletsRange": "{min} – {max} {count, plural, one {WC} other {WCs}}",
+  "rentalType": "Tipo de aluguer",
+  "bareboat": "Sem skipper",
+  "skippered": "Com skipper",
+  "manufacturerAndModel": "Fabricante e modelo",
+  "classicMainsail": "Vela mestra clássica",
+  "rollingMainsail": "Vela mestra enrolável",
+  "enginePower": "Potência do motor",
+  "engineRangeHp": "{min} – {max} cv",
+  "yourSearch": "A sua pesquisa",
+  "allDestinations": "Todos os destinos",
+  "boatsAvailableLive": "barcos disponíveis · ao vivo",
+  "dateRange": "{start} – {end}",
+  "nightsCount": "{count, plural, one {# noite} other {# noites}}",
+  "vesselType": {
+    "sailing": "Vela",
+    "catamaran": "Catamarã",
+    "motorboat": "Lancha",
+    "motoryacht": "Iate a motor",
+    "gulet": "Gulet",
+    "powerCat": "Power cat"
+  }
 }

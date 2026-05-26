@@ -1,17 +1,22 @@
 import { Metadata } from 'next';
+import { Locale } from 'next-intl';
 import dynamic from 'next/dynamic';
 import { notFound } from 'next/navigation';
 
 import Layout from '@/components/Layout';
-import { meta } from '@/config/meta';
+import { LocaleType } from '@/config/locales.config';
 import { getBlog, getBlogWithSEO } from '@/lib/api';
-import { buildMetadata } from '@/utils/static/buildMetadata';
+import { buildMetadata, localizedUrl } from '@/utils/static/buildMetadata';
 import RelatedBlogSection from '@/views/Blog/RelatedBlogSection';
 
 const SingleBlogContent = dynamic(() => import('@/views/Blog/SingleBlogContent'));
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
-  const { slug } = await params;
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string; locale: Locale }>;
+}): Promise<Metadata> {
+  const { slug, locale } = await params;
 
   const blog = await getBlogWithSEO(slug);
 
@@ -33,6 +38,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   };
 
   const baseMetadata = buildMetadata({
+    locale: locale as LocaleType,
     title,
     description,
     path,
@@ -42,7 +48,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     ...baseMetadata,
     alternates: {
-      canonical: seo?.canonical || `${meta.url}/blog/${post.slug}`,
+      ...baseMetadata.alternates,
+      // Author-supplied canonical (WP-CMS field) wins; otherwise fall back to
+      // the locale-prefixed URL so each language indexes its own copy.
+      canonical: seo?.canonical || localizedUrl(locale as LocaleType, path),
     },
     openGraph: {
       ...baseMetadata.openGraph,

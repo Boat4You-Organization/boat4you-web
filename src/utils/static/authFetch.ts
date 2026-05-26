@@ -19,6 +19,7 @@ async function tryRefresh(refreshToken: string): Promise<string | null> {
     if (!res.ok) return null;
 
     const data = (await res.json()) as RefreshTokenResponse;
+
     return data.token ?? null;
   } catch {
     return null;
@@ -27,7 +28,9 @@ async function tryRefresh(refreshToken: string): Promise<string | null> {
 
 function buildHeaders(init: RequestInit | undefined, accessToken: string | null): Headers {
   const headers = new Headers(init?.headers);
+
   if (accessToken) headers.set('Authorization', `Bearer ${accessToken}`);
+
   return headers;
 }
 
@@ -55,11 +58,13 @@ export async function authFetch(input: string | URL, init?: RequestInit): Promis
   const firstResponse = await fetch(input, { ...init, headers: buildHeaders(init, accessToken) });
 
   const isAuthFailure = firstResponse.status === 401 || firstResponse.status === 403;
+
   if (!isAuthFailure || !refreshToken) {
     return firstResponse;
   }
 
   const newAccessToken = await tryRefresh(refreshToken);
+
   if (!newAccessToken) {
     return firstResponse;
   }

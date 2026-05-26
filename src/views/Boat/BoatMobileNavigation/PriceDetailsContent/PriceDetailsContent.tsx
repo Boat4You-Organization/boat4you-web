@@ -108,11 +108,19 @@ const PriceDetailsContent = ({ yacht, isCalculatedPrice, isSelectedOfferUnavaila
               });
 
               return (
-                <Stack key={`${name}-${id}`} direction="row" justifyContent="space-between">
-                  <Typography display="flex" flexDirection="row" gap="4px" variant="body1">
+                <Stack
+                  key={`${name}-${id}`}
+                  direction="row"
+                  justifyContent="space-between"
+                  alignItems="flex-start"
+                  gap={2}
+                >
+                  <Typography variant="body1" sx={{ flex: 1, minWidth: 0 }}>
                     {labelCode ? tServices(labelCode as YachtServiceExtrasKey) : name}
                   </Typography>
-                  <Typography variant="body1">{formattedPrice}</Typography>
+                  <Typography variant="body1" whiteSpace="nowrap" sx={{ flexShrink: 0 }}>
+                    {formattedPrice}
+                  </Typography>
                 </Stack>
               );
             })}
@@ -126,23 +134,31 @@ const PriceDetailsContent = ({ yacht, isCalculatedPrice, isSelectedOfferUnavaila
           // and always paid at the marina on handover — append it under the
           // "Paid at marina" group so the recap lines up with the extras tab.
           const showSecurityDeposit = yacht.securityDeposit > 0;
-          const renderRow = ({ id, name, priceEur, priceInfo, labelCode }: typeof inAdvance[number]) => {
+          const renderRow = ({ id, name, priceEur, priceInfo, labelCode }: (typeof inAdvance)[number]) => {
             const formattedPrice = formatPriceWithCurrency({
               clientPriceEur: priceEur,
               clientPriceInfo: priceInfo,
               locale,
             });
+
             return (
-              <Stack key={`${name}-${id}`} direction="row" justifyContent="space-between" gap={4}>
-                <Typography display="flex" flexDirection="row" variant="body1">
+              <Stack
+                key={`${name}-${id}`}
+                direction="row"
+                justifyContent="space-between"
+                alignItems="flex-start"
+                gap={2}
+              >
+                <Typography variant="body1" sx={{ flex: 1, minWidth: 0 }}>
                   {labelCode ? tServices(labelCode as YachtServiceExtrasKey) : name}
                 </Typography>
-                <Typography variant="body1" whiteSpace="nowrap">
+                <Typography variant="body1" whiteSpace="nowrap" sx={{ flexShrink: 0 }}>
                   {formattedPrice}
                 </Typography>
               </Stack>
             );
           };
+
           return (
             <>
               {inAdvance.length > 0 && (
@@ -160,11 +176,11 @@ const PriceDetailsContent = ({ yacht, isCalculatedPrice, isSelectedOfferUnavaila
                   </Typography>
                   {onSite.map(renderRow)}
                   {showSecurityDeposit && (
-                    <Stack direction="row" justifyContent="space-between" gap={4}>
-                      <Typography display="flex" flexDirection="row" variant="body1">
+                    <Stack direction="row" justifyContent="space-between" alignItems="flex-start" gap={2}>
+                      <Typography variant="body1" sx={{ flex: 1, minWidth: 0 }}>
                         {tServices('refundable-security-deposit')}
                       </Typography>
-                      <Typography variant="body1" whiteSpace="nowrap">
+                      <Typography variant="body1" whiteSpace="nowrap" sx={{ flexShrink: 0 }}>
                         {formatPriceWithCurrency({ clientPriceEur: yacht.securityDeposit, locale })}
                       </Typography>
                     </Stack>

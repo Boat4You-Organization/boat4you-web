@@ -4,7 +4,11 @@ export const continentsTabs = ['europe', 'americas'] as const;
 export const boatsTabs = ['recommended', 'lowestPrice', 'highestPrice', 'minLength', 'maxLength'] as const;
 
 export const singleBoatTabs = ['details', 'ammenities', 'availability', 'extras', 'faq'] as const;
-export const singleCustomBoatTabs = ['details', 'ammenities', 'goodToKnow', 'faq'] as const;
+// Custom yachts get a dedicated 'priceDetails' tab right after Amenities
+// — admins enter season-specific pricing notes in the admin form, and
+// users expect to see them under their own header rather than buried at
+// the bottom of the amenities list.
+export const singleCustomBoatTabs = ['details', 'ammenities', 'priceDetails', 'goodToKnow', 'video', 'faq'] as const;
 
 export const reservationTabs = [
   'reservationTabs.mainInfo',

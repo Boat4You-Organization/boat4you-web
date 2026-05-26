@@ -109,7 +109,9 @@ export async function createReservation(
     }
 
     if (!response.ok) {
-      const body: ErrorModel = await response.json().catch(() => ({ message: `HTTP ${response.status}` }) as ErrorModel);
+      const body: ErrorModel = await response
+        .json()
+        .catch(() => ({ message: `HTTP ${response.status}` }) as ErrorModel);
 
       return { payload: null, message: body.message ?? `HTTP ${response.status}` };
     }
@@ -165,9 +167,7 @@ export interface YachtSwapInfo {
   notes: string | null;
 }
 
-export async function getYachtSwapInfo(
-  reservationId: number
-): Promise<PayloadResponse<YachtSwapInfo | null>> {
+export async function getYachtSwapInfo(reservationId: number): Promise<PayloadResponse<YachtSwapInfo | null>> {
   try {
     const response = await authFetch(
       `${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/secured/reservations/${reservationId}/yacht-swap`
@@ -179,19 +179,19 @@ export async function getYachtSwapInfo(
 
     if (!response.ok) {
       const body: ErrorModel = await response.json();
+
       return { payload: null, message: body.message };
     }
 
     const payload = await response.json();
+
     return { payload };
   } catch (error) {
     return { payload: null, message: 'An unexpected error occurred while fetching yacht-swap info' };
   }
 }
 
-export async function acknowledgeYachtSwap(
-  reservationId: number
-): Promise<PayloadResponse<boolean>> {
+export async function acknowledgeYachtSwap(reservationId: number): Promise<PayloadResponse<boolean>> {
   try {
     const response = await authFetch(
       `${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/secured/reservations/${reservationId}/yacht-swap/acknowledge`,
@@ -200,6 +200,7 @@ export async function acknowledgeYachtSwap(
 
     if (!response.ok) {
       const body: ErrorModel = await response.json();
+
       return { payload: false, message: body.message };
     }
 
@@ -245,5 +246,48 @@ export async function calculatePaymentPhases(
     return { payload };
   } catch (error) {
     return { payload: [], message: 'An unexpected error occurred while fetching payment phases' };
+  }
+}
+
+/**
+ * Partner-aware payment-phase preview for the /enter-your-details screen,
+ * before any reservation has been created. Backend looks up the offer by
+ * (yachtId, dateFrom, dateTo) and applies partner-supplied installment ratios
+ * against `clientTotalPrice` (which already includes any B4Y agency discount).
+ *
+ * Falls back to A/B/C internal rules server-side when no offer matches —
+ * we still return phases so the UI never shows nothing.
+ *
+ * Public endpoint (no auth) so guest checkout works.
+ */
+export async function previewPaymentPhases(
+  yachtId: number,
+  dateFrom: string,
+  dateTo: string,
+  clientTotalPrice: number
+): Promise<PayloadResponse<PaymentPhase[]>> {
+  try {
+    const params = new URLSearchParams({
+      yachtId: yachtId.toString(),
+      dateFrom,
+      dateTo,
+      clientTotalPrice: clientTotalPrice.toString(),
+    });
+
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/reservations/payment-phases-preview?${params.toString()}`
+    );
+
+    if (!response.ok) {
+      const body: ErrorModel = await response.json();
+
+      return { payload: [], message: body.message };
+    }
+
+    const payload = await response.json();
+
+    return { payload };
+  } catch (error) {
+    return { payload: [], message: 'An unexpected error occurred while fetching payment phases preview' };
   }
 }

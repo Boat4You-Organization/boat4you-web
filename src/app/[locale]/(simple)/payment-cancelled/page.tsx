@@ -90,13 +90,25 @@ const PaymentCancelledPage = () => {
     return <ErrorPage />;
   }
 
+  // The cancel_url from Stripe is identical for first-instalment and
+  // subsequent-instalment payments, but the user-facing message must NOT be.
+  // If any phase is already paidOn, the reservation is already confirmed —
+  // showing the "Pre-Reserved, you have 48h" warning would be alarming and
+  // factually wrong (the boat stays booked, the unpaid instalment can wait
+  // until its own deadline).
+  const isConfirmedReservation = reservationData.paymentPhases?.some(p => p.paidOn) ?? false;
+
   return (
     <Layout showFooter={false}>
       <ReservationOverview
-        title={t('youDidNotFinishYourPayment')}
-        description={t.rich('itLooksLikeYouHaveNotCompletedYourPayment', {
-          preReservedChip: PreReservedChip,
-        })}
+        title={isConfirmedReservation ? t('paymentInterruptedTitle') : t('youDidNotFinishYourPayment')}
+        description={
+          isConfirmedReservation
+            ? t('paymentInterruptedDescription')
+            : t.rich('itLooksLikeYouHaveNotCompletedYourPayment', {
+                preReservedChip: PreReservedChip,
+              })
+        }
         descriptionIcon={Information}
         reservationData={reservationData}
         actionText={t('yourReservations')}

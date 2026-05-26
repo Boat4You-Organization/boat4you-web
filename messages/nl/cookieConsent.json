@@ -1,0 +1,38 @@
+{
+  "title": "Cookies",
+  "description": "We gebruiken cookies om je ervaring nog beter te maken!",
+  "mainTitle": "Cookiebeleid",
+  "mainDescription": "We gebruiken cookies om je ervaring op het Boat4You-platform te verbeteren, te analyseren hoe je onze website gebruikt en ons boekingssysteem voor boten te verbeteren. Deze cookies helpen ons gepersonaliseerde inhoud te leveren en zorgen ervoor dat ons platform optimaal werkt voor jouw boekingsbehoeften. We verzamelen essentiële cookies voor de werking van het platform, analytische gegevens om de gebruikerservaring te verbeteren en voorkeuren om je dashboard te personaliseren. Lees meer in ons <link>Privacybeleid</link>.",
+  "buttons": {
+    "accept": "Alles accepteren",
+    "reject": "Alleen noodzakelijke accepteren",
+    "manage": "Cookie-instellingen",
+    "save": "Instellingen opslaan"
+  },
+  "cookieList": {
+    "name": "Naam",
+    "domain": "Domein",
+    "duration": "Duur",
+    "description": "Omschrijving"
+  },
+  "necessary": {
+    "title": "Essentiële cookies",
+    "description": "Deze cookies zijn noodzakelijk voor de juiste werking van onze website en kunnen niet worden uitgeschakeld. Ze zorgen voor essentiële functionaliteit zoals formulierbeveiliging, taalinstellingen en basisnavigatie. Je kunt deze cookies in je browser blokkeren, maar dan werken sommige delen van de website mogelijk niet correct. Deze cookies bewaren geen persoonlijk identificeerbare informatie."
+  },
+  "analytics": {
+    "title": "Analytische cookies",
+    "description": "Deze cookies helpen ons te begrijpen hoe bezoekers onze website gebruiken door anonieme informatie te verzamelen over gebruikspatronen, populaire pagina's en verbeterpunten. We gebruiken deze gegevens om de prestaties van ons platform te optimaliseren en de gebruikerservaring voor klanten die naar bootverhuur zoeken te verbeteren.",
+    "cookies": [
+      {
+        "name": "_ga",
+        "domain": "www.boat4you.com",
+        "duration": "400 dagen",
+        "description": "Google Analytics-cookie die unieke gebruikers onderscheidt en anonieme gegevens verzamelt over websiteverkeer, gebruikersinteracties en trends om ons te helpen ons boekingsplatform en de gebruikerservaring te verbeteren."
+      }
+    ]
+  },
+  "marketing": {
+    "title": "Marketing-cookies",
+    "description": "Deze cookies helpen ons de effectiviteit van onze marketing te begrijpen en potentiële klanten te identificeren die geïnteresseerd zijn in ons bootverhuurplatform. We gebruiken ze om interacties op de website te volgen en onze communicatie met klanten die jachtcharter-diensten zoeken te verbeteren. Deze cookies worden alleen geladen met jouw toestemming en je kunt je toestemming op elk moment intrekken."
+  }
+}

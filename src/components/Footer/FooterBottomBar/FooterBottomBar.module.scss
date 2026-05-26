@@ -3,11 +3,24 @@
 @use '@/styles/mixins/breakpoints' as *;
 
 .footerBottomBar {
-  padding-top: rem-calc(72);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
+  gap: rem-calc(16);
+  padding-top: rem-calc(72);
   height: 100%;
   width: 100%;
-  align-items: center;
+
+  // Tighter top gap on mobile — 72px is excessive on a phone where the
+  // sections above already stack vertically. Plus center-align so the
+  // copyright and assurance row stack neatly when the row wraps.
+  @include media(0, 'md') {
+    padding-top: rem-calc(40);
+    justify-content: center;
+    text-align: center;
+  }
 
   .link {
     display: flex;

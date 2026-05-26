@@ -201,6 +201,31 @@ E-mail: support@boat4you.com
 
 Rado ćemo vam pomoći s bilo kakvim upitima -- bilo da je pomoć u razumijevanju ove Politike, rješavanje problema s podacima vašeg računa, ili ispunjavanje pojedinačnog zahtjeva za prava. Vaša privatnost nam je važna, i tu smo da pomognemo.
 
-**Datum stupanja na snagu:** 17. lipnja 2025.
+## Razdoblje čuvanja podataka
+
+Različite kategorije podataka čuvamo različito dugo, u skladu sa zakonskim obvezama i legitimnim interesima poslovanja charter posrednika:
+
+- **Profil računa** (ime, e-mail, telefon, adresa): čuva se dok je račun aktivan. Kada izbrišete račun preko stranice _Moj profil_, vaši osobni podaci anonimiziraju se u nekoliko minuta (ime → "Deleted User"; e-mail → anonimizirana adresa; telefon, adresa, grad, država → brišu se).
+- **Zapisi o rezervacijama** (rezervacije, faze plaćanja, datumi chartera, brojevi potvrda): čuvaju se **10 godina** nakon zadnjeg datuma rezervacije, radi računovodstvenih obveza i usklađivanja s partnerskim agencijama. Nakon brisanja računa ti zapisi ostaju u sustavu, ali više nisu povezani s vašim identitetom.
+- **Metapodaci plaćanja** (Stripe payment intent ID, reference bankovnih uplata): čuvaju se **7 godina** uz rezervaciju, kao što zahtijevaju financijski propisi.
+- **Autentikacijski podaci** (JWT tokeni, refresh tokeni, kodovi za reset lozinke): brišu se odmah pri brisanju računa, pri odjavi, ili nakon prirodnog isteka (obično minute do sati).
+- **GDPR evidencija aktivnosti** (kada ste ostvarili pravo pristupa / prenosivosti / brisanja): čuva se uz vaš korisnički zapis radi odgovornosti prema članku 5(2). Anonimna nakon brisanja računa.
+- **Logovi pristupa serveru i audit zapisi**: čuvaju se **90 dana** radi analize sigurnosnih incidenata, nakon čega se brišu.
+
+## Marketinška komunikacija
+
+**Ne šaljemo marketinške biltene niti promotivne mailove.** Svaki e-mail koji dobijete od nas je transakcijski — potvrde rezervacija, podsjetnici za plaćanje, obavijesti o otkazu, i slične operativne poruke izravno vezane uz rezervaciju koju ste napravili. Nema marketinških privola za upravljanje jer nema ničega na što biste se prijavili ili odjavili.
+
+## Vaša prava — samoposluga
+
+Sljedeća GDPR prava možete ostvariti sami, bez kontaktiranja podrške:
+
+- **Pravo pristupa (čl. 15)** + **Pravo ispravka (čl. 16)**: otvorite _Moj profil_ — svaka osobna informacija koju imamo može se urediti tamo.
+- **Pravo na prenosivost podataka (čl. 20)**: otvorite _Moj profil_ i koristite gumb _Preuzmi moje podatke_. Dobit ćete JSON datoteku s vašim profilom, svim rezervacijama, svim fazama plaćanja i vašom GDPR poviješću aktivnosti.
+- **Pravo na brisanje (čl. 17)**: otvorite _Moj profil_ i koristite gumb _Izbriši račun_. Vaši osobni podaci anonimizirat će se odmah. Zapisi o rezervacijama ostaju (anonimizirani) za zakonski rok čuvanja opisan iznad.
+
+Za sve druge zahtjeve — ograničavanje obrade, prigovor, ili bilo što što zahtijeva ljudski pregled — pošaljite mail na support@boat4you.com i odgovorit ćemo u GDPR-om propisanom roku od 30 dana.
+
+**Datum stupanja na snagu:** 17. lipnja 2025. Ažurirano 1. svibnja 2026. s rokovima čuvanja, samouslužnim pravima i potvrdom o nepostojanju marketinške komunikacije.
 
 Ova Politika privatnosti stupa na snagu od gore navedenog datuma i zamjenjuje sve prethodne verzije.

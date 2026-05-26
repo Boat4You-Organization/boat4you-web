@@ -30,6 +30,7 @@ const GoodToKnowItem = ({ title, value, link, onClick }: GoodToKnowItemProps) =>
         </Box>
       );
     }
+
     if (link) {
       return (
         <Link href={link} target="_blank" className={styles.link}>
@@ -38,6 +39,7 @@ const GoodToKnowItem = ({ title, value, link, onClick }: GoodToKnowItemProps) =>
         </Link>
       );
     }
+
     return <Typography variant="body1">{value}</Typography>;
   };
 

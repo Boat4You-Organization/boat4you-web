@@ -41,6 +41,11 @@ const ReservationInfoSection = ({ reservationDetails, userCurrency }: Reservatio
     checkout,
     specialRequest,
     numberOfDays: backendNumberOfDays,
+    services,
+    obligatoryExtrasKeys,
+    securityDeposit,
+    insuredSecurityDeposit,
+    depositCurrency,
   } = reservationDetails;
   // Prefer the backend-provided number (matches BookingSummaryCard on
   // /enter-your-details); only fall back to the locally calculated span if
@@ -107,6 +112,12 @@ const ReservationInfoSection = ({ reservationDetails, userCurrency }: Reservatio
             clientPricePerDayEur={clientPricePerDayEur}
             clientPricePerDayInfo={clientPricePerDayInfo}
             userCurrency={userCurrency}
+            services={services}
+            obligatoryExtrasKeys={obligatoryExtrasKeys}
+            securityDeposit={securityDeposit}
+            insuredSecurityDeposit={insuredSecurityDeposit}
+            depositCurrency={depositCurrency}
+            dateFrom={dateFrom}
           />
         );
 

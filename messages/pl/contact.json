@@ -1,0 +1,19 @@
+{
+  "hero": {
+    "title": "Potrzebujesz więcej informacji?<strong>Skontaktuj się z nami</strong>",
+    "description": "W <logo></logo> <companyName>Boat4You</companyName> planujemy czartery jachtów, które pokochasz. Morze Śródziemne, Karaiby lub nowe wody — nasi eksperci poprowadzą Cię od pierwszego zapytania aż do wypłynięcia. Podaj nam terminy, liczebność załogi i bazę startową. Wyślemy dopasowane oferty, jasne ceny i proste kolejne kroki."
+  },
+  "contact": {
+    "telephoneNumber": "Numer telefonu",
+    "email": "E-mail",
+    "emergencyNumber": "Numer alarmowy / Pilny numer telefonu",
+    "workingHours": "Godziny pracy",
+    "mondayToSunday": "Poniedziałek - Niedziela 8:00 - 20:00 (CEST)"
+  },
+  "internationalSupport": {
+    "title": "Wsparcie międzynarodowe",
+    "usaOffice": "Biuro USA",
+    "ukOffice": "Biuro Wielka Brytania",
+    "croatiaHQ": "Numer WhatsApp"
+  }
+}

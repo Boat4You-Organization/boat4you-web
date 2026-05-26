@@ -37,9 +37,12 @@ interface FeatureRow {
 const formatMeasure = (info: DimensionInfo | null | undefined, fallback: number | null | undefined): string | null => {
   if (info && info.amount != null) {
     const unit = info.unit === 'METRE' ? 'm' : info.unit === 'FEET' ? 'ft' : '';
+
     return `${info.amount} ${unit}`.trim();
   }
+
   if (fallback != null) return `${fallback} m`;
+
   return null;
 };
 

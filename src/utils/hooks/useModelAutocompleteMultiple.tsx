@@ -13,6 +13,9 @@ interface UseModelAutocompleteProps {
   manufacturerIds: number[];
   selectedIds: number[];
   onChange: (value: SelectOption[]) => void;
+  /** Model IDs that have ≥1 yacht in the current filter context. Models
+   *  outside this set render disabled in the dropdown. */
+  enabledIds?: Set<number>;
 }
 
 interface ModelsState {
@@ -21,7 +24,12 @@ interface ModelsState {
   error: string | null;
 }
 
-const useModelAutocompleteMultiple = ({ manufacturerIds, selectedIds, onChange }: UseModelAutocompleteProps) => {
+const useModelAutocompleteMultiple = ({
+  manufacturerIds,
+  selectedIds,
+  onChange,
+  enabledIds,
+}: UseModelAutocompleteProps) => {
   const [stateModels, actionModels] = useActionState(getModels, {
     models: [],
     loading: false,
@@ -76,6 +84,7 @@ const useModelAutocompleteMultiple = ({ manufacturerIds, selectedIds, onChange }
       label={t('model')}
       placeholder={manufacturerIds.length === 0 ? t('selectManufacturerFirst') : t('searchModel')}
       disabled={manufacturerIds.length === 0}
+      getOptionDisabled={enabledIds ? opt => !enabledIds.has(Number(opt.id)) : undefined}
     />
   );
 

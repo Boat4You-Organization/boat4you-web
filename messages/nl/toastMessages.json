@@ -1,0 +1,13 @@
+{
+  "request-password-failed": "Wachtwoord aanvragen mislukt",
+  "request-password-success": "Wachtwoordverzoek succesvol",
+  "login-success": "Aanmelden geslaagd",
+  "login-failed": "Aanmelden mislukt",
+  "userUpdated": "Gebruiker succesvol bijgewerkt",
+  "userUpdateFailed": "Gebruiker bijwerken mislukt",
+  "requestCancelBookingSuccess": "Annuleringsverzoek voor boeking succesvol",
+  "requestCancelBookingFailed": "Annuleringsverzoek voor boeking mislukt",
+  "linkCopied": "Link gekopieerd naar klembord",
+  "reservationNumberCopied": "Reserveringsnummer gekopieerd naar klembord",
+  "reservationIdCopied": "Boekingsreferentie gekopieerd naar klembord"
+}

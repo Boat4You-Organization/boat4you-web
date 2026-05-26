@@ -1,9 +1,9 @@
 {
   "metadata": {
     "base": {
-      "title": "Boat4You | Aluguel de Barcos Fácil e Seguro no Mundo Todo",
+      "title": "Aluguer de Iate e Barco em Todo o Mundo | Boat4You",
       "titleTemplate": "%s | Boat4You",
-      "description": "Navegue e reserve barcos em mais de 100 países. Veleiros, catamarãs, lanchas – com ou sem skipper. Melhores preços. Reserva segura. Suporte 24/7.",
+      "description": "Alugue iates e barcos em mais de 100 países. Veleiros, catamarãs, lanchas. Melhores preços, suporte 24/7, reserva segura.",
       "path": ""
     },
     "search": {
@@ -12,7 +12,7 @@
       "path": "/search"
     },
     "blog": {
-      "title": "Guias de Charter de Iates | Planejamento, Roteiros, Notícias | Boat4You",
+      "title": "Guias de Charter de Iates | Planejamento, Roteiros, Notícias",
       "description": "Os guias especializados de charter de iates da Boat4You fornecem inspiração e informações sobre férias náuticas, como escolher o barco certo e onde navegar.",
       "path": "/blog"
     },
@@ -37,7 +37,7 @@
       "path": "/faq"
     },
     "termsAndConditions": {
-      "title": "Termos e Condições da Boat4You",
+      "title": "Termos e Condições",
       "description": "Revise os termos e condições para usar a Boat4You, incluindo responsabilidades do usuário, pagamentos e políticas de conta.",
       "path": "/terms-and-conditions"
     },

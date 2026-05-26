@@ -11,9 +11,16 @@ interface UseAmenityAutocompleteProps {
   selectedIds: number[];
   onChange: (value: SelectOption[]) => void;
   amenities: AmenityModel[];
+  /** Amenity IDs that have ≥1 yacht in the current filter context. */
+  enabledIds?: Set<number>;
 }
 
-const useAmenityAutocompleteMultiple = ({ selectedIds, onChange, amenities }: UseAmenityAutocompleteProps) => {
+const useAmenityAutocompleteMultiple = ({
+  selectedIds,
+  onChange,
+  amenities,
+  enabledIds,
+}: UseAmenityAutocompleteProps) => {
   const t = useTranslations('filters');
   const amenitiesT = useTranslations('yacht.amenitiesList');
 
@@ -39,6 +46,7 @@ const useAmenityAutocompleteMultiple = ({ selectedIds, onChange, amenities }: Us
       onChange={onChange}
       label={t('amenities')}
       placeholder={t('searchAmenities')}
+      getOptionDisabled={enabledIds ? opt => !enabledIds.has(Number(opt.id)) : undefined}
     />
   );
 

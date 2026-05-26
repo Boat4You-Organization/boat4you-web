@@ -1,0 +1,186 @@
+{
+  "hero": {
+    "title": "Jachtcharter in",
+    "ctaTitle": "één klik.",
+    "description": "Charter je perfecte jacht in een paar klikken. Eenvoudig, snel en zonder stress — je droomzeilavontuur begint hier.",
+    "support": "Uitstekende klantenservice",
+    "yachtsCount": "{count} jachten",
+    "marinasCount": "{count} jachthavens"
+  },
+  "generalSearchBar": {
+    "whereAreYouGoing": "Waar ga je naartoe?",
+    "selectBoatType": "Selecteer boottype",
+    "where": "Waar",
+    "searchLocations": "Zoek locaties",
+    "when": "Wanneer",
+    "choosedates": "Kies data",
+    "withWhat": "Waarmee",
+    "chooseBoat": "Kies een boot",
+    "chooseDestination": "Kies bestemming",
+    "chooseTransportation": "Kies vervoer",
+    "searchBoats": " Zoek boten",
+    "aroundCurrentLocation": "Rondom huidige locatie",
+    "locating": "Locatie bepalen…",
+    "locationError": "Locatie kon niet worden bepaald",
+    "selectYacht": "Selecteer jacht"
+  },
+  "destinationsSection": {
+    "theWorldIs": "Beste jachtcharter-",
+    "yours": "bestemmingen",
+    "yachts": "jachten",
+    "destinations": {
+      "bahamas": "Bahama's",
+      "caribbean": "Caribisch gebied",
+      "croatia": "Kroatië",
+      "france": "Frankrijk",
+      "greece": "Griekenland",
+      "italy": "Italië",
+      "martinique": "Martinique",
+      "montenegro": "Montenegro",
+      "seychelles": "Seychellen",
+      "spain": "Spanje",
+      "türkiye": "Turkije",
+      "virginIslandsBritish": "Britse Maagdeneilanden",
+      "grenada": "Grenada",
+      "splitRegion": "Regio Split",
+      "ionianRegion": "Ionische regio"
+    },
+    "destinationsLocative": {
+      "bahamas": "Bahama's",
+      "caribbean": "Caribisch gebied",
+      "croatia": "Kroatië",
+      "france": "Frankrijk",
+      "greece": "Griekenland",
+      "italy": "Italië",
+      "martinique": "Martinique",
+      "montenegro": "Montenegro",
+      "seychelles": "Seychellen",
+      "spain": "Spanje",
+      "türkiye": "Turkije",
+      "virginIslandsBritish": "Britse Maagdeneilanden",
+      "grenada": "Grenada",
+      "splitRegion": "Regio Split",
+      "ionianRegion": "Ionische regio"
+    }
+  },
+  "whyChooseUsSection": {
+    "whyChoose": "Waarom kies je ons als je <strong>professionele charteraanbieder</strong>",
+    "items": {
+      "competitivePricing": {
+        "title": "Concurrerende prijzen",
+        "description": "Beste tarieven zonder verborgen kosten. Topkwaliteit tegen onverslaanbare prijzen."
+      },
+      "wideSelection": {
+        "title": "Ruime keuze",
+        "description": "Diverse vloot van luxe jachten tot zeilboten voor elke gelegenheid."
+      },
+      "securePayment": {
+        "title": "Veilig betalen",
+        "description": "Beveiliging op bankniveau met vertrouwde betaalproviders. Je gegevens zijn veilig."
+      },
+      "trustedCustomerService": {
+        "title": "Betrouwbare klantenservice",
+        "description": "24/7 deskundige ondersteuning voor naadloos boeken en onvergetelijke ervaringen."
+      }
+    }
+  },
+  "ourFleetSection": {
+    "getToKnow": "We hebben de boot die je wilt, ",
+    "ourFleet": "ongeacht het type",
+    "boatSelection": "De beste selectie boten online tegen de beste prijzen",
+    "boat": "boot",
+    "fleet": {
+      "catamarans": "Catamarans",
+      "gulets": "Guletten",
+      "houseBoats": "Woonboten",
+      "luxuryMotorYachts": "Luxe motorjachten",
+      "motorboats": "Motorboten",
+      "motorYachts": "Motorjachten",
+      "motorSailors": "Motorzeilers",
+      "powerCatamarans": "Power catamarans",
+      "sailingYachts": "Zeiljachten",
+      "miniCruisers": "Mini-cruisers",
+      "trimarans": "Trimaran",
+      "rubberBoats": "Rubberboot"
+    }
+  },
+  "chooseFromFiveHundredLocations": "Meer dan 40 landen voor bootverhuur en jachtcharter tegen de beste prijzen",
+  "riskFreeBooking": {
+    "riskFreeBooking": "Risicovrij boeken",
+    "save15Now": "Bespaar nu 15%",
+    "saveUpTo": "Bespaar tot 47%",
+    "cancellingDescription": "Annuleren bij ons is volledig risicovrij en flexibel. We bieden ruimhartige restitutiebeleidsregels om je investering te beschermen."
+  },
+  "blogSection": {
+    "readAboutYour": "Ideeën voor je volgende ",
+    "nextHoliday": "zeilvakantie",
+    "discoverSecretSpots": "Ontdek geheime plekjes zoals de locals; bekijk ons advies voor je volgende jachtcharter."
+  },
+  "allDestinationsSection": {
+    "allOf": "Ontdek onze ",
+    "ourDestinations": "favoriete plekken om te zeilen",
+    "specialDeals": "Krijg speciale aanbiedingen en bespaar geld op elke boekingsreservering.",
+    "continents": {
+      "europe": "Europa",
+      "americas": "Amerika",
+      "asia": "Azië",
+      "africa": "Afrika",
+      "australia": "Australië"
+    }
+  },
+  "languageModal": {
+    "title": "Taal en valuta",
+    "savePreferences": "Voorkeuren opslaan",
+    "languageLabel": "Taal",
+    "currencyLabel": "Valuta",
+    "languages": {
+      "en": "Engels",
+      "fr": "Frans",
+      "de": "Duits",
+      "pt": "Portugees",
+      "it": "Italiaans",
+      "es": "Spaans",
+      "hr": "Kroatisch",
+      "pl": "Pools",
+      "nl": "Nederlands"
+    }
+  },
+  "manufacturersSection": {
+    "title": "Populairste jachtbouwers",
+    "subtitle": "Blader door de catalogus per merk",
+    "preTitle": "Populairste ",
+    "emphasizedTitle": "jachtbouwers"
+  },
+  "faqSection": {
+    "title": "Veelgestelde vragen",
+    "subtitle": "Alles wat je moet weten voordat je boekt",
+    "questions": [
+      {
+        "q": "Hoe boek ik een jachtcharter op Boat4You?",
+        "a": "Kies je bestemming en data, bekijk de beschikbare jachten en klik op Reserveren bij de boot van je keuze. Wij bevestigen de beschikbaarheid bij de partner, sturen je een boekingsvoorstel en zodra je de aanbetaling voldoet, staat je charter vast. Het hele proces duurt slechts enkele minuten."
+      },
+      {
+        "q": "Heb ik een vaarbewijs nodig om een jacht te charteren?",
+        "a": "Voor een charter zonder schipper (bareboat) heb je een vaarbewijs nodig dat in het charterland erkend wordt – Klein Vaarbewijs II, RYA Day Skipper, ICC of een gelijkwaardig brevet. Heb je geen vaarbewijs, dan kun je elk jacht alsnog boeken en bij het afrekenen een schipper toevoegen."
+      },
+      {
+        "q": "Wat is inbegrepen in de bareboat-charterprijs?",
+        "a": "Het basistarief omvat het jacht zelf, de standaarduitrusting, de ondersteuning van het charterkantoor en een verzekering tegen grote schade. Eindschoonmaak, brandstof, ligplaatsen buiten de thuishaven, transit log en toeristenbelasting worden meestal apart betaald – op elke jachtpagina zie je de verplichte en optionele extra's transparant op een rij."
+      },
+      {
+        "q": "Kan ik een jacht zonder schipper huren?",
+        "a": "Ja. Bareboat-charter is beschikbaar voor de meeste jachten in ons aanbod, mits ten minste één persoon aan boord een geldig vaarbewijs en een marifoonbedienerscertificaat (VHF) heeft. Heeft niemand uit de groep een vaarbewijs, dan kun je hetzelfde jacht huren met een professionele schipper tegen een dagtoeslag."
+      },
+      {
+        "q": "Wat is de beste tijd om een jacht te charteren in de Mediterranean?",
+        "a": "Mei, juni en september zijn ideaal – warme zee, lichte winden, minder drukte en duidelijk lagere prijzen dan in het hoogseizoen juli en augustus. April en oktober zijn nog steeds geschikt voor ervaren zeilers die geen moeite hebben met een koelere zee, en bieden de laagste weektarieven van het jaar."
+      },
+      {
+        "q": "Kan ik mijn boeking annuleren?",
+        "a": "De annuleringsvoorwaarden verschillen per jacht – de exacte voorwaarden staan op elke aanbiedingspagina voordat je betaalt. Bij het afrekenen bieden we ook een optionele annuleringsverzekering aan die de charterkosten terugbetaalt als je vanwege een verzekerde reden moet annuleren. De terugbetaalbare borg wordt altijd geretourneerd, tenzij het jacht beschadigd is."
+      }
+    ],
+    "preTitle": "Veelgestelde ",
+    "emphasizedTitle": "vragen"
+  }
+}

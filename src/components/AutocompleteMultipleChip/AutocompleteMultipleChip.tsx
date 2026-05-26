@@ -91,7 +91,24 @@ const AutocompleteMultipleChip = ({
       return acc;
     }, [] as AutocompleteOption[]);
 
-    const selected = uniqueOptions.filter(option => selectedSet.has(option[valueField]));
+    // Dedupe SELECTED options by display label so dual-source region pairs
+    // (e.g. Ionian + Ionian Islands → both labelled "Ionian Region") render as
+    // a single chip instead of two stacked chips that share text. Non-selected
+    // options keep their full list (the dropdown can show specifics for the
+    // user to pick from). The hidden duplicate id is still tracked in `value`
+    // so backend search continues to hit both providers.
+    const selectedLabelsSeen = new Set<string>();
+    const selected = uniqueOptions.filter(option => {
+      if (!selectedSet.has(option[valueField])) return false;
+
+      const labelKey = (option.label ?? '').toLowerCase();
+
+      if (selectedLabelsSeen.has(labelKey)) return false;
+
+      selectedLabelsSeen.add(labelKey);
+
+      return true;
+    });
     const nonSelected = uniqueOptions.filter(option => !selectedSet.has(option[valueField]));
 
     return [...selected, ...nonSelected];

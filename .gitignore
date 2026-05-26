@@ -36,3 +36,13 @@ yarn-error.log*
 .env*
 
 messages/**/*.d.json.ts
+
+# IDE
+/.idea/
+*.iml
+
+# alternative lockfile (this project uses yarn)
+/package-lock.json
+
+# TS incremental build cache
+/tsconfig.tsbuildinfo
