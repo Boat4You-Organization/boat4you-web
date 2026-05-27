@@ -81,7 +81,7 @@ const YachtTypeGrid = ({ selected, onToggle, counts }: YachtTypeGridProps) => {
               <YachtTypeIcon type={tile.id} size={20} />
             </Box>
             <Box component="span" sx={{ fontSize: 10.5, fontWeight: 700 }}>
-              {t(tile.labelKey)}
+              {t(tile.labelKey as Parameters<typeof t>[0])}
             </Box>
             <Box
               component="span"

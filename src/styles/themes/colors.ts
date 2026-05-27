@@ -21,6 +21,7 @@ export default {
   black300: '#bdbdbd',
   black200: '#dcdcdc',
   black100: '#efefef',
+  black50: '#f7f7f7',
   red950: '#4b0404',
   red900: '#881414',
   red800: '#a50f0f',

@@ -14,6 +14,7 @@ import { DEFAULT_IMAGE } from '@/config/constants.config';
 import { YachtModel } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
 import copyToClipboard from '@/utils/static/copyToClipboard';
+import { getBoatImageUrl } from '@/utils/static/imageUtils';
 import { toTitleCase } from '@/utils/static/toTitleCase';
 
 import styles from './BoatShareModal.module.scss';
@@ -46,11 +47,7 @@ const BoatShareModal = ({ open, onOpen, onClose, yacht }: BoatShareModalProps) =
         {mainImage && (
           <Box className={styles.imageWrapper}>
             <Image
-              src={
-                mainImage
-                  ? `${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/image/${mainImage.id}?width=200`
-                  : DEFAULT_IMAGE
-              }
+              src={mainImage ? getBoatImageUrl(mainImage.id, 200) : DEFAULT_IMAGE}
               alt="Boat image"
               fill
               sizes="auto"

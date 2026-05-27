@@ -9,6 +9,7 @@ import { PriceCalcDto } from '@/models/yacht-offer.model';
 import { YachtAvailability, YachtFleet, YachtModel } from '@/models/yacht.model';
 import { PayloadResponse } from '@/types/response.type';
 import { authFetch } from '@/utils/static/authFetch';
+import { getBoatImageBaseUrl } from '@/utils/static/imageUtils';
 import { createYachtQueryParams } from '@/utils/static/queryParams';
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -99,14 +100,11 @@ export async function getYachtImage(state: any, { imageId, width, height }: Yach
 
     if (height) params.append('height', height.toString());
 
-    const response = await fetch(
-      `${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/image/${imageId}${params && `?${params.toString()}`}`,
-      {
-        headers: {
-          Accept: 'image/*',
-        },
-      }
-    );
+    const response = await fetch(`${getBoatImageBaseUrl(imageId)}${params && `?${params.toString()}`}`, {
+      headers: {
+        Accept: 'image/*',
+      },
+    });
 
     if (!response.ok) {
       return null;

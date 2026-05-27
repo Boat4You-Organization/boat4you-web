@@ -12,7 +12,7 @@ import styles from './OurFleetCard.module.scss';
 const OurFleetCard = ({ vesselType, yachtCount }: YachtFleet) => {
   const t = useTranslations('home.ourFleetSection');
 
-  const config = VESSEL_TYPE_CONFIG[vesselType];
+  const config = VESSEL_TYPE_CONFIG[vesselType as keyof typeof VESSEL_TYPE_CONFIG];
 
   return (
     <Link href={`/search?boatTypes=${config.slug}`}>

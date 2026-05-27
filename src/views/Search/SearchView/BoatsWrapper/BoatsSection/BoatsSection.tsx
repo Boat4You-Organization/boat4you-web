@@ -480,7 +480,7 @@ const BoatsSection = ({
           {/* Active filter chips — render under the Recommended/Lowest price
               tab row so user sees what's applied and can clear individual
               filters with a single click. Hidden when no filter is active. */}
-          <AppliedFilterChips params={params} setMultipleParams={setMultipleParams} t={t} />
+          <AppliedFilterChips params={params} setMultipleParams={setMultipleParams} t={t as (key: string) => string} />
           <RiskFreeCTA searchPage disableGutters />
           {/* Count headline as a real <h2> — anchors the heading hierarchy
               between the page H1 and the per-yacht H3 cards. Without it

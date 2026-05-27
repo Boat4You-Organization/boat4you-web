@@ -92,7 +92,7 @@ export async function generateMetadata({ params: paramsPromise, searchParams }: 
       : `destinationsSection.destinations.${key}`;
 
     try {
-      return tHome(ns as Parameters<typeof tHome>[0]);
+      return tHome.raw(ns as Parameters<typeof tHome.raw>[0]) as string;
     } catch {
       return raw;
     }
@@ -116,9 +116,9 @@ export async function generateMetadata({ params: paramsPromise, searchParams }: 
   // katamarana u Hrvatskoj" — genitive in HR, nominative in non-inflecting
   // locales, all driven by the per-locale common.json `*ForRental` keys).
   const boatTypeForRental = singleBoatType
-    ? tCommon(
-        VESSEL_TYPE_LABEL_MAP_FOR_RENTAL[singleBoatType].replace(/^common\./, '') as Parameters<typeof tCommon>[0]
-      )
+    ? (tCommon.raw(
+        VESSEL_TYPE_LABEL_MAP_FOR_RENTAL[singleBoatType].replace(/^common\./, '') as Parameters<typeof tCommon.raw>[0]
+      ) as string)
     : null;
 
   let title: string;

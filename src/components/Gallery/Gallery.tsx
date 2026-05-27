@@ -10,6 +10,7 @@ import Image from 'next/image';
 import Photos from '@/components/SvgIcons/Photos';
 import { YachtImage, YachtModel } from '@/models/yacht.model';
 import useToggleState from '@/utils/hooks/useToggleState';
+import { getBoatImageUrl } from '@/utils/static/imageUtils';
 
 import styles from './Gallery.module.scss';
 import Lightbox from './Lightbox';
@@ -86,7 +87,7 @@ const Gallery = ({ yacht, images, showShareAndFavorite = false, maxDisplayedImag
               })}
             >
               <Image
-                src={`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/image/${id}?width=1200`}
+                src={getBoatImageUrl(id, 1200)}
                 alt={`Image slide ${id}`}
                 fill
                 sizes="(max-width: 600px) 100vw, 50vw"

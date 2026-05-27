@@ -28,6 +28,7 @@ export interface SelectedExtra {
   unitPriceEur: number;
   unitPriceInfo: PriceInfo;
   key: string;
+  paymentType: string | null;
 }
 
 export interface PaymentPhase {

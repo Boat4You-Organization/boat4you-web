@@ -76,7 +76,7 @@ const equipmentByCategory = (
 ): string[] =>
   yacht.amenities
     ?.filter(amenity => amenity.equipment?.category === category)
-    ?.map(amenity => amenitiesT(amenity.equipment.labelCode).toLowerCase().trim())
+    ?.map(amenity => amenitiesT(amenity.equipment!.labelCode).toLowerCase().trim())
     ?.filter(item => item && item.length > 0)
     ?.sort((a, b) => a.localeCompare(b)) || [];
 

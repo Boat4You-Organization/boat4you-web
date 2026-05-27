@@ -195,7 +195,9 @@ const SeoTextSection = ({
   // the same lookup works across all 9 locales without conditionals.
   const destLocativeKey = DESTINATION_LOCATIVE_KEY[dest.toLowerCase()];
   const destForTitle = destLocativeKey
-    ? tHome(`destinationsSection.destinationsLocative.${destLocativeKey}` as Parameters<typeof tHome>[0])
+    ? (tHome.raw(
+        `destinationsSection.destinationsLocative.${destLocativeKey}` as Parameters<typeof tHome.raw>[0]
+      ) as string)
     : dest;
   const title = t('seoBlockTitle', { destination: destForTitle });
 

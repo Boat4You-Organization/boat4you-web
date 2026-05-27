@@ -17,6 +17,7 @@ import Share from '@/components/SvgIcons/Share';
 import { YachtImage, YachtModel } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
 import useToggleState from '@/utils/hooks/useToggleState';
+import { getBoatImageUrl } from '@/utils/static/imageUtils';
 import BoatShareModal from '@/views/Boat/BoatHeroSection/BoatShareModal';
 
 import styles from './Lightbox.module.scss';
@@ -177,7 +178,7 @@ const Lightbox = ({ yacht, images, open, onClose, selectedImage, showShareAndFav
             renderItem={image => (
               <Box className={styles.imageWrapper}>
                 <Image
-                  src={`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/image/${image.id}?width=1920`}
+                  src={getBoatImageUrl(image.id, 1920)}
                   alt={`Gallery image ${image.id}`}
                   fill
                   sizes="100vw"
@@ -216,7 +217,7 @@ const Lightbox = ({ yacht, images, open, onClose, selectedImage, showShareAndFav
                   >
                     <Box className={styles.box}>
                       <Image
-                        src={`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/image/${image.id}?width=256`}
+                        src={getBoatImageUrl(image.id, 256)}
                         alt={`Thumbnail ${image.id}`}
                         fill
                         sizes="120px"

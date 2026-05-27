@@ -7,7 +7,7 @@ import SwipeableModal from './SwipeableModal';
 
 interface ModalRootProps extends DialogProps {
   title?: string | undefined;
-  onOpen: () => void;
+  onOpen?: () => void;
   onClose: () => void;
   description?: string;
   onConfirm?: () => void;
@@ -60,7 +60,7 @@ const ModalRoot = ({
       <SwipeableModal
         open={open}
         onClose={onClose}
-        onOpen={onOpen}
+        onOpen={onOpen || (() => {})}
         title={title}
         hideCancelButton
         arrowBack={arrowBack}

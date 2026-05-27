@@ -17,7 +17,7 @@ declare module '@mui/material/Typography' {
     inherit: false;
     h5: false;
     h6: false;
-    caption: false;
+
     overline: false;
     subtitle1: false;
     subtitle2: false;

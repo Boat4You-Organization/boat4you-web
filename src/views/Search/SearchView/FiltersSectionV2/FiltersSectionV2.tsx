@@ -323,7 +323,7 @@ const FiltersSectionV2 = ({ catalogueData, catalogueFilters, isMobile }: Filters
   const rawDestination = (params.destinations && params.destinations[0]) || '';
   const destinationKey = destinationKeyByLabel[rawDestination.toLowerCase()];
   const destinationLabel = destinationKey
-    ? tHome(`destinationsSection.destinations.${destinationKey}` as Parameters<typeof tHome>[0])
+    ? (tHome.raw(`destinationsSection.destinations.${destinationKey}` as Parameters<typeof tHome.raw>[0]) as string)
     : rawDestination;
 
   return (
@@ -402,7 +402,7 @@ const FiltersSectionV2 = ({ catalogueData, catalogueFilters, isMobile }: Filters
         {/* People ─────────────────────────────────────────────── */}
         <FilterGroup title={t('peopleMaxGuests')}>
           <Box sx={{ ...searchV2Type.numericValue, mb: '6px' }}>
-            {t('guestsRange', { min: people[0], max: people[1] })}
+            {t('guestsRange', { min: String(people[0]), max: String(people[1]) })}
           </Box>
           <FilterRangeSliderV2
             min={0}
@@ -422,7 +422,7 @@ const FiltersSectionV2 = ({ catalogueData, catalogueFilters, isMobile }: Filters
         {/* Berths ─────────────────────────────────────────────── */}
         <FilterGroup title={t('berths')}>
           <Box sx={{ ...searchV2Type.numericValue, mb: '6px' }}>
-            {t('berthsRange', { min: berths[0], max: berths[1] })}
+            {t('berthsRange', { min: String(berths[0]), max: String(berths[1]) })}
           </Box>
           <FilterRangeSliderV2
             min={0}
@@ -487,7 +487,7 @@ const FiltersSectionV2 = ({ catalogueData, catalogueFilters, isMobile }: Filters
         {/* Toilets ────────────────────────────────────────────── */}
         <FilterGroup title={t('toilets')}>
           <Box sx={{ ...searchV2Type.numericValue, mb: '6px' }}>
-            {t('toiletsRange', { min: toilets[0], max: toilets[1], count: toilets[1] })}
+            {t('toiletsRange', { min: String(toilets[0]), max: String(toilets[1]), count: toilets[1] })}
           </Box>
           <FilterRangeSliderV2
             min={0}
@@ -586,7 +586,7 @@ const FiltersSectionV2 = ({ catalogueData, catalogueFilters, isMobile }: Filters
         {/* Engine power ──────────────────────────────────────── */}
         <FilterGroup title={t('enginePower')}>
           <Box sx={{ ...searchV2Type.numericValue, mb: '6px' }}>
-            {t('engineRangeHp', { min: engine[0], max: engine[1].toLocaleString('en-US') })}
+            {t('engineRangeHp', { min: String(engine[0]), max: engine[1].toLocaleString('en-US') })}
             <Box component="span" sx={{ fontWeight: 400, color: searchV2.inkSoft, ml: '6px', fontSize: 11 }}>
               ({(engine[0] * 0.745).toFixed(1)}–{(engine[1] * 0.745).toFixed(0)} kW)
             </Box>

@@ -3,7 +3,10 @@ export type SessionStorageKey =
   | 'reservationNumber'
   | 'activeStep'
   | 'selectedPaymentMethod'
-  | 'selectedInstallment';
+  | 'selectedInstallment'
+  | 'bookingContact'
+  | 'paymentPhases'
+  | 'reservationExpiresAt';
 
 export const getDataFromSessionStorage = <T>(key: SessionStorageKey): T | null => {
   if (typeof window === 'undefined') {
