@@ -75,6 +75,14 @@ const nextConfig = {
         hostname: 'boat4you.com',
       },
       {
+        // Bunny CDN pull zone (NEXT_PUBLIC_IMAGE_CDN_URL) — yacht photos served via
+        // boat4you.b-cdn.net/public/image/<id>. Without whitelisting this host the
+        // Next image optimizer returns 400 and listings render blank once the CDN
+        // env var is configured (the .env on the FE box now sets it).
+        protocol: 'https',
+        hostname: 'boat4you.b-cdn.net',
+      },
+      {
         protocol: 'https',
         hostname: 'ws.nausys.com',
       },
