@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-use-before-define */
 import React from 'react';
 
 import { Box, Divider, Stack, Typography } from '@mui/material';

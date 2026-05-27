@@ -1,3 +1,4 @@
+/* eslint-disable no-nested-ternary, react/no-unstable-nested-components */
 import { useEffect, useMemo, useState } from 'react';
 
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';

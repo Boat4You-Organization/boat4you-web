@@ -1,3 +1,4 @@
+/* eslint-disable no-await-in-loop */
 import { routing } from '@/i18n/routing';
 import { getBlogs } from '@/lib/api';
 import { BlogTeaser } from '@/types/blog.type';

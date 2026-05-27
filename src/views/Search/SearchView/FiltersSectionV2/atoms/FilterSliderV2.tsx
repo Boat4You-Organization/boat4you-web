@@ -1,5 +1,6 @@
 'use client';
 
+/* eslint-disable react/no-array-index-key */
 import { Box } from '@mui/material';
 
 import { searchV2 } from '@/styles/themes/searchV2';

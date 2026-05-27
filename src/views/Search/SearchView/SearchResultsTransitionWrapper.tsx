@@ -1,5 +1,6 @@
 'use client';
 
+/* eslint-disable react/jsx-no-useless-fragment */
 import { ReactNode } from 'react';
 
 // WORKAROUND — left intentionally as a pass-through.

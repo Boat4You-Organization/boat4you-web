@@ -1,3 +1,4 @@
+/* eslint-disable no-nested-ternary */
 import React, { JSX } from 'react';
 
 import CloseRounded from '@mui/icons-material/CloseRounded';

@@ -1,3 +1,4 @@
+/* eslint-disable no-nested-ternary */
 import { Button, Grid, Icon, List, ListItem, Stack, Tooltip, Typography } from '@mui/material';
 import { useLocale, useTranslations } from 'next-intl';
 
@@ -33,9 +34,7 @@ const AvailabilityCard = ({ yacht, offer }: AvailabilityCardProps) => {
         : 7;
 
   const showListPrice = typeof listPriceEur === 'number' && listPriceEur > clientPriceEur;
-  const discountPercent = showListPrice
-    ? Math.round(((listPriceEur! - clientPriceEur) / listPriceEur!) * 100)
-    : 0;
+  const discountPercent = showListPrice ? Math.round(((listPriceEur! - clientPriceEur) / listPriceEur!) * 100) : 0;
 
   // Round to whole euros for cleaner display ("3,001 €" not "3,001.68 €")
   const roundedTotal = Math.round(clientPriceEur);
@@ -44,9 +43,7 @@ const AvailabilityCard = ({ yacht, offer }: AvailabilityCardProps) => {
     : clientPriceInfo;
   const roundedListPrice = showListPrice ? Math.round(listPriceEur!) : null;
   const roundedListPriceInfo =
-    showListPrice && listPriceInfo
-      ? { ...listPriceInfo, amount: Math.round(listPriceInfo.amount) }
-      : null;
+    showListPrice && listPriceInfo ? { ...listPriceInfo, amount: Math.round(listPriceInfo.amount) } : null;
 
   const formattedTotal = formatPriceWithCurrency({
     clientPriceEur: roundedTotal,

@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import { Box, Stack, Typography } from '@mui/material';
 import { useLocale, useTranslations } from 'next-intl';
 

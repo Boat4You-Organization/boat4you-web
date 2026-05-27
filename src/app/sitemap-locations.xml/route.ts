@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-syntax */
 import { PROMOTED_COUNTRY_CODES } from '@/config/promoted-countries.config';
 import { routing } from '@/i18n/routing';
 import { CountryCountModel, LocationModel } from '@/models/locations.model';

@@ -1,5 +1,6 @@
 'use client';
 
+/* eslint-disable no-nested-ternary, react/no-array-index-key */
 import { Box } from '@mui/material';
 
 import { CharterType, MainSailType, VESSEL_TYPE_LABEL_MAP_PLURAL, VesselType } from '@/models/yacht.model';

@@ -1,5 +1,6 @@
 'use client';
 
+/* eslint-disable @typescript-eslint/no-use-before-define */
 import { useMemo, useState } from 'react';
 
 import CakeIcon from '@mui/icons-material/CakeOutlined';

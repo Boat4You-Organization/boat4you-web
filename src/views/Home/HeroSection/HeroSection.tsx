@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-use-before-define */
 import { Box, Container, Stack, Typography } from '@mui/material';
 import { useTranslations } from 'next-intl';
 

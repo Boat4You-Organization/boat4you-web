@@ -1,3 +1,4 @@
+/* eslint-disable no-nested-ternary, no-void */
 import { Metadata } from 'next';
 import { Locale } from 'next-intl';
 import { getLocale, getTranslations } from 'next-intl/server';

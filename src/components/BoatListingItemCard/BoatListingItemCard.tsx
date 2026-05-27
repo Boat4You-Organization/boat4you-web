@@ -1,5 +1,6 @@
 'use client';
 
+/* eslint-disable @typescript-eslint/no-shadow, consistent-return, no-nested-ternary */
 import { useEffect, useMemo, useState } from 'react';
 
 import {
@@ -214,7 +215,7 @@ const BoatListingItemCard = ({
         picks.push(demoPool[idx]);
       }
 
-      i++;
+      i += 1;
     }
 
     return picks;

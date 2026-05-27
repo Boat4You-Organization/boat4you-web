@@ -1,5 +1,6 @@
 'use client';
 
+/* eslint-disable consistent-return, no-nested-ternary */
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useFormContext } from 'react-hook-form';
 

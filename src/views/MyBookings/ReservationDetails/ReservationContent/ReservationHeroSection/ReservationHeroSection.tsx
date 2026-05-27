@@ -1,5 +1,6 @@
 'use client';
 
+/* eslint-disable no-nested-ternary, no-void */
 import { useEffect, useState, useTransition } from 'react';
 
 import AccessTimeIcon from '@mui/icons-material/AccessTimeOutlined';

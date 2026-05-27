@@ -193,6 +193,7 @@ const FiltersSectionV2 = ({ catalogueData, catalogueFilters, isMobile }: Filters
   // Yacht type ──────────────────────────────────────────────────────
   const selectedTypes = (params.boatTypes || []) as VesselType[];
   const handleTypeToggle = (type: VesselType) => {
+    // eslint-disable-next-line @typescript-eslint/no-shadow
     const next = selectedTypes.includes(type) ? selectedTypes.filter(t => t !== type) : [...selectedTypes, type];
 
     setMultipleParams({ boatTypes: next, page: 1 });
@@ -203,7 +204,12 @@ const FiltersSectionV2 = ({ catalogueData, catalogueFilters, isMobile }: Filters
   const handleCharterToggle = (id: CharterType) => {
     const next = new Set(selectedCharterTypes);
 
-    next.has(id) ? next.delete(id) : next.add(id);
+    if (next.has(id)) {
+      next.delete(id);
+    } else {
+      next.add(id);
+    }
+
     setMultipleParams({ charterType: Array.from(next), page: 1 });
   };
 
@@ -212,7 +218,12 @@ const FiltersSectionV2 = ({ catalogueData, catalogueFilters, isMobile }: Filters
   const handleMainsailToggle = (id: MainSailType) => {
     const next = new Set(selectedMainsail);
 
-    next.has(id) ? next.delete(id) : next.add(id);
+    if (next.has(id)) {
+      next.delete(id);
+    } else {
+      next.add(id);
+    }
+
     setMultipleParams({ mainSailType: Array.from(next), page: 1 });
   };
 

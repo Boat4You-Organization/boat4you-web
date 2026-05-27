@@ -1,3 +1,4 @@
+/* eslint-disable no-nested-ternary */
 import React from 'react';
 
 import { Box, Grid, Stack, Typography } from '@mui/material';

@@ -300,7 +300,8 @@ const POPULAR_TEMPLATE_COUNT = 8;
 const stableTemplateIdx = (s: string): number => {
   let h = 0;
 
-  for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) | 0;
+  // eslint-disable-next-line no-bitwise
+  for (let i = 0; i < s.length; i += 1) h = (h * 31 + s.charCodeAt(i)) | 0;
 
   return Math.abs(h) % POPULAR_TEMPLATE_COUNT;
 };

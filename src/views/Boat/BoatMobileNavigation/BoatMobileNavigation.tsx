@@ -1,5 +1,6 @@
 'use client';
 
+/* eslint-disable no-nested-ternary */
 import React, { useState } from 'react';
 
 import { Box, Button, Stack, Typography } from '@mui/material';

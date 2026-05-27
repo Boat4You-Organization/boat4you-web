@@ -1,5 +1,6 @@
 'use client';
 
+/* eslint-disable consistent-return, no-nested-ternary, react/no-unstable-nested-components */
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';

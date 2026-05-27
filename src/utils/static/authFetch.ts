@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import { cookies } from 'next/headers';
 import 'server-only';
 

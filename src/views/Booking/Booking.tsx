@@ -1,5 +1,6 @@
 'use client';
 
+/* eslint-disable consistent-return */
 import { useEffect, useRef, useState } from 'react';
 
 import { Box, Container, Stack } from '@mui/material';

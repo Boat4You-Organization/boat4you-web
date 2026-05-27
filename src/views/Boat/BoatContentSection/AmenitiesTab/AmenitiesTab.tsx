@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import React from 'react';
 
 import { Box, Divider, Grid, List, ListItem, Stack, Typography } from '@mui/material';

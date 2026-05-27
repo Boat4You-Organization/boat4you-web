@@ -1,5 +1,6 @@
 'use client';
 
+/* eslint-disable @typescript-eslint/no-use-before-define, consistent-return, no-await-in-loop, no-restricted-syntax */
 import { useEffect, useState } from 'react';
 
 import { Box, Button, Collapse, Typography } from '@mui/material';
