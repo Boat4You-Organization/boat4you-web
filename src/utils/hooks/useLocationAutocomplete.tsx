@@ -1,4 +1,4 @@
-/* eslint-disable react/jsx-no-useless-fragment */
+/* eslint-disable react/jsx-no-useless-fragment, no-restricted-syntax, no-nested-ternary */
 import { startTransition, useActionState, useEffect, useState } from 'react';
 import { useFormContext } from 'react-hook-form';
 
@@ -450,7 +450,12 @@ const useLocationAutocomplete = ({
         .forEach(loc => push(transformLocationToOption(loc, true)));
 
       // 2. Recent searches — above popular, only when user actually has any.
-      recentSearches
+      //    Run the same REGION dedup as the typing path: picking the bundled
+      //    "Split Region" popular entry adds BOTH backend rows (r-5 "Split
+      //    region" + r-189 "Split") to recents, which otherwise stack as two
+      //    near-identical region chips here. dedupeRegionDuplicates collapses
+      //    them to one (keeps the country_code-bearing row).
+      dedupeRegionDuplicates(recentSearches)
         .filter(loc => !selectedSet.has(loc.id))
         .forEach(loc => push(transformLocationToOption(loc, false, RECENT_GROUP)));
 
