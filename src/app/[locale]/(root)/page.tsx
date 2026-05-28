@@ -11,6 +11,10 @@ import whyChooseUs from '@/config/whyChooseUs';
 import { routing } from '@/i18n/routing';
 import { getBlogs } from '@/lib/api';
 import DestinationsSection from '@/views/Home/DestinationsSection';
+// Server components (plain HTML, no client JS) — static-imported so they
+// render to HTML and never hydrate on the client. Pulling these out of
+// `dynamic()` is what removes their main-thread cost on mobile.
+import FAQSection from '@/views/Home/FAQSection';
 // Hero is the LCP element — static import (not `dynamic()`) so the title +
 // search bar land in the initial server-rendered HTML. The legacy
 // `dynamic()` wrapper waited for client JS before rendering, costing
@@ -30,7 +34,6 @@ export function generateStaticParams() {
 const WhyChooseUsSection = dynamic(() => import('@/components/WhyChooseUsSection'));
 const OurFleetSection = dynamic(() => import('@/views/Home/OurFleetSection'));
 const ManufacturersSection = dynamic(() => import('@/views/Home/ManufacturersSection'));
-const FAQSection = dynamic(() => import('@/views/Home/FAQSection'));
 const RiskFreeCTA = dynamic(() => import('@/components/RiskFreeCTA'));
 const AllDestinationsSection = dynamic(() => import('@/views/Home/AllDestinationsSection'));
 const BlogSection = dynamic(() => import('@/views/Home/BlogSection'));
