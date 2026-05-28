@@ -32,6 +32,13 @@ const nextConfig = {
     // backend is behind api.boat4you.com with cleaner URLs so optimizer stays on.
     unoptimized: process.env.NODE_ENV !== 'production',
     deviceSizes: [640, 750, 828, 1080, 1200, 1920],
+    // Next 16 restricts <Image quality> to the default 75 unless explicitly
+    // allow-listed — anything else returns "q parameter not allowed" (400).
+    // We use 65 on home thumbnails (DestinationCard, OurFleetCard, the
+    // cookie-consent splash) where SSIM is well within perceptual tolerance
+    // and saves ~25 % bytes per request. Keep 75 too for callers that
+    // didn't opt in.
+    qualities: [65, 75],
     remotePatterns: [
       // Backend dev serves images off http://localhost:8443. Next.js Image
       // optimizer only matches the default port (80/443) unless we spell the
