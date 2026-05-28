@@ -1,4 +1,4 @@
-import { Swiper as SwiperType } from 'swiper';
+import type { Swiper as SwiperType } from 'swiper';
 
 import HorizontalSlider from '@/components/HorizontalSlider';
 import { CountryCountModel } from '@/models/locations.model';

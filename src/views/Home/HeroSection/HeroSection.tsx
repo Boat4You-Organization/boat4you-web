@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-use-before-define */
-import { Box, Container, Stack, Typography } from '@mui/material';
+import { Suspense } from 'react';
+
 import { useTranslations } from 'next-intl';
 
 import GeneralSearchBarRoot from '@/components/GeneralSearchBarRoot';
@@ -14,6 +15,10 @@ interface HeroSectionProps {
   stats?: { yachts: number; marinas: number } | null;
 }
 
+// Plain HTML + CSS-module hero (no MUI). The hero is the LCP element; MUI's
+// Typography/Box/Stack are client components whose Emotion runtime re-runs at
+// hydration and dominated mobile TBT. Rendering it as server-only markup means
+// the LCP text paints from static HTML with zero JS attached.
 const HeroSection = ({ stats }: HeroSectionProps) => {
   const t = useTranslations('home');
 
@@ -25,69 +30,43 @@ const HeroSection = ({ stats }: HeroSectionProps) => {
 
   return (
     <>
-      <Container component="section" className={styles.container}>
-        <Stack alignItems="center" gap={2}>
-          <Typography variant="hero" component="h1">
-            {t('hero.title')}{' '}
-            <Typography
-              variant="hero"
-              component="span"
-              fontWeight={800}
-              fontStyle="italic"
-              sx={{ pr: '0.08em', wordBreak: 'break-word' }}
-            >
-              {t('hero.ctaTitle')}
-            </Typography>
-          </Typography>
+      <section className={styles.container}>
+        <div className={styles.inner}>
+          <h1 className={styles.title}>
+            {t('hero.title')} <span className={styles.titleEmphasis}>{t('hero.ctaTitle')}</span>
+          </h1>
           {showStats && (
-            <Stack
-              direction="row"
-              gap={{ xs: 1.5, md: 3 }}
-              flexWrap="wrap"
-              justifyContent="center"
-              sx={{ fontSize: { xs: 12, md: 14 }, fontWeight: 600, opacity: 0.95 }}
-            >
+            <div className={styles.stats}>
               <TrustPill label={t('hero.support')} />
               <TrustPill label={t('hero.yachtsCount', { count: fmt(stats!.yachts) })} />
               <TrustPill label={t('hero.marinasCount', { count: fmt(stats!.marinas) })} />
-            </Stack>
+            </div>
           )}
-          <Typography variant="body1" fontWeight={500}>
-            {t('hero.description')}
-          </Typography>
-        </Stack>
-      </Container>
-      <GeneralSearchBarRoot />
+          <p className={styles.description}>{t('hero.description')}</p>
+        </div>
+      </section>
+      {/* GeneralSearchBarRoot reads useSearchParams() via useSyncUserPreferences
+          — Suspense lets the home prerender as SSG; the search bar hydrates
+          when the client mount sees the actual query string. The fallback
+          height reserves space so the hero composition doesn't shift. */}
+      <Suspense fallback={<div className={styles.searchFallback} />}>
+        <GeneralSearchBarRoot />
+      </Suspense>
     </>
   );
 };
 
 /**
  * Single trust-line pill — "✓ {label}". Inline checkmark + label, scaled
- * to fit the hero typography weight. Kept private to the file because
- * it's only meaningful in this layout.
+ * to fit the hero typography weight.
  */
 const TrustPill = ({ label }: { label: string }) => (
-  <Box component="span" sx={{ display: 'inline-flex', alignItems: 'center', gap: 0.75, whiteSpace: 'nowrap' }}>
-    <Box
-      component="span"
-      aria-hidden
-      sx={{
-        display: 'inline-flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        width: 16,
-        height: 16,
-        borderRadius: '50%',
-        border: '1.5px solid currentColor',
-        fontSize: 10,
-        lineHeight: 1,
-      }}
-    >
+  <span className={styles.pill}>
+    <span className={styles.pillCheck} aria-hidden>
       ✓
-    </Box>
+    </span>
     {label}
-  </Box>
+  </span>
 );
 
 export default HeroSection;

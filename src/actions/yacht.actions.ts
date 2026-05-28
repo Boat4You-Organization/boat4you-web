@@ -148,7 +148,13 @@ export async function getSingleYachtAvailability(
 
 export async function getYachtFleet(): Promise<YachtFleet[]> {
   try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/catalogue/type-count`);
+    // Home OurFleetSection — counts shift daily as partner sync adjusts the
+    // catalogue, but per-request hits stack onto a backend cold path that
+    // dominates TTFB on PSI cold runs. 60s SWR keeps the numbers fresh and
+    // the home cacheable.
+    const response = await fetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/catalogue/type-count`, {
+      next: { revalidate: 60 },
+    });
 
     return await response.json();
   } catch {

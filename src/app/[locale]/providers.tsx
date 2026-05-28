@@ -8,19 +8,16 @@ import { ThemeProvider } from '@mui/material/styles';
 import CookieConsentController from '@/components/CookieConsentController';
 import Toast from '@/components/Toast';
 import UserSync from '@/components/UserSync';
-import { UserModel } from '@/models/user.model';
 import theme from '@/styles/themes';
 import { AuthModalProvider } from '@/utils/context/AuthModalContext';
 
-interface ProvidersProps extends PropsWithChildren {
-  user: UserModel | null;
-}
-
-const Providers = ({ children, user }: ProvidersProps) => (
+// UserSync now self-fetches /api/me; no `user` prop needed from the
+// server layout (which lets the layout drop cookies() and stay static).
+const Providers = ({ children }: PropsWithChildren) => (
   <AppRouterCacheProvider>
     <ThemeProvider theme={theme}>
       <AuthModalProvider>
-        <UserSync user={user} />
+        <UserSync />
         {children}
         <Toast />
         <CookieConsentController />

@@ -3,6 +3,8 @@
 
 .root {
   &.container {
+    // Was a MUI <Card> (div); now a Link (<a>) so it needs display:block.
+    display: block;
     position: relative;
     border-radius: rem-calc(12);
     overflow: hidden;
@@ -29,6 +31,21 @@
       left: rem-calc(24);
       bottom: rem-calc(24);
       right: rem-calc(24);
+    }
+
+    // Was Typography variant="h2" (28px) with fontWeight 800 + italic override.
+    .title {
+      margin: 0;
+      font-size: rem-calc(28);
+      font-weight: 800;
+      font-style: italic;
+    }
+
+    // Was Typography variant="body2" fontWeight={500}.
+    .count {
+      margin: 0;
+      font-size: rem-calc(14);
+      font-weight: 500;
     }
 
     .overlay {

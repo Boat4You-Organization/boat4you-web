@@ -7,6 +7,13 @@ body {
   font-family: $primary-font-family;
   font-variant-numeric: lining-nums;
   font-feature-settings: lnum;
+
+  // Lock to light scheme — the app has no dark-mode design, but UAs/Chrome
+  // headless inherit `prefers-color-scheme: dark` and tint unstyled
+  // background through, which made the home preview render a black flash
+  // around lazy sections before their CSS chunks landed.
+  color-scheme: light;
+  background-color: #fff;
 }
 
 a {

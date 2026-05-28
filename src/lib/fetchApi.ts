@@ -5,6 +5,9 @@ const fetchAPI = async <T extends {}>(query: string, { variables = {} } = {}): P
 
   headers.append('Content-Type', 'application/json');
 
+  // GraphQL via POST defaults to no-store under Next 16 — the home blog
+  // strip would re-hit WordPress on every SSR cold start and dominate TTFB.
+  // 5 min SWR is plenty for editorial content; admin can purge via redeploy.
   const res = await fetch(API_URL, {
     method: 'POST',
     headers,
@@ -12,6 +15,7 @@ const fetchAPI = async <T extends {}>(query: string, { variables = {} } = {}): P
       query,
       variables,
     }),
+    next: { revalidate: 300 },
   });
 
   if (!res.ok) {

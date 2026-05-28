@@ -21,8 +21,43 @@ const withNextIntl = createNextIntlPlugin({
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  // Next default gzip on. Nginx-level brotli (cusma1) handles modern UAs;
+  // keeping Next compress=true is safe (it's only applied when no upstream
+  // already encoded the response).
+  compress: true,
+  // Strip MUI tree at build time — pulls only the icons/components actually
+  // imported instead of the full barrel (~200KB JS saved on home). optimizeCss
+  // pulls Critters in to inline above-the-fold CSS into the prerendered HTML
+  // so the 10 render-blocking <link> chunks on the home no longer add up to
+  // 1.6s of paint delay.
+  experimental: {
+    optimizePackageImports: ['@mui/material', '@mui/icons-material', '@mui/x-date-pickers'],
+    optimizeCss: true,
+  },
   sassOptions: {
     silenceDeprecations: ['legacy-js-api'],
+  },
+  // HTML responses default to no-store under our middleware-less setup;
+  // explicit SWR header lets Chrome's bf-cache restore the page on back/
+  // forward nav (PSI mobile flags MainResourceHasCacheControlNoStore). The
+  // 60s freshness window is short enough to pick up content updates and long
+  // enough to absorb traffic spikes. /api/* stays uncached (auth-sensitive).
+  async headers() {
+    return [
+      {
+        source: '/((?!api/|_next/static/|_next/image|favicons/).*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=0, s-maxage=60, stale-while-revalidate=600',
+          },
+        ],
+      },
+      {
+        source: '/_next/static/(.*)',
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
+      },
+    ];
   },
   images: {
     // Local dev backend serves images with query strings (/public/image/123?width=800)

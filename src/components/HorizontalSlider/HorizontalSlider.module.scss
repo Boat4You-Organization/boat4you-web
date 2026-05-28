@@ -1,27 +1,34 @@
 @use '@/styles/utils/rem-calc' as *;
 
-.container {
+.scroller {
+  display: flex;
+  gap: rem-calc(20);
   margin-top: rem-calc(24);
-  overflow: visible;
+  overflow-x: auto;
 
-  &:global(.swiper) {
-    overflow: visible;
+  // Vertical padding (with compensating negative margin) gives card shadows
+  // and hover lifts room to render — `overflow-x: auto` would otherwise clip
+  // them, since the cross-axis can't stay `visible` once an axis scrolls.
+  padding-block: rem-calc(12);
+  margin-bottom: rem-calc(-12);
+  scroll-snap-type: x proximity;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; // Firefox
+  -ms-overflow-style: none; // legacy Edge
+
+  &::-webkit-scrollbar {
+    display: none; // Chrome/Safari — match Swiper's hidden track
   }
 }
 
-.containerAuto {
-  overflow: visible;
-
-  &:global(.swiper) {
-    overflow: visible;
-  }
-
-  .slide {
-    margin-right: rem-calc(20);
-    max-width: rem-calc(305);
-
-    &:last-child {
-      margin-right: 0;
-    }
-  }
+.slide {
+  // Cards size to 100% of their slide, so the slide needs an explicit width
+  // (Swiper used to provide this via slidesPerView="auto"). 305px matches the
+  // card design (DestinationCard 305/341, OurFleetCard 305/227); on narrow
+  // phones it caps to most of the viewport so the next card still peeks.
+  flex: 0 0 auto;
+  width: rem-calc(305);
+  max-width: 82vw;
+  scroll-snap-align: start;
 }

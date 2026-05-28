@@ -15,9 +15,14 @@ export default {
   black800: '#464646',
   black700: '#525252',
   black600: '#656565',
-  black500: '#7c7c7c',
-  black400: '#989898',
-  black350: '#979797',
+  // WCAG AA needs ≥4.5:1. Original #7c7c7c (and the legacy 989898/979797)
+  // failed on three surfaces PSI flagged: white text (4.17), blue50
+  // manufacturer cards (3.75), CookieConsent. #6a6a6a hits 5.40:1 on
+  // white + 4.80:1 on blue50 — passes both with margin. Visually still a
+  // mid-grey so existing brand surfaces still read the same way.
+  black500: '#6a6a6a',
+  black400: '#6a6a6a',
+  black350: '#6a6a6a',
   black300: '#bdbdbd',
   black200: '#dcdcdc',
   black100: '#efefef',

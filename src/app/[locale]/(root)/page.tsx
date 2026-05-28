@@ -1,16 +1,14 @@
-import { Suspense } from 'react';
-
 import { Locale } from 'next-intl';
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import dynamic from 'next/dynamic';
 
 import { getTopManufacturers } from '@/actions/catalogue.actions';
 import getCountriesCount, { getHeroStats } from '@/actions/locations.actions';
 import { getYachtFleet } from '@/actions/yacht.actions';
 import Layout from '@/components/Layout';
-import LoadingSection from '@/components/LoadingSection';
 import { PAGE_SIZE } from '@/config/constants.config';
 import whyChooseUs from '@/config/whyChooseUs';
+import { routing } from '@/i18n/routing';
 import { getBlogs } from '@/lib/api';
 import DestinationsSection from '@/views/Home/DestinationsSection';
 // Hero is the LCP element — static import (not `dynamic()`) so the title +
@@ -18,6 +16,16 @@ import DestinationsSection from '@/views/Home/DestinationsSection';
 // `dynamic()` wrapper waited for client JS before rendering, costing
 // 800-1200ms LCP on slow connections (Google flags any home with LCP > 2.5s).
 import HeroSection from '@/views/Home/HeroSection';
+
+// ISR — every 60s the next request rebuilds the home in the background and
+// stale visitors get the previous build until then. Combined with the root
+// layout dropping cookies() this turns PSI cold runs (previously 860ms
+// TTFB) into ~CDN-fast hits.
+export const revalidate = 60;
+
+export function generateStaticParams() {
+  return routing.locales.map(locale => ({ locale }));
+}
 
 const WhyChooseUsSection = dynamic(() => import('@/components/WhyChooseUsSection'));
 const OurFleetSection = dynamic(() => import('@/views/Home/OurFleetSection'));
@@ -60,6 +68,9 @@ async function buildFaqSchema(locale: Locale) {
 
 export default async function HomePage({ params }: { params: Promise<{ locale: Locale }> }) {
   const { locale } = await params;
+
+  setRequestLocale(locale);
+
   // Hero trust stats + top manufacturers + FAQ schema run alongside the
   // existing fetches so the rendered HTML is complete on the first paint.
   // Each helper fails soft (empty/zero/null) — a slow upstream never
@@ -74,25 +85,23 @@ export default async function HomePage({ params }: { params: Promise<{ locale: L
   ]);
 
   return (
-    <Suspense fallback={<LoadingSection />}>
-      <Layout>
-        {faqSchema && (
-          <script
-            type="application/ld+json"
-            // eslint-disable-next-line react/no-danger
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-          />
-        )}
-        <HeroSection stats={heroStats} />
-        <DestinationsSection countries={countriesCount} />
-        <WhyChooseUsSection translation="home" data={whyChooseUs} />
-        <OurFleetSection fleet={fleet} />
-        <ManufacturersSection manufacturers={manufacturers} />
-        <FAQSection />
-        <RiskFreeCTA />
-        <BlogSection posts={blogs.nodes} />
-        <AllDestinationsSection countries={countriesCount} />
-      </Layout>
-    </Suspense>
+    <Layout>
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          // eslint-disable-next-line react/no-danger
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
+      <HeroSection stats={heroStats} />
+      <DestinationsSection countries={countriesCount} />
+      <WhyChooseUsSection translation="home" data={whyChooseUs} />
+      <OurFleetSection fleet={fleet} />
+      <ManufacturersSection manufacturers={manufacturers} />
+      <FAQSection />
+      <RiskFreeCTA />
+      <BlogSection posts={blogs.nodes} />
+      <AllDestinationsSection countries={countriesCount} />
+    </Layout>
   );
 }

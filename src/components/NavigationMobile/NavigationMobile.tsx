@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { Suspense, useState } from 'react';
 
 import { Box, Button, Divider, List, Stack, Typography } from '@mui/material';
 import { useTranslations } from 'next-intl';
@@ -6,12 +6,12 @@ import { useTranslations } from 'next-intl';
 import { logout } from '@/actions/auth.actions';
 import navigationMobile from '@/config/navigationMobile.config';
 import { useRouter } from '@/i18n/navigation';
-import { UserModel } from '@/models/user.model';
 import { YachtModelLocalStorage } from '@/models/yacht.model';
 import { useLocalStorage } from '@/utils/hooks/useLocalStorage';
 import { resetAuthModals } from '@/valtio/auth/auth.actions';
 import { resetToast, showToast } from '@/valtio/global/global.actions';
 import { clearUser } from '@/valtio/user/user.actions';
+import { useUserStore } from '@/valtio/user/user.store';
 
 import styles from './NavigationMobile.module.scss';
 import NavigationMobileItem from './NavigationMobileItem';
@@ -21,10 +21,12 @@ import LanguageModal from './partials/LanguageModal';
 
 interface NavigationMobileProps {
   onNavigationToggle: () => void;
-  user?: UserModel | null;
 }
 
-const NavigationMobile = ({ user, onNavigationToggle }: NavigationMobileProps) => {
+const NavigationMobile = ({ onNavigationToggle }: NavigationMobileProps) => {
+  // Same store the Header reads — UserSync hydrates this client-side from
+  // /api/me on mount so neither this nor the Header forces dynamic SSR.
+  const { user } = useUserStore();
   const [favorites] = useLocalStorage<YachtModelLocalStorage[]>('favorites', []);
   const [favoritesModalOpen, setFavoritesModalOpen] = useState<boolean>(false);
   const [languageModalOpen, setLanguageModalOpen] = useState<boolean>(false);
@@ -93,18 +95,25 @@ const NavigationMobile = ({ user, onNavigationToggle }: NavigationMobileProps) =
         onOpen={() => setFavoritesModalOpen(true)}
         onClose={() => setFavoritesModalOpen(false)}
       />
-      <LanguageModal
-        isOpen={languageModalOpen}
-        onOpen={() => setLanguageModalOpen(true)}
-        onClose={() => setLanguageModalOpen(false)}
-        user={user || undefined}
-      />
-      <CurrencyModal
-        isOpen={currencyModalOpen}
-        onOpen={() => setCurrencyModalOpen(true)}
-        onClose={() => setCurrencyModalOpen(false)}
-        user={user || undefined}
-      />
+      {/* Both modals call useSearchParams() (preserve filter params when
+          switching locale/currency). Suspense lets the parent route stay
+          prerenderable; the modal markup hydrates client-side. */}
+      <Suspense fallback={null}>
+        <LanguageModal
+          isOpen={languageModalOpen}
+          onOpen={() => setLanguageModalOpen(true)}
+          onClose={() => setLanguageModalOpen(false)}
+          user={user || undefined}
+        />
+      </Suspense>
+      <Suspense fallback={null}>
+        <CurrencyModal
+          isOpen={currencyModalOpen}
+          onOpen={() => setCurrencyModalOpen(true)}
+          onClose={() => setCurrencyModalOpen(false)}
+          user={user || undefined}
+        />
+      </Suspense>
       <Box component="nav" className={styles.container}>
         <List className={`${styles.list} ${!user ? styles.listLoggedOut : ''}`}>
           {navigationMobile.map((item, index) => (

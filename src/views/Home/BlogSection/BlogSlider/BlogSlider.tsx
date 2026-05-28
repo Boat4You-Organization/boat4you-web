@@ -1,4 +1,4 @@
-import { Swiper as SwiperType } from 'swiper';
+import type { Swiper as SwiperType } from 'swiper';
 
 import BlogCard from '@/components/BlogCard';
 import HorizontalSlider from '@/components/HorizontalSlider';

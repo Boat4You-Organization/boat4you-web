@@ -3,7 +3,7 @@ import { JSX, useRef } from 'react';
 import { Box, Container, Stack, Typography } from '@mui/material';
 import cx from 'clsx';
 import { useTranslations } from 'next-intl';
-import { Swiper as SwiperType } from 'swiper';
+import type { Swiper as SwiperType } from 'swiper';
 
 import CarouselButton from '@/components/CarouselButton';
 import ChevronLeft from '@/components/SvgIcons/ChevronLeft';

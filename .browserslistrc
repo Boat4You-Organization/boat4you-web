@@ -1,0 +1,11 @@
+# Target modern evergreen browsers only. PSI flagged a 110ms legacy-js
+# regression coming from polyfills SWC was emitting for unsupported UAs;
+# this trims them by declaring the actual production audience. >0.5% picks
+# up real traffic, "last 2 versions" keeps the past year of Safari, and
+# excluding IE/Opera Mini drops the old transforms.
+> 0.5%
+last 2 versions
+Firefox ESR
+not dead
+not IE 11
+not op_mini all

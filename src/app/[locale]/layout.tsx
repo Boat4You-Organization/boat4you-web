@@ -3,10 +3,9 @@ import React from 'react';
 
 import { Metadata } from 'next';
 import { Locale, NextIntlClientProvider, hasLocale } from 'next-intl';
-import { getMessages, getTranslations } from 'next-intl/server';
+import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 
-import { getLoggedInUser } from '@/actions/auth.actions';
 import GoogleAnalyticsConsent from '@/components/GoogleAnalyticsConsent';
 import { LocaleType } from '@/config/locales.config';
 import { meta } from '@/config/meta';
@@ -73,24 +72,50 @@ interface RootLayoutProps {
   params: Promise<{ locale: string }>;
 }
 
+// `generateStaticParams` deliberately omitted at this layout: it would
+// cascade to every [locale] child route (incl. ones that legitimately
+// need useSearchParams without Suspense) and break the build. Pages that
+// want ISR/SSG opt in individually with their own static params +
+// setRequestLocale (see (root)/page.tsx).
+
 const RootLayout = async ({ children, params }: RootLayoutProps) => {
   const { locale } = await params;
-  const messages = await getMessages();
 
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
 
-  const [localizedJsonLd, user] = await Promise.all([getLocalizedJsonLd(locale as LocaleType), getLoggedInUser()]);
+  setRequestLocale(locale);
+
+  const messages = await getMessages();
+  const localizedJsonLd = await getLocalizedJsonLd(locale as LocaleType);
 
   return (
     <html lang={locale} suppressHydrationWarning>
       <head>
+        {/* Pre-resolve DNS + TLS to the two hosts every page fetches from
+            (backend API + Bunny image CDN). PSI flags "Avoid multiple
+            page redirects" + TTFB win on cold-cache mobile. preconnect is
+            cheap when the host actually receives traffic. */}
+        <link rel="preconnect" href="https://api.boat4you.com" crossOrigin="" />
+        <link rel="preconnect" href="https://boat4you.b-cdn.net" crossOrigin="" />
+        <link rel="dns-prefetch" href="https://wp.boat4you.com" />
+        {/* Hero H1 uses Raleway 500 (regular hero text) + 800 italic for the
+            CTA span. Preloading those two weights eliminates the 3s FOIT
+            window PSI flagged and lets the LCP element paint immediately. */}
+        <link rel="preload" href="/fonts/Raleway/Raleway-Medium.ttf" as="font" type="font/ttf" crossOrigin="" />
+        <link
+          rel="preload"
+          href="/fonts/Raleway/Raleway-ExtraBoldItalic.ttf"
+          as="font"
+          type="font/ttf"
+          crossOrigin=""
+        />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localizedJsonLd) }} />
       </head>
       <body suppressHydrationWarning>
         <NextIntlClientProvider messages={messages}>
-          <Providers user={user}>{children}</Providers>
+          <Providers>{children}</Providers>
         </NextIntlClientProvider>
       </body>
       <GoogleAnalyticsConsent gaId={process.env.NEXT_PUBLIC_BOAT_WS_GAID as string} gAdsId="AW-17979079830" />

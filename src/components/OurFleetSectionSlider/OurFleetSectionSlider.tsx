@@ -1,4 +1,4 @@
-import { Swiper as SwiperType } from 'swiper';
+import type { Swiper as SwiperType } from 'swiper';
 
 import HorizontalSlider from '@/components/HorizontalSlider';
 import { VESSEL_TYPE_CONFIG } from '@/config/ourFleet.config';
@@ -21,11 +21,7 @@ const OurFleetSectionSlider = ({ handleSwiper, fleet }: OurFleetSectionSliderPro
   const visibleFleet = fleet.filter(entry => ALLOWED_FLEET_TYPES.has(entry.vesselType));
 
   return (
-    <HorizontalSlider
-      data={visibleFleet}
-      handleSwiper={handleSwiper}
-      renderItem={boat => <OurFleetCard {...boat} />}
-    />
+    <HorizontalSlider data={visibleFleet} handleSwiper={handleSwiper} renderItem={boat => <OurFleetCard {...boat} />} />
   );
 };
 
