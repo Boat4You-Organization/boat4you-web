@@ -19,15 +19,13 @@ import DestinationsSection from '@/views/Home/DestinationsSection';
 // 800-1200ms LCP on slow connections (Google flags any home with LCP > 2.5s).
 import HeroSection from '@/views/Home/HeroSection';
 
-// OurFleetSection stays SSR — mid-fold but the vessel-type cards
-// (Catamaran / Sailing / Motor / …) carry the home's organic search
-// signal. The other six sections (WhyChooseUs / Manufacturers / FAQ
-// / RiskFreeCTA / Blog / AllDestinations) moved into HomeBelowFold
-// client wrapper with ssr:false so they don't bloat the SSR HTML or
-// the initial hydration. Their structured data (FAQ JSON-LD) is still
-// emitted server-side below, so SEO is preserved.
+const WhyChooseUsSection = dynamic(() => import('@/components/WhyChooseUsSection'));
 const OurFleetSection = dynamic(() => import('@/views/Home/OurFleetSection'));
-const HomeBelowFold = dynamic(() => import('@/views/Home/HomeBelowFold.client'));
+const ManufacturersSection = dynamic(() => import('@/views/Home/ManufacturersSection'));
+const FAQSection = dynamic(() => import('@/views/Home/FAQSection'));
+const RiskFreeCTA = dynamic(() => import('@/components/RiskFreeCTA'));
+const AllDestinationsSection = dynamic(() => import('@/views/Home/AllDestinationsSection'));
+const BlogSection = dynamic(() => import('@/views/Home/BlogSection'));
 
 /**
  * Build the FAQPage JSON-LD from the same translation source the client
@@ -87,13 +85,13 @@ export default async function HomePage({ params }: { params: Promise<{ locale: L
         )}
         <HeroSection stats={heroStats} />
         <DestinationsSection countries={countriesCount} />
+        <WhyChooseUsSection translation="home" data={whyChooseUs} />
         <OurFleetSection fleet={fleet} />
-        <HomeBelowFold
-          whyChooseUs={whyChooseUs}
-          manufacturers={manufacturers}
-          blogs={blogs.nodes}
-          countriesCount={countriesCount}
-        />
+        <ManufacturersSection manufacturers={manufacturers} />
+        <FAQSection />
+        <RiskFreeCTA />
+        <BlogSection posts={blogs.nodes} />
+        <AllDestinationsSection countries={countriesCount} />
       </Layout>
     </Suspense>
   );
