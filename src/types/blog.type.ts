@@ -32,11 +32,15 @@ export type BlogTeaser = {
   date: string;
   featuredImage: FeaturedImage;
   excerpt: string;
-  content: string;
   seo?: RankMathSEOData | null;
 };
 
+// `content` (full article HTML) lives on Blog only — the listing/teaser
+// payload (BlogTeaser) intentionally omits it so the homepage's getBlogs()
+// call doesn't ship 9 full article bodies the cards never render
+// (~150 KB+ off the SSR payload, PageSpeed mobile 28.5.2026).
 export type Blog = Omit<BlogTeaser, 'excerpt'> & {
+  content: string;
   categories: Nodes<BlogCategory[]>;
   seo?: RankMathSEOData | null;
 };

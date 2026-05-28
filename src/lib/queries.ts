@@ -18,7 +18,6 @@ query GetAllBlogs($pageSize: Int!,$categoryName: String, $after: String) {
         }
       }
       excerpt
-      content
     }
     pageInfo {
       endCursor
@@ -72,7 +71,6 @@ query GetBlog($id: ID!, $pageSize: Int!) {
         }
       }
       excerpt
-      content
     }
   }
 }`;
