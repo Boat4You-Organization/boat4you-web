@@ -41,6 +41,7 @@ const DestinationCard = ({ id, name, countryCode, yachtCount, priority = false }
             className={styles.image}
             priority={priority}
             fetchPriority={priority ? 'high' : undefined}
+            quality={65}
           />
         </CardMedia>
         <CardContent className={styles.content}>

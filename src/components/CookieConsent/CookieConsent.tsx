@@ -110,7 +110,14 @@ const CookieConsent = ({ showConsent }: CookieConsentProps) => {
   return (
     <>
       <Box className={cx(styles.container, { [styles.visible]: showConsent })}>
-        <Image src="/images/cookies.webp" alt="cookies" width={193} height={130} className={styles.image} />
+        <Image
+          src="/images/cookies.webp"
+          alt="cookies"
+          width={193}
+          height={130}
+          className={styles.image}
+          quality={65}
+        />
         <Typography component="p" variant="h3" fontWeight={800} fontStyle="italic" color={colors.blue500}>
           {t('title')}
         </Typography>

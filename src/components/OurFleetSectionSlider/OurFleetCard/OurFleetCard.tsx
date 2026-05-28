@@ -24,6 +24,7 @@ const OurFleetCard = ({ vesselType, yachtCount }: YachtFleet) => {
             fill
             sizes="(max-width: 600px) 80vw, 305px"
             className={styles.image}
+            quality={65}
           />
         </CardMedia>
         <CardContent className={styles.content}>
