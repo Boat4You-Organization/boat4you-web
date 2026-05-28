@@ -2,10 +2,8 @@
 
 import React, { ReactNode, createContext, useContext, useMemo } from 'react';
 
-import ConfirmAccountModal from '@/components/Auth/ConfirmAccountModal';
-import LoginModal from '@/components/Auth/LoginModal';
-import RequestPasswordResetModal from '@/components/Auth/RequestPasswordResetModal';
-import SignUpModal from '@/components/Auth/SignUpModal';
+import dynamic from 'next/dynamic';
+
 import {
   toggleConfirmAccountModal,
   toggleLoginModal,
@@ -13,6 +11,16 @@ import {
   toggleSignUpModal,
 } from '@/valtio/auth/auth.actions';
 import { useAuthStore } from '@/valtio/auth/auth.store';
+
+// Auth modals are lazy — they're closed on every initial page load (incl.
+// the home) and only a small fraction of visits actually open one. Static
+// imports bundled ~109 KB of MUI form code into the shell chunk that PSI
+// flagged 95% unused on the homepage. Dynamic + conditional render defers
+// the download until the user clicks Sign in / Register / etc.
+const LoginModal = dynamic(() => import('@/components/Auth/LoginModal'), { ssr: false });
+const SignUpModal = dynamic(() => import('@/components/Auth/SignUpModal'), { ssr: false });
+const ConfirmAccountModal = dynamic(() => import('@/components/Auth/ConfirmAccountModal'), { ssr: false });
+const RequestPasswordResetModal = dynamic(() => import('@/components/Auth/RequestPasswordResetModal'), { ssr: false });
 
 interface AuthModalContextType {
   openLoginModal: () => void;
@@ -59,22 +67,34 @@ export const AuthModalProvider = ({ children }: AuthModalProviderProps) => {
   return (
     <AuthModalContext.Provider value={contextValue}>
       {children}
-      <LoginModal isOpen={loginModalOpen} onOpen={contextValue.openLoginModal} onClose={contextValue.closeLoginModal} />
-      <SignUpModal
-        isOpen={signUpModalOpen}
-        onOpen={contextValue.openSignUpModal}
-        onClose={contextValue.closeSignUpModal}
-      />
-      <ConfirmAccountModal
-        isOpen={confirmAccountModalOpen}
-        onOpen={contextValue.openConfirmAccountModal}
-        onClose={contextValue.closeConfirmAccountModal}
-      />
-      <RequestPasswordResetModal
-        isOpen={requestPasswordResetModal}
-        onOpen={contextValue.openRequestPasswordResetModal}
-        onClose={contextValue.closeRequestPasswordResetModal}
-      />
+      {loginModalOpen && (
+        <LoginModal
+          isOpen={loginModalOpen}
+          onOpen={contextValue.openLoginModal}
+          onClose={contextValue.closeLoginModal}
+        />
+      )}
+      {signUpModalOpen && (
+        <SignUpModal
+          isOpen={signUpModalOpen}
+          onOpen={contextValue.openSignUpModal}
+          onClose={contextValue.closeSignUpModal}
+        />
+      )}
+      {confirmAccountModalOpen && (
+        <ConfirmAccountModal
+          isOpen={confirmAccountModalOpen}
+          onOpen={contextValue.openConfirmAccountModal}
+          onClose={contextValue.closeConfirmAccountModal}
+        />
+      )}
+      {requestPasswordResetModal && (
+        <RequestPasswordResetModal
+          isOpen={requestPasswordResetModal}
+          onOpen={contextValue.openRequestPasswordResetModal}
+          onClose={contextValue.closeRequestPasswordResetModal}
+        />
+      )}
     </AuthModalContext.Provider>
   );
 };
