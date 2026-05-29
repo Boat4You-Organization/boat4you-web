@@ -6,9 +6,12 @@ import { Box, Stack, Typography } from '@mui/material';
 import dayjs from 'dayjs';
 import { useLocale, useTranslations } from 'next-intl';
 
+import CircularProgress from '@/components/CircularProgress';
 import Modal from '@/components/ModalRoot/Modal';
 import VerticalTimeline from '@/components/VerticalTimeline';
+import { PaymentPhase } from '@/models/reservation.model';
 import colors from '@/styles/themes/colors';
+import DateTime from '@/utils/static/DateTime';
 import { generateCancellationTimeline } from '@/utils/static/cancellationUtils';
 import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
 import { calculatePaymentPhases } from '@/utils/static/paymentPhases';
@@ -24,6 +27,15 @@ interface BookingReviewModalProps {
   dateFrom: string;
   totalPriceEur: number;
   totalPriceInfo: { amount: number; currency: string; rate: number; validAt: string } | null;
+  /**
+   * Partner-aware payment phases (the real MMK/NauSys installment ratios with
+   * the B4Y agency discount applied) from /payment-phases-preview or the
+   * post-reservation schedule. When present these are the source of truth — the
+   * modal only falls back to the client-side A/B/C approximation when empty
+   * (preview still loading / sync gap / network error). Mirrors PriceBreakdownCard.
+   */
+  paymentPhases?: PaymentPhase[];
+  isLoadingPhases?: boolean;
 }
 
 /**
@@ -40,11 +52,24 @@ const BookingReviewModal = ({
   dateFrom,
   totalPriceEur,
   totalPriceInfo,
+  paymentPhases = [],
+  isLoadingPhases = false,
 }: BookingReviewModalProps) => {
   const t = useTranslations('common');
   const locale = useLocale();
 
-  const paymentPhases = useMemo(() => calculatePaymentPhases(dateFrom, totalPriceEur), [dateFrom, totalPriceEur]);
+  // Source priority mirrors PriceBreakdownCard: use the partner-aware phases
+  // (real MMK/NauSys ratios) passed in as a prop; fall back to the client-side
+  // A/B/C formula only when none were supplied. Previously this modal ALWAYS
+  // recomputed locally, so it disagreed with the sidebar Price-breakdown card
+  // on partner yachts (different split + dates).
+  const phases = useMemo(
+    () =>
+      paymentPhases.length > 0
+        ? paymentPhases.map(p => ({ deadline: DateTime.date(p.deadline), amount: p.amount }))
+        : calculatePaymentPhases(dateFrom, totalPriceEur),
+    [paymentPhases, dateFrom, totalPriceEur]
+  );
 
   const cancellationTimeline = useMemo(() => generateCancellationTimeline(dateFrom, t, locale), [dateFrom, t, locale]);
 
@@ -73,40 +98,44 @@ const BookingReviewModal = ({
 
         <Box className={styles.row}>
           <Typography className={styles.rowLabel}>{t('paymentSchedule')}</Typography>
-          <Box className={styles.phaseList}>
-            {paymentPhases.map((phase, index) => {
-              const isPaidOrDue = today.isSame(phase.deadline, 'day') || today.isAfter(phase.deadline, 'day');
+          {isLoadingPhases && paymentPhases.length === 0 ? (
+            <Box sx={{ display: 'flex', justifyContent: 'center', py: 2, flex: 1 }}>
+              <CircularProgress size={28} />
+            </Box>
+          ) : (
+            <Box className={styles.phaseList}>
+              {phases.map((phase, index) => {
+                const isPaidOrDue = today.isSame(phase.deadline, 'day') || today.isAfter(phase.deadline, 'day');
 
-              return (
-                <Box key={phase.deadline.toISOString()} className={styles.phase}>
-                  <Box className={`${styles.phaseDot} ${isPaidOrDue ? styles.phaseDotActive : ''}`} />
-                  <Stack>
-                    <Typography className={styles.phaseAmount}>
-                      {formatPriceWithCurrency({
-                        clientPriceEur: phase.amount,
-                        // Per-phase currency info: scale the EUR phase amount by
-                        // the total's conversion ratio. Previously we passed
-                        // `totalPriceInfo` as-is, so formatPriceWithCurrency used
-                        // the TOTAL amount for EVERY phase (e.g. 828 € + 828 €
-                        // for an 828 € total instead of 414 € + 414 €).
-                        clientPriceInfo:
-                          totalPriceInfo && totalPriceEur > 0
-                            ? {
-                                ...totalPriceInfo,
-                                amount: phase.amount * (totalPriceInfo.amount / totalPriceEur),
-                              }
-                            : undefined,
-                        locale,
-                      })}
-                    </Typography>
-                    <Typography className={styles.phaseDeadline}>
-                      {t('installmentNumber', { number: String(index + 1) })} {phase.deadline.format('D MMMM YYYY')}
-                    </Typography>
-                  </Stack>
-                </Box>
-              );
-            })}
-          </Box>
+                return (
+                  <Box key={phase.deadline.toISOString()} className={styles.phase}>
+                    <Box className={`${styles.phaseDot} ${isPaidOrDue ? styles.phaseDotActive : ''}`} />
+                    <Stack>
+                      <Typography className={styles.phaseAmount}>
+                        {formatPriceWithCurrency({
+                          clientPriceEur: phase.amount,
+                          // Per-phase currency info: scale the EUR phase amount by
+                          // the total's conversion ratio so each instalment shows
+                          // its own converted amount (not the full total).
+                          clientPriceInfo:
+                            totalPriceInfo && totalPriceEur > 0
+                              ? {
+                                  ...totalPriceInfo,
+                                  amount: phase.amount * (totalPriceInfo.amount / totalPriceEur),
+                                }
+                              : undefined,
+                          locale,
+                        })}
+                      </Typography>
+                      <Typography className={styles.phaseDeadline}>
+                        {t('installmentNumber', { number: String(index + 1) })} {phase.deadline.format('D MMMM YYYY')}
+                      </Typography>
+                    </Stack>
+                  </Box>
+                );
+              })}
+            </Box>
+          )}
         </Box>
 
         <Box className={styles.row}>

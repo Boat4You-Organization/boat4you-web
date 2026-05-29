@@ -174,7 +174,15 @@ const Booking = ({ isAdmin, user, initialStep = 0 }: BookingProps) => {
   const renderStepPanel = () => {
     switch (activeStep) {
       case 0:
-        return <DetailsStep reservationData={reservationData} isAdmin={isAdmin} user={user} />;
+        return (
+          <DetailsStep
+            reservationData={reservationData}
+            isAdmin={isAdmin}
+            user={user}
+            paymentPhases={previewPhases}
+            isLoadingPhases={isLoadingPreviewPhases}
+          />
+        );
       case 1:
         return <UnifiedPaymentStep reservationData={reservationData} />;
       case 2:

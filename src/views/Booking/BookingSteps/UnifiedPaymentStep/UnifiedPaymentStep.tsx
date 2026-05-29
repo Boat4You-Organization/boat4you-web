@@ -500,6 +500,7 @@ const UnifiedPaymentStep = ({ reservationData }: UnifiedPaymentStepProps) => {
         dateFrom={reservationData.dateFrom}
         totalPriceEur={reservationData.totalPriceEur}
         totalPriceInfo={reservationData.totalPriceInfo}
+        paymentPhases={apiPhases ?? []}
       />
     </Box>
   );

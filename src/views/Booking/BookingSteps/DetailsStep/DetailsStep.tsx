@@ -10,6 +10,7 @@ import FormInput from '@/components/Forms/FormInput';
 import PhoneInput from '@/components/PhoneInput';
 import VerifiedBadge from '@/components/SvgIcons/VerifiedBadge';
 import { BookingFormValues } from '@/config/form-models.config';
+import { PaymentPhase } from '@/models/reservation.model';
 import { UserModel } from '@/models/user.model';
 import { YachtModel } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
@@ -33,6 +34,11 @@ interface DetailsStepProps {
   reservationData: ReservationData;
   isAdmin: boolean;
   user: UserModel | null;
+  /** Partner-aware payment phases (lifted from Booking — the same data the
+   *  sidebar Price-breakdown card uses) so the Booking-review modal shows the
+   *  real MMK/NauSys schedule instead of a client-side approximation. */
+  paymentPhases?: PaymentPhase[];
+  isLoadingPhases?: boolean;
 }
 
 const defaultValues: BookingFormValues = {
@@ -46,7 +52,13 @@ const defaultValues: BookingFormValues = {
   selectedExtras: [],
 };
 
-const DetailsStep = ({ reservationData, isAdmin, user }: DetailsStepProps) => {
+const DetailsStep = ({
+  reservationData,
+  isAdmin,
+  user,
+  paymentPhases = [],
+  isLoadingPhases = false,
+}: DetailsStepProps) => {
   const { name, model, locationFrom } = reservationData;
   const [state, createReservationAction, createReservationPending] = useActionState(createReservation, undefined);
   const t = useTranslations('common');
@@ -235,6 +247,8 @@ const DetailsStep = ({ reservationData, isAdmin, user }: DetailsStepProps) => {
         dateFrom={reservationData.dateFrom}
         totalPriceEur={reservationData.totalPriceEur}
         totalPriceInfo={reservationData.totalPriceInfo}
+        paymentPhases={paymentPhases}
+        isLoadingPhases={isLoadingPhases}
       />
       <Box className={styles.container}>
         {/* "This is a rare find" scarcity card — kept for conversion psychology,
