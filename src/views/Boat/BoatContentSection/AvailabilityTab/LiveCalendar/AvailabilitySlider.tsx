@@ -52,17 +52,18 @@ const mapStatus = (s: Status | undefined): WeekData['status'] => {
   return 'available';
 };
 
-const toWeek = (offer: YachtOfferModel, discountRatio: number | null): WeekData => {
+const toWeek = (offer: YachtOfferModel): WeekData => {
   const from = dayjs(offer.dateFrom);
   const to = dayjs(offer.dateTo);
   const finalPrice = typeof offer.clientPriceEur === 'number' ? offer.clientPriceEur : 0;
-  // Discount: backend `/standard-offers` doesn't ship per-week `listPriceEur`,
-  // so we derive a uniform yacht-wide promo ratio from one listing call (see
-  // the `discountRatio` effect in the consumer below). `regularPrice` is the
-  // listing-equivalent rate before the broker discount; only set when the
-  // ratio is meaningfully below 1 so the badge stays accurate.
-  const regularPrice =
-    discountRatio && discountRatio > 0 && discountRatio < 0.995 ? Math.round(finalPrice / discountRatio) : undefined;
+  // Original ("list") rate before the offered price. boat4you's
+  // `/standard-offers` ships per-week `listPriceEur` (verified live), so we use
+  // it directly — no uniform yacht-wide ratio approximation like the catamaran/
+  // EY port did. Struck-through + savings % render only when the list price is
+  // genuinely above the final price, matching the Europe Yachts card
+  // (list € · −% · final €).
+  const listPrice = typeof offer.listPriceEur === 'number' ? offer.listPriceEur : 0;
+  const regularPrice = listPrice > finalPrice ? listPrice : undefined;
 
   return {
     id: String(offer.id ?? `${offer.dateFrom}|${offer.dateTo}`),
@@ -125,7 +126,7 @@ const AvailabilitySlider = ({ yacht }: AvailabilitySliderProps) => {
       return real ?? ({ ...period, status: Status.UNAVAILABLE } as unknown as YachtOfferModel);
     });
 
-    return withTiers(merged.map(o => toWeek(o, null)));
+    return withTiers(merged.map(o => toWeek(o)));
   }, [safeYachtOffers]);
 
   const months = useMemo(() => deriveMonthAxis(weeks), [weeks]);
