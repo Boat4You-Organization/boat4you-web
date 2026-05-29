@@ -5,7 +5,7 @@ import { YachtSearchParams } from '@/config/form-models.config';
 import { ErrorModel } from '@/models/error.model';
 import { InquiriesModel } from '@/models/inquiries.model';
 import { Currency } from '@/models/user.model';
-import { PriceCalcDto } from '@/models/yacht-offer.model';
+import { PriceCalcDto, YachtOfferModel } from '@/models/yacht-offer.model';
 import { YachtAvailability, YachtFleet, YachtModel } from '@/models/yacht.model';
 import { PayloadResponse } from '@/types/response.type';
 import { authFetch } from '@/utils/static/authFetch';
@@ -138,6 +138,31 @@ export async function getSingleYachtAvailability(
 
     const response = await fetch(
       `${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/yachts/${yachtSlug}/availability${params && `?${params.toString()}`}`
+    );
+
+    return await response.json();
+  } catch {
+    return [];
+  }
+}
+
+// Standard Saturday→Saturday offers across a date window — used by the live
+// availability calendar (LiveCalendar/AvailabilitySlider) via useActionState.
+// Thin wrapper over the same /standard-offers endpoint the legacy week-cards
+// hook hits.
+export async function getSingleYachtStandardOffers(
+  _state: unknown,
+  { yachtSlug, dateFrom, dateTo }: YachtOffersParams
+): Promise<YachtOfferModel[]> {
+  try {
+    const params = new URLSearchParams();
+
+    if (dateFrom) params.append('dateFrom', dateFrom);
+
+    if (dateTo) params.append('dateTo', dateTo);
+
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/yachts/${yachtSlug}/standard-offers?${params.toString()}`
     );
 
     return await response.json();

@@ -19,7 +19,7 @@ import GoodToKnowItem from '@/views/Boat/BoatContentSection/GoodToKnowItem';
 
 import AvailabilityCard from './AvailabilityCard';
 import AvailabilityDateSelector from './AvailabilityDateSelector';
-import AvailabilityStandardOffers from './AvailabilityStandardOffers';
+import LiveCalendar from './LiveCalendar';
 
 interface AvailabilityTabProps {
   yacht: YachtModel;
@@ -91,7 +91,9 @@ const AvailabilityTab = ({ yacht }: AvailabilityTabProps) => {
               <AvailabilityDateSelector onSubmit={handleSubmit} yacht={yacht} />
             </Form>
           )}
-          <AvailabilityStandardOffers yachtSlug={yacht.slug} />
+          <Stack sx={{ p: { xs: 2, md: 3 } }}>
+            <LiveCalendar yacht={yacht} />
+          </Stack>
         </Stack>
         {displayAvailabilityDateSelector &&
           availableOffers.map(offer => <AvailabilityCard key={offer.id} yacht={yacht} offer={offer} />)}

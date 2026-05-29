@@ -157,29 +157,24 @@ const ExtrasCard = ({
           </Typography>
         )}
       </Box>
-      <Stack
-        direction="column"
-        alignItems="flex-end"
-        sx={{ flexShrink: 0, textAlign: 'right', minWidth: { xs: 64, sm: 80 } }}
-      >
-        <Stack direction="row" alignItems="baseline" gap={0.5} flexWrap="nowrap">
-          {isStartingPrice && (
-            <Typography variant="body2" color={colors.black500}>
-              {t('from')}
-            </Typography>
-          )}
-          <Typography
-            color={colors.black950}
-            component="p"
-            variant="body1"
-            fontWeight={700}
-            sx={{ whiteSpace: 'nowrap' }}
-          >
-            {displayPrice}
-          </Typography>
-        </Stack>
-        <Typography variant="body2" color={colors.black500} sx={{ fontSize: 12, mt: 0.25 }}>
+      {/* Single row: unit label first, then the price — e.g. "Per week ·
+          1,400 €". Was a two-line stack (price over unit) which made each row
+          tall + the right column wide with empty space; Mario asked for one
+          tidy line (less vertical scroll). */}
+      <Stack direction="row" alignItems="baseline" gap={0.75} sx={{ flexShrink: 0, whiteSpace: 'nowrap' }}>
+        <Typography variant="body2" color={colors.black500} sx={{ fontSize: 12 }}>
           {t(UNIT_LABEL_MAP[unit])}
+        </Typography>
+        <Box component="span" sx={{ color: colors.black300, fontSize: 12 }}>
+          ·
+        </Box>
+        {isStartingPrice && (
+          <Typography variant="body2" color={colors.black500}>
+            {t('from')}
+          </Typography>
+        )}
+        <Typography color={colors.black950} component="p" variant="body1" fontWeight={700}>
+          {displayPrice}
         </Typography>
       </Stack>
     </Box>
