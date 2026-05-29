@@ -30,21 +30,30 @@ const BoatLocationModal = ({ open, onClose, locationName }: BoatLocationModalPro
       hideDivider
       width={900}
     >
-      <Box
-        component="iframe"
-        src={embedSrc}
-        sx={{
-          width: '100%',
-          height: { xs: 400, md: 550 },
-          border: 0,
-          borderRadius: 2,
-          display: 'block',
-        }}
-        loading="lazy"
-        referrerPolicy="no-referrer-when-downgrade"
-        allowFullScreen
-        title={`Google Maps — ${locationName}`}
-      />
+      {/* Only mount the Google Maps iframe while the modal is actually OPEN.
+          The mobile path (SwipeableModal) uses `keepMounted`, so without this
+          guard the embed loads and keeps a whole Google Maps renderer process
+          alive on every boat-detail page that renders this modal — even before
+          the user ever opens the map (confirmed in a mobile perf trace: the
+          maps process ran the entire session). Gating here also tears the
+          iframe down on close. */}
+      {open && (
+        <Box
+          component="iframe"
+          src={embedSrc}
+          sx={{
+            width: '100%',
+            height: { xs: 400, md: 550 },
+            border: 0,
+            borderRadius: 2,
+            display: 'block',
+          }}
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          allowFullScreen
+          title={`Google Maps — ${locationName}`}
+        />
+      )}
     </ModalRoot>
   );
 };
