@@ -78,6 +78,42 @@ function buildYachtProductSchema(yacht: YachtModel, locale: LocaleType) {
   const lowPrice = offerPrices.length ? Math.min(...offerPrices) : null;
   const highPrice = offerPrices.length ? Math.max(...offerPrices) : null;
 
+  // Google Merchant-listing validation wants a `description` on every Product.
+  // ~5-10% of synced yachts have no description/sysDescription, which tripped
+  // the "Missing field description" warning in Search Console — build a
+  // spec-based fallback so the field is always present.
+  const productName = [yacht.model, yacht.name].filter(Boolean).join(' ').trim();
+  const descSpecs: string[] = [];
+
+  if (yacht.cabins) descSpecs.push(`${yacht.cabins} cabin${yacht.cabins === 1 ? '' : 's'}`);
+
+  if (yacht.berths) descSpecs.push(`${yacht.berths} berth${yacht.berths === 1 ? '' : 's'}`);
+
+  const descMarina = yacht.location?.name ? ` from ${yacht.location.name}` : '';
+  const fallbackDescription =
+    `Charter the ${productName}${yacht.buildYear ? ` (${yacht.buildYear})` : ''}${descMarina}.` +
+    `${descSpecs.length ? ` ${descSpecs.join(', ')}.` : ''} Check availability and book directly on boat4you.com.`;
+  const description = (yacht.description || yacht.sysDescription || fallbackDescription).slice(0, 5000);
+
+  // Charter country (used for the offer's return/shipping region declarations).
+  const country = yacht.location?.countryCode;
+
+  // A yacht charter isn't a shipped/returnable physical good, but Google's
+  // Merchant-listing enhancement still asks for these on the offer. Declare
+  // them accurately: no shipping cost (nothing ships) + no returns (bookings
+  // follow a cancellation policy, not product returns). Clears the two
+  // non-critical Search Console warnings.
+  const offerShippingDetails = {
+    '@type': 'OfferShippingDetails',
+    shippingRate: { '@type': 'MonetaryAmount', value: 0, currency: 'EUR' },
+    ...(country ? { shippingDestination: { '@type': 'DefinedRegion', addressCountry: country } } : {}),
+  };
+  const merchantReturnPolicy = {
+    '@type': 'MerchantReturnPolicy',
+    returnPolicyCategory: 'https://schema.org/MerchantReturnNotPermitted',
+    ...(country ? { applicableCountry: country } : {}),
+  };
+
   // Build a non-empty `additionalProperty` array — Google validates each
   // entry has a numeric/string value, so we filter undefined fields out.
   const propertyEntries: Array<{ name: string; value: number | string; unitCode?: string }> = [];
@@ -96,12 +132,10 @@ function buildYachtProductSchema(yacht: YachtModel, locale: LocaleType) {
     '@context': 'https://schema.org',
     '@type': 'Product',
     productID: String(yacht.id),
-    name: [yacht.model, yacht.name].filter(Boolean).join(' ').trim(),
+    name: productName,
     url,
     image: mainImage,
-    ...(yacht.description || yacht.sysDescription
-      ? { description: (yacht.description || yacht.sysDescription || '').slice(0, 5000) }
-      : {}),
+    description,
     ...(brandName ? { brand: { '@type': 'Brand', name: brandName } } : {}),
     ...(yacht.vesselType ? { category: yacht.vesselType } : {}),
     ...(propertyEntries.length
@@ -122,6 +156,8 @@ function buildYachtProductSchema(yacht: YachtModel, locale: LocaleType) {
             offerCount: offerPrices.length,
             availability: 'https://schema.org/InStock',
             url,
+            shippingDetails: offerShippingDetails,
+            hasMerchantReturnPolicy: merchantReturnPolicy,
           },
         }
       : {}),
