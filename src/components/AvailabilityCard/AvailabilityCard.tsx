@@ -88,7 +88,14 @@ const AvailabilityCard = ({ w, selected, onClick, size = 'desktop' }: Availabili
         </Box>
       </Stack>
 
-      <Box sx={{ mt: compact ? '18px' : '12px', textAlign: 'center', fontFeatureSettings: '"tnum"' }}>
+      <Box
+        sx={{
+          mt: compact ? '18px' : '12px',
+          mb: compact ? 0 : '14px',
+          textAlign: 'center',
+          fontFeatureSettings: '"tnum"',
+        }}
+      >
         <Typography
           sx={{
             fontSize: compact ? '28px' : '17px',
