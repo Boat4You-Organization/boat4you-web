@@ -44,15 +44,9 @@ const BookingReviewModal = ({
   const t = useTranslations('common');
   const locale = useLocale();
 
-  const paymentPhases = useMemo(
-    () => calculatePaymentPhases(dateFrom, totalPriceEur),
-    [dateFrom, totalPriceEur],
-  );
+  const paymentPhases = useMemo(() => calculatePaymentPhases(dateFrom, totalPriceEur), [dateFrom, totalPriceEur]);
 
-  const cancellationTimeline = useMemo(
-    () => generateCancellationTimeline(dateFrom, t, locale),
-    [dateFrom, t, locale],
-  );
+  const cancellationTimeline = useMemo(() => generateCancellationTimeline(dateFrom, t, locale), [dateFrom, t, locale]);
 
   const today = dayjs().startOf('day');
 
@@ -63,14 +57,7 @@ const BookingReviewModal = ({
   });
 
   return (
-    <Modal
-      open={open}
-      onClose={onClose}
-      title={t('bookingReview')}
-      hideCancelButton
-      hideConfirmButton
-      maxWidth="sm"
-    >
+    <Modal open={open} onClose={onClose} title={t('bookingReview')} hideCancelButton hideConfirmButton maxWidth="sm">
       <Stack>
         <Box className={styles.row}>
           <Typography className={styles.rowLabel}>{t('yachtName')}</Typography>
@@ -92,20 +79,28 @@ const BookingReviewModal = ({
 
               return (
                 <Box key={phase.deadline.toISOString()} className={styles.phase}>
-                  <Box
-                    className={`${styles.phaseDot} ${isPaidOrDue ? styles.phaseDotActive : ''}`}
-                  />
+                  <Box className={`${styles.phaseDot} ${isPaidOrDue ? styles.phaseDotActive : ''}`} />
                   <Stack>
                     <Typography className={styles.phaseAmount}>
                       {formatPriceWithCurrency({
                         clientPriceEur: phase.amount,
-                        clientPriceInfo: totalPriceInfo ?? undefined,
+                        // Per-phase currency info: scale the EUR phase amount by
+                        // the total's conversion ratio. Previously we passed
+                        // `totalPriceInfo` as-is, so formatPriceWithCurrency used
+                        // the TOTAL amount for EVERY phase (e.g. 828 € + 828 €
+                        // for an 828 € total instead of 414 € + 414 €).
+                        clientPriceInfo:
+                          totalPriceInfo && totalPriceEur > 0
+                            ? {
+                                ...totalPriceInfo,
+                                amount: phase.amount * (totalPriceInfo.amount / totalPriceEur),
+                              }
+                            : undefined,
                         locale,
                       })}
                     </Typography>
                     <Typography className={styles.phaseDeadline}>
-                      {t('installmentNumber', { number: String(index + 1) })}{' '}
-                      {phase.deadline.format('D MMMM YYYY')}
+                      {t('installmentNumber', { number: String(index + 1) })} {phase.deadline.format('D MMMM YYYY')}
                     </Typography>
                   </Stack>
                 </Box>
@@ -122,11 +117,7 @@ const BookingReviewModal = ({
         </Box>
       </Stack>
 
-      <Typography
-        variant="body2"
-        color={colors.black500}
-        sx={{ mt: 2 }}
-      >
+      <Typography variant="body2" color={colors.black500} sx={{ mt: 2 }}>
         {t('bookingReviewFooter')}
       </Typography>
     </Modal>
