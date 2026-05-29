@@ -7,10 +7,12 @@ import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Swiper as SwiperType } from 'swiper';
+import 'swiper/css';
+import { Keyboard, Mousewheel } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 import CarouselButton from '@/components/CarouselButton';
 import FavoriteButton from '@/components/FavoriteButton';
-import HorizontalSlider from '@/components/HorizontalSlider';
 import ArrowLeft from '@/components/SvgIcons/ArrowLeft';
 import Logo from '@/components/SvgIcons/Logo';
 import Share from '@/components/SvgIcons/Share';
@@ -167,26 +169,33 @@ const Lightbox = ({ yacht, images, open, onClose, selectedImage, showShareAndFav
               )}
             </Stack>
           </Box>
-          <HorizontalSlider
-            data={yachtImages}
+          {/* Full Swiper (not the shared CSS scroll-snap HorizontalSlider) —
+              the lightbox drives it via the Swiper API: slideTo, the
+              slideChange listener, isBeginning/isEnd and thumbnail sync.
+              The home rails use the lightweight scroll-snap version; the
+              gallery needs the real thing. */}
+          <Swiper
+            className={styles.sliderWrapper}
+            modules={[Keyboard, Mousewheel]}
             slidesPerView={1}
-            enableKeyboard
-            handleSwiper={handleSwiper}
-            customStyles={{
-              container: styles.sliderWrapper,
-            }}
-            renderItem={image => (
-              <Box className={styles.imageWrapper}>
-                <Image
-                  src={getBoatImageUrl(image.id, 1920)}
-                  alt={`Gallery image ${image.id}`}
-                  fill
-                  sizes="100vw"
-                  className={styles.image}
-                />
-              </Box>
-            )}
-          />
+            keyboard={{ enabled: true }}
+            mousewheel={{ forceToAxis: true, releaseOnEdges: true }}
+            onSwiper={handleSwiper}
+          >
+            {yachtImages.map(image => (
+              <SwiperSlide key={image.id}>
+                <Box className={styles.imageWrapper}>
+                  <Image
+                    src={getBoatImageUrl(image.id, 1920)}
+                    alt={`Gallery image ${image.id}`}
+                    fill
+                    sizes="100vw"
+                    className={styles.image}
+                  />
+                </Box>
+              </SwiperSlide>
+            ))}
+          </Swiper>
           <Stack
             direction="row"
             alignItems="center"
@@ -200,33 +209,33 @@ const Lightbox = ({ yacht, images, open, onClose, selectedImage, showShareAndFav
           </Stack>
           <Box className={styles.thumbnailsWrapper}>
             <Box className={styles.thumbnailsContainer}>
-              <HorizontalSlider
-                data={yachtImages}
+              <Swiper
+                className={styles.thumbnailSlider}
                 slidesPerView="auto"
-                handleSwiper={handleThumbnailSwiper}
-                customStyles={{
-                  container: styles.thumbnailSlider,
-                  slide: styles.thumbnailSlide,
-                }}
-                renderItem={(image, index) => (
-                  <Box
-                    className={cx(styles.thumbnailSlide, {
-                      [styles.active]: index === currentSlide,
-                    })}
-                    onClick={() => handleThumbnailClick(index)}
-                  >
-                    <Box className={styles.box}>
-                      <Image
-                        src={getBoatImageUrl(image.id, 256)}
-                        alt={`Thumbnail ${image.id}`}
-                        fill
-                        sizes="120px"
-                        className={styles.thumbnailImage}
-                      />
+                spaceBetween={12}
+                onSwiper={handleThumbnailSwiper}
+              >
+                {yachtImages.map((image, index) => (
+                  <SwiperSlide key={image.id} style={{ width: 'auto' }}>
+                    <Box
+                      className={cx(styles.thumbnailSlide, {
+                        [styles.active]: index === currentSlide,
+                      })}
+                      onClick={() => handleThumbnailClick(index)}
+                    >
+                      <Box className={styles.box}>
+                        <Image
+                          src={getBoatImageUrl(image.id, 256)}
+                          alt={`Thumbnail ${image.id}`}
+                          fill
+                          sizes="120px"
+                          className={styles.thumbnailImage}
+                        />
+                      </Box>
                     </Box>
-                  </Box>
-                )}
-              />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
             </Box>
           </Box>
         </Container>
