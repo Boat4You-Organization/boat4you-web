@@ -15,7 +15,7 @@ Ovi Uvjeti primjenjuju se na sve posjetitelje, korisnike i druge koji pristupaju
 Radi jasnoće, ovdje su ključni pojmovi korišteni u ovim Uvjetima (svi pojmovi s velikim početnim slovom imaju značenja definirana u nastavku):
 
 - **"Platforma"** -- Boat4You web stranica (Boat4You.com), mobilne aplikacije i sve usluge ili alati koje pruža Boat4You i omogućuju korisnicima oglašavanje, pronalazak ili rezervaciju najma jahti.
-- **"Boat4You"** (također "**Društvo**" ili "**mi**"/"**nas**") -- Boat4You d.o.o., hrvatska tvrtka koja je vlasnik i upravlja Platformom.
+- **"Boat4You"** (također "**Društvo**" ili "**mi**"/"**nas**") -- Cusmanich d.o.o., hrvatska tvrtka koja je vlasnik i upravlja Platformom.
 - **"Korisnik"** ili **"vi"** -- Svaka osoba ili subjekt koji na bilo koji način koristi Platformu, uključujući Klijente i Pružatelje jahti.
 - **"Klijent"** -- Korisnik koji koristi Platformu za pretragu, rezervaciju ili najam jahte (također poznat kao najmoprimac ili čarterist).
 - **"Pružatelj jahti"** -- Korisnik (pojedinačni vlasnik, čarter tvrtka ili ovlašteni agent) koji oglašava i nudi jahte za najam putem Platforme. Pružatelji jahti su neovisne treće strane **koje nisu zaposlenici Boat4You**.
@@ -460,7 +460,7 @@ Ako preferirate poziv, možete nas dobiti na ovom broju tijekom radnog vremena (
 **Kontakt obrazac na web stranici:** Također možete koristiti kontakt obrazac na našoj web stranici (obično se nalazi na stranici "Kontaktirajte nas" ili "Podrška"). Ispunite ga s vašim upitom, i usmjerit ćemo ga u odgovarajući odjel.
 
 **Registracija tvrtke i PDV:**  
-Boat4You d.o.o je registriran u Hrvatskoj pod nazivom tvrtke:
+Cusmanich d.o.o je registriran u Hrvatskoj pod nazivom tvrtke:
 
 Cusmanich d.o.o.\*\*  
 **Vrboran 37**  

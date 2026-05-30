@@ -36,9 +36,9 @@ capitalized terms have the meanings defined below):
 - **"Platform"** -- The Boat4You website (Boat4You.com), mobile
   applications, and any services or tools provided by Boat4You that
   enable Users to list, find, or book yacht charters.
-- **"Boat4You"** (also "**Company**" or "**we**/"**us**") -- Boat4You
-  d.o.o., the Croatian-registered company that owns and operates the
-  Platform.
+- **"Boat4You"** (also "**Company**" or "**we**/"**us**") -- the brand
+  operated by Cusmanich d.o.o., the Croatian-registered company that owns
+  and operates the Platform.
 - **"User"** or **"you"** -- Any person or entity using the Platform in
   any manner, including Clients and Yacht Providers.
 - **"Client"** -- A User who uses the Platform to search for, book, or
@@ -1572,7 +1572,7 @@ website (usually found on the "Contact Us" or "Support" page). Fill it
 out with your query, and we'll route it to the appropriate department.
 
 **Company Registration and VAT:**  
-Boat4You d.o.o is registered in Croatia under company name:
+Cusmanich d.o.o is registered in Croatia under company name:
 
 Cusmanich d.o.o.\*\*  
 **Vrboran 37**  

@@ -11,9 +11,17 @@ const FooterBottomBar = () => {
 
   return (
     <Box className={styles.footerBottomBar}>
-      <Typography variant="body2" color={colors.black600} sx={{ whiteSpace: 'nowrap' }}>
-        © {new Date().getFullYear()} boat4you. {t('allRightsReserved')}
-      </Typography>
+      <Box>
+        <Typography variant="body2" color={colors.black600} sx={{ whiteSpace: 'nowrap' }}>
+          © {new Date().getFullYear()} boat4you. {t('allRightsReserved')}
+        </Typography>
+        {/* Impressum / company identity (audit C2): the legal entity behind the
+            Boat4you brand, surfaced on every page. Language-neutral registration
+            data (company name / address / OIB), so it isn't run through i18n. */}
+        <Typography variant="caption" component="p" color={colors.black600} sx={{ mt: 0.5, opacity: 0.75 }}>
+          Cusmanich d.o.o. · Vrboran 37, 21000 Split, Croatia · OIB 87394862517
+        </Typography>
+      </Box>
       {/* Trust strip sits in-line with the copyright on desktop (right-aligned),
           wraps below it on mobile. Compact variant has no chrome of its own,
           so it reads as a horizontal continuation of the copyright row. */}

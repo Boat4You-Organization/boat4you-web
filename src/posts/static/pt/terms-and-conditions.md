@@ -15,7 +15,7 @@ Estes Termos aplicam-se a todos os visitantes, Utilizadores e outros que acedem 
 Para maior clareza, aqui estão os termos-chave usados ao longo destes Termos (todos os termos capitalizados têm os significados definidos abaixo):
 
 - **"Plataforma"** — O _website_ da Boat4You (Boat4You.com), aplicações móveis e quaisquer serviços ou ferramentas fornecidas pela Boat4You que permitem aos Utilizadores listar, encontrar ou reservar _charters_ de iates.
-- **"Boat4You"** (também "**Empresa**" ou "**nós**/"**nos**") — Boat4You d.o.o., a empresa registada na Croácia que possui e opera a Plataforma.
+- **"Boat4You"** (também "**Empresa**" ou "**nós**/"**nos**") — Cusmanich d.o.o., a empresa registada na Croácia que possui e opera a Plataforma.
 - **"Utilizador"** ou **"você"** — Qualquer pessoa ou entidade que usa a Plataforma de qualquer forma, incluindo Clientes e Fornecedores de Iates.
 - **"Cliente"** — Um Utilizador que usa a Plataforma para procurar, reservar ou fretar um iate (também referido como locatário ou fretador).
 - **"Fornecedor de Iates"** — Um Utilizador (proprietário individual, empresa de _charter_ ou agente autorizado) que lista e oferece iates para _charter_ através da Plataforma. Os Fornecedores de Iates são terceiros independentes **não empregados pela Boat4You**.
@@ -461,7 +461,7 @@ Se preferir ligar, pode contactar-nos através deste número durante o horário 
 **Formulário de Contacto no Website:** Também pode usar o formulário de contacto no nosso _website_ (geralmente encontrado na página "Contacte-nos" ou "Suporte"). Preencha-o com a sua questão e nós a encaminharemos para o departamento apropriado.
 
 **Registo da Empresa e IVA:**
-A Boat4You d.o.o está registada na Croácia sob o nome da empresa:
+A Cusmanich d.o.o está registada na Croácia sob o nome da empresa:
 
 **Cusmanich d.o.o.**
 **Vrboran 37**

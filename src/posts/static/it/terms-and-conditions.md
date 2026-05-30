@@ -40,7 +40,7 @@ termini con iniziale maiuscola hanno i significati definiti di seguito):
   Boat4You che consente agli Utenti di elencare, trovare o prenotare
   charter yacht.
 - **"Boat4You"** (anche "**Società**" o "**noi**"/"**ci**") --
-  Boat4You d.o.o., la società registrata in Croazia che possiede e
+  Cusmanich d.o.o., la società registrata in Croazia che possiede e
   gestisce la Piattaforma.
 - **"Utente"** o **"tu"** -- Qualsiasi persona o entità che utilizza la
   Piattaforma in qualsiasi modo, inclusi Clienti e Fornitori di Yacht.
@@ -1715,7 +1715,7 @@ contatto sul nostro sito _web_ (di solito si trova sulla pagina "Contattaci" o
 appropriato.
 
 **Registrazione Società e Partita IVA (_VAT_):**
-Boat4You d.o.o. è registrata in Croazia con il nome della società:
+Cusmanich d.o.o. è registrata in Croazia con il nome della società:
 
 **Cusmanich d.o.o.**
 **Vrboran 37**

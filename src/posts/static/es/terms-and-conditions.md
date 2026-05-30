@@ -15,7 +15,7 @@ Estos Términos se aplican a todos los visitantes, Usuarios y otras personas que
 Para mayor claridad, aquí están los términos clave utilizados a lo largo de estos Términos (todos los términos en mayúscula tienen los significados que se definen a continuación):
 
 - **"Plataforma"** – El sitio web de Boat4You (Boat4You.com), aplicaciones móviles y cualquier servicio o herramienta proporcionada por Boat4You que permita a los Usuarios anunciar, encontrar o reservar alquileres de yates.
-- **"Boat4You"** (también **"Compañía"** o "**nosotros**") – Boat4You d.o.o., la empresa registrada en Croacia que posee y opera la Plataforma.
+- **"Boat4You"** (también **"Compañía"** o "**nosotros**") – Cusmanich d.o.o., la empresa registrada en Croacia que posee y opera la Plataforma.
 - **"Usuario"** o **"usted"** – Cualquier persona o entidad que utilice la Plataforma de cualquier manera, incluidos Clientes y Proveedores de Yates.
 - **"Cliente"** – Un Usuario que utiliza la Plataforma para buscar, reservar o alquilar un yate (también referido como arrendatario o fletador).
 - **"Proveedor de Yates"** – Un Usuario (propietario individual, compañía de chárter o agente autorizado) que anuncia y ofrece yates para chárter a través de la Plataforma. Los Proveedores de Yates son terceros independientes **no empleados por Boat4You**.
@@ -459,7 +459,7 @@ Si prefiere llamar, puede comunicarse con nosotros a este número durante el hor
 **Formulario de Contacto del Sitio Web:** También puede utilizar el formulario de contacto en nuestro sitio web (generalmente se encuentra en la página "Contáctenos" o "Soporte"). Rellénelo con su consulta y la dirigiremos al departamento apropiado.
 
 **Registro de la Empresa e IVA:**
-Boat4You d.o.o está registrada en Croacia bajo el nombre de la empresa:
+Cusmanich d.o.o está registrada en Croacia bajo el nombre de la empresa:
 
 **Cusmanich d.o.o.**
 **Vrboran 37**

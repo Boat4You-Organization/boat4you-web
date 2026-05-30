@@ -1855,7 +1855,7 @@ le formulaire de contact sur notre site Web (généralement disponible sur
 la page "Contactez-nous" ou "Support"). Remplissez-le avec votre
 demande, et nous la transmettrons au service approprié.
 
-**Enregistrement de la Société et TVA :** Boat4You d.o.o. est enregistrée en Croatie sous le nom de société :
+**Enregistrement de la Société et TVA :** Cusmanich d.o.o. est enregistrée en Croatie sous le nom de société :
 
 Cusmanich d.o.o.  
 **Vrboran 37** **21000 Split** **Croatie** **MB : 4026365** \*\*OIB : 87394862517

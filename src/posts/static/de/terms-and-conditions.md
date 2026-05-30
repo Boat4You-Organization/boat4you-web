@@ -15,7 +15,7 @@ Diese AGB gelten für alle Besucher, Nutzer und andere Personen, die auf die Pla
 Zur Klarheit werden hier die wichtigsten Begriffe aufgeführt, die in diesen AGB verwendet werden (alle großgeschriebenen Begriffe haben die unten definierten Bedeutungen):
 
 - **„Plattform“** – Die Boat4You-Website (Boat4You.com), mobile Anwendungen und alle von Boat4You bereitgestellten Dienste oder Tools, die es Nutzern ermöglichen, Yachtcharter anzubieten, zu finden oder zu buchen.
-- **„Boat4You“** (auch **„Unternehmen“** oder **„wir“/„uns“**) – Boat4You d.o.o., das in Kroatien registrierte Unternehmen, das die Plattform besitzt und betreibt.
+- **„Boat4You“** (auch **„Unternehmen“** oder **„wir“/„uns“**) – Cusmanich d.o.o., das in Kroatien registrierte Unternehmen, das die Plattform besitzt und betreibt.
 - **„Nutzer“** oder **„Sie“** – Jede natürliche oder juristische Person, die die Plattform in irgendeiner Weise nutzt, einschließlich Kunden und Yachtanbieter.
 - **„Kunde“** – Ein Nutzer, der die Plattform nutzt, um einen Yachtcharter zu suchen, zu buchen oder zu chartern (auch als Mieter oder Charterer bezeichnet).
 - **„Yachtanbieter“** – Ein Nutzer (einzelner Eigentümer, Charterunternehmen oder autorisierter Vertreter), der Yachten zur Vercharterung über die Plattform anbietet. Yachtanbieter sind unabhängige Dritte und **keine Angestellten von Boat4You**.
@@ -521,7 +521,7 @@ Wenn Sie lieber anrufen möchten, erreichen Sie uns unter dieser Nummer während
 
 **Kontaktformular der Website:** Sie können auch das Kontaktformular auf unserer Website verwenden (normalerweise auf der Seite „Kontakt“ oder „Support“). Füllen Sie es mit Ihrer Anfrage aus, und wir leiten diese an die entsprechende Abteilung weiter.
 
-**Firmenregistrierung und Umsatzsteuer-Identifikationsnummer:** Boat4You d.o.o ist in Kroatien unter folgendem Firmennamen registriert:
+**Firmenregistrierung und Umsatzsteuer-Identifikationsnummer:** Cusmanich d.o.o ist in Kroatien unter folgendem Firmennamen registriert:
 
 **Cusmanich d.o.o.** **Vrboran 37** **21000 Split** **Kroatien** **MB (Matični Broj / Registernummer): 4026365** **OIB (Osobni Identifikacijski Broj / USt-IdNr.): 87394862517**
 
