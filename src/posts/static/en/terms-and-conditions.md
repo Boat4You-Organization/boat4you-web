@@ -36,9 +36,9 @@ capitalized terms have the meanings defined below):
 - **"Platform"** -- The Boat4You website (Boat4You.com), mobile
   applications, and any services or tools provided by Boat4You that
   enable Users to list, find, or book yacht charters.
-- **"Boat4You"** (also "**Company**" or "**we**/"**us**") -- Boat4You
-  d.o.o., the Croatian-registered company that owns and operates the
-  Platform.
+- **"Boat4You"** (also "**Company**" or "**we**/"**us**") -- the brand
+  operated by Cusmanich d.o.o., the Croatian-registered company that owns
+  and operates the Platform.
 - **"User"** or **"you"** -- Any person or entity using the Platform in
   any manner, including Clients and Yacht Providers.
 - **"Client"** -- A User who uses the Platform to search for, book, or
@@ -1455,13 +1455,6 @@ out without legal action when you give us a chance to help.
 location and the nature of the dispute, you may have the right to use an
 alternative dispute resolution platform or mechanism. For example:
 
-- If you reside in the EU, you can consider using the **European
-  Commission's Online Dispute Resolution (ODR) platform** (accessible at
-  http://ec.europa.eu/odr) to facilitate resolving disputes related to
-  online transactions. This platform can forward your complaint to the
-  appropriate national ADR entity. Note, this is an **option** for you;
-  it doesn't replace our agreement above about jurisdiction, but it's a
-  tool that might help mediate a dispute out of court.
 - Boat4You is not committed to using any specific ADR entity unless
   required by law, but we will review any suggestion of ADR in good
   faith.
@@ -1579,7 +1572,7 @@ website (usually found on the "Contact Us" or "Support" page). Fill it
 out with your query, and we'll route it to the appropriate department.
 
 **Company Registration and VAT:**  
-Boat4You d.o.o is registered in Croatia under company name:
+Cusmanich d.o.o is registered in Croatia under company name:
 
 Cusmanich d.o.o.\*\*  
 **Vrboran 37**  

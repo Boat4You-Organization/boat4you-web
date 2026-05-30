@@ -1715,15 +1715,6 @@ emplacement et la nature du litige, vous pourriez avoir le droit
 d'utiliser une plateforme ou un mécanisme de règlement extrajudiciaire
 des litiges. Par exemple :
 
-- Si vous résidez dans l'UE, vous pouvez envisager d'utiliser la
-  **plateforme de résolution des litiges en ligne (RLL) de la
-  Commission Européenne** (accessible à
-  http://ec.europa.eu/odr) pour faciliter la résolution des litiges liés
-  aux transactions en ligne. Cette plateforme peut transmettre votre
-  plainte à l'entité nationale de REL appropriée. Notez qu'il s'agit
-  d'une **option** pour vous ; elle ne remplace pas notre accord
-  ci-dessus concernant la juridiction, mais c'est un outil qui pourrait
-  aider à arbitrer un litige hors cour.
 - Boat4You n'est pas tenu d'utiliser une entité REL spécifique, sauf
   si la loi l'exige, mais nous examinerons toute suggestion de REL de
   bonne foi.
@@ -1864,7 +1855,7 @@ le formulaire de contact sur notre site Web (généralement disponible sur
 la page "Contactez-nous" ou "Support"). Remplissez-le avec votre
 demande, et nous la transmettrons au service approprié.
 
-**Enregistrement de la Société et TVA :** Boat4You d.o.o. est enregistrée en Croatie sous le nom de société :
+**Enregistrement de la Société et TVA :** Cusmanich d.o.o. est enregistrée en Croatie sous le nom de société :
 
 Cusmanich d.o.o.  
 **Vrboran 37** **21000 Split** **Croatie** **MB : 4026365** \*\*OIB : 87394862517

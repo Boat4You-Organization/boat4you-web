@@ -393,7 +393,7 @@ export async function resetPassword(state: any, payload: ResetPasswordPayload) {
   }
 }
 
-export async function register(state: any, formData: FormData): Promise<PayloadResponse<UserModel | null>> {
+export async function register(state: any, formData: FormData): Promise<PayloadResponse<{ email: string } | null>> {
   const name = formData.get('name');
   const surname = formData.get('surname');
   const password = formData.get('password');
@@ -411,9 +411,12 @@ export async function register(state: any, formData: FormData): Promise<PayloadR
       return { payload: null, message: errorData.message };
     }
 
-    const result: UserModel = await response.json();
-
-    return { payload: result };
+    // Enumeration-safe backend returns 204 (no body) whether or not the email
+    // already has an account. Echo the email back so the confirm step knows
+    // which address to verify; if the account already existed the user instead
+    // receives a "you already have an account" email and any code entered just
+    // fails — no existence signal reaches the client.
+    return { payload: { email: String(email ?? '') } };
   } catch (error) {
     return { payload: null, message: 'An unexpected error occurred during registration' };
   }
@@ -421,13 +424,13 @@ export async function register(state: any, formData: FormData): Promise<PayloadR
 
 export async function verifyEmail(state: any, formData: FormData): Promise<LoginResult> {
   const cookieStore = await cookies();
-  const userId = formData.get('userId');
+  const email = formData.get('email');
   const verificationCode = formData.get('verificationCode');
 
   try {
     const response = await fetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/auth/register/verifyEmail`, {
       ...POST_REQUEST_PARAMETERS,
-      body: JSON.stringify({ userId, verificationCode }),
+      body: JSON.stringify({ email, verificationCode }),
     });
 
     if (!response.ok) {
@@ -472,15 +475,13 @@ export async function verifyEmail(state: any, formData: FormData): Promise<Login
 }
 
 export async function resendVerificationCode(state: any, formData: FormData): Promise<PayloadResponse<boolean>> {
-  const userId = formData.get('userId');
+  const email = formData.get('email');
 
   try {
-    const response = await fetch(
-      `${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/auth/register/resendVerificationCode/${userId}`,
-      {
-        ...POST_REQUEST_PARAMETERS,
-      }
-    );
+    const response = await fetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/auth/register/resendVerificationCode`, {
+      ...POST_REQUEST_PARAMETERS,
+      body: JSON.stringify({ email }),
+    });
 
     if (!response.ok) {
       const errorData: ErrorModel = await response.json();

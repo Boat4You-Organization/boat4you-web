@@ -11,6 +11,7 @@ import FormInput from '@/components/Forms/FormInput';
 import ModalRoot from '@/components/ModalRoot';
 import { ConfirmAccountFormValues } from '@/config/form-models.config';
 import colors from '@/styles/themes/colors';
+import { toggleLoginModal } from '@/valtio/auth/auth.actions';
 import { useAuthStore } from '@/valtio/auth/auth.store';
 
 import VerificationCodeInput from './VerificationCodeInput/VerificationCodeInput';
@@ -27,7 +28,7 @@ const initialValues: ConfirmAccountFormValues = {
 };
 
 const ConfirmAccountModal = ({ isOpen, onOpen, onClose }: ConfirmAccountModalProps) => {
-  const { userId, userEmail } = useAuthStore();
+  const { userEmail } = useAuthStore();
   const [state, action, verifyEmailPending] = useActionState(verifyEmail, undefined);
   const [resendState, resendAction, resendVerificationCodePending] = useActionState(resendVerificationCode, undefined);
   const t = useTranslations('common');
@@ -52,14 +53,14 @@ const ConfirmAccountModal = ({ isOpen, onOpen, onClose }: ConfirmAccountModalPro
     };
   }, [isOpen]);
 
-  if (!userId) {
+  if (!userEmail) {
     return null;
   }
 
   const handleVerificationComplete = (verificationCode: string) => {
     const formData = new FormData();
 
-    formData.append('userId', userId.toString());
+    formData.append('email', userEmail);
     formData.append('verificationCode', verificationCode);
 
     startTransition(() => {
@@ -70,11 +71,20 @@ const ConfirmAccountModal = ({ isOpen, onOpen, onClose }: ConfirmAccountModalPro
   const handleResendVerificationCode = () => {
     const formData = new FormData();
 
-    formData.append('userId', userId.toString());
+    formData.append('email', userEmail);
 
     startTransition(() => {
       resendAction(formData);
     });
+  };
+
+  // Enumeration-safe escape hatch: shown to everyone on the confirm screen.
+  // Covers the returning user who tried to re-register with an existing email
+  // (they received a "you already have an account" mail, not a code) without
+  // signalling account existence — the link looks identical for new users too.
+  const handleSignIn = () => {
+    onClose();
+    toggleLoginModal(true);
   };
 
   const noop = () => {};
@@ -141,6 +151,14 @@ const ConfirmAccountModal = ({ isOpen, onOpen, onClose }: ConfirmAccountModalPro
         <Button variant="text" onClick={handleResendVerificationCode}>
           <Typography variant="body1" fontWeight={700} color={colors.blue950} sx={{ textDecoration: 'underline' }}>
             {t('tryAgain')}
+          </Typography>
+        </Button>
+      </Stack>
+      <Stack direction="row" alignItems="center" gap={0.5} mt={1}>
+        <Typography variant="body1">{t('haveAccount')}</Typography>
+        <Button variant="text" onClick={handleSignIn}>
+          <Typography variant="body1" fontWeight={700} color={colors.blue950} sx={{ textDecoration: 'underline' }}>
+            {t('signIn')}
           </Typography>
         </Button>
       </Stack>

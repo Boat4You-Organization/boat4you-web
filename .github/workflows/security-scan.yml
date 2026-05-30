@@ -1,0 +1,38 @@
+name: Security Scan
+
+# Faza 0 (DevOps modernizacija) — secret + filesystem vulnerability scanning the
+# web repo didn't have. Lint/build CI (actions.yml) and npm Dependabot already
+# exist; this adds gitleaks (gating) and Trivy (report-only for now). Separate
+# workflow so it doesn't touch the existing build pipeline.
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  scan:
+    name: Secret & vulnerability scan
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # GATING — blocks new secrets in PRs/pushes.
+      - name: Secret scan (gitleaks)
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # Report-only for now; flip exit-code to '1' once the baseline is triaged.
+      - name: Vulnerability scan (Trivy)
+        uses: aquasecurity/trivy-action@master
+        with:
+          scan-type: fs
+          scan-ref: .
+          severity: HIGH,CRITICAL
+          ignore-unfixed: true
+          exit-code: '0'

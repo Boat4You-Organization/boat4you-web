@@ -15,7 +15,7 @@ Estos Términos se aplican a todos los visitantes, Usuarios y otras personas que
 Para mayor claridad, aquí están los términos clave utilizados a lo largo de estos Términos (todos los términos en mayúscula tienen los significados que se definen a continuación):
 
 - **"Plataforma"** – El sitio web de Boat4You (Boat4You.com), aplicaciones móviles y cualquier servicio o herramienta proporcionada por Boat4You que permita a los Usuarios anunciar, encontrar o reservar alquileres de yates.
-- **"Boat4You"** (también **"Compañía"** o "**nosotros**") – Boat4You d.o.o., la empresa registrada en Croacia que posee y opera la Plataforma.
+- **"Boat4You"** (también **"Compañía"** o "**nosotros**") – Cusmanich d.o.o., la empresa registrada en Croacia que posee y opera la Plataforma.
 - **"Usuario"** o **"usted"** – Cualquier persona o entidad que utilice la Plataforma de cualquier manera, incluidos Clientes y Proveedores de Yates.
 - **"Cliente"** – Un Usuario que utiliza la Plataforma para buscar, reservar o alquilar un yate (también referido como arrendatario o fletador).
 - **"Proveedor de Yates"** – Un Usuario (propietario individual, compañía de chárter o agente autorizado) que anuncia y ofrece yates para chárter a través de la Plataforma. Los Proveedores de Yates son terceros independientes **no empleados por Boat4You**.
@@ -416,7 +416,6 @@ Boat4You es una empresa croata y, por lo tanto, nuestra relación legal con uste
 
 **12.4. Resolución Alternativa de Disputas (RAD):** Dependiendo de su ubicación y la naturaleza de la disputa, es posible que tenga derecho a utilizar una plataforma o mecanismo de resolución alternativa de disputas. Por ejemplo:
 
-- Si reside en la UE, puede considerar utilizar la **Plataforma de Resolución de Disputas en Línea (RDL) de la Comisión Europea** (accesible en http://ec.europa.eu/odr) para facilitar la resolución de disputas relacionadas con transacciones en línea. Esta plataforma puede enviar su queja a la entidad nacional de RAD apropiada. Tenga en cuenta que esta es una **opción** para usted; no reemplaza nuestro acuerdo anterior sobre jurisdicción, pero es una herramienta que podría ayudar a mediar en una disputa fuera de los tribunales.
 - Boat4You no se compromete a utilizar ninguna entidad de RAD específica a menos que lo exija la ley, pero revisaremos cualquier sugerencia de RAD de buena fe.
 
 **12.5. Gastos Legales:** En cualquier litigio que surja de estos Términos, la parte ganadora tendrá derecho a recuperar sus honorarios y costos de abogados razonables, excepto cuando lo prohíba la ley o cuando un estatuto disponga una asignación de costos diferente (por ejemplo, algunas leyes de protección al consumidor permiten a los consumidores recuperar honorarios si ganan, etc.). Esta cláusula se aplica principalmente de empresa a empresa, pero la incluimos en general; para los consumidores, un tribunal podría decidir de manera diferente según las leyes locales.
@@ -460,7 +459,7 @@ Si prefiere llamar, puede comunicarse con nosotros a este número durante el hor
 **Formulario de Contacto del Sitio Web:** También puede utilizar el formulario de contacto en nuestro sitio web (generalmente se encuentra en la página "Contáctenos" o "Soporte"). Rellénelo con su consulta y la dirigiremos al departamento apropiado.
 
 **Registro de la Empresa e IVA:**
-Boat4You d.o.o está registrada en Croacia bajo el nombre de la empresa:
+Cusmanich d.o.o está registrada en Croacia bajo el nombre de la empresa:
 
 **Cusmanich d.o.o.**
 **Vrboran 37**

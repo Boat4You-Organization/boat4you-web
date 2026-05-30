@@ -9,7 +9,7 @@ import Form from '@/components/Forms/Form';
 import ModalRoot from '@/components/ModalRoot';
 import { SignUpFormValues } from '@/config/form-models.config';
 import { SIGNUP_FORM } from '@/config/form-names.config';
-import { setUserIdEmail, toggleConfirmAccountModal } from '@/valtio/auth/auth.actions';
+import { setUserEmail, toggleConfirmAccountModal } from '@/valtio/auth/auth.actions';
 import { showToast } from '@/valtio/global/global.actions';
 
 import EmailStep from './SignUpSteps/EmailStep';
@@ -38,7 +38,7 @@ const SignUpModal = ({ isOpen, onOpen, onClose }: SignUpModalProps) => {
 
   useEffect(() => {
     if (state?.payload) {
-      setUserIdEmail(state.payload.id, state.payload.email);
+      setUserEmail(state.payload.email);
       toggleConfirmAccountModal();
       onClose();
     } else if (state?.message) {
