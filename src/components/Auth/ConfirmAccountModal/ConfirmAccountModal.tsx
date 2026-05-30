@@ -27,7 +27,7 @@ const initialValues: ConfirmAccountFormValues = {
 };
 
 const ConfirmAccountModal = ({ isOpen, onOpen, onClose }: ConfirmAccountModalProps) => {
-  const { userId, userEmail } = useAuthStore();
+  const { userEmail } = useAuthStore();
   const [state, action, verifyEmailPending] = useActionState(verifyEmail, undefined);
   const [resendState, resendAction, resendVerificationCodePending] = useActionState(resendVerificationCode, undefined);
   const t = useTranslations('common');
@@ -52,14 +52,14 @@ const ConfirmAccountModal = ({ isOpen, onOpen, onClose }: ConfirmAccountModalPro
     };
   }, [isOpen]);
 
-  if (!userId) {
+  if (!userEmail) {
     return null;
   }
 
   const handleVerificationComplete = (verificationCode: string) => {
     const formData = new FormData();
 
-    formData.append('userId', userId.toString());
+    formData.append('email', userEmail);
     formData.append('verificationCode', verificationCode);
 
     startTransition(() => {
@@ -70,7 +70,7 @@ const ConfirmAccountModal = ({ isOpen, onOpen, onClose }: ConfirmAccountModalPro
   const handleResendVerificationCode = () => {
     const formData = new FormData();
 
-    formData.append('userId', userId.toString());
+    formData.append('email', userEmail);
 
     startTransition(() => {
       resendAction(formData);

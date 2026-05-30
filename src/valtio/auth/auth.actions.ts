@@ -21,6 +21,10 @@ export function setUserIdEmail(userId: number, userEmail: string): void {
   authStore.userEmail = userEmail;
 }
 
+export function setUserEmail(userEmail: string): void {
+  authStore.userEmail = userEmail;
+}
+
 export function resetAuthModals(): void {
   authStore.loginModalOpen = false;
   authStore.signUpModalOpen = false;
