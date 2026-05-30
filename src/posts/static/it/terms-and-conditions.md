@@ -1589,15 +1589,6 @@ tua posizione e della natura della controversia, potresti avere il diritto di
 utilizzare una piattaforma o un meccanismo di risoluzione alternativa delle
 controversie. Ad esempio:
 
-- Se risiedi nell'UE, puoi prendere in considerazione l'utilizzo della
-  **piattaforma _Online Dispute Resolution_ (ODR) della Commissione
-  Europea** (accessibile all'indirizzo http://ec.europa.eu/odr) per
-  facilitare la risoluzione delle controversie relative alle transazioni
-  _online_. Questa piattaforma può inoltrare il tuo reclamo
-  all'appropriato ente ADR nazionale. Nota, questa è
-  un'**opzione** per te; non sostituisce il nostro accordo di cui
-  sopra sulla giurisdizione, ma è uno strumento che potrebbe aiutare a
-  mediare una controversia fuori dal tribunale.
 - Boat4You non è impegnata a utilizzare alcun ente ADR specifico a meno
   che non sia richiesto dalla legge, ma esamineremo qualsiasi suggerimento
   di ADR in buona fede.

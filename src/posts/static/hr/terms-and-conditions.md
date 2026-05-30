@@ -417,7 +417,6 @@ Boat4You je hrvatska tvrtka, i stoga je naš pravni odnos s vama usidren u hrvat
 
 **12.4. Alternativno rješavanje sporova (ADR):** Ovisno o vašoj lokaciji i prirodi spora, možda imate pravo koristiti platformu za alternativno rješavanje sporova ili mehanizam. Primjerice:
 
-- Ako boravite u EU, možete razmotriti korištenje **platforme Europske komisije za online rješavanje sporova (ODR)** (dostupna na http://ec.europa.eu/odr) za olakšavanje rješavanja sporova povezanih s online transakcijama. Ova platforma može proslijediti vašu žalbu odgovarajućem nacionalnom ADR entitetu. Imajte na umu, ovo je **opcija** za vas; ne zamjenjuje naš sporazum gore o nadležnosti, ali je alat koji može pomoći posredovati spor izvan suda.
 - Boat4You nije obvezan koristiti bilo koji specifični ADR entitet osim ako to ne zahtijeva zakon, ali ćemo pregledati bilo koji prijedlog ADR-a u dobroj vjeri.
 
 **12.5. Pravni troškovi:** U bilo kakvoj parnici koja proizlazi iz ovih Uvjeta, pobjednička strana ima pravo na povrat svojih razumnih odvjetničkih troškova i troškova, osim gdje to zabranjuje zakon ili gdje drugačija alokacija troškova nije predviđena statutom (primjerice, neki zakoni o zaštiti potrošača dopuštaju potrošačima povrat troškova ako pobijede, itd.). Ova klauzula se uglavnom primjenjuje posao-posao, ali uključujemo je općenito; za potrošače, sud može odlučiti drugačije na temelju lokalnih zakona.
