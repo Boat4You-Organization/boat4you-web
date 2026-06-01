@@ -117,6 +117,15 @@ const nextConfig = {
         hostname: 'boat4you.com',
       },
       {
+        // Blog/WP media is host-swapped wp.boat4you.com -> www.boat4you.com in
+        // lib/api.ts (de-WordPress) and served via the cusma1 nginx /wp-content
+        // proxy. The Next image optimizer matches hostname exactly, so the
+        // bare boat4you.com entry above does NOT cover www — without this the
+        // optimizer 400s and blog images render as broken alt text.
+        protocol: 'https',
+        hostname: 'www.boat4you.com',
+      },
+      {
         // Bunny CDN pull zone (NEXT_PUBLIC_IMAGE_CDN_URL) — yacht photos served via
         // boat4you.b-cdn.net/public/image/<id>. Without whitelisting this host the
         // Next image optimizer returns 400 and listings render blank once the CDN
