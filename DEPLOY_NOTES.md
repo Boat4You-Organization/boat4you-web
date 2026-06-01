@@ -38,6 +38,13 @@ location /wp-content/ {
 }
 ```
 
+> FE prerequisite: because blog cards render via the Next `<Image>` optimizer, the
+> swapped host **`www.boat4you.com` must be in `next.config.js` images.remotePatterns**
+> (added 2026-06-01, commit 86df718). Next matches hostname exactly, so the bare
+> `boat4you.com` entry does NOT cover `www` — without it `/_next/image` returns 400 and
+> blog images render as broken alt text (the raw `/wp-content` URL still 200s via the
+> proxy; only the optimizer fails). Test with `/_next/image?url=<enc www url>&w=384&q=75`.
+
 **2. Retired-blog 301 redirects** (regex `$1` = optional `/locale` prefix, covers all 9 locales):
 
 ```nginx
@@ -61,6 +68,7 @@ After editing: `sudo nginx -t && sudo systemctl reload nginx`.
 
 ## Recent prod state (2026-06-01)
 
-- web @ git `main` (7680bce + resync): LiveCalendar availability, `/api/me` auth, de-WP, SEO fixes.
+- web @ git `main` (86df718): LiveCalendar availability, `/api/me` auth, de-WP, SEO fixes,
+  `www.boat4you.com` in image remotePatterns (blog-image fix).
 - backend @ git `main` 95d0db2: extras period-correct selection, Damage-Waiver-with-skipper from NauSys,
   extras dedupe by partner `externalId`.
