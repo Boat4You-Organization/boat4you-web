@@ -18,7 +18,7 @@ interface ExtrasTabProps {
 }
 
 const ExtrasTab = ({ yacht }: ExtrasTabProps) => {
-  const { selectedOffer } = useYachtStore();
+  const { selectedOffer, calculatedPrice } = useYachtStore();
   const t = useTranslations('yacht');
   const tServices = useTranslations('yacht.servicesList');
   const tCommon = useTranslations('common');
@@ -39,8 +39,21 @@ const ExtrasTab = ({ yacht }: ExtrasTabProps) => {
   // security deposit is always appended to the obligatory group because
   // it comes from yacht-level fields, not the services list.
   const obligatoryKeys = selectedOffer?.obligatoryExtrasKeys || [];
-  const obligatoryServices = sortedServices.filter(s => s.obligatory || obligatoryKeys.includes(s.key));
-  const optionalServices = sortedServices.filter(s => !s.obligatory && !obligatoryKeys.includes(s.key));
+  // Extras the partner makes obligatory only because of the current selection
+  // (e.g. Damage Waiver once a Skipper is added) come back flagged obligatory in
+  // the live price calc — promote them into "Selected services" so they read as
+  // mandatory (checked + locked, with their description) like the static ones.
+  const dynamicObligatoryKeys = new Set(
+    [...(calculatedPrice?.selectedExtrasInPrice ?? []), ...(calculatedPrice?.selectedExtrasAtBase ?? [])]
+      .filter(extra => extra.obligatory)
+      .map(extra => extra.key)
+  );
+  const obligatoryServices = sortedServices.filter(
+    s => s.obligatory || obligatoryKeys.includes(s.key) || dynamicObligatoryKeys.has(s.key)
+  );
+  const optionalServices = sortedServices.filter(
+    s => !s.obligatory && !obligatoryKeys.includes(s.key) && !dynamicObligatoryKeys.has(s.key)
+  );
 
   const securityDepositPrice =
     yacht.securityDeposit > 0 ? formatPriceWithCurrency({ clientPriceEur: yacht.securityDeposit, locale }) : null;

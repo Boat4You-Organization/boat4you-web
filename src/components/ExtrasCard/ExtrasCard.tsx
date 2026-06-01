@@ -33,7 +33,7 @@ const ExtrasCard = ({
   obligatory,
   description,
 }: ExtrasCardProps) => {
-  const { selectedOffer, selectedExtrasKeys } = useYachtStore();
+  const { selectedOffer, selectedExtrasKeys, calculatedPrice } = useYachtStore();
   const { calculatePrice } = useYachtPriceCalculation();
   const t = useTranslations('common');
   const servicesT = useTranslations('yacht.servicesList');
@@ -46,7 +46,19 @@ const ExtrasCard = ({
   // an empty array even when the item is obligatory at yacht level. Fall
   // back to the per-extra `obligatory` flag so Captain/Chef/APA on crewed
   // yachts don't silently flip to "optional".
-  const isObligatoryExtras = selectedOffer?.obligatoryExtrasKeys.includes(extraKey) || obligatory === true;
+  //
+  // A partner can also make an extra obligatory only once another is
+  // selected — e.g. Navigare makes the Damage Waiver mandatory once a
+  // Skipper is added. The backend replays the selection against NauSys and
+  // flags such extras obligatory in the live price calc; reflect that here
+  // so the box auto-checks + locks (the partner-supplied description, e.g.
+  // "Mandatory when skipper is added", explains why to the client).
+  const isDynamicallyObligatory = [
+    ...(calculatedPrice?.selectedExtrasInPrice ?? []),
+    ...(calculatedPrice?.selectedExtrasAtBase ?? []),
+  ].some(extra => extra.key === extraKey && extra.obligatory);
+  const isObligatoryExtras =
+    selectedOffer?.obligatoryExtrasKeys.includes(extraKey) || obligatory === true || isDynamicallyObligatory;
   const isSelected = selectedExtrasKeys.includes(extraKey);
   const isDisabled = isObligatoryExtras || !selectedOffer;
 
