@@ -170,7 +170,53 @@ export async function generateMetadata({ params: paramsPromise, searchParams }: 
   // stripped on the way in.
   const pageNum = Number(params.page ?? 1) || 1;
   const hasDates = !!(params.startDate || params.endDate);
-  const noindex = pageNum > 1 || hasDates;
+  // Only the headline destination [× single boat type] page is index-worthy
+  // (it matches the location / category sitemaps). Everything beyond that —
+  // marina-id "related" links (?did=), multi-destination combos, extra boat
+  // types, or any sidebar filter — is a near-duplicate of the headline page
+  // and was polluting the index ("Duplicate, Google chose different canonical"
+  // on 50+ /search?destinations= combos + thousands of crawled ?did= URLs).
+  // Noindex them; the canonical above still points back to the clean headline.
+  const INDEX_BLOCKING_PARAMS = [
+    'did',
+    'search',
+    'manufacturers',
+    'models',
+    'mfid',
+    'mid',
+    'amenities',
+    'services',
+    'amenityLabels',
+    'servicesLabels',
+    'charterType',
+    'mainSailType',
+    'yid',
+    'sortBy',
+    'sortDirection',
+    'minPrice',
+    'maxPrice',
+    'minCabins',
+    'maxCabins',
+    'minPersons',
+    'maxPersons',
+    'minBerths',
+    'maxBerths',
+    'minLength',
+    'maxLength',
+    'minBuildYear',
+    'maxBuildYear',
+    'minWc',
+    'maxWc',
+    'minEnginePower',
+    'maxEnginePower',
+  ];
+  const hasNonHeadlineFilter = INDEX_BLOCKING_PARAMS.some(k => {
+    const v = (params as unknown as Record<string, string | string[] | undefined>)[k];
+
+    return Array.isArray(v) ? v.length > 0 : v != null && String(v).length > 0;
+  });
+  const noindex =
+    pageNum > 1 || hasDates || uniqueRawDestinations.length > 1 || boatTypes.length > 1 || hasNonHeadlineFilter;
 
   return buildMetadata({
     locale: locale as LocaleType,

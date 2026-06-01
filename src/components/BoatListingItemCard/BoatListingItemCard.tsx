@@ -28,6 +28,7 @@ import cx from 'clsx';
 import { useLocale, useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
 
 import BoatLocationModal from '@/components/BoatLocationModal';
 import Checkbox from '@/components/Checkbox';
@@ -37,7 +38,6 @@ import { UserModel, UserRoleName } from '@/models/user.model';
 import { OfferStatus, YachtModelShortInfo } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
 import useBreakpoint from '@/utils/hooks/useBreakpoint';
-import useQueryParams from '@/utils/hooks/useQueryParams';
 import useToggleState from '@/utils/hooks/useToggleState';
 import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
 import { getBoatImageUrl } from '@/utils/static/imageUtils';
@@ -94,7 +94,25 @@ const BoatListingItemCard = ({
   offerDateFrom,
   offerDateTo,
 }: BoatListingItemCardProps) => {
-  const { queryParams } = useQueryParams();
+  // Boat detail's canonical ignores query params, so forwarding the live
+  // search filter (?destinations=/&did=) only spawns crawlable duplicate URLs
+  // (17.9K "alternate" + 1.96K "duplicate" in GSC). Forward ONLY the sailing
+  // dates: useful for the client, and absent when Googlebot crawls
+  // /search?destinations=X — so the bot follows a clean /boat/<slug>.
+  const searchParams = useSearchParams();
+  const boatDetailHref = (() => {
+    const q = new URLSearchParams();
+    const startDate = searchParams.get('startDate');
+    const endDate = searchParams.get('endDate');
+
+    if (startDate) q.set('startDate', startDate);
+
+    if (endDate) q.set('endDate', endDate);
+
+    const qs = q.toString();
+
+    return qs ? `/boat/${slug}?${qs}` : `/boat/${slug}`;
+  })();
   const { isMobile } = useBreakpoint();
   const t = useTranslations();
   const locale = useLocale();
@@ -363,7 +381,7 @@ const BoatListingItemCard = ({
   return (
     <>
       {location?.name && <BoatLocationModal open={isMapOpen} onClose={toggleMap} locationName={location.name} />}
-      <Link href={`/boat/${slug}?${queryParams}`} target="_blank" rel="noopener noreferrer">
+      <Link href={boatDetailHref} target="_blank" rel="noopener noreferrer">
         <Card
           elevation={0}
           classes={{ root: styles.root }}
