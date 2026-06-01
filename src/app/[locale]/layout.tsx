@@ -99,7 +99,6 @@ const RootLayout = async ({ children, params }: RootLayoutProps) => {
             cheap when the host actually receives traffic. */}
         <link rel="preconnect" href="https://api.boat4you.com" crossOrigin="" />
         <link rel="preconnect" href="https://boat4you.b-cdn.net" crossOrigin="" />
-        <link rel="dns-prefetch" href="https://wp.boat4you.com" />
         {/* Hero H1 uses Raleway 500 (regular hero text) + 800 italic for the
             CTA span. Preloading those two weights eliminates the 3s FOIT
             window PSI flagged and lets the LCP element paint immediately. */}

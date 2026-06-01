@@ -10,6 +10,33 @@ import {
   GetUnwrapedBlogAndRelatedBlogsResult,
 } from './queries';
 
+// The blog content + images live on WordPress (wp.boat4you.com). We never want
+// that origin to reach the browser or Google — every image src / content link /
+// og:image is rewritten to the main domain, which proxies /wp-content/ back to
+// WP via nginx (cusma1). Host-swap (not strip-to-relative) so og:image stays an
+// absolute URL. Recurses through every string in the fetched payload. (Mario
+// 1.6.2026: "wp. se ne smije nigdje vidit".)
+const WP_HOST = 'wp.boat4you.com';
+const PUBLIC_HOST = (process.env.NEXT_PUBLIC_BASE_URL || 'https://www.boat4you.com')
+  .replace(/^https?:\/\//, '')
+  .replace(/\/$/, '');
+
+function swapWpHost<T>(value: T): T {
+  if (typeof value === 'string') {
+    return value.split(WP_HOST).join(PUBLIC_HOST) as unknown as T;
+  }
+
+  if (Array.isArray(value)) {
+    return value.map(swapWpHost) as unknown as T;
+  }
+
+  if (value && typeof value === 'object') {
+    return Object.fromEntries(Object.entries(value).map(([k, v]) => [k, swapWpHost(v)])) as T;
+  }
+
+  return value;
+}
+
 export async function getRankMathSEO(url: string): Promise<RankMathSEOData | null> {
   try {
     const baseUrl = process.env.NEXT_PUBLIC_WORDPRESS_API_URL?.replace('/graphql', '');
@@ -103,7 +130,7 @@ export async function getBlogs(pageSize: number, categoryName?: string, after?: 
 
   const data = await fetchAPI<GetBlogsResult>(GET_ALL_BLOGS, { variables });
 
-  return CursorConnectionUtils.unwrapNodesAndEdges(data.posts);
+  return swapWpHost(CursorConnectionUtils.unwrapNodesAndEdges(data.posts));
 }
 
 export async function getBlog(id: string, pageSize: number): Promise<GetUnwrapedBlogAndRelatedBlogsResult | null> {
@@ -117,10 +144,10 @@ export async function getBlog(id: string, pageSize: number): Promise<GetUnwraped
 
   const relatedData = data.posts.nodes.filter(post => post.id !== data.post.id);
 
-  return {
+  return swapWpHost({
     post: CursorConnectionUtils.unwrapNodesAndEdges(data.post),
     posts: CursorConnectionUtils.unwrapNodesAndEdges(relatedData),
-  };
+  });
 }
 
 export async function getBlogWithSEO(slug: string) {
@@ -137,7 +164,7 @@ export async function getBlogWithSEO(slug: string) {
     ...blogData,
     post: {
       ...blogData.post,
-      seo: seoData,
+      seo: swapWpHost(seoData),
     },
   };
 }
