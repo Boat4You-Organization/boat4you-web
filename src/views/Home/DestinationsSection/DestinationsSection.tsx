@@ -29,9 +29,14 @@ const DestinationsSection = ({ countries }: DestinationsSectionProps) => {
       </h2>
       <p className={styles.subtitle}>{t('chooseFromFiveHundredLocations')}</p>
 
+      {/* No `priority` on any card: these sit below the fold (hero + search bar
+          fill the mobile viewport) and are never the LCP element. Marking the
+          first row priority preloaded 4 images at fetchPriority=high, stealing
+          slow-4G bandwidth from the actual LCP (hero). Default lazy loading
+          fetches them when they scroll into view. */}
       <div className={styles.grid}>
-        {visible.map((country, index) => (
-          <DestinationCard key={country.id} {...country} priority={index < 4} />
+        {visible.map(country => (
+          <DestinationCard key={country.id} {...country} />
         ))}
       </div>
     </section>
