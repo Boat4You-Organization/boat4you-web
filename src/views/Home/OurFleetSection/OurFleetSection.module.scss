@@ -1,19 +1,61 @@
 @use '@/styles/utils/rem-calc' as *;
 @use '@/styles/mixins/breakpoints' as *;
 
+// Was wrapped in MUI <Container maxWidth="xl">; now the section IS that container.
 .container {
+  width: 100%;
+  max-width: rem-calc(1280);
+  margin-inline: auto;
+  box-sizing: border-box;
   padding-block: rem-calc(74 42);
 
   @include media(0, 'sm') {
     padding-block: rem-calc(92 62);
   }
+}
 
-  .overlay {
-    bottom: rem-calc(20);
-    height: rem-calc(340);
+// Title / subtitle replicate the SliderSection heading (Typography h1 + body2).
+.title {
+  margin: 0;
+  font-size: rem-calc(36);
+  font-weight: 500;
+  color: #141857;
+}
 
-    @include media(0, 'sm') {
-      bottom: rem-calc(50);
-    }
+.titleEmphasis {
+  padding-left: 0.1em;
+  font-style: italic;
+  font-weight: 800;
+  color: #2856ff;
+  overflow-wrap: break-word;
+}
+
+.subtitle {
+  margin: rem-calc(4 0 0);
+  font-size: rem-calc(14);
+  font-weight: 500;
+  color: #6a6a6a;
+}
+
+// Static grid — 4 vessel-type cards per row (Mario). Replaces the Swiper rail.
+.grid {
+  margin-top: rem-calc(28);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: rem-calc(28 16);
+
+  @include media('sm') {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include media('md') {
+    grid-template-columns: repeat(4, 1fr);
+    gap: rem-calc(32 20);
+  }
+
+  // OurFleetCard's <Link> is the grid item — make it fill the cell.
+  > a {
+    display: block;
+    text-decoration: none;
   }
 }

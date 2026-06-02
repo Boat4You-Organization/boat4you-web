@@ -1,19 +1,73 @@
 @use '@/styles/utils/rem-calc' as *;
 @use '@/styles/mixins/breakpoints' as *;
 
+// Was wrapped in MUI <Container maxWidth="xl">; now the section IS that container.
 .container {
+  width: 100%;
+  max-width: rem-calc(1280);
+  margin-inline: auto;
+  box-sizing: border-box;
   padding-block: rem-calc(42);
 
   @include media(0, 'sm') {
     padding-block: rem-calc(92);
   }
+}
 
-  .overlay {
-    bottom: rem-calc(42);
-    height: rem-calc(473);
+// Title / subtitle replicate the SliderSection heading (Typography h1 + body2).
+.title {
+  margin: 0;
+  font-size: rem-calc(36);
+  font-weight: 500;
+  color: #141857;
+}
 
-    @include media(0, 'sm') {
-      bottom: rem-calc(92);
-    }
+.titleEmphasis {
+  padding-left: 0.1em;
+  font-style: italic;
+  font-weight: 800;
+  color: #2856ff;
+  overflow-wrap: break-word;
+}
+
+.subtitle {
+  margin: rem-calc(4 0 0);
+  font-size: rem-calc(14);
+  font-weight: 500;
+  color: #6a6a6a;
+}
+
+// 3 posts + a "Show more" tile = 4 columns on desktop. Replaces the Swiper rail.
+.grid {
+  margin-top: rem-calc(28);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: rem-calc(24);
+
+  @include media('sm') {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include media('md') {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+// "Show more" 4th tile — bordered box, centred label, matches the card height.
+.showMore {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: rem-calc(190);
+  border: 1px solid #dcdcdc;
+  border-radius: rem-calc(12);
+  color: #141857;
+  font-weight: 600;
+  font-size: rem-calc(18);
+  text-decoration: none;
+  transition: background-color 0.15s ease;
+
+  &:hover {
+    background-color: #f6f7fb;
   }
 }

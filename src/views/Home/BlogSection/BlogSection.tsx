@@ -1,38 +1,45 @@
-'use client';
-
 import { useTranslations } from 'next-intl';
-import { Swiper as SwiperType } from 'swiper';
+import Link from 'next/link';
 
-import SliderSection from '@/components/SliderSection';
+import BlogCard from '@/components/BlogCard';
 import { BlogTeaser } from '@/types/blog.type';
 
 import styles from './BlogSection.module.scss';
-import BlogSlider from './BlogSlider';
 
 interface BlogSectionProps {
   posts: BlogTeaser[];
 }
 
-const BlogSliderWrapper = ({
-  handleSwiper,
-  blogs,
-}: {
-  handleSwiper: (swiper: SwiperType) => void;
-  blogs: BlogTeaser[];
-}) => <BlogSlider blogs={blogs} handleSwiper={handleSwiper} />;
-
+/**
+ * Home blog teaser — was a Swiper carousel (client + Swiper hydration, a heavy
+ * mobile cost). Replaced (Jun-2026) with a static grid: 3 latest posts + a
+ * "Show more" tile linking to /blog (Mario, mirrors the competitor layout).
+ * Server component now, no Swiper JS.
+ */
 const BlogSection = ({ posts }: BlogSectionProps) => {
   const t = useTranslations('home');
+  const tCommon = useTranslations('common');
+
+  const teasers = posts.slice(0, 3);
+
+  if (!teasers.length) return null;
 
   return (
-    <SliderSection
-      title={t('blogSection.readAboutYour')}
-      emphasizedTitle={t('blogSection.nextHoliday')}
-      subtitle={t('blogSection.discoverSecretSpots')}
-      // eslint-disable-next-line react/no-unstable-nested-components
-      SliderComponent={props => <BlogSliderWrapper {...props} blogs={posts} />}
-      customStyles={{ container: styles.container, overlay: styles.overlay }}
-    />
+    <section className={styles.container}>
+      <h2 className={styles.title}>
+        {t('blogSection.readAboutYour')} <span className={styles.titleEmphasis}>{t('blogSection.nextHoliday')}</span>
+      </h2>
+      <p className={styles.subtitle}>{t('blogSection.discoverSecretSpots')}</p>
+
+      <div className={styles.grid}>
+        {teasers.map(post => (
+          <BlogCard key={post.slug} variant="home" {...post} />
+        ))}
+        <Link href="/blog" className={styles.showMore}>
+          <span>{tCommon('showMore')}</span>
+        </Link>
+      </div>
+    </section>
   );
 };
 
