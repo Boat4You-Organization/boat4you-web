@@ -6,6 +6,30 @@ cusma1 source resynced to git HEAD on 2026-06-01.
 
 ---
 
+## 2026-06-02 — Raleway → Latin-subset woff2 (commit `29bfbfa`) — PENDING DEPLOY
+
+Perf fix #1 for slow mobile LCP: home pulled ~617 KB of `.ttf` fonts (7 weights) that
+saturated slow-4G bandwidth ahead of the LCP hero background. All 18 Raleway weights are
+now Brotli **woff2**, subset to Latin + Latin-Ext (every shipped locale; drops Cyrillic) →
+~23 KB/weight, home payload **~170 KB (−72 %, ~444 KB off the wire)**. `_fonts.scss` is
+woff2-first + ttf fallback; the 2 preload `<link>` in `layout.tsx` switched to woff2.
+Verified locally (mobile): 0 `.ttf` fetched, Raleway + HR diacritics render, 0 errors.
+
+**⚠️ DEPLOY GOTCHA — must ship `public/`:** the FE-deploy tar in the section below does
+**NOT** include `public/`, but the 18 new files live in `public/fonts/Raleway/*.woff2`.
+A missing woff2 on cusma1 → **404 → font silently drops to system sans-serif** (a 404 does
+NOT trigger the `.ttf` format-fallback; that only fires for unsupported formats). So in
+addition to the normal build+ship, run:
+
+```bash
+scp public/fonts/Raleway/*.woff2 cusma1:/home/cusma1/nextapp/public/fonts/Raleway/
+```
+
+The `_fonts.scss` + `layout.tsx` edits ride along in `src` (and bake into `.next`) as usual.
+The `.ttf` files stay in place as the legacy fallback — do not delete them.
+
+---
+
 ## FE deploy (cusma1) — build LOCALLY, ship `.next` (do NOT build on server)
 
 On-server `yarn build` regenerates `.next` from cusma1's source and can silently revert
