@@ -179,6 +179,10 @@ const useLocationAutocomplete = ({
   const [stateLocation, actionLocation] = useActionState(getLocations, undefined);
   const { setValue, getValues } = useFormContext();
   const [searchString, setSearchString] = useState<string>('');
+  // Debounced mirror of searchString. The visible input updates instantly
+  // (setSearchString below), but the backend location lookup fires off this
+  // debounced value so typing "Croatia" makes ONE request, not seven.
+  const [debouncedSearch, setDebouncedSearch] = useState<string>('');
   const [popularEntries, setPopularEntries] = useState<PopularEntry[]>([]);
   const [isLocating, setIsLocating] = useState(false);
   const [locationError, setLocationError] = useState<string | null>(null);
@@ -270,15 +274,23 @@ const useLocationAutocomplete = ({
   // on every parent render and, via setState, create an infinite POST loop.
   const selectedValuesKey = (selectedValues || []).join(',');
 
+  // Debounce typing into debouncedSearch (300ms) — keeps the input instant
+  // while collapsing per-keystroke backend lookups into a single request.
+  useEffect(() => {
+    const handler = setTimeout(() => setDebouncedSearch(searchString), 300);
+
+    return () => clearTimeout(handler);
+  }, [searchString]);
+
   useEffect(() => {
     startTransition(() => {
       actionLocation({
-        name: searchString,
+        name: debouncedSearch,
         selected: selectedValues,
       });
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [searchString, selectedValuesKey]);
+  }, [debouncedSearch, selectedValuesKey]);
 
   // Popular searches are fixed — fetch once on mount.
   useEffect(() => {
