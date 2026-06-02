@@ -1,4 +1,3 @@
-import cx from 'clsx';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -16,11 +15,10 @@ interface DestinationCardProps extends CountryCountModel {
   priority?: boolean;
 }
 
-// Plain HTML + CSS (no MUI). Rendered 40-60× in the destinations rail, so
-// each MUI Card/CardMedia/Typography instance multiplied the home's hydration
-// cost. As semantic markup it ships zero client JS — the LCP/TBT win that the
-// section-level changes alone couldn't reach. Currency is no longer read off
-// useSearchParams (see note: that also forced the whole home dynamic).
+// Plain HTML + CSS (no MUI), zero client JS. Jun-2026: restyled to match the
+// fleet (OurFleet) card — landscape image on top, name + yacht count below in
+// dark text — so the destinations grid reads identically to the vessel-type
+// grid (Mario: "isti dizajn kao plovila"). Was an overlay-text card.
 const DestinationCard = ({ id, name, countryCode, yachtCount, priority = false }: DestinationCardProps) => {
   const t = useTranslations('home');
   const image = getImageByCountryCode(countryCode);
@@ -30,13 +28,13 @@ const DestinationCard = ({ id, name, countryCode, yachtCount, priority = false }
   const localizedName = translationKey ? t(translationKey) : name;
 
   return (
-    <Link href={`/search?destinations=${name}&did=${id}`} className={cx(styles.root, styles.container)}>
+    <Link href={`/search?destinations=${name}&did=${id}`} className={styles.card}>
       <div className={styles.imageWrapper}>
         <Image
           src={image.src}
           alt={alt}
           fill
-          sizes="(max-width: 600px) 80vw, 305px"
+          sizes="(max-width: 600px) 50vw, 305px"
           className={styles.image}
           priority={priority}
           fetchPriority={priority ? 'high' : undefined}
@@ -49,7 +47,6 @@ const DestinationCard = ({ id, name, countryCode, yachtCount, priority = false }
           {yachtCount} {t('destinationsSection.yachts')}
         </p>
       </div>
-      <div className={styles.overlay} />
     </Link>
   );
 };

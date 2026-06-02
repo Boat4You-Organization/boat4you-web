@@ -1,60 +1,51 @@
 @use '@/styles/settings/variables' as *;
 @use '@/styles/utils/rem-calc' as *;
+@use '@/styles/mixins/breakpoints' as *;
 
-.root {
-  &.container {
-    // Was a MUI <Card> (div); now a Link (<a>) so it needs display:block.
-    display: block;
+// Mirrors OurFleetCard: landscape image on top, name + count below in dark text
+// (Mario: destinations should look like the vessel-type cards).
+.card {
+  display: block;
+  text-decoration: none;
+
+  .imageWrapper {
     position: relative;
+    aspect-ratio: 305 / 227;
     border-radius: rem-calc(12);
     overflow: hidden;
-    color: $white;
-    cursor: pointer;
 
-    .imageWrapper {
-      position: relative;
-      aspect-ratio: 305 / 341;
-
-      .image {
-        object-fit: cover;
-        transition: transform $animation-duration-normal ease;
-      }
+    .image {
+      object-fit: cover;
+      transition: transform $animation-duration-normal ease;
     }
+  }
 
-    &:hover .imageWrapper .image {
-      transform: scale(1.1);
-    }
+  &:hover .imageWrapper .image {
+    transform: scale(1.1);
+  }
 
-    .content {
-      position: absolute;
-      z-index: 10;
-      left: rem-calc(24);
-      bottom: rem-calc(24);
-      right: rem-calc(24);
-    }
+  .content {
+    padding-top: rem-calc(18);
+  }
 
-    // Was Typography variant="h2" (28px) with fontWeight 800 + italic override.
-    .title {
-      margin: 0;
-      font-size: rem-calc(28);
-      font-weight: 800;
-      font-style: italic;
-    }
+  // Was overlaid white text; now matches OurFleetCard title (h2 28px / 18px
+  // mobile, italic 800, blue950).
+  .title {
+    margin: 0;
+    font-size: rem-calc(28);
+    font-weight: 800;
+    font-style: italic;
+    color: #141857;
 
-    // Was Typography variant="body2" fontWeight={500}.
-    .count {
-      margin: 0;
-      font-size: rem-calc(14);
-      font-weight: 500;
+    @include media(0, 'md') {
+      font-size: rem-calc(18);
     }
+  }
 
-    .overlay {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      background: linear-gradient(180deg, rgb(0 0 0 / 0%) 0%, rgb(0 0 0 / 50%) 100%);
-      width: 100%;
-      height: rem-calc(88);
-    }
+  .count {
+    margin: rem-calc(2 0 0);
+    font-size: rem-calc(14);
+    font-weight: 500;
+    color: #6a6a6a;
   }
 }

@@ -1,19 +1,61 @@
 @use '@/styles/utils/rem-calc' as *;
 @use '@/styles/mixins/breakpoints' as *;
 
+// Was wrapped in MUI <Container>; now the section IS that container.
 .container {
+  width: 100%;
+  max-width: rem-calc(1280);
+  margin-inline: auto;
+  box-sizing: border-box;
+  // Side gutter so the grid is not edge-to-edge on mobile (Mario).
+  padding-inline: rem-calc(16);
   padding-block: rem-calc(84 64);
+
+  @include media('md') {
+    padding-inline: rem-calc(24);
+  }
 
   @include media(0, 'md') {
     padding-block: rem-calc(84 92);
   }
+}
 
-  .overlay {
-    bottom: rem-calc(42);
-    height: rem-calc(380);
+.title {
+  margin: 0;
+  font-size: rem-calc(36);
+  font-weight: 500;
+  color: #141857;
+}
 
-    @include media(0, 'md') {
-      bottom: rem-calc(72);
-    }
+.titleEmphasis {
+  padding-left: 0.1em;
+  font-style: italic;
+  font-weight: 800;
+  color: #2856ff;
+  overflow-wrap: break-word;
+}
+
+.subtitle {
+  margin: rem-calc(4 0 0);
+  font-size: rem-calc(14);
+  font-weight: 500;
+  color: #6a6a6a;
+}
+
+// 4-per-row static grid (4 x 3), matching the fleet grid. Replaces the Swiper.
+.grid {
+  margin-top: rem-calc(28);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: rem-calc(18 12);
+
+  @include media('sm') {
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem-calc(28 16);
+  }
+
+  @include media('md') {
+    grid-template-columns: repeat(4, 1fr);
+    gap: rem-calc(32 20);
   }
 }
