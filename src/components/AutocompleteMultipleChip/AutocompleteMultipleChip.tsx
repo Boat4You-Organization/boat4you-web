@@ -156,9 +156,13 @@ const AutocompleteMultipleChip = ({
         position: 'relative',
         borderRadius: '12px',
         transition: 'background-color 300ms ease-in-out',
-        backgroundColor: isFocused && internalValue.length === 0 ? colors.blue100 : 'transparent',
+        // Field highlight (hover/focus) only in inline-input mode. In alwaysOpen
+        // (dropdown) mode the FormControl wraps the whole inline list, so a
+        // container-level background would darken the ENTIRE dropdown — let each
+        // option handle its own hover instead.
+        backgroundColor: !alwaysOpen && isFocused && internalValue.length === 0 ? colors.blue100 : 'transparent',
         '&:hover': {
-          backgroundColor: internalValue.length === 0 ? colors.blue50 : 'transparent',
+          backgroundColor: !alwaysOpen && internalValue.length === 0 ? colors.blue50 : 'transparent',
         },
         // In full-screen mobile picker mode: kill every nested container
         // that MUI Autocomplete adds (popper, paper, listbox). Targeting

@@ -18,6 +18,9 @@
   align-items: center;
   text-align: center;
   padding-block: rem-calc(77);
+  // Side gutter so the heading + description never run edge-to-edge (Mario,
+  // most visible on mobile). Background still fills the full width.
+  padding-inline: rem-calc(24);
   color: $white;
 
   @include media(0, 'md') {

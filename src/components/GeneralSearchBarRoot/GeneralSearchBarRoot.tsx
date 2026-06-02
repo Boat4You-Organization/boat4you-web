@@ -1,6 +1,6 @@
 'use client';
 
-import { Box, Container, Paper } from '@mui/material';
+import { Container, Paper } from '@mui/material';
 import { useRouter } from 'next/navigation';
 
 import Form from '@/components/Forms/Form';
@@ -10,8 +10,10 @@ import { Currency } from '@/models/user.model';
 import useQueryParams from '@/utils/hooks/useQueryParams';
 import DateTime from '@/utils/static/DateTime';
 
-import GeneralSearchBarDesktop from './GeneralSearchBarDesktop';
-import GeneralSearchBarMobile from './GeneralSearchBarMobile';
+// One unified responsive bar for both viewports (desktop = dropdowns below each
+// field, mobile = bottom-sheet modal). Replaces the old desktop+mobile pair that
+// double-rendered and hydrated two always-open autocompletes above the fold.
+import GeneralSearchBar from './GeneralSearchBarMobile';
 import styles from './GeneralSearchBarRoot.module.scss';
 
 const defaultValues: SearchBarFormValues = {
@@ -70,12 +72,7 @@ const GeneralSearchBarRoot = () => {
     >
       <Paper classes={{ root: styles.root }} className={styles.container} elevation={0}>
         <Form id={GENERAL_SEARCH_FORM} defaultValues={defaultValues} onSubmit={handleSubmit}>
-          <Box className={styles.searchDesktopWrapper}>
-            <GeneralSearchBarDesktop />
-          </Box>
-          <Box className={styles.searchMobileWrapper}>
-            <GeneralSearchBarMobile />
-          </Box>
+          <GeneralSearchBar />
         </Form>
       </Paper>
     </Container>

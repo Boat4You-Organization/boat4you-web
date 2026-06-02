@@ -19,9 +19,13 @@ import { VESSEL_TYPE_LABEL_MAP, VesselType } from '@/models/yacht.model';
 interface BoatTypeContentProps {
   maxDisplayedChips?: number;
   onDeleteSingle?: (option: string, index: number) => void;
+  // Desktop: fires when a boat type is added so the bar can run the search
+  // right away (no separate Search click — last step of the guided flow).
+  // Mobile leaves it unset and submits via the "Select yacht" button instead.
+  onSelect?: () => void;
 }
 
-const BoatTypeContent = ({ maxDisplayedChips, onDeleteSingle }: BoatTypeContentProps) => {
+const BoatTypeContent = ({ maxDisplayedChips, onDeleteSingle, onSelect }: BoatTypeContentProps) => {
   const { watch, setValue } = useFormContext<SearchBarFormValues>();
   const currentBoatTypes = watch('boatTypes') || [];
   const t = useTranslations();
@@ -64,6 +68,12 @@ const BoatTypeContent = ({ maxDisplayedChips, onDeleteSingle }: BoatTypeContentP
     }
 
     setValue('boatTypes', updatedBoatTypes);
+
+    // Adding a type is the final step of the desktop guided flow — run the
+    // search immediately. Deselecting (toggle off) must NOT search.
+    if (!isAlreadySelected) {
+      onSelect?.();
+    }
   };
 
   const selectedLabels = currentBoatTypes.map(boatTypeId => {

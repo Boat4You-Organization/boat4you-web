@@ -4,7 +4,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useFormContext } from 'react-hook-form';
 
-import { Box, Button, Stack, Typography } from '@mui/material';
+import { Box, Button, Popover, Stack, Theme, Typography, useMediaQuery } from '@mui/material';
 import dayjs, { Dayjs } from 'dayjs';
 import { useTranslations } from 'next-intl';
 
@@ -19,19 +19,43 @@ import { GENERAL_SEARCH_FORM } from '@/config/form-names.config';
 import { VESSEL_TYPE_LABEL_MAP, VesselType } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
 import { DateDisableReason } from '@/types/dateDisabledReason.type';
-import useToggleState from '@/utils/hooks/useToggleState';
 
 import BoatTypeContent from './BoatTypeContent';
 import DestinationContent from './DestinationContent';
 
+type ActiveField = 'destination' | 'boatType' | null;
+
+// Unified responsive search bar (was mobile-only; kept the filename so the
+// home hero + the search-page mobile header modal imports stay put).
+//
+//  • DESKTOP (md+): one seamless bar of trigger buttons. Clicking a field
+//    opens its picker as a Popover anchored DIRECTLY BELOW that field — no
+//    modal, no "Choose destination" confirm button (Mario, Jun-2026).
+//  • MOBILE: bottom-sheet / full-screen ModalRoot with the guided flow
+//    (destination → dates → boat type → auto-submit). UNCHANGED.
+//
+// Pickers mount lazily — DestinationContent (the MUI Autocomplete) only renders
+// when its dropdown opens, so the home no longer hydrates two always-open
+// autocompletes above the fold.
 const GeneralSearchBarMobile = () => {
   const { watch, setValue } = useFormContext<SearchBarFormValues>();
-  const [isModalOpen, toggleModal] = useToggleState();
-  const [modalVariant, setModalVariant] = useState<'destination' | 'boatType' | null>(null);
-  // Guided flow: destination confirm → calendar opens via `openSignal` bump →
-  // once user picks an end date, we auto-open the boat-type modal. Matches
-  // desktop's `handleLocationAdded` UX so mobile users don't have to find
-  // each step manually.
+  // `noSsr` — evaluate matchMedia at render time instead of starting from the
+  // SSR default. This bar is client-only (CSR bailout), so there's no hydration
+  // to mismatch, and we must NOT briefly read as mobile on a desktop viewport
+  // (that would open the field pickers as a modal instead of a dropdown).
+  const isMobile = useMediaQuery((theme: Theme) => theme.breakpoints.down('md'), { noSsr: true });
+
+  // Single source of truth for which field's picker is open. Drives BOTH the
+  // desktop Popover and the mobile ModalRoot.
+  const [activeField, setActiveField] = useState<ActiveField>(null);
+
+  // Desktop popover anchors — point each dropdown under its own field box.
+  const destAnchorRef = useRef<HTMLDivElement | null>(null);
+  const boatAnchorRef = useRef<HTMLDivElement | null>(null);
+
+  // Mobile guided flow: destination confirm → calendar opens via `dateOpenSignal`
+  // bump → once the user picks an end date, auto-open the boat-type modal. Desktop
+  // never sets these (no confirm buttons), so the guided flow is mobile-only.
   const [dateOpenSignal, setDateOpenSignal] = useState(0);
   const autoAdvanceToBoatTypeRef = useRef(false);
 
@@ -44,27 +68,25 @@ const GeneralSearchBarMobile = () => {
   const startDate = watch('startDate');
   const endDate = watch('endDate');
 
-  const handleDestinationOpen = () => {
-    toggleModal();
-    setModalVariant('destination');
+  const handleDestinationOpen = () => setActiveField('destination');
+  const handleBoatTypeOpen = () => setActiveField('boatType');
+  const handleClose = () => setActiveField(null);
+
+  // Guided flow (both viewports) — picking a location closes the destination
+  // picker and opens the calendar (`dateOpenSignal` bump). Picking an end date
+  // then advances to boat type via the `endDate` effect below. No confirm taps
+  // between steps, so there's "not much clicking" (Mario) — same on mobile.
+  const handleLocationAdvance = () => {
+    autoAdvanceToBoatTypeRef.current = true;
+    setActiveField(null);
+    setDateOpenSignal(s => s + 1);
   };
 
-  const handleBoatTypeOpen = () => {
-    toggleModal();
-    setModalVariant('boatType');
-  };
-
-  const handleModalClose = () => {
-    toggleModal();
-    setModalVariant(null);
-  };
-
-  // Last step of the guided flow — after the user picks a boat type,
-  // fire the search right away. Saves the extra tap on "Search boats"
-  // at the bottom of the form. Close modal first so the list of results
-  // isn't covered by the sheet.
+  // Last step — after picking a boat type, fire the search right away (this is
+  // the mobile equivalent of clicking the bar's Search button on desktop).
+  // Close first so results aren't covered by the sheet.
   const handleBoatTypeConfirm = () => {
-    handleModalClose();
+    handleClose();
     requestAnimationFrame(() => {
       const form = document.getElementById(GENERAL_SEARCH_FORM) as HTMLFormElement | null;
 
@@ -72,32 +94,15 @@ const GeneralSearchBarMobile = () => {
     });
   };
 
-  // Confirm button inside destination modal: close modal + open calendar
-  // (via openSignal bump). Only advances if the user actually selected at
-  // least one destination — clicking without a pick just closes.
-  const handleDestinationConfirm = () => {
-    const hasDestination = (destinations || []).length > 0;
-
-    handleModalClose();
-
-    if (hasDestination) {
-      autoAdvanceToBoatTypeRef.current = true;
-      setDateOpenSignal(s => s + 1);
-    }
-  };
-
-  // When the user picks an end date during the guided flow, open the
-  // boat-type modal next. DatePickerDropdown closes its own modal on
-  // range-complete, so we let that finish before opening ours.
+  // Guided flow — when the user picks an end date, open the boat-type picker
+  // next. DatePickerDropdown closes its own popover/modal on range-complete, so
+  // let that finish first.
   useEffect(() => {
     if (!endDate || !autoAdvanceToBoatTypeRef.current) return;
 
     autoAdvanceToBoatTypeRef.current = false;
 
-    const timer = setTimeout(() => {
-      setModalVariant('boatType');
-      toggleModal();
-    }, 250);
+    const timer = setTimeout(() => setActiveField('boatType'), 250);
 
     return () => clearTimeout(timer);
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -168,24 +173,36 @@ const GeneralSearchBarMobile = () => {
     [startDate, endDate]
   );
 
-  const renderModalContent = () => {
-    switch (modalVariant) {
-      case 'destination':
-        return <DestinationContent />;
-      case 'boatType':
-        return <BoatTypeContent onDeleteSingle={handleDeleteSingleBoatType} />;
-      default:
-        return '';
+  // Desktop popover Paper styling — shared between the two dropdowns. Portals to
+  // <body> so the bar's `overflow: hidden` Paper never clips it.
+  const popoverPaperSx = {
+    mt: 1,
+    maxWidth: 'calc(100vw - 32px)',
+    maxHeight: '70vh',
+    overflowY: 'auto',
+    borderRadius: '10px',
+    boxShadow: '0px 4px 14px 0px rgba(0, 0, 0, 0.15)',
+  } as const;
+
+  const renderMobilePickerContent = () => {
+    if (activeField === 'destination') {
+      return <DestinationContent onLocationAdded={handleLocationAdvance} />;
     }
+
+    if (activeField === 'boatType') {
+      return <BoatTypeContent onDeleteSingle={handleDeleteSingleBoatType} onSelect={handleBoatTypeConfirm} />;
+    }
+
+    return null;
   };
 
   return (
     <>
-      <Stack width="100%" direction="column">
-        <Stack direction="column" flex={1}>
-          <Box flex={1} width={{ xs: 'auto', md: 278 }} minHeight="61px">
+      <Stack width="100%" direction={{ xs: 'column', md: 'row' }}>
+        <Stack direction={{ xs: 'column', md: 'row' }} flex={1}>
+          <Box ref={destAnchorRef} flex={1} minHeight="61px" sx={{ maxWidth: { md: 278 } }}>
             <ButtonWithChips
-              isActive={modalVariant === 'destination'}
+              isActive={activeField === 'destination'}
               onClick={handleDestinationOpen}
               handleClear={handleDestinationClear}
               placeholder={
@@ -203,7 +220,7 @@ const GeneralSearchBarMobile = () => {
               onDeleteSingle={handleDeleteSingleDestination}
             />
           </Box>
-          <Box flex={1} width={{ xs: 'auto', md: 278 }} height="100%">
+          <Box flex={1} minHeight="61px" sx={{ maxWidth: { md: 278 } }}>
             <DatePickerDropdown<SearchBarFormValues>
               startDateFieldName="startDate"
               endDateFieldName="endDate"
@@ -211,9 +228,9 @@ const GeneralSearchBarMobile = () => {
               openSignal={dateOpenSignal}
             />
           </Box>
-          <Box flex={1} width={{ xs: 'auto', md: 278 }} minHeight="61px">
+          <Box ref={boatAnchorRef} flex={1} minHeight="61px" sx={{ maxWidth: { md: 278 } }}>
             <ButtonWithChips
-              isActive={modalVariant === 'boatType'}
+              isActive={activeField === 'boatType'}
               onClick={handleBoatTypeOpen}
               handleClear={handleBoatTypeClear}
               placeholder={
@@ -232,50 +249,70 @@ const GeneralSearchBarMobile = () => {
             />
           </Box>
         </Stack>
-        <Box padding={1}>
+        <Box sx={{ p: { xs: 1, md: 0.75 }, display: 'flex', alignItems: 'stretch' }}>
           <Button
             type="submit"
             size="large"
-            endIcon={<Search size={24} />}
-            fullWidth
             id={GENERAL_SEARCH_FORM}
+            disabled={!destinations || destinations.length === 0}
             aria-label={t('generalSearchBar.searchBoats')}
+            sx={{ width: { xs: '100%', md: 'auto' }, minWidth: 'auto' }}
           >
-            {t('generalSearchBar.searchBoats')}
+            <Box component="span" sx={{ display: { xs: 'inline', md: 'none' }, mr: 1 }}>
+              {t('generalSearchBar.searchBoats')}
+            </Box>
+            <Search size={24} />
           </Button>
         </Box>
       </Stack>
-      <ModalRoot
-        title={
-          modalVariant === 'boatType' ? t('generalSearchBar.selectYacht') : t('generalSearchBar.chooseDestination')
-        }
-        open={isModalOpen}
-        onOpen={toggleModal}
-        onClose={handleModalClose}
-        hideCancelButton
-        // Destination uses full screen (long recent + popular + search
-        // results lists). Boat-type + calendar sit in a bottom sheet —
-        // compact content that shouldn't dominate the viewport.
-        fullScreenOnMobile={modalVariant === 'destination'}
-        customButton={
-          <Button
-            variant="contained"
-            size="large"
-            onClick={
-              modalVariant === 'destination'
-                ? handleDestinationConfirm
-                : modalVariant === 'boatType'
-                  ? handleBoatTypeConfirm
-                  : handleModalClose
-            }
-            fullWidth
+
+      {/* DESKTOP: each picker opens as a dropdown anchored below its field. */}
+      {!isMobile && (
+        <>
+          <Popover
+            open={activeField === 'destination'}
+            anchorEl={destAnchorRef.current}
+            onClose={handleClose}
+            anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
+            transformOrigin={{ vertical: 'top', horizontal: 'left' }}
+            slotProps={{ paper: { sx: { ...popoverPaperSx, width: 384, p: 1.5 } } }}
           >
-            {modalVariant === 'boatType' ? t('generalSearchBar.selectYacht') : t('generalSearchBar.chooseDestination')}
-          </Button>
-        }
-      >
-        {renderModalContent()}
-      </ModalRoot>
+            <DestinationContent onLocationAdded={handleLocationAdvance} />
+          </Popover>
+          <Popover
+            open={activeField === 'boatType'}
+            anchorEl={boatAnchorRef.current}
+            onClose={handleClose}
+            anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
+            transformOrigin={{ vertical: 'top', horizontal: 'left' }}
+            slotProps={{ paper: { sx: { ...popoverPaperSx, width: 320, p: 1 } } }}
+          >
+            <BoatTypeContent onDeleteSingle={handleDeleteSingleBoatType} onSelect={handleBoatTypeConfirm} />
+          </Popover>
+        </>
+      )}
+
+      {/* MOBILE: bottom-sheet / full-screen modal with the guided flow. */}
+      {isMobile && (
+        <ModalRoot
+          title={
+            activeField === 'boatType' ? t('generalSearchBar.selectYacht') : t('generalSearchBar.chooseDestination')
+          }
+          open={activeField !== null}
+          onOpen={() => {}}
+          onClose={handleClose}
+          hideCancelButton
+          // Both pickers advance on selection (location → calendar, boat type →
+          // search), so neither needs a confirm button — close via the X.
+          hideConfirmButton
+          // Destination uses full screen (long recent + popular + search
+          // results lists). Boat-type sits in a bottom sheet — compact content
+          // that shouldn't dominate the viewport.
+          fullScreenOnMobile={activeField === 'destination'}
+        >
+          {renderMobilePickerContent()}
+        </ModalRoot>
+      )}
     </>
   );
 };
