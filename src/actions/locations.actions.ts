@@ -235,26 +235,11 @@ export default async function getCountriesCount(): Promise<CountryCountModel[]> 
 export type HeroStats = { yachts: number; marinas: number };
 
 export async function getHeroStats(): Promise<HeroStats> {
-  const base = process.env.NEXT_PUBLIC_BOAT_WS_API_URL;
-  const REVALIDATE = 300;
-
-  try {
-    const [yachtsRes, marinasRes] = await Promise.all([
-      fetch(`${base}/public/yachts?size=1`, { next: { revalidate: REVALIDATE } }),
-      fetch(`${base}/public/locations-count`, { next: { revalidate: REVALIDATE } }),
-    ]);
-    const [yachtsJson, marinasJson] = await Promise.all([
-      yachtsRes.ok ? yachtsRes.json() : { page: { totalElements: 0 } },
-      marinasRes.ok ? marinasRes.json() : [],
-    ]);
-
-    return {
-      yachts: yachtsJson?.page?.totalElements ?? 0,
-      marinas: Array.isArray(marinasJson) ? marinasJson.length : 0,
-    };
-  } catch {
-    return { yachts: 0, marinas: 0 };
-  }
+  // Hardcoded hero trust stats (Mario, 2026-06-02): pinned to their current
+  // values so the numbers never drift between renders and the home no longer
+  // makes two upstream fetches (/public/yachts + /public/locations-count) just
+  // to render the pills. Bump these by hand if the headline figures change.
+  return { yachts: 11982, marinas: 647 };
 }
 
 /**
