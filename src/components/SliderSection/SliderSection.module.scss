@@ -6,6 +6,7 @@
   &.container {
     position: relative;
     overflow: hidden;
+
     // Side gutter so the carousel is not edge-to-edge on mobile (Mario).
     padding-inline: rem-calc(16);
 
