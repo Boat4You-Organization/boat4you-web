@@ -6,7 +6,14 @@ cusma1 source resynced to git HEAD on 2026-06-01.
 
 ---
 
-## 2026-06-02 — Raleway → Latin-subset woff2 (commit `29bfbfa`) — PENDING DEPLOY
+## 2026-06-02 — Raleway → Latin-subset woff2 (commit `29bfbfa`) — ✅ DEPLOYED
+
+**Deployed 2026-06-02 to cusma1, build-on-server** (CI `deploy_prod.yml` couldn't be triggered
+from this machine — no `gh`/token). Method: scp'd the 2 changed source files + 18 woff2 onto
+`/home/cusma1/nextapp`, paused watchdog, `cp -a .next .next.bak`, `NODE_OPTIONS=--max-old-space-size=2048 yarn build`
+(server has full src + devDeps + prod `.env`; build OK in 66s, 0 localhost baked), `sudo -S systemctl
+restart nextapp`, re-enabled watchdog, removed `.next.bak`. Live BUILD_ID `u-Za4fwpnDwILePja2vLy`.
+Verified on www.boat4you.com: **0 `.ttf`, 7 woff2 = 174 KB** (was ~617 KB, −72%), Raleway renders.
 
 Perf fix #1 for slow mobile LCP: home pulled ~617 KB of `.ttf` fonts (7 weights) that
 saturated slow-4G bandwidth ahead of the LCP hero background. All 18 Raleway weights are
@@ -15,17 +22,23 @@ now Brotli **woff2**, subset to Latin + Latin-Ext (every shipped locale; drops C
 woff2-first + ttf fallback; the 2 preload `<link>` in `layout.tsx` switched to woff2.
 Verified locally (mobile): 0 `.ttf` fetched, Raleway + HR diacritics render, 0 errors.
 
-**⚠️ DEPLOY GOTCHA — must ship `public/`:** the FE-deploy tar in the section below does
-**NOT** include `public/`, but the 18 new files live in `public/fonts/Raleway/*.woff2`.
-A missing woff2 on cusma1 → **404 → font silently drops to system sans-serif** (a 404 does
-NOT trigger the `.ttf` format-fallback; that only fires for unsupported formats). So in
-addition to the normal build+ship, run:
+**✅ Easiest + correct path — GitHub Actions `deploy_prod.yml`** (repo → Actions → "Deploy to
+Production" → Run workflow → branch `main`): builds on CI with the prod `.env` secrets and its
+tar **includes `public/`** (`tar … .next public src/posts …`), then on cusma1 does
+`stop nextapp → rm -rf .next node_modules public → extract → start`. So the 18 new woff2 ship
+**automatically** — no manual step. (Note: ~30–60 s downtime during the stop/start swap.)
+
+**⚠️ Only if you hand-deploy** via the "build locally, ship `.next`" recipe below: that tar does
+**NOT** include `public/`, so you must also run
 
 ```bash
 scp public/fonts/Raleway/*.woff2 cusma1:/home/cusma1/nextapp/public/fonts/Raleway/
 ```
 
-The `_fonts.scss` + `layout.tsx` edits ride along in `src` (and bake into `.next`) as usual.
+else a missing woff2 → **404 → font silently drops to system sans-serif** (a 404 does NOT trigger
+the `.ttf` format-fallback; that only fires for unsupported formats).
+
+The `_fonts.scss` + `layout.tsx` edits ride along in `src` (and bake into `.next`) either way.
 The `.ttf` files stay in place as the legacy fallback — do not delete them.
 
 ---
