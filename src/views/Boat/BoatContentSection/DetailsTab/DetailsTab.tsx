@@ -103,7 +103,7 @@ const DetailsTab = ({ yacht }: DetailsTabProps) => {
           ? { key: 'berths', icon: SingleBed, label: t('filters.berths'), value: String(yacht.berths) }
           : null,
         yacht.maxPersons
-          ? { key: 'guests', icon: People, label: t('yacht.guests'), value: String(yacht.maxPersons) }
+          ? { key: 'guests', icon: People, label: t('yacht.maxPassengers'), value: String(yacht.maxPersons) }
           : null,
         yacht.crewNumber && yacht.crewNumber > 0
           ? { key: 'crew', icon: People, label: t('yacht.crew'), value: String(yacht.crewNumber) }
@@ -124,7 +124,7 @@ const DetailsTab = ({ yacht }: DetailsTabProps) => {
           ? { key: 'berths', icon: SingleBed, label: t('filters.berths'), value: String(yacht.berths) }
           : null,
         yacht.maxPersons
-          ? { key: 'people', icon: People, label: t('filters.people'), value: String(yacht.maxPersons) }
+          ? { key: 'people', icon: People, label: t('yacht.maxPassengers'), value: String(yacht.maxPersons) }
           : null,
         yacht.wc ? { key: 'toilets', icon: Toilet, label: t('filters.toilets'), value: String(yacht.wc) } : null,
         yacht.mainSailType && yacht.mainSailType !== MainSailType.UNKNOWN
