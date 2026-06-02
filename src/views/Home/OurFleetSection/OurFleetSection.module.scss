@@ -7,6 +7,7 @@
   max-width: rem-calc(1280);
   margin-inline: auto;
   box-sizing: border-box;
+
   // Side gutter so the card grid does not run edge-to-edge on mobile
   // (Mario: "previse sirok"). Larger inset on wider screens.
   padding-inline: rem-calc(16);
