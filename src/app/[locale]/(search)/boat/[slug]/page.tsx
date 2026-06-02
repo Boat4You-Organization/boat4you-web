@@ -78,6 +78,16 @@ function buildYachtProductSchema(yacht: YachtModel, locale: LocaleType) {
   const lowPrice = offerPrices.length ? Math.min(...offerPrices) : null;
   const highPrice = offerPrices.length ? Math.max(...offerPrices) : null;
 
+  // No bookable offer with a real price → we can't form a VALID Product. Google
+  // requires `offers`, `review`, or `aggregateRating` on a Product, and for an
+  // unavailable yacht we have none (no price, no reviews). Emitting a Product
+  // without them makes the page "invalid" in Search Console (175 such pages,
+  // 6/2/26). Skip the Product schema entirely for these — the page stays
+  // indexable with its BreadcrumbList + the site-wide WebSite/Organization
+  // schema, just without a Product rich-result. Available yachts (with offers)
+  // are unaffected and keep their valid Product below.
+  if (!lowPrice || !highPrice) return null;
+
   // Google Merchant-listing validation wants a `description` on every Product.
   // ~5-10% of synced yachts have no description/sysDescription, which tripped
   // the "Missing field description" warning in Search Console — build a
@@ -388,11 +398,13 @@ const BoatPage = async ({
           brand chip in SERP). Server-rendered so the crawler picks it up
           on the first hit; the root WebSite/Organization/Service schema
           (in [locale]/layout.tsx) coexists alongside this one. */}
-      <script
-        type="application/ld+json"
-        // eslint-disable-next-line react/no-danger
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
-      />
+      {productSchema && (
+        <script
+          type="application/ld+json"
+          // eslint-disable-next-line react/no-danger
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+        />
+      )}
       <script
         type="application/ld+json"
         // eslint-disable-next-line react/no-danger
