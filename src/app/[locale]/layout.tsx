@@ -102,12 +102,12 @@ const RootLayout = async ({ children, params }: RootLayoutProps) => {
         {/* Hero H1 uses Raleway 500 (regular hero text) + 800 italic for the
             CTA span. Preloading those two weights eliminates the 3s FOIT
             window PSI flagged and lets the LCP element paint immediately. */}
-        <link rel="preload" href="/fonts/Raleway/Raleway-Medium.ttf" as="font" type="font/ttf" crossOrigin="" />
+        <link rel="preload" href="/fonts/Raleway/Raleway-Medium.woff2" as="font" type="font/woff2" crossOrigin="" />
         <link
           rel="preload"
-          href="/fonts/Raleway/Raleway-ExtraBoldItalic.ttf"
+          href="/fonts/Raleway/Raleway-ExtraBoldItalic.woff2"
           as="font"
-          type="font/ttf"
+          type="font/woff2"
           crossOrigin=""
         />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localizedJsonLd) }} />
