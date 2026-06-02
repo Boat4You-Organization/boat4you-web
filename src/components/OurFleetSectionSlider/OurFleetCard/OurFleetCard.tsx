@@ -28,7 +28,16 @@ const OurFleetCard = ({ vesselType, yachtCount }: YachtFleet) => {
           />
         </CardMedia>
         <CardContent className={styles.content}>
-          <Typography variant="h2" component="h3" fontWeight={800} fontStyle="italic" color={colors.blue950}>
+          <Typography
+            variant="h2"
+            component="h3"
+            fontWeight={800}
+            fontStyle="italic"
+            color={colors.blue950}
+            // Compact title on mobile so the 2-up grid does not feel oversized
+            // (Mario: "na mobile previse rasireno"); desktop keeps the h2 28px.
+            sx={{ fontSize: { xs: 18, md: 28 } }}
+          >
             {t(config.titleKey)}
           </Typography>
           <Typography variant="body2" color={colors.black350}>
