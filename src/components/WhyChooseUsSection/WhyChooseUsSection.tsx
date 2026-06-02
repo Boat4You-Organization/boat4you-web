@@ -29,6 +29,8 @@ const WhyChooseUsSection = ({ translation, data }: WhyChooseUsSectionProps) => {
       maxWidth="xl"
       disableGutters
       className={cx(styles.container, { [styles.howWeWork]: translation === 'howWeWork' })}
+      // Side gutter so the section is not edge-to-edge on mobile (Mario).
+      sx={{ px: { xs: 2, md: 3 } }}
     >
       <Typography variant="h1" component="h2" color={colors.blue950}>
         {t.rich('whyChooseUsSection.whyChoose', {

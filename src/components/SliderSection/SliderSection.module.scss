@@ -1,11 +1,17 @@
 @use '@/styles/settings/variables' as *;
 @use '@/styles/utils/rem-calc' as *;
+@use '@/styles/mixins/breakpoints' as *;
 
 .root {
   &.container {
     position: relative;
     overflow: hidden;
-    padding-inline: 0;
+    // Side gutter so the carousel is not edge-to-edge on mobile (Mario).
+    padding-inline: rem-calc(16);
+
+    @include media('md') {
+      padding-inline: rem-calc(24);
+    }
 
     .overlay {
       position: absolute;

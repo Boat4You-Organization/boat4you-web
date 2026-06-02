@@ -79,7 +79,14 @@ const AllDestinationsSection = ({ countries }: AllDestinationsSectionProps) => {
   };
 
   return (
-    <Container maxWidth="xl" component="section" disableGutters className={styles.container}>
+    <Container
+      maxWidth="xl"
+      component="section"
+      disableGutters
+      className={styles.container}
+      // Side gutter so the section is not edge-to-edge on mobile (Mario).
+      sx={{ px: { xs: 2, md: 3 } }}
+    >
       <Typography variant="h1" component="h2" color={colors.blue950}>
         {t('allDestinationsSection.allOf')}{' '}
         <Typography

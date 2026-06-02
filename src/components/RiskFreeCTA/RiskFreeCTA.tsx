@@ -22,7 +22,14 @@ const RiskFreeCTA = ({ searchPage, disableGutters }: RiskFreeCTAProps) => {
       className={styles.containerWrapper}
       disableGutters={disableGutters}
     >
-      <Container maxWidth="xl" disableGutters className={cx(styles.container, { [styles.searchPage]: searchPage })}>
+      <Container
+        maxWidth="xl"
+        disableGutters
+        className={cx(styles.container, { [styles.searchPage]: searchPage })}
+        // Side gutter on the home banner so it is not edge-to-edge on mobile
+        // (Mario); search page keeps its own layout untouched.
+        sx={searchPage ? undefined : { px: { xs: 2, md: 3 } }}
+      >
         <Card elevation={0} className={styles.card}>
           {/* Row layout on ALL viewports (text left, illustration right) —
               mobile previously stacked column-reverse which ate too much
