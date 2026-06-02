@@ -1,13 +1,86 @@
 @use '@/styles/utils/rem-calc' as *;
 @use '@/styles/mixins/breakpoints' as *;
 
-// Mirror AllDestinationsSection's container shape so the two blocks read
-// as a matching pair near the bottom of the home page (Mario, Apr-2026:
-// "stavi u gabarite Explore our favorite places to sail").
+// Replicates MUI <Container maxWidth="xl" disableGutters>: full width capped at
+// 1280, centred, no gutters. Same vertical rhythm as AllDestinationsSection /
+// FAQSection so the trailing blocks read as a matching pair (Mario, Apr-2026).
 .container {
+  width: 100%;
+  max-width: rem-calc(1280);
+  margin-inline: auto;
+  box-sizing: border-box;
   padding-block: rem-calc(42 60);
 
   @include media(0, 'sm') {
     padding-block: rem-calc(92 60);
   }
+}
+
+// Was Typography variant="h1" (36px / weight 500) as <h2>, colour blue950.
+.title {
+  margin: 0;
+  font-size: rem-calc(36);
+  font-weight: 500;
+  color: #141857;
+}
+
+// Was the nested Typography span: italic 800, blue500, slight left pad.
+.titleEmphasis {
+  padding-left: 0.1em;
+  font-style: italic;
+  font-weight: 800;
+  color: #2856ff;
+  overflow-wrap: break-word;
+}
+
+// Was Typography variant="body2" colour black350.
+.subtitle {
+  margin: rem-calc(4 0 0);
+  font-size: rem-calc(14);
+  font-weight: 500;
+  color: #6a6a6a;
+}
+
+// Was the MUI Box responsive grid (2 / 3 / 4 / 6 cols, gap 1.5 / 2).
+.grid {
+  margin-top: rem-calc(24);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: rem-calc(12);
+
+  @include media('sm') {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include media('md') {
+    grid-template-columns: repeat(4, 1fr);
+    gap: rem-calc(16);
+  }
+
+  @include media('lg') {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+// Was the per-item Link > Stack (gap 0.25), blue500 / 700 / 14, hover underline.
+.tile {
+  display: flex;
+  flex-direction: column;
+  gap: rem-calc(2);
+  text-decoration: none;
+  color: #2856ff;
+  font-weight: 700;
+  font-size: rem-calc(14);
+  line-height: 1.2;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Was the nested Box for the yacht count: 12px, black500, weight 500.
+.count {
+  font-size: rem-calc(12);
+  color: #6a6a6a;
+  font-weight: 500;
 }
