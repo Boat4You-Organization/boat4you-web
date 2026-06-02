@@ -37,6 +37,44 @@ function swapWpHost<T>(value: T): T {
   return value;
 }
 
+/**
+ * The blog template (SingleBlogContent) already renders the post title as the
+ * page <h1>. WordPress authors routinely also paste the title as an <h1> at the
+ * top of the post body, so the page ends up with TWO <h1>s — an SEO fault.
+ * Drop a leading body <h1> that duplicates the title, and demote any other stray
+ * <h1> in the body to <h2>, so the template <h1> stays the single page H1.
+ */
+function sanitizeBlogContentHeadings(html: string, title?: string): string {
+  if (typeof html !== 'string' || !html) return html;
+
+  const norm = (s: string) =>
+    s
+      .replace(/<[^>]+>/g, '')
+      .replace(/&amp;/gi, '&')
+      .replace(/&#?[a-z0-9]+;/gi, ' ')
+      .replace(/\s+/g, ' ')
+      .trim()
+      .toLowerCase();
+  const titleNorm = title ? norm(title) : '';
+
+  // Remove only the FIRST <h1> and only when it duplicates the post title.
+  let removed = false;
+  let out = html.replace(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i, (match, inner) => {
+    if (!removed && titleNorm && norm(inner) === titleNorm) {
+      removed = true;
+
+      return '';
+    }
+
+    return match;
+  });
+
+  // Demote any remaining body <h1> to <h2> — the page must keep exactly one H1.
+  out = out.replace(/<h1(\b[^>]*)>/gi, '<h2$1>').replace(/<\/h1>/gi, '</h2>');
+
+  return out;
+}
+
 export async function getRankMathSEO(url: string): Promise<RankMathSEOData | null> {
   try {
     const baseUrl = process.env.NEXT_PUBLIC_WORDPRESS_API_URL?.replace('/graphql', '');
@@ -144,10 +182,18 @@ export async function getBlog(id: string, pageSize: number): Promise<GetUnwraped
 
   const relatedData = data.posts.nodes.filter(post => post.id !== data.post.id);
 
-  return swapWpHost({
+  const result = swapWpHost({
     post: CursorConnectionUtils.unwrapNodesAndEdges(data.post),
     posts: CursorConnectionUtils.unwrapNodesAndEdges(relatedData),
   });
+
+  // Strip the duplicate-title <h1> from the body so the template title is the
+  // page's only H1 (fixes the double-H1 SEO fault on blog posts).
+  if (result?.post?.content) {
+    result.post.content = sanitizeBlogContentHeadings(result.post.content, result.post.title);
+  }
+
+  return result;
 }
 
 export async function getBlogWithSEO(slug: string) {
