@@ -3,6 +3,7 @@ import { useTranslations } from 'next-intl';
 
 import AssuranceBadges from '@/components/AssuranceBadges';
 import CookieSettingsButton from '@/components/Footer/CookieSettingsButton';
+import TripAdvisorRating from '@/components/TripAdvisorRating';
 import colors from '@/styles/themes/colors';
 
 import styles from './FooterBottomBar.module.scss';
@@ -27,10 +28,13 @@ const FooterBottomBar = () => {
           <CookieSettingsButton />
         </Box>
       </Box>
-      {/* Trust strip sits in-line with the copyright on desktop (right-aligned),
-          wraps below it on mobile. Compact variant has no chrome of its own,
-          so it reads as a horizontal continuation of the copyright row. */}
-      <AssuranceBadges variant="footer" />
+      {/* Trust column on the right: TripAdvisor review rating (social proof,
+          mirrors the sister sites) above the four-commitment assurance strip.
+          Right-aligned on desktop, centered when the row wraps on mobile. */}
+      <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: { xs: 'center', md: 'flex-end' }, gap: 1 }}>
+        <TripAdvisorRating />
+        <AssuranceBadges variant="footer" />
+      </Box>
     </Box>
   );
 };
