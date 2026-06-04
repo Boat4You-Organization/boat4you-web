@@ -46,15 +46,8 @@ const SignUpModal = ({ isOpen, onOpen, onClose }: SignUpModalProps) => {
     }
   }, [state, onClose]);
 
-  const noop = () => {};
-
   const handleReset = () => {
     setActiveStep(0);
-  };
-
-  const handleNext = (event: React.MouseEvent<HTMLButtonElement>) => {
-    event.preventDefault();
-    setActiveStep(prevActiveStep => prevActiveStep + 1);
   };
 
   const handleBack = () => {
@@ -67,6 +60,16 @@ const SignUpModal = ({ isOpen, onOpen, onClose }: SignUpModalProps) => {
   };
 
   const handleSubmit = async (formValues: SignUpFormValues) => {
+    // Email step: a valid submit — Continue button OR Enter in the email field — just advances
+    // to the user-data step. Without this guard, pressing Enter fired the form's native submit
+    // straight into register() with an empty password, surfacing the backend "Password does not
+    // meet the strength requirements" error on the email step.
+    if (!isLastStep) {
+      setActiveStep(prevActiveStep => prevActiveStep + 1);
+
+      return;
+    }
+
     const formData = new FormData();
 
     formData.append('name', formValues.name);
@@ -111,8 +114,7 @@ const SignUpModal = ({ isOpen, onOpen, onClose }: SignUpModalProps) => {
       arrowBack={isLastStep}
       onBack={handleBack}
       ConfirmBtnProps={{
-        onClick: isLastStep ? noop : handleNext,
-        type: isLastStep ? 'submit' : 'button',
+        type: 'submit',
         form: SIGNUP_FORM,
         disabled: pending,
       }}
