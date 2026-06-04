@@ -504,3 +504,56 @@ export async function resendVerificationCode(state: any, formData: FormData): Pr
     return { payload: false, message: 'An unexpected error occurred during resend verification code' };
   }
 }
+
+/**
+ * Verified email change — step 1. Authenticated; the backend emails a confirmation link to the
+ * NEW address. The email does NOT change until that link is opened (see confirmEmailChange).
+ */
+export async function requestEmailChange(newEmail: string): Promise<{ success: boolean; message?: string }> {
+  try {
+    const response = await authFetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/users/me/request-email-change`, {
+      ...POST_REQUEST_PARAMETERS,
+      body: JSON.stringify({ newEmail }),
+    });
+
+    if (!response.ok) {
+      const body: ErrorModel = await response.json();
+
+      return { success: false, message: body.message };
+    }
+
+    return { success: true };
+  } catch (error) {
+    return { success: false, message: error instanceof Error ? error.message : 'Unexpected error' };
+  }
+}
+
+/**
+ * Verified email change — step 2. Public; the signed token authorizes the change. The backend
+ * revokes all sessions on success, so we clear the local cookies to reflect the forced logout.
+ */
+export async function confirmEmailChange(token: string): Promise<{ success: boolean; message?: string }> {
+  const cookieStore = await cookies();
+
+  try {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/users/confirm-email-change`, {
+      ...POST_REQUEST_PARAMETERS,
+      body: JSON.stringify({ token }),
+    });
+
+    if (!response.ok) {
+      const body: ErrorModel = await response.json();
+
+      return { success: false, message: body.message };
+    }
+  } catch (error) {
+    return { success: false, message: error instanceof Error ? error.message : 'Unexpected error' };
+  }
+
+  cookieStore.delete(AuthKeys.ACCESS_TOKEN);
+  cookieStore.delete(AuthKeys.REFRESH_TOKEN);
+  cookieStore.delete(AuthKeys.USER_ID);
+  revalidatePath('/', 'layout');
+
+  return { success: true };
+}

@@ -9,5 +9,6 @@
   "requestCancelBookingFailed": "Annuleringsverzoek voor boeking mislukt",
   "linkCopied": "Link gekopieerd naar klembord",
   "reservationNumberCopied": "Reserveringsnummer gekopieerd naar klembord",
-  "reservationIdCopied": "Boekingsreferentie gekopieerd naar klembord"
+  "reservationIdCopied": "Boekingsreferentie gekopieerd naar klembord",
+  "emailChangeLinkSent": "We hebben een bevestigingslink naar je nieuwe e-mail gestuurd — open die om af te ronden."
 }

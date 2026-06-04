@@ -9,5 +9,6 @@
   "requestCancelBookingFailed": "Richiesta di cancellazione prenotazione fallita",
   "linkCopied": "Link copiato negli appunti",
   "reservationNumberCopied": "Numero prenotazione copiato negli appunti",
-  "reservationIdCopied": "Riferimento prenotazione copiato negli appunti"
+  "reservationIdCopied": "Riferimento prenotazione copiato negli appunti",
+  "emailChangeLinkSent": "Abbiamo inviato un link di conferma alla tua nuova email — aprilo per completare."
 }

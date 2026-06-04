@@ -9,5 +9,6 @@
   "requestCancelBookingFailed": "Request to cancel booking failed",
   "linkCopied": "Link copied to clipboard",
   "reservationNumberCopied": "Reservation number copied to clipboard",
-  "reservationIdCopied": "Booking reference copied to clipboard"
+  "reservationIdCopied": "Booking reference copied to clipboard",
+  "emailChangeLinkSent": "We've sent a confirmation link to your new email — open it to finish."
 }

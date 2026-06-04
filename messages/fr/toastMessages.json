@@ -9,5 +9,6 @@
   "requestCancelBookingFailed": "Échec de la demande d'annulation de réservation",
   "linkCopied": "Lien copié dans le presse-papiers",
   "reservationNumberCopied": "Numéro de réservation copié dans le presse-papiers",
-  "reservationIdCopied": "Référence de réservation copiée dans le presse-papiers"
+  "reservationIdCopied": "Référence de réservation copiée dans le presse-papiers",
+  "emailChangeLinkSent": "Nous avons envoyé un lien de confirmation à votre nouvel e-mail — ouvrez-le pour terminer."
 }

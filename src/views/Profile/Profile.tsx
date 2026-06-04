@@ -35,7 +35,7 @@ import {
 } from '@mui/material';
 import { useTranslations } from 'next-intl';
 
-import { deleteMyAccount, downloadMyData, logout, updatePassword } from '@/actions/auth.actions';
+import { deleteMyAccount, downloadMyData, logout, requestEmailChange, updatePassword } from '@/actions/auth.actions';
 import { updateMyProfile, updateUserPreferences } from '@/actions/user.actions';
 import Form from '@/components/Forms/Form';
 import FormInput from '@/components/Forms/FormInput';
@@ -118,6 +118,31 @@ const Profile = ({ user }: ProfileProps) => {
 
   const handleSubmit = async (formValues: ProfileFormValues) => {
     setIsSubmitting(true);
+
+    // Email is the login identity — it changes only through the verified flow, never a direct
+    // profile save (the backend rejects that). Fire the request that emails a confirmation link
+    // to the NEW address; the change applies only when that link is opened. Nothing changes here,
+    // so we reset the field back to the current address via router.refresh().
+    if (formValues.email !== (user.email ?? '')) {
+      const { success: linkSent, message: linkMsg } = await requestEmailChange(formValues.email);
+
+      showToast(
+        linkSent
+          ? // next-intl's strict key union doesn't surface this freshly-added bundle key at
+            // compile time (it widens the large message type); the key exists in all locales.
+            { status: 'success', text: (tToastMessage as unknown as (k: string) => string)('emailChangeLinkSent') }
+          : { status: 'error', text: linkMsg || tToastMessage('userUpdateFailed') }
+      );
+
+      setEditingField(null);
+      setIsSubmitting(false);
+
+      if (linkSent) {
+        router.refresh();
+      }
+
+      return;
+    }
 
     const hasPreferencesChanged = formValues.language !== user.language || formValues.currency !== user.currency;
 

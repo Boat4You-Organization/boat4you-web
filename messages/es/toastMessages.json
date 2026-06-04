@@ -9,5 +9,6 @@
   "requestCancelBookingFailed": "Solicitud de cancelación de reserva falló",
   "linkCopied": "Enlace copiado al portapapeles",
   "reservationNumberCopied": "Número de reserva copiado al portapapeles",
-  "reservationIdCopied": "Referencia de reserva copiada al portapapeles"
+  "reservationIdCopied": "Referencia de reserva copiada al portapapeles",
+  "emailChangeLinkSent": "Hemos enviado un enlace de confirmación a tu nuevo correo — ábrelo para terminar."
 }

@@ -9,5 +9,6 @@
   "requestCancelBookingFailed": "Żądanie anulowania rezerwacji nie powiodło się",
   "linkCopied": "Link skopiowany do schowka",
   "reservationNumberCopied": "Numer rezerwacji skopiowany do schowka",
-  "reservationIdCopied": "Numer rezerwacji skopiowany do schowka"
+  "reservationIdCopied": "Numer rezerwacji skopiowany do schowka",
+  "emailChangeLinkSent": "Wysłaliśmy link potwierdzający na Twój nowy e-mail — otwórz go, aby zakończyć."
 }

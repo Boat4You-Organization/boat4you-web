@@ -9,5 +9,6 @@
   "requestCancelBookingFailed": "Stornierungsanfrage fehlgeschlagen",
   "linkCopied": "Link in die Zwischenablage kopiert",
   "reservationNumberCopied": "Reservierungsnummer in die Zwischenablage kopiert",
-  "reservationIdCopied": "Buchungsreferenz in die Zwischenablage kopiert"
+  "reservationIdCopied": "Buchungsreferenz in die Zwischenablage kopiert",
+  "emailChangeLinkSent": "Wir haben einen Bestätigungslink an Ihre neue E-Mail gesendet — öffnen Sie ihn zum Abschluss."
 }

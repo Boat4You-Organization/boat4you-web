@@ -9,5 +9,6 @@
   "requestCancelBookingFailed": "Zahtjev za otkazivanje rezervacije nije uspio",
   "linkCopied": "Link je kopiran u međuspremnik",
   "reservationNumberCopied": "Broj rezervacije je kopiran u međuspremnik",
-  "reservationIdCopied": "Referenca rezervacije kopirana u međuspremnik"
+  "reservationIdCopied": "Referenca rezervacije kopirana u međuspremnik",
+  "emailChangeLinkSent": "Poslali smo potvrdu na tvoj novi email — otvori je da dovršiš."
 }
