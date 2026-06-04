@@ -458,14 +458,24 @@ export async function verifyEmail(state: any, formData: FormData): Promise<Login
       path: '/',
     });
 
+    // Fetch the user DIRECTLY with the fresh token. `getLoggedInUser()` reads the cookie we
+    // just set, which isn't visible within the same server-action tick — it would return null,
+    // leaving state.user undefined so the header stays logged-out and the user "logs in" again.
+    // Mirrors login().
     try {
-      const user = await getLoggedInUser();
+      const meResponse = await fetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/auth/me`, {
+        headers: {
+          Authorization: `Bearer ${data.token}`,
+        },
+      });
 
-      if (user) {
+      if (meResponse.ok) {
+        const user: UserModel = await meResponse.json();
+
         return { success: true, user };
       }
     } catch (userError) {
-      // Skip user fetch error
+      // Skip user fetch error — session is valid, just missing user data
     }
 
     return { success: true };

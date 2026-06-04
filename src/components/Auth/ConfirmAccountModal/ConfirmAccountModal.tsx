@@ -10,9 +10,13 @@ import Form from '@/components/Forms/Form';
 import FormInput from '@/components/Forms/FormInput';
 import ModalRoot from '@/components/ModalRoot';
 import { ConfirmAccountFormValues } from '@/config/form-models.config';
+import { UserModel } from '@/models/user.model';
 import colors from '@/styles/themes/colors';
+import { useSyncUserPreferences } from '@/utils/hooks/useSyncUserPreferences';
 import { toggleLoginModal } from '@/valtio/auth/auth.actions';
 import { useAuthStore } from '@/valtio/auth/auth.store';
+import { showToast } from '@/valtio/global/global.actions';
+import { setUser } from '@/valtio/user/user.actions';
 
 import VerificationCodeInput from './VerificationCodeInput/VerificationCodeInput';
 
@@ -32,11 +36,22 @@ const ConfirmAccountModal = ({ isOpen, onOpen, onClose }: ConfirmAccountModalPro
   const [state, action, verifyEmailPending] = useActionState(verifyEmail, undefined);
   const [resendState, resendAction, resendVerificationCodePending] = useActionState(resendVerificationCode, undefined);
   const t = useTranslations('common');
+  const tToastMessages = useTranslations('toastMessages');
+  const { syncPreferences } = useSyncUserPreferences();
 
   useEffect(() => {
     if (state?.success) {
+      // verifyEmail already set the auth cookies — reflect the signed-in state in the UI
+      // (header + preferences) so the user isn't bounced to a "Sign in" they no longer need.
+      if (state.user) {
+        setUser(state.user as UserModel);
+        syncPreferences({ user: state.user });
+      }
+
+      showToast({ status: 'success', text: tToastMessages('login-success') });
       onClose();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state, onClose]);
 
   useEffect(() => {
