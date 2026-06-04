@@ -5,10 +5,11 @@ import { VisibilityOffOutlined, VisibilityOutlined } from '@mui/icons-material';
 import { Button, IconButton, InputAdornment, Stack, Typography } from '@mui/material';
 import { useTranslations } from 'next-intl';
 
+import PasswordRequirements from '@/components/Auth/PasswordRequirements';
 import FormInput from '@/components/Forms/FormInput';
 import colors from '@/styles/themes/colors';
 import useToggleState from '@/utils/hooks/useToggleState';
-import { FormValidator } from '@/utils/static/FormValidator';
+import { FormValidator, MIN_PASSWORD_LENGTH } from '@/utils/static/FormValidator';
 
 const ForgotPasswordForm = () => {
   const [passwordVisibility, togglePasswordVisibility] = useToggleState();
@@ -33,7 +34,7 @@ const ForgotPasswordForm = () => {
         formLabel={t('password')}
         type={passwordVisibility ? 'text' : 'password'}
         placeholder={t('password')}
-        validate={validator.isNotEmpty}
+        validate={FormValidator.all(validator.isNotEmpty, validator.minLength(MIN_PASSWORD_LENGTH))}
         slotProps={{
           input: {
             endAdornment: (
@@ -50,6 +51,7 @@ const ForgotPasswordForm = () => {
           },
         }}
       />
+      <PasswordRequirements />
       <FormInput
         name="confirmPassword"
         formLabel={t('repeatPassword')}

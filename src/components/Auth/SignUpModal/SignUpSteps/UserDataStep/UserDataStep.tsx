@@ -3,9 +3,11 @@ import { IconButton, InputAdornment, Stack, Typography } from '@mui/material';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 
+import PasswordRequirements from '@/components/Auth/PasswordRequirements';
 import FormInput from '@/components/Forms/FormInput';
 import colors from '@/styles/themes/colors';
 import useToggleState from '@/utils/hooks/useToggleState';
+import { FormValidator, MIN_PASSWORD_LENGTH } from '@/utils/static/FormValidator';
 
 import styles from './UserDataStep.module.scss';
 
@@ -34,13 +36,28 @@ const UserDataStep = () => {
 
   return (
     <Stack gap={3}>
-      <FormInput name="name" formLabel={t('name')} placeholder={t('name')} />
-      <FormInput name="surname" formLabel={t('surname')} placeholder={t('surname')} />
+      <FormInput
+        name="name"
+        formLabel={t('name')}
+        placeholder={t('name')}
+        validate={FormValidator.withTranslation(t).isNotEmpty}
+      />
+      <FormInput
+        name="surname"
+        formLabel={t('surname')}
+        placeholder={t('surname')}
+        validate={FormValidator.withTranslation(t).isNotEmpty}
+      />
       <FormInput
         name="password"
         formLabel={t('password')}
         placeholder={t('password')}
         type={passwordVisibility ? 'text' : 'password'}
+        validate={value => {
+          const validator = FormValidator.withTranslation(t);
+
+          return FormValidator.all(validator.isNotEmpty, validator.minLength(MIN_PASSWORD_LENGTH))(value);
+        }}
         slotProps={{
           input: {
             endAdornment: (
@@ -57,11 +74,18 @@ const UserDataStep = () => {
           },
         }}
       />
+      <PasswordRequirements />
       <FormInput
         name="repeatPassword"
         formLabel={t('repeatPassword')}
         placeholder={t('repeatPassword')}
         type={confirmPasswordVisibility ? 'text' : 'password'}
+        validate={(value, formValues) => {
+          const validator = FormValidator.withTranslation(t);
+          const typed = formValues as { password?: string } | undefined;
+
+          return FormValidator.all(validator.isNotEmpty, validator.matchesPassword(typed?.password || ''))(value);
+        }}
         slotProps={{
           input: {
             endAdornment: (

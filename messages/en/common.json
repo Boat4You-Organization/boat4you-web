@@ -466,6 +466,7 @@
     "phoneNumberInvalidFormat": "Phone number can only contain digits and an optional + at the start",
     "phoneNumberInvalidLength": "Phone number must be between 10 and 15 digits",
     "phoneNumberInvalidCountryCode": "Please enter a valid phone number with country code",
+    "passwordMinLength": "At least {count} characters",
     "passwordsDoNotMatchValidation": "Passwords do not match"
   },
   "cancellationPending": "Cancellation Pending",

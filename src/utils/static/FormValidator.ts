@@ -6,10 +6,15 @@ export const acceptedImageTypes = 'image/heic,image/png,image/jpg,image/jpeg';
 
 export const acceptedAppendixTypes = '.pdf,application/pdf';
 
+// Client mirror of the backend PasswordPolicy.MIN_LENGTH (12). Keep in sync with
+// security/services/PasswordPolicy.kt — the server stays the source of truth; this only
+// drives the inline requirement hint + pre-submit guard so users don't hit a server 400.
+export const MIN_PASSWORD_LENGTH = 12;
+
 type ValidationFn<T = string> = (value?: T) => string | true;
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-type TranslateFn = (key: any) => string;
+type TranslateFn = (key: any, values?: any) => string;
 
 export class FormValidator {
   public static all<T = string>(...validationFns: ValidationFn<T>[]): ValidationFn<T> {
@@ -105,6 +110,11 @@ export class FormValidator {
       return value === passwordValue ? true : 'Passwords do not match';
     };
 
+  public static minLength =
+    (min: number): ValidationFn =>
+    (value?: string) =>
+      (value || '').length >= min ? true : `At least ${min} characters`;
+
   // New translated validation methods
   public static withTranslation(t: TranslateFn) {
     return {
@@ -149,6 +159,9 @@ export class FormValidator {
 
         return value === passwordValue ? true : t('validation.passwordsDoNotMatchValidation');
       },
+
+      minLength: (min: number) => (value?: string) =>
+        (value || '').length >= min ? true : t('validation.passwordMinLength', { count: min }),
 
       isValidPhoneNumberWithCountry: (countryDialCode: string) => (value?: string) => {
         if (!value || value.trim() === '') return t('validation.phoneNumberRequired');

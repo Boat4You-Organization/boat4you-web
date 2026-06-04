@@ -411,6 +411,7 @@
     "phoneNumberInvalidFormat": "Broj telefona može sadržavati samo znamenke i opcionalno + na početku",
     "phoneNumberInvalidLength": "Broj telefona mora imati između 10 i 15 znamenki",
     "phoneNumberInvalidCountryCode": "Molimo unesite važeći telefonski broj s pozivnim brojem zemlje",
+    "passwordMinLength": "Najmanje {count} znakova",
     "passwordsDoNotMatchValidation": "Lozinke se ne podudaraju"
   },
   "cancellationPending": "Otkazivanje na čekanju",

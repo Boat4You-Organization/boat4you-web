@@ -450,6 +450,7 @@
     "phoneNumberInvalidFormat": "Telefoonnummer mag alleen cijfers en optioneel een + aan het begin bevatten",
     "phoneNumberInvalidLength": "Telefoonnummer moet tussen 10 en 15 cijfers bevatten",
     "phoneNumberInvalidCountryCode": "Voer een geldig telefoonnummer met landcode in",
+    "passwordMinLength": "Minstens {count} tekens",
     "passwordsDoNotMatchValidation": "Wachtwoorden komen niet overeen"
   },
   "cancellationPending": "Annulering in behandeling",

@@ -406,6 +406,7 @@
     "phoneNumberInvalidFormat": "El número de teléfono solo puede contener dígitos y un + opcional al principio",
     "phoneNumberInvalidLength": "El número de teléfono debe tener entre 10 y 15 dígitos",
     "phoneNumberInvalidCountryCode": "Por favor, introduzca un número de teléfono válido con código de país",
+    "passwordMinLength": "Al menos {count} caracteres",
     "passwordsDoNotMatchValidation": "Las contraseñas no coinciden"
   },
   "cancellationPending": "Cancelación pendiente",

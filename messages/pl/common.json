@@ -450,6 +450,7 @@
     "phoneNumberInvalidFormat": "Numer telefonu może zawierać tylko cyfry oraz opcjonalny + na początku",
     "phoneNumberInvalidLength": "Numer telefonu musi mieć od 10 do 15 cyfr",
     "phoneNumberInvalidCountryCode": "Wpisz prawidłowy numer telefonu z kodem kraju",
+    "passwordMinLength": "Co najmniej {count} znaków",
     "passwordsDoNotMatchValidation": "Hasła się nie zgadzają"
   },
   "cancellationPending": "Anulowanie w toku",

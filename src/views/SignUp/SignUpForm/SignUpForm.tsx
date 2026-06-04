@@ -4,10 +4,11 @@ import { VisibilityOffOutlined, VisibilityOutlined } from '@mui/icons-material';
 import { Button, IconButton, InputAdornment, Stack } from '@mui/material';
 import { useTranslations } from 'next-intl';
 
+import PasswordRequirements from '@/components/Auth/PasswordRequirements';
 import FormInput from '@/components/Forms/FormInput';
 import colors from '@/styles/themes/colors';
 import useToggleState from '@/utils/hooks/useToggleState';
-import { FormValidator } from '@/utils/static/FormValidator';
+import { FormValidator, MIN_PASSWORD_LENGTH } from '@/utils/static/FormValidator';
 
 export interface SignUpFormValues {
   password: string;
@@ -26,7 +27,11 @@ const SignUpForm = () => {
         formLabel={t('password')}
         placeholder={t('password')}
         type={passwordVisibility ? 'text' : 'password'}
-        validate={FormValidator.withTranslation(t).isNotEmpty}
+        validate={value => {
+          const validator = FormValidator.withTranslation(t);
+
+          return FormValidator.all(validator.isNotEmpty, validator.minLength(MIN_PASSWORD_LENGTH))(value);
+        }}
         slotProps={{
           input: {
             endAdornment: (
@@ -43,6 +48,7 @@ const SignUpForm = () => {
           },
         }}
       />
+      <PasswordRequirements />
       <FormInput
         name="confirmPassword"
         formLabel={t('repeatPassword')}

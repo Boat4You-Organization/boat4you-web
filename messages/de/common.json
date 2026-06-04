@@ -406,6 +406,7 @@
     "phoneNumberInvalidFormat": "Telefonnummer darf nur Ziffern und optional ein + am Anfang enthalten",
     "phoneNumberInvalidLength": "Telefonnummer muss zwischen 10 und 15 Ziffern lang sein",
     "phoneNumberInvalidCountryCode": "Bitte geben Sie eine gültige Telefonnummer mit Ländervorwahl ein",
+    "passwordMinLength": "Mindestens {count} Zeichen",
     "passwordsDoNotMatchValidation": "Passwörter stimmen nicht überein"
   },
   "cancellationPending": "Stornierung ausstehend",
