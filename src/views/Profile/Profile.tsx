@@ -119,27 +119,40 @@ const Profile = ({ user }: ProfileProps) => {
   const handleSubmit = async (formValues: ProfileFormValues) => {
     setIsSubmitting(true);
 
-    // Email is the login identity — it changes only through the verified flow, never a direct
-    // profile save (the backend rejects that). Fire the request that emails a confirmation link
-    // to the NEW address; the change applies only when that link is opened. Nothing changes here,
-    // so we reset the field back to the current address via router.refresh().
-    if (formValues.email !== (user.email ?? '')) {
-      const { success: linkSent, message: linkMsg } = await requestEmailChange(formValues.email);
+    // Email is the login identity — when the email section is edited it goes through the verified
+    // flow, never a direct profile save. We fire on the section being edited (not on a value diff)
+    // so re-submitting the SAME address reports an error instead of silently doing nothing.
+    // Changing to a new address emails a confirmation link there; the email only changes once that
+    // link is opened. The field resets to the current address via router.refresh().
+    if (editingField === 'Email') {
+      const newEmail = formValues.email.trim();
 
-      showToast(
-        linkSent
-          ? // next-intl's strict key union doesn't surface this freshly-added bundle key at
-            // compile time (it widens the large message type); the key exists in all locales.
-            { status: 'success', text: (tToastMessage as unknown as (k: string) => string)('emailChangeLinkSent') }
-          : { status: 'error', text: linkMsg || tToastMessage('userUpdateFailed') }
-      );
+      if (newEmail.toLowerCase() === (user.email ?? '').toLowerCase()) {
+        showToast({
+          status: 'error',
+          text: 'This is already your email address — enter a different one to change it.',
+        });
+        setIsSubmitting(false);
 
-      setEditingField(null);
-      setIsSubmitting(false);
+        return;
+      }
+
+      const { success: linkSent, message: linkMsg } = await requestEmailChange(newEmail);
 
       if (linkSent) {
+        // next-intl's strict key union doesn't surface this freshly-added bundle key at compile
+        // time (it widens the large message type); the key exists in all locales.
+        showToast({
+          status: 'success',
+          text: (tToastMessage as unknown as (k: string) => string)('emailChangeLinkSent'),
+        });
+        setEditingField(null);
         router.refresh();
+      } else {
+        showToast({ status: 'error', text: linkMsg || tToastMessage('userUpdateFailed') });
       }
+
+      setIsSubmitting(false);
 
       return;
     }
