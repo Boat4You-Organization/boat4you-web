@@ -4,6 +4,7 @@ import { Suspense } from 'react';
 import { useTranslations } from 'next-intl';
 
 import GeneralSearchBarRoot from '@/components/GeneralSearchBarRoot';
+import { TRIPADVISOR_RATING, TRIPADVISOR_REVIEW_COUNT, TRIPADVISOR_URL } from '@/config/tripadvisor';
 
 import styles from './HeroSection.module.scss';
 
@@ -42,6 +43,21 @@ const HeroSection = ({ stats }: HeroSectionProps) => {
               <TrustPill label={t('hero.marinasCount', { count: fmt(stats!.marinas) })} />
             </div>
           )}
+          {/* TripAdvisor review rating — plain markup (no MUI) so the LCP hero
+              stays JS-free; reads the shared @/config/tripadvisor values. */}
+          <a
+            className={styles.tripadvisor}
+            href={TRIPADVISOR_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Rated ${TRIPADVISOR_RATING} out of 5 from ${TRIPADVISOR_REVIEW_COUNT} reviews on TripAdvisor`}
+          >
+            <span className={styles.taStars} aria-hidden>
+              ★★★★★
+            </span>
+            <span className={styles.taScore}>{TRIPADVISOR_RATING}</span>
+            <span className={styles.taCount}>· {TRIPADVISOR_REVIEW_COUNT} reviews on TripAdvisor</span>
+          </a>
           <p className={styles.description}>{t('hero.description')}</p>
         </div>
       </section>

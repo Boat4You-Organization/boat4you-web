@@ -3,6 +3,7 @@ import { getTranslations } from 'next-intl/server';
 
 import { LocaleType } from '@/config/locales.config';
 import { meta } from '@/config/meta';
+import { TRIPADVISOR_RATING, TRIPADVISOR_REVIEW_COUNT } from '@/config/tripadvisor';
 import { routing } from '@/i18n/routing';
 
 type MetadataOptions = {
@@ -195,6 +196,19 @@ export const getLocalizedJsonLd = async (locale: LocaleType) => {
           'https://x.com/Boat4you_com',
           'https://www.youtube.com/@Boat4you_com',
         ],
+        // Review signal for AI / LLM answer engines (and the Knowledge Graph):
+        // the group's TripAdvisor rating (Europe Yachts Charter — the operating
+        // brand, same profile linked in the footer + hero). Self-serving on an
+        // Organization, so Google won't render review stars from it, but it
+        // reinforces entity authority and is read by AI search (matches the AEO
+        // sister-site setup). Keep in sync with TripAdvisorRating component.
+        aggregateRating: {
+          '@type': 'AggregateRating',
+          ratingValue: TRIPADVISOR_RATING,
+          reviewCount: TRIPADVISOR_REVIEW_COUNT,
+          bestRating: '5',
+          worstRating: '1',
+        },
       },
       {
         '@type': ['Service', 'TravelAgency'],

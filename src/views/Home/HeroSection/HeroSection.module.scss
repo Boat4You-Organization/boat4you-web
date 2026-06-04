@@ -113,3 +113,40 @@
     height: rem-calc(88);
   }
 }
+
+// TripAdvisor review-rating trust line — gold stars on the dark hero, white
+// score + label. Plain anchor (no MUI) so the LCP hero stays JS-free.
+.tripadvisor {
+  display: inline-flex;
+  align-items: center;
+  gap: rem-calc(6);
+  color: $white;
+  font-size: rem-calc(13);
+  line-height: 1;
+  text-decoration: none;
+  opacity: 0.95;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  @include media('md') {
+    font-size: rem-calc(14);
+  }
+}
+
+.taStars {
+  color: #ffb400;
+  font-size: rem-calc(14);
+  letter-spacing: 1.5px;
+}
+
+.taScore {
+  font-weight: 700;
+}
+
+.taCount {
+  font-weight: 500;
+  opacity: 0.9;
+}

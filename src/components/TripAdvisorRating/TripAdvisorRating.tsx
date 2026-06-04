@@ -1,27 +1,24 @@
 import { Box, Typography } from '@mui/material';
 
+import { TRIPADVISOR_RATING, TRIPADVISOR_REVIEW_COUNT, TRIPADVISOR_URL } from '@/config/tripadvisor';
 import colors from '@/styles/themes/colors';
 
 /**
  * TripAdvisor review-rating trust signal — "★★★★★ 4.9 · 145 reviews on
  * TripAdvisor" linking the group's real TripAdvisor profile (Europe Yachts
- * Charter, Split — Boat4You Group's operating brand). Mirrors the trust line
- * already live on the sister sites (catamaran-* / europe-yachts) so the
- * social-proof reads the same everywhere. Static text + link, deliberately NOT
- * the TripAdvisor script widget (which mounts unreliably under Next client
- * navigation and re-renders); the static image+link counts toward the same
- * referrer signal.
+ * Charter, Split — Boat4You Group's operating brand). Mirrors the trust line on
+ * the sister sites and the homepage hero; all read the shared
+ * `@/config/tripadvisor` values so the footer, hero and JSON-LD can't drift.
+ * Static text + link, deliberately NOT the TripAdvisor script widget (which
+ * mounts unreliably under Next client navigation and re-renders).
  */
-const TA_PROFILE_URL =
-  'https://www.tripadvisor.com/Attraction_Review-g295370-d12422829-Reviews-Europe_Yachts_Charter-Split_Split_Dalmatia_County_Dalmatia.html';
-
 const TripAdvisorRating = () => (
   <Box
     component="a"
-    href={TA_PROFILE_URL}
+    href={TRIPADVISOR_URL}
     target="_blank"
     rel="noopener noreferrer"
-    aria-label="Rated 4.9 out of 5 from 145 reviews on TripAdvisor"
+    aria-label={`Rated ${TRIPADVISOR_RATING} out of 5 from ${TRIPADVISOR_REVIEW_COUNT} reviews on TripAdvisor`}
     sx={{
       display: 'inline-flex',
       alignItems: 'center',
@@ -35,10 +32,10 @@ const TripAdvisorRating = () => (
       ★★★★★
     </Box>
     <Typography component="span" variant="body2" fontWeight={700} fontSize={13} color={colors.black900}>
-      4.9
+      {TRIPADVISOR_RATING}
     </Typography>
     <Typography component="span" variant="caption" fontSize={12} color={colors.black600}>
-      · 145 reviews on TripAdvisor
+      · {TRIPADVISOR_REVIEW_COUNT} reviews on TripAdvisor
     </Typography>
   </Box>
 );
