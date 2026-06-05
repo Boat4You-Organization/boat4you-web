@@ -229,6 +229,8 @@ export async function getMyAccountInfo(): Promise<{
   lastLoginAt: string | null;
   totalBookings: number;
   emailVerified: boolean;
+  provider: string | null;
+  passwordSet: boolean;
 } | null> {
   try {
     const response = await authFetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/users/me/account-info`, {
@@ -350,6 +352,80 @@ export async function deleteMyAccount(): Promise<{ success: boolean; message?: s
   revalidatePath('/', 'layout');
 
   return { success: true };
+}
+
+export type SessionInfo = {
+  sessionGroup: string;
+  userAgent?: string | null;
+  ipAddress?: string | null;
+  createdAt?: string | null;
+  lastUsedAt?: string | null;
+  current: boolean;
+};
+
+export async function getSessions(): Promise<SessionInfo[]> {
+  try {
+    const res = await authFetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/users/me/sessions`, { method: 'GET' });
+
+    if (!res.ok) return [];
+
+    return await res.json();
+  } catch {
+    return [];
+  }
+}
+
+export async function revokeSession(sessionGroup: string): Promise<{ success: boolean }> {
+  try {
+    const res = await authFetch(
+      `${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/users/me/sessions/${encodeURIComponent(sessionGroup)}`,
+      { method: 'DELETE' }
+    );
+
+    return { success: res.ok };
+  } catch {
+    return { success: false };
+  }
+}
+
+export async function revokeOtherSessions(): Promise<{ success: boolean }> {
+  try {
+    const res = await authFetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/users/me/sessions/revoke-others`, {
+      method: 'POST',
+    });
+
+    return { success: res.ok };
+  } catch {
+    return { success: false };
+  }
+}
+
+export async function setInitialPassword(newPassword: string): Promise<{ success: boolean; message?: string }> {
+  try {
+    const res = await authFetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/users/me/set-password`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ newPassword }),
+    });
+
+    if (!res.ok) {
+      let message = 'Could not set password';
+
+      try {
+        const b = await res.json();
+
+        message = b?.message ?? message;
+      } catch {
+        // non-JSON error body
+      }
+
+      return { success: false, message };
+    }
+
+    return { success: true };
+  } catch {
+    return { success: false, message: 'Unexpected error' };
+  }
 }
 
 export async function logout(): Promise<{ success: boolean }> {
