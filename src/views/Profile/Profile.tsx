@@ -40,6 +40,7 @@ import { updateMyProfile, updateUserPreferences } from '@/actions/user.actions';
 import Form from '@/components/Forms/Form';
 import FormInput from '@/components/Forms/FormInput';
 import { FormInputProps } from '@/components/Forms/FormInput/FormInput';
+import SecuritySection from '@/components/Profile/SecuritySection';
 import Select from '@/components/Select';
 import currencies from '@/config/currencies.config';
 import { ProfileFormValues } from '@/config/form-models.config';
@@ -82,6 +83,9 @@ const Profile = ({ user }: ProfileProps) => {
   const pathname = usePathname();
   const router = useRouter();
   const t = useTranslations('common');
+  // next-intl's strict key union doesn't surface freshly-added common keys at
+  // compile time (TS widens the large literal); they exist in every locale.
+  const tt = t as unknown as (k: string) => string;
   const tToastMessage = useTranslations('toastMessages');
 
   const initialValues: ProfileFormValues = useMemo(
@@ -292,6 +296,8 @@ const Profile = ({ user }: ProfileProps) => {
 
       <AccountInfoSection user={user} />
 
+      <SecuritySection />
+
       <Form defaultValues={initialValues} onSubmit={handleSubmit} id={PROFILE_FORM}>
         <Box className={styles.sectionHeader}>
           <PersonIcon fontSize="small" />
@@ -368,7 +374,7 @@ const Profile = ({ user }: ProfileProps) => {
               "Not set" rather than blank, which would look broken. */}
           <EditableField
             icon={<CakeIcon fontSize="small" />}
-            label="Birthday"
+            label={tt('birthday')}
             value={
               user.birthday
                 ? new Date(user.birthday).toLocaleDateString(undefined, {
@@ -378,14 +384,14 @@ const Profile = ({ user }: ProfileProps) => {
                   })
                 : 'Not set'
             }
-            description="Optional. We'll send you a small birthday greeting from the team — nothing else."
+            description={tt('birthdayDescription')}
             isEditing={editingField === 'Birthday'}
             onToggleEdit={() => handleToggleEdit('Birthday')}
             isAnotherEditing={editingField !== null && editingField !== 'Birthday'}
             isSubmitting={isSubmitting}
           >
             <Stack direction={{ xs: 'column', sm: 'row' }} gap={{ xs: 2.5, sm: 3 }}>
-              <FormInput name="birthday" formLabel="Birthday" placeholder="YYYY-MM-DD" type="date" />
+              <FormInput name="birthday" formLabel={tt('birthday')} placeholder="YYYY-MM-DD" type="date" />
               <Stack width={1} display={{ xs: 'none', sm: 'flex' }} />
             </Stack>
           </EditableField>

@@ -8,6 +8,7 @@ import HistoryIcon from '@mui/icons-material/HistoryOutlined';
 import SailingIcon from '@mui/icons-material/Sailing';
 import { Box, Paper, Stack, Typography } from '@mui/material';
 import dayjs from 'dayjs';
+import { useTranslations } from 'next-intl';
 
 import { getMyAccountInfo } from '@/actions/auth.actions';
 import { UserModel } from '@/models/user.model';
@@ -37,6 +38,10 @@ const formatDateTime = (iso: string | null | undefined) => (iso ? dayjs(iso).for
 const AccountInfoSection = ({ user: _user }: AccountInfoSectionProps) => {
   const [info, setInfo] = useState<AccountInfo | null>(null);
   const [loadingInfo, setLoadingInfo] = useState(true);
+  const t = useTranslations('common');
+  // next-intl's strict key union doesn't surface freshly-added common keys at
+  // compile time (TS widens the large literal); they exist in every locale.
+  const tt = t as unknown as (k: string) => string;
 
   useEffect(() => {
     let cancelled = false;
@@ -67,17 +72,17 @@ const AccountInfoSection = ({ user: _user }: AccountInfoSectionProps) => {
       <Stack direction={{ xs: 'column', sm: 'row' }} gap={2.5} flexWrap="wrap" sx={{ mb: 3 }}>
         <StatChip
           icon={<EventIcon fontSize="small" />}
-          label="Member since"
+          label={tt('memberSince')}
           value={loadingInfo ? '…' : formatDate(info?.memberSince)}
         />
         <StatChip
           icon={<HistoryIcon fontSize="small" />}
-          label="Last login"
+          label={tt('lastLogin')}
           value={loadingInfo ? '…' : formatDateTime(info?.lastLoginAt)}
         />
         <StatChip
           icon={<SailingIcon fontSize="small" />}
-          label="Total bookings"
+          label={tt('totalBookings')}
           value={loadingInfo ? '…' : String(info?.totalBookings ?? 0)}
         />
       </Stack>
