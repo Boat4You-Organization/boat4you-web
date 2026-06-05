@@ -148,6 +148,81 @@ export async function login(state: any, formData: FormData): Promise<LoginResult
   }
 }
 
+/**
+ * Social login. The Google ID token (credential) minted by Google Identity
+ * Services in the browser is forwarded to the backend, which verifies it
+ * server-side (signature via Google JWKS + aud/iss/email_verified) and returns
+ * the same token pair as a password login. Mirrors `login` for cookie-setting +
+ * the direct /auth/me fetch (cookieStore.set() isn't readable within the same
+ * server-action tick).
+ */
+export async function googleLogin(idToken: string): Promise<LoginResult> {
+  try {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/auth/oauth/google`, {
+      ...POST_REQUEST_PARAMETERS,
+      body: JSON.stringify({ idToken }),
+    });
+
+    if (!response.ok) {
+      let message = 'Google sign-in failed';
+
+      try {
+        const errorData = await response.json();
+
+        message = errorData.message || message;
+      } catch {
+        // non-JSON error body — keep the generic message
+      }
+
+      return { success: false, message };
+    }
+
+    const data: LoginResponse = await response.json();
+
+    const cookieStore = await cookies();
+    const isProd = process.env.NODE_ENV === 'production';
+
+    cookieStore.set(AuthKeys.ACCESS_TOKEN, data.token, {
+      httpOnly: true,
+      secure: isProd,
+      maxAge: 60 * 60 * 24 * 7,
+      sameSite: 'lax',
+      path: '/',
+    });
+
+    cookieStore.set(AuthKeys.REFRESH_TOKEN, data.refreshToken, {
+      httpOnly: true,
+      secure: isProd,
+      maxAge: 60 * 60 * 24 * 30,
+      sameSite: 'lax',
+      path: '/',
+    });
+
+    try {
+      const meResponse = await fetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/auth/me`, {
+        headers: {
+          Authorization: `Bearer ${data.token}`,
+        },
+      });
+
+      if (meResponse.ok) {
+        const user: UserModel = await meResponse.json();
+
+        return { success: true, user };
+      }
+    } catch (userError) {
+      // Skip user fetch error — session is valid, just missing user data
+    }
+
+    return { success: true };
+  } catch (error) {
+    return {
+      success: false,
+      message: 'An unexpected error occurred during Google sign-in',
+    };
+  }
+}
+
 /** Account info readout for /my-profile (member-since, last login, bookings, email verified). */
 export async function getMyAccountInfo(): Promise<{
   memberSince: string;

@@ -2,15 +2,20 @@
 
 import { startTransition, useActionState, useEffect, useState } from 'react';
 
+import { Divider, Stack } from '@mui/material';
 import { useTranslations } from 'next-intl';
 
 import { register } from '@/actions/auth.actions';
+import GoogleSignInButton from '@/components/Auth/GoogleSignInButton';
 import Form from '@/components/Forms/Form';
 import ModalRoot from '@/components/ModalRoot';
 import { SignUpFormValues } from '@/config/form-models.config';
 import { SIGNUP_FORM } from '@/config/form-names.config';
+import { UserModel } from '@/models/user.model';
+import { useSyncUserPreferences } from '@/utils/hooks/useSyncUserPreferences';
 import { setUserEmail, toggleConfirmAccountModal } from '@/valtio/auth/auth.actions';
 import { showToast } from '@/valtio/global/global.actions';
+import { setUser } from '@/valtio/user/user.actions';
 
 import EmailStep from './SignUpSteps/EmailStep';
 import UserDataStep from './SignUpSteps/UserDataStep';
@@ -33,6 +38,11 @@ const SignUpModal = ({ isOpen, onOpen, onClose }: SignUpModalProps) => {
   const [activeStep, setActiveStep] = useState<number>(0);
   const [state, action, pending] = useActionState(register, undefined);
   const t = useTranslations('common');
+  const tToastMessages = useTranslations('toastMessages');
+  const { syncPreferences } = useSyncUserPreferences();
+  const googleEnabled = !!process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID;
+  // next-intl strict key union doesn't surface freshly-added common.json keys — cast for the divider label.
+  const orContinueWithEmailLabel = (t as unknown as (key: string) => string)('orContinueWithEmail');
 
   const isLastStep = activeStep === 1;
 
@@ -57,6 +67,17 @@ const SignUpModal = ({ isOpen, onOpen, onClose }: SignUpModalProps) => {
   const handleClose = () => {
     onClose();
     handleReset();
+  };
+
+  const handleGoogleSuccess = (user: UserModel) => {
+    setUser(user);
+    syncPreferences({ user });
+    showToast({ status: 'success', text: tToastMessages('login-success') });
+    handleClose();
+  };
+
+  const handleGoogleError = (message: string) => {
+    showToast({ status: 'error', text: message || tToastMessages('login-failed') });
   };
 
   const handleSubmit = async (formValues: SignUpFormValues) => {
@@ -119,6 +140,12 @@ const SignUpModal = ({ isOpen, onOpen, onClose }: SignUpModalProps) => {
         disabled: pending,
       }}
     >
+      {googleEnabled && activeStep === 0 && (
+        <Stack gap={2.5} mb={2.5}>
+          <GoogleSignInButton onSuccess={handleGoogleSuccess} onError={handleGoogleError} />
+          <Divider sx={{ fontSize: 13, color: 'text.secondary' }}>{orContinueWithEmailLabel}</Divider>
+        </Stack>
+      )}
       <Form defaultValues={defaultValues} onSubmit={handleSubmit} id={SIGNUP_FORM}>
         {renderStepPanel()}
       </Form>

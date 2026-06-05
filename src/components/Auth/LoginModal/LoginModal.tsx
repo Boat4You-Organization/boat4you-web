@@ -1,10 +1,11 @@
 import { startTransition, useActionState, useEffect } from 'react';
 
 import { VisibilityOffOutlined, VisibilityOutlined } from '@mui/icons-material';
-import { Button, IconButton, InputAdornment, Stack } from '@mui/material';
+import { Button, Divider, IconButton, InputAdornment, Stack } from '@mui/material';
 import { useTranslations } from 'next-intl';
 
 import { login } from '@/actions/auth.actions';
+import GoogleSignInButton from '@/components/Auth/GoogleSignInButton';
 import Form from '@/components/Forms/Form';
 import FormInput from '@/components/Forms/FormInput';
 import ModalRoot from '@/components/ModalRoot';
@@ -37,6 +38,21 @@ const LoginModal = ({ isOpen, onOpen, onClose }: LoginModalProps) => {
   const t = useTranslations('common');
   const tToastMessages = useTranslations('toastMessages');
   const validator = FormValidator.withTranslation(t);
+  const googleEnabled = !!process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID;
+  // next-intl's strict key union doesn't surface freshly-added common.json keys
+  // (the large literal gets widened) — cast for the new divider label.
+  const orContinueWithEmailLabel = (t as unknown as (key: string) => string)('orContinueWithEmail');
+
+  const handleGoogleSuccess = (user: UserModel) => {
+    toggleLoginModal();
+    setUser(user);
+    syncPreferences({ user });
+    showToast({ status: 'success', text: tToastMessages('login-success') });
+  };
+
+  const handleGoogleError = (message: string) => {
+    showToast({ status: 'error', text: message || tToastMessages('login-failed') });
+  };
 
   useEffect(() => {
     if (state?.success && state.user) {
@@ -92,6 +108,12 @@ const LoginModal = ({ isOpen, onOpen, onClose }: LoginModalProps) => {
         disabled: pending,
       }}
     >
+      {googleEnabled && (
+        <Stack gap={2.5} mb={2.5}>
+          <GoogleSignInButton onSuccess={handleGoogleSuccess} onError={handleGoogleError} />
+          <Divider sx={{ fontSize: 13, color: 'text.secondary' }}>{orContinueWithEmailLabel}</Divider>
+        </Stack>
+      )}
       <Form defaultValues={defaultValues} onSubmit={handleSubmit} id={LOGIN_FORM} mode="onBlur">
         <Stack gap={3}>
           <FormInput
