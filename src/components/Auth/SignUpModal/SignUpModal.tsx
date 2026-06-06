@@ -6,6 +6,7 @@ import { Divider, Stack } from '@mui/material';
 import { useTranslations } from 'next-intl';
 
 import { register } from '@/actions/auth.actions';
+import FacebookSignInButton from '@/components/Auth/FacebookSignInButton';
 import GoogleSignInButton from '@/components/Auth/GoogleSignInButton';
 import Form from '@/components/Forms/Form';
 import ModalRoot from '@/components/ModalRoot';
@@ -41,6 +42,8 @@ const SignUpModal = ({ isOpen, onOpen, onClose }: SignUpModalProps) => {
   const tToastMessages = useTranslations('toastMessages');
   const { syncPreferences } = useSyncUserPreferences();
   const googleEnabled = !!process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID;
+  const facebookEnabled = !!process.env.NEXT_PUBLIC_FACEBOOK_APP_ID;
+  const socialEnabled = googleEnabled || facebookEnabled;
   // next-intl strict key union doesn't surface freshly-added common.json keys — cast for the divider label.
   const orContinueWithEmailLabel = (t as unknown as (key: string) => string)('orContinueWithEmail');
 
@@ -69,14 +72,14 @@ const SignUpModal = ({ isOpen, onOpen, onClose }: SignUpModalProps) => {
     handleReset();
   };
 
-  const handleGoogleSuccess = (user: UserModel) => {
+  const handleSocialSuccess = (user: UserModel) => {
     setUser(user);
     syncPreferences({ user });
     showToast({ status: 'success', text: tToastMessages('login-success') });
     handleClose();
   };
 
-  const handleGoogleError = (message: string) => {
+  const handleSocialError = (message: string) => {
     showToast({ status: 'error', text: message || tToastMessages('login-failed') });
   };
 
@@ -140,9 +143,10 @@ const SignUpModal = ({ isOpen, onOpen, onClose }: SignUpModalProps) => {
         disabled: pending,
       }}
     >
-      {googleEnabled && activeStep === 0 && (
+      {socialEnabled && activeStep === 0 && (
         <Stack gap={2.5} mb={2.5}>
-          <GoogleSignInButton onSuccess={handleGoogleSuccess} onError={handleGoogleError} />
+          <FacebookSignInButton onSuccess={handleSocialSuccess} onError={handleSocialError} />
+          <GoogleSignInButton onSuccess={handleSocialSuccess} onError={handleSocialError} />
           <Divider sx={{ fontSize: 13, color: 'text.secondary' }}>{orContinueWithEmailLabel}</Divider>
         </Stack>
       )}

@@ -5,6 +5,7 @@ import { Button, Divider, IconButton, InputAdornment, Stack } from '@mui/materia
 import { useTranslations } from 'next-intl';
 
 import { login } from '@/actions/auth.actions';
+import FacebookSignInButton from '@/components/Auth/FacebookSignInButton';
 import GoogleSignInButton from '@/components/Auth/GoogleSignInButton';
 import Form from '@/components/Forms/Form';
 import FormInput from '@/components/Forms/FormInput';
@@ -39,18 +40,20 @@ const LoginModal = ({ isOpen, onOpen, onClose }: LoginModalProps) => {
   const tToastMessages = useTranslations('toastMessages');
   const validator = FormValidator.withTranslation(t);
   const googleEnabled = !!process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID;
+  const facebookEnabled = !!process.env.NEXT_PUBLIC_FACEBOOK_APP_ID;
+  const socialEnabled = googleEnabled || facebookEnabled;
   // next-intl's strict key union doesn't surface freshly-added common.json keys
   // (the large literal gets widened) — cast for the new divider label.
   const orContinueWithEmailLabel = (t as unknown as (key: string) => string)('orContinueWithEmail');
 
-  const handleGoogleSuccess = (user: UserModel) => {
+  const handleSocialSuccess = (user: UserModel) => {
     toggleLoginModal();
     setUser(user);
     syncPreferences({ user });
     showToast({ status: 'success', text: tToastMessages('login-success') });
   };
 
-  const handleGoogleError = (message: string) => {
+  const handleSocialError = (message: string) => {
     showToast({ status: 'error', text: message || tToastMessages('login-failed') });
   };
 
@@ -108,9 +111,10 @@ const LoginModal = ({ isOpen, onOpen, onClose }: LoginModalProps) => {
         disabled: pending,
       }}
     >
-      {googleEnabled && (
+      {socialEnabled && (
         <Stack gap={2.5} mb={2.5}>
-          <GoogleSignInButton onSuccess={handleGoogleSuccess} onError={handleGoogleError} />
+          <FacebookSignInButton onSuccess={handleSocialSuccess} onError={handleSocialError} />
+          <GoogleSignInButton onSuccess={handleSocialSuccess} onError={handleSocialError} />
           <Divider sx={{ fontSize: 13, color: 'text.secondary' }}>{orContinueWithEmailLabel}</Divider>
         </Stack>
       )}
