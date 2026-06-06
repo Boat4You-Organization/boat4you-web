@@ -1,4 +1,4 @@
-import React, { ElementType, useEffect, useMemo, useState } from 'react';
+import React, { ElementType, useEffect, useMemo, useRef, useState } from 'react';
 
 import { Close } from '@mui/icons-material';
 import {
@@ -145,9 +145,38 @@ const AutocompleteMultipleChip = ({
     internalValue.length === 0 && !inputValue && !isFocused && Array.isArray(placeholder);
   const placeholderText = Array.isArray(placeholder) ? '' : placeholder;
 
+  const rootRef = useRef<HTMLDivElement>(null);
+
+  // alwaysOpen = the picker is rendered inside a freshly-mounted popover
+  // (desktop "Where" dropdown) or modal (mobile). MUI Popover/Modal auto-focuses
+  // its own Paper (a div), NOT our input — so opening the picker left the input
+  // unfocused and the first keystrokes went nowhere (the field read as
+  // un-typeable). Focus the input as soon as the picker mounts so the user can
+  // type a region/city/marina immediately. rAF lets the popover finish its own
+  // focus pass first so ours wins.
+  useEffect(() => {
+    if (!alwaysOpen) return undefined;
+
+    const id = requestAnimationFrame(() => {
+      rootRef.current?.querySelector('input')?.focus();
+    });
+
+    return () => cancelAnimationFrame(id);
+  }, [alwaysOpen]);
+
+  // Belt-and-braces: a click anywhere on the field (the two-line label overlay,
+  // the icon padding, the empty area) also focuses the actual <input>.
+  const focusInput = (e: React.MouseEvent<HTMLElement>) => {
+    if (disabled) return;
+
+    e.currentTarget.querySelector('input')?.focus();
+  };
+
   return (
     <FormControl
+      ref={rootRef}
       fullWidth
+      onClick={focusInput}
       sx={{
         cursor: 'pointer',
         flex: 1,
@@ -361,7 +390,9 @@ const AutocompleteMultipleChip = ({
             },
             '& .MuiAutocomplete-input': {
               height: '100%',
-              cursor: 'pointer',
+              // Text caret on the actual input — signals "type here" (the rest
+              // of the field keeps the pointer cursor as a click-to-open target).
+              cursor: 'text',
               '&::placeholder': {
                 fontSize: variant === 'compact' ? '14px' : '16px',
                 transition: 'font-size 300ms ease',

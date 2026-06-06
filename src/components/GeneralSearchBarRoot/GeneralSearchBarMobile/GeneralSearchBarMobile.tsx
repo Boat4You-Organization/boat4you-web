@@ -273,6 +273,11 @@ const GeneralSearchBarMobile = () => {
             open={activeField === 'destination'}
             anchorEl={destAnchorRef.current}
             onClose={handleClose}
+            // Don't let the Popover grab focus onto its Paper (a div) after the
+            // open transition — that stole focus back from the search input and
+            // made the field read as un-typeable. DestinationContent focuses the
+            // input itself on mount, which is the better a11y target anyway.
+            disableAutoFocus
             anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
             transformOrigin={{ vertical: 'top', horizontal: 'left' }}
             slotProps={{ paper: { sx: { ...popoverPaperSx, width: 384, p: 1.5 } } }}
