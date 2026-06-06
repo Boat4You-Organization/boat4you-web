@@ -223,6 +223,81 @@ export async function googleLogin(idToken: string): Promise<LoginResult> {
   }
 }
 
+/**
+ * Social login. The Facebook user access token minted by the Facebook JS SDK in
+ * the browser is forwarded to the backend, which verifies it server-side (debug
+ * token against the Graph API + app-id/expiry/email) and returns the same token
+ * pair as a password login. Mirrors `googleLogin` for cookie-setting + the direct
+ * /auth/me fetch (cookieStore.set() isn't readable within the same server-action
+ * tick).
+ */
+export async function facebookLogin(accessToken: string): Promise<LoginResult> {
+  try {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/auth/oauth/facebook`, {
+      ...POST_REQUEST_PARAMETERS,
+      body: JSON.stringify({ accessToken }),
+    });
+
+    if (!response.ok) {
+      let message = 'Facebook sign-in failed';
+
+      try {
+        const errorData = await response.json();
+
+        message = errorData.message || message;
+      } catch {
+        // non-JSON error body — keep the generic message
+      }
+
+      return { success: false, message };
+    }
+
+    const data: LoginResponse = await response.json();
+
+    const cookieStore = await cookies();
+    const isProd = process.env.NODE_ENV === 'production';
+
+    cookieStore.set(AuthKeys.ACCESS_TOKEN, data.token, {
+      httpOnly: true,
+      secure: isProd,
+      maxAge: 60 * 60 * 24 * 7,
+      sameSite: 'lax',
+      path: '/',
+    });
+
+    cookieStore.set(AuthKeys.REFRESH_TOKEN, data.refreshToken, {
+      httpOnly: true,
+      secure: isProd,
+      maxAge: 60 * 60 * 24 * 30,
+      sameSite: 'lax',
+      path: '/',
+    });
+
+    try {
+      const meResponse = await fetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/auth/me`, {
+        headers: {
+          Authorization: `Bearer ${data.token}`,
+        },
+      });
+
+      if (meResponse.ok) {
+        const user: UserModel = await meResponse.json();
+
+        return { success: true, user };
+      }
+    } catch (userError) {
+      // Skip user fetch error — session is valid, just missing user data
+    }
+
+    return { success: true };
+  } catch (error) {
+    return {
+      success: false,
+      message: 'An unexpected error occurred during Facebook sign-in',
+    };
+  }
+}
+
 /** Account info readout for /my-profile (member-since, last login, bookings, email verified). */
 export async function getMyAccountInfo(): Promise<{
   memberSince: string;
