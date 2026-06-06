@@ -29,6 +29,10 @@ const HeatmapStrip = ({ weeks, activeId, visibleRange, onCellClick, height = 56 
         const isActive = w.id === activeId;
         const isVisible = visibleRange && i >= visibleRange[0] && i < visibleRange[1];
         const isBooked = w.status === 'booked';
+        const isService = w.status === 'service';
+        // Both RESERVATION ('booked') and SERVICE ('service') are hard-blocked:
+        // non-clickable. They differ only in their overlay so the user sees why.
+        const isBlocked = isBooked || isService;
         const isOpt = w.status === 'option';
         const tier = w.tier ?? 0;
 
@@ -36,8 +40,8 @@ const HeatmapStrip = ({ weeks, activeId, visibleRange, onCellClick, height = 56 
           <Box
             component="button"
             key={w.id}
-            onClick={() => !isBooked && onCellClick(w, i)}
-            disabled={isBooked}
+            onClick={() => !isBlocked && onCellClick(w, i)}
+            disabled={isBlocked}
             title={`${w.from} → ${w.to} · ${fmtPrice(w.price)} · ${statusLabel(w.status)}`}
             aria-label={`Week ${w.from} to ${w.to}, ${fmtPrice(w.price)}, ${statusLabel(w.status)}`}
             sx={{
@@ -45,10 +49,10 @@ const HeatmapStrip = ({ weeks, activeId, visibleRange, onCellClick, height = 56 
               padding: 0,
               border: 0,
               borderRadius: '6px',
-              background: isBooked ? '#F3F4F6' : tierBg(tier),
+              background: isBlocked ? '#F3F4F6' : tierBg(tier),
               outline: isActive ? `2.5px solid ${T.navy}` : isVisible ? '1.5px solid rgba(15,30,62,0.25)' : 'none',
               outlineOffset: isActive ? '1px' : '-1px',
-              cursor: isBooked ? 'not-allowed' : 'pointer',
+              cursor: isBlocked ? 'not-allowed' : 'pointer',
               position: 'relative',
               overflow: 'hidden',
             }}
@@ -60,6 +64,16 @@ const HeatmapStrip = ({ weeks, activeId, visibleRange, onCellClick, height = 56 
                   inset: 0,
                   borderRadius: '6px',
                   background: 'repeating-linear-gradient(45deg, transparent 0 4px, rgba(0,0,0,0.12) 4px 5px)',
+                }}
+              />
+            )}
+            {isService && (
+              <Box
+                sx={{
+                  position: 'absolute',
+                  inset: 0,
+                  borderRadius: '6px',
+                  background: 'repeating-linear-gradient(135deg, transparent 0 4px, rgba(71,85,105,0.18) 4px 5px)',
                 }}
               />
             )}

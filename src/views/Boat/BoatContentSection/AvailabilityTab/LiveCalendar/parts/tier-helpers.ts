@@ -3,7 +3,10 @@
 /* eslint-disable no-nested-ternary -- vendored price-tier + label logic */
 import { T } from './tokens';
 
-export type WeekStatus = 'available' | 'option' | 'booked' | 'selected';
+// 'booked'  → RESERVATION (partner reservation) — hard-block.
+// 'service' → SERVICE (maintenance / owner block) — hard-block, distinct tier.
+// 'option'  → live partner option — selectable, routes to inquiry.
+export type WeekStatus = 'available' | 'option' | 'booked' | 'service' | 'selected';
 
 export interface WeekData {
   /** Stable identifier — used as React key + backend offer id. */
@@ -34,11 +37,22 @@ export interface WeekData {
 
 /** Human-readable status label rendered inside the pill badge. */
 export const statusLabel = (s: WeekStatus): string =>
-  s === 'booked' ? 'Reserved' : s === 'option' ? 'Pre-reserved' : s === 'selected' ? 'Selected' : 'Available';
+  s === 'booked'
+    ? 'Reserved'
+    : s === 'service'
+      ? 'Unavailable'
+      : s === 'option'
+        ? 'Pre-reserved'
+        : s === 'selected'
+          ? 'Selected'
+          : 'Available';
 
 /** Foreground + background colour pair for the status pill. */
 export const statusColor = (s: WeekStatus): { fg: string; bg: string } => {
   if (s === 'booked') return { fg: '#B91C1C', bg: '#FEE2E2' };
+
+  // SERVICE — slate hard-block, visually distinct from a red RESERVATION.
+  if (s === 'service') return { fg: '#475569', bg: '#E2E8F0' };
 
   if (s === 'option') return { fg: T.amber, bg: T.amberSoft };
 

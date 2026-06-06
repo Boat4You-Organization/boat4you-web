@@ -5,6 +5,12 @@ import { Unit, YachtServiceModel } from './yacht-service.model';
 export enum Status {
   FREE = 'FREE',
   OPTION = 'OPTION',
+  RESERVATION = 'RESERVATION',
+  SERVICE = 'SERVICE',
+  // Retained as a legacy/fallback bucket. The backend no longer emits
+  // UNAVAILABLE for offers (it now ships the honest 4-state FREE | OPTION |
+  // RESERVATION | SERVICE), but keeping the member means any stale cached
+  // client value still compiles and the gate routes it to "hard-blocked".
   UNAVAILABLE = 'UNAVAILABLE',
 }
 

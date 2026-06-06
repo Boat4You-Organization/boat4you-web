@@ -18,7 +18,6 @@ import { YachtModel } from '@/models/yacht.model';
 import useBreakpoint from '@/utils/hooks/useBreakpoint';
 import useQueryParams from '@/utils/hooks/useQueryParams';
 import DateTime from '@/utils/static/DateTime';
-import { generateSaturdayToSaturdayPeriods } from '@/utils/static/standardOffers.utils';
 import { setselectedOffer } from '@/valtio/yacht/yacht.actions';
 
 import ArrowBtn from './parts/ArrowBtn';
@@ -35,11 +34,13 @@ interface AvailabilitySliderProps {
 }
 
 // ────────────────────────────────────────────────────────────────────────────
-//  Adapter — turn `YachtOfferModel[]` (one per Saturday-to-Saturday week)
-//  into the widget's `WeekData[]` shape. Status mapping:
-//      Status.FREE        → 'available'
-//      Status.OPTION      → 'option'      (Mario rule 12.5.2026)
-//      Status.UNAVAILABLE → 'booked'
+//  Adapter — turn the partner's published `YachtOfferModel[]` (any check-in day,
+//  any length) into the widget's `WeekData[]` shape. Honest 4-state mapping:
+//      Status.FREE        → 'available'  (selectable → reserve)
+//      Status.OPTION      → 'option'     (selectable → inquiry)
+//      Status.RESERVATION → 'booked'     (hard-block, red/hatched)
+//      Status.SERVICE     → 'service'    (hard-block, slate, distinct tier)
+//      Status.UNAVAILABLE → 'booked'     (legacy fallback, hard-block)
 //  Display labels (`from`, `to`, `fromMonth`) come from dayjs to stay locale-
 //  consistent with the rest of the detail page.
 // ────────────────────────────────────────────────────────────────────────────
@@ -47,7 +48,9 @@ interface AvailabilitySliderProps {
 const mapStatus = (s: Status | undefined): WeekData['status'] => {
   if (s === Status.OPTION) return 'option';
 
-  if (s === Status.UNAVAILABLE) return 'booked';
+  if (s === Status.SERVICE) return 'service';
+
+  if (s === Status.RESERVATION || s === Status.UNAVAILABLE) return 'booked';
 
   return 'available';
 };
@@ -108,25 +111,16 @@ const AvailabilitySlider = ({ yacht }: AvailabilitySliderProps) => {
     fetchOffersForCurrentParams();
   }, [fetchOffersForCurrentParams]);
 
-  // Saturday→Saturday scaffold so every week shows up even when the partner
-  // hasn't published an offer for it (gap rows become `booked`). boat4you's
-  // generateSaturdayToSaturdayPeriods `count` is in WEEKS, so 78 ≈ 18 months
-  // to match the fetch horizon above — that's what gives 3 navigable 6-month
-  // chunks (without it the widget showed only ~4 months / "1 of 1" and the
-  // arrows were dead).
+  // Honest availability (Deploy 4): render EXACTLY the periods the partner
+  // published — any check-in day, any length — sorted chronologically so the
+  // strip reads left-to-right. No Saturday→Saturday scaffold: gaps are simply
+  // absent rather than synthesized as fake "booked" weeks (which mis-stated
+  // non-Sat-Sat fleets, e.g. MMK OfferType.OTHER, as all-grey). The chunk math
+  // below (26 weeks ≈ 6 months) slices whatever array length results.
   const weeks = useMemo<WeekData[]>(() => {
-    const scaffold = generateSaturdayToSaturdayPeriods(DateTime.now() || dayjs(), 78);
-    const merged: YachtOfferModel[] = scaffold.map(period => {
-      const real = safeYachtOffers.find(o => o.dateFrom === period.dateFrom && o.dateTo === period.dateTo);
+    const published = [...safeYachtOffers].sort((a, b) => a.dateFrom.localeCompare(b.dateFrom));
 
-      // Gap weeks (partner published no offer) become a minimal "booked"
-      // placeholder. boat4you's YachtOfferModel has more required fields than the
-      // few `toWeek` reads (id/dateFrom/dateTo/clientPriceEur/status), so cast via
-      // unknown — the placeholder is never used for booking (status === booked).
-      return real ?? ({ ...period, status: Status.UNAVAILABLE } as unknown as YachtOfferModel);
-    });
-
-    return withTiers(merged.map(o => toWeek(o)));
+    return withTiers(published.map(toWeek));
   }, [safeYachtOffers]);
 
   const months = useMemo(() => deriveMonthAxis(weeks), [weeks]);
@@ -144,14 +138,14 @@ const AvailabilitySlider = ({ yacht }: AvailabilitySliderProps) => {
     const start = search.get('startDate');
     const end = search.get('endDate');
     const urlMatch = start && end ? weeks.find(w => w.dateFromIso === start && w.dateToIso === end) : null;
-    const firstAvail = weeks.find(w => w.status !== 'booked');
+    const firstAvail = weeks.find(w => w.status !== 'booked' && w.status !== 'service');
 
     setSelId(urlMatch?.id ?? firstAvail?.id ?? weeks[0]?.id);
   }, [weeks, selId]);
 
   const handleSelect = useCallback(
     (w: WeekData) => {
-      if (w.status === 'booked') return;
+      if (w.status === 'booked' || w.status === 'service') return;
 
       setSelId(w.id);
 

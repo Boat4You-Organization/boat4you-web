@@ -15,7 +15,6 @@ import Calendar from '@/components/SvgIcons/Calendar';
 import { BoatCalendarFormValues } from '@/config/form-models.config';
 import { ReservationStatus } from '@/models/reservation.model';
 import { CURRENCY_SYMBOL_MAP, Currency } from '@/models/user.model';
-import { Status } from '@/models/yacht-offer.model';
 import { YachtServiceExtrasKey } from '@/models/yacht-service.model';
 import { YachtModel } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
@@ -26,6 +25,7 @@ import useToggleState from '@/utils/hooks/useToggleState';
 import { useYachtAvailability } from '@/utils/hooks/useYachtAvailability';
 import DateTime from '@/utils/static/DateTime';
 import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
+import { resolveGate } from '@/utils/static/offerStatusGate';
 import { toTitleCase } from '@/utils/static/toTitleCase';
 import { handleNextMonth, handlePrevMonth, toggleBoatInquiryModalOpen } from '@/valtio/yacht/yacht.actions';
 import { useYachtStore } from '@/valtio/yacht/yacht.store';
@@ -61,8 +61,10 @@ const BoatCalendarForm = ({ yacht, variant }: BoatCalendarFormProps) => {
     : 0;
   const daysText = useDaysText(computedNumberOfDays);
 
-  const isSelectedOfferOption = selectedOffer?.status === Status.OPTION;
-  const isSelectedOfferUnavailable = selectedOffer?.status === Status.UNAVAILABLE;
+  // Single honest gate decision (FREE → reserve, OPTION → inquiry,
+  // RESERVATION/SERVICE → hard-blocked). See offerStatusGate.ts.
+  const gate = resolveGate(selectedOffer?.status, { custom: yacht.custom, inquireOnly });
+  const isSelectedOfferBlocked = gate === 'blocked';
   const isCalculatedPrice = calculatedPrice && Object.keys(calculatedPrice).length > 0;
 
   const formattedClientPricePerDay = formatPriceWithCurrency({
@@ -172,7 +174,9 @@ const BoatCalendarForm = ({ yacht, variant }: BoatCalendarFormProps) => {
   );
 
   const handleReserveClick = () => {
-    if (isSelectedOfferOption || yacht.custom || inquireOnly) {
+    if (gate === 'blocked') return; // defensive — the button is disabled anyway
+
+    if (gate === 'inquiry') {
       toggleBoatInquiryModalOpen();
 
       return;
@@ -194,7 +198,7 @@ const BoatCalendarForm = ({ yacht, variant }: BoatCalendarFormProps) => {
           </Stack>
         ) : (
           <Stack>
-            {hasValidDateSelection && isCalculatedPrice && !isSelectedOfferUnavailable ? (
+            {hasValidDateSelection && isCalculatedPrice && !isSelectedOfferBlocked ? (
               <Typography component="p" variant="h3" fontWeight={700} color={colors.blue500}>
                 Ready to sail?
               </Typography>
@@ -318,14 +322,9 @@ const BoatCalendarForm = ({ yacht, variant }: BoatCalendarFormProps) => {
                   size="large"
                   fullWidth
                   onClick={handleReserveClick}
-                  disabled={
-                    variant === 'inner'
-                      ? !isCalculatedPrice ||
-                        (isSelectedOfferUnavailable && !isSelectedOfferOption && !yacht.custom && !inquireOnly)
-                      : false
-                  }
+                  disabled={variant === 'inner' ? !isCalculatedPrice || isSelectedOfferBlocked : false}
                 >
-                  {variant === 'inner' && !isSelectedOfferOption && !inquireOnly ? t('reserve') : t('inquireNow')}
+                  {variant === 'inner' && gate === 'reserve' ? t('reserve') : t('inquireNow')}
                 </Button>
               </Box>
             </Tooltip>
@@ -336,7 +335,7 @@ const BoatCalendarForm = ({ yacht, variant }: BoatCalendarFormProps) => {
           )}
         </Stack>
 
-        {hasValidDateSelection && variant === 'inner' && isCalculatedPrice && !isSelectedOfferUnavailable && (
+        {hasValidDateSelection && variant === 'inner' && isCalculatedPrice && !isSelectedOfferBlocked && (
           <Box>
             <Typography variant="body2" color={colors.black600} pt={3} textAlign="center">
               {t('wontChargedYet')}

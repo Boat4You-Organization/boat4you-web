@@ -12,7 +12,6 @@ import ModalRoot from '@/components/ModalRoot';
 import Calendar from '@/components/SvgIcons/Calendar';
 import { BoatCalendarFormValues } from '@/config/form-models.config';
 import { BOAT_CALENDAR_FORM } from '@/config/form-names.config';
-import { Status } from '@/models/yacht-offer.model';
 import { YachtModel } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
 import useQueryParams from '@/utils/hooks/useQueryParams';
@@ -20,6 +19,7 @@ import { useReservation } from '@/utils/hooks/useReservation';
 import useToggleState from '@/utils/hooks/useToggleState';
 import DateTime from '@/utils/static/DateTime';
 import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
+import { resolveGate } from '@/utils/static/offerStatusGate';
 import { toggleBoatInquiryModalOpen } from '@/valtio/yacht/yacht.actions';
 import { useYachtStore } from '@/valtio/yacht/yacht.store';
 
@@ -52,15 +52,21 @@ const BoatMobileNavigation = ({ yacht }: BoatMobileNavigationProps) => {
         }
       : defaultValues;
 
-  const isSelectedOfferOption = selectedOffer?.status === Status.OPTION;
-  const isSelectedOfferUnavailable = selectedOffer?.status === Status.UNAVAILABLE;
+  // Single honest gate decision, mirror of BoatCalendarForm (desktop). See
+  // offerStatusGate.ts. `isSelectedOfferBlocked` reuses the existing
+  // `isSelectedOfferUnavailable` child prop name but now carries the correct
+  // RESERVATION/SERVICE hard-block meaning (no longer the lossy UNAVAILABLE).
+  const gate = resolveGate(selectedOffer?.status, { custom: yacht.custom, inquireOnly: yacht.inquireOnly });
+  const isSelectedOfferBlocked = gate === 'blocked';
   const isCalculatedPrice = calculatedPrice && Object.keys(calculatedPrice).length > 0;
-  const isInquireFlow = isSelectedOfferOption || yacht.custom || yacht.inquireOnly;
+  const isInquireFlow = gate === 'inquiry';
 
   const { handleReservation } = useReservation({ yacht });
   const locale = useLocale();
 
   const handleReservationClick = () => {
+    if (isSelectedOfferBlocked) return; // defensive — the button is disabled anyway
+
     if (isInquireFlow) {
       toggleBoatInquiryModalOpen();
 
@@ -109,7 +115,7 @@ const BoatMobileNavigation = ({ yacht }: BoatMobileNavigationProps) => {
           <ChangeDatesContent
             yacht={yacht}
             isCalculatedPrice={isCalculatedPrice}
-            isSelectedOfferUnavailable={isSelectedOfferUnavailable}
+            isSelectedOfferUnavailable={isSelectedOfferBlocked}
           />
         );
       case 'price':
@@ -117,7 +123,7 @@ const BoatMobileNavigation = ({ yacht }: BoatMobileNavigationProps) => {
           <PriceDetailsContent
             yacht={yacht}
             isCalculatedPrice={isCalculatedPrice}
-            isSelectedOfferUnavailable={isSelectedOfferUnavailable}
+            isSelectedOfferUnavailable={isSelectedOfferBlocked}
           />
         );
       default:
@@ -145,7 +151,7 @@ const BoatMobileNavigation = ({ yacht }: BoatMobileNavigationProps) => {
                   <Typography variant="h4" component="p" color={colors.green500}>
                     {tYacht('priceOnInquiry')}
                   </Typography>
-                ) : !isSelectedOfferUnavailable && !isCalculatedPrice ? (
+                ) : !isSelectedOfferBlocked && !isCalculatedPrice ? (
                   <Typography variant="h4" component="p">
                     -
                   </Typography>
@@ -186,7 +192,7 @@ const BoatMobileNavigation = ({ yacht }: BoatMobileNavigationProps) => {
                   id={BOAT_CALENDAR_FORM}
                   fullWidth
                   onClick={handleReservationClick}
-                  disabled={!isInquireFlow && (!isCalculatedPrice || isSelectedOfferUnavailable)}
+                  disabled={isSelectedOfferBlocked || (!isInquireFlow && !isCalculatedPrice)}
                 >
                   {isInquireFlow ? tYacht('inquireNow') : tYacht('reserve')}
                 </Button>

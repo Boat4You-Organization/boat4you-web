@@ -54,6 +54,18 @@ const Legend = ({ compact = false }: LegendProps) => (
       Reserved
     </Box>
     <Box component="span" sx={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
+      <Box
+        component="span"
+        sx={{
+          width: '14px',
+          height: '12px',
+          borderRadius: '2px',
+          background: 'repeating-linear-gradient(135deg, #F3F4F6 0 3px, rgba(71,85,105,0.18) 3px 4px)',
+        }}
+      />
+      Unavailable
+    </Box>
+    <Box component="span" sx={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
       <Box component="span" sx={{ width: '8px', height: '8px', borderRadius: '99px', background: T.amber }} />
       Pre-reserved
     </Box>

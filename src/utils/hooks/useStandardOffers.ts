@@ -34,6 +34,10 @@ export const useStandardOffers = ({ yachtSlug, periods }: UseStandardOffersProps
         offer => offer.dateFrom === period.dateFrom && offer.dateTo === period.dateTo
       );
 
+      // Honest 4-state status (Deploy 4): FREE → available (reservable),
+      // OPTION → inquiry chip. RESERVATION/SERVICE intentionally yield BOTH
+      // false here, so the period chip is neither available nor option and the
+      // chip click handler won't select it (hard-blocked).
       return {
         isAvailable: matchingOffer?.status === Status.FREE,
         isOption: matchingOffer?.status === Status.OPTION,

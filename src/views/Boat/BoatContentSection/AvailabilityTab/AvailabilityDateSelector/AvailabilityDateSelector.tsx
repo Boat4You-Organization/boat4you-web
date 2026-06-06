@@ -9,6 +9,7 @@ import { useLocale, useTranslations } from 'next-intl';
 
 import DateRangePicker from '@/components/DateRangePicker';
 import { BoatCalendarFormValues } from '@/config/form-models.config';
+import { ReservationStatus } from '@/models/reservation-status.model';
 import { YachtModel } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
 import useToggleState from '@/utils/hooks/useToggleState';
@@ -42,7 +43,9 @@ const AvailabilityDateSelector = ({ yacht, onSubmit }: AvailabilityDateSelectorP
     const dates: string[] = [];
 
     yachtAvailability.forEach(item => {
-      if (item.status === 'RESERVATION') {
+      // Hard-blocked dates only — RESERVATION (partner reservation) AND SERVICE
+      // (maintenance / owner block). OPTION stays selectable (routes to inquiry).
+      if (item.status === ReservationStatus.RESERVATION || item.status === ReservationStatus.SERVICE) {
         const start = dayjs(item.from);
         const end = dayjs(item.to);
         let current = start;

@@ -8,12 +8,12 @@ import Availablity from '@/components/SvgIcons/Availablity';
 import Bulp from '@/components/SvgIcons/Bulp';
 import { BoatCalendarFormValues } from '@/config/form-models.config';
 import { AVAILABILITY_TAB_FORM } from '@/config/form-names.config';
-import { Status } from '@/models/yacht-offer.model';
 import { YachtModel } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
 import useQueryParams from '@/utils/hooks/useQueryParams';
 import useToggleState from '@/utils/hooks/useToggleState';
 import DateTime from '@/utils/static/DateTime';
+import { isHardBlocked } from '@/utils/static/offerStatusGate';
 import { useYachtStore } from '@/valtio/yacht/yacht.store';
 import GoodToKnowItem from '@/views/Boat/BoatContentSection/GoodToKnowItem';
 
@@ -37,7 +37,10 @@ const AvailabilityTab = ({ yacht }: AvailabilityTabProps) => {
   const tCommon = useTranslations('common');
   const [isMapOpen, toggleMap] = useToggleState();
 
-  const availableOffers = offersToDisplay.filter(offer => offer.status !== Status.UNAVAILABLE);
+  // Show booking cards only for offers that aren't hard-blocked. With the
+  // honest 4-state status the block is RESERVATION/SERVICE (and the legacy
+  // UNAVAILABLE fallback) — FREE + OPTION offers stay (OPTION routes to inquiry).
+  const availableOffers = offersToDisplay.filter(offer => !isHardBlocked(offer.status));
 
   const initialValues =
     params.startDate && params.endDate
