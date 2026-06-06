@@ -13,6 +13,13 @@ import { YachtServiceModel } from './yacht-service.model';
  * Values match the raw ordinals sent by the API. The card groups these
  * into two user-facing badges (Available / Pre-reserved).
  */
+export enum MatchKind {
+  EXACT = 'EXACT',
+  SHIFTED = 'SHIFTED',
+  SHORTER = 'SHORTER',
+  LONGER = 'LONGER',
+}
+
 export enum OfferStatus {
   UNKNOWN = 'UNKNOWN',
   FREE = 'FREE',
@@ -231,13 +238,24 @@ export interface YachtModelShortInfo extends Pick<
    */
   amenityKeys?: string[] | null;
   /**
-   * Start/end of the offer period that matched the user's search (±3 day flex
-   * window). When these differ from the user's requested dates the card shows
-   * a "Closest day" badge alongside the shifted period. Strings in ISO format
-   * (YYYY-MM-DD) from the backend's LocalDate serialization.
+   * Start/end of the REAL offer period that matched the user's search. When
+   * `matchKind` != EXACT these carry the closest matched window (which may be
+   * shifted/shorter/longer than the requested dates), so the card can show a
+   * "closest dates: DD.MM - DD.MM" badge. Strings in ISO format (YYYY-MM-DD)
+   * from the backend's LocalDate serialization.
    */
   offerDateFrom?: string | null;
   offerDateTo?: string | null;
+  /**
+   * How the returned offer window relates to the user's requested dates.
+   * EXACT   → offer matches the requested period (no badge)
+   * SHIFTED → same length, different start (closest-dates badge)
+   * SHORTER → shorter than requested
+   * LONGER  → longer than requested
+   * null when the search had no date filter. Backend's MatchKind enum,
+   * serialized by name.
+   */
+  matchKind?: MatchKind | null;
   /**
    * True for admin-managed (entry_type=2) yachts. Search card swaps the
    * green "Available" badge for a blue "On request" label so users know

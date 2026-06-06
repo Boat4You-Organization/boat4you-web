@@ -1,8 +1,6 @@
 'use client';
 
 /* eslint-disable @typescript-eslint/no-shadow, consistent-return, no-nested-ternary */
-import { useEffect, useMemo, useState } from 'react';
-
 import {
   AcUnit,
   AccessTime,
@@ -35,7 +33,7 @@ import Checkbox from '@/components/Checkbox';
 import FavoriteButton from '@/components/FavoriteButton';
 import FlagIcon from '@/components/FlagIcon';
 import { UserModel, UserRoleName } from '@/models/user.model';
-import { OfferStatus, YachtModelShortInfo } from '@/models/yacht.model';
+import { MatchKind, OfferStatus, YachtModelShortInfo } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
 import useBreakpoint from '@/utils/hooks/useBreakpoint';
 import useToggleState from '@/utils/hooks/useToggleState';
@@ -93,6 +91,7 @@ const BoatListingItemCard = ({
   isSelected = false,
   offerDateFrom,
   offerDateTo,
+  matchKind,
 }: BoatListingItemCardProps) => {
   // Boat detail's canonical ignores query params, so forwarding the live
   // search filter (?destinations=/&did=) only spawns crawlable duplicate URLs
@@ -176,10 +175,8 @@ const BoatListingItemCard = ({
   // Each yacht shows up to 3 amenity icons on the card. The backend returns
   // the top N Equipment label_codes (kebab-case, e.g. "air-conditioning")
   // in `amenityKeys`, sorted by Equipment.filterOrder. We map each label_code
-  // to an MUI icon + i18n-friendly key here. If the backend hasn't populated
-  // the field (legacy deploy or yacht with no equipment rows), we fall back
-  // to a deterministic per-id pick from a demo pool so the card still looks
-  // populated.
+  // to an MUI icon + i18n-friendly key here. When the backend has no equipment
+  // rows for a yacht the row is simply empty (no demo placeholder).
   //
   // When adding new amenities: extend `AMENITY_ICON_MAP` below AND make sure
   // the i18n key (`common.<camelCase>`) exists in the translations file.
@@ -202,43 +199,6 @@ const BoatListingItemCard = ({
     heating: { Icon: LocalFireDepartment, i18nKey: 'common.heating' },
   };
 
-  // Demo fallback — kept for yachts whose amenityKeys the backend hasn't yet
-  // populated. Deterministic per id so the same yacht shows the same icons
-  // across reloads (no flicker).
-  const demoPool: ReadonlyArray<{ key: string; Icon: typeof AcUnit }> = [
-    { key: 'airConditioning', Icon: AcUnit },
-    { key: 'freeWifi', Icon: Wifi },
-    { key: 'dinghy', Icon: DirectionsBoat },
-    { key: 'gpsPlotter', Icon: GpsFixed },
-    { key: 'autopilot', Icon: AutoMode },
-    { key: 'generator', Icon: Bolt },
-    { key: 'bimini', Icon: BeachAccess },
-    { key: 'outsideShower', Icon: Pool },
-    { key: 'cooker', Icon: Kitchen },
-    { key: 'fridge', Icon: Air },
-    { key: 'waterToys', Icon: WifiTethering },
-    { key: 'snorkelSets', Icon: LocalDrink },
-  ];
-
-  const pickDemoAmenities = (seed: number, count: number) => {
-    const picks: Array<{ key: string; Icon: typeof AcUnit }> = [];
-    const used = new Set<number>();
-    let i = 0;
-
-    while (picks.length < count && i < demoPool.length * 3) {
-      const idx = (seed * 7 + i * 13) % demoPool.length;
-
-      if (!used.has(idx)) {
-        used.add(idx);
-        picks.push(demoPool[idx]);
-      }
-
-      i += 1;
-    }
-
-    return picks;
-  };
-
   const realAmenities = (amenityKeys ?? [])
     .map(key => AMENITY_ICON_MAP[key])
     .filter((v): v is { Icon: typeof AcUnit; i18nKey: string } => Boolean(v))
@@ -248,30 +208,14 @@ const BoatListingItemCard = ({
       Icon,
     }));
 
-  const demoAmenities =
-    realAmenities.length > 0
-      ? realAmenities
-      : pickDemoAmenities(id, 3).map(({ key, Icon }) => ({
-          label: t(`common.${key}` as 'common.airConditioning'),
-          Icon,
-        }));
-
-  // DEMO social proof — "X people are also interested" shown on ~60% of
-  // yachts with a deterministic per-id seed (no flicker on re-render, same
-  // yacht always shows the same number). Count range: 30–80.
-  // Replace with real data once backend tracks listing views / saves.
-  const showSocialProof = id % 10 < 6; // 60% of yachts
-  const interestedCount = 30 + (id % 51); // 30..80
-
   // ── Availability badge ──
   // Maps the full OfferStatus enum into the two-badge model the card shows.
   // Per business rules:
   //   • Available:    FREE, OPTION_EXPIRED, CANCELLED, INFO, UNKNOWN
   //   • Pre-reserved: OPTION, OPTION_WAITING, RESERVED, UNAVAILABLE, SERVICE
   //
-  // Backend doesn't deploy the `offerStatus` field yet — fall back to isOption
-  // (boolean) for now. DEMO: if neither is present, deterministically fake a
-  // mix of statuses based on yacht id so the design shows both badges.
+  // Uses the REAL backend `offerStatus`; falls back to `isOption` when only the
+  // boolean is present (older payloads), else FREE. No demo mix.
   const availableStatuses: ReadonlyArray<OfferStatus> = [
     OfferStatus.FREE,
     OfferStatus.OPTION_EXPIRED,
@@ -280,30 +224,7 @@ const BoatListingItemCard = ({
     OfferStatus.UNKNOWN,
   ];
 
-  const resolvedStatus: OfferStatus = (() => {
-    if (offerStatus) return offerStatus;
-
-    if (isOption) return OfferStatus.OPTION;
-
-    // DEMO mix per yacht id — ensures visual variety until backend ships
-    // the `offerStatus` field in YachtSearchResponseDto. UNAVAILABLE is
-    // intentionally excluded — those yachts are filtered out at the SQL
-    // view level (truly unbookable) so the UI never sees them.
-    const demoMap: Record<number, OfferStatus> = {
-      0: OfferStatus.FREE,
-      1: OfferStatus.FREE,
-      2: OfferStatus.FREE,
-      3: OfferStatus.OPTION,
-      4: OfferStatus.OPTION_WAITING,
-      5: OfferStatus.RESERVED,
-      6: OfferStatus.CANCELLED,
-      7: OfferStatus.OPTION_EXPIRED,
-      8: OfferStatus.SERVICE,
-      9: OfferStatus.INFO,
-    };
-
-    return demoMap[id % 10] ?? OfferStatus.FREE;
-  })();
+  const resolvedStatus: OfferStatus = offerStatus ?? (isOption ? OfferStatus.OPTION : OfferStatus.FREE);
 
   const isAvailable = availableStatuses.includes(resolvedStatus);
 
@@ -312,21 +233,13 @@ const BoatListingItemCard = ({
   // likely to convert because they already have commercial interest.
   const isSpecialPromotion = resolvedStatus === OfferStatus.OPTION || resolvedStatus === OfferStatus.OPTION_WAITING;
 
-  // ── Closest day (non-standard charter week) ──
-  // Charter weeks are Sat-Sat 7-day by convention; anything else (Mon-Mon,
-  // Thu-Fri, 10-day, …) is flagged with a "Closest day" badge so the user
-  // realises the offer's period doesn't line up with a normal weekly rental.
-  const isCloseDayMatch = (() => {
-    if (!offerDateFrom || !offerDateTo) return false;
-
-    const from = new Date(`${offerDateFrom}T00:00:00Z`);
-    const to = new Date(`${offerDateTo}T00:00:00Z`);
-    const dayMs = 1000 * 60 * 60 * 24;
-    const days = Math.round((to.getTime() - from.getTime()) / dayMs);
-    const startsOnSaturday = from.getUTCDay() === 6;
-
-    return !(startsOnSaturday && days === 7);
-  })();
+  // ── Closest dates (offer window != requested dates) ──
+  // Honest availability (Deploy 4): the backend tells us via `matchKind` how the
+  // returned offer relates to the searched dates. Anything other than EXACT
+  // means the user is looking at the closest available window, so we surface a
+  // "closest dates: DD.MM - DD.MM" badge with the REAL matched period
+  // (offerDateFrom/offerDateTo). No more client-side Sat-Sat guessing.
+  const isCloseDayMatch = Boolean(matchKind) && matchKind !== MatchKind.EXACT && Boolean(offerDateFrom && offerDateTo);
 
   const formatOfferPeriod = (): string => {
     if (!offerDateFrom || !offerDateTo) return '';
@@ -338,39 +251,6 @@ const BoatListingItemCard = ({
     };
 
     return `${f(offerDateFrom)} – ${f(offerDateTo)}`;
-  };
-
-  // ── DEAL OF THE WEEK ──
-  // Yachts with 40%+ discount get a prominent ribbon + 2-day countdown timer
-  // (stable deadline per yacht id so the clock doesn't jitter on re-render).
-  // The deadline is computed once per yacht id and memoized — each yacht gets
-  // a unique expiry within the next ~24-48 hours, so users see a mix on the page.
-  const isDealOfTheWeek = discountPercent >= 40;
-
-  const dealDeadline = useMemo(
-    () => Date.now() + (24 + (id % 25)) * 60 * 60 * 1000, // 24..48 hours from mount
-    [id]
-  );
-
-  const [tickTime, setTickTime] = useState(() => Date.now());
-
-  useEffect(() => {
-    if (!isDealOfTheWeek) return;
-
-    const t = setInterval(() => setTickTime(Date.now()), 1000);
-
-    return () => clearInterval(t);
-  }, [isDealOfTheWeek]);
-
-  const formatCountdown = (): string => {
-    const remainingMs = Math.max(0, dealDeadline - tickTime);
-    const totalSec = Math.floor(remainingMs / 1000);
-    const hh = Math.floor(totalSec / 3600);
-    const mm = Math.floor((totalSec % 3600) / 60);
-    const ss = totalSec % 60;
-    const pad = (n: number) => String(n).padStart(2, '0');
-
-    return `${pad(hh)} : ${pad(mm)} : ${pad(ss)}`;
   };
 
   const handleCheckboxClick = (e: React.MouseEvent) => {
@@ -470,74 +350,6 @@ const BoatListingItemCard = ({
                 }}
               >
                 {t('common.specialPromotion')}
-              </Box>
-            )}
-
-            {/* DEAL OF THE WEEK — cream card. Desktop: top-left corner of
-              image, vertical stack. Mobile: bottom strip across the full
-              image width, one horizontal row (label + countdown inline). */}
-            {isDealOfTheWeek && (
-              <Box
-                sx={{
-                  position: 'absolute',
-                  zIndex: 2,
-                  backgroundColor: '#F0E8D2',
-                  border: '1px solid #E0D7B8',
-                  boxShadow: '0 2px 8px rgba(0,0,0,0.15)',
-                  display: 'flex',
-                  ...(isMobile
-                    ? {
-                        top: 'auto',
-                        bottom: 0,
-                        left: 0,
-                        right: 0,
-                        flexDirection: 'column',
-                        alignItems: 'center',
-                        gap: 0.25,
-                        px: 1,
-                        py: 0.5,
-                        borderRadius: '0 0 10px 10px',
-                      }
-                    : {
-                        top: isSpecialPromotion ? 52 : 12,
-                        left: 12,
-                        flexDirection: 'column',
-                        alignItems: 'flex-start',
-                        gap: 0.25,
-                        px: 1.25,
-                        py: 0.75,
-                        borderRadius: 1,
-                        minWidth: 140,
-                      }),
-                }}
-              >
-                <Stack direction="row" alignItems="center" gap={0.5}>
-                  <AccessTime sx={{ fontSize: 13, color: colors.black950 }} />
-                  <Typography
-                    sx={{
-                      fontSize: isMobile ? 9 : 10,
-                      fontWeight: 800,
-                      letterSpacing: 0.6,
-                      color: colors.black950,
-                      textTransform: 'uppercase',
-                      whiteSpace: 'nowrap',
-                    }}
-                  >
-                    {t('common.dealOfTheWeek')}
-                  </Typography>
-                </Stack>
-                <Typography
-                  sx={{
-                    fontSize: isMobile ? 11 : 13,
-                    fontWeight: 700,
-                    letterSpacing: 0.6,
-                    color: colors.black950,
-                    fontVariantNumeric: 'tabular-nums',
-                    whiteSpace: 'nowrap',
-                  }}
-                >
-                  {formatCountdown()}
-                </Typography>
               </Box>
             )}
           </CardMedia>
@@ -667,7 +479,8 @@ const BoatListingItemCard = ({
               );
             })()}
 
-            {/* Highlights — max 3 amenities, packed close together. DEMO data. */}
+            {/* Highlights — up to 3 real amenities from the backend (empty when
+              the yacht has no equipment rows). */}
             <Stack
               direction="row"
               alignItems="center"
@@ -677,7 +490,7 @@ const BoatListingItemCard = ({
               mb={{ xs: 0.5, md: 0 }}
               sx={{ overflow: 'hidden' }}
             >
-              {demoAmenities.map(({ label, Icon: AmenityIcon }) => (
+              {realAmenities.map(({ label, Icon: AmenityIcon }) => (
                 <Stack
                   key={label}
                   direction={{ xs: 'row', md: 'column' }}
@@ -694,34 +507,6 @@ const BoatListingItemCard = ({
                   </Typography>
                 </Stack>
               ))}
-            </Stack>
-
-            {/* Social proof — DEMO. Shown on ~60% of yachts with a deterministic count.
-              Sits under amenities as a compact blue50 pill — single-line, own
-              width so neighbouring text isn't affected. The 40% of yachts that
-              don't qualify still render an invisible placeholder of identical
-              dimensions so every card ends up the same total height (prevents
-              the "jumpy grid" effect when scrolling through search results). */}
-            <Stack
-              direction="row"
-              alignItems="center"
-              gap={0.5}
-              aria-hidden={!showSocialProof}
-              sx={{
-                mt: 0,
-                alignSelf: 'flex-start',
-                px: 0.75,
-                py: 0.25,
-                borderRadius: 1,
-                backgroundColor: showSocialProof ? colors.blue50 : 'transparent',
-                visibility: showSocialProof ? 'visible' : 'hidden',
-                whiteSpace: 'nowrap',
-              }}
-            >
-              <AccessTime sx={{ fontSize: 12, color: colors.blue500 }} />
-              <Typography color={colors.blue500} sx={{ fontSize: 11, fontWeight: 500, whiteSpace: 'nowrap' }}>
-                {t('common.peopleAlsoInterested', { count: String(interestedCount) })}
-              </Typography>
             </Stack>
 
             {/* Price + Boat details — pushed to bottom-right corner */}
