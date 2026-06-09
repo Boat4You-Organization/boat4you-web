@@ -103,12 +103,18 @@ const BoatListingItemCard = ({
   const searchParams = useSearchParams();
   const boatDetailHref = (() => {
     const q = new URLSearchParams();
-    const startDate = searchParams.get('startDate');
-    const endDate = searchParams.get('endDate');
+    const searchedStart = searchParams.get('startDate');
+    const searchedEnd = searchParams.get('endDate');
 
-    if (startDate) q.set('startDate', startDate);
+    // Only carry dates when the visitor actually searched with dates — keeps
+    // Googlebot-crawled /search card links clean (no date-param duplicates).
+    // When dated, link to the matched OFFER's own week (offerDateFrom/To) so a
+    // "closest day" card opens the exact offer it displays — incl. its one-way
+    // pickup » drop-off — instead of the searched week (which may be a
+    // different, e.g. round-trip, offer). Falls back to the searched dates.
+    if (searchedStart) q.set('startDate', offerDateFrom || searchedStart);
 
-    if (endDate) q.set('endDate', endDate);
+    if (searchedEnd) q.set('endDate', offerDateTo || searchedEnd);
 
     const qs = q.toString();
 
