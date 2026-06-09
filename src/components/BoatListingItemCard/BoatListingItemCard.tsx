@@ -406,7 +406,16 @@ const BoatListingItemCard = ({
                   <Typography
                     variant="body1"
                     component="span"
-                    sx={{ display: 'inline-flex', alignItems: 'center', flexWrap: 'wrap', gap: 0.5 }}
+                    // Desktop: shrink the label so a one-way "pickup » drop-off"
+                    // fits on one line (body1 16px wrapped to two). Mobile keeps
+                    // the default size — it wraps anyway on the narrow card.
+                    sx={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      flexWrap: 'wrap',
+                      gap: 0.5,
+                      fontSize: { md: 12 },
+                    }}
                   >
                     <Box
                       component="span"
@@ -435,7 +444,7 @@ const BoatListingItemCard = ({
                       aria-label={t('common.openInMap')}
                     >
                       {location.name}
-                      <OpenInNew sx={{ fontSize: 14 }} />
+                      <OpenInNew sx={{ fontSize: { xs: 14, md: 12 } }} />
                     </Box>
                     {locationTo?.name && (
                       <>
@@ -473,7 +482,7 @@ const BoatListingItemCard = ({
                           aria-label={t('common.openInMap')}
                         >
                           {locationTo.name}
-                          <OpenInNew sx={{ fontSize: 14 }} />
+                          <OpenInNew sx={{ fontSize: { xs: 14, md: 12 } }} />
                         </Box>
                       </>
                     )}
