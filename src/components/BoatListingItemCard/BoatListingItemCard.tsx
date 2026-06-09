@@ -1,6 +1,8 @@
 'use client';
 
 /* eslint-disable @typescript-eslint/no-shadow, consistent-return, no-nested-ternary */
+import { useState } from 'react';
+
 import {
   AcUnit,
   AccessTime,
@@ -36,7 +38,6 @@ import { UserModel, UserRoleName } from '@/models/user.model';
 import { MatchKind, OfferStatus, YachtModelShortInfo } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
 import useBreakpoint from '@/utils/hooks/useBreakpoint';
-import useToggleState from '@/utils/hooks/useToggleState';
 import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
 import { getBoatImageUrl } from '@/utils/static/imageUtils';
 import { roleGuard } from '@/utils/static/roleGuard';
@@ -70,6 +71,7 @@ const BoatListingItemCard = ({
   name,
   charterType,
   location,
+  locationTo,
   buildYear,
   maxPersons,
   cabins,
@@ -115,7 +117,13 @@ const BoatListingItemCard = ({
   const { isMobile } = useBreakpoint();
   const t = useTranslations();
   const locale = useLocale();
-  const [isMapOpen, toggleMap] = useToggleState();
+  // Track WHICH marina the map modal shows, so a one-way card can open either
+  // the pickup or the drop-off. null = closed. (Replaces the single-location
+  // toggle, which could only ever show `location`.)
+  const [mapMarinaName, setMapMarinaName] = useState<string | null>(null);
+  const isMapOpen = mapMarinaName !== null;
+  const closeMap = () => setMapMarinaName(null);
+  const openMapFor = (marinaName: string) => setMapMarinaName(marinaName);
 
   const isAdmin = roleGuard(user?.roles || [], [UserRoleName.SYSTEM_ADMIN]);
 
@@ -260,7 +268,7 @@ const BoatListingItemCard = ({
 
   return (
     <>
-      {location?.name && <BoatLocationModal open={isMapOpen} onClose={toggleMap} locationName={location.name} />}
+      {mapMarinaName && <BoatLocationModal open={isMapOpen} onClose={closeMap} locationName={mapMarinaName} />}
       <Link href={boatDetailHref} target="_blank" rel="noopener noreferrer">
         <Card
           elevation={0}
@@ -370,54 +378,105 @@ const BoatListingItemCard = ({
             {location && (
               <Stack
                 direction="row"
-                alignItems="center"
+                // One-way "pickup » drop-off" can wrap to 2 lines — top-align
+                // the flag with the first line; single-marina cards stay centered.
+                alignItems={locationTo?.name ? 'flex-start' : 'center'}
                 gap={{ xs: 0.5, md: 1 }}
-                // FlagIcon wraps the flag in a fixed 28px square — force the
-                // wrapper (first child Box) to match the text line-height on
-                // mobile so the flag sits centered with the marina name.
+                // FlagIcon wraps the flag in a fixed square — force the wrapper
+                // (first child Box) to match the marina-name line-height and never
+                // shrink, so the flag stays aligned with the text.
                 sx={{
                   ...(isGridView ? { minHeight: '3em' } : {}),
                   '& > div:first-of-type': {
                     width: { xs: 16, md: 28 },
                     height: { xs: 16, md: 28 },
+                    flexShrink: 0,
                   },
                 }}
               >
                 <FlagIcon countryCode={location.countryCode} />
                 {hasLocation ? (
+                  // One-way charters show pickup » drop-off, both clickable (each
+                  // opens its own marina in the map modal). Round-trip yachts have
+                  // locationTo == null, so only the pickup renders.
                   // Can't use component="a" here — the whole card is already
                   // wrapped in a <Link> (anchor), and nested <a> is invalid HTML.
-                  // Role=link + keyboard handler, stopPropagation to prevent the
+                  // role=button + keyboard handler + stopPropagation prevents the
                   // card's Link from navigating to the boat detail.
                   <Typography
                     variant="body1"
-                    role="button"
-                    tabIndex={0}
-                    onClick={e => {
-                      e.preventDefault();
-                      e.stopPropagation();
-                      toggleMap();
-                    }}
-                    onKeyDown={e => {
-                      if (e.key === 'Enter' || e.key === ' ') {
+                    component="span"
+                    sx={{ display: 'inline-flex', alignItems: 'center', flexWrap: 'wrap', gap: 0.5 }}
+                  >
+                    <Box
+                      component="span"
+                      role="button"
+                      tabIndex={0}
+                      onClick={e => {
                         e.preventDefault();
                         e.stopPropagation();
-                        toggleMap();
-                      }
-                    }}
-                    sx={{
-                      color: colors.blue500,
-                      textDecoration: 'none',
-                      display: 'inline-flex',
-                      alignItems: 'center',
-                      gap: 0.5,
-                      cursor: 'pointer',
-                      '&:hover': { textDecoration: 'underline' },
-                    }}
-                    aria-label={t('common.openInMap')}
-                  >
-                    {location.name}
-                    <OpenInNew sx={{ fontSize: 14 }} />
+                        openMapFor(location.name);
+                      }}
+                      onKeyDown={e => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          openMapFor(location.name);
+                        }
+                      }}
+                      sx={{
+                        color: colors.blue500,
+                        cursor: 'pointer',
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: 0.5,
+                        '&:hover': { textDecoration: 'underline' },
+                      }}
+                      aria-label={t('common.openInMap')}
+                    >
+                      {location.name}
+                      <OpenInNew sx={{ fontSize: 14 }} />
+                    </Box>
+                    {locationTo?.name && (
+                      <>
+                        <Box
+                          component="span"
+                          aria-hidden="true"
+                          sx={{ color: colors.black500, fontWeight: 600, mx: 0.25 }}
+                        >
+                          »
+                        </Box>
+                        <Box
+                          component="span"
+                          role="button"
+                          tabIndex={0}
+                          onClick={e => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            openMapFor(locationTo.name);
+                          }}
+                          onKeyDown={e => {
+                            if (e.key === 'Enter' || e.key === ' ') {
+                              e.preventDefault();
+                              e.stopPropagation();
+                              openMapFor(locationTo.name);
+                            }
+                          }}
+                          sx={{
+                            color: colors.blue500,
+                            cursor: 'pointer',
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            gap: 0.5,
+                            '&:hover': { textDecoration: 'underline' },
+                          }}
+                          aria-label={t('common.openInMap')}
+                        >
+                          {locationTo.name}
+                          <OpenInNew sx={{ fontSize: 14 }} />
+                        </Box>
+                      </>
+                    )}
                   </Typography>
                 ) : (
                   <Typography variant="body1">{location.name}</Typography>

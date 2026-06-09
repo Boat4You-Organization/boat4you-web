@@ -205,6 +205,12 @@ export interface YachtModelShortInfo extends Pick<
   slug: string;
   name: string;
   location: Location;
+  /**
+   * Drop-off location for one-way charters. Null when pickup == drop-off
+   * (most yachts). When set, the listing card renders
+   * "{location.name} » {locationTo.name}".
+   */
+  locationTo?: Location | null;
   charterType: CharterType;
   vesselType: VesselType;
   totalLocations: number;
