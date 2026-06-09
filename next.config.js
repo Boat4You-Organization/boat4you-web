@@ -60,6 +60,17 @@ const nextConfig = {
     ];
   },
   images: {
+    // Custom loader: yacht photos (/public/image/<id>) are resized by the
+    // backend on a ?width= param and served via Bunny CDN, so we skip Next's
+    // built-in optimizer for them entirely — the browser fetches the
+    // correctly-sized image straight from the Bunny edge. This stops cusma1
+    // from re-resizing + caching every variant in .next/cache/images (that
+    // cache had no size cap, grew to ~6 GB and filled the disk). Non-image
+    // endpoints (flags, WP/blog media, static assets) pass through unchanged.
+    // See src/utils/static/bunnyImageLoader.js. Requires "Cache by query
+    // string" on the Bunny pull zone so each width is cached separately.
+    loader: 'custom',
+    loaderFile: './src/utils/static/bunnyImageLoader.js',
     // Local dev backend serves images with query strings (/public/image/123?width=800)
     // which Next.js 16 image optimizer's remotePatterns rejects ("url parameter
     // is not allowed") even with a matching host/port. Turning optimization off
