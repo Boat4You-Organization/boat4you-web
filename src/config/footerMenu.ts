@@ -53,22 +53,22 @@ const footerMenu: NavigationLink[] = [
         target: '_blank',
       },
       {
-        displayName: 'Catamaran Charter Croatia',
+        displayName: 'Catamaran Croatia',
         href: 'https://www.catamaran-croatia-charter.com',
         target: '_blank',
       },
       {
-        displayName: 'Catamaran Charter Greece',
+        displayName: 'Catamaran Greece',
         href: 'https://www.catamaran-charter-greece.com',
         target: '_blank',
       },
       {
-        displayName: 'Catamaran Charter Italy',
+        displayName: 'Catamaran Italy',
         href: 'https://www.catamarancharteritaly.com/',
         target: '_blank',
       },
       {
-        displayName: 'Catamaran Charter Caribbean',
+        displayName: 'Catamaran Caribbean',
         href: 'https://www.catamaran-charter-caribbean.com',
         target: '_blank',
       },
