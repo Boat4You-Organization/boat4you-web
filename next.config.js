@@ -21,6 +21,19 @@ const withNextIntl = createNextIntlPlugin({
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  async redirects() {
+    return [
+      // Apex -> www canonical 301 (2026-06-11). nginx on the edge already
+      // enforces this (see deploy/nginx/); this git-tracked backstop keeps the
+      // rule alive even if the nginx conf is ever regenerated (certbot --nginx).
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'boat4you.com' }],
+        destination: 'https://www.boat4you.com/:path*',
+        permanent: true,
+      },
+    ];
+  },
   // Next default gzip on. Nginx-level brotli (cusma1) handles modern UAs;
   // keeping Next compress=true is safe (it's only applied when no upstream
   // already encoded the response).
