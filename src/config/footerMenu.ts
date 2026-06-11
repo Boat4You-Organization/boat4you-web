@@ -72,6 +72,11 @@ const footerMenu: NavigationLink[] = [
         href: 'https://www.catamaran-charter-caribbean.com',
         target: '_blank',
       },
+      {
+        displayName: 'Croatia Yachting',
+        href: 'https://www.croatia-yachting.com',
+        target: '_blank',
+      },
     ],
   },
 ];
