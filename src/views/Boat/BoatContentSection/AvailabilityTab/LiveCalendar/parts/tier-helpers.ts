@@ -1,6 +1,8 @@
 // Pure logic utilities — extracted from Mario's availability-widget handoff
 // so the React components stay declarative. No JSX here.
 /* eslint-disable no-nested-ternary -- vendored price-tier + label logic */
+import { CURRENCY_SYMBOL_MAP, Currency } from '@/models/user.model';
+
 import { T } from './tokens';
 
 // 'booked'  → RESERVATION (partner reservation) — hard-block.
@@ -24,6 +26,11 @@ export interface WeekData {
    *  greater than `price`, the card renders `regularPrice` struck through
    *  with the % savings beside it. From backend's `totalPriceEur`. */
   regularPrice?: number;
+  /** ISO-4217 currency of `price`/`regularPrice` (e.g. 'AUD', 'USD'). When set,
+   *  `fmtPrice` renders that currency's symbol; undefined falls back to EUR.
+   *  Sourced from the offer's `clientPriceInfo.currency` (the backend converts
+   *  when the offer fetch passes ?currency=). */
+  currency?: string;
   /** Visual state — drives badge + heatmap cell. */
   status: WeekStatus;
   /** Optional pre-computed price tier (0..3). If absent, `withTiers` derives it. */
@@ -64,12 +71,17 @@ export const statusColor = (s: WeekStatus): { fg: string; bg: string } => {
 /** Price-tier → heatmap cell background. */
 export const tierBg = (t: 0 | 1 | 2 | 3): string => [T.tierLow, T.tierMid, T.tierHigh, T.tierPeak][t];
 
-/** Croatian locale price formatter — `9.945 €`. `maximumFractionDigits: 0`
- *  strips any trailing `.00` that the Italy backend ships on its `clientPriceEur`
- *  field (Mario rule 12.5.2026 — "na italy, cijena bez .00"). EY + Greece +
- *  Croatia + Caribbean ne vraćaju decimale, ali option je benign there too. */
-export const fmtPrice = (n: number): string =>
-  `${new Intl.NumberFormat('hr-HR', { maximumFractionDigits: 0 }).format(n)} €`;
+/** Croatian-locale price formatter — `9.945 €`, or `15.745 A$` when a currency
+ *  is given. `maximumFractionDigits: 0` strips any trailing `.00` the Italy
+ *  backend ships (Mario rule 12.5.2026 — "na italy, cijena bez .00"). The
+ *  symbol mirrors `formatPriceWithCurrency` (CURRENCY_SYMBOL_MAP) so the week
+ *  cards match the detail box + booking panel for AUD/USD/etc.; no `currency`
+ *  → EUR. */
+export const fmtPrice = (n: number, currency?: string): string => {
+  const symbol = currency ? (CURRENCY_SYMBOL_MAP[currency as Currency] ?? currency) : '€';
+
+  return `${new Intl.NumberFormat('hr-HR', { maximumFractionDigits: 0 }).format(n)} ${symbol}`;
+};
 
 /**
  * Auto-derive a price tier (0..3) per week relative to the min/max of the

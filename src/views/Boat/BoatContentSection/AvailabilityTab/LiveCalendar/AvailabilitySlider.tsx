@@ -13,11 +13,13 @@ import weekOfYear from 'dayjs/plugin/weekOfYear';
 
 import { getSingleYachtStandardOffers } from '@/actions/yacht.actions';
 import AvailabilityCard from '@/components/AvailabilityCard';
+import { Currency } from '@/models/user.model';
 import { Status, YachtOfferModel } from '@/models/yacht-offer.model';
 import { YachtModel } from '@/models/yacht.model';
 import useBreakpoint from '@/utils/hooks/useBreakpoint';
 import useQueryParams from '@/utils/hooks/useQueryParams';
 import DateTime from '@/utils/static/DateTime';
+import { useUserStore } from '@/valtio/user/user.store';
 import { setselectedOffer } from '@/valtio/yacht/yacht.actions';
 
 import ArrowBtn from './parts/ArrowBtn';
@@ -58,14 +60,18 @@ const mapStatus = (s: Status | undefined): WeekData['status'] => {
 const toWeek = (offer: YachtOfferModel): WeekData => {
   const from = dayjs(offer.dateFrom);
   const to = dayjs(offer.dateTo);
-  const finalPrice = typeof offer.clientPriceEur === 'number' ? offer.clientPriceEur : 0;
+  // Use the currency-converted amounts from the partner price-info (the backend
+  // converts when the fetch passes ?currency=), falling back to the EUR fields.
+  // `currency` drives the card symbol so AUD/USD/... render correctly instead of
+  // a hardcoded €. clientPriceInfo.currency is the source of truth for the unit.
+  const finalPrice =
+    offer.clientPriceInfo?.amount ?? (typeof offer.clientPriceEur === 'number' ? offer.clientPriceEur : 0);
   // Original ("list") rate before the offered price. boat4you's
-  // `/standard-offers` ships per-week `listPriceEur` (verified live), so we use
-  // it directly — no uniform yacht-wide ratio approximation like the catamaran/
-  // EY port did. Struck-through + savings % render only when the list price is
-  // genuinely above the final price, matching the Europe Yachts card
-  // (list € · −% · final €).
-  const listPrice = typeof offer.listPriceEur === 'number' ? offer.listPriceEur : 0;
+  // `/standard-offers` ships per-week list price, so we use it directly — no
+  // uniform yacht-wide ratio approximation like the catamaran/EY port did.
+  // Struck-through + savings % render only when the list price is genuinely
+  // above the final price, matching the Europe Yachts card (list · −% · final).
+  const listPrice = offer.listPriceInfo?.amount ?? (typeof offer.listPriceEur === 'number' ? offer.listPriceEur : 0);
   const regularPrice = listPrice > finalPrice ? listPrice : undefined;
 
   return {
@@ -75,6 +81,7 @@ const toWeek = (offer: YachtOfferModel): WeekData => {
     fromMonth: from.format('MMM'),
     price: finalPrice,
     regularPrice,
+    currency: offer.clientPriceInfo?.currency,
     status: mapStatus(offer.status as Status),
     raw: offer,
     dateFromIso: offer.dateFrom,
@@ -90,7 +97,12 @@ const AvailabilitySlider = ({ yacht }: AvailabilitySliderProps) => {
   // blue AvailabilityDateSelector + offer detail card react to those params
   // (same channel the legacy week-cards picker used). No valtio date actions
   // here (boat4you doesn't expose them).
-  const { setMultipleParams } = useQueryParams();
+  const { setMultipleParams, params } = useQueryParams();
+  const { user } = useUserStore();
+  // Currency precedence mirrors useStandardOffers: logged-in user preference,
+  // then the ?currency= URL param, else EUR. Drives both the fetch (so the
+  // backend converts) and the rendered symbol.
+  const currency = user?.currency || (params.currency as Currency) || Currency.EUR;
 
   const fetchOffersForCurrentParams = useCallback(() => {
     const startDate = DateTime.now();
@@ -102,10 +114,11 @@ const AvailabilitySlider = ({ yacht }: AvailabilitySliderProps) => {
         // 18-month horizon (Mario rule 12.5.2026) — klijent treba moći
         // scroll-ati u sljedeću sezonu (npr. August 2027) iz spring 2026.
         dateTo: DateTime.formatFull(startDate?.add(18, 'month') as Dayjs),
+        currency,
       });
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [yacht.slug]);
+  }, [yacht.slug, currency]);
 
   useEffect(() => {
     fetchOffersForCurrentParams();

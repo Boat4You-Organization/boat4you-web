@@ -152,7 +152,7 @@ export async function getSingleYachtAvailability(
 // hook hits.
 export async function getSingleYachtStandardOffers(
   _state: unknown,
-  { yachtSlug, dateFrom, dateTo }: YachtOffersParams
+  { yachtSlug, dateFrom, dateTo, currency }: YachtOffersParams
 ): Promise<YachtOfferModel[]> {
   try {
     const params = new URLSearchParams();
@@ -160,6 +160,12 @@ export async function getSingleYachtStandardOffers(
     if (dateFrom) params.append('dateFrom', dateFrom);
 
     if (dateTo) params.append('dateTo', dateTo);
+
+    // Pass the selected currency so the backend converts clientPriceInfo /
+    // listPriceInfo amounts (AUD/USD/...). Without it the calendar week cards
+    // stayed in EUR while the detail box + booking panel showed the chosen
+    // currency.
+    if (currency) params.append('currency', currency);
 
     const response = await fetch(
       `${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/yachts/${yachtSlug}/standard-offers?${params.toString()}`

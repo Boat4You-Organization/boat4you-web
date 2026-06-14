@@ -179,7 +179,7 @@ const AvailabilityCard = ({ w, selected, onClick, size = 'desktop' }: Availabili
                 fontFeatureSettings: '"tnum"',
               }}
             >
-              {fmtPrice(regular)}
+              {fmtPrice(regular, w.currency)}
             </Typography>
             <Box
               component="span"
@@ -210,7 +210,7 @@ const AvailabilityCard = ({ w, selected, onClick, size = 'desktop' }: Availabili
               Strikethrough regular price already hidden when `price ≤ 0`
               (guard above). Main `0 €` stays even when booked — same colour
               as the row, no strikethrough, no em-dash. */}
-          {fmtPrice(w.price)}
+          {fmtPrice(w.price, w.currency)}
         </Typography>
       </Box>
     </Box>

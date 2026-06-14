@@ -42,8 +42,8 @@ const HeatmapStrip = ({ weeks, activeId, visibleRange, onCellClick, height = 56 
             key={w.id}
             onClick={() => !isBlocked && onCellClick(w, i)}
             disabled={isBlocked}
-            title={`${w.from} → ${w.to} · ${fmtPrice(w.price)} · ${statusLabel(w.status)}`}
-            aria-label={`Week ${w.from} to ${w.to}, ${fmtPrice(w.price)}, ${statusLabel(w.status)}`}
+            title={`${w.from} → ${w.to} · ${fmtPrice(w.price, w.currency)} · ${statusLabel(w.status)}`}
+            aria-label={`Week ${w.from} to ${w.to}, ${fmtPrice(w.price, w.currency)}, ${statusLabel(w.status)}`}
             sx={{
               flex: 1,
               padding: 0,
