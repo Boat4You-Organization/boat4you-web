@@ -54,10 +54,15 @@ import styles from './BoatListingItemCard.module.scss';
  *   "Lagoon 450 F"               → "Lagoon 450 F"
  */
 const cleanModelName = (raw: string): string =>
-  raw
-    .replace(/\s*[-,|]?\s*\d+\s*\+\s*\d+\s*cab\.?$/i, '')
-    .replace(/\s*[-,|]?\s*\d+\s*cab\.?$/i, '')
-    .trim();
+  // Title-case the model the same way the yacht name already is (toTitleCase),
+  // so the listing never shows shouty all-caps model trims like "ELITE" or
+  // "SMART ELECTRIC" — every vessel name reads lowercase-except-initial.
+  toTitleCase(
+    raw
+      .replace(/\s*[-,|]?\s*\d+\s*\+\s*\d+\s*cab\.?$/i, '')
+      .replace(/\s*[-,|]?\s*\d+\s*cab\.?$/i, '')
+      .trim()
+  );
 
 interface BoatListingItemCardProps extends YachtModelShortInfo {
   isGridView: boolean;
