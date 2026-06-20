@@ -15,10 +15,6 @@ const PAGE_SIZE = 100;
 
 export const revalidate = 3600;
 
-const EMPTY_SITEMAP = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-</urlset>`;
-
 const XML_HEADERS = {
   'Content-Type': 'application/xml',
   'X-Content-Type-Options': 'nosniff',
@@ -55,8 +51,13 @@ export async function GET(request: NextRequest, { params }: { params: Promise<{ 
       countryCodes: PROMOTED,
     });
 
+    // Out-of-range / empty page: return 404, NOT a 200 with an empty
+    // <urlset>. An empty urlset has no <url> child, which Google Search
+    // Console rejects ("Missing XML tag: parent urlset, tag url"). 404
+    // lets GSC cleanly drop stale page indices left over from when the
+    // catalogue was larger (e.g. before agencies were de-listed).
     if (!yachtsData.content || yachtsData.content.length === 0) {
-      return new NextResponse(EMPTY_SITEMAP, { headers: XML_HEADERS });
+      return new NextResponse('Not Found', { status: 404 });
     }
 
     const lastmod = new Date().toISOString();
@@ -83,6 +84,8 @@ ${urls}
 
     return new NextResponse(sitemap, { headers: XML_HEADERS });
   } catch {
-    return new NextResponse(EMPTY_SITEMAP, { headers: XML_HEADERS });
+    // Transient backend failure — 503 so GSC retries later instead of
+    // treating an empty/200 response as a permanently broken sitemap.
+    return new NextResponse('Service Unavailable', { status: 503 });
   }
 }

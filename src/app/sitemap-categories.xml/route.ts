@@ -10,6 +10,14 @@ const XML_HEADERS = {
   'X-Content-Type-Options': 'nosniff',
 };
 
+// XML-escape <loc> contents. Query-string URLs contain a literal `&`
+// (the `destinations=…&boatTypes=…` separator), and `&` is reserved in
+// XML — an unescaped one makes the whole sitemap unparseable (GSC
+// "Sitemap can be read, but has errors → Parsing error, line 4"). Escape
+// `&` first so we don't double-encode the entities we introduce.
+const escapeXml = (s: string): string =>
+  s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&apos;');
+
 // Per-vessel-type × per-country SEO landings — Google rewards specific
 // "catamaran charter Croatia" / "gulet rental Greece" style intent. Both
 // `destinations` and `boatTypes` are canonical-aware in /search
@@ -66,7 +74,7 @@ export async function GET() {
         const loc = `${baseUrl}${prefix}/search?destinations=${encodeURIComponent(slug)}&boatTypes=${type}`;
 
         return `  <url>
-    <loc>${loc}</loc>
+    <loc>${escapeXml(loc)}</loc>
     <lastmod>${lastmod}</lastmod>
   </url>`;
       })
