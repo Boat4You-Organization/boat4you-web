@@ -117,7 +117,10 @@ const RootLayout = async ({ children, params }: RootLayoutProps) => {
           <Providers>{children}</Providers>
         </NextIntlClientProvider>
       </body>
-      <GoogleAnalyticsConsent gaId={process.env.NEXT_PUBLIC_BOAT_WS_GAID as string} gAdsId="AW-17979079830" />
+      <GoogleAnalyticsConsent
+        gaId={process.env.NEXT_PUBLIC_BOAT_WS_GAID as string}
+        gAdsIds={['AW-17979079830', 'AW-11060948992']}
+      />
     </html>
   );
 };

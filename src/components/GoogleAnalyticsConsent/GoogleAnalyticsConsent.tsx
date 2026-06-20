@@ -8,10 +8,10 @@ import { shouldShowAnalytics } from '@/lib/cookie-consent';
 
 interface GoogleAnalyticsConsentProps {
   gaId: string;
-  gAdsId?: string;
+  gAdsIds?: string[];
 }
 
-export function GoogleAnalyticsConsent({ gaId, gAdsId }: GoogleAnalyticsConsentProps) {
+export function GoogleAnalyticsConsent({ gaId, gAdsIds }: GoogleAnalyticsConsentProps) {
   const [analyticsConsent, setAnalyticsConsent] = useState(false);
   const [mounted, setMounted] = useState(false);
 
@@ -75,11 +75,11 @@ export function GoogleAnalyticsConsent({ gaId, gAdsId }: GoogleAnalyticsConsentP
         security_storage: 'granted',
       });
 
-      if (gAdsId && analyticsConsent) {
-        window.gtag('config', gAdsId);
+      if (analyticsConsent && gAdsIds?.length) {
+        gAdsIds.forEach(id => window.gtag('config', id));
       }
     }
-  }, [gaId, gAdsId, analyticsConsent, mounted]);
+  }, [gaId, gAdsIds, analyticsConsent, mounted]);
 
   if (!gaId || !mounted) return null;
 
