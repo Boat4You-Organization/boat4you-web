@@ -10,6 +10,7 @@ import FormInput from '@/components/Forms/FormInput';
 import PhoneInput from '@/components/PhoneInput';
 import VerifiedBadge from '@/components/SvgIcons/VerifiedBadge';
 import { BookingFormValues } from '@/config/form-models.config';
+import { trackBeginCheckout } from '@/lib/trackBeginCheckout';
 import { PaymentPhase } from '@/models/reservation.model';
 import { UserModel } from '@/models/user.model';
 import { YachtModel } from '@/models/yacht.model';
@@ -135,6 +136,11 @@ const DetailsStep = ({
       if (isAdmin) {
         router.push('/payment-pending');
       } else {
+        // Conversion: a real customer filled in their details and a reservation
+        // was created — fire BEFORE navigating away so gtag runs on this page.
+        // Consent Mode gates it; transaction_id de-dupes. Admin bookings above
+        // are intentionally excluded.
+        trackBeginCheckout({ ref: state.payload.id, value: reservationData.totalPriceEur, currency: 'EUR' });
         router.push(`/payment/${params?.slug ?? ''}`);
         showToast({
           status: 'success',
