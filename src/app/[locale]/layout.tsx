@@ -93,6 +93,19 @@ const RootLayout = async ({ children, params }: RootLayoutProps) => {
   return (
     <html lang={locale} suppressHydrationWarning>
       <head>
+        {/* Google Consent Mode v2 — set the denied-by-default consent state
+            BEFORE gtag.js loads (GoogleAnalyticsConsent loads it eagerly so
+            Google can detect the tag). Until the visitor accepts, the tag sets
+            no cookies and tracks nothing; analytics_storage follows the
+            analytics choice, ad_* follows marketing. A returning visitor who
+            already consented starts granted (read synchronously from the
+            consent cookie). */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}var a='denied',m='denied';try{var c=document.cookie.match(/(?:^|; )boat4you_cookie_consent=([^;]*)/);if(c){var o=JSON.parse(decodeURIComponent(c[1]));if(o&&o.consentGiven){if(o.analytics)a='granted';if(o.marketing)m='granted';}}}catch(e){}gtag('consent','default',{analytics_storage:a,ad_storage:m,ad_user_data:m,ad_personalization:m,functionality_storage:'granted',security_storage:'granted'});",
+          }}
+        />
         {/* Pre-resolve DNS + TLS to the two hosts every page fetches from
             (backend API + Bunny image CDN). PSI flags "Avoid multiple
             page redirects" + TTFB win on cold-cache mobile. preconnect is

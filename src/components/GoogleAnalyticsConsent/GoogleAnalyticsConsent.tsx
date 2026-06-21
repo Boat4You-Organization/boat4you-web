@@ -1,87 +1,67 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
 import { GoogleAnalytics } from '@next/third-parties/google';
 
-import { shouldShowAnalytics } from '@/lib/cookie-consent';
+import { shouldShowAnalytics, shouldShowMarketing } from '@/lib/cookie-consent';
 
 interface GoogleAnalyticsConsentProps {
   gaId: string;
   gAdsIds?: string[];
 }
 
+type GtagFn = (...args: unknown[]) => void;
+
+const getGtag = (): GtagFn | undefined =>
+  typeof window === 'undefined' ? undefined : (window as unknown as { gtag?: GtagFn }).gtag;
+
+// Google Consent Mode v2.
+//
+// The denied-by-default consent state is set by an inline <head> script in the
+// layout that runs BEFORE gtag.js loads (see RootLayout). That ordering is what
+// keeps us compliant: the tag is loaded eagerly so Google can DETECT it, but in
+// `denied` state it sets NO cookies and tracks nothing — only anonymous,
+// cookieless consent signals — until the visitor accepts. After consent we flip
+// to `granted` here.
+//
+// Granular mapping (GDPR: separate purposes): analytics_storage follows the
+// ANALYTICS choice; ad_storage / ad_user_data / ad_personalization follow the
+// MARKETING choice. GA4 is loaded eagerly by <GoogleAnalytics>; the Google Ads
+// conversion id(s) are configured here.
 export function GoogleAnalyticsConsent({ gaId, gAdsIds }: GoogleAnalyticsConsentProps) {
-  const [analyticsConsent, setAnalyticsConsent] = useState(false);
-  const [mounted, setMounted] = useState(false);
-
   useEffect(() => {
-    setAnalyticsConsent(shouldShowAnalytics());
-    setMounted(true);
-  }, []);
+    const sync = (): void => {
+      const analytics = shouldShowAnalytics() ? 'granted' : 'denied';
+      const marketing = shouldShowMarketing() ? 'granted' : 'denied';
 
-  useEffect(() => {
-    const handleConsentChange = (): void => {
-      const newAnalyticsConsent = shouldShowAnalytics();
-
-      setAnalyticsConsent(newAnalyticsConsent);
-
-      if (typeof window !== 'undefined' && window.gtag) {
-        window.gtag('consent', 'update', {
-          analytics_storage: newAnalyticsConsent ? 'granted' : 'denied',
-        });
-      }
+      getGtag()?.('consent', 'update', {
+        analytics_storage: analytics,
+        ad_storage: marketing,
+        ad_user_data: marketing,
+        ad_personalization: marketing,
+      });
     };
 
-    window.addEventListener('storage', handleConsentChange);
-    window.addEventListener('consentUpdated', handleConsentChange);
+    sync();
+    window.addEventListener('storage', sync);
+    window.addEventListener('consentUpdated', sync);
 
     return () => {
-      window.removeEventListener('storage', handleConsentChange);
-      window.removeEventListener('consentUpdated', handleConsentChange);
+      window.removeEventListener('storage', sync);
+      window.removeEventListener('consentUpdated', sync);
     };
   }, []);
 
   useEffect(() => {
-    if (!mounted || !gaId) return;
+    const gtag = getGtag();
 
-    if (!window.dataLayer) {
-      window.dataLayer = [];
-    }
+    if (!gaId || !gtag || !gAdsIds?.length) return;
 
-    if (!window.gtag) {
-      window.gtag = function gtagFunction(
-        command: 'config' | 'event' | 'consent' | 'js',
-        targetOrAction: string | 'default' | 'update' | Date,
-        config?: {
-          analytics_storage?: 'granted' | 'denied';
-          ad_storage?: 'granted' | 'denied';
-          functionality_storage?: 'granted' | 'denied';
-          security_storage?: 'granted' | 'denied';
-          [key: string]: string | number | boolean | undefined;
-        }
-      ) {
-        if (window.dataLayer) {
-          window.dataLayer.push({ command, target: targetOrAction, ...config });
-        }
-      };
-    }
+    gAdsIds.forEach(id => gtag('config', id));
+  }, [gaId, gAdsIds]);
 
-    if (window.gtag) {
-      window.gtag('consent', 'default', {
-        analytics_storage: analyticsConsent ? 'granted' : 'denied',
-        ad_storage: analyticsConsent ? 'granted' : 'denied',
-        functionality_storage: 'granted',
-        security_storage: 'granted',
-      });
+  if (!gaId) return null;
 
-      if (analyticsConsent && gAdsIds?.length) {
-        gAdsIds.forEach(id => window.gtag('config', id));
-      }
-    }
-  }, [gaId, gAdsIds, analyticsConsent, mounted]);
-
-  if (!gaId || !mounted) return null;
-
-  return analyticsConsent ? <GoogleAnalytics gaId={gaId} /> : null;
+  return <GoogleAnalytics gaId={gaId} />;
 }
