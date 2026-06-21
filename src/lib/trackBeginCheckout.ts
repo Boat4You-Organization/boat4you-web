@@ -7,10 +7,9 @@
 // configures, so Google Consent Mode v2 governs them automatically: nothing
 // with personal data fires until the visitor accepts cookies (Google models the
 // conversion when denied).
-//   • ads_conversion_begin_checkout — the Google Ads conversion. Create it in
-//     Google Ads by importing the GA4 key event of the SAME name (GA4 is linked
-//     to the Ads account). Do NOT rename without updating the Google Ads
-//     conversion action.
+//   • a Google Ads 'conversion' event sent to the "Begin checkout" conversion
+//     action (send_to AW-11060948992/fGaQCMr96sIcEIDgopop). This is what Google
+//     Ads counts + optimises bidding toward.
 //   • begin_checkout — the GA4 standard ecommerce event (funnel + reporting).
 //
 // `transaction_id` (the reservation id) lets Google Ads de-duplicate if the
@@ -18,7 +17,8 @@
 
 type Gtag = (command: string, action: string, params?: Record<string, unknown>) => void;
 
-const GADS_BEGIN_CHECKOUT_EVENT = 'ads_conversion_begin_checkout';
+// Google Ads "Begin checkout" conversion action (account AW-11060948992).
+const GADS_CONVERSION_SEND_TO = 'AW-11060948992/fGaQCMr96sIcEIDgopop';
 
 export const trackBeginCheckout = ({
   ref,
@@ -38,6 +38,6 @@ export const trackBeginCheckout = ({
   const txId = ref !== undefined && ref !== null ? String(ref) : undefined;
   const valueParams = typeof value === 'number' && value > 0 ? { value, currency } : {};
 
-  gtag('event', GADS_BEGIN_CHECKOUT_EVENT, { transaction_id: txId, ...valueParams });
+  gtag('event', 'conversion', { send_to: GADS_CONVERSION_SEND_TO, transaction_id: txId, ...valueParams });
   gtag('event', 'begin_checkout', { transaction_id: txId, ...valueParams });
 };
