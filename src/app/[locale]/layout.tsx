@@ -5,6 +5,7 @@ import { Metadata } from 'next';
 import { Locale, NextIntlClientProvider, hasLocale } from 'next-intl';
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
+import Script from 'next/script';
 
 import GoogleAnalyticsConsent from '@/components/GoogleAnalyticsConsent';
 import { LocaleType } from '@/config/locales.config';
@@ -100,7 +101,9 @@ const RootLayout = async ({ children, params }: RootLayoutProps) => {
             analytics choice, ad_* follows marketing. A returning visitor who
             already consented starts granted (read synchronously from the
             consent cookie). */}
-        <script
+        <Script
+          id="gtag-consent-default"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html:
               "window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}var a='denied',m='denied';try{var c=document.cookie.match(/(?:^|; )boat4you_cookie_consent=([^;]*)/);if(c){var o=JSON.parse(decodeURIComponent(c[1]));if(o&&o.consentGiven){if(o.analytics)a='granted';if(o.marketing)m='granted';}}}catch(e){}gtag('consent','default',{analytics_storage:a,ad_storage:m,ad_user_data:m,ad_personalization:m,functionality_storage:'granted',security_storage:'granted'});",
