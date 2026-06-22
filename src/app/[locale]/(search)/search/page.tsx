@@ -298,15 +298,18 @@ function buildSearchProductsLd(yachts: YachtModelShortInfo[] | undefined, baseUr
     const yachtUrl = `${baseUrl}/boat/${y.slug}`;
     const fullName = [y.modelName, y.name].filter(Boolean).join(' ').trim() || y.name || 'Yacht';
     const brandFirstWord = (y.modelName || '').trim().split(/\s+/)[0] || null;
-    const imageUrl = y.mainImageId ? getBoatImageUrl(y.mainImageId, 1200) : null;
+    // Google Merchant listings REQUIRES `image` on every Product — a missing
+    // field is a critical GSC error. Always set it, falling back to the site
+    // OG image when the yacht has no photo (a valid fallback beats no image),
+    // mirroring the boat-detail Product schema.
+    const imageUrl = y.mainImageId ? getBoatImageUrl(y.mainImageId, 1200) : `${baseUrl}/meta/og-image.png`;
     const product: Record<string, unknown> = {
       '@type': 'Product',
       '@id': yachtUrl,
       name: fullName,
+      image: imageUrl,
       url: yachtUrl,
     };
-
-    if (imageUrl) product.image = imageUrl;
 
     if (brandFirstWord) product.brand = { '@type': 'Brand', name: brandFirstWord };
 
