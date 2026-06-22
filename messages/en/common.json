@@ -584,5 +584,12 @@
   "crewListTitle": "Crew list",
   "crewListDescription": "Submit your crew details before pickup.",
   "openLink": "Open link",
-  "download": "Download"
+  "download": "Download",
+  "pwa": {
+    "installTitle": "Install Boat4You",
+    "installSubtitle": "Add to your home screen for one-tap access.",
+    "iosHint": "Tap Share, then \"Add to Home Screen\".",
+    "installCta": "Install",
+    "dismiss": "Dismiss"
+  }
 }

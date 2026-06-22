@@ -26,7 +26,7 @@
         text-align: center;
       }
       .card {
-        max-width: 420px;
+        max-width: 440px;
       }
       img {
         width: 72px;
@@ -62,9 +62,70 @@
   <body>
     <div class="card">
       <img src="/favicons/android-chrome-192x192.png" alt="Boat4You" />
-      <h1>You're offline</h1>
-      <p>We can't reach Boat4You right now. Check your connection — yacht availability and prices need to load live.</p>
-      <button onclick="location.reload()">Try again</button>
+      <h1 id="t">You're offline</h1>
+      <p id="b">
+        We can't reach Boat4You right now. Check your connection — yacht availability and prices need to load live.
+      </p>
+      <button id="r" onclick="location.reload()">Try again</button>
     </div>
+    <script>
+      (function () {
+        var T = {
+          en: {
+            t: "You're offline",
+            b: "We can't reach Boat4You right now. Check your connection — yacht availability and prices need to load live.",
+            r: 'Try again',
+          },
+          hr: {
+            t: 'Niste povezani',
+            b: 'Trenutačno ne možemo doći do Boat4You. Provjerite vezu — dostupnost plovila i cijene moraju se učitati uživo.',
+            r: 'Pokušaj ponovno',
+          },
+          de: {
+            t: 'Du bist offline',
+            b: 'Boat4You ist gerade nicht erreichbar. Prüfe deine Verbindung — Verfügbarkeit und Preise werden live geladen.',
+            r: 'Erneut versuchen',
+          },
+          fr: {
+            t: 'Vous êtes hors ligne',
+            b: 'Boat4You est injoignable pour le moment. Vérifiez votre connexion — la disponibilité et les prix se chargent en direct.',
+            r: 'Réessayer',
+          },
+          it: {
+            t: 'Sei offline',
+            b: 'Al momento non riusciamo a raggiungere Boat4You. Controlla la connessione — disponibilità e prezzi si caricano in tempo reale.',
+            r: 'Riprova',
+          },
+          es: {
+            t: 'Estás sin conexión',
+            b: 'Ahora mismo no podemos acceder a Boat4You. Comprueba tu conexión — la disponibilidad y los precios se cargan en directo.',
+            r: 'Reintentar',
+          },
+          pt: {
+            t: 'Está offline',
+            b: 'De momento não conseguimos aceder ao Boat4You. Verifique a ligação — a disponibilidade e os preços carregam em direto.',
+            r: 'Tentar novamente',
+          },
+          pl: {
+            t: 'Jesteś offline',
+            b: 'Nie możemy teraz połączyć się z Boat4You. Sprawdź połączenie — dostępność i ceny ładują się na żywo.',
+            r: 'Spróbuj ponownie',
+          },
+          nl: {
+            t: 'Je bent offline',
+            b: 'We kunnen Boat4You nu niet bereiken. Controleer je verbinding — beschikbaarheid en prijzen worden live geladen.',
+            r: 'Opnieuw proberen',
+          },
+        };
+        var m = document.cookie.match(/(?:^|; )NEXT_LOCALE=([a-z]{2})/);
+        var l = (m && m[1]) || (navigator.language || 'en').slice(0, 2).toLowerCase();
+        var d = T[l] || T.en;
+        document.documentElement.lang = T[l] ? l : 'en';
+        document.title = d.t + ' · Boat4You';
+        document.getElementById('t').textContent = d.t;
+        document.getElementById('b').textContent = d.b;
+        document.getElementById('r').textContent = d.r;
+      })();
+    </script>
   </body>
 </html>

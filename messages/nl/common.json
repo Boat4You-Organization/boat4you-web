@@ -584,5 +584,12 @@
   "crewListTitle": "Bemanningslijst",
   "crewListDescription": "Dien de bemanningsgegevens in vóór de overdracht.",
   "openLink": "Link openen",
-  "download": "Downloaden"
+  "download": "Downloaden",
+  "pwa": {
+    "installTitle": "Boat4You installeren",
+    "installSubtitle": "Voeg toe aan je startscherm voor snelle toegang.",
+    "iosHint": "Tik op Delen en daarna „Zet op beginscherm”.",
+    "installCta": "Installeren",
+    "dismiss": "Sluiten"
+  }
 }

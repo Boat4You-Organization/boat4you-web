@@ -584,5 +584,12 @@
   "crewListTitle": "Lista de tripulación",
   "crewListDescription": "Envíe los datos de la tripulación antes de la recogida.",
   "openLink": "Abrir enlace",
-  "download": "Descargar"
+  "download": "Descargar",
+  "pwa": {
+    "installTitle": "Instalar Boat4You",
+    "installSubtitle": "Añádelo a tu pantalla de inicio para un acceso rápido.",
+    "iosHint": "Toca Compartir y luego «Añadir a inicio».",
+    "installCta": "Instalar",
+    "dismiss": "Cerrar"
+  }
 }

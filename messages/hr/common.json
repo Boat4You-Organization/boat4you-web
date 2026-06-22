@@ -584,5 +584,12 @@
   "crewListTitle": "Lista posade",
   "crewListDescription": "Pošaljite podatke posade prije preuzimanja.",
   "openLink": "Otvori link",
-  "download": "Preuzmi"
+  "download": "Preuzmi",
+  "pwa": {
+    "installTitle": "Instalirajte Boat4You",
+    "installSubtitle": "Dodajte na početni zaslon za pristup jednim dodirom.",
+    "iosHint": "Dodirnite Dijeli, zatim „Dodaj na početni zaslon”.",
+    "installCta": "Instaliraj",
+    "dismiss": "Zatvori"
+  }
 }

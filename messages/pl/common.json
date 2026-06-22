@@ -584,5 +584,12 @@
   "crewListTitle": "Lista załogi",
   "crewListDescription": "Prześlij dane załogi przed odbiorem.",
   "openLink": "Otwórz link",
-  "download": "Pobierz"
+  "download": "Pobierz",
+  "pwa": {
+    "installTitle": "Zainstaluj Boat4You",
+    "installSubtitle": "Dodaj do ekranu głównego, aby mieć szybki dostęp.",
+    "iosHint": "Dotknij Udostępnij, a następnie „Do ekranu głównego”.",
+    "installCta": "Zainstaluj",
+    "dismiss": "Zamknij"
+  }
 }

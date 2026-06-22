@@ -2,6 +2,8 @@
 
 import { CSSProperties, useEffect, useState } from 'react';
 
+import { useTranslations } from 'next-intl';
+
 interface BeforeInstallPromptEvent extends Event {
   prompt: () => Promise<void>;
   userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>;
@@ -54,6 +56,7 @@ const close: CSSProperties = {
 // install API) it shows the "Share → Add to Home Screen" hint. Hidden when the
 // app is already running standalone or the user dismissed it.
 export default function InstallPrompt() {
+  const t = useTranslations('common');
   const [deferred, setDeferred] = useState<BeforeInstallPromptEvent | null>(null);
   const [iosHint, setIosHint] = useState(false);
   const [visible, setVisible] = useState(false);
@@ -118,21 +121,19 @@ export default function InstallPrompt() {
   if (!visible) return null;
 
   return (
-    <div role="dialog" aria-label="Install Boat4You app" style={wrap}>
+    <div role="dialog" aria-label={t('pwa.installTitle')} style={wrap}>
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src="/favicons/android-chrome-192x192.png" alt="" width={40} height={40} style={{ borderRadius: 8 }} />
       <div style={{ flex: 1, minWidth: 0 }}>
-        <div style={{ fontWeight: 600, fontSize: 14, color: '#0a2540' }}>Install Boat4You</div>
-        <div style={{ fontSize: 12, color: '#5b6b7b' }}>
-          {iosHint ? 'Tap Share, then “Add to Home Screen”.' : 'Add to your home screen for one-tap access.'}
-        </div>
+        <div style={{ fontWeight: 600, fontSize: 14, color: '#0a2540' }}>{t('pwa.installTitle')}</div>
+        <div style={{ fontSize: 12, color: '#5b6b7b' }}>{iosHint ? t('pwa.iosHint') : t('pwa.installSubtitle')}</div>
       </div>
       {!iosHint && (
         <button type="button" onClick={install} style={btn}>
-          Install
+          {t('pwa.installCta')}
         </button>
       )}
-      <button type="button" onClick={dismiss} aria-label="Dismiss" style={close}>
+      <button type="button" onClick={dismiss} aria-label={t('pwa.dismiss')} style={close}>
         ✕
       </button>
     </div>

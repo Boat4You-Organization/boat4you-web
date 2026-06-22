@@ -584,5 +584,12 @@
   "crewListTitle": "Lista equipaggio",
   "crewListDescription": "Invia i dati dell'equipaggio prima del ritiro.",
   "openLink": "Apri link",
-  "download": "Scarica"
+  "download": "Scarica",
+  "pwa": {
+    "installTitle": "Installa Boat4You",
+    "installSubtitle": "Aggiungi alla schermata Home per accedere con un tocco.",
+    "iosHint": "Tocca Condividi, poi «Aggiungi a Home».",
+    "installCta": "Installa",
+    "dismiss": "Chiudi"
+  }
 }
