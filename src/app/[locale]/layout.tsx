@@ -8,6 +8,7 @@ import { notFound } from 'next/navigation';
 import Script from 'next/script';
 
 import GoogleAnalyticsConsent from '@/components/GoogleAnalyticsConsent';
+import InstallPrompt from '@/components/InstallPrompt';
 import ServiceWorkerRegister from '@/components/ServiceWorkerRegister';
 import { LocaleType } from '@/config/locales.config';
 import { meta } from '@/config/meta';
@@ -143,6 +144,7 @@ const RootLayout = async ({ children, params }: RootLayoutProps) => {
           <Providers>{children}</Providers>
         </NextIntlClientProvider>
         <ServiceWorkerRegister />
+        <InstallPrompt />
       </body>
       <GoogleAnalyticsConsent
         gaId={process.env.NEXT_PUBLIC_BOAT_WS_GAID as string}
