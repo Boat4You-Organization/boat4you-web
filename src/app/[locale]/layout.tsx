@@ -1,13 +1,14 @@
 /* eslint-disable react/no-danger */
 import React from 'react';
 
-import { Metadata } from 'next';
+import { Metadata, Viewport } from 'next';
 import { Locale, NextIntlClientProvider, hasLocale } from 'next-intl';
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import Script from 'next/script';
 
 import GoogleAnalyticsConsent from '@/components/GoogleAnalyticsConsent';
+import ServiceWorkerRegister from '@/components/ServiceWorkerRegister';
 import { LocaleType } from '@/config/locales.config';
 import { meta } from '@/config/meta';
 import { routing } from '@/i18n/routing';
@@ -61,12 +62,21 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: L
         { rel: 'mask-icon', url: '/favicons/safari-pinned-tab.svg', color: '#000000' },
       ],
     },
-    manifest: '/favicons/site.webmanifest',
+    manifest: '/manifest.webmanifest',
+    appleWebApp: {
+      capable: true,
+      statusBarStyle: 'default',
+      title: 'Boat4You',
+    },
     verification: {
       google: 'tFIC79JuxjclDP3qaJy82tGjJETeJ5Zz_BeVNK_vYPQ',
     },
   };
 }
+
+export const viewport: Viewport = {
+  themeColor: '#0a2540',
+};
 
 interface RootLayoutProps {
   children: React.ReactNode;
@@ -132,6 +142,7 @@ const RootLayout = async ({ children, params }: RootLayoutProps) => {
         <NextIntlClientProvider messages={messages}>
           <Providers>{children}</Providers>
         </NextIntlClientProvider>
+        <ServiceWorkerRegister />
       </body>
       <GoogleAnalyticsConsent
         gaId={process.env.NEXT_PUBLIC_BOAT_WS_GAID as string}
