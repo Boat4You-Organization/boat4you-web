@@ -142,9 +142,10 @@ const RootLayout = async ({ children, params }: RootLayoutProps) => {
       <body suppressHydrationWarning>
         <NextIntlClientProvider messages={messages}>
           <Providers>{children}</Providers>
+          {/* InstallPrompt uses useTranslations → must be INSIDE the provider. */}
+          <InstallPrompt />
         </NextIntlClientProvider>
         <ServiceWorkerRegister />
-        <InstallPrompt />
       </body>
       <GoogleAnalyticsConsent
         gaId={process.env.NEXT_PUBLIC_BOAT_WS_GAID as string}
