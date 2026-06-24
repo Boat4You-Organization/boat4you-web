@@ -208,9 +208,11 @@ const AvailabilityCard = ({ w, selected, onClick, size = 'desktop' }: Availabili
         >
           {/* Mario rule 12.5.2026: "makni gornju nulu, ostavi donju 0 €".
               Strikethrough regular price already hidden when `price ≤ 0`
-              (guard above). Main `0 €` stays even when booked — same colour
-              as the row, no strikethrough, no em-dash. */}
-          {fmtPrice(w.price, w.currency)}
+              (guard above). A blocked week with no real price (a synthesised
+              "Unavailable" gap filler, Mario 24.6.2026) shows an em-dash
+              instead of a misleading "0 €"; real reserved weeks keep their
+              greyed price. */}
+          {isBooked && w.price <= 0 ? '—' : fmtPrice(w.price, w.currency)}
         </Typography>
       </Box>
     </Box>

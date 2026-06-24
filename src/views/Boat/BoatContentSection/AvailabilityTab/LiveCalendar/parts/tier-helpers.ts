@@ -1,6 +1,8 @@
 // Pure logic utilities — extracted from Mario's availability-widget handoff
 // so the React components stay declarative. No JSX here.
 /* eslint-disable no-nested-ternary -- vendored price-tier + label logic */
+import dayjs from 'dayjs';
+
 import { CURRENCY_SYMBOL_MAP, Currency } from '@/models/user.model';
 
 import { T } from './tokens';
@@ -122,4 +124,82 @@ export const monthAxis = (weeks: WeekData[]): string[] => {
   });
 
   return months;
+};
+
+/** Heatmap chunk size — Mario rule 12.5.2026: ~6 months per page (26 weeks),
+ *  two arrows to jump ±6 months across the 18-month horizon. */
+export const WEEKS_PER_CHUNK = 26;
+
+/**
+ * Turn the partner's sparse published weeks into a CONTINUOUS weekly timeline
+ * so every heatmap "page" is the same width and the calendar flows unbroken
+ * (Mario 24.6.2026 — "neka se nastavi flow … ako nema ponude stavi nedostupno,
+ * neka dizajn bude konstantan"). Without this, chunking the sparse offer array
+ * by index produced a 5-cell stub last page whenever the season had gaps.
+ *
+ * Real offers are kept EXACTLY as published — never moved, re-priced, or
+ * dropped — so the Deploy-4 "honest availability" guarantee holds and odd
+ * cadences cannot be mis-stated (the only thing synthesised is the empty space
+ * BETWEEN real offers). Gaps become grey `service` ("Unavailable") fillers,
+ * each anchored to the NEXT offer's own check-in weekday so they stay on the
+ * partner's cadence even after an odd-length block (e.g. a 61-day SERVICE
+ * ending mid-week). The tail is padded so the final chunk fills to `perChunk`.
+ */
+export const fillTimeline = (weeks: WeekData[], perChunk: number = WEEKS_PER_CHUNK): WeekData[] => {
+  if (weeks.length === 0) return weeks;
+
+  const mkFiller = (fromIso: string): WeekData => {
+    const from = dayjs(fromIso);
+    const to = from.add(7, 'day');
+
+    return {
+      id: `gap|${fromIso}`,
+      from: from.format('MMM DD'),
+      to: to.format('MMM DD'),
+      fromMonth: from.format('MMM'),
+      price: 0,
+      status: 'service',
+      dateFromIso: fromIso,
+      dateToIso: to.format('YYYY-MM-DD'),
+    };
+  };
+
+  const out: WeekData[] = [];
+  // Running end-of-coverage — the `dateTo` of the last real week pushed.
+  let cursor = weeks[0].dateFromIso ?? weeks[0].from;
+
+  weeks.forEach(w => {
+    const startIso = w.dateFromIso;
+
+    if (startIso) {
+      // Whole 7-day fillers that fit before this offer, counted back from its
+      // own start so they land on the partner's weekday (no cadence desync).
+      const gapDays = dayjs(startIso).diff(dayjs(cursor), 'day');
+      const n = Math.max(0, Math.floor(gapDays / 7));
+
+      for (let k = n; k >= 1; k -= 1) {
+        out.push(
+          mkFiller(
+            dayjs(startIso)
+              .subtract(k * 7, 'day')
+              .format('YYYY-MM-DD')
+          )
+        );
+      }
+    }
+
+    out.push(w);
+    cursor = w.dateToIso ?? dayjs(w.dateFromIso).add(7, 'day').format('YYYY-MM-DD');
+  });
+
+  // Pad the tail so the final chunk is full width (weekly steps from last end).
+  let pad = 0;
+
+  while (out.length % perChunk !== 0 && pad < perChunk) {
+    out.push(mkFiller(cursor));
+    cursor = dayjs(cursor).add(7, 'day').format('YYYY-MM-DD');
+    pad += 1;
+  }
+
+  return out;
 };

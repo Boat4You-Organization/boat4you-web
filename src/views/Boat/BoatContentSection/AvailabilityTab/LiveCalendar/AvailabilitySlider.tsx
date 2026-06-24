@@ -26,7 +26,7 @@ import ArrowBtn from './parts/ArrowBtn';
 import HeatmapStrip from './parts/HeatmapStrip';
 import Legend from './parts/Legend';
 import MonthAxis from './parts/MonthAxis';
-import { WeekData, monthAxis as deriveMonthAxis, withTiers } from './parts/tier-helpers';
+import { WEEKS_PER_CHUNK, WeekData, monthAxis as deriveMonthAxis, fillTimeline, withTiers } from './parts/tier-helpers';
 import { T } from './parts/tokens';
 
 dayjs.extend(weekOfYear);
@@ -124,16 +124,16 @@ const AvailabilitySlider = ({ yacht }: AvailabilitySliderProps) => {
     fetchOffersForCurrentParams();
   }, [fetchOffersForCurrentParams]);
 
-  // Honest availability (Deploy 4): render EXACTLY the periods the partner
-  // published — any check-in day, any length — sorted chronologically so the
-  // strip reads left-to-right. No Saturday→Saturday scaffold: gaps are simply
-  // absent rather than synthesized as fake "booked" weeks (which mis-stated
-  // non-Sat-Sat fleets, e.g. MMK OfferType.OTHER, as all-grey). The chunk math
-  // below (26 weeks ≈ 6 months) slices whatever array length results.
+  // Render the partner's published periods EXACTLY (Deploy 4 honest
+  // availability — any check-in day/length, never synthesised into fake
+  // bookings), then bridge the empty space BETWEEN them into a continuous
+  // weekly timeline via `fillTimeline` (Mario 24.6.2026): gaps become grey
+  // "Unavailable" fillers and the tail is padded so every chunk is the same
+  // width — no more 5-cell stub last page. Real offers are untouched.
   const weeks = useMemo<WeekData[]>(() => {
     const published = [...safeYachtOffers].sort((a, b) => a.dateFrom.localeCompare(b.dateFrom));
 
-    return withTiers(published.map(toWeek));
+    return withTiers(fillTimeline(published.map(toWeek)));
   }, [safeYachtOffers]);
 
   const months = useMemo(() => deriveMonthAxis(weeks), [weeks]);
@@ -202,10 +202,8 @@ interface BranchProps {
 }
 
 const VISIBLE_COUNT = 5;
-/** Heatmap chunk size — Mario rule 12.5.2026: pokazati 6 mjeseci odjednom
- *  + dvije strelice za skok na sljedećih ili prethodnih 6 mjeseci (18-mjesečni
- *  horizon → 3 chunka). 26 weeks ≈ 6 months (4.33 weeks/month). */
-const WEEKS_PER_CHUNK = 26;
+// WEEKS_PER_CHUNK (26 ≈ 6 months) now lives in tier-helpers so `fillTimeline`
+// can pad the tail to a full chunk width.
 
 const AvailabilityDesktop = ({ weeks, selId, onSelect }: BranchProps) => {
   const totalChunks = Math.max(1, Math.ceil(weeks.length / WEEKS_PER_CHUNK));
