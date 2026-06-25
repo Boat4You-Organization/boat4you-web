@@ -132,8 +132,12 @@ const AvailabilitySlider = ({ yacht }: AvailabilitySliderProps) => {
   // width — no more 5-cell stub last page. Real offers are untouched.
   const weeks = useMemo<WeekData[]>(() => {
     const published = [...safeYachtOffers].sort((a, b) => a.dateFrom.localeCompare(b.dateFrom));
+    // 18-month horizon (matches the fetch window) so a sentinel far-future date
+    // in the partner data (e.g. a SERVICE block dated to 2098) can't push the
+    // calendar/chunk label decades out ("JUN 2026 → FEB 2099" bug, 25.6.2026).
+    const horizonIso = DateTime.formatFull(DateTime.now()?.add(18, 'month') as Dayjs);
 
-    return withTiers(fillTimeline(published.map(toWeek)));
+    return withTiers(fillTimeline(published.map(toWeek), horizonIso));
   }, [safeYachtOffers]);
 
   const months = useMemo(() => deriveMonthAxis(weeks), [weeks]);

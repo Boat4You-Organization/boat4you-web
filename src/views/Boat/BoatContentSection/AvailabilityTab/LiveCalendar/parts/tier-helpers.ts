@@ -145,58 +145,110 @@ export const WEEKS_PER_CHUNK = 26;
  * partner's cadence even after an odd-length block (e.g. a 61-day SERVICE
  * ending mid-week). The tail is padded so the final chunk fills to `perChunk`.
  */
-export const fillTimeline = (weeks: WeekData[], perChunk: number = WEEKS_PER_CHUNK): WeekData[] => {
+export const fillTimeline = (
+  weeks: WeekData[],
+  horizonIso?: string,
+  perChunk: number = WEEKS_PER_CHUNK
+): WeekData[] => {
   if (weeks.length === 0) return weeks;
 
-  const mkFiller = (fromIso: string): WeekData => {
+  // Hard upper bound on what the calendar may show (the fetch horizon = now +
+  // 18 months). Partner data sometimes carries sentinel far-future dates — e.g.
+  // a SERVICE block dated `2026-11-22 → 2098-12-31` — which must NEVER drive the
+  // timeline or the chunk label (it produced "JUN 2026 → FEB 2099"). Everything
+  // is clamped to / stops at this horizon. (Mario 25.6.2026.)
+  const horizon = horizonIso ? dayjs(horizonIso) : null;
+
+  const mkCell = (fromIso: string, opts: Partial<WeekData> = {}): WeekData => {
     const from = dayjs(fromIso);
     const to = from.add(7, 'day');
 
     return {
-      id: `gap|${fromIso}`,
+      id: opts.id ?? `gap|${fromIso}`,
       from: from.format('MMM DD'),
       to: to.format('MMM DD'),
       fromMonth: from.format('MMM'),
-      price: 0,
-      status: 'service',
+      price: opts.price ?? 0,
+      currency: opts.currency,
+      status: opts.status ?? 'service',
       dateFromIso: fromIso,
       dateToIso: to.format('YYYY-MM-DD'),
     };
   };
 
   const out: WeekData[] = [];
-  // Running end-of-coverage — the `dateTo` of the last real week pushed.
+  // Running end-of-coverage — the `dateTo` of the last week pushed.
   let cursor = weeks[0].dateFromIso ?? weeks[0].from;
 
-  weeks.forEach(w => {
+  for (let i = 0; i < weeks.length; i += 1) {
+    const w = weeks[i];
     const startIso = w.dateFromIso;
 
-    if (startIso) {
-      // Whole 7-day fillers that fit before this offer, counted back from its
-      // own start so they land on the partner's weekday (no cadence desync).
-      const gapDays = dayjs(startIso).diff(dayjs(cursor), 'day');
-      const n = Math.max(0, Math.floor(gapDays / 7));
+    // eslint-disable-next-line no-continue
+    if (!startIso) continue;
 
-      for (let k = n; k >= 1; k -= 1) {
-        out.push(
-          mkFiller(
-            dayjs(startIso)
-              .subtract(k * 7, 'day')
-              .format('YYYY-MM-DD')
-          )
-        );
-      }
+    // Drop anything that starts beyond the horizon (e.g. a sentinel offer).
+    if (horizon && dayjs(startIso).isAfter(horizon)) break;
+
+    // Whole 7-day fillers that fit before this offer, counted back from its
+    // own start so they land on the partner's weekday (no cadence desync).
+    const gapDays = dayjs(startIso).diff(dayjs(cursor), 'day');
+    const n = Math.max(0, Math.floor(gapDays / 7));
+
+    for (let k = n; k >= 1; k -= 1) {
+      out.push(
+        mkCell(
+          dayjs(startIso)
+            .subtract(k * 7, 'day')
+            .format('YYYY-MM-DD')
+        )
+      );
     }
 
-    out.push(w);
-    cursor = w.dateToIso ?? dayjs(w.dateFromIso).add(7, 'day').format('YYYY-MM-DD');
-  });
+    const isBlocked = w.status === 'booked' || w.status === 'service';
+    // Clamp the offer's end to the horizon so a sentinel date can't push the
+    // calendar (and chunk label) decades into the future.
+    const endIso =
+      horizon && dayjs(w.dateToIso ?? startIso).isAfter(horizon)
+        ? horizon.format('YYYY-MM-DD')
+        : (w.dateToIso ?? startIso);
+    const spanDays = dayjs(endIso).diff(dayjs(startIso), 'day');
+
+    if (isBlocked && spanDays > 8) {
+      // Expand a long blocked period into weekly "Unavailable" cells up to the
+      // (clamped) end, so the user can still browse those weeks — a whole year
+      // covered by one SERVICE block reads as week-by-week Unavailable instead
+      // of a single giant cell (and 2027 becomes visible).
+      let c = dayjs(startIso);
+      let guard = 0;
+
+      while (c.isBefore(dayjs(endIso)) && guard < 520) {
+        out.push(
+          mkCell(c.format('YYYY-MM-DD'), {
+            id: `blk|${w.id}|${c.format('YYYY-MM-DD')}`,
+            status: w.status,
+            price: w.status === 'booked' ? w.price : 0,
+            currency: w.currency,
+          })
+        );
+        c = c.add(7, 'day');
+        guard += 1;
+      }
+
+      cursor = endIso;
+    } else {
+      out.push(w);
+      cursor = w.dateToIso ?? dayjs(startIso).add(7, 'day').format('YYYY-MM-DD');
+    }
+
+    if (horizon && !dayjs(cursor).isBefore(horizon)) break;
+  }
 
   // Pad the tail so the final chunk is full width (weekly steps from last end).
   let pad = 0;
 
   while (out.length % perChunk !== 0 && pad < perChunk) {
-    out.push(mkFiller(cursor));
+    out.push(mkCell(cursor));
     cursor = dayjs(cursor).add(7, 'day').format('YYYY-MM-DD');
     pad += 1;
   }
