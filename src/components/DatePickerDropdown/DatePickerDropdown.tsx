@@ -174,17 +174,17 @@ const DatePickerDropdown = <T extends FieldValues>({
     </Stack>
   );
 
-  // Mobile: render a vertical list of the next N months starting from the
-  // current month. 6 months is enough for the typical booking window and
-  // half the DOM of 12 — noticeably snappier on low-end phones.
-  const MOBILE_MONTHS_AHEAD = 6;
+  // Mobile: render a vertical list of months from the current one through the
+  // END of NEXT calendar year, so a customer can always pick a date up to the
+  // whole next year ahead (Mario rule 27.6.2026 — was a fixed 6 months, which
+  // ran out in Nov 2026 and hid all of 2027). Built once per mount.
+  const mobileMonths = React.useMemo(() => {
+    const start = dayjs().startOf('month');
+    const end = dayjs().add(1, 'year').endOf('year').startOf('month');
+    const count = end.diff(start, 'month') + 1;
 
-  // Build once per mount — `dayjs().startOf('month')` is stable for the
-  // session, no need to recompute every render.
-  const mobileMonths = React.useMemo(
-    () => Array.from({ length: MOBILE_MONTHS_AHEAD }, (_, i) => dayjs().startOf('month').add(i, 'month')),
-    []
-  );
+    return Array.from({ length: count }, (_, i) => start.add(i, 'month'));
+  }, []);
 
   const renderCalendarContent = () => {
     const nextMonth = currentMonth.add(1, 'month');
@@ -194,7 +194,31 @@ const DatePickerDropdown = <T extends FieldValues>({
       return (
         // `MuiDateCalendar` already renders its own month header — don't
         // double it. Narrow padding + small gap so months sit clean.
-        <Stack direction="column" spacing={0.5} width="100%" px={2}>
+        // Compact each month (drop the 276px floor, tighten week gaps + day
+        // cells) so the NEXT month's header peeks below the fold — signals the
+        // list scrolls. Mobile-only; desktop/boat-detail keep roomier sizing.
+        // Mario rule 27.6.2026.
+        <Stack
+          direction="column"
+          spacing={1}
+          width="100%"
+          px={2}
+          sx={{
+            // Nest through `.MuiDateCalendar-root` to outrank the equal-
+            // specificity defaults CustomDateCalendar sets on its own sx
+            // (MUI's sx collapses `&&`, so an extra class is the reliable bump).
+            // Compact fixed height (MUI absolutely-positions the month grid in
+            // the slide transition, so it needs an explicit reserve — `unset`
+            // collapses it). 6 rows × 32px + gaps ≈ 204, down from 276.
+            '& .MuiDateCalendar-root .MuiPickersSlideTransition-root': { minHeight: '204px' },
+            '& .MuiDateCalendar-root .MuiDayCalendar-monthContainer': { gap: '2px' },
+            '& .MuiDateCalendar-root .MuiDayCalendar-header': { pb: '2px' },
+            '& .MuiPickersDay-root, & .MuiPickersDay-hiddenDaySpacingFiller': {
+              minWidth: '32px',
+              minHeight: '32px',
+            },
+          }}
+        >
           {mobileMonths.map(month => (
             <CustomDateCalendar
               key={month.format('YYYY-MM')}
@@ -212,14 +236,7 @@ const DatePickerDropdown = <T extends FieldValues>({
     }
 
     return (
-      <Stack
-        direction="row"
-        spacing={4}
-        paddingBlock={2}
-        paddingInline={4}
-        width="100%"
-        height="100%"
-      >
+      <Stack direction="row" spacing={4} paddingBlock={2} paddingInline={4} width="100%" height="100%">
         {showDualCalendar ? (
           <>
             {renderSingleMonth(currentMonth, true, false)}
