@@ -368,7 +368,11 @@ const DatePickerDropdown = <T extends FieldValues>({
             </Button>
           }
         >
-          {renderCalendarContent()}
+          {/* SwipeableModal is keepMounted, so render the (now 19-month) month
+              list ONLY while the sheet is open — otherwise ~686 MUI day cells
+              mount on every home page load and blow up TBT. They mount on
+              first open instead. Mario 28.6.2026. */}
+          {isModalOpen && renderCalendarContent()}
         </ModalRoot>
       )}
     </>
