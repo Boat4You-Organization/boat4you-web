@@ -81,7 +81,12 @@ const MyBookingsPage = async ({ searchParams }: { searchParams: Promise<AllSearc
   return (
     <Layout>
       <ActiveReservationsSection reservations={activeReservations} />
-      <PastReservationsSection reservations={pastReservations} />
+      {/* Mario 2.7.2026: the "Past reservations" section only earns its place
+          when there IS history to show. 99% of customers are on their first
+          booking — greeting them with a big "You have no past reservations."
+          empty state just makes the dashboard look bare. Returning customers
+          still see their full history. */}
+      {pastReservations.length > 0 && <PastReservationsSection reservations={pastReservations} />}
     </Layout>
   );
 };

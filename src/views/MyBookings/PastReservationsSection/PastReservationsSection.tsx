@@ -1,7 +1,6 @@
 import { Container, Grid, Typography } from '@mui/material';
 import { getTranslations } from 'next-intl/server';
 
-import ListEmptyState from '@/components/ListEmptyState';
 import { ReservationShortInfo } from '@/models/reservation.model';
 
 import PastReservationCard from './PastReservationCard';
@@ -23,19 +22,18 @@ const PastReservationsSection = async ({ reservations }: PastReservationsSection
 
   return (
     <Container component="section" maxWidth="xl" disableGutters className={styles.container}>
-      <Typography component="h1" sx={{ typography: { xs: 'h2', sm: 'h1' }, fontWeight: '700 !important' }}>
+      {/* h2, not h1 — the page's h1 is the "Reservations" heading above; this
+          is a subsection. (The page also only renders this section when there
+          are past reservations, so no empty state is needed here.) */}
+      <Typography component="h2" sx={{ typography: { xs: 'h2', sm: 'h1' }, fontWeight: '700 !important' }}>
         {t('pastReservations')}
       </Typography>
       <Grid container spacing={3} mt={5}>
-        {sortedReservations.length === 0 ? (
-          <ListEmptyState title={t('youHaveNoPastReservations')} />
-        ) : (
-          sortedReservations.map((reservation, index) => (
-            <Grid key={`${index + 1}`} size={{ xs: 12, md: 6 }}>
-              <PastReservationCard reservation={reservation} />
-            </Grid>
-          ))
-        )}
+        {sortedReservations.map((reservation, index) => (
+          <Grid key={`${index + 1}`} size={{ xs: 12, md: 6 }}>
+            <PastReservationCard reservation={reservation} />
+          </Grid>
+        ))}
       </Grid>
     </Container>
   );
