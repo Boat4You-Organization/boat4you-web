@@ -99,10 +99,10 @@ const ReservationInfoSection = ({ reservationDetails, userCurrency }: Reservatio
       case 2:
         return <AmenitiesTab reservationDetails={reservationDetails} />;
 
+      // Indices follow `reservationTabs` in tabs.config.ts — cancellation
+      // deliberately sits just above FAQ (Mario 2.7.2026: don't open the
+      // page by planting the idea of cancelling).
       case 3:
-        return <CancellationTab dateFrom={dateFrom} />;
-
-      case 4:
         return (
           <PaymentTab
             selectedExtras={selectedExtras}
@@ -121,8 +121,11 @@ const ReservationInfoSection = ({ reservationDetails, userCurrency }: Reservatio
           />
         );
 
-      case 5:
+      case 4:
         return <GoodToKnowTab />;
+
+      case 5:
+        return <CancellationTab dateFrom={dateFrom} />;
 
       case 6:
         return <FaqTab />;
