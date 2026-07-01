@@ -299,7 +299,7 @@ const UnifiedPaymentStep = ({ reservationData }: UnifiedPaymentStepProps) => {
             transition: 'border-color 0.15s',
           }}
         >
-          <Stack direction="row" alignItems="center" gap={1.5}>
+          <Stack direction="row" alignItems="center" gap={1.5} flexWrap="wrap">
             <Radio
               checked={selectedPaymentMethod === PaymentMethod.CREDIT_CARD}
               onChange={() => setPaymentMethod(PaymentMethod.CREDIT_CARD)}
@@ -310,8 +310,17 @@ const UnifiedPaymentStep = ({ reservationData }: UnifiedPaymentStepProps) => {
               {t('onlinePaymentsCreditCard')}
             </Typography>
             {/* Brand acceptance marks — stronger trust cue than the
-                "Powered by Stripe" caption alone. */}
-            <Box sx={{ ml: 'auto', display: 'flex', alignItems: 'center' }}>
+                "Powered by Stripe" caption alone. Three badges don't fit
+                next to the title on a phone: the row wraps and the marks
+                shrink slightly so they sit right-aligned on their own line. */}
+            <Box
+              sx={{
+                ml: 'auto',
+                display: 'flex',
+                alignItems: 'center',
+                '& svg': { height: { xs: 18, sm: 22 }, width: 'auto' },
+              }}
+            >
               <CardBrands height={22} />
             </Box>
           </Stack>
