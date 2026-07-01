@@ -1,6 +1,7 @@
 /* eslint-disable no-nested-ternary, react/no-unstable-nested-components */
 import { useEffect, useMemo, useState } from 'react';
 
+import CheckCircleOutline from '@mui/icons-material/CheckCircleOutline';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import {
   Alert,
@@ -21,6 +22,7 @@ import NextLink from 'next/link';
 
 import { getBankTransferFee, getCardSurchargePercentage } from '@/actions/settings.actions';
 import BankTransferIcon from '@/components/SvgIcons/Payment/BankTransfer';
+import CardBrands from '@/components/SvgIcons/Payment/CardBrands';
 import CreditCardIcon from '@/components/SvgIcons/Payment/CreditCard';
 import SecurePayement from '@/components/SvgIcons/WhyChooseUs/SecurePayment';
 import { bankDetails } from '@/config/bank-details.config';
@@ -157,6 +159,14 @@ const UnifiedPaymentStep = ({ reservationData }: UnifiedPaymentStepProps) => {
   const dueNowDeadline = paymentPhases[0]?.deadline ?? dayjs();
   const dateFormatter = (d: dayjs.Dayjs) => d.locale(locale).format('D MMMM YYYY');
   const fmt = (eur: number) => formatPriceWithCurrency({ clientPriceEur: eur, locale });
+
+  // Free-cancellation trust tick — MUST mirror generateCancellationTimeline
+  // (cancellationUtils): the free window (today + 5 days) only exists when the
+  // charter is 45+ days away; closer bookings cancel at 100% from day one, so
+  // showing "free cancellation" there would be a lie the sidebar immediately
+  // contradicts.
+  const daysUntilCharter = dayjs(reservationData.dateFrom).diff(dayjs(), 'day');
+  const freeCancellationUntil = daysUntilCharter >= 45 ? dateFormatter(dayjs().add(5, 'day')) : null;
 
   const cardBorder = (active: boolean) => (active ? `2px solid ${colors.blue500}` : `1px solid ${colors.black200}`);
 
@@ -298,6 +308,11 @@ const UnifiedPaymentStep = ({ reservationData }: UnifiedPaymentStepProps) => {
             <Typography variant="body1" fontWeight={700}>
               {t('onlinePaymentsCreditCard')}
             </Typography>
+            {/* Brand acceptance marks — stronger trust cue than the
+                "Powered by Stripe" caption alone. */}
+            <Box sx={{ ml: 'auto', display: 'flex', alignItems: 'center' }}>
+              <CardBrands height={22} />
+            </Box>
           </Stack>
           <Stack gap={0.25} ml={5} mt={0.75}>
             <Stack direction="row" justifyContent="space-between">
@@ -428,6 +443,42 @@ const UnifiedPaymentStep = ({ reservationData }: UnifiedPaymentStepProps) => {
           </Collapse>
         </Box>
 
+        {/* "What happens after payment" — kills the high-ticket fear of
+            "I pay and then… silence". Three concrete steps, no promises the
+            emails don't actually deliver. */}
+        <Box sx={{ border: cardBorder(false), borderRadius: 1.5, px: 2.5, py: 2 }}>
+          <Typography variant="body1" fontWeight={700} mb={1.5}>
+            {t('whatHappensNext')}
+          </Typography>
+          <Stack gap={1.25}>
+            {[t('nextStepEmailConfirmation'), t('nextStepBookingConfirmed'), t('nextStepCheckIn')].map((step, idx) => (
+              <Stack key={step} direction="row" alignItems="flex-start" gap={1.25}>
+                <Box
+                  sx={{
+                    width: 22,
+                    height: 22,
+                    borderRadius: '50%',
+                    backgroundColor: colors.blue500,
+                    color: '#fff',
+                    fontSize: '0.75rem',
+                    fontWeight: 700,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    flexShrink: 0,
+                    mt: 0.1,
+                  }}
+                >
+                  {idx + 1}
+                </Box>
+                <Typography variant="body2" color={colors.black700}>
+                  {step}
+                </Typography>
+              </Stack>
+            ))}
+          </Stack>
+        </Box>
+
         {/* Legal acceptance notice — by clicking "Pay now" the user implicitly
             agrees to the policies below. Links open the corresponding static
             pages in a new tab so the booking flow isn't interrupted. */}
@@ -481,6 +532,32 @@ const UnifiedPaymentStep = ({ reservationData }: UnifiedPaymentStepProps) => {
             {t('confirmationWillBeSentTo', { email: contact.email })}
           </Typography>
         )}
+        {/* Trust row — same green-tick language as BookingHero. The
+            free-cancellation tick is CONDITIONAL (charter 45+ days away)
+            and carries the exact date, mirroring the CancellationCard
+            timeline so the two can never contradict each other. */}
+        <Stack direction="row" flexWrap="wrap" columnGap={2} rowGap={0.5} justifyContent="flex-end">
+          {freeCancellationUntil && (
+            <Stack direction="row" alignItems="center" gap={0.5}>
+              <CheckCircleOutline sx={{ fontSize: 16, color: colors.green500 }} />
+              <Typography variant="body2" color={colors.green500} fontWeight={600}>
+                {t('trustFreeCancellationUntil', { date: freeCancellationUntil })}
+              </Typography>
+            </Stack>
+          )}
+          <Stack direction="row" alignItems="center" gap={0.5}>
+            <CheckCircleOutline sx={{ fontSize: 16, color: colors.green500 }} />
+            <Typography variant="body2" color={colors.green500} fontWeight={600}>
+              {t('trustSecurePayment')}
+            </Typography>
+          </Stack>
+          <Stack direction="row" alignItems="center" gap={0.5}>
+            <CheckCircleOutline sx={{ fontSize: 16, color: colors.green500 }} />
+            <Typography variant="body2" color={colors.green500} fontWeight={600}>
+              {t('bestPriceOnTheMarket')}
+            </Typography>
+          </Stack>
+        </Stack>
         <Box
           component="button"
           type="button"
