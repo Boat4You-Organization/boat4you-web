@@ -18,6 +18,7 @@ import { PaymentMethod } from '@/config/paymentMethods.config';
 import { PaymentPhase } from '@/models/reservation.model';
 import colors from '@/styles/themes/colors';
 import { usePaymentSubmit } from '@/utils/hooks/usePaymentSubmit';
+import { bankFeeShareForPhase } from '@/utils/static/bankTransferFee';
 import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
 import { showToast } from '@/valtio/global/global.actions';
 
@@ -117,9 +118,24 @@ const PayNowModal = ({ isOpen, onClose, reservationId, reservationNumber, paymen
   }, [paymentMethod]);
 
   const baseDueNow = oldestUnpaid?.amount ?? 0;
-  const cardFee = (baseDueNow * cardSurchargePercent) / 100;
+  // Whole-euro fees (no cents) — mirrors the backend exactly:
+  // card: StripePaymentService rounds the surcharge HALF_UP to whole EUR, so
+  // Math.round always displays the amount Stripe collects; bank: THIS phase's
+  // share of the fixed per-reservation fee (32 across 2 installments → 16 per
+  // wire) — indexed by the phase's position in the deadline-sorted schedule,
+  // same split the wire emails use.
+  const cardFee = Math.round((baseDueNow * cardSurchargePercent) / 100);
   const cardAdjusted = baseDueNow + cardFee;
-  const bankAdjusted = baseDueNow + bankFee;
+  const sortedAllPhases = useMemo(
+    () => [...paymentPhases].sort((a, b) => (a.deadline > b.deadline ? 1 : -1)),
+    [paymentPhases]
+  );
+  const oldestUnpaidIndex = Math.max(
+    sortedAllPhases.findIndex(p => p.id === oldestUnpaid?.id),
+    0
+  );
+  const bankFeeShare = bankFeeShareForPhase(bankFee, paymentPhases.length, oldestUnpaidIndex);
+  const bankAdjusted = baseDueNow + bankFeeShare;
   const methodAdjustedAmount = paymentMethod === PaymentMethod.BANK_TRANSFER ? bankAdjusted : cardAdjusted;
 
   const dueNowDeadline = oldestUnpaid ? dayjs(oldestUnpaid.deadline) : dayjs();
@@ -341,7 +357,7 @@ const PayNowModal = ({ isOpen, onClose, reservationId, reservationNumber, paymen
                   {t('bankTransferFee')}
                 </Typography>
                 <Typography variant="body2" color={colors.black700}>
-                  +{fmt(bankFee)}
+                  +{fmt(bankFeeShare)}
                 </Typography>
               </Stack>
               <Divider sx={{ my: 0.5 }} />

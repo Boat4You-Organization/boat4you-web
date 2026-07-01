@@ -29,6 +29,7 @@ import { PaymentPhase as ApiPaymentPhase } from '@/models/reservation.model';
 import colors from '@/styles/themes/colors';
 import { ReservationData } from '@/types/reservation.type';
 import { usePaymentSubmit } from '@/utils/hooks/usePaymentSubmit';
+import { bankFeeShareForPhase } from '@/utils/static/bankTransferFee';
 import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
 import { calculatePaymentPhases as calculateClientPhases } from '@/utils/static/paymentPhases';
 import { getDataFromSessionStorage } from '@/utils/static/sessionStorageUtils';
@@ -140,9 +141,16 @@ const UnifiedPaymentStep = ({ reservationData }: UnifiedPaymentStepProps) => {
   }, []);
 
   const baseDueNow = selectedPhase?.amount ?? 0;
-  const cardFee = (baseDueNow * cardSurchargePercent) / 100;
+  // Whole-euro fees (no cents) — mirrors the backend exactly:
+  // card: StripePaymentService rounds the surcharge HALF_UP to whole EUR before
+  // charging, so Math.round here always displays the amount Stripe collects;
+  // bank: this phase's share of the fixed per-reservation fee (32 across 2
+  // installments → 16 per wire), same split the wire emails use. This screen
+  // always pays phase #0 (see selectedPhase above).
+  const cardFee = Math.round((baseDueNow * cardSurchargePercent) / 100);
   const cardAdjusted = baseDueNow + cardFee;
-  const bankAdjusted = baseDueNow + bankFee;
+  const bankFeeShare = bankFeeShareForPhase(bankFee, paymentPhases.length, 0);
+  const bankAdjusted = baseDueNow + bankFeeShare;
 
   const methodAdjustedAmount = selectedPaymentMethod === PaymentMethod.BANK_TRANSFER ? bankAdjusted : cardAdjusted;
 
@@ -355,7 +363,7 @@ const UnifiedPaymentStep = ({ reservationData }: UnifiedPaymentStepProps) => {
                   {t('bankTransferFee')}
                 </Typography>
                 <Typography variant="body2" color={colors.black700}>
-                  +{fmt(bankFee)}
+                  +{fmt(bankFeeShare)}
                 </Typography>
               </Stack>
               <Divider sx={{ my: 0.5 }} />
