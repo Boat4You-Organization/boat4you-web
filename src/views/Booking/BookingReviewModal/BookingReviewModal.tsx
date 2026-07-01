@@ -36,6 +36,12 @@ interface BookingReviewModalProps {
    */
   paymentPhases?: PaymentPhase[];
   isLoadingPhases?: boolean;
+  /**
+   * Partner option expiry (ISO) — end of the free-cancellation window in the
+   * timeline (Mario 2.7.2026: free exactly while our option lasts). Null →
+   * legacy 5-day fallback inside generateCancellationTimeline.
+   */
+  freeUntil?: string | null;
 }
 
 /**
@@ -54,6 +60,7 @@ const BookingReviewModal = ({
   totalPriceInfo,
   paymentPhases = [],
   isLoadingPhases = false,
+  freeUntil = null,
 }: BookingReviewModalProps) => {
   const t = useTranslations('common');
   const locale = useLocale();
@@ -71,7 +78,10 @@ const BookingReviewModal = ({
     [paymentPhases, dateFrom, totalPriceEur]
   );
 
-  const cancellationTimeline = useMemo(() => generateCancellationTimeline(dateFrom, t, locale), [dateFrom, t, locale]);
+  const cancellationTimeline = useMemo(
+    () => generateCancellationTimeline(dateFrom, t, locale, freeUntil),
+    [dateFrom, t, locale, freeUntil]
+  );
 
   const today = dayjs().startOf('day');
 

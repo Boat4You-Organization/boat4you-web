@@ -13,13 +13,22 @@ interface CancellationCardProps {
   compact?: boolean;
   isLastStep?: boolean;
   dateFrom: string;
+  /**
+   * Partner option expiry (ISO) — end of the free-cancellation window (Mario
+   * 2.7.2026: free exactly while our option lasts). Null → legacy 5-day
+   * fallback inside generateCancellationTimeline.
+   */
+  freeUntil?: string | null;
 }
 
-const CancellationCard = ({ compact, isLastStep, dateFrom }: CancellationCardProps) => {
+const CancellationCard = ({ compact, isLastStep, dateFrom, freeUntil = null }: CancellationCardProps) => {
   const t = useTranslations('common');
   const locale = useLocale();
 
-  const cancellationTimeline = useMemo(() => generateCancellationTimeline(dateFrom, t, locale), [dateFrom, t, locale]);
+  const cancellationTimeline = useMemo(
+    () => generateCancellationTimeline(dateFrom, t, locale, freeUntil),
+    [dateFrom, t, locale, freeUntil]
+  );
 
   return (
     <Box className={cx(styles.container, { [styles.compact]: compact, [styles.lastStep]: isLastStep })}>

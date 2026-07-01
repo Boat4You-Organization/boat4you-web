@@ -160,13 +160,14 @@ const UnifiedPaymentStep = ({ reservationData }: UnifiedPaymentStepProps) => {
   const dateFormatter = (d: dayjs.Dayjs) => d.locale(locale).format('D MMMM YYYY');
   const fmt = (eur: number) => formatPriceWithCurrency({ clientPriceEur: eur, locale });
 
-  // Free-cancellation trust tick — MUST mirror generateCancellationTimeline
-  // (cancellationUtils): the free window (today + 5 days) only exists when the
-  // charter is 45+ days away; closer bookings cancel at 100% from day one, so
-  // showing "free cancellation" there would be a lie the sidebar immediately
-  // contradicts.
-  const daysUntilCharter = dayjs(reservationData.dateFrom).diff(dayjs(), 'day');
-  const freeCancellationUntil = daysUntilCharter >= 45 ? dateFormatter(dayjs().add(5, 'day')) : null;
+  // Free-cancellation trust tick — Mario rule (2.7.2026): the free window
+  // lasts EXACTLY as long as our option at the charter agency, so the date is
+  // the partner option expiry (reservationExpiresAt), the same source as the
+  // bank-transfer deadline banner. No partner expiry → no tick; we never
+  // invent a deadline (option-expiry-no-fallback rule). The sidebar
+  // CancellationCard receives the same date via Booking.tsx so the two
+  // surfaces always agree.
+  const freeCancellationUntil = reservationExpiresAt ? dateFormatter(dayjs(reservationExpiresAt)) : null;
 
   const cardBorder = (active: boolean) => (active ? `2px solid ${colors.blue500}` : `1px solid ${colors.black200}`);
 
@@ -586,6 +587,7 @@ const UnifiedPaymentStep = ({ reservationData }: UnifiedPaymentStepProps) => {
         totalPriceEur={reservationData.totalPriceEur}
         totalPriceInfo={reservationData.totalPriceInfo}
         paymentPhases={apiPhases ?? []}
+        freeUntil={reservationExpiresAt}
       />
     </Box>
   );

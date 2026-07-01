@@ -65,11 +65,20 @@ export const generateCancellationTimeline = (
   dateFrom: string,
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   t?: (key: any, values?: any) => string,
-  locale?: string
+  locale?: string,
+  /**
+   * Partner option expiry (ISO). Mario rule (2.7.2026): the free-cancellation
+   * window lasts EXACTLY as long as our option at the charter agency — the
+   * expiry the partner returned, not the generic "today + 5 days" estimate.
+   * When absent (no option yet — boat page / details step, or the partner
+   * sent no expiry) the legacy 5-day estimate remains as the fallback; we
+   * never invent a partner deadline (option-expiry-no-fallback rule).
+   */
+  freeUntil?: string | null
 ): CancellationTimelineItem[] => {
   const today = dayjs();
   const reservationStartDate = dayjs(dateFrom);
-  const fiveDaysFromToday = today.add(5, 'day');
+  const freeWindowEnd = freeUntil ? dayjs(freeUntil) : today.add(5, 'day');
   const daysUntilReservation = DateTime.daysBetween(today, reservationStartDate);
   const isWithin44DayPeriod = daysUntilReservation <= 44;
   const timeline: CancellationTimelineItem[] = [];
@@ -86,12 +95,12 @@ export const generateCancellationTimeline = (
     timeline.push({
       date: DateTime.formatWithMonthName(today, locale),
       text: t
-        ? t('cancelAndRescheduleForFreeBefore', { date: DateTime.formatLongWithoutDay(fiveDaysFromToday, locale) })
-        : `Cancel and reschedule for free before ${DateTime.formatLongWithoutDay(fiveDaysFromToday, locale)}`,
+        ? t('cancelAndRescheduleForFreeBefore', { date: DateTime.formatLongWithoutDay(freeWindowEnd, locale) })
+        : `Cancel and reschedule for free before ${DateTime.formatLongWithoutDay(freeWindowEnd, locale)}`,
       active: today.isSameOrAfter(today),
     });
 
-    const fiftyPercentStartDate = fiveDaysFromToday.add(1, 'day');
+    const fiftyPercentStartDate = freeWindowEnd.add(1, 'day');
     const hundredPercentStartDate = reservationStartDate.subtract(44, 'day');
 
     timeline.push({

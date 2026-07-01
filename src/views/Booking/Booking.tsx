@@ -228,7 +228,14 @@ const Booking = ({ isAdmin, user, initialStep = 0 }: BookingProps) => {
                 securityDeposit={reservationData.securityDeposit}
               />
               <Box className={styles.divider} />
-              <CancellationCard dateFrom={reservationData.dateFrom} />
+              {/* Free-cancellation window end = partner option expiry (set by
+                  DetailsStep once the option is created; null on step 0 →
+                  legacy 5-day fallback). Same source as the payment-step trust
+                  tick so the sidebar and the tick always show the same date. */}
+              <CancellationCard
+                dateFrom={reservationData.dateFrom}
+                freeUntil={getDataFromSessionStorage<string>('reservationExpiresAt')}
+              />
             </>
           )}
         </Stack>
