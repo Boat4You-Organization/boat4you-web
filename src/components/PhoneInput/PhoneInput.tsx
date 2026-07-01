@@ -106,7 +106,19 @@ export const PhoneInput = ({
   };
 
   const getE164Format = (country: PhoneCountry, number: string): string => {
-    const cleaned = number.replace(/\D/g, '');
+    let cleaned = number.replace(/\D/g, '');
+
+    if (!cleaned) return '';
+
+    // People habitually type their number in NATIONAL format with the trunk
+    // prefix ("0" in most of Europe): 098 360 398. In international format the
+    // trunk zero is dropped — +385 98 360 398, NOT +385 098 360 398 (the
+    // latter is undialable abroad). Exception: Italy (+39) and San Marino
+    // (+378, Italian numbering plan) — their leading 0 is PART of the
+    // subscriber number and must be kept (+39 06 … is a valid Rome number).
+    if (country.iso2Code !== 'IT' && country.iso2Code !== 'SM') {
+      cleaned = cleaned.replace(/^0+/, '');
+    }
 
     if (!cleaned) return '';
 
