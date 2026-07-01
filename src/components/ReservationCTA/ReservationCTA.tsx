@@ -140,7 +140,11 @@ const ReservationCTA = ({ reservationDetails }: ReservationCTAProps) => {
                       .sort((a, b) => (a.deadline > b.deadline ? 1 : -1))
                       .map((phase, idx, arr) => {
                         const paid = Boolean(phase.paidOn);
-                        const dateLabel = phase.deadline ? DateTime.formatHR(DateTime.date(phase.deadline)) : '-';
+                        // Month spelled out (Mario 2.7.2026): "06.07.2026" reads as
+                        // June 7th to an American — "6 July 2026" is unambiguous.
+                        const dateLabel = phase.deadline
+                          ? DateTime.formatLongWithoutDay(DateTime.date(phase.deadline), locale)
+                          : '-';
 
                         return (
                           <Stack
@@ -224,7 +228,9 @@ const ReservationCTA = ({ reservationDetails }: ReservationCTAProps) => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
                   {t('deadline')}{' '}
-                  {nextInstallment.deadline ? DateTime.formatHR(DateTime.date(nextInstallment.deadline)) : '-'}
+                  {nextInstallment.deadline
+                    ? DateTime.formatLongWithoutDay(DateTime.date(nextInstallment.deadline), locale)
+                    : '-'}
                 </Typography>
               </Stack>
             </Stack>
@@ -312,7 +318,7 @@ const ReservationCTA = ({ reservationDetails }: ReservationCTAProps) => {
                 </Stack>
               )}
               <Typography variant="body2" color={colors.mandalay800}>
-                {DateTime.formatHR(DateTime.date(cancellationRejectedAt!))}
+                {DateTime.formatLongWithoutDay(DateTime.date(cancellationRejectedAt!), locale)}
               </Typography>
             </Stack>
           );
@@ -338,7 +344,7 @@ const ReservationCTA = ({ reservationDetails }: ReservationCTAProps) => {
               </Typography>
             </Stack>
             <Typography variant="body2" color={colors.mandalay800}>
-              {DateTime.formatHR(DateTime.date(cancellationRequestAt!))}
+              {DateTime.formatLongWithoutDay(DateTime.date(cancellationRequestAt!), locale)}
             </Typography>
             {cancellationRequest && (
               <Stack gap={0.5}>
