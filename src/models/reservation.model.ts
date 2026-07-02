@@ -129,6 +129,8 @@ export interface ReservationDetails extends ReservationShortInfo {
   documents?: ReservationDocument[];
 }
 
+export type ReservationDocumentType = 'BOARDING_PASS' | 'CREW_LIST' | 'CONTRACT' | 'OTHER';
+
 export interface ReservationDocument {
   id: number;
   reservationId: number;
@@ -137,6 +139,9 @@ export interface ReservationDocument {
   sizeBytes: number;
   uploadedBy: number | null;
   uploadedAt: string;
+  /** Drives the human label ("Boarding pass") — OTHER/legacy docs fall back
+   *  to the raw filename. */
+  documentType?: ReservationDocumentType;
 }
 
 export interface CreateReservationResponse {

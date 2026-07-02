@@ -410,73 +410,163 @@ const ReservationCTA = ({ reservationDetails }: ReservationCTAProps) => {
         </Stack>
       </Stack>
       <Divider sx={{ mt: 3, mb: 2 }} />
-      {/* Document stack — Download receipt + crew list URL + admin-uploaded
-          files all share the same Button shape so the sidebar reads as one
-          consistent column. Mario rule (3.5.2026): unificiraj da svi izgledaju
-          isto + dodaj naslov da klijent zna sta je to. */}
+      {/* Travel documents — typed rows instead of the former wall of identical
+          blue buttons (Mario 3.7.2026): each row carries a human label driven
+          by documentType ("Boarding pass", not base_info_final.pdf), the file
+          meta (size · date), and a right-aligned action — Open ↗ for the
+          partner crew-list editor, Download for files. The crew list carries a
+          passport-accuracy note because the agency files it with the port
+          authority. */}
       {(() => {
-        const buttonSx = {
-          textTransform: 'none' as const,
-          justifyContent: 'flex-start',
-          textAlign: 'left',
-          fontWeight: 700,
-          fontSize: 15,
-          px: 2,
-          '& .MuiButton-startIcon': { marginRight: 1.25 },
+        const docTypeLabel = (type?: string): string | null => {
+          switch (type) {
+            case 'BOARDING_PASS':
+              return t('docTypeBoardingPass');
+            case 'CREW_LIST':
+              return t('crewListTitle');
+            case 'CONTRACT':
+              return t('docTypeContract');
+            default:
+              return null;
+          }
         };
+
+        const formatSize = (bytes: number): string =>
+          bytes < 1024 * 1024
+            ? `${Math.max(1, Math.round(bytes / 1024))} KB`
+            : `${(bytes / 1024 / 1024).toFixed(1)} MB`;
+
+        const rowSx = {
+          display: 'flex',
+          alignItems: 'center',
+          gap: 1.5,
+          px: 2,
+          py: 1.5,
+          border: `1px solid ${colors.black200}`,
+          borderRadius: 1.5,
+          color: 'inherit',
+          textDecoration: 'none',
+          transition: 'border-color 0.15s, background-color 0.15s',
+          '&:hover': { borderColor: colors.blue500, backgroundColor: colors.black100 },
+        } as const;
+
+        const actionSx = {
+          display: 'flex',
+          alignItems: 'center',
+          gap: 0.5,
+          color: colors.blue500,
+          fontWeight: 700,
+          fontSize: 14,
+          flexShrink: 0,
+          ml: 'auto',
+        } as const;
 
         return (
           <Stack spacing={1.25}>
-            <Typography variant="h3" component="p" fontWeight={700} sx={{ mb: 1.5 }}>
-              {t('documentsTitle')}
+            <Typography variant="h3" component="p" fontWeight={700} sx={{ mb: 0.5 }}>
+              {t('travelDocumentsTitle')}
             </Typography>
-            <Button
-              fullWidth
-              size="large"
-              variant="contained"
-              color="info"
-              startIcon={<Download size={20} />}
+
+            {/* Booking receipt — generated PDF, always available */}
+            <Box
+              component="button"
+              type="button"
               onClick={downloadReservationPDF}
               disabled={isDownloading || isBookingEditable}
-              sx={buttonSx}
+              sx={{
+                ...rowSx,
+                width: '100%',
+                background: 'none',
+                font: 'inherit',
+                cursor: isDownloading || isBookingEditable ? 'default' : 'pointer',
+                opacity: isDownloading || isBookingEditable ? 0.5 : 1,
+              }}
             >
-              {t('downloadReceipt')}
-            </Button>
+              <Stack alignItems="flex-start" sx={{ minWidth: 0 }}>
+                <Typography variant="body1" fontWeight={700}>
+                  {t('receiptRowTitle')}
+                </Typography>
+                <Typography variant="body2" color={colors.black500}>
+                  PDF
+                </Typography>
+              </Stack>
+              <Box sx={actionSx}>
+                <Download size={18} />
+                {t('download')}
+              </Box>
+            </Box>
+
+            {/* Crew list — the PARTNER's own editor (agency files it with the
+                port authority; no transcription in between). */}
             {reservationDetails.crewListUrl && (
-              <Button
-                fullWidth
-                size="large"
-                variant="contained"
-                color="info"
-                startIcon={<ExternalLink size={20} />}
-                component="a"
-                href={reservationDetails.crewListUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                sx={buttonSx}
-              >
-                {t('crewListTitle')}
-              </Button>
-            )}
-            {reservationDetails.documents?.map(doc => (
-              <Button
-                key={doc.id}
-                fullWidth
-                size="large"
-                variant="contained"
-                color="info"
-                startIcon={<Download size={20} />}
-                component="a"
-                href={`/api/my-bookings/${reservationId}/documents/${doc.id}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                sx={buttonSx}
-              >
-                <Box sx={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', flex: 1 }}>
-                  {doc.filename}
+              <>
+                <Box
+                  component="a"
+                  href={reservationDetails.crewListUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  sx={rowSx}
+                >
+                  <Stack sx={{ minWidth: 0 }}>
+                    <Typography variant="body1" fontWeight={700}>
+                      {t('crewListTitle')}
+                    </Typography>
+                    <Typography variant="body2" color={colors.black500}>
+                      {t('crewListFillOnline')}
+                    </Typography>
+                  </Stack>
+                  <Box sx={actionSx}>
+                    <ExternalLink size={18} />
+                    {t('openLink')}
+                  </Box>
                 </Box>
-              </Button>
-            ))}
+                <Typography variant="body2" color={colors.black500} sx={{ px: 0.5 }}>
+                  {t('crewListPassportNote')}
+                </Typography>
+              </>
+            )}
+
+            {/* Admin-uploaded documents (boarding pass PDF, Kavas crew Word
+                form, contract scans …) */}
+            {reservationDetails.documents?.map(doc => {
+              const typedLabel = docTypeLabel(doc.documentType);
+
+              return (
+                <Box
+                  key={doc.id}
+                  component="a"
+                  href={`/api/my-bookings/${reservationId}/documents/${doc.id}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  sx={rowSx}
+                >
+                  <Stack sx={{ minWidth: 0 }}>
+                    <Typography
+                      variant="body1"
+                      fontWeight={700}
+                      sx={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}
+                    >
+                      {typedLabel ?? doc.filename}
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      color={colors.black500}
+                      sx={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}
+                    >
+                      {typedLabel ? `${doc.filename} · ` : ''}
+                      {formatSize(doc.sizeBytes)}
+                      {doc.uploadedAt
+                        ? ` · ${DateTime.formatLongWithoutDay(DateTime.date(doc.uploadedAt), locale)}`
+                        : ''}
+                    </Typography>
+                  </Stack>
+                  <Box sx={actionSx}>
+                    <Download size={18} />
+                    {t('download')}
+                  </Box>
+                </Box>
+              );
+            })}
           </Stack>
         );
       })()}
