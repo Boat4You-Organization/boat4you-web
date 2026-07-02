@@ -129,7 +129,7 @@ export interface ReservationDetails extends ReservationShortInfo {
   documents?: ReservationDocument[];
 }
 
-export type ReservationDocumentType = 'BOARDING_PASS' | 'CREW_LIST' | 'CONTRACT' | 'OTHER';
+export type ReservationDocumentType = 'BOARDING_PASS' | 'CREW_LIST' | 'CONTRACT' | 'PREFERENCE_LIST' | 'OTHER';
 
 export interface ReservationDocument {
   id: number;

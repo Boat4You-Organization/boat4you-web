@@ -426,6 +426,8 @@ const ReservationCTA = ({ reservationDetails }: ReservationCTAProps) => {
               return t('crewListTitle');
             case 'CONTRACT':
               return t('docTypeContract');
+            case 'PREFERENCE_LIST':
+              return t('docTypePreferenceList');
             default:
               return null;
           }
