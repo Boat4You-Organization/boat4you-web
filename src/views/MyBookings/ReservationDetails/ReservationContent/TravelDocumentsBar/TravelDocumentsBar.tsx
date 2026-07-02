@@ -72,7 +72,10 @@ const TravelDocumentsBar = ({ reservationDetails }: TravelDocumentsBarProps) => 
 
   return (
     <Container component="section" maxWidth="xl" disableGutters>
-      <Stack direction={{ xs: 'column', sm: 'row' }} flexWrap="wrap" gap={1.5} sx={{ mt: 3 }}>
+      <Typography variant="h3" component="h2" fontWeight={700} sx={{ mt: 4 }}>
+        {t('travelDocumentsTitle')}
+      </Typography>
+      <Stack direction={{ xs: 'column', sm: 'row' }} flexWrap="wrap" gap={1.5} sx={{ mt: 2 }}>
         {crewListUrl && (
           <Button
             size="large"
