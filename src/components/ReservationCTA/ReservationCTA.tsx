@@ -10,7 +10,6 @@ import Calendar from '@/components/SvgIcons/Calendar';
 import Email from '@/components/SvgIcons/Contact/Email';
 import Copy from '@/components/SvgIcons/Copy';
 import Download from '@/components/SvgIcons/Download';
-import ExternalLink from '@/components/SvgIcons/ExternalLink';
 import Phone from '@/components/SvgIcons/Phone';
 import { PaymentMethod } from '@/config/paymentMethods.config';
 import { ReservationDetails, ReservationStatus } from '@/models/reservation.model';
@@ -463,10 +462,19 @@ const ReservationCTA = ({ reservationDetails }: ReservationCTAProps) => {
           ml: 'auto',
         } as const;
 
+        // Travel documents (crew list, boarding pass / base info, preference
+        // list) live in the PROMINENT bar under the yacht images — the sidebar
+        // must not duplicate them (Mario 3.7.2026: "ako smo stavili gore, ne
+        // treba biti i u slideru"). Here only the receipt + everything else
+        // (contract scans, untyped uploads) remain.
+        const sidebarDocs = (reservationDetails.documents ?? []).filter(
+          doc => !['CREW_LIST', 'BOARDING_PASS', 'PREFERENCE_LIST'].includes(doc.documentType ?? '')
+        );
+
         return (
           <Stack spacing={1.25}>
             <Typography variant="h3" component="p" fontWeight={700} sx={{ mb: 0.5 }}>
-              {t('travelDocumentsTitle')}
+              {t('documentsTitle')}
             </Typography>
 
             {/* Booking receipt — generated PDF, always available */}
@@ -498,39 +506,9 @@ const ReservationCTA = ({ reservationDetails }: ReservationCTAProps) => {
               </Box>
             </Box>
 
-            {/* Crew list — the PARTNER's own editor (agency files it with the
-                port authority; no transcription in between). */}
-            {reservationDetails.crewListUrl && (
-              <>
-                <Box
-                  component="a"
-                  href={reservationDetails.crewListUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  sx={rowSx}
-                >
-                  <Stack sx={{ minWidth: 0 }}>
-                    <Typography variant="body1" fontWeight={700}>
-                      {t('crewListTitle')}
-                    </Typography>
-                    <Typography variant="body2" color={colors.black500}>
-                      {t('crewListFillOnline')}
-                    </Typography>
-                  </Stack>
-                  <Box sx={actionSx}>
-                    <ExternalLink size={18} />
-                    {t('openLink')}
-                  </Box>
-                </Box>
-                <Typography variant="body2" color={colors.black500} sx={{ px: 0.5 }}>
-                  {t('crewListPassportNote')}
-                </Typography>
-              </>
-            )}
-
-            {/* Admin-uploaded documents (boarding pass PDF, Kavas crew Word
-                form, contract scans …) */}
-            {reservationDetails.documents?.map(doc => {
+            {/* Remaining admin-uploaded documents (contract scans, untyped
+                uploads) — travel docs render in the bar under the images. */}
+            {sidebarDocs.map(doc => {
               const typedLabel = docTypeLabel(doc.documentType);
 
               return (

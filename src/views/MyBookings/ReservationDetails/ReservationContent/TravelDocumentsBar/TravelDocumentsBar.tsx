@@ -1,11 +1,12 @@
 'use client';
 
-import { Button, Container, Stack } from '@mui/material';
+import { Button, Container, Stack, Typography } from '@mui/material';
 import { useTranslations } from 'next-intl';
 
 import Download from '@/components/SvgIcons/Download';
 import ExternalLink from '@/components/SvgIcons/ExternalLink';
 import { ReservationDetails, ReservationDocument } from '@/models/reservation.model';
+import colors from '@/styles/themes/colors';
 
 /**
  * Prominent travel-documents strip rendered directly UNDER the yacht images —
@@ -67,6 +68,8 @@ const TravelDocumentsBar = ({ reservationDetails }: TravelDocumentsBarProps) => 
       </Button>
     ));
 
+  const hasCrewList = Boolean(crewListUrl) || crewListDocs.length > 0;
+
   return (
     <Container component="section" maxWidth="xl" disableGutters>
       <Stack direction={{ xs: 'column', sm: 'row' }} flexWrap="wrap" gap={1.5} sx={{ mt: 3 }}>
@@ -88,6 +91,13 @@ const TravelDocumentsBar = ({ reservationDetails }: TravelDocumentsBarProps) => 
         {renderDocButtons(boardingPassDocs, t('docTypeBoardingPass'))}
         {renderDocButtons(preferenceListDocs, t('docTypePreferenceList'))}
       </Stack>
+      {/* Passport-accuracy note travels WITH the crew-list button (the agency
+          files the list with the port authority). */}
+      {hasCrewList && (
+        <Typography variant="body2" color={colors.black500} sx={{ mt: 1 }}>
+          {t('crewListPassportNote')}
+        </Typography>
+      )}
     </Container>
   );
 };
