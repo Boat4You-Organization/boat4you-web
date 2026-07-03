@@ -38,6 +38,9 @@ const TravelDocumentsBar = ({ reservationDetails }: TravelDocumentsBarProps) => 
 
   if (!hasAnything) return null;
 
+  // Yellow, not blue — the sidebar "Pay now" is the page's single blue CTA;
+  // these must stand out without competing with it (Mario 3.7.2026:
+  // "previše plavo s ovim botunom pay now").
   const buttonSx = {
     textTransform: 'none' as const,
     fontWeight: 700,
@@ -45,6 +48,9 @@ const TravelDocumentsBar = ({ reservationDetails }: TravelDocumentsBarProps) => 
     px: 3,
     py: 1.25,
     width: { xs: '100%', sm: 'auto' },
+    backgroundColor: colors.mandalay500,
+    color: colors.mandalay950,
+    '&:hover': { backgroundColor: colors.mandalay600 },
     '& .MuiButton-startIcon': { marginRight: 1 },
   };
 
