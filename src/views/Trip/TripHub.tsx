@@ -430,7 +430,7 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment, ownerCredentials }: TripHu
 
       {!cancelled && (
         <>
-          <div style={{ padding: '14px 14px 104px', display: 'flex', flexDirection: 'column', gap: 10 }}>
+          <div style={{ padding: '14px 14px 128px', display: 'flex', flexDirection: 'column', gap: 10 }}>
             {/* ============================= TRIP ============================= */}
             {tab === 'trip' && (
               <>
@@ -746,17 +746,17 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment, ownerCredentials }: TripHu
                       display: 'flex',
                       flexDirection: 'column',
                       alignItems: 'center',
-                      gap: 2,
-                      padding: '9px 0 7px',
+                      gap: 4,
+                      padding: '12px 0 12px',
                       background: 'none',
                       border: 'none',
                       cursor: 'pointer',
-                      color: active ? '#2856ff' : '#8494ab',
+                      color: active ? '#2856ff' : '#64748b',
                       fontWeight: 700,
                     }}
                   >
-                    <span style={{ fontSize: 20, lineHeight: 1, opacity: active ? 1 : 0.7 }}>{item.icon}</span>
-                    <span style={{ fontSize: 10.5 }}>{item.label}</span>
+                    <span style={{ fontSize: 27, lineHeight: 1, opacity: active ? 1 : 0.85 }}>{item.icon}</span>
+                    <span style={{ fontSize: 12.5 }}>{item.label}</span>
                   </button>
                 );
               })}
