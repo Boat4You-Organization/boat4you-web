@@ -3,6 +3,8 @@
 /* eslint-disable @next/next/no-img-element */
 import { useCallback, useEffect, useMemo, useState } from 'react';
 
+import LogoWithoutText from '@/components/SvgIcons/LogoWithoutText';
+
 import TripSocial, { TripOwnerCredentials } from './TripSocial';
 
 /**
@@ -352,9 +354,10 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment, ownerCredentials }: TripHu
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12 }}>
           <a
             href="https://www.boat4you.com"
-            style={{ color: '#fff', textDecoration: 'none', fontWeight: 800, fontSize: 16 }}
+            style={{ display: 'flex', alignItems: 'center', gap: 7, color: '#fff', textDecoration: 'none' }}
           >
-            ⛵ boat4you
+            <LogoWithoutText size={24} />
+            <span style={{ fontWeight: 800, fontSize: 18, letterSpacing: '-0.01em' }}>boat4you</span>
           </a>
           <span
             style={{
