@@ -141,6 +141,7 @@ const TripSocial = ({ trip, token, apiUrl, ownerCredentials }: TripSocialProps) 
   const [consent, setConsent] = useState(false);
   const [uploading, setUploading] = useState(false);
   const [uploadError, setUploadError] = useState<string | null>(null);
+  const [zipping, setZipping] = useState(false);
   const [inviteQr, setInviteQr] = useState<string | null>(null);
   const [copied, setCopied] = useState(false);
 
@@ -408,6 +409,35 @@ const TripSocial = ({ trip, token, apiUrl, ownerCredentials }: TripSocialProps) 
       method: 'DELETE',
     }).catch(() => {});
     refreshCrewAndPhotos();
+  };
+
+  const downloadAll = async () => {
+    if (!creds || zipping) return;
+
+    setZipping(true);
+
+    try {
+      const res = await fetch(
+        `${apiUrl}/public/trip/${token}/album.zip?key=${encodeURIComponent(creds.participantKey)}`
+      );
+
+      if (res.ok) {
+        const blob = await res.blob();
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+
+        a.href = url;
+        a.download = 'trip-photos.zip';
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        URL.revokeObjectURL(url);
+      }
+    } catch {
+      /* download failed — the individual photos remain tappable */
+    } finally {
+      setZipping(false);
+    }
   };
 
   const shareInvite = async () => {
@@ -716,6 +746,16 @@ const TripSocial = ({ trip, token, apiUrl, ownerCredentials }: TripSocialProps) 
                   );
                 })}
               </div>
+            )}
+            {photos.length > 0 && (
+              <button
+                type="button"
+                onClick={downloadAll}
+                disabled={zipping}
+                style={{ ...BTN_BLUE, opacity: zipping ? 0.6 : 1 }}
+              >
+                {zipping ? 'Preparing your download…' : '⬇ Download all photos'}
+              </button>
             )}
             {!uploadsClosed ? (
               <>
