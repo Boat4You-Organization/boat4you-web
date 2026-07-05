@@ -39,6 +39,7 @@ interface ChatMessage {
 
 interface Photo {
   id: number;
+  participantId: number | null;
   uploaderName: string | null;
   marketingConsent: boolean;
   createdAt: string;
@@ -127,22 +128,21 @@ const TripSocial = ({ trip, token, apiUrl, ownerCredentials }: TripSocialProps) 
   }, [ownerCredentials, storageKey]);
 
   /* ------------------------------ data sync ------------------------------ */
+  // Full authoritative sync (sinceId=0, replace): scheduler-posted concierge
+  // messages get ids the SSE stream never delivered, so an incremental
+  // cursor would skip them forever; replacing also keeps ordering correct.
   const refreshMessages = useCallback(() => {
     if (!creds) return;
 
-    fetch(`${apiUrl}/public/trip/${token}/chat?key=${creds.participantKey}&sinceId=${lastIdRef.current}`)
+    fetch(`${apiUrl}/public/trip/${token}/chat?key=${creds.participantKey}&sinceId=0`)
       .then(r => (r.ok ? r.json() : null))
       .then((fresh: ChatMessage[] | null) => {
-        if (!fresh?.length) return;
+        if (!fresh) return;
 
-        setMessages(prev => {
-          const known = new Set(prev.map(m => m.id));
-          const merged = [...prev, ...fresh.filter(m => !known.has(m.id))];
+        const sorted = [...fresh].sort((a, b) => a.id - b.id);
 
-          lastIdRef.current = merged.length ? merged[merged.length - 1].id : 0;
-
-          return merged;
-        });
+        lastIdRef.current = sorted.length ? sorted[sorted.length - 1].id : 0;
+        setMessages(sorted);
       })
       .catch(() => {});
   }, [apiUrl, token, creds]);
@@ -151,10 +151,20 @@ const TripSocial = ({ trip, token, apiUrl, ownerCredentials }: TripSocialProps) 
     if (!creds) return;
 
     fetch(`${apiUrl}/public/trip/${token}/participants?key=${creds.participantKey}`)
-      .then(r => (r.ok ? r.json() : null))
+      .then(r => {
+        if (r.status === 403) {
+          // Removed by the leader / link regenerated — drop the dead key and
+          // fall back to the join flow.
+          window.localStorage.removeItem(storageKey);
+          setCreds(null);
+
+          return null;
+        }
+
+        return r.ok ? r.json() : null;
+      })
       .then((list: Participant[] | null) => {
         if (list) setParticipants(list);
-        // A 403 means we were removed / the link was regenerated — reset.
       })
       .catch(() => {});
 
@@ -164,7 +174,7 @@ const TripSocial = ({ trip, token, apiUrl, ownerCredentials }: TripSocialProps) 
         if (list) setPhotos(list);
       })
       .catch(() => {});
-  }, [apiUrl, token, creds]);
+  }, [apiUrl, token, creds, storageKey]);
 
   useEffect(() => {
     if (!creds) return undefined;
@@ -198,7 +208,10 @@ const TripSocial = ({ trip, token, apiUrl, ownerCredentials }: TripSocialProps) 
       /* EventSource auto-reconnects; the poll covers the gap */
     };
 
-    const poll = setInterval(refreshMessages, 30_000);
+    const poll = setInterval(() => {
+      refreshMessages();
+      refreshCrewAndPhotos();
+    }, 30_000);
 
     return () => {
       source.close();
@@ -330,6 +343,18 @@ const TripSocial = ({ trip, token, apiUrl, ownerCredentials }: TripSocialProps) 
 
       if (fileRef.current) fileRef.current.value = '';
     }
+  };
+
+  const deletePhoto = async (photo: Photo) => {
+    if (!creds) return;
+
+    // eslint-disable-next-line no-alert
+    if (!window.confirm('Delete this photo?')) return;
+
+    await fetch(`${apiUrl}/public/trip/${token}/photos/${photo.id}?key=${encodeURIComponent(creds.participantKey)}`, {
+      method: 'DELETE',
+    }).catch(() => {});
+    refreshCrewAndPhotos();
   };
 
   const shareInvite = async () => {
@@ -590,21 +615,51 @@ const TripSocial = ({ trip, token, apiUrl, ownerCredentials }: TripSocialProps) 
           <div style={{ ...CARD, display: 'flex', flexDirection: 'column', gap: 10 }}>
             {photos.length > 0 && (
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 6 }}>
-                {photos.map(photo => (
-                  <a
-                    key={photo.id}
-                    href={`${apiUrl}/public/trip/${token}/photos/${photo.id}/raw?key=${encodeURIComponent(creds.participantKey)}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      src={`${apiUrl}/public/trip/${token}/photos/${photo.id}/raw?key=${encodeURIComponent(creds.participantKey)}`}
-                      alt={photo.uploaderName ?? 'Trip photo'}
-                      loading="lazy"
-                      style={{ width: '100%', aspectRatio: '1/1', objectFit: 'cover', borderRadius: 9 }}
-                    />
-                  </a>
-                ))}
+                {photos.map(photo => {
+                  const mayDelete =
+                    isOwner || (photo.participantId != null && photo.participantId === creds.participantId);
+
+                  return (
+                    <div key={photo.id} style={{ position: 'relative' }}>
+                      <img
+                        src={`${apiUrl}/public/trip/${token}/photos/${photo.id}/raw?key=${encodeURIComponent(creds.participantKey)}`}
+                        alt={photo.uploaderName ?? 'Trip photo'}
+                        loading="lazy"
+                        style={{
+                          width: '100%',
+                          aspectRatio: '1/1',
+                          objectFit: 'cover',
+                          borderRadius: 9,
+                          display: 'block',
+                        }}
+                      />
+                      {mayDelete && (
+                        <button
+                          type="button"
+                          onClick={() => deletePhoto(photo)}
+                          aria-label="Delete photo"
+                          style={{
+                            position: 'absolute',
+                            top: 4,
+                            right: 4,
+                            border: 'none',
+                            borderRadius: 99,
+                            width: 22,
+                            height: 22,
+                            background: 'rgba(12,36,97,.75)',
+                            color: '#fff',
+                            fontSize: 12,
+                            fontWeight: 800,
+                            cursor: 'pointer',
+                            lineHeight: 1,
+                          }}
+                        >
+                          ✕
+                        </button>
+                      )}
+                    </div>
+                  );
+                })}
               </div>
             )}
             {!uploadsClosed ? (

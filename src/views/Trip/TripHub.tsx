@@ -151,15 +151,15 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment, ownerCredentials }: TripHu
           endpoint: json.endpoint,
           p256dh: json.keys.p256dh,
           auth: json.keys.auth,
-          // The payments card is server-injected only for the authenticated
-          // owner — reuse that as the owner signal for payment reminders.
-          isOwner: Boolean(ownerPayment),
+          // The backend verifies this key against the OWNER participant —
+          // it gates the (amount-free) installment reminders.
+          ownerKey: ownerCredentials?.participantKey ?? null,
           userAgent: navigator.userAgent,
         }),
         keepalive: true,
       }).catch(() => {});
     },
-    [apiUrl, token, ownerPayment]
+    [apiUrl, token, ownerCredentials]
   );
 
   useEffect(() => {
