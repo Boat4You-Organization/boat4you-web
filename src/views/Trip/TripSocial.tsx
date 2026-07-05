@@ -459,7 +459,8 @@ const TripSocial = ({ trip, token, apiUrl, ownerCredentials }: TripSocialProps) 
                     border: '1px solid #d4dcea',
                     borderRadius: 10,
                     padding: '11px 12px',
-                    fontSize: 15,
+                    // 16px min — iOS Safari auto-zooms into any smaller input on focus.
+                    fontSize: 16,
                     outline: 'none',
                   }}
                 />
@@ -642,7 +643,8 @@ const TripSocial = ({ trip, token, apiUrl, ownerCredentials }: TripSocialProps) 
                     border: '1px solid #d4dcea',
                     borderRadius: 10,
                     padding: '10px 12px',
-                    fontSize: 14,
+                    // 16px min — iOS Safari auto-zooms into any smaller input on focus.
+                    fontSize: 16,
                     outline: 'none',
                   }}
                 />

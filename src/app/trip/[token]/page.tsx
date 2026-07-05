@@ -75,6 +75,10 @@ export const viewport: Viewport = {
   themeColor: '#0c2461',
   width: 'device-width',
   initialScale: 1,
+  // App-like: lock the scale so the hub never pinch- or focus-zooms (the
+  // inputs are also 16px so iOS has no reason to auto-zoom on focus).
+  maximumScale: 1,
+  userScalable: false,
 };
 
 const TripPage = async ({ params }: { params: Promise<{ token: string }> }) => {
