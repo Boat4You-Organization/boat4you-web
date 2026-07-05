@@ -595,10 +595,9 @@
   "docTypePreferenceList": "Lista delle preferenze",
   "docTypeContract": "Contratto",
   "crewListFillOnline": "Compila online",
-  "openLink": "Apri",
+  "openLink": "Apri link",
   "crewListPassportNote": "La società di charter registra ogni ospite presso l'autorità portuale: inserisci i dati esattamente come sul passaporto.",
   "crewListDescription": "Invia i dati dell'equipaggio prima del ritiro.",
-  "openLink": "Apri link",
   "download": "Scarica",
   "pwa": {
     "installTitle": "Installa Boat4You",
@@ -606,5 +605,7 @@
     "iosHint": "Tocca Condividi, poi «Aggiungi a Home».",
     "installCta": "Installa",
     "dismiss": "Chiudi"
-  }
+  },
+  "tripQrHint": "Scansiona per aprirla sul telefono",
+  "tripQrAlt": "Codice QR dell'app di viaggio"
 }

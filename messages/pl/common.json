@@ -595,10 +595,9 @@
   "docTypePreferenceList": "Lista preferencji",
   "docTypeContract": "Umowa",
   "crewListFillOnline": "Wypełnij online",
-  "openLink": "Otwórz",
+  "openLink": "Otwórz link",
   "crewListPassportNote": "Firma czarterowa zgłasza każdego gościa kapitanatowi portu — wprowadź dane dokładnie tak, jak w paszporcie.",
   "crewListDescription": "Prześlij dane załogi przed odbiorem.",
-  "openLink": "Otwórz link",
   "download": "Pobierz",
   "pwa": {
     "installTitle": "Zainstaluj Boat4You",
@@ -606,5 +605,7 @@
     "iosHint": "Dotknij Udostępnij, a następnie „Do ekranu głównego”.",
     "installCta": "Zainstaluj",
     "dismiss": "Zamknij"
-  }
+  },
+  "tripQrHint": "Zeskanuj, aby otworzyć na telefonie",
+  "tripQrAlt": "Kod QR aplikacji podróży"
 }

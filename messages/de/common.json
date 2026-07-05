@@ -595,10 +595,9 @@
   "docTypePreferenceList": "Präferenzliste",
   "docTypeContract": "Vertrag",
   "crewListFillOnline": "Online ausfüllen",
-  "openLink": "Öffnen",
+  "openLink": "Link öffnen",
   "crewListPassportNote": "Die Charterfirma meldet jeden Gast bei der Hafenbehörde an — geben Sie die Daten jedes Gastes genau wie im Reisepass ein.",
   "crewListDescription": "Reichen Sie die Crew-Daten vor der Übernahme ein.",
-  "openLink": "Link öffnen",
   "download": "Herunterladen",
   "pwa": {
     "installTitle": "Boat4You installieren",
@@ -606,5 +605,7 @@
     "iosHint": "Auf „Teilen“ tippen, dann „Zum Home-Bildschirm“.",
     "installCta": "Installieren",
     "dismiss": "Schließen"
-  }
+  },
+  "tripQrHint": "Scannen und am Handy öffnen",
+  "tripQrAlt": "QR-Code der Trip-App"
 }

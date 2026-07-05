@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 
 import { getLoggedInUser } from '@/actions/auth.actions';
 import { getReservationDetails, getUserReservations } from '@/actions/reservation.actions';
+import { claimTripOwner } from '@/actions/trip.actions';
 import { Currency } from '@/models/user.model';
 import TripHub, { TripDto, TripOwnerPayment } from '@/views/Trip';
 
@@ -83,8 +84,19 @@ const TripPage = async ({ params }: { params: Promise<{ token: string }> }) => {
   if (!trip) notFound();
 
   const ownerPayment = await resolveOwnerPayment(trip);
+  // Owner enters the closed group through his web session — his devices all
+  // converge on the one OWNER participant. Guests join client-side by name.
+  const ownerCredentials = ownerPayment ? await claimTripOwner(token) : null;
 
-  return <TripHub trip={trip} token={token} apiUrl={API ?? ''} ownerPayment={ownerPayment} />;
+  return (
+    <TripHub
+      trip={trip}
+      token={token}
+      apiUrl={API ?? ''}
+      ownerPayment={ownerPayment}
+      ownerCredentials={ownerCredentials}
+    />
+  );
 };
 
 export default TripPage;

@@ -1,7 +1,10 @@
 'use client';
 
-import { Button, Container, Stack, Typography } from '@mui/material';
+import { useEffect, useState } from 'react';
+
+import { Box, Button, Container, Stack, Typography } from '@mui/material';
 import { useTranslations } from 'next-intl';
+import QRCode from 'qrcode';
 
 import Download from '@/components/SvgIcons/Download';
 import ExternalLink from '@/components/SvgIcons/ExternalLink';
@@ -25,6 +28,21 @@ interface TravelDocumentsBarProps {
 const TravelDocumentsBar = ({ reservationDetails }: TravelDocumentsBarProps) => {
   const t = useTranslations('common');
   const { reservationId, crewListUrl, documents, tripToken } = reservationDetails;
+  const [tripQr, setTripQr] = useState<string | null>(null);
+
+  // QR next to the Trip app button: the customer reads my-bookings on a
+  // desktop but the trip hub lives on the phone — scanning bridges the two.
+  useEffect(() => {
+    if (!tripToken) return;
+
+    QRCode.toDataURL(`${window.location.origin}/trip/${tripToken}`, {
+      width: 240,
+      margin: 1,
+      color: { dark: '#0c2461', light: '#ffffff' },
+    })
+      .then(setTripQr)
+      .catch(() => {});
+  }, [tripToken]);
 
   const byType = (type: ReservationDocument['documentType']) =>
     (documents ?? []).filter(doc => doc.documentType === type);
@@ -108,6 +126,26 @@ const TravelDocumentsBar = ({ reservationDetails }: TravelDocumentsBarProps) => 
           >
             ⚓ {t('openTripApp')}
           </Button>
+        )}
+        {tripQr && (
+          <Box
+            sx={{
+              display: { xs: 'none', sm: 'flex' },
+              alignItems: 'center',
+              gap: 1,
+              border: '1px solid',
+              borderColor: colors.black200,
+              borderRadius: 2,
+              px: 1,
+              py: 0.5,
+            }}
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={tripQr} alt={t('tripQrAlt')} width={56} height={56} style={{ borderRadius: 4 }} />
+            <Typography variant="body2" color={colors.black500} sx={{ maxWidth: 120, fontSize: 12 }}>
+              {t('tripQrHint')}
+            </Typography>
+          </Box>
         )}
         {crewListUrl && (
           <Button

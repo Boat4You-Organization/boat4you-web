@@ -3,6 +3,8 @@
 /* eslint-disable @next/next/no-img-element */
 import { useCallback, useEffect, useMemo, useState } from 'react';
 
+import TripSocial, { TripOwnerCredentials } from './TripSocial';
+
 /**
  * Boat4You Trip hub — standalone mobile-first PWA surface (English only by
  * decision). Everything here is crew-shareable: NO prices except the
@@ -39,6 +41,8 @@ export interface TripDto {
   }[];
   /** VAPID public key — null/absent means push is off and the reminders card hides. */
   vapidPublicKey?: string | null;
+  /** Crew invites open only after the first payment. */
+  inviteUnlocked?: boolean;
 }
 
 export interface TripOwnerPayment {
@@ -52,6 +56,7 @@ interface TripHubProps {
   token: string;
   apiUrl: string;
   ownerPayment: TripOwnerPayment | null;
+  ownerCredentials: TripOwnerCredentials | null;
 }
 
 /** Official maritime SAR numbers where well-established; 112 works EU-wide. */
@@ -111,7 +116,7 @@ const urlBase64ToUint8Array = (base64: string) => {
 
 type PushState = 'unsupported' | 'idle' | 'subscribing' | 'subscribed' | 'denied';
 
-const TripHub = ({ trip, token, apiUrl, ownerPayment }: TripHubProps) => {
+const TripHub = ({ trip, token, apiUrl, ownerPayment, ownerCredentials }: TripHubProps) => {
   const dateFrom = useMemo(() => new Date(trip.dateFrom), [trip.dateFrom]);
   const dateTo = useMemo(() => new Date(trip.dateTo), [trip.dateTo]);
 
@@ -499,6 +504,9 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment }: TripHubProps) => {
               </div>
             </>
           )}
+
+          {/* ---------- CREW / CHAT / ALBUM (closed group) ---------- */}
+          <TripSocial trip={trip} token={token} apiUrl={apiUrl} ownerCredentials={ownerCredentials} />
 
           {/* ---------- LEADER-ONLY PAYMENTS ---------- */}
           {ownerPayment && ownerPayment.nextAmountEur != null && !finished && (

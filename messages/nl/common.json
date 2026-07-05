@@ -595,10 +595,9 @@
   "docTypePreferenceList": "Voorkeurenlijst",
   "docTypeContract": "Contract",
   "crewListFillOnline": "Online invullen",
-  "openLink": "Openen",
+  "openLink": "Link openen",
   "crewListPassportNote": "De chartermaatschappij registreert elke gast bij de havenautoriteit — vul de gegevens exact in zoals in het paspoort.",
   "crewListDescription": "Dien de bemanningsgegevens in vóór de overdracht.",
-  "openLink": "Link openen",
   "download": "Downloaden",
   "pwa": {
     "installTitle": "Boat4You installeren",
@@ -606,5 +605,7 @@
     "iosHint": "Tik op Delen en daarna „Zet op beginscherm”.",
     "installCta": "Installeren",
     "dismiss": "Sluiten"
-  }
+  },
+  "tripQrHint": "Scan om te openen op je telefoon",
+  "tripQrAlt": "QR-code van de trip-app"
 }

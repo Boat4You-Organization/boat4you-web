@@ -595,10 +595,9 @@
   "docTypePreferenceList": "Liste de préférences",
   "docTypeContract": "Contrat",
   "crewListFillOnline": "À remplir en ligne",
-  "openLink": "Ouvrir",
+  "openLink": "Ouvrir le lien",
   "crewListPassportNote": "La compagnie de location enregistre chaque passager auprès des autorités portuaires — saisissez les données exactement comme sur le passeport.",
   "crewListDescription": "Soumettez les données d'équipage avant la prise en charge.",
-  "openLink": "Ouvrir le lien",
   "download": "Télécharger",
   "pwa": {
     "installTitle": "Installer Boat4You",
@@ -606,5 +605,7 @@
     "iosHint": "Appuyez sur Partager, puis « Sur l'écran d'accueil ».",
     "installCta": "Installer",
     "dismiss": "Fermer"
-  }
+  },
+  "tripQrHint": "Scannez pour ouvrir sur votre téléphone",
+  "tripQrAlt": "QR code de l'app de voyage"
 }

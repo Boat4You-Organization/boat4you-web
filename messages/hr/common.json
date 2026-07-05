@@ -595,10 +595,9 @@
   "docTypePreferenceList": "Lista preferencija",
   "docTypeContract": "Ugovor",
   "crewListFillOnline": "Ispunite online",
-  "openLink": "Otvori",
+  "openLink": "Otvori link",
   "crewListPassportNote": "Charter kompanija prijavljuje svakog gosta lučkoj kapetaniji — unesite podatke svakog gosta točno kako pišu u putovnici.",
   "crewListDescription": "Pošaljite podatke posade prije preuzimanja.",
-  "openLink": "Otvori link",
   "download": "Preuzmi",
   "pwa": {
     "installTitle": "Instalirajte Boat4You",
@@ -606,5 +605,7 @@
     "iosHint": "Dodirnite Dijeli, zatim „Dodaj na početni zaslon”.",
     "installCta": "Instaliraj",
     "dismiss": "Zatvori"
-  }
+  },
+  "tripQrHint": "Skenirajte i otvorite na mobitelu",
+  "tripQrAlt": "QR kod Trip aplikacije"
 }
