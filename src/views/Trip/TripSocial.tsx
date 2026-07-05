@@ -79,6 +79,52 @@ const BTN_BLUE = {
 
 const fmtTime = (iso: string) => new Date(iso).toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
 
+/**
+ * Downscale to max 2048 px JPEG before upload — phone photos are 5-15 MB
+ * (nginx 413-rejected them until 5.7.2026 and the server caps images at
+ * 10 MB); resizing makes uploads fast on marina Wi-Fi too. Falls back to
+ * the original file when decoding fails; the server still magic-byte
+ * validates whatever arrives.
+ */
+const downscalePhoto = (file: File): Promise<Blob> =>
+  new Promise(resolve => {
+    const img = new Image();
+    const url = URL.createObjectURL(file);
+
+    img.onload = () => {
+      URL.revokeObjectURL(url);
+
+      const scale = Math.min(1, 2048 / Math.max(img.width, img.height));
+
+      if (scale === 1 && file.size < 4_000_000) {
+        resolve(file);
+
+        return;
+      }
+
+      const canvas = document.createElement('canvas');
+
+      canvas.width = Math.round(img.width * scale);
+      canvas.height = Math.round(img.height * scale);
+
+      const ctx = canvas.getContext('2d');
+
+      if (!ctx) {
+        resolve(file);
+
+        return;
+      }
+
+      ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+      canvas.toBlob(blob => resolve(blob ?? file), 'image/jpeg', 0.85);
+    };
+    img.onerror = () => {
+      URL.revokeObjectURL(url);
+      resolve(file);
+    };
+    img.src = url;
+  });
+
 const TripSocial = ({ trip, token, apiUrl, ownerCredentials }: TripSocialProps) => {
   const storageKey = `b4y-trip-${token}`;
 
@@ -94,6 +140,7 @@ const TripSocial = ({ trip, token, apiUrl, ownerCredentials }: TripSocialProps) 
   const [sending, setSending] = useState(false);
   const [consent, setConsent] = useState(false);
   const [uploading, setUploading] = useState(false);
+  const [uploadError, setUploadError] = useState<string | null>(null);
   const [inviteQr, setInviteQr] = useState<string | null>(null);
   const [copied, setCopied] = useState(false);
 
@@ -325,19 +372,25 @@ const TripSocial = ({ trip, token, apiUrl, ownerCredentials }: TripSocialProps) 
     if (!creds || !file || uploading) return;
 
     setUploading(true);
+    setUploadError(null);
 
     try {
+      const blob = await downscalePhoto(file);
       const form = new FormData();
 
-      form.append('file', file);
+      form.append('file', blob, 'photo.jpg');
       form.append('key', creds.participantKey);
       form.append('marketingConsent', String(consent));
 
       const res = await fetch(`${apiUrl}/public/trip/${token}/photos`, { method: 'POST', body: form });
 
-      if (res.ok) refreshCrewAndPhotos();
+      if (res.ok) {
+        refreshCrewAndPhotos();
+      } else {
+        setUploadError('Upload failed — please try a different photo.');
+      }
     } catch {
-      /* upload failed — nothing persisted */
+      setUploadError('Upload failed — check your connection and try again.');
     } finally {
       setUploading(false);
 
@@ -667,7 +720,7 @@ const TripSocial = ({ trip, token, apiUrl, ownerCredentials }: TripSocialProps) 
                 <input
                   ref={fileRef}
                   type="file"
-                  accept="image/jpeg,image/png,image/webp"
+                  accept="image/*"
                   style={{ display: 'none' }}
                   onChange={e => uploadPhoto(e.target.files?.[0])}
                 />
@@ -679,6 +732,7 @@ const TripSocial = ({ trip, token, apiUrl, ownerCredentials }: TripSocialProps) 
                 >
                   {uploading ? 'Uploading…' : '📷 Add a photo'}
                 </button>
+                {uploadError && <div style={{ color: '#b32424', fontSize: 12.5 }}>{uploadError}</div>}
                 <label
                   style={{ ...SUB, fontSize: 12, display: 'flex', gap: 7, alignItems: 'flex-start', cursor: 'pointer' }}
                 >
