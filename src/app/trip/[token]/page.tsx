@@ -67,7 +67,7 @@ export async function generateMetadata({ params }: { params: Promise<{ token: st
     robots: { index: false, follow: false },
     manifest: `/trip/${token}/manifest.webmanifest`,
     appleWebApp: { capable: true, statusBarStyle: 'black-translucent', title: 'B4Y Trip' },
-    icons: { apple: '/favicons/apple-touch-icon.png' },
+    icons: { apple: '/icons/trip-apple-180.png' },
   };
 }
 

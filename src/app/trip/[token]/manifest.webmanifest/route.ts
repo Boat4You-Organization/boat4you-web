@@ -21,9 +21,9 @@ export async function GET(_req: NextRequest, { params }: { params: Promise<{ tok
       theme_color: '#0c2461',
       lang: 'en',
       icons: [
-        { src: '/favicons/android-chrome-192x192.png', sizes: '192x192', type: 'image/png', purpose: 'any' },
-        { src: '/favicons/android-chrome-512x512.png', sizes: '512x512', type: 'image/png', purpose: 'any' },
-        { src: '/icons/maskable-512.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' },
+        { src: '/icons/trip-icon-192.png', sizes: '192x192', type: 'image/png', purpose: 'any' },
+        { src: '/icons/trip-icon-512.png', sizes: '512x512', type: 'image/png', purpose: 'any' },
+        { src: '/icons/trip-maskable-512.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' },
       ],
     },
     {
