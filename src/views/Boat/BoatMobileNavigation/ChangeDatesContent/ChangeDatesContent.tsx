@@ -33,16 +33,25 @@ const ChangeDatesContent = ({ yacht, isCalculatedPrice, isSelectedOfferUnavailab
   const [isModalOpen, toggleModal] = useToggleState();
   const { setValue, watch } = useFormContext<BoatCalendarFormValues>();
   const t = useTranslations('yacht');
+  const tCommon = useTranslations('common');
   const locale = useLocale();
-
-  const formattedClientPricePerDay = formatPriceWithCurrency({
-    clientPriceEur: calculatedPrice?.clientPricePerDayEur,
-    clientPriceInfo: calculatedPrice?.clientPricePerDayInfo,
-    locale,
-  });
 
   const startDate = watch('startDate');
   const endDate = watch('endDate');
+
+  // Headline shows the charter price for the WHOLE selected period, not a
+  // per-day rate — mirrors the search listing card and availability card
+  // (both use clientPriceEur + `priceForXDays`). A per-day number reads
+  // misleadingly cheap (494/day vs ~3458 for the week). Mario 5.7.2026.
+  const selectedDays = startDate && endDate ? endDate.diff(startDate, 'day') : 7;
+  const numberOfDays =
+    calculatedPrice?.numberOfDays && calculatedPrice.numberOfDays > 0 ? calculatedPrice.numberOfDays : selectedDays;
+
+  const formattedClientPriceTotal = formatPriceWithCurrency({
+    clientPriceEur: calculatedPrice?.clientPriceEur,
+    clientPriceInfo: calculatedPrice?.clientPriceInfo,
+    locale,
+  });
 
   const [availabilityState, availabilityAction] = useActionState(getSingleYachtAvailability, []);
 
@@ -146,10 +155,10 @@ const ChangeDatesContent = ({ yacht, isCalculatedPrice, isSelectedOfferUnavailab
         {hasValidDateSelection && isCalculatedPrice && !isSelectedOfferUnavailable ? (
           <Stack direction="row" spacing={1} alignItems="end">
             <Typography component="p" variant="h2" color={colors.green500}>
-              {t('upTo')} {formattedClientPricePerDay}
+              {t('upTo')} {formattedClientPriceTotal}
             </Typography>
             <Typography variant="body1" color={colors.black600}>
-              {t('perDay')}
+              {tCommon('priceForXDays', { days: String(numberOfDays) })}
             </Typography>
           </Stack>
         ) : (
