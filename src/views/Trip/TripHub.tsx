@@ -118,6 +118,13 @@ const urlBase64ToUint8Array = (base64: string) => {
 
 type PushState = 'unsupported' | 'idle' | 'subscribing' | 'subscribed' | 'denied';
 
+interface BeforeInstallPromptEvent extends Event {
+  prompt: () => Promise<void>;
+  userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>;
+}
+
+const INSTALL_DISMISS_KEY = 'b4y-trip-install-dismissed';
+
 type TabId = 'trip' | 'documents' | 'chat' | 'more';
 
 const TABS: { id: TabId; label: string; icon: string }[] = [
@@ -136,6 +143,9 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment, ownerCredentials }: TripHu
   const [standalone, setStandalone] = useState(true);
   const [pushState, setPushState] = useState<PushState>('unsupported');
   const [tab, setTab] = useState<TabId>('trip');
+  const [installEvent, setInstallEvent] = useState<BeforeInstallPromptEvent | null>(null);
+  const [installDismissed, setInstallDismissed] = useState(true);
+  const [iosHintOpen, setIosHintOpen] = useState(false);
 
   // Day-1 analytics — fire-and-forget, the hub must never wait on it.
   const sendEvent = useCallback(
@@ -190,8 +200,53 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment, ownerCredentials }: TripHu
 
     if (pushParam) sendEvent('PUSH_OPEN', pushParam);
 
-    return () => clearInterval(t);
+    // Install banner: show in browser mode unless the user X-ed it before.
+    // Android also fires beforeinstallprompt → we drive the native installer.
+    let dismissed = true;
+
+    try {
+      dismissed = window.localStorage.getItem(INSTALL_DISMISS_KEY) === '1';
+    } catch {
+      /* private mode — treat as not dismissed */
+      dismissed = false;
+    }
+    setInstallDismissed(dismissed || isStandalone);
+
+    const onBeforeInstall = (e: Event) => {
+      e.preventDefault();
+      setInstallEvent(e as BeforeInstallPromptEvent);
+    };
+
+    window.addEventListener('beforeinstallprompt', onBeforeInstall);
+
+    return () => {
+      clearInterval(t);
+      window.removeEventListener('beforeinstallprompt', onBeforeInstall);
+    };
   }, [sendEvent]);
+
+  const dismissInstall = () => {
+    setInstallDismissed(true);
+    try {
+      window.localStorage.setItem(INSTALL_DISMISS_KEY, '1');
+    } catch {
+      /* private mode — dismissal just won't persist */
+    }
+  };
+
+  const runInstall = async () => {
+    if (!installEvent) {
+      // iOS / unsupported: reveal the manual Share → Add to Home Screen steps.
+      setIosHintOpen(o => !o);
+
+      return;
+    }
+
+    await installEvent.prompt();
+    await installEvent.userChoice;
+    setInstallEvent(null);
+    dismissInstall();
+  };
 
   // Trip reminders (web-push). Register the SW and reflect the current
   // subscription; iOS Safari outside the installed PWA has no Notification
@@ -347,8 +402,98 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment, ownerCredentials }: TripHu
     h2: { fontSize: 15, fontWeight: 800, margin: '18px 2px 8px' } as const,
   };
 
+  const isIos = now != null && /iphone|ipad|ipod/i.test(navigator.userAgent);
+  const showInstallBanner = !standalone && !installDismissed && !cancelled;
+
   return (
     <div style={S.page}>
+      {/* ---------- INSTALL BANNER (browser only, X to dismiss) ---------- */}
+      {showInstallBanner && (
+        <div
+          style={{
+            position: 'sticky',
+            top: 0,
+            zIndex: 40,
+            background: 'linear-gradient(120deg,#2856ff,#1a3fd6)',
+            color: '#fff',
+            padding: '11px 12px 12px 14px',
+            boxShadow: '0 2px 10px rgba(15,23,42,.18)',
+          }}
+        >
+          <button
+            type="button"
+            onClick={dismissInstall}
+            aria-label="Dismiss"
+            style={{
+              position: 'absolute',
+              top: 6,
+              right: 6,
+              width: 26,
+              height: 26,
+              border: 'none',
+              borderRadius: 99,
+              background: 'rgba(255,255,255,.18)',
+              color: '#fff',
+              fontSize: 15,
+              fontWeight: 800,
+              lineHeight: 1,
+              cursor: 'pointer',
+            }}
+          >
+            ✕
+          </button>
+          <div style={{ display: 'flex', gap: 10, alignItems: 'center', paddingRight: 26 }}>
+            <span style={{ fontSize: 26 }}>📲</span>
+            <div style={{ fontSize: 12.5, lineHeight: 1.35, fontWeight: 600 }}>
+              Add this trip to your home screen to get a heads-up about your charter and an alert the moment we add your
+              documents.
+            </div>
+          </div>
+          <button
+            type="button"
+            onClick={runInstall}
+            style={{
+              marginTop: 9,
+              width: '100%',
+              background: '#fff',
+              color: '#1a3fd6',
+              border: 'none',
+              borderRadius: 10,
+              padding: '10px',
+              fontWeight: 800,
+              fontSize: 14,
+              cursor: 'pointer',
+            }}
+          >
+            {installEvent ? '📲 Add to home screen' : 'How do I add it?'}
+          </button>
+          {iosHintOpen && !installEvent && (
+            <div
+              style={{
+                marginTop: 8,
+                fontSize: 12,
+                lineHeight: 1.5,
+                background: 'rgba(255,255,255,.14)',
+                borderRadius: 8,
+                padding: '9px 11px',
+              }}
+            >
+              {isIos ? (
+                <>
+                  Tap the <b>Share</b> button ⬆ at the bottom of Safari, then choose{' '}
+                  <b>&quot;Add to Home Screen&quot;</b>.
+                </>
+              ) : (
+                <>
+                  Open the browser menu ⋮ and choose <b>&quot;Install app&quot;</b> or{' '}
+                  <b>&quot;Add to Home screen&quot;</b> — best done in Chrome.
+                </>
+              )}
+            </div>
+          )}
+        </div>
+      )}
+
       {/* ---------- HERO ---------- */}
       <div style={S.hero}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12 }}>
