@@ -11,11 +11,7 @@ const intlMiddleware = createIntlMiddleware(routing);
 // authenticated session. Pages that need richer reservation data fetch it via
 // the authenticated API when possible, but gracefully fall back to the local
 // reservation payload for guests.
-const protectedRoutes = [
-  '/my-profile',
-  '/my-bookings',
-  '/cancel-booking',
-];
+const protectedRoutes = ['/my-profile', '/my-bookings', '/cancel-booking'];
 
 async function refreshAccessToken(refreshToken: string): Promise<string | null> {
   try {
@@ -82,5 +78,5 @@ export async function proxy(req: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/((?!api|_next/static|_next/image|favicon|favicons|robots|sitemap|manifest|.*\\..*$).*)'],
+  matcher: ['/((?!api|trip|_next/static|_next/image|favicon|favicons|robots|sitemap|manifest|.*\\..*$).*)'],
 };

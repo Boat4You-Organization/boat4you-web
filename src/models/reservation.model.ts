@@ -124,6 +124,8 @@ export interface ReservationDetails extends ReservationShortInfo {
   // Crew list link — partner-supplied (NauSys/MMK at confirmation) or
   // admin-entered manually for fictitious bookings.
   crewListUrl?: string | null;
+  // Boat4You Trip PWA hub key — /trip/{token} ("Trip app" button, owner only).
+  tripToken?: string | null;
   // Admin-uploaded documents attached to the booking (PDF/DOC/DOCX). Customer
   // downloads via /secured/reservations/my-reservations/{id}/documents/{docId}.
   documents?: ReservationDocument[];

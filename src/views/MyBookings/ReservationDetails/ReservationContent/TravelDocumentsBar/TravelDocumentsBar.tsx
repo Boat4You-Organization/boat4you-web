@@ -24,7 +24,7 @@ interface TravelDocumentsBarProps {
 
 const TravelDocumentsBar = ({ reservationDetails }: TravelDocumentsBarProps) => {
   const t = useTranslations('common');
-  const { reservationId, crewListUrl, documents } = reservationDetails;
+  const { reservationId, crewListUrl, documents, tripToken } = reservationDetails;
 
   const byType = (type: ReservationDocument['documentType']) =>
     (documents ?? []).filter(doc => doc.documentType === type);
@@ -34,7 +34,9 @@ const TravelDocumentsBar = ({ reservationDetails }: TravelDocumentsBarProps) => 
   const preferenceListDocs = byType('PREFERENCE_LIST');
 
   const hasAnything =
-    Boolean(crewListUrl) || crewListDocs.length + boardingPassDocs.length + preferenceListDocs.length > 0;
+    Boolean(crewListUrl) ||
+    Boolean(tripToken) ||
+    crewListDocs.length + boardingPassDocs.length + preferenceListDocs.length > 0;
 
   if (!hasAnything) return null;
 
@@ -82,6 +84,31 @@ const TravelDocumentsBar = ({ reservationDetails }: TravelDocumentsBarProps) => 
         {t('travelDocumentsTitle')}
       </Typography>
       <Stack direction={{ xs: 'column', sm: 'row' }} flexWrap="wrap" gap={1.5} sx={{ mt: 2 }}>
+        {/* Boat4You Trip — the owner's door into the PWA hub he shares with
+            his crew (countdown, docs, weather, SOS). Navy so it reads as a
+            different kind of action than the yellow document buttons. */}
+        {tripToken && (
+          <Button
+            size="large"
+            variant="contained"
+            component="a"
+            href={`/trip/${tripToken}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            sx={{
+              textTransform: 'none',
+              fontWeight: 700,
+              fontSize: 15,
+              px: 3,
+              py: 1.25,
+              width: { xs: '100%', sm: 'auto' },
+              backgroundColor: '#0c2461',
+              '&:hover': { backgroundColor: '#122f7a' },
+            }}
+          >
+            ⚓ {t('openTripApp')}
+          </Button>
+        )}
         {crewListUrl && (
           <Button
             size="large"
