@@ -43,6 +43,7 @@ const ReservationCTA = ({ reservationDetails }: ReservationCTAProps) => {
     cancellationRequest,
     cancellationRejectedAt,
     cancellationRejectedReason,
+    charterUpdate,
   } = reservationDetails;
   const { installmentDisplay, nextInstallment, isFullyPaid } = usePaymentStatus(paymentPhases);
   const { handleSubmit, isLoading } = usePaymentSubmit({
@@ -376,6 +377,27 @@ const ReservationCTA = ({ reservationDetails }: ReservationCTAProps) => {
         </Stack>
       </Stack>
       {renderPaymentStatus()}
+      {/* Charter update — broker-written note about extras arranged with the
+          agency (e.g. "Skipper: 1470 €"). Highlighted, directly under the
+          Pay-now action. Hidden when empty. */}
+      {charterUpdate?.trim() && (
+        <Box
+          mt={3}
+          p={2}
+          sx={{
+            backgroundColor: colors.yellow50,
+            border: `1px solid ${colors.yellow500}`,
+            borderRadius: '12px',
+          }}
+        >
+          <Typography variant="h4" component="p" fontWeight={700} color={colors.yellow500} mb={1}>
+            {t('charterUpdateTitle')}
+          </Typography>
+          <Typography variant="body1" sx={{ whiteSpace: 'pre-wrap', lineHeight: 1.6 }}>
+            {charterUpdate.trim()}
+          </Typography>
+        </Box>
+      )}
       <Stack gap={3} mt={3}>
         <Typography variant="h3" component="p" fontWeight={700}>
           {cancellationRequestAt ? t('questionsAboutCancellation') : t('contactTheSupport')}

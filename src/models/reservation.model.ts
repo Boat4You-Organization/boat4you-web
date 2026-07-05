@@ -126,6 +126,10 @@ export interface ReservationDetails extends ReservationShortInfo {
   crewListUrl?: string | null;
   // Boat4You Trip PWA hub key — /trip/{token} ("Trip app" button, owner only).
   tripToken?: string | null;
+  // Broker-written "Charter update" — negotiated extras arranged with the agency
+  // (e.g. "Skipper: 1470 €"). Free text, shown below the Pay-now action; the
+  // block hides when null/empty.
+  charterUpdate?: string | null;
   // Admin-uploaded documents attached to the booking (PDF/DOC/DOCX). Customer
   // downloads via /secured/reservations/my-reservations/{id}/documents/{docId}.
   documents?: ReservationDocument[];
