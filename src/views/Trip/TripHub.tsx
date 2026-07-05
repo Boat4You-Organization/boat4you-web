@@ -1,7 +1,7 @@
 'use client';
 
 /* eslint-disable @next/next/no-img-element */
-import { useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 
 /**
  * Boat4You Trip hub — standalone mobile-first PWA surface (English only by
@@ -37,6 +37,8 @@ export interface TripDto {
     uploadedAt: string;
     documentType?: string;
   }[];
+  /** VAPID public key — null/absent means push is off and the reminders card hides. */
+  vapidPublicKey?: string | null;
 }
 
 export interface TripOwnerPayment {
@@ -99,6 +101,16 @@ interface ForecastDay {
 const fmtDate = (iso: string) =>
   new Date(iso).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
 
+/** VAPID key (base64url) → Uint8Array for pushManager.subscribe. */
+const urlBase64ToUint8Array = (base64: string) => {
+  const padding = '='.repeat((4 - (base64.length % 4)) % 4);
+  const raw = window.atob((base64 + padding).replace(/-/g, '+').replace(/_/g, '/'));
+
+  return Uint8Array.from(raw, c => c.charCodeAt(0));
+};
+
+type PushState = 'unsupported' | 'idle' | 'subscribing' | 'subscribed' | 'denied';
+
 const TripHub = ({ trip, token, apiUrl, ownerPayment }: TripHubProps) => {
   const dateFrom = useMemo(() => new Date(trip.dateFrom), [trip.dateFrom]);
   const dateTo = useMemo(() => new Date(trip.dateTo), [trip.dateTo]);
@@ -106,19 +118,122 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment }: TripHubProps) => {
   const [now, setNow] = useState<Date | null>(null);
   const [forecast, setForecast] = useState<ForecastDay[] | null>(null);
   const [standalone, setStandalone] = useState(true);
+  const [pushState, setPushState] = useState<PushState>('unsupported');
+
+  // Day-1 analytics — fire-and-forget, the hub must never wait on it.
+  const sendEvent = useCallback(
+    (type: string, meta?: string) => {
+      fetch(`${apiUrl}/public/trip/${token}/events`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ type, meta }),
+        keepalive: true,
+      }).catch(() => {});
+    },
+    [apiUrl, token]
+  );
+
+  const postSubscription = useCallback(
+    (subscription: PushSubscription) => {
+      const json = subscription.toJSON();
+
+      if (!json.endpoint || !json.keys?.p256dh || !json.keys?.auth) return;
+
+      fetch(`${apiUrl}/public/trip/${token}/push-subscriptions`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          endpoint: json.endpoint,
+          p256dh: json.keys.p256dh,
+          auth: json.keys.auth,
+          // The payments card is server-injected only for the authenticated
+          // owner — reuse that as the owner signal for payment reminders.
+          isOwner: Boolean(ownerPayment),
+          userAgent: navigator.userAgent,
+        }),
+        keepalive: true,
+      }).catch(() => {});
+    },
+    [apiUrl, token, ownerPayment]
+  );
 
   useEffect(() => {
     setNow(new Date());
 
     const t = setInterval(() => setNow(new Date()), 30_000);
 
-    setStandalone(
+    const isStandalone =
       window.matchMedia('(display-mode: standalone)').matches ||
-        (navigator as { standalone?: boolean }).standalone === true
-    );
+      (navigator as { standalone?: boolean }).standalone === true;
+
+    setStandalone(isStandalone);
+    sendEvent('HUB_VIEW', isStandalone ? 'standalone' : 'browser');
+
+    const pushParam = new URLSearchParams(window.location.search).get('push');
+
+    if (pushParam) sendEvent('PUSH_OPEN', pushParam);
 
     return () => clearInterval(t);
-  }, []);
+  }, [sendEvent]);
+
+  // Trip reminders (web-push). Register the SW and reflect the current
+  // subscription; iOS Safari outside the installed PWA has no Notification
+  // API, so the card simply stays hidden there (install guide covers it).
+  useEffect(() => {
+    if (process.env.NODE_ENV !== 'production') return;
+
+    if (!trip.vapidPublicKey) return;
+
+    if (!('serviceWorker' in navigator) || !('PushManager' in window) || !('Notification' in window)) return;
+
+    navigator.serviceWorker
+      .register('/sw.js')
+      .then(registration => registration.pushManager.getSubscription())
+      .then(subscription => {
+        if (subscription) {
+          setPushState('subscribed');
+          // Re-post so a pruned/re-bound reservation heals itself.
+          postSubscription(subscription);
+        } else if (Notification.permission === 'denied') {
+          setPushState('denied');
+        } else {
+          setPushState('idle');
+        }
+      })
+      .catch(() => {});
+  }, [trip.vapidPublicKey, postSubscription]);
+
+  const enableReminders = async () => {
+    const key = trip.vapidPublicKey;
+
+    if (!key) return;
+
+    try {
+      setPushState('subscribing');
+
+      const permission = await Notification.requestPermission();
+
+      if (permission !== 'granted') {
+        setPushState(permission === 'denied' ? 'denied' : 'idle');
+
+        return;
+      }
+
+      await navigator.serviceWorker.register('/sw.js');
+
+      const registration = await navigator.serviceWorker.ready;
+      const subscription = await registration.pushManager.subscribe({
+        userVisibleOnly: true,
+        applicationServerKey: urlBase64ToUint8Array(key),
+      });
+
+      postSubscription(subscription);
+      sendEvent('PUSH_SUBSCRIBE');
+      setPushState('subscribed');
+    } catch {
+      setPushState('idle');
+    }
+  };
 
   // Weather for the EXACT marina (Open-Meteo, keyless). 7 days.
   useEffect(() => {
@@ -256,6 +371,7 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment }: TripHubProps) => {
               href={boatUrl}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => sendEvent('SITE_CLICK', 'hero')}
               style={{ color: '#fff', textDecoration: 'none' }}
             >
               <div style={{ fontSize: 24, fontWeight: 800, letterSpacing: '-0.01em', margin: '2px 0' }}>
@@ -305,6 +421,7 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment }: TripHubProps) => {
               href={boatUrl}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => sendEvent('SITE_CLICK', 'gallery')}
               style={{ ...S.card, textDecoration: 'none', color: 'inherit' }}
             >
               <div style={{ display: 'flex', gap: 6, alignItems: 'center' }}>
@@ -340,7 +457,13 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment }: TripHubProps) => {
           {/* ---------- FINISHED: thanks + rebook ---------- */}
           {finished && (
             <>
-              <a href={boatUrl} target="_blank" rel="noopener noreferrer" style={S.btnBlue}>
+              <a
+                href={boatUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => sendEvent('SITE_CLICK', 'rebook')}
+                style={S.btnBlue}
+              >
                 Sail {trip.yacht.name} again next year →
               </a>
               <div style={{ ...S.card, ...S.sub }}>
@@ -364,6 +487,7 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment }: TripHubProps) => {
                   href={`${apiUrl}/public/trip/${token}/documents/${doc.id}`}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => sendEvent('DOC_OPEN', doc.documentType ?? 'OTHER')}
                   style={S.btnYellow}
                 >
                   {DOC_LABELS[doc.documentType ?? ''] ?? doc.filename} ⬇
@@ -406,6 +530,46 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment }: TripHubProps) => {
                   <span style={{ color: '#2856ff', fontWeight: 700 }}>Pay on boat4you.com →</span>
                 </div>
               </a>
+            </>
+          )}
+
+          {/* ---------- TRIP REMINDERS (web-push) ---------- */}
+          {pushState !== 'unsupported' && !finished && (
+            <>
+              <div style={S.h2}>Trip reminders</div>
+              <div style={{ ...S.card, display: 'flex', flexDirection: 'column', gap: 8 }}>
+                {pushState === 'subscribed' && (
+                  <div style={{ fontWeight: 800, fontSize: 14, color: '#16815f' }}>
+                    🔔 Reminders are on for this phone
+                  </div>
+                )}
+                {pushState === 'denied' && (
+                  <div style={{ ...S.sub, fontSize: 12.5 }}>
+                    Notifications are blocked for this site — enable them in your browser settings to get trip
+                    reminders.
+                  </div>
+                )}
+                {(pushState === 'idle' || pushState === 'subscribing') && (
+                  <button
+                    type="button"
+                    onClick={enableReminders}
+                    disabled={pushState === 'subscribing'}
+                    style={{
+                      ...S.btnBlue,
+                      border: 'none',
+                      width: '100%',
+                      cursor: 'pointer',
+                      opacity: pushState === 'subscribing' ? 0.6 : 1,
+                    }}
+                  >
+                    🔔 Get trip reminders
+                  </button>
+                )}
+                <div style={{ ...S.sub, fontSize: 12 }}>
+                  Countdown nudges, the weather on departure day and a heads-up when it&apos;s time to check in —
+                  straight to this phone.
+                </div>
+              </div>
             </>
           )}
 

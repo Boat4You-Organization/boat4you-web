@@ -15,9 +15,9 @@
  *
  * Bump VERSION to invalidate all caches on a breaking change.
  */
-const VERSION = 'b4y-v1';
-const STATIC_CACHE = VERSION + '-static';
-const PAGE_CACHE = VERSION + '-pages';
+const VERSION = 'b4y-v2';
+const STATIC_CACHE = `${VERSION}-static`;
+const PAGE_CACHE = `${VERSION}-pages`;
 const PRECACHE = ['/offline.html', '/manifest.webmanifest'];
 
 self.addEventListener('install', event => {
@@ -39,7 +39,7 @@ self.addEventListener('activate', event => {
 });
 
 self.addEventListener('fetch', event => {
-  const request = event.request;
+  const { request } = event;
 
   if (request.method !== 'GET') return;
 
@@ -57,11 +57,13 @@ self.addEventListener('fetch', event => {
             hit ||
             fetch(request).then(res => {
               cache.put(request, res.clone());
+
               return res;
             })
         )
       )
     );
+
     return;
   }
 
@@ -71,11 +73,14 @@ self.addEventListener('fetch', event => {
       fetch(request)
         .then(res => {
           const copy = res.clone();
+
           caches.open(PAGE_CACHE).then(cache => cache.put(request, copy));
+
           return res;
         })
         .catch(() => caches.match(request).then(hit => hit || caches.match('/offline.html')))
     );
+
     return;
   }
 
@@ -87,12 +92,55 @@ self.addEventListener('fetch', event => {
           const network = fetch(request)
             .then(res => {
               cache.put(request, res.clone());
+
               return res;
             })
             .catch(() => hit);
+
           return hit || network;
         })
       )
     );
   }
+});
+
+/* Boat4You Trip push (phase 2). The backend sends a JSON payload
+ * {title, body, url, tag}; the click opens the trip hub (focusing an already
+ * open one when possible). The hub records PUSH_OPEN itself via the ?push=
+ * query param in the URL, so the SW stays dumb. */
+self.addEventListener('push', event => {
+  if (!event.data) return;
+
+  let payload;
+
+  try {
+    payload = event.data.json();
+  } catch (_) {
+    return;
+  }
+  event.waitUntil(
+    self.registration.showNotification(payload.title || 'Boat4You', {
+      body: payload.body || '',
+      tag: payload.tag || 'boat4you-trip',
+      icon: '/favicons/android-chrome-192x192.png',
+      badge: '/favicons/favicon-32x32.png',
+      data: { url: payload.url || '/' },
+    })
+  );
+});
+
+self.addEventListener('notificationclick', event => {
+  event.notification.close();
+
+  const url = (event.notification.data && event.notification.data.url) || '/';
+
+  event.waitUntil(
+    self.clients.matchAll({ type: 'window', includeUncontrolled: true }).then(windows => {
+      const open = windows.find(w => w.url.split('?')[0] === url.split('?')[0]);
+
+      if (open) return open.focus();
+
+      return self.clients.openWindow(url);
+    })
+  );
 });
