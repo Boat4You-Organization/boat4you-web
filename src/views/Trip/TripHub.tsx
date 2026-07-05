@@ -116,6 +116,15 @@ const urlBase64ToUint8Array = (base64: string) => {
 
 type PushState = 'unsupported' | 'idle' | 'subscribing' | 'subscribed' | 'denied';
 
+type TabId = 'trip' | 'documents' | 'chat' | 'more';
+
+const TABS: { id: TabId; label: string; icon: string }[] = [
+  { id: 'trip', label: 'Trip', icon: '⛵' },
+  { id: 'documents', label: 'Documents', icon: '📄' },
+  { id: 'chat', label: 'Chat', icon: '💬' },
+  { id: 'more', label: 'More', icon: '☰' },
+];
+
 const TripHub = ({ trip, token, apiUrl, ownerPayment, ownerCredentials }: TripHubProps) => {
   const dateFrom = useMemo(() => new Date(trip.dateFrom), [trip.dateFrom]);
   const dateTo = useMemo(() => new Date(trip.dateTo), [trip.dateTo]);
@@ -124,6 +133,7 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment, ownerCredentials }: TripHu
   const [forecast, setForecast] = useState<ForecastDay[] | null>(null);
   const [standalone, setStandalone] = useState(true);
   const [pushState, setPushState] = useState<PushState>('unsupported');
+  const [tab, setTab] = useState<TabId>('trip');
 
   // Day-1 analytics — fire-and-forget, the hub must never wait on it.
   const sendEvent = useCallback(
@@ -418,275 +428,341 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment, ownerCredentials }: TripHu
         )}
       </div>
 
-      {cancelled ? null : (
-        <div style={{ padding: '14px 14px 0', display: 'flex', flexDirection: 'column', gap: 10 }}>
-          {/* ---------- GALLERY / BOAT LINK ---------- */}
-          {trip.yacht.imageIds.length > 0 && (
-            <a
-              href={boatUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => sendEvent('SITE_CLICK', 'gallery')}
-              style={{ ...S.card, textDecoration: 'none', color: 'inherit' }}
-            >
-              <div style={{ display: 'flex', gap: 6, alignItems: 'center' }}>
-                <div style={{ display: 'flex', gap: 5, flex: 1, overflow: 'hidden' }}>
-                  {trip.yacht.imageIds.slice(0, 3).map(id => (
-                    <img
-                      key={id}
-                      src={img(id, 320)}
-                      alt={trip.yacht.name}
-                      style={{ width: '32%', aspectRatio: '4/3', objectFit: 'cover', borderRadius: 9 }}
-                    />
-                  ))}
-                </div>
-                <div style={{ fontSize: 12.5, fontWeight: 800, color: '#2856ff', whiteSpace: 'nowrap' }}>
-                  View
-                  <br />
-                  boat ↗
-                </div>
-              </div>
-              <div style={{ ...S.sub, marginTop: 8 }}>
-                {[
-                  trip.yacht.buildYear,
-                  trip.yacht.cabins != null ? `${trip.yacht.cabins} cabins` : null,
-                  trip.yacht.berths != null ? `${trip.yacht.berths} berths` : null,
-                  trip.yacht.lengthMeters != null ? `${trip.yacht.lengthMeters.toFixed(2)} m` : null,
-                ]
-                  .filter(Boolean)
-                  .join(' · ')}
-              </div>
-            </a>
-          )}
+      {!cancelled && (
+        <>
+          <div style={{ padding: '14px 14px 104px', display: 'flex', flexDirection: 'column', gap: 10 }}>
+            {/* ============================= TRIP ============================= */}
+            {tab === 'trip' && (
+              <>
+                {trip.yacht.imageIds.length > 0 && (
+                  <a
+                    href={boatUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => sendEvent('SITE_CLICK', 'gallery')}
+                    style={{ ...S.card, textDecoration: 'none', color: 'inherit' }}
+                  >
+                    <div style={{ display: 'flex', gap: 6, alignItems: 'center' }}>
+                      <div style={{ display: 'flex', gap: 5, flex: 1, overflow: 'hidden' }}>
+                        {trip.yacht.imageIds.slice(0, 3).map(id => (
+                          <img
+                            key={id}
+                            src={img(id, 320)}
+                            alt={trip.yacht.name}
+                            style={{ width: '32%', aspectRatio: '4/3', objectFit: 'cover', borderRadius: 9 }}
+                          />
+                        ))}
+                      </div>
+                      <div style={{ fontSize: 12.5, fontWeight: 800, color: '#2856ff', whiteSpace: 'nowrap' }}>
+                        View
+                        <br />
+                        boat ↗
+                      </div>
+                    </div>
+                    <div style={{ ...S.sub, marginTop: 8 }}>
+                      {[
+                        trip.yacht.buildYear,
+                        trip.yacht.cabins != null ? `${trip.yacht.cabins} cabins` : null,
+                        trip.yacht.berths != null ? `${trip.yacht.berths} berths` : null,
+                        trip.yacht.lengthMeters != null ? `${trip.yacht.lengthMeters.toFixed(2)} m` : null,
+                      ]
+                        .filter(Boolean)
+                        .join(' · ')}
+                    </div>
+                  </a>
+                )}
 
-          {/* ---------- FINISHED: thanks + rebook ---------- */}
-          {finished && (
-            <>
-              <a
-                href={boatUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => sendEvent('SITE_CLICK', 'rebook')}
-                style={S.btnBlue}
-              >
-                Sail {trip.yacht.name} again next year →
-              </a>
-              <div style={{ ...S.card, ...S.sub }}>
-                We hope {trip.yacht.name} was everything you wished for. Your travel documents stay here for 30 days.
-              </div>
-            </>
-          )}
+                {finished && (
+                  <>
+                    <a
+                      href={boatUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => sendEvent('SITE_CLICK', 'rebook')}
+                      style={S.btnBlue}
+                    >
+                      Sail {trip.yacht.name} again next year →
+                    </a>
+                    <div style={{ ...S.card, ...S.sub }}>
+                      We hope {trip.yacht.name} was everything you wished for. Your travel documents stay here for 30
+                      days.
+                    </div>
+                  </>
+                )}
 
-          {/* ---------- TRAVEL DOCUMENTATION ---------- */}
-          {(trip.crewListUrl || trip.documents.length > 0) && (
-            <>
-              <div style={S.h2}>Travel documentation</div>
-              {trip.crewListUrl && (
-                <a href={trip.crewListUrl} target="_blank" rel="noopener noreferrer" style={S.btnYellow}>
-                  Crew list — fill in online ↗
-                </a>
-              )}
-              {trip.documents.map(doc => (
-                <a
-                  key={doc.id}
-                  href={`${apiUrl}/public/trip/${token}/documents/${doc.id}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => sendEvent('DOC_OPEN', doc.documentType ?? 'OTHER')}
-                  style={S.btnYellow}
-                >
-                  {DOC_LABELS[doc.documentType ?? ''] ?? doc.filename} ⬇
-                </a>
-              ))}
-              <div style={{ ...S.sub, fontSize: 12 }}>
-                The charter company registers every guest with the port authority — enter each guest&apos;s details
-                exactly as they appear on their passport.
-              </div>
-            </>
-          )}
+                {ownerPayment && ownerPayment.nextAmountEur != null && !finished && (
+                  <>
+                    <div style={S.h2}>
+                      Payments{' '}
+                      <span
+                        style={{
+                          fontSize: 10,
+                          background: '#e9efff',
+                          color: '#1a3fd6',
+                          borderRadius: 99,
+                          padding: '2px 8px',
+                          verticalAlign: 2,
+                        }}
+                      >
+                        ONLY YOU
+                      </span>
+                    </div>
+                    <a
+                      href={`https://www.boat4you.com/my-bookings/${ownerPayment.reservationId}`}
+                      style={{ ...S.card, display: 'block', textDecoration: 'none', color: 'inherit' }}
+                    >
+                      <div style={{ fontWeight: 800, fontSize: 14 }}>
+                        Next installment: {Math.round(ownerPayment.nextAmountEur).toLocaleString('en-GB')} €
+                      </div>
+                      <div style={S.sub}>
+                        {ownerPayment.nextDeadline ? `Due by ${fmtDate(ownerPayment.nextDeadline)} · ` : ''}
+                        <span style={{ color: '#2856ff', fontWeight: 700 }}>Pay on boat4you.com →</span>
+                      </div>
+                    </a>
+                  </>
+                )}
 
-          {/* ---------- CREW / CHAT / ALBUM (closed group) ---------- */}
-          <TripSocial trip={trip} token={token} apiUrl={apiUrl} ownerCredentials={ownerCredentials} />
+                {trip.marina && forecast && (
+                  <>
+                    <div style={S.h2}>Weather · {trip.marina.name}</div>
+                    <div style={{ ...S.card, display: 'flex', flexDirection: 'column', gap: 7 }}>
+                      {forecast.map(day => (
+                        <div key={day.date} style={{ display: 'flex', alignItems: 'center', gap: 10, fontSize: 13 }}>
+                          <span style={{ width: 42, fontWeight: 700 }}>
+                            {new Date(day.date).toLocaleDateString('en-GB', { weekday: 'short' })}
+                          </span>
+                          <span style={{ fontSize: 17 }}>{WMO_ICONS[day.code] ?? '🌤'}</span>
+                          <span style={{ marginLeft: 'auto', fontWeight: 800, fontVariantNumeric: 'tabular-nums' }}>
+                            {day.tMax}°
+                          </span>
+                          <span style={{ width: 64, textAlign: 'right', color: '#5b6b82', fontSize: 12 }}>
+                            {day.windMaxKn} kn
+                          </span>
+                        </div>
+                      ))}
+                      <div style={{ ...S.sub, fontSize: 11, textAlign: 'center' }}>
+                        Forecast for the marina&apos;s exact location
+                      </div>
+                    </div>
+                  </>
+                )}
 
-          {/* ---------- LEADER-ONLY PAYMENTS ---------- */}
-          {ownerPayment && ownerPayment.nextAmountEur != null && !finished && (
-            <>
-              <div style={S.h2}>
-                Payments{' '}
-                <span
+                <div style={S.h2}>SOS &amp; contacts</div>
+                <div
                   style={{
-                    fontSize: 10,
-                    background: '#e9efff',
-                    color: '#1a3fd6',
-                    borderRadius: 99,
-                    padding: '2px 8px',
-                    verticalAlign: 2,
+                    ...S.card,
+                    borderColor: '#f3c1c1',
+                    background: '#fff8f8',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: 8,
                   }}
                 >
-                  ONLY YOU
-                </span>
-              </div>
-              <a
-                href={`https://www.boat4you.com/my-bookings/${ownerPayment.reservationId}`}
-                style={{ ...S.card, display: 'block', textDecoration: 'none', color: 'inherit' }}
-              >
-                <div style={{ fontWeight: 800, fontSize: 14 }}>
-                  Next installment: {Math.round(ownerPayment.nextAmountEur).toLocaleString('en-GB')} €
-                </div>
-                <div style={S.sub}>
-                  {ownerPayment.nextDeadline ? `Due by ${fmtDate(ownerPayment.nextDeadline)} · ` : ''}
-                  <span style={{ color: '#2856ff', fontWeight: 700 }}>Pay on boat4you.com →</span>
-                </div>
-              </a>
-            </>
-          )}
-
-          {/* ---------- TRIP REMINDERS (web-push) ---------- */}
-          {pushState !== 'unsupported' && !finished && (
-            <>
-              <div style={S.h2}>Trip reminders</div>
-              <div style={{ ...S.card, display: 'flex', flexDirection: 'column', gap: 8 }}>
-                {pushState === 'subscribed' && (
-                  <div style={{ fontWeight: 800, fontSize: 14, color: '#16815f' }}>
-                    🔔 Reminders are on for this phone
-                  </div>
-                )}
-                {pushState === 'denied' && (
-                  <div style={{ ...S.sub, fontSize: 12.5 }}>
-                    Notifications are blocked for this site — enable them in your browser settings to get trip
-                    reminders.
-                  </div>
-                )}
-                {(pushState === 'idle' || pushState === 'subscribing') && (
-                  <button
-                    type="button"
-                    onClick={enableReminders}
-                    disabled={pushState === 'subscribing'}
+                  {sosNumbers.map(sos => (
+                    <a
+                      key={sos.number}
+                      href={`tel:${sos.number.replace(/\s/g, '')}`}
+                      style={{
+                        background: '#b32424',
+                        color: '#fff',
+                        borderRadius: 11,
+                        padding: '11px 10px',
+                        textAlign: 'center',
+                        fontWeight: 800,
+                        fontSize: 14,
+                        textDecoration: 'none',
+                      }}
+                    >
+                      📞 {sos.number} · {sos.label}
+                    </a>
+                  ))}
+                  <a
+                    href="tel:112"
                     style={{
-                      ...S.btnBlue,
-                      border: 'none',
-                      width: '100%',
-                      cursor: 'pointer',
-                      opacity: pushState === 'subscribing' ? 0.6 : 1,
+                      background: '#8a1f1f',
+                      color: '#fff',
+                      borderRadius: 11,
+                      padding: '11px 10px',
+                      textAlign: 'center',
+                      fontWeight: 800,
+                      fontSize: 14,
+                      textDecoration: 'none',
                     }}
                   >
-                    🔔 Get trip reminders
-                  </button>
-                )}
-                <div style={{ ...S.sub, fontSize: 12 }}>
-                  Countdown nudges, the weather on departure day and a heads-up when it&apos;s time to check in —
-                  straight to this phone.
+                    📞 112 · All emergencies (EU)
+                  </a>
+                  {trip.agencyPhone && (
+                    <a
+                      href={`tel:${trip.agencyPhone.replace(/[^+\d]/g, '')}`}
+                      style={{ ...S.sub, textDecoration: 'none', textAlign: 'center', fontWeight: 700 }}
+                    >
+                      Charter base: {trip.agencyPhone}
+                    </a>
+                  )}
+                  <a
+                    href="tel:+385913000009"
+                    style={{ ...S.sub, textDecoration: 'none', textAlign: 'center', fontWeight: 700 }}
+                  >
+                    Boat4You support: +385 91 3000 009
+                  </a>
                 </div>
-              </div>
-            </>
-          )}
+              </>
+            )}
 
-          {/* ---------- WEATHER ---------- */}
-          {trip.marina && forecast && (
-            <>
-              <div style={S.h2}>Weather · {trip.marina.name}</div>
-              <div style={{ ...S.card, display: 'flex', flexDirection: 'column', gap: 7 }}>
-                {forecast.map(day => (
-                  <div key={day.date} style={{ display: 'flex', alignItems: 'center', gap: 10, fontSize: 13 }}>
-                    <span style={{ width: 42, fontWeight: 700 }}>
-                      {new Date(day.date).toLocaleDateString('en-GB', { weekday: 'short' })}
-                    </span>
-                    <span style={{ fontSize: 17 }}>{WMO_ICONS[day.code] ?? '🌤'}</span>
-                    <span style={{ marginLeft: 'auto', fontWeight: 800, fontVariantNumeric: 'tabular-nums' }}>
-                      {day.tMax}°
-                    </span>
-                    <span style={{ width: 64, textAlign: 'right', color: '#5b6b82', fontSize: 12 }}>
-                      {day.windMaxKn} kn
-                    </span>
+            {/* =========================== DOCUMENTS ========================= */}
+            {tab === 'documents' && (
+              <>
+                <div style={S.h2}>Travel documentation</div>
+                {trip.crewListUrl || trip.documents.length > 0 ? (
+                  <>
+                    {trip.crewListUrl && (
+                      <a href={trip.crewListUrl} target="_blank" rel="noopener noreferrer" style={S.btnYellow}>
+                        Crew list — fill in online ↗
+                      </a>
+                    )}
+                    {trip.documents.map(doc => (
+                      <a
+                        key={doc.id}
+                        href={`${apiUrl}/public/trip/${token}/documents/${doc.id}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() => sendEvent('DOC_OPEN', doc.documentType ?? 'OTHER')}
+                        style={S.btnYellow}
+                      >
+                        {DOC_LABELS[doc.documentType ?? ''] ?? doc.filename} ⬇
+                      </a>
+                    ))}
+                    <div style={{ ...S.sub, fontSize: 12 }}>
+                      The charter company registers every guest with the port authority — enter each guest&apos;s
+                      details exactly as they appear on their passport.
+                    </div>
+                  </>
+                ) : (
+                  <div style={{ ...S.card, ...S.sub, fontSize: 12.5, textAlign: 'center', padding: '22px 15px' }}>
+                    📄 Your travel documents — crew list, boarding pass and base info — appear here as your charter
+                    approaches. We&apos;ll let you know the moment they&apos;re ready.
                   </div>
-                ))}
-                <div style={{ ...S.sub, fontSize: 11, textAlign: 'center' }}>
-                  Forecast for the marina&apos;s exact location
-                </div>
-              </div>
-            </>
-          )}
+                )}
+              </>
+            )}
 
-          {/* ---------- SOS & CONTACTS ---------- */}
-          <div style={S.h2}>SOS &amp; contacts</div>
-          <div
-            style={{
-              ...S.card,
-              borderColor: '#f3c1c1',
-              background: '#fff8f8',
-              display: 'flex',
-              flexDirection: 'column',
-              gap: 8,
-            }}
-          >
-            {sosNumbers.map(sos => (
-              <a
-                key={sos.number}
-                href={`tel:${sos.number.replace(/\s/g, '')}`}
-                style={{
-                  background: '#b32424',
-                  color: '#fff',
-                  borderRadius: 11,
-                  padding: '11px 10px',
-                  textAlign: 'center',
-                  fontWeight: 800,
-                  fontSize: 14,
-                  textDecoration: 'none',
-                }}
-              >
-                📞 {sos.number} · {sos.label}
-              </a>
-            ))}
-            <a
-              href="tel:112"
+            {/* ============================= CHAT ============================ */}
+            {tab === 'chat' && (
+              <TripSocial trip={trip} token={token} apiUrl={apiUrl} ownerCredentials={ownerCredentials} />
+            )}
+
+            {/* ============================= MORE ============================ */}
+            {tab === 'more' && (
+              <>
+                {pushState !== 'unsupported' && !finished && (
+                  <>
+                    <div style={S.h2}>Trip reminders</div>
+                    <div style={{ ...S.card, display: 'flex', flexDirection: 'column', gap: 8 }}>
+                      {pushState === 'subscribed' && (
+                        <div style={{ fontWeight: 800, fontSize: 14, color: '#16815f' }}>
+                          🔔 Reminders are on for this phone
+                        </div>
+                      )}
+                      {pushState === 'denied' && (
+                        <div style={{ ...S.sub, fontSize: 12.5 }}>
+                          Notifications are blocked for this site — enable them in your browser settings to get trip
+                          reminders.
+                        </div>
+                      )}
+                      {(pushState === 'idle' || pushState === 'subscribing') && (
+                        <button
+                          type="button"
+                          onClick={enableReminders}
+                          disabled={pushState === 'subscribing'}
+                          style={{
+                            ...S.btnBlue,
+                            border: 'none',
+                            width: '100%',
+                            cursor: 'pointer',
+                            opacity: pushState === 'subscribing' ? 0.6 : 1,
+                          }}
+                        >
+                          🔔 Get trip reminders
+                        </button>
+                      )}
+                      <div style={{ ...S.sub, fontSize: 12 }}>
+                        Countdown nudges, the weather on departure day and a heads-up when it&apos;s time to check in —
+                        straight to this phone.
+                      </div>
+                    </div>
+                  </>
+                )}
+
+                {!standalone && (
+                  <>
+                    <div style={S.h2}>Keep this trip on your phone</div>
+                    <div style={{ ...S.card, ...S.sub, fontSize: 12.5 }}>
+                      <b style={{ color: '#0f172a' }}>iPhone:</b> Safari → Share ⬆ → &quot;Add to Home Screen&quot;
+                      <br />
+                      <b style={{ color: '#0f172a' }}>Android:</b> Chrome → menu ⋮ → &quot;Install app&quot;
+                    </div>
+                  </>
+                )}
+
+                <div style={S.h2}>About &amp; support</div>
+                <div style={{ ...S.card, ...S.sub, fontSize: 12.5, lineHeight: 1.7 }}>
+                  Boat4You support:{' '}
+                  <a href="tel:+385913000009" style={{ color: '#2856ff', fontWeight: 700 }}>
+                    +385 91 3000 009
+                  </a>
+                  <br />
+                  <a href="https://www.boat4you.com" style={{ color: '#5b6b82' }}>
+                    boat4you.com
+                  </a>{' '}
+                  · your charter, one tap away
+                </div>
+              </>
+            )}
+          </div>
+
+          {/* ======================= BOTTOM TAB BAR ======================= */}
+          <nav style={{ position: 'fixed', left: 0, right: 0, bottom: 0, zIndex: 20 }}>
+            <div
               style={{
-                background: '#8a1f1f',
-                color: '#fff',
-                borderRadius: 11,
-                padding: '11px 10px',
-                textAlign: 'center',
-                fontWeight: 800,
-                fontSize: 14,
-                textDecoration: 'none',
+                maxWidth: 480,
+                margin: '0 auto',
+                display: 'flex',
+                background: '#fff',
+                borderTop: '1px solid #e3e9f2',
+                boxShadow: '0 -2px 14px rgba(15,23,42,.07)',
+                paddingBottom: 'env(safe-area-inset-bottom)',
               }}
             >
-              📞 112 · All emergencies (EU)
-            </a>
-            {trip.agencyPhone && (
-              <a
-                href={`tel:${trip.agencyPhone.replace(/[^+\d]/g, '')}`}
-                style={{ ...S.sub, textDecoration: 'none', textAlign: 'center', fontWeight: 700 }}
-              >
-                Charter base: {trip.agencyPhone}
-              </a>
-            )}
-            <a
-              href="tel:+385913000009"
-              style={{ ...S.sub, textDecoration: 'none', textAlign: 'center', fontWeight: 700 }}
-            >
-              Boat4You support: +385 91 3000 009
-            </a>
-          </div>
+              {TABS.map(item => {
+                const active = tab === item.id;
 
-          {/* ---------- INSTALL GUIDE (browser only, hidden once installed) ---------- */}
-          {!standalone && (
-            <>
-              <div style={S.h2}>Keep this trip on your phone</div>
-              <div style={{ ...S.card, ...S.sub, fontSize: 12.5 }}>
-                <b style={{ color: '#0f172a' }}>iPhone:</b> Safari → Share ⬆ → &quot;Add to Home Screen&quot;
-                <br />
-                <b style={{ color: '#0f172a' }}>Android:</b> Chrome → menu ⋮ → &quot;Install app&quot;
-              </div>
-            </>
-          )}
-
-          <div style={{ ...S.sub, fontSize: 11, textAlign: 'center', marginTop: 10 }}>
-            <a href="https://www.boat4you.com" style={{ color: '#5b6b82' }}>
-              boat4you.com
-            </a>{' '}
-            · your charter, one tap away
-          </div>
-        </div>
+                return (
+                  <button
+                    key={item.id}
+                    type="button"
+                    onClick={() => setTab(item.id)}
+                    style={{
+                      flex: 1,
+                      display: 'flex',
+                      flexDirection: 'column',
+                      alignItems: 'center',
+                      gap: 2,
+                      padding: '9px 0 7px',
+                      background: 'none',
+                      border: 'none',
+                      cursor: 'pointer',
+                      color: active ? '#2856ff' : '#8494ab',
+                      fontWeight: 700,
+                    }}
+                  >
+                    <span style={{ fontSize: 20, lineHeight: 1, opacity: active ? 1 : 0.7 }}>{item.icon}</span>
+                    <span style={{ fontSize: 10.5 }}>{item.label}</span>
+                  </button>
+                );
+              })}
+            </div>
+          </nav>
+        </>
       )}
     </div>
   );
