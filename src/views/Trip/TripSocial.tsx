@@ -152,7 +152,10 @@ const TripSocial = ({ trip, token, apiUrl, ownerCredentials }: TripSocialProps) 
   const cancelled = trip.status === 'CANCELLED';
   const dateTo = useMemo(() => new Date(trip.dateTo), [trip.dateTo]);
   const chatReadOnly = Date.now() > dateTo.getTime() + 14 * 86_400_000;
-  const uploadsClosed = Date.now() > dateTo.getTime() + 30 * 86_400_000;
+  // GDPR retention: photos are deleted 10 days after the charter; uploads
+  // close at the same mark, and the deadline is shown to the crew.
+  const photoDeletionAt = useMemo(() => new Date(dateTo.getTime() + 10 * 86_400_000), [dateTo]);
+  const uploadsClosed = Date.now() > photoDeletionAt.getTime();
   const finished = Date.now() > dateTo.getTime();
 
   /* ------------------------- credentials bootstrap ------------------------ */
@@ -748,14 +751,23 @@ const TripSocial = ({ trip, token, apiUrl, ownerCredentials }: TripSocialProps) 
               </div>
             )}
             {photos.length > 0 && (
-              <button
-                type="button"
-                onClick={downloadAll}
-                disabled={zipping}
-                style={{ ...BTN_BLUE, opacity: zipping ? 0.6 : 1 }}
-              >
-                {zipping ? 'Preparing your download…' : '⬇ Download all photos'}
-              </button>
+              <>
+                <button
+                  type="button"
+                  onClick={downloadAll}
+                  disabled={zipping}
+                  style={{ ...BTN_BLUE, opacity: zipping ? 0.6 : 1 }}
+                >
+                  {zipping ? 'Preparing your download…' : '⬇ Download all photos'}
+                </button>
+                <div style={{ ...SUB, fontSize: 12 }}>
+                  📅 Save your photos by{' '}
+                  <b style={{ color: '#0f172a' }}>
+                    {photoDeletionAt.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
+                  </b>{' '}
+                  — after that we permanently remove all trip photos from our system (GDPR).
+                </div>
+              </>
             )}
             {!uploadsClosed ? (
               <>
@@ -789,7 +801,8 @@ const TripSocial = ({ trip, token, apiUrl, ownerCredentials }: TripSocialProps) 
               </>
             ) : (
               <div style={{ ...SUB, fontSize: 12 }}>
-                The album is closed for new photos — everything here stays for your memories.
+                This album is closed for new photos. Trip photos are kept for 10 days after the charter, then
+                permanently removed from our system (GDPR).
               </div>
             )}
           </div>
