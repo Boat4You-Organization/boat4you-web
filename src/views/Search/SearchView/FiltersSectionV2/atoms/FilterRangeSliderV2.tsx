@@ -17,6 +17,11 @@ interface FilterRangeSliderV2Props {
   hist?: number[];
   format?: (n: number) => string;
   accent?: string;
+  /** Accessible name for the two thumbs ("<label> minimum" / "<label>
+   *  maximum"). MUI renders each thumb as an `<input type="range">`;
+   *  without this Lighthouse flags "Form elements do not have associated
+   *  labels" on every search page (and the agentic-browsing audit fails). */
+  ariaLabel?: string;
 }
 
 /**
@@ -36,6 +41,7 @@ const FilterRangeSliderV2 = ({
   hist,
   format,
   accent = searchV2.brand,
+  ariaLabel = 'Range',
 }: FilterRangeSliderV2Props) => {
   const range = Math.max(1, max - min);
   const pctA = ((vMin - min) / range) * 100;
@@ -73,6 +79,8 @@ const FilterRangeSliderV2 = ({
           max={max}
           step={step}
           disableSwap
+          getAriaLabel={index => `${ariaLabel} ${index === 0 ? 'minimum' : 'maximum'}`}
+          getAriaValueText={v => (format ? format(v) : String(v))}
           onChange={(_e, value) => {
             if (Array.isArray(value)) onChange([value[0], value[1]]);
           }}

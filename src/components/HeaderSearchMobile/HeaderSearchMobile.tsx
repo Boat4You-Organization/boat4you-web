@@ -71,7 +71,7 @@ const HeaderSearchMobile = ({ catalogueData, catalogueFilters }: HeaderSearchMob
       <GeneralSearchBarModal isOpen={generalSearchModalOpen} onClose={handleCloseGeneralSearchModal} />
       <AppBar elevation={0} classes={{ root: styles.root }} className={styles.container}>
         <Container disableGutters maxWidth="xl" className={styles.header}>
-          <IconButton size="large" onClick={handleGoBack}>
+          <IconButton size="large" onClick={handleGoBack} aria-label="Go back">
             <Icon>
               <ChevronLeft size={24} />
             </Icon>
@@ -138,7 +138,7 @@ const HeaderSearchMobile = ({ catalogueData, catalogueFilters }: HeaderSearchMob
             </Stack>
           </Box>
           {showFilterButton ? (
-            <IconButton size="large" onClick={handleOpenFiltersModal}>
+            <IconButton size="large" onClick={handleOpenFiltersModal} aria-label="Open filters">
               <Icon>
                 <Filters size={24} />
               </Icon>

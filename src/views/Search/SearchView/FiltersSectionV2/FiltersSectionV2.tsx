@@ -388,6 +388,7 @@ const FiltersSectionV2 = ({ catalogueData, catalogueFilters, isMobile }: Filters
             </Box>
           </Box>
           <FilterRangeSliderV2
+            ariaLabel="Weekly price"
             min={minPrice}
             max={maxPrice}
             step={50}
@@ -416,6 +417,7 @@ const FiltersSectionV2 = ({ catalogueData, catalogueFilters, isMobile }: Filters
             {t('guestsRange', { min: String(people[0]), max: String(people[1]) })}
           </Box>
           <FilterRangeSliderV2
+            ariaLabel="Guests"
             min={0}
             max={42}
             vMin={people[0]}
@@ -436,6 +438,7 @@ const FiltersSectionV2 = ({ catalogueData, catalogueFilters, isMobile }: Filters
             {t('berthsRange', { min: String(berths[0]), max: String(berths[1]) })}
           </Box>
           <FilterRangeSliderV2
+            ariaLabel="Berths"
             min={0}
             max={42}
             vMin={berths[0]}
@@ -459,6 +462,7 @@ const FiltersSectionV2 = ({ catalogueData, catalogueFilters, isMobile }: Filters
             </Box>
           </Box>
           <FilterRangeSliderV2
+            ariaLabel="Boat length in meters"
             min={4}
             max={56}
             vMin={length[0]}
@@ -481,6 +485,7 @@ const FiltersSectionV2 = ({ catalogueData, catalogueFilters, isMobile }: Filters
             {year[0]} – {year[1]}
           </Box>
           <FilterRangeSliderV2
+            ariaLabel="Build year"
             min={2000}
             max={yearMax}
             vMin={year[0]}
@@ -501,6 +506,7 @@ const FiltersSectionV2 = ({ catalogueData, catalogueFilters, isMobile }: Filters
             {t('toiletsRange', { min: String(toilets[0]), max: String(toilets[1]), count: toilets[1] })}
           </Box>
           <FilterRangeSliderV2
+            ariaLabel="Toilets"
             min={0}
             max={20}
             vMin={toilets[0]}
@@ -603,6 +609,7 @@ const FiltersSectionV2 = ({ catalogueData, catalogueFilters, isMobile }: Filters
             </Box>
           </Box>
           <FilterRangeSliderV2
+            ariaLabel="Engine power in horsepower"
             min={5}
             max={7296}
             vMin={engine[0]}
