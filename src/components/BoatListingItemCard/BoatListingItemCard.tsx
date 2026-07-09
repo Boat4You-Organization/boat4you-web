@@ -292,7 +292,12 @@ const BoatListingItemCard = ({
               alt={`${modelName} ${name || ''} boat image`}
               fill
               className={styles.image}
-              sizes="(max-width: 899px) 100vw, 388px"
+              // Mobile thumb is hard-capped at 140px by the scss module (40%,
+              // max-width 140 — both list AND grid view). The old 100vw made
+              // the browser pull the 640-750w source for a ~120px slot: ~40KB
+              // per card instead of ~8KB, ~25 cards per page (Lighthouse
+              // "Improve image delivery", 9.7.2026).
+              sizes="(max-width: 899px) 140px, 388px"
             />
 
             {/* Favorite heart — moved to TOP-RIGHT so it doesn't collide with
