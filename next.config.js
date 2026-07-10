@@ -21,6 +21,20 @@ const withNextIntl = createNextIntlPlugin({
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  async rewrites() {
+    return [
+      // Same-origin proxy for yacht photos used by the client-side yacht
+      // PDF (useYachtPdfDownload): the canvas WEBP->JPEG conversion needs
+      // CORS-clean pixels, and the Bunny pull zone serves cached copies
+      // without Access-Control-Allow-Origin (no Vary: Origin). Proxying
+      // through our origin sidesteps CORS entirely; Bunny still caches
+      // the images upstream. Query params (?width=) pass through.
+      {
+        source: '/pdf-image/:imageId',
+        destination: 'https://boat4you.b-cdn.net/public/image/:imageId',
+      },
+    ];
+  },
   async redirects() {
     return [
       // Apex -> www canonical 301 (2026-06-11). nginx on the edge already

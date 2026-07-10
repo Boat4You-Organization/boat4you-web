@@ -6,7 +6,6 @@ import QRCode from 'qrcode';
 import YachtPDF from '@/components/YachtPDF/YachtPDF';
 import { YachtOfferModel } from '@/models/yacht-offer.model';
 import { YachtModel } from '@/models/yacht.model';
-import { getBoatImageUrl } from '@/utils/static/imageUtils';
 import { toTitleCase } from '@/utils/static/toTitleCase';
 
 interface UseYachtPdfDownloadProps {
@@ -22,7 +21,9 @@ interface UseYachtPdfDownloadPayload {
 
 /** The image API serves WEBP only, which @react-pdf can't decode — pull the
  *  photo through a canvas and hand the renderer a JPEG data-URL instead.
- *  crossOrigin works because the CDN allows our origin (verified 10.7.2026). */
+ *  Photos load through the same-origin /pdf-image rewrite (next.config)
+ *  because the CDN's cached copies lack CORS headers, which would taint
+ *  the canvas. */
 const toJpegDataUrl = (url: string): Promise<string> =>
   new Promise((resolve, reject) => {
     const img = new window.Image();
@@ -94,8 +95,8 @@ const useYachtPdfDownload = ({ yacht, selectedOffer }: UseYachtPdfDownloadProps)
         .slice(0, 4)
         .map(i => i.id);
       const [heroSrc, ...gallerySrcs] = await Promise.all([
-        toJpegDataUrl(getBoatImageUrl(mainImageId, 1200)),
-        ...galleryIds.map(id => toJpegDataUrl(getBoatImageUrl(id, 800))),
+        toJpegDataUrl(`/pdf-image/${mainImageId}?width=1200`),
+        ...galleryIds.map(id => toJpegDataUrl(`/pdf-image/${id}?width=800`)),
       ]);
 
       const now = new Date();
