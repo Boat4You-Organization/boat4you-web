@@ -608,5 +608,6 @@
     "dismiss": "Dismiss"
   },
   "tripQrHint": "Scan to open on your phone",
-  "tripQrAlt": "Trip app QR code"
+  "tripQrAlt": "Trip app QR code",
+  "pdfDownload": "PDF Download"
 }

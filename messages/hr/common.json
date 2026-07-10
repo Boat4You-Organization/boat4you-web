@@ -608,5 +608,6 @@
     "dismiss": "Zatvori"
   },
   "tripQrHint": "Skenirajte i otvorite na mobitelu",
-  "tripQrAlt": "QR kod Trip aplikacije"
+  "tripQrAlt": "QR kod Trip aplikacije",
+  "pdfDownload": "Preuzmi PDF"
 }

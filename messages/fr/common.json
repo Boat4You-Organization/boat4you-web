@@ -608,5 +608,6 @@
     "dismiss": "Fermer"
   },
   "tripQrHint": "Scannez pour ouvrir sur votre téléphone",
-  "tripQrAlt": "QR code de l'app de voyage"
+  "tripQrAlt": "QR code de l'app de voyage",
+  "pdfDownload": "Télécharger le PDF"
 }

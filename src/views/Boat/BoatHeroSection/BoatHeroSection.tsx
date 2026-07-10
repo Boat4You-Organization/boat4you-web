@@ -2,8 +2,18 @@
 
 import React, { useState } from 'react';
 
-import { OpenInNew } from '@mui/icons-material';
-import { Box, Button, Container, Icon, IconButton, Link as MuiLink, Stack, Typography } from '@mui/material';
+import { FileDownloadOutlined, OpenInNew } from '@mui/icons-material';
+import {
+  Box,
+  Button,
+  CircularProgress,
+  Container,
+  Icon,
+  IconButton,
+  Link as MuiLink,
+  Stack,
+  Typography,
+} from '@mui/material';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
@@ -14,6 +24,7 @@ import Share from '@/components/SvgIcons/Share';
 import { YachtModel } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
 import useToggleState from '@/utils/hooks/useToggleState';
+import useYachtPdfDownload from '@/utils/hooks/useYachtPdfDownload';
 import { toTitleCase } from '@/utils/static/toTitleCase';
 import { useYachtStore } from '@/valtio/yacht/yacht.store';
 
@@ -28,6 +39,7 @@ const BoatHeroSection = ({ yacht }: BoatHeroSectionProps) => {
   const [isOpen, toggeIsOpen] = useToggleState();
   const t = useTranslations('common');
   const { selectedOffer } = useYachtStore();
+  const { downloadYachtPDF, isDownloading } = useYachtPdfDownload({ yacht, selectedOffer: selectedOffer ?? null });
 
   // One-way charters: the selected date's offer drops off at a different marina.
   // Show "pickup » drop-off" (each opens its own map) so it's clear the chosen
@@ -120,6 +132,13 @@ const BoatHeroSection = ({ yacht }: BoatHeroSectionProps) => {
             )}
           </Stack>
           <Stack direction="row" spacing={2} className={styles.iconsMobile}>
+            <IconButton onClick={downloadYachtPDF} disabled={isDownloading} aria-label={t('pdfDownload')}>
+              {isDownloading ? (
+                <CircularProgress size={20} sx={{ color: colors.black950 }} />
+              ) : (
+                <FileDownloadOutlined sx={{ fontSize: 22, color: colors.black950 }} />
+              )}
+            </IconButton>
             <IconButton onClick={toggeIsOpen} aria-label={t('share')}>
               <Icon>
                 <Share size={20} fill={colors.black950} />
@@ -131,6 +150,15 @@ const BoatHeroSection = ({ yacht }: BoatHeroSectionProps) => {
             />
           </Stack>
           <Stack direction="row" spacing={2} className={styles.iconsDesktop}>
+            <Button
+              variant="containedInfo"
+              startIcon={isDownloading ? <CircularProgress size={16} /> : <FileDownloadOutlined />}
+              onClick={downloadYachtPDF}
+              disabled={isDownloading}
+              aria-label={t('pdfDownload')}
+            >
+              {t('pdfDownload')}
+            </Button>
             <Button variant="containedInfo" startIcon={<Share />} onClick={toggeIsOpen} aria-label={t('share')}>
               {t('share')}
             </Button>

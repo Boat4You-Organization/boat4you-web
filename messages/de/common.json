@@ -608,5 +608,6 @@
     "dismiss": "Schließen"
   },
   "tripQrHint": "Scannen und am Handy öffnen",
-  "tripQrAlt": "QR-Code der Trip-App"
+  "tripQrAlt": "QR-Code der Trip-App",
+  "pdfDownload": "PDF herunterladen"
 }

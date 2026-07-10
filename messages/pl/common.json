@@ -608,5 +608,6 @@
     "dismiss": "Zamknij"
   },
   "tripQrHint": "Zeskanuj, aby otworzyć na telefonie",
-  "tripQrAlt": "Kod QR aplikacji podróży"
+  "tripQrAlt": "Kod QR aplikacji podróży",
+  "pdfDownload": "Pobierz PDF"
 }
