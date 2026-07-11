@@ -19,18 +19,22 @@ const SKY_LIGHT = '#bcd0ff';
 export const styles = StyleSheet.create({
   page: { fontFamily: 'Helvetica', color: INK, backgroundColor: '#ffffff' },
 
-  /* header */
+  /* header — light band with the full-colour logo (same design as the
+     sister sites' PDF, Mario 12.7.2026); the white email logo stays in
+     the navy foot band. */
   topBar: {
-    backgroundColor: NAVY,
-    paddingVertical: 18,
+    backgroundColor: '#ffffff',
+    borderBottomWidth: 1,
+    borderBottomColor: LINE,
+    paddingVertical: 15,
     paddingHorizontal: 37,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
     marginBottom: 22,
   },
-  logo: { height: 25, width: 99, objectFit: 'contain' },
-  topSite: { fontSize: 9.5, letterSpacing: 1.6, color: SKY, fontFamily: 'Helvetica-Bold' },
+  logo: { height: 26, width: 102, objectFit: 'contain' },
+  topSite: { fontSize: 9, letterSpacing: 1.6, color: MUTED, fontFamily: 'Helvetica-Bold' },
 
   /* hero */
   hero: { marginHorizontal: 37, borderRadius: 14, overflow: 'hidden', height: 370, position: 'relative' },

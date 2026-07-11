@@ -231,7 +231,10 @@ const YachtPDF = ({
       {/* PAGE 1 — cover */}
       <Page size="A4" style={styles.page}>
         <View style={styles.topBar}>
-          <Image src={`${baseUrl}/images/emails/boat4you-logo-full.png`} style={styles.logo} />
+          {/* Full-colour logo (public/images/pdf-logo.png, rasterised from
+              SvgIcons/Logo) — the emails PNG is white and would vanish on
+              this light band. */}
+          <Image src={`${baseUrl}/images/pdf-logo.png`} style={styles.logo} />
           <Text style={styles.topSite}>WWW.BOAT4YOU.COM</Text>
         </View>
 

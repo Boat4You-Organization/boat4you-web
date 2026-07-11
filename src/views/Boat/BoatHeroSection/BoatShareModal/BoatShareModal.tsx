@@ -121,6 +121,27 @@ const BoatShareModal = ({ open, onOpen, onClose, yacht }: BoatShareModalProps) =
             </Button>
           </Link>
         </Grid>
+        <Grid size={{ xs: 6 }}>
+          <Link
+            href={`https://wa.me/?text=${encodeURIComponent(`Check out this yacht: ${url}`)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={url}
+          >
+            <Button
+              startIcon={
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.9-1.4A10 10 0 1 0 12 2Zm5.1 14.1c-.2.6-1.2 1.2-1.7 1.2-.4.1-1 .1-1.6-.1a13 13 0 0 1-1.5-.5c-2.6-1.1-4.3-3.8-4.4-4-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2 .2-.3.5-.3.7-.3h.5c.2 0 .4-.1.6.4l.9 2.1c.1.2.1.4 0 .6l-.3.5-.5.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 .9c.3.2.5.2.6.4 0 .1 0 .7-.2 1.3Z" />
+                </svg>
+              }
+              size="large"
+              color="secondary"
+              fullWidth
+            >
+              WhatsApp
+            </Button>
+          </Link>
+        </Grid>
       </Grid>
     </>
   );
