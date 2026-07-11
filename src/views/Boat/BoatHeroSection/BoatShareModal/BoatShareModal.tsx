@@ -117,7 +117,7 @@ const BoatShareModal = ({ open, onOpen, onClose, yacht }: BoatShareModalProps) =
             aria-label={url}
           >
             <Button startIcon={<Twitter size={24} />} size="large" color="secondary" fullWidth>
-              Twitter
+              X
             </Button>
           </Link>
         </Grid>
