@@ -14,10 +14,9 @@ interface DestinationsSectionProps {
 
 // 4 x 3 static grid (Mario, Jun-2026) using the same card design as the fleet
 // grid. The COMPLETE country list still renders in AllDestinationsSection.
+// All 12 countries ALWAYS show — the promo tile only WIDENS the grid (grows it
+// to a 4th row), it never drops a country (Mario 12.7.2026).
 const GRID_LIMIT = 12;
-// With the promo tile in the grid it spans 3 desktop cells, so drop 3 countries
-// to keep the 4×3 block whole (Mario 12.7.2026 — banner blends in among them).
-const GRID_LIMIT_WITH_PROMO = 9;
 
 // Desktop placements for the promo tile. Never the top row (row 1) so it reads
 // as one of the destinations rather than a headline; it rotates through these
@@ -42,7 +41,7 @@ const DestinationsSection = async ({ countries }: DestinationsSectionProps) => {
   const pct = campaign ? await fetchCampaignMaxPct(campaign) : null;
   const showPromo = campaign != null;
 
-  const visible = countries.slice(0, showPromo ? GRID_LIMIT_WITH_PROMO : GRID_LIMIT);
+  const visible = countries.slice(0, GRID_LIMIT);
 
   if (!visible.length) return null;
 
