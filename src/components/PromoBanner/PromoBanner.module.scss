@@ -151,9 +151,13 @@
     font-size: 13px;
   }
 
+  /* Character centred (Mario 12.7.2026 — on the wide search banner it was
+     cramped behind the blob on the right and barely visible). */
   .dude {
-    right: 200px;
-    height: 64%;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    height: 80%;
   }
 
   @media (width <= 899px) {
