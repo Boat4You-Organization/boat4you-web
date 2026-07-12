@@ -84,7 +84,11 @@ const PaymentTab = ({
   const obligatoryServices = allServices.filter(s => s.obligatory || obligatoryKeys.includes(s.key));
   const optionalServices = allServices.filter(s => !s.obligatory && !obligatoryKeys.includes(s.key));
   const hasDeposit = typeof securityDeposit === 'number' && securityDeposit > 0;
-  const hasInsurance = typeof insuredSecurityDeposit === 'number' && insuredSecurityDeposit > 0;
+  // Deposit insurance is a selectable OPTION only (yacht.insuredDeposit is the
+  // yacht's AVAILABLE waiver amount, never auto-added — Mario 12.7.2026). A
+  // booking that actually bought it surfaces it as a reservation extra above,
+  // so never show the yacht-level waiver as part of a confirmed booking.
+  const hasInsurance = false;
   const showExtras = obligatoryServices.length > 0 || optionalServices.length > 0 || hasDeposit || hasInsurance;
   const depositCurrencySymbol = depositCurrency === 'EUR' ? '€' : (depositCurrency ?? '€');
 

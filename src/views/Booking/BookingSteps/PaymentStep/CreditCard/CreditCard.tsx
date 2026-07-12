@@ -42,7 +42,9 @@ const CreditCard = ({
     : paymentInstallmentsList.filter(item => item.id !== PaymentInstallment.INSTALLMENTS);
 
   const showSurcharge = typeof baseAmountEur === 'number' && baseAmountEur > 0 && surchargePercentage > 0;
-  const surchargeAmountEur = showSurcharge ? (baseAmountEur! * surchargePercentage) / 100 : 0;
+  // Whole-euro, HALF_UP — must mirror StripePaymentService's card surcharge so
+  // the displayed fee equals the amount Stripe actually collects.
+  const surchargeAmountEur = showSurcharge ? Math.round((baseAmountEur! * surchargePercentage) / 100) : 0;
   const totalAmountEur = showSurcharge ? baseAmountEur! + surchargeAmountEur : baseAmountEur;
 
   return (
