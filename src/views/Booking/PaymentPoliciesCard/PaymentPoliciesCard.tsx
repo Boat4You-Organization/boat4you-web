@@ -88,8 +88,10 @@ const PaymentPoliciesCard = ({
           // bank-collects in advance (Skipper/Hostess/APA) vs cash at the
           // marina (fuel/transit log/mooring/tourist tax). Security deposit
           // joins "Paid at marina" — see prop description.
-          const inAdvance = (selectedExtrasAtBase || []).filter(e => e.paymentType === 'ADVANCE_TO_OPERATOR');
-          const onSite = (selectedExtrasAtBase || []).filter(e => e.paymentType !== 'ADVANCE_TO_OPERATOR');
+          // Mario 12.7.2026: crew + APA settle at the base on handover — group
+          // everything payable outside our online total under "Paid at marina".
+          const inAdvance = (selectedExtrasAtBase || []).filter(() => false);
+          const onSite = selectedExtrasAtBase || [];
           const renderRow = ({ id, name, priceEur, priceInfo, labelCode }: (typeof inAdvance)[number]) => {
             const formattedPrice = formatPriceWithCurrency({
               clientPriceEur: priceEur,

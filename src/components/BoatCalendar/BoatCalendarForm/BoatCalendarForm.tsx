@@ -417,8 +417,12 @@ const BoatCalendarForm = ({ yacht, variant }: BoatCalendarFormProps) => {
               )}
               {(() => {
                 // V1_57 split — see PaymentTab.tsx for context
-                const inAdvance = (selectedExtrasAtBase || []).filter(e => e.paymentType === 'ADVANCE_TO_OPERATOR');
-                const onSite = (selectedExtrasAtBase || []).filter(e => e.paymentType !== 'ADVANCE_TO_OPERATOR');
+                // Mario 12.7.2026: crew (skipper/hostess) and APA are settled at
+                // the base on handover, not wired "in advance" — group everything
+                // payable outside our online total under "Paid at marina". No
+                // separate "paid in advance" section.
+                const inAdvance = (selectedExtrasAtBase || []).filter(() => false);
+                const onSite = selectedExtrasAtBase || [];
                 // Refundable security deposit is a yacht-level field, not a
                 // partner-sent extra — always shown under "Paid at marina"
                 // in the recap since it's held at pick-up (and refunded on

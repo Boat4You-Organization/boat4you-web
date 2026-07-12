@@ -69,12 +69,11 @@ const PaymentTab = ({
   // both groups read as "Paid at marina" which mis-led customers about APA.
   // Fallback when paymentType is null: keep legacy "marina" bucket so
   // un-backfilled rows stay visible.
-  const extrasInAdvance = selectedExtras.filter(
-    extra => extra.payableInBase && extra.paymentType === 'ADVANCE_TO_OPERATOR'
-  );
-  const extrasOnSite = selectedExtras.filter(
-    extra => extra.payableInBase && extra.paymentType !== 'ADVANCE_TO_OPERATOR'
-  );
+  // Mario 12.7.2026: crew (skipper/hostess) and APA are settled at the base
+  // on handover — no separate "paid in advance" section. Everything payable
+  // outside our online total (payableInBase) shows under "Paid at marina".
+  const extrasInAdvance = selectedExtras.filter(() => false);
+  const extrasOnSite = selectedExtras.filter(extra => extra.payableInBase);
   const extrasPayNow = selectedExtras.filter(extra => !extra.payableInBase);
 
   // Mirror boat-detail page ExtrasTab: split yacht catalogue services into

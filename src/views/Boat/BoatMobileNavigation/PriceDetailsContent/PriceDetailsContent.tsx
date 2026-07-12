@@ -128,8 +128,10 @@ const PriceDetailsContent = ({ yacht, isCalculatedPrice, isSelectedOfferUnavaila
         )}
         {(() => {
           // V1_57 split — see PaymentTab.tsx for context
-          const inAdvance = (selectedExtrasAtBase || []).filter(e => e.paymentType === 'ADVANCE_TO_OPERATOR');
-          const onSite = (selectedExtrasAtBase || []).filter(e => e.paymentType !== 'ADVANCE_TO_OPERATOR');
+          // Mario 12.7.2026: crew + APA settle at the base on handover — group
+          // everything payable outside our online total under "Paid at marina".
+          const inAdvance = (selectedExtrasAtBase || []).filter(() => false);
+          const onSite = selectedExtrasAtBase || [];
           // Refundable security deposit is yacht-level (not a partner extra)
           // and always paid at the marina on handover — append it under the
           // "Paid at marina" group so the recap lines up with the extras tab.
