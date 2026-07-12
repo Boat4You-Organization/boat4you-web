@@ -35,6 +35,9 @@ interface DealsPageParams {
 export const dynamic = 'force-dynamic';
 
 const LISTING_SIZE = 18;
+// Main charter vessel types, interleaved so the deals grid shows variety.
+const DEALS_VESSEL_TYPES = ['SAILING_YACHT', 'CATAMARAN', 'MOTORBOAT', 'MOTOR_YACHT', 'GULET'];
+const PER_TYPE_SIZE = 6;
 
 export async function generateMetadata({ params }: DealsPageParams): Promise<Metadata> {
   const { locale, campaign: slug } = await params;
@@ -63,16 +66,30 @@ const DealsPage = async ({ params }: DealsPageParams) => {
   if (!campaign) notFound();
 
   const { startDate, endDate } = resolveFeaturedWeek(campaign);
-  const [pct, yachts, t] = await Promise.all([
+  const [pct, perType, t] = await Promise.all([
     fetchCampaignMaxPct(campaign),
-    fetchYachts(
-      { startDate, endDate, sortBy: 'discount', size: LISTING_SIZE } as YachtSearchParams,
-      Currency.EUR,
-      locale
+    // Fetch the biggest discounts of EACH vessel type in parallel — sorting the
+    // whole catalogue by discount returns only sailing yachts (they carry the
+    // deepest last-minute cuts), so the page looked like we only offer sailboats
+    // (Mario 12.7.2026). Empty types just drop out of the interleave below.
+    Promise.all(
+      DEALS_VESSEL_TYPES.map(vesselType =>
+        fetchYachts(
+          { startDate, endDate, sortBy: 'discount', size: PER_TYPE_SIZE, boatTypes: [vesselType] } as YachtSearchParams,
+          Currency.EUR,
+          locale
+        ).then(res => res?.content ?? [])
+      )
     ),
     getTranslations('promo'),
   ]);
-  const boats = yachts?.content ?? [];
+
+  // Round-robin the per-type lists (rank 0 of every type, then rank 1, …) so the
+  // grid mixes catamarans, motorboats, gulets and sailing yachts instead of
+  // being a wall of one type.
+  const boats = Array.from({ length: PER_TYPE_SIZE })
+    .flatMap((_, rank) => perType.map(list => list[rank]).filter(Boolean))
+    .slice(0, LISTING_SIZE);
   const formatDay = (iso: string) =>
     new Date(iso).toLocaleDateString(locale, { day: 'numeric', month: 'short', year: 'numeric' });
 

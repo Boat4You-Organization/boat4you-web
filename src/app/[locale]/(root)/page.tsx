@@ -34,7 +34,6 @@ export function generateStaticParams() {
 const WhyChooseUsSection = dynamic(() => import('@/components/WhyChooseUsSection'));
 const OurFleetSection = dynamic(() => import('@/views/Home/OurFleetSection'));
 const ManufacturersSection = dynamic(() => import('@/views/Home/ManufacturersSection'));
-const RiskFreeCTA = dynamic(() => import('@/components/RiskFreeCTA'));
 const AllDestinationsSection = dynamic(() => import('@/views/Home/AllDestinationsSection'));
 const BlogSection = dynamic(() => import('@/views/Home/BlogSection'));
 
@@ -102,7 +101,6 @@ export default async function HomePage({ params }: { params: Promise<{ locale: L
       <OurFleetSection fleet={fleet} />
       <ManufacturersSection manufacturers={manufacturers} />
       <FAQSection />
-      <RiskFreeCTA />
       <BlogSection posts={blogs.nodes} />
       <AllDestinationsSection countries={countriesCount} />
     </Layout>
