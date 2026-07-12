@@ -191,13 +191,15 @@
 .tile {
   height: 100%;
 
+  /* Hero-style layout inside the tile (Mario 12.7.2026): title+sub top-left,
+     character centered, big discount blob bottom-right. */
   .banner {
     min-height: 0;
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 20px 26px;
+    justify-content: flex-start;
+    padding: 22px 26px;
     border-radius: 16px;
   }
 
@@ -224,24 +226,35 @@
     }
   }
 
-  /* Centered vertically and fully inside the tile — the shorter tile clipped
-     the hero's bottom-bleeding blob, cutting off the "%" (Mario 12.7.2026). */
+  /* Enlarged, in the bottom-right corner like the hero. It bleeds slightly at
+     the bottom but the "%" stays in the visible upper-centre of the blob. */
   .blob {
-    width: 156px;
-    height: 122px;
-    right: 4%;
-    top: 50%;
-    bottom: auto;
-    transform: translateY(-50%);
+    width: 208px;
+    height: 164px;
+    right: 3%;
+    bottom: -8%;
+    top: auto;
+    transform: none;
+
+    @media (width <= 1099px) {
+      width: 176px;
+      height: 140px;
+    }
 
     @media (width <= 899px) {
-      width: 120px;
-      height: 92px;
+      width: 132px;
+      height: 104px;
+      right: 4%;
+      bottom: -10%;
     }
   }
 
   .pct {
-    font-size: 40px;
+    font-size: 48px;
+
+    @media (width <= 1099px) {
+      font-size: 40px;
+    }
 
     @media (width <= 899px) {
       font-size: 32px;
@@ -249,18 +262,19 @@
   }
 
   .upto {
-    font-size: 13px;
+    font-size: 14px;
   }
 
-  /* Character sits just left of the blob; hidden on the narrowest screens
-     where the full-width tile has no room for it. */
+  /* Character centred horizontally, standing on the ground; hidden on the
+     narrowest screens where the full-width tile has no room for it. */
   .dude {
-    right: 175px;
-    height: 78%;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    height: 82%;
 
     @media (width <= 1099px) {
-      right: 150px;
-      height: 66%;
+      height: 70%;
     }
 
     @media (width <= 599px) {
