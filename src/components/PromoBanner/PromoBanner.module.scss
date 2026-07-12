@@ -202,20 +202,25 @@
   }
 
   .title {
-    font-size: 30px;
+    font-size: 46px;
+
+    @media (width <= 1099px) {
+      font-size: 38px;
+    }
 
     @media (width <= 899px) {
-      font-size: 26px;
+      font-size: 30px;
     }
   }
 
   .sub {
-    font-size: 13px;
-    margin-top: 8px;
+    font-size: 13.5px;
+    margin-top: 10px;
     max-width: 30ch;
 
     @media (width <= 899px) {
       font-size: 12px;
+      margin-top: 8px;
     }
   }
 
