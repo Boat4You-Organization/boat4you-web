@@ -14,6 +14,7 @@ const withNextIntl = createNextIntlPlugin({
       './messages/en/toastMessages.json',
       './messages/en/metadata.json',
       './messages/en/cookieConsent.json',
+      './messages/en/promo.json',
     ],
   },
 });

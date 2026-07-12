@@ -1,0 +1,40 @@
+{
+  "banner": {
+    "upTo": "do"
+  },
+  "campaigns": {
+    "lastMinute": {
+      "title": "LAST MINUTE",
+      "subtitle": "Nije kasno za vaš ljetni bijeg — zaplovite uz popust do {pct}%",
+      "subtitleNoPct": "Nije kasno za vaš ljetni bijeg — uhvatite najbolje preostale termine",
+      "metaTitle": "Last minute ponude za najam jahti",
+      "metaDescription": "Stvarni last minute popusti na najam jahti za nadolazeće tjedne. Prava sniženja partnera, rok besplatnog otkazivanja i trenutna dostupnost — ažurirano dnevno.",
+      "seoTitle": "Kako funkcioniraju naše last minute ponude",
+      "seoText": "Charter operateri snižavaju tjedne koji su blizu polaska još uvijek slobodni — isti brod koji je zimi bio po punoj cijeni može nekoliko tjedana prije ukrcaja koštati znatno manje. Popusti koje ovdje vidite stvarna su sniženja naših partnera: svaki postotak uspoređuje današnju cijenu s operaterovim vlastitim cjenikom za isti brod i isti tjedan, nikada s napuhanom referentnom cijenom. Dostupnost u posljednji trenutak mijenja se iz sata u sat, pa ako vam brod i cijena odgovaraju, vrijedi odmah osigurati termin — popularne veličine u najboljim marinama odlaze prve."
+    },
+    "septemberSails": {
+      "title": "RUJAN POD JEDRIMA",
+      "subtitle": "Toplo more, upola manje gužve — zaplovite u posezoni uz popust do {pct}%",
+      "subtitleNoPct": "Toplo more, upola manje gužve — posezona je izbor onih koji znaju",
+      "metaTitle": "Najam jahti u rujnu – najbolje ponude",
+      "metaDescription": "Rujanski charter tjedni sa stvarnim popustima: toplo more, postojani vjetrovi, mirne uvale i niže cijene nego u špici sezone. Usporedite prava sniženja partnera.",
+      "seoTitle": "Zašto je rujan pametan izbor za jedrenje",
+      "seoText": "Rujan zadržava sve ono što ljeto čini sjajnim — toplo more, duge dane, otvorene restorane — a izostavlja dvije stvari koje nitko ne naručuje: gužve i cijene vršne sezone. U marinama opet ima slobodnih vezova, sidrišta su mirna, a charter operateri aktivno snižavaju cijene kako bi popunili posljednje jake tjedne sezone. Postoci na ovoj stranici stvarna su sniženja partnera u odnosu na operaterov vlastiti cjenik za isti brod i isti tjedan — ono što uštedite pravi je novac, a ne marketing."
+    },
+    "earlyBooking": {
+      "title": "RANI BOOKING",
+      "subtitle": "Najbolji tjedni sljedeće sezone prvi nestaju — rezervirajte na vrijeme uz popust do {pct}%",
+      "subtitleNoPct": "Najbolji tjedni sljedeće sezone prvi nestaju — osigurajte svoj prije navale",
+      "metaTitle": "Rani booking popusti na najam jahti",
+      "metaDescription": "Rezervirajte charter za sljedeću sezonu ranije: najširi izbor brodova i termina te stvarni rani booking popusti operatera. Uz rok besplatnog otkazivanja.",
+      "seoTitle": "Zašto se rani booking isplati",
+      "seoText": "Charter flote otvaraju kalendare za sljedeću sezonu ujesen, a operateri ranu odluku nagrađuju svojim najboljim postocima — tada je izbor brodova, marina i tjedana školskih praznika još uvijek potpun. Rana rezervacija ovdje nije kockanje: vaša rezervacija uključuje rok besplatnog otkazivanja, a popust koji vidite uspoređuje trenutačnu cijenu s operaterovim vlastitim cjenikom za taj brod i tjedan. Kad dođe proljeće i popularni tjedni budu rasprodani, isti se brodovi prodaju po punoj cijeni."
+    }
+  },
+  "landing": {
+    "intro": "Svaki popust na ovoj stranici stvarno je sniženje partnera — postotak na svakoj kartici uspoređuje današnju cijenu s operaterovim vlastitim cjenikom za isti brod i isti tjedan.",
+    "boatsTitle": "Najbolje ponude za {from} – {to}",
+    "viewAll": "Pogledajte sve brodove uz filtre",
+    "noBoats": "Trenutno nema brodova na popustu za ovaj termin — navratite uskoro, dostupnost se mijenja svakodnevno."
+  }
+}

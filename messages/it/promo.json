@@ -1,0 +1,40 @@
+{
+  "banner": {
+    "upTo": "fino a"
+  },
+  "campaigns": {
+    "lastMinute": {
+      "title": "LAST MINUTE",
+      "subtitle": "Non è troppo tardi per la tua fuga estiva — salpa con sconti fino al {pct}%",
+      "subtitleNoPct": "Non è troppo tardi per la tua fuga estiva — assicurati le migliori settimane ancora disponibili",
+      "metaTitle": "Offerte Last Minute Noleggio Yacht",
+      "metaDescription": "Veri sconti last minute sul noleggio yacht: ribassi reali dei partner, cancellazione gratuita e disponibilità immediata. Aggiornati ogni giorno.",
+      "seoTitle": "Come funzionano le nostre offerte last minute",
+      "seoText": "Gli operatori charter scontano le settimane ancora libere a ridosso della partenza: la stessa barca che in inverno costava prezzo pieno può costare molto meno poche settimane prima dell'imbarco. Gli sconti che vedi qui sono veri ribassi applicati dai partner: ogni percentuale confronta il prezzo di oggi con il listino ufficiale dell'operatore per la stessa barca e la stessa settimana, mai con un prezzo di riferimento gonfiato. La disponibilità sotto data cambia di ora in ora: se una barca e un prezzo ti convincono, conviene bloccare subito la settimana — le misure più richieste nelle marine migliori vanno via per prime."
+    },
+    "septemberSails": {
+      "title": "SETTEMBRE A VELE SPIEGATE",
+      "subtitle": "Mare caldo, metà della folla — naviga a fine stagione con sconti fino al {pct}%",
+      "subtitleNoPct": "Mare caldo, metà della folla — il fine stagione è la scelta di chi se ne intende",
+      "metaTitle": "Offerte Noleggio Yacht a Settembre",
+      "metaDescription": "Charter a settembre con sconti reali: mare caldo, venti costanti, baie tranquille e prezzi più bassi dell'alta stagione. Confronta i veri ribassi dei partner.",
+      "seoTitle": "Perché settembre è il momento giusto per salpare",
+      "seoText": "Settembre conserva tutto ciò che rende grande l'estate — un mare caldo, giornate lunghe, ristoranti aperti — e lascia a terra le due cose che nessuno rimpiange: la folla e i prezzi di alta stagione. Nelle marine si ritrovano ormeggi liberi, le baie tornano tranquille e gli operatori charter applicano sconti concreti per riempire le ultime settimane forti della stagione. Le percentuali di questa pagina sono veri ribassi dei partner rispetto al listino ufficiale dell'operatore per la stessa barca e la stessa settimana: ciò che risparmi è denaro reale, non marketing."
+    },
+    "earlyBooking": {
+      "title": "EARLY BOOKING",
+      "subtitle": "Le settimane migliori della prossima stagione vanno via per prime — prenota in anticipo con sconti fino al {pct}%",
+      "subtitleNoPct": "Le settimane migliori della prossima stagione vanno via per prime — assicurati la tua prima degli altri",
+      "metaTitle": "Sconti Early Booking Noleggio Yacht",
+      "metaDescription": "Prenota il charter della prossima stagione in anticipo: massima scelta di barche e date, veri sconti early booking e periodo di cancellazione gratuita incluso.",
+      "seoTitle": "Perché prenotare in anticipo conviene",
+      "seoText": "Le flotte charter aprono i calendari della stagione successiva in autunno, e gli operatori premiano chi prenota per primo con le percentuali migliori — è il momento in cui la scelta di barche, marine e settimane delle vacanze scolastiche è ancora completa. Prenotare in anticipo qui non è un azzardo: la tua prenotazione include un periodo di cancellazione gratuita, e lo sconto che vedi confronta il prezzo attuale con il listino ufficiale dell'operatore per quella barca e quella settimana. Quando arriva la primavera e le settimane più richieste sono esaurite, le stesse barche si vendono a prezzo pieno."
+    }
+  },
+  "landing": {
+    "intro": "Ogni sconto di questa pagina è un vero ribasso applicato dal partner — la percentuale su ogni scheda confronta il prezzo di oggi con il listino ufficiale dell'operatore per la stessa barca e la stessa settimana.",
+    "boatsTitle": "Le migliori offerte per {from} – {to}",
+    "viewAll": "Vedi tutte le barche con i filtri",
+    "noBoats": "Al momento non ci sono barche scontate per queste date — torna presto, la disponibilità cambia ogni giorno."
+  }
+}

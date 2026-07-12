@@ -1,0 +1,40 @@
+{
+  "banner": {
+    "upTo": "jusqu'à"
+  },
+  "campaigns": {
+    "lastMinute": {
+      "title": "LAST MINUTE",
+      "subtitle": "Il n'est pas trop tard pour votre évasion estivale — larguez les amarres avec jusqu'à {pct}% de réduction",
+      "subtitleNoPct": "Il n'est pas trop tard pour votre évasion estivale — saisissez les meilleures semaines encore disponibles",
+      "metaTitle": "Location de Bateaux Last Minute — Offres",
+      "metaDescription": "Vraies réductions last minute sur la location de bateaux pour les prochaines semaines. Remises réelles des opérateurs, annulation gratuite — mise à jour quotidienne.",
+      "seoTitle": "Comment fonctionnent nos offres last minute",
+      "seoText": "Les opérateurs de charter baissent le prix des semaines encore disponibles à l'approche du départ — le même bateau affiché plein tarif en hiver peut coûter nettement moins cher quelques semaines avant l'embarquement. Les réductions affichées ici sont de véritables baisses de prix consenties par nos partenaires : chaque pourcentage compare le prix du jour au tarif catalogue de l'opérateur lui-même, pour le même bateau et la même semaine — jamais à une référence gonflée. Les disponibilités de dernière minute évoluent d'heure en heure : si un bateau et un prix vous conviennent, mieux vaut réserver la semaine sans attendre — les tailles les plus demandées dans les meilleures marinas partent en premier."
+    },
+    "septemberSails": {
+      "title": "CAP SUR SEPTEMBRE",
+      "subtitle": "Mer chaude, moitié moins de monde — naviguez en arrière-saison avec jusqu'à {pct}% de réduction",
+      "subtitleNoPct": "Mer chaude, moitié moins de monde — l'arrière-saison est le choix des connaisseurs",
+      "metaTitle": "Location de Bateaux en Septembre — Offres",
+      "metaDescription": "Semaines de septembre à prix réduit : mer chaude, vents réguliers, criques paisibles et tarifs plus doux qu'en plein été. Comparez de vraies remises partenaires.",
+      "seoTitle": "Pourquoi septembre est le bon moment pour naviguer",
+      "seoText": "Septembre garde tout ce qui fait le charme de l'été — une mer chaude, de longues journées, des restaurants ouverts — et supprime les deux choses dont personne ne veut : la foule et les prix de haute saison. Les marinas retrouvent des places libres, les mouillages sont paisibles, et les opérateurs de charter baissent activement leurs prix pour remplir les dernières belles semaines de la saison. Les pourcentages affichés sur cette page sont de véritables remises partenaires, calculées par rapport au tarif catalogue de l'opérateur lui-même pour le même bateau et la même semaine : ce que vous économisez est de l'argent réel, pas du marketing."
+    },
+    "earlyBooking": {
+      "title": "EARLY BOOKING",
+      "subtitle": "Les meilleures semaines de la saison prochaine partent en premier — réservez tôt avec jusqu'à {pct}% de réduction",
+      "subtitleNoPct": "Les meilleures semaines de la saison prochaine partent en premier — réservez la vôtre avant la ruée",
+      "metaTitle": "Early Booking — Réductions Location de Bateaux",
+      "metaDescription": "Réservez tôt votre location de bateau pour la saison prochaine : le plus grand choix de bateaux et de dates, avec de vraies remises early booking et annulation gratuite.",
+      "seoTitle": "Pourquoi réserver tôt est un bon calcul",
+      "seoText": "Les flottes de charter ouvrent leurs calendriers de la saison suivante à l'automne, et les opérateurs récompensent les réservations anticipées avec leurs meilleurs pourcentages — c'est le moment où le choix de bateaux, de marinas et de semaines de vacances scolaires est encore complet. Réserver tôt n'a rien d'un pari : votre réservation inclut une période d'annulation gratuite, et la réduction affichée compare le prix actuel au tarif catalogue de l'opérateur lui-même pour ce bateau et cette semaine. Au printemps, quand les semaines les plus demandées sont parties, les mêmes bateaux se vendent plein tarif."
+    }
+  },
+  "landing": {
+    "intro": "Chaque réduction sur cette page est une véritable baisse de prix consentie par nos partenaires — le pourcentage de chaque carte compare le prix du jour au tarif catalogue de l'opérateur lui-même, pour le même bateau et la même semaine.",
+    "boatsTitle": "Meilleures offres du {from} au {to}",
+    "viewAll": "Voir tous les bateaux avec filtres",
+    "noBoats": "Aucun bateau en promotion pour ces dates en ce moment — revenez bientôt, les disponibilités changent chaque jour."
+  }
+}

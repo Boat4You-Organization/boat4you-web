@@ -23,6 +23,13 @@ const FooterBottomBar = () => {
         <Typography variant="caption" component="p" color={colors.black600} sx={{ mt: 0.5, opacity: 0.75 }}>
           Cusmanich d.o.o. · Vrboran 37, 21000 Split, Croatia · OIB 87394862517
         </Typography>
+        {/* Storyset free-licence attribution — REQUIRED while the promo-banner
+            character illustration is live (storyset.com licence terms). */}
+        <Typography variant="caption" component="p" sx={{ mt: 0.5, opacity: 0.6 }}>
+          <a href="https://storyset.com" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit' }}>
+            Illustrations by Storyset
+          </a>
+        </Typography>
         {/* Cookie-consent withdrawal (audit C4) — re-opens the consent UI; GDPR Art. 7(3). */}
         <Box sx={{ mt: 0.5 }}>
           <CookieSettingsButton />

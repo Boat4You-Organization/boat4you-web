@@ -16,6 +16,7 @@ declare module 'next-intl' {
       toastMessages: typeof import('../../messages/en/toastMessages.json').default;
       metadata: typeof import('../../messages/en/metadata.json').default;
       cookieConsent: typeof import('../../messages/en/cookieConsent.json').default;
+      promo: typeof import('../../messages/en/promo.json').default;
     };
   }
 }

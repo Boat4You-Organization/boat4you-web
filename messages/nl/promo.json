@@ -1,0 +1,40 @@
+{
+  "banner": {
+    "upTo": "tot"
+  },
+  "campaigns": {
+    "lastMinute": {
+      "title": "LAST MINUTE",
+      "subtitle": "Het is nog niet te laat voor jouw zomer op het water — hijs de zeilen met tot {pct}% korting",
+      "subtitleNoPct": "Het is nog niet te laat voor jouw zomer op het water — pak de beste weken die nog vrij zijn",
+      "metaTitle": "Last Minute Jachtcharter Deals",
+      "metaDescription": "Echte last-minute kortingen op jachtcharters. Reële prijsverlagingen van partners, gratis annuleringsperiode en directe beschikbaarheid — dagelijks bijgewerkt.",
+      "seoTitle": "Zo werken onze last-minute deals",
+      "seoText": "Charterbedrijven geven korting op weken die vlak voor vertrek nog vrij zijn — dezelfde boot die in de winter de volle prijs kostte, kan enkele weken voor het inschepen aanzienlijk goedkoper zijn. De kortingen die je hier ziet, zijn echte prijsverlagingen van onze partners: elk percentage vergelijkt de prijs van vandaag met de eigen catalogusprijs van de verhuurder voor dezelfde boot en dezelfde week, nooit met een kunstmatig opgehoogde referentieprijs. De beschikbaarheid op korte termijn verandert per uur, dus als een boot en een prijs je bevallen, is het de moeite waard om de week meteen vast te leggen — populaire formaten in de beste jachthavens gaan het eerst."
+    },
+    "septemberSails": {
+      "title": "SEPTEMBER OP ZEE",
+      "subtitle": "Warme zee, half zoveel drukte — vaar het naseizoen in met tot {pct}% korting",
+      "subtitleNoPct": "Warme zee, half zoveel drukte — het naseizoen is de keuze van kenners",
+      "metaTitle": "Jachtcharter Deals in September",
+      "metaDescription": "Charterweken in september: warme zee, stabiele wind, rustige baaien en lagere prijzen dan in het hoogseizoen. Vergelijk echte kortingen van partners.",
+      "seoTitle": "Waarom september de slimme keuze is om te zeilen",
+      "seoText": "September behoudt alles wat de zomer geweldig maakt — een warme zee, lange dagen, geopende restaurants — en laat de twee dingen weg waar niemand om vraagt: drukte en hoogseizoensprijzen. In de jachthavens zijn weer ligplaatsen vrij, de ankerbaaien zijn rustig en charterbedrijven geven actief korting om de laatste sterke weken van het seizoen te vullen. De percentages op deze pagina zijn echte prijsverlagingen van onze partners ten opzichte van de eigen catalogusprijs van de verhuurder voor dezelfde boot en dezelfde week — wat je bespaart is dus echt geld, geen marketing."
+    },
+    "earlyBooking": {
+      "title": "VROEGBOEKKORTING",
+      "subtitle": "De beste weken van het nieuwe seizoen zijn het eerst weg — boek vooruit met tot {pct}% korting",
+      "subtitleNoPct": "De beste weken van het nieuwe seizoen zijn het eerst weg — leg de jouwe vast vóór de drukte begint",
+      "metaTitle": "Vroegboekkorting op Jachtcharters",
+      "metaDescription": "Boek je jachtcharter voor volgend seizoen vroeg: de ruimste keuze aan boten en data én echte vroegboekkortingen. Inclusief gratis annuleringsperiode.",
+      "seoTitle": "Waarom vroeg boeken loont",
+      "seoText": "Chartervloten openen hun kalender voor het nieuwe seizoen in het najaar, en verhuurders belonen vroege beslissers met hun beste percentages — dan is de keuze aan boten, jachthavens en schoolvakantieweken nog compleet. Vroeg boeken is hier geen gok: je reservering omvat een gratis annuleringsperiode, en de korting die je ziet vergelijkt de actuele prijs met de eigen catalogusprijs van de verhuurder voor die boot en die week. Tegen de tijd dat het voorjaar aanbreekt en de populaire weken vergeven zijn, gaan dezelfde boten voor de volle prijs van de hand."
+    }
+  },
+  "landing": {
+    "intro": "Elke korting op deze pagina is een echte prijsverlaging van onze partners — het percentage op elke kaart vergelijkt de prijs van vandaag met de eigen catalogusprijs van de verhuurder voor dezelfde boot en dezelfde week.",
+    "boatsTitle": "Topdeals voor {from} – {to}",
+    "viewAll": "Bekijk alle boten met filters",
+    "noBoats": "Op dit moment geen boten met korting voor deze periode — kom snel terug, de beschikbaarheid verandert dagelijks."
+  }
+}

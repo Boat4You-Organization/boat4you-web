@@ -1,0 +1,40 @@
+{
+  "banner": {
+    "upTo": "do"
+  },
+  "campaigns": {
+    "lastMinute": {
+      "title": "LAST MINUTE",
+      "subtitle": "Na letni rejs nie jest jeszcze za późno — wypłyń z rabatem do {pct}%",
+      "subtitleNoPct": "Na letni rejs nie jest jeszcze za późno — zarezerwuj najlepsze z wolnych tygodni",
+      "metaTitle": "Czarter jachtów last minute – oferty i rabaty",
+      "metaDescription": "Prawdziwe rabaty last minute na czarter jachtów. Realne obniżki cen partnerów, darmowe anulowanie i dostępność od ręki — aktualizowane codziennie.",
+      "seoTitle": "Jak działają nasze oferty last minute",
+      "seoText": "Operatorzy czarterów obniżają ceny tygodni, które pozostają wolne tuż przed terminem wypłynięcia — ta sama łódź, która zimą kosztowała pełną cenę, kilka tygodni przed zaokrętowaniem może być znacznie tańsza. Rabaty, które tu widzisz, to realne obniżki cen naszych partnerów: każdy procent porównuje dzisiejszą cenę z cennikową ceną samego operatora za tę samą łódź i ten sam tydzień — nigdy z zawyżoną ceną odniesienia. Dostępność na ostatnią chwilę zmienia się z godziny na godzinę, więc jeśli łódź i cena Ci odpowiadają, warto od razu zarezerwować termin — najpopularniejsze wielkości jachtów w najlepszych marinach znikają pierwsze."
+    },
+    "septemberSails": {
+      "title": "WRZESIEŃ POD ŻAGLAMI",
+      "subtitle": "Ciepłe morze, o połowę mniej tłumów — żegluj po sezonie z rabatem do {pct}%",
+      "subtitleNoPct": "Ciepłe morze, o połowę mniej tłumów — rejs po sezonie to wybór wtajemniczonych",
+      "metaTitle": "Wrześniowy czarter jachtów – oferty i rabaty",
+      "metaDescription": "Wrześniowe tygodnie czarterowe z realnymi rabatami: ciepłe morze, stabilny wiatr, spokojne zatoki i niższe ceny niż w szczycie lata. Porównaj obniżki partnerów.",
+      "seoTitle": "Dlaczego wrzesień to mądry wybór na rejs",
+      "seoText": "Wrzesień zachowuje wszystko, za co kochamy lato — ciepłe morze, długie dni, otwarte restauracje — a pozbywa się dwóch rzeczy, których nikt nie zamawia: tłumów i cen z wysokiego sezonu. W marinach znów są wolne miejsca, kotwicowiska pustoszeją, a operatorzy czarterów aktywnie obniżają ceny, by zapełnić ostatnie mocne tygodnie sezonu. Procenty na tej stronie to prawdziwe obniżki cen partnerów względem cennikowej ceny samego operatora za tę samą łódź i ten sam tydzień — to, co oszczędzasz, to realne pieniądze, a nie marketing."
+    },
+    "earlyBooking": {
+      "title": "FIRST MINUTE",
+      "subtitle": "Najlepsze tygodnie przyszłego sezonu znikają pierwsze — zarezerwuj wcześniej z rabatem do {pct}%",
+      "subtitleNoPct": "Najlepsze tygodnie przyszłego sezonu znikają pierwsze — zapewnij sobie swój, zanim zrobi się tłok",
+      "metaTitle": "Czarter jachtów first minute – rabaty",
+      "metaDescription": "Zarezerwuj czarter na przyszły sezon wcześniej: największy wybór jachtów i terminów oraz prawdziwe rabaty first minute od operatorów. Z darmowym anulowaniem.",
+      "seoTitle": "Dlaczego wczesna rezerwacja się opłaca",
+      "seoText": "Floty czarterowe otwierają kalendarze na kolejny sezon jesienią, a operatorzy nagradzają wczesne decyzje najwyższymi rabatami — to wtedy wybór łodzi, marin i tygodni w terminach wakacji szkolnych jest jeszcze pełny. Wczesna rezerwacja nie jest tu ryzykiem: obejmuje okres darmowego anulowania, a rabat, który widzisz, porównuje aktualną cenę z cennikową ceną samego operatora za tę łódź i ten tydzień. Gdy przychodzi wiosna i popularne terminy są już zajęte, te same łodzie sprzedają się w pełnej cenie."
+    }
+  },
+  "landing": {
+    "intro": "Każdy rabat na tej stronie to prawdziwa obniżka ceny partnera — procent na każdej karcie porównuje dzisiejszą cenę z cennikową ceną samego operatora za tę samą łódź i ten sam tydzień.",
+    "boatsTitle": "Najlepsze oferty na {from} – {to}",
+    "viewAll": "Zobacz wszystkie łodzie z filtrami",
+    "noBoats": "Obecnie brak przecenionych łodzi w tym terminie — zajrzyj wkrótce, dostępność zmienia się codziennie."
+  }
+}

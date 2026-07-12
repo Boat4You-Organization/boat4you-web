@@ -1,0 +1,40 @@
+{
+  "banner": {
+    "upTo": "até"
+  },
+  "campaigns": {
+    "lastMinute": {
+      "title": "LAST MINUTE",
+      "subtitle": "Ainda vai a tempo da sua escapada de verão — zarpe com até {pct}% de desconto",
+      "subtitleNoPct": "Ainda vai a tempo da sua escapada de verão — garanta as melhores semanas disponíveis",
+      "metaTitle": "Ofertas Last Minute de Aluguer de Iates",
+      "metaDescription": "Descontos genuínos de última hora em aluguer de iates para as próximas semanas. Reduções reais dos operadores, cancelamento gratuito e disponibilidade imediata.",
+      "seoTitle": "Como funcionam as nossas ofertas last minute",
+      "seoText": "Os operadores de charter descontam as semanas que continuam livres perto da data de partida — o mesmo barco que custava o preço de tabela no inverno pode ficar consideravelmente mais barato poucas semanas antes do check-in. Os descontos que vê aqui são reduções reais aplicadas pelos operadores parceiros: cada percentagem compara o preço de hoje com o preço de tabela do próprio operador para o mesmo barco e a mesma semana, nunca com um valor de referência inflacionado. A disponibilidade em cima da hora muda de hora a hora, por isso, se um barco e um preço lhe agradarem, vale a pena garantir a semana de imediato — os tamanhos mais procurados nas melhores marinas são os primeiros a esgotar."
+    },
+    "septemberSails": {
+      "title": "SETEMBRO A NAVEGAR",
+      "subtitle": "Mar quente, metade da multidão — navegue na pós-época com até {pct}% de desconto",
+      "subtitleNoPct": "Mar quente, metade da multidão — a pós-época é a escolha de quem sabe",
+      "metaTitle": "Ofertas de Aluguer de Iates em Setembro",
+      "metaDescription": "Semanas de charter em setembro com descontos reais: mar quente, ventos estáveis, baías tranquilas e preços mais baixos do que no pico do verão.",
+      "seoTitle": "Porque é setembro a semana inteligente para navegar",
+      "seoText": "Setembro conserva tudo o que torna o verão fantástico — mar quente, dias longos, restaurantes abertos — e dispensa as duas coisas que ninguém pede: multidões e preços de época alta. As marinas voltam a ter lugares livres, os fundeadouros estão tranquilos e os operadores de charter aplicam descontos ativamente para preencher as últimas semanas fortes da temporada. As percentagens nesta página são reduções genuínas dos operadores parceiros face ao preço de tabela do próprio operador para o mesmo barco e a mesma semana — o que poupa é dinheiro real, não marketing."
+    },
+    "earlyBooking": {
+      "title": "RESERVA ANTECIPADA",
+      "subtitle": "As melhores semanas da próxima temporada esgotam primeiro — reserve já com até {pct}% de desconto",
+      "subtitleNoPct": "As melhores semanas da próxima temporada esgotam primeiro — garanta a sua antes da corrida",
+      "metaTitle": "Descontos de Reserva Antecipada de Iates",
+      "metaDescription": "Reserve cedo o charter da próxima temporada: a maior escolha de barcos e datas e descontos genuínos de reserva antecipada. Com cancelamento gratuito.",
+      "seoTitle": "Porque compensa reservar cedo",
+      "seoText": "As frotas de charter abrem os calendários da temporada seguinte no outono, e os operadores recompensam quem se compromete cedo com as suas melhores percentagens — é nessa altura que a escolha de barcos, marinas e semanas de férias escolares ainda está completa. Reservar cedo não é uma aposta às cegas: a sua reserva inclui um período de cancelamento gratuito, e o desconto que vê compara o preço atual com o preço de tabela do próprio operador para esse barco e essa semana. Quando a primavera chegar e as semanas mais procuradas tiverem desaparecido, os mesmos barcos vendem-se ao preço cheio."
+    }
+  },
+  "landing": {
+    "intro": "Cada desconto nesta página é uma redução real aplicada pelo operador parceiro — a percentagem em cada cartão compara o preço de hoje com o preço de tabela do próprio operador para o mesmo barco e a mesma semana.",
+    "boatsTitle": "Melhores ofertas para {from} – {to}",
+    "viewAll": "Ver todos os barcos com filtros",
+    "noBoats": "De momento não há barcos com desconto para este período — volte em breve, a disponibilidade muda todos os dias."
+  }
+}

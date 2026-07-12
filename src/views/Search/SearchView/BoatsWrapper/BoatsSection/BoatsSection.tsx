@@ -20,7 +20,7 @@ import BoatListingItemCard from '@/components/BoatListingItemCard';
 import FloatingButton from '@/components/FloatingButton';
 import ListEmptyState from '@/components/ListEmptyState';
 import Pagination from '@/components/Pagination';
-import RiskFreeCTA from '@/components/RiskFreeCTA';
+import PromoBanner from '@/components/PromoBanner';
 import SeoTextSection from '@/components/SeoTextSection/SeoTextSection';
 import Grid from '@/components/SvgIcons/Grid';
 import List from '@/components/SvgIcons/List';
@@ -481,7 +481,10 @@ const BoatsSection = ({
               tab row so user sees what's applied and can clear individual
               filters with a single click. Hidden when no filter is active. */}
           <AppliedFilterChips params={params} setMultipleParams={setMultipleParams} t={t as (key: string) => string} />
-          <RiskFreeCTA searchPage disableGutters />
+          {/* Campaign promo strip (replaced RiskFreeCTA, Mario 12.7.2026) —
+              links to the active /deals landing; free-cancellation messaging
+              lives on the cards' badge + the 72h seal. */}
+          <PromoBanner compact />
           {/* Count headline as a real <h2> — anchors the heading hierarchy
               between the page H1 and the per-yacht H3 cards. Without it
               Screaming Frog (and Google) flag a "skipped heading level"

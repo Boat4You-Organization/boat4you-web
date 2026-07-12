@@ -6,6 +6,7 @@ import { getTopManufacturers } from '@/actions/catalogue.actions';
 import getCountriesCount, { getHeroStats } from '@/actions/locations.actions';
 import { getYachtFleet } from '@/actions/yacht.actions';
 import Layout from '@/components/Layout';
+import { PromoBannerServer } from '@/components/PromoBanner';
 import { PAGE_SIZE } from '@/config/constants.config';
 import whyChooseUs from '@/config/whyChooseUs';
 import { routing } from '@/i18n/routing';
@@ -97,6 +98,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: L
         />
       )}
       <HeroSection stats={heroStats} />
+      <PromoBannerServer />
       <DestinationsSection countries={countriesCount} />
       <WhyChooseUsSection translation="home" data={whyChooseUs} />
       <OurFleetSection fleet={fleet} />

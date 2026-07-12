@@ -1,0 +1,40 @@
+{
+  "banner": {
+    "upTo": "up to"
+  },
+  "campaigns": {
+    "lastMinute": {
+      "title": "LAST MINUTE",
+      "subtitle": "It's not too late for your summer escape — set sail with up to {pct}% off",
+      "subtitleNoPct": "It's not too late for your summer escape — grab the best remaining weeks",
+      "metaTitle": "Last Minute Yacht Charter Deals",
+      "metaDescription": "Genuine last-minute yacht charter discounts for the coming weeks. Real partner price cuts, free cancellation window and instant availability — updated daily.",
+      "seoTitle": "How our last-minute deals work",
+      "seoText": "Charter operators discount weeks that are still open close to departure — the same boat that was full price in winter can cost considerably less a few weeks before check-in. The discounts you see here are real partner price cuts: every percentage compares today's price against the operator's own list price for the same boat and the same week, never against an inflated reference. Availability at short notice changes by the hour, so if a boat and a price fit, it is worth securing the week right away — popular sizes in the best marinas go first."
+    },
+    "septemberSails": {
+      "title": "SEPTEMBER SAILS",
+      "subtitle": "Warm sea, half the crowds — sail the post-season with up to {pct}% off",
+      "subtitleNoPct": "Warm sea, half the crowds — the post-season is the insider's choice",
+      "metaTitle": "September Yacht Charter Deals",
+      "metaDescription": "September charter weeks with real discounts: warm sea, steady winds, quiet bays and lower prices than peak summer. Compare genuine partner price cuts.",
+      "seoTitle": "Why September is the smart week to sail",
+      "seoText": "September keeps everything that makes the summer great — a warm sea, long days, open restaurants — and drops the two things nobody orders: crowds and peak pricing. Marinas have free berths again, anchorages are quiet, and charter operators actively discount to fill the last strong weeks of the season. The percentages on this page are genuine partner price cuts against the operator's own list price for the same boat and week, so what you save is real money, not marketing."
+    },
+    "earlyBooking": {
+      "title": "EARLY BOOKING",
+      "subtitle": "The best weeks of next season go first — book ahead with up to {pct}% off",
+      "subtitleNoPct": "The best weeks of next season go first — secure yours ahead of the rush",
+      "metaTitle": "Early Booking Yacht Charter Discounts",
+      "metaDescription": "Book next season's yacht charter early: the widest choice of boats and dates plus genuine early-booking discounts from charter operators. Free cancellation window included.",
+      "seoTitle": "Why early booking pays off",
+      "seoText": "Charter fleets open their next-season calendars in autumn, and operators reward early commitments with their best percentages — that is when the choice of boats, marinas and school-holiday weeks is still complete. Booking early is not a gamble here: your reservation includes a free cancellation window, and the discount you see compares the current price against the operator's own list price for that boat and week. When spring comes and the popular weeks are gone, the same boats sell at full price."
+    }
+  },
+  "landing": {
+    "intro": "Every discount on this page is a genuine partner price cut — the percentage on each card compares today's price with the operator's own list price for the same boat and the same week.",
+    "boatsTitle": "Top deals for {from} – {to}",
+    "viewAll": "View all boats with filters",
+    "noBoats": "No discounted boats for this window right now — check back soon, availability changes daily."
+  }
+}

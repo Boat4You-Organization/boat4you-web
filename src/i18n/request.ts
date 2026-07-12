@@ -21,6 +21,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
     toastMessages: (await import(`../../messages/${locale}/toastMessages.json`)).default,
     metadata: (await import(`../../messages/${locale}/metadata.json`)).default,
     cookieConsent: (await import(`../../messages/${locale}/cookieConsent.json`)).default,
+    promo: (await import(`../../messages/${locale}/promo.json`)).default,
   } as const;
 
   return {

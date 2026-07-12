@@ -1,0 +1,40 @@
+{
+  "banner": {
+    "upTo": "bis zu"
+  },
+  "campaigns": {
+    "lastMinute": {
+      "title": "LAST MINUTE",
+      "subtitle": "Für Ihren Sommertörn ist es noch nicht zu spät — stechen Sie in See mit bis zu {pct}% Rabatt",
+      "subtitleNoPct": "Für Ihren Sommertörn ist es noch nicht zu spät — sichern Sie sich die besten verbliebenen Wochen",
+      "metaTitle": "Last-Minute-Yachtcharter-Angebote",
+      "metaDescription": "Echte Last-Minute-Rabatte auf Yachtcharter: reale Partner-Nachlässe, kostenloses Stornofenster und sofortige Verfügbarkeit — täglich aktualisiert.",
+      "seoTitle": "So funktionieren unsere Last-Minute-Angebote",
+      "seoText": "Charterbetreiber reduzieren Wochen, die kurz vor dem Törnbeginn noch frei sind — dieselbe Yacht, die im Winter zum vollen Preis angeboten wurde, kann wenige Wochen vor dem Check-in deutlich weniger kosten. Die Rabatte, die Sie hier sehen, sind echte Preisnachlässe der Partner: Jeder Prozentsatz vergleicht den heutigen Preis mit dem eigenen Listenpreis des Betreibers für dieselbe Yacht und dieselbe Woche — niemals mit einem künstlich überhöhten Referenzpreis. Die kurzfristige Verfügbarkeit ändert sich stündlich: Wenn Yacht und Preis passen, lohnt es sich, die Woche gleich zu sichern — beliebte Größen in den besten Marinas sind zuerst vergeben."
+    },
+    "septemberSails": {
+      "title": "SEGELN IM SEPTEMBER",
+      "subtitle": "Warmes Meer, halb so viel Trubel — segeln Sie in der Nachsaison mit bis zu {pct}% Rabatt",
+      "subtitleNoPct": "Warmes Meer, halb so viel Trubel — die Nachsaison ist der Geheimtipp für Kenner",
+      "metaTitle": "September-Yachtcharter-Angebote",
+      "metaDescription": "Charterwochen im September mit echten Rabatten: warmes Meer, konstanter Wind, ruhige Buchten und niedrigere Preise als im Hochsommer. Echte Partner-Nachlässe.",
+      "seoTitle": "Warum der September die klügste Wahl zum Segeln ist",
+      "seoText": "Der September behält alles, was den Sommer ausmacht — ein warmes Meer, lange Tage, geöffnete Restaurants — und lässt die zwei Dinge weg, die niemand bestellt: Menschenmassen und Hochsaisonpreise. In den Marinas gibt es wieder freie Liegeplätze, die Ankerbuchten sind ruhig, und die Charterbetreiber gewähren gezielt Rabatte, um die letzten starken Wochen der Saison zu füllen. Die Prozentsätze auf dieser Seite sind echte Preisnachlässe der Partner gegenüber dem eigenen Listenpreis des Betreibers für dieselbe Yacht und Woche — Ihre Ersparnis ist also bares Geld, kein Marketing."
+    },
+    "earlyBooking": {
+      "title": "FRÜHBUCHER",
+      "subtitle": "Die besten Wochen der nächsten Saison sind zuerst vergeben — buchen Sie im Voraus mit bis zu {pct}% Rabatt",
+      "subtitleNoPct": "Die besten Wochen der nächsten Saison sind zuerst vergeben — sichern Sie sich Ihre vor dem großen Ansturm",
+      "metaTitle": "Frühbucher-Rabatte für Yachtcharter",
+      "metaDescription": "Yachtcharter für die nächste Saison früh buchen: größte Auswahl an Yachten und Terminen plus echte Frühbucherrabatte. Inklusive kostenlosem Stornofenster.",
+      "seoTitle": "Warum sich Frühbuchen lohnt",
+      "seoText": "Charterflotten öffnen ihre Kalender für die nächste Saison im Herbst, und die Betreiber belohnen frühe Entscheidungen mit ihren besten Prozentsätzen — dann ist die Auswahl an Yachten, Marinas und Ferienwochen noch vollständig. Früh zu buchen ist hier kein Risiko: Ihre Reservierung beinhaltet ein kostenloses Stornofenster, und der angezeigte Rabatt vergleicht den aktuellen Preis mit dem eigenen Listenpreis des Betreibers für diese Yacht und Woche. Wenn der Frühling kommt und die beliebten Wochen vergeben sind, werden dieselben Yachten zum vollen Preis verkauft."
+    }
+  },
+  "landing": {
+    "intro": "Jeder Rabatt auf dieser Seite ist ein echter Preisnachlass des Partners — der Prozentsatz auf jeder Karte vergleicht den heutigen Preis mit dem eigenen Listenpreis des Betreibers für dieselbe Yacht und dieselbe Woche.",
+    "boatsTitle": "Top-Angebote für {from} – {to}",
+    "viewAll": "Alle Yachten mit Filtern anzeigen",
+    "noBoats": "Für diesen Zeitraum gibt es aktuell keine reduzierten Yachten — schauen Sie bald wieder vorbei, die Verfügbarkeit ändert sich täglich."
+  }
+}

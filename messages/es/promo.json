@@ -1,0 +1,40 @@
+{
+  "banner": {
+    "upTo": "hasta"
+  },
+  "campaigns": {
+    "lastMinute": {
+      "title": "LAST MINUTE",
+      "subtitle": "Aún estás a tiempo de tu escapada de verano: zarpa con hasta un {pct}% de descuento",
+      "subtitleNoPct": "Aún estás a tiempo de tu escapada de verano: hazte con las mejores semanas disponibles",
+      "metaTitle": "Ofertas Last Minute de Alquiler de Barcos",
+      "metaDescription": "Descuentos last minute reales en alquiler de barcos para las próximas semanas. Rebajas auténticas, cancelación gratuita y disponibilidad inmediata, al día.",
+      "seoTitle": "Cómo funcionan nuestras ofertas last minute",
+      "seoText": "Las navieras de chárter rebajan las semanas que siguen libres cuando se acerca la salida: el mismo barco que en invierno se vendía a precio completo puede costar bastante menos pocas semanas antes del embarque. Los descuentos que ves aquí son rebajas reales de nuestros operadores asociados: cada porcentaje compara el precio de hoy con la tarifa oficial del propio operador para el mismo barco y la misma semana, nunca con una referencia inflada. La disponibilidad de última hora cambia hora a hora, así que si un barco y un precio te encajan, conviene asegurar la semana cuanto antes: las esloras más demandadas en las mejores marinas vuelan primero."
+    },
+    "septemberSails": {
+      "title": "SEPTIEMBRE A VELA",
+      "subtitle": "Mar cálido y la mitad de gente: navega la postemporada con hasta un {pct}% de descuento",
+      "subtitleNoPct": "Mar cálido y la mitad de gente: la postemporada es la elección de los que saben",
+      "metaTitle": "Ofertas de Alquiler de Barcos en Septiembre",
+      "metaDescription": "Semanas de chárter en septiembre con descuentos reales: mar cálido, vientos estables, calas tranquilas y precios más bajos que en pleno verano.",
+      "seoTitle": "Por qué septiembre es el mes inteligente para navegar",
+      "seoText": "Septiembre conserva todo lo que hace grande al verano —un mar cálido, días largos, restaurantes abiertos— y elimina las dos cosas que nadie pide: las aglomeraciones y los precios de temporada alta. Las marinas vuelven a tener amarres libres, los fondeaderos están tranquilos y los operadores de chárter aplican descuentos activamente para llenar las últimas semanas fuertes de la temporada. Los porcentajes de esta página son rebajas reales de nuestros operadores asociados sobre su propia tarifa oficial para el mismo barco y la misma semana, así que lo que ahorras es dinero de verdad, no marketing."
+    },
+    "earlyBooking": {
+      "title": "RESERVA ANTICIPADA",
+      "subtitle": "Las mejores semanas de la próxima temporada vuelan: adelántate con hasta un {pct}% de descuento",
+      "subtitleNoPct": "Las mejores semanas de la próxima temporada vuelan: asegura la tuya antes que nadie",
+      "metaTitle": "Descuentos por Reserva Anticipada de Barcos",
+      "metaDescription": "Reserva pronto tu chárter de la próxima temporada: la mayor oferta de barcos y fechas con descuentos reales por reserva anticipada. Cancelación gratuita incluida.",
+      "seoTitle": "Por qué compensa reservar con antelación",
+      "seoText": "Las flotas de chárter abren los calendarios de la próxima temporada en otoño, y los operadores premian los compromisos tempranos con sus mejores porcentajes: es entonces cuando la oferta de barcos, marinas y semanas de vacaciones escolares aún está completa. Reservar pronto aquí no es una apuesta: tu reserva incluye un periodo de cancelación gratuita, y el descuento que ves compara el precio actual con la tarifa oficial del propio operador para ese barco y esa semana. Cuando llega la primavera y las semanas más buscadas se han agotado, los mismos barcos se venden a precio completo."
+    }
+  },
+  "landing": {
+    "intro": "Cada descuento de esta página es una rebaja real de nuestros operadores asociados: el porcentaje de cada tarjeta compara el precio de hoy con la tarifa oficial del propio operador para el mismo barco y la misma semana.",
+    "boatsTitle": "Mejores ofertas para {from} – {to}",
+    "viewAll": "Ver todos los barcos con filtros",
+    "noBoats": "Ahora mismo no hay barcos con descuento para estas fechas. Vuelve pronto: la disponibilidad cambia a diario."
+  }
+}
