@@ -219,15 +219,19 @@
     }
   }
 
+  /* Centered vertically and fully inside the tile — the shorter tile clipped
+     the hero's bottom-bleeding blob, cutting off the "%" (Mario 12.7.2026). */
   .blob {
-    width: 150px;
-    height: 118px;
-    right: 5%;
-    bottom: -14%;
+    width: 156px;
+    height: 122px;
+    right: 4%;
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
 
     @media (width <= 899px) {
-      width: 128px;
-      height: 100px;
+      width: 120px;
+      height: 92px;
     }
   }
 
