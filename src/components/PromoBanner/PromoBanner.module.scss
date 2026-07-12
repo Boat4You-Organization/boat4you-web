@@ -13,7 +13,7 @@
   min-height: 300px;
   padding: 30px 34px;
 
-  @media (max-width: 899px) {
+  @media (width <= 899px) {
     min-height: 210px;
     padding: 20px 22px;
   }
@@ -29,7 +29,7 @@
   position: relative;
   z-index: 2;
 
-  @media (max-width: 899px) {
+  @media (width <= 899px) {
     font-size: 28px;
   }
 }
@@ -43,7 +43,7 @@
   position: relative;
   z-index: 2;
 
-  @media (max-width: 899px) {
+  @media (width <= 899px) {
     font-size: 12.5px;
     margin-top: 8px;
     max-width: 34ch;
@@ -63,7 +63,7 @@
   justify-content: center;
   z-index: 1;
 
-  @media (max-width: 899px) {
+  @media (width <= 899px) {
     width: 150px;
     height: 118px;
     right: 4%;
@@ -74,7 +74,7 @@
   font-size: 17px;
   font-weight: 500;
 
-  @media (max-width: 899px) {
+  @media (width <= 899px) {
     font-size: 12px;
   }
 }
@@ -85,7 +85,7 @@
   letter-spacing: -0.03em;
   line-height: 1;
 
-  @media (max-width: 899px) {
+  @media (width <= 899px) {
     font-size: 34px;
   }
 }
@@ -98,12 +98,12 @@
   width: auto;
   z-index: 1;
 
-  @media (max-width: 899px) {
+  @media (width <= 899px) {
     right: 160px;
     height: 58%;
   }
 
-  @media (max-width: 599px) {
+  @media (width <= 599px) {
     display: none;
   }
 }
@@ -156,7 +156,7 @@
     height: 64%;
   }
 
-  @media (max-width: 899px) {
+  @media (width <= 899px) {
     .banner {
       min-height: 130px;
     }
