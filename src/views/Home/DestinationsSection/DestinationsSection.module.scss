@@ -44,9 +44,12 @@
 }
 
 // 4-per-row static grid (4 x 3), matching the fleet grid. Replaces the Swiper.
+// `dense` lets the country cards flow around the explicitly-placed promo tile
+// (12.7.2026) without leaving a hole.
 .grid {
   margin-top: rem-calc(28);
   display: grid;
+  grid-auto-flow: row dense;
   grid-template-columns: repeat(2, 1fr);
   gap: rem-calc(18 12);
 
@@ -58,5 +61,17 @@
   @include media('md') {
     grid-template-columns: repeat(4, 1fr);
     gap: rem-calc(32 20);
+  }
+}
+
+// Promo tile sits among the destination cards: full width on the 2/3-column
+// mobile grids (short, so it doesn't dominate), and 3-of-4 columns on desktop
+// at a rotating row so it never towers over the countries (Mario 12.7.2026).
+.promoCell {
+  grid-column: 1 / -1;
+
+  @include media('md') {
+    grid-column: var(--promo-col) / span 3;
+    grid-row: var(--promo-row);
   }
 }

@@ -19,11 +19,20 @@ interface PromoBannerProps {
   initialPct?: number | null;
   /** Shorter strip for the search listing (replaced RiskFreeCTA, 12.7.2026). */
   compact?: boolean;
+  /** Grid-cell variant: fills its cell height, sits among the destination
+   *  cards on the home page (Mario 12.7.2026 — banner should blend in). */
+  tile?: boolean;
   /** The landing hero renders the banner itself, without the self-link. */
   clickable?: boolean;
 }
 
-const PromoBanner = ({ campaign = getActiveCampaign(), initialPct, compact, clickable = true }: PromoBannerProps) => {
+const PromoBanner = ({
+  campaign = getActiveCampaign(),
+  initialPct,
+  compact,
+  tile,
+  clickable = true,
+}: PromoBannerProps) => {
   const t = useTranslations('promo');
   const [pct, setPct] = useState<number | null>(initialPct ?? null);
 
@@ -39,7 +48,7 @@ const PromoBanner = ({ campaign = getActiveCampaign(), initialPct, compact, clic
   if (!campaign) return null;
 
   const banner = (
-    <div className={cx({ [styles.compact]: compact })}>
+    <div className={cx({ [styles.compact]: compact, [styles.tile]: tile })}>
       <div className={styles.banner} style={{ background: campaign.colors.bg }}>
         <p className={styles.title}>{t(`campaigns.${campaign.i18nKey}.title`)}</p>
         <p className={styles.sub}>
@@ -73,7 +82,7 @@ const PromoBanner = ({ campaign = getActiveCampaign(), initialPct, compact, clic
   return (
     <Link
       href={`/deals/${campaign.slug}`}
-      className={styles.wrapper}
+      className={cx(styles.wrapper, { [styles.wrapperTile]: tile })}
       aria-label={t(`campaigns.${campaign.i18nKey}.title`)}
     >
       {banner}

@@ -179,3 +179,83 @@
     }
   }
 }
+
+/* Tile variant: sits inside the home destinations grid as one card-row-tall
+   cell spanning up to 3 columns (Mario 12.7.2026 — blend in among countries,
+   don't tower over them). Fills its grid cell height. */
+.wrapperTile {
+  display: block;
+  height: 100%;
+}
+
+.tile {
+  height: 100%;
+
+  .banner {
+    min-height: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 26px;
+    border-radius: 16px;
+  }
+
+  .title {
+    font-size: 30px;
+
+    @media (width <= 899px) {
+      font-size: 26px;
+    }
+  }
+
+  .sub {
+    font-size: 13px;
+    margin-top: 8px;
+    max-width: 30ch;
+
+    @media (width <= 899px) {
+      font-size: 12px;
+    }
+  }
+
+  .blob {
+    width: 150px;
+    height: 118px;
+    right: 5%;
+    bottom: -14%;
+
+    @media (width <= 899px) {
+      width: 128px;
+      height: 100px;
+    }
+  }
+
+  .pct {
+    font-size: 40px;
+
+    @media (width <= 899px) {
+      font-size: 32px;
+    }
+  }
+
+  .upto {
+    font-size: 13px;
+  }
+
+  /* Character sits just left of the blob; hidden on the narrowest screens
+     where the full-width tile has no room for it. */
+  .dude {
+    right: 175px;
+    height: 78%;
+
+    @media (width <= 1099px) {
+      right: 150px;
+      height: 66%;
+    }
+
+    @media (width <= 599px) {
+      display: none;
+    }
+  }
+}
