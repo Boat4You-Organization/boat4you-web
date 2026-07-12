@@ -49,7 +49,7 @@
   "skippered": "Sa skiperom",
   "manufacturerAndModel": "Proizvođač i model",
   "classicMainsail": "Klasično glavno jedro",
-  "rollingMainsail": "Roll glavno jedro",
+  "rollingMainsail": "Rolo glavno jedro",
   "enginePower": "Snaga motora",
   "engineRangeHp": "{min} – {max} KS",
   "yourSearch": "Vaša pretraga",
@@ -63,6 +63,6 @@
     "motorboat": "Gliser",
     "motoryacht": "Motorna jahta",
     "gulet": "Gulet",
-    "powerCat": "Power kat"
+    "powerCat": "Motorni katamaran"
   }
 }
