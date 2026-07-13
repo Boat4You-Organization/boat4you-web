@@ -29,6 +29,78 @@
       "metaDescription": "Book next season's yacht charter early: the widest choice of boats and dates plus genuine early-booking discounts from charter operators. Free cancellation window included.",
       "seoTitle": "Why early booking pays off",
       "seoText": "Charter fleets open their next-season calendars in autumn, and operators reward early commitments with their best percentages — that is when the choice of boats, marinas and school-holiday weeks is still complete. Booking early is not a gamble here: your reservation includes a free cancellation window, and the discount you see compares the current price against the operator's own list price for that boat and week. When spring comes and the popular weeks are gone, the same boats sell at full price."
+    },
+    "blackFriday": {
+      "title": "BLACK FRIDAY",
+      "subtitle": "The year's deepest cuts — book next season now with up to {pct}% off",
+      "subtitleNoPct": "The year's deepest cuts — book next season at rock-bottom rates",
+      "metaTitle": "Black Friday Yacht Charter Deals",
+      "metaDescription": "The single biggest discount event of the year: book next season's yacht charter at the deepest early rates. One week only, genuine partner price cuts.",
+      "seoTitle": "Why Black Friday is the best week to book",
+      "seoText": "Once a year, charter operators open their calendars at the lowest prices they will publish all season — and they hold that window open for one week only. This is the moment to lock next summer's boat while the whole fleet is still free and the percentages are at their deepest. The discounts here are genuine partner price cuts against the operator's own list price for the same boat and week, not a manufactured sale. When the week closes the rates climb, and the best boats in the Mediterranean and Caribbean are the first to go."
+    },
+    "christmas": {
+      "title": "CHRISTMAS",
+      "subtitle": "Give the sea for Christmas — plan next season with up to {pct}% off",
+      "subtitleNoPct": "Give the sea for Christmas — plan next season's escape together",
+      "metaTitle": "Christmas Yacht Charter Deals",
+      "metaDescription": "Gift a yacht charter or plan next season's family escape this Christmas. Warm bays, genuine partner discounts and a free cancellation window to book with confidence.",
+      "seoTitle": "A charter is the gift that lasts all summer",
+      "seoText": "There is no better present than a week at sea waiting on the calendar — a family gathered on deck, quiet anchorages, dinners under the stars. This Christmas is the time to plan next season together while the whole fleet is still open and operators are discounting early bookings. Every percentage here is a genuine partner price cut against the operator's own list price for the same boat and week, and your reservation includes a free cancellation window. Choose the Mediterranean or the Caribbean, wrap it up, and give the whole family something to look forward to."
+    },
+    "newYear": {
+      "title": "NEW YEAR",
+      "subtitle": "New year, new horizon — start it by booking next season, up to {pct}% off",
+      "subtitleNoPct": "New year, new horizon — start it by locking next season's charter",
+      "metaTitle": "New Year Yacht Charter Deals",
+      "metaDescription": "New year, new horizon: begin the year by securing next season's yacht charter. The widest choice of boats and dates with genuine early partner discounts.",
+      "seoTitle": "Begin the year with a week already booked",
+      "seoText": "The best resolutions are the ones already on the calendar. Start the year by choosing next season's boat while the fleet is complete and operators are still discounting early — the whole horizon, from the Adriatic to the Caribbean, is open in front of you. The percentages here are genuine partner price cuts against the operator's own list price for the same boat and week, and every booking includes a free cancellation window. Set the dates now, and by the time the first warm days arrive your summer is already waiting at the dock."
+    },
+    "flashDeals": {
+      "title": "FLASH DEALS",
+      "subtitle": "Blink and it's gone — book the coming season with up to {pct}% off",
+      "subtitleNoPct": "Blink and it's gone — grab the coming season before the window shuts",
+      "metaTitle": "Flash Sale Yacht Charter Deals",
+      "metaDescription": "A short spring burst of yacht charter deals for the coming season. Limited-time partner price cuts across the Mediterranean and Caribbean — gone in days.",
+      "seoTitle": "How the flash week works",
+      "seoText": "For a few days only, operators drop a fresh round of prices on the coming season's weeks — a quick spring burst before the summer rush really begins. This is a short window to secure a boat at a sharper rate while the calendar is still wide open. Every percentage you see is a genuine partner price cut against the operator's own list price for the same boat and week, and each booking includes a free cancellation window. The deals move fast and the window is measured in days, so if a boat and a price fit, take the week."
+    },
+    "hotWeek": {
+      "title": "HOT WEEK",
+      "subtitle": "The hottest deals of summer — sail this month with up to {pct}% off",
+      "subtitleNoPct": "The hottest deals of summer — imminent open weeks, going fast",
+      "metaTitle": "Hot Week Yacht Charter Deals",
+      "metaDescription": "The hottest week of the year for charter deals: imminent open weeks just days away at genuine partner discounts. Sail this summer — availability changes by the hour.",
+      "seoTitle": "Why this is the hottest week to sail",
+      "seoText": "This is the week the deals run hottest — open weeks just days out, discounted hard by operators who would rather sail full than leave a boat at the dock. The sea is at its warmest and the summer is in full swing, so these weeks are ready to sail almost the moment you book. Every percentage here is a genuine partner price cut against the operator's own list price for the same boat and week. Short-notice availability moves by the hour across the Mediterranean and Caribbean, so if a boat and a price line up, grab it now."
+    },
+    "birthdayWeek": {
+      "title": "BIRTHDAY WEEK",
+      "subtitle": "We're celebrating — sail the coming weeks with up to {pct}% off",
+      "subtitleNoPct": "We're celebrating — thank-you deals on the coming weeks",
+      "metaTitle": "Birthday Week Yacht Charter Deals",
+      "metaDescription": "Brokering charters since 2013 — we're celebrating our birthday with thank-you deals on the coming weeks. Genuine partner price cuts, one week of the year only.",
+      "seoTitle": "Our birthday, your best week",
+      "seoText": "We have been matching people with the right boat since 2013, and every birthday we mark it the only way that makes sense — by passing our best deals of the year to the customers who got us here. For this one week, the coming weeks across the Mediterranean and Caribbean come with our warmest thank-you rates. Every percentage is a genuine partner price cut against the operator's own list price for the same boat and week, and each booking includes a free cancellation window. Come celebrate with us — the sea is waiting."
+    },
+    "juneSails": {
+      "title": "JUNE SAILS",
+      "subtitle": "Warm sea before the crowds — sail June with up to {pct}% off",
+      "subtitleNoPct": "Warm sea before the crowds — June is the insider's month",
+      "metaTitle": "June Yacht Charter Deals",
+      "metaDescription": "June charter weeks with real discounts: a warm sea, gentle winds and quiet bays before the peak-summer crowds arrive. Genuine partner price cuts.",
+      "seoTitle": "Why those in the know sail in June",
+      "seoText": "June is the month the regulars keep to themselves — the sea has warmed, the winds are gentle, and the bays are still yours before July fills them. Marinas have room to spare, restaurants have opened for the season, and operators discount these early weeks to get the summer moving. The percentages on this page are genuine partner price cuts against the operator's own list price for the same boat and week, so the saving is real. Choose June across the Mediterranean or Caribbean and get the best of summer without the crush."
+    },
+    "julySails": {
+      "title": "JULY SAILS",
+      "subtitle": "The classic summer week — sail July with up to {pct}% off",
+      "subtitleNoPct": "The classic summer week — July is peak season at its best",
+      "metaTitle": "July Yacht Charter Deals",
+      "metaDescription": "July charter weeks with real discounts: long days, warm nights and the classic high-season sail. Compare genuine partner price cuts across every boat type.",
+      "seoTitle": "July is summer at full volume",
+      "seoText": "July is the week everyone pictures when they think of a summer at sea — long, bright days, warm nights on deck, buzzing harbours and every anchorage alive. It is peak season for a reason, and even at the height of it operators discount weeks they still want to fill. The percentages here are genuine partner price cuts against the operator's own list price for the same boat and week, never against an inflated reference. Pick your July week across the Mediterranean or Caribbean and sail the classic high-season charter at its very best."
     }
   },
   "landing": {

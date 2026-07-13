@@ -29,6 +29,78 @@
       "metaDescription": "Yachtcharter für die nächste Saison früh buchen: größte Auswahl an Yachten und Terminen plus echte Frühbucherrabatte. Inklusive kostenlosem Stornofenster.",
       "seoTitle": "Warum sich Frühbuchen lohnt",
       "seoText": "Charterflotten öffnen ihre Kalender für die nächste Saison im Herbst, und die Betreiber belohnen frühe Entscheidungen mit ihren besten Prozentsätzen — dann ist die Auswahl an Yachten, Marinas und Ferienwochen noch vollständig. Früh zu buchen ist hier kein Risiko: Ihre Reservierung beinhaltet ein kostenloses Stornofenster, und der angezeigte Rabatt vergleicht den aktuellen Preis mit dem eigenen Listenpreis des Betreibers für diese Yacht und Woche. Wenn der Frühling kommt und die beliebten Wochen vergeben sind, werden dieselben Yachten zum vollen Preis verkauft."
+    },
+    "blackFriday": {
+      "title": "BLACK FRIDAY",
+      "subtitle": "Der größte Rabatt des Jahres — sichern Sie sich die nächste Saison mit bis zu {pct}% Rabatt",
+      "subtitleNoPct": "Der größte Rabatt des Jahres — sichern Sie sich die nächste Saison zu den tiefsten Preisen",
+      "metaTitle": "Black-Friday-Yachtcharter-Angebote",
+      "metaDescription": "Black Friday bei boat4you: das größte Rabattereignis des Jahres. Buchen Sie die nächste Saison eine Woche lang zu den tiefsten Frühbucherpreisen. Echte Partner-Nachlässe.",
+      "seoTitle": "Black Friday: die tiefsten Preise des Jahres",
+      "seoText": "Einmal im Jahr, für nur eine Woche, senken die Charterbetreiber ihre Preise für die kommende Saison so tief wie sonst nie — das ist Black Friday bei boat4you. Wer jetzt bucht, sichert sich dieselbe Yacht, dieselbe Woche und dieselbe Marina zum tiefsten Preis des ganzen Jahres, lange bevor die Kalender im Frühling voll sind. Jeder angezeigte Prozentsatz ist ein echter Nachlass des Partners gegenüber seinem eigenen Listenpreis für dieselbe Yacht und Woche. Das Fenster ist kurz: sieben Tage, dann steigen die Preise wieder. Vom Mittelmeer bis in die Karibik lohnt sich das schnelle Zugreifen."
+    },
+    "christmas": {
+      "title": "WEIHNACHTEN",
+      "subtitle": "Verschenken Sie einen Törn oder planen Sie Ihre nächste Auszeit — mit bis zu {pct}% Rabatt",
+      "subtitleNoPct": "Verschenken Sie einen Törn oder planen Sie Ihre nächste Auszeit auf dem Wasser",
+      "metaTitle": "Weihnachtsangebote für Yachtcharter",
+      "metaDescription": "Schenken Sie zu Weihnachten einen Segeltörn oder planen Sie in Ruhe Ihre nächste Saison — mit echten Partner-Rabatten auf Yachten im ganzen Mittelmeer und in der Karibik.",
+      "seoTitle": "Ein Törn als Geschenk unter dem Christbaum",
+      "seoText": "Während draußen der Winter regiert, träumen die schönsten Geschenke schon vom Sommer. Ein Yachtcharter unter dem Christbaum ist mehr als ein Gutschein — es ist das Versprechen von langen Tagen auf See, gemeinsamen Ankerbuchten und Abenden, an die sich die ganze Familie noch Jahre später erinnert. Buchen Sie in aller Ruhe die kommende Saison, solange die Auswahl an Yachten und Wochen noch vollständig ist. Jeder Rabatt ist ein echter Nachlass des Partners gegenüber seinem eigenen Listenpreis für dieselbe Yacht und Woche — ein ehrliches Geschenk, im Mittelmeer wie in der Karibik."
+    },
+    "newYear": {
+      "title": "NEUES JAHR",
+      "subtitle": "Neues Jahr, neuer Horizont — starten Sie mit dem Törn für die nächste Saison und bis zu {pct}% Rabatt",
+      "subtitleNoPct": "Neues Jahr, neuer Horizont — sichern Sie sich Ihren Törn für die kommende Saison",
+      "metaTitle": "Neujahrsangebote für Yachtcharter",
+      "metaDescription": "Starten Sie das neue Jahr mit einem festen Plan: Buchen Sie Ihren Törn für die kommende Saison mit echten Frühbucherrabatten. Yachten im Mittelmeer und in der Karibik.",
+      "seoTitle": "Neues Jahr, neuer Horizont",
+      "seoText": "Die besten Vorsätze sind die, auf die man sich freut. Statt einer weiteren To-do-Liste setzen Sie sich in diesem Jahr ein Ziel am Horizont: eine Woche unter Segeln, irgendwo zwischen den Inseln des Mittelmeers oder den Buchten der Karibik. Wer den Törn schon im Januar bucht, hat die größte Auswahl an Yachten und Terminen — und die besten Frühbucherpreise der Saison. Jeder angezeigte Rabatt ist ein echter Nachlass des Partners gegenüber seinem eigenen Listenpreis für dieselbe Yacht und Woche. Das Jahr beginnt mit einem klaren Kurs."
+    },
+    "flashDeals": {
+      "title": "FLASH DEALS",
+      "subtitle": "Nur ein paar Tage: Blitzangebote für die kommende Saison mit bis zu {pct}% Rabatt",
+      "subtitleNoPct": "Nur ein paar Tage: Blitzangebote für die kommende Saison",
+      "metaTitle": "Flash-Deals für Yachtcharter",
+      "metaDescription": "Kurze Blitzaktion, echte Rabatte: Sichern Sie sich in wenigen Tagen Ihre Yacht für die kommende Saison. Reale Partner-Nachlässe, täglich aktualisiert.",
+      "seoTitle": "Blitzangebote — schnell sein lohnt sich",
+      "seoText": "Blitzangebote sind genau das: eine kurze, kräftige Welle an Rabatten, die nur wenige Tage anhält. Der Frühling steht vor der Tür, die Charterkalender füllen sich, und die Betreiber geben jetzt noch einmal die besten Preise für die kommende Saison frei — bevor der große Ansturm beginnt. Wer eine passende Yacht und Woche findet, sollte nicht lange zögern: Ist die Aktion vorbei, gilt wieder der volle Listenpreis. Jeder Prozentsatz ist ein echter Nachlass des Partners gegenüber seinem eigenen Preis für dieselbe Yacht und Woche, vom Mittelmeer bis in die Karibik."
+    },
+    "hotWeek": {
+      "title": "HOT WEEK",
+      "subtitle": "Die heißeste Woche des Jahres — freie Wochen für diesen Sommer mit bis zu {pct}% Rabatt",
+      "subtitleNoPct": "Die heißeste Woche des Jahres — freie Wochen für diesen Sommer, sofort verfügbar",
+      "metaTitle": "Hot Week: Yachtcharter-Angebote",
+      "metaDescription": "Die heißeste Rabattwoche des Sommers: freie Wochen nur wenige Tage vor dem Check-in, mit echten Partner-Nachlässen. Verfügbarkeit ändert sich stündlich.",
+      "seoTitle": "Hot Week: die heißesten Angebote des Sommers",
+      "seoText": "Es ist Hochsommer, das Thermometer klettert — und die Angebote werden genauso heiß. In der Hot Week bündeln die Charterbetreiber ihre stärksten Rabatte auf Wochen, die jetzt, in wenigen Tagen, noch frei sind. Kein Warten auf die nächste Saison: Diese Yachten stechen diesen Sommer in See. Die Verfügbarkeit ändert sich stündlich, und die besten Größen in den beliebtesten Marinas sind zuerst weg. Jeder Prozentsatz ist ein echter Nachlass des Partners gegenüber seinem eigenen Listenpreis für dieselbe Yacht und Woche — wenn Yacht und Preis passen, gleich zugreifen."
+    },
+    "birthdayWeek": {
+      "title": "GEBURTSTAGSWOCHE",
+      "subtitle": "Wir feiern Geburtstag — und Sie sparen in den kommenden Wochen mit bis zu {pct}% Rabatt",
+      "subtitleNoPct": "Wir feiern Geburtstag — und sagen Danke mit besonderen Angeboten für die kommenden Wochen",
+      "metaTitle": "Geburtstagswoche: Yachtcharter-Angebote",
+      "metaDescription": "boat4you feiert Geburtstag: Seit 2013 vermitteln wir Yachtcharter. Zum Jubiläum bedanken wir uns mit besonderen Angeboten für die kommenden Wochen.",
+      "seoTitle": "Seit 2013 — unsere Geburtstagswoche",
+      "seoText": "Seit 2013 vermitteln wir Yachtcharter im ganzen Mittelmeer und in der Karibik — und jedes Jahr Ende Mai feiern wir das mit einer ganzen Geburtstagswoche. Das größte Dankeschön gilt Ihnen: den Crews, die uns Saison für Saison ihr Vertrauen schenken. Deshalb bündeln wir zum Jubiläum besondere Angebote für die kommenden Wochen, mitten in der Saison, wenn das Meer schon warm und die Auswahl noch groß ist. Jeder Rabatt ist ein echter Nachlass des Partners gegenüber seinem eigenen Listenpreis für dieselbe Yacht und Woche. Feiern Sie mit uns — an Bord."
+    },
+    "juneSails": {
+      "title": "SEGELN IM JUNI",
+      "subtitle": "Warmes Meer, ruhige Buchten, sanfte Winde vor dem großen Andrang — im Juni mit bis zu {pct}% Rabatt",
+      "subtitleNoPct": "Warmes Meer, ruhige Buchten, sanfte Winde vor dem großen Andrang — der Juni ist der Kennertipp",
+      "metaTitle": "Juni-Yachtcharter-Angebote",
+      "metaDescription": "Charterwochen im Juni: warmes Meer, ruhige Ankerbuchten und sanfte Winde, bevor der Hochsommer beginnt. Mit echten Partner-Rabatten.",
+      "seoTitle": "Warum der Juni die schönste Zeit zum Segeln ist",
+      "seoText": "Der Juni ist das bestgehütete Geheimnis der Saison. Das Meer hat die Frühlingskühle abgelegt und ist zum Baden warm, die langen Tage reichen bequem für zwei Ankerplätze, und die Winde wehen sanft und verlässlich — ideal für entspanntes Segeln. Vor allem aber ist es noch ruhig: Die Buchten sind frei, die Marinas gelassen, und in den Hafenstädten hat man die schönsten Plätze noch für sich, bevor der Hochsommer den großen Andrang bringt. Jeder Rabatt auf diesen Juni-Wochen ist ein echter Nachlass des Partners gegenüber seinem eigenen Listenpreis für dieselbe Yacht und Woche."
+    },
+    "julySails": {
+      "title": "SEGELN IM JULI",
+      "subtitle": "Lange Tage, warme Nächte, die klassische Hochsaison-Woche — im Juli mit bis zu {pct}% Rabatt",
+      "subtitleNoPct": "Lange Tage, warme Nächte, die klassische Hochsaison-Woche — segeln Sie im Juli",
+      "metaTitle": "Juli-Yachtcharter-Angebote",
+      "metaDescription": "Charterwochen im Juli: lange Sonnentage, warme Nächte und die volle Hochsaison-Stimmung. Mit echten Partner-Rabatten auf freie Wochen.",
+      "seoTitle": "Juli: die klassische Hochsaison auf See",
+      "seoText": "Der Juli ist der Sommer in seiner reinsten Form: Die Sonne steht lange am Himmel, das Meer ist herrlich warm, und die Nächte sind so mild, dass das Leben an Deck bis spät weitergeht. Es ist die klassische Hochsaison-Woche — belebte Häfen, glasklare Buchten, ein Ankerplatz nach dem anderen. Wer diese Stimmung sucht, findet im Juli genau die Wochen, in denen alles offen und in Bewegung ist. Jeder angezeigte Rabatt ist ein echter Nachlass des Partners gegenüber seinem eigenen Listenpreis für dieselbe Yacht und Woche — Ihre Ersparnis ist bares Geld, kein Marketing."
     }
   },
   "landing": {

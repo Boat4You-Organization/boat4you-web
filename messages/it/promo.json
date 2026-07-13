@@ -29,6 +29,78 @@
       "metaDescription": "Prenota il charter della prossima stagione in anticipo: massima scelta di barche e date, veri sconti early booking e periodo di cancellazione gratuita incluso.",
       "seoTitle": "Perché prenotare in anticipo conviene",
       "seoText": "Le flotte charter aprono i calendari della stagione successiva in autunno, e gli operatori premiano chi prenota per primo con le percentuali migliori — è il momento in cui la scelta di barche, marine e settimane delle vacanze scolastiche è ancora completa. Prenotare in anticipo qui non è un azzardo: la tua prenotazione include un periodo di cancellazione gratuita, e lo sconto che vedi confronta il prezzo attuale con il listino ufficiale dell'operatore per quella barca e quella settimana. Quando arriva la primavera e le settimane più richieste sono esaurite, le stesse barche si vendono a prezzo pieno."
+    },
+    "blackFriday": {
+      "title": "BLACK FRIDAY",
+      "subtitle": "Il più grande evento di sconti dell'anno — prenota la prossima stagione con ribassi fino al {pct}%",
+      "subtitleNoPct": "Il più grande evento di sconti dell'anno — prenota la prossima stagione ai prezzi più bassi in assoluto",
+      "metaTitle": "Black Friday Noleggio Yacht",
+      "metaDescription": "Il Black Friday del charter: gli sconti più profondi dell'anno sulla prossima stagione. Veri ribassi dei partner, una sola settimana, poi tornano i prezzi di listino.",
+      "seoTitle": "Perché il Black Friday è il momento migliore per prenotare",
+      "seoText": "Una volta l'anno gli operatori charter aprono i cassetti più profondi: il Black Friday porta le percentuali più alte che vedrai su tutta la stagione a venire, con il Mediterraneo e i Caraibi ancora completi di barche, date e marine tra cui scegliere. Dura una sola settimana. Gli sconti sono veri ribassi dei partner — ogni percentuale confronta il prezzo di oggi con il listino ufficiale dell'operatore per la stessa barca e la stessa settimana — e la tua prenotazione include un periodo di cancellazione gratuita. Quando la settimana finisce, quelle stesse barche tornano a prezzo pieno."
+    },
+    "christmas": {
+      "title": "OFFERTE DI NATALE",
+      "subtitle": "Regala il mare, o regalati la prossima estate — sconti fino al {pct}%",
+      "subtitleNoPct": "Regala il mare, o regalati la prossima estate — assicurati ora le settimane migliori",
+      "metaTitle": "Offerte di Natale Noleggio Yacht",
+      "metaDescription": "A Natale regala una vacanza in barca o pianifica la fuga della prossima estate: veri sconti dei partner, massima scelta di date e cancellazione gratuita inclusa.",
+      "seoTitle": "Un charter sotto l'albero",
+      "seoText": "C'è un regalo che nessuno dimentica: una settimana in barca con le persone che ami, tra le baie del Mediterraneo o le acque turchesi dei Caraibi. A Natale gli operatori charter aprono i calendari della prossima stagione con sconti concreti, e la scelta di barche e settimane è ancora al completo — il momento ideale per pianificare con calma la fuga dell'estate che verrà. Le percentuali che vedi sono veri ribassi dei partner rispetto al listino ufficiale per quella barca e quella settimana, e ogni prenotazione include un periodo di cancellazione gratuita. Il tempo di pensarci con la famiglia."
+    },
+    "newYear": {
+      "title": "ANNO NUOVO, ROTTA NUOVA",
+      "subtitle": "Comincia l'anno bloccando la prossima estate in barca — sconti fino al {pct}%",
+      "subtitleNoPct": "Comincia l'anno bloccando la prossima estate in barca — le settimane migliori sono ancora libere",
+      "metaTitle": "Offerte Capodanno Noleggio Yacht",
+      "metaDescription": "Inaugura l'anno con una rotta all'orizzonte: prenota il charter della prossima stagione con veri sconti dei partner, ampia scelta e cancellazione gratuita.",
+      "seoTitle": "Il primo proposito dell'anno: salpare",
+      "seoText": "Un anno nuovo si apre meglio con qualcosa da attendere all'orizzonte. Bloccare adesso la barca della prossima estate significa scegliere quando la disponibilità è ancora completa — date delle vacanze, marine più richieste e ogni tipo di scafo, dalla barca a vela al catamarano, tra Mediterraneo e Caraibi. Gli sconti di questa pagina sono veri ribassi dei partner: ogni percentuale confronta il prezzo attuale con il listino ufficiale dell'operatore per la stessa barca e la stessa settimana, e la prenotazione include un periodo di cancellazione gratuita. Comincia l'anno con una rotta già tracciata, non con un rimpianto a stagione iniziata."
+    },
+    "flashDeals": {
+      "title": "FLASH DEALS",
+      "subtitle": "Solo pochi giorni — prenota la stagione in arrivo con sconti fino al {pct}%",
+      "subtitleNoPct": "Solo pochi giorni — prenota la stagione in arrivo alle migliori condizioni",
+      "metaTitle": "Flash Deals Noleggio Yacht",
+      "metaDescription": "Una settimana lampo di offerte per prenotare la stagione in arrivo: veri sconti dei partner, scelta ancora ampia e cancellazione gratuita. Poi finisce.",
+      "seoTitle": "Una finestra breve per prenotare l'estate",
+      "seoText": "Con l'avvicinarsi della primavera gli operatori charter aprono una breve finestra di offerte lampo per dare slancio alle prenotazioni della stagione in arrivo. Dura pochi giorni: la scelta di barche, date e marine tra Mediterraneo e Caraibi è ancora ampia, ma le settimane forti dell'estate iniziano già a riempirsi. Gli sconti sono veri ribassi dei partner — ogni percentuale confronta il prezzo di oggi con il listino ufficiale dell'operatore per la stessa barca e la stessa settimana — e ogni prenotazione include un periodo di cancellazione gratuita. Quando la settimana lampo si chiude, i prezzi tornano al listino pieno."
+    },
+    "hotWeek": {
+      "title": "HOT WEEK",
+      "subtitle": "La settimana più calda di offerte — salpa a giorni con sconti fino al {pct}%",
+      "subtitleNoPct": "La settimana più calda di offerte — settimane libere in partenza a giorni",
+      "metaTitle": "Hot Week Offerte Noleggio Yacht",
+      "metaDescription": "La settimana più calda dell'estate: sconti reali sulle settimane in partenza tra pochi giorni. Veri ribassi dei partner, disponibilità immediata, cancellazione gratuita.",
+      "seoTitle": "Perché la Hot Week scotta davvero",
+      "seoText": "In piena estate gli operatori charter accendono la settimana di offerte più bollente dell'anno: settimane pronte a salpare tra pochi giorni, scontate per non partire vuote. Sono barche disponibili adesso, tra Mediterraneo e Caraibi, per chi può decidere in fretta. Gli sconti sono veri ribassi dei partner — ogni percentuale confronta il prezzo di oggi con il listino ufficiale dell'operatore per la stessa barca e la stessa settimana — e la prenotazione include un periodo di cancellazione gratuita. La disponibilità sotto data brucia in fretta: se barca e prezzo ti convincono, blocca la settimana prima che sparisca."
+    },
+    "birthdayWeek": {
+      "title": "SETTIMANA DEL COMPLEANNO",
+      "subtitle": "Festeggiamo con te dal 2013 — grazie con sconti fino al {pct}%",
+      "subtitleNoPct": "Festeggiamo con te dal 2013 — le nostre offerte di compleanno per dire grazie",
+      "metaTitle": "Settimana del Compleanno Noleggio Yacht",
+      "metaDescription": "Compiamo un altro anno: dal 2013 organizziamo charter in tutto il mondo. Festeggiamo con veri sconti dei partner sulle settimane in arrivo e cancellazione gratuita.",
+      "seoTitle": "Il nostro compleanno, il tuo regalo",
+      "seoText": "Organizziamo vacanze in barca dal 2013, e ogni anno festeggiamo il nostro compleanno nel modo che ci piace di più: ringraziando chi naviga con noi. Per questa settimana speciale gli operatori charter mettono sul tavolo sconti concreti sulle settimane in arrivo, tra Mediterraneo e Caraibi, con ogni tipo di barca a disposizione. Le percentuali che vedi sono veri ribassi dei partner rispetto al listino ufficiale per quella barca e quella settimana — nessun prezzo gonfiato — e ogni prenotazione include un periodo di cancellazione gratuita. Un modo semplice per dirti grazie: salpa con noi, ti aspetta un regalo di compleanno."
+    },
+    "juneSails": {
+      "title": "GIUGNO IN BARCA",
+      "subtitle": "Mare già caldo, baie ancora tranquille — naviga a giugno con sconti fino al {pct}%",
+      "subtitleNoPct": "Mare già caldo, baie ancora tranquille — giugno è il segreto di chi se ne intende",
+      "metaTitle": "Offerte Noleggio Yacht a Giugno",
+      "metaDescription": "Charter a giugno: mare caldo, venti gentili, baie tranquille prima della folla di agosto. Veri sconti dei partner sulle settimane di giugno e cancellazione gratuita.",
+      "seoTitle": "Perché chi naviga davvero sceglie giugno",
+      "seoText": "Giugno è il segreto meglio custodito dell'estate: il mare ha già preso calore, le giornate sono lunghissime e i venti restano gentili, ma le baie del Mediterraneo e le acque dei Caraibi non hanno ancora la ressa dell'alta stagione. Gli ormeggi si trovano, le ancore si calano in calette silenziose e gli operatori charter propongono ancora sconti concreti sulle settimane di inizio estate. Le percentuali di questa pagina sono veri ribassi dei partner rispetto al listino ufficiale per la stessa barca e la stessa settimana: navighi al meglio, e spendi meno di chi aspetta il pieno di agosto."
+    },
+    "julySails": {
+      "title": "LUGLIO IN BARCA",
+      "subtitle": "Giornate lunghe, notti calde — vivi l'alta stagione con sconti fino al {pct}%",
+      "subtitleNoPct": "Giornate lunghe, notti calde — la settimana d'estate per eccellenza ti aspetta",
+      "metaTitle": "Offerte Noleggio Yacht a Luglio",
+      "metaDescription": "Charter a luglio in piena estate: giornate lunghe, mare caldo, notti tiepide. Veri sconti dei partner sulle settimane di luglio, disponibilità reale e cancellazione gratuita.",
+      "seoTitle": "Luglio, l'estate al suo apice",
+      "seoText": "Luglio è l'estate al massimo della sua forza: giornate lunghissime, acqua calda, notti tiepide e quella luce del Mediterraneo che sembra non spegnersi mai. È la settimana d'alta stagione per eccellenza, tra le isole del Mediterraneo e le baie dei Caraibi, con ogni tipo di barca pronta a salpare. Anche nel mese più richiesto restano occasioni: le percentuali che vedi sono veri ribassi dei partner rispetto al listino ufficiale per la stessa barca e la stessa settimana, e ogni prenotazione include un periodo di cancellazione gratuita. Le settimane migliori di luglio vanno via per prime — blocca la tua finché è disponibile."
     }
   },
   "landing": {

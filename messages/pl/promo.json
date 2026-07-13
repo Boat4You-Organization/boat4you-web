@@ -29,6 +29,78 @@
       "metaDescription": "Zarezerwuj czarter na przyszły sezon wcześniej: największy wybór jachtów i terminów oraz prawdziwe rabaty first minute od operatorów. Z darmowym anulowaniem.",
       "seoTitle": "Dlaczego wczesna rezerwacja się opłaca",
       "seoText": "Floty czarterowe otwierają kalendarze na kolejny sezon jesienią, a operatorzy nagradzają wczesne decyzje najwyższymi rabatami — to wtedy wybór łodzi, marin i tygodni w terminach wakacji szkolnych jest jeszcze pełny. Wczesna rezerwacja nie jest tu ryzykiem: obejmuje okres darmowego anulowania, a rabat, który widzisz, porównuje aktualną cenę z cennikową ceną samego operatora za tę łódź i ten tydzień. Gdy przychodzi wiosna i popularne terminy są już zajęte, te same łodzie sprzedają się w pełnej cenie."
+    },
+    "blackFriday": {
+      "title": "BLACK FRIDAY",
+      "subtitle": "Największa wyprzedaż roku — zaklep przyszły sezon z rabatem do {pct}%",
+      "subtitleNoPct": "Największa wyprzedaż roku — zaklep przyszły sezon w najlepszych cenach",
+      "metaTitle": "Black Friday na czarter jachtów – największe rabaty",
+      "metaDescription": "Black Friday na czarter jachtów: najgłębsze rabaty roku na przyszły sezon. Tylko przez tydzień — realne obniżki cen partnerów i darmowe anulowanie.",
+      "seoTitle": "Dlaczego Black Friday to najlepszy moment na rezerwację",
+      "seoText": "Raz w roku operatorzy czarterów schodzą z cenami najniżej, jak potrafią — i wypada to właśnie w tygodniu Black Friday. To jedyny moment, gdy kalendarz przyszłego sezonu jest jeszcze pełny, a rabaty najgłębsze: rezerwujesz najlepsze łodzie i najbardziej oblegane tygodnie, zanim zdąży to zrobić ktokolwiek inny. Procenty na tej stronie to prawdziwe obniżki cen partnerów względem cennikowej ceny samego operatora za tę samą łódź i ten sam tydzień. Oferta trwa tylko kilka dni, a gdy Black Friday się kończy, te same jachty wracają do pełnych stawek — kto rezerwuje teraz, płaci najmniej w całym roku."
+    },
+    "christmas": {
+      "title": "PODARUJ REJS",
+      "subtitle": "Podaruj bliskim przyszłe lato — świąteczne rabaty do {pct}%",
+      "subtitleNoPct": "Podaruj bliskim przyszłe lato — zaplanujcie razem następny sezon",
+      "metaTitle": "Świąteczny czarter jachtów – podaruj rejs w prezencie",
+      "metaDescription": "Świąteczne oferty czarteru jachtów: podaruj bliskim rejs na przyszły sezon lub zaplanuj rodzinną ucieczkę. Realne rabaty partnerów i darmowe anulowanie.",
+      "seoTitle": "Rejs jako świąteczny prezent",
+      "seoText": "Nie ma prezentu, który cieszy dłużej niż wspólny tydzień na wodzie — święta to idealny moment, by zamiast kolejnego gadżetu podarować bliskim przyszłe lato. Gdy za oknem grudniowy chłód, kalendarz następnego sezonu stoi otworem: wybieracie razem łódź, marinę i tydzień, a na resztę roku zostaje wam coś, na co można czekać. Rabaty, które tu widzisz, to prawdziwe obniżki cen partnerów względem cennikowej ceny samego operatora za tę samą łódź i ten sam tydzień. Rezerwacja obejmuje okres darmowego anulowania, więc świąteczny prezent możecie spokojnie dopiąć wspólnie już po feriach."
+    },
+    "newYear": {
+      "title": "NOWY ROK, NOWY HORYZONT",
+      "subtitle": "Nowy rok, nowy horyzont — zacznij go od rejsu z rabatem do {pct}%",
+      "subtitleNoPct": "Nowy rok, nowy horyzont — zacznij go od rezerwacji przyszłego sezonu",
+      "metaTitle": "Noworoczny czarter jachtów – zaplanuj nowy sezon",
+      "metaDescription": "Nowy rok, nowy horyzont: rozpocznij go od rezerwacji czarteru na nadchodzący sezon. Realne rabaty partnerów, pełny wybór terminów i darmowe anulowanie.",
+      "seoTitle": "Zacznij rok od zaplanowania rejsu",
+      "seoText": "Najlepsze noworoczne postanowienia to te, które zapisujesz w kalendarzu — a niewiele rzeczy zaczyna rok lepiej niż pewność, że latem czeka na Ciebie łódź. Styczniowe kalendarze flot są jeszcze niemal puste, więc masz do wyboru pełen wachlarz jachtów, marin i tygodni w najlepszych terminach nadchodzącego sezonu. Procenty na tej stronie to realne obniżki cen partnerów względem cennikowej ceny samego operatora za tę samą łódź i ten sam tydzień. Rezerwacja obejmuje okres darmowego anulowania, więc zaczynasz rok z konkretnym planem, a nie tylko z postanowieniem — z horyzontem, do którego naprawdę płyniesz."
+    },
+    "flashDeals": {
+      "title": "FLASH DEALS",
+      "subtitle": "Wiosenny błysk okazji — tylko przez tydzień rabaty do {pct}%",
+      "subtitleNoPct": "Wiosenny błysk okazji — zgarnij nadchodzący sezon, zanim znikną",
+      "metaTitle": "Flash Deals na czarter jachtów – wiosenne okazje",
+      "metaDescription": "Flash Deals: krótka wiosenna seria okazji na czarter jachtów w nadchodzącym sezonie. Realne rabaty partnerów, ważne tylko przez kilka dni.",
+      "seoTitle": "Czym są nasze wiosenne Flash Deals",
+      "seoText": "Wiosną, gdy sezon jest już blisko, operatorzy czarterów wypuszczają krótkie serie mocnych okazji, by domknąć wolne tygodnie — i właśnie te wyłapujemy dla Ciebie w naszych Flash Deals. To błyskawiczna akcja: ceny schodzą niżej, ale trwają tylko kilka dni, a najlepsze łodzie znikają pierwsze. Procenty na tej stronie to prawdziwe obniżki cen partnerów względem cennikowej ceny samego operatora za tę samą łódź i ten sam tydzień. Jeśli planujesz rejs w nadchodzącym sezonie, to jeden z najkrótszych i najbardziej opłacalnych momentów, by go zaklepać — gdy błysk gaśnie, ceny wracają do normy."
+    },
+    "hotWeek": {
+      "title": "GORĄCY TYDZIEŃ",
+      "subtitle": "Najgorętszy tydzień okazji — wypłyń tego lata z rabatem do {pct}%",
+      "subtitleNoPct": "Najgorętszy tydzień okazji — złap wolny termin na to lato",
+      "metaTitle": "Gorący tydzień czarteru jachtów – najlepsze letnie okazje",
+      "metaDescription": "Najgorętszy tydzień okazji w sezonie: wolne terminy na najbliższe tygodnie tego lata w realnie obniżonych cenach. Dostępność od ręki, aktualizowana codziennie.",
+      "seoTitle": "Dlaczego to najgorętszy tydzień sezonu",
+      "seoText": "W środku lata co kilka dni zwalnia się termin, którego ktoś nie dopiął — a operatorzy nie chcą, by łódź stała pusta w szczycie sezonu, więc tną cenę od ręki. To właśnie te wolne tygodnie, oddalone raptem o kilka dni, zbieramy w naszym najgorętszym tygodniu okazji. Procenty na tej stronie to prawdziwe obniżki cen partnerów względem cennikowej ceny samego operatora za tę samą łódź i ten sam tydzień. Dostępność zmienia się z godziny na godzinę i dotyczy najbliższych terminów, więc jeśli łódź i cena Ci pasują, rezerwuj bez zwłoki — w lipcu takie okazje nie czekają."
+    },
+    "birthdayWeek": {
+      "title": "TYDZIEŃ URODZIN",
+      "subtitle": "Świętujemy z Wami od 2013 roku — urodzinowe rabaty do {pct}%",
+      "subtitleNoPct": "Świętujemy z Wami od 2013 roku — urodzinowe okazje na nadchodzące tygodnie",
+      "metaTitle": "Tydzień urodzin boat4you – rabaty z podziękowaniem",
+      "metaDescription": "Świętujemy urodziny boat4you — pośredniczymy w czarterach od 2013 roku. Urodzinowe rabaty w podziękowaniu klientom na najbliższe tygodnie sezonu.",
+      "seoTitle": "Świętujemy urodziny — dziękujemy, że jesteście z nami",
+      "seoText": "Pośredniczymy w czarterach jachtów od 2013 roku, a nasze urodziny to okazja, by podziękować tym, dzięki którym co roku wypływamy dalej — naszym klientom. Przez cały tydzień świętujemy urodzinowymi ofertami na najbliższe tygodnie sezonu: te same łodzie, te same mariny, tylko w wyjątkowych, urodzinowych cenach. Procenty na tej stronie to prawdziwe obniżki cen partnerów względem cennikowej ceny samego operatora za tę samą łódź i ten sam tydzień. To nasz sposób, by powiedzieć „dziękujemy” — a najlepszym prezentem, jaki możemy sobie sprawić, jest kolejny Wasz udany rejs. Wypłyńmy razem w następny rok."
+    },
+    "juneSails": {
+      "title": "CZERWIEC POD ŻAGLAMI",
+      "subtitle": "Ciepłe morze, spokojne zatoki, jeszcze bez tłumów — żegluj w czerwcu z rabatem do {pct}%",
+      "subtitleNoPct": "Ciepłe morze, spokojne zatoki, jeszcze bez tłumów — czerwcowy rejs to wybór wtajemniczonych",
+      "metaTitle": "Czerwcowy czarter jachtów – oferty i rabaty",
+      "metaDescription": "Czerwcowe tygodnie czarterowe z realnymi rabatami: nagrzane morze, łagodny wiatr i puste zatoki przed szczytem sezonu. Porównaj obniżki partnerów.",
+      "seoTitle": "Dlaczego czerwiec to wybór wtajemniczonych",
+      "seoText": "Czerwiec ma w sobie to, czego szukają najbardziej doświadczeni żeglarze — morze zdążyło się już nagrzać, dni są najdłuższe w roku, a zatoki i mariny wciąż stoją niemal puste, bo szczyt sezonu dopiero nadchodzi. Wiatry są łagodne i przewidywalne, a operatorzy chętnie obniżają ceny wczesnoletnich tygodni, zanim ruszy pełny sezon. Procenty na tej stronie to prawdziwe obniżki cen partnerów względem cennikowej ceny samego operatora za tę samą łódź i ten sam tydzień. Kto pływał w czerwcu, wie: to samo ciepło i cisza, co w środku lata, tylko dla Ciebie i bez tłoku na kotwicowiskach."
+    },
+    "julySails": {
+      "title": "LIPIEC POD ŻAGLAMI",
+      "subtitle": "Długie dni, ciepłe noce, klasyka wysokiego sezonu — żegluj w lipcu z rabatem do {pct}%",
+      "subtitleNoPct": "Długie dni, ciepłe noce, klasyka wysokiego sezonu — złap lipcowy tydzień",
+      "metaTitle": "Lipcowy czarter jachtów – oferty i rabaty",
+      "metaDescription": "Lipcowe tygodnie czarterowe: długie słoneczne dni, ciepłe wieczory i tętniące życiem mariny w szczycie sezonu. Porównaj realne rabaty partnerów.",
+      "seoTitle": "Lipiec — serce wakacyjnego sezonu",
+      "seoText": "Lipiec to serce żeglarskiego lata — słońce od świtu do późnego wieczora, ciepła woda, nocne kąpiele i mariny tętniące życiem aż do rana. To klasyczny tydzień wysokiego sezonu, ten, o którym myślisz, gdy wyobrażasz sobie idealne wakacje na wodzie. Nawet w szczycie zdarzają się wolne terminy, które operatorzy wystawiają w obniżonych cenach — i to je tu dla Ciebie zbieramy. Procenty na tej stronie to prawdziwe obniżki cen partnerów względem cennikowej ceny samego operatora za tę samą łódź i ten sam tydzień. Lipcowe tygodnie schodzą najszybciej w całym roku, więc gdy trafisz na swój, nie zwlekaj z rezerwacją."
     }
   },
   "landing": {

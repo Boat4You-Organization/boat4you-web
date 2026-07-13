@@ -29,6 +29,78 @@
       "metaDescription": "Réservez tôt votre location de bateau pour la saison prochaine : le plus grand choix de bateaux et de dates, avec de vraies remises early booking et annulation gratuite.",
       "seoTitle": "Pourquoi réserver tôt est un bon calcul",
       "seoText": "Les flottes de charter ouvrent leurs calendriers de la saison suivante à l'automne, et les opérateurs récompensent les réservations anticipées avec leurs meilleurs pourcentages — c'est le moment où le choix de bateaux, de marinas et de semaines de vacances scolaires est encore complet. Réserver tôt n'a rien d'un pari : votre réservation inclut une période d'annulation gratuite, et la réduction affichée compare le prix actuel au tarif catalogue de l'opérateur lui-même pour ce bateau et cette semaine. Au printemps, quand les semaines les plus demandées sont parties, les mêmes bateaux se vendent plein tarif."
+    },
+    "blackFriday": {
+      "title": "BLACK FRIDAY",
+      "subtitle": "Le plus gros rabais de l'année sur la saison prochaine — une semaine seulement, jusqu'à {pct}% de réduction",
+      "subtitleNoPct": "Le plus gros rabais de l'année sur la saison prochaine — une semaine seulement, au tarif le plus bas",
+      "metaTitle": "Black Friday Location de Bateaux — Offres",
+      "metaDescription": "Black Friday : les plus fortes remises de l'année pour réserver votre bateau de la saison prochaine. Vraies remises opérateurs, annulation gratuite — une semaine seulement.",
+      "seoTitle": "Pourquoi le Black Friday est le meilleur moment pour réserver",
+      "seoText": "Une fois par an, les opérateurs de charter ouvrent grand leurs calendriers de la saison prochaine et consentent leurs pourcentages les plus élevés de l'année — le temps d'une seule semaine. C'est le moment où le choix est encore complet, de la Méditerranée aux Caraïbes et pour tous les types de bateaux : voiliers, catamarans, yachts à moteur. Chaque réduction affichée compare le prix du jour au tarif catalogue de l'opérateur lui-même, pour le même bateau et la même semaine — jamais à une référence gonflée. Votre réservation inclut une période d'annulation gratuite, et une fois la semaine passée, ces tarifs disparaissent jusqu'à l'an prochain."
+    },
+    "christmas": {
+      "title": "NOËL",
+      "subtitle": "Offrez une saison en mer ou planifiez votre évasion — la saison prochaine jusqu'à {pct}% de réduction",
+      "subtitleNoPct": "Offrez une saison en mer ou planifiez votre évasion pour la saison prochaine",
+      "metaTitle": "Offres de Noël — Location de Bateaux",
+      "metaDescription": "Offrez une location de bateau ou réservez votre évasion de la saison prochaine à prix réduit. Vraies remises partenaires et annulation gratuite pour les fêtes.",
+      "seoTitle": "Un cadeau qui prend le large",
+      "seoText": "Noël, c'est le moment de penser à ceux qu'on aime — et rien ne fait autant rêver qu'une semaine en mer. Vous pouvez offrir une location de bateau ou simplement planifier en famille votre évasion de la saison prochaine, pendant que les calendriers viennent d'ouvrir et que le choix reste complet, de la Méditerranée aux Caraïbes. Chaque réduction affichée est une véritable baisse de prix consentie par nos partenaires, calculée sur le tarif catalogue de l'opérateur lui-même pour le même bateau et la même semaine. Annulation gratuite comprise : un cadeau sans mauvaise surprise, à glisser sous le sapin."
+    },
+    "newYear": {
+      "title": "NOUVEL AN",
+      "subtitle": "Nouvelle année, nouvel horizon — bloquez votre bateau de la saison prochaine avec jusqu'à {pct}% de réduction",
+      "subtitleNoPct": "Nouvelle année, nouvel horizon — bloquez votre bateau de la saison prochaine",
+      "metaTitle": "Nouvel An — Offres Location de Bateaux",
+      "metaDescription": "Commencez l'année en bloquant votre bateau de la saison prochaine : le plus grand choix de dates, de vraies remises early booking et annulation gratuite.",
+      "seoTitle": "Nouvelle année, nouvel horizon",
+      "seoText": "Nouvelle année, nouvel horizon : quoi de mieux pour bien commencer que de bloquer dès maintenant votre semaine en mer ? Les flottes de charter ont ouvert leurs calendriers, et janvier est le moment où le choix de bateaux, de marinas et de dates de vacances est encore au complet, de la Méditerranée aux Caraïbes. Les pourcentages affichés ici sont de véritables remises partenaires, comparées au tarif catalogue de l'opérateur lui-même pour le même bateau et la même semaine — jamais à une référence gonflée. Avec l'annulation gratuite, réserver tôt vous engage sans vous enfermer. Faites de cette année celle du grand large."
+    },
+    "flashDeals": {
+      "title": "VENTES FLASH",
+      "subtitle": "Le temps d'une semaine seulement — réservez la saison qui vient avec jusqu'à {pct}% de réduction",
+      "subtitleNoPct": "Le temps d'une semaine seulement — réservez la saison qui vient avant que tout ferme",
+      "metaTitle": "Ventes Flash — Location de Bateaux",
+      "metaDescription": "Ventes flash de printemps : quelques jours seulement pour réserver la saison qui vient à prix réduit. Vraies remises partenaires, annulation gratuite.",
+      "seoTitle": "Des offres flash, le temps d'une semaine",
+      "seoText": "Le temps de quelques jours seulement, une poignée de semaines passe à prix cassés — juste avant que la saison ne démarre pour de bon. C'est une occasion courte et volontairement limitée de réserver le bateau qui vous plaît pour l'été qui vient, de la Méditerranée aux Caraïbes et pour tous les types de bateaux. Comme toujours chez nous, chaque réduction affichée compare le prix du jour au tarif catalogue de l'opérateur lui-même, pour le même bateau et la même semaine. Ces prix flash ne durent pas : quand la semaine se termine, les bateaux repartent au tarif normal. Annulation gratuite comprise."
+    },
+    "hotWeek": {
+      "title": "HOT WEEK",
+      "subtitle": "La semaine la plus chaude de l'année — des semaines libres à quelques jours du départ, jusqu'à {pct}% de réduction",
+      "subtitleNoPct": "La semaine la plus chaude de l'année — des semaines libres à quelques jours du départ",
+      "metaTitle": "Hot Week — Offres Location de Bateaux",
+      "metaDescription": "La semaine la plus chaude de l'année : réductions sur des semaines libres à quelques jours du départ, en plein été. Vraies remises opérateurs, mise à jour quotidienne.",
+      "seoTitle": "La semaine la plus chaude de nos offres",
+      "seoText": "C'est la semaine la plus chaude de notre calendrier d'offres : une rafale de réductions sur des semaines libres à quelques jours seulement du départ, en plein cœur de l'été. Quand un bateau se libère à la dernière minute, l'opérateur baisse son prix pour le remplir — et cette baisse, vous la retrouvez ici, comparée au tarif catalogue du même bateau pour la même semaine. De la Méditerranée aux Caraïbes, tous les types de bateaux sont concernés. Ces disponibilités changent d'heure en heure : si le bateau et le prix vous conviennent, réservez sans attendre, ils partent vite."
+    },
+    "birthdayWeek": {
+      "title": "ANNIVERSAIRE",
+      "subtitle": "Nous fêtons nos années de courtage — merci à vous, avec jusqu'à {pct}% de réduction sur les semaines à venir",
+      "subtitleNoPct": "Nous fêtons nos années de courtage — merci à vous, sur les semaines à venir",
+      "metaTitle": "Semaine Anniversaire — Offres Location de Bateaux",
+      "metaDescription": "Nous fêtons nos années de courtage depuis 2013 : offres anniversaire sur les semaines à venir. Vraies remises partenaires et annulation gratuite.",
+      "seoTitle": "Notre anniversaire, vos offres",
+      "seoText": "Nous courtons des locations de bateaux depuis 2013, et chaque année, la semaine de notre anniversaire, nous disons merci à ceux qui nous font confiance de la seule façon qui a du sens en mer : par de vraies offres. Pendant quelques jours, nos partenaires baissent leurs prix sur les semaines à venir, de la Méditerranée aux Caraïbes et pour tous les types de bateaux. Comme toujours, chaque pourcentage affiché compare le prix du jour au tarif catalogue de l'opérateur lui-même, pour le même bateau et la même semaine. Annulation gratuite comprise — c'est notre anniversaire, mais c'est vous qu'on gâte."
+    },
+    "juneSails": {
+      "title": "CAP SUR JUIN",
+      "subtitle": "Mer déjà chaude, criques encore désertes — naviguez en juin avec jusqu'à {pct}% de réduction",
+      "subtitleNoPct": "Mer déjà chaude, criques encore désertes — juin est le choix des connaisseurs",
+      "metaTitle": "Location de Bateaux en Juin — Offres",
+      "metaDescription": "Semaines de juin à prix réduit : mer déjà chaude, criques paisibles et vents doux avant la haute saison. Comparez de vraies remises partenaires.",
+      "seoTitle": "Pourquoi juin est le moment des connaisseurs",
+      "seoText": "Juin est le secret le mieux gardé de l'été : la mer s'est déjà réchauffée, les journées sont longues, et les vents restent doux et réguliers — sans la foule ni les tarifs de la haute saison. Les marinas ont encore de la place, les criques sont paisibles, et les opérateurs baissent volontiers leurs prix sur les dernières semaines de juin. De la Méditerranée aux Caraïbes, les pourcentages affichés ici sont de véritables remises partenaires, calculées sur le tarif catalogue de l'opérateur lui-même pour le même bateau et la même semaine. Naviguer avant la ruée, c'est le choix des connaisseurs."
+    },
+    "julySails": {
+      "title": "CAP SUR JUILLET",
+      "subtitle": "Longues journées, nuits douces — vivez le plein été en juillet avec jusqu'à {pct}% de réduction",
+      "subtitleNoPct": "Longues journées, nuits douces — vivez le plein été en juillet",
+      "metaTitle": "Location de Bateaux en Juillet — Offres",
+      "metaDescription": "Semaines de juillet à prix réduit : longues journées, nuits douces et le plein été en mer. Comparez de vraies remises partenaires, annulation gratuite.",
+      "seoTitle": "Juillet, le plein été en mer",
+      "seoText": "Juillet, c'est l'été dans toute sa splendeur : de longues journées ensoleillées, des nuits douces, une mer chaude et cette énergie de plein cœur de saison qu'on ne retrouve nulle part ailleurs. C'est la semaine classique des vacances, celle qu'on garde longtemps en mémoire. Les meilleures semaines de juillet partent vite, alors dès qu'un bateau se libère à bon prix, mieux vaut le saisir. De la Méditerranée aux Caraïbes, chaque réduction affichée compare le prix du jour au tarif catalogue de l'opérateur lui-même, pour le même bateau et la même semaine — de vraies économies, annulation gratuite comprise."
     }
   },
   "landing": {
