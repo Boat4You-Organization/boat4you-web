@@ -73,7 +73,7 @@ const footerMenu: NavigationLink[] = [
         target: '_blank',
       },
       {
-        displayName: 'Croatia Yachting',
+        displayName: 'Yacht Charter Croatia',
         href: 'https://www.croatia-yachting.com',
         target: '_blank',
       },
