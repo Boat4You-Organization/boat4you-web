@@ -25,7 +25,7 @@ const FooterBottomBar = () => {
         </Typography>
         {/* Storyset free-licence attribution — REQUIRED while the promo-banner
             character illustration is live (storyset.com licence terms). */}
-        <Typography variant="caption" component="p" sx={{ mt: 0.5, opacity: 0.6 }}>
+        <Typography variant="caption" component="p" sx={{ mt: 0.5, opacity: 0.45, fontSize: '0.62rem' }}>
           <a href="https://storyset.com" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit' }}>
             Illustrations by Storyset
           </a>
