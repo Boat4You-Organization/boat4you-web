@@ -294,7 +294,14 @@ const PRODUCT_SCHEMA_LIMIT = 10;
 function buildSearchProductsLd(yachts: YachtModelShortInfo[] | undefined, baseUrl: string, currency: string) {
   if (!yachts?.length) return null;
 
-  const items = yachts.slice(0, PRODUCT_SCHEMA_LIMIT).map((y, idx) => {
+  // Google requires `offers` (or reviews) on every merchant-listing Product,
+  // and a 0 € price is sync noise, not a bookable offer — keep only yachts
+  // with a real price in the ItemList, mirroring the boat-detail schema.
+  const priced = yachts.filter(y => y.clientPriceEur != null && y.clientPriceEur > 0);
+
+  if (!priced.length) return null;
+
+  const items = priced.slice(0, PRODUCT_SCHEMA_LIMIT).map((y, idx) => {
     const yachtUrl = `${baseUrl}/boat/${y.slug}`;
     const fullName = [y.modelName, y.name].filter(Boolean).join(' ').trim() || y.name || 'Yacht';
     const brandFirstWord = (y.modelName || '').trim().split(/\s+/)[0] || null;
@@ -303,30 +310,52 @@ function buildSearchProductsLd(yachts: YachtModelShortInfo[] | undefined, baseUr
     // OG image when the yacht has no photo (a valid fallback beats no image),
     // mirroring the boat-detail Product schema.
     const imageUrl = y.mainImageId ? getBoatImageUrl(y.mainImageId, 1200) : `${baseUrl}/meta/og-image.png`;
+    const specs: string[] = [];
+
+    if (y.cabins) specs.push(`${y.cabins} cabin${y.cabins === 1 ? '' : 's'}`);
+
+    if (y.maxPersons) specs.push(`up to ${y.maxPersons} guests`);
+
+    const country = y.location?.countryCode;
     const product: Record<string, unknown> = {
       '@type': 'Product',
       '@id': yachtUrl,
       name: fullName,
       image: imageUrl,
       url: yachtUrl,
+      description:
+        `Charter the ${fullName}${y.buildYear ? ` (${y.buildYear})` : ''}` +
+        `${y.location?.name ? ` from ${y.location.name}` : ''}.` +
+        `${specs.length ? ` ${specs.join(', ')}.` : ''} Check availability and book directly on boat4you.com.`,
     };
 
     if (brandFirstWord) product.brand = { '@type': 'Brand', name: brandFirstWord };
 
-    if (y.clientPriceEur != null) {
-      product.offers = {
-        '@type': 'Offer',
-        url: yachtUrl,
-        // Per-day price the search card shows. Round to integer so the
-        // SERP doesn't render trailing decimals where they aren't useful.
-        price: String(Math.round(y.clientPriceEur)),
-        priceCurrency: (currency || 'EUR').toUpperCase(),
-        availability:
-          y.offerStatus === 'FREE' || y.offerStatus === 'OPTION_EXPIRED'
-            ? 'https://schema.org/InStock'
-            : 'https://schema.org/PreOrder',
-      };
-    }
+    product.offers = {
+      '@type': 'Offer',
+      url: yachtUrl,
+      // Per-day price the search card shows. Round to integer so the
+      // SERP doesn't render trailing decimals where they aren't useful.
+      price: String(Math.round(y.clientPriceEur)),
+      priceCurrency: (currency || 'EUR').toUpperCase(),
+      availability:
+        y.offerStatus === 'FREE' || y.offerStatus === 'OPTION_EXPIRED'
+          ? 'https://schema.org/InStock'
+          : 'https://schema.org/PreOrder',
+      // A charter isn't a shipped/returnable good, but Google's merchant
+      // listing asks for both fields — declare them accurately (nothing
+      // ships, no product returns), same as the boat-detail schema.
+      shippingDetails: {
+        '@type': 'OfferShippingDetails',
+        shippingRate: { '@type': 'MonetaryAmount', value: 0, currency: 'EUR' },
+        ...(country ? { shippingDestination: { '@type': 'DefinedRegion', addressCountry: country } } : {}),
+      },
+      hasMerchantReturnPolicy: {
+        '@type': 'MerchantReturnPolicy',
+        returnPolicyCategory: 'https://schema.org/MerchantReturnNotPermitted',
+        ...(country ? { applicableCountry: country } : {}),
+      },
+    };
 
     return {
       '@type': 'ListItem',
