@@ -15,10 +15,11 @@ interface DestinationCardProps extends CountryCountModel {
   priority?: boolean;
 }
 
-// Plain HTML + CSS (no MUI), zero client JS. Jun-2026: restyled to match the
-// fleet (OurFleet) card — landscape image on top, name + yacht count below in
-// dark text — so the destinations grid reads identically to the vessel-type
-// grid (Mario: "isti dizajn kao plovila"). Was an overlay-text card.
+// Plain HTML + CSS (no MUI), zero client JS. Jul-2026: back to an overlay
+// card (Mario: image as tall as the promo tile, name + yacht count INSIDE
+// the photo) — the taller image fills the whole grid cell, so the promo
+// tile in the same row no longer towers over the destinations. A bottom
+// scrim keeps the white text readable on any photo.
 const DestinationCard = ({ id, name, countryCode, yachtCount, priority = false }: DestinationCardProps) => {
   const t = useTranslations('home');
   const image = getImageByCountryCode(countryCode);
@@ -29,18 +30,17 @@ const DestinationCard = ({ id, name, countryCode, yachtCount, priority = false }
 
   return (
     <Link href={`/search?destinations=${name}&did=${id}`} className={styles.card}>
-      <div className={styles.imageWrapper}>
-        <Image
-          src={image.src}
-          alt={alt}
-          fill
-          sizes="(max-width: 600px) 50vw, 305px"
-          className={styles.image}
-          priority={priority}
-          fetchPriority={priority ? 'high' : undefined}
-          quality={65}
-        />
-      </div>
+      <Image
+        src={image.src}
+        alt={alt}
+        fill
+        sizes="(max-width: 600px) 50vw, 305px"
+        className={styles.image}
+        priority={priority}
+        fetchPriority={priority ? 'high' : undefined}
+        quality={65}
+      />
+      <div className={styles.scrim} />
       <div className={styles.content}>
         <h3 className={styles.title}>{localizedName}</h3>
         <p className={styles.count}>

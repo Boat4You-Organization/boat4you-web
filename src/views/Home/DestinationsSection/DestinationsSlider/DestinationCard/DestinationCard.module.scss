@@ -2,40 +2,57 @@
 @use '@/styles/utils/rem-calc' as *;
 @use '@/styles/mixins/breakpoints' as *;
 
-// Mirrors OurFleetCard: landscape image on top, name + count below in dark text
-// (Mario: destinations should look like the vessel-type cards).
+// Overlay card (Jul-2026, Mario): the photo fills the whole cell — taller
+// than the old landscape-image-plus-caption card — and the name + count sit
+// inside it over a bottom scrim. Because the promo tile stretches to its
+// grid row, card height == promo tile height by construction.
 .card {
+  position: relative;
   display: block;
+  aspect-ratio: 305 / 280;
+  border-radius: rem-calc(12);
+  overflow: hidden;
   text-decoration: none;
 
-  .imageWrapper {
-    position: relative;
-    aspect-ratio: 305 / 227;
-    border-radius: rem-calc(12);
-    overflow: hidden;
-
-    .image {
-      object-fit: cover;
-      transition: transform $animation-duration-normal ease;
-    }
+  .image {
+    object-fit: cover;
+    transition: transform $animation-duration-normal ease;
   }
 
-  &:hover .imageWrapper .image {
+  &:hover .image {
     transform: scale(1.1);
   }
 
-  .content {
-    padding-top: rem-calc(18);
+  // Bottom gradient so the white text stays readable on bright photos
+  // (sand, sky). Deep navy tint matches the brand palette.
+  .scrim {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgb(10 14 46 / 78%) 0%, rgb(10 14 46 / 34%) 34%, transparent 62%);
+    pointer-events: none;
   }
 
-  // Was overlaid white text; now matches OurFleetCard title (h2 28px / 18px
-  // mobile, italic 800, blue950).
+  .content {
+    position: absolute;
+    inset-inline: rem-calc(18);
+    bottom: rem-calc(14);
+
+    @include media(0, 'md') {
+      inset-inline: rem-calc(12);
+      bottom: rem-calc(10);
+    }
+  }
+
+  // Same type treatment as before (italic 800), flipped to white for the
+  // overlay. Scrim carries the contrast; shadow is a safety net on the
+  // brightest photos.
   .title {
     margin: 0;
     font-size: rem-calc(28);
     font-weight: 800;
     font-style: italic;
-    color: #141857;
+    color: #fff;
+    text-shadow: 0 1px 8px rgb(10 14 46 / 45%);
 
     @include media(0, 'md') {
       font-size: rem-calc(18);
@@ -46,6 +63,6 @@
     margin: rem-calc(2 0 0);
     font-size: rem-calc(14);
     font-weight: 500;
-    color: #6a6a6a;
+    color: rgb(255 255 255 / 88%);
   }
 }
