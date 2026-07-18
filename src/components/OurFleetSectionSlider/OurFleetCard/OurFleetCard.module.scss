@@ -1,29 +1,62 @@
 @use '@/styles/settings/variables' as *;
 @use '@/styles/utils/rem-calc' as *;
+@use '@/styles/mixins/breakpoints' as *;
 
-.root {
-  &.container {
-    overflow: hidden;
-    cursor: pointer;
+// Overlay card (Jul-2026, Mario): mirrors DestinationCard — photo fills the
+// tile, name + count inside the image over a bottom scrim.
+.card {
+  position: relative;
+  display: block;
+  aspect-ratio: 305 / 280;
+  border-radius: rem-calc(12);
+  overflow: hidden;
+  text-decoration: none;
 
-    .imageWrapper {
-      position: relative;
-      aspect-ratio: 305 / 227;
-      border-radius: rem-calc(12);
-      overflow: hidden;
+  .image {
+    object-fit: cover;
+    transition: transform $animation-duration-normal ease;
+  }
 
-      .image {
-        object-fit: cover;
-        transition: transform $animation-duration-normal ease;
-      }
+  &:hover .image {
+    transform: scale(1.1);
+  }
+
+  // Bottom gradient so the white text stays readable on bright photos.
+  .scrim {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgb(10 14 46 / 78%) 0%, rgb(10 14 46 / 34%) 34%, transparent 62%);
+    pointer-events: none;
+  }
+
+  .content {
+    position: absolute;
+    inset-inline: rem-calc(18);
+    bottom: rem-calc(14);
+
+    @include media(0, 'md') {
+      inset-inline: rem-calc(12);
+      bottom: rem-calc(10);
     }
+  }
 
-    &:hover .imageWrapper .image {
-      transform: scale(1.1);
-    }
+  .title {
+    margin: 0;
+    font-size: rem-calc(28);
+    font-weight: 800;
+    font-style: italic;
+    color: #fff;
+    text-shadow: 0 1px 8px rgb(10 14 46 / 45%);
 
-    .content {
-      padding: rem-calc(18 0 0 0);
+    @include media(0, 'md') {
+      font-size: rem-calc(18);
     }
+  }
+
+  .count {
+    margin: rem-calc(2 0 0);
+    font-size: rem-calc(14);
+    font-weight: 500;
+    color: rgb(255 255 255 / 88%);
   }
 }

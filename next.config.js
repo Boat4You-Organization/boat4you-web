@@ -22,6 +22,11 @@ const withNextIntl = createNextIntlPlugin({
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  // Home SSG (9 locales, live API fetches) needs >60s per page when the
+  // build machine is under load from parallel builds — the default 60s
+  // limit killed three builds on 17.7.2026 alone. The pages themselves
+  // build in seconds on an idle machine.
+  staticPageGenerationTimeout: 180,
   async rewrites() {
     return [
       // Same-origin proxy for yacht photos used by the client-side yacht
