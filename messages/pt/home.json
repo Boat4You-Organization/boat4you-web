@@ -182,5 +182,32 @@
     ],
     "preTitle": "Perguntas ",
     "emphasizedTitle": "frequentes"
+  },
+  "seoSection": {
+    "preTitle": "Aluguer de iates,",
+    "emphasizedTitle": "sem complicações",
+    "intro": "Um aluguer de iate transforma as férias numa verdadeira viagem: o seu próprio barco, a sua própria rota e um novo ancoradouro sempre que lhe apetecer. A boat4you reúne milhares de iates de charter em mais de 40 países numa única pesquisa — com disponibilidade em tempo real e preços finais, para que o que vê seja exatamente o que paga. Compare veleiros, catamarãs, iates a motor e gulets lado a lado, veja fotografias reais e listas de equipamento e reserve a semana que quiser sem trocas intermináveis de e-mails.",
+    "blocks": [
+      {
+        "heading": "Bareboat, com skipper ou com tripulação completa",
+        "body": "Cabe-lhe a si decidir quanto da navegação quer assumir. Alugue um barco em regime bareboat e assuma o comando, se tiver uma licença reconhecida como o ICC ou o RYA Day Skipper. Prefere descontrair? Adicione um skipper profissional a qualquer iate no momento da reserva — ele conhece os ventos locais, os fundeadouros e as tascas que nenhum guia turístico menciona. E para umas férias de pura villa flutuante, escolha um iate com tripulação completa, em que o skipper e a hospedeira tratam de tudo, da cozinha ao planeamento da rota."
+      },
+      {
+        "heading": "Veleiro, catamarã ou iate a motor",
+        "body": "Os veleiros monocasco oferecem a sensação mais pura do vento e a melhor relação qualidade-preço por cama. Os catamarãs tornaram-se os preferidos das famílias: não adornam, têm dois cascos de cabines privadas e um salão onde cabe toda a tripulação. Os iates a motor trocam as velas pela velocidade e percorrem o dobro das milhas num dia, enquanto os tradicionais gulets aliam uma tripulação profissional ao romantismo dos conveses de madeira. Cada anúncio na boat4you mostra as cabines, as camas, o ano de construção e os extras obrigatórios antes de confirmar a reserva."
+      },
+      {
+        "heading": "Onde e quando zarpar",
+        "body": "A época do Mediterrâneo vai de abril a outubro: julho e agosto trazem sol garantido e os portos mais animados, enquanto maio, junho e setembro oferecem águas quentes, ventos mais estáveis e preços visivelmente mais baixos. De novembro a abril, a frota ruma a águas de inverno — as Caraíbas, as Bahamas e as Seychelles navegam no seu melhor enquanto a Europa espera pela primavera. A maioria dos charters decorre de sábado a sábado, a partir de marinas com boas ligações, o que facilita o planeamento de voos e transferes."
+      }
+    ],
+    "closing": "Pronto para começar? Escolha um destino acima, compare preços reais para as suas datas e garanta o seu iate online em minutos — com pagamento seguro e uma equipa de apoio que responde mesmo.",
+    "linksLabel": "Pesquisas populares de aluguer de iates",
+    "links": {
+      "sailing": "Aluguer de veleiros",
+      "catamaran": "Aluguer de catamarãs",
+      "motor": "Aluguer de iates a motor",
+      "motorsailer": "Aluguer de gulets e motoveleiros"
+    }
   }
 }

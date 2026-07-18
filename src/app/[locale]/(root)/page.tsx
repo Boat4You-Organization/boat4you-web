@@ -20,6 +20,7 @@ import FAQSection from '@/views/Home/FAQSection';
 // `dynamic()` wrapper waited for client JS before rendering, costing
 // 800-1200ms LCP on slow connections (Google flags any home with LCP > 2.5s).
 import HeroSection from '@/views/Home/HeroSection';
+import SeoTextSection from '@/views/Home/SeoTextSection';
 
 // ISR — every 60s the next request rebuilds the home in the background and
 // stale visitors get the previous build until then. Combined with the root
@@ -103,6 +104,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: L
       <FAQSection />
       <BlogSection posts={blogs.nodes} />
       <AllDestinationsSection countries={countriesCount} />
+      <SeoTextSection />
     </Layout>
   );
 }

@@ -1,0 +1,82 @@
+@use '@/styles/utils/rem-calc' as *;
+@use '@/styles/mixins/breakpoints' as *;
+
+// Same container rhythm as FAQSection / AllDestinationsSection so the
+// closing text block reads as part of the page, not an appendix.
+.container {
+  width: 100%;
+  max-width: rem-calc(1280);
+  margin-inline: auto;
+  box-sizing: border-box;
+  padding-inline: rem-calc(16);
+  padding-block: rem-calc(42 72);
+
+  @include media('md') {
+    padding-inline: rem-calc(24);
+  }
+}
+
+.title {
+  margin: 0;
+  font-size: rem-calc(36);
+  font-weight: 500;
+  color: #141857;
+}
+
+.titleEmphasis {
+  padding-left: 0.1em;
+  font-style: italic;
+  font-weight: 800;
+  color: #2856ff;
+  overflow-wrap: break-word;
+}
+
+.heading {
+  margin: rem-calc(28 0 0);
+  font-size: rem-calc(20);
+  font-weight: 600;
+  color: #141857;
+}
+
+.paragraph {
+  margin: rem-calc(12 0 0);
+  max-width: rem-calc(880);
+  font-size: rem-calc(15);
+  line-height: 1.65;
+  color: #4a4a4a;
+}
+
+.linksLabel {
+  margin: rem-calc(32 0 0);
+  font-size: rem-calc(14);
+  font-weight: 600;
+  color: #141857;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: rem-calc(10);
+  margin: rem-calc(12 0 0);
+  padding: 0;
+  list-style: none;
+}
+
+.link {
+  display: inline-block;
+  padding: rem-calc(8 16);
+  border: 1px solid #d9def2;
+  border-radius: rem-calc(999);
+  font-size: rem-calc(14);
+  font-weight: 500;
+  color: #2856ff;
+  text-decoration: none;
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease;
+
+  &:hover {
+    background-color: #f2f5ff;
+    border-color: #2856ff;
+  }
+}

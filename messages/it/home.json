@@ -182,5 +182,32 @@
     ],
     "preTitle": "Domande ",
     "emphasizedTitle": "frequenti"
+  },
+  "seoSection": {
+    "preTitle": "Noleggio yacht,",
+    "emphasizedTitle": "senza complicazioni",
+    "intro": "Un noleggio yacht trasforma la vacanza in un viaggio: la tua barca, la tua rotta e un ancoraggio nuovo ogni volta che ne hai voglia. boat4you riunisce migliaia di yacht in charter in oltre 40 Paesi in un'unica ricerca — con disponibilità in tempo reale e prezzi finali, così quello che vedi è quello che paghi davvero. Confronta fianco a fianco barche a vela, catamarani, yacht a motore e caicchi, guarda foto reali e liste dell'equipaggiamento e prenota la settimana che vuoi senza infiniti scambi di email.",
+    "blocks": [
+      {
+        "heading": "Bareboat, con skipper o con equipaggio completo",
+        "body": "Quanto navigare in prima persona lo decidi tu. Noleggia una barca bareboat e conducila da solo se possiedi una patente riconosciuta come l'ICC o la RYA Day Skipper. Preferisci rilassarti? Aggiungi uno skipper professionista a qualsiasi yacht al momento della prenotazione: conosce i venti locali, gli ormeggi e le trattorie che nessuna guida menziona. E per una vacanza da vera villa galleggiante, scegli uno yacht con equipaggio, dove skipper e hostess si occupano di tutto, dalla cucina alla pianificazione della rotta."
+      },
+      {
+        "heading": "Barca a vela, catamarano o yacht a motore",
+        "body": "I monoscafi a vela regalano la sensazione più autentica del vento e il miglior rapporto qualità-prezzo per posto letto. I catamarani sono ormai i preferiti delle famiglie: niente sbandamento, due scafi di cabine private e un quadrato dove tutto l'equipaggio trova posto. Gli yacht a motore scambiano le vele con la velocità e coprono il doppio delle miglia in un giorno, mentre i tradizionali caicchi uniscono un equipaggio professionale al fascino dei ponti in legno. Ogni annuncio su boat4you mostra cabine, posti letto, anno di costruzione ed extra obbligatori prima della conferma."
+      },
+      {
+        "heading": "Dove e quando salpare",
+        "body": "La stagione del Mediterraneo va da aprile a ottobre: luglio e agosto garantiscono sole e i porti più animati, mentre maggio, giugno e settembre offrono mare caldo, venti più regolari e prezzi sensibilmente più bassi. Da novembre ad aprile la flotta si sposta verso le acque invernali: Caraibi, Bahamas e Seychelles danno il meglio di sé mentre l'Europa aspetta la primavera. La maggior parte dei charter va da sabato a sabato con partenza da marine ben collegate, così voli e transfer si organizzano senza fatica."
+      }
+    ],
+    "closing": "Pronti a partire? Scegli una destinazione qui sopra, confronta prezzi reali per le tue date e assicurati il tuo yacht online in pochi minuti — con pagamento sicuro e un team di assistenza che risponde davvero.",
+    "linksLabel": "Le ricerche di noleggio yacht più popolari",
+    "links": {
+      "sailing": "Noleggio barche a vela",
+      "catamaran": "Noleggio catamarani",
+      "motor": "Noleggio yacht a motore",
+      "motorsailer": "Noleggio caicchi e motorsailer"
+    }
   }
 }

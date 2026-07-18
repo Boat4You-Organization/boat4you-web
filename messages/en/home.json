@@ -182,5 +182,32 @@
     ],
     "preTitle": "Frequently ",
     "emphasizedTitle": "asked questions"
+  },
+  "seoSection": {
+    "preTitle": "Yacht charter,",
+    "emphasizedTitle": "made simple",
+    "intro": "A yacht charter turns a holiday into a voyage: your own boat, your own route and a new anchorage whenever you feel like one. boat4you brings thousands of charter yachts in more than 40 countries into one search — with live availability and final prices, so what you see is what you actually pay. Compare sailing yachts, catamarans, motor yachts and gulets side by side, check real photos and equipment lists, and book the week you want without email back-and-forth.",
+    "blocks": [
+      {
+        "heading": "Bareboat, skippered or fully crewed",
+        "body": "How much of the sailing you do is up to you. Rent a bareboat and skipper it yourself if you hold a recognised licence such as the ICC or RYA Day Skipper. Prefer to relax? Add a professional skipper to any yacht at checkout — they know the local winds, the moorings and the taverns no guidebook lists. And for a pure floating-villa holiday, choose a crewed yacht where the skipper and hostess handle everything from cooking to route planning."
+      },
+      {
+        "heading": "Sailing yacht, catamaran or motor yacht",
+        "body": "Monohull sailing yachts give the purest feel of the wind and the best value per berth. Catamarans have become the family favourite: no heeling, two hulls of private cabins and a saloon the whole crew fits into. Motor yachts trade sails for speed and cover twice the miles in a day, while traditional gulets pair a professional crew with the romance of wooden decks. Every listing on boat4you shows cabins, berths, build year and the obligatory extras before you commit."
+      },
+      {
+        "heading": "Where and when to set sail",
+        "body": "The Mediterranean season runs from April to October: July and August bring guaranteed sun and the liveliest harbours, while May, June and September offer warm seas, steadier winds and noticeably lower prices. From November to April the fleet moves to winter waters — the Caribbean, the Bahamas and the Seychelles sail at their best while Europe waits for spring. Most charters run Saturday to Saturday from well-connected home marinas, so flights and transfers are easy to plan."
+      }
+    ],
+    "closing": "Ready to start? Pick a destination above, compare real prices for your dates and secure your yacht online in minutes — backed by secure payment and a support team that actually answers.",
+    "linksLabel": "Popular yacht charter searches",
+    "links": {
+      "sailing": "Sailing yacht charter",
+      "catamaran": "Catamaran charter",
+      "motor": "Motor yacht charter",
+      "motorsailer": "Gulet & motorsailer charter"
+    }
   }
 }

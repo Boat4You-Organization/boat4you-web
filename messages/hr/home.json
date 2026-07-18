@@ -182,5 +182,32 @@
     ],
     "preTitle": "Često postavljana ",
     "emphasizedTitle": "pitanja"
+  },
+  "seoSection": {
+    "blocks": [
+      {
+        "heading": "Bareboat, sa skiperom ili s punom posadom",
+        "body": "Koliko ćete sami ploviti, ovisi isključivo o vama. Unajmite brod bez posade (bareboat) i sami stanite za kormilo ako imate priznatu dozvolu poput ICC-a ili RYA Day Skippera. Radije biste se opustili? Profesionalnog skipera možete dodati bilo kojoj jahti pri rezervaciji — on poznaje lokalne vjetrove, vezove i konobe koje nećete naći ni u jednom vodiču. A za odmor u stilu ploveće vile odaberite jahtu s posadom (crewed), na kojoj skiper i hostesa preuzimaju sve, od kuhanja do planiranja rute."
+      },
+      {
+        "heading": "Jedrilica, katamaran ili motorna jahta",
+        "body": "Jednotrupne jedrilice (monohull) pružaju najčišći osjećaj vjetra i najbolji omjer cijene i broja ležajeva. Katamarani su postali obiteljski favorit: nema naginjanja, dva trupa s privatnim kabinama i salon u koji stane cijela posada. Motorne jahte mijenjaju jedra za brzinu pa u danu prelaze dvostruko više milja, dok tradicionalni guleti spajaju profesionalnu posadu s romantikom drvenih paluba. Svaki oglas na boat4you prikazuje kabine, ležajeve, godinu gradnje i obvezne dodatke prije nego što se odlučite."
+      },
+      {
+        "heading": "Gdje i kada isploviti",
+        "body": "Sezona na Mediteranu traje od travnja do listopada: srpanj i kolovoz donose zajamčeno sunce i najživlje luke, dok svibanj, lipanj i rujan nude toplo more, stabilnije vjetrove i osjetno niže cijene. Od studenoga do travnja flota se seli u zimske vode — Karibi, Bahami i Sejšeli tada plove u punom sjaju dok Europa čeka proljeće. Većina čartera traje od subote do subote i kreće iz dobro povezanih matičnih marina, pa je letove i transfere lako isplanirati."
+      }
+    ],
+    "closing": "Spremni za polazak? Odaberite destinaciju iznad, usporedite stvarne cijene za svoje datume i rezervirajte jahtu online u nekoliko minuta — uz sigurno plaćanje i podršku koja se doista javlja.",
+    "emphasizedTitle": "jednostavniji nego ikad",
+    "intro": "Najam jahte pretvara odmor u putovanje: vlastiti brod, vlastita ruta i novo sidrište kad god ga poželite. boat4you okuplja tisuće jahti za čarter u više od 40 zemalja u jednoj tražilici — s dostupnošću u stvarnom vremenu i konačnim cijenama, pa ono što vidite doista i plaćate. Usporedite jedrilice, katamarane, motorne jahte i gulete jedne uz druge, pregledajte stvarne fotografije i popise opreme te rezervirajte tjedan koji želite bez beskrajnog dopisivanja e-mailom.",
+    "links": {
+      "sailing": "Najam jedrilica",
+      "catamaran": "Najam katamarana",
+      "motor": "Najam motornih jahti",
+      "motorsailer": "Najam guleta i motornih jedrenjaka"
+    },
+    "linksLabel": "Popularne pretrage najma jahti",
+    "preTitle": "Najam jahti,"
   }
 }

@@ -182,5 +182,32 @@
     ],
     "preTitle": "Często zadawane ",
     "emphasizedTitle": "pytania"
+  },
+  "seoSection": {
+    "preTitle": "Czarter jachtów,",
+    "emphasizedTitle": "prostszy niż myślisz",
+    "intro": "Czarter jachtu zamienia zwykły urlop w prawdziwy rejs: własna łódź, własna trasa i nowa zatoka do zakotwiczenia, kiedy tylko przyjdzie Ci ochota. boat4you zbiera tysiące jachtów czarterowych z ponad 40 krajów w jednej wyszukiwarce — z dostępnością w czasie rzeczywistym i ostatecznymi cenami, więc płacisz dokładnie tyle, ile widzisz. Porównuj jachty żaglowe, katamarany, jachty motorowe i gulety obok siebie, oglądaj prawdziwe zdjęcia i listy wyposażenia, a wybrany tydzień rezerwuj bez niekończącej się wymiany e-maili.",
+    "blocks": [
+      {
+        "heading": "Bareboat, ze skipperem czy z pełną załogą",
+        "body": "To Ty decydujesz, ile żeglujesz samodzielnie. Wyczarteruj jacht w formule bareboat i poprowadź go sam, jeśli masz uznawany patent, taki jak ICC czy RYA Day Skipper. Wolisz odpoczywać? Do każdego jachtu możesz przy rezerwacji dodać zawodowego skippera — zna lokalne wiatry, mariny i tawerny, których nie znajdziesz w żadnym przewodniku. A jeśli marzy Ci się urlop w pływającej willi, wybierz jacht z załogą, na którym skipper i hostessa zajmą się wszystkim — od gotowania po planowanie trasy."
+      },
+      {
+        "heading": "Jacht żaglowy, katamaran czy jacht motorowy",
+        "body": "Jednokadłubowe jachty żaglowe dają najprawdziwszy kontakt z wiatrem i najlepszą cenę w przeliczeniu na koję. Katamarany stały się ulubieńcami rodzin: brak przechyłów, dwa kadłuby prywatnych kabin i mesa, w której mieści się cała załoga. Jachty motorowe wymieniają żagle na prędkość i pokonują dwa razy więcej mil dziennie, a tradycyjne gulety łączą profesjonalną załogę z romantyzmem drewnianych pokładów. Każda oferta na boat4you pokazuje kabiny, koje, rok budowy i obowiązkowe dopłaty, zanim podejmiesz decyzję."
+      },
+      {
+        "heading": "Gdzie i kiedy wypłynąć",
+        "body": "Sezon śródziemnomorski trwa od kwietnia do października: lipiec i sierpień to gwarancja słońca i najbardziej tętniące życiem porty, a maj, czerwiec i wrzesień kuszą ciepłym morzem, stabilniejszymi wiatrami i wyraźnie niższymi cenami. Od listopada do kwietnia flota przenosi się na zimowe wody — Karaiby, Bahamy i Seszele mają wtedy swój najlepszy czas, podczas gdy Europa czeka na wiosnę. Większość czarterów trwa od soboty do soboty i zaczyna się w dobrze skomunikowanych marinach macierzystych, więc loty i transfery łatwo zaplanować."
+      }
+    ],
+    "closing": "Chcesz zacząć? Wybierz kierunek powyżej, porównaj realne ceny w swoim terminie i zarezerwuj jacht online w kilka minut — z bezpieczną płatnością i zespołem obsługi, który naprawdę odpowiada.",
+    "linksLabel": "Popularne wyszukiwania czarteru jachtów",
+    "links": {
+      "sailing": "Czarter jachtów żaglowych",
+      "catamaran": "Czarter katamaranów",
+      "motor": "Czarter jachtów motorowych",
+      "motorsailer": "Czarter guletów i motorsailerów"
+    }
   }
 }

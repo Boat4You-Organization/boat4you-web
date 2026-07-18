@@ -182,5 +182,32 @@
     ],
     "preTitle": "Preguntas ",
     "emphasizedTitle": "frecuentes"
+  },
+  "seoSection": {
+    "preTitle": "Alquiler de yates,",
+    "emphasizedTitle": "sin complicaciones",
+    "intro": "Un alquiler de yates convierte unas vacaciones en una travesía: tu propio barco, tu propia ruta y un fondeadero nuevo siempre que te apetezca. boat4you reúne miles de yates de alquiler en más de 40 países en un solo buscador, con disponibilidad en tiempo real y precios finales, para que lo que ves sea exactamente lo que pagas. Compara veleros, catamaranes, yates a motor y goletas, consulta fotos reales y listas de equipamiento, y reserva la semana que quieras sin interminables correos de ida y vuelta.",
+    "blocks": [
+      {
+        "heading": "Sin patrón, con patrón o con tripulación completa",
+        "body": "Tú decides cuánto quieres navegar. Alquila un barco sin patrón (bareboat) y gobiérnalo tú mismo si cuentas con una titulación reconocida como el ICC o el RYA Day Skipper. ¿Prefieres relajarte? Añade un patrón profesional a cualquier yate al reservar: conoce los vientos locales, los amarres y las tabernas que no aparecen en ninguna guía. Y para unas vacaciones de pura villa flotante, elige un yate con tripulación, donde el patrón y la azafata se ocupan de todo, desde la cocina hasta la planificación de la ruta."
+      },
+      {
+        "heading": "Velero, catamarán o yate a motor",
+        "body": "Los veleros monocasco ofrecen la sensación más pura del viento y la mejor relación calidad-precio por plaza. El catamarán se ha convertido en el favorito de las familias: sin escora, dos cascos con camarotes privados y un salón donde cabe toda la tripulación. Los yates a motor cambian velas por velocidad y recorren el doble de millas en un día, mientras que las goletas tradicionales combinan tripulación profesional con el romanticismo de las cubiertas de madera. Cada anuncio de boat4you muestra camarotes, plazas, año de construcción y los extras obligatorios antes de confirmar la reserva."
+      },
+      {
+        "heading": "Dónde y cuándo zarpar",
+        "body": "La temporada del Mediterráneo va de abril a octubre: julio y agosto garantizan sol y los puertos más animados, mientras que mayo, junio y septiembre ofrecen aguas cálidas, vientos más estables y precios notablemente más bajos. De noviembre a abril la flota se traslada a aguas de invierno: el Caribe, las Bahamas y las Seychelles viven su mejor momento mientras Europa espera la primavera. La mayoría de los chárteres van de sábado a sábado desde puertos base bien conectados, así que los vuelos y traslados se planifican sin esfuerzo."
+      }
+    ],
+    "closing": "¿Listo para empezar? Elige un destino arriba, compara precios reales para tus fechas y asegura tu yate online en cuestión de minutos, con pago seguro y un equipo de atención que responde de verdad.",
+    "linksLabel": "Búsquedas populares de alquiler de yates",
+    "links": {
+      "sailing": "Alquiler de veleros",
+      "catamaran": "Alquiler de catamaranes",
+      "motor": "Alquiler de yates a motor",
+      "motorsailer": "Alquiler de goletas y motoveleros"
+    }
   }
 }

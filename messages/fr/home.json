@@ -182,5 +182,32 @@
     ],
     "preTitle": "Questions ",
     "emphasizedTitle": "fréquentes"
+  },
+  "seoSection": {
+    "preTitle": "La location de yacht,",
+    "emphasizedTitle": "en toute simplicité",
+    "intro": "Une location de yacht transforme des vacances en véritable voyage : votre propre bateau, votre propre itinéraire et un nouveau mouillage dès que l'envie vous prend. boat4you réunit des milliers de yachts à louer dans plus de 40 pays en une seule recherche — avec disponibilités en temps réel et prix définitifs : ce que vous voyez est ce que vous payez réellement. Comparez voiliers, catamarans, yachts à moteur et goélettes côte à côte, consultez de vraies photos et les listes d'équipement, et réservez la semaine de votre choix sans interminables échanges d'e-mails.",
+    "blocks": [
+      {
+        "heading": "Sans skipper, avec skipper ou avec équipage complet",
+        "body": "C'est vous qui décidez de la part de navigation que vous souhaitez assurer. Louez un bateau coque nue (bareboat) et barrez-le vous-même si vous détenez un permis reconnu comme l'ICC ou le RYA Day Skipper. Envie de vous détendre ? Ajoutez un skipper professionnel à n'importe quel yacht lors de la réservation — il connaît les vents locaux, les mouillages et les tavernes qu'aucun guide ne mentionne. Et pour des vacances façon villa flottante, choisissez un yacht avec équipage, où skipper et hôtesse s'occupent de tout, de la cuisine à la planification de l'itinéraire."
+      },
+      {
+        "heading": "Voilier, catamaran ou yacht à moteur",
+        "body": "Les voiliers monocoques offrent la sensation la plus pure du vent et le meilleur rapport qualité-prix par couchette. Le catamaran est devenu le favori des familles : pas de gîte, deux coques de cabines privées et un carré où tout l'équipage trouve sa place. Les yachts à moteur troquent les voiles contre la vitesse et parcourent deux fois plus de milles en une journée, tandis que les goélettes traditionnelles allient équipage professionnel et charme des ponts en bois. Chaque annonce sur boat4you affiche les cabines, les couchettes, l'année de construction et les extras obligatoires avant que vous ne vous engagiez."
+      },
+      {
+        "heading": "Où et quand larguer les amarres",
+        "body": "En Méditerranée, la saison s'étend d'avril à octobre : juillet et août garantissent le soleil et les ports les plus animés, tandis que mai, juin et septembre offrent une mer chaude, des vents plus réguliers et des prix nettement plus doux. De novembre à avril, la flotte migre vers les eaux d'hiver — les Caraïbes, les Bahamas et les Seychelles se naviguent alors sous leur meilleur jour pendant que l'Europe attend le printemps. La plupart des locations vont du samedi au samedi, au départ de marinas bien desservies : vols et transferts se planifient donc facilement."
+      }
+    ],
+    "closing": "Prêt à embarquer ? Choisissez une destination ci-dessus, comparez les prix réels pour vos dates et réservez votre yacht en ligne en quelques minutes — avec paiement sécurisé et une équipe d'assistance qui répond vraiment.",
+    "linksLabel": "Recherches populaires de location de yacht",
+    "links": {
+      "sailing": "Location de voilier",
+      "catamaran": "Location de catamaran",
+      "motor": "Location de yacht à moteur",
+      "motorsailer": "Location de goélette & voilier à moteur"
+    }
   }
 }

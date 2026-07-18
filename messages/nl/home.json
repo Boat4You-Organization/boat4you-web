@@ -182,5 +182,32 @@
     ],
     "preTitle": "Veelgestelde ",
     "emphasizedTitle": "vragen"
+  },
+  "seoSection": {
+    "preTitle": "Jacht huren,",
+    "emphasizedTitle": "eenvoudig geregeld",
+    "intro": "Een jacht huren maakt van een vakantie een echte zeereis: je eigen boot, je eigen route en een nieuwe ankerplaats wanneer jij daar zin in hebt. boat4you brengt duizenden charterjachten in meer dan 40 landen samen in één zoekopdracht — met actuele beschikbaarheid en definitieve prijzen, zodat je precies betaalt wat je ziet. Vergelijk zeiljachten, catamarans, motorjachten en gulets naast elkaar, bekijk echte foto's en uitrustingslijsten en boek de week die jou uitkomt, zonder eindeloos heen-en-weer gemail.",
+    "blocks": [
+      {
+        "heading": "Bareboat, met schipper of met volledige bemanning",
+        "body": "Hoeveel je zelf vaart, bepaal jij. Huur een bareboat en sta zelf aan het roer als je een erkend vaarbewijs hebt, zoals het ICC of RYA Day Skipper. Liever ontspannen? Voeg bij het boeken aan elk jacht een professionele schipper toe — die kent de lokale winden, de aanlegplaatsen en de taveernes die in geen enkele reisgids staan. En wil je een vakantie als in een drijvende villa, kies dan een jacht met volledige bemanning, waar schipper en hostess alles verzorgen, van koken tot routeplanning."
+      },
+      {
+        "heading": "Zeiljacht, catamaran of motorjacht",
+        "body": "Monohull-zeiljachten bieden het puurste zeilgevoel en de beste prijs per slaapplaats. De catamaran is uitgegroeid tot dé familiefavoriet: hij helt niet over, heeft twee rompen vol privéhutten en een salon waar de hele bemanning in past. Motorjachten ruilen zeilen in voor snelheid en leggen op een dag twee keer zoveel mijlen af, terwijl traditionele gulets een professionele bemanning koppelen aan de romantiek van houten dekken. Elke aanbieding op boat4you toont hutten, slaapplaatsen, bouwjaar en de verplichte extra's voordat je boekt."
+      },
+      {
+        "heading": "Waar en wanneer je het ruime sop kiest",
+        "body": "Het seizoen op de Middellandse Zee loopt van april tot en met oktober: juli en augustus brengen gegarandeerde zon en de levendigste havens, terwijl mei, juni en september warme zeeën, stabielere wind en duidelijk lagere prijzen bieden. Van november tot april verhuist de vloot naar haar winterbestemmingen — dan varen de Caraïben, de Bahama's en de Seychellen op hun best, terwijl Europa op de lente wacht. De meeste charters lopen van zaterdag tot zaterdag vanuit goed bereikbare thuishavens, zodat vluchten en transfers eenvoudig te plannen zijn."
+      }
+    ],
+    "closing": "Klaar voor vertrek? Kies hierboven een bestemming, vergelijk echte prijzen voor jouw data en leg je jacht binnen een paar minuten online vast — met veilig betalen en een supportteam dat écht antwoord geeft.",
+    "linksLabel": "Populaire zoekopdrachten voor jachtcharter",
+    "links": {
+      "sailing": "Zeiljacht huren",
+      "catamaran": "Catamaran huren",
+      "motor": "Motorjacht huren",
+      "motorsailer": "Gulet & motorzeiler huren"
+    }
   }
 }

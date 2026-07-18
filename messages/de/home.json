@@ -182,5 +182,32 @@
     ],
     "preTitle": "Häufig ",
     "emphasizedTitle": "gestellte Fragen"
+  },
+  "seoSection": {
+    "preTitle": "Yachtcharter",
+    "emphasizedTitle": "leicht gemacht",
+    "intro": "Ein Yachtcharter macht aus dem Urlaub eine echte Reise: das eigene Boot, die eigene Route und eine neue Ankerbucht, wann immer Ihnen danach ist. boat4you bündelt Tausende Charteryachten in über 40 Ländern in einer einzigen Suche – mit Live-Verfügbarkeit und Endpreisen, sodass Sie genau das zahlen, was Sie sehen. Vergleichen Sie Segelyachten, Katamarane, Motoryachten und Gulets direkt nebeneinander, prüfen Sie echte Fotos und Ausstattungslisten und buchen Sie Ihre Wunschwoche ganz ohne E-Mail-Pingpong.",
+    "blocks": [
+      {
+        "heading": "Bareboat, mit Skipper oder mit Crew",
+        "body": "Wie viel Sie selbst segeln, entscheiden Sie. Chartern Sie eine Yacht als Bareboat und führen Sie sie selbst, wenn Sie einen anerkannten Führerschein wie das ICC oder den RYA Day Skipper besitzen. Lieber entspannen? Buchen Sie beim Checkout zu jeder Yacht einen professionellen Skipper hinzu – er kennt die lokalen Winde, die besten Liegeplätze und die Tavernen, die in keinem Reiseführer stehen. Und für einen Urlaub wie in einer schwimmenden Villa wählen Sie eine Yacht mit Crew, auf der Skipper und Hostess alles übernehmen – vom Kochen bis zur Routenplanung."
+      },
+      {
+        "heading": "Segelyacht, Katamaran oder Motoryacht",
+        "body": "Einrumpfige Segelyachten (Monohulls) vermitteln das unverfälschteste Segelgefühl und bieten den besten Preis pro Koje. Katamarane sind längst der Favorit für Familien: keine Krängung, private Kabinen in zwei Rümpfen und ein Salon, in den die ganze Crew passt. Motoryachten tauschen Segel gegen Geschwindigkeit und schaffen doppelt so viele Meilen am Tag, während traditionelle Gulets eine professionelle Crew mit der Romantik hölzerner Decks verbinden. Jedes Inserat auf boat4you zeigt Kabinen, Kojen, Baujahr und die obligatorischen Extras, bevor Sie sich festlegen."
+      },
+      {
+        "heading": "Wohin und wann in See stechen",
+        "body": "Die Mittelmeersaison läuft von April bis Oktober: Juli und August bringen garantierte Sonne und die lebhaftesten Häfen, während Mai, Juni und September warmes Wasser, beständigere Winde und spürbar niedrigere Preise bieten. Von November bis April zieht die Flotte in wärmere Reviere – die Karibik, die Bahamas und die Seychellen zeigen sich dann von ihrer besten Seite, während Europa auf den Frühling wartet. Die meisten Charter laufen von Samstag bis Samstag ab gut angebundenen Heimathäfen, sodass sich Flüge und Transfers leicht planen lassen."
+      }
+    ],
+    "closing": "Bereit für den Start? Wählen Sie oben ein Reiseziel, vergleichen Sie echte Preise für Ihre Wunschtermine und sichern Sie sich Ihre Yacht online in wenigen Minuten – mit sicherer Zahlung und einem Support-Team, das tatsächlich antwortet.",
+    "linksLabel": "Beliebte Yachtcharter-Suchen",
+    "links": {
+      "sailing": "Segelyacht chartern",
+      "catamaran": "Katamaran chartern",
+      "motor": "Motoryacht chartern",
+      "motorsailer": "Gulet & Motorsegler chartern"
+    }
   }
 }
