@@ -609,5 +609,17 @@
   },
   "tripQrHint": "Scan to open on your phone",
   "tripQrAlt": "Trip app QR code",
-  "pdfDownload": "PDF Download"
+  "pdfDownload": "PDF Download",
+  "chatWidget": {
+    "title": "boat4you assistant",
+    "subtitleAi": "AI concierge — replies in seconds",
+    "subtitleHuman": "Our team is with you",
+    "greeting": "Hi! I can help you find the right yacht. Where and when would you like to sail?",
+    "placeholder": "Type a message…",
+    "send": "Send",
+    "typing": "typing…",
+    "open": "Open chat",
+    "close": "Close chat",
+    "agentTag": "boat4you team"
+  }
 }

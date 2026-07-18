@@ -609,5 +609,17 @@
   },
   "tripQrHint": "Escanea para abrirla en tu móvil",
   "tripQrAlt": "Código QR de la app del viaje",
-  "pdfDownload": "Descargar PDF"
+  "pdfDownload": "Descargar PDF",
+  "chatWidget": {
+    "title": "Asistente boat4you",
+    "subtitleAi": "Conserje IA — responde en segundos",
+    "subtitleHuman": "Nuestro equipo está con usted",
+    "greeting": "¡Hola! Puedo ayudarle a encontrar el yate adecuado. ¿Dónde y cuándo le gustaría navegar?",
+    "placeholder": "Escriba un mensaje…",
+    "send": "Enviar",
+    "typing": "escribiendo…",
+    "open": "Abrir chat",
+    "close": "Cerrar chat",
+    "agentTag": "Equipo boat4you"
+  }
 }

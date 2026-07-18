@@ -609,5 +609,17 @@
   },
   "tripQrHint": "Skenirajte i otvorite na mobitelu",
   "tripQrAlt": "QR kod Trip aplikacije",
-  "pdfDownload": "Preuzmi PDF"
+  "pdfDownload": "Preuzmi PDF",
+  "chatWidget": {
+    "title": "boat4you asistent",
+    "subtitleAi": "AI concierge — odgovara u sekundama",
+    "subtitleHuman": "Naš tim je s vama",
+    "greeting": "Pozdrav! Pomoći ću vam pronaći pravu jahtu. Gdje i kada biste željeli ploviti?",
+    "placeholder": "Upišite poruku…",
+    "send": "Pošalji",
+    "typing": "piše…",
+    "open": "Otvori chat",
+    "close": "Zatvori chat",
+    "agentTag": "boat4you tim"
+  }
 }

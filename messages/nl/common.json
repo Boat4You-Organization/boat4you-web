@@ -609,5 +609,17 @@
   },
   "tripQrHint": "Scan om te openen op je telefoon",
   "tripQrAlt": "QR-code van de trip-app",
-  "pdfDownload": "PDF downloaden"
+  "pdfDownload": "PDF downloaden",
+  "chatWidget": {
+    "title": "boat4you assistent",
+    "subtitleAi": "AI-concierge — antwoordt binnen seconden",
+    "subtitleHuman": "Ons team helpt je",
+    "greeting": "Hoi! Ik help je graag de juiste jacht te vinden. Waar en wanneer wil je varen?",
+    "placeholder": "Typ een bericht…",
+    "send": "Versturen",
+    "typing": "typt…",
+    "open": "Chat openen",
+    "close": "Chat sluiten",
+    "agentTag": "boat4you team"
+  }
 }

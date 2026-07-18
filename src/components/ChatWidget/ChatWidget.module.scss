@@ -1,0 +1,228 @@
+@use '@/styles/utils/rem-calc' as *;
+@use '@/styles/mixins/breakpoints' as *;
+
+// Floating concierge button + panel. Brand blue #2856ff / navy #141857.
+.fab {
+  position: fixed;
+  right: rem-calc(20);
+  bottom: rem-calc(20);
+  z-index: 1300;
+  width: rem-calc(56);
+  height: rem-calc(56);
+  border: 0;
+  border-radius: 50%;
+  background: #2856ff;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgb(20 24 87 / 35%);
+  transition: transform 0.15s ease;
+
+  &:hover {
+    transform: scale(1.06);
+  }
+}
+
+.panel {
+  position: fixed;
+  right: rem-calc(20);
+  bottom: rem-calc(20);
+  z-index: 1300;
+  width: rem-calc(370);
+  max-width: calc(100vw - #{rem-calc(24)});
+  height: rem-calc(560);
+  max-height: calc(100dvh - #{rem-calc(40)});
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: rem-calc(16);
+  box-shadow: 0 12px 40px rgb(20 24 87 / 30%);
+  overflow: hidden;
+
+  @include media(0, 'sm') {
+    right: rem-calc(12);
+    bottom: rem-calc(12);
+    width: calc(100vw - #{rem-calc(24)});
+    height: min(#{rem-calc(560)}, calc(100dvh - #{rem-calc(24)}));
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: rem-calc(8);
+  padding: rem-calc(14 16);
+  background: #141857;
+  color: #fff;
+}
+
+.title {
+  margin: 0;
+  font-size: rem-calc(15);
+  font-weight: 700;
+}
+
+.subtitle {
+  margin: 0;
+  font-size: rem-calc(12);
+  opacity: 0.75;
+}
+
+.close {
+  border: 0;
+  background: transparent;
+  color: #fff;
+  font-size: rem-calc(26);
+  line-height: 1;
+  cursor: pointer;
+  padding: rem-calc(0 4);
+}
+
+.list {
+  flex: 1;
+  overflow-y: auto;
+  padding: rem-calc(14);
+  display: flex;
+  flex-direction: column;
+  gap: rem-calc(10);
+  background: #f6f8ff;
+}
+
+.bubbleAssistant,
+.bubbleUser {
+  max-width: 85%;
+  padding: rem-calc(10 13);
+  border-radius: rem-calc(14);
+  font-size: rem-calc(14);
+  line-height: 1.45;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+}
+
+.bubbleAssistant {
+  align-self: flex-start;
+  background: #fff;
+  color: #23253a;
+  border: 1px solid #e4e8f8;
+  border-bottom-left-radius: rem-calc(4);
+}
+
+.bubbleUser {
+  align-self: flex-end;
+  margin-left: auto;
+  background: #2856ff;
+  color: #fff;
+  border-bottom-right-radius: rem-calc(4);
+}
+
+.agentTag {
+  display: block;
+  font-size: rem-calc(11);
+  font-weight: 700;
+  color: #2856ff;
+  margin-bottom: rem-calc(2);
+}
+
+.typing {
+  align-self: flex-start;
+  font-size: rem-calc(13);
+  color: #6a6a6a;
+  padding: rem-calc(4 6);
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: rem-calc(8);
+  margin-top: rem-calc(8);
+}
+
+.card {
+  display: flex;
+  gap: rem-calc(10);
+  background: #fff;
+  border: 1px solid #e4e8f8;
+  border-radius: rem-calc(12);
+  overflow: hidden;
+  text-decoration: none;
+  transition: border-color 0.15s ease;
+
+  &:hover {
+    border-color: #2856ff;
+  }
+
+  img {
+    width: rem-calc(92);
+    height: rem-calc(72);
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+}
+
+.cardBody {
+  padding: rem-calc(8 10 8 0);
+  min-width: 0;
+}
+
+.cardName {
+  margin: 0;
+  font-size: rem-calc(13);
+  font-weight: 700;
+  color: #141857;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cardMeta {
+  margin: rem-calc(2 0 0);
+  font-size: rem-calc(12);
+  color: #6a6a6a;
+}
+
+.cardPrice {
+  margin: rem-calc(2 0 0);
+  font-size: rem-calc(14);
+  font-weight: 800;
+  color: #2856ff;
+}
+
+.inputRow {
+  display: flex;
+  gap: rem-calc(8);
+  padding: rem-calc(10 12);
+  border-top: 1px solid #e4e8f8;
+  background: #fff;
+
+  input {
+    flex: 1;
+    border: 1px solid #d9def2;
+    border-radius: rem-calc(999);
+    padding: rem-calc(9 14);
+    font-size: rem-calc(14);
+    outline: none;
+
+    &:focus {
+      border-color: #2856ff;
+    }
+  }
+
+  button {
+    border: 0;
+    border-radius: rem-calc(999);
+    background: #2856ff;
+    color: #fff;
+    font-size: rem-calc(14);
+    font-weight: 600;
+    padding: rem-calc(9 16);
+    cursor: pointer;
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: default;
+    }
+  }
+}

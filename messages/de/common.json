@@ -609,5 +609,17 @@
   },
   "tripQrHint": "Scannen und am Handy öffnen",
   "tripQrAlt": "QR-Code der Trip-App",
-  "pdfDownload": "PDF herunterladen"
+  "pdfDownload": "PDF herunterladen",
+  "chatWidget": {
+    "title": "boat4you Assistent",
+    "subtitleAi": "KI-Concierge — antwortet in Sekunden",
+    "subtitleHuman": "Unser Team ist für Sie da",
+    "greeting": "Hallo! Ich helfe Ihnen, die richtige Yacht zu finden. Wo und wann möchten Sie segeln?",
+    "placeholder": "Nachricht eingeben…",
+    "send": "Senden",
+    "typing": "schreibt…",
+    "open": "Chat öffnen",
+    "close": "Chat schließen",
+    "agentTag": "boat4you Team"
+  }
 }

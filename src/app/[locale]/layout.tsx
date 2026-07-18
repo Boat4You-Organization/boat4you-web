@@ -7,6 +7,7 @@ import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server
 import { notFound } from 'next/navigation';
 import Script from 'next/script';
 
+import ChatWidget from '@/components/ChatWidget';
 import GoogleAnalyticsConsent from '@/components/GoogleAnalyticsConsent';
 import InstallPrompt from '@/components/InstallPrompt';
 import ServiceWorkerRegister from '@/components/ServiceWorkerRegister';
@@ -141,7 +142,10 @@ const RootLayout = async ({ children, params }: RootLayoutProps) => {
       </head>
       <body suppressHydrationWarning>
         <NextIntlClientProvider messages={messages}>
-          <Providers>{children}</Providers>
+          <Providers>
+            {children}
+            <ChatWidget />
+          </Providers>
           {/* InstallPrompt uses useTranslations → must be INSIDE the provider. */}
           <InstallPrompt />
         </NextIntlClientProvider>
