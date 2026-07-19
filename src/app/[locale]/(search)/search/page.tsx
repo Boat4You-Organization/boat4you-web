@@ -348,6 +348,14 @@ function buildSearchProductsLd(yachts: YachtModelShortInfo[] | undefined, baseUr
       shippingDetails: {
         '@type': 'OfferShippingDetails',
         shippingRate: { '@type': 'MonetaryAmount', value: 0, currency: 'EUR' },
+        // Google requires deliveryTime whenever shippingDetails is present (GSC
+        // "Missing field deliveryTime", 18.7.2026). Booking confirmation is
+        // issued instantly and nothing physically ships → handling + transit 0.
+        deliveryTime: {
+          '@type': 'ShippingDeliveryTime',
+          handlingTime: { '@type': 'QuantitativeValue', minValue: 0, maxValue: 0, unitCode: 'DAY' },
+          transitTime: { '@type': 'QuantitativeValue', minValue: 0, maxValue: 0, unitCode: 'DAY' },
+        },
         ...(country ? { shippingDestination: { '@type': 'DefinedRegion', addressCountry: country } } : {}),
       },
       hasMerchantReturnPolicy: {
