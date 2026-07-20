@@ -167,10 +167,14 @@ const ChatWidget = () => {
     setMessages(prev => [...prev, { id: -Date.now(), role: 'USER', content, payload: null }]);
     scrollDown();
     try {
+      // Current URL rides along so the assistant knows which yacht page the
+      // visitor is on ("does THIS boat have AC?"). Read at send time — no
+      // router hooks, so no Suspense/SSR concerns in the root layout.
+      const page = window.location.pathname + window.location.search;
       const res = await fetch(`${API}/public/chat/sessions/${token}/messages`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ content }),
+        body: JSON.stringify({ content, page }),
       });
 
       if (res.ok) {
