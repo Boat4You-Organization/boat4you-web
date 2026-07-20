@@ -83,10 +83,16 @@ const ChatWidget = () => {
     const stored = window.localStorage.getItem(TOKEN_KEY);
 
     const create = async () => {
+      // Landing page + referrer travel once at creation — the broker inbox
+      // shows where the visitor came from (JivoChat parity, 20.7.2026).
       const res = await fetch(`${API}/public/chat/sessions`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ locale }),
+        body: JSON.stringify({
+          locale,
+          page: window.location.pathname + window.location.search,
+          referrer: document.referrer || null,
+        }),
       });
 
       if (res.status === 503) {
@@ -129,6 +135,29 @@ const ChatWidget = () => {
 
     (stored ? restore(stored) : create()).catch(() => setDisabled(true));
   }, [open, token, disabled, locale, appendMessages]);
+
+  // Presence heartbeat: while a session exists, report the current page every
+  // 30s so the broker inbox shows who is live on the site and what they're
+  // browsing (JivoChat parity, Mario 20.7.2026). Best-effort — errors ignored.
+  useEffect(() => {
+    if (!token || disabled) return undefined;
+
+    const ping = () => {
+      fetch(`${API}/public/chat/sessions/${token}/presence`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ page: window.location.pathname + window.location.search }),
+      }).catch(() => {
+        /* best-effort */
+      });
+    };
+
+    ping();
+
+    const interval = window.setInterval(ping, 30000);
+
+    return () => window.clearInterval(interval);
+  }, [token, disabled]);
 
   // Poll for broker replies while a human owns the session (and lightly in
   // AI mode too, so a takeover surfaces without a visitor message).
