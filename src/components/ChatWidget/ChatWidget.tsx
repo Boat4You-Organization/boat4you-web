@@ -53,6 +53,10 @@ const ChatWidget = () => {
   const [sending, setSending] = useState(false);
   const listRef = useRef<HTMLDivElement>(null);
   const lastIdRef = useRef(0);
+  // One transcript hydration per pageload — the mount effect may pre-set the
+  // token for the presence heartbeat, so "token exists" no longer implies
+  // "history already loaded".
+  const hydratedRef = useRef(false);
 
   const scrollDown = () => {
     requestAnimationFrame(() => {
@@ -76,11 +80,21 @@ const ChatWidget = () => {
     scrollDown();
   }, []);
 
-  // Open -> ensure a session exists; restore transcript for returning tokens.
+  // Returning visitors with a stored session start heartbeating immediately —
+  // the broker sees them browsing without waiting for the panel to open.
   useEffect(() => {
-    if (!open || token || disabled) return;
-
     const stored = window.localStorage.getItem(TOKEN_KEY);
+
+    if (stored) setToken(stored);
+  }, []);
+
+  // Open -> ensure a session exists; restore transcript once per pageload.
+  useEffect(() => {
+    if (!open || disabled || hydratedRef.current) return;
+
+    hydratedRef.current = true;
+
+    const stored = token ?? window.localStorage.getItem(TOKEN_KEY);
 
     const create = async () => {
       // Landing page + referrer travel once at creation — the broker inbox
