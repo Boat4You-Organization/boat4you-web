@@ -620,6 +620,9 @@
     "typing": "typt…",
     "open": "Chat openen",
     "close": "Chat sluiten",
-    "agentTag": "boat4you team"
+    "agentTag": "boat4you team",
+    "namePrompt": "Welkom! Wat is uw naam, zodat we u kunnen aanspreken?",
+    "namePlaceholder": "Uw naam",
+    "nameStart": "Chat starten"
   }
 }

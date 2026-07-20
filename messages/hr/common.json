@@ -620,6 +620,9 @@
     "typing": "piše…",
     "open": "Otvori chat",
     "close": "Zatvori chat",
-    "agentTag": "boat4you tim"
+    "agentTag": "boat4you tim",
+    "namePrompt": "Dobrodošli! Kako se zovete, da znamo kome se obraćamo?",
+    "namePlaceholder": "Vaše ime",
+    "nameStart": "Započni razgovor"
   }
 }

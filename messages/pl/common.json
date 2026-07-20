@@ -620,6 +620,9 @@
     "typing": "pisze…",
     "open": "Otwórz czat",
     "close": "Zamknij czat",
-    "agentTag": "Zespół boat4you"
+    "agentTag": "Zespół boat4you",
+    "namePrompt": "Witamy! Jak masz na imię, abyśmy wiedzieli, jak się do Ciebie zwracać?",
+    "namePlaceholder": "Twoje imię",
+    "nameStart": "Rozpocznij czat"
   }
 }

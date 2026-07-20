@@ -620,6 +620,9 @@
     "typing": "escribiendo…",
     "open": "Abrir chat",
     "close": "Cerrar chat",
-    "agentTag": "Equipo boat4you"
+    "agentTag": "Equipo boat4you",
+    "namePrompt": "¡Bienvenido! ¿Cómo se llama, para poder dirigirnos a usted?",
+    "namePlaceholder": "Su nombre",
+    "nameStart": "Iniciar chat"
   }
 }

@@ -51,6 +51,8 @@ const ChatWidget = () => {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState('');
   const [sending, setSending] = useState(false);
+  const [needsName, setNeedsName] = useState(false);
+  const [nameInput, setNameInput] = useState('');
   const listRef = useRef<HTMLDivElement>(null);
   const lastIdRef = useRef(0);
   // One transcript hydration per pageload — the mount effect may pre-set the
@@ -88,15 +90,11 @@ const ChatWidget = () => {
     if (stored) setToken(stored);
   }, []);
 
-  // Open -> ensure a session exists; restore transcript once per pageload.
-  useEffect(() => {
-    if (!open || disabled || hydratedRef.current) return;
-
-    hydratedRef.current = true;
-
-    const stored = token ?? window.localStorage.getItem(TOKEN_KEY);
-
-    const create = async () => {
+  // Pre-chat name step (Mario 20.7.2026): a brand-new visitor tells us their
+  // name before the session starts — the broker knows who they talk to and the
+  // assistant greets them personally.
+  const createSession = useCallback(
+    async (name: string) => {
       // Landing page + referrer travel once at creation — the broker inbox
       // shows where the visitor came from (JivoChat parity, 20.7.2026).
       const res = await fetch(`${API}/public/chat/sessions`, {
@@ -104,6 +102,7 @@ const ChatWidget = () => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           locale,
+          name,
           page: window.location.pathname + window.location.search,
           referrer: document.referrer || null,
         }),
@@ -122,7 +121,18 @@ const ChatWidget = () => {
       window.localStorage.setItem(TOKEN_KEY, data.token);
       setToken(data.token);
       setStatus(data.status);
-    };
+      setNeedsName(false);
+    },
+    [locale]
+  );
+
+  // Open -> restore an existing session, or ask the visitor's name first.
+  useEffect(() => {
+    if (!open || disabled || hydratedRef.current) return;
+
+    hydratedRef.current = true;
+
+    const stored = token ?? window.localStorage.getItem(TOKEN_KEY);
 
     const restore = async (existing: string) => {
       const res = await fetch(`${API}/public/chat/sessions/${existing}/messages?afterId=0`);
@@ -135,7 +145,8 @@ const ChatWidget = () => {
 
       if (!res.ok) {
         window.localStorage.removeItem(TOKEN_KEY);
-        await create();
+        setToken(null);
+        setNeedsName(true);
 
         return;
       }
@@ -147,8 +158,20 @@ const ChatWidget = () => {
       appendMessages(data.messages);
     };
 
-    (stored ? restore(stored) : create()).catch(() => setDisabled(true));
-  }, [open, token, disabled, locale, appendMessages]);
+    if (stored) {
+      restore(stored).catch(() => setDisabled(true));
+    } else {
+      setNeedsName(true);
+    }
+  }, [open, token, disabled, appendMessages]);
+
+  const submitName = () => {
+    const name = nameInput.trim();
+
+    if (!name) return;
+
+    createSession(name).catch(() => setDisabled(true));
+  };
 
   // Presence heartbeat: while a session exists, report the current page every
   // 30s so the broker inbox shows who is live on the site and what they're
@@ -269,54 +292,76 @@ const ChatWidget = () => {
               ×
             </button>
           </div>
-          <div ref={listRef} className={styles.list}>
-            <div className={styles.bubbleAssistant}>{t('greeting')}</div>
-            {messages.map(m => (
-              <div key={m.id}>
-                <div className={m.role === 'USER' ? styles.bubbleUser : styles.bubbleAssistant}>
-                  {m.role === 'ADMIN' && <span className={styles.agentTag}>{t('agentTag')}</span>}
-                  {m.content}
-                </div>
-                {cardsOf(m).length > 0 && (
-                  <div className={styles.cards}>
-                    {cardsOf(m).map(c => (
-                      <Link
-                        key={c.slug}
-                        href={`/boat/${c.slug}?startDate=${c.startDate}&endDate=${c.endDate}&currency=EUR`}
-                        className={styles.card}
-                        target="_blank"
-                      >
-                        {/* eslint-disable-next-line @next/next/no-img-element -- tiny chat thumb, skip next/image pipeline */}
-                        <img src={getBoatImageUrl(c.imageId, 200)} alt={c.name} loading="lazy" />
-                        <div className={styles.cardBody}>
-                          <p className={styles.cardName}>{c.name}</p>
-                          <p className={styles.cardMeta}>
-                            {c.cabins > 0 ? `${c.cabins} cab · ` : ''}
-                            {c.maxPersons > 0 ? `${c.maxPersons} pax · ` : ''}
-                            {c.year > 0 ? c.year : ''}
-                          </p>
-                          <p className={styles.cardPrice}>€{c.totalPriceEur.toLocaleString('de-DE')}</p>
-                        </div>
-                      </Link>
-                    ))}
-                  </div>
-                )}
+          {needsName && !token ? (
+            <>
+              <div className={styles.list}>
+                <div className={styles.bubbleAssistant}>{t('namePrompt')}</div>
               </div>
-            ))}
-            {sending && <div className={styles.typing}>{t('typing')}</div>}
-          </div>
-          <div className={styles.inputRow}>
-            <input
-              value={input}
-              onChange={e => setInput(e.target.value)}
-              onKeyDown={e => e.key === 'Enter' && send()}
-              placeholder={t('placeholder')}
-              maxLength={1000}
-            />
-            <button type="button" onClick={send} disabled={sending || !input.trim()}>
-              {t('send')}
-            </button>
-          </div>
+              <div className={styles.inputRow}>
+                <input
+                  value={nameInput}
+                  onChange={e => setNameInput(e.target.value)}
+                  onKeyDown={e => e.key === 'Enter' && submitName()}
+                  placeholder={t('namePlaceholder')}
+                  maxLength={120}
+                />
+                <button type="button" onClick={submitName} disabled={!nameInput.trim()}>
+                  {t('nameStart')}
+                </button>
+              </div>
+            </>
+          ) : (
+            <>
+              <div ref={listRef} className={styles.list}>
+                <div className={styles.bubbleAssistant}>{t('greeting')}</div>
+                {messages.map(m => (
+                  <div key={m.id}>
+                    <div className={m.role === 'USER' ? styles.bubbleUser : styles.bubbleAssistant}>
+                      {m.role === 'ADMIN' && <span className={styles.agentTag}>{t('agentTag')}</span>}
+                      {m.content}
+                    </div>
+                    {cardsOf(m).length > 0 && (
+                      <div className={styles.cards}>
+                        {cardsOf(m).map(c => (
+                          <Link
+                            key={c.slug}
+                            href={`/boat/${c.slug}?startDate=${c.startDate}&endDate=${c.endDate}&currency=EUR`}
+                            className={styles.card}
+                            target="_blank"
+                          >
+                            {/* eslint-disable-next-line @next/next/no-img-element -- tiny chat thumb, skip next/image pipeline */}
+                            <img src={getBoatImageUrl(c.imageId, 200)} alt={c.name} loading="lazy" />
+                            <div className={styles.cardBody}>
+                              <p className={styles.cardName}>{c.name}</p>
+                              <p className={styles.cardMeta}>
+                                {c.cabins > 0 ? `${c.cabins} cab · ` : ''}
+                                {c.maxPersons > 0 ? `${c.maxPersons} pax · ` : ''}
+                                {c.year > 0 ? c.year : ''}
+                              </p>
+                              <p className={styles.cardPrice}>€{c.totalPriceEur.toLocaleString('de-DE')}</p>
+                            </div>
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ))}
+                {sending && <div className={styles.typing}>{t('typing')}</div>}
+              </div>
+              <div className={styles.inputRow}>
+                <input
+                  value={input}
+                  onChange={e => setInput(e.target.value)}
+                  onKeyDown={e => e.key === 'Enter' && send()}
+                  placeholder={t('placeholder')}
+                  maxLength={1000}
+                />
+                <button type="button" onClick={send} disabled={sending || !input.trim()}>
+                  {t('send')}
+                </button>
+              </div>
+            </>
+          )}
         </div>
       )}
     </>
