@@ -92,23 +92,30 @@ const toWeek = (offer: YachtOfferModel): WeekData => {
 const AvailabilitySlider = ({ yacht }: AvailabilitySliderProps) => {
   const { isBelowLg } = useBreakpoint();
   const [standardOffers, standardOffersAction] = useActionState(getSingleYachtStandardOffers, []);
-  // Dedupe by week+status (20.7.2026): duplicate offer rows in the DB drew
-  // the same week card 24x on this strip. The DB has a unique guard now, but
-  // the strip must stay one-card-per-week whatever the payload contains.
+  // One card per week, best status wins (20.7.2026): route/product variant rows
+  // can leave a week with a FREE row next to residual UNAVAILABLE siblings — the
+  // week IS sellable, so a bookable variant must beat a blocked one. Real full
+  // bookings flip every variant row, so nothing bookable survives to win here.
   const safeYachtOffers = useMemo(() => {
     if (!Array.isArray(standardOffers)) return [];
 
-    const seen = new Set<string>();
+    const rank = (s: Status | undefined) => {
+      if (s === Status.FREE) return 0;
 
-    return standardOffers.filter(o => {
-      const key = `${o.dateFrom}|${o.dateTo}|${o.status}`;
+      if (s === Status.OPTION) return 1;
 
-      if (seen.has(key)) return false;
+      return 2;
+    };
+    const byWeek = new Map<string, YachtOfferModel>();
 
-      seen.add(key);
+    standardOffers.forEach(o => {
+      const key = `${o.dateFrom}|${o.dateTo}`;
+      const prev = byWeek.get(key);
 
-      return true;
+      if (!prev || rank(o.status as Status) < rank(prev.status as Status)) byWeek.set(key, o);
     });
+
+    return [...byWeek.values()];
   }, [standardOffers]);
   // boat4you selects a week by writing startDate/endDate to the URL — the
   // blue AvailabilityDateSelector + offer detail card react to those params
