@@ -70,6 +70,17 @@ const AvailabilityCard = ({ yacht, offer }: AvailabilityCardProps) => {
       >
         <Typography variant="h3" fontWeight={700}>
           {model} | {toTitleCase(name)}
+          {/* One-way / multi-base fleets list the same week once per route —
+              without the route label the variants look like duplicate cards
+              (Mario 20.7.2026, Salina 48 Shamane: 7x7 base matrix). */}
+          {offer.locationFrom?.name && (
+            <Typography component="span" display="block" variant="body2" color={colors.black600} fontWeight={500}>
+              {offer.locationFrom.name}
+              {offer.locationTo?.name && offer.locationTo.name !== offer.locationFrom.name
+                ? ` → ${offer.locationTo.name}`
+                : ''}
+            </Typography>
+          )}
         </Typography>
         <Stack alignItems={{ xs: 'flex-start', md: 'flex-end' }}>
           <Typography variant="body2" color={colors.black600}>
