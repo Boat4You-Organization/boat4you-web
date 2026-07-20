@@ -100,7 +100,21 @@ export const setselectedOffer = (offer: YachtOfferModel | null) => {
 };
 
 export const setOffersToDisplay = (offers: YachtOfferModel[]) => {
-  yachtStore.offersToDisplay = offers;
+  // Belt-and-braces against duplicate offer rows (20.7.2026: the offer table
+  // had 1.37M byte-identical duplicates — DB now has a unique guard, but the
+  // UI must never render the same week/route twice regardless of data state).
+  // Legit one-way variants survive: the key includes both route endpoints.
+  const seen = new Set<string>();
+
+  yachtStore.offersToDisplay = offers.filter(o => {
+    const key = `${o.dateFrom}|${o.dateTo}|${o.status}|${o.locationFrom?.id ?? ''}|${o.locationTo?.id ?? ''}`;
+
+    if (seen.has(key)) return false;
+
+    seen.add(key);
+
+    return true;
+  });
 };
 
 export const resetData = () => {

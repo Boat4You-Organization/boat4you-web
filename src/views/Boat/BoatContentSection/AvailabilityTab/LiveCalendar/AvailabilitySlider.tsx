@@ -92,7 +92,24 @@ const toWeek = (offer: YachtOfferModel): WeekData => {
 const AvailabilitySlider = ({ yacht }: AvailabilitySliderProps) => {
   const { isBelowLg } = useBreakpoint();
   const [standardOffers, standardOffersAction] = useActionState(getSingleYachtStandardOffers, []);
-  const safeYachtOffers = useMemo(() => (Array.isArray(standardOffers) ? standardOffers : []), [standardOffers]);
+  // Dedupe by week+status (20.7.2026): duplicate offer rows in the DB drew
+  // the same week card 24x on this strip. The DB has a unique guard now, but
+  // the strip must stay one-card-per-week whatever the payload contains.
+  const safeYachtOffers = useMemo(() => {
+    if (!Array.isArray(standardOffers)) return [];
+
+    const seen = new Set<string>();
+
+    return standardOffers.filter(o => {
+      const key = `${o.dateFrom}|${o.dateTo}|${o.status}`;
+
+      if (seen.has(key)) return false;
+
+      seen.add(key);
+
+      return true;
+    });
+  }, [standardOffers]);
   // boat4you selects a week by writing startDate/endDate to the URL — the
   // blue AvailabilityDateSelector + offer detail card react to those params
   // (same channel the legacy week-cards picker used). No valtio date actions
