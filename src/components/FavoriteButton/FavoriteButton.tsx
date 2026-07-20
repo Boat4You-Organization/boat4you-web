@@ -17,9 +17,10 @@ interface FavoriteButtonProps {
   yacht: YachtModelLocalStorage;
   color?: string;
   buttonText?: string;
+  className?: string;
 }
 
-const FavoriteButton = ({ yacht, color, buttonText }: FavoriteButtonProps) => {
+const FavoriteButton = ({ yacht, color, buttonText, className }: FavoriteButtonProps) => {
   const t = useTranslations('common');
   const [favorites, setFavorites] = useLocalStorage<YachtModelLocalStorage[]>('favorites', []);
 
@@ -98,7 +99,7 @@ const FavoriteButton = ({ yacht, color, buttonText }: FavoriteButtonProps) => {
     <IconButton
       onClick={handleClick}
       classes={{ root: styles.root }}
-      className={cx(styles.container, {
+      className={cx(styles.container, className, {
         [styles.active]: isFavorite,
       })}
       aria-label={ariaLabel}

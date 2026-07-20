@@ -3,10 +3,43 @@
 @use '@/styles/mixins/breakpoints' as *;
 
 .container {
+  // Mobile flips to photo-first (title below the image, Boataround-style,
+  // Mario 20.7.2026) via flex order — a single H1 stays in the DOM.
+  display: flex;
+  flex-direction: column;
+
+  .titleRow {
+    @include media(0, 'sm') {
+      order: 2;
+
+      h1 {
+        font-size: rem-calc(24);
+        line-height: 1.25;
+        font-weight: 800;
+      }
+    }
+  }
+
+  .galleryWrap {
+    position: relative;
+
+    @include media(0, 'sm') {
+      order: 1;
+      // The AppBar is position:fixed — with the photo now first on mobile it
+      // takes over the clearance the old pt-11 title row used to provide.
+      margin-top: rem-calc(76);
+    }
+  }
+
   .imageWrapper {
     position: relative;
     width: rem-calc(28);
     height: rem-calc(28);
+
+    @include media(0, 'sm') {
+      width: rem-calc(20);
+      height: rem-calc(20);
+    }
 
     .image {
       width: 100%;
@@ -15,11 +48,28 @@
     }
   }
 
-  .iconsMobile {
+  // Circular photo-overlay actions (PDF / share / favorite) — mobile only.
+  .imageActions {
     display: none;
 
     @include media(0, 'sm') {
       display: flex;
+      position: absolute;
+      top: rem-calc(12);
+      right: rem-calc(12);
+      z-index: 2;
+    }
+  }
+
+  .imageActionBtn {
+    width: rem-calc(40);
+    height: rem-calc(40);
+    background-color: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 rem-calc(2) rem-calc(8) rgba(15, 23, 42, 0.18);
+
+    &:hover,
+    &:active {
+      background-color: $white;
     }
   }
 

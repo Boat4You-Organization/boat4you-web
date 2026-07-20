@@ -171,9 +171,9 @@ const ChangeDatesContent = ({ yacht, isCalculatedPrice, isSelectedOfferUnavailab
         <Stack pt={3} spacing={2}>
           <FormDateInput
             name="startDate"
-            formLabel="Start date"
+            formLabel={t('startDate')}
             type="text"
-            placeholder="Pick Date"
+            placeholder={t('pickDate')}
             onClick={toggleModal}
             slotProps={{
               input: {
@@ -188,9 +188,9 @@ const ChangeDatesContent = ({ yacht, isCalculatedPrice, isSelectedOfferUnavailab
           />
           <FormDateInput
             name="endDate"
-            formLabel="End date"
+            formLabel={t('endDate')}
             type="text"
-            placeholder="Pick Date"
+            placeholder={t('pickDate')}
             onClick={toggleModal}
             slotProps={{
               input: {

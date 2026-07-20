@@ -1,7 +1,7 @@
 'use client';
 
 /* eslint-disable no-nested-ternary */
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { Box, Button, Stack, Typography } from '@mui/material';
 import dayjs from 'dayjs';
@@ -43,6 +43,18 @@ const BoatMobileNavigation = ({ yacht }: BoatMobileNavigationProps) => {
   const { params, setMultipleParams } = useQueryParams();
   const [isModalOpen, toggleModal] = useToggleState();
   const [modalVariant, setModalVariant] = useState<'price' | 'dates' | null>(null);
+  // The bar used to cover ~20% of the first screen (Mario 20.7.2026) — slide it
+  // in only once the visitor starts scrolling, Boataround-style.
+  const [revealed, setRevealed] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setRevealed(window.scrollY > 160);
+
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   const initialValues =
     params.startDate && params.endDate
@@ -144,7 +156,7 @@ const BoatMobileNavigation = ({ yacht }: BoatMobileNavigationProps) => {
 
         return (
           <>
-            <Box className={styles.container}>
+            <Box className={revealed ? `${styles.container} ${styles.revealed}` : styles.container}>
               <Stack direction="row" justifyContent="space-between">
                 <Typography variant="body1">{t('totalPrice')}</Typography>
                 {isInquireFlow ? (

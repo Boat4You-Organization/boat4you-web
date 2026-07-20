@@ -60,7 +60,15 @@ const BoatHeroSection = ({ yacht }: BoatHeroSectionProps) => {
       <BoatShareModal open={isOpen} onOpen={toggeIsOpen} onClose={toggeIsOpen} yacht={yacht} />
       {mapMarinaName && <BoatLocationModal open={isMapOpen} onClose={closeMap} locationName={mapMarinaName} />}
       <Container component="section" maxWidth="xl" disableGutters className={styles.container}>
-        <Stack direction="row" justifyContent="space-between" alignItems="center" pt={11} pb={2}>
+        {/* Mobile order flips via CSS (title below the photo, Boataround-style,
+            Mario 20.7.2026) — single H1 in the DOM either way. */}
+        <Stack
+          direction="row"
+          justifyContent="space-between"
+          alignItems="center"
+          className={styles.titleRow}
+          sx={{ pt: { xs: 2, sm: 11 }, pb: { xs: 1, sm: 2 } }}
+        >
           <Stack direction="column" spacing={0.5}>
             <Typography component="h1" variant="h2" color={colors.black950}>
               {yacht.model} | {toTitleCase(yacht.name)}
@@ -131,24 +139,6 @@ const BoatHeroSection = ({ yacht }: BoatHeroSectionProps) => {
               </Stack>
             )}
           </Stack>
-          <Stack direction="row" spacing={2} className={styles.iconsMobile}>
-            <IconButton onClick={downloadYachtPDF} disabled={isDownloading} aria-label={t('pdfDownload')}>
-              {isDownloading ? (
-                <CircularProgress size={20} sx={{ color: colors.black950 }} />
-              ) : (
-                <FileDownloadOutlined sx={{ fontSize: 22, color: colors.black950 }} />
-              )}
-            </IconButton>
-            <IconButton onClick={toggeIsOpen} aria-label={t('share')}>
-              <Icon>
-                <Share size={20} fill={colors.black950} />
-              </Icon>
-            </IconButton>
-            <FavoriteButton
-              yacht={{ ...yacht, mainImageId: yacht.yachtImages.find(el => el.mainImage)?.id || 0 }}
-              color={colors.black950}
-            />
-          </Stack>
           <Stack direction="row" spacing={2} className={styles.iconsDesktop}>
             <Button
               variant="containedInfo"
@@ -168,7 +158,34 @@ const BoatHeroSection = ({ yacht }: BoatHeroSectionProps) => {
             />
           </Stack>
         </Stack>
-        <Gallery yacht={yacht} />
+        <Box className={styles.galleryWrap}>
+          <Gallery yacht={yacht} />
+          {/* Boataround-style circular actions ON the photo (mobile only). */}
+          <Stack direction="row" spacing={1} className={styles.imageActions}>
+            <IconButton
+              className={styles.imageActionBtn}
+              onClick={downloadYachtPDF}
+              disabled={isDownloading}
+              aria-label={t('pdfDownload')}
+            >
+              {isDownloading ? (
+                <CircularProgress size={18} sx={{ color: colors.black950 }} />
+              ) : (
+                <FileDownloadOutlined sx={{ fontSize: 20, color: colors.black950 }} />
+              )}
+            </IconButton>
+            <IconButton className={styles.imageActionBtn} onClick={toggeIsOpen} aria-label={t('share')}>
+              <Icon sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <Share size={18} fill={colors.black950} />
+              </Icon>
+            </IconButton>
+            <FavoriteButton
+              yacht={{ ...yacht, mainImageId: yacht.yachtImages.find(el => el.mainImage)?.id || 0 }}
+              color={colors.black950}
+              className={styles.imageActionBtn}
+            />
+          </Stack>
+        </Box>
       </Container>
     </>
   );

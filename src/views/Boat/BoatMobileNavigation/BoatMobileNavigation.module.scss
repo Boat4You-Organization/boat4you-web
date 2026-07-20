@@ -15,11 +15,19 @@
   border-top: rem-calc(1) solid $black-200;
   box-shadow: $box-shadow-caledar-navigation;
   display: none;
+  // Hidden until the visitor scrolls (Mario 20.7.2026) — slides up from the
+  // bottom instead of covering the first screen.
+  transform: translateY(110%);
+  transition: transform 0.25s ease;
 
   @include media(0, 'md') {
     display: flex;
     flex-direction: column;
     gap: rem-calc(16);
+  }
+
+  &.revealed {
+    transform: translateY(0);
   }
 
   .price {
