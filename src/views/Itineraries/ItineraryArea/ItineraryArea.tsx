@@ -6,6 +6,7 @@ import { Box, Container, Stack, Typography } from '@mui/material';
 import { useTranslations } from 'next-intl';
 
 import { itineraries } from '@/config/itineraries.config';
+import { isOneWayItinerary } from '@/helper/itineraryDaysHelper';
 import { itineraryNamespace, resolveAreaText, resolveRouteText } from '@/helper/itineraryI18n';
 import { Link } from '@/i18n/navigation';
 import colors from '@/styles/themes/colors';
@@ -208,9 +209,7 @@ const ItineraryArea: FC<ItineraryAreaProps> = ({ slug }) => {
         >
           {filteredRoutes.map((route, i) => {
             const days = route.routeDays?.length ?? 7;
-            const oneWay =
-              (route.otherPoints?.length ?? 0) > 0 &&
-              route.otherPoints[route.otherPoints.length - 1] !== route.startingPoint;
+            const oneWay = isOneWayItinerary(route);
             const pathLabel = formatRoutePath(route.startingPoint, route.otherPoints || []);
             const metaDesc = resolveRouteText(route, 'metaDesc', route.metaDesc, tArea);
 

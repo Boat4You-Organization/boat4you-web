@@ -156,7 +156,7 @@ const genovaRoute: ItineraryRoute = {
     {
       id: 'vado-ligure-cogoleto-genova',
       routeFrom: 'Vado Ligure',
-      routeTo: 'Cogoleto',
+      routeTo: 'Genova',
       day: 7,
       mapPin: {
         desktop: { left: 30.6, top: 25.2 },

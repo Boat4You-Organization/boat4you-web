@@ -157,7 +157,7 @@ const lavagnaRoute: ItineraryRoute = {
     {
       id: 'anzo-setta-portofino-lavagna',
       routeFrom: 'Anzo-Setta',
-      routeTo: 'Portofino',
+      routeTo: 'Lavagna',
       day: 7,
       mapPin: {
         desktop: { left: 4.4, top: 22.7 },

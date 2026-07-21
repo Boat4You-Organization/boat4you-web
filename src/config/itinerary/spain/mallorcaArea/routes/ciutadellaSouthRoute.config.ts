@@ -155,7 +155,7 @@ const ciutadellaSouthRoute: ItineraryRoute = {
     {
       id: 'cala-sant-vicenc-cala-en-bosch-ciutadella',
       routeFrom: 'Cala Sant Vicenç',
-      routeTo: 'Cala en Bosch',
+      routeTo: 'Ciutadella',
       day: 7,
       mapPin: {
         desktop: { left: 71.9, top: 22.2 },

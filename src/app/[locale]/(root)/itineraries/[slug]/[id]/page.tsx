@@ -8,6 +8,7 @@ import { notFound } from 'next/navigation';
 import Layout from '@/components/Layout';
 import { itineraries } from '@/config/itineraries.config';
 import { LocaleType } from '@/config/locales.config';
+import { isOneWayItinerary } from '@/helper/itineraryDaysHelper';
 import { itineraryNamespace, resolveDayText, resolveRouteText } from '@/helper/itineraryI18n';
 import { buildBreadcrumbJsonLd, buildTouristTripJsonLd } from '@/utils/static/buildItineraryJsonLd';
 import { buildMetadata } from '@/utils/static/buildMetadata';
@@ -140,9 +141,7 @@ const ItineraryRoutePage = async ({ params }: ItineraryRoutePageParams) => {
 
   const routePath = [itineraryRoute.startingPoint, ...itineraryRoute.otherPoints].join(' – ');
   const days = itineraryRoute.routeDays?.length ?? 7;
-  const oneWay =
-    (itineraryRoute.otherPoints?.length ?? 0) > 0 &&
-    itineraryRoute.otherPoints[itineraryRoute.otherPoints.length - 1] !== itineraryRoute.startingPoint;
+  const oneWay = isOneWayItinerary(itineraryRoute);
 
   return (
     <Layout>

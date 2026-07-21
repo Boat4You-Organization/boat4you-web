@@ -156,7 +156,7 @@ const ciutadellaRoute: ItineraryRoute = {
     {
       id: 'mao-port-d-addaia-ciutadella',
       routeFrom: 'Maó',
-      routeTo: "Port d'Addaia",
+      routeTo: 'Ciutadella',
       day: 7,
       mapPin: {
         desktop: { left: 93.8, top: 16.1 },

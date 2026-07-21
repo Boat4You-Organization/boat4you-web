@@ -156,7 +156,7 @@ const palmaDeMallorcaRoute: ItineraryRoute = {
     {
       id: 'porto-cristo-can-pastilla-palma',
       routeFrom: 'Porto Cristo',
-      routeTo: "Ca'n Pastilla",
+      routeTo: 'Palma de Mallorca',
       day: 7,
       mapPin: {
         desktop: { left: 22.4, top: 59.4 },

@@ -158,7 +158,7 @@ const palamosRoute: ItineraryRoute = {
     {
       id: 'calella-mataro-palamos',
       routeFrom: 'Calella',
-      routeTo: 'Mataró',
+      routeTo: 'Palamós',
       day: 7,
       mapPin: {
         desktop: { left: 68.5, top: 39.7 },

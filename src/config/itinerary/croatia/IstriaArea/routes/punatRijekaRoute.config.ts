@@ -157,8 +157,8 @@ const punatRijekaRoute: ItineraryRoute = {
     },
     {
       id: 'baska-lopar-rab-punat',
-      routeFrom: 'Punat',
-      routeTo: 'Lopar (Rab)',
+      routeFrom: 'Baška (Krk)',
+      routeTo: 'Punat',
       day: 7,
       mapPin: {
         desktop: { left: 52.1, top: 29 },

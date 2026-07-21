@@ -155,7 +155,7 @@ const marbellaRoute: ItineraryRoute = {
     {
       id: 'torre-de-benagalbon-churriana-marbella',
       routeFrom: 'Torre de Benagalbón',
-      routeTo: 'Churriana',
+      routeTo: 'Marbella',
       day: 7,
       mapPin: {
         desktop: { left: 93.2, top: 23.9 },

@@ -154,7 +154,7 @@ const sitgesRoute: ItineraryRoute = {
     {
       id: 'mataro-barcelona-sitges',
       routeFrom: 'Mataró',
-      routeTo: 'Barcelona',
+      routeTo: 'Sitges',
       day: 7,
       mapPin: {
         desktop: { left: 58.9, top: 48.3 },

@@ -178,7 +178,7 @@ const trogirKornatiKrkaRoute: ItineraryRoute = {
     {
       id: 'rogoznica-split',
       routeFrom: 'Rogoznica',
-      routeTo: 'Split',
+      routeTo: 'Trogir',
       day: 7,
       mapPin: {
         desktop: { left: 31.6, top: 28.8 },
