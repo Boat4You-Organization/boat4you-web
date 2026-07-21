@@ -25,6 +25,7 @@
 
     @include media(0, 'sm') {
       order: 1;
+
       // The AppBar is position:fixed — with the photo now first on mobile it
       // takes over the clearance the old pt-11 title row used to provide.
       margin-top: rem-calc(76);
@@ -64,8 +65,8 @@
   .imageActionBtn {
     width: rem-calc(40);
     height: rem-calc(40);
-    background-color: rgba(255, 255, 255, 0.92);
-    box-shadow: 0 rem-calc(2) rem-calc(8) rgba(15, 23, 42, 0.18);
+    background-color: rgb(255 255 255 / 92%);
+    box-shadow: 0 rem-calc(2) rem-calc(8) rgb(15 23 42 / 18%);
 
     &:hover,
     &:active {

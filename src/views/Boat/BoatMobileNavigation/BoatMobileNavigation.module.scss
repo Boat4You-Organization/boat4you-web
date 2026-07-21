@@ -15,6 +15,7 @@
   border-top: rem-calc(1) solid $black-200;
   box-shadow: $box-shadow-caledar-navigation;
   display: none;
+
   // Hidden until the visitor scrolls (Mario 20.7.2026) — slides up from the
   // bottom instead of covering the first screen.
   transform: translateY(110%);
