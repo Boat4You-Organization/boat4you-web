@@ -1,1 +1,255 @@
-{}
+{
+  "routes": {
+    "baltic-danish-isles-week": {
+      "metaTitle": "Baltico tedesco e isole danesi 7 giorni | Boat4You",
+      "metaDesc": "Una settimana da Heiligenhafen attraverso il Fehmarn Belt fino a Langeland, Aero e Sonderborg. Consigli su porto, ormeggio e terra per ogni giorno.",
+      "days": {
+        "1": {
+          "shortDescription": "Una breve tappa di rodaggio fino a Fehmarn, con arrivo al moderno porto di Burgtiefe e alla lunga lingua di sabbia del Suedstrand.",
+          "description": "La maggior parte degli equipaggi usa il primo giorno per ambientarsi più che per macinare miglia, e questa tappa si presta bene. È una navigazione tranquilla di una decina di miglia dalla marina base di Heiligenhafen, giù e intorno fino a Burgtiefe, sulla costa meridionale di Fehmarn. Molla gli ormeggi verso metà mattina, controlla le cime dei terzaroli e le manovelle dei winch durante la traversata, e ormeggerai con ancora tutto il pomeriggio davanti.\n\nBurgtiefe è la più nuova e spaziosa delle marine di Fehmarn, ben riparata dietro la lingua di sabbia. Alle sue spalle si stende il Suedstrand, tre chilometri di spiaggia fatti apposta per una lunga passeggiata a piedi nudi una volta messi i parabordi. Fai qui i rifornimenti se li hai saltati a Heiligenhafen. I chioschi vicino al porto hanno l'essenziale, e il blocco docce è abbastanza pulito da mandare tutti a bordo contenti.",
+          "thingsToDo": [
+            "Cammina i tre chilometri della spiaggia del Suedstrand",
+            "Fai rifornimento ai chioschi del porto di Burgtiefe",
+            "Pedala sulle strade pianeggianti fino al paese di Burg",
+            "Un aperitivo al tramonto sulla terrazza della marina di Burgtiefe"
+          ],
+          "mooringTip": "Burgtiefe ha posti barca tra i pali su pontili a finger, non un ormeggio di poppa alla banchina, quindi prepara le cime di prua e uno spring di mezza barca prima di entrare. A inizio stagione si riempie di rado, ma a luglio arriva prima delle cinque, quando si accumula la flotta diretta in Danimarca."
+        },
+        "2": {
+          "shortDescription": "La principale traversata in mare aperto dell'itinerario, sopra il Fehmarn Belt fino a Bagenkop, il vecchio e salmastro porto di pesca sulla punta meridionale di Langeland.",
+          "description": "È il giorno in cui attraversi un vero tratto di mare aperto. Il Fehmarn Belt è largo circa diciotto chilometri con venti-trenta metri sotto la chiglia, e il vento estivo di solito si assesta tra ovest e sud-ovest, il che regala un buon lasco su verso Langeland. Le correnti qui sono deboli e per lo più generate dal vento, quindi tieni d'occhio le rotte del traffico mercantile più che la marea.\n\nBagenkop è quello vero: un porto di pesca ancora attivo che sa di catrame e sale. Se una barca da posta fissa ha appena scaricato il pescato, compra il pesce direttamente sulla banchina. Sali sulla torre di dieci metri tra il vecchio approdo del traghetto e la marina per il tramonto, poi prenota un tavolo al Bagenkop Kro, il cui buffet di pesce apre alle sei. Il mercoledì sera la musica dal vivo anima il palco del porto.",
+          "thingsToDo": [
+            "Compra il pescato fresco sulla banchina di Bagenkop",
+            "Sali sulla torre panoramica di dieci metri del porto",
+            "Prenota il buffet di pesce al Bagenkop Kro",
+            "Ascolta la musica dal vivo del mercoledì sul palco del porto"
+          ],
+          "mooringTip": "A Bagenkop si ormeggia di poppa o all'inglese sul lato della marina; il vecchio bacino da pesca è più profondo ma riservato alle barche da lavoro. Prendi un posto tra i pali vicino all'edificio dei servizi, dove ci sono cucina e docce gratuite, e paga le tasse portuali alla macchinetta prima di allontanarti."
+        },
+        "3": {
+          "shortDescription": "Su lungo la costa di Langeland e poi verso Marstal, la 'Skippertown' cantieristica di Aero, con ampi pontili e un museo pieno di velieri in bottiglia.",
+          "description": "Una comoda navigazione di una quindicina di miglia, prima a nord lungo la costa occidentale di Langeland, poi a ovest fino all'estremità orientale di Aero. Con un vento da ovest che rinforza potresti trovarti di bolina stretta durante la traversata, quindi una mano di terzaroli presa per tempo ti risparmia grane dopo.\n\nMarstal si è guadagnata onestamente il soprannome di Skippertown. Un tempo era la seconda città armatoriale della Danimarca, e i piccoli cantieri lungo il porto rimettono ancora in sesto scafi di legno. Dedica un'ora al Marstal Maritime Museum, dove i modellini e i velieri in bottiglia raccontano la storia dell'isola meglio di qualsiasi targa. Il lungomare è costeggiato da lunghi pontili di legno, e la cittadina conserva un'anima da porto di lavoro più che da cartolina. Un gelato in banchina e poi una passeggiata lenta tra i cantieri: così la maggior parte degli equipaggi passa la serata.",
+          "thingsToDo": [
+            "Visita i velieri in bottiglia del Marstal Maritime Museum",
+            "Osserva i cantieri di scafi in legno lungo il porto",
+            "Passeggia sui lunghi pontili di legno all'imbrunire",
+            "Un gelato sul lungomare di Marstal"
+          ],
+          "mooringTip": "La marina di Marstal si trova all'estremità nord, oltre la banchina commerciale; ormeggia di poppa sulla tua ancora o in un posto tra i pali secondo le indicazioni. Verso gli angoli interni i fondali calano, quindi preferisci i pontili esterni se peschi più di due metri."
+        },
+        "4": {
+          "shortDescription": "Una breve e pigra tappa intorno ad Aero fino ad Aeroskobing, cittadina del dodicesimo secolo fatta di case pastello, vicoli acciottolati e cabine da bagno dipinte.",
+          "description": "La tappa più corta della settimana, appena sette miglia intorno al lato sud e ovest dell'isola. Non c'è motivo di partire presto. Fatti un bagno dalla barca, lascia dormire l'equipaggio, e sarai comunque ormeggiato ad Aeroskobing ben prima di pranzo.\n\nÈ questa cittadina il motivo per cui si torna ad Aero. I suoi vicoli risalgono al dodicesimo secolo, lastricati di ciottoli e fiancheggiati da case dipinte in gialli tenui, ocra e azzurri pallidi, con le porte che si aprono direttamente sulla strada. Spingiti fino alla spiaggia sul lato nord per vedere la fila di cabine da bagno dai colori allegri, poi torna per cena; i ristoranti di pesce vicino al porto sono davvero buoni. Qui le serate si placano presto, ed è proprio questo, per molti equipaggi, il bello.",
+          "thingsToDo": [
+            "Perditi tra i vicoli acciottolati del dodicesimo secolo",
+            "Fotografa le cabine da bagno dipinte sulla spiaggia",
+            "Mangia pesce fresco vicino al porto di Aeroskobing",
+            "Guarda il porto placarsi all'imbrunire"
+          ],
+          "mooringTip": "Il porto di Aeroskobing è piccolo e molto frequentato a luglio, quindi conviene arrivare nel primo pomeriggio; ormeggiarsi a pacchetto in due o tre barche è normale e previsto. Ci si ormeggia all'inglese o di poppa ai pontili, e in alta stagione l'ufficio del porto ti assegna il posto invece di lasciarlo a chi arriva prima."
+        },
+        "5": {
+          "shortDescription": "A ovest verso l'isola di Als e dentro a Sonderborg, con ormeggio ai piedi di un castello del dodicesimo secolo affacciato sull'acqua, a due passi dal centro.",
+          "description": "Oggi una ventina di miglia verso ovest, lasciandosi alle spalle il gruppo di Aero e attraversando verso l'isola di Als. L'avvicinamento a Sonderborg passa per lo stretto sotto il ponte di Re Christian X, quindi chiama in anticipo per gli orari di apertura e tieni d'occhio il traffico dei traghetti. Il vento tende di nuovo a ovest, regalando una buona veleggiata per gran parte del percorso.\n\nSonderborg è la città più grande dell'itinerario e accoglie oltre quattordicimila barche in visita all'anno, quindi i servizi sono ottimi. Ormeggia nel porto sud e il castello di Sonderborg ti sovrasta, una mole di mattoni rossi del dodicesimo secolo che oggi ospita il museo di storia regionale. La via dello shopping è a due minuti dalla banchina, la spiaggia cittadina è vicina, e dall'altra parte dell'acqua il mulino di Dybbol segna la collina dell'antico campo di battaglia.",
+          "thingsToDo": [
+            "Visita il museo di storia del castello di Sonderborg",
+            "Fai un bagno nella spiaggia cittadina vicino alla marina",
+            "Gironzola per la via dello shopping accanto alla banchina",
+            "Guarda oltre l'acqua verso la collina del mulino di Dybbol"
+          ],
+          "mooringTip": "Punta al porto sud tra il ponte e il castello, invece che alla Marina Fiskenaes, se vuoi stare nel cuore della città; si ormeggia all'inglese e di poppa, con fondali sufficienti per la maggior parte delle chiglie. Nelle settimane di punta chiama l'ormeggiatore mentre entri, perché i posti centrali vanno via per primi."
+        },
+        "6": {
+          "shortDescription": "Il lungo lasco di ritorno verso sud-est fino a Bagenkop, occasione per veleggiare deciso in mare aperto e rientrare nel porto di pesca di Langeland.",
+          "description": "Il rientro verso casa comincia con una bella navigazione di una ventina di miglia giù fino a Langeland. Con il dominante vento da ovest al traverso, è spesso la veleggiata migliore della settimana: barca sbandata e in movimento, Als che cala a poppa. Regola la partenza sul vento più che sull'orologio; se soffia forte da ovest, partire prima ti fa arrivare prima che rinforzi.\n\nTornare a Bagenkop la seconda volta è diverso. Ormai conosci il porto, quindi niente corsa al posto barca. È la serata giusta per recuperare quello che ti sei perso all'andata: pesce affumicato alle bancarelle del porto, o una birra in banchina mentre le barche da posta fissa vanno e vengono. Il tramonto dalla torre panoramica vale la salita anche la seconda volta.",
+          "thingsToDo": [
+            "Assaggia il pesce affumicato alle bancarelle del porto",
+            "Sali sulla torre panoramica per un secondo tramonto",
+            "Guarda le barche da posta fissa lavorare in banchina",
+            "Fai carburante e acqua prima dell'ultima tappa"
+          ],
+          "mooringTip": "A questo punto conoscerai la disposizione: posti tra i pali vicino all'edificio dei servizi, acqua più profonda nel vecchio bacino. Se le previsioni per la traversata finale danno vento fresco, prendi un posto sul lato interno riparato, così al mattino non dovrai lottare per staccare la barca dal pontile."
+        },
+        "7": {
+          "shortDescription": "L'ultima traversata sopra il Fehmarn Belt fino a Heiligenhafen, la tappa in mare aperto più lunga e un degno ultimo giorno in mare.",
+          "description": "L'ultima tappa è la traversata più lunga della settimana, circa venticinque miglia da Bagenkop di nuovo attraverso il Fehmarn Belt fino alla base di Heiligenhafen. Parti entro le nove per avere margine, e controlla le previsioni la sera prima, perché un forte vento da ovest in prua può trasformarla in una lunga faticata.\n\nGran parte della giornata è mare aperto, con la bassa linea verde di Fehmarn che sale lentamente all'orizzonte. Tieniti lontano dal traffico mercantile nel belt e mantieni la rotta verso l'imboccatura di Heiligenhafen, ben segnalata man mano che ti avvicini alla costa. Superati i moli esterni, entrare in marina è semplice. Fai carburante, sciacqua i wc di bordo e riconsegna la barca in ordine; di solito c'è tempo per un ultimo piatto di pesce sul porto prima di rimettersi in viaggio.",
+          "thingsToDo": [
+            "Guarda Fehmarn spuntare all'orizzonte",
+            "Fai carburante e salda il conto alla marina di Heiligenhafen",
+            "Un ultimo piatto di pesce sul porto prima di partire",
+            "Riconsegna la barca sciacquata e in ordine"
+          ],
+          "mooringTip": "La marina di Heiligenhafen è ampia e ben segnalata; segui il canale segnalato dalle boe in entrata e prendi il posto di riconsegna assegnato invece di sceglierne uno a piacere. Prenota il carburante in anticipo se ti serve il pieno per la riconsegna, perché la pompa può fare coda nelle mattine del cambio del sabato."
+        }
+      }
+    },
+    "baltic-fyn-circle-14-days": {
+      "metaTitle": "Baltico tedesco e isole danesi 14 giorni | Boat4You",
+      "metaDesc": "Due settimane da Heiligenhafen attraverso il Fehmarn Sound fino a Ærø, Svendborg, Faaborg e Als, poi rientro nell'arcipelago della Fionia meridionale.",
+      "days": {
+        "1": {
+          "shortDescription": "Una tranquilla tappa di rodaggio in uscita da Heiligenhafen, sotto il ponte del Fehmarn Sound e intorno fino alla grande e moderna marina di Burgtiefe.",
+          "description": "La maggior parte degli equipaggi usa questo primo giorno per collaudare la barca più che per rincorrere miglia. Superi il lungo frangiflutti di Heiligenhafen, metti la prua a ovest e passi sotto il ponte del Fehmarn Sound che collega l'isola alla terraferma. Da lì è un breve lasco fin sotto Burgtiefe, sulla costa sud di Fehmarn.\n\nLa marina è la più nuova e spaziosa delle cinque dell'isola, con circa 600 posti barca disposti dietro un caratteristico bacino circolare. Carburante, un negozio nautico e docce calde sono tutti in loco, quindi è il posto giusto per sistemare l'attrezzatura prima della traversata in mare aperto di domani.\n\nA terra, il Südstrand si stende per chilometri di sabbia chiara, amato da chi fa kitesurf e windsurf quando la brezza rinforza. Vai a letto presto. Il salto verso la Danimarca vuole un equipaggio riposato e previsioni stabili.",
+          "thingsToDo": [
+            "Cammina la lunga spiaggia da kitesurf del Südstrand",
+            "Fai il pieno di carburante alla stazione di Burgtiefe",
+            "Rifornisci la cambusa nel paese di Burg",
+            "Guarda i windsurfisti al largo della costa sud di Fehmarn"
+          ],
+          "mooringTip": "Burgtiefe ha posto per gli ospiti anche ad agosto, quindi prenotare è raramente indispensabile, ma chiama in anticipo in un fine settimana d'estate. I posti tra i pali richiedono cime di poppa ai dalben, e nel bacino i fondali si mantengono sui 3 metri."
+        },
+        "2": {
+          "shortDescription": "La vera traversata del Baltico verso nord fino alla Danimarca, mare aperto fino al porto di pesca dalle casette di legno rosso di Bagenkop, a Langeland.",
+          "description": "È la tappa che sa davvero di traversata. Una volta lasciata Fehmarn, tra te e la punta meridionale di Langeland c'è poco: una ventina di miglia di Baltico aperto con la costa che cala a poppa. Un vento da sud-ovest regala un comodo lasco; qualcosa da nord-ovest la rende una bolina più bagnata, quindi di solito aspettiamo la finestra giusta invece di forzare.\n\nBagenkop si trova all'estremità sud di Langeland, un porto di pesca attivo dove capannoni di legno rosso costeggiano la banchina. È senza pretese, e proprio per questo migliore. L'affumicatoio vicino al porto vende pesce appena sbarcato, e le dune e la riserva naturale a sud del paese sono perfette per sgranchirsi le gambe dopo una giornata al timone.\n\nQui si issa la prima bandiera di cortesia danese del viaggio.",
+          "thingsToDo": [
+            "Compra pesce affumicato all'affumicatoio del porto",
+            "Cammina tra le dune a sud di Bagenkop",
+            "Avvista gli uccelli nella riserva costiera",
+            "Issa la bandiera di cortesia danese"
+          ],
+          "mooringTip": "Bagenkop è una sosta semplice, all'inglese o in un posto tra i pali, ben riparata, ma si riempie di equipaggi che fanno la stessa traversata. A luglio arriva entro metà pomeriggio per assicurarti un posto verso il lato dell'affumicatoio."
+        },
+        "3": {
+          "shortDescription": "Un breve salto fino a Ærø e Marstal, un tempo seconda città armatoriale della Danimarca, ancora circondata da cantieri navali e velerie.",
+          "description": "Una giornata più tranquilla dopo la traversata. Lasci Bagenkop e fai rotta a ovest attraverso l'imbocco dell'arcipelago fino a Ærø, la lunga isola bassa che fa da perno a tutta questa zona di crociera. Una quindicina di miglia, di solito al traverso.\n\nMarstal si merita la sosta. Nell'epoca della vela era il secondo porto della Danimarca dopo Copenaghen, e la cittadina profuma ancora leggermente di catrame e vernice. Il Marstal Maritime Museum si distribuisce su diverse vecchie case e vale un pomeriggio, zeppo di modellini, polene e la storia delle flotte di golette costruite proprio su questa riva. Gironzola sul fronte del porto, osserva uno scafo di legno che torna in vita in uno dei cantieri, poi trova un tavolo per la sera. Qui il ritmo è lento apposta.",
+          "thingsToDo": [
+            "Visita il Marstal Maritime Museum",
+            "Osserva la costruzione di barche in legno nei cantieri",
+            "Cammina sul lungo frangiflutti del porto costruito a mano",
+            "Gironzola sul fronte del porto profumato di catrame"
+          ],
+          "mooringTip": "Il porto turistico di Marstal si trova appena a ovest della banchina commerciale; dirigiti ai pontili ospiti invece che al bacino da pesca. I fondali sono buoni, ma i posti esterni rollano un po' con un fresco vento da sud, quindi infilati all'interno se puoi."
+        },
+        "4": {
+          "shortDescription": "A nord tra le isole fino al Svendborgsund, lo stretto più trafficato della Danimarca, con arrivo alla vivace cittadina marinara di Svendborg.",
+          "description": "Oggi navighi nel cuore dell'arcipelago. Da Marstal la rotta punta a nord, insinuandosi tra Ærø, Tåsinge e una manciata di isole più piccole finché l'acqua si restringe nel Svendborgsund. Lo stretto serpeggia come un fiume tra rive boscose ed è considerato il tratto più navigato di tutta la Danimarca, quindi tieni gli occhi ben aperti per il piccolo vaporetto M/S Helge, che sbuffa su e giù da queste parti da oltre un secolo.\n\nSvendborg è una vera cittadina di lavoro, la seconda della Fionia, con la marina a due passi da negozi e stazione. Il Frederiksøens Fiskebar, sulla vecchia isola dei cantieri, serve buon pesce in riva all'acqua. Se hai un'ora, passa a Tåsinge per il Valdemars Slot, una residenza signorile con fossato che risale agli anni Quaranta del Seicento.",
+          "thingsToDo": [
+            "Mangia pesce al Frederiksøens Fiskebar",
+            "Visita il Valdemars Slot a Tåsinge",
+            "Guarda passare il vaporetto M/S Helge",
+            "Perditi tra i vecchi vicoli del porto di Svendborg"
+          ],
+          "mooringTip": "Svendborg ha diversi bacini; vanno bene sia il porto ospiti su Frederiksø sia la marina a est del ponte. È uno snodo trafficato, quindi punta a ormeggiare entro il tardo pomeriggio, e attenzione alla corrente che scorre nel sund."
+        },
+        "5": {
+          "shortDescription": "Una classica giornata d'arcipelago verso ovest fino a Faaborg, passando per Lyø e Avernakø, con arrivo ai piedi della vecchia torre campanaria della città.",
+          "description": "Alcuni skipper la definiscono la tappa più bella delle due settimane, ed è difficile dargli torto. Lasciando il Svendborgsund pieghi a ovest attraverso l'acqua aperta dell'arcipelago, con i bassi dossi verdi di Lyø e Avernakø a sinistra. Entrambe meritano una deviazione se la giornata è ancora giovane; il minuscolo porto di Lyø e il suo villaggio con lo stagno delle anatre sono una cartolina danese.\n\nFaaborg attende sulla costa della Fionia. Vie acciottolate salgono dalla banchina fino al medievale Klokketårnet, la vecchia torre campanaria, e la salita dei suoi gradini si ripaga con tetti e mare distesi sotto di te. Il Faaborg Museum custodisce la migliore collezione al mondo dei pittori della Fionia. Giù verso la marina, caffè e bancarelle di pesce costeggiano l'acqua, e il gelato del porto è ormai un'istituzione.",
+          "thingsToDo": [
+            "Sali sulla torre campanaria Klokketårnet di Faaborg",
+            "Ammira i pittori della Fionia al Faaborg Museum",
+            "Devia verso il villaggio portuale di Lyø",
+            "Assaggia il gelato del fronte porto"
+          ],
+          "mooringTip": "Il porto ospiti di Faaborg si trova proprio sotto il centro storico, comodo per tutto ciò che c'è a terra. In piena estate può affollarsi; se i posti interni sono pieni, i pontili più nuovi a est hanno buoni fondali e si riempiono di rado."
+        },
+        "6": {
+          "shortDescription": "Di nuovo a sud fino ad Ærøskøbing, la cittadina settecentesca meglio conservata della Danimarca, con vicoli acciottolati fiancheggiati da case dai colori vivaci.",
+          "description": "Ora di nuovo a sud, riattraversando l'arcipelago fino alla costa nord di Ærø e al piccolo porto di Ærøskøbing. È una navigazione modesta, una quindicina di miglia più o meno, che lascia libero il pomeriggio per la cittadina, e questa te la ricorderai.\n\nÆrøskøbing è cambiata a malapena in duecento anni. Strade di case orlate di malvarosa e dipinte di senape, rosso sangue e verde pallido scendono verso l'acqua, e l'intero borgo è tutelato come una delle più belle cittadine settecentesche della Scandinavia. All'imbrunire, dopo che il traghetto delle gite giornaliere se n'è andato, i ciottoli si svuotano e la luce si fa dorata. Spingiti fino alla fila di cabine da bagno dai colori sgargianti sulla spiaggia, compra un gelato dal vecchio droghiere e lascia l'equipaggio libero per un paio d'ore a terra.",
+          "thingsToDo": [
+            "Passeggia per le vie acciottolate settecentesche di Ærøskøbing",
+            "Fotografa le cabine da bagno dipinte sulla spiaggia",
+            "Visita la vecchia drogheria del porto",
+            "Cogli la luce dorata della sera a terra"
+          ],
+          "mooringTip": "Il piccolo porto di Ærøskøbing è meritatamente frequentato, quindi arriva prima della calca del pomeriggio o dopo l'ultimo traghetto per trovare posto. Ormeggiarsi a pacchetto qui è normale; prendi le cime per tempo e sii pronto ad accettare un vicino di fianco."
+        },
+        "7": {
+          "shortDescription": "Una navigazione più lunga verso ovest fino a Dyvig, un porto naturale racchiuso nella terraferma su Als e uno degli ancoraggi più belli della Danimarca.",
+          "description": "La tappa più lunga della crociera ti porta via da Ærø, verso Als, la grande isola che sorveglia l'ingresso del Little Belt. Metti in conto quasi tutta la giornata, una venticinquina di miglia, con il fetch che cresce un po' nell'acqua più aperta a metà traversata.\n\nLa ricompensa è Dyvig. Un'imboccatura stretta e ben segnalata si apre in uno specchio d'acqua quasi del tutto racchiuso, circondato da boschi di faggi e campagna, con appena una casa in vista. Due piccole marine si dividono l'insenatura, il Dyvig Bådelaug gestito dai soci e il più recente Dyvig Bro, entrambi tranquilli e cordiali. Una volta date le cime, è il tipo di posto dove ti tuffi dallo specchio di poppa, accendi la griglia e guardi il sole calare dietro gli alberi. Porta i rifornimenti; a terra, oltre la riva, c'è ben poco.",
+          "thingsToDo": [
+            "Fai un bagno nello specchio d'acqua riparato di Dyvig",
+            "Cammina nei boschi di faggi intorno all'insenatura",
+            "Griglia la cena dallo specchio di poppa",
+            "Un aperitivo al tramonto dal pontile del Dyvig Bro"
+          ],
+          "mooringTip": "L'imboccatura di Dyvig è stretta ma ben segnalata dalle boe; prendila con calma e resta nel canale segnalato. Entrambe le marine hanno buoni fondali, e, essendo completamente racchiuso, lo specchio d'acqua resta calmo con quasi qualsiasi vento, il che lo rende un rifugio sicuro."
+        },
+        "8": {
+          "shortDescription": "Una navigazione rilassata giù lungo la costa di Als e attraverso l'Alssund fino a Sønderborg, con il castello e la marina a coronare lo stretto.",
+          "description": "Una giornata più facile. Esci da Dyvig e viri a sud lungo la costa di Als, poi entri nell'Alssund, lo stretto canale che separa l'isola dalla terraferma dello Jutland. L'acqua è riparata e la navigazione tranquilla, una buona occasione per far prendere il timone a qualcuno di nuovo.\n\nSønderborg si apre all'estremità sud, con la sua marina eletta porto danese dell'anno nel 2024 e capace di attirare oltre quattordicimila equipaggi in visita a stagione. Il Sønderborg Slot imbiancato a calce sorge proprio sul lungomare, in parte fortezza, in parte museo, e racconta l'intricata storia danese-tedesca di questa terra di confine. La città ha buoni ristoranti, un vero supermercato per un rifornimento a metà crociera, e il ponte Christian X si apre ogni ora se vuoi proseguire a nord. La maggior parte degli equipaggi è felice semplicemente di restare.",
+          "thingsToDo": [
+            "Visita il Sønderborg Slot sul lungomare",
+            "Rifornisciti al supermercato cittadino",
+            "Guarda l'apertura del ponte Christian X",
+            "Cena lungo la banchina di Sønderborg"
+          ],
+          "mooringTip": "La premiata marina di Sønderborg si trova appena a sud del ponte stradale, sul lato della città; è ampia e ben gestita ma affollata, quindi prenota in anticipo nelle settimane di punta. Fai attenzione alla corrente di marea nell'Alssund mentre ti avvicini ai posti barca."
+        },
+        "9": {
+          "shortDescription": "Comincia la virata verso casa, un lungo lasco di ritorno a est attraverso il belt fino ai vicoli dipinti di Ærøskøbing.",
+          "description": "La crociera vira verso casa, anche se casa è ancora comodamente a una settimana di distanza. Da Sønderborg ripercorri parte della rotta dell'andata, di nuovo attraverso l'Alssund e a est per l'acqua aperta verso Ærø. È un'altra tappa piena di circa venticinque miglia, e con il dominante vento da sud-ovest in poppa può essere una navigazione veloce e appagante.\n\nÆrøskøbing è un porto così bello che una seconda notte non sembra affatto una ripetizione. Tutto quello che ti sei perso la prima volta è ancora lì ad aspettarti: i musei marittimi e dei velieri in bottiglia, una passeggiata più lunga lungo la riva, una vera cena seduti a terra. Se l'equipaggio ha voglia di cambiare, l'ancoraggio nella baia appena a est della città regala una notte tranquilla all'ancora con le luci del porto a prua.",
+          "thingsToDo": [
+            "Ammira la collezione di velieri in bottiglia di Ærø",
+            "Àncorati nella baia a est della città",
+            "Torna in un caffè preferito di Ærøskøbing",
+            "Cammina il sentiero sulla riva all'imbrunire"
+          ],
+          "mooringTip": "Se al rientro il porto di Ærøskøbing è pieno, la baia appena a est offre buona tenuta su sabbia tra i due e i quattro metri, riparata da qualsiasi vento con componente ovest. Fila calumo abbondante e controlla prima le previsioni della notte."
+        },
+        "10": {
+          "shortDescription": "La tappa più corta del viaggio, una pigra costeggiata mattutina lungo la riva di Ærø da Ærøskøbing di nuovo a Marstal.",
+          "description": "Questa è a malapena una navigazione. Da Ærøskøbing a Marstal ci sono una manciata di miglia lungo il bordo meridionale dell'isola, quindi non serve affrettare la colazione. Aspetta che il vento entri, poi fanne una veleggiata tranquilla intorno alla punta orientale di Ærø, abbastanza sottocosta da distinguere fattorie e qualche campanile.\n\nLa giornata corta lascia molto tempo a Marstal, che merita una seconda occhiata. Se l'altra volta il museo ti aveva tenuto occupato, questa visita è per la cittadina in sé: le vecchie case dei capitani, i cantieri che sfornano ancora scafi di legno e il lungo frangiflutti costruito a mano che puoi percorrere fino in fondo. Ci sono buoni posti per mangiare vicino al porto, e un negozio nautico se alla barca serve qualcosa prima della traversata di ritorno verso la Germania.",
+          "thingsToDo": [
+            "Cammina fino in fondo al frangiflutti di Marstal",
+            "Ammira le vecchie case dei capitani di mare",
+            "Rifornisciti al negozio nautico di Marstal",
+            "Naviga sottocosta oltre i campanili di Ærø"
+          ],
+          "mooringTip": "Gli stessi pontili ospiti di prima, a ovest del porto commerciale. Con una giornata così corta puoi arrivare presto e scegliere un posto interno riparato prima degli equipaggi che stanno ancora risalendo dalla Germania."
+        },
+        "11": {
+          "shortDescription": "Di nuovo attraverso il mare aperto fino a Bagenkop, a Langeland, base d'appoggio per la traversata verso la Germania e ultimo tranquillo porto di pesca danese.",
+          "description": "Ora inizi a impostare il rientro. Da Marstal è un lasco lineare di ritorno a est fino a Bagenkop, ripercorrendo l'acqua che hai attraversato il terzo giorno, circa quindici miglia con l'arcipelago che si allontana alle spalle. Dagli un lungo ultimo sguardo; dopo stanotte le isole danesi resteranno a poppa per sempre.\n\nBagenkop è il posto giusto per fare tappa. È il porto danese più vicino a Fehmarn, il che accorcia la traversata in mare aperto di domani, ed è un porticciolo calmo e sincero dove passare l'ultima notte in Danimarca. Fai il pieno di carburante e acqua, compra un ultimo giro di pesce affumicato all'affumicatoio del porto e controlla bene le previsioni. La tappa di Fehmarn vuole condizioni stabili. Se il vento non promette bene, questo è un posto comodo dove fermarsi un giorno ad aspettare.",
+          "thingsToDo": [
+            "Compra un ultimo giro di pesce affumicato",
+            "Fai il pieno di carburante e acqua",
+            "Cammina un'ultima volta sulla spiaggia di Bagenkop",
+            "Studia le previsioni per la traversata"
+          ],
+          "mooringTip": "Bagenkop è comodo all'inglese o in un posto tra i pali, con riparo solido. Prendi un posto vicino al pontile del carburante così puoi fare il pieno e mollare presto; la traversata verso la Germania conviene iniziarla al mattino, mentre il vento è ancora leggero."
+        },
+        "12": {
+          "shortDescription": "La traversata di ritorno verso la Germania, Baltico aperto dalla punta di Langeland fino a Fehmarn e al familiare bacino circolare di Burgtiefe.",
+          "description": "La traversata di ritorno, e l'unica tappa in mare aperto rimasta del viaggio. Da Bagenkop metti la prua a sud nelle stesse venti e passa miglia di Baltico che hai percorso all'andata, solo al contrario, con la Germania che sale lentamente oltre la prua. Un vento da nord la rende una navigazione in poppa regalata; un forte vento da sud-ovest la trasforma in una faticata, ed è per questo che sono state le previsioni a decidere se partire stamattina.\n\nLa costa sud di Fehmarn e il porto circolare di Burgtiefe sono uno spettacolo benvenuto dopo una giornata al largo. Rientra, ormeggia nell'ampio bacino e segna il momento: la navigazione impegnativa delle due settimane è alle spalle. Il Südstrand è a due passi per un bagno che sciacqua via il sale, e i ristoranti del porto sono il posto adatto per una vera cena di equipaggio.",
+          "thingsToDo": [
+            "Fai un bagno al Südstrand per togliere il sale",
+            "Brinda alla traversata in un ristorante del porto",
+            "Fai carburante alla stazione di Burgtiefe",
+            "Guarda i surfisti al largo della costa sud di Fehmarn"
+          ],
+          "mooringTip": "Il bacino da 600 posti di Burgtiefe ha quasi sempre spazio, e dopo una lunga traversata è rassicurante sapere che un posto ti aspetta. Punta a un pontile sottovento e usa i dalben di poppa; il bacino circolare può incanalare una brezza fresca sull'acqua."
+        },
+        "13": {
+          "shortDescription": "Una tappa breve e facile verso la terraferma, sotto il ponte del Fehmarn Sound fino alla marina riparata di Grossenbrode.",
+          "description": "Una giornata poco impegnativa per sciogliere le ultime miglia. Lasci Burgtiefe, risali lungo la costa di Fehmarn e passi ancora una volta sotto il ponte del Fehmarn Sound, poi scivoli verso Grossenbrode, sul lato terraferma dello stretto. Una decina di miglia, al massimo il lavoro di un pomeriggio.\n\nGrossenbrode si trova in mezzo alla più grande concentrazione di barche a noleggio del Baltico tedesco, quindi la marina è ben attrezzata per gli equipaggi che rallentano. È più tranquilla di Heiligenhafen e piacevole per un'ultima notte a bordo, con una lunga lingua di sabbia per un bagno e una passeggiata finali. Metti in ordine la barca finché c'è luce, sistema l'attrezzatura che riconsegnerai domani e goditi una serata senza fretta. La base è a un breve salto la mattina.",
+          "thingsToDo": [
+            "Fai un bagno dalla lingua di sabbia di Grossenbrode",
+            "Fai un'ultima passeggiata lungo la riva",
+            "Riordina e disarma la barca per tempo",
+            "Goditi una tranquilla ultima serata a bordo"
+          ],
+          "mooringTip": "La marina di Grossenbrode è calma e raramente piena a fine settimana di noleggio, quindi trovare posto è facile. Scegline uno con un semplice accesso allo stretto al mattino; il ritorno a Heiligenhafen è breve e vorrai una partenza pulita."
+        },
+        "14": {
+          "shortDescription": "L'ultimo breve salto di ritorno fino a Heiligenhafen, una facile veleggiata mattutina per chiudere il cerchio alla marina di partenza.",
+          "description": "L'ultima tappa, e una tranquilla per finire. Da Grossenbrode è un breve lasco di ritorno a Heiligenhafen, solo una manciata di miglia attraverso l'imbocco della baia, quindi non c'è fretta di partire all'alba. La maggior parte degli equipaggi si concede una colazione con calma, prende la brezza del mattino e percorre l'ultimo tratto in un'ora o due.\n\nLa grande marina di Heiligenhafen chiude l'anello dove tutto è iniziato due settimane fa. Regola l'arrivo sull'orario di riconsegna della base, fai carburante lungo l'entrata e accosta la barca per l'ultima volta. Due settimane e qualcosa più di centocinquanta miglia sono alle spalle, con un bel mix di traversate aperte e navigazione riparata tra le isole. Sistema le pratiche, scarica e trova un tavolo sul porto per un'ultima birra fresca prima di rimettersi in viaggio.",
+          "thingsToDo": [
+            "Fai carburante prima della riconsegna a Heiligenhafen",
+            "Brinda al viaggio in un caffè del porto",
+            "Passeggia sul lungomare di Heiligenhafen",
+            "Sistema le pratiche del noleggio alla base"
+          ],
+          "mooringTip": "Conferma il posto di riconsegna e lo slot per il rifornimento con la base prima di lasciare Grossenbrode. I pontili ospiti e charter di Heiligenhafen sono ben segnalati; avvicinati a passo d'uomo, perché la marina è ampia e spesso affollata di equipaggi in partenza e in rientro."
+        }
+      }
+    }
+  },
+  "areas": {
+    "baltic-germany": {
+      "metaTitle": "Itinerari Baltico tedesco e isole danesi | Boat4You",
+      "metaDesc": "Rotte giorno per giorno da Heiligenhafen attraverso il Baltico tedesco fino a Ærø, Marstal e le isole della Fionia meridionale. Piani da 7 e 14 giorni.",
+      "title": "Naviga il Baltico tedesco fino alle isole danesi",
+      "description": "Tappe brevi e acque clementi fanno di questa una delle zone di crociera più facili del Nord Europa. Dalle basi di Heiligenhafen e del Fehmarn Sound raggiungi Langeland in un pomeriggio, poi metti in fila le isole della Fionia meridionale, dove le tappe superano di rado le 20 miglia e un riparo non è mai lontano. I venti estivi si mantengono per lo più sui 3-4 della scala Beaufort, con qualche colpo di vento di passaggio, e la stagione va da metà maggio a fine settembre. Ærøskøbing premia chi arriva presto; la cittadina settecentesca di ciottoli riempie in fretta il suo piccolo porto, quindi ormeggia prima della calca del traghetto pomeridiano. Marstal, appena dietro l'isola, tiene vivo il suo passato armatoriale in un museo marittimo stipato di modellini di barche. Svendborg apre la porta a Skarø e Drejø per pigre giornate all'ancora. Nota da esperti: al ritorno salta la trafficata banchina cittadina di Sønderborg e infilati a Hørup Hav, quattro miglia a est, per un'ultima notte tranquilla."
+    }
+  }
+}

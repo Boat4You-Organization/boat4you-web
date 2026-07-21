@@ -1,1 +1,255 @@
-{}
+{
+  "routes": {
+    "baltic-danish-isles-week": {
+      "metaTitle": "7 Tage Deutsche Ostsee & Dänische Inseln | Boat4You",
+      "metaDesc": "Eine Woche von Heiligenhafen über den Fehmarnbelt nach Langeland, Aero und Sonderborg. Hafen-, Liege- und Landtipps für alle sieben Tage.",
+      "days": {
+        "1": {
+          "shortDescription": "Ein kurzer Eingewöhnungsschlag hinüber nach Fehmarn, der an Burgtiefes moderner Marina und der langen Sandzunge des Südstrands endet.",
+          "description": "Die meisten Crews nutzen den ersten Tag zum Ankommen, statt Meilen zu schrubben – und dieser Schlag passt genau dazu. Es sind gemächliche gut zehn Meilen von der Basis-Marina in Heiligenhafen hinunter und herum nach Burgtiefe an Fehmarns Südküste. Wer bis zum späten Vormittag ablegt und unterwegs Reffleinen und Winschkurbeln kontrolliert, hat beim Festmachen noch den ganzen Nachmittag vor sich.\n\nBurgtiefe ist die neueste und großzügigste der Marinas auf Fehmarn, gut geschützt hinter der Nehrung. Dahinter zieht sich der Südstrand hin, drei Kilometer Sand wie gemacht für einen langen Barfußspaziergang, sobald die Fender draußen sind. Wer sich in Heiligenhafen nicht eingedeckt hat, bunkert hier Proviant. Die Kioske am Hafen führen das Nötigste, und das Sanitärgebäude ist sauber genug, um alle zufrieden weiterziehen zu lassen.",
+          "thingsToDo": [
+            "Die drei Kilometer lange Sandnehrung des Südstrands erwandern",
+            "An den Hafenkiosken von Burgtiefe Proviant bunkern",
+            "Auf flachen Wegen ins Städtchen Burg radeln",
+            "Sundowner auf der Marina-Terrasse in Burgtiefe"
+          ],
+          "mooringTip": "Burgtiefe hat Boxen an Fingerstegen statt einer Heckanlegestelle am Kai, also mach Bugleinen und eine Mittschiffsspring klar, bevor du einläufst. In der Vorsaison wird es selten voll, im Juli aber solltest du vor fünf da sein, wenn sich die Dänemark-Fahrer stauen."
+        },
+        "2": {
+          "shortDescription": "Die Hauptüberfahrt der Route über offenes Wasser des Fehmarnbelts nach Bagenkop, Langelands salzigem alten Fischereihafen an der Südspitze der Insel.",
+          "description": "Heute querst du ein ordentliches Stück offenes Wasser. Der Fehmarnbelt ist rund achtzehn Kilometer breit, mit zwanzig bis dreißig Metern unter dem Kiel, und der Sommerwind steht meist irgendwo aus West oder Südwest – das gibt einen angenehmen Raumschots-Kurs hinauf nach Langeland. Die Strömung ist hier schwach und überwiegend windgetrieben, achte also mehr auf die Schifffahrtswege als auf die Tide.\n\nBagenkop ist echt: ein arbeitender Fischereihafen, der noch nach Teer und Salz riecht. Hat gerade ein Bundgarn-Kutter seinen Fang angelandet, kauf den Fisch direkt vom Kai. Steig für den Sonnenuntergang auf den zehn Meter hohen Turm zwischen altem Fähranleger und Marina und reservier dann einen Tisch im Bagenkop Kro, dessen Fischbuffet um sechs öffnet. Mittwochabends gibt es Livemusik auf der Hafenbühne.",
+          "thingsToDo": [
+            "Frischen Fang direkt am Kai von Bagenkop kaufen",
+            "Auf den zehn Meter hohen Hafen-Aussichtsturm steigen",
+            "Das Fischbuffet im Bagenkop Kro reservieren",
+            "Mittwochs Livemusik auf der Hafenbühne erleben"
+          ],
+          "mooringTip": "In Bagenkop liegst du auf der Marina-Seite mit dem Heck zum Steg oder längsseits; das alte Fischereibecken ist tiefer, bleibt aber den Arbeitsbooten vorbehalten. Nimm eine Box beim Servicegebäude, wo es die kostenlose Gemeinschaftsküche und die Duschen gibt, und zahl das Hafengeld am Automaten, bevor du losziehst."
+        },
+        "3": {
+          "shortDescription": "An Langelands Küste hinauf und hinüber nach Marstal, Aeros Schiffbauer- und „Skippertown“ mit breiten Stegen und einem Museum voller Buddelschiffe.",
+          "description": "Ein angenehmer Schlag von rund fünfzehn Meilen, erst nach Norden an Langelands Westküste, dann nach Westen hinüber zum Ostzipfel von Aero. Frischt es aus West auf, kann die Überfahrt hoch am Wind werden – ein früh gestecktes Reff erspart später den Ärger.\n\nMarstal trägt seinen Beinamen Skippertown zu Recht. Einst Dänemarks zweitgrößte Reederstadt, flicken die kleinen Werften am Hafen noch heute hölzerne Rümpfe. Gönn dem Marstal Maritime Museum eine Stunde, wo Schiffsmodelle und Buddelschiffe die Geschichte der Insel besser erzählen als jede Tafel. Die Uferpromenade ist von langen Holzstegen gesäumt, und der Ort hat sich einen echten, arbeitenden Charakter bewahrt statt eines aufpolierten. Ein Eis am Hafen und danach ein gemächlicher Gang durch die Werften – so verbringen die meisten Crews den Abend.",
+          "thingsToDo": [
+            "Die Buddelschiffe im Marstal Maritime Museum bestaunen",
+            "Den Holzschiffwerften am Hafen zusehen",
+            "In der Dämmerung über die langen Holzstege schlendern",
+            "Ein Eis an der Uferpromenade von Marstal"
+          ],
+          "mooringTip": "Marstals Marina liegt am Nordende, hinter dem Handelskai; geh mit dem Heck an den eigenen Anker oder nach Anweisung in eine Box. Zu den inneren Ecken hin wird es flach, halte dich also an die äußeren Stege, wenn du mehr als zwei Meter Tiefgang hast."
+        },
+        "4": {
+          "shortDescription": "Ein gemütlicher kurzer Schlag um Aero herum nach Aeroskobing, einer Stadt aus dem zwölften Jahrhundert mit Pastellhäusern, Kopfsteingassen und bunten Badehäuschen.",
+          "description": "Der kürzeste Schlag der Woche, kaum sieben Meilen um den Süden und Westen der Insel. Kein Grund, früh loszukommen. Spring vom Boot ins Wasser, lass die Crew ausschlafen – und du machst trotzdem lange vor dem Mittag in Aeroskobing fest.\n\nWegen der Stadt kommen die Leute immer wieder nach Aero. Ihre Gassen stammen aus dem zwölften Jahrhundert, mit Kopfsteinpflaster und gesäumt von Häusern in sanftem Gelb, Ocker und Blassblau, deren Türen direkt auf die Straße gehen. Lauf hinaus zum Strand im Norden, zur Reihe der bunt bemalten Badehäuschen, und komm zum Abendessen zurück; die Fischrestaurants am Hafen sind wirklich gut. Die Abende werden hier früh still – und genau das ist für die meisten Crews der Reiz.",
+          "thingsToDo": [
+            "Durch die Kopfsteingassen aus dem zwölften Jahrhundert bummeln",
+            "Die bunten Badehäuschen am Strand fotografieren",
+            "Frischen Fisch am Hafen von Aeroskobing essen",
+            "Zusehen, wie der Hafen in der Dämmerung still wird"
+          ],
+          "mooringTip": "Aeroskobings Hafen ist klein und im Juli beliebt, es lohnt sich also, am frühen Nachmittag da zu sein; im Päckchen zu zweit oder zu dritt zu liegen ist hier normal und erwünscht. Festgemacht wird längsseits oder mit dem Heck an den Stegen, und in der Hochsaison weist das Hafenbüro dir einen Platz zu, statt ihn nach der Reihenfolge des Eintreffens zu vergeben."
+        },
+        "5": {
+          "shortDescription": "Nach Westen zur Insel Als und hinein nach Sonderborg, wo du unter einem Wasserschloss aus dem zwölften Jahrhundert festmachst, nur einen kurzen Weg vom Zentrum entfernt.",
+          "description": "Heute rund zwanzig Meilen nach Westen, die Aero-Gruppe bleibt achteraus, und es geht hinüber zur Insel Als. Die Ansteuerung von Sonderborg führt durch den engen Sund unter der Brücke von König Christian X. hindurch, frag also vorab die Öffnungszeiten ab und behalte den Fährverkehr im Auge. Der Wind steht meist wieder aus West und gibt für den größten Teil des Weges einen anständigen Segeltörn.\n\nSonderborg ist der größte Ort der Route und zählt jährlich über vierzehntausend Gastyachten, entsprechend hervorragend sind die Einrichtungen. Machst du im Südhafen fest, thront Schloss Sonderborg direkt über dir, ein Backsteinbau aus dem zwölften Jahrhundert, in dem heute das regionale Geschichtsmuseum untergebracht ist. Die Einkaufsstraße liegt zwei Minuten vom Kai, der Stadtstrand ist nah, und drüben überm Wasser markiert die Dybbol-Mühle den Höhenzug des alten Schlachtfelds.",
+          "thingsToDo": [
+            "Das Geschichtsmuseum im Schloss Sonderborg besuchen",
+            "Am Stadtstrand neben der Marina baden",
+            "Durch die Einkaufsstraße am Kai stöbern",
+            "Hinüber zum Höhenzug der Dybbol-Mühle blicken"
+          ],
+          "mooringTip": "Steuere den Südhafen zwischen Brücke und Schloss an, nicht die Marina Fiskenaes, wenn du mitten in der Stadt liegen willst; hier wird längsseits und mit dem Heck festgemacht, tief genug für die meisten Kiele. In den Hauptwochen ruf beim Einlaufen den Hafenmeister, denn die zentralen Liegeplätze sind zuerst weg."
+        },
+        "6": {
+          "shortDescription": "Der lange Raumschots-Schlag zurück nach Südosten nach Bagenkop – Gelegenheit, über offenes Wasser richtig zu segeln und wieder in Langelands Fischereihafen einzukehren.",
+          "description": "Der Heimweg beginnt mit einem soliden Schlag von rund zweiundzwanzig Meilen zurück nach Langeland. Mit dem vorherrschenden Westwind querab ist dies oft der beste Segeltag der Woche: das Boot krängt und läuft, Als fällt achteraus zurück. Richte deinen Start nach dem Wind, nicht nach der Uhr; bläst es kräftig aus West, bringt dich ein früheres Ablegen hinein, bevor er auffrischt.\n\nDie Rückkehr nach Bagenkop fühlt sich beim zweiten Mal anders an. Du kennst den Hafen jetzt, kein Gerangel um einen Liegeplatz. Dies ist der Abend, um nachzuholen, was du auf dem Hinweg verpasst hast: geräucherten Fisch von den Hafenständen oder ein Bier am Kai, während die Bundgarn-Kutter kommen und gehen. Der Sonnenuntergang vom Aussichtsturm ist den Aufstieg auch ein zweites Mal wert.",
+          "thingsToDo": [
+            "Geräucherten Fisch von den Hafenständen probieren",
+            "Für einen zweiten Sonnenuntergang auf den Aussichtsturm steigen",
+            "Den Bundgarn-Kuttern bei der Arbeit am Kai zusehen",
+            "Vor dem letzten Schlag Diesel und Wasser auffüllen"
+          ],
+          "mooringTip": "Die Aufteilung kennst du jetzt: Boxen beim Servicegebäude, tieferes Wasser im alten Becken. Sieht die Vorhersage für die letzte Überfahrt frisch aus, nimm einen Platz an der geschützten Innenseite, damit du das Boot am Morgen nicht mühsam vom Steg wegkämpfen musst."
+        },
+        "7": {
+          "shortDescription": "Die letzte Überfahrt zurück über den Fehmarnbelt nach Heiligenhafen – der längste Schlag über offenes Wasser und ein würdiger letzter Tag auf See.",
+          "description": "Der letzte Schlag ist die längste Überfahrt der Woche, gut fünfundzwanzig Meilen von Bagenkop zurück über den Fehmarnbelt zur Basis in Heiligenhafen. Leg bis neun ab, um dir Puffer zu verschaffen, und prüf die Vorhersage am Abend zuvor – ein kräftiger Westwind von vorn kann daraus eine lange Schinderei machen.\n\nDen Großteil des Tages bist du auf offenem Wasser, während sich die flache grüne Linie von Fehmarn langsam voraus erhebt. Halte dich frei von der Schifffahrt im Belt und liege auf Kurs zur Ansteuerung von Heiligenhafen, die gut betonnt ist, sobald du der Küste näher kommst. Bist du erst durch die äußeren Molen, ist die Einfahrt in die Marina unkompliziert. Diesel bunkern, die Toiletten durchspülen und ein aufgeräumtes Boot zurückgeben; meist bleibt Zeit für einen letzten Teller Fisch am Hafen, bevor es nach Hause geht.",
+          "thingsToDo": [
+            "Zusehen, wie Fehmarn am Horizont auftaucht",
+            "In der Marina Heiligenhafen tanken und abrechnen",
+            "Ein letzter Teller Fisch am Hafen vor der Abreise",
+            "Ein abgespültes, aufgeräumtes Boot zurückgeben"
+          ],
+          "mooringTip": "Heiligenhafens Marina ist groß und gut ausgeschildert; folge dem betonnten Fahrwasser hinein und nimm deinen zugewiesenen Rückgabeplatz, statt dir selbst einen auszusuchen. Melde das Tanken vorab an, wenn du für die Übergabe einen vollen Tank brauchst, denn samstagmorgens beim Wechsel kann sich an der Tankstelle eine Schlange bilden."
+        }
+      }
+    },
+    "baltic-fyn-circle-14-days": {
+      "metaTitle": "14 Tage Deutsche Ostsee & Dänische Inseln | Boat4You",
+      "metaDesc": "Zwei Wochen von Heiligenhafen über den Fehmarnsund nach Ærø, Svendborg, Faaborg und Als, dann heim durch die Südfünische Inselwelt.",
+      "days": {
+        "1": {
+          "shortDescription": "Ein sanfter Eingewöhnungsschlag aus Heiligenhafen hinaus, unter der Fehmarnsundbrücke hindurch und herum zu Burgtiefes großer, moderner Marina.",
+          "description": "Die meisten Crews nutzen diesen ersten Tag, um das Boot einzufahren, statt Meilen zu jagen. Du läufst an Heiligenhafens langer Mole hinaus, drehst nach West und passierst unter der Fehmarnsundbrücke hindurch, die die Insel mit dem Festland verbindet. Von dort ist es ein kurzer Raumschots-Schlag herum nach Burgtiefe an Fehmarns Südküste.\n\nDie Marina ist die neueste und großzügigste der fünf auf der Insel, mit rund 600 Liegeplätzen hinter einem markanten runden Becken. Diesel, ein Yachtausrüster und warme Duschen sind alle vor Ort, ein vernünftiger Platz also, um vor der offenen Überfahrt morgen das Zeug klarzumachen.\n\nAn Land zieht sich der Südstrand über Kilometer heller Sand hin, beliebt bei Kite- und Windsurfern, sobald die Brise auffrischt. Geh früh in die Koje. Der Sprung nach Dänemark verlangt eine ausgeruhte Crew und eine beständige Vorhersage.",
+          "thingsToDo": [
+            "Den langen Kitesurf-Strand Südstrand entlanggehen",
+            "An der Bunkerstation Burgtiefe Diesel nachfüllen",
+            "Im Städtchen Burg die Kombüse auffüllen",
+            "Den Windsurfern vor Fehmarns Südküste zusehen"
+          ],
+          "mooringTip": "Burgtiefe hat selbst im August Platz für Gäste, eine Reservierung ist also selten nötig, ruf aber an einem Sommerwochenende vorher an. In den Boxen belegst du die Achterleinen an Dalben, und die Wassertiefen im Becken halten rund 3 Meter."
+        },
+        "2": {
+          "shortDescription": "Die richtige Ostsee-Überfahrt nach Norden bis Dänemark, offenes Wasser bis zum rot verschalten Fischereihafen Bagenkop auf Langeland.",
+          "description": "Das ist der Schlag, der sich wie eine echte Passage anfühlt. Bist du erst frei von Fehmarn, liegt kaum etwas zwischen dir und Langelands Südspitze – rund zwanzig Meilen offene Ostsee, die Küste fällt achteraus zurück. Ein Südwestwind gibt einen bequemen Raumschots-Kurs; alles aus Nordwest macht daraus ein nasseres Kreuzen, deshalb warten wir meist auf das richtige Zeitfenster, statt es zu erzwingen.\n\nBagenkop liegt am unteren Ende von Langeland, ein arbeitender Fischereihafen, wo rote Holzschuppen den Kai säumen. Er ist bodenständig und gerade darum umso schöner. Die Räucherei am Hafen verkauft Fisch direkt von den Booten, und die Dünen und das Naturschutzgebiet südlich des Orts sind nach einem Tag am Ruder gut zum Beinevertreten.\n\nHier setzt du die erste dänische Gastlandflagge der Reise.",
+          "thingsToDo": [
+            "Geräucherten Fisch in der Hafenräucherei kaufen",
+            "Durch die Dünen südlich von Bagenkop wandern",
+            "Im Küstenschutzgebiet Vögel beobachten",
+            "Die dänische Gastlandflagge setzen"
+          ],
+          "mooringTip": "Bagenkop ist ein unkomplizierter Halt längsseits oder in der Box mit gutem Schutz, füllt sich aber mit Crews, die dieselbe Überfahrt machen. Sei im Juli am frühen Nachmittag da, um dir einen Platz am Räucherei-Ende zu sichern."
+        },
+        "3": {
+          "shortDescription": "Ein kurzer Hüpfer hinüber nach Ærø und Marstal, einst Dänemarks zweitgrößte Reederstadt, noch heute umringt von Werften und Segelmachereien.",
+          "description": "Ein ruhigerer Tag nach der Überfahrt. Du verlässt Bagenkop und legst einen Westkurs über die Mündung des Archipels nach Ærø an, der langen, flachen Insel, die dieses ganze Revier verankert. Rund fünfzehn Meilen, meist mit halbem Wind.\n\nMarstal verdient sein Geld. Im Zeitalter der Segelschiffe war es nach Kopenhagen Dänemarks zweiter Hafen, und noch heute riecht die Stadt leicht nach Teer und Lack. Das Marstal Maritime Museum erstreckt sich über mehrere alte Häuser und ist einen Nachmittag wert, vollgepackt mit Schiffsmodellen, Galionsfiguren und der Geschichte der Schonerflotten, die genau an diesem Ufer gebaut wurden. Schlendere über die Hafenfront, sieh zu, wie in einer der Werften ein hölzerner Rumpf ins Leben zurückgeholt wird, und such dir dann für den Abend einen Tisch. Das gemächliche Tempo hier hat Methode.",
+          "thingsToDo": [
+            "Das Marstal Maritime Museum besichtigen",
+            "Dem hölzernen Bootsbau in den Werften zusehen",
+            "Über die lange, von Hand gebaute Hafenmole gehen",
+            "Über die nach Teer duftende Hafenfront bummeln"
+          ],
+          "mooringTip": "Marstals Yachthafen liegt direkt westlich des Handelskais; steuere die Gaststege an, nicht das Fischereibecken. Die Tiefen sind gut, doch an den äußeren Plätzen rollt es bei frischem Südwind ein wenig, halte dich also nach innen, wenn du kannst."
+        },
+        "4": {
+          "shortDescription": "Nach Norden durch die Inseln in den Svendborgsund, Dänemarks meistbefahrene Meerenge, mit Ziel der lebhaften Hafenstadt Svendborg.",
+          "description": "Heute segelst du ins Herz des Archipels. Von Marstal führt der Kurs nach Norden, fädelt sich zwischen Ærø, Tåsinge und einer Handvoll kleinerer Inseln hindurch, bis sich das Wasser in den Svendborgsund verengt. Die Meerenge windet sich wie ein Fluss zwischen bewaldeten Ufern und gilt als meistbesegelte Strecke in ganz Dänemark – halte also gut Ausschau nach dem kleinen Dampfer M/S Helge, der hier seit über einem Jahrhundert auf und ab tuckert.\n\nSvendborg selbst ist eine richtige, arbeitende Stadt, die zweitgrößte auf Fünen, und die Marina liegt in bequemer Gehweite zu Geschäften und Bahnhof. Die Frederiksøens Fiskebar auf der alten Werftinsel serviert ehrliche Meeresfrüchte direkt am Wasser. Bleibt eine Stunde, setz über nach Tåsinge zum Valdemars Slot, einem von Wassergräben umgebenen Herrenhaus aus den 1640er-Jahren.",
+          "thingsToDo": [
+            "Meeresfrüchte in der Frederiksøens Fiskebar essen",
+            "Valdemars Slot auf Tåsinge besuchen",
+            "Den Dampfer M/S Helge vorbeiziehen sehen",
+            "Durch Svendborgs alte Hafengassen streifen"
+          ],
+          "mooringTip": "Svendborg hat mehrere Becken; sowohl der Gasthafen auf Frederiksø als auch die Marina östlich der Brücke funktionieren. Es ist ein reges Drehkreuz, sei also am späten Nachmittag festgemacht, und achte auf die Strömung, die durch den Sund setzt."
+        },
+        "5": {
+          "shortDescription": "Ein klassischer Archipel-Tag nach Westen nach Faaborg, vorbei an Lyø und Avernakø, mit Ausklang unter dem alten Glockenturm der Stadt.",
+          "description": "Manche Skipper nennen dies den schönsten Schlag der zwei Wochen, und dem lässt sich schwer widersprechen. Aus dem Svendborgsund heraus hältst du nach Westen über das offene Wasser des Archipels, die flachen grünen Buckel von Lyø und Avernakø backbord voraus. Beide lohnen einen Abstecher, wenn der Tag noch jung ist; Lyøs winziger Hafen und sein Dorf mit dem Ententeich sind wie eine dänische Postkarte.\n\nFaaborg wartet an der Küste Fünens. Kopfsteingassen steigen vom Kai hinauf zum mittelalterlichen Klokketårnet, dem alten Glockenturm, und der Aufstieg über seine Stufen lohnt sich mit Dächern und Wasser tief unter dir. Das Faaborg Museum beherbergt die weltweit beste Sammlung der Fünen-Maler. Unten an der Marina reihen sich Cafés und Fischstände am Wasser, und das Eis am Hafen ist geradezu eine Institution.",
+          "thingsToDo": [
+            "Auf Faaborgs Glockenturm Klokketårnet steigen",
+            "Die Fünen-Maler im Faaborg Museum sehen",
+            "Einen Abstecher zum Hafendorf von Lyø machen",
+            "Das Eis an der Hafenpromenade probieren"
+          ],
+          "mooringTip": "Faaborgs Gasthafen liegt direkt unterhalb der Altstadt, praktisch für alles an Land. Im Hochsommer kann es eng werden; sind die inneren Plätze belegt, bieten die neueren Stege im Osten genug Tiefe und werden selten voll."
+        },
+        "6": {
+          "shortDescription": "Wieder nach Süden nach Ærøskøbing, der am besten erhaltenen Stadt des 18. Jahrhunderts in Dänemark, deren Kopfsteingassen von bonbonbunten Häusern gesäumt sind.",
+          "description": "Jetzt wieder nach Süden, quer zurück über den Archipel zu Ærøs Nordküste und dem kleinen Hafen von Ærøskøbing. Ein bescheidener Segeltag, fünfzehn Meilen mehr oder weniger, der den Nachmittag für die Stadt frei lässt – und diese wirst du in Erinnerung behalten.\n\nÆrøskøbing hat sich in zweihundert Jahren kaum verändert. Straßen mit stockrosengesäumten Häusern in Senfgelb, Ochsenblutrot und Blassgrün laufen zum Wasser hinunter, und der ganze Ort steht als eine der schönsten Städte des 18. Jahrhunderts in Skandinavien unter Schutz. Am Abend, wenn die Ausflugsfähre weg ist, leert sich das Kopfsteinpflaster und das Licht wird golden. Lauf hinaus zur Reihe der bunt bemalten Badehäuschen am Strand, kauf ein Eis beim alten Kaufmann und lass die Crew für ein paar Stunden an Land von der Leine.",
+          "thingsToDo": [
+            "Durch Ærøskøbings Kopfsteingassen aus dem 18. Jahrhundert schlendern",
+            "Die bunten Badehäuschen am Strand fotografieren",
+            "Den altmodischen Kaufmannsladen am Hafen besuchen",
+            "Das goldene Abendlicht an Land einfangen"
+          ],
+          "mooringTip": "Ærøskøbings kleiner Hafen ist zu Recht beliebt, sei also vor dem Nachmittagsandrang oder nach der letzten Fähre da, um einen Platz zu finden. Im Päckchen zu liegen ist hier normal; nimm die Leinen früh an und sei bereit, einen Nachbarn längsseits aufzunehmen."
+        },
+        "7": {
+          "shortDescription": "Eine längere Westpassage nach Dyvig, einem rundum geschützten Naturhafen auf Als und einem der schönsten Ankerplätze Dänemarks.",
+          "description": "Der längste Schlag des Törns bringt dich von Ærø weg und hinaus Richtung Als, der großen Insel, die die Einfahrt zum Kleinen Belt bewacht. Rechne mit dem besseren Teil eines Tages, rund fünfundzwanzig Meilen, wobei die Welle im offeneren Wasser auf halbem Weg etwas aufbaut.\n\nDer Lohn ist Dyvig. Eine schmale, gut betonnte Einfahrt öffnet sich in ein nahezu vollständig geschlossenes Becken, umringt von Buchenwäldern und Feldern, kaum ein Haus in Sicht. Zwei kleine Marinas teilen sich die Bucht, das vereinseigene Dyvig Bådelaug und das neuere Dyvig Bro, beide ruhig und freundlich. Sind die Leinen erst fest, ist das so ein Ort, an dem du vom Heck ins Wasser springst, den Grill anzündest und zusiehst, wie die Sonne hinter den Bäumen versinkt. Bring Proviant mit; an Land gibt es außer dem Wasserrand kaum etwas.",
+          "thingsToDo": [
+            "Im geschützten Becken von Dyvig baden",
+            "Durch die Buchenwälder rund um die Bucht wandern",
+            "Das Abendessen am Heck grillen",
+            "Sundowner am Steg von Dyvig Bro"
+          ],
+          "mooringTip": "Dyvigs Einfahrt ist schmal, aber gut betonnt; nimm sie langsam und halte dich an das markierte Fahrwasser. Beide Marinas bieten gute Tiefe, und da das Becken rundum geschlossen ist, bleibt es bei fast jedem Wind ruhig – ein verlässlicher Schlupfwinkel."
+        },
+        "8": {
+          "shortDescription": "Ein entspannter Schlag an der Küste von Als hinunter und durch den Alssund nach Sønderborg, dessen Schloss und Marina die Meerenge krönen.",
+          "description": "Ein leichterer Tag. Du gleitest aus Dyvig hinaus und drehst nach Süden an der Küste von Als entlang, dann in den Alssund, den schmalen Kanal, der die Insel vom jütländischen Festland trennt. Das Wasser ist geschützt und das Segeln sanft, eine gute Gelegenheit, jemand Neuem das Ruder zu überlassen.\n\nAm Südende öffnet sich Sønderborg, dessen Marina 2024 zum dänischen Hafen des Jahres gewählt wurde und pro Saison über vierzehntausend Gastcrews anzieht. Das weiß getünchte Sønderborg Slot steht direkt am Wasser, halb Festung, halb Museum, und erzählt die verworrene dänisch-deutsche Geschichte dieses Grenzlands. Die Stadt hat gute Restaurants, einen ordentlichen Supermarkt zum Auffüllen mitten im Törn, und die Christian-X.-Brücke öffnet zur vollen Stunde, falls du weiter nach Norden willst. Die meisten Crews bleiben einfach gern, wo sie sind.",
+          "thingsToDo": [
+            "Das Sønderborg Slot am Wasser besichtigen",
+            "Im Supermarkt der Stadt Vorräte auffüllen",
+            "Die Christian-X.-Brücke beim Öffnen beobachten",
+            "Am Kai von Sønderborg essen gehen"
+          ],
+          "mooringTip": "Sønderborgs preisgekrönte Marina liegt direkt südlich der Straßenbrücke auf der Stadtseite; sie ist groß und gut geführt, aber viel besucht, buche also in den Hauptwochen vorab. Achte auf den Stromversatz durch den Alssund, wenn du die Liegeplätze ansteuerst."
+        },
+        "9": {
+          "shortDescription": "Die Wende nach Hause beginnt, ein längerer Raumschots-Schlag zurück nach Osten zu den bunten Gassen von Ærøskøbing.",
+          "description": "Der Törn wendet sich heimwärts, auch wenn das Zuhause noch eine bequeme Woche entfernt ist. Von Sønderborg fährst du einen Teil des Hinwegs zurück, durch den Alssund und nach Osten über das offene Wasser Richtung Ærø. Es ist wieder ein voller Schlag von rund fünfundzwanzig Meilen, und mit dem vorherrschenden Südwestwind im Rücken kann es ein schneller, befriedigender Lauf werden.\n\nÆrøskøbing ist ein so guter Hafen, dass sich eine zweite Nacht kaum wie Wiederholung anfühlt. Alles, was du beim ersten Mal verpasst hast, wartet: die Museen für Seefahrt und Buddelschiffe, ein längerer Spaziergang am Ufer, ein richtiges Abendessen an Land in Ruhe. Ist der Crew nach Abwechslung, gibt der Ankerplatz in der Bucht direkt östlich der Stadt eine stille Nacht vor Anker, mit den Hafenlichtern voraus.",
+          "thingsToDo": [
+            "Die Buddelschiff-Sammlung von Ærø ansehen",
+            "In der Bucht östlich der Stadt ankern",
+            "Ein Lieblingscafé in Ærøskøbing wieder besuchen",
+            "In der Dämmerung den Uferweg entlanggehen"
+          ],
+          "mooringTip": "Ist Ærøskøbings Hafen bei deiner Rückkehr voll, bietet die Bucht direkt östlich guten Halt im Sand bei zwei bis vier Metern, geschützt gegen alles mit West darin. Steck reichlich Kette und prüf zuerst die Vorhersage für die Nacht."
+        },
+        "10": {
+          "shortDescription": "Der kürzeste Schlag der Reise, ein gemütlicher Küsten-Hüpfer am Vormittag an Ærøs Ufer von Ærøskøbing zurück nach Marstal.",
+          "description": "Kaum eine Passage, dieser Schlag. Von Ærøskøbing nach Marstal sind es eine Handvoll Meilen an der Südkante der Insel, also kein Grund, das Frühstück zu hetzen. Warte, bis der Wind einsetzt, und mach dann einen entspannten Segeltag daraus, um Ærøs Ostspitze herum, dicht genug unter Land, um Höfe und den einen oder anderen Kirchturm auszumachen.\n\nDer kurze Tag lässt reichlich Zeit in Marstal, das einen zweiten Blick verdient. Hat dich beim letzten Mal das Museum beschäftigt, gilt dieser Besuch der Stadt selbst: den alten Kapitänshäusern, den Werften, die noch hölzerne Rümpfe bauen, und der langen, von Hand aufgeschütteten Mole, die du bis ganz ans Ende abgehen kannst. Es gibt gute Lokale am Hafen und einen Yachtausrüster, falls das Boot vor der Überfahrt zurück nach Deutschland noch etwas braucht.",
+          "thingsToDo": [
+            "Bis ans Ende der Mole von Marstal gehen",
+            "Die alten Kapitänshäuser bewundern",
+            "Beim Yachtausrüster in Marstal eindecken",
+            "Dicht unter Land an Ærøs Kirchtürmen vorbeisegeln"
+          ],
+          "mooringTip": "Dieselben Gaststege wie zuvor, westlich des Handelshafens. Bei so einem kurzen Tag kannst du früh ankommen und dir einen geschützten Innenplatz sichern, noch vor den Crews, die sich von Deutschland heraufarbeiten."
+        },
+        "11": {
+          "shortDescription": "Zurück über offenes Wasser nach Bagenkop auf Langeland, Sprungbrett für die Überfahrt nach Deutschland und ein letzter stiller dänischer Fischereihafen.",
+          "description": "Jetzt beginnst du, die Rückkehr aufzubauen. Von Marstal ist es ein unkomplizierter Raumschots-Schlag zurück nach Osten nach Bagenkop, dasselbe Wasser wie an Tag drei, rund fünfzehn Meilen, während der Archipel achteraus zurückfällt. Wirf einen langen letzten Blick; nach dieser Nacht liegen die dänischen Inseln endgültig achteraus.\n\nBagenkop ist der richtige Ort, um sich bereitzumachen. Es ist der Fehmarn nächstgelegene dänische Hafen, was die offene Überfahrt morgen verkürzt, und ein ruhiger, ehrlicher kleiner Hafen für eine letzte Nacht in Dänemark. Fülle Diesel und Wasser auf, kauf eine letzte Runde geräucherten Fisch aus der Hafenräucherei und prüf die Vorhersage sorgfältig. Der Fehmarn-Schlag will beständige Bedingungen. Sieht der Wind falsch aus, ist dies ein bequemer Platz, um einen Tag zu bleiben und ihn abzuwarten.",
+          "thingsToDo": [
+            "Eine letzte Runde geräucherten Fisch kaufen",
+            "Diesel- und Wassertanks auffüllen",
+            "Ein letztes Mal am Strand von Bagenkop gehen",
+            "Die Vorhersage für die Überfahrt studieren"
+          ],
+          "mooringTip": "Bagenkop ist einfach längsseits oder in einer Box mit solidem Schutz. Nimm einen Platz nahe der Tankstelle, damit du auftanken und früh ablegen kannst; die Überfahrt nach Deutschland beginnt man am besten morgens, solange der Wind noch leicht ist."
+        },
+        "12": {
+          "shortDescription": "Die Überfahrt zurück nach Deutschland, offene Ostsee von Langelands Spitze nach Fehmarn und ins vertraute runde Becken von Burgtiefe.",
+          "description": "Die Rücküberfahrt, und der einzige verbleibende Schlag über offenes Wasser auf dieser Reise. Von Bagenkop hältst du nach Süden in dieselben gut zwanzig Meilen Ostsee, die du auf dem Hinweg gesegelt bist, nur umgekehrt, während sich Deutschland langsam über dem Bug erhebt. Ein Nordwind macht daraus einen geschenkten Vorwindkurs; ein harter Südwestwind macht daraus eine Schinderei – deshalb entschied die Vorhersage, ob du heute Morgen ablegst.\n\nFehmarns Südküste und der runde Hafen von Burgtiefe sind ein willkommener Anblick nach einem Tag auf See. Lauf wieder ein, mach im geräumigen Becken fest und halte den Moment fest: Das harte Segeln der zwei Wochen liegt hinter dir. Zum Südstrand ist es ein kurzer Weg für einen Sprung ins Wasser, um das Salz abzuspülen, und die Hafenrestaurants sind der passende Ort für ein richtiges Crew-Dinner.",
+          "thingsToDo": [
+            "Am Südstrand ins Wasser springen, um das Salz abzuspülen",
+            "In einem Hafenrestaurant auf die Überfahrt anstoßen",
+            "An der Bunkerstation Burgtiefe tanken",
+            "Den Surfern vor Fehmarns Südküste zusehen"
+          ],
+          "mooringTip": "Burgtiefes Becken mit 600 Plätzen hat fast immer Raum, und nach einer langen Überfahrt ist es beruhigend zu wissen, dass ein Platz wartet. Steuere einen Steg in Lee an und nutze die Heckdalben; das runde Becken kann eine frische Brise über das Wasser bündeln."
+        },
+        "13": {
+          "shortDescription": "Ein kurzer, einfacher Schlag zurück Richtung Festland, unter der Fehmarnsundbrücke hindurch zur geschützten Marina in Großenbrode.",
+          "description": "Ein anspruchsloser Tag, um die letzten Meilen ausklingen zu lassen. Du verlässt Burgtiefe, arbeitest dich an Fehmarns Küste zurück und passierst noch einmal unter der Fehmarnsundbrücke hindurch, dann gleitest du hinüber nach Großenbrode auf der Festlandseite des Sunds. Rund zehn Meilen, höchstens eine Nachmittagsarbeit.\n\nGroßenbrode liegt inmitten der größten Ansammlung von Charteryachten an der deutschen Ostsee, entsprechend gut ist die Marina auf Crews im Ausklang eingestellt. Sie ist ruhiger als Heiligenhafen und angenehm für eine letzte Nacht an Bord, mit einer langen Sandzunge für ein letztes Bad und einen Spaziergang. Bring das Boot in Ordnung, solange es hell ist, sortiere das Zeug, das du morgen zurückgibst, und genieße einen gemächlichen Abend. Zur Basis ist es am Morgen nur ein kurzer Sprung.",
+          "thingsToDo": [
+            "An der Sandzunge von Großenbrode baden",
+            "Einen letzten Spaziergang am Ufer machen",
+            "Das Boot früh aufklaren und abriggen",
+            "Einen ruhigen letzten Abend an Bord genießen"
+          ],
+          "mooringTip": "Großenbrodes Marina ist ruhig und spät in einer Charterwoche selten voll, ein Liegeplatz ist also leicht zu haben. Wähle einen mit einfachem Zugang zum Sund am Morgen; der Weg zurück nach Heiligenhafen ist kurz, und du willst sauber ablegen können."
+        },
+        "14": {
+          "shortDescription": "Der letzte kurze Sprung zurück nach Heiligenhafen, ein leichter Vormittagstörn, um an der Heimatmarina den Kreis zu schließen.",
+          "description": "Der letzte Schlag, und ein sanfter zum Abschluss. Von Großenbrode ist es ein kurzer Raumschots-Schlag zurück nach Heiligenhafen, nur eine Handvoll Meilen über die Mündung der Bucht, kein Grund also, im Morgengrauen loszulegen. Die meisten Crews gönnen sich ein gemütliches Frühstück, nehmen die Morgenbrise und segeln das letzte Stück in ein, zwei Stunden.\n\nHeiligenhafens große Marina schließt den Kreis dort, wo er vor zwei Wochen begann. Richte deine Ankunft nach dem Rückgabefenster der Basis, tanke im Hineinlaufen noch Diesel und bring sie ein letztes Mal längsseits. Zwei Wochen und gut über hundertfünfzig Meilen liegen hinter dir, mit einer echten Mischung aus offenen Überfahrten und geschütztem Inselsegeln. Erledige den Papierkram, lad aus und such dir einen Hafentisch für ein letztes kaltes Bier, bevor es nach Hause geht.",
+          "thingsToDo": [
+            "Vor der Rückgabe in Heiligenhafen tanken",
+            "In einem Hafencafé auf die Reise anstoßen",
+            "Über Heiligenhafens Uferpromenade bummeln",
+            "Den Charter-Papierkram an der Basis erledigen"
+          ],
+          "mooringTip": "Bestätige deinen Rückgabeplatz und deinen Tank-Slot mit der Basis, bevor du Großenbrode verlässt. Heiligenhafens Gast- und Charterstege sind gut ausgeschildert; lauf mit Schleichfahrt an, denn die Marina ist groß und oft voll mit ab- und anlegenden Crews."
+        }
+      }
+    }
+  },
+  "areas": {
+    "baltic-germany": {
+      "metaTitle": "Segeltörns Deutsche Ostsee & Dänische Inseln | Boat4You",
+      "metaDesc": "Tag-für-Tag-Charterrouten von Heiligenhafen über die deutsche Ostsee nach Ærø, Marstal und zu den südfünischen Inseln. 7- und 14-Tage-Segelpläne.",
+      "title": "Von der deutschen Ostsee zu den Dänischen Inseln segeln",
+      "description": "Kurze Schläge und gutmütiges Wasser machen dies zu einem der einfachsten Reviere Nordeuropas. Von Heiligenhafen und den Basen am Fehmarnsund querst du an einem Nachmittag nach Langeland und reihst dann die südfünischen Inseln aneinander, wo die Schläge selten über 20 Meilen gehen und Schutz nie weit ist. Der Sommerwind liegt an den meisten Tagen bei 3 bis 4 Beaufort, mit dem einen oder anderen kräftigen Wind dazwischen, und die Saison läuft von Mitte Mai bis Ende September. Ærøskøbing belohnt frühes Eintreffen; die kopfsteingepflasterte Stadt aus dem 18. Jahrhundert füllt ihren kleinen Hafen schnell, mach also fest, bevor der Nachmittags-Fährandrang kommt. Marstal, gleich um die Insel herum, hält seine Seefahrtsvergangenheit in einem Schifffahrtsmuseum voller Schiffsmodelle lebendig. Svendborg öffnet die Tür zu Skarø und Drejø für träge Ankertage. Insider-Tipp – lass auf dem Rückweg den belebten Stadtkai von Sønderborg links liegen und schlüpf ins vier Meilen östlich gelegene Hørup Hav für eine ruhige letzte Nacht."
+    }
+  }
+}

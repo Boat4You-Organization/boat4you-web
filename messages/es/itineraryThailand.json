@@ -1,1 +1,256 @@
-{}
+{
+  "routes": {
+    "andaman-explorer-14-days": {
+      "metaTitle": "Explorador del Mar de Andamán en 14 días | Boat4You",
+      "metaDesc": "Dos semanas desde Yacht Haven, Phuket, por la bahía de Phang Nga, Phi Phi, Ko Lanta y las islas Trang: cuevas marinas, hongs y playas de arena blanca.",
+      "days": {
+        "1": {
+          "shortDescription": "Zarpa de Yacht Haven rumbo al este hacia la bahía de Phang Nga, para terminar en los acantilados horadados de cuevas de Ko Phanak.",
+          "description": "La primera mañana va sobre todo de salir del puerto deportivo y de que la tripulación coja el ritmo. Desde Yacht Haven la bahía se abre enseguida, y a media mañana las agujas de piedra caliza de Phang Nga empiezan a alzarse entre la calima. Ko Phanak queda a unas doce millas, una isla verde con forma de pan, acribillada de cuevas. Solemos fondear en la cara de sotavento y echar la anexa o los kayaks antes de que la luz se aplane. Vale la pena buscar dos pasos: el largo túnel oscuro que los lugareños llaman la Cueva de los Murciélagos, y otro más bajo que solo se puede cruzar a remo cerca de la bajamar. Si calculas mal la hora, la entrada queda cerrada. Lleva un frontal, ve despacio y escucha el goteo del techo sobre ti.",
+          "thingsToDo": [
+            "Remar hasta el paso de la Cueva de los Murciélagos",
+            "Cruzar en kayak el túnel de bajamar en la estoa",
+            "Bañarte en el fondeadero resguardado de sotavento",
+            "Copas al atardecer bajo los acantilados de caliza"
+          ],
+          "mooringTip": "Ko Phanak no tiene boyas de amarre, así que fondea en arena en la cara de sotavento del este, lejos de las bocas de las cuevas. El agarre es bueno en 5-8 m; mantente lejos de las repisas de roca someras que quedan al descubierto en bajamar."
+        },
+        "2": {
+          "shortDescription": "Un corto salto al norte hasta Ko Hong, donde una cueva de marea da a una laguna completamente cercada por acantilados.",
+          "description": "Ko Hong está tan cerca que no hay prisa por levar el ancla. El nombre significa habitación, y en cuanto cruzas la entrada a remo entiendes por qué: un anillo de caliza vertical con el cielo por tapa y agua verde y quieta debajo. Acierta con la marea. Al hong interior solo se llega en torno a la estoa, y en el momento equivocado o rozas el techo o encuentras el canal seco. La mayoría de tripulaciones va temprano, antes de que lleguen las longtail de excursionistas desde tierra firme. Más tarde, el fondeadero se calma. Los martines pescadores rondan los bajíos, los macacos se afanan en la linde del bosque y, a última hora de la tarde, los acantilados echan sombra sobre la cubierta. Un lugar tranquilo, algo inquietante, una vez que se apagan todos los motores.",
+          "thingsToDo": [
+            "Cruzar en kayak la cueva de marea hasta el hong",
+            "Calcular la entrada en torno a la estoa",
+            "Observar los macacos en la linde del bosque",
+            "Hacer snorkel en el fondeadero resguardado del este"
+          ],
+          "mooringTip": "Fondea frente a la cara este de Ko Hong, al oeste de los bajos que salen de Ko Na Khae. La arena y el fango dan un agarre fiable; llega antes de media mañana para adelantarte a la flota de excursiones en la entrada de la laguna."
+        },
+        "3": {
+          "shortDescription": "Cruza la bahía hasta la relajada Ko Yao Noi, una isla de trabajo con arrozales, plantaciones de caucho y marisco honesto.",
+          "description": "En Ko Yao Noi todo va más despacio. Es una isla de verdad, no una hilera de resorts, y la vida gira en torno a la pesca, el sangrado del caucho y el arroz. La travesía desde Ko Hong es un cómodo largo con el nordeste habitual, un par de horas si la brisa acompaña. Fondea frente a la costa este o métete hacia el canal entre Yao Noi y Yao Yai. Baja con la anexa a Laem Sai, un local de marisco en el extremo sur con un pequeño pontón flotante al que puedes amarrar. Pide lo que ese día haya salido de las barcas: cangrejo, gambas, un pescado entero al vapor con lima y guindilla. Alquila una scooter si quieres ver los arrozales y el interior tranquilo. Aquí nadie tiene prisa, y de eso se trata.",
+          "thingsToDo": [
+            "Amarrar la anexa en el pontón de Laem Sai",
+            "Pedir pescado al vapor en un chiringuito de marisco",
+            "Recorrer en scooter los arrozales del interior",
+            "Fondear junto al canal de Yao Yai"
+          ],
+          "mooringTip": "Fondea frente a la costa este de Ko Yao Noi o en el canal hacia Ko Yao Yai; el grupo de Ko Pak Bia, al sur, ofrece buen agarre al suroeste de su lengua de arena. El pontón de Laem Sai admite anexas, no el barco en sí."
+        },
+        "4": {
+          "shortDescription": "Navega al este hasta Railay, una península de piedra caliza aislada de tierra firme y accesible solo desde el agua.",
+          "description": "Railay es un cabo al que la carretera nunca llegó. Los acantilados verticales lo sellan de Krabi, así que todo y todos llegan en barco, lo que da al lugar su aire extraño, de náufrago. La travesía desde Ko Yao Noi va al este por mar abierto y se lleva casi toda la mañana. Procura fondear frente a Railay West o Phra Nang con tiempo estable. La playa de Phra Nang es el reclamo: arena fina bajo una pared en voladizo, con la Cueva de la Princesa y su santuario de ofrendas escondido en un extremo. Los escaladores cuelgan del karst todo el día, y al anochecer las longtail devuelven a la gente para las copas del atardecer. Aquí el agarre es irregular, con roca a trechos, así que fondea con cuidado y bucea sobre el ancla si el agua está lo bastante clara.",
+          "thingsToDo": [
+            "Desembarcar en la playa de Phra Nang",
+            "Visitar el santuario de la Cueva de la Princesa",
+            "Ver a los escaladores en el karst de Railay",
+            "Copas al atardecer frente a Railay West"
+          ],
+          "mooringTip": "Fondea frente a Railay West o Phra Nang solo en la estación seca; el fondo es rocoso a trechos, así que fila bastante cadena y bucea sobre el ancla si puedes. Esta costa queda expuesta durante el monzón del suroeste y conviene evitarla entonces."
+        },
+        "5": {
+          "shortDescription": "Un largo de veinte millas hasta Phi Phi Don, el bullicioso centro del grupo, con una subida al famoso mirador.",
+          "description": "La ruidosa es Phi Phi Don, y no hay que engañarse. Tras la calma de Phang Nga, la singladura al sur te deja en un sitio que vive del turismo, con bares en Ton Sai, ferris que van y vienen y longtail zumbando por el fondeadero. Aun así merece una noche. Las bahías gemelas de Ton Sai y Loh Dalum se juntan en una estrecha cintura de arena, y la subida al mirador que las corona es corta y sudorosa, pero compensa al llegar arriba. Ao Yongkasem, más conocida como Monkey Beach, queda a la vuelta de la esquina si el fondeadero se llena. Avituallar es fácil aquí, y hielo y cerveza fría aún más. Salta a tierra temprano, haz el mirador antes del calor y toma la velada como tu último contacto con el gentío en un tiempo.",
+          "thingsToDo": [
+            "Subir al mirador de Phi Phi Don",
+            "Hacer snorkel en Monkey Beach (Ao Yongkasem)",
+            "Reponer hielo y provisiones en Ton Sai",
+            "Copas nocturnas junto a la bahía de Loh Dalum"
+          ],
+          "mooringTip": "La bahía de Ton Sai tiene boyas de amarre oficiales, mejores que fondear sobre su arena movediza; coge una y resérvala con antelación en temporada alta, porque se llenan rápido. Ao Yongkasem es una alternativa más tranquila justo al otro lado del cabo."
+        },
+        "6": {
+          "shortDescription": "Una corta singladura hasta la deshabitada Phi Phi Le por Maya Bay, la laguna de Pileh y algo del mejor snorkel de la zona.",
+          "description": "Phi Phi Le está a apenas una hora de su hermana mayor, pero es otro mundo: sin hoteles, sin pueblo, solo acantilados que caen a plomo sobre el mar. Maya Bay, la playa que hizo famosa la película, reabrió con normas estrictas. No se puede fondear dentro, la entrada cuesta unos cientos de baht por cabeza y el acceso es por Loh Samah, en la cara trasera, donde están los guardas. La laguna de Pileh es para mí el verdadero premio: un cañón inundado de agua de jade donde puedes quedarte al ancla, mecerte y bañarte. Loh Samah y las paredes de alrededor guardan buen coral y peces de arrecife. Reduce la velocidad dentro del parque, usa las boyas y lleva el permiso encima. Phi Phi Le en sí es una parada de día, no un dormitorio, así que planifica dónde pasarás la noche antes de llegar.",
+          "thingsToDo": [
+            "Bañarte en el agua de jade de la laguna de Pileh",
+            "Visitar Maya Bay por Loh Samah",
+            "Hacer snorkel en las paredes de arrecife de Loh Samah",
+            "Comprar por adelantado la e-entrada del parque nacional"
+          ],
+          "mooringTip": "Nada de fondear en ningún punto de Phi Phi Le: usa solo las boyas de amarre del parque, no pases de tres nudos y lleva un permiso DNP válido. Maya Bay es un desembarco de día, así que pasa la noche en una boya del parque en Loh Samah si está permitido, o regresa a Phi Phi Don."
+        },
+        "7": {
+          "shortDescription": "Deja atrás el gentío en una etapa más larga al sur hasta Ko Lanta, una isla tranquila con un casco antiguo muy fotogénico.",
+          "description": "Esta es una de las etapas más largas, y una buena ocasión para navegar de verdad si el nordeste se afirma. Ko Lanta queda unas veinte millas al sur, una isla grande y relajada de playas largas y cocoteros que nunca acabó siguiendo el camino de Phi Phi. En la costa este, Lanta Old Town es el motivo para parar. Una única calle de casas-tienda de madera centenarias se alza sobre pilotes por encima del agua, levantadas por comerciantes chinos y gitanos del mar. Recórrela a última hora de la tarde, cuando la luz vuelve dorados los tablones. Hay restaurantes sencillos sobre el agua que sirven currys del sur de Tailandia, cargados de cúrcuma y coco. Fondea frente al muelle del pueblo y baja con la anexa. Tras la intensidad del grupo de Phi Phi, Lanta se siente como soltar el aire.",
+          "thingsToDo": [
+            "Pasear las casas sobre pilotes de Lanta Old Town",
+            "Comer curry del sur de Tailandia sobre el agua",
+            "Fondear frente al muelle del casco antiguo",
+            "Curiosear los puestos de artesanía gitana del mar"
+          ],
+          "mooringTip": "Durante el monzón del nordeste, las playas de la costa oeste ofrecen fondeo fácil; en la temporada del suroeste, pásate a la resguardada cara este. Fondea frente al muelle del casco antiguo, en la costa este, sobre arena y fango, y desembarca con la anexa en el pantalán del pueblo."
+        },
+        "8": {
+          "shortDescription": "Adéntrate en las islas Trang hasta Ko Muk, hogar de la Cueva Esmeralda: ochenta metros a nado hasta una playa oculta.",
+          "description": "Al sur de Lanta las islas se espacian y el agua se aclara. Ko Muk es la puerta del grupo de Trang, y su gran número es Tham Morakot, la Cueva Esmeralda. Desde el acantilado que da al mar, una abertura baja conduce a un túnel de ochenta metros que en el centro queda a oscuras del todo. Lo cruzas a nado, a veces remolcando una bolsa estanca, y sales a un hong de dolina: un círculo de arena y jungla con paredes verticales y una moneda de cielo por encima. Ve en bajamar y antes que las longtail, a ser posible con un frontal y un compañero. De vuelta a bordo, el fondeadero de la bahía orlada de palmeras al norte es tranquilo y bonito. El lado del pueblo tiene comida buena y barata y un aire pausado de fin del mundo que le va bien a la costa de Trang.",
+          "thingsToDo": [
+            "Cruzar a nado el túnel de la Cueva Esmeralda hasta el hong",
+            "Calcular la cueva para la bajamar",
+            "Fondear en la bahía norte orlada de palmeras",
+            "Comer barato en el pueblo de Ko Muk"
+          ],
+          "mooringTip": "Fondea a media milla al norte de la Cueva Esmeralda, en la bahía bordeada de palmeras, resguardado por la caliza, y no frente al expuesto acantilado oeste. Cruza la cueva en bajamar con un frontal, y no lo intentes si entra mar de fondo por la boca."
+        },
+        "9": {
+          "shortDescription": "Un salto de cinco millas hasta Ko Kradan, considerada la mejor playa de Trang: arena blanca, agua clara, poca gente.",
+          "description": "Ko Kradan queda a apenas cinco millas de Ko Muk, así que esto es una mañana de navegación suave y un día entero para hacer muy poco. La isla es casi toda parque nacional, con un largo tramo de arena blanca en la cara este mirando al amanecer y un arrecife al que puedes hacer snorkel directamente desde la playa. Hay poca urbanización, unos pocos sitios discretos para comer y poco que hacer más allá de bañarte, leer y echar la siesta a la sombra. Ahí está el encanto. El agua toma tonos de verde pálido sobre la arena y se vuelve azul donde el arrecife cae. Cada primavera vienen parejas a casarse bajo el agua sobre el arrecife, lo que dice algo del lugar. Fondea frente a la playa principal, baja a tierra a comer pescado a la brasa y deja que el día se vaya solo.",
+          "thingsToDo": [
+            "Hacer snorkel en el arrecife junto a la playa",
+            "Holgazanear en la arena de cara este de Ko Kradan",
+            "Comer pescado a la brasa en un chiringuito",
+            "Remar en kayak en el agua clara hacia Ko Muk"
+          ],
+          "mooringTip": "Fondea frente a la larga playa de cara este, sobre arena, para buen agarre y una noche tranquila con el monzón del nordeste. El arrecife queda cerca de la orilla, así que echa el ancla bien lejos de él y comprueba que no borneas sobre el coral."
+        },
+        "10": {
+          "shortDescription": "Pon rumbo norte y desanda hacia Ko Lanta, una etapa fácil en popa con una segunda oportunidad en el paseo marítimo del casco antiguo.",
+          "description": "La ruta empieza ahora su bucle de regreso hacia Phuket, y la primera etapa al norte te devuelve a Ko Lanta. Con el nordeste habitual a tu espalda puede ser una singladura de popa perezosa, con el foque tangoneado y sin prisas, mientras las islas Trang se quedan atrás. Volver a Lanta te da una segunda oportunidad: lo que te perdieras la primera vez, un paseo más largo por el casco antiguo, o simplemente un fondeadero de playa tranquilo en la costa oeste si la temporada lo permite. Avituallar es sencillo aquí, en las tiendas pequeñas y el mercado, y conviene hacerlo antes de las últimas paradas isleñas, donde escasean los suministros. Coge fruta fresca, agua y hielo. Luego elige una playa, báñate desde el barco y disfruta de una tarde sin despertador temprano.",
+          "thingsToDo": [
+            "Reponer fruta y agua en el mercado de Lanta",
+            "Segundo paseo por Lanta Old Town",
+            "Singladura de popa tangoneada desde Kradan",
+            "Fondeadero al atardecer en la costa oeste de Lanta"
+          ],
+          "mooringTip": "Vuelve a fondear donde convenga según la temporada: playas de la costa oeste con el monzón del nordeste, la resguardada costa este si sopla del suroeste. La arena y el fango agarran bien, y es un buen sitio para repostar agua y combustible antes de la singladura de vuelta al norte."
+        },
+        "11": {
+          "shortDescription": "De vuelta a Phi Phi Don por una noche, calculando las paradas de snorkel y el mirador antes de que caigan los barcos de excursión.",
+          "description": "La etapa de Lanta de vuelta a Phi Phi Don son unas veinte y pico millas sin complicación, y a estas alturas la tripulación ya se sabe la rutina. La segunda vez puedes ser más listo con el gentío. Métete en Ton Sai o coge una boya temprano, haz la subida al mirador con las primeras luces, antes de que los ferris descarguen, y usa el mediodía para hacer snorkel donde no estén los barcos de excursión. Bamboo Island, al norte, merece el pequeño desvío por su banco de arena y su arrecife cuando el parque está tranquilo. De vuelta en Phi Phi Don, la tarde sigue teniendo sus bares y su bullicio si te apetece, o puedes cenar con calma a bordo y ver a las longtail encadenar sus luces por la bahía. Mañana la ruta vira al oeste, de regreso a aguas de Phuket.",
+          "thingsToDo": [
+            "Subir al mirador de Phi Phi al amanecer",
+            "Desviarte al banco de arena de Bamboo Island",
+            "Hacer snorkel en una bahía tranquila al mediodía",
+            "Coger temprano una boya de amarre en Ton Sai"
+          ],
+          "mooringTip": "Coge otra vez una boya de amarre en Ton Sai en lugar de pelearte con la arena movediza, y reclámala temprano. Si Ton Sai está a rebosar, Ao Yongkasem, a la vuelta, es más tranquila y suele tener sitio."
+        },
+        "12": {
+          "shortDescription": "Una travesía más larga al oeste, fuera de las islas, hasta Ko Rang Yai, una isla tranquila y orlada de palmeras frente al este de Phuket.",
+          "description": "Esta es la gran travesía de la segunda semana, un largo tirón al oeste desde Phi Phi de vuelta hacia la costa de Phuket. Dale casi todo el día y empieza pronto, porque la brisa marina de la tarde puede montarse de proa. Ko Rang Yai ofrece un aterrizaje suave: una isla baja y orlada de palmeras a unas pocas millas de la costa este de Phuket, con fondeo fácil por las caras oeste y norte. Tras el drama de los acantilados de Trang y el gentío de Phi Phi, es una parada deliberadamente tranquila. Báñate, haz snorkel en los bajíos, camina por la playa y deja que la tripulación baje revoluciones a la vista de las luces de Phuket. Hay una granja de perlas y un pequeño resort en tierra, pero aquí el atractivo es sencillamente el agua en calma y una buena noche de sueño antes del último par de días fáciles.",
+          "thingsToDo": [
+            "Fondear frente a la playa oeste de Ko Rang Yai",
+            "Hacer snorkel en los bajíos de la cara norte",
+            "Pasear por la playa bajo los cocoteros",
+            "Atardecer a la vista de las luces de Phuket"
+          ],
+          "mooringTip": "Fondea por la cara oeste o norte de Ko Rang Yai, que dan buen agarre en arena y abrigo del nordeste dominante. Es un fondeo nocturno fácil y protegido, y a un corto salto de Yacht Haven por si necesitas acortar el final."
+        },
+        "13": {
+          "shortDescription": "Cruza de nuevo a la bahía de Phang Nga para una última noche relajada en Ko Yao Noi antes de la corta singladura de vuelta.",
+          "description": "Con el bucle casi cerrado, el penúltimo día es corto y sin prisas. Un suave largo te saca de Ko Rang Yai y te lleva de vuelta a las aguas resguardadas en torno a Ko Yao Noi, la misma isla tranquila de la primera semana. La segunda vez ya conoces el fondeadero y el pontón de Laem Sai, así que es una ocasión para acomodarte sin guía. Pide una última buena cena de marisco, cangrejo y gambas y una Chang fría, y brinda por una quincena que ha reunido cuevas marinas, lagunas cercadas de jungla, arrecifes de parque y algunas de las playas más tranquilas del país. Si a la tripulación le quedan fuerzas, una vuelta al cabo en anexa al atardecer es una buena forma de cerrarlo. Si no, basta con ver cómo la luz se apaga tras el karst.",
+          "thingsToDo": [
+            "Última cena de marisco en Laem Sai",
+            "Vuelta al cabo en anexa al atardecer",
+            "Fondear frente a la ya conocida costa de Yao Noi",
+            "Brindar por la quincena con una Chang fría"
+          ],
+          "mooringTip": "Vuelve al fondeadero frente a la costa este de Ko Yao Noi o al canal de Yao Yai que ya usaste, sobre arena y fango fiables. Deja solo un corto y tranquilo salto hasta Yacht Haven para la última mañana."
+        },
+        "14": {
+          "shortDescription": "Una corta última mañana cruzando la bahía de vuelta a Yacht Haven, cerrando un bucle de dos semanas por la costa de Andamán.",
+          "description": "La última etapa es fácil, que es como la quieres. Es un corto trayecto a motor o de través desde Ko Yao Noi de vuelta a Yacht Haven, una hora o dos según el viento, con la costa de Phuket llenando la vista al frente. La mayoría de tripulaciones aprovecha la mañana para bañarse una vez más, dejar el barco en orden y secar el equipo antes del puerto. Procura llegar a muelle con tiempo de sobra en vez de precipitar la maniobra; el pantalán de combustible y el registro salen más finos sin prisas. Catorce días te devuelven al punto de partida, desde las agujas acribilladas de cuevas de Phang Nga por las islas Trang y de vuelta. Cierra el cuaderno de bitácora, da propina a la tripulación si la tuviste y empieza a trazar la próxima quincena antes incluso de pisar tierra.",
+          "thingsToDo": [
+            "Último baño matutino frente a Ko Yao Noi",
+            "Secar el equipo y estibar en navegación",
+            "Repostar en el pantalán de combustible de Yacht Haven",
+            "Cerrar la bitácora con un último café"
+          ],
+          "mooringTip": "Llama antes a Yacht Haven por VHF para un amarre y un hueco en el pantalán de combustible, y llega con tiempo de sobra en vez de a última hora. Entra despacio al puerto; el canal está bien balizado, pero la corriente lo cruza."
+        }
+      }
+    },
+    "phuket-phang-nga-week": {
+      "metaTitle": "Bahía de Phang Nga y Phi Phi 7 días | Boat4You",
+      "metaDesc": "Siete días desde Yacht Haven, Phuket: cuevas marinas en Ko Phanak, la laguna hong de Ko Hong, Ko Yao Noi, los acantilados de Railay y Ko Phi Phi.",
+      "days": {
+        "1": {
+          "shortDescription": "Un suave primer salto al sur, hacia el país de la caliza, para terminar en Ko Phanak, donde cuevas hundidas se abren a lagunas iluminadas por el sol.",
+          "description": "Hecho el avituallamiento en el puerto, solemos largar amarras a media mañana y poner rumbo al sur, hacia las islas de karst que hacen famosa esta bahía. La singladura a Ko Phanak es corta, un rodaje fácil mientras la tripulación se hace al barco. Fondea en la cara este, donde tienes abrigo de la brisa dominante y unos cuatro metros bajo la quilla en bajamar. El verdadero motivo para parar está dentro de la roca. Ko Phanak está acribillada de túneles y hongs, lagunas sin techo que se abren al cielo una vez que se ha desplomado la bóveda de una cueva. Coge los kayaks, no la anexa, porque los pasos se estrechan y las paredes están lo bastante afiladas como para reventar una neumática. Calcula tu remada para media marea en el hong doble del oeste; el túnel solo despeja entonces, y hay algo de corriente que leer.",
+          "thingsToDo": [
+            "Remar en kayak el hong sin techo de la cara norte",
+            "Cruzar a remo el túnel oeste a media marea",
+            "Llevar un frontal para la cueva de estalactitas",
+            "Bañarte desde el barco antes del ocaso"
+          ],
+          "mooringTip": "Fondea frente a la cara este en unos cuatro metros sobre arena; te resguarda de la brisa habitual. Aquí no hay boyas de amarre, así que agarra bien el ancla y deja sitio para bornear con la marea."
+        },
+        "2": {
+          "shortDescription": "Una corta navegación más adentro de la bahía hasta Ko Hong, cuya laguna cercada de acantilados se abre por un único túnel bajo.",
+          "description": "Ko Hong queda un poco más adentro del parque nacional, otra corta navegación que deja la tarde libre. El nombre significa habitación en tailandés, y eso es justo lo que espera dentro: una laguna amurallada de caliza, a la que se llega por un túnel que tomas en anexa o kayak. Ve entre media marea y pleamar, o la entrada seca y te quedas esperando sobre las rocas. Una vez dentro, el ruido de fuera se apaga y flotas en un cuenco verde con los acantilados inclinándose por encima. Aquí no hay servicios de ningún tipo, ni agua, ni combustible, ni tienda, así que llega autosuficiente. Solemos fondear frente a la playa, meter la anexa hasta la laguna y luego bañarnos directamente desde el espejo de popa según se suaviza la luz. Muchas tripulaciones acaban deseando haber reservado dos noches.",
+          "thingsToDo": [
+            "Cruzar el túnel en anexa hasta la laguna interior",
+            "Calcular la entrada entre media marea y pleamar",
+            "Hacer snorkel en las paredes de caliza junto a la playa",
+            "Remar los bordes de manglar con las primeras luces"
+          ],
+          "mooringTip": "Echa el ancla frente a la playa sobre arena; la laguna en sí es demasiado angosta y somera para quedarse dentro. Llega a primera hora de la tarde para pillar la ventana de marea del túnel."
+        },
+        "3": {
+          "shortDescription": "Cruza el centro de la bahía hasta Ko Yao Noi, una isla tailandesa de trabajo con pueblos de verdad y buenas cocinas en tierra.",
+          "description": "Tras dos noches entre lagunas vacías, Ko Yao Noi se siente casi sociable. Es una isla habitada de plantaciones de caucho, arrozales y familias pescadoras, y es un cambio bienvenido comer en tierra. Fondea frente a la costa este en unos cuatro metros, que agarra bien cuando arrecia la brisa del suroeste. Cuida el momento al desembarcar la anexa: los llanos del norte son todo roca y cubren en pleamar, así que apunta a la playa del extremo sur. La cena es el reclamo. Anchor Point hace su propio pan y su kombucha y tira mucho de producto local, mientras que Thakhao Bay View saca los platos sobre el agua. Alquila una scooter si tienes una tarde y recorre las tranquilas veredas de atrás entre los arrozales. Es de esas paradas que las tripulaciones recuerdan por la comida y la calma.",
+          "thingsToDo": [
+            "Cenar en Anchor Point Koh Yao Noi",
+            "Platos al atardecer en Thakhao Bay View",
+            "Recorrer en scooter las veredas entre arrozales",
+            "Desembarcar la anexa en la playa del sur"
+          ],
+          "mooringTip": "Fondea frente a la costa este en unos cuatro metros de arena; agarra bien con un suroeste fresco. Desembarca en la playa del sur, ya que la orilla norte es roca que cubre en pleamar."
+        },
+        "4": {
+          "shortDescription": "Navega al este hasta Railay, una península de caliza vertical aislada de tierra firme y accesible solo desde el agua.",
+          "description": "Railay es el día que todos fotografían. Las imponentes paredes de karst sellan la península de Krabi tan por completo que solo se puede llegar en barco, y el efecto desde el fondeadero es puro drama. La pega es el fondo. El lecho frente a Railay West tiene roca a trechos, así que elige bien el sitio, fila bastante cadena y bucea sobre el ancla si dudas. No hay muelles, así que cuenta con vadear con la anexa hasta la orilla por los bajíos. Una vez en tierra, recorre el corto sendero hasta la playa de Phra Nang, pasando por la Cueva de la Princesa con sus ofrendas, y observa a los escaladores trabajando la pared en voladizo sobre la arena. Aunque no toques la roca, merece la hora. Solemos planear llegar con luz de sobra para que el ancla quede bien agarrada antes del gentío de la tarde.",
+          "thingsToDo": [
+            "Caminar a la playa de Phra Nang y la Cueva de la Princesa",
+            "Ver a los escaladores en la pared de Phra Nang",
+            "Remar en kayak desde Railay West rodeando el cabo",
+            "Copas al atardecer por Railay East"
+          ],
+          "mooringTip": "El fondo frente a Railay West es roca irregular, así que elige una mancha de arena, fila cadena generosa y bucea para comprobar el agarre. No hay pantalanes; vadearás con la anexa hasta la orilla, así que ten lista una estacha de proa corta."
+        },
+        "5": {
+          "shortDescription": "Una etapa por mar abierto al sur hasta Phi Phi Don, cambiando bahías tranquilas por agua turquesa, arrecifes y un pueblito bullicioso.",
+          "description": "Este es el salto más largo de la semana, una navegación en condiciones fuera de la bahía resguardada y al sur, hasta el grupo de Phi Phi. La mayoría de tripulaciones o fondea en Ton Sai, práctica para tiendas y bares pero rara vez tranquila, o se pasa a Loh Dalum, en la cara norte, por su agua más clara y su baño más cómodo. Hay tres boyas de amarre naranjas en la cara este de Loh Dalum que vale la pena coger temprano. El arrecife al oeste de Ton Sai da buen snorkel directamente desde el barco. Maya Bay, en la vecina Phi Phi Leh, es la postal, aunque el acceso está muy controlado para proteger el coral, con horarios fijos y algún cierre total, así que consulta las normas antes de comprometerte. Las noches en tierra en el pueblo de Ton Sai son animadas; eso es o el atractivo o el motivo para fondear en otra parte.",
+          "thingsToDo": [
+            "Coger una boya de amarre en Loh Dalum",
+            "Hacer snorkel en el arrecife al oeste de Ton Sai",
+            "Excursión a Maya Bay respetando las normas",
+            "Subir al mirador de Phi Phi",
+            "Cenar y tomar algo en el pueblo de Ton Sai"
+          ],
+          "mooringTip": "Loh Dalum tiene tres boyas de amarre naranjas en su cara este; coge una pronto en temporada, porque vuelan. El fondeadero de Ton Sai agarra, pero sigue lleno de longtail y marejada, así que Loh Dalum o las bahías del este son más tranquilas para pasar la noche."
+        },
+        "6": {
+          "shortDescription": "Navega de vuelta al oeste hacia Phuket, terminando en Ko Rang Yai, una isla baja y orlada de palmeras con una amplia playa blanca.",
+          "description": "La larga etapa de vuelta al oeste va por mar abierto hacia Phuket, y Ko Rang Yai es un fondeadero final cómodo antes del puerto. Es una isla llana y arenosa tras días de roca imponente, y el cambio de escala se agradece. Aquí funcionan dos fondeaderos. La cara oeste te da una amplia playa blanca y arena limpia para fondear, mientras que la cara norte queda mejor protegida cuando el viento del suroeste sube, así que elige según la previsión. El agua está en calma y lo bastante clara para bañarte, hacer snorkel y remar directamente desde el barco. Solemos hacer de esta una tarde tranquila, echar el ancla temprano y dejar que la tripulación se dé un último baño largo y una cena sosegada a bordo. Es una forma suave de ir bajando el ritmo antes de la corta singladura de vuelta por la mañana.",
+          "thingsToDo": [
+            "Fondear frente a la playa blanca de la cara oeste",
+            "Bañarte y hacer snorkel desde el barco",
+            "Remar por los bajíos en calma al anochecer",
+            "Última cena a bordo, fondeados"
+          ],
+          "mooringTip": "Dos fondeaderos: la playa oeste para buen tiempo y arena blanca fina, la cara norte para abrigo cuando arrecia la brisa del suroeste. Lee la previsión y elige el socaire en consecuencia."
+        },
+        "7": {
+          "shortDescription": "Una corta singladura matutina de vuelta a Yacht Haven, una etapa final fácil para entregar el barco sin prisas.",
+          "description": "La última mañana es corta y poco exigente. Yacht Haven está en la punta nordeste de Phuket, una singladura recta y fácil desde Ko Rang Yai, así que no hace falta madrugar. Solemos desayunar con calma fondeados, darnos un baño más y luego volver a motor con margen para dejar el barco listo antes de la hora de entrega. Al entrar al puerto, vigila la marea; la aproximación seca a trechos y el canal pide respeto en bajamar. Una vez a muelle, esperan combustible, agua y una buena ducha caliente, además de un sitio donde sentarte a hacer balance de la semana. Siete días, una bahía llena de cuevas y acantilados, y unas cuantas playas que la mayoría solo ve desde la longtail de un excursionista. Un trato justo por una semana a bordo.",
+          "thingsToDo": [
+            "Desayuno tranquilo y un último baño fondeados",
+            "Ajustar la aproximación al puerto con la marea",
+            "Repostar y hacer agua en Yacht Haven",
+            "Hacer cuentas en una comida en tierra"
+          ],
+          "mooringTip": "La aproximación a Yacht Haven tiene bajos y seca a trechos, así que calcula tu llegada para marea creciente o pleamar y sigue el canal balizado. Llama antes por un amarre y combustible antes de la hora de entrega."
+        }
+      }
+    }
+  },
+  "areas": {
+    "thailand": {
+      "metaTitle": "Itinerarios de vela por el Mar de Andamán | Boat4You",
+      "metaDesc": "Rutas de charter de 7 y 14 días por Phang Nga, Koh Phi Phi y las Similan, con fondeaderos de caliza resguardados y vientos estables de estación seca.",
+      "title": "Navega el laberinto de islas de caliza de Andamán",
+      "description": "La costa oeste de Tailandia se navega mejor entre noviembre y abril, cuando el monzón del nordeste calma el mar y te regala brisa estable e indulgente casi todas las tardes. Las distancias son cortas y el agua se mantiene llana al abrigo de las islas, así que pasas más tiempo bañándote que cazando velas. La bahía de Phang Nga es la joya: un centenar largo de torres de caliza que se alzan directamente del agua de jade, con cuevas marinas en las que te metes a remo en bajamar y la aguja inclinada de Ko Tapu, la roca que hizo famosa James Bond, escondida entre ellas. Baja al sur a Koh Phi Phi por las paredes verticales de Maya Bay, o empuja al noroeste hasta las Similan, cuyos bolos de granito y buceo cristalino solo abren en los meses secos. Consejo de iniciado: fondea temprano. Las flotillas de excursionistas desde Phuket se despejan a media tarde, así que las bahías famosas quedan para las tripulaciones que pernoctan en cuanto se va la última lancha rápida. Los catamaranes son los que mejor van en estos fondeaderos someros y resguardados."
+    }
+  }
+}

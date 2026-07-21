@@ -1,1 +1,256 @@
-{}
+{
+  "routes": {
+    "andaman-explorer-14-days": {
+      "metaTitle": "14-dnevna plovidba Andamanskim morem | Boat4You",
+      "metaDesc": "Dva tjedna od Yacht Havena na Phuketu kroz zaljev Phang Nga, Phi Phi, Ko Lantu i otočje Trang: morske špilje, hongovi i tihe plaže bijelog pijeska.",
+      "days": {
+        "1": {
+          "shortDescription": "Isplovi iz Yacht Havena i usmjeri pramac na istok u zaljev Phang Nga, do litica Ko Phanaka izbušenih špiljama.",
+          "description": "Prvo je jutro uglavnom o tome da se izvučeš iz marine i da se posada uhoda. Iz Yacht Havena zaljev se brzo otvara, a do sredine prijepodneva vapnenački se tornjevi Phang Nge počinju dizati iz izmaglice. Ko Phanak leži nekih dvanaest milja dalje, zelena štruca od otoka isprepletena špiljama poput saća. Obično sidrimo na zavjetrini i spuštamo gumenjak ili kajake prije nego što svjetlo splasne. Dva prolaza vrijedi pronaći: dugi mračni tunel koji mještani zovu Šišmišja špilja i niži kroz koji se može proveslati samo oko oseke. Pogodiš li krivo, ulaz je zatvoren. Ponesi čeonu svjetiljku, kreći se polako i osluškuj kapanje sa stropa iznad sebe.",
+          "thingsToDo": [
+            "Proveslaj kroz prolaz Šišmišje špilje",
+            "Kajakom kroz niskovodni tunel za zatišja struje",
+            "Plivaj sa zaštićenog sidrišta u zavjetrini",
+            "Piće uz zalazak pod vapnenačkim liticama"
+          ],
+          "mooringTip": "Ko Phanak nema vezove, pa sidri u pijesku na istočnoj zavjetrini, podalje od ulaza u špilje. Držanje je dobro na 5-8 metara; kloni se plitkih kamenih polica koje se za oseke ogole."
+        },
+        "2": {
+          "shortDescription": "Kratak skok na sjever do Ko Honga, gdje se plimna špilja otvara u lagunu posve okruženu liticama.",
+          "description": "Ko Hong je dovoljno blizu da nema žurbe s dizanjem sidra. Ime znači soba, i čim proveslaš kroz ulaz shvatiš zašto: prsten okomitog vapnenca s nebom kao poklopcem i mirnom zelenom vodom ispod. Pogodi plimu kako treba. Do unutarnjeg honga dođeš samo oko zatišja, a u krivom trenutku ili stružeš po stropu ili nađeš kanal suh. Većina posada kreće rano, prije nego što longtail brodići s izletnicima stignu s kopna. Kasnije se sidrište smiri. Vodomari love po plićaku, makakiji tumaraju uz rub šume, a do kasnog poslijepodneva litice bacaju sjenu preko palube. Tiho, pomalo sablasno mjesto kad svi motori utihnu.",
+          "thingsToDo": [
+            "Kajakom kroz plimnu špilju u hong",
+            "Uskladi ulazak sa zatišjem struje",
+            "Promatraj makakije uz rub šume",
+            "Roni s disalicom na zaštićenom istočnom sidrištu"
+          ],
+          "mooringTip": "Sidri uz istočnu stranu Ko Honga, zapadno od plićaka koji se protežu od Ko Na Khaea. Pijesak i mulj daju pouzdano držanje; stigni prije sredine prijepodneva da pretekneš izletničku flotu do ulaza u lagunu."
+        },
+        "3": {
+          "shortDescription": "Prijeđi zaljev do opuštenog Ko Yao Noija, radnog otoka rižinih polja, plantaža kaučuka i poštene morske hrane.",
+          "description": "Na Ko Yao Noiju sve uspori. Ovo je pravi otok, ne resort-poteza, i život teče od ribolova, sakupljanja kaučuka i riže. Plovidba od Ko Honga lagana je bočnim vjetrom uz uobičajeni sjeveroistočnjak, dva-tri sata ako povjetarac surađuje. Sidri uz istočnu obalu ili se zavuci prema kanalu između Yao Noija i Yao Yaija. Odvezi se gumenjakom do Laem Saija, mjesta s morskom hranom na južnom kraju s malim plutajućim pontonom za koji se možeš privezati. Naruči što god je tog jutra stiglo s brodova: rakovice, kozice, cijelu ribu na pari s limetom i čilijem. Unajmi skuter ako želiš vidjeti polja i tihu unutrašnjost. Ovdje nikome nije žurba, i u tome je poanta.",
+          "thingsToDo": [
+            "Priveži tender uz ponton Laem Sai",
+            "Naruči ribu na pari u ribljoj konobi",
+            "Skuterom kroz rižina polja u unutrašnjosti",
+            "Usidri se kod kanala Yao Yai"
+          ],
+          "mooringTip": "Sidri uz istočnu obalu Ko Yao Noija ili u kanalu prema Ko Yao Yaiju; skupina Ko Pak Bia na jugu nudi dobro držanje jugozapadno od svojeg pješčanog spruda. Ponton Laem Sai prima tendere, ne i samu jahtu."
+        },
+        "4": {
+          "shortDescription": "Plovi na istok do Railaya, vapnenačkog poluotoka odsječenog od kopna i dostupnog samo s mora.",
+          "description": "Railay je rt do kojeg cesta nikad nije stigla. Okomite ga litice zatvaraju od grada Krabija, pa sve i svatko stiže brodom, što mjestu daje čudan osjećaj brodolomca. Prijelaz od Ko Yao Noija ide na istok preko otvorene vode i traje gotovo cijelo prijepodne. Nastoj se usidriti kod Railay Westa ili Phra Nanga po mirnom vremenu. Plaža Phra Nang glavni je mamac: mekan pijesak pod nadvijenom stijenom, s Princess Cave i njezinim svetištem prinosa skrivenim na jednom kraju. Penjači po vas cijeli dan vise s krša, a do sumraka longtailovi vraćaju ljude na piće uz zalazak. Držanje je ovdje mjestimično slabo, preko stijene, pa spusti sidro pažljivo i zaroni na njega ako je voda dovoljno bistra.",
+          "thingsToDo": [
+            "Iskrcaj se na plažu Phra Nang",
+            "Posjeti svetište u Princess Cave",
+            "Promatraj penjače na kršu Railaya",
+            "Piće uz zalazak kod Railay Westa"
+          ],
+          "mooringTip": "Sidri kod Railay Westa ili Phra Nanga samo u sušnoj sezoni; dno je mjestimično kamenito, pa popusti dovoljno lanca i zaroni na sidro ako možeš. Ova je obala izložena za jugozapadnog monsuna i tada je bolje izbjegavati."
+        },
+        "5": {
+          "shortDescription": "Dvadesetak milja bočnim vjetrom do Phi Phi Dona, prometnog središta skupine, uz uspon do slavnog vidikovca.",
+          "description": "Bučni je onaj Phi Phi Don, i nema se što skrivati. Nakon tišine Phang Nge plovidba na jug spušta te negdje što živi od turizma, s barovima u Ton Saiju, trajektima koji dolaze i odlaze i longtailovima koji zuje sidrištem. Ipak vrijedi jedne noći. Dva zaljeva blizanca, Ton Sai i Loh Dalum, spajaju se na uskom pojasu pijeska, a uspon do vidikovca iznad njih kratak je i znojan, ali se na vrhu isplati. Ao Yongkasem, poznatiji kao Monkey Beach, iza je ugla ako ti sidrište djeluje pretrpano. Opskrba je ovdje laka, led i hladno pivo još lakši. Iskrcaj se rano, prođi vidikovac prije vrućine i shvati večer kao posljednji okus gužve na neko vrijeme.",
+          "thingsToDo": [
+            "Popni se na vidikovac Phi Phi Dona",
+            "Roni s disalicom oko Monkey Beacha (Ao Yongkasem)",
+            "Nadopuni led i namirnice u Ton Saiju",
+            "Večernje piće uz zaljev Loh Dalum"
+          ],
+          "mooringTip": "Zaljev Ton Sai ima službene sidrene plutače koje su bolje od sidrenja po njegovu pomičnom pijesku; uzmi jednu i rezerviraj unaprijed u sezoni, jer se brzo popune. Ao Yongkasem mirnija je alternativa odmah iza rta."
+        },
+        "6": {
+          "shortDescription": "Kratka plovidba do nenaseljenog Phi Phi Lea zbog Maya Baya, lagune Pileh i ronjenja s disalicom među najboljima u kraju.",
+          "description": "Phi Phi Le jedva je sat vremena od svoje veće sestre, ali je drugi svijet: nema hotela, nema sela, samo litice koje se strmo obrušavaju u more. Maya Bay, plaža koju je film proslavio, ponovno je otvorena uz stroga pravila. U njoj se ne smije sidriti, ulaz stoji nekoliko stotina bahta po glavi, a pristup je kroz Loh Samah na stražnjoj strani, gdje sjede čuvari. Laguna Pileh za mene je prava nagrada, potopljeni kanjon žadne vode gdje možeš driftati na sidru i plivati. Loh Samah i okolne stijene kriju dobre koralje i grebenske ribe. Drži brzinu nisko unutar parka, koristi plutače i nosi dozvolu sa sobom. Sam Phi Phi Le dnevna je postaja, ne spavaonica, pa isplaniraj gdje ćeš spavati prije nego što stigneš.",
+          "thingsToDo": [
+            "Zaplivaj u žadnoj vodi lagune Pileh",
+            "Posjeti Maya Bay preko Loh Samaha",
+            "Roni s disalicom uz grebenske stijene kod Loh Samaha",
+            "Kupi e-ulaznicu za nacionalni park unaprijed"
+          ],
+          "mooringTip": "Nigdje sidrenja na Phi Phi Leu: koristi samo parkovne sidrene plutače, drži se ispod tri čvora i nosi važeću DNP dozvolu. Maya Bay je dnevni pristan, pa prenoći na parkovnoj plutači kod Loh Samaha ako je dopušteno, ili se vrati na Phi Phi Don."
+        },
+        "7": {
+          "shortDescription": "Ostavi gužvu za sobom na dužoj etapi na jug do Ko Lante, ležernog otoka s fotogeničnom starom jezgrom.",
+          "description": "Ovo je jedna od dužih etapa i dobra prilika za pravo jedrenje ako sjeveroistočnjak zapuše. Ko Lanta leži nekih dvadeset milja južnije, velik opušten otok dugih plaža i kokosovih gajeva koji nikad nije krenuo putem Phi Phija. Na istočnoj obali, stara jezgra Lante razlog je da se zaustaviš. Jedna ulica stoljetnih drvenih dućana-kuća stoji na stupovima nad vodom, sagradili su ih kineski trgovci i trgovci morski nomadi. Prošeći njome u kasno poslijepodne kad svjetlo pozlati daske. Ima jednostavnih restorana nad vodom koji poslužuju južnotajlandske curryje bogate kurkumom i kokosom. Sidri kod gradskog gata i odvezi se gumenjakom. Nakon intenziteta skupine Phi Phi, Lanta djeluje kao izdah.",
+          "thingsToDo": [
+            "Prošeći kuće na stupovima stare jezgre Lante",
+            "Pojedi južnotajlandski curry nad vodom",
+            "Sidri kod gata stare jezgre",
+            "Razgledaj rukotvorine morskih nomada"
+          ],
+          "mooringTip": "Za sjeveroistočnog monsuna plaže zapadne obale nude lako sidrenje; u jugozapadnoj sezoni premjesti se na zaštićenu istočnu stranu. Sidri kod gata stare jezgre na istočnoj obali, u pijesku i mulju, a tender iskrcaj na gradskom gatu."
+        },
+        "8": {
+          "shortDescription": "Uputi se u otočje Trang do Ko Muka, doma Smaragdne špilje: osamdeset metara plivanja do skrivene plaže.",
+          "description": "Južno od Lante otoci se prorjeđuju, a voda bistri. Ko Muk je vrata otočja Trang, a njegova je glavna atrakcija Tham Morakot, Smaragdna špilja. S litice okrenute moru nizak otvor vodi u osamdeset metara dugačak tunel koji u sredini postane crn kao katran. Preplivaš ga, katkad vukući vodonepropusnu vreću, i izroniš u hong-vrtaču: krug pijeska i džungle s okomitim stijenama i novčićem neba iznad. Kreni za oseke i prije longtailova, po mogućnosti sa svjetiljkom i pratiocem. Natrag na brodu, sidrište u zaljevu obrubljenom palmama na sjeveru mirno je i lijepo. Na strani sela ima jeftine, dobre hrane i onaj spor osjećaj kraja ceste koji pristaje obali Tranga.",
+          "thingsToDo": [
+            "Preplivaj tunel Smaragdne špilje do honga",
+            "Uskladi špilju s osekom",
+            "Sidri u sjevernom zaljevu obrubljenom palmama",
+            "Jedi jeftino u selu Ko Muk"
+          ],
+          "mooringTip": "Sidri otprilike pola milje sjeverno od Smaragdne špilje, u zaljevu obrubljenom palmama, zaštićenom vapnencem, radije nego kod izložene zapadne litice. Preplivaj špilju za oseke sa svjetiljkom i ne pokušavaj ako u otvor ulazi mrtvo more."
+        },
+        "9": {
+          "shortDescription": "Petmiljski skok do Ko Kradana, naširoko ocijenjenog najljepšom plažom Tranga: bijeli pijesak, bistra voda, malo ljudi.",
+          "description": "Ko Kradan jedva je pet milja od Ko Muka, pa je ovo jutro laganog jedrenja i cijeli dan za činiti vrlo malo. Otok je uglavnom nacionalni park, s jednim dugim potezom bijelog pijeska na istočnoj strani okrenutom izlasku sunca i grebenom za kojim možeš roniti ravno s plaže. Malo je izgrađenosti, nekoliko neupadljivih mjesta za jelo i ne mnogo toga za raditi osim plivati, čitati i drijemati u hladu. U tome je čar. Voda leži u nijansama blijedozelene nad pijeskom, produbljujući se u plavo ondje gdje greben otpada. Parovi ovamo dolaze vjenčati se pod vodom na grebenu svakog proljeća, što ti govori ponešto o ambijentu. Sidri kod glavne plaže, iziđi na kopno na ručak od ribe s roštilja i pusti da dan otplovi.",
+          "thingsToDo": [
+            "Roni s disalicom po kućnom grebenu uz plažu",
+            "Ljenčari na pijesku Ko Kradana okrenutom istoku",
+            "Ručak od ribe s roštilja u plažnoj konobi",
+            "Kajakom po bistroj vodi prema Ko Muku"
+          ],
+          "mooringTip": "Sidri kod duge plaže okrenute istoku, u pijesku, za dobro držanje i mirnu noć za sjeveroistočnog monsuna. Greben je blizu obale, pa spusti sidro dovoljno daleko od njega i provjeri da se ne okrećeš iznad koralja."
+        },
+        "10": {
+          "shortDescription": "Okreni na sjever i vrati se prema Ko Lanti, lagana etapa niz vjetar uz drugu priliku za rivu stare jezgre.",
+          "description": "Ruta sada počinje svoju petlju natrag prema Phuketu, a prva etapa na sjever vraća te na Ko Lantu. S uobičajenim sjeveroistočnjakom u leđa može to biti lijena plovidba niz vjetar, s razapetim jedrom i bez žurbe, dok otočje Trang nestaje za krmom. Povratak na Lantu daje ti drugu priliku: sve što si prvi put propustio, dužu šetnju starom jezgrom ili samo mirno sidrište uz plažu na zapadnoj obali ako sezona dopušta. Opskrba je ovdje jednostavna preko malih trgovina i tržnice, vrijedi je obaviti prije posljednjih nekoliko otočnih postaja gdje zalihe presuše. Uzmi svježeg voća, vode i leda. Zatim odaberi plažu, zaplivaj s broda i uživaj u večeri bez ranog alarma.",
+          "thingsToDo": [
+            "Nadopuni voće i vodu na tržnici Lante",
+            "Druga šetnja starom jezgrom Lante",
+            "Plovidba niz vjetar razapetih jedara od Kradana",
+            "Sidrište uz zalazak na zapadnoj obali Lante"
+          ],
+          "mooringTip": "Usidri se ponovno ondje gdje sezona odgovara: plaže zapadne obale za sjeveroistočnog monsuna, zaštićena istočna obala ako puše jugozapadnjak. Pijesak i mulj dobro drže, a ovo je dobro mjesto za nadopunu vode i goriva prije plovidbe natrag na sjever."
+        },
+        "11": {
+          "shortDescription": "Natrag do Phi Phi Dona na jednu noć, s ronjenjem i vidikovcem usklađenima prije nego što nagrnu dnevni brodovi.",
+          "description": "Etapa od Lante natrag do Phi Phi Dona jednostavnih je dvadesetak milja, i posada sad već zna postupak. Drugi put možeš biti pametniji oko gužve. Uvuci se u Ton Sai ili zgrabi plutaču rano, popni se na vidikovac u prvo svjetlo prije nego što trajekti izbace putnike i iskoristi sredinu dana za ronjenje negdje gdje izletničkih brodova nema. Bamboo Island na sjeveru vrijedi kratkog zaobilaska zbog svojeg spruda i grebena dok je park miran. Natrag na Phi Phi Donu, večer još ima svoje barove i vrevu ako ih želiš, ili možeš mirno večerati na brodu i gledati kako longtailovi nižu svoja svjetla preko zaljeva. Sutra ruta zavija na zapad, natrag prema phuketskim vodama.",
+          "thingsToDo": [
+            "Uspon na vidikovac Phi Phija u zoru",
+            "Zaobilazak do spruda Bamboo Islanda",
+            "Roni s disalicom u mirnom zaljevu u podne",
+            "Zgrabi sidrenu plutaču u Ton Saiju rano"
+          ],
+          "mooringTip": "Uzmi opet sidrenu plutaču u Ton Saiju umjesto da se boriš s pomičnim pijeskom, i osvoji je rano u danu. Ako je Ton Sai pretrpan, Ao Yongkasem iza ugla mirniji je i obično ima mjesta."
+        },
+        "12": {
+          "shortDescription": "Duži prijelaz na zapad izvan otoka do Ko Rang Yaija, mirnog otočića obrubljenog palmama tik uz istočni Phuket.",
+          "description": "Ovo je veliki prijelaz drugog tjedna, dugačka plovidba na zapad od Phi Phija natrag prema phuketskoj obali. Odvoji za nju gotovo cijeli dan i kreni rano, jer poslijepodnevni maestral može ojačati u pramac. Ko Rang Yai nudi mek doček: nizak otok obrubljen palmama nekoliko milja od istočne obale Phuketa, s lakim sidrenjem uz zapadnu i sjevernu stranu. Nakon drame litica Tranga i gužve Phi Phija, ovo je namjerno miran predah. Plivaj, roni po plićaku, prošeći plažom i pusti posadu da se opusti nadomak svjetala Phuketa. Ima uzgajalište bisera i mali resort na kopnu, ali privlačnost je ovdje jednostavno mirna voda i dobar noćni san prije posljednjih nekoliko laganih dana.",
+          "thingsToDo": [
+            "Sidri kod zapadne plaže Ko Rang Yaija",
+            "Roni s disalicom po plićaku uz sjevernu stranu",
+            "Šetnja plažom pod kokosovim palmama",
+            "Zalazak nadomak svjetala Phuketa"
+          ],
+          "mooringTip": "Sidri uz zapadnu ili sjevernu stranu Ko Rang Yaija, obje daju dobro držanje u pijesku i zaklon od prevladavajućeg sjeveroistočnjaka. Lako je i zaštićeno noćenje i kratak skok od Yacht Havena ako trebaš skratiti završetak."
+        },
+        "13": {
+          "shortDescription": "Vrati se u zaljev Phang Nga na posljednju opuštenu noć na Ko Yao Noiju prije kratke plovidbe kući.",
+          "description": "Kad je petlja gotovo zatvorena, pretposljednji je dan kratak i bez žurbe. Lagan bočni vjetar odvodi te od Ko Rang Yaija i natrag u zaštićenu vodu oko Ko Yao Noija, istog opuštenog otoka iz prvog tjedna. Drugi put ovdje već poznaješ sidrište i ponton u Laem Saiju, pa je ovo prilika da se smjestiš bez vodiča. Naruči posljednju pravu večeru od morskih plodova, rakovice i kozice i hladni Chang, i nazdravi dvotjednu plovidbu koja je obuhvatila morske špilje, lagune okružene džunglom, parkovne grebene i neke od najmirnijih plaža u zemlji. Ako posada ima snage, plovidba gumenjakom oko rta uz zalazak lijep je način da se sve zaokruži. Inače, samo gledaj kako svjetlo zalazi iza krša.",
+          "thingsToDo": [
+            "Posljednja večera od morskih plodova u Laem Saiju",
+            "Vožnja gumenjakom oko rta uz zalazak",
+            "Sidri kod poznate obale Yao Noija",
+            "Nazdravi dvotjednu plovidbu hladnim Changom"
+          ],
+          "mooringTip": "Vrati se na sidrište uz istočnu obalu Ko Yao Noija ili u kanal Yao Yai koji si ranije koristio, u pouzdanom pijesku i mulju. Ostaje samo kratak, miran skok do Yacht Havena za posljednje jutro."
+        },
+        "14": {
+          "shortDescription": "Kratko posljednje jutro natrag preko zaljeva do Yacht Havena, kojim se zaokružuje dvotjedna petlja andamanskom obalom.",
+          "description": "Posljednja je etapa laka, upravo kakvu je želiš. Kratka je plovidba na motor ili bočnim vjetrom od Ko Yao Noija natrag do Yacht Havena, sat ili dva ovisno o vjetru, s phuketskom obalom koja ispunjava pogled pred tobom. Većina posada iskoristi jutro za još jedno kupanje, dovođenje broda u red i sušenje opreme prije marine. Nastoj biti uz vez s vremenom u zalihi umjesto da žuriš s prilazom; opskrba gorivom i check-in idu glađe bez žurbe. Četrnaest dana zaokružuje krug, od špiljama izbušenih tornjeva Phang Nge kroz otočje Trang i natrag. Zaključi brodski dnevnik, daj napojnicu posadi ako si je imao i počni planirati sljedeća dva tjedna prije nego što si i kročio na kopno.",
+          "thingsToDo": [
+            "Posljednje jutarnje kupanje kod Ko Yao Noija",
+            "Osuši opremu i pospremi stvari u plovidbi",
+            "Nadopuni gorivo na pumpi Yacht Havena",
+            "Zaključi brodski dnevnik uz posljednju kavu"
+          ],
+          "mooringTip": "Nazovi Yacht Haven unaprijed preko VHF-a za vez i termin na pumpi i stigni s viškom vremena umjesto u zadnji čas. Prilazi marini polako; kanal je dobro označen, ali struja teče poprijeko preko njega."
+        }
+      }
+    },
+    "phuket-phang-nga-week": {
+      "metaTitle": "7-dnevni zaljev Phang Nga i Phi Phi | Boat4You",
+      "metaDesc": "Sedam dana od Yacht Havena na Phuketu: morske špilje Ko Phanaka, laguna honga na Ko Hongu, Ko Yao Noi, litice Railaya i Ko Phi Phi.",
+      "days": {
+        "1": {
+          "shortDescription": "Lagan prvi skok na jug u vapnenački kraj, do Ko Phanaka gdje se urušene špilje otvaraju u suncem obasjane lagune.",
+          "description": "Kad je opskrba u marini obavljena, obično odvezujemo konope sredinom prijepodneva i usmjeravamo pramac na jug prema krškim otocima po kojima je ovaj zaljev slavan. Plovidba do Ko Phanaka kratka je, lagana proba dok se posada uhoda. Sidri na istočnoj strani, gdje dobivaš zaklon od prevladavajućeg povjetarca i otprilike četiri metra pod kobilicom za oseke. Pravi razlog za zaustavljanje unutar je stijene. Ko Phanak je izrešetan tunelima i hongovima, lagunama bez krova koje se otvore nebu čim se strop špilje uruši. Uzmi kajake, ne tender, jer se prolazi sužavaju, a stijene su dovoljno oštre da rasporu gumenjak. Uskladi veslanje sa sredinom plime na zapadnom dvostrukom hongu; tunel se tek tada oslobodi, a ima i struje koju valja pročitati.",
+          "thingsToDo": [
+            "Kajakom kroz hong bez krova na sjevernoj strani",
+            "Proveslaj zapadni tunel za sredine plime",
+            "Ponesi svjetiljku za špilju sa stalaktitima",
+            "Zaplivaj s broda prije zalaska"
+          ],
+          "mooringTip": "Sidri uz istočnu stranu na otprilike četiri metra iznad pijeska; zaklanja te od uobičajenog povjetarca. Vezova ovdje nema, pa dobro usadi sidro i ostavi prostora za zaokretanje s plimom."
+        },
+        "2": {
+          "shortDescription": "Kratka plovidba dublje u zaljev do Ko Honga, čija se liticama okružena laguna otvara kroz jedan jedini niski tunel.",
+          "description": "Ko Hong leži nešto dublje u nacionalnom parku, još jedno kratko jedrenje koje ostavlja poslijepodne slobodnim. Ime na tajlandskom znači soba, i upravo to čeka unutra: laguna ozidana vapnencem, do koje se dolazi kroz tunel gumenjakom ili kajakom. Kreni za srednje do visoke plime, inače se ulaz ogoli pa čekaš na stijenama. Kad prođeš, buka vanjskog svijeta splasne i lebdiš u zelenoj zdjeli s liticama nadvijenima iznad glave. Nikakvih sadržaja ovdje nema, ni vode, ni goriva, ni trgovine, pa stigni samodostatan. Skloni smo sidriti kod plaže, odvesti gumenjak u lagunu, a onda zaplivati ravno s krme dok svjetlo omekšava. Posade često zažale što nisu rezervirale dvije noći.",
+          "thingsToDo": [
+            "Gumenjakom kroz tunel u unutarnju lagunu",
+            "Uskladi ulazak sa srednjom do visokom plimom",
+            "Roni s disalicom uz vapnenačke strmine kod plaže",
+            "Kajakom uz rubove mangrova u prvo svjetlo"
+          ],
+          "mooringTip": "Spusti sidro kod plaže u pijesak; sama je laguna preuska i preplitka za sidrenje. Stigni do ranog poslijepodneva da uhvatiš plimni prozor za tunel."
+        },
+        "3": {
+          "shortDescription": "Prijeđi sredinu zaljeva do Ko Yao Noija, radnog tajlandskog otoka s pravim selima i dobrim kuhinjama na kopnu.",
+          "description": "Nakon dvije noći među pustim lagunama, Ko Yao Noi djeluje gotovo društveno. Ovo je nastanjen otok plantaža kaučuka, rižinih polja i ribarskih obitelji, i dobrodošla je promjena jesti na kopnu. Sidri uz istočnu obalu na oko četiri metra, koja dobro drži kad jugozapadni povjetarac zapuše. Pazi na tempiranje kad iskrcavaš tender: sjeverni su plićaci sve sama stijena i prekriju se za visoke vode, pa ciljaj na plažu na južnom kraju. Večera je mamac. Anchor Point radi vlastiti kruh i kombuchu i oslanja se snažno na lokalne namirnice, dok Thakhao Bay View šalje tanjure van nad vodu. Unajmi skuter ako imaš poslijepodne i provozaj tihe pobočne puteljke pokraj polja. Ovo je vrsta postaje koje se posade sjećaju po hrani i miru.",
+          "thingsToDo": [
+            "Večera u Anchor Pointu Koh Yao Noi",
+            "Tanjuri uz zalazak u Thakhao Bay Viewu",
+            "Skuterom pobočnim puteljcima pokraj rižinih polja",
+            "Iskrcaj tender na južnoj plaži"
+          ],
+          "mooringTip": "Sidri uz istočnu obalu na oko četiri metra pijeska; dobro drži za svježeg jugozapadnjaka. Iziđi na kopno na južnoj plaži, jer je sjeverna obala stijena koja se prekrije za visoke plime."
+        },
+        "4": {
+          "shortDescription": "Plovi na istok do Railaya, poluotoka okomitog vapnenca odsječenog od kopna i dostupnog samo s mora.",
+          "description": "Railay je dan koji svi fotografiraju. Visoki krški zidovi zatvaraju poluotok od Krabija tako potpuno da stići možeš samo brodom, a učinak sa sidrišta prava je drama. Kvaka je u dnu. Dno kod Railay Westa mjestimično prelazi u stijenu, pa odaberi mjesto, popusti dovoljno lanca i zaroni na sidro ako nisi siguran. Gatova nema, pa očekuj da ćeš tender gaziti do obale kroz plićak. Kad se iskrcaš, prijeđi kratku stazu do plaže Phra Nang, pokraj Princess Cave s njezinim prinosima, i gledaj penjače kako obrađuju nadvijeni zid iznad pijeska. Čak i ako nikad ne dotakneš stijenu, vrijedi tog sata. Obično planiramo stići uz višak svjetla da se sidro pošteno usadi prije poslijepodnevne gužve.",
+          "thingsToDo": [
+            "Prošeći do plaže Phra Nang i Princess Cave",
+            "Promatraj penjače na zidu Phra Nanga",
+            "Kajakom od Railay Westa oko rta",
+            "Piće uz zalazak duž Railay Easta"
+          ],
+          "mooringTip": "Dno kod Railay Westa mjestimično je kamenito, pa odaberi pješčanu mrlju, popusti izdašno lanca i zaroni da provjeriš usađenost. Gatova nema; tender ćeš gaziti do obale, pa drži kratak pramčani konop spreman."
+        },
+        "5": {
+          "shortDescription": "Etapa otvorenim morem na jug do Phi Phi Dona, mijenjajući mirne zaljeve za tirkiznu vodu, grebene i živahno seoce.",
+          "description": "Ovo je najduži skok u tjednu, pravo jedrenje iz zaštićenog zaljeva i na jug do skupine Phi Phi. Većina posada ili sidri u Ton Saiju, zgodnom za trgovine i barove, ali rijetko mirnom, ili se prebaci do Loh Daluma na sjevernoj strani zbog bistrije vode i lakšeg kupanja. Na istočnoj strani Loh Daluma tri su narančaste sidrene plutače koje vrijedi zgrabiti rano. Greben zapadno od Ton Saija dobar je za ronjenje s disalicom ravno s broda. Maya Bay na susjednom Phi Phi Lehu razglednica je, premda je pristup strogo kontroliran radi zaštite koralja, s određenim satima i pokojim potpunim zatvaranjem, pa provjeri pravila prije nego što se odlučiš. Večeri na kopnu u selu Ton Sai živahne su; to je ili čar ili razlog da se usidriš drugdje.",
+          "thingsToDo": [
+            "Zgrabi sidrenu plutaču u Loh Dalumu",
+            "Roni s disalicom po grebenu zapadno od Ton Saija",
+            "Dnevni izlet do Maya Baya po pravilima",
+            "Popni se do vidikovca Phi Phija",
+            "Večera i piće u selu Ton Sai"
+          ],
+          "mooringTip": "Loh Dalum ima tri narančaste sidrene plutače na istočnoj strani; uzmi jednu rano u sezoni jer brzo nestanu. Sidrište Ton Sai drži, ali ostaje prometno s longtailovima i mrtvim morem, pa su Loh Dalum ili istočni zaljevi mirniji za noć."
+        },
+        "6": {
+          "shortDescription": "Plovi natrag na zapad prema Phuketu, sa završetkom na Ko Rang Yaiju, niskom otoku obrubljenom palmama sa širokom bijelom plažom.",
+          "description": "Duga etapa natrag na zapad ide preko otvorene vode prema Phuketu, a Ko Rang Yai čini lako posljednje sidrište prije marine. Ravan je i pješčan otok nakon dana visokih stijena, i promjena mjerila je dobrodošla. Ovdje rade dva sidrišta. Zapadna strana daje ti široku bijelu plažu i čist pijesak za spuštanje sidra, dok je sjeverna strana bolje zaštićena kad jugozapadni vjetar ojača, pa biraj prema prognozi. Voda je mirna i dovoljno bistra za plivanje, ronjenje i veslanje ravno s broda. Skloni smo od ovoga napraviti lijeno poslijepodne, spustiti sidro rano i pustiti posadu na posljednje dugo kupanje i mirnu večeru na brodu. Blag je to način za smiriti se prije kratke plovidbe kući ujutro.",
+          "thingsToDo": [
+            "Sidri kod bijele plaže na zapadnoj strani",
+            "Plivaj i roni s disalicom ravno s broda",
+            "Veslaj po mirnom plićaku u sumrak",
+            "Posljednja večera na brodu na sidru"
+          ],
+          "mooringTip": "Dva sidrišta: zapadna plaža za lijepo vrijeme i fini bijeli pijesak, sjeverna strana za zaklon kad jugozapadnjak ojača. Pročitaj prognozu i odaberi zavjetrinu u skladu s tim."
+        },
+        "7": {
+          "shortDescription": "Kratka jutarnja plovidba natrag do Yacht Havena, lagana posljednja etapa za predaju broda bez žurbe.",
+          "description": "Posljednje je jutro kratko i nezahtjevno. Yacht Haven sjedi na sjeveroistočnom vrhu Phuketa, ravna i laka plovidba od Ko Rang Yaija, pa nema potrebe biti na nogama u zoru. Obično imamo spor doručak na sidru, još jedno kupanje, pa se na motor vratimo na vrijeme da očistimo brod prije roka za predaju. Pri ulasku u marinu, drži oko na plimi; prilaz se mjestimično ogoli, a plovni put traži poštovanje za oseke. Kad se privežeš, čeka gorivo, voda i prava topla tuširanja, uz mjesto gdje sjesti i podvući crtu pod tjedan. Sedam dana, zaljev pun špilja i litica i nekoliko plaža koje većina ljudi vidi samo s izletničkog longtaila. Poštena razmjena za tjedan na brodu.",
+          "thingsToDo": [
+            "Spor doručak i posljednje kupanje na sidru",
+            "Uskladi prilaz marini s plimom",
+            "Natoči gorivo i vodu u Yacht Havenu",
+            "Podmiri račun uz obrok na obali"
+          ],
+          "mooringTip": "Prilaz Yacht Havenu pliti se i mjestimično ogoli, pa uskladi dolazak s rastućom ili visokom plimom i slijedi označen plovni put. Nazovi unaprijed za vez i gorivo prije termina za predaju."
+        }
+      }
+    }
+  },
+  "areas": {
+    "thailand": {
+      "metaTitle": "Plovidbeni itinerari Andamanskim morem | Boat4You",
+      "metaDesc": "7- i 14-dnevne charter rute kroz zaljev Phang Nga, Koh Phi Phi i Similane, sa zaštićenim vapnenačkim sidrištima i postojanim vjetrovima sušne sezone.",
+      "title": "Zaplovi andamanskim labirintom vapnenačkih otoka",
+      "description": "Zapadnom se obalom Tajlanda najlakše plovi između studenoga i travnja, kad sjeveroistočni monsun smiri more i daruje ti postojan, blagonaklon povjetarac većinu poslijepodneva. Udaljenosti su kratke, a voda ostaje ravna iza otoka, pa više vremena provedeš plivajući nego trimajući jedra. Zaljev Phang Nga glavna je atrakcija: stotinjak vapnenačkih tornjeva diže se ravno iz žadne vode, s morskim špiljama u koje uploviš veslajući za oseke i nakošenim tornjem Ko Tapua, stijene koju je proslavio James Bond, skrivenim među njima. Spusti se na jug do Koh Phi Phija zbog okomitih zidova Maya Baya, ili gurni na sjeverozapad do Similana, čije se granitne gromade i bistro ronjenje otvaraju samo u sušnim mjesecima. Savjet upućenih: sidri rano. Izletničke flotile iz Phuketa raziđu se do sredine poslijepodneva, pa slavni zaljevi pripadaju posadama koje noće čim posljednji gliser ode. Katamarani najbolje pristaju ovim plitkim, zaštićenim sidrištima."
+    }
+  }
+}

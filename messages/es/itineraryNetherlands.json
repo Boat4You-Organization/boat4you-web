@@ -1,1 +1,255 @@
-{}
+{
+  "routes": {
+    "dutch-waters-14-days": {
+      "metaTitle": "Vuelta al Zuiderzee en 14 días | Boat4You",
+      "metaDesc": "Vuelta a vela de 14 días desde Lemmer por el IJsselmeer y el Markermeer: Stavoren, Enkhuizen, Hoorn, Volendam, Marken, Muiden y Urk.",
+      "days": {
+        "1": {
+          "shortDescription": "Una primera etapa tranquila costeando la orilla frisia hasta Stavoren, la más antigua de las once ciudades y, sin duda, un pueblo de marineros.",
+          "description": "La mayoría de las tripulaciones aprovechan el primer día para ir soltando amarras sin exigirse demasiado. Es una singladura corta por la costa frisia, unas once millas, y la esclusa de Lemmer te deja en aguas abiertas en menos de una hora. Stavoren lleva mil años acogiendo navegantes, y todavía da la sensación de estar construido alrededor del agua más que junto a ella. El puerto exterior da directamente al IJsselmeer; el interior se acomoda entre el lago y los meres frisios. Sube dando un paseo hasta la pequeña estatua de bronce de la Dama de Stavoren, que mira fijamente al mar: la fábula con moraleja del pueblo, fundida en metal. Aquí los atardeceres son tranquilos en el buen sentido. Si sopla el suroeste, cuenta con una travesía animada a un largo y con algunas olas cortas que te recuerdan dónde estás.",
+          "thingsToDo": [
+            "Ver la estatua de bronce de la Dama de Stavoren",
+            "Pasear por el puerto exterior junto al IJsselmeer",
+            "Curiosear en la tienda náutica de Marina Stavoren",
+            "Tomar una copa al atardecer con vistas a la esclusa del puerto interior"
+          ],
+          "mooringTip": "El Buitenhaven admite barcos de hasta 25 metros con tres metros de calado y queda fuera de la esclusa, así que a la mañana siguiente sales directo al lago. En julio reserva con un día de antelación; se llena de tripulaciones que hacen la misma vuelta."
+        },
+        "2": {
+          "shortDescription": "Cabotaje hacia el norte pasando Hindeloopen y Workum hasta Makkum, un pueblo alfarero frisio con una playa como es debido para el baño.",
+          "description": "Hoy la orilla frisia te acompaña por el través. Pasas Hindeloopen y Workum, ambos merecen un desvío si te sobran horas, antes de que Makkum se abra detrás de su playa. Es uno de los pocos puntos del lago donde de verdad puedes bañarte desde la arena, y en una tarde cálida los bajíos se llenan de windsurfistas y cometas de kite. El pueblo es más antiguo de lo que parece. Royal Tichelaar cuece aquí loza con esmalte de estaño desde 1572, y las casas de comerciantes junto a la esclusa todavía llevan el dinero de aquel oficio en sus gabletes. Aprovisionarse es fácil. Aquí solemos repostar agua y hacernos con pan fresco antes de la primera travesía de verdad, mañana. El viento tira del oeste al suroeste; una mayor rizada mantiene la comodidad si arrecia por la tarde.",
+          "thingsToDo": [
+            "Visitar la centenaria fábrica de cerámica Royal Tichelaar",
+            "Hacer windsurf o paddle surf en la playa de Makkum",
+            "Admirar los gabletes de los comerciantes junto a la esclusa",
+            "Desviarte a tierra en Hindeloopen o Workum"
+          ],
+          "mooringTip": "El puerto de Makkum queda justo pasada la esclusa; llama al capitán de puerto al aproximarte, porque los pantalanes de visitantes se quedan justos para todo lo que pase de doce metros. Llega a media tarde los fines de semana de verano o acabarás abarloado."
+        },
+        "3": {
+          "shortDescription": "Tu primera travesía en condiciones del IJsselmeer, rumbo oeste hacia Medemblik y las recias torres rojas del Castillo de Radboud.",
+          "description": "Este es el día en que el lago enseña su anchura. Desde Makkum pones proa al oeste por aguas abiertas hacia la costa de Holanda Septentrional, de quince a dieciocho millas según la derrota, y durante un par de horas no hay más que el horizonte y el viento. El IJsselmeer es poco profundo, así que una brisa fresca levanta enseguida olas cortas y empinadas; elige una buena ventana meteorológica y tendrás un largo rápido y placentero. Medemblik se anuncia con el Castillo de Radboud, una torre del homenaje achaparrada del siglo XIII que Floris V mandó levantar para tener a raya a los frisios occidentales. El Pekelharinghaven queda a un corto paseo del centro, justo pasado el castillo. Vale la pena salir de Makkum hacia las nueve para llegar con la tarde todavía por delante.",
+          "thingsToDo": [
+            "Subir a la torre del homenaje medieval del Castillo de Radboud",
+            "Montar en el tranvía de vapor Hoorn-Medemblik",
+            "Pasear por los muelles del Pekelharinghaven",
+            "Tomar un café en el frente del puerto viejo"
+          ],
+          "mooringTip": "Entra en Medemblik y cae a babor justo pasado el castillo para llegar al Pekelharinghaven, tranquilo y a solo unos minutos del pueblo. Los calados son buenos para veleros de crucero, y rara vez hace falta reservar salvo en los fines de semana de regatas."
+        },
+        "4": {
+          "shortDescription": "Un salto corto hacia el sur hasta Enkhuizen, el puerto del Siglo de Oro cuyo Museo del Zuiderzee recrea el mundo perdido del lago.",
+          "description": "Después de la travesía de ayer, esta etapa sabe a respiro: apenas nueve millas costa abajo. Enkhuizen fue uno de los pueblos más ricos del Siglo de Oro neerlandés, puerto base de la Compañía de las Indias Orientales, y aquella riqueza sigue en pie en sus almacenes y en la robusta puerta de piedra Dromedaris que guarda la entrada. Dedica la tarde al Museo del Zuiderzee. La parte al aire libre enlaza calles enteras de casas trasladadas aquí desde aldeas que ahogó el dique, con gente remendando redes y ahumando pescado como se hacía hacia 1900. El Compagnieshaven es enorme y bullicioso, justo al lado del museo y a dos minutos del casco viejo. Aquí es también donde la esclusa Krabbersgat separa el IJsselmeer del Markermeer, así que mañana cruzas a aguas distintas.",
+          "thingsToDo": [
+            "Pasar media jornada en el Museo del Zuiderzee",
+            "Subir a la torre portuaria Dromedaris",
+            "Ver ahumar pescado en el museo al aire libre",
+            "Tomar una copa al anochecer en la terraza del Compagnieshaven"
+          ],
+          "mooringTip": "El Compagnieshaven recibe unos 18.000 barcos de paso al año, así que sus 600 amarres absorben el gentío del verano mejor que los puertos más pequeños del pueblo. Procura llegar antes de las cinco; los pantalanes más cercanos al museo son los primeros en ocuparse."
+        },
+        "5": {
+          "shortDescription": "Costa del Markermeer abajo hasta Hoorn, un pueblo del Siglo de Oro con 368 monumentos que dio nombre al Cabo de Hornos.",
+          "description": "Una vez franqueada la esclusa de Enkhuizen estás en el Markermeer, que se navega un pelín más plano que el propio IJsselmeer. Unas doce millas costa abajo te llevan a Hoorn, que concentró más historia en dos siglos que la mayoría de los pueblos en diez. Willem Schouten dobló el extremo de Sudamérica en 1616 y lo bautizó con el nombre de su puerto natal, y por eso el Cabo de Hornos lleva el nombre de un pueblo pesquero neerlandés. El viejo puerto interior, el Binnenhaven, queda justo bajo la inclinada Hoofdtoren y te deja de lleno en un centro con 368 edificios catalogados. El Grashaven, la marina moderna, es más cómodo pero menos romántico. Cafés y restaurantes de sobra bordean el paseo marítimo, así que el avituallamiento y una buena cena quedan resueltos. Un día relajado, si el tiempo acompaña.",
+          "thingsToDo": [
+            "Fotografiar la inclinada torre Hoofdtoren",
+            "Recorrer los 368 monumentos del viejo Hoorn",
+            "Atracar en el puerto viejo Binnenhaven",
+            "Cenar en la plaza Roode Steen"
+          ],
+          "mooringTip": "Por ambiente, toma el Binnenhaven, en pleno casco viejo, en lugar del moderno Grashaven, pero es pequeño y poco profundo hacia el fondo, así que entra despacio con la proa. Los puentes que dan al puerto interior tienen horarios de apertura fijos; consúltalos antes de comprometerte."
+        },
+        "6": {
+          "shortDescription": "Una singladura tranquila hacia el sur hasta Volendam, el pueblo pesquero de la anguila y los trajes típicos donde atracas en pleno corazón del bullicio.",
+          "description": "Unas catorce millas de Markermeer separan Hoorn de Volendam, un largo cómodo con los habituales vientos del oeste. Volendam explota a fondo su pasado, y eso o te lo tomas con buen humor o no. El paseo marítimo, el Dijk, es un muro compacto de puestos de pescado, casas de tortitas y gente con traje tradicional posando para las fotos. Bajo todo eso hay un pueblo pesquero de verdad, y la anguila ahumada y el kibbeling fresco son buenos de verdad. El puerto municipal te deja justo en medio de todo, palo con palo entre el gentío. Eso es el atractivo o el inconveniente, según tu humor. Si buscas aguas más tranquilas, recuerda que Marken y Monnickendam quedan a una singladura corta. Nosotros solemos llegar pronto, comer bien y dejar que la tarde vaya viniendo.",
+          "thingsToDo": [
+            "Probar la anguila ahumada en el Dijk",
+            "Degustar kibbeling fresco en un puesto del puerto",
+            "Posar con el traje típico de Volendam para una foto",
+            "Contemplar la flota pesquera desde el muelle"
+          ],
+          "mooringTip": "El Gemeentehaven está justo en el corazón turístico, con electricidad, agua y WiFi en los pantalanes de visitantes. Es popular y compacto, así que reserva con antelación en julio y agosto o llega antes del mediodía para asegurarte sitio."
+        },
+        "7": {
+          "shortDescription": "Un brinco de cuatro millas hasta Marken, una antigua isla de casas sobre pilotes y gabletes en verde y blanco que aún se siente aparte.",
+          "description": "Cuatro millas cruzando la ensenada apenas cuentan como travesía, así que tómatelo como un regalo. Duerme hasta tarde, callejea por Volendam y luego haz el corto cruce para dedicarle a Marken toda la tarde. Un dique lo une a tierra firme desde 1957, pero el lugar nunca se dio por enterado. La vieja aldea se agrupa sobre montículos bajos, con sus casas de madera alzadas sobre pilotes contra unas inundaciones que ya no llegan, y los gabletes pintados del mismo verde y blanco desde hace generaciones. Camina hasta el Paard van Marken, el pequeño faro de la punta oriental, para la mejor vista de vuelta sobre el agua. No hay supermercado que merezca ese nombre, así que aprovisiónate en Volendam antes de salir. Noches tranquilas, luz nítida por la mañana y una aldea que premia el paseo sin prisa.",
+          "thingsToDo": [
+            "Caminar hasta el faro Paard van Marken",
+            "Fotografiar las casas sobre pilotes en verde y blanco",
+            "Visitar el taller de zuecos y trajes de Marken",
+            "Seguir el sendero del puerto que rodea la aldea"
+          ],
+          "mooringTip": "El puerto de Marken es pequeño y muy solicitado por los barcos de excursión de un día, así que procura estar dentro a primera hora de la tarde. El fondo remonta hacia la cabeza de los muelles; toma un amarre en el pantalán de visitantes en lugar de forzar la entrada hasta el fondo."
+        },
+        "8": {
+          "shortDescription": "Un salto corto hasta Monnickendam, un pueblo de Waterland de cobertizos de anguila ahumada y un carillón, con mucho menos gentío que Volendam.",
+          "description": "Otra etapa suave, cinco millas a lo sumo, que es el ritmo de este rincón del lago. Monnickendam es lo que Volendam sería sin las excursiones en autocar: los mismos viejos huesos de Waterland, un puerto que trabaja, pero con sitio para respirar. La Speeltoren, la torre del siglo XV en la calle mayor, todavía hace sonar su carillón y los caballeros mecánicos dan las horas. Junto al agua, los ahumadores de anguila llevan generaciones curando pescado sobre roble y aliso, y un bocadillo de anguila comido en el muelle es uno de los pequeños placeres de toda esta ruta. La marina alberga más de 650 barcos y aun así rara vez se siente abarrotada. Es una base tranquila antes de la etapa más larga de mañana rumbo a Ámsterdam y el castillo de Muiden.",
+          "thingsToDo": [
+            "Escuchar el carillón y los caballeros de la Speeltoren",
+            "Comer anguila ahumada en un ahumadero del puerto",
+            "Recorrer la Grote Kerk y las calles viejas",
+            "Ver los veleros clásicos de madera en la marina"
+          ],
+          "mooringTip": "La marina de Monnickendam tiene más de 650 amarres y casi siempre encuentra sitio incluso en temporada, pero los amarres con encanto están a lo largo del histórico puerto interior, que se llena primero. Una breve apertura de puente te da paso; consulta el horario."
+        },
+        "9": {
+          "shortDescription": "Hacia el sur cruzando el IJmeer, pasando el fuerte-isla de Pampus, hasta Muiden, donde un castillo medieval guarda la desembocadura del Vecht.",
+          "description": "Ahora cambia el paisaje. Dejas atrás los viejos puertos del Zuiderzee y navegas al sur por el IJmeer, el agua a las puertas de Ámsterdam, unas quince millas con el perfil de la ciudad creciendo por la amura de estribor. A mitad de camino, el bajo fuerte de ladrillo de Pampus surge directamente del lago, parte del anillo de fortines que en su día defendió Ámsterdam y hoy una isla-museo en la que puedes desembarcar si cuadran los horarios. Muiden se asienta donde el río Vecht se junta con el mar, y su castillo, el Muiderslot, es el auténtico: una torre del homenaje del siglo XIII con foso y cuatro torres redondas, hoy a cargo del Rijksmuseum. El KNZRV, el club náutico más antiguo del país, tiene aquí su sede, así que estás en buena compañía. Vigila el tráfico; estas aguas se animan un fin de semana con buen tiempo.",
+          "thingsToDo": [
+            "Visitar el castillo con foso Muiderslot",
+            "Desembarcar en la fortaleza-isla de Pampus",
+            "Pasear por la ribera del Vecht en Muiden",
+            "Ver la flota frente al club KNZRV"
+          ],
+          "mooringTip": "El puerto del pueblo de Muiden y el club KNZRV quedan justo pasada la bocana del Vecht; la esclusa de mar y un puente de carretera controlan el acceso, así que ajusta tu llegada a una apertura. Los amarres son limitados, así que la mayor Marina Muiderzand, enfrente en Almere, es una alternativa fiable."
+        },
+        "10": {
+          "shortDescription": "Poner rumbo norte de nuevo, volver a cruzar el IJmeer pasando Pampus y remontar la costa hasta Volendam para pasar la noche.",
+          "description": "A partir de aquí la vuelta pone proa a casa. Rehaces el IJmeer hacia el norte, con Pampus otra vez a un costado, y cruzas de vuelta al Markermeer para la subida a Volendam. Son unas quince millas, y con el viento dominante ahora más por el través o la aleta puede ser una singladura rápida y fácil. Si te apetece un cambio respecto al pueblo pesquero, Marina Muiderzand o una parada para comer en Pampus rompen el día. Al volver a Volendam por segunda vez, reparas en cosas que se te pasaron: el pequeño museo detrás del Dijk, las calles una hilera más atrás del paseo, donde de verdad vive la gente del lugar. Toma un amarre, estira las piernas y empieza a pensar en las dos travesías abiertas que rematan el viaje.",
+          "thingsToDo": [
+            "Romper la travesía en Pampus para comer",
+            "Visitar el Volendams Museum detrás del Dijk",
+            "Explorar las callejuelas apartadas del paseo marítimo",
+            "Aprovisionarte para las travesías que quedan"
+          ],
+          "mooringTip": "Ya conoces el Gemeentehaven de la etapa de ida; una segunda noche es más fácil si llamas con antelación, porque los amarres de visitantes rotan rápido. Aquí abarloarse es lo normal, así que ten las defensas listas a ambas bandas al entrar."
+        },
+        "11": {
+          "shortDescription": "Remontar el Markermeer y franquear la esclusa de Enkhuizen, de vuelta al puerto del Siglo de Oro y su gran dársena.",
+          "description": "Una ceñida más larga que la de ayer, unas catorce millas Markermeer arriba hasta Enkhuizen. Si el viento está en el oeste o el suroeste, como suele, pasarás buena parte del día ciñendo, así que salir temprano compensa. Arriba te reencuentras con el Krabbersgat, donde el Naviduct pasa el tráfico rodado por debajo del agua mientras los barcos esclusan por encima. Es un ingenioso alarde de la ingeniería neerlandesa y da una callada satisfacción atravesarlo. Enkhuizen merece una segunda mirada. Si a la ida pasaste de puntillas por el Museo del Zuiderzee, ahora es el momento de volver, o simplemente pasea por las murallas y los puertos viejos al anochecer. Mañana toca la grande, la travesía abierta hasta Urk, así que reposta combustible y agua esta noche.",
+          "thingsToDo": [
+            "Esclusar por el Naviduct del Krabbersgat",
+            "Volver a las calles al aire libre del Museo del Zuiderzee",
+            "Pasear por las murallas de Enkhuizen al anochecer",
+            "Repostar combustible antes de la travesía a Urk"
+          ],
+          "mooringTip": "Viniendo del Markermeer entras a Enkhuizen esclusando por el Krabbersgat; hay pantalanes de espera a ambos lados por si hay cola. Ya dentro, tanto el Compagnieshaven como el más pequeño Buyshaven, cerca del centro, admiten visitantes."
+        },
+        "12": {
+          "shortDescription": "La travesía abierta más larga de la ruta, hacia el noreste por el IJsselmeer hasta Urk, un viejo pueblo isleño que todavía huele a pescado.",
+          "description": "Esta es la travesía que las tripulaciones recuerdan. Desde Enkhuizen esclusas de vuelta al IJsselmeer y pones proa al noreste por aguas abiertas hacia Urk, cerca de veinte millas sin abrigo por el camino. Elige bien el tiempo. Con un oeste sostenido es un largo glorioso; con un temporal duro, las olas cortas y empinadas del IJsselmeer tendrán ocupada a toda la tripulación. Urk fue una isla hasta que se desecó el pólder que la rodea en los años cuarenta, y ha conservado hasta la última pizca de aquel aislamiento, dialecto propio incluido. El puerto todavía se gana la vida, con coloridos pesqueros descargando pescado junto a los pantalanes de visitantes. Sube hasta el viejo faro y el monumento a los pescadores en la punta, donde los nombres de los perdidos están tallados en piedra. Las cenas de pescado de aquí son tan frescas como puedan serlo.",
+          "thingsToDo": [
+            "Detenerte ante el monumento a los pescadores de Urk",
+            "Subir al viejo faro de Urk",
+            "Ver a los pesqueros descargar pescado en el puerto",
+            "Comer pescado recién frito en el Westhaven"
+          ],
+          "mooringTip": "Urk tiene tres puertos; los veleros de paso suelen tomar el Westhaven o el más nuevo Nieuwe Haven, lejos de los muelles pesqueros en activo. Está expuesto al oeste, así que con un oeste fuerte entra pronto y dobla las amarras."
+        },
+        "13": {
+          "shortDescription": "Una última travesía relajada por el rincón frisio de vuelta a Lemmer, cerrando la vuelta donde empezó.",
+          "description": "La última navegación de verdad es amable, unas catorce millas de Urk de vuelta a Lemmer por el rincón noreste del lago. Después de la travesía de Urk sabe casi a descanso. Lo más probable es que la costa frisia se vaya acercando por la proa a lo largo de la tarde, y si el viento colabora es un largo sencillo todo el camino. Lemmer te recibe de vuelta por su esclusa, la misma puerta que te dejó salir hace dos semanas, y el pueblo tiene bastante vida en su paseo marítimo para una cena de última noche como es debido. Si hay tiempo y luz, el Woudagemaal, la gran estación de bombeo a vapor justo a las afueras, merece la breve escapada a tierra. Si no, acomódate, haz la cuenta de las millas y deja que la tripulación se intercambie esas historias que siempre mejoran al contarlas.",
+          "thingsToDo": [
+            "Esclusar de vuelta al puerto viejo de Lemmer",
+            "Visitar la estación de bombeo a vapor Woudagemaal",
+            "Cenar la última noche en el paseo marítimo de Lemmer",
+            "Callejear por el pueblo pesquero de Lemmer"
+          ],
+          "mooringTip": "De vuelta en Lemmer puedes quedarte en la marina del lado del IJsselmeer, antes de la esclusa, o tomar los amarres del pueblo, dentro; los interiores son más prácticos para los restaurantes. Si mañana devuelves el barco, la marina exterior facilita el cambio de manos de la mañana."
+        },
+        "14": {
+          "shortDescription": "Un día de reserva en la base: una salida corta por los lagos frisios, dormir hasta tarde o, simplemente, tiempo para devolver el barco sin prisa.",
+          "description": "Dos semanas por el lago se merecen un aterrizaje suave, y para eso está este día. Si te quedas con el barco una noche más, los lagos frisios se abren nada más salir de Lemmer por la Prinses Margrietsluis, y una corta navegación hasta el Tjeukemeer o el Groote Brekken te regala aguas planas y abrigadas después de todo ese mar abierto. Es otro tipo de navegación, cerrada y verde, con juncales en lugar de horizontes. Si el chárter termina aquí, aprovecha la mañana sin prisas: achica las aguas negras, cuadra el cuaderno de bitácora, acércate al pueblo a por un último café junto al agua. Lemmer luce su pasado de pueblo pesquero sin darse importancia, y es un lugar agradable donde estar sin plan. Sea como sea que lo pases, terminas donde empezaste, que es la callada satisfacción de una vuelta bien navegada.",
+          "thingsToDo": [
+            "Una salida de prueba hasta el Tjeukemeer",
+            "Explorar los lagos de juncos Groote Brekken",
+            "Un último café en el muelle de Lemmer",
+            "Devolver el barco sin prisas en la base"
+          ],
+          "mooringTip": "Si sacas el barco a los lagos frisios, la Prinses Margrietsluis es tu puerta de entrada y puede hacer cola las tardes de verano, así que planea la vuelta antes del ajetreo del anochecer. Para la devolución, quédate en la marina más cercana a la base de chárter para que la mañana sea sencilla."
+        }
+      }
+    },
+    "ijsselmeer-classic-week": {
+      "metaTitle": "Pueblos del Zuiderzee en 7 días | Boat4You",
+      "metaDesc": "Una semana por el IJsselmeer desde Lemmer: Urk, Enkhuizen, Hoorn, Volendam, Medemblik y Stavoren, con consejos de atraque en cada puerto del Zuiderzee.",
+      "days": {
+        "1": {
+          "shortDescription": "Una etapa inicial fácil hacia el sur cruzando el IJsselmeer hasta Urk, una antigua isla cuyo puerto todavía huele a anguila ahumada.",
+          "description": "Lemmer se asienta donde los lagos frisios se juntan con el agua abierta, así que la mayoría de las tripulaciones pasan la primera hora simplemente asentando el barco antes de salir por la bocana. La singladura hasta Urk ronda las dieciséis millas con viento del suroeste, un tiempo de largos cómodo para una jornada de rodaje. Urk fue una isla hasta que los diques la alcanzaron en 1939, y ha conservado ese aire de isla. Los botters de velas curtidas siguen alineados en los muelles. El viejo faro vigila desde lo alto un laberinto de callejuelas donde las pescaderías venden arenque y anguila ahumada recién salida del ahumadero. Solemos amarrar a media tarde, pasear por el puerto y luego comer solla en una mesa junto al agua. Deja un rato para el camino de la iglesia por la parte alta del pueblo. La luz del atardecer allí arriba bien merece la subida.",
+          "thingsToDo": [
+            "Ver los botters de velas curtidas en los muelles viejos",
+            "Comprar anguila ahumada en una pescadería de Urk",
+            "Subir al faro sobre el pueblo",
+            "Cenar en el granero-botter del Restaurant de Boet"
+          ],
+          "mooringTip": "El puerto interior de Urk se llena rápido en verano, así que procura entrar antes de media tarde y cuenta con abarloarte de dos o tres en fondo. Los amarres de la marina del lado norte están más resguardados si un suroeste fresco mete marejada en la bocana."
+        },
+        "2": {
+          "shortDescription": "Una travesía en condiciones por aguas abiertas del IJsselmeer hasta Enkhuizen, el viejo pueblo de la Compañía de las Indias Orientales junto al Museo del Zuiderzee.",
+          "description": "Esta es la primera travesía de verdad de la semana, unas veinte millas de lago abierto con la baja costa de Urk quedando por la popa. El IJsselmeer es poco profundo, así que un viento fresco levanta una mar corta y empinada más que un mar de fondo largo; si sopla duro del suroeste, riza pronto y acomódate. Enkhuizen recompensa la llegada. En el siglo XVII fue un rico puerto de la Compañía Neerlandesa de las Indias Orientales, y la puerta Drommedaris todavía guarda la entrada del puerto. El Museo del Zuiderzee está justo junto al agua, una aldea al aire libre de casas trasladadas que muestra cómo vivían estos pueblos antes de que el dique cerrara el mar. Solemos tomar el Compagnieshaven por los servicios y luego caminar los diez minutos hasta las calles viejas a cenar. Aprovisiónate aquí si los pañoles van quedando escasos.",
+          "thingsToDo": [
+            "Visitar el Museo del Zuiderzee al aire libre",
+            "Fotografiar la puerta Drommedaris al anochecer",
+            "Recorrer las calles de comerciantes del Siglo de Oro",
+            "Aprovisionarte en el minimercado del Compagnieshaven"
+          ],
+          "mooringTip": "El Compagnieshaven tiene servicios completos y unos 600 amarres justo al lado del museo, fácil de tomar con casi cualquier condición. Para una noche más animada en el casco viejo, sigue hasta el Buitenhaven municipal, aunque se aprieta mucho los fines de semana de verano."
+        },
+        "3": {
+          "shortDescription": "Hacia el sur por la esclusa Krabbersgat hasta el Markermeer, para amarrar bajo la torre portuaria gótica de Hoorn.",
+          "description": "Día corto, así que no hay prisa por largar amarras. Justo al sur de Enkhuizen el Houtribdijk parte el agua en dos, y cruzas del IJsselmeer al más tranquilo Markermeer por la esclusa Krabbersgat. El tráfico se agolpa allí las mañanas de verano, así que conviene cronometrar el paso para después de la punta madrugadora. De la esclusa hay una docena de millas fáciles hasta Hoorn. El pueblo fue un peso pesado en tiempos de la Compañía de las Indias Orientales, y todavía luce bien esa historia. La Hoofdtoren, una recia torre gótica de 1532, se alza en la esquina del puerto y hoy alberga un restaurante. Amarra en el Binnenhaven y estarás en pleno casco viejo, a veces abarloado de varios barcos en fondo contra el muelle. Reserva la tarde para el Grote Oost y sus casas de comerciantes.",
+          "thingsToDo": [
+            "Tomar algo bajo la Hoofdtoren de 1532",
+            "Pasear entre las casas de comerciantes del Grote Oost",
+            "Recorrer Oostereiland y el puerto viejo",
+            "Cruzar la esclusa Krabbersgat tras la punta matinal"
+          ],
+          "mooringTip": "El Binnenhaven de Hoorn te deja en el corazón del casco viejo, pero los amarres son limitados y abarloarse de tres o cuatro en fondo es lo normal en julio. Llega a primera hora de la tarde, o toma la mayor marina Grashaven, a un corto paseo, si el muelle interior está lleno."
+        },
+        "4": {
+          "shortDescription": "Una etapa suave por el Markermeer hasta Volendam, donde el frente del puerto vive de la anguila ahumada y el traje típico.",
+          "description": "Otra etapa modesta, unas once millas pegado a la orilla oeste del Markermeer, y la navegación suele ser plana e indulgente salvo con un temporal duro. Volendam es la parada más visitada de la semana y no se disculpa por ello. El paseo marítimo es un muro de ahumaderos de anguila, tiendas de recuerdos y cafés, y el olor a anguila ahumada te llega antes que el propio puerto. Es turístico, sí, pero el pescado es bueno de verdad y las viejas tiendas de trajes forman parte del lugar, no son un decorado. Atraca en el Marinahaven o en el puerto municipal y pisas directamente el dijk que sostiene todo el paseo. Recórrelo al anochecer, cuando ya se han ido los autocares de excursión; el puerto se vacía y la luz se suaviza sobre el agua. Y de paso, prueba el kibbeling frito de un puesto.",
+          "thingsToDo": [
+            "Degustar anguila ahumada en el frente del puerto",
+            "Comer kibbeling en un puesto del muelle",
+            "Curiosear las viejas tiendas de trajes de Volendam",
+            "Pasear por el dijk después de la puesta de sol"
+          ],
+          "mooringTip": "Los dos puertos de Volendam te dejan justo en el paseo, que es a la vez el atractivo y el inconveniente; cuenta con oleaje de paso y trasiego de gente hasta tarde. Reserva el Marinahaven con antelación para un fin de semana de julio, y toma un amarre alejado del muelle del ferry para una mañana tranquila."
+        },
+        "5": {
+          "shortDescription": "La etapa más larga de la semana, remontando el lago hasta Medemblik, con su marina al pie del ladrillo rojo del Castillo de Radboud.",
+          "description": "El día más largo del viaje, así que largamos hacia las nueve. Medemblik queda ya en el IJsselmeer, lo que significa rehacer el Markermeer hacia el norte y volver a esclusar en el Krabbersgat de Enkhuizen antes del tramo final en aguas abiertas. Cuéntalo en unas treinta millas en total, más si el viento te viene de proa. Una vez pasada la esclusa el lago se abre y, con un suroeste sostenido por la aleta, las últimas horas pueden ser la mejor navegación de la semana. Medemblik es el pueblo más antiguo de Frisia Occidental, pequeño y sin prisas después de Volendam. La marina Regatta Center está justo en aguas abiertas, al pie de los muros del Kasteel Radboud, el castillo del siglo XIII que guarda la vieja bocana. Hay un ferrocarril de vapor en activo hasta Hoorn si tienes una mañana muerta. Medemblik nos gusta precisamente porque no te pide nada.",
+          "thingsToDo": [
+            "Visitar el Kasteel Radboud del siglo XIII",
+            "Montar en el tren de vapor hacia Hoorn",
+            "Recorrer el puerto viejo y las murallas",
+            "Ver la flota de regatas desde la marina"
+          ],
+          "mooringTip": "El Regatta Center Medemblik está en aguas abiertas a las afueras del pueblo, sencillo de tomar pero expuesto si sopla duro de tierra a mar desde el suroeste. Para más abrigo y un paseo más corto hasta los cafés, pide en su lugar al capitán de puerto un amarre en el más antiguo puerto interior."
+        },
+        "6": {
+          "shortDescription": "Una travesía directa del IJsselmeer hasta el lado frisio y Stavoren, el pueblo más antiguo de la provincia, rodeado de agua por tres lados.",
+          "description": "Hoy se pone proa de vuelta a la orilla frisia, una travesía de unas quince millas que en un día bueno es un solo largo prolongado y placentero. Ojo con el tráfico cerca de Enkhuizen y con los buques que se embudan hacia el Krabbersgat, y luego se abre agua libre por delante. Stavoren es el pueblo más antiguo de Frisia y se asienta con el lago abrazándolo por tres lados, lo que facilita la aproximación con casi cualquier viento. La leyenda local habla de la Dama de Stavoren, una viuda rica cuya soberbia supuestamente arruinó el puerto; la pequeña estatua junto al agua todavía escruta el mar en busca de su barco perdido. El pueblo en sí es tranquilo y bajo, un puñado de calles, una esclusa hacia los lagos frisios y un par de buenas terrazas. Después del gentío de Volendam, se siente como soltar el aire.",
+          "thingsToDo": [
+            "Encontrar la estatua de la Dama de Stavoren",
+            "Tomar una cerveza en una terraza junto a la esclusa",
+            "Ver pasar los barcos hacia los lagos frisios",
+            "Pasear por las calles bajas del casco viejo"
+          ],
+          "mooringTip": "Stavoren tiene un puerto exterior justo sobre el IJsselmeer y un puerto interior junto a la esclusa hacia los lagos frisios. El Buitenhaven es el más práctico para una llegada al anochecer; las dársenas interiores están más tranquilas de noche si entra mar de fondo desde el lago."
+        },
+        "7": {
+          "shortDescription": "Una última singladura relajada remontando la costa frisia de vuelta a Lemmer, cerrando la vuelta donde empezó la semana.",
+          "description": "La última etapa es corta y amable, unas quince millas hacia el norte por la costa frisia con la orilla a la vista casi todo el camino. Si el barco se devuelve a la mañana siguiente, no hay motivo para correr; solemos fondear para comer o meternos en uno de los puertecitos antes de cubrir las últimas millas hasta Lemmer. Lemmer ocupa el cruce entre el IJsselmeer y los lagos frisios, y el canal Zijlroede recorre como una espina dorsal el centro del pueblo, flanqueado de cafés y barcos amarrados. Para una última tarde en tierra, el Woudagemaal merece la breve escapada; es la mayor estación de bombeo a vapor en activo del mundo y todavía se enciende cuando los lagos suben. Luego una cena final en los viejos cafés marrones, y la vuelta queda cerrada.",
+          "thingsToDo": [
+            "Visitar la estación de vapor Woudagemaal, Patrimonio de la Humanidad",
+            "Pasear por los muelles del canal Zijlroede",
+            "Cenar por última vez en un café marrón de Lemmer",
+            "Fondear para una comida de despedida"
+          ],
+          "mooringTip": "De vuelta en la base, sigue las instrucciones de amarre de la empresa de chárter y procura estar atracado a última hora de la tarde para dejar tiempo al combustible, el agua y la devolución. Los amarres del canal en el centro son bonitos pero justos; la marina de Lemmer es más sencilla si tienes que devolver el barco con prisa."
+        }
+      }
+    }
+  },
+  "areas": {
+    "netherlands": {
+      "metaTitle": "Navegar el IJsselmeer y aguas holandesas | Boat4You",
+      "metaDesc": "Rutas de charter por el IJsselmeer y el Markermeer: saltos cortos entre puertos del Zuiderzee como Urk, Enkhuizen y Volendam, planes de 7 y 14 días.",
+      "title": "Navega el anillo de puertos viejos del IJsselmeer",
+      "description": "Esto es navegación en agua dulce sobre el viejo Zuiderzee, cerrado al mar del Norte por el Afsluitdijk hace casi un siglo. El IJsselmeer y su hermana más tranquila, el Markermeer, son ambos poco profundos, así que un suroeste fresco levanta una marejadilla corta y empinada que mantiene alerta a la tripulación sin dejar nunca el abrigo fuera de alcance. Las etapas son cortas. De Hoorn a Enkhuizen hay apenas 12 NM, y casi todos los días navegas dos o tres horas entre puertos, lo que hace de este un rincón indulgente para una primera semana en bareboat. Los puertos cargan con la historia: Urk todavía subasta su captura en el muelle, Enkhuizen custodia el Museo del Zuiderzee al aire libre y Volendam te pone en la mano el arenque recién sacado del dique. Medemblik tiene el Castillo de Radboud vigilando el último puerto antes del gran dique. Una nota práctica: cruzar entre los dos lagos implica esclusar en Enkhuizen o Kornwerderzand, así que consulta los horarios de esclusa y amarra pronto los fines de semana de julio, cuando se agolpa la flota."
+    }
+  }
+}

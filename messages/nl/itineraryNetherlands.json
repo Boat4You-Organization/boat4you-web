@@ -1,1 +1,255 @@
-{}
+{
+  "routes": {
+    "dutch-waters-14-days": {
+      "metaTitle": "14-daagse Zuiderzeetocht | Boat4You",
+      "metaDesc": "Een 14-daagse zeiltocht vanaf Lemmer rond het IJsselmeer en Markermeer, langs Stavoren, Enkhuizen, Hoorn, Volendam, Marken, Muiden en Urk.",
+      "days": {
+        "1": {
+          "shortDescription": "Een rustige eerste etappe langs de Friese kust naar Stavoren, de oudste van de elf steden en door en door een zeilersstad.",
+          "description": "De meeste bemanningen gebruiken de eerste dag om er losjes in te komen in plaats van meteen door te jakkeren. Het is een kort stukje langs de Friese kust, een mijl of elf, en de Lemster sluis zet je binnen het uur op open water. Stavoren vangt al duizend jaar zeilers en voelt nog altijd rond het water gebouwd in plaats van ernaast. De buitenhaven ligt pal aan het IJsselmeer, de binnenhaven wringt zich tussen het meer en de Friese meren. Wandel omhoog naar het bronzen Vrouwtje van Stavoren dat over zee staart, de waarschuwende sage van de stad in metaal. De avonden zijn hier stil op de goede manier. Staat er een zuidwester, reken dan op een levendige halve wind en een paar korte golfjes die je eraan herinneren waar je bent.",
+          "thingsToDo": [
+            "Bekijk het bronzen Vrouwtje van Stavoren",
+            "Wandel langs de buitenhaven aan het IJsselmeer",
+            "Snuffel in de scheepswinkel bij Marina Stavoren",
+            "Borrel met uitzicht op de sluis van de binnenhaven"
+          ],
+          "mooringTip": "De Buitenhaven neemt schepen tot 25 meter met drie meter diepgang en ligt buiten de sluis, zodat je de volgende ochtend zo het meer op glijdt. In juli een nacht van tevoren reserveren; het loopt vol met bemanningen die dezelfde ronde varen."
+        },
+        "2": {
+          "shortDescription": "Kusthop noordwaarts langs Hindeloopen en Workum naar Makkum, een Fries aardewerkstadje met een echt zwemstrand.",
+          "description": "Vandaag houd je de Friese kust op je dwars. Je passeert Hindeloopen en Workum, allebei een omweg waard als je de uurtjes hebt, voordat Makkum achter zijn strand opendoemt. Dit is een van de weinige plekken op het meer waar je echt vanaf het zand kunt zwemmen, en op een warme middag vult het ondiepe zich met surfers en kitelijnen. Het stadje zelf is ouder dan het lijkt. Koninklijke Tichelaar bakt hier al sinds 1572 tinglazuuraardewerk, en de koopmanshuizen bij de sluis dragen het geld van die handel nog in hun gevels. Bevoorraden gaat makkelijk. Wij vullen hier meestal water en verse broodjes aan voor de eerste echte oversteek van morgen. De wind zit doorgaans west tot zuidwest; een gereefd grootzeil houdt het comfortabel als het 's middags aantrekt.",
+          "thingsToDo": [
+            "Bezoek de eeuwenoude aardewerkfabriek van Koninklijke Tichelaar",
+            "Surf of suppen vanaf het strand van Makkum",
+            "Bewonder de koopmansgevels bij de sluis",
+            "Maak een uitstapje aan wal in Hindeloopen of Workum"
+          ],
+          "mooringTip": "De haven van Makkum ligt net binnen de sluis; roep de havenmeester op bij het naderen, want de passantensteigers zijn krap voor alles boven de twaalf meter. Kom in het weekend in de zomer voor het midden van de middag binnen, anders lig je misschien langszij."
+        },
+        "3": {
+          "shortDescription": "Je eerste echte oversteek van het IJsselmeer, westwaarts naar Medemblik en de stevige rode torens van Kasteel Radboud.",
+          "description": "Dit is de dag waarop het meer zijn breedte laat zien. Vanaf Makkum steek je westwaarts over open water af richting de Noord-Hollandse kust, vijftien tot achttien mijl afhankelijk van je koers, en een paar uur lang is er niets dan de horizon en de wind. Het IJsselmeer is ondiep, dus een frisse bries stapelt snel korte, steile golven op; kies een goed weerraam en je hebt een snelle, voldoening gevende ruime wind. Medemblik kondigt zich aan met Kasteel Radboud, een gedrongen dertiende-eeuwse burcht die Floris de Vijfde neerzette om de West-Friezen in het gareel te houden. De Pekelharinghaven ligt op loopafstand van het centrum, net voorbij het kasteel. De moeite waard om Makkum om negen uur te verlaten, zodat je aankomt met de middag nog voor je.",
+          "thingsToDo": [
+            "Beklim de middeleeuwse burcht van Kasteel Radboud",
+            "Rijd mee met de stoomtram Hoorn-Medemblik",
+            "Slenter langs de kades van de Pekelharinghaven",
+            "Koffie aan de oude havenkade"
+          ],
+          "mooringTip": "Vaar Medemblik binnen en sla net voorbij het kasteel bakboord af naar de Pekelharinghaven, rustig en op maar een paar minuten van de stad. De diepte is prima voor toerjachten, en buiten regattaweekenden hoef je zelden te reserveren."
+        },
+        "4": {
+          "shortDescription": "Een korte sprong zuidwaarts naar Enkhuizen, de Gouden Eeuw-haven waarvan het Zuiderzeemuseum de verdwenen wereld van het meer tot leven wekt.",
+          "description": "Na de oversteek van gisteren voelt deze etappe als een adempauze, amper negen mijl langs de kust. Enkhuizen was een van de rijkste steden van de Gouden Eeuw, een thuishaven van de VOC, en die rijkdom staat er nog in de pakhuizen en de dikke stenen Drommedaris die de ingang bewaakt. Wijd de middag aan het Zuiderzeemuseum. De buitenhelft rijgt hele straten aaneen van huizen die hierheen zijn verplaatst uit dorpen die de dijk liet verdrinken, bemand door mensen die netten boeten en vis roken zoals ze rond 1900 deden. De Compagnieshaven is enorm en levendig, pal naast het museum en op twee minuten van het oude centrum. Hier scheidt ook de Krabbersgatsluis het IJsselmeer van het Markermeer, dus morgen steek je over naar ander water.",
+          "thingsToDo": [
+            "Breng een halve dag door in het Zuiderzeemuseum",
+            "Beklim de haventoren Drommedaris",
+            "Kijk hoe vis wordt gerookt in het openluchtmuseum",
+            "Avondborrel op het terras van de Compagnieshaven"
+          ],
+          "mooringTip": "De Compagnieshaven ontvangt zo'n 18.000 passanten per jaar, dus de 600 ligplaatsen vangen de zomerdrukte beter op dan de kleinere stadshavens. Probeer voor vijven binnen te zijn; de steigers het dichtst bij het museum gaan het eerst."
+        },
+        "5": {
+          "shortDescription": "Langs de Markermeerkust naar Hoorn, een Gouden Eeuw-stad met 368 monumenten die haar naam gaf aan Kaap Hoorn.",
+          "description": "Eenmaal door de sluis bij Enkhuizen vaar je op het Markermeer, dat een tikje vlakker zeilt dan het IJsselmeer zelf. Zo'n twaalf mijl langs de kust brengt je naar Hoorn, dat in twee eeuwen meer geschiedenis stopte dan de meeste steden in tien redden. Willem Schouten rondde in 1616 de zuidpunt van Zuid-Amerika en noemde hem naar zijn thuishaven, en daarom draagt Kaap Hoorn de naam van een Nederlands vissersstadje. De oude Binnenhaven ligt pal onder de scheve Hoofdtoren en zet je zo midden in een centrum met 368 monumenten. De Grashaven, de moderne jachthaven, is makkelijker maar minder romantisch. Langs de kade liggen volop cafés en restaurants, dus zowel de bevoorrading als een goed diner zijn geregeld. Een ontspannen dag, als het weer meezit.",
+          "thingsToDo": [
+            "Fotografeer de scheve Hoofdtoren",
+            "Slenter langs de 368 monumenten van oud Hoorn",
+            "Meer af in de oude Binnenhaven",
+            "Diner op het plein Roode Steen"
+          ],
+          "mooringTip": "Voor de sfeer neem je de Binnenhaven midden in de oude stad in plaats van de moderne Grashaven, maar hij is klein en ondiep richting het einde, dus vaar er langzaam in. De bruggen naar de binnenhaven hebben vaste openingstijden; check ze voordat je je vastlegt."
+        },
+        "6": {
+          "shortDescription": "Een gestage tocht zuidwaarts naar Volendam, het paling-en-klederdracht-vissersdorp waar je middenin de drukte afmeert.",
+          "description": "Zo'n veertien mijl Markermeer scheidt Hoorn van Volendam, een makkelijke ruime wind bij de gebruikelijke westenwind. Volendam speelt zijn verleden flink uit, en dat neem je met humor of je neemt het niet. De kade, de Dijk, is een aaneengesloten muur van viskramen, pannenkoekhuizen en mensen in klederdracht die op de foto poseren. Onder dat alles zit een echt vissersdorp, en de gerookte paling en verse kibbeling zijn oprecht lekker. De gemeentehaven zet je er middenin, mast aan mast met de menigte. Dat is de charme of het nadeel, afhankelijk van je stemming. Wil je rustiger water, denk er dan aan dat Marken en Monnickendam maar een klein stukje verder liggen. Wij komen meestal vroeg aan, eten goed en laten de avond op ons afkomen.",
+          "thingsToDo": [
+            "Proef gerookte paling op de Dijk",
+            "Neem verse kibbeling bij een havenkraam",
+            "Poseer in Volendamse klederdracht voor een foto",
+            "Bekijk de vissersvloot vanaf de kade"
+          ],
+          "mooringTip": "De Gemeentehaven ligt pal in het toeristische hart, met stroom, water en wifi op de passantensteigers. Hij is populair en compact, dus reserveer in juli en augustus vooruit of kom voor de lunch binnen om zeker te zijn van een plek."
+        },
+        "7": {
+          "shortDescription": "Een sprong van vier mijl naar Marken, een voormalig eiland van paalwoningen en groen-witte gevels dat nog altijd op zichzelf staat.",
+          "description": "Vier mijl over de bocht telt amper als een overtocht, dus beschouw het als een cadeautje. Slaap uit, scharrel wat rond in Volendam, maak dan de korte oversteek en gun Marken de hele middag. Sinds 1957 verbindt een dijk het met het vasteland, maar het dorp heeft dat memo nooit gekregen. Het oude dorp klit samen op lage terpen, met houten huizen op palen tegen overstromingen die niet meer komen, en gevels die generaties lang in datzelfde groen en wit worden geschilderd. Loop naar het Paard van Marken, het vuurtorentje op de oostpunt, voor het mooiste uitzicht terug over het water. Een supermarkt van betekenis is er niet, dus doe je inkopen in Volendam voordat je vertrekt. Stille nachten, helder ochtendlicht en een dorp dat traag slenteren beloont.",
+          "thingsToDo": [
+            "Wandel naar de vuurtoren Paard van Marken",
+            "Fotografeer de groen-witte paalwoningen",
+            "Bezoek de Markense klompen- en klederdrachtwerkplaats",
+            "Volg het havenpad rond het dorp"
+          ],
+          "mooringTip": "De haven van Marken is klein en geliefd bij de charterboten van dagjesmensen, dus zorg dat je in het begin van de middag binnen bent. Richting de koppen van de kade wordt het ondiep; neem een boxligplaats aan de passantensteiger in plaats van helemaal door te varen."
+        },
+        "8": {
+          "shortDescription": "Een korte sprong naar Monnickendam, een Waterlands stadje van palingrokerijen en een carillon, met veel minder drukte dan Volendam.",
+          "description": "Weer een rustige, hooguit vijf mijl, en dat is het ritme van deze hoek van het meer. Monnickendam is hoe Volendam zou aanvoelen zonder de touringcars: hetzelfde oude Waterlandse geraamte, een werkende haven, maar ruimte om adem te halen. De Speeltoren, de vijftiende-eeuwse toren aan de hoofdstraat, laat nog altijd zijn carillon klinken en de mechanische ridders slaan het hele uur. Beneden aan het water roken de palingrokers al generaties lang vis boven eiken- en elzenhout, en een palingbroodje op de kade is een van de kleine geneugten van deze hele route. De jachthaven telt ruim 650 boten en voelt toch zelden overvol. Het is een rustige uitvalsbasis voor de langere etappe van morgen richting Amsterdam en het kasteel bij Muiden.",
+          "thingsToDo": [
+            "Hoor het carillon en de ridders van de Speeltoren",
+            "Eet gerookte paling uit een havenrokerij",
+            "Slenter langs de Grote Kerk en de oude straten",
+            "Bekijk klassieke houten jachten in de jachthaven"
+          ],
+          "mooringTip": "De jachthaven van Monnickendam heeft ruim 650 ligplaatsen en vindt zelfs in het seizoen meestal plek, maar de sfeervolle plekken liggen langs de historische binnenhaven, die het eerst vol is. Een korte brugopening brengt je binnen; check de tijden."
+        },
+        "9": {
+          "shortDescription": "Zuidwaarts over het IJmeer langs het eilandfort Pampus naar Muiden, waar een middeleeuws kasteel de monding van de Vecht bewaakt.",
+          "description": "Nu verandert het decor. Je laat de oude Zuiderzeehavens achter je en zeilt zuidwaarts het IJmeer op, het water voor de deur van Amsterdam, zo'n vijftien mijl met de skyline van de stad die groeit voor je stuurboordboeg. Halverwege rijst het lage bakstenen fort Pampus recht uit het meer op, deel van de kring van forten die ooit Amsterdam verdedigde en nu een museumeiland waar je aan land kunt als de timing klopt. Muiden ligt waar de Vecht de zee ontmoet, en zijn kasteel, het Muiderslot, is het echte werk: een dertiende-eeuwse burcht met slotgracht en vier ronde torens, nu onder de hoede van het Rijksmuseum. De KNZRV, de oudste zeilvereniging van het land, heeft hier haar thuis, dus je bent in goed gezelschap. Let op het verkeer; dit water wordt druk op een mooi weekend.",
+          "thingsToDo": [
+            "Bezoek het Muiderslot met zijn slotgracht",
+            "Ga aan land op het eilandfort Pampus",
+            "Wandel langs de Vecht in Muiden",
+            "Bekijk de vloot voor de KNZRV"
+          ],
+          "mooringTip": "De stadshaven van Muiden en de KNZRV liggen net binnen de Vecht; de zeesluis en een verkeersbrug regelen de toegang, dus stem je aankomst af op een opening. Ligplaatsen zijn schaars, dus het grotere Marina Muiderzand aan de overkant bij Almere is een betrouwbare uitwijkplek."
+        },
+        "10": {
+          "shortDescription": "Weer noordwaarts, opnieuw het IJmeer over langs Pampus, en terug omhoog langs de kust naar Volendam voor de nacht.",
+          "description": "Vanaf hier draait de ronde huiswaarts. Je vaart het IJmeer weer noordwaarts terug, Pampus opnieuw opzij, en steekt over naar het Markermeer voor de tocht omhoog naar Volendam. Het is zo'n vijftien mijl, en met de heersende wind nu meer dwars of achterlijker kan het een snelle, makkelijke overtocht zijn. Heb je zin in iets anders dan het vissersdorp, dan kunnen Marina Muiderzand of een lunchstop bij Pampus de dag opbreken. Als je voor de tweede keer Volendam binnenkomt, valt je op wat je eerder miste: het kleine museum achter de Dijk, de straten één rij achter de kade waar de mensen echt wonen. Neem een ligplaats, strek de benen en begin na te denken over de twee open oversteken die de reis afsluiten.",
+          "thingsToDo": [
+            "Onderbreek de overtocht bij Pampus voor de lunch",
+            "Bezoek het Volendams Museum achter de Dijk",
+            "Verken de achterstraatjes achter de kade",
+            "Bevoorraad voor de oversteken die komen"
+          ],
+          "mooringTip": "De Gemeentehaven ken je al van de heenweg; een tweede nacht gaat makkelijker als je vooruit belt, want passantenplaatsen wisselen snel. Langszij afmeren is hier normaal, dus hang je stootwillen aan beide kanten bij het binnenvaren."
+        },
+        "11": {
+          "shortDescription": "Terug omhoog over het Markermeer en door de sluis bij Enkhuizen, terug naar de Gouden Eeuw-haven en haar grote haven.",
+          "description": "Een langere kruistocht dan gisteren, zo'n veertien mijl recht omhoog over het Markermeer naar Enkhuizen. Zit de wind in het westen of zuidwesten, zoals vaak, dan werk je een groot deel aan de wind, dus een vroege start loont. Bovenaan kom je weer bij het Krabbersgat, waar het Naviduct het wegverkeer onder het water door leidt terwijl de boten er bovenlangs schutten. Het is een slim staaltje Nederlandse waterbouw en stiekem een genot om door te varen. Enkhuizen verdient een tweede blik. Ben je op de heenweg langs het Zuiderzeemuseum gevlogen, dan is dit het moment om terug te gaan, of wandel gewoon bij schemer langs de wallen en de oude havens. Morgen is de grote, de open oversteek naar Urk, dus vul vanavond brandstof en water bij.",
+          "thingsToDo": [
+            "Schut door het Naviduct in het Krabbersgat",
+            "Keer terug naar de openluchtstraten van het Zuiderzeemuseum",
+            "Wandel bij schemer langs de wallen van Enkhuizen",
+            "Vul brandstof bij voor de oversteek naar Urk"
+          ],
+          "mooringTip": "Vanaf het Markermeer schut je Enkhuizen binnen via het Krabbersgat; aan beide kanten liggen wachtsteigers als er een rij staat. Eenmaal door nemen zowel de Compagnieshaven als de kleinere Buyshaven bij het centrum passanten aan."
+        },
+        "12": {
+          "shortDescription": "De langste open oversteek van de route, noordoostwaarts over het IJsselmeer naar Urk, een oud eilandstadje dat nog altijd naar vis ruikt.",
+          "description": "Dit is de overtocht die bemanningen bijblijft. Vanaf Enkhuizen schut je terug het IJsselmeer op en zet koers noordoostwaarts over open water naar Urk, bijna twintig mijl zonder enige beschutting ertussen. Kies je weer. Bij een gestage westenwind is het een prachtige ruime wind; bij hard weer houden de korte, steile IJsselmeergolven de hele bemanning bezig. Urk was een eiland tot de polder eromheen in de jaren veertig werd drooggelegd, en het heeft elke vezel van die afzondering behouden, tot aan het eigen dialect. De haven verdient er nog altijd de kost, met kleurrijke kotters die vis lossen naast de passantensteigers. Loop omhoog naar de oude vuurtoren en het vissersmonument op de punt, waar de namen van de verdronkenen in steen zijn gehakt. De vismaaltijden zijn hier zo vers als ze komen.",
+          "thingsToDo": [
+            "Sta stil bij het vissersmonument van Urk",
+            "Klim naar de oude vuurtoren van Urk",
+            "Kijk hoe kotters vis lossen in de haven",
+            "Eet versgebakken vis aan de Westhaven"
+          ],
+          "mooringTip": "Urk heeft drie havens; passanten nemen meestal de Westhaven of de nieuwere Nieuwe Haven, weg van de werkende visserskades. De haven ligt open op het westen, dus bij een stevige westenwind kom je vroeg binnen en verdubbel je je lijnen."
+        },
+        "13": {
+          "shortDescription": "Een ontspannen laatste overtocht langs de Friese hoek terug naar Lemmer, waar de ronde begon.",
+          "description": "De laatste echte zeiltocht is een milde, zo'n veertien mijl van Urk terug omhoog naar Lemmer over de noordoosthoek van het meer. Na de oversteek van Urk voelt het bijna rustgevend. Waarschijnlijk zie je de Friese kust de hele middag dichterbij komen voor je boeg, en werkt de wind mee, dan is het de hele weg een rechttoe rechtaan ruime wind. Lemmer verwelkomt je terug door zijn sluis, dezelfde poort die je twee weken geleden naar buiten liet, en het stadje heeft genoeg leven op zijn kade voor een echt afscheidsdiner. Is er tijd en licht, dan is het Woudagemaal, het grote stoomgemaal net buiten de stad, het korte uitstapje aan wal waard. Anders installeer je je, tel je de mijlen op en laat je de bemanning de verhalen uitwisselen die altijd beter worden in de vertelling.",
+          "thingsToDo": [
+            "Schut terug de oude haven van Lemmer in",
+            "Bezoek stoomgemaal het Woudagemaal",
+            "Afscheidsdiner aan de kade van Lemmer",
+            "Slenter door de straten van het Lemster vissersdorp"
+          ],
+          "mooringTip": "Terug in Lemmer kun je in de jachthaven aan de IJsselmeerkant voor de sluis liggen of de stadsligplaatsen erbinnen nemen; de binnenplaatsen zijn handiger voor de restaurants. Lever je de boot morgen in, dan maakt de buitenhaven de ochtendwissel eenvoudiger."
+        },
+        "14": {
+          "shortDescription": "Een bufferdag op de basis: een korte proefvaart op de Friese meren, uitslapen, of gewoon tijd om de boot rustig in te leveren.",
+          "description": "Twee weken rond het meer verdienen een zachte landing, en daar is deze dag voor. Houd je de boot nog een nacht, dan openen de Friese meren zich pal bij Lemmer via de Prinses Margrietsluis, en een kort stukje varen naar het Tjeukemeer of de Groote Brekken geeft je vlak, beschut water na al dat open varen. Het is een ander soort zeilen, dichtbij en groen, met rietkragen in plaats van horizonnen. Eindigt de charter hier, gebruik de ochtend dan zonder haast: pomp af, werk het logboek bij, loop de stad in voor een laatste koffie aan het water. Lemmer draagt zijn vissersverleden luchtig, en het is een prettige plek om niets te hoeven. Hoe je hem ook doorbrengt, je eindigt waar je begon, en dat is de stille voldoening van een goed gevaren ronde.",
+          "thingsToDo": [
+            "Proefvaart naar het Tjeukemeer",
+            "Verken de rietmeren van de Groote Brekken",
+            "Laatste koffie aan de kade van Lemmer",
+            "Rustige bootoverdracht op de basis"
+          ],
+          "mooringTip": "Neem je de boot mee naar de Friese meren, dan is de Prinses Margrietsluis je poort en die kan op zomermiddagen een rij vormen, dus plan de terugweg voor de avondspits. Voor de overdracht lig je in de jachthaven het dichtst bij de charterbasis, zodat de ochtend simpel blijft."
+        }
+      }
+    },
+    "ijsselmeer-classic-week": {
+      "metaTitle": "7-daagse Zuiderzee-stedenronde | Boat4You",
+      "metaDesc": "Een week rond het IJsselmeer vanaf Lemmer: Urk, Enkhuizen, Hoorn, Volendam, Medemblik en Stavoren, met afmeertips voor elke oude Zuiderzeehaven.",
+      "days": {
+        "1": {
+          "shortDescription": "Een makkelijke openingsetappe zuidwaarts over het IJsselmeer naar Urk, een voormalig eiland waarvan de haven nog naar gerookte paling ruikt.",
+          "description": "Lemmer ligt waar de Friese meren het open water ontmoeten, dus de meeste bemanningen besteden het eerste uur aan het inregelen van de boot voordat ze de havenmond verlaten. De tocht naar Urk is zo'n zestien mijl bij een zuidwester, aangenaam ruime-windweer voor een inzeildag. Urk was een eiland tot de dijken het in 1939 bereikten, en het heeft dat eilandgevoel behouden. Botters met bruine zeilen liggen nog altijd langs de kades. De oude vuurtoren kijkt uit over een wirwar van steegjes waar viswinkels haring en gerookte paling zo van de rokerij verkopen. Wij meren meestal in het midden van de middag af, lopen de haven rond en eten dan schol aan een tafeltje aan het water. Reserveer wat tijd voor het kerkpad langs de top van het dorp. Het avondlicht daarboven is de klim waard.",
+          "thingsToDo": [
+            "Bekijk botters met bruine zeilen langs de oude kades",
+            "Koop gerookte paling in een viswinkel op Urk",
+            "Klim naar de vuurtoren boven het dorp",
+            "Diner in de botterschuur van Restaurant de Boet"
+          ],
+          "mooringTip": "De binnenhaven van Urk loopt in de zomer snel vol, dus zorg dat je voor het midden van de middag binnen bent en reken erop dat je twee of drie boten dik langszij ligt. De boxen aan de noordkant zijn rustiger als een frisse zuidwester golfslag de ingang in drijft."
+        },
+        "2": {
+          "shortDescription": "Een echte openwateroversteek van het IJsselmeer naar Enkhuizen, de oude VOC-stad naast het Zuiderzeemuseum.",
+          "description": "Dit is de eerste echte oversteek van de week, zo'n twintig mijl open meer met de lage kust van Urk die achter je wegzakt. Het IJsselmeer is ondiep, dus een frisse wind bouwt eerder een korte, steile zee op dan een lange deining; waait het hard uit het zuidwesten, reef dan vroeg en zet je erin. Enkhuizen maakt de aankomst goed. In de zeventiende eeuw was het een welvarende VOC-haven, en de Drommedaris bewaakt nog altijd de haveningang. Het Zuiderzeemuseum ligt pal aan het water, een openluchtdorp van verplaatste huizen dat laat zien hoe deze steden leefden voordat de dijk de zee afsloot. Wij nemen meestal de Compagnieshaven voor de voorzieningen en lopen dan de tien minuten naar de oude straten voor het diner. Bevoorraad hier als de kastjes leeg raken.",
+          "thingsToDo": [
+            "Bezoek het openlucht-Zuiderzeemuseum",
+            "Fotografeer de Drommedaris bij schemer",
+            "Slenter door de koopmansstraten uit de Gouden Eeuw",
+            "Doe inkopen in de mini-supermarkt van de Compagnieshaven"
+          ],
+          "mooringTip": "De Compagnieshaven heeft alle voorzieningen en ruim 600 ligplaatsen pal naast het museum, onder de meeste omstandigheden makkelijk binnen te varen. Voor een levendiger avond in het oude centrum vaar je door naar de gemeentelijke Buitenhaven, al ligt die in de zomerweekenden dicht op elkaar."
+        },
+        "3": {
+          "shortDescription": "Zuidwaarts door de Krabbersgatsluis het Markermeer op, en afmeren onder de gotische haventoren van Hoorn.",
+          "description": "Korte dag, dus geen haast om los te gooien. Net ten zuiden van Enkhuizen splitst de Houtribdijk het water in tweeën, en steek je vanaf het IJsselmeer via de Krabbersgatsluis het rustigere Markermeer over. Op zomerochtenden klontert het verkeer daar samen, dus het loont de overtocht na de vroege spits te plannen. Vanaf de sluis is het een mijl of twaalf makkelijk varen naar Hoorn. De stad was een zwaargewicht in de tijd van de VOC, en draagt die geschiedenis nog goed. De Hoofdtoren, een stevige gotische toren uit 1532, staat op de hoek van de haven en herbergt nu een restaurant. Meer je af in de Binnenhaven en je ligt midden in de oude stad, soms meerdere boten dik langszij de kade. Bewaar de middag voor de Grote Oost en zijn koopmanshuizen.",
+          "thingsToDo": [
+            "Borrel onder de Hoofdtoren uit 1532",
+            "Slenter langs de koopmanshuizen aan de Grote Oost",
+            "Wandel over het Oostereiland en langs de oude haven",
+            "Plan de Krabbersgatsluis na de ochtendspits"
+          ],
+          "mooringTip": "De Binnenhaven van Hoorn zet je in het hart van de oude stad, maar de ligplaatsen zijn beperkt en in juli is drie of vier boten langszij normaal. Kom in het begin van de middag binnen, of neem de grotere jachthaven Grashaven op een klein stukje lopen als de binnenkade vol is."
+        },
+        "4": {
+          "shortDescription": "Een rustige Markermeer-etappe naar Volendam, waar de havenkade draait op gerookte paling en klederdracht.",
+          "description": "Weer een bescheiden etappe, een mijl of elf dicht langs de westkust van het Markermeer, en het zeilen is meestal vlak en vergevingsgezind, behalve bij hard weer. Volendam is de meest bezochte stop van de week en maakt daar geen excuses voor. De kade is een muur van palingrokerijen, souvenirwinkels en cafés, en de geur van gerookte paling bereikt je nog voor de haven dat doet. Toeristisch, ja, maar de vis is oprecht lekker en de oude klederdrachtwinkels horen bij de plek, niet bij een decor. Meer af in de Marinahaven of de gemeentehaven en je stapt zo op de dijk die de hele boulevard draagt. Loop hem 's avonds als de touringcars van de dagjesmensen weg zijn; de haven loopt leeg en het licht wordt zachter over het water. Neem meteen wat gebakken kibbeling bij een kraam.",
+          "thingsToDo": [
+            "Proef gerookte paling aan de havenkade",
+            "Eet kibbeling bij een kraam aan de kade",
+            "Snuffel in de oude klederdrachtwinkels van Volendam",
+            "Wandel over de dijkboulevard na zonsondergang"
+          ],
+          "mooringTip": "De twee havens van Volendam zetten je pal aan de boulevard, wat zowel de charme als het nadeel is; reken op golfslag en wandelaars tot laat. Reserveer de Marinahaven vooruit voor een weekend in juli, en neem een plek weg van de veerkade voor een rustige ochtend."
+        },
+        "5": {
+          "shortDescription": "De langste etappe van de week terug omhoog over het meer naar Medemblik, met de jachthaven onder het rode baksteen van Kasteel Radboud.",
+          "description": "Langste dag van de reis, dus wij gooien om negen uur los. Medemblik ligt weer aan het IJsselmeer, wat betekent dat je het Markermeer noordwaarts terugvaart en opnieuw bij het Krabbersgat van Enkhuizen schut voordat het laatste open stuk begint. Reken op zo'n dertig mijl in totaal, meer als de wind je tegenzit. Eenmaal door de sluis opent het meer zich, en met een gestage zuidwester achterlijk kunnen de laatste uren het mooiste zeilen van de week zijn. Medemblik is de oudste stad van West-Friesland, klein en op zijn gemak na Volendam. De jachthaven Regatta Center ligt pal aan het open water onder de muren van Kasteel Radboud, het dertiende-eeuwse kasteel dat de oude havenmond bewaakt. Er rijdt een echte stoomtrein naar Hoorn als je een luie ochtend hebt. Wij houden van Medemblik juist omdat het niets van je vraagt.",
+          "thingsToDo": [
+            "Bezoek het dertiende-eeuwse Kasteel Radboud",
+            "Rijd mee met de stoomtrein richting Hoorn",
+            "Wandel langs de oude haven en de stadsmuren",
+            "Bekijk de regattavloot vanuit de jachthaven"
+          ],
+          "mooringTip": "Regatta Center Medemblik ligt aan open water buiten de stad, eenvoudig binnen te varen maar open als het hard aanlandig uit het zuidwesten waait. Voor beschutting en een kortere loop naar de cafés vraag je de havenmeester juist om een box in de oudere binnenhaven."
+        },
+        "6": {
+          "shortDescription": "Een rechte oversteek over het IJsselmeer naar de Friese kant en Stavoren, de oudste stad van de provincie, aan drie kanten door water omringd.",
+          "description": "Vandaag wijst de koers terug naar de Friese kust, een oversteek van zo'n vijftien mijl die op een mooie dag één lange, voldoening gevende ruime wind is. Let op het verkeer bij Enkhuizen en de scheepvaart die naar het Krabbersgat trechtert, daarna opent zich vrij water voor je. Stavoren is de oudste stad van Friesland en ligt met het meer aan drie kanten om zich heen, wat het aanlopen bij vrijwel elke wind makkelijk maakt. De plaatselijke sage vertelt van het Vrouwtje van Stavoren, een rijke weduwe wier hoogmoed de haven zou hebben verwoest; het beeldje aan het water tuurt nog altijd over zee naar haar verdwenen schip. Het stadje zelf is stil en laag, een handvol straten, een sluis naar de Friese meren en een paar goede terrasjes. Na de drukte van Volendam voelt het als uitademen.",
+          "thingsToDo": [
+            "Zoek het beeld van het Vrouwtje van Stavoren",
+            "Neem een terrasbiertje bij de sluis",
+            "Kijk hoe boten de Friese meren op varen",
+            "Wandel door de lage straatjes van de oude stad"
+          ],
+          "mooringTip": "Stavoren heeft een buitenhaven pal aan het IJsselmeer en een binnenhaven bij de sluis naar de Friese meren. De Buitenhaven is het handigst voor een avondaankomst; de binnenbekkens liggen 's nachts rustiger als er deining van het meer binnenloopt."
+        },
+        "7": {
+          "shortDescription": "Een ontspannen slottocht omhoog langs de Friese kust terug naar Lemmer, waar de week begon.",
+          "description": "De laatste etappe is kort en mild, een mijl of vijftien noordwaarts langs de Friese kust met de kust bijna de hele weg in zicht. Moet de boot de volgende ochtend terug, dan is er geen reden tot haast; wij gaan vaak voor de lunch voor anker of duiken een van de kleine haventjes in voordat we de laatste mijlen Lemmer binnenvaren. Lemmer vormt het knooppunt van het IJsselmeer en de Friese meren, en het Zijlroedekanaal loopt als een ruggengraat door het midden van de stad, omzoomd door cafés en aangemeerde boten. Voor een laatste middag aan wal is het Woudagemaal het korte uitstapje waard; het is het grootste werkende stoomgemaal ter wereld en stookt nog altijd op als de meren hoog staan. Dan een laatste diner in de oude bruine cafés, en de ronde is rond.",
+          "thingsToDo": [
+            "Bezoek UNESCO-stoomgemaal het Woudagemaal",
+            "Slenter langs de kades van het Zijlroedekanaal",
+            "Laatste diner in een Lemmers bruin café",
+            "Ga voor anker voor een afscheidslunch"
+          ],
+          "mooringTip": "Terug op de basis volg je de afmeerinstructies van de charterfirma en zorg je dat je aan het eind van de middag langszij ligt, zodat er tijd is voor brandstof, water en overdracht. De kanaalligplaatsen in het centrum zijn mooi maar krap; de jachthaven van Lemmer is eenvoudiger als je de boot snel omdraait."
+        }
+      }
+    }
+  },
+  "areas": {
+    "netherlands": {
+      "metaTitle": "Zeilen op IJsselmeer & Hollandse wateren | Boat4You",
+      "metaDesc": "Charterroutes over het IJsselmeer en Markermeer: korte sprongen tussen Zuiderzee-havensteden als Urk, Enkhuizen en Volendam, 7- en 14-daagse plannen.",
+      "title": "Zeil langs de kring van oude havens van het IJsselmeer",
+      "description": "Dit is zoetwaterzeilen op de oude Zuiderzee, bijna een eeuw geleden door de Afsluitdijk van de Noordzee afgesloten. Zowel het IJsselmeer als zijn rustigere zuster het Markermeer is ondiep, dus een frisse zuidwester jaagt een korte, steile golfslag op die een bemanning scherp houdt zonder dat de beschutting ooit buiten bereik raakt. De etappes blijven kort. Van Hoorn naar Enkhuizen is amper 12 zeemijl, en de meeste dagen zeil je twee of drie uur tussen de havens, wat dit een vergevingsgezind gebied maakt voor een eerste week bareboat. De havens dragen de geschiedenis: Urk veilt zijn vangst nog op de kade, Enkhuizen bewaakt het openlucht-Zuiderzeemuseum, en Volendam geeft je haring zo van de dijk. Bij Medemblik houdt Kasteel Radboud de laatste haven voor de grote dijk in de gaten. Eén praktische noot: oversteken tussen de twee meren betekent schutten bij Enkhuizen of Kornwerderzand, dus check de sluistijden en meer vroeg af op weekenden in juli als de vloot binnenstroomt."
+    }
+  }
+}

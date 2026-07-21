@@ -1,1 +1,255 @@
-{}
+{
+  "routes": {
+    "baltic-danish-isles-week": {
+      "metaTitle": "7 dni: niemiecki Bałtyk i wyspy duńskie | Boat4You",
+      "metaDesc": "Tydzień żeglugi z Heiligenhafen przez Fehmarnbelt do Langeland, Aero i Sonderborga. Porty, cumowanie i wskazówki na lądzie na wszystkie siedem dni.",
+      "days": {
+        "1": {
+          "shortDescription": "Krótki, rozruchowy skok na Fehmarn, z metą w nowoczesnej marinie Burgtiefe i przy długiej, piaszczystej mierzei Suedstrand.",
+          "description": "Większość załóg pierwszy dzień poświęca raczej na wdrożenie się niż na nabijanie mil, i ten etap doskonale się do tego nadaje. To spokojny przelot jakichś dziesięciu mil z bazowej mariny w Heiligenhafen w dół i naokoło do Burgtiefe na południowym brzegu Fehmarnu. Odbij od pomostu przed południem, po drodze sprawdź liny refowe i korby wind, a i tak przycumujesz z całym popołudniem przed sobą.\n\nBurgtiefe to najnowsza i najprzestronniejsza z marin Fehmarnu, dobrze osłonięta za mierzeją. Za nią ciągnie się Suedstrand — trzykilometrowy pas piasku stworzony do długiego spaceru na bosaka, gdy tylko wystawisz odbijacze. Zrób tu zapasy, jeśli pominąłeś to w Heiligenhafen. Kioski przy porcie mają podstawowe rzeczy, a węzeł sanitarny jest na tyle czysty, że każdy odejdzie zadowolony.",
+          "thingsToDo": [
+            "Przejdź trzykilometrową mierzeję plażową Suedstrand",
+            "Zrób zapasy w kioskach portu Burgtiefe",
+            "Przejedź rowerem płaskimi dróżkami do miasteczka Burg",
+            "Drink o zachodzie na tarasie mariny w Burgtiefe"
+          ],
+          "mooringTip": "Burgtiefe ma miejsca typu box przy pomostach palcowych, a nie nabrzeże do cumowania rufą, więc przed wejściem przygotuj liny dziobowe i szpring śródokręcia. Wczesnym sezonem rzadko się zapełnia, ale w lipcu dobij przed piątą, gdy piętrzy się flota zmierzająca do Danii."
+        },
+        "2": {
+          "shortDescription": "Główny przełot trasy przez otwartą wodę, przez Fehmarnbelt do Bagenkop — słonego, starego portu rybackiego Langeland na południowym cyplu wyspy.",
+          "description": "To dzień, w którym pokonujesz porządny odcinek otwartej wody. Fehmarnbelt ma jakieś osiemnaście kilometrów szerokości i od dwudziestu do trzydziestu metrów pod kilem, a letni wiatr zwykle wieje gdzieś z zachodu lub południowego zachodu, co daje przyjemny półwiatr w górę do Langeland. Prądy są tu słabe i głównie wiatrowe, więc bardziej pilnuj torów wodnych niż pływów.\n\nBagenkop jest prawdziwe: czynny port rybacki, który wciąż pachnie smołą i solą. Jeśli kuter właśnie wyładował połów, kup rybę prosto z nabrzeża. Wejdź na dziesięciometrową wieżę między starym stanowiskiem promowym a mariną, żeby złapać zachód słońca, a potem zarezerwuj stolik w Bagenkop Kro, gdzie bufet rybny otwierają o szóstej. W środowe wieczory na portowej scenie gra muzyka na żywo.",
+          "thingsToDo": [
+            "Kup świeży połów z nabrzeża w Bagenkop",
+            "Wejdź na dziesięciometrową wieżę widokową portu",
+            "Zarezerwuj bufet rybny w Bagenkop Kro",
+            "Złap środową muzykę na żywo na portowej scenie"
+          ],
+          "mooringTip": "W Bagenkop cumujesz rufą lub burtą po stronie mariny; stary basen rybacki jest głębszy, ale zarezerwowany dla jednostek roboczych. Zajmij miejsce box przy budynku socjalnym, gdzie są darmowa kuchnia i prysznice, i zapłać opłatę portową w automacie, zanim gdzieś się wybierzesz."
+        },
+        "3": {
+          "shortDescription": "W górę wzdłuż wybrzeża Langeland i na Aero do Marstal — stoczniowego „Skippertown” wyspy, z szerokimi pomostami i muzeum pełnym statków w butelkach.",
+          "description": "Wygodny przelot około piętnastu mil, najpierw na północ wzdłuż zachodniego brzegu Langeland, potem na zachód do wschodniego krańca Aero. Gdy rozwieje się wiatr z zachodu, na przejściu możesz iść ostro na wiatr, więc wcześnie założony ref oszczędzi zamieszania później.\n\nMarstal uczciwie zapracował na przydomek Skippertown. To niegdyś drugie miasto żeglugowe Danii, a niewielkie warsztaty przy porcie wciąż łatają drewniane kadłuby. Poświęć godzinę na Marstal Maritime Museum, gdzie modele statków i statki w butelkach opowiadają historię wyspy lepiej niż jakakolwiek tablica. Wzdłuż nabrzeża ciągną się długie drewniane pomosty, a miasteczko zachowuje autentyczny, roboczy charakter zamiast wypolerowanego. Lody przy porcie, a potem powolny spacer przez stocznie — tak większość załóg spędza wieczór.",
+          "thingsToDo": [
+            "Obejrzyj statki w butelkach w Marstal Maritime Museum",
+            "Popatrz na warsztaty drewnianych kadłubów przy porcie",
+            "Przejdź się długimi drewnianymi pomostami o zmierzchu",
+            "Lody na nabrzeżu w Marstal"
+          ],
+          "mooringTip": "Marina w Marstal leży na północnym krańcu, za nabrzeżem handlowym; cumuj rufą na własnej kotwicy albo do miejsca box według wskazań. Ku wewnętrznym narożnikom robi się płycej, więc jeśli masz zanurzenie ponad dwa metry, wybieraj zewnętrzne pomosty."
+        },
+        "4": {
+          "shortDescription": "Leniwy, krótki skok naokoło Aero do Aeroskobing — dwunastowiecznego miasteczka pastelowych domów, brukowanych uliczek i malowanych domków kąpielowych.",
+          "description": "Najkrótszy etap tygodnia, ledwie siedem mil naokoło południa i zachodu wyspy. Nie ma powodu, by ruszać wcześnie. Popływaj z burty, pozwól załodze pospać, a i tak przycumujesz w Aeroskobing długo przed obiadem.\n\nTo miasteczko jest powodem, dla którego ludzie wciąż wracają na Aero. Jego uliczki sięgają dwunastego wieku, wybrukowane i obstawione domami malowanymi w miękkie żółcie, ochry i blade błękity, z drzwiami otwierającymi się wprost na ulicę. Wyjdź na plażę po północnej stronie, by zobaczyć rząd wesoło pomalowanych domków kąpielowych, a potem wróć na kolację; restauracje rybne przy porcie są naprawdę dobre. Wieczory cichną tu wcześnie, co dla większości załóg jest właśnie sednem sprawy.",
+          "thingsToDo": [
+            "Powłócz się dwunastowiecznymi brukowanymi uliczkami",
+            "Sfotografuj malowane domki kąpielowe na plaży",
+            "Zjedz świeżą rybę przy porcie w Aeroskobing",
+            "Popatrz, jak port cichnie o zmierzchu"
+          ],
+          "mooringTip": "Port w Aeroskobing jest mały i oblegany w lipcu, więc warto dobić wczesnym popołudniem; cumowanie na drugiej czy trzeciej burcie jest tu normą i czymś oczekiwanym. Cumuje się burtą albo rufą do pomostów, a w szczycie sezonu miejsce przydziela biuro portu, zamiast puszczać wszystko na zasadzie kto pierwszy, ten lepszy."
+        },
+        "5": {
+          "shortDescription": "Na zachód na wyspę Als i do Sonderborga, z cumowaniem pod dwunastowiecznym nadwodnym zamkiem, w krótkim spacerze od miasta.",
+          "description": "Dziś jakieś dwadzieścia mil na zachód, żegnasz grupę Aero i przechodzisz na wyspę Als. Podejście do Sonderborga prowadzi wąską cieśniną pod mostem króla Christiana X, więc zawczasu zadzwoń o godziny otwarcia i miej oko na ruch promów. Wiatr znów skłania się ku zachodniemu, dając porządną żeglugę przez większość drogi.\n\nSonderborg to największe miasto na trasie, odwiedzane przez ponad czternaście tysięcy jachtów rocznie, więc zaplecze jest znakomite. Zacumuj w porcie południowym, a zamek Sonderborg wznosi się wprost nad tobą — dwunastowieczna ceglana bryła, w której mieści się dziś regionalne muzeum historyczne. Ulica handlowa jest dwie minuty od nabrzeża, miejska plaża tuż obok, a po drugiej stronie wody młyn Dybbol znaczy grzbiet dawnego pola bitwy.",
+          "thingsToDo": [
+            "Zwiedź muzeum historyczne w zamku Sonderborg",
+            "Popływaj na miejskiej plaży przy marinie",
+            "Rozejrzyj się po ulicy handlowej przy nabrzeżu",
+            "Spójrz na grzbiet z młynem Dybbol po drugiej stronie"
+          ],
+          "mooringTip": "Kieruj się do portu południowego między mostem a zamkiem, a nie do Marina Fiskenaes, jeśli chcesz być w samym centrum miasta; cumuje się tu burtą i rufą, głębokość wystarczy dla większości kili. W szczytowych tygodniach w drodze na miejsce zadzwoń do bosmana, bo centralne miejsca schodzą pierwsze."
+        },
+        "6": {
+          "shortDescription": "Długi półwiatr z powrotem na południowy wschód do Bagenkop — okazja, by ostro pożeglować po otwartej wodzie i znów zadomowić się w porcie rybackim Langeland.",
+          "description": "Droga do domu zaczyna się solidnym przelotem około dwudziestu dwóch mil z powrotem w dół do Langeland. Z przeważającym wiatrem z zachodu na trawersie to często najlepsza żegluga tygodnia — łódź przechylona i w ruchu, Als zostaje za rufą. Start wyznacz według wiatru, nie zegara; jeśli mocno dmie z zachodu, wcześniejsze wyjście wprowadzi cię, zanim się rozkręci.\n\nPowrót do Bagenkop za drugim razem czuje się inaczej. Znasz już port, więc nie ma szarpaniny o miejsce. To wieczór, by nadrobić to, co ominęło cię w drodze tam: wędzone ryby ze straganów portowych albo piwo na nabrzeżu, gdy kutry przypływają i odpływają. Zachód słońca z wieży widokowej wart jest wejścia po raz drugi.",
+          "thingsToDo": [
+            "Spróbuj wędzonej ryby ze straganów portowych",
+            "Wejdź na wieżę widokową po drugi zachód słońca",
+            "Popatrz na kutry uwijające się przy nabrzeżu",
+            "Zatankuj i uzupełnij wodę przed ostatnim etapem"
+          ],
+          "mooringTip": "Rozkład będzie ci już znany: miejsca box przy budynku socjalnym, głębsza woda w starym basenie. Jeśli prognoza na ostatnie przejście zapowiada świeży wiatr, zajmij miejsce po osłoniętej, wewnętrznej stronie, żeby rano nie odpychać łodzi od pomostu."
+        },
+        "7": {
+          "shortDescription": "Ostatnie przejście z powrotem przez Fehmarnbelt do Heiligenhafen — najdłuższy etap po otwartej wodzie i godne zwieńczenie ostatniego dnia na morzu.",
+          "description": "Ostatni etap to najdłuższe przejście tygodnia, jakieś dwadzieścia pięć mil z Bagenkop z powrotem przez Fehmarnbelt do bazy w Heiligenhafen. Wyjdź do dziewiątej, żeby mieć zapas, i sprawdź prognozę poprzedniego wieczora, bo silny zachodniak prosto w dziób może zamienić to w długą mordęgę.\n\nWiększość dnia to otwarta woda, a niska zielona linia Fehmarnu powoli wyrasta przed dziobem. Trzymaj się z dala od ruchu statków w cieśninie i utrzymuj kurs na podejście do Heiligenhafen, dobrze oznakowane, gdy zbliżasz się do brzegu. Po minięciu zewnętrznych falochronów wejście do mariny jest proste. Zatankuj, przepłucz toalety i oddaj łódź uporządkowaną; zwykle zostaje jeszcze czas na ostatni talerz ryby przy porcie przed drogą do domu.",
+          "thingsToDo": [
+            "Popatrz, jak Fehmarn wyrasta na horyzoncie",
+            "Zatankuj i rozlicz się w marinie Heiligenhafen",
+            "Ostatni talerz ryby przy porcie przed wyjazdem",
+            "Oddaj opłukaną, uporządkowaną łódź"
+          ],
+          "mooringTip": "Marina w Heiligenhafen jest duża i dobrze oznakowana; wejdź oznakowanym bojami torem i zajmij przydzielone miejsce zwrotne, zamiast wybierać własne. Zarezerwuj paliwo z wyprzedzeniem, jeśli przy zdaniu potrzebujesz pełnego baku, bo w sobotnie poranki wymiany załóg do dystrybutora ustawiają się kolejki."
+        }
+      }
+    },
+    "baltic-fyn-circle-14-days": {
+      "metaTitle": "14 dni: niemiecki Bałtyk i wyspy duńskie | Boat4You",
+      "metaDesc": "Dwa tygodnie żeglugi z Heiligenhafen przez Fehmarnsund do Ærø, Svendborga, Faaborga i Als, a potem do domu przez archipelag Południowej Fionii.",
+      "days": {
+        "1": {
+          "shortDescription": "Spokojny, rozruchowy etap z Heiligenhafen, pod mostem nad Fehmarnsund i naokoło do dużej, nowoczesnej mariny Burgtiefe.",
+          "description": "Większość załóg pierwszy dzień poświęca na roztestowanie łodzi, a nie na gonienie za milami. Mijasz długi falochron Heiligenhafen, bierzesz kurs na zachód i przechodzisz pod mostem nad Fehmarnsund, który łączy wyspę ze stałym lądem. Stamtąd już tylko krótki półwiatr naokoło do Burgtiefe na południowym wybrzeżu Fehmarnu.\n\nMarina jest najnowsza i najprzestronniejsza z pięciu na wyspie, z około 600 miejscami rozłożonymi wokół charakterystycznego okrągłego basenu. Paliwo, sklep żeglarski i ciepłe prysznice są na miejscu, więc to rozsądny punkt, by ogarnąć sprzęt przed jutrzejszym przejściem przez otwartą wodę.\n\nNa lądzie Südstrand ciągnie się kilometrami jasnego piasku, lubiany przez kite- i windsurferów, gdy tylko rozkręci się bryza. Połóż się wcześnie spać. Skok do Danii wymaga wypoczętej załogi i ustabilizowanej prognozy.",
+          "thingsToDo": [
+            "Przejdź się długą plażą kitesurfingową Südstrand",
+            "Dotankuj paliwo na stacji bunkrowej Burgtiefe",
+            "Zaopatrz kambuz w miasteczku Burg",
+            "Popatrz na windsurferów u południowego brzegu Fehmarnu"
+          ],
+          "mooringTip": "Burgtiefe ma miejsce dla gości nawet w sierpniu, więc rezerwacja rzadko jest konieczna, ale w letni weekend zadzwoń z wyprzedzeniem. Miejsca box cumuje się linami rufowymi do pali, a głębokość w basenie utrzymuje się w okolicach 3 metrów."
+        },
+        "2": {
+          "shortDescription": "Prawdziwe bałtyckie przejście na północ do Danii, otwarta woda aż do zbudowanego z czerwonego drewna portu rybackiego Bagenkop na Langeland.",
+          "description": "To etap, który czuje się jak prawdziwy rejs. Po minięciu Fehmarnu między tobą a południowym cyplem Langeland niewiele już zostaje — jakieś dwadzieścia mil otwartego Bałtyku, z brzegiem znikającym za rufą. Wiatr z południowego zachodu daje wygodny półwiatr; cokolwiek z północnego zachodu zamienia to w mokrzejsze lawirowanie, więc zwykle czekamy na właściwe okno, zamiast iść na siłę.\n\nBagenkop leży na samym dole Langeland — czynny port rybacki, gdzie wzdłuż nabrzeża stoją czerwone szopy z desek. Jest bezpretensjonalny i tym lepszy. Wędzarnia przy porcie sprzedaje rybę prosto z łodzi, a wydmy i rezerwat przyrody na południe od miasteczka dają dobrą okazję, by rozprostować nogi po dniu za sterem.\n\nTu wciągasz pierwszą duńską banderę grzecznościową rejsu.",
+          "thingsToDo": [
+            "Kup wędzoną rybę w portowej wędzarni",
+            "Przejdź się wydmami na południe od Bagenkop",
+            "Wypatruj ptaków w nadmorskim rezerwacie",
+            "Wciągnij duńską banderę grzecznościową"
+          ],
+          "mooringTip": "Bagenkop to prosty przystanek — cumowanie burtą lub w miejscu box — z dobrą osłoną, ale zapełnia się załogami robiącymi to samo przejście. W lipcu dobij do wczesnego popołudnia, by mieć pewność miejsca bliżej wędzarni."
+        },
+        "3": {
+          "shortDescription": "Krótki przeskok na Ærø do Marstal — niegdyś drugiego miasta żeglugowego Danii, wciąż otoczonego stoczniami i żaglowniami.",
+          "description": "Łagodniejszy dzień po przejściu. Odbijasz z Bagenkop i bierzesz kurs na zachód przez wejście do archipelagu ku Ærø — długiej, niskiej wyspie, która spina cały ten akwen. Jakieś piętnaście mil, zwykle na półwietrze.\n\nMarstal zasługuje na swoje miejsce. W epoce żagla było drugim portem Danii po Kopenhadze, a miasteczko wciąż lekko pachnie smołą i lakierem. Marstal Maritime Museum rozciąga się po kilku starych domach i warte jest całego popołudnia — pełne modeli statków, galionów i historii flot szkunerów budowanych na tym właśnie brzegu. Powłócz się nabrzeżem, popatrz, jak w jednym z warsztatów przywracają do życia drewniany kadłub, a potem znajdź stolik na wieczór. Tempo jest tu wolne z rozmysłem.",
+          "thingsToDo": [
+            "Zwiedź Marstal Maritime Museum",
+            "Popatrz na budowę drewnianych łodzi w warsztatach",
+            "Przejdź się długim, ręcznie usypanym falochronem portu",
+            "Powłócz się pachnącym smołą nabrzeżem"
+          ],
+          "mooringTip": "Port jachtowy w Marstal leży tuż na zachód od nabrzeża handlowego; kieruj się do pomostów gościnnych, a nie do basenu rybackiego. Głębokości są dobre, ale zewnętrzne miejsca lekko kołyszą przy świeżym wietrze z południa, więc jeśli możesz, schowaj się w środku."
+        },
+        "4": {
+          "shortDescription": "Na północ między wyspami do Svendborgsund — najbardziej ruchliwej cieśniny Danii — z metą w tętniącym życiem, morskim miasteczku Svendborg.",
+          "description": "Dziś wpływasz w serce archipelagu. Z Marstal kurs biegnie na północ, przeciskając się między Ærø, Tåsinge a garstką mniejszych wysepek, aż woda zwęża się w Svendborgsund. Cieśnina wije się jak rzeka między zalesionymi brzegami i uchodzi za najczęściej przemierzany żaglami odcinek w całej Danii, więc dobrze wypatruj małego parowca M/S Helge, który dyszy tu tam i z powrotem od ponad stu lat.\n\nSam Svendborg to porządne, robocze miasto, drugie co do wielkości na Fionii, z mariną w zasięgu spaceru od sklepów i dworca. Frederiksøens Fiskebar na dawnej wyspie stoczniowej serwuje uczciwe owoce morza nad wodą. Jeśli masz godzinę, przepraw się na Tåsinge do Valdemars Slot — otoczonego fosą dworu z lat czterdziestych XVII wieku.",
+          "thingsToDo": [
+            "Zjedz owoce morza w Frederiksøens Fiskebar",
+            "Odwiedź Valdemars Slot na Tåsinge",
+            "Popatrz, jak przepływa parowiec M/S Helge",
+            "Powłócz się starymi uliczkami portu w Svendborgu"
+          ],
+          "mooringTip": "Svendborg ma kilka basenów; sprawdzą się zarówno port gościnny na Frederiksø, jak i marina na wschód od mostu. To ruchliwy węzeł, więc celuj w przycumowanie do późnego popołudnia i uważaj na prąd płynący przez sund."
+        },
+        "5": {
+          "shortDescription": "Klasyczny archipelagowy dzień na zachód do Faaborga, mijając Lyø i Avernakø, z metą pod starą dzwonnicą miasteczka.",
+          "description": "Niektórzy skipperzy nazywają ten etap najpiękniejszym w całym dwutygodniowym rejsie i trudno się spierać. Wychodząc ze Svendborgsund, kierujesz się na zachód przez otwartą wodę archipelagu, z niskimi zielonymi garbami Lyø i Avernakø po lewej burcie. Obie warte są zboczenia z trasy, jeśli dzień jest jeszcze młody; maleńki port Lyø i wioska ze stawem kaczek to duńska pocztówka.\n\nFaaborg czeka na brzegu Fionii. Brukowane uliczki wspinają się od nabrzeża do średniowiecznego Klokketårnet, starej dzwonnicy, a wejście po jej stopniach nagradza widokiem dachów i wody rozłożonych w dole. Faaborg Museum ma najlepszą kolekcję malarzy z Fionii, jaką znajdziesz. Na dole przy marinie kawiarnie i stragany rybne ciągną się wzdłuż wody, a lody przy porcie to już niemal instytucja.",
+          "thingsToDo": [
+            "Wejdź na dzwonnicę Klokketårnet w Faaborgu",
+            "Zobacz malarzy z Fionii w Faaborg Museum",
+            "Zbocz do portowej wioski na Lyø",
+            "Spróbuj lodów przy nabrzeżu portu"
+          ],
+          "mooringTip": "Port gościnny w Faaborgu leży wprost pod starym miastem, wygodnie do wszystkiego na lądzie. Pełnią lata bywa tłoczno; jeśli wewnętrzne miejsca są zajęte, nowsze pomosty na wschodzie mają głębokość i rzadko się zapełniają."
+        },
+        "6": {
+          "shortDescription": "Znów na południe do Ærøskøbing — najlepiej zachowanego osiemnastowiecznego miasteczka Danii, którego brukowane uliczki obstawiają domy w cukierkowych barwach.",
+          "description": "Teraz z powrotem na południe, znów w poprzek archipelagu ku północnemu brzegowi Ærø i niewielkiemu portowi Ærøskøbing. To skromna żegluga, jakieś piętnaście mil, która zostawia wolne popołudnie na miasteczko — a to jedno z tych, które zapamiętasz.\n\nÆrøskøbing przez dwieście lat prawie się nie zmieniło. Uliczki domów obrzeżonych malwami, malowanych na musztardowo, wołową krew i bladą zieleń, schodzą ku wodzie, a całość jest chroniona jako jedno z najpiękniejszych osiemnastowiecznych miasteczek Skandynawii. Wieczorem, gdy odpłynie prom z jednodniowymi wycieczkowiczami, bruk pustoszeje, a światło robi się złote. Wyjdź do rzędu jaskrawo pomalowanych domków kąpielowych na plaży, kup lody u starego sklepikarza i puść załogę wolno na parę godzin na ląd.",
+          "thingsToDo": [
+            "Przejdź się osiemnastowiecznymi brukowanymi uliczkami Ærøskøbing",
+            "Sfotografuj malowane domki kąpielowe na plaży",
+            "Zajrzyj do staroświeckiego sklepiku przy porcie",
+            "Złap na lądzie złote światło wieczoru"
+          ],
+          "mooringTip": "Mały port Ærøskøbing cieszy się zasłużoną popularnością, więc dobij przed popołudniowym szczytem albo po ostatnim promie, żeby znaleźć miejsce. Cumowanie na drugiej burcie jest tu normą; podaj liny wcześnie i bądź gotów przyjąć sąsiada burta w burtę."
+        },
+        "7": {
+          "shortDescription": "Dłuższe przejście na zachód do Dyvig — otoczonego lądem naturalnego portu na Als i jednego z najpiękniejszych kotwicowisk w Danii.",
+          "description": "Najdłuższy etap rejsu zabiera cię od Ærø ku Als — dużej wyspie strzegącej wejścia do Małego Bełtu. Licz na większą część dnia, jakieś dwadzieścia pięć mil, z falą trochę rosnącą na bardziej otwartej wodzie w połowie drogi.\n\nNagrodą jest Dyvig. Wąskie, dobrze oznakowane wejście otwiera się na niemal całkowicie zamknięte rozlewisko, otoczone bukowymi lasami i polami, z ledwie jednym domem w zasięgu wzroku. Dwie małe mariny dzielą tę zatoczkę — prowadzona przez członków Dyvig Bådelaug i nowsza Dyvig Bro, obie ciche i przyjazne. Gdy liny są już na miejscu, to takie miejsce, gdzie skaczesz do wody z pawęży, rozpalasz grill i patrzysz, jak słońce chowa się za drzewa. Weź prowiant; na lądzie poza samym brzegiem niewiele znajdziesz.",
+          "thingsToDo": [
+            "Popływaj w osłoniętym rozlewisku Dyvig",
+            "Przejdź się bukowymi lasami wokół zatoczki",
+            "Zgrilluj kolację z pawęży",
+            "Drink o zachodzie z pomostu Dyvig Bro"
+          ],
+          "mooringTip": "Wejście do Dyvig jest wąskie, ale dobrze oznakowane bojami; wchodź powoli i trzymaj się oznaczonego toru. Obie mariny mają dobrą głębokość, a że rozlewisko jest w pełni zamknięte, pozostaje spokojne przy niemal każdym wietrze, co czyni je pewnym schronieniem."
+        },
+        "8": {
+          "shortDescription": "Wyluzowany przelot w dół wybrzeża Als i przez Alssund do Sønderborga, którego zamek i marina wieńczą cieśninę.",
+          "description": "Łatwiejszy dzień. Wymykasz się z Dyvig i skręcasz na południe wzdłuż brzegu Als, potem w Alssund — wąski kanał oddzielający wyspę od jutlandzkiego lądu. Woda jest osłonięta, a żegluga spokojna, dobra okazja, by za ster stanął ktoś nowy.\n\nSønderborg otwiera się na południowym krańcu, a jego marina została wybrana duńskim portem roku 2024 i przyciąga ponad czternaście tysięcy załóg w sezonie. Bielony Sønderborg Slot stoi wprost nad wodą — po części forteca, po części muzeum — opowiadając zawiłą duńsko-niemiecką historię tego pogranicza. W miasteczku są dobre restauracje, porządny supermarket na uzupełnienie zapasów w połowie rejsu, a most Christiana X podnosi się o pełnej godzinie, jeśli chcesz płynąć dalej na północ. Większość załóg z radością po prostu zostaje na miejscu.",
+          "thingsToDo": [
+            "Zwiedź Sønderborg Slot nad wodą",
+            "Uzupełnij zapasy w miejskim supermarkecie",
+            "Popatrz, jak podnosi się most Christiana X",
+            "Zjedz kolację wzdłuż nabrzeża w Sønderborgu"
+          ],
+          "mooringTip": "Nagradzana marina w Sønderborgu leży tuż na południe od mostu drogowego, po stronie miasta; jest duża i dobrze prowadzona, ale ruchliwa, więc w szczytowych tygodniach rezerwuj z wyprzedzeniem. Podchodząc do miejsc, uważaj na znoszący prąd w Alssund."
+        },
+        "9": {
+          "shortDescription": "Zaczyna się zwrot ku domowi — dłuższy półwiatr z powrotem na wschód przez cieśninę do malowanych uliczek Ærøskøbing.",
+          "description": "Rejs zawraca ku domowi, choć do domu wciąż spokojny tydzień. Z Sønderborga częściowo odtwarzasz trasę w drugą stronę, z powrotem przez Alssund i na wschód przez otwartą wodę ku Ærø. To kolejny pełny etap około dwudziestu pięciu mil, a z przeważającym wiatrem z południowego zachodu za rufą może być szybki i satysfakcjonujący.\n\nÆrøskøbing jest tak dobrym portem, że druga noc ledwie czuje się jak powtórka. Czeka wszystko, co ominęło cię za pierwszym razem: muzea morskie i statków w butelkach, dłuższy spacer wzdłuż brzegu, porządna kolacja na lądzie przy stole. Jeśli załoga ma ochotę na zmianę, kotwicowisko w zatoce tuż na wschód od miasteczka daje spokojną noc na kotwicy, z portowymi światłami przed dziobem.",
+          "thingsToDo": [
+            "Obejrzyj kolekcję statków w butelkach z Ærø",
+            "Zakotwicz w zatoce na wschód od miasteczka",
+            "Wróć do ulubionej kawiarni w Ærøskøbing",
+            "Przejdź się ścieżką wzdłuż brzegu o zmierzchu"
+          ],
+          "mooringTip": "Jeśli po powrocie port Ærøskøbing jest zapchany, zatoka tuż na wschód daje dobre trzymanie na piasku na dwóch–czterech metrach, osłonięta od wszystkiego z zachodu. Wyłóż sporo łańcucha i wpierw sprawdź nocną prognozę."
+        },
+        "10": {
+          "shortDescription": "Najkrótszy etap wyprawy — leniwy poranny skok wzdłuż brzegu Ærø z Ærøskøbing z powrotem do Marstal.",
+          "description": "Ten ledwie zasługuje na miano przejścia. Z Ærøskøbing do Marstal to garść mil wzdłuż południowej krawędzi wyspy, więc nie ma po co się spieszyć ze śniadaniem. Poczekaj, aż wiatr się rozwieje, a potem spokojnie pożegluj naokoło wschodniego cypla Ærø, na tyle blisko brzegu, by wypatrzeć gospodarstwa i niejedną wieżę kościoła.\n\nKrótki dzień zostawia mnóstwo czasu w Marstal, które nagradza drugie spojrzenie. Jeśli poprzednio zajęło cię muzeum, ta wizyta należy do samego miasteczka: domów starych kapitanów, warsztatów wciąż budujących drewniane kadłuby i długiego, ręcznie usypanego falochronu, którym możesz dojść do samego końca. Przy porcie są dobre miejsca na jedzenie, a jest i sklep żeglarski, gdyby łódź czegoś potrzebowała przed przejściem z powrotem do Niemiec.",
+          "thingsToDo": [
+            "Dojdź do końca falochronu w Marstal",
+            "Podziwiaj domy starych kapitanów",
+            "Uzupełnij zapasy w sklepie żeglarskim w Marstal",
+            "Pożegluj tuż przy brzegu, mijając wieże Ærø"
+          ],
+          "mooringTip": "Te same pomosty gościnne co poprzednio, na zachód od portu handlowego. Przy tak krótkim dniu możesz dobić wcześnie i wybrać osłonięte miejsce w środku, zanim dotrą załogi wciąż płynące z Niemiec."
+        },
+        "11": {
+          "shortDescription": "Z powrotem przez otwartą wodę do Bagenkop na Langeland — przystanek przed przejściem do Niemiec i ostatni cichy duński port rybacki.",
+          "description": "Teraz zaczynasz ustawiać powrót. Z Marstal to prosty półwiatr z powrotem na wschód do Bagenkop, odtwarzając wodę pokonaną trzeciego dnia, jakieś piętnaście mil, z archipelagiem znikającym za rufą. Rzuć długie ostatnie spojrzenie; po dzisiejszej nocy duńskie wyspy zostają za rufą na dobre.\n\nBagenkop to właściwe miejsce na przystanek. To najbliższy Fehmarnowi duński port, co skraca jutrzejsze przejście przez otwartą wodę, a przy tym spokojny, uczciwy port na ostatnią noc w Danii. Uzupełnij paliwo i wodę, kup ostatnią porcję wędzonej ryby w portowej wędzarni i uważnie sprawdź prognozę. Etap na Fehmarn wymaga ustabilizowanych warunków. Jeśli wiatr zapowiada się źle, to wygodne miejsce, by przeczekać dzień.",
+          "thingsToDo": [
+            "Kup ostatnią porcję wędzonej ryby",
+            "Uzupełnij zbiorniki paliwa i wody",
+            "Przejdź się plażą Bagenkop jeszcze raz",
+            "Przestudiuj prognozę na przejście"
+          ],
+          "mooringTip": "W Bagenkop łatwo cumuje się burtą lub w miejscu box, z solidną osłoną. Zajmij miejsce blisko nabrzeża paliwowego, żeby zatankować i odbić wcześnie; przejście do Niemiec najlepiej zacząć rano, póki wiatr jest jeszcze słaby."
+        },
+        "12": {
+          "shortDescription": "Przejście z powrotem do Niemiec, otwarta bałtycka woda od cypla Langeland po Fehmarn i znajomy okrągły basen w Burgtiefe.",
+          "description": "Powrotne przejście i jedyny etap po otwartej wodzie, jaki został w wyprawie. Z Bagenkop bierzesz kurs na południe, w te same z górą dwadzieścia mil Bałtyku, które przepłynąłeś w drodze tam, tyle że na odwrót, z Niemcami powoli wyrastającymi nad dziobem. Wiatr z północy zamienia to w prezent — bieg z wiatrem; ostry południowo-zachodni czyni z tego mordęgę, dlatego to prognoza zdecydowała, czy wyszedłeś dziś rano.\n\nPołudniowe wybrzeże Fehmarnu i okrągły port w Burgtiefe to mile widziany widok po dniu na pełnym morzu. Zamelduj się z powrotem, przycumuj w przestronnym basenie i odnotuj tę chwilę: trudna żegluga dwóch tygodni jest już za tobą. Do Südstrand jest krótki spacer na kąpiel, by spłukać sól, a portowe restauracje to odpowiednie miejsce na porządną kolację załogi.",
+          "thingsToDo": [
+            "Popływaj przy Südstrand, by spłukać sól",
+            "Wznieś toast za przejście w portowej restauracji",
+            "Zatankuj na stacji bunkrowej Burgtiefe",
+            "Popatrz na surferów u południowego brzegu Fehmarnu"
+          ],
+          "mooringTip": "Basen Burgtiefe na 600 miejsc niemal zawsze ma wolne miejsce, a po długim przejściu pokrzepia świadomość, że coś na ciebie czeka. Celuj w zawietrzny pomost i korzystaj z pali rufowych; okrągły basen potrafi przepuszczać świeżą bryzę przez wodę."
+        },
+        "13": {
+          "shortDescription": "Krótki, łatwy etap z powrotem ku stałemu lądowi, pod mostem nad Fehmarnsund do osłoniętej mariny w Grossenbrode.",
+          "description": "Niewymagający dzień, by rozwinąć ostatnie mile. Odbijasz z Burgtiefe, wracasz wzdłuż wybrzeża Fehmarnu i jeszcze raz przechodzisz pod mostem nad Fehmarnsund, a potem przemykasz do Grossenbrode po lądowej stronie sundu. Jakieś dziesięć mil, najwyżej popołudniowa robota.\n\nGrossenbrode leży pośród największego skupiska jachtów czarterowych na niemieckim Bałtyku, więc marina jest dobrze przygotowana dla wyhamowujących załóg. Jest ciszej niż w Heiligenhafen i przyjemnie na ostatnią noc na wodzie, z długą piaszczystą mierzeją na ostatnią kąpiel i spacer. Ogarnij łódź, póki jest jasno, przygotuj sprzęt, który jutro oddasz, i ciesz się niespiesznym wieczorem. Do bazy jest rano tylko krótki skok.",
+          "thingsToDo": [
+            "Popływaj przy piaszczystej mierzei Grossenbrode",
+            "Wybierz się na ostatni spacer wzdłuż brzegu",
+            "Ogarnij i wcześnie rozbroj łódź",
+            "Ciesz się cichym ostatnim wieczorem na wodzie"
+          ],
+          "mooringTip": "Marina w Grossenbrode jest spokojna i pod koniec tygodnia czarterowego rzadko pełna, więc o miejsce łatwo. Wybierz takie z prostym porannym wyjściem na sund; droga powrotna do Heiligenhafen jest krótka i będziesz chciał czystego odbicia."
+        },
+        "14": {
+          "shortDescription": "Ostatni krótki skok z powrotem do Heiligenhafen — łatwa poranna żegluga, by zamknąć pętlę w macierzystej marinie.",
+          "description": "Ostatni etap, i to spokojny na zakończenie. Z Grossenbrode to krótki półwiatr z powrotem do Heiligenhafen, ledwie garść mil w poprzek wejścia do zatoki, więc nie ma presji, by ruszać o świcie. Większość załóg je niespieszne śniadanie, łapie poranną bryzę i pokonuje ostatni odcinek w godzinę czy dwie.\n\nDuża marina w Heiligenhafen zamyka pętlę tam, gdzie zaczęła się dwa tygodnie temu. Dopasuj przybycie do okienka zdania łodzi w bazie, dotankuj po drodze i po raz ostatni przybij burtą. Za tobą dwa tygodnie i grubo ponad sto pięćdziesiąt mil, z porządną mieszanką otwartych przejść i osłoniętej żeglugi między wyspami. Załatw papiery, rozładuj i znajdź stolik przy porcie na ostatnie zimne piwo przed drogą do domu.",
+          "thingsToDo": [
+            "Zatankuj przed zdaniem łodzi w Heiligenhafen",
+            "Wznieś toast za wyprawę w portowej kawiarni",
+            "Przejdź się nadmorską promenadą Heiligenhafen",
+            "Załatw papiery czarterowe w bazie"
+          ],
+          "mooringTip": "Potwierdź w bazie miejsce zdania łodzi i okienko tankowania, zanim opuścisz Grossenbrode. Pomosty gościnne i czarterowe w Heiligenhafen są dobrze oznakowane; podchodź bardzo wolno, bo marina jest duża i często zatłoczona odbijającymi i wracającymi załogami."
+        }
+      }
+    }
+  },
+  "areas": {
+    "baltic-germany": {
+      "metaTitle": "Trasy żeglugi: niemiecki Bałtyk i wyspy duńskie | Boat4You",
+      "metaDesc": "Rozpisane dzień po dniu trasy czarterowe z Heiligenhafen przez niemiecki Bałtyk do Ærø, Marstal i wysp Południowej Fionii. Plany na 7 i 14 dni.",
+      "title": "Z niemieckiego Bałtyku na duńskie wyspy",
+      "description": "Krótkie skoki i wyrozumiała woda czynią z tego jeden z najłatwiejszych akwenów żeglarskich w północnej Europie. Z baz w Heiligenhafen i nad Fehmarnsund przeprawisz się na Langeland w jedno popołudnie, a potem nawiążesz jedną po drugiej wyspy Południowej Fionii, gdzie etapy rzadko przekraczają 20 mil, a osłona nigdy nie jest daleko. Latem wiatr wieje przez większość dni w granicach 3-4 stopni Beauforta, z okazjonalnym mocniejszym dmuchnięciem, a sezon trwa od połowy maja do końca września. Ærøskøbing nagradza wczesne przybycie; brukowane osiemnastowieczne miasteczko szybko zapełnia swój mały port, więc przycumuj przed popołudniowym tłumem z promu. Marstal, tuż za rogiem wyspy, utrzymuje przy życiu swoją żeglugową przeszłość w muzeum morskim zastawionym modelami łodzi. Svendborg otwiera drzwi do Skarø i Drejø na leniwe dni na kotwicy. Wskazówka od wtajemniczonych — w drodze powrotnej omiń ruchliwe miejskie nabrzeże Sønderborga i wślizgnij się do Hørup Hav, cztery mile na wschód, na spokojną ostatnią noc."
+    }
+  }
+}

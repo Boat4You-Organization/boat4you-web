@@ -1,1 +1,255 @@
-{}
+{
+  "routes": {
+    "dutch-waters-14-days": {
+      "metaTitle": "14-dnevni krug oko Zuiderzeea | Boat4You",
+      "metaDesc": "14-dnevni jedriličarski krug iz Lemmera oko IJsselmeera i Markermeera: Stavoren, Enkhuizen, Hoorn, Volendam, Marken, Muiden i Urk.",
+      "days": {
+        "1": {
+          "shortDescription": "Lagana prva etapa niz frizijsku obalu do Stavorena, najstarijeg od jedanaest gradova i od pamtivijeka mornarskog grada.",
+          "description": "Većina posada prvi dan iskoristi da se uigra, a ne da odmah pritisne. Kratak je to skok niz frizijsku obalu, možda jedanaest milja, a Lemmerska prevodnica izvede te na otvorenu vodu unutar sat vremena. Stavoren mami mornare već tisuću godina i još uvijek djeluje kao da je sagrađen oko vode, a ne tek pokraj nje. Vanjska luka leži tik na IJsselmeeru, unutarnja se zavukla između jezera i frizijskih jezeraca. Prošeći do brončane Gospe od Stavorena koja zuri prema pučini, gradske opomene izlivene u metal. Večeri su ovdje tihe na onaj dobar način. Ako zapuše jugozapadnjak, spremi se na živahno bočno jedrenje i pokoji kratak val da te podsjete gdje si.",
+          "thingsToDo": [
+            "Pogledaj brončani kip Gospe od Stavorena",
+            "Prošeći vanjskom lukom uz IJsselmeer",
+            "Zaviri u brodsku opremu u Marini Stavoren",
+            "Piće uz zalazak s pogledom na prevodnicu unutarnje luke"
+          ],
+          "mooringTip": "Buitenhaven prima brodove do 25 metara i tri metra gaza, a leži izvan prevodnice pa ujutro odmah iskliziš na jezero. U srpnju rezerviraj dan ranije; puni se posadama koje voze isti krug."
+        },
+        "2": {
+          "shortDescription": "Obalni skok na sjever pokraj Hindeloopena i Workuma do Makkuma, frizijskog lončarskog gradića s pravom plažom za kupanje.",
+          "description": "Danas ti frizijska obala ostaje s boka. Prolaziš Hindeloopen i Workum, oba vrijedna zaobilaska ako imaš sati, prije nego što se Makkum otvori iza svoje plaže. Ovo je jedno od rijetkih mjesta na jezeru gdje se stvarno možeš kupati s pijeska, a toplog poslijepodneva plićaci se napune daskašima i zmajevima. Sam je gradić stariji nego što izgleda. Royal Tichelaar ovdje peče kositrom glaziranu keramiku još od 1572., a trgovačke kuće uz prevodnicu i danas nose novac te trgovine u svojim zabatima. Namirnice se lako nabave. Ovdje obično dopunimo vodu i svježi kruh prije prvog pravog preplova sutradan. Vjetar je uglavnom od zapada do jugozapada; skraćeno glavno jedro drži stvari ugodnima ako popodne ojača.",
+          "thingsToDo": [
+            "Obiđi stoljetnu lončarsku radionicu Royal Tichelaar",
+            "Daskaj ili veslaj na SUP-u s plaže Makkum",
+            "Zadivi se trgovačkim zabatima uz prevodnicu",
+            "Skokni na kopno u Hindeloopen ili Workum"
+          ],
+          "mooringTip": "Makkumska luka leži odmah iza prevodnice; na prilazu nazovi lučkog kapetana jer su gostinski pontoni tijesni za sve preko dvanaest metara. Ljetnim vikendima stigni do sredine poslijepodneva ili ćeš završiti privezan uz drugi brod."
+        },
+        "3": {
+          "shortDescription": "Tvoj prvi pravi preplov IJsselmeera, na zapad do Medemblika i zdepastih crvenih kula dvorca Radboud.",
+          "description": "Ovo je dan kad jezero pokaže svoju širinu. Iz Makkuma kreneš na zapad preko otvorene vode prema obali Sjeverne Holandije, petnaest do osamnaest milja ovisno o kursu, i par sati nema ničega osim horizonta i vjetra. IJsselmeer je plitak pa svjež vjetar brzo naslaže kratke, strme valove; ugrabi vremenski prozor i čeka te brzo, ugodno jedrenje u pol vjetra. Medemblik se najavi dvorcem Radboud, zdepastom utvrdom iz trinaestog stoljeća koju je Floris Peti podigao da drži Zapadne Frizijce na uzdi. Pekelharinghaven je na kratkoj šetnji od centra, odmah iza dvorca. Isplati se isploviti iz Makkuma do devet da stigneš dok ti je poslijepodne još pred tobom.",
+          "thingsToDo": [
+            "Popni se na srednjovjekovnu kulu dvorca Radboud",
+            "Provozaj se parnim tramvajem Hoorn-Medemblik",
+            "Prošeći gatovima Pekelharinghavena",
+            "Kava na staroj lučkoj rivi"
+          ],
+          "mooringTip": "Uđi u Medemblik i skreni ulijevo odmah iza dvorca prema Pekelharinghavenu, tihom i tek nekoliko minuta od grada. Dubine su dobre za krstaške jedrilice, a izvan regatnih vikenda rijetko trebaš rezervirati."
+        },
+        "4": {
+          "shortDescription": "Kratak skok na jug do Enkhuizena, luke zlatnog doba čiji muzej Zuiderzee oživljava izgubljeni svijet jezera.",
+          "description": "Nakon jučerašnjeg preplova ova etapa djeluje kao predah, jedva devet milja niz obalu. Enkhuizen je bio jedan od najbogatijih gradova nizozemskog zlatnog doba, matična luka Istočnoindijske kompanije, i to se bogatstvo još vidi u skladištima i debelim kamenim vratima Dromedaris koja čuvaju ulaz. Posveti poslijepodne muzeju Zuiderzee. Vanjski dio niže cijele ulice kuća preseljenih ovamo iz sela koje je nasip potopio, a u njima ljudi krpaju mreže i dime ribu kao oko 1900. Compagnieshaven je golem i živ, tik uz muzej i dvije minute od starog centra. Ovdje i prevodnica Krabbersgat dijeli IJsselmeer od Markermeera, pa sutra prelaziš na drugu vodu.",
+          "thingsToDo": [
+            "Provedi pola dana u muzeju Zuiderzee",
+            "Popni se na lučku kulu Dromedaris",
+            "Gledaj kako se dimi riba u muzeju na otvorenom",
+            "Večernje piće na terasi Compagnieshavena"
+          ],
+          "mooringTip": "Compagnieshaven godišnje primi oko 18.000 gostujućih brodova, pa njegovih 600 vezova upija ljetnu gužvu bolje od manjih gradskih luka. Nastoj stići prije pet; pontoni najbliži muzeju prvi nestaju."
+        },
+        "5": {
+          "shortDescription": "Niz obalu Markermeera do Hoorna, grada zlatnog doba s 368 spomenika koji je posudio ime rtu Horn.",
+          "description": "Kad prođeš prevodnicu kod Enkhuizena, na Markermeeru si, a on jedri tek nešto mirnije od samog IJsselmeera. Otprilike dvanaest milja niz obalu dovede te do Hoorna, koji je u dva stoljeća sabio više povijesti nego većina gradova u deset. Willem Schouten je 1616. oplovio vrh Južne Amerike i nazvao ga po svojoj matičnoj luci, pa zato rt Horn nosi ime nizozemskoga ribarskog grada. Stara unutarnja luka, Binnenhaven, leži tik pod nakošenim Hoofdtorenom i spušta te ravno u centar s 368 zaštićenih zgrada. Grashaven, moderna marina, jednostavniji je ali manje romantičan. Uz rivu se niže mnoštvo kafića i restorana, pa su i namirnice i dobra večera riješeni. Opušten dan, ako vrijeme dopusti.",
+          "thingsToDo": [
+            "Fotografiraj nakošenu kulu Hoofdtoren",
+            "Prošeći kroz 368 spomenika starog Hoorna",
+            "Priveži se u staroj luci Binnenhaven",
+            "Večera na trgu Roode Steen"
+          ],
+          "mooringTip": "Za ugođaj izaberi Binnenhaven usred starog grada, a ne modernu Grashaven, ali je mala i plitka prema dnu pa uplovljavaj polako. Mostovi do unutarnje luke otvaraju se u fiksnim terminima; provjeri ih prije nego se odlučiš."
+        },
+        "6": {
+          "shortDescription": "Ravnomjerna plovidba na jug do Volendama, ribarskog sela jegulja i narodnih nošnji gdje se privezuješ usred zbivanja.",
+          "description": "Hoorn i Volendam dijeli četrnaestak milja Markermeera, lako jedrenje u pol vjetra po uobičajenim zapadnjacima. Volendam se snažno oslanja na svoju prošlost, a to ćeš ili primiti s dobrim humorom ili nećeš. Riva, Dijk, čvrst je zid ribljih tezgi, palačinkarnica i ljudi u narodnoj nošnji koji poziraju za fotografije. Ispod svega toga stoji pravo ribarsko selo, a dimljena jegulja i svježi kibbeling odlični su. Gradska luka smjesti te usred svega, jarbol do jarbola s gomilom. To ti je ili čar ili mana, ovisno o raspoloženju. Ako želiš mirniju vodu, sjeti se da su Marken i Monnickendam tek kratko jedrenje dalje. Mi obično stignemo rano, dobro se najedemo i pustimo večer da teče.",
+          "thingsToDo": [
+            "Kušaj dimljenu jegulju na Dijku",
+            "Probaj svježi kibbeling s lučke tezge",
+            "Poziraj u volendamskoj nošnji za fotografiju",
+            "Promatraj ribarsku flotu s gata"
+          ],
+          "mooringTip": "Gemeentehaven je posred turističkog srca, sa strujom, vodom i WiFi-jem na gostinskim pontonima. Popularan je i zbijen, pa u srpnju i kolovozu rezerviraj unaprijed ili stigni prije podneva da budeš siguran u vez."
+        },
+        "7": {
+          "shortDescription": "Skok od četiri milje do Markena, nekadašnjeg otoka kuća na stupovima i zeleno-bijelih zabata koji i danas djeluje odvojeno.",
+          "description": "Četiri milje preko zaljeva jedva se broje kao plovidba, pa to shvati kao dar. Odspavaj, ljenčari po Volendamu, pa napravi kratki preplov i pokloni Markenu cijelo poslijepodne. Nasip ga veže uz kopno od 1957., ali mjesto to nikad nije primilo k znanju. Staro se selo zgurilo na niske humke, drvene kuće dignute na stupove protiv poplava kojih više nema, zabati generacijama obojeni istom zelenom i bijelom. Prošeći do Paard van Markena, malog svjetionika na istočnom rtu, za najljepši pogled natrag preko vode. Supermarketa vrijednog spomena nema, pa se opskrbi u Volendamu prije polaska. Tihe noći, bistro svjetlo ujutro i selo koje nagrađuje polagano lutanje.",
+          "thingsToDo": [
+            "Prošeći do svjetionika Paard van Marken",
+            "Fotografiraj zeleno-bijele kuće na stupovima",
+            "Posjeti markensku radionicu klompi i nošnji",
+            "Prati lučku stazu oko sela"
+          ],
+          "mooringTip": "Markenska je luka mala i omiljena kod izletničkih brodova, pa nastoj biti unutra do ranog poslijepodneva. Prema vrhovima gatova dubine se smanjuju; uzmi vez uz prstasti ponton za goste umjesto da guraš skroz unutra."
+        },
+        "8": {
+          "shortDescription": "Kratak skok do Monnickendama, waterlandskog gradića dimionica jegulje i zvonjave, s daleko manje gužve nego Volendam.",
+          "description": "Još jedna blaga, najviše pet milja, što je ritam ovog kutka jezera. Monnickendam je ono što bi Volendam mogao biti bez autobusnih grupa: iste stare waterlandske kosti, radna luka, ali prostor za disanje. Speeltoren, kula iz petnaestog stoljeća na glavnoj ulici, još svira svoju zvonjavu, a mehanički vitezovi izbijaju sate. Dolje uz vodu dimioničari jegulje generacijama suše ribu nad hrastom i johom, a pecivo s jeguljom pojedeno na gatu jedna je od malih radosti cijele ove rute. Marina drži više od 650 brodova, a rijetko djeluje pretrpano. Čini miran oslonac prije sutrašnje duže etape prema Amsterdamu i dvorcu u Muidenu.",
+          "thingsToDo": [
+            "Poslušaj zvonjavu i vitezove Speeltorena",
+            "Pojedi dimljenu jegulju iz lučke dimionice",
+            "Prošeći do crkve Grote Kerk i starih ulica",
+            "Promatraj klasične drvene jedrilice u marini"
+          ],
+          "mooringTip": "Marina Monnickendam ima preko 650 vezova i obično nađe mjesta i u sezoni, ali najljepša mjesta su uz povijesnu unutarnju luku, koja se prva popuni. Unutra te pusti kratko otvaranje mosta; provjeri raspored."
+        },
+        "9": {
+          "shortDescription": "Na jug preko IJmeera pokraj otočne utvrde Pampus do Muidena, gdje srednjovjekovni dvorac čuva ušće Vechta.",
+          "description": "Sad se kulisa mijenja. Ostavljaš stare zuiderzeeske luke i jedriš na jug na IJmeer, vodu na pragu Amsterdama, otprilike petnaest milja dok ti gradska silueta raste s desnog pramca. Na pola puta niska opečna utvrda Pampus izranja ravno iz jezera, dio prstena utvrda koje su nekoć branile Amsterdam, a danas muzejski otok na koji možeš pristati ako se termini poklope. Muiden leži ondje gdje se rijeka Vecht susreće s morem, a njegov dvorac, Muiderslot, prava je stvar: utvrda iz trinaestog stoljeća s opkopom i četiri okrugle kule, o kojoj danas skrbi Rijksmuseum. Ovdje je dom KNZRV-a, najstarijeg jedriličarskog kluba u zemlji, pa si u dobrom društvu. Pazi na promet; ova voda zna biti prometna za lijepog vikenda.",
+          "thingsToDo": [
+            "Obiđi dvorac Muiderslot okružen opkopom",
+            "Pristani na otočnu utvrdu Pampus",
+            "Prošeći uz rijeku Vecht u Muidenu",
+            "Promatraj flotu pred klubom KNZRV"
+          ],
+          "mooringTip": "Gradska luka Muidena i klub KNZRV leže odmah uz ušće Vechta; morska prevodnica i cestovni most kontroliraju ulaz, pa uskladi dolazak s otvaranjem. Vezova je malo, pa je veća Marina Muiderzand preko puta kod Almerea pouzdana rezerva."
+        },
+        "10": {
+          "shortDescription": "Ponovno na sjever, preplovi natrag IJmeer pokraj Pampusa i probij se uz obalu do Volendama na noćenje.",
+          "description": "Odavde se krug okreće prema kući. Vraćaš se IJmeerom na sjever, Pampus opet sa strane, pa prelaziš natrag na Markermeer za plovidbu do Volendama. Petnaestak je to milja, a s prevladavajućim vjetrom sad više s boka ili krme može biti brz, lak preplov. Ako ti se da promjena od ribarskog sela, Marina Muiderzand ili stanka za ručak na Pampusu mogu prekinuti dan. Vraćajući se u Volendam drugi put, primijetiš ono što si prvi put propustio: mali muzej iza Dijka, ulice jedan red iza rive gdje mještani zapravo žive. Uzmi vez, protegni noge i počni razmišljati o dva otvorena preplova koji zaključuju putovanje.",
+          "thingsToDo": [
+            "Prekini plovidbu na Pampusu za ručak",
+            "Posjeti Volendams Museum iza Dijka",
+            "Istraži sporedne ulice iza rive",
+            "Opskrbi se za preplove koji slijede"
+          ],
+          "mooringTip": "Gemeentehaven već poznaješ s polaska; druga noć ide lakše ako se najaviš, jer se gostinski vezovi brzo izmjenjuju. Privez uz drugi brod ovdje je uobičajen, pa na ulasku postavi bokobrane s obje strane."
+        },
+        "11": {
+          "shortDescription": "Natrag uz Markermeer i kroz prevodnicu Enkhuizena, povratak u luku zlatnog doba i njezin prostrani lučki bazen.",
+          "description": "Duže krmarenje uz vjetar nego jučer, otprilike četrnaest milja ravno uz Markermeer do Enkhuizena. Ako je vjetar sa zapada ili jugozapada, kako često biva, dobar dio puta ćeš orcati, pa se rani polazak isplati. Na vrhu se opet spajaš s Krabbersgatom, gdje Naviduct provodi cestovni promet ispod vode dok se brodovi iznad prevode kroz prevodnicu. Domišljat je to komad nizozemskog inženjerstva i tiho zadovoljstvo proći kroz njega. Enkhuizen zaslužuje drugi pogled. Ako si na polasku samo ovlaš prošao muzej Zuiderzee, sad je vrijeme da se vratiš, ili jednostavno prošeći bedemima i starim lukama u suton. Sutra je onaj veliki, otvoreni preplov do Urka, pa večeras dopuni gorivo i vodu.",
+          "thingsToDo": [
+            "Prevedi se kroz Naviduct Krabbersgat",
+            "Vrati se u ulice muzeja Zuiderzee na otvorenom",
+            "Prošeći bedemima Enkhuizena u suton",
+            "Dopuni gorivo prije preplova do Urka"
+          ],
+          "mooringTip": "Dolazeći s Markermeera, u Enkhuizen se prevodiš kroz Krabbersgat; ako ima reda, pontoni za čekanje su s obje strane. Kad prođeš, i Compagnieshaven i manji Buyshaven blizu centra primaju goste."
+        },
+        "12": {
+          "shortDescription": "Najduži otvoreni preplov rute, na sjeveroistok preko IJsselmeera do Urka, starog otočnog gradića koji još miriše na ribu.",
+          "description": "Ovo je preplov koji posade pamte. Iz Enkhuizena se prevodiš natrag na IJsselmeer i usmjeriš na sjeveroistok preko otvorene vode prema Urku, blizu dvadeset milja bez zaklona između. Biraj vrijeme. U postojanom zapadnjaku to je veličanstveno jedrenje u pol vjetra; u jakom udaru kratko, strmo more IJsselmeera zaposlit će cijelu posadu. Urk je bio otok dok okolni polder nisu isušili četrdesetih, i sačuvao je svu tu odvojenost, sve do vlastitog narječja. Luka i dalje živi od rada, šarene ribarice iskrcavaju ribu uz gostinske pontone. Prošeći do starog svjetionika i spomenika ribarima na rtu, gdje su imena izgubljenih uklesana u kamen. Riblje večere ovdje su svježe koliko mogu biti.",
+          "thingsToDo": [
+            "Zastani kod urškog spomenika ribarima",
+            "Popni se do starog svjetionika u Urku",
+            "Gledaj kako ribarice iskrcavaju ribu u luci",
+            "Pojedi svježe prženu ribu na Westhavenu"
+          ],
+          "mooringTip": "Urk ima tri luke; gostujuće jedrilice obično uzimaju Westhaven ili noviji Nieuwe Haven, podalje od radnih ribarskih gatova. Izložen je zapadu, pa u jakom zapadnjaku uđi rano i udvostruči vezove."
+        },
+        "13": {
+          "shortDescription": "Opušten završni preplov uz frizijski kut natrag do Lemmera, zatvarajući krug ondje gdje je i počeo.",
+          "description": "Posljednje pravo jedrenje blago je, četrnaestak milja od Urka natrag do Lemmera preko sjeveroistočnog kuta jezera. Nakon preplova do Urka djeluje gotovo odmarajuće. Vjerojatno ćeš kroz poslijepodne gledati kako ti se frizijska obala primiče pred pramcem, a ako vjetar surađuje, cijelim putem je jednostavno jedrenje u pol vjetra. Lemmer te dočeka natrag kroz svoju prevodnicu, ista vrata koja su te pustila van prije dva tjedna, a grad ima dovoljno života na rivi za pravu večeru zadnje noći. Ako ima vremena i svjetla, Woudagemaal, velika parna crpna stanica odmah izvan grada, vrijedi kratkog izleta na kopno. Inače, smjesti se, prebroji milje i pusti posadu da razmjenjuje priče koje uvijek postaju bolje u pričanju.",
+          "thingsToDo": [
+            "Prevedi se natrag u staru luku Lemmera",
+            "Obiđi parnu crpnu stanicu Woudagemaal",
+            "Večera zadnje noći na rivi Lemmera",
+            "Prošeći ulicama ribarskog Lemmera"
+          ],
+          "mooringTip": "Natrag u Lemmeru možeš stati u marinu na strani IJsselmeera prije prevodnice ili uzeti gradske vezove unutra; unutarnji su vezovi bliži restoranima. Ako sutra vraćaš brod, vanjska marina olakšava jutarnju primopredaju."
+        },
+        "14": {
+          "shortDescription": "Rezervni dan u bazi: kratko protezanje po frizijskim jezerima, ljenčarenje u krevetu ili jednostavno vrijeme da bez žurbe vratiš brod.",
+          "description": "Dva tjedna oko jezera zaslužuju mekano slijetanje, i za to je ovaj dan. Ako zadržavaš brod još jednu noć, frizijska jezera otvaraju se odmah kod Lemmera kroz Prinses Margrietsluis, a kratko jedrenje na Tjeukemeer ili Groote Brekken pruža ti mirnu, zaklonjenu vodu nakon svega tog otvorenog. To je drukčija vrsta jedrenja, tijesna i zelena, s obalama trstike umjesto horizonata. Ako čarter ovdje završava, iskoristi jutro bez žurbe: ispumpaj kaljužu, zaključi brodski dnevnik, prošeći u grad na zadnju kavu uz vodu. Lemmer svoju ribarsku prošlost nosi olako i ugodno je mjesto za dokoličarenje. Kako god ga proveo, završavaš ondje gdje si i počeo, a to je tiho zadovoljstvo dobro odjedrenog kruga.",
+          "thingsToDo": [
+            "Kratko jedrenje na Tjeukemeer",
+            "Istraži jezera trstike Groote Brekken",
+            "Zadnja kava na gatu Lemmera",
+            "Nežurna primopredaja broda u bazi"
+          ],
+          "mooringTip": "Ako izvedeš brod na frizijska jezera, Prinses Margrietsluis su tvoja vrata i ljetnim poslijepodnevima zna se stvoriti red, pa isplaniraj povratak prije večernje gužve. Za primopredaju stani u marinu najbližu čarter bazi da jutro bude jednostavno."
+        }
+      }
+    },
+    "ijsselmeer-classic-week": {
+      "metaTitle": "7-dnevni krug gradova Zuiderzeea | Boat4You",
+      "metaDesc": "Tjedan dana oko IJsselmeera iz Lemmera: Urk, Enkhuizen, Hoorn, Volendam, Medemblik i Stavoren, uz savjete za privez u svakoj staroj luci Zuiderzeea.",
+      "days": {
+        "1": {
+          "shortDescription": "Laka uvodna etapa na jug preko IJsselmeera do Urka, nekadašnjeg otoka čija luka još miriše na dimljenu jegulju.",
+          "description": "Lemmer leži ondje gdje se frizijska jezera susreću s otvorenom vodom, pa većina posada prvi sat samo slaže brod prije nego izađe iz lučkih vrata. Plovidba do Urka iznosi šesnaestak milja u jugozapadnjaku, ugodno vrijeme za jedrenje u pol vjetra na dan uigravanja. Urk je bio otok dok ga nasipi nisu dosegli 1939., i zadržao je taj osjećaj. Botteri sa smeđim jedrima još se nižu uz gatove. Stari svjetionik nadgleda splet uličica gdje riblje trgovine prodaju haringu i dimljenu jegulju ravno s dimionice. Obično se privežemo do sredine poslijepodneva, prošećemo lukom, pa jedemo iverak za stolom uz vodu. Ostavi malo vremena za crkvenu stazu uz vrh sela. Večernje svjetlo ondje gore vrijedi uspona.",
+          "thingsToDo": [
+            "Pogledaj bottere sa smeđim jedrima uz stare gatove",
+            "Kupi dimljenu jegulju u urškoj ribarnici",
+            "Popni se do svjetionika iznad sela",
+            "Večera u botterskom ambaru restorana de Boet"
+          ],
+          "mooringTip": "Urška unutarnja luka ljeti se brzo puni, pa nastoj ući prije sredine poslijepodneva i računaj na privez dva-tri broda u dubinu. Vezovi u marini na sjevernoj strani mirniji su ako svjež jugozapadnjak gura valove u ulaz."
+        },
+        "2": {
+          "shortDescription": "Pravi preplov otvorene vode IJsselmeera do Enkhuizena, starog grada Istočnoindijske kompanije uz muzej Zuiderzee.",
+          "description": "Ovo je prvi pravi preplov tjedna, dvadesetak milja otvorenog jezera dok ti niska urška obala nestaje za krmom. IJsselmeer je plitak pa svjež vjetar gradi kratko, strmo more, a ne dugačko valjanje; ako jako puše s jugozapada, skrati jedra rano i smjesti se u to. Enkhuizen zaslužuje dolazak. U sedamnaestom stoljeću bio je bogata luka nizozemske Istočnoindijske kompanije, a vrata Drommedaris i danas čuvaju ulaz u luku. Muzej Zuiderzee leži tik uz vodu, selo preseljenih kuća na otvorenom koje pokazuje kako su ovi gradovi živjeli prije nego što je nasip zatvorio more. Obično uzimamo Compagnieshaven zbog sadržaja, pa prošećemo deset minuta u stare ulice na večeru. Ovdje se opskrbi ako ti se zalihe prorjeđuju.",
+          "thingsToDo": [
+            "Obiđi muzej Zuiderzee na otvorenom",
+            "Fotografiraj vrata Drommedaris u suton",
+            "Prošeći trgovačkim ulicama zlatnog doba",
+            "Opskrbi se u mini-marketu Compagnieshavena"
+          ],
+          "mooringTip": "Compagnieshaven ima potpune sadržaje i oko 600 vezova tik uz muzej, lako se uplovljava u većini uvjeta. Za življu noć u starom centru produži do gradske Buitenhaven, iako se ljetnim vikendima zbije do kraja."
+        },
+        "3": {
+          "shortDescription": "Na jug kroz prevodnicu Krabbersgat na Markermeer, s privezom pod gotičkom lučkom kulom Hoorna.",
+          "description": "Kratak dan, pa nema žurbe s odvezivanjem. Odmah južno od Enkhuizena Houtribdijk dijeli vodu na dvoje, i iz IJsselmeera prelaziš u mirniji Markermeer kroz prevodnicu Krabbersgat. Ljetnim jutrima ondje se nagomila promet, pa se isplati proći nakon rane gužve. Od prevodnice je desetak lakih milja do Hoorna. Grad je bio teškaš u doba Istočnoindijske kompanije i tu povijest i dalje dobro nosi. Hoofdtoren, zdepasta gotička kula iz 1532., stoji na uglu luke i danas u sebi drži restoran. Priveži se u Binnenhaven i usred si starog grada, katkad privezan nekoliko brodova u dubinu uz gat. Sačuvaj poslijepodne za Grote Oost i njegove trgovačke kuće.",
+          "thingsToDo": [
+            "Piće ispod Hoofdtorena iz 1532.",
+            "Prošeći uz trgovačke kuće na Grote Oostu",
+            "Prošeći Oostereilandom i starom lukom",
+            "Prođi prevodnicu Krabbersgat nakon jutarnje gužve"
+          ],
+          "mooringTip": "Hoornski Binnenhaven smješta te u srce starog grada, ali vezova je malo i privez tri-četiri broda jedan uz drugi u srpnju je normalan. Stigni do ranog poslijepodneva ili uzmi veću marinu Grashaven na kratkoj šetnji ako je unutarnji gat pun."
+        },
+        "4": {
+          "shortDescription": "Blaga etapa Markermeerom do Volendama, gdje se lučka riva vrti oko dimljene jegulje i narodne nošnje.",
+          "description": "Još jedna skromna etapa, jedanaestak milja tik uz zapadnu obalu Markermeera, a jedrenje je obično plosnato i popustljivo u svemu osim jakog udara. Volendam je najposjećeniji stop tjedna i zbog toga se ne ispričava. Riva je zid dimionica jegulje, suvenirnica i kafića, a miris dimljene jegulje stigne do tebe prije nego što se pojavi luka. Turistički je, da, ali riba je stvarno dobra, a stare trgovine nošnji dio su mjesta, a ne kulisa. Priveži se u Marinahaven ili gradsku luku i zakoračiš ravno na dijk koji nosi cijelu šetnicu. Prošeći njome navečer kad odu izletnički autobusi; luka se isprazni, a svjetlo omekša nad vodom. Usput probaj prženi kibbeling s tezge.",
+          "thingsToDo": [
+            "Kušaj dimljenu jegulju na lučkoj rivi",
+            "Pojedi kibbeling s tezge na gatu",
+            "Razgledaj stare volendamske trgovine nošnji",
+            "Prošeći šetnicom na dijku nakon zalaska"
+          ],
+          "mooringTip": "Dvije volendamske luke smjeste te ravno na šetnicu, što je i čar i mana; očekuj valove od brodova i prolaznike do kasno. Za srpanjski vikend rezerviraj Marinahaven unaprijed i uzmi vez podalje od trajektnog gata za mirno jutro."
+        },
+        "5": {
+          "shortDescription": "Najduža etapa tjedna natrag uz jezero do Medemblika, čija je marina pod crvenom opekom dvorca Radboud.",
+          "description": "Najduži dan putovanja, pa odvezujemo do devet. Medemblik leži natrag na IJsselmeeru, što znači ponovno uz Markermeer na sjever i još jednom kroz prevodnicu Krabbersgat kod Enkhuizena prije završne otvorene dionice. Nazovi to tridesetak milja sveukupno, više ako ti vjetar dođe u pramac. Kad prođeš prevodnicu, jezero se otvori i, uz postojan jugozapadnjak s krme, zadnji sati mogu biti najbolje jedrenje tjedna. Medemblik je najstariji grad Zapadne Frizije, malen i nežuran nakon Volendama. Marina Regatta Center leži tik na otvorenoj vodi pod zidinama dvorca Kasteel Radboud, dvorca iz trinaestog stoljeća koji čuva staro ušće luke. Ima i djelujuća parna željeznica do Hoorna ako imaš dokono jutro. Medemblik nam se sviđa upravo zato što od tebe ništa ne traži.",
+          "thingsToDo": [
+            "Posjeti dvorac Kasteel Radboud iz trinaestog stoljeća",
+            "Provozaj se parnim vlakom prema Hoornu",
+            "Prošeći starom lukom i gradskim zidinama",
+            "Promatraj regatnu flotu iz marine"
+          ],
+          "mooringTip": "Regatta Center Medemblik leži na otvorenoj vodi izvan grada, jednostavan za uplovljavanje ali izložen ako jako puše s jugozapada prema obali. Za zaklon i kraću šetnju do kafića, radije zatraži od lučkog kapetana vez u starijoj unutarnjoj luci."
+        },
+        "6": {
+          "shortDescription": "Izravan preplov IJsselmeera na frizijsku stranu i do Stavorena, najstarijeg grada u pokrajini, okruženog vodom s tri strane.",
+          "description": "Danas se opet usmjeravaš prema frizijskoj obali, preplov od petnaestak milja koji je za lijepa dana jedno dugo, ugodno jedrenje u pol vjetra. Pazi na promet blizu Enkhuizena i na brodove koji se lijevkasto slijevaju prema Krabbersgatu, a onda se pred tobom otvori čista voda. Stavoren je najstariji grad Frizije i leži s jezerom omotanim oko tri njegove strane, što prilaz čini lakim iz gotovo svakog vjetra. Mjesna legenda pripovijeda o Gospi od Stavorena, bogatoj udovici čiji je ponos navodno upropastio luku; kip uz vodu i danas gleda prema pučini tražeći njezin izgubljeni brod. Sam je grad tih i nizak, šačica ulica, prevodnica u frizijska jezera i par dobrih terasa. Nakon gomila Volendama djeluje kao izdah.",
+          "thingsToDo": [
+            "Pronađi kip Gospe od Stavorena",
+            "Popij pivo na terasi uz prevodnicu",
+            "Gledaj brodove kako prolaze u frizijska jezera",
+            "Prošeći niskim ulicama starog grada"
+          ],
+          "mooringTip": "Stavoren ima vanjsku luku tik na IJsselmeeru i unutarnju luku uz prevodnicu u frizijska jezera. Buitenhaven je najzgodniji za večernji dolazak; unutarnji bazeni mirniji su preko noći ako s jezera dolazi valovlje."
+        },
+        "7": {
+          "shortDescription": "Opuštena završna plovidba uz frizijsku obalu natrag do Lemmera, zatvarajući krug ondje gdje je tjedan počeo.",
+          "description": "Posljednja je etapa kratka i blaga, petnaestak milja na sjever uz frizijsku obalu s obalom na vidiku gotovo cijelim putem. Ako se brod vraća sljedeće jutro, nema razloga za žurbu; često se usidrimo za ručak ili svratimo u koju od malih luka prije nego što odjedrimo zadnje milje u Lemmer. Lemmer drži spoj IJsselmeera i frizijskih jezera, a kanal Zijlroede provlači se kao kralježnica kroz sredinu grada, obrubljen kafićima i privezanim brodovima. Za posljednje poslijepodne na kopnu Woudagemaal vrijedi kratkog izleta; to je najveća djelujuća parna crpna stanica na svijetu i još se pokrene kad jezera nabujaju. Zatim posljednja večera u starim smeđim kafićima, i krug je zatvoren.",
+          "thingsToDo": [
+            "Posjeti parnu stanicu Woudagemaal pod zaštitom UNESCO-a",
+            "Prošeći uz gatove kanala Zijlroede",
+            "Posljednja večera u lemmerskom smeđem kafiću",
+            "Usidri se za oproštajni ručak"
+          ],
+          "mooringTip": "Natrag u bazi slijedi upute čarter tvrtke za privez i nastoj biti uz obalu do kasnog poslijepodneva da ostane vremena za gorivo, vodu i primopredaju. Vezovi u gradskom kanalu lijepi su ali tijesni; marina Lemmer jednostavnija je ako brzo vraćaš brod."
+        }
+      }
+    }
+  },
+  "areas": {
+    "netherlands": {
+      "metaTitle": "Jedrenje IJsselmeerom i nizozemskim vodama | Boat4You",
+      "metaDesc": "Čarter rute preko IJsselmeera i Markermeera: kratki skokovi između zuiderzeeskih lučkih gradova Urka, Enkhuizena i Volendama, planovi za 7 i 14 dana.",
+      "title": "Jedrite IJsselmeerovim prstenom starih luka",
+      "description": "Ovo je jedrenje slatkom vodom na starom Zuiderzeeu, gotovo prije stoljeća odsječenom od Sjevernog mora nasipom Afsluitdijk. IJsselmeer i njegova mirnija sestra Markermeer oba su plitka, pa svjež jugozapadnjak digne kratko, strmo valovlje koje drži posadu na oprezu, a da zaklon nikad ne izmakne dohvatu. Etape ostaju kratke. Od Hoorna do Enkhuizena jedva je 12 nautičkih milja, a većinu dana ploviš dva-tri sata između luka, što ovo čini popustljivim krajem za prvi bareboat tjedan. Luke nose povijest: Urk još dražbuje svoj ulov na gatu, Enkhuizen čuva muzej Zuiderzee na otvorenom, a Volendam ti pruža haringu ravno s nasipa. Medemblik ima dvorac Radboud koji bdije nad posljednjom lukom prije velikog nasipa. Jedna praktična napomena: prelazak između dvaju jezera znači prevođenje kroz prevodnicu kod Enkhuizena ili Kornwerderzanda, pa provjeri raspored prevodnica i priveži se rano srpanjskim vikendima kad se flota nagrne."
+    }
+  }
+}
