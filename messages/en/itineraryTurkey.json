@@ -513,6 +513,326 @@
           "mooringTip": "Refuel at the D-Marin fuel berth just inside the entrance before you take your berth, so you hand the boat back full. Mooring is stern-to on lazy lines in a fully sheltered basin; expect roughly €100 to €160 a night in high season and book your return slot ahead."
         }
       }
+    },
+    "gokova-gulf-14-days": {
+      "metaTitle": "14-Day Gökova & Güllük Cruise | Boat4You",
+      "metaDesc": "A two-week loop from Bodrum through the Gökova gulf, then north to Güllük and Didim. Mud baths at Kara Ada, Cleopatra's golden sand, quiet pine coves.",
+      "days": {
+        "1": {
+          "shortDescription": "A gentle first hop out of the marina to Kara Ada, where a cave spring and orange mud make an easy shakedown afternoon.",
+          "description": "You won't need an early start for this one. Kara Ada sits barely five miles off Bodrum, a green, pine-topped hump that most crews reach inside an hour under engine. The draw is the cave on the eastern shore, where a sulphur spring runs at body temperature and the mud around it stains an odd orange. People smear it on, bake in the sun, then rinse off in the bay. It's touristy, and by midday the gulet fleet has arrived, so I like to anchor early, do the mud circus before the crowds, then move to a quieter cove on the south side for lunch and a swim. Use the afternoon to sort the boat, check the tender and get provisions squared away. Tomorrow is a proper crossing.",
+          "thingsToDo": [
+            "Soak in Kara Ada's sulphur cave spring",
+            "Coat yourself in the orange healing mud",
+            "Swim off the quieter south-side cove",
+            "Top up provisions before leaving Bodrum"
+          ],
+          "mooringTip": "Anchor off the cave in 4–8 m over sand and weed; it gets busy with day boats by late morning, so drop the hook early and run a line ashore if swing room is tight."
+        },
+        "2": {
+          "shortDescription": "The big crossing south to Çökertme, a gusty cove of wooden jetties where taverna pontoons trade a mooring for dinner.",
+          "description": "This is the day the trip opens up. Point the bow south across open water and you're looking at fifteen to twenty miles, three to four hours depending on the meltemi. Çökertme is the reward, a horseshoe cove backed by olive groves and a handful of family tavernas built out over the water. It's a classic gulet stop for good reason. The catch is the wind: gusts funnel down off the hills without warning, and the sand-and-weed bottom holds poorly. Most crews skip anchoring altogether and tie to one of the restaurant pontoons, which comes with a laid mooring line and an unspoken agreement to eat ashore. Captain İbrahim's has been feeding sailors here for years. Order the meze, watch the light go pink on the ridge, and turn in early.",
+          "thingsToDo": [
+            "Dine on the pontoon at Captain İbrahim's",
+            "Order a full spread of Aegean meze",
+            "Watch sunset colour the ridge behind the cove",
+            "Swim before the afternoon gusts build"
+          ],
+          "mooringTip": "Forget the anchor here unless you enjoy re-setting it. Grab a taverna pontoon with a laid line instead; arrive by mid-afternoon in July as the three jetties fill fast, and expect sudden katabatic gusts overnight."
+        },
+        "3": {
+          "shortDescription": "A short run east to Ören, a low-key village on the Keramos plain with a marina, a pebble beach and Carian ruins uphill.",
+          "description": "After the drama of Çökertme, Ören feels calm. It's a modest coastal village on the south side of the gulf, set on the plain where the ancient city of Keramos once stood. The run east is easy, a couple of hours in flat morning water before the wind fills in. There's a small municipal marina and a long grey-pebble beach that stays quiet even in August, which is precisely the point. Walk into the old quarter and you'll find stone houses, bougainvillea and the scattered remains of Keramos on the slopes above town. It's not a place with much to prove. We usually take a slow lunch, hire bikes or walk up to the ruins in the cooler evening, and let the crew catch their breath before the head of the gulf tomorrow.",
+          "thingsToDo": [
+            "Walk up to the ruins of ancient Keramos",
+            "Stroll Ören's stone-house old quarter",
+            "Unwind on the long grey-pebble beach",
+            "Tie up at the small municipal marina"
+          ],
+          "mooringTip": "Ören's little marina takes yachts on lazy lines and is rarely full; call ahead in peak weeks. If you prefer to anchor, the bay off the beach holds well in sand but is open to the afternoon westerly, so tuck as far in as depth allows."
+        },
+        "4": {
+          "shortDescription": "Sail to the head of the gulf and Akyaka, where a spring-fed river winds through reed beds and thermal winds draw the kitesurfers.",
+          "description": "Akyaka sits right at the top of the gulf, where the mountains close in and the water turns glassy green. The sail up is often a beat into the afternoon thermal, so we tend to leave Ören by nine and motor-sail the calmer early hours. The village itself is a delight of timber balconies and Ottoman-Greek architecture, all built under strict local rules that have kept the chain hotels out. Its signature is the Azmak, a short karst-fed river so clear you can count the fish; take the tender or a rented kayak up through the reeds to the springs and the riverside cafés. Out on the bay, the same steady wind that makes the climb hard turns Akyaka into one of Turkey's better kitesurfing spots. Eat grilled fish by the water and let the day slow down.",
+          "thingsToDo": [
+            "Kayak the clear Azmak river to its springs",
+            "Lunch on grilled fish by the waterfront",
+            "Watch kitesurfers work the afternoon thermal",
+            "Wander Akyaka's timber-balconied old streets"
+          ],
+          "mooringTip": "The bay at the head of the gulf is deep and the afternoon wind sends in chop, so anchor close under the northern shore and take a line ashore. A few pontoon berths off the village restaurants let you dine and stay put if you'd rather."
+        },
+        "5": {
+          "shortDescription": "Head back west to Sedir Island, home to Cleopatra's famous golden sand and the tumbled ruins of ancient Kedreai.",
+          "description": "Sedir Island, better known as Cleopatra Island, is the one everyone wants to see, and for once the hype holds up. The beach is made of tiny golden oolite grains found almost nowhere else nearby, which is where the legend of Cleopatra shipping sand from Egypt comes from. Today the sand is fiercely protected: you walk a boardwalk, swim off the beach, but you cannot lie on it or carry a single grain away. Behind the shore lie the walls, theatre and agora of ancient Kedreai, worth the short wander in the morning cool. Come early. Day-tripper boats from Marmaris and Bodrum pour in from mid-morning, so we like to be anchored and ashore by eight, then gone by lunch to a quieter overnight cove nearby. The water here is a startling pale turquoise over sand.",
+          "thingsToDo": [
+            "Walk the boardwalk along Cleopatra's golden beach",
+            "Explore the ruins and theatre of Kedreai",
+            "Snorkel the pale turquoise shallows off Sedir",
+            "Arrive early to beat the day-tripper fleet"
+          ],
+          "mooringTip": "There's no overnighting alongside the beach; anchor off the north or east of the island in sand, or better, visit at anchor by day and move to a sheltered cove for the night. Holding is good but the spot catches wash from constant tour-boat traffic."
+        },
+        "6": {
+          "shortDescription": "A relaxed leg to Karacasöğüt, a deep pine-ringed bay of taverna jetties that shelters well when the meltemi pipes up.",
+          "description": "Karaca, or Karacasöğüt, is one of the gulf's great all-weather holes. It sits on the southern shore, a deep inlet below Karaca Ada, wrapped in pine forest and so well protected that local boats winter here. After the exposure of Sedir, the calm is welcome. The bay splits into several arms, each with its own scatter of jetties and simple family restaurants where you tie up bows-to and eat under the trees. The sail across is gentle, maybe two to three hours, with the ridge feeding you a steady breeze on the beam. This is a day to do very little. Swim, read, dinghy into the reed-lined creek at the head of the bay, and settle in for a still night. If the forecast shows a big meltemi, there's nowhere better in the gulf to sit it out.",
+          "thingsToDo": [
+            "Tie bows-to at a pine-shaded taverna jetty",
+            "Dinghy into the reed-lined creek at the head",
+            "Swim in the sheltered inner arms",
+            "Ride out a meltemi in calm water"
+          ],
+          "mooringTip": "Pick a restaurant pontoon and tie stern- or bows-to for a laid line and a guaranteed calm night; the water is deep close in, so approach slowly. Free-anchoring works in the arms too, in 6–10 m over mud that holds well."
+        },
+        "7": {
+          "shortDescription": "Sail west toward the gulf mouth to Mersincik, a wild, empty anchorage inside the Gökova protected zone.",
+          "description": "Mersincik is where the gulf starts to feel remote. Tucked on the north shore near the western mouth, it's part of the Gökova special protection zone, so there's no development, no road in, just pine, rock and clear water. The passage west takes you along the exposed northern side, and with a fresh meltemi you can carry good speed on a reach for much of it. The main bay is beautiful but catches the north wind; if it's blowing hard, duck into the smaller cove to the northwest, though swing room is tight and you'll want an anchor ashore. Wild goats pick along the shoreline in the evening. There's nothing to buy and nothing to do but swim, walk the empty headlands, and enjoy a night without a single light on shore. Fill water and provisions before you leave Karaca.",
+          "thingsToDo": [
+            "Swim off the empty, undeveloped shoreline",
+            "Walk the pine headlands for gulf views",
+            "Spot wild goats along the shore at dusk",
+            "Stargaze with no shore lights around"
+          ],
+          "mooringTip": "Anchor in the main bay in 5–8 m over sand and take a line to the rocks; it's open to the north, so if the meltemi is up, use the tighter northwest cove and set a shore anchor as there's little room to swing. Arrive self-sufficient, as there are no facilities."
+        },
+        "8": {
+          "shortDescription": "Cross back south to Çökertme for a second night on the taverna pontoons before the run home begins.",
+          "description": "The loop turns for home today. From Mersincik you cross the mouth of the gulf back to the familiar horseshoe of Çökertme, a passage of a few hours that can be a fast, rolling reach if the meltemi cooperates. Second time around, you already know the cove's tricks. The same gusts pour off the hills, the same jetties wait, but you know the drill now. Slot onto a different pontoon than last week and try a new taverna; Rosemary and the other family kitchens along the shore each have their regulars. This is a good evening to sort laundry, refuel the crew on a long dinner ashore, and swap notes on the best swims of the trip so far. Watch the anchor light of late arrivals bob in as the wind gusts through after dark.",
+          "thingsToDo": [
+            "Try a different taverna such as Rosemary",
+            "Swim the horseshoe cove one more time",
+            "Refuel the crew on a long shore dinner",
+            "Compare the trip's best swims over meze"
+          ],
+          "mooringTip": "As before, take a pontoon line rather than anchoring, and pick a different jetty from your first visit to keep things fresh. Rig a good snubber and extra fenders; the overnight gusts here nudge boats around on the laid moorings."
+        },
+        "9": {
+          "shortDescription": "Retrace the crossing north-west to Kara Ada for a last gulf swim and a second go at the mud cave.",
+          "description": "Back across the water to Kara Ada, closing the Gökova part of the trip. It's the same long open crossing as day two, run in reverse, so watch the forecast and leave early if the meltemi is set to build. By now the crew are proper sailors and the miles pass easily. Kara Ada makes a fitting last stop in the gulf, close enough to Bodrum that you're within reach of the marina but still a green island with that odd, restorative cave. Give the mud baths a second try if the first was too crowded, or just find a clean cove on the south side and swim. Rinse the salt, tidy the boat, and enjoy a quiet anchorage before the trip changes character. Tomorrow you round the peninsula and the whole feel of the coast shifts.",
+          "thingsToDo": [
+            "Return to the mud cave for a quieter soak",
+            "Find a clean south-side cove to swim",
+            "Rinse and tidy the boat after the gulf",
+            "Toast the end of the Gökova loop"
+          ],
+          "mooringTip": "Same as day one: anchor over sand and weed near the cave, or move round to the south coves for cleaner holding and fewer boats by evening. Being so close to Bodrum, it fills with returning charter boats, so claim your spot before sundown."
+        },
+        "10": {
+          "shortDescription": "Round the peninsula to fashionable Göltürkbükü, where beach clubs and jetty restaurants line a bay sheltered from the open-water meltemi.",
+          "description": "Today the coast changes entirely. You round the western tip of the Bodrum peninsula, past Gümüşlük and Yalıkavak, onto the glamorous north shore and into Göltürkbükü. The channel outside can see the meltemi at a solid thirty knots, so time the rounding for the morning and reef early if in doubt. Inside, it's another world: a long, sheltered bay lined with wooden platforms built out over the sea, chic beach clubs and the famous Maçakızı hotel where Istanbul's smart set summers. This is the trip's dose of polish. Book a lounger, have a cocktail sent out to the boat, or simply people-watch from the cockpit as tenders ferry guests between yachts. It's a long way, in feel, from the empty headlands of Mersincik, and that contrast is part of the fun.",
+          "thingsToDo": [
+            "Grab a lounger at a Türkbükü beach club",
+            "Dine on a jetty platform over the water",
+            "People-watch the tender traffic from the cockpit",
+            "See the Maçakızı hotel scene up close"
+          ],
+          "mooringTip": "Most of Göltürkbükü's waterfront is run by beach clubs that lay moorings and expect you to book a table or loungers; call ahead in season and they'll send a tender to take your lines. Free-anchoring room is limited and holding patchy, so a laid mooring is the easier call."
+        },
+        "11": {
+          "shortDescription": "Sail north into the Gulf of Güllük to an old fishing town of seafood grills, a friendly marina and nearby Iasos ruins.",
+          "description": "Güllük is the antidote to Türkbükü. A working fishing town on its own gulf north of the peninsula, it trades the celebrity gloss for trawlers, tea houses and some of the best-value seafood on this coast. The sail up is straightforward, out of Türkbükü and north into the wide, sheltered Gulf of Güllük, often a comfortable reach. There's a proper marina here with a few hundred berths if you want power and water, but the town quay is where the character sits. Wander the front in the evening, pick your fish off the ice at a lokanta, and eat it grilled with rakı and a gulf sunset. History buffs can take a taxi or a long walk to the ruins of ancient Iasos on the next headland, a Carian city that grew rich on exactly the fish you're eating. Quiet, honest, and a good re-provisioning stop.",
+          "thingsToDo": [
+            "Pick fresh fish off the ice at a lokanta",
+            "Visit the Carian ruins of ancient Iasos",
+            "Stroll the working fishing-town waterfront",
+            "Re-provision at the market before Didim"
+          ],
+          "mooringTip": "Take a berth at Güllük's marina for full services, or go stern-to on the town quay for the livelier scene and easy reach of the fish restaurants. The gulf is well sheltered, so a night at anchor off the town in 4–6 m over mud is comfortable in settled weather."
+        },
+        "12": {
+          "shortDescription": "A longer leg north to Didim's big marina, gateway to the Temple of Apollo and the golden beach at Altınkum.",
+          "description": "Didim marks the top of the loop and the most built-up stop of the fortnight, but it earns its place. The passage up from Güllük is the longest of these northern days, so plan for an early departure and keep an eye on the meltemi, which can pick up across the open approaches. D-Marin Didim is a large, well-run marina with everything you might need to set the boat right for the run home. The real reason to come is inland: the Temple of Apollo at Didyma, one of the ancient world's great oracle sanctuaries, its huge columns still standing after more than two thousand years. It's a short, cheap taxi from the marina and worth an unhurried morning. Afterwards, cool off on the long golden sweep of Altınkum beach or grab lunch in town before turning south again.",
+          "thingsToDo": [
+            "Tour the oracle Temple of Apollo at Didyma",
+            "Swim the long golden sands of Altınkum",
+            "Refit and refuel at D-Marin Didim",
+            "Lunch in Didim town after the ruins"
+          ],
+          "mooringTip": "D-Marin Didim is a full-service marina; radio ahead on VHF for a berth assignment, especially in high summer when catamaran and superyacht traffic is heavy. It's the easiest place on the route to take on fuel, water and fresh provisions before the two-day run back to Bodrum."
+        },
+        "13": {
+          "shortDescription": "Turn south again and run back down to Göltürkbükü for a final polished night before the last hop to Bodrum.",
+          "description": "The bow points home. From Didim you retrace the water south, back around into the lee of the Bodrum peninsula and into Göltürkbükü for a second, more relaxed night. Knowing the bay now, you can skip the scramble for a mooring and settle straight in. This is the last real evening of the trip, so it's worth making it count. If the first Türkbükü night was for the scene, use this one for a good dinner and an early, calm swim off the boat. The northern approaches can be breezy in the afternoon, so we usually leave Didim mid-morning to arrive with the light still high and the wind not yet at its peak. Pack in a final lazy afternoon on a jetty platform, sort gear and settle the last of the boat admin. Bodrum is only a short hop away tomorrow.",
+          "thingsToDo": [
+            "Book a return table at a Türkbükü jetty club",
+            "Take a calm early swim off the boat",
+            "Enjoy a final lazy afternoon on a platform",
+            "Settle boat admin before the last leg"
+          ],
+          "mooringTip": "As on day ten, arrange a beach-club mooring ahead of arrival; being a return visit, you'll know which platform suited you. Aim to be secured by mid-afternoon before the northerly funnels into the bay and the tender queue builds."
+        },
+        "14": {
+          "shortDescription": "The final short hop back around to Bodrum, with time for one last swim before handing the boat back.",
+          "description": "The last morning is an easy one. Bodrum lies just around the eastern shoulder of the peninsula, a couple of hours from Göltürkbükü, so there's no need to rush the lines. Most charter bases want the boat back by late morning or midday, so we tend to slip out early, take one final swim at anchor somewhere along the way, then make our approach to the marina under the shadow of the great Castle of St Peter. Coming into Bodrum by sea is the right way to arrive: the fortress, the white town climbing the hills, the forest of masts in the harbour. Have fenders and lines ready well before you enter, follow the marineros' directions to your berth, and let the fortnight sink in. Two weeks, two gulfs, a mud cave and an oracle. Not a bad loop.",
+          "thingsToDo": [
+            "Take a last swim at anchor en route",
+            "Approach under Bodrum's Castle of St Peter",
+            "Photograph the harbour's forest of masts",
+            "Hand the boat back before midday"
+          ],
+          "mooringTip": "Confirm your return time and berth with the charter base the evening before, and have fenders and mooring lines rigged on both sides before you enter Bodrum's busy harbour. Follow the marina staff in for a stern-to berth; the approach can be crowded with day boats at midday."
+        }
+      }
+    },
+    "lycian-coast-14-days": {
+      "metaTitle": "14-Day Lycian Coast Odyssey | Boat4You",
+      "metaDesc": "Two weeks round-trip from Göcek: sail Skopea Limani's coves, Fethiye's harbour, Ölüdeniz, Gemiler ruins and Ekincik for the Dalyan river trip.",
+      "days": {
+        "1": {
+          "shortDescription": "Ease out of Göcek's marina belt into Skopea Limani and drop the hook in wide, pine-fringed Sarsala for a gentle first night.",
+          "description": "Göcek is where nearly every Lycian charter begins, and there's no rush on day one. Sort provisions at the market by the square, top up water and ice, then motor out past the wooded islands of Skopea Limani. Sarsala sits on the north side of Boz Burun, a broad bay backed by red pine and a scatter of smaller coves. Holding is good over sand and weed, and most crews run a line ashore near the head to sit steady. There's a small jetty restaurant if you'd rather not cook the first evening. We usually aim to arrive by mid-afternoon, swim off the stern while the light drops behind the ridge, and let everyone find their sea legs before the longer legs ahead. Mornings here are glassy.",
+          "thingsToDo": [
+            "Provision at Göcek's morning market",
+            "Swim off Sarsala's sandy jetty",
+            "Walk the pine track behind the bay",
+            "Dinner at the bay's jetty taverna"
+          ],
+          "mooringTip": "Anchor in 6-8 m over sand and weed and take a long line ashore toward the head of the bay. The western coves fill first in July, so arrive by early afternoon for a spot."
+        },
+        "2": {
+          "shortDescription": "A short hop deeper into the gulf to Kapı Creek, a narrow fjord-like inlet with a friendly pontoon taverna at its head.",
+          "description": "The run to Kapı Creek is barely an hour, so there's time for a lazy morning swim first. The creek cuts a slot between steep, tree-covered slopes, and it feels more like a Norwegian fjord than the Turkish coast until you catch the woodsmoke from the taverna. Yachts moor stern-to the wooden pontoon, where the family running the place take your lines and later bring out mezze and grilled fish. Water stays deep close in, so carry your speed toward the jetty and drop the hook well out. Go ashore for the short scramble up to the little goat pens above the head of the creek. It's a favourite with the flotilla crowd, so worth calling ahead in high summer to be sure of a berth.",
+          "thingsToDo": [
+            "Moor stern-to the Kapı Creek pontoon",
+            "Order mezze and grilled fish ashore",
+            "Scramble to the goat pens above",
+            "Snorkel the steep rocky sides"
+          ],
+          "mooringTip": "Depths stay deep until close to the pontoon, so approach slowly and drop in 10-12 m before backing to the jetty for lazy lines. Radio or call ahead in July and August, as the handful of berths book out."
+        },
+        "3": {
+          "shortDescription": "Cross to Ruin Bay, where cut Roman stone sits just under the surface at the head of the bay and the swimming is about the clearest in the gulf.",
+          "description": "Ruin Bay, also called Cleopatra's Bath, lies a couple of hours west across the mouth of the gulf. The draw is underwater: low walls and cut stone from a Roman-era settlement rest just beneath the surface at the head of the bay, clear enough to read from a mask. Anchor off and swim in over the ruins rather than taking the boat too far into the shallows. A rickety jetty restaurant serves cold beer and simple grills under the pines. The neighbouring Tomb Bay, a short dinghy ride round the point, has Lycian rock tombs carved high into the cliff, worth a look in the soft evening light. Afternoons can bring a swirling breeze off the hills, so set the anchor with care.",
+          "thingsToDo": [
+            "Snorkel the submerged Roman walls",
+            "Dinghy to Tomb Bay's Lycian tombs",
+            "Cold beer at the jetty grill",
+            "Photograph the cliffs at dusk"
+          ],
+          "mooringTip": "The head of the bay shoals over the ruins, so anchor in 5-8 m clear of the stonework and swim ashore rather than motoring in. Watch for gusts funnelling down the valley in the afternoon and dig the anchor in well."
+        },
+        "4": {
+          "shortDescription": "Round to Wall Bay beneath towering cliffs, tie stern-to the boat-only restaurant, and dine with your feet almost over the water.",
+          "description": "Wall Bay, Duvar Bükü on the chart, takes its name from the sheer rock face that walls in one side of the anchorage. It's a short sail from Ruin Bay, so plan a swim stop on the way. The bottom drops off quickly, which makes free swinging room tight, so most boats go stern-to the small pontoon belonging to Adaia, the family restaurant here you can only reach by boat. They'll help with your lines and cook a proper Turkish spread once the sun is off the cliffs. Snorkelling along the wall is among the best in this corner of the gulf, with clear water and steep drop-offs. Quiet after dark, with only cicadas and the odd goat bell for company.",
+          "thingsToDo": [
+            "Tie stern-to Adaia's boat-only pontoon",
+            "Snorkel the sheer underwater wall",
+            "Try the restaurant's Turkish mezze spread",
+            "Kayak along the cliff base"
+          ],
+          "mooringTip": "The bottom shelves steeply, so free-anchoring space is limited; take a line to the restaurant pontoon and reserve a table, which usually secures your berth. Drop in 8-10 m and back in close under the rock."
+        },
+        "5": {
+          "shortDescription": "Leave the coves for a night in Fethiye, a working harbour town with a lively fish market, bazaar, and rock tombs above.",
+          "description": "Time to reprovision and stretch your legs in a real town. Fethiye sits at the head of its own gulf, a couple of hours' sail from Wall Bay, usually with a helpful afternoon breeze on the beam. Berth at Ece Marina or the town quay and walk into the bazaar for spices, Turkish delight, and a barber if you fancy one. The fish market is the ritual here: buy your catch from the stalls, then hand it to one of the surrounding restaurants who grill it for a small charge. Above the town, the rock-cut Tomb of Amyntas glows amber at sunset, a stiff climb up the steps but worth it. Stock the fridge properly before you head back out to the wilder bays.",
+          "thingsToDo": [
+            "Buy fish at the covered market",
+            "Climb to the Tomb of Amyntas",
+            "Browse the old bazaar for spices",
+            "Reprovision at the harbourside shops"
+          ],
+          "mooringTip": "Ece Marina is calm and well run, but book ahead in peak weeks; the town quay is cheaper and central, though it can roll when ferries pass. Med-moor to laid lines and expect marina rates."
+        },
+        "6": {
+          "shortDescription": "Sail out of Fethiye Gulf to Gemiler Island, ringed by Byzantine church ruins and one of the coast's finest sunset walks.",
+          "description": "Gemiler, sometimes called St Nicholas Island, guards the entrance to a sheltered channel southwest of Fethiye. The whole island is layered with Byzantine ruins: churches, cisterns, and a covered processional way climbing to a chapel at the summit. Anchor in the cove on the island's south side in 6 to 9 metres over sand, and run a line to the shore to keep from swinging. Two simple restaurants ashore handle water and a cold drink. Leave time to land the dinghy and walk up through the ruins as the light goes gold; the view over the channel to the mainland is why people linger here. The anchorage is calm in the usual westerlies but exposed if the wind backs to the south.",
+          "thingsToDo": [
+            "Walk the ruins to the summit chapel",
+            "Time the climb for golden hour",
+            "Line ashore in the south cove",
+            "Snorkel the channel to the shore"
+          ],
+          "mooringTip": "Anchor in 6-9 m on sand in the southern cove and take a line ashore to the rocks, as swinging room is limited. Arrive by late afternoon in season, since the handful of good spots go early."
+        },
+        "7": {
+          "shortDescription": "A short leg to Ölüdeniz, home to the famous Blue Lagoon sand spit and the paragliders drifting down from Babadağ above.",
+          "description": "Ölüdeniz is the postcard everyone knows, a still lagoon behind a curl of white sand under a green mountain. The lagoon itself is a protected nature park now and closed to yachts, so you moor under the headland off Belcekız beach and go ashore by dinghy or swim in. Overhead there's a near-constant stream of paragliders spiralling down from Babadağ, which at almost two thousand metres ranks among the highest commercial launch sites anywhere. This is the busiest spot on the route, so treat it as a lively day stop rather than a wilderness night. Watch a canopy or two land on the beach, eat an ice cream, then decide whether to stay put or slip back to a quieter cove.",
+          "thingsToDo": [
+            "Swim into the Blue Lagoon nature park",
+            "Watch paragliders land on Belcekız beach",
+            "Dinghy ashore for beachfront lunch",
+            "Walk the sand spit at dusk"
+          ],
+          "mooringTip": "The lagoon is closed to boats, so anchor off Belcekız under the headland in 8-12 m and expect a rolly, exposed night if any southerly runs in. Many crews use it as a day stop and move on to a calmer anchorage."
+        },
+        "8": {
+          "shortDescription": "Drop the hook off Butterfly Valley, a steep gorge that spills to a boat-only beach with a waterfall walk inland.",
+          "description": "Just around the headland, Butterfly Valley opens as a cleft in the flank of Babadağ, its beach reachable only from the water. The valley takes its name from the tiger butterflies that breed here, and a rough path leads inland past a small farm to a waterfall at the back of the gorge. Wear proper shoes; the last stretch means scrambling over rock with a rope to help. The anchorage is a day stop for most, open to the south and deep close to shore, so you drop in fairly deep and run a long line to the beach. Have lunch aboard, do the hike in the cool of the morning, and move on before the afternoon breeze turns it uncomfortable. Ashore there's a rustic bar under the trees.",
+          "thingsToDo": [
+            "Hike the gorge to the waterfall",
+            "Look for tiger butterflies inland",
+            "Anchor with a long line ashore",
+            "Drink at the rustic beach bar"
+          ],
+          "mooringTip": "This is an open day anchorage, deep right up to the beach; drop in 15-20 m and run a long line ashore, keeping an anchor watch. Leave before the afternoon southwesterly builds, as it sends swell straight in."
+        },
+        "9": {
+          "shortDescription": "Head back into Skopea Limani to Coldwater Bay, where springs off the hillside chill the sea and the swimming is bracing.",
+          "description": "With the exposed southern bays behind you, the route turns back into the shelter of Skopea Limani and Coldwater Bay, known to the charts as Soğuksu. Freshwater springs run off the wooded slope straight into the sea, and you feel the cold in patches as you swim, a jolt after the warm water elsewhere. It's a peaceful, pine-scented anchorage with good holding and room to take a line ashore among the trees. There's usually a small pontoon restaurant tucked into one corner if you want dinner brought to you. After the crush at Ölüdeniz, this feels like the coast exhaling. We often stay two nights when the schedule allows, using it as a base to swim, read, and let the day drift.",
+          "thingsToDo": [
+            "Swim through the cold spring patches",
+            "Line ashore among the pines",
+            "Dinner at the corner pontoon restaurant",
+            "Paddleboard the calm morning water"
+          ],
+          "mooringTip": "Holding is good over sand and weed in 6-10 m; take a line ashore to the trees, since the bay is narrow with limited swinging room. It stays calm in the prevailing westerlies, making it a reliable overnight."
+        },
+        "10": {
+          "shortDescription": "Return to Gemiler Island for a second night, taking the ruins at a slower pace and staking out a good sunset spot early.",
+          "description": "Looping back to Gemiler on the way west gives you the island a second time without the pressure of ticking it off. Arrive earlier than the day-trip gulets and you'll have the pick of the south cove, with time to snorkel the channel before the afternoon crowd thins toward evening. If you skipped the full climb last time, do it now: the path threads through roofless churches and old cisterns up to the summit chapel, best walked as the heat eases. Back aboard, the anchorage settles once the tripper boats leave and the sunset over the ruins is the quiet reward. Grab water and a cold drink from the restaurants ashore. It's a short, easy day, so no need to leave Coldwater Bay early.",
+          "thingsToDo": [
+            "Revisit the summit chapel path",
+            "Snorkel the island channel at midday",
+            "Claim a south-cove spot early",
+            "Sunset drinks as the gulets leave"
+          ],
+          "mooringTip": "As before, anchor in 6-9 m of sand in the southern cove with a line ashore; getting in before the afternoon gulet traffic secures a calmer, better-placed berth. Watch for a southerly shift that would make it untenable overnight."
+        },
+        "11": {
+          "shortDescription": "The longest leg of the trip, west to Ekincik, launch point for the river run up to Kaunos and Dalyan's mud baths.",
+          "description": "Ekincik is the western turn of the route and the longest single hop, so we usually leave by nine to be in before the afternoon breeze builds on the nose. The bay is broad and sandy, set below the hills at the edge of the Dalyan delta, with a small two-pontoon marina in one corner if you'd rather tie up than anchor. The real reason to come is what lies beyond: local boats run from here up the reed-lined Dalyan river to the rock-cut tombs of ancient Kaunos, the sulphur mud baths at Sultaniye, and İztuzu, the turtle-nesting beach at the river mouth. Arrange the trip through the marina or a beach restaurant the evening you arrive. The open bay can send in a swell if the wind goes south.",
+          "thingsToDo": [
+            "Book the Dalyan river boat trip",
+            "Wallow in the Sultaniye mud baths",
+            "See the rock tombs of Kaunos",
+            "Walk İztuzu turtle beach at the delta"
+          ],
+          "mooringTip": "Anchor in 5-10 m over good sand in the northern corner, or take a berth at the small My Marina pontoons for more security. The bay is open to the south and southwest, so pick a settled forecast for an overnight here."
+        },
+        "12": {
+          "shortDescription": "A gentle sail east to quiet Kızılkuyruk, a wooded cove off the main track where the night is all cicadas and stars.",
+          "description": "After the buzz of the Dalyan trip, Kızılkuyruk is the antidote: a small, tree-lined bay on the Boz Burun peninsula that sees few boats and keeps things simple. The sail from Ekincik is short and easy, hugging a coast of empty coves and steep pine. There's nothing ashore to speak of, which is the point; you anchor, run a line to a tree, and swim in water that stays clear and still. Bring what you need for the evening, since there's no taverna to fall back on. This is the sort of anchorage crews remember long after the headline stops fade, a last taste of the quiet before the route turns for home. Stars come out thick once the light dies.",
+          "thingsToDo": [
+            "Line ashore to a shady pine",
+            "Swim in the empty clear cove",
+            "Cook aboard under the stars",
+            "Kayak the deserted neighbouring coves"
+          ],
+          "mooringTip": "Anchor in 6-10 m and take a line to a tree, as the cove is narrow with little swinging room. It's well protected in the usual summer westerlies but has no facilities, so provision and fill water at Ekincik first."
+        },
+        "13": {
+          "shortDescription": "Sail back into Skopea Limani to Sarsala, closing the loop where it began with an easy final night at anchor.",
+          "description": "The penultimate day brings you back into the familiar shelter of Skopea Limani and round to Sarsala, the same broad bay that opened the trip. Coming back to it at the end feels different: you know the drill now, pick your line ashore without fuss, and settle in like regulars. The sail is a relaxed reach across the gulf with time for one last long swim stop en route. Sarsala's holding and its jetty restaurant make it an easy final night, close enough to Göcek that the morning run back stays stress-free. Use the afternoon to swim out the last of your energy, sort gear, and toast the fortnight. If the taverna's busy, book a table when you drop the hook.",
+          "thingsToDo": [
+            "Last long swim stop mid-gulf",
+            "Final dinner at Sarsala's jetty taverna",
+            "Line ashore near the bay head",
+            "Sort and pack gear before Göcek"
+          ],
+          "mooringTip": "Return to the same routine: anchor in 6-8 m over sand and weed with a line ashore near the head of the bay. Being close to base, you can afford a leisurely start, but reserve the taverna early if you want to eat ashore."
+        },
+        "14": {
+          "shortDescription": "A short morning motor back to Göcek to hand back the boat, with time for a last coffee on the waterfront.",
+          "description": "The final leg is barely an hour, so there's no need for an early alarm. Most charters want the boat back mid-morning, which leaves time for a quiet swim before you weigh anchor and idle out of Sarsala for the last time. The run back across Skopea Limani retraces the very first day, the wooded islands sliding past in reverse. Top up fuel and water on the way in if the base asks for it, then bring her alongside in Göcek and let the crew handle the lines. Once you're checked out, there's usually time for a coffee or a last lunch on the waterfront before transfers. Fourteen days of it, and the gulf still holds coves you didn't reach.",
+          "thingsToDo": [
+            "Last dawn swim off Sarsala",
+            "Top up fuel before handback",
+            "Coffee on the Göcek waterfront",
+            "Browse the marina shops before transfer"
+          ],
+          "mooringTip": "Confirm the base's fuel-up and return-time rules the night before so you're not rushed. Approach Göcek's marina slowly and call ahead on VHF for berth directions; staff take your lines on arrival."
+        }
+      }
     }
   }
 }

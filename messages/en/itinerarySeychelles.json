@@ -1,1 +1,255 @@
-{}
+{
+  "areas": {
+    "seychelles": {
+      "metaTitle": "Seychelles Sailing Itineraries | Boat4You",
+      "metaDesc": "Day-by-day charter routes through the Seychelles Inner Islands — Mahé, Praslin, La Digue and Curieuse, with short hops and easy trade-wind sailing.",
+      "title": "Sail the Granite Heart of Seychelles",
+      "description": "The Inner Islands sit close together, so a week here is mostly short hops rather than long passages — Mahé to Praslin is the longest leg at roughly 30 nautical miles, and on most days you are at anchor by early afternoon. From May to October the southeast trades hold a steady 10 to 20 knots, plenty to sail properly without ever feeling exposed; the quieter months of April and November go glassy and clear if you would rather dive than beat to windward. Drop the hook off Anse Lazio before the Praslin day boats arrive, dinghy in to walk the coco de mer palms of the Vallée de Mai, then cross to Curieuse and share a beach with free-roaming giant tortoises. La Digue's Anse Source d'Argent is the shot everyone wants, so get there at first light and it is yours. One local note: the passes between the granite islands run current on the tide, so time your crossings and the sailing stays gentle."
+    }
+  },
+  "routes": {
+    "inner-islands-classic": {
+      "metaTitle": "7-Day Seychelles Island-Hopper | Boat4You",
+      "metaDesc": "A relaxed 7-day sailing route from Eden Island, Mahé, through Sainte Anne, Praslin, Curieuse, Anse Lazio and La Digue in the Seychelles inner islands.",
+      "days": {
+        "1": {
+          "shortDescription": "A gentle three-mile shakedown from the marina into Seychelles' oldest marine park, with green turtles and Moyenne Island a dinghy ride away.",
+          "description": "Most crews use the first afternoon to shake down the boat rather than rush anywhere, and Sainte Anne suits that perfectly. It sits barely three miles off Eden Island, so you can provision in the morning, motor out past the harbour wall, and be swinging on a buoy by early afternoon. The park is the country's oldest, a cluster of six granite islands ringed by reef. Green turtles surface around the moorings, unbothered by dinghies. Take the tender across to Moyenne, once privately owned, now walkable in an hour with resident tortoises for company. The snorkelling off Round Island is easy and shallow, good for anyone still finding their fins. Keep an eye on the buoy count in season; the field fills by late afternoon. Sundowners here, with Mahé's hills going pink behind you, set the tone for the week.",
+          "thingsToDo": [
+            "Snorkel the shallow reef off Round Island",
+            "Dinghy to Moyenne Island's tortoise trail",
+            "Watch green turtles surface near the moorings",
+            "Sundowners with views back to Mahé"
+          ],
+          "mooringTip": "The 24 park buoys are far safer than anchoring here; book the permit (around SCR 500) before you leave the marina and pick up a buoy by mid-afternoon, since the field fills fast in the trade-wind season."
+        },
+        "2": {
+          "shortDescription": "The week's main passage, a twenty-odd-mile reach across open water to Praslin's workhorse anchorage, where the village ashore can fix almost anything.",
+          "description": "This is the one real passage of the trip, so it pays to leave by nine. From the Sainte Anne buoys it's a little over twenty miles across open water to Praslin, and in the May-to-September trades you'll usually get a steady reach of 12 to 18 knots on the beam. The seas can stand up in the channel, so stow the coffee mugs before you clear the reef. Baie Sainte Anne opens on the southeast corner of Praslin, wide and forgiving, with sand holding in four to eight metres. It's the most useful overnight stop in the inner islands: a supermarket, a fuel quay, a chandlery of sorts, and mechanics who have seen every charter fault. If you'd rather not trust your own anchor, a local man named Robert keeps a handful of moorings and answers the VHF.",
+          "thingsToDo": [
+            "Restock at the Baie Sainte Anne supermarket",
+            "Refuel and take on water at the quay",
+            "Sort charter faults with local mechanics",
+            "Walk the jetty to the ferry dock"
+          ],
+          "mooringTip": "Baie Sainte Anne is the best-holding overnight anchorage in the group, sand in four to eight metres with room to swing. If the bay is busy, call Robert on the VHF for one of his private moorings rather than crowding the fleet."
+        },
+        "3": {
+          "shortDescription": "A short hop around Praslin's north coast to an island run by giant tortoises, with the St Pierre snorkelling stop on the way.",
+          "description": "Curieuse lies just off Praslin's north shore, an easy morning's sail once you've rounded the top of the island. Break the trip at St Pierre, a clump of granite boulders about a mile and a half off Anse Volbert; the coral shelves around it hold parrotfish and the odd ray, best snorkelled before the afternoon breeze gets up. Curieuse itself was a leper colony a century ago and is now a reserve. Pick up a park buoy in Baie Laraie, pay the ranger, and go ashore among more than three hundred free-roaming Aldabra tortoises, some pushing a hundred years old. The mangrove boardwalk runs a mile from the ranger station to Anse St José, past skinks and mudskippers and the tangle of red mangrove roots. The rust-coloured laterite soil gives the beaches a tint you won't see anywhere else on the trip.",
+          "thingsToDo": [
+            "Snorkel the coral shelves off St Pierre",
+            "Meet free-roaming Aldabra tortoises at Baie Laraie",
+            "Walk the mangrove boardwalk to Anse St José",
+            "Picnic in the shade by the ranger station"
+          ],
+          "mooringTip": "Curieuse is a marine park; pick up a buoy in Baie Laraie and settle the fee with the ranger (about SCR 250 a night) rather than anchoring. The west side around Anse St José is prettier but exposed, so leave it for settled weather and a crew happy to dive the anchor."
+        },
+        "4": {
+          "shortDescription": "A five-mile drop back to Praslin for the archipelago's most photographed beach, granite boulders, silk sand, and a Creole grill in the shade.",
+          "description": "Anse Lazio sits on Praslin's northwest tip, a short sail down from Curieuse and, for many, the beach that defines the Seychelles. Granite boulders bookend a long crescent of pale sand, with takamaka trees throwing shade at the back. Anchor off in sand and take the tender in early: the snorkelling around the boulders at the north end is at its calmest before nine, and by mid-morning the surge makes threading the rocks awkward. Watch the shallows for stingrays half-buried in the sand, and shuffle your feet. Ashore, Bonbon Plume grills the day's catch under an open thatch roof at the water's edge; a fish plate runs somewhere around 25 to 35 dollars, a cold Seybrew a few more. The bay can roll if any swell wraps in, so many crews treat this as a long lunch stop and move on for the night.",
+          "thingsToDo": [
+            "Snorkel the north-end boulders before nine",
+            "Grilled catch and Seybrew at Bonbon Plume",
+            "Shuffle the shallows watching for stingrays",
+            "Laze under the takamaka trees"
+          ],
+          "mooringTip": "Anse Lazio is an open roadstead with no buoys; anchor in sand and keep an eye on it, as swell can wrap around the point. If a northwest set is running or you want a quiet night, treat it as a day stop and sleep back in a sheltered bay."
+        },
+        "5": {
+          "shortDescription": "Across to La Digue, the archipelago's slow-moving island, where bicycles outnumber cars and Anse Source d'Argent waits at the end of a shaded track.",
+          "description": "La Digue lies a dozen miles east, an easy reach across the channel that separates it from Praslin. The catch is the harbour: La Passe takes only four to six yachts, so raise the harbourmaster on VHF 16 before you commit, and if there's no room, anchor off in the lee and dinghy in. Once ashore, the island runs on bicycles and ox carts. Hire a bike at the jetty and pedal twenty minutes south to Anse Source d'Argent, the reef-sheltered beach whose sculpted granite has sold a thousand postcards; go early or in the afternoon light, either side of the day-trippers arriving off the ferry. The shallow lagoon there stays calm enough for a first-time snorkeller. Detour inland through the Veuve reserve if you want a look at the black paradise flycatcher, one of the rarest birds in the region.",
+          "thingsToDo": [
+            "Cycle the shaded track to Anse Source d'Argent",
+            "Snorkel the calm reef-sheltered lagoon",
+            "Spot the paradise flycatcher in Veuve reserve",
+            "Rent bikes at the La Passe jetty"
+          ],
+          "mooringTip": "La Passe harbour holds only four to six boats, so call the harbourmaster on VHF 16 for permission before arriving. If it's full, the anchorage just outside is fine in settled trades, sheltered by the surrounding islands, though it can roll in a west swell."
+        },
+        "6": {
+          "shortDescription": "A quick reach out to the Cocos marine park, three granite islets ringed by the clearest reef water you'll snorkel all week.",
+          "description": "Ile Cocos is barely three miles off La Digue, a cluster of granite islets set in a marine park that many rate as the best snorkelling in the inner islands. The water is startlingly clear over the coral heads, and the fish life is dense: angelfish, snapper, the occasional turtle grazing the reef. There's no landing on the islets themselves, so this is a day spent on the water. Pick up a park buoy, pay the fee, and get in early, before the day boats from La Digue and Praslin arrive around eleven. If Cocos is crowded, the sisters close by, Grande Soeur and Petite Soeur, offer quieter reef and a beach to stretch out on. Most crews tuck in behind Félicité for the night, where the holding is good and the anchorage stays calm in the southeast trades.",
+          "thingsToDo": [
+            "Snorkel the clear coral heads at Ile Cocos",
+            "Beat the day boats by arriving early",
+            "Cross to Grande Soeur for a quieter reef",
+            "Anchor behind Félicité for the night"
+          ],
+          "mooringTip": "Cocos is a no-landing marine park, so you take a buoy and pay the ranger fee for a few hours' snorkelling rather than staying the night. Line up an overnight spot behind Félicité or off Grande Soeur before the light goes, since Cocos itself is exposed once the day boats leave."
+        },
+        "7": {
+          "shortDescription": "The long leg home, a broad reach back down to Mahé and Eden Island, timed to clear the marina before the light fades.",
+          "description": "The run back to Mahé is the longest of the week, close to thirty miles from the Cocos anchorage down to Eden Island. In the southeast trades it's usually a broad reach or a run, fast and comfortable, though the swell builds behind you in the open channel, so a preventer on the boom earns its keep. Leave early. You want to be through the reef passes and into the marina with good light, and the trades often freshen through the afternoon. If there's time in hand, a last swim stop back in the Sainte Anne park breaks up the passage nicely. Once you're alongside at Eden Island, top up fuel and water, rinse off the salt, and walk over to the marina bars and restaurants for a proper last dinner ashore. The base usually wants the yacht back by mid-morning, so sort the paperwork the night before.",
+          "thingsToDo": [
+            "Rig a preventer for the downwind passage",
+            "Last swim stop in the Sainte Anne park",
+            "Refuel and rinse down at Eden Island",
+            "Farewell dinner at the Eden Island restaurants"
+          ],
+          "mooringTip": "Aim to reach Eden Island with plenty of daylight; the reef passes and marina fairways are far easier to read before the afternoon glare, and the trades tend to build late. Confirm your berth assignment with the base on the VHF as you approach."
+        }
+      }
+    },
+    "seychelles-explorer-14-days": {
+      "metaTitle": "14-Day Inner Islands Explorer | Boat4You",
+      "metaDesc": "Two weeks round the granitic Seychelles from Eden Island (Mahe): Sainte Anne, Silhouette, Praslin, Curieuse, La Digue and the Sisters.",
+      "days": {
+        "1": {
+          "shortDescription": "A gentle five-mile shakedown from the marina to a six-island marine park, ideal for settling the crew before the longer legs.",
+          "description": "Most crews leave Eden Island by mid-morning once the paperwork and provisioning are done, and the run out to Sainte Anne barely takes an hour. The park spreads across six granite islets roughly five miles off Victoria, and it has been protected since the early nineties, so the reef here still holds its colour. Pick up a park buoy off Cerf or Moyenne, pay the overnight fee, and spend the afternoon in the water. Snorkelling over the seagrass usually turns up turtles grazing in the shallows. Moyenne has a short walking trail and a handful of Aldabra tortoises if you want to stretch your legs ashore. It is an easy first night: sheltered water, the lights of Mahe across the channel, and time to work out where everything lives on the boat.",
+          "thingsToDo": [
+            "Snorkel the seagrass beds off Cerf",
+            "Walk Moyenne's tortoise trail ashore",
+            "Pick up a park mooring buoy",
+            "Sundowners watching Mahe's lights across the channel"
+          ],
+          "mooringTip": "Sainte Anne uses a managed buoy field; grab a mooring rather than dropping anchor on the reef, and have the overnight fee ready for the ranger. The buoys off Cerf and Moyenne give the best shelter in the southeast season."
+        },
+        "2": {
+          "shortDescription": "Round the top of Mahe to a quiet marine-park bay on the northwest coast, with sand holding and reef within swimming distance.",
+          "description": "You'll want to leave Sainte Anne early and work your way anti-clockwise around the north of Mahe. Baie Ternay sits at the northwest corner, tucked behind Cap Ternay, and it is one of the more reliable overnight bays on the island when the trades are up. The bottom is sand, so holding is good once you set the hook, and the whole bay is a marine reserve. From August into October, plankton draws whale sharks through this stretch of coast, and turtles and the odd moray are regulars on the reef closer in. Ashore, the Anse Major trail heads off along the headland for anyone who fancies a walk before dinner. It is a working anchorage rather than a resort scene, which is rather the point out here.",
+          "thingsToDo": [
+            "Snorkel the reserve reef for turtles",
+            "Watch for whale sharks in season",
+            "Hike the Anse Major coastal trail",
+            "Anchor off Cap Ternay for the night"
+          ],
+          "mooringTip": "Baie Ternay is anchor-only on sand in around five to eight metres; set well back from the reef edge and expect a park fee if a ranger comes by. Tuck in behind Cap Ternay for shelter from the southeast."
+        },
+        "3": {
+          "shortDescription": "A proper open-water leg northwest to Silhouette's forested peaks, anchoring off the long sand at La Passe under Mont Dauban.",
+          "description": "This is the first real passage of the trip, twenty-odd miles of open water out to Silhouette, so it pays to leave by nine and let the boat settle into the swell. Silhouette is the third largest of the granitic islands and easily the most dramatic to approach: Mont Dauban climbs over seven hundred metres straight out of the sea, usually with a cap of cloud. The anchorage lies off La Passe on the east coast, a long run of pale sand backed by a small village and the national park behind it. Holding is decent in sand, though it can roll if the swell wraps in. Landing needs park permission, arranged through your charter base, so sort that before you leave. The snorkelling along the granite edges is quiet and often yours alone.",
+          "thingsToDo": [
+            "Anchor off La Passe's long beach",
+            "Snorkel the quiet granite drop-offs",
+            "Look up at Mont Dauban's cloud-capped peak",
+            "Walk the village nature path"
+          ],
+          "mooringTip": "Anchor in sand off La Passe in seven to ten metres, but be ready for roll if a southerly swell sneaks in around the point. Confirm your landing permit with the base before setting out, since the island is a managed reserve."
+        },
+        "4": {
+          "shortDescription": "Out across open water to the Praslin group and Cousin, a seabird reserve where wardens ferry you ashore through the surf.",
+          "description": "Today is the big reach across to the Praslin group, and you'll feel the miles, so an early start and a reefed main make for an easier day. Cousin is a special reserve run by Nature Seychelles, brought back from a coconut plantation to save the Seychelles warbler in the sixties. These days it is one of the densest seabird islands anywhere, thick with terns and noddies, and Aldabra tortoises plod about under the trees. You cannot land your own tender here. Yachts anchor off and the wardens come out to run you in through the shore break, and visits are weekdays only with a landing fee. Time it for late morning, take the guided walk, then drop back to the boat before the afternoon wind fills in and the anchorage gets lumpy.",
+          "thingsToDo": [
+            "Take the warden-guided seabird walk",
+            "Spot Aldabra tortoises under the trees",
+            "Watch nesting terns and noddies",
+            "Look for the Seychelles warbler"
+          ],
+          "mooringTip": "Cousin has no landing of your own tender and no overnight anchorage worth the name; anchor off in sand for the visit only, on a weekday, and let the reserve staff run you ashore. Move on to Praslin to sleep."
+        },
+        "5": {
+          "shortDescription": "Into Praslin's main harbour at Baie Sainte Anne, the trip's best chance to reprovision and see the Vallee de Mai.",
+          "description": "After the reserve, it is a gentle sail round to Baie Sainte Anne on Praslin's east coast, the practical hub of this part of the archipelago. The bay holds the main ferry terminal, a fuel dock and shops, so it is the obvious place to top up water, ice and provisions for the second week. Praslin itself rewards a day off the boat. The Vallee de Mai, a short taxi ride inland, is the only place the coco de mer palm grows wild, and the forest is genuinely prehistoric under the canopy. If you would rather stay near the coast, Cote d'Or up the road has a long beach and a row of casual places to eat. Get your shopping done in the morning while the shelves are stocked.",
+          "thingsToDo": [
+            "Reprovision at the Baie Sainte Anne shops",
+            "Walk the Vallee de Mai palm forest",
+            "Eat grilled fish at Cote d'Or",
+            "Top up water and fuel"
+          ],
+          "mooringTip": "Baie Sainte Anne is a busy working bay; anchor clear of the ferry fairway and the moored local craft in sand, or ask about a berth if you need shore power and easy provisioning."
+        },
+        "6": {
+          "shortDescription": "North to Aride, the archipelago's great seabird island, weather permitting, with a beach landing through the surf to millions of nesting birds.",
+          "description": "Aride is the northernmost of the granite islands and the seabird capital of the whole group, with breeding colonies that run into the hundreds of thousands. The catch is the landing. There is no jetty, so the reserve's boat takes you in over the beach, and that only happens when the swell allows, which usually means the calmer months rather than the height of the southeast season. Call ahead and be ready to change plans. When it does go, the guided walk up through the plateau is superb, with sooty terns wheeling overhead and Wright's gardenia flowering nowhere else on earth. The anchorage is open and rolly, so this is a daytime stop, not a night at rest. If Aride is closed, the islands around Praslin give you a fallback without much detour.",
+          "thingsToDo": [
+            "Land by reserve boat over the beach",
+            "Walk the seabird plateau with a guide",
+            "Find Wright's gardenia in flower",
+            "Watch sooty terns wheel overhead"
+          ],
+          "mooringTip": "Aride's anchorage is exposed and only tenable in calm weather; treat it as a day stop, anchor off in sand, and phone the reserve first, since landings are cancelled whenever the surf is up."
+        },
+        "7": {
+          "shortDescription": "Down to Curieuse, where free-roaming Aldabra tortoises, red-earth trails and a mangrove boardwalk fill an easy afternoon ashore.",
+          "description": "From Aride it is a straightforward sail down to Curieuse, which sits just off the north coast of Praslin. The island was a leper colony for the best part of a century, and the old Doctor's House still stands near the beach at Anse St Jose. What people come for now are the tortoises, a few hundred Aldabra giants that wander loose across the reserve, unbothered and easy to photograph. A boardwalk runs back through the mangroves, and coco de mer palms grow wild on the slopes here as well as in the Vallee. Anchor in Baie Laraie on the sheltered side and take the tender ashore to pay the park fee at the ranger station. Green turtles nest on these beaches in season, so tread carefully above the tideline.",
+          "thingsToDo": [
+            "Photograph free-roaming Aldabra tortoises",
+            "Walk the mangrove boardwalk",
+            "Visit the old Doctor's House",
+            "Anchor in sheltered Baie Laraie"
+          ],
+          "mooringTip": "Anchor in Baie Laraie on Curieuse's southwest side, in sand, well in from the reef; it gives good shelter in the southeast trades. Land the tender at Anse St Jose to pay the marine-park fee before walking."
+        },
+        "8": {
+          "shortDescription": "Barely an hour to Anse Lazio, one of Praslin's finest beaches, for snorkelling off the rocks and lunch on the sand.",
+          "description": "Curieuse to Anse Lazio is barely an hour, so there is no rush to move. Lazio curls along the northwest tip of Praslin, a wide arc of pale sand between two granite headlands, and it earns its reputation. The snorkelling is best along the rocks at the northern end, where the coral holds up and you'll often find parrotfish and the occasional ray working the edges. Two beach restaurants sit back under the takamaka trees; Bon Bon Plume does a good grilled catch of the day if you want lunch ashore. Anchor off in sand and swim in. The bay opens to the northwest, so it is comfortable through the southeast season but no place to be if the wind swings north. We usually take the morning here and move on before the afternoon swell builds.",
+          "thingsToDo": [
+            "Snorkel the rocks at Lazio's north end",
+            "Lunch on grilled fish at Bon Bon Plume",
+            "Swim the arc of pale sand",
+            "Anchor off in clear sand"
+          ],
+          "mooringTip": "Anse Lazio is anchor-off in sand and open to the northwest, so it is a fine daytime and fair-weather stop but exposed if the wind backs north; don't leave the boat unwatched if a swell is running."
+        },
+        "9": {
+          "shortDescription": "Across to La Digue, the ox-cart island of bicycles and granite boulders, home to the much-photographed Anse Source d'Argent.",
+          "description": "La Digue lies a short sail east of Praslin, and it is the island most people picture when they think of Seychelles. There are almost no cars here; you get around by bicycle or the odd ox-cart, which sets the pace nicely. Rent a bike at La Passe and ride south to L'Union Estate, where Anse Source d'Argent hides behind its wall of sculpted granite boulders and shallow, pale-water lagoons. Go early or late to miss the day-trippers off the ferry. On the southeast coast, Grande Anse and Petite Anse are wilder and often empty, though the current can be strong. The only genuinely all-weather anchorage is the harbour at La Passe, which is functional rather than pretty, so most crews tuck in there and take the boat's tender ashore.",
+          "thingsToDo": [
+            "Cycle to Anse Source d'Argent",
+            "Ride through L'Union Estate",
+            "Walk to wild Grande Anse",
+            "Rent bikes at La Passe"
+          ],
+          "mooringTip": "La Passe harbour is the one all-weather spot on La Digue but it is small and often full, so arrive early to find room, or anchor off and run the tender in. Grande Anse suits a fair-weather lunch stop only, with a watch on the current."
+        },
+        "10": {
+          "shortDescription": "A morning sail out to Marianne, an uninhabited island ringed by some of the region's best dive walls and big pelagic life.",
+          "description": "Marianne sits out on its own east of La Digue, empty since the coconut plantations were abandoned, and the reason to come is what lies underwater. The walls around the island rise steeply from ten to thirty metres, and they pull in the bigger fish: grey reef sharks, eagle rays cruising the drop, barracuda hanging in the current, and turtles almost everywhere. It is a well-known dive area, so if anyone aboard has a ticket, arrange a boat dive through an operator before you leave La Digue. For snorkellers the shallower reef along the sheltered side still delivers. There is no proper overnight anchorage here and the island is open to the swell, so treat Marianne as a settled-weather day trip and plan to head back toward the more sheltered islands to sleep.",
+          "thingsToDo": [
+            "Dive Marianne's steep reef walls",
+            "Look for grey reef sharks",
+            "Watch eagle rays on the drop",
+            "Snorkel the sheltered inshore reef"
+          ],
+          "mooringTip": "Marianne has no secure overnight anchorage and lies open to the ocean swell; come only in settled weather, anchor off in sand for the dive, and keep an engine-ready watch. Sleep back at Felicite or La Digue."
+        },
+        "11": {
+          "shortDescription": "Two miles back to Felicite, a granite island with a private resort, a lively fringing reef and reliable turtle sightings.",
+          "description": "Felicite is only a couple of miles back toward La Digue, a steep green lump of granite that now carries a single high-end resort across its ridges. You are not going ashore unless you are staying there, but that hardly matters, because the draw is the fringing reef. The water along the western and northern shores is clear and busy, with hawksbill turtles grazing the coral and spotted eagle rays gliding past in the deeper blue. Pick up the boat in the lee of the island out of the trade wind and spend the afternoon in and out of the water. The granite scenery above the waterline is as good as anywhere on the trip. It makes a calm, sheltered night after the exposure of Marianne, and sets you up nicely for the Sisters in the morning.",
+          "thingsToDo": [
+            "Snorkel the western fringing reef",
+            "Look for grazing hawksbill turtles",
+            "Watch spotted eagle rays pass",
+            "Anchor in the island's lee"
+          ],
+          "mooringTip": "Anchor in sand on the sheltered western or northern side of Felicite, out of the southeast wind; it gives a calm night. The island itself is a private resort, so plan to stay with the boat and the reef."
+        },
+        "12": {
+          "shortDescription": "A quick sail to Grande Soeur of the Sisters Islands, open on weekdays, with two fine beaches and top snorkelling off the west reef.",
+          "description": "Grande Soeur, the larger of the two Sisters, is a short reach north from Felicite. The island belongs to a Praslin hotel, which runs day visits during the week and keeps it for guests at weekends, so check the day before you plan your stop. Time it right and you get two beaches almost to yourself: one on the west side backed by a strip of forest, another over a low saddle you can walk across in ten minutes. The snorkelling along the western reef is the real prize, with healthy coral and turtles feeding in the shallows. Anchor off the main beach in sand and take the tender in. Bring your own water and shade, since facilities are minimal and aimed at the day-tour crowd rather than passing yachts.",
+          "thingsToDo": [
+            "Snorkel the healthy western reef",
+            "Walk over the saddle between beaches",
+            "Swim with feeding turtles",
+            "Anchor off the main beach"
+          ],
+          "mooringTip": "Anchor off Grande Soeur's western beach in sand and go in by tender, but only on a weekday; the island closes to visitors at weekends for resort guests. Check the calendar before you commit to the stop."
+        },
+        "13": {
+          "shortDescription": "Up to Ile Cocos, a tiny cluster of granite islets rated the finest snorkelling in the whole archipelago.",
+          "description": "Ile Cocos is a scatter of small granite rocks north of La Digue, protected as a marine park since the mid-nineties, and plenty of sailors rate it the best snorkelling in Seychelles. There is no landing; the islets themselves are off-limits, and the point is entirely underwater. Coral gardens run between the boulders in clear, shallow water, thick with reef fish, and you can drift for an hour without covering much ground. Because it is a well-known day-trip site out of La Digue, it fills up around midday, so aim to arrive early and have the water largely to yourselves. There is a park fee, collected by the wardens who patrol the area. It is a short passage, so make it a leisurely morning stop before the long run back toward Mahe on the final day.",
+          "thingsToDo": [
+            "Snorkel the coral between the boulders",
+            "Arrive early before the day boats",
+            "Drift the shallow granite channels",
+            "Photograph reef fish in clear water"
+          ],
+          "mooringTip": "Ile Cocos is a protected day-use area with no landing; you anchor or lie off briefly to snorkel and pay the ranger fee. Get there early, because it is shallow, small, and busy with tour boats by late morning."
+        },
+        "14": {
+          "shortDescription": "The long final passage back across open water to Eden Island, timing your departure to reach the marina and clear the boat before dark.",
+          "description": "The last day is the longest sail of the trip, twenty-five miles or so of open water back across to Mahe, so this is the one morning to be off early. With the southeast trades on the beam it can be a quick, satisfying run; give yourself a comfortable margin all the same, since arriving at the marina in daylight makes handing the boat back far less stressful. Most bases want the yacht in and fuelled the evening before the final morning, so check your charter agreement and plan the timing around it. As Mahe rises ahead, the green wall of the mountains behind Victoria closes off two weeks that started on the same dock. Tie up at Eden Island, rinse the salt off, and let the trip settle before the flight home.",
+          "thingsToDo": [
+            "Sail the open crossing to Mahe",
+            "Refuel and hand back at Eden Island",
+            "Rinse down after two weeks aboard",
+            "Toast the trip at the marina"
+          ],
+          "mooringTip": "Aim to reach Eden Island marina well before dark and confirm the base's return time in advance, as many want the boat back and fuelled the evening before. Radio ahead for a berth assignment on approach."
+        }
+      }
+    }
+  }
+}

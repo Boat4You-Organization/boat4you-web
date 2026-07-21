@@ -1,1 +1,255 @@
-{}
+{
+  "areas": {
+    "montenegro": {
+      "metaTitle": "Montenegro Sailing Itineraries | Boat4You",
+      "metaDesc": "Fjord-like bays and open-coast riviera: sail Kotor, Perast and Budva with calm mornings, an afternoon breeze and short, easy hops.",
+      "title": "Sail the Fjord Coast of Montenegro",
+      "description": "The Bay of Kotor sails like nowhere else in the Adriatic: a deep ria wrapped in near-vertical limestone, glassy at breakfast and stirred by a steady afternoon maestral that settles around 10 to 20 knots before dying off near sunset. Distances stay forgiving. Most legs run 5 to 18 nautical miles, so you can loiter under the Venetian ramparts of Kotor, then reach the baroque waterfront of Perast and its islet church, Our Lady of the Rocks, without a rushed passage. Push out of the bay and the open coast opens toward Budva's walled old town and the Sveti Stefan islet, roughly 25 miles from the mouth. Swim into the Blue Cave off the Luštica peninsula on a calm morning, before the day boats arrive. One habit pays off here: when the northeast bora threatens, the inner arms of the bay stay sheltered while the outer coast turns rough, so save your down-coast runs for settled forecasts."
+    }
+  },
+  "routes": {
+    "boka-budva-week": {
+      "metaTitle": "7-Day Boka Bay & Budva Loop | Boat4You",
+      "metaDesc": "A relaxed 7-day sailing route from Porto Montenegro in Tivat through Kotor, Perast, Herceg Novi and Budva, with quiet anchorages and fresh Boka seafood.",
+      "days": {
+        "1": {
+          "shortDescription": "Ease out of Tivat's superyacht basin and thread the Verige narrows to the walled town of Kotor under its mountain.",
+          "description": "Collecting the boat at Porto Montenegro takes half a morning once you factor in the charter briefing and a proper provisioning run, so we rarely leave before eleven. The inner bay stays glassy most mornings, and the passage through the Verige narrows is the kind of gentle sail that lets a new crew find its feet. Kotor sits at the head of the bay, its stone walls pinned against a wall of grey limestone. Tie up in the town marina, then walk straight into the old quarter through the Sea Gate. If your legs are willing, the climb to the fortress of St John rewards you with the whole bay laid out below; go late afternoon once the heat has eased. Dinner is a short stroll across worn marble squares.",
+          "thingsToDo": [
+            "Climb to St John's fortress at dusk",
+            "Enter the old town via the Sea Gate",
+            "Provision fully at Porto Montenegro before leaving",
+            "Evening drinks on Kotor's marble squares"
+          ],
+          "mooringTip": "Book a Kotor Marina berth ahead in July and August, since the quay fills by mid-afternoon. Anchoring in the inner bay is awkward because night gusts fall hard off the mountains, so the marina is the safer bet."
+        },
+        "2": {
+          "shortDescription": "A lazy five-mile hop to baroque Perast and its two islets, one of them a church built on a man-made reef.",
+          "description": "This is the shortest leg of the week, barely an hour under sail, so there's no reason to rush breakfast. Perast has no marina to speak of, just a line of mooring buoys off its waterfront and a short town quay that fills early. Grab a buoy, drop the dinghy, and motor across to Our Lady of the Rocks. The island itself was built by hand over centuries, ballast stones and scuttled boats piled onto a reef until there was room for a church. Inside hang dozens of votive paintings left by sailors who made it home. Back ashore, the town is a single ribbon of Venetian stone with no cars. We usually book a table at Konoba Otok Bronza and watch the light go soft over the water.",
+          "thingsToDo": [
+            "Dinghy across to Our Lady of the Rocks",
+            "See the votive paintings inside the island church",
+            "Dinner on the terrace at Konoba Otok Bronza",
+            "Walk Perast's car-free stone waterfront"
+          ],
+          "mooringTip": "Perast's buoy field is small and cannot be booked, so approach by early afternoon to claim one; the short town quay has limited depth and space. In a northerly the buoys off the point can get lumpy."
+        },
+        "3": {
+          "shortDescription": "Sail the length of the bay and out through the Verige narrows to Herceg Novi, a town of stairs and sea forts.",
+          "description": "Today you actually get to sail. Once the maestral fills in around midday, the run west down the length of the bay and back through the Verige narrows is a proper reach, maybe three hours with a decent breeze. Herceg Novi guards the entrance where the bay meets the open Adriatic. The old town rises in tiers straight from the water, all stairs and shaded passages, so pack light shoes and expect to work for your views. Forte Mare, the sea fort at the bottom, dates to the fourteenth century and now hosts open-air screenings in summer. The central port is small and often full; if there's no room, the anchorage just east holds well in mud at around eight metres. Coffee under the palms on the main square is the local ritual.",
+          "thingsToDo": [
+            "Climb the stepped lanes of the old town",
+            "Visit the Forte Mare sea fort",
+            "Coffee under the palms on the main square",
+            "Swim off the boat near the bay mouth"
+          ],
+          "mooringTip": "Port Herceg has only about seventy berths and fills in season, so call ahead or arrive early. Failing that, anchor just east of town in seven to ten metres of mud, which holds well and shelters from the prevailing northwest."
+        },
+        "4": {
+          "shortDescription": "Cross the bay mouth to Zanjice's pebble cove, with the Blue Cave and Mamula fort a dinghy ride away.",
+          "description": "Barely four miles separate Herceg Novi from Zanjice, so make a morning of the crossing and stop to swim on the way. Zanjice is a curved pebble beach on the Lustica shore, close to where the bay opens to the sea. It gets busy with day boats by lunchtime, then empties again by evening. Take the tender or a local water taxi round to the Blue Cave, a low grotto where the light turns the water an electric blue; the entrance is tight and only a few metres deep, so time it for calm conditions. Mamula, the round island fortress off the point, is worth a slow pass. This is a settled-weather anchorage rather than a marina, exposed if the wind backs south, so keep an anchor watch and be ready to move if it comes up.",
+          "thingsToDo": [
+            "Swim into the Blue Cave by tender",
+            "Anchor off Zanjice's pebble beach for lunch",
+            "Slow pass around Mamula island fortress",
+            "Snorkel the clear water off Lustica"
+          ],
+          "mooringTip": "Zanjice is an open anchorage best in calm, settled weather; drop the hook on sand and weed and dig it in well. Arrive by early afternoon before the day-trip boats take the best spots, and watch it overnight if any southerly is forecast."
+        },
+        "5": {
+          "shortDescription": "Round the peninsula and sail the open coast to Budva, where medieval walls meet sandy beaches and a loud summer night.",
+          "description": "Today the sheltered water runs out. Rounding the tip of Lustica puts you on the open coast, where there's usually more swell and a steadier breeze, so an earlier start pays off before the afternoon wind builds. Budva is roughly three to four hours down the coast depending on the wind. Its marina sits right against the old town walls, so you step off the boat almost into the medieval lanes. The walled quarter is compact and photogenic, ringed by sandy beaches that fill fast in July. Budva is also the coast's nightlife capital, so light sleepers might prefer a berth away from the bars. For a quieter swim, the island of Sveti Nikola sits just offshore, and the postcard islet of Sveti Stefan is a short sail south.",
+          "thingsToDo": [
+            "Walk Budva's medieval walls at golden hour",
+            "Anchor off Sveti Nikola island for a swim",
+            "Sail past the Sveti Stefan islet",
+            "Sample the old town bars after dark"
+          ],
+          "mooringTip": "Marina Budva is large but very busy in summer, so reserve a berth ahead. If you want quiet, ask for a pontoon away from the old-town bars. Anchoring off Sveti Stefan works only in calm weather, as it is open to swell."
+        },
+        "6": {
+          "shortDescription": "Backtrack up the coast to sleepy Bigova, a fishing hamlet where dinner is whatever the owner's sons landed that morning.",
+          "description": "After Budva's noise, Bigova is the antidote. It sits back inside a deep, green inlet on the southwest corner of the Lustica peninsula, and the sail up is a straightforward couple of hours. There is almost nothing here beyond a scatter of houses, a few fishing boats, and two konobas at the water's edge, which is exactly the point. Pick up one of the buoys close to the restaurants or anchor a little further in on good holding. We tend to book a table at Grispolis, where the family fishes for its own kitchen and brings the day's catch to the table before it's cooked, Boka style. Pod Volatom next door works the same idea with its own following. Swim off the boat, eat late, and turn in to complete quiet.",
+          "thingsToDo": [
+            "Pick the day's catch at Konoba Grispolis",
+            "Dine at Pod Volatom by the water",
+            "Swim in the calm, green Bigova inlet",
+            "Watch the fishing boats come in"
+          ],
+          "mooringTip": "Bigova has eight mooring buoys in three to six metres, set right by the two restaurants, so book a table and the owner will usually point you to a buoy. Otherwise anchor north of the buoys on sand and weed in six to seven metres."
+        },
+        "7": {
+          "shortDescription": "An easy final morning back through the bay entrance to Tivat, with time for a last swim before handing back the boat.",
+          "description": "The last leg is short and unhurried, an hour or two back around into the bay and up to Tivat. Most charters want the boat back by morning, so check your exact hand-over time the night before and leave Bigova with a margin. There's usually room for one more swim in a quiet cove on the way, and it's worth taking it. Fuel up before you reach the marina, since topping off at the pontoon can mean a queue in high season. Porto Montenegro itself is a pleasant place to end. The waterfront promenade is lined with cafes, and the small naval heritage collection with its old submarine fills an afternoon nicely if your flight is the next day. Settle the log, rinse the salt off, and toast a week well sailed.",
+          "thingsToDo": [
+            "Last swim in a quiet cove en route",
+            "Stroll the Porto Montenegro promenade",
+            "Visit the naval heritage submarine collection",
+            "Fuel up before the marina queue"
+          ],
+          "mooringTip": "Fill the fuel tank before you enter the marina, as the fuel dock queues in peak season. Confirm your hand-back slot and cleaning requirements the evening before so the last morning stays relaxed."
+        }
+      }
+    },
+    "montenegro-adriatic-14-days": {
+      "metaTitle": "14-Day Montenegro & Boka Bay Cruise | Boat4You",
+      "metaDesc": "Two weeks from Porto Montenegro (Tivat) through Boka Bay to Bar and back: Kotor, Perast, Budva, Sveti Stefan, quiet coves and old towns.",
+      "days": {
+        "1": {
+          "shortDescription": "A short first hop from the Tivat marina out to Rose, the old fishing hamlet at the very mouth of Boka Bay.",
+          "description": "Most crews collect the boat in the afternoon, so day one is deliberately gentle. From Porto Montenegro it's a lazy hour or so down the bay to Rose, tucked against the tip of the Luštica peninsula where the water opens to the sea. The village is tiny: a row of stone houses, a jetty, a couple of fish tavernas that fill up by eight. Above it stands Forte Rose, an Austro-Hungarian fort that now runs a small diving centre. Swim off the back of the boat while the light drops behind the headland. There's no rush here, and no real nightlife either, which is the point. A good spot to sort out cabins, test the anchor windlass, and eat well before the proper sailing starts tomorrow.",
+          "thingsToDo": [
+            "Climb up to Forte Rose fortress",
+            "Dive the reef with the local centre",
+            "Dinner at a Rose fish taverna",
+            "Swim off the boat at dusk"
+          ],
+          "mooringTip": "Rose has a short town quay plus a handful of buoys; grab a buoy or drop anchor in the cove on sand at 4–6 m. The quay fills fast with day boats through July and August, so an early arrival helps."
+        },
+        "2": {
+          "shortDescription": "A gentle skip across the strait to Herceg Novi, the fortified town of stairways, sea forts and the D-Marin Portonovi marina next door.",
+          "description": "Herceg Novi sits just across the water, maybe forty minutes under engine if the morning is still. The town climbs the hillside in a tangle of steps and terraces, so wear proper shoes. Start at the Forte Mare bastion by the sea, then work up through the old gate to the Kanli Kula fortress and the clock tower on Belavista square. Coffee here is a ritual; nobody hurries. For a berth you have a choice: the town pier below the walls for the atmosphere, or the polished D-Marin at Portonovi a couple of miles west if you want fuel, showers and calm water. We usually take the town side and walk in. Provision here too, as the market and shops are better than anything further down the coast.",
+          "thingsToDo": [
+            "Walk the ramparts of Forte Mare",
+            "Climb to Kanli Kula fortress",
+            "Coffee on Belavista square",
+            "Stock the galley at the town market"
+          ],
+          "mooringTip": "Berth stern-to on the town pier below the fortress, or take a serviced berth at D-Marin Portonovi two miles west for fuel and laundry. The town quay catches wash from the ferry lane, so use plenty of fender and a long stern line."
+        },
+        "3": {
+          "shortDescription": "Sail the length of the bay to Perast, the baroque captains' village facing its two famous islets in the narrows below Kotor.",
+          "description": "This is the day the scenery turns operatic. You pass through the Verige narrows, where the mountains close in and the water goes flat and dark, then Perast appears with its bell tower and its two islands offshore. One is natural: Sveti Đorđe, cypress-dark, with a closed Benedictine monastery and an old graveyard. The other, Gospa od Škrpjela, was built by hand over centuries, fishermen dropping stones onto a reef until an island held. Tie up, take the little shuttle boat across, and see the votive church and its silver plaques. Back in the village, the stone waterfront runs to a handful of konobas doing fish and local Vranac wine. Leave time to simply sit. Perast catches the last sun long after Kotor has gone into shadow.",
+          "thingsToDo": [
+            "Shuttle out to Our Lady of the Rocks",
+            "Photograph the Verige narrows under sail",
+            "Fish and Vranac at a waterfront konoba",
+            "Climb St Nicholas' bell tower"
+          ],
+          "mooringTip": "Perast's short quay has only a few berths and no anchoring right off the front, so call ahead or arrive before noon. In settled weather many crews anchor between Sveti Đorđe and Gospa od Škrpjela on sand and dinghy in."
+        },
+        "4": {
+          "shortDescription": "Just an hour deeper into the fjord to Kotor, its walled old town backed by the great stairway climbing to San Giovanni.",
+          "description": "Barely an hour from Perast, so there's no reason to leave early. Motor slowly to the head of the bay and Kotor rises straight out of the water, the town walls zig-zagging up the crag behind it to the fortress of San Giovanni. Get in, get moored, then attack the climb before the cruise crowds and the heat: roughly 1,350 steps to the top, with the whole fjord opening beneath you. Inside the walls it's a maze of squares and alleys, the cathedral of St Tryphon at its heart and cats on every step. Eat late. The old town keeps going well past midnight in season, and the marina is a two-minute walk from the gate, so there's no dinghy ride home in the dark.",
+          "thingsToDo": [
+            "Climb the walls to San Giovanni",
+            "Find St Tryphon's cathedral inside the walls",
+            "Get lost in the old-town alleys",
+            "Late dinner on a stone square"
+          ],
+          "mooringTip": "Marina Kotor sits right under the walls with lazylines and full services; book ahead in July and August as it's small and popular. Cruise ships share the channel by day, so keep a good lookout on the approach and expect some wash."
+        },
+        "5": {
+          "shortDescription": "Back out of the fjord to Luštica Bay, the new all-weather marina on Trašte Bay with golf, pools and a clean night's sleep.",
+          "description": "Retrace the bay in reverse, out through the narrows and round the Luštica shore to Trašte Bay on the open coast. It's a comfortable half-day, so drop the hook somewhere along the way for lunch and a swim. Luštica Bay itself is a purpose-built resort marina, all new pontoons and deep, sheltered water, with a golf course above and a couple of decent restaurants on the quay. After a week of medieval stone it feels almost startlingly modern, and that's fine for a night: proper showers, a lap pool, laundry sorted. Charge everything, run the watermaker, and let the crew spread out ashore. From here the itinerary turns south and the character changes, trading the closed-in bay for beaches, cliffs and longer open-water legs down the coast.",
+          "thingsToDo": [
+            "Anchor for a lunch swim en route",
+            "Round of golf above the marina",
+            "Lap pool and long hot showers",
+            "Dinner on the Trašte Bay quay"
+          ],
+          "mooringTip": "Luštica Bay marina has modern serviced berths on lazylines and holds well in most weather; reserve in peak weeks as it's a popular first or last stop. Trašte Bay outside is good holding on sand if you'd rather anchor and swim first."
+        },
+        "6": {
+          "shortDescription": "A lazy morning down to Žanjice, the buoyed swimming cove on Luštica's seaward side, with the Blue Grotto around the corner.",
+          "description": "Short and sweet today. Žanjice lies just around the Luštica headland, a shingle bay backed by one of the oldest olive groves on the coast and ringed with mooring buoys. Pick one up, launch the dinghy, and putter round to the Blue Grotto (Plava Špilja), a sea cave where the light comes up turquoise off the sand bottom. Neighbouring Mirišta is prettier but rolls more, so most crews stay put at Žanjice. There's a wreck on the seabed off Ogada rocks between the two, which the dive boats work if you fancy it. Ashore, the beach has a couple of grills doing fresh fish and cold beer. Nothing here needs planning. Swim, eat, nap, and time tomorrow's hop to Budva for the afternoon breeze.",
+          "thingsToDo": [
+            "Dinghy into the Blue Grotto sea cave",
+            "Walk the ancient Žanjice olive grove",
+            "Dive the wreck off Ogada rocks",
+            "Grilled fish at a beach shack"
+          ],
+          "mooringTip": "Žanjice has laid buoys across the bay; take one rather than anchoring, as the bottom is patchy and drops off fast. It's day-boat central by midday in summer, so arrive early or plan to stay the night once the trippers leave."
+        },
+        "7": {
+          "shortDescription": "The first proper open-water leg south to Budva, walled old town on one side, marina and long night out on the other.",
+          "description": "Now the coastal cruising begins. It's roughly 20 miles from Žanjice down to Budva, and the maestral usually fills in from the northwest around late morning, so leave by nine and you should carry a fair breeze most of the way. Budva is the busy heart of the Montenegrin riviera. Its compact walled town sits on a little peninsula, with the citadel at the tip and the Ballerina statue on the rocks below. Off the beach lies the island of Sveti Nikola, good for an anchored lunch before you go in. The marina and old harbour put you steps from the bars and restaurants, and the town runs late and loud in July. After the quiet of the bay it's a jolt, so lean into it for one night, then move on.",
+          "thingsToDo": [
+            "Walk the citadel walls at sunset",
+            "Anchored lunch off Sveti Nikola island",
+            "Find the Ballerina statue on the rocks",
+            "A late night in the old town"
+          ],
+          "mooringTip": "Budva marina and the old harbour are handy but pricey and can be rolly when the southeast swell gets in; a berth beats the exposed roadstead for a comfortable night. Book in high season, and ask for an inside berth away from the entrance."
+        },
+        "8": {
+          "shortDescription": "Barely an hour along the coast to Sveti Stefan, the postcard islet-hotel, then a swim off Miločer's royal beaches next door.",
+          "description": "Only a few miles today, so sleep off Budva and go when you like. Sveti Stefan is the image everyone knows: a fortified islet packed with terracotta roofs, joined to the shore by a slender causeway, now run as an exclusive hotel. You can't land on the islet itself and there's an exclusion zone around it, but the view from the water is the whole point. Anchor off in calm weather and swim toward Miločer, where the old royal beaches sit under a stand of pines. The Praskvica monastery is a short walk up the hill if you want shade and a bit of history. This is an exposed spot with no real shelter, so treat it as a long lunch-and-swim stop and drop down to Petrovac before evening if the forecast looks unsettled.",
+          "thingsToDo": [
+            "Photograph the islet from the water",
+            "Swim to Miločer's royal beaches",
+            "Walk up to Praskvica monastery",
+            "Anchor lunch under the pines"
+          ],
+          "mooringTip": "There's no marina at Sveti Stefan and the anchorage is open to swell, with a marked exclusion zone around the islet you must stay outside. Anchor on sand off Miločer in settled conditions only, and don't plan to overnight unless it's flat calm."
+        },
+        "9": {
+          "shortDescription": "Hug the cliffs down to Petrovac, a small resort town with a Venetian fort, red-sand beaches and two little offshore islets.",
+          "description": "The coast between Sveti Stefan and Petrovac is one long ribbon of small beaches and swim spots, so take it slowly and dip in wherever it looks good. Drobni Pijesak and Trsteno are worth a stop, and there are shallow sea caves you can nose the dinghy into. Petrovac itself is low-key and family-friendly, built round a curve of reddish sand with a little Venetian fort, the Kastio, standing over the water. Two islets sit just offshore: Katič and Sveta Nedjelja, the second with a tiny chapel. Walk the seafront promenade in the evening when the whole town comes out for ice cream and a stroll. It's a modest harbour and gets crowded, so this is more about the beaches and the easy pace than any grand sight.",
+          "thingsToDo": [
+            "Swim the caves at Drobni Pijesak",
+            "Walk out to the Kastio fort",
+            "Dinghy to Katič islet chapel",
+            "Evening ice cream on the promenade"
+          ],
+          "mooringTip": "Petrovac's harbour is tiny and fair-weather only, with just a few visitor spots that go early. Most crews anchor off the beach on sand in 4–6 m and use the dinghy, keeping clear of swimmer lines and the rocks by the islets."
+        },
+        "10": {
+          "shortDescription": "The turnaround: a longer leg south to Bar, big secure marina, customs port, and the ancient ruined town of Stari Bar inland.",
+          "description": "This is the far point of the trip, so make a passage of it. Bar sits well south of Petrovac and the run down is open water, best sailed on the afternoon maestral if it cooperates. Bar is a working port first and a tourist town second, but that has its uses: the marina is large, deep and genuinely all-weather, with fuel, chandlery and customs on site, which matters if anyone's continuing toward Albania. Leave the waterfront and head inland to Stari Bar, the ruined old town on its rock, half-Ottoman and half-Venetian and slowly being reclaimed by fig trees. Nearby stands the Old Olive of Mirovica, reckoned to be over two thousand years old. It's not a pretty harbour, but it's the most secure stop on the coast and a good place to reset for the sail back north.",
+          "thingsToDo": [
+            "Wander the ruins of Stari Bar",
+            "See the 2,000-year-old Mirovica olive tree",
+            "Climb toward Haj-Nehaj fortress",
+            "Top up fuel and provisions"
+          ],
+          "mooringTip": "Marina Bar has 600-plus serviced berths on lazylines and is the most sheltered spot on this coast, so there's rarely a need to book far ahead outside peak. It doubles as an official entry and exit port, so it's the place to clear customs if you're sailing on to Albania."
+        },
+        "11": {
+          "shortDescription": "Northbound again to Petrovac, this time lingering over the offshore islets and quiet beaches you sailed past on the way down.",
+          "description": "Turn the bows north and start working back up the coast. It's the same water you came down, but with the turnaround behind you the mood shifts to unwinding. Take the morning slowly out of Bar, then aim to fetch up at Petrovac by early afternoon with time to enjoy it properly this time. The two islets off the bay, Katič and Sveta Nedjelja, are worth the dinghy trip, and the wooded Buljarica beach just south is a long, wild stretch of sand that stays quiet even in August. Back in town, pick a konoba on the front for grilled squid and a carafe of house white. If the harbour's full, the anchorage off the main beach is perfectly good in settled weather, and the swimming right off the boat is some of the best on the route.",
+          "thingsToDo": [
+            "Dinghy out to Sveta Nedjelja chapel",
+            "Find the wild sands of Buljarica",
+            "Grilled squid at a seafront konoba",
+            "Long swim off the anchored boat"
+          ],
+          "mooringTip": "As on the way down, Petrovac's little harbour fills fast, so anchor off the beach on good sand in 4–6 m if there's no room. Buljarica bay just to the south is a calmer, roomier overnight anchorage if the wind stays light."
+        },
+        "12": {
+          "shortDescription": "Back to Budva for a last big night ashore, timing the short northbound hop to swim off Sveti Stefan on the way.",
+          "description": "A short leg back up to Budva, and the last chance for a proper night out before the marina hand-back looms. Break the trip with another pass by Sveti Stefan, anchoring off for a final swim toward the Miločer pines while the water's still warm. Roll into Budva by mid-afternoon. This time you know the place, so skip the tourist strip and find the smaller konobas in the back lanes of the old town, where the fish is fresher and the bill kinder. It's a good evening to gather the crew, settle the kitty, and toast the trip over local Vranac. Provision lightly too, since tomorrow is a quiet cove and the final morning is all packing. Get a berth rather than lying in the roadstead, so the last night ashore isn't a rolly one.",
+          "thingsToDo": [
+            "Farewell swim off Sveti Stefan",
+            "Dinner in the old-town back lanes",
+            "Toast the trip with local Vranac",
+            "Sunset from the citadel walls"
+          ],
+          "mooringTip": "Take a marina or old-harbour berth for this last night out rather than anchoring in the roadstead, which rolls when any southeast swell sneaks in. Booking ahead is wise in July and August, when Budva is at its busiest."
+        },
+        "13": {
+          "shortDescription": "Back into the bay's shelter at Bigova, a tucked-away fishing cove famous for holding well when the bora blows.",
+          "description": "The final full day of sailing brings you back toward Tivat, with one last anchorage before the marina. Bigova is a small fishing village at the southeastern corner of Trašte Bay, set deep into the land so it stays calm when everywhere else is bouncing. It has long been the bolt-hole crews run to when the bora threatens, and the holding on mud and sand is excellent. There's not much to it: a few houses, fishing boats, and a couple of konobas that serve whatever came up in the nets that morning. Eat the fish, walk the shoreline, and enjoy the quiet after two weeks of towns and beaches. It's a fitting last night, close enough to Tivat that tomorrow's leg is barely an hour, which leaves the evening entirely free.",
+          "thingsToDo": [
+            "Fresh catch at a Bigova konoba",
+            "Walk the quiet fishing-village shoreline",
+            "Swim in the sheltered cove",
+            "Sundowners at anchor after the towns"
+          ],
+          "mooringTip": "Bigova is prized as a bora shelter, so it fills up fast in unsettled weather; arrive early to find room in the compact cove. Anchor on mud and sand, which holds very well, or take a buoy off one of the konobas if you plan to eat ashore."
+        },
+        "14": {
+          "shortDescription": "A short final hop back into Boka to hand the boat over at Porto Montenegro in Tivat, ending where it all began.",
+          "description": "The last morning is an easy one. It's barely an hour from Bigova round into the bay and up to Porto Montenegro, so there's no need for a dawn start unless check-out demands it. Most bases want the boat back by nine or ten, fuelled and reasonably tidy, so leave a little time to top up the tank on the way in and square away the cabins. Porto Montenegro itself is worth a last wander once you've handed over: a slick superyacht marina with a naval-heritage museum, waterfront cafés, and a lido pool if your flight's not until evening. Two weeks, the whole Montenegrin coast from the fjord to Bar and back, and a boat that's carried you the length of it. Settle the bill, swap details with the crew, and start plotting the next one.",
+          "thingsToDo": [
+            "Refuel before the marina hand-back",
+            "Visit the naval heritage museum",
+            "Coffee on the Porto Montenegro waterfront",
+            "Last swim at the marina lido"
+          ],
+          "mooringTip": "Porto Montenegro is a large, well-run marina with lazyline berths and staff on the dock to take your lines for hand-back. Confirm your check-out slot and fuel-dock timing the evening before, as mornings get busy with boats coming and going."
+        }
+      }
+    }
+  }
+}

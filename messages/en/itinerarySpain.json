@@ -769,6 +769,486 @@
           "mooringTip": "Port Aiguadolç de Sitges berths you stern-to on lazy lines for about €80–130 at peak and is fully sheltered; use the fuel berth by the entrance to hand the boat back topped up. On a 24-mile day, sail early to beat the southwesterly."
         }
       }
+    },
+    "costa-brava-14-days": {
+      "metaTitle": "14-Day Barcelona & Costa Brava | Boat4You",
+      "metaDesc": "A 14-day round trip from Barcelona (Port Olímpic) up the Maresme to Costa Brava's coves, home via Sitges and Garraf. Tossa's walls, Palamós prawns.",
+      "days": {
+        "1": {
+          "shortDescription": "A short shakedown leg up the Maresme coast from the city to El Masnou's tidy marina and its well-known second-hand boat quays.",
+          "description": "Most crews use the first day to shake the boat down rather than cover ground, and this leg suits that. It's roughly eight miles from Port Olímpic up the Maresme shore, close enough to keep Barcelona's towers over your shoulder for the first hour. The garbí usually fills in after lunch, so if you slip the lines by mid-morning you'll motor out of the harbour and pick up a light southwesterly for the run north. El Masnou's marina sits behind a solid breakwater and stays calm in most conditions. The port is known across Spain as the place brokers park used yachts, so the pontoons make for good browsing. Ashore, the old fishermen's quarter climbs the hill in narrow streets, and there are enough cellars and terraces to settle into the rhythm of the trip.",
+          "thingsToDo": [
+            "Browse the used-yacht pontoons at Port Masnou",
+            "Walk the old fishermen's quarter up the hill",
+            "Sundowners on the marina promenade terraces",
+            "Stock up at the town market before Costa Brava"
+          ],
+          "mooringTip": "Port Masnou has plenty of visitor berths and answers on VHF 09; call ahead in July and August as the used-boat trade keeps pontoons busy. The breakwater shelters you from the afternoon garbí."
+        },
+        "2": {
+          "shortDescription": "A brief hop to Mataró, the Maresme's biggest marina and a Roman town worth an afternoon off the boat.",
+          "description": "This is barely a passage, five miles of coast-hopping, so there's no reason to rush breakfast. We usually leave the dock around ten, let the morning calm burn off, and sail the last stretch once the breeze steadies. Mataró's marina is the largest on this coast and has full yard facilities if anything needs attention early in the charter. The town itself rewards a walk inland. It was Roman Iluro, and you can still trace the old street grid, with a covered market and a knot of modernista buildings by a young Gaudí. Provisioning is easy here, better than anywhere until Palamós, so it pays to fill the lockers before you commit to the quieter coast ahead. Evenings are unhurried, with vermouth bars near the seafront that fill up slowly after eight.",
+          "thingsToDo": [
+            "Trace the Roman street grid of Iluro",
+            "See the young Gaudí modernista buildings",
+            "Shop the covered municipal market",
+            "Vermouth at a seafront bar after eight"
+          ],
+          "mooringTip": "Port de Mataró is large and rarely full, with visitor berths on the outer pontoons and a travel-lift if you need work done. Depths are generous throughout, so the approach is straightforward even at dusk."
+        },
+        "3": {
+          "shortDescription": "Six miles to Arenys de Mar, a working fishing port with a dawn fish auction and one of the oldest sailing clubs on the coast.",
+          "description": "Arenys still lands fish for a living, and that gives the port a different feel from the resort marinas either side of it. The passage is short, six miles or so, and if the garbí is up you can reach along the coast with the sails full and the engine off. The Club Nàutic here dates to 1952 and the welcome is warm to visiting crews. What draws most people is the late-afternoon fish auction, the llotja, when the day boats come in and the catch is sold off at a shouting pace you can watch from the quay. Book a table nearby and eat what landed an hour earlier. The town runs uphill from the water, and the old cemetery above it is oddly famous, worth the climb for the view back over the harbour.",
+          "thingsToDo": [
+            "Watch the afternoon fish auction at the llotja",
+            "Eat the day's catch beside the quay",
+            "Climb to the hilltop cemetery viewpoint",
+            "Visit the Club Nàutic, founded 1952"
+          ],
+          "mooringTip": "Arenys is a genuine fishing harbour, so keep clear of the trawler channel and the auction quay on the way in. The Club Nàutic keeps visitor berths; call on VHF 09 and expect a fair bit of movement from working boats."
+        },
+        "4": {
+          "shortDescription": "A seven-mile run to Calella, marked from miles off by its old lighthouse, with a long beach to anchor against in settled weather.",
+          "description": "Calella has no real marina, which changes the day's shape. You point at the lighthouse, the Far de Calella, standing white on its headland since the 1850s and visible long before the town resolves out of the haze. In calm weather the anchorage off the main beach is fine for a lunch stop or an overnight, sand holding well in five or six metres. Keep an eye on the forecast, because anything with east in it rolls straight in and the anchorage turns uncomfortable fast. Ashore, Calella is a busy resort with a long promenade, but the old core behind it still has a Catalan market town at its heart. Climb to the Torre de les Bruixes on the hill for the wider view, then come down for an early swim before the beach crowds thin at dusk.",
+          "thingsToDo": [
+            "See the 1850s Far de Calella lighthouse",
+            "Climb to the Torre de les Bruixes",
+            "Swim off the long town beach",
+            "Browse the old-town Catalan market"
+          ],
+          "mooringTip": "There is no harbour here, only an open anchorage off the beach that works in westerlies and calm. Drop the hook in five to six metres on sand and leave at the first sign of easterly swell, which sets in without much warning."
+        },
+        "5": {
+          "shortDescription": "Nine miles north to Blanes, where the Sa Palomera rock marks the true start of the Costa Brava and a proper fish town waits.",
+          "description": "Blanes is where the coast changes character. The flat Maresme beaches give way to the rockier, pine-topped shore people picture when they think of the Costa Brava, and the Sa Palomera rock standing off the town is the traditional marker of that line. It's about nine miles from Calella, an easy morning if you leave by nine before the garbí builds. The town keeps a serious fishing fleet, and the daily auction feeds restaurants like Can Flores, open near the market since 1958 and still the place locals send you. Above the harbour sit two botanical gardens, Marimurtra the finer of them, its paths dropping to belvederes right over the sea. The marina is well run and sheltered, a comfortable base for a night before the coves proper begin the next morning.",
+          "thingsToDo": [
+            "Walk the cliffside paths of Marimurtra gardens",
+            "Eat fresh fish at Can Flores",
+            "See the Sa Palomera rock up close",
+            "Browse the harbour fish market at dawn"
+          ],
+          "mooringTip": "Marina Blanes and the Club de Vela take visitors and monitor VHF 09, with good shelter behind the breakwater. Reserve a berth ahead in high summer, as this is a popular first or last stop on many Costa Brava charters."
+        },
+        "6": {
+          "shortDescription": "A short four-mile skip to Lloret de Mar, busy ashore but ringed with quieter coves like Santa Cristina and Cala Boadella.",
+          "description": "Four miles is nothing, so treat this as a coves day rather than a passage. Lloret's town beach is loud in season, but the anchorages either side of it are the reason to come. Santa Cristina, just southwest, is a broad sandy bay with a hermitage on the point and good holding in clear water. Round a little further and Cala Boadella is smaller and greener, popular with day boats but calm enough for a swim and lunch on the hook. We usually anchor off one of these for the afternoon and only move onto the town quay if there's weather about. Lloret itself has more history than its reputation suggests, with a hilltop castle folly over the sea and a Modernista cemetery worth an hour if you want to stretch your legs ashore before dark.",
+          "thingsToDo": [
+            "Anchor for lunch at Cala Boadella",
+            "Swim off Santa Cristina beach",
+            "Visit the seafront castle folly",
+            "Wander the Modernista cemetery"
+          ],
+          "mooringTip": "Lloret has only a small craft harbour, so plan to anchor. Santa Cristina and Cala Boadella both hold well on sand in four to eight metres but are open to the south; move to Blanes marina if a southerly is forecast overnight."
+        },
+        "7": {
+          "shortDescription": "Five miles to Tossa de Mar, its medieval walls dropping straight to the water, with sheltered coves like Giverola just up the coast.",
+          "description": "Tossa is the postcard everyone has seen, the Vila Vella, a walled medieval town with round towers standing right above the sea. Approaching from Lloret you get the best of it, the ramparts golden in afternoon light as you round into the bay. Tossa has no marina and the main bay is only a fair-weather stop, but you can anchor under the fortress on the south side or pick up a buoy for a few hours ashore. For the night, most crews slide north to Cala Giverola or Cala Futadera, both cut into pine and cliff and both sheltered from the tramuntana, with sand in five to ten metres. Walk the walls before dinner, when the day trippers have gone and the light softens, then eat in the old town lanes below.",
+          "thingsToDo": [
+            "Walk the Vila Vella medieval ramparts",
+            "Anchor overnight at sheltered Cala Giverola",
+            "Swim at pine-framed Cala Futadera",
+            "Dine in the old-town lanes after dusk"
+          ],
+          "mooringTip": "Tossa's bay has mooring buoys and room to anchor under the Vila Vella, but it is only tenable in calm or northerlies. For a settled night move to Cala Giverola or Cala Futadera, both of which shrug off the tramuntana."
+        },
+        "8": {
+          "shortDescription": "Sant Feliu de Guíxols is next, a real harbour town nine miles on with a monastery, a proper marina, and the S'Agaró coves a short walk north.",
+          "description": "The coast between Tossa and Sant Feliu is some of the finest on this stretch, a run of cliffs and coves with the road climbing high above you. It's around nine miles, and if the tramuntana is quiet it's a lovely reach in flat water close under the land. Sant Feliu is a proper town with a working harbour and a marina to match, so it makes a good place to reprovision or take a berth after a run of anchorages. The old Benedictine monastery and its Porta Ferrada anchor the centre, and the seafront passeig has the bustle of a place that lives year round. Just north, the coves of S'Agaró and Sa Conca are a short dinghy hop or walk away, elegant and calm, with the Camí de Ronda coast path linking them along the cliffs.",
+          "thingsToDo": [
+            "See the Porta Ferrada and monastery",
+            "Swim at Sa Conca beach",
+            "Walk the S'Agaró Camí de Ronda",
+            "Reprovision at the harbour-front market"
+          ],
+          "mooringTip": "Port de Sant Feliu de Guíxols is a full-service marina with fuel and visitor berths; call ahead on VHF 09 in summer. The harbour is open to the south and east, so a strong llevant can make the entrance lumpy."
+        },
+        "9": {
+          "shortDescription": "Seven miles to Palamós, the prawn capital of the coast, where the afternoon fish auction and a red-prawn dinner are the whole point.",
+          "description": "If you eat one thing on this trip, make it the prawns here. The gamba de Palamós is a genuinely special animal, deep red and sweet, landed by a fleet that still works out of the town, and it commands prices to match its reputation. The sail up is short, about seven miles, with the option to dawdle in the coves below Sant Feliu on the way. Palamós has a big, secure marina, 866 berths taking boats to thirty metres, so a night alongside is easy to arrange. Time your arrival for the fish auction and you can watch the boxes come ashore before eating the same catch that evening. Nàutic Palamós and Can Blau both cook it plainly, which is the right way. The town's fishing museum, the Espai del Peix, is a good rainy-hour fallback.",
+          "thingsToDo": [
+            "Eat red gamba de Palamós plainly grilled",
+            "Watch the afternoon fish auction dockside",
+            "Visit the Espai del Peix fishing museum",
+            "Anchor at Cala S'Alguer's fishermen's huts"
+          ],
+          "mooringTip": "Marina Palamós is one of the largest on the coast and almost always has room, with depths to ten metres and a straightforward approach. Book ahead only over peak August weekends; otherwise call on VHF 09 as you close the harbour."
+        },
+        "10": {
+          "shortDescription": "The return south begins, an easy seven miles back toward Sant Feliu with time to linger in the fishermen's coves along the way.",
+          "description": "This leg retraces yesterday's water, but the point is not to hurry it. The coast between Palamós and Sant Feliu is stitched with small coves that reward a slow morning, and with only seven miles to cover you have the day to spend on the hook. Cala S'Alguer, just south of Palamós, is the standout, a narrow inlet lined with old whitewashed fishermen's huts and no road access, so it stays quiet. Further down, Cala del Castell sits below the ruins of an Iberian settlement and holds well in sand. We usually pick one for lunch and a long swim, then drift into Sant Feliu in the late afternoon to take a berth and eat ashore. If the tramuntana kicks up, though, cut the coves short and get into the marina early.",
+          "thingsToDo": [
+            "Anchor at hut-lined Cala S'Alguer",
+            "Swim below the ruins at Cala del Castell",
+            "Snorkel the rocky points between coves",
+            "Return to Sant Feliu for dinner ashore"
+          ],
+          "mooringTip": "Cala S'Alguer and Cala del Castell both give good sand holding in three to eight metres but are open to the east, so they suit calm or offshore mornings. Keep the marina at Sant Feliu as your fallback if the wind veers."
+        },
+        "11": {
+          "shortDescription": "Nine miles back down the cliff-lined coast to Tossa de Mar, timed to walk the walls again once the day boats have gone.",
+          "description": "The run back to Tossa covers the same handsome cliffs you passed heading north, and it reads differently in the opposite light. Leave Sant Feliu after breakfast and you can drop into a cove or two on the way; Cala Salionç and Canyet both make good lunch stops with sand and shelter in northerly weather. Nine miles is a half day at most. The idea is to reach Tossa with the afternoon still ahead, anchor under the Vila Vella or take a buoy, and go ashore for a second, quieter look at the old town once the tour coaches have left. Climb the ramparts at golden hour, when the walls glow and the swifts come out over the bay. For the night, slip back up to Cala Giverola if any weather is threatening from the south.",
+          "thingsToDo": [
+            "Lunch stop at Cala Salionç",
+            "Swim in sheltered Cala Canyet",
+            "Walk Tossa's ramparts at golden hour",
+            "Retreat to Cala Giverola if weather turns"
+          ],
+          "mooringTip": "As on the way up, Tossa's bay is a fair-weather berth only, with buoys and anchoring under the fortress. If the forecast shows any south in it, spend the night in Cala Giverola instead, tucked in behind the headland."
+        },
+        "12": {
+          "shortDescription": "The long haul south, close to fifty miles past Barcelona to Sitges, so leave before dawn and treat it as a passage day.",
+          "description": "This is the one real passage of the fortnight. Sitges lies well southwest of Barcelona, and from Tossa that is close to fifty miles, so it earns an early start. We usually slip the buoy before first light, motor out into the calm, and pick up the garbí once it fills in the middle of the day for a proper sail down past the city. Keep well offshore of Barcelona's port, where traffic is heavy and the separation scheme has to be respected. By mid-afternoon the Garraf hills rise ahead and Sitges shows itself, white against the green. Port d'Aiguadolç is a large, sheltered marina just east of the town, with 742 berths and plenty of restaurants along the quay. Tie up, walk into Sitges for the evening, and let the long day settle over a late dinner.",
+          "thingsToDo": [
+            "Sail past the Barcelona skyline offshore",
+            "Explore Sitges old town and seafront",
+            "See the Cau Ferrat museum by the sea",
+            "Dinner on the Aiguadolç marina quay"
+          ],
+          "mooringTip": "Port d'Aiguadolç is big and well protected, taking boats to thirty-two metres, and monitors VHF 09. After a fifty-mile day, call ahead as you pass Barcelona so a berth is ready when you arrive tired."
+        },
+        "13": {
+          "shortDescription": "A three-mile hop to tiny Garraf, a cluster of Modernista cottages under dramatic cliffs, and the calmest night of the trip.",
+          "description": "After yesterday's mileage, Garraf is the reward, barely three miles west of Sitges and a complete change of scale. The village is a row of white cottages with green trim, built in the early 1900s to a design linked to Gaudí's circle, sitting under the steep limestone of the Garraf massif. There is a small marina and a short beach, and not much else, which is exactly the appeal. Spend the morning at anchor or on a berth, swim off the boat, and walk the handful of streets before lunch at one of the beach restaurants. The massif behind rises into a natural park laced with walking trails if the legs want stretching. It's a slow, quiet day by design, the kind that lets a two-week trip wind down rather than sprint to the finish.",
+          "thingsToDo": [
+            "See the Gaudí-circle Modernista cottages",
+            "Swim off Garraf's small beach",
+            "Lunch at a beachfront restaurant",
+            "Hike a trail in the Garraf massif"
+          ],
+          "mooringTip": "Garraf's marina is small and fills in summer, so call ahead or arrive early for a berth. The anchorage off the beach is fine in the prevailing garbí but open to the south, so watch the evening forecast."
+        },
+        "14": {
+          "shortDescription": "The last leg home, twelve miles back up to Port Olímpic, with the Barcelona skyline growing ahead the whole way in.",
+          "description": "The final morning is a straightforward twelve miles back to base, and there's no need to rush it. If the garbí cooperates you'll sail most of the way, the Garraf hills falling behind and the city building slowly ahead until the Sagrada Família and the hotel towers pick out the skyline. Give yourself time. Charter companies want the boat back by a set hour, usually mid-morning or noon, so a nine o'clock departure leaves room to hand over without stress. As you close Barcelona, keep clear of the commercial port entrance and follow the buoyed channel into Port Olímpic. Once the lines are ashore there's still an afternoon and evening in the city to spend, which is the right way to end a fortnight afloat, with a walk through the Barceloneta and one last plate of seafood.",
+          "thingsToDo": [
+            "Sail toward the Barcelona skyline",
+            "Follow the buoyed channel into Port Olímpic",
+            "Walk the Barceloneta seafront",
+            "Final seafood dinner in the city"
+          ],
+          "mooringTip": "Return to Port Olímpic against the mid-morning handover deadline, so leave Garraf early. Keep well clear of the commercial harbour approach and enter through the marked channel; call the marina on VHF 09 for your berth assignment."
+        }
+      }
+    },
+    "ibiza-formentera-14-days": {
+      "metaTitle": "14-Day Ibiza & Formentera Loop | Boat4You",
+      "metaDesc": "Two weeks from Marina Eivissa around Ibiza and Formentera: Ses Salines, Es Vedrà, the Illetes buoy fields, and the quiet north coast at Portinatx.",
+      "days": {
+        "1": {
+          "shortDescription": "A short first leg south from Ibiza Town to the salt-pan beaches, easing the crew in before the real distance begins.",
+          "description": "Only five miles separate the marina at Ibiza Town from Ses Salines, so there's no rush to slip lines. We usually top up water, sort the fridge, and clear the harbour by late morning. Once past the airport headland the salt flats open up behind the dunes, and the water shades from navy to that pale green the Posidonia gives it. Drop the hook on clean sand, well off the meadow, in five to seven metres. Ashore, Sa Trinxa still runs the same loose beach-bar rhythm it has for years, and Beso Beach does a proper Basque-style lunch if you book. The bay stays busy through the afternoon, then empties as the day boats leave. Swim before dinner, watch the light go soft over the salt pans, and let the trip settle.",
+          "thingsToDo": [
+            "Beach lunch at Sa Trinxa chiringuito",
+            "Cocktails on the sand at Beso Beach",
+            "Walk the salt pans at sunset",
+            "Snorkel the Posidonia off the sand patches"
+          ],
+          "mooringTip": "Anchor only on the bright sand patches, not the dark Posidonia, in five to eight metres. The bay is open to the south, so if a southerly is forecast overnight, move round to Es Cavallet or into Formentera instead."
+        },
+        "2": {
+          "shortDescription": "A quick crossing of the Es Freus channel to La Savina on Formentera, the last proper provisioning before the buoy-field days ahead.",
+          "description": "The hop across Es Freus is short but wants attention. The channel between the islands is shallow and scattered with islets, Es Penjats and s'Espardell among them, so keep to the buoyed line and watch for day-tripper ferries running hard between Ibiza and La Savina. Reckon on four or five miles, an hour under sail if the breeze cooperates. La Savina is Formentera's only real harbour and it fills fast in July, so call ahead or book a berth well before you leave Salines. Once tied up, the island is yours by scooter or bike: a flat run out to the lighthouse at Cap de Barbaria, or east to the wine bars around Sant Ferran. Provisions are easy here, fuel too. Handy to stock up before the anchoring days that follow.",
+          "thingsToDo": [
+            "Scooter to Cap de Barbaria lighthouse",
+            "Sunset drinks in Sant Ferran",
+            "Bike the flat road to Es Pujols",
+            "Provision and refuel before the anchorages"
+          ],
+          "mooringTip": "La Savina books out in high season and walk-in space is rare in July and August. Reserve a berth in advance, and note the marina is exposed to westerlies that can send a chop across the outer pontoons."
+        },
+        "3": {
+          "shortDescription": "Motor the short stretch north to the Illetes sandbar and Espalmador, some of the clearest anchoring water in the Balearics.",
+          "description": "Barely three miles separate La Savina from Ses Illetes, and the payoff is immediate. This is the postcard everyone comes for: a low sand spit with water so shallow and bright you can count the ripples on the bottom. The whole area sits inside the Ses Salines natural park, and the rules are strict. Take one of the ecological buoys rather than dropping anchor, either in the Illetes field or up towards Espalmador, and book it through the park's system or on VHF 77. Once you're settled, the day looks after itself. Wade the sandbar to the far side, swim the gap to Espalmador at slack water, or walk the islet's low dunes. Simple grilled-fish spots run along the beach for a lazy lunch ashore. By evening most boats thin out and the anchorage goes quiet.",
+          "thingsToDo": [
+            "Wade the Illetes sandbar toward Espalmador",
+            "Grilled-fish lunch on the beach",
+            "Snorkel the shallows off Illetes",
+            "Walk Espalmador's low dunes at dusk"
+          ],
+          "mooringTip": "Anchoring on the Posidonia is banned and patrolled here; take an ecological buoy in the Illetes or Espalmador field, up to 25 metres length, booked via the park system or VHF 77. Grab one early, they go by mid-morning in summer."
+        },
+        "4": {
+          "shortDescription": "A longer leg round Ibiza's south-west corner past Es Vedrà to the sheltered sunset bay of Cala Vedella.",
+          "description": "This is the first proper passage of the trip, around twenty miles back across the Freus and up the south-west coast. Leave by nine to beat the afternoon breeze building on the nose. The reward comes off Cap Blanc, where Es Vedrà rears up out of the sea, a bare limestone pyramid that dominates the whole run north. It photographs best in late-afternoon light, so time your approach if you can. Cala Vedella itself is a narrow, well-protected inlet with a sand beach at its head and a scatter of villas up the pine slopes. Anchor in the middle in six to ten metres, sand and weed mixed. There's a family-run restaurant right on the sand doing honest paella, and the bay faces west, which means the sunset lands straight down the water at your transom.",
+          "thingsToDo": [
+            "Photograph Es Vedrà off Cap Blanc",
+            "Paella at the beachfront restaurant",
+            "Sundowners facing west from the cockpit",
+            "Swim the sheltered head of the bay"
+          ],
+          "mooringTip": "Cala Vedella is tucked in and holds well in the prevailing sea breeze, but it's tight and popular, so arrive by mid-afternoon for a spot near the middle. It's exposed to a westerly swell, so check the forecast before committing for the night."
+        },
+        "5": {
+          "shortDescription": "A gentle coastal hop north to Sant Antoni's big bay, with Cala Bassa and the famous sunset strip on tap.",
+          "description": "Short day, maybe eight miles up the coast, so there's time for a stop before you reach port. Cala Bassa and Cala Conta both sit on the way in, wide sandy bays where you can anchor in five to eight metres and swim off the boat before lunch. Both open to the west, so they're fine in a light morning but get rolly once the breeze fills. Sant Antoni's bay is huge and the marina at Club Nàutic is well run, though berths aren't cheap in season. Tie up, walk the front, and stake out a spot along the Sunset Strip. Café del Mar and Café Mambo have been playing the sun down over the Conejera islands for decades. It's touristy, no argument, but the light off that stretch of water earns the crowd.",
+          "thingsToDo": [
+            "Anchor and swim at Cala Bassa",
+            "Sunset set at Café del Mar",
+            "Walk the S'Arenal promenade",
+            "Provision at the Sant Antoni market"
+          ],
+          "mooringTip": "Club Nàutic Sant Antoni takes larger yachts but books up in July and August, so reserve ahead; expect roughly 130 to 150 euros a night for a mid-size boat. Anchoring in the outer bay is possible but exposed to the west and to constant day-boat wash."
+        },
+        "6": {
+          "shortDescription": "Round the wild north-west cliffs to Portinatx, the quiet, boho end of Ibiza where the coast finally slows down.",
+          "description": "The run up and around the north-west corner is the most dramatic of the loop, roughly fifteen miles of high cliff and almost no development. Past Cala Salada the coast turns sheer and the anchorages thin out, so carry enough fuel and water for the day. Portinatx sits at the top of the island, three linked coves that make up its most sheltered corner. The main bay, S'Arenal Gran, has good holding on sand in four to six metres and stays calm in anything but a hard northerly. This is the laid-back side of Ibiza, all pine and low white houses, a world away from the west-coast clubs. Ashore there are a few honest beach restaurants and a short walk out to the old lighthouse. We usually stay two nights here when the schedule allows.",
+          "thingsToDo": [
+            "Anchor in the calm of S'Arenal Gran",
+            "Walk to the Portinatx lighthouse",
+            "Snorkel the rocks at Cala Xarraca",
+            "Sunset drinks above Cala Xuclar"
+          ],
+          "mooringTip": "Portinatx is the north coast's best shelter, holding well on sand, but the three coves crowd with day boats by noon. Come in earlier for a spot, and only trust it overnight if no northerly is forecast."
+        },
+        "7": {
+          "shortDescription": "Down the greener east coast to Santa Eulària, a riverside town with a proper marina and an easy, unhurried feel.",
+          "description": "The east coast is softer than the north, greener and lower, and the sailing down to Santa Eulària runs about twelve miles with the wind usually behind you. Worth a stop at Cala Sant Vicent or off Tagomago, the private island where the water runs deep and clear over sand. Santa Eulària itself is the most relaxed of Ibiza's three towns, built around the mouth of the island's only river. The marina is modern and calm, a good place to reprovision and do laundry mid-charter. Ashore, the palm-lined promenade and the restaurants along Carrer Sant Vicent make for an easy evening. If it's a Wednesday, the old hippy market at Punta Arabí in nearby Es Canar is worth the short taxi. Quieter than Ibiza Town, and better for it.",
+          "thingsToDo": [
+            "Anchor off Tagomago island for a swim",
+            "Stroll the palm-lined seafront promenade",
+            "Punta Arabí hippy market on Wednesdays",
+            "Dinner along Carrer Sant Vicent"
+          ],
+          "mooringTip": "Puerto Deportivo Santa Eulària is sheltered and well equipped, a good mid-trip stop for water, fuel and laundry; book ahead in peak weeks. Anchoring is possible off the town beach but it's open to the south and east."
+        },
+        "8": {
+          "shortDescription": "A short southern leg back to Ibiza Town, closing the first loop under the walls of Dalt Vila.",
+          "description": "An easy last leg of the first week, about eight miles south with a stop or two if you want them. Cala Llonga is a deep, protected inlet just down the coast, good for a morning swim, and Sol d'en Serra below it has a decent beach restaurant on the rocks. From there it's a straight run past Talamanca into Ibiza Town, with the ramparts of Dalt Vila filling the skyline as you close the harbour. The old town is a UNESCO site and worth the climb, up through the Portal de ses Taules to the cathedral for the view back over your own masthead. Marina Eivissa puts you a short walk from the port-side bars and the tangle of streets in La Marina. A good night to eat well and swap the anchorages for cobbles.",
+          "thingsToDo": [
+            "Morning swim in Cala Llonga",
+            "Lunch on the rocks at Sol d'en Serra",
+            "Climb Dalt Vila to the cathedral",
+            "Evening in the La Marina backstreets"
+          ],
+          "mooringTip": "Marina Eivissa sits right below the old town and is in demand, so confirm your return berth before you leave. For a quieter, cheaper option, Marina Botafoch across the harbour is a short water-taxi from the same nightlife."
+        },
+        "9": {
+          "shortDescription": "Back out to Ses Salines to open week two, this time with the salt pans and the birds as much as the beach.",
+          "description": "Second week, same short hop south, but there's no reason to rush it or to anchor in the same spot. This time we tuck round the point into Es Cavallet, the long beach on the eastern side, which is usually calmer in a light southerly and a shade less busy than Salines proper. The working salt pans behind the dunes are the reason the whole park exists, still harvested today, and in the right season you'll see flamingos stalking the shallows. Anchor on sand in five to seven metres and take the dinghy in. Walk the path between the pans, or drift down to Sa Trinxa at the far end of Salines, where the DJ has been easing the same sunset crowd along for years. A gentle reset before the crossing to Formentera again.",
+          "thingsToDo": [
+            "Anchor off the quieter Es Cavallet beach",
+            "Look for flamingos on the salt pans",
+            "Sunset session at Sa Trinxa",
+            "Walk the path between the salt flats"
+          ],
+          "mooringTip": "Es Cavallet, just east of the point, is a calmer alternative to the main Salines beach in a light southerly. Anchor on the sand patches only; the same Posidonia rules and patrols apply across the whole park."
+        },
+        "10": {
+          "shortDescription": "Cross straight to Espalmador this time, the low uninhabited islet off Formentera's tip with its own field of eco buoys.",
+          "description": "Rather than repeat La Savina, cross the Freus and pick up a buoy at Espalmador, the uninhabited islet off Formentera's northern tip. The big anchorage here is S'Alga, on the sheltered eastern side, part of a field of ecological buoys that runs down towards the Illetes sandbar. It's protected from the prevailing westerlies and holds a crowd of boats through the day without feeling packed. Take the tender ashore and walk across to the ocean side, where a shallow lagoon sits behind the beach. The old mud baths there are fenced off now for conservation, so admire and move on. Otherwise it's swimming, snorkelling the eelgrass edges for the fish that hang there, and a long lazy afternoon on a bare island with not a building in sight.",
+          "thingsToDo": [
+            "Pick up a buoy in S'Alga bay",
+            "Walk across Espalmador to the lagoon",
+            "Snorkel the eelgrass edges for fish",
+            "Beach a tender on the ocean side"
+          ],
+          "mooringTip": "S'Alga on Espalmador's east side is the calmest buoy field in a westerly, up to 25 metres length; book it through the park app or VHF 77. If everything's taken, drop back onto clean sand well clear of the meadow and buoy lines."
+        },
+        "11": {
+          "shortDescription": "Retrace the south-west passage past Es Vedrà, breaking the leg with a swim stop at Cala Saona on the way out.",
+          "description": "The passage back up to Cala Vedella covers the same twenty-odd miles, so start early and use the flat morning water. Cala Saona, on Formentera's west coast, makes a fine first stop, a red-cliffed bay with a sand bottom that holds an anchor well for an hour's swim. From there it's out past Es Vedrà again, and it never gets old; the rock looks different in every light and from every angle on the approach. If the sea's kind, ease in close under it before turning north. Cala Vedella will be busier by the time you arrive, so aim for the mid-afternoon and take whatever room is left in the middle of the inlet. Same honest paella on the sand, same clean west-facing sunset. Some places earn a second night.",
+          "thingsToDo": [
+            "Swim stop under the cliffs at Cala Saona",
+            "Ease in close beneath Es Vedrà",
+            "Anchor mid-inlet at Cala Vedella",
+            "Second sunset dinner on the sand"
+          ],
+          "mooringTip": "Cala Saona is a good lunch anchorage but wide open to the west, fine only in a calm morning. At Cala Vedella, arrive by mid-afternoon in the second week's traffic and set the hook clear of swimmers near the beach."
+        },
+        "12": {
+          "shortDescription": "The easy coastal run north again, this time lingering at Cala Comte's sandbanks before the pull of Sant Antoni's bay.",
+          "description": "A short leg again, but swap the stop. Today it's Cala Comte, the string of low rocky islets and sandbanks a little south of Sant Antoni. The water over the bars glows an improbable pale blue, and you can anchor off in five to seven metres and swim between the islets. It's one of the best swimming spots on the island, though it fills with day boats, so come mid-morning while it's still yours. When you've had enough, it's a couple of miles into Sant Antoni for the night. If you skipped it last time, this is the evening for the Sunset Strip and a drink at Mambo, then a proper meal in the streets back from the marina. The town's harbour is also your last easy provisioning before the long run east.",
+          "thingsToDo": [
+            "Swim between the islets at Cala Comte",
+            "Anchor over the pale sandbanks",
+            "Sunset drink at Café Mambo",
+            "Final provisioning in Sant Antoni"
+          ],
+          "mooringTip": "Cala Comte is stunning but wide open and shallow near the islets, so anchor outside the swim zone in five metres plus and watch your swing. For the night, the Club Nàutic berth is safer than the exposed outer bay."
+        },
+        "13": {
+          "shortDescription": "The long haul round the north coast, from Sant Antoni's bay all the way to Santa Eulària on the far east side.",
+          "description": "This is the longest run of the fortnight, close to twenty-five miles right around the top of Ibiza, so it's an early start and a full day's sailing. Clear Sant Antoni bay, pass Cala Salada's twin coves, and settle in for the cliff-lined north-west coast you saw on day six. Break it at Portinatx if the crew wants a swim and a bite, then push on east past Cala Sant Vicent and the offshore hump of Tagomago. The wind on this stretch tends to fill from the east by afternoon, so you may be hardening up for the last few miles into Santa Eulària. Come in tired and grateful for a marina berth, a shower, and a still cockpit. It's a big day, but rounding the wild end of the island in one go is the kind of sail that sticks with a crew.",
+          "thingsToDo": [
+            "Morning swim at Cala Salada's twin coves",
+            "Lunch stop back at Portinatx",
+            "Pass close under Tagomago island",
+            "Berth and unwind at Santa Eulària"
+          ],
+          "mooringTip": "This is a committing passage with few bail-out anchorages on the north-west cliffs, so leave early with fuel and water topped up and an eye on the afternoon easterly. Book the Santa Eulària berth ahead so a tired crew has a guaranteed spot."
+        },
+        "14": {
+          "shortDescription": "The final short leg home to Ibiza Town, with time for one last swim before you hand the boat back.",
+          "description": "Only eight miles left, and no need to hurry the last morning. Most crews take a slow breakfast at anchor, then make one final stop, either back into Cala Llonga or round to Talamanca just outside Ibiza Town, for a last swim off the transom. From Talamanca you can already see Dalt Vila's floodlit walls, and the run into Marina Eivissa takes twenty minutes. If the charter ends the next morning, tie up early and spend the evening ashore, one more climb through the old town and a table somewhere in La Marina. Two weeks and roughly a hundred and forty miles later, you've circled both islands, worked the wild north and the busy west, and learned which coves are worth the second look. Rinse the salt off, settle the fuel, and raise a glass to the loop.",
+          "thingsToDo": [
+            "Final swim off Talamanca beach",
+            "Slow breakfast at anchor in Cala Llonga",
+            "Farewell dinner in La Marina",
+            "Last walk up through Dalt Vila"
+          ],
+          "mooringTip": "Head in by early afternoon to secure your Marina Eivissa berth and leave time for fuelling and a proper hose-down before handover. If the marina's full on your return date, Marina Botafoch across the water is the reliable fallback."
+        }
+      }
+    },
+    "mallorca-round-island-14-days": {
+      "metaTitle": "14-Day Mallorca Round-Island Sail | Boat4You",
+      "metaDesc": "Two weeks under sail from Palma de Mallorca: the Tramuntana coast, Formentor, the quiet east-coast calas and Cabrera's protected waters.",
+      "days": {
+        "1": {
+          "shortDescription": "A short westward shakedown out of Palma to the marine-reserve waters off Illa del Toro, ideal for a settling-in first night.",
+          "description": "Most crews use the first afternoon to find their feet rather than rack up miles. It is roughly fifteen miles from Palma's marina out past Cap de Cala Figuera to the little island of El Toro, with Port Adriano tucked in behind it. Leave the pontoon by mid-morning, sort out the sails in the open bay, and you have time to swim before dinner.\n\nThe islet of El Toro and the Malgrats just north sit inside a marine reserve, so the water is clear and the fish are used to snorkellers. Port Adriano itself is a modern marina with good berths and a couple of restaurants. If the forecast is calm, anchor off the reserve edge instead and keep the night quiet.",
+          "thingsToDo": [
+            "Snorkel the Malgrats and El Toro reserve",
+            "Berth or dine at Port Adriano marina",
+            "Swim off the reserve's clear edge",
+            "Shake down the rig in Santa Ponsa bay"
+          ],
+          "mooringTip": "Port Adriano has laid berths and is the reliable option in any westerly. The reserve anchorage off El Toro only holds in settled weather, so pick sand between the seagrass patches and check your swing before dark."
+        },
+        "2": {
+          "shortDescription": "A long haul around the southwest corner and up the Tramuntana wall to Sóller's horseshoe bay, one of the coast's finest harbours.",
+          "description": "This is the biggest single passage of the fortnight, so we usually slip lines by nine. Round Cap de Cala Figuera, pass Port d'Andratx and Sant Elm, then the Serra de Tramuntana drops straight into the sea for hour after hour. There is little shelter along this stretch, so watch the afternoon sea breeze, and Sa Foradada makes a good lunch stop if the swell allows.\n\nSóller opens up as a near-circular bay ringed by mountains. Take the vintage tram up to Sóller town, or walk to the Far des Cap Gros lighthouse for the view back down over the anchorage. Harbour-front kitchens do proper rice and fresh fish. It is the kind of arrival that makes a long day feel earned.",
+          "thingsToDo": [
+            "Ride the 1913 tram to Sóller town",
+            "Walk up to Far des Cap Gros",
+            "Lunch stop under Sa Foradada headland",
+            "Eat rice and fish on the harbour front"
+          ],
+          "mooringTip": "Anchor in the middle of the bay in sand, or take a berth on the Marina Tramontana and Club Nàutic pontoons. The bay is well protected except in a northerly, when swell wraps in and a berth is worth booking ahead."
+        },
+        "3": {
+          "shortDescription": "More Tramuntana cliffs past Sa Calobra and around wild Cap de Formentor to the cliff-backed anchorage at Cala Sant Vicenç.",
+          "description": "Another committing coast day, and again worth an early start. The mountains keep falling into the water past Sa Calobra and the Torrent de Pareis gorge, both worth a slow pass with the camera. The big feature is Cap de Formentor, the island's northern tip, where wind can funnel hard around the headland and the sea stacks up when breeze meets swell.\n\nOnce you turn the corner, Cala Sant Vicenç sits below tall red cliffs facing northeast. The anchorage is at the head of the bay over sand, tucked in as far as depth allows. Small beaches ashore give you somewhere to land the tender. It is exposed to any north or east component, so treat it as a fair-weather stop and keep an eye on the evening forecast.",
+          "thingsToDo": [
+            "Photograph the Torrent de Pareis at Sa Calobra",
+            "Round the cliffs of Cap de Formentor",
+            "Land the tender on Cala Sant Vicenç beach",
+            "Snorkel the rocky heads below the cliffs"
+          ],
+          "mooringTip": "This is an anchor-only cove with no facilities. Drop over the sandy patch at the head of the bay and back down hard, but be ready to move to Pollença if the wind swings into the north or east overnight."
+        },
+        "4": {
+          "shortDescription": "A gentle half-day around Formentor into the sheltered Bay of Pollença, with a mooring-buoy swim stop under the pines on the way.",
+          "description": "After two hard coast days this one is a breather. It is only a few miles back around Cap de Formentor and into the wide Bay of Pollença, so there is no rush to leave. Cala Formentor, the long pine-backed beach on the north side, has mooring buoys laid to protect the seagrass; grab one for lunch and a swim before the tripper boats arrive.\n\nPort de Pollença itself sits at the head of the bay, a low-key resort town that locals still summer in. The Real Club Náutico takes yachts up to around twenty-five metres, and there is a long promenade for an evening stroll. Provision here if you need to; the town has proper supermarkets, and there is a Sunday market up in Pollença village inland.",
+          "thingsToDo": [
+            "Pick up a buoy off Cala Formentor beach",
+            "Swim under the Formentor pines",
+            "Stroll the Pollença seafront promenade",
+            "Provision at the town supermarkets"
+          ],
+          "mooringTip": "Cala Formentor's buoys are first-come in season and fill by mid-morning. In Port de Pollença take a berth at the Club Náutico or anchor off the town in sand; the bay is calm in the usual sea breeze but open to the northeast."
+        },
+        "5": {
+          "shortDescription": "A short crossing over the headland into Alcúdia Bay, pairing a modern marina with the walled Roman old town just inland.",
+          "description": "Barely ten miles today, over the Cap des Pinar headland that separates the two great northern bays. Alcúdia Bay is broad and shallow, with reliable thermal wind building through the afternoon, so it sails better than it looks on the chart. Plenty of crews treat this as a relaxed morning and a long lunch.\n\nThe marina at Alcúdia is well found, with fuel and services, and the walk into the old town is the reason to stop. Alcúdia was the Roman capital of the island, and its medieval walls, narrow lanes and the ruins of Pollentia are all within a short stroll. Come back down to the port for grilled fish and a cold beer. If the family wants sand, Platja d'Alcúdia runs for miles along the bay.",
+          "thingsToDo": [
+            "Walk the medieval walls of Alcúdia old town",
+            "See the Roman ruins of Pollentia",
+            "Refuel and reprovision at the marina",
+            "Beach afternoon on Platja d'Alcúdia"
+          ],
+          "mooringTip": "Alcúdia's marina is the comfortable choice and has fuel and water on the quay. You can also anchor off the long beach in two to four metres of sand, but hold is best further out and the anchorage is open to the north."
+        },
+        "6": {
+          "shortDescription": "Out of the bay and around the northeast capes to Cala Ratjada, a working harbour town with good beaches and a clifftop lighthouse.",
+          "description": "Today you leave the northern bays for good, crossing to the far corner of the island. Round Cap des Freu, keeping off the rocks, and the coast turns south toward Cala Ratjada. It is open water most of the way, so a morning of proper sailing if the northeasterly cooperates.\n\nCala Ratjada is an old fishing port that grew into a resort without losing its harbour. The marina holds around two hundred boats and the water inside stays calm overnight. Ashore, the beaches at Cala Agulla and Cala Gat are a short walk, and the Capdepera lighthouse on the headland is worth the climb for the view across to Menorca on a clear day. The fish restaurants around the port are the local draw.",
+          "thingsToDo": [
+            "Swim at Cala Agulla or Cala Gat",
+            "Climb to Capdepera lighthouse for the view",
+            "Eat fresh fish around the fishing port",
+            "Browse the harbourfront in the evening"
+          ],
+          "mooringTip": "The Club Nàutic Cala Ratjada has visitor berths and shelters you from the prevailing north and east; call ahead in July and August. Anchoring off Cala Agulla works by day in settled weather but is too exposed for a comfortable night."
+        },
+        "7": {
+          "shortDescription": "Down the east coast to Porto Cristo, a narrow natural inlet that shelters the fishing fleet and sits above the famous Drach caves.",
+          "description": "The east coast is gentler cruising than the west, a run of low cliffs broken by narrow inlets. Porto Cristo lies about twenty-five miles south, tucked into a slot in the coast that has sheltered fishing boats for centuries. The sail down is straightforward, with the afternoon breeze usually filling in from the southeast.\n\nThe town's headline attraction is underground: the Coves del Drac, a huge cave system with an underground lake and daily concerts, are a five-minute walk from the quay. The harbour itself is snug and friendly, better protection than the open calas on either side. Grab an ice cream on the front, wander the small beach at the head of the inlet, and enjoy an easier evening after a week of bigger passages.",
+          "thingsToDo": [
+            "Tour the Coves del Drac underground lake",
+            "Walk the beach at the inlet head",
+            "Wander the old fishing harbour",
+            "Watch the sunset from the quay"
+          ],
+          "mooringTip": "Club Náutico Porto Cristo takes boats up to about twenty metres and four metres draught; the entrance is narrow, so come in slow and call ahead for a berth. There is little room to anchor inside, so book if you want to stay the night."
+        },
+        "8": {
+          "shortDescription": "A short hop south to Portocolom, a big natural harbour with a reservable buoy field and one of the coast's quietest overnight anchorages.",
+          "description": "An easy morning, only a dozen miles down the coast, so there is no reason to leave early. Portocolom is one of the largest natural harbours on the island, a wide sheltered lagoon with a narrow entrance and a proper working-village feel. The old fishermen's boathouses still line parts of the shore.\n\nInside, a big field of mooring buoys gives you a calm, secure night out of any wind, and it holds far better than an open cala. The small marina and the buoys can both be booked ahead. Ashore, the Far de Portocolom lighthouse marks the entrance, and the Cala Marçal beach is a short walk if you want sand. This is a good spot to slow down, do laundry and eat well without a crowd.",
+          "thingsToDo": [
+            "Pick up a buoy in the natural harbour",
+            "Walk out to the Portocolom lighthouse",
+            "Beach afternoon at Cala Marçal",
+            "Dinner among the old boathouses"
+          ],
+          "mooringTip": "Book a mooring buoy or a marina berth in advance; the buoy field is the most sheltered overnight anchorage on this coast and fills in season. The entrance channel is buoyed but shallow at the sides, so stay mid-channel coming in."
+        },
+        "9": {
+          "shortDescription": "South along the cliffs to Cala Santanyí, a compact sandy cove ringed by pines, with the Es Pontàs rock arch just around the corner.",
+          "description": "The coast starts to feel more southern here, the cliffs lower and the calas sandier. It is around eighteen miles down to Cala Santanyí, an easy reach in the usual breeze. The cove is small, maybe seventy metres of fine sand backed by pines and low rock, and the water shelves gently from a sandy bottom that gives good holding.\n\nJust to the west lies Es Pontàs, the natural stone arch that climbers made famous; drift past under sail for the best view of it. The cala itself gets busy with day-trippers off the beach in high summer, so an afternoon arrival often means more room as the crowds thin. It is a fair-weather anchorage, well sheltered from north through northeast but open to the south.",
+          "thingsToDo": [
+            "Anchor off the sandy Cala Santanyí beach",
+            "Sail past the Es Pontàs stone arch",
+            "Snorkel the rocky edges of the cove",
+            "Sundowner swim before the day boats go"
+          ],
+          "mooringTip": "Anchor in the sandy patch in the middle of the cove in three to five metres; it holds well and shelters you from the north and northeast. There are no buoys or facilities, and it is open to any southerly, so watch the forecast."
+        },
+        "10": {
+          "shortDescription": "Around the island's southern tip at Cap de ses Salines and along the low south coast to the narrow, cliff-walled inlet of Cala Pi.",
+          "description": "Today you round the southernmost point of Mallorca. Cap de ses Salines is low and rocky with a lighthouse, and tide against wind can kick up a short sea off it, so time the passage for the calmer morning hours. Past the cape the coast flattens and opens toward the salt flats and long beaches of the south.\n\nCala Pi is the reward: a deep, narrow canyon of an inlet cut into the cliffs, with a small sandy beach at its head and old fishermen's huts on the rock. It is a striking place to drop the hook, though room is tight and depth runs out quickly at the back. After the west coast's big scenery this is a smaller, quieter hole in the rock, and worth the fiddly approach in.",
+          "thingsToDo": [
+            "Round the Cap de ses Salines lighthouse",
+            "Anchor in the Cala Pi canyon inlet",
+            "Walk up to the clifftop watchtower",
+            "Swim off the small sand beach"
+          ],
+          "mooringTip": "Space in Cala Pi is limited and the inlet narrows fast, so arrive early to get a spot and consider a line ashore to stop your swing. It is well protected except from the south and southwest, which sends swell straight in."
+        },
+        "11": {
+          "shortDescription": "Offshore south to the Cabrera national park, a protected archipelago of clear water and a hilltop castle where every mooring must be booked ahead.",
+          "description": "This is the day that needs planning well before you leave the dock. Cabrera is a national park, and the only way to stay is on one of the fifty mooring buoys in the main harbour, booked in advance through the Balearic government site with a permit. Anchoring anywhere in the park is banned.\n\nThe crossing is about ten miles of open water south from the coast, usually a pleasant reach. Once on the buoy, the payoff is real: water so clear you can count the anchor chain of the boat next door, a Napoleonic-era castle on the hill above the port, and walking trails ashore under the wardens' eye. Take the tender or a short trip into the Cova Blava sea cave, where the light through the water glows deep blue in the middle of the day.",
+          "thingsToDo": [
+            "Pick up your booked buoy in Cabrera port",
+            "Hike up to the hilltop castle",
+            "Take the tender into the Cova Blava",
+            "Snorkel the park's protected clear water"
+          ],
+          "mooringTip": "You cannot anchor anywhere in Cabrera; you must reserve one of the fifty buoys online in advance and carry the permit, and July and August book out early. Buoys are colour-coded by boat size, so book the right one for your yacht's length."
+        },
+        "12": {
+          "shortDescription": "Back north to the mainland for a day at Es Trenc, Mallorca's longest undeveloped beach, all pale sand and shallow water behind the old salt pans.",
+          "description": "A short passage back to the main island, roughly ten miles, drops you off one of the last long stretches of undeveloped coast in the Balearics. Es Trenc runs for a couple of miles of pale sand behind the old salt pans, with no hotels crowding the shore, and the water shades from turquoise to deep blue over a clean sandy bottom.\n\nThe anchoring is easy in good weather: pick your depth off the beach in sand and swim ashore for a walk along the dunes. There is no shelter to speak of, so this is strictly a settled-weather stop and not a night to be caught out in. Come for the afternoon, enjoy the space and the colour of the water, and move on to a protected harbour before evening if the forecast is at all uncertain.",
+          "thingsToDo": [
+            "Swim off the turquoise Es Trenc shallows",
+            "Walk the dunes behind the salt pans",
+            "Anchor in clean sand off the beach",
+            "Long lunch aboard at anchor"
+          ],
+          "mooringTip": "Anchor in two to four metres of sand well off the beach; holding is excellent but there is no protection at all, so only stop here in a settled forecast and never plan to overnight in doubtful weather."
+        },
+        "13": {
+          "shortDescription": "East to Cala Figuera, a fjord-like fishing harbour that still lands its catch daily and stays calm behind twin rocky arms.",
+          "description": "A relaxed sail back east along the south coast, retracing part of yesterday's water before the coast rises again into low cliffs. Cala Figuera is the prettiest of the working ports on this side, a Y-shaped inlet where fishermen's houses come right down to the water and boats still go out at dawn and sell their catch on return.\n\nThe inlet is narrow and shallow toward its ends, so pilot in carefully and take a berth at the small port rather than trying to anchor in the tight channel. Ashore it stays quiet, with a couple of good seafood terraces looking down over the boats and clifftop walks toward Cala Santanyí. After Cabrera and Es Trenc, an evening watching the fishing boats come in is the right note to end the loop on.",
+          "thingsToDo": [
+            "Watch the fishing boats unload at dawn",
+            "Eat seafood on a terrace over the port",
+            "Walk the cliff path toward Cala Santanyí",
+            "Photograph the fjord-like twin inlets"
+          ],
+          "mooringTip": "The inlet is tight and shoals at the heads, so take a berth at the small Port de Cala Figuera rather than anchoring. Call ahead as visitor space is limited; it is well sheltered from west and northwest but the entrance is uncomfortable in a strong easterly."
+        },
+        "14": {
+          "shortDescription": "The long final leg back west around Cap de ses Salines and Cap Blanc into the Bay of Palma to close the circle.",
+          "description": "The last day is a proper passage, so an early start pays off. From Cala Figuera you drop back down to Cap de ses Salines and turn west along the low southern shore, past Es Trenc again and the cliffs below Cap Blanc, then into the wide Bay of Palma. Reckon on a full day under sail, thirty-odd miles depending on how far offshore the wind pushes you.\n\nThe bay usually gives a good sea breeze for the run in, with the cathedral and the city skyline growing ahead as you close the coast. Leave time to fuel up, take on water and square the boat away before handback the next morning. A fitting end to the loop: two weeks, most of the coastline, and pretty much every sort of anchorage the island has, from open sand to national-park buoys.",
+          "thingsToDo": [
+            "Sail the long south coast past Cap Blanc",
+            "Close the Bay of Palma under sail",
+            "Refuel and take on water before handback",
+            "Toast the loop with the cathedral in view"
+          ],
+          "mooringTip": "Book your return berth or the charter base's mooring in Palma ahead of arrival, as the bay's marinas are busy in season. Come in before the afternoon breeze peaks to make the final approach and berthing easier."
+        }
+      }
     }
   }
 }

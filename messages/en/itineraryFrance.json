@@ -1,1 +1,1168 @@
-{}
+{
+  "areas": {
+    "atlantic-france": {
+      "metaTitle": "Brittany & Atlantic Sailing Routes | Boat4You",
+      "metaDesc": "Charter routes through South Brittany: Belle-Île, Houat, Hoëdic and the Gulf of Morbihan. Wind, tides and island anchorages, day by day.",
+      "title": "Sail South Brittany's Islands and Tides",
+      "description": "This corner of the Atlantic rewards sailors who read the water. Summer winds usually settle into a moderate southwesterly, Force 3 or 4 most afternoons, which makes for easy reaches between islands that rarely sit more than a couple of hours apart. Quiberon Bay stays sheltered enough for a relaxed first day, then the coast opens up. Belle-Île is the big draw, its cliffs and the Grotte de l'Apothicairerie on the wild side, Le Palais and its Vauban citadel on the calmer one. Smaller Houat and Hoëdic offer white-sand anchorages and almost no cars. The Gulf of Morbihan is the puzzle everyone remembers, an inland sea threaded with islets like Île aux Moines and Île d'Arz. One rule matters here: time your run through the Gulf mouth with the flood or slack, since the Jument current can top nine knots at springs and will stop a cruising yacht dead. July and August fill Le Palais by late afternoon, so arrive before three or aim for June and September."
+    },
+    "corsica": {
+      "metaTitle": "Corsica Yacht Charter Itineraries | Boat4You",
+      "metaDesc": "Day-by-day Corsica sailing routes from Ajaccio to Bonifacio and the Lavezzi reserve, with wind, distances and the best months to dodge the crowds.",
+      "title": "Sail Corsica's Granite Coast and Reserve Bays",
+      "description": "Most crews base out of Ajaccio and work south toward Bonifacio, a run that rewards you with steady thermal winds of 10 to 20 knots through summer afternoons. The sailing here is honest work: the west coast throws up force 3 to 6 westerlies, and the Strait of Bonifacio funnels the Libeccio into short, sharp gusts, so carry a plan B for the crossing out to the Îles Lavezzi. That reserve of granite islets and shallow turquoise bays is the payoff. North of Ajaccio, the red porphyry cliffs of Scandola and the boat-only hamlet of Girolata make a quieter alternative to the southern circuit. Legs mostly run 15 to 30 nautical miles, easy day-hops. One practical note: Bonifacio's fjord harbour packs out from mid-July through August, so radio ahead for a berth or anchor off and tender in. Come in June or September and the same anchorages feel half-empty."
+    },
+    "cote-azur": {
+      "metaTitle": "Côte d'Azur Sailing Itineraries | Boat4You",
+      "metaDesc": "Day-by-day charter routes on the Côte d'Azur: light winds, short hops from Cannes to Saint-Tropez, Port-Cros and Porquerolles' island anchorages.",
+      "title": "From Cannes Glamour to Wild Island Anchorages",
+      "description": "The Côte d'Azur packs short, forgiving hops into a coastline that swings from film-festival marinas to pine-covered islands in a single afternoon. Winds are usually light, a westerly of 10 to 25 knots through the day that eases after dark, with almost no tide to plan around. Saint-Tropez sits about 26 nautical miles from Cannes, so you rarely log long passages. Point the bow at the Îles de Lérins for a free anchorage off Saint-Honorat's monastery, then push west to Port-Cros, the first national park in Europe to protect land and seabed together. Porquerolles rewards the detour with white-sand bays like Plage Notre-Dame. If you want the glamour without the gridlock, sail here in late May, June, or September; July and August turn Saint-Tropez into a superyacht car park. One local habit worth copying: check the holding before you drop, since anchoring over the protected Posidonia seagrass is both illegal and poor ground."
+    },
+    "french-canals": {
+      "metaTitle": "French Canals Sailing Itineraries | Boat4You",
+      "metaDesc": "Licence-free canal cruising across France: the Canal du Midi, Alsace's Arzviller boat lift and Burgundy's Saône. 7- and 14-day routes.",
+      "title": "Cruise France's Canals at Walking Pace",
+      "description": "Forget sails and tide tables. On France's inland waterways you travel at walking pace behind an engine, measuring each day in cruising hours and lock counts rather than nautical miles. No licence is needed, and an hour of dockside training covers the basics. Three very different stretches sit under this banner. The Canal du Midi runs plane-tree tunnels past medieval Carcassonne and the Minervois vineyards around Le Somail and Homps. In Alsace, the Canal de la Marne au Rhin climbs the Saint-Louis-Arzviller boat lift, which raises your hull 45 metres in a single move, then threads the castle-studded Zorn valley to Saverne. Burgundy trades narrow locks for the broad, open Saône, with Saint-Jean-de-Losne as its long-standing barging hub. Boats run roughly April to October; book the quieter shoulder weeks if July crowds at popular moorings put you off. Bring a bike, because the towpaths make for easy shore rides between stops."
+    }
+  },
+  "routes": {
+    "ajaccio-south-corsica": {
+      "metaTitle": "7-Day South Corsica & Bonifacio | Boat4You",
+      "metaDesc": "Sail south from Ajaccio to Bonifacio and the Lavezzi islands: seven days through the Gulf of Valinco, granite towers and cliff-top harbours.",
+      "days": {
+        "1": {
+          "shortDescription": "Slip out of Napoleon's home port, round Capo di Muro, and drop the hook in the sandy coves of Porto Pollo.",
+          "description": "Provisioning in Ajaccio is easy, so most crews load up at the covered market before casting off. Once clear of the gulf the coast turns wilder as you work south past Capo di Muro, roughly twenty miles of open water with the afternoon thermal usually filling in behind you. Porto Pollo sits at the mouth of the Gulf of Valinco, a low-key spot with a sandy bottom that holds an anchor well. The harbour office is genuinely helpful and answers the radio, which counts for a lot when you arrive late. Swim off the back before dinner; the water here is calm and shallow enough for a first night. We usually leave Ajaccio by mid-morning to reach the anchorage with light to spare and time for a proper shakedown of the boat.",
+          "thingsToDo": [
+            "Shop Ajaccio's covered market before casting off",
+            "Snorkel the shallows off Porto Pollo",
+            "Rent a windsurfer in Porto Pollo bay",
+            "Sundowner at a Porto Pollo beach bar"
+          ],
+          "mooringTip": "Porto Pollo has good holding on sand in 3-5 metres; anchor off the beach rather than crowding the small jetty, and hail the harbour office on VHF if you want a lazy line or a berth in July."
+        },
+        "2": {
+          "shortDescription": "A short two-hour hop across the Valinco to Campomoro, where the largest Genoese tower in Corsica guards a quiet sandy bay.",
+          "description": "This is one of the shorter legs of the week, barely two hours if the breeze cooperates, so there's no rush to leave. Campomoro closes off the southern side of the Gulf of Valinco, a village of granite houses that has kept its fishing-hamlet feel. The star-shaped tower on the headland is the biggest in Corsica and worth the twenty-minute walk up for the view back over the gulf. Anchoring is straightforward in settled weather, with good sand off the beach. Keep an eye on the forecast, though: the bay opens to the southwest, and a libeccio will send swell straight in. Snorkelling along the rocks at the northern end turns up plenty of fish. Ashore, a handful of small restaurants serve the day's catch a few steps from the water.",
+          "thingsToDo": [
+            "Climb to the star-shaped Campomoro tower",
+            "Snorkel the rocks at the bay's north end",
+            "Follow the coastal path past the tower",
+            "Fresh catch at a beachfront restaurant"
+          ],
+          "mooringTip": "Anchor on sand off the beach in 4-6 metres, but treat Campomoro as fair-weather only. If a southwesterly libeccio is forecast overnight the bay gets rolly, and Porto Pollo or Propriano make safer boltholes."
+        },
+        "3": {
+          "shortDescription": "Coast south to Tizzano, a pocket-sized fishing port on a clear-water cove, roughly halfway to the Bonifacio strait.",
+          "description": "South of Campomoro the coast grows remote, backed by the maquis of the Senetosa reserve with its twin lighthouses. Tizzano appears as a narrow inlet, easy to miss until you're almost on it. The port itself takes boats under ten metres; anything larger anchors off the pier in the cove, where the water runs clear over sand and weed. It's a small place, a scatter of houses, a grocery for topping up, and a couple of restaurants that lean hard on the local catch and Sartene wine. Not much happens here, which is rather the point after a couple of busy harbours. We often time this leg for late morning so the afternoon sun is on the anchorage. Take the dinghy ashore for an early dinner and watch the fishing boats come in.",
+          "thingsToDo": [
+            "Anchor and swim in Tizzano's clear cove",
+            "Fresh fish dinner at the port",
+            "Pair supper with a Sartene red",
+            "Top up at the Tizzano grocery"
+          ],
+          "mooringTip": "The tiny port only suits boats under about 10 m; larger yachts anchor off the jetty in 3-5 m on sand. Set the hook well and check your swing, as the cove is snug and fills with local moorings in season."
+        },
+        "4": {
+          "shortDescription": "Round Corsica's southwest tip and thread the cliff-slot entrance into Bonifacio, one of the Mediterranean's great natural harbours.",
+          "description": "Today's leg carries the most exposure of the trip, rounding the southwest corner where the Strait of Bonifacio funnels wind between Corsica and Sardinia. A libeccio or mistral can pipe up past thirty knots, so we always check the forecast the night before and leave early to beat the afternoon build. The reward is the approach. From seaward the entrance is a plain slit in white limestone cliffs, invisible until you're close, then the calanque doglegs right and the harbour opens beneath the old town. Bonifacio clings to the clifftop above, all tall houses and Genoese ramparts. The marina fills fast in July and August, so book ahead. Once tied up, climb the stairs into the haute ville for a drink on the ramparts and the walk out to the Bosco cemetery at sunset.",
+          "thingsToDo": [
+            "Walk the ramparts of the haute ville",
+            "Descend the King of Aragon staircase",
+            "Sunset at the Bosco clifftop cemetery",
+            "Aperitif on a Bonifacio marina terrace"
+          ],
+          "mooringTip": "Book the Bonifacio marina ahead for July and August; it's a stern-to berth on the quay with lazy lines and a harbour team on the pontoons. If it's full, the Calanque de la Catena buoys just outside cost around 25 euros for a monohull."
+        },
+        "5": {
+          "shortDescription": "A six-mile skip across the strait to the Lavezzi islands, a granite nature reserve ringed with pale sand and snorkelling coves.",
+          "description": "The Lavezzi archipelago lies just a few miles east of Bonifacio, close enough that timing is all about wind rather than distance. These are low granite islands, weathered into rounded boulders, and the whole group sits inside the Bocche di Bonifacio nature reserve. Cala di Greco on the north side is the usual anchorage, with a sandy patch to drop into and buoys nearby that are reserved for the tripper boats running out from Bonifacio, so leave those clear. The snorkelling around Cala Lazarina and Cala di u Grecu is the best of the week, granite gullies alive with fish in gin-clear shallows. Watch the marked no-anchor zones, fenced off with yellow buoys to protect the seagrass. This is a daytime stop; the anchorage is open, so most crews move back to shelter before nightfall.",
+          "thingsToDo": [
+            "Snorkel the granite gullies at Cala Lazarina",
+            "Anchor and swim off Cala di Greco",
+            "Walk the trail to the Lavezzi memorials",
+            "Watch for fish in Cala di u Grecu"
+          ],
+          "mooringTip": "Anchor on the sand patches at Cala di Greco in 3-6 m and stay well off the yellow-buoyed protection zones. It's a fair-weather day anchorage only, exposed to swell, so plan to be back in Bonifacio or heading north before evening."
+        },
+        "6": {
+          "shortDescription": "The long haul north back up the west coast to Propriano, a proper resort marina at the head of the Gulf of Valinco.",
+          "description": "Here's the big mile-eater of the week, a long beat or reach north from the strait back into the Gulf of Valinco. Get away early. With the prevailing southwesterly you may carry a decent sailing angle much of the way, but the leg is exposed and best done in the morning's lighter air rather than the afternoon thermal at full strength. Propriano waits at the top of the gulf, a proper resort town with a big marina, cafes and restaurants lining the quay, and a harbour master who takes you onto the pontoon. After the wild anchorages of the south it feels almost busy. Reprovision here, do the laundry, and eat ashore; the seafront restaurants do good grilled fish and there's real choice. It's a comfortable, sheltered berth to regroup before the final run home.",
+          "thingsToDo": [
+            "Reprovision along the Propriano quay",
+            "Grilled fish at a seafront restaurant",
+            "Evening stroll the marina promenade",
+            "Swim at Propriano's Plage du Lido"
+          ],
+          "mooringTip": "Call Propriano's capitainerie on approach for a berth; the harbour team meets you on the pontoon, with water and power laid on. It's a well-sheltered marina, a good place to sit out any libeccio brewing offshore."
+        },
+        "7": {
+          "shortDescription": "The final leg back to base, tracing the Valinco coast and rounding Capo di Muro to close the loop at Ajaccio.",
+          "description": "The run home retraces the exposed headland at Capo di Muro before the coast eases into the Gulf of Ajaccio. It's around thirty miles, so leave in good time, especially if you have a fixed hand-back slot; charter bases usually want the boat back by evening or the following morning. If the timing is kind there's a case for one last swim stop in a cove short of the city, Portigliolo or the beaches below Coti-Chiavari, before the marina bustle. Ajaccio itself deserves an afternoon if you have it. The old town and Napoleon's birthplace, the citadel, and a last dinner ashore round the week off well. We tend to fuel up and settle the boat the evening before hand-back so the final morning is unhurried and nobody's chasing the clock.",
+          "thingsToDo": [
+            "Last swim at Portigliolo beach",
+            "Tour Napoleon's birthplace, Maison Bonaparte",
+            "Wander Ajaccio's old town and citadel",
+            "Farewell dinner on the Ajaccio quay"
+          ],
+          "mooringTip": "Refuel before returning to the Ajaccio charter berth, and confirm your hand-back time and pontoon with the base. Aim to be alongside with daylight to spare; the marina gets busy at turnaround and manoeuvring room is tight."
+        }
+      }
+    },
+    "alsace-canal-week": {
+      "metaTitle": "7-Day Alsace Canal & Boat Lift | Boat4You",
+      "metaDesc": "A relaxed 7-day canal loop from Hesse through the Arzviller boat lift, Lutzelbourg and Saverne, then west past the Gondrexange lakes to Lagarde.",
+      "days": {
+        "1": {
+          "shortDescription": "A short shakedown hop east from the Hesse base to Niderviller, home to a faience works that has fired porcelain for centuries.",
+          "description": "The first day is deliberately gentle. From the port at Hesse you drop the lines mid-morning, ease past the old Benedictine abbey that now serves as the village church, and settle into canal pace, which is walking pace with a coffee in hand. Two or three locks separate you from Niderviller, enough to get the crew working the ropes without any pressure. Niderviller earns its stop. The faience and porcelain manufactory here has been turning out tableware since the eighteenth century, and its shop is a short walk from the quay. The village keeps its window boxes full through summer. Tie up early, stretch your legs, and let everyone learn where the fenders live before tomorrow's big day at the Arzviller lift.",
+          "thingsToDo": [
+            "Tour the Niderviller faience and porcelain works",
+            "Buy hand-painted tableware at the manufactory shop",
+            "Walk to the Benedictine abbey church in Hesse",
+            "Practice lock handling on the quiet first locks"
+          ],
+          "mooringTip": "Niderviller's port de plaisance has a sheet-piling quay on the south side with water and power; the Neubruch quay just downstream takes about fifteen boats if the main basin fills up. Arrive by mid-afternoon in July."
+        },
+        "2": {
+          "shortDescription": "The headline day: two canal tunnels and the Arzviller boat lift drop you 45 metres down to Lutzelbourg, huddled under its ruined castle.",
+          "description": "Leave early. The Arzviller lift runs on a timetable and boats gather to descend in batches, so an unhurried breakfast beats a long wait at the top. Before you reach it, two tunnels test the nerves: the short Niderviller bore at 475 metres, then the long Arzviller tunnel at over 2,300 metres, lit but narrow, where you creep through in single file. Then comes the reason people book this canal. The Saint-Louis-Arzviller inclined plane carries your boat sideways down a 45-metre slope in a water-filled caisson, doing in minutes what seventeen old locks once took a full day to manage. Lutzelbourg waits below, wooden houses stacked under a broken castle keep. The Fournil des Écluisiers bakery does the morning croissants.",
+          "thingsToDo": [
+            "Ride the Saint-Louis-Arzviller inclined plane caisson",
+            "Motor through the 2,300-metre Arzviller tunnel",
+            "Climb to Lutzelbourg's ruined castle keep",
+            "Grab croissants at Fournil des Écluisiers"
+          ],
+          "mooringTip": "Lutzelbourg has a popular quay right in the village; in peak weeks it fills by early afternoon, so slot in before the lift's later boats arrive. Bollards line the bank for an easy step-off, and there is no need to reserve."
+        },
+        "3": {
+          "shortDescription": "Three easy hours down the wooded Zorn valley land you at Saverne, moored in the basin below the pink sandstone Château des Rohan.",
+          "description": "Short and scenic. The run down to Saverne takes about three hours through the wooded Zorn valley, a handful of locks breaking up the green. We usually leave by nine to have the afternoon free in town. Saverne rewards the walk. Moor in the wide basin and the Château des Rohan sits right across the water, a 140-metre sweep of pink sandstone they call the little Versailles of Alsace. The old town runs to half-timbered fronts and geranium boxes. If your legs are willing, the ruins of Haut-Barr sit on a ridge above town, the so-called Eye of Alsace, with views reaching toward Strasbourg and the Rhine on a clear day. For dinner, the Taverne Katz occupies a carved sixteenth-century house near the church.",
+          "thingsToDo": [
+            "Tour the pink sandstone Château des Rohan",
+            "Climb to the Haut-Barr ruins for the view",
+            "Wander Saverne's rose garden in bloom",
+            "Dine at the sixteenth-century Taverne Katz"
+          ],
+          "mooringTip": "The basin opposite the château is the prize berth and fills fast on summer afternoons; there is water and electricity, with a capitainerie on the quay. Aim to be tied up by two if you want a château view from the cockpit."
+        },
+        "4": {
+          "shortDescription": "Retrace the Zorn valley back to Lutzelbourg, a slow half-day that leaves the afternoon for the castle path and the crystal workshops.",
+          "description": "The same valley, read backwards, looks different. You climb rather than descend the locks today, and the light falls the other way across the wooded slopes. It is a genuine half-day, so there is no reason to rush the ropes. Plenty of crews break the run and tie up on a quiet stretch of bank for lunch in open country, which is one of the real pleasures of this canal. Back at Lutzelbourg, the footpath up to the castle ruin takes about twenty minutes and pays off with a long view down the valley you have just cruised. The village keeps a couple of small workshops trading on the area's glass and crystal heritage. Evening is for the terrace, a local Riesling, and an early night before the lift again.",
+          "thingsToDo": [
+            "Moor mid-canal for a countryside lunch",
+            "Hike the footpath to Lutzelbourg castle ruin",
+            "Browse the village crystal and glass workshops",
+            "Sip Alsace Riesling on the quay terrace"
+          ],
+          "mooringTip": "Anywhere the bank is piled or firm you can moor with stakes and a mallet in open country, so carry a couple of spare mooring pins. Back in Lutzelbourg the village quay is first-come, and an earlier arrival secures the good spots."
+        },
+        "5": {
+          "shortDescription": "Back up the boat lift and west past your home base to Xouaxange, where the canal threads between medieval monks' fishponds and the Gondrexange lake.",
+          "description": "Today you turn west and change scenery for good. The inclined plane lifts you back to the summit, the two tunnels pass in reverse, and beyond Niderviller the canal leaves the wooded gorge for open Lorraine. You will slide straight past Hesse without stopping, which can feel slightly odd on a round trip. The character softens out here. Water spreads into big shallow lakes, the étangs that Benedictine monks dug in the Middle Ages to farm carp, and reed beds replace the tree walls of Alsace. Xouaxange announces itself with a low stone bridge over the cut. Gondrexange, the largest of the lakes, sits just beyond, good for a swim off the boat or an hour with a rod. It is a quiet, birdy stretch, best taken slowly.",
+          "thingsToDo": [
+            "Ascend the Arzviller boat lift again",
+            "Swim off the boat in Étang de Gondrexange",
+            "Photograph Xouaxange's old stone canal bridge",
+            "Fish the reed-lined ponds at dusk"
+          ],
+          "mooringTip": "Moorings thin out west of Niderviller, so plan your stop rather than assume a quay. There are rural pontoons near Gondrexange and quiet piled banks around Xouaxange; the lakes shallow off at the edges, so keep to the marked channel."
+        },
+        "6": {
+          "shortDescription": "Deeper into rural Lorraine, the day finishes at Lagarde's busy pleasure port, with a chandlery for provisions and a canal-side kitchen at PK 209.",
+          "description": "The canal keeps its rural mood all the way to Lagarde. You pass the shoulder of the Gondrexange lakes, work through a run of locks near Héming, and roll on into the Lorraine nature park, herons lifting off the water ahead of the bow. It is easy cruising with time to talk. Lagarde is a proper waterway hub. The pleasure port carries around forty berths with diesel, water, showers and a chandlery-cum-grocery, which makes it the sensible place to restock before the last day. Right on the bank at kilometre point 209, the Restaurant PK 209 plates up Lorraine cooking and freshwater fish, with a terrace over the water for a warm evening. Book a table in high season; the port fills with hire crews doing the same loop.",
+          "thingsToDo": [
+            "Restock at the Lagarde port chandlery",
+            "Eat Lorraine fish on the PK 209 terrace",
+            "Watch herons over the nature park reaches",
+            "Top up fuel and water before the final leg"
+          ],
+          "mooringTip": "Lagarde is a full-service base with roughly forty berths, so book ahead in July and August when returning hire fleets crowd the pontoons. Fuel, water and pump-out are on site, making this the last easy top-up before Hesse."
+        },
+        "7": {
+          "shortDescription": "You close the loop east to the Hesse base at an easy pace, with time for a last swim and a detour to Sarrebourg's Chagall window.",
+          "description": "The loop closes gently. Turning back east, you cover familiar water through Gondrexange and Héming, but with the boat now in your hands it reads as calm rather than new. Leave enough margin for the locks; VNF crews knock off for lunch, and you want the boat cleaned and fuelled before hand-back time, not after. There is usually room for one more pause. A last swim in the lakes, or a short taxi from the canal into Sarrebourg to stand under Marc Chagall's blue stained-glass wall in the Chapelle des Cordeliers, rounds off the week nicely. Then it is the short final stretch into Hesse, past the abbey church, and back onto the home pontoon. Coil the ropes, and let the crew argue about which day was the best.",
+          "thingsToDo": [
+            "See Chagall's stained glass in Sarrebourg",
+            "Take a final swim in the Lorraine lakes",
+            "Pass Hesse's Benedictine abbey church by boat",
+            "Refuel and clean up before hand-back"
+          ],
+          "mooringTip": "Time your last locks around the midday break so you reach Hesse with a comfortable margin before the agreed return. Bases usually want the boat back by a set morning hour, so an overnight at Hesse the night before beats a dawn dash."
+        }
+      }
+    },
+    "brittany-islands-14-days": {
+      "metaTitle": "14-Day Morbihan & Belle-Ile | Boat4You",
+      "metaDesc": "Two weeks from Le Crouesty through the Gulf of Morbihan to Houat, Belle-Ile, Groix and Lorient. Anchorages, harbours and mooring tips for South Brittany.",
+      "days": {
+        "1": {
+          "shortDescription": "Catch the flood up the narrows into the Gulf of Morbihan and lock into the marina at the heart of old Vannes.",
+          "description": "The first leg is short but it runs on the clock, not the log. Time your departure so the flood carries you through the gap between Port-Navalo and Kerpenhir, where the Jument current runs hard on big coefficients. Once inside, the water calms and the channel to Vannes winds past oyster trestles and low green shores. The marina sits right in the old town, reached through a swing bridge and sill that only open around high water, so check the timetable before you commit. Ashore, the ramparts and the wash-houses along the Marle are worth an hour, and the lanes behind the cathedral are full of creperies. We usually arrive with time to walk the walls before dinner. Buy your bread and coffee here; it is the best-stocked stop of the whole loop.",
+          "thingsToDo": [
+            "Walk the medieval ramparts above the wash-houses",
+            "Creperie dinner in the old town lanes",
+            "Cathedral of Saint-Pierre and Place Henri IV",
+            "Provision fully at the city-centre market"
+          ],
+          "mooringTip": "The swing bridge and sill into Vannes basin open only for a window around high water, so plan your arrival and departure to the published timetable. Berths are in the heart of town and fill in July, so call the capitainerie ahead."
+        },
+        "2": {
+          "shortDescription": "A lazy morning in Vannes, then a short drift down the Gulf to the green lanes and mooring field of Ile aux Moines.",
+          "description": "Leave Vannes on the ebb and let the current do the work down to Ile aux Moines, the largest of the Gulf islands and its prettiest. The passage is only a few miles, but the tide sets hard through the narrows off Port-Blanc, so line up your timing and keep an eye on the transit. Pick up a buoy off Port du Lerio; the holding is patchy and the fairway busy, so a mooring beats the anchor here. Rent a bike from the quay and ride out to the Bois d'Amour and the megalith at the Pointe du Trech. The village keeps a couple of good spots for a plateau of oysters. Evenings are quiet once the day-trippers catch the last shuttle back to Port-Blanc.",
+          "thingsToDo": [
+            "Cycle the Bois d'Amour woodland path",
+            "Oyster platter at a Le Bourg terrace",
+            "Megalith and view at Pointe du Trech",
+            "Swim off Plage du Goret"
+          ],
+          "mooringTip": "Take a visitor buoy off Port du Lerio rather than anchoring; the fairway is narrow and the bottom uneven. Tidal streams run strongly past the island, so approach near slack water if you can."
+        },
+        "3": {
+          "shortDescription": "Ride the ebb out of the Gulf and reach across Quiberon Bay to France's most famous racing harbour on the River Crac'h.",
+          "description": "This is the day you leave the sheltered water behind. Slip out through the Port-Navalo narrows on the last of the ebb, then set a course west across Quiberon Bay, usually a fine reach in the afternoon sea breeze. The entrance to the River Crac'h is buoyed and straightforward, and the marina lies about a mile upstream past ranks of oyster barges under the Kerisper bridge. La Trinite is serious sailing country; Tabarly kept his boats here and the Spi Ouest-France still fills the pontoons every spring. Walk the quay to read the transom names on the racing hulls. For dinner, La Maison Quintin does oysters straight off the river, and Le Chantier serves plain grilled fish from an old oyster shed across the water.",
+          "thingsToDo": [
+            "Read the racing transoms along the pontoons",
+            "Oysters at La Maison Quintin terrace",
+            "Grilled fish at Le Chantier",
+            "Walk over the Pont de Kerisper"
+          ],
+          "mooringTip": "La Trinite is a large, well-run marina with a visitors' pontoon near the fuel berth; call ahead in regatta season when the Crac'h fills fast. The river current runs briskly, so approach your berth stemming the tide."
+        },
+        "4": {
+          "shortDescription": "Sail the open bay to car-free Houat and drop the hook off the long white dune arc of Treac'h er Goured.",
+          "description": "Houat sits out in the open bay, and the passage from La Trinite gives you a proper sail across ten miles or so of Quiberon water. The island is small, treeless and car-free, ringed by sand. On the east side, Treac'h er Goured curves for two kilometres of white dune, and in settled westerlies it makes a glorious day anchorage. Anchor off the beach clear of the marked cable zone, or pick up a buoy at Port Saint-Gildas on the north coast. The tiny village is a ten-minute walk up from the harbour, with a bakery and one or two places for crab. In a north-easterly the beach anchorage rolls at night, so shift round to the more sheltered water off Treac'h er Salus.",
+          "thingsToDo": [
+            "Walk the dune arc of Treac'h er Goured",
+            "Crab and langoustine in the village",
+            "Coast path around Pointe de Beg Pell",
+            "Swim off the white eastern beaches"
+          ],
+          "mooringTip": "The Port Saint-Gildas buoy field has 25 to 30 visitor moorings and fills early in August, so arrive by mid-afternoon. For a settled night, anchor off Treac'h er Salus, which shelters better from the overnight north-easterly breeze."
+        },
+        "5": {
+          "shortDescription": "A short hop south to Houat's wilder little sister, Hoedic, all heath, forts and empty beaches.",
+          "description": "Hoedic lies only a few miles south of Houat, so this is a morning of easy sailing and an afternoon ashore. The island is even smaller and quieter than its neighbour, a low carpet of heath and dune with a handful of houses at the centre. Pick up a buoy in Port de l'Argol, the little harbour on the west side, or anchor off in calm weather. There are no cars and barely a shop, which is rather the point. Walk out to the old Fort d'Hoedic and the chapel, then down to the Plage de la Vierge for a swim. Evenings here are about as still as sailing in France gets. Bring what you need from Houat; provisioning on Hoedic is thin.",
+          "thingsToDo": [
+            "Explore the restored Fort d'Hoedic",
+            "Swim at the Plage de la Vierge",
+            "Walk the heath to the lighthouse",
+            "Sundowner on deck in total quiet"
+          ],
+          "mooringTip": "Port de l'Argol offers visitor buoys but little shelter in strong westerlies, so check the forecast before committing to a night. Provisions are minimal, so top up food and water at Houat first."
+        },
+        "6": {
+          "shortDescription": "Cross to Belle-Ile, the biggest of the Breton islands, and berth beneath the Vauban citadel guarding busy Le Palais.",
+          "description": "Belle-Ile earns its name and its reputation, and the crossing from Hoedic runs about fifteen miles across open water, so pick a settled window. Le Palais is the island's front door, a working harbour under the great star-shaped Citadelle Vauban that Louis XIV's engineer built to hold the approaches. It gets crowded in season; expect to raft three or four deep on the outer pontoons, or lock into the inner basin when the gate opens near high water. Once tied up, the town has everything after days on the outer islands: chandlery, markets, a cinema, and proper restaurants. Tour the citadel ramparts for the view back over the masts. Hire bikes or a car here if you plan to see the wild south coast and the Aiguilles de Port-Coton.",
+          "thingsToDo": [
+            "Tour the star-shaped Citadelle Vauban",
+            "Bike to the Aiguilles de Port-Coton",
+            "Market shopping on the quay",
+            "Cinema or a proper restaurant dinner"
+          ],
+          "mooringTip": "Le Palais fills fast in July and August, so arrive before midday and expect to raft several boats deep on the visitor pontoons. The inner basin gate opens only around high water, so time it or take an outer berth."
+        },
+        "7": {
+          "shortDescription": "Just a few miles round the coast to Sauzon, Belle-Ile's prettiest port, all pastel quays and a drying tidal creek.",
+          "description": "You could almost walk it, but sailing round from Le Palais to Sauzon is the nicer way to arrive. Sauzon sits at the head of a narrow tidal inlet on the north-west coast, a curve of pastel houses and a slim lighthouse at the entrance. Most of the harbour dries, so visitors pick up fore-and-aft moorings on the trots in the channel; the deeper berths at the outer end stay afloat. It is calmer and more genteel than Le Palais, made for a slow afternoon. Walk the coast path out to the Pointe du Cardinal, then come back for dinner. The Hotel du Phare on the quay has a terrace over the water and does the day's catch simply and well.",
+          "thingsToDo": [
+            "Coast path to the Pointe du Cardinal",
+            "Dinner on the Hotel du Phare terrace",
+            "Photograph the pastel quayside houses",
+            "Walk out to the harbour lighthouse"
+          ],
+          "mooringTip": "Most of Sauzon dries, so take a fore-and-aft trot mooring in the channel and check you have the depth over low water for your draft. The outer moorings stay afloat; ask the harbourmaster where to lie."
+        },
+        "8": {
+          "shortDescription": "A longer open-water leg north-west to Ile de Groix and its old tuna harbour of Port Tudy.",
+          "description": "This is the longest single hop of the trip, roughly twenty miles of open Atlantic from Belle-Ile up to Groix, so leave early and watch the forecast for anything in the west. Groix rewards the effort. Port Tudy, on the north coast, was once one of France's great tuna ports, and the stone quays and old canning sheds still frame the basin. The marina is popular and takes no reservations, so you raft up where the harbourmaster points you. Ashore, walk or cycle out to the Plage des Grands Sables, a rare convex beach that shifts shape with the currents. The island keeps a tuna festival in its bones and a good line in seafood. We like the quiet of Port-Lay, the tiny cove just west of the main harbour.",
+          "thingsToDo": [
+            "Cycle to the convex Plage des Grands Sables",
+            "Wander the old canning sheds at Port Tudy",
+            "Sunset walk to tiny Port-Lay",
+            "Seafood on the Port Tudy quay"
+          ],
+          "mooringTip": "Port Tudy takes no bookings and rafts boats deep in season, so arrive by early afternoon and be ready to lie alongside another yacht. The outer trots roll in northerly swell; the inner basin is calmer if there is room."
+        },
+        "9": {
+          "shortDescription": "A short sail east into the great bay of Lorient, France's sailing city, past the concrete submarine pens.",
+          "description": "Groix to Lorient is a gentle seven miles, so there is no rush off the mooring. The entrance to the bay is wide and well marked, but the ferries and fishing boats keep you alert, and the ebb can run hard in the channel. Lorient is where French offshore racing lives. The old German submarine base at Keroman now holds the Cite de la Voile Eric Tabarly and a pontoon full of IMOCA and Ultim campaign boats; you can often watch a crew working on a foiling giant. The city-centre marina is handy for provisioning and a night off the islands. It is not pretty in the postcard sense, but for anyone who follows the Vendee Globe it is close to a pilgrimage. Restock the boat here before turning south again.",
+          "thingsToDo": [
+            "Cite de la Voile Eric Tabarly museum",
+            "See the IMOCA and Ultim racing pontoons",
+            "Tour the Keroman submarine base",
+            "Full provisioning run in the city"
+          ],
+          "mooringTip": "Lorient has several marinas; the city-centre pontoons are the most convenient for shops and the train. Watch the strong ebb and the commercial and ferry traffic on the way in, and call ahead in race weeks when berths vanish."
+        },
+        "10": {
+          "shortDescription": "Back out to Groix for a beach day, anchoring off the pale sands rather than squeezing into Port Tudy.",
+          "description": "Turn back out to Groix, but this time treat it as a day on the water rather than a harbour stop. In a westerly the anchorage off the Plage des Grands Sables on the east coast is hard to beat, a sweep of pale sand shelving into clear green shallows. Drop the hook off the beach and row ashore for a swim and a walk to Locmaria. If the wind swings into the east, tuck instead into the lee on the south side or go back to a buoy at Port Tudy. This is a good spare day to slow down, do a little maintenance, and let the crew off the leash. Time your evening move so you are settled before the sea breeze dies and the anchorage empties out.",
+          "thingsToDo": [
+            "Anchor and swim off Plage des Grands Sables",
+            "Walk to the village of Locmaria",
+            "Snorkel the clear green shallows",
+            "Lazy lunch at anchor"
+          ],
+          "mooringTip": "In westerlies the Grands Sables anchorage is calm and sandy; in easterlies it becomes untenable, so move to the south coast or into Port Tudy. Set the anchor well, as the tide turns the boats through the day."
+        },
+        "11": {
+          "shortDescription": "Retrace the open water south back to Belle-Ile, usually a fast downwind run to Le Palais.",
+          "description": "The leg back to Belle-Ile covers the same twenty miles of open water, but in the prevailing westerly it usually runs the other way from day eight, downwind and quick. Poled out or under gennaker, you can eat the miles before lunch. Le Palais will feel familiar now, and a second night lets you see the parts of the island you missed. Rent bikes and ride the wild south coast to the Grand Phare and the needle rocks of Port-Coton, where the swell breaks white against the cliffs that Monet painted. If the harbour is full again, the anchorage off the citadel is fair in offshore winds. Provision for the run home; the outer islands ahead are thin on shops, and the Gulf is still two days away.",
+          "thingsToDo": [
+            "Bike to the Grand Phare lighthouse",
+            "See the Aiguilles de Port-Coton cliffs",
+            "Second look around Le Palais old town",
+            "Provision for the outer islands"
+          ],
+          "mooringTip": "As on day six, Le Palais is busiest at midday; a mid-morning arrival off a fast downwind leg helps you find a raft space. In steady offshore wind the anchorage below the citadel is a quieter alternative."
+        },
+        "12": {
+          "shortDescription": "Short reach back to Houat for a final island beach day before turning into the Gulf for home.",
+          "description": "A short reach east brings you back to Houat, and with the outer legs behind you there is no reason to hurry. This is the trip's last real island day, so make it count. If the wind holds in the west, anchor off Treac'h er Goured again and spend the afternoon on that long white beach, or take the coast path right around the island in a couple of easy hours. The village bakery does a good far breton if you time it before the shelves empty. Grab a buoy at Port Saint-Gildas for the night, or lie off Treac'h er Salus if the breeze backs north. Watch the forecast closely now; tomorrow's run into the Gulf wants a reasonable window and a fair tide at the entrance.",
+          "thingsToDo": [
+            "Last swim off Treac'h er Goured",
+            "Coast path loop around the island",
+            "Far breton from the village bakery",
+            "Sunset drinks at Port Saint-Gildas"
+          ],
+          "mooringTip": "Take a Port Saint-Gildas buoy for the night and settle early, as the field fills in high summer. If the wind backs into the north, the anchorage off Treac'h er Salus is the calmer choice for sleeping."
+        },
+        "13": {
+          "shortDescription": "Cross Quiberon Bay back to home base at Le Crouesty, timing your arrival for the tidal gate off Port-Navalo.",
+          "description": "The last full leg takes you back across Quiberon Bay to Le Crouesty, the big marina just outside the mouth of the Gulf. It is an easy sail in normal conditions, ten miles or so, often a beam reach in the sea breeze. Crouesty is a deep-water port that stays open on all tides, so there is no gate to catch on arrival, which makes it a relaxed place to end the sailing. Once berthed, walk round the headland to Port-Navalo for a last look at the Gulf entrance and the fierce current running through the narrows. The marina has fuel, water and a chandlery for anything you need to square away. If the boat is due back clean and full, this is the evening to start, not tomorrow morning.",
+          "thingsToDo": [
+            "Walk the headland to Port-Navalo village",
+            "Watch the current race through the narrows",
+            "Refuel and top up water at Crouesty",
+            "Farewell seafood dinner at the marina"
+          ],
+          "mooringTip": "Le Crouesty is a large all-tide marina, so arrival timing is easy, but call the capitainerie for a visitor berth in peak weeks. Fuel up on arrival to avoid the morning queue on handover day."
+        },
+        "14": {
+          "shortDescription": "A buffer day at Le Crouesty: a short local potter, a final swim, or simply pack up and hand back the boat.",
+          "description": "The final day is deliberately loose. Most charters hand the boat back this morning, so it is really an insurance day against a blow that might have stranded you on the islands. If the weather has been kind and you are ahead, use it. A short potter up to Port-Navalo and a swim off the Gulf beaches makes a gentle last morning before you clear the cabins. Otherwise, this is time for the unglamorous end of a trip: strip the bunks, run the last of the provisions into a lunch, settle the fuel and the paperwork, and check nothing has crept under a floorboard. Two weeks around these islands leaves most crews already plotting the next loop. Le Crouesty makes an easy place to say goodbye to the boat.",
+          "thingsToDo": [
+            "Short morning sail to Port-Navalo",
+            "Final swim off the Gulf beaches",
+            "Strip bunks and clear the cabins",
+            "Settle fuel, water and paperwork"
+          ],
+          "mooringTip": "Keep the boat on its Le Crouesty berth for the handover and confirm the check-out time with the base. If you take a short morning sail, be back well before the agreed return so the crew can inspect on schedule."
+        }
+      }
+    },
+    "burgundy-saone-week": {
+      "metaTitle": "7-Day Saône & Doubs Loop | Boat4You",
+      "metaDesc": "A relaxed 7-day river loop from Saint-Jean-de-Losne through Auxonne, Dole and Verdun-sur-le-Doubs, with easy locks, town quays and Burgundy cooking.",
+      "days": {
+        "1": {
+          "shortDescription": "An easy upstream shakedown from France's biggest inland port to Auxonne, the garrison town where young Napoleon learned his gunnery.",
+          "description": "Collect the boat at Saint-Jean-de-Losne, run through the handover, and point the bow upstream on the Grande Saône. It is a gentle first leg, roughly five hours against a lazy current, with big automated locks that do the work for you. The river runs wide and green here, past willows and the odd fisherman. Auxonne appears behind its Vauban ramparts. Napoleon trained as an artillery lieutenant in the barracks by the Place d'Armes, and the Château Louis XI now keeps a small museum to those years. Tie up at Port Royal or along the town quay, then walk the Porte de Comté and the tall Notre-Dame church before dinner. We usually leave the base by ten so there is time to settle in and still stroll the old streets before the light goes.",
+          "thingsToDo": [
+            "Tour the Napoleon museum in Château Louis XI",
+            "Walk the Vauban ramparts and Porte de Comté",
+            "See the 13th-century Notre-Dame church on Place d'Armes",
+            "Browse the covered market for provisions"
+          ],
+          "mooringTip": "Port Royal has pontoon berths with water and power; the free town quay downstream fills up first in July and August, so aim to arrive before mid-afternoon."
+        },
+        "2": {
+          "shortDescription": "Drop back down the Saône, turn up the Rhône–Rhin canal, and tie up below Dole's tall Notre-Dame tower in Louis Pasteur's home town.",
+          "description": "This is the longest run of the week, so an early start pays off. Slip down the Saône to the hamlet of Saint-Symphorien, where the Canal du Rhône au Rhin peels off toward the Jura. From here the water narrows and the small locks begin, the canal weaving in and out of the Doubs through wooded banks. Dole arrives in the afternoon. Its port sits right below the collegiate church of Notre-Dame, a minute's walk from the Canal des Tanneurs and the cobbled tannery quarter where the old mills are now studios and bistros. Louis Pasteur was born on this waterside in 1822, and his childhood house still stands by the water. We tend to moor, shower, and head straight up into the old town for an apéritif before the restaurants fill.",
+          "thingsToDo": [
+            "Visit Louis Pasteur's birthplace on the tanners' canal",
+            "Climb toward the Notre-Dame collegiate church tower",
+            "Wander the cobbled Canal des Tanneurs quarter",
+            "Try a Jura Savagnin wine at a bistro"
+          ],
+          "mooringTip": "Dole's hire-base pontoon and the town quay offer water, power and showers for a modest night fee. It is a popular stop in high season, so call the harbourmaster ahead or arrive before the locks close for the day."
+        },
+        "3": {
+          "shortDescription": "Retrace the leafy Rhône–Rhin canal down to Saint-Symphorien, a quiet junction hamlet where the locks give way to open river.",
+          "description": "A calmer day, and a pretty one. The canal back from Dole runs slow and shaded, herons lifting off the reeds as you pass, the Doubs glinting through the trees where the two channels braid together. The locks come at an easy rhythm, most of them worked by the boat's remote or the resident keeper. Saint-Symphorien itself is barely more than a church, a lock and a stone quay at the point where the Canal du Rhône au Rhin meets the Saône. That is the appeal. After a busy day in Dole, it is a spot to slow down, fish off the bank, and cook aboard. If the mood takes you, it is a short hop on to Saint-Jean-de-Losne for supplies, but there is no need to rush.",
+          "thingsToDo": [
+            "Watch the Doubs and canal braid together",
+            "Fish or picnic from the stone quay",
+            "Photograph the village church at the junction",
+            "Cook aboard with market produce from Dole"
+          ],
+          "mooringTip": "Moor to the stone quay on the left bank just below the junction lock. Services here are basic, so top up water and shop in Dole or nearby Saint-Jean-de-Losne beforehand."
+        },
+        "4": {
+          "shortDescription": "An open-water cruise down the Saône to Seurre, a former shipbuilding town with a secure marina steps from its main square.",
+          "description": "Back on the broad Saône, the pace changes again. This stretch is proper river cruising: few locks, wide bends, and long views over the water meadows of the Bresse. Keep an eye out for herons and, if you are lucky, a kingfisher along the banks. Seurre sits on the right, its wooded islands and the old Mignot Bay basin sheltering the marina. The town built river barges for generations, and the quiet quays still carry that working-river feel. Step ashore into a tidy grid of streets, a couple of boulangeries, and the Écomusée that tells the Saône's story. We often break here mid-week to reprovision properly. It is an easy town to like, unhurried, with enough of a kitchen scene to make dinner ashore worthwhile.",
+          "thingsToDo": [
+            "Visit the Écomusée in the old town",
+            "Stroll the Saône islands and river path",
+            "Restock at the boulangeries near the square",
+            "Watch for kingfishers along the banks"
+          ],
+          "mooringTip": "The marina sits in the sheltered Mignot Bay basin with a digicode gate, water and power, and only takes boats under about 18 metres. Book by phone in July and August, as the pontoons are close to town and popular."
+        },
+        "5": {
+          "shortDescription": "Cruise on to Verdun-sur-le-Doubs at the meeting of two rivers, home of pôchouse, the local white-wine freshwater fish stew.",
+          "description": "The turning point of the loop, and arguably the tastiest. A steady run down the Saône brings you to where the Doubs pours in from the east, and the little town of Verdun-sur-le-Doubs sits right on the join. The Port de la Confluence is friendly and well kept, with a brasserie, a wine bar and a launderette on the quay. What people really come for is pôchouse: a stew of river fish browned and simmered in Burgundy white, served over garlic-rubbed croutons, a recipe locals have guarded since the sixteenth century. Book a table and order it. Afterwards, walk the short heritage trail through the old streets and cross the footbridge to the Île du Château, an island of gardens in mid-river. It is a fine place to watch the day end.",
+          "thingsToDo": [
+            "Order pôchouse at a quayside restaurant",
+            "Walk the 1.6 km heritage trail",
+            "Cross to the Île du Château gardens",
+            "Sit at the port's wine bar"
+          ],
+          "mooringTip": "Port de la Confluence lies about 500 metres up the Doubs from the actual junction; take the marked channel, not the main flow, and call ahead in summer for one of the 25 visitor berths."
+        },
+        "6": {
+          "shortDescription": "Turn for home up the Saône, retracing quiet water back to Seurre for a second, more relaxed evening on familiar pontoons.",
+          "description": "Homeward now, and no hurry about it. Cruising upstream on the Saône is slower than the run down, but the current here is mild and the locks are big and forgiving. Take the morning over it. This is the day to try the things you skipped: drop the boat's dinghy or a kayak in a quiet reach, swim off a shelving bank if the weather is warm, or simply sit up top with a coffee and watch the Bresse slide by. Seurre welcomes you back in the afternoon. Knowing the marina already, you can tie up quickly and give the evening to the town, a longer dinner, a walk along the islands, a nightcap on deck. Second nights in a place you liked are one of the underrated pleasures of a week afloat.",
+          "thingsToDo": [
+            "Swim off a quiet shelving bank",
+            "Kayak a calm reach of the Saône",
+            "Return to a favourite Seurre restaurant",
+            "Walk the river islands at dusk"
+          ],
+          "mooringTip": "You already know the Mignot Bay pontoons, so aim to arrive by late afternoon and use the digicode gate. If the visitor berths are full, the harbourmaster can usually point you to a spare finger."
+        },
+        "7": {
+          "shortDescription": "A short final leg up the Saône back to Saint-Jean-de-Losne, France's busiest inland port and the junction of two great waterways.",
+          "description": "The last morning is a gentle one. It is a short upstream hop from Seurre to Saint-Jean-de-Losne, a couple of hours with a lock or two, so there is no rush to cast off at dawn. Ease back into the big marina where the week began, one of the largest inland ports in France and the point where the Canal de Bourgogne meets the Saône. There is life here: chandlery, workshops, barges of every vintage tied three deep. If your handover is not until morning, spend the last afternoon walking the quays, watching boats lock through, and finding a table at one of the waterside cafés for a final Burgundy glass. Rinse the freshwater off the deck, pack slowly, and let the trip settle. A loop like this ends where it started, but you arrive back a different sort of tired.",
+          "thingsToDo": [
+            "Watch boats lock through at the junction",
+            "Browse the chandlery and river shops",
+            "Toast the trip at a waterside café",
+            "See the Burgundy Canal's first lock"
+          ],
+          "mooringTip": "Return berths at the H2O marina are assigned by the base, so radio or phone ahead as you approach. Give yourself time to reverse gently onto the pontoon, as the Saône's current runs past the entrance."
+        }
+      }
+    },
+    "canal-du-midi-14-days": {
+      "metaTitle": "14-Day Canal du Midi Cruise | Boat4You",
+      "metaDesc": "Two weeks on the Canal du Midi from Port Cassafieres: Fonseranes locks, Carcassonne, Castelnaudary cassoulet, Le Somail and the oysters of Marseillan.",
+      "days": {
+        "1": {
+          "shortDescription": "A gentle shakedown leg west to Agde, where the round lock and a black basalt cathedral set the tone for the fortnight ahead.",
+          "description": "Take the first day slowly. It is the leg where the crew learns which way the bow swings and how the boat sits under power. From Port Cassafieres the canal runs down toward Agde, a town cut from black volcanic basalt that gives it a stern, unusual look. The centrepiece here is the écluse ronde, a circular lock dating from the 1670s with gates opening three ways, toward Béziers, the Hérault river and the town itself. Lock keepers handle the mechanics, but keep fenders low and lines ready. Walk into the old town for the fortified Cathédrale Saint-Étienne, also basalt, its walls almost windowless. We usually provision properly here before heading upstream. There is a decent market and enough shops to fill the lockers for the days when villages thin out.",
+          "thingsToDo": [
+            "See the 17th-century écluse ronde d'Agde",
+            "Visit the basalt Cathédrale Saint-Étienne",
+            "Provision at Agde's covered market",
+            "Walk the black-stone old town lanes"
+          ],
+          "mooringTip": "Agde's round lock is a highlight, not a hazard, but arrive before the 12:30 to 13:30 lunch closure or you will wait it out. Town-quay berths fill fast in July, so a bank mooring on stakes just short of Agde is quieter."
+        },
+        "2": {
+          "shortDescription": "Retrace east and climb the Fonseranes staircase into Béziers, birthplace of the canal's engineer and home to a hilltop cathedral.",
+          "description": "Today has the trip's signature climb. You backtrack past Port Cassafieres, cross the Orb on a long stone aqueduct, then face Fonseranes: eight linked oval chambers lifting boats more than twenty metres in a single flight. It is the busiest spot on the whole canal, so expect a queue and a crowd of onlookers on the banks. Take it in turns on the lines and let the eclusier set the pace. Béziers itself sits above the river, crowned by the Cathédrale Saint-Nazaire, whose terrace gives a long view over the vineyards. This was Pierre-Paul Riquet's home town, and there is a statue of him on the Allées Paul Riquet, a shaded avenue good for an evening stroll and a beer.",
+          "thingsToDo": [
+            "Climb the eight-chamber Fonseranes lock flight",
+            "Cross the Pont-canal over the Orb",
+            "See Cathédrale Saint-Nazaire's hilltop terrace",
+            "Stroll the shaded Allées Paul Riquet"
+          ],
+          "mooringTip": "Moor at the basin below Fonseranes or on the pound above it, then walk or cycle the fifteen minutes into Béziers. The staircase only runs in set uphill and downhill sessions, so check the day's timetable at the lock hut rather than turning up and hoping."
+        },
+        "3": {
+          "shortDescription": "Onto the lockless long pound, through the little Malpas tunnel to Capestang, where one of the canal's lowest bridges tests your air draft.",
+          "description": "After the exertion of Fonseranes, this is a restful day with no locks at all. You join the grand bief, the fifty-four kilometre pound that Riquet held level across the plain. Not far along comes Malpas, the first canal tunnel ever dug, short and dim but only wide enough for one boat, so sound your horn and check nothing is coming the other way. Above it sits the Oppidum d'Ensérune, an Iron Age hilltop settlement worth the climb if you moor at Colombiers. Capestang closes the day, its huge Collégiale Saint-Étienne visible for miles over the vines. Mind the bridge on the approach, as it is among the lowest on the network and skippers with tall wheelhouses have been caught out here.",
+          "thingsToDo": [
+            "Motor through the 161m Malpas tunnel",
+            "Climb to the Oppidum d'Ensérune",
+            "See the Collégiale Saint-Étienne de Capestang",
+            "Taste Minervois wine in the village"
+          ],
+          "mooringTip": "Capestang's port has around thirty berths with water, power and showers, handy after a dry run along the pound. Measure your air draft before the low road bridge on the way in; if in doubt, drop anything on the coachroof and cross slowly."
+        },
+        "4": {
+          "shortDescription": "A slow amble along the pound to Le Somail, a one-bridge canal hamlet with a floating grocer and a barn of old books.",
+          "description": "Still no locks, so there is no reason to rush. The pound winds on past Poilhes, a good spot for a late lunch on the water, and then reaches Le Somail. This is the village people remember most from a Midi trip. A humpbacked stone bridge from Riquet's era spans the cut, and beside it floats an old barge that still trades as a grocer. A few steps on you find Le Trouve Tout du Livre, a rambling shop with tens of thousands of second-hand books and prints stacked to the rafters. There is a 17th-century ice house nearby and a small chapel. The Canal de la Robine branches off toward Narbonne here, though that is a detour for another trip.",
+          "thingsToDo": [
+            "Browse Le Trouve Tout du Livre bookshop",
+            "Buy supplies from the floating épicerie barge",
+            "Lunch on the water at Poilhes",
+            "See the old glacière ice house"
+          ],
+          "mooringTip": "Le Somail is small and popular, so the quay fills by mid-afternoon in season; arrive early or moor on the bank just outside the village and walk in. There is a mooring fee at the port itself, payable to the harbour office."
+        },
+        "5": {
+          "shortDescription": "Past riverside wine cellars to Homps, an old barrel port on the edge of the Minervois where the locks start again.",
+          "description": "The lockless run ends today. You pass Ventenac-en-Minervois, where a grand old cellar sits right on the bank and sells the local red, and then Paraza with its château above the water. At Argens-Minervois the pound finally gives way and the locks resume, so the pace slows and the crew earns its lunch again. Homps was once a serious wine port, the place where barrels of Minervois and Corbières were loaded for the long haul down to Bordeaux. Today it is a lively base with restaurants along the quay and a good spot to break the journey. We often stop early here, buy a few bottles from a nearby domaine, and eat aboard as the light goes soft over the water.",
+          "thingsToDo": [
+            "Taste Minervois red at Ventenac's cellar",
+            "See Château de Paraza above the canal",
+            "Work the first Argens-Minervois lock",
+            "Dine on the quay at Homps"
+          ],
+          "mooringTip": "Homps is a hire base, so berths can be tight on Saturday changeover days; a weekday night is easier. Moor bows-in along the town quay for power and water, or find a quiet bank stretch just east of the village if you prefer stakes and silence."
+        },
+        "6": {
+          "shortDescription": "A working day of locks through Minervois villages to Trèbes, ending at a triple staircase beside a good produce market.",
+          "description": "This is a proper lock day, so set an early start and settle into a rhythm. The canal threads through La Redorte, Puichéric and Marseillette, each with its own chamber or two, and the crew soon has the drill down: fender, line, ease off, wait for the level. Vineyards run right to the towpath for much of it. Trèbes arrives at the end behind a three-chamber staircase, one of those spots where you handle three locks back to back and are glad of the break afterward. The village keeps a genuinely good line of local produce, wine, olives, confit and jam among it, so it is a fine place to restock. Waterside tables make an easy dinner once the boat is tied up.",
+          "thingsToDo": [
+            "Work the three-chamber Trèbes staircase lock",
+            "Buy confit and olives in Trèbes",
+            "Pass the vineyards at Marseillette",
+            "Eat at a canal-side table in Trèbes"
+          ],
+          "mooringTip": "Time your approach to Trèbes so you clear the staircase before the 12:30 lunch break, or you will sit above it for an hour. The town quay has services and fills quickly, so a berth secured by early afternoon saves circling."
+        },
+        "7": {
+          "shortDescription": "A short hop with a couple of locks into Carcassonne, whose floodlit medieval Cité is the set-piece of the whole route.",
+          "description": "A gentle leg after yesterday's grind, with only a handful of locks to lift you toward Carcassonne. Tie up at the Port du Canal in the lower town, the Bastide Saint-Louis, which is a grid of 13th-century streets in its own right. The reason everyone comes, though, is above it: the Cité, a walled fortress of fifty-two towers restored by Viollet-le-Duc in the 1800s and now on the UNESCO list. It is a stiff twenty-minute walk up or a short bus ride from the port. Go late in the day when the coach crowds thin and the ramparts turn gold, then walk the outer walls after dark when the whole thing is lit. Book a table inside the walls for cassoulet if you can.",
+          "thingsToDo": [
+            "Walk the ramparts of the medieval Cité",
+            "See Château Comtal inside the walls",
+            "Wander the Bastide Saint-Louis lower town",
+            "Eat cassoulet within the fortress walls"
+          ],
+          "mooringTip": "Carcassonne's Port du Canal is central but limited, so aim to arrive by early afternoon in high season. It is a walk or a quick bus up to the Cité; leave the boat and do not try to move it late, as the surrounding locks shut at 19:00."
+        },
+        "8": {
+          "shortDescription": "Head upstream through quiet locks to Bram, a rare circular village wound in rings around its old church.",
+          "description": "West of Carcassonne the canal grows quieter and the boats thin out. You climb steadily through a run of locks with long green stretches between them, the kind of day where the towpath cyclists become your main company. Bram is the stop, and it is unusual: the old village is a circulade, laid out in concentric rings around a former castle site, with a 13th-century church at the hub. Wander in from the port and the streets curl you around almost without meaning to. It is one of the oldest settlements in the Aude, and small enough to see in an hour. There is not much bustle here, which is rather the point after the crowds at the Cité.",
+          "thingsToDo": [
+            "Walk Bram's concentric circulade streets",
+            "See the 13th-century village church",
+            "Cycle the shaded towpath west of Carcassonne",
+            "Picnic on a quiet lock lawn"
+          ],
+          "mooringTip": "Bram's mooring is small and calm, with a short walk into the village. If the port is full, the banks on the approach take stakes easily and the towpath here is firm; just keep clear of the lock cut so working boats can pass."
+        },
+        "9": {
+          "shortDescription": "A lock-heavy climb to Castelnaudary, opening onto the canal's widest basin in the town that invented cassoulet.",
+          "description": "Save your energy, because this short stretch is thick with locks, seventeen chambers packed into sixteen kilometres. It is slow, methodical work, and worth leaving by nine to stay ahead of other boats and the midday closure. The climb finishes at the Saint-Roch staircase, a four-chamber flight that lifts you into Castelnaudary. There the canal suddenly opens into the Grand Bassin, the widest expanse of water on the whole Midi, almost a small lake in the middle of town. Castelnaudary is the home of cassoulet, the slow-cooked bean and confit dish that turns up on every menu here. Order it properly, with a local red, and do not plan to move far afterward. This is the turning point of the fortnight.",
+          "thingsToDo": [
+            "Climb the four-chamber Saint-Roch lock flight",
+            "Moor on the open Grand Bassin",
+            "Eat authentic cassoulet in town",
+            "Buy a cassole pot as a souvenir"
+          ],
+          "mooringTip": "The Grand Bassin gives plenty of room to moor, but it is open and can get choppy when the wind funnels across it, so take a berth on the sheltered town side. Clear the Saint-Roch staircase before the lunch closure; it is a bottleneck when several boats bunch up."
+        },
+        "10": {
+          "shortDescription": "Turn for home and run the seventeen locks back down to Carcassonne, an easier descent but a long day at the ropes.",
+          "description": "Now you turn the boat and start back east. The same seventeen locks you climbed yesterday come again, this time downhill, which is gentler on the engine but no shorter on the clock. Descending, you drop into each chamber and pay out line as the water falls, so keep hands clear of cleats under load. Leaving Castelnaudary early makes all the difference; the lunchtime shutdown at 12:30 can strand you between flights if you dawdle. Break the monotony at the villages along the way, and take on water where you can. By late afternoon Carcassonne's towers come back into view, and there is no shame in a second night below the Cité if the light is good and the ropes have earned it.",
+          "thingsToDo": [
+            "Descend the seventeen locks toward Carcassonne",
+            "Top up water at a village tap",
+            "Photograph the Cité from the canal",
+            "Spend a second evening below the ramparts"
+          ],
+          "mooringTip": "Descending locks is easier on the crew but watch the lines as the boat drops; never make fast to a bollard on a falling level. If you reach Carcassonne late, the Port du Canal berths may be taken, so have a bank spot on the eastern approach in mind as backup."
+        },
+        "11": {
+          "shortDescription": "Back east through Trèbes and the Minervois locks to Homps, retracing the prettiest wine country of the route.",
+          "description": "The return run continues through country you already know, which is no bad thing on a canal, since the second pass shows you what the first missed. You drop through Trèbes and its staircase again, then work the chain of Minervois locks back toward Homps. Vineyards line most of the way, and by now the crew handles the ropes without thinking. It is a good day to slow the pace, stop at a village you skipped on the way up, and buy wine straight from a cellar door rather than a shop. Homps welcomes you back with its quayside tables. If the weather holds, eat outside and watch the hire boats jockey for berths as the afternoon winds down.",
+          "thingsToDo": [
+            "Descend the Trèbes staircase eastbound",
+            "Buy wine at a Minervois cellar door",
+            "Revisit a village skipped on the climb",
+            "Dine quayside again at Homps"
+          ],
+          "mooringTip": "You know Homps by now, so aim for the same quay and grab a spot before the changeover rush if it is a Saturday. Bank moorings just outside town stay calmer overnight and put you a short walk from the restaurants."
+        },
+        "12": {
+          "shortDescription": "Drop through the last Argens locks onto the long pound and glide, lock-free, past Le Somail to Capestang.",
+          "description": "One more short bout of locks and then the easy water returns. You descend at Argens-Minervois and rejoin the grand bief, that long level pound where the boat simply runs and the crew can put the winch handles away. This is the day to enjoy the ride: coffee on the foredeck, a slow drift under the plane trees, a second look at Le Somail if you want to top up the book collection. The kilometres pass without effort as far as Capestang, back beneath its watchful collegiate church. After the lock-work of the past week, a lockless afternoon feels like a small holiday within the holiday. Keep an eye on that low bridge again on the way in.",
+          "thingsToDo": [
+            "Descend the Argens-Minervois lock westbound",
+            "Drift the lockless grand bief under plane trees",
+            "Stop again at Le Somail's bookshop",
+            "Return to Capestang's shaded port"
+          ],
+          "mooringTip": "With no locks to time on the pound, you can arrive at Capestang later than usual, but the berths still go to early birds in summer. Re-check your air draft at the low bridge; nothing about it has changed since day three."
+        },
+        "13": {
+          "shortDescription": "The big day: down Fonseranes, past Agde and out across the Étang de Thau to Marseillan's oysters and vermouth.",
+          "description": "This is the longest push of the trip, so leave at first light. You run the last of the pound, then descend the Fonseranes staircase, cross back over the Orb and carry on past Port Cassafieres toward the sea. At Agde the round lock turns you toward the coast, and beyond it the canal ends at the Les Onglous lighthouse, where fresh water gives way to the wide Étang de Thau. The lagoon crossing is roughly eighteen kilometres of open water to Marseillan, and it wants respect: follow the marked channel and cross in the morning calm. Marseillan rewards the effort. It is the home of Noilly Prat vermouth, and the Thau around it is thick with oyster beds, best eaten fresh on the quay with a glass of cold Picpoul.",
+          "thingsToDo": [
+            "Descend the full Fonseranes staircase",
+            "Pass the Les Onglous lighthouse onto Thau",
+            "Tour the Noilly Prat vermouth cellars",
+            "Eat Thau oysters with cold Picpoul"
+          ],
+          "mooringTip": "The Étang de Thau is a small inland sea and turns dangerous fast in a Tramontane over force four, so cross early and never at night. Stick to the buoyed channel, and book a berth at Marseillan port ahead in July, as the quay is popular and space is finite."
+        },
+        "14": {
+          "shortDescription": "Cross the Thau back in the morning calm, lock through Agde one last time and return the boat to Port Cassafieres.",
+          "description": "The last leg is short but demands the same care as yesterday. Recross the Étang de Thau early, while the water is still flat and the Tramontane has not woken, keeping to the channel markers back toward the Les Onglous light. Once inside the canal the pressure comes off. You lock through the round lock at Agde a final time, now old hands at it, and follow the familiar cut back to Port Cassafieres. Leave enough of the morning to clean up, empty the lockers and hand the boat back without a rush; most bases want it returned by a set time. It is worth a last coffee on deck to take stock. Two weeks and the better part of a hundred locks lie in your wake.",
+          "thingsToDo": [
+            "Recross the Étang de Thau at dawn",
+            "Lock through the Agde round lock",
+            "Clean and hand back the boat",
+            "Toast the fortnight on deck"
+          ],
+          "mooringTip": "Time the Thau crossing for the early calm, then aim to reach Port Cassafieres with a comfortable margin before your handback slot. Top up fuel and water near Agde if the contract requires a full tank, and leave the mooring lines coiled ready for the next crew."
+        }
+      }
+    },
+    "canal-du-midi-classic": {
+      "metaTitle": "7-Day Canal du Midi Cruise | Boat4You",
+      "metaDesc": "Seven days from Castelnaudary to Beziers on the Canal du Midi: Carcassonne's walls, Minervois wine ports, the Malpas tunnel and Fonseranes locks.",
+      "days": {
+        "1": {
+          "shortDescription": "Ease out of Castelnaudary's Grand Bassin and work the lock ladder down to Bram, cassoulet country slipping behind you.",
+          "description": "The Grand Bassin at Castelnaudary is the widest stretch of the whole canal, so you get room to find your feet before the first bollard. Take on the cassoulet the town is famous for at lunch, then cast off. The run to Bram threads a string of lock chambers, and boats bunch up here as everyone learns the ropes, so a calm hand on the throttle pays off. Remember the ecluses shut between roughly 12:30 and 13:30, and again by seven in the evening. Bram itself is a quiet, circular village you can walk in twenty minutes. We usually tie up early, take on water at the base, and stroll the ring of old lanes before supper.",
+          "thingsToDo": [
+            "Lunch on Castelnaudary cassoulet before casting off",
+            "Practise lock handling on the Bram ladder",
+            "Walk Bram's circular medieval lanes",
+            "Take on water at the Castel Nautique base"
+          ],
+          "mooringTip": "Bram's quay has water and power but limited berths, so aim to arrive before mid-afternoon. Bank mooring with stakes works well on the shaded reaches if the quay is full."
+        },
+        "2": {
+          "shortDescription": "A steady day east to Carcassonne, where the port sits below the turreted Cite, one of Europe's great walled towns.",
+          "description": "Carcassonne earns its own day, and most crews give it two nights. The town moorings sit in a basin just below the lower town, an easy walk or short bus ride from the medieval Cite on the hill. Cross the old bridge, climb to the double ring of ramparts, and you can spend hours on the wall walk above the vineyards. Go early or late; the ramparts fill with day-trippers by mid-morning in season. Back at the port, the quay has power and water, and there are enough cafes in the Bastide Saint-Louis for a proper dinner ashore. The approach is straightforward, but the basin gets busy, so scout your spot on the way in.",
+          "thingsToDo": [
+            "Walk the ramparts of the medieval Cite",
+            "Cross the Pont Vieux into the old town",
+            "Dinner in the Bastide Saint-Louis",
+            "Refuel and top up water at the port"
+          ],
+          "mooringTip": "The Carcassonne basin has serviced quays but fills fast in July and August. Arrive by early afternoon, or moor along the bank just west and walk in."
+        },
+        "3": {
+          "shortDescription": "Just a couple of hours to Trebes, home to a triple lock and a mill-turned-restaurant sitting right over the water.",
+          "description": "This is a short hop, which suits a slow morning. Trebes announces itself with a staircase of three lock chambers, always good theatre, and there is usually a lock-keeper's stall selling honey or wine beside the gates. Moor along the village quay and the day is yours. Le Moulin de Trebes, an old watermill on the bank at the three locks, does a weekday lunch menu for around twenty-three euros with the terrace looking straight onto the passing boats. The church of Saint-Etienne is worth a look for its painted wooden corbels. With so little distance to cover, we often push a couple of extra kilometres past the village and moor in open country for a quieter night.",
+          "thingsToDo": [
+            "Watch boats climb the Trebes triple lock",
+            "Lunch on the terrace at Le Moulin de Trebes",
+            "See the painted corbels in Saint-Etienne church",
+            "Buy honey or wine at the lock stall"
+          ],
+          "mooringTip": "The Trebes quay is popular and shallow at the very edge, so nose in gently and keep fenders low. Book Le Moulin de Trebes ahead in summer, especially for evening service."
+        },
+        "4": {
+          "shortDescription": "Into the Minervois: locks and vineyards to Homps, once a busy port shipping barrels of red down toward Bordeaux.",
+          "description": "Today the canal leaves the wide plain and starts to feel like wine country. You pass through Puicheric and La Redorte, the latter grouped around a chateau that is now a hotel with a good table if you fancy a stop. The reaches here are pretty and well shaded where the plane trees still stand. Homps was one of the canal's hardest-working ports, loading Minervois and Corbieres wine for the long haul toward Bordeaux, and the old warehouses still line the quay. It makes a natural overnight. Tie up, walk the village, and find a cellar for a tasting; the Minervois reds are honest and cheap at source. Locks are frequent through here, so keep an eye on the lunchtime closure.",
+          "thingsToDo": [
+            "Taste Minervois reds at a Homps cellar",
+            "Pause at the chateau hotel in La Redorte",
+            "Walk Homps' old wine-trading quay",
+            "Work the locks through Puicheric"
+          ],
+          "mooringTip": "Homps has a serviced basin plus free bank mooring either side; the basin is handier for water and power. Approach slowly, as the old wine-port quay silts near the edge."
+        },
+        "5": {
+          "shortDescription": "Vineyard villages the whole way to Le Somail, a hamlet barely big enough for its stone bridge, chapel and cellar-turned-bookshop.",
+          "description": "A lovely stretch, and largely lock-free once you clear Argens. Argens-Minervois sits under a fourteenth-century chateau with cobbled lanes worth a wander, and the canal then rolls past Roubia, Paraza and Ventenac, each with its wine cave close to the water. Look out for the little aqueduct at Repudre, one of the oldest on the whole system. Le Somail is the prize at the end. It is barely a hamlet: a humpback stone bridge, a chapel, an ice-cream boat, and Le Trouve Tout du Livre, a former wine cellar packed with fifty thousand secondhand books. Moor along the bank near the bridge and stay for the evening light. It goes quiet once the day boats leave, which is exactly the point.",
+          "thingsToDo": [
+            "Browse 50,000 books at Le Trouve Tout du Livre",
+            "Wander the chateau lanes of Argens-Minervois",
+            "Taste wine at the Ventenac-en-Minervois cave",
+            "Photograph Le Somail's humpback bridge"
+          ],
+          "mooringTip": "Le Somail has no locks to hold you up, so arrive by early afternoon; the bankside spots near the bridge go first. Stakes hold well in the towpath here."
+        },
+        "6": {
+          "shortDescription": "On to Capestang beneath its dominating Gothic church, threading what is often called the lowest bridge on the whole canal.",
+          "description": "There is a junction near Le Somail where the Canal de Jonction branches off toward the Robine and Narbonne; ignore it and stay on the main line for Capestang. The village skyline is all church: the collegiale Saint-Etienne, a great unfinished Gothic pile raised by the same masons who built Narbonne cathedral, with a bell-tower view over the vineyards for anyone who climbs it. Watch the road bridge on the way in, long known as the lowest arch on the canal; if your air draft is marginal, keep to the centre and go dead slow. Moor at the village port, which has water and power, and walk up through the old streets to the church. There is a village market some mornings if your timing is lucky.",
+          "thingsToDo": [
+            "Climb the collegiale Saint-Etienne bell tower",
+            "Take in the openwork Gothic choir",
+            "Wander Capestang's old trading port and streets",
+            "Browse the village market if it's running"
+          ],
+          "mooringTip": "The Capestang road bridge is famously low, so if your boat's air draft is tight, check the gauge and pass slowly down the middle. The port quay has services but limited length."
+        },
+        "7": {
+          "shortDescription": "A grand finish: the Malpas tunnel bored through rock, then the great Fonseranes lock staircase dropping down into Beziers.",
+          "description": "The last day packs in the canal's headline acts. First comes the Malpas tunnel, a hundred and sixty-five metres bored straight through the hill in 1679, the first navigable tunnel ever cut for a canal. It runs one boat at a time, so wait your turn and sound off before you enter. Just above it, a short walk up, sits the Oppidum d'Enserune with a wide view over an old drained lagoon. Then the ground drops away at Fonseranes, a staircase of linked lock chambers that lowers boats toward the Orb. Most crews moor above the flight for the night and walk down to watch, then head into Beziers for Saint-Nazaire cathedral on its bluff. The Cers wind can gust hard on this open eastern end, so tie on well.",
+          "thingsToDo": [
+            "Pass through the historic Malpas tunnel",
+            "Climb to the Oppidum d'Enserune viewpoint",
+            "Watch boats descend the Fonseranes staircase",
+            "Visit Saint-Nazaire cathedral above Beziers"
+          ],
+          "mooringTip": "Moor above the Fonseranes flight for the night rather than locking down late, since the staircase is manned and keeps set hours. Beziers' basin can be exposed to the Cers, so double up your lines."
+        }
+      }
+    },
+    "cannes-lerins-st-tropez": {
+      "metaTitle": "7-Day Riviera & Golden Isles | Boat4You",
+      "metaDesc": "A 7-day yacht route from Cannes through the Lérins, Saint-Tropez, Cavalaire, Porquerolles and Port-Cros, back along the red Esterel coast.",
+      "days": {
+        "1": {
+          "shortDescription": "A short hop from the marina to two pine-covered islands, one guarding a famous prison cell, the other still farmed by monks.",
+          "description": "Barely an hour out of Cannes and you drop the engine off Sainte-Marguerite, the larger of the two Lérins. The channel between it and Saint-Honorat is one of the calmest spots on this coast, ringed by Aleppo pines and eelgrass you must not anchor over. Pick the sandy patches instead, and give the marked protection zones a wide berth. Ashore on Sainte-Marguerite, the old Fort Royal held the man in the iron mask; the walk up through the pines takes twenty minutes. Saint-Honorat is quieter, still worked by Cistercian monks who press their own wine and the Lérina liqueur. We usually run this leg late morning, swim off the boat through the afternoon, and stay put for a still first night.",
+          "thingsToDo": [
+            "Walk up to Fort Royal, Sainte-Marguerite",
+            "Taste Lérina liqueur at Saint-Honorat abbey",
+            "Swim the channel between the two islands",
+            "Follow the shaded pine paths of Sainte-Marguerite"
+          ],
+          "mooringTip": "Anchor only on the sand patches in the channel; the eelgrass beds are protected and holding is poor over weed. It gets busy by noon in July, so arrive early or take the outer edge of the field."
+        },
+        "2": {
+          "shortDescription": "A proper passage across the bay to the most photographed harbour on the coast, with a market square worth the early start.",
+          "description": "This is the first real sail of the week, a little over twenty miles of open water with Cap Camarat closing the gulf ahead. Leave by nine and you will be tied up before the afternoon breeze fills in. Saint-Tropez wants booking well ahead in season; the harbourmaster puts you stern-to along the quay, close enough to read the menus. Café Sénéquier and its red terrace have watched the port since 1887. Behind the Quai Jean-Jaurès the Ponche quarter keeps its pastel walls and narrow lanes, quiet once the day boats leave. Time it for a Tuesday or Saturday and the Place des Lices fills with market stalls from first light, tapenade and Provençal cheese and far too many hats.",
+          "thingsToDo": [
+            "Coffee on Sénéquier's red terrace",
+            "Wander the Ponche old quarter's lanes",
+            "Shop the Place des Lices market",
+            "Climb to the Citadelle for the view"
+          ],
+          "mooringTip": "Book a berth in Saint-Tropez well in advance for July and August; the quay is stern-to and fills fast. If it is full, anchor off the north of the gulf toward Les Canoubiers and tender in."
+        },
+        "3": {
+          "shortDescription": "Ten miles around two wild capes drop you into a sheltered bay of sand, with a wine village and a coastal reserve close behind the beach.",
+          "description": "Only ten miles today, but they round some of the best coast in the gulf. Off Cap Taillat and Cap Lardier the land belongs to the Conservatoire du Littoral, steep green inlets with no road behind them, worth dropping the hook for a lunch swim if the sea is calm. Cavalaire itself sits in a broad sandy bay that shrugs off the Mistral but opens to anything from the east and southwest, so read the forecast before you commit to a night. Free anchoring is banned in the bay; take one of the moorings or a visitor berth in the port. The town is unfussy and geared to sailors, with easy provisioning and a string of Côtes de Provence growers up the valley behind it.",
+          "thingsToDo": [
+            "Swim the wild inlets off Cap Lardier",
+            "Provision at Cavalaire's morning market",
+            "Taste Côtes de Provence rosé inland",
+            "Walk the sandy sweep of Cavalaire beach"
+          ],
+          "mooringTip": "Anchoring is prohibited across Cavalaire bay, so pick up a mooring buoy or book a visitor berth at the port. The holding on mud and weed is fine, but the bay is untenable in easterlies, so move on if the wind backs."
+        },
+        "4": {
+          "shortDescription": "A solid half-day west to Porquerolles, largest of the Golden Isles, finishing off Plage Notre-Dame, one of the Med's finest white beaches.",
+          "description": "Around twenty-two miles west, past Cap Bénat, and the Îles d'Or come up out of the haze. Porquerolles is the largest and the greenest, all vineyards, pine and eucalyptus, and it sits inside a national park with real teeth. You need a black-water holding tank to anchor legally here. The buoy field off the port takes boats up to thirteen metres and books out in July, so reserve ahead or plan to anchor well off the sand. Plage Notre-Dame, a long walk or cycle east of the village, is the one people come for, pale sand under umbrella pines. The village itself gathers round the Place d'Armes, a dusty square with boules, a couple of bars and bikes for hire by the hour.",
+          "thingsToDo": [
+            "Cycle to Plage Notre-Dame beach",
+            "Play boules on the Place d'Armes",
+            "Ride up to Fort Sainte-Agathe",
+            "Taste island wine from Porquerolles vineyards"
+          ],
+          "mooringTip": "Reserve a harbour buoy in advance; the field is limited to boats under thirteen metres and fills through the summer. To anchor you need a black-water tank aboard and must stay clear of the marked Posidonia beds, at least 300 metres off the beaches."
+        },
+        "5": {
+          "shortDescription": "Eight miles gets you to the wildest of the three islands, all forest and clear water inside Europe's first marine national park.",
+          "description": "Under eight miles island to island, so there's no rush off the mooring. Port-Cros is the smallest of the Golden Isles and the least touched, a hump of dense forest that runs down to the water with almost no building on it. The main road, so to speak, is a footpath. The rade in front of the harbour holds boats on buoys and along the quay, protected from most directions except a hard southerly. Over twelve metres and you must take a buoy in the Bagaud zone; anchoring between Bagaud and the port is now banned outright. Off La Palud on the north side, a marked snorkel trail runs over six buoys, and on a good day you will drift over grouper and barracuda. Save an hour for the walk up to Fort de l'Estissac.",
+          "thingsToDo": [
+            "Snorkel the marked trail off La Palud",
+            "Walk up to Fort de l'Estissac",
+            "Anchor quietly in Port-Man bay",
+            "Follow the forest path across the island"
+          ],
+          "mooringTip": "Take a buoy in the Rade de Port-Cros; anything over twelve metres is required to, and anchoring between Bagaud and the harbour is prohibited. Book where you can, arrive by early afternoon, and remember a black-water tank is mandatory in the park."
+        },
+        "6": {
+          "shortDescription": "The big passage back east, a long day under sail to where the red Esterel rock drops straight into the sea.",
+          "description": "This is the long one. Reckon on forty-odd miles back east, so we slip the buoy at first light and settle in for a full day on the water. The reward comes at the end, when the Esterel massif rises ahead in fired-up red, volcanic rock falling sheer into deep blue. If the timing works, drop into Cap Roux on the way in, sandy bottom in five to eight metres and good shelter from the west. Île d'Or, with its little Saracen tower, is private, so you round it rather than land. Théoule sits at the western corner of the Bay of Napoule, tucked out of the northwest and holding a handful of restaurants and a beach or two, well clear of the Cannes crush across the water.",
+          "thingsToDo": [
+            "Anchor under the red cliffs of Cap Roux",
+            "Round Île d'Or and its Saracen tower",
+            "Swim the Esterel coves near Anthéor",
+            "Dine on the quiet Théoule waterfront"
+          ],
+          "mooringTip": "Start this leg at dawn to beat the afternoon breeze on a long passage. Théoule anchorage in the Bay of Napoule shelters you from northwest through south, but for a settled night the port or a Cannes-side berth is the safer bet."
+        },
+        "7": {
+          "shortDescription": "An easy final morning across the bay to Cannes, time for one last swim before you hand the boat back.",
+          "description": "The shortest leg of the week, five miles or so across the Bay of Napoule with the Esterel at your back and Cannes ahead. No reason to hurry. If the charter base wants the boat by noon, there is still time to anchor for a last swim off Île Sainte-Marguerite on the way in, closing the loop where the week began. Coming into Cannes you pass under the old town, Le Suquet, its watchtower standing over the tiled roofs, and the long sweep of La Croisette with the palaces behind the beach. Get fenders and lines ready early; the marina at Cannes runs tight in season and the fuel dock can back up. Fuel, pump out, and step ashore for a proper lunch in the Suquet before you leave.",
+          "thingsToDo": [
+            "Last swim off Île Sainte-Marguerite",
+            "Climb Le Suquet to the watchtower",
+            "Stroll La Croisette before departure",
+            "Lunch in the old town of Le Suquet"
+          ],
+          "mooringTip": "Coming into Cannes in season, have fenders and stern lines ready before you enter and call the marina ahead on VHF for a berth. The fuel dock backs up mid-morning, so top up early if you owe the base a full tank."
+        }
+      }
+    },
+    "corsica-grand-tour-14-days": {
+      "metaTitle": "14-Day Corsica Grand Tour | Boat4You",
+      "metaDesc": "Two weeks from Ajaccio around Corsica: Scandola, Calvi, Bonifacio, the Lavezzi islands and the Gulf of Valinco, with real anchorage tips.",
+      "days": {
+        "1": {
+          "shortDescription": "A gentle shakedown leg out of Napoleon's home port into the wide sandy bay of Sagone, quiet once the day boats leave.",
+          "description": "Ajaccio is where most crews pick up the boat, so treat this first leg as a settling-in run rather than a race. Provision at the market near the old town before you slip lines, then point northwest out past the Sanguinaires islands guarding the gulf mouth. The bay at Sagone opens broad and sandy, ringed by low hills and a handful of beach eateries. By late afternoon the water-skiers and tripper boats thin out, and the anchorage turns calm enough for a first night at anchor. We usually aim to be in by five, giving the crew time to sort stowage and swim before dark. Holding is good over sand in three to five metres. Keep an eye west; the bay is open to swell if the wind backs, though summer evenings are typically settled here.",
+          "thingsToDo": [
+            "Provision at Ajaccio's old-town covered market",
+            "Visit the Maison Bonaparte museum",
+            "Swim off Sagone's long sandy beach",
+            "Sundowner at a Sagone beach restaurant"
+          ],
+          "mooringTip": "Anchor off the beach at Sagone rather than crowding the small quay; the sand holds well in three to five metres. Set your hook by late afternoon before the evening breeze fills in."
+        },
+        "2": {
+          "shortDescription": "Just up the coast sits Greek-founded Cargese, where a Catholic and an Orthodox church still face each other across the valley.",
+          "description": "Only a handful of miles separate Sagone from Cargese, so there's no need for an early start. The village sits on a bluff above its little harbour, and its odd history shows in the two churches staring across the ravine at one another, one Latin Catholic, one Greek Orthodox, left over from Greek refugees who settled here in the seventeenth century. The harbour itself is small and can fill fast in July, so a lunchtime arrival helps. Below town the beaches run one after another. Plage de Pero and Plage de Chiuni are both worth the dinghy ride for an afternoon swim and a walk. Ashore, the cafes along the port square do a decent plate of charcuterie and a cold Pietra beer. We tend to anchor off Pero and leave the harbour to the ferries.",
+          "thingsToDo": [
+            "Compare the Latin and Greek Orthodox churches",
+            "Swim at Plage de Pero or Chiuni",
+            "Charcuterie and Pietra beer on the port",
+            "Walk up to Cargese's old cemetery"
+          ],
+          "mooringTip": "The little harbour at Cargese is tight and often full by midday, so anchor off Plage de Pero to the north instead. Sand holding is reliable in four to six metres, open to the west."
+        },
+        "3": {
+          "shortDescription": "A scenic run to the red porphyry headland of Capo Rosso, capped by its lone Genoese watchtower above the Gulf of Porto.",
+          "description": "The coast north of Cargese turns dramatic. Capo Rosso rises in slabs of rust-red rock, with the Tour de Turghju perched some three hundred metres up on its spine, a stiff walk if you fancy the climb from a landing below. This is the doorway to the Gulf of Porto and the Calanche de Piana beyond, where wind and sea have carved the granite into spires. The cape is exposed, so read the forecast before committing to an overnight here. Many crews tuck into the sheltered coves inside the gulf instead, or press on to Ficajola with its tiny fishing beach. If the afternoon libeccio builds, don't linger off the point. We time the passage for morning calm and let the crew shoot photos while the light stays soft on the cliffs.",
+          "thingsToDo": [
+            "Photograph the red cliffs of Capo Rosso",
+            "Climb to the Tour de Turghju watchtower",
+            "Dinghy into Anse de Ficajola beach",
+            "Detour into the Calanche de Piana rock spires"
+          ],
+          "mooringTip": "Capo Rosso itself is too exposed for a settled night, so use it as a daytime stop and anchor inside the Gulf of Porto or at Ficajola. Watch for afternoon westerlies funnelling round the point."
+        },
+        "4": {
+          "shortDescription": "Past the Scandola reserve lies Girolata, a fort-topped hamlet you can reach only by boat or footpath.",
+          "description": "Today you skirt the edge of the Scandola reserve, a UNESCO-listed jumble of red volcanic rock where ospreys nest on the cliffs and no landing is allowed. Keep offshore of the marked zone and enjoy it from the water. Girolata waits just south, hidden behind a low headland with a squat Genoese fort standing guard. The anchorage is one of the most sheltered on the island, ringed by dozens of fore-and-aft buoys laid in Cala Muretta and Cala Vecchia. Pick one up early; the field fills through the afternoon as tripper boats and yachts pour in. Ashore there's no road, just a cluster of restaurants serving the day's catch and grilled meats. We like to swim before the crowds arrive, then take the shore path for the view back down over the bay.",
+          "thingsToDo": [
+            "Cruise the red cliffs of Scandola reserve",
+            "Pick up a buoy in Cala Muretta",
+            "Walk the coast path to the Genoese fort",
+            "Fresh grilled fish at a Girolata restaurant"
+          ],
+          "mooringTip": "Girolata's fore-and-aft buoys are the safe bet and hold you steady in any wind, but they go early. Aim to arrive before mid-afternoon, and expect to pay a fee to the boat that comes round collecting."
+        },
+        "5": {
+          "shortDescription": "The longer northbound leg crosses open water to Calvi, where a Genoese citadel stands over one of Corsica's liveliest marinas.",
+          "description": "This is the first proper passage of the trip, roughly twenty-five miles up to the Balagne coast, so a nine o'clock departure gives you comfortable margins. The coast is wild and roadless for much of the way, with few bolt-holes, which is why the forecast matters. Westerlies tend to build after noon, so an earlier start keeps the sea kinder. Calvi announces itself from far off, the citadel walls catching the light above a curve of pine-backed beach. The marina sits right under the ramparts and buzzes late into the evening. If it's full in high season, the anchorage in the Revellata bay just west is calm and pretty. Ashore, climb into the old town, where locals will tell you Columbus was born, and eat well along the quay. We book a berth ahead in August.",
+          "thingsToDo": [
+            "Explore the Genoese citadel above Calvi",
+            "Swim off Calvi's pine-backed beach",
+            "Quayside dinner in the marina",
+            "Anchor overnight in Revellata bay"
+          ],
+          "mooringTip": "Calvi's marina fills fast in July and August, so radio ahead or arrive early for a berth under the citadel. If it's full, the Revellata anchorage a couple of miles west offers calm holding over sand."
+        },
+        "6": {
+          "shortDescription": "The return south along the wild Scandola coast back to sheltered Girolata, with a possible quiet stop at Galeria.",
+          "description": "Retracing your wake gives a different trip in reverse light, and the twenty-five miles back down to Girolata pass quickly with the usual afternoon breeze behind you. Break the run at Galeria if you fancy a change; the anchorage in its bay is quiet and sits just before the reserve boundary, handy for a lunch stop and a swim away from the crowds. From there it's a short hop back to Scandola's red buttresses, best seen with the sun swinging west. Girolata's buoy field will be filling again by the time you arrive, so don't dawdle over lunch. A second night here is no hardship; the little bay looks different in changing light, and by evening, once the day boats have gone, it settles into something close to silence. We grab an early buoy and swim off the stern.",
+          "thingsToDo": [
+            "Lunch stop and swim at Galeria bay",
+            "See Scandola's red cliffs in evening light",
+            "Snorkel off the stern in Girolata",
+            "Evening drink ashore at the harbour"
+          ],
+          "mooringTip": "Coming back to Girolata a second time, you already know the drill: grab a fore-and-aft buoy early. Galeria makes a calm lunchtime anchorage on sand if you want to break the leg."
+        },
+        "7": {
+          "shortDescription": "A long haul south past Sagone and the Sanguinaires islands, closing the first loop back in the Gulf of Ajaccio.",
+          "description": "The longest single leg of the fortnight, this run tops forty miles, so an early departure isn't optional. Slip the buoy at first light while the sea is flat and the wind still sleeping. You'll pass the mouth of the Sagone gulf and round Capo di Feno before the Sanguinaires islands come up, four reddish islets marking the entrance to the Gulf of Ajaccio and worth a slow pass for the old semaphore and lighthouse. The gulf itself often kicks up a lumpy afternoon chop as the sea breeze funnels in, another reason to have the miles behind you by mid-afternoon. Ajaccio's marinas have space for visitors, and the town rewards a night off the anchor, with proper restaurants and a chance to top up stores. We reprovision here before the southern half begins.",
+          "thingsToDo": [
+            "Slow pass by the Sanguinaires islands",
+            "Reprovision at Ajaccio's covered market",
+            "Dinner ashore in the old town",
+            "Aperitif along the Ajaccio marina quay"
+          ],
+          "mooringTip": "Ajaccio has two marinas, Tino Rossi by the old town and the larger Charles Ornano; call ahead in season. After a forty-mile day the visitor berths are worth the fee for showers and easy provisioning."
+        },
+        "8": {
+          "shortDescription": "South around Capo di Muro into the Gulf of Valinco, dropping the hook off the sleepy sands of Porto Pollo.",
+          "description": "With the western loop done, the boat turns south for the quieter half of the island. Clear the Gulf of Ajaccio and round Capo di Muro, a low rocky point that can raise a short sea when wind meets current, then bear into the broad Gulf of Valinco. Porto Pollo sits on the northern shore, a low-key village with a small beach, a scatter of eateries and clear water that begs a swim the moment the anchor bites. The holding is good over sand, and the bay is well protected from the prevailing westerlies. There's little to do ashore beyond eat, swim and slow down, which after the long haul from Girolata is rather the point. We drop the hook off the beach and let the crew loaf away the afternoon.",
+          "thingsToDo": [
+            "Swim off Porto Pollo's sheltered beach",
+            "Snorkel the clear Valinco shallows",
+            "Seafood supper at a village eatery",
+            "Paddleboard along the northern shore"
+          ],
+          "mooringTip": "Anchor off the Porto Pollo beach in three to six metres over sand; holding is dependable and the bay shrugs off the usual westerly. Tuck in behind the point if a southerly is forecast."
+        },
+        "9": {
+          "shortDescription": "Cross the gulf to Campomoro, where the largest Genoese tower in Corsica watches over a curved sandy beach.",
+          "description": "The two shores of the Valinco sit barely a few miles apart, so it's a morning of easy sailing and an afternoon of doing very little. Campomoro curls around a neat sandy bay on the gulf's southern arm, crowned by the biggest Genoese tower on the island, a squat fortified block you can walk up to and look out from over the whole gulf. The village is tiny, just a few bars and restaurants strung behind the beach, which is exactly its charm. Anchor off the sand and swim ashore for a drink as the light goes gold on the tower. The bay is open to the west, so if the libeccio is up you'll roll a little at anchor. We pick a calm forecast for this one and enjoy the quiet.",
+          "thingsToDo": [
+            "Walk up to the Campomoro Genoese tower",
+            "Swim from the curved sandy bay",
+            "Drink at a beachfront Campomoro bar",
+            "Snorkel the rocks below the tower"
+          ],
+          "mooringTip": "Anchor off Campomoro beach over sand, but note the bay is open west and rolls in a libeccio swell. A few seasonal buoys sit near the tower; otherwise pick a settled night here."
+        },
+        "10": {
+          "shortDescription": "The long southbound run around Corsica's toe to Bonifacio, its old town clinging to white cliffs above a hidden harbour.",
+          "description": "This is a committing leg, around twenty-five miles down to the island's southern tip, and the Strait of Bonifacio has a habit of accelerating whatever wind is about. Check the forecast hard before you leave, and if it's blowing hard from the west, sit tight another day. Rounding the last capes, Bonifacio hides its entrance well; you're almost on the cliffs before the narrow calanque opens to port and the marina reveals itself, tucked into a natural fjord below the ramparts. The medieval haute ville above is all limestone lanes and sea views, and the harbour restaurants run late. Berths are limited and demand is high, so book ahead in season or take a laid mooring further up the inlet. We time our arrival for early afternoon to be sure of a spot.",
+          "thingsToDo": [
+            "Wander the limestone lanes of the haute ville",
+            "Climb the Escalier du Roi d'Aragon steps",
+            "Harbourside dinner in the calanque",
+            "View the cliffs from the marina entrance"
+          ],
+          "mooringTip": "Bonifacio's marina sits deep inside the calanque and is very busy in summer, so reserve a berth or take a laid mooring up the inlet. Enter under power; the fjord funnels gusts even when it looks calm."
+        },
+        "11": {
+          "shortDescription": "Slip into the Bouches de Bonifacio reserve and moor off the granite boulders and clear coves of the Lavezzi islands.",
+          "description": "The Lavezzi lie just six miles off Bonifacio, but in fully protected waters, so read the rules before you go. The islands lie inside the Bouches de Bonifacio reserve, the largest marine reserve in mainland France, and the coves are governed by numbered mooring fields laid since the 2022 regulations. Anchoring is restricted, and where it's allowed it's on sand only, never on the seagrass. Pick up a buoy in Cala di u Grecu or Cala Lazarina and you're swimming in some of the clearest water in the Med, over pale sand between rounded granite boulders. Ashore, a walking path leads to the cemetery marking the wreck of the frigate Semillante, lost here in 1855. The bays offer little shelter for the night, so most crews visit by day.",
+          "thingsToDo": [
+            "Snorkel the granite coves of Cala Lazarina",
+            "Pick up a mooring in Cala di u Grecu",
+            "Walk to the Semillante shipwreck memorial",
+            "Swim over pale sand between the boulders"
+          ],
+          "mooringTip": "The Lavezzi coves use numbered ZMEL buoys under the 2022 reserve rules; grab one and never drop the hook on seagrass. The bays give little overnight shelter, so treat it as a daytime stop and sleep back at Bonifacio or Rondinara."
+        },
+        "12": {
+          "shortDescription": "Rondinara waits up the east coast, a near-perfect horseshoe bay with good sand holding and summer buoys.",
+          "description": "Turning north out of the strait, the character of the coast softens. Rondinara lies about ten miles up, between Bonifacio and Porto-Vecchio, and it's one of those bays that looks almost designed by hand, a rounded horseshoe of pale sand with a narrow mouth. That shape makes it a fine anchorage, well protected through the western half of the compass, from northerlies round to southerlies. Holding is good in sand, and a scatter of buoys appears in season if you'd rather not anchor. The beach draws day-trippers by road, so it can be busy at midday, but the crowd thins by evening and the bay comes into its own. We drop the hook toward the northern side, swim ashore, and stay put for the night. A calm, easy end to the southern loop.",
+          "thingsToDo": [
+            "Swim in the horseshoe bay of Rondinara",
+            "Walk the sandy beach at dusk",
+            "Snorkel the rocky northern headland",
+            "Anchor for a quiet night aboard"
+          ],
+          "mooringTip": "Rondinara gives good sand holding and shelter from north through south on its western side; anchor toward the northern shore. Seasonal buoys appear in summer, and the bay is calmest once the beach crowd leaves in the evening."
+        },
+        "13": {
+          "shortDescription": "The long leg back west around the southern capes to Propriano, the Valinco's busiest port and a good spot to restock.",
+          "description": "The passage back to the west coast is a fair stretch, well over thirty miles, and it means rounding the exposed southern tip again, so an early start and a settled forecast are worth the discipline. Once past Capo di Feno and the Senetosa point, the coast eases you north into the familiar Gulf of Valinco. Propriano sits at its head, the busiest town on this stretch, with a working port that runs ferries to Sardinia and a waterfront lined with shops and restaurants. After a week of quiet anchorages the bustle is a welcome change, and the marina makes reprovisioning simple before the last hop home. We tie up, walk the front for an ice cream, and eat ashore. Fresh fish and a bottle of Corsican rose close the day nicely.",
+          "thingsToDo": [
+            "Stroll Propriano's restaurant-lined waterfront",
+            "Restock at the town's shops and market",
+            "Fresh fish and Corsican rose ashore",
+            "Evening ice cream along the port"
+          ],
+          "mooringTip": "Propriano's marina takes visitors but is busy with the Sardinia ferry traffic, so call ahead and keep clear of the ferry berth on approach. Berthing here is easier than anchoring off the exposed town beach."
+        },
+        "14": {
+          "shortDescription": "The final leg north around Capo di Muro and past the Sanguinaires, back to Ajaccio to hand over the boat.",
+          "description": "The last day retraces the water between the two western gulfs, roughly thirty miles back up to Ajaccio. Leave in good time; charter handovers usually want the boat in by morning, and it's poor form to arrive flustered on the final approach. Round Capo di Muro one more time, then the Sanguinaires islands come up to mark the gulf entrance, a fitting last landmark with their reddish rock and old lighthouse. If the timing allows, a farewell swim in one of the coves along the way is a good way to sign off. Back in Ajaccio, refuel, fill the water tanks and start squaring away the boat before the handover. We like to be alongside by late afternoon, giving the crew time to pack unhurried and toast a fortnight well sailed.",
+          "thingsToDo": [
+            "Farewell swim in a Sanguinaires cove",
+            "Round Capo di Muro for the last time",
+            "Refuel and water up at Ajaccio marina",
+            "Final crew dinner in the old town"
+          ],
+          "mooringTip": "Aim to be back in Ajaccio by late afternoon on the final day; charter bases want the boat cleared next morning. Refuel and top up water on the way in, and confirm your handover berth with the base by radio."
+        }
+      }
+    },
+    "morbihan-quiberon": {
+      "metaTitle": "7-Day Morbihan & Belle-Île | Boat4You",
+      "metaDesc": "Seven days from Le Crouesty through the Gulf of Morbihan to Vannes, Houat, Belle-Île and Hoedic: car-free islands, tidal channels and Breton ports.",
+      "days": {
+        "1": {
+          "shortDescription": "Slip out of Le Crouesty on the flood and ride the tide up into the gulf to car-free Ile aux Moines.",
+          "description": "The gulf entrance narrows off Port-Navalo, and the tide runs hard through it, so we usually leave Le Crouesty an hour or so after low water and let the flood carry us in. Two to three knots under the keel makes short work of the passage. Once inside, the water flattens and the islands open up around you.\n\nIle aux Moines sits near the middle of the gulf, its two visitor pontoons floating free of the shore. No cars run here. Hire a bike at the port and follow the lane south through the Bois d'Amour to Pointe de Brouël, where Ile d'Arz lies low across the water. The Dolmen des Pierres Plates rewards a short walk. Back at Port Blanc, a plate of oysters and a cold Muscadet closes the day well.",
+          "thingsToDo": [
+            "Cycle the Bois d'Amour to Pointe de Brouël",
+            "Visit the Dolmen des Pierres Plates",
+            "Eat oysters back at Port Blanc",
+            "Walk the lane to Pointe du Trec'h"
+          ],
+          "mooringTip": "The two visitor pontoons sit detached from land, so arrive self-sufficient with your own water. Depths at the far end of the southern pontoon drop near 1.6m, so berth toward the inner end at low springs, or pick up a gulf mooring buoy off Port Blanc."
+        },
+        "2": {
+          "shortDescription": "A short hop up the channel, timed to the tide, brings you through the lock into medieval Vannes and its walled old town.",
+          "description": "Vannes hides at the head of a narrow river, and you only get in for a couple of hours either side of high water. Plan backwards from that. We generally weigh anchor to arrive at the Kérino swing bridge on the rising tide, then motor gently up the canal past moored boats and reed banks. The lock holds the inner basin at just over two metres, so there is water even when the gulf outside has drained.\n\nThe reward is a berth in the centre of town. Vannes keeps its ramparts, its old washhouses along the Marle, and streets of leaning half-timbered houses. Cathédrale Saint-Pierre and the covered market at La Cohue are a few minutes' walk. Provision here; the market is good and the shops are close.",
+          "thingsToDo": [
+            "Walk the ramparts and Marle washhouses",
+            "See Cathédrale Saint-Pierre in the old town",
+            "Browse La Cohue covered market",
+            "Provision at the Vannes town market"
+          ],
+          "mooringTip": "The inner basin opens only about 2.5 to 3 hours either side of high water, and you pass a swing bridge then a lock to reach it. Call the capitainerie ahead on VHF and time your run up the canal for the last of the flood."
+        },
+        "3": {
+          "shortDescription": "Ride the ebb back down the gulf and out past Port-Navalo, then cross Quiberon Bay to the white sands of Houat.",
+          "description": "This is the longest day, so we like to be off the pontoon early and out of the gulf on the ebb. The channel past Port-Navalo runs fast when the tide is with you, and you sluice out into Quiberon Bay in no time. From there it is an open reach of a dozen or so miles across to Houat.\n\nThe island is a low ridge of granite and gorse with one small village. Boats gather in the Rade de Houat, the sandy road along the north side, or on the buoys off Saint-Gildas. The pull is Treac'h er Goured, a two-kilometre curve of white sand at the eastern end. Take the tender in and walk the dune. Note that anchoring off that beach is banned over the marked cable zone.",
+          "thingsToDo": [
+            "Land the tender on Treac'h er Goured",
+            "Walk the two-kilometre dune arc",
+            "Wander Houat's single fishing village",
+            "Swim off the Rade sandbanks"
+          ],
+          "mooringTip": "Anchor in the Rade de Houat on the sand, well clear of the marked cable zone off Treac'h er Goured, where anchoring is forbidden. The Saint-Gildas buoy field fills fast in July and August, so come in by mid-afternoon if you want one."
+        },
+        "4": {
+          "shortDescription": "A gentle sail south to Belle-Île, the biggest of the Breton islands, and its busy citadel harbour at Le Palais.",
+          "description": "Belle-Île lies a short reach south of Houat, close enough that the day feels unhurried. Le Palais announces itself from a distance: the huge star-shaped Citadelle Vauban stands over the harbour mouth. Inside, the port is the largest in southern Brittany and, in high summer, one of the fullest. Expect to raft up on the trot buoys, three or four boats abreast.\n\nAshore, the town runs on ferries and holidaymakers, but it has real bones. Tour the citadel, hire bikes or a scooter, and strike out for the wild west coast. The Aiguilles de Port-Coton, the rock needles Monet painted, are worth the ride. Provisioning is easy here, with proper shops and a morning market near the quay.",
+          "thingsToDo": [
+            "Tour the Citadelle Vauban above the port",
+            "Cycle to the Aiguilles de Port-Coton",
+            "Ride out to Grotte de l'Apothicairerie",
+            "Shop the morning market by the quay"
+          ],
+          "mooringTip": "Le Palais moors visitors on trot buoys, rafting several boats to one line, so put out big fenders and expect neighbours. It is the busiest port in the area in July and August; radio ahead or arrive early, and note the outer berths catch the ferry wash."
+        },
+        "5": {
+          "shortDescription": "Round the north of Belle-Île to Sauzon, a quieter drying harbour of painted houses, crêpe stalls and Sarah Bernhardt's headland.",
+          "description": "Sauzon sits barely five miles round the top of the island, so there is no rush. It is everything Le Palais is not: small, calm, easy on the eye, a run of pastel houses stepping up from a narrow inlet. The harbour dries at its head, so most visitors pick up a fore-and-aft mooring in the deeper channel and take the tender ashore.\n\nSpend the afternoon on foot. The quayside stalls do galettes, waffles and Bellilois cider with the harbour laid out below. Walk or cycle out to the Pointe des Poulains, where Sarah Bernhardt kept a house and a small lighthouse marks the island's northern tip. Come back for dinner on the west quay as the light goes soft over the water.",
+          "thingsToDo": [
+            "Eat galettes and cider on the quay",
+            "Walk to the Pointe des Poulains lighthouse",
+            "See Sarah Bernhardt's clifftop house",
+            "Dine on the west harbour quay"
+          ],
+          "mooringTip": "Sauzon's inner harbour dries, so take a fore-and-aft mooring on the buoys in the deeper channel rather than heading up to the top. The entrance channel runs about 3m deep; check your tide tables before committing to any berth near the drying part."
+        },
+        "6": {
+          "shortDescription": "Cross back toward the mainland shore to tiny Hoedic, a car-free speck of dunes, forts and daisy-chain moorings at Argol.",
+          "description": "The crossing to Hoedic runs a dozen-odd miles northeast across open water, so watch the forecast; the bay kicks up a short sea in a fresh westerly. The island itself is tiny, lower and wilder than its neighbours, ringed by dunes and pale beaches with a single hamlet in the middle.\n\nPort de l'Argol takes you on daisy-chain moorings, three boats to a line, and only smaller yachts fit. Once ashore, an hour or two covers most of it on foot. Walk out to the old Fort d'Hoedic, poke around the chapel, and find a beach to yourself on the eastern shore. There are a couple of simple places to eat near the port, but bring stores; supplies here are thin.",
+          "thingsToDo": [
+            "Walk out to the Fort d'Hoedic",
+            "Visit the island chapel and hamlet",
+            "Find an empty eastern-shore beach",
+            "Eat at a small port bistro"
+          ],
+          "mooringTip": "Port de l'Argol offers daisy-chain moorings on trot buoys for boats under about 14m and up to 2m draft, so most bareboats fit. It is small and popular; arrive early in season, and be ready to lie close alongside other yachts on the same line."
+        },
+        "7": {
+          "shortDescription": "A final reach north across Quiberon Bay and back through the gulf mouth to your berth at Le Crouesty.",
+          "description": "The run home is a straightforward reach across Quiberon Bay, fifteen miles or so back to the Rhuys peninsula. Time it so you meet the gulf entrance with the flood, or at least at slack; punching a full ebb off Port-Navalo is slow, wet work you can avoid with a little planning.\n\nIf the day is kind and you are ahead of schedule, there is time to anchor off the beach at Port-Navalo or drop the hook one last time in the lee of Méaban before turning in. Le Crouesty is a big, well-sheltered marina, easy to enter in almost any weather. Top up fuel and water on the way to your berth, and leave the boat as you would want to find her.",
+          "thingsToDo": [
+            "Anchor off Port-Navalo for a last swim",
+            "Time the gulf entrance with the flood",
+            "Refuel before returning the boat",
+            "Watch the Méaban beacon on the way in"
+          ],
+          "mooringTip": "Aim to reach the gulf mouth at slack or on the flood; the tide off Port-Navalo runs up to three knots against you on the ebb. Le Crouesty's fuel berth sits near the entrance, so top up before you work back to your allocated pontoon."
+        }
+      }
+    },
+    "riviera-esterel-14-days": {
+      "metaTitle": "14-Day Riviera & Esterel Voyage | Boat4You",
+      "metaDesc": "A 14-day yacht charter from Cannes along the French Riviera and Esterel coast: Antibes, Monaco, Saint-Tropez, Port-Cros and Porquerolles.",
+      "days": {
+        "1": {
+          "shortDescription": "A gentle first leg from Cannes to Antibes, home to Europe's biggest yacht harbour and a walled old town worth an afternoon.",
+          "description": "Short and forgiving, this opening leg lets the crew settle before the real distances begin. Cannes to Antibes runs about ten miles, close along the coast, with Cap d'Antibes green and low ahead of you. Port Vauban is the largest marina in Europe, and the superyachts lined along the Quai des Milliardaires make the scale obvious the moment you round Fort Carré. Ashore, the old town rewards an unhurried afternoon. The Marché Provençal on Cours Masséna sells tapenade, socca and Provençal linen under its iron roof most mornings. Above it sits the Château Grimaldi, now the Picasso Museum, where the artist worked in 1946. We usually drop the shore lines by mid-afternoon and walk the ramparts before dinner. A simple day, but a good one to shake the boat down.",
+          "thingsToDo": [
+            "Wander the Marché Provençal on Cours Masséna",
+            "Tour the Picasso Museum in Château Grimaldi",
+            "Walk the ramparts by Fort Carré",
+            "Swim off Plage de la Garoupe, Cap d'Antibes"
+          ],
+          "mooringTip": "Port Vauban takes visitors, but call the capitainerie ahead in July and August when the big berths fill fast. For a quieter night, anchor in sand off Cap d'Antibes and tender in."
+        },
+        "2": {
+          "shortDescription": "Coast east past Nice into one of the Mediterranean's deepest natural bays, where cruise ships and yachts share the same sheltered water.",
+          "description": "From Antibes you track past the airport approach and the long sweep of the Baie des Anges before Nice slides by to port. The Rade de Villefranche opens soon after, one of the deepest natural harbours in the Mediterranean, dropping close to ninety metres between Cap de Nice and Cap Ferrat. The bay holds boats well and stays calm in most conditions, though a strong southerly sends swell straight in, so watch the forecast. The town climbs the hillside in ochre and pink. Rue Obscure, a vaulted medieval passage below the houses, is worth finding, and the baroque Chapelle Saint-Pierre carries decorations by Jean Cocteau. Cap Ferrat next door holds the Villa Ephrussi de Rothschild and its gardens. We often anchor off the beach and take the tender to the fishing quay.",
+          "thingsToDo": [
+            "Find the vaulted Rue Obscure passage",
+            "See Cocteau's frescoes in Chapelle Saint-Pierre",
+            "Visit Villa Ephrussi de Rothschild on Cap Ferrat",
+            "Swim off the Plage des Marinières"
+          ],
+          "mooringTip": "La Darse marina is small and its berths mostly private, so plan to anchor. Holding is good in sand and mud at eight to twelve metres; take a southerly forecast seriously and move if it builds."
+        },
+        "3": {
+          "shortDescription": "A short hop to the Principality, where Port Hercule packs in the superyachts below the casino terraces and the Prince's palace.",
+          "description": "Barely an hour under power, or a lazy sail if there's wind for it. What you remember is the arrival, not the miles. Round Cap Ferrat, pass Cap d'Ail, and Monaco stacks up ahead of you, apartment towers rising straight from the water. Port Hercule has around seven hundred berths but only a handful for visitors, and space in season is scarce and pricey, so booking ahead is close to essential. The Principality repays the effort of getting ashore. The Oceanographic Museum sits on the cliff at Monaco-Ville, its aquarium worth a couple of hours. The old town and the Prince's Palace crown the Rocher, and the Casino de Monte-Carlo needs only a jacket and some nerve. If berths are full, Cap-d'Ail's Port de Fontvieille lies just west and stays calmer.",
+          "thingsToDo": [
+            "Tour the cliffside Oceanographic Museum",
+            "Watch the palace guard change at Monaco-Ville",
+            "Stroll the Casino de Monte-Carlo square",
+            "Walk the exotic garden's cactus terraces"
+          ],
+          "mooringTip": "Book Port Hercule well ahead in summer; visitor space is limited and rates are steep. Fontvieille, just around the point, is a cheaper and quieter fallback if the main port is full."
+        },
+        "4": {
+          "shortDescription": "The turn back west, a longer coastal run past Cap Ferrat and Nice with anchorage choices if the wind stays kind.",
+          "description": "This is the day you unwind the eastern corner and head back toward the Esterel end of the coast. Monaco to Antibes is roughly twenty-five miles, long enough to feel like a proper sail if the afternoon breeze fills in from the southeast. We usually leave by nine to have the wind behind us for the second half. There is no shortage of places to break the run. Beaulieu-sur-Mer and the sheltered water off Cap Ferrat make an easy lunch stop, and the Villa Kerylos, a reconstructed Greek villa on the point, is visible from the deck. Back at Antibes, choose a different berth or anchorage than your first night; the Baie de la Garoupe on the cape's east side is calm in most summer conditions and a short tender from the lighthouse path.",
+          "thingsToDo": [
+            "Lunch stop off Beaulieu-sur-Mer",
+            "Spot Villa Kerylos on Cap Ferrat",
+            "Anchor in the Baie de la Garoupe",
+            "Walk the Sentier du Littoral coastal path"
+          ],
+          "mooringTip": "The Baie de la Garoupe on Cap d'Antibes gives good sand holding and shelter from anything but an easterly. Arrive before mid-afternoon in July to find swinging room among the day boats."
+        },
+        "5": {
+          "shortDescription": "A tiny two-island hop to anchor between the monks' vineyard and the fort that held the Man in the Iron Mask.",
+          "description": "Short enough that you could almost drift there. The run drops you into the channel between Sainte-Marguerite and Saint-Honorat, the two Lérins islands off Cannes. The water between them is a favourite anchorage, sand at five to ten metres with good holding, and it fills with day boats by noon and empties again by evening. Sainte-Marguerite carries the Fort Royal, where legend puts the Man in the Iron Mask, and pine paths cross the island to quiet coves. Saint-Honorat belongs to a Cistercian community that still works its vines; the monks make a wine and the Lérina liqueur, both sold at the abbey shop. Anchoring is banned directly in front of the monastery, marked by yellow buoys, so leave that stretch clear. Stay the night once the trip boats leave and you get the place nearly to yourself.",
+          "thingsToDo": [
+            "Explore Fort Royal on Sainte-Marguerite",
+            "Taste Lérina liqueur at Saint-Honorat abbey",
+            "Walk the pine paths to quiet coves",
+            "Snorkel the shallow channel between the islands"
+          ],
+          "mooringTip": "Anchor in sand at five to ten metres in the channel, but keep clear of the yellow-buoyed no-anchor zone off the abbey. Booking a park mooring buoy is possible and saves fretting over holding in a blow."
+        },
+        "6": {
+          "shortDescription": "Cross to the fiery red Esterel coast and pick up a buoy in Agay's sheltered bay beneath the volcanic hills.",
+          "description": "West again, and the coast changes character completely. The Esterel massif is old volcano, red rhyolite that colours the cliffs and the water at their foot a rusty pink. From the Lérins it is a straightforward run past Théoule and the Pointe de l'Aiguille to Agay, tucked between Cap Dramont and the Pointe de la Baumette. Agay is one of the better natural harbours on this stretch, well protected except from the south. The bay has a buoy field on its eastern side, and because the seagrass beds are protected, taking a buoy rather than dropping the hook is both required in places and simply kinder to the seabed. Cap Dramont, just east, is where Allied troops landed in August 1944, and the little Ile d'Or with its stone tower sits offshore. A calm, red-walled anchorage to end the day.",
+          "thingsToDo": [
+            "Swim beneath the red Esterel cliffs",
+            "Walk to the Cap Dramont landing beach",
+            "Photograph the Ile d'Or's stone tower",
+            "Hike a stretch of the Sentier du Littoral"
+          ],
+          "mooringTip": "Take a buoy in Agay rather than anchoring; the eastern field is well sheltered and the seagrass beds are protected. Arrive by early afternoon in high season, as the buoys go quickly and are not always bookable."
+        },
+        "7": {
+          "shortDescription": "A brief coastal skip to Saint-Raphael, rounding Cap Dramont into a lively resort port with a Byzantine basilica above the quays.",
+          "description": "An easy morning. Saint-Raphael sits only a few miles round Cap Dramont, so there is no rush; the leg is really an excuse to potter along the red coast and swim off the Ile d'Or on the way. The town runs into Fréjus behind it, and the old port gives you a proper marina with fuel, water and a walk into the centre. Saint-Raphael grew as a Belle Époque resort and kept some of that air. The Basilique Notre-Dame-de-la-Victoire, Byzantine in style with a striped dome, stands a few streets back from the water. There is a morning market, a decent fish counter, and enough restaurants along the front to make provisioning painless. A good spot to top up tanks and stock the galley before the longer crossing to the Gulf of Saint-Tropez tomorrow.",
+          "thingsToDo": [
+            "See the Byzantine Basilique Notre-Dame-de-la-Victoire",
+            "Browse the Saint-Raphael morning market",
+            "Swim off the Ile d'Or on approach",
+            "Stock the galley at the port fish counter"
+          ],
+          "mooringTip": "The Vieux Port at Saint-Raphael and neighbouring Santa Lucia both take visitors and offer fuel and water. Book a night berth in season and use the stop to fill tanks before the open crossing west."
+        },
+        "8": {
+          "shortDescription": "Cross the open water to Saint-Tropez, anchoring in the Baie des Canebiers a tender-ride from the citadel and the old port.",
+          "description": "The first real crossing of the trip. From Saint-Raphael you leave the coast and head roughly twenty miles southwest across open water to the Gulf of Saint-Tropez, so pick a settled morning and keep an eye on the afternoon sea breeze, which can build over the gulf. Saint-Tropez itself is expensive and busy in the port, so many crews anchor in the Baie des Canebiers, just east of town. The bottom is sand and grass with good holding, and a buoyed channel keeps swimmers and boats apart. From there it is a short tender to the beach and a half-hour walk past the marine cemetery to the citadel and the old harbour. Place des Lices holds its market on Tuesday and Saturday, and a slice of tarte Tropézienne is close to obligatory. Sénéquier on the quay is for people-watching, not budgets.",
+          "thingsToDo": [
+            "Anchor and swim in Baie des Canebiers",
+            "Browse Place des Lices market, Tuesday or Saturday",
+            "Climb to the Citadelle for gulf views",
+            "Try tarte Tropézienne near the old port"
+          ],
+          "mooringTip": "Anchor in the Baie des Canebiers in sand and grass at five to ten metres; the port is costly and often full in summer. Keep inside the buoyed channel and leave room to swing when the sea breeze veers."
+        },
+        "9": {
+          "shortDescription": "A ten-minute crossing of the gulf to Port Grimaud, a 1960s lakeside town where you moor at your own front door.",
+          "description": "Hardly a passage at all. You cross the head of the gulf to Port Grimaud, the canal town the architect François Spoerry built from scratch in the 1960s. Pastel houses front the water, each with its own mooring, and the whole place is laid out like a small Provençal answer to Venice. The marina has around five hundred berths, with some sixty kept for visitors on boats under twenty metres, so a call ahead in season is sensible. Once you are tied up, the town is all footbridges and quiet quays, best seen with an evening walk and a coche d'eau, the little electric ferries that thread the canals. Climb to the old hilltop village of Grimaud behind it for the wider view, castle ruins and a Templar chapel included. An easy, pretty night after the crossing.",
+          "thingsToDo": [
+            "Ride a coche d'eau through the canals",
+            "Walk to hilltop Grimaud's castle ruins",
+            "Cross the footbridges at golden hour",
+            "Eat at a canal-side terrace"
+          ],
+          "mooringTip": "Port Grimaud keeps around sixty visitor berths for boats under twenty metres; reserve ahead in July and August. Approach slowly and watch the shallow, marked entrance channel, which silts on the edges."
+        },
+        "10": {
+          "shortDescription": "Round the wild capes south of the gulf to Cavalaire's broad sandy bay at the foot of the Pradels hills.",
+          "description": "Leaving the gulf, you round the string of protected headlands that make this one of the prettiest corners of the Var coast. Cap Camarat with its lighthouse, then Cap Taillat and Cap Lardier, all part of a shoreline kept free of building. Slip in behind them for a swim; the Plage de l'Escalet and the water off Cap Taillat run clear and quiet on a calm day. Cavalaire-sur-Mer sits at the end of the run, a wide bay under the Massif des Pradels with a long sandy beach and a modern marina. It is an unpretentious resort after the gloss of Saint-Tropez, good for restocking and a relaxed evening. The bay opens to the south and east, so it is a fair-weather anchorage; the marina is the safer bet if any swell is forecast.",
+          "thingsToDo": [
+            "Swim off Cap Taillat's sand spit",
+            "Anchor at Plage de l'Escalet",
+            "Restock at Cavalaire's seafront shops",
+            "Walk the protected Cap Lardier trail"
+          ],
+          "mooringTip": "Cavalaire's bay is open to south and east, so anchor only in settled weather and take the marina if swell threatens. Off Cap Taillat the holding is good in sand, but it is a daytime stop, not an overnight one in wind."
+        },
+        "11": {
+          "shortDescription": "Follow the Maures coast to Le Lavandou, a working seaside town with a dozen beaches and the Golden Islands offshore.",
+          "description": "A relaxed coastal leg under the Massif des Maures, the dark wooded hills that back this shore. Past Cap Nègre and the discreet villas along its flanks, then the string of coves the locals call the twelve beaches of Le Lavandou. Cavalière is the biggest, with room to anchor off the sand in settled weather and swim ashore for lunch. Le Lavandou is a real fishing and holiday town rather than a set piece, and better for it. The port takes visitors, the market is genuine, and the seafront has the kind of unfussy restaurants where the catch is local. From here the Iles d'Or lie just across the water, so it makes a natural staging point before you cross to Port-Cros. We often provision here for the two island nights, since the parks have little for sale.",
+          "thingsToDo": [
+            "Anchor and swim off Cavalière beach",
+            "Provision at Le Lavandou's market",
+            "Eat fresh catch on the seafront",
+            "Sail past the villas of Cap Nègre"
+          ],
+          "mooringTip": "Le Lavandou's port takes visitors and is a good place to top up before the Golden Islands, where supplies are thin. In an offshore breeze you can anchor off Cavalière beach; move in if the wind swings onshore."
+        },
+        "12": {
+          "shortDescription": "Cross to Port-Cros, Europe's first marine national park, and pick up a park buoy off a forested, car-free island.",
+          "description": "A short crossing takes you to Port-Cros, the wildest of the three Golden Islands and the heart of a national park set up in 1963, among the first marine reserves in Europe. The whole island is protected, thickly wooded, and free of cars, and the rules on the water are strict for good reason. Moorings come from a park buoy field, sized for boats up to fifteen metres, and anchoring is banned in the Passe de Bagaud to protect the seagrass. Your boat needs a holding tank for black water to use these waters. Once settled, the walking is the draw: the path to the Fort de l'Estissac and the shaded trail across to the Plage de la Palud, where a marked snorkel trail runs the shallows past the Rascas islet. Quiet, green, and a world away from the Saint-Tropez quays.",
+          "thingsToDo": [
+            "Snorkel the marked trail off Plage de la Palud",
+            "Climb to the Fort de l'Estissac",
+            "Walk the shaded path across the island",
+            "Watch for grouper in the clear shallows"
+          ],
+          "mooringTip": "Use a national-park buoy; anchoring is restricted and forbidden in the Passe de Bagaud. Buoys suit boats up to fifteen metres and a black-water holding tank is required, so arrive early and have the tank sorted."
+        },
+        "13": {
+          "shortDescription": "Hop to Porquerolles, the largest Golden Island, for white-sand beaches, vineyard lanes and a village square shaded by eucalyptus.",
+          "description": "Porquerolles lies a gentle few miles west, the biggest and most inhabited of the islands. The village grew around a nineteenth-century garrison, and its square, dusty with pétanque and shaded by eucalyptus, still feels like a frontier outpost that decided to stay for the wine. The north coast holds the best-known beaches, Plage Notre-Dame and Plage d'Argent among them, both sand and both sheltered from the mistral behind the island. Anchor off the north shore and you are a short walk or bike ride from the village; the island has vineyards making Côtes de Provence rosé and lanes easily covered on a rented bike. Fort Sainte-Agathe looks down over the harbour, and the lighthouse walk at the south end gives you the cliffs and the open sea. The most polished of the three islands, and a fine last anchorage.",
+          "thingsToDo": [
+            "Swim at Plage Notre-Dame or Plage d'Argent",
+            "Rent a bike through the vineyard lanes",
+            "Taste Côtes de Provence rosé at a domaine",
+            "Walk to the southern lighthouse cliffs"
+          ],
+          "mooringTip": "Anchor off the north-coast beaches, sheltered from the mistral, in sand at five to twelve metres. Plage Notre-Dame and d'Argent fill with day boats by late morning, so drop the hook early to claim swinging room."
+        },
+        "14": {
+          "shortDescription": "The long final leg back to Cannes, an early start across open water to close the loop on the Croisette.",
+          "description": "The longest day of the fortnight, and one to plan properly. Porquerolles back to Cannes is a big stretch of open water, well over forty miles, so we usually slip the buoy at first light to be in before the afternoon breeze hardens. If the crew wants to break it, Le Lavandou or Cavalaire make sensible halfway stops. The coast rebuilds as you go, the Maures giving way to the red Esterel and finally the low green of Cap d'Antibes and the Lérins. Cannes closes the circle in style, La Croisette running gold along the front and Le Suquet, the old town, climbing to its church tower and the view back over the bay. Berth in the Vieux Port or anchor off the Croisette for a last night, and toast a fortnight's sailing well done.",
+          "thingsToDo": [
+            "Walk La Croisette and the old harbour",
+            "Climb Le Suquet for the bay view",
+            "Browse Marché Forville for last provisions",
+            "Toast the trip from the Croisette anchorage"
+          ],
+          "mooringTip": "Leave Porquerolles at dawn for this long leg and watch the afternoon breeze off the Esterel. In Cannes, the Vieux Port takes visitors but is busy; anchoring off La Croisette in settled weather is a pleasant, cheaper last night."
+        }
+      }
+    }
+  }
+}

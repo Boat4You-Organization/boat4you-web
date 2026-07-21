@@ -1099,6 +1099,486 @@
           "mooringTip": "Marina Piccola di Sorrento is stern-to at about €100–160 in peak; confirm your handover slot 24 hours ahead so the berth is held. Top up fuel at the entrance berth on the way in to save a scramble at handover."
         }
       }
+    },
+    "aeolian-full-circle-14-days": {
+      "metaTitle": "14-Day Aeolian Full Circle | Boat4You",
+      "metaDesc": "Two weeks from Portorosa around all seven Aeolian Islands, from Vulcano's mud baths to Stromboli's lava, then back via Cefalù and Palermo.",
+      "days": {
+        "1": {
+          "shortDescription": "Slip the lines at Portorosa and point north for the sulphur-scented crater island where the Aeolians properly begin.",
+          "description": "The first leg is a warm-up, roughly fifteen miles of open water once you clear the shoals off Portorosa. We usually leave by nine, before the afternoon breeze fills in from the northwest and kicks up a short chop across the channel. Vulcano announces itself long before you see it clearly; the smell of rotten eggs drifts downwind from the fumaroles. Drop the hook in Porto di Ponente on the west side, where the sand holds well in five to ten metres and the sunsets are worth the sulphur. Ashore, the mud baths near Porto di Levante are a rite of passage, though your swimwear may never recover. If your legs still have anything left, the Gran Cratere climb takes about an hour and the rim view over the whole archipelago sets up the fortnight ahead.",
+          "thingsToDo": [
+            "Soak in the Porto di Levante mud baths",
+            "Climb the Gran Cratere rim (about an hour)",
+            "Watch sunset from Porto di Ponente's black sand",
+            "Swim over the warm underwater fumaroles"
+          ],
+          "mooringTip": "Porto di Ponente is the calm choice in easterlies; anchor in 5 to 10 metres on sand and give the cliffs a wide berth for submerged rocks. Levante has buoys, but the sulphur haze works its way into everything, so most crews prefer to sleep on the Ponente side."
+        },
+        "2": {
+          "shortDescription": "A short morning hop to the archipelago's lively capital, with a Spanish citadel above the harbour and pumice cliffs to the north.",
+          "description": "Barely an hour under sail separates Vulcano from Lipari, so there is no rush. Slide up the east coast and the old town rises ahead, the castle walls of the citadel catching the morning light above Marina Corta. Tie up or grab a buoy, then wander into the lanes behind the quay where the archaeological museum lays out four thousand years of island history in plain terms. Lipari earns a full day. Hire a scooter and run north past Canneto to the old pumice quarries at Porticello, where the white spoil still turns the shallows a milky turquoise. Come evening, Via Garibaldi fills with the smell of grilled fish and the local Malvasia gets poured freely. We often stay two nights here when the schedule allows; the island earns them.",
+          "thingsToDo": [
+            "Tour the citadel's archaeological museum",
+            "Scooter to Porticello's white pumice shallows",
+            "Aperitivo along Via Garibaldi at dusk",
+            "Swim below the Canneto pumice cliffs"
+          ],
+          "mooringTip": "Marina Corta is postcard-pretty but tight and often full by late afternoon; Marina Lunga (Pignataro) to the north has more room and better shelter from the northwest. Book a berth ahead in July and August, or anchor south of Marina Corta in about 12 metres on sand."
+        },
+        "3": {
+          "shortDescription": "Cross to the greenest Aeolian for Malvasia vineyards, caper terraces and the cliff-ringed bay where Il Postino was filmed.",
+          "description": "Salina sits a couple of hours northwest, twin volcanic cones green with vines where the other islands run to bare rock. Santa Marina makes an easy landfall, a proper little marina with water and fuel and a walkable seafront. The island rewards a car more than most. Drive up to Malfa and out to Pollara, the half-collapsed crater bay where the fishermen still pull their boats up the shingle. Salina takes its food seriously. Capers grow wild on the terraces, the Malvasia delle Lipari is honeyed and worth a case in the bilge, and every bar claims the definitive granita. We rate the ones in Santa Marina for breakfast, brioche and all. Sunset from Pollara, with Filicudi floating on the horizon, is the sort of thing crews talk about for years.",
+          "thingsToDo": [
+            "Taste Malvasia at a Malfa winery",
+            "Swim in the Pollara crater bay",
+            "Order caper-laden pasta in Santa Marina",
+            "Try the granita and brioche at breakfast"
+          ],
+          "mooringTip": "Santa Marina's marina is the practical base with full services; call ahead in high season. If the northwest is blowing hard, Rinella on the south coast offers a quieter buoy field and a black-sand beach, though it fills fast with day boats."
+        },
+        "4": {
+          "shortDescription": "Head out to the wild western edge of the chain, where a sea cave, a lone rock spire and a fishing-village terrace wait.",
+          "description": "Filicudi is the quiet one, a longer reach west across open water where the swell has room to build, so pick a settled forecast. Round the south of the island and the Grotta del Bue Marino opens in the cliff, a sea cave you can nose a tender into when it is calm. Off the western tip stands La Canna, a needle of rock climbing seventy metres straight out of the sea. Anchor off Filicudi Porto or drop into the bay below Pecorini a Mare. Ashore, the terrace at La Sirena in Pecorini is the reason many people sail this far, the chef cooking whatever the fishermen landed that morning a few steps away. There is almost nothing to do here beyond swim, eat and watch the light change. That is rather the point.",
+          "thingsToDo": [
+            "Tender into the Grotta del Bue Marino",
+            "Circle La Canna's seventy-metre rock spire",
+            "Lunch on the terrace at La Sirena",
+            "Snorkel the clear water off Capo Graziano"
+          ],
+          "mooringTip": "Filicudi Porto has a small pier with a handful of buoys and limited depth, so arrive early. The bay off Pecorini a Mare gives good holding on sand but opens to the south; if any southerly is forecast, move round to the more sheltered eastern side for the night."
+        },
+        "5": {
+          "shortDescription": "Retrace east toward Salina with time for a swim stop, closing the western loop before the islands' glamorous heart.",
+          "description": "The return to Salina is the same water in reverse, but a different day. With the wind usually behind you on an easterly heading, it is often the easiest sail of the trip, so there is no need to leave at dawn. Take the long way if the sea is kind and pass close under Filicudi's north face, where the terraced walls climb impossibly steep above the water. Halfway across, heave to for a swim where the seabed drops away deep and blue beneath the keel. Back on Salina you can pick a different anchorage from Day 3; if you tied up at Santa Marina before, try the buoy field at Rinella this time for the black sand and the sunset over Filicudi you just left behind. A short shore walk brings you to a couple of honest trattorias.",
+          "thingsToDo": [
+            "Swim stop in deep water mid-channel",
+            "Photograph Filicudi's terraced north face",
+            "Anchor off Rinella's black-sand beach",
+            "Dinner at a Rinella trattoria"
+          ],
+          "mooringTip": "Rinella's small buoy field on Salina's south coast is calm in prevailing northwesterlies and handy for the beach, but exposed to any southerly swell. If the forecast looks unsettled, carry on to Santa Marina where the marina gives proper all-round shelter."
+        },
+        "6": {
+          "shortDescription": "Sail to the smallest and most fashionable island for Bronze Age ruins above a turquoise cove and a famous sunset scene.",
+          "description": "Panarea lies a few hours east, the tiniest of the seven and by some distance the most polished. Whitewashed houses, bougainvillea over the lanes, no cars to speak of, and a summer crowd that arrives by yacht. Pick up a buoy off the main village of San Pietro; the waters around the island are a protected marine reserve, so anchoring is restricted and the buoy fields are the sensible choice. The reward for the fees is Cala Junco, a near-perfect horseshoe cove on the southern shore with the Bronze Age village of Capo Milazzese on the headland above. Walk up in the late afternoon once the tour boats have gone. Come nightfall, the terrace at Hotel Raya has been the island's social anchor for decades, though the drinks cost roughly what the view is worth.",
+          "thingsToDo": [
+            "Snorkel the horseshoe cove at Cala Junco",
+            "Walk to Capo Milazzese's Bronze Age village",
+            "Sundowner on the Hotel Raya terrace",
+            "Tender out to the Basiluzzo islet"
+          ],
+          "mooringTip": "Panarea sits inside a marine protected area, so use the official buoy fields off San Pietro rather than dropping anchor. They fill by early afternoon in season, so aim to arrive before lunch, and expect the swell to wrap in when the wind goes east."
+        },
+        "7": {
+          "shortDescription": "Make the short passage to the ever-active volcano and time your arrival for the lava show down the Sciara del Fuoco after dark.",
+          "description": "This is the day the whole route builds toward. Stromboli stands maybe twelve miles northeast of Panarea, a black cone that smokes without pause and has done for thousands of years. Sail up the east side to the roadstead off Scari, below the village of San Vincenzo, and go ashore for granita and a walk along the black-sand beach. The real event comes at dusk. Work the boat round to the northwest flank where the Sciara del Fuoco, the Stream of Fire, drops straight from the summit into the sea. Hold position a few hundred metres off and wait for the light to fade. Every twenty minutes or so the crater throws up glowing rock that tumbles down the scree, brighter as the sky darkens. Charter crews rarely forget their first night watching it.",
+          "thingsToDo": [
+            "Watch the Sciara del Fuoco erupt at dusk",
+            "Walk San Vincenzo's black-sand beach",
+            "Granita stop in Stromboli village",
+            "Circle the Strombolicchio sea stack"
+          ],
+          "mooringTip": "The Scari roadstead is deep and open, fine for a lunch stop but rolly and unprotected for the night. Many crews view the Sciara after dark then run back to a buoy at Panarea to sleep; if you do stay off Stromboli, set plenty of scope and keep an anchor watch."
+        },
+        "8": {
+          "shortDescription": "Ease back southwest to Panarea for the beach coves and clear-water swimming you sailed past on the way north.",
+          "description": "After the drama of Stromboli, this is a gentler day. The hop back to Panarea takes only a couple of hours, so there is room to linger over breakfast and let the morning calm settle before the sea breeze builds. If you skipped it before, this is the day for the string of tiny islets scattered off Panarea's east coast, Lisca Bianca and Bottaro among them, where a shallow reef of volcanic gas bubbles up through the water and warms it in patches. Anchor the tender, mask on, and swim over the fizzing seabed. Back on the buoy at San Pietro, the evening runs slower than the crowds suggest. Grab an outside table in one of the lanes, order the caponata and a chilled Sicilian white, and watch the last tenders ferry people ashore.",
+          "thingsToDo": [
+            "Snorkel the gas bubbles off Bottaro",
+            "Swim the shallows around Lisca Bianca",
+            "Browse San Pietro's boutique-lined lanes",
+            "Order caponata at a village trattoria"
+          ],
+          "mooringTip": "Use the San Pietro buoy fields again rather than anchoring inside the reserve. The eastern islets have day buoys for snorkelling stops; pick one up for a swim but do not rely on it overnight, as they sit open to the wind."
+        },
+        "9": {
+          "shortDescription": "Head back to the capital for anything you missed first time, from thermal spa cliffs to the best granita on the islands.",
+          "description": "The passage back to Lipari runs a comfortable ten miles or so southwest, an easy morning under sail with Salina off to starboard. Lipari deserves a second look, and coming back gives you the chance to do what the first stop was too short for. Take the boat round the west coast this time to the sea stacks at Pietra del Bagno, or push north to swim below the pumice cliffs where the white stone still slides into water so pale it looks lit from beneath. In town, the upper streets above the citadel stay quiet even in August. Find a spot on the ramparts at golden hour with a scoop of mulberry granita and watch the ferries come and go across to Vulcano. Provisioning is easy here too, so top up the boat before the run back to Sicily.",
+          "thingsToDo": [
+            "Swim the sea stacks at Pietra del Bagno",
+            "Walk the quiet streets above the citadel",
+            "Sunset granita on the ramparts",
+            "Reprovision at the Lipari town shops"
+          ],
+          "mooringTip": "Come back into Marina Lunga for the better shelter and easier provisioning, or take a town buoy off Marina Corta if you want to be in the heart of things. In a strong northwesterly, Marina Corta gets uncomfortable, so the Pignataro side is the safer overnight bet."
+        },
+        "10": {
+          "shortDescription": "A gentle final Aeolian leg back to Vulcano for one more mud soak and a last climb before turning for Sicily.",
+          "description": "You can almost pick out Vulcano from the Lipari waterfront, and the crossing runs an hour at most, so this ranks as the most relaxed sail of the fortnight. There is no reason to hurry off the buoy. Motor across the narrow strait, past the Faraglione stack that guards the entrance, and settle back into Porto di Ponente for a second night. Round two at the mud baths is optional; some crews swear by it, others cannot face the smell again. Better, perhaps, to take the tender round to the base of the fumarole fields and snorkel where warm gas bubbles rise through the shallows and heat the water around your legs. Save the evening for the Ponente beach. This is the last night among the volcanoes before the long haul west to the Sicilian mainland, so it is worth a proper sunset and a decent bottle to mark the turn.",
+          "thingsToDo": [
+            "Snorkel the warm fumarole shallows",
+            "Second soak in the Levante mud baths",
+            "Photograph the Faraglione entrance stack",
+            "Last volcano sunset from Porto di Ponente"
+          ],
+          "mooringTip": "Ponente does the job for one more night, tucked out of any easterly with the hook biting well into sand. Set the hook well and check it, because you want a settled night before an early start on the long Cefalù passage tomorrow."
+        },
+        "11": {
+          "shortDescription": "The trip's big passage: some fifty miles across open sea to Cefalù's honey-stone cathedral and the great rock above it.",
+          "description": "Today is the long one, roughly fifty miles of open Tyrrhenian back to the Sicilian coast, so treat it as a proper passage day. We leave Vulcano at first light and aim to have the anchor down at Cefalù before the afternoon breeze pipes up on the beam. Get the sails set early, keep a watch rotation going, and let the miles roll by. Cefalù comes into view from a long way out, the twin towers of its Norman cathedral standing against the huge crag of La Rocca that shelters the town. Ashore, the old lanes lead down to a medieval washhouse where spring water still runs to the sea, and the crescent of sand fills the moment the sun is out. After a fortnight of small island quays, a real Sicilian town feels like an event.",
+          "thingsToDo": [
+            "Step inside the Norman cathedral's golden mosaics",
+            "Climb La Rocca for the rooftop view",
+            "Find the medieval Lavatoio washhouse",
+            "Swim off Cefalù's crescent town beach"
+          ],
+          "mooringTip": "Cefalù's old harbour is charming but open to the north and offers little real shelter, so most crews anchor off the beach in settled weather and watch the forecast closely. The small Presidiana marina just east has berths and services if the wind turns onshore; book ahead in summer."
+        },
+        "12": {
+          "shortDescription": "Coast west to the Sicilian capital, mooring in the heart of the old city within reach of its markets and Norman splendour.",
+          "description": "A shorter coastal run today, something like thirty-five miles west along the north shore with the mountains rising green to port the whole way. Palermo is a proper city and a jolt after the islands, loud and layered and endlessly worth it. La Cala marina sits right in the old town, so you can step off the boat and be among the market stalls of the Vucciria or Ballarò within minutes, where swordfish and blood oranges and street food crowd the lanes. Give the afternoon to the Cappella Palatina and the golden Byzantine ceilings above it. Eat where the locals queue, order the pane e panelle or the arancine, and finish with a cannolo filled to order. If you have an evening spare, the sweep of Mondello bay lies just west of the city and makes a fine anchorage.",
+          "thingsToDo": [
+            "Graze the street food at Ballarò market",
+            "See the gold mosaics of the Cappella Palatina",
+            "Eat arancine where the locals queue",
+            "Swim in the bay at Mondello"
+          ],
+          "mooringTip": "La Cala marina puts you right in central Palermo, which is a huge convenience but books up fast in summer, so reserve well ahead. If it is full, Marina Villa Igiea just north is a smart alternative with good security and an easy taxi into the centre."
+        },
+        "13": {
+          "shortDescription": "Turn back east along the coast toward Cefalù, with a lazy swim stop and one more evening under the great rock.",
+          "description": "The eastbound run retraces yesterday's water, and with the prevailing northwesterly behind you it is usually a relaxed sail rather than a slog. Take your time. The coast between Palermo and Cefalù hides quiet coves worth a detour, so drop the hook somewhere off the cliffs near Sant'Ambrogio for lunch and a swim before pushing the last few miles east. Back at Cefalù you already know the ground, which is the pleasure of a second night. Skip the sights this time and just live in the place. Book a table in the old town for the evening, order the pasta with sardines and wild fennel that Sicily does better than anywhere, and watch the floodlit cathedral glow above the rooftops. Tomorrow is the short final leg home, so tonight is the one to let run late.",
+          "thingsToDo": [
+            "Anchor for lunch off Sant'Ambrogio's cliffs",
+            "Eat pasta con le sarde in the old town",
+            "Evening stroll under the floodlit cathedral",
+            "Last swim off the town beach"
+          ],
+          "mooringTip": "Anchoring off the beach works again in fair weather; if the wind backs onshore, the Presidiana marina east of town is the bolt-hole. With only a short leg left tomorrow, pick whichever gives the calmer night and set the alarm early only if the forecast pushes you to."
+        },
+        "14": {
+          "shortDescription": "The final run east back to Portorosa, closing a fortnight's loop with the Aeolians standing on the northern horizon.",
+          "description": "The last leg carries you east along the Sicilian coast to the marina where it all began, a passage of forty-odd miles depending on how the wind sits. Leave Cefalù in good time; charter turnaround waits for nobody, and most bases want the boat back by late afternoon. On a clear day the whole chain you have just circled sits low on the horizon to the north, Vulcano and Lipari and the smoking cap of Stromboli, a fitting last look at where the fortnight was spent. Portorosa is a full-service marina with fuel, water and easy access, so build in time to refuel and pump out before you hand back the keys. Square away the boat, settle up, and let the crew take one more coffee on the quay while the two weeks sink in properly.",
+          "thingsToDo": [
+            "Spot the whole Aeolian chain on the horizon",
+            "Refuel and pump out at Portorosa",
+            "Final crew coffee on the marina quay",
+            "Settle the boat for handover"
+          ],
+          "mooringTip": "Portorosa is a large, well-marked marina, but the approach channel is shallow in places, so follow the buoyed entrance and call ahead on the radio for a berth assignment. Leave a clear hour for fuelling and the pump-out station, which can queue on changeover days."
+        }
+      }
+    },
+    "amalfi-cilento-14-days": {
+      "metaTitle": "14-Day Amalfi & Cilento Odyssey | Boat4You",
+      "metaDesc": "Two weeks from Salerno: the Amalfi Coast, Naples and Ischia's thermal baths, then the wild Cilento caves at Palinuro before looping home to Salerno.",
+      "days": {
+        "1": {
+          "shortDescription": "A short first hop out of Salerno to Cetara, the anchovy village where tuna boats still work the coast at dawn.",
+          "description": "Most crews use this first leg to shake down the boat rather than cover ground. It is barely seven miles from Salerno, so there's no rush to leave, and provisioning in the city first makes sense. Cetara sits in a cleft below the coast road, still a genuine fishing port rather than a resort. Its boats land tuna and anchovies, and the village turns the latter into colatura di alici, an amber sauce descended from Roman garum. Order spaghetti dressed with it at one of the harbour trattorias and you'll understand the fuss. The port is small and shallow, built for local craft, so plan your night early. Walk up to the Torre Vicereale before dinner while the light drops. We usually keep the afternoon loose and let people find their sea legs.",
+          "thingsToDo": [
+            "Taste spaghetti alla colatura at a harbour trattoria",
+            "Climb to the Torre Vicereale watchtower",
+            "Buy PDO colatura di alici to take home",
+            "Swim off the Marina di Cetara beach"
+          ],
+          "mooringTip": "Cetara's harbour is small and built for local fishing boats up to about 13 metres, with shallow water inside. Call ahead or arrive by early afternoon; larger yachts usually anchor off the beach in settled weather and tender in."
+        },
+        "2": {
+          "shortDescription": "A gentle run west to Amalfi, where a striped cathedral rises above the quay and the old paper mills still turn.",
+          "description": "Amalfi is close enough that you could leave after a long breakfast, though the anchorages fill by mid-afternoon in July. The town was a maritime republic a thousand years ago and it still trades on the sea. Marina Coppola takes yachts up to around thirty-five metres in eight to eleven metres of water, and there are moorings off the front, but southerly swell rolls straight in, so watch the forecast. Ashore, the Duomo di Sant'Andrea and its long staircase dominate the piazza. Duck into the Museo della Carta to see the water-driven paper presses that made the town rich. Buy lemons the size of fists and a bottle of limoncello. Evenings get busy, then day-trippers vanish by eight; that's the hour to eat.",
+          "thingsToDo": [
+            "Climb the steps to Duomo di Sant'Andrea",
+            "Tour the water-powered Museo della Carta",
+            "Sample sfusato lemons and local limoncello",
+            "Walk the Valle delle Ferriere path inland"
+          ],
+          "mooringTip": "Marina Coppola handles yachts to about 35 metres in 8-11 metres, and there are town moorings off the seafront too. Southerlies send swell into the roadstead, so book a berth ahead in season and keep an eye on the wind backing south."
+        },
+        "3": {
+          "shortDescription": "West past Praiano to Positano, the vertical town that photographs better from the water than from any street.",
+          "description": "The stretch from Amalfi curls past Conca dei Marini and Praiano, worth a swim stop at the Grotta dello Smeraldo if the sea is flat. Positano itself has no harbour, only a jetty for landing. There are seasonal buoy fields off Spiaggia Grande and the quieter Fornillo beach, with a tender service running ashore. Depths drop away fast, and crews often struggle to anchor in under twenty metres while keeping clear of the swimming lines. Take a buoy if one's free and settle in. The town climbs the cliff in tiers of pink and ochre, and the walk up to Santa Maria Assunta with its majolica dome is short but steep. Eat at Fornillo for less noise. We generally aim to be moored by two.",
+          "thingsToDo": [
+            "Snorkel the Grotta dello Smeraldo near Conca dei Marini",
+            "See the majolica dome of Santa Maria Assunta",
+            "Escape the crowds on Fornillo beach",
+            "Aperitivo above Spiaggia Grande at sunset"
+          ],
+          "mooringTip": "Positano has no marina, only buoy fields off Spiaggia Grande and Fornillo with a tender shuttle. Buoys are limited and the seabed shelves steeply, making anchoring awkward under 20 metres. Grab a mooring early or plan to move on if none are free."
+        },
+        "4": {
+          "shortDescription": "Round Punta Campanella into the Bay of Naples and tie up at Sorrento's Marina Piccola under the cliffs.",
+          "description": "This leg takes you around Punta Campanella, the tip of the peninsula, where the current can run and the wind funnels; time it for the morning calm. Off the point lie the Li Galli islets, said to be Homer's Sirens, good for a mid-passage swim. Sorrento sits on a tufa shelf above two marinas. Marina Piccola is the working port, sharing water with the Capri and Naples ferries, so expect wash and a busy quay. Marina Grande, further west, keeps its fishing-village feel and better restaurants. Up top, Piazza Tasso and the old lanes are made for an evening stroll. Order gnocchi alla sorrentina and a glass of the local limoncello. A lift or the zigzag ramp connects the harbour to the town.",
+          "thingsToDo": [
+            "Swim off the Li Galli islets rounding the point",
+            "Wander Piazza Tasso and the old-town lanes",
+            "Dine on gnocchi alla sorrentina at Marina Grande",
+            "Ride the lift up from Marina Piccola"
+          ],
+          "mooringTip": "Marina Piccola is a functioning ferry port, so berths get wash and the quay is busy; book ahead in summer. For a calmer night with better tavernas, try Marina Grande to the west, though space there is tighter."
+        },
+        "5": {
+          "shortDescription": "Cross the gulf to Naples and moor beneath Castel dell'Ovo in the Borgo Marinari, Vesuvius filling the skyline.",
+          "description": "A proper crossing today, roughly eighteen miles of open gulf with Vesuvius growing off the bow. The sea breeze tends to build from late morning, so an early start earns you a flatter passage. Naples more than makes up for the early alarm. Tie up in the Borgo Marinari, the little harbour tucked against Castel dell'Ovo on the islet of Megaride, where fishermen and yachts to about twenty-four metres share the quay under the fortress walls. Step ashore and you're minutes from Santa Lucia and the seafront. This is the city for pizza in its birthplace, with the historic centre, Spaccanapoli, and the archaeological museum a taxi ride away. It's a loud, unvarnished place after the polished coast, and better for it. Lock the boat and go explore on foot.",
+          "thingsToDo": [
+            "Eat a Margherita in its Naples birthplace",
+            "Tour Castel dell'Ovo above the harbour",
+            "Walk Spaccanapoli through the historic centre",
+            "See the bronzes at the Archaeological Museum"
+          ],
+          "mooringTip": "Borgo Marinari at Castel dell'Ovo berths yachts from about 10 to 24 metres with power and water on the quay. It sits in the middle of a working city, so confirm a berth in advance and leave nothing on deck when you head ashore."
+        },
+        "6": {
+          "shortDescription": "Sail out to Ischia, the green volcanic island of vineyards and hot springs at the mouth of the gulf.",
+          "description": "Ischia lies across the gulf from Naples, larger and greener than Capri and far less frantic. The passage is open water, so watch the afternoon breeze. Most crews make first for the Aragonese Castle, the fortress on its own islet linked to Ischia Ponte by a stone causeway; you can anchor off and dinghy in for a look. The island is volcanic through and through, which means thermal water everywhere and vineyards climbing the slopes for the local Biancolella white. Sant'Angelo, on the south side, is a car-free hamlet worth the detour if the weather allows a stop. Provisioning is easy in Ischia Porto. Ease off tonight before the north coast tomorrow. Swim, eat well, turn in early.",
+          "thingsToDo": [
+            "Anchor off the Aragonese Castle at Ischia Ponte",
+            "Taste Biancolella white from the island's vineyards",
+            "Detour to car-free Sant'Angelo on the south coast",
+            "Soak in a natural thermal spring"
+          ],
+          "mooringTip": "Ischia Porto is a former volcanic crater with good shelter and full services, though it fills in high season. You can anchor off Ischia Ponte near the castle in settled weather, but it's exposed to any northerly, so keep the forecast close."
+        },
+        "7": {
+          "shortDescription": "A short shift along Ischia's north coast to Casamicciola Terme, the island's old spa town below Monte Epomeo.",
+          "description": "Barely an hour's sail moves you around to Casamicciola Terme, so treat today as a lazy one. Ischia's oldest spa resort has drawn people to its hot springs since the nineteenth century, and the marina here is modern and well run, taking yachts to around thirty-five metres inside the mole over a sandy bottom. The reason to come is the thermal parks. Parco Termale Castiglione stacks nine pools up the hillside at temperatures from thirty-two to forty degrees, with sea access below; it makes an easy afternoon. If you'd rather stay low-key, O'Vagnitiello is a smaller bathing park cut into the rock. Ashore, the rebuilt town is quieter than Ischia Porto. Book a spa slot, wander the front, and let the day drift. Tomorrow is a long one back across the gulf.",
+          "thingsToDo": [
+            "Soak the day at Parco Termale Castiglione",
+            "Bathe in the rock pools of O'Vagnitiello",
+            "Ride up toward Monte Epomeo for the view",
+            "Stroll Casamicciola's rebuilt seafront promenade"
+          ],
+          "mooringTip": "Marina di Casamicciola is a sheltered, well-serviced port taking yachts to about 35 metres inside and larger craft alongside the outer quay, over sand in up to five metres. It's a comfortable, secure night, but reserve in July and August."
+        },
+        "8": {
+          "shortDescription": "The long haul back across the Bay of Naples to Sorrento, Capri off to starboard the whole way.",
+          "description": "This is the biggest single crossing of the trip so far, better started early while the gulf is still glassy. The rhumb line takes you south of Procida and across open water with Capri filling the view to starboard, tempting a detour if time and wind allow; the Faraglioni stacks alone are worth the diversion. Otherwise, hold for Sorrento and its shelf-top position above the sea. Coming back to Marina Piccola means a known quay and an easy walk into Piazza Tasso for a last coastal dinner. If you fancy a swim en route, the water off Punta Campanella is clear and deep. Fuel and provision here, because the run down to the Cilento starts tomorrow and the southern ports are smaller. Aim to be tied up before the afternoon breeze fills in.",
+          "thingsToDo": [
+            "Detour to Capri's Faraglioni sea stacks",
+            "Swim in clear water off Punta Campanella",
+            "Provision and refuel at Marina Piccola",
+            "Last coastal dinner around Piazza Tasso"
+          ],
+          "mooringTip": "You already know Marina Piccola from earlier, so berthing is straightforward, but it stays a busy ferry port. Book ahead and, if you want quiet on this second visit, ask about Marina Grande instead."
+        },
+        "9": {
+          "shortDescription": "Back around Punta Campanella to Amalfi for a second night, timed to beat the day-boats to a mooring.",
+          "description": "Retracing the peninsula, you round Punta Campanella again and drop back onto the Amalfi Coast, this time from the west. It's a scenic fifteen miles or so past Positano, and there's no shame in a second swim below its cliffs if a buoy is going spare. Amalfi is the target for tonight, partly because it's a fine base and partly to reposition for the long jump to the Cilento tomorrow. Arriving mid-morning gives you the pick of the moorings before the tour boats swarm in. With the town already familiar, use the afternoon differently. Hike part of the Valle delle Ferriere up the gorge behind the town, past old ironworks and ferns, or take the bus up to Ravello for the gardens and the view from Villa Rufolo. Reprovision for the passage south.",
+          "thingsToDo": [
+            "Hike the Valle delle Ferriere gorge above town",
+            "Bus up to Ravello's Villa Rufolo gardens",
+            "Second swim below the Positano cliffs",
+            "Reprovision for the Cilento crossing"
+          ],
+          "mooringTip": "Same story as your first Amalfi night: Marina Coppola berths and seafront moorings, both exposed to southerly swell. Get in before the day-boats to claim a spot, and reprovision now, because the Cilento ports south of here are smaller and quieter."
+        },
+        "10": {
+          "shortDescription": "A long open crossing of the Gulf of Salerno to Agropoli, gateway to the Greek temples of Paestum.",
+          "description": "Today the coast opens out and the crowds thin. It's a solid thirty-mile reach across the Gulf of Salerno to Agropoli, the northern gateway to the Cilento, so leave early and settle into the passage. The tourist port has floating pontoons and decent shelter, tucked in below the old town and its Aragonese castle, and it holds well against the sirocco. Agropoli feels like the real south after the polished Amalfi towns, a working place with a good fish market and honest trattorias. The main draw is inland. Paestum, half an hour away, keeps three Doric temples that have stood in the plain since the Greeks built them 2,500 years ago, among the best preserved anywhere. Arrange a taxi or hire bikes. Back aboard, the pace of the trip has clearly changed.",
+          "thingsToDo": [
+            "Visit the Doric temples at Paestum",
+            "Climb to Agropoli's Aragonese castle and old town",
+            "Buy the day's catch at the fish market",
+            "Try mozzarella di bufala from the Sele plain"
+          ],
+          "mooringTip": "Agropoli's tourist port has floating pontoons and holds up well against the sirocco, unlike the exposed Amalfi roadsteads. It's calmer and cheaper here; a call ahead in peak weeks secures a finger berth, but pressure is lighter than up north."
+        },
+        "11": {
+          "shortDescription": "South past Punta Licosa to Acciaroli, a low-key fishing harbour Hemingway is said to have loved.",
+          "description": "A shorter, easier day rounds Punta Licosa, a wooded headland with a protected marine area and an islet off its tip, clear water over rock and posidonia that begs for an anchor-and-swim stop at midday. Acciaroli sits a little further south, a small fishing harbour with a genuine village behind it. Hemingway is rumoured to have passed through and drawn on the place for The Old Man and the Sea; true or not, it has the right weathered feel. The port takes yachts comfortably and stays relaxed. This is Cilento longevity country, where an unusual number of people live past a hundred, credited to the seafood, greens, and rosemary-heavy cooking. Eat simply and well by the water. There's little to do beyond swim, walk the mole, and watch the boats. That's the point.",
+          "thingsToDo": [
+            "Anchor and swim off Punta Licosa's marine reserve",
+            "Walk Acciaroli's harbour mole at dusk",
+            "Eat fresh seafood in the old village",
+            "Look for the Hemingway plaque by the port"
+          ],
+          "mooringTip": "Acciaroli's marina is small but welcoming and takes yachts without much fuss; it's a popular Cilento stop, so it can fill in August. The anchorage off Punta Licosa to the north is lovely by day but open, so use it for lunch, not overnight."
+        },
+        "12": {
+          "shortDescription": "Down the wild Cilento shore to Cape Palinuro, honeycomb of sea caves and the famous Blue Grotto.",
+          "description": "The coast turns dramatic today. Cape Palinuro juts out in a mass of cliffs and grottoes, more than thirty of them bored into the rock. The star is the Grotta Azzurra, where light through an underwater channel turns the water an electric blue; a local gozzo boat runs visits and you'll want to book, since only authorised craft may enter. Anchor for a swim in the Cala del Buondormire, the 'good sleep' bay under the headland, and look up at the Arco Naturale, a stone arch spanning the water. The little marina at Palinuro sits east of the cape and gets busy, so raft up early. Ashore it's a summer resort, cheerful and unpretentious. This is the turning point of the loop; from here the compass swings back north toward Salerno.",
+          "thingsToDo": [
+            "Book a gozzo into the Grotta Azzurra",
+            "Anchor and swim in Cala del Buondormire",
+            "See the Arco Naturale stone arch",
+            "Explore the caves below Cape Palinuro"
+          ],
+          "mooringTip": "Palinuro's marina lies just east of the cape and is small and popular, so arrive early and expect to raft up in season. The Buondormire anchorage under the headland is fine for a daytime stop but too exposed to leave the boat overnight."
+        },
+        "13": {
+          "shortDescription": "The long leg back north to Agropoli, retracing the Cilento coast with the wind on the beam.",
+          "description": "A long one back up the Cilento, so top up fuel and water before you slip. The return north often gives a better sailing angle than the run down, with the prevailing breeze on the beam once it fills; use the early hours for miles and let the afternoon wind do the work. There's no rule saying you must push straight through. If the day's kind, break the passage at Marina di Camerota or drop the hook again off Punta Licosa for a last Cilento swim before the water gets busier further north. Agropoli makes a sensible night stop, a known, sheltered port within a day's reach of Salerno. Back in the tourist harbour, you'll notice how much quieter this end of the trip has been. A final fish dinner ashore feels earned.",
+          "thingsToDo": [
+            "Break the passage at Marina di Camerota",
+            "Last Cilento swim off Punta Licosa",
+            "Refuel and reprovision at Agropoli's port",
+            "Final fish supper in the old town"
+          ],
+          "mooringTip": "You know Agropoli's tourist port from the way down, so berthing is easy and it stays well sheltered from the sirocco. Reserve if you're arriving late off a long leg, and fuel up here for the final run to Salerno."
+        },
+        "14": {
+          "shortDescription": "The closing run across the gulf back to Salerno, the Amalfi cliffs rising ahead as the trip winds down.",
+          "description": "The last leg closes the loop across the Gulf of Salerno, roughly thirty miles with the Amalfi wall growing ahead. Most charters want the boat back by a set time, so plan the morning around fuel state, the wind, and any final swim rather than sightseeing. If you're early, there's a decent last anchorage off the mouth of the Sele or a lunch stop before the city. Salerno itself is easy to overlook, with a long seafront promenade, a Norman-era cathedral holding the relics of Saint Matthew, and a lived-in old town for a farewell meal. The marina here is large and easy to enter, well sheltered behind its moles. Leave time to clean up, settle the fuel, and hand back with the tanks as the base wants them. Two weeks and a full circle done.",
+          "thingsToDo": [
+            "Visit Salerno's cathedral and Saint Matthew's crypt",
+            "Stroll the Lungomare Trieste seafront promenade",
+            "Wander the medieval old town for a last meal",
+            "Settle fuel and hand back at the marina"
+          ],
+          "mooringTip": "Salerno's marina complex is large, easy to approach, and well protected behind its breakwaters, so the final berthing is undemanding. Confirm your check-out slot and fuel-dock timing with the base ahead, as morning queues build in summer."
+        }
+      }
+    },
+    "sardinia-maddalena-14-days": {
+      "metaTitle": "14-Day Sardinia & Corsica Loop | Boat4You",
+      "metaDesc": "Two weeks from Olbia through Tavolara, the Costa Smeralda and the Maddalena islands, with a Bocche di Bonifacio crossing to Corsica and back.",
+      "days": {
+        "1": {
+          "shortDescription": "A short first leg out of Olbia's gulf to the limestone wall of Tavolara, where a king still holds court.",
+          "description": "Most crews sail out of Olbia after lunch, once the boat is provisioned and the paperwork is done. It is an easy reach across the gulf, and Tavolara grows on the horizon the whole way: a sheer grey massif that climbs above five hundred metres straight from the water. The island sits inside a marine protected area, so you pick up one of the park buoys on the sandy north shore rather than dropping the hook where you please. Ashore there is almost nothing, which is the point. Two family kitchens serve lobster and grilled fish, and a beach bar handles the rest. Tavolara even has its own self-styled king, a title passed down one Sardinian family for generations. Swim before dinner while the light goes gold on the cliff.",
+          "thingsToDo": [
+            "Dinner at Da Tonino, Re di Tavolara",
+            "Swim off the sandy north-shore beach",
+            "Photograph the 565-metre limestone wall at sunset",
+            "Snorkel the seagrass inside the marine park"
+          ],
+          "mooringTip": "The north shore has a handful of park buoys on sand and seagrass; free anchoring is restricted inside the reserve. Arrive by mid-afternoon in July and August to be sure of a mooring."
+        },
+        "2": {
+          "shortDescription": "Barely an hour across the channel to Porto San Paolo, the low village that watches Tavolara from the mainland shore.",
+          "description": "This is the shortest leg of the fortnight, so there is no rush. We usually linger on the Tavolara buoy through the morning, then slip across the narrow channel to Porto San Paolo in under an hour. The village is low and unfussy, a working slip for the little ferries that shuttle day-trippers to the island. What you come for lies on the way: the coves around Punta Coda Cavallo, where the water shades from turquoise to deep blue over pale sand. The beaches below the headland make a good lunch stop before you tie up. Porto San Paolo itself has a pontoon and a scatter of trattorias along the front, handy for topping up bread, fruit and a bottle of Vermentino before the next day north.",
+          "thingsToDo": [
+            "Lunch stop in Cala Coda Cavallo",
+            "Swim over pale sand at Punta Molara",
+            "Provision Vermentino along the village front",
+            "Watch the Tavolara ferries from the pontoon"
+          ],
+          "mooringTip": "Porto San Paolo has a small marina pontoon with modest depths, so call ahead in season. If you would rather anchor, the sandy bays under Capo Coda Cavallo hold well in anything but a strong easterly."
+        },
+        "3": {
+          "shortDescription": "North around Capo Figari to Golfo Aranci, where a resident pod of bottlenose dolphins works the water off the point.",
+          "description": "Leave by nine and you round Capo Figari with the morning still cool. The passage north from Porto San Paolo runs maybe fourteen miles, most of it comfortable sailing once the day's thermal has filled in. Keep a watch off the cape: a pod of bottlenose dolphins has settled these waters for years, and they often come to ride the bow. Tuck into Cala Moresca under the Figari headland, two small crescents of golden sand backed by pines, with a path through the scrub linking Cala Greca and Cala del Sonno if you fancy a walk. Golfo Aranci town is a plain fishing and ferry port, not pretty, but the anchorage off Cala Moresca is one of the better protected spots on this stretch. Grill something on board and stay the night.",
+          "thingsToDo": [
+            "Watch bottlenose dolphins off Capo Figari",
+            "Anchor at Cala Moresca beneath the pines",
+            "Walk the path to Cala del Sonno",
+            "Snorkel the rocks under Capo Figari"
+          ],
+          "mooringTip": "Anchor off Cala Moresca on sand in three to six metres, tucked under Capo Figari for shelter from the north and west. It fills with day boats by midday, so come in early or wait for the late-afternoon exodus."
+        },
+        "4": {
+          "shortDescription": "A gentle half-day west into Costa Smeralda glamour, mooring under the piazza and pastel arcades of Porto Rotondo.",
+          "description": "The run down to Porto Rotondo is short, only a few miles, so make a morning of the beach at Marinella on the way. That long white bay between the two headlands has the best holding on this coast and good shelter from the prevailing northwesterly, which is why half the fleet seems to be there on a July afternoon. Porto Rotondo is where the Costa Smeralda starts to show its money. The marina wraps around a neat piazza of arcades, boutiques and gelato, all built in the deliberately rustic Emerald Coast style. Berths are not cheap in high season, but the town is made for an evening stroll and a long dinner. If the budget says otherwise, anchor off Marinella and take the tender in for aperitivo.",
+          "thingsToDo": [
+            "Beach morning anchored off Marinella bay",
+            "Aperitivo on Porto Rotondo's central piazza",
+            "Gelato along the arcaded waterfront",
+            "See San Lorenzo church's carved-wood interior"
+          ],
+          "mooringTip": "Book a Porto Rotondo berth well ahead for July and August, as it is a busy, pricey marina. The anchorage off Marinella beach is the free alternative, sand in three to five metres with reliable holding."
+        },
+        "5": {
+          "shortDescription": "Up the indented Emerald Coast to Porto Cervo, where the superyacht set moors below a village of whitewashed arcades.",
+          "description": "Short and pretty, this leg threads the indented Costa Smeralda coast up to Porto Cervo. The old village above the marina was the Aga Khan's original vision for the Emerald Coast in the sixties, and it still trades on it: whitewashed walls, bougainvillea, and a covered walkway of designer shops the locals call the Passeggiata. Superyachts line the quay at the Marina di Porto Cervo, and the people-watching alone earns the stop. For a swim, the Piccolo and Grande Pevero beaches sit just south, both easy to reach by tender. This is the priciest night of the trip if you take a berth, so plenty of crews anchor in nearby Cala Granu or Liscia Ruja instead and come in by dinghy to walk the village at dusk once the crowds thin.",
+          "thingsToDo": [
+            "Walk the Passeggiata's designer arcade",
+            "Swim at Grande Pevero beach",
+            "People-watch superyachts on the marina quay",
+            "Sunset aperitivo above the old harbour"
+          ],
+          "mooringTip": "Marina di Porto Cervo is superyacht territory and charges accordingly, so reserve ahead if you want the quay. For a quiet, free night, anchor in Cala Granu just north or off Liscia Ruja and tender in."
+        },
+        "6": {
+          "shortDescription": "Doubling back south to Portisco, the workaday big marina for fuel, water and a serious provisioning run.",
+          "description": "Portisco is not a place you sail to for the scenery, and that is fine. After the extravagance of Porto Cervo, this is the workaday stop where you sort the boat out: fuel, water, laundry, a supermarket run before the wilder days ahead in the archipelago. The IGY marina in the Gulf of Cugnana is large, sheltered and well run, with hundreds of berths and easy road access if crew are changing over. Make the passage a lazy one, with a swim stop at Cala Petra Ruja or Romazzino on the way down. Once tied up, there is a decent chandlery and a couple of honest marina restaurants. Eat early, sleep well, and top up the tanks in the morning before pointing north toward Caprera.",
+          "thingsToDo": [
+            "Full provisioning run before the islands",
+            "Swim stop at Cala Petra Ruja",
+            "Take on fuel and water at IGY",
+            "Casual dinner at a marina trattoria"
+          ],
+          "mooringTip": "IGY Portisco is a large, well-protected marina and rarely full, so it is a safe bet for a fuel and provisioning stop. Book if you need a crew change, since it has road access and parking."
+        },
+        "7": {
+          "shortDescription": "The real archipelago begins: north to Caprera, Garibaldi's granite island, and the celebrated white sand of Cala Coticcio.",
+          "description": "This is the day the trip changes gear. You clear the Costa Smeralda and cross into the La Maddalena National Park, roughly a dozen miles of open water with the pink granite islands rising ahead. Caprera is the wildest of them, more forest and rock than town, and forever tied to Giuseppe Garibaldi, who lived out his last years here; his house is now a small museum worth the walk. The prize on the water is Cala Coticcio, the horseshoe of white sand and boulders locals nickname the Tahiti of Sardinia. Access is by tender only and numbers are capped, so it pays to be early. If the wind swings, Porto Palma on the south side is a well-sheltered bay with a scatter of buoys and space to swing.",
+          "thingsToDo": [
+            "Tender into Cala Coticcio's white sand",
+            "Visit Garibaldi's house and tomb",
+            "Anchor overnight in sheltered Porto Palma",
+            "Snorkel the granite of Cala Brigantina"
+          ],
+          "mooringTip": "Cala Coticcio is a no-anchor zone reached only by dinghy, so overnight in Porto Palma or Cala Portese on the south coast, both with buoys and good sand. Park permits apply throughout the archipelago; carry yours aboard."
+        },
+        "8": {
+          "shortDescription": "The shortest of hops from Caprera to La Maddalena town, the archipelago's only real port, all pastel houses and evening passeggiata.",
+          "description": "Barely worth raising the mainsail, the leg from Caprera to La Maddalena takes minutes, the two islands linked by the low Moneta causeway. La Maddalena is the one proper town out here, and after a run of empty anchorages the noise is welcome. Its old centre climbs from the harbour in pink-and-ochre terraces, with a market, real shops, and a long waterfront that fills for the evening passeggiata. Tie up in the town marina at Cala Gavetta, right in the middle of things, or anchor off and tender in. Provision hard here, because it is the last decent supermarket before the western islands. Ashore, wander up to the old fortifications for the view, then find a table for spaghetti alle vongole and cold Vermentino as the lights come on across the water.",
+          "thingsToDo": [
+            "Passeggiata along Cala Gavetta waterfront",
+            "Provision at the town market",
+            "Climb to the old military fortifications",
+            "Spaghetti alle vongole at the harbour"
+          ],
+          "mooringTip": "Cala Gavetta and the adjacent town quays put you in the heart of La Maddalena but fill fast in August, so call ahead. Anchoring is possible off the town, though holding is patchy over weed; set the hook carefully."
+        },
+        "9": {
+          "shortDescription": "West to uninhabited Spargi, an island of pink granite ringed by some of the archipelago's clearest, palest anchorages.",
+          "description": "A gentle few miles west drops you at Spargi, and the scenery shifts again. There is nothing on the island but granite, maquis and beaches, no jetty, no bar, no road. Cala Corsara on the south side is the classic anchorage, a broad bay of pale sand and pink boulders with water so clear you can count the links of your chain in twenty metres. It draws day boats, so the early birds get the best of it; by six the fleet thins and the light turns soft. If the wind backs into the west, shift round to Cala Conneri, tucked among rocks and scrub with good protection. This is a day for doing very little: swim, snorkel the granite slabs, walk the shore path, and let the boat swing to her anchor.",
+          "thingsToDo": [
+            "Anchor in Cala Corsara's pink granite bay",
+            "Snorkel over twenty-metre visibility",
+            "Shelter in Cala Conneri from westerlies",
+            "Walk the empty shoreline paths"
+          ],
+          "mooringTip": "Cala Corsara has buoys plus room to anchor on sand in five to fifteen metres; take a park buoy where one is offered. For a westerly blow, Cala Conneri on the north side gives better cover."
+        },
+        "10": {
+          "shortDescription": "Northwest to Santa Teresa Gallura at Sardinia's very tip, with Capo Testa's lunar granite and Rena Bianca's white sand.",
+          "description": "Today you leave the archipelago proper and push northwest to the top corner of Sardinia. Santa Teresa Gallura sits in a narrow inlet, Porto Longone, that gives good all-round shelter and a snug marina to tie up in before the Corsica crossing. Round Capo Testa on the way and you understand why people rave about it: enormous wind-sculpted granite boulders, the Valle della Luna hollow behind, a lighthouse on the point staring straight across the strait. Anchor off Cala Grande under the cape for a swim in shockingly clear water. In town, Rena Bianca is a broad white beach a short walk from the marina, good for a last easy afternoon. Eat well tonight; tomorrow you cross the Bocche di Bonifacio, and that wants a fresh crew.",
+          "thingsToDo": [
+            "Climb the granite maze at Capo Testa",
+            "Swim at Rena Bianca town beach",
+            "Explore the Valle della Luna hollow",
+            "Anchor under the Capo Testa lighthouse"
+          ],
+          "mooringTip": "Porto Longone marina in Santa Teresa is well sheltered and the sensible place to overnight before the strait, so book in high season. The bays under Capo Testa are fine day anchorages but exposed to any northerly swell."
+        },
+        "11": {
+          "shortDescription": "The set-piece day: cross the Bocche di Bonifacio to Corsica and sail into Bonifacio's fjord beneath its cliff-top citadel.",
+          "description": "The crossing is the shortest international hop imaginable, under nine miles from Santa Teresa to the Corsican shore, but the Bocche di Bonifacio commands respect. The strait funnels the maestrale, and a wind that is only fresh over the Gulf of Lion arrives here amplified, kicking up short steep seas under gusts that can top forty knots. Check the forecast the night before and go early, before the afternoon builds. On a calm morning it is a delight, with the Lavezzi islands off to starboard. Bonifacio itself is the kind of arrival you remember: a long narrow inlet cut into white limestone cliffs, the medieval citadel teetering on the rim above. Motor slowly up the fjord to the marina, then climb the ramparts of the old town at dusk for the view back down the strait.",
+          "thingsToDo": [
+            "Cross the strait early before the maestrale",
+            "Motor up the fjord-like inlet",
+            "Walk the citadel ramparts at dusk",
+            "Detour past the Lavezzi islands"
+          ],
+          "mooringTip": "Bonifacio's marina sits deep inside the inlet with excellent shelter but limited space, so radio ahead in season as it fills by early afternoon. Time the crossing for a calm morning and reef early if the maestrale is forecast."
+        },
+        "12": {
+          "shortDescription": "Back across the strait to Palau, guardian of the archipelago, under the wind-carved Bear Rock and its hilltop fortress.",
+          "description": "Recross the Bocche while the morning is kind and slip back into Italian waters at Palau. It is a busy little ferry town, the mainland gateway to La Maddalena, with a workmanlike marina and everything you need to restock. The landmark here is the Roccia dell'Orso, a granite outcrop above town weathered into the shape of a crouching bear, visible for miles and worth the short climb for the panorama over the whole archipelago. Above it stands the Fortezza di Monte Altura, a nineteenth-century fort you can tour. If Palau's harbour feels too busy, the anchorages just east at Porto Rafael and around the Isola dei Cavalli are prettier for a swim. Pick up any last provisions tonight, because the run south tomorrow is a long one back toward Tavolara.",
+          "thingsToDo": [
+            "Climb to the Roccia dell'Orso bear rock",
+            "Tour the Fortezza di Monte Altura",
+            "Swim off elegant Porto Rafael",
+            "Restock at Palau's harbour shops"
+          ],
+          "mooringTip": "Palau's marina is functional and central but exposed to the wash of constant ferry traffic; for a calmer night, anchor east toward Porto Rafael on sand. Watch for the buoyed ferry channel on the approach."
+        },
+        "13": {
+          "shortDescription": "The long haul home: a full day south down the Gallura coast to close the loop back at Tavolara.",
+          "description": "This is the longest passage of the fortnight, so treat it as a proper sailing day. From Palau you head back east through the archipelago and then turn south, retracing the Costa Smeralda coast with maybe forty miles to cover down to Tavolara. Get the anchor up early and make the most of the morning breeze. If the day runs late or the crew wants a break, there are easy bolt-holes along the way at Porto Cervo or Portisco. Otherwise settle in, hand-steer through the good stretches, and watch the familiar landmarks slide past in reverse. Tavolara reappears late in the afternoon, its grey wall as striking on the way home as it was on day one. Pick up a park buoy on the north shore and toast the last full night aboard.",
+          "thingsToDo": [
+            "Long downwind run along the Gallura coast",
+            "Optional break at Porto Cervo",
+            "Return to the Tavolara north-shore buoys",
+            "Farewell dinner ashore on Tavolara"
+          ],
+          "mooringTip": "Break this long leg with a lunch anchorage if the crew tires; Cala di Volpe or Liscia Ruja sit roughly halfway. Reach the Tavolara buoy field before evening, as the handful of moorings goes early in season."
+        },
+        "14": {
+          "shortDescription": "A short final leg back across the gulf to Olbia, timed to hand the boat back clean and unhurried.",
+          "description": "The last morning is a gentle one. Olbia lies only a few miles southwest across the gulf, so there is no need to rush the coffee. Most charters want the boat back by mid-morning, which leaves time for one final swim off Tavolara before you slip the buoy. Motor or sail in across the flat water of the Gulf of Olbia, past Isola delle Bocche and the long entrance channel that leads to the marinas. Once alongside, there is the familiar routine of stripping beds, settling the fuel and saying goodbye to a boat you have come to know over two weeks. Olbia itself deserves a couple of hours if your flight allows: the Romanesque basilica of San Simplicio and a plate of bottarga pasta make a fitting last taste of Sardinia.",
+          "thingsToDo": [
+            "Final morning swim off Tavolara",
+            "Sail the flat Gulf of Olbia",
+            "Visit San Simplicio basilica in town",
+            "Last bottarga pasta before flying home"
+          ],
+          "mooringTip": "Charter bases in Olbia usually want the boat alongside by 9 a.m., so leave Tavolara by seven for an easy approach. Follow the marked channel into the gulf, since it shoals outside the buoys."
+        }
+      }
     }
   }
 }
