@@ -84,7 +84,10 @@ const ItineraryRoutePage = async ({ params }: ItineraryRoutePageParams) => {
 
   const t = await getTranslations('itinerary');
   // did-carrying search link — a bare ?destinations= does NOT filter.
-  const boatsSearchHref = await resolveBoatsSearchHref(itineraryRoute.startingPoint);
+  const boatsSearchHref = await resolveBoatsSearchHref(itineraryRoute.startingPoint, [
+    parent.sailingArea,
+    country ?? '',
+  ]);
   // Per-route copy (metaDesc → hero lede) lives in the route's country
   // namespace; resolveRouteText t.has-guards → config fallback.
   const tRoute = await getTranslations({

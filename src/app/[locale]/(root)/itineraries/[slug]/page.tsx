@@ -121,7 +121,9 @@ const ItineraryAreaPage = async ({ params }: ItineraryAreaPageParams) => {
         title={t('areaCta.title')}
         lede={t('areaCta.lede')}
         action={primaryStart ? t('areaCta.action', { start: primaryStart }) : t('areaCta.actionFallback')}
-        to={primaryStart ? await resolveBoatsSearchHref(primaryStart) : '/search'}
+        to={
+          primaryStart ? await resolveBoatsSearchHref(primaryStart, [itinerary.sailingArea, country ?? '']) : '/search'
+        }
         secondaryAction={t('areaCta.secondaryAction')}
         secondaryTo="/search"
       />

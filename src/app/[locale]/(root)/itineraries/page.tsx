@@ -43,7 +43,7 @@ const ItinerariesPage = async ({ params }: ItinerariesPageParams) => {
   const t = await getTranslations('itinerary');
   // did-carrying country links for the SEO guide (bare ?destinations= does not filter).
   const [croatiaHref, greeceHref, italyHref, spainHref, turkeyHref] = await Promise.all(
-    ['Croatia', 'Greece', 'Italy', 'Spain', 'Turkey'].map(resolveBoatsSearchHref)
+    ['Croatia', 'Greece', 'Italy', 'Spain', 'Turkey'].map(c => resolveBoatsSearchHref(c))
   );
   const countrySearchHrefs = {
     croatia: croatiaHref,
