@@ -11,6 +11,7 @@
 interface PublicLocation {
   id: string;
   name?: string;
+  locationType?: string;
 }
 
 interface PagedLocations {
@@ -34,14 +35,27 @@ export const resolveBoatsSearchHref = async (name: string): Promise<string> => {
     if (candidates.length === 0) return plain;
 
     const target = name.trim().toLowerCase();
+    const norm = (value?: string) => value?.trim().toLowerCase() ?? '';
+
+    // A region carrying the same name beats the namesake city/marina:
+    // "Split" the location lists a handful of boats moored in town while
+    // "Split region" (r-5) holds the whole charter fleet (Mario 22.7).
+    const region = candidates.find(
+      c =>
+        (c.locationType === 'REGION' || c.id.startsWith('r-')) &&
+        (norm(c.name) === target || norm(c.name) === `${target} region` || norm(c.name).startsWith(target))
+    );
     const best =
-      candidates.find(c => c.name?.trim().toLowerCase() === target) ??
-      candidates.find(c => c.name?.trim().toLowerCase().startsWith(target)) ??
+      region ??
+      candidates.find(c => norm(c.name) === target) ??
+      candidates.find(c => norm(c.name).startsWith(target)) ??
       candidates[0];
 
     if (!best?.id) return plain;
 
-    return `${plain}&did=${encodeURIComponent(best.id)}`;
+    const label = region?.name ?? name;
+
+    return `/search?destinations=${encodeURIComponent(label)}&did=${encodeURIComponent(best.id)}`;
   } catch {
     return plain;
   }
