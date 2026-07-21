@@ -1,0 +1,186 @@
+{
+  "meta": {
+    "title": "Trasy rejsów — plany czarterowe dzień po dniu | Boat4You",
+    "description": "Trasy czarterowe dzień po dniu w Chorwacji, Grecji, Włoszech, Hiszpanii, Turcji i na Karaibach. Interaktywne mapy, dystanse żeglugi i jachty do rezerwacji z każdej mariny startowej.",
+    "imageAlt": "Trasy rejsów Boat4You — plany żeglugi z mapami dzień po dniu",
+    "collectionDescription": "Trasy rejsów Boat4You — przykładowe 7-dniowe trasy po Chorwacji, Grecji, Włoszech, Hiszpanii, Turcji i Karaibach z marinami startowymi, kotwicowiskami i dziennymi dystansami."
+  },
+  "breadcrumb": {
+    "home": "Strona główna",
+    "itinerary": "Trasy rejsów",
+    "areaSuffix": "akwen"
+  },
+  "listHero": {
+    "kicker": "Trasy rejsów",
+    "eyebrow": "Trasy żeglugi dzień po dniu",
+    "title": "Trasy",
+    "italic": "rejsów.",
+    "lede": "Sprawdzone tygodniowe trasy po Chorwacji, Grecji, Włoszech, Hiszpanii, Turcji i Karaibach. Śledź mapę dzień po dniu, sprawdź dystanse i wybierz jacht z mariny startowej trasy — wszystko z rezerwacją online.",
+    "imageAlt": "Trasy rejsów — plany dzień po dniu"
+  },
+  "listCta": {
+    "title": "Znalazłeś trasę dla siebie?",
+    "lede": "Każda trasa zaczyna się w marinie pełnej jachtów do rezerwacji online — wybierz tydzień, porównaj aktualne ceny i zarezerwuj z bezpłatnym anulowaniem.",
+    "action": "Znajdź swój jacht"
+  },
+  "areaHero": {
+    "kicker": "Trasa",
+    "eyebrow": "Trasy rejsów · {country}",
+    "title": "Czarter jachtów {area} —",
+    "italic": "trasy."
+  },
+  "areaCta": {
+    "title": "Podoba Ci się któraś z tych tras?",
+    "lede": "Sprawdź, które jachty są dostępne z marin tego akwenu w Twoim terminie — aktualne ceny, rzeczywista dostępność, rezerwacja online.",
+    "action": "Jachty z portu {start}",
+    "actionFallback": "Przeglądaj dostępne jachty",
+    "secondaryAction": "Wszystkie jachty"
+  },
+  "routeHero": {
+    "kickerOneWay": "Trasa · {days, number} dni · w jedną stronę",
+    "kickerRoundTrip": "Trasa · {days, number} dni · pętla",
+    "eyebrow": "Trasa czarterowa · {area}",
+    "italicVia": "przez {points}.",
+    "italicRoundTrip": "pętla."
+  },
+  "routeCta": {
+    "title": "Przepłyń tę trasę własnym czarterem",
+    "lede": "Sprawdź dostępność z mariny startowej, porównaj jachty i zarezerwuj swój tydzień online — z bezpłatnym anulowaniem.",
+    "action": "Jachty z portu {start}",
+    "secondaryAction": "Wszystkie jachty"
+  },
+  "pdfDownload": "Pobierz PDF (bezpłatnie)",
+  "tripLd": {
+    "name": "{days, number}-dniowa trasa czarterowa {area} — {route}",
+    "description": "Przykładowa {days, number}-dniowa trasa czarterowa na akwenie {area}, {country}, ze startem z portu {start}."
+  },
+  "hub": {
+    "eyebrow": "Akweny żeglarskie",
+    "title": "Każda trasa, według",
+    "titleItalic": "akwenu.",
+    "lede": "Wybierz wody pasujące do Twojego tygodnia — każda karta otwiera wszystkie trasy z danej bazy, dzień po dniu. Płyń według planu albo potraktuj go jako punkt wyjścia; postoje dopasowują się do pogody i załogi.",
+    "tellUsLink": "Znajdź swój jacht →",
+    "countryHeadingItalic": "trasy.",
+    "areaSingular": "akwen",
+    "areaPlural": "akweny",
+    "routeSingular": "trasa",
+    "routePlural": "trasy",
+    "sailingAreaCardTitle": "Akwen {area}",
+    "exploreRoutes": "Poznaj trasy — {area}",
+    "daysExact": "{days, number} dni",
+    "daysRange": "{min, number}–{max, number} dni"
+  },
+  "area": {
+    "routeCountSingular": "trasa",
+    "routeCountPlural": "tras",
+    "routesFrom": "z portu {start}",
+    "pickTitle": "Wybierz swój",
+    "pickTitleItalic": "tydzień z akwenu {area}.",
+    "areaSubtitle": "{country} · akwen {area}",
+    "tailorLink": "Znajdź swój jacht →",
+    "allStartingPoints": "Wszystkie porty startowe",
+    "pickStartingPoint": "Wybierz port startowy",
+    "roundTrip": "{start} — pętla",
+    "dayBadgeOneWay": "{days, number} dni · w jedną stronę",
+    "dayBadgeLoop": "{days, number} dni · pętla",
+    "routeCardKicker": "Trasa {index} · Start: {start}",
+    "seeDayByDay": "Zobacz dzień po dniu",
+    "aboutEyebrow": "O akwenie {area}",
+    "aboutHeading": "{area},",
+    "aboutHeadingItalic": "słowami żeglarza."
+  },
+  "detail": {
+    "eyebrow": "Trasa",
+    "heading": "Trasa dzień po dniu",
+    "intro": "Kliknij dowolną pinezkę na mapie lub dowolny dzień w podsumowaniu poniżej, aby zobaczyć postój, opis i zdjęcia tego dnia."
+  },
+  "panel": {
+    "dayLabel": "Dzień {number, number}",
+    "distanceLabel": "Dystans",
+    "distanceValue": "{nm, number} Mm",
+    "sailingLabel": "Żegluga",
+    "sailingValue": "~{hours, number} h przy 5 węzłach"
+  },
+  "journey": {
+    "eyebrow": "Cała historia",
+    "heading": "Podróż dzień po dniu",
+    "intro": "Nazwane kotwicowiska, wskazówki cumownicze i atrakcje dla każdego etapu tygodnia — mapa podąża za Tobą podczas przewijania.",
+    "dayLabel": "Dzień {number, number}",
+    "thingsToDo": "Co robić",
+    "mooringTip": "Wskazówka cumownicza"
+  },
+  "extras": {
+    "atAGlanceKicker": "W skrócie",
+    "atAGlanceHeading": "Trasa w skrócie",
+    "bestSeasonLabel": "Najlepszy sezon",
+    "bestSeasonFallback": "maj – październik",
+    "durationLabel": "Czas trwania",
+    "durationValue": "{days, number} dni",
+    "departureLabel": "Port startowy",
+    "sailingAreaLabel": "Akwen",
+    "summaryHeading": "Podsumowanie trasy",
+    "summaryHint": "Kliknij dowolny dzień, aby wrócić do mapy i zobaczyć jego zdjęcia, opis i wskazówkę cumowniczą.",
+    "dayLabel": "Dzień {number, number}",
+    "planHeading": "Zaplanuj tę trasę",
+    "browseYachtsTitle": "Jachty z portu {start}",
+    "browseYachtsSubtitle": "Dostępność i ceny na żywo, rezerwacja online",
+    "allRoutesTitle": "Wszystkie trasy — {area}",
+    "allRoutesSubtitle": "Porównaj inne warianty trasy",
+    "searchAllTitle": "Przeszukaj całą flotę",
+    "searchAllSubtitle": "Każdy kierunek, termin i typ jachtu",
+    "bestMonths": {
+      "split": "maj – początek października (szczyt cze – wrz)",
+      "dubrovnik": "maj – połowa października (szczyt cze – wrz)",
+      "sibenik": "maj – początek października (szczyt cze – wrz)",
+      "istria": "czerwiec – połowa września (szczyt lip – sie)",
+      "zadar": "maj – początek października (szczyt cze – wrz)",
+      "cyclades": "maj – połowa października (szczyt cze – wrz, meltemi lip – sie)",
+      "ionian": "maj – połowa października (szczyt cze – wrz, spokojniejsze wiatry)",
+      "sporades": "maj – początek października (szczyt cze – wrz)",
+      "dodecanese": "maj – połowa października (szczyt cze – wrz)",
+      "bodrum": "maj – połowa października (szczyt cze – wrz)",
+      "gocek": "kwiecień – listopad (szczyt maj – paź)",
+      "catalonia": "maj – połowa października (szczyt cze – wrz)",
+      "ibiza": "maj – połowa października (szczyt cze – wrz)",
+      "mallorca": "kwiecień – połowa października (szczyt maj – wrz)",
+      "amalfi": "maj – połowa października (szczyt cze – wrz)",
+      "sardinia": "maj – połowa października (szczyt cze – wrz)",
+      "sicily": "kwiecień – połowa października (szczyt maj – wrz)",
+      "bahamas": "grudzień – kwiecień (szczyt sty – mar)",
+      "bvi": "listopad – maj (szczyt gru – kwi)",
+      "grenada": "grudzień – maj (poniżej pasa huraganów)",
+      "martinique": "grudzień – maj (szczyt sty – kwi)"
+    }
+  },
+  "suggested": {
+    "heading": "Proponowane trasy dla Twojej mariny",
+    "viewAll": "Zobacz wszystkie trasy — {area}",
+    "blogHeading": "Przepłyń to sam — proponowane trasy"
+  },
+  "indexSeo": {
+    "h2Choose": "Jak wybrać trasę czarteru",
+    "introPara1": "Boat4You obejmuje sześć rejonów czarterowych — <strong>Chorwację, Grecję, Włochy, Hiszpanię, Turcję i Karaiby</strong> — a każdy żegluje się inaczej: inne wiatry, inne dystanse, inne ceny. Standardowy tydzień czarteru biegnie od mariny do mariny, od soboty do soboty, i przykładowe trasy na tej stronie zbudowane są dokładnie wokół tego rytmu.",
+    "introPara2": "Każda trasa jest też realnie dostępna: <strong>w każdej bazie startowej Boat4You utrzymuje flotę z dostępnością na żywo</strong> — gdy trasa pasuje, przechodzisz z planu rejsu prosto do jachtów faktycznie wolnych w tej marinie w Twoim terminie.",
+    "readFullGuide": "Przeczytaj pełny przewodnik po trasach",
+    "showLess": "Pokaż mniej",
+    "h3Croatia": "Chorwacja — Split, Dubrownik, Szybenik, Istria i Zadar",
+    "croatiaBody": "Krótkie odcinki, osłonięte kanały i ponad tysiąc wysp czynią z Chorwacji najłatwiejsze miejsce w Europie na pierwszy samodzielny tydzień czarteru. Najruchliwsze bazy leżą wokół <strong>Splitu i Trogiru</strong>; Dubrownik, Szybenik i Zadar pokrywają południe i północ. Licz na etapy 10–25 Mm, wyspiarskie miasteczko każdego wieczoru i dwa parki narodowe — Kornati i Mljet — w zasięgu tygodnia. <croatiaLink>Zobacz jachty w Chorwacji</croatiaLink>.",
+    "h3Greece": "Grecja — Cyklady, Morze Jońskie, Sporady i Dodekanez",
+    "greeceBody": "Grecja dzieli się na cztery nastroje: łagodne <strong>Morze Jońskie</strong> na spokojne rodzinne tygodnie, wietrzne, pocztówkowe <strong>Cyklady</strong> dla pewnych załóg, zielone i ciche <strong>Sporady</strong> oraz <strong>Dodekanez</strong> tuż przy tureckim wybrzeżu. Dystanse pozostają umiarkowane, a na wielu postojach tawerny zastępują mariny. <greeceLink>Zobacz jachty w Grecji</greeceLink>.",
+    "h3Italy": "Włochy — Wybrzeże Amalfi, Sardynia i Sycylia",
+    "italyBody": "Włochy to czarter dla zmysłów — <strong>Wybrzeże Amalfi</strong> i Capri z Neapolu, granitowe zatoczki i krystaliczna woda na <strong>sardyńskiej Costa Smeralda</strong>, wulkany i skoki po Wyspach Liparyjskich z <strong>Sycylii</strong>. Etapy są krótkie; kuchnia to drugi plan rejsu. <italyLink>Zobacz jachty we Włoszech</italyLink>.",
+    "h3Spain": "Hiszpania — Baleary i Katalonia",
+    "spainBody": "<strong>Baleary</strong> — Majorka, Ibiza, Minorka, Formentera — mieszczą kotwicowiska pod klifami i beach cluby w krótkich dziennych etapach, a <strong>Barcelona i Costa Brava</strong> pasują załogom, które chcą wielkomiejskiego startu i przybrzeżnego rejsu. <spainLink>Zobacz jachty w Hiszpanii</spainLink>.",
+    "h3Turkey": "Turcja — Bodrum i Göcek",
+    "turkeyBody": "Turkusowe Wybrzeże ma najdłuższy sezon na Morzu Śródziemnym — od kwietnia do listopada — z <strong>Bodrum</strong> na zatokę Gökova lub z <strong>Göcek</strong> na Fethiye, Kaş i zatopione ruiny Kekovy, do tego najsilniejsza flota gulet z załogą. <turkeyLink>Zobacz jachty w Turcji</turkeyLink>.",
+    "h3Caribbean": "Karaiby — BVI, Bahamy, Grenada i Martynika",
+    "caribbeanBody": "Zimowy czarter w najlepszym wydaniu: stałe pasaty, etapy w zasięgu wzroku na <strong>BVI</strong>, płytkie turkusowe ławice na <strong>Bahamach</strong> oraz zieleńsze, spokojniejsze <strong>Grenadyny i Martynika</strong> na południu. Sezon osiąga szczyt od grudnia do kwietnia — dokładnie wtedy, gdy Morze Śródziemne śpi. <caribbeanLink>Przeglądaj trasy karaibskie</caribbeanLink>.",
+    "h2Quick": "Szybki przewodnik decyzyjny",
+    "quickFirstTime": "<strong>Pierwszy samodzielny czarter albo małe dzieci na pokładzie?</strong> Chorwacja ze Splitu lub greckie Morze Jońskie — krótkie, osłonięte etapy i łagodne wiatry.",
+    "quickPhotogenic": "<strong>Polujesz na pocztówkę?</strong> Cyklady dla białych wiosek nad głębokim błękitem, Sardynia dla zatoczek o karaibskiej wodzie — albo prawdziwe Karaiby z Tortoli.",
+    "quickTwoWeeks": "<strong>Masz dwa tygodnie?</strong> Połącz trasę w jedną stronę Split → Dubrownik, zejdź z Aten w głąb Cyklad albo zepnij Bodrum z Göcek wzdłuż Turkusowego Wybrzeża.",
+    "quickFood": "<strong>Żeglujesz dla stołu?</strong> Wybrzeże Amalfi z Neapolu albo Majorka i Minorka — krótkie etapy, długie kolacje.",
+    "quickCrewed": "<strong>Chcesz załogę w cenie?</strong> Tureckie gulety pływają z kapitanem i kucharzem; większe jachty z załogą żeglują po Chorwacji, Grecji i Karaibach.",
+    "stillUnsure": "Wciąż się wahasz? <searchLink>Otwórz wyszukiwarkę jachtów</searchLink> — filtruj po kraju, terminie i typie jachtu, a właściwa trasa zwykle pokaże się sama."
+  }
+}

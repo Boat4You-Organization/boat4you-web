@@ -7,6 +7,7 @@ import { notFound } from 'next/navigation';
 import { getLoggedInUser } from '@/actions/auth.actions';
 import { getSingleYacth } from '@/actions/yacht.actions';
 import Layout from '@/components/Layout';
+import SuggestedItineraries from '@/components/SuggestedItineraries';
 import { AllSearchParams } from '@/config/form-models.config';
 import { LocaleType } from '@/config/locales.config';
 import { meta } from '@/config/meta';
@@ -18,6 +19,7 @@ import BoatContentSection from '@/views/Boat/BoatContentSection';
 import BoatHeroSection from '@/views/Boat/BoatHeroSection';
 import BoatMobileNavigation from '@/views/Boat/BoatMobileNavigation';
 import { BoatTransitionProvider } from '@/views/Boat/BoatTransitionProvider';
+import RelatedBoats from '@/views/Boat/RelatedBoats';
 
 /**
  * Build a `Product` JSON-LD schema for a yacht detail page.
@@ -421,6 +423,14 @@ const BoatPage = async ({
       <BoatTransitionProvider>
         <BoatHeroSection yacht={yacht} />
         <BoatContentSection yacht={yacht} />
+        {/* Post-content upsell order fixed by Mario (21.7.2026): similar
+            boats FIRST, day-by-day itineraries for the marina below. */}
+        <RelatedBoats yacht={yacht} user={user} locale={locale} currency={currency} />
+        <SuggestedItineraries
+          marinaName={yacht.location?.name}
+          countryCode={yacht.location?.countryCode}
+          variant="full"
+        />
         <BoatMobileNavigation yacht={yacht} />
       </BoatTransitionProvider>
     </Layout>

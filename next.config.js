@@ -15,6 +15,13 @@ const withNextIntl = createNextIntlPlugin({
       './messages/en/metadata.json',
       './messages/en/cookieConsent.json',
       './messages/en/promo.json',
+      './messages/en/itinerary.json',
+      './messages/en/itineraryCroatia.json',
+      './messages/en/itineraryGreece.json',
+      './messages/en/itineraryItaly.json',
+      './messages/en/itinerarySpain.json',
+      './messages/en/itineraryTurkey.json',
+      './messages/en/itineraryCaribbean.json',
     ],
   },
 });

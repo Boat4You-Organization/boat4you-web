@@ -56,6 +56,10 @@ export async function GET() {
     <loc>${baseUrl}/sitemap-categories.xml</loc>
     <lastmod>${lastmod}</lastmod>
   </sitemap>
+  <sitemap>
+    <loc>${baseUrl}/sitemap-itineraries.xml</loc>
+    <lastmod>${lastmod}</lastmod>
+  </sitemap>
 ${yachtSitemaps}
 </sitemapindex>`;
 

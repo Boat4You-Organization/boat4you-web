@@ -1,0 +1,186 @@
+{
+  "meta": {
+    "title": "Zeilroutes voor jachtcharter — vaarroutes | Boat4You",
+    "description": "Charterroutes dag voor dag in Kroatië, Griekenland, Italië, Spanje, Turkije en het Caribisch gebied. Interactieve kaarten, vaarafstanden en boekbare boten vanuit elke vertrekjachthaven.",
+    "imageAlt": "Boat4You charterroutes — zeilroutes met kaarten dag voor dag",
+    "collectionDescription": "Boat4You zeilroutes — voorbeeldroutes van 7 dagen door Kroatië, Griekenland, Italië, Spanje, Turkije en het Caribisch gebied met vertrekjachthavens, ankerplaatsen en dagelijkse afstanden."
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "itinerary": "Zeilroutes",
+    "areaSuffix": "vaargebied"
+  },
+  "listHero": {
+    "kicker": "Zeilroutes",
+    "eyebrow": "Vaarroutes dag voor dag",
+    "title": "Zeil-",
+    "italic": "routes.",
+    "lede": "Beproefde weekroutes door Kroatië, Griekenland, Italië, Spanje, Turkije en het Caribisch gebied. Volg de kaart dag voor dag, bekijk de afstanden en kies een boot uit de thuishaven van de route — allemaal online te boeken.",
+    "imageAlt": "Zeilroutes — routes dag voor dag"
+  },
+  "listCta": {
+    "title": "Een route gevonden die je aanspreekt?",
+    "lede": "Elke route begint in een jachthaven vol online boekbare boten — kies je week, vergelijk actuele prijzen en reserveer met gratis annulering.",
+    "action": "Vind jouw boot"
+  },
+  "areaHero": {
+    "kicker": "Zeilroute",
+    "eyebrow": "Vaarroutes · {country}",
+    "title": "Jachtcharter {area} —",
+    "italic": "zeilroutes."
+  },
+  "areaCta": {
+    "title": "Spreekt een van deze routes je aan?",
+    "lede": "Bekijk welke boten beschikbaar zijn vanuit de jachthavens van dit vaargebied voor jouw data — actuele prijzen, echte beschikbaarheid, online boeken.",
+    "action": "Bekijk boten vanuit {start}",
+    "actionFallback": "Bekijk beschikbare boten",
+    "secondaryAction": "Alle boten bekijken"
+  },
+  "routeHero": {
+    "kickerOneWay": "Route · {days, number} dagen · enkele reis",
+    "kickerRoundTrip": "Route · {days, number} dagen · rondtocht",
+    "eyebrow": "Charterroute · {area}",
+    "italicVia": "via {points}.",
+    "italicRoundTrip": "rondtocht."
+  },
+  "routeCta": {
+    "title": "Vaar deze route met je eigen charter",
+    "lede": "Controleer de beschikbaarheid vanuit de vertrekjachthaven, vergelijk boten en leg je week online vast — inclusief gratis annulering.",
+    "action": "Bekijk boten vanuit {start}",
+    "secondaryAction": "Alle boten bekijken"
+  },
+  "pdfDownload": "PDF downloaden (gratis)",
+  "tripLd": {
+    "name": "{days, number}-daagse {area} charterroute — {route}",
+    "description": "Voorbeeld van een {days, number}-daagse charterroute in vaargebied {area}, {country}, met vertrek vanuit {start}."
+  },
+  "hub": {
+    "eyebrow": "Vaargebieden",
+    "title": "Elke route, per",
+    "titleItalic": "vaargebied.",
+    "lede": "Kies het water dat bij jouw week past — elke kaart opent alle routes vanuit die basis, dag voor dag. Gebruik ze zoals ze zijn of als vertrekpunt; de stops passen zich aan het weer en je bemanning aan.",
+    "tellUsLink": "Vind jouw boot →",
+    "countryHeadingItalic": "zeilroutes.",
+    "areaSingular": "vaargebied",
+    "areaPlural": "vaargebieden",
+    "routeSingular": "route",
+    "routePlural": "routes",
+    "sailingAreaCardTitle": "Vaargebied {area}",
+    "exploreRoutes": "Ontdek de routes van {area}",
+    "daysExact": "{days, number} dagen",
+    "daysRange": "{min, number}–{max, number} dagen"
+  },
+  "area": {
+    "routeCountSingular": "route",
+    "routeCountPlural": "routes",
+    "routesFrom": "vanuit {start}",
+    "pickTitle": "Kies jouw",
+    "pickTitleItalic": "week vanuit {area}.",
+    "areaSubtitle": "{country} · vaargebied {area}",
+    "tailorLink": "Vind jouw boot →",
+    "allStartingPoints": "Alle vertrekpunten",
+    "pickStartingPoint": "Kies een vertrekpunt",
+    "roundTrip": "{start} — rondtocht",
+    "dayBadgeOneWay": "{days, number} dagen · enkele reis",
+    "dayBadgeLoop": "{days, number} dagen · rondtocht",
+    "routeCardKicker": "Route {index} · Vertrek {start}",
+    "seeDayByDay": "Bekijk dag voor dag",
+    "aboutEyebrow": "Over {area}",
+    "aboutHeading": "{area},",
+    "aboutHeadingItalic": "in de woorden van een zeiler."
+  },
+  "detail": {
+    "eyebrow": "De route",
+    "heading": "De route dag voor dag",
+    "intro": "Klik op een speld op de kaart of op een dag in het routeoverzicht hieronder om de stop, het verhaal en de foto's van die dag te zien."
+  },
+  "panel": {
+    "dayLabel": "Dag {number, number}",
+    "distanceLabel": "Afstand",
+    "distanceValue": "{nm, number} NM",
+    "sailingLabel": "Zeiltijd",
+    "sailingValue": "~{hours, number} u bij 5 kn"
+  },
+  "journey": {
+    "eyebrow": "Het hele verhaal",
+    "heading": "De reis dag voor dag",
+    "intro": "Ankerplaatsen met naam, aanlegtips en activiteiten voor elke etappe van de week — de kaart beweegt mee terwijl je scrolt.",
+    "dayLabel": "Dag {number, number}",
+    "thingsToDo": "Wat te doen",
+    "mooringTip": "Aanlegtip"
+  },
+  "extras": {
+    "atAGlanceKicker": "In één oogopslag",
+    "atAGlanceHeading": "De route in één oogopslag",
+    "bestSeasonLabel": "Beste seizoen",
+    "bestSeasonFallback": "mei – oktober",
+    "durationLabel": "Duur",
+    "durationValue": "{days, number} dagen",
+    "departureLabel": "Vertrek",
+    "sailingAreaLabel": "Vaargebied",
+    "summaryHeading": "Routeoverzicht",
+    "summaryHint": "Klik op een dag om terug te springen naar de kaart en zijn foto's, verhaal en aanlegtip te zien.",
+    "dayLabel": "Dag {number, number}",
+    "planHeading": "Plan deze route",
+    "browseYachtsTitle": "Bekijk boten vanuit {start}",
+    "browseYachtsSubtitle": "Live beschikbaarheid en prijzen, online boekbaar",
+    "allRoutesTitle": "Alle routes van {area}",
+    "allRoutesSubtitle": "Vergelijk andere routevarianten",
+    "searchAllTitle": "Doorzoek de hele vloot",
+    "searchAllSubtitle": "Elke bestemming, datum en boottype",
+    "bestMonths": {
+      "split": "mei – begin oktober (hoogseizoen jun – sep)",
+      "dubrovnik": "mei – half oktober (hoogseizoen jun – sep)",
+      "sibenik": "mei – begin oktober (hoogseizoen jun – sep)",
+      "istria": "juni – half september (hoogseizoen jul – aug)",
+      "zadar": "mei – begin oktober (hoogseizoen jun – sep)",
+      "cyclades": "mei – half oktober (hoogseizoen jun – sep, meltemi jul – aug)",
+      "ionian": "mei – half oktober (hoogseizoen jun – sep, rustigere wind)",
+      "sporades": "mei – begin oktober (hoogseizoen jun – sep)",
+      "dodecanese": "mei – half oktober (hoogseizoen jun – sep)",
+      "bodrum": "mei – half oktober (hoogseizoen jun – sep)",
+      "gocek": "april – november (hoogseizoen mei – okt)",
+      "catalonia": "mei – half oktober (hoogseizoen jun – sep)",
+      "ibiza": "mei – half oktober (hoogseizoen jun – sep)",
+      "mallorca": "april – half oktober (hoogseizoen mei – sep)",
+      "amalfi": "mei – half oktober (hoogseizoen jun – sep)",
+      "sardinia": "mei – half oktober (hoogseizoen jun – sep)",
+      "sicily": "april – half oktober (hoogseizoen mei – sep)",
+      "bahamas": "december – april (hoogseizoen jan – mrt)",
+      "bvi": "november – mei (hoogseizoen dec – apr)",
+      "grenada": "december – mei (onder de orkaangordel)",
+      "martinique": "december – mei (hoogseizoen jan – apr)"
+    }
+  },
+  "suggested": {
+    "heading": "Voorgestelde routes voor jouw jachthaven",
+    "viewAll": "Bekijk alle routes van {area}",
+    "blogHeading": "Zeil het zelf — voorgestelde routes"
+  },
+  "indexSeo": {
+    "h2Choose": "Zo kies je jouw charterroute",
+    "introPara1": "Boat4You dekt zes chartergebieden — <strong>Kroatië, Griekenland, Italië, Spanje, Turkije en het Caribisch gebied</strong> — en elk vaart anders: andere winden, andere afstanden, andere prijsniveaus. Een standaard charterweek loopt van jachthaven naar jachthaven, van zaterdag tot zaterdag, en de voorbeeldroutes op deze pagina zijn precies rond dat ritme gebouwd.",
+    "introPara2": "Elke route is bovendien in de praktijk boekbaar: <strong>in elke vertrekbasis houdt Boat4You een vloot met live beschikbaarheid aan</strong> — past een route, dan spring je vanuit het vaarplan direct naar de boten die in die haven echt vrij zijn voor jouw data.",
+    "readFullGuide": "Lees de volledige routegids",
+    "showLess": "Minder tonen",
+    "h3Croatia": "Kroatië — Split, Dubrovnik, Šibenik, Istrië & Zadar",
+    "croatiaBody": "Korte rakken, beschutte kanalen en meer dan duizend eilanden maken Kroatië de makkelijkste plek van Europa voor je eerste bareboatweek. De drukste bases liggen rond <strong>Split en Trogir</strong>; Dubrovnik, Šibenik en Zadar dekken het zuiden en noorden. Reken op etappes van 10–25 NM, elke avond een eilandstadje en twee nationale parken — Kornati en Mljet — binnen het bereik van één week. <croatiaLink>Bekijk boten in Kroatië</croatiaLink>.",
+    "h3Greece": "Griekenland — Cycladen, Ionische Zee, Sporaden & Dodekanesos",
+    "greeceBody": "Griekenland valt uiteen in vier sferen: de zachte <strong>Ionische Zee</strong> voor ontspannen gezinsweken, de winderige ansichtkaart-<strong>Cycladen</strong> voor zelfverzekerde bemanningen, de groene, stille <strong>Sporaden</strong> en de <strong>Dodekanesos</strong> langs de Turkse kust. De afstanden blijven bescheiden en op veel overnachtingsplekken vervangen taverna's de jachthavens. <greeceLink>Bekijk boten in Griekenland</greeceLink>.",
+    "h3Italy": "Italië — Amalfikust, Sardinië & Sicilië",
+    "italyBody": "Italië is charteren voor de zintuigen — de <strong>Amalfikust</strong> en Capri vanuit Napels, granietbaaien en glashelder water aan <strong>Sardiniës Costa Smeralda</strong>, vulkanen en eilandhoppen door de Eolische Eilanden vanuit <strong>Sicilië</strong>. De rakken zijn kort; het eten is de tweede route. <italyLink>Bekijk boten in Italië</italyLink>.",
+    "h3Spain": "Spanje — Balearen & Catalonië",
+    "spainBody": "De <strong>Balearen</strong> — Mallorca, Ibiza, Menorca, Formentera — stoppen ankerbaaien onder kliffen en beachclubs in korte dagetappes, terwijl <strong>Barcelona en de Costa Brava</strong> passen bij bemanningen die een grootstedelijke aankomst en een kusttocht willen. <spainLink>Bekijk boten in Spanje</spainLink>.",
+    "h3Turkey": "Turkije — Bodrum & Göcek",
+    "turkeyBody": "De Turquoise Kust heeft het langste seizoen van de Middellandse Zee — april tot november — vanuit <strong>Bodrum</strong> voor de Golf van Gökova of vanuit <strong>Göcek</strong> voor Fethiye, Kaş en de verzonken ruïnes van Kekova, plus de sterkste gulet-vloot met bemanning. <turkeyLink>Bekijk boten in Turkije</turkeyLink>.",
+    "h3Caribbean": "Caribisch gebied — BVI, Bahama's, Grenada & Martinique",
+    "caribbeanBody": "Wintercharteren op zijn best: constante passaatwinden, rakken op zichtafstand in de <strong>BVI</strong>, ondiepe turquoise banken op de <strong>Bahama's</strong> en de groenere, rustigere <strong>Grenadines en Martinique</strong> in het zuiden. Het seizoen piekt van december tot april — precies wanneer de Middellandse Zee slaapt. <caribbeanLink>Bekijk de Caribische zeilroutes</caribbeanLink>.",
+    "h2Quick": "Snelle beslisgids",
+    "quickFirstTime": "<strong>Eerste bareboat of jonge kinderen aan boord?</strong> Kroatië vanuit Split of de Griekse Ionische Zee — korte, beschutte etappes en vergevingsgezinde wind.",
+    "quickPhotogenic": "<strong>Op zoek naar de ansichtkaart?</strong> De Cycladen voor witte dorpen op diep blauw, Sardinië voor Caribisch heldere baaien — of het echte Caribisch gebied vanuit Tortola.",
+    "quickTwoWeeks": "<strong>Twee weken de tijd?</strong> Combineer de enkele reis Split → Dubrovnik, vaar vanuit Athene diep de Cycladen in of rijg Bodrum en Göcek aaneen langs de Turquoise Kust.",
+    "quickFood": "<strong>Zeilen om te eten?</strong> De Amalfikust vanuit Napels, of Mallorca en Menorca — korte rakken, lange diners.",
+    "quickCrewed": "<strong>Bemanning inbegrepen?</strong> Turkse gulets varen met kapitein en kok; grotere crewed jachten zeilen in Kroatië, Griekenland en het Caribisch gebied.",
+    "stillUnsure": "Twijfel je nog? <searchLink>Open de bootzoeker</searchLink> — filter op land, data en boottype, en de juiste route dient zich meestal vanzelf aan."
+  }
+}

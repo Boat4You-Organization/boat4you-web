@@ -7,12 +7,14 @@ import Currency from '@/components/SvgIcons/Currency';
 import FAQ from '@/components/SvgIcons/FAQ';
 import Favorite from '@/components/SvgIcons/Favorite';
 import Language from '@/components/SvgIcons/Language';
+import Location from '@/components/SvgIcons/Location';
 
 export type NavigationMobileItemTitle =
   | 'about.title'
   | 'about.frequentlyAskedQuestions'
   | 'about.aboutUs'
   | 'about.blog'
+  | 'about.itineraries'
   | 'about.contact'
   | 'preferences.title'
   | 'preferences.favorites'
@@ -51,6 +53,11 @@ const navigationMobile: NavigationMobileItem[] = [
         text: 'about.blog',
         href: '/blog',
         icon: Blog,
+      },
+      {
+        text: 'about.itineraries',
+        href: '/itineraries',
+        icon: Location,
       },
       {
         text: 'about.contact',

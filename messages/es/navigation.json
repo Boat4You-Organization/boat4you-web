@@ -3,6 +3,7 @@
     "faq": "FAQ",
     "aboutUs": "Sobre Nosotros",
     "blog": "Blog",
+    "itineraries": "Itinerarios",
     "contact": "Contacto",
     "myBookings": "Mis Reservas",
     "profileSettings": "Configuración de Perfil"
@@ -42,6 +43,7 @@
       "frequentlyAskedQuestions": "Preguntas Frecuentes",
       "aboutUs": "Sobre Nosotros",
       "blog": "Blog",
+      "itineraries": "Itinerarios",
       "contact": "Contacto"
     },
     "preferences": {

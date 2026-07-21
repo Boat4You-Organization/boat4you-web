@@ -1,0 +1,186 @@
+{
+  "meta": {
+    "title": "Yacht Charter Itineraries — Sailing Routes | Boat4You",
+    "description": "Day-by-day yacht charter routes in Croatia, Greece, Italy, Spain, Türkiye and the Caribbean. Interactive maps, sailing distances and bookable boats from every departure marina.",
+    "imageAlt": "Boat4You yacht charter itineraries — sailing routes with day-by-day maps",
+    "collectionDescription": "Boat4You sailing itineraries — sample 7-day charter routes across Croatia, Greece, Italy, Spain, Türkiye and the Caribbean with departure marinas, anchorages and per-day sailing distances."
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "itinerary": "Itineraries",
+    "areaSuffix": "area"
+  },
+  "listHero": {
+    "kicker": "Itineraries",
+    "eyebrow": "Day-by-day sailing routes",
+    "title": "Yacht charter sailing",
+    "italic": "itineraries.",
+    "lede": "Proven week-long routes across Croatia, Greece, Italy, Spain, Türkiye and the Caribbean. Follow the day-by-day map, check the distances and pick a boat from the route's home marina — all bookable online.",
+    "imageAlt": "Yacht charter sailing itineraries — day-by-day routes"
+  },
+  "listCta": {
+    "title": "Found a route you like?",
+    "lede": "Every itinerary starts at a marina full of boats you can book online — pick your week, compare live prices and reserve with free cancellation.",
+    "action": "Find your boat"
+  },
+  "areaHero": {
+    "kicker": "Itinerary",
+    "eyebrow": "{country} sailing routes",
+    "title": "{area} yacht charter",
+    "italic": "itineraries."
+  },
+  "areaCta": {
+    "title": "Like one of these routes?",
+    "lede": "See which boats are available from this area's marinas for your dates — live prices, real availability, online booking.",
+    "action": "See boats from {start}",
+    "actionFallback": "Browse available boats",
+    "secondaryAction": "Browse all boats"
+  },
+  "routeHero": {
+    "kickerOneWay": "Route · {days, number} days · one-way",
+    "kickerRoundTrip": "Route · {days, number} days · round-trip",
+    "eyebrow": "Yacht charter route · {area}",
+    "italicVia": "via {points}.",
+    "italicRoundTrip": "round-trip."
+  },
+  "routeCta": {
+    "title": "Sail this route on your own charter",
+    "lede": "Check live availability from the departure marina, compare boats and secure your week online — free cancellation included.",
+    "action": "See boats from {start}",
+    "secondaryAction": "Browse all boats"
+  },
+  "pdfDownload": "Download PDF (free)",
+  "tripLd": {
+    "name": "{days, number}-day {area} yacht charter route — {route}",
+    "description": "Sample {days, number}-day yacht charter itinerary in {area}, {country}, departing from {start}."
+  },
+  "hub": {
+    "eyebrow": "Sailing areas",
+    "title": "Every route, by",
+    "titleItalic": "sailing area.",
+    "lede": "Pick the waters that fit your week — each card opens all routes from that base, day by day. Use them as they are or as a starting point; the stops adapt to the weather and your crew.",
+    "tellUsLink": "Find your boat →",
+    "countryHeadingItalic": "itineraries.",
+    "areaSingular": "area",
+    "areaPlural": "areas",
+    "routeSingular": "route",
+    "routePlural": "routes",
+    "sailingAreaCardTitle": "Sailing area {area}",
+    "exploreRoutes": "Explore {area} routes",
+    "daysExact": "{days, number} days",
+    "daysRange": "{min, number}–{max, number} days"
+  },
+  "area": {
+    "routeCountSingular": "route",
+    "routeCountPlural": "routes",
+    "routesFrom": "from {start}",
+    "pickTitle": "Pick your",
+    "pickTitleItalic": "week from {area}.",
+    "areaSubtitle": "{country} · {area} sailing area",
+    "tailorLink": "Find your boat →",
+    "allStartingPoints": "All starting points",
+    "pickStartingPoint": "Pick a starting point",
+    "roundTrip": "{start} round-trip",
+    "dayBadgeOneWay": "{days, number}-day one-way",
+    "dayBadgeLoop": "{days, number}-day loop",
+    "routeCardKicker": "Route {index} · From {start}",
+    "seeDayByDay": "See day-by-day",
+    "aboutEyebrow": "About {area}",
+    "aboutHeading": "{area},",
+    "aboutHeadingItalic": "in a sailor's words."
+  },
+  "detail": {
+    "eyebrow": "The route",
+    "heading": "Day-by-day route",
+    "intro": "Click any pin on the map or any day in the route summary below to see that day's stop, story and photos."
+  },
+  "panel": {
+    "dayLabel": "Day {number, number}",
+    "distanceLabel": "Distance",
+    "distanceValue": "{nm, number} NM",
+    "sailingLabel": "Sailing",
+    "sailingValue": "~{hours, number}h at 5 kn"
+  },
+  "journey": {
+    "eyebrow": "The full story",
+    "heading": "Day-by-day journey",
+    "intro": "Named anchorages, mooring notes and things to do for every leg of the week — the map follows along as you scroll.",
+    "dayLabel": "Day {number, number}",
+    "thingsToDo": "Things to do",
+    "mooringTip": "Mooring tip"
+  },
+  "extras": {
+    "atAGlanceKicker": "At a glance",
+    "atAGlanceHeading": "Route at a glance",
+    "bestSeasonLabel": "Best season",
+    "bestSeasonFallback": "May – October",
+    "durationLabel": "Duration",
+    "durationValue": "{days, number} days",
+    "departureLabel": "Departure",
+    "sailingAreaLabel": "Sailing area",
+    "summaryHeading": "Route summary",
+    "summaryHint": "Click any day to jump back to the map and see its photos, narrative and mooring tip.",
+    "dayLabel": "Day {number, number}",
+    "planHeading": "Plan this route",
+    "browseYachtsTitle": "See boats from {start}",
+    "browseYachtsSubtitle": "Live availability & prices, bookable online",
+    "allRoutesTitle": "All {area} routes",
+    "allRoutesSubtitle": "Compare other route variations",
+    "searchAllTitle": "Search the whole fleet",
+    "searchAllSubtitle": "Every destination, date and boat type",
+    "bestMonths": {
+      "split": "May – early October (peak Jun – Sep)",
+      "dubrovnik": "May – mid-October (peak Jun – Sep)",
+      "sibenik": "May – early October (peak Jun – Sep)",
+      "istria": "June – mid-September (peak Jul – Aug)",
+      "zadar": "May – early October (peak Jun – Sep)",
+      "cyclades": "May – mid-October (peak Jun – Sep, meltemi Jul – Aug)",
+      "ionian": "May – mid-October (peak Jun – Sep, calmer winds)",
+      "sporades": "May – early October (peak Jun – Sep)",
+      "dodecanese": "May – mid-October (peak Jun – Sep)",
+      "bodrum": "May – mid-October (peak Jun – Sep)",
+      "gocek": "April – November (peak May – Oct)",
+      "catalonia": "May – mid-October (peak Jun – Sep)",
+      "ibiza": "May – mid-October (peak Jun – Sep)",
+      "mallorca": "April – mid-October (peak May – Sep)",
+      "amalfi": "May – mid-October (peak Jun – Sep)",
+      "sardinia": "May – mid-October (peak Jun – Sep)",
+      "sicily": "April – mid-October (peak May – Sep)",
+      "bahamas": "December – April (peak Jan – Mar)",
+      "bvi": "November – May (peak Dec – Apr)",
+      "grenada": "December – May (below the hurricane belt)",
+      "martinique": "December – May (peak Jan – Apr)"
+    }
+  },
+  "suggested": {
+    "heading": "Suggested itineraries for your marina",
+    "viewAll": "View all {area} itineraries",
+    "blogHeading": "Sail it yourself — suggested itineraries"
+  },
+  "indexSeo": {
+    "h2Choose": "How to pick your yacht charter route",
+    "introPara1": "Boat4You covers six charter playgrounds — <strong>Croatia, Greece, Italy, Spain, Türkiye and the Caribbean</strong> — and each sails differently: different winds, different distances, different price points. A standard charter week runs marina to marina, Saturday to Saturday, and the sample routes on this page are built around exactly that rhythm.",
+    "introPara2": "Every route here is bookable in practice: <strong>each departure base holds a live fleet on Boat4You</strong>, so once a route fits, you can jump straight from the itinerary to the boats actually available from that marina for your dates.",
+    "readFullGuide": "Read the full route guide",
+    "showLess": "Show less",
+    "h3Croatia": "Croatia — Split, Dubrovnik, Šibenik, Istria & Zadar",
+    "croatiaBody": "Short hops, sheltered channels and more than a thousand islands make Croatia the easiest place in Europe to sail your first bareboat week. The busiest bases sit around <strong>Split and Trogir</strong>, with Dubrovnik, Šibenik and Zadar covering the south and north. Expect 10–25 NM legs, an island town every evening and two national parks — Kornati and Mljet — within a week's reach. <croatiaLink>See boats in Croatia</croatiaLink>.",
+    "h3Greece": "Greece — Cyclades, Ionian, Sporades & Dodecanese",
+    "greeceBody": "Greece splits into four moods: the gentle <strong>Ionian</strong> for relaxed family weeks, the windy postcard <strong>Cyclades</strong> for confident crews, the green and quiet <strong>Sporades</strong>, and the <strong>Dodecanese</strong> hugging the Turkish coast. Distances stay modest and tavernas replace marinas at many overnight stops. <greeceLink>See boats in Greece</greeceLink>.",
+    "h3Italy": "Italy — Amalfi Coast, Sardinia & Sicily",
+    "italyBody": "Italy is charter for the senses — the <strong>Amalfi Coast</strong> and Capri from Naples, granite coves and gin-clear water on <strong>Sardinia's Costa Smeralda</strong>, volcanoes and Aeolian island-hopping from <strong>Sicily</strong>. The sailing legs are short; the food is the second itinerary. <italyLink>See boats in Italy</italyLink>.",
+    "h3Spain": "Spain — Balearics & Catalonia",
+    "spainBody": "The <strong>Balearics</strong> — Mallorca, Ibiza, Menorca, Formentera — pack cliff-backed anchorages and beach clubs into short daily legs, while <strong>Barcelona and the Costa Brava</strong> suit crews who want a big-city arrival and a coastal cruise. <spainLink>See boats in Spain</spainLink>.",
+    "h3Turkey": "Türkiye — Bodrum & Göcek",
+    "turkeyBody": "The Turquoise Coast runs the longest season in the Mediterranean — April to November — from <strong>Bodrum</strong> for the Gulf of Gökova or <strong>Göcek</strong> for Fethiye, Kaş and Kekova's sunken ruins, plus the strongest crewed-gulet fleet anywhere. <turkeyLink>See boats in Türkiye</turkeyLink>.",
+    "h3Caribbean": "Caribbean — BVI, Bahamas, Grenada & Martinique",
+    "caribbeanBody": "Winter charter at its best: steady trade winds, line-of-sight hops in the <strong>BVI</strong>, shallow turquoise banks in the <strong>Bahamas</strong>, and the greener, quieter <strong>Grenadines and Martinique</strong> to the south. The season peaks December to April — exactly when the Mediterranean sleeps. <caribbeanLink>Browse the Caribbean itineraries</caribbeanLink>.",
+    "h2Quick": "Quick decision guide",
+    "quickFirstTime": "<strong>First bareboat, or young kids aboard?</strong> Croatia from Split or the Greek Ionian — short sheltered legs and forgiving winds.",
+    "quickPhotogenic": "<strong>Chasing the postcard?</strong> The Cyclades for white villages over deep blue, Sardinia for Caribbean-clear coves — or the actual Caribbean from Tortola.",
+    "quickTwoWeeks": "<strong>Two weeks to fill?</strong> Combine a Split → Dubrovnik one-way, run Athens deep into the Cyclades, or chain Bodrum with Göcek along the Turquoise Coast.",
+    "quickFood": "<strong>Sailing to eat?</strong> The Amalfi Coast from Naples, or Mallorca and Menorca — short legs, long dinners.",
+    "quickCrewed": "<strong>Want the crew included?</strong> Türkiye's gulets come with captain and chef; larger crewed yachts sail Croatia, Greece and the Caribbean.",
+    "stillUnsure": "Still deciding? <searchLink>Open the boat search</searchLink> — filter by country, dates and boat type, and the right route usually reveals itself."
+  }
+}

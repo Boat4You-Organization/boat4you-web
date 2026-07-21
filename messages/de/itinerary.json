@@ -1,0 +1,186 @@
+{
+  "meta": {
+    "title": "Yachtcharter-Reiserouten — Segelrouten | Boat4You",
+    "description": "Yachtcharter-Routen Tag für Tag in Kroatien, Griechenland, Italien, Spanien, der Türkei und der Karibik. Interaktive Karten, Segeldistanzen und buchbare Boote ab jeder Abfahrtsmarina.",
+    "imageAlt": "Boat4You Yachtcharter-Reiserouten — Segelrouten mit Karten Tag für Tag",
+    "collectionDescription": "Boat4You Segel-Reiserouten — 7-Tage-Beispielrouten durch Kroatien, Griechenland, Italien, Spanien, die Türkei und die Karibik mit Abfahrtsmarinas, Ankerplätzen und täglichen Segeldistanzen."
+  },
+  "breadcrumb": {
+    "home": "Startseite",
+    "itinerary": "Reiserouten",
+    "areaSuffix": "Revier"
+  },
+  "listHero": {
+    "kicker": "Reiserouten",
+    "eyebrow": "Segelrouten Tag für Tag",
+    "title": "Yachtcharter-",
+    "italic": "Reiserouten.",
+    "lede": "Bewährte Wochenrouten durch Kroatien, Griechenland, Italien, Spanien, die Türkei und die Karibik. Folgen Sie der Karte Tag für Tag, prüfen Sie die Distanzen und wählen Sie ein Boot aus der Heimatmarina der Route — alles online buchbar.",
+    "imageAlt": "Yachtcharter-Segelrouten — Routen Tag für Tag"
+  },
+  "listCta": {
+    "title": "Eine Route gefunden, die Ihnen gefällt?",
+    "lede": "Jede Reiseroute beginnt in einer Marina voller online buchbarer Boote — wählen Sie Ihre Woche, vergleichen Sie aktuelle Preise und reservieren Sie mit kostenloser Stornierung.",
+    "action": "Finden Sie Ihr Boot"
+  },
+  "areaHero": {
+    "kicker": "Reiseroute",
+    "eyebrow": "Segelrouten in {country}",
+    "title": "Yachtcharter {area} —",
+    "italic": "Reiserouten."
+  },
+  "areaCta": {
+    "title": "Gefällt Ihnen eine dieser Routen?",
+    "lede": "Sehen Sie, welche Boote in den Marinas dieses Reviers für Ihre Daten verfügbar sind — aktuelle Preise, echte Verfügbarkeit, Online-Buchung.",
+    "action": "Boote ab {start} ansehen",
+    "actionFallback": "Verfügbare Boote ansehen",
+    "secondaryAction": "Alle Boote ansehen"
+  },
+  "routeHero": {
+    "kickerOneWay": "Route · {days, number} Tage · One-Way",
+    "kickerRoundTrip": "Route · {days, number} Tage · Rundtörn",
+    "eyebrow": "Yachtcharter-Route · {area}",
+    "italicVia": "über {points}.",
+    "italicRoundTrip": "Rundtörn."
+  },
+  "routeCta": {
+    "title": "Segeln Sie diese Route auf Ihrem eigenen Charter",
+    "lede": "Prüfen Sie die Verfügbarkeit ab der Abfahrtsmarina, vergleichen Sie Boote und sichern Sie sich Ihre Woche online — kostenlose Stornierung inklusive.",
+    "action": "Boote ab {start} ansehen",
+    "secondaryAction": "Alle Boote ansehen"
+  },
+  "pdfDownload": "PDF herunterladen (kostenlos)",
+  "tripLd": {
+    "name": "{days, number}-tägige {area} Yachtcharter-Route — {route}",
+    "description": "Beispielhafte {days, number}-tägige Yachtcharter-Reiseroute im Revier {area}, {country}, mit Abfahrt ab {start}."
+  },
+  "hub": {
+    "eyebrow": "Segelreviere",
+    "title": "Jede Route, nach",
+    "titleItalic": "Segelrevier.",
+    "lede": "Wählen Sie das Revier, das zu Ihrer Woche passt — jede Karte öffnet alle Routen ab dieser Basis, Tag für Tag. Nutzen Sie sie unverändert oder als Ausgangspunkt; die Stopps passen sich Wetter und Crew an.",
+    "tellUsLink": "Finden Sie Ihr Boot →",
+    "countryHeadingItalic": "Reiserouten.",
+    "areaSingular": "Revier",
+    "areaPlural": "Reviere",
+    "routeSingular": "Route",
+    "routePlural": "Routen",
+    "sailingAreaCardTitle": "Segelrevier {area}",
+    "exploreRoutes": "Routen ab {area} entdecken",
+    "daysExact": "{days, number} Tage",
+    "daysRange": "{min, number}–{max, number} Tage"
+  },
+  "area": {
+    "routeCountSingular": "Route",
+    "routeCountPlural": "Routen",
+    "routesFrom": "ab {start}",
+    "pickTitle": "Wählen Sie Ihre",
+    "pickTitleItalic": "Woche ab {area}.",
+    "areaSubtitle": "{country} · Segelrevier {area}",
+    "tailorLink": "Finden Sie Ihr Boot →",
+    "allStartingPoints": "Alle Starthäfen",
+    "pickStartingPoint": "Starthafen wählen",
+    "roundTrip": "{start} Rundtörn",
+    "dayBadgeOneWay": "{days, number} Tage One-Way",
+    "dayBadgeLoop": "{days, number} Tage Rundtörn",
+    "routeCardKicker": "Route {index} · Ab {start}",
+    "seeDayByDay": "Tag für Tag ansehen",
+    "aboutEyebrow": "Über {area}",
+    "aboutHeading": "{area},",
+    "aboutHeadingItalic": "mit den Worten eines Seglers."
+  },
+  "detail": {
+    "eyebrow": "Die Route",
+    "heading": "Route Tag für Tag",
+    "intro": "Klicken Sie auf einen Pin auf der Karte oder auf einen Tag in der Routenübersicht unten, um Etappe, Geschichte und Fotos des Tages zu sehen."
+  },
+  "panel": {
+    "dayLabel": "Tag {number, number}",
+    "distanceLabel": "Distanz",
+    "distanceValue": "{nm, number} NM",
+    "sailingLabel": "Segelzeit",
+    "sailingValue": "~{hours, number} h bei 5 kn"
+  },
+  "journey": {
+    "eyebrow": "Die ganze Geschichte",
+    "heading": "Die Reise Tag für Tag",
+    "intro": "Benannte Ankerplätze, Anlegetipps und Aktivitäten für jede Etappe der Woche — die Karte wandert beim Scrollen mit.",
+    "dayLabel": "Tag {number, number}",
+    "thingsToDo": "Unternehmungen",
+    "mooringTip": "Anlegetipp"
+  },
+  "extras": {
+    "atAGlanceKicker": "Auf einen Blick",
+    "atAGlanceHeading": "Die Route auf einen Blick",
+    "bestSeasonLabel": "Beste Saison",
+    "bestSeasonFallback": "Mai – Oktober",
+    "durationLabel": "Dauer",
+    "durationValue": "{days, number} Tage",
+    "departureLabel": "Abfahrt",
+    "sailingAreaLabel": "Segelrevier",
+    "summaryHeading": "Routenübersicht",
+    "summaryHint": "Klicken Sie auf einen Tag, um zur Karte zurückzuspringen und seine Fotos, Geschichte und den Anlegetipp zu sehen.",
+    "dayLabel": "Tag {number, number}",
+    "planHeading": "Diese Route planen",
+    "browseYachtsTitle": "Boote ab {start} ansehen",
+    "browseYachtsSubtitle": "Live-Verfügbarkeit & Preise, online buchbar",
+    "allRoutesTitle": "Alle Routen ab {area}",
+    "allRoutesSubtitle": "Weitere Routenvarianten vergleichen",
+    "searchAllTitle": "Die gesamte Flotte durchsuchen",
+    "searchAllSubtitle": "Jedes Ziel, jedes Datum, jeder Bootstyp",
+    "bestMonths": {
+      "split": "Mai – Anfang Oktober (Hochsaison Jun – Sep)",
+      "dubrovnik": "Mai – Mitte Oktober (Hochsaison Jun – Sep)",
+      "sibenik": "Mai – Anfang Oktober (Hochsaison Jun – Sep)",
+      "istria": "Juni – Mitte September (Hochsaison Jul – Aug)",
+      "zadar": "Mai – Anfang Oktober (Hochsaison Jun – Sep)",
+      "cyclades": "Mai – Mitte Oktober (Hochsaison Jun – Sep, Meltemi Jul – Aug)",
+      "ionian": "Mai – Mitte Oktober (Hochsaison Jun – Sep, ruhigere Winde)",
+      "sporades": "Mai – Anfang Oktober (Hochsaison Jun – Sep)",
+      "dodecanese": "Mai – Mitte Oktober (Hochsaison Jun – Sep)",
+      "bodrum": "Mai – Mitte Oktober (Hochsaison Jun – Sep)",
+      "gocek": "April – November (Hochsaison Mai – Okt)",
+      "catalonia": "Mai – Mitte Oktober (Hochsaison Jun – Sep)",
+      "ibiza": "Mai – Mitte Oktober (Hochsaison Jun – Sep)",
+      "mallorca": "April – Mitte Oktober (Hochsaison Mai – Sep)",
+      "amalfi": "Mai – Mitte Oktober (Hochsaison Jun – Sep)",
+      "sardinia": "Mai – Mitte Oktober (Hochsaison Jun – Sep)",
+      "sicily": "April – Mitte Oktober (Hochsaison Mai – Sep)",
+      "bahamas": "Dezember – April (Hochsaison Jan – Mär)",
+      "bvi": "November – Mai (Hochsaison Dez – Apr)",
+      "grenada": "Dezember – Mai (unterhalb des Hurrikangürtels)",
+      "martinique": "Dezember – Mai (Hochsaison Jan – Apr)"
+    }
+  },
+  "suggested": {
+    "heading": "Empfohlene Routen für Ihre Marina",
+    "viewAll": "Alle Routen für {area} ansehen",
+    "blogHeading": "Selbst segeln — empfohlene Routen"
+  },
+  "indexSeo": {
+    "h2Choose": "So wählen Sie Ihre Yachtcharter-Route",
+    "introPara1": "Boat4You deckt sechs Charter-Reviere ab — <strong>Kroatien, Griechenland, Italien, Spanien, die Türkei und die Karibik</strong> — und jedes segelt sich anders: andere Winde, andere Distanzen, andere Preisniveaus. Eine Standard-Charterwoche läuft von Marina zu Marina, Samstag bis Samstag, und die Beispielrouten auf dieser Seite sind genau um diesen Rhythmus gebaut.",
+    "introPara2": "Jede Route hier ist auch praktisch buchbar: <strong>in jeder Abfahrtsbasis hält Boat4You eine live verfügbare Flotte</strong> — passt eine Route, springen Sie direkt vom Törnplan zu den Booten, die in dieser Marina für Ihre Daten tatsächlich frei sind.",
+    "readFullGuide": "Den vollständigen Routen-Guide lesen",
+    "showLess": "Weniger anzeigen",
+    "h3Croatia": "Kroatien — Split, Dubrovnik, Šibenik, Istrien & Zadar",
+    "croatiaBody": "Kurze Schläge, geschützte Kanäle und mehr als tausend Inseln machen Kroatien zum einfachsten Ort Europas für die erste eigene Charterwoche. Die meistgebuchten Basen liegen um <strong>Split und Trogir</strong>; Dubrovnik, Šibenik und Zadar decken Süden und Norden ab. Rechnen Sie mit Etappen von 10–25 NM, jeden Abend einem Inselstädtchen und zwei Nationalparks — Kornati und Mljet — in Wochenreichweite. <croatiaLink>Boote in Kroatien ansehen</croatiaLink>.",
+    "h3Greece": "Griechenland — Kykladen, Ionisches Meer, Sporaden & Dodekanes",
+    "greeceBody": "Griechenland teilt sich in vier Stimmungen: das sanfte <strong>Ionische Meer</strong> für entspannte Familienwochen, die windigen Postkarten-<strong>Kykladen</strong> für sichere Crews, die grünen, stillen <strong>Sporaden</strong> und den <strong>Dodekanes</strong> entlang der türkischen Küste. Die Distanzen bleiben moderat, und an vielen Abendstopps ersetzen Tavernen die Marinas. <greeceLink>Boote in Griechenland ansehen</greeceLink>.",
+    "h3Italy": "Italien — Amalfiküste, Sardinien & Sizilien",
+    "italyBody": "Italien ist Charter für die Sinne — die <strong>Amalfiküste</strong> und Capri ab Neapel, Granitbuchten und glasklares Wasser an <strong>Sardiniens Costa Smeralda</strong>, Vulkane und Inselhüpfen durch die Äolischen Inseln ab <strong>Sizilien</strong>. Die Schläge sind kurz; das Essen ist die zweite Reiseroute. <italyLink>Boote in Italien ansehen</italyLink>.",
+    "h3Spain": "Spanien — Balearen & Katalonien",
+    "spainBody": "Die <strong>Balearen</strong> — Mallorca, Ibiza, Menorca, Formentera — packen Ankerbuchten unter Klippen und Beachclubs in kurze Tagesetappen, während <strong>Barcelona und die Costa Brava</strong> Crews passen, die Großstadt-Anreise und Küstentörn wollen. <spainLink>Boote in Spanien ansehen</spainLink>.",
+    "h3Turkey": "Türkei — Bodrum & Göcek",
+    "turkeyBody": "Die Türkisküste hat die längste Saison im Mittelmeer — April bis November — ab <strong>Bodrum</strong> für den Golf von Gökova oder ab <strong>Göcek</strong> für Fethiye, Kaş und die versunkenen Ruinen von Kekova, dazu die stärkste Gulet-Flotte mit Crew überhaupt. <turkeyLink>Boote in der Türkei ansehen</turkeyLink>.",
+    "h3Caribbean": "Karibik — BVI, Bahamas, Grenada & Martinique",
+    "caribbeanBody": "Wintercharter in Bestform: stetige Passatwinde, Sichtweiten-Schläge in den <strong>BVI</strong>, flache Türkisbänke auf den <strong>Bahamas</strong> und die grüneren, ruhigeren <strong>Grenadinen und Martinique</strong> im Süden. Die Saison gipfelt von Dezember bis April — genau dann, wenn das Mittelmeer schläft. <caribbeanLink>Karibik-Reiserouten ansehen</caribbeanLink>.",
+    "h2Quick": "Schnelle Entscheidungshilfe",
+    "quickFirstTime": "<strong>Erste eigene Charter oder kleine Kinder an Bord?</strong> Kroatien ab Split oder das griechische Ionische Meer — kurze, geschützte Etappen und gutmütige Winde.",
+    "quickPhotogenic": "<strong>Auf Postkartenjagd?</strong> Die Kykladen für weiße Dörfer über tiefem Blau, Sardinien für karibisch klare Buchten — oder die echte Karibik ab Tortola.",
+    "quickTwoWeeks": "<strong>Zwei Wochen Zeit?</strong> Kombinieren Sie den One-Way Split → Dubrovnik, segeln Sie von Athen tief in die Kykladen oder reihen Sie Bodrum und Göcek entlang der Türkisküste aneinander.",
+    "quickFood": "<strong>Segeln, um zu essen?</strong> Die Amalfiküste ab Neapel oder Mallorca und Menorca — kurze Schläge, lange Abendessen.",
+    "quickCrewed": "<strong>Crew inklusive gewünscht?</strong> Die türkischen Gulets kommen mit Kapitän und Koch; größere Crewed-Yachten segeln in Kroatien, Griechenland und der Karibik.",
+    "stillUnsure": "Noch unentschlossen? <searchLink>Öffnen Sie die Bootssuche</searchLink> — filtern Sie nach Land, Datum und Bootstyp, und die richtige Route zeigt sich meist von selbst."
+  }
+}

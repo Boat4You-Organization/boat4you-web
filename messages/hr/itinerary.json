@@ -1,0 +1,186 @@
+{
+  "meta": {
+    "title": "Itinerari za najam plovila — jedriličarske rute | Boat4You",
+    "description": "Rute za najam plovila dan po dan u Hrvatskoj, Grčkoj, Italiji, Španjolskoj, Turskoj i na Karibima. Interaktivne karte, udaljenosti u miljama i plovila dostupna iz svake polazne marine.",
+    "imageAlt": "Boat4You itinerari za najam plovila — jedriličarske rute s kartama dan po dan",
+    "collectionDescription": "Boat4You jedriličarski itinerari — ogledne 7-dnevne rute kroz Hrvatsku, Grčku, Italiju, Španjolsku, Tursku i Karibe s polaznim marinama, sidrištima i dnevnim udaljenostima."
+  },
+  "breadcrumb": {
+    "home": "Početna",
+    "itinerary": "Itinerari",
+    "areaSuffix": "područje"
+  },
+  "listHero": {
+    "kicker": "Itinerari",
+    "eyebrow": "Jedriličarske rute dan po dan",
+    "title": "Jedriličarski",
+    "italic": "itinerari.",
+    "lede": "Provjerene tjedne rute kroz Hrvatsku, Grčku, Italiju, Španjolsku, Tursku i Karibe. Pratite kartu dan po dan, provjerite udaljenosti i odaberite plovilo iz polazne marine rute — sve uz online rezervaciju.",
+    "imageAlt": "Jedriličarski itinerari — rute dan po dan"
+  },
+  "listCta": {
+    "title": "Pronašli ste rutu koja vam se sviđa?",
+    "lede": "Svaki itinerar počinje u marini punoj plovila koja možete rezervirati online — odaberite tjedan, usporedite aktualne cijene i rezervirajte uz besplatno otkazivanje.",
+    "action": "Pronađite svoje plovilo"
+  },
+  "areaHero": {
+    "kicker": "Itinerar",
+    "eyebrow": "Jedriličarske rute — {country}",
+    "title": "{area} — najam plovila i",
+    "italic": "itinerari."
+  },
+  "areaCta": {
+    "title": "Sviđa vam se neka od ovih ruta?",
+    "lede": "Pogledajte koja su plovila dostupna iz marina ovog područja za vaše datume — aktualne cijene, stvarna raspoloživost, online rezervacija.",
+    "action": "Plovila iz polazišta {start}",
+    "actionFallback": "Pregledajte dostupna plovila",
+    "secondaryAction": "Sva plovila"
+  },
+  "routeHero": {
+    "kickerOneWay": "Ruta · {days, number} dana · jednosmjerna",
+    "kickerRoundTrip": "Ruta · {days, number} dana · kružna",
+    "eyebrow": "Ruta za najam plovila · {area}",
+    "italicVia": "preko: {points}.",
+    "italicRoundTrip": "kružna ruta."
+  },
+  "routeCta": {
+    "title": "Zaplovite ovom rutom na vlastitom charteru",
+    "lede": "Provjerite raspoloživost iz polazne marine, usporedite plovila i osigurajte svoj tjedan online — uz besplatno otkazivanje.",
+    "action": "Plovila iz polazišta {start}",
+    "secondaryAction": "Sva plovila"
+  },
+  "pdfDownload": "Preuzmi PDF (besplatno)",
+  "tripLd": {
+    "name": "{area} — {days, number}-dnevna ruta za najam plovila: {route}",
+    "description": "Ogledni {days, number}-dnevni itinerar za najam plovila u području {area}, {country}, s polaskom iz mjesta {start}."
+  },
+  "hub": {
+    "eyebrow": "Plovna područja",
+    "title": "Svaka ruta, po",
+    "titleItalic": "plovnom području.",
+    "lede": "Odaberite akvatorij koji odgovara vašem tjednu — svaka kartica otvara sve rute iz te baze, dan po dan. Koristite ih kakve jesu ili kao polazište; postaje se prilagođavaju vremenu i vašoj posadi.",
+    "tellUsLink": "Pronađite svoje plovilo →",
+    "countryHeadingItalic": "itinerari.",
+    "areaSingular": "područje",
+    "areaPlural": "područja",
+    "routeSingular": "ruta",
+    "routePlural": "rute",
+    "sailingAreaCardTitle": "Plovno područje {area}",
+    "exploreRoutes": "Istražite rute — {area}",
+    "daysExact": "{days, number} dana",
+    "daysRange": "{min, number}–{max, number} dana"
+  },
+  "area": {
+    "routeCountSingular": "ruta",
+    "routeCountPlural": "ruta",
+    "routesFrom": "iz polazišta {start}",
+    "pickTitle": "Odaberite svoj",
+    "pickTitleItalic": "tjedan iz područja {area}.",
+    "areaSubtitle": "{country} · plovno područje {area}",
+    "tailorLink": "Pronađite svoje plovilo →",
+    "allStartingPoints": "Sva polazišta",
+    "pickStartingPoint": "Odaberite polazište",
+    "roundTrip": "{start} — kružna ruta",
+    "dayBadgeOneWay": "{days, number} dana · jednosmjerna",
+    "dayBadgeLoop": "{days, number} dana · kružna",
+    "routeCardKicker": "Ruta {index} · Polazak: {start}",
+    "seeDayByDay": "Pogledajte dan po dan",
+    "aboutEyebrow": "O području {area}",
+    "aboutHeading": "{area},",
+    "aboutHeadingItalic": "riječima jedriličara."
+  },
+  "detail": {
+    "eyebrow": "Ruta",
+    "heading": "Ruta dan po dan",
+    "intro": "Kliknite bilo koji pin na karti ili bilo koji dan u sažetku rute ispod za postaju, priču i fotografije tog dana."
+  },
+  "panel": {
+    "dayLabel": "Dan {number, number}",
+    "distanceLabel": "Udaljenost",
+    "distanceValue": "{nm, number} NM",
+    "sailingLabel": "Plovidba",
+    "sailingValue": "~{hours, number} h pri 5 čv"
+  },
+  "journey": {
+    "eyebrow": "Cijela priča",
+    "heading": "Putovanje dan po dan",
+    "intro": "Imenovana sidrišta, savjeti za vez i prijedlozi aktivnosti za svaku etapu tjedna — karta vas prati dok skrolate.",
+    "dayLabel": "Dan {number, number}",
+    "thingsToDo": "Što raditi",
+    "mooringTip": "Savjet za vez"
+  },
+  "extras": {
+    "atAGlanceKicker": "Ukratko",
+    "atAGlanceHeading": "Ruta ukratko",
+    "bestSeasonLabel": "Najbolja sezona",
+    "bestSeasonFallback": "svibanj – listopad",
+    "durationLabel": "Trajanje",
+    "durationValue": "{days, number} dana",
+    "departureLabel": "Polazak",
+    "sailingAreaLabel": "Plovno područje",
+    "summaryHeading": "Sažetak rute",
+    "summaryHint": "Kliknite bilo koji dan za povratak na kartu i njegove fotografije, priču i savjet za vez.",
+    "dayLabel": "Dan {number, number}",
+    "planHeading": "Isplanirajte ovu rutu",
+    "browseYachtsTitle": "Plovila iz polazišta {start}",
+    "browseYachtsSubtitle": "Raspoloživost i cijene uživo, rezervacija online",
+    "allRoutesTitle": "Sve rute — {area}",
+    "allRoutesSubtitle": "Usporedite ostale varijante rute",
+    "searchAllTitle": "Pretražite cijelu flotu",
+    "searchAllSubtitle": "Sve destinacije, datumi i tipovi plovila",
+    "bestMonths": {
+      "split": "svibanj – početak listopada (vrhunac lip – ruj)",
+      "dubrovnik": "svibanj – sredina listopada (vrhunac lip – ruj)",
+      "sibenik": "svibanj – početak listopada (vrhunac lip – ruj)",
+      "istria": "lipanj – sredina rujna (vrhunac srp – kol)",
+      "zadar": "svibanj – početak listopada (vrhunac lip – ruj)",
+      "cyclades": "svibanj – sredina listopada (vrhunac lip – ruj, meltemi srp – kol)",
+      "ionian": "svibanj – sredina listopada (vrhunac lip – ruj, mirniji vjetrovi)",
+      "sporades": "svibanj – početak listopada (vrhunac lip – ruj)",
+      "dodecanese": "svibanj – sredina listopada (vrhunac lip – ruj)",
+      "bodrum": "svibanj – sredina listopada (vrhunac lip – ruj)",
+      "gocek": "travanj – studeni (vrhunac svi – lis)",
+      "catalonia": "svibanj – sredina listopada (vrhunac lip – ruj)",
+      "ibiza": "svibanj – sredina listopada (vrhunac lip – ruj)",
+      "mallorca": "travanj – sredina listopada (vrhunac svi – ruj)",
+      "amalfi": "svibanj – sredina listopada (vrhunac lip – ruj)",
+      "sardinia": "svibanj – sredina listopada (vrhunac lip – ruj)",
+      "sicily": "travanj – sredina listopada (vrhunac svi – ruj)",
+      "bahamas": "prosinac – travanj (vrhunac sij – ožu)",
+      "bvi": "studeni – svibanj (vrhunac pro – tra)",
+      "grenada": "prosinac – svibanj (ispod pojasa uragana)",
+      "martinique": "prosinac – svibanj (vrhunac sij – tra)"
+    }
+  },
+  "suggested": {
+    "heading": "Predloženi itinerari za vašu marinu",
+    "viewAll": "Svi itinerari — {area}",
+    "blogHeading": "Zaplovite sami — predloženi itinerari"
+  },
+  "indexSeo": {
+    "h2Choose": "Kako odabrati rutu za najam plovila",
+    "introPara1": "Boat4You pokriva šest charter-područja — <strong>Hrvatsku, Grčku, Italiju, Španjolsku, Tursku i Karibe</strong> — a svako se plovi drukčije: drugi vjetrovi, druge udaljenosti, druge cijene. Standardni charter-tjedan traje od marine do marine, od subote do subote, i ogledne rute na ovoj stranici građene su upravo oko tog ritma.",
+    "introPara2": "Svaka je ruta ovdje i praktično rezervabilna: <strong>u svakoj polaznoj bazi Boat4You drži živu flotu</strong>, pa kad vam ruta sjedne, iz itinerara skačete ravno na plovila stvarno dostupna iz te marine za vaše datume.",
+    "readFullGuide": "Pročitajte cijeli vodič kroz rute",
+    "showLess": "Prikaži manje",
+    "h3Croatia": "Hrvatska — Split, Dubrovnik, Šibenik, Istra i Zadar",
+    "croatiaBody": "Kratke etape, zaklonjeni kanali i više od tisuću otoka čine Hrvatsku najlakšim mjestom u Europi za prvi samostalni charter-tjedan. Najprometnije su baze oko <strong>Splita i Trogira</strong>, a Dubrovnik, Šibenik i Zadar pokrivaju jug i sjever. Očekujte etape od 10–25 NM, otočno mjesto svake večeri i dva nacionalna parka — Kornate i Mljet — na dohvat jednog tjedna. <croatiaLink>Pogledajte plovila u Hrvatskoj</croatiaLink>.",
+    "h3Greece": "Grčka — Cikladi, Jonsko more, Sporadi i Dodekanez",
+    "greeceBody": "Grčka se dijeli na četiri raspoloženja: blago <strong>Jonsko more</strong> za opuštene obiteljske tjedne, vjetrovite razglednice <strong>Ciklada</strong> za sigurne posade, zelene i tihe <strong>Sporade</strong> te <strong>Dodekanez</strong> uz tursku obalu. Udaljenosti ostaju umjerene, a taverne na mnogim noćenjima mijenjaju marine. <greeceLink>Pogledajte plovila u Grčkoj</greeceLink>.",
+    "h3Italy": "Italija — obala Amalfi, Sardinija i Sicilija",
+    "italyBody": "Italija je charter za sva osjetila — <strong>obala Amalfi</strong> i Capri iz Napulja, granitne uvale i kristalno more na <strong>sardinijskoj Costa Smeraldi</strong>, vulkani i skakanje po Eolskim otocima sa <strong>Sicilije</strong>. Plovidbene su etape kratke; hrana je drugi itinerar. <italyLink>Pogledajte plovila u Italiji</italyLink>.",
+    "h3Spain": "Španjolska — Baleari i Katalonija",
+    "spainBody": "<strong>Baleari</strong> — Mallorca, Ibiza, Menorca, Formentera — nude sidrišta pod liticama i beach-klubove u kratkim dnevnim etapama, dok <strong>Barcelona i Costa Brava</strong> odgovaraju posadama koje žele velegradski dolazak i obalno krstarenje. <spainLink>Pogledajte plovila u Španjolskoj</spainLink>.",
+    "h3Turkey": "Turska — Bodrum i Göcek",
+    "turkeyBody": "Tirkizna obala ima najdulju sezonu na Mediteranu — od travnja do studenog — iz <strong>Bodruma</strong> za zaljev Gökova ili iz <strong>Göceka</strong> za Fethiye, Kaş i potopljene ruševine Kekove, uz najjaču flotu guleta s posadom. <turkeyLink>Pogledajte plovila u Turskoj</turkeyLink>.",
+    "h3Caribbean": "Karibi — BVI, Bahami, Grenada i Martinique",
+    "caribbeanBody": "Zimski charter u najboljem izdanju: postojani pasati, etape na pogled u <strong>BVI-ju</strong>, plitki tirkizni prudovi na <strong>Bahamima</strong> te zeleniji i tiši <strong>Grenadini i Martinique</strong> na jugu. Sezona vrhunac doseže od prosinca do travnja — točno kad Mediteran spava. <caribbeanLink>Pregledajte karipske itinerare</caribbeanLink>.",
+    "h2Quick": "Brzi vodič za odluku",
+    "quickFirstTime": "<strong>Prvi samostalni najam ili mala djeca na brodu?</strong> Hrvatska iz Splita ili grčko Jonsko more — kratke zaklonjene etape i blagi vjetrovi.",
+    "quickPhotogenic": "<strong>Lovite razglednicu?</strong> Cikladi za bijela sela nad modrim morem, Sardinija za uvale karipski bistrog mora — ili pravi Karibi iz Tortole.",
+    "quickTwoWeeks": "<strong>Imate dva tjedna?</strong> Spojite jednosmjernu rutu Split → Dubrovnik, zaplovite iz Atene duboko u Ciklade ili nanižite Bodrum i Göcek duž Tirkizne obale.",
+    "quickFood": "<strong>Jedrite radi stola?</strong> Obala Amalfi iz Napulja ili Mallorca i Menorca — kratke etape, duge večere.",
+    "quickCrewed": "<strong>Želite uključenu posadu?</strong> Turski guleti dolaze s kapetanom i kuharom; veće jahte s posadom plove Hrvatskom, Grčkom i Karibima.",
+    "stillUnsure": "Još se dvoumite? <searchLink>Otvorite tražilicu plovila</searchLink> — filtrirajte po državi, datumima i tipu plovila i prava se ruta obično sama pokaže."
+  }
+}

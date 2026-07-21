@@ -1,0 +1,186 @@
+{
+  "meta": {
+    "title": "Itinerari per il noleggio barche — rotte di navigazione | Boat4You",
+    "description": "Rotte charter giorno per giorno in Croazia, Grecia, Italia, Spagna, Turchia e ai Caraibi. Mappe interattive, distanze di navigazione e barche prenotabili da ogni marina di partenza.",
+    "imageAlt": "Itinerari charter Boat4You — rotte di navigazione con mappe giorno per giorno",
+    "collectionDescription": "Itinerari di navigazione Boat4You — rotte di esempio di 7 giorni in Croazia, Grecia, Italia, Spagna, Turchia e ai Caraibi con marine di partenza, ancoraggi e distanze giornaliere."
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "itinerary": "Itinerari",
+    "areaSuffix": "zona"
+  },
+  "listHero": {
+    "kicker": "Itinerari",
+    "eyebrow": "Rotte di navigazione giorno per giorno",
+    "title": "Itinerari di",
+    "italic": "navigazione.",
+    "lede": "Rotte settimanali collaudate in Croazia, Grecia, Italia, Spagna, Turchia e ai Caraibi. Segui la mappa giorno per giorno, controlla le distanze e scegli una barca dalla marina di partenza — tutto prenotabile online.",
+    "imageAlt": "Itinerari di navigazione — rotte giorno per giorno"
+  },
+  "listCta": {
+    "title": "Hai trovato la rotta che fa per te?",
+    "lede": "Ogni itinerario parte da una marina piena di barche prenotabili online — scegli la tua settimana, confronta i prezzi in tempo reale e prenota con cancellazione gratuita.",
+    "action": "Trova la tua barca"
+  },
+  "areaHero": {
+    "kicker": "Itinerario",
+    "eyebrow": "Rotte di navigazione · {country}",
+    "title": "Noleggio barche {area} —",
+    "italic": "itinerari."
+  },
+  "areaCta": {
+    "title": "Ti piace una di queste rotte?",
+    "lede": "Scopri quali barche sono disponibili dalle marine di questa zona per le tue date — prezzi in tempo reale, disponibilità reale, prenotazione online.",
+    "action": "Vedi le barche da {start}",
+    "actionFallback": "Vedi le barche disponibili",
+    "secondaryAction": "Tutte le barche"
+  },
+  "routeHero": {
+    "kickerOneWay": "Rotta · {days, number} giorni · solo andata",
+    "kickerRoundTrip": "Rotta · {days, number} giorni · circolare",
+    "eyebrow": "Rotta charter · {area}",
+    "italicVia": "via {points}.",
+    "italicRoundTrip": "circolare."
+  },
+  "routeCta": {
+    "title": "Naviga questa rotta con il tuo charter",
+    "lede": "Controlla la disponibilità dalla marina di partenza, confronta le barche e assicurati la tua settimana online — cancellazione gratuita inclusa.",
+    "action": "Vedi le barche da {start}",
+    "secondaryAction": "Tutte le barche"
+  },
+  "pdfDownload": "Scarica il PDF (gratuito)",
+  "tripLd": {
+    "name": "Rotta charter {area} di {days, number} giorni — {route}",
+    "description": "Itinerario charter di esempio di {days, number} giorni nella zona {area}, {country}, con partenza da {start}."
+  },
+  "hub": {
+    "eyebrow": "Zone di navigazione",
+    "title": "Ogni rotta, per",
+    "titleItalic": "zona di navigazione.",
+    "lede": "Scegli le acque adatte alla tua settimana — ogni scheda apre tutte le rotte da quella base, giorno per giorno. Usale così come sono o come punto di partenza; le tappe si adattano al meteo e al tuo equipaggio.",
+    "tellUsLink": "Trova la tua barca →",
+    "countryHeadingItalic": "itinerari.",
+    "areaSingular": "zona",
+    "areaPlural": "zone",
+    "routeSingular": "rotta",
+    "routePlural": "rotte",
+    "sailingAreaCardTitle": "Zona di navigazione {area}",
+    "exploreRoutes": "Esplora le rotte {area}",
+    "daysExact": "{days, number} giorni",
+    "daysRange": "{min, number}–{max, number} giorni"
+  },
+  "area": {
+    "routeCountSingular": "rotta",
+    "routeCountPlural": "rotte",
+    "routesFrom": "da {start}",
+    "pickTitle": "Scegli la tua",
+    "pickTitleItalic": "settimana da {area}.",
+    "areaSubtitle": "{country} · zona di navigazione {area}",
+    "tailorLink": "Trova la tua barca →",
+    "allStartingPoints": "Tutti i punti di partenza",
+    "pickStartingPoint": "Scegli un punto di partenza",
+    "roundTrip": "{start} — rotta circolare",
+    "dayBadgeOneWay": "{days, number} giorni · solo andata",
+    "dayBadgeLoop": "{days, number} giorni · circolare",
+    "routeCardKicker": "Rotta {index} · Partenza {start}",
+    "seeDayByDay": "Vedi giorno per giorno",
+    "aboutEyebrow": "Su {area}",
+    "aboutHeading": "{area},",
+    "aboutHeadingItalic": "raccontata da un velista."
+  },
+  "detail": {
+    "eyebrow": "La rotta",
+    "heading": "La rotta giorno per giorno",
+    "intro": "Clicca un segnaposto sulla mappa o un giorno nel riepilogo qui sotto per vedere tappa, racconto e foto di quella giornata."
+  },
+  "panel": {
+    "dayLabel": "Giorno {number, number}",
+    "distanceLabel": "Distanza",
+    "distanceValue": "{nm, number} NM",
+    "sailingLabel": "Navigazione",
+    "sailingValue": "~{hours, number} h a 5 nodi"
+  },
+  "journey": {
+    "eyebrow": "La storia completa",
+    "heading": "Il viaggio giorno per giorno",
+    "intro": "Ancoraggi con nome, consigli per l'ormeggio e cose da fare per ogni tappa della settimana — la mappa ti segue mentre scorri.",
+    "dayLabel": "Giorno {number, number}",
+    "thingsToDo": "Cosa fare",
+    "mooringTip": "Consiglio per l'ormeggio"
+  },
+  "extras": {
+    "atAGlanceKicker": "In sintesi",
+    "atAGlanceHeading": "La rotta in sintesi",
+    "bestSeasonLabel": "Stagione migliore",
+    "bestSeasonFallback": "maggio – ottobre",
+    "durationLabel": "Durata",
+    "durationValue": "{days, number} giorni",
+    "departureLabel": "Partenza",
+    "sailingAreaLabel": "Zona di navigazione",
+    "summaryHeading": "Riepilogo della rotta",
+    "summaryHint": "Clicca un giorno per tornare alla mappa e vederne foto, racconto e consiglio per l'ormeggio.",
+    "dayLabel": "Giorno {number, number}",
+    "planHeading": "Pianifica questa rotta",
+    "browseYachtsTitle": "Vedi le barche da {start}",
+    "browseYachtsSubtitle": "Disponibilità e prezzi in tempo reale, prenotazione online",
+    "allRoutesTitle": "Tutte le rotte {area}",
+    "allRoutesSubtitle": "Confronta le altre varianti della rotta",
+    "searchAllTitle": "Cerca in tutta la flotta",
+    "searchAllSubtitle": "Ogni destinazione, data e tipo di barca",
+    "bestMonths": {
+      "split": "maggio – inizio ottobre (alta stagione giu – set)",
+      "dubrovnik": "maggio – metà ottobre (alta stagione giu – set)",
+      "sibenik": "maggio – inizio ottobre (alta stagione giu – set)",
+      "istria": "giugno – metà settembre (alta stagione lug – ago)",
+      "zadar": "maggio – inizio ottobre (alta stagione giu – set)",
+      "cyclades": "maggio – metà ottobre (alta stagione giu – set, meltemi lug – ago)",
+      "ionian": "maggio – metà ottobre (alta stagione giu – set, venti più calmi)",
+      "sporades": "maggio – inizio ottobre (alta stagione giu – set)",
+      "dodecanese": "maggio – metà ottobre (alta stagione giu – set)",
+      "bodrum": "maggio – metà ottobre (alta stagione giu – set)",
+      "gocek": "aprile – novembre (alta stagione mag – ott)",
+      "catalonia": "maggio – metà ottobre (alta stagione giu – set)",
+      "ibiza": "maggio – metà ottobre (alta stagione giu – set)",
+      "mallorca": "aprile – metà ottobre (alta stagione mag – set)",
+      "amalfi": "maggio – metà ottobre (alta stagione giu – set)",
+      "sardinia": "maggio – metà ottobre (alta stagione giu – set)",
+      "sicily": "aprile – metà ottobre (alta stagione mag – set)",
+      "bahamas": "dicembre – aprile (alta stagione gen – mar)",
+      "bvi": "novembre – maggio (alta stagione dic – apr)",
+      "grenada": "dicembre – maggio (sotto la fascia degli uragani)",
+      "martinique": "dicembre – maggio (alta stagione gen – apr)"
+    }
+  },
+  "suggested": {
+    "heading": "Itinerari suggeriti per la tua marina",
+    "viewAll": "Vedi tutti gli itinerari di {area}",
+    "blogHeading": "Salpa anche tu — itinerari suggeriti"
+  },
+  "indexSeo": {
+    "h2Choose": "Come scegliere la tua rotta charter",
+    "introPara1": "Boat4You copre sei aree charter — <strong>Croazia, Grecia, Italia, Spagna, Turchia e Caraibi</strong> — e ognuna si naviga in modo diverso: altri venti, altre distanze, altre fasce di prezzo. Una settimana charter standard va da marina a marina, da sabato a sabato, e le rotte di esempio di questa pagina sono costruite esattamente su quel ritmo.",
+    "introPara2": "Ogni rotta qui è anche prenotabile in pratica: <strong>in ogni base di partenza Boat4You mantiene una flotta con disponibilità in tempo reale</strong> — quando una rotta ti convince, passi dall'itinerario direttamente alle barche davvero libere in quella marina per le tue date.",
+    "readFullGuide": "Leggi la guida completa alle rotte",
+    "showLess": "Mostra meno",
+    "h3Croatia": "Croazia — Spalato, Dubrovnik, Sebenico, Istria e Zara",
+    "croatiaBody": "Tappe brevi, canali riparati e più di mille isole fanno della Croazia il posto più facile d'Europa per la prima settimana in bareboat. Le basi più attive sono attorno a <strong>Spalato e Trogir</strong>; Dubrovnik, Sebenico e Zara coprono sud e nord. Aspettati tappe di 10–25 NM, un borgo isolano ogni sera e due parchi nazionali — Kornati e Mljet — a portata di settimana. <croatiaLink>Vedi le barche in Croazia</croatiaLink>.",
+    "h3Greece": "Grecia — Cicladi, Ionio, Sporadi e Dodecaneso",
+    "greeceBody": "La Grecia si divide in quattro anime: il dolce <strong>Ionio</strong> per settimane familiari rilassate, le ventose <strong>Cicladi</strong> da cartolina per equipaggi esperti, le verdi e tranquille <strong>Sporadi</strong> e il <strong>Dodecaneso</strong> lungo la costa turca. Le distanze restano contenute e in molte soste serali le taverne sostituiscono le marine. <greeceLink>Vedi le barche in Grecia</greeceLink>.",
+    "h3Italy": "Italia — Costiera Amalfitana, Sardegna e Sicilia",
+    "italyBody": "L'Italia è il charter dei sensi — la <strong>Costiera Amalfitana</strong> e Capri da Napoli, calette di granito e acqua cristallina sulla <strong>Costa Smeralda sarda</strong>, vulcani e island hopping alle Eolie dalla <strong>Sicilia</strong>. Le tappe sono brevi; la cucina è il secondo itinerario. <italyLink>Vedi le barche in Italia</italyLink>.",
+    "h3Spain": "Spagna — Baleari e Catalogna",
+    "spainBody": "Le <strong>Baleari</strong> — Maiorca, Ibiza, Minorca, Formentera — concentrano ancoraggi sotto le falesie e beach club in brevi tappe quotidiane, mentre <strong>Barcellona e la Costa Brava</strong> sono perfette per equipaggi che vogliono un arrivo metropolitano e una crociera costiera. <spainLink>Vedi le barche in Spagna</spainLink>.",
+    "h3Turkey": "Turchia — Bodrum e Göcek",
+    "turkeyBody": "La Costa Turchese ha la stagione più lunga del Mediterraneo — da aprile a novembre — da <strong>Bodrum</strong> per il golfo di Gökova o da <strong>Göcek</strong> per Fethiye, Kaş e le rovine sommerse di Kekova, con in più la più grande flotta di caicchi con equipaggio. <turkeyLink>Vedi le barche in Turchia</turkeyLink>.",
+    "h3Caribbean": "Caraibi — BVI, Bahamas, Grenada e Martinica",
+    "caribbeanBody": "Il charter invernale al suo meglio: alisei costanti, tappe a vista nelle <strong>BVI</strong>, bassi fondali turchesi alle <strong>Bahamas</strong> e le più verdi e tranquille <strong>Grenadine e Martinica</strong> a sud. La stagione culmina da dicembre ad aprile — esattamente quando il Mediterraneo dorme. <caribbeanLink>Sfoglia gli itinerari dei Caraibi</caribbeanLink>.",
+    "h2Quick": "Guida rapida alla scelta",
+    "quickFirstTime": "<strong>Primo bareboat o bambini piccoli a bordo?</strong> Croazia da Spalato o Ionio greco — tappe brevi e riparate, venti gentili.",
+    "quickPhotogenic": "<strong>A caccia della cartolina?</strong> Le Cicladi per i villaggi bianchi sul blu, la Sardegna per calette dall'acqua caraibica — o i Caraibi veri da Tortola.",
+    "quickTwoWeeks": "<strong>Due settimane a disposizione?</strong> Combina la solo andata Spalato → Dubrovnik, scendi da Atene nel cuore delle Cicladi o collega Bodrum e Göcek lungo la Costa Turchese.",
+    "quickFood": "<strong>Navigare per mangiare?</strong> La Costiera Amalfitana da Napoli, o Maiorca e Minorca — tappe brevi, cene lunghe.",
+    "quickCrewed": "<strong>Vuoi l'equipaggio incluso?</strong> I caicchi turchi arrivano con capitano e cuoco; yacht crewed più grandi navigano in Croazia, Grecia e ai Caraibi.",
+    "stillUnsure": "Ancora indeciso? <searchLink>Apri la ricerca barche</searchLink> — filtra per paese, date e tipo di barca e la rotta giusta di solito si rivela da sola."
+  }
+}

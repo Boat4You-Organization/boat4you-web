@@ -1,0 +1,528 @@
+{
+  "areas": {
+    "bahamas": {
+      "metaTitle": "Abacos Bahamas Sailing Itineraries | Boat4You",
+      "metaDesc": "Routes from Marsh Harbour across the Sea of Abaco: Hope Town's lighthouse, Man-O-War Cay and gin-clear bank sailing, day by day.",
+      "title": "Bank sailing in six feet of gin",
+      "description": "The Abacos are chartering on a different physics. The Sea of Abaco is a protected bank, often only three or four metres deep, so the water glows that impossible Bahamian pale-blue and the sailing stays flat while the trade wind does the work. Distances are tiny: Hope Town's candy-striped lighthouse, Man-O-War's boatbuilding sheds and Great Guana's beach bars all sit within a couple of hours of each other. Navigation is by eye — read the water colour, respect the sand bores, and the bank is friendly. Conch fritters and rum punch handle the catering ashore. Winter cold fronts need watching, but between them the Abacos serve the gentlest ocean sailing in the hemisphere."
+    },
+    "bvi": {
+      "metaTitle": "BVI Sailing Itineraries | Boat4You",
+      "metaDesc": "Routes from Tortola: the Baths, Anegada's reef, Jost Van Dyke's beach bars — line-of-sight Caribbean sailing with mooring notes.",
+      "title": "The Caribbean's line-of-sight playground",
+      "description": "There's a reason every charter company on earth keeps a fleet in the BVI: the islands arrange themselves in a ring around the Sir Francis Drake Channel, the trades blow a reliable fifteen knots across it, and the next anchorage is always visible from the last one. Mooring balls take the anchoring stress out of most nights. The hits are real — swimming through the granite caves of the Baths, lobster on Anegada's endless reef, the Soggy Dollar's painkiller at White Bay — but so are the quiet corners, Norman Island's bight or Cooper's snorkel coves midweek. December to April is the classic season. If your crew has never chartered before, start here; if they've chartered everywhere, they'll still grin."
+    },
+    "grenada": {
+      "metaTitle": "Grenada Sailing Itineraries | Boat4You",
+      "metaDesc": "Routes from Port Louis up the Grenadian coast to Carriacou: sculpture-park snorkelling, spice markets and proper trade-wind legs.",
+      "title": "Spice island start, Grenadines ambition",
+      "description": "Grenada is the Caribbean with its seasoning intact. The island smells of nutmeg two miles offshore, St. George's horseshoe harbour is the prettiest capital in the Windwards, and the underwater sculpture park at Molinere makes the first day's snorkel stop genuinely strange and wonderful. Sailing north, the legs get real — proper trade-wind passages in open Atlantic swell — until Carriacou pays it all back with Sandy Island's cartoon perfection and Paradise Beach rum shacks. This is a charter for crews who want some ocean in their ocean holiday. The southern anchorages around Prickly Bay make an easy shakedown day, and Port Louis Marina is as comfortable a base as the Caribbean offers."
+    },
+    "martinique": {
+      "metaTitle": "Martinique & St. Lucia Itineraries | Boat4You",
+      "metaDesc": "Routes from Le Marin: Anses d'Arlet, St-Pierre under the volcano and the crossing to St. Lucia's Pitons — French Caribbean sailing.",
+      "title": "French bakeries, volcano views, real passages",
+      "description": "Martinique is the Caribbean that takes lunch seriously. Le Marin — the biggest charter base in the Windwards — sends you out with proper baguettes aboard, and the west coast unrolls in easy day-hops: turtles grazing under the boat at Grande Anse d'Arlet, St-Pierre sitting quietly beneath the volcano that erased it in 1902, rum distilleries that treat tasting as education. Then comes the choice: stay French and gentle, or make the twenty-mile channel crossing to St. Lucia, where the Pitons rise straight out of the sea and a mooring under them is the Caribbean's best front-row seat. The channel is honest trade-wind sailing — reef early, go with the morning. Both halves of the week earn their place."
+    }
+  },
+  "routes": {
+    "bahamas-route": {
+      "metaTitle": "7-Day Sea of Abaco Sailing Route | Boat4You",
+      "metaDesc": "Sail the Sea of Abaco from Marsh Harbour: Hope Town's lighthouse, Nippers beach bar, the Goombay Smash and quiet cays over an easy 7-day Bahamas route.",
+      "days": {
+        "1": {
+          "shortDescription": "A short first hop across the Sea of Abaco to Hope Town, where a striped lighthouse still guards one of the prettiest harbours in the Abacos.",
+          "description": "Collect the boat at Marsh Harbour, run through the provisioning list, and you can slip the lines by mid-morning. The crossing to Elbow Cay runs about five miles, an easy hour on flat water with the island in sight the whole way. Hope Town's harbour is snug, and you cannot anchor inside it, so aim straight for a mooring ball rather than circling. The red-and-white lighthouse is the reason most crews come. It still burns kerosene and turns by a hand-wound weight system, one of the last of its kind anywhere. Climb the 101 steps late in the afternoon when the light softens and the whole cay lays out below you. Ashore, the lanes are narrow and car-free, lined with clapboard cottages in sherbet colours. We usually tie up the dinghy and walk to Captain Jack's for cracked conch and a cold Kalik.",
+          "thingsToDo": [
+            "Climb the 101 steps up Hope Town Lighthouse",
+            "Cracked conch and Kalik at Captain Jack's",
+            "Wander the car-free lanes of Hope Town",
+            "Sundowner rum at Harbour's Edge on the water"
+          ],
+          "mooringTip": "Hope Town harbour has no room to anchor, so grab a mooring ball on arrival or call Hope Town Inn & Marina ahead in high season. Balls fill by early afternoon, so come in before the crowds do."
+        },
+        "2": {
+          "shortDescription": "Slip south to Tahiti Beach for the low-tide sandbar, then ride the sea breeze back across to Marsh Harbour for the night.",
+          "description": "Tahiti Beach sits at the southern tip of Elbow Cay, three miles down from Hope Town and worth the short trip. Time it for a falling tide. As the water drops, a long pale sandbar surfaces off the point, ankle-deep and ringed by coconut palms, with Lubbers Quarters and Tilloo Cay across the cut. Anchor in Aunt Pat's Bay and run the tender in, or wade the last stretch. The Thirsty Cuda, a bar moored just off the sand, does fish bites and frozen drinks if you want lunch without going ashore. When the sea breeze fills in around noon, it is an easy reach back across the Sea of Abaco to Marsh Harbour. Anchor off the town, top up water and ice, and eat aboard tonight.",
+          "thingsToDo": [
+            "Walk the low-tide sandbar at Tahiti Beach",
+            "Fish bites afloat at the Thirsty Cuda",
+            "Snorkel the cut toward Lubbers Quarters",
+            "Provision and refuel back at Marsh Harbour"
+          ],
+          "mooringTip": "Aunt Pat's Bay off Tahiti Beach has good sand holding but thins fast at low water, so watch your swing and draft. Back at Marsh Harbour, the town anchorage holds well in mud once the anchor digs in."
+        },
+        "3": {
+          "shortDescription": "Sail north to Great Guana Cay for two of the Abacos' loudest beach bars, Grabbers on the harbour and Nippers on the ocean.",
+          "description": "The run up to Great Guana Cay is another gentle one, roughly seven miles with the mainland to port and reefs to starboard. Fishers Bay opens on the settlement side, where you can drop the hook in sand or pick up one of Grabbers' moorings. Grabbers sits right on the bay, an easy dinghy hop for a swim and a burger. The other draw is a five-minute walk across the narrow island. Nippers perches on a dune above the Atlantic beach, all painted decks and a serious frozen rum punch. Land here on a Sunday and the pig roast turns the place into the busiest patch of sand in the Abacos, with boats rafting up all afternoon. Snorkel the reef off the ocean beach first, before the crowd arrives.",
+          "thingsToDo": [
+            "Frozen rum punch on Nippers' Atlantic deck",
+            "Burgers and a swim at Grabbers",
+            "Sunday pig roast on the ocean beach",
+            "Snorkel the reef off Guana's outer shore"
+          ],
+          "mooringTip": "Fishers Bay holds well in sand at 2 to 5 metres, and Grabbers keeps a handful of moorings you can call for. If a norther is forecast the bay gets exposed, so plan to be tucked in behind Guana before the wind swings."
+        },
+        "4": {
+          "shortDescription": "Time the Whale Cay Passage for calm water, then carry on to Green Turtle Cay and the Goombay Smash at Miss Emily's.",
+          "description": "This is the one leg that needs a weather eye. To reach the northern cays, most charter boats leave the protected Sea of Abaco through Whale Cay Passage, a short mile and a half in open Atlantic where swell and a strong easterly can make it rough. Check the forecast the night before and go early, on a rising tide, while it is still settled. Clear of the channel, the water lies down again and Green Turtle Cay opens up ahead. Take a mooring in White Sound off the Green Turtle Club, since the holding here is poor and a ball is the safer bet. Dinghy round to New Plymouth in the afternoon. The lanes are worth an hour, and Miss Emily's Blue Bee Bar, where the Goombay Smash was invented back in the sixties, still pours the original.",
+          "thingsToDo": [
+            "Cross the Whale early on a calm morning",
+            "Original Goombay Smash at Miss Emily's",
+            "Wander New Plymouth's loyalist lanes",
+            "Sundowner at the Green Turtle Club dock"
+          ],
+          "mooringTip": "White Sound and Black Sound both hold poorly over silt, so take a mooring ball rather than trust the anchor. Only cross the Whale in settled conditions; if easterly swell is up, wait a day rather than pushing it."
+        },
+        "5": {
+          "shortDescription": "Reach north to the empty beaches of Manjack and Powell Cay, snorkelling with rays and turtles before dropping back to your mooring.",
+          "description": "Leave the mooring behind for a day and reach north to Manjack and Powell Cay, a pair of low, mostly uninhabited islands a few miles up the chain. Manjack is the pick of the two. Anchor off the northern cove, take the dinghy in, and follow the trail across to the ocean side where the sand runs empty for a mile. The shallows here hold stingrays and small sharks, and there is decent snorkelling on the reefs off the point. Powell Cay, a little further on, gives you another wide beach and good holding if you fancy a second stop. On the way back, swing past No Name Cay, where a small band of swimming pigs will paddle out to the boat looking for scraps. Drop back onto your Green Turtle mooring before dark.",
+          "thingsToDo": [
+            "Snorkel the reefs off Manjack Cay point",
+            "Walk Manjack's empty ocean-side beach",
+            "Meet the swimming pigs at No Name Cay",
+            "Anchor off Powell Cay for a second swim"
+          ],
+          "mooringTip": "Manjack's northern cove gives good sand holding in settled weather but is open to the north, so treat it as a daytime stop, not an overnight one. Keep your Green Turtle mooring for the night rather than giving it up."
+        },
+        "6": {
+          "shortDescription": "Back across the Whale to Man-O-War Cay, the Abacos' boat-building village, where Albury's still stitches bags from old sailcloth.",
+          "description": "Retrace the Whale southbound, again picking a calm window, and drop back into the sheltered Sea of Abaco. Man-O-War Cay is a different animal from the party cays. Loyalist families settled here in the 1790s and turned it into the boat-building heart of the Bahamas, and the Alburys have been laying up hulls and Abaco dinghies for six generations. The harbour is narrow, so a mooring is the sensible call over anchoring in the tight channel. Walk the single lane and look in at Albury's Sail Shop, where they still sew tough little totes from sailcloth by hand. One thing to know: the cay has been dry for generations, with no bar or bottle for sale, so keep a cold one aboard for the evening. The ocean-side beaches are quiet and usually empty.",
+          "thingsToDo": [
+            "Watch hulls take shape in the boatyards",
+            "Sailcloth totes at Albury's Sail Shop",
+            "Walk the single lane to the ocean beach",
+            "Snorkel the quiet reefs off the settlement"
+          ],
+          "mooringTip": "Man-O-War's harbour is tight and busy, so pick up a mooring rather than anchor in the channel, and call ahead in peak season. Remember the cay is dry, so buy any drinks before you arrive."
+        },
+        "7": {
+          "shortDescription": "A short final hop back across to Marsh Harbour, with time for one last swim before handing the boat back.",
+          "description": "The last leg is the shortest of the week, barely four miles back down to Marsh Harbour. If your drop-off is not until the afternoon, there is no rush. Motor slowly along the shore, find a quiet patch off the settlement for a final swim, and let the crew have a last hour in the water. Marsh Harbour is the biggest town in the Abacos and the place to settle up, refuel and offload rubbish. Aim to be on the fuel dock or at anchor with plenty of time before the handover, since the base will want the boat cleared and topped off. If there is an evening flight, most crews spend the last night ashore here rather than aboard. It is an easy, unhurried end to a week of short hops and shallow turquoise water.",
+          "thingsToDo": [
+            "One last swim off the Marsh Harbour shore",
+            "Refuel and settle up at the base",
+            "Provisioning run at Maxwell's supermarket",
+            "Farewell dinner on the Marsh Harbour waterfront"
+          ],
+          "mooringTip": "Marsh Harbour's anchorage is roomy and holds well in mud, but leave time to reach the fuel dock before the base closes. Confirm the exact drop-off spot with your charter company when you book, as slip availability varies."
+        }
+      }
+    },
+    "bvi-route": {
+      "metaTitle": "7-Day BVI Island-Hopper | Boat4You",
+      "metaDesc": "Sail a seven-day loop from Tortola through the British Virgin Islands: Peter, Cooper and Norman Islands, Jost Van Dyke's beach bars and Cane Garden Bay.",
+      "days": {
+        "1": {
+          "shortDescription": "A short first hop across the channel to Peter Island, easing the crew into trade-wind sailing before a quiet night at anchor.",
+          "description": "Most crews spend the morning provisioning in Road Town, so there's no rush to slip lines. The crossing to Peter Island runs barely five miles, a gentle beam reach that lets everyone find their feet before anything demanding. The trades come out of the east most days, and the channel stays flat behind the ring of islands.\n\nGreat Harbour opens wide and deep on the north shore, with moorings along the southwest edge when the breeze allows. We usually prefer Deadman's Bay for the beach, a curve of pale sand with clean swimming straight off the boat. If you want solitude, Little Harbour to the east holds turtles grazing in the shallows and the old Percy Chubb estate ruins ashore. Sundown here is unhurried.",
+          "thingsToDo": [
+            "Swim the sandy curve of Deadman's Bay",
+            "Find turtles grazing in Little Harbour",
+            "Top up fuel at Sprat Bay marina",
+            "Explore the old Percy Chubb estate ruins"
+          ],
+          "mooringTip": "The southwest moorings in Great Harbour catch more breeze than they look, so pick one with swinging room. Sprat Bay has only five balls at close to double the going rate, so call the dockmaster ahead or take a slip if you want power and water."
+        },
+        "2": {
+          "shortDescription": "An easy run east to Cooper Island, where a rum bar with two hundred labels waits at the head of the bay.",
+          "description": "Cooper sits a handful of miles east, an hour or so of relaxed sailing with the trades on the beam. Manchioneel Bay runs deep and the bottom is thick grass, so nobody anchors here anymore; the whole bay is a field of some forty balls set for boats up to sixty feet.\n\nPick up early in high season, because this is a popular stop and the good spots go by mid-afternoon. Ashore, the Cooper Island Beach Club is the draw. The rum bar keeps well over two hundred bottles, the coffee shop roasts its own beans, and the kitchen leans on whatever comes off the local boats. Snorkel Cistern Point on the south side for reef fish and the odd turtle before dinner.",
+          "thingsToDo": [
+            "Taste from Cooper Island's 200-label rum bar",
+            "Snorkel the reef at Cistern Point",
+            "Dive the RMS Rhone with Sail Caribbean",
+            "Try the beach club's own roasted coffee"
+          ],
+          "mooringTip": "The bay is too deep and grassy to anchor well, so plan on a mooring; there are around forty at roughly twenty-five dollars a night, paid ashore at the club. Arrive by early afternoon in winter or you will be left with the rollier outer balls."
+        },
+        "3": {
+          "shortDescription": "A longer leg up to Scrub Island's resort marina, where a proper dock, a hot shower and a poolside grill reward the passage.",
+          "description": "This is a slightly harder morning. Scrub lies up past the east end of Tortola, so expect a spell of working to windward before you round Beef Island and lay the marina. Leave by nine if the forecast is brisk.\n\nScrub Island Resort runs a real marina, fifty-odd slips with fuel, power and water, plus a mooring field off the bay if you would rather stay on the hook. After a few nights swinging at anchor, a berth alongside feels like a treat. There is a spa, a couple of pools, and Donovan's Reef down in the marina village for an unhurried dinner by the water. The resort's beach on the far side is worth the short walk over the hill.",
+          "thingsToDo": [
+            "Berth alongside for fuel and water",
+            "Dinner at Donovan's Reef marina grill",
+            "Book a treatment at the resort spa",
+            "Walk over to Scrub's north-shore beach"
+          ],
+          "mooringTip": "Book a slip ahead in season, as the marina fills with the resort's own traffic and the occasional mega-yacht up to a hundred and sixty feet. If the dock is full, the mooring field off the bay stays calm enough, and the fuel dock takes both diesel and petrol."
+        },
+        "4": {
+          "shortDescription": "The week's best run, a long downwind sail west to Jost Van Dyke and the beach bar that invented the Painkiller.",
+          "description": "If any day earns a full main and a poled-out headsail, this is it. Scrub to Jost Van Dyke is a long reach and run down the length of the channel, the trades pushing you west past Tortola's north coast. Give yourself the morning; it's the sort of sailing people book the whole trip for.\n\nWhite Bay is the postcard: a thin strip of sand behind a reef, home to the Soggy Dollar Bar where the Painkiller was first mixed. The entry is narrow and shallow, so read the water carefully on the way in. Around the point, Great Harbour is the island's capital and the official port of entry, with Foxy's and its decades of yachtsmen's flotsam nailed to the rafters.",
+          "thingsToDo": [
+            "Order a Painkiller at the Soggy Dollar Bar",
+            "Clear customs on Great Harbour beach",
+            "Catch a set at Foxy's Tamarind Bar",
+            "Swim ashore across White Bay's shallows"
+          ],
+          "mooringTip": "White Bay has only eight to ten balls, paid at Ivan's for the eastern set or the Soggy Dollar for the western; the reef entrance is unforgiving, so go in slow and eyeball it. For a settled night, the moorings in Little Harbour hold better than anchoring in Great Harbour's thin sand."
+        },
+        "5": {
+          "shortDescription": "Barely two hours across the water to Cane Garden Bay on Tortola's north shore, a long beach known for Quito's live music and local rum.",
+          "description": "An easy morning after the long haul west. Cane Garden Bay sits just across the water on Tortola's north side, a sail of under two hours. The bay is a broad arc of sand backed by green hills, one of the prettier anchorages on the island.\n\nAim to arrive by mid-afternoon. The mooring field and the sand patches outside it fill fast, and in winter a north swell can wrap in and set the whole bay rolling. If the forecast shows ground swell, think hard before committing; this is a surf beach for a reason. Ashore, Quito's Gazebo has been the heart of the place for years, with local seafood and Quito Rymer's own band most nights. There's a dinghy dock right out front.",
+          "thingsToDo": [
+            "Catch Quito Rymer's band at the Gazebo",
+            "Tour the Callwood rum distillery up the road",
+            "Snorkel the reef at the bay's north end",
+            "Walk the long beach between the bars"
+          ],
+          "mooringTip": "Get in by three in the afternoon in high season, because both the moorings and the sandy patches outside them go early. Skip the bay altogether if a northern ground swell is running; it wraps straight in and the anchorage turns miserable overnight."
+        },
+        "6": {
+          "shortDescription": "Round the west end and cross to Norman Island, the Treasure Island of legend, for cave snorkeling and a floating pirate bar.",
+          "description": "Today you cross back to the south side. Round the west end of Tortola and lay a course down for Norman Island, the rock most people take for Stevenson's Treasure Island. It's a fair sail, so plan the caves for the afternoon.\n\nThe Bight is a huge, well-sheltered bay and one of the busiest mooring fields in the islands, with balls to spare most of the year. Before you settle, dinghy or swim to the caves at the western edge; three shallow grottos cut into the cliff, their walls crusted with orange and red cup coral. It's the most snorkeled spot in the BVI for good reason. Come evening, the Willy T floating bar and Pirates Bight ashore keep things loud and cheerful.",
+          "thingsToDo": [
+            "Snorkel the cup-coral caves at The Bight",
+            "Snorkel the pinnacles at The Indians",
+            "Jump off the Willy T floating bar",
+            "Dinner ashore at Pirates Bight"
+          ],
+          "mooringTip": "The Bight carries one of the largest mooring fields in the BVI, so even in a peak week you'll find a ball, though the inner ones near Pirates Bight go first. Use the day-use moorings off the caves for snorkeling and don't try to overnight out there; the bay proper is the only settled option."
+        },
+        "7": {
+          "shortDescription": "Six miles home across the channel to Tortola, with time for one last snorkel before you hand the boat back.",
+          "description": "The run home is short, six miles or so back across to Road Town, so there's no reason to rush off. Most charter companies want the boat back by late morning, which leaves time for a slow breakfast on a Norman Island mooring and a final swim.\n\nIf you skipped the pinnacles at The Indians on the way in, they sit just off your track and make a good last stop. Otherwise, point the bow north across the channel one more time and enjoy the beam reach that's carried you all week. Top up fuel and water before you hand her back, settle the mooring receipts, and rinse the salt off the deck. A week in the BVI goes quickly, and this stretch always feels too soon.",
+          "thingsToDo": [
+            "Last snorkel at The Indians pinnacles",
+            "Slow breakfast on a Norman Island mooring",
+            "Top up fuel before returning to base",
+            "Settle mooring receipts and rinse the deck"
+          ],
+          "mooringTip": "Charter bases expect the boat back mid-morning, and the fuel docks at Road Town and Nanny Cay back up on turnaround days, so top off early. Leave enough time to hand over cleanly rather than arriving with the tank still to fill."
+        }
+      }
+    },
+    "grenada-route": {
+      "metaTitle": "7-Day Grenada to the Grenadines | Boat4You",
+      "metaDesc": "A seven-day sailing route from Port Louis Marina, Grenada up to the Tobago Cays and back, with turtles, palm-fringed anchorages and reef snorkelling.",
+      "days": {
+        "1": {
+          "shortDescription": "A short first hop north from St. George's to a quiet reserve bay where the Caribbean's famous underwater sculptures wait a few metres down.",
+          "description": "Most crews spend the morning provisioning and sorting the boat, then slip the lines around lunchtime for the easy run up the coast. Dragon Bay sits only a couple of miles north of the Lagoon, so there is no rush. The bay forms part of the Moliniere-Beausejour marine reserve, and the water clears as you round the point.\n\nThe draw here is the Moliniere reef and Jason deCaires Taylor's underwater sculpture park just to the south. Snorkel over the ring of children in 'Vicissitudes' or the man at his typewriter, all a few metres beneath you, with coral and reef fish filling the gaps between. There are no shops or dinghy docks, which is rather the point. Anchor early, swim before the day boats arrive, and let the first night be a slow one.",
+          "thingsToDo": [
+            "Snorkel the Moliniere underwater sculpture park",
+            "Drift over 'Vicissitudes', the ring of children",
+            "Explore Moliniere Point's reef and fish",
+            "Swim from the boat before day-trippers arrive"
+          ],
+          "mooringTip": "There is no dinghy dock and few boats stay overnight; pick up a government mooring ball if one is free, or anchor in sand and stay well clear of the reef and the marked snorkelling zone."
+        },
+        "2": {
+          "shortDescription": "The route's longest leg, a lively reach up Grenada's leeward coast and across open water to the boatyard bars of Carriacou.",
+          "description": "This is the day to leave early. It is around thirty miles up to Tyrrel Bay, and the leeward side of Grenada can be gusty and fickle, so stay a mile or two offshore to keep the trade wind steady. Once past the top of the island the course opens to roughly 055 degrees, a proper beam reach in fifteen knots or so. Give the Kick 'em Jenny exclusion zone a wide berth; the submarine volcano is marked on the chart.\n\nTyrrel Bay is deep and well sheltered, a working anchorage with a boatyard, chandlery and a scatter of bars ashore. Row in to the Original Slipway, built into an old careening yard with machinery worked into the tables and bar. Carriacou is still Grenada, so no clearance is needed tonight.",
+          "thingsToDo": [
+            "Dinner at the Original Slipway boatyard bar",
+            "Sundowner at the Lazy Turtle on the waterfront",
+            "Dinghy over to the mangroves and snorkel",
+            "Provision and top up water in the bay"
+          ],
+          "mooringTip": "Tyrrel Bay is deep with good holding in clear sand, but avoid the weedy patches that foul an anchor. There are moorings and dinghy docks at the haul-out yard and yacht club; no need to book, just arrive with daylight to find a sandy spot."
+        },
+        "3": {
+          "shortDescription": "Cross the border into St Vincent and the Grenadines to a slim coconut-fringed neck of sand rated among the region's prettiest anchorages.",
+          "description": "Today you change countries. Clear out of Grenada at Hillsborough or Tyrrel Bay before you go, then sail the twelve or so miles north into St Vincent and the Grenadines; Clifton on Union Island is the nearest port of entry to clear in. It is a gentle beam reach in the usual easterly.\n\nSalt Whistle Bay itself is a curl of white sand backed by palms, split by a thin neck of beach with the calm anchorage on one side and the Atlantic swell breaking on the other. Walk across it in a minute. A handful of beach bars line the southern end, Mama Jean's and the Last Bar Before the Jungle among them, good for a cold Hairoun and grilled fish. The bay is small and fills fast, so aim to be in by mid-afternoon.",
+          "thingsToDo": [
+            "Walk the sandy neck to the windward beach",
+            "Cold Hairoun beer at Mama Jean's",
+            "Grilled fish at the Last Bar Before the Jungle",
+            "Swim the calm leeward crescent under the palms"
+          ],
+          "mooringTip": "Holding is poor over the sea grass, so pick up one of the mooring balls (around 60 EC a night) or drop the hook in the sand patch toward the northern side. Get in early; there is little room once the fleet arrives."
+        },
+        "4": {
+          "shortDescription": "A tiny hop to the reef-ringed lagoon at the heart of the Grenadines, where green turtles graze the seagrass off Baradal.",
+          "description": "The sail is barely worth the name, three or four miles east to the most talked-about anchorage in the islands. Behind Horseshoe Reef sit five uninhabited cays around a broad turquoise lagoon; you moor in the open water and let the reef take the ocean swell.\n\nTake the dinghy to Baradal, where the marine park has fenced off a seagrass sanctuary for green and hawksbill turtles. Snorkel slowly and keep your distance, and they carry on feeding as if you were not there. The best of the coral lies out toward the Atlantic along the reef itself. Come evening a boat boy will row past taking barbecue orders; lobster, snapper and conch grilled on the beach, though lobster is off the menu from May to August while the season is closed.",
+          "thingsToDo": [
+            "Snorkel the Baradal turtle sanctuary",
+            "Drift the coral along Horseshoe Reef",
+            "Beach barbecue of grilled snapper or conch",
+            "Dinghy out to Petit Tabac's palms"
+          ],
+          "mooringTip": "Since 2023 the park charges the same whether you anchor or take one of the thirty-odd moorings, so grab a ball to spare the seabed. Rangers collect the fee by boat; pick up early, as the lagoon is exposed and the good spots go first."
+        },
+        "5": {
+          "shortDescription": "Sail back south into Grenadian waters to a bare white cay ringed by reef, one of the best snorkelling stops on the route.",
+          "description": "Turn south and cross the border again. Clear out of St Vincent and the Grenadines at Clifton, then reach back down to Carriacou and check in at Hillsborough. It is around fifteen miles, the wind now on the beam or just forward of it.\n\nSandy Island is little more than a spit of white sand and a line of palms off Carriacou's west coast, sitting inside a protected marine park. You anchor here for the snorkelling. Schools of yellow grunt hang over the coral at the south end, with bigger heads further north. Pick up a mooring, swim, and take a picnic ashore to the single table. There is nothing else here, and after the crowds of the Cays that suits most crews fine.",
+          "thingsToDo": [
+            "Snorkel the coral heads off the north end",
+            "Picnic ashore at Sandy Island's table",
+            "Swim over the yellow grunt schools",
+            "Clear customs back in at Hillsborough"
+          ],
+          "mooringTip": "Take one of the marine-park moorings rather than anchoring; the reef comes up fast and holding is only good in the sand. A small daily park fee applies, and there are no facilities, so carry water and shade for the afternoon."
+        },
+        "6": {
+          "shortDescription": "A long downwind run back to Grenada's capital, ending in the horseshoe harbour of the Carenage below the old fort.",
+          "description": "Now the trade wind works for you. It is a downwind run of thirty-odd miles back to St. George's, quick and easy with the swell behind, though the leeward stretch off Grenada can go light and patchy near the coast. Most crews are alongside or anchored by mid-afternoon.\n\nSt. George's is the prettiest working harbour in the region, a ring of red-roofed warehouses and waterfront cafes under Fort George. Tie the dinghy at the Carenage and eat callaloo soup or a roti at one of the quaysides. For a proper dinner, BB's Crabback on the north side does Chef Benjamin's crabback and prawns in lobster sauce. A water taxi from town reaches Grand Anse beach in a few minutes if the crew wants sand.",
+          "thingsToDo": [
+            "Lunch on the Carenage: roti or callaloo soup",
+            "Dinner at BB's Crabback for local crabback",
+            "Climb to Fort George for harbour views",
+            "Water taxi across to Grand Anse beach"
+          ],
+          "mooringTip": "You can anchor in the Lagoon off St. George's or take a berth at Port Louis Marina if you want an early, easy last morning. The harbour is busy with ferries and fishing boats, so keep clear of the fairway when you drop the hook."
+        },
+        "7": {
+          "shortDescription": "A five-minute motor across the Lagoon to the marina, with time for fuel, water and a last Grenadian lunch before handover.",
+          "description": "There is barely a sail left in this one. Port Louis Marina sits in the Lagoon on the edge of St. George's, a few hundred metres from wherever you spent the night, so the last passage is a short motor across flat water. Time it for the morning and you have the day to spare.\n\nCamper & Nicholsons runs the marina, with fuel, water and provisioning on the dock and the Victory Bar & Grill for a final lunch. Most charters want the boat back with a full tank and the heads pumped out, so leave a little slack for the fuel queue. If there is time before handover, wander the Carenage one more time or pick up nutmeg and cocoa to carry home from the island that grows them.",
+          "thingsToDo": [
+            "Fuel and water on the Port Louis dock",
+            "Farewell lunch at the Victory Bar & Grill",
+            "Last stroll along the Carenage waterfront",
+            "Buy nutmeg and cocoa to take home"
+          ],
+          "mooringTip": "Book your berth at Port Louis ahead, especially in the winter season, and call the dock on VHF as you leave the anchorage. Arrive early for fuel; the pontoon gets busy with boats returning from charter on the same morning."
+        }
+      }
+    },
+    "martinique-route": {
+      "metaTitle": "7-Day Martinique Lee-Coast Loop | Boat4You",
+      "metaDesc": "Round-island week from Le Marin: turtles at the Anses d'Arlet, 1902 wrecks off Saint-Pierre, black-sand Anse Couleuvre and the white arc of Les Salines.",
+      "days": {
+        "1": {
+          "shortDescription": "Settle into Martinique's biggest charter base, load the boat, and paddle the mangrove creeks before the week's first westward leg.",
+          "description": "Most crews board around midday, so day one is about groundwork rather than miles. Marina du Marin holds roughly 830 berths and a hundred mooring balls, which makes it the busiest base in the Eastern Caribbean and a slightly chaotic place to find your slip. Take the boat handover slowly. Walk to Auchan for baguettes, French cheese and a case of Lorraine, then top the water tanks while you have easy dock access. If you land early, the mangrove channels north of the harbour are worth an hour in the dinghy, quiet and full of birdlife once you clear the moorings. Eat ashore tonight. Kokoarum and the marina-front terraces do a decent first supper, and an early night sets you up for tomorrow's run west to the Anses d'Arlet.",
+          "thingsToDo": [
+            "Provision at Auchan for baguettes and Lorraine beer",
+            "Dinghy the mangrove creeks north of the harbour",
+            "Supper on the terrace at Kokoarum",
+            "Run the systems check before leaving the dock"
+          ],
+          "mooringTip": "Your slip at Marina du Marin is assigned by the charter base, not chosen on arrival, so call up on VHF as you enter the buoyed channel. Shore power is 220V European fittings, so pack an adapter if your fleet is US-rigged."
+        },
+        "2": {
+          "shortDescription": "Twelve miles west around Cap Salomon to a turtle bay where mandatory buoys sit over the seagrass and the church frames the beach.",
+          "description": "We usually leave by nine to hold the beam reach in steady air before the trades build. The leg runs about twelve miles up the leeward coast, rounding Cap Salomon into the string of bays the French call the Anses d'Arlet. Grande Anse is the widest, a pale crescent backed by Creole houses and a little pier that every visitor photographs at least once. The real draw is underwater. Green turtles graze the seagrass meadows here in numbers, and a marked snorkel trail runs off the northern end where you drift over them in three or four metres. A team of bay wardens works the moorings and will point you to a free ball. Lunch is easy at the beachfront tables: grilled fish, accras and a cold ti-punch, then back in the water for the afternoon.",
+          "thingsToDo": [
+            "Snorkel the marked turtle trail off Grande Anse",
+            "Photograph the headland church and its pier",
+            "Grilled fish and accras at the beach tables",
+            "Paddle south to Petite Anse d'Arlet"
+          ],
+          "mooringTip": "Much of the bay is a protected seagrass zone where anchoring is banned, so pick up one of the wardens' buoys, white for boats and yellow marking the swim lanes. They fill through the afternoon in season, so arriving before lunch gives you the pick of them."
+        },
+        "3": {
+          "shortDescription": "A longer 22-mile hop north past Fort-de-France to the old capital under Mount Pelée, with wreck diving straight off the anchorage.",
+          "description": "This is the week's biggest single passage, roughly twenty-two miles up the coast past the capital at Fort-de-France. Give the headlands room where the wind funnels, then settle in for the reach north. Saint-Pierre sits in the shadow of Mount Pelée, whose 1902 eruption killed nearly the whole town in minutes and sent the hundreds of ships then in the bay to the bottom. Eight of those wrecks are still dived, scattered between roughly ten and eighty metres off the breakwater. Ashore, the Frank Perret memorial and the ruined theatre tell the story properly, and Cyparis's cell, the prisoner who somehow lived, still stands. The sand shelves steeply and holds well in eight to fifteen metres. One thing to plan for: the volcano sends cool gusts down onto the bay after dark, so a well-set anchor matters here.",
+          "thingsToDo": [
+            "Dive the 1902 wrecks off the breakwater",
+            "Visit the Frank Perret volcano memorial",
+            "Walk the ruined theatre and Cyparis's cell",
+            "Dinner in the cobbled old town"
+          ],
+          "mooringTip": "Saint-Pierre is an open roadstead with no shelter from north swell, so anchor on the black sand in eight to fifteen metres and set it hard. A few visitor buoys sit near the south breakwater; stay at least 100 m off the wrecks, which are a protected archaeological site."
+        },
+        "4": {
+          "shortDescription": "A short five-mile run to Martinique's wild northwest corner, a black-sand cove under the cliffs with a rainforest waterfall walk.",
+          "description": "Only about five miles today, but they take you to the emptiest anchorage on the route. Past Anse Ceron the coast turns wild, all steep basalt and forest tumbling to the sea, and Anse Couleuvre opens up as a dark strip of volcanic sand with almost nothing built behind it. Go ashore early for the walk. A forest path follows the Couleuvre river inland for an hour or so, past the ruins of an old estate and its distillery, huge fromager trees overhead, to a waterfall dropping twenty metres into a cool pool. Back aboard, the snorkelling along the rocks is good and turtles turn up now and then. This is a night to leave the cockpit lights off. There is no village glow here, only the cliffs and the stars.",
+          "thingsToDo": [
+            "Hike the Couleuvre river trail to the waterfall",
+            "Snorkel the rocks at the cove's edges",
+            "Swim off the volcanic black-sand beach",
+            "Watch for turtles surfacing near the boat"
+          ],
+          "mooringTip": "Couleuvre is anchor-only on black sand in six to ten metres, tucked under the easterly wind but wide open to any north swell. Check the forecast before committing to the night, and if swell is running, drop back to Saint-Pierre or Anse Mitan instead."
+        },
+        "5": {
+          "shortDescription": "Eighteen miles back south to a tiny fishing hamlet where green turtles feed on the seagrass and gommiers line the sand.",
+          "description": "Turn south and retrace the coast, roughly eighteen miles with the trades on the quarter and the capital slipping by to port. Anse Dufour is small, a single curve of gold sand with brightly painted gommiers, the local fishing skiffs, drawn up at the top of the beach. The turtles are the whole reason to stop. They come in to graze the seagrass most mornings, and you can slip off the swim step and float above them without a boat trip or a guide. Two small restaurants do accras and grilled catch just off the sand. When you have had enough of the water, the ten-minute path over the headland leads to Anse Noire, the one black-sand beach on this coast, worth the walk for the contrast alone.",
+          "thingsToDo": [
+            "Snorkel with green turtles over the seagrass",
+            "Walk the headland path to Anse Noire",
+            "Accras and grilled catch at the beach snacks",
+            "Photograph the painted gommiers on the sand"
+          ],
+          "mooringTip": "The bay is small and popular, with room for only a dozen boats, so aim to arrive before noon in season. Where buoys are laid over the seagrass, use them rather than anchoring; otherwise find a clear patch of sand and stay well off the swim zone."
+        },
+        "6": {
+          "shortDescription": "Fourteen miles round Diamond Rock to Sainte-Anne, with a long lunch stop off the three-kilometre white sweep of Les Salines.",
+          "description": "A fine last full day of sailing. From Dufour it is about fourteen miles southeast, rounding the Pointe du Diamant with the great pyramid of Diamond Rock standing off the shore. Break the trip at Les Salines. The three-kilometre arc of white sand at the island's southern tip is the beach every Martiniquais names first, and the shallow water off it makes a lazy lunch anchorage. Push on in the afternoon to Sainte-Anne, a proper village with a stone church, a busy market and beach cafes selling rum punch and crepes. The anchorage is broad and sandy, sheltered from the easterly trades, and holds a big fleet without feeling cramped. Wander the market stalls before they close, then take a sundowner ashore with the day's last light on the water.",
+          "thingsToDo": [
+            "Lunch anchor off the white arc of Les Salines",
+            "Round Diamond Rock off the Pointe du Diamant",
+            "Browse Sainte-Anne market for spices and rum",
+            "Rum punch and crepes at a beach cafe"
+          ],
+          "mooringTip": "Sainte-Anne is anchor-only on clean white sand in four to six metres, with excellent holding and shelter from the trades. There is plenty of swinging room even at peak, but keep clear of the marked swim areas off the village beach and leave the dinghy channel open."
+        },
+        "7": {
+          "shortDescription": "A short five-mile finish back to Le Marin, timed around fuel, the hand-back inspection, and one last morning swim off Sainte-Anne.",
+          "description": "The last leg is barely five miles, so there is no rush to weigh anchor. Take a final swim off Sainte-Anne while the light is soft, then motor-sail the short hop back into the Cul-de-Sac Marin. Most contracts want the boat alongside by late afternoon for the check-out, and the base runs the berthing on VHF as you come in. Time the fuel dock carefully. It gets a queue on hand-back mornings, so filling up between nine and midday saves a long wait with the engine idling. Once you are fast alongside and the tanks are topped, there is usually time for a last lunch on the marina front before the walkthrough. Crews tend to spend it working out how to book the same week again next year.",
+          "thingsToDo": [
+            "Early swim off Sainte-Anne before departure",
+            "Refuel at the Marina du Marin dock",
+            "Last lunch on the marina front",
+            "Hand-back walkthrough with the base team"
+          ],
+          "mooringTip": "Fuel and hand-back both bottleneck late in the morning, so top up early and confirm your return time with the base. Berthing for check-out is directed by the base crew on VHF, so listen out as you enter the buoyed channel rather than picking a slip yourself."
+        }
+      }
+    },
+    "martinique-st-lucia-route": {
+      "metaTitle": "7-Day Martinique to St Lucia Sail | Boat4You",
+      "metaDesc": "Round-trip yacht route from Le Marin, Martinique across the channel to St Lucia's Pitons, Marigot Bay and Rodney Bay, then home via Grande Anse d'Arlet.",
+      "days": {
+        "1": {
+          "shortDescription": "An easy first afternoon: three miles south from Le Marin, the Caribbean's busiest charter base, to the broad sand bottom off Sainte-Anne, with Les Salines beach a walk down the coast.",
+          "description": "Le Marin is where most Caribbean charters begin, and it shows: 800-odd berths, French supermarkets, chandlers and a fuel dock all within a dinghy ride. Load up here, because provisioning gets thinner once you cross to St Lucia. The first leg is short, barely three miles down to Sainte-Anne, so there's no rush. We usually clear the marina by late morning and let the crew settle into the boat on the way. Sainte-Anne's bay is broad and shallow, sand under five metres or so, and the holding is reliable once the anchor bites. Drop the hook off the village and dinghy in for a wander past the church square. If the wind is kind, walk south toward Les Salines, one of the island's finest beaches.",
+          "thingsToDo": [
+            "Provision at Le Marin's French supermarkets",
+            "Walk south to Les Salines beach",
+            "Wander Sainte-Anne's church square",
+            "Snorkel the reef off Pointe Marin"
+          ],
+          "mooringTip": "Sainte-Anne is all anchoring, no buoys; aim for sand in four to six metres and give the seagrass patches a wide berth so the hook sets clean. The bay fills up by evening in season, so arrive mid-afternoon for a spot near the village."
+        },
+        "2": {
+          "shortDescription": "The open-water hop across the St Lucia Channel to Rodney Bay, an easy port of entry with a proper marina and Reduit Beach behind it.",
+          "description": "This is the day of real sailing. From Sainte-Anne it's around twenty miles of open channel to Rodney Bay, four to six hours on a beam reach with the trades usually blowing 15 to 20 knots and a bit of swell midway. Worth leaving by nine to make the anchorage in daylight. Rodney Bay is a port of entry, so clear customs and immigration at the IGY marina within twenty-four hours of arrival and stay aboard until you have the paperwork. Once you're cleared, the choices open up: berth in the lagoon, or anchor off Reduit Beach in settled weather. Ashore there are chandlers, restaurants and cold Piton beer a short walk from the sand.",
+          "thingsToDo": [
+            "Clear customs at IGY Rodney Bay Marina",
+            "Swim at Reduit Beach",
+            "Hike Fort Rodney on Pigeon Island",
+            "Sundowners at a Reduit Beach bar"
+          ],
+          "mooringTip": "The outside anchorage off Reduit Beach is fine in settled spells but rolls when northerly swell wraps in; the Rodney Bay Lagoon and marina berths are calmer if a swell is forecast. For clearance, tie up at the marina rather than anchoring first, since no one should go ashore before customs signs you off."
+        },
+        "3": {
+          "shortDescription": "Ten sheltered miles in the island's wind shadow drop you into Marigot Bay, a mangrove-ringed hurricane hole with buoys to pick up and tables right on the water.",
+          "description": "The pace drops right off today. It's roughly ten miles south along the leeward coast, mostly flat water in the island's wind shadow with the odd gust funnelling off the valleys. A couple of hours' sailing, no more. Marigot Bay hides behind a low spit of palms and doesn't reveal itself until you're almost inside. The inner pool is a genuine hurricane hole, ringed by steep green hills that kill the swell and most of the wind. Pick up one of the marina's mooring buoys in the inner bay rather than fighting for space to anchor. Ashore, Chateau Mygo does honest Creole cooking, and the water taxi will run you over to Doolittle's for dinner and back.",
+          "thingsToDo": [
+            "Take a mooring in the inner hurricane hole",
+            "Dinner at Chateau Mygo's Creole kitchen",
+            "Water taxi to Doolittle's bar",
+            "Paddle the mangroves at the head of the bay"
+          ],
+          "mooringTip": "There's barely room to swing and it stays deep right up to the shore, so forget anchoring and grab one of the marina's twenty balls; a boat boy runs out to take your lines. They go fast in season, so raise the marina on the radio while you're still off the entrance."
+        },
+        "4": {
+          "shortDescription": "The signature leg: south to Soufrière and a mooring beneath the twin Pitons, inside a protected reserve of reef and rainforest.",
+          "description": "The Pitons come into view long before you reach them, two green spires dropping straight into the sea. It's about twelve miles down the coast, an easy sail broken by wind holes under the high land, so keep the engine handy. You'll still be talking about this stretch on the flight home. The whole bay sits inside the Soufrière marine reserve, a UNESCO site where anchoring is off-limits and you take a mooring buoy from the SMMA rangers, who charge a small conservation fee by boat length. Grab one off Sugar Beach, between the Pitons, or under the cliffs at Anse Chastanet for the better snorkelling. Ashore, the sulphur springs and botanical gardens make a good half-day if the crew wants a break from the water.",
+          "thingsToDo": [
+            "Take an SMMA buoy off Sugar Beach",
+            "Snorkel the reef at Anse Chastanet",
+            "Soak in Sulphur Springs mud baths",
+            "Walk the Diamond Botanical Gardens"
+          ],
+          "mooringTip": "No hook goes down anywhere in the reserve, so take an SMMA buoy (white with a blue stripe) and pay the ranger the conservation fee; the fishermen's plain white buoys are not for visitors. The buoys off Sugar Beach are deep and often stern-tied to shore, so arrive with daylight to sort lines calmly."
+        },
+        "5": {
+          "shortDescription": "A run back up the coast to Rodney Bay to clear out of St Lucia, with time for Pigeon Island before the crossing home.",
+          "description": "Today is about getting north again. It's roughly twenty-five miles back up the leeward coast to Rodney Bay, a comfortable sail in the island's lee with the same afternoon gusts off the headlands. Leave Soufrière after a last morning snorkel and you'll be anchored by mid-afternoon. Back in Rodney Bay, clear out with customs at the marina so you're free to leave for Martinique at first light. With the paperwork done, tuck up under Pigeon Island for the night, the calmest corner of the bay once the park closes. Fort Rodney is worth the short climb for the view over the anchorage and across to Martinique, tomorrow's horizon. Take on fuel and water before you leave; it's scarcer on the far side.",
+          "thingsToDo": [
+            "Clear out of St Lucia at the marina",
+            "Anchor under Pigeon Island for the night",
+            "Climb to Fort Rodney's ruins",
+            "Top up fuel and water before leaving"
+          ],
+          "mooringTip": "The Pigeon Island anchorage holds well in sand at four to seven metres, but watch for shallow patches near the beach. It empties out and stays quiet once the national park shuts for the evening, so it's a good spot to stage for an early start."
+        },
+        "6": {
+          "shortDescription": "The channel crossing back to Martinique, finishing under the church at Grande Anse d'Arlet where green turtles graze the seagrass off the beach.",
+          "description": "The crossing back to Martinique is the longer of the two channel days, close to thirty miles from Rodney Bay up to the Anses d'Arlet. Heading north the trades come more onto the bow, so expect a lively reach and some spray; reef early and start at dawn to keep it a daytime passage. Landfall is the southwest corner of Martinique. Grande Anse d'Arlet is a proper reward for the miles. A dark-sand crescent curves below a red-roofed church whose steeple lines up dead straight with the pier. The anchoring is good over sand, and the water off the beach holds seagrass meadows where green turtles feed most mornings. Ti Sable, feet in the sand, does grilled fish and a Sunday party that spills onto the beach.",
+          "thingsToDo": [
+            "Snorkel with green turtles off the beach",
+            "Photograph Saint-Henri church aligned with the pier",
+            "Lunch at Ti Sable beach club",
+            "Dinghy round to Anse Dufour and Anse Noire"
+          ],
+          "mooringTip": "Grande Anse is an anchoring bay; drop over clear sand in five to eight metres and avoid the marked seagrass so you don't foul the turtle grazing. It gets busy with day boats by late morning, so an early arrival wins you a spot close to the village."
+        },
+        "7": {
+          "shortDescription": "A last short leg round Martinique's south coast past Diamond Rock, back to Le Marin to hand the boat over.",
+          "description": "The final morning is an easy one, ten miles or so back to Le Marin around the southern tip of the island. Off Petite Anse d'Arlet the coast opens onto Diamond Rock, a 175-metre lump of stone the Royal Navy once garrisoned as a ship-of-war. Give it a slow pass; the snorkelling on its flanks is worth a last swim if the sea is calm. From there it's a beat back east into the trades toward Sainte-Anne, then up the buoyed channel into Le Marin. Charter boats usually want the yacht back by late morning, so time the last leg to leave Grande Anse early. Fill the fuel tank on the way in, settle up, and let the crew make the most of one more lunch ashore.",
+          "thingsToDo": [
+            "Slow pass and snorkel at Diamond Rock",
+            "Lunch stop off Petite Anse d'Arlet",
+            "Refuel on the way into Le Marin",
+            "Final lunch on Le Marin's waterfront"
+          ],
+          "mooringTip": "Le Marin's approach is buoyed but shallow and coral-strewn, so follow the marked channel in and don't cut corners. Call the charter base on the way to confirm your berth, and go in bows-first or as they direct; the fuel dock sits near the entrance for a top-up before handover."
+        }
+      }
+    },
+    "virgin-gorda-anegada-route": {
+      "metaTitle": "7-Day BVI: Baths to Anegada | Boat4You",
+      "metaDesc": "A week-long sail from Tortola through the Virgin Gorda boulders to Anegada's reef, North Sound, Scrub Island and Jost Van Dyke's beach bars.",
+      "days": {
+        "1": {
+          "shortDescription": "Cross the Drake Channel to Virgin Gorda and thread through the granite boulders and grottoes of The Baths before the day boats arrive.",
+          "description": "Most crews clear Road Town by mid-morning and pick their way east across the Sir Francis Drake Channel, ten miles of steady beating into the trades with Virgin Gorda growing on the bow. The payoff is The Baths, where house-sized granite boulders tumble into the sea and form a maze of shaded grottoes and tidal pools. Pick up a National Parks ball off the beach, then swim or dinghy in and follow the rope-and-ladder trail through the rocks to Devil's Bay. Bring reef shoes; the scramble is wet and the stone gets slick. Snorkelling around the boulder bases turns up sergeant majors and the odd tarpon. Come early. By eleven the ferries land and the caves fill, so an eight o'clock start buys you an hour of near-empty beach and better light for photos.",
+          "thingsToDo": [
+            "Scramble the boulder trail to Devil's Bay",
+            "Snorkel the grottoes around Spring Bay",
+            "Cool off in the shaded tidal pools",
+            "Photograph the caves before the ferries land"
+          ],
+          "mooringTip": "The Baths mooring field is day-use only, so plan to leave by late afternoon and drop back to Spanish Town or Savannah Bay for the night. Balls are first-come; grab one by mid-morning in season."
+        },
+        "2": {
+          "shortDescription": "Round the top of Virgin Gorda into North Sound, a sheltered basin of marinas, beach bars and rebuilt yacht-club moorings.",
+          "description": "From Spanish Town it is a short reach up the leeward coast, maybe ten miles, before you slip through the pass into North Sound. The water flattens the moment you are inside. This is a natural harbour ringed by anchorages: Leverick Bay for fuel, water and a proper grocery run, Saba Rock and the rebuilt Bitter End Yacht Club for sundowners, and quiet room to anchor off Prickly Pear. We usually take a Leverick ball, top up tanks, then dinghy across for the evening. Friday nights the dock hosts Michael Beans and his pirate jump-up, loud and good fun. If you would rather stay still, Saba Rock's own buoys include fresh water and a bag of ice, which is worth the fee after a hot day. Provision here; it is the last serious shop before Anegada.",
+          "thingsToDo": [
+            "Top up fuel and water at Leverick Bay",
+            "Sundowners at the rebuilt Bitter End Yacht Club",
+            "Roll into Leverick Bay for Michael Beans' pirate jump-up",
+            "Take a mooring off Saba Rock"
+          ],
+          "mooringTip": "North Sound runs on BoatyBall, so reserve a Leverick or Saba Rock ball from your phone before you arrive in peak weeks. Prefer to anchor? The mud-and-sand basin west of Prickly Pear holds well for modern anchors."
+        },
+        "3": {
+          "shortDescription": "The long leg out to flat, coral-fringed Anegada, where a marked channel through Horseshoe Reef leads to a lobster dinner.",
+          "description": "This is the one properly open passage of the week, roughly twelve to fifteen miles of Atlantic-flavoured water with no island in sight until you are almost on top of it. Anegada is coral, not rock, so it barely lifts above the horizon. Leave North Sound by nine to keep the sun high and behind you for the approach. The channel into Setting Point is buoyed and narrow, and the water outside it shoals to nothing in seconds over the eighteen-mile Horseshoe Reef. Follow the red and green marks exactly and ignore any temptation to cut a corner. Once you are moored, the island runs at walking pace. Order your lobster in the afternoon at Potter's or the Anegada Reef Hotel so the grill is lit by the time you dinghy in.",
+          "thingsToDo": [
+            "Order lobster ahead at Potter's by the Sea",
+            "Sunset drinks at the Anegada Reef Hotel",
+            "Watch the reef markers into Setting Point",
+            "Live music evenings at the Wonky Dog"
+          ],
+          "mooringTip": "Setting Point has only a handful of moorings and almost no safe anchoring among the coral heads, so reserve a BoatyBall well ahead. Holding in the grassy patches is poor, and depths run just six to eight feet."
+        },
+        "4": {
+          "shortDescription": "A full day ashore on Anegada: north-shore beaches, reef snorkelling and the salt-pond flamingos that make this island unlike any other in the group.",
+          "description": "Nobody touches the boat today. Anegada is the one island worth giving a whole day, so hire a jeep or a scooter at Setting Point, or flag a taxi, and cross the scrubby interior to the north shore. Loblolly Bay and Cow Wreck Beach are the two big draws, long ribbons of pale sand with reef close enough to swim to. The snorkelling off Loblolly is the best on the island, with elkhorn coral and the occasional turtle. Big Bamboo and the Cow Wreck Beach Bar handle lunch and cold Caribs. On the way back, stop at the western salt ponds where a small flock of flamingos feeds; early morning and late afternoon give the best sightings. Bonefishing guides work the flats if that is your thing. It is a slow, sunburnt kind of day, and that is the point.",
+          "thingsToDo": [
+            "Snorkel the elkhorn reef off Loblolly Bay",
+            "Lunch at the Cow Wreck Beach Bar",
+            "Spot flamingos at the western salt ponds",
+            "Hire a jeep across the island interior"
+          ],
+          "mooringTip": "You keep your Setting Point mooring for the second night, so there is nothing to move; just confirm your BoatyBall reservation covers both nights. Take the dinghy in early to lock down a jeep before they are all gone."
+        },
+        "5": {
+          "shortDescription": "A beam reach back south to Scrub Island, where a full-service marina and quiet resort beaches wait after the open water.",
+          "description": "Point the bow back toward the main island chain for the longest sail of the trip, sixteen-odd miles of beam reaching in the usual trades. Scrub Island sits off Tortola's north-east corner, a short hop from Marina Cay and Trellis Bay. The marina here is the smartest on the route, with slips for big boats, fresh water, power and a genuine hot shower, plus Donovan's Reef and Caravela for dinner if you have had enough of your own galley. We like tying up for a night to reset: laundry, provisioning at the Outpost, a swim off One Shoe Beach. Dive BVI runs trips out from the dock. If the marina is full, Marina Cay's mooring field next door makes a fine fallback with its own little beach bar.",
+          "thingsToDo": [
+            "Dinner at Donovan's Reef Marina Bar",
+            "Swim off One Shoe Beach",
+            "Book a snorkel trip with Dive BVI",
+            "Reprovision at the Scrub Island Outpost"
+          ],
+          "mooringTip": "Scrub Island is a marina rather than a mooring field, so book a slip through Dockwa a day or two ahead, especially for a larger catamaran. If it is booked out, pick up a ball at neighbouring Marina Cay instead."
+        },
+        "6": {
+          "shortDescription": "Sail the length of Tortola's north coast to Jost Van Dyke, home of Foxy's, the Soggy Dollar and the original Painkiller.",
+          "description": "Today the wind sits behind you, an easy run along the top of Tortola past Cane Garden Bay and around Great Thatch to Jost Van Dyke, the better part of fifteen miles depending on your line. Jost is small, sleepy and famous out of all proportion to its size. Great Harbour holds Foxy's, the beach bar Philicianno Callwood started decades ago, still throwing a party most nights. Round the corner in White Bay is the Soggy Dollar, where the Painkiller was invented and you swim ashore rather than land a dinghy. Both bays crowd up when the day boats arrive, so time it. Slip in before eleven or after four and you get the sand closer to yourself. Little Harbour, quieter still, has Sydney's Peace and Love and good moorings if the other two feel too busy.",
+          "thingsToDo": [
+            "Painkillers at the Soggy Dollar Bar",
+            "Late night at Foxy's in Great Harbour",
+            "Swim ashore onto White Bay's sand",
+            "Quiet moorings and dinner in Little Harbour"
+          ],
+          "mooringTip": "White Bay has only eight or ten balls and shallow anchoring in soft sand, so arrive early or take a mooring in calmer Great Harbour and dinghy round. Both bays are open to north swell and best avoided in winter groundswell."
+        },
+        "7": {
+          "shortDescription": "A short final hop back toward Road Town, with time for one last swim at Sandy Spit or a stop in Soper's Hole.",
+          "description": "The last morning is an easy one, only eight or ten miles back to Road Town, so there is no need to rush the coffee. Most charter bases want the boat back by noon, which still leaves room for a detour. Sandy Spit and Sandy Cay, just off Jost, are picture-book sandbars worth a quick anchor and a swim before you turn for home. If you need fuel or a last few provisions, Soper's Hole at Tortola's West End has a fuel dock, a small marina and a couple of cafes around the waterfront. From there it is a straightforward run down the Sir Francis Drake Channel to base. Rinse the salt off, settle the log, and raise a glass with the crew before you hand back the keys.",
+          "thingsToDo": [
+            "Anchor and swim at Sandy Spit",
+            "Fuel and coffee at Soper's Hole",
+            "Last provisions at West End marina",
+            "Final sail down the Drake Channel"
+          ],
+          "mooringTip": "Sandy Spit has no moorings; anchor off the sand in settled weather and keep clear of the reef on its eastern side. Line up your return fuel stop at Soper's Hole early, as the dock backs up on changeover mornings."
+        }
+      }
+    }
+  }
+}

@@ -17,6 +17,13 @@ declare module 'next-intl' {
       metadata: typeof import('../../messages/en/metadata.json').default;
       cookieConsent: typeof import('../../messages/en/cookieConsent.json').default;
       promo: typeof import('../../messages/en/promo.json').default;
+      itinerary: typeof import('../../messages/en/itinerary.json').default;
+      itineraryCroatia: typeof import('../../messages/en/itineraryCroatia.json').default;
+      itineraryGreece: typeof import('../../messages/en/itineraryGreece.json').default;
+      itineraryItaly: typeof import('../../messages/en/itineraryItaly.json').default;
+      itinerarySpain: typeof import('../../messages/en/itinerarySpain.json').default;
+      itineraryTurkey: typeof import('../../messages/en/itineraryTurkey.json').default;
+      itineraryCaribbean: typeof import('../../messages/en/itineraryCaribbean.json').default;
     };
   }
 }

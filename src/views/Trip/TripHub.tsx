@@ -4,6 +4,7 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 
 import LogoWithoutText from '@/components/SvgIcons/LogoWithoutText';
+import { areaForMarina, suggestedRoutesForArea } from '@/helper/itineraryMatch';
 
 import TripSocial, { TripOwnerCredentials } from './TripSocial';
 
@@ -358,6 +359,15 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment, ownerCredentials }: TripHu
 
   const img = (id: number, w = 480) => `${apiUrl}/public/image/${id}?width=${w}`;
   const boatUrl = `https://www.boat4you.com/boat/${trip.yacht.slug}`;
+
+  // Suggested sailing routes from the departure marina (plain config data,
+  // EN-only like the rest of the hub). 12+ nights floats 14-day routes first.
+  const itineraryAreaId = areaForMarina(trip.marina?.name, trip.marina?.countryCode);
+  const suggestedRoutes = useMemo(() => {
+    const nights = Math.max(0, Math.round((dateTo.getTime() - dateFrom.getTime()) / 86_400_000));
+
+    return suggestedRoutesForArea(itineraryAreaId, nights, trip.marina?.name).slice(0, 3);
+  }, [itineraryAreaId, dateFrom, dateTo, trip.marina?.name]);
 
   const sosNumbers = SOS_BY_COUNTRY[trip.marina?.countryCode?.toUpperCase() ?? ''] ?? [];
 
@@ -759,6 +769,61 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment, ownerCredentials }: TripHu
                       ))}
                       <div style={{ ...S.sub, fontSize: 11, textAlign: 'center' }}>
                         Forecast for the marina&apos;s exact location
+                      </div>
+                    </div>
+                  </>
+                )}
+
+                {!finished && itineraryAreaId && suggestedRoutes.length > 0 && (
+                  <>
+                    <div style={S.h2}>Suggested itinerary 🗺</div>
+                    <div style={{ ...S.card, display: 'flex', flexDirection: 'column', gap: 9 }}>
+                      {suggestedRoutes.map(route => (
+                        <a
+                          key={route.id}
+                          href={`https://www.boat4you.com/itineraries/${itineraryAreaId}/${route.id}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={() => sendEvent('SITE_CLICK', 'itinerary')}
+                          style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: 8,
+                            textDecoration: 'none',
+                            color: 'inherit',
+                            fontSize: 13,
+                          }}
+                        >
+                          <span
+                            style={{
+                              flex: 1,
+                              minWidth: 0,
+                              fontWeight: 700,
+                              whiteSpace: 'nowrap',
+                              overflow: 'hidden',
+                              textOverflow: 'ellipsis',
+                            }}
+                          >
+                            {[route.startingPoint, ...route.otherPoints].join(' → ')}
+                          </span>
+                          <span
+                            style={{
+                              background: '#e9efff',
+                              color: '#1a3fd6',
+                              borderRadius: 99,
+                              padding: '2px 8px',
+                              fontSize: 11,
+                              fontWeight: 800,
+                              whiteSpace: 'nowrap',
+                            }}
+                          >
+                            {route.numberOfDays ?? route.routeDays.length} days
+                          </span>
+                          <span style={{ color: '#2856ff', fontWeight: 800 }}>↗</span>
+                        </a>
+                      ))}
+                      <div style={{ ...S.sub, fontSize: 11 }}>
+                        Day-by-day sailing routes from your marina — open on boat4you.com
                       </div>
                     </div>
                   </>

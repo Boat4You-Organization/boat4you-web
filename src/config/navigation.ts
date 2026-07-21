@@ -1,6 +1,6 @@
 import Link from '@/types/link.type';
 
-export type NavItem = 'faq' | 'aboutUs' | 'blog' | 'contact';
+export type NavItem = 'faq' | 'aboutUs' | 'blog' | 'itineraries' | 'contact';
 
 interface NavLink extends Link {
   text: NavItem;
@@ -18,6 +18,10 @@ const navigation: NavLink[] = [
   {
     text: 'blog',
     href: '/blog',
+  },
+  {
+    text: 'itineraries',
+    href: '/itineraries',
   },
   {
     text: 'contact',

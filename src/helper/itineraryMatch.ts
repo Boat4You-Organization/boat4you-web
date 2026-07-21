@@ -1,0 +1,638 @@
+import { itineraries } from '@/config/itineraries.config';
+import { Itinerary, ItineraryRoute } from '@/types/itinerary.type';
+
+/**
+ * Marina → sailing-area matcher for the "Suggested itineraries"
+ * integrations (boat detail, my-bookings, Trip PWA, admin offers mirror).
+ *
+ * We deliberately map by NAME KEYWORDS + country code, not by marina id:
+ * partner ids get renumbered (see region-ids gotcha) and both the
+ * reservation model and the admin offer cart only carry the marina NAME.
+ * Keyword tables were tuned against the full production marina list
+ * (760 active marinas, 21.7.2026): ~76% of the fleet resolves to an
+ * area; the rest (France, Seychelles, Thailand, northern Europe…) has
+ * no itinerary content yet, so callers must treat `null` as "hide the
+ * section", never as an error.
+ */
+
+const AREA_KEYWORDS: Record<string, [string, string[]][]> = {
+  HR: [
+    [
+      'sibenik',
+      [
+        'sibenik',
+        'mandalina',
+        'kremik',
+        'pirovac',
+        'rogoznica',
+        'frapa',
+        'skradin',
+        'primosten',
+        'vodice',
+        'jezera',
+        'murter',
+        'betina',
+        'tribunj',
+        'hramina',
+        'solaris',
+      ],
+    ],
+    [
+      'zadar',
+      [
+        'zadar',
+        'sukosan',
+        'dalmacija',
+        'biograd',
+        'kornati',
+        'pag ',
+        'preko',
+        'sangulin',
+        'kukljica',
+        'simuni',
+        'novalja',
+        'olive island',
+        'ugljan',
+        'pasman',
+        'sali',
+        'tankerkomerc',
+        'borik',
+      ],
+    ],
+    ['dubrovnik', ['dubrovnik', 'slano', 'komolac', 'cavtat', 'orebic', 'korcula', 'lumbarda', 'ploce', 'gruz']],
+    [
+      'istria',
+      [
+        'pula',
+        'pomer',
+        'veruda',
+        'rovinj',
+        'porec',
+        'vrsar',
+        'umag',
+        'novigrad',
+        'punat',
+        'krk',
+        'opatija',
+        'rijeka',
+        'icici',
+        'cres',
+        'losinj',
+        'rab',
+        'supetarska',
+        'kvarner',
+        'crikvenica',
+        'selce',
+        'njivice',
+        'malinska',
+        'polesana',
+        'medulin',
+        'liznjan',
+        'funtana',
+        'admiral',
+      ],
+    ],
+    [
+      'split',
+      [
+        'split',
+        'trogir',
+        'kastel',
+        'seget',
+        'baotic',
+        'agana',
+        'rogac',
+        'milna',
+        'supetar',
+        'bol',
+        'hvar',
+        'vrboska',
+        'jelsa',
+        'stari grad',
+        'makarska',
+        'baska voda',
+        'tucepi',
+        'omis',
+        'strozanac',
+        'podstrana',
+        'lav ',
+        'vranjic',
+        'solin',
+        'stobrec',
+        'vis ',
+        'komiza',
+        'vela luka',
+        'drvenik',
+        'sevid',
+        'vinisce',
+        'maslinica',
+      ],
+    ],
+  ],
+  GR: [
+    [
+      'ionian',
+      [
+        'lefkas',
+        'lefkada',
+        'corfu',
+        'gouvia',
+        'kerkyra',
+        'preveza',
+        'aktio',
+        'zakynthos',
+        'kefalonia',
+        'argostoli',
+        'sami',
+        'ithaki',
+        'ithaca',
+        'vounaki',
+        'palairos',
+        'nidri',
+        'nikiana',
+        'sivota',
+        'plataria',
+        'igoumenitsa',
+        'parga',
+        'paleros',
+        'vliho',
+        'benitses',
+      ],
+    ],
+    [
+      'sporades',
+      ['volos', 'skiathos', 'skopelos', 'alonissos', 'achilleio', 'nea anchialos', 'nies', 'milina', 'pteleos'],
+    ],
+    [
+      'dodecanese',
+      [
+        'kos',
+        'rhodes',
+        'rodos',
+        'samos',
+        'pythagorio',
+        'leros',
+        'lakki',
+        'kalymnos',
+        'symi',
+        'karpathos',
+        'patmos',
+        'astypalaia',
+      ],
+    ],
+    [
+      'cyclades',
+      [
+        'alimos',
+        'athens',
+        'athina',
+        'kalamaki',
+        'lavrio',
+        'lavrion',
+        'laurium',
+        'olympic',
+        'agios kosmas',
+        'flisvos',
+        'zea',
+        'piraeus',
+        'paros',
+        'naxos',
+        'mykonos',
+        'syros',
+        'santorini',
+        'tinos',
+        'andros',
+        'milos',
+        'sifnos',
+        'serifos',
+        'kythnos',
+        'kea',
+        'aegina',
+        'poros',
+        'hydra',
+        'spetses',
+        'ermioni',
+        'porto heli',
+        'porto cheli',
+        'nafplio',
+        'epidavros',
+        'methana',
+        'nea peramos',
+        'elefsina',
+        'sounio',
+        'vouliagmeni',
+        'glyfada',
+        'varkiza',
+        'anavyssos',
+        'salamina',
+        'salamis',
+        'chalkida',
+        'chalkis',
+        'evia',
+        'loutraki',
+        'korinthos',
+        'kilada',
+        'koilada',
+        'tolo',
+      ],
+    ],
+  ],
+  IT: [
+    [
+      'sicily',
+      [
+        'sicil',
+        'palermo',
+        'portorosa',
+        'orlando',
+        'lipari',
+        'milazzo',
+        'marsala',
+        'trapani',
+        'riposto',
+        'catania',
+        'siracusa',
+        'ragusa',
+        'licata',
+        'sciacca',
+        'balestrate',
+        'cefalu',
+        'aeolian',
+        'egadi',
+        'favignana',
+        'salina',
+        'vulcano',
+        'messina',
+        'giardini',
+      ],
+    ],
+    [
+      'sardinia',
+      [
+        'sardin',
+        'olbia',
+        'portisco',
+        'cannigione',
+        'cala dei sardi',
+        'carloforte',
+        'cagliari',
+        'alghero',
+        'palau',
+        'maddalena',
+        'santa teresa',
+        'villasimius',
+        'arbatax',
+        'oristano',
+        'castelsardo',
+        'porto cervo',
+        'porto rotondo',
+        'golfo aranci',
+        'budoni',
+        'san teodoro',
+        'stintino',
+        'bosa',
+        'teulada',
+        'portoscuso',
+      ],
+    ],
+    [
+      'amalfi',
+      [
+        'salerno',
+        'arechi',
+        'napoli',
+        'naples',
+        'procida',
+        'ischia',
+        'capri',
+        'sorrento',
+        'castellammare',
+        'stabia',
+        'amalfi',
+        'positano',
+        'pozzuoli',
+        'baia',
+        'nisida',
+        'acton',
+        'mergellina',
+        'agropoli',
+        'casamicciola',
+        'genova',
+        'genoa',
+        'lavagna',
+        'portofino',
+        'chiavari',
+        'rapallo',
+        'santa margherita',
+        'sestri',
+        'imperia',
+        'loano',
+        'varazze',
+        'savona',
+        'alassio',
+        'sanremo',
+        'san remo',
+        'la spezia',
+        'lerici',
+        'portovenere',
+        'viareggio',
+        'livorno',
+        'pisa',
+        'punta ala',
+        'argentario',
+        'porto ercole',
+        'santo stefano',
+        'elba',
+        'portoferraio',
+        'piombino',
+        'follonica',
+        'scarlino',
+        'castiglione',
+        'cala de',
+        'civitavecchia',
+        'ostia',
+        'roma',
+        'anzio',
+        'nettuno',
+        'gaeta',
+        'formia',
+        'terracina',
+        'san felice',
+        'ponza',
+        'tropea',
+        'vibo',
+        'gallipoli',
+        'otranto',
+        'brindisi',
+        'bari',
+        'monopoli',
+      ],
+    ],
+  ],
+  ES: [
+    ['ibiza', ['ibiza', 'eivissa', 'sant antoni', 'san antonio', 'formentera', 'santa eulalia', 'botafoch']],
+    [
+      'mallorca',
+      [
+        'mallorca',
+        'palma',
+        'la lonja',
+        'alcudia',
+        'pollensa',
+        'portocolom',
+        'porto colom',
+        'andratx',
+        'soller',
+        'porto cristo',
+        'porto petro',
+        'arenal',
+        'can pastilla',
+        'menorca',
+        'mahon',
+        'ciutadella',
+        'fornells',
+        'naviera',
+        'portals',
+        'magaluf',
+        'santa ponsa',
+        'bonaire',
+        'calanova',
+      ],
+    ],
+    [
+      'catalonia',
+      [
+        'barcelona',
+        'badalona',
+        'sitges',
+        'palamos',
+        'roses',
+        'estartit',
+        'empuriabrava',
+        'blanes',
+        'arenys',
+        'mataro',
+        'vilanova',
+        'tarragona',
+        'cambrils',
+        'ampolla',
+        'sant carles',
+        'garraf',
+        'ginesta',
+        'premia',
+        'castelldefels',
+        'denia',
+        'javea',
+        'xabia',
+        'calpe',
+        'altea',
+        'alicante',
+        'torrevieja',
+        'valencia',
+        'gandia',
+        'burriana',
+        'castellon',
+        'vinaros',
+        'peniscola',
+      ],
+    ],
+  ],
+  TR: [
+    [
+      'bodrum',
+      [
+        'bodrum',
+        'turgutreis',
+        'yalikavak',
+        'didim',
+        'turkbuku',
+        'gumusluk',
+        'milta',
+        'kusadasi',
+        'izmir',
+        'cesme',
+        'alacati',
+        'sigacik',
+        'teos',
+      ],
+    ],
+    [
+      'gocek',
+      [
+        'gocek',
+        'fethiye',
+        'ece ',
+        'skopea',
+        'marmaris',
+        'netsel',
+        'albatros',
+        'adakoy',
+        'orhaniye',
+        'selimiye',
+        'bozburun',
+        'datca',
+        'hisaronu',
+        'kas ',
+        'kalkan',
+        'finike',
+        'kemer',
+        'antalya',
+        'alanya',
+        'side',
+        'sarsala',
+      ],
+    ],
+  ],
+  VG: [
+    [
+      'bvi',
+      [
+        'tortola',
+        'nanny cay',
+        'road town',
+        'hodge',
+        'soper',
+        'virgin gorda',
+        'spanish town',
+        'jost',
+        'scrub island',
+        'trellis',
+        'beef island',
+      ],
+    ],
+  ],
+  BS: [
+    [
+      'bahamas',
+      [
+        'nassau',
+        'marsh harbour',
+        'abaco',
+        'palm cay',
+        'exuma',
+        'george town',
+        'bimini',
+        'freeport',
+        'hope town',
+        'treasure cay',
+        'harbour island',
+        'eleuthera',
+        'staniel',
+      ],
+    ],
+  ],
+  GD: [
+    [
+      'grenada',
+      [
+        'grenada',
+        'port louis',
+        'st george',
+        'saint george',
+        'prickly bay',
+        'clarkes court',
+        'phare bleu',
+        'secret harbour',
+        'carriacou',
+        'tyrrel',
+      ],
+    ],
+  ],
+  MQ: [
+    [
+      'martinique',
+      ['martinique', 'le marin', 'fort de france', 'fort-de-france', 'pointe du bout', 'case pilote', 'trois ilets'],
+    ],
+  ],
+  LC: [['martinique', ['rodney bay', 'castries', 'soufriere', 'vieux fort']]],
+};
+
+/** When no keyword hits, these countries are compact enough that the
+ *  busiest hub area is still an honest suggestion. */
+const COUNTRY_DEFAULT_AREA: Record<string, string> = {
+  HR: 'split',
+  GR: 'cyclades',
+  VG: 'bvi',
+  BS: 'bahamas',
+  GD: 'grenada',
+  MQ: 'martinique',
+};
+
+const normalize = (s: string) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+
+/**
+ * Resolve a marina to an itinerary area id, or null when we have no
+ * itinerary content for its waters. Dual-source feeds label some
+ * Caribbean marinas under umbrella country codes ("Martinique, Le
+ * Marin" filed under BQ), so when the country tables miss we retry
+ * every table by name alone before giving up.
+ */
+export const areaForMarina = (
+  marinaName: string | null | undefined,
+  countryCode: string | null | undefined
+): string | null => {
+  if (!marinaName) return null;
+
+  const name = ` ${normalize(marinaName)} `;
+  const cc = countryCode?.toUpperCase() ?? '';
+
+  const matchIn = (tables: [string, string[]][]): string | null =>
+    tables.find(([, keywords]) => keywords.some(k => name.includes(k)))?.[0] ?? null;
+
+  return (
+    matchIn(AREA_KEYWORDS[cc] ?? []) ??
+    Object.values(AREA_KEYWORDS).map(matchIn).find(Boolean) ??
+    COUNTRY_DEFAULT_AREA[cc] ??
+    null
+  );
+};
+
+/** Find an area (with its stamped i18n namespace) by id across all countries. */
+export const findItineraryArea = (areaId: string | null | undefined): Itinerary | null => {
+  if (!areaId) return null;
+
+  return itineraries.flatMap(group => group.itinerary).find(area => area.id === areaId) ?? null;
+};
+
+/**
+ * Routes to suggest for a charter of `nights` nights (undefined = no
+ * date context). Ranking, most important first:
+ *  1. routes that START at the yacht's own marina (Sukošan boats see
+ *     Sukošan departures before Biograd ones — Mario 21.7.2026),
+ *  2. duration fit — 12+ nights floats 14-day routes up, else 7-day,
+ *  3. original config order.
+ */
+export const suggestedRoutesForArea = (
+  areaId: string | null | undefined,
+  nights?: number,
+  marinaName?: string | null
+): ItineraryRoute[] => {
+  const area = findItineraryArea(areaId);
+
+  if (!area) return [];
+
+  const routes = [...area.routes];
+  const marina = marinaName ? normalize(marinaName) : null;
+  const wantLong = nights != null && nights >= 12;
+
+  const startScore = (route: ItineraryRoute): number => {
+    if (!marina || !route.startingPoint) return 0;
+
+    const start = normalize(route.startingPoint);
+
+    return marina.includes(start) || start.includes(marina) ? 1 : 0;
+  };
+
+  return routes.sort((a, b) => {
+    const byStart = startScore(b) - startScore(a);
+
+    if (byStart !== 0) return byStart;
+
+    if (nights == null) return 0;
+
+    const aLong = (a.numberOfDays ?? a.routeDays.length) >= 12 ? 1 : 0;
+    const bLong = (b.numberOfDays ?? b.routeDays.length) >= 12 ? 1 : 0;
+
+    return wantLong ? bLong - aLong : aLong - bLong;
+  });
+};

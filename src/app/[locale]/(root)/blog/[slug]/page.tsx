@@ -4,6 +4,7 @@ import dynamic from 'next/dynamic';
 import { notFound } from 'next/navigation';
 
 import Layout from '@/components/Layout';
+import RelatedItineraries from '@/components/RelatedItineraries';
 import { LocaleType } from '@/config/locales.config';
 import { getBlog, getBlogWithSEO } from '@/lib/api';
 import { buildMetadata, localizedUrl } from '@/utils/static/buildMetadata';
@@ -82,6 +83,11 @@ const SingleBlogPage = async ({ params }: { params: Promise<{ slug: string }> })
   return (
     <Layout>
       <SingleBlogContent {...blog.post} />
+      <RelatedItineraries
+        title={blog.post.title}
+        slug={blog.post.slug}
+        categories={blog.post.categories?.nodes?.map(c => `${c.slug} ${c.name}`)}
+      />
       <RelatedBlogSection posts={blog.posts} />
     </Layout>
   );

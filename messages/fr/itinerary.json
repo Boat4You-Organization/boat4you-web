@@ -1,0 +1,186 @@
+{
+  "meta": {
+    "title": "Itinéraires de location de bateaux — routes de navigation | Boat4You",
+    "description": "Itinéraires de croisière jour par jour en Croatie, Grèce, Italie, Espagne, Turquie et aux Caraïbes. Cartes interactives, distances de navigation et bateaux réservables depuis chaque marina de départ.",
+    "imageAlt": "Itinéraires de location de bateaux Boat4You — routes de navigation avec cartes jour par jour",
+    "collectionDescription": "Itinéraires de navigation Boat4You — exemples de routes de 7 jours en Croatie, Grèce, Italie, Espagne, Turquie et aux Caraïbes avec marinas de départ, mouillages et distances quotidiennes."
+  },
+  "breadcrumb": {
+    "home": "Accueil",
+    "itinerary": "Itinéraires",
+    "areaSuffix": "zone"
+  },
+  "listHero": {
+    "kicker": "Itinéraires",
+    "eyebrow": "Routes de navigation jour par jour",
+    "title": "Itinéraires de",
+    "italic": "navigation.",
+    "lede": "Des routes d'une semaine éprouvées en Croatie, Grèce, Italie, Espagne, Turquie et aux Caraïbes. Suivez la carte jour par jour, vérifiez les distances et choisissez un bateau dans la marina de départ — le tout réservable en ligne.",
+    "imageAlt": "Itinéraires de navigation — routes jour par jour"
+  },
+  "listCta": {
+    "title": "Une route vous a séduit ?",
+    "lede": "Chaque itinéraire démarre dans une marina pleine de bateaux réservables en ligne — choisissez votre semaine, comparez les prix en direct et réservez avec annulation gratuite.",
+    "action": "Trouvez votre bateau"
+  },
+  "areaHero": {
+    "kicker": "Itinéraire",
+    "eyebrow": "Routes de navigation · {country}",
+    "title": "Location de bateaux {area} —",
+    "italic": "itinéraires."
+  },
+  "areaCta": {
+    "title": "Une de ces routes vous plaît ?",
+    "lede": "Découvrez les bateaux disponibles depuis les marinas de cette zone pour vos dates — prix en direct, disponibilité réelle, réservation en ligne.",
+    "action": "Voir les bateaux depuis {start}",
+    "actionFallback": "Voir les bateaux disponibles",
+    "secondaryAction": "Voir tous les bateaux"
+  },
+  "routeHero": {
+    "kickerOneWay": "Route · {days, number} jours · aller simple",
+    "kickerRoundTrip": "Route · {days, number} jours · boucle",
+    "eyebrow": "Route de croisière · {area}",
+    "italicVia": "via {points}.",
+    "italicRoundTrip": "en boucle."
+  },
+  "routeCta": {
+    "title": "Naviguez cette route sur votre propre location",
+    "lede": "Vérifiez la disponibilité depuis la marina de départ, comparez les bateaux et réservez votre semaine en ligne — annulation gratuite incluse.",
+    "action": "Voir les bateaux depuis {start}",
+    "secondaryAction": "Voir tous les bateaux"
+  },
+  "pdfDownload": "Télécharger le PDF (gratuit)",
+  "tripLd": {
+    "name": "Route de croisière {area} de {days, number} jours — {route}",
+    "description": "Exemple d'itinéraire de croisière de {days, number} jours dans la zone {area}, {country}, au départ de {start}."
+  },
+  "hub": {
+    "eyebrow": "Zones de navigation",
+    "title": "Toutes les routes, par",
+    "titleItalic": "zone de navigation.",
+    "lede": "Choisissez le plan d'eau qui correspond à votre semaine — chaque carte ouvre toutes les routes depuis cette base, jour par jour. Suivez-les telles quelles ou comme point de départ ; les escales s'adaptent à la météo et à votre équipage.",
+    "tellUsLink": "Trouvez votre bateau →",
+    "countryHeadingItalic": "itinéraires.",
+    "areaSingular": "zone",
+    "areaPlural": "zones",
+    "routeSingular": "route",
+    "routePlural": "routes",
+    "sailingAreaCardTitle": "Zone de navigation {area}",
+    "exploreRoutes": "Explorer les routes {area}",
+    "daysExact": "{days, number} jours",
+    "daysRange": "{min, number}–{max, number} jours"
+  },
+  "area": {
+    "routeCountSingular": "route",
+    "routeCountPlural": "routes",
+    "routesFrom": "depuis {start}",
+    "pickTitle": "Choisissez votre",
+    "pickTitleItalic": "semaine depuis {area}.",
+    "areaSubtitle": "{country} · zone de navigation {area}",
+    "tailorLink": "Trouvez votre bateau →",
+    "allStartingPoints": "Tous les points de départ",
+    "pickStartingPoint": "Choisissez un point de départ",
+    "roundTrip": "{start} en boucle",
+    "dayBadgeOneWay": "{days, number} jours · aller simple",
+    "dayBadgeLoop": "{days, number} jours · boucle",
+    "routeCardKicker": "Route {index} · Départ {start}",
+    "seeDayByDay": "Voir jour par jour",
+    "aboutEyebrow": "À propos de {area}",
+    "aboutHeading": "{area},",
+    "aboutHeadingItalic": "racontée par un marin."
+  },
+  "detail": {
+    "eyebrow": "La route",
+    "heading": "La route jour par jour",
+    "intro": "Cliquez sur un repère de la carte ou sur un jour du résumé ci-dessous pour voir l'escale, le récit et les photos de la journée."
+  },
+  "panel": {
+    "dayLabel": "Jour {number, number}",
+    "distanceLabel": "Distance",
+    "distanceValue": "{nm, number} MN",
+    "sailingLabel": "Navigation",
+    "sailingValue": "~{hours, number} h à 5 nd"
+  },
+  "journey": {
+    "eyebrow": "L'histoire complète",
+    "heading": "Le voyage jour par jour",
+    "intro": "Mouillages nommés, conseils d'amarrage et activités pour chaque étape de la semaine — la carte vous suit au fil du défilement.",
+    "dayLabel": "Jour {number, number}",
+    "thingsToDo": "À faire",
+    "mooringTip": "Conseil d'amarrage"
+  },
+  "extras": {
+    "atAGlanceKicker": "En un coup d'œil",
+    "atAGlanceHeading": "La route en un coup d'œil",
+    "bestSeasonLabel": "Meilleure saison",
+    "bestSeasonFallback": "mai – octobre",
+    "durationLabel": "Durée",
+    "durationValue": "{days, number} jours",
+    "departureLabel": "Départ",
+    "sailingAreaLabel": "Zone de navigation",
+    "summaryHeading": "Résumé de la route",
+    "summaryHint": "Cliquez sur un jour pour revenir à la carte et voir ses photos, son récit et son conseil d'amarrage.",
+    "dayLabel": "Jour {number, number}",
+    "planHeading": "Planifier cette route",
+    "browseYachtsTitle": "Voir les bateaux depuis {start}",
+    "browseYachtsSubtitle": "Disponibilité et prix en direct, réservation en ligne",
+    "allRoutesTitle": "Toutes les routes {area}",
+    "allRoutesSubtitle": "Comparer les autres variantes",
+    "searchAllTitle": "Parcourir toute la flotte",
+    "searchAllSubtitle": "Toutes les destinations, dates et types de bateaux",
+    "bestMonths": {
+      "split": "mai – début octobre (haute saison juin – sept)",
+      "dubrovnik": "mai – mi-octobre (haute saison juin – sept)",
+      "sibenik": "mai – début octobre (haute saison juin – sept)",
+      "istria": "juin – mi-septembre (haute saison juil – août)",
+      "zadar": "mai – début octobre (haute saison juin – sept)",
+      "cyclades": "mai – mi-octobre (haute saison juin – sept, meltem juil – août)",
+      "ionian": "mai – mi-octobre (haute saison juin – sept, vents plus calmes)",
+      "sporades": "mai – début octobre (haute saison juin – sept)",
+      "dodecanese": "mai – mi-octobre (haute saison juin – sept)",
+      "bodrum": "mai – mi-octobre (haute saison juin – sept)",
+      "gocek": "avril – novembre (haute saison mai – oct)",
+      "catalonia": "mai – mi-octobre (haute saison juin – sept)",
+      "ibiza": "mai – mi-octobre (haute saison juin – sept)",
+      "mallorca": "avril – mi-octobre (haute saison mai – sept)",
+      "amalfi": "mai – mi-octobre (haute saison juin – sept)",
+      "sardinia": "mai – mi-octobre (haute saison juin – sept)",
+      "sicily": "avril – mi-octobre (haute saison mai – sept)",
+      "bahamas": "décembre – avril (haute saison janv – mars)",
+      "bvi": "novembre – mai (haute saison déc – avril)",
+      "grenada": "décembre – mai (sous la ceinture des ouragans)",
+      "martinique": "décembre – mai (haute saison janv – avril)"
+    }
+  },
+  "suggested": {
+    "heading": "Itinéraires suggérés pour votre marina",
+    "viewAll": "Voir tous les itinéraires {area}",
+    "blogHeading": "À vous de naviguer — itinéraires suggérés"
+  },
+  "indexSeo": {
+    "h2Choose": "Comment choisir votre route de croisière",
+    "introPara1": "Boat4You couvre six terrains de jeu — <strong>la Croatie, la Grèce, l'Italie, l'Espagne, la Turquie et les Caraïbes</strong> — et chacun se navigue différemment : autres vents, autres distances, autres niveaux de prix. Une semaine de location standard va de marina en marina, du samedi au samedi, et les routes types de cette page sont construites exactement sur ce rythme.",
+    "introPara2": "Chaque route est aussi réservable en pratique : <strong>chaque base de départ dispose d'une flotte en direct sur Boat4You</strong> — dès qu'une route vous convient, vous passez de l'itinéraire aux bateaux réellement disponibles dans cette marina pour vos dates.",
+    "readFullGuide": "Lire le guide complet des routes",
+    "showLess": "Afficher moins",
+    "h3Croatia": "Croatie — Split, Dubrovnik, Šibenik, Istrie et Zadar",
+    "croatiaBody": "Étapes courtes, chenaux abrités et plus d'un millier d'îles font de la Croatie l'endroit le plus simple d'Europe pour une première semaine en bareboat. Les bases les plus actives entourent <strong>Split et Trogir</strong> ; Dubrovnik, Šibenik et Zadar couvrent le sud et le nord. Comptez des étapes de 10 à 25 MN, un village insulaire chaque soir et deux parcs nationaux — Kornati et Mljet — à portée d'une semaine. <croatiaLink>Voir les bateaux en Croatie</croatiaLink>.",
+    "h3Greece": "Grèce — Cyclades, mer Ionienne, Sporades et Dodécanèse",
+    "greeceBody": "La Grèce se décline en quatre ambiances : la douce <strong>mer Ionienne</strong> pour des semaines familiales détendues, les <strong>Cyclades</strong> venteuses et photogéniques pour équipages aguerris, les <strong>Sporades</strong> vertes et tranquilles, et le <strong>Dodécanèse</strong> qui longe la côte turque. Les distances restent modestes et les tavernes remplacent souvent les marinas le soir. <greeceLink>Voir les bateaux en Grèce</greeceLink>.",
+    "h3Italy": "Italie — côte amalfitaine, Sardaigne et Sicile",
+    "italyBody": "L'Italie, c'est la croisière des sens — la <strong>côte amalfitaine</strong> et Capri depuis Naples, criques de granit et eau cristalline sur la <strong>Costa Smeralda sarde</strong>, volcans et cabotage éolien depuis la <strong>Sicile</strong>. Les étapes sont courtes ; la table est le second itinéraire. <italyLink>Voir les bateaux en Italie</italyLink>.",
+    "h3Spain": "Espagne — Baléares et Catalogne",
+    "spainBody": "Les <strong>Baléares</strong> — Majorque, Ibiza, Minorque, Formentera — concentrent mouillages sous falaises et beach clubs en courtes étapes quotidiennes, tandis que <strong>Barcelone et la Costa Brava</strong> conviennent aux équipages qui veulent une arrivée citadine et une croisière côtière. <spainLink>Voir les bateaux en Espagne</spainLink>.",
+    "h3Turkey": "Turquie — Bodrum et Göcek",
+    "turkeyBody": "La côte turquoise offre la plus longue saison de Méditerranée — d'avril à novembre — depuis <strong>Bodrum</strong> pour le golfe de Gökova ou depuis <strong>Göcek</strong> pour Fethiye, Kaş et les ruines englouties de Kekova, avec en prime la plus grande flotte de goélettes avec équipage. <turkeyLink>Voir les bateaux en Turquie</turkeyLink>.",
+    "h3Caribbean": "Caraïbes — BVI, Bahamas, Grenade et Martinique",
+    "caribbeanBody": "La croisière d'hiver à son meilleur : alizés réguliers, étapes à vue dans les <strong>BVI</strong>, bancs turquoise peu profonds aux <strong>Bahamas</strong>, et les <strong>Grenadines et la Martinique</strong>, plus vertes et plus calmes, au sud. La saison culmine de décembre à avril — exactement quand la Méditerranée dort. <caribbeanLink>Parcourir les itinéraires des Caraïbes</caribbeanLink>.",
+    "h2Quick": "Guide de décision rapide",
+    "quickFirstTime": "<strong>Premier bareboat ou jeunes enfants à bord ?</strong> La Croatie depuis Split ou la mer Ionienne grecque — étapes courtes et abritées, vents cléments.",
+    "quickPhotogenic": "<strong>En quête de carte postale ?</strong> Les Cyclades pour les villages blancs sur bleu profond, la Sardaigne pour des criques dignes des Caraïbes — ou les vraies Caraïbes depuis Tortola.",
+    "quickTwoWeeks": "<strong>Deux semaines devant vous ?</strong> Combinez l'aller simple Split → Dubrovnik, descendez d'Athènes au cœur des Cyclades, ou enchaînez Bodrum et Göcek le long de la côte turquoise.",
+    "quickFood": "<strong>Naviguer pour la table ?</strong> La côte amalfitaine depuis Naples, ou Majorque et Minorque — étapes courtes, longs dîners.",
+    "quickCrewed": "<strong>Équipage inclus ?</strong> Les goélettes turques viennent avec capitaine et cuisinier ; de plus grands yachts avec équipage naviguent en Croatie, en Grèce et aux Caraïbes.",
+    "stillUnsure": "Encore hésitant ? <searchLink>Ouvrez la recherche de bateaux</searchLink> — filtrez par pays, dates et type de bateau, et la bonne route se révèle souvent d'elle-même."
+  }
+}

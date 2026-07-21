@@ -162,6 +162,9 @@ export interface YachtAvailability {
 }
 
 export type Location = {
+  /** Destination id with type prefix ("l-2026" marina, "r-…" region) —
+   *  present on the yacht-detail payload, usable as a search `did`. */
+  id?: string;
   name: string;
   countryCode: string;
 };
