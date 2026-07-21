@@ -1,6 +1,6 @@
 import { Itinerary } from '@/types/itinerary.type';
 
-import { skiathosRoute, volosSkopelosRoute } from './routes';
+import { skiathosRoute, sporadesGrandTour14Route, volosSkopelosRoute } from './routes';
 
 const skiathosItinerary: Itinerary = {
   metaTitle: 'Sporades Yacht Charter Itineraries | Greece Sailing Routes',
@@ -28,7 +28,7 @@ Vessel mix runs catamarans (Lagoon 40-46, Bali 4.2) for families and crews wanti
 Best season May–early July and September. May has the lightest wind and smallest crowds (water 19–21 °C, swimmable but cool). September brings the warmest swim (23–24 °C) with the meltemi already retreating. July is hot and crowded around Skiathos town nightlife (and the Mamma Mia! day-trip traffic on Skopelos), August is full-rate with Skiathos airport gridlocked Saturday — avoid if possible.
 
 Pine-forested island slopes, traditional fishing-village ports (Skopelos town and Alonissos's Patitiri stand out), and shallow turquoise anchorages around Tsougria suit families with kids, first-Med crews, and nature-and-culture-focused charters wanting an alternative to the meltemi pressure of the Cyclades. Skiathos itself has 60+ beaches catalogued by the tourism board — Koukounaries, Lalaria (accessible only by boat from the north coast), Mandraki and Banana Bay are the standout swim stops.`,
-  routes: [skiathosRoute, volosSkopelosRoute],
+  routes: [skiathosRoute, volosSkopelosRoute, sporadesGrandTour14Route],
 };
 
 export default skiathosItinerary;

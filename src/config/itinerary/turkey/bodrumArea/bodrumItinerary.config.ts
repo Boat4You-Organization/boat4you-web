@@ -1,6 +1,6 @@
 import { Itinerary } from '@/types/itinerary.type';
 
-import { bodrumAkyakaRoute, bodrumDidimRoute, bodrumRoute } from './routes';
+import { bodrumAkyakaRoute, bodrumDidimRoute, bodrumRoute, gokovaGulf14Route } from './routes';
 
 const bodrumItinerary: Itinerary = {
   metaTitle: 'Bodrum Yacht Charter Itineraries | Aegean Blue Cruise from Bodrum',
@@ -30,7 +30,7 @@ Cross-border one-ways are popular: Bodrum → Kos (one-day delivery to the Greek
 The Turkish season runs longest of all Mediterranean grounds — April through early November — with August Bodrum heat (35–38 °C onshore) being the only real downside. May, June, September and October are the broker's preferred windows: water 22–25 °C, light afternoon meltemi 3–4 Bft, the marinas reachable without pre-booking. Turkish cuisine at Çökertme, Karacasöğüt and Kapı Creek meyhanes is a charter draw of its own — meze plates, raki, fresh-caught fish grilled simply, prices roughly half of comparable Greek tavernas.
 
 Permits and paperwork: Turkish charter agencies handle the transit log, marina fees, fishing-licence-where-needed, and the Turkish VAT-equivalent (KDV) on the charter base price (already in the broker quote). National Park entry fees apply to Saklıkent Gorge inland excursions if the crew wants the shore tour, but Gökova is a Special Environmental Protection Area, not a fee-charged National Park.`,
-  routes: [bodrumRoute, bodrumAkyakaRoute, bodrumDidimRoute],
+  routes: [bodrumRoute, bodrumAkyakaRoute, bodrumDidimRoute, gokovaGulf14Route],
 };
 
 export default bodrumItinerary;

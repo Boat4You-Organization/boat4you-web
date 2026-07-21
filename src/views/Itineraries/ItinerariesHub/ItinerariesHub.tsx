@@ -12,6 +12,7 @@ import colors from '@/styles/themes/colors';
 import { Itinerary } from '@/types/itinerary.type';
 import { staticSrcSet } from '@/utils/static/staticImageSrcSet';
 import ItineraryHubSeoSection from '@/views/Itineraries/ItineraryHubSeoSection';
+import type { CountrySearchHrefs } from '@/views/Itineraries/ItineraryHubSeoSection/ItineraryHubSeoSection';
 
 /**
  * `/itineraries` hub — port of EY's CCItinerary restyled with MUI (B4Y
@@ -164,7 +165,7 @@ const HubAreaCard: FC<{
   );
 };
 
-const ItinerariesHub: FC = () => {
+const ItinerariesHub: FC<{ countrySearchHrefs?: CountrySearchHrefs }> = ({ countrySearchHrefs }) => {
   const t = useTranslations('itinerary');
 
   return (
@@ -271,7 +272,7 @@ const ItinerariesHub: FC = () => {
         </Stack>
       </Container>
       <Box sx={{ borderTop: `1px solid ${colors.black200}` }}>
-        <ItineraryHubSeoSection />
+        <ItineraryHubSeoSection countrySearchHrefs={countrySearchHrefs} />
       </Box>
     </>
   );

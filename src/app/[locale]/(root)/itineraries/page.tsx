@@ -8,6 +8,7 @@ import { itineraries } from '@/config/itineraries.config';
 import { LocaleType } from '@/config/locales.config';
 import { buildBreadcrumbJsonLd, buildItineraryCollectionJsonLd } from '@/utils/static/buildItineraryJsonLd';
 import { buildMetadata } from '@/utils/static/buildMetadata';
+import { resolveBoatsSearchHref } from '@/utils/static/itinerarySearchHref';
 import { serializeJsonLd } from '@/utils/static/serializeJsonLd';
 import ItinerariesHub from '@/views/Itineraries/ItinerariesHub';
 import ItineraryEndCta from '@/views/Itineraries/ItineraryEndCta';
@@ -40,6 +41,17 @@ const ItinerariesPage = async ({ params }: ItinerariesPageParams) => {
   setRequestLocale(locale);
 
   const t = await getTranslations('itinerary');
+  // did-carrying country links for the SEO guide (bare ?destinations= does not filter).
+  const [croatiaHref, greeceHref, italyHref, spainHref, turkeyHref] = await Promise.all(
+    ['Croatia', 'Greece', 'Italy', 'Spain', 'Turkey'].map(resolveBoatsSearchHref)
+  );
+  const countrySearchHrefs = {
+    croatia: croatiaHref,
+    greece: greeceHref,
+    italy: italyHref,
+    spain: spainHref,
+    turkey: turkeyHref,
+  };
 
   // Flatten country-grouped itineraries → ListItems for the
   // CollectionPage schema. Each carries `id` and `sailingArea` + parent
@@ -73,7 +85,7 @@ const ItinerariesPage = async ({ params }: ItinerariesPageParams) => {
         lede={t('listHero.lede')}
         image={{ src: '/images/itinerary/banner.webp', alt: t('listHero.imageAlt') }}
       />
-      <ItinerariesHub />
+      <ItinerariesHub countrySearchHrefs={countrySearchHrefs} />
       <ItineraryEndCta title={t('listCta.title')} lede={t('listCta.lede')} action={t('listCta.action')} to="/search" />
     </Layout>
   );

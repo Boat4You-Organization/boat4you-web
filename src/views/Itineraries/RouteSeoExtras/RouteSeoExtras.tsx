@@ -18,6 +18,8 @@ interface RouteSeoExtrasProps {
    * not provided (server-only renders, no parent state).
    */
   onDaySelect?: (id: string) => void;
+  /** did-carrying /search link for the starting point (server-resolved). */
+  boatsSearchHref?: string;
 }
 
 const StatPill = ({ kicker, value }: { kicker: string; value: string }) => (
@@ -47,7 +49,7 @@ const StatPill = ({ kicker, value }: { kicker: string; value: string }) => (
  * B4Y's /search?destinations={startingPoint} hand-off (B4Y region ids
  * differ — dids are NOT carried over) + itinerary cross-links.
  */
-const RouteSeoExtras = ({ route, sailingArea, itinerarySlug, onDaySelect }: RouteSeoExtrasProps) => {
+const RouteSeoExtras = ({ route, sailingArea, itinerarySlug, onDaySelect, boatsSearchHref }: RouteSeoExtrasProps) => {
   const t = useTranslations('itinerary');
   const days = route.routeDays ?? [];
   const numberOfDays = route.numberOfDays ?? days.length ?? 7;
@@ -62,7 +64,7 @@ const RouteSeoExtras = ({ route, sailingArea, itinerarySlug, onDaySelect }: Rout
 
   const planCards: Array<{ href: string; title: string; subtitle: string }> = [
     {
-      href: `/search?destinations=${encodeURIComponent(route.startingPoint)}`,
+      href: boatsSearchHref ?? `/search?destinations=${encodeURIComponent(route.startingPoint)}`,
       title: t('extras.browseYachtsTitle', { start: route.startingPoint }),
       subtitle: t('extras.browseYachtsSubtitle'),
     },

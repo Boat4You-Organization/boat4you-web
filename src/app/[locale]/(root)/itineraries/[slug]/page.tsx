@@ -10,6 +10,7 @@ import { LocaleType } from '@/config/locales.config';
 import { itineraryNamespace, resolveAreaText } from '@/helper/itineraryI18n';
 import { buildBreadcrumbJsonLd, buildTouristTripJsonLd } from '@/utils/static/buildItineraryJsonLd';
 import { buildMetadata } from '@/utils/static/buildMetadata';
+import { resolveBoatsSearchHref } from '@/utils/static/itinerarySearchHref';
 import { serializeJsonLd } from '@/utils/static/serializeJsonLd';
 import ItineraryArea from '@/views/Itineraries/ItineraryArea';
 import ItineraryEndCta from '@/views/Itineraries/ItineraryEndCta';
@@ -120,7 +121,7 @@ const ItineraryAreaPage = async ({ params }: ItineraryAreaPageParams) => {
         title={t('areaCta.title')}
         lede={t('areaCta.lede')}
         action={primaryStart ? t('areaCta.action', { start: primaryStart }) : t('areaCta.actionFallback')}
-        to={primaryStart ? `/search?destinations=${encodeURIComponent(primaryStart)}` : '/search'}
+        to={primaryStart ? await resolveBoatsSearchHref(primaryStart) : '/search'}
         secondaryAction={t('areaCta.secondaryAction')}
         secondaryTo="/search"
       />

@@ -1,6 +1,13 @@
 import { Itinerary } from '@/types/itinerary.type';
 
-import { genovaRoute, lavagnaRoute, salernoRoute, salernoSouthRoute, sorentoRoute } from './routes';
+import {
+  amalfiCilento14Route,
+  genovaRoute,
+  lavagnaRoute,
+  salernoRoute,
+  salernoSouthRoute,
+  sorentoRoute,
+} from './routes';
 
 const amalfiItinerary: Itinerary = {
   metaTitle: 'Amalfi Coast Yacht Charter Itineraries | Italy Sailing Routes',
@@ -30,7 +37,7 @@ Vessel mix here leans heavily on motor yachts and crewed luxury yachts (40–80 
 Best season May–early July and September. August is high-glamour but high-cost (mooring fees triple at Capri's Marina Grande — €150+ for a 45 ft yacht in peak August, €250+ at Marina Piccola anchorage), and the Sorrento traffic ashore peaks (the SS163 cliffside coastal road becomes single-lane-with-30-minute-waits in August). June and September are the sweet spot for value, weather and food — water 23–25 °C, the Capri tour-boat density still manageable, and the Praiano and Cetara trattorie holding evening tables instead of turning crews away.
 
 Permits and paperwork: no special National Park permits for the Amalfi side (the Punta Campanella Marine Protected Area on the Sorrento peninsula's tip does have anchoring restrictions in marked zones — the broker pre-checks). Tourist-tax line items appear on the marina overnight invoice (€2–5/person/night, varies by port). Standard Italian charter VAT and APA reconciliation handled per Italian charter regulations.`,
-  routes: [genovaRoute, lavagnaRoute, salernoRoute, salernoSouthRoute, sorentoRoute],
+  routes: [genovaRoute, lavagnaRoute, salernoRoute, salernoSouthRoute, sorentoRoute, amalfiCilento14Route],
 };
 
 export default amalfiItinerary;

@@ -25,9 +25,12 @@ interface Props {
   itinerarySlug: string;
   /** Country label from the itineraries config group — feeds the PDF cover. */
   country: string;
+  /** did-carrying /search link for the starting point (resolved server-side —
+   *  a bare ?destinations= does not filter the listing). */
+  boatsSearchHref: string;
 }
 
-const RouteDetailContent = ({ route, sailingArea, itinerarySlug, country }: Props) => {
+const RouteDetailContent = ({ route, sailingArea, itinerarySlug, country, boatsSearchHref }: Props) => {
   const [activeDayId, setActiveDayId] = useState<string>(route.routeDays[0]?.id ?? '');
   const mapAnchorRef = useRef<HTMLDivElement | null>(null);
 
@@ -58,6 +61,7 @@ const RouteDetailContent = ({ route, sailingArea, itinerarySlug, country }: Prop
         route={route}
         sailingArea={sailingArea}
         itinerarySlug={itinerarySlug}
+        boatsSearchHref={boatsSearchHref}
         onDaySelect={handleDaySelectFromSummary}
       />
       <RouteDayDetailedJourney route={route} />

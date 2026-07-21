@@ -29,6 +29,9 @@ export default getRequestConfig(async ({ requestLocale }) => {
     itinerarySpain: (await import(`../../messages/${locale}/itinerarySpain.json`)).default,
     itineraryTurkey: (await import(`../../messages/${locale}/itineraryTurkey.json`)).default,
     itineraryCaribbean: (await import(`../../messages/${locale}/itineraryCaribbean.json`)).default,
+    itineraryFrance: (await import(`../../messages/${locale}/itineraryFrance.json`)).default,
+    itineraryMontenegro: (await import(`../../messages/${locale}/itineraryMontenegro.json`)).default,
+    itinerarySeychelles: (await import(`../../messages/${locale}/itinerarySeychelles.json`)).default,
   } as const;
 
   return {

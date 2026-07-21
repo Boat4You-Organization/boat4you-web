@@ -22,6 +22,9 @@ const withNextIntl = createNextIntlPlugin({
       './messages/en/itinerarySpain.json',
       './messages/en/itineraryTurkey.json',
       './messages/en/itineraryCaribbean.json',
+      './messages/en/itineraryFrance.json',
+      './messages/en/itineraryMontenegro.json',
+      './messages/en/itinerarySeychelles.json',
     ],
   },
 });

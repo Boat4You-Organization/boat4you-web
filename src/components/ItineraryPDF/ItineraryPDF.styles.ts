@@ -3,8 +3,9 @@ import { StyleSheet } from '@react-pdf/renderer';
 /**
  * A4 @72dpi = 595×842pt. Same visual language as YachtPDF.styles —
  * palette mirrors the site theme (colors.ts blues): navy #141857,
- * accent #2856ff, light #eef3ff, ink #292929. Built-in Helvetica
- * family (regular/bold), no font registration.
+ * accent #2856ff, light #eef3ff, ink #292929. Uses the site's Inter
+ * TTFs (registered in useItineraryPdfDownload) — the built-in Helvetica
+ * lacks Croatian/Turkish diacritics (č ž š ğ) and drops them silently.
  */
 const NAVY = '#141857';
 const ACCENT = '#2856ff';
@@ -16,7 +17,7 @@ const SKY = '#8eb2ff';
 const SKY_LIGHT = '#bcd0ff';
 
 export const styles = StyleSheet.create({
-  page: { fontFamily: 'Helvetica', color: INK, backgroundColor: '#ffffff' },
+  page: { fontFamily: 'Inter', color: INK, backgroundColor: '#ffffff' },
 
   /* header — light band with the full-colour logo (same as YachtPDF) */
   topBar: {
@@ -31,7 +32,17 @@ export const styles = StyleSheet.create({
     marginBottom: 20,
   },
   logo: { height: 26, width: 102, objectFit: 'contain' },
-  topSite: { fontSize: 9, letterSpacing: 1.6, color: MUTED, fontFamily: 'Helvetica-Bold' },
+  topSite: { fontSize: 9, letterSpacing: 1.6, color: MUTED, fontFamily: 'Inter', fontWeight: 600 },
+  topRoute: {
+    fontSize: 8,
+    letterSpacing: 1.1,
+    color: MUTED,
+    fontFamily: 'Inter',
+    fontWeight: 600,
+    flexShrink: 1,
+    marginLeft: 16,
+    textAlign: 'right',
+  },
 
   /* cover hero — route card image with a navy caption band */
   hero: { marginHorizontal: 37, borderRadius: 14, overflow: 'hidden', height: 215, position: 'relative' },
@@ -47,7 +58,7 @@ export const styles = StyleSheet.create({
   },
   heroKicker: { fontSize: 8, letterSpacing: 2.2, color: SKY_LIGHT, marginBottom: 4 },
   heroNameLink: { textDecoration: 'none' },
-  heroName: { fontSize: 19, fontFamily: 'Helvetica-Bold', color: '#ffffff' },
+  heroName: { fontSize: 19, fontFamily: 'Inter', fontWeight: 600, color: '#ffffff' },
   heroSub: { fontSize: 10, color: LINE, marginTop: 3 },
 
   /* cover body — static map on the left, day summary on the right */
@@ -62,7 +73,7 @@ export const styles = StyleSheet.create({
   },
   mapImage: { width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'center' },
   summaryColumn: { flex: 1 },
-  sectionTitle: { fontSize: 9.5, letterSpacing: 2, color: NAVY, fontFamily: 'Helvetica-Bold', marginBottom: 8 },
+  sectionTitle: { fontSize: 9.5, letterSpacing: 2, color: NAVY, fontFamily: 'Inter', fontWeight: 600, marginBottom: 8 },
   summaryRow: {
     flexDirection: 'row',
     alignItems: 'flex-start',
@@ -71,8 +82,8 @@ export const styles = StyleSheet.create({
     borderBottomWidth: 0.7,
     borderBottomColor: '#e7e9f4',
   },
-  summaryDay: { fontSize: 7.6, color: MUTED, fontFamily: 'Helvetica-Bold', width: 34, marginTop: 0.6 },
-  summaryLeg: { fontSize: 8.6, color: NAVY, fontFamily: 'Helvetica-Bold', flex: 1 },
+  summaryDay: { fontSize: 7.6, color: MUTED, fontFamily: 'Inter', fontWeight: 600, width: 34, marginTop: 0.6 },
+  summaryLeg: { fontSize: 8.6, color: NAVY, fontFamily: 'Inter', fontWeight: 600, flex: 1 },
 
   /* totals box under the day summary */
   totalsBox: {
@@ -85,7 +96,7 @@ export const styles = StyleSheet.create({
     gap: 22,
   },
   totalCell: {},
-  totalValue: { fontSize: 13.5, color: NAVY, fontFamily: 'Helvetica-Bold' },
+  totalValue: { fontSize: 13.5, color: NAVY, fontFamily: 'Inter', fontWeight: 600 },
   totalUnit: { fontSize: 8.5 },
   totalLabel: { fontSize: 6.8, letterSpacing: 0.8, color: MUTED, marginTop: 2.5 },
 
@@ -105,7 +116,7 @@ export const styles = StyleSheet.create({
   qr: { width: 62, height: 62, borderRadius: 6, backgroundColor: '#ffffff', padding: 4 },
   footTextWrap: { flexShrink: 1 },
   footTitleLink: { textDecoration: 'none' },
-  footTitle: { fontSize: 11.5, fontFamily: 'Helvetica-Bold', color: '#ffffff' },
+  footTitle: { fontSize: 11.5, fontFamily: 'Inter', fontWeight: 600, color: '#ffffff' },
   footSub: { fontSize: 8.6, color: SKY_LIGHT, marginTop: 4, lineHeight: 1.45 },
   footRight: { marginLeft: 'auto', alignItems: 'flex-end' },
   footLogo: { height: 20, width: 79, objectFit: 'contain', marginBottom: 5 },
@@ -132,12 +143,12 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  dayBubbleText: { fontSize: 9.5, fontFamily: 'Helvetica-Bold', color: '#ffffff' },
-  dayHeading: { fontSize: 12.5, fontFamily: 'Helvetica-Bold', color: NAVY, flexShrink: 1 },
-  dayStats: { marginLeft: 'auto', fontSize: 8.4, color: MUTED, fontFamily: 'Helvetica-Bold' },
+  dayBubbleText: { fontSize: 9.5, fontFamily: 'Inter', fontWeight: 600, color: '#ffffff' },
+  dayHeading: { fontSize: 12.5, fontFamily: 'Inter', fontWeight: 600, color: NAVY, flexShrink: 1 },
+  dayStats: { marginLeft: 'auto', fontSize: 8.4, color: MUTED, fontFamily: 'Inter', fontWeight: 600 },
   dayDescription: { fontSize: 9.2, lineHeight: 1.55, color: INK },
 
-  thingsTitle: { fontSize: 7.6, letterSpacing: 1.6, color: MUTED, fontFamily: 'Helvetica-Bold', marginTop: 9 },
+  thingsTitle: { fontSize: 7.6, letterSpacing: 1.6, color: MUTED, fontFamily: 'Inter', fontWeight: 600, marginTop: 9 },
   thingsList: { marginTop: 4.5 },
   thingsRow: { flexDirection: 'row', gap: 5, marginBottom: 2.5 },
   thingsBullet: { fontSize: 8.8, color: ACCENT },
@@ -152,7 +163,7 @@ export const styles = StyleSheet.create({
     paddingVertical: 8,
     paddingHorizontal: 11,
   },
-  mooringTitle: { fontSize: 7.6, letterSpacing: 1.6, color: NAVY, fontFamily: 'Helvetica-Bold' },
+  mooringTitle: { fontSize: 7.6, letterSpacing: 1.6, color: NAVY, fontFamily: 'Inter', fontWeight: 600 },
   mooringText: { fontSize: 8.8, lineHeight: 1.45, color: INK, marginTop: 3 },
 
   /* fixed footer on day pages — logo + site + page numbers */
@@ -169,6 +180,6 @@ export const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   pageFooterLogo: { height: 14, width: 55, objectFit: 'contain' },
-  pageFooterSite: { fontSize: 8, color: MUTED, fontFamily: 'Helvetica-Bold', letterSpacing: 1 },
+  pageFooterSite: { fontSize: 8, color: MUTED, fontFamily: 'Inter', fontWeight: 600, letterSpacing: 1 },
   pageFooterPage: { fontSize: 8, color: MUTED },
 });

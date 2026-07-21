@@ -1,5 +1,6 @@
 import { Itinerary } from '@/types/itinerary.type';
 
+import ibizaFormentera14Route from './routes/ibizaFormentera14Route.config';
 import ibizaRoute from './routes/ibizaRoute.config';
 
 const ibizaItinerary: Itinerary = {
@@ -30,7 +31,7 @@ Es Vedrà — the 380 m limestone needle 2 NM off Ibiza's south-west coast — i
 Best season is May–early July and September. July is hot and the marinas fill; August is full-rate everywhere — Marina Ibiza peak nightly fees hit €150–250 for a 45 ft yacht, the beach-club sun-bed minimum spend runs €100+, and Espalmador buoys are gone two weeks before you ask. September drops the same yacht to €80–120/night, water stays 23–24 °C, and the queue at Es Vedrà thins to a handful. May has the lightest wind and the smallest crowds but cooler water (19–21 °C) — best for couples and families more interested in the cruising than the swim.
 
 Weather pattern: prevailing south-westerly afternoon breeze 3–5 Bft (10–18 kt), light morning calm, occasional Tramuntana from the north when a Pyrenean front pushes through — pins the fleet in for 24 hours typically. Autumn storms can be sudden from mid-October; charter season effectively closes November–April. VHF Ch 16 monitored 24/7 by Salvamento Marítimo (Tarragona MRCC); the broker's emergency cycle wakes a duty captain in Palma if a partner-side issue lands outside business hours.`,
-  routes: [ibizaRoute],
+  routes: [ibizaRoute, ibizaFormentera14Route],
 };
 
 export default ibizaItinerary;

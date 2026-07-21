@@ -1,0 +1,1 @@
+export { seychellesItinerary } from './innerIslandsArea';

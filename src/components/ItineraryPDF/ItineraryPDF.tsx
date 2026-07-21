@@ -27,6 +27,10 @@ export interface ItineraryPdfDay {
   distanceNm: number | null;
   /** Estimated hours at 5 kn (itineraryDayStats); null = unmapped port. */
   sailingHours: number | null;
+  /** Config mapPin.desktop percentages — the hook paints numbered pins +
+   *  the connecting route line onto the static map canvas. Null = no pin. */
+  pinLeft: number | null;
+  pinTop: number | null;
 }
 
 export interface ItineraryPdfData {
@@ -110,21 +114,21 @@ const ItineraryPDF = ({ data, heroSrc, mapSrc, qrDataUrl, baseUrl, generatedDate
               <View key={d.day} style={styles.summaryRow}>
                 <Text style={styles.summaryDay}>DAY {d.day}</Text>
                 <Text style={styles.summaryLeg}>
-                  {d.from} → {d.to}
+                  {d.from} – {d.to}
                 </Text>
               </View>
             ))}
             <View style={styles.totalsBox}>
               <View style={styles.totalCell}>
                 <Text style={styles.totalValue}>
-                  {totalNm > 0 ? `≈ ${totalNm}` : '—'}
+                  {totalNm > 0 ? `~${totalNm}` : '–'}
                   {totalNm > 0 ? <Text style={styles.totalUnit}> NM</Text> : null}
                 </Text>
                 <Text style={styles.totalLabel}>TOTAL DISTANCE</Text>
               </View>
               <View style={styles.totalCell}>
                 <Text style={styles.totalValue}>
-                  {totalHours > 0 ? `≈ ${totalHours}` : '—'}
+                  {totalHours > 0 ? `~${totalHours}` : '–'}
                   {totalHours > 0 ? <Text style={styles.totalUnit}> h</Text> : null}
                 </Text>
                 <Text style={styles.totalLabel}>SAILING AT 5 KN</Text>
@@ -164,7 +168,9 @@ const ItineraryPDF = ({ data, heroSrc, mapSrc, qrDataUrl, baseUrl, generatedDate
       <Page size="A4" style={[styles.page, styles.dayPage]}>
         <View style={styles.topBar} fixed>
           <Image src={`${baseUrl}/images/pdf-logo.png`} style={styles.logo} />
-          <Text style={styles.topSite}>{routeName.toUpperCase()}</Text>
+          {/* flexShrink + right alignment — long route names wrap into a
+              second line instead of running under the logo. */}
+          <Text style={styles.topRoute}>{routeName.toUpperCase()}</Text>
         </View>
 
         <View style={styles.dayBody}>
@@ -178,7 +184,7 @@ const ItineraryPDF = ({ data, heroSrc, mapSrc, qrDataUrl, baseUrl, generatedDate
                     <Text style={styles.dayBubbleText}>{d.day}</Text>
                   </View>
                   <Text style={styles.dayHeading}>
-                    {d.from} → {d.to}
+                    {d.from} – {d.to}
                   </Text>
                   {stats ? <Text style={styles.dayStats}>{stats}</Text> : null}
                 </View>

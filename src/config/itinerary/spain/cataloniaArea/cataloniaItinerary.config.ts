@@ -1,6 +1,6 @@
 import { Itinerary } from '@/types/itinerary.type';
 
-import { barcelonaRoute, marbellaRoute, palamosRoute, sitgesRoute } from './routes';
+import { barcelonaRoute, costaBrava14Route, marbellaRoute, palamosRoute, sitgesRoute } from './routes';
 
 const cataloniaItinerary: Itinerary = {
   metaTitle: 'Catalonia Yacht Charter Itineraries | Barcelona & Costa Brava Sailing',
@@ -32,7 +32,7 @@ Catalonia suits motor yachts (the Barcelona harbour and the Costa Brava cove com
 Best season May–early July and September. August Barcelona heat (32–35 °C onshore) and tourist-density are the trade-off for peak weather; many crews start or end in Barcelona but spend the bulk of the week 60+ NM north up the Costa Brava where the city density disappears. May has the lightest crowds and the cooler swim (water 19–21 °C); September is the broker's preferred window — water 23–24 °C, light afternoon thermals, restaurants reopening from their late-August closure.
 
 The Tramuntana wind risk is the one weather caveat. A few times per season a Pyrenean front sends a north-east 7–8 Bft Tramuntana down the Costa Brava — pins the fleet in for 24 hours typically (the Costa Brava harbours all have safe enough overnight protection). The captain reads the forecast 48 hours ahead and reroutes south if needed. Spring shoulder weeks (May, early June) carry higher Tramuntana risk than late summer.`,
-  routes: [barcelonaRoute, marbellaRoute, palamosRoute, sitgesRoute],
+  routes: [barcelonaRoute, marbellaRoute, palamosRoute, sitgesRoute, costaBrava14Route],
 };
 
 export default cataloniaItinerary;

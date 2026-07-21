@@ -46,7 +46,15 @@ const Para = ({ children }: { children: ReactNode }) => (
  * ItineraryHubSeoSection. Intro paragraphs are always in the DOM; the
  * per-region guide expands on demand but is server-rendered either way.
  */
-const ItineraryHubSeoSection = () => {
+export interface CountrySearchHrefs {
+  croatia?: string;
+  greece?: string;
+  italy?: string;
+  spain?: string;
+  turkey?: string;
+}
+
+const ItineraryHubSeoSection = ({ countrySearchHrefs }: { countrySearchHrefs?: CountrySearchHrefs }) => {
   const t = useTranslations('itinerary');
   const [expanded, setExpanded] = useState(false);
 
@@ -89,20 +97,43 @@ const ItineraryHubSeoSection = () => {
       <Box id="itinerary-hub-seo-content" hidden={!expanded}>
         <SectionH3>{t('indexSeo.h3Croatia')}</SectionH3>
         <Para>
-          {t.rich('indexSeo.croatiaBody', { strong, croatiaLink: inlineLink('/search?destinations=Croatia') })}
+          {t.rich('indexSeo.croatiaBody', {
+            strong,
+            croatiaLink: inlineLink(countrySearchHrefs?.croatia ?? '/search?destinations=Croatia'),
+          })}
         </Para>
 
         <SectionH3>{t('indexSeo.h3Greece')}</SectionH3>
-        <Para>{t.rich('indexSeo.greeceBody', { strong, greeceLink: inlineLink('/search?destinations=Greece') })}</Para>
+        <Para>
+          {t.rich('indexSeo.greeceBody', {
+            strong,
+            greeceLink: inlineLink(countrySearchHrefs?.greece ?? '/search?destinations=Greece'),
+          })}
+        </Para>
 
         <SectionH3>{t('indexSeo.h3Italy')}</SectionH3>
-        <Para>{t.rich('indexSeo.italyBody', { strong, italyLink: inlineLink('/search?destinations=Italy') })}</Para>
+        <Para>
+          {t.rich('indexSeo.italyBody', {
+            strong,
+            italyLink: inlineLink(countrySearchHrefs?.italy ?? '/search?destinations=Italy'),
+          })}
+        </Para>
 
         <SectionH3>{t('indexSeo.h3Spain')}</SectionH3>
-        <Para>{t.rich('indexSeo.spainBody', { strong, spainLink: inlineLink('/search?destinations=Spain') })}</Para>
+        <Para>
+          {t.rich('indexSeo.spainBody', {
+            strong,
+            spainLink: inlineLink(countrySearchHrefs?.spain ?? '/search?destinations=Spain'),
+          })}
+        </Para>
 
         <SectionH3>{t('indexSeo.h3Turkey')}</SectionH3>
-        <Para>{t.rich('indexSeo.turkeyBody', { strong, turkeyLink: inlineLink('/search?destinations=Turkey') })}</Para>
+        <Para>
+          {t.rich('indexSeo.turkeyBody', {
+            strong,
+            turkeyLink: inlineLink(countrySearchHrefs?.turkey ?? '/search?destinations=Turkey'),
+          })}
+        </Para>
 
         <SectionH3>{t('indexSeo.h3Caribbean')}</SectionH3>
         <Para>{t.rich('indexSeo.caribbeanBody', { strong, caribbeanLink: inlineLink('/itineraries/bvi') })}</Para>

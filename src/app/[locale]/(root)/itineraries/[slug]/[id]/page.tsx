@@ -11,6 +11,7 @@ import { LocaleType } from '@/config/locales.config';
 import { itineraryNamespace, resolveDayText, resolveRouteText } from '@/helper/itineraryI18n';
 import { buildBreadcrumbJsonLd, buildTouristTripJsonLd } from '@/utils/static/buildItineraryJsonLd';
 import { buildMetadata } from '@/utils/static/buildMetadata';
+import { resolveBoatsSearchHref } from '@/utils/static/itinerarySearchHref';
 import { serializeJsonLd } from '@/utils/static/serializeJsonLd';
 import ItineraryEndCta from '@/views/Itineraries/ItineraryEndCta';
 import ItineraryHero from '@/views/Itineraries/ItineraryHero';
@@ -81,6 +82,8 @@ const ItineraryRoutePage = async ({ params }: ItineraryRoutePageParams) => {
   }
 
   const t = await getTranslations('itinerary');
+  // did-carrying search link — a bare ?destinations= does NOT filter.
+  const boatsSearchHref = await resolveBoatsSearchHref(itineraryRoute.startingPoint);
   // Per-route copy (metaDesc → hero lede) lives in the route's country
   // namespace; resolveRouteText t.has-guards → config fallback.
   const tRoute = await getTranslations({
@@ -165,12 +168,13 @@ const ItineraryRoutePage = async ({ params }: ItineraryRoutePageParams) => {
         sailingArea={parent.sailingArea}
         itinerarySlug={parent.id}
         country={country ?? 'Europe'}
+        boatsSearchHref={boatsSearchHref}
       />
       <ItineraryEndCta
         title={t('routeCta.title')}
         lede={t('routeCta.lede')}
         action={t('routeCta.action', { start: itineraryRoute.startingPoint })}
-        to={`/search?destinations=${encodeURIComponent(itineraryRoute.startingPoint)}`}
+        to={boatsSearchHref}
         secondaryAction={t('routeCta.secondaryAction')}
         secondaryTo="/search"
       />

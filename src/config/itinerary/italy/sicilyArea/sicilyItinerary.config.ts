@@ -1,6 +1,6 @@
 import { Itinerary } from '@/types/itinerary.type';
 
-import { capoDorlandoRoute, lipariRoute, palermoLongRoute, palermoRoute } from './routes';
+import { aeolianFullCircle14Route, capoDorlandoRoute, lipariRoute, palermoLongRoute, palermoRoute } from './routes';
 
 const sicilyItinerary: Itinerary = {
   metaTitle: 'Sicily Yacht Charter Itineraries | Aeolian Island Blue Route',
@@ -30,7 +30,7 @@ Sicilian cuisine is a charter draw of its own. The Aeolians and the north coast 
 Best season May–June and early September. Midsummer (mid-July through August) brings volcanic-tourism crowds at the Stromboli boat-tour landings and the Vulcano mud baths; the heat in Palermo and the south coast hits 35–38 °C; the Lipari and Vulcano marina overnight rates double. The shoulder months drop rates 30–35% and the volcano visibility from offshore is still strong (Stromboli explosions are continuous year-round). Late September can deliver the best balance — water 23 °C, light maestrale wind, Aeolians half-empty.
 
 Permits and paperwork: the Aeolian Islands sit inside a UNESCO World Heritage site but there is no per-yacht entry permit — anchoring is regulated through standard maritime norms (no anchor on protected seabed in marked zones). The Egadi Marine Park does charge per-day entry fees (€20–60/yacht, payable at the Capo d'Orlando port office or online ahead). The broker handles all filings inside the charter quote.`,
-  routes: [capoDorlandoRoute, lipariRoute, palermoLongRoute, palermoRoute],
+  routes: [capoDorlandoRoute, lipariRoute, palermoLongRoute, palermoRoute, aeolianFullCircle14Route],
 };
 
 export default sicilyItinerary;

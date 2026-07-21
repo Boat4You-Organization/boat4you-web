@@ -24,6 +24,9 @@ declare module 'next-intl' {
       itinerarySpain: typeof import('../../messages/en/itinerarySpain.json').default;
       itineraryTurkey: typeof import('../../messages/en/itineraryTurkey.json').default;
       itineraryCaribbean: typeof import('../../messages/en/itineraryCaribbean.json').default;
+      itineraryFrance: typeof import('../../messages/en/itineraryFrance.json').default;
+      itineraryMontenegro: typeof import('../../messages/en/itineraryMontenegro.json').default;
+      itinerarySeychelles: typeof import('../../messages/en/itinerarySeychelles.json').default;
     };
   }
 }

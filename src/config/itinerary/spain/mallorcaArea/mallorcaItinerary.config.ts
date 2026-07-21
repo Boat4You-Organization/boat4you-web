@@ -1,6 +1,12 @@
 import { Itinerary } from '@/types/itinerary.type';
 
-import { ciutadellaRoute, ciutadellaSouthRoute, palmaDeMallorcaRoute, palmaDeMallorcaSouthRoute } from './routes';
+import {
+  ciutadellaRoute,
+  ciutadellaSouthRoute,
+  mallorcaRoundIsland14Route,
+  palmaDeMallorcaRoute,
+  palmaDeMallorcaSouthRoute,
+} from './routes';
 
 const mallorcaItinerary: Itinerary = {
   metaTitle: 'Mallorca Yacht Charter Itineraries | Balearic Island Sailing',
@@ -30,7 +36,13 @@ Vessel mix is the most diverse in Spain — sailing yachts (Bavaria, Jeanneau, B
 Best season May–early July and September. The Tramuntana wind from the north-west builds in winter and shoulder seasons (genuinely dangerous in late autumn — the season effectively closes mid-November); summer is settled with reliable south-westerly afternoon thermals 3–5 Bft. July–August brings family-tourism crowds (PMI airport at peak capacity, the Palma harbour at full-night-fee €130–250 for a 45 ft yacht), but Mallorca handles them better than Ibiza — the cove network is dense enough that even peak August has empty bays within 10 NM of any port. May has the smallest crowds and the cooler swim; September is the broker's preferred window — water 24 °C, water clarity at peak, Tramuntana risk still moderate.
 
 Mallorcan cuisine is a charter draw — sobrassada (the soft cured pork spread), ensaïmada (the spiral coiled pastry, eaten at breakfast), tumbet (the layered aubergine and potato), Mahón cheese (technically from Menorca but ubiquitous on the Mallorcan tables), and Binissalem DO red wines from the centre of the island. Marina-side dining at Puerto Portals (high-end west of Palma) and Port d'Andratx delivers consistent quality; the village trattorie at Deià (Sa Foradada cove restaurant, only reachable by boat or by 45-minute hike) and Sóller (Béns d'Avall, the standout Tramuntana-coast establishment) are the gastronomic anchors of the western route.`,
-  routes: [ciutadellaRoute, ciutadellaSouthRoute, palmaDeMallorcaRoute, palmaDeMallorcaSouthRoute],
+  routes: [
+    ciutadellaRoute,
+    ciutadellaSouthRoute,
+    palmaDeMallorcaRoute,
+    palmaDeMallorcaSouthRoute,
+    mallorcaRoundIsland14Route,
+  ],
 };
 
 export default mallorcaItinerary;

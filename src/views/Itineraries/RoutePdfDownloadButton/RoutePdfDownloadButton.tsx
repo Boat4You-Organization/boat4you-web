@@ -58,6 +58,8 @@ const RoutePdfDownloadButton = ({ route, sailingArea, itinerarySlug, country }: 
         mooringTip: resolveDayText(route, day, 'mooringTip', day.mooringTip, t) ?? '',
         distanceNm: stats?.nauticalMiles ?? null,
         sailingHours: stats?.sailingHours ?? null,
+        pinLeft: day.mapPin?.desktop?.left ?? null,
+        pinTop: day.mapPin?.desktop?.top ?? null,
       };
     }),
   };

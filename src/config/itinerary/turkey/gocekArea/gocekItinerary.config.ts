@@ -1,6 +1,6 @@
 import { Itinerary } from '@/types/itinerary.type';
 
-import { fethiyeRoute, gocekKizikuyrukKoyuRoute, gocekRoute } from './routes';
+import { fethiyeRoute, gocekKizikuyrukKoyuRoute, gocekRoute, lycianCoast14Route } from './routes';
 
 const gocekItinerary: Itinerary = {
   metaTitle: 'Göcek Yacht Charter Itineraries | Turkish Riviera Sailing',
@@ -32,7 +32,7 @@ Göcek itself sits inside a strict Special Environmental Protection Area — no 
 Vessel mix is a strong gulet market (the Göcek–Fethiye one-way "Blue Cruise" is the most traditional Turkish charter format — 20–35 m wooden motor-sailers with full crew, all-inclusive pricing) plus a growing bareboat catamaran and sailing yacht segment from Skopea and D-Marin. Crewed luxury motor yachts run the Yalıkavak-Göcek long-haul corridor and the eastbound Lycian-Coast 14-day weeks.
 
 Best season May–early July and September–October. The Turkish season runs Apr–Nov, longer than any other Mediterranean ground; August Göcek heat (33–36 °C onshore) and the marina full-book situation are the only real downside. Permits, transit logs and Turkish-side regulatory paperwork are all handled by the partner agency in the booking quote.`,
-  routes: [fethiyeRoute, gocekKizikuyrukKoyuRoute, gocekRoute],
+  routes: [fethiyeRoute, gocekKizikuyrukKoyuRoute, gocekRoute, lycianCoast14Route],
 };
 
 export default gocekItinerary;

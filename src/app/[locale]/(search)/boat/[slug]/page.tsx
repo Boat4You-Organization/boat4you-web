@@ -1,4 +1,5 @@
 /* eslint-disable no-nested-ternary */
+import { Container } from '@mui/material';
 import { Metadata } from 'next';
 import { Locale } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
@@ -426,11 +427,15 @@ const BoatPage = async ({
         {/* Post-content upsell order fixed by Mario (21.7.2026): similar
             boats FIRST, day-by-day itineraries for the marina below. */}
         <RelatedBoats yacht={yacht} user={user} locale={locale} currency={currency} />
-        <SuggestedItineraries
-          marinaName={yacht.location?.name}
-          countryCode={yacht.location?.countryCode}
-          variant="full"
-        />
+        {/* SuggestedItineraries has no Container of its own (it was born
+            inside BoatContentSection's) — wrap it or it bleeds full-width. */}
+        <Container maxWidth="xl">
+          <SuggestedItineraries
+            marinaName={yacht.location?.name}
+            countryCode={yacht.location?.countryCode}
+            variant="full"
+          />
+        </Container>
         <BoatMobileNavigation yacht={yacht} />
       </BoatTransitionProvider>
     </Layout>
