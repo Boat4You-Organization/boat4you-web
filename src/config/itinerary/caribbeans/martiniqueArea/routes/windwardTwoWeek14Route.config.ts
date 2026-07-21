@@ -17,7 +17,7 @@ const windwardTwoWeek14Route: ItineraryRoute = {
       day: 1,
       mapPin: { desktop: { left: 83.9, top: 43.3 }, mobile: { left: 83.9, top: 43.3 } },
       description: 'Day 1: Le Marin to Sainte-Anne.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/caribbeans/destinations/sainte-anne.webp', alt: 'Sainte-Anne' }],
     },
     {
       id: 'windward-two-week-14-days-day-2',
@@ -26,7 +26,7 @@ const windwardTwoWeek14Route: ItineraryRoute = {
       day: 2,
       mapPin: { desktop: { left: 41.9, top: 39.4 }, mobile: { left: 41.9, top: 39.4 } },
       description: 'Day 2: Sainte-Anne to Grande Anse d’Arlet.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/caribbeans/destinations/grande-anse.webp', alt: 'Grande Anse d’Arlet' }],
     },
     {
       id: 'windward-two-week-14-days-day-3',
@@ -35,7 +35,7 @@ const windwardTwoWeek14Route: ItineraryRoute = {
       day: 3,
       mapPin: { desktop: { left: 42.0, top: 36.6 }, mobile: { left: 42.0, top: 36.6 } },
       description: 'Day 3: Grande Anse d’Arlet to Anse Dufour.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/caribbeans/destinations/anse-dufour.webp', alt: 'Anse Dufour' }],
     },
     {
       id: 'windward-two-week-14-days-day-4',
@@ -44,7 +44,7 @@ const windwardTwoWeek14Route: ItineraryRoute = {
       day: 4,
       mapPin: { desktop: { left: 23.3, top: 21.2 }, mobile: { left: 23.3, top: 21.2 } },
       description: 'Day 4: Anse Dufour to Saint-Pierre.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/caribbeans/destinations/saint-pierre.webp', alt: 'Saint-Pierre' }],
     },
     {
       id: 'windward-two-week-14-days-day-5',
@@ -53,7 +53,7 @@ const windwardTwoWeek14Route: ItineraryRoute = {
       day: 5,
       mapPin: { desktop: { left: 13.2, top: 13.2 }, mobile: { left: 13.2, top: 13.2 } },
       description: 'Day 5: Saint-Pierre to Anse Couleuvre.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/caribbeans/destinations/anse-couleuvre.webp', alt: 'Anse Couleuvre' }],
     },
     {
       id: 'windward-two-week-14-days-day-6',
@@ -62,7 +62,7 @@ const windwardTwoWeek14Route: ItineraryRoute = {
       day: 6,
       mapPin: { desktop: { left: 23.3, top: 21.2 }, mobile: { left: 23.3, top: 21.2 } },
       description: 'Day 6: Anse Couleuvre to Saint-Pierre.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/caribbeans/destinations/saint-pierre.webp', alt: 'Saint-Pierre' }],
     },
     {
       id: 'windward-two-week-14-days-day-7',
@@ -71,7 +71,7 @@ const windwardTwoWeek14Route: ItineraryRoute = {
       day: 7,
       mapPin: { desktop: { left: 41.9, top: 39.4 }, mobile: { left: 41.9, top: 39.4 } },
       description: 'Day 7: Saint-Pierre to Grande Anse d’Arlet.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/caribbeans/destinations/grande-anse.webp', alt: 'Grande Anse d’Arlet' }],
     },
     {
       id: 'windward-two-week-14-days-day-8',
@@ -80,7 +80,7 @@ const windwardTwoWeek14Route: ItineraryRoute = {
       day: 8,
       mapPin: { desktop: { left: 86.8, top: 40.9 }, mobile: { left: 86.8, top: 40.9 } },
       description: 'Day 8: Grande Anse d’Arlet to Le Marin.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/caribbeans/destinations/le-marin.webp', alt: 'Le Marin' }],
     },
     {
       id: 'windward-two-week-14-days-day-9',
@@ -98,7 +98,7 @@ const windwardTwoWeek14Route: ItineraryRoute = {
       day: 10,
       mapPin: { desktop: { left: 54.5, top: 78.6 }, mobile: { left: 54.5, top: 78.6 } },
       description: 'Day 10: Rodney Bay (St. Lucia) to Marigot Bay (St. Lucia).',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/caribbeans/destinations/marigot.webp', alt: 'Marigot Bay (St. Lucia)' }],
     },
     {
       id: 'windward-two-week-14-days-day-11',
@@ -116,7 +116,7 @@ const windwardTwoWeek14Route: ItineraryRoute = {
       day: 12,
       mapPin: { desktop: { left: 54.5, top: 78.6 }, mobile: { left: 54.5, top: 78.6 } },
       description: 'Day 12: Soufrière (Pitons) to Marigot Bay (St. Lucia).',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/caribbeans/destinations/marigot.webp', alt: 'Marigot Bay (St. Lucia)' }],
     },
     {
       id: 'windward-two-week-14-days-day-13',
@@ -134,7 +134,7 @@ const windwardTwoWeek14Route: ItineraryRoute = {
       day: 14,
       mapPin: { desktop: { left: 86.8, top: 40.9 }, mobile: { left: 86.8, top: 40.9 } },
       description: 'Day 14: Rodney Bay (St. Lucia) to Le Marin.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/caribbeans/destinations/le-marin.webp', alt: 'Le Marin' }],
     },
   ],
   map: {

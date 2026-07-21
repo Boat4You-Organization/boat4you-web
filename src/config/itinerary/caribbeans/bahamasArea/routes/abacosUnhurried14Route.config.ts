@@ -17,7 +17,7 @@ const abacosUnhurried14Route: ItineraryRoute = {
       day: 1,
       mapPin: { desktop: { left: 86.8, top: 86.8 }, mobile: { left: 86.8, top: 86.8 } },
       description: 'Day 1: Marsh Harbour to Hope Town.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/caribbeans/destinations/hope-town.webp', alt: 'Hope Town' }],
     },
     {
       id: 'abacos-unhurried-14-days-day-2',
@@ -35,7 +35,7 @@ const abacosUnhurried14Route: ItineraryRoute = {
       day: 3,
       mapPin: { desktop: { left: 54.6, top: 46.7 }, mobile: { left: 54.6, top: 46.7 } },
       description: 'Day 3: Man-O-War Cay to Great Guana Cay.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/caribbeans/destinations/great-guana-cay.webp', alt: 'Great Guana Cay' }],
     },
     {
       id: 'abacos-unhurried-14-days-day-4',
@@ -44,7 +44,7 @@ const abacosUnhurried14Route: ItineraryRoute = {
       day: 4,
       mapPin: { desktop: { left: 13.2, top: 13.2 }, mobile: { left: 13.2, top: 13.2 } },
       description: 'Day 4: Great Guana Cay to Green Turtle Cay.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/caribbeans/destinations/green-turtle-cay.webp', alt: 'Green Turtle Cay' }],
     },
     {
       id: 'abacos-unhurried-14-days-day-5',
@@ -53,7 +53,7 @@ const abacosUnhurried14Route: ItineraryRoute = {
       day: 5,
       mapPin: { desktop: { left: 54.6, top: 46.7 }, mobile: { left: 54.6, top: 46.7 } },
       description: 'Day 5: Green Turtle Cay to Great Guana Cay.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/caribbeans/destinations/great-guana-cay.webp', alt: 'Great Guana Cay' }],
     },
     {
       id: 'abacos-unhurried-14-days-day-6',
@@ -62,7 +62,7 @@ const abacosUnhurried14Route: ItineraryRoute = {
       day: 6,
       mapPin: { desktop: { left: 66.7, top: 85.2 }, mobile: { left: 66.7, top: 85.2 } },
       description: 'Day 6: Great Guana Cay to Marsh Harbour.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/caribbeans/destinations/marsh-harbour.webp', alt: 'Marsh Harbour' }],
     },
     {
       id: 'abacos-unhurried-14-days-day-7',
@@ -71,7 +71,7 @@ const abacosUnhurried14Route: ItineraryRoute = {
       day: 7,
       mapPin: { desktop: { left: 86.8, top: 86.8 }, mobile: { left: 86.8, top: 86.8 } },
       description: 'Day 7: Marsh Harbour to Hope Town.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/caribbeans/destinations/hope-town.webp', alt: 'Hope Town' }],
     },
     {
       id: 'abacos-unhurried-14-days-day-8',
@@ -89,7 +89,7 @@ const abacosUnhurried14Route: ItineraryRoute = {
       day: 9,
       mapPin: { desktop: { left: 54.6, top: 46.7 }, mobile: { left: 54.6, top: 46.7 } },
       description: 'Day 9: Man-O-War Cay to Great Guana Cay.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/caribbeans/destinations/great-guana-cay.webp', alt: 'Great Guana Cay' }],
     },
     {
       id: 'abacos-unhurried-14-days-day-10',
@@ -98,7 +98,7 @@ const abacosUnhurried14Route: ItineraryRoute = {
       day: 10,
       mapPin: { desktop: { left: 13.2, top: 13.2 }, mobile: { left: 13.2, top: 13.2 } },
       description: 'Day 10: Great Guana Cay to Green Turtle Cay.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/caribbeans/destinations/green-turtle-cay.webp', alt: 'Green Turtle Cay' }],
     },
     {
       id: 'abacos-unhurried-14-days-day-11',
@@ -116,7 +116,7 @@ const abacosUnhurried14Route: ItineraryRoute = {
       day: 12,
       mapPin: { desktop: { left: 86.8, top: 86.8 }, mobile: { left: 86.8, top: 86.8 } },
       description: 'Day 12: Man-O-War Cay to Hope Town.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/caribbeans/destinations/hope-town.webp', alt: 'Hope Town' }],
     },
     {
       id: 'abacos-unhurried-14-days-day-13',
@@ -125,7 +125,7 @@ const abacosUnhurried14Route: ItineraryRoute = {
       day: 13,
       mapPin: { desktop: { left: 66.7, top: 85.2 }, mobile: { left: 66.7, top: 85.2 } },
       description: 'Day 13: Hope Town to Marsh Harbour.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/caribbeans/destinations/marsh-harbour.webp', alt: 'Marsh Harbour' }],
     },
     {
       id: 'abacos-unhurried-14-days-day-14',
@@ -134,7 +134,7 @@ const abacosUnhurried14Route: ItineraryRoute = {
       day: 14,
       mapPin: { desktop: { left: 66.7, top: 85.2 }, mobile: { left: 66.7, top: 85.2 } },
       description: 'Day 14: Marsh Harbour to Marsh Harbour.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/caribbeans/destinations/marsh-harbour.webp', alt: 'Marsh Harbour' }],
     },
   ],
   map: {

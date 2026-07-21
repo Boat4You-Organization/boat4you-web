@@ -7,7 +7,7 @@ const innerIslandsClassicRoute: ItineraryRoute = {
   id: 'inner-islands-classic',
   startingPoint: 'Eden Island (Mahe)',
   otherPoints: ['Praslin (Baie Sainte Anne)', 'La Digue'],
-  cardImage: { src: '/images/destinations/seychelles.webp', alt: 'Seychelles' },
+  cardImage: { src: '/images/itinerary/seychelles/seychelles-photos/mahe-eden-island.webp', alt: 'Seychelles' },
   gallery: [],
   routeDays: [
     {
@@ -26,7 +26,12 @@ const innerIslandsClassicRoute: ItineraryRoute = {
       day: 2,
       mapPin: { desktop: { left: 66.3, top: 27.7 }, mobile: { left: 66.3, top: 27.7 } },
       description: 'Day 2: Sainte Anne to Praslin (Baie Sainte Anne).',
-      gallery: [],
+      gallery: [
+        {
+          src: '/images/itinerary/seychelles/seychelles-photos/praslin-anse-lazio.webp',
+          alt: 'Praslin (Baie Sainte Anne)',
+        },
+      ],
     },
     {
       id: 'inner-islands-classic-day-3',
@@ -35,7 +40,7 @@ const innerIslandsClassicRoute: ItineraryRoute = {
       day: 3,
       mapPin: { desktop: { left: 60.2, top: 13.2 }, mobile: { left: 60.2, top: 13.2 } },
       description: 'Day 3: Praslin (Baie Sainte Anne) to Curieuse.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/seychelles/seychelles-photos/curieuse-tortoises.webp', alt: 'Curieuse' }],
     },
     {
       id: 'inner-islands-classic-day-4',
@@ -44,7 +49,7 @@ const innerIslandsClassicRoute: ItineraryRoute = {
       day: 4,
       mapPin: { desktop: { left: 54.5, top: 15.3 }, mobile: { left: 54.5, top: 15.3 } },
       description: 'Day 4: Curieuse to Anse Lazio.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/seychelles/seychelles-photos/praslin-anse-lazio.webp', alt: 'Anse Lazio' }],
     },
     {
       id: 'inner-islands-classic-day-5',
@@ -53,7 +58,9 @@ const innerIslandsClassicRoute: ItineraryRoute = {
       day: 5,
       mapPin: { desktop: { left: 79.3, top: 29.0 }, mobile: { left: 79.3, top: 29.0 } },
       description: 'Day 5: Anse Lazio to La Digue.',
-      gallery: [],
+      gallery: [
+        { src: '/images/itinerary/seychelles/seychelles-photos/la-digue-anse-source-d-argent.webp', alt: 'La Digue' },
+      ],
     },
     {
       id: 'inner-islands-classic-day-6',
@@ -71,7 +78,9 @@ const innerIslandsClassicRoute: ItineraryRoute = {
       day: 7,
       mapPin: { desktop: { left: 13.2, top: 86.8 }, mobile: { left: 13.2, top: 86.8 } },
       description: 'Day 7: Ile Cocos to Eden Island (Mahe).',
-      gallery: [],
+      gallery: [
+        { src: '/images/itinerary/seychelles/seychelles-photos/mahe-eden-island.webp', alt: 'Eden Island (Mahe)' },
+      ],
     },
   ],
   map: {

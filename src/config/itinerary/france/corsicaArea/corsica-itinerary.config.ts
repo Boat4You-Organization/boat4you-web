@@ -7,9 +7,9 @@ const corsicaItinerary: Itinerary = {
   metaDesc: 'Day-by-day charter routes in Corsica — 7- and 14-day options.',
   id: 'corsica',
   sailingArea: 'Corsica',
-  image: { src: '/images/destinations/france.webp', alt: 'Corsica' },
+  image: { src: '/images/itinerary/france/corsica-photos/ajaccio.webp', alt: 'Corsica' },
   title: 'Corsica sailing itineraries',
-  backgroundImage: { src: '/images/destinations/france.webp', alt: 'Corsica' },
+  backgroundImage: { src: '/images/itinerary/france/corsica-photos/ajaccio.webp', alt: 'Corsica' },
   description: 'Charter routes across Corsica with practical day-by-day notes.',
   routes: [ajaccioSouthCorsicaRoute, corsicaGrandTour14Route],
 };

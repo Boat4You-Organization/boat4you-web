@@ -7,9 +7,9 @@ const montenegroItinerary: Itinerary = {
   metaDesc: 'Day-by-day charter routes in Montenegro — 7- and 14-day options.',
   id: 'montenegro',
   sailingArea: 'Montenegro',
-  image: { src: '/images/destinations/montenegro.webp', alt: 'Montenegro' },
+  image: { src: '/images/itinerary/montenegro/montenegro-photos/kotor-bay.webp', alt: 'Montenegro' },
   title: 'Montenegro sailing itineraries',
-  backgroundImage: { src: '/images/destinations/montenegro.webp', alt: 'Montenegro' },
+  backgroundImage: { src: '/images/itinerary/montenegro/montenegro-photos/kotor-bay.webp', alt: 'Montenegro' },
   description: 'Charter routes across Montenegro with practical day-by-day notes.',
   routes: [bokaBudvaWeekRoute, montenegroAdriatic14Route],
 };

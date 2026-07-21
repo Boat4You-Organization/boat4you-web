@@ -17,7 +17,7 @@ const bviFullLoop14Route: ItineraryRoute = {
       day: 1,
       mapPin: { desktop: { left: 39.1, top: 86.8 }, mobile: { left: 39.1, top: 86.8 } },
       description: 'Day 1: Tortola (Road Town) to Norman Island.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/caribbeans/destinations/norman-island.webp', alt: 'Norman Island' }],
     },
     {
       id: 'bvi-full-loop-14-days-day-2',
@@ -26,7 +26,7 @@ const bviFullLoop14Route: ItineraryRoute = {
       day: 2,
       mapPin: { desktop: { left: 46.8, top: 79.0 }, mobile: { left: 46.8, top: 79.0 } },
       description: 'Day 2: Norman Island to Peter Island.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/caribbeans/destinations/peter-island.webp', alt: 'Peter Island' }],
     },
     {
       id: 'bvi-full-loop-14-days-day-3',
@@ -35,7 +35,7 @@ const bviFullLoop14Route: ItineraryRoute = {
       day: 3,
       mapPin: { desktop: { left: 55.4, top: 76.1 }, mobile: { left: 55.4, top: 76.1 } },
       description: 'Day 3: Peter Island to Cooper Island.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/caribbeans/destinations/cooper-island.webp', alt: 'Cooper Island' }],
     },
     {
       id: 'bvi-full-loop-14-days-day-4',
@@ -80,7 +80,7 @@ const bviFullLoop14Route: ItineraryRoute = {
       day: 8,
       mapPin: { desktop: { left: 55.1, top: 57.1 }, mobile: { left: 55.1, top: 57.1 } },
       description: 'Day 8: North Sound (Leverick Bay) to Scrub Island.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/caribbeans/destinations/scrub-island.webp', alt: 'Scrub Island' }],
     },
     {
       id: 'bvi-full-loop-14-days-day-9',
@@ -89,7 +89,7 @@ const bviFullLoop14Route: ItineraryRoute = {
       day: 9,
       mapPin: { desktop: { left: 30.3, top: 68.0 }, mobile: { left: 30.3, top: 68.0 } },
       description: 'Day 9: Scrub Island to Cane Garden Bay.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/caribbeans/destinations/cane-garden-bay.webp', alt: 'Cane Garden Bay' }],
     },
     {
       id: 'bvi-full-loop-14-days-day-10',
@@ -98,7 +98,7 @@ const bviFullLoop14Route: ItineraryRoute = {
       day: 10,
       mapPin: { desktop: { left: 13.2, top: 64.1 }, mobile: { left: 13.2, top: 64.1 } },
       description: 'Day 10: Cane Garden Bay to Jost Van Dyke.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/caribbeans/destinations/jost-van-dyke.webp', alt: 'Jost Van Dyke' }],
     },
     {
       id: 'bvi-full-loop-14-days-day-11',
@@ -107,7 +107,7 @@ const bviFullLoop14Route: ItineraryRoute = {
       day: 11,
       mapPin: { desktop: { left: 30.3, top: 68.0 }, mobile: { left: 30.3, top: 68.0 } },
       description: 'Day 11: Jost Van Dyke to Cane Garden Bay.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/caribbeans/destinations/cane-garden-bay.webp', alt: 'Cane Garden Bay' }],
     },
     {
       id: 'bvi-full-loop-14-days-day-12',
@@ -116,7 +116,7 @@ const bviFullLoop14Route: ItineraryRoute = {
       day: 12,
       mapPin: { desktop: { left: 39.1, top: 86.8 }, mobile: { left: 39.1, top: 86.8 } },
       description: 'Day 12: Cane Garden Bay to Norman Island.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/caribbeans/destinations/norman-island.webp', alt: 'Norman Island' }],
     },
     {
       id: 'bvi-full-loop-14-days-day-13',
@@ -125,7 +125,7 @@ const bviFullLoop14Route: ItineraryRoute = {
       day: 13,
       mapPin: { desktop: { left: 46.8, top: 79.0 }, mobile: { left: 46.8, top: 79.0 } },
       description: 'Day 13: Norman Island to Peter Island.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/caribbeans/destinations/peter-island.webp', alt: 'Peter Island' }],
     },
     {
       id: 'bvi-full-loop-14-days-day-14',
@@ -134,7 +134,7 @@ const bviFullLoop14Route: ItineraryRoute = {
       day: 14,
       mapPin: { desktop: { left: 34.7, top: 69.2 }, mobile: { left: 34.7, top: 69.2 } },
       description: 'Day 14: Peter Island to Tortola (Road Town).',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/caribbeans/destinations/tortola.webp', alt: 'Tortola (Road Town)' }],
     },
   ],
   map: {

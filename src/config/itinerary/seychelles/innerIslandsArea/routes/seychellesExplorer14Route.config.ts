@@ -7,7 +7,7 @@ const seychellesExplorer14Route: ItineraryRoute = {
   id: 'seychelles-explorer-14-days',
   startingPoint: 'Eden Island (Mahe)',
   otherPoints: ['Silhouette', 'Praslin (Baie Sainte Anne)', 'Felicite'],
-  cardImage: { src: '/images/destinations/seychelles.webp', alt: 'Seychelles' },
+  cardImage: { src: '/images/itinerary/seychelles/seychelles-photos/mahe-eden-island.webp', alt: 'Seychelles' },
   gallery: [],
   routeDays: [
     {
@@ -35,7 +35,7 @@ const seychellesExplorer14Route: ItineraryRoute = {
       day: 3,
       mapPin: { desktop: { left: 13.2, top: 58.9 }, mobile: { left: 13.2, top: 58.9 } },
       description: 'Day 3: Baie Ternay to Silhouette.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/seychelles/seychelles-photos/silhouette-island.webp', alt: 'Silhouette' }],
     },
     {
       id: 'seychelles-explorer-14-days-day-4',
@@ -53,7 +53,12 @@ const seychellesExplorer14Route: ItineraryRoute = {
       day: 5,
       mapPin: { desktop: { left: 69.9, top: 37.0 }, mobile: { left: 69.9, top: 37.0 } },
       description: 'Day 5: Cousin to Praslin (Baie Sainte Anne).',
-      gallery: [],
+      gallery: [
+        {
+          src: '/images/itinerary/seychelles/seychelles-photos/praslin-anse-lazio.webp',
+          alt: 'Praslin (Baie Sainte Anne)',
+        },
+      ],
     },
     {
       id: 'seychelles-explorer-14-days-day-6',
@@ -71,7 +76,7 @@ const seychellesExplorer14Route: ItineraryRoute = {
       day: 7,
       mapPin: { desktop: { left: 66.3, top: 25.2 }, mobile: { left: 66.3, top: 25.2 } },
       description: 'Day 7: Aride to Curieuse.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/seychelles/seychelles-photos/curieuse-tortoises.webp', alt: 'Curieuse' }],
     },
     {
       id: 'seychelles-explorer-14-days-day-8',
@@ -80,7 +85,7 @@ const seychellesExplorer14Route: ItineraryRoute = {
       day: 8,
       mapPin: { desktop: { left: 62.9, top: 26.9 }, mobile: { left: 62.9, top: 26.9 } },
       description: 'Day 8: Curieuse to Anse Lazio.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/seychelles/seychelles-photos/praslin-anse-lazio.webp', alt: 'Anse Lazio' }],
     },
     {
       id: 'seychelles-explorer-14-days-day-9',
@@ -89,7 +94,9 @@ const seychellesExplorer14Route: ItineraryRoute = {
       day: 9,
       mapPin: { desktop: { left: 77.6, top: 38.0 }, mobile: { left: 77.6, top: 38.0 } },
       description: 'Day 9: Anse Lazio to La Digue.',
-      gallery: [],
+      gallery: [
+        { src: '/images/itinerary/seychelles/seychelles-photos/la-digue-anse-source-d-argent.webp', alt: 'La Digue' },
+      ],
     },
     {
       id: 'seychelles-explorer-14-days-day-10',
@@ -134,7 +141,9 @@ const seychellesExplorer14Route: ItineraryRoute = {
       day: 14,
       mapPin: { desktop: { left: 38.4, top: 85.1 }, mobile: { left: 38.4, top: 85.1 } },
       description: 'Day 14: Ile Cocos to Eden Island (Mahe).',
-      gallery: [],
+      gallery: [
+        { src: '/images/itinerary/seychelles/seychelles-photos/mahe-eden-island.webp', alt: 'Eden Island (Mahe)' },
+      ],
     },
   ],
   map: {

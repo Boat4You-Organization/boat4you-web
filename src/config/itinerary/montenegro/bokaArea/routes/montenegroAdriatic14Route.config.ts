@@ -7,7 +7,7 @@ const montenegroAdriatic14Route: ItineraryRoute = {
   id: 'montenegro-adriatic-14-days',
   startingPoint: 'Porto Montenegro (Tivat)',
   otherPoints: ['Kotor', 'Sveti Stefan', 'Bar'],
-  cardImage: { src: '/images/destinations/montenegro.webp', alt: 'Montenegro' },
+  cardImage: { src: '/images/itinerary/montenegro/montenegro-photos/porto-montenegro-tivat.webp', alt: 'Montenegro' },
   gallery: [],
   routeDays: [
     {
@@ -26,7 +26,7 @@ const montenegroAdriatic14Route: ItineraryRoute = {
       day: 2,
       mapPin: { desktop: { left: 13.2, top: 19.9 }, mobile: { left: 13.2, top: 19.9 } },
       description: 'Day 2: Rose to Herceg Novi.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/montenegro/montenegro-photos/herceg-novi.webp', alt: 'Herceg Novi' }],
     },
     {
       id: 'montenegro-adriatic-14-days-day-3',
@@ -35,7 +35,9 @@ const montenegroAdriatic14Route: ItineraryRoute = {
       day: 3,
       mapPin: { desktop: { left: 34.8, top: 13.2 }, mobile: { left: 34.8, top: 13.2 } },
       description: 'Day 3: Herceg Novi to Perast.',
-      gallery: [],
+      gallery: [
+        { src: '/images/itinerary/montenegro/montenegro-photos/perast-our-lady-of-the-rocks.webp', alt: 'Perast' },
+      ],
     },
     {
       id: 'montenegro-adriatic-14-days-day-4',
@@ -44,7 +46,7 @@ const montenegroAdriatic14Route: ItineraryRoute = {
       day: 4,
       mapPin: { desktop: { left: 44.1, top: 25.0 }, mobile: { left: 44.1, top: 25.0 } },
       description: 'Day 4: Perast to Kotor.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/montenegro/montenegro-photos/kotor-bay.webp', alt: 'Kotor' }],
     },
     {
       id: 'montenegro-adriatic-14-days-day-5',
@@ -71,7 +73,7 @@ const montenegroAdriatic14Route: ItineraryRoute = {
       day: 7,
       mapPin: { desktop: { left: 53.1, top: 52.8 }, mobile: { left: 53.1, top: 52.8 } },
       description: 'Day 7: Zanjice to Budva.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/montenegro/montenegro-photos/budva-old-town.webp', alt: 'Budva' }],
     },
     {
       id: 'montenegro-adriatic-14-days-day-8',
@@ -80,7 +82,7 @@ const montenegroAdriatic14Route: ItineraryRoute = {
       day: 8,
       mapPin: { desktop: { left: 60.3, top: 57.0 }, mobile: { left: 60.3, top: 57.0 } },
       description: 'Day 8: Budva to Sveti Stefan.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/montenegro/montenegro-photos/sveti-stefan.webp', alt: 'Sveti Stefan' }],
     },
     {
       id: 'montenegro-adriatic-14-days-day-9',
@@ -116,7 +118,7 @@ const montenegroAdriatic14Route: ItineraryRoute = {
       day: 12,
       mapPin: { desktop: { left: 53.1, top: 52.8 }, mobile: { left: 53.1, top: 52.8 } },
       description: 'Day 12: Petrovac to Budva.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/montenegro/montenegro-photos/budva-old-town.webp', alt: 'Budva' }],
     },
     {
       id: 'montenegro-adriatic-14-days-day-13',
@@ -134,7 +136,12 @@ const montenegroAdriatic14Route: ItineraryRoute = {
       day: 14,
       mapPin: { desktop: { left: 33.7, top: 23.3 }, mobile: { left: 33.7, top: 23.3 } },
       description: 'Day 14: Bigova to Porto Montenegro (Tivat).',
-      gallery: [],
+      gallery: [
+        {
+          src: '/images/itinerary/montenegro/montenegro-photos/porto-montenegro-tivat.webp',
+          alt: 'Porto Montenegro (Tivat)',
+        },
+      ],
     },
   ],
   map: {

@@ -1,0 +1,256 @@
+{
+  "routes": {
+    "andaman-explorer-14-days": {
+      "metaTitle": "14-Day Andaman Sea Explorer | Boat4You",
+      "metaDesc": "Two weeks from Yacht Haven, Phuket through Phang Nga Bay, Phi Phi, Ko Lanta and the Trang islands: sea caves, hongs and quiet white-sand beaches.",
+      "days": {
+        "1": {
+          "shortDescription": "Slip out of Yacht Haven and point east into Phang Nga Bay, ending at Ko Phanak's cave-riddled cliffs.",
+          "description": "The first morning is mostly about getting clear of the marina and settling the crew. From Yacht Haven the bay opens quickly, and by mid-morning the limestone stacks of Phang Nga start rising out of the haze. Ko Phanak sits about twelve miles out, a green loaf of an island honeycombed with caves. We usually anchor on the lee side and drop the dinghy or kayaks before the light goes flat. Two passages are worth finding: the long dark tunnel locals call the Bat Cave, and a lower one you can only paddle through near low water. Time it wrong and the entrance is shut. Bring a head torch, go slowly, and listen for the drip of the ceiling above you.",
+          "thingsToDo": [
+            "Paddle into the Bat Cave passage",
+            "Kayak the low-water tunnel at slack",
+            "Swim off the sheltered lee anchorage",
+            "Sundowners under the limestone cliffs"
+          ],
+          "mooringTip": "Ko Phanak has no moorings, so anchor in sand on the eastern lee side away from the cave mouths. Holding is good in 5-8 metres; keep clear of the shallow rock shelves that dry at low tide."
+        },
+        "2": {
+          "shortDescription": "A short hop north to Ko Hong, where a tidal cave opens into a lagoon completely walled in by cliffs.",
+          "description": "Ko Hong is close enough that there's no rush to lift the anchor. The name means room, and once you paddle through the entrance you understand why: a ring of vertical limestone with the sky as a lid and still green water underneath. Get the tide right. The inner hong is reachable only around slack, and at the wrong state you either scrape the roof or find the channel dry. Most crews go early, before the day-tripper longtails arrive from the mainland. Later, the anchorage settles down. Kingfishers work the shallows, macaques pick along the tree line, and the cliffs throw shade across the deck by late afternoon. A quiet, slightly eerie place once the engines all go silent.",
+          "thingsToDo": [
+            "Kayak the tidal cave into the hong",
+            "Time the entrance around slack water",
+            "Watch macaques along the tree line",
+            "Snorkel the sheltered eastern anchorage"
+          ],
+          "mooringTip": "Anchor off the east side of Ko Hong, west of the shoals that run out from Ko Na Khae. Sand and mud give reliable holding; arrive before mid-morning to beat the tour fleet to the lagoon entrance."
+        },
+        "3": {
+          "shortDescription": "Cross the bay to laid-back Ko Yao Noi, a working island of rice paddies, rubber plots and honest seafood.",
+          "description": "Everything slows down at Ko Yao Noi. It's a real island, not a resort strip, and life runs on fishing, rubber tapping and rice. The sail across from Ko Hong is an easy reach in the usual northeasterly, a couple of hours if the breeze cooperates. Anchor off the east coast or tuck down toward the channel between Yao Noi and Yao Yai. Take the dinghy in to Laem Sai, a seafood place at the south end with a small floating pontoon you can tie to. Order whatever came off the boats that morning: crab, prawns, a whole steamed fish with lime and chilli. Rent a scooter if you want to see the paddies and the quiet interior. Nobody is in a hurry here, and that's the point.",
+          "thingsToDo": [
+            "Tie the tender at Laem Sai pontoon",
+            "Order steamed fish at a seafood shack",
+            "Scooter through the inland rice paddies",
+            "Anchor off the Yao Yai channel"
+          ],
+          "mooringTip": "Anchor off the east coast of Ko Yao Noi or in the channel toward Ko Yao Yai; the Ko Pak Bia group to the south offers good holding southwest of its sandy spit. The Laem Sai pontoon takes tenders, not the yacht itself."
+        },
+        "4": {
+          "shortDescription": "Sail east to Railay, a limestone peninsula cut off from the mainland and reachable only from the water.",
+          "description": "Railay is a headland the road never reached. Sheer cliffs seal it off from Krabi town, so everything and everyone arrives by boat, which gives the place its odd, castaway feel. The passage from Ko Yao Noi runs east across open water and takes most of a morning. Aim to anchor off Railay West or Phra Nang in settled weather. Phra Nang beach is the draw: soft sand under an overhanging wall, with the Princess Cave and its shrine of offerings tucked at one end. Climbers hang off the karst all day, and by dusk the longtails ferry people back for sundowners. The holding here is patchy over rock in places, so set the anchor with care and swim on it if the water is clear enough.",
+          "thingsToDo": [
+            "Land on Phra Nang beach",
+            "Visit the Princess Cave shrine",
+            "Watch climbers on the Railay karst",
+            "Sundowners off Railay West"
+          ],
+          "mooringTip": "Anchor off Railay West or Phra Nang in the dry season only; the seabed is rocky in patches, so use plenty of scope and dive the anchor if you can. This coast is exposed in the southwest monsoon and best avoided then."
+        },
+        "5": {
+          "shortDescription": "A twenty-mile reach out to Phi Phi Don, the busy hub of the group, with a hike to the famous viewpoint.",
+          "description": "The loud one is Phi Phi Don, and there's no pretending otherwise. After the quiet of Phang Nga the run south drops you somewhere that lives on tourism, with bars in Ton Sai, ferries coming and going and longtails buzzing the anchorage. It's still worth a night. The twin bays of Ton Sai and Loh Dalum meet at a narrow waist of sand, and the climb to the viewpoint above them is short and sweaty but pays off at the top. Ao Yongkasem, better known as Monkey Beach, sits round the corner if the anchorage feels crowded. Provisioning is easy here, ice and cold beer easier still. Get ashore early, do the viewpoint before the heat, and treat the evening as your last taste of a crowd for a while.",
+          "thingsToDo": [
+            "Climb to the Phi Phi Don viewpoint",
+            "Snorkel round Monkey Beach (Ao Yongkasem)",
+            "Restock ice and provisions in Ton Sai",
+            "Evening drinks along Loh Dalum bay"
+          ],
+          "mooringTip": "Ton Sai Bay has official mooring buoys that beat anchoring over its shifting sand; take one and book ahead in high season, as they fill fast. Ao Yongkasem is a quieter alternative just around the headland."
+        },
+        "6": {
+          "shortDescription": "A short run to uninhabited Phi Phi Le for Maya Bay, Pileh Lagoon and some of the best snorkelling around.",
+          "description": "Phi Phi Le is barely an hour from its bigger sister, but it's a different world: no hotels, no village, just cliffs dropping straight into the sea. Maya Bay, the beach the film made famous, reopened with strict rules. You can't anchor in it, entry runs to a few hundred baht per head, and access is through Loh Samah on the back side where the rangers sit. Pileh Lagoon is the real prize for me, a flooded canyon of jade water where you can drift on the hook and swim. Loh Samah and the surrounding walls hold good coral and reef fish. Keep speed down inside the park, use the buoys, and carry your permit. Phi Phi Le itself is a day stop, not a bedroom, so plan where you'll sleep before you arrive.",
+          "thingsToDo": [
+            "Swim in Pileh Lagoon's jade water",
+            "Visit Maya Bay via Loh Samah",
+            "Snorkel the reef walls off Loh Samah",
+            "Buy the national park e-ticket ahead"
+          ],
+          "mooringTip": "No anchoring anywhere at Phi Phi Le: use the park mooring buoys only, keep under three knots and carry a valid DNP permit. Maya Bay is a day landing, so overnight on a Loh Samah park buoy if allowed, or drop back to Phi Phi Don."
+        },
+        "7": {
+          "shortDescription": "Leave the crowds behind on a longer leg south to Ko Lanta, an easygoing island with a photogenic old town.",
+          "description": "This is one of the longer legs, and a good chance to actually sail if the northeasterly fills in. Ko Lanta lies roughly twenty miles south, a big relaxed island of long beaches and coconut groves that never quite went the way of Phi Phi. On the east coast, Lanta Old Town is the reason to stop. A single street of century-old wooden shophouses stands on stilts over the water, built by Chinese and sea-gypsy traders. Wander it in the late afternoon when the light turns gold on the planks. There are simple restaurants over the water serving southern-Thai curries heavy on turmeric and coconut. Anchor off the town pier and take the dinghy in. After the intensity of the Phi Phi group, Lanta feels like exhaling.",
+          "thingsToDo": [
+            "Walk Lanta Old Town's stilt houses",
+            "Eat southern-Thai curry over the water",
+            "Anchor off the Old Town pier",
+            "Browse the sea-gypsy craft stalls"
+          ],
+          "mooringTip": "During the northeast monsoon the west-coast beaches offer easy anchoring; in the southwest season shift to the sheltered east side. Anchor off the Old Town pier on the east coast in sand and mud, and land the tender at the town jetty."
+        },
+        "8": {
+          "shortDescription": "Head into the Trang islands to Ko Muk, home of the Emerald Cave: an eighty-metre swim into a hidden beach.",
+          "description": "South of Lanta the islands thin out and the water clears. Ko Muk is the gateway to the Trang group, and its headline act is Tham Morakot, the Emerald Cave. From the seaward cliff a low opening leads into an eighty-metre tunnel that goes pitch black in the middle. You swim it, sometimes towing a dry bag, and come out in a sinkhole hong: a circle of sand and jungle with sheer walls and a coin of sky overhead. Go at low water and before the longtails, ideally with a torch and a buddy. Back aboard, the anchorage in the palm-fringed bay to the north is calm and pretty. The village side has cheap, good food and a slow, end-of-the-road feel that suits the Trang coast.",
+          "thingsToDo": [
+            "Swim the Emerald Cave tunnel to the hong",
+            "Time the cave for low water",
+            "Anchor in the palm-fringed north bay",
+            "Eat cheap in Ko Muk village"
+          ],
+          "mooringTip": "Anchor about half a mile north of the Emerald Cave in the palm-lined bay, sheltered by the limestone, rather than off the exposed western cliff. Swim the cave at low water with a torch, and don't attempt it if a swell is running into the entrance."
+        },
+        "9": {
+          "shortDescription": "A five-mile skip to Ko Kradan, widely rated the finest beach in Trang: white sand, clear water, few people.",
+          "description": "Ko Kradan is barely five miles off Ko Muk, so this is a morning's gentle sail and a whole day to do very little. The island is mostly national park, with one long stretch of white sand on the east side facing the sunrise and a reef you can snorkel straight off the beach. There's little development, a few low-key places to eat, and not much to do beyond swim, read and nap in the shade. That's the appeal. The water sits in shades of pale green over sand, deepening to blue where the reef drops away. Couples come here to marry underwater on the reef each spring, which tells you something about the setting. Anchor off the main beach, go ashore for a grilled-fish lunch, and let the day drift.",
+          "thingsToDo": [
+            "Snorkel the house reef off the beach",
+            "Laze on Ko Kradan's east-facing sand",
+            "Grilled-fish lunch at a beach shack",
+            "Kayak the clear water toward Ko Muk"
+          ],
+          "mooringTip": "Anchor off the long east-facing beach in sand for good holding and a settled night in the northeast monsoon. The reef lies close in, so drop the hook well off it and check you're not swinging over coral."
+        },
+        "10": {
+          "shortDescription": "Turn north and retrace toward Ko Lanta, an easy downwind leg with a second chance at the Old Town waterfront.",
+          "description": "The route now begins its loop back toward Phuket, and the first leg north returns you to Ko Lanta. With the usual northeasterly behind you it can be a lazy downwind run, poled out and unhurried, with the Trang islands falling away astern. Coming back to Lanta gives you a second bite: anything you missed the first time, a longer wander through the Old Town, or just a quiet beach anchorage on the west coast if the season allows. Provisioning is straightforward here through the small shops and the market, worth doing before the last few island stops where supplies thin out. Grab fresh fruit, water and ice. Then pick a beach, swim off the boat, and enjoy an evening without an early alarm.",
+          "thingsToDo": [
+            "Restock fruit and water at Lanta market",
+            "Second wander through Lanta Old Town",
+            "Downwind run poled out from Kradan",
+            "Sunset anchorage on Lanta's west coast"
+          ],
+          "mooringTip": "Re-anchor where the season suits: west-coast beaches in the northeast monsoon, the sheltered east coast if a southwesterly is blowing. Sand and mud hold well, and this is a good spot to top up water and fuel before the run back north."
+        },
+        "11": {
+          "shortDescription": "Back up to Phi Phi Don for a night, timing snorkel stops and the viewpoint before the day boats descend.",
+          "description": "The leg from Lanta back to Phi Phi Don is a straightforward twenty-odd miles, and by now the crew knows the drill. Second time around you can be smarter about the crowds. Slip into Ton Sai or grab a buoy early, do the viewpoint climb at first light before the ferries unload, and use the middle of the day for a snorkel somewhere the tour boats aren't. Bamboo Island to the north is worth the short detour for its sandbar and reef when the park is quiet. Back on Phi Phi Don, the evening still has its bars and its bustle if you want them, or you can eat quietly aboard and watch the longtails string their lights across the bay. Tomorrow the route swings west, back toward Phuket waters.",
+          "thingsToDo": [
+            "Sunrise climb to the Phi Phi viewpoint",
+            "Detour to Bamboo Island's sandbar",
+            "Snorkel a quiet bay at midday",
+            "Grab a Ton Sai mooring buoy early"
+          ],
+          "mooringTip": "Take a Ton Sai mooring buoy again rather than fight the shifting sand, and claim it early in the day. If Ton Sai is packed, Ao Yongkasem around the corner is calmer and usually has room."
+        },
+        "12": {
+          "shortDescription": "A longer westward passage out of the islands to Ko Rang Yai, a calm palm-lined isle just off east Phuket.",
+          "description": "This is the big crossing of the second week, a long haul west from Phi Phi back toward the Phuket shore. Give it most of the day and start early, since the afternoon sea breeze can build on the nose. Ko Rang Yai makes a soft landing: a low, palm-fringed island a few miles off Phuket's east coast, with easy anchoring off the west and north sides. After the drama of the Trang cliffs and Phi Phi's crowds, it's a deliberately quiet stop. Swim, snorkel the shallows, walk the beach, and let the crew wind down within sight of Phuket's lights. There's a pearl farm and a small resort ashore, but the pull here is simply calm water and a good night's sleep before the last couple of easy days.",
+          "thingsToDo": [
+            "Anchor off Ko Rang Yai's west beach",
+            "Snorkel the shallows off the north side",
+            "Beach walk under the coconut palms",
+            "Sunset within sight of Phuket's lights"
+          ],
+          "mooringTip": "Anchor off the west or north side of Ko Rang Yai, both of which give good holding in sand and shelter from the prevailing northeasterly. It's an easy, protected overnight and a short hop from Yacht Haven if you need to shorten the finish."
+        },
+        "13": {
+          "shortDescription": "Cross back into Phang Nga Bay for a final relaxed night at Ko Yao Noi before the short run home.",
+          "description": "With the loop nearly closed, the penultimate day is short and unhurried. A gentle reach takes you off Ko Rang Yai and back across into the sheltered water around Ko Yao Noi, the same easygoing island from the first week. Second time here you already know the anchorage and the pontoon at Laem Sai, so it's a chance to settle in without a guidebook. Order a last proper seafood dinner, crab and prawns and a cold Chang, and toast a fortnight that's covered sea caves, jungle-walled lagoons, park reefs and some of the quietest beaches in the country. If the crew has energy, a sunset dinghy run around the headland is a fine way to close it out. Otherwise, just watch the light go behind the karst.",
+          "thingsToDo": [
+            "Final seafood dinner at Laem Sai",
+            "Sunset dinghy run round the headland",
+            "Anchor off the familiar Yao Noi coast",
+            "Toast the fortnight with a cold Chang"
+          ],
+          "mooringTip": "Return to the anchorage off Ko Yao Noi's east coast or the Yao Yai channel you used earlier, in reliable sand and mud. It leaves only a short, calm hop to Yacht Haven for the final morning."
+        },
+        "14": {
+          "shortDescription": "A short final morning back across the bay to Yacht Haven, unpacking a two-week loop of the Andaman coast.",
+          "description": "The last leg is an easy one, which is how you want it. It's a short motor or reach from Ko Yao Noi back across to Yacht Haven, an hour or two depending on the wind, with the Phuket shore filling the view ahead. Most crews use the morning to swim one more time, square away the boat and dry the kit before the marina. Aim to be alongside with time in hand rather than rushing the approach; the fuel dock and check-in go more smoothly unhurried. Fourteen days brings you full circle, from the cave-riddled stacks of Phang Nga through the Trang islands and back. Settle the log, tip the crew if you had one, and start plotting the next fortnight before you've even stepped ashore.",
+          "thingsToDo": [
+            "Final morning swim off Ko Yao Noi",
+            "Dry kit and stow gear underway",
+            "Top up at the Yacht Haven fuel dock",
+            "Settle the log over a last coffee"
+          ],
+          "mooringTip": "Call Yacht Haven ahead on VHF for a berth and fuel-dock slot, and arrive with time to spare rather than at the last minute. Approach the marina slowly; the channel is well marked but the tide runs across it."
+        }
+      }
+    },
+    "phuket-phang-nga-week": {
+      "metaTitle": "7-Day Phang Nga Bay & Phi Phi | Boat4You",
+      "metaDesc": "Seven days from Yacht Haven, Phuket: sea caves at Ko Phanak, the hong lagoon at Ko Hong, Ko Yao Noi, Railay's cliffs and Ko Phi Phi.",
+      "days": {
+        "1": {
+          "shortDescription": "A gentle first hop south into limestone country, ending at Ko Phanak where collapsed caves open into sunlit lagoons.",
+          "description": "Provisioning done at the marina, we usually slip the lines mid-morning and point south toward the karst islands that make this bay famous. The run to Ko Phanak is short, an easy shakedown while the crew finds their feet. Anchor on the east side, where you get shelter from the prevailing breeze and roughly four metres under the keel at low water. The real reason to stop is inside the rock. Ko Phanak is riddled with tunnels and hongs, roofless lagoons that open to the sky once a cave ceiling has fallen in. Take the kayaks, not the tender, because the passages narrow and the walls are sharp enough to shred an inflatable. Time your paddle for mid-tide on the western double hong; the tunnel only clears then, and there is some current to read.",
+          "thingsToDo": [
+            "Kayak the roofless hong on the north side",
+            "Paddle the western tunnel at mid-tide",
+            "Bring a torch for the stalactite cave",
+            "Swim off the boat before sundown"
+          ],
+          "mooringTip": "Anchor off the east side in about four metres over sand; it shelters you from the usual breeze. No moorings here, so set the hook well and leave swing room for the tide."
+        },
+        "2": {
+          "shortDescription": "A short cruise deeper into the bay to Ko Hong, whose cliff-ringed lagoon opens through a single low tunnel.",
+          "description": "Ko Hong sits a little further into the national park, another short sail that leaves the afternoon free. The name means room in Thai, and that is exactly what waits inside: a lagoon walled by limestone, reached through a tunnel you take by dinghy or kayak. Go at mid to high tide, or the entrance dries out and you sit waiting on the rocks. Once through, the noise of the outside drops away and you are floating in a green bowl with the cliffs leaning overhead. There are no facilities anywhere here, no water, no fuel, no shop, so arrive self-sufficient. We tend to anchor off the beach, run the dinghy in for the lagoon, then swim straight off the transom as the light goes soft. Crews often wish they had booked two nights.",
+          "thingsToDo": [
+            "Dinghy the tunnel into the inner lagoon",
+            "Time entry for mid-to-high tide",
+            "Snorkel the limestone drop-offs off the beach",
+            "Kayak the mangrove edges at first light"
+          ],
+          "mooringTip": "Drop the hook off the beach in sand; the lagoon itself is too tight and shallow to lie in. Arrive by early afternoon so you catch the tide window for the tunnel."
+        },
+        "3": {
+          "shortDescription": "Cross the middle of the bay to Ko Yao Noi, a working Thai island with real villages and good kitchens ashore.",
+          "description": "After two nights among empty lagoons, Ko Yao Noi feels almost social. This is a lived-in island of rubber plantations, rice paddies and fishing families, and it makes a welcome change to eat ashore. Anchor off the east coast in around four metres, which holds well when the southwest breeze pipes up. Watch your timing landing the tender: the northern flats are all rock and cover at high water, so aim for the beach at the southern end. Dinner is the draw. Anchor Point does its own bread and kombucha and leans hard on local produce, while Thakhao Bay View sends plates out over the water. Rent a scooter if you have an afternoon and ride the quiet back lanes past the paddies. It is the kind of stop crews remember for the food and the calm.",
+          "thingsToDo": [
+            "Dinner at Anchor Point Koh Yao Noi",
+            "Sunset plates at Thakhao Bay View",
+            "Scooter the back lanes past rice paddies",
+            "Land the tender on the southern beach"
+          ],
+          "mooringTip": "Anchor off the east coast in about four metres of sand; it is a good hold in a fresh southwesterly. Go ashore at the southern beach, since the northern shore is rock that covers at high tide."
+        },
+        "4": {
+          "shortDescription": "Sail east to Railay, a peninsula of sheer limestone cut off from the mainland and reachable only from the water.",
+          "description": "Railay is the day everyone photographs. Towering karst walls seal the peninsula off from Krabi so completely that you can only arrive by boat, and the effect from the anchorage is genuine drama. The catch is the ground. The seabed off Railay West runs to rock in places, so pick your spot, use plenty of chain and dive the anchor if you are unsure. There are no piers, so expect to wade the tender ashore through the shallows. Once landed, walk the short path over to Phra Nang beach, past the Princess Cave with its offerings, and watch climbers working the overhanging wall above the sand. Even if you never touch the rock, it is worth the hour. We usually plan to arrive with light to spare so the anchor gets set properly before the afternoon crowd.",
+          "thingsToDo": [
+            "Walk to Phra Nang beach and Princess Cave",
+            "Watch climbers on the Phra Nang wall",
+            "Kayak from Railay West around the headland",
+            "Sundowner drinks along Railay East"
+          ],
+          "mooringTip": "The bottom off Railay West is patchy rock, so choose a sandy patch, lay generous scope and dive to check the set. There are no jetties; you will wade the tender ashore, so keep a short bow line ready."
+        },
+        "5": {
+          "shortDescription": "An open-water leg south to Phi Phi Don, trading quiet bays for turquoise water, reefs and a busy little village.",
+          "description": "This is the longest hop of the week, a proper sail out of the sheltered bay and south to the Phi Phi group. Most crews either anchor in Ton Sai, handy for the shops and bars but rarely quiet, or slip round to Loh Dalum on the north side for clearer water and easier swimming. There are three orange mooring balls on the east side of Loh Dalum worth grabbing early. The reef on the west of Ton Sai is good snorkelling straight from the boat. Maya Bay on neighbouring Phi Phi Leh is the postcard, though access is tightly controlled to protect the coral, with set hours and the odd full closure, so check the rules before you commit. Evenings ashore in Ton Sai village are lively; that is either the appeal or the reason to anchor elsewhere.",
+          "thingsToDo": [
+            "Grab a mooring ball at Loh Dalum",
+            "Snorkel the reef west of Ton Sai",
+            "Day-trip to Maya Bay within the rules",
+            "Walk up to the Phi Phi viewpoint",
+            "Dinner and drinks in Ton Sai village"
+          ],
+          "mooringTip": "Loh Dalum has three orange mooring balls on its east side; take one early in the season as they go fast. Ton Sai anchorage holds but stays busy with longtails and swell, so Loh Dalum or the eastern bays are calmer for the night."
+        },
+        "6": {
+          "shortDescription": "Sail back west toward Phuket, finishing at Ko Rang Yai, a low palm-fringed island with a broad white beach.",
+          "description": "The long leg back west runs across open water toward Phuket, and Ko Rang Yai makes an easy final anchorage before the marina. It is a flat, sandy island after days of towering rock, and the change of scale is welcome. Two anchorages work here. The west side gives you a wide white beach and clean sand to drop into, while the north side sits better protected when the southwest wind is up, so pick by the forecast. The water is calm and clear enough to swim, snorkel and paddle straight off the boat. We tend to make this a slow afternoon, get the anchor down early, and let the crew have a last long swim and a quiet dinner aboard. It is a gentle way to wind down before the short run home in the morning.",
+          "thingsToDo": [
+            "Anchor off the west-side white beach",
+            "Swim and snorkel straight off the boat",
+            "Paddle the calm shallows at dusk",
+            "Last dinner aboard at anchor"
+          ],
+          "mooringTip": "Two anchorages: the west beach for fair weather and fine white sand, the north side for shelter when the southwest breeze builds. Read the forecast and pick the lee accordingly."
+        },
+        "7": {
+          "shortDescription": "A short morning run back up to Yacht Haven, an easy final leg to hand the boat back without a rush.",
+          "description": "The last morning is short and undemanding. Yacht Haven sits on the northeast tip of Phuket, a straight and easy run from Ko Rang Yai, so there is no need to be up at dawn. We usually have a slow breakfast at anchor, take one more swim, then motor back in good time to clear the boat before the handover deadline. Coming into the marina, keep an eye on the tide; the approach dries in patches and the fairway wants respect at low water. Once alongside, there is fuel, water and a proper hot shower waiting, along with somewhere to sit and total up the week. Seven days, a bay full of caves and cliffs, and a few beaches most people only see from a day-tripper's longtail. A fair trade for a week aboard.",
+          "thingsToDo": [
+            "Slow breakfast and a final swim at anchor",
+            "Time the marina approach with the tide",
+            "Refuel and take on water at Yacht Haven",
+            "Settle up over a shore-side meal"
+          ],
+          "mooringTip": "The Yacht Haven approach shoals and dries in places, so time your arrival for a rising or high tide and follow the marked fairway. Call ahead for a berth and fuel before the handover slot."
+        }
+      }
+    }
+  },
+  "areas": {
+    "thailand": {
+      "metaTitle": "Andaman Sea Sailing Itineraries | Boat4You",
+      "metaDesc": "7- and 14-day charter routes through Phang Nga Bay, Koh Phi Phi and the Similans, with sheltered limestone anchorages and steady dry-season winds.",
+      "title": "Sail the Andaman's Limestone Island Maze",
+      "description": "Thailand's west coast sails easiest between November and April, when the northeast monsoon settles the sea and hands you steady, forgiving breeze most afternoons. Distances are short and the water stays flat behind the islands, so you spend more time swimming than trimming. Phang Nga Bay is the centrepiece: a hundred-odd limestone towers rising straight out of jade water, with sea caves you paddle into at low tide and the leaning spire of Ko Tapu, the rock made famous by James Bond, tucked among them. Drop south to Koh Phi Phi for the sheer walls of Maya Bay, or push northwest to the Similans, whose granite boulders and clear diving open only in the dry months. Insider note: anchor early. The day-tripper flotillas from Phuket clear out by mid-afternoon, so the famous bays belong to overnighting crews once the last speedboat leaves. Catamarans suit these shallow, sheltered anchorages best."
+    }
+  }
+}

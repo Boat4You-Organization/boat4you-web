@@ -7,7 +7,7 @@ const ajaccioSouthCorsicaRoute: ItineraryRoute = {
   id: 'ajaccio-south-corsica',
   startingPoint: 'Ajaccio',
   otherPoints: ['Bonifacio', 'Iles Lavezzi'],
-  cardImage: { src: '/images/destinations/france.webp', alt: 'Corsica' },
+  cardImage: { src: '/images/itinerary/france/corsica-photos/ajaccio.webp', alt: 'Corsica' },
   gallery: [],
   routeDays: [
     {
@@ -44,7 +44,7 @@ const ajaccioSouthCorsicaRoute: ItineraryRoute = {
       day: 4,
       mapPin: { desktop: { left: 72.9, top: 80.4 }, mobile: { left: 72.9, top: 80.4 } },
       description: 'Day 4: Tizzano to Bonifacio.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/france/corsica-photos/bonifacio-cliffs.webp', alt: 'Bonifacio' }],
     },
     {
       id: 'ajaccio-south-corsica-day-5',
@@ -53,7 +53,7 @@ const ajaccioSouthCorsicaRoute: ItineraryRoute = {
       day: 5,
       mapPin: { desktop: { left: 86.8, top: 86.8 }, mobile: { left: 86.8, top: 86.8 } },
       description: 'Day 5: Bonifacio to Iles Lavezzi.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/france/corsica-photos/lavezzi-islands.webp', alt: 'Iles Lavezzi' }],
     },
     {
       id: 'ajaccio-south-corsica-day-6',
@@ -62,7 +62,7 @@ const ajaccioSouthCorsicaRoute: ItineraryRoute = {
       day: 6,
       mapPin: { desktop: { left: 36.2, top: 43.9 }, mobile: { left: 36.2, top: 43.9 } },
       description: 'Day 6: Iles Lavezzi to Propriano.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/france/corsica-photos/propriano.webp', alt: 'Propriano' }],
     },
     {
       id: 'ajaccio-south-corsica-day-7',
@@ -71,7 +71,7 @@ const ajaccioSouthCorsicaRoute: ItineraryRoute = {
       day: 7,
       mapPin: { desktop: { left: 13.2, top: 13.2 }, mobile: { left: 13.2, top: 13.2 } },
       description: 'Day 7: Propriano to Ajaccio.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/france/corsica-photos/ajaccio.webp', alt: 'Ajaccio' }],
     },
   ],
   map: {

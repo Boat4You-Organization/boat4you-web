@@ -7,7 +7,7 @@ const alsaceCanalWeekRoute: ItineraryRoute = {
   id: 'alsace-canal-week',
   startingPoint: 'Hesse',
   otherPoints: ['Saverne', 'Lutzelbourg'],
-  cardImage: { src: '/images/destinations/france.webp', alt: 'French Canals' },
+  cardImage: { src: '/images/itinerary/france/french-canals-photos/canal-du-midi-barge.webp', alt: 'French Canals' },
   gallery: [],
   routeDays: [
     {
@@ -35,7 +35,7 @@ const alsaceCanalWeekRoute: ItineraryRoute = {
       day: 3,
       mapPin: { desktop: { left: 86.8, top: 13.2 }, mobile: { left: 86.8, top: 13.2 } },
       description: 'Day 3: Lutzelbourg to Saverne.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/france/french-canals-photos/saverne-alsace-canal.webp', alt: 'Saverne' }],
     },
     {
       id: 'alsace-canal-week-day-4',

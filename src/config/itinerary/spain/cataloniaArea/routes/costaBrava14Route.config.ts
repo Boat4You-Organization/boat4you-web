@@ -17,7 +17,7 @@ const costaBrava14Route: ItineraryRoute = {
       day: 1,
       mapPin: { desktop: { left: 41.4, top: 57.4 }, mobile: { left: 41.4, top: 57.4 } },
       description: 'Day 1: Barcelona (Port Olímpic) to El Masnou.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/spain/destinations/el-masnou.webp', alt: 'El Masnou' }],
     },
     {
       id: 'costa-brava-14-days-day-2',
@@ -26,7 +26,7 @@ const costaBrava14Route: ItineraryRoute = {
       day: 2,
       mapPin: { desktop: { left: 48.7, top: 50.5 }, mobile: { left: 48.7, top: 50.5 } },
       description: 'Day 2: El Masnou to Mataró.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/spain/destinations/mataro.webp', alt: 'Mataró' }],
     },
     {
       id: 'costa-brava-14-days-day-3',
@@ -44,7 +44,7 @@ const costaBrava14Route: ItineraryRoute = {
       day: 4,
       mapPin: { desktop: { left: 60.9, top: 41.4 }, mobile: { left: 60.9, top: 41.4 } },
       description: 'Day 4: Arenys de Mar to Calella.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/spain/destinations/calella.webp', alt: 'Calella' }],
     },
     {
       id: 'costa-brava-14-days-day-5',
@@ -53,7 +53,7 @@ const costaBrava14Route: ItineraryRoute = {
       day: 5,
       mapPin: { desktop: { left: 67.9, top: 34.1 }, mobile: { left: 67.9, top: 34.1 } },
       description: 'Day 5: Calella to Blanes.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/spain/destinations/blanes.webp', alt: 'Blanes' }],
     },
     {
       id: 'costa-brava-14-days-day-6',
@@ -62,7 +62,7 @@ const costaBrava14Route: ItineraryRoute = {
       day: 6,
       mapPin: { desktop: { left: 71.0, top: 31.2 }, mobile: { left: 71.0, top: 31.2 } },
       description: 'Day 6: Blanes to Lloret de Mar.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/spain/destinations/lloret-de-mar-town.webp', alt: 'Lloret de Mar' }],
     },
     {
       id: 'costa-brava-14-days-day-7',
@@ -71,7 +71,7 @@ const costaBrava14Route: ItineraryRoute = {
       day: 7,
       mapPin: { desktop: { left: 75.8, top: 28.7 }, mobile: { left: 75.8, top: 28.7 } },
       description: 'Day 7: Lloret de Mar to Tossa de Mar.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/spain/destinations/tossa-de-mar.webp', alt: 'Tossa de Mar' }],
     },
     {
       id: 'costa-brava-14-days-day-8',
@@ -80,7 +80,9 @@ const costaBrava14Route: ItineraryRoute = {
       day: 8,
       mapPin: { desktop: { left: 81.2, top: 21.3 }, mobile: { left: 81.2, top: 21.3 } },
       description: 'Day 8: Tossa de Mar to Sant Feliu de Guíxols.',
-      gallery: [],
+      gallery: [
+        { src: '/images/itinerary/spain/destinations/sant-feliu-de-guixols.webp', alt: 'Sant Feliu de Guíxols' },
+      ],
     },
     {
       id: 'costa-brava-14-days-day-9',
@@ -98,7 +100,9 @@ const costaBrava14Route: ItineraryRoute = {
       day: 10,
       mapPin: { desktop: { left: 81.2, top: 21.3 }, mobile: { left: 81.2, top: 21.3 } },
       description: 'Day 10: Palamós to Sant Feliu de Guíxols.',
-      gallery: [],
+      gallery: [
+        { src: '/images/itinerary/spain/destinations/sant-feliu-de-guixols.webp', alt: 'Sant Feliu de Guíxols' },
+      ],
     },
     {
       id: 'costa-brava-14-days-day-11',
@@ -107,7 +111,7 @@ const costaBrava14Route: ItineraryRoute = {
       day: 11,
       mapPin: { desktop: { left: 75.8, top: 28.7 }, mobile: { left: 75.8, top: 28.7 } },
       description: 'Day 11: Sant Feliu de Guíxols to Tossa de Mar.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/spain/destinations/tossa-de-mar.webp', alt: 'Tossa de Mar' }],
     },
     {
       id: 'costa-brava-14-days-day-12',
@@ -125,7 +129,7 @@ const costaBrava14Route: ItineraryRoute = {
       day: 13,
       mapPin: { desktop: { left: 18.9, top: 83.6 }, mobile: { left: 18.9, top: 83.6 } },
       description: 'Day 13: Sitges to Garraf.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/spain/destinations/garraf.webp', alt: 'Garraf' }],
     },
     {
       id: 'costa-brava-14-days-day-14',
@@ -134,7 +138,7 @@ const costaBrava14Route: ItineraryRoute = {
       day: 14,
       mapPin: { desktop: { left: 33.7, top: 69.0 }, mobile: { left: 33.7, top: 69.0 } },
       description: 'Day 14: Garraf to Barcelona (Port Olímpic).',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/spain/destinations/barcelona.webp', alt: 'Barcelona (Port Olímpic)' }],
     },
   ],
   map: {

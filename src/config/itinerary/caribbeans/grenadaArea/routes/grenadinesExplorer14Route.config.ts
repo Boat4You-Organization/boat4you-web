@@ -17,7 +17,7 @@ const grenadinesExplorer14Route: ItineraryRoute = {
       day: 1,
       mapPin: { desktop: { left: 13.8, top: 83.2 }, mobile: { left: 13.8, top: 83.2 } },
       description: 'Day 1: Port Louis Marina to Dragon Bay, Grenada.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/caribbeans/destinations/dragon-bay.webp', alt: 'Dragon Bay, Grenada' }],
     },
     {
       id: 'grenadines-explorer-14-days-day-2',
@@ -26,7 +26,7 @@ const grenadinesExplorer14Route: ItineraryRoute = {
       day: 2,
       mapPin: { desktop: { left: 62.8, top: 36.6 }, mobile: { left: 62.8, top: 36.6 } },
       description: 'Day 2: Dragon Bay, Grenada to Tyrell Bay, Carriacou.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/caribbeans/destinations/tyrell-bay.webp', alt: 'Tyrell Bay, Carriacou' }],
     },
     {
       id: 'grenadines-explorer-14-days-day-3',
@@ -35,7 +35,7 @@ const grenadinesExplorer14Route: ItineraryRoute = {
       day: 3,
       mapPin: { desktop: { left: 60.7, top: 32.0 }, mobile: { left: 60.7, top: 32.0 } },
       description: 'Day 3: Tyrell Bay, Carriacou to Sandy Island, Carriacou.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/caribbeans/destinations/sandy-island.webp', alt: 'Sandy Island, Carriacou' }],
     },
     {
       id: 'grenadines-explorer-14-days-day-4',
@@ -44,7 +44,9 @@ const grenadinesExplorer14Route: ItineraryRoute = {
       day: 4,
       mapPin: { desktop: { left: 77.5, top: 13.2 }, mobile: { left: 77.5, top: 13.2 } },
       description: 'Day 4: Sandy Island, Carriacou to Salt Whistle Bay, Mayreau.',
-      gallery: [],
+      gallery: [
+        { src: '/images/itinerary/caribbeans/destinations/salt-whistle-bay.webp', alt: 'Salt Whistle Bay, Mayreau' },
+      ],
     },
     {
       id: 'grenadines-explorer-14-days-day-5',
@@ -53,7 +55,7 @@ const grenadinesExplorer14Route: ItineraryRoute = {
       day: 5,
       mapPin: { desktop: { left: 86.8, top: 14.6 }, mobile: { left: 86.8, top: 14.6 } },
       description: 'Day 5: Salt Whistle Bay, Mayreau to Tobago Cays.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/caribbeans/destinations/tobago-cays.webp', alt: 'Tobago Cays' }],
     },
     {
       id: 'grenadines-explorer-14-days-day-6',
@@ -62,7 +64,7 @@ const grenadinesExplorer14Route: ItineraryRoute = {
       day: 6,
       mapPin: { desktop: { left: 86.8, top: 14.6 }, mobile: { left: 86.8, top: 14.6 } },
       description: 'Day 6: Tobago Cays to Tobago Cays.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/caribbeans/destinations/tobago-cays.webp', alt: 'Tobago Cays' }],
     },
     {
       id: 'grenadines-explorer-14-days-day-7',
@@ -71,7 +73,9 @@ const grenadinesExplorer14Route: ItineraryRoute = {
       day: 7,
       mapPin: { desktop: { left: 77.5, top: 13.2 }, mobile: { left: 77.5, top: 13.2 } },
       description: 'Day 7: Tobago Cays to Salt Whistle Bay, Mayreau.',
-      gallery: [],
+      gallery: [
+        { src: '/images/itinerary/caribbeans/destinations/salt-whistle-bay.webp', alt: 'Salt Whistle Bay, Mayreau' },
+      ],
     },
     {
       id: 'grenadines-explorer-14-days-day-8',
@@ -80,7 +84,7 @@ const grenadinesExplorer14Route: ItineraryRoute = {
       day: 8,
       mapPin: { desktop: { left: 62.8, top: 36.6 }, mobile: { left: 62.8, top: 36.6 } },
       description: 'Day 8: Salt Whistle Bay, Mayreau to Tyrell Bay, Carriacou.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/caribbeans/destinations/tyrell-bay.webp', alt: 'Tyrell Bay, Carriacou' }],
     },
     {
       id: 'grenadines-explorer-14-days-day-9',
@@ -89,7 +93,7 @@ const grenadinesExplorer14Route: ItineraryRoute = {
       day: 9,
       mapPin: { desktop: { left: 60.7, top: 32.0 }, mobile: { left: 60.7, top: 32.0 } },
       description: 'Day 9: Tyrell Bay, Carriacou to Sandy Island, Carriacou.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/caribbeans/destinations/sandy-island.webp', alt: 'Sandy Island, Carriacou' }],
     },
     {
       id: 'grenadines-explorer-14-days-day-10',
@@ -98,7 +102,7 @@ const grenadinesExplorer14Route: ItineraryRoute = {
       day: 10,
       mapPin: { desktop: { left: 62.8, top: 36.6 }, mobile: { left: 62.8, top: 36.6 } },
       description: 'Day 10: Sandy Island, Carriacou to Tyrell Bay, Carriacou.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/caribbeans/destinations/tyrell-bay.webp', alt: 'Tyrell Bay, Carriacou' }],
     },
     {
       id: 'grenadines-explorer-14-days-day-11',
@@ -107,7 +111,7 @@ const grenadinesExplorer14Route: ItineraryRoute = {
       day: 11,
       mapPin: { desktop: { left: 13.8, top: 83.2 }, mobile: { left: 13.8, top: 83.2 } },
       description: 'Day 11: Tyrell Bay, Carriacou to Dragon Bay, Grenada.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/caribbeans/destinations/dragon-bay.webp', alt: 'Dragon Bay, Grenada' }],
     },
     {
       id: 'grenadines-explorer-14-days-day-12',
@@ -116,7 +120,7 @@ const grenadinesExplorer14Route: ItineraryRoute = {
       day: 12,
       mapPin: { desktop: { left: 27.3, top: 78.6 }, mobile: { left: 27.3, top: 78.6 } },
       description: 'Day 12: Dragon Bay, Grenada to St. George’s, Grenada.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/caribbeans/destinations/st-george.webp', alt: 'St. George’s, Grenada' }],
     },
     {
       id: 'grenadines-explorer-14-days-day-13',
@@ -125,7 +129,7 @@ const grenadinesExplorer14Route: ItineraryRoute = {
       day: 13,
       mapPin: { desktop: { left: 13.8, top: 83.2 }, mobile: { left: 13.8, top: 83.2 } },
       description: 'Day 13: St. George’s, Grenada to Dragon Bay, Grenada.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/caribbeans/destinations/dragon-bay.webp', alt: 'Dragon Bay, Grenada' }],
     },
     {
       id: 'grenadines-explorer-14-days-day-14',
@@ -134,7 +138,7 @@ const grenadinesExplorer14Route: ItineraryRoute = {
       day: 14,
       mapPin: { desktop: { left: 13.2, top: 86.8 }, mobile: { left: 13.2, top: 86.8 } },
       description: 'Day 14: Dragon Bay, Grenada to Port Louis Marina.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/caribbeans/destinations/port-louis-marina.webp', alt: 'Port Louis Marina' }],
     },
   ],
   map: {

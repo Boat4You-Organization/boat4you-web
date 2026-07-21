@@ -7,7 +7,7 @@ const corsicaGrandTour14Route: ItineraryRoute = {
   id: 'corsica-grand-tour-14-days',
   startingPoint: 'Ajaccio',
   otherPoints: ['Girolata', 'Bonifacio', 'Porto-Vecchio'],
-  cardImage: { src: '/images/destinations/france.webp', alt: 'Corsica' },
+  cardImage: { src: '/images/itinerary/france/corsica-photos/ajaccio.webp', alt: 'Corsica' },
   gallery: [],
   routeDays: [
     {
@@ -44,7 +44,7 @@ const corsicaGrandTour14Route: ItineraryRoute = {
       day: 4,
       mapPin: { desktop: { left: 20.4, top: 26.4 }, mobile: { left: 20.4, top: 26.4 } },
       description: 'Day 4: Capo Rosso to Girolata.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/france/corsica-photos/girolata.webp', alt: 'Girolata' }],
     },
     {
       id: 'corsica-grand-tour-14-days-day-5',
@@ -53,7 +53,7 @@ const corsicaGrandTour14Route: ItineraryRoute = {
       day: 5,
       mapPin: { desktop: { left: 34.9, top: 13.2 }, mobile: { left: 34.9, top: 13.2 } },
       description: 'Day 5: Girolata to Calvi.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/france/corsica-photos/calvi-citadel.webp', alt: 'Calvi' }],
     },
     {
       id: 'corsica-grand-tour-14-days-day-6',
@@ -62,7 +62,7 @@ const corsicaGrandTour14Route: ItineraryRoute = {
       day: 6,
       mapPin: { desktop: { left: 20.4, top: 26.4 }, mobile: { left: 20.4, top: 26.4 } },
       description: 'Day 6: Calvi to Girolata.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/france/corsica-photos/girolata.webp', alt: 'Girolata' }],
     },
     {
       id: 'corsica-grand-tour-14-days-day-7',
@@ -71,7 +71,7 @@ const corsicaGrandTour14Route: ItineraryRoute = {
       day: 7,
       mapPin: { desktop: { left: 33.0, top: 52.1 }, mobile: { left: 33.0, top: 52.1 } },
       description: 'Day 7: Girolata to Ajaccio.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/france/corsica-photos/ajaccio.webp', alt: 'Ajaccio' }],
     },
     {
       id: 'corsica-grand-tour-14-days-day-8',
@@ -98,7 +98,7 @@ const corsicaGrandTour14Route: ItineraryRoute = {
       day: 10,
       mapPin: { desktop: { left: 75.2, top: 83.7 }, mobile: { left: 75.2, top: 83.7 } },
       description: 'Day 10: Campomoro to Bonifacio.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/france/corsica-photos/bonifacio-cliffs.webp', alt: 'Bonifacio' }],
     },
     {
       id: 'corsica-grand-tour-14-days-day-11',
@@ -107,7 +107,7 @@ const corsicaGrandTour14Route: ItineraryRoute = {
       day: 11,
       mapPin: { desktop: { left: 85.0, top: 86.8 }, mobile: { left: 85.0, top: 86.8 } },
       description: 'Day 11: Bonifacio to Iles Lavezzi.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/france/corsica-photos/lavezzi-islands.webp', alt: 'Iles Lavezzi' }],
     },
     {
       id: 'corsica-grand-tour-14-days-day-12',
@@ -125,7 +125,7 @@ const corsicaGrandTour14Route: ItineraryRoute = {
       day: 13,
       mapPin: { desktop: { left: 49.2, top: 66.6 }, mobile: { left: 49.2, top: 66.6 } },
       description: 'Day 13: Rondinara to Propriano.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/france/corsica-photos/propriano.webp', alt: 'Propriano' }],
     },
     {
       id: 'corsica-grand-tour-14-days-day-14',
@@ -134,7 +134,7 @@ const corsicaGrandTour14Route: ItineraryRoute = {
       day: 14,
       mapPin: { desktop: { left: 33.0, top: 52.1 }, mobile: { left: 33.0, top: 52.1 } },
       description: 'Day 14: Propriano to Ajaccio.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/france/corsica-photos/ajaccio.webp', alt: 'Ajaccio' }],
     },
   ],
   map: {

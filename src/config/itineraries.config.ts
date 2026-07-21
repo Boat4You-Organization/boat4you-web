@@ -17,9 +17,12 @@ import {
   coteAzurItinerary,
   frenchCanalsItinerary,
 } from './itinerary/france';
+import { germanyItinerary } from './itinerary/germany';
 import { amalfiItinerary, sardiniaItinerary, sicilyItinerary } from './itinerary/italy';
 import { montenegroItinerary } from './itinerary/montenegro';
+import { netherlandsItinerary } from './itinerary/netherlands';
 import { seychellesItinerary } from './itinerary/seychelles';
+import { thailandItinerary } from './itinerary/thailand';
 import { bodrumItinerary, gocekItinerary } from './itinerary/turkey';
 
 // Raw country-grouped config. Text lives in the per-country config files
@@ -55,6 +58,18 @@ const rawItineraries: Itineraries[] = [
   {
     country: 'Seychelles',
     itinerary: [seychellesItinerary],
+  },
+  {
+    country: 'Thailand',
+    itinerary: [thailandItinerary],
+  },
+  {
+    country: 'Netherlands',
+    itinerary: [netherlandsItinerary],
+  },
+  {
+    country: 'Germany',
+    itinerary: [germanyItinerary],
   },
   {
     country: 'Italy',

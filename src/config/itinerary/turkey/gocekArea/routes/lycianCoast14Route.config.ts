@@ -17,7 +17,7 @@ const lycianCoast14Route: ItineraryRoute = {
       day: 1,
       mapPin: { desktop: { left: 61.1, top: 34.6 }, mobile: { left: 61.1, top: 34.6 } },
       description: 'Day 1: Göcek to Sarsala Bay.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/turkey/destinations/sarsala-bay.webp', alt: 'Sarsala Bay' }],
     },
     {
       id: 'lycian-coast-14-days-day-2',
@@ -35,7 +35,7 @@ const lycianCoast14Route: ItineraryRoute = {
       day: 3,
       mapPin: { desktop: { left: 58.6, top: 34.7 }, mobile: { left: 58.6, top: 34.7 } },
       description: 'Day 3: Kapı Creek to Ruin Bay.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/turkey/destinations/ruin-bay.webp', alt: 'Ruin Bay' }],
     },
     {
       id: 'lycian-coast-14-days-day-4',
@@ -44,7 +44,7 @@ const lycianCoast14Route: ItineraryRoute = {
       day: 4,
       mapPin: { desktop: { left: 67.1, top: 38.1 }, mobile: { left: 67.1, top: 38.1 } },
       description: 'Day 4: Ruin Bay to Wall Bay.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/turkey/destinations/wall-bay.webp', alt: 'Wall Bay' }],
     },
     {
       id: 'lycian-coast-14-days-day-5',
@@ -53,7 +53,7 @@ const lycianCoast14Route: ItineraryRoute = {
       day: 5,
       mapPin: { desktop: { left: 85.2, top: 64.0 }, mobile: { left: 85.2, top: 64.0 } },
       description: 'Day 5: Wall Bay to Fethiye.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/turkey/destinations/fethiye.webp', alt: 'Fethiye' }],
     },
     {
       id: 'lycian-coast-14-days-day-6',
@@ -62,7 +62,7 @@ const lycianCoast14Route: ItineraryRoute = {
       day: 6,
       mapPin: { desktop: { left: 77.7, top: 80.3 }, mobile: { left: 77.7, top: 80.3 } },
       description: 'Day 6: Fethiye to Gemiler Island.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/turkey/destinations/gemiler-island.webp', alt: 'Gemiler Island' }],
     },
     {
       id: 'lycian-coast-14-days-day-7',
@@ -80,7 +80,7 @@ const lycianCoast14Route: ItineraryRoute = {
       day: 8,
       mapPin: { desktop: { left: 84.5, top: 86.8 }, mobile: { left: 84.5, top: 86.8 } },
       description: 'Day 8: Ölüdeniz to Butterfly Valley.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/turkey/destinations/butterfly-valley.webp', alt: 'Butterfly Valley' }],
     },
     {
       id: 'lycian-coast-14-days-day-9',
@@ -98,7 +98,7 @@ const lycianCoast14Route: ItineraryRoute = {
       day: 10,
       mapPin: { desktop: { left: 77.7, top: 80.3 }, mobile: { left: 77.7, top: 80.3 } },
       description: 'Day 10: Coldwater Bay to Gemiler Island.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/turkey/destinations/gemiler-island.webp', alt: 'Gemiler Island' }],
     },
     {
       id: 'lycian-coast-14-days-day-11',
@@ -107,7 +107,7 @@ const lycianCoast14Route: ItineraryRoute = {
       day: 11,
       mapPin: { desktop: { left: 13.2, top: 13.2 }, mobile: { left: 13.2, top: 13.2 } },
       description: 'Day 11: Gemiler Island to Ekincik.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/turkey/destinations/ekincik.webp', alt: 'Ekincik' }],
     },
     {
       id: 'lycian-coast-14-days-day-12',
@@ -125,7 +125,7 @@ const lycianCoast14Route: ItineraryRoute = {
       day: 13,
       mapPin: { desktop: { left: 61.1, top: 34.6 }, mobile: { left: 61.1, top: 34.6 } },
       description: 'Day 13: Kızıkuyruk Koyu to Sarsala Bay.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/turkey/destinations/sarsala-bay.webp', alt: 'Sarsala Bay' }],
     },
     {
       id: 'lycian-coast-14-days-day-14',
@@ -134,7 +134,7 @@ const lycianCoast14Route: ItineraryRoute = {
       day: 14,
       mapPin: { desktop: { left: 63.3, top: 32.3 }, mobile: { left: 63.3, top: 32.3 } },
       description: 'Day 14: Sarsala Bay to Göcek.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/turkey/destinations/gocek.webp', alt: 'Göcek' }],
     },
   ],
   map: {

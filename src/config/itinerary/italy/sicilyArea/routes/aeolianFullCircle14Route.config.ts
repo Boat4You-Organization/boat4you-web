@@ -17,7 +17,7 @@ const aeolianFullCircle14Route: ItineraryRoute = {
       day: 1,
       mapPin: { desktop: { left: 70.0, top: 50.9 }, mobile: { left: 70.0, top: 50.9 } },
       description: 'Day 1: Portorosa to Vulcano Porto.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/italy/destinations/vulcano.webp', alt: 'Vulcano Porto' }],
     },
     {
       id: 'aeolian-full-circle-14-days-day-2',
@@ -26,7 +26,7 @@ const aeolianFullCircle14Route: ItineraryRoute = {
       day: 2,
       mapPin: { desktop: { left: 69.7, top: 45.2 }, mobile: { left: 69.7, top: 45.2 } },
       description: 'Day 2: Vulcano Porto to Lipari.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/italy/destinations/lipari.webp', alt: 'Lipari' }],
     },
     {
       id: 'aeolian-full-circle-14-days-day-3',
@@ -35,7 +35,7 @@ const aeolianFullCircle14Route: ItineraryRoute = {
       day: 3,
       mapPin: { desktop: { left: 66.3, top: 34.4 }, mobile: { left: 66.3, top: 34.4 } },
       description: 'Day 3: Lipari to Salina.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/italy/destinations/salina-island.webp', alt: 'Salina' }],
     },
     {
       id: 'aeolian-full-circle-14-days-day-4',
@@ -44,7 +44,7 @@ const aeolianFullCircle14Route: ItineraryRoute = {
       day: 4,
       mapPin: { desktop: { left: 56.6, top: 34.3 }, mobile: { left: 56.6, top: 34.3 } },
       description: 'Day 4: Salina to Filicudi Porto.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/italy/destinations/filicudi.webp', alt: 'Filicudi Porto' }],
     },
     {
       id: 'aeolian-full-circle-14-days-day-5',
@@ -53,7 +53,7 @@ const aeolianFullCircle14Route: ItineraryRoute = {
       day: 5,
       mapPin: { desktop: { left: 66.3, top: 34.4 }, mobile: { left: 66.3, top: 34.4 } },
       description: 'Day 5: Filicudi Porto to Salina.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/italy/destinations/salina-island.webp', alt: 'Salina' }],
     },
     {
       id: 'aeolian-full-circle-14-days-day-6',
@@ -62,7 +62,7 @@ const aeolianFullCircle14Route: ItineraryRoute = {
       day: 6,
       mapPin: { desktop: { left: 73.9, top: 28.4 }, mobile: { left: 73.9, top: 28.4 } },
       description: 'Day 6: Salina to Panarea.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/italy/destinations/panarea.webp', alt: 'Panarea' }],
     },
     {
       id: 'aeolian-full-circle-14-days-day-7',
@@ -71,7 +71,7 @@ const aeolianFullCircle14Route: ItineraryRoute = {
       day: 7,
       mapPin: { desktop: { left: 78.8, top: 13.2 }, mobile: { left: 78.8, top: 13.2 } },
       description: 'Day 7: Panarea to Stromboli.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/italy/destinations/stromboli.webp', alt: 'Stromboli' }],
     },
     {
       id: 'aeolian-full-circle-14-days-day-8',
@@ -80,7 +80,7 @@ const aeolianFullCircle14Route: ItineraryRoute = {
       day: 8,
       mapPin: { desktop: { left: 73.9, top: 28.4 }, mobile: { left: 73.9, top: 28.4 } },
       description: 'Day 8: Stromboli to Panarea.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/italy/destinations/panarea.webp', alt: 'Panarea' }],
     },
     {
       id: 'aeolian-full-circle-14-days-day-9',
@@ -89,7 +89,7 @@ const aeolianFullCircle14Route: ItineraryRoute = {
       day: 9,
       mapPin: { desktop: { left: 69.7, top: 45.2 }, mobile: { left: 69.7, top: 45.2 } },
       description: 'Day 9: Panarea to Lipari.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/italy/destinations/lipari.webp', alt: 'Lipari' }],
     },
     {
       id: 'aeolian-full-circle-14-days-day-10',
@@ -98,7 +98,7 @@ const aeolianFullCircle14Route: ItineraryRoute = {
       day: 10,
       mapPin: { desktop: { left: 70.0, top: 50.9 }, mobile: { left: 70.0, top: 50.9 } },
       description: 'Day 10: Lipari to Vulcano Porto.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/italy/destinations/vulcano.webp', alt: 'Vulcano Porto' }],
     },
     {
       id: 'aeolian-full-circle-14-days-day-11',
@@ -107,7 +107,7 @@ const aeolianFullCircle14Route: ItineraryRoute = {
       day: 11,
       mapPin: { desktop: { left: 36.7, top: 86.8 }, mobile: { left: 36.7, top: 86.8 } },
       description: 'Day 11: Vulcano Porto to Cefalù.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/italy/destinations/cefalu.webp', alt: 'Cefalù' }],
     },
     {
       id: 'aeolian-full-circle-14-days-day-12',
@@ -116,7 +116,7 @@ const aeolianFullCircle14Route: ItineraryRoute = {
       day: 12,
       mapPin: { desktop: { left: 13.2, top: 79.3 }, mobile: { left: 13.2, top: 79.3 } },
       description: 'Day 12: Cefalù to Palermo.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/italy/destinations/palermo.webp', alt: 'Palermo' }],
     },
     {
       id: 'aeolian-full-circle-14-days-day-13',
@@ -125,7 +125,7 @@ const aeolianFullCircle14Route: ItineraryRoute = {
       day: 13,
       mapPin: { desktop: { left: 36.7, top: 86.8 }, mobile: { left: 36.7, top: 86.8 } },
       description: 'Day 13: Palermo to Cefalù.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/italy/destinations/cefalu.webp', alt: 'Cefalù' }],
     },
     {
       id: 'aeolian-full-circle-14-days-day-14',
@@ -134,7 +134,7 @@ const aeolianFullCircle14Route: ItineraryRoute = {
       day: 14,
       mapPin: { desktop: { left: 86.8, top: 82.2 }, mobile: { left: 86.8, top: 82.2 } },
       description: 'Day 14: Cefalù to Portorosa.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/italy/destinations/portorosa.webp', alt: 'Portorosa' }],
     },
   ],
   map: {

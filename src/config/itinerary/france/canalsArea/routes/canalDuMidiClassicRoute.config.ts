@@ -7,7 +7,7 @@ const canalDuMidiClassicRoute: ItineraryRoute = {
   id: 'canal-du-midi-classic',
   startingPoint: 'Castelnaudary',
   otherPoints: ['Carcassonne', 'Le Somail'],
-  cardImage: { src: '/images/destinations/france.webp', alt: 'French Canals' },
+  cardImage: { src: '/images/itinerary/france/french-canals-photos/castelnaudary.webp', alt: 'French Canals' },
   gallery: [],
   routeDays: [
     {
@@ -26,7 +26,7 @@ const canalDuMidiClassicRoute: ItineraryRoute = {
       day: 2,
       mapPin: { desktop: { left: 36.4, top: 85.1 }, mobile: { left: 36.4, top: 85.1 } },
       description: 'Day 2: Bram to Carcassonne.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/france/french-canals-photos/carcassonne-walls.webp', alt: 'Carcassonne' }],
     },
     {
       id: 'canal-du-midi-classic-day-3',
@@ -53,7 +53,7 @@ const canalDuMidiClassicRoute: ItineraryRoute = {
       day: 5,
       mapPin: { desktop: { left: 66.3, top: 61.0 }, mobile: { left: 66.3, top: 61.0 } },
       description: 'Day 5: Homps to Le Somail.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/france/french-canals-photos/le-somail.webp', alt: 'Le Somail' }],
     },
     {
       id: 'canal-du-midi-classic-day-6',
@@ -71,7 +71,7 @@ const canalDuMidiClassicRoute: ItineraryRoute = {
       day: 7,
       mapPin: { desktop: { left: 86.8, top: 13.2 }, mobile: { left: 86.8, top: 13.2 } },
       description: 'Day 7: Capestang to Beziers.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/france/french-canals-photos/beziers-locks.webp', alt: 'Beziers' }],
     },
   ],
   map: {

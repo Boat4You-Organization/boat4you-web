@@ -1,0 +1,1 @@
+export { germanyItinerary } from './balticArea';

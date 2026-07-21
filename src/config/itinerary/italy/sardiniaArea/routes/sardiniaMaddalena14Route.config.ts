@@ -17,7 +17,7 @@ const sardiniaMaddalena14Route: ItineraryRoute = {
       day: 1,
       mapPin: { desktop: { left: 86.8, top: 84.5 }, mobile: { left: 86.8, top: 84.5 } },
       description: 'Day 1: Olbia to Tavolara Island.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/italy/destinations/tavolara-island.webp', alt: 'Tavolara Island' }],
     },
     {
       id: 'sardinia-maddalena-14-days-day-2',
@@ -26,7 +26,7 @@ const sardiniaMaddalena14Route: ItineraryRoute = {
       day: 2,
       mapPin: { desktop: { left: 78.3, top: 86.8 }, mobile: { left: 78.3, top: 86.8 } },
       description: 'Day 2: Tavolara Island to Porto San Paolo.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/italy/destinations/porto-san-paolo.webp', alt: 'Porto San Paolo' }],
     },
     {
       id: 'sardinia-maddalena-14-days-day-3',
@@ -35,7 +35,7 @@ const sardiniaMaddalena14Route: ItineraryRoute = {
       day: 3,
       mapPin: { desktop: { left: 75.1, top: 71.2 }, mobile: { left: 75.1, top: 71.2 } },
       description: 'Day 3: Porto San Paolo to Golfo Aranci.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/italy/destinations/golfo-aranci.webp', alt: 'Golfo Aranci' }],
     },
     {
       id: 'sardinia-maddalena-14-days-day-4',
@@ -44,7 +44,7 @@ const sardiniaMaddalena14Route: ItineraryRoute = {
       day: 4,
       mapPin: { desktop: { left: 64.8, top: 65.2 }, mobile: { left: 64.8, top: 65.2 } },
       description: 'Day 4: Golfo Aranci to Porto Rotondo.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/italy/destinations/porto-san-paolo.webp', alt: 'Porto Rotondo' }],
     },
     {
       id: 'sardinia-maddalena-14-days-day-5',
@@ -53,7 +53,7 @@ const sardiniaMaddalena14Route: ItineraryRoute = {
       day: 5,
       mapPin: { desktop: { left: 63.9, top: 49.8 }, mobile: { left: 63.9, top: 49.8 } },
       description: 'Day 5: Porto Rotondo to Porto Cervo.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/italy/destinations/porto-san-paolo.webp', alt: 'Porto Cervo' }],
     },
     {
       id: 'sardinia-maddalena-14-days-day-6',
@@ -62,7 +62,7 @@ const sardiniaMaddalena14Route: ItineraryRoute = {
       day: 6,
       mapPin: { desktop: { left: 66.2, top: 68.5 }, mobile: { left: 66.2, top: 68.5 } },
       description: 'Day 6: Porto Cervo to Portisco.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/italy/destinations/portisco.webp', alt: 'Portisco' }],
     },
     {
       id: 'sardinia-maddalena-14-days-day-7',
@@ -71,7 +71,7 @@ const sardiniaMaddalena14Route: ItineraryRoute = {
       day: 7,
       mapPin: { desktop: { left: 54.9, top: 39.4 }, mobile: { left: 54.9, top: 39.4 } },
       description: 'Day 7: Portisco to Caprera.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/italy/destinations/caprera.webp', alt: 'Caprera' }],
     },
     {
       id: 'sardinia-maddalena-14-days-day-8',
@@ -80,7 +80,7 @@ const sardiniaMaddalena14Route: ItineraryRoute = {
       day: 8,
       mapPin: { desktop: { left: 46.1, top: 39.0 }, mobile: { left: 46.1, top: 39.0 } },
       description: 'Day 8: Caprera to La Maddalena.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/italy/destinations/la-maddalena.webp', alt: 'La Maddalena' }],
     },
     {
       id: 'sardinia-maddalena-14-days-day-9',
@@ -89,7 +89,7 @@ const sardiniaMaddalena14Route: ItineraryRoute = {
       day: 9,
       mapPin: { desktop: { left: 36.8, top: 34.0 }, mobile: { left: 36.8, top: 34.0 } },
       description: 'Day 9: La Maddalena to Spargi.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/italy/destinations/spargi.webp', alt: 'Spargi' }],
     },
     {
       id: 'sardinia-maddalena-14-days-day-10',
@@ -98,7 +98,7 @@ const sardiniaMaddalena14Route: ItineraryRoute = {
       day: 10,
       mapPin: { desktop: { left: 16.9, top: 34.7 }, mobile: { left: 16.9, top: 34.7 } },
       description: 'Day 10: Spargi to Santa Teresa Gallura.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/italy/destinations/santa-teresa-gallura.webp', alt: 'Santa Teresa Gallura' }],
     },
     {
       id: 'sardinia-maddalena-14-days-day-11',
@@ -107,7 +107,7 @@ const sardiniaMaddalena14Route: ItineraryRoute = {
       day: 11,
       mapPin: { desktop: { left: 13.2, top: 13.2 }, mobile: { left: 13.2, top: 13.2 } },
       description: 'Day 11: Santa Teresa Gallura to Bonifacio.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/italy/destinations/bonifacio.webp', alt: 'Bonifacio' }],
     },
     {
       id: 'sardinia-maddalena-14-days-day-12',
@@ -116,7 +116,7 @@ const sardiniaMaddalena14Route: ItineraryRoute = {
       day: 12,
       mapPin: { desktop: { left: 43.4, top: 43.5 }, mobile: { left: 43.4, top: 43.5 } },
       description: 'Day 12: Bonifacio to Palau.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/italy/destinations/palau.webp', alt: 'Palau' }],
     },
     {
       id: 'sardinia-maddalena-14-days-day-13',
@@ -125,7 +125,7 @@ const sardiniaMaddalena14Route: ItineraryRoute = {
       day: 13,
       mapPin: { desktop: { left: 86.8, top: 84.5 }, mobile: { left: 86.8, top: 84.5 } },
       description: 'Day 13: Palau to Tavolara Island.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/italy/destinations/tavolara-island.webp', alt: 'Tavolara Island' }],
     },
     {
       id: 'sardinia-maddalena-14-days-day-14',
@@ -134,7 +134,7 @@ const sardiniaMaddalena14Route: ItineraryRoute = {
       day: 14,
       mapPin: { desktop: { left: 58.9, top: 80.9 }, mobile: { left: 58.9, top: 80.9 } },
       description: 'Day 14: Tavolara Island to Olbia.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/italy/destinations/olbia.webp', alt: 'Olbia' }],
     },
   ],
   map: {

@@ -17,7 +17,7 @@ const amalfiCilento14Route: ItineraryRoute = {
       day: 1,
       mapPin: { desktop: { left: 55.7, top: 31.7 }, mobile: { left: 55.7, top: 31.7 } },
       description: 'Day 1: Salerno to Cetara.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/italy/destinations/cetara.webp', alt: 'Cetara' }],
     },
     {
       id: 'amalfi-cilento-14-days-day-2',
@@ -26,7 +26,7 @@ const amalfiCilento14Route: ItineraryRoute = {
       day: 2,
       mapPin: { desktop: { left: 50.3, top: 32.9 }, mobile: { left: 50.3, top: 32.9 } },
       description: 'Day 2: Cetara to Amalfi.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/italy/destinations/amalfi.webp', alt: 'Amalfi' }],
     },
     {
       id: 'amalfi-cilento-14-days-day-3',
@@ -35,7 +35,7 @@ const amalfiCilento14Route: ItineraryRoute = {
       day: 3,
       mapPin: { desktop: { left: 44.0, top: 33.5 }, mobile: { left: 44.0, top: 33.5 } },
       description: 'Day 3: Amalfi to Positano.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/italy/destinations/positano.webp', alt: 'Positano' }],
     },
     {
       id: 'amalfi-cilento-14-days-day-4',
@@ -44,7 +44,7 @@ const amalfiCilento14Route: ItineraryRoute = {
       day: 4,
       mapPin: { desktop: { left: 38.2, top: 33.6 }, mobile: { left: 38.2, top: 33.6 } },
       description: 'Day 4: Positano to Sorrento.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/italy/destinations/sorrento.webp', alt: 'Sorrento' }],
     },
     {
       id: 'amalfi-cilento-14-days-day-5',
@@ -53,7 +53,7 @@ const amalfiCilento14Route: ItineraryRoute = {
       day: 5,
       mapPin: { desktop: { left: 32.4, top: 13.2 }, mobile: { left: 32.4, top: 13.2 } },
       description: 'Day 5: Sorrento to Naples.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/italy/destinations/naples.webp', alt: 'Naples' }],
     },
     {
       id: 'amalfi-cilento-14-days-day-6',
@@ -71,7 +71,7 @@ const amalfiCilento14Route: ItineraryRoute = {
       day: 7,
       mapPin: { desktop: { left: 13.2, top: 22.9 }, mobile: { left: 13.2, top: 22.9 } },
       description: 'Day 7: Ischia to Casamicciola Terme.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/italy/destinations/casamicciola.webp', alt: 'Casamicciola Terme' }],
     },
     {
       id: 'amalfi-cilento-14-days-day-8',
@@ -80,7 +80,7 @@ const amalfiCilento14Route: ItineraryRoute = {
       day: 8,
       mapPin: { desktop: { left: 38.2, top: 33.6 }, mobile: { left: 38.2, top: 33.6 } },
       description: 'Day 8: Casamicciola Terme to Sorrento.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/italy/destinations/sorrento.webp', alt: 'Sorrento' }],
     },
     {
       id: 'amalfi-cilento-14-days-day-9',
@@ -89,7 +89,7 @@ const amalfiCilento14Route: ItineraryRoute = {
       day: 9,
       mapPin: { desktop: { left: 50.3, top: 32.9 }, mobile: { left: 50.3, top: 32.9 } },
       description: 'Day 9: Sorrento to Amalfi.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/italy/destinations/amalfi.webp', alt: 'Amalfi' }],
     },
     {
       id: 'amalfi-cilento-14-days-day-10',
@@ -98,7 +98,7 @@ const amalfiCilento14Route: ItineraryRoute = {
       day: 10,
       mapPin: { desktop: { left: 71.3, top: 58.3 }, mobile: { left: 71.3, top: 58.3 } },
       description: 'Day 10: Amalfi to Agropoli.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/italy/destinations/agropoli.webp', alt: 'Agropoli' }],
     },
     {
       id: 'amalfi-cilento-14-days-day-11',
@@ -107,7 +107,7 @@ const amalfiCilento14Route: ItineraryRoute = {
       day: 11,
       mapPin: { desktop: { left: 72.9, top: 74.0 }, mobile: { left: 72.9, top: 74.0 } },
       description: 'Day 11: Agropoli to Acciaroli.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/italy/destinations/acciaroli.webp', alt: 'Acciaroli' }],
     },
     {
       id: 'amalfi-cilento-14-days-day-12',
@@ -116,7 +116,7 @@ const amalfiCilento14Route: ItineraryRoute = {
       day: 12,
       mapPin: { desktop: { left: 86.8, top: 86.8 }, mobile: { left: 86.8, top: 86.8 } },
       description: 'Day 12: Acciaroli to Palinuro.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/italy/destinations/palinuro.webp', alt: 'Palinuro' }],
     },
     {
       id: 'amalfi-cilento-14-days-day-13',
@@ -125,7 +125,7 @@ const amalfiCilento14Route: ItineraryRoute = {
       day: 13,
       mapPin: { desktop: { left: 71.3, top: 58.3 }, mobile: { left: 71.3, top: 58.3 } },
       description: 'Day 13: Palinuro to Agropoli.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/italy/destinations/agropoli.webp', alt: 'Agropoli' }],
     },
     {
       id: 'amalfi-cilento-14-days-day-14',
@@ -134,7 +134,7 @@ const amalfiCilento14Route: ItineraryRoute = {
       day: 14,
       mapPin: { desktop: { left: 59.2, top: 28.6 }, mobile: { left: 59.2, top: 28.6 } },
       description: 'Day 14: Agropoli to Salerno.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/italy/destinations/salerno.webp', alt: 'Salerno' }],
     },
   ],
   map: {

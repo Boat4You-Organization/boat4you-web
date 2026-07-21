@@ -45,6 +45,9 @@ export const COUNTRY_TO_NAMESPACE: Record<string, string> = {
   france: 'itineraryFrance',
   montenegro: 'itineraryMontenegro',
   seychelles: 'itinerarySeychelles',
+  thailand: 'itineraryThailand',
+  netherlands: 'itineraryNetherlands',
+  germany: 'itineraryGermany',
 };
 
 /** Fallback namespace when a country has no mapping yet (keeps the
@@ -77,7 +80,10 @@ export type ItineraryNamespace =
   | 'itineraryCaribbean'
   | 'itineraryFrance'
   | 'itineraryMontenegro'
-  | 'itinerarySeychelles';
+  | 'itinerarySeychelles'
+  | 'itineraryThailand'
+  | 'itineraryNetherlands'
+  | 'itineraryGermany';
 
 /** Narrow a stamped area/route to its typed namespace (config fallback). */
 export const itineraryNamespace = (obj: { i18nNamespace?: string }): ItineraryNamespace =>

@@ -7,7 +7,7 @@ const rivieraEsterel14Route: ItineraryRoute = {
   id: 'riviera-esterel-14-days',
   startingPoint: 'Cannes',
   otherPoints: ['Monaco', 'Porquerolles', 'Saint-Tropez'],
-  cardImage: { src: '/images/destinations/france.webp', alt: "Côte d'Azur" },
+  cardImage: { src: '/images/itinerary/france/cote-azur-photos/cannes.webp', alt: "Côte d'Azur" },
   gallery: [],
   routeDays: [
     {
@@ -17,7 +17,7 @@ const rivieraEsterel14Route: ItineraryRoute = {
       day: 1,
       mapPin: { desktop: { left: 69.2, top: 28.3 }, mobile: { left: 69.2, top: 28.3 } },
       description: 'Day 1: Cannes to Antibes.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/france/cote-azur-photos/antibes.webp', alt: 'Antibes' }],
     },
     {
       id: 'riviera-esterel-14-days-day-2',
@@ -26,7 +26,7 @@ const rivieraEsterel14Route: ItineraryRoute = {
       day: 2,
       mapPin: { desktop: { left: 80.1, top: 16.5 }, mobile: { left: 80.1, top: 16.5 } },
       description: 'Day 2: Antibes to Villefranche-sur-Mer.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/france/cote-azur-photos/villefranche.webp', alt: 'Villefranche-sur-Mer' }],
     },
     {
       id: 'riviera-esterel-14-days-day-3',
@@ -35,7 +35,7 @@ const rivieraEsterel14Route: ItineraryRoute = {
       day: 3,
       mapPin: { desktop: { left: 86.8, top: 13.2 }, mobile: { left: 86.8, top: 13.2 } },
       description: 'Day 3: Villefranche-sur-Mer to Monaco.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/france/cote-azur-photos/monaco-harbour.webp', alt: 'Monaco' }],
     },
     {
       id: 'riviera-esterel-14-days-day-4',
@@ -44,7 +44,7 @@ const rivieraEsterel14Route: ItineraryRoute = {
       day: 4,
       mapPin: { desktop: { left: 69.2, top: 28.3 }, mobile: { left: 69.2, top: 28.3 } },
       description: 'Day 4: Monaco to Antibes.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/france/cote-azur-photos/antibes.webp', alt: 'Antibes' }],
     },
     {
       id: 'riviera-esterel-14-days-day-5',
@@ -53,7 +53,7 @@ const rivieraEsterel14Route: ItineraryRoute = {
       day: 5,
       mapPin: { desktop: { left: 64.1, top: 34.9 }, mobile: { left: 64.1, top: 34.9 } },
       description: 'Day 5: Antibes to Iles de Lerins.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/france/cote-azur-photos/iles-de-lerins.webp', alt: 'Iles de Lerins' }],
     },
     {
       id: 'riviera-esterel-14-days-day-6',
@@ -71,7 +71,7 @@ const rivieraEsterel14Route: ItineraryRoute = {
       day: 7,
       mapPin: { desktop: { left: 47.4, top: 44.8 }, mobile: { left: 47.4, top: 44.8 } },
       description: 'Day 7: Agay to Saint-Raphael.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/france/cote-azur-photos/saint-tropez.webp', alt: 'Saint-Raphael' }],
     },
     {
       id: 'riviera-esterel-14-days-day-8',
@@ -80,7 +80,7 @@ const rivieraEsterel14Route: ItineraryRoute = {
       day: 8,
       mapPin: { desktop: { left: 39.7, top: 59.7 }, mobile: { left: 39.7, top: 59.7 } },
       description: 'Day 8: Saint-Raphael to Saint-Tropez.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/france/cote-azur-photos/saint-tropez.webp', alt: 'Saint-Tropez' }],
     },
     {
       id: 'riviera-esterel-14-days-day-9',
@@ -89,7 +89,7 @@ const rivieraEsterel14Route: ItineraryRoute = {
       day: 9,
       mapPin: { desktop: { left: 36.1, top: 59.6 }, mobile: { left: 36.1, top: 59.6 } },
       description: 'Day 9: Saint-Tropez to Port Grimaud.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/france/cote-azur-photos/port-cros.webp', alt: 'Port Grimaud' }],
     },
     {
       id: 'riviera-esterel-14-days-day-10',
@@ -116,7 +116,7 @@ const rivieraEsterel14Route: ItineraryRoute = {
       day: 12,
       mapPin: { desktop: { left: 24.3, top: 86.1 }, mobile: { left: 24.3, top: 86.1 } },
       description: 'Day 12: Le Lavandou to Port-Cros.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/france/cote-azur-photos/port-cros.webp', alt: 'Port-Cros' }],
     },
     {
       id: 'riviera-esterel-14-days-day-13',
@@ -125,7 +125,7 @@ const rivieraEsterel14Route: ItineraryRoute = {
       day: 13,
       mapPin: { desktop: { left: 13.2, top: 86.8 }, mobile: { left: 13.2, top: 86.8 } },
       description: 'Day 13: Port-Cros to Porquerolles.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/france/cote-azur-photos/porquerolles.webp', alt: 'Porquerolles' }],
     },
     {
       id: 'riviera-esterel-14-days-day-14',
@@ -134,7 +134,7 @@ const rivieraEsterel14Route: ItineraryRoute = {
       day: 14,
       mapPin: { desktop: { left: 62.4, top: 32.0 }, mobile: { left: 62.4, top: 32.0 } },
       description: 'Day 14: Porquerolles to Cannes.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/france/cote-azur-photos/cannes.webp', alt: 'Cannes' }],
     },
   ],
   map: {

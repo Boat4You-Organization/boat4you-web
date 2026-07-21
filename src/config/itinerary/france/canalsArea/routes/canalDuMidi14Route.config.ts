@@ -7,7 +7,7 @@ const canalDuMidi14Route: ItineraryRoute = {
   id: 'canal-du-midi-14-days',
   startingPoint: 'Port Cassafieres',
   otherPoints: ['Beziers', 'Carcassonne', 'Castelnaudary'],
-  cardImage: { src: '/images/destinations/france.webp', alt: 'French Canals' },
+  cardImage: { src: '/images/itinerary/france/french-canals-photos/canal-du-midi-barge.webp', alt: 'French Canals' },
   gallery: [],
   routeDays: [
     {
@@ -26,7 +26,7 @@ const canalDuMidi14Route: ItineraryRoute = {
       day: 2,
       mapPin: { desktop: { left: 72.1, top: 19.4 }, mobile: { left: 72.1, top: 19.4 } },
       description: 'Day 2: Agde to Beziers.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/france/french-canals-photos/beziers-locks.webp', alt: 'Beziers' }],
     },
     {
       id: 'canal-du-midi-14-days-day-3',
@@ -44,7 +44,7 @@ const canalDuMidi14Route: ItineraryRoute = {
       day: 4,
       mapPin: { desktop: { left: 55.7, top: 63.1 }, mobile: { left: 55.7, top: 63.1 } },
       description: 'Day 4: Capestang to Le Somail.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/france/french-canals-photos/le-somail.webp', alt: 'Le Somail' }],
     },
     {
       id: 'canal-du-midi-14-days-day-5',
@@ -71,7 +71,7 @@ const canalDuMidi14Route: ItineraryRoute = {
       day: 7,
       mapPin: { desktop: { left: 31.7, top: 85.2 }, mobile: { left: 31.7, top: 85.2 } },
       description: 'Day 7: Trebes to Carcassonne.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/france/french-canals-photos/carcassonne-walls.webp', alt: 'Carcassonne' }],
     },
     {
       id: 'canal-du-midi-14-days-day-8',
@@ -89,7 +89,7 @@ const canalDuMidi14Route: ItineraryRoute = {
       day: 9,
       mapPin: { desktop: { left: 13.2, top: 31.2 }, mobile: { left: 13.2, top: 31.2 } },
       description: 'Day 9: Bram to Castelnaudary.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/france/french-canals-photos/castelnaudary.webp', alt: 'Castelnaudary' }],
     },
     {
       id: 'canal-du-midi-14-days-day-10',
@@ -98,7 +98,7 @@ const canalDuMidi14Route: ItineraryRoute = {
       day: 10,
       mapPin: { desktop: { left: 31.7, top: 85.2 }, mobile: { left: 31.7, top: 85.2 } },
       description: 'Day 10: Castelnaudary to Carcassonne.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/france/french-canals-photos/carcassonne-walls.webp', alt: 'Carcassonne' }],
     },
     {
       id: 'canal-du-midi-14-days-day-11',

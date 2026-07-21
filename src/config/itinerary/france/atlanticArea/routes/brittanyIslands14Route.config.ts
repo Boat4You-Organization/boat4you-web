@@ -7,7 +7,10 @@ const brittanyIslands14Route: ItineraryRoute = {
   id: 'brittany-islands-14-days',
   startingPoint: 'Le Crouesty',
   otherPoints: ['Ile de Groix', 'Belle-Ile (Le Palais)', 'La Trinite-sur-Mer'],
-  cardImage: { src: '/images/destinations/france.webp', alt: 'Brittany & Atlantic' },
+  cardImage: {
+    src: '/images/itinerary/france/atlantic-france-photos/golfe-du-morbihan.webp',
+    alt: 'Brittany & Atlantic',
+  },
   gallery: [],
   routeDays: [
     {
@@ -17,7 +20,7 @@ const brittanyIslands14Route: ItineraryRoute = {
       day: 1,
       mapPin: { desktop: { left: 86.8, top: 29.6 }, mobile: { left: 86.8, top: 29.6 } },
       description: 'Day 1: Le Crouesty to Vannes.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/france/atlantic-france-photos/vannes.webp', alt: 'Vannes' }],
     },
     {
       id: 'brittany-islands-14-days-day-2',
@@ -35,7 +38,9 @@ const brittanyIslands14Route: ItineraryRoute = {
       day: 3,
       mapPin: { desktop: { left: 58.2, top: 42.4 }, mobile: { left: 58.2, top: 42.4 } },
       description: 'Day 3: Ile aux Moines to La Trinite-sur-Mer.',
-      gallery: [],
+      gallery: [
+        { src: '/images/itinerary/france/atlantic-france-photos/la-trinite-sur-mer.webp', alt: 'La Trinite-sur-Mer' },
+      ],
     },
     {
       id: 'brittany-islands-14-days-day-4',
@@ -44,7 +49,7 @@ const brittanyIslands14Route: ItineraryRoute = {
       day: 4,
       mapPin: { desktop: { left: 66.0, top: 77.7 }, mobile: { left: 66.0, top: 77.7 } },
       description: 'Day 4: La Trinite-sur-Mer to Houat.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/france/atlantic-france-photos/houat.webp', alt: 'Houat' }],
     },
     {
       id: 'brittany-islands-14-days-day-5',
@@ -62,7 +67,9 @@ const brittanyIslands14Route: ItineraryRoute = {
       day: 6,
       mapPin: { desktop: { left: 45.0, top: 85.3 }, mobile: { left: 45.0, top: 85.3 } },
       description: 'Day 6: Hoedic to Belle-Ile (Le Palais).',
-      gallery: [],
+      gallery: [
+        { src: '/images/itinerary/france/atlantic-france-photos/belle-ile.webp', alt: 'Belle-Ile (Le Palais)' },
+      ],
     },
     {
       id: 'brittany-islands-14-days-day-7',
@@ -71,7 +78,7 @@ const brittanyIslands14Route: ItineraryRoute = {
       day: 7,
       mapPin: { desktop: { left: 37.9, top: 81.0 }, mobile: { left: 37.9, top: 81.0 } },
       description: 'Day 7: Belle-Ile (Le Palais) to Sauzon.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/france/atlantic-france-photos/sauzon.webp', alt: 'Sauzon' }],
     },
     {
       id: 'brittany-islands-14-days-day-8',
@@ -80,7 +87,7 @@ const brittanyIslands14Route: ItineraryRoute = {
       day: 8,
       mapPin: { desktop: { left: 13.2, top: 31.4 }, mobile: { left: 13.2, top: 31.4 } },
       description: 'Day 8: Sauzon to Ile de Groix.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/france/atlantic-france-photos/ile-de-groix.webp', alt: 'Ile de Groix' }],
     },
     {
       id: 'brittany-islands-14-days-day-9',
@@ -98,7 +105,7 @@ const brittanyIslands14Route: ItineraryRoute = {
       day: 10,
       mapPin: { desktop: { left: 13.2, top: 31.4 }, mobile: { left: 13.2, top: 31.4 } },
       description: 'Day 10: Lorient to Ile de Groix.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/france/atlantic-france-photos/ile-de-groix.webp', alt: 'Ile de Groix' }],
     },
     {
       id: 'brittany-islands-14-days-day-11',
@@ -107,7 +114,9 @@ const brittanyIslands14Route: ItineraryRoute = {
       day: 11,
       mapPin: { desktop: { left: 45.0, top: 85.3 }, mobile: { left: 45.0, top: 85.3 } },
       description: 'Day 11: Ile de Groix to Belle-Ile (Le Palais).',
-      gallery: [],
+      gallery: [
+        { src: '/images/itinerary/france/atlantic-france-photos/belle-ile.webp', alt: 'Belle-Ile (Le Palais)' },
+      ],
     },
     {
       id: 'brittany-islands-14-days-day-12',
@@ -116,7 +125,7 @@ const brittanyIslands14Route: ItineraryRoute = {
       day: 12,
       mapPin: { desktop: { left: 66.0, top: 77.7 }, mobile: { left: 66.0, top: 77.7 } },
       description: 'Day 12: Belle-Ile (Le Palais) to Houat.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/france/atlantic-france-photos/houat.webp', alt: 'Houat' }],
     },
     {
       id: 'brittany-islands-14-days-day-13',

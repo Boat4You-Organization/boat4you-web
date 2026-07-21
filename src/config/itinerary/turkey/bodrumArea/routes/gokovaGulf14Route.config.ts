@@ -26,7 +26,7 @@ const gokovaGulf14Route: ItineraryRoute = {
       day: 2,
       mapPin: { desktop: { left: 46.5, top: 63.0 }, mobile: { left: 46.5, top: 63.0 } },
       description: 'Day 2: Kara Ada to Çökertme.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/turkey/destinations/cokertme.webp', alt: 'Çökertme' }],
     },
     {
       id: 'gokova-gulf-14-days-day-3',
@@ -35,7 +35,7 @@ const gokovaGulf14Route: ItineraryRoute = {
       day: 3,
       mapPin: { desktop: { left: 61.1, top: 59.0 }, mobile: { left: 61.1, top: 59.0 } },
       description: 'Day 3: Çökertme to Ören.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/turkey/destinations/oren.webp', alt: 'Ören' }],
     },
     {
       id: 'gokova-gulf-14-days-day-4',
@@ -44,7 +44,7 @@ const gokovaGulf14Route: ItineraryRoute = {
       day: 4,
       mapPin: { desktop: { left: 86.8, top: 58.4 }, mobile: { left: 86.8, top: 58.4 } },
       description: 'Day 4: Ören to Akyaka.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/turkey/destinations/akyaka.webp', alt: 'Akyaka' }],
     },
     {
       id: 'gokova-gulf-14-days-day-5',
@@ -53,7 +53,7 @@ const gokovaGulf14Route: ItineraryRoute = {
       day: 5,
       mapPin: { desktop: { left: 68.3, top: 86.8 }, mobile: { left: 68.3, top: 86.8 } },
       description: 'Day 5: Akyaka to Cleopatra Island.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/turkey/destinations/cleopatra-island.webp', alt: 'Cleopatra Island' }],
     },
     {
       id: 'gokova-gulf-14-days-day-6',
@@ -62,7 +62,7 @@ const gokovaGulf14Route: ItineraryRoute = {
       day: 6,
       mapPin: { desktop: { left: 75.6, top: 75.2 }, mobile: { left: 75.6, top: 75.2 } },
       description: 'Day 6: Cleopatra Island to Karaca.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/turkey/destinations/karaca-island.webp', alt: 'Karaca' }],
     },
     {
       id: 'gokova-gulf-14-days-day-7',
@@ -71,7 +71,7 @@ const gokovaGulf14Route: ItineraryRoute = {
       day: 7,
       mapPin: { desktop: { left: 51.7, top: 64.9 }, mobile: { left: 51.7, top: 64.9 } },
       description: 'Day 7: Karaca to Mersincik.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/turkey/destinations/mersincik.webp', alt: 'Mersincik' }],
     },
     {
       id: 'gokova-gulf-14-days-day-8',
@@ -80,7 +80,7 @@ const gokovaGulf14Route: ItineraryRoute = {
       day: 8,
       mapPin: { desktop: { left: 46.5, top: 63.0 }, mobile: { left: 46.5, top: 63.0 } },
       description: 'Day 8: Mersincik to Çökertme.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/turkey/destinations/cokertme.webp', alt: 'Çökertme' }],
     },
     {
       id: 'gokova-gulf-14-days-day-9',
@@ -107,7 +107,7 @@ const gokovaGulf14Route: ItineraryRoute = {
       day: 11,
       mapPin: { desktop: { left: 35.8, top: 30.5 }, mobile: { left: 35.8, top: 30.5 } },
       description: 'Day 11: Göl Türkbükü to Güllük.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/turkey/destinations/milas-gulluk.webp', alt: 'Güllük' }],
     },
     {
       id: 'gokova-gulf-14-days-day-12',
@@ -116,7 +116,7 @@ const gokovaGulf14Route: ItineraryRoute = {
       day: 12,
       mapPin: { desktop: { left: 13.2, top: 13.2 }, mobile: { left: 13.2, top: 13.2 } },
       description: 'Day 12: Güllük to Didim.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/turkey/destinations/didim.webp', alt: 'Didim' }],
     },
     {
       id: 'gokova-gulf-14-days-day-13',
@@ -134,7 +134,7 @@ const gokovaGulf14Route: ItineraryRoute = {
       day: 14,
       mapPin: { desktop: { left: 24.4, top: 60.2 }, mobile: { left: 24.4, top: 60.2 } },
       description: 'Day 14: Göl Türkbükü to Bodrum.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/turkey/destinations/bodrum-town.webp', alt: 'Bodrum' }],
     },
   ],
   map: {

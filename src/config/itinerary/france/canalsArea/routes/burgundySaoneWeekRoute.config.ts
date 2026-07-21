@@ -7,7 +7,7 @@ const burgundySaoneWeekRoute: ItineraryRoute = {
   id: 'burgundy-saone-week',
   startingPoint: 'Saint-Jean-de-Losne',
   otherPoints: ['Dole', 'Auxonne'],
-  cardImage: { src: '/images/destinations/france.webp', alt: 'French Canals' },
+  cardImage: { src: '/images/itinerary/france/french-canals-photos/canal-du-midi-barge.webp', alt: 'French Canals' },
   gallery: [],
   routeDays: [
     {

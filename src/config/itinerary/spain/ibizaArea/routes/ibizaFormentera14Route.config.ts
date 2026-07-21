@@ -17,7 +17,7 @@ const ibizaFormentera14Route: ItineraryRoute = {
       day: 1,
       mapPin: { desktop: { left: 56.2, top: 63.1 }, mobile: { left: 56.2, top: 63.1 } },
       description: 'Day 1: Marina Eivissa to Platja de ses Salines.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/spain/destinations/platja-daro.webp', alt: 'Platja de ses Salines' }],
     },
     {
       id: 'ibiza-formentera-14-days-day-2',
@@ -26,7 +26,7 @@ const ibizaFormentera14Route: ItineraryRoute = {
       day: 2,
       mapPin: { desktop: { left: 60.0, top: 81.2 }, mobile: { left: 60.0, top: 81.2 } },
       description: 'Day 2: Platja de ses Salines to Puerto Formentera.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/spain/destinations/puerto-de-addaya.webp', alt: 'Puerto Formentera' }],
     },
     {
       id: 'ibiza-formentera-14-days-day-3',
@@ -35,7 +35,7 @@ const ibizaFormentera14Route: ItineraryRoute = {
       day: 3,
       mapPin: { desktop: { left: 63.0, top: 86.8 }, mobile: { left: 63.0, top: 86.8 } },
       description: 'Day 3: Puerto Formentera to Formentera.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/spain/destinations/puerto-formentera.webp', alt: 'Formentera' }],
     },
     {
       id: 'ibiza-formentera-14-days-day-4',
@@ -44,7 +44,7 @@ const ibizaFormentera14Route: ItineraryRoute = {
       day: 4,
       mapPin: { desktop: { left: 13.2, top: 54.5 }, mobile: { left: 13.2, top: 54.5 } },
       description: 'Day 4: Formentera to Cala Vedella.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/spain/destinations/cala-vedella.webp', alt: 'Cala Vedella' }],
     },
     {
       id: 'ibiza-formentera-14-days-day-5',
@@ -53,7 +53,9 @@ const ibizaFormentera14Route: ItineraryRoute = {
       day: 5,
       mapPin: { desktop: { left: 33.6, top: 37.3 }, mobile: { left: 33.6, top: 37.3 } },
       description: 'Day 5: Cala Vedella to Sant Antoni de Portmany.',
-      gallery: [],
+      gallery: [
+        { src: '/images/itinerary/spain/destinations/sant-antoni-de-portmany.webp', alt: 'Sant Antoni de Portmany' },
+      ],
     },
     {
       id: 'ibiza-formentera-14-days-day-6',
@@ -62,7 +64,7 @@ const ibizaFormentera14Route: ItineraryRoute = {
       day: 6,
       mapPin: { desktop: { left: 82.6, top: 13.2 }, mobile: { left: 82.6, top: 13.2 } },
       description: 'Day 6: Sant Antoni de Portmany to Portinatx.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/spain/destinations/portinatx.webp', alt: 'Portinatx' }],
     },
     {
       id: 'ibiza-formentera-14-days-day-7',
@@ -71,7 +73,9 @@ const ibizaFormentera14Route: ItineraryRoute = {
       day: 7,
       mapPin: { desktop: { left: 86.8, top: 36.4 }, mobile: { left: 86.8, top: 36.4 } },
       description: 'Day 7: Portinatx to Santa Eulària des Riu.',
-      gallery: [],
+      gallery: [
+        { src: '/images/itinerary/spain/destinations/santa-eularia-des-riu.webp', alt: 'Santa Eulària des Riu' },
+      ],
     },
     {
       id: 'ibiza-formentera-14-days-day-8',
@@ -80,7 +84,7 @@ const ibizaFormentera14Route: ItineraryRoute = {
       day: 8,
       mapPin: { desktop: { left: 60.5, top: 50.5 }, mobile: { left: 60.5, top: 50.5 } },
       description: 'Day 8: Santa Eulària des Riu to Marina Eivissa.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/spain/destinations/eivissa.webp', alt: 'Marina Eivissa' }],
     },
     {
       id: 'ibiza-formentera-14-days-day-9',
@@ -89,7 +93,7 @@ const ibizaFormentera14Route: ItineraryRoute = {
       day: 9,
       mapPin: { desktop: { left: 56.2, top: 63.1 }, mobile: { left: 56.2, top: 63.1 } },
       description: 'Day 9: Marina Eivissa to Ses Salines.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/spain/destinations/platja-de-ses-salines.webp', alt: 'Ses Salines' }],
     },
     {
       id: 'ibiza-formentera-14-days-day-10',
@@ -98,7 +102,7 @@ const ibizaFormentera14Route: ItineraryRoute = {
       day: 10,
       mapPin: { desktop: { left: 63.0, top: 86.8 }, mobile: { left: 63.0, top: 86.8 } },
       description: 'Day 10: Ses Salines to Formentera.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/spain/destinations/puerto-formentera.webp', alt: 'Formentera' }],
     },
     {
       id: 'ibiza-formentera-14-days-day-11',
@@ -107,7 +111,7 @@ const ibizaFormentera14Route: ItineraryRoute = {
       day: 11,
       mapPin: { desktop: { left: 13.2, top: 54.5 }, mobile: { left: 13.2, top: 54.5 } },
       description: 'Day 11: Formentera to Cala Vedella.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/spain/destinations/cala-vedella.webp', alt: 'Cala Vedella' }],
     },
     {
       id: 'ibiza-formentera-14-days-day-12',
@@ -116,7 +120,9 @@ const ibizaFormentera14Route: ItineraryRoute = {
       day: 12,
       mapPin: { desktop: { left: 33.6, top: 37.3 }, mobile: { left: 33.6, top: 37.3 } },
       description: 'Day 12: Cala Vedella to Sant Antoni de Portmany.',
-      gallery: [],
+      gallery: [
+        { src: '/images/itinerary/spain/destinations/sant-antoni-de-portmany.webp', alt: 'Sant Antoni de Portmany' },
+      ],
     },
     {
       id: 'ibiza-formentera-14-days-day-13',
@@ -125,7 +131,9 @@ const ibizaFormentera14Route: ItineraryRoute = {
       day: 13,
       mapPin: { desktop: { left: 86.8, top: 36.4 }, mobile: { left: 86.8, top: 36.4 } },
       description: 'Day 13: Sant Antoni de Portmany to Santa Eulària des Riu.',
-      gallery: [],
+      gallery: [
+        { src: '/images/itinerary/spain/destinations/santa-eularia-des-riu.webp', alt: 'Santa Eulària des Riu' },
+      ],
     },
     {
       id: 'ibiza-formentera-14-days-day-14',
@@ -134,7 +142,7 @@ const ibizaFormentera14Route: ItineraryRoute = {
       day: 14,
       mapPin: { desktop: { left: 60.5, top: 50.5 }, mobile: { left: 60.5, top: 50.5 } },
       description: 'Day 14: Santa Eulària des Riu to Marina Eivissa.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/spain/destinations/eivissa.webp', alt: 'Marina Eivissa' }],
     },
   ],
   map: {

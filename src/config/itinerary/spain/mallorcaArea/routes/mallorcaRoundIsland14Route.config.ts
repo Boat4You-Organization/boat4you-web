@@ -17,7 +17,7 @@ const mallorcaRoundIsland14Route: ItineraryRoute = {
       day: 1,
       mapPin: { desktop: { left: 13.2, top: 53.4 }, mobile: { left: 13.2, top: 53.4 } },
       description: 'Day 1: Palma de Mallorca to El Toro.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/spain/destinations/el-toro-mallorca.webp', alt: 'El Toro' }],
     },
     {
       id: 'mallorca-round-island-14-days-day-2',
@@ -26,7 +26,7 @@ const mallorcaRoundIsland14Route: ItineraryRoute = {
       day: 2,
       mapPin: { desktop: { left: 28.9, top: 24.9 }, mobile: { left: 28.9, top: 24.9 } },
       description: 'Day 2: El Toro to Port de Sóller.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/spain/destinations/port-de-soller.webp', alt: 'Port de Sóller' }],
     },
     {
       id: 'mallorca-round-island-14-days-day-3',
@@ -35,7 +35,7 @@ const mallorcaRoundIsland14Route: ItineraryRoute = {
       day: 3,
       mapPin: { desktop: { left: 56.4, top: 13.2 }, mobile: { left: 56.4, top: 13.2 } },
       description: 'Day 3: Port de Sóller to Cala Sant Vicenç.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/spain/destinations/cala-sant-vicenc.webp', alt: 'Cala Sant Vicenç' }],
     },
     {
       id: 'mallorca-round-island-14-days-day-4',
@@ -44,7 +44,7 @@ const mallorcaRoundIsland14Route: ItineraryRoute = {
       day: 4,
       mapPin: { desktop: { left: 58.2, top: 14.1 }, mobile: { left: 58.2, top: 14.1 } },
       description: 'Day 4: Cala Sant Vicenç to Port de Pollença.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/spain/destinations/port-de-pollenca.webp', alt: 'Port de Pollença' }],
     },
     {
       id: 'mallorca-round-island-14-days-day-5',
@@ -53,7 +53,7 @@ const mallorcaRoundIsland14Route: ItineraryRoute = {
       day: 5,
       mapPin: { desktop: { left: 61.0, top: 19.4 }, mobile: { left: 61.0, top: 19.4 } },
       description: 'Day 5: Port de Pollença to Alcúdia.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/spain/destinations/alcudia.webp', alt: 'Alcúdia' }],
     },
     {
       id: 'mallorca-round-island-14-days-day-6',
@@ -62,7 +62,7 @@ const mallorcaRoundIsland14Route: ItineraryRoute = {
       day: 6,
       mapPin: { desktop: { left: 86.8, top: 33.6 }, mobile: { left: 86.8, top: 33.6 } },
       description: 'Day 6: Alcúdia to Cala Ratjada (Mallorca).',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/spain/destinations/cala-ratjada.webp', alt: 'Cala Ratjada (Mallorca)' }],
     },
     {
       id: 'mallorca-round-island-14-days-day-7',
@@ -71,7 +71,7 @@ const mallorcaRoundIsland14Route: ItineraryRoute = {
       day: 7,
       mapPin: { desktop: { left: 77.1, top: 49.5 }, mobile: { left: 77.1, top: 49.5 } },
       description: 'Day 7: Cala Ratjada (Mallorca) to Porto Cristo.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/spain/destinations/porto-cristo.webp', alt: 'Porto Cristo' }],
     },
     {
       id: 'mallorca-round-island-14-days-day-8',
@@ -80,7 +80,7 @@ const mallorcaRoundIsland14Route: ItineraryRoute = {
       day: 8,
       mapPin: { desktop: { left: 72.1, top: 61.0 }, mobile: { left: 72.1, top: 61.0 } },
       description: 'Day 8: Porto Cristo to Portocolom.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/spain/destinations/portocolom.webp', alt: 'Portocolom' }],
     },
     {
       id: 'mallorca-round-island-14-days-day-9',
@@ -89,7 +89,7 @@ const mallorcaRoundIsland14Route: ItineraryRoute = {
       day: 9,
       mapPin: { desktop: { left: 61.7, top: 68.7 }, mobile: { left: 61.7, top: 68.7 } },
       description: 'Day 9: Portocolom to Cala Santanyí.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/spain/destinations/cala-santanyi.webp', alt: 'Cala Santanyí' }],
     },
     {
       id: 'mallorca-round-island-14-days-day-10',
@@ -98,7 +98,7 @@ const mallorcaRoundIsland14Route: ItineraryRoute = {
       day: 10,
       mapPin: { desktop: { left: 40.1, top: 66.2 }, mobile: { left: 40.1, top: 66.2 } },
       description: 'Day 10: Cala Santanyí to Cala Pi.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/spain/destinations/cala-pi.webp', alt: 'Cala Pi' }],
     },
     {
       id: 'mallorca-round-island-14-days-day-11',
@@ -107,7 +107,7 @@ const mallorcaRoundIsland14Route: ItineraryRoute = {
       day: 11,
       mapPin: { desktop: { left: 48.0, top: 86.8 }, mobile: { left: 48.0, top: 86.8 } },
       description: 'Day 11: Cala Pi to Cabrera Archipelago.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/spain/destinations/cabrera-archipelago.webp', alt: 'Cabrera Archipelago' }],
     },
     {
       id: 'mallorca-round-island-14-days-day-12',
@@ -116,7 +116,7 @@ const mallorcaRoundIsland14Route: ItineraryRoute = {
       day: 12,
       mapPin: { desktop: { left: 51.0, top: 67.7 }, mobile: { left: 51.0, top: 67.7 } },
       description: 'Day 12: Cabrera Archipelago to Es Trenc.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/spain/destinations/es-trenc.webp', alt: 'Es Trenc' }],
     },
     {
       id: 'mallorca-round-island-14-days-day-13',
@@ -125,7 +125,7 @@ const mallorcaRoundIsland14Route: ItineraryRoute = {
       day: 13,
       mapPin: { desktop: { left: 65.1, top: 69.4 }, mobile: { left: 65.1, top: 69.4 } },
       description: 'Day 13: Es Trenc to Cala Figuera.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/spain/destinations/cala-figuera.webp', alt: 'Cala Figuera' }],
     },
     {
       id: 'mallorca-round-island-14-days-day-14',
@@ -134,7 +134,7 @@ const mallorcaRoundIsland14Route: ItineraryRoute = {
       day: 14,
       mapPin: { desktop: { left: 25.7, top: 46.6 }, mobile: { left: 25.7, top: 46.6 } },
       description: 'Day 14: Cala Figuera to Palma de Mallorca.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/spain/destinations/palma.webp', alt: 'Palma de Mallorca' }],
     },
   ],
   map: {

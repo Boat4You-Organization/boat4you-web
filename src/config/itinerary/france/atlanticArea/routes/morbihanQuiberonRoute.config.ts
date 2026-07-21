@@ -7,7 +7,10 @@ const morbihanQuiberonRoute: ItineraryRoute = {
   id: 'morbihan-quiberon',
   startingPoint: 'Le Crouesty',
   otherPoints: ['Belle-Ile (Le Palais)', 'Houat'],
-  cardImage: { src: '/images/destinations/france.webp', alt: 'Brittany & Atlantic' },
+  cardImage: {
+    src: '/images/itinerary/france/atlantic-france-photos/golfe-du-morbihan.webp',
+    alt: 'Brittany & Atlantic',
+  },
   gallery: [],
   routeDays: [
     {
@@ -26,7 +29,7 @@ const morbihanQuiberonRoute: ItineraryRoute = {
       day: 2,
       mapPin: { desktop: { left: 86.8, top: 13.2 }, mobile: { left: 86.8, top: 13.2 } },
       description: 'Day 2: Ile aux Moines to Vannes.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/france/atlantic-france-photos/vannes.webp', alt: 'Vannes' }],
     },
     {
       id: 'morbihan-quiberon-day-3',
@@ -35,7 +38,7 @@ const morbihanQuiberonRoute: ItineraryRoute = {
       day: 3,
       mapPin: { desktop: { left: 55.5, top: 75.1 }, mobile: { left: 55.5, top: 75.1 } },
       description: 'Day 3: Vannes to Houat.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/france/atlantic-france-photos/houat.webp', alt: 'Houat' }],
     },
     {
       id: 'morbihan-quiberon-day-4',
@@ -44,7 +47,9 @@ const morbihanQuiberonRoute: ItineraryRoute = {
       day: 4,
       mapPin: { desktop: { left: 24.0, top: 84.9 }, mobile: { left: 24.0, top: 84.9 } },
       description: 'Day 4: Houat to Belle-Ile (Le Palais).',
-      gallery: [],
+      gallery: [
+        { src: '/images/itinerary/france/atlantic-france-photos/belle-ile.webp', alt: 'Belle-Ile (Le Palais)' },
+      ],
     },
     {
       id: 'morbihan-quiberon-day-5',
@@ -53,7 +58,7 @@ const morbihanQuiberonRoute: ItineraryRoute = {
       day: 5,
       mapPin: { desktop: { left: 13.2, top: 79.3 }, mobile: { left: 13.2, top: 79.3 } },
       description: 'Day 5: Belle-Ile (Le Palais) to Sauzon.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/france/atlantic-france-photos/sauzon.webp', alt: 'Sauzon' }],
     },
     {
       id: 'morbihan-quiberon-day-6',

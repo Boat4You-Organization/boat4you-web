@@ -17,7 +17,7 @@ const sporadesGrandTour14Route: ItineraryRoute = {
       day: 1,
       mapPin: { desktop: { left: 48.8, top: 52.0 }, mobile: { left: 48.8, top: 52.0 } },
       description: 'Day 1: Skiathos Marina to Skopelos.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/greece/destinations/skopelos.webp', alt: 'Skopelos' }],
     },
     {
       id: 'sporades-grand-tour-14-days-day-2',
@@ -26,7 +26,7 @@ const sporadesGrandTour14Route: ItineraryRoute = {
       day: 2,
       mapPin: { desktop: { left: 54.8, top: 47.3 }, mobile: { left: 54.8, top: 47.3 } },
       description: 'Day 2: Skopelos to Alonissos.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/greece/destinations/alonissos.webp', alt: 'Alonissos' }],
     },
     {
       id: 'sporades-grand-tour-14-days-day-3',
@@ -35,7 +35,7 @@ const sporadesGrandTour14Route: ItineraryRoute = {
       day: 3,
       mapPin: { desktop: { left: 64.3, top: 18.5 }, mobile: { left: 64.3, top: 18.5 } },
       description: 'Day 3: Alonissos to Kyra Panagia.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/greece/destinations/kyra.webp', alt: 'Kyra Panagia' }],
     },
     {
       id: 'sporades-grand-tour-14-days-day-4',
@@ -44,7 +44,7 @@ const sporadesGrandTour14Route: ItineraryRoute = {
       day: 4,
       mapPin: { desktop: { left: 86.8, top: 86.8 }, mobile: { left: 86.8, top: 86.8 } },
       description: 'Day 4: Kyra Panagia to Skyros.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/greece/destinations/skyros.webp', alt: 'Skyros' }],
     },
     {
       id: 'sporades-grand-tour-14-days-day-5',
@@ -53,7 +53,7 @@ const sporadesGrandTour14Route: ItineraryRoute = {
       day: 5,
       mapPin: { desktop: { left: 64.3, top: 18.5 }, mobile: { left: 64.3, top: 18.5 } },
       description: 'Day 5: Skyros to Kyra Panagia.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/greece/destinations/kyra.webp', alt: 'Kyra Panagia' }],
     },
     {
       id: 'sporades-grand-tour-14-days-day-6',
@@ -62,7 +62,7 @@ const sporadesGrandTour14Route: ItineraryRoute = {
       day: 6,
       mapPin: { desktop: { left: 54.8, top: 47.3 }, mobile: { left: 54.8, top: 47.3 } },
       description: 'Day 6: Kyra Panagia to Tzortzi Bay (Alonissos).',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/greece/destinations/alonissos.webp', alt: 'Tzortzi Bay (Alonissos)' }],
     },
     {
       id: 'sporades-grand-tour-14-days-day-7',
@@ -71,7 +71,7 @@ const sporadesGrandTour14Route: ItineraryRoute = {
       day: 7,
       mapPin: { desktop: { left: 54.8, top: 47.3 }, mobile: { left: 54.8, top: 47.3 } },
       description: 'Day 7: Tzortzi Bay (Alonissos) to Alonissos.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/greece/destinations/alonissos.webp', alt: 'Alonissos' }],
     },
     {
       id: 'sporades-grand-tour-14-days-day-8',
@@ -80,7 +80,7 @@ const sporadesGrandTour14Route: ItineraryRoute = {
       day: 8,
       mapPin: { desktop: { left: 48.8, top: 52.0 }, mobile: { left: 48.8, top: 52.0 } },
       description: 'Day 8: Alonissos to Skopelos.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/greece/destinations/skopelos.webp', alt: 'Skopelos' }],
     },
     {
       id: 'sporades-grand-tour-14-days-day-9',
@@ -89,7 +89,7 @@ const sporadesGrandTour14Route: ItineraryRoute = {
       day: 9,
       mapPin: { desktop: { left: 19.0, top: 56.5 }, mobile: { left: 19.0, top: 56.5 } },
       description: 'Day 9: Skopelos to Trikeri Island.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/greece/destinations/trikeri.webp', alt: 'Trikeri Island' }],
     },
     {
       id: 'sporades-grand-tour-14-days-day-10',
@@ -98,7 +98,7 @@ const sporadesGrandTour14Route: ItineraryRoute = {
       day: 10,
       mapPin: { desktop: { left: 19.0, top: 56.6 }, mobile: { left: 19.0, top: 56.6 } },
       description: 'Day 10: Trikeri Island to Agia Kiriaki.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/greece/destinations/kiriaki.webp', alt: 'Agia Kiriaki' }],
     },
     {
       id: 'sporades-grand-tour-14-days-day-11',
@@ -107,7 +107,7 @@ const sporadesGrandTour14Route: ItineraryRoute = {
       day: 11,
       mapPin: { desktop: { left: 13.2, top: 13.2 }, mobile: { left: 13.2, top: 13.2 } },
       description: 'Day 11: Agia Kiriaki to Volos.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/greece/destinations/volos-town-island.webp', alt: 'Volos' }],
     },
     {
       id: 'sporades-grand-tour-14-days-day-12',
@@ -116,7 +116,7 @@ const sporadesGrandTour14Route: ItineraryRoute = {
       day: 12,
       mapPin: { desktop: { left: 19.0, top: 56.5 }, mobile: { left: 19.0, top: 56.5 } },
       description: 'Day 12: Volos to Trikeri Island.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/greece/destinations/trikeri.webp', alt: 'Trikeri Island' }],
     },
     {
       id: 'sporades-grand-tour-14-days-day-13',
@@ -125,7 +125,7 @@ const sporadesGrandTour14Route: ItineraryRoute = {
       day: 13,
       mapPin: { desktop: { left: 35.0, top: 47.7 }, mobile: { left: 35.0, top: 47.7 } },
       description: 'Day 13: Trikeri Island to Koukounaries (Skiathos).',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/greece/destinations/koukounaries.webp', alt: 'Koukounaries (Skiathos)' }],
     },
     {
       id: 'sporades-grand-tour-14-days-day-14',
@@ -134,7 +134,7 @@ const sporadesGrandTour14Route: ItineraryRoute = {
       day: 14,
       mapPin: { desktop: { left: 38.0, top: 45.7 }, mobile: { left: 38.0, top: 45.7 } },
       description: 'Day 14: Koukounaries (Skiathos) to Skiathos Marina.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/greece/destinations/skiathos-town-island.webp', alt: 'Skiathos Marina' }],
     },
   ],
   map: {

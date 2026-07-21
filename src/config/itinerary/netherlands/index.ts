@@ -1,0 +1,1 @@
+export { netherlandsItinerary } from './ijsselmeerArea';
