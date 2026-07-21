@@ -71,6 +71,11 @@ const SOS_BY_COUNTRY: Record<string, { label: string; number: string }[]> = {
   TR: [{ label: 'Coast guard', number: '158' }],
 };
 
+// Swap for the TripAdvisor / Google review URL once a public listing exists
+// (keep in sync with app/trip/not-found.tsx).
+const REVIEW_URL =
+  'mailto:info@boat4you.com?subject=My%20charter%20experience&body=Hi%20Boat4You%2C%0A%0AHere%27s%20how%20my%20trip%20went%3A%0A';
+
 const DOC_LABELS: Record<string, string> = {
   BOARDING_PASS: 'Boarding pass / Base info',
   CREW_LIST: 'Crew list (form)',
@@ -341,6 +346,9 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment, ownerCredentials }: TripHu
 
   const cancelled = trip.status === 'CANCELLED';
   const finished = now != null && now > dateTo;
+  // Crew photos are purged 10 days after the charter (TripPhotoRetentionJob) —
+  // nudge the album download only while there is still something to save.
+  const albumClosing = finished && now != null && now.getTime() < dateTo.getTime() + 10 * 86_400_000;
   const msLeft = now ? dateFrom.getTime() - now.getTime() : 0;
   const days = Math.max(0, Math.floor(msLeft / 86_400_000));
   const hours = Math.max(0, Math.floor((msLeft % 86_400_000) / 3_600_000));
@@ -622,15 +630,46 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment, ownerCredentials }: TripHu
 
                 {finished && (
                   <>
+                    <div style={S.h2}>The adventure isn&apos;t over ⚓</div>
                     <a
                       href={boatUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={() => sendEvent('SITE_CLICK', 'rebook')}
+                      style={S.btnYellow}
+                    >
+                      ⛵ Sail {trip.yacht.name} again next year →
+                    </a>
+                    <a
+                      href="https://www.boat4you.com/?utm_source=trip&utm_medium=pwa&utm_campaign=post_charter"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => sendEvent('SITE_CLICK', 'next_adventure')}
                       style={S.btnBlue}
                     >
-                      Sail {trip.yacht.name} again next year →
+                      🌊 Find your next adventure →
                     </a>
+                    <a
+                      href={REVIEW_URL}
+                      onClick={() => sendEvent('SITE_CLICK', 'review')}
+                      style={{ ...S.card, display: 'block', textDecoration: 'none', color: 'inherit' }}
+                    >
+                      <div style={{ fontWeight: 800, fontSize: 14 }}>⭐ How was your trip?</div>
+                      <div style={S.sub}>
+                        Tell us what you loved (or what we should do better) — it takes a minute and shapes every
+                        charter after yours.
+                      </div>
+                    </a>
+                    {albumClosing && (
+                      <button
+                        type="button"
+                        onClick={() => setTab('chat')}
+                        style={{ ...S.card, ...S.sub, textAlign: 'left', width: '100%', cursor: 'pointer' }}
+                      >
+                        📸 Any photos your crew shared sail away <b>10 days after the charter</b> — open the Chat tab to
+                        download the ZIP while they&apos;re still aboard.
+                      </button>
+                    )}
                     <div style={{ ...S.card, ...S.sub }}>
                       We hope {trip.yacht.name} was everything you wished for. Your travel documents stay here for 30
                       days.
