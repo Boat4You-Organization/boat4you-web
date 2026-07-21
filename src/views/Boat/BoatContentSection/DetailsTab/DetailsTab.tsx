@@ -230,102 +230,97 @@ const DetailsTab = ({ yacht }: DetailsTabProps) => {
   return (
     <Stack component="section" direction="column">
       <Stack direction="column" spacing={3}>
-        {/* Description is desktop-only — on phones it pushed the key facts far
-            below the fold (Mario 20.7.2026). display:none keeps the SEO-rich
-            text in the DOM for crawlers. */}
-        <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-          <Stack direction="column" spacing={3}>
-            <Typography
-              component="h2"
-              variant="h3"
-              fontWeight={700}
-              display="flex"
-              flexDirection="row"
-              alignItems="center"
-              gap={1}
-            >
-              <Description variant="secondary" size={32} /> {t('yacht.descriptionTitle')}
+        {/* The "Description" heading is desktop-only (Mario 20.7.2026) — on
+            phones the text starts right away, pulled up without the header. */}
+        <Typography
+          component="h2"
+          variant="h3"
+          fontWeight={700}
+          flexDirection="row"
+          alignItems="center"
+          gap={1}
+          sx={{ display: { xs: 'none', sm: 'flex' } }}
+        >
+          <Description variant="secondary" size={32} /> {t('yacht.descriptionTitle')}
+        </Typography>
+        {!yacht.custom && (
+          // SEO-rich description: scannable paragraphs (intro, accommodation,
+          // toilets, equipment, specs, sailing region, CTA). More content
+          // means stronger long-tail keyword coverage, and the "a/an … and"
+          // output from the equipment hook reads as natural English. Each
+          // paragraph is conditional on underlying data — missing specs or
+          // location just collapses that block rather than rendering "null".
+          //
+          // Key SEO terms (yacht name, model, location, country, main stats)
+          // are bolded so they stand out both to readers and search-engine
+          // parsers. Translations use <b>…</b> markers and `t.rich()`
+          // renders them through a <strong> handler to keep semantic HTML.
+          <Stack direction="column" spacing={2}>
+            <Typography variant="body1" color={colors.black500}>
+              {yacht.cabins ? `${yacht.cabins}${t('yacht.lineCabin')} ${vesselTypeLabel}` : vesselTypeLabel}{' '}
+              <strong>{yacht.model}</strong> – <strong>{displayName}</strong>
+              {t('yacht.wasBuilt')} <strong>{yacht.buildYear}</strong>
+              {locationLabel && (
+                <>
+                  {' '}
+                  {t('yacht.andDockedIn')} <strong>{locationLabel}</strong>
+                </>
+              )}
+              .
             </Typography>
-            {!yacht.custom && (
-              // SEO-rich description: scannable paragraphs (intro, accommodation,
-              // toilets, equipment, specs, sailing region, CTA). More content
-              // means stronger long-tail keyword coverage, and the "a/an … and"
-              // output from the equipment hook reads as natural English. Each
-              // paragraph is conditional on underlying data — missing specs or
-              // location just collapses that block rather than rendering "null".
-              //
-              // Key SEO terms (yacht name, model, location, country, main stats)
-              // are bolded so they stand out both to readers and search-engine
-              // parsers. Translations use <b>…</b> markers and `t.rich()`
-              // renders them through a <strong> handler to keep semantic HTML.
-              <Stack direction="column" spacing={2}>
-                <Typography variant="body1" color={colors.black500}>
-                  {yacht.cabins ? `${yacht.cabins}${t('yacht.lineCabin')} ${vesselTypeLabel}` : vesselTypeLabel}{' '}
-                  <strong>{yacht.model}</strong> – <strong>{displayName}</strong>
-                  {t('yacht.wasBuilt')} <strong>{yacht.buildYear}</strong>
-                  {locationLabel && (
-                    <>
-                      {' '}
-                      {t('yacht.andDockedIn')} <strong>{locationLabel}</strong>
-                    </>
-                  )}
-                  .
-                </Typography>
-                {(yacht.maxPersons || yacht.cabins) && (
-                  <Typography variant="body1" color={colors.black500}>
-                    <strong>{displayName}</strong> {t('yacht.canAccommodate')}
-                    <strong>{yacht.maxPersons}</strong> {t('yacht.peopleIn')} <strong>{yacht.cabins}</strong>{' '}
-                    {t('yacht.pillowIncluded')}
-                  </Typography>
-                )}
-                {yacht.wc && (
-                  <Typography variant="body1" color={colors.black500}>
-                    {t(VESSEL_TYPE_LABEL_MAP[yacht.vesselType])} <strong>{displayName}</strong> {t('yacht.offers')}{' '}
-                    <strong>{yacht.wc}</strong> {t('yacht.toiletsWithShower')}.
-                  </Typography>
-                )}
-                {description && (
-                  <Typography variant="body1" color={colors.black500}>
-                    {description}
-                  </Typography>
-                )}
-                {lengthValue && beamValue && (yacht.fuelTank || yacht.waterTank) && (
-                  <Typography variant="body1" color={colors.black500}>
-                    {t.rich(yacht.enginePower ? 'yacht.descSpecs' : 'yacht.descSpecsShort', {
-                      name: displayName,
-                      length: lengthValue,
-                      beam: beamValue,
-                      engine: String(yacht.enginePower ?? ''),
-                      fuel: String(yacht.fuelTank ?? 0),
-                      water: String(yacht.waterTank ?? 0),
-                      b: chunks => <strong>{chunks}</strong>,
-                    })}
-                  </Typography>
-                )}
-                {yacht.location?.name && (
-                  <Typography variant="body1" color={colors.black500}>
-                    {t.rich(countryName ? 'yacht.descSailingRegion' : 'yacht.descSailingRegionNoCountry', {
-                      location: yacht.location.name,
-                      country: countryName ?? '',
-                      b: chunks => <strong>{chunks}</strong>,
-                    })}
-                  </Typography>
-                )}
-                <Typography variant="body1" color={colors.black500}>
-                  {t.rich('yacht.descCTA', {
-                    name: displayName,
-                    b: chunks => <strong>{chunks}</strong>,
-                  })}
-                </Typography>
-              </Stack>
-            )}
-            {yacht.custom && yacht.description && (
+            {(yacht.maxPersons || yacht.cabins) && (
               <Typography variant="body1" color={colors.black500}>
-                {yacht.description}
+                <strong>{displayName}</strong> {t('yacht.canAccommodate')}
+                <strong>{yacht.maxPersons}</strong> {t('yacht.peopleIn')} <strong>{yacht.cabins}</strong>{' '}
+                {t('yacht.pillowIncluded')}
               </Typography>
             )}
+            {yacht.wc && (
+              <Typography variant="body1" color={colors.black500}>
+                {t(VESSEL_TYPE_LABEL_MAP[yacht.vesselType])} <strong>{displayName}</strong> {t('yacht.offers')}{' '}
+                <strong>{yacht.wc}</strong> {t('yacht.toiletsWithShower')}.
+              </Typography>
+            )}
+            {description && (
+              <Typography variant="body1" color={colors.black500}>
+                {description}
+              </Typography>
+            )}
+            {lengthValue && beamValue && (yacht.fuelTank || yacht.waterTank) && (
+              <Typography variant="body1" color={colors.black500}>
+                {t.rich(yacht.enginePower ? 'yacht.descSpecs' : 'yacht.descSpecsShort', {
+                  name: displayName,
+                  length: lengthValue,
+                  beam: beamValue,
+                  engine: String(yacht.enginePower ?? ''),
+                  fuel: String(yacht.fuelTank ?? 0),
+                  water: String(yacht.waterTank ?? 0),
+                  b: chunks => <strong>{chunks}</strong>,
+                })}
+              </Typography>
+            )}
+            {yacht.location?.name && (
+              <Typography variant="body1" color={colors.black500}>
+                {t.rich(countryName ? 'yacht.descSailingRegion' : 'yacht.descSailingRegionNoCountry', {
+                  location: yacht.location.name,
+                  country: countryName ?? '',
+                  b: chunks => <strong>{chunks}</strong>,
+                })}
+              </Typography>
+            )}
+            <Typography variant="body1" color={colors.black500}>
+              {t.rich('yacht.descCTA', {
+                name: displayName,
+                b: chunks => <strong>{chunks}</strong>,
+              })}
+            </Typography>
           </Stack>
-        </Box>
+        )}
+        {yacht.custom && yacht.description && (
+          <Typography variant="body1" color={colors.black500}>
+            {yacht.description}
+          </Typography>
+        )}
         {/* priceDescription was here previously — moved to AmenitiesTab so
             the High/Mid/Low season pricing block sits below the amenities
             grid where users expect price-related details. */}
