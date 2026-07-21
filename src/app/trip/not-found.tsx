@@ -18,9 +18,12 @@ export const metadata: Metadata = {
 };
 
 const SITE = 'https://www.boat4you.com/?utm_source=trip&utm_medium=pwa&utm_campaign=post_charter';
-// Swap for the TripAdvisor / Google review URL once a public listing exists.
+// Tripadvisor listing (Europe Yachts Charter, Split — Mario 21.7.2026).
+// Keep in sync with TripHub.tsx.
 const REVIEW_URL =
-  'mailto:info@boat4you.com?subject=My%20charter%20experience&body=Hi%20Boat4You%2C%0A%0AHere%27s%20how%20my%20trip%20went%3A%0A';
+  'https://www.tripadvisor.com/Attraction_Review-g295370-d12422829-Reviews-Europe_Yachts_Charter-Split_Split_Dalmatia_County_Dalmatia.html';
+const VOUCHER_MAILTO =
+  'mailto:info@boat4you.com?subject=Tripadvisor%20review%20%E2%80%94%20%E2%82%AC50%20voucher&body=Hi%20Boat4You%2C%0A%0AI%20just%20left%20a%20Tripadvisor%20review%20under%20the%20name%3A%20%0A%0APlease%20send%20me%20my%20%E2%82%AC50%20voucher%20for%20the%20next%20adventure!%0A';
 
 const TripNotFound = () => (
   <main
@@ -85,6 +88,8 @@ const TripNotFound = () => (
       </a>
       <a
         href={REVIEW_URL}
+        target="_blank"
+        rel="noopener noreferrer"
         style={{
           display: 'block',
           textAlign: 'center',
@@ -97,8 +102,28 @@ const TripNotFound = () => (
           textDecoration: 'none',
         }}
       >
-        <span aria-hidden="true">⭐</span> Tell us how it went
+        <span aria-hidden="true">⭐</span> Review us on Tripadvisor → get a €50 voucher
       </a>
+      <div
+        style={{
+          background: '#eafaf1',
+          border: '1px solid #bce6cf',
+          borderRadius: 14,
+          padding: '13px 15px',
+          color: '#0a3d2e',
+          fontSize: 12.5,
+          lineHeight: 1.6,
+        }}
+      >
+        <div style={{ fontWeight: 800, fontSize: 14, marginBottom: 3 }}>
+          <span aria-hidden="true">🎁</span> €50 for your next adventure
+        </div>
+        Leave a review on Tripadvisor, then{' '}
+        <a href={VOUCHER_MAILTO} style={{ color: '#16815f', fontWeight: 700 }}>
+          e-mail us the name you reviewed under
+        </a>{' '}
+        — we&apos;ll send you a <b>€50 voucher</b> for your next booking with Boat4You.
+      </div>
       <div
         style={{
           background: '#fff',

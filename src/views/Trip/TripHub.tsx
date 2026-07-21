@@ -71,10 +71,12 @@ const SOS_BY_COUNTRY: Record<string, { label: string; number: string }[]> = {
   TR: [{ label: 'Coast guard', number: '158' }],
 };
 
-// Swap for the TripAdvisor / Google review URL once a public listing exists
-// (keep in sync with app/trip/not-found.tsx).
+// Tripadvisor listing (Europe Yachts Charter, Split — Mario 21.7.2026).
+// Keep in sync with app/trip/not-found.tsx.
 const REVIEW_URL =
-  'mailto:info@boat4you.com?subject=My%20charter%20experience&body=Hi%20Boat4You%2C%0A%0AHere%27s%20how%20my%20trip%20went%3A%0A';
+  'https://www.tripadvisor.com/Attraction_Review-g295370-d12422829-Reviews-Europe_Yachts_Charter-Split_Split_Dalmatia_County_Dalmatia.html';
+const VOUCHER_MAILTO =
+  'mailto:info@boat4you.com?subject=Tripadvisor%20review%20%E2%80%94%20%E2%82%AC50%20voucher&body=Hi%20Boat4You%2C%0A%0AI%20just%20left%20a%20Tripadvisor%20review%20under%20the%20name%3A%20%0A%0APlease%20send%20me%20my%20%E2%82%AC50%20voucher%20for%20the%20next%20adventure!%0A';
 
 const DOC_LABELS: Record<string, string> = {
   BOARDING_PASS: 'Boarding pass / Base info',
@@ -649,17 +651,45 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment, ownerCredentials }: TripHu
                     >
                       🌊 Find your next adventure →
                     </a>
-                    <a
-                      href={REVIEW_URL}
-                      onClick={() => sendEvent('SITE_CLICK', 'review')}
-                      style={{ ...S.card, display: 'block', textDecoration: 'none', color: 'inherit' }}
+                    <div
+                      style={{
+                        ...S.card,
+                        color: '#0a3d2e',
+                        background: '#eafaf1',
+                        borderColor: '#bce6cf',
+                      }}
                     >
-                      <div style={{ fontWeight: 800, fontSize: 14 }}>⭐ How was your trip?</div>
-                      <div style={S.sub}>
-                        Tell us what you loved (or what we should do better) — it takes a minute and shapes every
-                        charter after yours.
+                      <div style={{ fontWeight: 800, fontSize: 14 }}>
+                        🎁 Review us on Tripadvisor → get a €50 voucher
                       </div>
-                    </a>
+                      <div style={{ fontSize: 12.5, lineHeight: 1.6, marginTop: 3 }}>
+                        Share your experience, then{' '}
+                        <a href={VOUCHER_MAILTO} style={{ color: '#16815f', fontWeight: 700 }}>
+                          e-mail us the name you reviewed under
+                        </a>{' '}
+                        — we&apos;ll send you a €50 voucher for your next adventure.
+                      </div>
+                      <a
+                        href={REVIEW_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() => sendEvent('SITE_CLICK', 'review')}
+                        style={{
+                          display: 'block',
+                          textAlign: 'center',
+                          marginTop: 9,
+                          background: '#16815f',
+                          color: '#fff',
+                          fontWeight: 800,
+                          fontSize: 14,
+                          borderRadius: 10,
+                          padding: '11px 10px',
+                          textDecoration: 'none',
+                        }}
+                      >
+                        ⭐ Leave a review on Tripadvisor →
+                      </a>
+                    </div>
                     {albumClosing && (
                       <button
                         type="button"
