@@ -88,6 +88,9 @@ const ItineraryRoutePage = async ({ params }: ItineraryRoutePageParams) => {
     parent.sailingArea,
     country ?? '',
   ]);
+  // "Browse all boats" scoped to the route's country — a bare /search
+  // shows the Croatia-heavy default fleet under a Greek route (Mario 22.7).
+  const countrySearchHref = country ? await resolveBoatsSearchHref(country) : '/search';
   // Per-route copy (metaDesc → hero lede) lives in the route's country
   // namespace; resolveRouteText t.has-guards → config fallback.
   const tRoute = await getTranslations({
@@ -178,7 +181,7 @@ const ItineraryRoutePage = async ({ params }: ItineraryRoutePageParams) => {
         action={t('routeCta.action', { start: itineraryRoute.startingPoint })}
         to={boatsSearchHref}
         secondaryAction={t('routeCta.secondaryAction')}
-        secondaryTo="/search"
+        secondaryTo={countrySearchHref}
       />
     </Layout>
   );
