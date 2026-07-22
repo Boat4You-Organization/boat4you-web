@@ -1,1 +1,1168 @@
-{}
+{
+  "routes": {
+    "abacos-unhurried-14-days": {
+      "metaTitle": "14 jours aux Abacos sans hâte | Boat4You",
+      "metaDesc": "Deux semaines tranquilles depuis Marsh Harbour autour de la Sea of Abaco : phare de Hope Town, chantiers de Man-O-War, bars de Guana Cay et Green Turtle.",
+      "days": {
+        "1": {
+          "shortDescription": "Une première étape facile vers le sud, en eaux abritées, jusqu'à Hope Town, où un phare rayé rouge et blanc marque l'entrée du port.",
+          "description": "Récupérez le bateau à Marsh Harbour, remplissez le frigo chez Maxwell's et ne bâclez pas les formalités. La route vers Hope Town ne fait que six milles à travers la Sea of Abaco : rien ne presse avant le milieu de matinée. Visez l'entrée du port autour de la marée haute ; le chenal est peu profond et le champ de corps-morts se trouve juste à l'intérieur. On ne mouille pas dans le port même, uniquement sur bouée, alors une arrivée posée paie. Une fois installé, le phare rouge et blanc d'Elbow Reef n'est qu'à deux minutes d'annexe. Il brûle encore au kérosène et se remonte à la main chaque nuit, l'un des derniers du genre. Grimpez-le avant le coucher du soleil pour la vue au large d'Elbow Cay, puis dînez à terre chez Captain Jack's, sur le front de mer.",
+          "thingsToDo": [
+            "Grimper le phare à kérosène d'Elbow Reef",
+            "Faire l'avitaillement au supermarché Maxwell's",
+            "Verre au coucher du soleil chez Captain Jack's",
+            "Flâner dans les ruelles pastel de Hope Town"
+          ],
+          "mooringTip": "Le port de Hope Town ne laisse pas de place pour mouiller : prenez une bouée (environ 30 $ la nuit) et calez votre entrée sur une marée haute, car l'entrée est peu profonde. En pleine saison, le champ se remplit en début d'après-midi, alors essayez d'arriver avant quatorze heures."
+        },
+        "2": {
+          "shortDescription": "Un court saut vers le nord jusqu'à Man-O-War Cay, cœur de la construction navale des Bahamas et seule île où l'on ne sert pas une goutte d'alcool.",
+          "description": "Man-O-War se trouve à quatre ou cinq milles à peine plus haut dans la chaîne, une heure de navigation tranquille tout au plus. On y construit des bateaux depuis les années 1800, et depuis le port on entend encore les ponceuses et l'on respire l'époxy. Suivez l'unique sentier du village jusqu'à Albury's Sail Shop, où la famille coud sacs et chapeaux dans de la toile à voile, un métier transmis de génération en génération. Une chose à savoir avant d'arriver : c'est la seule île « sèche » des Bahamas. Aucun bar n'y vend d'alcool, alors embarquez le vôtre depuis Marsh Harbour ou Hope Town si vous voulez l'apéro à bord. Le port est étroit et bien protégé, sûr par presque tous les vents. Passez l'après-midi sur la plage tranquille côté océan, derrière les chantiers, puis dînez à bord et couchez-vous tôt.",
+          "thingsToDo": [
+            "Fouiner chez Albury's, la voilerie en toile",
+            "Voir les hangars de construction de bateaux en bois",
+            "Se baigner sur la plage tranquille côté océan",
+            "Visiter le petit musée du patrimoine de Man-O-War"
+          ],
+          "mooringTip": "La Man-O-War Marina entretient des corps-morts dans les ports nord et est, pour 17 à 20 $ la nuit, ponton à annexe compris. On peut aussi mouiller au large de Dickie's Cay, mais les bouées sont bon marché et le port est étroit : les corps-morts l'emportent généralement."
+        },
+        "3": {
+          "shortDescription": "Remontez jusqu'à Great Guana Cay pour sa longue plage atlantique et deux des bars de plage les plus célèbres des Abacos.",
+          "description": "Great Guana demande un peu plus de route, huit à dix milles environ le long du bras de mer, mais reste confortable dans l'est habituel. L'attrait, ici, c'est la langue de sable de sept milles côté Atlantique et deux bars qui nourrissent les marins depuis des décennies. Nipper's domine la dune face au récif, réputé pour son cochon grillé du dimanche, de midi et demi à seize heures. Grabbers est en contrebas, sur Fishers Bay, plus calme, mieux pour piquer une tête depuis le bateau et siroter un cocktail glacé au mouillage. Un dimanche, attendez-vous à voir affluer les vedettes depuis Marsh Harbour. Les autres jours, la plage est presque à vous. Faites du snorkeling sur le récif juste au bord de la côte océan quand la houle se couche, car le corail est tout proche.",
+          "thingsToDo": [
+            "Cochon grillé du dimanche chez Nipper's",
+            "Cocktails glacés au Grabbers, à Fishers Bay",
+            "Snorkeling sur le récif côté Atlantique",
+            "Marcher les sept milles de plage océane"
+          ],
+          "mooringTip": "Prenez une bouée dans Guana Harbour ou mouillez à Fishers Bay, au large de Grabbers, par deux à cinq mètres de sable, qui tient bien. Un dimanche de fête, arrivez avant midi : la baie se remplit vite et les bons emplacements partent tôt."
+        },
+        "4": {
+          "shortDescription": "Le grand jour de traversée : contourner Whale Cay en plein Atlantique pour rejoindre Green Turtle Cay et le vieux New Plymouth.",
+          "description": "C'est l'unique étape qui demande de la préparation. La Sea of Abaco devient trop peu profonde au-delà de Whale Cay : on sort dans l'Atlantique par le Whale Cay Passage pour rentrer de l'autre côté. Par temps calme, c'est une demi-heure d'eau libre, pas plus. Avec une houle de nord ou d'est contre le courant, la passe lève ce que les locaux appellent une « rage », et on attend simplement un meilleur jour. Consultez la météo la veille et partez tôt, tant que c'est calme. Au nord se trouve Green Turtle Cay, dont le village de New Plymouth fut fondé par les Loyalistes en 1786. Amarrez-vous dans White Sound ou Black Sound, tous deux bien abrités, et gardez le village pour demain.",
+          "thingsToDo": [
+            "Passer le Whale Cay Passage par mer calme",
+            "Mouiller dans le White Sound abrité",
+            "Chercher du verre poli sur Gillam Bay",
+            "Apéro à la marina du Green Turtle Club"
+          ],
+          "mooringTip": "Ne franchissez le Whale que par conditions établies, près de l'étale ou en marée montante, car une houle de nord est la cause classique des « rages ». Une fois passé, White Sound offre corps-morts et places de marina, tandis que Black Sound propose un mouillage plus tranquille dans une vase molle : crochez bien l'ancre."
+        },
+        "5": {
+          "shortDescription": "Une matinée à New Plymouth pour un Goombay Smash, puis retour autour du Whale jusqu'à Great Guana Cay.",
+          "description": "Passez la matinée à terre avant d'appareiller. New Plymouth est un damier de maisons pastel en bardage de bois, de tombes loyalistes et d'un petit jardin de sculptures commémoratif qui mérite une promenade sans hâte. L'arrêt que font la plupart des équipages, c'est le Miss Emily's Blue Bee Bar, où fut inventé le Goombay Smash, dont la famille garde encore la recette secrète. Un seul ne fera pas de mal avant de larguer les amarres. Ensuite, cap de nouveau autour de Whale Cay pendant que la matinée reste calme, en refaisant la passe d'hier à l'envers. Tâchez de franchir la passe avant que la brise de l'après-midi ne s'installe. En début d'après-midi, vous voilà de retour sur une bouée à Great Guana, sachant cette fois exactement où se trouve le bon récif à snorkeling. Une seconde nuit ici n'a rien d'une corvée.",
+          "thingsToDo": [
+            "Goombay Smash au Miss Emily's Blue Bee Bar",
+            "Le jardin de sculptures loyaliste de New Plymouth",
+            "Passer le Whale avant la brise d'après-midi",
+            "Deuxième baignade au large de Fishers Bay"
+          ],
+          "mooringTip": "Refaites la traversée du Whale le matin, car ce schéma d'aubes calmes et de vent qui forcit l'après-midi tient la majeure partie de la saison. De retour à Guana, les mêmes bouées du port ou un emplacement au large de Grabbers conviennent bien pour la nuit."
+        },
+        "6": {
+          "shortDescription": "Une navigation facile jusqu'à la base de Marsh Harbour pour réavitailler, faire la lessive et repartir de zéro pour la deuxième semaine.",
+          "description": "Mi-parcours, et un arrêt pratique. De Guana à Marsh Harbour, c'est un bon plein sans histoire d'environ huit milles : le temps d'une dernière baignade matinale avant de larguer la bouée. Marsh Harbour est la seule vraie ville des Abacos, donc l'endroit où refaire les vivres. Complétez chez Maxwell's, refaites l'eau et le carburant, et videz les sacs de glace accumulés. Si l'équipage veut une soirée hors du bord, les restaurants du front de mer, autour des marinas, sont à deux pas. C'est une escale utilitaire plus que pittoresque, et c'est très bien ainsi. Une nuit tranquille au mouillage ou à quai vous remet en selle pour reprendre la boucle à neuf au matin.",
+          "thingsToDo": [
+            "Refaire les vivres au supermarché Maxwell's",
+            "Refaire l'eau, le carburant et la glace",
+            "Dîner à terre sur le front de mer de la marina",
+            "Une dernière baignade à Guana avant le départ"
+          ],
+          "mooringTip": "Marsh Harbour offre de la place pour mouiller dans une vase qui tient bien, ou prenez une place à Harbour View ou au Conch Inn pour l'électricité de quai et un accès facile à l'avitaillement. Réservez à l'avance en haute saison, car les marinas proches des supermarchés se remplissent les premières."
+        },
+        "7": {
+          "shortDescription": "De nouveau vers le sud jusqu'à Hope Town, en descendant cette fois Elbow Cay jusqu'au banc de sable de Tahiti Beach.",
+          "description": "Même courte traversée qu'au premier jour, six milles environ, mais un autre programme à l'arrivée. Plutôt que de vous installer directement dans le port, poussez jusqu'à la pointe sud d'Elbow Cay et mouillez au large de Tahiti Beach. À marée basse, un large banc de sable découvre, peu profond et tiède, parfait pour patauger et boire une bière depuis la jupe de bain. Il y a un bon spot de snorkeling tout près, sur les herbiers où broutent les tortues. Plus tard, remontez vers le champ de corps-morts de Hope Town pour la nuit. Si vous avez sauté la montée du phare la semaine dernière, faites-la maintenant, à l'heure dorée, quand la lumière s'adoucit sur les toits. Chez Vernon's Grocery, en ville, la key lime pie vaut le déplacement.",
+          "thingsToDo": [
+            "Mouiller près du banc de sable de Tahiti Beach",
+            "Snorkeling sur les herbiers à tortues",
+            "Key lime pie chez Vernon's Grocery",
+            "Monter au phare d'Elbow Reef à l'heure dorée"
+          ],
+          "mooringTip": "Tahiti Beach est un mouillage, pas un champ de bouées : jetez l'ancre dans le sable, à l'écart des herbiers, et surveillez la marée descendante sur le banc. Pour la nuit, revenez sur une bouée de Hope Town plutôt que de rester au large de la pointe sud, exposée."
+        },
+        "8": {
+          "shortDescription": "Retour à Man-O-War Cay pour découvrir plus tranquillement les hangars à bateaux, la voilerie et sa plage océane déserte.",
+          "description": "Une escale déjà connue, mais Man-O-War récompense une seconde visite, sans hâte. L'histoire de la construction navale vous étant désormais familière, consacrez plutôt cette journée à l'eau. La plage côté océan, au-delà du village, est le plus souvent déserte, un croissant de sable pâle avec un récif assez proche pour faire du snorkeling depuis le bord. De retour au village, Joe's Studio vend des demi-coques et de l'artisanat local, et Albury's Sail Shop mérite qu'on y flâne vraiment plutôt qu'un coup d'œil rapide. N'oubliez pas que la règle de l'île « sèche » tient toujours : tout ce que vous boirez sortira de vos propres équipets. Le port vous garde bien calé quoi que fasse le vent dans la nuit, ce qui explique en partie pourquoi les équipages y reviennent. Cuisinez à bord et couchez-vous à une heure raisonnable, car l'étape de demain, plus haut dans la chaîne, est plus longue que la plupart.",
+          "thingsToDo": [
+            "Snorkeling sur le récif de la plage océane",
+            "Voir les demi-coques chez Joe's Studio",
+            "Acheter un sac en toile chez Albury's",
+            "Parcourir tout le sentier du village"
+          ],
+          "mooringTip": "Les mêmes corps-morts bon marché de la Man-O-War Marina font l'affaire, et le port est est le mieux protégé des deux par est frais. Si les deux ports sont pleins, on mouille correctement au large de Dickie's Cay, juste à l'extérieur."
+        },
+        "9": {
+          "shortDescription": "Encore une fois vers le nord jusqu'à Great Guana Cay, en calant la route pour être au mouillage à temps pour une soirée tranquille au bar de plage.",
+          "description": "L'étape de huit à dix milles jusqu'à Guana est désormais un terrain connu, ce qui en fait une journée de navigation détendue. Hissez les voiles, laissez le pilote automatique travailler et profitez du dernier long bord en eau libre du bras de mer. Si ce n'est pas un dimanche, Nipper's et Grabbers sont calmes et accueillants, le genre d'après-midi où l'on fait durer un verre en regardant le récif changer de couleur. C'est l'étape pour parfaire le bronzage et se baigner depuis le bateau. Grabbers sert un bon conch et un burger si vous préférez ne pas cuisiner. Mouillez tôt à Fishers Bay pour attraper la lumière sur l'eau, et gardez la balade sur la plage océane pour l'aube tranquille de demain, avant que le vent ne se lève.",
+          "thingsToDo": [
+            "Conch et burger au Grabbers",
+            "Baignade et snorkeling à Fishers Bay",
+            "Apéro tandis que le récif change de couleur",
+            "Balade à l'aube sur la plage océane"
+          ],
+          "mooringTip": "Fishers Bay, au large de Grabbers, est le mouillage facile pour la nuit : deux à cinq mètres sur sable, bonne tenue, et plus calme que le côté océan. Mouillez avec une touée suffisante, car la brise de mer de l'après-midi peut vous faire éviter avant de tomber au crépuscule."
+        },
+        "10": {
+          "shortDescription": "Contourner le Whale une deuxième fois jusqu'à Green Turtle Cay, en s'installant cette fois dans Black Sound pour un séjour plus long.",
+          "description": "Le Whale de nouveau, et vous connaissez maintenant la chanson : vérifier la houle la veille, partir à l'aube, prendre un vent de nord comme un panneau stop. Avec une traversée derrière vous, la passe paraît routinière par bon temps, sans jamais mériter pour autant qu'on baisse la garde. De l'autre côté, choisissez cette fois Black Sound pour la nuit. C'est le plus tranquille des deux mouillages de Green Turtle, cerné de mangrove et calme comme un étang, avec la location de bateaux de Donny et quelques petits pontons à proximité. Rejoignez New Plymouth en annexe pour une vraie soirée à terre, pas juste une heure à la va-vite. Avec une journée et une nuit entières ici, vous pouvez vraiment voir l'endroit, marcher jusqu'à Gillam Bay pour le verre poli, et bien manger sans regarder l'heure.",
+          "thingsToDo": [
+            "Ramasser du verre poli à Gillam Bay",
+            "Dîner à terre à New Plymouth",
+            "Mouiller dans Black Sound, cerné de mangrove",
+            "Un autre Goombay Smash chez Miss Emily's"
+          ],
+          "mooringTip": "Black Sound est de la vase molle : enfoncez l'ancre et faites-la crocher franchement en marche arrière avant de vous y fier pour la nuit. L'entrée est peu profonde, alors privilégiez une marée haute pour rentrer, et surveillez les corps-morts et les petites embarcations qui encombrent le bassin intérieur."
+        },
+        "11": {
+          "shortDescription": "Une étape plus longue, de retour autour du Whale et le long de la chaîne jusqu'au port abrité de Man-O-War Cay.",
+          "description": "Aujourd'hui, on avale plus de milles : départ matinal, que le Whale soit calme ou non. Vous franchissez la passe cap au sud dès les premières lueurs, puis continuez le long du bras de mer, passant Great Guana sans vous arrêter, quinze à dix-huit milles en tout. C'est ce qui ressemble le plus, sur ce voyage, à une vraie journée de voile, et par un est régulier, c'en est une belle. Repérez Man-O-War en milieu d'après-midi, tant que vous pouvez encore lire l'eau, car ce port étroit n'est pas fait pour qu'on y tâtonne à la tombée du jour. Une fois amarré, la récompense, c'est ce même bassin bien protégé et une soirée tranquille parmi les hangars à bateaux. S'il reste de l'énergie à l'équipage, la plage océane est à quelques pas pour une dernière baignade avant que le soleil ne tombe.",
+          "thingsToDo": [
+            "Traversée matinale du Whale aux premières lueurs",
+            "Long bon plein en eau libre dans le bras de mer",
+            "Dernière baignade océane à Man-O-War",
+            "Soirée tranquille parmi les hangars à bateaux"
+          ],
+          "mooringTip": "C'est un jour où l'on part tôt pour engranger les milles avant que le Whale ou le vent ne se gâtent. Arriver à Man-O-War avec de la lumière en réserve, c'est une entrée facile : alignez votre approche du corps-mort avant de vous engager dans le chenal étroit."
+        },
+        "12": {
+          "shortDescription": "Un petit saut tranquille de quatre milles jusqu'à Hope Town pour une dernière nuit sous le phare rayé rouge et blanc.",
+          "description": "Après les milles d'hier, levez le pied. De Man-O-War à Hope Town, il n'y a que quatre ou cinq milles, une heure de voile facile : inutile de se presser pour larguer les amarres. Calez l'entrée du port sur la seconde moitié d'une marée montante et prenez une bouée dans le champ, au pied du phare. C'est votre dernière vraie soirée dehors, alors profitez-en à terre. Flânez dans les ruelles étroites entre les cottages pastel, achetez une part de key lime pie, et installez-vous pour l'apéro face à l'eau au Wine Down Sip Sip ou au On Da Beach. Le phare balaie le port de son faisceau à la nuit tombée, remonté à la main et allumé au kérosène comme il l'est depuis plus d'un siècle. Voilà un cadre à la hauteur pour la dernière soirée.",
+          "thingsToDo": [
+            "Dernier apéro au Wine Down Sip Sip",
+            "Regarder le faisceau du phare à la nuit",
+            "Flâner dans les ruelles pastel de Hope Town",
+            "Une dernière part de key lime pie"
+          ],
+          "mooringTip": "Prenez une bouée à Hope Town tôt pour votre dernière nuit, car le champ est prisé et se remplit en milieu d'après-midi en saison. Calez l'entrée peu profonde sur une marée montante, et ne comptez pas mouiller à l'intérieur : le port est réservé aux corps-morts."
+        },
+        "13": {
+          "shortDescription": "La courte navigation de retour vers la base, avec le temps d'un dernier snorkeling à Mermaid Reef avant Marsh Harbour.",
+          "description": "Une dernière traversée sans hâte, six milles environ pour retraverser jusqu'à Marsh Harbour. Quittez Hope Town après un petit-déjeuner tranquille et, si le vent le permet, faites un crochet par Mermaid Reef, juste au large de Marsh Harbour, pour un snorkeling d'adieu au-dessus des patates de corail et de leurs poissons. De retour à la base, c'est la fin pratique de la croisière. Débarquez les déchets, commencez à faire les valises et réglez les frais de carburant et de mouillage tant que le bureau est ouvert. La plupart des bateaux de charter doivent rentrer la veille du débarquement : c'est donc la nuit à passer à quai plutôt qu'au mouillage. Réservez une table dans l'un des établissements du front de mer pour un dernier dîner d'équipage à terre, et trinquez à deux semaines qui n'ont jamais donné l'impression d'être pressées.",
+          "thingsToDo": [
+            "Snorkeling d'adieu à Mermaid Reef",
+            "Régler les frais de carburant et de mouillage",
+            "Dernier dîner d'équipage sur le front de mer",
+            "Faire les valises et ranger le bateau"
+          ],
+          "mooringTip": "Rentrez à votre marina de charter la veille du check-out, car la plupart des bases des Abacos veulent le bateau la nuit d'avant plutôt que le matin même. Prenez une place si vous en avez réservé une ; sinon, le mouillage du port tient bien dans la vase, à un court trajet d'annexe des pontons."
+        },
+        "14": {
+          "shortDescription": "Jour de débarquement à Marsh Harbour : check-out final, un dernier café sur le pont et le retour à la maison.",
+          "description": "La dernière matinée est courte et surtout logistique. Le check-out du charter aux Abacos se fait généralement tôt : ayez les sacs bouclés et le bateau en ordre avant que l'équipe de la base ne monte à bord pour l'inspection. Le temps d'un café dans le cockpit et d'un dernier regard sur le port avant de rendre les clés. Si votre vol depuis l'aéroport de Marsh Harbour part plus tard dans la journée, une balade en ville ou une heure tranquille au bord de l'eau comblera facilement l'attente. Deux semaines de courtes étapes et de longs déjeuners laissent les équipages étonnamment détendus, ce qui est tout l'intérêt de faire la version lente de cette boucle plutôt que de la boucler d'une traite. Bon voyage, et attention à la marche en descendant sur le ponton.",
+          "thingsToDo": [
+            "Check-out final avec l'équipe de la base",
+            "Café dans le cockpit à l'aube",
+            "Un dernier regard sur Marsh Harbour",
+            "Transfert vers l'aéroport de Marsh Harbour"
+          ],
+          "mooringTip": "Rien à amarrer aujourd'hui, juste la restitution. Ayez le bateau vidé et les pare-battages en place avant l'arrivée de l'équipe de check-out, et réglez les derniers frais au bureau de la base avant de filer à l'aéroport."
+        }
+      }
+    },
+    "bahamas-route": {
+      "metaTitle": "Route de 7 jours dans la Sea of Abaco | Boat4You",
+      "metaDesc": "Naviguez la Sea of Abaco depuis Marsh Harbour : phare de Hope Town, bar Nippers, Goombay Smash et cayes tranquilles sur 7 jours faciles.",
+      "days": {
+        "1": {
+          "shortDescription": "Un court premier saut à travers la Sea of Abaco jusqu'à Hope Town, où un phare rayé veille encore sur l'un des plus jolis ports des Abacos.",
+          "description": "Récupérez le bateau à Marsh Harbour, passez en revue la liste d'avitaillement, et vous pouvez larguer les amarres en milieu de matinée. La traversée jusqu'à Elbow Cay fait environ cinq milles, une heure facile sur eau plate, l'île en vue tout du long. Le port de Hope Town est douillet, et on ne peut pas y mouiller : visez directement une bouée plutôt que de tourner en rond. Le phare rouge et blanc, c'est la raison pour laquelle la plupart des équipages viennent. Il brûle encore au kérosène et tourne grâce à un système de poids remonté à la main, l'un des derniers du genre où que ce soit. Grimpez les 101 marches en fin d'après-midi, quand la lumière s'adoucit et que la caye tout entière se déploie sous vos pieds. À terre, les ruelles sont étroites et sans voitures, bordées de cottages en bardage aux couleurs sorbet. En général, on amarre l'annexe et on marche jusqu'à Captain Jack's pour un cracked conch et une Kalik bien fraîche.",
+          "thingsToDo": [
+            "Grimper les 101 marches du phare de Hope Town",
+            "Cracked conch et Kalik chez Captain Jack's",
+            "Flâner dans les ruelles sans voitures de Hope Town",
+            "Rhum au coucher du soleil au Harbour's Edge"
+          ],
+          "mooringTip": "Le port de Hope Town ne laisse pas de place pour mouiller : prenez une bouée dès l'arrivée ou appelez la Hope Town Inn & Marina à l'avance en haute saison. Les bouées se remplissent en début d'après-midi, alors entrez avant la foule."
+        },
+        "2": {
+          "shortDescription": "Glissez vers le sud jusqu'à Tahiti Beach pour le banc de sable de marée basse, puis laissez la brise de mer vous ramener à Marsh Harbour pour la nuit.",
+          "description": "Tahiti Beach se trouve à la pointe sud d'Elbow Cay, à trois milles au sud de Hope Town, et vaut ce court trajet. Calez-le sur une marée descendante. À mesure que l'eau se retire, un long banc de sable pâle émerge au large de la pointe, à hauteur de cheville, ceinturé de cocotiers, avec Lubbers Quarters et Tilloo Cay de l'autre côté de la passe. Mouillez dans Aunt Pat's Bay et rejoignez le bord en annexe, ou finissez à pied dans l'eau. Le Thirsty Cuda, un bar amarré juste au large du sable, sert des bouchées de poisson et des cocktails glacés si vous voulez déjeuner sans aller à terre. Quand la brise de mer s'installe vers midi, c'est un bon plein facile pour retraverser la Sea of Abaco jusqu'à Marsh Harbour. Mouillez au large de la ville, refaites l'eau et la glace, et dînez à bord ce soir.",
+          "thingsToDo": [
+            "Arpenter le banc de sable de Tahiti Beach à marée basse",
+            "Bouchées de poisson à flot au Thirsty Cuda",
+            "Snorkeling dans la passe vers Lubbers Quarters",
+            "Avitailler et refaire le plein à Marsh Harbour"
+          ],
+          "mooringTip": "Aunt Pat's Bay, au large de Tahiti Beach, tient bien sur le sable mais devient vite peu profonde à marée basse : surveillez votre évitage et votre tirant d'eau. De retour à Marsh Harbour, le mouillage de la ville tient bien dans la vase une fois l'ancre enfoncée."
+        },
+        "3": {
+          "shortDescription": "Cap au nord vers Great Guana Cay pour deux des bars de plage les plus animés des Abacos : Grabbers côté port et Nippers côté océan.",
+          "description": "La remontée vers Great Guana Cay est encore une étape douce, sept milles environ avec la grande île à bâbord et les récifs à tribord. Fishers Bay s'ouvre côté village, où l'on peut jeter l'ancre dans le sable ou prendre l'un des corps-morts de Grabbers. Grabbers est juste sur la baie, à un saut d'annexe pour une baignade et un burger. L'autre attrait est à cinq minutes à pied, en travers de l'île étroite. Nippers se perche sur une dune au-dessus de la plage atlantique, tout en terrasses colorées et en un sérieux rhum punch glacé. Débarquez ici un dimanche, et le cochon grillé fait de l'endroit le coin de sable le plus fréquenté des Abacos, les bateaux se mettant à couple tout l'après-midi. Faites d'abord du snorkeling sur le récif au large de la plage océane, avant que la foule n'arrive.",
+          "thingsToDo": [
+            "Rhum punch glacé sur la terrasse atlantique de Nippers",
+            "Burgers et baignade au Grabbers",
+            "Cochon grillé du dimanche sur la plage océane",
+            "Snorkeling sur le récif côté large de Guana"
+          ],
+          "mooringTip": "Fishers Bay tient bien sur le sable par 2 à 5 mètres, et Grabbers dispose de quelques corps-morts que l'on peut réserver par radio. Si un coup de nord est annoncé, la baie devient exposée : prévoyez d'être bien abrité derrière Guana avant que le vent ne bascule."
+        },
+        "4": {
+          "shortDescription": "Calez le Whale Cay Passage sur une mer calme, puis poussez jusqu'à Green Turtle Cay et le Goombay Smash chez Miss Emily's.",
+          "description": "C'est l'unique étape qui demande de garder l'œil sur le temps. Pour atteindre les cayes du nord, la plupart des bateaux de charter quittent la Sea of Abaco protégée par le Whale Cay Passage, un petit mille et demi en plein Atlantique où la houle et un est soutenu peuvent lever une mer dure. Consultez la météo la veille et partez tôt, en marée montante, tant que c'est encore établi. Une fois la passe franchie, la mer se recouche et Green Turtle Cay s'ouvre devant. Prenez un corps-mort dans White Sound, au large du Green Turtle Club, car la tenue y est mauvaise et la bouée reste le choix le plus sûr. Rejoignez New Plymouth en annexe l'après-midi. Les ruelles valent bien une heure, et le Miss Emily's Blue Bee Bar, où le Goombay Smash fut inventé dans les années soixante, sert toujours l'original.",
+          "thingsToDo": [
+            "Franchir le Whale tôt par matinée calme",
+            "Le Goombay Smash original chez Miss Emily's",
+            "Flâner dans les ruelles loyalistes de New Plymouth",
+            "Apéro sur le ponton du Green Turtle Club"
+          ],
+          "mooringTip": "White Sound et Black Sound tiennent tous deux mal sur le limon : prenez une bouée plutôt que de vous fier à l'ancre. Ne franchissez le Whale que par conditions établies ; si la houle d'est se lève, attendez un jour plutôt que de forcer."
+        },
+        "5": {
+          "shortDescription": "Remontez au portant vers les plages désertes de Manjack et Powell Cay, à faire du snorkeling avec raies et tortues avant de regagner votre corps-mort.",
+          "description": "Laissez le corps-mort pour une journée et remontez au portant vers Manjack et Powell Cay, deux îles basses et pour l'essentiel inhabitées, quelques milles plus haut dans la chaîne. Manjack est la meilleure des deux. Mouillez dans l'anse nord, prenez l'annexe et suivez le sentier jusqu'au côté océan, où le sable file désert sur un mille. Les hauts-fonds abritent ici raies pastenagues et petits requins, et le snorkeling est correct sur les récifs au large de la pointe. Powell Cay, un peu plus loin, offre une autre large plage et une bonne tenue si vous voulez un deuxième arrêt. Au retour, faites un crochet par No Name Cay, où une petite bande de cochons nageurs viendra vous rejoindre à la nage en quête de restes. Regagnez votre corps-mort de Green Turtle avant la nuit.",
+          "thingsToDo": [
+            "Snorkeling sur les récifs de la pointe de Manjack",
+            "Marcher la plage océane déserte de Manjack",
+            "Rencontrer les cochons nageurs de No Name Cay",
+            "Mouiller à Powell Cay pour une seconde baignade"
+          ],
+          "mooringTip": "L'anse nord de Manjack tient bien sur le sable par temps établi mais reste ouverte au nord : considérez-la comme un arrêt de jour, pas pour la nuit. Gardez votre corps-mort de Green Turtle pour la nuit plutôt que de le libérer."
+        },
+        "6": {
+          "shortDescription": "De retour à travers le Whale jusqu'à Man-O-War Cay, le village de constructeurs de bateaux des Abacos, où Albury's coud encore des sacs dans de la vieille toile à voile.",
+          "description": "Refaites le Whale cap au sud, en choisissant là encore une fenêtre calme, et replongez dans la Sea of Abaco abritée. Man-O-War Cay est d'une tout autre nature que les cayes à fête. Des familles loyalistes s'y sont installées dans les années 1790 et en ont fait le cœur de la construction navale des Bahamas ; les Albury stratifient coques et dinghies Abaco depuis six générations. Le port est étroit : le corps-mort s'impose plutôt que de mouiller dans le chenal serré. Parcourez l'unique ruelle et passez à Albury's Sail Shop, où l'on coud encore à la main de petits cabas robustes dans de la toile à voile. Une chose à savoir : la caye est « sèche » depuis des générations, sans bar ni bouteille à vendre, alors gardez de quoi vous rafraîchir à bord pour la soirée. Les plages côté océan sont tranquilles et le plus souvent désertes.",
+          "thingsToDo": [
+            "Voir les coques prendre forme dans les chantiers",
+            "Cabas en toile à voile chez Albury's Sail Shop",
+            "Suivre l'unique ruelle jusqu'à la plage océane",
+            "Snorkeling sur les récifs tranquilles du village"
+          ],
+          "mooringTip": "Le port de Man-O-War est étroit et fréquenté : prenez un corps-mort plutôt que de mouiller dans le chenal, et appelez à l'avance en pleine saison. N'oubliez pas que la caye est « sèche » : achetez vos boissons avant d'arriver."
+        },
+        "7": {
+          "shortDescription": "Un court dernier saut pour retraverser jusqu'à Marsh Harbour, avec le temps d'une ultime baignade avant de rendre le bateau.",
+          "description": "La dernière étape est la plus courte de la semaine, quatre milles à peine pour redescendre à Marsh Harbour. Si votre restitution n'est qu'en après-midi, rien ne presse. Avancez au moteur lentement le long de la côte, trouvez un coin tranquille au large du village pour une dernière baignade, et offrez à l'équipage une ultime heure dans l'eau. Marsh Harbour est la plus grande ville des Abacos et l'endroit pour régler les comptes, refaire le plein et débarquer les déchets. Visez le ponton à carburant ou le mouillage bien avant la restitution, car la base voudra le bateau vidé et le plein fait. S'il y a un vol le soir, la plupart des équipages passent la dernière nuit à terre ici plutôt qu'à bord. C'est une fin facile et sans hâte à une semaine de courtes étapes et d'eaux turquoise peu profondes.",
+          "thingsToDo": [
+            "Une dernière baignade au large de Marsh Harbour",
+            "Refaire le plein et régler à la base",
+            "Avitaillement au supermarché Maxwell's",
+            "Dîner d'adieu sur le front de mer de Marsh Harbour"
+          ],
+          "mooringTip": "Le mouillage de Marsh Harbour est spacieux et tient bien dans la vase, mais gardez du temps pour rejoindre le ponton à carburant avant la fermeture de la base. Confirmez le point de restitution exact avec votre société de charter à la réservation, car la disponibilité des places varie."
+        }
+      }
+    },
+    "bvi-full-loop-14-days": {
+      "metaTitle": "Boucle des îles Vierges britanniques 14 j | Boat4You",
+      "metaDesc": "Boucle au départ de Tortola à travers toutes les îles Vierges britanniques : les Baths, le récif d'Anegada, Jost Van Dyke et chaque anse tranquille.",
+      "days": {
+        "1": {
+          "shortDescription": "La Bight de Norman Island n'est qu'à six milles de la base, un premier après-midi facile entre les grottes de snorkeling et le bar-pirate flottant.",
+          "description": "Récupérez le bateau à Road Town, réglez l'avitaillement et le briefing cartes, puis sortez pour un bon plein facile à travers le Sir Francis Drake Channel. Norman Island se trouve à quelque six milles au sud : rien ne presse. La Bight s'ouvre en une baie large et abritée, avec un champ de corps-morts entretenu par le restaurant Pirates, à terre. Prenez une bouée, mettez l'annexe à l'eau et contournez jusqu'aux Caves de Treasure Point avant que les bateaux à la journée ne s'en aillent. Le snorkeling y est authentique, avec des bancs de petits poissons argentés dans les grottes qui auraient, dit-on, inspiré Stevenson. Le soir venu, le bar flottant Willy T se tient à quelques centaines de pieds de la plage, les painkillers coulant à flot et les équipages les plus téméraires plongeant du pont supérieur. En général, on dîne à terre chez Pirates et on se couche tôt. Quatorze jours, c'est long ; le premier jour sert à trouver le rythme.",
+          "thingsToDo": [
+            "Snorkeling dans les Caves de Treasure Point",
+            "Painkillers à bord du Willy T",
+            "Dîner à terre au Pirates Bight",
+            "Se baigner sur la plage de la Bight"
+          ],
+          "mooringTip": "La Bight compte de nombreuses bouées entretenues par Pirates, mais elle se remplit en haute saison hivernale ; visez d'être amarré en milieu d'après-midi. On peut mouiller à l'extérieur du champ, sur le sable, si les bouées sont prises."
+        },
+        "2": {
+          "shortDescription": "Peter Island n'est qu'à deux milles au vent, la plus grande île privée de la chaîne, avec une nuit tranquille qui attend à Great Harbour ou à Little Harbour.",
+          "description": "Peter Island est juste en face de Norman, de l'autre côté du chenal, deux milles tout au plus : la matinée est à vous pour vous attarder autour d'un café et d'un second snorkeling. Au moment de partir, la navigation est courte et se fait d'ordinaire dans la brise d'est. La côte nord abrite deux bons mouillages. Great Harbour est la baie étroite et plus profonde, avec des corps-morts et une tenue fiable dans le sable par vingt à trente pieds. Little Harbour, plus à l'ouest, est plutôt plus calme et moins fréquentée, et c'est souvent là qu'on finit. À terre, l'île est un domaine de resort privé : l'intérêt, c'est vraiment l'eau. Deadman's Bay, côté sud, offre un long ruban de sable et un snorkeling correct au large des pointes. Gardez la soirée simple, cuisinez à bord et regardez la lumière quitter les collines de Tortola.",
+          "thingsToDo": [
+            "Mouiller dans le calme de Little Harbour",
+            "Balade sur la plage de Deadman's Bay",
+            "Snorkeling sur les pointes rocheuses de White Bay",
+            "Apéro sur le pont face à Tortola"
+          ],
+          "mooringTip": "Great Harbour tient bien sur le sable par 20 à 30 pieds, avec des corps-morts en plus ; Little Harbour est plus calme mais plus serré, alors arrivez plus tôt pour une bouée. Les deux sont exposés à une houle de nord, s'il y en a une."
+        },
+        "3": {
+          "shortDescription": "Filez au portant vers l'est jusqu'à Cooper Island pour le bar à rhum du Beach Club, son restaurant à l'énergie solaire et les tortues de Cistern Point.",
+          "description": "Depuis Peter Island, c'est un court près ou un bon plein cap à l'est jusqu'à Cooper, selon l'orientation des alizés. Manchioneel Bay, côté ouest, est l'attrait : un croissant de corps-morts devant le Cooper Island Beach Club. L'endroit fonctionne en grande partie au solaire, torréfie son propre café, et le bar à rhum derrière le restaurant garde un sérieux fonds de bouteilles. Réservez une table si vous voulez dîner à terre. Les bouées blanches se prennent au premier arrivé et sont en général toutes prises avant midi : on a donc tendance à quitter Peter Island en milieu de matinée. Cistern Point, à l'extrémité nord de la baie, est un beau spot de snorkeling, avec des tortues qui broutent les herbiers et un tombant qui plonge dans le bleu. Une fois installé, il n'y a plus grand-chose à faire que nager, lire et laisser filer l'après-midi.",
+          "thingsToDo": [
+            "Dégustation de rhums au bar du Beach Club",
+            "Snorkeling sur le tombant de Cistern Point",
+            "Dîner au restaurant de Cooper Island",
+            "Café frais de la torréfaction à terre"
+          ],
+          "mooringTip": "Les dix-sept bouées blanches se prennent au premier arrivé et sont généralement pleines à midi ; les vingt bouées orange à l'extrémité sud se réservent via l'appli BoatyBall. Le mouillage à l'intérieur du champ n'est pas autorisé."
+        },
+        "4": {
+          "shortDescription": "Cap au nord vers Virgin Gorda et la cathédrale de granit des Baths, un labyrinthe de blocs gros comme des maisons et de vasques de marée, à explorer de préférence aux premières lueurs.",
+          "description": "Les Baths sont le seul site des BVI qui tienne les promesses des cartes postales, et tout est dans le timing. Quittez Cooper tôt et remontez les quelques milles jusqu'à la pointe sud-ouest de Virgin Gorda, car les bateaux à la journée débarquent en masse à partir de dix heures environ. Prenez une bouée des National Parks au large de la plage ou à Devil's Bay, puis approchez en annexe jusqu'à la ligne et finissez à la nage. À terre, un sentier se faufile entre des blocs de granit gros comme des maisons, sous des rais de lumière, le long de vasques que la houle remplit et vide. Le passage jusqu'à Devil's Bay prend vingt minutes et vous récompense d'un sable plus tranquille. Ce n'est un mouillage que pour la journée : prévoyez de bouger pour la nuit. Spring Bay, juste à côté, ou le Yacht Harbour sont de bonnes options.",
+          "thingsToDo": [
+            "Le sentier des blocs jusqu'à Devil's Bay",
+            "Snorkeling matinal avant les bateaux à la journée",
+            "Nager dans les grottes de Spring Bay",
+            "Un verre frais au Poor Man's Bar"
+          ],
+          "mooringTip": "Les bouées de jour des National Parks, au large de la plage des Baths et à Devil's Bay, coûtent environ 30 $ et ne peuvent pas être gardées la nuit. Prenez-en une tôt, puis rejoignez Spring Bay ou le Yacht Harbour avant la nuit."
+        },
+        "5": {
+          "shortDescription": "Contournez la pointe est de Virgin Gorda jusqu'à North Sound, un lagon cerné de récifs, tout en champs de corps-morts, marinas et eau plate de tous côtés.",
+          "description": "North Sound est le plus calme des grands mouillages du territoire, un lagon presque fermé, protégé par le récif et une poignée de petites îles. La remontée depuis les Baths contourne la côte est de Virgin Gorda et prend deux heures environ, parfois un près serré animé une fois la pointe passée. À l'intérieur, l'embarras du choix : Leverick Bay, dans l'angle sud-ouest, est l'option pratique, avec champ de corps-morts, marina, shipchandler et un bon bar de plage. C'est un bon endroit pour refaire l'eau, faire la lessive et prendre une vraie douche. La tenue dans tout le sound est excellente dans une vase collante par trente à quarante-cinq pieds, si vous préférez mouiller. Leverick organise un jump-up le vendredi soir, avec un danseur sur échasses mocko jumbie qui vaut le détour si vos dates tombent bien.",
+          "thingsToDo": [
+            "Le jump-up du vendredi à Leverick Bay",
+            "Refaire l'eau et les vivres à terre",
+            "Un verre au bar de plage de la marina",
+            "Taxi jusqu'au belvédère de Gorda Peak"
+          ],
+          "mooringTip": "Leverick Bay dispose d'un grand champ de corps-morts et de places de marina avec électricité de quai ; réservez une place à l'avance en haute saison. La tenue dans tout North Sound est excellente dans la vase par 30 à 45 pieds si vous préférez mouiller."
+        },
+        "6": {
+          "shortDescription": "La traversée tant attendue jusqu'à Anegada, la seule île corallienne du groupe, par le chenal du récif vers cabanes à langouste et plages désertes.",
+          "description": "Anegada est l'exception : plate, de corail et de calcaire, là où toutes les autres îles des BVI sont volcaniques et escarpées. Depuis North Sound, c'est environ quinze milles au nord, deux à trois heures au portant, et l'approche compte. On enfile un chenal balisé taillé dans le Horseshoe Reef : calez votre route sur une bonne lumière et respectez scrupuleusement les balises. Setting Point est le seul mouillage, une rangée conviviale de corps-morts et de restaurants de langouste égrenés le long du rivage. Une fois arrivé, louez une jeep ou prenez un taxi vers la côte nord : Loblolly Bay et Cow Wreck Bay, c'est le genre de sable large et désert pour lequel on fait tout ce chemin. Réservez votre langouste l'après-midi pour laisser du temps à la cuisine ; grillée au Wonky Dog ou chez Potter's, c'est toute la raison de votre venue.",
+          "thingsToDo": [
+            "Dîner de langouste grillée au Wonky Dog",
+            "Escapade en jeep jusqu'à Loblolly Bay",
+            "Snorkeling sur les hauts-fonds de Cow Wreck Bay",
+            "Repérer les flamants dans les salines"
+          ],
+          "mooringTip": "N'approchez Setting Point que par bonne lumière au zénith et suivez les bouées du chenal à travers le Horseshoe Reef ; les eaux alentour deviennent vite peu profondes. Réservez un corps-mort en saison, et commandez votre langouste à terre plusieurs heures à l'avance."
+        },
+        "7": {
+          "shortDescription": "Reprenez le chenal du récif jusqu'à North Sound, cette fois pour ses recoins : le bar de Saba Rock, le Bitter End et une baignade au large de Prickly Pear.",
+          "description": "En quittant Anegada, reprenez le chenal à travers le récif et faites route vers North Sound ; les alizés au travers, c'est une traversée rapide et facile. Plutôt que de vous réinstaller directement à Leverick, passez l'après-midi à explorer le côté est du lagon. Saba Rock est une île minuscule avec un bar chic et un petit champ de corps-morts bien serré, parfait pour un rhum et le coucher du soleil. Juste à côté, le Bitter End Yacht Club a été reconstruit et anime des pontons vivants, avec sports nautiques et une supérette. Prickly Pear, de l'autre côté de l'eau, a une plage tranquille et un bar de plage à Vixen Point si vous voulez du sable sous les pieds. En général, on revient sur une bouée de Leverick pour une nuit plus calme. Pas de longue navigation demain, alors profitez de l'eau plate.",
+          "thingsToDo": [
+            "Rhum au coucher du soleil à Saba Rock",
+            "L'ambiance des pontons au Bitter End",
+            "Bar de plage à Vixen Point, Prickly Pear",
+            "Paddle sur le lagon abrité"
+          ],
+          "mooringTip": "Le champ de Saba Rock est petit et se remplit tôt ; prenez une bouée en fin d'après-midi ou prévoyez de rejoindre le dîner en annexe. Pour une nuit plus calme, prenez un corps-mort à Leverick Bay et rejoignez les bars en annexe."
+        },
+        "8": {
+          "shortDescription": "Cap à l'ouest le long de la chaîne jusqu'à Scrub Island, une marina de resort près de Trellis Bay avec piscines, spa et un vrai ponton pour la nuit.",
+          "description": "Aujourd'hui, on commence à revenir vers l'ouest le long de la chaîne. Scrub Island se trouve juste au large de la pointe est de Tortola, à un mille environ, et la descente depuis North Sound est un vent arrière confortable, la brise dans le dos. Scrub est une île-resort dotée d'une marina complète : c'est la nuit à passer à quai si vous avez envie d'électricité de bord, d'une longue douche et d'une baignade dans les piscines à flanc de colline. Le restaurant et la plage sont ouverts aux occupants d'une place, et l'avitaillement est facile avant la seconde moitié du voyage. Si vous préférez rester au mouillage, Marina Cay et Trellis Bay, tout près, proposent des corps-morts, Trellis étant un pôle de vie locale, avec l'ancien atelier d'Aragorn sur la plage. Dans un cas comme dans l'autre, c'est une escale douce et civilisée pour couper le retour.",
+          "thingsToDo": [
+            "Nager dans les piscines à flanc de colline du resort",
+            "Une place à quai et une longue douche chaude",
+            "Annexe jusqu'à Trellis Bay pour la vie de plage",
+            "Voir les ferronneries de l'atelier d'Aragorn"
+          ],
+          "mooringTip": "La Scrub Island Marina prend les réservations via Dockwa et compte plus de 50 places avec électricité et eau ; réservez à l'avance en saison. Pour un corps-mort à la place, Marina Cay et Trellis Bay, tout près, sont à un court saut vers l'ouest."
+        },
+        "9": {
+          "shortDescription": "Contournez la côte nord de Tortola jusqu'à Cane Garden Bay, une longue plage en croissant, avec du reggae chez Quito's et du rhum à la vieille distillerie Callwood.",
+          "description": "Cane Garden Bay se trouve sur la côte nord-ouest de Tortola : depuis Scrub, vous contournez la pointe est et longez toute la côte nord, un bon plein agréable de deux heures environ. La baie est un large croissant de sable adossé à des collines verdoyantes, bondée de corps-morts et bordée d'une poignée de bars de plage. Amarrez-vous, rejoignez le bord à la nage, et l'après-midi peut prendre deux tournures. Montez jusqu'à la Callwood Rum Distillery, une vieille distillerie de pierre qui fait le rhum Arundel depuis des générations, puis redescendez tranquillement pour du poisson grillé et du reggae au Quito's Gazebo, tenu par le musicien local Quito Rymer. Myett's fait aussi un bon dîner sur la plage. Une seule réserve : une houle de nord rend cette baie inconfortable, alors surveillez la météo et gardez une option de repli en poche.",
+          "thingsToDo": [
+            "Visiter la vieille distillerie de rhum Callwood",
+            "Soirée reggae au Quito's Gazebo",
+            "Dîner sur la plage au Myett's Garden & Grille",
+            "Nager dans le croissant de Cane Garden Bay"
+          ],
+          "mooringTip": "Cane Garden Bay est truffée de corps-morts : prenez-en un plutôt que de disputer de la place au mouillage entre eux. Elle roule beaucoup par houle de nord, alors vérifiez la météo et soyez prêt à filer plutôt vers une baie de la côte sud."
+        },
+        "10": {
+          "shortDescription": "Sautez jusqu'à Jost Van Dyke pour le Painkiller original du Soggy Dollar à White Bay, puis Foxy's et l'effervescence de village de pêcheurs de Great Harbour.",
+          "description": "Jost Van Dyke est juste à l'ouest de Tortola, une courte navigation à travers la passe de Thatch Island. Deux mouillages font la journée. White Bay, c'est la carte postale : une bande de sable blanc frangée de récif où le Soggy Dollar Bar prétend avoir inventé le Painkiller, et l'on rejoint le bord à la nage faute de ponton à annexe digne de ce nom. Great Harbour, juste au coin, est le cœur battant de l'île et le port d'entrée, où se trouve Foxy's, où Philicianno Callwood tient sa cour et joue du calypso depuis des décennies. Mouiller à Great Harbour est délicat, avec du sable peu profond près du bord et une vase qui tient mal au-delà : le corps-mort s'impose. Passez l'après-midi à White Bay et la soirée chez Foxy's, ou l'inverse. Peu d'endroits concentrent autant de caractère sur une seule petite île.",
+          "thingsToDo": [
+            "Painkiller au Soggy Dollar Bar",
+            "Rejoindre le sable de White Bay à la nage",
+            "Calypso et barbecue chez Foxy's",
+            "Annexe jusqu'à la Bubbly Pool de Diamond Cay"
+          ],
+          "mooringTip": "White Bay compte quelques corps-morts payés au Soggy Dollar ou chez Ivan's, avec de la place pour mouiller dans le sable à travers les passes du récif. Great Harbour tient mal : prenez-y un corps-mort pour la nuit plutôt que de vous fier à l'ancre."
+        },
+        "11": {
+          "shortDescription": "Retour à l'est vers Cane Garden Bay pour une deuxième nuit, plus lente : une balade sur la plage, un snorkeling au large de la pointe nord et l'apéro au-dessus du mouillage.",
+          "description": "La courte étape de retour depuis Jost vous laisse une matinée paresseuse à White Bay avant de traverser vers la côte nord de Tortola. En entrant une deuxième fois à Cane Garden Bay, vous connaissez déjà la manœuvre : cette escale, c'est plutôt lever le pied que faire du tourisme. Prenez une bouée, nagez sur toute la longueur de la plage, et faites du snorkeling sur les rochers de l'extrémité nord, là où le récif abrite petits poissons et, parfois, une raie. À terre, la petite enfilade de bars et de boutiques se parcourt tranquillement, et un taxi jusqu'au belvédère de Bananakeet vous offre toute la baie déployée en contrebas au coucher du soleil. Faites quelques vivres si besoin ; les petites boutiques ont l'essentiel. Cuisinez à bord, ou allez déguster une dernière assiette de poisson grillé à terre avant que le bateau ne remette le cap au sud demain.",
+          "thingsToDo": [
+            "Snorkeling sur les rochers de la pointe nord",
+            "Coucher de soleil depuis le belvédère de Bananakeet",
+            "Longue baignade dans la plage en croissant",
+            "Dîner de poisson grillé sur le sable"
+          ],
+          "mooringTip": "Comme la fois précédente, prenez un corps-mort plutôt que de mouiller dans le champ encombré, et gardez un œil sur toute houle de nord. Si la baie roule, Brewers Bay, juste à l'est, est un repli plus calme avec ses propres corps-morts."
+        },
+        "12": {
+          "shortDescription": "De nouveau vers le sud le long du Drake Channel jusqu'à Norman Island, en bouclant la boucle à la Bight avec un snorkeling aux Indians en chemin.",
+          "description": "C'est l'une des plus belles journées de voile de la quinzaine. Depuis Cane Garden Bay, vous doublez la pointe ouest de Tortola et tirez un long bon plein le long du Sir Francis Drake Channel, vent de travers, toute la chaîne d'îles défilant à bâbord. Si le timing s'y prête, arrêtez-vous aux Indians en chemin, quatre pitons rocheux qui font l'un des plus beaux spots de snorkeling des BVI, et prenez-y une bouée des National Parks pour une heure. Ensuite, un court saut jusqu'à la Bight pour votre dernière nuit à Norman Island. Au retour, la baie paraît familière et facile. Essayez Kelly's Cove, côté nord, pour un snorkeling plus tranquille cette fois, et dînez chez Pirates ou de retour à bord du Willy T s'il reste de l'énergie à l'équipage.",
+          "thingsToDo": [
+            "Snorkeling sur les pitons des Indians",
+            "Un bon plein le long du Sir Francis Drake Channel",
+            "Snorkeling tranquille à Kelly's Cove",
+            "Dernière nuit au corps-mort dans la Bight"
+          ],
+          "mooringTip": "Les Indians ont un petit champ de corps-morts de jour des National Parks qui se remplit vite ; prenez-en un en milieu de matinée ou prévoyez un court arrêt entre d'autres bateaux. De retour à la Bight, les corps-morts sont nombreux, mais réservez-en un avant la ruée de l'après-midi."
+        },
+        "13": {
+          "shortDescription": "Une dernière traversée facile vers Peter Island, cette fois jusqu'à Great Harbour et une ultime longue baignade sur le sable blanc de Deadman's Bay.",
+          "description": "Le bateau étant dû demain, le treizième jour est volontairement tranquille. Il n'y a que deux milles de Norman à Peter Island : aucune raison de se presser de larguer la bouée. Cette fois, mettez le cap sur Great Harbour, la baie centrale profonde, où la tenue est bonne et les corps-morts se blottissent au pied des collines. L'intérêt de s'y arrêter à nouveau est simple : une baignade de plus et une nuit tranquille de plus avant la marina. Prenez l'annexe jusqu'à Deadman's Bay, un long arc de sable pâle côté sud, avec un snorkeling facile au large de chacune des deux pointes. De retour à bord, c'est la soirée pour finir ce qui reste dans le carré et la glacière, ranger un peu le bateau et regarder le soleil se coucher derrière Norman Island une dernière fois, depuis l'eau.",
+          "thingsToDo": [
+            "Dernière baignade au large de Deadman's Bay",
+            "Snorkeling sur les pointes de part et d'autre de la baie",
+            "Nuit tranquille au corps-mort à Great Harbour",
+            "Vider le carré en un dîner sur le pont"
+          ],
+          "mooringTip": "Great Harbour tient bien sur le sable par 20 à 30 pieds et compte des corps-morts sous la côte nord ; c'est la plus abritée des baies de Peter Island. Choisissez votre emplacement tôt pour être installé pour une dernière nuit calme au mouillage."
+        },
+        "14": {
+          "shortDescription": "La dernière matinée est un rapide moteur-et-voile à travers le chenal jusqu'à Road Town, calé pour rendre le bateau avant le check-out de la base.",
+          "description": "La dernière étape est douce, trois ou quatre milles pour retraverser le Sir Francis Drake Channel de Peter Island à Road Town. La plupart des bases veulent le bateau à quai en milieu de matinée : partez à temps et profitez d'une ultime petite navigation plutôt que d'un moteur pressé. Rangez le matériel, ensachez les déchets, et refaites le carburant et l'eau si votre contrat l'exige. Une fois le check-in fait, Road Town a de quoi combler l'attente avant un vol : le marché du samedi et les stands d'artisanat, une boutique de rhum ou deux pour rapporter quelque chose, et un vrai déjeuner à terre que quelqu'un d'autre cuisine pour vous. Deux semaines dans les BVI couvrent beaucoup de terrain pour une zone de navigation aussi compacte, et la boucle de retour vers Tortola paraît toujours plus courte que l'aller.",
+          "thingsToDo": [
+            "Rapporter du rhum local à Road Town",
+            "Flâner entre les stands d'artisanat près du ponton des ferries",
+            "Long déjeuner à terre après le check-in",
+            "Régler le carburant et l'eau à la base"
+          ],
+          "mooringTip": "Confirmez votre heure de check-in et la procédure au ponton à carburant avant de quitter Peter Island ; le poste de carburant de Road Town s'engorge les matins de rotation chargés. Visez d'être à quai tôt pour éviter la file au ponton."
+        }
+      }
+    },
+    "bvi-route": {
+      "metaTitle": "Cabotage de 7 jours dans les BVI | Boat4You",
+      "metaDesc": "Boucle de sept jours depuis Tortola dans les îles Vierges britanniques : Peter, Cooper et Norman Island, les bars de Jost Van Dyke et Cane Garden Bay.",
+      "days": {
+        "1": {
+          "shortDescription": "Un court premier saut à travers le chenal jusqu'à Peter Island, pour mettre l'équipage en douceur dans la navigation aux alizés avant une nuit tranquille au mouillage.",
+          "description": "La plupart des équipages passent la matinée à faire les vivres à Road Town : inutile de se presser pour larguer les amarres. La traversée jusqu'à Peter Island fait cinq milles à peine, un doux travers qui laisse à chacun le temps de trouver ses marques avant quoi que ce soit d'exigeant. Les alizés viennent de l'est la plupart des jours, et le chenal reste plat derrière l'anneau d'îles.\n\nGreat Harbour s'ouvre, large et profonde, sur la côte nord, avec des corps-morts le long du bord sud-ouest quand la brise le permet. En général, on préfère Deadman's Bay pour la plage, un croissant de sable pâle où l'on nage au propre directement depuis le bateau. Si vous cherchez la solitude, Little Harbour, à l'est, abrite des tortues qui broutent dans les hauts-fonds et les ruines de l'ancien domaine Percy Chubb, à terre. Le coucher du soleil, ici, se prend sans hâte.",
+          "thingsToDo": [
+            "Nager dans le croissant de sable de Deadman's Bay",
+            "Trouver les tortues qui broutent à Little Harbour",
+            "Refaire le carburant à la marina de Sprat Bay",
+            "Explorer les ruines du domaine Percy Chubb"
+          ],
+          "mooringTip": "Les corps-morts sud-ouest de Great Harbour attrapent plus de brise qu'il n'y paraît : choisissez-en un avec de la place pour éviter. Sprat Bay n'a que cinq bouées, à près du double du tarif courant : appelez le capitaine de port à l'avance ou prenez une place si vous voulez électricité et eau."
+        },
+        "2": {
+          "shortDescription": "Une navigation facile vers l'est jusqu'à Cooper Island, où un bar à rhum aux deux cents étiquettes vous attend au fond de la baie.",
+          "description": "Cooper se trouve à quelques milles à l'est, une heure environ de navigation détendue, les alizés au travers. Manchioneel Bay est profonde et le fond est un épais herbier : plus personne n'y mouille désormais ; toute la baie est un champ d'une quarantaine de bouées prévues pour des bateaux jusqu'à soixante pieds.\n\nPrenez-en une tôt en haute saison, car c'est une escale prisée et les bons emplacements partent en milieu d'après-midi. À terre, le Cooper Island Beach Club est l'attrait. Le bar à rhum garde bien plus de deux cents bouteilles, le café torréfie ses propres grains, et la cuisine s'appuie sur ce qui arrive des bateaux locaux. Faites du snorkeling à Cistern Point, côté sud, pour les poissons de récif et, parfois, une tortue avant le dîner.",
+          "thingsToDo": [
+            "Déguster au bar à rhum aux 200 étiquettes de Cooper Island",
+            "Snorkeling sur le récif de Cistern Point",
+            "Plonger sur le RMS Rhone avec Sail Caribbean",
+            "Goûter le café torréfié maison du beach club"
+          ],
+          "mooringTip": "La baie est trop profonde et trop herbeuse pour bien mouiller : comptez sur un corps-mort ; il y en a une quarantaine, à environ vingt-cinq dollars la nuit, réglés à terre au club. Arrivez en début d'après-midi en hiver, sinon il ne vous restera que les bouées extérieures, plus rouleuses."
+        },
+        "3": {
+          "shortDescription": "Une étape plus longue jusqu'à la marina de resort de Scrub Island, où un vrai ponton, une douche chaude et un grill au bord de la piscine récompensent la traversée.",
+          "description": "C'est une matinée un peu plus rude. Scrub se trouve au-delà de la pointe est de Tortola : attendez-vous à un moment à tirer des bords au près avant de doubler Beef Island et d'atteindre la marina. Partez vers neuf heures si la météo annonce du frais.\n\nLe Scrub Island Resort exploite une vraie marina, une cinquantaine de places avec carburant, électricité et eau, plus un champ de corps-morts au large de la baie si vous préférez rester au mouillage. Après quelques nuits à éviter sur l'ancre, une place à quai a des airs de récompense. Il y a un spa, deux piscines, et le Donovan's Reef, en bas dans le village de la marina, pour un dîner sans hâte au bord de l'eau. La plage du resort, de l'autre côté, vaut la courte marche par-dessus la colline.",
+          "thingsToDo": [
+            "Une place à quai pour le carburant et l'eau",
+            "Dîner au grill Donovan's Reef de la marina",
+            "Réserver un soin au spa du resort",
+            "Marcher jusqu'à la plage nord de Scrub"
+          ],
+          "mooringTip": "Réservez une place à l'avance en saison, car la marina se remplit du trafic propre au resort et, parfois, d'un méga-yacht jusqu'à cent soixante pieds. Si le ponton est complet, le champ de corps-morts au large de la baie reste assez calme, et le ponton à carburant délivre gasoil comme essence."
+        },
+        "4": {
+          "shortDescription": "La plus belle navigation de la semaine, un long vent arrière vers l'ouest jusqu'à Jost Van Dyke et le bar de plage qui a inventé le Painkiller.",
+          "description": "Si un jour mérite grand-voile pleine et génois tangonné, c'est bien celui-ci. De Scrub à Jost Van Dyke, c'est un long bord de largue puis de vent arrière sur toute la longueur du chenal, les alizés vous poussant vers l'ouest le long de la côte nord de Tortola. Accordez-vous la matinée ; c'est le genre de navigation pour laquelle on réserve tout le voyage.\n\nWhite Bay, c'est la carte postale : une fine bande de sable derrière un récif, où se trouve le Soggy Dollar Bar, là où le Painkiller a été mélangé pour la première fois. L'entrée est étroite et peu profonde : lisez bien l'eau en rentrant. Passé la pointe, Great Harbour est la capitale de l'île et le port d'entrée officiel, avec Foxy's et ses décennies de reliques de plaisanciers clouées aux chevrons.",
+          "thingsToDo": [
+            "Commander un Painkiller au Soggy Dollar Bar",
+            "Faire les formalités de douane sur la plage de Great Harbour",
+            "Voir un concert au Foxy's Tamarind Bar",
+            "Rejoindre le bord à la nage dans les hauts-fonds de White Bay"
+          ],
+          "mooringTip": "White Bay n'a que huit à dix bouées, payées chez Ivan's pour le groupe est ou au Soggy Dollar pour le groupe ouest ; l'entrée du récif ne pardonne pas, alors entrez lentement et à l'œil. Pour une nuit tranquille, les corps-morts de Little Harbour tiennent mieux qu'un mouillage dans le sable maigre de Great Harbour."
+        },
+        "5": {
+          "shortDescription": "À peine deux heures de traversée jusqu'à Cane Garden Bay, sur la côte nord de Tortola, une longue plage connue pour la musique live de Quito et le rhum local.",
+          "description": "Une matinée facile après la longue tirée vers l'ouest. Cane Garden Bay est juste en face, de l'autre côté de l'eau, sur la côte nord de Tortola, une navigation de moins de deux heures. La baie est un large arc de sable adossé à des collines verdoyantes, l'un des plus jolis mouillages de l'île.\n\nVisez une arrivée en milieu d'après-midi. Le champ de corps-morts et les taches de sable à l'extérieur se remplissent vite, et en hiver une houle de nord peut s'enrouler dans la baie et la faire rouler tout entière. Si la météo annonce de la houle de fond, réfléchissez bien avant de vous engager ; si c'est une plage de surf, ce n'est pas pour rien. À terre, le Quito's Gazebo est le cœur de l'endroit depuis des années, avec des fruits de mer locaux et le groupe de Quito Rymer la plupart des soirs. Il y a un ponton à annexe juste devant.",
+          "thingsToDo": [
+            "Voir le groupe de Quito Rymer au Gazebo",
+            "Visiter la distillerie de rhum Callwood, plus haut sur la route",
+            "Snorkeling sur le récif de l'extrémité nord de la baie",
+            "Marcher la longue plage entre les bars"
+          ],
+          "mooringTip": "Arrivez avant quinze heures en haute saison, car les corps-morts comme les taches de sable à l'extérieur partent tôt. Renoncez carrément à la baie si une houle de fond de nord se lève : elle s'y enroule directement et le mouillage devient un supplice toute la nuit."
+        },
+        "6": {
+          "shortDescription": "Contournez la pointe ouest et traversez vers Norman Island, l'Île au trésor de la légende, pour du snorkeling dans les grottes et un bar-pirate flottant.",
+          "description": "Aujourd'hui, vous repassez sur le versant sud. Contournez la pointe ouest de Tortola et faites route vers Norman Island, le rocher que la plupart tiennent pour l'Île au trésor de Stevenson. C'est une bonne navigation : prévoyez les grottes pour l'après-midi.\n\nLa Bight est une immense baie bien abritée et l'un des champs de corps-morts les plus fréquentés des îles, avec des bouées en réserve la majeure partie de l'année. Avant de vous installer, rejoignez en annexe ou à la nage les grottes du bord ouest ; trois grottes peu profondes taillées dans la falaise, aux parois incrustées de corail-coupe orange et rouge. C'est le spot le plus snorkelé des BVI, et à juste titre. Le soir venu, le bar flottant Willy T et le Pirates Bight, à terre, mettent de l'ambiance et de la gaieté.",
+          "thingsToDo": [
+            "Snorkeling dans les grottes à corail-coupe de la Bight",
+            "Snorkeling sur les pitons des Indians",
+            "Sauter du bar flottant Willy T",
+            "Dîner à terre au Pirates Bight"
+          ],
+          "mooringTip": "La Bight abrite l'un des plus grands champs de corps-morts des BVI : même en semaine de pointe, vous trouverez une bouée, même si celles de l'intérieur, près du Pirates Bight, partent les premières. Utilisez les corps-morts de jour au large des grottes pour le snorkeling et n'essayez pas d'y passer la nuit ; la baie elle-même est la seule option abritée."
+        },
+        "7": {
+          "shortDescription": "Six milles de retour à travers le chenal jusqu'à Tortola, avec le temps d'un dernier snorkeling avant de rendre le bateau.",
+          "description": "Le retour est court, six milles environ pour retraverser jusqu'à Road Town : aucune raison de partir en trombe. La plupart des sociétés de charter veulent le bateau en fin de matinée, ce qui laisse le temps d'un petit-déjeuner tranquille sur un corps-mort de Norman Island et d'une dernière baignade.\n\nSi vous avez sauté les pitons des Indians à l'aller, ils sont juste sur votre route et font un bon dernier arrêt. Sinon, pointez l'étrave au nord à travers le chenal une fois de plus et savourez le travers qui vous a porté toute la semaine. Refaites le carburant et l'eau avant de rendre le bateau, réglez les reçus de corps-mort et rincez le sel du pont. Une semaine dans les BVI passe vite, et ce dernier bout paraît toujours trop tôt venu.",
+          "thingsToDo": [
+            "Dernier snorkeling sur les pitons des Indians",
+            "Petit-déjeuner tranquille au corps-mort de Norman Island",
+            "Refaire le carburant avant le retour à la base",
+            "Régler les reçus de corps-mort et rincer le pont"
+          ],
+          "mooringTip": "Les bases de charter attendent le bateau en milieu de matinée, et les pontons à carburant de Road Town et de Nanny Cay s'engorgent les jours de rotation : refaites le plein tôt. Gardez assez de temps pour une restitution nette plutôt que d'arriver avec le réservoir encore à remplir."
+        }
+      }
+    },
+    "grenada-route": {
+      "metaTitle": "Grenade et Grenadines en 7 jours | Boat4You",
+      "metaDesc": "Croisière de sept jours de Port Louis Marina (Grenade) aux Tobago Cays : tortues, mouillages bordés de palmiers et snorkeling sur les récifs.",
+      "days": {
+        "1": {
+          "shortDescription": "Une première étape courte vers le nord, de St. George's à une baie de réserve tranquille où les célèbres sculptures sous-marines des Caraïbes vous attendent à quelques mètres de profondeur.",
+          "description": "La plupart des équipages passent la matinée à avitailler et à préparer le bateau, puis larguent les amarres vers midi pour la petite remontée tranquille de la côte. Dragon Bay ne se trouve qu'à un mille ou deux au nord du Lagoon, alors rien ne presse. La baie fait partie de la réserve marine de Moliniere-Beausejour, et l'eau s'éclaircit dès que vous doublez la pointe.\n\nL'attrait ici, c'est le récif de Moliniere et le parc de sculptures sous-marines de Jason deCaires Taylor, juste au sud. Faites du snorkeling au-dessus de la ronde d'enfants de « Vicissitudes » ou de l'homme à sa machine à écrire, tous posés à quelques mètres sous vous, coraux et poissons de récif comblant les vides. Il n'y a ni commerces ni ponton pour l'annexe, et c'est justement tout l'intérêt. Mouillez tôt, baignez-vous avant l'arrivée des bateaux d'excursion, et laissez cette première nuit s'étirer.",
+          "thingsToDo": [
+            "Snorkeling dans le parc de sculptures sous-marines de Moliniere",
+            "Dériver au-dessus de « Vicissitudes », la ronde d'enfants",
+            "Explorer le récif et les poissons de la pointe Moliniere",
+            "Se baigner depuis le bateau avant l'arrivée des excursionnistes"
+          ],
+          "mooringTip": "Il n'y a pas de ponton pour l'annexe et peu de bateaux passent la nuit ; prenez une bouée d'amarrage gouvernementale si l'une est libre, ou mouillez sur sable en restant bien à l'écart du récif et de la zone de snorkeling balisée."
+        },
+        "2": {
+          "shortDescription": "L'étape la plus longue du parcours, un bord animé le long de la côte sous le vent de Grenade puis une traversée en eau libre jusqu'aux bars du chantier de Carriacou.",
+          "description": "C'est le jour où il faut partir tôt. Il y a une trentaine de milles jusqu'à Tyrrel Bay, et le côté sous le vent de Grenade peut se montrer capricieux et à risées, alors gardez un mille ou deux d'eau au large pour conserver un alizé régulier. Une fois passée la pointe nord de l'île, la route s'ouvre à environ 055 degrés, un vrai largue par une quinzaine de nœuds. Écartez-vous largement de la zone d'exclusion de Kick 'em Jenny ; le volcan sous-marin est indiqué sur la carte.\n\nTyrrel Bay est profonde et bien abritée, un mouillage de travail avec un chantier naval, un shipchandler et quelques bars à terre. Ralliez à l'annexe l'Original Slipway, aménagé dans un ancien bassin de carénage, avec des machines intégrées aux tables et au bar. Carriacou fait encore partie de Grenade, donc aucune formalité ce soir.",
+          "thingsToDo": [
+            "Dîner au bar du chantier Original Slipway",
+            "Verre au coucher du soleil au Lazy Turtle, sur le front de mer",
+            "Rejoindre les mangroves à l'annexe pour du snorkeling",
+            "Avitailler et refaire les pleins d'eau dans la baie"
+          ],
+          "mooringTip": "Tyrrel Bay est profonde avec une bonne tenue sur sable clair, mais évitez les plaques d'herbiers qui font déraper l'ancre. Il y a des bouées et des pontons à annexe au chantier de levage et au yacht club ; pas besoin de réserver, arrivez simplement de jour pour trouver un coin de sable."
+        },
+        "3": {
+          "shortDescription": "Franchissez la frontière vers Saint-Vincent-et-les-Grenadines pour rejoindre un mince cordon de sable bordé de cocotiers, classé parmi les plus beaux mouillages de la région.",
+          "description": "Aujourd'hui, vous changez de pays. Faites vos formalités de sortie de Grenade à Hillsborough ou Tyrrel Bay avant de partir, puis remontez la douzaine de milles vers le nord jusqu'à Saint-Vincent-et-les-Grenadines ; Clifton, sur Union Island, est le port d'entrée le plus proche pour les formalités. C'est un largue tranquille par l'est habituel.\n\nSalt Whistle Bay elle-même est une courbe de sable blanc adossée aux palmiers, coupée par un fin cordon de plage : le mouillage calme d'un côté, la houle de l'Atlantique déferlant de l'autre. On la traverse en une minute. Quelques bars de plage s'alignent à l'extrémité sud, dont Mama Jean's et le Last Bar Before the Jungle, parfaits pour une Hairoun fraîche et du poisson grillé. La baie est petite et se remplit vite, alors visez une arrivée en début d'après-midi.",
+          "thingsToDo": [
+            "Traverser le cordon de sable jusqu'à la plage au vent",
+            "Bière Hairoun bien fraîche chez Mama Jean's",
+            "Poisson grillé au Last Bar Before the Jungle",
+            "Se baigner dans le croissant sous le vent, à l'abri, sous les palmiers"
+          ],
+          "mooringTip": "La tenue est mauvaise sur les herbiers, alors prenez l'une des bouées d'amarrage (environ 60 EC la nuit) ou jetez l'ancre dans la tache de sable côté nord. Arrivez tôt ; il reste peu de place une fois la flotte là."
+        },
+        "4": {
+          "shortDescription": "Un tout petit saut jusqu'au lagon cerné de récifs au cœur des Grenadines, où les tortues vertes broutent l'herbier au large de Baradal.",
+          "description": "La navigation mérite à peine ce nom : trois ou quatre milles vers l'est jusqu'au mouillage le plus commenté des îles. Derrière Horseshoe Reef se nichent cinq cayes inhabitées autour d'un vaste lagon turquoise ; on mouille en eau libre et le récif encaisse la houle du large.\n\nPrenez l'annexe jusqu'à Baradal, où le parc marin a délimité un sanctuaire d'herbiers pour les tortues vertes et imbriquées. Faites du snorkeling doucement, en gardant vos distances, et elles continuent de brouter comme si vous n'étiez pas là. Les plus beaux coraux se trouvent vers l'Atlantique, le long du récif lui-même. Le soir venu, un boat boy passe en barque prendre les commandes de barbecue : langouste, vivaneau et lambi grillés sur la plage, la langouste étant toutefois retirée du menu de mai à août, saison fermée oblige.",
+          "thingsToDo": [
+            "Snorkeling dans le sanctuaire de tortues de Baradal",
+            "Dériver le long des coraux de Horseshoe Reef",
+            "Barbecue sur la plage : vivaneau ou lambi grillé",
+            "Annexe jusqu'aux palmiers de Petit Tabac"
+          ],
+          "mooringTip": "Depuis 2023, le parc facture le même tarif que vous mouilliez ou que vous preniez l'une des trentaines de bouées, alors attrapez un coffre pour épargner le fond. Les gardes encaissent la redevance en bateau ; prenez une bouée tôt, car le lagon est exposé et les bons emplacements partent en premier."
+        },
+        "5": {
+          "shortDescription": "Redescendez vers le sud dans les eaux grenadines jusqu'à une caye de sable blanc nue, cernée de récif, l'un des meilleurs spots de snorkeling du parcours.",
+          "description": "Mettez cap au sud et repassez la frontière. Faites vos formalités de sortie de Saint-Vincent-et-les-Grenadines à Clifton, puis redescendez au largue jusqu'à Carriacou pour vous enregistrer à Hillsborough. Il y a une quinzaine de milles, le vent désormais au travers ou un peu sur l'avant.\n\nSandy Island n'est guère plus qu'une langue de sable blanc et une rangée de palmiers au large de la côte ouest de Carriacou, à l'intérieur d'un parc marin protégé. On y mouille pour le snorkeling. Des bancs de gorettes jaunes flottent au-dessus du corail à l'extrémité sud, avec de plus grosses têtes de corail plus au nord. Prenez une bouée, baignez-vous et emportez un pique-nique à terre jusqu'à l'unique table. Il n'y a rien d'autre ici, et après la foule des Cays, ça convient très bien à la plupart des équipages.",
+          "thingsToDo": [
+            "Snorkeling sur les têtes de corail de l'extrémité nord",
+            "Pique-nique à terre à la table de Sandy Island",
+            "Nager au-dessus des bancs de gorettes jaunes",
+            "Refaire les formalités d'entrée à Hillsborough"
+          ],
+          "mooringTip": "Prenez l'une des bouées du parc marin plutôt que de mouiller ; le récif remonte vite et la tenue n'est bonne que sur le sable. Une petite redevance de parc s'applique chaque jour, et il n'y a aucun équipement, alors emportez de l'eau et de l'ombre pour l'après-midi."
+        },
+        "6": {
+          "shortDescription": "Une longue descente vent arrière jusqu'à la capitale de Grenade, avec pour terme le port en fer à cheval du Carenage, sous le vieux fort.",
+          "description": "Maintenant, l'alizé travaille pour vous. C'est une descente vent arrière d'une trentaine de milles jusqu'à St. George's, rapide et facile avec la houle derrière, même si la portion sous le vent de Grenade peut mollir et devenir capricieuse près de la côte. La plupart des équipages sont à quai ou au mouillage en milieu d'après-midi.\n\nSt. George's est le plus joli port de travail de la région, un cercle d'entrepôts aux toits rouges et de cafés du front de mer sous Fort George. Amarrez l'annexe au Carenage et régalez-vous d'une soupe callaloo ou d'un roti sur l'un des quais. Pour un vrai dîner, BB's Crabback, côté nord, propose le crabback du chef Benjamin et des gambas en sauce de langouste. Un taxi-boat depuis la ville rejoint la plage de Grand Anse en quelques minutes si l'équipage veut du sable.",
+          "thingsToDo": [
+            "Déjeuner sur le Carenage : roti ou soupe callaloo",
+            "Dîner chez BB's Crabback pour le crabback local",
+            "Monter à Fort George pour la vue sur le port",
+            "Taxi-boat jusqu'à la plage de Grand Anse"
+          ],
+          "mooringTip": "Vous pouvez mouiller dans le Lagoon au large de St. George's ou prendre une place à Port Louis Marina si vous voulez une dernière matinée facile et matinale. Le port est fréquenté par les ferries et les bateaux de pêche, alors restez à l'écart du chenal quand vous jetez l'ancre."
+        },
+        "7": {
+          "shortDescription": "Cinq minutes de moteur en traversant le Lagoon jusqu'à la marina, avec le temps de faire carburant, eau et un dernier déjeuner grenadin avant la restitution.",
+          "description": "Il ne reste presque plus rien à naviguer sur celle-ci. Port Louis Marina se trouve dans le Lagoon, en bordure de St. George's, à quelques centaines de mètres de l'endroit où vous avez passé la nuit ; la dernière traversée n'est donc qu'un court trajet moteur sur eau plate. Programmez-la le matin et vous avez la journée devant vous.\n\nCamper & Nicholsons gère la marina, avec carburant, eau et avitaillement au ponton et le Victory Bar & Grill pour un dernier déjeuner. La plupart des loueurs veulent le bateau rendu plein et les WC vidangés, alors gardez un peu de marge pour la file du carburant. S'il reste du temps avant la restitution, flânez une dernière fois sur le Carenage ou faites provision de muscade et de cacao à rapporter de l'île qui les cultive.",
+          "thingsToDo": [
+            "Carburant et eau au ponton de Port Louis",
+            "Déjeuner d'adieu au Victory Bar & Grill",
+            "Dernière promenade le long du front de mer du Carenage",
+            "Acheter muscade et cacao à rapporter"
+          ],
+          "mooringTip": "Réservez votre place à Port Louis à l'avance, surtout en saison hivernale, et appelez le ponton en VHF en quittant le mouillage. Arrivez tôt pour le carburant ; le ponton se remplit de bateaux rentrant de location le même matin."
+        }
+      }
+    },
+    "grenadines-explorer-14-days": {
+      "metaTitle": "Grenadines et Tobago Cays en 14 j | Boat4You",
+      "metaDesc": "Deux semaines de Port Louis Marina (Grenade) aux Tobago Cays et retour : tortues, mouillages sur récif et une vraie boucle des Grenadines.",
+      "days": {
+        "1": {
+          "shortDescription": "Remontez tranquillement la côte sous le vent de Grenade jusqu'à Dragon Bay, où un parc de sculptures sous-marines se trouve juste au large de la pointe.",
+          "description": "La plupart des équipages quittent Port Louis en fin de matinée, une fois le bateau avitaillé et les formalités réglées. La remontée jusqu'à Dragon Bay est courte, quatre ou cinq milles peut-être sous le vent de l'île, alors rien ne presse. La baie se trouve à l'intérieur de l'aire marine protégée de Molinière-Beauséjour, et l'attrait ici, c'est le parc de sculptures sous-marines de Jason deCaires Taylor, juste au tournant de la pointe Moliniere. Quelque soixante-dix figures se dressent en eau peu profonde, faciles à atteindre masque et palmes directement depuis l'annexe. La plage elle-même est de sable volcanique sombre, adossée à un versant vert et abrupt. Le snorkeling sur le récif est vraiment bon, avec de plus beaux coraux que la plupart des mouillages de premier jour. Nous nageons en général avant que le trafic de l'après-midi ne trouble la visibilité. Un départ tranquille et sans effort, qui met tout le monde en douceur dans le rythme du voyage.",
+          "thingsToDo": [
+            "Snorkeling dans le parc de sculptures sous-marines de Molinière",
+            "Nager le long de la plage de sable volcanique noir",
+            "Dériver sur le récif au large de la pointe Moliniere",
+            "Rentrer à l'annexe avant le trafic de l'après-midi"
+          ],
+          "mooringTip": "Il y a des bouées d'amarrage gouvernementales dans la zone du parc de sculptures, une réserve marine où mouiller sur le corail est déconseillé. Attrapez une bouée tôt, ou mouillez sur la tache de sable au sud, par environ 6 mètres."
+        },
+        "2": {
+          "shortDescription": "La grande étape en eau libre vers le nord jusqu'à Carriacou, en écartant bien le volcan sous-marin Kick 'em Jenny en chemin.",
+          "description": "C'est la plus longue journée de la quinzaine, une trentaine de milles d'eau libre entre Grenade et Carriacou, alors nous aimons quitter la bouée avant neuf heures. Les alizés s'établissent en général à l'est ou au nord-est, entre quinze et vingt nœuds, ce qui place le vent sur l'avant du travers et peut donner un bord animé et salé une fois passé l'abri de la côte. Écartez-vous franchement de Kick 'em Jenny. Le volcan sous-marin se trouve à environ cinq milles de la pointe nord de Grenade, avec une zone d'exclusion de 1,5 kilomètre que tout le trafic doit respecter. Tyrell Bay s'ouvre dans l'après-midi, un mouillage large et bien protégé, plein de bateaux de croisière. Les formalités de douane se font au chantier naval, ici. À terre, le Slipway sert à dîner au milieu de vieux équipements marins, et le Lambi Queen sort un steel band le vendredi.",
+          "thingsToDo": [
+            "Faire les formalités d'entrée à Grenade au chantier naval",
+            "Dîner au restaurant Slipway",
+            "Écouter le steel band du vendredi au Lambi Queen",
+            "S'avitailler à la supérette du chantier"
+          ],
+          "mooringTip": "Tyrell Bay est vaste et la tenue sur vase est bonne, alors mouiller y est simple même quand ça paraît bondé. Dirigez-vous vers la rive sud pour plus d'évitage, et crochez bien l'ancre car les risées de l'après-midi dévalent des collines."
+        },
+        "3": {
+          "shortDescription": "Un saut de deux milles jusqu'à Sandy Island, une langue de sable coiffée de palmiers et cernée de récif, à l'intérieur du parc marin de Carriacou.",
+          "description": "Après la longue remontée vers le nord, le troisième jour est une récompense : à peine deux milles à franchir jusqu'à Sandy Island, un bas croissant de sable blanc et une poignée de palmiers posés sur le récif au large de Hillsborough. C'est un parc marin national, alors on s'amarre à une bouée plutôt que de mouiller, et un garde passe en général encaisser une modeste redevance. Le snorkeling est la raison de venir. L'extrémité sud abrite de grands bancs de gorettes jaunes, tandis que les têtes de corail au large de la pointe nord sont en meilleur état que la plupart. Il n'y a rien à terre, ni bar, ni toilettes, pas même d'ombre au-delà des palmiers, alors emportez eau et déjeuner depuis le bateau. Nous prenons souvent l'annexe pour une dérive tranquille au fil du courant, en le laissant nous ramener le long du récif.",
+          "thingsToDo": [
+            "Snorkeling dans les bancs de gorettes jaunes de l'extrémité sud",
+            "Dériver au fil du courant sur les têtes de corail du nord",
+            "Pique-niquer sous les quelques palmiers de l'île",
+            "Se baigner directement depuis la bouée à l'aube"
+          ],
+          "mooringTip": "Le mouillage est interdit ; il n'y a qu'environ sept bouées visiteurs, alors arrivez en début d'après-midi en haute saison pour en être sûr. La redevance tourne autour de dix à vingt dollars US et le garde l'encaisse sur l'eau."
+        },
+        "4": {
+          "shortDescription": "Franchissez la frontière vers Saint-Vincent-et-les-Grenadines pour rejoindre le cordon de sable bordé de palmiers de Mayreau, à Salt Whistle Bay.",
+          "description": "Aujourd'hui, vous quittez les eaux grenadines pour Saint-Vincent-et-les-Grenadines, alors faites vos formalités de sortie avant de partir et prévoyez de les faire à l'entrée à Clifton, sur Union Island, un petit détour au vent de Mayreau. Il y a une douzaine de milles, alizés au travers, un largue facile et lumineux. Salt Whistle Bay est la récompense : une mince courbe de sable, palmiers penchés des deux côtés, les Caraïbes sur une rive et le mouillage sur l'autre. Elle est petite, et elle se remplit, surtout de catamarans, dès le milieu de l'après-midi. La tenue sur les herbiers est mauvaise, une bouée vaut donc bien son prix. À terre, les paillotes de plage vont bon train ; le Last Bar Before the Jungle sert des boissons fraîches, et cela vaut la peine de franchir la colline jusqu'à Saline Bay pour Robert Righteous and de Youths, où le lambi au curry est le plat à commander.",
+          "thingsToDo": [
+            "Formalités d'entrée à SVG à Clifton, Union Island",
+            "Parcourir le cordon de palmiers entre deux mers",
+            "Boissons fraîches au Last Bar Before the Jungle",
+            "Lambi au curry chez Robert Righteous, Saline Bay"
+          ],
+          "mooringTip": "La baie est étroite et la tenue sur herbiers peu fiable, alors prenez l'une des bouées si l'une est libre, et arrivez tôt car elles partent vite. Ne mouillez que dans la tache de sable côté nord, et attendez-vous à un peu de rouleau si vous finissez au fond."
+        },
+        "5": {
+          "shortDescription": "Trois milles jusqu'aux Tobago Cays, cinq îles inhabitées derrière Horseshoe Reef, avec des tortues vertes dans les petits fonds.",
+          "description": "Les Cays ne sont qu'à trois ou quatre milles de Mayreau, c'est donc une matinée d'impatience plutôt que d'effort. Cinq îles inhabitées, Petit Rameau, Petit Bateau, Baradal, Jamesby et Petit Tabac, se blottissent derrière Horseshoe Reef, qui encaisse de plein fouet la houle de l'Atlantique et laisse l'eau à l'intérieur plate et incroyablement claire. Prenez une bouée du parc ; les gardes en gèrent une trentaine et viendront vous trouver pour la redevance. Le sanctuaire de tortues se trouve au large du côté ouest de Baradal, cerné de bouées blanches, et l'on y accède à l'annexe par un passage balisé. Les tortues vertes y broutent l'herbier presque tous les jours, sans se soucier des nageurs. Le soir, les marchands en bateau passent prendre les commandes pour un barbecue de langouste sur la plage, l'un de ces rituels des Grenadines qui valent d'être vécus au moins une fois.",
+          "thingsToDo": [
+            "Snorkeling dans le sanctuaire de tortues au large de Baradal",
+            "Réserver un barbecue de langouste sur la plage auprès d'un marchand",
+            "Débarquer à pied sur Petit Bateau",
+            "Regarder la houle déferler sur Horseshoe Reef"
+          ],
+          "mooringTip": "Prenez une bouée du parc plutôt que de mouiller ; les gardes en mouillent une trentaine et encaissent la redevance sur l'eau. Arrivez avant le milieu de l'après-midi en saison, et notez que les bouées du sanctuaire de tortues au large de Baradal balisent une zone interdite au mouillage, accessible uniquement à l'annexe."
+        },
+        "6": {
+          "shortDescription": "Une journée entière d'escale dans les Cays pour faire du snorkeling sur le récif, randonner sur une caye et rallier Petit Tabac à l'annexe.",
+          "description": "Sans traversée à faire, le sixième jour est celui où l'on ralentit. La plupart des équipages passent la matinée de nouveau à l'eau, soit au sanctuaire de tortues, soit le long de l'intérieur de Horseshoe Reef, où le corail et la vie sous-marine récompensent une observation prolongée. Une sortie à l'annexe jusqu'à Petit Tabac vaut le trajet mouillé ; c'est sur cette minuscule île à palmiers, au bord du récif, qu'un célèbre film de pirates a abandonné ses naufragés, et elle est en général déserte en milieu de matinée. Baradal offre une courte montée jusqu'à un modeste point de vue sur tout le mouillage, la photo dont tout le monde se souvient. Les après-midi filent volontiers entre une baignade, un livre à l'ombre du cockpit et une nouvelle tournée des bateaux de glace et de boissons qui circulent dans la flotte. Gardez un œil sur la météo si une houle de nord s'installe.",
+          "thingsToDo": [
+            "Annexe jusqu'à l'îlot à palmiers de Petit Tabac",
+            "Monter au point de vue de Baradal sur le mouillage",
+            "Snorkeling sur l'intérieur de Horseshoe Reef",
+            "Acheter glace et boissons à un bateau marchand"
+          ],
+          "mooringTip": "Puisque vous restez sur place, vérifiez votre pendille de bouée et vos protections anti-ragage le matin. Une houle de fond venue du nord s'enroule parfois dans le mouillage, alors si ça se met à rouler, les bouées blotties plus près de Baradal sont plus confortables."
+        },
+        "7": {
+          "shortDescription": "Un bref retour vers Mayreau, cette fois pour monter au village perché et retrouver la vue classique sur les Cays.",
+          "description": "Le retour à Salt Whistle Bay est une courte glissade vent arrière, bouclée bien avant le déjeuner. Ayant déjà mouillé ici, cette escale tient à l'île plutôt qu'à la plage. Une route raide grimpe de Saline Bay jusqu'au village sur la crête, et la petite église catholique en pierre, au sommet, offre l'une des plus belles vues des Grenadines : les Tobago Cays étalés sur le récif en contrebas, l'océan au-delà. C'est une marche en sueur de vingt minutes, à faire de préférence en fin d'après-midi, quand la lumière s'adoucit et que la chaleur retombe. De retour au bord de l'eau, les bars de plage vont à leur propre rythme ; un punch au rhum au coucher du soleil est la commande de rigueur. Dennis's Hideaway, du côté de Saline Bay, est une valeur sûre pour dîner si vous voulez changer des paillotes de Salt Whistle.",
+          "thingsToDo": [
+            "Monter au point de vue de l'église perchée",
+            "Contempler les Cays depuis la crête",
+            "Punch au rhum sur la plage au coucher du soleil",
+            "Dîner au Dennis's Hideaway, Saline Bay"
+          ],
+          "mooringTip": "Comme la fois précédente : prenez une bouée si vous le pouvez, car la tenue sur herbiers est mauvaise et la baie fait le plein. Si vous arrivez sur un champ de bouées complet, Saline Bay, côté sud, offre plus de place pour mouiller sur sable et un débarquement à l'annexe facile."
+        },
+        "8": {
+          "shortDescription": "Repassez dans les eaux grenadines et réinstallez-vous à Tyrell Bay, formalités faites, pour une soirée tranquille à terre.",
+          "description": "Repartir vers le sud, c'est se déclarer sortant de Saint-Vincent-et-les-Grenadines à Clifton et se déclarer entrant à Grenade à Tyrell Bay, alors gardez à portée de main les papiers du bateau et la liste d'équipage. La descente fait une douzaine de milles et, les alizés désormais derrière vous, elle est en général plus clémente que la remontée d'il y a une semaine. Tyrell Bay paraît familière à la deuxième visite, ce qui n'est pas plus mal après une série de mouillages exposés. Une fois les formalités faites, il reste le temps de pousser l'annexe dans le lagon de mangrove au fond de la baie, un trou à cyclone désigné et un calme contraste avec les bouées. Pour le dîner, la rangée d'adresses du front de mer offre des choix au-delà du Slipway ; la plupart des équipages flânent simplement le long de la rive jusqu'à ce qu'une adresse leur plaise.",
+          "thingsToDo": [
+            "Refaire les formalités d'entrée à Grenade à Tyrell Bay",
+            "Annexe jusqu'au lagon-mangrove, trou à cyclone",
+            "Flâner sur le front de mer pour le dîner",
+            "Refaire carburant et eau au chantier naval"
+          ],
+          "mooringTip": "La tenue sur la vase de la baie est fiable, alors mouiller est l'option facile par défaut ; laissez les bouées aux bateaux qui les veulent. Blottissez-vous vers l'extrémité sud, à l'écart du chenal des ferries, et restez à distance de l'entrée balisée du lagon si vous partez explorer à l'annexe."
+        },
+        "9": {
+          "shortDescription": "De nouveau Sandy Island, cette fois en associant le récif à un après-midi à terre sur Paradise Beach, à Carriacou.",
+          "description": "La deuxième escale à Sandy Island est l'occasion de prendre son temps et de combiner la bouée avec une sortie à terre. La traversée se compte en minutes plutôt qu'en milles. Cette fois, une fois le récif nagé, cela vaut la peine de poser l'annexe sur la grande terre à L'Esterre et d'arpenter la longue bande pâle de Paradise Beach. Le Hardwood Bar, en retrait sous les arbres, y sert bière fraîche et lambi sur fond de ce qui passe à la radio. Les plongeurs du bord peuvent organiser une sortie jusqu'aux Sister Rocks, les deux pitons un peu plus au large qui attirent la plus belle vie sous-marine des environs de Carriacou. Sinon, la journée ressemble beaucoup à la première visite, ce qui, à Sandy Island, est précisément le but. On s'amarre, on nage, on sèche, on recommence.",
+          "thingsToDo": [
+            "Bière et lambi au Hardwood Bar",
+            "Parcourir Paradise Beach dans toute sa longueur",
+            "Organiser une plongée aux Sister Rocks",
+            "Nager sur le récif directement depuis la bouée"
+          ],
+          "mooringTip": "Les bouées du parc au large de Sandy Island sont peu nombreuses et prisées, alors si elles sont toutes prises à l'arrivée, mouillez plutôt au large de L'Esterre Bay et rejoignez à l'annexe. La même redevance de parc marin s'applique, encaissée par le garde."
+        },
+        "10": {
+          "shortDescription": "Une escale-étape de retour à Tyrell Bay pour réavitailler et se reposer avant la longue traversée vers le sud jusqu'à Grenade.",
+          "description": "Le dixième jour, il s'agit surtout de se préparer à la traversée du retour, alors la courte remontée jusqu'à Tyrell Bay n'est qu'un moyen d'y parvenir. C'est ici qu'il faut faire le plein d'eau et de carburant, garnir le frigo à la supérette et régler le linge tant qu'il y a un ponton pour cela. Avec du temps devant soi, un bus ou un taxi jusqu'à Hillsborough, la ville principale de Carriacou, en vaut la peine pour le marché local et un coup d'œil au petit musée du patrimoine. La ville a un air paisible et laborieux que les mouillages n'ont pas. De retour à bord, la plupart des skippers inspectent le bateau et vérifient la fenêtre météo du matin ; l'étape jusqu'à Grenade est longue et vaut mieux d'être entamée tôt. Un dîner tranquille au mouillage convient d'ordinaire à la soirée qui précède une grosse journée.",
+          "thingsToDo": [
+            "Réavitailler à la supérette de Tyrell Bay",
+            "Prendre un taxi jusqu'à la ville de Hillsborough",
+            "Parcourir le musée du patrimoine de Carriacou",
+            "Faire le plein de carburant et d'eau pour la traversée"
+          ],
+          "mooringTip": "Mouillez comme avant sur la bonne tenue de vase ; nul besoin de bouée ici. Si vous voulez faire le plein au ponton à carburant, allez-y tôt, et crochez votre ancre avec beaucoup de mou pour que le bateau repose tranquille toute la nuit avant la traversée."
+        },
+        "11": {
+          "shortDescription": "La longue étape de retour vers Grenade, une descente vent arrière plus rapide cette fois, avec retour au calme de Dragon Bay.",
+          "description": "La traversée qui a paru pénible à l'aller vous le rend aujourd'hui. Alizés derrière, la trentaine de milles de Carriacou à Grenade se transforme en une descente vent arrière roulante, plus rapide et plus sèche que l'étape aller. Un départ matinal reste judicieux ; le vent tend à forcir au fil de la journée et vous voulez l'ancre au fond avant la nuit. Contournez largement Kick 'em Jenny une fois de plus, en restant hors de la zone d'exclusion au large de la côte nord de Grenade, puis rapprochez-vous de la côte sous le vent à mesure que les reliefs de l'île aplanissent la mer. Dragon Bay est un atterrissage tout en douceur après l'eau libre, la même anse protégée d'où vous êtes partis, avec le parc de sculptures à portée pour qui veut un dernier snorkeling. Après une longue journée à la barre, la plupart des équipages sont heureux de s'installer tôt et de laisser le bateau immobile.",
+          "thingsToDo": [
+            "Filer vent arrière vers le sud jusqu'à Grenade",
+            "Rester bien à l'écart de la zone de Kick 'em Jenny",
+            "Un dernier snorkeling au parc de sculptures",
+            "S'installer tôt après la traversée"
+          ],
+          "mooringTip": "De retour sur les bouées gouvernementales de la réserve de Molinière, prenez une bouée plutôt que de mouiller sur le corail. Arrivez avec de la marge de jour ; trouver une bouée ou un mouillage sur tache de sable est bien plus simple avant la tombée du jour, après une longue traversée."
+        },
+        "12": {
+          "shortDescription": "Descendez la côte jusqu'à St George's, la capitale de Grenade, avec son Carenage en fer à cheval, ses forts perchés et son marché aux épices.",
+          "description": "Une courte descente le long de la côte vous mène à St George's, et c'est l'une des plus jolies capitales à aborder par la mer. La ville épouse le Carenage, un fer à cheval d'entrepôts pastel et de toits rouges gravissant les collines, avec Fort George dressé au-dessus de l'entrée. Il y a une place à Port Louis Marina, dans le lagon, ou vous pouvez mouiller au large et rallier à pied. Le Carenage lui-même est fait pour la flânerie, bordé de bars à rhum et de cafés ; le marché aux produits et aux épices, quelques rues plus haut, est l'endroit pour acheter muscade, macis et boules de cacao directement aux cultivateurs de l'île aux épices. Fort George se gagne à la sueur, mais la vue sur le port et vers le large est la récompense. C'est la dose de vie citadine du voyage après deux semaines de baies tranquilles, et elle tombe à point.",
+          "thingsToDo": [
+            "Monter à Fort George pour la vue sur le port",
+            "Acheter muscade et cacao au marché aux épices",
+            "Flâner parmi les bars à rhum et cafés du Carenage",
+            "Prendre une place ou mouiller devant Port Louis Marina"
+          ],
+          "mooringTip": "Une place à Port Louis Marina est l'option la plus simple et vous met à un pas de la ville, ou vous pouvez mouiller dans le lagon où la tenue est correcte. Réservez une place à l'avance en haute saison, et appelez la marina en VHF 14 à l'approche."
+        },
+        "13": {
+          "shortDescription": "Une dernière journée pleine facile, en remontant la côte sous le vent jusqu'à Dragon Bay, prévue comme marge météo près de la base.",
+          "description": "La dernière journée pleine est volontairement douce, un court largue de retour le long de la côte ouest jusqu'à Dragon Bay. Rien ne presse, et l'étape sert aussi de marge : si les étapes précédentes ont pris du retard ou si le temps a tourné, c'est le mou dans le programme qui garde le voyage détendu plutôt que précipité. La plupart des équipages en font un adieu à l'eau. Une dernière dérive au-dessus du parc de sculptures, un long déjeuner au mouillage, une ultime baignade depuis la jupe avant que le bateau ne doive rentrer. La côte sous le vent reste calme dans l'ombre de vent de l'île, c'est donc une navigation facile quoi que fassent les alizés au large. Être proche de la base signifie que le trajet du dernier matin jusqu'à Port Louis est court, ce qui allège la pression de la restitution. Une nuit tranquille à Dragon Bay boucle la boucle.",
+          "thingsToDo": [
+            "Une dernière dérive au-dessus du parc de sculptures",
+            "Long déjeuner au mouillage à Dragon Bay",
+            "Ultime baignade depuis la jupe arrière",
+            "Se positionner près de la base pour la restitution"
+          ],
+          "mooringTip": "De retour sur les bouées de Molinière pour la dernière nuit ; prenez une bouée tôt pour pouvoir vous détendre dès le soir. N'être qu'à quelques milles de Port Louis retire toute pression du matin, alors inutile de forcer pour un emplacement à la nuit tombée."
+        },
+        "14": {
+          "shortDescription": "Faites au moteur les derniers milles jusqu'à Port Louis Marina pour rendre le bateau et clôturer deux semaines de mer.",
+          "description": "Le dernier matin tient plus de la formalité que de la navigation : quelques milles le long de la côte de Dragon Bay à Port Louis Marina, en général avec le soleil encore bas. Les restitutions de location veulent d'habitude le bateau rendu en milieu de matinée, alors un petit-déjeuner tôt et un rangement en route gardent les choses sans stress. En entrant dans le lagon, appelez la marina en VHF 14 pour une place et suivez le chenal balisé en passant les marques rouges. Une fois à quai, il y a le carburant à compléter, l'annexe à ranger et les sacs à faire, puis la restitution avec la base. Si les vols le permettent, cela vaut la peine de s'attarder un moment à St George's plutôt que de filer ; les cafés du Carenage font de faciles dernières heures à terre. Deux semaines, environ cent vingt milles parcourus, et une vraie boucle des Grenadines du sud derrière vous.",
+          "thingsToDo": [
+            "Appeler Port Louis Marina en VHF 14",
+            "Suivre le chenal balisé au-delà des marques rouges",
+            "Compléter le carburant avant la restitution",
+            "Dernier café sur le Carenage après la restitution"
+          ],
+          "mooringTip": "C'est une arrivée à la marina, donc aucun mouillage à gérer ; réservez votre place à l'avance et confirmez l'heure de retour avec la base. Entrez lentement dans le lagon, guettez le trafic des ferries, et ayez pare-battages et amarres parés des deux bords avant le chenal."
+        }
+      }
+    },
+    "martinique-route": {
+      "metaTitle": "Martinique côte sous le vent 7 j | Boat4You",
+      "metaDesc": "Semaine autour de la Martinique depuis Le Marin : tortues aux Anses d'Arlet, épaves de 1902 à Saint-Pierre, Anse Couleuvre et l'arc blanc des Salines.",
+      "days": {
+        "1": {
+          "shortDescription": "Installez-vous à la plus grande base de charter de Martinique, chargez le bateau et pagayez dans les criques de mangrove avant la première étape de la semaine vers l'ouest.",
+          "description": "La plupart des équipages embarquent vers midi, alors le premier jour tient de la préparation plutôt que des milles. La Marina du Marin compte environ 830 places et une centaine de bouées, ce qui en fait la base la plus fréquentée des Petites Antilles et un endroit un peu chaotique pour retrouver sa place. Prenez le temps de la prise en main du bateau. Marchez jusqu'à Auchan pour des baguettes, du fromage français et un pack de Lorraine, puis remplissez les réservoirs d'eau tant que le ponton est facile d'accès. Si vous arrivez tôt, les chenaux de mangrove au nord du port valent une heure à l'annexe, tranquilles et pleins d'oiseaux dès que vous quittez les bouées. Dînez à terre ce soir. Kokoarum et les terrasses du front de marina font un premier souper convenable, et une nuit tôt vous prépare pour la remontée de demain vers l'ouest, aux Anses d'Arlet.",
+          "thingsToDo": [
+            "S'avitailler chez Auchan : baguettes et bière Lorraine",
+            "Annexe dans les criques de mangrove au nord du port",
+            "Souper en terrasse au Kokoarum",
+            "Faire le tour des systèmes avant de quitter le ponton"
+          ],
+          "mooringTip": "Votre place à la Marina du Marin est attribuée par la base de charter, pas choisie à l'arrivée, alors appelez en VHF en entrant dans le chenal balisé. L'électricité de quai est en 220 V aux normes européennes, prévoyez donc un adaptateur si votre flotte est équipée aux normes US."
+        },
+        "2": {
+          "shortDescription": "Douze milles vers l'ouest en contournant le Cap Salomon jusqu'à une baie à tortues où des bouées obligatoires reposent sur l'herbier et où l'église encadre la plage.",
+          "description": "Nous partons en général avant neuf heures pour tenir le largue dans un air régulier avant que les alizés ne forcissent. L'étape court sur une douzaine de milles le long de la côte sous le vent, en doublant le Cap Salomon pour entrer dans le chapelet de baies que les Français appellent les Anses d'Arlet. Grande Anse est la plus large, un croissant pâle adossé à des maisons créoles et à une petite jetée que tout visiteur photographie au moins une fois. Le vrai attrait est sous l'eau. Les tortues vertes broutent les prairies d'herbiers en nombre ici, et un sentier de snorkeling balisé part de l'extrémité nord, où l'on dérive au-dessus d'elles par trois ou quatre mètres. Une équipe de gardiens de la baie s'occupe des bouées et vous indiquera un corps-mort libre. Le déjeuner est facile aux tables du bord de plage : poisson grillé, accras et un ti-punch frais, puis retour à l'eau pour l'après-midi.",
+          "thingsToDo": [
+            "Snorkeling sur le sentier balisé aux tortues de Grande Anse",
+            "Photographier l'église de la pointe et sa jetée",
+            "Poisson grillé et accras aux tables de plage",
+            "Pagayer au sud jusqu'à Petite Anse d'Arlet"
+          ],
+          "mooringTip": "Une grande partie de la baie est une zone d'herbiers protégée où le mouillage est interdit, alors prenez l'une des bouées des gardiens, blanche pour les bateaux et jaune pour marquer les couloirs de baignade. Elles se remplissent au fil de l'après-midi en saison, alors arriver avant midi vous en laisse le choix."
+        },
+        "3": {
+          "shortDescription": "Un saut plus long de 22 milles vers le nord, passé Fort-de-France, jusqu'à l'ancienne capitale sous la Montagne Pelée, avec plongée sur épaves juste au mouillage.",
+          "description": "C'est la plus grande étape d'un seul tenant de la semaine, environ vingt-deux milles le long de la côte, passé la capitale à Fort-de-France. Donnez de l'eau aux pointes où le vent s'engouffre, puis installez-vous dans le largue vers le nord. Saint-Pierre se trouve à l'ombre de la Montagne Pelée, dont l'éruption de 1902 a tué presque toute la ville en quelques minutes et envoyé par le fond les centaines de navires alors dans la baie. Huit de ces épaves se plongent encore, éparpillées entre une dizaine et quatre-vingts mètres au large du brise-lames. À terre, le mémorial Frank Perret et le théâtre en ruine racontent l'histoire comme il faut, et la cellule de Cyparis, le prisonnier qui a survécu on ne sait comment, tient toujours debout. Le sable descend en pente raide et tient bien par huit à quinze mètres. Un point à anticiper : le volcan envoie des risées fraîches sur la baie après la tombée de la nuit, alors une ancre bien croquée compte ici.",
+          "thingsToDo": [
+            "Plonger sur les épaves de 1902 au large du brise-lames",
+            "Visiter le mémorial volcanique Frank Perret",
+            "Parcourir le théâtre en ruine et la cellule de Cyparis",
+            "Dîner dans la vieille ville aux ruelles pavées"
+          ],
+          "mooringTip": "Saint-Pierre est une rade ouverte sans aucun abri de la houle de nord, alors mouillez sur le sable noir par huit à quinze mètres et croquez fort l'ancre. Quelques bouées visiteurs se trouvent près du brise-lames sud ; restez à au moins 100 m des épaves, site archéologique protégé."
+        },
+        "4": {
+          "shortDescription": "Une courte étape de cinq milles jusqu'au coin nord-ouest sauvage de la Martinique, une anse de sable noir sous les falaises avec une marche vers une cascade en forêt tropicale.",
+          "description": "Cinq milles seulement aujourd'hui, mais ils vous mènent au mouillage le plus désert du parcours. Passé Anse Céron, la côte devient sauvage, tout en basalte abrupt et forêt dévalant vers la mer, et Anse Couleuvre s'ouvre en une bande sombre de sable volcanique, avec presque rien de bâti derrière. Débarquez tôt pour la marche. Un sentier forestier remonte la rivière Couleuvre à l'intérieur des terres pendant une heure environ, passé les ruines d'une ancienne habitation et de sa distillerie, d'immenses fromagers au-dessus de vous, jusqu'à une cascade qui chute de vingt mètres dans un bassin frais. De retour à bord, le snorkeling le long des roches est bon et les tortues font surface de temps à autre. C'est une nuit pour laisser les feux de cockpit éteints. Aucune lueur de village ici, seulement les falaises et les étoiles.",
+          "thingsToDo": [
+            "Randonner le sentier de la rivière Couleuvre jusqu'à la cascade",
+            "Snorkeling sur les roches aux extrémités de l'anse",
+            "Se baigner depuis la plage de sable noir volcanique",
+            "Guetter les tortues qui font surface près du bateau"
+          ],
+          "mooringTip": "Couleuvre se prend au mouillage seul, sur sable noir par six à dix mètres, à l'abri du vent d'est mais grande ouverte à toute houle de nord. Vérifiez la météo avant de vous engager pour la nuit, et si la houle s'installe, repliez-vous sur Saint-Pierre ou l'Anse Mitan."
+        },
+        "5": {
+          "shortDescription": "Dix-huit milles de retour vers le sud jusqu'à un minuscule hameau de pêcheurs où les tortues vertes broutent l'herbier et où les gommiers bordent le sable.",
+          "description": "Mettez cap au sud et longez de nouveau la côte, environ dix-huit milles, alizés sur la hanche et la capitale défilant sur bâbord. Anse Dufour est petite, une seule courbe de sable doré avec des gommiers aux couleurs vives, les esquifs de pêche du coin, halés en haut de la plage. Les tortues sont toute la raison de s'arrêter. Elles viennent brouter l'herbier presque tous les matins, et vous pouvez vous glisser de la jupe de bain pour flotter au-dessus d'elles, sans excursion ni guide. Deux petits restaurants servent accras et poisson grillé juste au bord du sable. Quand vous en avez assez de l'eau, le sentier de dix minutes par la pointe mène à Anse Noire, la seule plage de sable noir de cette côte, qui vaut la marche rien que pour le contraste.",
+          "thingsToDo": [
+            "Snorkeling avec les tortues vertes au-dessus de l'herbier",
+            "Marcher le sentier de la pointe jusqu'à Anse Noire",
+            "Accras et poisson grillé aux snacks de plage",
+            "Photographier les gommiers peints sur le sable"
+          ],
+          "mooringTip": "La baie est petite et prisée, avec de la place pour une douzaine de bateaux seulement, alors visez une arrivée avant midi en saison. Là où des bouées sont mouillées sur l'herbier, utilisez-les plutôt que de mouiller ; sinon, trouvez une tache de sable dégagée et tenez-vous bien à l'écart de la zone de baignade."
+        },
+        "6": {
+          "shortDescription": "Sainte-Anne est à quatorze milles plus bas sur la côte, l'étape s'incurvant devant le Rocher du Diamant ; halte déjeuner aux Salines, trois kilomètres de sable blanc.",
+          "description": "Une belle dernière journée pleine de navigation. De Dufour, il y a environ quatorze milles au sud-est, en doublant la Pointe du Diamant, la grande pyramide du Rocher du Diamant se dressant au large. Coupez le trajet aux Salines. L'arc de trois kilomètres de sable blanc à la pointe sud de l'île est la plage que tout Martiniquais nomme en premier, et l'eau peu profonde qui la borde fait un paresseux mouillage de déjeuner. Poussez l'après-midi jusqu'à Sainte-Anne, un vrai village avec une église en pierre, un marché animé et des cafés de plage servant punch au rhum et crêpes. Le mouillage est large et sableux, à l'abri des alizés d'est, et accueille une grande flotte sans donner l'impression d'être à l'étroit. Flânez parmi les étals du marché avant leur fermeture, puis prenez un verre au coucher du soleil à terre, avec la dernière lumière du jour sur l'eau.",
+          "thingsToDo": [
+            "Mouiller pour déjeuner devant l'arc blanc des Salines",
+            "Doubler le Rocher du Diamant à la Pointe du Diamant",
+            "Parcourir le marché de Sainte-Anne, épices et rhum",
+            "Punch au rhum et crêpes dans un café de plage"
+          ],
+          "mooringTip": "Sainte-Anne se prend au mouillage seul, sur sable blanc propre par quatre à six mètres, avec une excellente tenue et l'abri des alizés. Il y a largement de quoi éviter même en pleine saison, mais restez à l'écart des zones de baignade balisées devant la plage du village et laissez le chenal des annexes dégagé."
+        },
+        "7": {
+          "shortDescription": "Une courte fin de cinq milles jusqu'au Marin, rythmée par le carburant, l'inspection de restitution et une dernière baignade matinale devant Sainte-Anne.",
+          "description": "La dernière étape fait à peine cinq milles, alors rien ne presse pour lever l'ancre. Prenez une ultime baignade devant Sainte-Anne tant que la lumière est douce, puis faites au moteur-voile le court saut de retour dans le Cul-de-Sac Marin. La plupart des contrats veulent le bateau à quai en fin d'après-midi pour la restitution, et la base gère l'accostage en VHF à votre arrivée. Programmez bien le ponton à carburant. Il y a la queue les matins de restitution, alors faire le plein entre neuf heures et midi évite une longue attente moteur au ralenti. Une fois à quai et les réservoirs pleins, il reste d'ordinaire le temps d'un dernier déjeuner sur le front de marina avant l'état des lieux. Les équipages passent souvent ce moment à chercher comment réserver la même semaine l'an prochain.",
+          "thingsToDo": [
+            "Baignade matinale devant Sainte-Anne avant le départ",
+            "Faire le plein au ponton de la Marina du Marin",
+            "Dernier déjeuner sur le front de marina",
+            "État des lieux de restitution avec l'équipe de la base"
+          ],
+          "mooringTip": "Le carburant et la restitution s'engorgent tous deux en fin de matinée, alors faites le plein tôt et confirmez votre heure de retour avec la base. L'accostage pour la restitution est dirigé par l'équipe de la base en VHF, alors soyez à l'écoute en entrant dans le chenal balisé plutôt que de choisir une place vous-même."
+        }
+      }
+    },
+    "martinique-st-lucia-route": {
+      "metaTitle": "Martinique-Sainte-Lucie en 7 jours | Boat4You",
+      "metaDesc": "Aller-retour au départ du Marin (Martinique) vers les Pitons de Sainte-Lucie, Marigot Bay et Rodney Bay, puis retour par Grande Anse d'Arlet.",
+      "days": {
+        "1": {
+          "shortDescription": "Un premier après-midi facile : trois milles au sud du Marin, la base de charter la plus fréquentée des Caraïbes, jusqu'au large fond de sable devant Sainte-Anne, la plage des Salines à une promenade de là sur la côte.",
+          "description": "Le Marin est le point de départ de la plupart des charters des Caraïbes, et ça se voit : quelque 800 places, supermarchés français, shipchandlers et un ponton à carburant, tous à un coup d'annexe. Faites le plein d'avitaillement ici, car il se raréfie une fois passé à Sainte-Lucie. La première étape est courte, à peine trois milles jusqu'à Sainte-Anne, alors rien ne presse. Nous quittons en général la marina en fin de matinée et laissons l'équipage prendre ses marques à bord en route. La baie de Sainte-Anne est large et peu profonde, sable sous cinq mètres environ, et la tenue est fiable dès que l'ancre croche. Mouillez au large du village et rejoignez à l'annexe pour une flânerie sur la place de l'église. Si le vent est clément, marchez au sud vers Les Salines, l'une des plus belles plages de l'île.",
+          "thingsToDo": [
+            "S'avitailler dans les supermarchés français du Marin",
+            "Marcher au sud jusqu'à la plage des Salines",
+            "Flâner sur la place de l'église de Sainte-Anne",
+            "Snorkeling sur le récif au large de la Pointe Marin"
+          ],
+          "mooringTip": "Sainte-Anne, c'est mouillage seul, sans bouées ; visez le sable par quatre à six mètres et écartez-vous des plaques d'herbiers pour que l'ancre croche proprement. La baie fait le plein en soirée en saison, alors arrivez en milieu d'après-midi pour un emplacement près du village."
+        },
+        "2": {
+          "shortDescription": "L'étape en eau libre à travers le canal de Sainte-Lucie jusqu'à Rodney Bay, un port d'entrée facile avec une vraie marina et Reduit Beach en toile de fond.",
+          "description": "C'est le jour de la vraie navigation. De Sainte-Anne, il y a une vingtaine de milles de canal ouvert jusqu'à Rodney Bay, quatre à six heures au largue avec des alizés soufflant en général 15 à 20 nœuds et un peu de houle à mi-parcours. Mieux vaut partir avant neuf heures pour rallier le mouillage de jour. Rodney Bay est un port d'entrée, alors faites vos formalités de douane et d'immigration à la marina IGY dans les vingt-quatre heures suivant l'arrivée et restez à bord tant que les papiers ne sont pas en règle. Une fois dédouané, les choix s'ouvrent : place dans le lagon, ou mouillage au large de Reduit Beach par temps établi. À terre, il y a shipchandlers, restaurants et de la bière Piton bien fraîche à courte marche du sable.",
+          "thingsToDo": [
+            "Faire les formalités à la marina IGY Rodney Bay",
+            "Se baigner à Reduit Beach",
+            "Monter à Fort Rodney sur Pigeon Island",
+            "Verre au coucher du soleil dans un bar de Reduit Beach"
+          ],
+          "mooringTip": "Le mouillage extérieur au large de Reduit Beach est bien par temps calme mais roule quand une houle de nord s'y enroule ; le lagon de Rodney Bay et les places de la marina sont plus tranquilles si de la houle est annoncée. Pour les formalités, amarrez-vous à la marina plutôt que de mouiller d'abord, car nul ne doit descendre à terre avant que la douane ne vous ait dédouané."
+        },
+        "3": {
+          "shortDescription": "Dix milles abrités dans l'ombre de vent de l'île vous déposent à Marigot Bay, un trou à cyclone cerné de mangrove, avec des bouées à prendre et des tables au ras de l'eau.",
+          "description": "Le rythme retombe complètement aujourd'hui. Il y a une dizaine de milles vers le sud le long de la côte sous le vent, surtout de l'eau plate dans l'ombre de vent de l'île, avec quelques risées s'engouffrant des vallées. Deux heures de navigation, pas plus. Marigot Bay se cache derrière un bas cordon de palmiers et ne se révèle que lorsqu'on est presque à l'intérieur. Le bassin intérieur est un vrai trou à cyclone, cerné de collines vertes et abruptes qui tuent la houle et l'essentiel du vent. Prenez l'une des bouées de la marina dans la baie intérieure plutôt que de vous battre pour de la place au mouillage. À terre, le Chateau Mygo fait une honnête cuisine créole, et le taxi-boat vous mènera chez Doolittle's pour dîner, aller et retour.",
+          "thingsToDo": [
+            "Prendre une bouée dans le trou à cyclone intérieur",
+            "Dîner à la cuisine créole du Chateau Mygo",
+            "Taxi-boat jusqu'au bar Doolittle's",
+            "Pagayer dans les mangroves au fond de la baie"
+          ],
+          "mooringTip": "Il y a à peine de quoi éviter et ça reste profond jusqu'à la rive, alors oubliez le mouillage et attrapez l'une des vingt bouées de la marina ; un boat boy accourt prendre vos amarres. Elles partent vite en saison, alors appelez la marina à la radio tant que vous êtes encore au large de l'entrée."
+        },
+        "4": {
+          "shortDescription": "L'étape phare : au sud jusqu'à Soufrière et une bouée au pied des deux Pitons, à l'intérieur d'une réserve protégée de récif et de forêt tropicale.",
+          "description": "Les Pitons apparaissent bien avant qu'on ne les atteigne, deux flèches vertes plongeant droit dans la mer. Il y a environ douze milles le long de la côte, une navigation facile entrecoupée de trous de vent sous les hauteurs, alors gardez le moteur à portée. Vous parlerez encore de ce tronçon dans l'avion du retour. Toute la baie se trouve dans la réserve marine de Soufrière, un site de l'UNESCO où le mouillage est interdit et où l'on prend une bouée auprès des gardes de la SMMA, qui facturent une petite redevance de conservation selon la longueur du bateau. Attrapez-en une au large de Sugar Beach, entre les Pitons, ou sous les falaises à Anse Chastanet pour le meilleur snorkeling. À terre, les sources sulfureuses et les jardins botaniques font une bonne demi-journée si l'équipage veut une pause loin de l'eau.",
+          "thingsToDo": [
+            "Prendre une bouée SMMA au large de Sugar Beach",
+            "Snorkeling sur le récif à Anse Chastanet",
+            "Bains de boue aux Sulphur Springs",
+            "Parcourir les Diamond Botanical Gardens"
+          ],
+          "mooringTip": "Aucune ancre ne descend où que ce soit dans la réserve, alors prenez une bouée SMMA (blanche à bande bleue) et payez la redevance de conservation au garde ; les bouées blanches unies des pêcheurs ne sont pas pour les visiteurs. Les bouées au large de Sugar Beach sont profondes et souvent amarrées cul à terre, alors arrivez de jour pour régler vos amarres calmement."
+        },
+        "5": {
+          "shortDescription": "Une remontée de la côte jusqu'à Rodney Bay pour faire les formalités de sortie de Sainte-Lucie, avec le temps de voir Pigeon Island avant la traversée du retour.",
+          "description": "Aujourd'hui, il s'agit de remonter vers le nord. Il y a environ vingt-cinq milles de retour le long de la côte sous le vent jusqu'à Rodney Bay, une navigation confortable dans l'abri de l'île avec les mêmes risées d'après-midi au large des pointes. Quittez Soufrière après un dernier snorkeling matinal et vous serez au mouillage en milieu d'après-midi. De retour à Rodney Bay, faites vos formalités de sortie à la douane de la marina pour être libre de partir vers la Martinique dès l'aube. Papiers en règle, blottissez-vous sous Pigeon Island pour la nuit, le coin le plus calme de la baie une fois le parc fermé. Fort Rodney vaut la courte montée pour la vue sur le mouillage et jusqu'à la Martinique, l'horizon de demain. Faites le plein de carburant et d'eau avant de partir ; c'est plus rare de l'autre côté.",
+          "thingsToDo": [
+            "Faire les formalités de sortie de Sainte-Lucie à la marina",
+            "Mouiller sous Pigeon Island pour la nuit",
+            "Monter aux ruines de Fort Rodney",
+            "Compléter carburant et eau avant de partir"
+          ],
+          "mooringTip": "Le mouillage de Pigeon Island tient bien sur sable par quatre à sept mètres, mais guettez les hauts-fonds près de la plage. Il se vide et reste tranquille une fois le parc national fermé pour la soirée, ce qui en fait un bon point d'appui pour un départ matinal."
+        },
+        "6": {
+          "shortDescription": "La traversée du canal de retour vers la Martinique, avec pour terme l'église de Grande Anse d'Arlet, où les tortues vertes broutent l'herbier au large de la plage.",
+          "description": "La traversée du retour vers la Martinique est la plus longue des deux journées de canal, près de trente milles de Rodney Bay jusqu'aux Anses d'Arlet. En route vers le nord, les alizés viennent davantage dans le nez, alors attendez-vous à un largue animé et à quelques embruns ; prenez un ris tôt et partez à l'aube pour garder une traversée de jour. L'atterrissage se fait au coin sud-ouest de la Martinique. Grande Anse d'Arlet est une vraie récompense pour les milles parcourus. Un croissant de sable sombre s'incurve sous une église aux toits rouges dont le clocher s'aligne parfaitement avec la jetée. Le mouillage est bon sur sable, et l'eau au large de la plage abrite des prairies d'herbiers où les tortues vertes se nourrissent presque tous les matins. Ti Sable, pieds dans le sable, sert du poisson grillé et une fête du dimanche qui déborde sur la plage.",
+          "thingsToDo": [
+            "Snorkeling avec les tortues vertes au large de la plage",
+            "Photographier l'église Saint-Henri alignée avec la jetée",
+            "Déjeuner au beach club Ti Sable",
+            "Annexe jusqu'à Anse Dufour et Anse Noire"
+          ],
+          "mooringTip": "Grande Anse est une baie de mouillage ; jetez l'ancre sur sable clair par cinq à huit mètres et évitez l'herbier balisé pour ne pas gêner le broutage des tortues. Elle se remplit de bateaux d'excursion en fin de matinée, alors une arrivée matinale vous gagne un emplacement près du village."
+        },
+        "7": {
+          "shortDescription": "Une dernière courte étape autour de la côte sud de la Martinique, passé le Rocher du Diamant, jusqu'au Marin pour rendre le bateau.",
+          "description": "Le dernier matin est facile, une dizaine de milles de retour vers Le Marin par la pointe sud de l'île. Au large de Petite Anse d'Arlet, la côte s'ouvre sur le Rocher du Diamant, un bloc de pierre de 175 mètres que la Royal Navy a jadis armé comme navire de guerre. Passez-le lentement ; le snorkeling sur ses flancs vaut une dernière baignade si la mer est calme. De là, c'est un près de retour vers l'est dans les alizés en direction de Sainte-Anne, puis la remontée du chenal balisé jusqu'au Marin. Les loueurs veulent d'habitude le bateau rendu en fin de matinée, alors calez la dernière étape pour quitter Grande Anse tôt. Faites le plein de carburant en entrant, réglez les comptes, et laissez l'équipage profiter au mieux d'un dernier déjeuner à terre.",
+          "thingsToDo": [
+            "Passage lent et snorkeling au Rocher du Diamant",
+            "Halte déjeuner au large de Petite Anse d'Arlet",
+            "Refaire le plein en entrant au Marin",
+            "Dernier déjeuner sur le front de mer du Marin"
+          ],
+          "mooringTip": "L'approche du Marin est balisée mais peu profonde et parsemée de corail, alors suivez le chenal marqué et ne coupez pas les angles. Appelez la base de charter en route pour confirmer votre place, et entrez cul le premier ou selon leurs indications ; le ponton à carburant est près de l'entrée pour un plein avant la restitution."
+        }
+      }
+    },
+    "virgin-gorda-anegada-route": {
+      "metaTitle": "7 jours BVI : des Baths à Anegada | Boat4You",
+      "metaDesc": "Une semaine de voile depuis Tortola : rochers de Virgin Gorda, récif d'Anegada, North Sound, Scrub Island et les bars de plage de Jost Van Dyke.",
+      "days": {
+        "1": {
+          "shortDescription": "Traversez le canal de Drake jusqu'à Virgin Gorda et faufilez-vous entre les blocs de granit et les grottes des Baths avant l'arrivée des bateaux d'excursion.",
+          "description": "La plupart des équipages quittent Road Town en milieu de matinée et remontent au vent vers l'est à travers le canal Sir Francis Drake, dix milles de près soutenu dans les alizés, Virgin Gorda grossissant sur l'étrave. La récompense, ce sont les Baths, où des blocs de granit gros comme des maisons dégringolent dans la mer et forment un dédale de grottes ombragées et de vasques. Prenez une bouée du parc national au large de la plage, puis rejoignez le rivage à la nage ou en annexe et suivez le parcours de cordes et d'échelles à travers les rochers jusqu'à Devil's Bay. Prévoyez des chaussures d'eau : l'escalade est humide et la roche devient glissante. En masque et tuba autour des blocs, vous croiserez des sergents-majors et parfois un tarpon. Venez tôt. Vers onze heures les ferries débarquent et les grottes se remplissent ; un départ à huit heures vous offre une heure de plage presque déserte et une meilleure lumière pour les photos.",
+          "thingsToDo": [
+            "Grimper le parcours des rochers jusqu'à Devil's Bay",
+            "Explorer les grottes en masque et tuba autour de Spring Bay",
+            "Se rafraîchir dans les vasques ombragées",
+            "Photographier les grottes avant l'arrivée des ferries"
+          ],
+          "mooringTip": "Le champ de bouées des Baths est réservé à la journée : prévoyez de partir en fin d'après-midi et de redescendre à Spanish Town ou Savannah Bay pour la nuit. Les bouées se prennent au premier arrivé ; attrapez-en une en milieu de matinée en saison."
+        },
+        "2": {
+          "shortDescription": "Contournez la pointe nord de Virgin Gorda pour entrer dans North Sound, un bassin abrité de marinas, de bars de plage et de bouées de yacht-club reconstruites.",
+          "description": "Depuis Spanish Town, une courte bordée sur la côte sous le vent, une dizaine de milles peut-être, avant de vous glisser par la passe dans North Sound. L'eau s'aplatit dès que vous êtes à l'intérieur. C'est un port naturel cerné de mouillages : Leverick Bay pour le carburant, l'eau et un vrai ravitaillement, Saba Rock et le Bitter End Yacht Club reconstruit pour l'apéro, et de la place au calme pour mouiller au large de Prickly Pear. On prend en général une bouée à Leverick, on fait le plein des réservoirs, puis on traverse en annexe pour la soirée. Le vendredi soir, le ponton accueille Michael Beans et son jump-up de pirates, bruyant et bon enfant. Si vous préférez ne pas bouger, les bouées de Saba Rock incluent l'eau douce et un sac de glace, ce qui vaut bien le tarif après une journée de chaleur. Ravitaillez ici : c'est la dernière vraie boutique avant Anegada.",
+          "thingsToDo": [
+            "Faire le plein de carburant et d'eau à Leverick Bay",
+            "Apéro au Bitter End Yacht Club reconstruit",
+            "Passer à Leverick Bay pour le jump-up de pirates de Michael Beans",
+            "Prendre une bouée au large de Saba Rock"
+          ],
+          "mooringTip": "North Sound fonctionne avec BoatyBall : réservez une bouée à Leverick ou Saba Rock depuis votre téléphone avant d'arriver, en pleine saison. Vous préférez mouiller ? Le fond de vase et de sable à l'ouest de Prickly Pear tient bien avec les ancres modernes."
+        },
+        "3": {
+          "shortDescription": "La longue étape vers Anegada, plate et bordée de corail, où un chenal balisé à travers le Horseshoe Reef mène à un dîner de langouste.",
+          "description": "C'est la seule vraie traversée en eau libre de la semaine, une douzaine à quinze milles d'une eau aux allures d'Atlantique, sans aucune île en vue jusqu'à ce que vous soyez presque dessus. Anegada, c'est du corail, pas du rocher, et elle dépasse à peine de l'horizon. Quittez North Sound vers neuf heures pour garder le soleil haut et dans le dos à l'approche. Le chenal vers Setting Point est balisé et étroit, et l'eau tout autour passe de rien en quelques secondes sur les dix-huit milles du Horseshoe Reef. Suivez les marques rouges et vertes à la lettre et résistez à toute envie de couper un angle. Une fois amarré, l'île vit au rythme du pas. Commandez votre langouste dès l'après-midi chez Potter's ou à l'Anegada Reef Hotel, pour que le grill soit allumé quand vous débarquez en annexe.",
+          "thingsToDo": [
+            "Commander la langouste à l'avance chez Potter's by the Sea",
+            "Verre au coucher du soleil à l'Anegada Reef Hotel",
+            "Suivre les balises du récif jusqu'à Setting Point",
+            "Soirées musique live au Wonky Dog"
+          ],
+          "mooringTip": "Setting Point ne compte qu'une poignée de bouées et presque aucun mouillage sûr entre les patates de corail : réservez une BoatyBall bien à l'avance. La tenue sur les fonds d'herbier est médiocre, et les profondeurs ne dépassent guère deux à deux mètres cinquante."
+        },
+        "4": {
+          "shortDescription": "Une journée entière à terre sur Anegada : plages de la côte nord, masque et tuba sur le récif et les flamants roses des salines qui rendent cette île unique dans l'archipel.",
+          "description": "Aujourd'hui, personne ne touche au bateau. Anegada est la seule île qui mérite qu'on lui consacre une journée entière : louez une jeep ou un scooter à Setting Point, ou hélez un taxi, et traversez l'intérieur broussailleux jusqu'à la côte nord. Loblolly Bay et Cow Wreck Beach sont les deux grands attraits, de longs rubans de sable pâle avec un récif assez proche pour l'atteindre à la nage. Le snorkeling au large de Loblolly est le meilleur de l'île, avec du corail corne d'élan et parfois une tortue. Big Bamboo et le Cow Wreck Beach Bar s'occupent du déjeuner et des Carib bien fraîches. Au retour, arrêtez-vous aux salines de l'ouest où se nourrit une petite colonie de flamants ; tôt le matin et en fin d'après-midi offrent les meilleures observations. Les guides de pêche au bonefish travaillent les hauts-fonds, si c'est votre truc. C'est une journée lente et ensoleillée, et c'est bien là tout l'intérêt.",
+          "thingsToDo": [
+            "Explorer le récif de corail corne d'élan au large de Loblolly Bay",
+            "Déjeuner au Cow Wreck Beach Bar",
+            "Observer les flamants aux salines de l'ouest",
+            "Louer une jeep pour traverser l'intérieur de l'île"
+          ],
+          "mooringTip": "Vous gardez votre bouée à Setting Point pour la deuxième nuit : rien à déplacer, vérifiez simplement que votre réservation BoatyBall couvre les deux nuits. Débarquez tôt en annexe pour bloquer une jeep avant qu'elles ne soient toutes prises."
+        },
+        "5": {
+          "shortDescription": "Un largue vers le sud jusqu'à Scrub Island, où une marina tout équipée et des plages tranquilles de resort vous attendent après le large.",
+          "description": "Mettez le cap vers la chaîne d'îles principale pour la plus longue navigation du voyage, seize milles environ au largue dans les alizés habituels. Scrub Island se trouve au large de la pointe nord-est de Tortola, à un saut de puce de Marina Cay et Trellis Bay. La marina y est la plus chic du parcours, avec des places pour les grandes unités, de l'eau douce, de l'électricité et une vraie douche chaude, plus Donovan's Reef et Caravela pour le dîner si vous en avez assez de votre propre carré. On aime bien s'amarrer une nuit pour souffler : lessive, ravitaillement à l'Outpost, une baignade au large de One Shoe Beach. Dive BVI organise des sorties depuis le ponton. Si la marina est complète, le champ de bouées de Marina Cay juste à côté fait un très bon repli, avec son petit bar de plage.",
+          "thingsToDo": [
+            "Dîner au Donovan's Reef Marina Bar",
+            "Se baigner au large de One Shoe Beach",
+            "Réserver une sortie snorkeling avec Dive BVI",
+            "Se ravitailler à l'Outpost de Scrub Island"
+          ],
+          "mooringTip": "Scrub Island est une marina plutôt qu'un champ de bouées : réservez une place via Dockwa un jour ou deux à l'avance, surtout pour un gros catamaran. Si c'est complet, prenez plutôt une bouée à Marina Cay, juste à côté."
+        },
+        "6": {
+          "shortDescription": "Longez toute la côte nord de Tortola jusqu'à Jost Van Dyke, patrie de Foxy's, du Soggy Dollar et du Painkiller original.",
+          "description": "Aujourd'hui le vent est dans le dos, un vent arrière tranquille le long du haut de Tortola, passé Cane Garden Bay et autour de Great Thatch jusqu'à Jost Van Dyke, une bonne quinzaine de milles selon votre route. Jost est petite, endormie et célèbre bien au-delà de sa taille. Great Harbour abrite Foxy's, le bar de plage lancé par Philicianno Callwood il y a des décennies, qui fait encore la fête presque tous les soirs. De l'autre côté de la pointe, à White Bay, se trouve le Soggy Dollar, où le Painkiller a été inventé et où l'on rejoint le rivage à la nage plutôt que d'accoster en annexe. Les deux baies se remplissent quand arrivent les bateaux d'excursion : arrangez-vous. Glissez-vous avant onze heures ou après seize heures et vous aurez le sable presque pour vous. Little Harbour, plus calme encore, abrite le Sydney's Peace and Love et de bonnes bouées si les deux autres semblent trop pleines.",
+          "thingsToDo": [
+            "Painkillers au Soggy Dollar Bar",
+            "Soirée tardive chez Foxy's à Great Harbour",
+            "Rejoindre à la nage le sable de White Bay",
+            "Bouées tranquilles et dîner à Little Harbour"
+          ],
+          "mooringTip": "White Bay ne compte que huit ou dix bouées et un mouillage peu profond sur sable meuble : arrivez tôt, ou prenez une bouée dans le Great Harbour plus calme et contournez en annexe. Les deux baies sont ouvertes à la houle de nord et à éviter par houle de fond hivernale."
+        },
+        "7": {
+          "shortDescription": "Un dernier petit saut vers Road Town, avec le temps d'une ultime baignade à Sandy Spit ou d'une escale à Soper's Hole.",
+          "description": "La dernière matinée est facile, seulement huit à dix milles pour rentrer à Road Town : inutile de bâcler le café. La plupart des bases de charter veulent le bateau de retour pour midi, ce qui laisse encore la place à un détour. Sandy Spit et Sandy Cay, juste au large de Jost, sont des bancs de sable de carte postale qui valent un mouillage rapide et une baignade avant de mettre le cap sur la maison. Si vous avez besoin de carburant ou de quelques provisions de dernière minute, Soper's Hole, à la pointe ouest de Tortola, possède un ponton de carburant, une petite marina et deux ou trois cafés autour du port. De là, c'est une navigation sans histoire le long du canal Sir Francis Drake jusqu'à la base. Rincez le sel, bouclez le livre de bord et levez un verre avec l'équipage avant de rendre les clés.",
+          "thingsToDo": [
+            "Mouiller et se baigner à Sandy Spit",
+            "Carburant et café à Soper's Hole",
+            "Dernières provisions à la marina de West End",
+            "Dernière navigation le long du canal de Drake"
+          ],
+          "mooringTip": "Sandy Spit n'a pas de bouées : mouillez au large du sable par temps calme et tenez-vous à l'écart du récif sur son côté est. Prévoyez tôt votre plein de retour à Soper's Hole, car le ponton s'engorge les matins de rotation."
+        }
+      }
+    },
+    "windward-two-week-14-days": {
+      "metaTitle": "Croisière de 14 jours aux Îles du Vent | Boat4You",
+      "metaDesc": "Deux semaines depuis Le Marin, Martinique : baies à tortues, la côte de la Montagne Pelée, puis un saut vers les Pitons de Sainte-Lucie et Marigot Bay.",
+      "days": {
+        "1": {
+          "shortDescription": "Un premier après-midi tranquille : sortez au moteur de la base de charter et mouillez au large de la longue plage blanche de Sainte-Anne, à Pointe Marin.",
+          "description": "La plupart des équipages passent la première matinée à ranger les provisions et à prendre en main le bateau : gardez le jour un court. Sainte-Anne se trouve à peine à cinq milles du complexe portuaire du Marin, une mise en jambes douce avant tout ce qui est plus ambitieux. Le mouillage est immense et rarement plein, le sable tenant sous une eau claire au large de Pointe Marin. Prenez l'annexe jusqu'au quai en béton du village, ou amarrez-vous au ponton flottant près du Pirates Bar. Le bourg lui-même est petit et sans hâte : une place d'église, quelques crêperies, une boulangerie qui vaut une promenade matinale. On se baigne en général depuis le tableau arrière avant le dîner, puis on mange à terre. Des baguettes fraîches et de la Lorraine bien fraîche font un bon début pour deux semaines. Couchez-vous tôt : demain vous doublez la pointe sud.",
+          "thingsToDo": [
+            "Se baigner depuis la plage blanche de Pointe Marin",
+            "Café et croissants à la boulangerie du village",
+            "Rejoindre en annexe le ponton du Pirates Bar",
+            "Balade au coucher du soleil autour de la place de l'église de Sainte-Anne"
+          ],
+          "mooringTip": "Mouillez sur sable n'importe où au large de Pointe Marin ; la baie est assez vaste pour qu'on se dispute rarement la place. La tenue est bonne par trois à cinq mètres, inutile d'arriver tôt."
+        },
+        "2": {
+          "shortDescription": "Doublez la pointe sud de l'île et remontez la côte sous le vent jusqu'à Grande Anse d'Arlet, la meilleure baie de snorkeling de Martinique.",
+          "description": "Quitter la côte sud, c'est passer le cap à la pointe de l'île, là où la houle contourne le relief et où le vent forcit. Une fois sur la face sous le vent, l'eau s'aplatit et la navigation devient facile. Grande Anse d'Arlet est une large baie adossée à une église aux toits rouges posée presque sur le sable, l'un des endroits les plus photographiés de l'île. L'attrait, c'est ce qui se cache dessous : des herbiers où broutent des tortues vertes, plus du récif le long des deux pointes. Glissez-vous à l'eau depuis le bateau et vous en trouverez souvent une en quelques minutes. À terre, une rangée de restaurants simples sert du poisson grillé et des accras. Mieux vaut quitter Sainte-Anne vers neuf heures pour arriver avec une lumière encore haute pour le snorkeling.",
+          "thingsToDo": [
+            "Palmer sur les herbiers à la recherche des tortues vertes",
+            "Photographier l'église posée sur le sable au bord de l'eau",
+            "Poisson grillé et accras dans une paillote de plage",
+            "Explorer le récif le long des deux pointes"
+          ],
+          "mooringTip": "Mouillez sur sable par cinq à huit mètres vers le milieu de la baie, à l'écart de la zone de baignade balisée devant la plage. Le côté sud offre un peu plus d'abri si de la houle s'invite."
+        },
+        "3": {
+          "shortDescription": "Un très court saut vers le nord jusqu'à la minuscule Anse Dufour, où l'eau peu profonde rend faciles à trouver les tortues vertes qui y résident.",
+          "description": "C'est à peine une heure de voile : traitez ça comme une matinée paresseuse. Anse Dufour est une baie de poche aux airs de village de pêcheurs, quelques barques tirées sur le sable et deux petits restaurants au fond. Les tortues vertes y sont plus abondantes que presque partout ailleurs sur la côte ; elles viennent chaque jour brouter l'herbier et se soucient peu des nageurs. Juste à côté, à courte marche par-dessus la pointe, Anse Noire déroule son sable volcanique noir et son propre récif. Les deux baies sont petites et se remplissent de bateaux d'excursion en fin de matinée, argument de plus pour arriver tôt et prendre une bouée tant qu'il en reste. Déjeuner à terre, un après-midi dans l'eau, une nuit tranquille au mouillage.",
+          "thingsToDo": [
+            "Nager avec les tortues vertes à Anse Dufour",
+            "Marcher jusqu'à Anse Noire et son sable noir",
+            "Déjeuner dans un restaurant de bord de plage du village de pêcheurs",
+            "Explorer le récif le long des bords de la baie"
+          ],
+          "mooringTip": "Anse Dufour est exiguë : attrapez une bouée ou mouillez sur une plaque de sable à l'écart des barques de pêche ; les fonds remontent vite sous les trois mètres. Arrivez avant midi, quand les bateaux d'excursion envahissent la petite baie."
+        },
+        "4": {
+          "shortDescription": "Remontez la côte sous le vent jusqu'à Saint-Pierre, l'ancienne capitale que la Montagne Pelée a ensevelie sous les cendres en 1902, sa rade encore pleine d'épaves.",
+          "description": "La route vers le nord vous tient au ras des collines verdoyantes, la Montagne Pelée grandissant devant. Saint-Pierre était le port le plus riche des Caraïbes jusqu'au matin du 8 mai 1902, quand le volcan lâcha une nuée ardente qui tua près de 28 000 personnes en quelques minutes et coula presque tous les navires de la rade. Aujourd'hui, vous mouillez au-dessus de cette histoire. À terre, le théâtre en ruine et le cachot qui sauva l'un des rares survivants font une promenade grave, adoucie par de bonnes boulangeries et des débits de rhum dans la ville reconstruite. La rade est calme, le vent en général léger, la tenue correcte dans le sable volcanique noir. Les plongeurs viennent pour les épaves du fond, dont le vapeur Roraima, l'une des plus belles plongées sur épave de la région. Consacrez l'après-midi à la ville et gardez la plongée pour demain.",
+          "thingsToDo": [
+            "Parcourir le théâtre en ruine et les vestiges de 1902",
+            "Visiter le cachot du survivant, le cachot Cyparis",
+            "Flâner dans les débits de rhum de la ville reconstruite",
+            "Photographier la Montagne Pelée depuis le mouillage"
+          ],
+          "mooringTip": "Le fond descend en pente raide et le sable est un limon volcanique noir et mou : mouillez près du bord et filez beaucoup de chaîne ; la tenue peut être capricieuse au premier essai. C'est profond près de la côte, souvent dix mètres ou plus."
+        },
+        "5": {
+          "shortDescription": "Une courte navigation vers la pointe nord sauvage à Anse Couleuvre, sable noir au pied de falaises boisées, sous le volcan.",
+          "description": "Au nord de Saint-Pierre, la côte devient brute. La route s'arrête passé Le Prêcheur et les dernières baies appartiennent surtout aux pêcheurs et à quelque voilier de croisière de passage. Anse Couleuvre est la récompense : une bande de sable noir enfermée par de hautes falaises et une forêt dense, adossée à des cocotiers et aux ruines d'une ancienne distillerie de rhum. Un sentier mène à l'intérieur des terres vers une petite cascade, une marche facile d'un mille environ, et au départ de randonnées plus longues sur les flancs de la Montagne Pelée. Les surfeurs connaissent la vague d'ici, et le snorkeling le long des rochers est parmi les meilleurs de l'île. Il n'y a aucun service et peu d'abri : c'est un mouillage de journée que la plupart des équipages savourent avant de redescendre vers le sud. Venez pour la baignade et le calme.",
+          "thingsToDo": [
+            "Suivre le sentier forestier jusqu'à la cascade",
+            "Explorer le récif rocheux au large du sable noir",
+            "Découvrir la distillerie de rhum en ruine sous les arbres",
+            "Regarder les surfeurs sur la vague exposée au nord"
+          ],
+          "mooringTip": "C'est une rade ouverte, sans bouées, où la houle peut entrer par le nord : elle convient à une journée calme plutôt qu'à une nuit. Mouillez sur sable au large de la plage et gardez une veille au mouillage si une houle de fond se lève."
+        },
+        "6": {
+          "shortDescription": "Redescendez vers le sud à Saint-Pierre pour une seconde nuit, cette fois pour plonger sur les épaves de la rade et explorer la ville.",
+          "description": "Le court retour à Saint-Pierre vous donne le mouillage tranquille qui manque à la pointe nord, et l'occasion de faire ce que la ville fait de mieux. Sous la rade reposent une douzaine de navires perdus dans la catastrophe de 1902, posés entre vingt et soixante mètres et tapissés de corail. Le Roraima est le plus célèbre, même si plusieurs barges et goélettes sont moins profondes et tout aussi saisissantes. Les centres de plongée locaux organisent des sorties la plupart des matins si vous avez réservé ; sinon, le Musée Volcanologique et la distillerie Depaz sur la colline occupent bien un après-midi. On aime arpenter les ruelles pavées à la fraîche de la fin de journée, puis dîner dans l'un des établissements du front de mer. Le rhum agricole Depaz, distillé presque à l'ombre du volcan, mérite d'être rapporté à bord.",
+          "thingsToDo": [
+            "Plonger sur l'épave du Roraima dans la rade",
+            "Visiter la distillerie de rhum agricole Depaz",
+            "Visiter le Musée Volcanologique Frank Perret",
+            "Déguster des fruits de mer sur le front de mer de Saint-Pierre"
+          ],
+          "mooringTip": "Même sable noir et mou qu'à l'aller : re-mouillez avec beaucoup de chaîne et vérifiez que ça tient avant de quitter le bateau. Si un bateau de plongée travaille les épaves, laissez une bonne marge à son bout de descente et à ses plongeurs quand vous jetez l'ancre."
+        },
+        "7": {
+          "shortDescription": "Redescendez la côte ouest jusqu'à Grande Anse d'Arlet pour une dernière baignade avec les tortues et une soirée tranquille à terre.",
+          "description": "La navigation vers le sud retrace des eaux familières, vent arrière et douce, toute la côte sous le vent se déroulant sur tribord. Grande Anse d'Arlet mérite une seconde visite parce que la baie fonctionne si bien comme camp de base : bonne tenue, débarquement facile, et des tortues toujours en train de brouter l'herbier dès que vous vous glissez par-dessus bord. Cette fois, attardez-vous. Prenez l'annexe jusqu'à Petite Anse, juste à côté, plus calme et encadrée de barques de pêche, ou suivez le sentier littoral par-dessus la pointe pour la vue en enfilade sur la baie. La soirée est la plus belle heure du village, quand les bateaux d'excursion sont partis et que les restaurants de plage s'allument. Commandez la pêche du jour et un ti-punch, regardez le soleil tomber derrière la pointe lointaine. C'est la dernière soirée tranquille en Martinique avant de mettre le cap sur Sainte-Lucie.",
+          "thingsToDo": [
+            "Une dernière baignade avec les tortues au large de la plage",
+            "Filer en annexe jusqu'à la paisible Petite Anse",
+            "Suivre le sentier littoral par-dessus la pointe",
+            "Ti-punch et poisson frais au coucher du soleil"
+          ],
+          "mooringTip": "Reprenez la même plaque de sable au milieu de la baie par cinq à huit mètres et restez à l'écart de la zone de baignade balisée. Si le mouillage est chargé, Petite Anse, juste au nord, a souvent de la place et tient tout aussi bien."
+        },
+        "8": {
+          "shortDescription": "Doublez la pointe sud pour rentrer au Marin, faites le plein de carburant, d'eau et de provisions, et préparez-vous à la traversée du canal.",
+          "description": "Aujourd'hui se referme la boucle martiniquaise. Vous tirez des bords pour repasser la pointe sud dans les alizés : attendez-vous à du vent dans le nez et un peu de clapot jusqu'à tomber sous le vent, dans la longue baie du Marin. La marina d'ici est l'une des plus grandes bases de charter des Caraïbes, ce qui en fait l'endroit idéal pour régler la logistique avant de partir au large. Faites le plein d'eau et de gasoil, faites un vrai ravitaillement au Leader Price, et faites vos formalités de sortie à la Douane si vous ne les avez pas faites en ligne. Il reste du temps l'après-midi pour retourner se baigner au large de Sainte-Anne ou simplement se reposer au mouillage. Une nuit tôt aide : la traversée vers Sainte-Lucie demande un départ le matin, avec la lumière du jour devant soi.",
+          "thingsToDo": [
+            "Se ravitailler au supermarché du Marin",
+            "Faire le plein de gasoil et d'eau à la marina",
+            "Faire les formalités à la Douane",
+            "Dernier passage à la boulangerie française avant la traversée"
+          ],
+          "mooringTip": "Vous pouvez mouiller dans la baie encombrée du Marin ou prendre une place à la marina pour simplifier le plein et le ravitaillement. Réservez une place à l'avance en haute saison, car cette base se remplit de bateaux en rotation le week-end."
+        },
+        "9": {
+          "shortDescription": "La grande étape : 22 milles de traversée jusqu'à Sainte-Lucie, alizés au large tout du long, puis douane et calme à Rodney Bay.",
+          "description": "C'est la traversée vers laquelle tout l'itinéraire converge. Depuis Le Marin, il y a environ 22 à 25 milles d'eau libre jusqu'à Rodney Bay, quatre à six heures de vraie navigation avec les alizés de 15 à 25 nœuds au travers. Le canal entre les îles peut être formé là où le vent rencontre le courant : prenez un ris tôt et arrimez tout en bas. Une fois que la masse verte de Sainte-Lucie se dresse devant, l'allure se stabilise sous son vent. Rodney Bay est large et bien protégée, le sable tenant au large de Reduit Beach et la marina blottie dans le lagon. Faites vos formalités d'entrée avec la douane et l'immigration à la marina avant de vous détendre. Ensuite, c'est une bière fraîche honnêtement méritée, avec Pigeon Island et son vieux fort qui attendent le lendemain matin.",
+          "thingsToDo": [
+            "Prendre un ris pour la traversée en eau libre",
+            "Faire les formalités à la Rodney Bay Marina",
+            "Mouiller au large de Reduit Beach pour une baignade",
+            "Apéro avec vue sur le lagon"
+          ],
+          "mooringTip": "Mouillez sur sable au large de Reduit Beach par trois à six mètres, ou prenez une place à la marina dans le lagon pour des formalités faciles. Ne mouillez pas dans les zones de baignade balisées, et terminez votre entrée avant de débarquer où que ce soit."
+        },
+        "10": {
+          "shortDescription": "Une douce navigation côtière vers le sud jusqu'à Marigot Bay, un trou à ouragan enclavé, si joli qu'il se cache derrière sa propre langue de sable plantée de palmiers.",
+          "description": "Court et facile aujourd'hui, une dizaine de milles le long de la côte, sous le vent des collines. Marigot Bay se rétrécit en une fente qu'on manque presque depuis le large, puis s'ouvre sur un port intérieur quasi fermé, cerné de pentes verdoyantes et d'un banc de sable couvert de palmiers. Les marins l'utilisent comme trou à ouragan depuis des générations, et l'histoire raconte qu'une flotte britannique s'y serait un jour cachée sous des palmes. À l'intérieur, vous prenez une bouée côté sud ou mouillez dans le bassin extérieur au nord. Le village de la marina compte un shipchandler, un petit marché et deux ou trois bons bars au bord de l'eau ; Doolittle's, de l'autre côté du plan d'eau en navette, est l'escale apéro classique. C'est une nuit douillette et protégée, qui mérite une baignade l'après-midi et un dîner tôt à terre.",
+          "thingsToDo": [
+            "Prendre une bouée dans le port intérieur",
+            "Apéro chez Doolittle's de l'autre côté du plan d'eau",
+            "Se baigner au large du banc de sable planté de palmiers",
+            "Faire un tour au shipchandler et au marché du village de la marina"
+          ],
+          "mooringTip": "Le chenal d'entrée est étroit mais profond ; tenez le milieu et attention à la navette. Prenez une bouée côté sud ou mouillez dans le bassin extérieur au nord, où la tenue dans la vase est bonne."
+        },
+        "11": {
+          "shortDescription": "Naviguez vers le sud jusqu'aux Pitons et prenez une bouée entre les deux flèches, le mouillage qui résume à lui seul un charter à Sainte-Lucie.",
+          "description": "La descente matinale vers Soufrière dévoile les Pitons dans toute leur ampleur, deux cônes boisés jaillissant à pic de la mer, le Gros Piton à 798 mètres et le Petit Piton à 743. Rien d'autre sur le parcours ne ressemble à cela. La Soufrière Marine Management Area gère des bouées au large de Sugar Beach, posées pile dans le creux entre les pics, et un permis est obligatoire ; les rangers passent encaisser le droit et vérifier que vous êtes bien amarré. Ces bouées sont prisées et se remplissent en début d'après-midi : quittez Marigot après le petit-déjeuner et prenez-en une tant que vous le pouvez. L'eau est profonde jusqu'au rivage et le vent s'engouffre entre les Pitons en rafales dures. Explorez le récif sous le Petit Piton au masque et tuba, puis laissez le mouillage opérer sa magie tandis que la lumière vire à l'or.",
+          "thingsToDo": [
+            "Prendre une bouée SMMA au large de Sugar Beach",
+            "Explorer le récif sous le Petit Piton",
+            "Excursion à terre aux Sulphur Springs et aux jardins",
+            "Photographier les Pitons à l'heure dorée"
+          ],
+          "mooringTip": "Ici, vous devez utiliser une bouée SMMA, pas mouiller ; l'eau est trop profonde et le fond protégé. Arrivez en début d'après-midi, acceptez l'aide du ranger pour passer une amarre arrière à terre contre les rafales, et prévoyez le montant du permis en espèces."
+        },
+        "12": {
+          "shortDescription": "Passez la matinée à terre aux sources sulfureuses et jardins de Soufrière, puis remontez vers le nord à l'abri de Marigot Bay.",
+          "description": "Soufrière mérite une matinée tranquille à terre avant de repartir. Une courte course en taxi mène aux Sulphur Springs, présentées comme un volcan qu'on visite en voiture, et au jardin botanique de Diamond Falls avec ses bains chauds minéraux. Des vendeurs sur l'eau vous proposeront de vous conduire à terre et de guider la sortie ; convenez d'un prix d'abord et c'est de l'argent bien dépensé. De retour à bord, larguez la bouée en fin de matinée et remettez le cap au nord, une descente facile au vent arrière, les Pitons rapetissant dans le sillage. Marigot fait une escale naturelle pour une seconde nuit tranquille, son port intérieur aussi abrité que n'importe quel autre point de la côte. On tend à calculer l'arrivée pour qu'une bouée soit libre avant la ruée de l'après-midi. Une baignade, un dîner tranquille, et la navigation exigeante est derrière vous.",
+          "thingsToDo": [
+            "Visiter le volcan des Sulphur Springs, accessible en voiture",
+            "Se baigner au jardin botanique de Diamond Falls",
+            "Naviguer au vent arrière, les Pitons dans le sillage",
+            "Seconde nuit tranquille sur une bouée à Marigot"
+          ],
+          "mooringTip": "Comme à l'aller à Marigot : bouées côté sud ou mouillage dans le bassin nord sur bonne vase. Visez une arrivée avant le milieu d'après-midi, quand la foule des navettes et des charters rafle les dernières bouées."
+        },
+        "13": {
+          "shortDescription": "Une navigation facile pour remonter à Rodney Bay : dernière nuit à Sainte-Lucie, ravitaillement et formalités de sortie à la douane.",
+          "description": "L'étape de retour vers Rodney Bay est courte et clémente, une dizaine de milles le long de la côte, sous le vent de l'île. C'est le jour pour se préparer à la traversée du retour. La Rodney Bay Marina a un bon supermarché, des shipchandlers et du carburant : ravitaillez maintenant plutôt qu'une fois de retour au Marin. Faites vos formalités de sortie avec la douane et l'immigration ici ; vous ne pouvez pas les faire en mer. Une fois les corvées réglées, un bel après-midi s'offre à vous. Mouillez au large de Pigeon Island et rejoignez la terre en annexe pour monter jusqu'au Fort Rodney, où les vieilles batteries de canons regardent vers le nord, par-dessus le canal, en direction de la Martinique, votre atterrissage de demain. Reduit Beach a des bars pour un dernier apéro sur Sainte-Lucie. Réglez le réveil : la traversée demande un départ matinal et sans précipitation.",
+          "thingsToDo": [
+            "Monter jusqu'au Fort Rodney sur Pigeon Island",
+            "Ravitailler et faire le plein à la Rodney Bay Marina",
+            "Faire les formalités de sortie avec la douane et l'immigration",
+            "Dernier apéro sur Reduit Beach"
+          ],
+          "mooringTip": "Mouillez sur sable au large de Pigeon Island pour la promenade à terre, ou au large de Reduit Beach, plus près de la marina. Si vous voulez partir à l'aube, une place dans le lagon la veille vous évite de relever l'ancre dans le noir."
+        },
+        "14": {
+          "shortDescription": "La traversée du retour : 22 milles pour repasser le canal jusqu'en Martinique et rentrer au Marin rendre le bateau.",
+          "description": "Dernière étape, et une bonne à réussir. Le retour au Marin, ce sont les mêmes 22 à 25 milles, mais l'angle change : avec les alizés d'est, vous ferez souvent un près bon plein ou même du louvoyage, alors partez tôt et gardez-vous de la marge. Le canal se comporte comme à l'aller, le plus formé au milieu où le courant s'oppose au vent, s'apaisant sous le vent de la Martinique. Visez à lever la côte avec plusieurs heures de jour d'avance, puis remontez vers l'est jusqu'à Sainte-Anne et dans la longue baie du Marin. La plupart des bases veulent le bateau de retour en milieu d'après-midi le dernier jour, plein fait et raisonnablement en ordre. S'il reste du temps, un dernier mouillage au large de Pointe Marin et une baignade closent le voyage comme il se doit avant d'accoster.",
+          "thingsToDo": [
+            "Départ matinal pour la traversée du canal",
+            "Régler pour un près bon plein ou du louvoyage",
+            "Dernière baignade au large de Pointe Marin",
+            "Rendre le bateau plein fait au Marin"
+          ],
+          "mooringTip": "Calculez votre arrivée de jour et vérifiez le créneau de retour de la base ; beaucoup veulent que vous soyez à quai en milieu d'après-midi. Si vous atteignez Le Marin tôt, mouillez au large de Sainte-Anne pour une dernière baignade plutôt que d'attendre dans la marina."
+        }
+      }
+    }
+  },
+  "areas": {
+    "bahamas": {
+      "metaTitle": "Itinéraires voile aux Abacos, Bahamas | Boat4You",
+      "metaDesc": "Des routes depuis Marsh Harbour à travers la Sea of Abaco : phare de Hope Town, Man-O-War Cay et navigation sur banc limpide, jour après jour.",
+      "title": "Naviguer sur le banc dans une eau claire comme du gin",
+      "description": "Les Abacos, c'est le charter avec une autre physique. La Sea of Abaco est un banc protégé, souvent profond de trois ou quatre mètres seulement : l'eau y luit de ce bleu pâle bahamien impossible et la navigation reste plate pendant que l'alizé fait le travail. Les distances sont minuscules : le phare rayé de Hope Town, les hangars de construction de Man-O-War et les bars de plage de Great Guana se trouvent tous à deux heures les uns des autres. On navigue à l'œil — lisez la couleur de l'eau, respectez les hauts-fonds de sable, et le banc se montre amical. Beignets de conch et rhum punch règlent l'intendance à terre. Les fronts froids de l'hiver demandent de la vigilance, mais entre eux, les Abacos offrent la navigation la plus douce de l'hémisphère."
+    },
+    "bvi": {
+      "metaTitle": "Itinéraires voile aux BVI | Boat4You",
+      "metaDesc": "Des routes depuis Tortola : les Baths, le récif d'Anegada, les bars de Jost Van Dyke — voile caribéenne à vue, avec conseils de mouillage.",
+      "title": "Le terrain de jeu à vue des Caraïbes",
+      "description": "Si toutes les sociétés de charter de la planète gardent une flotte aux BVI, ce n'est pas un hasard : les îles s'organisent en anneau autour du Sir Francis Drake Channel, les alizés y soufflent un fiable quinze nœuds, et le mouillage suivant est toujours visible depuis le précédent. Les corps-morts ôtent le stress du mouillage à la plupart des nuits. Les incontournables sont bien réels — nager dans les grottes de granit des Baths, la langouste sur le récif sans fin d'Anegada, le painkiller du Soggy Dollar à White Bay — mais les recoins tranquilles aussi, la bight de Norman Island ou les criques à snorkeling de Cooper en milieu de semaine. De décembre à avril, c'est la saison classique. Si votre équipage n'a jamais fait de charter, commencez ici ; s'il en a fait partout, il sourira quand même."
+    },
+    "grenada": {
+      "metaTitle": "Itinéraires voile à Grenade | Boat4You",
+      "metaDesc": "Des routes de Port Louis jusqu'à Carriacou, le long de la côte : snorkeling au parc de sculptures, marchés aux épices et étapes aux alizés.",
+      "title": "Départ sur l'île aux épices, l'appel des Grenadines",
+      "description": "Grenade, c'est les Caraïbes avec tous leurs assaisonnements. L'île sent la noix de muscade à deux milles au large, le port en fer à cheval de St. George's est la plus jolie capitale des Îles du Vent, et le parc de sculptures sous-marines de Molinere fait du snorkeling du premier jour un arrêt vraiment étrange et merveilleux. En remontant vers le nord, les étapes deviennent sérieuses — de vraies traversées aux alizés dans la houle atlantique — jusqu'à ce que Carriacou vous rende tout au centuple, avec la perfection de carte postale de Sandy Island et les paillotes à rhum de Paradise Beach. C'est un charter pour les équipages qui veulent un peu d'océan dans leurs vacances océanes. Les mouillages du sud, autour de Prickly Bay, font une journée de rodage facile, et la Port Louis Marina est une base aussi confortable que les Caraïbes en offrent."
+    },
+    "martinique": {
+      "metaTitle": "Itinéraires Martinique et Sainte-Lucie | Boat4You",
+      "metaDesc": "Des routes depuis Le Marin : Anses d'Arlet, St-Pierre sous le volcan et la traversée vers les Pitons de Sainte-Lucie — voile aux Antilles françaises.",
+      "title": "Boulangeries françaises, vues sur le volcan, vraies traversées",
+      "description": "La Martinique, c'est les Caraïbes qui prennent le déjeuner au sérieux. Le Marin — la plus grande base de charter des Îles du Vent — vous envoie en mer avec de vraies baguettes à bord, et la côte ouest se déroule en petites étapes faciles : les tortues qui broutent sous le bateau à Grande Anse d'Arlet, St-Pierre paisible au pied du volcan qui l'a effacée en 1902, des distilleries de rhum qui font de la dégustation une leçon. Vient ensuite le choix : rester en douceur côté français, ou faire les vingt milles de traversée du canal vers Sainte-Lucie, où les Pitons jaillissent tout droit de la mer et où un corps-mort à leur pied offre la meilleure place au premier rang des Caraïbes. Le canal, c'est de la vraie voile aux alizés — arisez tôt, partez avec le matin. Les deux moitiés de la semaine méritent leur place."
+    }
+  }
+}
