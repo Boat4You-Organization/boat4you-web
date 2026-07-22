@@ -3556,6 +3556,516 @@
           "mooringTip": "Traz o barco de volta à Marina Frapa Slano conforme o teu contrato estipula; o gestor da base vai indicar-te um lugar. A janela de entrega de sábado é das 08:00 às 09:00, por isso, se a papelada pedir regresso na véspera, fica atracado até às 17:00 de sexta. O pontão de combustível fica no lado oeste da entrada da marina."
         }
       }
+    },
+    "split-dubrovnik-split-14day-route": {
+      "metaTitle": "Split–Dubrovnik ida e volta 14 dias | Boat4You",
+      "metaDesc": "Rota de 14 dias à vela de Split até Dubrovnik e de volta, via Hvar, Vis, Lastovo, Mljet e Korčula, com distâncias e dicas de amarração por noite.",
+      "days": {
+        "1": {
+          "shortDescription": "Uma etapa de abertura tranquila, quinze milhas para sudoeste até Milna, no recanto mais sossegado da costa oeste de Brač. Primeiro um mergulho junto ao ferro, depois deixe a noite girar à volta da peka.",
+          "description": "No primeiro dia ninguém tem pressa. A travessia até Milna são quinze milhas de mar aberto ao largo de Split, o suficiente para içar tudo, acertar os rizos e deixar quem não navega há um ano recordar como isto funciona. A enseada entra fundo pela costa oeste de Brač, e avista-se Milna pela torre barroca da igreja muito antes de as casas se distinguirem por trás. Há pescadores neste porto desde que os venezianos mandavam nesta costa, e mantém aquele ar pausado e habitado. Comece por fundear na parte larga da baía, dê o primeiro mergulho da temporada e deixe o cais da vila para mais tarde, quando os barcos da tarde começarem a largar. Uma coisa a tratar assim que puser os pés em terra: o borrego na peka precisa de três horas sobre as brasas, por isso vá direito à konoba e encomende-o. Feito isso, o resto da noite corre sozinho.",
+          "thingsToDo": [
+            "Encomende a peka assim que amarrar, não depois do mergulho",
+            "Dê o primeiro mergulho da viagem junto ao ferro, fora da vila",
+            "Suba à igreja paroquial barroca acima do cais",
+            "Vá de bote até Osibova para o pôr do sol",
+            "Leve uma garrafa de azeite de Brač antes de a loja fechar"
+          ],
+          "mooringTip": "De popa no cais da vila com ferro próprio; a taxa é baixa e há água e electricidade ao longo do troço central. Na maioria dos dias a enseada mantém-se lisa, mas um Maestral forte à tarde empurra mar picado para a baía exterior, portanto, se o cais estiver cheio, siga três milhas para norte até Bobovišća, que fica ao abrigo de qualquer vento de oeste."
+        },
+        "2": {
+          "shortDescription": "Quinze milhas para sudeste até às ilhas Pakleni, com Palmižana a meio da cadeia. Amarre no pontão da marina ou desça para sul até Vinogradišće quando o vento de oeste começar a trabalhar.",
+          "description": "Primeiro o café, depois largar amarras para as quinze milhas de través a atravessar o Canal de Hvar até às ilhas Pakleni, uma cadeia baixa de ilhéus de pinho que resguardam a entrada em Hvar Town. Palmižana é a maior delas e a única com marina, mais ou menos a meio. A baía principal é areia e ervas entre cinco e dez metros, um fundeadouro razoável até o vento de oeste apertar por volta das duas da tarde e pôr os barcos a balançar. Quando isso acontecer, agarre um lugar com lazy line no pontão da ACI ou desça para Vinogradišće, onde o normal é passar um cabo para terra e a ondulação não chega. A família Meneghello plantou aqui um jardim botânico em 1906, e continua a ser a coisa a ver; o almoço estende-se com gosto no Zori ou no Toto's, à beira-mar. Guarde o equipamento de snorkel para as ânforas espalhadas ao largo da costa oeste, melhores na luz calma do fim da tarde.",
+          "thingsToDo": [
+            "Faça snorkel nas ânforas afundadas ao largo da costa oeste",
+            "Passeie pelo jardim Meneghello, plantado em 1906",
+            "Instale-se para um almoço demorado no Zori ou no Toto's",
+            "Vá de bote até Marinkovac quando quiser uma praia mais vazia",
+            "Apanhe o táxi-barco para Hvar Town depois de anoitecer"
+          ],
+          "mooringTip": "O pontão da ACI enche todos os dias em Julho e Agosto, por isso reserve um lugar com lazy line online muito antes de chegar. Se já não houver, meta-se em Vinogradišće, no lado sul, e passe um cabo para terra, que é como toda a gente faz ali. Assim que o gradiente de sudoeste se instala, não passe a noite na baía principal."
+        },
+        "3": {
+          "shortDescription": "A curta etapa de cinco milhas de volta a Hvar Town, que em Julho é um caos. Só a marina da ACI fica calma quando o vento enche; use a riva como paragem de almoço e nada mais.",
+          "description": "Hoje mal chega a uma hora à vela, cinco milhas a direito pelo canal, e vai dar ao porto mais movimentado da Dalmácia. Reconhece-se Hvar Town de bem ao largo: o Fortica sobre a colina, a longa arcada de pedra do Arsenal na frente, a torre de São Estêvão a marcar a praça por trás. Qualquer coisa maior do que um veleiro de passeio quer a ACI Marina Hvar, no lado oeste da baía, que é na verdade o único sítio que fica calmo quando chega a brisa da tarde. A riva cobra à hora e por bom dinheiro, mas ao meio-dia os barcos de excursão e os botes tomam conta dela e não dá qualquer abrigo do Maestral. Faça o Fortica cedo, antes de o sol transformar a subida num suplício. Depois deixe a noite resolver-se sozinha entre as konobas nas ruelas junto à praça.",
+          "thingsToDo": [
+            "Suba ao Fortica cedo, antes do calor do meio-dia",
+            "Veja a arcada do Arsenal e São Estêvão, na praça",
+            "Pague uma rodada numa konoba das ruelas de trás",
+            "Espreite as bancas de alfazema perto de Trg Sv. Stjepana",
+            "Veja o porto do molhe da marina depois de escurecer"
+          ],
+          "mooringTip": "Reserve a ACI Marina Hvar com antecedência na época; cada lugar tem lazy lines, água e electricidade. Use a riva só como amarração de almoço, exposta às rajadas de oeste e cheia de botes, nunca como lugar para passar a noite."
+        },
+        "4": {
+          "shortDescription": "Vinte e cinco milhas até Vis, com paragem para um mergulho em Stiniva, cercada de falésias. O dia acaba em Komiža, um porto de pesca activo que oferece o melhor pôr do sol desta costa.",
+          "description": "Aponte a proa a oeste ao largo de Hvar a meio da manhã para a longa travessia, vinte e cinco milhas até Vis. É a mais afastada das ilhas habitadas em relação ao continente, fechada como base militar até 1989 e por isso ainda mais vazia. Parta a viagem em Stiniva, na costa sul, uma enseada que é quase um tanque, quase fechada por falésias, com uma abertura no meio pouco mais larga do que o barco. Largue o ferro na areia entre oito e dez metros e afaste-se das ervas. Os barcos de excursão começam a despejar por aquela fenda por volta das onze, por isso chegue antes deles ou espere que se vão ao fim do dia. Dali é um saltinho para oeste até Komiža, que ainda desembarca peixe e não turistas. Amarre de popa na dársena interior e depois jante no Jastožera, a casa das lagostas construída sobre estacas por cima da água, com uma Vugava fresca das vinhas da própria ilha. Fique acordado para o pôr do sol; aqui fora faz jus à fama.",
+          "thingsToDo": [
+            "Entre em Stiniva antes dos barcos de excursão",
+            "Coma lagosta no Jastožera, por cima da água",
+            "Peça um copo do branco Vugava da ilha",
+            "Suba o Monte Hum para ver todo o arquipélago",
+            "Percorra a Gruta de Tito, acima do porto"
+          ],
+          "mooringTip": "De popa com ferro próprio na dársena interior de Komiža; a areia e as ervas agarram bem, embora o molhe exterior apanhe qualquer ondulação de sudoeste. Se a previsão der vento fresco de oeste ou sudoeste, motore as seis milhas para norte até Vis Town, na Baía de São Jorge, que fica resguardada de tudo isso."
+        },
+        "5": {
+          "shortDescription": "Duas grutas de manhã, depois vinte milhas para leste até Vela Luka, das baías mais seguras deste troço para passar a noite. Apanhe a Gruta Azul cedo, enquanto o sol ainda a ilumina.",
+          "description": "Ponha o despertador. A Gruta Azul, em Biševo, só se acende por volta das nove até ao meio-dia, quando o sol entra de esguelha sob a rocha e inunda a câmara de um azul eléctrico intenso. Amarra-se ao cais da concessão lá fora e espera-se a vez num bote licenciado, porque os botes particulares não entram. Meia hora depois, atravesse para Ravnik até à Gruta Verde, onde a luz do dia cai por um buraco no tecto e a água fica esmeralda; essa entra-se com o próprio bote, e costuma estar quase vazia. Ao início da tarde, vire para leste e some as dezoito milhas até Vela Luka, no extremo oeste de Korčula, um porto fundo com todos os serviços que fecha a passagem a tudo o que venha de norte ou de leste. Em terra, peça žrnovski makaruni, ainda enrolados à mão por aqui, e uma garrafa de Pošip das vinhas ali em cima, em Čara e Smokvica.",
+          "thingsToDo": [
+            "Meta-se na fila dos botes para a Gruta Azul antes das onze",
+            "Entre na Gruta Verde de Ravnik com o seu bote",
+            "Peça žrnovski makaruni numa konoba junto ao cais",
+            "Beba um Pošip cultivado ali em cima, em Čara",
+            "Passeie pela marginal de Vela Luka ao entardecer"
+          ],
+          "mooringTip": "Vela Luka recebe-o de popa com ferro próprio ao longo do extenso cais da vila, com água, electricidade e bomba de combustível no extremo oeste. A lama e a areia agarram lindamente e a baía está fechada a norte e a leste. Só um sul forte mete alguma ondulação lá dentro, e mesmo assim o pontão interior fica tranquilo."
+        },
+        "6": {
+          "shortDescription": "Catorze milhas até Lastovo, das ilhas mais isoladas por estas bandas. Agarre uma boia gratuita em Zaklopatica em troca de jantar em terra e fique acordado para um céu sem uma luz.",
+          "description": "Para sul de Vela Luka, uma travessia de catorze milhas deixa-o em Lastovo, que é mais ou menos o mais longe que se pode estar de tudo por aqui. A ilha inteira é um parque natural e, com quase nenhuma luz, o céu à noite é o mais escuro do país. Siga para Zaklopatica, uma baía mordida na costa norte com um ilhéu baixo atravessado à entrada a absorver a ondulação. Cada konoba em terra pendura umas quantas boias de graça, no entendimento de que se janta com eles, por isso agarre uma, vá de bote até terra e reserve mesa. A lagosta é o luxo; o pedido honesto é šporki makaruli, um guisado pesado de vaca e macarrão. Não há quase nada para fazer aqui, e é precisamente por isso que se vem. Muito depois de levantados os pratos, a Via Láctea continua pendurada sobre o topo do mastro. Se se levantar vento de sudeste, Skrivena Luka, ali na costa sul, aguenta com qualquer coisa.",
+          "thingsToDo": [
+            "Agarre uma boia de konoba e pague-a com o jantar",
+            "Peça os šporki makaruli, ou lagosta se andar em fundos",
+            "Vá de bote até ao ilhéu atravessado na entrada",
+            "Suba até às curiosas chaminés de Lastovo",
+            "Fique no convés para ver a Via Láctea"
+          ],
+          "mooringTip": "As boias das konobas de Zaklopatica não custam nada depois de reservar o jantar em terra, por isso trate disso com eles ao amarrar. Deixe o ferro arrumado, que as ervas marinhas agarram mal. A baía abriga-o de norte até oeste; se a previsão der sudeste acima de quinze knots, passe quatro milhas para sul, até Skrivena Luka."
+        },
+        "7": {
+          "shortDescription": "Para nordeste até Mljet, vinte e duas milhas, com Polače à espera no fundo de uma baía murada por colinas. Há ruínas romanas na margem e os lagos salgados ficam a curta caminhada terra adentro.",
+          "description": "A etapa de Mljet são vinte e duas milhas para nordeste, e guarda a melhor chegada de toda a viagem para o fim. Polače está tão metida no fundo da sua enseada, por trás de cristas de pinhal, que quase se está em cima dela antes de a baía abrir. Uma ruína romana do século IV fica mesmo na margem, perto o suficiente para amarrar ao lado; as muralhas e uma torre de canto ainda estão de pé, e podem percorrer-se de graça. Tudo o que fica a oeste daqui é parque nacional, por isso ou agarra uma boia verde do parque e acerta contas com o guarda na frente, o que também cobre a entrada da tripulação no parque, ou amarra de popa ao pontão da aldeia. Da água é meia hora a pé até ao Veliko Jezero, o maior dos dois lagos salgados da ilha, onde um pequeno barco do parque leva até a um mosteiro beneditino isolado no seu próprio ilhéu. Reserve a tarde inteira para os lagos e não a apresse.",
+          "thingsToDo": [
+            "Percorra a ruína romana do século IV, na margem",
+            "Apanhe o barco do parque até ao mosteiro de Santa Maria",
+            "Nade nos lagos salgados, mais frios do que o mar aberto",
+            "Dê a volta a pé ao trilho dos dois lagos",
+            "Acerte contas com o guarda por uma boia verde do parque"
+          ],
+          "mooringTip": "Polače funciona com boias pagas do parque nacional, e a taxa inclui a entrada da tripulação no parque; acerte contas com o guarda à chegada. É dos ancoradouros mais abrigados da costa sul, protegido de norte até sudeste. Alguns barcos podem também amarrar de popa com ferro próprio ao pontão da aldeia."
+        },
+        "8": {
+          "shortDescription": "Rumo a Dubrovnik, vinte e quatro milhas, amarrando na ACI Marina em Komolac, oito quilómetros rio acima em relação às muralhas. Visita-se o Porto Velho; nunca se dorme nele.",
+          "description": "Espere pelo Maestral, que numa manhã calma de Verão já sopra às dez para o levar as vinte e quatro milhas costa abaixo até Dubrovnik. Esqueça o porto velho sob as muralhas; é um postal da UNESCO e não serve de nada a uma tripulação, aberto a sul, cheio de botes de excursão e só de dia. Todos os barcos de charter ficam antes na ACI Marina Dubrovnik, em Komolac, oito quilómetros para o interior pela Rijeka Dubrovačka acima, onde há lazy lines, combustível e a gama completa de serviços. O autocarro 1A ou um táxi põe-no na Porta de Pile num quarto de hora, à entrada da Stradun. Percorrer as muralhas não é opcional: comece em Pile antes de o sol baixar e dê uns bons noventa minutos ao circuito. Depois, arranje jantar por uma das vielas de Prijeko e uma última bebida no Buža, o bar agarrado às rochas do lado de fora da muralha sul.",
+          "thingsToDo": [
+            "Percorra o circuito completo das muralhas antes do pôr do sol",
+            "Jante numa viela de Prijeko, ao lado da Stradun",
+            "Tome uma bebida no Buža, sobre as rochas do mar",
+            "Suba o Monte Srđ de teleférico",
+            "Espreite o Palácio do Reitor e o claustro franciscano"
+          ],
+          "mooringTip": "A ACI Marina Dubrovnik, em Komolac, é o único ancoradouro sensato para a noite; reserve com antecedência na época para lazy lines e serviços completos. Conte com trinta minutos porta a porta do pontão até à Porta de Pile de autocarro 1A ou de táxi. O Porto Velho é uma paragem de bote de dia e nada mais."
+        },
+        "9": {
+          "shortDescription": "Vinte milhas de volta pela costa sul até uma baía chamada Okuklje, logo a seguir ao limite do parque. Tem três konobas, nenhuma aldeia e talvez a noite mais tranquila da viagem.",
+          "description": "Dubrovnik para trás, o regresso são vinte milhas pelo lado sul de Mljet até Okuklje, escolhida precisamente por ser o anti-Dubrovnik. Sem aldeia, sem barcos de excursão, apenas três konobas de família e uma baía estreita com espaço para umas vinte quilhas. Fica fora dos limites do parque, por isso não há taxa, e cada konoba estende as suas próprias boias gratuitas para quem janta em terra. Agarre uma, vá até terra e ponha o seu nome numa mesa. O pedido certo é o risoto negro, tingido de preto com choco e o que o barco trouxe nessa manhã. Colinas íngremes fecham a baía por três lados, e o vento simplesmente pára ao pôr do sol por muito que se passe lá fora no canal. Passe a tarde na água ou no trilho do promontório, que abre uma vista para sul até Korčula. Não acontece nada depois de escurecer, e é exactamente por isso que se veio.",
+          "thingsToDo": [
+            "Agarre uma boia gratuita de konoba e reserve mesa",
+            "Peça risoto negro feito com o peixe do dia",
+            "Percorra o trilho do promontório pela vista até Korčula",
+            "Mergulhe do painel de popa direto para água lisa",
+            "Recolha-se cedo, sem vila que o mantenha acordado"
+          ],
+          "mooringTip": "As boias das konobas de Okuklje são gratuitas com reserva de jantar, por isso trate disso ao amarrar. Se estiverem todas ocupadas pode fundear, mas as ervas marinhas dão um fundeadouro irregular. A baía é acolhedora de norte, leste e sul; só um noroeste forte mete alguma ondulação até à entrada."
+        },
+        "10": {
+          "shortDescription": "O Canal de Pelješac encaminha-o para Korčula Town: deixe as muralhas para o entardecer, quando as multidões dos ferries já partiram e a pedra fica dourada.",
+          "description": "Canal de Pelješac acima por quinze milhas, e Korčula Town ergue-se à proa, um punhado de telhados de terracota numa língua de terra amuralhada com uma única torre sineira a dominar tudo. A ACI Marina Korčula, no lado leste, tem tudo, lazy lines e o resto. O cais da vila, do lado oeste, recebe alguns barcos de popa com ferro próprio e fica mais perto das portas, mas está aberto a oeste e começa a balançar assim que o Maestral encontra o canal. O centro histórico é pequeno o bastante para se atravessar em dez minutos, mas as suas ruelas em espinha de peixe, cortadas na diagonal para apanhar a brisa do mar e travar o vento, compensam uma volta mais demorada. A Catedral de São Marcos e a casa de Marco Polo, cuja ligação ao homem é ténue mas o edifício genuinamente do século XIV, são os dois pontos a ver. Percorra-a ao entardecer, depois de os ferries do dia terem levado as multidões para Split. Se lhe apetecer uma incursão a vinho, Lumbarda e o seu branco Grk local ficam a três milhas para sudeste.",
+          "thingsToDo": [
+            "Percorra o centro histórico ao entardecer, depois dos ferries",
+            "Suba à torre sineira da Catedral de São Marcos",
+            "Espreite a duvidosa casa de Marco Polo",
+            "Prove o branco Grk ali perto, em Lumbarda",
+            "Assista a uma dança de espadas Moreška, se houver"
+          ],
+          "mooringTip": "Com qualquer tempo, escolha a ACI Marina Korčula, no lado leste — lazy lines, serviços completos. O cais da vila, do lado oeste, fica mais perto das portas mas abre para oeste e começa a balançar nas tardes do início do Verão. Se o canal se agitar, refugie-se três milhas para sudeste, na baía de Lumbarda."
+        },
+        "11": {
+          "shortDescription": "Vinte e três milhas até Jelsa, no lado norte de Hvar, tudo o que Hvar Town não é. As aldeias da alfazema, no interior, ficam a uma caminhada fácil ou a um curto passeio de bicicleta.",
+          "description": "De volta ao lado calmo de Hvar, vinte e três milhas para noroeste até Jelsa, que fica tão longe em espírito como em milhas da vila da outra costa. É a terceira povoação da ilha, mais pequena e mais sossegada, à volta de uma baía larga cujo cais da vila o recebe de popa com ferro próprio sobre bom fundo de lama e areia. Há também uma pequena marina no lado leste, para quem quer lazy lines e electricidade de terra. Jelsa é o coração agrícola da ilha, e a alfazema do interior ainda dá uma verdadeira colheita em Julho. Nas ruelas de trás, as konobas servem o branco local Bogdanjuša e cortam o queijo Faros. Com a tarde à sua disposição, vá a pé ou apanhe uma bicicleta emprestada até Vrboska, três milhas ao longo da costa, onde os pequenos canais e as pontes pedonais lhe valeram o rótulo de Veneza em miniatura, e esteja de volta a uma mesa de Jelsa ao jantar.",
+          "thingsToDo": [
+            "Pedale até Vrboska pelo centro entrecortado de canais",
+            "Peça branco Bogdanjuša numa konoba das ruelas de trás",
+            "Suba à torre de vigia Tor, acima da vila",
+            "Caminhe pela Planície de Stari Grad",
+            "Leve óleo de alfazema de Hvar enquanto é época"
+          ],
+          "mooringTip": "De popa no cais da vila de Jelsa com ferro próprio, taxa baixa, água e electricidade ao longo do troço central. A baía protege-o bem de sul e sudoeste mas fica aberta a norte, raro no Verão salvo uma Bora tardia. A pequena marina no lado leste é a alternativa para qualquer tempo."
+        },
+        "12": {
+          "shortDescription": "Dez milhas pelo Canal de Brač até Lučice, uma fila de enseadas desertas ao lado de Pučišća. Dois restaurantes de praia põem as boias, e a água é a mais transparente de toda a viagem.",
+          "description": "Um saltinho curto para norte, dez milhas pelo Canal de Brač até à costa sul da ilha e à fila de pequenas enseadas de Lučice, mesmo a leste de Pučišća. Não vive aqui ninguém. O promontório é calcário branco nu e pinheiro, e os únicos telhados são de um par de restaurantes de praia sazonais que põem boias gratuitas para quem come com eles. Agarre uma na enseada mais funda e vá logo para a água. A água é a razão para se dar ao trabalho: a pedra branca de Brač, a mesma que cortaram para o Palácio de Diocleciano, embranquece o fundo e estica a visibilidade até vinte metros num dia calmo. As duas cozinhas mantêm tudo simples, peixe grelhado e um jarro de Plavac Mali. Se quiser uma hora fora do barco, motore o bote para oeste até Pučišća para ver os canteiros a trabalhar nos seus estaleiros e a velha escola de escultura a formar aprendizes. Chame-lhe a calma antes de amanhã apontar para casa.",
+          "thingsToDo": [
+            "Agarre uma boia de restaurante na enseada do meio",
+            "Faça snorkel sobre o fundo calcário claro em água cristalina",
+            "Coma peixe grelhado e Plavac Mali na praia",
+            "Vá de bote a Pučišća ver a escola de escultura",
+            "Reme junto ao promontório deserto ao raiar do dia"
+          ],
+          "mooringTip": "As boias dos restaurantes de Lučice são gratuitas assim que se comprometer com o jantar em terra, por isso avise-os à chegada. Sem boias livres, fundeie entre oito e doze metros sobre areia e ervas. As enseadas abrigam de norte e leste mas ficam abertas a sul; num sul fresco, o porto de Pučišća, a uma milha para oeste, está completamente fechado."
+        },
+        "13": {
+          "shortDescription": "Quinze milhas até Maslinica, no extremo oeste de Šolta e o único porto natural genuíno da ilha, resguardado por um punhado de ilhéus. Uma última noite calma antes da entrega de sábado.",
+          "description": "Última noite a bordo. Quinze milhas ao longo do lado de baixo de Brač e pelo Canal de Šolta trazem-no a Maslinica, um porto em S profundo no extremo oeste de Šolta e o único porto natural a sério da ilha. As casas cercam a metade interior da baía; a metade exterior está salpicada de sete ilhéus, e o maior deles, Stipanska, fica exactamente onde é preciso para travar a ondulação do mar aberto. Escolha entre dois lugares. O Martinis Marchi, no lado sul, dá-lhe lazy lines e serviços completos, construído à volta de um castelo barroco do século XVIII que hoje funciona como hotel e restaurante. Em frente, o cais da aldeia recebe-o de popa com ferro próprio por menos dinheiro e bastante mais animação. Šolta é a mais próxima destas ilhas de Split e ainda uma das mais adormecidas; as konobas na praça vão gastando o azeite local e o tinto Dobričić da própria ilha. A viagem de regresso de amanhã é curta, por isso não há pressa nenhuma esta noite.",
+          "thingsToDo": [
+            "Passeie pelo pátio do castelo Martinis Marchi",
+            "Vá de bote até Stipanska pelo trilho de mergulhos",
+            "Prove o azeite Šoltansko numa konoba da praça",
+            "Experimente o Dobričić, a casta tinta da ilha",
+            "Tome um copo ao pôr do sol num ilhéu a oeste"
+          ],
+          "mooringTip": "A Marina Martinis Marchi, no lado sul, é a opção para qualquer tempo, com lazy lines e serviços completos; reserve com antecedência para Julho e Agosto. O cais da aldeia em frente recebe-o de popa com ferro próprio por uma taxa baixa, aberto apenas ao raro norte de Verão. Os ilhéus à entrada fecham a baía de sul até noroeste."
+        },
+        "14": {
+          "shortDescription": "Doze milhas para leste até à base para a entrega de sábado, com tempo de sobra para uma última volta ao Palácio de Diocleciano antes do aeroporto.",
+          "description": "Dia de entrega, e o mais curto de todos, doze milhas para leste até ao conjunto de bases de Split. A rotina de sábado é a mesma de uma ponta à outra da costa croata: barco atracado, tanques despejados e atestados, conveses lavados a mangueira, inventário conferido e o skipper à espera da vistoria de saída entre as oito e as nove. A maioria das bases de Split fica na Marina Kaštela, na ACI Marina Split ou na ACI Trogir, e a aproximação a qualquer uma é simples com qualquer visibilidade. Largue de Maslinica ao raiar do dia, antes de o Maestral acordar e enquanto o canal ainda está liso como vidro, e chegará com tempo de sobra. Se a papelada se despachar cedo, percorra o Palácio de Diocleciano de uma ponta à outra uma última vez e depois estique um almoço num café da Riva antes de o carro chegar para o aeroporto. Essa refeição final demorada é o mais parecido que um charter dálmata tem com uma verdadeira despedida.",
+          "thingsToDo": [
+            "Ateste o combustível antes da vistoria das nove",
+            "Percorra o Palácio de Diocleciano uma última vez",
+            "Nade em Bačvice, mesmo a leste do centro",
+            "Leve azeite Šoltansko no mercado do Pazar",
+            "Estique um almoço demorado na Riva"
+          ],
+          "mooringTip": "Regresse à base que o seu contrato indicar, Marina Kaštela, ACI Marina Split ou ACI Trogir; cada uma o amarra de popa ou de costado conforme o gestor da base decidir. A janela de entrega é normalmente das oito às nove de sábado, por isso, se o contrato exigir a chegada na véspera, esteja atracado ao final da tarde de sexta-feira."
+        }
+      }
+    },
+    "split-kornati-krka-route": {
+      "metaTitle": "Kornati e Krka de Split, 7 dias | Boat4You",
+      "metaDesc": "Sete dias de Split ao Parque Nacional Kornati e Krka acima até Skradin, passando por Primošten e regresso por Rogoznica. Distâncias e amarração.",
+      "days": {
+        "1": {
+          "shortDescription": "Um saltinho curto de 8 milhas para oeste até aos baixios arenosos de Krknjaši, entre as ilhas Drvenik, uma primeira noite fácil enquanto a tripulação se instala.",
+          "description": "Sair de Split numa tarde de sábado exige paciência. O canal de acesso ao largo da ACI Marina e da Riva da cidade enche de barcos a partir, por isso o plano do primeiro dia é modesto: apontar a oeste e deixar a multidão dispersar-se atrás de si. O ancoradouro fica no estreito de água pouco funda que separa Veli Drvenik de Mali Drvenik, um tanque de fundo arenoso entre três e seis metros que fica de um turquesa intenso mal o sol nasce. O fundeadouro é de confiança. Um trio de tavernas em Veli Drvenik dá-lhe uma boia gratuita se reservar mesa, mas pode facilmente largar o ferro na areia e ir de bote comer peixe grelhado. Há um trilho à volta do promontório e uma pequena capela do outro lado, se alguém quiser esticar as pernas. Costumamos recolher-nos cedo por aqui. A etapa de amanhã, para norte, é mais longa.",
+          "thingsToDo": [
+            "Fundeie nos baixios de areia entre 4 e 6 m",
+            "Vá de bote a terra comer peixe grelhado em Veli Drvenik",
+            "Percorra o trilho do promontório até à capela",
+            "Mergulhe da popa antes de chegarem os barcos de excursão",
+            "Veja o sol descer sobre o Adriático aberto"
+          ],
+          "mooringTip": "Largue o ferro entre quatro e seis metros sobre areia e crava com força; as boias dos restaurantes não custam nada se comer em terra. Só o oeste e o noroeste conseguem entrar, por isso, com um oeste fresco previsto, siga as duas milhas até à ACI Marina Trogir para passar a noite."
+        },
+        "2": {
+          "shortDescription": "Catorze milhas costa acima até Primošten, um centro histórico de terracota na sua própria península estrangulada, com as vinhas de Babić a subir as encostas por trás.",
+          "description": "Avista-se Primošten de bem longe: um punhado de telhados de terracota numa quase-ilha, ligada ao continente pelo mais fino istmo de terra, com a igreja de São Jorge a coroar o topo. O centro histórico continua habitado, sem qualquer verniz de resort, e as konobas metidas nas ruelas de trás cozinham comida dálmata honesta. Amarrar é a única coisa a planear. Os barcos de dia podem ficar no cais da vila, mas ninguém passa a noite ali; os lugares para a noite são na Marina Kremik, umas duas milhas para sul, e uma shuttle traz-nos de volta ao centro para o jantar. Por trás da vila, as encostas carregam os socalcos de pedra seca de Bucavac, muradas à mão ao longo de gerações para abrigar a vinha de Babić. Essa casta dá um tinto escuro e estruturado que vale a pena pedir em vez dos brancos fáceis da costa. Arranje um lugar no molhe, copo na mão, e veja a luz apagar-se na água.",
+          "thingsToDo": [
+            "Suba à igreja de São Jorge no cimo",
+            "Peça um copo de Babić no cais",
+            "Percorra os socalcos de vinha de Bucavac, feitos à mão",
+            "Coma brudet numa konoba das ruelas de trás",
+            "Apanhe a shuttle de Kremik para vir jantar"
+          ],
+          "mooringTip": "Kremik é a marina com que pode contar para a noite, duas milhas costa abaixo, com lazy lines, serviços completos e uma shuttle para Primošten. Use o cais da vila só como poiso de dia; está virado a oeste franco, e convém sair de lá antes de a frota de pesca voltar ao entardecer."
+        },
+        "3": {
+          "shortDescription": "Vinte milhas mar adentro até ao Parque Nacional de Kornati e ao seu labirinto de ilhas nuas e desertas, amarrando em Piškera, a única marina que o parque permite lá dentro.",
+          "description": "Kornati não é como nenhum outro sítio onde se navega na Croácia. Oitenta e nove ilhas, nem um único residente permanente, cristas baixas de pedra penteadas por muros secos e a cair a direito para água funda. A pesca é proibida, por isso o mar lá debaixo continua cheio de vida. O lugar da noite é a ACI Marina Piškera, no ilhéu de Panitula Vela e a única marina dentro dos limites do parque. Tem lazy lines, água, electricidade e um restaurante na rocha acima dos pontões. Trate do bilhete do parque antes de chegar, porque reservar online sai mais barato do que pagar no quiosque. A tarde é sua: vá de bote até à água limpa ao largo de Lavsa para fazer snorkel, ou desça para sul até onde as falésias de Mana e Kornat mergulham a direito no mar. É um sítio austero e sossegado, e o silêncio depois do pôr do sol é o que interessa.",
+          "thingsToDo": [
+            "Reserve primeiro o bilhete do parque de Kornati online",
+            "Faça snorkel no canal em direção ao ilhéu de Lavsa",
+            "Navegue sob as falésias sul de Mana",
+            "Jante no restaurante da marina no alto da falésia",
+            "Trepe a crista cársica em Panitula"
+          ],
+          "mooringTip": "Todos os lugares em Piškera têm lazy line; em Julho e Agosto reserve com antecedência, porque enche. Fundear dentro do parque durante a noite está limitado a cinco baías (Lavsa, Lojena, Vrulje, Statival e Stiniva), e as konobas de lá costumam deixar-lhe uma boia gratuita se jantar com eles. Os barcos dos guardas passam por lá, por isso não fuja à taxa."
+        },
+        "4": {
+          "shortDescription": "Quinze milhas para leste, saindo de Kornati até Zlarin, uma ilha verde sem carros, com uma única aldeia à volta do porto e sete séculos de comércio de coral vermelho.",
+          "description": "Deixe Kornati pela popa e siga para leste para as ilhas de Šibenik, onde Zlarin faz um contraste suave com o carso bruto que fica para trás. Uma aldeia, sem carros, ruelas que sobem terra adentro sob ciprestes e pinheiros. O coral atravessa todo o passado da ilha: os mergulhadores daqui trabalharam os bancos vermelhos ao largo durante quase setecentos anos, e a aldeia mantém um museu do coral onde as linhas com pesos e as armações de ferro mostram como se pescavam os bancos. Algumas oficinas ainda fazem joalharia de coral à mão. Amarra-se de popa com ferro próprio ao cais, com água e electricidade nos lugares interiores por uma taxa baixa. À tarde, suba por um dos trilhos até às capelinhas na crista, ou nade a partir das rochas planas ao longo da costa sul. Depois do jantar, o molhe é o mais animado que Zlarin consegue ser, e isso agrada à maioria das tripulações.",
+          "thingsToDo": [
+            "Visite o museu do coral vermelho, na praça",
+            "Percorra os trilhos da crista sob ciprestes e pinheiros",
+            "Nade a partir das rochas da costa sul",
+            "Compre coral trabalhado à mão numa oficina da aldeia",
+            "Jante e fique no molhe ao entardecer"
+          ],
+          "mooringTip": "Amarre de popa ao cais da aldeia de Zlarin com ferro próprio; água e electricidade chegam a meio do cais por uma taxa baixa. Fica abrigado de tudo o que venha de oeste, noroeste ou norte, mas um sirocco de sudeste entra em cheio. Se a previsão der sudeste acima de 15 knots, são quatro milhas para norte até às águas abrigadas ao largo de Šibenik, seja a ACI Marina Mandalina ou o cais da cidade."
+        },
+        "5": {
+          "shortDescription": "Doze milhas pelo estuário do Krka acima, passando Šibenik e o desfiladeiro de Santo António, até Skradin, porta de entrada para as cascatas do Parque Nacional de Krka.",
+          "description": "Esta é uma das etapas mais estranhas e melhores de toda a costa. Doze dessas milhas fazem-se por terra adentro. Passa-se rente às velhas muralhas de Šibenik, enfia-se o corte na rocha do canal de Santo António sob a sua ponte rodoviária, atravessa-se uma faixa de água salobra e sai-se para o poço de água doce, fundo e sombreado por colinas, onde fica a ACI Marina Skradin. Qualquer barco de charter passa por baixo da ponte com folga de sobra. Skradin é a porta do Parque Nacional de Krka, e um barco-shuttle do parque sobe a corrente da marina até Skradinski Buk, as cascatas em socalcos que tornaram o rio famoso. Paga-se no quiosque do paredão e o bilhete do barco está incluído; durante a época sai um mais ou menos a cada meia hora. As regras de 2021 puseram fim aos banhos mesmo por baixo das quedas, mas o passadiço contorna as duas margens e a subida até ao miradouro do topo compensa. De volta à vila, peça o risoto de Skradin, cozinhado devagar com açafrão durante horas, e uma garrafa de tinto local.",
+          "thingsToDo": [
+            "Apanhe o barco do parque até Skradinski Buk",
+            "Percorra o passadiço nas duas margens do rio",
+            "Suba ao miradouro acima das quedas",
+            "Peça o risoto de açafrão de Skradin, cozinhado devagar",
+            "Passeie pelas ruelas medievais atrás da marina"
+          ],
+          "mooringTip": "Todos os lugares da ACI Marina Skradin têm lazy line, o estaleiro presta serviços completos e há combustível à entrada, no caminho. O canal balizado do rio tem profundidade suficiente para qualquer calado de charter; conte com cerca de uma hora e meia à velocidade de casco desde a foz do rio, em Šibenik. O parque não deixa fundear em lado nenhum ao longo do seu troço de rio, por isso é a marina ou nada."
+        },
+        "6": {
+          "shortDescription": "Vinte milhas a refazer o rio, depois a costa aberta rumo a Rogoznica, com o seu estranho lago salgado Olho do Dragão junto à considerável Marina Frapa.",
+          "description": "Refaça o rio e depois arribe para sudeste, costa aberta abaixo, até Rogoznica, uma vila baixa de península mais ou menos a meio caminho entre Šibenik e Split. O que torna o sítio curioso é o Olho do Dragão: um poço de água salgada afundado bem no carso, mesmo na ponta da península, sem qualquer saída à vista. Uma passagem escondida por baixo da superfície deixa a maré enchê-lo e esvaziá-lo duas vezes por dia. A sua superfície fica abaixo do nível do mar aberto, dá para percorrer o rebordo de calcário em cerca de vinte minutos a partir da vila, e a cor da água vai mudando à medida que a luz se move. No lado sul, a Marina Frapa conta-se entre os maiores estaleiros deste troço da Dalmácia, com lazy lines, cais de combustível, um hotel e uma fila de restaurantes à beira-mar. Há espaço no cais norte para barcos mais pequenos amarrarem de popa, mas apanha o noroeste, por isso, na época, a maioria dos skippers vai simplesmente para a marina e fica-se por aí. A vila em si é pequena: uma frota de pesca, um punhado de konobas, um bairro antigo na ponta.",
+          "thingsToDo": [
+            "Caminhe até ao lago Olho do Dragão",
+            "Espreite lá de cima, do rebordo cársico",
+            "Coma brudet numa konoba da península",
+            "Passeie pelo bairro antigo na ponta",
+            "Vá de bote até ao ilhéu de Smokvica para um mergulho"
+          ],
+          "mooringTip": "Com qualquer tempo a resposta é a Marina Frapa, no lado sul: lazy lines nos lugares, serviços completos, combustível abastecido mesmo à entrada. A alternativa do cais norte implica largar o próprio ferro e amarrar de popa por uma taxa baixa, mas nada a protege do noroeste, por isso passe para a marina assim que se anuncie um vento fresco."
+        },
+        "7": {
+          "shortDescription": "A viagem de regresso são vinte milhas para leste-sudeste até à base, ACI Marina Split ou a Riva, com o objetivo de estar atracado para a entrega das 09:00 de sábado.",
+          "description": "Vinte milhas para leste-sudeste põem-no de volta em Split, e é a entrega de sábado que marca o relógio. Normalmente esperam-no atracado até às nove: tanques atestados, casas de banho despejadas, conveses lavados e cada linha do inventário conferida. A maioria dos charters de Split volta à ACI Marina Split, junto ao Palácio de Diocleciano, ou a uma das bases para os lados de Kaštela e Trogir, e a entrada é simples com qualquer luz. A caminho de leste passa-se pelo lado sul de Čiovo, e as suas pequenas baías são boas para um último mergulho; Slatine ou Saldun são as que a maioria das tripulações escolhe. Depois de o barco arrumado e a papelada assinada, o palácio fica a poucos minutos a pé e o aeroporto a cerca de meia hora. A maioria das tripulações termina uma semana destas com um almoço demorado na Riva.",
+          "thingsToDo": [
+            "Nade uma última vez no sul de Čiovo",
+            "Ateste e despeje os tanques antes do check-out",
+            "Percorra o Palácio de Diocleciano antes do transfer",
+            "Refresque-se na praia de Bačvice, em Split",
+            "Faça um almoço demorado na Riva"
+          ],
+          "mooringTip": "Traga o barco de volta à base que o seu contrato indicar, seja a marina ACI de Split, Kaštela ou Trogir, e ocupe o lugar que o gestor da base lhe der. A entrega decorre normalmente das oito às nove de sábado de manhã; quando o contrato pede regresso na noite de sexta, esteja amarrado por volta das cinco da tarde anterior."
+        }
+      }
+    },
+    "split-vis-korcula-hvar-route": {
+      "metaTitle": "Rota Split, Vis e Hvar, 7 dias | Boat4You",
+      "metaDesc": "Sete dias de Split por Šolta, Vis, a Gruta Azul, Korčula, as ilhas Pakleni, Stari Grad e Brač, com distâncias e dicas de amarração por etapa.",
+      "days": {
+        "1": {
+          "shortDescription": "Um primeiro saltinho curto de 15 milhas para sudoeste deixa-o em Maslinica, a enseada sossegada no extremo oeste de Šolta, resguardada por trás de sete pequenos ilhéus.",
+          "description": "Quinze milhas fora de Split e já está fundeado em Maslinica, o que faz dela uma forma indulgente de começar a semana. Šolta fica mais perto do continente do que qualquer outra ilha deste grupo, e no entanto mantém-se fora do circuito das excursões de um dia, por isso o ritmo é mais lento do que seria de esperar tão perto de uma cidade. A baía curva para dentro das colinas e um punhado de pequenos ilhéus à entrada tira a força a qualquer ondulação de oeste. Tem duas opções para a noite. O Martinis Marchi, no lado sul, oferece lazy lines a sério e serviços completos junto ao seu castelo barroco restaurado; o cais da aldeia em frente recebe-o de popa com ferro próprio por uma taxa baixa. Costumamos ir a pé até aos ilhéus a oeste antes do jantar, mergulhar a partir das rochas e deixar a tripulação instalar-se cedo. Amanhã é o dia comprido.",
+          "thingsToDo": [
+            "Mergulhe a partir das rochas do ilhéu de Polebrnjak",
+            "Peça o tinto Dobričić numa konoba da aldeia",
+            "Visite o pátio do castelo Martinis Marchi",
+            "Prove o azeite Šoltansko na aldeia",
+            "Vá de bote até Stipanska pelo trilho de mergulhos"
+          ],
+          "mooringTip": "O Martinis Marchi tem lazy lines e serviços completos no lado sul; reserve para Julho e Agosto. O cais da aldeia, a norte, é mais barato, de popa com ferro próprio, e a baía abriga-o de tudo salvo de um raro vento de norte."
+        },
+        "2": {
+          "shortDescription": "Vinte e quatro milhas de mar aberto para sul até Komiža, uma vila piscatória ativa no lado mais distante de Vis, com o mais belo pôr do sol da costa.",
+          "description": "É o troço de mar aberto mais longo da semana, por isso costumamos largar amarras cedo. A derrota corre para sul por baixo de Brač com o Canal de Hvar a alargar-se para bombordo, depois mar fora até Vis, a mais afastada das ilhas croatas habitadas. Esteve fechada a visitantes como zona militar até 1989, e é por isso que aqui não se encontra sprawl de resorts. Komiža enrola-se à volta de uma pequena baía na costa oeste, com a sua frota de pesca ainda amarrada do lado leste. Amarre de popa na dársena interior com ferro próprio; o fundeadouro em areia e ervas costuma ser firme, embora o molhe exterior não seja sítio para passar a noite quando o sudoeste se levanta. O jantar é boga grelhada e uma garrafa de Vugava, o branco local. Depois o pôr do sol, a cair no mar aberto sem nada a oeste de si até à Itália.",
+          "thingsToDo": [
+            "Passeie pela frota de pesca no cais leste",
+            "Prove boga grelhada com um copo de Vugava",
+            "Visite o Museu dos Pescadores na torre veneziana",
+            "Suba o Monte Hum pela vista de 360 graus",
+            "Veja o pôr do sol do molhe do porto"
+          ],
+          "mooringTip": "Amarre de popa com ferro próprio dentro da dársena interior; o fundo é areia e ervas e agarra bem na maior parte dos casos. Se a previsão der sudoeste acima de 15 knots, siga as seis milhas até Vis Town, na Baía de São Jorge, que está bem fechada."
+        },
+        "3": {
+          "shortDescription": "Luz na gruta ao amanhecer, um mergulho em Budihovac, depois uma tarde tranquila rumo a leste que termina no fundo da baía de Vela Luka.",
+          "description": "O horário manda neste dia. A gruta de Biševo só brilha naquele azul improvável quando o sol está no sítio certo, mais ou menos entre as nove e as onze da manhã, por isso planeie estar à espera à entrada cedo. Amarre ao pequeno cais da concessão lá fora, pague a taxa no quiosque e entre num dos botes oficiais; o seu próprio bote fica onde está. Quarenta minutos chegam. Dali descemos até Budihovac, ao largo da costa sul de Vis, um par de ilhéus com água tão limpa que parece encenada, e fundeamos entre seis e oito metros de areia clara para um mergulho e almoço a bordo. A tarde são dezoito milhas para leste até Vela Luka, uma enseada longa e abrigada no extremo oeste de Korčula com combustível, água e tudo o que precisa no cais. Reserve mesa para žrnovski makaruni, a massa que aqui enrolam à mão.",
+          "thingsToDo": [
+            "Entre na Gruta Azul de bote",
+            "Fundeie e mergulhe junto aos ilhéus gémeos de Budihovac",
+            "Peça žrnovski makaruni numa konoba de Vela Luka",
+            "Passeie pela marginal de Vela Luka ao entardecer"
+          ],
+          "mooringTip": "Vela Luka dá-lhe um longo cais da vila, de popa com ferro próprio, com água, electricidade e um posto de combustível no extremo oeste e um fundeadouro que raramente larga. Está bem fechada a norte e a leste; só um sul forte empurra alguma ondulação lá para dentro."
+        },
+        "4": {
+          "shortDescription": "Trinta milhas para leste até às ilhas Pakleni e Palmižana, a única marina do arquipélago e a porta das traseiras de Hvar Town.",
+          "description": "A travessia mais longa da semana, trinta milhas para leste-nordeste, e compensa estar fora do cais ao raiar do dia. O objetivo é cruzar o Canal de Korčula antes de o Maestral da tarde entrar por volta das duas, embora, quando chega, se instale bem de través e o leve na última etapa até ao grupo Pakleni a bom ritmo. Palmižana fica no lado leste de Sv Klement, o maior destes ilhéus e o único com marina, por isso os lugares com lazy line esgotam depressa no pino do Verão. A baía principal agarra entre cinco e dez metros mas balança assim que o vento se enfia à tarde; se preferir evitá-lo, as enseadas do lado sul, como Vinogradišće, ficam mais sossegadas com um cabo passado para terra. Em terra, a família Meneghello mantém aqui um jardim botânico desde 1906. O jantar é numa das konobas à volta da baía, e há ânforas romanas ao largo da ponta oeste a pouca profundidade, dá para fazer snorkel.",
+          "thingsToDo": [
+            "Faça snorkel nas ânforas romanas ao largo da costa oeste",
+            "Passeie pelo jardim botânico Meneghello, de 1906",
+            "Fundeie com um cabo para terra na enseada de Vinogradišće",
+            "Apanhe o táxi-barco para Hvar Town para jantar"
+          ],
+          "mooringTip": "Reserve os lugares com lazy line da ACI em Palmižana online com bastante antecedência para Julho e Agosto. Se estiver cheia, ou se o sudoeste da tarde estiver a crescer, meta-se em Vinogradišće, no lado sul, e passe um cabo para terra em vez de balançar na baía principal."
+        },
+        "5": {
+          "shortDescription": "Contorne o cabo norte de Hvar e deslize pela longa enseada lisa até Stari Grad, onde campos plantados por colonos gregos ainda ladeiam a costa.",
+          "description": "Umas suaves catorze milhas hoje, curvando no sentido dos ponteiros do relógio à volta do cabo oeste de Hvar e para dentro da enseada funda que abriga Stari Grad. Os gregos fundaram Pharos aqui em 384 a.C., e a sua malha de ruas ainda molda o centro histórico. Por trás da vila estende-se a Planície de Stari Grad, sítio da UNESCO onde os limites dos campos traçados por esses mesmos colonos são cultivados ainda hoje, mais de dois mil anos depois. Amarrar é fácil. O cais da vila, ao longo da costa oeste, recebe-o de popa com ferro próprio por uma taxa modesta, e há uma pequena marina da ACI do lado leste se quiser electricidade e cabos com qualquer tempo. Vá a pé até ao Tvrdalj do poeta Hektorović, uma casa de pedra fortificada à volta do seu próprio viveiro de peixes. À tarde alugamos bicicletas e pedalamos pelos velhos campos gregos; um almoço de peka numa konoba simples vale as três horas de antecedência que pedem.",
+          "thingsToDo": [
+            "Pedale pela malha de campos gregos da Planície de Stari Grad",
+            "Visite o Castelo Tvrdalj e o seu viveiro de peixes",
+            "Percorra a malha grega de ruas do centro histórico",
+            "Reserve um almoço de peka numa konoba simples"
+          ],
+          "mooringTip": "O cais da vila, a oeste, é de popa com ferro próprio, com água e electricidade no troço central; a marina da ACI em frente é a alternativa para qualquer tempo. A enseada é funda e com feitio de fiorde, por isso mantém-se calma para qualquer lado que o vento sopre."
+        },
+        "6": {
+          "shortDescription": "Umas doze milhas para norte pelo Canal de Brač até Milna, o porto mais abrigado da ilha e um belo sítio para peka.",
+          "description": "Doze milhas a atravessar o Canal de Brač trazem-no a Milna, uma enseada estreita talhada no lado oeste da ilha que abriga barcos desde os tempos venezianos. Vai avistar a velha igreja paroquial no cais interior muito antes de estar atracado. Amarre de popa no cais da vila, lá dentro, com ferro próprio, com água e electricidade ao longo do troço central; a metade exterior da baía é fundeadouro livre entre seis e dez metros de areia, com um cabo às rochas se a brisa da tarde entrar. Duas coisas deram nome a Brač: a pedra branca, ainda cortada em Pučišća costa acima e levada há muito para o Palácio de Diocleciano, e o borrego feito devagar sob a peka. Se lhe apetecer peka esta noite, encomende-a assim que amarrar; a espera habitual é de três horas. Mais tarde, vá a pé até à igrejinha no promontório mesmo a norte do porto, pela vista de volta sobre os barcos.",
+          "thingsToDo": [
+            "Encomende borrego na peka à chegada",
+            "Caminhe até à igreja do promontório, a norte do porto",
+            "Veja a igreja paroquial do século XVII, no cais",
+            "Vá de bote a Bobovišća para um mergulho ao pôr do sol"
+          ],
+          "mooringTip": "Amarre de popa no cais interior da vila com ferro próprio por uma taxa baixa, água e electricidade a meio. A baía exterior é fundeadouro livre com um cabo às rochas; o cais mantém-se confortável quando o Maestral aperta, e Bobovišća, três milhas a norte, é o refúgio para mau tempo."
+        },
+        "7": {
+          "shortDescription": "Umas últimas quinze milhas a atravessar o canal até Split para a entrega de sábado, com tempo de sobra para o Palácio de Diocleciano.",
+          "description": "A viagem de regresso são quinze milhas para leste-nordeste pelo Canal de Split aberto. A maioria dos charters termina num sábado de manhã, e a base tem uma janela apertada: atracado até às nove, e antes da vistoria das oito às nove convém ter o combustível atestado, os tanques de retenção despejados, os conveses lavados e o inventário conferido contra a folha, com alguém a bordo para fazer a entrega. Consoante o seu contrato, vai rumar à ACI Marina Split, à Marina Kaštela ou à ACI Trogir; a aproximação a qualquer uma é clara com qualquer luz. O Palácio fica a cinco minutos a pé dos lugares da ACI; o aeroporto a vinte e cinco de carro. Se o tempo permitir, feche a semana como deve ser. Passe uma hora nas caves do Palácio e em cima, no Peristilo, ou segure uma mesa na Riva e veja os ferries a ir e vir. Sete dias, três das melhores ilhas da Dalmácia, e nem uma travessia a semana toda que tenha parecido um sacrifício.",
+          "thingsToDo": [
+            "Despeje os tanques e ateste o combustível antes da vistoria",
+            "Percorra o Palácio de Diocleciano uma última vez",
+            "Suba à torre sineira de São Domnius pela panorâmica",
+            "Dê um último mergulho na praia de Bačvice",
+            "Demore-se no almoço na Riva de Split"
+          ],
+          "mooringTip": "Regresse à base que o seu contrato indicar, ACI Marina Split, Marina Kaštela ou ACI Trogir, e amarre conforme o gestor da base determinar. A janela de vistoria de sábado é das oito às nove; se a papelada pedir regresso na véspera, procure estar de volta por volta das cinco de sexta-feira."
+        }
+      }
+    },
+    "sukosan-kornati-hvar-korcula-vis-skradin-14days-route": {
+      "metaTitle": "Volta Kornati–Vis à vela, 14 dias | Boat4You",
+      "metaDesc": "Duas semanas à vela de Sukošan pelos Kornati, Hvar, Korčula, Vis e Krka acima até Skradin. Fundeadouros, konobas e dicas de amarração honestas.",
+      "days": {
+        "1": {
+          "shortDescription": "Uma longa etapa de abertura de cerca de 25 milhas até Žut, a maior das ilhas exteriores de Kornati, com um punhado de konobas sazonais.",
+          "description": "Não há aquecimento suave nesta rota. Da Marina Dalmacija, a primeira etapa são uns bons 25 milhas para sul, por isso costumamos largar amarras pelas nove e aproveitar a manhã calma antes de a brisa da tarde entrar. Žut fica mesmo a leste de Kornat, tudo cristas cinzentas nuas e muros de pedra seca, sem um único residente todo o ano. A recompensa é o espaço. Baías como Hiljača e Bizikovica abrem-se uma atrás da outra, e as konobas daqui têm as suas próprias boias, por isso uma mesa em terra vem com uma noite na amarração. Fundeie sobre areia clara e verá o fundo a dez metros. O jantar é o que o barco trouxe — peixe grelhado, um jarro de branco da casa, o cheiro a salva selvagem a vir da colina ao cair da luz.",
+          "thingsToDo": [
+            "Fundeie sobre areia na baía de Hiljača",
+            "Suba à crista pelas vistas de Kornat",
+            "Faça snorkel nos baixios abrigados",
+            "Peixe grelhado fresco numa konoba de Žut"
+          ],
+          "mooringTip": "As boias das konobas ao largo de Žut são a escolha fácil: coma em terra e a amarração vem à borla. Com uma bura forte, meta-se em Hiljača, do lado leste, em vez das baías abertas a oeste."
+        },
+        "2": {
+          "shortDescription": "Siga para norte até Pantera, uma baía arenosa bem abrigada no topo de Dugi Otok, a curta caminhada do farol mais alto do Adriático.",
+          "description": "Pantera, por vezes assinalada como Čuna nas cartas, é uma baía larga de areia e cascalho na ponta norte de Dugi Otok. O fundeadouro é bom entre cinco e oito metros e a baía ignora tudo o que venha de norte e nordeste, o que faz dela uma noite calma depois da exposição dos Kornati exteriores. A remo ou a pé até terra são quinze minutos até Veli Rat, um farol de 40 metros de 1849 que os locais juram ter sido rebocado com claras de ovo misturadas na cal. A oeste do ancoradouro fica Sakarun, uma praia longa e pouco funda onde a água ganha aquele turquesa claro que se tem sobre areia branca. Aponte-a para o fim da tarde, depois de saírem os barcos de excursão. Lulas na grelha, um Pošip fresco, e as luzes de mastro a acender uma a uma.",
+          "thingsToDo": [
+            "Caminhe até ao farol de Veli Rat",
+            "Nade na praia arenosa de Sakarun",
+            "Fundeie sobre areia na baía de Pantera",
+            "Copos ao pôr do sol no convés, sobre areia branca"
+          ],
+          "mooringTip": "Fundeadouro livre sobre areia entre cinco e oito metros, bem abrigado de norte e nordeste. Enche ao início da noite em Julho, por isso largue o ferro antes de chegar a frota de charter e dê ré com força para cravar."
+        },
+        "3": {
+          "shortDescription": "Umas fáceis doze milhas chegam a Vrulja, no interior do Parque Nacional de Kornati, com as suas três konobas em torno do campo de amarração mais movimentado do arquipélago.",
+          "description": "Dia curto, por isso não há pressa. Costumamos navegar pelo caminho mais longo por fora de Kornat para ver as coroas, as falésias a pique onde a ilha mergulha a direito no mar aberto, ao largo de Mana e Klis. Compre o bilhete do parque antes de entrar; os guardas verificam mesmo. A própria Vrulja é uma pequena baía de trabalho com três konobas alinhadas ao longo da margem, cada uma com as suas boias, e enche na época. Reserve com antecedência se quiser as boas. Em terra, a ementa é borrego da peka e peixe das brasas, com o cheiro a chegar pela água muito antes de se sentar. As tripulações ambiciosas sobem a Metlina, com 237 metros o ponto alto de Kornat, pela vista sobre todo o labirinto cinzento.",
+          "thingsToDo": [
+            "Navegue pelas coroas exteriores de Kornati",
+            "Reserve uma boia de konoba em Vrulja",
+            "Borrego na peka numa konoba de Vrulja",
+            "Suba a Metlina pela vista do arquipélago"
+          ],
+          "mooringTip": "Tenha o bilhete do parque de Kornati tratado antes de cruzar o limite. As boias das konobas de Vrulja vêm com o jantar, mas são poucas, por isso ligue com antecedência num fim de semana de Verão ou chegue a meio da tarde."
+        },
+        "4": {
+          "shortDescription": "Vinte milhas para sul, passando Šibenik, até Primošten, um centro histórico de terracota apertado num promontório sobre as vinhas de Babić.",
+          "description": "Da água, Primošten lê-se como uma ilha, um punhado de casas de pedra num promontório ligado ao continente por um istmo baixo. A igreja de São Jorge coroa o topo, com o seu cemitério a olhar para o canal. Por trás da vila, as encostas de Bucavac estão nervuradas de muros de pedra seca, um padrão famoso o bastante para estar pendurado no edifício da ONU em Nova Iorque, e cultivam o Babić que entra no tinto denso da região. A maioria das tripulações amarra na Marina Kremik, cerca de milha e meia para sul, e vem de táxi ou a pé para o serão. As ruelas do centro histórico são íngremes e valem uma hora antes do jantar. Mergulhe em Velika Raduča à entrada, se o maestral não tiver levantado mar picado.",
+          "thingsToDo": [
+            "Suba à igreja de São Jorge no alto da colina",
+            "Veja as vinhas de pedra seca de Bucavac",
+            "Prove o tinto local Babić",
+            "Mergulhe na praia de Velika Raduča"
+          ],
+          "mooringTip": "A Marina Kremik, a milha e meia para sul, é o ancoradouro habitual para a noite e precisa de reserva no Verão. O cais da própria vila de Primošten é pequeno e apanha ondulação com vento de oeste, por isso use-o como paragem de almoço e não como lugar de dormida."
+        },
+        "5": {
+          "shortDescription": "Um saltinho curto de 14 milhas até Trogir, uma vila amuralhada da UNESCO no seu próprio ilhéu, entre o continente e Čiovo.",
+          "description": "Trogir mete muita pedra numa ilha pequena. Fundada pelos gregos, sobreposta por romanos e depois pelos venezianos, o núcleo inteiro é um sítio da UNESCO que se atravessa a pé em dez minutos sem nunca cansar. O destaque é a Catedral de São Lourenço, e em especial o portal esculpido de Radovan, de 1240, que vale a pena esticar o pescoço para ver. Suba à fortaleza Kamerlengo, na ponta oeste, pelos telhados e pelo canal mais além. A riva do lado de Čiovo é onde o serão acontece, gelado na mão, superiates de um lado e barcos de pescadores do outro. É uma via de água movimentada, por isso mantenha boa vigia ao passar pela garganta. Reserve a marina da ACI; o cais da vila é de curta duração e raramente se encontra um espaço em Agosto.",
+          "thingsToDo": [
+            "Veja o portal de Radovan na catedral",
+            "Suba à fortaleza Kamerlengo",
+            "Percorra a pé o centro histórico amuralhado",
+            "Gelado ao serão na riva de Čiovo"
+          ],
+          "mooringTip": "A ACI Marina Trogir, do lado de Čiovo, é o ancoradouro de confiança para a noite e vale a pena reservar antes no pino da época. O cais da vila é só de curta duração e o canal que atravessa a vila é apertado, por isso ponha alguém na proa à entrada."
+        },
+        "6": {
+          "shortDescription": "Para sul, passando Šolta e Brač, até Hvar Town, o porto mais movimentado e mais bem vestido da Dalmácia, de frente para as ilhas Pakleni.",
+          "description": "Hvar Town é onde a rota se torna glamorosa. A praça principal é a maior da Dalmácia, fechada de um lado pela catedral do século XVI e vigiada pelo Fortica, o forte espanhol na colina. Suba antes do pôr do sol; a subida leva vinte minutos e a vista de volta sobre as ilhas Pakleni é a razão pela qual as pessoas aguentam as multidões. Essas ilhas, a umas duas milhas do porto, são onde realmente vale a pena fundear. Palmižana, em Sveti Klement, tem uma marina a sério e uma fila de konobas escondidas nos pinheiros. Na vila são cocktails no Hula-Hula e música até tarde em velhos pátios, se for esse o feitio da sua tripulação. Se não for, atravesse para os Pakleni em busca de uma enseada sossegada e venha só para jantar.",
+          "thingsToDo": [
+            "Suba ao Fortica pelas vistas dos Pakleni",
+            "Fundeie ao largo de Palmižana, nos Pakleni",
+            "Copos no bar Hula-Hula",
+            "Veja a praça principal e a catedral de Hvar"
+          ],
+          "mooringTip": "O cais da vila de Hvar é caro, exposto e geralmente cheio; a ACI Marina Palmižana, em Sveti Klement, a duas milhas de distância, é o ancoradouro mais calmo e seguro para a noite. Reserve Palmižana com antecedência e vá à vila de bote ou de táxi-barco para o serão."
+        },
+        "7": {
+          "shortDescription": "Uma longa etapa de 35 milhas para sudeste até Korčula, um centro histórico fortificado com um traçado de ruas em espinha de peixe feito para travar o vento.",
+          "description": "É o dia único mais longo da rota, cerca de 35 milhas, por isso compensa sair de Hvar cedo e aproveitar o sul que houver. O centro histórico de Korčula projeta-se numa pequena península, com as ruas dispostas em espinha de peixe para que as ruelas do lado de barlavento fiquem abrigadas enquanto as de sotavento deixam passar a brisa de Verão. Planeamento medieval inteligente. A vila apoia-se muito na sua ligação a Marco Polo, e pode subir à torre sineira de São Marcos pela vista dos telhados e do canal em direção a Pelješac. No Verão ainda se dança a moreška, a velha dança das espadas, num palco junto às muralhas. Para uma bebida, arranje uma garrafa de Grk das areias de Lumbarda, um branco que não se encontra facilmente fora desta ilha.",
+          "thingsToDo": [
+            "Percorra as ruelas em espinha de peixe do centro de Korčula",
+            "Suba à torre sineira de São Marcos",
+            "Assista à dança das espadas moreška",
+            "Prove o vinho Grk local de Lumbarda"
+          ],
+          "mooringTip": "A ACI Marina Korčula é pequena, por isso reserve-a. O cais do centro histórico está exposto ao sirocco; se a previsão der jugo forte durante a noite, mude-se para a baía de Lumbarda ou para um ancoradouro de sotavento em vez de ficar atracado na ondulação."
+        },
+        "8": {
+          "shortDescription": "Para sul até Lastovo, a ilha habitada mais remota da Croácia, e Skrivena Luka, um dos portos naturais mais abrigados da costa.",
+          "description": "Lastovo fica suficientemente ao largo para ter permanecido zona militar durante décadas, e ainda hoje parece um passo à parte do resto da costa. A ilha inteira é um parque natural, densa de pinheiro e salpicada das altas chaminés ornamentadas por que os locais são conhecidos. Skrivena Luka, o Porto Escondido do lado sul, faz exatamente o que o nome diz: uma baía quase fechada por terra que se mantém calma com quase qualquer tempo. Por cima ergue-se o farol de Struga, uma caminhada fácil por uma vista sobre as falésias até ao mar aberto. As konobas daqui têm amarrações, e o jantar tende para slow food, presunto fumado e cabra local, rakija servida quer se peça quer não. É uma noite sossegada, e depois de uma semana de portos é esse o motivo para se vir tão longe.",
+          "thingsToDo": [
+            "Passe a noite na abrigada Skrivena Luka",
+            "Suba até ao farol de Struga",
+            "Repare nas chaminés de pedra ornamentadas de Lastovo",
+            "Jantar demorado de konoba com rakija local"
+          ],
+          "mooringTip": "Compre o bilhete do Parque Natural de Lastovo e agarre uma boia de konoba em Skrivena Luka em vez de fundear pelo campo de amarração. A baía é famosa pela calma, mas os cantos interiores agarram melhor se alguma ondulação der a volta lá para dentro."
+        },
+        "9": {
+          "shortDescription": "Uma travessia aberta de 25 milhas para norte até Vis, fechada a visitantes até 1989, e à sua vila piscatória ocidental de Komiža.",
+          "description": "O salto até Vis é mar aberto a sério, uns 25 milhas com pouco por trás de que se abrigar, por isso escolha uma previsão estável e rize cedo se o maestral estiver a soprar. Vis esteve interdita a estrangeiros durante os anos jugoslavos, o que a poupou ao excesso de construção que se vê noutros lados. Komiža, no lado oeste sob o monte Hum, continua a ser vila de pesca em primeiro lugar: casas de pedra à volta de um porto apertado, redes a secar, uma torre veneziana na marginal que hoje alberga o museu da pesca. Coma a pogača, a tarte rasa de anchova e cebola da ilha, e beba o branco local Vugava. A Gruta Azul, na vizinha Biševo, é a grande excursão; vá cedo com um barco licenciado antes de a luz baixar lá dentro. Suba o Hum ao fim do dia, se as pernas ajudarem.",
+          "thingsToDo": [
+            "Excursão de um dia à Gruta Azul, em Biševo",
+            "Pogača de Komiža, tarte de anchova",
+            "Visite o museu da pesca de Komiža",
+            "Suba o monte Hum para o pôr do sol"
+          ],
+          "mooringTip": "O porto de Komiža é de curta duração e pode ganhar rajadas quando a bura se enfia pela baía. Para uma noite tranquila, reserve a ACI Marina Vis, no lado oposto da ilha, e volte a Komiža numa ida e volta de dia."
+        },
+        "10": {
+          "shortDescription": "Uma travessia de 30 milhas de volta para nordeste até Zlarin, a ilha de coral sem trânsito ao largo de Šibenik, com a sua única aldeia estendida ao longo do porto.",
+          "description": "Dia longo de volta pelo mar aberto, por isso mais um começo cedo, e a meio da tarde já vai fechando as ilhas de Šibenik. Zlarin é pequena e sossegada de uma maneira que os portos mais movimentados não são; sem carros, uma aldeia à volta do porto, trilhos por entre oliveiras e pinheiros. A ilha fez nome com o coral, colhido à mão nestas águas desde o século XV, e há um pequeno Centro do Coral na aldeia que conta a história melhor do que eu. Compre uma peça diretamente de uma oficina se quiser uma verdadeira recordação. O cais do porto é curto e pouco fundo, por isso a maioria de nós fundeia mesmo lá fora sobre areia e vai de bote. Sente-se na marginal ao entardecer com uma loza e veja as fortalezas de Šibenik ficarem douradas do outro lado do canal.",
+          "thingsToDo": [
+            "Visite o Centro do Coral de Zlarin",
+            "Compre coral numa oficina da aldeia",
+            "Percorra os trilhos da ilha, sem carros",
+            "Loza rakija na frente do porto"
+          ],
+          "mooringTip": "O cais de Zlarin é de curta duração e pouco fundo, por isso fundeie fora do porto sobre areia entre cinco e sete metros e vá de bote a terra. O fundeadouro é razoável, mas vigie o seu raio de giro se a frota se juntar."
+        },
+        "11": {
+          "shortDescription": "Uma subida suave a motor pelo rio Krka chega a Skradin, uma pequena vila medieval dentro do parque nacional, logo abaixo das quedas de Skradinski Buk.",
+          "description": "Depois de dias de sal e mar aberto, a subida do Krka é uma mudança de cenário: água verde e lisa entre margens arborizadas, o cheiro a pinho e a rio em vez de maresia. Skradin fica onde o rio alarga, uma vila medieval compacta com uma marina mesmo aos seus pés. Não se pode levar o barco até às quedas; deixe-o na ACI Skradin e apanhe o barco do parque até Skradinski Buk, uma larga escadaria de cascatas que se pode contornar por passadiços. A própria vila merece um serão sem pressas. Peça o Skradinski rižot, cozinhado durante horas até ficar quase uma pasta, e termine com o bolo de mel local. Se tiver uma manhã livre, alugue uma bicicleta e faça um dos trilhos do parque à beira da água.",
+          "thingsToDo": [
+            "Suba de barco do parque até às quedas de Skradinski Buk",
+            "Passeie pelas ruelas medievais de Skradin",
+            "Prove o Skradinski rižot, cozinhado devagar",
+            "Pedale por um trilho ribeirinho do parque de Krka"
+          ],
+          "mooringTip": "A ACI Marina Skradin, junto ao rio, é a base para o parque; reserve-a para Julho e Agosto. Suba às quedas no barco do próprio parque em vez de tentar levar o barco rio acima."
+        },
+        "12": {
+          "shortDescription": "Uma curta descida de 8 milhas rio abaixo e mar fora até Tijat, uma minúscula ilha desabitada coberta de pinheiro no arquipélago de Šibenik.",
+          "description": "Um dia tranquilo, e depois de Skradin é para ser mesmo assim. Desça de novo o Krka, para fora pelo velho canal de Šibenik sob a fortaleza de São Nicolau, e é um saltinho até Tijat. Não vive aqui ninguém. A ilha é baixa e verde, rodeada de ilhéus mais pequenos entre os quais se pode enfiar um caiaque, com bom fundeadouro sobre areia e ervas no lado sul. Não há serviços absolutamente nenhuns, por isso ateste água e provisões em Skradin ou Šibenik antes de partir, e leve o que precisa para a noite. Este é um dia de nadar e mais nada: faça snorkel nos baixios, arme uma rede de dormir entre as oliveiras em terra, grelhe o que sobrar do frigorífico ao cair do sol. Numa noite calma é mais ou menos o mais sossegado que o Adriático consegue ser.",
+          "thingsToDo": [
+            "Faça caiaque pelos ilhéus do lado sul de Tijat",
+            "Faça snorkel nos baixios abrigados de Tijat",
+            "Rede de dormir entre as oliveiras da beira-mar",
+            "Grelhe o jantar no convés, fundeado"
+          ],
+          "mooringTip": "Fundeie sobre areia e ervas marinhas entre cinco e oito metros ao largo da costa sul de Tijat. Não há serviços na ilha, por isso encha o depósito de água e abasteça a cozinha em Skradin ou Šibenik primeiro."
+        },
+        "13": {
+          "shortDescription": "Umas suaves 8 milhas até Murter, a ilha porta de entrada para os Kornati, com a praia arenosa de Slanica e duas marinas junto à vila.",
+          "description": "Murter é a rampa de lançamento para a maioria dos charters de Kornati, ligada ao continente por uma pequena ponte levadiça em Tisno que abre duas vezes por dia. É uma ilha de trabalho, discreta, e depois das paragens exteriores até parece animada. Slanica, no lado oeste, é a rara praia de areia a sério por estas bandas, pouco funda e boa para um último mergulho demorado. Em Betina, a aldeia a seguir, constroem barcos de madeira gajeta há gerações, e o pequeno museu marítimo de lá vale meia hora. Para o jantar de despedida, procure pašticada, vaca estufada devagar em vinho e prošek até se desfazer, geralmente servida sobre nhoque. Amarre na Marina Hramina ou na Marina Betina, ambas a menos de uma milha da vila, e acerte contas do combustível antes da correria da manhã.",
+          "thingsToDo": [
+            "Último mergulho na praia arenosa de Slanica",
+            "Veja o museu dos barcos de madeira em Betina",
+            "Veja abrir a ponte levadiça de Tisno",
+            "Pašticada, estufado de vaca, numa konoba"
+          ],
+          "mooringTip": "A Marina Hramina ou a Marina Betina, ambas a menos de uma milha da vila de Murter, recebem-no para a noite; reserve com antecedência no Verão. Trate do seu horário de combustível na véspera para não ficar em fila na bomba no dia da entrega."
+        },
+        "14": {
+          "shortDescription": "Dia de entrega: 22 milhas de regresso pelo canal de Pašman para fechar a volta em Sukošan, onde a Marina Dalmacija é a maior da Croácia.",
+          "description": "Última etapa, e sem razão para a apressar. A rota sobe o canal de Pašman, águas abrigadas entre a ilha e o continente, com tempo para mais um mergulho numa enseada sossegada antes de fechar a costa. A Marina Dalmacija, em Sukošan, é a maior do país, uma pequena cidade de pontões, por isso saiba o número do seu lugar antes de chegar e ligue para o escritório na aproximação. Deixe tempo para limpar e arrumar as malas; as entregas de charter correm melhor quando o barco volta em ordem. Se a cozinha ainda tiver provisões, faça um verdadeiro último jantar a bordo, risoto negro de choco se conseguir a tinta, e erga um copo a duas semanas que cobriram quase tudo o que a Dalmácia faz bem. Abasteça à entrada para que a manhã seja só papelada.",
+          "thingsToDo": [
+            "Último mergulho numa enseada do canal de Pašman",
+            "Faça risoto negro de choco a bordo",
+            "Abasteça antes do lugar na Marina Dalmacija",
+            "Arrume as malas e limpe para a entrega"
+          ],
+          "mooringTip": "A Marina Dalmacija, em Sukošan, é enorme, por isso confirme o seu lugar atribuído e um horário de combustível com o escritório com um dia de antecedência. Entre devagar e tenha defensas e cabos prontos dos dois lados; os canais de acesso ficam movimentados na rotação de sábado."
+        }
+      }
     }
   },
   "areas": {
