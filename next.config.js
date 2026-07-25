@@ -65,6 +65,16 @@ const nextConfig = {
         destination: 'https://www.boat4you.com/:path*',
         permanent: true,
       },
+      // Legacy blog slug still reachable from old external links / stale
+      // search results (reported by a visitor 25.7.2026). The article lives
+      // on Europe Yachts nowadays; our own equivalent is the cost breakdown
+      // pillar — 301 there so the visitor lands on live content and any
+      // remaining link equity transfers. Locale-prefixed variants included.
+      {
+        source: '/:locale(de|es|fr|it|pt|hr|en)?/blog/how-much-does-it-cost-to-charter-a-yacht',
+        destination: '/blog/yacht-charter-cost-2026-full-breakdown',
+        permanent: true,
+      },
     ];
   },
   // Next default gzip on. Nginx-level brotli (cusma1) handles modern UAs;
