@@ -10,8 +10,11 @@
 set -u
 APP=/home/cusma1/nextapp
 LOG="logger -t nextapp-disk-guard"
-CAP_MB=4096     # ISR artefakti max ~4G
-TRIM_TO_MB=3072 # kad probije cap, srezi na ~3G
+# Cap se SKALIRA s velicinom diska (radi i nakon upgradea 26G->50G):
+# ISR cache smije zauzeti max 20% diska; kad probije, srezi na 15%.
+TOTAL_MB=$(df --output=size -m / | tail -1 | tr -dc '0-9')
+CAP_MB=$((TOTAL_MB * 20 / 100))
+TRIM_TO_MB=$((TOTAL_MB * 15 / 100))
 
 USE=$(df --output=pcent / | tail -1 | tr -dc '0-9')
 
