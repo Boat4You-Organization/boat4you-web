@@ -11,7 +11,12 @@ const brittanyIslands14Route: ItineraryRoute = {
     src: '/images/itinerary/france/atlantic-france-photos/golfe-du-morbihan.webp',
     alt: 'Brittany & Atlantic',
   },
-  gallery: [],
+  gallery: [
+    { src: '/images/itinerary/france/atlantic-france-photos/belle-ile.webp', alt: 'Belle Ile' },
+    { src: '/images/itinerary/france/atlantic-france-photos/golfe-du-morbihan.webp', alt: 'Golfe Du Morbihan' },
+    { src: '/images/itinerary/france/atlantic-france-photos/houat.webp', alt: 'Houat' },
+    { src: '/images/itinerary/france/atlantic-france-photos/ile-de-groix.webp', alt: 'Ile De Groix' },
+  ],
   routeDays: [
     {
       id: 'brittany-islands-14-days-day-1',
@@ -29,7 +34,7 @@ const brittanyIslands14Route: ItineraryRoute = {
       day: 2,
       mapPin: { desktop: { left: 77.1, top: 40.4 }, mobile: { left: 77.1, top: 40.4 } },
       description: 'Day 2: Vannes to Ile aux Moines.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/france/atlantic-france-photos/vannes.webp', alt: 'Vannes' }],
     },
     {
       id: 'brittany-islands-14-days-day-3',
@@ -58,7 +63,7 @@ const brittanyIslands14Route: ItineraryRoute = {
       day: 5,
       mapPin: { desktop: { left: 74.2, top: 86.8 }, mobile: { left: 74.2, top: 86.8 } },
       description: 'Day 5: Houat to Hoedic.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/france/atlantic-france-photos/houat.webp', alt: 'Houat' }],
     },
     {
       id: 'brittany-islands-14-days-day-6',
@@ -96,7 +101,7 @@ const brittanyIslands14Route: ItineraryRoute = {
       day: 9,
       mapPin: { desktop: { left: 22.3, top: 13.2 }, mobile: { left: 22.3, top: 13.2 } },
       description: 'Day 9: Ile de Groix to Lorient.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/france/atlantic-france-photos/ile-de-groix.webp', alt: 'Ile De Groix' }],
     },
     {
       id: 'brittany-islands-14-days-day-10',
@@ -134,7 +139,7 @@ const brittanyIslands14Route: ItineraryRoute = {
       day: 13,
       mapPin: { desktop: { left: 72.4, top: 50.2 }, mobile: { left: 72.4, top: 50.2 } },
       description: 'Day 13: Houat to Le Crouesty.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/france/atlantic-france-photos/houat.webp', alt: 'Houat' }],
     },
     {
       id: 'brittany-islands-14-days-day-14',
@@ -143,7 +148,7 @@ const brittanyIslands14Route: ItineraryRoute = {
       day: 14,
       mapPin: { desktop: { left: 72.4, top: 50.2 }, mobile: { left: 72.4, top: 50.2 } },
       description: 'Day 14: Le Crouesty to Le Crouesty.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/france/atlantic-france-photos/belle-ile.webp', alt: 'Belle Ile' }],
     },
   ],
   map: {

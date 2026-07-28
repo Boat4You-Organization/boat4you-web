@@ -8,7 +8,12 @@ const rivieraEsterel14Route: ItineraryRoute = {
   startingPoint: 'Cannes',
   otherPoints: ['Monaco', 'Porquerolles', 'Saint-Tropez'],
   cardImage: { src: '/images/itinerary/france/cote-azur-photos/cannes.webp', alt: "Côte d'Azur" },
-  gallery: [],
+  gallery: [
+    { src: '/images/itinerary/france/cote-azur-photos/antibes.webp', alt: 'Antibes' },
+    { src: '/images/itinerary/france/cote-azur-photos/cannes.webp', alt: 'Cannes' },
+    { src: '/images/itinerary/france/cote-azur-photos/iles-de-lerins.webp', alt: 'Iles De Lerins' },
+    { src: '/images/itinerary/france/cote-azur-photos/monaco-harbour.webp', alt: 'Monaco Harbour' },
+  ],
   routeDays: [
     {
       id: 'riviera-esterel-14-days-day-1',
@@ -62,7 +67,7 @@ const rivieraEsterel14Route: ItineraryRoute = {
       day: 6,
       mapPin: { desktop: { left: 52.8, top: 43.7 }, mobile: { left: 52.8, top: 43.7 } },
       description: 'Day 6: Iles de Lerins to Agay.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/france/cote-azur-photos/iles-de-lerins.webp', alt: 'Iles De Lerins' }],
     },
     {
       id: 'riviera-esterel-14-days-day-7',
@@ -98,7 +103,7 @@ const rivieraEsterel14Route: ItineraryRoute = {
       day: 10,
       mapPin: { desktop: { left: 33.1, top: 69.9 }, mobile: { left: 33.1, top: 69.9 } },
       description: 'Day 10: Port Grimaud to Cavalaire.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/france/cote-azur-photos/cannes.webp', alt: 'Cannes' }],
     },
     {
       id: 'riviera-esterel-14-days-day-11',
@@ -107,7 +112,7 @@ const rivieraEsterel14Route: ItineraryRoute = {
       day: 11,
       mapPin: { desktop: { left: 23.4, top: 73.3 }, mobile: { left: 23.4, top: 73.3 } },
       description: 'Day 11: Cavalaire to Le Lavandou.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/france/cote-azur-photos/antibes.webp', alt: 'Antibes' }],
     },
     {
       id: 'riviera-esterel-14-days-day-12',

@@ -8,7 +8,12 @@ const costaBrava14Route: ItineraryRoute = {
   startingPoint: 'Barcelona (Port Olímpic)',
   otherPoints: ['Arenys de Mar', 'Blanes', 'Calella'],
   cardImage: { src: '/images/itinerary/spain/catalonia-itinerary/routes/barcelona.webp', alt: '14-day route' },
-  gallery: [],
+  gallery: [
+    { src: '/images/itinerary/spain/destinations/alcudia.webp', alt: 'Alcudia' },
+    { src: '/images/itinerary/spain/destinations/badalona.webp', alt: 'Badalona' },
+    { src: '/images/itinerary/spain/destinations/barcelona-marina.webp', alt: 'Barcelona Marina' },
+    { src: '/images/itinerary/spain/destinations/barcelona.webp', alt: 'Barcelona' },
+  ],
   routeDays: [
     {
       id: 'costa-brava-14-days-day-1',
@@ -35,7 +40,7 @@ const costaBrava14Route: ItineraryRoute = {
       day: 3,
       mapPin: { desktop: { left: 54.6, top: 45.4 }, mobile: { left: 54.6, top: 45.4 } },
       description: 'Day 3: Mataró to Arenys de Mar.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/spain/destinations/mataro.webp', alt: 'Mataro' }],
     },
     {
       id: 'costa-brava-14-days-day-4',
@@ -91,7 +96,9 @@ const costaBrava14Route: ItineraryRoute = {
       day: 9,
       mapPin: { desktop: { left: 86.8, top: 13.2 }, mobile: { left: 86.8, top: 13.2 } },
       description: 'Day 9: Sant Feliu de Guíxols to Palamós.',
-      gallery: [],
+      gallery: [
+        { src: '/images/itinerary/spain/destinations/sant-feliu-de-guixols.webp', alt: 'Sant Feliu De Guixols' },
+      ],
     },
     {
       id: 'costa-brava-14-days-day-10',
@@ -120,7 +127,7 @@ const costaBrava14Route: ItineraryRoute = {
       day: 12,
       mapPin: { desktop: { left: 13.2, top: 86.8 }, mobile: { left: 13.2, top: 86.8 } },
       description: 'Day 12: Tossa de Mar to Sitges.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/spain/destinations/tossa-de-mar.webp', alt: 'Tossa De Mar' }],
     },
     {
       id: 'costa-brava-14-days-day-13',

@@ -8,7 +8,12 @@ const phuketPhangNgaWeekRoute: ItineraryRoute = {
   startingPoint: 'Yacht Haven (Phuket)',
   otherPoints: ['Ko Hong (Phang Nga)', 'Ko Phi Phi Don'],
   cardImage: { src: '/images/itinerary/thailand/thailand-photos/thailand-andaman.webp', alt: 'Thailand (Andaman Sea)' },
-  gallery: [],
+  gallery: [
+    { src: '/images/itinerary/thailand/thailand-photos/ko-hong-lagoon.webp', alt: 'Ko Hong Lagoon' },
+    { src: '/images/itinerary/thailand/thailand-photos/ko-lanta.webp', alt: 'Ko Lanta' },
+    { src: '/images/itinerary/thailand/thailand-photos/ko-phi-phi.webp', alt: 'Ko Phi Phi' },
+    { src: '/images/itinerary/thailand/thailand-photos/longtail-boats.webp', alt: 'Longtail Boats' },
+  ],
   routeDays: [
     {
       id: 'phuket-phang-nga-week-day-1',
@@ -17,7 +22,7 @@ const phuketPhangNgaWeekRoute: ItineraryRoute = {
       day: 1,
       mapPin: { desktop: { left: 35.0, top: 18.2 }, mobile: { left: 35.0, top: 18.2 } },
       description: 'Day 1: Yacht Haven (Phuket) to Ko Phanak.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/thailand/thailand-photos/maya-bay.webp', alt: 'Maya Bay' }],
     },
     {
       id: 'phuket-phang-nga-week-day-2',
@@ -37,7 +42,9 @@ const phuketPhangNgaWeekRoute: ItineraryRoute = {
       day: 3,
       mapPin: { desktop: { left: 51.5, top: 31.3 }, mobile: { left: 51.5, top: 31.3 } },
       description: 'Day 3: Ko Hong (Phang Nga) to Ko Yao Noi.',
-      gallery: [],
+      gallery: [
+        { src: '/images/itinerary/thailand/thailand-photos/phang-nga-bay-karsts.webp', alt: 'Phang Nga Bay Karsts' },
+      ],
     },
     {
       id: 'phuket-phang-nga-week-day-4',
@@ -55,7 +62,7 @@ const phuketPhangNgaWeekRoute: ItineraryRoute = {
       day: 5,
       mapPin: { desktop: { left: 78.0, top: 86.8 }, mobile: { left: 78.0, top: 86.8 } },
       description: 'Day 5: Railay (Krabi) to Ko Phi Phi Don.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/thailand/thailand-photos/railay-krabi.webp', alt: 'Railay Krabi' }],
     },
     {
       id: 'phuket-phang-nga-week-day-6',
@@ -64,7 +71,7 @@ const phuketPhangNgaWeekRoute: ItineraryRoute = {
       day: 6,
       mapPin: { desktop: { left: 29.3, top: 53.8 }, mobile: { left: 29.3, top: 53.8 } },
       description: 'Day 6: Ko Phi Phi Don to Ko Rang Yai.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/thailand/thailand-photos/ko-lanta.webp', alt: 'Ko Lanta' }],
     },
     {
       id: 'phuket-phang-nga-week-day-7',
@@ -73,7 +80,7 @@ const phuketPhangNgaWeekRoute: ItineraryRoute = {
       day: 7,
       mapPin: { desktop: { left: 13.2, top: 21.2 }, mobile: { left: 13.2, top: 21.2 } },
       description: 'Day 7: Ko Rang Yai to Yacht Haven (Phuket).',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/thailand/thailand-photos/ko-hong-lagoon.webp', alt: 'Ko Hong Lagoon' }],
     },
   ],
   map: {

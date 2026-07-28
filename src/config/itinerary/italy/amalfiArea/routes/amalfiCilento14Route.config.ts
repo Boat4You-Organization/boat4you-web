@@ -8,7 +8,12 @@ const amalfiCilento14Route: ItineraryRoute = {
   startingPoint: 'Salerno',
   otherPoints: ['Acciaroli', 'Agropoli', 'Amalfi'],
   cardImage: { src: '/images/itinerary/italy/amalfi-itinerary/routes/genova.webp', alt: '14-day route' },
-  gallery: [],
+  gallery: [
+    { src: '/images/itinerary/italy/destinations/acciaroli.webp', alt: 'Acciaroli' },
+    { src: '/images/itinerary/italy/destinations/agropoli.webp', alt: 'Agropoli' },
+    { src: '/images/itinerary/italy/destinations/albenga.webp', alt: 'Albenga' },
+    { src: '/images/itinerary/italy/destinations/amalfi.webp', alt: 'Amalfi' },
+  ],
   routeDays: [
     {
       id: 'amalfi-cilento-14-days-day-1',
@@ -62,7 +67,7 @@ const amalfiCilento14Route: ItineraryRoute = {
       day: 6,
       mapPin: { desktop: { left: 15.0, top: 23.4 }, mobile: { left: 15.0, top: 23.4 } },
       description: 'Day 6: Naples to Ischia.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/italy/destinations/naples.webp', alt: 'Naples' }],
     },
     {
       id: 'amalfi-cilento-14-days-day-7',

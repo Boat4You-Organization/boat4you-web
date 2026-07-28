@@ -11,12 +11,7 @@ import { cataloniaItinerary, ibizaItinerary, mallorcaItinerary } from '@/config/
 import { namespaceForCountry } from '@/helper/itineraryI18n';
 import { Itineraries } from '@/types/itinerary.type';
 
-import {
-  atlanticFranceItinerary,
-  corsicaItinerary,
-  coteAzurItinerary,
-  frenchCanalsItinerary,
-} from './itinerary/france';
+import { atlanticFranceItinerary, corsicaItinerary, coteAzurItinerary } from './itinerary/france';
 import { amalfiItinerary, sardiniaItinerary, sicilyItinerary } from './itinerary/italy';
 import { montenegroItinerary } from './itinerary/montenegro';
 import { seychellesItinerary } from './itinerary/seychelles';
@@ -46,7 +41,7 @@ const rawItineraries: Itineraries[] = [
   },
   {
     country: 'France',
-    itinerary: [coteAzurItinerary, corsicaItinerary, atlanticFranceItinerary, frenchCanalsItinerary],
+    itinerary: [coteAzurItinerary, corsicaItinerary, atlanticFranceItinerary],
   },
   {
     country: 'Montenegro',

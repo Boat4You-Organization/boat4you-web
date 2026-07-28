@@ -8,7 +8,12 @@ const andamanExplorer14Route: ItineraryRoute = {
   startingPoint: 'Yacht Haven (Phuket)',
   otherPoints: ['Ko Phi Phi Don', 'Ko Lanta', 'Ko Kradan'],
   cardImage: { src: '/images/itinerary/thailand/thailand-photos/thailand-andaman.webp', alt: 'Thailand (Andaman Sea)' },
-  gallery: [],
+  gallery: [
+    { src: '/images/itinerary/thailand/thailand-photos/ko-hong-lagoon.webp', alt: 'Ko Hong Lagoon' },
+    { src: '/images/itinerary/thailand/thailand-photos/ko-lanta.webp', alt: 'Ko Lanta' },
+    { src: '/images/itinerary/thailand/thailand-photos/ko-phi-phi.webp', alt: 'Ko Phi Phi' },
+    { src: '/images/itinerary/thailand/thailand-photos/longtail-boats.webp', alt: 'Longtail Boats' },
+  ],
   routeDays: [
     {
       id: 'andaman-explorer-14-days-day-1',
@@ -17,7 +22,7 @@ const andamanExplorer14Route: ItineraryRoute = {
       day: 1,
       mapPin: { desktop: { left: 24.6, top: 15.9 }, mobile: { left: 24.6, top: 15.9 } },
       description: 'Day 1: Yacht Haven (Phuket) to Ko Phanak.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/thailand/thailand-photos/ko-lanta.webp', alt: 'Ko Lanta' }],
     },
     {
       id: 'andaman-explorer-14-days-day-2',
@@ -37,7 +42,9 @@ const andamanExplorer14Route: ItineraryRoute = {
       day: 3,
       mapPin: { desktop: { left: 33.2, top: 22.8 }, mobile: { left: 33.2, top: 22.8 } },
       description: 'Day 3: Ko Hong (Phang Nga) to Ko Yao Noi.',
-      gallery: [],
+      gallery: [
+        { src: '/images/itinerary/thailand/thailand-photos/phang-nga-bay-karsts.webp', alt: 'Phang Nga Bay Karsts' },
+      ],
     },
     {
       id: 'andaman-explorer-14-days-day-4',
@@ -55,7 +62,7 @@ const andamanExplorer14Route: ItineraryRoute = {
       day: 5,
       mapPin: { desktop: { left: 47.1, top: 52.3 }, mobile: { left: 47.1, top: 52.3 } },
       description: 'Day 5: Railay (Krabi) to Ko Phi Phi Don.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/thailand/thailand-photos/railay-krabi.webp', alt: 'Railay Krabi' }],
     },
     {
       id: 'andaman-explorer-14-days-day-6',
@@ -64,7 +71,7 @@ const andamanExplorer14Route: ItineraryRoute = {
       day: 6,
       mapPin: { desktop: { left: 46.1, top: 57.4 }, mobile: { left: 46.1, top: 57.4 } },
       description: 'Day 6: Ko Phi Phi Don to Ko Phi Phi Le.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/thailand/thailand-photos/railay-krabi.webp', alt: 'Railay Krabi' }],
     },
     {
       id: 'andaman-explorer-14-days-day-7',
@@ -82,7 +89,7 @@ const andamanExplorer14Route: ItineraryRoute = {
       day: 8,
       mapPin: { desktop: { left: 86.8, top: 82.5 }, mobile: { left: 86.8, top: 82.5 } },
       description: 'Day 8: Ko Lanta to Ko Muk.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/thailand/thailand-photos/ko-lanta.webp', alt: 'Ko Lanta' }],
     },
     {
       id: 'andaman-explorer-14-days-day-9',
@@ -91,7 +98,7 @@ const andamanExplorer14Route: ItineraryRoute = {
       day: 9,
       mapPin: { desktop: { left: 84.3, top: 86.8 }, mobile: { left: 84.3, top: 86.8 } },
       description: 'Day 9: Ko Muk to Ko Kradan.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/thailand/thailand-photos/maya-bay.webp', alt: 'Maya Bay' }],
     },
     {
       id: 'andaman-explorer-14-days-day-10',
@@ -109,7 +116,7 @@ const andamanExplorer14Route: ItineraryRoute = {
       day: 11,
       mapPin: { desktop: { left: 47.1, top: 52.3 }, mobile: { left: 47.1, top: 52.3 } },
       description: 'Day 11: Ko Lanta to Ko Phi Phi Don.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/thailand/thailand-photos/ko-lanta.webp', alt: 'Ko Lanta' }],
     },
     {
       id: 'andaman-explorer-14-days-day-12',
@@ -118,7 +125,7 @@ const andamanExplorer14Route: ItineraryRoute = {
       day: 12,
       mapPin: { desktop: { left: 21.6, top: 34.8 }, mobile: { left: 21.6, top: 34.8 } },
       description: 'Day 12: Ko Phi Phi Don to Ko Rang Yai.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/thailand/thailand-photos/ko-phi-phi.webp', alt: 'Ko Phi Phi' }],
     },
     {
       id: 'andaman-explorer-14-days-day-13',
@@ -127,7 +134,7 @@ const andamanExplorer14Route: ItineraryRoute = {
       day: 13,
       mapPin: { desktop: { left: 33.2, top: 22.8 }, mobile: { left: 33.2, top: 22.8 } },
       description: 'Day 13: Ko Rang Yai to Ko Yao Noi.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/thailand/thailand-photos/ko-lanta.webp', alt: 'Ko Lanta' }],
     },
     {
       id: 'andaman-explorer-14-days-day-14',
@@ -136,7 +143,7 @@ const andamanExplorer14Route: ItineraryRoute = {
       day: 14,
       mapPin: { desktop: { left: 13.2, top: 17.5 }, mobile: { left: 13.2, top: 17.5 } },
       description: 'Day 14: Ko Yao Noi to Yacht Haven (Phuket).',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/thailand/thailand-photos/ko-hong-lagoon.webp', alt: 'Ko Hong Lagoon' }],
     },
   ],
   map: {

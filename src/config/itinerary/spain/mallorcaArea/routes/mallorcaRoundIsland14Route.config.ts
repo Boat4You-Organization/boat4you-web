@@ -8,7 +8,12 @@ const mallorcaRoundIsland14Route: ItineraryRoute = {
   startingPoint: 'Palma de Mallorca',
   otherPoints: ['Alcúdia', 'Cabrera Archipelago', 'Cala Figuera'],
   cardImage: { src: '/images/itinerary/spain/mallorca-itinerary/routes/ciutadella.webp', alt: '14-day route' },
-  gallery: [],
+  gallery: [
+    { src: '/images/itinerary/spain/destinations/alcudia.webp', alt: 'Alcudia' },
+    { src: '/images/itinerary/spain/destinations/badalona.webp', alt: 'Badalona' },
+    { src: '/images/itinerary/spain/destinations/barcelona-marina.webp', alt: 'Barcelona Marina' },
+    { src: '/images/itinerary/spain/destinations/barcelona.webp', alt: 'Barcelona' },
+  ],
   routeDays: [
     {
       id: 'mallorca-round-island-14-days-day-1',

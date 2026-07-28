@@ -8,7 +8,12 @@ const grenadinesExplorer14Route: ItineraryRoute = {
   startingPoint: 'Port Louis Marina',
   otherPoints: ['Dragon Bay, Grenada', 'Salt Whistle Bay, Mayreau', 'Sandy Island, Carriacou'],
   cardImage: { src: '/images/itinerary/caribbeans/grenada-itinerary/itinerary-card.webp', alt: '14-day route' },
-  gallery: [],
+  gallery: [
+    { src: '/images/itinerary/caribbeans/destinations/anse-couleuvre.webp', alt: 'Anse Couleuvre' },
+    { src: '/images/itinerary/caribbeans/destinations/anse-dufour.webp', alt: 'Anse Dufour' },
+    { src: '/images/itinerary/caribbeans/destinations/anse-marcel.webp', alt: 'Anse Marcel' },
+    { src: '/images/itinerary/caribbeans/destinations/cane-garden-bay.webp', alt: 'Cane Garden Bay' },
+  ],
   routeDays: [
     {
       id: 'grenadines-explorer-14-days-day-1',

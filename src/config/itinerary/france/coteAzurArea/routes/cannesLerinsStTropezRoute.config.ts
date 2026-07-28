@@ -8,7 +8,12 @@ const cannesLerinsStTropezRoute: ItineraryRoute = {
   startingPoint: 'Cannes',
   otherPoints: ['Saint-Tropez', 'Porquerolles'],
   cardImage: { src: '/images/itinerary/france/cote-azur-photos/cannes.webp', alt: "Côte d'Azur" },
-  gallery: [],
+  gallery: [
+    { src: '/images/itinerary/france/cote-azur-photos/antibes.webp', alt: 'Antibes' },
+    { src: '/images/itinerary/france/cote-azur-photos/cannes.webp', alt: 'Cannes' },
+    { src: '/images/itinerary/france/cote-azur-photos/iles-de-lerins.webp', alt: 'Iles De Lerins' },
+    { src: '/images/itinerary/france/cote-azur-photos/monaco-harbour.webp', alt: 'Monaco Harbour' },
+  ],
   routeDays: [
     {
       id: 'cannes-lerins-st-tropez-day-1',
@@ -35,7 +40,7 @@ const cannesLerinsStTropezRoute: ItineraryRoute = {
       day: 3,
       mapPin: { desktop: { left: 42.0, top: 64.2 }, mobile: { left: 42.0, top: 64.2 } },
       description: 'Day 3: Saint-Tropez to Cavalaire.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/france/cote-azur-photos/saint-tropez.webp', alt: 'Saint Tropez' }],
     },
     {
       id: 'cannes-lerins-st-tropez-day-4',
@@ -62,7 +67,7 @@ const cannesLerinsStTropezRoute: ItineraryRoute = {
       day: 6,
       mapPin: { desktop: { left: 77.6, top: 18.9 }, mobile: { left: 77.6, top: 18.9 } },
       description: 'Day 6: Port-Cros to Theoule-sur-Mer.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/france/cote-azur-photos/antibes.webp', alt: 'Antibes' }],
     },
     {
       id: 'cannes-lerins-st-tropez-day-7',

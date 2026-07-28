@@ -8,7 +8,18 @@ const innerIslandsClassicRoute: ItineraryRoute = {
   startingPoint: 'Eden Island (Mahe)',
   otherPoints: ['Praslin (Baie Sainte Anne)', 'La Digue'],
   cardImage: { src: '/images/itinerary/seychelles/seychelles-photos/mahe-eden-island.webp', alt: 'Seychelles' },
-  gallery: [],
+  gallery: [
+    { src: '/images/itinerary/seychelles/seychelles-photos/curieuse-tortoises.webp', alt: 'Curieuse Tortoises' },
+    {
+      src: '/images/itinerary/seychelles/seychelles-photos/granite-boulders-beach.webp',
+      alt: 'Granite Boulders Beach',
+    },
+    {
+      src: '/images/itinerary/seychelles/seychelles-photos/la-digue-anse-source-d-argent.webp',
+      alt: 'La Digue Anse Source D Argent',
+    },
+    { src: '/images/itinerary/seychelles/seychelles-photos/mahe-eden-island.webp', alt: 'Mahe Eden Island' },
+  ],
   routeDays: [
     {
       id: 'inner-islands-classic-day-1',
@@ -17,7 +28,9 @@ const innerIslandsClassicRoute: ItineraryRoute = {
       day: 1,
       mapPin: { desktop: { left: 18.1, top: 81.9 }, mobile: { left: 18.1, top: 81.9 } },
       description: 'Day 1: Eden Island (Mahe) to Sainte Anne.',
-      gallery: [],
+      gallery: [
+        { src: '/images/itinerary/seychelles/seychelles-photos/mahe-eden-island.webp', alt: 'Mahe Eden Island' },
+      ],
     },
     {
       id: 'inner-islands-classic-day-2',
@@ -69,7 +82,12 @@ const innerIslandsClassicRoute: ItineraryRoute = {
       day: 6,
       mapPin: { desktop: { left: 86.8, top: 22.1 }, mobile: { left: 86.8, top: 22.1 } },
       description: 'Day 6: La Digue to Ile Cocos.',
-      gallery: [],
+      gallery: [
+        {
+          src: '/images/itinerary/seychelles/seychelles-photos/la-digue-anse-source-d-argent.webp',
+          alt: 'La Digue Anse Source D Argent',
+        },
+      ],
     },
     {
       id: 'inner-islands-classic-day-7',

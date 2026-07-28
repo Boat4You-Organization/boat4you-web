@@ -8,7 +8,12 @@ const bviFullLoop14Route: ItineraryRoute = {
   startingPoint: 'Tortola (Road Town)',
   otherPoints: ['Anegada', 'Cane Garden Bay', 'Cooper Island'],
   cardImage: { src: '/images/itinerary/caribbeans/bvi-itinerary/itinerary-card.webp', alt: '14-day route' },
-  gallery: [],
+  gallery: [
+    { src: '/images/itinerary/caribbeans/destinations/anse-couleuvre.webp', alt: 'Anse Couleuvre' },
+    { src: '/images/itinerary/caribbeans/destinations/anse-dufour.webp', alt: 'Anse Dufour' },
+    { src: '/images/itinerary/caribbeans/destinations/anse-marcel.webp', alt: 'Anse Marcel' },
+    { src: '/images/itinerary/caribbeans/destinations/cane-garden-bay.webp', alt: 'Cane Garden Bay' },
+  ],
   routeDays: [
     {
       id: 'bvi-full-loop-14-days-day-1',
@@ -44,7 +49,7 @@ const bviFullLoop14Route: ItineraryRoute = {
       day: 4,
       mapPin: { desktop: { left: 72.4, top: 67.8 }, mobile: { left: 72.4, top: 67.8 } },
       description: 'Day 4: Cooper Island to The Baths (Virgin Gorda).',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/caribbeans/destinations/cooper-island.webp', alt: 'Cooper Island' }],
     },
     {
       id: 'bvi-full-loop-14-days-day-5',
@@ -53,7 +58,7 @@ const bviFullLoop14Route: ItineraryRoute = {
       day: 5,
       mapPin: { desktop: { left: 86.8, top: 54.9 }, mobile: { left: 86.8, top: 54.9 } },
       description: 'Day 5: The Baths (Virgin Gorda) to North Sound (Leverick Bay).',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/caribbeans/destinations/anse-marcel.webp', alt: 'Anse Marcel' }],
     },
     {
       id: 'bvi-full-loop-14-days-day-6',
@@ -62,7 +67,7 @@ const bviFullLoop14Route: ItineraryRoute = {
       day: 6,
       mapPin: { desktop: { left: 82.3, top: 13.2 }, mobile: { left: 82.3, top: 13.2 } },
       description: 'Day 6: North Sound (Leverick Bay) to Anegada.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/caribbeans/destinations/anse-dufour.webp', alt: 'Anse Dufour' }],
     },
     {
       id: 'bvi-full-loop-14-days-day-7',
@@ -71,7 +76,7 @@ const bviFullLoop14Route: ItineraryRoute = {
       day: 7,
       mapPin: { desktop: { left: 86.8, top: 54.9 }, mobile: { left: 86.8, top: 54.9 } },
       description: 'Day 7: Anegada to North Sound (Leverick Bay).',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/caribbeans/destinations/anse-couleuvre.webp', alt: 'Anse Couleuvre' }],
     },
     {
       id: 'bvi-full-loop-14-days-day-8',

@@ -11,7 +11,12 @@ const morbihanQuiberonRoute: ItineraryRoute = {
     src: '/images/itinerary/france/atlantic-france-photos/golfe-du-morbihan.webp',
     alt: 'Brittany & Atlantic',
   },
-  gallery: [],
+  gallery: [
+    { src: '/images/itinerary/france/atlantic-france-photos/belle-ile.webp', alt: 'Belle Ile' },
+    { src: '/images/itinerary/france/atlantic-france-photos/golfe-du-morbihan.webp', alt: 'Golfe Du Morbihan' },
+    { src: '/images/itinerary/france/atlantic-france-photos/houat.webp', alt: 'Houat' },
+    { src: '/images/itinerary/france/atlantic-france-photos/ile-de-groix.webp', alt: 'Ile De Groix' },
+  ],
   routeDays: [
     {
       id: 'morbihan-quiberon-day-1',
@@ -20,7 +25,7 @@ const morbihanQuiberonRoute: ItineraryRoute = {
       day: 1,
       mapPin: { desktop: { left: 72.2, top: 27.0 }, mobile: { left: 72.2, top: 27.0 } },
       description: 'Day 1: Le Crouesty to Ile aux Moines.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/france/atlantic-france-photos/houat.webp', alt: 'Houat' }],
     },
     {
       id: 'morbihan-quiberon-day-2',
@@ -67,7 +72,7 @@ const morbihanQuiberonRoute: ItineraryRoute = {
       day: 6,
       mapPin: { desktop: { left: 67.9, top: 86.8 }, mobile: { left: 67.9, top: 86.8 } },
       description: 'Day 6: Sauzon to Hoedic.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/france/atlantic-france-photos/sauzon.webp', alt: 'Sauzon' }],
     },
     {
       id: 'morbihan-quiberon-day-7',
@@ -76,7 +81,7 @@ const morbihanQuiberonRoute: ItineraryRoute = {
       day: 7,
       mapPin: { desktop: { left: 65.1, top: 39.7 }, mobile: { left: 65.1, top: 39.7 } },
       description: 'Day 7: Hoedic to Le Crouesty.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/france/atlantic-france-photos/belle-ile.webp', alt: 'Belle Ile' }],
     },
   ],
   map: {

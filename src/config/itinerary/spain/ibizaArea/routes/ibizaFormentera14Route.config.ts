@@ -8,7 +8,12 @@ const ibizaFormentera14Route: ItineraryRoute = {
   startingPoint: 'Marina Eivissa',
   otherPoints: ['Cala Vedella', 'Formentera', 'Marina Eivissa'],
   cardImage: { src: '/images/itinerary/spain/ibiza-itinerary/routes/ibiza.webp', alt: '14-day route' },
-  gallery: [],
+  gallery: [
+    { src: '/images/itinerary/spain/destinations/alcudia.webp', alt: 'Alcudia' },
+    { src: '/images/itinerary/spain/destinations/badalona.webp', alt: 'Badalona' },
+    { src: '/images/itinerary/spain/destinations/barcelona-marina.webp', alt: 'Barcelona Marina' },
+    { src: '/images/itinerary/spain/destinations/barcelona.webp', alt: 'Barcelona' },
+  ],
   routeDays: [
     {
       id: 'ibiza-formentera-14-days-day-1',

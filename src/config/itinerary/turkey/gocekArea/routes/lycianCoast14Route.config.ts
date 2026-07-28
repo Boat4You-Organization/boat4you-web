@@ -8,7 +8,12 @@ const lycianCoast14Route: ItineraryRoute = {
   startingPoint: 'Göcek',
   otherPoints: ['Butterfly Valley', 'Coldwater Bay', 'Ekincik'],
   cardImage: { src: '/images/itinerary/turkey/bodrum-itinerary/routes/bodrum-didim.webp', alt: '14-day route' },
-  gallery: [],
+  gallery: [
+    { src: '/images/itinerary/turkey/destinations/akyaka.webp', alt: 'Akyaka' },
+    { src: '/images/itinerary/turkey/destinations/bodrum-marina.webp', alt: 'Bodrum Marina' },
+    { src: '/images/itinerary/turkey/destinations/bodrum-town.webp', alt: 'Bodrum Town' },
+    { src: '/images/itinerary/turkey/destinations/butterfly-valley.webp', alt: 'Butterfly Valley' },
+  ],
   routeDays: [
     {
       id: 'lycian-coast-14-days-day-1',
@@ -26,7 +31,7 @@ const lycianCoast14Route: ItineraryRoute = {
       day: 2,
       mapPin: { desktop: { left: 53.2, top: 63.1 }, mobile: { left: 53.2, top: 63.1 } },
       description: 'Day 2: Sarsala Bay to Kapı Creek.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/turkey/destinations/sarsala-bay.webp', alt: 'Sarsala Bay' }],
     },
     {
       id: 'lycian-coast-14-days-day-3',
@@ -71,7 +76,7 @@ const lycianCoast14Route: ItineraryRoute = {
       day: 7,
       mapPin: { desktop: { left: 86.8, top: 81.7 }, mobile: { left: 86.8, top: 81.7 } },
       description: 'Day 7: Gemiler Island to Ölüdeniz.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/turkey/destinations/cleopatra-island.webp', alt: 'Cleopatra Island' }],
     },
     {
       id: 'lycian-coast-14-days-day-8',
@@ -89,7 +94,7 @@ const lycianCoast14Route: ItineraryRoute = {
       day: 9,
       mapPin: { desktop: { left: 44.9, top: 40.8 }, mobile: { left: 44.9, top: 40.8 } },
       description: 'Day 9: Butterfly Valley to Coldwater Bay.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/turkey/destinations/butterfly-valley.webp', alt: 'Butterfly Valley' }],
     },
     {
       id: 'lycian-coast-14-days-day-10',
@@ -116,7 +121,7 @@ const lycianCoast14Route: ItineraryRoute = {
       day: 12,
       mapPin: { desktop: { left: 54.7, top: 77.6 }, mobile: { left: 54.7, top: 77.6 } },
       description: 'Day 12: Ekincik to Kızıkuyruk Koyu.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/turkey/destinations/ekincik.webp', alt: 'Ekincik' }],
     },
     {
       id: 'lycian-coast-14-days-day-13',

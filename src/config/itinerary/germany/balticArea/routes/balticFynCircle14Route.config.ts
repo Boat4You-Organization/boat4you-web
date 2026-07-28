@@ -11,7 +11,12 @@ const balticFynCircle14Route: ItineraryRoute = {
     src: '/images/itinerary/germany/baltic-germany-photos/heiligenhafen.webp',
     alt: 'German Baltic & Danish Isles',
   },
-  gallery: [],
+  gallery: [
+    { src: '/images/itinerary/germany/baltic-germany-photos/aeroskobing.webp', alt: 'Aeroskobing' },
+    { src: '/images/itinerary/germany/baltic-germany-photos/fehmarn.webp', alt: 'Fehmarn' },
+    { src: '/images/itinerary/germany/baltic-germany-photos/heiligenhafen.webp', alt: 'Heiligenhafen' },
+    { src: '/images/itinerary/germany/baltic-germany-photos/marstal-harbour.webp', alt: 'Marstal Harbour' },
+  ],
   routeDays: [
     {
       id: 'baltic-fyn-circle-14-days-day-1',
@@ -29,7 +34,7 @@ const balticFynCircle14Route: ItineraryRoute = {
       day: 2,
       mapPin: { desktop: { left: 61.0, top: 48.4 }, mobile: { left: 61.0, top: 48.4 } },
       description: 'Day 2: Burgtiefe (Fehmarn) to Bagenkop.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/germany/baltic-germany-photos/fehmarn.webp', alt: 'Fehmarn' }],
     },
     {
       id: 'baltic-fyn-circle-14-days-day-3',
@@ -56,7 +61,7 @@ const balticFynCircle14Route: ItineraryRoute = {
       day: 5,
       mapPin: { desktop: { left: 40.2, top: 13.2 }, mobile: { left: 40.2, top: 13.2 } },
       description: 'Day 5: Svendborg to Faaborg.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/germany/baltic-germany-photos/svendborg.webp', alt: 'Svendborg' }],
     },
     {
       id: 'baltic-fyn-circle-14-days-day-6',
@@ -74,7 +79,7 @@ const balticFynCircle14Route: ItineraryRoute = {
       day: 7,
       mapPin: { desktop: { left: 13.2, top: 25.8 }, mobile: { left: 13.2, top: 25.8 } },
       description: 'Day 7: Aeroskobing to Dyvig.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/germany/baltic-germany-photos/aeroskobing.webp', alt: 'Aeroskobing' }],
     },
     {
       id: 'baltic-fyn-circle-14-days-day-8',
@@ -110,7 +115,9 @@ const balticFynCircle14Route: ItineraryRoute = {
       day: 11,
       mapPin: { desktop: { left: 61.0, top: 48.4 }, mobile: { left: 61.0, top: 48.4 } },
       description: 'Day 11: Marstal to Bagenkop.',
-      gallery: [],
+      gallery: [
+        { src: '/images/itinerary/germany/baltic-germany-photos/marstal-harbour.webp', alt: 'Marstal Harbour' },
+      ],
     },
     {
       id: 'baltic-fyn-circle-14-days-day-12',
@@ -128,7 +135,7 @@ const balticFynCircle14Route: ItineraryRoute = {
       day: 13,
       mapPin: { desktop: { left: 81.1, top: 85.9 }, mobile: { left: 81.1, top: 85.9 } },
       description: 'Day 13: Burgtiefe (Fehmarn) to Grossenbrode.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/germany/baltic-germany-photos/fehmarn.webp', alt: 'Fehmarn' }],
     },
     {
       id: 'baltic-fyn-circle-14-days-day-14',

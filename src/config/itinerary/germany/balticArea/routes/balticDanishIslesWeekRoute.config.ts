@@ -11,7 +11,12 @@ const balticDanishIslesWeekRoute: ItineraryRoute = {
     src: '/images/itinerary/germany/baltic-germany-photos/heiligenhafen.webp',
     alt: 'German Baltic & Danish Isles',
   },
-  gallery: [],
+  gallery: [
+    { src: '/images/itinerary/germany/baltic-germany-photos/aeroskobing.webp', alt: 'Aeroskobing' },
+    { src: '/images/itinerary/germany/baltic-germany-photos/fehmarn.webp', alt: 'Fehmarn' },
+    { src: '/images/itinerary/germany/baltic-germany-photos/heiligenhafen.webp', alt: 'Heiligenhafen' },
+    { src: '/images/itinerary/germany/baltic-germany-photos/marstal-harbour.webp', alt: 'Marstal Harbour' },
+  ],
   routeDays: [
     {
       id: 'baltic-danish-isles-week-day-1',
@@ -29,7 +34,7 @@ const balticDanishIslesWeekRoute: ItineraryRoute = {
       day: 2,
       mapPin: { desktop: { left: 59.3, top: 35.3 }, mobile: { left: 59.3, top: 35.3 } },
       description: 'Day 2: Burgtiefe (Fehmarn) to Bagenkop.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/germany/baltic-germany-photos/fehmarn.webp', alt: 'Fehmarn' }],
     },
     {
       id: 'baltic-danish-isles-week-day-3',
@@ -65,7 +70,9 @@ const balticDanishIslesWeekRoute: ItineraryRoute = {
       day: 6,
       mapPin: { desktop: { left: 59.3, top: 35.3 }, mobile: { left: 59.3, top: 35.3 } },
       description: 'Day 6: Sonderborg to Bagenkop.',
-      gallery: [],
+      gallery: [
+        { src: '/images/itinerary/germany/baltic-germany-photos/sonderborg-castle.webp', alt: 'Sonderborg Castle' },
+      ],
     },
     {
       id: 'baltic-danish-isles-week-day-7',

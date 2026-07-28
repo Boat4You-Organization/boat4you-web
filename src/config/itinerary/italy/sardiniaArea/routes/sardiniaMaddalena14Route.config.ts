@@ -8,7 +8,12 @@ const sardiniaMaddalena14Route: ItineraryRoute = {
   startingPoint: 'Olbia',
   otherPoints: ['Bonifacio', 'Caprera', 'Golfo Aranci'],
   cardImage: { src: '/images/itinerary/italy/sardinia-itinerary/routes/olbia-long.webp', alt: '14-day route' },
-  gallery: [],
+  gallery: [
+    { src: '/images/itinerary/italy/destinations/acciaroli.webp', alt: 'Acciaroli' },
+    { src: '/images/itinerary/italy/destinations/agropoli.webp', alt: 'Agropoli' },
+    { src: '/images/itinerary/italy/destinations/albenga.webp', alt: 'Albenga' },
+    { src: '/images/itinerary/italy/destinations/amalfi.webp', alt: 'Amalfi' },
+  ],
   routeDays: [
     {
       id: 'sardinia-maddalena-14-days-day-1',

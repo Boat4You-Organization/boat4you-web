@@ -8,7 +8,18 @@ const seychellesExplorer14Route: ItineraryRoute = {
   startingPoint: 'Eden Island (Mahe)',
   otherPoints: ['Silhouette', 'Praslin (Baie Sainte Anne)', 'Felicite'],
   cardImage: { src: '/images/itinerary/seychelles/seychelles-photos/mahe-eden-island.webp', alt: 'Seychelles' },
-  gallery: [],
+  gallery: [
+    { src: '/images/itinerary/seychelles/seychelles-photos/curieuse-tortoises.webp', alt: 'Curieuse Tortoises' },
+    {
+      src: '/images/itinerary/seychelles/seychelles-photos/granite-boulders-beach.webp',
+      alt: 'Granite Boulders Beach',
+    },
+    {
+      src: '/images/itinerary/seychelles/seychelles-photos/la-digue-anse-source-d-argent.webp',
+      alt: 'La Digue Anse Source D Argent',
+    },
+    { src: '/images/itinerary/seychelles/seychelles-photos/mahe-eden-island.webp', alt: 'Mahe Eden Island' },
+  ],
   routeDays: [
     {
       id: 'seychelles-explorer-14-days-day-1',
@@ -17,7 +28,9 @@ const seychellesExplorer14Route: ItineraryRoute = {
       day: 1,
       mapPin: { desktop: { left: 41.3, top: 81.1 }, mobile: { left: 41.3, top: 81.1 } },
       description: 'Day 1: Eden Island (Mahe) to Sainte Anne.',
-      gallery: [],
+      gallery: [
+        { src: '/images/itinerary/seychelles/seychelles-photos/mahe-eden-island.webp', alt: 'Mahe Eden Island' },
+      ],
     },
     {
       id: 'seychelles-explorer-14-days-day-2',
@@ -26,7 +39,9 @@ const seychellesExplorer14Route: ItineraryRoute = {
       day: 2,
       mapPin: { desktop: { left: 27.5, top: 86.8 }, mobile: { left: 27.5, top: 86.8 } },
       description: 'Day 2: Sainte Anne to Baie Ternay.',
-      gallery: [],
+      gallery: [
+        { src: '/images/itinerary/seychelles/seychelles-photos/curieuse-tortoises.webp', alt: 'Curieuse Tortoises' },
+      ],
     },
     {
       id: 'seychelles-explorer-14-days-day-3',
@@ -44,7 +59,9 @@ const seychellesExplorer14Route: ItineraryRoute = {
       day: 4,
       mapPin: { desktop: { left: 59.1, top: 33.2 }, mobile: { left: 59.1, top: 33.2 } },
       description: 'Day 4: Silhouette to Cousin.',
-      gallery: [],
+      gallery: [
+        { src: '/images/itinerary/seychelles/seychelles-photos/silhouette-island.webp', alt: 'Silhouette Island' },
+      ],
     },
     {
       id: 'seychelles-explorer-14-days-day-5',
@@ -67,7 +84,9 @@ const seychellesExplorer14Route: ItineraryRoute = {
       day: 6,
       mapPin: { desktop: { left: 59.5, top: 13.2 }, mobile: { left: 59.5, top: 13.2 } },
       description: 'Day 6: Praslin (Baie Sainte Anne) to Aride.',
-      gallery: [],
+      gallery: [
+        { src: '/images/itinerary/seychelles/seychelles-photos/praslin-anse-lazio.webp', alt: 'Praslin Anse Lazio' },
+      ],
     },
     {
       id: 'seychelles-explorer-14-days-day-7',
@@ -105,7 +124,12 @@ const seychellesExplorer14Route: ItineraryRoute = {
       day: 10,
       mapPin: { desktop: { left: 86.8, top: 36.3 }, mobile: { left: 86.8, top: 36.3 } },
       description: 'Day 10: La Digue to Marianne.',
-      gallery: [],
+      gallery: [
+        {
+          src: '/images/itinerary/seychelles/seychelles-photos/la-digue-anse-source-d-argent.webp',
+          alt: 'La Digue Anse Source D Argent',
+        },
+      ],
     },
     {
       id: 'seychelles-explorer-14-days-day-11',
@@ -114,7 +138,12 @@ const seychellesExplorer14Route: ItineraryRoute = {
       day: 11,
       mapPin: { desktop: { left: 81.8, top: 31.5 }, mobile: { left: 81.8, top: 31.5 } },
       description: 'Day 11: Marianne to Felicite.',
-      gallery: [],
+      gallery: [
+        {
+          src: '/images/itinerary/seychelles/seychelles-photos/la-digue-anse-source-d-argent.webp',
+          alt: 'La Digue Anse Source D Argent',
+        },
+      ],
     },
     {
       id: 'seychelles-explorer-14-days-day-12',
@@ -123,7 +152,12 @@ const seychellesExplorer14Route: ItineraryRoute = {
       day: 12,
       mapPin: { desktop: { left: 81.7, top: 26.9 }, mobile: { left: 81.7, top: 26.9 } },
       description: 'Day 12: Felicite to Grande Soeur.',
-      gallery: [],
+      gallery: [
+        {
+          src: '/images/itinerary/seychelles/seychelles-photos/granite-boulders-beach.webp',
+          alt: 'Granite Boulders Beach',
+        },
+      ],
     },
     {
       id: 'seychelles-explorer-14-days-day-13',
@@ -132,7 +166,9 @@ const seychellesExplorer14Route: ItineraryRoute = {
       day: 13,
       mapPin: { desktop: { left: 82.0, top: 32.4 }, mobile: { left: 82.0, top: 32.4 } },
       description: 'Day 13: Grande Soeur to Ile Cocos.',
-      gallery: [],
+      gallery: [
+        { src: '/images/itinerary/seychelles/seychelles-photos/curieuse-tortoises.webp', alt: 'Curieuse Tortoises' },
+      ],
     },
     {
       id: 'seychelles-explorer-14-days-day-14',

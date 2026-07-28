@@ -8,7 +8,12 @@ const ijsselmeerClassicWeekRoute: ItineraryRoute = {
   startingPoint: 'Lemmer',
   otherPoints: ['Enkhuizen', 'Hoorn'],
   cardImage: { src: '/images/itinerary/netherlands/netherlands-photos/lemmer.webp', alt: 'IJsselmeer & Dutch Waters' },
-  gallery: [],
+  gallery: [
+    { src: '/images/itinerary/netherlands/netherlands-photos/enkhuizen-harbour.webp', alt: 'Enkhuizen Harbour' },
+    { src: '/images/itinerary/netherlands/netherlands-photos/flat-bottom-ships.webp', alt: 'Flat Bottom Ships' },
+    { src: '/images/itinerary/netherlands/netherlands-photos/hoorn.webp', alt: 'Hoorn' },
+    { src: '/images/itinerary/netherlands/netherlands-photos/ijsselmeer.webp', alt: 'Ijsselmeer' },
+  ],
   routeDays: [
     {
       id: 'ijsselmeer-classic-week-day-1',
@@ -17,7 +22,7 @@ const ijsselmeerClassicWeekRoute: ItineraryRoute = {
       day: 1,
       mapPin: { desktop: { left: 74.3, top: 54.8 }, mobile: { left: 74.3, top: 54.8 } },
       description: 'Day 1: Lemmer to Urk.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/netherlands/netherlands-photos/lemmer.webp', alt: 'Lemmer' }],
     },
     {
       id: 'ijsselmeer-classic-week-day-2',
@@ -62,7 +67,7 @@ const ijsselmeerClassicWeekRoute: ItineraryRoute = {
       day: 6,
       mapPin: { desktop: { left: 47.3, top: 13.2 }, mobile: { left: 47.3, top: 13.2 } },
       description: 'Day 6: Medemblik to Stavoren.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/netherlands/netherlands-photos/medemblik.webp', alt: 'Medemblik' }],
     },
     {
       id: 'ijsselmeer-classic-week-day-7',

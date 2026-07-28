@@ -8,7 +8,12 @@ const ajaccioSouthCorsicaRoute: ItineraryRoute = {
   startingPoint: 'Ajaccio',
   otherPoints: ['Bonifacio', 'Iles Lavezzi'],
   cardImage: { src: '/images/itinerary/france/corsica-photos/ajaccio.webp', alt: 'Corsica' },
-  gallery: [],
+  gallery: [
+    { src: '/images/itinerary/france/corsica-photos/ajaccio.webp', alt: 'Ajaccio' },
+    { src: '/images/itinerary/france/corsica-photos/bonifacio-cliffs.webp', alt: 'Bonifacio Cliffs' },
+    { src: '/images/itinerary/france/corsica-photos/calvi-citadel.webp', alt: 'Calvi Citadel' },
+    { src: '/images/itinerary/france/corsica-photos/girolata.webp', alt: 'Girolata' },
+  ],
   routeDays: [
     {
       id: 'ajaccio-south-corsica-day-1',
@@ -17,7 +22,7 @@ const ajaccioSouthCorsicaRoute: ItineraryRoute = {
       day: 1,
       mapPin: { desktop: { left: 21.6, top: 40.1 }, mobile: { left: 21.6, top: 40.1 } },
       description: 'Day 1: Ajaccio to Porto Pollo.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/france/corsica-photos/ajaccio.webp', alt: 'Ajaccio' }],
     },
     {
       id: 'ajaccio-south-corsica-day-2',
@@ -26,7 +31,7 @@ const ajaccioSouthCorsicaRoute: ItineraryRoute = {
       day: 2,
       mapPin: { desktop: { left: 23.4, top: 49.3 }, mobile: { left: 23.4, top: 49.3 } },
       description: 'Day 2: Porto Pollo to Campomoro.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/france/corsica-photos/bonifacio-cliffs.webp', alt: 'Bonifacio Cliffs' }],
     },
     {
       id: 'ajaccio-south-corsica-day-3',
@@ -35,7 +40,7 @@ const ajaccioSouthCorsicaRoute: ItineraryRoute = {
       day: 3,
       mapPin: { desktop: { left: 29.1, top: 60.8 }, mobile: { left: 29.1, top: 60.8 } },
       description: 'Day 3: Campomoro to Tizzano.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/france/corsica-photos/ajaccio.webp', alt: 'Ajaccio' }],
     },
     {
       id: 'ajaccio-south-corsica-day-4',

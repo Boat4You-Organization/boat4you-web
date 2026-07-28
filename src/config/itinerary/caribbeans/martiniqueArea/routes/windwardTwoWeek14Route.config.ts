@@ -8,7 +8,12 @@ const windwardTwoWeek14Route: ItineraryRoute = {
   startingPoint: 'Le Marin',
   otherPoints: ['Anse Couleuvre', 'Anse Dufour', 'Grande Anse d’Arlet'],
   cardImage: { src: '/images/itinerary/caribbeans/martinique-itinerary/itinerary-card.webp', alt: '14-day route' },
-  gallery: [],
+  gallery: [
+    { src: '/images/itinerary/caribbeans/destinations/anse-couleuvre.webp', alt: 'Anse Couleuvre' },
+    { src: '/images/itinerary/caribbeans/destinations/anse-dufour.webp', alt: 'Anse Dufour' },
+    { src: '/images/itinerary/caribbeans/destinations/anse-marcel.webp', alt: 'Anse Marcel' },
+    { src: '/images/itinerary/caribbeans/destinations/cane-garden-bay.webp', alt: 'Cane Garden Bay' },
+  ],
   routeDays: [
     {
       id: 'windward-two-week-14-days-day-1',
@@ -89,7 +94,7 @@ const windwardTwoWeek14Route: ItineraryRoute = {
       day: 9,
       mapPin: { desktop: { left: 70.2, top: 70.5 }, mobile: { left: 70.2, top: 70.5 } },
       description: 'Day 9: Le Marin to Rodney Bay (St. Lucia).',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/caribbeans/destinations/le-marin.webp', alt: 'Le Marin' }],
     },
     {
       id: 'windward-two-week-14-days-day-10',
@@ -107,7 +112,7 @@ const windwardTwoWeek14Route: ItineraryRoute = {
       day: 11,
       mapPin: { desktop: { left: 47.8, top: 86.8 }, mobile: { left: 47.8, top: 86.8 } },
       description: 'Day 11: Marigot Bay (St. Lucia) to Soufrière (Pitons).',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/caribbeans/destinations/marigot-town.webp', alt: 'Marigot Town' }],
     },
     {
       id: 'windward-two-week-14-days-day-12',
@@ -125,7 +130,7 @@ const windwardTwoWeek14Route: ItineraryRoute = {
       day: 13,
       mapPin: { desktop: { left: 70.2, top: 70.5 }, mobile: { left: 70.2, top: 70.5 } },
       description: 'Day 13: Marigot Bay (St. Lucia) to Rodney Bay (St. Lucia).',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/caribbeans/destinations/marigot-town.webp', alt: 'Marigot Town' }],
     },
     {
       id: 'windward-two-week-14-days-day-14',

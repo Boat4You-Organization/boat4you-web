@@ -8,7 +8,15 @@ const bokaBudvaWeekRoute: ItineraryRoute = {
   startingPoint: 'Porto Montenegro (Tivat)',
   otherPoints: ['Kotor', 'Budva'],
   cardImage: { src: '/images/itinerary/montenegro/montenegro-photos/porto-montenegro-tivat.webp', alt: 'Montenegro' },
-  gallery: [],
+  gallery: [
+    { src: '/images/itinerary/montenegro/montenegro-photos/budva-old-town.webp', alt: 'Budva Old Town' },
+    { src: '/images/itinerary/montenegro/montenegro-photos/herceg-novi.webp', alt: 'Herceg Novi' },
+    { src: '/images/itinerary/montenegro/montenegro-photos/kotor-bay.webp', alt: 'Kotor Bay' },
+    {
+      src: '/images/itinerary/montenegro/montenegro-photos/perast-our-lady-of-the-rocks.webp',
+      alt: 'Perast Our Lady Of The Rocks',
+    },
+  ],
   routeDays: [
     {
       id: 'boka-budva-week-day-1',
@@ -46,7 +54,7 @@ const bokaBudvaWeekRoute: ItineraryRoute = {
       day: 4,
       mapPin: { desktop: { left: 20.1, top: 44.9 }, mobile: { left: 20.1, top: 44.9 } },
       description: 'Day 4: Herceg Novi to Zanjice.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/montenegro/montenegro-photos/herceg-novi.webp', alt: 'Herceg Novi' }],
     },
     {
       id: 'boka-budva-week-day-5',
@@ -64,7 +72,7 @@ const bokaBudvaWeekRoute: ItineraryRoute = {
       day: 6,
       mapPin: { desktop: { left: 53.9, top: 59.7 }, mobile: { left: 53.9, top: 59.7 } },
       description: 'Day 6: Budva to Bigova.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/montenegro/montenegro-photos/budva-old-town.webp', alt: 'Budva Old Town' }],
     },
     {
       id: 'boka-budva-week-day-7',

@@ -8,7 +8,12 @@ const dutchWaters14Route: ItineraryRoute = {
   startingPoint: 'Lemmer',
   otherPoints: ['Enkhuizen', 'Muiden', 'Makkum'],
   cardImage: { src: '/images/itinerary/netherlands/netherlands-photos/lemmer.webp', alt: 'IJsselmeer & Dutch Waters' },
-  gallery: [],
+  gallery: [
+    { src: '/images/itinerary/netherlands/netherlands-photos/enkhuizen-harbour.webp', alt: 'Enkhuizen Harbour' },
+    { src: '/images/itinerary/netherlands/netherlands-photos/flat-bottom-ships.webp', alt: 'Flat Bottom Ships' },
+    { src: '/images/itinerary/netherlands/netherlands-photos/hoorn.webp', alt: 'Hoorn' },
+    { src: '/images/itinerary/netherlands/netherlands-photos/ijsselmeer.webp', alt: 'Ijsselmeer' },
+  ],
   routeDays: [
     {
       id: 'dutch-waters-14-days-day-1',
@@ -17,7 +22,7 @@ const dutchWaters14Route: ItineraryRoute = {
       day: 1,
       mapPin: { desktop: { left: 48.7, top: 31.1 }, mobile: { left: 48.7, top: 31.1 } },
       description: 'Day 1: Lemmer to Stavoren.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/netherlands/netherlands-photos/lemmer.webp', alt: 'Lemmer' }],
     },
     {
       id: 'dutch-waters-14-days-day-2',
@@ -26,7 +31,7 @@ const dutchWaters14Route: ItineraryRoute = {
       day: 2,
       mapPin: { desktop: { left: 53.1, top: 13.2 }, mobile: { left: 53.1, top: 13.2 } },
       description: 'Day 2: Stavoren to Makkum.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/netherlands/netherlands-photos/lemmer.webp', alt: 'Lemmer' }],
     },
     {
       id: 'dutch-waters-14-days-day-3',
@@ -71,7 +76,7 @@ const dutchWaters14Route: ItineraryRoute = {
       day: 7,
       mapPin: { desktop: { left: 20.3, top: 74.1 }, mobile: { left: 20.3, top: 74.1 } },
       description: 'Day 7: Volendam to Marken.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/netherlands/netherlands-photos/volendam.webp', alt: 'Volendam' }],
     },
     {
       id: 'dutch-waters-14-days-day-8',
@@ -80,7 +85,7 @@ const dutchWaters14Route: ItineraryRoute = {
       day: 8,
       mapPin: { desktop: { left: 13.2, top: 73.7 }, mobile: { left: 13.2, top: 73.7 } },
       description: 'Day 8: Marken to Monnickendam.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/netherlands/netherlands-photos/hoorn.webp', alt: 'Hoorn' }],
     },
     {
       id: 'dutch-waters-14-days-day-9',
@@ -89,7 +94,9 @@ const dutchWaters14Route: ItineraryRoute = {
       day: 9,
       mapPin: { desktop: { left: 16.7, top: 86.8 }, mobile: { left: 16.7, top: 86.8 } },
       description: 'Day 9: Monnickendam to Muiden.',
-      gallery: [],
+      gallery: [
+        { src: '/images/itinerary/netherlands/netherlands-photos/flat-bottom-ships.webp', alt: 'Flat Bottom Ships' },
+      ],
     },
     {
       id: 'dutch-waters-14-days-day-10',
@@ -116,7 +123,9 @@ const dutchWaters14Route: ItineraryRoute = {
       day: 12,
       mapPin: { desktop: { left: 74.7, top: 53.3 }, mobile: { left: 74.7, top: 53.3 } },
       description: 'Day 12: Enkhuizen to Urk.',
-      gallery: [],
+      gallery: [
+        { src: '/images/itinerary/netherlands/netherlands-photos/enkhuizen-harbour.webp', alt: 'Enkhuizen Harbour' },
+      ],
     },
     {
       id: 'dutch-waters-14-days-day-13',

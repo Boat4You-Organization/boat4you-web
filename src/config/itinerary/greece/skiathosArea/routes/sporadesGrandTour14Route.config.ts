@@ -8,7 +8,12 @@ const sporadesGrandTour14Route: ItineraryRoute = {
   startingPoint: 'Skiathos Marina',
   otherPoints: ['Agia Kiriaki', 'Alonissos', 'Koukounaries (Skiathos)'],
   cardImage: { src: '/images/itinerary/greece/skiathos-itinerary/routes/sporades.webp', alt: '14-day route' },
-  gallery: [],
+  gallery: [
+    { src: '/images/itinerary/greece/destinations/adhamas.webp', alt: 'Adhamas' },
+    { src: '/images/itinerary/greece/destinations/aegina-town.webp', alt: 'Aegina Town' },
+    { src: '/images/itinerary/greece/destinations/aegina.webp', alt: 'Aegina' },
+    { src: '/images/itinerary/greece/destinations/agios.webp', alt: 'Agios' },
+  ],
   routeDays: [
     {
       id: 'sporades-grand-tour-14-days-day-1',

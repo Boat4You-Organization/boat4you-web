@@ -8,7 +8,12 @@ const gokovaGulf14Route: ItineraryRoute = {
   startingPoint: 'Bodrum',
   otherPoints: ['Akyaka', 'Cleopatra Island', 'Didim'],
   cardImage: { src: '/images/itinerary/turkey/bodrum-itinerary/routes/bodrum.webp', alt: '14-day route' },
-  gallery: [],
+  gallery: [
+    { src: '/images/itinerary/turkey/destinations/akyaka.webp', alt: 'Akyaka' },
+    { src: '/images/itinerary/turkey/destinations/bodrum-marina.webp', alt: 'Bodrum Marina' },
+    { src: '/images/itinerary/turkey/destinations/bodrum-town.webp', alt: 'Bodrum Town' },
+    { src: '/images/itinerary/turkey/destinations/butterfly-valley.webp', alt: 'Butterfly Valley' },
+  ],
   routeDays: [
     {
       id: 'gokova-gulf-14-days-day-1',
@@ -17,7 +22,7 @@ const gokovaGulf14Route: ItineraryRoute = {
       day: 1,
       mapPin: { desktop: { left: 24.0, top: 62.9 }, mobile: { left: 24.0, top: 62.9 } },
       description: 'Day 1: Bodrum to Kara Ada.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/turkey/destinations/bodrum-marina.webp', alt: 'Bodrum Marina' }],
     },
     {
       id: 'gokova-gulf-14-days-day-2',
@@ -89,7 +94,7 @@ const gokovaGulf14Route: ItineraryRoute = {
       day: 9,
       mapPin: { desktop: { left: 24.0, top: 62.9 }, mobile: { left: 24.0, top: 62.9 } },
       description: 'Day 9: Çökertme to Kara Ada.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/turkey/destinations/cokertme.webp', alt: 'Cokertme' }],
     },
     {
       id: 'gokova-gulf-14-days-day-10',
@@ -98,7 +103,9 @@ const gokovaGulf14Route: ItineraryRoute = {
       day: 10,
       mapPin: { desktop: { left: 16.9, top: 46.6 }, mobile: { left: 16.9, top: 46.6 } },
       description: 'Day 10: Kara Ada to Göl Türkbükü.',
-      gallery: [],
+      gallery: [
+        { src: '/images/itinerary/turkey/destinations/yalikavak-golturkbuku.webp', alt: 'Yalikavak Golturkbuku' },
+      ],
     },
     {
       id: 'gokova-gulf-14-days-day-11',
@@ -125,7 +132,7 @@ const gokovaGulf14Route: ItineraryRoute = {
       day: 13,
       mapPin: { desktop: { left: 16.9, top: 46.6 }, mobile: { left: 16.9, top: 46.6 } },
       description: 'Day 13: Didim to Göl Türkbükü.',
-      gallery: [],
+      gallery: [{ src: '/images/itinerary/turkey/destinations/didim.webp', alt: 'Didim' }],
     },
     {
       id: 'gokova-gulf-14-days-day-14',
