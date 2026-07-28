@@ -1,1 +1,753 @@
-{}
+{
+  "routes": {
+    "ajaccio-south-corsica": {
+      "metaTitle": "7 dana: južna Korzika i Bonifacio | Boat4You",
+      "metaDesc": "Od Ajaccia na jug do Bonifacia i otoka Lavezzi: sedam dana kroz zaljev Valinco, granitne kule i luke pod liticama.",
+      "days": {
+        "1": {
+          "shortDescription": "Isplovite iz Napoleonove rodne luke, obiđite Capo di Muro i bacite sidro u pješčanim uvalama Porto Polla.",
+          "description": "Opskrba u Ajacciu ide lako, pa se većina posada natovari na natkrivenoj tržnici prije nego što odveže konope. Čim izađete iz zaljeva obala postaje divlja dok se probijate na jug pokraj Capo di Mura, otprilike dvadesetak milja otvorene vode, s popodnevnim termikom koji obično popuni s krme. Porto Pollo leži na ulazu u zaljev Valinco, mirno mjesto s pjeskovitim dnom koje dobro drži sidro. Lučki ured je stvarno susretljiv i javlja se na radio, što puno znači kad stignete kasno. Skočite s krme prije večere; more je ovdje mirno i plitko taman za prvu noć. Iz Ajaccia obično krećemo do sredine prijepodneva da do sidrišta stignemo za svjetla i uz vremena za pošteno uhodavanje broda.",
+          "thingsToDo": [
+            "Kupnja na natkrivenoj tržnici u Ajacciu prije isplovljenja",
+            "Ronjenje na dah u plićaku ispred Porto Polla",
+            "Najam daske za jedrenje u uvali Porto Pollo",
+            "Piće uz zalazak sunca u beach baru Porto Polla"
+          ],
+          "mooringTip": "Porto Pollo dobro drži na pijesku na 3-5 metara; usidrite se ispred plaže umjesto da se gurate uz mali gat, a lučki ured zovnite na VHF ako želite mrtvi vez ili mjesto u srpnju."
+        },
+        "2": {
+          "shortDescription": "Kratak dvosatni skok preko Valinca do Campomora, gdje najveća đenovljanska kula na Korzici čuva mirnu pješčanu uvalu.",
+          "description": "Ovo je jedna od kraćih etapa tjedna, jedva dva sata ako vjetar surađuje, pa nema žurbe s polaskom. Campomoro zatvara južnu stranu zaljeva Valinco, selo granitnih kuća koje je zadržalo duh ribarskog zaseoka. Zvjezdasta kula na rtu najveća je na Korzici i vrijedi dvadesetak minuta hoda uzbrdo zbog pogleda natrag preko zaljeva. Sidrenje je jednostavno po mirnom vremenu, s dobrim pijeskom ispred plaže. Ipak pratite prognozu: uvala je otvorena prema jugozapadu i libeccio šalje valove ravno unutra. Ronjenje uz stijene na sjevernom kraju otkriva podosta ribe. Na kopnu vam nekoliko malih restorana, par koraka od mora, servira dnevni ulov.",
+          "thingsToDo": [
+            "Uspon do zvjezdaste kule Campomoro",
+            "Ronjenje na dah uz stijene na sjeveru uvale",
+            "Šetnja obalnom stazom iza kule",
+            "Svježa riba u restoranu na plaži"
+          ],
+          "mooringTip": "Sidrite na pijesku ispred plaže na 4-6 metara, ali Campomoro shvatite kao sidrište samo za lijepo vrijeme. Ako se preko noći najavljuje jugozapadni libeccio, uvala se razljulja, a Porto Pollo ili Propriano su sigurnije utočište."
+        },
+        "3": {
+          "shortDescription": "Uz obalu na jug do Tizzana, džepne ribarske lučice u uvali bistre vode, otprilike na pola puta do Bonifaciovih vrata.",
+          "description": "Južno od Campomora obala postaje pusta, zaleđena makijom rezervata Senetosa s njegova dva svjetionika. Tizzano se otvara kao uska uvala, lako ga je promašiti dok mu niste gotovo na nosu. U samu lučicu stanu brodovi do deset metara; sve veće sidri ispred gata u uvali, gdje je voda bistra nad pijeskom i travom. Mjesto je maleno, šačica kuća, dućan za nadopunu i par restorana koji se oslanjaju na lokalni ulov i vino iz Sartènea. Ovdje se ne događa bogzna što, a upravo je to poanta nakon dvije užurbane luke. Ovu etapu često tempiramo za kasno prijepodne kako bi popodnevno sunce palo na sidrište. Odvezite se tenderom na kopno na ranu večeru i gledajte kako se ribari vraćaju.",
+          "thingsToDo": [
+            "Sidrenje i kupanje u bistroj uvali Tizzano",
+            "Večera od svježe ribe u luci",
+            "Uz večeru crno vino iz Sartènea",
+            "Nadopuna namirnica u dućanu u Tizzanu"
+          ],
+          "mooringTip": "Lučica prima samo brodove do otprilike 10 m; veće jahte sidre ispred gata na 3-5 m po pijesku. Dobro nabijte sidro i provjerite krug zaošijavanja jer je uvala tijesna i u sezoni puna lokalnih bova."
+        },
+        "4": {
+          "shortDescription": "Obiđite jugozapadni vrh Korzike i uđite kroz procjep među liticama u Bonifacio, jednu od najljepših prirodnih luka Mediterana.",
+          "description": "Današnja etapa nosi najviše izloženosti na cijelom putovanju jer se obilazi jugozapadni kut gdje Bonifaciova vrata tjeraju vjetar kroz lijevak između Korzike i Sardinije. Libeccio ili maestral znaju puhnuti preko trideset čvorova, pa prognozu uvijek provjeravamo večer prije i krećemo rano, prije popodnevnog jačanja. Nagrada je sam prilaz. S mora je ulaz tek obična pukotina u bijelim vapnenačkim liticama, nevidljiva dok mu se ne približite, a onda kalanka skreće udesno i luka se otvara pod starim gradom. Bonifacio se drži za vrh litice, sve sami visoki dvorci i đenovljanske zidine. Marina se u srpnju i kolovozu puni brzo, pa rezervirajte unaprijed. Kad se vežete, popnite se stubama u haute ville na piće na bedemima i šetnju do groblja Bosco u zalazak sunca.",
+          "thingsToDo": [
+            "Šetnja bedemima gornjega grada, haute ville",
+            "Silazak stubama King of Aragon",
+            "Zalazak sunca na groblju Bosco nad liticom",
+            "Aperitiv na terasi marine u Bonifaciju"
+          ],
+          "mooringTip": "Marinu u Bonifaciju rezervirajte unaprijed za srpanj i kolovoz; vez je krmom uz rivu s mrtvim vezovima i ekipom marine na pontonima. Ako je puna, bove u uvali Calanque de la Catena tik izvan luke stoje oko 25 eura za jednotrupca."
+        },
+        "5": {
+          "shortDescription": "Šest milja preko kanala do otoka Lavezzi, granitnog rezervata prirode okruženog svijetlim pijeskom i uvalama za ronjenje.",
+          "description": "Otočje Lavezzi leži svega nekoliko milja istočno od Bonifacia, dovoljno blizu da je sve u tempiranju vjetra, a ne u udaljenosti. To su niski granitni otoci, isklesani u zaobljene gromade, a cijela skupina leži unutar rezervata prirode Bocche di Bonifacio. Cala di Greco na sjevernoj strani uobičajeno je sidrište, s pjeskovitim jezikom u koji se sidri i bovama u blizini koje su rezervirane za izletničke brodove iz Bonifacia, pa ih ostavite slobodne. Ronjenje oko uvala Cala Lazarina i Cala di u Grecu najbolje je u tjednu, granitni kanali puni ribe u kristalno bistrom plićaku. Pazite na označene zone zabranjenog sidrenja, ograđene žutim bovama radi zaštite posidonije. Ovo je dnevna postaja; sidrište je otvoreno, pa se većina posada vraća u zaklon prije mraka.",
+          "thingsToDo": [
+            "Ronjenje kroz granitne kanale uvale Cala Lazarina",
+            "Sidrenje i kupanje u uvali Cala di Greco",
+            "Šetnja stazom do spomen-obilježja na Lavezzima",
+            "Promatranje ribe u uvali Cala di u Grecu"
+          ],
+          "mooringTip": "Sidrite na pjeskovitim mrljama u uvali Cala di Greco na 3-6 m i držite se podalje od zaštićenih zona označenih žutim bovama. To je dnevno sidrište samo za lijepo vrijeme, izloženo valovima, pa planirajte povratak u Bonifacio ili odlazak na sjever prije večeri."
+        },
+        "6": {
+          "shortDescription": "Dugi povratak na sjever uz zapadnu obalu do Propriana, prave turističke marine na dnu zaljeva Valinco.",
+          "description": "Evo i etape koja jede milje, dugo krmanje uz vjetar ili bočno prema sjeveru, iz vrata natrag u zaljev Valinco. Krenite rano. Uz prevladavajući jugozapadnjak dobar dio puta možete imati pristojan kut jedrenja, ali etapa je izložena i najbolje ju je odraditi u jutarnjem laganijem vjetru, a ne u popodnevnoj termici u punoj snazi. Propriano vas čeka na vrhu zaljeva, pravi turistički gradić s velikom marinom, kafićima i restoranima uz rivu te lučkim osobljem koje vas primi na ponton. Nakon divljih sidrišta juga djeluje gotovo užurbano. Ovdje se nadopunite, operite rublje i jedite na kopnu; restorani uz more rade dobru ribu s roštilja i izbor je stvarno velik. Udoban je i zaklonjen vez za predah prije završnog povratka kući.",
+          "thingsToDo": [
+            "Nadopuna namirnica uz rivu u Proprianu",
+            "Riba s roštilja u restoranu uz more",
+            "Večernja šetnja rivom marine",
+            "Kupanje na plaži Plage du Lido u Proprianu"
+          ],
+          "mooringTip": "Kapetaniju Propriana nazovite u prilazu radi veza; ekipa marine dočeka vas na pontonu, a voda i struja su na vezu. Marina je dobro zaklonjena i pravo mjesto za prečekati libeccio koji se kuha vani."
+        },
+        "7": {
+          "shortDescription": "Zadnja etapa natrag do baze, uz obalu Valinca i oko Capo di Mura kako bi se krug zatvorio u Ajacciu.",
+          "description": "Povratak vodi natrag pokraj izloženog rta Capo di Muro prije nego što obala prijeđe u zaljev Ajaccia. Ima tridesetak milja, pa krenite na vrijeme, pogotovo ako imate fiksni termin primopredaje; čarter baze brod obično žele natrag do večeri ili sljedećeg jutra. Ako vam vrijeme dopusti, isplati se stati na posljednje kupanje u nekoj uvali prije grada, u Portigliolu ili na plažama ispod Coti-Chiavarija, prije gužve u marini. I sam Ajaccio zaslužuje popodne ako ga imate. Stari grad i Napoleonova rodna kuća, citadela i posljednja večera na kopnu lijepo zaokruže tjedan. Mi obično natočimo gorivo i sredimo brod večer prije primopredaje kako zadnje jutro ne bi bilo trka s vremenom.",
+          "thingsToDo": [
+            "Posljednje kupanje na plaži Portigliolo",
+            "Obilazak Napoleonove rodne kuće, Maison Bonaparte",
+            "Lutanje starim gradom i citadelom Ajaccia",
+            "Oproštajna večera na rivi u Ajacciu"
+          ],
+          "mooringTip": "Natočite gorivo prije povratka na čarter vez u Ajacciu i potvrdite s bazom vrijeme primopredaje i ponton. Ciljajte da budete na vezu dok je još dana; marina se za smjene puni, a prostora za manevar je malo."
+        }
+      }
+    },
+    "brittany-islands-14-days": {
+      "metaTitle": "14 dana: Morbihan i Belle-Île | Boat4You",
+      "metaDesc": "Dva tjedna od Le Crouestyja kroz zaljev Morbihan do Houata, Belle-Îlea, Groixa i Lorienta. Sidrišta, luke i savjeti za vez u južnoj Bretanji.",
+      "days": {
+        "1": {
+          "shortDescription": "Uhvatite plimnu struju kroz tjesnac u zaljev Morbihan i uđite kroz ustavu u marinu u srcu starog Vannesa.",
+          "description": "Prva etapa je kratka, ali se vodi po satu, a ne po logu. Isplovljenje tempirajte tako da vas plima ponese kroz procjep između Port-Navala i Kerpenhira, gdje struja Jument vuče žestoko na velikim koeficijentima. Unutra se voda smiri, a kanal prema Vannesu vijuga pokraj kamenica na stalcima i niskih zelenih obala. Marina je smještena u samom starom gradu, a do nje se dolazi kroz pokretni most i prag koji se otvaraju samo oko visoke vode, pa provjerite raspored prije nego što se obvežete. Na kopnu vrijedi odvojiti sat vremena za bedeme i stare perionice uz rijeku Marle, a uličice iza katedrale pune su kreperija. Obično stignemo na vrijeme da prošećemo zidinama prije večere. Ovdje kupite kruh i kavu; to je najbolje opskrbljena postaja na cijelom krugu.",
+          "thingsToDo": [
+            "Šetnja srednjovjekovnim bedemima iznad perionica",
+            "Večera u kreperiji u uličicama starog grada",
+            "Katedrala Saint-Pierre i trg Place Henri IV",
+            "Potpuna opskrba na tržnici u centru grada"
+          ],
+          "mooringTip": "Pokretni most i prag prema bazenu Vannesa otvaraju se samo u prozoru oko visoke vode, pa dolazak i odlazak uskladite s objavljenim rasporedom. Vezovi su u samom srcu grada i u srpnju se pune, zato nazovite kapetaniju unaprijed."
+        },
+        "2": {
+          "shortDescription": "Lijeno jutro u Vannesu, pa kratko spuštanje niz zaljev do zelenih puteljaka i polja bova otoka Île aux Moines.",
+          "description": "Iz Vannesa isplovite na oseki i pustite struju da odradi posao do otoka Île aux Moines, najvećeg i najljepšeg u zaljevu. Plovidba je duga tek nekoliko milja, ali struja žestoko vuče kroz tjesnac kod Port-Blanca, pa uskladite tempiranje i držite oko na obali. Uzmite bovu ispred Port du Lerija; dno drži nejednako, a plovni je put prometan, pa je bova ovdje bolja od sidra. Unajmite bicikl na rivi i odvezite se do šume Bois d'Amour i megalita na rtu Pointe du Trech. Selo ima nekoliko dobrih mjesta za pladanj kamenica. Večeri su tihe čim jednodnevni izletnici uhvate posljednji brodić za Port-Blanc.",
+          "thingsToDo": [
+            "Vožnja biciklom šumskom stazom Bois d'Amour",
+            "Pladanj kamenica na terasi u Le Bourgu",
+            "Megalit i pogled na rtu Pointe du Trech",
+            "Kupanje na plaži Plage du Goret"
+          ],
+          "mooringTip": "Uzmite gostujuću bovu ispred Port du Lerija umjesto da sidrite; plovni put je uzak, a dno neravno. Plimne struje uz otok teku snažno, pa priđite blizu zastoja struje ako ikako možete."
+        },
+        "3": {
+          "shortDescription": "Ponesite se osekom iz zaljeva i prijeđite Quiberonski zaljev do najpoznatije regatne luke Francuske na rijeci Crac'h.",
+          "description": "Ovo je dan kad ostavljate zaklonjenu vodu iza sebe. Iskliznite kroz tjesnac Port-Navalo na posljednjoj oseki, pa postavite kurs na zapad preko Quiberonskog zaljeva, obično lijepo bočno jedrenje u popodnevnom termiku. Ulaz u rijeku Crac'h je obilježen i jednostavan, a marina leži milju uzvodno, iza redova pontona s kamenicama ispod mosta Kerisper. La Trinité je ozbiljna jedriličarska zemlja; Tabarly je ovdje držao svoje brodove, a Spi Ouest-France i danas svakog proljeća napuni pontone. Prošećite rivom i čitajte imena na krmama regatnih brodova. Za večeru, La Maison Quintin poslužuje kamenice ravno iz rijeke, a Le Chantier jednostavnu ribu s roštilja u staroj kamenici preko vode.",
+          "thingsToDo": [
+            "Čitanje imena na krmama regatnih brodova uz pontone",
+            "Kamenice na terasi La Maison Quintin",
+            "Riba s roštilja u Le Chantieru",
+            "Šetnja preko mosta Pont de Kerisper"
+          ],
+          "mooringTip": "La Trinité je velika, dobro vođena marina s gostujućim pontonom blizu benzinske postaje; nazovite unaprijed u regatnoj sezoni kad se Crac'h brzo napuni. Riječna struja teče živo, pa vezu prilazite protiv struje."
+        },
+        "4": {
+          "shortDescription": "Jedrenje preko otvorenog zaljeva do Houata bez automobila i sidrenje ispred dugog bijelog luka dina Treac'h er Goured.",
+          "description": "Houat leži vani u otvorenom zaljevu, a plovidba iz La Trinitéa daje vam pravo jedrenje preko desetak milja quiberonske vode. Otok je malen, bez drveća i bez automobila, uokviren pijeskom. Na istočnoj strani Treac'h er Goured zavija se u dva kilometra bijelih dina i po mirnim zapadnjacima čini veličanstveno dnevno sidrište. Sidrite ispred plaže izvan označene zone kabela ili uzmite bovu u Port Saint-Gildasu na sjevernoj obali. Do sela je deset minuta hoda uzbrdo od luke, s pekarnicom i jednim-dva mjesta za rakovicu. Po sjeveroistočnjaku se sidrište pred plažom noću ljulja, pa se prebacite u zaklonjeniju vodu ispred Treac'h er Salusa.",
+          "thingsToDo": [
+            "Šetnja lukom dina Treac'h er Goured",
+            "Rakovice i škampi u selu",
+            "Obalna staza oko rta Pointe de Beg Pell",
+            "Kupanje na bijelim istočnim plažama"
+          ],
+          "mooringTip": "Polje bova u Port Saint-Gildasu ima 25 do 30 gostujućih vezova i u kolovozu se rano napuni, pa stignite do sredine popodneva. Za mirnu noć sidrite ispred Treac'h er Salusa, koji bolje zaklanja od noćnog sjeveroistočnjaka."
+        },
+        "5": {
+          "shortDescription": "Kratak skok na jug do Houatove divlje mlađe sestre, Hoëdica, sve sama vriština, utvrde i prazne plaže.",
+          "description": "Hoëdic leži svega nekoliko milja južno od Houata, pa je ovo jutro laganog jedrenja i popodne na kopnu. Otok je još manji i tiši od susjeda, niski tepih vrištine i dina sa šačicom kuća u sredini. Uzmite bovu u Port de l'Argolu, lučici na zapadnoj strani, ili se usidrite ispred po mirnom vremenu. Nema automobila ni gotovo ikakvog dućana, a to je zapravo poanta. Prošećite do stare utvrde Fort d'Hoëdic i kapelice, pa siđite na plažu Plage de la Vierge na kupanje. Večeri su ovdje otprilike najmirnije što jedrenje u Francuskoj može ponuditi. Ponesite sve s Houata; opskrba na Hoëdicu je tanka.",
+          "thingsToDo": [
+            "Obilazak obnovljene utvrde Fort d'Hoëdic",
+            "Kupanje na plaži Plage de la Vierge",
+            "Šetnja kroz vrištinu do svjetionika",
+            "Piće na palubi u potpunoj tišini"
+          ],
+          "mooringTip": "Port de l'Argol nudi gostujuće bove, ali slab zaklon po jakim zapadnjacima, pa provjerite prognozu prije nego što ostanete na noć. Namirnica je malo, zato hranu i vodu nadopunite još na Houatu."
+        },
+        "6": {
+          "shortDescription": "Prijelaz na Belle-Île, najveći bretonski otok, i vez pod Vaubanovom citadelom koja čuva prometni Le Palais.",
+          "description": "Belle-Île opravdava i ime i reputaciju, a prijelaz s Hoëdica ima petnaestak milja otvorene vode, pa birajte miran prozor. Le Palais je ulazna vrata otoka, radna luka pod velikom zvjezdastom Citadelle Vauban koju je Luj XIV. dao sagraditi da drži prilaze. U sezoni je gužva; računajte na vez u tri-četiri reda uz vanjske pontone ili ulazak u unutarnji bazen kad se vrata otvore oko visoke vode. Kad se vežete, grad ima sve što vam nakon dana na vanjskim otocima treba: brodsku opremu, tržnicu, kino i prave restorane. Prošećite bedemima citadele zbog pogleda natrag na šumu jarbola. Ovdje unajmite bicikle ili auto ako planirate vidjeti divlju južnu obalu i Aiguilles de Port-Coton.",
+          "thingsToDo": [
+            "Obilazak zvjezdaste Citadelle Vauban",
+            "Biciklom do stijena Aiguilles de Port-Coton",
+            "Kupnja na tržnici uz rivu",
+            "Kino ili večera u pravom restoranu"
+          ],
+          "mooringTip": "Le Palais se u srpnju i kolovozu puni brzo, pa stignite prije podneva i računajte na vez u nekoliko redova uz gostujuće pontone. Vrata unutarnjeg bazena otvaraju se samo oko visoke vode, pa to tempirajte ili uzmite vanjski vez."
+        },
+        "7": {
+          "shortDescription": "Samo nekoliko milja uz obalu do Sauzona, najljepše luke Belle-Îlea, sve sami pastelni pročelji i plimna uvala koja presuši.",
+          "description": "Gotovo biste mogli pješice, ali jedrenje iz Le Palaisa do Sauzona ljepši je način dolaska. Sauzon leži na dnu uskog plimnog kanala na sjeverozapadnoj obali, luk pastelnih kuća i vitki svjetionik na ulazu. Većina luke presuši, pa gosti uzimaju vezove na pramac i krmu na nizovima bova u kanalu; dublji vezovi na vanjskom kraju ostaju na vodi. Mirnije je i otmjenije nego u Le Palaisu, stvoreno za sporo popodne. Prošećite obalnom stazom do rta Pointe du Cardinal, pa se vratite na večeru. Hotel du Phare na rivi ima terasu nad morem i jednostavno, ali dobro pripremi dnevni ulov.",
+          "thingsToDo": [
+            "Obalna staza do rta Pointe du Cardinal",
+            "Večera na terasi Hotela du Phare",
+            "Fotografiranje pastelnih kuća uz rivu",
+            "Šetnja do lučkog svjetionika"
+          ],
+          "mooringTip": "Većina Sauzona presuši, pa uzmite vez na pramac i krmu u nizu bova u kanalu i provjerite imate li dubine za svoj gaz u niskoj vodi. Vanjske bove ostaju na vodi; pitajte lučkog kapetana gdje da se vežete."
+        },
+        "8": {
+          "shortDescription": "Duža etapa otvorenim morem prema sjeverozapadu do otoka Île de Groix i njegove stare tunolovske luke Port Tudy.",
+          "description": "Ovo je najduži pojedinačni skok putovanja, dvadesetak milja otvorenog Atlantika od Belle-Îlea do Groixa, pa krenite rano i pratite prognozu za bilo što sa zapada. Groix se isplati. Port Tudy na sjevernoj obali bio je nekad jedna od najvećih francuskih luka za tunu, a kamene rive i stare konzervne šupe i danas uokviruju bazen. Marina je popularna i ne prima rezervacije, pa se vežete ondje gdje vam lučki kapetan pokaže. Na kopnu prošećite ili se odvezite biciklom do plaže Plage des Grands Sables, rijetke konveksne plaže koja mijenja oblik s morskim strujama. Otok festival tune nosi u kostima, kao i dobru ribu. Nama je draga tišina Port-Laya, sićušne uvale odmah zapadno od glavne luke.",
+          "thingsToDo": [
+            "Biciklom do konveksne plaže Plage des Grands Sables",
+            "Razgledavanje starih konzervnih šupa u Port Tudyju",
+            "Šetnja do malenog Port-Laya u zalazak sunca",
+            "Plodovi mora na rivi Port Tudyja"
+          ],
+          "mooringTip": "Port Tudy ne prima rezervacije i u sezoni veže brodove u više redova, pa stignite do ranog popodneva i budite spremni vezati se uz drugu jahtu. Vanjski nizovi bova ljuljaju po sjevernom valu; unutarnji je bazen mirniji ako ima mjesta."
+        },
+        "9": {
+          "shortDescription": "Kratko jedrenje na istok u veliki zaljev Lorienta, francuskog jedriličarskog grada, pokraj betonskih podmorničkih bunkera.",
+          "description": "Od Groixa do Lorienta ima blagih sedam milja, pa nema žurbe s odvezivanjem. Ulaz u zaljev je širok i dobro obilježen, ali trajekti i ribarski brodovi drže vas budnima, a oseka zna žestoko potjerati kroz kanal. Lorient je mjesto gdje živi francusko oceansko jedrenje. Stara njemačka podmornička baza u Keromanu danas drži Cité de la Voile Éric Tabarly i ponton pun IMOCA i Ultim brodova; često možete gledati posadu kako radi na letećem divu. Marina u centru grada zgodna je za opskrbu i noć izvan otoka. Nije lijep u razglednicom smislu, ali za svakoga tko prati Vendée Globe blizu je hodočašću. Ovdje napunite brod prije nego što ponovno krenete na jug.",
+          "thingsToDo": [
+            "Muzej Cité de la Voile Éric Tabarly",
+            "Razgledavanje pontona s IMOCA i Ultim brodovima",
+            "Obilazak podmorničke baze Keroman",
+            "Velika opskrba u gradu"
+          ],
+          "mooringTip": "Lorient ima nekoliko marina; pontoni u centru grada najpraktičniji su za dućane i vlak. U prilazu pazite na jaku oseku te na trgovački i trajektni promet, a u regatnim tjednima nazovite unaprijed jer vezovi nestanu."
+        },
+        "10": {
+          "shortDescription": "Natrag na Groix na dan plaže, uz sidrenje ispred svijetlog pijeska umjesto stiskanja u Port Tudy.",
+          "description": "Vratite se na Groix, ali ovaj put kao dan na vodi, a ne kao lučku postaju. Po zapadnjaku je sidrište ispred plaže Plage des Grands Sables na istočnoj obali teško nadmašiti, zamah svijetlog pijeska koji tone u bistri zeleni plićak. Bacite sidro ispred plaže i odveslajte na kupanje i šetnju do Locmarije. Ako vjetar skrene na istok, uvucite se u zavjetrinu na južnoj strani ili se vratite na bovu u Port Tudyju. Ovo je dobar rezervni dan za usporavanje, malo održavanja i puštanje posade s uzice. Večernji premještaj tempirajte tako da budete smireni prije nego što termik padne i sidrište se isprazni.",
+          "thingsToDo": [
+            "Sidrenje i kupanje ispred plaže Plage des Grands Sables",
+            "Šetnja do sela Locmaria",
+            "Ronjenje na dah u bistrom zelenom plićaku",
+            "Lijeni ručak na sidru"
+          ],
+          "mooringTip": "Po zapadnjacima je sidrište Grands Sables mirno i pjeskovito; po istočnjacima postaje neodrživo, pa se prebacite na južnu obalu ili u Port Tudy. Dobro nabijte sidro jer plima tijekom dana okreće brodove."
+        },
+        "11": {
+          "shortDescription": "Povratak preko otvorenog mora na jug do Belle-Îlea, obično brz niz vjetar do Le Palaisa.",
+          "description": "Etapa natrag na Belle-Île pokriva istih dvadeset milja otvorenog mora, ali po prevladavajućem zapadnjaku obično ide u suprotnom smjeru od osmog dana, niz vjetar i brzo. S poštapanim jedrom ili pod genakerom milje pojedete prije ručka. Le Palais će vam sad biti poznat, a druga noć daje priliku da vidite dijelove otoka koje ste propustili. Unajmite bicikle i provozajte se divljom južnom obalom do velikog svjetionika Grand Phare i iglastih stijena Port-Cotona, gdje se val bijelo lomi o litice koje je Monet slikao. Ako je luka opet puna, sidrište ispred citadele pristojno je po vjetru s kopna. Opskrbite se za povratak; vanjski otoci pred vama tanki su na dućanima, a zaljev je još dva dana daleko.",
+          "thingsToDo": [
+            "Biciklom do svjetionika Grand Phare",
+            "Pogled na litice Aiguilles de Port-Coton",
+            "Drugi krug po starom gradu Le Palaisa",
+            "Opskrba za vanjske otoke"
+          ],
+          "mooringTip": "Kao i šestog dana, Le Palais je najgušći oko podneva; dolazak sredinom prijepodneva nakon brze etape niz vjetar pomaže vam naći mjesto u redu brodova. Po stabilnom vjetru s kopna sidrište ispod citadele mirnija je alternativa."
+        },
+        "12": {
+          "shortDescription": "Kratko bočno jedrenje natrag na Houat za posljednji otočni dan na plaži prije skretanja u zaljev i prema kući.",
+          "description": "Kratko bočno jedrenje na istok vraća vas na Houat, a kad su vanjske etape iza vas, nema razloga za žurbu. Ovo je posljednji pravi otočni dan putovanja, pa neka se pamti. Ako se vjetar drži zapada, opet se usidrite ispred Treac'h er Goureda i provedite popodne na toj dugoj bijeloj plaži ili obiđite otok obalnom stazom u nekoliko laganih sati. Seoska pekarnica radi dobar far breton ako je uhvatite prije nego što se police isprazne. Za noć uzmite bovu u Port Saint-Gildasu ili ostanite ispred Treac'h er Salusa ako vjetar skrene na sjever. Sad pomno pratite prognozu; sutrašnji ulazak u zaljev traži pristojan prozor i povoljnu struju na ulazu.",
+          "thingsToDo": [
+            "Posljednje kupanje ispred Treac'h er Goureda",
+            "Kružna obalna staza oko otoka",
+            "Far breton iz seoske pekarnice",
+            "Piće uz zalazak sunca u Port Saint-Gildasu"
+          ],
+          "mooringTip": "Uzmite bovu u Port Saint-Gildasu za noć i smjestite se rano jer se polje usred ljeta napuni. Ako vjetar skrene na sjever, sidrište ispred Treac'h er Salusa mirniji je izbor za spavanje."
+        },
+        "13": {
+          "shortDescription": "Prijelaz preko Quiberonskog zaljeva natrag u matičnu bazu Le Crouesty, uz tempiranje dolaska prema plimnim vratima kod Port-Navala.",
+          "description": "Posljednja puna etapa vodi vas natrag preko Quiberonskog zaljeva do Le Crouestyja, velike marine odmah izvan ušća zaljeva. U normalnim uvjetima to je lagano jedrenje, desetak milja, često bočno u termiku. Crouesty je dubokovodna luka otvorena na svim plimama, pa u dolasku nema vrata koja treba uhvatiti, što ga čini opuštenim mjestom za kraj jedrenja. Kad se vežete, prošećite oko rta do Port-Navala na posljednji pogled na ulaz u zaljev i divlju struju kroz tjesnac. Marina ima gorivo, vodu i brodsku opremu za sve što još treba srediti. Ako brod treba vratiti čist i pun, s tim počnite večeras, a ne sutra ujutro.",
+          "thingsToDo": [
+            "Šetnja preko rta do sela Port-Navalo",
+            "Promatranje struje koja juri kroz tjesnac",
+            "Gorivo i nadopuna vode u Crouestyju",
+            "Oproštajna večera s plodovima mora u marini"
+          ],
+          "mooringTip": "Le Crouesty je velika marina dostupna na svim plimama, pa je tempiranje dolaska jednostavno, ali u vršnim tjednima nazovite kapetaniju radi gostujućeg veza. Gorivo natočite po dolasku da izbjegnete jutarnji red na dan primopredaje."
+        },
+        "14": {
+          "shortDescription": "Rezervni dan u Le Crouestyju: kratko lokalno krstarenje, posljednje kupanje ili jednostavno pakiranje i predaja broda.",
+          "description": "Zadnji je dan namjerno labav. Većina čartera brod predaje to jutro, pa je zapravo riječ o osiguranju od nevremena koje vas je moglo zadržati na otocima. Ako je vrijeme bilo dobro i u prednosti ste, iskoristite ga. Kratak izlet do Port-Navala i kupanje na plažama u zaljevu čine blago posljednje jutro prije nego što ispraznite kabine. U protivnom, ovo je vrijeme za neglamurozni kraj putovanja: skinite posteljinu, od ostatka namirnica složite ručak, podmirite gorivo i papire i provjerite da ništa nije zapalo pod pod. Nakon dva tjedna oko ovih otoka većina posada već planira sljedeći krug. Le Crouesty je lako mjesto za oprostiti se od broda.",
+          "thingsToDo": [
+            "Kratko jutarnje jedrenje do Port-Navala",
+            "Posljednje kupanje na plažama u zaljevu",
+            "Skidanje posteljine i pražnjenje kabina",
+            "Podmirenje goriva, vode i papirologije"
+          ],
+          "mooringTip": "Za primopredaju držite brod na vezu u Le Crouestyju i potvrdite s bazom vrijeme odjave. Ako idete na kratko jutarnje jedrenje, vratite se s dosta vremena prije dogovorenog termina kako bi posada mogla obaviti pregled na vrijeme."
+        }
+      }
+    },
+    "cannes-lerins-st-tropez": {
+      "metaTitle": "7 dana: Rivijera i Zlatni otoci | Boat4You",
+      "metaDesc": "Sedmodnevna ruta od Cannesa preko otočja Lérins, Saint-Tropeza, Cavalairea, Porquerollesa i Port-Crosa, natrag uz crvenu obalu Esterela.",
+      "days": {
+        "1": {
+          "shortDescription": "Kratak skok iz marine do dva borovima obrasla otoka, od kojih jedan čuva slavnu tamničku ćeliju, a drugi i danas obrađuju redovnici.",
+          "description": "Jedva sat vremena od Cannesa i gasite motor ispred Sainte-Marguerite, većeg od dva Lérinsa. Kanal između njega i Saint-Honorata jedno je od najmirnijih mjesta na ovoj obali, okruženo alepskim borovima i posidonijom preko koje se ne smije sidriti. Birajte pjeskovite mrlje i zaobiđite označene zaštićene zone u širokom luku. Na kopnu, na Sainte-Margueriti, stara utvrda Fort Royal držala je čovjeka sa željeznom maskom; uspon kroz borove traje dvadesetak minuta. Saint-Honorat je mirniji, i dalje ga obrađuju cisterciti koji prave vlastito vino i liker Lérina. Ovu etapu obično plovimo kasno prijepodne, kupamo se s broda cijelo popodne i ostajemo tu za mirnu prvu noć.",
+          "thingsToDo": [
+            "Uspon do utvrde Fort Royal na Sainte-Margueriti",
+            "Kušanje likera Lérina u opatiji Saint-Honorat",
+            "Kupanje u kanalu između dva otoka",
+            "Šetnja sjenovitim borovim stazama Sainte-Marguerite"
+          ],
+          "mooringTip": "Sidrite isključivo na pjeskovitim mrljama u kanalu; livade posidonije su zaštićene, a držanje po travi je loše. Do podneva je u srpnju već gužva, pa dođite rano ili se smjestite na vanjski rub polja."
+        },
+        "2": {
+          "shortDescription": "Prava plovidba preko zaljeva do najfotografiranije luke na obali, s tržnicom zbog koje se isplati ustati rano.",
+          "description": "Ovo je prvo pravo jedrenje u tjednu, nešto više od dvadeset milja otvorene vode s rtom Cap Camarat koji zatvara zaljev pred vama. Krenete li do devet, bit ćete vezani prije nego što popodnevni vjetar popuni. Saint-Tropez u sezoni traži rezervaciju dosta unaprijed; lučki kapetan vas smjesti krmom uz rivu, dovoljno blizu da čitate jelovnike. Café Sénéquier i njegova crvena terasa promatraju luku od 1887. Iza rive Quai Jean-Jaurès četvrt Ponche čuva pastelne zidove i uske uličice, tihe čim izletnički brodovi odu. Pogodite li utorak ili subotu, trg Place des Lices se od zore napuni štandovima, tapenadom, provansalskim sirevima i previše šešira.",
+          "thingsToDo": [
+            "Kava na crvenoj terasi Sénéquiera",
+            "Lutanje uličicama stare četvrti Ponche",
+            "Kupnja na tržnici Place des Lices",
+            "Uspon do Citadelle zbog pogleda"
+          ],
+          "mooringTip": "Vez u Saint-Tropezu rezervirajte znatno unaprijed za srpanj i kolovoz; riva je krmom i puni se brzo. Ako je puna, usidrite se na sjeveru zaljeva prema Les Canoubiersu i dođite tenderom."
+        },
+        "3": {
+          "shortDescription": "Deset milja oko dva divlja rta spušta vas u zaklonjen pješčani zaljev, s vinarskim selom i obalnim rezervatom odmah iza plaže.",
+          "description": "Danas samo deset milja, ali obilaze najljepši dio obale u zaljevu. Kod rtova Cap Taillat i Cap Lardier zemlja pripada Conservatoire du Littoral, strme zelene uvale bez ceste u zaleđu, vrijedne bacanja sidra za ručak i kupanje ako je more mirno. Sam Cavalaire leži u širokom pješčanom zaljevu koji odbija maestral, ali je otvoren svemu s istoka i jugozapada, pa pročitajte prognozu prije nego što se odlučite ostati na noć. Slobodno sidrenje u zaljevu je zabranjeno; uzmite bovu ili gostujući vez u luci. Gradić je bez pretenzija i okrenut jedriličarima, s lakom opskrbom i nizom vinara Côtes de Provence u dolini iza njega.",
+          "thingsToDo": [
+            "Kupanje u divljim uvalama kod Cap Lardiera",
+            "Opskrba na jutarnjoj tržnici u Cavalaireu",
+            "Kušanje rosé vina Côtes de Provence u zaleđu",
+            "Šetnja pješčanim lukom plaže Cavalaire"
+          ],
+          "mooringTip": "Sidrenje je zabranjeno po cijelom zaljevu Cavalaire, pa uzmite bovu ili rezervirajte gostujući vez u luci. Držanje po mulju i travi je solidno, ali je zaljev neodrživ po istočnjaku, pa krenite dalje ako vjetar skrene."
+        },
+        "4": {
+          "shortDescription": "Solidno pola dana na zapad do Porquerollesa, najvećeg od Zlatnih otoka, sa završetkom ispred plaže Notre-Dame, jedne od najljepših bijelih plaža Mediterana.",
+          "description": "Dvadesetak i dvije milje na zapad, pokraj rta Cap Bénat, i Îles d'Or izranjaju iz izmaglice. Porquerolles je najveći i najzeleniji, sve sami vinogradi, borovi i eukaliptusi, a leži unutar nacionalnog parka koji ozbiljno drži pravila. Da biste ovdje legalno sidrili, trebate tank za crne vode. Polje bova ispred luke prima brodove do trinaest metara i u srpnju se rasproda, pa rezervirajte unaprijed ili planirajte sidrenje dobrano daleko od pijeska. Plage Notre-Dame, dugu šetnju ili vožnju biciklom istočno od sela, ljudi i dolaze vidjeti, blijedi pijesak pod pinijama. Samo selo okuplja se oko trga Place d'Armes, prašnjavog trga s boćanjem, nekoliko barova i biciklima za najam na sat.",
+          "thingsToDo": [
+            "Biciklom do plaže Plage Notre-Dame",
+            "Partija boćanja na trgu Place d'Armes",
+            "Vožnja do utvrde Fort Sainte-Agathe",
+            "Kušanje otočnog vina iz vinograda Porquerollesa"
+          ],
+          "mooringTip": "Bovu u luci rezervirajte unaprijed; polje je ograničeno na brodove ispod trinaest metara i puno je kroz cijelo ljeto. Za sidrenje trebate tank za crne vode na brodu i morate se držati podalje od označenih livada posidonije, najmanje 300 metara od plaža."
+        },
+        "5": {
+          "shortDescription": "Osam milja i stižete do najdivljeg od tri otoka, sve sama šuma i bistra voda unutar prvog europskog morskog nacionalnog parka.",
+          "description": "Manje od osam milja od otoka do otoka, pa nema žurbe s odvezivanjem. Port-Cros je najmanji od Zlatnih otoka i najmanje dirnut, greben guste šume koja se spušta do mora, s gotovo nijednom građevinom. Glavna cesta, da tako kažemo, pješačka je staza. Uvala ispred luke drži brodove na bovama i uz rivu, zaštićena iz gotovo svih smjerova osim jakog juga. Preko dvanaest metara morate uzeti bovu u zoni Bagaud; sidrenje između Bagauda i luke sada je potpuno zabranjeno. Ispred La Paluda na sjevernoj strani prostire se označena ronilačka staza sa šest bova, a po dobrom danu plutat ćete iznad kirnji i barakuda. Odvojite sat vremena za uspon do utvrde Fort de l'Estissac.",
+          "thingsToDo": [
+            "Ronjenje na dah označenom stazom kod La Paluda",
+            "Uspon do utvrde Fort de l'Estissac",
+            "Mirno sidrenje u uvali Port-Man",
+            "Šumska staza preko otoka"
+          ],
+          "mooringTip": "Uzmite bovu u uvali Rade de Port-Cros; za sve preko dvanaest metara to je obvezno, a sidrenje između Bagauda i luke je zabranjeno. Rezervirajte gdje možete, stignite do ranog popodneva i zapamtite da je tank za crne vode u parku obvezan."
+        },
+        "6": {
+          "shortDescription": "Velika etapa natrag na istok, dug dan pod jedrima do mjesta gdje crvena stijena Esterela pada ravno u more.",
+          "description": "Ovo je ona duga. Računajte na četrdesetak milja natrag na istok, pa bovu odvezujemo u prvo svjetlo i namjestimo se za cijeli dan na vodi. Nagrada dolazi na kraju, kad masiv Esterel izroni pred vama u užarenoj crvenoj boji, vulkanska stijena koja se okomito ruši u duboko plavo. Ako vam vrijeme dopusti, svratite u Cap Roux putem, pjeskovito dno na pet do osam metara i dobar zaklon od zapada. Île d'Or, s malenom saracenskom kulom, privatni je, pa ga obilazite umjesto da pristajete. Théoule sjedi u zapadnom kutu zaljeva Napoule, sklonjen od sjeverozapadnjaka, s nekoliko restorana i pokojom plažom, daleko od gužve Cannesa preko vode.",
+          "thingsToDo": [
+            "Sidrenje pod crvenim liticama rta Cap Roux",
+            "Obilazak otoka Île d'Or i njegove saracenske kule",
+            "Kupanje u uvalama Esterela kod Anthéora",
+            "Večera na mirnoj rivi Théoulea"
+          ],
+          "mooringTip": "Ovu etapu započnite u zoru da na dugoj plovidbi izbjegnete popodnevni vjetar. Sidrište Théoule u zaljevu Napoule štiti vas od sjeverozapada preko zapada do juga, ali je za mirnu noć luka ili vez na strani Cannesa sigurniji izbor."
+        },
+        "7": {
+          "shortDescription": "Lagano posljednje jutro preko zaljeva do Cannesa, uz vremena za posljednje kupanje prije predaje broda.",
+          "description": "Najkraća etapa tjedna, pet-šest milja preko zaljeva Napoule s Esterelom za leđima i Cannesom pred pramcem. Nema razloga za žurbu. Ako čarter baza želi brod do podneva, ima još vremena za sidrenje i posljednje kupanje kod otoka Île Sainte-Marguerite usput, čime zatvarate krug ondje gdje je tjedan počeo. U prilazu Cannesu prolazite ispod starog grada Le Suqueta, s kulom stražarnicom nad crvenim krovovima, i uz dugi luk Croisette s palačama iza plaže. Bokobrane i konope pripremite rano; marina u Cannesu u sezoni radi napeto, a benzinska postaja zna zakrčiti. Natočite gorivo, ispraznite tank i siđite na pošten ručak u Suquetu prije odlaska.",
+          "thingsToDo": [
+            "Posljednje kupanje kod otoka Île Sainte-Marguerite",
+            "Uspon na Le Suquet do kule stražarnice",
+            "Šetnja Croisettom prije polaska",
+            "Ručak u starom gradu Le Suquet"
+          ],
+          "mooringTip": "U sezoni u Cannes ulazite s bokobranima i krmenim konopima spremnima prije samog ulaza i marinu zovnite unaprijed na VHF radi veza. Benzinska postaja se zagušuje sredinom prijepodneva, pa natočite rano ako bazi dugujete pun tank."
+        }
+      }
+    },
+    "corsica-grand-tour-14-days": {
+      "metaTitle": "14 dana: veliki krug Korzike | Boat4You",
+      "metaDesc": "Dva tjedna od Ajaccia oko Korzike: Scandola, Calvi, Bonifacio, otoci Lavezzi i zaljev Valinco, uz prave savjete za sidrenje.",
+      "days": {
+        "1": {
+          "shortDescription": "Lagana uhodavajuća etapa iz Napoleonove rodne luke u široki pješčani zaljev Sagone, miran čim izletnički brodovi odu.",
+          "description": "Ajaccio je mjesto gdje većina posada preuzima brod, pa ovu prvu etapu shvatite kao uhodavanje, a ne kao utrku. Opskrbite se na tržnici blizu starog grada prije nego što odvežete konope, pa uzmite kurs prema sjeverozapadu, van pokraj otočića Sanguinaires koji čuvaju ulaz u zaljev. Uvala u Sagoneu otvara se široka i pjeskovita, uokvirena niskim brdima i šačicom konoba na plaži. Do kasnog popodneva skijaši na vodi i izletnički brodovi se prorijede, a sidrište se smiri taman za prvu noć na sidru. Obično ciljamo da uđemo do pet, kako bi posada stigla posložiti stvari i okupati se prije mraka. Dno dobro drži po pijesku na tri do pet metara. Držite oko na zapadu; uvala je otvorena valu ako vjetar skrene, premda su ljetne večeri ovdje uglavnom mirne.",
+          "thingsToDo": [
+            "Opskrba na natkrivenoj tržnici u starom Ajacciu",
+            "Posjet muzeju Maison Bonaparte",
+            "Kupanje na dugoj pješčanoj plaži Sagonea",
+            "Piće uz zalazak sunca u restoranu na plaži u Sagoneu"
+          ],
+          "mooringTip": "Sidrite ispred plaže u Sagoneu umjesto da se gurate uz mali gat; pijesak dobro drži na tri do pet metara. Sidro nabijte do kasnog popodneva, prije nego što večernji vjetar popuni."
+        },
+        "2": {
+          "shortDescription": "Malo dalje uz obalu leži Cargèse, koji su osnovali Grci i gdje se katolička i pravoslavna crkva još uvijek gledaju preko doline.",
+          "description": "Sagone i Cargèse dijeli tek nekoliko milja, pa nema potrebe za ranim polaskom. Selo leži na hridi iznad svoje lučice, a njegova čudna povijest vidi se u dvjema crkvama koje se preko jaruge gledaju, jedna latinska katolička, druga grčka pravoslavna, ostavština grčkih izbjeglica koji su se ovdje naselili u sedamnaestom stoljeću. Sama lučica je mala i u srpnju se brzo napuni, pa pomaže dolazak oko podneva. Ispod grada plaže se nižu jedna za drugom. Plage de Pero i Plage de Chiuni obje su vrijedne vožnje tenderom radi popodnevnog kupanja i šetnje. Na kopnu, kafići uz lučki trg rade pristojan tanjur pršuta i suhomesnatog uz hladnu Pietru. Mi se obično sidrimo ispred Pera i luku prepuštamo trajektima.",
+          "thingsToDo": [
+            "Usporedba latinske i grčke pravoslavne crkve",
+            "Kupanje na plaži Plage de Pero ili Chiuni",
+            "Suhomesnato i pivo Pietra u luci",
+            "Šetnja do starog groblja u Cargèseu"
+          ],
+          "mooringTip": "Lučica u Cargèseu je tijesna i do podneva često puna, pa se radije usidrite ispred plaže Plage de Pero sjeverno od nje. Pijesak pouzdano drži na četiri do šest metara, ali je otvoreno prema zapadu."
+        },
+        "3": {
+          "shortDescription": "Slikovita plovidba do crvenog porfirnog rta Capo Rosso, okrunjenog usamljenom đenovljanskom kulom nad zaljevom Porto.",
+          "description": "Obala sjeverno od Cargèsea postaje dramatična. Capo Rosso diže se u pločama hrđavocrvene stijene, s kulom Tour de Turghju smještenom tristotinjak metara visoko na njegovu hrptu, uz podosta naporan uspon ako vam se da krenuti s pristajanja ispod. Ovo su vrata u zaljev Porto i Calanche de Piana iza njega, gdje su vjetar i more izdubili granit u tornjeve. Rt je izložen, pa pročitajte prognozu prije nego što se odlučite ovdje prenoćiti. Mnoge se posade radije uvuku u zaklonjene uvale unutar zaljeva ili nastave do Ficajole s njezinom sićušnom ribarskom plažom. Ako popodnevni libeccio ojača, ne zadržavajte se kod rta. Prolaz tempiramo za jutarnju tišinu i pustimo posadu da fotografira dok je svjetlo na liticama još meko.",
+          "thingsToDo": [
+            "Fotografiranje crvenih litica rta Capo Rosso",
+            "Uspon do stražarske kule Tour de Turghju",
+            "Tenderom do plaže Anse de Ficajola",
+            "Skretanje u kamene tornjeve Calanche de Piana"
+          ],
+          "mooringTip": "Sam Capo Rosso previše je izložen za mirnu noć, pa ga iskoristite kao dnevnu postaju i usidrite se unutar zaljeva Porto ili kod Ficajole. Pazite na popodnevne zapadnjake koji ubrzavaju oko rta."
+        },
+        "4": {
+          "shortDescription": "Iza rezervata Scandola leži Girolata, zaselak pod utvrdom do kojeg se dolazi samo brodom ili pješačkom stazom.",
+          "description": "Danas plovite rubom rezervata Scandola, na UNESCO-vu popisu uvrštenog spleta crvene vulkanske stijene gdje orlovi ribari gnijezde na liticama, a pristajanje je zabranjeno. Držite se izvan označene zone i uživajte s vode. Girolata čeka odmah južno, skrivena iza niskog rta, s čučavom đenovljanskom utvrdom na straži. Sidrište je jedno od najzaklonjenijih na otoku, s desecima bova za pramac i krmu položenih u uvalama Cala Muretta i Cala Vecchia. Uzmite je rano; polje se kroz popodne puni kako pristižu izletnički brodovi i jahte. Na kopnu nema ceste, samo skupina restorana koji poslužuju dnevni ulov i meso s roštilja. Volimo se okupati prije nego što dođu gužve, pa se popeti obalnom stazom radi pogleda natrag na uvalu.",
+          "thingsToDo": [
+            "Plovidba uz crvene litice rezervata Scandola",
+            "Uzimanje bove u uvali Cala Muretta",
+            "Obalna staza do đenovljanske utvrde",
+            "Svježa riba s roštilja u restoranu u Girolati"
+          ],
+          "mooringTip": "Bove za pramac i krmu u Girolati sigurna su opcija i drže vas mirno po svakom vjetru, ali brzo nestanu. Ciljajte dolazak prije sredine popodneva i računajte na naknadu koju naplaćuje brod koji obilazi."
+        },
+        "5": {
+          "shortDescription": "Duža etapa prema sjeveru prelazi otvoreno more do Calvija, gdje đenovljanska citadela stoji nad jednom od najživljih marina na Korzici.",
+          "description": "Ovo je prva prava plovidba na putovanju, dvadesetak i pet milja do obale Balagne, pa vam polazak u devet daje udobnu rezervu. Obala je velikim dijelom divlja i bez ceste, s malo utočišta, i baš zato je prognoza važna. Zapadnjaci obično jačaju poslije podneva, pa raniji polazak čuva more mirnijim. Calvi se najavljuje izdaleka, zidine citadele koje hvataju svjetlo nad lukom plaže u zaleđu borova. Marina je odmah pod bedemima i vrvi do kasno navečer. Ako je u visokoj sezoni puna, sidrište u uvali Revellata odmah zapadno mirno je i lijepo. Na kopnu se popnite u stari grad, gdje će vam mještani reći da je Kolumbo rođen ovdje, i dobro jedite uz rivu. U kolovozu vez rezerviramo unaprijed.",
+          "thingsToDo": [
+            "Razgledavanje đenovljanske citadele nad Calvijem",
+            "Kupanje na plaži Calvija u zaleđu borova",
+            "Večera na rivi u marini",
+            "Noćenje na sidru u uvali Revellata"
+          ],
+          "mooringTip": "Marina u Calviju se u srpnju i kolovozu brzo puni, pa javite se radiom unaprijed ili stignite rano po vez pod citadelom. Ako je puna, sidrište Revellata par milja zapadno nudi mirno držanje po pijesku."
+        },
+        "6": {
+          "shortDescription": "Povratak na jug uz divlju obalu Scandole natrag u zaklonjenu Girolatu, uz mogući miran predah u Galeriji.",
+          "description": "Plovidba vlastitim tragom u obrnutom svjetlu djeluje kao sasvim drugo putovanje, a dvadeset i pet milja natrag do Girolate brzo prođe uz uobičajeni popodnevni vjetar s krme. Prekinite etapu u Galeriji ako želite promjenu; sidrište u njezinoj uvali je mirno i leži tik pred granicom rezervata, zgodno za ručak i kupanje dalje od gužve. Odatle je kratak skok natrag do crvenih bastiona Scandole, koje je najljepše vidjeti dok sunce zalazi na zapad. Polje bova u Girolati bit će se već popunjavalo dok stignete, pa ne otežite s ručkom. Druga noć ovdje nije nikakva kazna; uvalica izgleda drukčije u promjenjivom svjetlu, a navečer, kad izletnički brodovi odu, spusti se u nešto blizu tišine. Mi zgrabimo bovu rano i skočimo s krme.",
+          "thingsToDo": [
+            "Predah za ručak i kupanje u uvali Galeria",
+            "Crvene litice Scandole u večernjem svjetlu",
+            "Ronjenje na dah s krme u Girolati",
+            "Večernje piće na kopnu u luci"
+          ],
+          "mooringTip": "Kad se drugi put vraćate u Girolatu, već znate proceduru: zgrabite bovu za pramac i krmu rano. Galeria je mirno sidrište po pijesku za ručak ako želite prekinuti etapu."
+        },
+        "7": {
+          "shortDescription": "Duga plovidba na jug pokraj Sagonea i otočića Sanguinaires, čime se prvi krug zatvara u zaljevu Ajaccia.",
+          "description": "Najduža pojedinačna etapa dvotjednog putovanja prelazi četrdeset milja, pa rani polazak nije stvar izbora. Odvežite bovu u prvo svjetlo, dok je more glatko, a vjetar još spava. Proći ćete ušće zaljeva Sagone i obići Capo di Feno prije nego što izrone otočići Sanguinaires, četiri crvenkasta hridnjaka koji obilježavaju ulaz u zaljev Ajaccio i vrijede sporog prolaza zbog starog semafora i svjetionika. Sam zaljev često podigne kratke popodnevne valove kad termik zapuše u lijevak, još jedan razlog da milje ostavite iza sebe do sredine popodneva. Marine u Ajacciu imaju mjesta za goste, a grad nagrađuje noć izvan sidra pravim restoranima i prilikom da nadopunite zalihe. Ovdje se opskrbimo prije nego što počne južna polovica.",
+          "thingsToDo": [
+            "Spori prolaz pokraj otočića Sanguinaires",
+            "Opskrba na natkrivenoj tržnici u Ajacciu",
+            "Večera na kopnu u starom gradu",
+            "Aperitiv uz rivu marine u Ajacciu"
+          ],
+          "mooringTip": "Ajaccio ima dvije marine, Tino Rossi kraj starog grada i veću Charles Ornano; u sezoni nazovite unaprijed. Nakon četrdeset milja gostujući vez vrijedi naknade zbog tuševa i lake opskrbe."
+        },
+        "8": {
+          "shortDescription": "Na jug oko Capo di Mura u zaljev Valinco i sidrenje ispred pospanog pijeska Porto Polla.",
+          "description": "Sa zapadnim krugom iza sebe brod se okreće na jug, prema mirnijoj polovici otoka. Izađite iz zaljeva Ajaccio i obiđite Capo di Muro, nizak kameni rt koji zna podići kratko more kad se vjetar sudari sa strujom, pa uplovite u široki zaljev Valinco. Porto Pollo leži na sjevernoj obali, tiho selo s malom plažom, nekoliko konoba i bistrom vodom koja vas zove na kupanje čim sidro zagrize. Dno dobro drži po pijesku, a uvala je dobro zaštićena od prevladavajućih zapadnjaka. Na kopnu se osim jela, kupanja i usporavanja nema što raditi, a nakon duge etape iz Girolate upravo je to poanta. Bacimo sidro ispred plaže i pustimo posadu da proljenčari popodne.",
+          "thingsToDo": [
+            "Kupanje na zaklonjenoj plaži Porto Polla",
+            "Ronjenje na dah u bistrom plićaku Valinca",
+            "Večera s plodovima mora u seoskoj konobi",
+            "Vožnja daskom uz sjevernu obalu"
+          ],
+          "mooringTip": "Sidrite ispred plaže u Porto Pollu na tri do šest metara po pijesku; držanje je pouzdano i uvala odbija uobičajeni zapadnjak. Uvucite se iza rta ako je najavljen jugo."
+        },
+        "9": {
+          "shortDescription": "Prijelaz preko zaljeva do Campomora, gdje najveća đenovljanska kula na Korzici bdije nad zavijenom pješčanom plažom.",
+          "description": "Dvije obale Valinca dijeli tek nekoliko milja, pa je ovo jutro laganog jedrenja i popodne u kojem se ne radi gotovo ništa. Campomoro se izvija oko uredne pješčane uvale na južnom kraku zaljeva, okrunjen najvećom đenovljanskom kulom na otoku, čučavim utvrđenim blokom do kojeg se možete popeti i s njega gledati preko cijelog zaljeva. Selo je sićušno, tek nekoliko barova i restorana nanizanih iza plaže, i baš je u tome njegov šarm. Usidrite se ispred pijeska i doplivajte na piće dok svjetlo pozlaćuje kulu. Uvala je otvorena prema zapadu, pa ćete se na sidru malo ljuljati ako libeccio zapuše. Za ovo biramo mirnu prognozu i uživamo u tišini.",
+          "thingsToDo": [
+            "Uspon do đenovljanske kule u Campomoru",
+            "Kupanje u zavijenoj pješčanoj uvali",
+            "Piće u baru na plaži u Campomoru",
+            "Ronjenje na dah uz stijene ispod kule"
+          ],
+          "mooringTip": "Sidrite ispred plaže u Campomoru po pijesku, ali imajte na umu da je uvala otvorena zapadu i da se ljulja po valu libeccia. Kraj kule ima nekoliko sezonskih bova; inače za ovdje birajte mirnu noć."
+        },
+        "10": {
+          "shortDescription": "Duga plovidba na jug oko korzikanskog vrha do Bonifacia, čiji se stari grad drži za bijele litice iznad skrivene luke.",
+          "description": "Ovo je obvezujuća etapa, dvadesetak i pet milja do južnog vrha otoka, a Bonifaciova vrata imaju običaj ubrzati svaki vjetar koji je vani. Prognozu prije polaska provjerite temeljito, a ako puše jako sa zapada, ostanite još dan. Nakon posljednjih rtova Bonifacio dobro skriva svoj ulaz; gotovo ste na liticama prije nego što se uska kalanka otvori s lijeve strane i marina se ukaže, ušuškana u prirodnom fjordu pod bedemima. Srednjovjekovni haute ville iznad sav je od vapnenačkih uličica i pogleda na more, a lučki restorani rade do kasno. Vezova je malo, a potražnja velika, pa u sezoni rezervirajte unaprijed ili uzmite položeni vez dublje u uvali. Dolazak tempiramo za rano popodne kako bismo bili sigurni u mjesto.",
+          "thingsToDo": [
+            "Lutanje vapnenačkim uličicama gornjeg grada",
+            "Uspon stubama Escalier du Roi d'Aragon",
+            "Večera uz obalu u kalanki",
+            "Pogled na litice s ulaza u marinu"
+          ],
+          "mooringTip": "Marina u Bonifaciju leži duboko u kalanki i ljeti je vrlo prometna, pa rezervirajte vez ili uzmite položeni vez uz uvalu. Ulazite na motor; fjord provlači udare vjetra i kad izgleda mirno."
+        },
+        "11": {
+          "shortDescription": "Uplovite u rezervat Bouches de Bonifacio i vežite se ispred granitnih gromada i bistrih uvala otoka Lavezzi.",
+          "description": "Lavezzi leže samo šest milja od Bonifacia, ali u potpuno zaštićenim vodama, pa prije polaska pročitajte pravila. Otoci se nalaze unutar rezervata Bouches de Bonifacio, najvećeg morskog rezervata u kontinentalnoj Francuskoj, a uvale su uređene numeriranim poljima bova postavljenima nakon propisa iz 2022. Sidrenje je ograničeno, a gdje je dopušteno, samo je po pijesku, nikad po morskoj travi. Uzmite bovu u uvali Cala di u Grecu ili Cala Lazarina i plivate u nekoj od najbistrijih voda Mediterana, iznad blijedog pijeska među zaobljenim granitnim gromadama. Na kopnu pješačka staza vodi do groblja koje obilježava brodolom fregate Sémillante, potonule ovdje 1855. Uvale nude slab noćni zaklon, pa ih većina posada posjećuje danju.",
+          "thingsToDo": [
+            "Ronjenje na dah u granitnim uvalama Cala Lazarina",
+            "Uzimanje veza u uvali Cala di u Grecu",
+            "Šetnja do spomen-obilježja brodolomu Sémillante",
+            "Kupanje nad blijedim pijeskom među gromadama"
+          ],
+          "mooringTip": "Uvale Lavezzija koriste numerirane ZMEL bove prema pravilima rezervata iz 2022.; uzmite jednu i nikad ne bacajte sidro na morsku travu. Uvale daju slab noćni zaklon, pa ih shvatite kao dnevnu postaju i spavajte natrag u Bonifaciju ili Rondinari."
+        },
+        "12": {
+          "shortDescription": "Rondinara vas čeka uz istočnu obalu, gotovo savršena potkovasta uvala s dobrim pjeskovitim dnom i ljetnim bovama.",
+          "description": "Kad iz vrata skrenete na sjever, karakter obale se smekša. Rondinara leži desetak milja gore, između Bonifacia i Porto-Vecchia, i jedna je od onih uvala koje izgledaju kao da ih je netko rukom nacrtao, zaobljena potkova blijedog pijeska s uskim ustima. Taj oblik čini je odličnim sidrištem, dobro zaštićenim kroz zapadnu polovicu kompasa, od sjevernjaka preko zapada do juga. Pijesak dobro drži, a u sezoni se pojavi i nekoliko bova ako se ne želite sidriti. Plaža privlači izletnike cestom, pa u podne zna biti gužva, ali se do večeri prorijedi i uvala dođe do izražaja. Bacimo sidro prema sjevernoj strani, doplivamo na plažu i ostanemo preko noći. Miran, lagan kraj južnog kruga.",
+          "thingsToDo": [
+            "Kupanje u potkovastoj uvali Rondinara",
+            "Šetnja pješčanom plažom u sumrak",
+            "Ronjenje na dah uz kameni sjeverni rt",
+            "Sidrenje za mirnu noć na brodu"
+          ],
+          "mooringTip": "Rondinara nudi dobro držanje po pijesku i zaklon od sjevera preko zapada do juga; sidrite prema sjevernoj obali. Ljeti se pojave sezonske bove, a uvala je najmirnija kad navečer ode gužva s plaže."
+        },
+        "13": {
+          "shortDescription": "Duga etapa natrag na zapad oko južnih rtova do Propriana, najprometnije luke Valinca i dobrog mjesta za nadopunu.",
+          "description": "Povratak na zapadnu obalu poprilična je dionica, znatno preko trideset milja, i znači ponovno obilaženje izloženog južnog vrha, pa se disciplina ranog polaska i mirne prognoze itekako isplati. Kad prođete Capo di Feno i rt Senetosa, obala vas lagano vodi na sjever u poznati zaljev Valinco. Propriano leži na njegovu dnu, najprometniji grad na ovom potezu, s radnom lukom iz koje idu trajekti za Sardiniju i rivom punom dućana i restorana. Nakon tjedna mirnih sidrišta vreva je dobrodošla promjena, a marina čini opskrbu pred posljednji skok jednostavnom. Vežemo se, prošećemo rivom uz sladoled i večeramo na kopnu. Svježa riba i boca korzikanskog roséa lijepo zaključe dan.",
+          "thingsToDo": [
+            "Šetnja rivom Propriana punom restorana",
+            "Nadopuna u gradskim dućanima i na tržnici",
+            "Svježa riba i korzikanski rosé na kopnu",
+            "Večernji sladoled uz luku"
+          ],
+          "mooringTip": "Marina u Proprianu prima goste, ali je opterećena trajektnim prometom prema Sardiniji, pa nazovite unaprijed i u prilazu se držite podalje od trajektnog veza. Vez ovdje je lakši nego sidrenje ispred izložene gradske plaže."
+        },
+        "14": {
+          "shortDescription": "Posljednja etapa na sjever oko Capo di Mura i pokraj Sanguinairesa, natrag u Ajaccio na predaju broda.",
+          "description": "Zadnji dan ponovno prelazi vodu između dvaju zapadnih zaljeva, tridesetak milja natrag do Ajaccia. Krenite na vrijeme; čarter primopredaje brod obično traže do jutra, a ružno je stići uspuhan na završnom prilazu. Obiđite Capo di Muro još jednom, pa se pojave otočići Sanguinaires koji obilježavaju ulaz u zaljev, prikladan posljednji orijentir sa svojom crvenkastom stijenom i starim svjetionikom. Ako vrijeme dopusti, oproštajno kupanje u nekoj uvali usput lijep je način da se putovanje zaokruži. Natrag u Ajacciu natočite gorivo, napunite spremnike vode i počnite sređivati brod prije primopredaje. Volimo biti na vezu do kasnog popodneva, da posada može pakirati bez žurbe i nazdraviti dobro odjedrenom dvotjednom krugu.",
+          "thingsToDo": [
+            "Oproštajno kupanje u uvali kod Sanguinairesa",
+            "Posljednje obilaženje Capo di Mura",
+            "Gorivo i voda u marini u Ajacciu",
+            "Završna večera posade u starom gradu"
+          ],
+          "mooringTip": "Ciljajte povratak u Ajaccio do kasnog popodneva posljednjeg dana; čarter baze žele brod ispražnjen sljedeće jutro. Gorivo i vodu nadopunite u prilazu i radiom s bazom potvrdite vez za primopredaju."
+        }
+      }
+    },
+    "morbihan-quiberon": {
+      "metaTitle": "7 dana: Morbihan i Belle-Île | Boat4You",
+      "metaDesc": "Sedam dana od Le Crouestyja kroz Morbihanski zaljev do Vannesa, Houata, Belle-Îlea i Hoedica: otoci bez auta, plimni kanali i bretonske luke.",
+      "days": {
+        "1": {
+          "shortDescription": "Isplovljavamo iz Le Crouestyja s nadolazećom plimom i puštamo struju da nas ponese u zaljev, do Ile aux Moinesa na kojem nema automobila.",
+          "description": "Ulaz u zaljev sužava se kod Port-Navala i struja kroz njega juri, pa iz Le Crouestyja obično krećemo sat vremena nakon niske vode i pustimo da nas plima unese unutra. Dva do tri čvora ispod kobilice brzo pojedu taj prolaz. Kad jednom uđete, more se smiri i otoci se otvore oko vas.\n\nIle aux Moines leži otprilike na sredini zaljeva, s dva gostujuća pontona koji plutaju odvojeno od obale. Automobila ovdje nema. Unajmite bicikl u luci i krenite puteljkom prema jugu kroz Bois d'Amour do Pointe de Brouëla, odakle se nisko preko vode pruža Ile d'Arz. Dolmen des Pierres Plates vrijedi kratke šetnje. Natrag u Port Blancu, tanjur kamenica i hladan Muscadet lijepo zaokruže dan.",
+          "thingsToDo": [
+            "Biciklom kroz Bois d'Amour do Pointe de Brouëla",
+            "Obiđite Dolmen des Pierres Plates",
+            "Pojedite kamenice u Port Blancu",
+            "Prošećite puteljkom do Pointe du Trec'ha"
+          ],
+          "mooringTip": "Oba gostujuća pontona odvojena su od kopna, pa dođite samodostatni, s vlastitom vodom. Na vanjskom kraju južnog pontona dubine padaju na oko 1,6 m, pa se za velikih oseka vežite bliže unutarnjem kraju ili uzmite bovu u zaljevu ispred Port Blanca."
+        },
+        "2": {
+          "shortDescription": "Kratak skok kanalom, tempiran po plimi, vodi vas kroz ustavu u srednjovjekovni Vannes i njegovu staru jezgru unutar zidina.",
+          "description": "Vannes se krije na dnu uske rijeke i unutra se ulazi tek dva-tri sata prije i poslije visoke vode. Od toga planirajte unatrag. Sidro obično dižemo tako da na pokretni most Kérino stignemo za rastuće plime, a onda polako na motor uz kanal, pokraj privezanih brodova i obala u trsci. Ustava drži unutarnji bazen na nešto više od dva metra, pa vode ima i kad se zaljev vani isprazni.\n\nNagrada je vez usred grada. Vannes je sačuvao svoje bedeme, stare praonice uz rijeku Marle i ulice nakrivljenih kuća s vidljivim drvenim gredama. Cathédrale Saint-Pierre i natkrivena tržnica La Cohue nekoliko su minuta hoda. Opskrbite se ovdje; tržnica je dobra, a dućani su blizu.",
+          "thingsToDo": [
+            "Prošećite bedemima i praonicama uz Marle",
+            "Pogledajte Cathédrale Saint-Pierre u staroj jezgri",
+            "Prošećite natkrivenom tržnicom La Cohue",
+            "Opskrbite se na gradskoj tržnici u Vannesu"
+          ],
+          "mooringTip": "Unutarnji bazen otvoren je samo oko 2,5 do 3 sata prije i poslije visoke vode, a do njega se prolazi kroz pokretni most pa kroz ustavu. Najavite se kapetaneriji na VHF-u i plovidbu kanalom tempirajte za kraj plime."
+        },
+        "3": {
+          "shortDescription": "S osekom niz zaljev i van pokraj Port-Navala, pa preko Quiberonskog zaljeva do bijelog pijeska Houata.",
+          "description": "Ovo je najduži dan, pa volimo rano odriješiti s pontona i izaći iz zaljeva na oseci. Kanal pokraj Port-Navala juri kad je struja s vama i u tren oka vas izbaci u Quiberonski zaljev. Odande je otvorenih desetak milja u boku vjetra do Houata.\n\nOtok je niska greda granita i žutilovke s jednim malim selom. Brodovi se okupljaju u Rade de Houatu, pješčanom sidrištu uz sjevernu stranu, ili na bovama ispred Saint-Gildasa. Mamac je Treac'h er Goured, dva kilometra dug luk bijelog pijeska na istočnom kraju. Iskrcajte se tenderom i prošećite dinom. Imajte na umu da je sidrenje pred tom plažom zabranjeno iznad označene kabelske zone.",
+          "thingsToDo": [
+            "Iskrcajte se tenderom na Treac'h er Goured",
+            "Prošećite dva kilometra dugim lukom dine",
+            "Obiđite jedino ribarsko selo na Houatu",
+            "Zaplivajte s pješčanih plićaka u Radeu"
+          ],
+          "mooringTip": "Sidrite u Rade de Houatu na pijesku, dobro podalje od označene kabelske zone ispred Treac'h er Goureda, gdje je sidrenje zabranjeno. Polje bova kod Saint-Gildasa u srpnju i kolovozu brzo se puni, pa uplovite do ranog poslijepodneva ako želite bovu."
+        },
+        "4": {
+          "shortDescription": "Lagana plovidba prema jugu do Belle-Îlea, najvećeg bretonskog otoka, i njegove prometne luke pod citadelom u Le Palaisu.",
+          "description": "Belle-Île leži kratak zalet južno od Houata, dovoljno blizu da dan prođe bez žurbe. Le Palais se najavljuje izdaleka: golema zvjezdasta Citadelle Vauban stoji nad ulazom u luku. Unutra je najveća luka južne Bretanje i, usred ljeta, jedna od najpunijih. Očekujte vezivanje u boku na muringima, po tri ili četiri broda jedan uz drugoga.\n\nNa kopnu grad živi od trajekata i ljetnih gostiju, ali ima pravu kičmu. Obiđite citadelu, unajmite bicikle ili skuter i otisnite se na divlju zapadnu obalu. Aiguilles de Port-Coton, stijene-igle koje je slikao Monet, vrijedne su vožnje. Opskrba je ovdje jednostavna, s pravim dućanima i jutarnjom tržnicom blizu rive.",
+          "thingsToDo": [
+            "Obiđite Citadelle Vauban iznad luke",
+            "Biciklom do Aiguilles de Port-Coton",
+            "Otiđite do Grotte de l'Apothicairerie",
+            "Kupujte na jutarnjoj tržnici uz rivu"
+          ],
+          "mooringTip": "Le Palais goste veže na muringe u nizu, po nekoliko brodova na istu bovu, pa spustite velike bokobrane i računajte na susjede. U srpnju i kolovozu to je najprometnija luka u kraju; javite se radiom unaprijed ili doplovite rano, a znajte i da vanjske vezove hvata val trajekata."
+        },
+        "5": {
+          "shortDescription": "Oko sjevera Belle-Îlea do Sauzona, mirnije luke koja presušuje, s obojanim kućama, štandovima s palačinkama i rtom Sarah Bernhardt.",
+          "description": "Sauzon je jedva pet milja oko vrha otoka, pa žurbe nema. On je sve ono što Le Palais nije: malen, miran, ugodan oku, niz pastelnih kuća koje se penju iz uskog zaljeva. U dnu luka presušuje, pa većina gostiju uzme privez pramcem i krmom u dubljem kanalu, a na obalu ide tenderom.\n\nPoslijepodne provedite pješice. Štandovi na rivi rade galette, vafle i cider s Belle-Îlea, a luka vam je raširena pod nogama. Prošećite ili se odvezite biciklom do Pointe des Poulains, gdje je Sarah Bernhardt imala kuću, a mali svjetionik označava sjeverni vrh otoka. Vratite se na večeru na zapadnu rivu, kad svjetlo omekša nad vodom.",
+          "thingsToDo": [
+            "Jedite galette uz cider na rivi",
+            "Prošećite do svjetionika Pointe des Poulains",
+            "Pogledajte kuću Sarah Bernhardt na litici",
+            "Večerajte na zapadnoj rivi luke"
+          ],
+          "mooringTip": "Unutarnja luka u Sauzonu presušuje, pa uzmite privez pramcem i krmom na bove u dubljem kanalu umjesto da idete do samog dna. Ulazni kanal dubok je oko 3 m; provjerite tablice plime i oseke prije nego se odlučite za bilo koji vez blizu dijela koji ostaje na suhom."
+        },
+        "6": {
+          "shortDescription": "Natrag prema kopnu, do sićušnog Hoedica, mrvice bez automobila s dinama, utvrdama i muringima u nizu u Argolu.",
+          "description": "Prijelaz do Hoedica je desetak i nešto milja prema sjeveroistoku preko otvorene vode, pa pratite prognozu; zaljev na svježem zapadnjaku digne kratko, neugodno more. Sam otok je sićušan, niži i divlji od susjeda, obrubljen dinama i blijedim plažama, sa samo jednim zaseokom u sredini.\n\nPort de l'Argol prima vas na muringe u nizu, po tri broda na istu bovu, i stanu samo manje jahte. Kad se iskrcate, sat-dva pješice pokrije gotovo sve. Prošećite do stare Fort d'Hoedic, zavirite u kapelicu i nađite plažu samo za sebe na istočnoj obali. Blizu luke ima nekoliko jednostavnih mjesta za jelo, ali ponesite zalihe; opskrba je ovdje tanka.",
+          "thingsToDo": [
+            "Prošećite do Fort d'Hoedic",
+            "Obiđite otočku kapelicu i zaselak",
+            "Nađite praznu plažu na istočnoj obali",
+            "Ručajte u malom bistrou uz luku"
+          ],
+          "mooringTip": "Port de l'Argol nudi muringe u nizu na bovama za brodove do otprilike 14 m i najviše 2 m gaza, pa većina bareboat jahti prolazi. Luka je mala i tražena; u sezoni doplovite rano i budite spremni ležati tijesno uz druge jahte na istoj bovi."
+        },
+        "7": {
+          "shortDescription": "Posljednji zalet prema sjeveru preko Quiberonskog zaljeva i natrag kroz ulaz u zaljev do veza u Le Crouestyju.",
+          "description": "Povratak kući jednostavna je plovidba u boku preko Quiberonskog zaljeva, petnaestak milja natrag do poluotoka Rhuys. Tempirajte ga tako da na ulaz u zaljev dođete s plimom ili barem u zastoju struje; gurati punu oseku kod Port-Navala spor je i mokar posao koji se s malo planiranja lako izbjegne.\n\nAko je dan lijep i idete ispred plana, ima vremena za sidrenje pred plažom u Port-Navalu ili za posljednje bacanje sidra u zavjetrini Méabana prije uplovljavanja. Le Crouesty je velika, dobro zaštićena marina, laka za ulazak po gotovo svakom vremenu. Nadolijte gorivo i vodu na putu do veza i ostavite brod onakvim kakvim biste ga i sami željeli zateći.",
+          "thingsToDo": [
+            "Usidrite se pred Port-Navalom za posljednje kupanje",
+            "Tempirajte ulaz u zaljev s plimom",
+            "Natočite gorivo prije vraćanja broda",
+            "Pratite oznaku Méaban pri ulasku"
+          ],
+          "mooringTip": "Ciljajte na ulaz u zaljev u zastoju struje ili za plime; kod Port-Navala struja na oseci ide i do tri čvora protiv vas. Vez s gorivom u Le Crouestyju je blizu ulaza, pa natočite prije nego se probijete do dodijeljenog pontona."
+        }
+      }
+    },
+    "riviera-esterel-14-days": {
+      "metaTitle": "14 dana: Riviera i Esterel | Boat4You",
+      "metaDesc": "Četrnaest dana plovidbe iz Cannesa Azurnom obalom i obalom Esterela: Antibes, Monaco, Saint-Tropez, Port-Cros i Porquerolles.",
+      "days": {
+        "1": {
+          "shortDescription": "Lagana prva etapa od Cannesa do Antibesa, gdje su najveća europska marina za jahte i stari grad unutar zidina vrijedan cijelog poslijepodneva.",
+          "description": "Kratka i popustljiva, ova uvodna etapa daje posadi da se slegne prije nego počnu prave milje. Od Cannesa do Antibesa je desetak milja, uz samu obalu, s Cap d'Antibesom zelenim i niskim pred vama. Port Vauban je najveća marina u Europi, a superjahte poredane uz Quai des Milliardaires jasno pokažu razmjere čim obiđete Fort Carré. Na kopnu, stari grad zaslužuje polagano poslijepodne. Marché Provençal na Cours Masséni gotovo svako jutro pod svojim željeznim krovom prodaje tapenadu, soccu i provansalsko platno. Iznad njega stoji Château Grimaldi, danas Muzej Picasso, gdje je slikar radio 1946. Obično se vežemo sredinom poslijepodneva i prošećemo bedemima prije večere. Jednostavan dan, ali dobar za uhodavanje broda.",
+          "thingsToDo": [
+            "Prošećite tržnicom Marché Provençal na Cours Masséni",
+            "Obiđite Muzej Picasso u Château Grimaldiju",
+            "Prošećite bedemima kraj Fort Carréa",
+            "Zaplivajte na Plage de la Garoupe, Cap d'Antibes"
+          ],
+          "mooringTip": "Port Vauban prima goste, ali u srpnju i kolovozu nazovite kapetaneriju unaprijed jer se veliki vezovi brzo popune. Za mirniju noć usidrite se u pijesku pred Cap d'Antibesom i na obalu idite tenderom."
+        },
+        "2": {
+          "shortDescription": "Uz obalu prema istoku pokraj Nice, u jedan od najdubljih prirodnih zaljeva Mediterana, gdje kruzeri i jahte dijele istu zaklonjenu vodu.",
+          "description": "Iz Antibesa idete pokraj prilaza zračnoj luci i dugog luka Baie des Anges, a onda Nica prolazi s lijeve strane. Ubrzo se otvara Rade de Villefranche, jedna od najdubljih prirodnih luka na Mediteranu, koja između Cap de Nicea i Cap Ferrata pada na blizu devedeset metara. Zaljev dobro drži brodove i po većini uvjeta ostaje miran, no jaki južni vjetar tjera mrtvo more ravno unutra, pa pratite prognozu. Grad se penje uz brdo u oker i ružičastoj boji. Rue Obscure, nadsvođeni srednjovjekovni prolaz ispod kuća, vrijedi potražiti, a barokna Chapelle Saint-Pierre nosi ukrase Jeana Cocteaua. Susjedni Cap Ferrat čuva Villu Ephrussi de Rothschild i njezine vrtove. Često se sidrimo pred plažom i tenderom idemo na ribarsku rivu.",
+          "thingsToDo": [
+            "Pronađite nadsvođeni prolaz Rue Obscure",
+            "Pogledajte Cocteauove freske u Chapelle Saint-Pierre",
+            "Posjetite Villu Ephrussi de Rothschild na Cap Ferratu",
+            "Zaplivajte s Plage des Marinières"
+          ],
+          "mooringTip": "Marina La Darse je mala i vezovi su joj uglavnom privatni, pa računajte na sidrenje. Držanje je dobro u pijesku i mulju na osam do dvanaest metara; prognozu južnog vjetra shvatite ozbiljno i pomaknite se ako ojača."
+        },
+        "3": {
+          "shortDescription": "Kratak skok do Kneževine, gdje Port Hercule zbija superjahte ispod terasa kasina i Kneževe palače.",
+          "description": "Jedva sat vremena na motor, ili lijena plovidba ako ima vjetra za nju. Ono što pamtite je dolazak, ne milje. Obiđite Cap Ferrat, prođite Cap d'Ail i Monaco se složi pred vama, sa stambenim tornjevima koji rastu ravno iz mora. Port Hercule ima oko sedamsto vezova, ali tek nekolicinu za goste, a mjesta u sezoni ima malo i skupa su, pa je rezervacija gotovo obavezna. Kneževina se isplati truda oko iskrcaja. Oceanografski muzej stoji na litici u Monaco-Villeu, a njegov akvarij vrijedi par sati. Stari grad i Kneževa palača krune Rocher, a za Casino de Monte-Carlo trebaju samo sako i malo hrabrosti. Ako su vezovi puni, Port de Fontvieille u Cap-d'Ailu leži odmah zapadno i ostaje mirniji.",
+          "thingsToDo": [
+            "Obiđite Oceanografski muzej na litici",
+            "Gledajte smjenu straže pred palačom u Monaco-Villeu",
+            "Prošećite trgom pred Casino de Monte-Carlo",
+            "Prošećite kaktus-terasama egzotičnog vrta"
+          ],
+          "mooringTip": "Ljeti Port Hercule rezervirajte dobrano unaprijed; mjesta za goste ima malo, a cijene su visoke. Fontvieille, odmah iza rta, jeftinija je i mirnija zamjena ako je glavna luka puna."
+        },
+        "4": {
+          "shortDescription": "Okret natrag prema zapadu, duža plovidba uz obalu pokraj Cap Ferrata i Nice, uz izbor sidrišta ako vjetar ostane blag.",
+          "description": "Ovo je dan u kojem odmatate istočni kut i vraćate se prema esterelskom kraju obale. Od Monaca do Antibesa ima oko dvadeset pet milja, dovoljno da bude prava plovidba ako se poslijepodne digne povjetarac s jugoistoka. Obično krećemo do devet kako bismo drugu polovicu odradili s vjetrom u leđa. Mjesta za predah ne nedostaje. Beaulieu-sur-Mer i zaklonjena voda pod Cap Ferratom lako su odmorište za ručak, a Villa Kerylos, rekonstruirana grčka vila na rtu, vidi se s palube. Natrag u Antibesu odaberite drugi vez ili sidrište nego prve noći; Baie de la Garoupe na istočnoj strani rta miran je po većini ljetnih uvjeta i kratko je tenderom od staze uz svjetionik.",
+          "thingsToDo": [
+            "Stanka za ručak pred Beaulieu-sur-Merom",
+            "Uočite Villu Kerylos na Cap Ferratu",
+            "Usidrite se u Baie de la Garoupe",
+            "Prošećite obalnom stazom Sentier du Littoral"
+          ],
+          "mooringTip": "Baie de la Garoupe na Cap d'Antibesu daje dobro držanje u pijesku i zaklon od svega osim od istočnog vjetra. U srpnju doplovite prije sredine poslijepodneva da nađete mjesta za okretanje među dnevnim brodicama."
+        },
+        "5": {
+          "shortDescription": "Sićušan skok do dva otoka, na sidro između redovničkog vinograda i utvrde u kojoj je bio Čovjek sa željeznom maskom.",
+          "description": "Toliko kratko da biste dotamo gotovo mogli i otploviti na struju. Plovidba vas spušta u kanal između Sainte-Marguerite i Saint-Honorata, dvaju Lérinskih otoka pred Cannesom. Voda između njih omiljeno je sidrište, pijesak na pet do deset metara s dobrim držanjem, a do podneva se napuni dnevnim brodicama i do večeri opet isprazni. Sainte-Marguerite nosi Fort Royal, gdje legenda smješta Čovjeka sa željeznom maskom, a borove staze presijecaju otok do tihih uvala. Saint-Honorat pripada cistercitskoj zajednici koja i danas obrađuje svoje vinograde; redovnici prave vino i liker Lérina, oboje se prodaje u dućanu opatije. Sidrenje je izravno pred samostanom zabranjeno i označeno žutim bovama, pa taj potez ostavite slobodnim. Prenoćite ovdje kad izletnički brodovi odu i mjesto je gotovo samo vaše.",
+          "thingsToDo": [
+            "Istražite Fort Royal na Sainte-Marguerite",
+            "Kušajte liker Lérina u opatiji na Saint-Honoratu",
+            "Prošećite borovim stazama do tihih uvala",
+            "Ronite s maskom u plitkom kanalu između otoka"
+          ],
+          "mooringTip": "Sidrite u pijesku na pet do deset metara u kanalu, ali držite se podalje od zone zabranjenog sidrenja pred opatijom, označene žutim bovama. Moguće je rezervirati i parkovsku bovu, pa ne brinete o držanju kad zapuše."
+        },
+        "6": {
+          "shortDescription": "Prijeđite na vatreno crvenu obalu Esterela i uzmite bovu u zaklonjenom zaljevu Agay, pod vulkanskim brdima.",
+          "description": "Opet prema zapadu, i obala potpuno mijenja karakter. Masiv Esterel je stari vulkan, crveni riolit koji boji litice, a more pod njima poprima hrđavo ružičastu nijansu. Od Lérinskih otoka to je jednostavna plovidba pokraj Théoulea i Pointe de l'Aiguille do Agaya, uvučenog između Cap Dramonta i Pointe de la Baumette. Agay je jedna od boljih prirodnih luka na ovom potezu, dobro zaštićena osim s juga. U zaljevu je polje bova na istočnoj strani, a kako su livade posidonije zaštićene, uzimanje bove umjesto bacanja sidra ponegdje je i obavezno, a svakako je ljubaznije prema dnu. Cap Dramont, odmah istočno, mjesto je iskrcavanja savezničkih trupa u kolovozu 1944., a mali Ile d'Or s kamenom kulom stoji pred obalom. Mirno sidrište među crvenim stijenama za kraj dana.",
+          "thingsToDo": [
+            "Zaplivajte pod crvenim liticama Esterela",
+            "Prošećite do plaže iskrcavanja na Cap Dramontu",
+            "Fotografirajte kamenu kulu na Ile d'Oru",
+            "Prehodajte dio staze Sentier du Littoral"
+          ],
+          "mooringTip": "U Agayu uzmite bovu umjesto da sidrite; istočno polje dobro je zaklonjeno, a livade posidonije su zaštićene. U jeku sezone doplovite do ranog poslijepodneva jer bove brzo nestanu i ne mogu se uvijek rezervirati."
+        },
+        "7": {
+          "shortDescription": "Kratak skok uz obalu do Saint-Raphaela, oko Cap Dramonta u živu turističku luku s bizantskom bazilikom iznad rive.",
+          "description": "Lagano jutro. Saint-Raphael je tek nekoliko milja oko Cap Dramonta, pa žurbe nema; etapa je zapravo izlika da se motate crvenom obalom i usput zaplivate kod Ile d'Ora. Grad se straga stapa s Fréjusom, a stara luka daje vam pravu marinu s gorivom, vodom i šetnjom do centra. Saint-Raphael je izrastao kao ljetovalište Belle Époque i nešto od tog duha je zadržao. Basilique Notre-Dame-de-la-Victoire, bizantskog stila s prugastom kupolom, stoji nekoliko ulica od mora. Tu je i jutarnja tržnica, pristojna ribarnica i dovoljno restorana uz obalu da opskrba bude bezbolna. Dobro mjesto za punjenje tankova i kambuze prije sutrašnjeg dužeg prijelaza do zaljeva Saint-Tropez.",
+          "thingsToDo": [
+            "Pogledajte bizantsku Basilique Notre-Dame-de-la-Victoire",
+            "Prošećite jutarnjom tržnicom u Saint-Raphaelu",
+            "Zaplivajte kod Ile d'Ora na prilazu",
+            "Napunite kambuzu na ribarnici u luci"
+          ],
+          "mooringTip": "Vieux Port u Saint-Raphaelu i susjedna Santa Lucia primaju goste i nude gorivo i vodu. U sezoni rezervirajte noćni vez i iskoristite stanku za punjenje tankova prije otvorenog prijelaza na zapad."
+        },
+        "8": {
+          "shortDescription": "Preko otvorene vode do Saint-Tropeza, na sidro u Baie des Canebiers, na skok tenderom od citadele i stare luke.",
+          "description": "Prvi pravi prijelaz na ovom putovanju. Iz Saint-Raphaela napuštate obalu i idete dvadesetak milja prema jugozapadu preko otvorene vode do zaljeva Saint-Tropez, pa izaberite mirno jutro i pazite na poslijepodnevni povjetarac s mora koji zna ojačati nad zaljevom. Sam Saint-Tropez je u luci skup i pretrpan, pa mnoge posade sidre u Baie des Canebiers, odmah istočno od grada. Dno je pijesak i trava s dobrim držanjem, a označeni kanal dijeli kupače od brodova. Odande je kratko tenderom do plaže i pola sata hoda pokraj pomorskog groblja do citadele i stare luke. Place des Lices ima tržnicu utorkom i subotom, a komad tarte Tropézienne gotovo je obavezan. Sénéquier na rivi je za promatranje ljudi, ne za budžet.",
+          "thingsToDo": [
+            "Usidrite se i zaplivajte u Baie des Canebiers",
+            "Obiđite tržnicu na Place des Lices, utorkom ili subotom",
+            "Popnite se do Citadelle zbog pogleda na zaljev",
+            "Kušajte tarte Tropézienne kraj stare luke"
+          ],
+          "mooringTip": "Sidrite u Baie des Canebiers na pijesku i travi na pet do deset metara; luka je skupa i ljeti često puna. Držite se unutar označenog kanala i ostavite prostora za okretanje kad povjetarac zaokrene."
+        },
+        "9": {
+          "shortDescription": "Deset minuta preko zaljeva do Port Grimauda, gradića iz 1960-ih uz vodu, gdje se vežete pred vlastitim kućnim pragom.",
+          "description": "Jedva da je to plovidba. Prelazite dno zaljeva do Port Grimauda, kanalskog gradića koji je arhitekt François Spoerry šezdesetih sagradio od nule. Pastelne kuće gledaju na vodu, svaka sa svojim vezom, a cijelo je mjesto zamišljeno kao mali provansalski odgovor na Veneciju. Marina ima oko petsto vezova, od čega šezdesetak za goste na brodovima do dvadeset metara, pa je poziv unaprijed u sezoni pametan. Kad se vežete, gradić su sve sami mostići i tihe rive, najbolje ih je vidjeti u večernjoj šetnji i iz coche d'eau, malih električnih brodica koje se provlače kanalima. Popnite se do starog Grimauda na brdu iza za širi pogled, s ruševinama dvorca i templarskom kapelom. Lagana i lijepa noć nakon prijelaza.",
+          "thingsToDo": [
+            "Provozajte se s coche d'eau kroz kanale",
+            "Prošećite do ruševina dvorca u Grimaudu na brdu",
+            "Prijeđite mostiće u zlatnom satu",
+            "Večerajte na terasi uz kanal"
+          ],
+          "mooringTip": "Port Grimaud drži šezdesetak vezova za goste na brodovima do dvadeset metara; u srpnju i kolovozu rezervirajte unaprijed. Prilazite polako i pazite na plitak, označen ulazni kanal koji se po rubovima zamuljuje."
+        },
+        "10": {
+          "shortDescription": "Oko divljih rtova južno od zaljeva do širokog pješčanog zaljeva Cavalaire, u podnožju brda Pradels.",
+          "description": "Izlazeći iz zaljeva obilazite niz zaštićenih rtova koji ovaj kut varske obale čine jednim od najljepših. Cap Camarat sa svojim svjetionikom, pa Cap Taillat i Cap Lardier, sve dio obale na kojoj se nije gradilo. Uvucite se iza njih na kupanje; Plage de l'Escalet i more kod Cap Taillata po mirnom su danu bistri i tihi. Cavalaire-sur-Mer je na kraju etape, širok zaljev pod Massif des Pradels s dugom pješčanom plažom i modernom marinom. Nakon sjaja Saint-Tropeza to je nepretenciozno ljetovalište, dobro za obnovu zaliha i opušteno veče. Zaljev je otvoren jugu i istoku, pa je sidrište samo za lijepo vrijeme; ako se najavljuje mrtvo more, marina je sigurniji izbor.",
+          "thingsToDo": [
+            "Zaplivajte s pješčane prevlake Cap Taillata",
+            "Usidrite se kod Plage de l'Escalet",
+            "Obnovite zalihe u dućanima uz rivu u Cavalaireu",
+            "Prošećite zaštićenom stazom Cap Lardier"
+          ],
+          "mooringTip": "Zaljev Cavalaire otvoren je jugu i istoku, pa sidrite samo po stabilnom vremenu, a uzmite marinu ako prijeti mrtvo more. Kod Cap Taillata držanje je dobro u pijesku, ali to je dnevna stanka, a ne noćenje po vjetru."
+        },
+        "11": {
+          "shortDescription": "Uz obalu Mauresa do Le Lavandoua, živog primorskog grada s desetak plaža i Zlatnim otocima pred sobom.",
+          "description": "Opuštena etapa uz obalu pod masivom Maures, tamnim šumovitim brdima koja zaklanjaju ovu obalu. Pokraj Cap Nègrea i diskretnih vila po njegovim bokovima, pa niz uvala koje mještani zovu dvanaest plaža Le Lavandoua. Cavalière je najveća, s prostorom za sidrenje pred pijeskom po mirnom vremenu i kupanjem do obale za ručak. Le Lavandou je pravi ribarski i ljetovališni grad, a ne kulisa, i time je bolji. Luka prima goste, tržnica je stvarna, a uz rivu su restorani bez pretenzija u kojima je riba lokalna. Odavde su Iles d'Or tek preko vode, pa je ovo prirodna odskočna daska prije prijelaza na Port-Cros. Često se ovdje opskrbimo za dvije noći na otocima jer se u parkovima gotovo ništa ne prodaje.",
+          "thingsToDo": [
+            "Usidrite se i zaplivajte kod plaže Cavalière",
+            "Opskrbite se na tržnici u Le Lavandouu",
+            "Jedite svježu ribu uz rivu",
+            "Proplovite pokraj vila na Cap Nègreu"
+          ],
+          "mooringTip": "Luka u Le Lavandouu prima goste i dobro je mjesto za nadopunu prije Zlatnih otoka, gdje je opskrba tanka. Uz vjetar s kopna možete sidriti pred plažom Cavalière; pomaknite se u luku ako vjetar okrene s mora."
+        },
+        "12": {
+          "shortDescription": "Prijeđite na Port-Cros, prvi europski morski nacionalni park, i uzmite parkovsku bovu pred pošumljenim otokom bez automobila.",
+          "description": "Kratak prijelaz vodi vas na Port-Cros, najdivljiji od triju Zlatnih otoka i srce nacionalnog parka osnovanog 1963., među prvim morskim rezervatima u Europi. Cijeli je otok zaštićen, gusto pošumljen i bez automobila, a pravila na vodi su stroga i s razlogom. Vez se uzima s parkovskog polja bova, dimenzioniranog za brodove do petnaest metara, a sidrenje je u Passe de Bagaud zabranjeno radi zaštite posidonije. Da biste plovili tim vodama, brod mora imati tank za crne vode. Kad se smjestite, glavni je adut hodanje: staza do Fort de l'Estissac i sjenoviti put preko otoka do Plage de la Palud, gdje plićakom pokraj hridi Rascas ide označena ronilačka staza. Tiho, zeleno i svjetlosnim godinama daleko od rive u Saint-Tropezu.",
+          "thingsToDo": [
+            "Ronite označenom stazom kod Plage de la Palud",
+            "Popnite se do Fort de l'Estissac",
+            "Prošećite sjenovitom stazom preko otoka",
+            "Tražite kirnje u bistrom plićaku"
+          ],
+          "mooringTip": "Koristite bovu nacionalnog parka; sidrenje je ograničeno, a u Passe de Bagaud zabranjeno. Bove su za brodove do petnaest metara i obavezan je tank za crne vode, pa doplovite rano i pitanje tanka riješite unaprijed."
+        },
+        "13": {
+          "shortDescription": "Skok do Porquerollesa, najvećeg Zlatnog otoka, zbog plaža od bijelog pijeska, puteljaka kroz vinograde i seoskog trga u sjeni eukaliptusa.",
+          "description": "Porquerolles leži nekoliko laganih milja prema zapadu, najveći je i najnaseljeniji od otoka. Selo je izraslo oko garnizona iz devetnaestog stoljeća, a njegov trg, prašnjav od boćanja i zasjenjen eukaliptusima, i danas djeluje kao granična postaja koja je odlučila ostati zbog vina. Sjeverna obala krije najpoznatije plaže, među njima Plage Notre-Dame i Plage d'Argent, obje pješčane i obje zaklonjene od mistrala iza otoka. Usidrite se uz sjevernu obalu i do sela vam je kratka šetnja ili vožnja biciklom; otok ima vinograde koji rade Côtes de Provence rosé i puteljke koje unajmljeni bicikl lako pokrije. Fort Sainte-Agathe gleda na luku, a šetnja do svjetionika na južnom kraju daje vam litice i otvoreno more. Najuglađeniji od triju otoka i lijepo posljednje sidrište.",
+          "thingsToDo": [
+            "Zaplivajte na Plage Notre-Dame ili Plage d'Argent",
+            "Unajmite bicikl za puteljke kroz vinograde",
+            "Kušajte Côtes de Provence rosé u nekom domaine",
+            "Prošećite do litica sa svjetionikom na jugu"
+          ],
+          "mooringTip": "Sidrite pred plažama na sjevernoj obali, zaklonjeni od mistrala, u pijesku na pet do dvanaest metara. Plage Notre-Dame i d'Argent do kasnog jutra se napune dnevnim brodicama, pa bacite sidro rano da osigurate prostor za okretanje."
+        },
+        "14": {
+          "shortDescription": "Duga završna etapa natrag do Cannesa, rani polazak preko otvorene vode da se krug zatvori na Croisetti.",
+          "description": "Najduži dan u ova dva tjedna i onaj koji treba dobro isplanirati. Od Porquerollesa do Cannesa je velik potez otvorene vode, dobrano preko četrdeset milja, pa bovu obično odriješimo u prvo svjetlo kako bismo stigli prije nego poslijepodnevni vjetar ojača. Ako posada želi razbiti etapu, Le Lavandou ili Cavalaire razumne su stanke na pola puta. Obala se putem ponovno slaže: Maures ustupa mjesto crvenom Esterelu, a na kraju dolazi niski zeleni Cap d'Antibes i Lérinski otoci. Cannes zatvara krug kako dolikuje, s La Croisette koja se zlati uz more i s Le Suquetom, starim gradom, koji se penje do crkvenog tornja i pogleda natrag preko zaljeva. Vežite se u Vieux Portu ili se usidrite pred Croisettom za posljednju noć i nazdravite dobro odrađenih četrnaest dana plovidbe.",
+          "thingsToDo": [
+            "Prošećite La Croisette i staru luku",
+            "Popnite se na Le Suquet zbog pogleda na zaljev",
+            "Obiđite Marché Forville za posljednju opskrbu",
+            "Nazdravite putovanju sa sidrišta pred Croisettom"
+          ],
+          "mooringTip": "Za ovu dugu etapu isplovite iz Porquerollesa u zoru i pazite na poslijepodnevni vjetar s Esterela. U Cannesu Vieux Port prima goste, ali je prometan; sidrenje pred La Croisette po mirnom vremenu ugodna je i jeftinija posljednja noć."
+        }
+      }
+    }
+  },
+  "areas": {
+    "atlantic-france": {
+      "metaTitle": "Jedrenje Bretanjom i Atlantikom | Boat4You",
+      "metaDesc": "Charter rute kroz južnu Bretanju: Belle-Île, Houat, Hoëdic i zaljev Morbihan. Vjetar, plime i otočna sidrišta, dan po dan.",
+      "title": "Jedrite otocima i plimama južne Bretanje",
+      "description": "Ovaj kut Atlantika nagrađuje jedriličare koji znaju čitati more. Ljetni se vjetrovi obično slegnu u umjeren jugozapadnjak, snage 3 ili 4 bofora većinu popodneva, što daje lagana bočna jedrenja između otoka koji rijetko stoje više od dva sata jedan od drugoga. Quiberonski zaljev dovoljno je zaklonjen za opušten prvi dan, a onda se obala otvara. Belle-Île je glavni adut, s liticama i špiljom Grotte de l'Apothicairerie na divljoj strani te Le Palaisom i njegovom Vaubanovom citadelom na mirnijoj. Manji Houat i Hoëdic nude sidrišta pod bijelim pijeskom i gotovo nijedan automobil. Zaljev Morbihan slagalica je koje se svi sjećaju, unutrašnje more prošarano otočićima poput Île aux Moines i Île d'Arz. Ovdje vrijedi jedno pravilo: prolaz kroz ušće zaljeva tempirajte s nadolazećom plimom ili zastojem struje jer struja Jument u sizigijama prelazi devet čvorova i zaustavit će krstašicu u mjestu. Srpanj i kolovoz napune Le Palais do kasnog popodneva, pa dođite prije tri ili ciljajte lipanj i rujan."
+    },
+    "corsica": {
+      "metaTitle": "Korzika: itinerari za charter jahte | Boat4You",
+      "metaDesc": "Korzikanske rute jedrenja dan po dan, od Ajaccia do Bonifacia i rezervata Lavezzi, s vjetrom, udaljenostima i najboljim mjesecima bez gužve.",
+      "title": "Jedrite granitnom obalom Korzike i uvalama rezervata",
+      "description": "Većina posada baza se u Ajacciu i radi prema jugu do Bonifacia, plovidba koja vas nagrađuje stabilnim termičkim vjetrovima od 10 do 20 čvorova kroz ljetna popodneva. Jedrenje je ovdje pošten posao: zapadna obala diže zapadnjake snage 3 do 6 bofora, a Bonifaciova vrata provlače libeccio u kratke, oštre udare, pa za prijelaz do otočja Îles Lavezzi imajte plan B. Taj rezervat granitnih hridnjaka i plitkih tirkiznih uvala i jest nagrada. Sjeverno od Ajaccia, crvene porfirne litice Scandole i zaselak Girolata do kojeg se stiže samo brodom mirnija su alternativa južnom krugu. Etape uglavnom idu 15 do 30 nautičkih milja, lagani dnevni skokovi. Jedna praktična napomena: fjordska luka u Bonifaciju krca je od sredine srpnja kroz kolovoz, pa javite se radiom unaprijed za vez ili se usidrite ispred i dođite tenderom. Dođete li u lipnju ili rujnu, ista sidrišta djeluju upola prazna."
+    },
+    "cote-azur": {
+      "metaTitle": "Côte d'Azur: itinerari jedrenja | Boat4You",
+      "metaDesc": "Charter rute na Azurnoj obali dan po dan: slab vjetar, kratki skokovi od Cannesa do Saint-Tropeza, Port-Crosa i otočnih sidrišta Porquerollesa.",
+      "title": "Od glamura Cannesa do divljih otočnih sidrišta",
+      "description": "Côte d'Azur pakira kratke, blagonaklone skokove u obalu koja u jednom popodnevu prelazi iz marina s filmskih festivala u borovima obrasle otoke. Vjetrovi su obično slabi, zapadnjak od 10 do 25 čvorova kroz dan koji nakon mraka popusti, uz gotovo nikakve plime s kojima treba računati. Saint-Tropez je od Cannesa udaljen oko 26 nautičkih milja, pa rijetko upisujete duge plovidbe. Uperite pramac prema otočju Îles de Lérins zbog besplatnog sidrišta ispred samostana na Saint-Honoratu, pa nastavite na zapad do Port-Crosa, prvog nacionalnog parka u Europi koji je zajedno zaštitio kopno i morsko dno. Porquerolles nagrađuje skretanje uvalama bijelog pijeska poput plaže Plage Notre-Dame. Želite li glamur bez gužve, jedrite ovdje krajem svibnja, u lipnju ili rujnu; srpanj i kolovoz pretvore Saint-Tropez u parkiralište megajahti. Jedna lokalna navika koju vrijedi preuzeti: prije nego što spustite sidro provjerite dno jer je sidrenje po zaštićenoj posidoniji i nezakonito i loše držanje."
+    }
+  }
+}
