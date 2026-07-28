@@ -1,1 +1,255 @@
-{}
+{
+  "routes": {
+    "boka-budva-week": {
+      "metaTitle": "Volta de 7 Dias à Boka e Budva | Boat4You",
+      "metaDesc": "Rota tranquila de 7 dias de Porto Montenegro, em Tivat, por Kotor, Perast, Herceg Novi e Budva, com fundeadouros calmos e peixe fresco da Boka.",
+      "days": {
+        "1": {
+          "shortDescription": "Saia sem pressa da doca de superiates de Tivat e enfie-se pelo estreito de Verige até à cidade muralhada de Kotor, ao pé da montanha.",
+          "description": "Levantar o barco em Porto Montenegro leva meia manhã, contando com o briefing do charter e umas compras a sério, por isso raramente largamos antes das onze. A baía interior fica quase sempre espelhada de manhã, e a passagem pelo estreito de Verige é daquelas navegações mansas que dão à tripulação nova tempo para se encontrar. Kotor fica no fundo da baía, com as muralhas de pedra encostadas a um paredão de calcário cinzento. Amarre na marina da cidade e entre logo na parte velha pela Porta do Mar. Se as pernas ajudarem, a subida à fortaleza de São João paga-se com a baía inteira estendida lá em baixo; vá ao fim da tarde, quando o calor já afrouxou. O jantar fica a poucos passos, atravessando praças de mármore gasto.",
+          "thingsToDo": [
+            "Subir à fortaleza de São João ao anoitecer",
+            "Entrar na cidade velha pela Porta do Mar",
+            "Fazer as compras todas em Porto Montenegro antes de largar",
+            "Copos ao fim do dia nas praças de mármore de Kotor"
+          ],
+          "mooringTip": "Reserve lugar na Kotor Marina com antecedência em julho e agosto, porque o cais enche a meio da tarde. Fundear na baía interior é ingrato, já que de noite as rajadas caem com força das montanhas, por isso a marina é a aposta mais segura."
+        },
+        "2": {
+          "shortDescription": "Um salto preguiçoso de cinco milhas até à barroca Perast e às suas duas ilhotas, uma delas uma igreja erguida sobre um recife feito à mão.",
+          "description": "É a etapa mais curta da semana, mal chega a uma hora à vela, por isso não há motivo para despachar o pequeno-almoço. Perast não tem marina digna desse nome, apenas uma fila de boias de amarração em frente à marginal e um cais curto que enche cedo. Apanhe uma boia, ponha o anexo na água e vá até Nossa Senhora das Rochas. A ilha foi construída à mão ao longo de séculos: pedras de lastro e barcos afundados amontoados sobre um recife até haver espaço para uma igreja. Lá dentro estão dezenas de quadros votivos deixados por marinheiros que conseguiram voltar. Em terra, a vila é uma única fita de pedra veneziana, sem carros. Costumamos reservar mesa na Konoba Otok Bronza e ver a luz amaciar sobre a água.",
+          "thingsToDo": [
+            "Ir de anexo até Nossa Senhora das Rochas",
+            "Ver os quadros votivos na igreja da ilha",
+            "Jantar no terraço da Konoba Otok Bronza",
+            "Passear a marginal de pedra de Perast, sem carros"
+          ],
+          "mooringTip": "O campo de boias de Perast é pequeno e não se reserva, por isso chegue no início da tarde para garantir uma; o cais da vila é curto e tem pouca profundidade e pouco espaço. Com vento de norte, as boias ao largo da ponta ficam mexidas."
+        },
+        "3": {
+          "shortDescription": "Navegar a baía a todo o comprimento e sair pelo estreito de Verige até Herceg Novi, uma cidade de escadas e fortes marítimos.",
+          "description": "Hoje navega-se a sério. Assim que o maestral entra por volta do meio-dia, a descida para oeste ao longo da baía e a passagem de volta pelo estreito de Verige fazem-se num bom través, talvez três horas com brisa jeitosa. Herceg Novi guarda a entrada, onde a baía encontra o Adriático aberto. A cidade velha sobe em socalcos a partir da água, só escadas e passagens à sombra, por isso leve calçado leve e conte trabalhar pelas vistas. O Forte Mare, o forte marítimo lá em baixo, é do século XIV e hoje acolhe cinema ao ar livre no verão. O porto central é pequeno e muitas vezes está cheio; se não houver lugar, o fundeadouro logo a leste agarra bem em lodo por uns oito metros. Um café debaixo das palmeiras na praça principal é o ritual local.",
+          "thingsToDo": [
+            "Subir as ruelas em degraus da cidade velha",
+            "Visitar o forte marítimo Forte Mare",
+            "Café debaixo das palmeiras na praça principal",
+            "Um mergulho do barco junto à boca da baía"
+          ],
+          "mooringTip": "O Port Herceg tem só cerca de setenta lugares e enche na época, por isso telefone antes ou chegue cedo. Se não der, fundeie logo a leste da cidade em sete a dez metros de lodo, que agarra bem e abriga do noroeste dominante."
+        },
+        "4": {
+          "shortDescription": "Atravessar a boca da baía até à enseada de calhau de Zanjice, com a Gruta Azul e o forte de Mamula a um passeio de anexo.",
+          "description": "São apenas quatro milhas entre Herceg Novi e Zanjice, por isso estique a travessia pela manhã e pare para um banho pelo caminho. Zanjice é uma praia curva de calhau na costa de Lustica, perto de onde a baía se abre ao mar. Enche de barcos de passeio à hora de almoço e volta a esvaziar ao fim do dia. Vá de anexo ou de táxi-barco local até à Gruta Azul, uma gruta baixa onde a luz põe a água de um azul elétrico; a entrada é apertada e tem só uns metros de fundo, por isso escolha um momento de mar calmo. Mamula, a fortaleza redonda na ilha ao largo da ponta, merece uma passagem lenta. Isto é um fundeadouro de bom tempo, não uma marina, e fica exposto se o vento rodar para sul, por isso mantenha vigia ao ferro e esteja pronto a mudar-se se refrescar.",
+          "thingsToDo": [
+            "Entrar a nado na Gruta Azul, chegando de anexo",
+            "Fundear ao largo da praia de calhau de Zanjice para almoçar",
+            "Passagem lenta à volta da fortaleza da ilha de Mamula",
+            "Snorkel nas águas claras ao largo de Lustica"
+          ],
+          "mooringTip": "Zanjice é um fundeadouro aberto, bom só com tempo calmo e estável; largue o ferro em areia e ervas e cave-o bem. Chegue no início da tarde, antes de os barcos de passeio ficarem com os melhores sítios, e vigie durante a noite se houver previsão de sul."
+        },
+        "5": {
+          "shortDescription": "Dobrar a península e navegar a costa aberta até Budva, onde as muralhas medievais dão para praias de areia e noites de verão barulhentas.",
+          "description": "Hoje acaba-se a água abrigada. Ao dobrar a ponta de Lustica passa para a costa aberta, onde costuma haver mais ondulação e brisa mais constante, por isso compensa largar cedo, antes de o vento da tarde crescer. Budva fica a umas três a quatro horas pela costa abaixo, conforme o vento. A marina está encostada às muralhas da cidade velha, por isso sai do barco quase para dentro das ruelas medievais. O bairro muralhado é compacto e fotogénico, rodeado de praias de areia que enchem depressa em julho. Budva é também a capital da noite nesta costa, por isso quem tem sono leve fará melhor em pedir um lugar longe dos bares. Para um banho mais sossegado, a ilha de Sveti Nikola fica logo ali ao largo, e a ilhota de postal de Sveti Stefan está a uma curta navegação para sul.",
+          "thingsToDo": [
+            "Percorrer as muralhas medievais de Budva à hora dourada",
+            "Fundear ao largo da ilha de Sveti Nikola para um banho",
+            "Passar à vela pela ilhota de Sveti Stefan",
+            "Provar os bares da cidade velha depois de escurecer"
+          ],
+          "mooringTip": "A Marina Budva é grande, mas muito movimentada no verão, por isso reserve lugar com antecedência. Se quiser sossego, peça um pontão afastado dos bares da cidade velha. Fundear ao largo de Sveti Stefan só resulta com tempo calmo, porque está aberto à ondulação."
+        },
+        "6": {
+          "shortDescription": "Voltar costa acima até à sonolenta Bigova, um lugarejo de pescadores onde o jantar é o que os filhos do dono trouxeram nessa manhã.",
+          "description": "Depois do barulho de Budva, Bigova é o antídoto. Fica recolhida no fundo de uma enseada verde e profunda, no canto sudoeste da península de Lustica, e a navegação até lá são umas duas horas sem complicações. Não há aqui quase nada além de meia dúzia de casas, uns barcos de pesca e duas konobas à beira de água, e é precisamente esse o encanto. Apanhe uma das boias junto aos restaurantes ou fundeie um pouco mais para dentro, onde o fundo agarra bem. Costumamos reservar mesa no Grispolis, onde a família pesca para a própria cozinha e traz o peixe do dia à mesa antes de o cozinhar, à maneira da Boka. O Pod Volatom, mesmo ao lado, faz o mesmo e tem a sua própria clientela. Mergulhe do barco, jante tarde e deite-se num silêncio completo.",
+          "thingsToDo": [
+            "Escolher o peixe do dia na Konoba Grispolis",
+            "Jantar no Pod Volatom à beira de água",
+            "Nadar na enseada calma e verde de Bigova",
+            "Ver os barcos de pesca a chegar"
+          ],
+          "mooringTip": "Bigova tem oito boias de amarração em três a seis metros, mesmo à frente dos dois restaurantes; reserve mesa e o dono costuma indicar-lhe uma boia. Caso contrário, fundeie a norte das boias, em areia e ervas, por seis a sete metros."
+        },
+        "7": {
+          "shortDescription": "Uma última manhã tranquila, de volta pela entrada da baía até Tivat, com tempo para um derradeiro mergulho antes de entregar o barco.",
+          "description": "A última etapa é curta e sem pressas: uma hora ou duas a contornar para dentro da baía e a subir até Tivat. A maioria dos charters quer o barco de volta logo de manhã, por isso confirme a hora exata da entrega na véspera e saia de Bigova com margem. Normalmente ainda dá para mais um banho numa enseada sossegada pelo caminho, e vale a pena aproveitá-lo. Meta combustível antes de chegar à marina, porque atestar no pontão pode significar fila em época alta. Porto Montenegro é, em si, um bom sítio para terminar. A marginal está cheia de cafés, e a pequena coleção de património naval, com o seu velho submarino, preenche bem uma tarde se o voo só for no dia seguinte. Feche o diário de bordo, tire o sal com água doce e brinde a uma semana bem navegada.",
+          "thingsToDo": [
+            "Último mergulho numa enseada calma pelo caminho",
+            "Passear a marginal de Porto Montenegro",
+            "Visitar a coleção de património naval com o submarino",
+            "Atestar antes da fila na marina"
+          ],
+          "mooringTip": "Encha o depósito antes de entrar na marina, porque o cais de combustível faz fila em época alta. Confirme na véspera a hora de entrega e as exigências de limpeza, para que a última manhã corra descontraída."
+        }
+      }
+    },
+    "montenegro-adriatic-14-days": {
+      "metaTitle": "Cruzeiro 14 Dias Montenegro e Boka | Boat4You",
+      "metaDesc": "Duas semanas de Porto Montenegro (Tivat) pela Boka até Bar e de volta: Kotor, Perast, Budva, Sveti Stefan, enseadas calmas e cidades antigas.",
+      "days": {
+        "1": {
+          "shortDescription": "Um primeiro salto curto da marina de Tivat até Rose, o velho lugarejo de pescadores mesmo à boca da Boka.",
+          "description": "A maioria das tripulações levanta o barco à tarde, por isso o primeiro dia é de propósito calmo. De Porto Montenegro é uma hora preguiçosa baía abaixo até Rose, encostada à ponta da península de Luštica, onde a água se abre ao mar. A aldeia é minúscula: uma fila de casas de pedra, um pontão e duas tabernas de peixe que enchem pelas oito. Por cima ergue-se o Forte Rose, um forte austro-húngaro que hoje acolhe um pequeno centro de mergulho. Mergulhe pela popa enquanto a luz cai por trás do cabo. Aqui não há pressa nenhuma, nem vida noturna a sério, e é isso mesmo que se quer. Bom sítio para arrumar os camarotes, testar o molinete do ferro e comer bem antes de a navegação a sério começar amanhã.",
+          "thingsToDo": [
+            "Subir até à fortaleza Forte Rose",
+            "Mergulhar no recife com o centro local",
+            "Jantar numa taberna de peixe em Rose",
+            "Mergulhar do barco ao anoitecer"
+          ],
+          "mooringTip": "Rose tem um cais curto e meia dúzia de boias; apanhe uma boia ou largue ferro na enseada, em areia, a 4–6 m. O cais enche depressa com barcos de passeio ao longo de julho e agosto, por isso chegar cedo ajuda."
+        },
+        "2": {
+          "shortDescription": "Um salto suave pelo estreito até Herceg Novi, cidade fortificada de escadarias e fortes marítimos, com a marina D-Marin Portonovi ali ao lado.",
+          "description": "Herceg Novi fica logo do outro lado da água, uns quarenta minutos a motor se a manhã estiver parada. A cidade trepa a encosta num emaranhado de degraus e terraços, por isso calce sapatos a sério. Comece no bastião do Forte Mare, junto ao mar, e depois suba pela porta velha até à fortaleza Kanli Kula e à torre do relógio na praça Belavista. Aqui o café é um ritual; ninguém se apressa. Para amarrar tem escolha: o molhe da cidade por baixo das muralhas, pelo ambiente, ou a impecável D-Marin em Portonovi, umas duas milhas a oeste, se quiser combustível, duches e água calma. Nós ficamos normalmente do lado da cidade e vamos a pé. Faça também aqui as compras, porque o mercado e as lojas são melhores do que tudo o que há mais à frente na costa.",
+          "thingsToDo": [
+            "Percorrer as muralhas do Forte Mare",
+            "Subir à fortaleza Kanli Kula",
+            "Café na praça Belavista",
+            "Abastecer a cozinha de bordo no mercado da cidade"
+          ],
+          "mooringTip": "Amarre de popa no molhe da cidade, por baixo da fortaleza, ou pegue num lugar com serviços na D-Marin Portonovi, duas milhas a oeste, para combustível e lavandaria. O cais da cidade apanha a esteira do canal dos ferries, por isso use bastantes defensas e um cabo de popa comprido."
+        },
+        "3": {
+          "shortDescription": "Navegar a baía a todo o comprimento até Perast, a vila barroca dos capitães, virada para as suas duas ilhotas famosas no estreito abaixo de Kotor.",
+          "description": "É neste dia que a paisagem se torna operática. Passa-se pelo estreito de Verige, onde as montanhas se fecham e a água fica lisa e escura, e depois aparece Perast, com o seu campanário e as duas ilhas ao largo. Uma é natural: Sveti Đorđe, escurecida de ciprestes, com um mosteiro beneditino fechado e um velho cemitério. A outra, Gospa od Škrpjela, foi construída à mão ao longo de séculos, com os pescadores a deitar pedras sobre um recife até se aguentar uma ilha. Amarre, apanhe o barquinho que faz a travessia e veja a igreja votiva e as suas placas de prata. De volta à vila, a marginal de pedra tem meia dúzia de konobas com peixe e o vinho local Vranac. Deixe tempo para simplesmente ficar sentado. Perast apanha o último sol muito depois de Kotor já estar na sombra.",
+          "thingsToDo": [
+            "Ir de barco até Nossa Senhora das Rochas",
+            "Fotografar o estreito de Verige à vela",
+            "Peixe e Vranac numa konoba da marginal",
+            "Subir ao campanário de São Nicolau"
+          ],
+          "mooringTip": "O cais curto de Perast tem só uns poucos lugares e não se pode fundear mesmo em frente, por isso telefone antes ou chegue antes do meio-dia. Com tempo estável, muitas tripulações fundeiam em areia entre Sveti Đorđe e Gospa od Škrpjela e vão de anexo até terra."
+        },
+        "4": {
+          "shortDescription": "Só mais uma hora fiorde adentro até Kotor, com a cidade velha muralhada e a grande escadaria a subir até San Giovanni.",
+          "description": "Fica a pouco mais de uma hora de Perast, por isso não há razão para largar cedo. Siga a motor devagar até ao fundo da baía e Kotor levanta-se direita da água, com as muralhas a ziguezaguear pelo penhasco acima, atrás da cidade, até à fortaleza de San Giovanni. Entre, amarre e ataque a subida antes das multidões dos cruzeiros e do calor: cerca de 1350 degraus até ao cimo, com o fiorde inteiro a abrir-se lá em baixo. Dentro das muralhas é um labirinto de praças e becos, com a catedral de São Trifão no coração e gatos em cada degrau. Jante tarde. Na época, a cidade velha aguenta-se bem para lá da meia-noite, e a marina fica a dois minutos a pé da porta, por isso não há regresso de anexo às escuras.",
+          "thingsToDo": [
+            "Subir as muralhas até San Giovanni",
+            "Descobrir a catedral de São Trifão dentro das muralhas",
+            "Perder-se nos becos da cidade velha",
+            "Jantar tarde numa praça de pedra"
+          ],
+          "mooringTip": "A Marina Kotor fica mesmo debaixo das muralhas, com lazy lines e serviços completos; reserve com antecedência em julho e agosto, porque é pequena e procurada. Os navios de cruzeiro partilham o canal durante o dia, por isso vá atento na aproximação e conte com alguma esteira."
+        },
+        "5": {
+          "shortDescription": "Sair do fiorde de volta até Luštica Bay, a nova marina para todo o tempo na baía de Trašte, com golfe, piscinas e uma noite de sono descansada.",
+          "description": "Refaça a baía ao contrário, saindo pelo estreito e contornando a costa de Luštica até à baía de Trašte, já na costa aberta. É meio dia de navegação confortável, por isso largue o ferro algures pelo caminho para almoçar e dar um mergulho. Luštica Bay é uma marina de resort feita de raiz, pontões novos e água funda e abrigada, com um campo de golfe por cima e dois restaurantes decentes no cais. Depois de uma semana de pedra medieval parece quase chocantemente moderna, e por uma noite sabe bem: duches a sério, piscina para nadar, roupa lavada. Carregue tudo, ponha o dessalinizador a trabalhar e deixe a tripulação espalhar-se em terra. Daqui o itinerário vira para sul e muda de carácter, trocando a baía fechada por praias, falésias e etapas mais longas em mar aberto pela costa abaixo.",
+          "thingsToDo": [
+            "Fundear pelo caminho para almoçar e nadar",
+            "Uma volta de golfe por cima da marina",
+            "Piscina e duches quentes demorados",
+            "Jantar no cais da baía de Trašte"
+          ],
+          "mooringTip": "A marina de Luštica Bay tem lugares modernos com serviços e lazy lines e aguenta-se bem na maioria das condições; reserve nas semanas de pico, porque é uma primeira ou última paragem muito popular. A baía de Trašte, ali fora, tem bom fundo de areia se preferir fundear e nadar primeiro."
+        },
+        "6": {
+          "shortDescription": "Uma manhã preguiçosa até Žanjice, a enseada de banhos com boias no lado virado ao mar de Luštica, com a Gruta Azul ao virar da esquina.",
+          "description": "Hoje é curto e bom. Žanjice fica logo depois do cabo de Luštica, uma baía de seixos com um dos olivais mais antigos da costa por trás e um anel de boias de amarração. Apanhe uma, ponha o anexo na água e vá devagarinho até à Gruta Azul (Plava Špilja), uma gruta marinha onde a luz sobe turquesa do fundo de areia. A vizinha Mirišta é mais bonita, mas balança mais, por isso a maioria das tripulações fica-se por Žanjice. Há um naufrágio no fundo, ao largo das rochas de Ogada, entre as duas, que os barcos de mergulho visitam, se lhe apetecer. Em terra, a praia tem duas grelhas a fazer peixe fresco e cerveja gelada. Aqui nada precisa de planeamento. Nadar, comer, dormir a sesta e acertar o salto de amanhã até Budva com a brisa da tarde.",
+          "thingsToDo": [
+            "Entrar de anexo na Gruta Azul",
+            "Passear o antigo olival de Žanjice",
+            "Mergulhar no naufrágio ao largo das rochas de Ogada",
+            "Peixe grelhado numa barraca da praia"
+          ],
+          "mooringTip": "Žanjice tem boias fundeadas por toda a baía; apanhe uma em vez de largar ferro, porque o fundo é irregular e cai a pique. No verão, ao meio-dia, é o quartel-general dos barcos de passeio, por isso chegue cedo ou conte ficar a noite, depois de os visitantes irem embora."
+        },
+        "7": {
+          "shortDescription": "A primeira etapa a sério em mar aberto, para sul até Budva: cidade velha muralhada de um lado, marina e noite comprida do outro.",
+          "description": "Agora começa a navegação costeira a sério. São cerca de 20 milhas de Žanjice até Budva, e o maestral costuma entrar de noroeste ao fim da manhã, por isso largue até às nove e deverá levar boa brisa quase todo o caminho. Budva é o coração agitado da riviera montenegrina. A cidade muralhada, compacta, assenta numa pequena península, com a cidadela na ponta e a estátua da Bailarina nas rochas lá em baixo. Ao largo da praia fica a ilha de Sveti Nikola, boa para um almoço ao ferro antes de entrar. A marina e o porto velho deixam-no a dois passos dos bares e restaurantes, e em julho a cidade vai até tarde e com barulho. Depois do sossego da baía é um choque, por isso entregue-se por uma noite e siga viagem.",
+          "thingsToDo": [
+            "Percorrer as muralhas da cidadela ao pôr do sol",
+            "Almoço ao ferro ao largo da ilha de Sveti Nikola",
+            "Encontrar a estátua da Bailarina nas rochas",
+            "Uma noite comprida na cidade velha"
+          ],
+          "mooringTip": "A marina de Budva e o porto velho são práticos, mas caros, e podem balançar quando entra ondulação de sudeste; ainda assim, um lugar amarrado vale mais do que o ancoradouro exposto para uma noite descansada. Reserve em época alta e peça um lugar interior, longe da entrada."
+        },
+        "8": {
+          "shortDescription": "Mal uma hora pela costa até Sveti Stefan, a ilhota-hotel de postal, e depois um banho nas praias reais de Miločer, ali ao lado.",
+          "description": "Hoje são só umas milhas, por isso durma a noite de Budva e largue quando lhe apetecer. Sveti Stefan é a imagem que toda a gente conhece: uma ilhota fortificada cheia de telhados de terracota, ligada a terra por um istmo estreito, hoje explorada como hotel exclusivo. Não se pode desembarcar na ilhota e há uma zona de exclusão à volta, mas a vista do mar é que interessa. Fundeie ao largo com tempo calmo e nade em direção a Miločer, onde as antigas praias reais ficam debaixo de um pinhal. O mosteiro de Praskvica fica a uma curta subida a pé, se quiser sombra e um pouco de história. É um sítio exposto, sem abrigo a sério, por isso trate-o como uma paragem longa de almoço e banhos e desça até Petrovac antes do fim do dia se a previsão parecer instável.",
+          "thingsToDo": [
+            "Fotografar a ilhota a partir do mar",
+            "Nadar até às praias reais de Miločer",
+            "Subir a pé ao mosteiro de Praskvica",
+            "Almoço ao ferro debaixo dos pinheiros"
+          ],
+          "mooringTip": "Sveti Stefan não tem marina e o fundeadouro está aberto à ondulação, com uma zona de exclusão assinalada à volta da ilhota, fora da qual tem de ficar. Largue ferro em areia ao largo de Miločer só com tempo estável e não conte pernoitar a não ser que o mar esteja completamente liso."
+        },
+        "9": {
+          "shortDescription": "Costear as falésias até Petrovac, uma pequena vila balnear com um forte veneziano, praias de areia avermelhada e duas ilhotas ao largo.",
+          "description": "A costa entre Sveti Stefan e Petrovac é uma longa fita de praias pequenas e sítios para nadar, por isso vá devagar e meta-se na água onde lhe parecer bem. Drobni Pijesak e Trsteno valem uma paragem, e há grutas marinhas pouco fundas onde pode enfiar o nariz do anexo. Petrovac é discreta e boa para famílias, construída à volta de uma curva de areia avermelhada, com um pequeno forte veneziano, o Kastio, a dominar a água. Ao largo ficam duas ilhotas: Katič e Sveta Nedjelja, esta última com uma capelinha. Percorra a marginal ao fim do dia, quando a vila inteira sai para comer gelado e passear. O porto é modesto e enche, por isso aqui o que conta são as praias e o ritmo calmo, e não grandes monumentos.",
+          "thingsToDo": [
+            "Nadar nas grutas de Drobni Pijesak",
+            "Ir a pé até ao forte Kastio",
+            "Ir de anexo à capela da ilhota Katič",
+            "Gelado ao fim do dia na marginal"
+          ],
+          "mooringTip": "O porto de Petrovac é minúsculo e só serve com bom tempo, com meia dúzia de lugares para visitantes que desaparecem cedo. A maioria das tripulações fundeia ao largo da praia, em areia, a 4–6 m, e usa o anexo, mantendo-se longe das linhas de banhistas e das rochas junto às ilhotas."
+        },
+        "10": {
+          "shortDescription": "O ponto de retorno: uma etapa mais longa para sul até Bar, marina grande e segura, porto alfandegário e as ruínas antigas de Stari Bar, no interior.",
+          "description": "É o ponto mais distante da viagem, por isso faça dele uma travessia a sério. Bar fica bem a sul de Petrovac e a descida faz-se em mar aberto, melhor navegada com o maestral da tarde, se ele colaborar. Bar é primeiro um porto de trabalho e só depois uma vila turística, mas isso tem as suas vantagens: a marina é grande, funda e verdadeiramente para todo o tempo, com combustível, loja náutica e alfândega no local, o que conta se alguém seguir para a Albânia. Deixe a marginal e suba para o interior até Stari Bar, a cidade velha em ruínas sobre o seu rochedo, meio otomana e meio veneziana, devagarinho reconquistada pelas figueiras. Ali perto está a Velha Oliveira de Mirovica, que se calcula ter mais de dois mil anos. Não é um porto bonito, mas é a paragem mais segura desta costa e um bom sítio para recompor tudo antes da subida para norte.",
+          "thingsToDo": [
+            "Vaguear pelas ruínas de Stari Bar",
+            "Ver a oliveira de Mirovica, com 2000 anos",
+            "Subir em direção à fortaleza Haj-Nehaj",
+            "Atestar combustível e reforçar os mantimentos"
+          ],
+          "mooringTip": "A Marina Bar tem mais de 600 lugares com serviços e lazy lines e é o ponto mais abrigado desta costa, por isso raramente é preciso reservar com muita antecedência fora do pico. Serve também de porto oficial de entrada e saída, por isso é aqui que se despacha a alfândega se seguir para a Albânia."
+        },
+        "11": {
+          "shortDescription": "De novo para norte, até Petrovac, desta vez com calma pelas ilhotas ao largo e pelas praias sossegadas por onde passou à ida.",
+          "description": "Vire a proa a norte e comece a subir a costa. É a mesma água por onde desceu, mas com o ponto de retorno já para trás o ambiente passa a ser de descontração. Saia de Bar sem pressa de manhã e conte chegar a Petrovac no início da tarde, com tempo para a aproveitar como deve ser desta vez. As duas ilhotas ao largo da baía, Katič e Sveta Nedjelja, valem a ida de anexo, e a praia arborizada de Buljarica, mesmo a sul, é um areal longo e selvagem que se mantém sossegado mesmo em agosto. De volta à vila, escolha uma konoba na marginal para lulas grelhadas e um jarro de branco da casa. Se o porto estiver cheio, o fundeadouro ao largo da praia principal serve perfeitamente com tempo estável, e os banhos ali mesmo ao lado do barco estão entre os melhores do percurso.",
+          "thingsToDo": [
+            "Ir de anexo até à capela de Sveta Nedjelja",
+            "Descobrir os areais selvagens de Buljarica",
+            "Lulas grelhadas numa konoba da marginal",
+            "Uma boa nadada a partir do barco fundeado"
+          ],
+          "mooringTip": "Tal como à ida, o pequeno porto de Petrovac enche depressa, por isso fundeie ao largo da praia, em boa areia, a 4–6 m, se não houver lugar. A baía de Buljarica, logo a sul, é um fundeadouro mais calmo e mais folgado para passar a noite se o vento se mantiver fraco."
+        },
+        "12": {
+          "shortDescription": "De volta a Budva para uma última grande noite em terra, aproveitando o curto salto para norte para um banho ao largo de Sveti Stefan pelo caminho.",
+          "description": "Uma etapa curta de volta a Budva e a última oportunidade para uma saída a sério antes de a entrega na marina se aproximar. Corte a viagem com mais uma passagem por Sveti Stefan, fundeando ao largo para um último mergulho em direção aos pinheiros de Miločer enquanto a água ainda está quente. Entre em Budva a meio da tarde. Desta vez já conhece o sítio, por isso passe ao lado da zona turística e procure as konobas mais pequenas nas ruelas das traseiras da cidade velha, onde o peixe é mais fresco e a conta mais simpática. É uma boa noite para juntar a tripulação, acertar as contas comuns e brindar à viagem com Vranac local. Faça também umas compras leves, já que amanhã é uma enseada sossegada e a última manhã é só arrumar malas. Amarre num lugar em vez de ficar no ancoradouro, para que a última noite em terra não seja de balanço.",
+          "thingsToDo": [
+            "Mergulho de despedida ao largo de Sveti Stefan",
+            "Jantar nas ruelas escondidas da cidade velha",
+            "Brindar à viagem com Vranac local",
+            "Pôr do sol nas muralhas da cidadela"
+          ],
+          "mooringTip": "Nesta última noite fora, pegue num lugar na marina ou no porto velho em vez de fundear no ancoradouro, que balança assim que entra alguma ondulação de sudeste. Em julho e agosto convém reservar, quando Budva está no seu auge."
+        },
+        "13": {
+          "shortDescription": "De volta ao abrigo da baía, em Bigova, uma enseada de pescadores escondida, famosa por agarrar bem quando sopra a bora.",
+          "description": "O último dia completo de navegação traz-nos de volta na direção de Tivat, com um derradeiro fundeadouro antes da marina. Bigova é uma pequena aldeia piscatória no canto sudeste da baía de Trašte, metida bem para dentro de terra, por isso mantém-se calma quando tudo o resto está a saltar. Há muito que é o refúgio para onde as tripulações correm quando a bora ameaça, e o fundo de lodo e areia agarra às mil maravilhas. Não tem grande coisa: umas casas, barcos de pesca e duas konobas que servem o que veio nas redes nessa manhã. Coma o peixe, ande pela beira-mar e aproveite o sossego depois de duas semanas de vilas e praias. É uma última noite à altura, suficientemente perto de Tivat para que a etapa de amanhã não passe de uma hora, o que deixa o serão completamente livre.",
+          "thingsToDo": [
+            "Peixe acabado de pescar numa konoba de Bigova",
+            "Passear a beira-mar sossegada da aldeia piscatória",
+            "Nadar na enseada abrigada",
+            "Copo ao pôr do sol, ao ferro, depois das cidades"
+          ],
+          "mooringTip": "Bigova é muito procurada como abrigo de bora, por isso enche depressa quando o tempo está instável; chegue cedo para arranjar espaço na enseada, que é acanhada. Fundeie em lodo e areia, que agarram muito bem, ou apanhe uma boia em frente a uma das konobas se pensa jantar em terra."
+        },
+        "14": {
+          "shortDescription": "Um último salto curto de volta à Boka para entregar o barco em Porto Montenegro, em Tivat, acabando onde tudo começou.",
+          "description": "A última manhã é fácil. De Bigova até Porto Montenegro, contornando para dentro da baía, é pouco mais de uma hora, por isso não é preciso largar de madrugada a não ser que o check-out o exija. A maioria das bases quer o barco de volta pelas nove ou dez, atestado e razoavelmente arrumado, por isso deixe algum tempo para encher o depósito à entrada e pôr os camarotes em ordem. Porto Montenegro merece uma última volta depois da entrega: uma marina de superiates muito polida, com museu de património naval, cafés na marginal e uma piscina lido se o voo só for à noite. Duas semanas, toda a costa montenegrina do fiorde a Bar e de volta, e um barco que o levou de ponta a ponta. Acerte a conta, troque contactos com a tripulação e comece a planear a próxima.",
+          "thingsToDo": [
+            "Atestar antes da entrega na marina",
+            "Visitar o museu de património naval",
+            "Café na marginal de Porto Montenegro",
+            "Último mergulho na piscina lido da marina"
+          ],
+          "mooringTip": "Porto Montenegro é uma marina grande e bem gerida, com lugares em lazy lines e pessoal no cais para receber os cabos na entrega. Confirme na véspera a hora do check-out e do cais de combustível, porque as manhãs enchem de barcos a chegar e a sair."
+        }
+      }
+    }
+  },
+  "areas": {
+    "montenegro": {
+      "metaTitle": "Itinerários de Vela em Montenegro | Boat4You",
+      "metaDesc": "Baías tipo fiorde e riviera aberta: navegue até Kotor, Perast e Budva com manhãs calmas, brisa da tarde e etapas curtas e fáceis.",
+      "title": "Navegue a Costa dos Fiordes do Montenegro",
+      "description": "Navegar a Baía de Kotor não se parece com mais nada no Adriático: uma ria profunda envolvida em calcário quase vertical, espelhada à hora do pequeno-almoço e agitada por um maestral constante à tarde, que assenta entre 10 e 20 nós antes de morrer perto do pôr do sol. As distâncias não castigam ninguém. A maioria das etapas fica entre 5 e 18 milhas náuticas, por isso dá para se demorar sob as muralhas venezianas de Kotor e chegar depois à marginal barroca de Perast e à sua igreja na ilhota, Nossa Senhora das Rochas, sem uma travessia à pressa. Saia da baía e a costa aberta abre-se para a cidade velha muralhada de Budva e para a ilhota de Sveti Stefan, a cerca de 25 milhas da boca. Entre a nado na Gruta Azul, ao largo da península de Luštica, numa manhã calma, antes de chegarem os barcos de passeio. Há um hábito que compensa aqui: quando a bora de nordeste ameaça, os braços interiores da baía ficam abrigados enquanto a costa exterior fica dura, por isso guarde as descidas pela costa para previsões estáveis."
+    }
+  }
+}

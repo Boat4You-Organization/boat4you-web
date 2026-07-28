@@ -1,1 +1,255 @@
-{}
+{
+  "routes": {
+    "boka-budva-week": {
+      "metaTitle": "Boka Kotorska i Budva w 7 dni | Boat4You",
+      "metaDesc": "Spokojna 7-dniowa trasa z Porto Montenegro w Tivacie przez Kotor, Perast, Herceg Novi i Budvę – ciche kotwicowiska i świeże ryby z Boki.",
+      "days": {
+        "1": {
+          "shortDescription": "Wypływamy z superjachtowego basenu w Tivacie, przechodzimy cieśninę Verige i docieramy do otoczonego murami Kotoru pod ścianą gór.",
+          "description": "Odbiór łodzi w Porto Montenegro zabiera pół poranka, jeśli doliczyć odprawę czarterową i porządne zakupy prowiantu, więc rzadko odbijamy przed jedenastą. Wewnętrzna zatoka bywa o poranku gładka jak lustro, a przejście cieśniną Verige to dokładnie ten rodzaj spokojnego żeglowania, przy którym świeża załoga łapie rytm. Kotor leży w samej głębi zatoki, a jego kamienne mury przyklejone są do ściany szarego wapienia. Cumujemy w miejskiej marinie i przez Bramę Morską wchodzimy prosto na starówkę. Jeśli nogi pozwalają, wspinaczka do twierdzy św. Jana wynagradza widokiem całej zatoki rozłożonej w dole; najlepiej ruszyć późnym popołudniem, gdy upał zelżeje. Na kolację idzie się kilka kroków przez wytarte marmurowe place.",
+          "thingsToDo": [
+            "Wspinaczka do twierdzy św. Jana o zmierzchu",
+            "Wejście na starówkę przez Bramę Morską",
+            "Pełne zakupy prowiantu w Porto Montenegro przed wypłynięciem",
+            "Wieczorny drink na marmurowych placach Kotoru"
+          ],
+          "mooringTip": "W lipcu i sierpniu rezerwuj miejsce w Kotor Marina z wyprzedzeniem – nabrzeże zapełnia się już wczesnym popołudniem. Kotwiczenie w wewnętrznej zatoce bywa niewdzięczne, bo nocą z gór spadają mocne szkwały, więc marina to bezpieczniejszy wybór."
+        },
+        "2": {
+          "shortDescription": "Leniwy, pięciomilowy skok do barokowego Perastu i jego dwóch wysepek – na jednej stoi kościół zbudowany na sztucznej rafie.",
+          "description": "To najkrótszy etap tygodnia, ledwie godzina pod żaglami, więc nie ma po co spieszyć się ze śniadaniem. Perast nie ma właściwie mariny – jest tylko rząd boi cumowniczych przed nabrzeżem i krótkie miejskie nabrzeże, które zapełnia się wcześnie. Bierzemy boję, wodujemy ponton i płyniemy na Gospę od Škrpjela, czyli Matkę Boską na Skale. Sama wyspa powstała ludzką ręką przez stulecia: kamienie balastowe i zatapiane łodzie piętrzono na rafie, aż zrobiło się miejsce na kościół. W środku wiszą dziesiątki obrazów wotywnych zostawionych przez marynarzy, którzy wrócili do domu. Na lądzie miasteczko to jedna wstęga weneckiego kamienia, bez samochodów. Zwykle rezerwujemy stolik w Konoba Otok Bronza i patrzymy, jak światło mięknie nad wodą.",
+          "thingsToDo": [
+            "Pontonem na wyspę Gospa od Škrpjela",
+            "Obrazy wotywne w kościele na wysepce",
+            "Kolacja na tarasie Konoba Otok Bronza",
+            "Spacer kamiennym nabrzeżem Perastu, bez samochodów"
+          ],
+          "mooringTip": "Pole boi w Peraście jest małe i nie da się go zarezerwować, więc podchodź wczesnym popołudniem, żeby złapać wolną; krótkie miejskie nabrzeże ma ograniczoną głębokość i miejsce. Przy wietrze z północy boje przy cyplu potrafią mocno kołysać."
+        },
+        "3": {
+          "shortDescription": "Żegluga przez całą zatokę i wyjście cieśniną Verige do Herceg Novi – miasta schodów i nadmorskich fortów.",
+          "description": "Dziś w końcu naprawdę pożeglujemy. Kiedy koło południa wejdzie maestral, droga na zachód przez całą zatokę i z powrotem przez cieśninę Verige to porządny półwiatr – jakieś trzy godziny przy przyzwoitej bryzie. Herceg Novi strzeże wejścia tam, gdzie zatoka spotyka otwarty Adriatyk. Starówka wznosi się tarasami wprost z wody, same schody i zacienione przejścia, więc weź lekkie buty i licz się z tym, że na widoki trzeba zapracować. Forte Mare, nadmorski fort na dole, pochodzi z XIV wieku, a latem odbywają się w nim projekcje pod gołym niebem. Port miejski jest mały i często pełny; jeśli zabraknie miejsca, kotwicowisko tuż na wschód trzyma dobrze w mule na jakichś ośmiu metrach. Kawa pod palmami na głównym placu to tutejszy rytuał.",
+          "thingsToDo": [
+            "Wspinaczka schodkowymi uliczkami starówki",
+            "Wizyta w nadmorskim forcie Forte Mare",
+            "Kawa pod palmami na głównym placu",
+            "Kąpiel z łodzi przy wyjściu z zatoki"
+          ],
+          "mooringTip": "Port Herceg ma tylko około siedemdziesięciu miejsc i w sezonie się zapełnia, więc zadzwoń wcześniej albo przypłyń wcześnie. Jeśli się nie uda, zakotwicz tuż na wschód od miasta na siedmiu–dziesięciu metrach w mule; trzyma dobrze i osłania od przeważającego wiatru z północnego zachodu."
+        },
+        "4": {
+          "shortDescription": "Przejście przez wejście do zatoki do żwirowej zatoczki Zanjice – Błękitna Grota i fort Mamula o rzut pontonem.",
+          "description": "Herceg Novi od Zanjice dzielą ledwie cztery mile, więc zrób z przejścia cały poranek i zatrzymaj się po drodze na kąpiel. Zanjice to łukowata żwirowa plaża na brzegu Lusticy, blisko miejsca, w którym zatoka otwiera się na morze. Do południa robi się tu tłoczno od łodzi jednodniowych, a wieczorem znów pustoszeje. Pontonem albo lokalną taksówką wodną podjedź do Błękitnej Groty – niskiej pieczary, w której światło barwi wodę na jaskrawy błękit; wejście jest ciasne i ma tylko kilka metrów głębokości, więc planuj je na spokojną pogodę. Mamula, okrągła twierdza na wysepce przy cyplu, warta jest powolnego okrążenia. To kotwicowisko na ustabilizowaną pogodę, a nie marina, odsłonięte, gdy wiatr przejdzie na południe, więc trzymaj wachtę kotwiczną i bądź gotów zmienić miejsce, jeśli się rozwieje.",
+          "thingsToDo": [
+            "Wpłynięcie pontonem do Błękitnej Groty",
+            "Postój na kotwicy na lunch przy żwirowej plaży Zanjice",
+            "Powolne okrążenie twierdzy na wyspie Mamula",
+            "Snorkeling w przejrzystej wodzie u brzegów Lusticy"
+          ],
+          "mooringTip": "Zanjice to otwarte kotwicowisko, najlepsze przy spokojnej, ustabilizowanej pogodzie; rzuć kotwicę na piasku z trawą morską i porządnie ją zaryj. Przypłyń wczesnym popołudniem, zanim łodzie wycieczkowe zajmą najlepsze miejsca, a jeśli prognoza mówi o wietrze z południa, miej ją na oku przez noc."
+        },
+        "5": {
+          "shortDescription": "Opłynięcie półwyspu i żegluga otwartym wybrzeżem do Budvy, gdzie średniowieczne mury spotykają piaszczyste plaże i głośną letnią noc.",
+          "description": "Dziś kończy się osłonięta woda. Za czubkiem Lusticy wychodzisz na otwarte wybrzeże, gdzie zwykle więcej falowania i równiejsza bryza, więc wcześniejszy start opłaca się, zanim popołudniowy wiatr przybierze. Do Budvy jest jakieś trzy do czterech godzin wzdłuż brzegu, zależnie od wiatru. Marina leży tuż pod murami starego miasta, więc z pokładu schodzi się właściwie prosto w średniowieczne uliczki. Dzielnica w murach jest zwarta i fotogeniczna, otoczona piaszczystymi plażami, które w lipcu zapełniają się błyskawicznie. Budva to również stolica nocnego życia wybrzeża, więc kto ma lekki sen, wybierze miejsce z dala od barów. Na spokojniejszą kąpiel jest wysepka Sveti Nikola tuż przy brzegu, a pocztówkowy Sveti Stefan leży kawałek na południe.",
+          "thingsToDo": [
+            "Spacer średniowiecznymi murami Budvy o złotej godzinie",
+            "Kotwica przy wyspie Sveti Nikola i kąpiel",
+            "Przejście pod wysepką Sveti Stefan",
+            "Bary starówki po zmroku"
+          ],
+          "mooringTip": "Marina Budva jest duża, ale latem bardzo zatłoczona, więc rezerwuj miejsce z wyprzedzeniem. Jeśli zależy ci na ciszy, poproś o pomost z dala od barów starówki. Kotwiczenie przy Sveti Stefan sprawdza się tylko przy spokojnej pogodzie, bo jest odsłonięte na falę."
+        },
+        "6": {
+          "shortDescription": "Powrót wzdłuż wybrzeża do sennej Bigovej – rybackiej osady, gdzie na kolację jest to, co synowie gospodarza złowili rano.",
+          "description": "Po hałasie Budvy Bigova jest odtrutką. Leży w głębi zielonej, wciętej w ląd zatoczki w południowo-zachodnim rogu półwyspu Lustica, a droga w górę wybrzeża to spokojne dwie godziny. Nie ma tu prawie nic poza garstką domów, kilkoma łodziami rybackimi i dwiema konobami tuż przy wodzie – i o to właśnie chodzi. Weź jedną z boi blisko restauracji albo zakotwicz nieco głębiej, gdzie dno dobrze trzyma. Zwykle rezerwujemy stolik w Grispolis, gdzie rodzina łowi na potrzeby własnej kuchni i przynosi dzienny połów do stołu, zanim jeszcze trafi na ogień, przyrządzony na sposób Boki. Sąsiedni Pod Volatom robi to samo i ma własnych wiernych gości. Kąpiel z łodzi, późna kolacja i sen w zupełnej ciszy.",
+          "thingsToDo": [
+            "Wybór dziennego połowu w Konoba Grispolis",
+            "Kolacja nad wodą w Pod Volatom",
+            "Kąpiel w spokojnej, zielonej zatoczce Bigova",
+            "Powrót kutrów rybackich do portu"
+          ],
+          "mooringTip": "Bigova ma osiem boi cumowniczych na trzech–sześciu metrach, tuż przy dwóch restauracjach, więc zarezerwuj stolik, a gospodarz zwykle wskaże ci wolną boję. Poza tym można zakotwiczyć na północ od boi, na piasku z trawą, na sześciu–siedmiu metrach."
+        },
+        "7": {
+          "shortDescription": "Łatwy ostatni poranek: przez wejście do zatoki z powrotem do Tivatu, z czasem na ostatnią kąpiel przed zdaniem łodzi.",
+          "description": "Ostatni etap jest krótki i bez pośpiechu – godzina, może dwie z powrotem do zatoki i w górę do Tivatu. Większość czarterów chce łódź z powrotem rano, więc sprawdź dokładną godzinę zdania poprzedniego wieczora i wypłyń z Bigovej z zapasem. Po drodze zwykle znajdzie się miejsce na jeszcze jedną kąpiel w cichej zatoczce i warto z tego skorzystać. Zatankuj przed wejściem do mariny, bo uzupełnianie paliwa przy pomoście w szczycie sezonu oznacza kolejkę. Samo Porto Montenegro to przyjemne miejsce na zakończenie. Nadmorska promenada jest pełna kawiarni, a niewielka kolekcja dziedzictwa marynarki ze starym okrętem podwodnym potrafi zająć całe popołudnie, jeśli lecisz dopiero następnego dnia. Zamknij dziennik, spłucz sól i wznieś toast za dobrze przeżeglowany tydzień.",
+          "thingsToDo": [
+            "Ostatnia kąpiel w cichej zatoczce po drodze",
+            "Spacer promenadą Porto Montenegro",
+            "Okręt podwodny w kolekcji dziedzictwa marynarki",
+            "Tankowanie przed kolejką w marinie"
+          ],
+          "mooringTip": "Napełnij zbiornik paliwa przed wejściem do mariny, bo w szczycie sezonu przy stacji paliw ustawia się kolejka. Godzinę zdania łodzi i wymagania dotyczące sprzątania potwierdź poprzedniego wieczora, żeby ostatni poranek pozostał spokojny."
+        }
+      }
+    },
+    "montenegro-adriatic-14-days": {
+      "metaTitle": "Czarnogóra i Boka Kotorska: 14 dni | Boat4You",
+      "metaDesc": "Dwa tygodnie z Porto Montenegro (Tivat) przez Bokę Kotorską do Baru i z powrotem: Kotor, Perast, Budva, Sveti Stefan, ciche zatoki i stare miasta.",
+      "days": {
+        "1": {
+          "shortDescription": "Krótki pierwszy skok z mariny w Tivacie do Rose – starej osady rybackiej u samego wejścia do Boki Kotorskiej.",
+          "description": "Większość załóg odbiera łódź po południu, więc pierwszy dzień jest celowo spokojny. Z Porto Montenegro to leniwa godzinka w dół zatoki do Rose, wciśniętego przy czubku półwyspu Luštica, tam gdzie woda otwiera się na morze. Wioska jest maleńka: rząd kamiennych domów, pomost, para rybnych tawern, które do ósmej się zapełniają. Nad nią stoi Forte Rose, austro-węgierski fort, w którym działa dziś małe centrum nurkowe. Kąpiel z rufy, gdy światło schodzi za cyplem. Nie ma tu pośpiechu ani prawdziwego życia nocnego – i o to właśnie chodzi. Dobre miejsce, żeby rozdzielić koje, sprawdzić windę kotwiczną i dobrze zjeść, zanim jutro zacznie się prawdziwe żeglowanie.",
+          "thingsToDo": [
+            "Wejście do twierdzy Forte Rose",
+            "Nurkowanie na rafie z miejscowym centrum",
+            "Kolacja w rybnej tawernie w Rose",
+            "Kąpiel z łodzi o zmierzchu"
+          ],
+          "mooringTip": "Rose ma krótkie miejskie nabrzeże i garść boi; weź boję albo rzuć kotwicę w zatoczce na piasku, na 4–6 m. Przez lipiec i sierpień nabrzeże szybko zapełniają łodzie jednodniowe, więc wcześniejsze przybycie pomaga."
+        },
+        "2": {
+          "shortDescription": "Spokojny przeskok przez cieśninę do Herceg Novi – ufortyfikowanego miasta schodów i nadmorskich fortów, z mariną D-Marin Portonovi tuż obok.",
+          "description": "Herceg Novi leży zaraz po drugiej stronie wody, jakieś czterdzieści minut na silniku, jeśli poranek jest bezwietrzny. Miasto pnie się po zboczu plątaniną schodów i tarasów, więc załóż porządne buty. Zacznij od bastionu Forte Mare przy morzu, potem idź w górę przez starą bramę do twierdzy Kanli Kula i wieży zegarowej na placu Belavista. Kawa jest tu rytuałem; nikt się nie spieszy. Z cumowaniem masz wybór: miejskie molo pod murami dla klimatu albo wypucowana D-Marin w Portonovi dwie mile na zachód, jeśli chcesz paliwa, pryszniców i spokojnej wody. Zwykle wybieramy stronę miasta i dochodzimy pieszo. Tu też zrób zakupy – targ i sklepy są lepsze niż cokolwiek dalej wzdłuż wybrzeża.",
+          "thingsToDo": [
+            "Spacer po wałach Forte Mare",
+            "Wejście do twierdzy Kanli Kula",
+            "Kawa na placu Belavista",
+            "Zaopatrzenie kambuza na miejskim targu"
+          ],
+          "mooringTip": "Cumuj rufą do miejskiego mola pod twierdzą albo weź obsługiwane miejsce w D-Marin Portonovi dwie mile na zachód, jeśli potrzebujesz paliwa i pralni. Miejskie nabrzeże łapie falę od promowego toru wodnego, więc daj dużo odbijaczy i długą cumę rufową."
+        },
+        "3": {
+          "shortDescription": "Żegluga przez całą zatokę do Perastu – barokowej wsi kapitanów naprzeciw dwóch słynnych wysepek, w cieśninie poniżej Kotoru.",
+          "description": "To dzień, w którym sceneria robi się operowa. Przechodzisz cieśninę Verige, gdzie góry się zwierają, a woda staje się płaska i ciemna, i wtedy pojawia się Perast z dzwonnicą i dwiema wyspami przed sobą. Jedna jest naturalna: Sveti Đorđe, ciemna od cyprysów, z zamkniętym klasztorem benedyktynów i starym cmentarzem. Druga, Gospa od Škrpjela, powstała ludzką ręką przez stulecia – rybacy zrzucali kamienie na rafę, aż utrzymała się wyspa. Zacumuj, weź małą łódkę wahadłową i zobacz wotywny kościół z jego srebrnymi tablicami. W wiosce kamienne nabrzeże ciągnie się do kilku konob, w których podają ryby i miejscowe wino vranac. Zostaw czas, żeby po prostu posiedzieć. Perast łapie ostatnie słońce długo po tym, jak Kotor wpadnie w cień.",
+          "thingsToDo": [
+            "Łódką wahadłową na Gospę od Škrpjela",
+            "Zdjęcia cieśniny Verige pod żaglami",
+            "Ryba i vranac w konobie nad wodą",
+            "Wejście na dzwonnicę św. Mikołaja"
+          ],
+          "mooringTip": "Krótkie nabrzeże w Peraście ma tylko kilka miejsc i nie da się kotwiczyć tuż przed nim, więc zadzwoń wcześniej albo przypłyń przed południem. Przy ustabilizowanej pogodzie wiele załóg kotwiczy na piasku między Sveti Đorđe a Gospą od Škrpjela i dopływa pontonem."
+        },
+        "4": {
+          "shortDescription": "Zaledwie godzina głębiej w fiord do Kotoru, gdzie za murami starówki wznosi się wielka droga schodów do San Giovanni.",
+          "description": "Z Perastu ledwie godzina, więc nie ma powodu wypływać wcześnie. Płyń wolno w głąb zatoki, a Kotor wyrasta prosto z wody, z murami wspinającymi się zygzakiem po skale do twierdzy San Giovanni. Wejdź, zacumuj i bierz się za podejście, zanim zjadą tłumy z wycieczkowców i zrobi się upał: około 1350 stopni na szczyt, z całym fiordem otwierającym się pod tobą. W obrębie murów jest labirynt placyków i zaułków, katedra św. Trifona w sercu miasta i koty na każdym schodku. Jedz późno. Starówka w sezonie żyje długo po północy, a marina jest dwie minuty od bramy, więc nie czeka cię powrót pontonem po ciemku.",
+          "thingsToDo": [
+            "Wejście murami do twierdzy San Giovanni",
+            "Katedra św. Trifona w obrębie murów",
+            "Zgubienie się w zaułkach starówki",
+            "Późna kolacja na kamiennym placu"
+          ],
+          "mooringTip": "Marina Kotor leży tuż pod murami, ma lazy line i pełen serwis; rezerwuj w lipcu i sierpniu, bo jest mała i popularna. W dzień kanał dzielisz ze statkami wycieczkowymi, więc na podejściu miej dobrą obserwację i licz się z falą od nich."
+        },
+        "5": {
+          "shortDescription": "Z powrotem z fiordu do Luštica Bay – nowej mariny nad zatoką Trašte, osłoniętej przy każdej pogodzie, z golfem, basenami i porządnie przespaną nocą.",
+          "description": "Wracasz zatoką tą samą drogą, przez cieśninę i wzdłuż brzegu Lušticy do zatoki Trašte na otwartym wybrzeżu. To wygodne pół dnia, więc rzuć gdzieś po drodze kotwicę na lunch i kąpiel. Sama Luštica Bay to marina zbudowana od podstaw przy kurorcie: nowe pomosty, głęboka i osłonięta woda, pole golfowe powyżej i kilka przyzwoitych restauracji przy nabrzeżu. Po tygodniu średniowiecznego kamienia wydaje się wręcz zaskakująco nowoczesna – i przez jedną noc to zupełnie w porządku: porządne prysznice, basen, ogarnięte pranie. Naładuj wszystko, puść odsalarkę i pozwól załodze rozejść się po lądzie. Stąd trasa skręca na południe i zmienia charakter: zamknięta zatoka ustępuje plażom, klifom i dłuższym etapom po otwartej wodzie.",
+          "thingsToDo": [
+            "Kotwica po drodze na lunch i kąpiel",
+            "Runda golfa nad mariną",
+            "Basen i długie gorące prysznice",
+            "Kolacja na nabrzeżu zatoki Trašte"
+          ],
+          "mooringTip": "Marina Luštica Bay ma nowoczesne, obsługiwane miejsca na lazy line i trzyma dobrze przy prawie każdej pogodzie; w szczycie sezonu rezerwuj, bo to popularny pierwszy lub ostatni przystanek. Zatoka Trašte na zewnątrz ma dobre trzymanie na piasku, jeśli wolisz najpierw zakotwiczyć i popływać."
+        },
+        "6": {
+          "shortDescription": "Leniwy poranek w dół do Žanjice – zatoczki do kąpieli z bojami po morskiej stronie Lušticy, z Błękitną Grotą tuż za rogiem.",
+          "description": "Dziś krótko i przyjemnie. Žanjice leży zaraz za cyplem Lušticy: żwirowa zatoka z jednym z najstarszych gajów oliwnych na wybrzeżu w tle i wieńcem boi cumowniczych. Weź boję, zwoduj ponton i podjedź za róg do Błękitnej Groty (Plava Špilja), morskiej jaskini, w której światło odbite od piaszczystego dna świeci turkusem. Sąsiednie Mirišta jest ładniejsze, ale bardziej kołysze, więc większość załóg zostaje w Žanjice. Między nimi, przy skałach Ogada, leży na dnie wrak, przy którym pracują łodzie nurkowe, jeśli masz ochotę. Na plaży kilka grillów podaje świeżą rybę i zimne piwo. Nic tu nie wymaga planowania. Kąpiel, jedzenie, drzemka – a jutrzejszy skok do Budvy zaplanuj pod popołudniową bryzę.",
+          "thingsToDo": [
+            "Pontonem do morskiej jaskini Błękitna Grota",
+            "Spacer po starym gaju oliwnym w Žanjice",
+            "Nurkowanie na wraku przy skałach Ogada",
+            "Grillowana ryba w budce na plaży"
+          ],
+          "mooringTip": "W Žanjice w poprzek zatoki wyłożone są boje; weź jedną zamiast kotwiczyć, bo dno jest niejednolite i szybko opada. Latem w południe to centrum łodzi jednodniowych, więc przypłyń wcześnie albo zaplanuj nocleg, gdy wycieczkowicze odpłyną."
+        },
+        "7": {
+          "shortDescription": "Pierwszy porządny etap po otwartej wodzie na południe do Budvy: z jednej strony starówka w murach, z drugiej marina i długa noc na mieście.",
+          "description": "Teraz zaczyna się żegluga wzdłuż wybrzeża. Z Žanjice do Budvy jest jakieś 20 mil, a maestral zwykle wchodzi z północnego zachodu późnym przedpołudniem, więc wypłyń koło dziewiątej, a przez większość drogi powinieneś mieć przyzwoity wiatr. Budva to ruchliwe serce czarnogórskiej riwiery. Zwarte miasto w murach siedzi na małym półwyspie, z cytadelą na czubku i posągiem Baletnicy na skałach poniżej. Przy plaży leży wyspa Sveti Nikola, dobra na lunch na kotwicy, zanim wejdziesz do portu. Marina i stary port stawiają cię o krok od barów i restauracji, a w lipcu miasto gra głośno i długo. Po ciszy zatoki to wstrząs, więc daj się temu ponieść na jedną noc, a potem płyń dalej.",
+          "thingsToDo": [
+            "Spacer po murach cytadeli o zachodzie słońca",
+            "Lunch na kotwicy przy wyspie Sveti Nikola",
+            "Posąg Baletnicy na skałach",
+            "Późna noc na starówce"
+          ],
+          "mooringTip": "Marina Budva i stary port są wygodne, ale drogie i potrafią kołysać, gdy wejdzie fala z południowego wschodu; miejsce przy kei daje spokojniejszą noc niż odsłonięta reda. W szczycie sezonu rezerwuj i proś o miejsce w głębi, z dala od wejścia."
+        },
+        "8": {
+          "shortDescription": "Ledwie godzina wzdłuż brzegu do Sveti Stefan – pocztówkowej wysepki-hotelu – i kąpiel przy sąsiednich królewskich plażach Miločeru.",
+          "description": "Dziś tylko kilka mil, więc odeśpij Budvę i wypłyń, kiedy chcesz. Sveti Stefan to obrazek, który zna każdy: ufortyfikowana wysepka nabita terakotowymi dachami, połączona z lądem wąską groblą, prowadzona dziś jako ekskluzywny hotel. Na samą wysepkę nie wejdziesz, wokół obowiązuje strefa zakazu, ale widok z wody i tak jest tu całą rzeczą. Przy spokojnej pogodzie zakotwicz obok i płyń w stronę Miločeru, gdzie dawne królewskie plaże leżą pod kępą sosen. Klasztor Praskvica to krótki spacer w górę zbocza, jeśli chcesz cienia i odrobiny historii. To odsłonięte miejsce bez prawdziwej osłony, więc potraktuj je jako długi postój na lunch i kąpiel, a przed wieczorem zejdź do Petrovacu, jeśli prognoza wygląda niepewnie.",
+          "thingsToDo": [
+            "Zdjęcia wysepki od strony wody",
+            "Kąpiel przy królewskich plażach Miločeru",
+            "Spacer w górę do klasztoru Praskvica",
+            "Lunch na kotwicy pod sosnami"
+          ],
+          "mooringTip": "Przy Sveti Stefan nie ma mariny, a kotwicowisko jest otwarte na falę; wokół wysepki wyznaczono strefę zakazu, poza którą trzeba pozostać. Kotwicz na piasku przy Miločerze wyłącznie przy ustabilizowanej pogodzie i nie planuj noclegu, chyba że jest zupełnie płasko."
+        },
+        "9": {
+          "shortDescription": "Wzdłuż klifów w dół do Petrovacu – małego kurortu z weneckim fortem, plażami z czerwonego piasku i dwiema wysepkami przy brzegu.",
+          "description": "Wybrzeże między Sveti Stefan a Petrovacem to jedna długa wstęga małych plaż i miejsc do kąpieli, więc płyń wolno i wskakuj do wody wszędzie tam, gdzie wygląda dobrze. Drobni Pijesak i Trsteno są warte postoju, a do płytkich jaskiń morskich można wsunąć się pontonem. Sam Petrovac jest spokojny i rodzinny, zbudowany wokół łuku czerwonawego piasku, z niewielkim weneckim fortem Kastio nad wodą. Tuż przy brzegu leżą dwie wysepki: Katič i Sveta Nedjelja, ta druga z maleńką kaplicą. Przejdź się wieczorem nadmorską promenadą, kiedy całe miasto wychodzi na lody i spacer. Port jest skromny i bywa zatłoczony, więc chodzi tu raczej o plaże i spokojne tempo niż o wielkie atrakcje.",
+          "thingsToDo": [
+            "Kąpiel w jaskiniach przy Drobni Pijesak",
+            "Spacer do fortu Kastio",
+            "Pontonem do kaplicy na wysepce Katič",
+            "Wieczorne lody na promenadzie"
+          ],
+          "mooringTip": "Port w Petrovacu jest maleńki i tylko na dobrą pogodę, z zaledwie kilkoma miejscami dla gości, które schodzą wcześnie. Większość załóg kotwiczy przy plaży na piasku na 4–6 m i korzysta z pontonu, trzymając się z dala od lin dla pływających i skał przy wysepkach."
+        },
+        "10": {
+          "shortDescription": "Punkt zwrotny: dłuższy etap na południe do Baru – duża, bezpieczna marina, port odprawy celnej i ruiny starego Stari Baru w głębi lądu.",
+          "description": "To najdalszy punkt rejsu, więc zrób z tego prawdziwe przejście. Bar leży sporo na południe od Petrovacu, a droga w dół prowadzi po otwartej wodzie – najlepiej pod popołudniowym maestralem, jeśli dopisze. Bar jest przede wszystkim portem roboczym, a dopiero potem miastem turystycznym, ale to ma swoje zalety: marina jest duża, głęboka i naprawdę osłonięta przy każdej pogodzie, z paliwem, sklepem żeglarskim i odprawą celną na miejscu, co ma znaczenie, jeśli ktoś płynie dalej w stronę Albanii. Zostaw nabrzeże i ruszaj w głąb lądu do Stari Baru – zrujnowanego starego miasta na skale, w połowie osmańskiego, w połowie weneckiego, powoli zarastanego przez figowce. Nieopodal stoi Stara Oliwka z Mirovicy, której przypisuje się ponad dwa tysiące lat. To nie jest ładny port, ale najbezpieczniejszy przystanek na tym wybrzeżu i dobre miejsce, żeby złapać oddech przed powrotem na północ.",
+          "thingsToDo": [
+            "Wędrówka po ruinach Stari Baru",
+            "Oliwka z Mirovicy licząca 2000 lat",
+            "Podejście pod twierdzę Haj-Nehaj",
+            "Uzupełnienie paliwa i prowiantu"
+          ],
+          "mooringTip": "Marina Bar ma ponad 600 obsługiwanych miejsc na lazy line i jest najlepiej osłoniętym punktem na tym wybrzeżu, więc poza szczytem sezonu rzadko trzeba rezerwować z dużym wyprzedzeniem. Pełni też funkcję oficjalnego portu wejścia i wyjścia, więc to tutaj odprawiasz się na cle, jeśli płyniesz dalej do Albanii."
+        },
+        "11": {
+          "shortDescription": "Znów na północ do Petrovacu, tym razem z czasem na wysepki i ciche plaże, które w drodze na południe minąłeś bez postoju.",
+          "description": "Dziób na północ i zaczynamy wracać wzdłuż wybrzeża. To ta sama woda, ale z punktem zwrotnym za rufą nastrój przechodzi w rozprężenie. Wypłyń z Baru spokojnie, bez pośpiechu, i celuj w Petrovac na wczesne popołudnie, żeby tym razem zobaczyć go porządnie. Dwie wysepki przed zatoką, Katič i Sveta Nedjelja, warte są wyprawy pontonem, a zalesiona plaża Buljarica tuż na południe to długi, dziki pas piasku, który zostaje cichy nawet w sierpniu. W miasteczku wybierz konobę przy nabrzeżu na grillowane kalmary i karafkę domowego białego. Jeśli port jest pełny, kotwicowisko przy głównej plaży jest przy ustabilizowanej pogodzie zupełnie dobre, a kąpiel prosto z łodzi należy do najlepszych na całej trasie.",
+          "thingsToDo": [
+            "Pontonem do kaplicy na Sveta Nedjelja",
+            "Dzikie piaski Buljaricy",
+            "Grillowane kalmary w konobie przy nabrzeżu",
+            "Długa kąpiel z zakotwiczonej łodzi"
+          ],
+          "mooringTip": "Tak jak w drodze na południe, mały port w Petrovacu zapełnia się szybko, więc jeśli nie ma miejsca, zakotwicz przy plaży na dobrym piasku na 4–6 m. Zatoka Buljarica kawałek dalej na południe to spokojniejsze i przestronniejsze kotwicowisko na noc, o ile wiatr pozostaje słaby."
+        },
+        "12": {
+          "shortDescription": "Powrót do Budvy na ostatnią dużą noc na lądzie, z krótkim skokiem na północ zaplanowanym tak, by po drodze popływać przy Sveti Stefan.",
+          "description": "Krótki etap z powrotem do Budvy i ostatnia szansa na porządne wyjście, zanim zawiśnie nad wami zdanie łodzi w marinie. Przerwij drogę kolejnym przejściem obok Sveti Stefan: zakotwicz i popłyń na ostatnią kąpiel w stronę sosen Miločeru, póki woda jest ciepła. Do Budvy wpadnij wczesnym popołudniem. Tym razem znasz już miasto, więc omiń turystyczny deptak i znajdź mniejsze konoby w bocznych uliczkach starówki, gdzie ryba jest świeższa, a rachunek łaskawszy. To dobry wieczór, żeby zebrać załogę, rozliczyć wspólną kasę i wznieść toast miejscowym vrancem. Zrób też lekkie zakupy, bo jutro czeka cicha zatoczka, a ostatni poranek to samo pakowanie. Weź miejsce w marinie zamiast stać na redzie, żeby ostatnia noc nie była kołysana.",
+          "thingsToDo": [
+            "Pożegnalna kąpiel przy Sveti Stefan",
+            "Kolacja w bocznych uliczkach starówki",
+            "Toast za rejs miejscowym vrancem",
+            "Zachód słońca z murów cytadeli"
+          ],
+          "mooringTip": "Na tę ostatnią noc weź miejsce w marinie albo w starym porcie zamiast kotwiczyć na redzie, która kołysze, gdy wkradnie się fala z południowego wschodu. W lipcu i sierpniu, kiedy Budva jest najbardziej oblegana, warto zarezerwować z wyprzedzeniem."
+        },
+        "13": {
+          "shortDescription": "Z powrotem w osłonę zatoki, do Bigovej – ukrytej rybackiej zatoczki słynącej z dobrego trzymania, gdy wieje bora.",
+          "description": "Ostatni pełny dzień żeglowania prowadzi z powrotem w stronę Tivatu, z jednym kotwicowiskiem przed mariną. Bigova to mała rybacka wioska w południowo-wschodnim rogu zatoki Trašte, wcięta głęboko w ląd, więc zostaje spokojna, kiedy wszędzie indziej rzuca. Od dawna jest kryjówką, do której załogi uciekają, gdy grozi bora, a trzymanie w mule i piasku jest znakomite. Nie ma tu wiele: kilka domów, łodzie rybackie i para konob, które podają to, co tego ranka weszło w sieci. Zjedz rybę, przejdź się brzegiem i naciesz się ciszą po dwóch tygodniach miast i plaż. To dobra ostatnia noc, na tyle blisko Tivatu, że jutrzejszy etap to ledwie godzina, więc wieczór macie całkowicie wolny.",
+          "thingsToDo": [
+            "Świeży połów w konobie w Bigovej",
+            "Spacer brzegiem cichej rybackiej wioski",
+            "Kąpiel w osłoniętej zatoczce",
+            "Drink o zachodzie na kotwicy, po tygodniach miast"
+          ],
+          "mooringTip": "Bigova ceniona jest jako schronienie przed borą, więc przy niepewnej pogodzie zapełnia się błyskawicznie; przypłyń wcześnie, żeby znaleźć miejsce w ciasnej zatoczce. Kotwicz na mule i piasku, które trzymają bardzo dobrze, albo weź boję przy jednej z konob, jeśli planujesz kolację na lądzie."
+        },
+        "14": {
+          "shortDescription": "Krótki ostatni skok z powrotem do Boki, żeby zdać łódź w Porto Montenegro w Tivacie – tam, gdzie wszystko się zaczęło.",
+          "description": "Ostatni poranek jest łatwy. Z Bigovej to ledwie godzina za róg do zatoki i w górę do Porto Montenegro, więc nie ma potrzeby zrywać się o świcie, chyba że wymaga tego godzina zdania. Większość baz chce łódź z powrotem na dziewiątą albo dziesiątą, zatankowaną i w miarę uporządkowaną, więc zostaw trochę czasu na uzupełnienie paliwa po drodze i ogarnięcie koi. Samo Porto Montenegro warto obejść po zdaniu łodzi: elegancka marina superjachtów z muzeum dziedzictwa marynarki, kawiarniami przy nabrzeżu i basenem, jeśli lot masz dopiero wieczorem. Dwa tygodnie, całe czarnogórskie wybrzeże od fiordu do Baru i z powrotem, i łódź, która przeniosła was przez to wszystko. Zamknij rachunki, wymień się kontaktami z załogą i zacznij planować następny rejs.",
+          "thingsToDo": [
+            "Tankowanie przed zdaniem łodzi w marinie",
+            "Muzeum dziedzictwa marynarki",
+            "Kawa na nabrzeżu Porto Montenegro",
+            "Ostatnia kąpiel na basenie mariny"
+          ],
+          "mooringTip": "Porto Montenegro to duża, dobrze prowadzona marina z miejscami na lazy line i obsługą na pomoście, która przy zdaniu odbierze cumy. Godzinę wymeldowania i porę tankowania potwierdź poprzedniego wieczora, bo rano robi się ruch od wpływających i wypływających jachtów."
+        }
+      }
+    }
+  },
+  "areas": {
+    "montenegro": {
+      "metaTitle": "Trasy żeglarskie po Czarnogórze | Boat4You",
+      "metaDesc": "Fiordowe zatoki i otwarta riwiera: Kotor, Perast i Budva, spokojne poranki, popołudniowa bryza i krótkie, łatwe etapy.",
+      "title": "Popłyń fiordowym wybrzeżem Czarnogóry",
+      "description": "Zatoka Kotorska żegluje się jak żadne inne miejsce na Adriatyku: to głęboka ria zamknięta niemal pionowym wapieniem, przy śniadaniu gładka jak lustro, a po południu poruszona równym maestralem, który ustala się w okolicach 10 do 20 węzłów i zamiera pod zachód słońca. Odległości są łaskawe. Większość etapów ma od 5 do 18 mil morskich, więc możesz pokręcić się pod weneckimi murami Kotoru, a potem dojść do barokowego nabrzeża Perastu i jego kościoła na wysepce, Gospy od Škrpjela, bez gonienia w piętkę. Wyjdź z zatoki, a otwarte wybrzeże prowadzi ku otoczonej murami starówce Budvy i wysepce Sveti Stefan, jakieś 25 mil od wejścia. W spokojny poranek, zanim przypłyną łodzie wycieczkowe, wpłyń na kąpiel do Błękitnej Groty przy półwyspie Luštica. Jeden nawyk się tu opłaca: gdy grozi bora z północnego wschodu, wewnętrzne ramiona zatoki zostają osłonięte, podczas gdy zewnętrzne wybrzeże robi się szorstkie – zostaw więc etapy wzdłuż otwartego brzegu na ustabilizowane prognozy."
+    }
+  }
+}

@@ -1,1 +1,255 @@
-{}
+{
+  "routes": {
+    "inner-islands-classic": {
+      "metaTitle": "7 Tage Inselhüpfen Seychellen | Boat4You",
+      "metaDesc": "Entspannter 7-Tage-Törn ab Eden Island, Mahé, über Sainte Anne, Praslin, Curieuse, Anse Lazio und La Digue auf den inneren Seychellen.",
+      "days": {
+        "1": {
+          "shortDescription": "Ein gemütlicher Drei-Meilen-Schlag von der Marina in den ältesten Meerespark der Seychellen – grüne Meeresschildkröten und Moyenne Island nur eine Dinghyfahrt entfernt.",
+          "description": "Die meisten Crews nutzen den ersten Nachmittag lieber zum Einfahren des Schiffs, statt irgendwohin zu hetzen – und dafür ist Sainte Anne genau richtig. Der Park liegt keine drei Meilen vor Eden Island: Man kann morgens Proviant übernehmen, an der Hafenmole vorbei hinausmotoren und hängt am frühen Nachmittag schon an der Boje. Es ist der älteste Meerespark des Landes, sechs Granitinseln, umschlossen von Riff. Rund um die Bojen tauchen grüne Meeresschildkröten auf, von Dinghys völlig unbeeindruckt. Setzt mit dem Beiboot nach Moyenne über, einst in Privatbesitz, heute in einer Stunde zu umrunden, mit Riesenschildkröten als Gesellschaft. Das Schnorcheln vor Round Island ist flach und einfach, ideal für alle, die sich noch an die Flossen gewöhnen. Behaltet in der Saison die Zahl der freien Bojen im Auge; am späten Nachmittag ist das Feld voll. Der Sundowner hier, mit den rosa getönten Hügeln von Mahé im Rücken, gibt den Ton für die Woche vor.",
+          "thingsToDo": [
+            "Das flache Riff vor Round Island beschnorcheln",
+            "Mit dem Dinghy zum Schildkrötenpfad auf Moyenne Island",
+            "Grüne Meeresschildkröten an den Bojen beobachten",
+            "Sundowner mit Blick zurück nach Mahé"
+          ],
+          "mooringTip": "Die 24 Parkbojen sind hier deutlich sicherer als der eigene Anker; besorgt die Genehmigung (rund SCR 500) noch vor dem Ablegen in der Marina und nehmt bis zum frühen Nachmittag eine Boje, denn in der Passatsaison ist das Feld schnell belegt."
+        },
+        "2": {
+          "shortDescription": "Der Hauptschlag der Woche: gut zwanzig Meilen über offenes Wasser zum Arbeitsankerplatz von Praslin, wo man an Land fast jeden Schaden repariert bekommt.",
+          "description": "Das ist der einzige richtige Schlag der Reise, also lohnt es sich, spätestens um neun loszukommen. Von den Bojen bei Sainte Anne sind es gut zwanzig Meilen über offenes Wasser nach Praslin, und im Passat von Mai bis September steht meist ein stetiger Raumschotkurs mit 12 bis 18 Knoten querab. Im Kanal kann die See aufstehen, also verstaut die Kaffeebecher, bevor ihr das Riff hinter euch lasst. Die Baie Sainte Anne öffnet sich an der Südostecke von Praslin, weit und gutmütig, mit Sandgrund auf vier bis acht Metern. Es ist der nützlichste Übernachtungsplatz der inneren Inseln: Supermarkt, Tankkai, ein halbwegs sortierter Ausrüster und Mechaniker, die jeden Charterschaden schon gesehen haben. Wer dem eigenen Anker nicht ganz traut: Ein Einheimischer namens Robert unterhält eine Handvoll Muringbojen und meldet sich auf UKW.",
+          "thingsToDo": [
+            "Im Supermarkt der Baie Sainte Anne auffüllen",
+            "Am Kai bunkern und Wasser übernehmen",
+            "Charterschäden mit den örtlichen Mechanikern beheben",
+            "Über den Steg zum Fähranleger laufen"
+          ],
+          "mooringTip": "Die Baie Sainte Anne ist der Ankerplatz mit dem besten Halt in der Gruppe – Sand auf vier bis acht Metern und genug Schwojraum. Ist die Bucht voll, ruft lieber Robert auf UKW für eine seiner privaten Bojen, statt euch zwischen die Flotte zu drängen."
+        },
+        "3": {
+          "shortDescription": "Ein kurzer Schlag um Praslins Nordküste zu einer Insel, die den Riesenschildkröten gehört – mit Schnorchelstopp bei St Pierre unterwegs.",
+          "description": "Curieuse liegt direkt vor der Nordküste von Praslin, ein entspannter Vormittagsschlag, sobald ihr die Inselspitze gerundet habt. Unterbrecht die Fahrt bei St Pierre, einer Ansammlung von Granitblöcken rund anderthalb Meilen vor Anse Volbert; die Korallenterrassen ringsum halten Papageifische und ab und zu einen Rochen, am besten beschnorchelt, bevor der Nachmittagswind einsetzt. Curieuse selbst war vor hundert Jahren eine Leprakolonie und ist heute Reservat. Nehmt eine Parkboje in der Baie Laraie, zahlt beim Ranger und geht an Land zwischen mehr als dreihundert frei laufenden Aldabra-Riesenschildkröten, von denen manche an die hundert Jahre alt sind. Der Mangroven-Bohlenweg führt gut eine Meile von der Rangerstation bis nach Anse St José, vorbei an Skinken, Schlammspringern und dem Gewirr roter Mangrovenwurzeln. Der rostrote Lateritboden gibt den Stränden einen Farbton, den ihr sonst nirgends auf dem Törn seht.",
+          "thingsToDo": [
+            "Die Korallenterrassen vor St Pierre beschnorcheln",
+            "Frei laufende Aldabra-Schildkröten in der Baie Laraie treffen",
+            "Den Mangroven-Bohlenweg nach Anse St José gehen",
+            "Picknick im Schatten bei der Rangerstation"
+          ],
+          "mooringTip": "Curieuse ist Meerespark; nehmt eine Boje in der Baie Laraie und rechnet die Gebühr (etwa SCR 250 pro Nacht) mit dem Ranger ab, statt zu ankern. Die Westseite um Anse St José ist hübscher, aber ungeschützt – also nur bei ruhigem Wetter und mit einer Crew, die den Anker gern kontrolltaucht."
+        },
+        "4": {
+          "shortDescription": "Fünf Meilen zurück nach Praslin zum meistfotografierten Strand des Archipels: Granitblöcke, seidiger Sand und ein kreolischer Grill im Schatten.",
+          "description": "Anse Lazio liegt an der Nordwestspitze von Praslin, ein kurzer Schlag von Curieuse herunter – und für viele der Strand, der die Seychellen ausmacht. Granitblöcke rahmen eine lange Sichel hellen Sandes, dahinter werfen Takamaka-Bäume Schatten. Ankert im Sand davor und fahrt früh mit dem Beiboot hinein: Das Schnorcheln an den Felsen am Nordende ist vor neun am ruhigsten, ab dem späten Vormittag macht der Schwell das Durchfädeln zwischen den Steinen mühsam. Achtet im Flachen auf halb eingegrabene Stechrochen und schlurft mit den Füßen über den Grund. An Land grillt das Bonbon Plume den Fang des Tages unter offenem Palmdach direkt am Wasser; ein Fischteller liegt bei etwa 25 bis 35 Dollar, ein kaltes Seybrew kostet ein paar mehr. Die Bucht kann rollen, sobald Schwell hereinläuft, deshalb behandeln viele Crews sie als langen Mittagsstopp und ziehen für die Nacht weiter.",
+          "thingsToDo": [
+            "Vor neun an den Felsen im Norden schnorcheln",
+            "Gegrillter Fang und Seybrew im Bonbon Plume",
+            "Schlurfend durchs Flache, Augen auf für Stechrochen",
+            "Unter den Takamaka-Bäumen faulenzen"
+          ],
+          "mooringTip": "Anse Lazio ist eine offene Reede ohne Bojen; ankert im Sand und behaltet den Anker im Auge, denn der Schwell kann um die Landspitze herumlaufen. Steht Dünung aus Nordwest oder wollt ihr eine ruhige Nacht, nutzt die Bucht als Tagesstopp und schlaft in einer geschützten Bucht."
+        },
+        "5": {
+          "shortDescription": "Hinüber nach La Digue, der langsamsten Insel des Archipels, wo es mehr Fahrräder als Autos gibt und Anse Source d'Argent am Ende eines schattigen Weges wartet.",
+          "description": "La Digue liegt ein gutes Dutzend Meilen östlich, ein leichter Halbwindschlag über den Kanal, der die Insel von Praslin trennt. Der Haken ist der Hafen: In La Passe finden nur vier bis sechs Yachten Platz, also ruft den Hafenmeister auf UKW-Kanal 16, bevor ihr euch festlegt; ist nichts frei, ankert im Lee und fahrt mit dem Dinghy hinein. An Land läuft die Insel auf Fahrrädern und Ochsenkarren. Leiht am Steg ein Rad und radelt zwanzig Minuten nach Süden zur Anse Source d'Argent, dem riffgeschützten Strand, dessen geformte Granitblöcke tausend Postkarten verkauft haben; kommt früh oder im Nachmittagslicht, also vor oder nach den Tagesgästen von der Fähre. Die flache Lagune dort bleibt ruhig genug für den ersten Schnorchelversuch. Wer mag, macht landeinwärts einen Abstecher durchs Veuve-Reservat und schaut nach dem Schwarzen Paradiesschnäpper, einem der seltensten Vögel der Region.",
+          "thingsToDo": [
+            "Auf dem schattigen Weg zur Anse Source d'Argent radeln",
+            "In der ruhigen, riffgeschützten Lagune schnorcheln",
+            "Den Paradiesschnäpper im Veuve-Reservat aufspüren",
+            "Räder am Steg von La Passe mieten"
+          ],
+          "mooringTip": "Im Hafen von La Passe liegen nur vier bis sechs Boote, holt euch also vorher auf UKW-Kanal 16 die Erlaubnis des Hafenmeisters. Ist er voll, ist der Ankerplatz gleich davor bei beständigem Passat in Ordnung, geschützt von den umliegenden Inseln – bei Westschwell rollt es allerdings."
+        },
+        "6": {
+          "shortDescription": "Ein kurzer Schlag hinaus zum Meerespark Cocos: drei Granitinselchen in dem klarsten Riffwasser, das ihr die ganze Woche beschnorchelt.",
+          "description": "Ile Cocos liegt keine drei Meilen vor La Digue, eine Gruppe von Granitinselchen in einem Meerespark, den viele für das beste Schnorchelrevier der inneren Inseln halten. Das Wasser über den Korallenköpfen ist verblüffend klar, und die Fischdichte stimmt: Kaiserfische, Schnapper, ab und zu eine Schildkröte, die am Riff weidet. Anlanden ist auf den Inselchen nicht erlaubt, das hier ist also ein Tag auf und im Wasser. Nehmt eine Parkboje, zahlt die Gebühr und geht früh rein, bevor gegen elf die Ausflugsboote aus La Digue und Praslin eintreffen. Ist es bei Cocos zu voll, bieten die Schwestern nebenan, Grande Soeur und Petite Soeur, ruhigeres Riff und einen Strand zum Ausstrecken. Die meisten Crews verkriechen sich für die Nacht hinter Félicité, wo der Halt gut ist und der Ankerplatz im Südostpassat ruhig bleibt.",
+          "thingsToDo": [
+            "Die klaren Korallenköpfe bei Ile Cocos beschnorcheln",
+            "Früh da sein, bevor die Ausflugsboote kommen",
+            "Zur Grande Soeur für ruhigeres Riff übersetzen",
+            "Für die Nacht hinter Félicité ankern"
+          ],
+          "mooringTip": "Cocos ist Meerespark ohne Anlandeerlaubnis: Ihr nehmt eine Boje, zahlt die Rangergebühr und schnorchelt ein paar Stunden, statt dort zu übernachten. Sichert euch vor Einbruch der Dunkelheit einen Nachtplatz hinter Félicité oder vor Grande Soeur, denn Cocos selbst liegt ungeschützt, sobald die Tagesboote weg sind."
+        },
+        "7": {
+          "shortDescription": "Der lange Heimschlag: raumschots zurück nach Mahé und Eden Island, zeitlich so gelegt, dass ihr die Marina vor der Dämmerung erreicht.",
+          "description": "Der Rückweg nach Mahé ist der längste Schlag der Woche, knapp dreißig Meilen vom Ankerplatz bei Cocos hinunter nach Eden Island. Im Südostpassat läuft es meist raumschots oder vor dem Wind, schnell und bequem, doch im offenen Kanal baut sich die Welle von achtern auf – ein Bullenstander am Baum verdient sich da seine Existenz. Legt früh ab. Ihr wollt die Riffdurchfahrten und die Marina bei gutem Licht nehmen, und der Passat frischt nachmittags oft auf. Bleibt Zeit, lockert ein letzter Badestopp im Park von Sainte Anne den Schlag angenehm auf. Sobald ihr in Eden Island längsseits liegt: Diesel und Wasser auffüllen, Salz abspülen und hinüber zu den Bars und Restaurants der Marina für ein richtiges letztes Abendessen an Land. Die Basis will die Yacht meist am späten Vormittag zurück, erledigt den Papierkram also am Abend davor.",
+          "thingsToDo": [
+            "Für den Vorwindkurs einen Bullenstander setzen",
+            "Letzter Badestopp im Park von Sainte Anne",
+            "In Eden Island bunkern und abspülen",
+            "Abschiedsessen in den Restaurants von Eden Island"
+          ],
+          "mooringTip": "Plant so, dass ihr Eden Island mit reichlich Tageslicht erreicht; die Riffdurchfahrten und die Marinagassen lassen sich vor dem Nachmittagsblendlicht viel leichter lesen, und der Passat legt spät zu. Bestätigt euren Liegeplatz im Anlauf per UKW mit der Basis."
+        }
+      }
+    },
+    "seychelles-explorer-14-days": {
+      "metaTitle": "14 Tage Innere Inseln Seychellen | Boat4You",
+      "metaDesc": "Zwei Wochen rund um die Granit-Seychellen ab Eden Island (Mahe): Sainte Anne, Silhouette, Praslin, Curieuse, La Digue und die Sisters.",
+      "days": {
+        "1": {
+          "shortDescription": "Ein gemütlicher Fünf-Meilen-Schlag von der Marina in einen Meerespark aus sechs Inseln – ideal, um die Crew vor den längeren Etappen einzuspielen.",
+          "description": "Die meisten Crews legen in Eden Island am späten Vormittag ab, sobald Papierkram und Proviant erledigt sind, und der Weg hinaus nach Sainte Anne dauert kaum eine Stunde. Der Park verteilt sich über sechs Granitinselchen rund fünf Meilen vor Victoria und steht seit Anfang der Neunziger unter Schutz, weshalb das Riff hier seine Farbe behalten hat. Nehmt eine Parkboje vor Cerf oder Moyenne, zahlt die Übernachtungsgebühr und verbringt den Nachmittag im Wasser. Beim Schnorcheln über den Seegraswiesen tauchen fast immer Schildkröten auf, die im Flachen weiden. Auf Moyenne gibt es einen kurzen Rundweg und eine Handvoll Aldabra-Schildkröten, falls ihr euch an Land die Beine vertreten wollt. Eine einfache erste Nacht: geschütztes Wasser, die Lichter von Mahe über dem Kanal und Zeit, um herauszufinden, wo an Bord was liegt.",
+          "thingsToDo": [
+            "Über den Seegraswiesen vor Cerf schnorcheln",
+            "An Land den Schildkrötenpfad auf Moyenne gehen",
+            "Eine Parkboje aufnehmen",
+            "Sundowner mit den Lichtern von Mahe über dem Kanal"
+          ],
+          "mooringTip": "Sainte Anne hat ein bewirtschaftetes Bojenfeld; nehmt eine Muring, statt den Anker auf dem Riff fallen zu lassen, und haltet die Übernachtungsgebühr für den Ranger bereit. Die Bojen vor Cerf und Moyenne bieten in der Südostsaison den besten Schutz."
+        },
+        "2": {
+          "shortDescription": "Um die Nordspitze von Mahe in eine stille Meeresparkbucht an der Nordwestküste, mit gutem Sandgrund und Riff in Schwimmweite.",
+          "description": "Von Sainte Anne solltet ihr früh loskommen und euch gegen den Uhrzeigersinn um den Norden von Mahe herumarbeiten. Die Baie Ternay liegt an der Nordwestecke, hinter Cap Ternay versteckt, und ist bei stehendem Passat eine der verlässlicheren Übernachtungsbuchten der Insel. Der Grund ist Sand, der Halt also gut, sobald der Anker eingefahren ist, und die ganze Bucht ist Meeresreservat. Von August bis in den Oktober zieht Plankton Walhaie an diesen Küstenabschnitt, und Schildkröten und die eine oder andere Muräne gehören weiter innen am Riff zum Stammpublikum. An Land führt der Anse-Major-Weg über die Landzunge davon, falls jemand vor dem Abendessen laufen mag. Das ist ein Arbeitsankerplatz und keine Resortkulisse – was hier draußen genau der Punkt ist.",
+          "thingsToDo": [
+            "Am Riff des Reservats nach Schildkröten schnorcheln",
+            "In der Saison nach Walhaien Ausschau halten",
+            "Den Küstenweg zur Anse Major wandern",
+            "Für die Nacht vor Cap Ternay ankern"
+          ],
+          "mooringTip": "In der Baie Ternay wird nur geankert, auf Sand in rund fünf bis acht Metern; bleibt gut vom Riffrand weg und rechnet mit einer Parkgebühr, wenn ein Ranger vorbeikommt. Verkriecht euch hinter Cap Ternay, dort seid ihr vor Südost geschützt."
+        },
+        "3": {
+          "shortDescription": "Eine echte Etappe über offenes Wasser nach Nordwesten zu Silhouettes bewaldeten Gipfeln, Ankern vor dem langen Sandstrand von La Passe unter dem Mont Dauban.",
+          "description": "Das ist der erste richtige Schlag der Reise, gut zwanzig Meilen offenes Wasser hinaus nach Silhouette; es lohnt sich also, um neun loszukommen und dem Boot Zeit zu geben, sich in den Schwell einzufinden. Silhouette ist die drittgrößte der Granitinseln und mit Abstand die spektakulärste im Anlauf: Der Mont Dauban steigt über siebenhundert Meter direkt aus dem Meer, meist mit einer Wolkenhaube. Der Ankerplatz liegt vor La Passe an der Ostküste, ein langer Streifen hellen Sandes mit einem kleinen Dorf und dem Nationalpark dahinter. Der Halt im Sand ist ordentlich, es kann aber rollen, wenn Schwell hereinläuft. Fürs Anlanden braucht es eine Parkgenehmigung, die über eure Charterbasis läuft – klärt das vor dem Ablegen. Das Schnorcheln entlang der Granitkanten ist ruhig und gehört oft euch allein.",
+          "thingsToDo": [
+            "Vor dem langen Strand von La Passe ankern",
+            "Die stillen Granitabbrüche beschnorcheln",
+            "Zum wolkenverhangenen Gipfel des Mont Dauban aufschauen",
+            "Den Naturpfad durchs Dorf gehen"
+          ],
+          "mooringTip": "Ankert im Sand vor La Passe auf sieben bis zehn Metern, rechnet aber mit Rollen, falls sich Südschwell um die Landspitze schleicht. Bestätigt die Landegenehmigung vor dem Auslaufen mit der Basis, denn die Insel ist ein bewirtschaftetes Reservat."
+        },
+        "4": {
+          "shortDescription": "Über offenes Wasser hinüber zur Praslin-Gruppe und nach Cousin, einem Seevogelreservat, in das euch die Ranger durch die Brandung an Land bringen.",
+          "description": "Heute steht der große Schlag hinüber zur Praslin-Gruppe an, und die Meilen sind zu spüren – ein früher Start und ein Reff im Groß machen den Tag leichter. Cousin ist ein Sonderreservat von Nature Seychelles, das in den Sechzigern aus einer Kokosplantage zurückgewonnen wurde, um den Seychellen-Rohrsänger zu retten. Heute ist es eine der dichtest besiedelten Seevogelinseln überhaupt, voller Seeschwalben und Noddis, und unter den Bäumen trotten Aldabra-Schildkröten herum. Mit dem eigenen Beiboot dürft ihr hier nicht anlanden. Yachten ankern davor, die Ranger kommen heraus und fahren euch durch die Uferbrandung hinein; Besuche gibt es nur werktags und gegen Landegebühr. Legt es auf den späten Vormittag, macht die geführte Runde und geht zurück an Bord, bevor der Nachmittagswind einsetzt und der Ankerplatz ruppig wird.",
+          "thingsToDo": [
+            "Die geführte Seevogelrunde mit dem Ranger gehen",
+            "Aldabra-Schildkröten unter den Bäumen entdecken",
+            "Brütende Seeschwalben und Noddis beobachten",
+            "Nach dem Seychellen-Rohrsänger Ausschau halten"
+          ],
+          "mooringTip": "Bei Cousin darf das eigene Beiboot nicht anlanden, und einen brauchbaren Übernachtungsankerplatz gibt es nicht; ankert nur für den Besuch im Sand davor, werktags, und lasst euch vom Reservatsteam an Land bringen. Zum Schlafen geht es weiter nach Praslin."
+        },
+        "5": {
+          "shortDescription": "In Praslins Haupthafen Baie Sainte Anne, die beste Gelegenheit der Reise zum Bunkern und für einen Besuch im Vallee de Mai.",
+          "description": "Nach dem Reservat geht es in ruhiger Fahrt herum zur Baie Sainte Anne an Praslins Ostküste, dem praktischen Drehkreuz dieses Teils vom Archipel. In der Bucht liegen der wichtigste Fähranleger, ein Tankdock und Läden, es ist also der naheliegende Ort, um Wasser, Eis und Proviant für die zweite Woche aufzufüllen. Praslin selbst lohnt einen Tag weg vom Boot. Das Vallee de Mai, eine kurze Taxifahrt landeinwärts, ist der einzige Ort, an dem die Coco de Mer wild wächst, und der Wald unter dem Blätterdach wirkt tatsächlich urzeitlich. Wer lieber an der Küste bleibt: Cote d'Or die Straße hinauf hat einen langen Strand und eine Reihe unkomplizierter Lokale. Erledigt den Einkauf am Vormittag, solange die Regale voll sind.",
+          "thingsToDo": [
+            "In den Läden der Baie Sainte Anne bunkern",
+            "Durch den Palmenwald des Vallee de Mai laufen",
+            "Gegrillten Fisch in Cote d'Or essen",
+            "Wasser und Diesel auffüllen"
+          ],
+          "mooringTip": "Die Baie Sainte Anne ist eine belebte Arbeitsbucht; ankert im Sand, aber klar von der Fährrinne und den örtlichen Liegern. Fragt nach einem Liegeplatz, wenn ihr Landstrom und bequemes Proviantieren braucht."
+        },
+        "6": {
+          "shortDescription": "Nordwärts nach Aride, der großen Seevogelinsel des Archipels – wetterabhängig, mit Strandanlandung durch die Brandung zu Millionen brütender Vögel.",
+          "description": "Aride ist die nördlichste der Granitinseln und die Seevogelhauptstadt der ganzen Gruppe, mit Brutkolonien, die in die Hunderttausende gehen. Der Haken ist die Anlandung. Es gibt keinen Steg, also bringt euch das Boot des Reservats über den Strand hinein, und das nur, wenn der Schwell es zulässt – was meist die ruhigeren Monate bedeutet und nicht den Höhepunkt der Südostsaison. Ruft vorher an und seid bereit umzuplanen. Klappt es, ist die geführte Wanderung hinauf aufs Plateau großartig, mit kreisenden Rußseeschwalben über euch und Wrights Gardenie, die nirgends sonst auf der Erde blüht. Der Ankerplatz ist offen und rollig, das hier ist also ein Tagesstopp und keine Nacht in Ruhe. Ist Aride geschlossen, bieten die Inseln um Praslin ohne großen Umweg einen Ersatz.",
+          "thingsToDo": [
+            "Mit dem Reservatsboot über den Strand anlanden",
+            "Mit Guide über das Seevogelplateau wandern",
+            "Wrights Gardenie in Blüte finden",
+            "Kreisenden Rußseeschwalben zusehen"
+          ],
+          "mooringTip": "Der Ankerplatz vor Aride ist ungeschützt und nur bei ruhigem Wetter haltbar; nehmt ihn als Tagesstopp, ankert im Sand davor und ruft vorher im Reservat an, denn bei Brandung werden Anlandungen gestrichen."
+        },
+        "7": {
+          "shortDescription": "Hinunter nach Curieuse, wo frei laufende Aldabra-Schildkröten, rote Erdpfade und ein Mangroven-Bohlenweg einen entspannten Nachmittag an Land füllen.",
+          "description": "Von Aride führt ein unkomplizierter Schlag hinunter nach Curieuse, das direkt vor der Nordküste von Praslin liegt. Die Insel war fast ein Jahrhundert lang Leprakolonie, und das alte Doctor's House steht noch beim Strand von Anse St Jose. Was die Leute heute herbringt, sind die Schildkröten: ein paar hundert Aldabra-Riesen, die frei über das Reservat wandern, unbeeindruckt und leicht zu fotografieren. Ein Bohlenweg führt zurück durch die Mangroven, und Coco-de-Mer-Palmen wachsen auch hier an den Hängen wild, nicht nur im Vallee. Ankert auf der geschützten Seite in der Baie Laraie und setzt mit dem Beiboot über, um an der Rangerstation die Parkgebühr zu zahlen. Grüne Meeresschildkröten legen an diesen Stränden in der Saison ihre Eier ab – geht oberhalb der Flutlinie also vorsichtig.",
+          "thingsToDo": [
+            "Frei laufende Aldabra-Schildkröten fotografieren",
+            "Den Mangroven-Bohlenweg gehen",
+            "Das alte Doctor's House besuchen",
+            "In der geschützten Baie Laraie ankern"
+          ],
+          "mooringTip": "Ankert in der Baie Laraie an Curieuses Südwestseite, im Sand und mit gutem Abstand zum Riff; bei Südostpassat ist der Schutz gut. Landet mit dem Beiboot bei Anse St Jose an und zahlt vor der Wanderung die Meeresparkgebühr."
+        },
+        "8": {
+          "shortDescription": "Kaum eine Stunde zur Anse Lazio, einem der schönsten Strände Praslins – Schnorcheln an den Felsen, Mittagessen im Sand.",
+          "description": "Von Curieuse zur Anse Lazio ist es kaum eine Stunde, es eilt also nicht. Lazio zieht sich um die Nordwestspitze von Praslin, ein weiter Bogen hellen Sandes zwischen zwei Granitlandzungen, und der Ruf kommt nicht von ungefähr. Am besten schnorchelt es sich an den Felsen im Norden, wo die Korallen noch stehen und oft Papageifische und ab und zu ein Rochen die Kanten abfahren. Zwei Strandrestaurants liegen zurückgesetzt unter den Takamaka-Bäumen; das Bon Bon Plume macht einen guten gegrillten Tagesfang, falls ihr an Land essen wollt. Ankert im Sand davor und schwimmt hinein. Die Bucht öffnet sich nach Nordwesten, in der Südostsaison ist sie also bequem, bei drehendem Nordwind aber kein guter Platz. Wir nehmen meist den Vormittag hier und ziehen weiter, bevor der Nachmittagsschwell aufbaut.",
+          "thingsToDo": [
+            "An den Felsen am Nordende von Lazio schnorcheln",
+            "Gegrillten Fisch im Bon Bon Plume zu Mittag",
+            "Den Bogen aus hellem Sand entlangschwimmen",
+            "Im klaren Sand davor ankern"
+          ],
+          "mooringTip": "Vor der Anse Lazio wird im Sand geankert, und sie liegt offen nach Nordwesten – ein feiner Tages- und Schönwetterstopp, aber ungeschützt, wenn der Wind auf Nord dreht; lasst das Boot bei laufendem Schwell nicht unbeaufsichtigt."
+        },
+        "9": {
+          "shortDescription": "Hinüber nach La Digue, der Ochsenkarren-Insel aus Fahrrädern und Granitblöcken, Heimat der vielfotografierten Anse Source d'Argent.",
+          "description": "La Digue liegt einen kurzen Schlag östlich von Praslin und ist die Insel, die die meisten vor Augen haben, wenn sie an die Seychellen denken. Autos gibt es hier fast keine; man kommt mit dem Fahrrad oder dem gelegentlichen Ochsenkarren voran, was das Tempo angenehm vorgibt. Mietet in La Passe ein Rad und fahrt nach Süden zum L'Union Estate, wo sich die Anse Source d'Argent hinter ihrer Wand aus geformten Granitblöcken und flachen, hellen Lagunen versteckt. Kommt früh oder spät, dann seid ihr den Tagesgästen von der Fähre aus dem Weg. An der Südostküste sind Grande Anse und Petite Anse wilder und oft menschenleer, die Strömung kann dort allerdings kräftig setzen. Der einzige wirklich allwettertaugliche Liegeplatz ist der Hafen von La Passe – funktional statt hübsch –, weshalb die meisten Crews dort hineingehen und mit dem Beiboot an Land fahren.",
+          "thingsToDo": [
+            "Zur Anse Source d'Argent radeln",
+            "Durch das L'Union Estate fahren",
+            "Zur wilden Grande Anse laufen",
+            "Räder in La Passe mieten"
+          ],
+          "mooringTip": "Der Hafen von La Passe ist der einzige allwettertaugliche Platz auf La Digue, aber klein und oft voll – kommt früh, um Platz zu finden, oder ankert davor und fahrt mit dem Beiboot hinein. Die Grande Anse taugt nur als Schönwetter-Mittagsstopp, mit einem Auge auf der Strömung."
+        },
+        "10": {
+          "shortDescription": "Ein Vormittagsschlag hinaus nach Marianne, einer unbewohnten Insel mit einigen der besten Tauchwände der Region und großen Freiwasserfischen.",
+          "description": "Marianne liegt für sich allein östlich von La Digue, verlassen seit dem Ende der Kokosplantagen, und der Grund herzukommen liegt unter Wasser. Die Wände rund um die Insel fallen steil von zehn auf dreißig Meter ab und ziehen die größeren Fische an: Grauhaie, Adlerrochen, die den Abbruch entlangziehen, Barrakudas, die in der Strömung stehen, und Schildkröten praktisch überall. Es ist ein bekanntes Tauchgebiet – wer an Bord einen Schein hat, sollte den Bootstauchgang über einen Anbieter in La Digue organisieren, bevor ihr ablegt. Für Schnorchler liefert auch das flachere Riff auf der geschützten Seite. Einen richtigen Übernachtungsankerplatz gibt es hier nicht, und die Insel liegt offen im Schwell; behandelt Marianne also als Tagesausflug bei beständigem Wetter und plant, zum Schlafen zu den geschützteren Inseln zurückzukehren.",
+          "thingsToDo": [
+            "An Mariannes steilen Riffwänden tauchen",
+            "Nach Grauhaien Ausschau halten",
+            "Adlerrochen am Abbruch beobachten",
+            "Das geschützte Riff küstennah beschnorcheln"
+          ],
+          "mooringTip": "Marianne hat keinen sicheren Übernachtungsankerplatz und liegt offen im Ozeanschwell; kommt nur bei beständigem Wetter, ankert für den Tauchgang im Sand davor und haltet Maschinenwache. Geschlafen wird zurück bei Felicite oder La Digue."
+        },
+        "11": {
+          "shortDescription": "Zwei Meilen zurück nach Felicite, einer Granitinsel mit privatem Resort, lebendigem Saumriff und verlässlichen Schildkrötensichtungen.",
+          "description": "Felicite liegt nur ein paar Meilen zurück Richtung La Digue, ein steiler grüner Granitklotz, über dessen Kämme sich heute ein einzelnes Luxusresort zieht. An Land kommt ihr nicht, wenn ihr dort nicht wohnt, aber das macht wenig aus, denn der Reiz ist das Saumriff. Das Wasser an der West- und Nordseite ist klar und belebt: Karettschildkröten weiden die Korallen ab, gefleckte Adlerrochen gleiten draußen im Blau vorbei. Legt euch im Lee der Insel aus dem Passat und verbringt den Nachmittag rein und raus aus dem Wasser. Die Granitkulisse über der Wasserlinie ist so gut wie irgendwo auf dem Törn. Nach der Ungeschütztheit von Marianne wird das eine ruhige, geborgene Nacht – und die perfekte Ausgangslage für die Sisters am Morgen.",
+          "thingsToDo": [
+            "Das Saumriff an der Westseite beschnorcheln",
+            "Nach weidenden Karettschildkröten schauen",
+            "Vorbeiziehende gefleckte Adlerrochen beobachten",
+            "Im Lee der Insel ankern"
+          ],
+          "mooringTip": "Ankert im Sand an der geschützten West- oder Nordseite von Felicite, aus dem Südostwind heraus; das gibt eine ruhige Nacht. Die Insel selbst ist ein privates Resort, plant also mit Boot und Riff."
+        },
+        "12": {
+          "shortDescription": "Ein kurzer Schlag zur Grande Soeur der Sisters Islands, werktags geöffnet, mit zwei feinen Stränden und Spitzenschnorcheln am Westriff.",
+          "description": "Grande Soeur, die größere der beiden Sisters, liegt einen kurzen Schlag nördlich von Felicite. Die Insel gehört einem Hotel auf Praslin, das unter der Woche Tagesbesuche fährt und sie am Wochenende den eigenen Gästen vorbehält – fragt also am Vortag nach. Trefft ihr es richtig, habt ihr zwei Strände fast für euch: einen an der Westseite mit einem Waldstreifen im Rücken, den anderen über einen flachen Sattel, den ihr in zehn Minuten überquert. Der eigentliche Gewinn ist das Schnorcheln am Westriff, mit gesunden Korallen und Schildkröten, die im Flachen fressen. Ankert im Sand vor dem Hauptstrand und fahrt mit dem Beiboot hinein. Bringt eigenes Wasser und Schatten mit, denn die Einrichtungen sind minimal und auf die Tagesausflügler ausgelegt, nicht auf durchreisende Yachten.",
+          "thingsToDo": [
+            "Das gesunde Westriff beschnorcheln",
+            "Über den Sattel zwischen den Stränden laufen",
+            "Mit fressenden Schildkröten schwimmen",
+            "Vor dem Hauptstrand ankern"
+          ],
+          "mooringTip": "Ankert im Sand vor dem Weststrand von Grande Soeur und fahrt mit dem Beiboot hinein – aber nur werktags; am Wochenende ist die Insel für Resortgäste gesperrt. Prüft den Kalender, bevor ihr den Stopp fest einplant."
+        },
+        "13": {
+          "shortDescription": "Hinauf nach Ile Cocos, einer winzigen Gruppe von Granitinselchen, die als bestes Schnorchelrevier des ganzen Archipels gilt.",
+          "description": "Ile Cocos ist eine Streuung kleiner Granitfelsen nördlich von La Digue, seit Mitte der Neunziger als Meerespark geschützt, und viele Segler halten es für das beste Schnorchelrevier der Seychellen. Anlanden geht nicht; die Inselchen selbst sind tabu, und der Sinn der Sache liegt komplett unter Wasser. Zwischen den Felsblöcken ziehen sich Korallengärten durch klares, flaches Wasser, dicht besetzt mit Rifffischen, und ihr könnt eine Stunde treiben, ohne viel Strecke zu machen. Weil es ein bekanntes Tagesausflugsziel von La Digue aus ist, füllt es sich gegen Mittag – kommt also früh, dann gehört euch das Wasser weitgehend allein. Es fällt eine Parkgebühr an, die von den patrouillierenden Rangern kassiert wird. Der Schlag ist kurz, macht daraus also einen gemächlichen Vormittagsstopp vor der langen Rückreise nach Mahe am letzten Tag.",
+          "thingsToDo": [
+            "Die Korallen zwischen den Felsblöcken beschnorcheln",
+            "Früh da sein, vor den Ausflugsbooten",
+            "Durch die flachen Granitkanäle treiben",
+            "Rifffische im klaren Wasser fotografieren"
+          ],
+          "mooringTip": "Ile Cocos ist ein geschütztes Tagesrevier ohne Anlandung; ihr ankert oder treibt kurz zum Schnorcheln und zahlt die Rangergebühr. Kommt früh, denn es ist flach, klein und am späten Vormittag voller Ausflugsboote."
+        },
+        "14": {
+          "shortDescription": "Der lange Schlussschlag über offenes Wasser zurück nach Eden Island, mit einer Abfahrtszeit, die euch Marina und Bootsübergabe vor der Dunkelheit sichert.",
+          "description": "Der letzte Tag ist der längste Schlag der Reise, gut fünfundzwanzig Meilen offenes Wasser zurück nach Mahe – der eine Morgen also, an dem ihr wirklich früh raus solltet. Mit dem Südostpassat querab kann es ein schneller, befriedigender Ritt werden; gönnt euch trotzdem eine großzügige Reserve, denn bei Tageslicht in der Marina anzukommen macht die Rückgabe deutlich entspannter. Die meisten Basen wollen die Yacht schon am Abend vor dem letzten Morgen im Hafen und vollgetankt haben, lest also den Chartervertrag und plant die Zeit danach. Wenn Mahe voraus aufsteigt und die grüne Bergwand hinter Victoria näher kommt, schließen sich zwei Wochen, die am selben Steg begonnen haben. Festmachen in Eden Island, Salz abspülen und den Törn noch etwas sacken lassen, bevor es zum Flug geht.",
+          "thingsToDo": [
+            "Die offene Überfahrt nach Mahe segeln",
+            "In Eden Island bunkern und übergeben",
+            "Nach zwei Wochen an Bord abspülen",
+            "In der Marina auf den Törn anstoßen"
+          ],
+          "mooringTip": "Plant, die Marina Eden Island deutlich vor Einbruch der Dunkelheit zu erreichen, und klärt die Rückgabezeit vorab mit der Basis, denn viele wollen das Boot schon am Vorabend zurück und vollgetankt. Funkt im Anlauf wegen der Liegeplatzzuweisung voraus."
+        }
+      }
+    }
+  },
+  "areas": {
+    "seychelles": {
+      "metaTitle": "Segelrouten Seychellen | Boat4You",
+      "metaDesc": "Törnvorschläge Tag für Tag durch die inneren Seychellen — Mahé, Praslin, La Digue und Curieuse, mit kurzen Schlägen und entspanntem Passatsegeln.",
+      "title": "Segeln im Granitherz der Seychellen",
+      "description": "Die Inneren Inseln liegen dicht beieinander, eine Woche hier besteht also überwiegend aus kurzen Schlägen statt langer Etappen — Mahé nach Praslin ist mit rund 30 Seemeilen die längste Strecke, und an den meisten Tagen liegt ihr am frühen Nachmittag vor Anker. Von Mai bis Oktober hält der Südostpassat stetige 10 bis 20 Knoten, genug zum richtigen Segeln, ohne dass es je ungemütlich wird; die ruhigeren Monate April und November werden glasig und klar, wenn ihr lieber taucht als gegen den Wind kreuzt. Werft den Anker vor Anse Lazio, bevor die Tagesboote aus Praslin kommen, fahrt mit dem Dinghy hinein und lauft durch die Coco-de-Mer-Palmen des Vallée de Mai, quert dann nach Curieuse und teilt euch einen Strand mit frei laufenden Riesenschildkröten. Die Anse Source d'Argent auf La Digue ist das Foto, das alle wollen — seid im ersten Licht dort, dann gehört sie euch. Ein Hinweis von hier: In den Passagen zwischen den Granitinseln setzt mit der Tide Strom, timet eure Überfahrten, dann bleibt das Segeln sanft."
+    }
+  }
+}

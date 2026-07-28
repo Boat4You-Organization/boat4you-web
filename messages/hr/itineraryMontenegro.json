@@ -1,1 +1,255 @@
-{}
+{
+  "routes": {
+    "boka-budva-week": {
+      "metaTitle": "Boka i Budva u 7 dana | Boat4You",
+      "metaDesc": "Opuštena 7-dnevna ruta od Porto Montenegra u Tivtu preko Kotora, Perasta, Herceg Novog i Budve, uz mirna sidrišta i svježu ribu Boke.",
+      "days": {
+        "1": {
+          "shortDescription": "Lagani izlazak iz tivatskog bazena za superjahte i provlačenje kroz tjesnac Verige do Kotora, grada u zidinama pod planinom.",
+          "description": "Preuzimanje broda u Porto Montenegru pojede pola jutra kad se zbroje primopredaja i poštena nabava namirnica, pa rijetko krećemo prije jedanaest. Unutrašnji dio zaljeva ujutro je gladak kao ulje, a prolaz kroz tjesnac Verige upravo je ona vrsta pitomog jedrenja u kojoj se nova posada uhoda. Kotor je na samom dnu zaljeva, kamenih zidina prislonjenih uz sivi vapnenački zid. Vežite se u gradskoj marini pa uđite ravno u staru jezgru kroz Morska vrata. Ako vas noge služe, uspon na tvrđavu Sv. Ivana nagradit će vas cijelim zaljevom pod nogama; krenite kasno poslijepodne, kad žega popusti. Do večere se stiže kratkom šetnjom preko izlizanih mramornih trgova.",
+          "thingsToDo": [
+            "Uspon na tvrđavu Sv. Ivana u sumrak",
+            "Ulazak u stari grad kroz Morska vrata",
+            "Kompletna nabava u Porto Montenegru prije polaska",
+            "Večernje piće na mramornim trgovima Kotora"
+          ],
+          "mooringTip": "U srpnju i kolovozu rezervirajte vez u Marini Kotor unaprijed jer se riva popuni do sredine poslijepodneva. Sidrenje u unutrašnjem zaljevu je nezgodno jer noću s planina padaju jaki udari, pa je marina sigurniji izbor."
+        },
+        "2": {
+          "shortDescription": "Lijena etapa od pet milja do baroknog Perasta i njegova dva otočića, od kojih je jedan crkva sagrađena na umjetnom grebenu.",
+          "description": "Ovo je najkraća etapa tjedna, jedva sat vremena pod jedrima, pa nema razloga žuriti s doručkom. Perast nema marinu vrijednu spomena, samo niz sidrenih bova ispred rive i kratki gradski gat koji se rano popuni. Uhvatite bovu, spustite gumenjak i prebacite se do Gospe od Škrpjela. Otok je stoljećima nastajao ljudskom rukom: kamen balasta i potopljeni brodovi slagali su se na greben dok nije bilo mjesta za crkvu. Unutra vise deseci zavjetnih slika koje su ostavili pomorci sretno vraćeni kući. Na kopnu je mjesto jedna jedina vrpca mletačkog kamena, bez automobila. Obično rezerviramo stol u Konobi Otok Bronza i gledamo kako svjetlo omekšava nad vodom.",
+          "thingsToDo": [
+            "Gumenjakom do Gospe od Škrpjela",
+            "Zavjetne slike u otočnoj crkvi",
+            "Večera na terasi Konobe Otok Bronza",
+            "Šetnja perastanskom kamenom rivom bez automobila"
+          ],
+          "mooringTip": "Perastansko polje bova je malo i ne može se rezervirati, pa doplovite do ranog poslijepodneva da uhvatite svoju; kratki gradski gat ima malo dubine i mjesta. Na sjevernom vjetru bove kod rta znaju biti neugodno valovite."
+        },
+        "3": {
+          "shortDescription": "Jedrenje cijelom dužinom zaljeva i van kroz tjesnac Verige do Herceg Novog, grada stuba i morskih utvrda.",
+          "description": "Danas se konačno jedri. Kad oko podneva ispuni maestral, spust prema zapadu cijelom dužinom zaljeva i natrag kroz tjesnac Verige pravi je bočni vjetar, uz pristojan povjetarac možda tri sata. Herceg Novi čuva ulaz ondje gdje se zaljev spaja s otvorenim Jadranom. Stari grad se u terasama diže ravno iz mora, sve same stube i sjenoviti prolazi, pa ponesite lagane cipele i računajte da ćete za poglede morati zaraditi. Forte Mare, morska utvrda na dnu, potječe iz četrnaestog stoljeća, a ljeti se u njoj održavaju projekcije na otvorenom. Gradska luka je mala i često puna; ako nema mjesta, sidrište odmah istočno dobro drži u mulju na oko osam metara. Kava pod palmama na glavnom trgu lokalni je ritual.",
+          "thingsToDo": [
+            "Uspon stubištima stare jezgre",
+            "Obilazak morske utvrde Forte Mare",
+            "Kava pod palmama na glavnom trgu",
+            "Kupanje s broda kod ulaza u zaljev"
+          ],
+          "mooringTip": "Luka Herceg Novi ima svega sedamdesetak vezova i u sezoni se popuni, pa najavite dolazak ili stignite rano. Ako ne uspije, usidrite se odmah istočno od grada na sedam do deset metara u mulju, koji odlično drži i štiti od prevladavajućeg sjeverozapada."
+        },
+        "4": {
+          "shortDescription": "Prijelaz preko ulaza u zaljev do šljunčane uvale Zanjice, uz Plavu špilju i tvrđavu Mamula na dohvat gumenjaka.",
+          "description": "Herceg Novi i Zanjice dijele jedva četiri milje, pa od prijelaza napravite cijelo jutro i usput stanite na kupanje. Zanjice su zavijena šljunčana plaža na obali Lustice, blizu mjesta gdje se zaljev otvara prema moru. Do ručka se napune izletničkim brodovima, a do večeri se opet isprazne. Tenderom ili lokalnim taksi-brodom obiđite do Plave špilje, niske grote u kojoj svjetlo boji vodu električno plavom; ulaz je uzak i dubok svega nekoliko metara, pa to ciljajte po mirnom vremenu. Mamula, okrugla otočna tvrđava kod rta, zaslužuje polagani prolazak. Ovo je sidrište za stabilno vrijeme, a ne marina, i izloženo je ako vjetar zaokrene na jug, pa držite sidrenu stražu i budite spremni maknuti se ako zapuše.",
+          "thingsToDo": [
+            "Uplivajte tenderom u Plavu špilju",
+            "Sidrenje pred šljunčanom plažom Zanjice za ručak",
+            "Polagani krug oko otočne tvrđave Mamula",
+            "Ronjenje na dah u bistroj vodi Lustice"
+          ],
+          "mooringTip": "Zanjice su otvoreno sidrište, najbolje po mirnom i stabilnom vremenu; bacite sidro na pijesak i travu i dobro ga ukopajte. Stignite do ranog poslijepodneva prije nego što izletnički brodovi pokupe najbolja mjesta, i držite je na oku preko noći ako se najavljuje jugo."
+        },
+        "5": {
+          "shortDescription": "Obilazak poluotoka i jedrenje otvorenom obalom do Budve, gdje se srednjovjekovne zidine spajaju s pješčanim plažama i bučnom ljetnom noći.",
+          "description": "Danas ponestaje zaklonjene vode. Iza vrha Lustice izlazite na otvorenu obalu, gdje obično ima više valova i stalnijeg vjetra, pa se raniji polazak isplati prije nego što popodnevni vjetar ojača. Do Budve je tri do četiri sata niz obalu, ovisno o vjetru. Marina je smještena tik uz zidine starog grada, pa s broda gotovo izravno kročite u srednjovjekovne uličice. Grad unutar zidina je zbijen i fotogeničan, okružen pješčanim plažama koje se u srpnju brzo napune. Budva je i noćna prijestolnica obale, pa oni koji lako spavaju možda radije uzmu vez podalje od barova. Za mirnije kupanje tu je otok Sveti Nikola nadomak obale, a razglednički otočić Sveti Stefan kratko je jedrenje prema jugu.",
+          "thingsToDo": [
+            "Šetnja budvanskim zidinama u zlatnom satu",
+            "Sidrenje kod otoka Sveti Nikola i kupanje",
+            "Prolaz pokraj otočića Sveti Stefan",
+            "Barovi starog grada nakon mraka"
+          ],
+          "mooringTip": "Marina Budva je velika, ali ljeti vrlo prometna, pa vez rezervirajte unaprijed. Ako želite mir, tražite mjesto na gatu podalje od barova starog grada. Sidrenje kod Svetog Stefana ide samo po mirnom vremenu jer je otvoreno valovima."
+        },
+        "6": {
+          "shortDescription": "Povratak uz obalu do uspavane Bigove, ribarskog zaseoka gdje je večera ono što su gazdini sinovi izvukli to jutro.",
+          "description": "Nakon budvanske buke Bigova je lijek. Uvučena je u duboku, zelenu uvalu na jugozapadnom kutu poluotoka Lustica, a plovidba do nje je bezbrižnih par sati. Ovdje gotovo ničega nema osim šačice kuća, nekoliko ribarskih brodica i dvije konobe uz samo more, što je upravo poanta. Uzmite jednu od bova blizu restorana ili se usidrite malo dublje u uvali, gdje sidro dobro drži. Mi obično rezerviramo stol u Grispolisu, gdje obitelj lovi za vlastitu kuhinju i dnevni ulov donese na stol prije nego što ga spremi, na bokeljski način. Susjedni Pod Volatom radi po istoj ideji i ima svoje vjerne goste. Kupajte se s broda, jedite kasno i legnite u potpunu tišinu.",
+          "thingsToDo": [
+            "Odaberite dnevni ulov u Konobi Grispolis",
+            "Večera u Pod Volatom uz more",
+            "Kupanje u mirnoj, zelenoj uvali Bigova",
+            "Gledanje ribara kako se vraćaju"
+          ],
+          "mooringTip": "Bigova ima osam sidrenih bova na tri do šest metara, postavljenih tik uz dvije konobe, pa rezervirajte stol i gazda će vas obično uputiti na bovu. Inače se usidrite sjeverno od bova, na pijesku i travi, na šest do sedam metara."
+        },
+        "7": {
+          "shortDescription": "Lagano posljednje jutro natrag kroz ulaz u zaljev do Tivta, uz vremena za posljednje kupanje prije predaje broda.",
+          "description": "Zadnja etapa je kratka i bez žurbe, sat ili dva natrag u zaljev i gore do Tivta. Većina čartera želi brod natrag do jutra, pa točan termin primopredaje provjerite večer prije i iz Bigove krenite s rezervom. Usput obično ostane mjesta za još jedno kupanje u nekoj mirnoj uvali, i vrijedi ga uzeti. Natočite gorivo prije nego što uđete u marinu jer dolijevanje na pontonu u punoj sezoni zna značiti red. I sam Porto Montenegro ugodno je mjesto za završetak. Uz rivu je niz kafića, a mala zbirka pomorske baštine sa starom podmornicom lijepo ispuni poslijepodne ako vam je let sutradan. Zaključite dnevnik, isperite sol i nazdravite dobro odjedrenom tjednu.",
+          "thingsToDo": [
+            "Posljednje kupanje u mirnoj uvali usput",
+            "Šetnja rivom Porto Montenegra",
+            "Posjet zbirci pomorske baštine s podmornicom",
+            "Gorivo prije reda pred marinom"
+          ],
+          "mooringTip": "Napunite tank goriva prije ulaska u marinu jer se na benzinskoj stanici u špici stvara red. Termin primopredaje i obveze oko čišćenja potvrdite večer prije da zadnje jutro ostane opušteno."
+        }
+      }
+    },
+    "montenegro-adriatic-14-days": {
+      "metaTitle": "Crna Gora i Boka u 14 dana | Boat4You",
+      "metaDesc": "Dva tjedna od Porto Montenegra (Tivat) kroz Boku do Bara i natrag: Kotor, Perast, Budva, Sveti Stefan, mirne uvale i stari gradovi.",
+      "days": {
+        "1": {
+          "shortDescription": "Kratka prva etapa iz tivatske marine do Rose, starog ribarskog zaseoka na samom ulazu u Boku.",
+          "description": "Većina posada preuzima brod poslijepodne, pa je prvi dan namjerno blag. Od Porto Montenegra je lijenih sat vremena niz zaljev do Rose, uvučene uz vrh poluotoka Luštica, ondje gdje se voda otvara prema moru. Selo je maleno: red kamenih kuća, gat i par ribljih konoba koje se do osam napune. Iznad njega stoji Forte Rose, austrougarska utvrda u kojoj danas radi mali ronilački centar. Kupajte se s krme dok svjetlo pada iza rta. Ovdje se nikamo ne žuri, a nema ni pravog noćnog života, i to je poanta. Dobro mjesto da se dogovore kabine, isproba sidreno vitlo i dobro pojede prije nego što sutra počne pravo jedrenje.",
+          "thingsToDo": [
+            "Uspon do tvrđave Forte Rose",
+            "Ronjenje na grebenu s lokalnim centrom",
+            "Večera u ribljoj konobi u Rose",
+            "Kupanje s broda u sumrak"
+          ],
+          "mooringTip": "Rose ima kratki gradski gat i nekoliko bova; uzmite bovu ili bacite sidro u uvali na pijesak na 4–6 m. Gat se kroz srpanj i kolovoz brzo napuni izletničkim brodovima, pa pomaže rani dolazak."
+        },
+        "2": {
+          "shortDescription": "Blag skok preko tjesnaca do Herceg Novog, utvrđenog grada stubišta i morskih utvrda, s marinom D-Marin Portonovi u susjedstvu.",
+          "description": "Herceg Novi je odmah preko vode, možda četrdeset minuta na motor ako je jutro mirno. Grad se penje uz brijeg u klupku stuba i terasa, pa obujte pristojne cipele. Krenite od bastiona Forte Mare uz more, pa se kroz stara vrata popnite do tvrđave Kanli Kula i sata na trgu Belavista. Kava je ovdje ritual; nitko ne žuri. Za vez imate izbor: gradski gat ispod zidina zbog atmosfere ili uglađeni D-Marin u Portonoviju par milja zapadnije ako želite gorivo, tuševe i mirnu vodu. Mi obično uzimamo gradsku stranu i ušetamo u grad. Ovdje i napunite brod namirnicama jer su tržnica i dućani bolji od svega dalje niz obalu.",
+          "thingsToDo": [
+            "Šetnja bedemima Forte Mare",
+            "Uspon do tvrđave Kanli Kula",
+            "Kava na trgu Belavista",
+            "Nabava na gradskoj tržnici"
+          ],
+          "mooringTip": "Vežite se krmom na gradski gat ispod tvrđave ili uzmite servisirani vez u D-Marin Portonovi dvije milje zapadnije, zbog goriva i praonice. Gradska riva hvata val od trajektne rute, pa koristite dovoljno bokobrana i dugu krmenu špagu."
+        },
+        "3": {
+          "shortDescription": "Jedrenje cijelom dužinom zaljeva do Perasta, baroknog kapetanskog mjesta okrenutog prema dvama slavnim otočićima u tjesnacu ispod Kotora.",
+          "description": "Ovo je dan kad scenografija postaje operna. Prolazite kroz tjesnac Verige, gdje se planine sklapaju, a voda postaje ravna i tamna, i onda se pojavi Perast sa svojim zvonikom i dva otoka pred sobom. Jedan je prirodan: Sveti Đorđe, taman od čempresa, sa zatvorenim benediktinskim samostanom i starim grobljem. Drugi, Gospa od Škrpjela, nastajao je ljudskom rukom kroz stoljeća: ribari su spuštali kamenje na greben dok se otok nije održao. Vežite se, prebacite se brodićem i pogledajte zavjetnu crkvu i njezine srebrne pločice. Natrag u mjestu, kamena riva vodi do nekoliko konoba s ribom i domaćim vrancem. Ostavite vremena da jednostavno sjedite. Perast hvata zadnje sunce dugo nakon što je Kotor otišao u sjenu.",
+          "thingsToDo": [
+            "Brodićem do Gospe od Škrpjela",
+            "Fotografija tjesnaca Verige pod jedrima",
+            "Riba i vranac u konobi na rivi",
+            "Uspon na zvonik Sv. Nikole"
+          ],
+          "mooringTip": "Perastanski gat ima samo nekoliko vezova, a ispred same rive se ne sidri, pa najavite dolazak ili stignite prije podneva. Po mirnom vremenu mnoge posade sidre na pijesku između Svetog Đorđa i Gospe od Škrpjela pa gumenjakom u mjesto."
+        },
+        "4": {
+          "shortDescription": "Samo sat dublje u fjord do Kotora, čija se stara jezgra u zidinama naslanja na veliko stubište prema San Giovanniju.",
+          "description": "Jedva sat od Perasta, pa nema razloga za rani polazak. Polako na motor do dna zaljeva i Kotor se diže ravno iz vode, sa zidinama koje cik-cak idu uz liticu iza njega do tvrđave San Giovanni. Uđite, vežite se, pa napadnite uspon prije gužve s kruzera i prije vrućine: otprilike 1.350 stuba do vrha, uz cijeli fjord koji se otvara pod vama. Unutar zidina je labirint trgova i uličica, katedrala Sv. Tripuna u srcu i mačke na svakoj stubi. Jedite kasno. Stari grad u sezoni radi dobrano iza ponoći, a marina je dvije minute od vrata, pa nema noćne vožnje gumenjakom kući.",
+          "thingsToDo": [
+            "Uspon zidinama do San Giovannija",
+            "Katedrala Sv. Tripuna unutar zidina",
+            "Izgubite se u uličicama stare jezgre",
+            "Kasna večera na kamenom trgu"
+          ],
+          "mooringTip": "Marina Kotor je tik ispod zidina, s muringom i punom uslugom; rezervirajte u srpnju i kolovozu jer je mala i tražena. Kruzeri danju dijele kanal, pa na prilazu držite dobru stražu i računajte na njihov val."
+        },
+        "5": {
+          "shortDescription": "Natrag iz fjorda do Luštica Baya, nove marine za svako vrijeme u zaljevu Trašte, s golfom, bazenima i mirnim snom.",
+          "description": "Vratite se zaljevom unatrag, van kroz tjesnac i oko obale Luštice do zaljeva Trašte na otvorenoj obali. To je udobnih pola dana, pa usput negdje bacite sidro za ručak i kupanje. Luštica Bay je namjenski građena resort marina, sve novi pontoni i duboka, zaklonjena voda, s golf terenom iznad i par pristojnih restorana na rivi. Nakon tjedan dana srednjovjekovnog kamena djeluje gotovo zapanjujuće moderno, i to je sasvim u redu za jednu noć: pravi tuševi, bazen za plivanje, riješeno pranje rublja. Napunite sve baterije, pustite desalinizator i pustite posadu da se raširi po kopnu. Odavde itinerar skreće na jug i karakter se mijenja: zatvoreni zaljev zamjenjuju plaže, klifovi i duže etape po otvorenom.",
+          "thingsToDo": [
+            "Sidrenje za ručak i kupanje usput",
+            "Partija golfa iznad marine",
+            "Bazen i dugi topli tuševi",
+            "Večera na rivi zaljeva Trašte"
+          ],
+          "mooringTip": "Marina Luštica Bay ima moderne servisirane vezove na muringu i dobro drži po većini vremena; rezervirajte u špici jer je popularna kao prva ili zadnja postaja. Zaljev Trašte izvan marine dobro drži na pijesku ako se radije prvo usidrite i okupate."
+        },
+        "6": {
+          "shortDescription": "Lijeno jutro do Žanjica, uvale s bovama za kupanje na morskoj strani Luštice, s Plavom špiljom iza ugla.",
+          "description": "Danas kratko i slatko. Žanjice su odmah iza rta Luštice, žalo od šljunka iza kojeg stoji jedan od najstarijih maslinika na obali, a uokolo su postavljene bove. Uhvatite jednu, spustite gumenjak i obiđite do Plave špilje, morske pećine u kojoj se svjetlo diže tirkizno s pješčanog dna. Susjedna Mirišta su ljepša, ali više valjaju, pa većina posada ostaje na Žanjicama. Na dnu, kod hridi Ogada između njih, leži olupina na kojoj rade ronilački brodovi ako vas zanima. Na obali su dva roštilja sa svježom ribom i hladnim pivom. Ovdje ništa ne treba planirati. Kupajte se, jedite, odspavajte i sutrašnji skok do Budve tempirajte za popodnevni vjetar.",
+          "thingsToDo": [
+            "Gumenjakom u morsku pećinu Plava špilja",
+            "Šetnja drevnim maslinikom na Žanjicama",
+            "Ronjenje na olupini kod hridi Ogada",
+            "Riba s roštilja u konobi na plaži"
+          ],
+          "mooringTip": "Žanjice imaju postavljene bove preko uvale; uzmite bovu umjesto sidrenja jer je dno neujednačeno i brzo pada u dubinu. Ljeti su do podneva središte izletničkih brodova, pa stignite rano ili planirajte prenoćiti kad izletnici odu."
+        },
+        "7": {
+          "shortDescription": "Prva prava etapa po otvorenom moru prema jugu do Budve: s jedne strane stari grad u zidinama, s druge marina i duga noć vani.",
+          "description": "Sad počinje priobalna plovidba. Od Žanjica do Budve je oko 20 milja, a maestral obično ispuni sa sjeverozapada u kasno jutro, pa krenete li do devet, dobar vjetar nosit će vas veći dio puta. Budva je užurbano srce crnogorske rivijere. Zbijeni grad u zidinama sjedi na malom poluotoku, s citadelom na vrhu i kipom Balerine na hridima ispod. Pred plažom leži otok Sveti Nikola, dobar za usidreni ručak prije ulaska. Marina i stara luka smjestit će vas na korak od barova i restorana, a grad u srpnju radi kasno i glasno. Nakon tišine zaljeva to je šok, pa se prepustite jednu noć i onda dalje.",
+          "thingsToDo": [
+            "Šetnja zidinama citadele u zalazak",
+            "Usidreni ručak kod otoka Sveti Nikola",
+            "Potražite kip Balerine na hridima",
+            "Kasna noć u starom gradu"
+          ],
+          "mooringTip": "Marina Budva i stara luka su praktične, ali skupe i znaju valjati kad uđe jugoistočni val; vez je za mirnu noć bolji od izloženog sidrišta. U visokoj sezoni rezervirajte i tražite unutarnji vez podalje od ulaza."
+        },
+        "8": {
+          "shortDescription": "Jedva sat uz obalu do Svetog Stefana, otočića-hotela s razglednice, pa kupanje kod kraljevskih plaža Miločera u susjedstvu.",
+          "description": "Danas samo nekoliko milja, pa odspavajte Budvu i krenite kad vam odgovara. Sveti Stefan je slika koju svi znaju: utvrđeni otočić nabijen krovovima od kupe, spojen s kopnom tankim nasipom, danas ekskluzivni hotel. Na sam otočić se ne može iskrcati i oko njega je zabranjena zona, ali pogled s mora i jest cijela poanta. Usidrite se pred njim po mirnom vremenu i doplivajte prema Miločeru, gdje stare kraljevske plaže leže pod borovima. Manastir Praskvica je kratka šetnja uz brijeg ako želite hlad i malo povijesti. Mjesto je izloženo i bez pravog zaklona, pa ga uzmite kao dugu stanku za ručak i kupanje, a do večeri se spustite do Petrovca ako prognoza nije mirna.",
+          "thingsToDo": [
+            "Fotografija otočića s mora",
+            "Plivanje do kraljevskih plaža Miločera",
+            "Šetnja do manastira Praskvica",
+            "Usidreni ručak pod borovima"
+          ],
+          "mooringTip": "Na Svetom Stefanu nema marine, a sidrište je otvoreno valovima, uz označenu zabranjenu zonu oko otočića izvan koje morate ostati. Sidrite na pijesku pred Miločerom samo u stabilnim uvjetima i ne planirajte prenoćiti osim ako je more zrcalo."
+        },
+        "9": {
+          "shortDescription": "Uz same litice do Petrovca, malog turističkog mjesta s mletačkom utvrdom, crvenkastim plažama i dva otočića pred obalom.",
+          "description": "Obala između Svetog Stefana i Petrovca jedna je duga vrpca malih plaža i mjesta za kupanje, pa idite polako i uskočite gdje god izgleda dobro. Drobni Pijesak i Trsteno vrijede stanke, a ima i plitkih morskih špilja u koje se može uvući gumenjakom. Sam Petrovac je miran i obiteljski, sagrađen oko luka crvenkastog pijeska, s malom mletačkom utvrdom Kastio nad morem. Pred obalom su dva otočića: Katič i Sveta Nedjelja, na drugom je i crkvica. Navečer prošećite rivom, kad cijelo mjesto izađe na sladoled i šetnju. Lučica je skromna i zna se nagurati, pa je ovdje više riječ o plažama i laganom ritmu nego o velikim znamenitostima.",
+          "thingsToDo": [
+            "Kupanje u špiljama kod Drobnog Pijeska",
+            "Šetnja do utvrde Kastio",
+            "Gumenjakom do crkvice na otočiću Katič",
+            "Večernji sladoled na rivi"
+          ],
+          "mooringTip": "Petrovačka lučica je sićušna i samo za lijepo vrijeme, s tek nekoliko mjesta za goste koja rano odu. Većina posada sidri pred plažom na pijesku na 4–6 m i koristi gumenjak, držeći se podalje od plutača za kupače i hridi kod otočića."
+        },
+        "10": {
+          "shortDescription": "Okretište: duža etapa prema jugu do Bara, velika sigurna marina, carinska luka i drevni ruševni Stari Bar u zaleđu.",
+          "description": "Ovo je najdalja točka putovanja, pa od nje napravite pravu plovidbu. Bar je dobrano južno od Petrovca i spust do njega ide po otvorenom, najbolje na popodnevnom maestralu ako posluži. Bar je prije svega radna luka, a tek onda turističko mjesto, no to ima svojih prednosti: marina je velika, duboka i doista za svako vrijeme, s gorivom, brodskom opremom i carinom na licu mjesta, što je važno ako netko nastavlja prema Albaniji. Ostavite rivu i krenite u zaleđe do Starog Bara, ruševnog starog grada na stijeni, pola osmanskog i pola mletačkog, kojeg polako preuzimaju smokve. U blizini stoji Stara maslina u Mirovici, za koju se drži da je starija od dvije tisuće godina. Nije to lijepa luka, ali je najsigurnija postaja na obali i dobro mjesto za predah prije povratka na sjever.",
+          "thingsToDo": [
+            "Obilazak ruševina Starog Bara",
+            "Stara maslina u Mirovici, 2.000 godina",
+            "Uspon prema tvrđavi Haj-Nehaj",
+            "Dopuna goriva i namirnica"
+          ],
+          "mooringTip": "Marina Bar ima preko 600 servisiranih vezova na muringu i najzaklonjenije je mjesto na ovoj obali, pa izvan špice rijetko treba rezervirati unaprijed. Ujedno je službena ulazna i izlazna luka, pa se ovdje obavlja carina ako plovite dalje prema Albaniji."
+        },
+        "11": {
+          "shortDescription": "Opet na sjever do Petrovca, ovaj put uz zadržavanje na otočićima i mirnim plažama pokraj kojih ste na putu prema jugu samo prošli.",
+          "description": "Okrenite pramac na sjever i počnite se vraćati uz obalu. To je ista voda kojom ste sišli, ali s okretištem iza sebe raspoloženje prelazi u opuštanje. Iz Bara izađite polako ujutro, pa ciljajte da u Petrovac stignete do ranog poslijepodneva i ovaj ga put doživite kako treba. Dva otočića pred uvalom, Katič i Sveta Nedjelja, vrijede vožnje gumenjakom, a šumovita plaža Buljarica malo južnije duga je i divlja pješčana uvala koja ostaje mirna i u kolovozu. U mjestu odaberite konobu na rivi za lignje s roštilja i bokal domaćeg bijelog. Ako je lučica puna, sidrište pred glavnom plažom sasvim je dobro po mirnom vremenu, a kupanje ravno s broda jedno je od najboljih na cijeloj ruti.",
+          "thingsToDo": [
+            "Gumenjakom do crkvice Sveta Nedjelja",
+            "Divlji pijesak Buljarice",
+            "Lignje s roštilja u konobi na rivi",
+            "Dugo kupanje s usidrenog broda"
+          ],
+          "mooringTip": "Kao i na putu prema jugu, petrovačka lučica se brzo napuni, pa ako nema mjesta sidrite pred plažom na dobrom pijesku na 4–6 m. Uvala Buljarica malo južnije mirnije je i prostranije sidrište za noć ako vjetar ostane slab."
+        },
+        "12": {
+          "shortDescription": "Natrag u Budvu na posljednju veliku noć na kopnu, uz kratku etapu prema sjeveru tempiranu za kupanje kod Svetog Stefana.",
+          "description": "Kratka etapa natrag do Budve i posljednja prilika za pravu noć vani prije nego što se primopredaja primakne. Prekinite plovidbu još jednim prolaskom pokraj Svetog Stefana i usidrite se za posljednje kupanje prema miločerskim borovima dok je voda još topla. U Budvu uplovite do sredine poslijepodneva. Sad mjesto već poznajete, pa preskočite turističku ulicu i pronađite manje konobe u stražnjim uličicama starog grada, gdje je riba svježija, a račun blaži. Dobra je to večer da se posada okupi, poravna zajednička kasa i nazdravi putovanju domaćim vrancem. Nabavite i nešto namirnica, jer sutra je mirna uvala, a zadnje jutro je samo pakiranje. Uzmite vez umjesto ležanja na sidrištu, da posljednja noć na kopnu ne bude valovita.",
+          "thingsToDo": [
+            "Oproštajno kupanje kod Svetog Stefana",
+            "Večera u stražnjim uličicama starog grada",
+            "Nazdravite putovanju domaćim vrancem",
+            "Zalazak sunca sa zidina citadele"
+          ],
+          "mooringTip": "Za ovu posljednju noć uzmite vez u marini ili staroj luci umjesto sidrenja na otvorenom sidrištu, koje valja čim se uvuče jugoistočni val. U srpnju i kolovozu, kad je Budva najprometnija, pametno je rezervirati unaprijed."
+        },
+        "13": {
+          "shortDescription": "Natrag u zaklon zaljeva, u Bigovu, skrivenu ribarsku uvalu poznatu po tome da drži kad zapuše bura.",
+          "description": "Posljednji puni dan plovidbe vraća vas prema Tivtu, uz još jedno sidrište prije marine. Bigova je malo ribarsko mjesto u jugoistočnom kutu zaljeva Trašte, duboko uvučeno u kopno pa ostaje mirno kad se svugdje drugdje poskakuje. Odavno je to zaklon u koji posade bježe kad zaprijeti bura, a držanje na mulju i pijesku je izvrsno. Nema tu puno toga: nekoliko kuća, ribarske brodice i par konoba koje serviraju ono što je to jutro došlo u mreže. Pojedite ribu, prošećite obalom i uživajte u tišini nakon dva tjedna gradova i plaža. Prikladna je to zadnja noć, dovoljno blizu Tivta da je sutrašnja etapa jedva sat, pa je večer potpuno slobodna.",
+          "thingsToDo": [
+            "Svjež ulov u konobi u Bigovi",
+            "Šetnja mirnom obalom ribarskog mjesta",
+            "Kupanje u zaklonjenoj uvali",
+            "Piće na sidru nakon svih gradova"
+          ],
+          "mooringTip": "Bigova je cijenjena kao zaklon od bure, pa se po nemirnom vremenu brzo napuni; stignite rano da nađete mjesta u skučenoj uvali. Sidrite na mulj i pijesak, koji vrlo dobro drže, ili uzmite bovu pred jednom od konoba ako planirate jesti na kopnu."
+        },
+        "14": {
+          "shortDescription": "Kratka posljednja etapa natrag u Boku i predaja broda u Porto Montenegru u Tivtu, ondje gdje je sve i počelo.",
+          "description": "Zadnje jutro je lagano. Od Bigove je jedva sat oko rta u zaljev i gore do Porto Montenegra, pa nema potrebe za polaskom u zoru osim ako to ne traži primopredaja. Većina baza želi brod natrag do devet ili deset, natočen i pristojno pospremljen, pa ostavite malo vremena da usput dopunite tank i posložite kabine. I sam Porto Montenegro vrijedi posljednje šetnje kad predate brod: uglađena marina za superjahte s muzejom pomorske baštine, kafićima uz more i bazenom na lidu ako vam let nije prije večeri. Dva tjedna, cijela crnogorska obala od fjorda do Bara i natrag, i brod koji vas je nosio cijelim tim putem. Podmirite račun, razmijenite kontakte s posadom i počnite kovati plan za sljedeći put.",
+          "thingsToDo": [
+            "Dopuna goriva prije predaje broda",
+            "Posjet muzeju pomorske baštine",
+            "Kava na rivi Porto Montenegra",
+            "Posljednje kupanje na lidu marine"
+          ],
+          "mooringTip": "Porto Montenegro je velika i dobro vođena marina s vezovima na muringu i osobljem na gatu koje prihvaća konope pri predaji. Termin primopredaje i vrijeme na benzinskoj stanici potvrdite večer prije jer su jutra prometna zbog brodova koji dolaze i odlaze."
+        }
+      }
+    }
+  },
+  "areas": {
+    "montenegro": {
+      "metaTitle": "Jedriličarski itinerari Crne Gore | Boat4You",
+      "metaDesc": "Fjordovski zaljevi i otvorena rivijera: jedrite Kotor, Perast i Budvu uz mirna jutra, popodnevni maestral i kratke, lagane etape.",
+      "title": "Jedrenje fjordskom obalom Crne Gore",
+      "description": "Boka kotorska jedri se kao nijedno drugo mjesto na Jadranu: duboka ria stisnuta među gotovo okomite vapnenačke stijene, zrcalna za doručkom i uzburkana stalnim popodnevnim maestralom koji se ustali oko 10 do 20 čvorova prije nego što pred zalazak utihne. Udaljenosti su blagonaklone. Većina etapa je 5 do 18 nautičkih milja, pa možete dokono kružiti pod mletačkim bedemima Kotora, a zatim doći do barokne rive Perasta i njegove otočne crkve, Gospe od Škrpjela, bez ijedne užurbane plovidbe. Izađete li iz zaljeva, otvorena obala vodi prema Budvi u zidinama i otočiću Sveti Stefan, oko 25 milja od ulaza. Uplivajte u Plavu špilju kod poluotoka Luštica po mirnom jutru, prije nego što stignu izletnički brodovi. Jedna se navika ovdje isplati: kad zaprijeti sjeveroistočna bura, unutrašnji kraci zaljeva ostaju zaklonjeni dok vanjska obala postaje neugodna, pa etape niz obalu čuvajte za stabilne prognoze."
+    }
+  }
+}
