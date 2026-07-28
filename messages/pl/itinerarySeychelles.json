@@ -1,1 +1,255 @@
-{}
+{
+  "routes": {
+    "inner-islands-classic": {
+      "metaTitle": "Seszele: 7 dni po wyspach | Boat4You",
+      "metaDesc": "Spokojna 7-dniowa trasa z Eden Island na Mahé przez Sainte Anne, Praslin, Curieuse, Anse Lazio i La Digue po wewnętrznych Seszelach.",
+      "days": {
+        "1": {
+          "shortDescription": "Spokojne trzy mile na rozruch z mariny do najstarszego parku morskiego Seszeli — żółwie zielone tuż przy bojach, a Moyenne Island o rzut pontonem.",
+          "description": "Większość załóg wykorzystuje pierwsze popołudnie na ogarnięcie łodzi, zamiast gdziekolwiek pędzić — i Sainte Anne nadaje się do tego idealnie. Leży ledwie trzy mile od Eden Island, więc rano robisz zakupy, wychodzisz na silniku za główkę portu i zaraz po południu kołyszesz się już na boi. To najstarszy park morski w kraju: sześć granitowych wysepek w pierścieniu rafy. Żółwie zielone wynurzają się tuż przy bojach i zupełnie nie przejmują się pontonami. Podskocz pontonem na Moyenne — kiedyś prywatną wyspę, dziś do obejścia w godzinę, w towarzystwie mieszkających tam żółwi lądowych. Snorkeling przy Round Island jest łatwy i płytki, w sam raz dla tych, którzy dopiero oswajają się z płetwami. W sezonie pilnuj wolnych boi: pole zapełnia się późnym popołudniem. Drink o zachodzie słońca, z różowiejącymi wzgórzami Mahé za plecami, nadaje ton całemu tygodniowi.",
+          "thingsToDo": [
+            "Snorkeling na płytkiej rafie przy Round Island",
+            "Pontonem na ścieżkę żółwi na Moyenne Island",
+            "Podglądanie żółwi zielonych przy bojach",
+            "Drink o zachodzie z widokiem na Mahé"
+          ],
+          "mooringTip": "24 boje parkowe są tu znacznie bezpieczniejsze niż kotwiczenie; wykup zezwolenie (około SCR 500) jeszcze przed wyjściem z mariny i łap boję do wczesnego popołudnia, bo w sezonie pasatowym pole zapełnia się błyskawicznie."
+        },
+        "2": {
+          "shortDescription": "Główny przelot tygodnia — dwadzieścia kilka mil półwiatrem przez otwartą wodę do roboczego kotwicowiska Praslin, gdzie w miasteczku naprawią prawie wszystko.",
+          "description": "To jedyny prawdziwy przelot na tej trasie, więc warto ruszyć przed dziewiątą. Od boi w Sainte Anne jest trochę ponad dwadzieścia mil otwartej wody do Praslin, a w pasatach od maja do września zwykle złapiesz równe 12 do 18 kn z trawersu. W cieśninie fala potrafi się podnieść, więc pochowaj kubki po kawie, zanim miniesz rafę. Baie Sainte Anne otwiera się w południowo-wschodnim narożniku Praslin: szeroka i wyrozumiała, z piaskiem trzymającym kotwicę na czterech do ośmiu metrach. To najbardziej praktyczny nocleg na wyspach wewnętrznych — supermarket, nabrzeże paliwowe, coś w rodzaju sklepu żeglarskiego i mechanicy, którzy widzieli już każdą czarterową awarię. Jeśli wolisz nie ufać własnej kotwicy, miejscowy Robert ma kilka boi i odpowiada na VHF.",
+          "thingsToDo": [
+            "Uzupełnienie zapasów w supermarkecie w Baie Sainte Anne",
+            "Tankowanie paliwa i wody przy nabrzeżu",
+            "Naprawa czarterowych usterek u miejscowych mechaników",
+            "Spacer pomostem do przystani promowej"
+          ],
+          "mooringTip": "Baie Sainte Anne to kotwicowisko o najlepszym trzymaniu w całej grupie — piasek na czterech do ośmiu metrach i miejsce na obrót. Jeśli w zatoce tłoczno, zawołaj Roberta na VHF i weź jedną z jego prywatnych boi, zamiast wciskać się między inne jachty."
+        },
+        "3": {
+          "shortDescription": "Krótki skok wzdłuż północy Praslin na wyspę rządzoną przez olbrzymie żółwie, z przystankiem na snorkeling przy St Pierre po drodze.",
+          "description": "Curieuse leży tuż przy północnym brzegu Praslin — spokojna poranna żegluga, gdy tylko opłyniesz czubek wyspy. Przerwij rejs przy St Pierre, kępie granitowych głazów jakieś półtorej mili od Anse Volbert; na koralowych półkach wokół nich kręcą się papugoryby i czasem płaszczka, a najlepiej nurkować tu z fajką, zanim popołudniowa bryza się rozkręci. Sama Curieuse była sto lat temu kolonią trędowatych, dziś jest rezerwatem. Weź boję parkową w Baie Laraie, zapłać strażnikowi i zejdź na ląd między ponad trzysta wolno chodzących żółwi olbrzymich z Aldabry, z których niektóre dobijają setki. Pomost przez namorzyny biegnie milę od stacji strażników do Anse St José, mijając scynki, poskoczki mułowe i plątaninę czerwonych korzeni. Rdzawa laterytowa ziemia nadaje tutejszym plażom odcień, jakiego nie zobaczysz nigdzie indziej na tej trasie.",
+          "thingsToDo": [
+            "Snorkeling na koralowych półkach przy St Pierre",
+            "Spotkanie z wolno chodzącymi żółwiami z Aldabry w Baie Laraie",
+            "Spacer pomostem przez namorzyny do Anse St José",
+            "Piknik w cieniu przy stacji strażników"
+          ],
+          "mooringTip": "Curieuse to park morski — zamiast kotwiczyć, weź boję w Baie Laraie i rozlicz opłatę ze strażnikiem (około SCR 250 za noc). Zachodnia strona przy Anse St José jest ładniejsza, ale odsłonięta, więc zostaw ją na spokojną pogodę i załogę, która chętnie sprawdzi kotwicę w nurkowaniu."
+        },
+        "4": {
+          "shortDescription": "Pięć mil z powrotem na Praslin, po najczęściej fotografowaną plażę archipelagu: granitowe głazy, jedwabisty piasek i kreolski grill w cieniu.",
+          "description": "Anse Lazio leży na północno-zachodnim cyplu Praslin, kawałek żeglugi w dół od Curieuse — dla wielu to plaża, która definiuje Seszele. Granitowe głazy zamykają z obu stron długi półksiężyc jasnego piasku, a z tyłu cień rzucają drzewa takamaka. Stań na kotwicy w piasku i zejdź pontonem wcześnie: snorkeling wokół głazów na północnym końcu jest najspokojniejszy przed dziewiątą, a od późnego przedpołudnia przybój utrudnia lawirowanie między skałami. Na płyciznach uważaj na ogończe do połowy zagrzebane w piasku i szuraj stopami. Na brzegu Bonbon Plume grilluje dzienny połów pod otwartym strzechowym dachem tuż nad wodą; talerz ryby wychodzi mniej więcej 25 do 35 dolarów, zimne Seybrew parę więcej. W zatoce potrafi kołysać, gdy zawinie tu jakakolwiek martwa fala, więc wiele załóg traktuje to miejsce jako długi postój na lunch i płynie dalej na noc.",
+          "thingsToDo": [
+            "Snorkeling przy północnych głazach przed dziewiątą",
+            "Grillowany połów dnia i Seybrew w Bonbon Plume",
+            "Szuranie stopami po płyciźnie z uwagą na ogończe",
+            "Leniuchowanie pod drzewami takamaka"
+          ],
+          "mooringTip": "Anse Lazio to otwarta reda bez boi; rzuć kotwicę w piasku i miej ją na oku, bo martwa fala potrafi zawinąć za cypel. Jeśli idzie fala z północnego zachodu albo zależy ci na spokojnej nocy, potraktuj to miejsce jako dzienny postój i przenocuj w osłoniętej zatoce."
+        },
+        "5": {
+          "shortDescription": "Przeskok na La Digue, najwolniejszą wyspę archipelagu, gdzie rowerów jest więcej niż aut, a na końcu zacienionej drogi czeka Anse Source d'Argent.",
+          "description": "La Digue leży kilkanaście mil na wschód — łatwy kurs półwiatrem przez cieśninę dzielącą ją od Praslin. Haczyk tkwi w porcie: La Passe mieści tylko cztery do sześciu jachtów, więc zawołaj kapitanat na VHF 16, zanim się zdecydujesz, a jeśli nie ma miejsca, stań na kotwicy pod osłoną wyspy i dopłyń pontonem. Na lądzie wszystko kręci się wokół rowerów i wozów ciągniętych przez woły. Wypożycz rower przy pomoście i przejedź dwadzieścia minut na południe do Anse Source d'Argent — osłoniętej rafą plaży, której rzeźbiony granit sprzedał tysiąc pocztówek; jedź wcześnie rano albo w popołudniowym świetle, obok fali jednodniowych gości z promu. Płytka laguna jest tam na tyle spokojna, że poradzi sobie nawet ktoś, kto pierwszy raz zakłada fajkę. Jeśli masz ochotę, zbocz w głąb wyspy do rezerwatu Veuve i wypatruj czarnej muchołówki rajskiej, jednego z najrzadszych ptaków regionu.",
+          "thingsToDo": [
+            "Przejazd rowerem zacienioną drogą do Anse Source d'Argent",
+            "Snorkeling w spokojnej lagunie osłoniętej rafą",
+            "Wypatrywanie muchołówki rajskiej w rezerwacie Veuve",
+            "Wypożyczenie rowerów przy pomoście w La Passe"
+          ],
+          "mooringTip": "Port La Passe mieści tylko cztery do sześciu jachtów, więc przed przyjściem poproś kapitanat o zgodę na VHF 16. Gdy jest pełny, kotwicowisko tuż na zewnątrz sprawdza się przy ustabilizowanych pasatach — osłaniają je okoliczne wyspy — choć przy fali z zachodu potrafi kołysać."
+        },
+        "6": {
+          "shortDescription": "Szybki skok półwiatrem do parku morskiego Cocos — trzy granitowe wysepki w najczystszej wodzie, w jakiej zanurkujesz przez cały tydzień.",
+          "description": "Ile Cocos leży ledwie trzy mile od La Digue: grupka granitowych wysepek w parku morskim, który wielu uznaje za najlepszy snorkeling na wyspach wewnętrznych. Woda nad koralowymi głowami jest zaskakująco przejrzysta, a ryb jest tu gęsto — ryby anielskie, lucjany, od czasu do czasu żółw skubiący rafę. Na same wysepki nie wolno schodzić, więc to dzień spędzony na wodzie. Weź boję parkową, zapłać opłatę i wskakuj do wody wcześnie, zanim koło jedenastej dopłyną łodzie z La Digue i Praslin. Jeśli przy Cocos jest tłoczno, pobliskie siostry — Grande Soeur i Petite Soeur — oferują spokojniejszą rafę i plażę do rozprostowania nóg. Większość załóg chowa się na noc za Félicité, gdzie kotwica trzyma dobrze, a kotwicowisko pozostaje spokojne przy południowo-wschodnich pasatach.",
+          "thingsToDo": [
+            "Snorkeling nad przejrzystymi koralowymi głowami przy Ile Cocos",
+            "Wczesne przypłynięcie, przed łodziami wycieczkowymi",
+            "Przeskok na Grande Soeur po spokojniejszą rafę",
+            "Nocne kotwiczenie za Félicité"
+          ],
+          "mooringTip": "Cocos to park morski bez prawa zejścia na ląd — bierzesz boję i płacisz strażnikowi za kilka godzin snorkelingu, a nie za nocleg. Miejsce na noc za Félicité albo przy Grande Soeur wybierz, zanim zgaśnie światło, bo samo Cocos jest odsłonięte, gdy odpłyną łodzie wycieczkowe."
+        },
+        "7": {
+          "shortDescription": "Długi etap powrotny — baksztagiem w dół do Mahé i Eden Island, tak rozplanowany, by wejść do mariny, zanim zgaśnie światło.",
+          "description": "Powrót na Mahé to najdłuższy odcinek tygodnia, blisko trzydzieści mil z kotwicowiska przy Cocos do Eden Island. Przy południowo-wschodnich pasatach zwykle idzie się baksztagiem albo z wiatrem — szybko i wygodnie — choć na otwartej wodzie fala rośnie od rufy, więc obszywka (preventer) na bomie zarabia na siebie z nawiązką. Wyjdź wcześnie. Chcesz przejść przez przejścia w rafie i wejść do mariny przy dobrym świetle, a pasaty często wzmagają się po południu. Jeśli zostanie zapas czasu, ostatni postój na kąpiel w parku Sainte Anne ładnie rozbija ten przelot. Po zacumowaniu w Eden Island uzupełnij paliwo i wodę, spłucz sól i przejdź się do marinowych barów i restauracji na porządną ostatnią kolację na lądzie. Baza zwykle chce jacht z powrotem do późnego rana, więc papiery załatw poprzedniego wieczoru.",
+          "thingsToDo": [
+            "Postawienie preventera na kurs z wiatrem",
+            "Ostatni postój na kąpiel w parku Sainte Anne",
+            "Tankowanie i spłukanie łodzi w Eden Island",
+            "Pożegnalna kolacja w restauracjach Eden Island"
+          ],
+          "mooringTip": "Celuj w Eden Island z dużym zapasem światła dziennego; przejścia w rafie i tory podejściowe mariny czyta się o wiele łatwiej przed popołudniowym blaskiem, a pasaty zwykle wzmagają się pod wieczór. W trakcie podejścia potwierdź przydział miejsca z bazą na VHF."
+        }
+      }
+    },
+    "seychelles-explorer-14-days": {
+      "metaTitle": "14 dni: Wyspy Wewnętrzne Seszeli | Boat4You",
+      "metaDesc": "Dwa tygodnie wokół granitowych Seszeli z Eden Island (Mahe): Sainte Anne, Silhouette, Praslin, Curieuse, La Digue i Sisters.",
+      "days": {
+        "1": {
+          "shortDescription": "Spokojne pięć mil na rozruch z mariny do parku morskiego z sześcioma wyspami — idealne, by załoga dotarła się przed dłuższymi etapami.",
+          "description": "Większość załóg wychodzi z Eden Island późnym rankiem, gdy papiery i zakupy są już z głowy, a skok do Sainte Anne zajmuje ledwie godzinę. Park rozciąga się na sześciu granitowych wysepkach jakieś pięć mil od Victorii i jest chroniony od początku lat dziewięćdziesiątych, więc tutejsza rafa wciąż trzyma kolor. Weź boję parkową przy Cerf albo Moyenne, zapłać za nocleg i spędź popołudnie w wodzie. Snorkeling nad łąkami trawy morskiej zwykle kończy się spotkaniem żółwi pasących się na płyciźnie. Na Moyenne jest krótka ścieżka spacerowa i garstka żółwi z Aldabry, jeśli chcesz rozprostować nogi na lądzie. To łatwa pierwsza noc: osłonięta woda, światła Mahe po drugiej stronie cieśniny i czas, żeby rozgryźć, gdzie na łodzi co leży.",
+          "thingsToDo": [
+            "Snorkeling nad łąkami trawy morskiej przy Cerf",
+            "Spacer ścieżką żółwi na Moyenne",
+            "Cumowanie do boi parkowej",
+            "Drink o zachodzie i światła Mahe po drugiej stronie cieśniny"
+          ],
+          "mooringTip": "Sainte Anne ma zarządzane pole boi cumowniczych — zamiast rzucać kotwicę na rafę, weź boję i przygotuj opłatę za nocleg dla strażnika. Boje przy Cerf i Moyenne dają najlepszą osłonę w sezonie południowo-wschodnim."
+        },
+        "2": {
+          "shortDescription": "Wokół północnego czubka Mahe do cichej zatoki w parku morskim na północno-zachodnim wybrzeżu — piasek trzyma kotwicę, a rafa jest w zasięgu pływania.",
+          "description": "Z Sainte Anne warto wyjść wcześnie i obejść północ Mahe przeciwnie do ruchu wskazówek zegara. Baie Ternay leży w północno-zachodnim narożniku, schowana za Cap Ternay, i jest jedną z pewniejszych zatok noclegowych na wyspie, gdy wieją pasaty. Dno jest piaszczyste, więc po zakopaniu kotwicy trzyma dobrze, a cała zatoka to rezerwat morski. Od sierpnia do października plankton ściąga wzdłuż tego odcinka wybrzeża rekiny wielorybie, a bliżej brzegu na rafie stałymi bywalcami są żółwie i od czasu do czasu murena. Na lądzie wzdłuż cypla biegnie szlak Anse Major, jeśli ktoś ma ochotę na spacer przed kolacją. To raczej robocze kotwicowisko niż kurortowa sceneria — i o to tu właśnie chodzi.",
+          "thingsToDo": [
+            "Snorkeling na rafie rezerwatu w poszukiwaniu żółwi",
+            "Wypatrywanie rekinów wielorybich w sezonie",
+            "Wędrówka nadmorskim szlakiem Anse Major",
+            "Nocne kotwiczenie przy Cap Ternay"
+          ],
+          "mooringTip": "W Baie Ternay stoi się wyłącznie na kotwicy, w piasku na jakichś pięciu do ośmiu metrach; osadź ją dobrze z dala od krawędzi rafy i licz się z opłatą parkową, jeśli podpłynie strażnik. Schowaj się za Cap Ternay, żeby mieć osłonę od południowego wschodu."
+        },
+        "3": {
+          "shortDescription": "Porządny etap otwartą wodą na północny zachód, ku zalesionym szczytom Silhouette — kotwica przy długiej piaszczystej plaży w La Passe, pod Mont Dauban.",
+          "description": "To pierwszy prawdziwy przelot na trasie — dwadzieścia kilka mil otwartej wody do Silhouette — więc opłaca się wyjść przed dziewiątą i dać łodzi czas na ułożenie się w fali. Silhouette jest trzecią co do wielkości z wysp granitowych i zdecydowanie najbardziej efektowną w podejściu: Mont Dauban wyrasta wprost z morza na ponad siedemset metrów, zwykle w czapie chmur. Kotwicowisko leży przy La Passe na wschodnim brzegu, wzdłuż długiego pasa jasnego piasku, za którym stoi mała wioska, a dalej park narodowy. Kotwica trzyma w piasku przyzwoicie, choć potrafi kołysać, gdy zawinie tu martwa fala. Zejście na ląd wymaga zgody parku, załatwianej przez bazę czarterową, więc zorganizuj to przed wypłynięciem. Snorkeling wzdłuż granitowych ścian jest cichy i często masz go wyłącznie dla siebie.",
+          "thingsToDo": [
+            "Kotwiczenie przy długiej plaży La Passe",
+            "Snorkeling przy cichych granitowych ścianach",
+            "Widok na szczyt Mont Dauban w czapie chmur",
+            "Spacer przyrodniczą ścieżką przez wioskę"
+          ],
+          "mooringTip": "Rzuć kotwicę w piasku przy La Passe na siedmiu do dziesięciu metrach, ale bądź gotów na kołysanie, jeśli za cypel wejdzie fala z południa. Potwierdź w bazie zezwolenie na zejście na ląd przed wypłynięciem, bo wyspa jest zarządzanym rezerwatem."
+        },
+        "4": {
+          "shortDescription": "Otwartą wodą do grupy Praslin i na Cousin — rezerwat ptaków morskich, na który strażnicy przewożą gości przez przybój.",
+          "description": "Dziś duży przelot półwiatrem do grupy Praslin i te mile czuć, więc wczesny start i refowany grot robią z tego znacznie spokojniejszy dzień. Cousin to specjalny rezerwat prowadzony przez Nature Seychelles, przywrócony naturze z plantacji kokosowej, żeby w latach sześćdziesiątych uratować trzcinniczka seszelskiego. Dziś to jedna z najgęściej zasiedlonych ptasich wysp na świecie, aż roi się od rybitw i rybołówek, a pod drzewami człapią żółwie z Aldabry. Własnym pontonem nie zejdziesz tu na ląd. Jachty stają na kotwicy, a strażnicy wypływają i przewożą gości przez przybój; wizyty tylko w dni robocze i za opłatą. Zaplanuj to na późny ranek, weź udział w spacerze z przewodnikiem, a potem wróć na łódź, zanim popołudniowy wiatr się wypełni i kotwicowisko zrobi się niespokojne.",
+          "thingsToDo": [
+            "Spacer ornitologiczny z przewodnikiem rezerwatu",
+            "Wypatrywanie żółwi z Aldabry pod drzewami",
+            "Obserwacja gniazdujących rybitw i rybołówek",
+            "Poszukiwanie trzcinniczka seszelskiego"
+          ],
+          "mooringTip": "Na Cousin nie zejdziesz własnym pontonem i nie ma tu kotwicowiska na noc z prawdziwego zdarzenia; stań w piasku wyłącznie na czas wizyty, w dzień roboczy, i daj się przewieźć na brzeg obsłudze rezerwatu. Na nocleg płyń dalej na Praslin."
+        },
+        "5": {
+          "shortDescription": "Do głównego portu Praslin w Baie Sainte Anne — najlepsza okazja na trasie, żeby uzupełnić zapasy i zobaczyć Vallee de Mai.",
+          "description": "Po rezerwacie czeka spokojna żegluga wokół wyspy do Baie Sainte Anne na wschodnim brzegu Praslin, praktycznego centrum tej części archipelagu. W zatoce jest główny terminal promowy, nabrzeże paliwowe i sklepy, więc to oczywiste miejsce na uzupełnienie wody, lodu i prowiantu na drugi tydzień. Sam Praslin wart jest dnia spędzonego poza łodzią. Vallee de Mai, krótki kurs taksówką w głąb wyspy, to jedyne miejsce, gdzie palma coco de mer rośnie dziko, a las pod okapem jest naprawdę prehistoryczny. Jeśli wolisz zostać bliżej wybrzeża, kawałek dalej Cote d'Or ma długą plażę i rząd niezobowiązujących knajpek. Zakupy zrób rano, dopóki półki są pełne.",
+          "thingsToDo": [
+            "Uzupełnienie zapasów w sklepach w Baie Sainte Anne",
+            "Spacer po palmowym lesie Vallee de Mai",
+            "Grillowana ryba w Cote d'Or",
+            "Uzupełnienie wody i paliwa"
+          ],
+          "mooringTip": "Baie Sainte Anne to ruchliwa, robocza zatoka; rzuć kotwicę w piasku z dala od toru promów i miejscowych łodzi na bojach albo dopytaj o miejsce przy nabrzeżu, jeśli potrzebujesz prądu z lądu i łatwych zakupów."
+        },
+        "6": {
+          "shortDescription": "Na północ do Aride, wielkiej ptasiej wyspy archipelagu — jeśli pogoda pozwoli — z lądowaniem przez przybój wprost między miliony gniazdujących ptaków.",
+          "description": "Aride to najdalej wysunięta na północ z wysp granitowych i ptasia stolica całej grupy — kolonie lęgowe liczy się tu w setkach tysięcy. Haczyk tkwi w lądowaniu. Nie ma pomostu, więc na brzeg zabiera cię łódź rezerwatu przez plażę, a to udaje się tylko przy odpowiedniej fali, czyli raczej w spokojniejszych miesiącach niż w szczycie sezonu południowo-wschodniego. Zadzwoń wcześniej i bądź gotów zmienić plany. Kiedy się uda, spacer z przewodnikiem przez płaskowyż jest znakomity: nad głową krążą rybitwy popielate, a gardenia Wrighta nie kwitnie nigdzie indziej na świecie. Kotwicowisko jest otwarte i kołyszące, więc traktuj to jako postój dzienny, nie nocleg. Jeśli Aride będzie zamknięte, wyspy wokół Praslin dają zapasowy plan bez większego nadkładania drogi.",
+          "thingsToDo": [
+            "Lądowanie łodzią rezerwatu wprost na plażę",
+            "Spacer z przewodnikiem po ptasim płaskowyżu",
+            "Znalezienie kwitnącej gardenii Wrighta",
+            "Obserwacja krążących nad głową rybitw popielatych"
+          ],
+          "mooringTip": "Kotwicowisko przy Aride jest odsłonięte i nadaje się tylko na spokojną pogodę; potraktuj je jako postój dzienny, stań w piasku i najpierw zadzwoń do rezerwatu, bo lądowania odwołuje się zawsze, gdy podnosi się przybój."
+        },
+        "7": {
+          "shortDescription": "W dół na Curieuse, gdzie wolno chodzące żółwie z Aldabry, ścieżki w czerwonej ziemi i pomost przez namorzyny wypełniają spokojne popołudnie na lądzie.",
+          "description": "Z Aride prowadzi prosta droga w dół na Curieuse, leżącą tuż przy północnym brzegu Praslin. Wyspa przez blisko sto lat była kolonią trędowatych, a stary Doctor's House wciąż stoi przy plaży w Anse St Jose. Dziś przypływa się tu dla żółwi: kilkuset olbrzymów z Aldabry chodzi wolno po rezerwacie, niczym się nie przejmując i dając się łatwo fotografować. Przez namorzyny biegnie pomost, a coco de mer rośnie dziko także na tutejszych stokach, nie tylko w Vallee. Rzuć kotwicę w Baie Laraie od osłoniętej strony i dopłyń pontonem, żeby zapłacić opłatę parkową w stacji strażników. W sezonie na tych plażach gniazdują żółwie zielone, więc powyżej linii przypływu stąpaj ostrożnie.",
+          "thingsToDo": [
+            "Zdjęcia wolno chodzących żółwi z Aldabry",
+            "Spacer pomostem przez namorzyny",
+            "Wizyta w starym Doctor's House",
+            "Kotwiczenie w osłoniętej Baie Laraie"
+          ],
+          "mooringTip": "Kotwicz w Baie Laraie po południowo-zachodniej stronie Curieuse, w piasku i dobrze z dala od rafy; daje to dobrą osłonę przy pasatach z południowego wschodu. Ponton przybij w Anse St Jose, żeby przed spacerem opłacić wstęp do parku morskiego."
+        },
+        "8": {
+          "shortDescription": "Ledwie godzina do Anse Lazio, jednej z najpiękniejszych plaż Praslin — snorkeling przy skałach i lunch na piasku.",
+          "description": "Z Curieuse do Anse Lazio jest ledwie godzina, więc nie ma po co się spieszyć. Lazio wygina się wzdłuż północno-zachodniego cypla Praslin szerokim łukiem jasnego piasku między dwoma granitowymi przylądkami i w pełni zasługuje na swoją renomę. Najlepszy snorkeling jest przy skałach na północnym końcu, gdzie koral trzyma się dobrze, a przy krawędziach często pracują papugoryby i od czasu do czasu płaszczka. Pod drzewami takamaka stoją dwie plażowe restauracje; Bon Bon Plume robi dobry grillowany połów dnia, jeśli masz ochotę na lunch na lądzie. Stań na kotwicy w piasku i dopłyń wpław. Zatoka otwiera się na północny zachód, więc przez sezon południowo-wschodni jest wygodna, ale nie ma tu czego szukać, gdy wiatr skręci na północ. Zwykle bierzemy tu poranek i ruszamy dalej, zanim popołudniowa fala urośnie.",
+          "thingsToDo": [
+            "Snorkeling przy skałach na północnym końcu Lazio",
+            "Lunch z grillowanej ryby w Bon Bon Plume",
+            "Kąpiel przy łuku jasnego piasku",
+            "Kotwiczenie w czystym piasku"
+          ],
+          "mooringTip": "W Anse Lazio stoi się na kotwicy w piasku, a zatoka jest otwarta na północny zachód, więc to świetny postój na dzień i dobrą pogodę, ale odsłonięty, gdy wiatr skręci na północ; przy falującej wodzie nie zostawiaj łodzi bez nadzoru."
+        },
+        "9": {
+          "shortDescription": "Przeskok na La Digue — wyspę wozów zaprzężonych w woły, rowerów i granitowych głazów, z najczęściej fotografowaną Anse Source d'Argent.",
+          "description": "La Digue leży kawałek żeglugi na wschód od Praslin i to właśnie ją większość ludzi ma przed oczami, myśląc o Seszelach. Samochodów prawie tu nie ma; poruszasz się rowerem albo wozem zaprzężonym w woły, co samo w sobie ustawia tempo. Wypożycz rower w La Passe i jedź na południe do L'Union Estate, gdzie za ścianą rzeźbionych granitowych głazów i płytkich, jasnych lagun kryje się Anse Source d'Argent. Jedź wcześnie albo późno, żeby ominąć jednodniowych gości z promu. Na południowo-wschodnim brzegu Grande Anse i Petite Anse są dziksze i często zupełnie puste, choć prąd potrafi tam być silny. Jedynym naprawdę wszechpogodowym kotwicowiskiem jest port w La Passe — funkcjonalny raczej niż ładny — więc większość załóg chowa się tam i na brzeg wyskakuje pontonem.",
+          "thingsToDo": [
+            "Przejazd rowerem do Anse Source d'Argent",
+            "Przejażdżka przez L'Union Estate",
+            "Spacer na dziką Grande Anse",
+            "Wypożyczenie rowerów w La Passe"
+          ],
+          "mooringTip": "Port La Passe to jedyne wszechpogodowe miejsce na La Digue, ale jest mały i często pełny, więc przypłyń wcześnie albo stań na kotwicy na zewnątrz i dowieź się pontonem. Grande Anse nadaje się wyłącznie na lunch przy dobrej pogodzie, z okiem na prąd."
+        },
+        "10": {
+          "shortDescription": "Poranna żegluga na Marianne, bezludną wyspę otoczoną jednymi z najlepszych ścian nurkowych regionu i dużą rybą pelagiczną.",
+          "description": "Marianne leży samotnie na wschód od La Digue, pusta odkąd porzucono plantacje kokosów, a powodem, żeby tu przypłynąć, jest to, co pod wodą. Ściany wokół wyspy wznoszą się stromo z dziesięciu do trzydziestu metrów i ściągają większą rybę: rekiny rafowe szare, orlenie cętkowane przemykające wzdłuż ściany, barrakudy wiszące w prądzie i żółwie właściwie wszędzie. To znany rejon nurkowy, więc jeśli ktoś na pokładzie ma uprawnienia, umów nurkowanie z łodzi u operatora jeszcze przed wyjściem z La Digue. Snorkelującym wystarczy płytsza rafa po osłoniętej stronie. Nie ma tu porządnego kotwicowiska na noc, a wyspa stoi otworem na falę, więc traktuj Marianne jako jednodniowy wypad przy ustabilizowanej pogodzie i planuj powrót na noc w stronę bardziej osłoniętych wysp.",
+          "thingsToDo": [
+            "Nurkowanie na stromych ścianach rafy Marianne",
+            "Wypatrywanie rekinów rafowych szarych",
+            "Obserwacja orleni cętkowanych przy ścianie",
+            "Snorkeling na osłoniętej rafie przybrzeżnej"
+          ],
+          "mooringTip": "Marianne nie ma bezpiecznego kotwicowiska na noc i leży otworem na oceaniczną falę; przypływaj wyłącznie przy ustabilizowanej pogodzie, stań w piasku na czas nurkowania i trzymaj wachtę z silnikiem w gotowości. Śpij z powrotem przy Felicite albo La Digue."
+        },
+        "11": {
+          "shortDescription": "Dwie mile z powrotem na Felicite — granitową wyspę z prywatnym kurortem, żywą rafą brzegową i pewnymi spotkaniami z żółwiami.",
+          "description": "Felicite leży zaledwie parę mil w stronę La Digue: stroma, zielona bryła granitu, po której grzbietach rozłożył się dziś jeden ekskluzywny kurort. Na ląd nie zejdziesz, jeśli tam nie mieszkasz, ale to bez większego znaczenia, bo tym, co przyciąga, jest rafa brzegowa. Woda wzdłuż zachodniego i północnego brzegu jest przejrzysta i pełna życia — żółwie szylkretowe skubią koral, a w głębszym błękicie przesuwają się orlenie cętkowane. Ustaw łódź po zawietrznej wyspy, poza pasatem, i spędź popołudnie na wchodzeniu i wychodzeniu z wody. Granitowa sceneria nad linią wody jest równie dobra jak wszędzie indziej na tej trasie. Po odsłoniętej Marianne wychodzi z tego spokojna, osłonięta noc, która ładnie ustawia poranne wyjście na Sisters.",
+          "thingsToDo": [
+            "Snorkeling na zachodniej rafie brzegowej",
+            "Wypatrywanie żerujących żółwi szylkretowych",
+            "Obserwacja przepływających orleni cętkowanych",
+            "Kotwiczenie po zawietrznej wyspy"
+          ],
+          "mooringTip": "Kotwicz w piasku po osłoniętej zachodniej lub północnej stronie Felicite, poza wiatrem z południowego wschodu; noc wychodzi spokojna. Sama wyspa to prywatny kurort, więc planuj czas przy łodzi i na rafie."
+        },
+        "12": {
+          "shortDescription": "Szybka żegluga na Grande Soeur z grupy Sisters Islands, otwartą w dni robocze — dwie świetne plaże i najlepszy snorkeling przy zachodniej rafie.",
+          "description": "Grande Soeur, większa z dwóch Sisters, to krótki kurs półwiatrem na północ od Felicite. Wyspa należy do hotelu na Praslin, który organizuje tu wizyty w tygodniu, a w weekendy zostawia ją swoim gościom, więc sprawdź to dzień przed planowanym postojem. Jeśli trafisz dobrze, dwie plaże będziesz miał niemal na wyłączność: jedną po zachodniej stronie, z pasem lasu za plecami, i drugą za niskim siodłem, które przejdziesz w dziesięć minut. Prawdziwą nagrodą jest snorkeling wzdłuż zachodniej rafy — zdrowy koral i żółwie żerujące na płyciźnie. Rzuć kotwicę w piasku naprzeciw głównej plaży i dopłyń pontonem. Weź własną wodę i coś na cień, bo zaplecze jest minimalne i pomyślane pod wycieczki jednodniowe, a nie przepływające jachty.",
+          "thingsToDo": [
+            "Snorkeling na zdrowej zachodniej rafie",
+            "Przejście siodłem między plażami",
+            "Pływanie z żerującymi żółwiami",
+            "Kotwiczenie naprzeciw głównej plaży"
+          ],
+          "mooringTip": "Kotwicz w piasku naprzeciw zachodniej plaży Grande Soeur i wchodź na ląd pontonem, ale wyłącznie w dzień roboczy; w weekendy wyspa jest zamknięta dla odwiedzających i zarezerwowana dla gości kurortu. Sprawdź kalendarz, zanim wpiszesz ten postój do planu."
+        },
+        "13": {
+          "shortDescription": "Na północ do Ile Cocos — maleńkiej grupki granitowych wysepek uznawanej za najlepszy snorkeling w całym archipelagu.",
+          "description": "Ile Cocos to rozsypane granitowe skałki na północ od La Digue, chronione jako park morski od połowy lat dziewięćdziesiątych, i sporo żeglarzy uznaje je za najlepszy snorkeling na Seszelach. Zejścia na ląd nie ma; same wysepki są wyłączone z ruchu, a cały sens rozgrywa się pod wodą. Między głazami ciągną się ogrody koralowe w przejrzystej, płytkiej wodzie, gęste od ryb rafowych, i można tak dryfować godzinę, prawie nie zmieniając miejsca. Ponieważ to znany cel jednodniowych wycieczek z La Digue, koło południa robi się tłoczno, więc celuj we wczesny przyjazd i miej wodę praktycznie dla siebie. Obowiązuje opłata parkowa, ściągana przez patrolujących rejon strażników. To krótki przelot, więc zrób z niego niespieszny poranny postój przed długim powrotem w stronę Mahe ostatniego dnia.",
+          "thingsToDo": [
+            "Snorkeling nad koralem między głazami",
+            "Wczesne przypłynięcie, przed łodziami wycieczkowymi",
+            "Dryfowanie płytkimi granitowymi kanałami",
+            "Zdjęcia ryb rafowych w przejrzystej wodzie"
+          ],
+          "mooringTip": "Ile Cocos to chroniony obszar dzienny bez prawa zejścia na ląd; stajesz na kotwicy albo leżysz krótko w dryfie, żeby ponurkować z fajką, i płacisz strażnikom opłatę. Przypłyń wcześnie, bo miejsce jest płytkie, małe i późnym rankiem pełne łodzi wycieczkowych."
+        },
+        "14": {
+          "shortDescription": "Ostatni, długi przelot otwartą wodą do Eden Island — wyjście zaplanuj tak, by dobić do mariny i zdać łódź przed zmrokiem.",
+          "description": "Ostatni dzień to najdłuższa żegluga na trasie, jakieś dwadzieścia pięć mil otwartej wody z powrotem na Mahe, więc to ten jeden poranek, kiedy naprawdę trzeba wyjść wcześnie. Z południowo-wschodnimi pasatami z trawersu potrafi to być szybki, satysfakcjonujący bieg; mimo wszystko daj sobie wygodny zapas, bo wejście do mariny za dnia sprawia, że zdanie łodzi jest dużo mniej stresujące. Większość baz chce jacht na miejscu i zatankowany już wieczorem przed ostatnim porankiem, więc sprawdź swoją umowę czarterową i ułóż plan pod nią. Kiedy Mahe wyrasta przed dziobem, zielona ściana gór za Victorią zamyka dwa tygodnie, które zaczęły się przy tym samym pomoście. Zacumuj w Eden Island, spłucz sól i daj rejsowi wybrzmieć przed lotem do domu.",
+          "thingsToDo": [
+            "Przejście otwartą wodą na Mahe",
+            "Tankowanie i zdanie łodzi w Eden Island",
+            "Spłukanie łodzi po dwóch tygodniach na pokładzie",
+            "Toast za rejs w marinie"
+          ],
+          "mooringTip": "Celuj w wejście do mariny Eden Island dobrze przed zmrokiem i wcześniej ustal z bazą godzinę zdania łodzi, bo wiele z nich chce jacht z powrotem i zatankowany już poprzedniego wieczoru. W podejściu zawołaj przez radio po przydział miejsca."
+        }
+      }
+    }
+  },
+  "areas": {
+    "seychelles": {
+      "metaTitle": "Seszele: trasy żeglarskie | Boat4You",
+      "metaDesc": "Trasy czarterowe dzień po dniu po Wyspach Wewnętrznych Seszeli — Mahé, Praslin, La Digue i Curieuse: krótkie skoki i łatwa żegluga w pasatach.",
+      "title": "Popłyń w granitowe serce Seszeli",
+      "description": "Wyspy Wewnętrzne leżą blisko siebie, więc tydzień tutaj to głównie krótkie skoki, a nie długie przeloty — najdłuższy etap, z Mahé na Praslin, to jakieś 30 mil morskich, a w większość dni stoisz na kotwicy już wczesnym popołudniem. Od maja do października południowo-wschodnie pasaty trzymają równe 10 do 20 kn: w zupełności wystarczy, żeby porządnie pożeglować, nigdy nie czując się odsłoniętym. Spokojniejszy kwiecień i listopad przynoszą wodę gładką jak szkło i przejrzystą, jeśli wolisz nurkować niż halsować pod wiatr. Rzuć kotwicę przy Anse Lazio, zanim dopłyną łodzie wycieczkowe z Praslin, zejdź pontonem na ląd i przejdź się między palmami coco de mer w Vallée de Mai, a potem przeskocz na Curieuse i podziel się plażą z wolno chodzącymi żółwiami olbrzymimi. Anse Source d'Argent na La Digue to zdjęcie, którego chcą wszyscy — bądź tam o pierwszym świetle, a plaża jest twoja. Jedna miejscowa uwaga: w przejściach między granitowymi wyspami pływ generuje prąd, więc dobierz porę przejść, a żegluga zostanie łagodna."
+    }
+  }
+}

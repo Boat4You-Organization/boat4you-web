@@ -1,1 +1,255 @@
-{}
+{
+  "routes": {
+    "inner-islands-classic": {
+      "metaTitle": "7 dana Sejšeli: od otoka do otoka | Boat4You",
+      "metaDesc": "Opuštena 7-dnevna ruta jedrenja: Eden Island (Mahé), Sainte Anne, Praslin, Curieuse, Anse Lazio i La Digue po unutarnjim otocima Sejšela.",
+      "days": {
+        "1": {
+          "shortDescription": "Laganih tri milje od marine do najstarijeg morskog parka na Sejšelima, uz zelene kornjače i Moyenne Island nadohvat tendera.",
+          "description": "Većina posada prvo poslijepodne iskoristi da posloži brod umjesto da negdje juri, a Sainte Anne je za to idealna. Od Eden Islanda je jedva tri milje, pa možete ujutro nabaviti namirnice, izaći iza lukobrana i već rano poslijepodne visjeti na bovi. Park je najstariji u zemlji, skupina od šest granitnih otoka opasanih grebenom. Zelene kornjače izranjaju oko boja i ne smeta im tender. Prebacite se gumenjakom na Moyenne, nekad u privatnom vlasništvu, danas se obiđe za sat vremena, a društvo vam prave kornjače koje tu žive. Šnorkanje kod Round Islanda plitko je i jednostavno, taman za one koji se tek navikavaju na peraje. U sezoni pripazite na broj slobodnih boja; polje se popuni do kasnog poslijepodneva. Sundowner ovdje, dok brda Mahéa iza vas postaju ružičasta, daje ton cijelom tjednu.",
+          "thingsToDo": [
+            "Šnorkanje na plitkom grebenu kod Round Islanda",
+            "Tenderom do staze s kornjačama na Moyenne Islandu",
+            "Promatranje zelenih kornjača uz bove",
+            "Sundowner s pogledom natrag na Mahé"
+          ],
+          "mooringTip": "24 bove u parku puno su sigurnije od sidrenja; dozvolu (oko 500 SCR) riješite prije izlaska iz marine i bovu uhvatite do sredine poslijepodneva jer se polje u sezoni pasata brzo popuni."
+        },
+        "2": {
+          "shortDescription": "Glavna etapa tjedna: dvadesetak milja otvorenog mora s vjetrom s boka do radnog sidrišta na Praslinu, gdje vam u mjestu poprave gotovo sve.",
+          "description": "Ovo je jedina prava plovidba na putu, pa se isplati krenuti do devet. Od boja u Sainte Anne ima nešto više od dvadeset milja otvorenog mora do Praslina, a od svibnja do rujna, u pasatu, obično dobijete stabilnih 12 do 18 čvorova s boka. U kanalu se more zna dići, pa spremite šalice prije nego izađete iza grebena. Baie Sainte Anne otvara se na jugoistočnom kutu Praslina, široka je i dobroćudna, s pijeskom koji drži na četiri do osam metara. To je najkorisnije noćno sidrište unutarnjih otoka: supermarket, gat za gorivo, nekakav nautički dućan i mehaničari koji su vidjeli svaki mogući kvar na charter brodu. Ako se ne želite oslanjati na vlastito sidro, mještanin po imenu Robert drži nekoliko boja i javlja se na VHF.",
+          "thingsToDo": [
+            "Nadopuna zaliha u supermarketu u Baie Sainte Anne",
+            "Gorivo i voda na gatu",
+            "Rješavanje kvarova s lokalnim mehaničarima",
+            "Šetnja gatom do trajektnog pristaništa"
+          ],
+          "mooringTip": "Baie Sainte Anne najbolje je noćno sidrište u skupini: pijesak na četiri do osam metara i dovoljno prostora za okretanje. Ako je uvala puna, zovnite Roberta na VHF-u za jednu od njegovih privatnih boja umjesto da se gurate u flotu."
+        },
+        "3": {
+          "shortDescription": "Kratak skok oko sjeverne obale Praslina do otoka kojim gospodare divovske kornjače, uz usputno šnorkanje kod St Pierrea.",
+          "description": "Curieuse leži tik uz sjevernu obalu Praslina, lagano jutarnje jedrenje čim zaobiđete vrh otoka. Usput stanite kod St Pierrea, hrpe granitnih gromada milju i pol od Anse Volberta; koraljne police oko njega pune su riba papiga i pokoje raže, a najbolje ih je šnorkati prije nego poslijepodne pojača povjetarac. Sama Curieuse bila je prije stoljeća leprozorij, a danas je rezervat. Uhvatite parkovnu bovu u Baie Laraie, platite rendžeru i iskrcajte se među više od tristo slobodnih aldabranskih kornjača, od kojih neke guraju stotu. Drvena staza kroz mangrove vodi milju od rendžerske postaje do Anse St José, pokraj gušterica, mudskipera i spleta crvenih korijena mangrova. Zemlja boje hrđe, laterit, daje plažama nijansu kakvu nigdje drugdje na putu nećete vidjeti.",
+          "thingsToDo": [
+            "Šnorkanje po koraljnim policama kod St Pierrea",
+            "Susret sa slobodnim aldabranskim kornjačama u Baie Laraie",
+            "Šetnja drvenom stazom kroz mangrove do Anse St José",
+            "Piknik u hladu kraj rendžerske postaje"
+          ],
+          "mooringTip": "Curieuse je morski park; umjesto sidrenja uhvatite bovu u Baie Laraie i naknadu (oko 250 SCR po noći) podmirite kod rendžera. Zapadna strana kod Anse St José ljepša je, ali izložena, pa je ostavite za mirno vrijeme i posadu koja je voljna zaroniti do sidra."
+        },
+        "4": {
+          "shortDescription": "Pet milja natrag na Praslin, do najfotografiranije plaže arhipelaga: granitne gromade, svilenkast pijesak i kreolski roštilj u hladu.",
+          "description": "Anse Lazio je na sjeverozapadnom vrhu Praslina, kratko jedrenje niz obalu od Curieuse i, za mnoge, plaža koja definira Sejšele. Granitne gromade zatvaraju dugi polumjesec blijedog pijeska, a takamake straga bacaju hlad. Usidrite se u pijesku i tenderom krenite rano na obalu: šnorkanje oko gromada na sjevernom kraju najmirnije je prije devet, a do sredine prijepodneva valovi otežavaju provlačenje između stijena. U plićaku pazite na raže napola zakopane u pijesak i vucite noge po dnu. Na obali Bonbon Plume peče dnevni ulov pod otvorenim slamnatim krovom tik uz more; riblji tanjur dođe negdje oko 25 do 35 dolara, hladan Seybrew koji dolar više. Uvala zna ljuljati ako se val uvuče, pa je mnoge posade tretiraju kao dugu stanku za ručak i noć provedu drugdje.",
+          "thingsToDo": [
+            "Šnorkanje oko gromada na sjevernom kraju prije devet",
+            "Pečeni ulov i Seybrew u Bonbon Plumeu",
+            "Vucite noge po plićaku i pazite na raže",
+            "Lijenčarenje u hladu takamaka"
+          ],
+          "mooringTip": "Anse Lazio je otvoreno sidrište bez boja; usidrite se u pijesku i držite sidro na oku jer val zna zaobići rt. Ako valja sa sjeverozapada ili želite mirnu noć, iskoristite je kao dnevnu stanku, a spavajte u zaklonjenoj uvali."
+        },
+        "5": {
+          "shortDescription": "Prijelaz na La Digue, najsporiji otok arhipelaga, gdje bicikala ima više nego auta, a Anse Source d'Argent čeka na kraju hladovite staze.",
+          "description": "La Digue je desetak milja istočno, ugodno jedrenje s vjetrom s boka preko kanala koji ga dijeli od Praslina. Kvaka je luka: La Passe prima samo četiri do šest jahti, pa zovnite lučkog kapetana na VHF-u 16 prije nego se obvežete, a ako nema mjesta, usidrite se u zavjetrini i uđite tenderom. Na kopnu otok vozi na biciklima i volovskim zapregama. Unajmite bicikl kod gata i dvadeset minuta pedalirajte na jug do Anse Source d'Argent, plaže zaklonjene grebenom čiji je izbrušeni granit prodao tisuću razglednica; idite rano ili u poslijepodnevnom svjetlu, prije ili poslije jednodnevnih gostiju s trajekta. Plitka laguna ondje ostaje dovoljno mirna i za prvo šnorkanje. Skrenite u unutrašnjost kroz rezervat Veuve ako želite vidjeti crnu rajsku muharicu, jednu od najrjeđih ptica u regiji.",
+          "thingsToDo": [
+            "Vožnja biciklom hladovitom stazom do Anse Source d'Argent",
+            "Šnorkanje u mirnoj laguni iza grebena",
+            "Traženje rajske muharice u rezervatu Veuve",
+            "Najam bicikala kod gata u La Passeu"
+          ],
+          "mooringTip": "Luka La Passe prima samo četiri do šest brodova, pa prije dolaska tražite dopuštenje lučkog kapetana na VHF-u 16. Ako je puna, sidrište odmah ispred sasvim je u redu u stabilnom pasatu, zaklonjeno okolnim otocima, iako zna ljuljati na zapadnom valu."
+        },
+        "6": {
+          "shortDescription": "Kratko jedrenje do morskog parka Cocos, tri granitna otočića okružena najbistrijom vodom nad grebenom koju ćete cijeli tjedan šnorkati.",
+          "description": "Ile Cocos je jedva tri milje od La Digue, skupina granitnih otočića u morskom parku koji mnogi drže najboljim šnorkanjem unutarnjih otoka. Voda nad koraljnim glavicama zapanjujuće je bistra, a riba je gusta: ribe anđeli, lucijani, pokoja kornjača koja pase po grebenu. Na same otočiće se ne smije iskrcati, pa je ovo dan proveden na vodi. Uhvatite parkovnu bovu, platite naknadu i uđite u more rano, prije nego oko jedanaest stignu izletnički brodovi s La Digue i Praslina. Ako je na Cocosu gužva, sestre u blizini, Grande Soeur i Petite Soeur, nude mirniji greben i plažu za izležavanje. Većina posada noć provede u zaklonu Félicitéa, gdje sidro dobro drži, a sidrište ostaje mirno u jugoistočnom pasatu.",
+          "thingsToDo": [
+            "Šnorkanje nad bistrim koraljnim glavicama kod Ile Cocosa",
+            "Dolazak rano, prije izletničkih brodova",
+            "Prelazak na Grande Soeur zbog mirnijeg grebena",
+            "Sidrenje u zaklonu Félicitéa za noć"
+          ],
+          "mooringTip": "Cocos je morski park bez iskrcaja, pa uzmete bovu i platite rendžeru naknadu za nekoliko sati šnorkanja, ali se tu ne noći. Mjesto za noć iza Félicitéa ili kod Grande Soeur osigurajte prije nego padne svjetlo jer je sam Cocos izložen čim izletnici odu."
+        },
+        "7": {
+          "shortDescription": "Duga etapa doma, s vjetrom u krmeni bok natrag prema Mahéu i Eden Islandu, tempirana tako da uđete u marinu prije nego padne svjetlo.",
+          "description": "Povratak na Mahé najduži je u tjednu, blizu trideset milja od sidrišta kod Cocosa do Eden Islanda. U jugoistočnom pasatu to je obično jedrenje u krmeni bok ili niz vjetar, brzo i udobno, iako se u otvorenom kanalu val gomila iza vas, pa preventer na bumu vrijedi svake minute koju ste na njega potrošili. Krenite rano. Želite proći prolaze kroz greben i ući u marinu po dobrom svjetlu, a pasat poslijepodne često pojača. Ako ostane vremena, posljednje kupanje u parku Sainte Anne lijepo razbije plovidbu. Kad se privežete na Eden Islandu, dopunite gorivo i vodu, isperite sol i prošećite do barova i restorana marine na pošteno zadnju večeru na kopnu. Baza obično traži brod natrag do sredine prijepodneva, pa papire riješite večer prije.",
+          "thingsToDo": [
+            "Postavljanje preventera za plovidbu niz vjetar",
+            "Posljednje kupanje u parku Sainte Anne",
+            "Gorivo i ispiranje broda na Eden Islandu",
+            "Oproštajna večera u restoranima Eden Islanda"
+          ],
+          "mooringTip": "Ciljajte doći na Eden Island s puno danjeg svjetla; prolazi kroz greben i kanali marine puno se lakše čitaju prije poslijepodnevnog odsjaja, a pasat kasnije obično ojača. Dodjelu veza potvrdite s bazom na VHF-u dok se približavate."
+        }
+      }
+    },
+    "seychelles-explorer-14-days": {
+      "metaTitle": "Sejšeli u 14 dana: unutarnji otoci | Boat4You",
+      "metaDesc": "Dva tjedna po granitnim Sejšelima, polazak s Eden Islanda (Mahe): Sainte Anne, Silhouette, Praslin, Curieuse, La Digue i otoci Sisters.",
+      "days": {
+        "1": {
+          "shortDescription": "Laganih pet milja od marine do morskog parka od šest otoka, taman da se posada slegne prije dužih etapa.",
+          "description": "Većina posada s Eden Islanda krene do sredine prijepodneva, čim su papiri i namirnice riješeni, a plovidba do Sainte Anne jedva traje sat vremena. Park se prostire preko šest granitnih otočića otprilike pet milja od Victorije i zaštićen je od ranih devedesetih, pa greben ovdje još drži boju. Uhvatite parkovnu bovu kod Cerfa ili Moyenne, platite naknadu za noćenje i provedite poslijepodne u vodi. Šnorkanje nad livadama morske trave obično otkrije kornjače koje pasu u plićaku. Na Moyenne je kratka pješačka staza i nekoliko aldabranskih kornjača ako želite protegnuti noge. Prva noć je laka: zaklonjena voda, svjetla Mahea preko kanala i vrijeme da posložite gdje na brodu što stoji.",
+          "thingsToDo": [
+            "Šnorkanje nad livadama morske trave kod Cerfa",
+            "Šetnja stazom kornjača na Moyenne",
+            "Hvatanje parkovne bove",
+            "Sundowner uz svjetla Mahea preko kanala"
+          ],
+          "mooringTip": "Sainte Anne ima uređeno polje boja; umjesto sidrenja na grebenu uzmite bovu i pripremite naknadu za noćenje za rendžera. Bove kod Cerfa i Moyenne daju najbolji zaklon u jugoistočnoj sezoni."
+        },
+        "2": {
+          "shortDescription": "Oko vrha Mahea do mirne uvale u morskom parku na sjeverozapadnoj obali, s pijeskom koji drži i grebenom nadohvat plivanja.",
+          "description": "Iz Sainte Anne isplati se krenuti rano i probiti se u smjeru suprotnom od kazaljke oko sjevera Mahea. Baie Ternay je na sjeverozapadnom kutu, uvučena iza Cap Ternaya, i jedna je od pouzdanijih noćnih uvala na otoku kad pasat puše. Dno je pijesak, pa sidro dobro drži kad ga jednom položite, a cijela je uvala morski rezervat. Od kolovoza do listopada plankton dovlači kitopsine uz ovaj dio obale, a kornjače i pokoja murina redovni su gosti na grebenu bliže obali. Na kopnu staza Anse Major kreće duž rta, za one koji žele prošetati prije večere. Ovo je radno sidrište, a ne resort scena, što je ovdje uglavnom i poanta.",
+          "thingsToDo": [
+            "Šnorkanje po grebenu rezervata u potrazi za kornjačama",
+            "Osmatranje kitopsina u sezoni",
+            "Pješačenje obalnom stazom Anse Major",
+            "Sidrenje kod Cap Ternaya za noć"
+          ],
+          "mooringTip": "U Baie Ternay se samo sidri, u pijesku na oko pet do osam metara; ostanite dobro odmaknuti od ruba grebena i računajte na parkovnu naknadu ako naiđe rendžer. Uvucite se iza Cap Ternaya za zaklon od jugoistočnjaka."
+        },
+        "3": {
+          "shortDescription": "Prava etapa otvorenim morem prema sjeverozapadu, do šumovitih vrhova Silhouettea, uz sidrenje pred dugom plažom La Passe pod Mont Daubanom.",
+          "description": "Ovo je prva prava plovidba na putu, dvadesetak milja otvorenog mora do Silhouettea, pa se isplati krenuti do devet i pustiti brod da se posloži u valu. Silhouette je treći po veličini granitni otok i daleko najdramatičniji za prilaz: Mont Dauban se diže preko sedamsto metara ravno iz mora, obično s kapom oblaka. Sidrište je pred La Passeom na istočnoj obali, dugačak potez blijedog pijeska iza kojeg je malo selo, a iza njega nacionalni park. Sidro u pijesku drži pristojno, iako zna ljuljati kad se val uvuče. Za iskrcaj treba dozvola parka, koja se sređuje preko charter baze, pa to riješite prije polaska. Šnorkanje uz granitne rubove mirno je i često ga imate samo za sebe.",
+          "thingsToDo": [
+            "Sidrenje pred dugom plažom La Passe",
+            "Šnorkanje uz mirne granitne strmce",
+            "Pogled na oblakom zaogrnut vrh Mont Daubana",
+            "Šetnja seoskom prirodnom stazom"
+          ],
+          "mooringTip": "Sidrite u pijesku pred La Passeom na sedam do deset metara, ali budite spremni na ljuljanje ako se južni val provuče oko rta. Dozvolu za iskrcaj potvrdite s bazom prije polaska jer je otok upravljani rezervat."
+        },
+        "4": {
+          "shortDescription": "Preko otvorenog mora do skupine Praslin i Cousina, rezervata morskih ptica gdje vas čuvari kroz valove prebacuju na obalu.",
+          "description": "Danas je veliki prelazak prema skupini Praslin i milje ćete osjetiti, pa rani polazak i skraćeno glavno jedro čine dan lakšim. Cousin je posebni rezervat kojim upravlja Nature Seychelles, vraćen iz kokosove plantaže kako bi se šezdesetih spasio sejšelski trstenjak. Danas je to jedan od otoka s najgušćom populacijom morskih ptica na svijetu, prepun čigri i noddija, a ispod drveća gegaju se aldabranske kornjače. Ovdje se ne smijete iskrcati vlastitim tenderom. Jahte se sidre podalje, a čuvari dolaze po vas i provoze vas kroz priobalni val; posjeti su samo radnim danima i uz naknadu za iskrcaj. Tempirajte ga za kasno prijepodne, prođite vođenu šetnju pa se vratite na brod prije nego poslijepodnevni vjetar ojača i sidrište postane neugodno.",
+          "thingsToDo": [
+            "Vođena šetnja s čuvarom među morskim pticama",
+            "Traženje aldabranskih kornjača pod drvećem",
+            "Promatranje čigri i noddija na gnijezdima",
+            "Potraga za sejšelskim trstenjakom"
+          ],
+          "mooringTip": "Na Cousin se ne smije vlastitim tenderom, a pravog sidrišta za noćenje nema; usidrite se u pijesku samo za posjet, radnim danom, i pustite osoblje rezervata da vas preveze na obalu. Za spavanje nastavite na Praslin."
+        },
+        "5": {
+          "shortDescription": "U glavnu luku Praslina, Baie Sainte Anne, najbolju priliku na putu za nadopunu zaliha i obilazak Vallee de Mai.",
+          "description": "Nakon rezervata slijedi mirno jedrenje do Baie Sainte Anne na istočnoj obali Praslina, praktičnog središta ovog dijela arhipelaga. U uvali su glavni trajektni terminal, gat za gorivo i dućani, pa je to očito mjesto za dopunu vode, leda i namirnica za drugi tjedan. Sam Praslin zaslužuje dan izvan broda. Vallee de Mai, kratka vožnja taksijem u unutrašnjost, jedino je mjesto gdje coco de mer palma raste divlje, a šuma je pod krošnjama uistinu prapovijesna. Ako radije ostajete uz obalu, Cote d'Or malo dalje ima dugu plažu i niz opuštenih mjesta za jelo. Kupovinu obavite ujutro, dok su police pune.",
+          "thingsToDo": [
+            "Nadopuna zaliha u dućanima u Baie Sainte Anne",
+            "Šetnja palminom šumom Vallee de Mai",
+            "Pečena riba u Cote d'Or",
+            "Dopuna vode i goriva"
+          ],
+          "mooringTip": "Baie Sainte Anne je prometna radna uvala; sidrite u pijesku podalje od trajektnog prolaza i privezanih lokalnih brodica ili se raspitajte za vez ako trebate struju s obale i laku nabavu."
+        },
+        "6": {
+          "shortDescription": "Sjeverno na Aride, veliki ptičji otok arhipelaga, ako vrijeme dopusti: iskrcaj kroz val na plažu, među milijune ptica na gnijezdima.",
+          "description": "Aride je najsjeverniji granitni otok i ptičja prijestolnica cijele skupine, s gnijezdećim kolonijama koje idu u stotine tisuća. Kvaka je iskrcaj. Gata nema, pa vas brod rezervata prebacuje preko plaže, a to ide samo kad val dopusti, što uglavnom znači mirnije mjesece, a ne vrhunac jugoistočne sezone. Nazovite unaprijed i budite spremni promijeniti plan. Kad krene, vođena šetnja gore preko visoravni je vrhunska, s čađavim čigrama koje kruže iznad glave i Wrightovom gardenijom koja ne cvate nigdje drugdje na svijetu. Sidrište je otvoreno i ljuljavo, pa je ovo dnevna stanka, a ne noć na miru. Ako je Aride zatvoren, otoci oko Praslina daju rezervnu opciju bez velikog zaobilaženja.",
+          "thingsToDo": [
+            "Iskrcaj brodom rezervata preko plaže",
+            "Vođena šetnja ptičjom visoravni",
+            "Potraga za rascvjetalom Wrightovom gardenijom",
+            "Promatranje čađavih čigri koje kruže nad glavom"
+          ],
+          "mooringTip": "Sidrište kod Aridea je izloženo i drži samo po mirnom vremenu; tretirajte ga kao dnevnu stanku, sidrite u pijesku i prvo nazovite rezervat jer se iskrcaji otkazuju čim val poraste."
+        },
+        "7": {
+          "shortDescription": "Prema jugu na Curieuse, gdje slobodne aldabranske kornjače, staze crvene zemlje i drvena staza kroz mangrove ispune lagano poslijepodne na kopnu.",
+          "description": "Od Aridea je do Curieuse jednostavno jedrenje; otok leži tik uz sjevernu obalu Praslina. Bio je leprozorij gotovo cijelo stoljeće, a stara Doktorova kuća još stoji kraj plaže u Anse St Jose. Danas se dolazi zbog kornjača, nekoliko stotina aldabranskih divova koji slobodno lutaju rezervatom, nesmetani i zahvalni za fotografiju. Drvena staza vodi natrag kroz mangrove, a coco de mer palme rastu divlje i na ovim padinama, ne samo u Valleeu. Usidrite se u Baie Laraie na zaklonjenoj strani i tenderom se iskrcajte da platite parkovnu naknadu na rendžerskoj postaji. Zelene kornjače u sezoni gnijezde na ovim plažama, pa iznad crte plime hodajte oprezno.",
+          "thingsToDo": [
+            "Fotografiranje slobodnih aldabranskih kornjača",
+            "Šetnja drvenom stazom kroz mangrove",
+            "Posjet staroj Doktorovoj kući",
+            "Sidrenje u zaklonjenoj Baie Laraie"
+          ],
+          "mooringTip": "Sidrite u Baie Laraie na jugozapadnoj strani Curieuse, u pijesku i dobro uvučeni od grebena; daje solidan zaklon u jugoistočnom pasatu. Tender iskrcajte u Anse St Jose da prije šetnje platite naknadu morskog parka."
+        },
+        "8": {
+          "shortDescription": "Jedva sat vremena do Anse Lazio, jedne od najljepših plaža Praslina, za šnorkanje uz stijene i ručak na pijesku.",
+          "description": "Od Curieuse do Anse Lazio ima jedva sat vremena, pa nema žurbe s polaskom. Lazio se povija uz sjeverozapadni vrh Praslina, širok luk blijedog pijeska između dva granitna rta, i zasluženo nosi svoj glas. Šnorkanje je najbolje uz stijene na sjevernom kraju, gdje koralj još drži, pa ćete često naći ribe papige i pokoju ražu kako obrađuju rubove. Dva plažna restorana skrivena su pod takamakama; Bon Bon Plume radi dobar pečeni ulov dana ako želite ručati na kopnu. Usidrite se u pijesku i doplivajte. Uvala je otvorena prema sjeverozapadu, pa je udobna kroz cijelu jugoistočnu sezonu, ali nije mjesto za boravak ako vjetar skrene na sjever. Mi obično uzmemo prijepodne ovdje i krenemo dalje prije nego poslijepodne naraste val.",
+          "thingsToDo": [
+            "Šnorkanje uz stijene na sjevernom kraju Lazia",
+            "Ručak uz pečenu ribu u Bon Bon Plumeu",
+            "Plivanje uz luk blijedog pijeska",
+            "Sidrenje u bistrom pijesku"
+          ],
+          "mooringTip": "Na Anse Lazio se sidri u pijesku i otvoreno je prema sjeverozapadu, pa je odlična dnevna stanka po lijepom vremenu, ali izložena ako vjetar skrene na sjever; ne ostavljajte brod bez nadzora dok valja."
+        },
+        "9": {
+          "shortDescription": "Prijelaz na La Digue, otok volovskih zaprega, bicikala i granitnih gromada, dom mnogo puta fotografirane Anse Source d'Argent.",
+          "description": "La Digue je kratko jedrenje istočno od Praslina i to je otok koji većina ljudi zamišlja kad pomisli na Sejšele. Auta gotovo da i nema; krećete se biciklom ili pokojom volovskom zapregom, što lijepo postavlja ritam. Unajmite bicikl u La Passeu i odvezite se na jug do imanja L'Union Estate, gdje se Anse Source d'Argent krije iza zida izbrušenih granitnih gromada i plitkih laguna blijede vode. Idite rano ili kasno da izbjegnete jednodnevne goste s trajekta. Na jugoistočnoj obali Grande Anse i Petite Anse divlje su i često prazne, iako struja zna biti jaka. Jedino sidrište koje drži po svakom vremenu je luka u La Passeu, funkcionalna više nego lijepa, pa se većina posada uvuče tamo i na obalu ide brodskim tenderom.",
+          "thingsToDo": [
+            "Biciklom do Anse Source d'Argent",
+            "Vožnja kroz imanje L'Union Estate",
+            "Šetnja do divlje Grande Anse",
+            "Najam bicikala u La Passeu"
+          ],
+          "mooringTip": "Luka La Passe jedino je mjesto na La Digue koje drži po svakom vremenu, ali je mala i često puna, pa dođite rano da nađete mjesto ili se usidrite ispred i vozite tender. Grande Anse je samo za stanku po lijepom vremenu, uz oko na struju."
+        },
+        "10": {
+          "shortDescription": "Jutarnje jedrenje do Marianne, nenaseljenog otoka okruženog nekim od najboljih ronilačkih strmaca u regiji i krupnom pelagičnom ribom.",
+          "description": "Marianne stoji sama za sebe istočno od La Digue, prazna otkako su kokosove plantaže napuštene, a razlog za dolazak je ono pod vodom. Strmci oko otoka dižu se strmo s deset na trideset metara i vuku krupnu ribu: sive grebenske morske pse, orlove raže koje krstare uz rub, barakude koje vise u struji i kornjače gotovo posvuda. Ovo je poznato ronilačko područje, pa ako netko na brodu ima ronilačku iskaznicu, dogovorite ronjenje s brodom preko lokalnog centra još s La Digue. Za šnorkanje i plići greben na zaklonjenoj strani sasvim dobro služi. Pravog sidrišta za noćenje ovdje nema, a otok je otvoren valu, pa Marianne uzmite kao jednodnevni izlet po mirnom vremenu i planirajte povratak prema zaklonjenijim otocima na spavanje.",
+          "thingsToDo": [
+            "Ronjenje uz strme grebenske strmce Marianne",
+            "Potraga za sivim grebenskim morskim psima",
+            "Promatranje orlovih raža uz rub strmca",
+            "Šnorkanje po zaklonjenom priobalnom grebenu"
+          ],
+          "mooringTip": "Marianne nema sigurno sidrište za noćenje i otvorena je oceanskom valu; dolazite samo po mirnom vremenu, sidrite u pijesku za vrijeme ronjenja i držite stražu s motorom u pripravnosti. Spavajte natrag kod Felicitea ili La Digue."
+        },
+        "11": {
+          "shortDescription": "Dvije milje natrag do Felicitea, granitnog otoka s privatnim resortom, živim rubnim grebenom i pouzdanim susretima s kornjačama.",
+          "description": "Felicite je samo par milja natrag prema La Digue, strma zelena granitna gruda koja danas preko svojih hrbata nosi jedan vrhunski resort. Na kopno ne idete osim ako tamo ne odsjedate, ali to jedva da je važno jer je adut rubni greben. Voda uz zapadnu i sjevernu obalu bistra je i puna života, s kornjačama karetama koje pasu po koralju i pjegavim orlovim ražama koje klize kroz dublje plavetnilo. Brod dovedite u zavjetrinu otoka, izvan pasata, i provedite poslijepodne ulazeći i izlazeći iz mora. Granitna scenografija iznad površine dobra je kao bilo gdje na putu. To je mirna, zaklonjena noć nakon izloženosti kod Marianne i lijepa priprema za Sisters ujutro.",
+          "thingsToDo": [
+            "Šnorkanje po zapadnom rubnom grebenu",
+            "Potraga za kornjačama karetama na paši",
+            "Promatranje pjegavih orlovih raža u prolazu",
+            "Sidrenje u zavjetrini otoka"
+          ],
+          "mooringTip": "Sidrite u pijesku na zaklonjenoj zapadnoj ili sjevernoj strani Felicitea, izvan jugoistočnjaka; noć je mirna. Sam otok je privatni resort, pa računajte da ostajete uz brod i greben."
+        },
+        "12": {
+          "shortDescription": "Kratko jedrenje do Grande Soeur, veće od otoka Sisters, otvorene radnim danima, s dvije lijepe plaže i vrhunskim šnorkanjem uz zapadni greben.",
+          "description": "Grande Soeur, veća od dvije Sisters, kratko je jedrenje sjeverno od Felicitea. Otok pripada hotelu s Praslina koji radnim danima vodi jednodnevne izlete, a vikendom ga drži za svoje goste, pa provjerite dan prije nego isplanirate stanku. Ako pogodite dan, dobijete dvije plaže gotovo samo za sebe: jednu na zapadnoj strani iza koje je pojas šume, drugu preko niskog sedla koje se prijeđe u deset minuta. Pravi adut je šnorkanje uz zapadni greben, sa zdravim koraljem i kornjačama koje pasu u plićaku. Usidrite se pred glavnom plažom u pijesku i uđite tenderom. Ponesite svoju vodu i hlad jer je sadržaja malo i namijenjeni su izletničkoj skupini, a ne jahtama u prolazu.",
+          "thingsToDo": [
+            "Šnorkanje po zdravom zapadnom grebenu",
+            "Prijelaz preko sedla između dvije plaže",
+            "Plivanje s kornjačama na paši",
+            "Sidrenje pred glavnom plažom"
+          ],
+          "mooringTip": "Sidrite pred zapadnom plažom Grande Soeur u pijesku i idite tenderom, ali samo radnim danom; vikendom je otok zatvoren za posjetitelje zbog gostiju resorta. Provjerite kalendar prije nego se odlučite na stanku."
+        },
+        "13": {
+          "shortDescription": "Sjeverno do Ile Cocosa, sićušne skupine granitnih otočića koja slovi za najbolje šnorkanje cijelog arhipelaga.",
+          "description": "Ile Cocos je rasuta hrpa malih granitnih stijena sjeverno od La Digue, zaštićena kao morski park od sredine devedesetih, i mnogi jedriličari drže da je to najbolje šnorkanje na Sejšelima. Iskrcaja nema; sami otočići su zabranjeni, a sve se događa pod vodom. Koraljni vrtovi protežu se između gromada u bistroj, plitkoj vodi gustoj od grebenske ribe, pa možete lebdjeti sat vremena a da ne prijeđete velik put. Kako je to poznato izletničko odredište s La Digue, oko podneva se napuni, pa ciljajte na rani dolazak i vodu uglavnom za sebe. Naplaćuje se parkovna naknada, a kupe je čuvari koji patroliraju područjem. Plovidba je kratka, pa neka to bude ležerna jutarnja stanka prije dugog povratka prema Maheu zadnjeg dana.",
+          "thingsToDo": [
+            "Šnorkanje po koralju između gromada",
+            "Rani dolazak, prije izletničkih brodova",
+            "Lebdenje kroz plitke granitne kanale",
+            "Fotografiranje grebenske ribe u bistroj vodi"
+          ],
+          "mooringTip": "Ile Cocos je zaštićeno područje za dnevni posjet bez iskrcaja; usidrite se ili nakratko ležite podalje da šnorkate i platite naknadu rendžeru. Dođite rano jer je plitko, malo i do kasnog prijepodneva puno izletničkih brodova."
+        },
+        "14": {
+          "shortDescription": "Duga završna plovidba preko otvorenog mora natrag na Eden Island, s polaskom tempiranim tako da stignete u marinu i predate brod prije mraka.",
+          "description": "Zadnji dan je najduže jedrenje na putu, dvadeset i pet milja otvorenog mora natrag na Mahe, pa je to jedno jutro kad treba krenuti rano. S jugoistočnim pasatom s boka može biti brzo i zadovoljavajuće; svejedno si ostavite udobnu rezervu jer je dolazak u marinu po danjem svjetlu čini predaju broda daleko manje stresnom. Većina baza želi jahtu u marini i natočenu već večer prije zadnjeg jutra, pa provjerite ugovor i planirajte vrijeme prema tome. Dok Mahe raste pred vama, zeleni zid planina iza Victorije zatvara dva tjedna koja su počela na istom gatu. Privežite se na Eden Islandu, isperite sol i pustite da se putovanje slegne prije leta kući.",
+          "thingsToDo": [
+            "Jedrenje preko otvorenog mora do Mahea",
+            "Gorivo i predaja broda na Eden Islandu",
+            "Ispiranje broda nakon dva tjedna na moru",
+            "Nazdravljanje putovanju u marini"
+          ],
+          "mooringTip": "Ciljajte doći u marinu Eden Island puno prije mraka i unaprijed potvrdite vrijeme povratka s bazom jer mnoge žele brod natrag i natočen već večer prije. Javite se radijem u prilazu za dodjelu veza."
+        }
+      }
+    }
+  },
+  "areas": {
+    "seychelles": {
+      "metaTitle": "Itinerari jedrenja po Sejšelima | Boat4You",
+      "metaDesc": "Charter rute dan po dan kroz unutarnje otoke Sejšela — Mahé, Praslin, La Digue i Curieuse, uz kratke etape i lagano jedrenje na pasatu.",
+      "title": "Jedrite granitnim srcem Sejšela",
+      "description": "Unutarnji otoci leže blizu jedan drugome, pa je tjedan ovdje uglavnom niz kratkih skokova, a ne dugih plovidbi — od Mahéa do Praslina je najduža etapa, otprilike 30 nautičkih milja, a većinu dana ste na sidru već rano poslijepodne. Od svibnja do listopada jugoistočni pasat drži stabilnih 10 do 20 čvorova, sasvim dovoljno za pravo jedrenje bez ikakvog osjećaja izloženosti; mirniji travanj i studeni donose staklasto more i bistru vodu ako radije ronite nego jedrite uz vjetar. Bacite sidro pred Anse Lazio prije nego stignu izletnički brodovi s Praslina, iskrcajte se tenderom i prošećite među coco de mer palmama u Vallée de Mai, pa prijeđite na Curieuse i podijelite plažu sa slobodnim divovskim kornjačama. Anse Source d'Argent na La Digue kadar je koji svi žele, pa dođite u prvo svjetlo i vaš je. Jedna lokalna napomena: kroz prolaze između granitnih otoka struja teče s plimom, pa tempirajte prelaske i jedrenje ostaje pitomo."
+    }
+  }
+}

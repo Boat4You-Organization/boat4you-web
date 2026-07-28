@@ -1,1 +1,255 @@
-{}
+{
+  "routes": {
+    "inner-islands-classic": {
+      "metaTitle": "Seychelles em 7 Dias de Ilha em Ilha | Boat4You",
+      "metaDesc": "Rota tranquila de 7 dias desde Eden Island, Mahé, por Sainte Anne, Praslin, Curieuse, Anse Lazio e La Digue, nas ilhas interiores das Seychelles.",
+      "days": {
+        "1": {
+          "shortDescription": "Uma saída suave de três milhas desde a marina até ao parque marinho mais antigo das Seychelles, com tartarugas-verdes e Moyenne Island a um salto de bote.",
+          "description": "A maioria das tripulações usa a primeira tarde para acertar o barco em vez de correr para lado nenhum, e Sainte Anne serve na perfeição. Fica a escassas três milhas de Eden Island, por isso dá para fazer as compras de manhã, sair a motor para lá do quebra-mar e estar amarrado a uma boia no início da tarde. O parque é o mais antigo do país, um conjunto de seis ilhas graníticas rodeadas de recife. As tartarugas-verdes vêm à superfície junto às amarrações, indiferentes aos botes. Leve o bote até Moyenne, outrora privada, hoje percorrida a pé numa hora com tartarugas terrestres a fazer companhia. O snorkeling ao largo de Round Island é fácil e pouco fundo, bom para quem ainda anda a habituar-se às barbatanas. Fique atento ao número de boias na época alta; o campo enche ao fim da tarde. Um copo ao pôr do sol aqui, com as colinas de Mahé a ficarem cor-de-rosa atrás de si, dá o tom da semana.",
+          "thingsToDo": [
+            "Fazer snorkeling no recife raso ao largo de Round Island",
+            "Ir de bote ao trilho das tartarugas de Moyenne Island",
+            "Ver as tartarugas-verdes a emergir junto às amarrações",
+            "Copos ao pôr do sol com vista para Mahé"
+          ],
+          "mooringTip": "As 24 boias do parque são bem mais seguras do que fundear aqui; trate da licença (cerca de SCR 500) antes de sair da marina e apanhe uma boia a meio da tarde, porque o campo enche depressa na época dos alísios."
+        },
+        "2": {
+          "shortDescription": "A grande travessia da semana: vinte e tal milhas de mar aberto até ao fundeadouro de serviço de Praslin, onde a aldeia em terra resolve quase tudo.",
+          "description": "Esta é a única travessia a sério da viagem, por isso compensa largar às nove. Das boias de Sainte Anne são pouco mais de vinte milhas de mar aberto até Praslin e, nos alísios de maio a setembro, apanha-se normalmente um través constante de 12 a 18 nós. No canal o mar pode levantar, portanto arrume as canecas do café antes de passar o recife. A Baie Sainte Anne abre-se no canto sudeste de Praslin, larga e tolerante, com areia a segurar entre os quatro e os oito metros. É a escala de pernoita mais útil das ilhas interiores: supermercado, cais de combustível, uma espécie de loja náutica e mecânicos que já viram todas as avarias de charter. Se preferir não confiar no seu próprio ferro, um senhor local chamado Robert tem meia dúzia de amarrações e responde ao VHF.",
+          "thingsToDo": [
+            "Reabastecer no supermercado da Baie Sainte Anne",
+            "Meter combustível e água no cais",
+            "Resolver avarias de charter com os mecânicos locais",
+            "Percorrer o pontão até ao cais dos ferries"
+          ],
+          "mooringTip": "A Baie Sainte Anne é o fundeadouro de pernoita com melhor tença do grupo, areia entre quatro e oito metros e espaço para girar. Se a baía estiver cheia, chame o Robert pelo VHF e peça uma das suas amarrações em vez de se enfiar no meio da frota."
+        },
+        "3": {
+          "shortDescription": "Um salto curto pela costa norte de Praslin até uma ilha governada por tartarugas gigantes, com paragem de snorkeling em St Pierre pelo caminho.",
+          "description": "Curieuse fica mesmo em frente à costa norte de Praslin, uma navegação fácil de manhã depois de contornar o topo da ilha. Corte a viagem em St Pierre, um punhado de rochedos graníticos a milha e meia ao largo de Anse Volbert; os patamares de coral à volta guardam peixes-papagaio e alguma raia, e mergulha-se melhor antes de a brisa da tarde levantar. A própria Curieuse foi uma leprosaria há cem anos e é hoje uma reserva. Apanhe uma boia do parque na Baie Laraie, pague ao guarda e vá a terra no meio de mais de trezentas tartarugas de Aldabra em liberdade, algumas a puxar pelos cem anos. O passadiço do mangal corre uma milha desde a casa dos guardas até Anse St José, por entre lagartos, peixes-saltadores e o emaranhado de raízes de mangue-vermelho. O solo laterítico cor de ferrugem dá às praias um tom que não verá em mais lado nenhum da viagem.",
+          "thingsToDo": [
+            "Fazer snorkeling nos patamares de coral de St Pierre",
+            "Conhecer as tartarugas de Aldabra em liberdade na Baie Laraie",
+            "Percorrer o passadiço do mangal até Anse St José",
+            "Piquenique à sombra junto à casa dos guardas"
+          ],
+          "mooringTip": "Curieuse é parque marinho; apanhe uma boia na Baie Laraie e acerte a taxa com o guarda (cerca de SCR 250 por noite) em vez de fundear. O lado oeste, junto a Anse St José, é mais bonito mas exposto, por isso deixe-o para tempo estável e para uma tripulação disposta a mergulhar a verificar o ferro."
+        },
+        "4": {
+          "shortDescription": "Cinco milhas de regresso a Praslin para a praia mais fotografada do arquipélago: rochedos de granito, areia de seda e grelhados crioulos à sombra.",
+          "description": "Anse Lazio fica na ponta noroeste de Praslin, uma navegação curta desde Curieuse e, para muitos, a praia que define as Seychelles. Rochedos de granito fecham as duas pontas de um longo crescente de areia clara, com takamakas a dar sombra ao fundo. Fundeie ao largo em areia e vá cedo com o bote: o snorkeling à volta dos rochedos da ponta norte está no seu melhor antes das nove e, a meio da manhã, o balanço torna incómodo passar por entre as rochas. Repare nas raias meio enterradas na areia junto à praia e arraste os pés. Em terra, o Bonbon Plume grelha o peixe do dia sob um telheiro de colmo à beira-água; um prato de peixe anda pelos 25 a 35 dólares e uma Seybrew fresca custa mais uns trocos. A baía pode ficar rolante se entrar ondulação, por isso muitas tripulações usam-na como paragem longa de almoço e seguem viagem para dormir.",
+          "thingsToDo": [
+            "Fazer snorkeling nos rochedos da ponta norte antes das nove",
+            "Peixe grelhado e uma Seybrew no Bonbon Plume",
+            "Arrastar os pés na zona rasa, de olho nas raias",
+            "Preguiçar à sombra das takamakas"
+          ],
+          "mooringTip": "Anse Lazio é um ancoradouro aberto, sem boias; fundeie em areia e mantenha-a debaixo de olho, porque a ondulação contorna a ponta. Se houver ondulação de noroeste ou quiser uma noite tranquila, trate-a como paragem de dia e vá dormir a uma baía abrigada."
+        },
+        "5": {
+          "shortDescription": "Travessia até La Digue, a ilha lenta do arquipélago, onde há mais bicicletas do que carros e Anse Source d'Argent espera no fim de um caminho à sombra.",
+          "description": "La Digue fica uma dúzia de milhas a leste, um través fácil pelo canal que a separa de Praslin. O senão é o porto: La Passe só leva quatro a seis iates, por isso chame o capitão do porto pelo VHF 16 antes de se comprometer e, se não houver lugar, fundeie ao abrigo e vá de bote. Em terra, a ilha move-se a bicicleta e a carro de bois. Alugue uma bicicleta junto ao cais e pedale vinte minutos para sul até Anse Source d'Argent, a praia abrigada pelo recife cujo granito esculpido já vendeu mil postais; vá cedo ou com a luz da tarde, antes ou depois dos excursionistas que chegam de ferry. A lagoa rasa mantém-se calma o suficiente para quem faz snorkeling pela primeira vez. Desvie-se para o interior pela reserva de Veuve se quiser ver o papa-moscas-do-paraíso, uma das aves mais raras da região.",
+          "thingsToDo": [
+            "Pedalar o caminho sombreado até Anse Source d'Argent",
+            "Fazer snorkeling na lagoa calma abrigada pelo recife",
+            "Avistar o papa-moscas-do-paraíso na reserva de Veuve",
+            "Alugar bicicletas no cais de La Passe"
+          ],
+          "mooringTip": "O porto de La Passe só leva quatro a seis barcos, por isso peça autorização ao capitão do porto pelo VHF 16 antes de chegar. Se estiver cheio, o fundeadouro logo à saída serve bem com alísios estáveis, abrigado pelas ilhas em redor, embora role com ondulação de oeste."
+        },
+        "6": {
+          "shortDescription": "Um través rápido até ao parque marinho de Cocos, três ilhéus de granito rodeados pela água mais limpa em que vai mergulhar toda a semana.",
+          "description": "Ile Cocos fica a escassas três milhas de La Digue, um conjunto de ilhéus graníticos dentro de um parque marinho que muitos consideram o melhor snorkeling das ilhas interiores. A água é de uma transparência impressionante sobre as cabeças de coral e há peixe em quantidade: peixes-anjo, pargos e, de vez em quando, uma tartaruga a pastar no recife. Não é permitido desembarcar nos ilhéus, por isso o dia passa-se na água. Apanhe uma boia do parque, pague a taxa e entre cedo, antes de os barcos de excursão de La Digue e Praslin chegarem por volta das onze. Se Cocos estiver cheia, as irmãs ali ao lado, Grande Soeur e Petite Soeur, oferecem recife mais sossegado e praia para esticar as pernas. A maioria das tripulações passa a noite abrigada atrás de Félicité, onde a tença é boa e o fundeadouro se mantém calmo com os alísios de sudeste.",
+          "thingsToDo": [
+            "Fazer snorkeling nas cabeças de coral de Ile Cocos",
+            "Chegar cedo e ganhar aos barcos de excursão",
+            "Passar a Grande Soeur para um recife mais sossegado",
+            "Fundear atrás de Félicité para passar a noite"
+          ],
+          "mooringTip": "Cocos é parque marinho sem desembarque, por isso apanha-se uma boia e paga-se a taxa ao guarda para umas horas de snorkeling, não para dormir. Trate do sítio para a noite atrás de Félicité ou ao largo de Grande Soeur antes de a luz ir embora, porque a própria Cocos fica exposta assim que os barcos de excursão se vão."
+        },
+        "7": {
+          "shortDescription": "A perna longa de regresso, um través largo até Mahé e Eden Island, com o horário calculado para entrar na marina antes de a luz cair.",
+          "description": "O regresso a Mahé é a etapa mais longa da semana, perto de trinta milhas desde o fundeadouro de Cocos até Eden Island. Com os alísios de sudeste é normalmente um través largo ou uma popa, rápido e confortável, embora a ondulação cresça por trás no canal aberto, pelo que uma retenida na retranca vale bem o trabalho. Largue cedo. Convém passar as barras do recife e entrar na marina com boa luz, e os alísios costumam refrescar ao longo da tarde. Se sobrar tempo, uma última paragem para um mergulho no parque de Sainte Anne parte bem a viagem. Depois de atracar em Eden Island, meta combustível e água, lave o sal e vá até aos bares e restaurantes da marina para um último jantar em terra como deve ser. A base costuma querer o barco de volta a meio da manhã, por isso trate da papelada na véspera.",
+          "thingsToDo": [
+            "Montar uma retenida para a navegação de popa",
+            "Última paragem para um mergulho no parque de Sainte Anne",
+            "Meter combustível e lavar o barco em Eden Island",
+            "Jantar de despedida nos restaurantes de Eden Island"
+          ],
+          "mooringTip": "Chegue a Eden Island com bastante luz de dia; as barras do recife e os canais da marina leem-se muito melhor antes do brilho da tarde, e os alísios tendem a refrescar ao fim do dia. Confirme o lugar de atracação com a base pelo VHF na aproximação."
+        }
+      }
+    },
+    "seychelles-explorer-14-days": {
+      "metaTitle": "Ilhas Interiores em 14 Dias | Boat4You",
+      "metaDesc": "Duas semanas pelas Seychelles graníticas a partir de Eden Island (Mahe): Sainte Anne, Silhouette, Praslin, Curieuse, La Digue e as ilhas Sisters.",
+      "days": {
+        "1": {
+          "shortDescription": "Uma saída suave de cinco milhas desde a marina até um parque marinho de seis ilhas, ideal para assentar a tripulação antes das etapas mais longas.",
+          "description": "A maioria das tripulações larga de Eden Island a meio da manhã, assim que a papelada e as compras estão feitas, e a corrida até Sainte Anne mal chega a uma hora. O parque estende-se por seis ilhéus graníticos a cerca de cinco milhas de Victoria e está protegido desde o início dos anos noventa, por isso o recife ainda aqui tem cor. Apanhe uma boia do parque ao largo de Cerf ou de Moyenne, pague a taxa de pernoita e passe a tarde dentro de água. Ao fazer snorkeling sobre as pradarias marinhas costuma aparecer alguma tartaruga a pastar no raso. Moyenne tem um trilho curto e algumas tartarugas de Aldabra, se quiser esticar as pernas em terra. É uma primeira noite fácil: água abrigada, as luzes de Mahe do outro lado do canal e tempo para perceber onde está tudo arrumado a bordo.",
+          "thingsToDo": [
+            "Fazer snorkeling nas pradarias marinhas ao largo de Cerf",
+            "Percorrer o trilho das tartarugas em Moyenne",
+            "Apanhar uma boia de amarração do parque",
+            "Copos ao pôr do sol a ver as luzes de Mahe do outro lado do canal"
+          ],
+          "mooringTip": "Sainte Anne tem um campo de boias gerido; apanhe uma amarração em vez de largar ferro sobre o recife e tenha a taxa de pernoita pronta para o guarda. As boias ao largo de Cerf e Moyenne dão o melhor abrigo na época de sudeste."
+        },
+        "2": {
+          "shortDescription": "Contornar o topo de Mahe até uma baía tranquila de parque marinho na costa noroeste, com boa tença em areia e recife à distância de um mergulho.",
+          "description": "Convém sair cedo de Sainte Anne e subir pelo norte de Mahe no sentido anti-horário. A Baie Ternay fica no canto noroeste, resguardada por trás de Cap Ternay, e é uma das baías de pernoita mais fiáveis da ilha quando os alísios sopram. O fundo é de areia, portanto a tença é boa assim que o ferro morde, e toda a baía é reserva marinha. De agosto a outubro o plâncton traz tubarões-baleia a esta faixa de costa, e as tartarugas e alguma moreia são presença habitual no recife mais para dentro. Em terra, o trilho de Anse Major segue pelo cabo, para quem quiser caminhar antes do jantar. É um fundeadouro de trabalho e não um cenário de resort, o que é precisamente a graça disto.",
+          "thingsToDo": [
+            "Fazer snorkeling no recife da reserva à procura de tartarugas",
+            "Estar atento aos tubarões-baleia na época certa",
+            "Caminhar o trilho costeiro de Anse Major",
+            "Fundear ao largo de Cap Ternay para passar a noite"
+          ],
+          "mooringTip": "A Baie Ternay é só de fundear, em areia, por volta dos cinco a oito metros; largue bem afastado da orla do recife e conte com uma taxa de parque se aparecer um guarda. Encoste-se a Cap Ternay para se abrigar do sudeste."
+        },
+        "3": {
+          "shortDescription": "Uma etapa a sério em mar aberto para noroeste, até aos picos florestados de Silhouette, fundeando na areia longa de La Passe sob o Mont Dauban.",
+          "description": "Esta é a primeira travessia a sério da viagem, umas vinte e tal milhas de mar aberto até Silhouette, por isso compensa largar às nove e deixar o barco encaixar na ondulação. Silhouette é a terceira maior das ilhas graníticas e de longe a mais imponente à chegada: o Mont Dauban sobe mais de setecentos metros a pique do mar, quase sempre com um chapéu de nuvem. O fundeadouro fica ao largo de La Passe, na costa leste, uma longa faixa de areia clara com uma pequena aldeia e o parque nacional atrás. A tença é razoável em areia, embora role se a ondulação entrar. O desembarque exige autorização do parque, tratada através da sua base de charter, por isso resolva isso antes de largar. O snorkeling ao longo das bordas de granito é sossegado e muitas vezes só seu.",
+          "thingsToDo": [
+            "Fundear ao largo da longa praia de La Passe",
+            "Fazer snorkeling nos tombadores de granito, sem ninguém à volta",
+            "Olhar para o cume do Mont Dauban coberto de nuvem",
+            "Percorrer o caminho natural da aldeia"
+          ],
+          "mooringTip": "Fundeie em areia ao largo de La Passe, entre sete e dez metros, mas conte com balanço se entrar ondulação de sul pela ponta. Confirme a licença de desembarque com a base antes de largar, já que a ilha é uma reserva gerida."
+        },
+        "4": {
+          "shortDescription": "Mar aberto até ao grupo de Praslin e a Cousin, reserva de aves marinhas onde são os guardas que o levam a terra por entre a rebentação.",
+          "description": "Hoje é a grande bordada até ao grupo de Praslin e vai sentir as milhas, por isso um arranque cedo e uma mão de rizos na grande tornam o dia bem mais fácil. Cousin é uma reserva especial gerida pela Nature Seychelles, recuperada de uma plantação de coco nos anos sessenta para salvar a felosa-das-Seychelles. Hoje é uma das ilhas com maior densidade de aves marinhas do mundo, cheia de gaivinas e noddis, e as tartarugas de Aldabra passeiam debaixo das árvores. Aqui não se desembarca com o bote do barco. Os iates fundeiam ao largo e são os guardas que vêm buscá-lo e o levam por entre a rebentação; as visitas são só em dias úteis e pagam taxa de desembarque. Marque para o fim da manhã, faça a visita guiada e volte para bordo antes de o vento da tarde entrar e o fundeadouro ficar picado.",
+          "thingsToDo": [
+            "Fazer a visita guiada às aves marinhas com um guarda",
+            "Ver as tartarugas de Aldabra debaixo das árvores",
+            "Observar as gaivinas e os noddis a nidificar",
+            "Procurar a felosa-das-Seychelles"
+          ],
+          "mooringTip": "Em Cousin não se desembarca com o bote próprio nem há fundeadouro de pernoita que se aproveite; fundeie ao largo em areia só para a visita, num dia útil, e deixe que o pessoal da reserva o leve a terra. Vá dormir a Praslin."
+        },
+        "5": {
+          "shortDescription": "Entrada no porto principal de Praslin, na Baie Sainte Anne, a melhor oportunidade da viagem para reabastecer e visitar a Vallee de Mai.",
+          "description": "Depois da reserva, é uma navegação tranquila até à Baie Sainte Anne, na costa leste de Praslin, o centro prático desta zona do arquipélago. A baía tem o terminal principal de ferries, cais de combustível e lojas, por isso é o sítio óbvio para encher de água, gelo e mantimentos para a segunda semana. Praslin merece um dia fora do barco. A Vallee de Mai, a um curto táxi para o interior, é o único sítio onde o coco-de-mer cresce em estado selvagem, e a floresta sob o dossel é genuinamente pré-histórica. Se preferir ficar perto da costa, Cote d'Or, ali ao lado, tem uma praia comprida e uma fila de sítios informais para comer. Faça as compras de manhã, enquanto as prateleiras ainda estão cheias.",
+          "thingsToDo": [
+            "Reabastecer nas lojas da Baie Sainte Anne",
+            "Caminhar pela floresta de palmeiras da Vallee de Mai",
+            "Comer peixe grelhado em Cote d'Or",
+            "Encher os depósitos de água e combustível"
+          ],
+          "mooringTip": "A Baie Sainte Anne é uma baía de trabalho, com muito movimento; fundeie em areia longe do canal dos ferries e das embarcações locais amarradas, ou pergunte por um lugar se precisar de energia de terra e de facilidade para abastecer."
+        },
+        "6": {
+          "shortDescription": "Para norte até Aride, a grande ilha de aves marinhas do arquipélago, se o tempo deixar, com desembarque na praia por entre a rebentação.",
+          "description": "Aride é a mais setentrional das ilhas graníticas e a capital das aves marinhas de todo o grupo, com colónias de reprodução na casa das centenas de milhares. O senão é o desembarque. Não há cais, por isso é o barco da reserva que o leva por cima da praia, e só quando a ondulação permite, o que normalmente significa os meses mais calmos e não o auge da época de sudeste. Telefone antes e esteja pronto para mudar de planos. Quando acontece, a visita guiada pelo planalto é notável, com andorinhas-do-mar-escuras a girar por cima e a gardénia de Wright a florir num sítio único no mundo. O fundeadouro é aberto e rolante, portanto é paragem de dia e não sítio para passar a noite. Se Aride estiver fechada, as ilhas à volta de Praslin dão uma alternativa sem grande desvio.",
+          "thingsToDo": [
+            "Desembarcar na praia no barco da reserva",
+            "Percorrer o planalto das aves marinhas com um guia",
+            "Encontrar a gardénia de Wright em flor",
+            "Ver as andorinhas-do-mar-escuras a girar no céu"
+          ],
+          "mooringTip": "O fundeadouro de Aride é exposto e só aguenta com tempo calmo; trate-o como paragem de dia, fundeie ao largo em areia e telefone antes à reserva, porque os desembarques são cancelados sempre que há rebentação."
+        },
+        "7": {
+          "shortDescription": "Descer até Curieuse, onde tartarugas de Aldabra em liberdade, trilhos de terra vermelha e um passadiço no mangal enchem uma tarde tranquila em terra.",
+          "description": "De Aride é uma navegação simples até Curieuse, que fica mesmo em frente à costa norte de Praslin. A ilha foi leprosaria durante quase um século e a antiga Doctor's House ainda está de pé junto à praia de Anse St Jose. O que traz hoje as pessoas são as tartarugas: umas centenas de gigantes de Aldabra que andam à solta pela reserva, sem se importarem com ninguém e fáceis de fotografar. Um passadiço atravessa o mangal e o coco-de-mer também cresce em estado selvagem nestas encostas, tal como na Vallee. Fundeie na Baie Laraie, do lado abrigado, e vá de bote a terra pagar a taxa do parque na casa dos guardas. As tartarugas-verdes desovam nestas praias na época certa, por isso pise com cuidado acima da linha de maré.",
+          "thingsToDo": [
+            "Fotografar as tartarugas de Aldabra em liberdade",
+            "Percorrer o passadiço do mangal",
+            "Visitar a antiga Doctor's House",
+            "Fundear na abrigada Baie Laraie"
+          ],
+          "mooringTip": "Fundeie na Baie Laraie, no lado sudoeste de Curieuse, em areia e bem afastado do recife; dá bom abrigo com os alísios de sudeste. Desembarque com o bote em Anse St Jose para pagar a taxa do parque marinho antes de caminhar."
+        },
+        "8": {
+          "shortDescription": "Pouco mais de uma hora até Anse Lazio, uma das melhores praias de Praslin, para snorkeling nas rochas e almoço na areia.",
+          "description": "De Curieuse a Anse Lazio é pouco mais de uma hora, portanto não há pressa nenhuma. Lazio desenha-se na ponta noroeste de Praslin, um arco largo de areia clara entre dois cabos de granito, e faz jus à fama. O snorkeling é melhor junto às rochas da ponta norte, onde o coral se aguenta e é frequente aparecerem peixes-papagaio e alguma raia a trabalhar as bordas. Há dois restaurantes de praia recuados à sombra das takamakas; o Bon Bon Plume faz um bom peixe do dia grelhado, se quiser almoçar em terra. Fundeie ao largo em areia e vá a nado. A baía abre-se a noroeste, por isso é confortável durante a época de sudeste, mas não é sítio para se estar se o vento rodar para norte. Costumamos ficar aqui a manhã e seguir antes de a ondulação da tarde crescer.",
+          "thingsToDo": [
+            "Fazer snorkeling nas rochas da ponta norte de Lazio",
+            "Almoçar peixe grelhado no Bon Bon Plume",
+            "Nadar ao longo do arco de areia clara",
+            "Fundear ao largo em areia limpa"
+          ],
+          "mooringTip": "Anse Lazio é de fundear ao largo em areia e está aberta a noroeste, por isso é uma excelente paragem de dia com bom tempo, mas fica exposta se o vento rodar para norte; não deixe o barco sem vigilância com ondulação a entrar."
+        },
+        "9": {
+          "shortDescription": "Travessia até La Digue, a ilha dos carros de bois, das bicicletas e dos rochedos de granito, casa da muito fotografada Anse Source d'Argent.",
+          "description": "La Digue fica a uma curta navegação a leste de Praslin e é a ilha que quase toda a gente imagina quando pensa nas Seychelles. Não há praticamente carros; anda-se de bicicleta ou, de vez em quando, no carro de bois, o que impõe um ritmo agradável. Alugue uma bicicleta em La Passe e siga para sul até L'Union Estate, onde Anse Source d'Argent se esconde atrás da sua muralha de rochedos de granito esculpido e de lagoas rasas de água clara. Vá cedo ou ao fim do dia para escapar aos excursionistas do ferry. Na costa sudeste, Grande Anse e Petite Anse são mais selvagens e muitas vezes desertas, ainda que a corrente possa ser forte. O único fundeadouro verdadeiramente para todo o tempo é o porto de La Passe, funcional mais do que bonito, por isso a maioria das tripulações mete-se ali e vai a terra com o bote.",
+          "thingsToDo": [
+            "Pedalar até Anse Source d'Argent",
+            "Atravessar L'Union Estate de bicicleta",
+            "Caminhar até à selvagem Grande Anse",
+            "Alugar bicicletas em La Passe"
+          ],
+          "mooringTip": "O porto de La Passe é o único sítio para todo o tempo em La Digue, mas é pequeno e muitas vezes está cheio, por isso chegue cedo para arranjar lugar, ou fundeie ao largo e vá de bote. Grande Anse serve apenas para uma paragem de almoço com bom tempo e sempre de olho na corrente."
+        },
+        "10": {
+          "shortDescription": "Uma manhã de navegação até Marianne, ilha desabitada rodeada por algumas das melhores paredes de mergulho da região e muita vida pelágica.",
+          "description": "Marianne fica isolada a leste de La Digue, vazia desde que as plantações de coco foram abandonadas, e a razão para vir está debaixo de água. As paredes à volta da ilha sobem a pique dos dez aos trinta metros e atraem o peixe grande: tubarões-de-recife-cinzentos, raias-águia a passear no tombador, barracudas suspensas na corrente e tartarugas por todo o lado. É uma zona de mergulho conhecida, por isso, se houver certificados a bordo, combine um mergulho de barco com um operador antes de sair de La Digue. Para quem faz snorkeling, o recife mais raso do lado abrigado também compensa. Não há fundeadouro de pernoita a sério e a ilha está aberta à ondulação, por isso trate Marianne como passeio de um dia com tempo estável e conte regressar às ilhas mais abrigadas para dormir.",
+          "thingsToDo": [
+            "Mergulhar nas paredes a pique de Marianne",
+            "Procurar tubarões-de-recife-cinzentos",
+            "Ver as raias-águia no tombador",
+            "Fazer snorkeling no recife abrigado junto à costa"
+          ],
+          "mooringTip": "Marianne não tem fundeadouro seguro para a noite e está aberta à ondulação do oceano; venha só com tempo estável, fundeie ao largo em areia para o mergulho e mantenha um vigia com o motor pronto. Vá dormir a Felicite ou La Digue."
+        },
+        "11": {
+          "shortDescription": "Duas milhas de volta a Felicite, ilha de granito com um resort privado, um recife franjante bem vivo e tartarugas quase garantidas.",
+          "description": "Felicite fica a um par de milhas na direção de La Digue, um bloco verde e íngreme de granito que hoje tem um único resort de topo espalhado pelas cristas. Não vai a terra a não ser que esteja lá hospedado, mas isso pouco importa, porque o que interessa é o recife franjante. A água ao longo das costas oeste e norte é clara e cheia de vida, com tartarugas-de-pente a pastar no coral e raias-águia-pintadas a deslizar no azul mais fundo. Meta o barco no sotavento da ilha, fora do alísio, e passe a tarde a entrar e a sair de água. A paisagem de granito acima da linha de água é tão boa como em qualquer outro ponto da viagem. Dá uma noite calma e abrigada depois da exposição de Marianne e deixa-o bem posicionado para as Sisters de manhã.",
+          "thingsToDo": [
+            "Fazer snorkeling no recife franjante do lado oeste",
+            "Procurar tartarugas-de-pente a pastar",
+            "Ver passar as raias-águia-pintadas",
+            "Fundear no sotavento da ilha"
+          ],
+          "mooringTip": "Fundeie em areia no lado oeste ou norte de Felicite, abrigado do vento de sudeste; dá uma noite calma. A ilha é um resort privado, por isso conte ficar-se pelo barco e pelo recife."
+        },
+        "12": {
+          "shortDescription": "Uma navegação curta até Grande Soeur, nas Sisters Islands, aberta em dias úteis, com duas belas praias e snorkeling de primeira no recife oeste.",
+          "description": "Grande Soeur, a maior das duas Sisters, fica a um través curto para norte de Felicite. A ilha pertence a um hotel de Praslin, que organiza visitas de dia durante a semana e a reserva para os seus hóspedes ao fim de semana, por isso confirme na véspera antes de contar com a paragem. Se calhar bem, ficam com duas praias quase só para si: uma do lado oeste, encostada a uma faixa de floresta, e outra do outro lado de uma sela baixa que se atravessa a pé em dez minutos. O snorkeling ao longo do recife oeste é o verdadeiro prémio, com coral saudável e tartarugas a alimentar-se no raso. Fundeie ao largo da praia principal em areia e vá de bote. Leve a sua água e a sua sombra, porque as infraestruturas são mínimas e pensadas para as excursões de dia, não para iates de passagem.",
+          "thingsToDo": [
+            "Fazer snorkeling no recife oeste, bem preservado",
+            "Atravessar a sela entre as duas praias",
+            "Nadar com as tartarugas a alimentar-se",
+            "Fundear ao largo da praia principal"
+          ],
+          "mooringTip": "Fundeie ao largo da praia oeste de Grande Soeur em areia e vá de bote, mas só em dia útil; a ilha fecha a visitantes ao fim de semana para os hóspedes do resort. Confirme o calendário antes de decidir a paragem."
+        },
+        "13": {
+          "shortDescription": "Subir até Ile Cocos, um punhado minúsculo de ilhéus graníticos considerado o melhor snorkeling de todo o arquipélago.",
+          "description": "Ile Cocos é um punhado de pequenas rochas graníticas a norte de La Digue, protegido como parque marinho desde meados dos anos noventa, e muitos velejadores consideram-no o melhor snorkeling das Seychelles. Não há desembarque; os ilhéus estão interditos e tudo o que interessa está debaixo de água. Jardins de coral correm por entre os rochedos, em água clara e pouco funda, cheios de peixe de recife, e pode deixar-se levar durante uma hora sem percorrer grande distância. Como é um destino conhecido das excursões de dia saídas de La Digue, enche por volta do meio-dia, por isso o objetivo é chegar cedo e ter a água praticamente só para si. Há uma taxa de parque, cobrada pelos guardas que patrulham a zona. A travessia é curta, portanto faça dela uma paragem de manhã sem pressas, antes da longa etapa de regresso a Mahe no último dia.",
+          "thingsToDo": [
+            "Fazer snorkeling no coral entre os rochedos",
+            "Chegar cedo, antes dos barcos de excursão",
+            "Deixar-se levar pelos canais rasos de granito",
+            "Fotografar o peixe de recife em água clara"
+          ],
+          "mooringTip": "Ile Cocos é uma zona protegida de uso diurno e sem desembarque; fundeia-se ou fica-se à capa por pouco tempo para fazer snorkeling e paga-se a taxa ao guarda. Chegue cedo, porque é pequena, pouco funda e cheia de barcos de excursão ao fim da manhã."
+        },
+        "14": {
+          "shortDescription": "A última travessia longa, de volta a Eden Island por mar aberto, com a saída calculada para chegar à marina e entregar o barco antes de escurecer.",
+          "description": "O último dia é a navegação mais longa da viagem, umas vinte e cinco milhas de mar aberto de regresso a Mahe, por isso é a manhã em que convém largar cedo. Com os alísios de sudeste ao través pode ser uma corrida rápida e saborosa; ainda assim, dê-se uma margem confortável, porque chegar à marina com luz de dia torna a entrega do barco muito menos stressante. A maioria das bases quer o iate atracado e abastecido na véspera da manhã final, por isso confirme o contrato de charter e planeie os horários em função disso. À medida que Mahe se levanta à proa, a parede verde das montanhas atrás de Victoria fecha duas semanas que começaram no mesmo cais. Amarre em Eden Island, tire o sal de cima e deixe a viagem assentar antes do voo de regresso.",
+          "thingsToDo": [
+            "Navegar a travessia aberta até Mahe",
+            "Abastecer e entregar o barco em Eden Island",
+            "Lavar tudo depois de duas semanas a bordo",
+            "Brindar à viagem na marina"
+          ],
+          "mooringTip": "Procure chegar à marina de Eden Island bem antes de escurecer e confirme com antecedência a hora de entrega da base, já que muitas querem o barco de volta e abastecido na véspera. Chame pelo rádio na aproximação para saber o lugar de atracação."
+        }
+      }
+    }
+  },
+  "areas": {
+    "seychelles": {
+      "metaTitle": "Itinerários de Vela nas Seychelles | Boat4You",
+      "metaDesc": "Rotas de charter dia a dia pelas ilhas interiores das Seychelles — Mahé, Praslin, La Digue e Curieuse: etapas curtas e alísios fáceis.",
+      "title": "Navegue o Coração de Granito das Seychelles",
+      "description": "As ilhas interiores ficam muito próximas umas das outras, por isso uma semana aqui é feita sobretudo de saltos curtos e não de travessias longas — de Mahé a Praslin é a etapa maior, com cerca de 30 milhas náuticas, e na maioria dos dias está fundeado no início da tarde. De maio a outubro os alísios de sudeste mantêm-se firmes entre os 10 e os 20 nós, o suficiente para velejar a sério sem nunca se sentir exposto; os meses mais calmos de abril e novembro deixam o mar liso e transparente, se preferir mergulhar a bolinar. Largue o ferro ao largo de Anse Lazio antes de chegarem os barcos de excursão de Praslin, vá de bote a terra caminhar entre os coqueiros-do-mar da Vallée de Mai e depois passe a Curieuse para dividir a praia com tartarugas gigantes em liberdade. Anse Source d'Argent, em La Digue, é a fotografia que toda a gente quer, por isso chegue à primeira luz e fica só para si. Uma nota local: os canais entre as ilhas graníticas puxam corrente com a maré, portanto acerte a hora das travessias e a navegação mantém-se suave."
+    }
+  }
+}
