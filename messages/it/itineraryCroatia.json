@@ -4066,6 +4066,429 @@
           "mooringTip": "Marina Dalmacija a Sukošan è enorme, quindi conferma con l'ufficio l'assegnazione del posto e un turno per il carburante il giorno prima. Entra piano e tieni parabordi e cime pronti su entrambi i lati; i canali di manovra si affollano nel cambio del sabato."
         }
       }
+    },
+    "trogir-kornati-krka-route": {
+      "metaTitle": "Kornati e Krka da Trogir in 7 giorni | Boat4You",
+      "metaDesc": "Una settimana da Trogir: a nord tra le isole Kornati, sul Krka fino alle cascate di Skradin, ritorno via Primošten, Zlarin e Rogoznica. Tappe in NM.",
+      "days": {
+        "1": {
+          "shortDescription": "Quattro miglia scarse verso ovest, fino alla laguna bassa tra le due isole Drvenik: giusto il tempo che l'equipaggio prenda confidenza prima delle miglia vere.",
+          "description": "Nessuno prenota una settimana in Dalmazia per passare il primo pomeriggio in marina, quindi molliamo presto da ACI Trogir e puntiamo a ovest. Quattro miglia dopo la barca scivola dentro Krknjaši, la laguna dal fondo chiaro che qui chiamano Laguna Blu, nel canale tra Veli Drvenik e la piccola Mali Drvenik. Il fondo è sabbia e alghe tra i tre e i sei metri, l'ancora fa presa al primo colpo e a metà mattina l'acqua prende quel turchese lattiginoso che sembra finto. Nessuna strada arriva alle tre taverne lungo la costa di Veli Drvenik: ci si va col tender, e ognuna mette a disposizione qualche gavitello gratuito per chi prenota un tavolo. Non c'è molto da fare oltre a nuotare, provare le regolazioni con poco vento e mangiare pesce alla griglia quasi con i piedi in acqua. Ed è esattamente il punto. Il primo giorno serve a rodare la barca, non a macinare miglia.",
+          "thingsToDo": [
+            "Dare fondo sulla sabbia tra i quattro e i sei metri",
+            "Nuotare nell'acqua bassa della Laguna Blu a Krknjaši",
+            "Cena a terra in una taverna di Veli Drvenik",
+            "Passeggiata fino alla punta di Veli Drvenik",
+            "Provare terzaroli e regolazioni finché è calmo"
+          ],
+          "mooringTip": "La tenuta sulla sabbia è ottima tra i tre e i sei metri, quindi di norma si dà fondo; i gavitelli delle taverne sono gratuiti se si cena a terra. La laguna ripara da tutto tranne che da ovest e nordovest: se danno ponente fresco sopra i 18 nodi, torna indietro le quattro miglia fino ad ACI Trogir per la notte."
+        },
+        "2": {
+          "shortDescription": "Quattordici miglia lungo la costa aperta fino a Primošten, borgo color terracotta stretto sulla sua penisola, con i vigneti di Babić che salgono sulle colline alle spalle.",
+          "description": "Primošten la vedi molto prima di arrivarci. Il borgo antico si stringe su uno spuntone di roccia tenuto attaccato alla terraferma solo da una bassa lingua di sabbia, con le case impilate fino al filo dell'acqua e la chiesa di San Giorgio a inchiodarne la cima. Quattordici miglia dai Drvenik, passando davanti a Rogoznica, dove tornerai più avanti nella settimana, e da vicino il paese si merita la sua fama: niente patina da resort, solo vicoli stretti e qualche konoba che fa brudet e pesce alla griglia. La riva del paese è solo diurna, così prendiamo un posto ad ACI Kremik due miglia più a sud e la sera rientriamo con la navetta. Alle spalle del borgo, i terrazzamenti di Bukovac chiudono il vitigno autoctono Babić dentro muretti a secco tirati su a mano da generazioni. Siediti sul muro a mare con un bicchiere di Babić mentre la luce si spegne. La sosta vale.",
+          "thingsToDo": [
+            "Salire alla chiesa di San Giorgio in cima",
+            "Un bicchiere di Babić sul muro a mare, con calma",
+            "Camminare tra i terrazzamenti di Bukovac fatti a mano",
+            "Trovare il brudet in un vicolo di Primošten",
+            "Prendere la navetta da Kremik per la serata"
+          ],
+          "mooringTip": "ACI Kremik, due miglia a sud del centro, è l'ormeggio notturno affidabile, con trappe e navetta per il paese; la riva del paese accetta solo visitatori diurni ed è aperta a ovest. Se con tempo stabile ti metti in riva, liberala entro le cinque, così i pescherecci ritrovano il loro posto al tramonto."
+        },
+        "3": {
+          "shortDescription": "Venti miglia a nordovest, dentro il Parco Nazionale Kornati: ottantanove isole spoglie e una sola marina, Piškera, sull'isolotto di Panitula.",
+          "description": "Questa è la tappa che gli equipaggi si ricordano. Venti miglia verso nordovest e la costa si dissolve nelle Kornati: ottantanove isole di carso grigio e nudo, muretti a secco che ne risalgono la schiena, nessuno che ci viva, e una zona di divieto di pesca che ha rimesso vita nei bassi fondali. Puntiamo ad ACI Piškera, appollaiata su un fazzoletto di isolotto che si chiama Panitula Vela, al limite occidentale del parco: l'unico ormeggio a pontile dentro i confini. Ci sono centocinquanta posti, tutti con trappe, acqua e corrente, e una sola konoba sul terrazzo sopra le barche. Compra il biglietto del parco online prima di arrivare: costa meno che al chiosco e in piena estate la tariffa giornaliera per una barca a noleggio sfiora i cento euro. Nel pomeriggio metti giù il tender e vai: maschera e pinne sulla secca nel passaggio tra Piškera e Lavsa, oppure spingiti a sud verso le corone esterne, dove Mana e Kornat scendono a picco per ottanta metri sotto la chiglia.",
+          "thingsToDo": [
+            "Fare il biglietto del parco online prima di arrivare",
+            "Snorkeling sui bassi fondali di Lavsa col tender",
+            "Navigare sotto la parete a picco a sud di Mana",
+            "Cena nell'unica konoba sopra i pontili",
+            "Camminare sul dorso sassoso di Panitula Vela"
+          ],
+          "mooringTip": "Ogni posto ad ACI Piškera ha le trappe; prenota online per luglio e agosto perché si riempie. L'ancoraggio notturno dentro il parco è consentito solo in poche baie autorizzate — Lavsa, Lojena, Vrulje, Stiniva e Statival — dove di solito le konobe mettono gavitelli gratuiti per chi cena da loro."
+        },
+        "4": {
+          "shortDescription": "Quindici miglia a est, verso le isole di Šibenik, fino a Zlarin: niente auto e settecento anni di pescatori di corallo rosso.",
+          "description": "Le Kornati restano a poppa e sono quindici miglia verso est fino alle isole di Šibenik, dove Zlarin se ne sta con il suo unico paese sgranato lungo la costa orientale e nemmeno un'auto su tutto lo scoglio. È il corallo ad aver fatto questo posto. Per quasi sette secoli gli uomini di qui si sono immersi sui banchi di corallo rosso al largo, e il piccolo museo sulla piazza conserva ancora gli attrezzi del mestiere: le pietre da piede, le sagole zavorrate, le gabbie di legno che calavano quando nessuno aveva ancora una bombola. Ci si ormeggia di poppa alla riva del paese per pochi spiccioli, con acqua e corrente sui posti interni. Niente auto vuol dire che i sentieri dell'interno sono tuoi: mezz'ora in salita tra pini e cipressi ti porta sul versante ovest, con lo sguardo giù per il canale. Le konobe cucinano quello che le barche hanno sbarcato la mattina e, finiti i piatti, il paese si ritrova sul muro a mare, cosa che alla quarta sera va bene a quasi tutti gli equipaggi.",
+          "thingsToDo": [
+            "Entrare nel museo del corallo rosso in piazza",
+            "Salire tra pini e cipressi fino al versante ovest",
+            "Bagno dagli scogli piatti sotto il paese",
+            "Mangiare il pescato del mattino in una konoba sulla riva",
+            "Vedere il corallo ancora lavorato a mano in bottega"
+          ],
+          "mooringTip": "Ormeggio di poppa alla riva del paese con la propria ancora; la tariffa è modesta e i posti centrali hanno acqua e corrente. Zlarin ripara da ovest e da nord ma resta aperta allo scirocco: se lo danno sopra i 15 nodi, risali le quattro miglia fino a Šibenik e mettiti dentro l'estuario."
+        },
+        "5": {
+          "shortDescription": "Dodici miglia rare, verso l'interno: su per il Krka oltre Šibenik, attraverso lo stretto canale di Sant'Antonio, fino a ormeggiare a Skradin sotto le cascate.",
+          "description": "Su questa costa non c'è quasi nient'altro che si navighi come il quinto giorno, perché lo passi andando dalla parte sbagliata: via dal mare aperto e dritto su per un fiume. Superi il centro storico di Šibenik, poi il canale si strozza nel passaggio di Sant'Antonio: seicento metri di roccia tagliata a mina con il ponte quarantanove metri più in alto, quindi nessun albero da charter ci va nemmeno vicino. Oltre lo stretto il sale si dirada, le colline si stringono su entrambe le rive e il fiume corre profondo e verde fino ai pontili di ACI Skradin. In stagione una barca del parco parte dalla marina ogni mezz'ora, il biglietto d'ingresso la comprende già, e ti porta su a Skradinski Buk, dove l'acqua scende quarantasei metri su diciassette gradini di travertino e una passerella di legno si infila lungo entrambe le rive. A terra la cosa da ordinare è il risotto di Skradin, manzo e zafferano cotti quasi un giorno intero, con una caraffa di Babić locale. Prendi una delle prime barche: verso mezzogiorno sulle passerelle si cammina spalla a spalla.",
+          "thingsToDo": [
+            "Risalire il fiume in barca fino alle cascate di Skradinski Buk",
+            "Seguire la passerella su entrambe le rive delle cascate",
+            "Assaggiare il risotto di Skradin, manzo e zafferano di lunga cottura",
+            "Girare tra i vicoli di pietra sopra la banchina",
+            "Salire al belvedere sopra le cascate"
+          ],
+          "mooringTip": "ACI Skradin ha trappe su ogni posto, servizi completi e un pontile carburante all'ingresso. Il canale del fiume è ben segnalato da boe e profondo per qualsiasi pescaggio; calcola circa novanta minuti a velocità di dislocamento dalla foce a Šibenik, e tieni presente che nel tratto del parco non si può dare fondo: o la marina o niente."
+        },
+        "6": {
+          "shortDescription": "Venti miglia giù verso il mare e poi a sudest fino a Rogoznica, paese su un promontorio affacciato sullo strano lago salato Zmajevo Oko, con la grande Marina Frapa per la notte.",
+          "description": "Fuori dal fiume e di nuovo in acqua salata, sono venti miglia a sudest fino a Rogoznica, un paese sparso su un promontorio tozzo più o meno a metà strada tra Šibenik e Split. Quello che la gente viene a vedere è Zmajevo Oko, l'Occhio del Drago: una pozza d'acqua salata incassata nel calcare all'estremità sud della punta. Il mare la alimenta attraverso un canale che nessuno riesce a vedere, strizzando l'acqua dentro e fuori con la marea, così con la bassa la superficie sta sei metri buoni sotto il mare che le sta appena oltre il bordo. Venti minuti a piedi dal paese e sei sulle rocce a guardarci dentro. Frapa, sul lato sud della penisola, è grande quanto può esserlo una marina in questa parte della Dalmazia e ha tutto: trappe, carburante, un hotel, ristoranti lungo la banchina. Una barca piccola può usare la riva del paese a nord, ma è spalancata al maestrale, quindi la maggior parte degli skipper paga la marina e dorme tranquilla.",
+          "thingsToDo": [
+            "Trovare il sentiero che porta a Zmajevo Oko",
+            "Stare sul bordo a guardare la marea muovere la pozza",
+            "Ordinare il brudet in una konoba sulla punta",
+            "Girare i pochi vicoli antichi vicino al porto",
+            "Tender fino a Smokvica per un bagno"
+          ],
+          "mooringTip": "Marina Frapa, sul lato sud, è la scelta con qualsiasi tempo: trappe, servizi completi, distributore all'ingresso e ristoranti in loco. La riva del paese a nord accetta l'ormeggio di poppa con la propria ancora per pochi euro ma è aperta a nordovest, quindi spostati in marina se danno maestrale sopra i 15 nodi."
+        },
+        "7": {
+          "shortDescription": "Diciotto miglia a sudest per riportare la barca alle basi di Trogir e Split per la riconsegna del sabato alle nove, con un ultimo bagno davanti a Čiovo prima di entrare.",
+          "description": "Ultima mattina, e l'orologio conta. Sono diciotto miglia a sudest per riportare la barca alle basi di Trogir e Split, e il sabato ha una scadenza secca: sottobordo entro le nove, serbatoi pieni e acque nere scaricate, coperta lavata, dotazioni riconsegnate e qualcuno a bordo per il giro di controllo tra le otto e le nove. Qualunque delle tre indichi il contratto, ACI Trogir, Marina Kaštela o ACI Split in città, l'ingresso è leggibile con qualsiasi tempo. Costeggerai il lato sud di Čiovo per tutto il tragitto, ed è punteggiato di calette: dai fondo davanti a Slatine o a Saldun per un ultimo bagno prima di impegnarti con la marina. Firmata la riconsegna e sbarcate le borse, da ACI Trogir sei a cinque minuti dal centro storico, dove la cattedrale di San Lorenzo custodisce ancora il portale scolpito da Radovan nel Duecento. Vale la mezz'ora che ti resta prima che arrivi l'auto per l'aeroporto.",
+          "thingsToDo": [
+            "Ancora davanti a Čiovo per l'ultimo bagno",
+            "Fare gasolio e svuotare le acque nere per tempo",
+            "Fermarsi sotto il portale di Radovan in cattedrale",
+            "Salire sulla fortezza Kamerlengo al margine del paese",
+            "Pranzo senza fretta sulla riva di Trogir"
+          ],
+          "mooringTip": "Rientra nella base indicata dal contratto di noleggio, che sia ACI Trogir, Marina Kaštela o ACI Split, e ormeggia di poppa o di fianco come indica il capobase. La finestra di riconsegna è tra le otto e le nove di sabato; se il contratto prevede il rientro la sera prima, sii dentro entro le cinque di venerdì."
+        }
+      }
+    },
+    "trogir-vis-korcula-hvar-route": {
+      "metaTitle": "Da Trogir a Vis, Hvar e Korčula in 7 giorni | Boat4You",
+      "metaDesc": "Giro da ACI Trogir a Vis e alla Grotta Azzurra, poi Korčula, Hvar e Stari Grad. Sette giorni di distanze, marine e note d'ormeggio sincere.",
+      "days": {
+        "1": {
+          "shortDescription": "Un salto di 12 miglia da ACI Trogir all'unico porto naturale di Šolta, chiuso da sette isolotti.",
+          "description": "Passi il canale del ponte di Trogir, scendi lungo il lato sud di Čiovo e in un paio d'ore Šolta si apre davanti. Maslinica sta sulla punta occidentale dell'isola, l'unico porto qui che ti tiene al riparo con quasi ogni tempo, grazie alla catenella di isolotti che ne guarda l'imboccatura. Di solito l'equipaggio si divide tra due opzioni: Martinis Marchi sulla riva sud, con trappe e un castello barocco riconvertito, oppure la riva del paese di fronte, ormeggio di poppa sulla propria ancora. Šolta resta tranquilla mentre Split, a un'ora di distanza, si riempie. Niente folle da gita giornaliera, niente fila di resort, solo konobe che versano il rosso autoctono Dobričić e spremono il proprio olio d'oliva. Nel tardo pomeriggio, tender fino a Stipanska per un bagno, poi trova un tavolo a terra prima che la luce si faccia morbida sull'acqua.",
+          "thingsToDo": [
+            "Bagno dagli scogli dell'isolotto di Stipanska",
+            "Assaggiare il Dobričić, il rosso autoctono di Šolta",
+            "Visitare il parco del castello Martinis Marchi",
+            "Comprare a terra l'olio Šoltansko spremuto a freddo",
+            "Tramonto dall'isolotto di Polebrnjak"
+          ],
+          "mooringTip": "Due possibilità: Martinis Marchi sul lato sud ha trappe e servizi completi ma si riempie in fretta a luglio e agosto, mentre la riva del paese di fronte ti prende di poppa sulla tua ancora per pochi euro. La catena di isolotti taglia fuori l'onda da ogni direzione tranne il nord, che in piena estate non soffia quasi mai."
+        },
+        "2": {
+          "shortDescription": "La tappa aperta più lunga della settimana: 24 miglia a sud, oltre Brač, fino a Komiža, vero porto di pescatori sul lato opposto di Vis.",
+          "description": "Ventiquattro miglia sono una buona giornata di navigazione, e il Canale di Hvar si spalanca al giardinetto di sinistra mentre lasci Brač a poppa. Vis è rimasta chiusa ai visitatori fino al 1989, isola-guarnigione jugoslava, e quell'isolamento le è rimasto addosso: meno alberghi, più vigne, un ritmo più lento di qualsiasi posto più vicino alla terraferma. Komiža si arrotola attorno a una piccola baia sul versante occidentale, con la flotta da pesca tirata lungo il braccio orientale. Ormeggia dentro il bacino, di poppa sulla tua ancora su sabbia e alghe, dove la tenuta di solito è buona. Evita il molo esterno per la notte: qualsiasi libecciata entra dritta dentro. A terra la vecchia torre veneziana ospita un piccolo museo della pesca, le konobe grigliano il pescato del giorno e il bianco Vugava si versa ben freddo. Al tramonto l'orizzonte a ovest corre ininterrotto verso l'Italia, e la fama è meritata.",
+          "thingsToDo": [
+            "Sardine appena grigliate e un bicchiere di Vugava",
+            "Museo della pesca nella torre veneziana",
+            "Salire sul Monte Hum per il panorama su tutta l'isola",
+            "Girare tra i pescherecci sulla banchina orientale",
+            "Guardare il sole calare verso l'Italia dal molo"
+          ],
+          "mooringTip": "Ormeggio di poppa con la propria ancora nel bacino interno, su sabbia e alghe che in genere tengono bene; è prevista una tassa di porto. Se danno libeccio sopra i 15 nodi, il molo esterno diventa insostenibile per la notte: fai le sei miglia fino a Vis Town, nella baia di San Giorgio, per un riparo completo."
+        },
+        "3": {
+          "shortDescription": "Grotta Azzurra appena apre, bagno di mezzogiorno a Budihovac, poi diciotto miglia a est fino a Vela Luka, sulla punta estrema di Korčula.",
+          "description": "A Biševo si arriva presto. La grotta si accende di quell'azzurro elettrico solo quando il sole basso entra dall'apertura sommersa, più o meno tra le nove e le undici del mattino: se parti da Komiža prima delle barche da escursione, fai meno coda. I tender privati restano fuori; ti ormeggi al piccolo pontile della concessione e entri con una delle barchette ufficiali per una visita di venti minuti. Da lì è un salto fino a Budihovac, due isolotti bassi davanti alla costa sud di Vis, con l'acqua così limpida che la catena dell'ancora sembra di vetro su otto metri di sabbia. Bagno, pranzo a bordo, poi prua a est. Diciotto miglia più avanti c'è Vela Luka, una lunga insenatura esposta a ovest all'estremità di Korčula, con carburante, acqua e riparo vero. A cena, žrnovski makaruni, la pasta tirata a mano che qui arrotolano sui ferri da calza.",
+          "thingsToDo": [
+            "Vedere la Grotta Azzurra accendersi verso le 10",
+            "Ancora e bagno agli isolotti di Budihovac",
+            "Žrnovski makaruni, la pasta a mano di Korčula",
+            "Fare carburante alla pompa di Vela Luka",
+            "Due passi sul lungomare di Vela Luka dopo il buio"
+          ],
+          "mooringTip": "Il pontile della concessione della Grotta Azzurra è solo per la sosta di metà giornata, si paga al chiosco e non si pernotta. A Vela Luka ti metti di poppa alla lunga riva del paese, su fango e sabbia che tengono bene, con il carburante all'estremità occidentale; solo un forte vento da sud riesce a spingere onda dentro il bacino."
+        },
+        "4": {
+          "shortDescription": "La traversata grossa: 32 miglia a est-nordest fino a Hvar, il porto più chiassoso e fotografato della costa, con ACI Marina come scelta sicura.",
+          "description": "Parti presto. Trentadue miglia attraverso due canali sono la tratta singola più lunga della settimana, e il maestrale di solito entra da ovest verso le due del pomeriggio. Se superi il Canale di Korčula prima che rinforzi, fai tutto il resto al traverso, comodo, fino a Hvar. La città si annuncia da lontano: la fortezza Fortica in cima alla collina, il lungo porticato di pietra dell'Arsenale sul lungomare, il campanile di Santo Stefano sopra la piazza. Prendi un posto ad ACI Marina Hvar, sul lato ovest della baia: per qualsiasi cosa che non sia una notte di bonaccia è l'unica opzione sensata, con trappe e servizi. La riva ti tenterà, ma a mezzogiorno si riempie di barche da escursione e tender e non offre alcun riparo dal vento pomeridiano. Ormeggia, entra a piedi, sali al forte prima che picchi il caldo e poi perdi la serata nelle konobe dei vicoli.",
+          "thingsToDo": [
+            "Salire alla Fortica per la vista sui Pakleni",
+            "L'Arsenale e la piazza di Santo Stefano",
+            "Trovare una konoba tranquilla fuori dalla piazza",
+            "Tender alle isole Pakleni per un bagno",
+            "Guardare la gente sulla riva dopo il tramonto"
+          ],
+          "mooringTip": "Prenota ACI Marina Hvar per tempo in stagione: con vento vero è l'unico posto notte sicuro per una barca di media taglia, e ha trappe, acqua e corrente. La riva del paese si paga a ore, è esposta alle raffiche da ovest e si riempie di tender, quindi consideralo solo un ormeggio diurno."
+        },
+        "5": {
+          "shortDescription": "Quattordici miglia tranquille attorno al capo occidentale di Hvar fino a Stari Grad, la città più antica della Croazia e porta d'accesso alla piana greca UNESCO.",
+          "description": "Mattinata facile. Quattordici miglia in senso orario attorno al capo occidentale e poi dentro, in fondo alla lunga baia che ripara Stari Grad sul versante nord di Hvar. I Greci sbarcarono qui nel 384 a.C. e la chiamarono Pharos; il loro reticolo di strade corre ancora nel quartiere vecchio, e la piana alle spalle del paese, lo Stari Grad Plain, è coltivata sulle stesse divisioni da allora, motivo per cui l'UNESCO l'ha inserita nella lista. Ormeggiare è semplice in entrambi i modi: la riva del paese lungo la sponda occidentale ti prende di poppa sulla tua ancora a pagamento, oppure la piccola ACI marina sul lato est ti dà trappe e corrente da terra. La baia corre come un fiordo e resta piatta con qualsiasi vento, quindi è una delle rare notti in cui puoi rilassarti sulle previsioni. Fai due passi fino a Tvrdalj, la casa fortificata del poeta Hektorović con la sua peschiera in pietra, e mangia la peka nella piana se prenoti per tempo.",
+          "thingsToDo": [
+            "Camminare sul reticolo greco del quartiere vecchio",
+            "Il castello Tvrdalj e la sua peschiera in pietra",
+            "In bicicletta attraverso lo Stari Grad Plain",
+            "Prenotare la peka in una konoba sulla piana",
+            "Percorrere la strada della lavanda a est del paese"
+          ],
+          "mooringTip": "Vanno bene entrambi gli ormeggi: di poppa alla riva del paese lungo la sponda occidentale per una tariffa contenuta, con acqua e corrente nel tratto centrale, oppure trappe ad ACI Marina Stari Grad di fronte. La baia ha forma di fiordo e resta calma con vento da ogni direzione, il che ne fa uno degli ancoraggi notturni più sicuri di Hvar."
+        },
+        "6": {
+          "shortDescription": "12 miglia a nord attraverso il Canale di Brač fino a Milna, il porto più protetto dell'isola, e poi un'ultima mattinata breve per tornare a Trogir.",
+          "description": "Milna sta una dozzina di miglia più a nord, un'insenatura stretta che taglia il fianco occidentale di Brač e ripara barche dai tempi di Venezia. L'imboccatura è facile da leggere: la chiesa parrocchiale alta sulla riva interna, le case di pietra grigia impilate sul pendio, il bacino che si stringe fino a una tasca d'acqua ferma in fondo. Ormeggia di poppa alla riva interna del paese per pochi euro, con acqua e corrente, oppure dai fondo più fuori nella baia larga, su sei-dieci metri di sabbia, e porta una cima a terra sugli scogli se il maestrale si alza. Brač ha costruito mezza Dalmazia con il suo calcare bianco, la stessa pietra tagliata per il Palazzo di Diocleziano e ancora oggi cavata su a Pučišća. Ordina l'agnello sotto la peka appena hai finito di ormeggiare: le braci vogliono tre ore.",
+          "thingsToDo": [
+            "Ordinare l'agnello alla peka appena ormeggiati",
+            "Ancora fuori con una cima a terra",
+            "La chiesa parrocchiale del Seicento",
+            "Assaggiare l'olio d'oliva di Brač alla cooperativa",
+            "Tender a nord fino a Bobovišća per un bagno al tramonto"
+          ],
+          "mooringTip": "L'ormeggio di poppa alla riva interna del paese costa poco e ha acqua e corrente nel tratto centrale; nella baia esterna si ancora gratis con una cima a terra sugli scogli. Milna è aperta a ovest e sudovest, quindi se il maestrale pomeridiano supera i 15 nodi la riva interna resta più tranquilla, e Bobovišća, tre miglia a nord, è il ripiego con qualsiasi tempo."
+        },
+        "7": {
+          "shortDescription": "Ultime 15 miglia a nordovest attraverso due canali, un ultimo bagno davanti a Čiovo e poi dentro ad ACI Trogir per la riconsegna del sabato entro le nove.",
+          "description": "Un'ultima tirata verso nordovest chiude il cerchio: quindici miglia indietro attraverso i canali di Brač e di Split fino ad ACI Marina Trogir. Le riconsegne del sabato sono strette, quindi punta a essere sottobordo entro le nove con le acque nere scaricate, il pieno fatto e la coperta sciacquata, e lo skipper a disposizione per il controllo tra le otto e le nove. C'è ancora tempo per un ultimo bagno: la costa sud di Čiovo è punteggiata di calette, e Slatine o Saldun sono la scelta ovvia per l'ultimo tuffo prima di entrare in marina. Chiusa la verifica, il centro storico di Trogir è a cinque minuti a piedi oltre il ponte. Punta alla cattedrale di San Lorenzo e fermati sotto il portale di Radovan, l'intaglio medievale più bello del Paese, oppure sali sulla torre Kamerlengo per la vista. L'aeroporto di Split è a dieci minuti di strada, e un pranzo lungo sulla Riva è il modo giusto di chiudere la settimana.",
+          "thingsToDo": [
+            "Ultimo bagno in una caletta a Slatine o Saldun",
+            "Sotto il portale di Radovan della cattedrale",
+            "Salire sulla fortezza Kamerlengo per la vista",
+            "Scaricare le acque nere e fare gasolio prima del controllo",
+            "Pranzo lungo sulla Riva di Trogir"
+          ],
+          "mooringTip": "Riporta la barca ad ACI Marina Trogir come previsto dal contratto; il capobase assegna il posto all'arrivo. La finestra di riconsegna del sabato è tra le otto e le nove, quindi se i documenti prevedono il rientro la sera prima, sii sottobordo entro le cinque di venerdì; il pontile carburante è sul lato ovest dell'ingresso."
+        }
+      }
+    },
+    "zadar-kornati-hvar-korcula-vis-skradin-14days-route": {
+      "metaTitle": "Kornati, Hvar e Vis da Zadar in 14 giorni | Boat4You",
+      "metaDesc": "14 giorni da Zadar tra le isole Kornati, Hvar, Korčula, Vis e il Krka a Skradin, con consigli su ancoraggi e konobe per ogni tappa.",
+      "days": {
+        "1": {
+          "shortDescription": "25 miglia a sud da Zadar ti lasciano tra le Kornati esterne e deserte, tra le cale tranquille di Žut e qualche konoba stagionale.",
+          "description": "Fai bene la spesa a Zadar prima di mollare, perché a Žut non c'è un negozio e d'inverno non ci vive nessuno. La discesa verso sud è semplice con il solito maestrale estivo, circa quattro ore di andatura tranquilla al traverso. Žut è la più grande delle Kornati esterne, una lunga dorsale di calcare nudo incisa da insenature riparate sul lato orientale. Di solito scegliamo una cala con il gavitello di un ristorante e ci sistemiamo presto: dal primo pomeriggio le più gettonate si riempiono. Bagno da poppa in acqua che resta limpida sopra la sabbia, poi su per il sentiero delle capre fino al crinale, con lo sguardo indietro verso Dugi Otok. La cena a terra è il premio. Ordina il brudet, lo stufato di pesce dalmata di lunga cottura da tirare su con la polenta, e lascia che la sera si spenga attorno a te.",
+          "thingsToDo": [
+            "Ancora in un'insenatura riparata di Žut",
+            "Sentiero di crinale con vista sulle Kornati",
+            "Snorkeling sui bassi fondali sabbiosi da poppa",
+            "Brudet, stufato di pesce, in una konoba stagionale"
+          ],
+          "mooringTip": "Prendi il gavitello di un ristorante in una delle cale occupate: la cena a terra copre l'ormeggio; altrimenti dai fondo più al largo sulla sabbia tra 7 e 10 m. A luglio e agosto arriva entro il primo pomeriggio, perché i campi boe davanti alle konobe si riempiono in fretta."
+        },
+        "2": {
+          "shortDescription": "Breve salto a nord, fino all'estremità boscosa di Dugi Otok: ancoraggio sotto il faro di Veli Rat, con la sabbia di Sakarun a pochi passi.",
+          "description": "Giornata morbida, quasi tutta a motore o con un'andatura leggera lungo il lato esterno di Dugi Otok. Pantera è una baia ampia bordata di pini vicino alla punta nordovest dell'isola, ben protetta da nord e nordest, il che ne fa una notte tranquilla quando la bora non spinge forte. Il pezzo forte a terra è il faro di Veli Rat, torre di calcare alta 40 metri del 1849 e una delle più alte dell'Adriatico; la tradizione locale racconta che nell'intonaco finirono albumi d'uovo per tenerla bianca. Sbarca col tender e cammina tra i pini fino a Sakarun, una rara baia bassa dal fondo di sabbia vera che tinge l'acqua di verde chiaro. Tornato a bordo, griglia quello che hai comprato a Žut e guarda la luce calare dietro il faro.",
+          "thingsToDo": [
+            "Salire al faro di Veli Rat del 1849",
+            "Camminare tra i pini fino alla spiaggia di Sakarun",
+            "Snorkeling nelle grotte lungo la costa rocciosa",
+            "Calamari alla griglia nel pozzetto di poppa"
+          ],
+          "mooringTip": "Ancora sulla sabbia tra 5 e 8 m; Pantera tiene bene e ripara da nord e nordest. Qui non ci sono gavitelli, quindi lasciati spazio per il giro d'ancora e verifica la presa prima di mollare il timone."
+        },
+        "3": {
+          "shortDescription": "12 miglia facili nel cuore del Parco Nazionale Kornati, dove la baia di Vrulja allinea il gruppo di konobe più fitto dell'arcipelago.",
+          "description": "Compra il biglietto del parco prima di entrare, se puoi: i guardiani salgono a bordo dentro i confini e comprato in anticipo costa meno. La navigazione tra le isole interne è il motivo per cui si viene alle Kornati: un labirinto di gobbe grigie e spoglie, cucite da muretti a secco che salgono dritti dal mare. Vrulja sta sul fianco riparato di Kornat, l'isola principale, e ospita tre konobe una accanto all'altra, ognuna con i suoi gavitelli. Prendine uno, poi cammina fino alle falesie sul mare aperto, dove i muretti arrivano fino allo strapiombo. Chi ha buone gambe può salire sul Metlina, 237 metri, il punto più alto della dorsale, per una vista su tutto il parco. Il pesce grigliato al gavitello, quella sera, sa di meglio proprio per la fatica.",
+          "thingsToDo": [
+            "Salire sul Metlina per la vista sul parco",
+            "Camminare lungo i muretti a secco di Kornat",
+            "Snorkeling nell'acqua limpida attorno ai gavitelli",
+            "Pesce fresco alla griglia in una konoba di Vrulja"
+          ],
+          "mooringTip": "Vrulja ha tre konobe con i propri campi boe: prendi un gavitello e la cena a terra lo copre. In una serata affollata di agosto prenota il gavitello via VHF o al telefono, perché è la sosta più gettonata del parco."
+        },
+        "4": {
+          "shortDescription": "Venti miglia a sud, oltre Šibenik, fino a Primošten: borgo di pietra sul suo promontorio, cinto dai vigneti di Bucavac e dal loro Babić rosso.",
+          "description": "Uscito dal parco l'acqua si apre e ti godi una navigata vera, venti miglia lungo la costa con il maestrale di solito al traverso da mezzogiorno. Primošten sorge su un promontorio tondeggiante che un tempo era un'isola, con il borgo antico stretto attorno alla chiesa di Sveti Juraj in cima. Sopra e dietro il paese si stendono i vigneti di Bucavac, un reticolo di appezzamenti a muretto a secco che da decenni attira i fotografi; è qui che cresce il denso rosso Babić. Ormeggia a Marina Kremik, un miglio e mezzo più a sud, poi taxi o due passi a piedi per la serata. Trova un tavolo nei vicoli del borgo, ordina il Babić in caraffa e abbinalo al risotto nero o al pesce appena preso.",
+          "thingsToDo": [
+            "Salire alla chiesa di Sveti Juraj",
+            "Vedere i vigneti a muretto a secco di Bucavac",
+            "Assaggiare il rosso Babić locale",
+            "Risotto nero nei vicoli del borgo antico"
+          ],
+          "mooringTip": "Marina Kremik, circa 1,5 miglia a sud del paese, è l'ormeggio notturno standard e conviene prenotarla a luglio e agosto. La riva del paese è esposta e va tenuta solo per una sosta a pranzo."
+        },
+        "5": {
+          "shortDescription": "14 miglia tranquille a sudest fino a Trogir, città-isola murata di pietra veneziana, con il portale di Radovan sulla facciata della cattedrale.",
+          "description": "Oggi è corta e semplice, quindi nessuna fretta di partire. Trogir sta su un'isoletta incastrata tra la terraferma e Čiovo, unita a entrambe da ponti, e tutto il nucleo medievale è nella lista UNESCO. Il pezzo forte è la cattedrale di San Lorenzo, e sopra il portone principale c'è il portale di Radovan, scolpito nel 1240 e coperto di figure che meritano uno sguardo lento. Sali sul Kamerlengo, il forte veneziano tozzo sulla punta, per una vista sul canale e sul tuo stesso albero. Quando il caldo molla, la riva lungo l'acqua si riempie di gente: uniscitici per un gelato e un giro lento tra i vicoli di pietra. Dopo giorni all'ancora è una città facile da amare.",
+          "thingsToDo": [
+            "Vedere il portale di Radovan del 1240",
+            "Salire sulla fortezza Kamerlengo per la vista sul canale",
+            "Girare tra i vicoli medievali in pietra",
+            "Gelato sulla riva di Trogir"
+          ],
+          "mooringTip": "ACI Marina Trogir, sul lato di Čiovo, è il posto affidabile da prenotare. La riva lungo il lungomare è per soste brevi e prende l'onda del traffico di passaggio, quindi trattala come visita diurna."
+        },
+        "6": {
+          "shortDescription": "A sud, oltre Brač e Šolta, fino a Hvar, con la fortezza spagnola sopra la piazza e le isole Pakleni proprio di fronte.",
+          "description": "Parti verso metà mattina per fare la traversata prima che nel Canale di Hvar si alzi la brezza pomeridiana. Hvar è il porto più affollato e agghindato della costa, costruito attorno alla piazza aperta più grande della Dalmazia, con la fortezza Fortica del Cinquecento a dominarla. La salita al forte è ripida ma breve, e la vista sul porto e sulle isole Pakleni al tramonto si merita la sua fama. Giù in città la cattedrale di Santo Stefano chiude la piazza e nei vicoli dietro si nascondono piccole enoteche. Se la marina è piena, e d'estate spesso lo è, prendi un gavitello o un posto dall'altra parte, a Palmižana, alle Pakleni. Torna in città per un drink all'Hula-Hula e lascia che la notte vada per le lunghe.",
+          "thingsToDo": [
+            "Salire alla Fortica per il tramonto",
+            "La cattedrale di Santo Stefano e la piazza",
+            "Ancoraggio diurno alle isole Pakleni",
+            "Aperitivo al tramonto all'Hula-Hula bar"
+          ],
+          "mooringTip": "La riva di Hvar funziona a chi prima arriva ed è caotica in stagione, quindi metti in conto ACI Marina Palmižana su Sveti Klement, circa 2 miglia di traversata alle Pakleni, come ripiego sicuro da prenotare."
+        },
+        "7": {
+          "shortDescription": "Tappa più lunga, 35 miglia a sudest fino alla murata Korčula: vicoli a lisca di pesce, la storia di Marco Polo e calici di Grk bianco.",
+          "description": "È la traversata più lunga del viaggio, quindi parti presto e fai il pieno di carburante e acqua prima di mollare. Con un po' di fortuna il maestrale entra da nordovest e ti porta quasi fino in fondo al traverso. Korčula sorge su una piccola penisola ovale, con le strade disposte a lisca di pesce perché lo scirocco estivo venga incanalato senza trasformare i vicoli in gallerie di vento. La città gioca molto sull'essere il luogo di nascita di Marco Polo, e puoi visitare la casa che se ne intesta il merito. Sali sul campanile di San Marco per i tetti e il canale oltre. D'estate va ancora in scena la moreška, una danza delle spade combattuta con lame vere dagli abitanti. Chiudi con un bicchiere di Grk, il bianco secco coltivato sulle sabbie della vicina Lumbarda.",
+          "thingsToDo": [
+            "Salire sul campanile della cattedrale di San Marco",
+            "Visitare la casa di Marco Polo",
+            "Assistere alla danza delle spade moreška",
+            "Assaggiare il bianco Grk di Lumbarda"
+          ],
+          "mooringTip": "ACI Marina Korčula è piccola e in piena estate si riempie, quindi prenota in anticipo. Gli ormeggi lungo le mura del centro storico sono suggestivi come alternativa ma esposti al moto ondoso di passaggio: sistema bene parabordi e cima di poppa."
+        },
+        "8": {
+          "shortDescription": "A sud verso Lastovo, l'isola più remota della Croazia, con ancora a Skrivena Luka, uno dei porti naturali meglio riparati della costa.",
+          "description": "Arrivare a Lastovo costa fatica, ed è esattamente per questo che resta tranquilla. L'isola è un parco naturale protetto, fittamente boscoso, con qualche villaggio di pietra sparso e molte meno barche di Hvar o Korčula. Skrivena Luka, il Porto Nascosto, morde a fondo nella costa sud e si richiude quasi del tutto, così ti tiene calmo anche quando fuori soffia. Sopra c'è il vecchio faro di Struga, una bella camminata con una lunga vista sul mare aperto e sull'isolotto di Sušac. Qui non c'è molto da fare oltre a nuotare, camminare e mangiare, ed è proprio il punto. Un paio di konobe mettono gavitelli nella baia: prendine uno, ordina quello che le barche hanno portato in giornata e vai a dormire presto sotto un cielo senza un filo di inquinamento luminoso.",
+          "thingsToDo": [
+            "Camminata fino al faro di Struga",
+            "Bagno nell'insenatura riparata di Skrivena Luka",
+            "Pesce fresco in una konoba della baia",
+            "Guardare le stelle sul parco naturale buio"
+          ],
+          "mooringTip": "Fai il biglietto del Parco Naturale di Lastovo, poi prendi uno dei gavitelli dei ristoranti in fondo a Skrivena Luka, dove la cena a terra copre l'ormeggio. La tenuta sulla sabbia è buona se preferisci ancorare più al largo."
+        },
+        "9": {
+          "shortDescription": "25 miglia di mare aperto verso nord fino a Vis, chiusa per decenni dai militari e riaperta solo nel 1989, con arrivo al porto peschereccio di Komiža.",
+          "description": "Qui si va in mare vero, la tappa più esposta dell'itinerario, quindi controlla le previsioni la sera prima e scegli il tempo giusto. Vis è più al largo di qualsiasi altra isola abitata della Dalmazia centrale, e quell'isolamento fu imposto per anni, quando serviva da base militare jugoslava chiusa agli estranei fino al 1989. Komiža è il porto occidentale, un grumo di case di pietra attorno a un porto da pesca ancora in attività, dove le reti si asciugano sulla banchina. Sali sull'Hum nel tardo pomeriggio per il tramonto migliore dell'isola. Da Komiža è una breve uscita fino all'isolotto di Biševo e alla sua Grotta Azzurra, che si visita meglio a tarda mattina, quando la luce rende l'acqua elettrica. Mangia la komiška pogača, una focaccia bassa di acciughe e pomodoro, e avrai capito l'isola davvero.",
+          "thingsToDo": [
+            "Escursione alla Grotta Azzurra di Biševo",
+            "Salire sul colle Hum per il tramonto",
+            "Assaggiare la komiška pogača alle acciughe",
+            "Visitare il museo della pesca di Komiža"
+          ],
+          "mooringTip": "La riva del paese a Komiža va bene di giorno ma di notte rolla e ripara poco, quindi prenota ACI Marina Vis sull'altro lato dell'isola per una notte tranquilla. Programma la Grotta Azzurra con tempo calmo, perché con l'onda l'ingresso chiude."
+        },
+        "10": {
+          "shortDescription": "30 miglia di traversata a nordest fino a Zlarin, l'isola del corallo senza auto davanti a Šibenik, dove si raccoglie corallo rosso dal Quattrocento.",
+          "description": "Un'altra bella traversata, quindi parti con buon anticipo e goditi le miglia finché il vento tiene. Zlarin è un'isola bassa e verde vicino a Šibenik, con un solo paese raccolto attorno al porto e nemmeno un'auto. L'isola ha vissuto di corallo, raccolto a mano su questi fondali dal Quattrocento, e ancora oggi trovi piccole botteghe che trasformano il rosso profondo in gioielli. Gira per i vicoli, entra al centro del corallo che ne racconta la storia e, se ti prende, compra un pezzo direttamente da chi lo lavora. Qui tutto va al passo dell'uomo. Siediti su una panchina in riva al mare con un bicchiere di loza, la rakija d'uva locale, e lascia che pino e salsedine facciano il resto prima della cena a bordo.",
+          "thingsToDo": [
+            "Visitare il centro del corallo di Zlarin",
+            "Curiosare in una bottega di corallo ancora attiva",
+            "Camminare per i sentieri del paese senza auto",
+            "Loza, la rakija locale, sul porto"
+          ],
+          "mooringTip": "La banchina del porto di Zlarin è per soste brevi e può essere affollata, quindi per la notte dai fondo appena fuori dalla baia sulla sabbia tra 5 e 7 m. È aperta a ovest, perciò scegli una serata stabile."
+        },
+        "11": {
+          "shortDescription": "Breve risalita del fiume Krka fino a Skradin, cittadina murata dentro il Parco Nazionale Krka e via d'ingresso alle cascate di Skradinski Buk.",
+          "description": "Oggi il mare lascia il posto a un fiume. Dal canale di Šibenik giri verso l'interno e risali il Krka a motore, dentro una gola verde dai fianchi ripidi, fino a Skradin, piccola città medievale che sta alla fine del tratto navigabile. È l'anticamera del Parco Nazionale Krka. Il biglietto del parco comprende la barca elettrica che sale fino a Skradinski Buk, il complesso di cascate a gradoni dove il fiume scende su terrazze di travertino dentro larghe pozze. Vacci presto, prima che arrivino i pullman delle gite da Split. In paese, Skradin merita una serata: vicoli stretti e silenziosi quando la folla si dirada, e una fama meritata per il pršut e l'agnello di lunga cottura. Ormeggia in marina e passa la notte sul fiume.",
+          "thingsToDo": [
+            "Prendere la navetta fino a Skradinski Buk",
+            "Camminare per i vicoli medievali di Skradin",
+            "Pedalare un sentiero del parco del Krka",
+            "Pršut dalmata e agnello per cena"
+          ],
+          "mooringTip": "ACI Marina Skradin è proprio alla foce, in paese, ed è l'ormeggio notturno ovvio; prenota per luglio e agosto. L'avvicinamento sul fiume è ben segnalato e tranquillo, una chiusura di giornata facile."
+        },
+        "12": {
+          "shortDescription": "Giù per il fiume e breve tratto costiero fino a Tijat, isolotto deserto nel canale di Šibenik, con nient'altro a terra che pini.",
+          "description": "Dopo le cascate e la folla, questa è una giornata di niente, voluta. Ridiscendi il Krka, esci per il canale di Šibenik e infilati tra le isolette coperte di pini fino a Tijat, una gobba bassa e disabitata senza paese, senza konoba e senza un rubinetto d'acqua. Il bello è tutto lì. Dai fondo sul lato riparato, cala il kayak o il paddle e gironzola tra gli isolotti vicini con i tuoi tempi. Il bagno è silenzioso e lo snorkeling sulla posidonia regala qualche pesce e parecchi ricci, quindi tieni le scarpette. Se hai un'amaca, tirala all'ombra. La sera cucina semplice a bordo, sardine sulla brace se hai fatto scorta, e lascia che la luce di fonda sia l'unica nella baia.",
+          "thingsToDo": [
+            "Kayak tra gli isolotti coperti di pini",
+            "Snorkeling sui bassi fondali di posidonia",
+            "Amaca all'ombra dei pini",
+            "Sardine alla griglia all'ancora"
+          ],
+          "mooringTip": "A Tijat non ci sono gavitelli né servizi, quindi ancora su sabbia e posidonia tra 5 e 8 m e assicurati che l'ancora abbia fatto presa bene. Fai scorta di cibo, acqua e carburante prima, a Skradin o a Šibenik, perché qui non trovi nulla."
+        },
+        "13": {
+          "shortDescription": "8 miglia tranquille fino a Murter, la porta operativa delle Kornati e casa di molte famiglie che gestiscono le konobe dell'arcipelago.",
+          "description": "Ultima giornata piena, facile: una breve traversata fino a Murter per chiudere il cerchio vicino a dove cominciano i charter per le Kornati. Murter è una comunità isolana vera, non un resort, e molte delle famiglie che gestiscono le konobe dentro il parco nazionale hanno qui la casa. Slanica è la spiaggia più nota dell'isola, una baia bassa e sabbiosa ai margini del paese, buona per una nuotata lunga e comoda da raggiungere a piedi. Fai un salto al piccolo museo etnografico, poi cammina fino al ponte girevole di Tisno, che collega l'isola alla terraferma e si apre a orari fissi per far passare gli alberi. Per cena, cerca la pašticada: manzo marinato per giorni e stufato piano con prugne e vino rosso, servito sugli gnocchi fatti in casa. È il piatto giusto per l'ultima sera fuori.",
+          "thingsToDo": [
+            "Bagno nella spiaggia sabbiosa di Slanica",
+            "Visitare il museo etnografico di Murter",
+            "Camminata fino al ponte di Tisno",
+            "Pašticada, stufato di manzo, per cena"
+          ],
+          "mooringTip": "Marina Hramina e Marina Betina distano entrambe meno di un miglio dal centro di Murter e vanno bene entrambe; prenota d'estate. Hramina è la più grande e la più vicina alla spiaggia e al centro storico."
+        },
+        "14": {
+          "shortDescription": "Ventidue miglia finali su per il canale di Pašman fino a Zadar, con arrivo al tramonto tra le note dell'Organo Marino e il Saluto al Sole acceso.",
+          "description": "Ultima tappa verso casa, risalendo il riparato canale di Pašman verso Zadar. C'è tempo per un bagno finale, quindi infilati in una delle cale tranquille lungo Pašman e sfrutta l'acqua finché ce l'hai. Il canale è protetto e di solito calmo, una navigata senza pretese per chiudere. Punta ad arrivare a Zadar a fine giornata. Sulla punta della riva del centro storico, l'Organo Marino di Nikola Bašić suona quando l'onda spinge l'aria dentro le canne sotto i gradini, e accanto il disco del Saluto al Sole si accende all'imbrunire. Passa prima dal Foro Romano, poi chiudi il viaggio con un bicchierino di Maraschino, il liquore di ciliegie che a Zadar si fa da secoli. Due settimane e quasi tutta la Dalmazia centrale alle spalle.",
+          "thingsToDo": [
+            "Ultimo bagno in una cala di Pašman",
+            "Ascoltare l'Organo Marino sulla riva",
+            "Il Saluto al Sole all'imbrunire",
+            "Maraschino, il liquore di ciliegie, nel centro storico"
+          ],
+          "mooringTip": "Marina Zadar a Borik è la base charter abituale per la riconsegna. Prenota lo slot al pontile carburante con circa 24 ore di anticipo, perché la coda si allunga nel cambio equipaggi di venerdì e sabato."
+        }
+      }
+    },
+    "zadar-kornati-krka-route": {
+      "metaTitle": "Da Zadar a Kornati e Krka in 7 giorni | Boat4You",
+      "metaDesc": "Sette giorni da Zadar tra Telaščica, le isole Kornati e le cascate del Krka, con ormeggi in baie sabbiose come Sakarun e Vrgada.",
+      "days": {
+        "1": {
+          "shortDescription": "Circa 22 miglia da Zadar, oltre i pendii di ulivi di Ugljan, fino a Božava, con sosta bagno sulla sabbia di Sakarun lungo la strada.",
+          "description": "L'Organo Marino geme e sospira sotto la Riva mentre molli gli ormeggi, e come commiato è tra i migliori che un porto possa dare. Da Zadar sono circa 22 miglia di andatura costante al traverso, prima davanti agli oliveti terrazzati di Ugljan, poi attorno alla spalla nordovest di Dugi Otok. Di solito spezziamo la tappa a Sakarun, una rara lingua di sabbia bianca dove il fondale digrada così piano che tutta la baia si accende di verde chiaro. Dai fondo lì per il pranzo e una nuotata lunga prima di fare l'ultimo miglio dentro Božava. Il paese è minuscolo: una chiesa di pietra, un paio di konobe, le barche che dondolano alla banchina. Ordina l'orata alla griglia e mangia tardi, come fanno qui. Sopra l'albero i rondoni girano fino al buio.",
+          "thingsToDo": [
+            "Ancora e bagno alla spiaggia di Sakarun",
+            "Salire sulla torre del faro di Veli Rat",
+            "Orata alla griglia in una konoba di Božava",
+            "Ascoltare l'Organo Marino di Zadar alla partenza"
+          ],
+          "mooringTip": "La piccola marina e la banchina di Božava si riempiono presto a luglio e agosto, quindi chiama via radio o mettiti in conto di stare all'ancora. Sakarun tiene bene sulla sabbia tra 4 e 6 m ma si svuota se rinforza il maestrale da nordovest, perciò trattala come sosta diurna e non come ancoraggio notturno."
+        },
+        "2": {
+          "shortDescription": "Un breve tratto di 14 miglia lungo il lato esterno di Dugi Otok fino a Telaščica, tra le baie più riparate dell'Adriatico e porta d'ingresso alle Kornati.",
+          "description": "Parti da Božava dopo colazione: sono 14 miglia facili verso sud lungo il versante di mare aperto di Dugi Otok, però tieni d'occhio l'onda dove le falesie incontrano il largo. Telaščica si apre come un lungo dito di mare protetto, contornato da più di venti cale. Ormeggia e attraversa a piedi la lingua di terra fino a Mir, un lago salato che sta qualche grado sopra l'Adriatico ed è anche più salato; il fango sulle sue rive ha fama locale di far bene alla pelle. Da lì il sentiero sale in cima alle falesie di Stene, che scendono quasi 160 metri a picco nell'acqua. Restaci un po'. Scendendo è probabile che incontri gli asini semiselvatici del parco a cercare ombra nella macchia.",
+          "thingsToDo": [
+            "Bagno nel lago salato caldo di Mir",
+            "Salita in cima alle falesie di Stene",
+            "Cercare gli asini selvatici del parco",
+            "Pranzo in una konoba di Telaščica"
+          ],
+          "mooringTip": "C'è una tassa d'ingresso al parco che si paga al gavitello. La baia è uno degli ancoraggi notturni più sicuri della zona, ma in piena estate i campi boe si riempiono dal tardo pomeriggio, quindi prenota tramite una delle konobe o arriva presto."
+        },
+        "3": {
+          "shortDescription": "Solo 8 miglia dentro il labirinto di pietra nuda del Parco Nazionale Kornati: 89 isole di carso, con gavitelli dei ristoranti a Levrnaka e Piškera.",
+          "description": "Oggi appena 8 miglia, ma è il cuore del viaggio. Le Kornati sono 89 isole di roccia chiara e senza alberi: niente paesi, niente strade, quasi nulla oltre pietra e mare. Le falesie esposte, quelle che qui chiamano corone, guardano l'Adriatico aperto e prendono tutto il peso dell'onda. Ormeggia a Levrnaka e fai il bagno a Lojena, una delle poche spiagge di sabbia di tutto il parco. Se hai gambe, la salita sul Metlina, su Kornat, ti mette l'intero arcipelago sotto gli occhi. Verso sera di solito ci sistemiamo vicino a Piškera, dove tra i ruderi resta in piedi una vecchia cappella dei pescatori. Prenota il tavolo a terra, griglia quello che la konoba ha sbarcato la mattina e guarda il cielo fare il suo mestiere quando i generatori si spengono.",
+          "thingsToDo": [
+            "Bagno nella sabbia di Lojena, a Levrnaka",
+            "Salire al belvedere del Metlina, sull'isola di Kornat",
+            "Vedere la cappella dei pescatori di Piškera",
+            "Cena a un gavitello di ristorante nelle Kornati"
+          ],
+          "mooringTip": "All'ingresso si paga il biglietto giornaliero del parco; compralo online in anticipo, perché costa meno che a bordo. I gavitelli dei ristoranti a Levrnaka, Piškera e Vrulje sono gratuiti se ceni a terra, quindi prenota il tavolo e l'ormeggio arriva con quello."
+        },
+        "4": {
+          "shortDescription": "Navigazione costiera rilassata fino a Zlarin, l'isola del corallo senza auto, dove le famiglie raccolgono corallo rosso dal Quattrocento.",
+          "description": "Dopo la pietra nuda delle Kornati, Zlarin sembra quasi rigogliosa. È una veleggiata tranquilla verso sudest, in direzione dell'arcipelago di Šibenik, con il maestrale che di solito entra a mezzogiorno e ti regala un bel traverso nell'ultimo tratto. Sull'isola non circolano auto, così il ritmo cala nell'istante in cui scendi dalla barca. Zlarin commercia corallo rosso da cinque secoli, e il piccolo Centro della Tradizione del Corallo mette in fila gli attrezzi e la storia. Gira per i vicoli dietro al porto, davanti alle botteghe dove qualche artigiano lucida ancora a mano. La sera prendi una panchina sull'acqua con un bicchiere di rakija locale e guarda i vecchi sbattere le carte a briškula. Le fortezze di Šibenik si accendono d'oro dall'altra parte del canale mentre la luce se ne va.",
+          "thingsToDo": [
+            "Visitare il Centro della Tradizione del Corallo",
+            "Camminare per i vicoli del porto senza auto",
+            "Rakija locale sulla panchina del lungomare",
+            "Assistere a una partita di briškula"
+          ],
+          "mooringTip": "La banchina del paese a Zlarin è corta e va considerata un ormeggio diurno; in stagione arriva prima di metà pomeriggio se vuoi un posto. Per una notte tranquilla, dai fondo appena fuori dal porto sulla sabbia tra 5 e 7 m e sbarca col tender."
+        },
+        "5": {
+          "shortDescription": "Verso l'interno lungo il Krka fino a Skradin, cittadina murata del Medioevo e via d'acqua per le celebri cascate del Krka.",
+          "description": "Oggi ti lasci il mare alle spalle. La rotta entra nel canale di Šibenik, passa sotto il ponte e risale la gola verde del fiume Krka, con un limite di velocità severo una volta dentro: prenditi tempo e goditi i riflessi. Skradin sta dove il fiume si allarga, un paese compatto di archi in pietra e cortili ombrosi. Dalla banchina le barche del parco nazionale salgono fino a Skradinski Buk, il complesso di cascate a gradoni che ha reso famoso il Krka: passerelle di legno si infilano tra i salti e le pozze. Tieni spazio per la tavola. Il risotto di Skradin sobbolle quasi un giorno intero, e il pršut e il formaggio locali fanno un pranzo facile in coperta. Chi va in bici può prendere un sentiero del parco che segue l'acqua verso monte.",
+          "thingsToDo": [
+            "Salire in barca fino alle cascate di Skradinski Buk",
+            "Girare per i vicoli medievali di Skradin",
+            "Assaggiare il risotto di Skradin di lunga cottura",
+            "Pedalare un sentiero lungo il Krka"
+          ],
+          "mooringTip": "ACI Marina Skradin è proprio alla foce del fiume ed è la scelta pratica per la notte; prenota con largo anticipo per luglio e agosto. La banchina del paese è solo per soste brevi e nel fiume e nel lago di Prokljan non si può ancorare, quindi non contare di dare fondo qui."
+        },
+        "6": {
+          "shortDescription": "Di nuovo in acqua salata e circa 18 miglia fino a Vrgada, isola senza auto vicino a Pirovac con una rara lingua di sabbia soffice.",
+          "description": "Ridiscendi il fiume fino alla costa e metti la prua a nordovest: sono circa 18 miglia fino a Vrgada, isola bassa e verde davanti a Pirovac che quasi tutti gli itinerari da charter saltano. Ed è proprio il punto. La baia di Luka digrada su sabbia vera, merce rara da queste parti, quindi l'ancoraggio si accende dello stesso azzurro chiaro che avevi visto a Sakarun. A terra c'è poco: quattro case, pinete, sentieri e nessuna auto. Cammina lungo una delle tracce fino alle spiagge dall'altra parte e frugati la battigia. D'estate aprono un paio di konobe familiari e, se sulla lavagna c'è il brudet, ordinalo: lo stufato dei pescatori qui è lento e onesto. L'isola si riempie un po' in agosto e a settembre torna vuota.",
+          "thingsToDo": [
+            "Bagno nella baia sabbiosa di Luka",
+            "Camminare i sentieri dell'isola senza auto",
+            "Cercare conchiglie sulle spiagge tranquille dall'altro lato",
+            "Brudet, stufato di pesce, in una konoba di famiglia"
+          ],
+          "mooringTip": "Vrgada ha gavitelli dei ristoranti davanti alla baia di Luka, gratuiti se ceni a terra. La tenuta è buona sulla sabbia tra 4 e 6 m se preferisci ancorare e tenerti la serata per te; con vento da sud può rollare, quindi infilati bene dentro."
+        },
+        "7": {
+          "shortDescription": "Le ultime 22 miglia risalgono a nord il canale di Pašman fino a Zadar, con arrivo dopo il buio per lo spettacolo del Saluto al Sole sulla riva.",
+          "description": "L'ultimo giorno sono 22 miglia lineari su per il canale di Pašman, e non c'è fretta se lasci Vrgada a metà mattina. Infila un ultimo bagno ovunque l'acqua ti tenti, davanti a Pašman o a Ugljan. Punta a rientrare a Zadar nel tardo pomeriggio, così consegni la barca e ti resta comunque la serata. Il centro storico ripaga una passeggiata lenta: la chiesa rotonda di San Donato, le pietre del Foro Romano sparse sotto i piedi, colonne levigate dai secoli. Resta fuori oltre il tramonto. Il Saluto al Sole, un grande disco di celle solari incassato nella Riva, si sveglia quando la luce cala e ti getta colori attorno ai piedi mentre l'Organo Marino suona l'onda. Brinda alla settimana con un Maraschino, il liquore di ciliegie che a Zadar si produce da duecento anni.",
+          "thingsToDo": [
+            "Ultimo bagno davanti a Pašman o Ugljan",
+            "Il Foro Romano e la chiesa di San Donato",
+            "Il Saluto al Sole all'imbrunire",
+            "Assaggiare il Maraschino, il liquore di ciliegie di Zadar"
+          ],
+          "mooringTip": "Marina Zadar a Borik è la base charter abituale per la riconsegna, anche se alcune flotte rientrano a Marina Dalmacija a Sukošan, quindi controlla i documenti. In ogni caso prenota lo slot carburante con un giorno di anticipo: i pontili si intasano nei cambi equipaggio di venerdì e sabato."
+        }
+      }
     }
   },
   "areas": {
