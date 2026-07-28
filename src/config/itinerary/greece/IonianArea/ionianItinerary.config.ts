@@ -24,7 +24,7 @@ const ionianItinerary: Itinerary = {
   },
   title: 'Ionian area yacht charter itinerary',
   backgroundImage: {
-    src: '/images/destinations/greece/greece-banner.webp',
+    src: '/images/itinerary/greece/banners/corfu-banner-large.webp',
     alt: 'Ionian area banner image',
   },
   description: `The Ionian Sea is the gentlest charter ground in Greece — protected channels between Lefkada, Kefalonia, Ithaca and Meganisi, light afternoon thermals (rarely above 5 Bft), and a chain of small fishing-village ports where charter pressure is much lower than the Cyclades. Lefkada (Marina Lefkas) and Corfu (Marina Gouvia) handle the bulk of bareboat embarkations; Preveza on the mainland is third. Distances are shorter — most legs are 8–18 NM — and almost everything is line-of-sight, which makes this the best Greek charter base for first-time skippers and families with young kids.

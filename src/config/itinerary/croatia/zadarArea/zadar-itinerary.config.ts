@@ -27,7 +27,7 @@ const zadarItinerary: Itinerary = {
   },
   title: 'Zadar area yacht charter itinerary',
   backgroundImage: {
-    src: '/images/destinations/croatia/croatia-banner.webp',
+    src: '/images/itinerary/croatia/banners/kornati-banner-large.webp',
     alt: 'Zadar',
   },
   description: `The Zadar charter cluster — Marina Sukošan, Marina Kornati Biograd, Marina Tankerkomerc Zadar — sits north of Šibenik and gives the most direct northbound route into Pag, Lošinj and the Kvarner Gulf, plus southbound access to the Kornati national park within 12 NM of departure. Zadar Airport handles direct flights from most European hubs in summer, and the road from Zagreb runs an easy 3 hours via the A1 motorway.

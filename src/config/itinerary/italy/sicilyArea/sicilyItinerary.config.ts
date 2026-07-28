@@ -14,7 +14,7 @@ const sicilyItinerary: Itinerary = {
   },
   title: 'Sicily area yacht charter itinerary',
   backgroundImage: {
-    src: '/images/destinations/italy/italy-banner.webp',
+    src: '/images/itinerary/italy/banners/favignana-banner-large.webp',
     alt: 'Sicily',
   },
   description: `Sicily and the Aeolian Islands offer Italy's most dramatic charter ground — seven volcanic islands including the constantly-erupting Stromboli (its lava flow is visible from sea after dark, the "Sciara del Fuoco" sliding down the north-west face into the water roughly every 10–20 minutes), the active Vulcano with its sulphuric mud baths and the post-eruption Gran Cratere walk, and the wine-and-caper terraces of Salina. Charters depart from Portorosa or Capo d'Orlando on Sicily's north coast (90-minute drive from Catania-Fontanarossa airport CTA, 2 hours from Palermo PMO); the Aeolian chain sits 25–40 NM offshore, putting Lipari and Vulcano within a single day-sail and Stromboli within reach by day 3.

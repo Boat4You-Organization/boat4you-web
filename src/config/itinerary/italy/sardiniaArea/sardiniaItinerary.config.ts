@@ -14,7 +14,7 @@ const sardiniaItinerary: Itinerary = {
   },
   title: 'Sardinia area yacht charter itinerary',
   backgroundImage: {
-    src: '/images/destinations/italy/italy-banner.webp',
+    src: '/images/itinerary/italy/banners/golfo-banner.webp',
     alt: 'Sardinia',
   },
   description: `Northeast Sardinia and the La Maddalena Archipelago deliver the western Mediterranean's clearest water — granite-cove anchorages with 10–14 m visibility on a settled day, white-sand beaches that pose against turquoise lagoons, and the Costa Smeralda's exclusive marina cluster (Porto Cervo, Porto Rotondo, Cala di Volpe) for the high-end charter market. Charters launch from Marina di Olbia (the main commercial port and the broadest fleet selection), Marina di Portisco (10 minutes north, more bareboat-focused), or Porto Rotondo (smaller, walkable to the piazza, slightly higher overnight rates). Olbia–Costa Smeralda airport (OLB) is 20 minutes from all three and runs direct EU flights April through October from London, Manchester, Düsseldorf, Frankfurt, Munich, Vienna, Geneva, Madrid and most major Italian hubs.

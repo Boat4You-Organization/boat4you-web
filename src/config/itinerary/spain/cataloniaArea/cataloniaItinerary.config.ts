@@ -14,7 +14,7 @@ const cataloniaItinerary: Itinerary = {
   },
   title: 'Catalonia area yacht charter itinerary',
   backgroundImage: {
-    src: '/images/destinations/spain/spain-banner.webp',
+    src: '/images/itinerary/spain/banners/barcelona-banner-large.webp',
     alt: 'Catalonia',
   },
   description: `The Catalan coast — Costa Brava in the north (240 km of cliff-and-cove coastline from Blanes to the French border), Barcelona's Port Olímpic / Port Vell in the centre, Sitges and the Costa Daurada south — gives charters the easiest big-city embarkation in Spain. Direct EU flights into Barcelona-El Prat (BCN) make Saturday-afternoon check-in painless from London, Manchester, Dublin, Paris, Berlin, Munich, Vienna, Amsterdam, Brussels, Zürich, Geneva, Stockholm, Milan and Rome year-round. The marina cluster around Port Forum, Port Vell and Marina Vela handles the bulk of bareboat departures; Marina 92 and Port Ginesta (15 km south at Sitges) are the bareboat-friendly alternatives with lower overnight rates.

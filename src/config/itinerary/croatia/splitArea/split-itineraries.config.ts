@@ -24,7 +24,7 @@ const splitItinerary: Itinerary = {
   },
   title: 'Split area yacht charter itinerary',
   backgroundImage: {
-    src: '/images/destinations/croatia/croatia-banner.webp',
+    src: '/images/itinerary/croatia/banners/hvar-banner-large.webp',
     alt: 'Split',
   },
   description: `Split anchors the central Dalmatian charter market and pulls roughly two-thirds of all Croatian yacht bookings each season — for good reason. Marina Kaštela, ACI Trogir and Marina Baotić sit twenty minutes from the airport, the Roman-era Diocletian's Palace runs as the city's living downtown, and a single Saturday-to-Saturday week lets you reach Šolta, Brač, Hvar, Vis, Korčula and back without ever doing more than 25 nautical miles in a day.

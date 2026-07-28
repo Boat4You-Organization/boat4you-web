@@ -22,7 +22,7 @@ const dubrovnikItinerary: Itinerary = {
   },
   title: 'Dubrovnik area yacht charter itinerary',
   backgroundImage: {
-    src: '/images/destinations/croatia/croatia-banner.webp',
+    src: '/images/itinerary/croatia/banners/dubrovnik-banner-large.webp',
     alt: 'Dubrovnik',
   },
   description: `Charters from Dubrovnik live and die by the southern flank of the Dalmatian coast — Mljet National Park 17 NM north, Lastovo 25 NM west, the Pelješac peninsula's wine villages a comfortable day-sail away. ACI Marina Dubrovnik (Komolac) and Marina Frapa Dubrovnik handle most of the fleet, with the airport at Čilipi twenty minutes south of both. Embarkation Saturday afternoons, return the following Saturday by 09:00 — same as the rest of Croatia, but with a noticeably calmer weather window than Split because you sit south of the bora's main reach.

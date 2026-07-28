@@ -14,7 +14,7 @@ const bodrumItinerary: Itinerary = {
   },
   title: 'Bodrum area yacht charter itinerary',
   backgroundImage: {
-    src: '/images/destinations/turkey/turkey-banner.webp',
+    src: '/images/itinerary/turkey/banners/bodrum-banner-large.webp',
     alt: 'Bodrum',
   },
   description: `Bodrum is the western embarkation hub for Turkish yacht charters — Yalıkavak Marina (the largest superyacht marina in the eastern Mediterranean, 400+ berths, the Med's busiest 60+ m yacht cluster after Antibes), Turgutreis Marina (the bareboat fleet centre, lower overnight rates and fast access to the western anchorages), and Bodrum's own Marmara Marina inside the castle bay (closest to Bodrum Old Town, walking distance to the Mausoleum at Halicarnassus). All three handle embarkation; Milas-Bodrum airport (BJV) is 35 minutes north and runs direct EU flights April through October.

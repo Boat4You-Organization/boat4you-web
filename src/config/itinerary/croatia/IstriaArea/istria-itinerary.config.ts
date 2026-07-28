@@ -22,7 +22,7 @@ const istriaItinerary: Itinerary = {
   },
   title: 'Istria area yacht charter itinerary',
   backgroundImage: {
-    src: '/images/destinations/croatia/croatia-banner.webp',
+    src: '/images/itinerary/croatia/banners/cres-banner-large.webp',
     alt: 'Istria',
   },
   description: `The Istrian charter market sits in northern Croatia and serves a different audience from Dalmatia: shorter passages between sheltered Kvarner Gulf islands, easier road access from Slovenia/Italy/Austria via Trieste or Ljubljana, and a culinary scene built on truffle, olive oil and Malvazija wine rather than Dalmatian seafood-and-wood-fire. Marina ACI Pula, Marina Pomer and Marina Punat (on Krk) handle most embarkations, with weekly check-in / check-out as in the rest of Croatia.

@@ -21,7 +21,7 @@ const amalfiItinerary: Itinerary = {
   },
   title: 'Amalfi area yacht charter itinerary',
   backgroundImage: {
-    src: '/images/destinations/italy/italy-banner.webp',
+    src: '/images/itinerary/italy/banners/amalfi-banner-large.webp',
     alt: 'Amalfi',
   },
   description: `The Amalfi Coast and the Gulf of Naples form Italy's most photographed charter ground — a 50-NM crescent of cliffside villages (Positano, Amalfi, Ravello, Praiano, Atrani, Cetara, Maiori, Minori, Furore), the islands of Capri, Ischia and Procida, and the Sorrento peninsula's pastel ports. Charters launch from Marina di Stabia (Castellammare, 30 minutes from Naples airport NAP), from Sorrento (15 minutes further south on the peninsula, smaller marina but walkable to the town centre), or from Salerno on the south side of the peninsula (the standout for crews wanting to start the loop at Amalfi-town itself or extending south toward Cilento). Northern long-week one-ways launch from Genoa or Lavagna, adding the Cinque Terre, Portofino, Portovenere and the upper Tyrrhenian to the standard Amalfi route.

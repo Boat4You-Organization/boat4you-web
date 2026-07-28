@@ -15,7 +15,7 @@ const ibizaItinerary: Itinerary = {
   },
   title: 'Ibiza area yacht charter itinerary',
   backgroundImage: {
-    src: '/images/destinations/spain/spain-banner.webp',
+    src: '/images/itinerary/spain/banners/ibiza-banner-large.webp',
     alt: 'Ibiza',
   },
   description: `Ibiza sits 80 NM south of Mallorca and 4 NM north of Formentera, at the western edge of the Balearic chain. The island runs roughly 41 km north-south and 25 km east-west — the whole coastline is reachable in a 7-day charter without ever clocking more than a 20 NM day. Three embarkation marinas serve the charter fleet: Marina Ibiza in Ibiza Town (300+ berths, the megayacht cluster, walking distance to the Old Town and beach-club transfers), Marina Botafoch (the upscale alternative on the north side of the harbour, slightly quieter), and Sant Antoni on the west coast (smaller, faster access to Cala Conta and Es Vedrà, lower mooring fees). Ibiza Airport (IBZ) is 15 minutes from Ibiza Town and 25 from Sant Antoni; direct flights run April through October from London, Manchester, Paris, Milan, Munich, Zürich, Amsterdam and most major EU hubs.

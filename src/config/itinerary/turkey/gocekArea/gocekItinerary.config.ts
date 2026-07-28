@@ -14,7 +14,7 @@ const gocekItinerary: Itinerary = {
   },
   title: 'Gocek area yacht charter itinerary',
   backgroundImage: {
-    src: '/images/destinations/turkey/turkey-banner.webp',
+    src: '/images/itinerary/turkey/banners/oludeniz-banner-large.webp',
     alt: 'Gocek',
   },
   description: `Göcek is the eastern Turkish charter base — D-Marin Göcek, Skopea Marina and Marinturk Village Port between them handle the bulk of embarkations, with Dalaman airport (DLM) 15 minutes north and running direct EU flights April through October from London, Manchester, Berlin, Vienna, Brussels, Amsterdam and most major German hubs. Göcek itself is a small town built around the marinas; most charterers see only the marina, the chandlery and the first restaurant on the way back to the boat, but the village holds its own and the Sunday morning markets are worth the 10-minute walk inland.

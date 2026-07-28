@@ -20,7 +20,7 @@ const mallorcaItinerary: Itinerary = {
   },
   title: 'Mallorca area yacht charter itinerary',
   backgroundImage: {
-    src: '/images/destinations/spain/spain-banner.webp',
+    src: '/images/itinerary/spain/banners/ciutadella-banner-large.webp',
     alt: 'Mallorca',
   },
   description: `Mallorca is the largest Balearic and the most balanced charter ground in the western Mediterranean — Palma's deep marina cluster (Marina Port de Mallorca, Real Club Náutico de Palma, Marina Naviera Balear, Club de Mar, STP) gives the broadest fleet selection in Spain by berth count, the southern and eastern coasts have the cove-and-cala anchorages (Cala Pi, Cala Mondragó, Cala Figuera, Cala d'Or, Porto Petro), the Cabrera National Park sits 8 NM south of the Cap de Salinas tip, and the western Tramuntana coast offers dramatic cliff-backed sailing past Sa Calobra and Port de Sóller. Direct EU flights into Palma airport (PMI — Spain's third-busiest after MAD and BCN) make Saturday-afternoon embarkation effortless from London, Manchester, Dublin, Paris, Berlin, Munich, Vienna, Amsterdam, Zürich, Geneva, Stockholm, Copenhagen and most major Italian hubs.

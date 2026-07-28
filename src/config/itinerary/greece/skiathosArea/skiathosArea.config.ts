@@ -14,7 +14,7 @@ const skiathosItinerary: Itinerary = {
   },
   title: 'Sporades area yacht charter itinerary',
   backgroundImage: {
-    src: '/images/destinations/greece/greece-banner.webp',
+    src: '/images/itinerary/greece/banners/alonissos-banner-large.webp',
     alt: 'Sporades area banner image',
   },
   description: `The Sporades sit in the central-Aegean cluster between mainland Greece and the Northern Aegean — Skiathos, Skopelos, Alonissos and the Marine National Park of Alonissos. Charters depart from Skiathos Marina (the standout commercial base, 5 minutes from Skiathos airport JSI with direct EU flights April through October) or from Volos on the mainland (a 90 NM transit from Athens that lands the same fleet at 20–30% lower weekly rates — worth it for charters with one-way time or budget pressure). The chain is short enough that a 7-day week comfortably covers the four main islands without one-way logistics, with passages typically 15–25 NM and harbour density allowing every-night-in-port if the crew wants it.

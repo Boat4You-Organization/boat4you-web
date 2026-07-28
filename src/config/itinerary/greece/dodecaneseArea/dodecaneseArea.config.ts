@@ -14,7 +14,7 @@ const dodecaneseItinerary: Itinerary = {
   },
   title: 'Dodecanese area yacht charter itinerary',
   backgroundImage: {
-    src: '/images/destinations/greece/greece-banner.webp',
+    src: '/images/itinerary/greece/banners/chalki-banner.webp',
     alt: 'Dodecanese area banner image',
   },
   description: `The Dodecanese is the eastern Aegean charter chain — twelve major islands hugging the Turkish coast, with Rhodes (RHO airport) and Kos (KGS) as primary embarkation marinas. The proximity to Turkey opens up cross-border one-way charters: Bodrum → Rhodes via Symi (Greek port-of-entry checkpoint at Symi) is a popular 7-day delivery format, and Bodrum → Kos via Kalymnos is the shorter cross-border option for crews wanting a half-Turkish half-Greek week. The cluster's southern position keeps the meltemi noticeably softer than the Cyclades while still providing reliable 3–5 Bft afternoon sailing wind.

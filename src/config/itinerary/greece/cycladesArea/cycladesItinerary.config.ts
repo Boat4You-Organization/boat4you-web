@@ -17,7 +17,7 @@ const cycladesItinerary: Itinerary = {
   },
   title: 'Cyclades area yacht charter itinerary',
   backgroundImage: {
-    src: '/images/destinations/greece/greece-banner.webp',
+    src: '/images/itinerary/greece/banners/Kythnos-banner-large.webp',
     alt: 'Cyclades area banner image',
   },
   description: `The Cyclades are the most demanding charter ground in Greece — and the most photogenic. Bases at Athens (Alimos, Kalamaki, Lavrion) put you 30–45 NM from Kea on the first leg, and from there the meltemi (typically 4–6 Bft, peaking 7+ in late July/August) drives a southward arc through Kythnos, Serifos, Sifnos, Paros, Mykonos, Santorini and Ios. Charters that try to claw back north against the meltemi without time and patience get expensive in fuel and uncomfortable in passages — the conventional one-way drop in Paros or Mykonos solves both.

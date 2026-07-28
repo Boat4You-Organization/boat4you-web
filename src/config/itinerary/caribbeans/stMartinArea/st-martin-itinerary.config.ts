@@ -9,7 +9,7 @@ const stmartinItinerary: Itinerary = {
   id: 'st-martin',
   sailingArea: 'St. Martin',
   image: {
-    src: '/images/destinations/stmartin/card.webp',
+    src: '/images/itinerary/caribbeans/destinations/marigot.webp',
     alt: 'St. Martin',
   },
   title: 'area.title',
