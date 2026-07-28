@@ -7,7 +7,10 @@ const dutchWaters14Route: ItineraryRoute = {
   id: 'dutch-waters-14-days',
   startingPoint: 'Lemmer',
   otherPoints: ['Enkhuizen', 'Muiden', 'Makkum'],
-  cardImage: { src: '/images/itinerary/netherlands/netherlands-photos/lemmer.webp', alt: 'IJsselmeer & Dutch Waters' },
+  cardImage: {
+    src: '/images/itinerary/netherlands/netherlands-photos/enkhuizen-harbour.webp',
+    alt: 'Enkhuizen Harbour',
+  },
   gallery: [
     { src: '/images/itinerary/netherlands/netherlands-photos/enkhuizen-harbour.webp', alt: 'Enkhuizen Harbour' },
     { src: '/images/itinerary/netherlands/netherlands-photos/flat-bottom-ships.webp', alt: 'Flat Bottom Ships' },

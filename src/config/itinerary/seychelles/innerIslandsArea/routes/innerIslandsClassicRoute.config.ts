@@ -7,7 +7,10 @@ const innerIslandsClassicRoute: ItineraryRoute = {
   id: 'inner-islands-classic',
   startingPoint: 'Eden Island (Mahe)',
   otherPoints: ['Praslin (Baie Sainte Anne)', 'La Digue'],
-  cardImage: { src: '/images/itinerary/seychelles/seychelles-photos/mahe-eden-island.webp', alt: 'Seychelles' },
+  cardImage: {
+    src: '/images/itinerary/seychelles/seychelles-photos/curieuse-tortoises.webp',
+    alt: 'Curieuse Tortoises',
+  },
   gallery: [
     { src: '/images/itinerary/seychelles/seychelles-photos/curieuse-tortoises.webp', alt: 'Curieuse Tortoises' },
     {

@@ -7,7 +7,7 @@ const amalfiCilento14Route: ItineraryRoute = {
   id: 'amalfi-cilento-14-days',
   startingPoint: 'Salerno',
   otherPoints: ['Acciaroli', 'Agropoli', 'Amalfi'],
-  cardImage: { src: '/images/itinerary/italy/amalfi-itinerary/routes/genova.webp', alt: '14-day route' },
+  cardImage: { src: '/images/itinerary/italy/banners/amalfi-banner-large.webp', alt: 'Amalfi Banner Large' },
   gallery: [
     { src: '/images/itinerary/italy/destinations/acciaroli.webp', alt: 'Acciaroli' },
     { src: '/images/itinerary/italy/destinations/agropoli.webp', alt: 'Agropoli' },

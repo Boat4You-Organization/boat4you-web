@@ -7,7 +7,7 @@ const costaBrava14Route: ItineraryRoute = {
   id: 'costa-brava-14-days',
   startingPoint: 'Barcelona (Port Olímpic)',
   otherPoints: ['Arenys de Mar', 'Blanes', 'Calella'],
-  cardImage: { src: '/images/itinerary/spain/catalonia-itinerary/routes/barcelona.webp', alt: '14-day route' },
+  cardImage: { src: '/images/itinerary/spain/banners/badalona-banner-large.webp', alt: 'Badalona Banner Large' },
   gallery: [
     { src: '/images/itinerary/spain/destinations/alcudia.webp', alt: 'Alcudia' },
     { src: '/images/itinerary/spain/destinations/badalona.webp', alt: 'Badalona' },

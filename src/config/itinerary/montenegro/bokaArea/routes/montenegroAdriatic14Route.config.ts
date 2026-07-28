@@ -7,7 +7,7 @@ const montenegroAdriatic14Route: ItineraryRoute = {
   id: 'montenegro-adriatic-14-days',
   startingPoint: 'Porto Montenegro (Tivat)',
   otherPoints: ['Kotor', 'Sveti Stefan', 'Bar'],
-  cardImage: { src: '/images/itinerary/montenegro/montenegro-photos/porto-montenegro-tivat.webp', alt: 'Montenegro' },
+  cardImage: { src: '/images/itinerary/montenegro/montenegro-photos/budva-old-town.webp', alt: 'Budva Old Town' },
   gallery: [
     { src: '/images/itinerary/montenegro/montenegro-photos/budva-old-town.webp', alt: 'Budva Old Town' },
     { src: '/images/itinerary/montenegro/montenegro-photos/herceg-novi.webp', alt: 'Herceg Novi' },

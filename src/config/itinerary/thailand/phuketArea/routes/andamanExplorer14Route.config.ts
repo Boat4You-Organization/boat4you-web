@@ -7,7 +7,7 @@ const andamanExplorer14Route: ItineraryRoute = {
   id: 'andaman-explorer-14-days',
   startingPoint: 'Yacht Haven (Phuket)',
   otherPoints: ['Ko Phi Phi Don', 'Ko Lanta', 'Ko Kradan'],
-  cardImage: { src: '/images/itinerary/thailand/thailand-photos/thailand-andaman.webp', alt: 'Thailand (Andaman Sea)' },
+  cardImage: { src: '/images/itinerary/thailand/thailand-photos/ko-hong-lagoon.webp', alt: 'Ko Hong Lagoon' },
   gallery: [
     { src: '/images/itinerary/thailand/thailand-photos/ko-hong-lagoon.webp', alt: 'Ko Hong Lagoon' },
     { src: '/images/itinerary/thailand/thailand-photos/ko-lanta.webp', alt: 'Ko Lanta' },

@@ -8,7 +8,7 @@ const olbiaLongRoute: ItineraryRoute = {
   id: 'olbia-long',
   startingPoint: 'Olbia',
   otherPoints: ['Long'],
-  cardImage: { src: '/images/itinerary/italy/sardinia-itinerary/routes/olbia-long.webp', alt: 'Card image' },
+  cardImage: { src: '/images/itinerary/italy/banners/olbia-banner-large.webp', alt: 'Olbia Banner Large' },
   gallery: [
     { src: '/images/itinerary/italy/banners/rotondo-banner-large.webp', alt: '' },
     { src: '/images/itinerary/italy/banners/olbia-banner-large.webp', alt: '' },

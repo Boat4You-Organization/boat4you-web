@@ -7,7 +7,7 @@ const gokovaGulf14Route: ItineraryRoute = {
   id: 'gokova-gulf-14-days',
   startingPoint: 'Bodrum',
   otherPoints: ['Akyaka', 'Cleopatra Island', 'Didim'],
-  cardImage: { src: '/images/itinerary/turkey/bodrum-itinerary/routes/bodrum.webp', alt: '14-day route' },
+  cardImage: { src: '/images/itinerary/turkey/banners/aegean-banner-large.webp', alt: 'Aegean Banner Large' },
   gallery: [
     { src: '/images/itinerary/turkey/destinations/akyaka.webp', alt: 'Akyaka' },
     { src: '/images/itinerary/turkey/destinations/bodrum-marina.webp', alt: 'Bodrum Marina' },

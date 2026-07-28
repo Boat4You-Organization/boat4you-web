@@ -7,7 +7,7 @@ const cannesLerinsStTropezRoute: ItineraryRoute = {
   id: 'cannes-lerins-st-tropez',
   startingPoint: 'Cannes',
   otherPoints: ['Saint-Tropez', 'Porquerolles'],
-  cardImage: { src: '/images/itinerary/france/cote-azur-photos/cannes.webp', alt: "Côte d'Azur" },
+  cardImage: { src: '/images/itinerary/france/cote-azur-photos/iles-de-lerins.webp', alt: "Côte d'Azur" },
   gallery: [
     { src: '/images/itinerary/france/cote-azur-photos/antibes.webp', alt: 'Antibes' },
     { src: '/images/itinerary/france/cote-azur-photos/cannes.webp', alt: 'Cannes' },

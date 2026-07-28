@@ -7,7 +7,7 @@ const aeolianFullCircle14Route: ItineraryRoute = {
   id: 'aeolian-full-circle-14-days',
   startingPoint: 'Portorosa',
   otherPoints: ['Cefalù', 'Filicudi Porto', 'Lipari'],
-  cardImage: { src: '/images/itinerary/italy/sicily-itinerary/routes/capo-dorlando.webp', alt: '14-day route' },
+  cardImage: { src: '/images/itinerary/italy/banners/acciaroli-banner.webp', alt: 'Acciaroli Banner' },
   gallery: [
     { src: '/images/itinerary/italy/destinations/acciaroli.webp', alt: 'Acciaroli' },
     { src: '/images/itinerary/italy/destinations/agropoli.webp', alt: 'Agropoli' },

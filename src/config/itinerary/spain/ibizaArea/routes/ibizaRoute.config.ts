@@ -8,7 +8,7 @@ const ibizaRoute: ItineraryRoute = {
   id: 'ibiza',
   startingPoint: 'Marina Eivissa',
   otherPoints: [],
-  cardImage: { src: '/images/itinerary/spain/ibiza-itinerary/routes/ibiza.webp', alt: 'Card image' },
+  cardImage: { src: '/images/itinerary/spain/banners/ibiza-banner-large.webp', alt: 'Ibiza Banner Large' },
   gallery: [
     { src: '/images/itinerary/spain/banners/ibiza-banner-large.webp', alt: '' },
     { src: '/images/itinerary/spain/banners/vedella-banner-large.webp', alt: '' },

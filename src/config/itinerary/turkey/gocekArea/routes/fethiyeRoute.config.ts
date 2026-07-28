@@ -8,7 +8,7 @@ const fethiyeRoute: ItineraryRoute = {
   id: 'fethiye',
   startingPoint: 'Fethiye',
   otherPoints: [],
-  cardImage: { src: '/images/itinerary/turkey/bodrum-itinerary/routes/bodrum-didim.webp', alt: 'Card image' },
+  cardImage: { src: '/images/itinerary/turkey/destinations/fethiye.webp', alt: 'Fethiye' },
   gallery: [
     { src: '/images/itinerary/turkey/banners/oludeniz-banner-large.webp', alt: '' },
     { src: '/images/itinerary/turkey/banners/yassica-banner-large.webp', alt: '' },

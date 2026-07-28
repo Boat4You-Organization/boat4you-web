@@ -7,7 +7,7 @@ const ajaccioSouthCorsicaRoute: ItineraryRoute = {
   id: 'ajaccio-south-corsica',
   startingPoint: 'Ajaccio',
   otherPoints: ['Bonifacio', 'Iles Lavezzi'],
-  cardImage: { src: '/images/itinerary/france/corsica-photos/ajaccio.webp', alt: 'Corsica' },
+  cardImage: { src: '/images/itinerary/france/corsica-photos/bonifacio-cliffs.webp', alt: 'Bonifacio Cliffs' },
   gallery: [
     { src: '/images/itinerary/france/corsica-photos/ajaccio.webp', alt: 'Ajaccio' },
     { src: '/images/itinerary/france/corsica-photos/bonifacio-cliffs.webp', alt: 'Bonifacio Cliffs' },
