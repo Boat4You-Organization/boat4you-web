@@ -3556,6 +3556,429 @@
           "mooringTip": "Vratite je u Marinu Frapa Slano kako nalaže vaš ugovor; voditelj baze uputit će vas na vez. Termin subotnje primopredaje je od 08:00 do 09:00, pa ako vaši papiri traže povratak večer prije, budite uz vez do 17:00 u petak. Benzinski ponton je na zapadnoj strani ulaza u marinu."
         }
       }
+    },
+    "trogir-kornati-krka-route": {
+      "metaTitle": "7 dana: Kornati i Krka iz Trogira | Boat4You",
+      "metaDesc": "Tjedan plovidbe iz Trogira: sjeverno na Kornate, uzvodno do slapova Krke kod Skradina, natrag preko Primoštena, Zlarina i Rogoznice. Etape u NM.",
+      "days": {
+        "1": {
+          "shortDescription": "Kratak skok od četiri milje prema zapadu, u plitku lagunu između dva Drvenika, taman da se posada uhoda prije nego krenu prave milje.",
+          "description": "Nitko ne uzima tjedan u Dalmaciji da bi prvo popodne proveo u marini, pa iz ACI Trogira izlazimo rano i pramac okrećemo na zapad. Četiri milje kasnije brod uplovljava u Krknjaše, lagunu svijetlog pijeska koju domaći zovu Plava laguna, u kanalu između Velog Drvenika i malenog Malog Drvenika. Dno je pijesak i trava na tri do šest metara, pa sidro zagrize iz prve, a voda do prijepodneva poprimi onu nestvarnu mliječno tirkiznu boju. Do tri konobe na obali Velog Drvenika ne vodi nijedna cesta; dolazi se tenderom, a svaka drži nekoliko besplatnih boja za goste koji rezerviraju stol. Osim kupanja, provjere opreme na laganom vjetru i ribe s gradela s nogama gotovo u moru, nema se što raditi. Upravo je to poanta. Prvi dan služi da se brod uhoda, ne da se love milje.",
+          "thingsToDo": [
+            "Baci sidro na pijesak na četiri do šest metara",
+            "Okupaj se u plitkoj Plavoj laguni na Krknjašima",
+            "Večera u konobi na Velom Drveniku",
+            "Prošeći do rta na Velom Drveniku",
+            "Vježbaj kraćenje jedara i trim dok je mirno"
+          ],
+          "mooringTip": "Držanje na pijesku je izvrsno na tri do šest metara, pa je sidrenje uobičajen izbor; konobske boje su besplatne ako večerate na kopnu. Laguna je zaklonjena sa svih strana osim zapada i sjeverozapada, pa ako se najavljuje svjež zapadnjak preko 18 čvorova, vrati se te četiri milje u ACI Trogir na noćenje."
+        },
+        "2": {
+          "shortDescription": "Četrnaest milja otvorenom obalom do Primoštena, gradića boje terakote nagurana na vlastiti poluotok, s vinogradima Babića koji se penju po brdima iza njega.",
+          "description": "Primošten ugledaš dobrano prije nego što do njega stigneš. Stara jezgra zbijena je na kamenoj glavici koju za obalu drži tek niska pješčana prevlaka, kuće su naslagane sve do same vode, a crkva svetog Jurja pribada vrh. Četrnaest milja od Drvenika, pokraj Rogoznice koju ćeš obići kasnije u tjednu, i izbliza opravdava svoj glas: bez ljetovališnog sjaja, samo uske kale i šačica konoba s brudetom i ribom s gradela. Gradska riva prima samo danju, pa vezujemo u ACI Kremiku dvije milje južnije i uvečer se šatlom vozimo u mjesto. Iza mjesta terase Bukovca ograđuju autohtoni Babić, suhozid slagan rukom kroz naraštaje. Sjedni na rivu s čašom Babića dok svjetlo gasne. Vrijedi zastati.",
+          "thingsToDo": [
+            "Popni se do crkve svetog Jurja na vrhu",
+            "Polako ispijaj čašu Babića na rivi",
+            "Prošeći ručno slaganim terasama Bukovca",
+            "Nađi brudet u nekoj primoštenskoj kali",
+            "Uvečer se odvezi šatlom iz Kremika u mjesto"
+          ],
+          "mooringTip": "ACI Kremik, dvije milje južno od centra, pouzdan je vez za noćenje s mrtvim vezovima i šatlom do mjesta; sama gradska riva prima goste samo danju i otvorena je prema zapadu. Ako po mirnom vremenu ipak vežeš na rivi, oslobodi je do pet kako bi ribarice u sumrak dobile svoje mjesto natrag."
+        },
+        "3": {
+          "shortDescription": "Dvadeset milja prema sjeverozapadu u Nacionalni park Kornati: osamdeset i devet golih otoka i jedna jedina marina, Piškera, na otočiću Panitula.",
+          "description": "Ovo je etapa koje se posade sjećaju. Dvadeset milja prema sjeverozapadu i obala jednostavno nestaje u Kornatima: osamdeset i devet otoka golog sivog krša, suhozidi koji im se penju po leđima, ni žive duše, i zona zabranjenog ribolova zbog koje plićaci opet vrve životom. Ciljamo ACI Piškeru, smještenu na krpici otočića Panitula Vela na zapadnom rubu parka, jedini vez uz pontone unutar granica parka. Ima ovdje sto pedeset vezova, svi s mrtvim vezovima, vodom i strujom, te jedna jedina konoba na terasi iznad brodova. Ulaznicu za park kupi online prije dolaska; jeftinija je nego na kiosku, a u vrhuncu sezone dnevna karta za charter jahtu ide blizu sto eura. Popodne spusti tender i kreni: roni na dah greben u prolazu između Piškere i Lavse ili se spusti južno do vanjskih kruna, gdje Mana i Kornat okomito padaju osamdeset metara pod kobilicu.",
+          "thingsToDo": [
+            "Riješi ulaznicu za park online prije dolaska",
+            "Odvezi se tenderom i roni plićake kod Lavse",
+            "Proplovi ispod okomite južne stijene Mane",
+            "Jedi u jedinoj konobi iznad pontona",
+            "Prošeći kamenim hrptom Panitule Vele"
+          ],
+          "mooringTip": "Svaki vez u ACI Piškeri ima mrtvi vez; za srpanj i kolovoz rezerviraj online jer se popuni. Noćno sidrenje unutar parka dopušteno je samo u nekoliko odobrenih uvala, Lavsa, Lojena, Vrulje, Stiniva i Statival, gdje konobe obično drže besplatne boje za goste koji večeraju kod njih."
+        },
+        "4": {
+          "shortDescription": "Petnaest milja prema istoku u šibenski arhipelag do Zlarina, otoka bez automobila čiji ronioci već sedamsto godina vade crveni koralj.",
+          "description": "Kornati ostaju za krmom i slijedi petnaest milja prema istoku, u šibenski arhipelag, gdje Zlarin drži svoje jedino selo razvučeno uz istočnu obalu i nijedan automobil na cijelom otoku. Ovo je mjesto sagradio koralj. Gotovo sedam stoljeća ljudi su ovdje ronili crveni koralj s grebena podalje od obale, a mali muzej na placi i danas čuva alat — kamene utege, olovom opterećene uzice, drvene okvire koje su spuštali prije nego što je itko imao bocu. Vežeš krmom uz mjesnu rivu za sitniš, unutarnji vezovi imaju vodu i struju. Nema automobila, pa su unutrašnje staze tvoje: pola sata uzbrdo kroz borove i čemprese izvede te na zapadnu padinu s pogledom natrag niz kanal. Konobe kuhaju ono što su brodice tog jutra iskrcale, a kad se tanjuri pospreme, cijelo selo završi na rivi, što četvrte večeri većini posada savršeno odgovara.",
+          "thingsToDo": [
+            "Svrati u muzej crvenog koralja kraj place",
+            "Popni se kroz borove i čemprese na zapadnu padinu",
+            "Okupaj se s ravnih stijena ispod sela",
+            "Pojedi jutarnji ulov u konobi na rivi",
+            "Gledaj kako se koralj i danas ručno obrađuje u radionici"
+          ],
+          "mooringTip": "Veži krmom uz mjesnu rivu na vlastito sidro; naknada je mala, a središnji vezovi imaju vodu i struju. Zlarin te štiti od zapada i sjevera, ali je otvoren prema jugoistoku, pa ako se najavljuje jugo preko 15 čvorova, prevali one četiri milje do Šibenika i veži u ušću."
+        },
+        "5": {
+          "shortDescription": "Rijetkih dvanaest milja u unutrašnjost: uz Krku pokraj Šibenika, kroz uski tjesnac svetog Ante, do veza u Skradinu pod slapovima Krke.",
+          "description": "Malo se što na ovoj obali plovi kao peti dan, jer ga provedeš idući u krivom smjeru, od otvorenog mora ravno uz rijeku. Prođeš šibensku staru jezgru, a onda se kanal stisne u tjesnac svetog Ante: šesto metara probijene stijene s mostom četrdeset i devet metara iznad, pa nijedan charter jarbol nije ni blizu problema. Iza tjesnaca sol slabi, brda se stisnu uz obje obale, a rijeka teče duboka i zelena do pontona ACI Skradina. U sezoni parkovski brod kreće iz marine svakih pola sata, vožnja je već uključena u ulaznicu, i vozi te do Skradinskog buka, gdje voda pada četrdeset i šest metara preko sedamnaest vapnenačkih pragova, a drvena staza se provlači uz obje obale. Na kopnu se naručuje skradinski rižot, junetina i šafran kuhani gotovo cijeli dan, uz bukaru domaćeg Babića. Uhvati jedan od ranih brodova; do podneva su staze rame uz rame.",
+          "thingsToDo": [
+            "Odvezi se brodom uzvodno do slapova Skradinskog buka",
+            "Prođi drvenom stazom s obje strane slapova",
+            "Pojedi skradinski rižot, junetinu sa šafranom kuhanu cijeli dan",
+            "Prošvrljaj starim kamenim kalama iznad rive",
+            "Prošeći do vidikovca iznad vrha slapova"
+          ],
+          "mooringTip": "ACI Skradin ima mrtve vezove na svakom vezu, punu infrastrukturu i pontonsku benzinsku na ulazu. Riječni je kanal dobro obilježen bovama i dubok za svaki gaz; računaj oko devedeset minuta pri deplasmanskoj brzini od ušća kod Šibenika, i imaj na umu da u dijelu unutar parka nema sidrenja, dakle marina ili ništa."
+        },
+        "6": {
+          "shortDescription": "Dvadeset milja natrag do mora i prema jugoistoku do Rogoznice, mjesta na rtu iznad neobičnog slanog jezera Zmajevo oko, s velikom Marinom Frapa za noćenje.",
+          "description": "S rijeke natrag na slanu vodu, pa dvadeset milja prema jugoistoku do Rogoznice, mjesta razvučenog po zdepastom rtu otprilike na pola puta od Šibenika do Splita. Ono zbog čega ljudi dolaze je Zmajevo oko: bazen slane vode udubljen u vapnenac na južnom kraju rta. More ga hrani kanalom koji se ne vidi i s plimom mu izmjenjuje vodu, pa je za oseke površina dobrih šest metara ispod mora odmah iza ruba. Dvadeset minuta hoda iz mjesta izvede te na hridi s pogledom ravno u njega. Frapa, na južnoj strani poluotoka, otprilike je najveće što marine u ovom dijelu Dalmacije budu, i ima sve: mrtve vezove, gorivo, hotel, restorane uz rivu. Manji brod može i na sjevernu mjesnu rivu, ali ona stoji širom otvorena maestralu, pa većina skipera radije plati marinu i mirno spava.",
+          "thingsToDo": [
+            "Pronađi stazu do Zmajeva oka",
+            "Stani na rub i gledaj kako plima diže i spušta jezero",
+            "Naruči brudet u konobi na rtu",
+            "Prošeći šačicom starih kala uz luku",
+            "Skoči tenderom do Smokvice na kupanje"
+          ],
+          "mooringTip": "Marina Frapa na južnoj strani izbor je za svako vrijeme, s mrtvim vezovima, punom infrastrukturom, benzinskom na ulazu i restoranima na licu mjesta. Sjeverna mjesna riva prima krmom na vlastito sidro uz malu naknadu, ali je otvorena prema sjeverozapadu, pa se prebaci u marinu ako se najavljuje maestral preko 15 čvorova."
+        },
+        "7": {
+          "shortDescription": "Osamnaest milja prema jugoistoku, brod se vraća u baze u Trogiru i Splitu na subotnju primopredaju u devet, uz još jedno kupanje kod Čiova prije veza.",
+          "description": "Zadnje jutro i sat sad nešto znači. Osamnaest je milja prema jugoistoku do povratka broda u baze u Trogiru i Splitu, a subota znači tvrdi rok: uz vez do devet, tankovi puni i pražnjenje odrađeno, paluba isprana, oprema vraćena i netko na brodu za obilazak između osam i devet. Koja god od te tri baze piše u tvojim papirima, ACI Trogir, Marina Kaštela ili ACI Split u gradu, ulaz se lako čita po svakom vremenu. Cijelim putem pratiš južnu obalu Čiova, a ona je posuta malim uvalama, pa baci sidro kod Slatina ili Salduna za posljednje kupanje prije nego se predaš marini. Kad je primopredaja potpisana i torbe na kopnu, ACI Trogir te ostavlja pet minuta od stare jezgre, gdje katedrala svetog Lovre i dalje čuva portal koji je Radovan isklesao u trinaestom stoljeću. Vrijedi tog pola sata koliko imaš dok ne dođe auto za aerodrom.",
+          "thingsToDo": [
+            "Usidri se kod Čiova za posljednje kupanje",
+            "Natoči gorivo i isprazni fekalni tank na vrijeme",
+            "Stani pod Radovanov portal na katedrali",
+            "Popni se na tvrđavu Kamerlengo na rubu grada",
+            "Uzmi opušten ručak na trogirskoj rivi"
+          ],
+          "mooringTip": "Vrati brod u bazu navedenu u charter ugovoru, bila to ACI Trogir, Marina Kaštela ili ACI Split, i veži krmom ili bokom kako te uputi voditelj baze. Prozor za primopredaju je subotom od osam do devet; ako ugovor traži povratak večer prije, budi u marini do pet u petak."
+        }
+      }
+    },
+    "trogir-vis-korcula-hvar-route": {
+      "metaTitle": "7 dana: Trogir, Vis, Hvar i Korčula | Boat4You",
+      "metaDesc": "Kružno iz ACI Trogira do Visa i Modre špilje, pa Korčula, Hvar i Stari Grad. Sedam dana udaljenosti, marina i iskrenih savjeta za vez.",
+      "days": {
+        "1": {
+          "shortDescription": "Kratkih 12 milja od ACI Trogira do jedine prirodne luke na Šolti, zatvorene vijencem od sedam otočića.",
+          "description": "Prođi kanal ispod trogirskog mosta, spusti se južnom stranom Čiova i Šolta se otvori pred tobom za koji sat. Maslinica leži na zapadnom vrhu otoka i jedina je ovdje luka koja te drži mirno po gotovo svakom vremenu, zahvaljujući nizu otočića koji čuvaju ulaz. Posada obično bira između dvije opcije: Martinis Marchi na južnoj obali, gdje čekaju mrtvi vezovi i barokni dvorac pretvoren u hotel, ili mjesna riva nasuprot, krmom na vlastito sidro. Šolta ostaje mirna dok se Split sat vremena dalje puni. Nema gužve izletničkih brodova, nema hotelskog niza, samo konobe koje toče domaći Dobričić i cijede vlastito maslinovo ulje. Kasno popodne skoči gumenjakom do Stipanske na kupanje, pa nađi stol na kopnu prije nego svjetlo omekša nad morem.",
+          "thingsToDo": [
+            "Okupaj se sa stijena na otočiću Stipanska",
+            "Kušaj šoltanski autohtoni Dobričić",
+            "Obiđi park dvorca Martinis Marchi",
+            "Kupi hladno prešano Šoltansko maslinovo ulje",
+            "Uhvati zalazak s otočića Polebrnjak"
+          ],
+          "mooringTip": "Dvije mogućnosti: Martinis Marchi na južnoj strani ima mrtve vezove i punu uslugu, ali se u srpnju i kolovozu brzo popuni, dok te mjesna riva nasuprot prima krmom na vlastito sidro uz malu naknadu. Vijenac otočića zatvara valove iz svih smjerova osim sjevera, a on u vrhuncu ljeta gotovo nikad ne puše."
+        },
+        "2": {
+          "shortDescription": "Najduža etapa tjedna po otvorenom, 24 milje prema jugu pokraj Brača do Komiže, pravog ribarskog mjesta na drugoj strani Visa.",
+          "description": "Dvadeset i četiri milje pristojan su dnevni put, a Hvarski kanal se otvara na lijevom boku dok Brač ostaje za krmom. Vis je posjetiteljima bio zatvoren do 1989., jugoslavenski garnizonski otok, i tu izolaciju nosi dobro: manje hotela, više vinograda, sporiji ritam nego bilo gdje bliže kopnu. Komiža se svija oko male uvale na zapadnoj obali, s ribarskom flotom povučenom uz istočni krak. Veži unutar bazena, krmom na vlastito sidro po pijesku i travi, gdje držanje uglavnom valja. Preskoči vanjski mul za noćenje; svako jugozapadno more ulazi ravno unutra. Na kopnu stara mletačka kula čuva mali ribarski muzej, konobe peku dnevni ulov, a Vugava se toči hladna. Kad sunce krene, zapadni horizont teče neprekinuto prema Italiji, i to opravdava svoj glas.",
+          "thingsToDo": [
+            "Srdele s gradela i čaša Vugave",
+            "Razgledaj ribarski muzej u mletačkoj kuli",
+            "Popni se na Hum zbog pogleda na cijeli otok",
+            "Prošeći uz ribarsku flotu na istočnoj rivi",
+            "S mula gledaj kako sunce pada prema Italiji"
+          ],
+          "mooringTip": "Veži krmom na vlastito sidro u unutarnjem bazenu, po pijesku i travi koji uglavnom dobro drže; računaj na lučku pristojbu. Ako se najavljuje jugozapadnjak preko 15 čvorova, vanjski mul je noću neodrživ, pa prevali šest milja do Visa i uđi u luku svetog Jurja gdje si potpuno zaklonjen."
+        },
+        "3": {
+          "shortDescription": "Modra špilja čim se otvori, podnevno kupanje kod Budihovca, pa osamnaest milja prema istoku do Vele Luke na drugom kraju Korčule.",
+          "description": "Na Biševo stigni rano. Špilja svijetli onom električno plavom bojom samo kad nisko sunce prolazi kroz podvodni otvor, otprilike između devet i jedanaest ujutro, pa ako pretekneš izletničke brodove iz Komiže, kraće ćeš čekati. Privatni gumenjaci ne ulaze; vežeš na malom koncesijskom molu i ulaziš jednim od službenih brodića na dvadesetak minuta razgledavanja. Odatle je kratak skok do Budihovca, dva niska otočića uz južnu obalu Visa s vodom toliko bistrom da sidreni lanac na osam metara pijeska visi kao staklo. Okupaj se, ručaj na brodu, pa pramac na istok. Osamnaest milja dalje je Vela Luka, duga uvala okrenuta zapadu na kraju Korčule, s gorivom, vodom i pravim zaklonom. Za večeru žrnovski makaruni, ručno valjana tjestenina koju oblikuju na pletaćim iglama.",
+          "thingsToDo": [
+            "Vidi Modru špilju kako svijetli oko 10 ujutro",
+            "Usidri se na kupanje kod otočića Budihovac",
+            "Pojedi žrnovske makarune, korčulansku ručno valjanu tjesteninu",
+            "Natoči gorivo na benzinskoj u Veloj Luci",
+            "Prošeći rivom Vele Luke nakon mraka"
+          ],
+          "mooringTip": "Koncesijski mol kod Modre špilje radi samo danju, naknada se plaća na kiosku i noćenja nema. Vela Luka te prima krmom uz dugu gradsku rivu po mulju i pijesku koji dobro drže, gorivo je na zapadnom kraju, a samo jako jugo ubaci nešto vala u bazen."
+        },
+        "4": {
+          "shortDescription": "Velika etapa: 32 milje prema istok-sjeveroistoku do Hvara, najbučnije i najfotografiranije luke na obali, gdje je ACI marina siguran izbor.",
+          "description": "Kreni rano. Trideset i dvije milje preko dva kanala najduži su pojedinačni potez tjedna, a maestral obično krene sa zapada oko dva popodne. Prođi Korčulanski kanal prije nego ojača i ostatak odjedri ugodno u bočnom vjetru do Hvara. Grad se javlja izdaleka: tvrđava Fortica na vrhu brda, duga kamena lođa Arsenala na rivi, zvonik svetog Stjepana iznad place. Veži u ACI marini Hvar na zapadnoj strani uvale; za sve osim noći bez vjetra to je jedina razumna opcija, s mrtvim vezovima i punom uslugom. Riva mami, ali se do podneva napuni izletničkim brodovima i tenderima i ne nudi nikakav zaklon od popodnevnog vjetra. Veži, prošeći do grada, popni se na tvrđavu prije vrućine, pa pusti da ti večer nestane u konobama u zaleđu.",
+          "thingsToDo": [
+            "Popni se na Forticu zbog pogleda na Paklene otoke",
+            "Prošeći Arsenalom i placom svetog Stjepana",
+            "Nađi mirnu konobu izvan glavne place",
+            "Skoči gumenjakom na Paklene otoke na kupanje",
+            "Promatraj svijet na rivi nakon mraka"
+          ],
+          "mooringTip": "ACI marinu Hvar rezerviraj unaprijed u sezoni; po iole ozbiljnijem vjetru to je jedini siguran noćni vez za jahtu srednje veličine, a dolazi s mrtvim vezovima, vodom i strujom. Gradska riva naplaćuje po satu, izložena je zapadnim udarima i puni se tenderima, pa je tretiraj isključivo kao dnevni vez."
+        },
+        "5": {
+          "shortDescription": "Lakih 14 milja oko zapadnog rta Hvara do Starog Grada, najstarijeg grada u Hrvatskoj i ulaza u UNESCO-vo Starogradsko polje.",
+          "description": "Mirno jutro. Četrnaest milja vodi te u smjeru kazaljke oko zapadnog rta i duboko u dugu uvalu koja štiti Stari Grad na sjevernoj strani Hvara. Grci su se ovdje iskrcali 384. pr. Kr. i mjesto nazvali Pharos; njihova ulična mreža još se čita u staroj jezgri, a polje iza grada, Starogradsko polje, obrađuje se po istim međama sve otada, zbog čega ga je UNESCO i uvrstio na popis. Vez je lak u oba slučaja: gradska riva uz zapadnu obalu prima krmom na vlastito sidro uz naknadu, ili ti mala ACI marina na istočnoj strani daje mrtve vezove i struju s obale. Uvala je poput fjorda i ostaje mirna po svakom vjetru, pa je ovo rijetka noć kad se ne moraš opterećivati prognozom. Prošeći do Tvrdalja, utvrđene kuće pjesnika Hektorovića s kamenim ribnjakom, i pojedi peku u polju ako rezerviraš na vrijeme.",
+          "thingsToDo": [
+            "Prošeći grčkim rasterom ulica u staroj jezgri",
+            "Pogledaj Tvrdalj i njegov kameni ribnjak",
+            "Provozaj se biciklom preko Starogradskog polja",
+            "Rezerviraj peku u konobi uz polje",
+            "Provozaj se lavandinom cestom istočno od grada"
+          ],
+          "mooringTip": "Oba veza rade posao: krmom uz gradsku rivu na zapadnoj obali uz skromnu naknadu, s vodom i strujom na središnjem dijelu, ili mrtvi vezovi u ACI marini Stari Grad nasuprot. Uvala je fjordskog oblika i ostaje mirna po vjetru iz svakog smjera, što je čini jednim od najsigurnijih noćnih vezova na Hvaru."
+        },
+        "6": {
+          "shortDescription": "12 milja prema sjeveru preko Bračkog kanala do Milne, najzaštićenije luke na otoku, uz kratko posljednje jutro do Trogira.",
+          "description": "Milna leži desetak milja sjeverno, uska uvala usječena u zapadnu stranu Brača koja skloni brodove još od mletačkih vremena. Ulaz se lako čita: visoka župna crkva na unutarnjoj rivi, sive kamene kuće naslagane uz padinu, bazen koji se pri dnu sužava u džep mirne vode. Veži krmom uz unutarnju gradsku rivu uz malu naknadu, voda i struja su tu, ili baci sidro vani u široj uvali na šest do deset metara pijeska i baci uže na stijene ako maestral ojača. Brač je od svog bijelog kamena sagradio pola Dalmacije, isti onaj koji je klesan za Dioklecijanovu palaču i koji se i danas vadi gore u Pučišćima. Naruči janjetinu ispod peke čim vežeš; ugljenu trebaju tri sata.",
+          "thingsToDo": [
+            "Naruči janjetinu ispod peke čim vežeš",
+            "Usidri se vani s krmenim užetom na kopno",
+            "Pogledaj župnu crkvu iz 17. stoljeća",
+            "Kušaj bračko maslinovo ulje u zadruzi",
+            "Odvezi se gumenjakom sjeverno do Bobovišća na kupanje o zalasku"
+          ],
+          "mooringTip": "Krmom uz unutarnju gradsku rivu plaćaš malu naknadu i dobivaš vodu i struju na središnjem dijelu; vanjska uvala je besplatno sidrenje s krmenim užetom na stijene. Milna je otvorena prema zapadu i jugozapadu, pa ako popodnevni maestral prijeđe 15 čvorova, unutarnja riva ostaje mirnija, a Bobovišća tri milje sjevernije rezerva su za svako vrijeme."
+        },
+        "7": {
+          "shortDescription": "Posljednjih 15 milja prema sjeverozapadu preko dva kanala, još jedno kupanje kod Čiova, pa u ACI Trogir na subotnju primopredaju do devet.",
+          "description": "Još jedan potez prema sjeverozapadu zatvara krug, petnaest milja natrag preko Bračkog i Splitskog kanala do ACI marine Trogir. Subotnje primopredaje idu na tijesno, pa ciljaj da budeš uz vez do devet, s ispražnjenim tankovima, punim gorivom i ispranom palubom, a skiper na raspolaganju za pregled između osam i devet. Ima još vremena za posljednje kupanje: južna obala Čiova posuta je malim uvalama, a Slatine ili Saldun logičan su zadnji skok u more prije nego skreneš u marinu. Kad pregled prođe, trogirska stara jezgra je pet minuta hoda preko mosta. Uputi se do katedrale svetog Lovre i stani pod Radovanov portal, najljepši komad srednjovjekovne skulpture u zemlji, ili se popni na kulu Kamerlengo zbog pogleda. Splitski aerodrom je deset minuta vožnje, a dugačak ručak na rivi pravi je način da zatvoriš tjedan.",
+          "thingsToDo": [
+            "Okupaj se u posljednjoj uvali kod Slatina ili Salduna",
+            "Stani pod Radovanov portal na katedrali",
+            "Popni se na tvrđavu Kamerlengo zbog pogleda",
+            "Isprazni tank i natoči gorivo prije primopredaje",
+            "Uzmi dugačak ručak na trogirskoj rivi"
+          ],
+          "mooringTip": "Vrati je u ACI marinu Trogir kako nalaže ugovor; voditelj baze dodjeljuje vez po dolasku. Subotnji prozor za primopredaju je od osam do devet, pa ako papiri traže povratak večer prije, budi uz vez do pet u petak, a pontonska benzinska je na zapadnoj strani ulaza."
+        }
+      }
+    },
+    "zadar-kornati-hvar-korcula-vis-skradin-14days-route": {
+      "metaTitle": "14 dana: Kornati, Hvar i Vis iz Zadra | Boat4You",
+      "metaDesc": "14 dana kružne plovidbe iz Zadra preko Kornata, Hvara, Korčule, Visa i Krke kod Skradina, uz savjete za sidrišta i konobe na svakoj etapi.",
+      "days": {
+        "1": {
+          "shortDescription": "25 milja prema jugu iz Zadra spušta te među prazne vanjske Kornate, u tihe uvale Žuta i šačicu sezonskih konoba.",
+          "description": "Dobro se opskrbi u Zadru prije nego odvežeš, jer na Žutu nema dućana i zimi ovdje nitko ne živi. Plovidba prema jugu jednostavna je po uobičajenom ljetnom maestralu, otprilike četiri sata laganog bočnog vjetra. Žut je najveći od vanjskih Kornata, dug hrbat golog vapnenca isječen zaklonjenim uvalama na istočnoj strani. Obično biramo uvalu s restoranskom bovom i smjestimo se rano; do sredine popodneva popularne se popune. Skoči s krme u vodu koja nad pijeskom ostaje bistra, pa uzmi kozju stazu na greben zbog pogleda natrag prema Dugom otoku. Večera na kopnu je nagrada. Naruči brudet, sporo kuhanu dalmatinsku ribu koja se kupi palentom, i pusti da večer utihne oko tebe.",
+          "thingsToDo": [
+            "Usidri se u zaklonjenoj uvali na Žutu",
+            "Prošeći grebenskom stazom zbog pogleda na Kornate",
+            "Roni na dah pješčane plićake s krme",
+            "Brudet u sezonskoj konobi"
+          ],
+          "mooringTip": "Uzmi restoransku bovu u nekoj od uvala i večera na kopnu pokriva vez; inače se usidri dalje na pijesku na 7-10 m. U srpnju i kolovozu stigni do ranog popodneva jer se polja bova ispred konoba brzo popune."
+        },
+        "2": {
+          "shortDescription": "Kratak skok na sjever do pošumljenog vrha Dugog otoka, sidrenje pod svjetionikom Veli Rat, a pijesci Sakaruna na dohvat šetnje.",
+          "description": "Ovo je blag dan, uglavnom na motoru ili u laganom bočnom vjetru uz vanjsku stranu Dugog otoka. Pantera je široka uvala obrubljena borovima blizu sjeverozapadnog vrha otoka, dobro zaštićena od sjevera i sjeveroistoka, što je čini mirnim noćnim vezom kad bura ne puše jako. Glavna atrakcija na kopnu je svjetionik Veli Rat, 40 metara visoka vapnenačka kula iz 1849. i jedna od najviših na Jadranu; predaja kaže da su u žbuku išla bjelanjka kako bi ostala bijela. Iskrcaj se tenderom i prošeći kroz borove do Sakaruna, rijetke plitke uvale s pravim pješčanim dnom koje vodu boji blijedozeleno. Natrag na brodu ispeci što si kupio na Žutu i gledaj kako svjetlo pada iza svjetionika.",
+          "thingsToDo": [
+            "Popni se na svjetionik Veli Rat iz 1849.",
+            "Prošeći kroz borove do plaže Sakarun",
+            "Roni na dah špilje uz kamenu obalu",
+            "Lignje s gradela na krmenoj palubi"
+          ],
+          "mooringTip": "Sidri na pijesku na 5-8 m; Pantera dobro drži i štiti te od sjevera i sjeveroistoka. Ovdje nema postavljenih bova, pa ostavi sebi prostora za zaokret i provjeri da je sidro zagrizlo prije nego napustiš kormilo."
+        },
+        "3": {
+          "shortDescription": "Lakih 12 milja u srce Nacionalnog parka Kornati, gdje uvala Vrulja nudi najveći skup konoba u arhipelagu.",
+          "description": "Ulaznicu za park kupi prije ulaska ako možeš; čuvari se ukrcavaju unutar granice, a unaprijed je jeftinije. Plovidba kroz unutarnje otoke razlog je zbog kojeg ljudi dolaze na Kornate, labirint golih sivih grba prošivenih suhozidima koji izlaze ravno iz mora. Vrulja leži na zaklonjenoj strani Kornata, glavnog otoka, i drži tri konobe jednu do druge, svaku sa svojim bovama. Uzmi jednu, pa prošeći do stijena okrenutih pučini, gdje suhozidi idu sve do ruba. Jači šetači mogu se popeti na Metlinu, s 237 metara najvišu točku grebena, zbog pogleda na cijeli park. Riba s gradela te večeri ima bolji okus zbog uloženog truda.",
+          "thingsToDo": [
+            "Popni se na Metlinu zbog pogleda na park",
+            "Prošeći uz suhozide Kornata",
+            "Roni na dah bistru vodu kod bova",
+            "Svježa riba s gradela u konobi u Vrulji"
+          ],
+          "mooringTip": "Vrulja ima tri konobe s vlastitim poljima bova; uzmi bovu i večera na kopnu pokriva trošak. Za prometnu kolovošku večer rezerviraj bovu preko VHF-a ili telefonom jer je ovo najpopularnije odredište u parku."
+        },
+        "4": {
+          "shortDescription": "Dvadeset milja prema jugu pokraj Šibenika do Primoštena, kamenog mjesta na vlastitom rtu okruženog vinogradima Bucavca i njihovim Babićem.",
+          "description": "Izlaskom iz parka more se otvara i dobivaš pravu plovidbu, dvadeset milja niz obalu s maestralom koji do podneva obično dođe bočno. Primošten stoji na zaobljenom rtu koji je nekad bio otok, sa starom jezgrom zbijenom oko brežuljkaste crkve Svetog Jurja. Iznad i iza mjesta pružaju se vinogradi Bucavca, rešetka suhozidnih parcela koja desetljećima privlači fotografe; ovdje se uzgaja gusti crni Babić. Veži u Marini Kremik milju i pol južnije, pa taksijem ili pješice u mjesto na večer. Nađi stol u starim kalama, naruči Babić u bukari i uz njega crni rižot ili svježe ulovljenu ribu.",
+          "thingsToDo": [
+            "Prošeći do crkve Svetog Jurja",
+            "Pogledaj suhozidne vinograde Bucavca",
+            "Kušaj domaći crni Babić",
+            "Crni rižot u kalama stare jezgre"
+          ],
+          "mooringTip": "Marina Kremik, oko 1,5 milju južno od mjesta, standardan je noćni vez i vrijedi ga rezervirati u srpnju i kolovozu. Gradska riva je izložena i najbolje ju je ostaviti za podnevni predah."
+        },
+        "5": {
+          "shortDescription": "Mirnih 14 milja prema jugoistoku do Trogira, otočnog grada u zidinama od mletačkog kamena, s Radovanovim portalom na pročelju katedrale.",
+          "description": "Danas je kratko i jednostavno, pa nema žurbe s polaskom. Trogir leži na malenom otoku uklinjenom između kopna i Čiova, s obje strane povezan mostovima, a cijela je srednjovjekovna jezgra na UNESCO-ovu popisu. Glavna je točka katedrala Svetog Lovre, a iznad njezinih glavnih vrata je Radovanov portal, isklesan 1240. i prekriven figurama koje traže polagano gledanje. Popni se na Kamerlengo, zdepastu mletačku tvrđavu na rtu, zbog pogleda na kanal i vlastiti vrh jarbola. Kad vrućina popusti, riva uz more se napuni ljudima; pridruži im se uz sladoled i polagani krug kamenim kalama. Nakon nekoliko dana na sidru grad je lako zavoljeti.",
+          "thingsToDo": [
+            "Pogledaj Radovanov portal iz 1240.",
+            "Popni se na tvrđavu Kamerlengo zbog pogleda na kanal",
+            "Prošvrljaj srednjovjekovnim kamenim kalama",
+            "Sladoled na trogirskoj rivi"
+          ],
+          "mooringTip": "ACI marina Trogir na strani Čiova pouzdan je vez uz prethodnu rezervaciju. Gradska riva uz more je za kratko zadržavanje i ljulja je val od prolaznog prometa, pa je tretiraj kao dnevni posjet."
+        },
+        "6": {
+          "shortDescription": "Prema jugu pokraj Brača i Šolte do Hvara, sa španjolskom tvrđavom iznad place i Paklenim otocima odmah preko vode.",
+          "description": "Kreni oko sredine jutra kako bi prešao kanal prije nego popodnevni vjetar ojača u Hvarskom kanalu. Hvar je najprometnija i najdotjeranija luka na obali, izgrađena oko najveće place u Dalmaciji, s tvrđavom Fortica iz šesnaestog stoljeća koja stoji iznad nje. Uspon do tvrđave je strm ali kratak, a pogled na luku i Paklene otoke o zalasku opravdava svoju reputaciju. Dolje u gradu katedrala Svetog Stjepana zatvara placu, a kale iza nje kriju male vinske barove. Ako je marina puna, a ljeti često jest, uzmi bovu ili vez nasuprot u Palmižani na Paklenima. Vrati se na piće u Hula-Hula bar i pusti da noć ode u sitne sate.",
+          "thingsToDo": [
+            "Popni se na Forticu o zalasku",
+            "Pogledaj katedralu Svetog Stjepana i placu",
+            "Usidri se preko dana kod Paklenih otoka",
+            "Piće o zalasku u Hula-Hula baru"
+          ],
+          "mooringTip": "Hvarska gradska riva u sezoni ide po redoslijedu dolaska i kaotična je, pa računaj na ACI marinu Palmižana na Svetom Klementu, oko 2 milje preko u Paklenima, kao siguran unaprijed rezerviran vez."
+        },
+        "7": {
+          "shortDescription": "Duža etapa od 35 milja prema jugoistoku do Korčule u zidinama: kale u obliku riblje kosti, priča o Marku Polu i čaše domaćeg Grka.",
+          "description": "Ovo je najduža etapa putovanja, pa kreni rano i prije polaska nadopuni gorivo i vodu. Uz malo sreće maestral se javi sa sjeverozapada i ponese te bočno gotovo cijelim putem. Korčula stoji na malom ovalnom poluotoku, s ulicama položenima u obliku riblje kosti tako da ljetno jugo prolazi kroz njih a da kale ne postanu vjetrovni tuneli. Grad se dobro drži priče da je rodno mjesto Marka Pola i možeš posjetiti kuću koja to tvrdi. Popni se na zvonik katedrale Svetog Marka zbog krovova i kanala iza njih. Ljeti mještani i dalje izvode morešku, mačevalački ples s pravim sabljama. Zaključi čašom Grka, suhog bijelog vina s pjeskovitih ravnica obližnje Lumbarde.",
+          "thingsToDo": [
+            "Popni se na zvonik katedrale Svetog Marka",
+            "Posjeti kuću Marka Pola",
+            "Pogledaj mačevalački ples morešku",
+            "Kušaj bijeli Grk iz Lumbarde"
+          ],
+          "mooringTip": "ACI marina Korčula je mala i u vrhuncu ljeta se popuni, pa rezerviraj unaprijed. Vezovi uz zidine stare jezgre atmosferična su rezerva, ali su izloženi valu prolaznih brodova, pa pažljivo postavi bokobrane i krmeno uže."
+        },
+        "8": {
+          "shortDescription": "Prema jugu na Lastovo, najudaljeniji hrvatski otok, sa sidrenjem u Skrivenoj luci, jednoj od najzaklonjenijih prirodnih luka na obali.",
+          "description": "Do Lastova se treba potruditi, i upravo zato ostaje miran. Otok je zaštićeni park prirode, gusto pošumljen, s pregršt kamenih sela i daleko manje brodova nego Hvar ili Korčula. Skrivena luka duboko zasijeca južnu obalu i gotovo se potpuno zatvara, pa te drži mirno i kad vani puše. Iznad nje stoji stari svjetionik Struga, lijepa šetnja s dugim pogledom prema pučini i otočiću Sušcu. Ovdje se osim kupanja, šetnje i jela nema što raditi, i to je poanta. Nekoliko konoba drži bove u uvali; uzmi jednu, naruči što je toga dana došlo s brodica i lezi rano pod nebo bez ijednog svjetlosnog onečišćenja.",
+          "thingsToDo": [
+            "Prošeći do svjetionika Struga",
+            "Okupaj se u zaklonjenoj Skrivenoj luci",
+            "Svježa riba u konobi u uvali",
+            "Promatraj zvijezde nad mračnim parkom prirode"
+          ],
+          "mooringTip": "Kupi ulaznicu za Park prirode Lastovo, pa uzmi jednu od restoranskih bova duboko u Skrivenoj luci, gdje večera na kopnu pokriva vez. Držanje je dobro na pijesku ako se radije sidriš dalje od obale."
+        },
+        "9": {
+          "shortDescription": "Otvorenih 25 milja prema sjeveru do Visa, desetljećima zatvorenog zbog vojske i otvorenog tek 1989., s pristajanjem u ribarskoj Komiži.",
+          "description": "Ovo je pravo otvoreno more, najizloženija etapa itinerara, pa provjeri prognozu večer prije i odaberi vrijeme. Vis leži dalje od obale nego ijedan drugi naseljeni otok srednje Dalmacije, a ta je izolacija godinama bila i propisana dok je služio kao jugoslavenska vojna baza, zatvorena za strance do 1989. Komiža je zapadna luka, zbijena skupina kamenih kuća oko radne ribarske luke gdje se mreže i dalje suše na rivi. Popni se na Hum kasno popodne zbog najljepšeg zalaska na otoku. Iz Komiže je kratak put do otočića Biševa i njegove Modre špilje, najbolje kasno ujutro kad svjetlo vodu pretvori u električno plavu. Pojedi komišku pogaču, plosnatu pitu sa slanim srdelama i rajčicom, i otok si okusio kako treba.",
+          "thingsToDo": [
+            "Dnevni izlet do Modre špilje na Biševu",
+            "Popni se na brdo Hum zbog zalaska",
+            "Kušaj komišku pogaču sa slanim srdelama",
+            "Pogledaj komiški ribarski muzej"
+          ],
+          "mooringTip": "Komiška gradska riva je danju u redu, ali noću ljulja i nudi malo zaklona, pa za miran san rezerviraj ACI marinu Vis na drugoj strani otoka. Posjet Modroj špilji tempiraj za mirno vrijeme jer val zatvara ulaz."
+        },
+        "10": {
+          "shortDescription": "30 milja natrag prema sjeveroistoku do Zlarina, koraljnog otoka bez automobila kod Šibenika, gdje se crveni koralj vadi od 15. stoljeća.",
+          "description": "Opet pristojan put, pa kreni na vrijeme i uživaj u miljama dok vjetar drži. Zlarin je nizak i zelen otok blizu Šibenika s jednim selom skupljenim oko luke i bez ijednog automobila. Otok je živio od koralja, ronjenog rukom uz ove obale od petnaestog stoljeća, a i danas ćeš naći male radionice koje duboko crveni koralj pretvaraju u nakit. Prošeći uz kale, svrati u koraljni centar koji priča tu priču i kupi komad izravno od majstora ako te povuče. Sve se ovdje kreće brzinom hoda. Sjedni na klupu uz more s čašom loze, domaće rakije od grožđa, i pusti da bor i sol odrade ostatak prije večere na brodu.",
+          "thingsToDo": [
+            "Posjeti zlarinski koraljni centar",
+            "Zaviri u radnu koraljnu radionicu",
+            "Prošeći seoskim stazama bez automobila",
+            "Loza na rivi uz luku"
+          ],
+          "mooringTip": "Zlarinska riva je za kratko zadržavanje i zna biti gužva, pa se za noć usidri odmah izvan uvale na pijesku na 5-7 m. Otvorena je prema zapadu, pa odaberi mirnu večer."
+        },
+        "11": {
+          "shortDescription": "Kratak potez uz rijeku Krku do Skradina, utvrđenog gradića u Nacionalnom parku Krka i ulaza prema slapovima Skradinskog buka.",
+          "description": "Danas more ustupa mjesto rijeci. Iz šibenskog kanala skrećeš u unutrašnjost i motorom se penješ Krkom kroz zelenu strmu dolinu do Skradina, malog srednjovjekovnog gradića na kraju plovnog dijela. Ovo je prag Nacionalnog parka Krka. Ulaznica uključuje električni brodić koji vozi do Skradinskog buka, kaskadnog kompleksa gdje rijeka pada preko sedrenih stepenica u široke bazene. Dođi rano, prije nego stignu izletnički autobusi iz Splita. Natrag u mjestu, i sam Skradin vrijedi večeri, s kalama koje se stisnu i utihnu kad se gužva prorijedi, a glas o pršutu i sporo pečenoj janjetini itekako je zaslužen. Veži u marini i prenoći na rijeci.",
+          "thingsToDo": [
+            "Odvezi se brodićem do Skradinskog buka",
+            "Prošeći srednjovjekovnim skradinskim kalama",
+            "Provozaj biciklom stazu u parku Krka",
+            "Dalmatinski pršut i janjetina za večeru"
+          ],
+          "mooringTip": "ACI marina Skradin je odmah na rijeci u mjestu i logičan je noćni vez; rezerviraj unaprijed za srpanj i kolovoz. Prilaz rijekom dobro je obilježen i miran, lak završetak dana."
+        },
+        "12": {
+          "shortDescription": "Natrag niz rijeku i kratak skok uz obalu do Tijata, malenog praznog otoka u šibenskom kanalu na kojem osim borova nema ničega.",
+          "description": "Nakon slapova i gužve, ovo je namjerni dan ništavila. Spusti se niz Krku, izađi kroz šibenski kanal i provuci se između malih borovih otoka do Tijata, niskog nenaseljenog brežuljka bez sela, bez konobe i bez slavine s vodom. U tome je sav čar. Usidri se sa zaklonjene strane, spusti kajak ili dasku i istraži susjedne otočiće svojim tempom. Kupanje je mirno, a ronjenje na dah nad livadama posidonije donosi pokoju ribu i podosta ježinaca, pa ne skidaj obuću. Razapni visaljku u hladu ako je imaš. Te večeri kuhaj jednostavno na brodu, srdele na žaru ako si se opskrbio, i neka sidreno svjetlo bude jedino u uvali.",
+          "thingsToDo": [
+            "Veslaj kajakom među borovim otočićima",
+            "Roni na dah plićake s posidonijom",
+            "Razapni visaljku među borovima",
+            "Ispeci srdele na sidru"
+          ],
+          "mooringTip": "Na Tijatu nema bova ni infrastrukture, pa se sidri na pijesku i posidoniji na 5-8 m i dobro zagrizi sidro. Hranu, vodu i gorivo uzmi ranije u Skradinu ili Šibeniku jer ovdje nećeš naći ništa."
+        },
+        "13": {
+          "shortDescription": "Lakih 8 milja do Murtera, radnih vrata Kornata i doma mnogih obitelji koje drže konobe u arhipelagu.",
+          "description": "Lagan posljednji cijeli dan, kratak prijelaz do Murtera kojim zatvaraš krug blizu mjesta gdje kornatski charteri i počinju. Murter je prava otočna zajednica, a ne ljetovalište, i mnoge obitelji koje vode konobe u nacionalnom parku ovdje imaju svoje kuće. Slanica je glavna plaža otoka, plitka pješčana uvala na rubu Murtera, dobra za dugo kupanje i lako dohvatljiva pješice. Svrati u mali etno muzej, pa prošeći do pokretnog mosta u Tisnom koji otok spaja s kopnom i po rasporedu se otvara da prođu jarboli. Za večeru ulovi pašticadu, junetinu marinaranu danima i sporo pirjanu sa suhim šljivama i crnim vinom uz domaće njoke. Pravo jelo za posljednju večer vani.",
+          "thingsToDo": [
+            "Okupaj se na pješčanoj plaži Slanica",
+            "Posjeti murterski etno muzej",
+            "Prošeći do mosta u Tisnom",
+            "Pašticada za večeru"
+          ],
+          "mooringTip": "Marina Hramina i Marina Betina obje su unutar milje od Murtera i obje rade posao; ljeti rezerviraj unaprijed. Hramina je veća i bliža plaži i staroj jezgri."
+        },
+        "14": {
+          "shortDescription": "Zaključne dvadeset i dvije milje kroz Pašmanski kanal natrag u Zadar, s dolaskom u sumrak uz tonove Morskih orgulja i užareni Pozdrav suncu.",
+          "description": "Posljednja etapa kući, natrag uz zaklonjeni Pašmanski kanal prema Zadru. Ima vremena za zadnje kupanje, pa usput svrati u neku od tihih uvala uz Pašman i iskoristi more dok ga imaš. Kanal je zaštićen i obično miran, nezahtjevna plovidba za kraj. Ciljaj da u Zadar stigneš kasno poslijepodne. Na vrhu rive stare jezgre Morske orgulje Nikole Bašića sviraju dok val tjera zrak kroz cijevi ispod stepenica, a pokraj njih se u sumrak upali disk Pozdrava suncu. Prvo prođi kroz rimski Forum, pa putovanje zatvori čašicom Maraschina, likera od višnje maraske koji Zadar radi stoljećima. Dva tjedna i gotovo cijela srednja Dalmacija iza tebe.",
+          "thingsToDo": [
+            "Posljednje kupanje u uvali na Pašmanu",
+            "Poslušaj Morske orgulje na rivi",
+            "Vidi Pozdrav suncu u sumrak",
+            "Maraschino, liker od višnje, u staroj jezgri"
+          ],
+          "mooringTip": "Marina Zadar u Boriku uobičajena je charter baza za predaju broda. Termin na benzinskoj rezerviraj oko 24 sata unaprijed jer se red gomila u petak i subotu tijekom izmjene."
+        }
+      }
+    },
+    "zadar-kornati-krka-route": {
+      "metaTitle": "7 dana: iz Zadra na Kornate i Krku | Boat4You",
+      "metaDesc": "Sedam dana plovidbe iz Zadra kroz Telaščicu, Kornate i do slapova Krke, uz vez u pješčanim uvalama poput Sakaruna i Vrgade.",
+      "days": {
+        "1": {
+          "shortDescription": "Oko 22 milje iz Zadra pokraj maslinika Ugljana do Božave, uz usputno kupanje na pješčanom Sakarunu.",
+          "description": "Morske orgulje stenju i uzdišu pod Rivom dok odvezuješ, a bolji ispraćaj nijedna luka ne daje. Iz Zadra slijedi ravnomjeran bočni vjetar i otprilike 22 milje, prvo pokraj terasastih maslinika Ugljana, pa oko sjeverozapadnog ramena Dugog otoka. Obično plovidbu prekinemo na Sakarunu, rijetkom potezu bijelog pijeska gdje dno pada tako blago da cijela uvala svijetli blijedozeleno. Baci ondje sidro za ručak i dugo kupanje prije nego prevališ posljednju milju do Božave. Mjesto je maleno: kamena crkva, par konoba, brodice koje se njišu uz rivu. Naruči komarču s gradela i jedi kasno, kako to rade domaći. Iznad jarbola čiope kruže do mraka.",
+          "thingsToDo": [
+            "Usidri se i okupaj na plaži Sakarun",
+            "Popni se na kulu svjetionika Veli Rat",
+            "Komarča s gradela u konobi u Božavi",
+            "Poslušaj zadarske Morske orgulje na polasku"
+          ],
+          "mooringTip": "Božavska mala marina i riva brzo se popune u srpnju i kolovozu, pa se javi radijem unaprijed ili računaj na sidrenje. Sakarun dobro drži na pijesku na 4-6 m, ali se isprazni čim se digne sjeverozapadnjak, pa ga tretiraj kao dnevni, a ne noćni vez."
+        },
+        "2": {
+          "shortDescription": "Kratkih 14 milja uz vanjski rub Dugog otoka do Telaščice, jedne od najzaklonjenijih uvala na Jadranu i vrata prema Kornatima.",
+          "description": "Kreni iz Božave nakon doručka; lakih je 14 milja prema jugu uz pučinsku stranu Dugog otoka, ali pripazi na val ondje gdje se stijene sudaraju s otvorenim morem. Telaščica se otvara kao dugačak zaštićeni prst mora, opasan s više od dvadeset uvala. Veži i prošeći preko prevlake do Mira, slanog jezera koje je nekoliko stupnjeva toplije od Jadrana i slanije od njega; blato uz njegov rub domaći hvale za kožu. Odatle se staza penje na vrh stijena Stene, koje padaju blizu 160 metara ravno u more. Sjedni gore na neko vrijeme. Na povratku ćeš vjerojatno sresti poludivlje magarce parka kako po makiji traže hlad.",
+          "thingsToDo": [
+            "Okupaj se u toplom slanom jezeru Mir",
+            "Popni se na vrh stijena Stene",
+            "Pripazi na divlje magarce u parku",
+            "Ručak u konobi u uvali Telaščice"
+          ],
+          "mooringTip": "Ulaznica za park naplaćuje se na bovi. Uvala je jedno od najsigurnijih noćnih sidrišta u regiji, ali se polja bova u vrhuncu ljeta popune do kasnog popodneva, pa rezerviraj preko neke od konoba ili stigni rano."
+        },
+        "3": {
+          "shortDescription": "Samo 8 milja u kameni labirint Nacionalnog parka Kornati, 89 krških otoka s restoranskim bovama na Levrnaki i Piškeri.",
+          "description": "Danas je samo osam milja, ali je to srce putovanja. Kornati su 89 otoka blijede stijene bez drveća, bez sela, bez cesta, gotovo ništa osim kamena i mora. Pučinske stijene, one koje domaći zovu krunama, gledaju na otvoreni Jadran i primaju svu težinu vala. Veži na Levrnaki i okupaj se na Lojeni, jednoj od rijetkih pješčanih plaža u cijelom parku. Ako imaš noge za to, uspon na Metlinu na Kornatu daje ti cijeli arhipelag pod sobom. Navečer se obično smjestimo blizu Piškere, gdje među ruševinama još stoji stara ribarska crkvica. Rezerviraj stol na kopnu, ispeci što je konoba tog jutra iskrcala i gledaj nebo kad agregati utihnu.",
+          "thingsToDo": [
+            "Okupaj se na pješčanoj Lojeni na Levrnaki",
+            "Popni se na vidikovac Metlina na otoku Kornatu",
+            "Pogledaj ribarsku crkvicu na Piškeri",
+            "Večera uz restoransku bovu na Kornatima"
+          ],
+          "mooringTip": "Na ulazu plaćaš dnevnu ulaznicu za park; kupi je online unaprijed jer je jeftinija nego na brodu. Restoranske bove na Levrnaki, Piškeri i u Vrulji besplatne su ako večeraš na kopnu, pa rezerviraj stol i vez dolazi uz njega."
+        },
+        "4": {
+          "shortDescription": "Opuštena plovidba uz obalu do Zlarina, hrvatskog koraljnog otoka bez automobila, gdje obitelji vade crveni koralj od petnaestog stoljeća.",
+          "description": "Nakon sirovog kamena Kornata Zlarin djeluje gotovo bujno. Blaga je to plovidba prema jugoistoku do šibenskog arhipelaga, s maestralom koji obično krene do podneva i posljednji dio ti da pravi bočni vjetar. Na otoku nema automobila, pa ritam padne čim siđeš s broda. Zlarin trguje crvenim koraljem pet stoljeća, a mali Centar za tradiciju koralja izlaže alat i priča priču. Prošvrljaj kalama iza luke, pokraj radionica u kojima nekolicina majstora još ručno polira koralj. Navečer sjedni na klupu uz more s čašom domaće rakije i gledaj kako starci lupaju karte u briškuli. Šibenske tvrđave žute preko kanala dok svjetlo gasne.",
+          "thingsToDo": [
+            "Posjeti Centar za tradiciju koralja",
+            "Prošeći kalama uz luku bez automobila",
+            "Domaća rakija na klupi uz more",
+            "Pogledaj partiju briškule"
+          ],
+          "mooringTip": "Zlarinska gradska riva je kratka i najbolje je tretirati je kao dnevni vez; u sezoni stigni prije sredine popodneva ako želiš mjesto. Za mirnu noć usidri se odmah izvan luke na pijesku na 5-7 m i idi na kopno tenderom."
+        },
+        "5": {
+          "shortDescription": "Uz Krku u unutrašnjost do Skradina, srednjovjekovnog gradića u zidinama i vodenog puta do slavnih slapova Krke.",
+          "description": "Danas ostavljaš more za sobom. Ruta ide u šibenski kanal, ispod mosta i uz zeleno grlo rijeke Krke, uz strogo ograničenje brzine čim uđeš u kanjon, pa ne žuri i uživaj u odrazima. Skradin leži ondje gdje se rijeka širi, zbijeno mjesto kamenih lukova i sjenovitih dvorišta. S rive parkovski brodovi voze do Skradinskog buka, kaskadnog kompleksa koji je Krku proslavio; drvene staze provlače se između slapova i bazena. Ostavi mjesta za jelo na kopnu. Skradinski rižot krčka gotovo cijeli dan, a domaći pršut i sir lak su ručak na palubi. Biciklisti mogu uhvatiti parkovsku stazu koja prati vodu uzvodno.",
+          "thingsToDo": [
+            "Brodom do slapova Skradinskog buka",
+            "Prošeći srednjovjekovnim kamenim kalama Skradina",
+            "Kušaj sporo kuhani skradinski rižot",
+            "Provozaj biciklom stazu uz Krku"
+          ],
+          "mooringTip": "ACI marina Skradin je odmah na ušću rijeke i praktičan je izbor za noćenje; za srpanj i kolovoz rezerviraj dobro unaprijed. Gradska riva je samo za kratko zadržavanje, a sidrenje u rijeci i Prokljanskom jezeru nije dopušteno, pa ne računaj da ćeš ovdje baciti sidro."
+        },
+        "6": {
+          "shortDescription": "Natrag na slanu vodu i otprilike 18 milja do Vrgade, otoka bez automobila kod Pirovca s rijetkim potezom mekanog pijeska.",
+          "description": "Vrati se rijekom do obale i okreni pramac na sjeverozapad; do Vrgade je oko 18 milja, do niskog zelenog otoka kod Pirovca koji većina charter ruta preskoči. U tome je i stvar. Uvala Luka spušta se na pravi pijesak, rijedak na ovom dijelu obale, pa sidrište svijetli istom onom blijedom plavom kao Sakarun. Na kopnu nema puno: nekoliko kuća, borove šume, staze i nijedan automobil. Prošeći jednom od staza do plaža na drugoj strani i pročešljaj liniju plime. Ljeti otvore dvije-tri obiteljske konobe, a ako je brudet na ploči, naruči ga; ribarski gulaš ovdje je nežuran i pošten. Otok se u kolovozu malo napuni i do rujna opet isprazni.",
+          "thingsToDo": [
+            "Okupaj se u pješčanoj uvali Luka",
+            "Prošeći otočnim stazama bez automobila",
+            "Pročešljaj tihe plaže na suprotnoj strani",
+            "Brudet u obiteljskoj konobi"
+          ],
+          "mooringTip": "Vrgada ima restoranske bove u uvali Luka koje su besplatne ako večeraš na kopnu. Držanje je dobro na pijesku na 4-6 m ako se radije sidriš i večer zadržiš za sebe; uz jugo zna zaljuljati, pa se dobro uvuci."
+        },
+        "7": {
+          "shortDescription": "Zaključne 22 milje prema sjeveru uz Pašmanski kanal do Zadra, s dolaskom nakon mraka na predstavu Pozdrava suncu na rivi.",
+          "description": "Posljednji dan su jednostavne 22 milje uz Pašmanski kanal i nema žurbe ako iz Vrgade kreneš oko sredine jutra. Ubaci još jedno kupanje gdje god te more povuče, uz Pašman ili Ugljan. Ciljaj da se u Zadar vratiš do kasnog poslijepodneva kako bi predao brod i još imao večer. Stara jezgra nagrađuje polagani hod: okrugla crkva svetog Donata, kamenje rimskog Foruma razbacano pod nogama, stupovi izglačani stoljećima. Ostani vani i nakon zalaska. Pozdrav suncu, veliki disk solarnih ćelija ugrađen u Rivu, budi se kad svjetlo nestane i baca boje oko tvojih nogu dok Morske orgulje sviraju val. Nazdravi tjednu Maraschinom, likerom od višnje koji Zadar radi već dvjesto godina.",
+          "thingsToDo": [
+            "Posljednje kupanje kod Pašmana ili Ugljana",
+            "Prošeći rimskim Forumom i crkvom svetog Donata",
+            "Vidi Pozdrav suncu u sumrak",
+            "Kušaj zadarski Maraschino, liker od višnje"
+          ],
+          "mooringTip": "Marina Zadar u Boriku uobičajena je charter baza za predaju, iako se neke flote vraćaju u Marinu Dalmacija u Sukošanu, pa provjeri papire. U svakom slučaju rezerviraj termin na benzinskoj dan ranije; pontoni se zakrče u petak i subotu tijekom izmjena."
+        }
+      }
     }
   },
   "areas": {
