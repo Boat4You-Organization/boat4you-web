@@ -621,8 +621,11 @@
     "open": "Chat openen",
     "close": "Chat sluiten",
     "agentTag": "boat4you team",
-    "namePrompt": "Welkom! Wat is uw naam, zodat we u kunnen aanspreken?",
+    "namePrompt": "Vul uw naam in om te beginnen:",
     "namePlaceholder": "Uw naam",
-    "nameStart": "Chat starten"
+    "nameStart": "Chat starten",
+    "welcomeTitle": "Welkom bij de boat4you chat!",
+    "welcomeText": "Ons team beantwoordt uw berichten rechtstreeks, met hulp van een AI-assistent voor vragen over vloot, routes en prijzen. Gesprekken kunnen worden teruggelezen om de service te verbeteren — deel alleen de gegevens die nodig zijn voor uw vraag.",
+    "privacyLink": "Privacybeleid"
   }
 }

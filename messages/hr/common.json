@@ -621,8 +621,11 @@
     "open": "Otvori chat",
     "close": "Zatvori chat",
     "agentTag": "boat4you tim",
-    "namePrompt": "Dobrodošli! Kako se zovete, da znamo kome se obraćamo?",
+    "namePrompt": "Molimo Vas, upišite svoje ime za početak:",
     "namePlaceholder": "Vaše ime",
-    "nameStart": "Započni razgovor"
+    "nameStart": "Započni chat",
+    "welcomeTitle": "Dobro došli u boat4you chat!",
+    "welcomeText": "Na vaše poruke odgovara naš tim, uz AI asistenta koji pomaže s pitanjima o flotama, rutama i cijenama. Razgovore naš tim može pregledati radi poboljšanja usluge — navedite samo podatke potrebne za vaš upit.",
+    "privacyLink": "Pravila privatnosti"
   }
 }

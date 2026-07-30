@@ -621,8 +621,11 @@
     "open": "Abrir chat",
     "close": "Cerrar chat",
     "agentTag": "Equipo boat4you",
-    "namePrompt": "¡Bienvenido! ¿Cómo se llama, para poder dirigirnos a usted?",
+    "namePrompt": "Introduzca su nombre para empezar:",
     "namePlaceholder": "Su nombre",
-    "nameStart": "Iniciar chat"
+    "nameStart": "Iniciar chat",
+    "welcomeTitle": "¡Bienvenido al chat de boat4you!",
+    "welcomeText": "Nuestro equipo responde directamente a sus mensajes, con ayuda de un asistente de IA para dudas sobre flota, rutas y precios. Las conversaciones pueden revisarse para mejorar el servicio — indique solo los datos necesarios para su consulta.",
+    "privacyLink": "Política de privacidad"
   }
 }

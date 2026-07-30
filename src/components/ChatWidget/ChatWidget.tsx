@@ -156,6 +156,10 @@ const ChatWidget = () => {
       setToken(existing);
       setStatus(data.status);
       appendMessages(data.messages);
+
+      // Sessions from before the pre-chat gate carry no name — the welcome
+      // screen greets them once before the transcript unlocks (Mario 30.7).
+      if (!data.visitorName) setNeedsName(true);
     };
 
     if (stored) {
@@ -169,6 +173,19 @@ const ChatWidget = () => {
     const name = nameInput.trim();
 
     if (!name) return;
+
+    // Existing (legacy) session: attach the name in place, keep the transcript.
+    if (token) {
+      fetch(`${API}/public/chat/sessions/${token}/name`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name }),
+      })
+        .then(() => setNeedsName(false))
+        .catch(() => setNeedsName(false));
+
+      return;
+    }
 
     createSession(name).catch(() => setDisabled(true));
   };
@@ -292,24 +309,28 @@ const ChatWidget = () => {
               ×
             </button>
           </div>
-          {needsName && !token ? (
-            <>
-              <div className={styles.list}>
-                <div className={styles.bubbleAssistant}>{t('namePrompt')}</div>
-              </div>
-              <div className={styles.inputRow}>
-                <input
-                  value={nameInput}
-                  onChange={e => setNameInput(e.target.value)}
-                  onKeyDown={e => e.key === 'Enter' && submitName()}
-                  placeholder={t('namePlaceholder')}
-                  maxLength={120}
-                />
-                <button type="button" onClick={submitName} disabled={!nameInput.trim()}>
-                  {t('nameStart')}
-                </button>
-              </div>
-            </>
+          {needsName ? (
+            <div className={styles.welcome}>
+              <p className={styles.welcomeTitle}>{t('welcomeTitle')}</p>
+              <p className={styles.welcomeText}>
+                {t('welcomeText')}{' '}
+                <Link href={`/${locale}/privacy-policy`} target="_blank" className={styles.welcomeLink}>
+                  {t('privacyLink')}
+                </Link>
+              </p>
+              <p className={styles.welcomePrompt}>{t('namePrompt')}</p>
+              <input
+                className={styles.welcomeInput}
+                value={nameInput}
+                onChange={e => setNameInput(e.target.value)}
+                onKeyDown={e => e.key === 'Enter' && submitName()}
+                placeholder={t('namePlaceholder')}
+                maxLength={120}
+              />
+              <button type="button" className={styles.welcomeStart} onClick={submitName} disabled={!nameInput.trim()}>
+                {t('nameStart')}
+              </button>
+            </div>
           ) : (
             <>
               <div ref={listRef} className={styles.list}>

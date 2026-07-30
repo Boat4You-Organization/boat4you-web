@@ -226,3 +226,70 @@
     }
   }
 }
+
+/* IKEA-style pre-chat welcome screen (Mario 30.7.2026): full-panel card with
+   intro + privacy link + name field + one big CTA — the transcript stays
+   hidden until a name is given. */
+.welcome {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 14px;
+  padding: 22px 20px;
+  overflow-y: auto;
+}
+
+.welcomeTitle {
+  margin: 0;
+  font-size: 19px;
+  font-weight: 800;
+  color: #141857;
+}
+
+.welcomeText {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: #3c4257;
+}
+
+.welcomeLink {
+  color: #2856ff;
+  text-decoration: underline;
+}
+
+.welcomePrompt {
+  margin: 6px 0 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #141857;
+}
+
+.welcomeInput {
+  padding: 12px 16px;
+  border: 1px solid #d5d9e2;
+  border-radius: 999px;
+  font-size: 14px;
+  outline: none;
+
+  &:focus {
+    border-color: #2856ff;
+  }
+}
+
+.welcomeStart {
+  margin-top: auto;
+  padding: 13px 16px;
+  border: 0;
+  border-radius: 999px;
+  background: #141857;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+
+  &:disabled {
+    opacity: 0.45;
+    cursor: default;
+  }
+}

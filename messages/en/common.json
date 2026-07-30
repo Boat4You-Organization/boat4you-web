@@ -621,8 +621,11 @@
     "open": "Open chat",
     "close": "Close chat",
     "agentTag": "boat4you team",
-    "namePrompt": "Welcome! What's your name, so we know how to address you?",
+    "namePrompt": "Please enter your name to start:",
     "namePlaceholder": "Your name",
-    "nameStart": "Start chat"
+    "nameStart": "Start chat",
+    "welcomeTitle": "Welcome to boat4you chat!",
+    "welcomeText": "Our team answers your messages directly, together with an AI assistant that helps with fleet, route and price questions. Conversations may be reviewed by our team to improve the experience — share only the details needed for your enquiry.",
+    "privacyLink": "Privacy Policy"
   }
 }
