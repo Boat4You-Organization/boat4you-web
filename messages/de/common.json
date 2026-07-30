@@ -611,10 +611,10 @@
   "tripQrAlt": "QR-Code der Trip-App",
   "pdfDownload": "PDF herunterladen",
   "chatWidget": {
-    "title": "boat4you Assistent",
+    "title": "IRIS — boat4you Assistentin",
     "subtitleAi": "KI-Concierge — antwortet in Sekunden",
     "subtitleHuman": "Unser Team ist für Sie da",
-    "greeting": "Hallo! Ich helfe Ihnen, die richtige Yacht zu finden. Wo und wann möchten Sie segeln?",
+    "greeting": "Hallo, ich bin IRIS! Ich helfe Ihnen, die richtige Yacht zu finden. Wo und wann möchten Sie segeln?",
     "placeholder": "Nachricht eingeben…",
     "send": "Senden",
     "typing": "schreibt…",
@@ -625,7 +625,7 @@
     "namePlaceholder": "Ihr Name",
     "nameStart": "Chat starten",
     "welcomeTitle": "Willkommen im boat4you Chat!",
-    "welcomeText": "Unser Team beantwortet Ihre Nachrichten direkt, unterstützt von einem KI-Assistenten für Fragen zu Flotte, Routen und Preisen. Gespräche können zur Verbesserung des Service eingesehen werden — teilen Sie nur die für Ihre Anfrage nötigen Angaben.",
+    "welcomeText": "Unser Team beantwortet Ihre Nachrichten direkt, gemeinsam mit IRIS, unserer KI-Assistentin für Fragen zu Flotte, Routen und Preisen. Gespräche können zur Verbesserung des Service eingesehen werden — teilen Sie nur die für Ihre Anfrage nötigen Angaben.",
     "privacyLink": "Datenschutzerklärung"
   }
 }

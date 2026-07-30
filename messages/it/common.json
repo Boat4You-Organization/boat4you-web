@@ -611,10 +611,10 @@
   "tripQrAlt": "Codice QR dell'app di viaggio",
   "pdfDownload": "Scarica PDF",
   "chatWidget": {
-    "title": "Assistente boat4you",
+    "title": "IRIS — assistente boat4you",
     "subtitleAi": "Concierge AI — risponde in pochi secondi",
     "subtitleHuman": "Il nostro team è con voi",
-    "greeting": "Ciao! Posso aiutarti a trovare lo yacht giusto. Dove e quando vorresti navigare?",
+    "greeting": "Ciao, sono IRIS! Vi aiuterò a trovare lo yacht giusto. Dove e quando vorreste navigare?",
     "placeholder": "Scrivi un messaggio…",
     "send": "Invia",
     "typing": "sta scrivendo…",
@@ -625,7 +625,7 @@
     "namePlaceholder": "Il vostro nome",
     "nameStart": "Inizia la chat",
     "welcomeTitle": "Benvenuti nella chat boat4you!",
-    "welcomeText": "Il nostro team risponde direttamente ai vostri messaggi, con l'aiuto di un assistente AI per domande su flotta, itinerari e prezzi. Le conversazioni possono essere riviste per migliorare il servizio — indicate solo i dati necessari alla vostra richiesta.",
+    "welcomeText": "Il nostro team risponde direttamente ai vostri messaggi, insieme a IRIS, la nostra assistente AI per domande su flotta, itinerari e prezzi. Le conversazioni possono essere riviste per migliorare il servizio — indicate solo i dati necessari alla vostra richiesta.",
     "privacyLink": "Informativa sulla privacy"
   }
 }
