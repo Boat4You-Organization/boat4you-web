@@ -1,1 +1,753 @@
-{}
+{
+  "routes": {
+    "ajaccio-south-corsica": {
+      "metaTitle": "7 dni: Korsyka Południowa i Bonifacio | Boat4You",
+      "metaDesc": "Z Ajaccio na południe do Bonifacio i wysp Lavezzi: siedem dni przez Zatokę Valinco, granitowe wieże i porty pod klifami.",
+      "days": {
+        "1": {
+          "shortDescription": "Wychodzimy z rodzinnego portu Napoleona, opływamy Capo di Muro i rzucamy kotwicę w piaszczystych zatoczkach Porto Pollo.",
+          "description": "Zaopatrzenie w Ajaccio jest proste, więc większość załóg robi zakupy na hali targowej, jeszcze przed rzuceniem cum. Po wyjściu z zatoki wybrzeże staje się dziksze, gdy idziemy na południe za Capo di Muro, jakieś dwadzieścia mil otwartej wody, a popołudniowa termika zwykle wchodzi nam w plecy. Porto Pollo leży u wejścia do Zatoki Valinco: spokojne miejsce z piaszczystym dnem, w którym kotwica trzyma pewnie. Bosmanat jest naprawdę pomocny i odpowiada na wywołanie przez radio, co wiele znaczy, kiedy przychodzisz późno. Przed kolacją kąpiel z pawęży, bo woda jest tu spokojna i na tyle płytka, że pierwsza noc mija łagodnie. Zwykle wychodzimy z Ajaccio przed południem, żeby dojść na kotwicowisko z zapasem światła i mieć czas na porządne rozpoznanie łódki.",
+          "thingsToDo": [
+            "Zakupy na hali targowej w Ajaccio przed wyjściem",
+            "Snorkeling na mieliznach przy Porto Pollo",
+            "Wypożyczenie windsurfingu w zatoce Porto Pollo",
+            "Drink o zachodzie w barze na plaży Porto Pollo"
+          ],
+          "mooringTip": "W Porto Pollo kotwica dobrze trzyma na piasku na 3-5 metrach; stawaj przy plaży, zamiast tłoczyć się u małego pomostu, a jeśli chcesz muring albo miejsce w lipcu, wywołaj bosmanat na VHF."
+        },
+        "2": {
+          "shortDescription": "Krótki, dwugodzinny skok przez Valinco do Campomoro, gdzie największa genueńska wieża na Korsyce pilnuje cichej, piaszczystej zatoki.",
+          "description": "To jeden z krótszych etapów tygodnia, ledwie dwie godziny, jeśli wiatr dopisze, więc nie ma po co zrywać się o świcie. Campomoro zamyka południową stronę Zatoki Valinco, wioska granitowych domów, która zachowała klimat rybackiej osady. Wieża w kształcie gwiazdy na przylądku jest największa na Korsyce i warta dwudziestu minut marszu w górę choćby dla widoku na całą zatokę. Przy spokojnej pogodzie kotwiczenie jest bezproblemowe, przy plaży leży dobry piasek. Pilnuj jednak prognozy: zatoka otwiera się na południowy zachód, a libeccio wpuszcza falę prosto do środka. Snorkeling wzdłuż skał na północnym końcu to sporo ryb. Na brzegu kilka małych restauracji podaje dzienny połów kilka kroków od wody.",
+          "thingsToDo": [
+            "Wejście na gwiaździstą wieżę Campomoro",
+            "Snorkeling na skałach w północnym krańcu zatoki",
+            "Ścieżka nadmorska za wieżą",
+            "Świeży połów w restauracji przy plaży"
+          ],
+          "mooringTip": "Kotwicz na piasku przy plaży na 4-6 metrach, ale traktuj Campomoro jako miejsce tylko na dobrą pogodę. Jeśli prognoza daje nocą libeccio z południowego zachodu, zatoka zaczyna kołysać, a bezpieczniejszą kryjówką będzie Porto Pollo albo Propriano."
+        },
+        "3": {
+          "shortDescription": "Wzdłuż brzegu na południe do Tizzano, kieszonkowego portu rybackiego w zatoczce z przejrzystą wodą, w połowie drogi do Cieśniny Bonifacio.",
+          "description": "Na południe od Campomoro brzeg pustynnieje, a w tle stoi makia rezerwatu Senetosa z bliźniaczymi latarniami. Tizzano to wąska zatoczka, którą łatwo przegapić, dopóki nie jesteś niemal na niej. Sam port przyjmuje łodzie poniżej dziesięciu metrów; wszystko większe kotwiczy przed pomostem w zatoczce, gdzie woda jest czysta nad piaskiem i trawą morską. To małe miejsce: kilka domów, sklepik na dokupienie zapasów i dwie restauracje, które stawiają na miejscowy połów i wino z Sartene. Niewiele się tu dzieje i o to właśnie chodzi po dwóch ruchliwych portach. Ten etap często planujemy na późny przedpołudniowy start, żeby popołudniowe słońce świeciło na kotwicowisko. Wskocz pontonem na brzeg na wczesną kolację i popatrz, jak wracają kutry.",
+          "thingsToDo": [
+            "Kotwica i kąpiel w przejrzystej zatoczce Tizzano",
+            "Kolacja ze świeżej ryby w porcie",
+            "Kolacja do czerwonego wina z Sartene",
+            "Uzupełnienie zapasów w sklepiku w Tizzano"
+          ],
+          "mooringTip": "Malutki port nadaje się tylko dla łodzi do około 10 m; większe jachty kotwiczą przed pomostem na 3-5 m na piasku. Dobrze zaryj kotwicę i sprawdź krąg obrotu, bo zatoczka jest ciasna i w sezonie zapełnia się lokalnymi bojami."
+        },
+        "4": {
+          "shortDescription": "Opływamy południowo-zachodni koniec Korsyki i przeciskamy się szczeliną w klifie do Bonifacio, jednego z najwspanialszych naturalnych portów Morza Śródziemnego.",
+          "description": "Dzisiejszy etap jest najbardziej odsłonięty w całym rejsie: opływamy południowo-zachodni róg, gdzie Cieśnina Bonifacio ściska wiatr między Korsyką a Sardynią. Libeccio albo mistral potrafi dmuchnąć ponad trzydzieści węzłów, więc prognozę sprawdzamy zawsze wieczorem, a wychodzimy wcześnie, żeby wyprzedzić popołudniowe wzmożenie. Nagrodą jest samo podejście. Od strony morza wejście to zwykła szczelina w białych wapiennych klifach, niewidoczna, dopóki nie podejdziesz blisko; potem calanque skręca w prawo i port otwiera się pod starym miastem. Bonifacio trzyma się krawędzi klifu nad tobą, same wysokie domy i genueńskie mury. Marina w lipcu i sierpniu zapełnia się szybko, więc rezerwuj z wyprzedzeniem. Po zacumowaniu wejdź schodami do haute ville na drinka na murach i na spacer do cmentarza Bosco o zachodzie słońca.",
+          "thingsToDo": [
+            "Spacer po murach haute ville",
+            "Zejście Schodami Króla Aragonii",
+            "Zachód słońca na cmentarzu Bosco nad klifem",
+            "Aperitif na tarasie mariny w Bonifacio"
+          ],
+          "mooringTip": "Marinę w Bonifacio rezerwuj zawczasu na lipiec i sierpień; cumujesz rufą do kei na muringach, a ekipa portowa pomaga na pomostach. Jeśli jest pełna, boje w Calanque de la Catena zaraz przy wejściu kosztują około 25 euro za jednokadłubowiec."
+        },
+        "5": {
+          "shortDescription": "Sześciomilowy skok przez cieśninę na wyspy Lavezzi, granitowy rezerwat otoczony jasnym piaskiem i zatoczkami do snorkelingu.",
+          "description": "Archipelag Lavezzi leży zaledwie kilka mil na wschód od Bonifacio, tak blisko, że planowanie dotyczy wiatru, nie odległości. To niskie granitowe wysepki, wyszlifowane w obłe głazy, a cała grupa leży w rezerwacie Bocche di Bonifacio. Zwykłym kotwicowiskiem jest Cala di Greco po północnej stronie: jest tam piaszczysty płat, w który można wpuścić kotwicę, a obok boje zarezerwowane dla statków wycieczkowych z Bonifacio, więc te zostaw wolne. Snorkeling wokół Cala Lazarina i Cala di u Grecu jest najlepszy w całym tygodniu: granitowe rynny pełne ryb w krystalicznie czystej płyciźnie. Uważaj na oznaczone strefy zakazu kotwiczenia, wygrodzone żółtymi bojami, by chronić łąki podmorskie. To postój na dzień, bo kotwicowisko jest odsłonięte, więc większość załóg wraca na osłonięte wody przed nocą.",
+          "thingsToDo": [
+            "Snorkeling w granitowych rynnach Cala Lazarina",
+            "Kotwica i kąpiel przy Cala di Greco",
+            "Ścieżka do pomników na Lavezzi",
+            "Podglądanie ryb w Cala di u Grecu"
+          ],
+          "mooringTip": "Kotwicz na piaszczystych płatach w Cala di Greco na 3-6 m i trzymaj się z daleka od stref ochronnych wyznaczonych żółtymi bojami. To kotwicowisko dzienne, tylko na dobrą pogodę, odsłonięte na falę, więc zaplanuj powrót do Bonifacio albo drogę na północ przed wieczorem."
+        },
+        "6": {
+          "shortDescription": "Długi marsz na północ, z powrotem wzdłuż zachodniego brzegu do Propriano, porządnej kurortowej mariny w głębi Zatoki Valinco.",
+          "description": "To największy pożeracz mil w tygodniu: długie halsowanie albo półwiatr na północ z cieśniny z powrotem do Zatoki Valinco. Wyjdź wcześnie. Przy przeważającym wiatrze z południowego zachodu przez większość drogi utrzymasz przyzwoity kurs pod żaglami, ale etap jest odsłonięty i lepiej zrobić go w lżejszym porannym wietrze niż w popołudniowej termice na pełnej sile. Propriano czeka w głębi zatoki: prawdziwe miasteczko kurortowe z dużą mariną, kawiarniami i restauracjami wzdłuż kei oraz bosmanem, który przyjmuje cię na pomoście. Po dzikich kotwicowiskach południa wydaje się niemal tłoczne. Zrób tu zapasy, pranie i zjedz na brzegu, bo restauracje nad wodą podają dobrą rybę z grilla, a wybór jest naprawdę spory. To wygodne, osłonięte miejsce, żeby się przegrupować przed ostatnim odcinkiem do bazy.",
+          "thingsToDo": [
+            "Zapasy na kei w Propriano",
+            "Ryba z grilla w restauracji nad wodą",
+            "Wieczorny spacer promenadą mariny",
+            "Kąpiel na Plage du Lido w Propriano"
+          ],
+          "mooringTip": "Podchodząc do Propriano, wywołaj capitainerie po miejsce; ekipa portowa wychodzi ci naprzeciw na pomoście, woda i prąd są na miejscu. Marina jest dobrze osłonięta i to dobre miejsce, żeby przeczekać libeccio szykujące się na morzu."
+        },
+        "7": {
+          "shortDescription": "Ostatni etap do bazy: wzdłuż brzegu Valinco i wokół Capo di Muro, żeby zamknąć pętlę w Ajaccio.",
+          "description": "Droga do domu prowadzi znów obok odsłoniętego przylądka Capo di Muro, zanim brzeg złagodnieje w Zatoce Ajaccio. To około trzydziestu mil, więc wychodź z zapasem czasu, zwłaszcza jeśli masz wyznaczoną godzinę zdania łódki; bazy czarterowe zwykle chcą ją z powrotem wieczorem albo następnego ranka. Jeśli czas pozwala, warto zrobić ostatni postój na kąpiel w zatoczce przed miastem, w Portigliolo albo na plażach poniżej Coti-Chiavari, przed zgiełkiem mariny. Samo Ajaccio zasługuje na popołudnie, jeśli je masz. Stare miasto i dom rodzinny Napoleona, cytadela i ostatnia kolacja na brzegu dobrze zamykają ten tydzień. Zwykle tankujemy i porządkujemy łódkę wieczorem przed zdaniem, żeby ostatni poranek był spokojny i nikt nie gonił za zegarem.",
+          "thingsToDo": [
+            "Ostatnia kąpiel na plaży Portigliolo",
+            "Zwiedzanie domu Napoleona, Maison Bonaparte",
+            "Spacer po starym mieście i cytadeli w Ajaccio",
+            "Pożegnalna kolacja na kei w Ajaccio"
+          ],
+          "mooringTip": "Zatankuj, zanim wrócisz na czarterowe miejsce w Ajaccio, i potwierdź z bazą godzinę zdania oraz pomost. Staraj się stanąć przy kei z zapasem światła dziennego; marina w porze przekazań jest zatłoczona, a miejsca na manewry mało."
+        }
+      }
+    },
+    "brittany-islands-14-days": {
+      "metaTitle": "14 dni: Morbihan i Belle-Ile | Boat4You",
+      "metaDesc": "Dwa tygodnie z Le Crouesty przez Zatokę Morbihan do Houat, Belle-Ile, Groix i Lorient. Kotwicowiska, porty i wskazówki dla południowej Bretanii.",
+      "days": {
+        "1": {
+          "shortDescription": "Wpłyń z przypływem przez cieśninę do Zatoki Morbihan i wejdź przez śluzę do mariny w sercu starego Vannes.",
+          "description": "Pierwszy etap jest krótki, ale liczy się zegar, nie log. Zaplanuj wyjście tak, aby przypływ przeniósł cię przez przesmyk między Port-Navalo a Kerpenhir, gdzie przy dużych współczynnikach prąd Jument idzie ostro. Za przesmykiem woda się uspokaja, a tor do Vannes wije się obok stelaży ostrygowych i niskich, zielonych brzegów. Marina leży w samym starym mieście, a dojście prowadzi przez most obrotowy i próg, które otwierają się tylko wokół wysokiej wody, więc sprawdź rozkład, zanim się na to zdecydujesz. Na brzegu mury obronne i pralnie nad rzeką Marle warte są godziny, a uliczki za katedrą są pełne creperii. Zwykle przychodzimy z czasem na spacer po murach przed kolacją. Kup tu chleb i kawę, bo to najlepiej zaopatrzony postój na całej pętli.",
+          "thingsToDo": [
+            "Spacer średniowiecznymi murami nad pralniami",
+            "Kolacja w creperii na uliczkach starego miasta",
+            "Katedra Saint-Pierre i Place Henri IV",
+            "Pełne zapasy na targu w centrum"
+          ],
+          "mooringTip": "Most obrotowy i próg do basenu w Vannes otwierają się tylko w okienku wokół wysokiej wody, więc planuj wejście i wyjście według opublikowanego rozkładu. Miejsca są w samym centrum i w lipcu się zapełniają, więc dzwoń do capitainerie zawczasu."
+        },
+        "2": {
+          "shortDescription": "Leniwy poranek w Vannes, potem krótki spływ zatoką do zielonych dróżek i boi cumowniczych Ile aux Moines.",
+          "description": "Wyjdź z Vannes na odpływie i pozwól prądowi pracować w dół do Ile aux Moines, największej i najpiękniejszej z wysp zatoki. Przejście to zaledwie kilka mil, ale w przesmyku przy Port-Blanc pływ prze mocno, więc dobierz czas i pilnuj namiarów na brzeg. Weź boję przy Port du Lerio, bo dno trzyma nierówno, a tor jest ruchliwy, więc boja bije tu kotwicę. Wypożycz rower na kei i pojedź do Bois d'Amour oraz do megalitu na Pointe du Trech. W wioseczce jest kilka dobrych miejsc na półmisek ostryg. Wieczory są ciche, gdy jednodniowi turyści złapią ostatni prom do Port-Blanc.",
+          "thingsToDo": [
+            "Rowerem leśną ścieżką Bois d'Amour",
+            "Półmisek ostryg na tarasie w Le Bourg",
+            "Megalit i widok na Pointe du Trech",
+            "Kąpiel na Plage du Goret"
+          ],
+          "mooringTip": "Weź boję dla gości przy Port du Lerio, zamiast rzucać kotwicę, bo tor jest wąski, a dno nierówne. Prądy pływowe idą przy wyspie mocno, więc jeśli możesz, podchodź blisko bezruchu wody."
+        },
+        "3": {
+          "shortDescription": "Wyjdź z zatoki na odpływie i przelej się półwiatrem przez Zatokę Quiberon do najsłynniejszego regatowego portu Francji nad rzeką Crac'h.",
+          "description": "To dzień, w którym zostawiasz osłonięte wody za rufą. Wymknij się przesmykiem Port-Navalo na resztkach odpływu, potem kurs na zachód przez Zatokę Quiberon, zwykle piękny półwiatr w popołudniowej bryzie. Wejście do rzeki Crac'h jest oznakowane bojami i proste, a marina leży jakąś milę w górę rzeki, za rzędami barek ostrygowych pod mostem Kerisper. La Trinite to poważna żeglarska kraina: Tabarly trzymał tu swoje łodzie, a Spi Ouest-France każdej wiosny wciąż zapełnia pomosty. Przejdź się keją i poczytaj nazwy na pawężach regatowych kadłubów. Na kolację La Maison Quintin podaje ostrygi wprost z rzeki, a Le Chantier prostą rybę z grilla w starej szopie ostrygowej po drugiej stronie wody.",
+          "thingsToDo": [
+            "Nazwy na pawężach regatowców przy pomostach",
+            "Ostrygi na tarasie La Maison Quintin",
+            "Ryba z grilla w Le Chantier",
+            "Przejście przez Pont de Kerisper"
+          ],
+          "mooringTip": "La Trinite to duża, dobrze prowadzona marina z pomostem dla gości przy stacji paliw; dzwoń zawczasu w sezonie regatowym, kiedy Crac'h zapełnia się błyskawicznie. Prąd w rzece idzie żwawo, więc podchodź do miejsca dziobem w pływ."
+        },
+        "4": {
+          "shortDescription": "Przez otwartą zatokę na bezsamochodowe Houat i kotwica przy długim, białym łuku wydm Treac'h er Goured.",
+          "description": "Houat leży na otwartej zatoce, a przejście z La Trinite to porządna żegluga przez jakieś dziesięć mil wód Quiberon. Wyspa jest mała, bezdrzewna i bez samochodów, otoczona piaskiem. Po wschodniej stronie Treac'h er Goured wygina się dwoma kilometrami białych wydm i przy stabilnych wiatrach z zachodu jest wspaniałym dziennym kotwicowiskiem. Kotwicz przy plaży, z dala od oznaczonej strefy kabla, albo weź boję w Port Saint-Gildas na północnym brzegu. Do maleńkiej wioski idzie się dziesięć minut w górę od portu; jest piekarnia i jedno czy dwa miejsca na kraba. Przy wiatrze z północnego wschodu kotwicowisko przy plaży kołysze nocą, więc przenieś się na osłonięte wody przy Treac'h er Salus.",
+          "thingsToDo": [
+            "Spacer po łuku wydm Treac'h er Goured",
+            "Krab i langustynki w wioseczce",
+            "Ścieżka nadmorska wokół Pointe de Beg Pell",
+            "Kąpiel na białych plażach po wschodniej stronie"
+          ],
+          "mooringTip": "Pole boi w Port Saint-Gildas ma 25 do 30 miejsc dla gości i w sierpniu zapełnia się wcześnie, więc przychodź do wczesnego popołudnia. Na spokojną noc kotwicz przy Treac'h er Salus, gdzie osłona od nocnego wiatru z północnego wschodu jest lepsza."
+        },
+        "5": {
+          "shortDescription": "Krótki skok na południe do dzikszej młodszej siostry Houat, Hoedic: wrzosowiska, forty i puste plaże.",
+          "description": "Hoedic leży zaledwie kilka mil na południe od Houat, więc to poranek łatwej żeglugi i popołudnie na brzegu. Wyspa jest jeszcze mniejsza i cichsza niż sąsiadka, niski dywan wrzosowisk i wydm z garstką domów w środku. Weź boję w Port de l'Argol, małym porcie po zachodniej stronie, albo przy spokojnej pogodzie zakotwicz przed nim. Nie ma samochodów i prawie nie ma sklepu, i o to właśnie chodzi. Przejdź do starego Fort d'Hoedic i kaplicy, a potem w dół na Plage de la Vierge na kąpiel. Wieczory są tu tak ciche, jak tylko francuska żegluga potrafi. Zabierz, co potrzebne, z Houat, bo na Hoedic zaopatrzenie jest ubogie.",
+          "thingsToDo": [
+            "Zwiedzanie odrestaurowanego Fort d'Hoedic",
+            "Kąpiel na Plage de la Vierge",
+            "Marsz wrzosowiskiem do latarni",
+            "Drink o zachodzie na pokładzie w pełnej ciszy"
+          ],
+          "mooringTip": "Port de l'Argol ma boje dla gości, ale niewiele osłony przy silnych wiatrach z zachodu, więc sprawdź prognozę, zanim zdecydujesz się tu nocować. Zapasy są minimalne, więc najpierw dobierz jedzenie i wodę na Houat."
+        },
+        "6": {
+          "shortDescription": "Przeskok na Belle-Ile, największą z bretońskich wysp, i miejsce pod cytadelą Vaubana pilnującą ruchliwego Le Palais.",
+          "description": "Belle-Ile zasługuje na swoją nazwę i renomę, a przejście z Hoedic to około piętnastu mil otwartej wody, więc wybierz spokojne okienko. Le Palais to główne drzwi wyspy: pracujący port pod wielką, gwiaździstą Citadelle Vauban, którą inżynier Ludwika XIV zbudował, by trzymać podejścia. W sezonie jest tłoczno; licz się z cumowaniem w trzeciej czy czwartej burcie na zewnętrznych pomostach albo z wejściem do basenu wewnętrznego, gdy wrota otwierają się blisko wysokiej wody. Po zacumowaniu miasteczko ma wszystko, czego brakowało na zewnętrznych wyspach: sklep żeglarski, targi, kino i prawdziwe restauracje. Przejdź się murami cytadeli dla widoku na las masztów. Wypożycz tu rowery albo samochód, jeśli chcesz zobaczyć dzikie południowe wybrzeże i Aiguilles de Port-Coton.",
+          "thingsToDo": [
+            "Zwiedzanie gwiaździstej Citadelle Vauban",
+            "Rowerem do Aiguilles de Port-Coton",
+            "Zakupy na targu przy kei",
+            "Kino albo kolacja w porządnej restauracji"
+          ],
+          "mooringTip": "Le Palais zapełnia się szybko w lipcu i sierpniu, więc przychodź przed południem i licz się z cumowaniem w kilku burtach na pomostach dla gości. Wrota basenu wewnętrznego otwierają się tylko wokół wysokiej wody, więc albo w to trafisz, albo bierz miejsce zewnętrzne."
+        },
+        "7": {
+          "shortDescription": "Tylko kilka mil wzdłuż brzegu do Sauzon, najładniejszego portu Belle-Ile: pastelowe keje i wysychająca pływowa zatoczka.",
+          "description": "Można by tam prawie dojść na piechotę, ale opłynięcie z Le Palais do Sauzon to przyjemniejszy sposób na przybycie. Sauzon leży w głębi wąskiej pływowej zatoczki na północno-zachodnim brzegu, łuk pastelowych domów i szczupła latarnia przy wejściu. Większość portu wysycha, więc goście biorą muringi dziób-rufa na łańcuchach w kanale; głębsze miejsca na zewnętrznym końcu zostają na wodzie. Jest tu spokojniej i bardziej dostojnie niż w Le Palais, jakby stworzone na leniwe popołudnie. Przejdź ścieżką nadmorską do Pointe du Cardinal, a potem wróć na kolację. Hotel du Phare przy kei ma taras nad wodą i podaje dzienny połów prosto i dobrze.",
+          "thingsToDo": [
+            "Ścieżka nadmorska do Pointe du Cardinal",
+            "Kolacja na tarasie Hotel du Phare",
+            "Zdjęcia pastelowych domów przy kei",
+            "Spacer do latarni przy wejściu do portu"
+          ],
+          "mooringTip": "Większość Sauzon wysycha, więc bierz muring dziób-rufa w kanale i sprawdź, czy przy niskiej wodzie masz głębokość pod swoje zanurzenie. Zewnętrzne boje zostają na wodzie; spytaj bosmana, gdzie stanąć."
+        },
+        "8": {
+          "shortDescription": "Dłuższy etap otwartą wodą na północny zachód do Ile de Groix i jej starego tuńczykowego portu Port Tudy.",
+          "description": "To najdłuższy pojedynczy skok w rejsie, około dwudziestu mil otwartego Atlantyku z Belle-Ile w górę do Groix, więc wychodź wcześnie i pilnuj prognozy pod kątem czegokolwiek z zachodu. Groix odwdzięcza się za trud. Port Tudy na północnym brzegu był kiedyś jednym z wielkich francuskich portów tuńczykowych, a kamienne keje i stare hale konserwowe wciąż obramowują basen. Marina jest popularna i nie przyjmuje rezerwacji, więc cumujesz w burtę tam, gdzie wskaże bosman. Na brzegu przejdź się albo pojedź rowerem na Plage des Grands Sables, rzadką wypukłą plażę, która zmienia kształt razem z prądami. Wyspa ma tuńczykowe święto we krwi i dobre owoce morza. Lubimy ciszę Port-Lay, maleńkiej zatoczki zaraz na zachód od głównego portu.",
+          "thingsToDo": [
+            "Rowerem na wypukłą Plage des Grands Sables",
+            "Spacer wśród starych hal konserwowych Port Tudy",
+            "Spacer o zachodzie do maleńkiego Port-Lay",
+            "Owoce morza na kei Port Tudy"
+          ],
+          "mooringTip": "Port Tudy nie przyjmuje rezerwacji i w sezonie ustawia łodzie w kilku burtach, więc przychodź wczesnym popołudniem i bądź gotowy stanąć w burtę do innego jachtu. Zewnętrzne łańcuchy kołyszą przy fali z północy; basen wewnętrzny jest spokojniejszy, jeśli jest miejsce."
+        },
+        "9": {
+          "shortDescription": "Krótka żegluga na wschód do wielkiej zatoki Lorient, żeglarskiego miasta Francji, obok betonowych schronów dla okrętów podwodnych.",
+          "description": "Z Groix do Lorient to spokojne siedem mil, więc nie ma powodu zrywać się z boi. Wejście do zatoki jest szerokie i dobrze oznakowane, ale promy i kutry trzymają cię w gotowości, a odpływ potrafi w torze iść mocno. Lorient to serce francuskich regat oceanicznych. Stara niemiecka baza okrętów podwodnych w Keroman mieści dziś Cite de la Voile Eric Tabarly i pomost pełny jednostek klas IMOCA i Ultim; często można patrzeć, jak załoga pracuje nad foilującym olbrzymem. Marina w centrum jest wygodna do zrobienia zapasów i na noc z dala od wysp. Nie jest to miejsce ładne w pocztówkowym sensie, ale dla każdego, kto śledzi Vendee Globe, jest niemal pielgrzymką. Uzupełnij tu zapasy, zanim znów skręcisz na południe.",
+          "thingsToDo": [
+            "Muzeum Cite de la Voile Eric Tabarly",
+            "Pomosty regatowców IMOCA i Ultim",
+            "Zwiedzanie bazy okrętów podwodnych Keroman",
+            "Duże zakupy zaopatrzeniowe w mieście"
+          ],
+          "mooringTip": "Lorient ma kilka marin; pomosty w centrum są najwygodniejsze do sklepów i dworca. Uważaj na silny odpływ oraz ruch handlowy i promowy przy wejściu, i dzwoń zawczasu w tygodnie regatowe, kiedy miejsca znikają."
+        },
+        "10": {
+          "shortDescription": "Powrót na Groix na dzień plażowy: kotwica przy jasnych piaskach zamiast wciskania się do Port Tudy.",
+          "description": "Wracamy na Groix, ale tym razem traktujemy to jako dzień na wodzie, nie postój w porcie. Przy wiatrze z zachodu kotwicowisko przy Plage des Grands Sables na wschodnim brzegu jest trudne do pobicia: łuk jasnego piasku schodzący w przejrzystą, zieloną płyciznę. Rzuć kotwicę przy plaży i przepłyń pontonem na brzeg na kąpiel i spacer do Locmarii. Jeśli wiatr przejdzie na wschód, schowaj się pod osłoną po południowej stronie albo wróć na boję w Port Tudy. To dobry dzień zapasowy, żeby zwolnić, zrobić trochę drobnych prac i puścić załogę luzem. Zaplanuj wieczorne przejście tak, żeby stanąć przed zamarciem bryzy i opustoszeniem kotwicowiska.",
+          "thingsToDo": [
+            "Kotwica i kąpiel przy Plage des Grands Sables",
+            "Spacer do wioski Locmaria",
+            "Snorkeling w przejrzystej, zielonej płyciźnie",
+            "Leniwy obiad na kotwicy"
+          ],
+          "mooringTip": "Przy wiatrach z zachodu kotwicowisko Grands Sables jest spokojne i piaszczyste; przy wschodnich staje się nie do utrzymania, więc przenieś się na południowy brzeg albo do Port Tudy. Dobrze zaryj kotwicę, bo pływ obraca łodzie w ciągu dnia."
+        },
+        "11": {
+          "shortDescription": "Tą samą otwartą wodą na południe, z powrotem na Belle-Ile, zwykle szybkim biegiem z wiatrem do Le Palais.",
+          "description": "Etap powrotny na Belle-Ile to te same dwadzieścia mil otwartej wody, ale przy przeważającym wiatrze z zachodu zwykle idzie odwrotnie niż w dniu ósmym: z wiatrem i szybko. Na wystawionym foku albo pod gennakerem można zjeść te mile jeszcze przed obiadem. Le Palais będzie już znajome, a druga noc pozwoli zobaczyć te części wyspy, które ominąłeś. Wypożycz rowery i jedź dzikim południowym brzegiem do Grand Phare i iglic skalnych Port-Coton, gdzie fala rozbija się na biało o klify, które malował Monet. Jeśli port znów jest pełny, kotwicowisko przy cytadeli jest znośne przy wiatrach od brzegu. Zrób zapasy na drogę do domu, bo na zewnętrznych wyspach sklepów jest niewiele, a do zatoki wciąż dwa dni.",
+          "thingsToDo": [
+            "Rowerem do latarni Grand Phare",
+            "Klify Aiguilles de Port-Coton",
+            "Drugie spojrzenie na stare miasto Le Palais",
+            "Zapasy na zewnętrzne wyspy"
+          ],
+          "mooringTip": "Jak w dniu szóstym, w Le Palais najgęściej jest w południe; przyjście przed południem po szybkim etapie z wiatrem pomaga znaleźć miejsce w burcie. Przy stałym wiatrze od brzegu kotwicowisko pod cytadelą jest spokojniejszą alternatywą."
+        },
+        "12": {
+          "shortDescription": "Krótki półwiatr z powrotem na Houat na ostatni wyspowy dzień plażowy, zanim skręcimy do zatoki i do domu.",
+          "description": "Krótki półwiatr na wschód sprowadza cię z powrotem na Houat, a mając zewnętrzne etapy za sobą, nie ma po co się spieszyć. To ostatni prawdziwy wyspowy dzień rejsu, więc niech się liczy. Jeśli wiatr trzyma z zachodu, znów zakotwicz przy Treac'h er Goured i spędź popołudnie na tej długiej, białej plaży albo obejdź wyspę ścieżką nadmorską w dwie spokojne godziny. Piekarnia w wioseczce robi dobry far breton, jeśli trafisz, zanim półki opustoszeją. Weź boję w Port Saint-Gildas na noc albo stań przy Treac'h er Salus, jeśli wiatr przejdzie na północ. Teraz pilnuj prognozy uważnie, bo jutrzejsze wejście do zatoki wymaga sensownego okienka i sprzyjającego pływu w przesmyku.",
+          "thingsToDo": [
+            "Ostatnia kąpiel przy Treac'h er Goured",
+            "Pętla ścieżką nadmorską wokół wyspy",
+            "Far breton z piekarni w wioseczce",
+            "Drinki o zachodzie w Port Saint-Gildas"
+          ],
+          "mooringTip": "Weź boję w Port Saint-Gildas na noc i stań wcześnie, bo w środku lata pole boi się zapełnia. Jeśli wiatr przejdzie na północ, kotwicowisko przy Treac'h er Salus jest spokojniejszym wyborem na sen."
+        },
+        "13": {
+          "shortDescription": "Przez Zatokę Quiberon z powrotem do bazy w Le Crouesty, z przyjściem dobranym do pływowej bramy przy Port-Navalo.",
+          "description": "Ostatni pełny etap prowadzi z powrotem przez Zatokę Quiberon do Le Crouesty, dużej mariny zaraz przed wejściem do Zatoki Morbihan. W normalnych warunkach to łatwa żegluga, jakieś dziesięć mil, często półwiatr w bryzie. Crouesty to głębokowodny port dostępny przy każdym stanie pływu, więc na przyjściu nie trzeba łapać żadnej bramy, co czyni z niego spokojne miejsce na zakończenie żeglugi. Po zacumowaniu przejdź się wokół przylądka do Port-Navalo, żeby ostatni raz spojrzeć na wejście do zatoki i na dziki prąd w przesmyku. Marina ma paliwo, wodę i sklep żeglarski na wszystko, co trzeba jeszcze dopiąć. Jeśli łódka ma wrócić czysta i z pełnym bakiem, zacznij dziś wieczorem, nie jutro rano.",
+          "thingsToDo": [
+            "Spacer przylądkiem do wioski Port-Navalo",
+            "Prąd pędzący przez przesmyk",
+            "Tankowanie i dolanie wody w Crouesty",
+            "Pożegnalna kolacja z owoców morza w marinie"
+          ],
+          "mooringTip": "Le Crouesty to duża marina dostępna przy każdym pływie, więc czas przyjścia nie jest problemem, ale w szczycie sezonu dzwoń do capitainerie po miejsce dla gości. Tankuj od razu po wejściu, żeby uniknąć porannej kolejki w dniu zdania."
+        },
+        "14": {
+          "shortDescription": "Dzień zapasowy w Le Crouesty: krótkie pokręcenie się po okolicy, ostatnia kąpiel albo po prostu pakowanie i zdanie łódki.",
+          "description": "Ostatni dzień jest celowo luźny. Większość czarterów zdaje łódkę tego ranka, więc to w istocie dzień ubezpieczenia na wypadek dmuchnięcia, które mogłoby zatrzymać cię na wyspach. Jeśli pogoda była łaskawa i masz zapas, wykorzystaj go. Krótki wypad do Port-Navalo i kąpiel na plażach zatoki to łagodny ostatni poranek, zanim opróżnisz koje. W przeciwnym razie to czas na nieefektowny koniec rejsu: rozebrać koje, przerobić resztki zapasów na obiad, rozliczyć paliwo i papiery oraz sprawdzić, czy nic nie wpadło pod podłogę. Dwa tygodnie wokół tych wysp sprawiają, że większość załóg już planuje następną pętlę. Le Crouesty to łatwe miejsce, żeby pożegnać się z łódką.",
+          "thingsToDo": [
+            "Krótka poranna żegluga do Port-Navalo",
+            "Ostatnia kąpiel na plażach zatoki",
+            "Rozebranie koi i opróżnienie kabin",
+            "Rozliczenie paliwa, wody i papierów"
+          ],
+          "mooringTip": "Zostaw łódkę na jej miejscu w Le Crouesty do przekazania i potwierdź z bazą godzinę zdania. Jeśli wybierasz się na krótką poranną żeglugę, wróć z dużym zapasem przed umówioną porą, żeby ekipa mogła zrobić przegląd na czas."
+        }
+      }
+    },
+    "cannes-lerins-st-tropez": {
+      "metaTitle": "7 dni: Riwiera i Złote Wyspy | Boat4You",
+      "metaDesc": "7-dniowa trasa z Cannes przez Lérins, Saint-Tropez, Cavalaire, Porquerolles i Port-Cros, z powrotem wzdłuż czerwonego wybrzeża Esterel.",
+      "days": {
+        "1": {
+          "shortDescription": "Krótki skok z mariny na dwie wyspy porośnięte sosnami: jedna pilnuje słynnej celi więziennej, drugą wciąż uprawiają mnisi.",
+          "description": "Ledwie godzina z Cannes i gasisz silnik przy Sainte-Marguerite, większej z dwóch wysp Lérins. Kanał między nią a Saint-Honorat to jedno z najspokojniejszych miejsc na tym wybrzeżu, otoczone sosnami alepskimi i łąkami trawy morskiej, nad którymi nie wolno kotwiczyć. Wybieraj piaszczyste płaty i omijaj z daleka oznaczone strefy ochronne. Na Sainte-Marguerite stary Fort Royal trzymał człowieka w żelaznej masce, a spacer w górę przez sosny zajmuje dwadzieścia minut. Saint-Honorat jest cichsza, wciąż uprawiana przez cystersów, którzy robią własne wino i likier Lérina. Ten etap robimy zwykle przed południem, popołudnie spędzamy kąpiąc się z łódki i zostajemy na spokojną pierwszą noc.",
+          "thingsToDo": [
+            "Spacer do Fort Royal na Sainte-Marguerite",
+            "Degustacja likieru Lérina w opactwie Saint-Honorat",
+            "Kąpiel w kanale między dwiema wyspami",
+            "Cieniste sosnowe ścieżki Sainte-Marguerite"
+          ],
+          "mooringTip": "Kotwicz wyłącznie na piaszczystych płatach w kanale; łąki trawy morskiej są chronione, a nad wodorostami kotwica trzyma słabo. W lipcu do południa robi się tłoczno, więc przychodź wcześnie albo bierz zewnętrzny skraj kotwicowiska."
+        },
+        "2": {
+          "shortDescription": "Porządne przejście przez zatokę do najczęściej fotografowanego portu tego wybrzeża, z targowym placem wartym wczesnego wstawania.",
+          "description": "To pierwsza prawdziwa żegluga tygodnia: nieco ponad dwadzieścia mil otwartej wody, z Cap Camarat zamykającym zatokę przed dziobem. Wyjdź do dziewiątej i będziesz zacumowany, zanim wejdzie popołudniowa bryza. Saint-Tropez w sezonie wymaga rezerwacji dużo wcześniej; bosman stawia cię rufą do kei, tak blisko, że czytasz menu z pokładu. Café Sénéquier ze swoim czerwonym tarasem patrzy na port od 1887 roku. Za Quai Jean-Jaurès dzielnica Ponche zachowała pastelowe ściany i wąskie uliczki, ciche, gdy odpłyną łodzie jednodniowe. Traf na wtorek albo sobotę, a Place des Lices od pierwszego światła zapełnia się straganami: tapenada, prowansalskie sery i o wiele za dużo kapeluszy.",
+          "thingsToDo": [
+            "Kawa na czerwonym tarasie Sénéquier",
+            "Spacer uliczkami starej dzielnicy Ponche",
+            "Zakupy na targu Place des Lices",
+            "Wejście do Citadelle po widok"
+          ],
+          "mooringTip": "Miejsce w Saint-Tropez rezerwuj dużo wcześniej na lipiec i sierpień; cumuje się rufą do kei, a wolne miejsca schodzą szybko. Jeśli jest pełno, zakotwicz w północnej części zatoki w stronę Les Canoubiers i dojedź pontonem."
+        },
+        "3": {
+          "shortDescription": "Dziesięć mil wokół dwóch dzikich przylądków wprowadza cię do osłoniętej piaszczystej zatoki, z winiarską wioską i nadmorskim rezerwatem zaraz za plażą.",
+          "description": "Dziś tylko dziesięć mil, ale wiodą wokół najpiękniejszego wybrzeża w tej zatoce. Przy Cap Taillat i Cap Lardier ziemia należy do Conservatoire du Littoral: strome, zielone zatoczki bez dróg na zapleczu, warte rzucenia kotwicy na obiadową kąpiel, jeśli morze jest spokojne. Samo Cavalaire leży w szerokiej, piaszczystej zatoce, która strząsa mistral, ale jest otwarta na wszystko ze wschodu i południowego zachodu, więc przeczytaj prognozę, zanim zdecydujesz się tu spać. Swobodne kotwiczenie w zatoce jest zabronione, więc weź boję albo miejsce dla gości w porcie. Miasteczko jest bez zadęcia i nastawione na żeglarzy, z łatwym zaopatrzeniem i szeregiem winiarzy Côtes de Provence w dolinie na zapleczu.",
+          "thingsToDo": [
+            "Kąpiel w dzikich zatoczkach przy Cap Lardier",
+            "Zapasy na porannym targu w Cavalaire",
+            "Degustacja rosé Côtes de Provence w głębi lądu",
+            "Spacer piaszczystym łukiem plaży Cavalaire"
+          ],
+          "mooringTip": "W zatoce Cavalaire kotwiczenie jest zabronione, więc bierz boję albo rezerwuj miejsce dla gości w porcie. Dno z mułu i wodorostów trzyma dobrze, ale przy wiatrach ze wschodu zatoka jest nie do utrzymania, więc rusz dalej, jeśli wiatr się przekręci."
+        },
+        "4": {
+          "shortDescription": "Solidne pół dnia na zachód do Porquerolles, największej ze Złotych Wysp, z finałem przy Plage Notre-Dame, jednej z najpiękniejszych białych plaż Morza Śródziemnego.",
+          "description": "Jakieś dwadzieścia dwie mile na zachód, za Cap Bénat, i z mgiełki wyłaniają się Îles d'Or. Porquerolles jest największa i najbardziej zielona, same winnice, sosny i eukaliptusy, a leży w parku narodowym, który naprawdę ma zęby. Żeby legalnie tu kotwiczyć, potrzebujesz zbiornika na wody czarne. Pole boi przed portem przyjmuje łodzie do trzynastu metrów i w lipcu jest wykupione, więc rezerwuj zawczasu albo planuj kotwiczenie daleko od piasku. Plage Notre-Dame, długi spacer albo przejazd rowerem na wschód od wioski, to ta plaża, po którą się tu przyjeżdża: jasny piasek pod piniami. Sama wioska skupia się wokół Place d'Armes, zakurzonego placu z bulodromem, paroma barami i rowerami na godziny.",
+          "thingsToDo": [
+            "Rowerem na plażę Plage Notre-Dame",
+            "Partia bule na Place d'Armes",
+            "Przejazd do Fort Sainte-Agathe",
+            "Degustacja wina z winnic Porquerolles"
+          ],
+          "mooringTip": "Zarezerwuj boję portową z wyprzedzeniem; pole jest ograniczone do łodzi poniżej trzynastu metrów i przez całe lato jest pełne. Do kotwiczenia potrzebujesz na pokładzie zbiornika na wody czarne i musisz trzymać się z dala od oznaczonych łąk posidonii, co najmniej 300 metrów od plaż."
+        },
+        "5": {
+          "shortDescription": "Osiem mil i jesteś na najdzikszej z trzech wysp: sam las i czysta woda w pierwszym morskim parku narodowym Europy.",
+          "description": "Niecałe osiem mil z wyspy na wyspę, więc nie ma po co zrywać się z boi. Port-Cros jest najmniejsza ze Złotych Wysp i najmniej tknięta, garb gęstego lasu schodzący do wody, niemal bez zabudowy. Główna droga, że tak powiem, to ścieżka. Reda przed portem trzyma łodzie na bojach i przy kei, osłonięta z większości kierunków poza silnym południowym. Powyżej dwunastu metrów musisz wziąć boję w strefie Bagaud, a kotwiczenie między Bagaud a portem jest już całkowicie zabronione. Przy La Palud po północnej stronie oznaczona ścieżka snorkelingowa biegnie przez sześć boi, a w dobry dzień przepłyniesz nad granikami i barakudami. Zostaw godzinę na wejście do Fort de l'Estissac.",
+          "thingsToDo": [
+            "Snorkeling oznaczoną ścieżką przy La Palud",
+            "Wejście do Fort de l'Estissac",
+            "Ciche kotwiczenie w zatoce Port-Man",
+            "Leśna ścieżka przez wyspę"
+          ],
+          "mooringTip": "Bierz boję na Rade de Port-Cros; powyżej dwunastu metrów to obowiązek, a kotwiczenie między Bagaud a portem jest zabronione. Rezerwuj, gdzie możesz, przychodź do wczesnego popołudnia i pamiętaj, że zbiornik na wody czarne jest w parku obowiązkowy."
+        },
+        "6": {
+          "shortDescription": "Wielkie przejście na wschód: długi dzień pod żaglami tam, gdzie czerwona skała Esterel wpada prosto do morza.",
+          "description": "To ten długi. Licz na czterdzieści z górką mil na wschód, więc rzucamy boję o pierwszym świetle i nastawiamy się na cały dzień na wodzie. Nagroda przychodzi na końcu, gdy przed dziobem podnosi się masyw Esterel w rozpalonej czerwieni, wulkaniczna skała spadająca pionowo w głęboki błękit. Jeśli czas pozwoli, zajrzyj po drodze do Cap Roux: piaszczyste dno na pięciu do ośmiu metrach i dobra osłona od zachodu. Île d'Or z małą saraceńską wieżą jest prywatna, więc opływasz ją, zamiast wysiadać. Théoule leży w zachodnim narożniku Zatoki Napoule, schowane od północnego zachodu, z garstką restauracji i jedną czy dwiema plażami, daleko od ścisku Cannes po drugiej stronie wody.",
+          "thingsToDo": [
+            "Kotwica pod czerwonymi klifami Cap Roux",
+            "Opłynięcie Île d'Or z saraceńską wieżą",
+            "Kąpiel w zatoczkach Esterel przy Anthéor",
+            "Kolacja na cichym nadbrzeżu Théoule"
+          ],
+          "mooringTip": "Zacznij ten etap o świcie, żeby na długim przejściu wyprzedzić popołudniową bryzę. Kotwicowisko Théoule w Zatoce Napoule osłania od północnego zachodu przez zachód po południe, ale na spokojną noc pewniejszy jest port albo miejsce po stronie Cannes."
+        },
+        "7": {
+          "shortDescription": "Spokojny ostatni poranek przez zatokę do Cannes, z czasem na ostatnią kąpiel przed zdaniem łódki.",
+          "description": "Najkrótszy etap tygodnia: jakieś pięć mil przez Zatokę Napoule z Esterelem za rufą i Cannes przed dziobem. Nie ma po co się spieszyć. Jeśli baza czarterowa chce łódkę do południa, wciąż zostaje czas, żeby po drodze zakotwiczyć na ostatnią kąpiel przy Île Sainte-Marguerite i zamknąć pętlę tam, gdzie zaczął się tydzień. Wchodząc do Cannes, mijasz stare miasto Le Suquet z wieżą strażniczą nad dachówkami i długi łuk La Croisette z pałacami za plażą. Odbijacze i liny przygotuj zawczasu, bo marina w Cannes w sezonie działa na styk, a przy stacji paliw może się zebrać kolejka. Zatankuj, opróżnij zbiornik i wyjdź na brzeg na porządny obiad w Suquet przed odjazdem.",
+          "thingsToDo": [
+            "Ostatnia kąpiel przy Île Sainte-Marguerite",
+            "Wejście na Le Suquet do wieży strażniczej",
+            "Spacer po La Croisette przed odjazdem",
+            "Obiad na starym mieście Le Suquet"
+          ],
+          "mooringTip": "Wchodząc do Cannes w sezonie, przygotuj odbijacze i liny rufowe przed wejściem i wywołaj marinę na VHF po miejsce. Przy stacji paliw kolejka rośnie przed południem, więc tankuj wcześnie, jeśli oddajesz łódkę z pełnym bakiem."
+        }
+      }
+    },
+    "corsica-grand-tour-14-days": {
+      "metaTitle": "14 dni: Wielka Pętla Korsyki | Boat4You",
+      "metaDesc": "Dwa tygodnie z Ajaccio wokół Korsyki: Scandola, Calvi, Bonifacio, wyspy Lavezzi i Zatoka Valinco, z praktycznymi wskazówkami o kotwicowiskach.",
+      "days": {
+        "1": {
+          "shortDescription": "Łagodny rozruchowy etap z rodzinnego portu Napoleona do szerokiej, piaszczystej zatoki Sagone, cichej po odpłynięciu łodzi jednodniowych.",
+          "description": "W Ajaccio większość załóg odbiera łódkę, więc traktuj ten pierwszy etap jako rozgrzewkę, nie wyścig. Zrób zapasy na targu przy starym mieście, zanim rzucisz cumy, potem kurs na północny zachód, obok wysp Sanguinaires pilnujących wejścia do zatoki. Zatoka Sagone otwiera się szeroko i piaszczyście, otoczona niskimi wzgórzami i garstką knajpek na plaży. Późnym popołudniem narciarze wodni i łodzie wycieczkowe rzedną, a kotwicowisko robi się dość spokojne na pierwszą noc na kotwicy. Zwykle celujemy w piątą, żeby załoga miała czas poukładać rzeczy i popływać przed zmrokiem. Na piasku, na trzech do pięciu metrach, kotwica trzyma dobrze. Zerkaj na zachód, bo zatoka jest otwarta na falę, jeśli wiatr się przekręci, choć letnie wieczory są tu zwykle spokojne.",
+          "thingsToDo": [
+            "Zapasy na hali targowej starego miasta w Ajaccio",
+            "Wizyta w muzeum Maison Bonaparte",
+            "Kąpiel na długiej piaszczystej plaży Sagone",
+            "Drink o zachodzie w plażowej restauracji w Sagone"
+          ],
+          "mooringTip": "Kotwicz przy plaży w Sagone, zamiast tłoczyć się u małej kei; piasek trzyma dobrze na trzech do pięciu metrach. Zaryj kotwicę przed późnym popołudniem, zanim wejdzie wieczorna bryza."
+        },
+        "2": {
+          "shortDescription": "Zaraz dalej wzdłuż brzegu leży założone przez Greków Cargese, gdzie kościół katolicki i prawosławny wciąż patrzą na siebie przez dolinę.",
+          "description": "Sagone od Cargese dzieli zaledwie kilka mil, więc nie ma potrzeby wczesnego startu. Wioska siedzi na urwisku nad swoim małym portem, a jej dziwną historię widać w dwóch kościołach patrzących na siebie przez wąwóz, jednym rzymskokatolickim, drugim greckoprawosławnym, pozostałości po greckich uchodźcach, którzy osiedlili się tu w siedemnastym wieku. Sam port jest mały i w lipcu potrafi zapełnić się szybko, więc przyjście w porze obiadu pomaga. Poniżej miasteczka plaże ciągną się jedna za drugą. Plage de Pero i Plage de Chiuni obie są warte podjazdu pontonem na popołudniową kąpiel i spacer. Na brzegu kawiarnie przy placu portowym podają przyzwoitą deskę wędlin i zimne piwo Pietra. Zwykle kotwiczymy przy Pero, a port zostawiamy promom.",
+          "thingsToDo": [
+            "Porównanie kościoła łacińskiego i greckoprawosławnego",
+            "Kąpiel na Plage de Pero albo Chiuni",
+            "Deska wędlin i piwo Pietra w porcie",
+            "Spacer do starego cmentarza w Cargese"
+          ],
+          "mooringTip": "Mały port w Cargese jest ciasny i do południa często pełny, więc kotwicz raczej przy Plage de Pero na północy. Piasek trzyma pewnie na czterech do sześciu metrach, przy otwarciu na zachód."
+        },
+        "3": {
+          "shortDescription": "Widokowy odcinek do czerwonego, porfirowego przylądka Capo Rosso, zwieńczonego samotną genueńską wieżą nad Zatoką Porto.",
+          "description": "Wybrzeże na północ od Cargese robi się dramatyczne. Capo Rosso wznosi się płytami rdzawoczerwonej skały, a Tour de Turghju siedzi jakieś trzysta metrów wyżej na jego grzbiecie, ostre podejście, jeśli masz ochotę wspiąć się od miejsca zejścia na brzeg poniżej. To brama do Zatoki Porto i dalej do Calanche de Piana, gdzie wiatr i morze wyrzeźbiły w granicie iglice. Przylądek jest odsłonięty, więc przeczytaj prognozę, zanim zdecydujesz się tu nocować. Wiele załóg woli schować się w osłoniętych zatoczkach w głębi zatoki albo pchnąć dalej do Ficajoli z jej maleńką rybacką plażą. Jeśli popołudniowe libeccio się rozkręca, nie zwlekaj przy przylądku. Przejście planujemy na poranną ciszę i pozwalamy załodze robić zdjęcia, póki światło na klifach jest miękkie.",
+          "thingsToDo": [
+            "Zdjęcia czerwonych klifów Capo Rosso",
+            "Wejście na wieżę strażniczą Tour de Turghju",
+            "Pontonem na plażę Anse de Ficajola",
+            "Wypad do skalnych iglic Calanche de Piana"
+          ],
+          "mooringTip": "Samo Capo Rosso jest zbyt odsłonięte na spokojną noc, więc traktuj je jako postój dzienny, a kotwicz w Zatoce Porto albo przy Ficajoli. Uważaj na popołudniowe wiatry z zachodu, które ściskają się wokół przylądka."
+        },
+        "4": {
+          "shortDescription": "Za rezerwatem Scandola leży Girolata, osada z fortem na szczycie, do której dojdziesz tylko łodzią albo ścieżką.",
+          "description": "Dziś przemykasz skrajem rezerwatu Scandola, wpisanego na listę UNESCO rumowiska czerwonych wulkanicznych skał, gdzie na klifach gniazdują rybołowy, a wysiadanie na brzeg jest zabronione. Trzymaj się na zewnątrz oznaczonej strefy i podziwiaj ją z wody. Girolata czeka niedaleko na południu, schowana za niskim przylądkiem, pilnowana przez przysadzisty genueński fort. Kotwicowisko jest jednym z najlepiej osłoniętych na wyspie, obstawione dziesiątkami boi dziób-rufa w Cala Muretta i Cala Vecchia. Bierz boję wcześnie, bo pole zapełnia się przez całe popołudnie, gdy wlewają się łodzie wycieczkowe i jachty. Na brzegu nie ma drogi, tylko skupisko restauracji podających dzienny połów i mięsa z grilla. Lubimy popływać, zanim przyjdą tłumy, a potem wejść nadbrzeżną ścieżką po widok z góry na zatokę.",
+          "thingsToDo": [
+            "Przejście wzdłuż czerwonych klifów rezerwatu Scandola",
+            "Boja w Cala Muretta",
+            "Ścieżka nadmorska do genueńskiego fortu",
+            "Świeża ryba z grilla w restauracji w Girolacie"
+          ],
+          "mooringTip": "Boje dziób-rufa w Girolacie to pewny wybór i trzymają cię nieruchomo przy każdym wiatrze, ale schodzą wcześnie. Staraj się przyjść przed środkiem popołudnia i licz się z opłatą dla łódki, która przypływa ją zebrać."
+        },
+        "5": {
+          "shortDescription": "Dłuższy etap na północ prowadzi otwartą wodą do Calvi, gdzie genueńska cytadela stoi nad jedną z najżywszych marin Korsyki.",
+          "description": "To pierwsze prawdziwe przejście rejsu, około dwudziestu pięciu mil w górę do wybrzeża Balagne, więc wyjście o dziewiątej daje komfortowy zapas. Wybrzeże jest przez większość drogi dzikie i bez dróg, z niewieloma kryjówkami, i właśnie dlatego prognoza ma znaczenie. Wiatry z zachodu zwykle rosną po południu, więc wcześniejszy start oznacza łagodniejsze morze. Calvi zapowiada się z daleka: mury cytadeli chwytają światło nad łukiem plaży z sosnami w tle. Marina leży wprost pod murami i tętni życiem do późnego wieczora. Jeśli w szczycie sezonu jest pełna, kotwicowisko w zatoce Revellata zaraz na zachód jest spokojne i ładne. Na brzegu wejdź do starego miasta, gdzie miejscowi powiedzą ci, że urodził się tu Kolumb, i zjedz dobrze przy kei. W sierpniu rezerwujemy miejsce z wyprzedzeniem.",
+          "thingsToDo": [
+            "Zwiedzanie genueńskiej cytadeli nad Calvi",
+            "Kąpiel na plaży Calvi pod sosnami",
+            "Kolacja przy kei w marinie",
+            "Nocna kotwica w zatoce Revellata"
+          ],
+          "mooringTip": "Marina w Calvi zapełnia się szybko w lipcu i sierpniu, więc wywołaj ją przez radio zawczasu albo przyjdź wcześnie po miejsce pod cytadelą. Jeśli jest pełna, kotwicowisko Revellata dwie mile na zachód daje spokojne trzymanie na piasku."
+        },
+        "6": {
+          "shortDescription": "Powrót na południe dzikim wybrzeżem Scandoli do osłoniętej Girolaty, z możliwym cichym postojem w Galerii.",
+          "description": "Ta sama trasa w odwrotnym świetle to inny rejs, a dwadzieścia pięć mil w dół do Girolaty mija szybko przy zwyczajowej popołudniowej bryzie w plecy. Przerwij drogę w Galerii, jeśli chcesz odmiany; kotwicowisko w jej zatoce jest ciche i leży zaraz przed granicą rezerwatu, wygodne na obiadowy postój i kąpiel z dala od tłumów. Stamtąd krótki skok pod czerwone przypory Scandoli, najlepiej widoczne, gdy słońce schodzi na zachód. Pole boi w Girolacie znów będzie się zapełniać, gdy dojdziesz, więc nie marudź nad obiadem. Druga noc tutaj to żadna kara: mała zatoka wygląda inaczej w zmiennym świetle, a wieczorem, gdy odpłyną łodzie jednodniowe, zapada w coś bliskiego ciszy. Bierzemy boję wcześnie i pływamy z rufy.",
+          "thingsToDo": [
+            "Obiadowy postój i kąpiel w zatoce Galeria",
+            "Czerwone klify Scandoli w wieczornym świetle",
+            "Snorkeling z rufy w Girolacie",
+            "Wieczorny drink na brzegu w porcie"
+          ],
+          "mooringTip": "Wracając do Girolaty po raz drugi, znasz już procedurę: bierz boję dziób-rufa wcześnie. Galeria to spokojne kotwicowisko na piasku na obiadowy postój, jeśli chcesz przerwać etap."
+        },
+        "7": {
+          "shortDescription": "Długi marsz na południe obok Sagone i wysp Sanguinaires, zamykający pierwszą pętlę w Zatoce Ajaccio.",
+          "description": "Najdłuższy pojedynczy etap tych dwóch tygodni przekracza czterdzieści mil, więc wczesne wyjście nie jest opcjonalne. Rzuć boję o pierwszym świetle, póki morze jest płaskie, a wiatr jeszcze śpi. Minesz wejście do zatoki Sagone i opłyniesz Capo di Feno, zanim wyłonią się wyspy Sanguinaires, cztery czerwonawe wysepki znaczące wejście do Zatoki Ajaccio, warte wolnego przejścia ze względu na stary semafor i latarnię. Sama zatoka często robi popołudniową, krótką i nieprzyjemną falę, gdy wciska się w nią bryza, to kolejny powód, by mieć mile za sobą do środka popołudnia. Mariny w Ajaccio mają miejsca dla gości, a miasto wynagradza noc poza kotwicą prawdziwymi restauracjami i szansą na uzupełnienie zapasów. Tu robimy zapasy przed południową połową rejsu.",
+          "thingsToDo": [
+            "Wolne przejście obok wysp Sanguinaires",
+            "Zapasy na hali targowej w Ajaccio",
+            "Kolacja na brzegu, na starym mieście",
+            "Aperitif przy kei mariny w Ajaccio"
+          ],
+          "mooringTip": "Ajaccio ma dwie mariny, Tino Rossi przy starym mieście i większą Charles Ornano; w sezonie dzwoń zawczasu. Po czterdziestomilowym dniu miejsce dla gości jest warte opłaty za prysznice i łatwe zaopatrzenie."
+        },
+        "8": {
+          "shortDescription": "Na południe wokół Capo di Muro do Zatoki Valinco i kotwica przy zaspanych piaskach Porto Pollo.",
+          "description": "Zachodnia pętla zamknięta, więc łódka skręca na południe, w cichszą połowę wyspy. Wyjdź z Zatoki Ajaccio i opłyń Capo di Muro, niski skalisty przylądek, który przy spotkaniu wiatru z prądem potrafi podnieść krótką falę, a potem skręć w szeroką Zatokę Valinco. Porto Pollo leży na północnym brzegu: spokojna wioska z małą plażą, kilkoma knajpkami i wodą tak czystą, że prosi się o kąpiel w chwili, gdy kotwica zaryje. Na piasku trzyma dobrze, a zatoka jest dobrze osłonięta od przeważających wiatrów z zachodu. Na brzegu niewiele do roboty poza jedzeniem, kąpielą i zwolnieniem tempa, a po długim marszu z Girolaty o to właśnie chodzi. Rzucamy kotwicę przy plaży i pozwalamy załodze przeleniuchować popołudnie.",
+          "thingsToDo": [
+            "Kąpiel na osłoniętej plaży Porto Pollo",
+            "Snorkeling w przejrzystych płyciznach Valinco",
+            "Kolacja z owoców morza w wiejskiej knajpce",
+            "Paddleboard wzdłuż północnego brzegu"
+          ],
+          "mooringTip": "Kotwicz przy plaży Porto Pollo na trzech do sześciu metrach na piasku; trzymanie jest pewne, a zatoka strząsa zwykły wiatr z zachodu. Jeśli prognoza daje wiatr z południa, schowaj się za przylądkiem."
+        },
+        "9": {
+          "shortDescription": "Przez zatokę do Campomoro, gdzie największa genueńska wieża na Korsyce czuwa nad wygiętą, piaszczystą plażą.",
+          "description": "Dwa brzegi Valinco dzieli ledwie kilka mil, więc to poranek łatwej żeglugi i popołudnie robienia bardzo niewiele. Campomoro owija się wokół zgrabnej piaszczystej zatoki na południowym ramieniu zatoki, zwieńczonej największą genueńską wieżą na wyspie, przysadzistym obronnym blokiem, do którego można wejść i spojrzeć z niego na całą zatokę. Wioska jest maleńka, kilka barów i restauracji rozciągniętych za plażą, i w tym cały jej urok. Zakotwicz nad piaskiem i przepłyń na brzeg na drinka, gdy światło złoci wieżę. Zatoka jest otwarta na zachód, więc jeśli wieje libeccio, na kotwicy trochę pokołysze. Na ten postój wybieramy spokojną prognozę i cieszymy się ciszą.",
+          "thingsToDo": [
+            "Spacer do genueńskiej wieży w Campomoro",
+            "Kąpiel w wygiętej piaszczystej zatoce",
+            "Drink w barze przy plaży w Campomoro",
+            "Snorkeling na skałach pod wieżą"
+          ],
+          "mooringTip": "Kotwicz przy plaży Campomoro na piasku, ale pamiętaj, że zatoka jest otwarta na zachód i kołysze przy fali od libeccio. Kilka sezonowych boi leży przy wieży; poza tym wybierz na ten postój spokojną noc."
+        },
+        "10": {
+          "shortDescription": "Długi bieg na południe wokół czubka Korsyki do Bonifacio, którego stare miasto trzyma się białych klifów nad ukrytym portem.",
+          "description": "To wymagający etap, około dwudziestu pięciu mil w dół do południowego czubka wyspy, a Cieśnina Bonifacio ma zwyczaj przyspieszać każdy wiatr, jaki się trafi. Przed wyjściem porządnie sprawdź prognozę, a jeśli mocno dmucha z zachodu, przeczekaj kolejny dzień. Za ostatnimi przylądkami Bonifacio dobrze ukrywa swoje wejście; jesteś niemal na klifach, zanim wąska calanque otworzy się po lewej i marina odsłoni się w naturalnym fiordzie pod murami. Średniowieczne haute ville powyżej to wapienne uliczki i widoki na morze, a restauracje w porcie działają do późna. Miejsc jest mało, a chętnych dużo, więc rezerwuj w sezonie zawczasu albo weź muring dalej w głębi zatoczki. Przyjście planujemy na wczesne popołudnie, żeby mieć pewność miejsca.",
+          "thingsToDo": [
+            "Spacer wapiennymi uliczkami haute ville",
+            "Wejście po stopniach Escalier du Roi d'Aragon",
+            "Kolacja przy porcie w calanque",
+            "Widok na klify z wejścia do mariny"
+          ],
+          "mooringTip": "Marina w Bonifacio leży głęboko w calanque i latem jest bardzo zajęta, więc rezerwuj miejsce albo bierz muring w głębi zatoczki. Wchodź na silniku, bo fiord ściska szkwały, nawet gdy wygląda spokojnie."
+        },
+        "11": {
+          "shortDescription": "Wejdź do rezerwatu Bouches de Bonifacio i stań na boi przy granitowych głazach i przejrzystych zatoczkach wysp Lavezzi.",
+          "description": "Lavezzi leżą zaledwie sześć mil od Bonifacio, ale na w pełni chronionych wodach, więc przed wyjściem przeczytaj przepisy. Wyspy leżą w rezerwacie Bouches de Bonifacio, największym morskim rezerwacie kontynentalnej Francji, a zatoczkami rządzą numerowane pola boi założone po przepisach z 2022 roku. Kotwiczenie jest ograniczone, a gdzie wolno, to tylko na piasku, nigdy na łąkach podmorskich. Weź boję w Cala di u Grecu albo Cala Lazarina i pływasz w jednej z najczystszych wód Morza Śródziemnego, nad jasnym piaskiem między obłymi granitowymi głazami. Na brzegu ścieżka prowadzi do cmentarza upamiętniającego wrak fregaty Semillante, która zatonęła tu w 1855 roku. Zatoczki dają niewiele osłony na noc, więc większość załóg odwiedza je za dnia.",
+          "thingsToDo": [
+            "Snorkeling w granitowych zatoczkach Cala Lazarina",
+            "Boja w Cala di u Grecu",
+            "Spacer do pomnika wraku Semillante",
+            "Kąpiel nad jasnym piaskiem między głazami"
+          ],
+          "mooringTip": "W zatoczkach Lavezzi obowiązują numerowane boje ZMEL zgodnie z przepisami rezerwatu z 2022 roku; bierz jedną i nigdy nie rzucaj kotwicy na łąki podmorskie. Zatoczki dają marną osłonę na noc, więc traktuj to jako postój dzienny i śpij z powrotem w Bonifacio albo w Rondinarze."
+        },
+        "12": {
+          "shortDescription": "Wyżej na wschodnim brzegu czeka Rondinara, niemal doskonała zatoka w kształcie podkowy, z dobrym piaszczystym dnem i letnimi bojami.",
+          "description": "Skręcając na północ z cieśniny, wybrzeże łagodnieje. Rondinara leży jakieś dziesięć mil dalej, między Bonifacio a Porto-Vecchio, i jest jedną z tych zatok, które wyglądają niemal jak zaprojektowane ręcznie: obła podkowa jasnego piasku z wąskim wejściem. Ten kształt czyni z niej świetne kotwicowisko, dobrze osłonięte w zachodniej połowie kompasu, od wiatrów północnych po południowe. Na piasku trzyma dobrze, a w sezonie pojawia się kilka boi, jeśli wolisz nie kotwiczyć. Plaża ściąga jednodniowych gości drogą, więc w południe bywa tłoczno, ale wieczorem tłum rzednie i zatoka pokazuje, co potrafi. Rzucamy kotwicę bliżej północnej strony, przepływamy na brzeg i zostajemy na noc. Spokojne, łatwe zamknięcie południowej pętli.",
+          "thingsToDo": [
+            "Kąpiel w podkowiastej zatoce Rondinara",
+            "Spacer piaszczystą plażą o zmierzchu",
+            "Snorkeling przy skalistym północnym przylądku",
+            "Kotwica na spokojną noc na łódce"
+          ],
+          "mooringTip": "Rondinara daje dobre trzymanie na piasku i osłonę od północy przez zachód po południe; kotwicz bliżej północnego brzegu. Latem pojawiają się sezonowe boje, a zatoka jest najspokojniejsza, gdy wieczorem plaża pustoszeje."
+        },
+        "13": {
+          "shortDescription": "Długi etap na zachód wokół południowych przylądków do Propriano, najbardziej ruchliwego portu Valinco i dobrego miejsca na zapasy.",
+          "description": "Przejście z powrotem na zachodni brzeg to spory kawał, dobrze ponad trzydzieści mil, i znów oznacza opłynięcie odsłoniętego południowego czubka, więc wczesny start i spokojna prognoza są warte tej dyscypliny. Za Capo di Feno i przylądkiem Senetosa wybrzeże łagodnie prowadzi cię na północ do znajomej Zatoki Valinco. Propriano leży w jej głębi, najbardziej ruchliwe miasto na tym odcinku, z pracującym portem obsługującym promy na Sardynię i nadbrzeżem pełnym sklepów i restauracji. Po tygodniu cichych kotwicowisk zgiełk jest miłą odmianą, a marina ułatwia zrobienie zapasów przed ostatnim skokiem do bazy. Cumujemy, idziemy nadbrzeżem na lody i jemy na brzegu. Świeża ryba i butelka korsykańskiego rosé ładnie zamykają dzień.",
+          "thingsToDo": [
+            "Spacer nadbrzeżem Propriano pełnym restauracji",
+            "Zapasy w sklepach i na targu w miasteczku",
+            "Świeża ryba i korsykańskie rosé na brzegu",
+            "Wieczorne lody przy porcie"
+          ],
+          "mooringTip": "Marina w Propriano przyjmuje gości, ale jest zajęta ruchem promów na Sardynię, więc dzwoń zawczasu i na podejściu trzymaj się z dala od stanowiska promowego. Cumowanie tutaj jest łatwiejsze niż kotwiczenie przy odsłoniętej miejskiej plaży."
+        },
+        "14": {
+          "shortDescription": "Ostatni etap na północ wokół Capo di Muro i obok Sanguinaires, z powrotem do Ajaccio, żeby zdać łódkę.",
+          "description": "Ostatni dzień to znów woda między dwiema zachodnimi zatokami, jakieś trzydzieści mil w górę do Ajaccio. Wychodź z zapasem czasu, bo przekazania czarterowe zwykle wymagają łódki na miejscu do rana, a przyjście w nerwach na ostatnim podejściu to zły styl. Opłyń jeszcze raz Capo di Muro, a potem wyłonią się wyspy Sanguinaires, znaczące wejście do zatoki, trafny ostatni punkt orientacyjny z czerwonawą skałą i starą latarnią. Jeśli czas pozwoli, pożegnalna kąpiel w jednej z zatoczek po drodze to dobre zakończenie. W Ajaccio zatankuj, napełnij zbiorniki wody i zacznij porządkować łódkę przed przekazaniem. Lubimy stać przy kei do późnego popołudnia, żeby załoga miała czas spokojnie się spakować i wznieść toast za dobrze przeżeglowane dwa tygodnie.",
+          "thingsToDo": [
+            "Pożegnalna kąpiel w zatoczce Sanguinaires",
+            "Ostatnie opłynięcie Capo di Muro",
+            "Tankowanie i woda w marinie w Ajaccio",
+            "Ostatnia kolacja załogi na starym mieście"
+          ],
+          "mooringTip": "Celuj w powrót do Ajaccio do późnego popołudnia ostatniego dnia; bazy czarterowe chcą łódkę zwolnioną następnego ranka. Zatankuj i dolej wody po drodze, a miejsce przy przekazaniu potwierdź z bazą przez radio."
+        }
+      }
+    },
+    "morbihan-quiberon": {
+      "metaTitle": "Morbihan i Belle-Île w 7 dni | Boat4You",
+      "metaDesc": "Siedem dni z Le Crouesty przez Zatokę Morbihan do Vannes, Houat, Belle-Île i Hoedic: wyspy bez samochodów, kanały pływowe i bretońskie porty.",
+      "days": {
+        "1": {
+          "shortDescription": "Wychodzimy z Le Crouesty na przypływie i wjeżdżamy z prądem w głąb zatoki, na wolną od samochodów Ile aux Moines.",
+          "description": "Wejście do zatoki zwęża się na wysokości Port-Navalo i prąd idzie tam ostro, dlatego z Le Crouesty wychodzimy zwykle jakąś godzinę po niskiej wodzie i pozwalamy przypływowi wnieść nas do środka. Dwa do trzech węzłów pod kilem szybko załatwia sprawę. W środku woda się wygładza, a wyspy otwierają się wokół was.\n\nIle aux Moines leży niemal w środku zatoki, a jej dwa pomosty dla gości pływają w oderwaniu od brzegu. Samochody tu nie jeżdżą. Wypożyczcie rower w porcie i jedźcie dróżką na południe, przez Bois d'Amour do Pointe de Brouël, skąd nisko nad wodą widać Ile d'Arz. Dolmen des Pierres Plates wart jest krótkiego spaceru. Po powrocie do Port Blanc talerz ostryg i zimne Muscadet ładnie zamykają dzień.",
+          "thingsToDo": [
+            "Przejechać rowerem Bois d'Amour do Pointe de Brouël",
+            "Zobaczyć Dolmen des Pierres Plates",
+            "Zjeść ostrygi po powrocie do Port Blanc",
+            "Przejść dróżką na Pointe du Trec'h"
+          ],
+          "mooringTip": "Oba pomosty dla gości stoją w oderwaniu od brzegu, więc przypłyńcie samowystarczalni, z własną wodą. Na dalszym końcu południowego pomostu głębokości spadają do około 1,6 m, dlatego przy niskiej wodzie syzygijnej wiążcie się bliżej wewnętrznego końca albo weźcie bojkę w zatoce przed Port Blanc."
+        },
+        "2": {
+          "shortDescription": "Krótki skok kanałem w górę, zgrany z pływem, i przez śluzę wpływacie do średniowiecznego Vannes z otoczonym murami starym miastem.",
+          "description": "Vannes kryje się na końcu wąskiej rzeki i wejdziecie tam tylko na dwie godziny przed i po wysokiej wodzie. Cały dzień planujcie od tego wstecz. Zwykle podnosimy kotwicę tak, by dojść do obrotowego mostu Kérino na rosnącej wodzie, a potem spokojnie na silniku idziemy kanałem, mijając zacumowane łodzie i trzcinowiska. Śluza trzyma w wewnętrznym basenie nieco ponad dwa metry, więc woda jest nawet wtedy, gdy zatoka na zewnątrz wysycha.\n\nNagrodą jest miejsce w samym centrum miasta. Vannes zachowało swoje mury obronne, stare pralnie nad Marle i ulice pochylonych domów o konstrukcji szachulcowej. Do Cathédrale Saint-Pierre i hali targowej La Cohue jest kilka minut spacerem. Zrobcie tu zapasy: targ jest dobry, a sklepy blisko.",
+          "thingsToDo": [
+            "Przejść się murami i obok pralni nad Marle",
+            "Zobaczyć Cathédrale Saint-Pierre na starym mieście",
+            "Zajrzeć do hali targowej La Cohue",
+            "Zrobić zapasy na targu w Vannes"
+          ],
+          "mooringTip": "Wewnętrzny basen jest dostępny tylko przez około 2,5 do 3 godzin przed i po wysokiej wodzie, a po drodze mijacie most obrotowy, a potem śluzę. Zadzwońcie wcześniej do kapitanatu na VHF i zaplanujcie przejście kanałem na końcówkę przypływu."
+        },
+        "3": {
+          "shortDescription": "Zjeżdżamy z odpływem w dół zatoki i wychodzimy za Port-Navalo, a potem przez Zatokę Quiberon na białe piaski Houat.",
+          "description": "To najdłuższy dzień, więc lubimy odejść od pomostu wcześnie i wyjść z zatoki na odpływie. Kanał za Port-Navalo idzie szybko, kiedy pływ pracuje dla was, i wypłukuje was w Zatokę Quiberon w mgnieniu oka. Dalej to otwarty półwiatr, jakieś dwanaście mil do Houat.\n\nWyspa to niski grzbiet granitu i janowca z jedną małą wioską. Łodzie zbierają się na Rade de Houat, piaszczystej redzie po północnej stronie, albo na bojkach przed Saint-Gildas. Magnesem jest Treac'h er Goured, dwukilometrowy łuk białego piasku na wschodnim końcu. Podskoczcie tam bączkiem i przejdźcie się wydmą. Pamiętajcie, że kotwiczenie przed tą plażą jest zabronione w oznaczonej strefie kabla.",
+          "thingsToDo": [
+            "Wysiąść z bączka na Treac'h er Goured",
+            "Przejść dwukilometrowy łuk wydmy",
+            "Pochodzić po jedynej rybackiej wioseczce Houat",
+            "Popływać przy piaszczystych łachach na redzie"
+          ],
+          "mooringTip": "Kotwiczcie na Rade de Houat w piasku, z dużym zapasem od oznaczonej strefy kabla przed Treac'h er Goured, gdzie kotwiczenie jest zakazane. Pole bojek przy Saint-Gildas zapełnia się szybko w lipcu i sierpniu, więc jeśli chcecie bojkę, wchodźcie do wczesnego popołudnia."
+        },
+        "4": {
+          "shortDescription": "Spokojny żagiel na południe do Belle-Île, największej z bretońskich wysp, i do tłocznego portu pod cytadelą w Le Palais.",
+          "description": "Belle-Île leży krótki półwiatr na południe od Houat, tak blisko, że dzień płynie bez pośpiechu. Le Palais zapowiada się z daleka: nad wejściem do portu górują potężne gwiaździste mury Citadelle Vauban. W środku port jest największy w południowej Bretanii i w szczycie lata jeden z najbardziej zapchanych. Spodziewajcie się cumowania w burtę na bojkach trotowych, po trzy czy cztery łodzie obok siebie.\n\nNa brzegu miasto żyje z promów i wczasowiczów, ale ma prawdziwy charakter. Zwiedźcie cytadelę, wypożyczcie rowery albo skuter i ruszcie na dzikie zachodnie wybrzeże. Aiguilles de Port-Coton, skalne iglice malowane przez Moneta, są warte tej wyprawy. Z zapasami nie ma problemu, są normalne sklepy i poranny targ przy nabrzeżu.",
+          "thingsToDo": [
+            "Zwiedzić Citadelle Vauban nad portem",
+            "Dojechać rowerem do Aiguilles de Port-Coton",
+            "Wyskoczyć do Grotte de l'Apothicairerie",
+            "Zrobić zakupy na porannym targu przy nabrzeżu"
+          ],
+          "mooringTip": "Le Palais stawia gości na bojkach trotowych, po kilka łodzi na jednej linie, więc wystawcie duże odbijacze i liczcie się z sąsiadami. W lipcu i sierpniu to najbardziej ruchliwy port w okolicy: zgłoście się wcześniej przez radio albo przyjdźcie rano, i pamiętajcie, że zewnętrzne miejsca łapią falę od promów."
+        },
+        "5": {
+          "shortDescription": "Opływamy północ Belle-Île do Sauzon, spokojniejszego, wysychającego portu malowanych domów, stoisk z krepami i przylądka Sarah Bernhardt.",
+          "description": "Sauzon leży niespełna pięć mil za północnym końcem wyspy, więc nie ma pośpiechu. Jest wszystkim, czym Le Palais nie jest: mały, cichy, ładny dla oka, ciąg pastelowych domów wspinających się od wąskiej zatoczki. W głębi port wysycha, więc większość gości bierze cumowanie dziób-rufa w głębszym kanale i idzie na brzeg bączkiem.\n\nPopołudnie spędźcie na nogach. Stoiska przy nabrzeżu robią galettes, gofry i cydr Bellilois, a port leży rozłożony poniżej. Idźcie pieszo albo rowerem na Pointe des Poulains, gdzie Sarah Bernhardt miała dom, a mała latarnia znaczy północny czubek wyspy. Wróćcie na kolację na zachodnie nabrzeże, kiedy światło robi się miękkie nad wodą.",
+          "thingsToDo": [
+            "Zjeść galettes i wypić cydr na nabrzeżu",
+            "Dojść do latarni na Pointe des Poulains",
+            "Zobaczyć dom Sarah Bernhardt na klifie",
+            "Zjeść kolację na zachodnim nabrzeżu portu"
+          ],
+          "mooringTip": "Wewnętrzny port w Sauzon wysycha, więc weźcie cumowanie dziób-rufa na bojkach w głębszym kanale, zamiast pchać się na samą górę. Kanał wejściowy ma około 3 m głębokości, więc sprawdźcie tablice pływów, zanim zdecydujecie się na jakiekolwiek miejsce blisko wysychającej części."
+        },
+        "6": {
+          "shortDescription": "Przeskok z powrotem w stronę lądu, na maleńkie Hoedic: wolny od samochodów drobiazg wydm, fortów i cumowań w girlandę w Argol.",
+          "description": "Przejście na Hoedic to jakieś dwanaście mil na północny wschód po otwartej wodzie, więc pilnujcie prognozy; przy świeżym zachodnim zatoka wystawia krótką, nieprzyjemną falę. Sama wyspa jest maleńka, niższa i dziksza od sąsiadów, opasana wydmami i jasnymi plażami, z jedną osadą w środku.\n\nPort de l'Argol przyjmuje na cumowaniach w girlandę, po trzy łodzie na jednej linie, i mieszczą się tam tylko mniejsze jachty. Na brzegu godzina czy dwie wystarczą, by obejść większość pieszo. Dojdźcie do starego Fort d'Hoedic, zajrzyjcie do kaplicy i znajdźcie sobie plażę na wschodnim brzegu tylko dla siebie. Przy porcie jest kilka prostych miejsc na jedzenie, ale przywieźcie zapasy, bo z dostawami tu cienko.",
+          "thingsToDo": [
+            "Dojść do Fort d'Hoedic",
+            "Zajrzeć do wyspowej kaplicy i osady",
+            "Znaleźć pustą plażę na wschodnim brzegu",
+            "Zjeść w małym bistro przy porcie"
+          ],
+          "mooringTip": "Port de l'Argol daje cumowania w girlandę na bojkach trotowych dla łodzi do około 14 m i 2 m zanurzenia, więc większość jednostek czarterowych się mieści. Jest mały i popularny: w sezonie przypłyńcie wcześnie i bądźcie gotowi leżeć ciasno w burtę z innymi jachtami na tej samej linie."
+        },
+        "7": {
+          "shortDescription": "Ostatni półwiatr na północ przez Zatokę Quiberon i przez wejście do zatoki z powrotem na wasze miejsce w Le Crouesty.",
+          "description": "Powrót to prosty półwiatr przez Zatokę Quiberon, jakieś piętnaście mil do półwyspu Rhuys. Ustawcie to tak, by dojść do wejścia w zatokę z przypływem albo przynajmniej na wodzie stojącej; przepychanie się przeciw pełnemu odpływowi przed Port-Navalo to powolna i mokra robota, której da się uniknąć przy odrobinie planowania.\n\nJeśli dzień będzie łaskawy, a wy przed czasem, zostanie chwila, by zakotwiczyć przed plażą w Port-Navalo albo ostatni raz rzucić hak w osłonie Méaban przed powrotem. Le Crouesty to duża, dobrze osłonięta marina, do której wejdziecie praktycznie w każdą pogodę. Uzupełnijcie paliwo i wodę po drodze do swojego miejsca i zostawcie łódź w takim stanie, w jakim chcielibyście ją zastać.",
+          "thingsToDo": [
+            "Zakotwiczyć przed Port-Navalo na ostatnią kąpiel",
+            "Zgrać wejście do zatoki z przypływem",
+            "Zatankować przed zdaniem łodzi",
+            "Wypatrywać znaku nawigacyjnego Méaban przy wejściu"
+          ],
+          "mooringTip": "Celujcie w wejście do zatoki na wodzie stojącej albo na przypływie; prąd przed Port-Navalo na odpływie idzie przeciw wam nawet trzy węzły. Stanowisko paliwowe w Le Crouesty jest blisko wejścia, więc zatankujcie, zanim wrócicie na przydzielony pomost."
+        }
+      }
+    },
+    "riviera-esterel-14-days": {
+      "metaTitle": "Riwiera i Esterel w 14 dni | Boat4You",
+      "metaDesc": "Czternastodniowy czarter jachtu z Cannes wzdłuż Riwiery Francuskiej i wybrzeża Esterel: Antibes, Monaco, Saint-Tropez, Port-Cros i Porquerolles.",
+      "days": {
+        "1": {
+          "shortDescription": "Łagodny pierwszy etap z Cannes do Antibes, gdzie stoi największy port jachtowy w Europie, a otoczone murami stare miasto warte jest całego popołudnia.",
+          "description": "Krótki i wyrozumiały pierwszy etap pozwala załodze się ułożyć, zanim zaczną się prawdziwe odległości. Z Cannes do Antibes jest około dziesięciu mil, blisko brzegu, z zielonym, niskim Cap d'Antibes przed dziobem. Port Vauban to największa marina w Europie, a superjachty ustawione wzdłuż Quai des Milliardaires pokazują skalę już w chwili, gdy opłyniecie Fort Carré. Na brzegu stare miasto wynagradza niespieszne popołudnie. Marché Provençal na Cours Masséna sprzedaje pod żelaznym dachem tapenadę, soccę i prowansalskie płótna niemal każdego przedpołudnia. Nad targiem stoi Château Grimaldi, dziś Muzeum Picassa, gdzie artysta pracował w 1946 roku. Zwykle rzucamy cumy na keję do wczesnego popołudnia, a przed kolacją idziemy na mury. Prosty dzień, ale dobry, żeby rozruszać łódź.",
+          "thingsToDo": [
+            "Pochodzić po Marché Provençal na Cours Masséna",
+            "Zwiedzić Muzeum Picassa w Château Grimaldi",
+            "Przejść się murami przy Fort Carré",
+            "Popływać z Plage de la Garoupe na Cap d'Antibes"
+          ],
+          "mooringTip": "Port Vauban przyjmuje gości, ale w lipcu i sierpniu zadzwońcie wcześniej do kapitanatu, bo duże miejsca schodzą szybko. Na spokojniejszą noc zakotwiczcie w piasku przed Cap d'Antibes i podskoczcie bączkiem."
+        },
+        "2": {
+          "shortDescription": "Wzdłuż brzegu na wschód, za Nice, do jednej z najgłębszych naturalnych zatok Morza Śródziemnego, gdzie wycieczkowce i jachty dzielą tę samą osłoniętą wodę.",
+          "description": "Z Antibes idziecie obok podejścia do lotniska i długiego łuku Baie des Anges, a potem Nice przesuwa się po lewej. Wkrótce otwiera się Rade de Villefranche, jeden z najgłębszych naturalnych portów Morza Śródziemnego, sięgający blisko dziewięćdziesięciu metrów między Cap de Nice i Cap Ferrat. Zatoka dobrze trzyma łodzie i w większości warunków zostaje spokojna, choć silny wiatr z południa wpycha falę prosto do środka, więc pilnujcie prognozy. Miasto wspina się po zboczu w ochrze i różu. Warto odnaleźć Rue Obscure, sklepiony średniowieczny przejazd pod domami, a barokowa Chapelle Saint-Pierre kryje dekoracje Jeana Cocteau. Obok, na Cap Ferrat, stoi Villa Ephrussi de Rothschild ze swoimi ogrodami. Często kotwiczymy przed plażą i bierzemy bączka na rybackie nabrzeże.",
+          "thingsToDo": [
+            "Znaleźć sklepiony pasaż Rue Obscure",
+            "Zobaczyć freski Cocteau w Chapelle Saint-Pierre",
+            "Odwiedzić Villa Ephrussi de Rothschild na Cap Ferrat",
+            "Popływać z Plage des Marinières"
+          ],
+          "mooringTip": "Marina La Darse jest mała, a jej miejsca w większości prywatne, więc planujcie kotwiczenie. Trzymanie w piasku i mule jest dobre na ośmiu do dwunastu metrach; prognozę z południa traktujcie poważnie i przenieście się, jeśli zacznie budować."
+        },
+        "3": {
+          "shortDescription": "Krótki skok do Księstwa, gdzie Port Hercule upycha superjachty pod tarasami kasyna i pałacem księcia.",
+          "description": "Ledwie godzina na silniku albo leniwy żagiel, jeśli będzie czym. Zapamiętacie przybycie, nie mile. Opłyńcie Cap Ferrat, minijcie Cap d'Ail i Monaco układa się przed wami w piętra, z wieżami apartamentów wyrastającymi wprost z wody. Port Hercule ma około siedmiuset miejsc, ale tylko garść dla gości, a miejsce w sezonie jest rzadkie i drogie, więc rezerwacja z góry jest praktycznie konieczna. Księstwo odpłaca za trud zejścia na brzeg. Muzeum Oceanograficzne stoi na klifie w Monaco-Ville, a jego akwarium warte jest paru godzin. Stare miasto i Pałac Książęcy wieńczą Rocher, a do Casino de Monte-Carlo potrzebna jest tylko marynarka i trochę odwagi. Jeśli miejsc nie będzie, Port de Fontvieille w Cap-d'Ail leży zaraz na zachód i jest spokojniejszy.",
+          "thingsToDo": [
+            "Zwiedzić Muzeum Oceanograficzne na klifie",
+            "Zobaczyć zmianę warty przed pałacem w Monaco-Ville",
+            "Przejść się placem przed Casino de Monte-Carlo",
+            "Pochodzić po kaktusowych tarasach ogrodu egzotycznego"
+          ],
+          "mooringTip": "Rezerwujcie Port Hercule dużo wcześniej na lato; miejsc dla gości jest mało, a stawki wysokie. Fontvieille, zaraz za przylądkiem, to tańsze i cichsze rozwiązanie awaryjne, jeśli główny port jest pełny."
+        },
+        "4": {
+          "shortDescription": "Zwrot na zachód: dłuższy etap wzdłuż brzegu za Cap Ferrat i Nice, z wyborem kotwicowisk, jeśli wiatr będzie łaskawy.",
+          "description": "To dzień, w którym rozwijacie wschodni narożnik i wracacie w stronę końca wybrzeża od strony Esterel. Z Monaco do Antibes jest jakieś dwadzieścia pięć mil, dość, by poczuć prawdziwe żeglowanie, jeśli popołudniowa bryza wypełni z południowego wschodu. Zwykle wychodzimy przed dziewiątą, żeby na drugą połowę mieć wiatr z tyłu. Miejsc na przerwę nie brakuje. Beaulieu-sur-Mer i osłonięta woda przy Cap Ferrat to łatwy przystanek na lunch, a Villa Kerylos, zrekonstruowana grecka willa na przylądku, jest widoczna z pokładu. W Antibes wybierzcie inne miejsce albo kotwicowisko niż pierwszej nocy; Baie de la Garoupe po wschodniej stronie przylądka jest spokojna w większości letnich warunków, a bączkiem stąd blisko do ścieżki przy latarni.",
+          "thingsToDo": [
+            "Przystanek na lunch przy Beaulieu-sur-Mer",
+            "Wypatrzyć Villa Kerylos na Cap Ferrat",
+            "Zakotwiczyć w Baie de la Garoupe",
+            "Przejść nadmorską Sentier du Littoral"
+          ],
+          "mooringTip": "Baie de la Garoupe na Cap d'Antibes daje dobre trzymanie w piasku i osłonę od wszystkiego poza wschodnim wiatrem. W lipcu przypłyńcie przed wczesnym popołudniem, żeby znaleźć miejsce na obrót między łodziami dziennymi."
+        },
+        "5": {
+          "shortDescription": "Maleńki skok na dwie wyspy, by zakotwiczyć między winnicą mnichów a fortem, w którym siedział Człowiek w Żelaznej Masce.",
+          "description": "Tak blisko, że niemal można by tam zdryfować. Etap wprowadza was w kanał między Sainte-Marguerite i Saint-Honorat, dwiema Wyspami Lerińskimi przed Cannes. Woda między nimi to ulubione kotwicowisko, piasek na pięciu do dziesięciu metrach z dobrym trzymaniem, które do południa zapełnia się łodziami dziennymi, a wieczorem znów pustoszeje. Na Sainte-Marguerite stoi Fort Royal, gdzie legenda umieszcza Człowieka w Żelaznej Masce, a sosnowe ścieżki przecinają wyspę do cichych zatoczek. Saint-Honorat należy do wspólnoty cystersów, która wciąż pracuje w swoich winnicach; mnisi robią wino i likier Lérina, jedno i drugie do kupienia w sklepiku przy opactwie. Kotwiczenie wprost przed klasztorem, w strefie oznaczonej żółtymi pławami, jest zabronione, więc zostawcie ten odcinek wolny. Zostańcie na noc i kiedy odpłyną łodzie wycieczkowe, będziecie mieli to miejsce niemal dla siebie.",
+          "thingsToDo": [
+            "Zwiedzić Fort Royal na Sainte-Marguerite",
+            "Skosztować likieru Lérina w opactwie Saint-Honorat",
+            "Przejść sosnowymi ścieżkami do cichych zatoczek",
+            "Ponurkować z rurką w płytkim kanale między wyspami"
+          ],
+          "mooringTip": "Kotwiczcie w piasku na pięciu do dziesięciu metrach w kanale, ale trzymajcie się z dala od oznaczonej żółtymi pławami strefy zakazu kotwiczenia przed opactwem. Można zarezerwować bojkę parkową, co oszczędza nerwów o trzymanie przy silniejszym dmuchnięciu."
+        },
+        "6": {
+          "shortDescription": "Przeskok na ognisto-czerwone wybrzeże Esterel i bojka w osłoniętej zatoce Agay pod wulkanicznymi wzgórzami.",
+          "description": "Znów na zachód i wybrzeże całkowicie zmienia charakter. Masyw Esterel to stary wulkan, czerwony ryolit, który barwi klify, a wodę u ich stóp na rdzawy róż. Od Wysp Lerińskich to proste przejście obok Théoule i Pointe de l'Aiguille do Agay, wciśniętego między Cap Dramont i Pointe de la Baumette. Agay to jeden z lepszych naturalnych portów na tym odcinku, dobrze osłonięty poza kierunkiem południowym. Po wschodniej stronie zatoki jest pole bojek, a ponieważ łąki posidonii są objęte ochroną, wzięcie bojki zamiast rzucania haka miejscami jest wymagane, a poza tym po prostu lepsze dla dna. Cap Dramont, zaraz na wschód, to miejsce desantu wojsk alianckich w sierpniu 1944 roku, a na wodzie leży mała Ile d'Or ze swoją kamienną wieżą. Spokojne kotwicowisko w czerwonych ścianach na koniec dnia.",
+          "thingsToDo": [
+            "Popływać pod czerwonymi klifami Esterel",
+            "Dojść na plażę desantu na Cap Dramont",
+            "Sfotografować kamienną wieżę na Ile d'Or",
+            "Przejść odcinek Sentier du Littoral"
+          ],
+          "mooringTip": "W Agay bierzcie bojkę, nie kotwiczcie; wschodnie pole jest dobrze osłonięte, a łąki posidonii chronione. W szczycie sezonu przypłyńcie wczesnym popołudniem, bo bojki schodzą szybko i nie zawsze da się je zarezerwować."
+        },
+        "7": {
+          "shortDescription": "Krótki skok wzdłuż brzegu do Saint-Raphael: za Cap Dramont wpływacie do żywego, wakacyjnego portu z bizantyjską bazyliką nad nabrzeżami.",
+          "description": "Łatwy poranek. Saint-Raphael leży zaledwie kilka mil za Cap Dramont, więc nie ma pośpiechu; ten etap to w zasadzie pretekst, żeby poczłapać wzdłuż czerwonego wybrzeża i popływać po drodze przy Ile d'Or. Miasto przechodzi w leżące za nim Fréjus, a stary port daje wam porządną marinę z paliwem, wodą i spacerem do centrum. Saint-Raphael wyrosło jako kurort belle époque i coś z tego klimatu zachowało. Basilique Notre-Dame-de-la-Victoire, bizantyjska w stylu, z prążkowaną kopułą, stoi kilka ulic od wody. Jest poranny targ, przyzwoite stoisko z rybami i dość restauracji na promenadzie, żeby zaopatrzenie było bezbolesne. Dobre miejsce, by dopełnić zbiorniki i zapełnić kambuz przed jutrzejszym dłuższym przejściem do Zatoki Saint-Tropez.",
+          "thingsToDo": [
+            "Zobaczyć bizantyjską Basilique Notre-Dame-de-la-Victoire",
+            "Przejść się porannym targiem w Saint-Raphael",
+            "Popływać przy Ile d'Or na podejściu",
+            "Zapełnić kambuz przy portowym stoisku z rybami"
+          ],
+          "mooringTip": "Vieux Port w Saint-Raphael i sąsiednia Santa Lucia przyjmują gości i mają paliwo oraz wodę. W sezonie zarezerwujcie miejsce na noc i wykorzystajcie postój, by napełnić zbiorniki przed otwartym przejściem na zachód."
+        },
+        "8": {
+          "shortDescription": "Przejście po otwartej wodzie do Saint-Tropez, z kotwiczeniem w Baie des Canebiers, o rzut bączkiem od cytadeli i starego portu.",
+          "description": "Pierwsze prawdziwe przejście tej wyprawy. Z Saint-Raphael odbijacie od brzegu i idziecie jakieś dwadzieścia mil na południowy zachód po otwartej wodzie do Zatoki Saint-Tropez, więc wybierzcie ustabilizowany poranek i pilnujcie popołudniowej bryzy morskiej, która nad zatoką potrafi się rozkręcić. Samo Saint-Tropez jest w porcie drogie i zatłoczone, dlatego wiele załóg kotwiczy w Baie des Canebiers, zaraz na wschód od miasta. Dno jest piaszczysto-trawiaste, z dobrym trzymaniem, a oznaczony pławami kanał rozdziela pływaków i łodzie. Stąd blisko bączkiem na plażę i pół godziny spacerem, obok cmentarza marynarskiego, do cytadeli i starego portu. Na Place des Lices targ stoi we wtorki i w soboty, a kawałek tarte Tropézienne to niemal obowiązek. Sénéquier na nabrzeżu jest do obserwowania ludzi, nie do oszczędzania.",
+          "thingsToDo": [
+            "Zakotwiczyć i popływać w Baie des Canebiers",
+            "Obejść targ na Place des Lices we wtorek lub sobotę",
+            "Wejść do Citadelle po widok na zatokę",
+            "Spróbować tarte Tropézienne przy starym porcie"
+          ],
+          "mooringTip": "Kotwiczcie w Baie des Canebiers w piasku i trawie na pięciu do dziesięciu metrach; port jest drogi i w lecie często pełny. Trzymajcie się wewnątrz oznaczonego pławami kanału i zostawcie zapas na obrót, gdy bryza morska się przekręci."
+        },
+        "9": {
+          "shortDescription": "Dziesięciominutowe przejście przez zatokę do Port Grimaud, miasteczka nad wodą z lat 60., gdzie cumujecie pod własnymi drzwiami.",
+          "description": "Ledwie przejście. Przecinacie głowę zatoki do Port Grimaud, miasta kanałów, które architekt François Spoerry zbudował od zera w latach sześćdziesiątych. Pastelowe domy stoją frontem do wody, każdy z własnym miejscem do cumowania, a całość rozplanowana jest jak mała, prowansalska odpowiedź na Wenecję. Marina ma około pięciuset miejsc, z czego jakieś sześćdziesiąt trzyma dla gości na łodziach poniżej dwudziestu metrów, więc telefon z wyprzedzeniem w sezonie ma sens. Kiedy jesteście już przywiązani, miasteczko to same kładki i ciche nabrzeża, najlepiej zobaczyć je na wieczornym spacerze i z coche d'eau, małych elektrycznych promów przeciskających się kanałami. Wejdźcie do starej wioski Grimaud na wzgórzu za miastem po szerszy widok, ruiny zamku i kaplicę templariuszy w komplecie. Łatwa, ładna noc po przejściu.",
+          "thingsToDo": [
+            "Przepłynąć kanały łodzią coche d'eau",
+            "Dojść do ruin zamku w Grimaud na wzgórzu",
+            "Przejść kładki w złotej godzinie",
+            "Zjeść na tarasie nad kanałem"
+          ],
+          "mooringTip": "Port Grimaud trzyma około sześćdziesięciu miejsc dla gości na łodziach poniżej dwudziestu metrów; rezerwujcie z wyprzedzeniem w lipcu i sierpniu. Podchodźcie wolno i uważajcie na płytki, oznakowany kanał wejściowy, który zamula się przy krawędziach."
+        },
+        "10": {
+          "shortDescription": "Opływamy dzikie przylądki na południe od zatoki do szerokiej, piaszczystej zatoki Cavalaire u stóp wzgórz Pradels.",
+          "description": "Wychodząc z zatoki, opływacie sznur chronionych przylądków, które czynią z tego jeden z najpiękniejszych zakątków wybrzeża Var. Cap Camarat z latarnią, potem Cap Taillat i Cap Lardier, cały ten brzeg wolny od zabudowy. Wsuńcie się za nie na kąpiel; Plage de l'Escalet i woda przy Cap Taillat są w spokojny dzień przejrzyste i ciche. Na końcu etapu jest Cavalaire-sur-Mer, szeroka zatoka pod Massif des Pradels, z długą piaszczystą plażą i nowoczesną mariną. Po glancu Saint-Tropez to kurort bez pretensji, dobry na uzupełnienie zapasów i spokojny wieczór. Zatoka otwiera się na południe i wschód, więc jest kotwicowiskiem na dobrą pogodę; jeśli w prognozie jest fala, pewniejszym wyborem jest marina.",
+          "thingsToDo": [
+            "Popływać przy piaszczystej mierzei Cap Taillat",
+            "Zakotwiczyć przy Plage de l'Escalet",
+            "Uzupełnić zapasy w sklepach na nadbrzeżu Cavalaire",
+            "Przejść szlakiem po chronionym Cap Lardier"
+          ],
+          "mooringTip": "Zatoka Cavalaire jest otwarta na południe i wschód, więc kotwiczcie tylko przy ustabilizowanej pogodzie, a przy zapowiadanej fali wejdźcie do mariny. Przy Cap Taillat trzymanie w piasku jest dobre, ale to przystanek na dzień, nie na noc przy wiatrze."
+        },
+        "11": {
+          "shortDescription": "Wzdłuż wybrzeża Maures do Le Lavandou, żyjącego z morza miasteczka z kilkunastoma plażami i Złotymi Wyspami na horyzoncie.",
+          "description": "Spokojny etap pod Massif des Maures, ciemnymi, lesistymi wzgórzami, które osłaniają ten brzeg. Za Cap Nègre i dyskretnymi willami na jego zboczach ciągnie się sznur zatoczek, które miejscowi nazywają dwunastoma plażami Le Lavandou. Cavalière jest największa, z miejscem na kotwicę przed piaskiem przy ustabilizowanej pogodzie i możliwością dopłynięcia na lunch na brzeg. Le Lavandou to prawdziwe miasto rybackie i wakacyjne, a nie dekoracja, i tym lepiej. Port przyjmuje gości, targ jest autentyczny, a na nadbrzeżu są takie restauracje bez fanaberii, w których połów jest lokalny. Stąd Iles d'Or leżą po prostu po drugiej stronie wody, więc to naturalny przystanek przed przejściem na Port-Cros. Często robimy tu zapasy na dwie wyspowe noce, bo w parkach niewiele da się kupić.",
+          "thingsToDo": [
+            "Zakotwiczyć i popływać przy plaży Cavalière",
+            "Zrobić zapasy na targu w Le Lavandou",
+            "Zjeść świeży połów na nadbrzeżu",
+            "Przepłynąć obok willi na Cap Nègre"
+          ],
+          "mooringTip": "Port w Le Lavandou przyjmuje gości i jest dobrym miejscem, by uzupełnić zapasy przed Złotymi Wyspami, gdzie z dostawami jest cienko. Przy wiatrze od brzegu możecie zakotwiczyć przed plażą Cavalière; jeśli wiatr przekręci się na brzeg, przenieście się."
+        },
+        "12": {
+          "shortDescription": "Przejście na Port-Cros, do pierwszego morskiego parku narodowego w Europie, i bojka parkowa przy zalesionej wyspie bez samochodów.",
+          "description": "Krótkie przejście stawia was przy Port-Cros, najdzikszej z trzech Złotych Wysp i sercu parku narodowego założonego w 1963 roku, jednego z pierwszych rezerwatów morskich w Europie. Cała wyspa jest chroniona, gęsto zalesiona i wolna od samochodów, a przepisy na wodzie są surowe i nie bez powodu. Cumuje się na parkowym polu bojek, przewidzianym dla łodzi do piętnastu metrów, a kotwiczenie w Passe de Bagaud jest zabronione, żeby chronić posidonię. Aby korzystać z tych wód, wasza łódź musi mieć zbiornik na wodę czarną. Kiedy już staniecie, największym magnesem są wędrówki: ścieżka do Fort de l'Estissac i cieniste przejście na drugą stronę wyspy, na Plage de la Palud, gdzie po płyciznach obok wysepki Rascas biegnie oznaczony szlak do snorkelingu. Cicho, zielono i o cały świat od nabrzeży Saint-Tropez.",
+          "thingsToDo": [
+            "Przepłynąć oznaczony szlak snorkelingowy przy Plage de la Palud",
+            "Wejść do Fort de l'Estissac",
+            "Przejść cienistą ścieżką przez wyspę",
+            "Wypatrywać granika w przejrzystej płyciźnie"
+          ],
+          "mooringTip": "Korzystajcie z bojki parku narodowego; kotwiczenie jest ograniczone, a w Passe de Bagaud zabronione. Bojki są dla łodzi do piętnastu metrów i wymagany jest zbiornik na wodę czarną, więc przypłyńcie wcześnie i miejcie zbiornik załatwiony."
+        },
+        "13": {
+          "shortDescription": "Skok na Porquerolles, największą ze Złotych Wysp: białe piaszczyste plaże, dróżki wśród winnic i rynek w cieniu eukaliptusów.",
+          "description": "Porquerolles leży kilka spokojnych mil na zachód i jest największa oraz najbardziej zamieszkana z wysp. Wioska wyrosła wokół dziewiętnastowiecznego garnizonu, a jej rynek, zakurzony od pétanque i ocieniony eukaliptusami, wciąż sprawia wrażenie placówki na końcu świata, która została na wino. Na północnym brzegu są najbardziej znane plaże, między innymi Plage Notre-Dame i Plage d'Argent, obie piaszczyste i obie osłonięte od mistrala przez wyspę. Zakotwiczcie przy północnym brzegu i macie krótki spacer albo przejażdżkę rowerem do wioski; na wyspie są winnice produkujące różowe Côtes de Provence i dróżki, które łatwo objechać na wypożyczonym rowerze. Fort Sainte-Agathe patrzy z góry na port, a spacer do latarni na południowym końcu daje wam klify i otwarte morze. Najbardziej dopieszczona z trzech wysp i piękne ostatnie kotwicowisko.",
+          "thingsToDo": [
+            "Popływać na Plage Notre-Dame albo Plage d'Argent",
+            "Wypożyczyć rower i objechać dróżki wśród winnic",
+            "Skosztować różowego Côtes de Provence w winiarni",
+            "Dojść do klifów przy południowej latarni"
+          ],
+          "mooringTip": "Kotwiczcie przy plażach północnego brzegu, osłonięci od mistrala, w piasku na pięciu do dwunastu metrach. Plage Notre-Dame i d'Argent zapełniają się łodziami dziennymi przed południem, więc rzućcie hak wcześnie, żeby mieć miejsce na obrót."
+        },
+        "14": {
+          "shortDescription": "Długi, ostatni etap z powrotem do Cannes: wczesny start po otwartej wodzie, żeby zamknąć pętlę na Croisette.",
+          "description": "Najdłuższy dzień tych dwóch tygodni i taki, który trzeba porządnie zaplanować. Z Porquerolles do Cannes jest spory kawał otwartej wody, dobrze ponad czterdzieści mil, więc zwykle rzucamy bojkę o pierwszym świetle, żeby wejść przed stwardnieniem popołudniowej bryzy. Jeśli załoga chce to przełamać, Le Lavandou albo Cavalaire to rozsądne przystanki w połowie drogi. Wybrzeże odbudowuje się w miarę drogi: Maures ustępują czerwonemu Esterel, a na końcu przychodzi niska zieleń Cap d'Antibes i Wysp Lerińskich. Cannes zamyka koło ze stylem, La Croisette biegnie złotem wzdłuż brzegu, a Le Suquet, stare miasto, wspina się do wieży kościoła i widoku z powrotem na zatokę. Stańcie w Vieux Port albo zakotwiczcie przed Croisette na ostatnią noc i wznieście toast za dobrze przeżeglowane dwa tygodnie.",
+          "thingsToDo": [
+            "Przejść La Croisette i stary port",
+            "Wejść na Le Suquet po widok na zatokę",
+            "Obejść Marché Forville po ostatnie zapasy",
+            "Wznieść toast z kotwicowiska przed Croisette"
+          ],
+          "mooringTip": "Wychodźcie z Porquerolles o świcie na ten długi etap i pilnujcie popołudniowej bryzy od Esterel. W Cannes Vieux Port przyjmuje gości, ale jest zatłoczony; kotwiczenie przed La Croisette przy ustabilizowanej pogodzie to przyjemna i tańsza ostatnia noc."
+        }
+      }
+    }
+  },
+  "areas": {
+    "atlantic-france": {
+      "metaTitle": "Bretania i Atlantyk: trasy żeglugi | Boat4You",
+      "metaDesc": "Trasy czarterowe po południowej Bretanii: Belle-Île, Houat, Hoëdic i Zatoka Morbihan. Wiatr, pływy i kotwicowiska wysp, dzień po dniu.",
+      "title": "Żegluj po wyspach i pływach południowej Bretanii",
+      "description": "Ten zakątek Atlantyku nagradza żeglarzy, którzy umieją czytać wodę. Letnie wiatry zwykle układają się w umiarkowany południowo-zachodni, 3 do 4 w skali Beauforta przez większość popołudni, co daje łatwe półwiatry między wyspami, które rzadko leżą dalej niż dwie godziny od siebie. Zatoka Quiberon jest dość osłonięta na spokojny pierwszy dzień, a potem wybrzeże się otwiera. Belle-Île to główny magnes: klify i Grotte de l'Apothicairerie po dzikiej stronie, Le Palais z cytadelą Vaubana po spokojniejszej. Mniejsze Houat i Hoëdic dają kotwicowiska przy białym piasku i niemal zero samochodów. Zatoka Morbihan to zagadka, którą wszyscy pamiętają, śródlądowe morze przeszyte wysepkami jak Île aux Moines i Île d'Arz. Jedna zasada ma tu znaczenie: przez wejście do zatoki idź z przypływem albo na bezruchu wody, bo prąd Jument przy syzygiach potrafi przekroczyć 9 kn i zatrzyma jacht turystyczny w miejscu. W lipcu i sierpniu Le Palais zapełnia się do późnego popołudnia, więc przychodź przed trzecią albo celuj w czerwiec i wrzesień."
+    },
+    "corsica": {
+      "metaTitle": "Korsyka: trasy czarteru jachtów | Boat4You",
+      "metaDesc": "Trasy żeglugi po Korsyce dzień po dniu: z Ajaccio do Bonifacio i rezerwatu Lavezzi, z wiatrami, odległościami i najlepszymi miesiącami bez tłumów.",
+      "title": "Żegluj granitowym wybrzeżem Korsyki i zatokami rezerwatu",
+      "description": "Większość załóg wychodzi z Ajaccio i idzie na południe w stronę Bonifacio, a ta trasa wynagradza stałymi wiatrami termicznymi 10 do 20 kn przez letnie popołudnia. Żegluga jest tu uczciwą pracą: zachodni brzeg rzuca wiatrami z zachodu o sile 3 do 6 w skali Beauforta, a Cieśnina Bonifacio ściska Libeccio w krótkie, ostre szkwały, więc miej plan B na przejście na Îles Lavezzi. Ten rezerwat granitowych wysepek i płytkich turkusowych zatok jest właśnie nagrodą. Na północ od Ajaccio czerwone porfirowe klify Scandoli i dostępna tylko z wody osada Girolata są cichszą alternatywą dla południowej pętli. Etapy liczą zwykle 15 do 30 mil morskich, czyli łatwe dzienne skoki. Jedna praktyczna uwaga: fiordowy port Bonifacio pęka w szwach od połowy lipca przez sierpień, więc wywołaj przez radio miejsce zawczasu albo zakotwicz przed wejściem i dojedź pontonem. Przyjedź w czerwcu albo we wrześniu i te same kotwicowiska będą na wpół puste."
+    },
+    "cote-azur": {
+      "metaTitle": "Côte d'Azur: trasy żeglugi | Boat4You",
+      "metaDesc": "Trasy czarterowe na Côte d'Azur dzień po dniu: słabe wiatry, krótkie skoki z Cannes do Saint-Tropez, Port-Cros i kotwicowisk Porquerolles.",
+      "title": "Od blichtru Cannes do dzikich kotwicowisk przy wyspach",
+      "description": "Côte d'Azur upycha krótkie, wyrozumiałe skoki na wybrzeżu, które w ciągu jednego popołudnia przechodzi od marin z festiwalu filmowego do wysp porośniętych sosnami. Wiatry są zwykle słabe, w ciągu dnia zachodni 10 do 25 kn, który po zmroku odpuszcza, i praktycznie nie ma pływów do planowania. Saint-Tropez leży około 26 mil morskich od Cannes, więc rzadko zapisujesz w logu długie przejścia. Skieruj dziób na Îles de Lérins po darmowe kotwicowisko przy klasztorze na Saint-Honorat, a potem pchnij na zachód do Port-Cros, pierwszego parku narodowego w Europie chroniącego łącznie ląd i dno morskie. Porquerolles wynagradza nadłożenie drogi zatokami z białym piaskiem, jak Plage Notre-Dame. Jeśli chcesz blichtru bez korków, żegluj tu pod koniec maja, w czerwcu albo we wrześniu; w lipcu i sierpniu Saint-Tropez zamienia się w parking dla superjachtów. Jeden miejscowy nawyk wart skopiowania: sprawdź dno, zanim rzucisz kotwicę, bo kotwiczenie nad chronioną posidonią jest i nielegalne, i po prostu kiepskie."
+    }
+  }
+}

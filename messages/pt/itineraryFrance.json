@@ -1,1 +1,248 @@
-{}
+{
+  "routes": {
+    "morbihan-quiberon": {
+      "metaTitle": "Morbihan e Belle-Île em 7 Dias | Boat4You",
+      "metaDesc": "Sete dias de Le Crouesty pelo Golfo de Morbihan até Vannes, Houat, Belle-Île e Hoedic: ilhas sem carros, canais de maré e portos bretões.",
+      "days": {
+        "1": {
+          "shortDescription": "Saia de Le Crouesty na enchente e deixe a maré levá-lo golfo adentro, até à Ile aux Moines, ilha sem carros.",
+          "description": "A entrada do golfo estreita ao largo de Port-Navalo e a maré corre com força por ali, por isso costumamos largar de Le Crouesty cerca de uma hora depois da baixa-mar e deixar a enchente empurrar-nos para dentro. Dois a três nós debaixo da quilha despacham a passagem num instante. Lá dentro a água acalma e as ilhas abrem-se em volta.\n\nA Ile aux Moines fica mais ou menos no meio do golfo, com dois pontões de visitantes soltos da margem. Aqui não andam carros. Alugue uma bicicleta no porto e siga o caminho para sul pelo Bois d'Amour até à Pointe de Brouël, com a Ile d'Arz rasteira do outro lado da água. O Dolmen des Pierres Plates compensa a curta caminhada. De volta a Port Blanc, um prato de ostras e um Muscadet bem fresco fecham o dia como deve ser.",
+          "thingsToDo": [
+            "Pedalar do Bois d'Amour à Pointe de Brouël",
+            "Visitar o Dolmen des Pierres Plates",
+            "Comer ostras de volta a Port Blanc",
+            "Caminhar até à Pointe du Trec'h"
+          ],
+          "mooringTip": "Os dois pontões de visitantes estão separados de terra, por isso chegue autossuficiente e com a sua própria água. No extremo do pontão sul as profundidades descem para perto de 1,6 m, portanto atraque para o lado de dentro em marés vivas de baixa-mar, ou apanhe uma boia de amarração do golfo ao largo de Port Blanc."
+        },
+        "2": {
+          "shortDescription": "Um salto curto canal acima, acertado com a maré, leva-o pela eclusa até à Vannes medieval e à sua cidade velha muralhada.",
+          "description": "Vannes esconde-se no fundo de um rio estreito e só se entra durante um par de horas antes e depois da preia-mar. Planeie de trás para a frente. Em regra levantamos ferro para chegar à ponte giratória de Kérino com a maré a subir e depois subimos o canal a motor, devagar, por entre barcos amarrados e canaviais. A eclusa mantém a doca interior com pouco mais de dois metros, por isso há água mesmo quando o golfo lá fora já secou.\n\nA recompensa é um lugar no centro da cidade. Vannes conserva as muralhas, os antigos lavadouros ao longo do Marle e ruas de casas de traves de madeira à vista, tortas com a idade. A Cathédrale Saint-Pierre e o mercado coberto de La Cohue ficam a poucos minutos a pé. Faça aqui as compras; o mercado é bom e as lojas são perto.",
+          "thingsToDo": [
+            "Percorrer as muralhas e os lavadouros do Marle",
+            "Ver a Cathédrale Saint-Pierre na cidade velha",
+            "Passear pelo mercado coberto de La Cohue",
+            "Abastecer no mercado municipal de Vannes"
+          ],
+          "mooringTip": "A doca interior só abre cerca de 2,5 a 3 horas antes e depois da preia-mar, e para chegar lá passa-se uma ponte giratória e depois uma eclusa. Ligue antes à capitainerie por VHF e faça a subida do canal no fim da enchente."
+        },
+        "3": {
+          "shortDescription": "Desça o golfo na vazante e saia por Port-Navalo, depois atravesse a Baía de Quiberon até às areias brancas de Houat.",
+          "description": "É o dia mais longo, por isso gostamos de largar do pontão cedo e sair do golfo na vazante. O canal ao largo de Port-Navalo corre rápido quando a maré está a favor e num instante estamos despejados na Baía de Quiberon. Dali é um través aberto de uma dúzia de milhas até Houat.\n\nA ilha é uma crista baixa de granito e tojo com uma única aldeia. Os barcos juntam-se na Rade de Houat, o fundeadouro de areia ao longo do lado norte, ou nas boias ao largo de Saint-Gildas. O grande chamariz é Treac'h er Goured, dois quilómetros de areia branca em curva na ponta leste. Leve o bote a terra e caminhe pela duna. Atenção: é proibido fundear ao largo dessa praia, sobre a zona de cabos assinalada.",
+          "thingsToDo": [
+            "Desembarcar de bote em Treac'h er Goured",
+            "Caminhar o arco de duna de dois quilómetros",
+            "Passear pela única aldeia de pescadores de Houat",
+            "Nadar nos bancos de areia da Rade"
+          ],
+          "mooringTip": "Fundeie na Rade de Houat, em areia, bem afastado da zona de cabos assinalada ao largo de Treac'h er Goured, onde é proibido fundear. O campo de boias de Saint-Gildas enche depressa em julho e agosto, por isso chegue até ao meio da tarde se quiser uma."
+        },
+        "4": {
+          "shortDescription": "Uma navegação tranquila para sul até Belle-Île, a maior das ilhas bretãs, e ao movimentado porto da cidadela em Le Palais.",
+          "description": "Belle-Île fica a um través curto a sul de Houat, perto o suficiente para o dia correr sem pressas. Le Palais anuncia-se de longe: a enorme Citadelle Vauban, em estrela, domina a boca do porto. Lá dentro está o maior porto do sul da Bretanha e, no pico do verão, um dos mais cheios. Conte com atracar a par nas boias de amarração em linha, três ou quatro barcos lado a lado.\n\nEm terra, a vila vive dos ferries e dos veraneantes, mas tem substância. Visite a cidadela, alugue bicicletas ou uma scooter e siga para a costa oeste, selvagem. As Aiguilles de Port-Coton, as agulhas de rocha que Monet pintou, valem bem o passeio. Abastecer aqui é fácil, com lojas a sério e um mercado matinal junto ao cais.",
+          "thingsToDo": [
+            "Visitar a Citadelle Vauban acima do porto",
+            "Pedalar até às Aiguilles de Port-Coton",
+            "Ir até à Grotte de l'Apothicairerie",
+            "Fazer compras no mercado matinal junto ao cais"
+          ],
+          "mooringTip": "Le Palais amarra os visitantes em boias de amarração em linha, com vários barcos na mesma boia, por isso ponha defensas grandes e conte com vizinhos. É o porto mais movimentado da zona em julho e agosto; avise por rádio ou chegue cedo, e note que os lugares exteriores apanham a onda dos ferries."
+        },
+        "5": {
+          "shortDescription": "Contorne o norte de Belle-Île até Sauzon, um porto tranquilo que seca, de casas pintadas, bancas de crêpes e o promontório de Sarah Bernhardt.",
+          "description": "Sauzon fica a escassas cinco milhas a contornar o topo da ilha, por isso não há pressa. É tudo o que Le Palais não é: pequeno, calmo, bonito de ver, uma fila de casas em tons pastel a subir de uma angra estreita. O porto seca no fundo, por isso a maioria dos visitantes apanha uma amarração a proa e popa no canal mais fundo e vai a terra de bote.\n\nPasse a tarde a pé. As bancas do cais fazem galettes, waffles e cidra Bellilois com o porto estendido lá em baixo. Caminhe ou pedale até à Pointe des Poulains, onde Sarah Bernhardt tinha casa e um pequeno farol marca a ponta norte da ilha. Volte para jantar no cais oeste, quando a luz amolece sobre a água.",
+          "thingsToDo": [
+            "Comer galettes com cidra no cais",
+            "Caminhar até ao farol da Pointe des Poulains",
+            "Ver a casa de Sarah Bernhardt na falésia",
+            "Jantar no cais oeste do porto"
+          ],
+          "mooringTip": "O porto interior de Sauzon seca, por isso apanhe uma amarração a proa e popa nas boias do canal mais fundo em vez de subir até ao topo. O canal de entrada tem cerca de 3 m de profundidade; confirme as tabelas de marés antes de se decidir por qualquer lugar perto da parte que seca."
+        },
+        "6": {
+          "shortDescription": "Atravesse de volta para o lado do continente até à minúscula Hoedic, um pontinho sem carros de dunas, fortes e amarrações em cadeia em Argol.",
+          "description": "A travessia para Hoedic são umas doze milhas para nordeste em mar aberto, por isso atenção à previsão; a baía levanta um mar curto com um oeste fresco. A ilha em si é minúscula, mais baixa e mais bravia que as vizinhas, cercada de dunas e praias claras, com um único casario no meio.\n\nO Port de l'Argol recebe-o em amarrações em cadeia, três barcos por linha, e só cabem iates pequenos. Uma vez em terra, uma hora ou duas a pé cobrem quase tudo. Caminhe até ao antigo Fort d'Hoedic, dê uma volta pela capela e encontre uma praia só para si na costa leste. Há um par de sítios simples para comer perto do porto, mas leve mantimentos; aqui os abastecimentos são escassos.",
+          "thingsToDo": [
+            "Caminhar até ao Fort d'Hoedic",
+            "Visitar a capela e o casario da ilha",
+            "Encontrar uma praia vazia na costa leste",
+            "Comer num pequeno bistrô do porto"
+          ],
+          "mooringTip": "O Port de l'Argol oferece amarrações em cadeia em boias de linha para barcos até cerca de 14 m e 2 m de calado, por isso a maioria dos bareboats cabe. É pequeno e popular; chegue cedo na época e prepare-se para ficar bem encostado a outros iates na mesma linha."
+        },
+        "7": {
+          "shortDescription": "Um último bordo para norte pela Baía de Quiberon e de volta pela boca do golfo ao seu lugar em Le Crouesty.",
+          "description": "O regresso é um través simples pela Baía de Quiberon, umas quinze milhas até à península de Rhuys. Calcule para encontrar a entrada do golfo com a enchente, ou pelo menos no estofo; furar uma vazante cheia ao largo de Port-Navalo é trabalho lento e molhado que se evita com um pouco de planeamento.\n\nSe o dia for generoso e estiver adiantado, há tempo para fundear ao largo da praia de Port-Navalo ou largar ferro uma última vez ao abrigo de Méaban antes de recolher. Le Crouesty é uma marina grande e bem abrigada, fácil de entrar com quase qualquer tempo. Meta combustível e água a caminho do seu lugar e deixe o barco como gostaria de o encontrar.",
+          "thingsToDo": [
+            "Fundear ao largo de Port-Navalo para um último banho",
+            "Acertar a entrada do golfo com a enchente",
+            "Meter combustível antes de entregar o barco",
+            "Observar a baliza de Méaban à entrada"
+          ],
+          "mooringTip": "Procure chegar à boca do golfo no estofo ou na enchente; ao largo de Port-Navalo a maré corre até três nós contra si na vazante. O posto de combustível de Le Crouesty fica perto da entrada, por isso abasteça antes de recuar até ao pontão que lhe foi atribuído."
+        }
+      }
+    },
+    "riviera-esterel-14-days": {
+      "metaTitle": "Riviera e Esterel em 14 Dias | Boat4You",
+      "metaDesc": "Charter de 14 dias desde Cannes pela Riviera Francesa e costa do Esterel: Antibes, Monaco, Saint-Tropez, Port-Cros e Porquerolles.",
+      "days": {
+        "1": {
+          "shortDescription": "Uma primeira etapa suave de Cannes a Antibes, casa do maior porto de recreio da Europa e de uma cidade velha muralhada que merece uma tarde.",
+          "description": "Curta e indulgente, esta primeira etapa deixa a tripulação assentar antes de começarem as distâncias a sério. De Cannes a Antibes são cerca de dez milhas, coladas à costa, com o Cap d'Antibes verde e baixo à proa. Port Vauban é a maior marina da Europa, e os superiates alinhados ao longo do Quai des Milliardaires deixam a escala evidente logo que se dobra o Fort Carré. Em terra, a cidade velha recompensa uma tarde sem pressas. O Marché Provençal, no Cours Masséna, vende tapenade, socca e linhos provençais debaixo do seu telhado de ferro quase todas as manhãs. Acima fica o Château Grimaldi, hoje Museu Picasso, onde o artista trabalhou em 1946. Costumamos dar as espias a terra a meio da tarde e percorrer as muralhas antes do jantar. Um dia simples, mas bom para acertar o barco.",
+          "thingsToDo": [
+            "Passear pelo Marché Provençal, no Cours Masséna",
+            "Visitar o Museu Picasso no Château Grimaldi",
+            "Percorrer as muralhas junto ao Fort Carré",
+            "Nadar na Plage de la Garoupe, no Cap d'Antibes"
+          ],
+          "mooringTip": "Port Vauban recebe visitantes, mas ligue antes à capitainerie em julho e agosto, quando os lugares grandes enchem depressa. Para uma noite mais tranquila, fundeie em areia ao largo do Cap d'Antibes e vá a terra de bote."
+        },
+        "2": {
+          "shortDescription": "Costeie para leste, passando Nice, até uma das baías naturais mais fundas do Mediterrâneo, onde navios de cruzeiro e iates partilham a mesma água abrigada.",
+          "description": "De Antibes segue-se pela zona de aproximação do aeroporto e pela longa curva da Baie des Anges antes de Nice deslizar a bombordo. A Rade de Villefranche abre-se pouco depois, um dos portos naturais mais profundos do Mediterrâneo, a descer para perto dos noventa metros entre o Cap de Nice e o Cap Ferrat. A baía segura bem os barcos e mantém-se calma na maioria das condições, embora um sul forte mande ondulação direta para dentro, por isso atenção à previsão. A vila sobe a encosta em ocre e rosa. Vale a pena procurar a Rue Obscure, uma passagem medieval abobadada por baixo das casas, e a barroca Chapelle Saint-Pierre tem decorações de Jean Cocteau. Ao lado, o Cap Ferrat guarda a Villa Ephrussi de Rothschild e os seus jardins. Muitas vezes fundeamos ao largo da praia e vamos de bote até ao cais dos pescadores.",
+          "thingsToDo": [
+            "Descobrir a passagem abobadada da Rue Obscure",
+            "Ver os frescos de Cocteau na Chapelle Saint-Pierre",
+            "Visitar a Villa Ephrussi de Rothschild, no Cap Ferrat",
+            "Nadar na Plage des Marinières"
+          ],
+          "mooringTip": "A marina de La Darse é pequena e os lugares são quase todos privados, por isso conte fundear. O fundo agarra bem em areia e lodo entre os oito e os doze metros; leve a sério qualquer previsão de sul e mude de sítio se aumentar."
+        },
+        "3": {
+          "shortDescription": "Um salto curto até ao Principado, onde Port Hercule empilha superiates sob as esplanadas do casino e o palácio do Príncipe.",
+          "description": "Pouco mais de uma hora a motor, ou uma navegação preguiçosa se houver vento para isso. O que fica na memória é a chegada, não as milhas. Dobre o Cap Ferrat, passe o Cap d'Ail e Monaco cresce à proa, torres de apartamentos a subir a pique da água. Port Hercule tem cerca de setecentos lugares, mas só um punhado para visitantes, e espaço em plena época é escasso e caro, pelo que reservar é quase obrigatório. O Principado paga o esforço de se ir a terra. O Museu Oceanográfico está na falésia de Monaco-Ville e o seu aquário vale umas boas duas horas. A cidade velha e o Palácio do Príncipe coroam o Rocher, e o Casino de Monte-Carlo só pede um casaco e algum descaramento. Se os lugares estiverem cheios, o Port de Fontvieille, em Cap-d'Ail, fica logo a oeste e é mais calmo.",
+          "thingsToDo": [
+            "Visitar o Museu Oceanográfico na falésia",
+            "Ver a troca da guarda do palácio em Monaco-Ville",
+            "Passear pela praça do Casino de Monte-Carlo",
+            "Percorrer os terraços de cactos do jardim exótico"
+          ],
+          "mooringTip": "Reserve Port Hercule com bastante antecedência no verão; o espaço para visitantes é limitado e as tarifas são altas. Fontvieille, logo depois da ponta, é a alternativa mais barata e tranquila se o porto principal estiver cheio."
+        },
+        "4": {
+          "shortDescription": "A viragem para oeste, um percurso costeiro mais longo por Cap Ferrat e Nice, com opções de fundeadouro se o vento ajudar.",
+          "description": "É o dia em que se desfaz o canto leste e se volta para o extremo do Esterel. De Monaco a Antibes são cerca de vinte e cinco milhas, o bastante para parecer uma navegação a sério se a brisa da tarde entrar de sudeste. Costumamos largar pelas nove para ter o vento pela popa na segunda metade. Não faltam sítios para cortar o percurso. Beaulieu-sur-Mer e a água abrigada ao largo do Cap Ferrat dão uma paragem fácil para almoço, e a Villa Kerylos, uma villa grega reconstruída na ponta, vê-se do convés. De volta a Antibes, escolha um lugar ou fundeadouro diferente do da primeira noite; a Baie de la Garoupe, no lado leste do cabo, é calma na maioria das condições de verão e fica a um curto trajeto de bote do caminho do farol.",
+          "thingsToDo": [
+            "Parar para almoçar ao largo de Beaulieu-sur-Mer",
+            "Avistar a Villa Kerylos no Cap Ferrat",
+            "Fundear na Baie de la Garoupe",
+            "Caminhar o Sentier du Littoral"
+          ],
+          "mooringTip": "A Baie de la Garoupe, no Cap d'Antibes, dá bom agarre em areia e abrigo de tudo menos de leste. Chegue antes do meio da tarde em julho para encontrar espaço de borneio entre os barcos de passeio."
+        },
+        "5": {
+          "shortDescription": "Um salto minúsculo entre duas ilhas, para fundear entre a vinha dos monges e o forte que guardou o Homem da Máscara de Ferro.",
+          "description": "Tão curto que quase se chega à deriva. O percurso deixa-o no canal entre Sainte-Marguerite e Saint-Honorat, as duas ilhas de Lérins ao largo de Cannes. A água entre elas é um fundeadouro de eleição, areia entre os cinco e os dez metros com bom agarre, e enche de barcos de passeio ao meio-dia para se esvaziar outra vez ao fim da tarde. Sainte-Marguerite guarda o Fort Royal, onde a lenda coloca o Homem da Máscara de Ferro, e caminhos de pinhal atravessam a ilha até enseadas tranquilas. Saint-Honorat pertence a uma comunidade cisterciense que ainda trabalha as suas vinhas; os monges fazem vinho e o licor Lérina, ambos vendidos na loja da abadia. É proibido fundear em frente ao mosteiro, zona marcada por boias amarelas, por isso deixe esse trecho livre. Fique a noite depois de os barcos de excursão partirem e o lugar é quase todo seu.",
+          "thingsToDo": [
+            "Explorar o Fort Royal em Sainte-Marguerite",
+            "Provar o licor Lérina na abadia de Saint-Honorat",
+            "Percorrer os caminhos de pinhal até enseadas calmas",
+            "Fazer snorkeling no canal raso entre as ilhas"
+          ],
+          "mooringTip": "Fundeie em areia entre os cinco e os dez metros no canal, mas afaste-se da zona de proibição marcada por boias amarelas ao largo da abadia. É possível reservar uma boia do parque, o que poupa preocupações com o agarre se soprar."
+        },
+        "6": {
+          "shortDescription": "Atravesse até à costa vermelha do Esterel e apanhe uma boia na baía abrigada de Agay, sob as colinas vulcânicas.",
+          "description": "Outra vez para oeste, e a costa muda de carácter por completo. O maciço do Esterel é vulcão antigo, riólito vermelho que tinge as falésias e a água a seus pés de um rosa ferrugento. Das Lérins é um percurso direto por Théoule e a Pointe de l'Aiguille até Agay, encaixada entre o Cap Dramont e a Pointe de la Baumette. Agay é um dos melhores portos naturais deste trecho, bem protegido exceto de sul. A baía tem um campo de boias do lado leste e, como as pradarias marinhas são protegidas, apanhar uma boia em vez de largar ferro é obrigatório em certos sítios e simplesmente mais amigo do fundo. O Cap Dramont, logo a leste, é onde as tropas aliadas desembarcaram em agosto de 1944, e a pequena Ile d'Or, com a sua torre de pedra, fica ao largo. Um fundeadouro calmo, de paredes vermelhas, para fechar o dia.",
+          "thingsToDo": [
+            "Nadar sob as falésias vermelhas do Esterel",
+            "Caminhar até à praia do desembarque do Cap Dramont",
+            "Fotografar a torre de pedra da Ile d'Or",
+            "Fazer um trecho do Sentier du Littoral"
+          ],
+          "mooringTip": "Apanhe uma boia em Agay em vez de fundear; o campo leste é bem abrigado e as pradarias marinhas são protegidas. Chegue no início da tarde em plena época, porque as boias vão-se depressa e não são sempre reserváveis."
+        },
+        "7": {
+          "shortDescription": "Um curto salto costeiro até Saint-Raphael, dobrando o Cap Dramont para um porto de veraneio animado, com uma basílica bizantina acima dos cais.",
+          "description": "Uma manhã fácil. Saint-Raphael fica a poucas milhas a contornar o Cap Dramont, por isso não há pressa; a etapa é sobretudo pretexto para calcorrear a costa vermelha e nadar ao largo da Ile d'Or pelo caminho. A cidade encosta a Fréjus por trás e o porto velho dá-lhe uma marina a sério, com combustível, água e uma caminhada até ao centro. Saint-Raphael cresceu como estância da Belle Époque e guardou algo desse ar. A Basilique Notre-Dame-de-la-Victoire, de estilo bizantino e cúpula listada, fica a poucas ruas da água. Há mercado de manhã, uma boa peixaria e restaurantes suficientes na frente marítima para tornar o abastecimento indolor. Bom sítio para encher tanques e a despensa antes da travessia mais longa para o Golfo de Saint-Tropez amanhã.",
+          "thingsToDo": [
+            "Ver a bizantina Basilique Notre-Dame-de-la-Victoire",
+            "Passear pelo mercado matinal de Saint-Raphael",
+            "Nadar ao largo da Ile d'Or na aproximação",
+            "Abastecer a despensa na peixaria do porto"
+          ],
+          "mooringTip": "O Vieux Port de Saint-Raphael e o vizinho Santa Lucia recebem visitantes e têm combustível e água. Reserve o lugar para a noite em época alta e aproveite a parada para encher os tanques antes da travessia aberta para oeste."
+        },
+        "8": {
+          "shortDescription": "Atravesse mar aberto até Saint-Tropez, fundeando na Baie des Canebiers, a um trajeto de bote da cidadela e do porto velho.",
+          "description": "A primeira travessia a sério da viagem. De Saint-Raphael deixa-se a costa e fazem-se cerca de vinte milhas para sudoeste em mar aberto até ao Golfo de Saint-Tropez, por isso escolha uma manhã calma e vigie a brisa marítima da tarde, que pode reforçar sobre o golfo. Saint-Tropez em si é caro e movimentado no porto, por isso muitas tripulações fundeiam na Baie des Canebiers, logo a leste da cidade. O fundo é areia e erva, com bom agarre, e um canal balizado mantém banhistas e barcos separados. Dali é um curto trajeto de bote até à praia e meia hora a pé pelo cemitério marinho até à cidadela e ao porto velho. A Place des Lices tem mercado à terça e ao sábado, e uma fatia de tarte Tropézienne é quase obrigatória. O Sénéquier, no cais, é para ver gente passar, não para poupar dinheiro.",
+          "thingsToDo": [
+            "Fundear e nadar na Baie des Canebiers",
+            "Percorrer o mercado da Place des Lices, terça ou sábado",
+            "Subir à Citadelle para ver o golfo",
+            "Provar tarte Tropézienne junto ao porto velho"
+          ],
+          "mooringTip": "Fundeie na Baie des Canebiers, em areia e erva, entre os cinco e os dez metros; o porto é caro e muitas vezes está cheio no verão. Mantenha-se dentro do canal balizado e deixe espaço de borneio para quando a brisa marítima rodar."
+        },
+        "9": {
+          "shortDescription": "Uma travessia de dez minutos do golfo até Port Grimaud, uma cidade lacustre dos anos 60 onde se amarra à própria porta de casa.",
+          "description": "Quase não é uma travessia. Cruza-se a cabeceira do golfo até Port Grimaud, a cidade-canal que o arquiteto François Spoerry construiu de raiz nos anos 60. Casas em tons pastel dão para a água, cada uma com a sua amarração, e o conjunto está desenhado como uma resposta provençal em miniatura a Veneza. A marina tem cerca de quinhentos lugares, dos quais uns sessenta reservados a visitantes com barcos até vinte metros, pelo que ligar antes na época faz sentido. Uma vez amarrado, a cidade é toda pontes pedonais e cais calmos, melhor vista num passeio ao anoitecer e num coche d'eau, os pequenos ferries elétricos que enfiam pelos canais. Suba à antiga aldeia de Grimaud, no alto, para a vista larga, ruínas do castelo e capela templária incluídas. Uma noite fácil e bonita depois da travessia.",
+          "thingsToDo": [
+            "Andar num coche d'eau pelos canais",
+            "Subir às ruínas do castelo de Grimaud",
+            "Atravessar as pontes pedonais à hora dourada",
+            "Comer numa esplanada à beira do canal"
+          ],
+          "mooringTip": "Port Grimaud guarda cerca de sessenta lugares para visitantes com barcos até vinte metros; reserve com antecedência em julho e agosto. Aproxime-se devagar e atenção ao canal de entrada, pouco fundo e balizado, que assoreia nas margens."
+        },
+        "10": {
+          "shortDescription": "Dobre os cabos selvagens a sul do golfo até à ampla baía de areia de Cavalaire, aos pés das colinas dos Pradels.",
+          "description": "Ao sair do golfo, dobram-se os promontórios protegidos que fazem deste um dos cantos mais bonitos da costa do Var. O Cap Camarat com o seu farol, depois o Cap Taillat e o Cap Lardier, todos parte de uma orla livre de construção. Meta-se por trás deles para um banho; a Plage de l'Escalet e a água ao largo do Cap Taillat ficam limpas e tranquilas num dia calmo. Cavalaire-sur-Mer está no fim do percurso, uma baía larga sob o Massif des Pradels, com uma longa praia de areia e uma marina moderna. É uma estância sem pretensões depois do brilho de Saint-Tropez, boa para reabastecer e para uma noite descontraída. A baía é aberta a sul e leste, por isso é um fundeadouro de bom tempo; com ondulação prevista, a marina é a aposta mais segura.",
+          "thingsToDo": [
+            "Nadar na restinga de areia do Cap Taillat",
+            "Fundear na Plage de l'Escalet",
+            "Reabastecer nas lojas da frente marítima de Cavalaire",
+            "Percorrer o trilho protegido do Cap Lardier"
+          ],
+          "mooringTip": "A baía de Cavalaire é aberta a sul e leste, por isso fundeie só com tempo estável e recolha à marina se ameaçar ondulação. Ao largo do Cap Taillat o fundo agarra bem em areia, mas é paragem de dia, não para passar a noite com vento."
+        },
+        "11": {
+          "shortDescription": "Siga a costa dos Maures até Le Lavandou, uma vila de mar a trabalhar, com uma dúzia de praias e as Ilhas Douradas ao largo.",
+          "description": "Uma etapa costeira descontraída sob o Massif des Maures, as colinas escuras e arborizadas que fecham esta costa. Passa-se o Cap Nègre e as villas discretas nas suas encostas, depois a fila de enseadas que os locais chamam as doze praias de Le Lavandou. Cavalière é a maior, com espaço para fundear ao largo da areia com tempo estável e ir a nado a terra para almoçar. Le Lavandou é uma verdadeira vila de pesca e de veraneio, e não um cenário, e sai a ganhar com isso. O porto recebe visitantes, o mercado é genuíno e a frente marítima tem aqueles restaurantes sem frescuras onde o peixe é da terra. Daqui as Iles d'Or ficam logo do outro lado da água, o que faz deste um ponto natural de escala antes de atravessar para Port-Cros. Costumamos abastecer aqui para as duas noites nas ilhas, já que nos parques há pouco para comprar.",
+          "thingsToDo": [
+            "Fundear e nadar na praia de Cavalière",
+            "Abastecer no mercado de Le Lavandou",
+            "Comer peixe fresco na frente marítima",
+            "Navegar diante das villas do Cap Nègre"
+          ],
+          "mooringTip": "O porto de Le Lavandou recebe visitantes e é bom sítio para reabastecer antes das Ilhas Douradas, onde os mantimentos são escassos. Com brisa de terra pode fundear ao largo da praia de Cavalière; entre no porto se o vento rodar para o mar."
+        },
+        "12": {
+          "shortDescription": "Atravesse para Port-Cros, o primeiro parque nacional marinho da Europa, e apanhe uma boia do parque ao largo de uma ilha florestada e sem carros.",
+          "description": "Uma travessia curta leva-o a Port-Cros, a mais bravia das três Ilhas Douradas e o coração de um parque nacional criado em 1963, entre as primeiras reservas marinhas da Europa. A ilha toda é protegida, densamente arborizada e sem carros, e as regras na água são severas por bons motivos. As amarrações são num campo de boias do parque, dimensionadas para barcos até quinze metros, e é proibido fundear na Passe de Bagaud para proteger as pradarias marinhas. Para navegar nestas águas o barco precisa de tanque de retenção de águas negras. Instalado, o que puxa é caminhar: o caminho para o Fort de l'Estissac e o trilho sombrio que atravessa até à Plage de la Palud, onde um percurso de snorkeling balizado segue os baixios junto ao ilhéu de Rascas. Silencioso, verde e a um mundo de distância dos cais de Saint-Tropez.",
+          "thingsToDo": [
+            "Fazer o percurso de snorkeling ao largo da Plage de la Palud",
+            "Subir ao Fort de l'Estissac",
+            "Percorrer o trilho sombrio que atravessa a ilha",
+            "Procurar garoupas nos baixios transparentes"
+          ],
+          "mooringTip": "Use uma boia do parque nacional; fundear é restrito e proibido na Passe de Bagaud. As boias servem barcos até quinze metros e é obrigatório ter tanque de retenção de águas negras, por isso chegue cedo e com o tanque em ordem."
+        },
+        "13": {
+          "shortDescription": "Salte para Porquerolles, a maior das Ilhas Douradas, por praias de areia branca, caminhos de vinha e uma praça de aldeia à sombra de eucaliptos.",
+          "description": "Porquerolles fica a umas milhas suaves para oeste, a maior e mais habitada das ilhas. A aldeia cresceu em volta de uma guarnição do século XIX, e a sua praça, poeirenta de pétanque e sombreada por eucaliptos, ainda parece um posto de fronteira que decidiu ficar pelo vinho. A costa norte tem as praias mais conhecidas, entre elas a Plage Notre-Dame e a Plage d'Argent, ambas de areia e ambas abrigadas do mistral por trás da ilha. Fundeie ao largo da costa norte e fica a uma curta caminhada ou passeio de bicicleta da aldeia; a ilha tem vinhas que fazem rosé Côtes de Provence e caminhos que se cobrem bem numa bicicleta alugada. O Fort Sainte-Agathe olha o porto de cima, e a caminhada até ao farol, na ponta sul, dá-lhe as falésias e o mar aberto. A mais polida das três ilhas, e um belo último fundeadouro.",
+          "thingsToDo": [
+            "Nadar na Plage Notre-Dame ou na Plage d'Argent",
+            "Alugar uma bicicleta e percorrer os caminhos das vinhas",
+            "Provar rosé Côtes de Provence num domaine",
+            "Caminhar até às falésias do farol sul"
+          ],
+          "mooringTip": "Fundeie ao largo das praias da costa norte, abrigadas do mistral, em areia entre os cinco e os doze metros. A Plage Notre-Dame e a d'Argent enchem de barcos de passeio ao fim da manhã, por isso largue ferro cedo para garantir espaço de borneio."
+        },
+        "14": {
+          "shortDescription": "A longa etapa final de regresso a Cannes, com partida cedo por mar aberto para fechar o círculo na Croisette.",
+          "description": "O dia mais longo da quinzena, e um para planear bem. De Porquerolles a Cannes é um grande trecho de mar aberto, bem mais de quarenta milhas, por isso costumamos largar a boia à primeira luz para chegar antes de a brisa da tarde endurecer. Se a tripulação quiser cortar o percurso, Le Lavandou ou Cavalaire são paragens sensatas a meio. A costa vai-se reconstruindo pelo caminho, os Maures dando lugar ao Esterel vermelho e, por fim, ao verde baixo do Cap d'Antibes e das Lérins. Cannes fecha o círculo com estilo, La Croisette a correr dourada ao longo da frente e Le Suquet, a cidade velha, a subir até à torre da igreja e à vista sobre a baía. Fique num lugar no Vieux Port ou fundeie ao largo da Croisette para a última noite, e brinde a uma quinzena de navegação bem feita.",
+          "thingsToDo": [
+            "Percorrer La Croisette e o porto velho",
+            "Subir a Le Suquet pela vista da baía",
+            "Passear pelo Marché Forville para as últimas compras",
+            "Brindar à viagem no fundeadouro da Croisette"
+          ],
+          "mooringTip": "Largue de Porquerolles ao amanhecer para esta etapa longa e atenção à brisa da tarde ao largo do Esterel. Em Cannes, o Vieux Port recebe visitantes mas está movimentado; fundear ao largo de La Croisette com tempo estável é uma última noite agradável e mais barata."
+        }
+      }
+    }
+  },
+  "areas": {}
+}

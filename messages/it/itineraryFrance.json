@@ -1,1 +1,753 @@
-{}
+{
+  "routes": {
+    "ajaccio-south-corsica": {
+      "metaTitle": "7 Giorni Corsica Sud e Bonifacio | Boat4You",
+      "metaDesc": "Da Ajaccio verso sud fino a Bonifacio e alle isole Lavezzi: sette giorni tra il Golfo di Valinco, torri di granito e porti sotto le falesie.",
+      "days": {
+        "1": {
+          "shortDescription": "Si lascia il porto natale di Napoleone, si doppia Capo di Muro e si dà fondo nelle cale sabbiose di Porto Pollo.",
+          "description": "Fare cambusa ad Ajaccio è semplice, così la maggior parte degli equipaggi carica tutto al mercato coperto prima di mollare gli ormeggi. Fuori dal golfo la costa si fa più selvaggia mentre si scende a sud verso Capo di Muro: una ventina di miglia di mare aperto, con il termico del pomeriggio che di solito entra da poppa. Porto Pollo sta all'imboccatura del Golfo di Valinco, un posto tranquillo con fondo di sabbia che tiene bene l'ancora. L'ufficio del porto è davvero disponibile e risponde alla radio, cosa che conta parecchio se arrivi tardi. Un bagno da poppa prima di cena: qui l'acqua è calma e abbastanza bassa per una prima notte. Di solito partiamo da Ajaccio verso metà mattina, così da arrivare in rada con luce in abbondanza e il tempo di dare una bella controllata alla barca.",
+          "thingsToDo": [
+            "Spesa al mercato coperto di Ajaccio prima di partire",
+            "Snorkeling nei bassifondi di Porto Pollo",
+            "Noleggio di un windsurf nella baia di Porto Pollo",
+            "Aperitivo al tramonto in un beach bar di Porto Pollo"
+          ],
+          "mooringTip": "Porto Pollo tiene bene su sabbia a 3-5 metri; dai fondo davanti alla spiaggia invece di affollare il piccolo pontile e chiama l'ufficio del porto in VHF se vuoi una lazy line o un posto a luglio."
+        },
+        "2": {
+          "shortDescription": "Due ore di traversata del Valinco fino a Campomoro, dove la più grande torre genovese della Corsica veglia su una baia sabbiosa e tranquilla.",
+          "description": "È una delle tappe più brevi della settimana, appena due ore se la brezza collabora, quindi nessuna fretta di partire. Campomoro chiude il lato sud del Golfo di Valinco: un villaggio di case in granito che ha conservato l'anima del borgo di pescatori. La torre a stella sul promontorio è la più grande della Corsica e vale i venti minuti di salita per la vista sul golfo. Con tempo stabile l'ancoraggio è semplice, buona sabbia davanti alla spiaggia. Occhio alle previsioni, però: la baia è aperta a sudovest e il libeccio ci manda dentro l'onda in pieno. Lo snorkeling lungo gli scogli all'estremità nord regala un bel po' di pesce. A terra, qualche piccolo ristorante serve il pescato del giorno a due passi dall'acqua.",
+          "thingsToDo": [
+            "Salita alla torre a stella di Campomoro",
+            "Snorkeling sugli scogli a nord della baia",
+            "Sentiero costiero oltre la torre",
+            "Pescato del giorno in un ristorante sulla spiaggia"
+          ],
+          "mooringTip": "Ancora su sabbia davanti alla spiaggia a 4-6 metri, ma considera Campomoro solo con bel tempo. Se di notte è previsto libeccio da sudovest la baia rolla, e Porto Pollo o Propriano sono rifugi più sicuri."
+        },
+        "3": {
+          "shortDescription": "Si costeggia verso sud fino a Tizzano, minuscolo porto di pesca in una cala d'acqua limpida, circa a metà strada dalle Bocche di Bonifacio.",
+          "description": "A sud di Campomoro la costa diventa remota, alle spalle la macchia della riserva di Senetosa con i suoi due fari. Tizzano si apre come un'insenatura stretta, facile da mancare finché non ci sei quasi sopra. Il porticciolo accoglie barche sotto i dieci metri; chi è più grande dà fondo davanti al molo, nella cala dove l'acqua è trasparente su sabbia e alghe. È un posto piccolo: quattro case sparse, un alimentari per rifornirsi e un paio di ristoranti che puntano tutto sul pescato locale e sul vino di Sartene. Qui non succede molto, ed è esattamente il punto dopo un paio di porti animati. Spesso programmiamo questa tappa a fine mattina, così il sole del pomeriggio batte sull'ancoraggio. Tender a terra per una cena presto, guardando rientrare le barche da pesca.",
+          "thingsToDo": [
+            "Ancoraggio e bagno nella cala limpida di Tizzano",
+            "Cena di pesce fresco al porto",
+            "Abbinare la cena a un rosso di Sartene",
+            "Rifornimento all'alimentari di Tizzano"
+          ],
+          "mooringTip": "Il porticciolo va bene solo per barche sotto i 10 m circa; gli scafi più grandi danno fondo davanti al molo a 3-5 m su sabbia. Cala bene l'ancora e controlla il giro, perché la cala è raccolta e in stagione si riempie di corpi morti locali."
+        },
+        "4": {
+          "shortDescription": "Si doppia l'estremità sudoccidentale della Corsica e si infila la fessura tra le falesie che porta a Bonifacio, uno dei grandi porti naturali del Mediterraneo.",
+          "description": "La tappa di oggi è la più esposta del giro: si doppia l'angolo sudoccidentale, dove le Bocche di Bonifacio incanalano il vento tra Corsica e Sardegna. Libeccio o mistral possono superare i trenta nodi, quindi controlliamo sempre le previsioni la sera prima e partiamo presto per anticipare il rinforzo pomeridiano. La ricompensa è l'avvicinamento. Dal mare l'entrata è una semplice fenditura nelle falesie bianche di calcare, invisibile finché non sei vicino; poi la calanque gira a destra e il porto si apre sotto la città vecchia. Bonifacio sta aggrappata in alto sulla falesia, tutta case alte e bastioni genovesi. La marina si riempie in fretta a luglio e agosto, quindi prenota. Una volta ormeggiati, sali le scale verso la haute ville per un bicchiere sui bastioni e la passeggiata fino al cimitero del Bosco al tramonto.",
+          "thingsToDo": [
+            "Passeggiata sui bastioni della haute ville",
+            "Discesa della scalinata del Re d'Aragona",
+            "Tramonto al cimitero del Bosco sulla falesia",
+            "Aperitivo su una terrazza della marina di Bonifacio"
+          ],
+          "mooringTip": "Prenota in anticipo la marina di Bonifacio per luglio e agosto; si ormeggia di poppa alla banchina con lazy line e personale sui pontili. Se è piena, le boe della Calanque de la Catena appena fuori costano circa 25 euro per un monoscafo."
+        },
+        "5": {
+          "shortDescription": "Sei miglia attraverso le Bocche fino alle isole Lavezzi, riserva naturale di granito circondata da sabbia chiara e cale da snorkeling.",
+          "description": "L'arcipelago delle Lavezzi sta poche miglia a est di Bonifacio, abbastanza vicino perché tutto dipenda dal vento e non dalla distanza. Sono isole basse di granito, levigate in massi arrotondati, e l'intero gruppo ricade nella riserva naturale delle Bocche di Bonifacio. Cala di Greco, sul lato nord, è l'ancoraggio abituale: c'è una lingua di sabbia dove dare fondo e vicino ci sono boe riservate alle barche escursione che arrivano da Bonifacio, quindi lasciale libere. Lo snorkeling intorno a Cala Lazarina e Cala di u Grecu è il migliore della settimana: canaloni di granito pieni di pesce in acqua bassa e cristallina. Attenzione alle zone di divieto di ancoraggio, delimitate da boe gialle a protezione della posidonia. Questa è una sosta diurna: la rada è aperta, quindi la maggior parte degli equipaggi rientra al riparo prima di sera.",
+          "thingsToDo": [
+            "Snorkeling nei canaloni di granito di Cala Lazarina",
+            "Ancoraggio e bagno a Cala di Greco",
+            "Sentiero fino ai memoriali delle Lavezzi",
+            "Osservare i pesci a Cala di u Grecu"
+          ],
+          "mooringTip": "Dai fondo sulle chiazze di sabbia a Cala di Greco a 3-6 m e resta ben fuori dalle zone protette segnate dalle boe gialle. È un ancoraggio diurno solo con bel tempo, esposto all'onda, quindi metti in conto di rientrare a Bonifacio o risalire verso nord prima di sera."
+        },
+        "6": {
+          "shortDescription": "La lunga risalita a nord lungo la costa ovest fino a Propriano, vera marina turistica in fondo al Golfo di Valinco.",
+          "description": "Ecco la tappa che mangia miglia, una lunga bolina o traverso verso nord dalle Bocche fino dentro il Golfo di Valinco. Parti presto. Con il sudovest prevalente puoi tenere un buon angolo di vela per gran parte del percorso, ma la tratta è esposta e si fa meglio con l'aria più leggera del mattino che con il termico pomeridiano a pieno regime. Propriano ti attende in fondo al golfo: una vera cittadina turistica con una grande marina, bar e ristoranti lungo la banchina e un ormeggiatore che ti prende al pontile. Dopo gli ancoraggi selvaggi del sud sembra quasi affollata. Rifai la cambusa qui, fai la lavanderia e cena a terra: i ristoranti sul lungomare grigliano bene il pesce e c'è vera scelta. È un posto comodo e riparato per rimettersi in sesto prima dell'ultima tappa verso casa.",
+          "thingsToDo": [
+            "Rifornimento lungo la banchina di Propriano",
+            "Pesce alla griglia in un ristorante sul lungomare",
+            "Passeggiata serale sul lungomare della marina",
+            "Bagno alla Plage du Lido di Propriano"
+          ],
+          "mooringTip": "Chiama la capitainerie di Propriano in avvicinamento per un posto; il personale ti accoglie al pontile, con acqua e corrente disponibili. È una marina ben riparata, ideale per aspettare un libeccio in arrivo dal largo."
+        },
+        "7": {
+          "shortDescription": "Ultima tappa verso la base, seguendo la costa del Valinco e doppiando Capo di Muro per chiudere l'anello ad Ajaccio.",
+          "description": "Il rientro ripercorre il promontorio esposto di Capo di Muro prima che la costa si addolcisca nel Golfo di Ajaccio. Sono una trentina di miglia, quindi parti con calma ma in orario, soprattutto se hai un'ora fissa per la riconsegna; le basi charter di solito rivogliono la barca entro sera o la mattina dopo. Se i tempi lo permettono vale un ultimo bagno in una cala prima della città, a Portigliolo o sulle spiagge sotto Coti-Chiavari, prima del trambusto della marina. Ajaccio merita un pomeriggio, se ce l'hai. La città vecchia e la casa natale di Napoleone, la cittadella e un'ultima cena a terra chiudono bene la settimana. Noi tendiamo a fare gasolio e sistemare la barca la sera prima della riconsegna, così l'ultima mattina è tranquilla e nessuno corre contro l'orologio.",
+          "thingsToDo": [
+            "Ultimo bagno alla spiaggia di Portigliolo",
+            "Visita alla casa natale di Napoleone, Maison Bonaparte",
+            "Giro nella città vecchia e alla cittadella di Ajaccio",
+            "Cena d'addio sulla banchina di Ajaccio"
+          ],
+          "mooringTip": "Fai gasolio prima di rientrare al posto charter di Ajaccio e conferma con la base orario di riconsegna e pontile. Cerca di essere in banchina con ancora luce: al cambio equipaggi la marina è affollata e lo spazio di manovra è stretto."
+        }
+      }
+    },
+    "brittany-islands-14-days": {
+      "metaTitle": "14 Giorni Morbihan e Belle-Ile | Boat4You",
+      "metaDesc": "Due settimane da Le Crouesty al Golfo del Morbihan, Houat, Belle-Ile, Groix e Lorient: rade, porti e consigli d'ormeggio in Bretagna sud.",
+      "days": {
+        "1": {
+          "shortDescription": "Si sfrutta la corrente di flusso su per lo stretto nel Golfo del Morbihan e si entra in chiusa nella marina nel cuore della vecchia Vannes.",
+          "description": "La prima tappa è breve, ma si regola sull'orologio, non sul solcometro. Programma la partenza in modo che il flusso ti porti attraverso il passaggio tra Port-Navalo e Kerpenhir, dove la corrente della Jument spinge forte con coefficienti alti. Una volta dentro l'acqua si calma e il canale per Vannes si snoda tra i tavolieri delle ostriche e basse sponde verdi. La marina è proprio in centro storico, si raggiunge attraverso un ponte mobile e una soglia che aprono solo intorno all'alta marea, quindi controlla gli orari prima di impegnarti. A terra, i bastioni e i lavatoi lungo la Marle valgono un'ora, e i vicoli dietro la cattedrale sono pieni di creperie. Di solito arriviamo con il tempo di camminare sulle mura prima di cena. Compra pane e caffè qui: è la sosta meglio rifornita di tutto l'anello.",
+          "thingsToDo": [
+            "Passeggiata sui bastioni medievali sopra i lavatoi",
+            "Cena in creperie nei vicoli della città vecchia",
+            "Cattedrale di Saint-Pierre e Place Henri IV",
+            "Cambusa completa al mercato del centro"
+          ],
+          "mooringTip": "Il ponte mobile e la soglia per il bacino di Vannes aprono solo in una finestra intorno all'alta marea, quindi pianifica arrivo e partenza sugli orari pubblicati. I posti sono nel cuore della città e a luglio si riempiono: chiama prima la capitainerie."
+        },
+        "2": {
+          "shortDescription": "Mattinata senza fretta a Vannes, poi breve discesa nel Golfo fino ai sentieri verdi e al campo boe dell'Ile aux Moines.",
+          "description": "Lascia Vannes con il riflusso e fatti portare dalla corrente fino all'Ile aux Moines, la più grande delle isole del Golfo e la più bella. Il passaggio è di poche miglia, ma la marea tira forte negli stretti davanti a Port-Blanc, quindi calcola i tempi e tieni d'occhio l'allineamento. Prendi una boa davanti a Port du Lerio: la tenuta è irregolare e il canale trafficato, qui un corpo morto batte l'ancora. Noleggia una bici in banchina e pedala fino al Bois d'Amour e al megalite della Pointe du Trech. Il villaggio conserva un paio di buoni indirizzi per un plateau di ostriche. Le serate sono tranquille appena i gitanti prendono l'ultima navetta per Port-Blanc.",
+          "thingsToDo": [
+            "Pedalata sul sentiero boschivo del Bois d'Amour",
+            "Plateau di ostriche su una terrazza a Le Bourg",
+            "Megalite e panorama alla Pointe du Trech",
+            "Bagno alla Plage du Goret"
+          ],
+          "mooringTip": "Prendi una boa per visitatori davanti a Port du Lerio invece di ancorare; il canale è stretto e il fondo irregolare. Le correnti di marea corrono forti lungo l'isola, quindi avvicinati vicino allo stanco se puoi."
+        },
+        "3": {
+          "shortDescription": "Con il riflusso si esce dal Golfo e si attraversa la baia di Quiberon fino al porto regatante più famoso di Francia, sul fiume Crac'h.",
+          "description": "È il giorno in cui lasci le acque protette. Esci dagli stretti di Port-Navalo con l'ultimo riflusso, poi rotta a ovest attraverso la baia di Quiberon, di solito un bel traverso con la brezza di mare del pomeriggio. L'entrata del fiume Crac'h è boata e semplice, e la marina sta circa un miglio a monte, oltre le file di chiatte per ostriche sotto il ponte di Kerisper. La Trinite è terra di vela seria: Tabarly teneva qui le sue barche e lo Spi Ouest-France riempie ancora i pontili ogni primavera. Cammina in banchina a leggere i nomi sugli specchi di poppa degli scafi da regata. Per cena, La Maison Quintin serve ostriche appena uscite dal fiume, e Le Chantier pesce alla griglia senza fronzoli in un vecchio capannone per ostriche sull'altra sponda.",
+          "thingsToDo": [
+            "Leggere i nomi degli scafi da regata lungo i pontili",
+            "Ostriche sulla terrazza di La Maison Quintin",
+            "Pesce alla griglia a Le Chantier",
+            "Attraversare il Pont de Kerisper"
+          ],
+          "mooringTip": "La Trinite è una marina grande e ben gestita, con un pontile visitatori vicino al distributore; chiama prima in stagione di regate, quando il Crac'h si riempie in fretta. La corrente del fiume è vivace, quindi entra nel posto controcorrente."
+        },
+        "4": {
+          "shortDescription": "Si naviga in baia aperta fino a Houat, isola senza auto, e si dà fondo davanti al lungo arco di dune bianche di Treac'h er Goured.",
+          "description": "Houat sta al largo, in mezzo alla baia, e la traversata da La Trinite regala una vera navigazione su una decina di miglia di acque di Quiberon. L'isola è piccola, senza alberi e senza auto, circondata di sabbia. Sul lato est Treac'h er Goured disegna due chilometri di duna bianca e, con ponente stabile, diventa un ancoraggio diurno splendido. Dai fondo davanti alla spiaggia lontano dalla zona cavi segnalata, oppure prendi una boa a Port Saint-Gildas sulla costa nord. Il minuscolo villaggio è dieci minuti di salita dal porto, con una panetteria e uno o due posti per mangiare granchio. Con vento da nordest di notte l'ancoraggio in spiaggia rolla, quindi spostati nelle acque più riparate davanti a Treac'h er Salus.",
+          "thingsToDo": [
+            "Camminare l'arco di dune di Treac'h er Goured",
+            "Granchio e scampi in paese",
+            "Sentiero costiero attorno alla Pointe de Beg Pell",
+            "Bagno nelle spiagge bianche a est"
+          ],
+          "mooringTip": "Il campo boe di Port Saint-Gildas ha 25-30 corpi morti per visitatori e ad agosto si riempie presto, quindi arriva entro metà pomeriggio. Per una notte tranquilla ancora davanti a Treac'h er Salus, più riparato dalla brezza notturna di nordest."
+        },
+        "5": {
+          "shortDescription": "Breve tappa verso sud fino a Hoedic, la sorellina più selvaggia di Houat: brughiera, forti e spiagge deserte.",
+          "description": "Hoedic sta solo poche miglia a sud di Houat, quindi è una mattinata di vela facile e un pomeriggio a terra. L'isola è ancora più piccola e silenziosa della vicina, un tappeto basso di brughiera e dune con una manciata di case al centro. Prendi una boa a Port de l'Argol, il porticciolo sul lato ovest, oppure dai fondo al largo con tempo calmo. Non ci sono auto e quasi nessun negozio, che è esattamente il punto. Cammina fino al vecchio Fort d'Hoedic e alla cappella, poi scendi alla Plage de la Vierge per un bagno. Le serate qui sono tra le più immobili che la vela in Francia possa offrire. Porta quello che ti serve da Houat: a Hoedic la cambusa è scarna.",
+          "thingsToDo": [
+            "Visitare il restaurato Fort d'Hoedic",
+            "Bagno alla Plage de la Vierge",
+            "Camminata nella brughiera fino al faro",
+            "Aperitivo in coperta nel silenzio assoluto"
+          ],
+          "mooringTip": "Port de l'Argol ha boe per visitatori ma poco riparo con ponente forte, quindi controlla le previsioni prima di fermarti per la notte. I rifornimenti sono minimi: fai cibo e acqua prima a Houat."
+        },
+        "6": {
+          "shortDescription": "Traversata a Belle-Ile, la più grande delle isole bretoni, con ormeggio sotto la cittadella Vauban che sorveglia l'animato Le Palais.",
+          "description": "Belle-Ile merita il nome e la fama, e la traversata da Hoedic è di circa quindici miglia in mare aperto, quindi scegli una finestra stabile. Le Palais è la porta d'ingresso dell'isola, un porto vivo di lavoro sotto la grande Citadelle Vauban a stella che l'ingegnere di Luigi XIV costruì per tenere gli accessi. In stagione è pieno: mettiti in conto di affiancare in terza o quarta fila sui pontili esterni, oppure di entrare nel bacino interno quando la porta apre vicino all'alta marea. Una volta ormeggiato, il paese ha tutto quello che manca dopo giorni sulle isole esterne: negozio nautico, mercati, un cinema e ristoranti veri. Fai il giro dei bastioni della cittadella per la vista sulla foresta di alberi. Noleggia bici o un'auto qui se vuoi vedere la costa sud selvaggia e le Aiguilles de Port-Coton.",
+          "thingsToDo": [
+            "Visita alla Citadelle Vauban a stella",
+            "In bici fino alle Aiguilles de Port-Coton",
+            "Spesa al mercato sulla banchina",
+            "Cinema o cena in un ristorante come si deve"
+          ],
+          "mooringTip": "Le Palais si riempie in fretta a luglio e agosto, quindi arriva prima di mezzogiorno e prepara le cime per affiancare più barche in fila sui pontili visitatori. La porta del bacino interno apre solo intorno all'alta marea: calcola i tempi o prendi un posto esterno."
+        },
+        "7": {
+          "shortDescription": "Poche miglia lungo la costa fino a Sauzon, il porto più bello di Belle-Ile: banchine pastello e una ria che si asciuga con la marea.",
+          "description": "Potresti quasi andarci a piedi, ma arrivare da Le Palais a Sauzon per mare è più bello. Sauzon sta in fondo a una stretta insenatura di marea sulla costa nordoccidentale, una curva di case pastello e un faro snello all'entrata. Gran parte del porto si asciuga, quindi i visitatori prendono corpi morti prua-poppa sui trot nel canale; i posti più profondi all'estremità esterna restano sempre a galla. È più calmo e più garbato di Le Palais, fatto per un pomeriggio lento. Fai il sentiero costiero fino alla Pointe du Cardinal, poi torna per cena. L'Hotel du Phare in banchina ha una terrazza sull'acqua e prepara il pescato del giorno in modo semplice e giusto.",
+          "thingsToDo": [
+            "Sentiero costiero fino alla Pointe du Cardinal",
+            "Cena sulla terrazza dell'Hotel du Phare",
+            "Fotografare le case pastello sulla banchina",
+            "Camminata fino al faro del porto"
+          ],
+          "mooringTip": "Quasi tutto Sauzon si asciuga, quindi prendi un corpo morto prua-poppa sui trot nel canale e verifica di avere fondale sufficiente per il tuo pescaggio con la bassa. Gli ormeggi esterni restano a galla: chiedi all'ormeggiatore dove metterti."
+        },
+        "8": {
+          "shortDescription": "Tappa più lunga in mare aperto verso nordovest fino all'Ile de Groix e al suo vecchio porto tonniero di Port Tudy.",
+          "description": "È la tratta singola più lunga del viaggio, una ventina di miglia di Atlantico aperto da Belle-Ile fino a Groix, quindi parti presto e controlla le previsioni per qualsiasi cosa da ovest. Groix ripaga la fatica. Port Tudy, sulla costa nord, è stato uno dei grandi porti tonnieri di Francia, e le banchine in pietra e i vecchi capannoni delle conserve inquadrano ancora il bacino. La marina è molto frequentata e non accetta prenotazioni, quindi ti affianchi dove ti indica l'ormeggiatore. A terra, a piedi o in bici fino alla Plage des Grands Sables, una rara spiaggia convessa che cambia forma con le correnti. L'isola ha la festa del tonno nel sangue e una buona cucina di mare. A noi piace la quiete di Port-Lay, la minuscola cala appena a ovest del porto principale.",
+          "thingsToDo": [
+            "In bici alla spiaggia convessa Plage des Grands Sables",
+            "Giro tra i vecchi capannoni delle conserve a Port Tudy",
+            "Camminata al tramonto verso la piccola Port-Lay",
+            "Cucina di mare sulla banchina di Port Tudy"
+          ],
+          "mooringTip": "Port Tudy non prende prenotazioni e in stagione affianca le barche in più file, quindi arriva nel primo pomeriggio e prepara la barca per ormeggiare a fianco di un'altra. I trot esterni rollano con onda da nord; il bacino interno è più calmo se c'è posto."
+        },
+        "9": {
+          "shortDescription": "Breve bordo verso est nella grande baia di Lorient, la città della vela francese, passando davanti alle basi in cemento dei sommergibili.",
+          "description": "Da Groix a Lorient sono sette miglia tranquille, quindi non c'è fretta di mollare la boa. L'ingresso della baia è largo e ben segnalato, ma traghetti e pescherecci ti tengono sveglio, e il riflusso può correre forte nel canale. Lorient è dove vive l'altura francese. La vecchia base tedesca dei sommergibili a Keroman ospita oggi la Cite de la Voile Eric Tabarly e un pontile pieno di IMOCA e Ultim in campagna; spesso puoi guardare un team lavorare su un gigante volante. La marina in centro è comoda per la cambusa e per una notte lontano dalle isole. Non è bella da cartolina, ma per chi segue il Vendee Globe è quasi un pellegrinaggio. Rifornisci la barca qui prima di puntare di nuovo a sud.",
+          "thingsToDo": [
+            "Museo Cite de la Voile Eric Tabarly",
+            "Vedere i pontili da regata degli IMOCA e Ultim",
+            "Visita alla base sommergibili di Keroman",
+            "Cambusa completa in città"
+          ],
+          "mooringTip": "Lorient ha più marine; i pontili in centro sono i più comodi per negozi e treno. In entrata attenzione al riflusso forte e al traffico commerciale e dei traghetti, e chiama prima nelle settimane di regata, quando i posti scompaiono."
+        },
+        "10": {
+          "shortDescription": "Ritorno a Groix per una giornata di mare, all'ancora davanti alle sabbie chiare invece di infilarsi a Port Tudy.",
+          "description": "Torna verso Groix, ma questa volta vivila come una giornata sull'acqua e non come una sosta in porto. Con vento da ovest l'ancoraggio davanti alla Plage des Grands Sables, sulla costa est, è difficile da battere: una distesa di sabbia chiara che scivola in bassi fondali verde trasparente. Dai fondo davanti alla spiaggia e vai a terra col tender per un bagno e una camminata fino a Locmaria. Se il vento gira a est, infilati sottovento sul lato sud oppure torna a una boa a Port Tudy. È una buona giornata di scorta per rallentare, fare un po' di manutenzione e lasciare l'equipaggio libero. Calcola lo spostamento serale per essere sistemato prima che la brezza di mare cada e l'ancoraggio si svuoti.",
+          "thingsToDo": [
+            "Ancoraggio e bagno alla Plage des Grands Sables",
+            "Camminata fino al villaggio di Locmaria",
+            "Snorkeling nei bassi fondali verde trasparente",
+            "Pranzo lento all'ancora"
+          ],
+          "mooringTip": "Con vento da ovest l'ancoraggio dei Grands Sables è calmo e sabbioso; con vento da est diventa insostenibile, quindi spostati sulla costa sud o dentro Port Tudy. Cala bene l'ancora, perché la marea gira le barche durante la giornata."
+        },
+        "11": {
+          "shortDescription": "Si ripercorre il mare aperto verso sud fino a Belle-Ile, di solito una veloce portante fino a Le Palais.",
+          "description": "La tratta di ritorno a Belle-Ile copre le stesse venti miglia di mare aperto, ma con il ponente prevalente di solito va al contrario rispetto al giorno otto: in poppa e veloce. Con il fiocco a farfalla o sotto gennaker ti mangi le miglia prima di pranzo. Le Palais ti sembrerà familiare, e una seconda notte ti lascia vedere le parti dell'isola che ti sei perso. Noleggia le bici e pedala sulla costa sud selvaggia fino al Grand Phare e agli scogli-aghi di Port-Coton, dove l'onda si frange bianca contro le falesie che Monet ha dipinto. Se il porto è di nuovo pieno, l'ancoraggio davanti alla cittadella è discreto con vento da terra. Fai cambusa per il rientro: le isole esterne davanti a te sono povere di negozi, e il Golfo è ancora a due giorni.",
+          "thingsToDo": [
+            "In bici fino al faro Grand Phare",
+            "Vedere le falesie delle Aiguilles de Port-Coton",
+            "Secondo giro nella città vecchia di Le Palais",
+            "Cambusa per le isole esterne"
+          ],
+          "mooringTip": "Come al giorno sei, Le Palais è più affollato a mezzogiorno; arrivare a metà mattina dopo una portante veloce aiuta a trovare spazio per affiancare. Con vento da terra costante l'ancoraggio sotto la cittadella è un'alternativa più tranquilla."
+        },
+        "12": {
+          "shortDescription": "Breve traverso di ritorno a Houat per un'ultima giornata di spiaggia prima di rientrare nel Golfo verso casa.",
+          "description": "Un breve traverso verso est ti riporta a Houat e, con le tappe esterne alle spalle, non c'è motivo di correre. È l'ultima vera giornata da isola del viaggio, quindi sfruttala. Se il vento tiene da ovest, dai fondo di nuovo davanti a Treac'h er Goured e passa il pomeriggio su quella lunga spiaggia bianca, oppure fai il sentiero costiero tutto intorno all'isola in un paio d'ore tranquille. La panetteria del paese fa un buon far breton se arrivi prima che gli scaffali si svuotino. Prendi una boa a Port Saint-Gildas per la notte, o mettiti davanti a Treac'h er Salus se la brezza gira a nord. Ora guarda le previsioni con attenzione: la risalita di domani nel Golfo vuole una finestra decente e marea favorevole all'imboccatura.",
+          "thingsToDo": [
+            "Ultimo bagno a Treac'h er Goured",
+            "Anello del sentiero costiero attorno all'isola",
+            "Far breton dalla panetteria del paese",
+            "Aperitivo al tramonto a Port Saint-Gildas"
+          ],
+          "mooringTip": "Prendi una boa a Port Saint-Gildas per la notte e sistemati presto, perché in pieno agosto il campo si riempie. Se il vento gira a nord, l'ancoraggio davanti a Treac'h er Salus è la scelta più calma per dormire."
+        },
+        "13": {
+          "shortDescription": "Traversata della baia di Quiberon fino alla base di Le Crouesty, calcolando l'arrivo sul cancello di marea davanti a Port-Navalo.",
+          "description": "L'ultima tappa piena ti riporta attraverso la baia di Quiberon fino a Le Crouesty, la grande marina appena fuori dall'imboccatura del Golfo. In condizioni normali è una vela facile, una decina di miglia, spesso al traverso con la brezza di mare. Crouesty è un porto in acque profonde, accessibile con ogni marea, quindi non c'è nessun cancello da prendere in arrivo: un modo rilassato di chiudere la navigazione. Una volta ormeggiato, fai il giro del promontorio fino a Port-Navalo per un ultimo sguardo all'imboccatura del Golfo e alla corrente furiosa che scorre negli stretti. La marina ha carburante, acqua e un negozio nautico per qualsiasi cosa da sistemare. Se la barca va restituita pulita e col pieno, la serata giusta per iniziare è questa, non domani mattina.",
+          "thingsToDo": [
+            "Camminata sul promontorio fino al paese di Port-Navalo",
+            "Guardare la corrente correre negli stretti",
+            "Gasolio e acqua a Crouesty",
+            "Cena di pesce d'addio alla marina"
+          ],
+          "mooringTip": "Le Crouesty è una grande marina accessibile con ogni marea, quindi l'orario d'arrivo è flessibile, ma chiama la capitainerie per un posto visitatori nelle settimane di punta. Fai gasolio all'arrivo per evitare la coda del mattino nel giorno di riconsegna."
+        },
+        "14": {
+          "shortDescription": "Giornata di riserva a Le Crouesty: un giretto locale, un ultimo bagno, oppure semplicemente sbaraccare e riconsegnare la barca.",
+          "description": "L'ultimo giorno è volutamente elastico. Quasi tutti i charter riconsegnano la barca stamattina, quindi in realtà è una giornata di assicurazione contro una burrasca che avrebbe potuto bloccarti sulle isole. Se il tempo è stato clemente e sei in anticipo, sfruttala. Un giretto fino a Port-Navalo e un bagno sulle spiagge del Golfo fanno un'ultima mattinata dolce prima di svuotare le cabine. Altrimenti è il momento della parte meno glamour del viaggio: sfare le cuccette, trasformare le ultime provviste in un pranzo, saldare gasolio e pratiche e controllare che nulla sia finito sotto un paiolo. Due settimane intorno a queste isole lasciano quasi tutti gli equipaggi già a progettare il giro successivo. Le Crouesty è un posto facile per salutare la barca.",
+          "thingsToDo": [
+            "Breve uscita a vela fino a Port-Navalo",
+            "Ultimo bagno sulle spiagge del Golfo",
+            "Sfare le cuccette e svuotare le cabine",
+            "Saldare gasolio, acqua e pratiche"
+          ],
+          "mooringTip": "Tieni la barca al posto di Le Crouesty per la riconsegna e conferma con la base l'ora del check-out. Se fai una breve uscita al mattino, rientra con largo anticipo sull'orario concordato, così il personale può fare il controllo in orario."
+        }
+      }
+    },
+    "cannes-lerins-st-tropez": {
+      "metaTitle": "7 Giorni Riviera e Isole d'Oro | Boat4You",
+      "metaDesc": "Rotta di 7 giorni da Cannes alle Lérins, Saint-Tropez, Cavalaire, Porquerolles e Port-Cros, con ritorno lungo la rossa costa dell'Esterel.",
+      "days": {
+        "1": {
+          "shortDescription": "Breve tappa dalla marina a due isole coperte di pini: una custodisce una cella di prigione famosa, l'altra è ancora coltivata dai monaci.",
+          "description": "Appena un'ora fuori da Cannes e spegni il motore davanti a Sainte-Marguerite, la più grande delle due Lérins. Il canale tra questa e Saint-Honorat è uno dei punti più calmi di questa costa, circondato da pini d'Aleppo e da posidonia su cui non si deve ancorare. Cerca invece le chiazze di sabbia e sta ben lontano dalle zone protette segnalate. A terra su Sainte-Marguerite, il vecchio Fort Royal ospitò l'uomo dalla maschera di ferro; la salita tra i pini richiede venti minuti. Saint-Honorat è più silenziosa, ancora lavorata dai monaci cistercensi che producono il loro vino e il liquore Lérina. Di solito facciamo questa tappa a fine mattina, nuotiamo dalla barca tutto il pomeriggio e restiamo lì per una prima notte immobile.",
+          "thingsToDo": [
+            "Salita al Fort Royal, Sainte-Marguerite",
+            "Assaggio del liquore Lérina all'abbazia di Saint-Honorat",
+            "Bagno nel canale tra le due isole",
+            "Sentieri ombrosi tra i pini di Sainte-Marguerite"
+          ],
+          "mooringTip": "Ancora solo sulle chiazze di sabbia nel canale; le praterie di posidonia sono protette e sull'alga la tenuta è scarsa. A luglio si riempie entro mezzogiorno, quindi arriva presto o mettiti al margine esterno del campo."
+        },
+        "2": {
+          "shortDescription": "Vera traversata della baia fino al porto più fotografato della costa, con una piazza del mercato che merita la partenza all'alba.",
+          "description": "È la prima vera navigazione della settimana, poco più di venti miglia di mare aperto con Cap Camarat che chiude il golfo davanti. Parti verso le nove e sarai ormeggiato prima che entri la brezza pomeridiana. Saint-Tropez va prenotata molto in anticipo in stagione; l'ormeggiatore ti mette di poppa alla banchina, abbastanza vicino da leggere i menù. Il Café Sénéquier e la sua terrazza rossa guardano il porto dal 1887. Dietro il Quai Jean-Jaurès il quartiere della Ponche conserva muri pastello e vicoli stretti, silenziosi appena partono le barche giornaliere. Fai coincidere la sosta con un martedì o un sabato e la Place des Lices si riempie di bancarelle dalle prime luci: tapenade, formaggi provenzali e troppi cappelli.",
+          "thingsToDo": [
+            "Caffè sulla terrazza rossa di Sénéquier",
+            "Giro nei vicoli del vecchio quartiere della Ponche",
+            "Mercato di Place des Lices",
+            "Salita alla Citadelle per il panorama"
+          ],
+          "mooringTip": "Prenota un posto a Saint-Tropez con largo anticipo per luglio e agosto; si ormeggia di poppa e la banchina si riempie in fretta. Se è piena, dai fondo a nord del golfo verso Les Canoubiers e scendi col tender."
+        },
+        "3": {
+          "shortDescription": "Dieci miglia attorno a due capi selvaggi ti portano in una baia sabbiosa e riparata, con un paese di vino e una riserva costiera dietro la spiaggia.",
+          "description": "Solo dieci miglia oggi, ma doppiano un pezzo di costa tra i migliori del golfo. Davanti a Cap Taillat e Cap Lardier la terra appartiene al Conservatoire du Littoral, insenature verdi e ripide senza strade dietro, che valgono un ancoraggio per un bagno e un pranzo se il mare è calmo. Cavalaire sta in un'ampia baia sabbiosa che scrolla via il Mistral ma è aperta a tutto quello che arriva da est e da sudovest, quindi leggi le previsioni prima di fermarti per la notte. L'ancoraggio libero in baia è vietato: prendi uno dei corpi morti o un posto visitatori in porto. Il paese è senza fronzoli e pensato per i velisti, con cambusa comoda e una fila di produttori di Côtes de Provence nella valle dietro.",
+          "thingsToDo": [
+            "Bagno nelle insenature selvagge di Cap Lardier",
+            "Cambusa al mercato mattutino di Cavalaire",
+            "Degustazione di rosé Côtes de Provence nell'entroterra",
+            "Passeggiata sull'arco sabbioso della spiaggia di Cavalaire"
+          ],
+          "mooringTip": "L'ancoraggio è vietato in tutta la baia di Cavalaire, quindi prendi una boa o prenota un posto visitatori in porto. La tenuta su fango e alga va bene, ma la baia è insostenibile con vento da est: se gira, spostati."
+        },
+        "4": {
+          "shortDescription": "Mezza giornata piena verso ovest fino a Porquerolles, la più grande delle Isole d'Oro, con arrivo alla Plage Notre-Dame, una delle spiagge bianche più belle del Mediterraneo.",
+          "description": "Una ventina di miglia a ovest, oltre Cap Bénat, e le Îles d'Or emergono dalla foschia. Porquerolles è la più grande e la più verde, tutta vigne, pini ed eucalipti, e sta dentro un parco nazionale che fa sul serio. Per ancorare legalmente qui ti serve una casse acque nere. Il campo boe davanti al porto accetta barche fino a tredici metri e a luglio si esaurisce, quindi prenota o metti in conto di ancorare ben lontano dalla sabbia. La Plage Notre-Dame, una lunga camminata o pedalata a est del villaggio, è quella per cui la gente viene: sabbia chiara sotto i pini marittimi. Il villaggio si raccoglie intorno alla Place d'Armes, una piazza polverosa con le bocce, un paio di bar e biciclette a noleggio a ore.",
+          "thingsToDo": [
+            "In bici fino alla spiaggia Plage Notre-Dame",
+            "Partita a bocce sulla Place d'Armes",
+            "Salita al Fort Sainte-Agathe",
+            "Degustazione dei vini dell'isola dalle vigne di Porquerolles"
+          ],
+          "mooringTip": "Prenota in anticipo una boa in porto; il campo è limitato a barche sotto i tredici metri e si riempie per tutta l'estate. Per ancorare serve una casse acque nere a bordo e bisogna stare lontano dalle praterie di posidonia segnalate, almeno 300 metri dalle spiagge."
+        },
+        "5": {
+          "shortDescription": "Otto miglia ti portano alla più selvaggia delle tre isole: foresta e acqua trasparente nel primo parco nazionale marino d'Europa.",
+          "description": "Meno di otto miglia da isola a isola, quindi nessuna fretta di mollare la boa. Port-Cros è la più piccola delle Isole d'Oro e la meno toccata, un dosso di foresta densa che scende fino all'acqua con quasi nessuna costruzione. La strada principale, per così dire, è un sentiero. La rada davanti al porto tiene le barche su boe e lungo la banchina, protetta da quasi tutte le direzioni tranne un forte vento da sud. Oltre i dodici metri devi prendere una boa nella zona di Bagaud; l'ancoraggio tra Bagaud e il porto è oggi vietato del tutto. Davanti a La Palud, sul lato nord, corre un percorso di snorkeling segnato da sei boe, e in una buona giornata scivoli sopra cernie e barracuda. Tieni da parte un'ora per la salita al Fort de l'Estissac.",
+          "thingsToDo": [
+            "Snorkeling sul percorso segnalato davanti a La Palud",
+            "Salita al Fort de l'Estissac",
+            "Ancoraggio tranquillo nella baia di Port-Man",
+            "Sentiero nella foresta attraverso l'isola"
+          ],
+          "mooringTip": "Prendi una boa nella Rade de Port-Cros; oltre i dodici metri è obbligatorio, e ancorare tra Bagaud e il porto è vietato. Prenota dove puoi, arriva nel primo pomeriggio e ricorda che nel parco la casse acque nere è obbligatoria."
+        },
+        "6": {
+          "shortDescription": "La grande traversata di ritorno verso est, una lunga giornata di vela fino a dove la roccia rossa dell'Esterel cade a picco nel mare.",
+          "description": "Questa è quella lunga. Metti in conto una quarantina di miglia verso est, quindi molliamo la boa alle prime luci e ci sistemiamo per una giornata intera in mare. La ricompensa arriva alla fine, quando il massiccio dell'Esterel si alza davanti in un rosso infuocato, roccia vulcanica che precipita nel blu profondo. Se i tempi tornano, infilati a Cap Roux lungo la rotta: fondo di sabbia tra cinque e otto metri e buon riparo da ovest. L'Île d'Or, con la sua piccola torre saracena, è privata, quindi la si doppia e non ci si sbarca. Théoule sta all'angolo occidentale della baia di Napoule, al riparo dal nordovest, con una manciata di ristoranti e una spiaggia o due, ben lontano dalla calca di Cannes dall'altra parte dell'acqua.",
+          "thingsToDo": [
+            "Ancoraggio sotto le falesie rosse di Cap Roux",
+            "Doppiare l'Île d'Or e la sua torre saracena",
+            "Bagno nelle cale dell'Esterel vicino ad Anthéor",
+            "Cena sul tranquillo lungomare di Théoule"
+          ],
+          "mooringTip": "Parti all'alba per questa tappa, così eviti la brezza pomeridiana su una navigazione lunga. L'ancoraggio di Théoule nella baia di Napoule ti ripara da nordovest fino a sud, ma per una notte tranquilla il porto o un posto sul lato di Cannes sono più sicuri."
+        },
+        "7": {
+          "shortDescription": "Ultima mattina tranquilla attraverso la baia fino a Cannes, con il tempo per un ultimo bagno prima di riconsegnare la barca.",
+          "description": "La tappa più breve della settimana, cinque miglia o poco più attraverso la baia di Napoule con l'Esterel alle spalle e Cannes davanti. Nessun motivo di correre. Se la base charter vuole la barca entro mezzogiorno, c'è ancora tempo per un ultimo bagno all'ancora davanti all'Île Sainte-Marguerite lungo la rotta, chiudendo l'anello dove la settimana è iniziata. Entrando a Cannes passi sotto la città vecchia, Le Suquet, con la sua torre di guardia sopra i tetti di tegole, e la lunga curva della Croisette con i palace dietro la spiaggia. Prepara parabordi e cime in anticipo: in stagione la marina di Cannes va stretta e al distributore si fa coda. Gasolio, scarico acque nere e a terra per un pranzo come si deve al Suquet prima di partire.",
+          "thingsToDo": [
+            "Ultimo bagno davanti all'Île Sainte-Marguerite",
+            "Salita a Le Suquet fino alla torre di guardia",
+            "Passeggiata sulla Croisette prima di partire",
+            "Pranzo nella città vecchia di Le Suquet"
+          ],
+          "mooringTip": "Entrando a Cannes in stagione, prepara parabordi e cime di poppa prima di imboccare l'ingresso e chiama la marina in VHF per un posto. Il distributore si intasa a metà mattina, quindi fai il pieno presto se devi restituire il serbatoio pieno."
+        }
+      }
+    },
+    "corsica-grand-tour-14-days": {
+      "metaTitle": "14 Giorni Gran Tour della Corsica | Boat4You",
+      "metaDesc": "Due settimane da Ajaccio intorno alla Corsica: Scandola, Calvi, Bonifacio, le isole Lavezzi e il Golfo di Valinco, con consigli veri sugli ancoraggi.",
+      "days": {
+        "1": {
+          "shortDescription": "Tappa d'assestamento tranquilla dal porto natale di Napoleone fino all'ampia baia sabbiosa di Sagone, silenziosa appena partono le barche giornaliere.",
+          "description": "Ad Ajaccio la maggior parte degli equipaggi prende la barca, quindi vivi questa prima tappa come un rodaggio e non come una regata. Fai cambusa al mercato vicino alla città vecchia prima di mollare gli ormeggi, poi prua a nordovest oltre le isole Sanguinaires che presidiano l'imboccatura del golfo. La baia di Sagone si apre ampia e sabbiosa, circondata da colline basse e da qualche locale sulla spiaggia. Nel tardo pomeriggio sciatori d'acqua e barche escursione si diradano, e l'ancoraggio diventa abbastanza calmo per una prima notte all'ancora. Di solito puntiamo a essere dentro per le cinque, così l'equipaggio ha tempo di sistemare le stive e nuotare prima del buio. La tenuta è buona su sabbia tra tre e cinque metri. Occhio a ovest: la baia è aperta all'onda se il vento gira, anche se le serate estive qui sono in genere stabili.",
+          "thingsToDo": [
+            "Cambusa al mercato coperto della città vecchia di Ajaccio",
+            "Visita al museo Maison Bonaparte",
+            "Bagno sulla lunga spiaggia sabbiosa di Sagone",
+            "Aperitivo al tramonto in un ristorante sulla spiaggia di Sagone"
+          ],
+          "mooringTip": "Ancora davanti alla spiaggia di Sagone invece di affollare il piccolo molo; la sabbia tiene bene tra tre e cinque metri. Cala l'ancora entro il tardo pomeriggio, prima che entri la brezza serale."
+        },
+        "2": {
+          "shortDescription": "Poco più su lungo la costa sta Cargese, fondata dai greci, dove una chiesa cattolica e una ortodossa si fronteggiano ancora da una parte all'altra della valle.",
+          "description": "Poche miglia separano Sagone da Cargese, quindi non serve partire all'alba. Il paese sta su un promontorio sopra il suo porticciolo, e la sua storia curiosa si vede nelle due chiese che si guardano in faccia attraverso il vallone, una cattolica latina e una greco-ortodossa, eredità dei profughi greci che si insediarono qui nel Seicento. Il porto è piccolo e a luglio si riempie in fretta, quindi arrivare a ora di pranzo aiuta. Sotto il paese le spiagge si susseguono una dopo l'altra. Plage de Pero e Plage de Chiuni valgono entrambe il giro col tender per un bagno pomeridiano e una camminata. A terra, i caffè della piazza del porto servono un buon piatto di salumi e una Pietra fresca. Noi tendiamo ad ancorare davanti a Pero e a lasciare il porto ai traghetti.",
+          "thingsToDo": [
+            "Confrontare la chiesa latina e quella greco-ortodossa",
+            "Bagno a Plage de Pero o Chiuni",
+            "Salumi e birra Pietra al porto",
+            "Salita al vecchio cimitero di Cargese"
+          ],
+          "mooringTip": "Il porticciolo di Cargese è stretto e spesso pieno già a mezzogiorno, quindi ancora invece davanti a Plage de Pero, a nord. La tenuta su sabbia è affidabile tra quattro e sei metri, esposta a ovest."
+        },
+        "3": {
+          "shortDescription": "Navigazione panoramica fino al promontorio di porfido rosso di Capo Rosso, coronato dalla sua torre genovese solitaria sopra il Golfo di Porto.",
+          "description": "La costa a nord di Cargese diventa spettacolare. Capo Rosso si alza in lastroni di roccia rosso ruggine, con la Tour de Turghju appollaiata circa trecento metri più su sulla cresta, una salita impegnativa se hai voglia di partire da uno sbarco più in basso. Questa è la porta del Golfo di Porto e delle Calanche de Piana più oltre, dove vento e mare hanno scolpito il granito in pinnacoli. Il capo è esposto, quindi leggi le previsioni prima di decidere di passarci la notte. Molti equipaggi si infilano invece nelle cale riparate dentro il golfo, oppure tirano fino a Ficajola con la sua minuscola spiaggia di pescatori. Se il libeccio pomeridiano rinforza, non attardarti al largo della punta. Noi programmiamo il passaggio nella calma del mattino e lasciamo l'equipaggio a fotografare finché la luce resta morbida sulle falesie.",
+          "thingsToDo": [
+            "Fotografare le falesie rosse di Capo Rosso",
+            "Salita alla torre di guardia Tour de Turghju",
+            "Col tender nella spiaggia dell'Anse de Ficajola",
+            "Deviazione nei pinnacoli di roccia delle Calanche de Piana"
+          ],
+          "mooringTip": "Capo Rosso in sé è troppo esposto per una notte tranquilla, quindi usalo come sosta diurna e ancora dentro il Golfo di Porto o a Ficajola. Attenzione ai venti pomeridiani da ovest che si incanalano attorno alla punta."
+        },
+        "4": {
+          "shortDescription": "Oltre la riserva di Scandola sta Girolata, un borgo con il forte in cima raggiungibile solo per mare o a piedi.",
+          "description": "Oggi sfiori il confine della riserva di Scandola, un ammasso UNESCO di roccia vulcanica rossa dove i falchi pescatori nidificano sulle falesie e lo sbarco è vietato. Resta al largo della zona segnalata e godila dall'acqua. Girolata ti attende appena a sud, nascosta dietro un promontorio basso con un basso forte genovese di guardia. L'ancoraggio è uno dei più riparati dell'isola, con decine di boe prua-poppa calate in Cala Muretta e Cala Vecchia. Prendine una presto: il campo si riempie nel pomeriggio, quando arrivano in massa barche escursione e yacht. A terra non ci sono strade, solo un gruppetto di ristoranti che servono il pescato del giorno e carni alla griglia. A noi piace nuotare prima che arrivi la folla, poi fare il sentiero costiero per la vista dall'alto sulla baia.",
+          "thingsToDo": [
+            "Navigare lungo le falesie rosse della riserva di Scandola",
+            "Prendere una boa in Cala Muretta",
+            "Sentiero costiero fino al forte genovese",
+            "Pesce fresco alla griglia in un ristorante di Girolata"
+          ],
+          "mooringTip": "Le boe prua-poppa di Girolata sono la scelta sicura e ti tengono fermo con qualsiasi vento, ma finiscono presto. Cerca di arrivare prima di metà pomeriggio e metti in conto una tariffa da pagare alla barca che passa a incassare."
+        },
+        "5": {
+          "shortDescription": "La tappa più lunga verso nord attraversa il mare aperto fino a Calvi, dove una cittadella genovese domina una delle marine più vive della Corsica.",
+          "description": "È la prima vera navigazione del viaggio, circa venticinque miglia su fino alla costa della Balagne, quindi una partenza alle nove ti dà margini comodi. La costa è selvaggia e senza strade per gran parte del percorso, con pochi rifugi, ed è per questo che le previsioni contano. I venti da ovest tendono a rinforzare dopo mezzogiorno, quindi partire prima mantiene il mare più gentile. Calvi si annuncia da lontano, le mura della cittadella che prendono la luce sopra una curva di spiaggia orlata di pini. La marina sta proprio sotto i bastioni e vive fino a tarda sera. Se in alta stagione è piena, l'ancoraggio nella baia di Revellata appena a ovest è calmo e bello. A terra, sali nella città vecchia, dove i locali ti diranno che qui è nato Colombo, e si mangia bene lungo la banchina. Ad agosto prenotiamo il posto in anticipo.",
+          "thingsToDo": [
+            "Esplorare la cittadella genovese sopra Calvi",
+            "Bagno sulla spiaggia di Calvi orlata di pini",
+            "Cena in banchina nella marina",
+            "Notte all'ancora nella baia di Revellata"
+          ],
+          "mooringTip": "La marina di Calvi si riempie in fretta a luglio e agosto, quindi chiama in VHF o arriva presto per un posto sotto la cittadella. Se è piena, l'ancoraggio di Revellata un paio di miglia a ovest offre tenuta calma su sabbia."
+        },
+        "6": {
+          "shortDescription": "Il ritorno a sud lungo la costa selvaggia di Scandola fino alla riparata Girolata, con possibile sosta tranquilla a Galeria.",
+          "description": "Ripercorrere la propria scia dà un viaggio diverso nella luce contraria, e le venticinque miglia di ritorno fino a Girolata passano rapide con la solita brezza pomeridiana da poppa. Spezza la tratta a Galeria se ti va un cambio: l'ancoraggio nella sua baia è tranquillo e sta appena prima del confine della riserva, comodo per una sosta pranzo e un bagno lontano dalla folla. Da lì è un salto breve fino ai bastioni rossi di Scandola, che danno il meglio con il sole che gira a ovest. Il campo boe di Girolata sarà di nuovo in riempimento quando arrivi, quindi non indugiare a pranzo. Una seconda notte qui non è un sacrificio: la piccola baia cambia con la luce e, di sera, appena partite le barche giornaliere, si assesta in qualcosa di molto vicino al silenzio. Noi prendiamo una boa presto e nuotiamo da poppa.",
+          "thingsToDo": [
+            "Sosta pranzo e bagno nella baia di Galeria",
+            "Le falesie rosse di Scandola nella luce della sera",
+            "Snorkeling da poppa a Girolata",
+            "Bicchiere serale a terra al porto"
+          ],
+          "mooringTip": "Tornando a Girolata la seconda volta conosci già la regola: prendi presto una boa prua-poppa. Galeria è un ancoraggio calmo su sabbia per il pranzo se vuoi spezzare la tappa."
+        },
+        "7": {
+          "shortDescription": "Lunga discesa verso sud oltre Sagone e le isole Sanguinaires, chiudendo il primo anello nel Golfo di Ajaccio.",
+          "description": "La tappa singola più lunga delle due settimane: questa supera le quaranta miglia, quindi una partenza all'alba non è opzionale. Molla la boa alle prime luci, con il mare piatto e il vento ancora addormentato. Passerai davanti all'imboccatura del golfo di Sagone e doppierai Capo di Feno prima che si alzino le isole Sanguinaires, quattro isolotti rossastri che segnano l'ingresso del Golfo di Ajaccio e valgono un passaggio lento per il vecchio semaforo e il faro. Il golfo stesso spesso alza un'onda corta e fastidiosa nel pomeriggio, quando la brezza di mare si incanala: un altro motivo per avere le miglia alle spalle entro metà pomeriggio. Le marine di Ajaccio hanno posto per i visitatori, e la città ripaga una notte lontano dall'ancora, con ristoranti veri e la possibilità di rifare le scorte. Qui facciamo cambusa prima che inizi la metà sud.",
+          "thingsToDo": [
+            "Passaggio lento davanti alle isole Sanguinaires",
+            "Cambusa al mercato coperto di Ajaccio",
+            "Cena a terra nella città vecchia",
+            "Aperitivo lungo la banchina della marina di Ajaccio"
+          ],
+          "mooringTip": "Ajaccio ha due marine, Tino Rossi accanto alla città vecchia e la più grande Charles Ornano; chiama prima in stagione. Dopo una giornata da quaranta miglia i posti visitatori valgono la tariffa per docce e cambusa comoda."
+        },
+        "8": {
+          "shortDescription": "Verso sud attorno a Capo di Muro nel Golfo di Valinco, dando fondo davanti alle sabbie sonnolente di Porto Pollo.",
+          "description": "Chiuso l'anello occidentale, la barca punta a sud per la metà più tranquilla dell'isola. Esci dal Golfo di Ajaccio e doppia Capo di Muro, una punta rocciosa bassa che può alzare un mare corto quando vento e corrente si incontrano, poi entra nell'ampio Golfo di Valinco. Porto Pollo sta sulla sponda nord, un villaggio senza pretese con una piccola spiaggia, qualche locale e acqua trasparente che chiede un bagno appena l'ancora fa presa. La tenuta su sabbia è buona e la baia è ben protetta dai ponenti prevalenti. A terra non c'è molto da fare oltre mangiare, nuotare e rallentare, che dopo la lunga tirata da Girolata è esattamente il punto. Diamo fondo davanti alla spiaggia e lasciamo l'equipaggio poltrire tutto il pomeriggio.",
+          "thingsToDo": [
+            "Bagno sulla spiaggia riparata di Porto Pollo",
+            "Snorkeling nei bassifondi limpidi del Valinco",
+            "Cena di pesce in una trattoria del villaggio",
+            "Paddleboard lungo la sponda nord"
+          ],
+          "mooringTip": "Ancora davanti alla spiaggia di Porto Pollo tra tre e sei metri su sabbia; la tenuta è affidabile e la baia scrolla via il solito ponente. Infilati dietro la punta se è previsto vento da sud."
+        },
+        "9": {
+          "shortDescription": "Traversata del golfo fino a Campomoro, dove la più grande torre genovese della Corsica sorveglia una spiaggia sabbiosa a mezzaluna.",
+          "description": "Le due sponde del Valinco distano appena poche miglia, quindi è una mattinata di vela facile e un pomeriggio di dolce far niente. Campomoro si arrotonda intorno a una bella baia sabbiosa sul braccio sud del golfo, coronata dalla più grande torre genovese dell'isola, un blocco fortificato basso fino al quale puoi salire per guardare tutto il golfo dall'alto. Il villaggio è minuscolo, solo qualche bar e ristorante allineati dietro la spiaggia, ed è esattamente il suo fascino. Ancora davanti alla sabbia e raggiungi la riva a nuoto per un bicchiere mentre la luce si fa dorata sulla torre. La baia è aperta a ovest, quindi se il libeccio è in piedi rollerai un po' all'ancora. Per questa scegliamo una previsione calma e ci godiamo la quiete.",
+          "thingsToDo": [
+            "Salita alla torre genovese di Campomoro",
+            "Bagno nella baia sabbiosa a mezzaluna",
+            "Bicchiere in un bar sulla spiaggia di Campomoro",
+            "Snorkeling sugli scogli sotto la torre"
+          ],
+          "mooringTip": "Ancora davanti alla spiaggia di Campomoro su sabbia, ma tieni presente che la baia è aperta a ovest e rolla con l'onda di libeccio. Vicino alla torre ci sono alcune boe stagionali; per il resto, scegli una notte stabile."
+        },
+        "10": {
+          "shortDescription": "La lunga discesa attorno alla punta della Corsica fino a Bonifacio, con la città vecchia aggrappata alle falesie bianche sopra un porto nascosto.",
+          "description": "È una tappa impegnativa, circa venticinque miglia giù fino all'estremità sud dell'isola, e le Bocche di Bonifacio hanno il vizio di accelerare qualsiasi vento in circolazione. Controlla bene le previsioni prima di partire e, se soffia forte da ovest, resta fermo un altro giorno. Doppiati gli ultimi capi, Bonifacio nasconde bene la sua entrata: sei quasi addosso alle falesie prima che la calanque stretta si apra a sinistra e la marina si riveli, infilata in un fiordo naturale sotto i bastioni. La haute ville medievale, in alto, è tutta vicoli di calcare e vedute sul mare, e i ristoranti del porto tirano fino a tardi. I posti sono pochi e la richiesta alta, quindi prenota in stagione o prendi un corpo morto più su nell'insenatura. Programmiamo l'arrivo per il primo pomeriggio per essere sicuri di un posto.",
+          "thingsToDo": [
+            "Girare i vicoli di calcare della haute ville",
+            "Salire l'Escalier du Roi d'Aragon",
+            "Cena sul porto nella calanque",
+            "Guardare le falesie dall'imboccatura della marina"
+          ],
+          "mooringTip": "La marina di Bonifacio sta in fondo alla calanque ed è molto affollata d'estate, quindi prenota un posto o prendi un corpo morto più su nell'insenatura. Entra a motore: il fiordo incanala le raffiche anche quando sembra calmo."
+        },
+        "11": {
+          "shortDescription": "Si entra nella riserva delle Bocche di Bonifacio per ormeggiare tra i massi di granito e le cale trasparenti delle isole Lavezzi.",
+          "description": "Le Lavezzi stanno solo sei miglia da Bonifacio, ma in acque totalmente protette, quindi leggi le regole prima di andare. Le isole ricadono nella riserva delle Bocche di Bonifacio, la più grande riserva marina della Francia continentale, e le cale sono regolate da campi boe numerati istituiti con la normativa del 2022. L'ancoraggio è limitato e, dove è consentito, solo su sabbia, mai sulla posidonia. Prendi una boa in Cala di u Grecu o Cala Lazarina e nuoterai in una delle acque più trasparenti del Mediterraneo, su sabbia chiara tra massi di granito arrotondati. A terra, un sentiero porta al cimitero che ricorda il naufragio della fregata Semillante, perduta qui nel 1855. Le baie offrono poco riparo per la notte, quindi la maggior parte degli equipaggi le visita di giorno.",
+          "thingsToDo": [
+            "Snorkeling nelle cale di granito di Cala Lazarina",
+            "Prendere un ormeggio in Cala di u Grecu",
+            "Camminata al memoriale del naufragio della Semillante",
+            "Bagno su sabbia chiara tra i massi"
+          ],
+          "mooringTip": "Le cale delle Lavezzi usano boe ZMEL numerate secondo le regole della riserva del 2022; prendine una e non calare mai l'ancora sulla posidonia. Le baie danno poco riparo notturno, quindi trattala come sosta diurna e dormi a Bonifacio o a Rondinara."
+        },
+        "12": {
+          "shortDescription": "Rondinara ti attende risalendo la costa est, una baia a ferro di cavallo quasi perfetta, con buona tenuta su sabbia e boe estive.",
+          "description": "Girando a nord fuori dalle Bocche, il carattere della costa si addolcisce. Rondinara sta una decina di miglia più su, tra Bonifacio e Porto-Vecchio, ed è una di quelle baie che sembrano disegnate a mano: un ferro di cavallo tondo di sabbia chiara con una bocca stretta. Quella forma la rende un bell'ancoraggio, ben protetto in tutta la metà occidentale della rosa dei venti, dai settentrionali fino ai meridionali. La tenuta su sabbia è buona, e in stagione appaiono alcune boe se preferisci non ancorare. La spiaggia attira gitanti via strada, quindi a mezzogiorno può essere affollata, ma la folla si dirada verso sera e la baia dà il meglio di sé. Diamo fondo verso il lato nord, raggiungiamo la riva a nuoto e restiamo per la notte. Una chiusura calma e semplice dell'anello sud.",
+          "thingsToDo": [
+            "Bagno nella baia a ferro di cavallo di Rondinara",
+            "Passeggiata sulla spiaggia sabbiosa all'imbrunire",
+            "Snorkeling sul promontorio roccioso a nord",
+            "Notte tranquilla all'ancora a bordo"
+          ],
+          "mooringTip": "Rondinara offre buona tenuta su sabbia e riparo da nord fino a sud sul suo lato occidentale; ancora verso la sponda nord. D'estate compaiono boe stagionali, e la baia è più calma appena la folla della spiaggia se ne va la sera."
+        },
+        "13": {
+          "shortDescription": "La lunga tappa di ritorno a ovest attorno ai capi meridionali fino a Propriano, il porto più vivo del Valinco e un buon posto per rifornirsi.",
+          "description": "Il ritorno verso la costa ovest è una bella tirata, ben oltre trenta miglia, e comporta doppiare di nuovo l'esposta punta sud, quindi partire presto con una previsione stabile vale la disciplina. Superati Capo di Feno e la punta di Senetosa, la costa ti accompagna a nord nel familiare Golfo di Valinco. Propriano sta in fondo, la cittadina più animata di questo tratto, con un porto operativo che manda traghetti in Sardegna e un lungomare pieno di negozi e ristoranti. Dopo una settimana di ancoraggi silenziosi il movimento è un cambio benvenuto, e la marina rende semplice rifare cambusa prima dell'ultimo salto verso casa. Ci ormeggiamo, passeggiamo sul fronte mare con un gelato e ceniamo a terra. Pesce fresco e una bottiglia di rosé corso chiudono bene la giornata.",
+          "thingsToDo": [
+            "Passeggiata sul lungomare di Propriano pieno di ristoranti",
+            "Rifornimento nei negozi e al mercato del paese",
+            "Pesce fresco e rosé corso a terra",
+            "Gelato serale lungo il porto"
+          ],
+          "mooringTip": "La marina di Propriano accetta visitatori ma è occupata dal traffico dei traghetti per la Sardegna, quindi chiama prima e in avvicinamento sta lontano dalla banchina dei traghetti. Ormeggiare qui è più comodo che ancorare davanti alla spiaggia esposta del paese."
+        },
+        "14": {
+          "shortDescription": "Ultima tappa verso nord attorno a Capo di Muro e oltre le Sanguinaires, di nuovo ad Ajaccio per riconsegnare la barca.",
+          "description": "L'ultimo giorno ripercorre l'acqua tra i due golfi occidentali, una trentina di miglia su fino ad Ajaccio. Parti con calma ma in orario: le riconsegne charter vogliono di solito la barca dentro entro mattina, e arrivare affannati all'ultimo avvicinamento fa brutta figura. Doppia Capo di Muro un'ultima volta, poi le isole Sanguinaires si alzano a segnare l'ingresso del golfo, un ultimo punto di riferimento perfetto con la loro roccia rossastra e il vecchio faro. Se i tempi lo permettono, un bagno d'addio in una delle cale lungo la rotta è un bel modo di chiudere. Tornato ad Ajaccio, fai gasolio, riempi i serbatoi d'acqua e inizia a sistemare la barca prima della riconsegna. A noi piace essere in banchina nel tardo pomeriggio, così l'equipaggio ha tempo di fare le valigie senza fretta e di brindare a due settimane navigate bene.",
+          "thingsToDo": [
+            "Bagno d'addio in una cala delle Sanguinaires",
+            "Doppiare Capo di Muro per l'ultima volta",
+            "Gasolio e acqua alla marina di Ajaccio",
+            "Ultima cena d'equipaggio nella città vecchia"
+          ],
+          "mooringTip": "Cerca di essere di nuovo ad Ajaccio nel tardo pomeriggio dell'ultimo giorno; le basi charter vogliono la barca libera la mattina dopo. Fai gasolio e acqua lungo la rotta d'ingresso e conferma via radio con la base il posto per la riconsegna."
+        }
+      }
+    },
+    "morbihan-quiberon": {
+      "metaTitle": "Morbihan e Belle-Île in 7 giorni | Boat4You",
+      "metaDesc": "Sette giorni da Le Crouesty attraverso il Golfo del Morbihan verso Vannes, Houat, Belle-Île e Hoedic: isole senza auto, canali di marea e porti bretoni.",
+      "days": {
+        "1": {
+          "shortDescription": "Usciamo da Le Crouesty con la corrente entrante e ci lasciamo portare dentro il golfo, fino all'Ile aux Moines, isola senza auto.",
+          "description": "L'imboccatura del golfo si restringe davanti a Port-Navalo e la corrente ci passa forte, così di solito partiamo da Le Crouesty un'ora circa dopo la bassa marea e lasciamo che il flusso entrante ci porti dentro. Con due o tre nodi sotto la chiglia il passaggio si fa in un attimo. Una volta dentro l'acqua si spiana e le isole si aprono tutto intorno.\n\nL'Ile aux Moines sta più o meno in mezzo al golfo, con i suoi due pontili per i visitatori staccati dalla riva. Qui non circolano auto. Noleggia una bici al porto e segui la stradina verso sud attraverso il Bois d'Amour fino alla Pointe de Brouël, dove l'Ile d'Arz si stende bassa sull'altra sponda. Il Dolmen des Pierres Plates vale una breve passeggiata. Di ritorno a Port Blanc, un piatto di ostriche e un Muscadet fresco chiudono bene la giornata.",
+          "thingsToDo": [
+            "Pedala nel Bois d'Amour fino alla Pointe de Brouël",
+            "Visita il Dolmen des Pierres Plates",
+            "Mangia ostriche al rientro a Port Blanc",
+            "Percorri la stradina fino alla Pointe du Trec'h"
+          ],
+          "mooringTip": "I due pontili per visitatori sono staccati da terra, quindi arriva autonomo, con la tua acqua a bordo. All'estremità esterna del pontile sud i fondali scendono verso 1,6 m: con le sizigie di bassa marea ormeggia verso l'interno, oppure prendi una boa del golfo davanti a Port Blanc."
+        },
+        "2": {
+          "shortDescription": "Un breve tratto lungo il canale, calcolato sulla marea, ti porta attraverso la chiusa fino alla Vannes medievale e alla sua città vecchia cinta di mura.",
+          "description": "Vannes si nasconde in fondo a un fiume stretto e si entra solo per un paio d'ore prima e dopo l'alta marea. La giornata si pianifica partendo da lì. In genere leviamo l'ancora per arrivare al ponte girevole di Kérino con la marea crescente, poi risaliamo il canale a motore, piano, tra le barche ormeggiate e i canneti. La chiusa tiene il bacino interno a poco più di due metri, quindi l'acqua c'è anche quando il golfo fuori si è svuotato.\n\nLa ricompensa è un ormeggio in pieno centro. Vannes conserva le sue mura, i vecchi lavatoi lungo la Marle e vie di case a graticcio tutte inclinate. La Cathédrale Saint-Pierre e il mercato coperto de La Cohue sono a pochi minuti a piedi. Fai provviste qui: il mercato è buono e i negozi sono vicini.",
+          "thingsToDo": [
+            "Cammina sulle mura e lungo i lavatoi della Marle",
+            "Visita la Cathédrale Saint-Pierre nella città vecchia",
+            "Gira il mercato coperto de La Cohue",
+            "Fai provviste al mercato di Vannes"
+          ],
+          "mooringTip": "Il bacino interno si apre solo circa 2,5-3 ore prima e dopo l'alta marea, e per arrivarci si passa prima un ponte girevole e poi una chiusa. Chiama la capitainerie in anticipo via VHF e programma la risalita del canale sull'ultima parte della marea entrante."
+        },
+        "3": {
+          "shortDescription": "Scendi il golfo con la corrente uscente, fuori oltre Port-Navalo, poi attraversa la Baia di Quiberon fino alle sabbie bianche di Houat.",
+          "description": "È la tappa più lunga, quindi ci piace mollare gli ormeggi presto e uscire dal golfo con la corrente di riflusso. Il canale davanti a Port-Navalo corre veloce quando la marea è con te e ti sputa in Baia di Quiberon in un attimo. Da lì è un traverso in mare aperto di una dozzina di miglia fino a Houat.\n\nL'isola è un basso crinale di granito e ginestre con un solo piccolo villaggio. Le barche si radunano nella Rade de Houat, la rada sabbiosa lungo il lato nord, oppure sulle boe davanti a Saint-Gildas. Il richiamo è Treac'h er Goured, due chilometri di curva di sabbia bianca all'estremità orientale. Vai a terra col tender e cammina sulla duna. Attenzione: davanti a quella spiaggia è vietato ancorare sulla zona dei cavi segnalata.",
+          "thingsToDo": [
+            "Sbarca col tender su Treac'h er Goured",
+            "Cammina i due chilometri di arco di duna",
+            "Gira l'unico villaggio di pescatori di Houat",
+            "Fai il bagno sui banchi di sabbia della Rade"
+          ],
+          "mooringTip": "Ancora nella Rade de Houat sulla sabbia, ben lontano dalla zona dei cavi segnalata davanti a Treac'h er Goured, dove ancorare è vietato. Il campo boe di Saint-Gildas si riempie in fretta a luglio e agosto: se ne vuoi una, arriva entro metà pomeriggio."
+        },
+        "4": {
+          "shortDescription": "Una tranquilla veleggiata verso sud fino a Belle-Île, la più grande delle isole bretoni, e al porto affollato sotto la cittadella di Le Palais.",
+          "description": "Belle-Île è un breve traverso a sud di Houat, così vicina che la giornata scorre senza fretta. Le Palais si annuncia da lontano: l'enorme Citadelle Vauban a forma di stella domina l'imboccatura del porto. Dentro, è il porto più grande della Bretagna meridionale e, in piena estate, uno dei più pieni. Aspettati di ormeggiare alle boe in linea, affiancato ad altre tre o quattro barche.\n\nA terra la città vive di traghetti e villeggianti, ma ha una sostanza vera. Visita la cittadella, noleggia bici o uno scooter e punta verso la costa occidentale selvaggia. Le Aiguilles de Port-Coton, i faraglioni dipinti da Monet, valgono il giro. Fare provviste qui è facile, con negozi come si deve e un mercato la mattina vicino alla banchina.",
+          "thingsToDo": [
+            "Visita la Citadelle Vauban sopra il porto",
+            "Pedala fino alle Aiguilles de Port-Coton",
+            "Spingiti fino alla Grotte de l'Apothicairerie",
+            "Fai la spesa al mercato mattutino sulla banchina"
+          ],
+          "mooringTip": "A Le Palais i visitatori ormeggiano su boe in linea, con più barche affiancate sulla stessa cima: prepara parabordi grandi e mettiti in conto dei vicini. È il porto più trafficato della zona a luglio e agosto: chiama via radio prima o arriva presto, e tieni presente che gli ormeggi esterni prendono l'onda dei traghetti."
+        },
+        "5": {
+          "shortDescription": "Doppia il nord di Belle-Île fino a Sauzon, porto più tranquillo che si secca, con case colorate, banchi di crêpe e il promontorio di Sarah Bernhardt.",
+          "description": "Sauzon è appena cinque miglia oltre la punta nord dell'isola, quindi nessuna fretta. È tutto ciò che Le Palais non è: piccolo, calmo, bello da guardare, una fila di case pastello che salgono da un'insenatura stretta. In fondo il porto si secca, così la maggior parte dei visitatori prende un ormeggio prua-poppa nel canale più profondo e va a terra col tender.\n\nPassa il pomeriggio a piedi. I banchi sul molo fanno galettes, waffle e sidro Bellilois, con il porto steso lì sotto. Cammina o pedala fino alla Pointe des Poulains, dove Sarah Bernhardt aveva una casa e un piccolo faro segna la punta settentrionale dell'isola. Torna per cena sulla banchina di ponente, quando la luce si fa morbida sull'acqua.",
+          "thingsToDo": [
+            "Mangia galettes e bevi sidro sul molo",
+            "Cammina fino al faro della Pointe des Poulains",
+            "Guarda la casa di Sarah Bernhardt sulla scogliera",
+            "Cena sulla banchina di ponente del porto"
+          ],
+          "mooringTip": "Il porto interno di Sauzon si secca: prendi un ormeggio prua-poppa sulle boe nel canale più profondo invece di spingerti in fondo. Il canale d'ingresso ha circa 3 m di fondale; controlla le tavole di marea prima di scegliere un posto vicino alla parte che secca."
+        },
+        "6": {
+          "shortDescription": "Torna verso la costa continentale fino alla minuscola Hoedic, un puntino senza auto di dune e forti, con ormeggi a catena all'Argol.",
+          "description": "La traversata per Hoedic è una dozzina di miglia verso nordest in mare aperto, quindi guarda le previsioni: con un teso da ponente la baia alza un mare corto. L'isola è minuscola, più bassa e più selvaggia delle vicine, cinta di dune e spiagge pallide con un unico paesino nel mezzo.\n\nIl Port de l'Argol ti prende su ormeggi a catena, tre barche per cima, e ci stanno solo barche piccole. Una volta a terra, un'ora o due a piedi bastano per vedere quasi tutto. Arriva fino al vecchio Fort d'Hoedic, curiosa nella cappella e trovati una spiaggia tutta tua sulla costa orientale. Vicino al porto ci sono un paio di posti semplici per mangiare, ma porta provviste: qui i rifornimenti sono scarsi.",
+          "thingsToDo": [
+            "Cammina fino al Fort d'Hoedic",
+            "Visita la cappella e il paesino dell'isola",
+            "Trova una spiaggia deserta sulla costa orientale",
+            "Mangia in un piccolo bistrot del porto"
+          ],
+          "mooringTip": "Il Port de l'Argol offre ormeggi a catena su boe in linea per barche fino a circa 14 m e 2 m di pescaggio, quindi la maggior parte dei bareboat ci sta. È piccolo e gettonato: in stagione arriva presto e mettiti in conto di stare vicinissimo ad altre barche sulla stessa cima."
+        },
+        "7": {
+          "shortDescription": "Un ultimo traverso verso nord attraverso la Baia di Quiberon e rientro per l'imboccatura del golfo al tuo posto a Le Crouesty.",
+          "description": "Il rientro è un traverso lineare attraverso la Baia di Quiberon, una quindicina di miglia fino alla penisola di Rhuys. Calcola i tempi per trovare l'imboccatura del golfo con la corrente entrante, o almeno con lo stanco di marea; risalire in pieno riflusso davanti a Port-Navalo è lento e bagnato, e con un po' di pianificazione lo si evita.\n\nSe la giornata è buona e sei in anticipo, c'è tempo per ancorare davanti alla spiaggia di Port-Navalo o per calare l'ancora un'ultima volta al riparo di Méaban prima di rientrare. Le Crouesty è una marina grande e ben protetta, facile da imboccare con quasi qualunque tempo. Fai carburante e acqua andando verso il posto d'ormeggio, e lascia la barca come vorresti trovarla.",
+          "thingsToDo": [
+            "Ancora davanti a Port-Navalo per un ultimo bagno",
+            "Imbocca il golfo con la corrente entrante",
+            "Fai carburante prima di riconsegnare la barca",
+            "Tieni d'occhio la torretta di Méaban all'ingresso"
+          ],
+          "mooringTip": "Cerca di arrivare all'imboccatura del golfo con lo stanco di marea o con la corrente entrante: davanti a Port-Navalo il riflusso arriva a tre nodi contro di te. La banchina carburante di Le Crouesty è vicina all'ingresso, quindi fai il pieno prima di risalire verso il pontile assegnato."
+        }
+      }
+    },
+    "riviera-esterel-14-days": {
+      "metaTitle": "Riviera ed Esterel in 14 giorni | Boat4You",
+      "metaDesc": "Un charter di 14 giorni da Cannes lungo la Costa Azzurra e la costa dell'Esterel: Antibes, Monaco, Saint-Tropez, Port-Cros e Porquerolles.",
+      "days": {
+        "1": {
+          "shortDescription": "Una prima tappa tranquilla da Cannes ad Antibes, con il più grande porto turistico d'Europa e una città vecchia murata che merita un pomeriggio.",
+          "description": "Breve e indulgente, questa prima tappa lascia all'equipaggio il tempo di sistemarsi prima che comincino le distanze vere. Da Cannes ad Antibes sono circa dieci miglia, sottocosta, con il Cap d'Antibes verde e basso davanti a te. Port Vauban è la marina più grande d'Europa, e i superyacht allineati lungo il Quai des Milliardaires ti fanno capire la scala nel momento in cui doppi il Fort Carré. A terra, la città vecchia ripaga un pomeriggio senza fretta. Il Marché Provençal su Cours Masséna vende tapenade, socca e tessuti provenzali sotto la sua tettoia di ferro quasi ogni mattina. Sopra sta il Château Grimaldi, oggi Museo Picasso, dove l'artista lavorò nel 1946. Di solito molliamo le cime di terra verso metà pomeriggio e facciamo un giro sulle mura prima di cena. Una giornata semplice, ma buona per prendere le misure alla barca.",
+          "thingsToDo": [
+            "Gira il Marché Provençal su Cours Masséna",
+            "Visita il Museo Picasso nel Château Grimaldi",
+            "Cammina sulle mura accanto al Fort Carré",
+            "Fai il bagno alla Plage de la Garoupe, Cap d'Antibes"
+          ],
+          "mooringTip": "Port Vauban accetta visitatori, ma chiama la capitainerie in anticipo a luglio e agosto, quando i posti grandi si riempiono in fretta. Per una notte più tranquilla, ancora sulla sabbia davanti al Cap d'Antibes e vai a terra col tender."
+        },
+        "2": {
+          "shortDescription": "Costeggia verso est oltre Nice fino a una delle baie naturali più profonde del Mediterraneo, dove navi da crociera e yacht condividono la stessa acqua riparata.",
+          "description": "Da Antibes passi sotto la traiettoria dell'aeroporto e lungo l'ampia curva della Baie des Anges, poi Nice ti scorre a sinistra. Poco dopo si apre la Rade de Villefranche, uno dei porti naturali più profondi del Mediterraneo, che scende quasi a novanta metri tra Cap de Nice e Cap Ferrat. La baia tiene bene le barche e resta calma con quasi tutte le condizioni, ma un teso da sud manda dentro l'onda in pieno, quindi guarda le previsioni. La città sale sul fianco della collina in ocra e rosa. Vale la pena cercare Rue Obscure, un passaggio medievale a volta sotto le case, e la barocca Chapelle Saint-Pierre porta le decorazioni di Jean Cocteau. Accanto, Cap Ferrat ospita la Villa Ephrussi de Rothschild e i suoi giardini. Spesso ancoriamo davanti alla spiaggia e prendiamo il tender fino alla banchina dei pescatori.",
+          "thingsToDo": [
+            "Cerca il passaggio a volta di Rue Obscure",
+            "Guarda gli affreschi di Cocteau nella Chapelle Saint-Pierre",
+            "Visita Villa Ephrussi de Rothschild a Cap Ferrat",
+            "Fai il bagno alla Plage des Marinières"
+          ],
+          "mooringTip": "La marina de La Darse è piccola e i posti in gran parte privati, quindi mettiti in conto di ancorare. La tenuta è buona su sabbia e fango tra otto e dodici metri; prendi sul serio una previsione da sud e spostati se rinforza."
+        },
+        "3": {
+          "shortDescription": "Un salto breve fino al Principato, dove Port Hercule stipa i superyacht sotto le terrazze del casinò e il palazzo del Principe.",
+          "description": "Appena un'ora a motore, o una veleggiata pigra se c'è vento. Quello che ricordi è l'arrivo, non le miglia. Doppia Cap Ferrat, passa Cap d'Ail e Monaco ti si accatasta davanti, torri di appartamenti che salgono direttamente dall'acqua. Port Hercule ha circa settecento posti ma solo una manciata per i visitatori, e in stagione lo spazio è raro e caro, quindi prenotare in anticipo è quasi indispensabile. Il Principato ripaga la fatica di sbarcare. Il Museo Oceanografico sta sulla scogliera a Monaco-Ville e il suo acquario vale un paio d'ore. La città vecchia e il Palazzo del Principe coronano il Rocher, e per il Casino de Monte-Carlo servono solo una giacca e un po' di faccia. Se i posti sono pieni, il Port de Fontvieille di Cap-d'Ail è appena a ovest e resta più tranquillo.",
+          "thingsToDo": [
+            "Visita il Museo Oceanografico sulla scogliera",
+            "Assisti al cambio della guardia a Monaco-Ville",
+            "Passeggia nella piazza del Casino de Monte-Carlo",
+            "Cammina tra le terrazze di cactus del giardino esotico"
+          ],
+          "mooringTip": "Prenota Port Hercule con largo anticipo in estate: lo spazio per i visitatori è limitato e le tariffe sono salate. Fontvieille, appena dietro la punta, è un ripiego più economico e tranquillo se il porto principale è pieno."
+        },
+        "4": {
+          "shortDescription": "Si gira verso ponente, una tappa costiera più lunga oltre Cap Ferrat e Nice, con qualche ancoraggio da scegliere se il vento resta gentile.",
+          "description": "È il giorno in cui riavvolgi l'angolo orientale della costa e torni verso il capo dell'Esterel. Da Monaco ad Antibes sono circa venticinque miglia, abbastanza per sembrare una vela vera se nel pomeriggio entra la brezza da sudest. Di solito partiamo entro le nove per avere il vento in poppa nella seconda metà. Non mancano i posti per spezzare la tappa. Beaulieu-sur-Mer e l'acqua riparata davanti a Cap Ferrat fanno una comoda sosta pranzo, e la Villa Kerylos, villa greca ricostruita sulla punta, si vede dal ponte. Tornato ad Antibes, scegli un posto o un ancoraggio diverso dalla prima notte: la Baie de la Garoupe, sul lato est del capo, è calma con quasi tutte le condizioni estive e sta a un breve tender dal sentiero del faro.",
+          "thingsToDo": [
+            "Sosta pranzo davanti a Beaulieu-sur-Mer",
+            "Individua Villa Kerylos a Cap Ferrat",
+            "Ancora nella Baie de la Garoupe",
+            "Cammina sul Sentier du Littoral"
+          ],
+          "mooringTip": "La Baie de la Garoupe, a Cap d'Antibes, offre buona tenuta su sabbia e riparo da tutto tranne il levante. A luglio arriva prima di metà pomeriggio per trovare spazio di giro tra le barche in giornata."
+        },
+        "5": {
+          "shortDescription": "Un salto brevissimo per ancorare tra due isole: la vigna dei monaci e il forte che ospitò la Maschera di Ferro.",
+          "description": "Talmente breve che ci si arriverebbe quasi alla deriva. La tappa ti lascia nel canale tra Sainte-Marguerite e Saint-Honorat, le due isole di Lérins davanti a Cannes. L'acqua tra le due è un ancoraggio molto amato, sabbia tra cinque e dieci metri con buona tenuta, e si riempie di barche in giornata entro mezzogiorno per svuotarsi di nuovo la sera. Sainte-Marguerite porta il Fort Royal, dove la leggenda mette la Maschera di Ferro, e sentieri tra i pini attraversano l'isola verso calette tranquille. Saint-Honorat appartiene a una comunità cistercense che coltiva ancora le sue vigne; i monaci fanno un vino e il liquore Lérina, entrambi in vendita nel negozio dell'abbazia. Davanti al monastero ancorare è vietato, con boe gialle a segnalarlo, quindi lascia libero quel tratto. Fermati per la notte, quando le barche delle escursioni se ne vanno, e il posto è quasi tutto tuo.",
+          "thingsToDo": [
+            "Esplora il Fort Royal su Sainte-Marguerite",
+            "Assaggia il liquore Lérina all'abbazia di Saint-Honorat",
+            "Segui i sentieri tra i pini fino a calette tranquille",
+            "Fai snorkeling nel canale basso tra le isole"
+          ],
+          "mooringTip": "Ancora su sabbia tra cinque e dieci metri nel canale, ma stai fuori dalla zona di divieto segnata dalle boe gialle davanti all'abbazia. Si può prenotare una boa del parco: risparmia il pensiero della tenuta se rinforza."
+        },
+        "6": {
+          "shortDescription": "Attraversa verso la costa rosso fuoco dell'Esterel e prendi una boa nella baia riparata di Agay, sotto le colline vulcaniche.",
+          "description": "Di nuovo verso ponente, e la costa cambia carattere del tutto. Il massiccio dell'Esterel è vecchio vulcano, riolite rossa che colora le falesie e, ai loro piedi, tinge l'acqua di un rosa ruggine. Dalle Lérins è una tappa lineare oltre Théoule e la Pointe de l'Aiguille fino ad Agay, infilata tra Cap Dramont e la Pointe de la Baumette. Agay è uno dei porti naturali migliori di questo tratto, ben protetto tranne che da sud. La baia ha un campo boe sul lato orientale e, poiché le praterie di posidonia sono protette, prendere una boa invece di calare l'ancora in certi punti è obbligatorio e comunque più rispettoso del fondale. Cap Dramont, appena a est, è dove nell'agosto 1944 sbarcarono le truppe alleate, e al largo sta la piccola Ile d'Or con la sua torre di pietra. Un ancoraggio calmo, tra pareti rosse, per chiudere la giornata.",
+          "thingsToDo": [
+            "Fai il bagno sotto le falesie rosse dell'Esterel",
+            "Cammina fino alla spiaggia dello sbarco a Cap Dramont",
+            "Fotografa la torre di pietra dell'Ile d'Or",
+            "Percorri un tratto del Sentier du Littoral"
+          ],
+          "mooringTip": "Ad Agay prendi una boa invece di ancorare: il campo orientale è ben riparato e le praterie di posidonia sono protette. In alta stagione arriva nel primo pomeriggio, perché le boe vanno via in fretta e non sempre si possono prenotare."
+        },
+        "7": {
+          "shortDescription": "Un breve salto costiero fino a Saint-Raphael, doppiando Cap Dramont, in un vivace porto turistico con una basilica bizantina sopra le banchine.",
+          "description": "Mattina facile. Saint-Raphael è solo poche miglia oltre Cap Dramont, quindi nessuna fretta: la tappa è in realtà una scusa per bighellonare lungo la costa rossa e fare un bagno all'Ile d'Or per strada. La città si fonde con Fréjus alle spalle, e il porto vecchio ti dà una marina come si deve, con carburante, acqua e due passi fino al centro. Saint-Raphael è cresciuta come località della Belle Époque e ne ha conservato un po' l'aria. La Basilique Notre-Dame-de-la-Victoire, in stile bizantino con la cupola a fasce, sta a poche vie dall'acqua. C'è un mercato la mattina, una buona pescheria e abbastanza ristoranti sul fronte mare da rendere indolore il rifornimento. Un buon posto per riempire i serbatoi e la cambusa prima della traversata più lunga di domani verso il Golfo di Saint-Tropez.",
+          "thingsToDo": [
+            "Visita la bizantina Basilique Notre-Dame-de-la-Victoire",
+            "Gira il mercato mattutino di Saint-Raphael",
+            "Fai il bagno all'Ile d'Or in avvicinamento",
+            "Rifornisci la cambusa alla pescheria del porto"
+          ],
+          "mooringTip": "Il Vieux Port di Saint-Raphael e la vicina Santa Lucia prendono entrambi visitatori e hanno carburante e acqua. In stagione prenota il posto per la notte e sfrutta la sosta per fare il pieno prima della traversata verso ponente."
+        },
+        "8": {
+          "shortDescription": "Attraversa il mare aperto fino a Saint-Tropez e ancora nella Baie des Canebiers, a un giro di tender dalla cittadella e dal porto vecchio.",
+          "description": "La prima vera traversata del viaggio. Da Saint-Raphael lasci la costa e punti una ventina di miglia a sudovest in mare aperto verso il Golfo di Saint-Tropez, quindi scegli una mattina stabile e tieni d'occhio la brezza di mare del pomeriggio, che sul golfo può rinforzare. Saint-Tropez in porto è cara e affollata, così molti equipaggi ancorano nella Baie des Canebiers, appena a est della città. Il fondo è sabbia e alghe con buona tenuta, e un canale boato tiene separati bagnanti e barche. Da lì è un breve tender fino alla spiaggia e mezz'ora a piedi, passando dal cimitero marino, per arrivare alla cittadella e al porto vecchio. Place des Lices fa mercato il martedì e il sabato, e una fetta di tarte Tropézienne è quasi d'obbligo. Sénéquier, sulla banchina, è per guardare la gente, non per il portafogli.",
+          "thingsToDo": [
+            "Ancora e nuota nella Baie des Canebiers",
+            "Gira il mercato di Place des Lices, martedì o sabato",
+            "Sali alla Citadelle per la vista sul golfo",
+            "Assaggia la tarte Tropézienne vicino al porto vecchio"
+          ],
+          "mooringTip": "Ancora nella Baie des Canebiers su sabbia e alghe tra cinque e dieci metri: il porto è costoso e in estate spesso pieno. Resta dentro il canale boato e lascia spazio per girare quando la brezza di mare cambia direzione."
+        },
+        "9": {
+          "shortDescription": "Dieci minuti di traversata del golfo fino a Port Grimaud, cittadina sull'acqua degli anni '60 dove ormeggi davanti alla porta di casa.",
+          "description": "Non è quasi una navigazione. Attraversi la testa del golfo fino a Port Grimaud, la città sui canali che l'architetto François Spoerry costruì dal nulla negli anni '60. Case pastello affacciate sull'acqua, ognuna con il suo ormeggio, e il tutto disposto come una piccola risposta provenzale a Venezia. La marina ha circa cinquecento posti, di cui una sessantina riservati ai visitatori con barche sotto i venti metri, quindi in stagione una chiamata in anticipo è saggia. Una volta ormeggiato, la città è tutta passerelle e banchine tranquille, da vedere meglio con una passeggiata serale e un coche d'eau, i piccoli traghetti elettrici che si infilano nei canali. Sali al vecchio borgo di Grimaud sulla collina dietro per la vista più ampia, rovine del castello e cappella dei Templari incluse. Una notte facile e bella dopo la traversata.",
+          "thingsToDo": [
+            "Sali su un coche d'eau attraverso i canali",
+            "Cammina fino alle rovine del castello di Grimaud",
+            "Attraversa le passerelle nell'ora d'oro",
+            "Mangia a una terrazza sul canale"
+          ],
+          "mooringTip": "Port Grimaud tiene una sessantina di posti per visitatori con barche sotto i venti metri: prenota in anticipo a luglio e agosto. Entra piano e attenzione al canale d'ingresso, basso e segnalato, che sui bordi insabbia."
+        },
+        "10": {
+          "shortDescription": "Doppia i capi selvaggi a sud del golfo fino all'ampia baia sabbiosa di Cavalaire, ai piedi delle colline dei Pradels.",
+          "description": "Lasciato il golfo, doppi la fila di promontori protetti che fanno di questo uno degli angoli più belli della costa del Var. Cap Camarat con il suo faro, poi Cap Taillat e Cap Lardier, tutti parte di un litorale tenuto libero dal cemento. Infilati dietro di loro per un bagno: la Plage de l'Escalet e l'acqua davanti a Cap Taillat sono limpide e tranquille in una giornata calma. Cavalaire-sur-Mer sta in fondo alla tappa, un'ampia baia sotto il Massif des Pradels con una lunga spiaggia di sabbia e una marina moderna. Dopo il lustro di Saint-Tropez è una località senza pretese, buona per rifornirsi e per una serata rilassata. La baia è aperta a sud ed est, quindi è un ancoraggio da bel tempo; se sono previste onde, la marina è la scelta più sicura.",
+          "thingsToDo": [
+            "Fai il bagno alla lingua di sabbia di Cap Taillat",
+            "Ancora alla Plage de l'Escalet",
+            "Rifornisciti nei negozi sul mare di Cavalaire",
+            "Cammina sul sentiero protetto di Cap Lardier"
+          ],
+          "mooringTip": "La baia di Cavalaire è aperta a sud ed est, quindi ancora solo con tempo stabile e vai in marina se minaccia onda. Davanti a Cap Taillat la tenuta su sabbia è buona, ma è una sosta diurna, non un ormeggio per la notte con vento."
+        },
+        "11": {
+          "shortDescription": "Segui la costa dei Maures fino a Le Lavandou, cittadina di mare che lavora davvero, con una dozzina di spiagge e le Isole d'Oro al largo.",
+          "description": "Una tappa costiera rilassata sotto il Massif des Maures, le colline scure e boscose che fanno da spalle a questa riva. Oltre Cap Nègre e le ville discrete sui suoi fianchi, poi la sfilza di calette che i locali chiamano le dodici spiagge di Le Lavandou. Cavalière è la più grande, con spazio per ancorare davanti alla sabbia con tempo stabile e nuotare a terra per pranzo. Le Lavandou è una vera città di pesca e di vacanze, non una cartolina, e ci guadagna. Il porto prende visitatori, il mercato è autentico e sul fronte mare ci sono quei ristoranti senza fronzoli dove il pescato è locale. Da qui le Iles d'Or sono appena al di là dell'acqua, quindi è una base naturale prima di attraversare a Port-Cros. Spesso facciamo provviste qui per le due notti sulle isole, dato che nei parchi non si trova quasi niente da comprare.",
+          "thingsToDo": [
+            "Ancora e fai il bagno davanti alla spiaggia di Cavalière",
+            "Fai provviste al mercato di Le Lavandou",
+            "Mangia il pescato fresco sul fronte mare",
+            "Naviga davanti alle ville di Cap Nègre"
+          ],
+          "mooringTip": "Il porto di Le Lavandou prende visitatori ed è un buon posto per rifornirsi prima delle Isole d'Oro, dove le scorte sono scarse. Con brezza da terra puoi ancorare davanti alla spiaggia di Cavalière; spostati se il vento gira verso terra."
+        },
+        "12": {
+          "shortDescription": "Attraversa verso Port-Cros, primo parco nazionale marino d'Europa, e prendi una boa del parco davanti a un'isola boscosa e senza auto.",
+          "description": "Una breve traversata ti porta a Port-Cros, la più selvaggia delle tre Isole d'Oro e il cuore di un parco nazionale istituito nel 1963, tra le prime riserve marine d'Europa. L'isola è protetta per intero, coperta di bosco fitto e senza auto, e le regole in acqua sono severe, con buone ragioni. Si ormeggia su un campo boe del parco, dimensionato per barche fino a quindici metri, e ancorare è vietato nella Passe de Bagaud per proteggere la posidonia. Per stare in queste acque la barca deve avere un serbatoio per le acque nere. Una volta sistemati, il richiamo è camminare: il sentiero per il Fort de l'Estissac e il percorso all'ombra fino alla Plage de la Palud, dove un sentiero subacqueo segnalato corre sui bassi fondali fino all'isolotto del Rascas. Silenzio, verde e un mondo di distanza dalle banchine di Saint-Tropez.",
+          "thingsToDo": [
+            "Fai snorkeling sul percorso segnalato alla Plage de la Palud",
+            "Sali al Fort de l'Estissac",
+            "Cammina all'ombra attraverso l'isola",
+            "Cerca le cernie nei bassi fondali limpidi"
+          ],
+          "mooringTip": "Usa una boa del parco nazionale: ancorare è limitato e vietato nella Passe de Bagaud. Le boe vanno bene per barche fino a quindici metri e serve un serbatoio per le acque nere, quindi arriva presto e sistema la questione del serbatoio."
+        },
+        "13": {
+          "shortDescription": "Salta a Porquerolles, la più grande delle Isole d'Oro: spiagge di sabbia bianca, stradine tra le vigne e una piazza all'ombra degli eucalipti.",
+          "description": "Porquerolles sta poche miglia più a ponente, la più grande e la più abitata delle isole. Il villaggio è nato attorno a una guarnigione dell'Ottocento e la sua piazza, polverosa di pétanque e ombreggiata dagli eucalipti, sembra ancora un avamposto di frontiera che ha deciso di restare per il vino. La costa nord ha le spiagge più famose, tra cui Plage Notre-Dame e Plage d'Argent, entrambe di sabbia ed entrambe al riparo dal mistral dietro l'isola. Ancora davanti alla riva nord e sei a una breve camminata o pedalata dal villaggio; l'isola ha vigneti che fanno rosé Côtes de Provence e stradine che si coprono facilmente con una bici a noleggio. Il Fort Sainte-Agathe guarda dall'alto il porto, e la passeggiata al faro all'estremità sud ti regala le falesie e il mare aperto. La più curata delle tre isole, e un bell'ultimo ancoraggio.",
+          "thingsToDo": [
+            "Fai il bagno a Plage Notre-Dame o Plage d'Argent",
+            "Noleggia una bici tra le stradine dei vigneti",
+            "Assaggia il rosé Côtes de Provence in un domaine",
+            "Cammina fino alle falesie del faro a sud"
+          ],
+          "mooringTip": "Ancora davanti alle spiagge della costa nord, al riparo dal mistral, su sabbia tra cinque e dodici metri. Plage Notre-Dame e d'Argent si riempiono di barche in giornata entro tarda mattinata, quindi cala l'ancora presto per assicurarti spazio di giro."
+        },
+        "14": {
+          "shortDescription": "L'ultima lunga tappa di rientro a Cannes, partenza all'alba attraverso il mare aperto per chiudere il cerchio sulla Croisette.",
+          "description": "Il giorno più lungo delle due settimane, e da pianificare bene. Da Porquerolles a Cannes c'è un bel tratto di mare aperto, ben oltre le quaranta miglia, quindi di solito molliamo la boa alle prime luci per arrivare prima che il vento del pomeriggio rinforzi. Se l'equipaggio vuole spezzarla, Le Lavandou o Cavalaire sono soste intermedie sensate. La costa si ricompone strada facendo, i Maures che cedono il passo all'Esterel rosso e infine al verde basso di Cap d'Antibes e delle Lérins. Cannes chiude il cerchio in bellezza, con La Croisette che corre dorata lungo il fronte mare e Le Suquet, la città vecchia, che sale fino al campanile e alla vista sulla baia. Ormeggia nel Vieux Port o ancora davanti alla Croisette per l'ultima notte, e brinda a due settimane di vela ben fatte.",
+          "thingsToDo": [
+            "Passeggia su La Croisette e nel porto vecchio",
+            "Sali a Le Suquet per la vista sulla baia",
+            "Gira il Marché Forville per le ultime provviste",
+            "Brinda al viaggio dall'ancoraggio della Croisette"
+          ],
+          "mooringTip": "Parti da Porquerolles all'alba per questa tappa lunga e tieni d'occhio la brezza pomeridiana sull'Esterel. A Cannes il Vieux Port prende visitatori ma è affollato; ancorare davanti a La Croisette con tempo stabile è un'ultima notte piacevole e più economica."
+        }
+      }
+    }
+  },
+  "areas": {
+    "atlantic-france": {
+      "metaTitle": "Rotte in Bretagna e Atlantico | Boat4You",
+      "metaDesc": "Rotte charter nella Bretagna sud: Belle-Île, Houat, Hoëdic e il Golfo del Morbihan. Vento, maree e ancoraggi tra le isole, giorno per giorno.",
+      "title": "Naviga isole e maree della Bretagna sud",
+      "description": "Questo angolo di Atlantico premia i velisti che sanno leggere l'acqua. I venti estivi si assestano di solito in un sudovest moderato, forza 3 o 4 nella maggior parte dei pomeriggi, e ne escono traversi facili tra isole che raramente distano più di un paio d'ore l'una dall'altra. La baia di Quiberon resta abbastanza riparata per un primo giorno tranquillo, poi la costa si apre. Belle-Île è il grande richiamo, con le sue falesie e la Grotte de l'Apothicairerie sul lato selvaggio, Le Palais e la sua cittadella Vauban su quello più calmo. Le più piccole Houat e Hoëdic offrono ancoraggi di sabbia bianca e quasi nessuna auto. Il Golfo del Morbihan è il rebus che tutti si ricordano, un mare interno intessuto di isolotti come l'Île aux Moines e l'Île d'Arz. Qui una regola conta più delle altre: programma il passaggio all'imboccatura del Golfo con il flusso o con lo stanco, perché la corrente della Jument può superare i nove nodi alle sizigie e fermare di netto una barca da crociera. A luglio e agosto Le Palais si riempie nel tardo pomeriggio, quindi arriva prima delle tre oppure punta su giugno e settembre."
+    },
+    "corsica": {
+      "metaTitle": "Itinerari Charter in Corsica | Boat4You",
+      "metaDesc": "Rotte giorno per giorno in Corsica da Ajaccio a Bonifacio e alla riserva delle Lavezzi, con venti, distanze e i mesi migliori per evitare la folla.",
+      "title": "Naviga tra granito e baie protette della Corsica",
+      "description": "La maggior parte degli equipaggi parte da Ajaccio e scende verso Bonifacio, una rotta che ripaga con termici costanti tra 10 e 20 nodi nei pomeriggi estivi. Qui la navigazione è lavoro onesto: la costa ovest tira ponenti da forza 3 a 6, e le Bocche di Bonifacio incanalano il libeccio in raffiche corte e secche, quindi tieni un piano B per la traversata verso le Îles Lavezzi. Quella riserva di isolotti di granito e basse baie turchesi è la ricompensa. A nord di Ajaccio, le falesie di porfido rosso di Scandola e il borgo raggiungibile solo per mare di Girolata sono un'alternativa più tranquilla al circuito sud. Le tappe stanno in gran parte tra 15 e 30 miglia nautiche, salti giornalieri comodi. Una nota pratica: il porto-fiordo di Bonifacio è pieno da metà luglio a tutto agosto, quindi chiama in VHF per un posto oppure ancora al largo e scendi col tender. Vieni a giugno o a settembre e gli stessi ancoraggi sembrano mezzi vuoti."
+    },
+    "cote-azur": {
+      "metaTitle": "Itinerari a Vela in Costa Azzurra | Boat4You",
+      "metaDesc": "Rotte charter giorno per giorno in Costa Azzurra: venti leggeri, tappe brevi da Cannes a Saint-Tropez, Port-Cros e le rade di Porquerolles.",
+      "title": "Dal glamour di Cannes alle rade selvagge delle isole",
+      "description": "La Côte d'Azur concentra tappe brevi e indulgenti su una costa che passa dalle marine da festival del cinema alle isole coperte di pini nello spazio di un pomeriggio. I venti sono di solito leggeri, un ponente tra 10 e 25 nodi durante il giorno che cala dopo il tramonto, e non c'è quasi marea da calcolare. Saint-Tropez sta a circa 26 miglia nautiche da Cannes, quindi raramente metti a log navigazioni lunghe. Punta la prua sulle Îles de Lérins per un ancoraggio gratuito davanti al monastero di Saint-Honorat, poi spingi a ovest fino a Port-Cros, il primo parco nazionale d'Europa a proteggere insieme terra e fondale. Porquerolles ripaga la deviazione con baie di sabbia bianca come la Plage Notre-Dame. Se vuoi il glamour senza l'ingorgo, naviga qui a fine maggio, in giugno o in settembre; luglio e agosto trasformano Saint-Tropez in un parcheggio di superyacht. Un'abitudine locale da copiare: controlla il fondo prima di calare, perché ancorare sulla posidonia protetta è illegale e tiene male."
+    }
+  }
+}

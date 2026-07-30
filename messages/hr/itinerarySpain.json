@@ -1,1 +1,433 @@
-{}
+{
+  "routes": {
+    "barcelona": {
+      "metaTitle": "Costa Brava katamaranom u 7 dana | Boat4You",
+      "metaDesc": "Sedmodnevni katamaranski krug iz Barcelone uz Costa Bravu: ribarska aukcija u Arenysu, zidine Tosse, crvene kozice iz Palamósa i bistre uvale.",
+      "days": {
+        "1": {
+          "shortDescription": "Preuzimanje broda i sigurnosni brifing u Port Olímpicu, pa mirnih 20 milja u krmu uz pješčani Maresme do ribarskog Arenysa.",
+          "description": "Prvi dan više pripada papirologiji nego jedrenju. Preuzimanje u Port Olímpicu odradite kako treba, provjerite motor, plin, snast, plotter i tender, i spremite provijant prije nego pomislite na odvez; ako su ormarići prazni, tržnica u Barceloneti je pet minuta taksijem. Ciljajte izlaz iz lukobrana oko podneva, kad se ustali jugozapadni garbí. Odatle je stalan kurs u pol vjetra na šest ili sedam čvorova, pola milje od plaža, uz obalni vlak koji zvecka pokraj vas. Badalona, El Masnou i Mataró nude zaklon ako se vrijeme pokvari. Arenys živi od ribe i ako se privežete prije pet, gledat ćete kako flota istovaruje i kako se pokreće aukcija na rivi. Grad se uspinje jednom sjenovitom ulicom, Rierom, gdje čekaju tapas barovi i slavne domaće jagode.",
+          "thingsToDo": [
+            "Pogledajte aukciju ribe na rivi, u llotji",
+            "Probajte sezonske jagode duž Riere",
+            "Vidite čipku na batiće u Museu Marès de la Punta",
+            "Prođite tapas barove po sjenovitoj Rieri"
+          ],
+          "mooringTip": "Port d'Arenys dijele ribarice i Club Nàutic Arenys de Mar, pa nazovite na VHF kanalu 9 prije nego zavučete pramac unutra. Gostujući vezovi su na oko 3-5 m i brzo se pune; za srpanj i kolovoz rezervirajte."
+        },
+        "2": {
+          "shortDescription": "Iz Arenysa krećete sredinom jutra na 18 milja u pol vjetra pokraj Blanesa, gdje pijesak Maresmea prelazi u crvene litice prave Costa Brave.",
+          "description": "Izađite iz Arenysa kad se jutarnji promet raščisti i držite kurs pokraj Caneta i Sant Pola. Krajolik je neupečatljiv do Blanesa, gdje stijena Sa Palomera označava službeni početak Costa Brave; unutar milje obala postaje okerna litica s borovima koji rastu do same vode i pojavljuju se prve uvale za kupanje. Ako vjetar sporo puni, prvi sat idite na motorno jedrenje i pustite da poslijepodnevna termika odradi ostatak. Tossu je s mora nemoguće promašiti: zidine i kule Vile Velle, posljednjeg opasanog srednjovjekovnog grada na ovoj obali, dižu se ravno s južnog kraja plaže. Sidro pustite pred Platja Gran na četiri do šest metara pijeska i tenderom na obalu. Prošetajte bedemima prije večere, a onda jedite cim i tomba, staru ribarsku brudetu.",
+          "thingsToDo": [
+            "Popnite se zidinama Vile Velle do svjetionika",
+            "Nađite bronzani kip Ave Gardner nad plažom",
+            "Doplivajte do uvale Es Codolar pod zidinama",
+            "Naručite cim i tomba za stolom uz plažu"
+          ],
+          "mooringTip": "Tossa nema marinu: sidrite pred Platja Gran na četiri do osam metara, na pijesku koji dobro drži, ili uhvatite jednu od ljetnih boja. Zaljev je otvoren od juga do istoka, pa se rano gubite ako se prognozira i najmanje more."
+        },
+        "3": {
+          "shortDescription": "Danas samo osam milja, pa se ne žurite: sidrite i kupajte se u borovima obrubljenim uvalama Giverola i Pola prije nego uplovite u zaklonjeni Sant Feliu.",
+          "description": "Put od Tosse do Sant Feliua dovoljno je kratak da se razvuče na cijeli dan, a obala to i zaslužuje. Obiđite rt i radite prema sjeveroistoku pod liticama: Cala Pola, Giverola i Futadera slijede jedna za drugom, svaka kao klin bistre zelene vode među stijenama. Giverola najbolje odgovara katamaranu, ima mjesta za sidrenje na pet do osam metara pijeska izvan linije kupača i beach bar za jutarnju kavu. Vidljivost je tu najbolja na cijelom putu, pa nek maske idu u vodu. Za rtom Punta de Garbí Sant Feliu se otvara u naravnu luku kojom se trguje još od rimskih dana. Benediktinski samostan i njegova stara Porta Ferrada zaslužuju sat vremena na kopnu, ali šetnja koju treba napraviti je camí de ronda prema sjeveru do S'Agaróa, dvadeset minuta kamenom stazom do Sa Conce i vila iznad nje.",
+          "thingsToDo": [
+            "Sidrite i ronite s maskom u Cali Giverola",
+            "Uđite u Calu Polu prije izletničkih brodova",
+            "Prošetajte camí de ronda do S'Agaróa",
+            "Pogledajte Portu Ferradu u samostanu"
+          ],
+          "mooringTip": "Port de Sant Feliu jedan je od najboljih naravnih zaklona na ovoj obali i odgovara na VHF kanalu 9, s gostujućim vezovima na tri do pet metara. U mirnom vremenu možete ostati i pred gradskom plažom, dobro izvan plovnog puta."
+        },
+        "4": {
+          "shortDescription": "Lijenih sedam milja pokraj Platja d'Aro i u Palamósu ste do podneva, baš na vrijeme za legendarne crvene kozice.",
+          "description": "Nitko se na ovoj etapi ne žuri. Sedam milja znači duže spavanje, kupanje s krmenih stepenica i vez u Palamósu s cijelim poslijepodnevom pred sobom. Grad živi od koća koje radnim danima istovaruju ulov na rivi; s galerije nad aukcijskom halom gledate kako gamba de Palamós ide pod čekić, slatka crvena kozica koja nosi vlastiti certifikat. Jedite je samo s gradela, za stolom uz luku, platite dobro i ne žalite ni centa. Museu de la Pesca odmah do popunjava priču. Kad je brod složen, uzmite tender milju uz obalu do Cale S'Alguer i njezina niza bijelih ribarskih kućica, ili do široke, neizgrađene plaže Platja de Castell iza nje. Oboje dolazi na svoje kad večernje svjetlo omekša.",
+          "thingsToDo": [
+            "Gledajte aukciju kozica s galerije llotje",
+            "Naručite gamba de Palamós s gradela uz luku",
+            "Tenderom do ribarskih kućica u Cali S'Alguer",
+            "Prošećite Museu de la Pesca na rivi"
+          ],
+          "mooringTip": "Marina Palamós leži u dubokom, zaklonjenom zaljevu i lako prima katamarane, s vezovima od tri do šest metara, VHF kanal 9; u sezoni rezervirajte, jer regate i kruzeri progutaju grad. U mirnim noćima sidrište pred Platja de Castell dobro drži na četiri do šest metara pijeska."
+        },
+        "5": {
+          "shortDescription": "Okrenite pramac kući, 14 milja poznatom obalom do Blanesa, gdje vrtovi Marimurtra na litici opravdavaju zaustavljanje.",
+          "description": "Ploviti istom obalom dva puta nije kazna kad ovako izgleda. Iz Palamósa krenite nakon doručka na jugozapad, a ako posada želi još jednu uvalu, Futadera ili Giverola lagan su jutarnji skok u vodu. U Blanesu Costa Brava službeno završava, na istoj stijeni Sa Palomera na kojoj je i počela. Razlog za zaustavljanje je Marimurtra, botanički vrt u terasama spuštenim po litici, koji je 1920-ih uredio njemački poduzetnik Karl Faust; nekih četiri tisuće vrsta spušta se stijenom do malog hrama-vidikovca nad uvalom Cala Sa Forcanera, slike koja puni pola razglednica u Kataloniji. Ciljajte kasno poslijepodne, kad autobusi odu. Blanes je ostao pravi radni grad, a ne ljetovalište: ribarska flota, večernja šetnja i pošteni barovi oko luke. Kraj srpnja donosi međunarodno natjecanje u vatrometu, točno nad sidrištem.",
+          "thingsToDo": [
+            "Prošetajte terasama vrta Marimurtra na litici",
+            "Stanite u hram nad uvalom Cala Sa Forcanera",
+            "Prošetajte do stijene Sa Palomera",
+            "Kupajte se u zaklonjenoj Cali Sant Francesc"
+          ],
+          "mooringTip": "Port de Blanes drži nekoliko gostujućih vezova na tri do šest metara, ali je tjesniji od Palamósa, pa nazovite prije dolaska. U mirnom, ustaljenom vremenu možete sidriti na pijesku pred Calom Sant Francesc, no ona postaje neodrživa pri bilo kakvom južnom moru."
+        },
+        "6": {
+          "shortDescription": "Blagih 12 milja natrag na Maresme, s ručkom na sidru pred bijelim Sant Pol de Marom prije Arenysa.",
+          "description": "Ovo je dan za potpuno popuštanje. Krenite iz Blanesa rano, dok je more još kao staklo, i uzmite kurs na svjetionik na rtu kod Calelle, koji stoji od 1859. i lako je prva oznaka. Nekoliko milja dalje Sant Pol de Mar je najbolja od stanica za ručak: hrpa bijelih kuća nad nizom malih plaža, uz solidno držanje u pijesku dvjesto metara od obale. Sidro, kupanje, spustite paddleboardove i jedite u kokpitu; ništa na kopnu ne nudi bolju vrijednost. Vikendom se jet-ski i dnevni brodovi približavaju obali, pa držite oštro oko kad je posada u vodi. Planirajte biti u Port d'Arenysu do kasnog poslijepodneva i iskoristite zadnju večer: duga večera na kopnu, suquet de peix ili fideuà, i podmirena posadna kasa.",
+          "thingsToDo": [
+            "Ručak na sidru pred Sant Pol de Marom",
+            "Uzmite kurs na Far de Calella iz 1859.",
+            "Spustite paddleboardove posljednji put",
+            "Rezervirajte fideuà za večeru u Arenysu"
+          ],
+          "mooringTip": "Natrag u Port d'Arenysu zovite na VHF kanalu 9 kao i prvi put i pitajte za vez koji ste imali prve noći. Mjesta za ručak na Maresmeu otvorena su sidrišta na pijesku, dobra po danu u mirnom vremenu, ali nikako za prenoćiti."
+        },
+        "7": {
+          "shortDescription": "Rana vožnja od 20 milja Maresmeom donosi barcelonsku panoramu pred pramac, pa gorivo i predaja broda u Port Olímpicu.",
+          "description": "Rani polazak isplati se dvostruko: držite se plana i dobivate Maresme u svitanje, glatko kao ulje, s malim ribaricama koje već vuku. Računajte na oko tri sata na motoru ili lijeno motorno jedrenje, a ako sat bude dobar, ima vremena za posljednje kupanje pred El Masnouom ili Ocatom. Onda grad izvodi svoj ulaz: kula Collserola na vrhu Tibidaba, Montjuïc koji se spušta do mora i, za plažom, kule Port Olímpica s Gehryjevom bakrenom ribom koja bliješti na suncu. Zadnje dvije milje držite oči otvorene, jer se voda pred Barcelonetom puni izletničkim brodovima, paddleboardovima i kupačima. Natočite gorivo prije nego uđete u svoj vez, a onda prođite kroz listu: upisani motočasovi, pročitani tankovi, prebrojana oprema i krug po palubi zbog ogrebotina. Slobodno vrijeme najbolje je potrošiti deset minuta hoda dalje, u tapas barovima Barcelonete.",
+          "thingsToDo": [
+            "Krenite u prvo svjetlo, po jutarnjoj bonaci",
+            "Tražite Gehryjevu bakrenu ribu na prilazu",
+            "Zaplivajte posljednji put pred plažom Ocata",
+            "Nazdravite krugu vermutom u Barceloneti"
+          ],
+          "mooringTip": "Dizel uzmite na pumpi u samom Port Olímpicu prije nego vratite brod na charter ponton, i to rano ujutro, jer se redovi već u petak i subotu brzo nagomilaju. Dubina uz vez je ugodnih tri do pet metara, a kad prođete lukobran, bazna posada vodit će vas preko VHF-a."
+        }
+      }
+    },
+    "ciutadella": {
+      "metaTitle": "Oplovite Menorcu u 7 dana | Boat4You",
+      "metaDesc": "Jedrite oko Menorce u 7 dana iz Ciutadelle: južne cale, Cala Galdana i Macarella, Cova d'en Xoroi, luka Mahón i divlja sjeverna obala.",
+      "days": {
+        "1": {
+          "shortDescription": "Lagan skok šest milja na jug za uigravanje posade, s krajem u pješčanoj uvali pod borovima i britanskom stražarskom kulom nad njom.",
+          "description": "Prva etapa namjerno je blaga: šest milja uz obalu da posada nađe ravnotežu prije dužih dana. Cala en Bosch leži za zavjesom alepskih borova, a pijesak pada dovoljno blago za prvo kupanje s pramca. Nad uvalom stoji Torre d'en Quart, jedna od kamenih stražarskih kula koje su Britanci podigli u 18. stoljeću da nadziru prilaze. Menorca je UNESCO-ov rezervat biosfere od 1993. i to se vidi: nema zida hotelskih blokova, samo niska makija i rtovi. Prvu noć obično uzimamo marinu, napunimo tankove vode i složimo kambuz dok još ima struje s kopna. Na kopnu tražite caldereta de langosta u S'Amaradoru i čašu otočkog Vi de la Terra.",
+          "thingsToDo": [
+            "Zaplivajte s pramca u Cali en Bosch",
+            "Popnite se do stražarske kule Torre d'en Quart",
+            "Caldereta de langosta u S'Amaradoru",
+            "Probajte Vi de la Terra Menorca"
+          ],
+          "mooringTip": "Marina vas prima krmom za oko €70–110 po noći u vrhu sezone i ne osjeti nikakav sjevernjak. Ako je puna, ili ako više volite ostati na sidru, spustite se u samu uvalu, na pijesak na 4–6 m."
+        },
+        "2": {
+          "shortDescription": "Kratak preskok četiri milje na istok do Son Saure, gdje se plaže za kupanje otvaraju samo onima koji dolaze brodom ili pješice.",
+          "description": "Danas samo četiri milje, pa nema žurbe s odvezom. Son Saura se otvara kao par blijedih pješčanih plaža bez ceste za njima; do vode se dolazi ili s broda ili pješice po Camí de Cavalls, staroj konjskoj stazi koja obilazi cijeli otok. Odmah istočno leže Es Talaier i Cala en Turqueta, obje vrijedne vožnje tenderom samo zbog boje vode. U srpnju i kolovozu livade posidonije su zaštićene i treba vam jedna od predviđenih boja, rezervirana unaprijed kod Govern Balear; ostatak godine možete sidriti na čistom pijesku. U unutrašnjosti je Talaiot de Son Catlar, najveće prapovijesno naselje sa zidinama na otoku. Nosimo nekoliko formatjada, domaćih pita sa sirom, za spori ručak u kokpitu.",
+          "thingsToDo": [
+            "Kupajte se u Es Talaieru i Cali en Turqueta",
+            "Prošetajte dio staze Camí de Cavalls",
+            "Istražite zidine Talaiota de Son Catlar",
+            "Rezervirajte boju nad posidonijom u punom ljetu"
+          ],
+          "mooringTip": "Od srpnja do kolovoza tu morate biti na označenoj boji nad posidonijom, oko €40–60 po noći, rezerviranoj online kod Govern Balear unaprijed. Izvan tih mjeseci sidrite na pijesku na 4–6 m, izvan livada morske trave."
+        },
+        "3": {
+          "shortDescription": "Šest milja do potkove Cale Galdane, pa tenderom do Macarelle na najfotografiraniju kupku na otoku.",
+          "description": "Cala Galdana je zaljev koji su svi vidjeli u katalogu, vapnenački amfiteatar s riječnim kanjonom, Barranc d'Algendar, koji se spušta iza njega. Tu je i prava marina, što je čini dobrim mjestom za dopunu vode i tuš za onoga koga to veseli. Pravi mamac je milju istočno, u Cali Macarella i njezinoj maloj susjedi Macarelleti, do kojih se dolazi samo s mora ili pješice. Sidrimo pred Macarellom za poslijepodne, na pijesku na četiri do šest metara, i gubimo se prije sumraka jer prenoćenje nad morskom travom nije dopušteno. Ako noge pristanu, Camí de Cavalls se uspinje zapadnom liticom do pogleda ravno u tirkiz. Ručak je arròs de peix u Es Brucu, gore na rtu.",
+          "thingsToDo": [
+            "Sidrite pred Calom Macarella za poslijepodne",
+            "Prošetajte do Macarellete stazom po litici",
+            "Ručak arròs de peix u Es Brucu",
+            "Uspnite se u kanjon Barranc d'Algendar"
+          ],
+          "mooringTip": "Marina u Cali Galdani veže vas krmom za oko €100–160 u vrhu sezone, dobro uvučenu od svakog sjevernjaka. Macarella odmah do je samo dnevno sidrište, pijesak na 4–6 m, bez prenoćenja nad posidonijom."
+        },
+        "4": {
+          "shortDescription": "Pet laganih milja do Son Boua i najdulje plaže na Menorci, s ruševinama ranokršćanske bazilike napola izgubljenima u dinama.",
+          "description": "Nakon drame Galdane, Son Bou djeluje širom otvoreno. Plaža ide gotovo dva kilometra, s pravim dinama za sobom i pojasom močvare koja ostaje iznenađujuće zelena. Na zapadnom kraju su temelji bazilike iz 5. stoljeća, ranokršćanske crkve koja sada leži nisko među poljskim cvijećem i lako je promašiti s mora. Marine nema, pa je ovo noć na sidru: sidro na pijesak na pet do sedam metara, dobro zaklonjeno kad vjetar stoji na sjeveru. Pratite prognozu, jer južnjak čini cijeli zaljev neodrživim, a onda ćete htjeti vezove Galdane pet milja natrag. Za večeru na kopnu, Sa Paissa radi dobru oliaiguu, otočku juhu od pomidora i zelene paprike.",
+          "thingsToDo": [
+            "Prošetajte dva kilometra plaže Son Bou",
+            "Nađite ruševine bazilike iz 5. stoljeća u dinama",
+            "Večera s oliaiguom u Sa Paissi",
+            "Potražite flamingose u S'Albufera des Grau"
+          ],
+          "mooringTip": "U Son Bouu nema luke, pa računajte na sidro: pijesak dobro drži na 5–7 m, a plaža vas zaklanja od sjevera. Ako se prognozira ikakav južnjak, obala brzo postaje zavjetrina, a Cala Galdana pet milja zapadno vaše je sklonište."
+        },
+        "5": {
+          "shortDescription": "Pet milja do Cala en Portera, uvale u liticama koju kruni bar Cova d'en Xoroi urezan u stijenu.",
+          "description": "Cala en Porter je kratka i strmih strana, uvala u kojoj litice govore najviše. Glavna atrakcija je Cova d'en Xoroi, splet terasa urezanih u stijenu tridesetak metara nad morem; otvara se za piće u sumrak i pretvara u pravi bar kad DJ počne oko deset. Dođite rano ako želite dobre stolove u zlatnom svjetlu. Dolje na razini mora sidrimo na pijesku na četiri do šest metara, drži dobro na sjevernjaku, ali marine nema ako se vrijeme pokvari. Šetnja stazom po litici nudi jedan vidikovac za drugim. Za večeru, Àmbit radi od domaćih sastojaka, a lignje punjene sobrasadom ono su što treba naručiti.",
+          "thingsToDo": [
+            "Piće u sumrak u Cova d'en Xoroi",
+            "Kupanje sa sidra pod vapnenačkim liticama",
+            "Lignje sa sobrasadom u Àmbitu",
+            "Pratite stazu po litici do vidikovaca"
+          ],
+          "mooringTip": "U Cala en Porteru nema vezova, pa je to sidro na pijesku na 4–6 m, ugodno dok vjetar ostaje sa sjevera. To je izložen urez, pa radije pratite prognozu nego da se vežete uz njega ako se gradi ikakav južnjak."
+        },
+        "6": {
+          "shortDescription": "Osam milja na istok u Mahón, uz jednu od najduljih naravnih luka na Mediteranu, do destilerije gina koja radi od 1700.",
+          "description": "Ulazak u Mahón glavni je prizor tjedna. Ulazite pokraj utvrda na ulazu i pratite luku duboku gotovo pet kilometara, jedno od najvećih naravnih sidrišta na Mediteranu, s otočićima i starim karantenskim bolnicama razasutima po sredini. Marina na dnu ostavlja vas kratkoj šetnji od starog grada. Menorca je veći dio 18. stoljeća bila pod britanskom vlašću i to se posvuda vidi: gin, prozori na guljotinu i ljubav prema pomadi, ginu s mutnom limunadom. Xoriguer destilira uz rivu od oko 1700. i vodi degustacije gotovo svaki dan. Kupite ribu ravno s klupe na Mercat des Peix, ili pustite Sa Llagostu da vam je skuha kao pravu otočku brudetu.",
+          "thingsToDo": [
+            "Obiđite destileriju gina Xoriguer",
+            "Popijte pomadu na rivi",
+            "Kupite ribu na Mercat des Peix",
+            "Riblja brudeta u Sa Llagosti"
+          ],
+          "mooringTip": "Marina di Mahón prima vas krmom za oko €100–160 u vrhu sezone i zaklonjena je kako luke rijetko jesu, što god vjetar radio. Ako više volite sidro, Cala Padera niže u kanalu drži na pijesku na 5–7 m."
+        },
+        "7": {
+          "shortDescription": "Duga vožnja kući: dvadeset i četiri milje oko divlje sjeverne obale, s kupanjem u Cali Mesquidi i Port d'Addaii.",
+          "description": "Ovo je zahtjevan dan, pa obično odvezujemo do devet. Do Ciutadelle je otprilike dvadeset i četiri milje, a ruta vas diže na sjevernu obalu: kamenitiju, pustiju i daleko otvoreniju tramuntani od juga kojim ste plovili. Cala Mesquida, malo izvan Maóa, dobra je za rano kupanje, a uski zaljev sa solanama u Port d'Addaii mirno je mjesto za prekid plovidbe. Nakon toga slijedi ravna etapa na zapad, obično uz poslijepodnevni vjetar koji popuni. Ciljajte biti uz vez u Ciutadelli do ranog poslijepodneva, za gorivo i ispiranje broda prije predaje. Luka je dug, tijesan kanal sklon naglim udarima vode zvanima rissaga, pa ostavite pravu labavost u konopima. Zaključite s greixonerom, otočkom kremom od cimeta, na Plaça des Born.",
+          "thingsToDo": [
+            "Rano kupanje u Cali Mesquidi",
+            "Prekinite plovidbu u Port d'Addaii",
+            "Gorivo i ispiranje broda u Ciutadelli",
+            "Krema greixonera na Plaça des Born"
+          ],
+          "mooringTip": "Ciutadella veže krmom za oko €80–130 u vrhu sezone; gorivo uzmite na vezu kod ulaza prije nego se probijete unutra. Luku može zaljuljati rissaga, pa udvostručite konope i potvrdite termin predaje 24 sata unaprijed."
+        }
+      }
+    },
+    "ciutadella-south": {
+      "metaTitle": "Od Menorce do Mallorce u 7 dana | Boat4You",
+      "metaDesc": "Tjedan jedrenja iz Ciutadelle: Cala Galdana i Macarella, prelaz do Cala Ratjade, pa Alcúdia, Port de Pollença i Cala Sant Vicenç.",
+      "days": {
+        "1": {
+          "shortDescription": "Blagih 12 milja na jug za otvaranje tjedna, s krajem u Cali Galdani, a Macarellin tirkiz je kratak skok tenderom.",
+          "description": "Uđite u tjedan kratkom etapom niz južnu obalu Menorce. Dvanaest milja, par sati pod jedrima ako popuni vjetar s mora, i nema razloga za žurbu s konopima. Cala Galdana leži na ušću šumovitog kanjona, a voda prelazi iz tamnoplave u onu blijedu vapnenačku zelenu kako se približavate plaži. Prava nagrada je odmah do: Cala Macarella i mala Macarelleta, dostupne samo brodom ili pješice, obje vrijedne poslijepodneva na sidru. Obično sidrimo pred Macarellom za kupanje, pa prošetamo dio Camí de Cavalls po litici. Natrag u Galdani, vežite se u marini i jedite na kopnu. Es Bruc radi pravi arròs de la terra, rižu sa zecom i šafranom koju nećete naći na mnogim jelovnicima izvan otoka.",
+          "thingsToDo": [
+            "Sidrite i kupajte se pred Calom Macarella",
+            "Prošetajte stazom Camí de Cavalls po litici",
+            "Probajte arròs de la terra u Es Brucu",
+            "Tenderom do malene Cale Macarellete"
+          ],
+          "mooringTip": "Marina u Cali Galdani prima vas krmom i dobro je zaštićena od sjevera, oko €100–160 po noći u vrhu sezone. U Macarelli možete sidriti samo danju, na pijesku na 4–6 m; zaljev je zaštićen zbog posidonije, pa nema prenoćenja."
+        },
+        "2": {
+          "shortDescription": "Prelaz kanala do Mallorce, 32 milje otvorenog mora do Cala Ratjade, najbolje započet rano, prije nego tramuntana nađe poslijepodnevne noge.",
+          "description": "Ovo je dugi dan i onaj koji se planira oko vjetra. Otvoreno more između otoka prima tramuntanu ravno u prsa, a što je za doručkom lijen sjevernjak, do sredine poslijepodneva može puhati 25 čvorova s kratkim morem. Vrijedi odvezati do devet i većinu od 32 milje ostaviti za sobom prije podneva. Kopno dohvaćate na sjeveroistočnom kutu Mallorce, u Cala Ratjadi, staroj ribarskoj luci koja i danas istovaruje vlastiti ulov. Vežite se u marini, koja je pravo zaklonjena, ili spustite sidro za rtom u Cali Agulla, na čistom pijesku. Uzbrdo, dvorac Capdepera iz 14. stoljeća lagana je šetnja i dobar način da razmrsite noge nakon dana za kormilom.",
+          "thingsToDo": [
+            "Prošetajte do dvorca Capdepera iz 14. stoljeća",
+            "Kupajte se u Cali Agulla nad bijelim pijeskom",
+            "Llagosta amb sobrassada u Es Molletu",
+            "Prošetajte obalnom stazom do Cale Gat"
+          ],
+          "mooringTip": "Marina u Cala Ratjadi potpuno je zatvorena i sigurna karta nakon prelaza; rezervirajte u srpnju i kolovozu. Ako je puna ili ako više volite sidro, Cala Agulla malo sjevernije dobro drži na pijesku na 4–6 m u mirnom vremenu."
+        },
+        "3": {
+          "shortDescription": "Petnaest laganih milja u zaljev Alcúdia do Colonije de Sant Pere, mirnog sela gdje se dine naslanjaju na borovu šumu.",
+          "description": "Nakon jučerašnjeg tegljenja ovo je odmor. Petnaest milja na zapad uz obalu i u široki zaljev Alcúdia, s brdima Serra de Llevant s lijeve strane gotovo cijelim putem. Colonia de Sant Pere više je radno selo nego ljetovalište i time mirnije. Stanica koju većina posada pamti je Es Coll Baix, plaža od svijetlih oblutaka pod vapnenačkim zidom, do koje se dolazi samo brodom ili strmom stazom kroz borove. Tu obično sidrimo za dugi ručak i kupanje prije nego nastavimo do seoske marine. Ako u noge još ima života, uzmite bicikle i odvozite četiri kilometra u unutrašnjost do Betlema, skupine kuća na obronku s pogledom natrag preko cijelog zaljeva. Ca'n Bernat u selu radi dobar tumbet.",
+          "thingsToDo": [
+            "Sidrite i kupajte se u Es Coll Baixu",
+            "Odvozite bicikl četiri kilometra do Betlema",
+            "Naručite tumbet u Ca'n Bernatu",
+            "Prošetajte dinama pod borovima u sumrak"
+          ],
+          "mooringTip": "Marina u Coloniji je mala i veže krmom, jeftinija od velikih mallorčanskih luka, oko €70–110, i uvučena od sjevera. Es Coll Baix je samo dnevno sidrište, pijesak na 4–6 m; nema zaklona ako vjetar okrene, pa držite oko na prognozi."
+        },
+        "4": {
+          "shortDescription": "Deset milja preko zaljeva do Alcúdije, gdje rimske ruševine i srednjovjekovne zidine stoje kratkoj šetnji za lukom.",
+          "description": "Danas samo deset milja, ravno preko dna zaljeva, pa ima vremena za kupanje pred Platja d'Alcúdia prije nego pomislite na vez. Dugi luk pijeska pada blago, a voda ostaje topla i u listopadu. Port d'Alcúdia je velika, lagana marina s pripremljenim konopima i puno mjesta, što je čini mirnim mjestom za poslijepodne na kopnu. Stari grad je razlog za zaustavljanje. Alcúdia je sačuvala zidine iz 14. stoljeća gotovo cijele i krug obiđete u pola sata. Odmah izvan njih leži kamenje rimske Pollentije, otočke prijestolnice od prije dvije tisuće godina. Zaključite večer u Ca'n Costi, gdje toče palo, gorko-slatki mallorčanski liker od trava koji se tu radi od 1761.",
+          "thingsToDo": [
+            "Prošetajte cijelim krugom zidina iz 14. stoljeća",
+            "Prošećite ruševinama rimske Pollentije",
+            "Palo u Ca'n Costi (od 1761.)",
+            "Kupajte se na dugom pijesku Platja d'Alcúdia"
+          ],
+          "mooringTip": "Port d'Alcúdia veže krmom uz pripremljene konope i rijetko se napuni, pa obično možete doći bez rezervacije; računajte na €100–160 u punom ljetu. Potpuno je zatvoren, ugodno mjesto za pričekati poslijepodnevnu tramuntanu."
+        },
+        "5": {
+          "shortDescription": "Samo osam milja na sjever do Port de Pollençe, uvučenog pod Tramuntanu, s poluotokom Formentor i njegovim plažama malo dalje.",
+          "description": "Kratka etapa, veliki krajolik. Osam milja donosi vas u zaljev Port de Pollença sa sivim zidom Tramuntane koji se diže ravno iz vode za gradom. Prije nego se smjestite, vrijedi nastaviti četiri milje do vrha poluotoka Formentor. Platja de Formentor je pojas finog blijedog pijeska pod pinijama, a sidrište pred njom jedno je od najljepših na ovoj obali. Natrag u gradu, marina je mirna, a rivu obrubljuju stari platani. Klasična jutarnja šetnja tu ide uz dolinu Boquer, suhi vapnenački kanjon u kojem Eleonorini sokoli love nad hrptom u kasno ljeto. Za večeru, Stay vani na molu siguran je stol; njihova pečena lechona ono je što treba naručiti.",
+          "thingsToDo": [
+            "Sidrite pred blijedim pijeskom Platja de Formentor",
+            "Prošetajte dolinom Boquer zbog sokolova",
+            "Naručite lechonu u restoranu Stay",
+            "Popnite se do kule Talaia d'Albercutx"
+          ],
+          "mooringTip": "Marina Port de Pollença veže krmom i zaklonjena je od sjevera, oko €100–160 u vršnim tjednima. Ako želite sidrište pred Formentorom, uzmite ga za ručak, a ne za prenoćiti; otvoreno je sjeveru i ljulja kad popuni poslijepodnevni vjetar."
+        },
+        "6": {
+          "shortDescription": "Četiri milje oko ugla do Cala Sant Vicenç, skupine malih zaljeva stisnutih pod liticama Tramuntane.",
+          "description": "Ovo gotovo nije ni plovidba, četiri milje oko rta, pa jutro tretirajte kao svoje. Cala Sant Vicenç je zapravo niz malih zaljeva pod istim imenom, urezanih u podnožje gora tamo gdje padaju u more. Cala Molins je najšira i ona pred kojom se sidri; ostale, među njima Cala Barques i Cala Carbó, džepovi su pijeska i šljunka nadohvat tendera. Ponesite masku. Blizu Cale Molins je kratak morski tunel kroz koji možete preplivati kad je more mirno, a stijena je pod vodom dramatična. Marine tu nema, pa ste noć na sidru, na pijesku na četiri do šest metara, dobro pokriveni od sjevera. Restaurant Clivia gore u zaselku radi izdašan frit de marisc.",
+          "thingsToDo": [
+            "Zaronite u morski tunel kod Cale Molins",
+            "Tenderom između Cale Barques i Cale Carbó",
+            "Jedite frit de marisc u Restaurantu Clivia",
+            "Gledajte zalazak sa staze na litici"
+          ],
+          "mooringTip": "Ovo je slobodno sidrište bez marine, pa se uvucite u onaj od tri zaljeva koji odgovara vjetru i sjedite na pijesku na 4–6 m. Ugodno je na sjevernjaku, ali izloženo svemu s istoka; provijant uzmite u Pollençi prije polaska, jer se tu nema što kupiti."
+        },
+        "7": {
+          "shortDescription": "Duga vožnja kući, 38 milja natrag preko kanala do Ciutadelle, rani polazak i oko na tramuntanu.",
+          "description": "Zadnji dan zrcali drugi: dugi prelaz otvorenim morem koji nagrađuje rani polazak. Trideset i osam milja na istok natrag do Menorce, i vrijedi isto pravilo, odradite milje prije nego tramuntana ojača kroz poslijepodne. Ciljajte dići Cap d'Artrutx, zdepasti svjetionik na jugozapadnom kutu Menorce, do ranog poslijepodneva; on je vaša oznaka za ulaz. Odmah za njim Son Xoriguer i Cala en Bosch nude posljednje tirkizno kupanje ako ste dobro odradili milje. Odatle je kratka etapa do Ciutadelle. Dopunite gorivo na vezu kod ulaza u luku prije nego krenete tražiti mjesto, da predaja sljedeće jutro prođe bez muke. Ostavite sat za stari grad: greixonera, krema s cimetom, na Plaça des Born pravi je zadnji stop.",
+          "thingsToDo": [
+            "Zaplivajte u tirkiznoj vodi Son Xoriguera",
+            "Fotografirajte svjetionik Cap d'Artrutx",
+            "Probajte greixoneru na Plaça des Born",
+            "Natočite gorivo prije predaje u Ciutadelli"
+          ],
+          "mooringTip": "Tijesna luka Ciutadelle veže krmom i brzo se puni u ljeto, oko €80–130 po noći; potvrdite mjesto i termin predaje dan prije. Gorivo uzmite na vezu kod ulaza prije nego se privežete, jer je nezgodno doći do njega kad ste ukliješteni."
+        }
+      }
+    },
+    "costa-brava-14-days": {
+      "metaTitle": "Barcelona i Costa Brava u 14 dana | Boat4You",
+      "metaDesc": "Četrnaestodnevni krug iz Barcelone (Port Olímpic) uz Maresme do uvala Costa Brave, kući preko Sitgesa i Garrafa. Zidine Tosse, kozice Palamósa.",
+      "days": {
+        "1": {
+          "shortDescription": "Kratka probna etapa uz obalu Maresmea, iz grada do uredne marine El Masnoua i njezinih poznatih rivi s rabljenim brodovima.",
+          "description": "Većina posada prvi dan koristi za uigravanje broda, a ne za milje, i ova etapa tome odgovara. Od Port Olímpica uz obalu Maresmea ima nekih osam milja, dovoljno blizu da barcelonske kule ostanu preko ramena prvi sat. Garbí obično popuni nakon podneva, pa ako odvežete do sredine jutra, izaći ćete iz luke na motoru i uhvatiti lagani jugozapadnjak za put na sjever. Marina El Masnou leži za solidnim lukobranom i ostaje mirna u većini uvjeta. Luka je po cijeloj Španjolskoj poznata kao mjesto gdje brokeri parkiraju rabljene jahte, pa su pontoni dobri za razgledavanje. Na kopnu se stara ribarska četvrt uspinje uskim ulicama, a podruma i terasa je dosta da uhvatite ritam putovanja.",
+          "thingsToDo": [
+            "Razgledajte pontone s rabljenim jahtama u Port Masnouu",
+            "Prošetajte starom ribarskom četvrti uzbrdo",
+            "Piće u sumrak na terasama uz marinu",
+            "Napunite zalihe na gradskoj tržnici prije Costa Brave"
+          ],
+          "mooringTip": "Port Masnou ima puno gostujućih vezova i odgovara na VHF kanalu 09; nazovite unaprijed u srpnju i kolovozu jer trgovina rabljenim brodovima drži pontone zauzetima. Lukobran vas zaklanja od poslijepodnevnog garbíja."
+        },
+        "2": {
+          "shortDescription": "Kratak skok do Mataróa, najveće marine na Maresmeu i rimskog grada koji zaslužuje poslijepodne s broda.",
+          "description": "Ovo gotovo nije plovidba, pet milja uz obalu, pa nema razloga za žurbu s doručkom. Obično odvezujemo oko deset, pustimo da jutarnja bonaca izgori i posljednji dio odjedrimo kad se vjetar ustali. Marina u Mataróu najveća je na ovoj obali i ima pun servis ako nešto treba popraviti na početku chartera. Sam grad nagrađuje šetnju u unutrašnjost. Bio je rimski Iluro i još se može pratiti stari raster ulica, s pokrivenom tržnicom i skupinom modernističkih zgrada mladog Gaudíja. Nabavka je tu laka, bolja nego bilo gdje do Palamósa, pa se isplati napuniti ormariće prije nego se predate mirnijoj obali koja slijedi. Večeri su bez žurbe, s vermut barovima kod obale koji se polako pune nakon osam.",
+          "thingsToDo": [
+            "Pratite rimski raster ulica Ilura",
+            "Vidite modernističke zgrade mladog Gaudíja",
+            "Kupujte na pokrivenoj gradskoj tržnici",
+            "Vermut u baru uz obalu nakon osam"
+          ],
+          "mooringTip": "Port de Mataró je velik i rijetko pun, s gostujućim vezovima na vanjskim pontonima i travel-liftom ako treba radova. Dubine su posvuda izdašne, pa je prilaz jednostavan i u sumrak."
+        },
+        "3": {
+          "shortDescription": "Šest milja do Arenys de Mara, radne ribarske luke s ribljom aukcijom u svitanje i jednim od najstarijih jedriličarskih klubova na obali.",
+          "description": "Arenys još živi od ribe i to luci daje drugačiji osjećaj od turističkih marina s obje strane. Plovidba je kratka, nekih šest milja, i ako je garbí digao, možete ići uz obalu u pol vjetra s punim jedrima i ugašenim motorom. Club Nàutic tu datira iz 1952. i dobrodošlica gostujućim posadama je topla. Većinu ljudi privlači riblja aukcija u kasno poslijepodne, llotja, kad dnevne barke uđu i ulov se prodaje brzinom vike koju možete gledati s rive. Rezervirajte stol u blizini i jedite ono što je pristalo sat prije. Grad se uspinje od mora, a staro groblje nad njim neobično je slavno i vrijedi uspona zbog pogleda natrag na luku.",
+          "thingsToDo": [
+            "Gledajte poslijepodnevnu ribarsku aukciju u llotji",
+            "Jedite dnevni ulov uz rivu",
+            "Popnite se do vidikovca na groblju na brdu",
+            "Posjetite Club Nàutic, osnovan 1952."
+          ],
+          "mooringTip": "Arenys je prava ribarska luka, pa se na ulazu držite podalje od kanala za koće i aukcijske rive. Club Nàutic drži gostujuće vezove; zovite na VHF kanalu 09 i računajte na dosta gibanja od radnih brodova."
+        },
+        "4": {
+          "shortDescription": "Sedam milja do Calelle, koju s milja daleko označava stari svjetionik, s dugom plažom za sidrenje u mirnom vremenu.",
+          "description": "Calella nema pravu marinu, što mijenja oblik dana. Ciljate na svjetionik, Far de Calella, koji stoji bijel na svom rtu od 1850-ih i vidi se davno prije nego se grad izvuče iz sumaglice. U mirnom vremenu sidrište pred glavnom plažom dobro je za ručak ili prenoćište, pijesak drži solidno na pet ili šest metara. Držite oko na prognozi, jer sve što ima istoka u sebi ulazi ravno unutra i sidrište brzo postane neugodno. Na kopnu je Calella živo ljetovalište s dugom rivom, ali staro jezgro za njom još ima katalonski trgovački grad u srcu. Popnite se do Torre de les Bruixes na brdu zbog šireg pogleda, pa se spustite na rano kupanje prije nego se plaža prorijedi u sumrak.",
+          "thingsToDo": [
+            "Vidite svjetionik Far de Calella iz 1850-ih",
+            "Popnite se do Torre de les Bruixes",
+            "Kupajte se na dugoj gradskoj plaži",
+            "Prošećite katalonskom tržnicom u starom gradu"
+          ],
+          "mooringTip": "Tu nema luke, samo otvoreno sidrište pred plažom koje radi na zapadnjaku i u bonaci. Sidro spustite na pet do šest metara na pijesku i gubite se na prvi znak istočnog mora, koje se digne bez velike najave."
+        },
+        "5": {
+          "shortDescription": "Devet milja na sjever do Blanesa, gdje stijena Sa Palomera označava pravi početak Costa Brave, a čeka vas i pravi riblji grad.",
+          "description": "U Blanesu obala mijenja karakter. Ravne plaže Maresmea prelaze u kamenitiju obalu s borovima na vrhu, onu koju ljudi zamišljaju kad pomisle na Costa Bravu, a stijena Sa Palomera pred gradom tradicionalna je oznaka te granice. Od Calelle je devet milja, lako jutro ako krenete do devet, prije nego garbí ojača. Grad drži ozbiljnu ribarsku flotu, a dnevna aukcija hrani restorane kao Can Flores, otvoren blizu tržnice od 1958. i još mjesto na koje vas domaći šalju. Nad lukom su dva botanička vrta, Marimurtra ljepši od njih, sa stazama koje padaju do vidikovaca točno nad morem. Marina je dobro vođena i zaklonjena, ugodna baza za noć prije nego sljedeće jutro počnu prave uvale.",
+          "thingsToDo": [
+            "Prošetajte stazama vrta Marimurtra po litici",
+            "Jedite svježu ribu u Can Floresu",
+            "Vidite stijenu Sa Palomera iz blizine",
+            "Prošećite ribljom tržnicom u luci u svitanje"
+          ],
+          "mooringTip": "Marina Blanes i Club de Vela primaju goste i slušaju VHF kanal 09, s dobrim zaklonom za lukobranom. Rezervirajte vez unaprijed u punom ljetu, jer je ovo popularna prva ili posljednja stanica mnogih chartera po Costa Bravi."
+        },
+        "6": {
+          "shortDescription": "Kratak preskok četiri milje do Lloret de Mara, bučnog na kopnu, ali okruženog mirnijim uvalama kao Santa Cristina i Cala Boadella.",
+          "description": "Četiri milje su ništa, pa ovo tretirajte kao dan uvala, a ne plovidbu. Gradska plaža Lloreta je u sezoni bučna, ali sidrišta s obje strane razlog su za dolazak. Santa Cristina, malo jugozapadno, širok je pješčani zaljev s pustinjačkom crkvom na rtu i dobrim držanjem u bistroj vodi. Zaokrenete još malo i Cala Boadella je manja i zelenija, popularna kod dnevnih brodova, ali dovoljno mirna za kupanje i ručak na sidru. Obično sidrimo pred jednom od njih za poslijepodne, a na gradsku rivu prelazimo samo ako se vrijeme mrsi. Lloret ima više povijesti nego što mu reputacija daje: dvorac-hir na brdu nad morem i modernističko groblje vrijedno sata ako želite razmrsiti noge na kopnu prije mraka.",
+          "thingsToDo": [
+            "Sidrite za ručak u Cali Boadella",
+            "Kupajte se pred plažom Santa Cristina",
+            "Posjetite dvorac-hir uz more",
+            "Prošećite modernističkim grobljem"
+          ],
+          "mooringTip": "Lloret ima samo malu luku za manje brodove, pa planirajte sidro. Santa Cristina i Cala Boadella dobro drže na pijesku na četiri do osam metara, ali su otvorene jugu; prebacite se u marinu Blanes ako se za noć prognozira južnjak."
+        },
+        "7": {
+          "shortDescription": "Pet milja do Tossa de Mara, čije srednjovjekovne zidine padaju ravno u more, uz zaklonjene uvale kao Giverola malo dalje uz obalu.",
+          "description": "Tossa je razglednica koju su svi vidjeli, Vila Vella, opasan srednjovjekovni grad s okruglim kulama koje stoje točno nad morem. Prilazeći iz Lloreta dobivate najbolji kadar, bedeme zlatne u poslijepodnevnom svjetlu dok ulazite u zaljev. Tossa nema marinu i glavni zaljev je samo stanica za dobro vrijeme, ali možete sidriti pod tvrđavom na južnoj strani ili uzeti boju za par sati na kopnu. Za noć se većina posada pomakne na sjever u Calu Giverola ili Calu Futadera, obje urezane u borove i liticu i obje zaklonjene od tramuntane, s pijeskom na pet do deset metara. Prošetajte zidinama prije večere, kad dnevni izletnici odu i svjetlo omekša, pa jedite u uličicama starog grada ispod.",
+          "thingsToDo": [
+            "Prošetajte srednjovjekovnim bedemima Vile Velle",
+            "Prenoćite na sidru u zaklonjenoj Cali Giverola",
+            "Kupajte se u Cali Futadera među borovima",
+            "Večerajte u uličicama starog grada nakon sumraka"
+          ],
+          "mooringTip": "Zaljev Tosse ima boje i mjesta za sidrenje pod Vilom Vellom, ali je održiv samo u bonaci ili na sjevernjaku. Za mirnu noć pomaknite se u Calu Giverola ili Calu Futadera, koje obje ne osjete tramuntanu."
+        },
+        "8": {
+          "shortDescription": "Slijedi Sant Feliu de Guíxols, pravi lučki grad devet milja dalje, sa samostanom, pravom marinom i uvalama S'Agaróa kratkoj šetnji na sjever.",
+          "description": "Obala između Tosse i Sant Feliua među najljepšima je na ovom dijelu, niz litica i uvala s cestom koja se uspinje visoko nad vama. Ima nekih devet milja i ako je tramuntana mirna, to je divan pol vjetra po ravnoj vodi, blizu pod kopnom. Sant Feliu je pravi grad s radnom lukom i marinom koja joj odgovara, pa je dobro mjesto za dopunu zaliha ili vez nakon niza sidrišta. Stari benediktinski samostan i njegova Porta Ferrada drže centar, a obalni passeig ima živost mjesta koje živi cijele godine. Odmah na sjeveru, uvale S'Agaró i Sa Conca kratka su vožnja tenderom ili šetnja, elegantne i mirne, a obalna staza Camí de Ronda povezuje ih po liticama.",
+          "thingsToDo": [
+            "Vidite Portu Ferradu i samostan",
+            "Kupajte se na plaži Sa Conca",
+            "Prošetajte Camí de Ronda do S'Agaróa",
+            "Dopunite zalihe na tržnici uz luku"
+          ],
+          "mooringTip": "Port de Sant Feliu de Guíxols marina je s punim servisom, gorivom i gostujućim vezovima; ljeti nazovite unaprijed na VHF kanalu 09. Luka je otvorena jugu i istoku, pa jak llevant može ulaz učiniti grubim."
+        },
+        "9": {
+          "shortDescription": "Sedam milja do Palamósa, prijestolnice kozica na ovoj obali, gdje su poslijepodnevna riblja aukcija i večera s crvenim kozicama cijela poanta.",
+          "description": "Ako na ovom putu pojedete jednu stvar, nek to budu ovdašnje kozice. Gamba de Palamós istinski je posebna životinja, duboko crvena i slatka, a lovi je flota koja i danas radi iz grada; cijene odgovaraju reputaciji. Plovidba je kratka, oko sedam milja, s opcijom da se zadržite u uvalama pod Sant Feliuom. Palamós ima veliku, sigurnu marinu, 866 vezova za brodove do trideset metara, pa je noć uz vez lako dogovoriti. Uskladite dolazak s ribljom aukcijom i gledat ćete kako gajbe izlaze na obalu prije nego isti ulov pojedete te večeri. Nàutic Palamós i Can Blau kuhaju ga jednostavno, kako i treba. Gradski ribarski muzej, Espai del Peix, dobra je rezerva za kišni sat.",
+          "thingsToDo": [
+            "Jedite crvenu gamba de Palamós s gradela",
+            "Gledajte poslijepodnevnu ribarsku aukciju na rivi",
+            "Posjetite ribarski muzej Espai del Peix",
+            "Sidrite kod ribarskih kućica u Cali S'Alguer"
+          ],
+          "mooringTip": "Marina Palamós jedna je od najvećih na obali i gotovo uvijek ima mjesta, s dubinama do deset metara i jednostavnim prilazom. Rezervirajte samo za vršne kolovoške vikende; inače zovite na VHF kanalu 09 kad se približite luci."
+        },
+        "10": {
+          "shortDescription": "Počinje vraćanje na jug, laganih sedam milja natrag prema Sant Feliuu, s vremenom za zadržavanje u ribarskim uvalama putem.",
+          "description": "Ova etapa ponavlja jučerašnju vodu, ali poanta nije brzina. Obala između Palamósa i Sant Feliua prošivena je malim uvalama koje nagrađuju sporo jutro, a sa samo sedam milja imate cijeli dan za sidro. Cala S'Alguer, malo južno od Palamósa, izdvaja se: uzak zaljev obrubljen starim bijelim ribarskim kućicama i bez ceste, pa ostaje mirna. Niže je Cala del Castell, pod ruševinama iberskog naselja, i dobro drži u pijesku. Obično izaberemo jednu za ručak i dugo kupanje, pa se u kasno poslijepodne uvučemo u Sant Feliu, uzmemo vez i jedemo na kopnu. Ako tramuntana digne, skratite uvale i uđite u marinu rano.",
+          "thingsToDo": [
+            "Sidrite u Cali S'Alguer, obrubljenoj kućicama",
+            "Kupajte se pod ruševinama u Cali del Castell",
+            "Ronite s maskom po kamenim rtovima među uvalama",
+            "Vratite se u Sant Feliu na večeru na kopnu"
+          ],
+          "mooringTip": "Cala S'Alguer i Cala del Castell dobro drže na pijesku na tri do osam metara, ali su otvorene istoku, pa odgovaraju mirnim jutrima ili vjetru s kopna. Marinu u Sant Feliuu držite kao rezervu ako vjetar okrene."
+        },
+        "11": {
+          "shortDescription": "Devet milja natrag obalom pod liticama do Tossa de Mara, tako uštimano da zidinama prošetate kad dnevni brodovi odu.",
+          "description": "Povratak u Tossu prolazi istim lijepim liticama koje ste vidjeli idući na sjever, a u obrnutom svjetlu se čitaju drugačije. Krenete li iz Sant Feliua nakon doručka, možete putem uskočiti u uvalu ili dvije; Cala Salionç i Canyet dobre su za ručak, s pijeskom i zaklonom u sjevernom vremenu. Devet milja je najviše pola dana. Ideja je doći u Tossu s poslijepodnevom pred sobom, sidriti pod Vilom Vellom ili uzeti boju, i izaći na kopno na drugi, mirniji pogled na stari grad kad turistički autobusi odu. Popnite se na bedeme u zlatnom svjetlu, kad zidine žare, a čiope izlaze nad zaljev. Za noć se vratite u Calu Giverola ako se s juga nešto sprema.",
+          "thingsToDo": [
+            "Stanica za ručak u Cali Salionç",
+            "Kupajte se u zaklonjenoj Cali Canyet",
+            "Prošetajte bedemima Tosse u zlatnom svjetlu",
+            "Uzmaknite u Calu Giverola ako se vrijeme mrsi"
+          ],
+          "mooringTip": "Kao i na putu prema sjeveru, zaljev Tosse je vez samo za dobro vrijeme, s bojama i sidrenjem pod tvrđavom. Ako prognoza pokaže ikakav jug, noć provedite u Cali Giverola, uvučeni za rtom."
+        },
+        "12": {
+          "shortDescription": "Dugi skok na jug, blizu pedeset milja pokraj Barcelone do Sitgesa, pa krenite prije zore i tretirajte ga kao dan plovidbe.",
+          "description": "Ovo je jedina prava plovidba u ovih četrnaest dana. Sitges leži dobro jugozapadno od Barcelone, a od Tosse je to blizu pedeset milja, pa zaslužuje rani polazak. Obično se odvezujemo s boje prije prvog svjetla, izađemo na motoru u bonacu i uhvatimo garbí kad popuni oko podneva, za pravo jedrenje niz obalu pokraj grada. Držite se dobro od barcelonske luke, gdje je promet gust i shemu razdvajanja treba respektirati. Do sredine poslijepodneva dižu se brda Garrafa i Sitges se pokaže, bijel na zelenom. Port d'Aiguadolç velika je i zaklonjena marina odmah istočno od grada, sa 742 veza i puno restorana uz rivu. Vežite se, prošetajte u Sitges na večer i pustite da se dugi dan slegne uz kasnu večeru.",
+          "thingsToDo": [
+            "Prođite pokraj barcelonske panorame po otvorenom",
+            "Istražite stari grad i obalu Sitgesa",
+            "Vidite muzej Cau Ferrat uz more",
+            "Večera na rivi marine Aiguadolç"
+          ],
+          "mooringTip": "Port d'Aiguadolç je velik i dobro zaštićen, prima brodove do trideset i dva metra i sluša VHF kanal 09. Nakon dana od pedeset milja nazovite dok prolazite Barcelonu, da vez bude spreman kad dođete umorni."
+        },
+        "13": {
+          "shortDescription": "Tri milje do malenog Garrafa, skupine modernističkih kućica pod dramatičnim liticama, i najmirnija noć putovanja.",
+          "description": "Nakon jučerašnjih milja Garraf je nagrada, tek tri milje zapadno od Sitgesa i potpuna promjena mjerila. Selo je niz bijelih kućica sa zelenim detaljima, građenih u ranim 1900-ima po projektu vezanom uz Gaudíjev krug, smještenih pod strmim vapnencem masiva Garraf. Ima malu marinu i kratku plažu, i ne mnogo više, što je upravo čar. Jutro provedite na sidru ili na vezu, kupajte se s broda i prošetajte tih par ulica prije ručka u jednom od restorana na plaži. Masiv za selom diže se u park prirode prošaran stazama ako noge traže kretanje. Namjerno je to spor, tih dan, onaj koji dvotjednom putovanju daje da se smiri, a ne da sprinta do cilja.",
+          "thingsToDo": [
+            "Vidite modernističke kućice iz Gaudíjeva kruga",
+            "Kupajte se s broda na maloj plaži Garrafa",
+            "Ručak u restoranu uz plažu",
+            "Prošetajte stazom po masivu Garraf"
+          ],
+          "mooringTip": "Marina Garrafa je mala i ljeti se puni, pa nazovite unaprijed ili dođite rano po vez. Sidrište pred plažom dobro je u prevladavajućem garbíju, ali otvoreno jugu, pa pratite večernju prognozu."
+        },
+        "14": {
+          "shortDescription": "Zadnja etapa kući, dvanaest milja natrag do Port Olímpica, s barcelonskom panoramom koja raste pred vama cijelim putem.",
+          "description": "Zadnje jutro je jednostavnih dvanaest milja do baze i nema potrebe za žurbom. Ako garbí posluži, odjedrit ćete većinu puta, s brdima Garrafa koja zaostaju i gradom koji se polako gradi pred vama dok Sagrada Família i hotelske kule ne iscrtaju panoramu. Dajte si vremena. Charter kompanije žele brod natrag do određenog sata, obično do sredine jutra ili podneva, pa polazak u devet ostavlja prostor za predaju bez stresa. Kad se približite Barceloni, držite se podalje od ulaza u komercijalnu luku i pratite obilježen kanal u Port Olímpic. Kad su konopi na obali, ostaje vam još poslijepodne i večer u gradu, što je pravi način da se zaključi dva tjedna na moru: šetnja Barcelonetom i još jedan tanjur plodova mora.",
+          "thingsToDo": [
+            "Jedrite prema barcelonskoj panorami",
+            "Pratite obilježen kanal u Port Olímpic",
+            "Prošetajte obalom Barcelonete",
+            "Zadnja večera s plodovima mora u gradu"
+          ],
+          "mooringTip": "U Port Olímpic se vraćate protiv roka predaje u sredini jutra, pa iz Garrafa krenite rano. Držite se dobro od prilaza komercijalnoj luci i ulazite označenim kanalom; zovite marinu na VHF kanalu 09 za dodjelu veza."
+        }
+      }
+    }
+  },
+  "areas": {
+    "catalonia": {
+      "metaTitle": "Itinerari Katalonije i Costa Brave | Boat4You",
+      "metaDesc": "Rute iz Barcelone, Sitgesa i Palamósa: cale Costa Brave, gironsko zaleđe uz more i tjedni grada i mora koji stvarno funkcioniraju.",
+      "title": "Glavni grad kojem je pripojena obala",
+      "description": "Katalonija je charter za posade koje uz jedrenje žele i civilizaciju. Krenite pod barcelonskom panoramom i unutar dana ste ili na jugu među plažama Sitgesa ili na sjeveru na Costa Bravi, gdje se borovi naginju nad male kamene cale, a voda postaje boje zelene flaše. Palamós i Roses pošteni su za prenoćište i imaju ozbiljne restorane — ovo je obala koja je hranila elBulli — a tramuntana, kad puhne, jaka je, ali dobro prognozirana. Etape su fleksibilne: držite se obale u danima od dvadeset milja ili produžite kad posada nađe ritam. Ovo je i onaj rijedak tjedan jedrenja u kojem dan odmora znači Gaudíja, a ne još jednu plažu. Sletite, ukrcajte se, bez trajekata."
+    },
+    "ibiza": {
+      "metaTitle": "Itinerari jedrenja Ibiza i Formentera | Boat4You",
+      "metaDesc": "Rute iz Marine Eivissa oko Ibize i Formentere: Es Palmador, Cala Saona i najbistrija sidrišta u Španjolskoj, noć po noć.",
+      "title": "Dva otoka, jedna beskrajna laguna",
+      "description": "Skinite plakate klubova i ostaje najbolja voda za kupanje u Španjolskoj. Kanal između Ibize i Formentere laguna je s pješčanim dnom u kojoj usidreni brodovi izgledaju kao da lebde u zraku, a tjedan je dovoljan da obiđete oba otoka bez ijedne plovidbe duže od tri sata. Formentera je tiša polovica — zalasci u Cali Saona, restorani na plaži koji sidrište uzimaju ozbiljno — dok sjeverna obala Ibize skriva borove uvale do kojih partijaneri nikad ne dođu. Ako želite buku, i ona je tu, jednu vožnju tenderom dalje. Posidonija je zaštićena i pod nadzorom: sidrite na pijesku, uvijek, ili uzmite boju. Lipanj i rujan daju istu vodu s pola brodova."
+    },
+    "mallorca": {
+      "metaTitle": "Itinerari jedrenja po Mallorci | Boat4You",
+      "metaDesc": "Rute iz Palme, Alcúdije i Menorce: litice Tramuntane, nacionalni park Cabrera i menorčanske cale — planirano dan po dan.",
+      "title": "Jedan otok koji se jedri kao tri",
+      "description": "Reputacija Mallorce pripada njezinim plažama; najbolja strana pripada jedriličarima. Jugozapad vam daje Palmu — pravu pomorsku prijestolnicu s katedralom nad sidrištem — i lagane skokove između marina. Obala Tramuntane je drama: litice od šesto metara, kanjon Sa Calobre i mala luka Sóller koja žari u sumrak. Na jugu je Cabrera, otok nacionalnog parka gdje vam boja s dozvolom kupuje noćno nebo kakvo je kopno zaboravilo. Dodajte menorčansku Ciutadellu i njezine nedirnute cale ako imate drugi tjedan. Vjetrovi su izvedivi cijele godine, a infrastruktura je najbolja na Balearima. Boje za Cabreru rezervirajte tjednima unaprijed — malo ih je i vrijede toga."
+    }
+  }
+}
