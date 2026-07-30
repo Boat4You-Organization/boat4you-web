@@ -1,1 +1,433 @@
-{}
+{
+  "routes": {
+    "barcelona": {
+      "metaTitle": "Katamaran: Costa Brava w 7 dni | Boat4You",
+      "metaDesc": "Siedmiodniowa pętla katamaranem z Barcelony na Costa Brava: aukcje ryb w Arenys, mury Tossy, czerwone krewetki z Palamós i przejrzyste zatoczki.",
+      "days": {
+        "1": {
+          "shortDescription": "Przekazanie łodzi i odprawa bezpieczeństwa w Port Olímpic, potem spokojne 20 mil z wiatrem wzdłuż piasków Maresme do rybackiego Arenys.",
+          "description": "Pierwszy dzień należy raczej do papierów niż do żeglugi. Zrób przekazanie w Port Olímpic jak należy – sprawdź silnik, gaz, olinowanie, ploter i ponton – i upchnij zapasy w schowkach, zanim pomyślisz o rzucaniu cum; jeśli bakisty są puste, targ w Barcelonecie to krótka jazda taksówką. Celuj w wyjście za falochron około południa, kiedy południowo-zachodni garbí już się rozkręci. Dalej idziemy równym półwiatrem, sześć czy siedem węzłów, pół mili od plaż, z nadmorską kolejką stukającą obok. Badalona, El Masnou i Mataró dają schronienie, gdyby pogoda się psuła. Arenys żyje z rybołówstwa i jeśli przywiążesz się przed piątą, zdążysz zobaczyć, jak flota wyładowuje połów i jak rozkręca się nabrzeżna aukcja. Miasteczko wspina się jedną zieloną ulicą, Rierą, gdzie czekają bary tapas i słynne miejscowe truskawki.",
+          "thingsToDo": [
+            "Zobacz nabrzeżną aukcję ryb w llotji",
+            "Spróbuj sezonowych truskawek na Rierze",
+            "Zobacz koronki klockowe w Museu Marès de la Punta",
+            "Przejdź bary tapas na zielonej Rierze"
+          ],
+          "mooringTip": "Port d'Arenys dzielą kutry rybackie i Club Nàutic Arenys de Mar, więc zawołaj na VHF 9, zanim wsuniesz się do środka. Miejsca dla gości mają około 3-5 m głębokości i szybko się zapełniają; na lipiec i sierpień rezerwuj."
+        },
+        "2": {
+          "shortDescription": "Wyjście z Arenys w połowie przedpołudnia i 18 mil półwiatrem za Blanes, gdzie piaski Maresme ustępują czerwonym klifom właściwej Costa Brava.",
+          "description": "Wymknij się z Arenys, gdy poranny ruch już przejdzie, i trzymaj kurs za Canet i Sant Pol. Krajobraz jest nijaki aż do Blanes, gdzie skała Sa Palomera wyznacza formalny początek Costa Brava; w ciągu mili brzeg zmienia się w ochrowy klif z sosnami schodzącymi do samej wody i pojawiają się pierwsze zatoczki do kąpieli. Jeśli wiatr nie spieszy się z napełnieniem żagli, pierwszą godzinę idź na silniku z żaglami i pozwól, by resztę zrobiła popołudniowa bryza termiczna. Tossy nie da się przeoczyć od strony wody: blankowane wieże Vila Vella, ostatniego zachowanego na tym wybrzeżu średniowiecznego miasta w murach, wspinają się wprost z południowego końca plaży. Rzuć kotwicę przed Platja Gran, na czterech do sześciu metrach piasku, i dowieź załogę pontonem na brzeg. Wejdź na mury przed kolacją, a potem zjedz cim i tomba, stary rybacki gulasz.",
+          "thingsToDo": [
+            "Wejdź na mury Vila Vella aż do latarni",
+            "Znajdź brązowy pomnik Avy Gardner nad plażą",
+            "Dopłyń do zatoczki Es Codolar pod murami",
+            "Zamów cim i tomba przy stoliku nad plażą"
+          ],
+          "mooringTip": "Tossa nie ma mariny: kotwicz przed Platja Gran na czterech do ośmiu metrach, na dobrze trzymającym piasku, albo weź jedną z letnich boi. Zatoka jest otwarta od południa przez wschód, więc uciekaj wcześnie, jeśli prognoza mówi o falowaniu."
+        },
+        "3": {
+          "shortDescription": "Dziś tylko osiem mil, więc nie spiesz się: kotwica i kąpiel w otoczonych sosnami zatoczkach Giverola i Pola, a potem osłonięte Sant Feliu.",
+          "description": "Odcinek z Tossy do Sant Feliu jest tak krótki, że da się go rozciągnąć na cały dzień, a wybrzeże to wynagradza. Opłyń przylądek i idź na północny wschód pod klifami: Cala Pola, Giverola i Futadera przychodzą jedna po drugiej, każda jak klin czystej, zielonej wody między skałami. Giverola pasuje katamaranowi najlepiej – jest miejsce, by stanąć na kotwicy na pięciu do ośmiu metrach piasku za linią kąpieliska, i jest bar na plaży na przedpołudniową kawę. Widoczność pod wodą jest tu najlepsza z całego rejsu, więc zamocz fajki. Za Punta de Garbí Sant Feliu otwiera się naturalnym portem, z którego kupcy korzystają od czasów rzymskich. Klasztor benedyktynów i jego starożytna Porta Ferrada są warte godziny na lądzie, ale spacer, który trzeba zrobić, to camí de ronda na północ do S'Agaró – dwadzieścia minut ścieżki z ciosanego kamienia, kończącej się przy Sa Conca i willach nad nią.",
+          "thingsToDo": [
+            "Stań na kotwicy i ponurkuj w Cala Giverola",
+            "Bądź w Cala Pola przed łodziami wycieczkowymi",
+            "Przejdź camí de ronda do S'Agaró",
+            "Zobacz Porta Ferrada przy klasztorze"
+          ],
+          "mooringTip": "Port de Sant Feliu to jedno z najlepszych naturalnych schronień na tym wybrzeżu, słucha na VHF 9, a miejsca dla gości mają trzy do pięciu metrów. Przy ustabilizowanej pogodzie możesz zamiast tego stanąć przed miejską plażą, dobrze poza torem podejściowym."
+        },
+        "4": {
+          "shortDescription": "Leniwy siedmiomilowy skok za Platja d'Aro i jesteś w Palamós na lunch, w porę na legendarne czerwone krewetki.",
+          "description": "Nikt nie pędzi na tym odcinku. Siedem mil to dłuższe spanie, kąpiel z rufowej platformy i miejsce w Palamós z całym popołudniem przed sobą. Miasto żyje z trawlerów, które w dni robocze wyładowują dzienny połów na nabrzeżu; z galerii nad halą aukcyjną widać, jak gamba de Palamós idzie pod młotek – słodka czerwona krewetka z własnym certyfikatem. Zjedz ją po prostu z grilla przy stoliku nad portem, zapłać słono i nie żałuj ani centa. Sąsiednie Museu de la Pesca dopowiada resztę historii. Kiedy łódź już stoi, weź ponton i przejedź milę wzdłuż brzegu do Cala S'Alguer z rzędem bielonych rybackich chat albo do szerokiej, niezabudowanej piaszczystej Platja de Castell za nią. Obie pokazują się najlepiej, gdy wieczorne światło mięknie.",
+          "thingsToDo": [
+            "Obejrzyj aukcję krewetek z galerii llotji",
+            "Zamów grillowaną gamba de Palamós nad portem",
+            "Podpłyń pontonem do rybackich chat w Cala S'Alguer",
+            "Zajrzyj do Museu de la Pesca na nabrzeżu"
+          ],
+          "mooringTip": "Marina Palamós leży w głębokiej, osłoniętej zatoce i bez problemu przyjmuje katamarany, z miejscami od trzech do sześciu metrów, na VHF 9; w sezonie rezerwuj z góry, bo regaty i wejścia wycieczkowców wypełniają miasto. W spokojne noce kotwicowisko przed Platja de Castell dobrze trzyma na czterech do sześciu metrach piasku."
+        },
+        "5": {
+          "shortDescription": "Dziobem do domu – 14 mil znajomym wybrzeżem do Blanes, gdzie ogrody Marimurtra na klifie same usprawiedliwiają postój.",
+          "description": "Żegluga tym samym wybrzeżem po raz drugi nie jest karą, kiedy wygląda tak jak to. Wyjdź z Palamós po śniadaniu kursem na południowy zachód, a jeśli załoga chce jeszcze jednej zatoczki, Futadera albo Giverola dają łatwą przedpołudniową kąpiel. W Blanes Costa Brava oficjalnie się kończy – przy tej samej skale Sa Palomera, od której się zaczęła. Powodem do postoju jest Marimurtra, ogród botaniczny zbudowany tarasami w klifie przez niemieckiego przedsiębiorcę Karla Fausta w latach dwudziestych; jakieś cztery tysiące gatunków schodzi po skalnej ścianie do małej świątyni-punktu widokowego nad Cala Sa Forcanera, obrazka z połowy katalońskich pocztówek. Zaplanuj to na późne popołudnie, kiedy autokary już odjadą. Blanes zostało normalnym, pracującym miastem, a nie kurortem: flota rybacka, wieczorny spacer i uczciwe bary wokół portu. Pod koniec lipca nad samym kotwicowiskiem odbywa się międzynarodowy konkurs fajerwerków.",
+          "thingsToDo": [
+            "Przejdź się po klifowych tarasach ogrodu Marimurtra",
+            "Stań w świątyni nad Cala Sa Forcanera",
+            "Dojdź do charakterystycznej skały Sa Palomera",
+            "Popływaj w osłoniętej Cala Sant Francesc"
+          ],
+          "mooringTip": "Port de Blanes trzyma kilka miejsc dla gości na trzech do sześciu metrach, ale jest ciaśniej niż w Palamós, więc zadzwoń przed przyjściem. Przy spokojnej, ustabilizowanej pogodzie można kotwiczyć na piasku przed Cala Sant Francesc, choć przy jakiejkolwiek fali z południa staje się to nie do wytrzymania."
+        },
+        "6": {
+          "shortDescription": "Spokojne 12 mil powrotu na Maresme, z lunchem na kotwicy przed bielonym Sant Pol de Mar, a potem Arenys.",
+          "description": "To dzień na całkowite wyluzowanie. Wyjdź z Blanes wcześnie, póki woda jest jeszcze jak szkło, i weź kurs na latarnię na przylądku w Calelli, z 1859 roku – łatwy pierwszy namiar. Kilka mil dalej Sant Pol de Mar to najlepszy z lunchowych postojów: stos białych domów nad ciągiem małych plaż i pewne trzymanie w piasku dwieście metrów od brzegu. Kotwica, kąpiel, deski SUP na wodę i jedzenie w kokpicie – nic na lądzie nie da lepszego stosunku ceny do przyjemności. W weekendy skutery wodne i łodzie jednodniowe podchodzą blisko brzegu, więc trzymaj czujną wachtę, kiedy załoga jest w wodzie. Zaplanuj powrót do Port d'Arenys na późne popołudnie i wykorzystaj ostatni wieczór jak należy: długa kolacja na lądzie, suquet de peix albo fideuà, i rozliczona kasa załogowa.",
+          "thingsToDo": [
+            "Lunch na kotwicy przed Sant Pol de Mar",
+            "Weź kurs na Far de Calella z 1859 roku",
+            "Wyciągnij deski SUP po raz ostatni",
+            "Zamów kolację z fideuà na lądzie w Arenys"
+          ],
+          "mooringTip": "Z powrotem w Port d'Arenys zawołaj na VHF 9 jak poprzednio i poproś o to samo miejsce, które miałeś pierwszej nocy. Lunchowe postoje na Maresme to otwarte redy nad piaskiem – w dzień przy ustabilizowanej pogodzie w porządku, ale nie na noc."
+        },
+        "7": {
+          "shortDescription": "Wczesne 20 mil w dół Maresme i panorama Barcelony wychodzi przed dziób, potem paliwo i zdanie łodzi w Port Olímpic.",
+          "description": "Wczesne wyjście opłaca się podwójnie: trzymasz harmonogram i dostajesz Maresme o świcie, gładkie jak szkło, z małymi łódkami już wybierającymi pułapki. Licz około trzech godzin na silniku albo w leniwym motorsailingu, a jeśli zegar będzie łaskawy, zostanie czas na pożegnalną kąpiel przy El Masnou albo Ocacie. Potem miasto robi swoje wejście – wieża Collserola koronująca Tibidabo na grzbiecie, Montjuïc spadający do brzegu, a za plażą wieżowce Port Olímpic z miedzianą rybą Gehry'ego błyskającą w słońcu. Na ostatnich dwóch milach miej oczy szeroko otwarte: woda przy Barcelonecie wypełnia się łodziami wycieczkowymi, deskami SUP i pływakami. Zatankuj, zanim wsuniesz się na swój pomost, a potem przejdź listę kontrolną: motogodziny wpisane, zbiorniki odczytane, sprzęt przeliczony, obchód pokładu w poszukiwaniu obić. Resztę czasu najlepiej wydać dziesięć minut piechotą dalej, w barach tapas Barcelonety.",
+          "thingsToDo": [
+            "Wyjdź o pierwszym brzasku, w porannej ciszy",
+            "Wypatruj miedzianej ryby Gehry'ego na podejściu",
+            "Ostatnia kąpiel przy plaży Ocata",
+            "Wznieś toast za rejs kieliszkiem vermutu w Barcelonecie"
+          ],
+          "mooringTip": "Zatankuj diesla przy własnej pompie Port Olímpic, zanim zdasz łódź na czarterowym pomoście, i zrób to wczesnym rankiem, bo od piątku i soboty weekendowe kolejki rosną szybko. Głębokość przy nabrzeżu to wygodne trzy do pięciu metrów, a gdy miniesz falochron, ekipa bazy poprowadzi cię przez VHF."
+        }
+      }
+    },
+    "ciutadella": {
+      "metaTitle": "Menorca w 7 dni – opłynięcie wyspy | Boat4You",
+      "metaDesc": "Menorca w 7 dni z Ciutadelli: zatoczki południa, Cala Galdana i Macarella, Cova d'en Xoroi, port Mahón i dzikie wybrzeże północne.",
+      "days": {
+        "1": {
+          "shortDescription": "Łatwy sześciomilowy skok na południe, żeby rozruszać załogę, z finałem w piaszczystej zatoczce za sosnami, z brytyjską wieżą strażniczą nad nią.",
+          "description": "Pierwszy odcinek jest celowo łagodny: sześć mil w dół wybrzeża, żeby załoga złapała równowagę przed dłuższymi dniami. Cala en Bosch siedzi za zasłoną sosen alepskich, a piasek opada tak łagodnie, że pierwszą kąpiel weźmiesz wprost z dziobu. Nad zatoczką stoi Torre d'en Quart, jedna z kamiennych wież strażniczych, które Brytyjczycy postawili w XVIII wieku, by pilnować podejść. Menorca jest rezerwatem biosfery UNESCO od 1993 roku i to widać: żadnej ściany wysokich hoteli, tylko niskie zarośla i przylądki. Pierwszą noc zwykle bierzemy w marinie, napełniamy zbiorniki wody i porządkujemy kambuz, póki jest prąd z lądu. Na lądzie szukaj caldereta de langosta w S'Amarador i kieliszka wyspowego Vi de la Terra.",
+          "thingsToDo": [
+            "Kąpiel z dziobu w Cala en Bosch",
+            "Wejdź na wieżę strażniczą Torre d'en Quart",
+            "Caldereta de langosta w S'Amarador",
+            "Spróbuj Vi de la Terra Menorca"
+          ],
+          "mooringTip": "Marina bierze cię rufą do pomostu za jakieś €70–110 za noc w szczycie sezonu i lekceważy każdy wiatr z północy. Jeśli jest pełna albo wolisz stać na kotwicy, wejdź do samej zatoczki i rzuć na piasku na 4–6 m."
+        },
+        "2": {
+          "shortDescription": "Krótki, czteromilowy przeskok na wschód do Son Saura, gdzie plaże do kąpieli otwierają się tylko dla tych, którzy przypłyną albo przyjdą pieszo.",
+          "description": "Dziś tylko cztery mile, więc nie ma pośpiechu z rzucaniem cum. Son Saura otwiera się parą jasnych piaszczystych plaż, za którymi nie ma żadnej drogi; do wody dojdziesz albo z łodzi, albo pieszo wzdłuż Camí de Cavalls, starej ścieżki jeździeckiej okrążającej całą wyspę. Zaraz na wschód leżą Es Talaier i Cala en Turqueta, obie warte przejazdu pontonem choćby dla samego koloru wody. W lipcu i sierpniu łąki posidonii są chronione i potrzebujesz jednej z wyznaczonych boi, zarezerwowanej z góry przez Govern Balear; przez resztę roku możesz kotwiczyć na czystym piasku. W głębi lądu stoi Talaiot de Son Catlar, największa prehistoryczna osada obwarowana na wyspie. Bierzemy ze sobą kilka formatjades, miejscowych serowych pierożków, na wolny lunch w kokpicie.",
+          "thingsToDo": [
+            "Popływaj w Es Talaier i Cala en Turqueta",
+            "Przejdź odcinek Camí de Cavalls",
+            "Zwiedź mury Talaiot de Son Catlar",
+            "Zarezerwuj boję na posidonii w pełni lata"
+          ],
+          "mooringTip": "Od lipca do sierpnia musisz tu stanąć na oznakowanej boi nad posidonią, około €40–60 za noc, rezerwowanej wcześniej online w Govern Balear. Poza tymi miesiącami kotwicz na piasku na 4–6 m, z dala od trawy morskiej."
+        },
+        "3": {
+          "shortDescription": "Sześć mil do podkowy Cala Galdana, a potem ponton do Macarelli na najczęściej fotografowaną kąpiel na wyspie.",
+          "description": "Cala Galdana to ta zatoka, którą każdy widział w katalogu – wapienny amfiteatr z wąwozem rzecznym, Barranc d'Algendar, schodzącym z tyłu. Jest tu porządna marina, więc to dobre miejsce, żeby dobrać wody i pozwolić wziąć prysznic każdemu, kto ma ochotę. Prawdziwa atrakcja leży milę na wschód: Cala Macarella i jej mała sąsiadka Macarelleta, obie dostępne tylko z morza albo pieszo. Na popołudnie stajemy na kotwicy przed Macarellą, na piasku na czterech do sześciu metrach, i wychodzimy przed zmierzchem, bo nocowanie nad trawą morską jest zabronione. Jeśli nogi mają ochotę, Camí de Cavalls wspina się na zachodni klif z widokiem prosto w turkus. Lunch to arròs de peix w Es Bruc, na przylądku.",
+          "thingsToDo": [
+            "Stań na kotwicy przed Cala Macarella na popołudnie",
+            "Dojdź ścieżką po klifie do Macarellety",
+            "Lunch z arròs de peix w Es Bruc",
+            "Wejdź w wąwóz Barranc d'Algendar"
+          ],
+          "mooringTip": "Marina w Cala Galdana stawia cię rufą do pomostu za około €100–160 w szczycie sezonu, dobrze schowaną przed każdym wiatrem z północy. Macarella obok jest kotwicowiskiem tylko na dzień, piasek na 4–6 m, bez nocowania nad posidonią."
+        },
+        "4": {
+          "shortDescription": "Pięć łatwych mil do Son Bou i najdłuższej plaży Menorki, z ruinami wczesnochrześcijańskiej bazyliki na wpół zagubionymi w wydmach.",
+          "description": "Po dramaturgii Galdany Son Bou wydaje się szeroko otwarte. Plaża ciągnie się blisko dwa kilometry, z prawdziwymi wydmami z tyłu i pasem terenów podmokłych, które trzymają zaskakująco zieloną barwę. Na zachodnim końcu znajdziesz fundamenty bazyliki z V wieku, wczesnochrześcijańskiego kościoła, który dziś leży nisko wśród dzikich kwiatów i łatwo go przeoczyć od strony wody. Mariny nie ma, więc to noc na kotwicy: rzuć na piasku na pięciu do siedmiu metrach, dobrze osłonięty, kiedy wiatr siedzi na północy. Pilnuj jednak prognozy, bo południowy czyni całą zatokę nie do wytrzymania i wtedy będziesz chciał wrócić do miejsc w Galdanie, pięć mil z tyłu. Na kolację na lądzie Sa Paissa robi dobrą oliaigua, wyspowy krem z pomidorów i zielonej papryki.",
+          "thingsToDo": [
+            "Przejdź dwukilometrowy łuk Son Bou",
+            "Znajdź w wydmach ruiny bazyliki z V wieku",
+            "Kolacja z oliaigua w Sa Paissa",
+            "Wypatruj flamingów w S'Albufera des Grau"
+          ],
+          "mooringTip": "W Son Bou nie ma portu, więc planuj kotwicę: piasek dobrze trzyma na 5–7 m, a plaża osłania cię od północy. Jeśli prognoza pokazuje cokolwiek z południa, brzeg szybko robi się zawietrzny, a Cala Galdana pięć mil na zachód jest twoją kryjówką."
+        },
+        "5": {
+          "shortDescription": "Pięciomilowy skok do Cala en Porter, zatoczki w ścianach klifu, ukoronowanej barem Cova d'en Xoroi wykutym w skale.",
+          "description": "Cala en Porter jest krótka i o stromych bokach, taka zatoczka, w której gadają głównie klify. Numerem jeden jest Cova d'en Xoroi, plątanina tarasów wykutych w skalnej ścianie jakieś trzydzieści metrów nad morzem; otwiera się na drinki o zachodzie słońca i zamienia w prawdziwy klub, kiedy około dziesiątej zaczyna DJ. Bądź tam wcześnie, jeśli chcesz dobre stoliki w złotej godzinie. Na poziomie wody stajemy na kotwicy na piasku na czterech do sześciu metrach – trzyma dobrze przy północnych, choć mariny nie ma, gdyby pogoda się zmieniła. Spacer ścieżką po klifie wyrzuca jeden punkt widokowy za drugim. Na kolację Àmbit pracuje w duchu farm-to-table, a ich kalmary faszerowane sobrasadą to rzecz do zamówienia.",
+          "thingsToDo": [
+            "Drinki o zachodzie słońca w Cova d'en Xoroi",
+            "Kąpiel z kotwicy pod wapiennymi klifami",
+            "Kalmary z sobrasadą w Àmbit",
+            "Idź ścieżką po klifie do punktów widokowych"
+          ],
+          "mooringTip": "W Cala en Porter nie ma miejsc w marinie, więc zostaje kotwica na piasku na 4–6 m, wygodna, póki wiatr trzyma się północy. To odsłonięte nacięcie w brzegu, więc raczej pilnuj prognozy, niż zostawaj tu na siłę, jeśli buduje się cokolwiek z południa."
+        },
+        "6": {
+          "shortDescription": "Osiem mil na wschód do Mahón, w głąb jednego z najdłuższych naturalnych portów Morza Śródziemnego, do destylarni ginu działającej od 1700 roku.",
+          "description": "Wejście pod żaglami do Mahón to popisowy numer tygodnia. Skręcasz za forty przy wejściu i idziesz portem głębokim na prawie pięć kilometrów, jednym z największych naturalnych kotwicowisk Morza Śródziemnego, z wysepkami i starymi szpitalami kwarantanny rozsianymi po środku. Marina na jego końcu zostawia cię w krótkim spacerze od starego miasta. Menorca przeżyła większość XVIII wieku pod brytyjskimi rządami i spadek po tym widać wszędzie: gin, okna skrzynkowe i zamiłowanie do pomady, ginu rozcieńczonego mętną lemoniadą. Xoriguer destyluje przy nabrzeżu od około 1700 roku i prowadzi degustacje niemal codziennie. Kup rybę wprost z lady na Mercat des Peix albo pozwól, żeby Sa Llagosta ugotowała ci z niej porządny wyspowy gulasz.",
+          "thingsToDo": [
+            "Zwiedź destylarnię ginu Xoriguer",
+            "Sącz pomadę na nabrzeżu",
+            "Kup rybę na Mercat des Peix",
+            "Rybny gulasz w Sa Llagosta"
+          ],
+          "mooringTip": "Marina di Mahón bierze cię rufą do pomostu za około €100–160 w szczycie sezonu i jest tak osłonięta, jak tylko port bywa, cokolwiek robi wiatr. Jeśli wolisz kotwicę, Cala Padera w głębi zatoki trzyma na piasku na 5–7 m."
+        },
+        "7": {
+          "shortDescription": "Długa droga do domu: dwadzieścia cztery mile wokół dzikiej północy, z kąpielami w Cala Mesquida i Port d'Addaia.",
+          "description": "To dzień, który zobowiązuje, więc zwykle rzucamy cumy przed dziewiątą. Do Ciutadelli jest jakieś dwadzieścia cztery mile, a trasa wynosi cię na północne wybrzeże: bardziej skaliste, pustsze i znacznie bardziej otwarte na tramuntanę niż południe, po którym pływałeś. Cala Mesquida, zaraz za Maó, nadaje się na wczesną kąpiel, a wąska zatoka solnisk w Port d'Addaia to spokojne miejsce, żeby przerwać przelot. Potem jest już równy odcinek na zachód, zwykle z popołudniową bryzą, która się napełnia. Celuj w wejście do Ciutadelli wczesnym popołudniem, żeby zatankować i opłukać łódź przed zdaniem. Port to długi, ciasny kanał podatny na nagłe wahania poziomu wody zwane rissagą, więc zostaw w cumach prawdziwy luz. Zakończ greixonerą, wyspowym kremem cynamonowym, na Plaça des Born.",
+          "thingsToDo": [
+            "Wczesna kąpiel w Cala Mesquida",
+            "Przerwij przelot w Port d'Addaia",
+            "Zatankuj i opłucz łódź w Ciutadelli",
+            "Krem greixonera na Plaça des Born"
+          ],
+          "mooringTip": "Ciutadella przyjmuje rufą do pomostu za jakieś €80–130 w szczycie sezonu; zatankuj przy nabrzeżu paliwowym u wejścia, zanim zaczniesz wciskać się w głąb. Port potrafi falować przy rissadze, więc zdubluj cumy i potwierdź godzinę zdania łodzi 24 godziny wcześniej."
+        }
+      }
+    },
+    "ciutadella-south": {
+      "metaTitle": "Z Menorki na Mallorcę w 7 dni | Boat4You",
+      "metaDesc": "Tydzień żeglugi z Ciutadelli: Cala Galdana i Macarella, przeskok do Cala Ratjada, potem Alcúdia, Port de Pollença i Cala Sant Vicenç.",
+      "days": {
+        "1": {
+          "shortDescription": "Spokojne 12 mil na południe na otwarcie tygodnia, z finałem w Cala Galdana, skąd do turkusu Macarelli jest krótki skok pontonem.",
+          "description": "Wejdź w tydzień łagodnie, krótkim odcinkiem w dół południowego wybrzeża Menorki. Dwanaście mil, dwie godziny pod żaglami, jeśli napełni się bryza morska, i żaden powód, żeby spieszyć się z cumami. Cala Galdana leży u wylotu zalesionego wąwozu, a woda przechodzi z głębokiego błękitu w tę bladą, wapienną zieleń, kiedy podchodzisz do plaży. Prawdziwa nagroda jest obok: Cala Macarella i mała Macarelleta, dostępne tylko łodzią albo pieszo, obie warte popołudnia na kotwicy. Zwykle stajemy przed Macarellą na kąpiel, a potem idziemy odcinkiem Camí de Cavalls po klifie. Z powrotem w Galdanie wiąż się w marinie i jedz na lądzie. Es Bruc robi porządne arròs de la terra, ryż z królikiem i szafranem, którego nie znajdziesz w wielu kartach poza wyspą.",
+          "thingsToDo": [
+            "Stań na kotwicy i popływaj przed Cala Macarella",
+            "Przejdź klifową ścieżką Camí de Cavalls",
+            "Spróbuj arròs de la terra w Es Bruc",
+            "Przepłyń pontonem do małej Cala Macarelleta"
+          ],
+          "mooringTip": "Marina w Cala Galdana bierze cię rufą do pomostu i jest dobrze zabezpieczona od północy, jakieś €100–160 za noc w szczycie sezonu. W Macarelli możesz kotwiczyć tylko w ciągu dnia, na piasku na 4–6 m; zatoka jest objęta ochroną posidonii, więc bez nocowania."
+        },
+        "2": {
+          "shortDescription": "Przeskok przez cieśninę na Mallorcę, 32 mile otwartej wody do Cala Ratjada, najlepiej zacząć wcześnie, zanim tramuntana rozkręci się po południu.",
+          "description": "To ten długi dzień i ten, który planuje się pod wiatr. Pas otwartej wody między wyspami łapie tramuntanę wprost w bok, a to, co przy śniadaniu jest leniwym wiatrem z północy, po południu potrafi wiać 25 węzłów z krótką, siekaną falą. Warto rzucić cumy przed dziewiątą i mieć większość tych 32 mil za sobą przed lunchem. Lądujesz w północno-wschodnim narożniku Mallorki, w Cala Ratjada, starym porcie rybackim, który nadal wyładowuje własny połów. Wiąż się w marinie, porządnie osłoniętej, albo rzuć kotwicę za przylądkiem w Cala Agulla nad czystym piaskiem. Na wzgórzu zamek Capdepera z XIV wieku to łatwy spacer i dobry sposób, żeby rozprostować nogi po dniu za sterem.",
+          "thingsToDo": [
+            "Wejdź do XIV-wiecznego zamku w Capdeperze",
+            "Popływaj w Cala Agulla nad białym piaskiem",
+            "Llagosta amb sobrassada w Es Mollet",
+            "Przejdź nadmorską ścieżką do Cala Gat"
+          ],
+          "mooringTip": "Marina w Cala Ratjada jest w pełni zamknięta i to pewny wybór po przejściu cieśniny; w lipcu i sierpniu rezerwuj z góry. Jeśli jest pełna albo wolisz stanąć na kotwicy, Cala Agulla zaraz na północ dobrze trzyma na piasku na 4–6 m przy ustabilizowanej pogodzie."
+        },
+        "3": {
+          "shortDescription": "Piętnaście łatwych mil w Zatokę Alcúdia do Colonia de Sant Pere, cichej wioski, w której wydmy wchodzą w sosnowe lasy.",
+          "description": "Po wczorajszej harówce ten dzień wydaje się odpoczynkiem. Piętnaście mil na zachód wzdłuż wybrzeża i w szeroką Zatokę Alcúdia, ze wzgórzami Serra de Llevant po lewej burcie prawie całą drogę. Colonia de Sant Pere jest bardziej pracującą wioską niż kurortem i przez to cichsza. Postój, który zapamiętuje większość załóg, to Es Coll Baix – jasna, kamienista plaża pod ścianą wapienia, do której dojdziesz tylko łodzią albo stromą ścieżką przez sosny. Zwykle stajemy tam na długi lunch i kąpiel, a potem idziemy dalej do wioskowej mariny. Jeśli wieczorem zostaną wam siły w nogach, wypożyczcie rowery i pojedźcie cztery kilometry w głąb lądu do Betlem, garstki domów na zboczu z widokiem na całą zatokę. Ca'n Bernat w wiosce robi dobry tumbet.",
+          "thingsToDo": [
+            "Stań na kotwicy i popływaj w Es Coll Baix",
+            "Przejedź cztery kilometry rowerem do Betlem",
+            "Zamów tumbet w Ca'n Bernat",
+            "Przejdź się o zmierzchu po wydmach za sosnami"
+          ],
+          "mooringTip": "Marina w Colonii jest mała, rufą do pomostu, tańsza niż duże porty Mallorki – jakieś €70–110 – i schowana od północy. Es Coll Baix to kotwicowisko wyłącznie dzienne, piasek na 4–6 m; nie ma tam żadnej osłony, gdyby wiatr się obrócił, więc pilnuj prognozy."
+        },
+        "4": {
+          "shortDescription": "Dziesięciomilowy skok przez zatokę do Alcúdii, gdzie rzymskie ruiny i średniowieczne mury stoją tuż za portem.",
+          "description": "Dziś tylko dziesięć mil, prosto przez głowę zatoki, więc jest czas na kąpiel przy Platja d'Alcúdia, zanim pomyślisz o cumowaniu. Długi łuk piasku opada łagodnie, a woda trzyma ciepło aż do października. Port d'Alcúdia to duża, wygodna marina z linkami pomocniczymi i mnóstwem miejsca, co czyni ją spokojnym punktem na popołudnie na lądzie. Powodem do postoju jest stare miasto. Alcúdia zachowała XIV-wieczne mury niemal w całości i obejdziesz je w pół godziny. Zaraz za nimi leżą kamienie rzymskiej Pollentii, stolicy wyspy dwa tysiące lat temu. Wieczór zakończ w Ca'n Costa, gdzie leje się palo, słodko-gorzki mallorkański likier ziołowy wytwarzany tu od 1761 roku.",
+          "thingsToDo": [
+            "Obejdź kompletne XIV-wieczne mury miasta",
+            "Pospaceruj po ruinach rzymskiej Pollentii",
+            "Sącz palo w Ca'n Costa (od 1761 roku)",
+            "Popływaj przy długiej piaszczystej Platja d'Alcúdia"
+          ],
+          "mooringTip": "Port d'Alcúdia stawia cię rufą do pomostu na linkach pomocniczych i rzadko bywa pełny, więc zwykle wejdziesz bez rezerwacji; licz na €100–160 w pełni lata. Jest w pełni zamknięty, wygodne miejsce, żeby przesiedzieć popołudniową tramuntanę."
+        },
+        "5": {
+          "shortDescription": "Tylko osiem mil na północ do Port de Pollença, wtulonego pod tramuntanę, z półwyspem Formentor i jego plażami kawałek dalej.",
+          "description": "Krótki przelot, wielkie widoki. Osiem mil wprowadza cię do zatoki w Port de Pollença, z szarą ścianą tramuntany wznoszącą się wprost z wody za miastem. Zanim się rozłożysz, warto pójść jeszcze cztery mile na koniec półwyspu Formentor. Platja de Formentor to pas drobnego, jasnego piasku pod parasolowatymi sosnami, a kotwicowisko przed nim jest jednym z najładniejszych na tym wybrzeżu. W mieście marina jest spokojna, a promenada obsadzona starymi platanami. Klasyczny poranny spacer prowadzi tu w górę Doliny Boquer, suchego wapiennego wąwozu, nad którego grzbietem późnym latem polują sokoły Eleonory. Na kolację Stay na pomoście to pewny stolik, a ich pieczona lechona to rzecz do zamówienia.",
+          "thingsToDo": [
+            "Stań na kotwicy przed jasnym piaskiem Platja de Formentor",
+            "Wejdź Doliną Boquer po sokoły",
+            "Zamów lechonę w Stay Restaurant",
+            "Wejdź na wieżę strażniczą Talaia d'Albercutx"
+          ],
+          "mooringTip": "Marina w Port de Pollença jest rufą do pomostu i osłonięta od północy, około €100–160 w szczytowych tygodniach. Jeśli chcesz kotwicowisko przy Formentorze, weź je na lunch, a nie na noc; jest otwarte na północ i kołysze, gdy wchodzi popołudniowa bryza."
+        },
+        "6": {
+          "shortDescription": "Czteromilowe przesunięcie za rogiem do Cala Sant Vicenç, skupiska małych zatok wciśniętych między klify tramuntany.",
+          "description": "To ledwie przelot, cztery mile za przylądek, więc poranek weź dla siebie. Cala Sant Vicenç to w istocie zestaw małych zatok pod jedną nazwą, wciętych w stopę gór tam, gdzie opadają do morza. Cala Molins jest najszersza i to przed nią stajemy na kotwicy; pozostałe, między innymi Cala Barques i Cala Carbó, to kieszenie piasku i żwiru w zasięgu pontonu. Weź maskę. Blisko Cala Molins jest krótki tunel morski, przez który da się przepłynąć, gdy woda jest spokojna, a skała pod wodą jest efektowna. Mariny tu nie ma, więc noc spędzasz na kotwicy na piasku na czterech do sześciu metrach, dobrze zakryty od północy. Restaurant Clivia w przysiółku wyżej robi hojne frit de marisc.",
+          "thingsToDo": [
+            "Ponurkuj w morskim tunelu przy Cala Molins",
+            "Przepłyń pontonem między Cala Barques i Cala Carbó",
+            "Zjedz frit de marisc w Restaurant Clivia",
+            "Obejrzyj zachód słońca ze ścieżki na klifie"
+          ],
+          "mooringTip": "To darmowe kotwicowisko bez mariny, więc wtul się w tę z trzech zatok, która pasuje do wiatru, i usiądź na piasku na 4–6 m. Jest przytulnie przy północnym, ale odsłonięte na wszystko ze wschodu; zrób zapasy w Pollença przed wyjściem, bo tu nie ma czego kupić."
+        },
+        "7": {
+          "shortDescription": "Długa droga do domu, 38 mil z powrotem przez cieśninę do Ciutadelli, wczesny start i oko na tramuntanę.",
+          "description": "Ostatni dzień odbija drugi: długie przejście otwartą wodą, które nagradza wczesny start. Trzydzieści osiem mil na wschód, z powrotem na Menorcę, i obowiązuje ta sama zasada – zrób mile, zanim tramuntana rozkręci się po południu. Celuj w wypatrzenie Cap d'Artrutx, przysadzistej latarni w południowo-zachodnim narożniku Menorki, wczesnym popołudniem; to twój znak na dojście. Zaraz za nią Son Xoriguer i Cala en Bosch oferują ostatnią turkusową kąpiel, jeśli szedłeś w dobrym tempie. Dalej jest już krótki odcinek do Ciutadelli. Dobierz paliwo przy nabrzeżu u wejścia do portu, zanim ruszysz szukać miejsca, żeby zdanie łodzi nazajutrz przebiegło bezboleśnie. Zostaw godzinę na stare miasto: greixonera, krem o zapachu cynamonu, na Plaça des Born to właściwy ostatni przystanek.",
+          "thingsToDo": [
+            "Popływaj w turkusowej wodzie przy Son Xoriguer",
+            "Sfotografuj latarnię Cap d'Artrutx",
+            "Spróbuj greixonery na Plaça des Born",
+            "Zatankuj przed zdaniem łodzi w Ciutadelli"
+          ],
+          "mooringTip": "Wąski port Ciutadelli jest rufą do pomostu i szybko zapełnia się w lecie, jakieś €80–130 za noc; potwierdź miejsce i godzinę zdania łodzi dzień wcześniej. Zatankuj przy nabrzeżu paliwowym blisko wejścia, zanim się przywiążesz, bo trudno tam podejść, kiedy jesteś już wciśnięty między inne łodzie."
+        }
+      }
+    },
+    "costa-brava-14-days": {
+      "metaTitle": "Barcelona i Costa Brava w 14 dni | Boat4You",
+      "metaDesc": "14-dniowa pętla z Barcelony (Port Olímpic) wzdłuż Maresme na zatoczki Costa Brava, powrót przez Sitges i Garraf. Mury Tossy, krewetki z Palamós.",
+      "days": {
+        "1": {
+          "shortDescription": "Krótki odcinek rozruchowy w górę wybrzeża Maresme, z miasta do zadbanej mariny w El Masnou i jej znanych pomostów z używanymi łodziami.",
+          "description": "Większość załóg używa pierwszego dnia raczej na rozruszanie łodzi niż na robienie mil, a ten odcinek do tego pasuje. Z Port Olímpic w górę brzegu Maresme jest jakieś osiem mil, dość blisko, żeby wieżowce Barcelony zostały ci przez pierwszą godzinę za plecami. Garbí zwykle napełnia się po lunchu, więc jeśli rzucisz cumy w połowie przedpołudnia, wyjdziesz z portu na silniku i złapiesz lekki południowo-zachodni na drogę na północ. Marina w El Masnou siedzi za solidnym falochronem i zostaje spokojna w niemal każdych warunkach. Port jest znany w całej Hiszpanii jako miejsce, gdzie brokerzy parkują używane jachty, więc pomosty świetnie się przegląda. Na lądzie stara dzielnica rybacka wspina się na wzgórze wąskimi uliczkami, a piwniczek i tarasów jest dość, żeby wejść w rytm rejsu.",
+          "thingsToDo": [
+            "Przejrzyj pomosty z używanymi jachtami w Port Masnou",
+            "Przejdź starą dzielnicę rybacką w górę wzgórza",
+            "Drinki o zachodzie na tarasach przy marinie",
+            "Zrób zapasy na miejskim targu przed Costa Brava"
+          ],
+          "mooringTip": "Port Masnou ma dużo miejsc dla gości i słucha na VHF 09; w lipcu i sierpniu dzwoń wcześniej, bo handel używanymi łodziami trzyma pomosty zajęte. Falochron osłania cię od popołudniowego garbí."
+        },
+        "2": {
+          "shortDescription": "Krótki skok do Mataró, największej mariny Maresme i rzymskiego miasta wartego popołudnia poza łodzią.",
+          "description": "To ledwie przelot, pięć mil skakania wzdłuż brzegu, więc nie ma powodu spieszyć się ze śniadaniem. Zwykle odchodzimy od pomostu około dziesiątej, dajemy porannej ciszy się wypalić i ostatni odcinek płyniemy pod żaglami, gdy bryza się ustabilizuje. Marina w Mataró jest największa na tym wybrzeżu i ma pełne zaplecze warsztatowe, jeśli coś wymaga uwagi na początku czarteru. Samo miasto wynagradza spacer w głąb lądu. To rzymskie Iluro i wciąż da się prześledzić dawną siatkę ulic, jest kryta hala targowa i garść budynków modernistycznych młodego Gaudíego. Zapasy robi się tu łatwo, lepiej niż gdziekolwiek aż do Palamós, więc warto zapełnić bakisty, zanim wejdziesz w cichsze wybrzeże. Wieczory są bez pośpiechu, z barami vermutowymi przy nabrzeżu, które napełniają się powoli po ósmej.",
+          "thingsToDo": [
+            "Prześledź rzymską siatkę ulic Iluro",
+            "Zobacz modernistyczne budynki młodego Gaudíego",
+            "Zrób zakupy w krytej hali miejskiej",
+            "Vermut w barze nad morzem po ósmej"
+          ],
+          "mooringTip": "Port de Mataró jest duży i rzadko pełny, z miejscami dla gości na zewnętrznych pomostach i dźwigiem, jeśli potrzebujesz prac na łodzi. Głębokości są wszędzie hojne, więc podejście jest proste nawet o zmierzchu."
+        },
+        "3": {
+          "shortDescription": "Sześć mil do Arenys de Mar, pracującego portu rybackiego z poranną aukcją ryb i jednym z najstarszych klubów żeglarskich na tym wybrzeżu.",
+          "description": "Arenys nadal łowi ryby na życie i to daje portowi inny charakter niż kurortowe mariny po obu jego stronach. Przejście jest krótkie, jakieś sześć mil, a jeśli garbí wieje, przejdziesz wzdłuż wybrzeża półwiatrem z pełnymi żaglami i wyłączonym silnikiem. Club Nàutic działa tu od 1952 roku i przyjmuje przypływające załogi serdecznie. Większość ludzi ciągnie tu późnopopołudniowa aukcja ryb, llotja, kiedy wracają jednodniowe kutry, a połów schodzi w krzykliwym tempie, które można obserwować z nabrzeża. Zarezerwuj stolik obok i zjedz to, co wyładowano godzinę wcześniej. Miasto biegnie w górę od wody, a stary cmentarz nad nim jest dziwnie słynny – wart wejścia choćby dla widoku z powrotem na port.",
+          "thingsToDo": [
+            "Obejrzyj popołudniową aukcję ryb w llotji",
+            "Zjedz dzienny połów przy nabrzeżu",
+            "Wejdź na punkt widokowy przy cmentarzu na wzgórzu",
+            "Odwiedź Club Nàutic, założony w 1952 roku"
+          ],
+          "mooringTip": "Arenys to prawdziwy port rybacki, więc na wejściu trzymaj się z dala od toru trawlerów i nabrzeża aukcyjnego. Club Nàutic trzyma miejsca dla gości; wołaj na VHF 09 i licz się z niemałym ruchem łodzi roboczych."
+        },
+        "4": {
+          "shortDescription": "Siedmiomilowy odcinek do Calelli, widocznej z wielu mil dzięki starej latarni, z długą plażą do kotwiczenia przy ustabilizowanej pogodzie.",
+          "description": "Calella nie ma prawdziwej mariny, co zmienia kształt dnia. Celujesz w latarnię, Far de Calella, białą na swoim przylądku od lat pięćdziesiątych XIX wieku i widoczną długo przed tym, jak miasto wyjdzie z mgiełki. Przy spokojnej pogodzie kotwicowisko przed główną plażą nadaje się na lunch albo i na noc, piasek dobrze trzyma na pięciu czy sześciu metrach. Pilnuj prognozy, bo cokolwiek ze wschodem w środku wchodzi tu prosto i kotwicowisko szybko staje się nieprzyjemne. Na lądzie Calella jest ruchliwym kurortem z długą promenadą, ale w starym rdzeniu za nią wciąż bije serce katalońskiego miasteczka targowego. Wejdź na Torre de les Bruixes na wzgórzu po szerszy widok, a potem zejdź na wczesną kąpiel, jeszcze zanim plażowe tłumy przerzedzą się o zmierzchu.",
+          "thingsToDo": [
+            "Zobacz latarnię Far de Calella z lat 50. XIX wieku",
+            "Wejdź na Torre de les Bruixes",
+            "Popływaj przy długiej miejskiej plaży",
+            "Przejrzyj kataloński targ na starym mieście"
+          ],
+          "mooringTip": "Portu tu nie ma, tylko otwarte kotwicowisko przed plażą, które działa przy zachodnich wiatrach i przy ciszy. Rzuć kotwicę na pięciu do sześciu metrach na piasku i uciekaj przy pierwszych oznakach fali ze wschodu, która wchodzi bez większego ostrzeżenia."
+        },
+        "5": {
+          "shortDescription": "Dziewięć mil na północ do Blanes, gdzie skała Sa Palomera wyznacza prawdziwy początek Costa Brava, a na brzegu czeka porządne rybackie miasto.",
+          "description": "W Blanes wybrzeże zmienia charakter. Płaskie plaże Maresme ustępują bardziej skalistemu, obsadzonemu sosnami brzegowi, który ludzie mają w głowie, myśląc o Costa Brava, a skała Sa Palomera stojąca przed miastem jest tradycyjnym znakiem tej granicy. Z Calelli jest jakieś dziewięć mil, łatwy poranek, jeśli wyjdziesz przed dziewiątą, zanim garbí się rozkręci. Miasto trzyma poważną flotę rybacką, a codzienna aukcja karmi restauracje takie jak Can Flores, otwarta przy targu od 1958 roku i nadal to miejsce, do którego odsyłają miejscowi. Nad portem leżą dwa ogrody botaniczne, z Marimurtrą jako lepszym z nich, którego ścieżki opadają do punktów widokowych wprost nad morzem. Marina jest dobrze prowadzona i osłonięta, wygodna baza na noc przed tym, jak nazajutrz zaczną się właściwe zatoczki.",
+          "thingsToDo": [
+            "Przejdź klifowe ścieżki ogrodów Marimurtra",
+            "Zjedz świeżą rybę w Can Flores",
+            "Zobacz z bliska skałę Sa Palomera",
+            "Przejrzyj portowy targ rybny o świcie"
+          ],
+          "mooringTip": "Marina Blanes i Club de Vela przyjmują gości i nasłuchują na VHF 09, z dobrą osłoną za falochronem. W pełni lata rezerwuj miejsce z góry, bo to popularny pierwszy albo ostatni przystanek wielu czarterów na Costa Brava."
+        },
+        "6": {
+          "shortDescription": "Krótki, czteromilowy przeskok do Lloret de Mar, głośnego na lądzie, ale otoczonego spokojniejszymi zatoczkami jak Santa Cristina i Cala Boadella.",
+          "description": "Cztery mile to nic, więc traktuj ten dzień jak dzień zatoczek, a nie przelot. Miejska plaża w Lloret jest w sezonie hałaśliwa, ale to kotwicowiska po obu jej stronach są powodem, żeby tu przyjść. Santa Cristina, zaraz na południowy zachód, to szeroka piaszczysta zatoka z pustelnią na przylądku i dobrym trzymaniem w czystej wodzie. Trochę dalej za rogiem Cala Boadella jest mniejsza i bardziej zielona, popularna wśród łodzi jednodniowych, ale wystarczająco spokojna na kąpiel i lunch na kotwicy. Zwykle stajemy przed jedną z nich na popołudnie i przechodzimy na miejskie nabrzeże tylko wtedy, gdy szykuje się pogoda. Samo Lloret ma więcej historii, niż sugeruje jego reputacja: zamek-kaprys na wzgórzu nad morzem i modernistyczny cmentarz warty godziny, jeśli chcesz rozprostować nogi na lądzie przed zmrokiem.",
+          "thingsToDo": [
+            "Stań na kotwicy na lunch w Cala Boadella",
+            "Popływaj przy plaży Santa Cristina",
+            "Zobacz zamek-kaprys nad morzem",
+            "Pospaceruj po modernistycznym cmentarzu"
+          ],
+          "mooringTip": "Lloret ma tylko mały port dla małych jednostek, więc planuj kotwicę. Santa Cristina i Cala Boadella dobrze trzymają na piasku na czterech do ośmiu metrach, ale są otwarte na południe; przy prognozie południowego na noc przenieś się do mariny w Blanes."
+        },
+        "7": {
+          "shortDescription": "Pięć mil do Tossa de Mar, ze średniowiecznymi murami spadającymi wprost do wody i osłoniętymi zatoczkami jak Giverola tuż w górę wybrzeża.",
+          "description": "Tossa to ta pocztówka, którą każdy widział – Vila Vella, średniowieczne miasto w murach z okrągłymi wieżami stojącymi wprost nad morzem. Podchodząc od Lloret, dostajesz najlepszy widok: mury złote w popołudniowym świetle, kiedy wchodzisz w zatokę. Tossa nie ma mariny, a główna zatoka to postój tylko na dobrą pogodę, ale możesz zakotwiczyć pod twierdzą po południowej stronie albo wziąć boję na kilka godzin na lądzie. Na noc większość załóg przesuwa się na północ do Cala Giverola albo Cala Futadera, obu wciętych w sosny i klif i obu osłoniętych od tramuntany, z piaskiem na pięciu do dziesięciu metrach. Przejdź mury przed kolacją, kiedy jednodniowi turyści już odjadą i światło zmięknie, a potem zjedz w uliczkach starego miasta poniżej.",
+          "thingsToDo": [
+            "Przejdź średniowieczne mury Vila Vella",
+            "Zakotwicz na noc w osłoniętej Cala Giverola",
+            "Popływaj w otoczonej sosnami Cala Futadera",
+            "Zjedz kolację w uliczkach starego miasta po zmierzchu"
+          ],
+          "mooringTip": "W zatoce Tossy są boje i miejsce na kotwicę pod Vila Vella, ale da się tam stać tylko przy ciszy albo wiatrach z północy. Na spokojną noc przejdź do Cala Giverola albo Cala Futadera, które obie lekceważą tramuntanę."
+        },
+        "8": {
+          "shortDescription": "Dalej Sant Feliu de Guíxols, prawdziwe portowe miasto dziewięć mil dalej, z klasztorem, porządną mariną i zatoczkami S'Agaró w krótkim spacerze na północ.",
+          "description": "Wybrzeże między Tossą a Sant Feliu należy do najpiękniejszych na tym odcinku – ciąg klifów i zatoczek z drogą wspinającą się wysoko nad tobą. Jest jakieś dziewięć mil, a jeśli tramuntana milczy, to piękny półwiatr po płaskiej wodzie blisko pod brzegiem. Sant Feliu to prawdziwe miasto z pracującym portem i mariną pod jego miarę, więc dobrze się tu uzupełnia zapasy albo bierze miejsce po serii kotwicowisk. Stary klasztor benedyktynów i jego Porta Ferrada trzymają centrum, a nadmorski passeig ma gwar miejsca, które żyje przez cały rok. Zaraz na północ zatoczki S'Agaró i Sa Conca są w zasięgu pontonu albo spaceru – eleganckie i spokojne, a nadmorska ścieżka Camí de Ronda łączy je po klifach.",
+          "thingsToDo": [
+            "Zobacz Porta Ferrada i klasztor",
+            "Popływaj przy plaży Sa Conca",
+            "Przejdź Camí de Ronda do S'Agaró",
+            "Uzupełnij zapasy na targu przy porcie"
+          ],
+          "mooringTip": "Port de Sant Feliu de Guíxols to marina z pełnym serwisem, paliwem i miejscami dla gości; latem dzwoń wcześniej na VHF 09. Port jest otwarty na południe i wschód, więc mocny llevant potrafi zrobić wejście wyboiste."
+        },
+        "9": {
+          "shortDescription": "Siedem mil do Palamós, krewetkowej stolicy wybrzeża, gdzie popołudniowa aukcja ryb i kolacja z czerwonych krewetek są całym sensem postoju.",
+          "description": "Jeśli masz zjeść jedną rzecz w tym rejsie, niech to będą tutejsze krewetki. Gamba de Palamós to naprawdę wyjątkowe zwierzę, głęboko czerwone i słodkie, łowione przez flotę, która nadal pracuje z tego miasta, i cena idzie w parze z reputacją. Żegluga w górę jest krótka, około siedmiu mil, z opcją poguzdrania się po drodze w zatoczkach pod Sant Feliu. Palamós ma dużą, bezpieczną marinę – 866 miejsc, przyjmuje łodzie do trzydziestu metrów – więc noc przy pomoście łatwo zorganizować. Zgraj przyjście z aukcją ryb i obejrzysz, jak skrzynki wychodzą na brzeg, zanim wieczorem zjesz ten sam połów. Nàutic Palamós i Can Blau gotują je po prostu, i tak właśnie należy. Miejskie muzeum rybołówstwa, Espai del Peix, jest dobrym planem B na deszczową godzinę.",
+          "thingsToDo": [
+            "Zjedz czerwoną gamba de Palamós po prostu z grilla",
+            "Obejrzyj popołudniową aukcję ryb przy nabrzeżu",
+            "Odwiedź muzeum rybołówstwa Espai del Peix",
+            "Zakotwicz przy rybackich chatach w Cala S'Alguer"
+          ],
+          "mooringTip": "Marina Palamós jest jedną z największych na wybrzeżu i niemal zawsze ma miejsce, z głębokościami do dziesięciu metrów i prostym podejściem. Rezerwuj z góry tylko na szczytowe sierpniowe weekendy; poza tym wołaj na VHF 09, podchodząc do portu."
+        },
+        "10": {
+          "shortDescription": "Zaczyna się powrót na południe, łatwe siedem mil w stronę Sant Feliu, z czasem na przystanki w rybackich zatoczkach po drodze.",
+          "description": "Ten odcinek wraca po wczorajszej wodzie, ale rzecz w tym, żeby się nie spieszyć. Wybrzeże między Palamós a Sant Feliu jest przeszyte małymi zatoczkami, które wynagradzają wolny poranek, a mając do przejścia tylko siedem mil, masz cały dzień do wydania na kotwicy. Cala S'Alguer, zaraz na południe od Palamós, jest tu najlepsza – wąska zatoczka wyłożona starymi bielonymi chatami rybackimi, bez dostępu drogowego, więc zostaje cicha. Dalej w dół Cala del Castell leży pod ruinami iberyjskiej osady i dobrze trzyma w piasku. Zwykle wybieramy jedną na lunch i długą kąpiel, a potem wsuwamy się do Sant Feliu późnym popołudniem, żeby wziąć miejsce i zjeść na lądzie. Jeśli jednak tramuntana się podniesie, skróć zatoczki i wejdź do mariny wcześniej.",
+          "thingsToDo": [
+            "Zakotwicz w otoczonej chatami Cala S'Alguer",
+            "Popływaj pod ruinami w Cala del Castell",
+            "Ponurkuj na skalistych przylądkach między zatoczkami",
+            "Wróć do Sant Feliu na kolację na lądzie"
+          ],
+          "mooringTip": "Cala S'Alguer i Cala del Castell dają dobre trzymanie w piasku na trzech do ośmiu metrach, ale są otwarte na wschód, więc pasują na ciszę albo poranki z wiatrem od lądu. Trzymaj marinę w Sant Feliu jako wariant awaryjny, gdyby wiatr się obrócił."
+        },
+        "11": {
+          "shortDescription": "Dziewięć mil z powrotem w dół obramowanego klifami wybrzeża do Tossa de Mar, tak zgrane, żeby znów przejść mury, kiedy jednodniowe łodzie już odejdą.",
+          "description": "Droga powrotna do Tossy prowadzi wzdłuż tych samych okazałych klifów, które mijałeś idąc na północ, i w przeciwnym świetle czyta się inaczej. Wyjdź z Sant Feliu po śniadaniu i możesz po drodze wpaść do jednej czy dwóch zatoczek; Cala Salionç i Canyet dobrze nadają się na lunch, z piaskiem i osłoną przy pogodzie z północy. Dziewięć mil to najwyżej pół dnia. Chodzi o to, żeby dojść do Tossy z popołudniem jeszcze przed sobą, zakotwiczyć pod Vila Vella albo wziąć boję i wyjść na brzeg na drugie, spokojniejsze spojrzenie na stare miasto, kiedy autokary już odjadą. Wejdź na mury w złotej godzinie, gdy kamień się rozżarza, a nad zatokę wychodzą jerzyki. Na noc przesuń się z powrotem do Cala Giverola, jeśli od południa cokolwiek grozi.",
+          "thingsToDo": [
+            "Postój na lunch w Cala Salionç",
+            "Popływaj w osłoniętej Cala Canyet",
+            "Przejdź mury Tossy w złotej godzinie",
+            "Cofnij się do Cala Giverola, jeśli pogoda się psuje"
+          ],
+          "mooringTip": "Jak w drodze na północ, zatoka Tossy to postój tylko na dobrą pogodę, z bojami i kotwiczeniem pod twierdzą. Jeśli prognoza pokazuje cokolwiek z południa, przespij noc w Cala Giverola, wtulony za przylądkiem."
+        },
+        "12": {
+          "shortDescription": "Długa droga na południe, blisko pięćdziesiąt mil za Barcelonę do Sitges, więc wyjdź przed świtem i traktuj to jak dzień przelotu.",
+          "description": "To jedyny prawdziwy przelot tych dwóch tygodni. Sitges leży dobrze na południowy zachód od Barcelony, a z Tossy to blisko pięćdziesiąt mil, więc wymaga wczesnego startu. Zwykle puszczamy boję przed pierwszym brzaskiem, wychodzimy na silniku w ciszę i w środku dnia łapiemy garbí, gdy się napełni, na porządną żeglugę w dół, obok miasta. Trzymaj się dobrze na zewnątrz portu w Barcelonie, gdzie ruch jest gęsty, a system rozgraniczenia ruchu trzeba respektować. Około połowy popołudnia wzgórza Garraf podnoszą się przed dziobem i pokazuje się Sitges, białe na tle zieleni. Port d'Aiguadolç to duża, osłonięta marina zaraz na wschód od miasta, z 742 miejscami i mnóstwem restauracji przy nabrzeżu. Przywiąż się, wejdź do Sitges na wieczór i pozwól, żeby ten długi dzień osiadł przy późnej kolacji.",
+          "thingsToDo": [
+            "Przejdź pod żaglami obok panoramy Barcelony",
+            "Zwiedź stare miasto i nadmorze Sitges",
+            "Zobacz muzeum Cau Ferrat nad morzem",
+            "Kolacja na nabrzeżu mariny Aiguadolç"
+          ],
+          "mooringTip": "Port d'Aiguadolç jest duży i dobrze osłonięty, przyjmuje łodzie do trzydziestu dwóch metrów i nasłuchuje na VHF 09. Po pięćdziesięciomilowym dniu zadzwoń, mijając Barcelonę, żeby miejsce było gotowe, kiedy dojdziesz zmęczony."
+        },
+        "13": {
+          "shortDescription": "Trzymilowy skok do maleńkiego Garraf, garstki modernistycznych domków pod dramatycznymi klifami, i najspokojniejsza noc rejsu.",
+          "description": "Po wczorajszych milach Garraf jest nagrodą – ledwie trzy mile na zachód od Sitges i całkowita zmiana skali. Wioska to rząd białych domków z zieloną stolarką, zbudowanych na początku XX wieku według projektu wiązanego z kręgiem Gaudíego, siedzących pod stromym wapieniem masywu Garraf. Jest mała marina i krótka plaża, i niewiele więcej, w czym tkwi cały urok. Poranek spędź na kotwicy albo przy pomoście, popływaj z łodzi i przejdź te kilka uliczek przed lunchem w jednej z plażowych restauracji. Masyw z tyłu podnosi się w park naturalny przetykany szlakami, jeśli nogi chcą się rozprostować. To z założenia wolny, cichy dzień, taki, który pozwala dwutygodniowemu rejsowi wyhamować, a nie sprintować do końca.",
+          "thingsToDo": [
+            "Zobacz modernistyczne domki z kręgu Gaudíego",
+            "Popływaj przy małej plaży w Garraf",
+            "Lunch w restauracji nad plażą",
+            "Przejdź szlak w masywie Garraf"
+          ],
+          "mooringTip": "Marina w Garraf jest mała i latem się zapełnia, więc dzwoń wcześniej albo przychodź rano po miejsce. Kotwicowisko przed plażą jest w porządku przy panującym garbí, ale otwarte na południe, więc pilnuj wieczornej prognozy."
+        },
+        "14": {
+          "shortDescription": "Ostatni odcinek do domu, dwanaście mil w górę do Port Olímpic, z panoramą Barcelony rosnącą przed dziobem przez całą drogę.",
+          "description": "Ostatni poranek to proste dwanaście mil z powrotem do bazy i nie ma potrzeby się spieszyć. Jeśli garbí będzie współpracował, większość drogi przejdziesz pod żaglami, ze wzgórzami Garraf zostającymi z tyłu i miastem budującym się powoli z przodu, aż Sagrada Família i wieże hoteli wypunktują panoramę. Daj sobie czas. Firmy czarterowe chcą łódź z powrotem na określoną godzinę, zwykle w połowie przedpołudnia albo w południe, więc wyjście o dziewiątej zostawia zapas na spokojne zdanie. Podchodząc do Barcelony, trzymaj się z dala od wejścia do portu handlowego i idź oznakowanym torem do Port Olímpic. Kiedy cumy będą na brzegu, zostanie jeszcze popołudnie i wieczór w mieście – i tak właśnie należy kończyć dwa tygodnie na wodzie: spacerem przez Barcelonetę i ostatnim talerzem owoców morza.",
+          "thingsToDo": [
+            "Płyń pod żaglami w stronę panoramy Barcelony",
+            "Idź oznakowanym torem do Port Olímpic",
+            "Przejdź się nadmorzem Barcelonety",
+            "Ostatnia kolacja z owoców morza w mieście"
+          ],
+          "mooringTip": "Wracaj do Port Olímpic pod presją terminu zdania w połowie przedpołudnia, więc wyjdź z Garraf wcześnie. Trzymaj się dobrze z dala od podejścia do portu handlowego i wchodź oznakowanym torem; zawołaj marinę na VHF 09 po przydział miejsca."
+        }
+      }
+    }
+  },
+  "areas": {
+    "catalonia": {
+      "metaTitle": "Katalonia i Costa Brava – trasy | Boat4You",
+      "metaDesc": "Trasy z Barcelony, Sitges i Palamós: zatoczki Costa Brava, nadmorskie zaplecze Girony i tygodnie łączące miasto z morzem, które naprawdę działają.",
+      "title": "Wielkie miasto z wybrzeżem w komplecie",
+      "description": "Katalonia to czarter dla załóg, które chcą cywilizacji razem z żeglugą. Zaczynasz pod panoramą Barcelony, a w ciągu dnia jesteś albo na południu, wśród plaż Sitges, albo na północy, na Costa Brava, gdzie sosny przechylają się nad małymi skalistymi zatoczkami, a woda robi się butelkowo zielona. Palamós i Roses to uczciwe porty na nocleg z poważnymi restauracjami — to właśnie wybrzeże wykarmiło elBulli — a tramuntana, kiedy wieje, jest silna, ale dobrze prognozowana. Odcinki są elastyczne: trzymaj się brzegu w dwudziestomilowych dniach albo wyciągaj je dłużej, gdy załoga wejdzie w rytm. To także jeden z tych rzadkich tygodni pod żaglami, w których dzień odpoczynku znaczy Gaudí, a nie kolejną plażę. Przylatujesz, wchodzisz na łódź, żadnych promów."
+    },
+    "ibiza": {
+      "metaTitle": "Ibiza i Formentera – trasy żeglugi | Boat4You",
+      "metaDesc": "Trasy z Marina Eivissa wokół Ibizy i Formentery: Es Palmador, Cala Saona i najczystsze kotwicowiska w Hiszpanii, noc po nocy.",
+      "title": "Dwie wyspy, jedna niekończąca się laguna",
+      "description": "Zdejmij plakaty klubowe, a zostanie najlepsza woda do kąpieli w Hiszpanii. Kanał między Ibizą a Formenterą to laguna o piaszczystym dnie, w której zakotwiczone łodzie wyglądają, jakby unosiły się w powietrzu, a tydzień wystarczy, żeby objechać obie wyspy, ani razu nie płynąc trzech godzin bez przerwy. Formentera to cicha połowa — zachody słońca w Cala Saona, plażowe restauracje, które traktują kotwicowisko poważnie — a północne wybrzeże Ibizy ukrywa sosnowe zatoczki, do których imprezowy tłum nigdy nie dociera. Jeśli chcesz hałasu, on też tam jest, jedną jazdę pontonem dalej. Trawa morska posidonia jest chroniona i patrolowana: kotwicz na piasku, zawsze, albo weź boję. Czerwiec i wrzesień dają tę samą wodę przy połowie łodzi."
+    },
+    "mallorca": {
+      "metaTitle": "Mallorca – trasy żeglugi | Boat4You",
+      "metaDesc": "Trasy z Palmy, Alcúdii i Menorki: klify Tramuntany, park narodowy Cabrera i zatoczki Menorki – zaplanowane dzień po dniu.",
+      "title": "Jedna wyspa, która żegluje jak trzy",
+      "description": "Reputacja Mallorki należy do jej plaż; jej najlepsza strona należy do żeglarzy. Południowy zachód daje ci Palmę — prawdziwą morską stolicę z katedrą nad polem boi — i łatwe skoki między marinami. Wybrzeże Tramuntany to dramat: klify na dwa tysiące stóp, wąwóz Sa Calobra i mały port Sóller świecący o zmierzchu. Na południu leży Cabrera, wyspa-park narodowy, gdzie boja z pozwoleniem kupuje ci takie nocne niebo, o jakim stały ląd zapomniał. Dorzuć Ciutadellę na Menorce i jej nietknięte zatoczki, jeśli masz drugi tydzień. Wiatry są do pracy przez cały rok, a infrastruktura najlepsza na Balearach. Boje w Cabrerze rezerwuj tygodnie wcześniej — jest ich mało i są tego warte."
+    }
+  }
+}

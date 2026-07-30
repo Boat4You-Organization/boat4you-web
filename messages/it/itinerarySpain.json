@@ -1,1 +1,433 @@
-{}
+{
+  "routes": {
+    "barcelona": {
+      "metaTitle": "Costa Brava in catamarano, 7 giorni | Boat4You",
+      "metaDesc": "Sette giorni in catamarano da Barcellona lungo la Costa Brava: aste del pesce ad Arenys, la Tossa murata, gamberi rossi di Palamós e cale trasparenti.",
+      "days": {
+        "1": {
+          "shortDescription": "Consegna e briefing di sicurezza al Port Olímpic, poi 20 miglia tranquille col vento in poppa lungo le sabbie del Maresme fino al borgo di pescatori di Arenys.",
+          "description": "Il primo giorno è più questione di scartoffie che di vela. Fate la consegna con calma al Port Olímpic, controllando motore, gas, attrezzatura, chartplotter e tender, e sistemate le provviste prima di pensare a mollare gli ormeggi; se le cambuse sono vuote, il mercato della Barceloneta è a un salto in taxi. Puntate a uscire dal molo foraneo verso l'ora di pranzo, quando il garbí da sudovest si è assestato. Da lì è un traverso costante a sei o sette nodi, mezzo miglio al largo delle spiagge, con il treno della costa che sferraglia lì accanto. Badalona, El Masnou e Mataró offrono tutte riparo se il tempo gira. Arenys vive di pesca, e se ormeggiate prima delle cinque vedete la flotta scaricare e l'asta sulla banchina che si accende. Il paese sale in collina lungo un'unica via alberata, la Riera, dove vi attendono i bar de tapas e le celebri fragole locali.",
+          "thingsToDo": [
+            "Assistere all'asta del pesce alla llotja",
+            "Assaggiare le fragole di stagione lungo la Riera",
+            "Vedere i merletti a fuselli al Museu Marès de la Punta",
+            "Fare il giro delle tapas sulla Riera alberata"
+          ],
+          "mooringTip": "Il Port d'Arenys è usato sia dai pescherecci sia dal Club Nàutic Arenys de Mar, quindi chiamate sul VHF 9 prima di infilarvi dentro. I posti per i transiti stanno sui 3-5 m e si riempiono in fretta; prenotate per luglio e agosto."
+        },
+        "2": {
+          "shortDescription": "Si lascia Arenys a metà mattina per 18 miglia di traverso oltre Blanes, dove la sabbia del Maresme cede il posto alle falesie rosse della vera Costa Brava.",
+          "description": "Uscite da Arenys quando il traffico del mattino si è diradato e tenete la rotta oltre Canet e Sant Pol. Il paesaggio resta anonimo fino a Blanes, dove lo scoglio di Sa Palomera segna l'inizio ufficiale della Costa Brava; entro un miglio la costa diventa falesia ocra con i pini che scendono fino al bagnasciuga, e appaiono le prime cale in cui vale la pena tuffarsi. Se il vento tarda a entrare, fate motorvelico la prima ora e lasciate che sia la termica del pomeriggio a fare il resto. Tossa è impossibile da mancare dal mare: le torri merlate della Vila Vella, l'ultima città medievale murata rimasta in piedi su questa costa, salgono a picco dall'estremità sud della spiaggia. Date fondo davanti a Platja Gran su quattro-sei metri di sabbia e portate il tender a terra. Salite sulle mura prima di cena, poi mangiate il cim i tomba, l'antico stufato dei pescatori.",
+          "thingsToDo": [
+            "Salire sulle mura della Vila Vella fino al faro",
+            "Trovare la statua in bronzo di Ava Gardner sopra la spiaggia",
+            "Nuotare fino alla cala Es Codolar sotto le mura",
+            "Ordinare il cim i tomba a un tavolo sul mare"
+          ],
+          "mooringTip": "Tossa non ha porto: si ancora davanti a Platja Gran su quattro-otto metri di sabbia di buona tenuta, oppure si prende una delle boe estive. La baia è aperta da sud fino a est, quindi filate via presto se è prevista onda."
+        },
+        "3": {
+          "shortDescription": "Solo otto miglia oggi, quindi prendetela con calma: ancora e bagni nelle cale orlate di pini di Giverola e Pola prima di infilarvi nella riparata Sant Feliu.",
+          "description": "Il tratto da Tossa a Sant Feliu è abbastanza corto da diluirlo su un'intera giornata, e la costa ripaga la scelta. Doppiate il promontorio e risalite verso nordest sotto le falesie: Cala Pola, Giverola e Futadera arrivano una dopo l'altra, ognuna un cuneo d'acqua verde e trasparente tra le rocce. Giverola è la più adatta a un catamarano, con spazio per ancorare su cinque-otto metri di sabbia fuori dalla linea dei bagnanti e un chiringuito per il caffè di metà mattina. La visibilità qui è la migliore di tutta la crociera, quindi bagnate le maschere. Dietro Punta de Garbí, Sant Feliu si apre in un porto naturale che i mercanti usano dai tempi dei romani. Il monastero benedettino e la sua antica Porta Ferrada valgono un'ora a terra, ma la passeggiata da fare è il camí de ronda verso nord fino a S'Agaró: venti minuti di sentiero lastricato che finiscono a Sa Conca, sotto le ville.",
+          "thingsToDo": [
+            "Ancorare e fare snorkeling a Cala Giverola",
+            "Arrivare a Cala Pola prima delle barche dei tour",
+            "Percorrere il camí de ronda fino a S'Agaró",
+            "Vedere la Porta Ferrada del monastero"
+          ],
+          "mooringTip": "Il Port de Sant Feliu è tra i ripari naturali migliori della costa e risponde sul VHF 9, con posti per i transiti su tre-cinque metri. Con tempo stabile potete invece stare all'ancora davanti alla spiaggia del paese, ben fuori dal canale d'accesso."
+        },
+        "4": {
+          "shortDescription": "Un pigro salto di sette miglia oltre Platja d'Aro vi porta a Palamós per pranzo, giusto in tempo per i leggendari gamberi rossi del paese.",
+          "description": "Nessuno ha fretta su questa tappa. Sette miglia vogliono dire dormire un po' di più, un bagno dallo specchio di poppa e un posto a Palamós con tutto il pomeriggio davanti. Il paese vive grazie ai suoi pescherecci, che sbarcano il pescato del giorno in banchina durante la settimana; dalla galleria sopra la sala d'asta si vede la gamba de Palamós andare all'incanto, il dolce gambero rosso che ha una certificazione tutta sua. Mangiatelo semplicemente alla griglia a un tavolo sul porto, pagate quello che costa e non rimpiangete un centesimo. Il Museu de la Pesca accanto racconta il resto della storia. Una volta sistemata la barca, prendete il tender e fate un miglio lungo la costa fino a Cala S'Alguer con la sua fila di case bianche dei pescatori, o fino all'ampia sabbia intatta di Platja de Castell subito dietro. Entrambe danno il meglio quando la luce della sera si ammorbidisce.",
+          "thingsToDo": [
+            "Seguire l'asta dei gamberi dalla galleria della llotja",
+            "Ordinare la gamba de Palamós alla griglia sul porto",
+            "Raggiungere in tender le case dei pescatori di Cala S'Alguer",
+            "Visitare il Museu de la Pesca sulla banchina"
+          ],
+          "mooringTip": "Marina Palamós si trova in una baia profonda e riparata e accoglie i catamarani senza problemi, con fondali da tre a sei metri e VHF 9; prenotate in stagione, perché regate e navi da crociera si mangiano il paese. Nelle notti stabili l'ancoraggio davanti a Platja de Castell tiene bene su quattro-sei metri di sabbia."
+        },
+        "5": {
+          "shortDescription": "Prua verso casa lungo 14 miglia di costa già vista fino a Blanes, dove i giardini di Marimurtra sulla falesia rendono la sosta più che meritata.",
+          "description": "Rifare una costa due volte non è una penitenza quando è bella così. Lasciate Palamós dopo colazione con rotta a sudovest e, se l'equipaggio vuole un'ultima cala, Futadera o Giverola sono un tuffo facile di metà mattina. Blanes è dove la Costa Brava finisce ufficialmente, allo stesso scoglio di Sa Palomera da cui era iniziata. Il motivo per fermarsi è Marimurtra, un giardino botanico terrazzato lungo la falesia dall'imprenditore tedesco Karl Faust negli anni Venti; circa quattromila specie scendono la parete di roccia fino a un tempietto affacciato su Cala Sa Forcanera, l'immagine che riempie metà delle cartoline della Catalogna. Andateci nel tardo pomeriggio, quando i bus sono ripartiti. Blanes resta un paese di lavoro e non una località turistica, con una flotta di pesca, la passeggiata serale e bar onesti attorno al porto. A fine luglio il concorso internazionale di fuochi d'artificio scoppia proprio sopra l'ancoraggio.",
+          "thingsToDo": [
+            "Girare le terrazze botaniche di Marimurtra sulla falesia",
+            "Salire al tempietto sopra Cala Sa Forcanera",
+            "Arrivare a piedi allo scoglio di Sa Palomera",
+            "Fare il bagno nella riparata Cala Sant Francesc"
+          ],
+          "mooringTip": "Il Port de Blanes tiene qualche posto per i transiti su tre-sei metri, ma lo spazio è più stretto che a Palamós, quindi chiamate prima di arrivare. Con tempo calmo e stabile potete ancorare su sabbia davanti a Cala Sant Francesc, che però diventa insostenibile con qualunque onda da sud."
+        },
+        "6": {
+          "shortDescription": "Dodici miglia tranquille di rientro sul Maresme, con pranzo all'ancora davanti alla bianca Sant Pol de Mar prima di Arenys.",
+          "description": "Questa è la giornata in cui rallentare del tutto. Lasciate Blanes presto, mentre l'acqua è ancora un vetro, e puntate al faro sul promontorio di Calella, che è del 1859 e fa da primo punto di riferimento facile. Qualche miglio più avanti, Sant Pol de Mar è la migliore delle soste pranzo: una catasta di case bianche sopra una serie di piccole spiagge, con buona tenuta su sabbia a un paio di centinaia di metri da riva. Ancorate, fate il bagno, mettete in acqua i paddleboard e mangiate in pozzetto; niente a terra vale altrettanto. Nei fine settimana moto d'acqua e barche giornaliere arrivano vicinissime a riva, quindi tenete d'occhio l'equipaggio quando è in acqua. Contate di rientrare al Port d'Arenys nel tardo pomeriggio, e fate valere l'ultima sera con una cena lunga a terra, un suquet de peix o una fideuà, e la cassa comune messa in pari.",
+          "thingsToDo": [
+            "Pranzare all'ancora davanti a Sant Pol de Mar",
+            "Puntare al Far de Calella del 1859",
+            "Mettere in acqua i paddleboard un'ultima volta",
+            "Prenotare una cena a base di fideuà ad Arenys"
+          ],
+          "mooringTip": "Tornati al Port d'Arenys, chiamate sul VHF 9 come all'andata e chiedete il posto della prima notte. Le soste pranzo del Maresme sono rade aperte su sabbia, buone di giorno con tempo stabile ma non luoghi in cui passare la notte."
+        },
+        "7": {
+          "shortDescription": "Venti miglia di buon'ora lungo il Maresme e lo skyline di Barcellona compare sulla prua, poi rifornimento e riconsegna al Port Olímpic.",
+          "description": "Partire presto rende due volte: vi tiene in orario e vi regala il Maresme all'alba, calmo come l'olio, con le barchette da nassa già fuori a recuperare le reti. Calcolate circa tre ore di motore o un motorvelico pigro e, se l'orologio è generoso, c'è un ultimo tuffo da fare davanti a El Masnou o Ocata. Poi la città fa il suo ingresso in scena: la torre di Collserola che incorona il Tibidabo sul crinale, il Montjuïc che scivola verso il mare e, dietro la spiaggia, le torri del Port Olímpic con il pesce di rame di Gehry che lampeggia al sole. Tenete gli occhi aperti nelle ultime due miglia, dove l'acqua della Barceloneta si riempie di barche turistiche, paddleboard e bagnanti. Fate carburante prima di infilarvi nel vostro pontile, poi macinate la checklist: ore motore annotate, serbatoi letti, dotazioni contate, un giro di coperta a cercare ammaccature. Il tempo che resta si spende bene nei bar de tapas della Barceloneta, a dieci minuti a piedi.",
+          "thingsToDo": [
+            "Partire alle prime luci per la calma dell'alba",
+            "Cercare il pesce di rame di Gehry in avvicinamento",
+            "Fare un ultimo bagno davanti alla spiaggia di Ocata",
+            "Brindare al giro con un vermut alla Barceloneta"
+          ],
+          "mooringTip": "Fate gasolio alla pompa del Port Olímpic prima di riconsegnare la barca al pontile charter, e organizzatevi di primo mattino, perché nel fine settimana le code si allungano già dal venerdì. Il fondale in banchina è comodo, tra tre e cinque metri, e appena passato il molo foraneo l'equipaggio della base vi guida in VHF."
+        }
+      }
+    },
+    "ciutadella": {
+      "metaTitle": "Giro di Minorca in 7 giorni | Boat4You",
+      "metaDesc": "Minorca in 7 giorni da Ciutadella: le cale del sud, Cala Galdana e Macarella, Cova d'en Xoroi, il porto di Mahón e la costa nord selvaggia.",
+      "days": {
+        "1": {
+          "shortDescription": "Un facile salto di sei miglia verso sud per scaldare l'equipaggio, con arrivo in una cala di sabbia tra i pini sovrastata da una torre di guardia inglese.",
+          "description": "La prima tappa è volutamente morbida: sei miglia lungo la costa per far trovare all'equipaggio il proprio ritmo prima delle giornate lunghe. Cala en Bosch sta dietro una cortina di pini d'Aleppo, con la sabbia che scende abbastanza dolcemente per un primo bagno da prua. Sopra la cala si erge la Torre d'en Quart, una delle torri di guardia in pietra che gli inglesi tirarono su nel Settecento per controllare gli accessi. Minorca è Riserva della Biosfera UNESCO dal 1993, e si vede: nessun muro di alberghi, solo macchia bassa e promontori. Di solito prendiamo il porto per la prima notte, riempiamo i serbatoi d'acqua e sistemiamo la cambusa finché c'è la corrente di banchina. A terra, cercate la caldereta de langosta da S'Amarador e un bicchiere del Vi de la Terra dell'isola.",
+          "thingsToDo": [
+            "Tuffarsi da prua a Cala en Bosch",
+            "Salire alla torre di guardia Torre d'en Quart",
+            "Caldereta de langosta da S'Amarador",
+            "Provare un Vi de la Terra Menorca"
+          ],
+          "mooringTip": "Il porto vi mette all'inglese per circa 70–110 € a notte in alta stagione e si beve qualunque tramontana. Se è pieno, o se preferite stare all'ancora, entrate nella cala stessa su sabbia in 4–6 m."
+        },
+        "2": {
+          "shortDescription": "Un breve salto di quattro miglia verso est fino a Son Saura, dove le spiagge si aprono solo a chi arriva in barca o a piedi.",
+          "description": "Solo quattro miglia oggi, quindi nessuna fretta di mollare gli ormeggi. Son Saura si apre come una coppia di spiagge di sabbia chiara senza una strada dietro; all'acqua ci si arriva dalla barca oppure a piedi lungo il Camí de Cavalls, l'antica mulattiera che gira tutta l'isola. Appena a est stanno Es Talaier e Cala en Turqueta, che valgono il giro in tender solo per il colore dell'acqua. In luglio e agosto le praterie di posidonia sono protette e serve una delle boe dedicate, prenotata in anticipo tramite il Govern Balear; nel resto dell'anno si può ancorare su sabbia pulita. Nell'entroterra sta il Talaiot de Son Catlar, il più grande insediamento preistorico fortificato dell'isola. Noi ci portiamo sempre qualche formatjada, i tortini salati di formaggio del posto, per un pranzo lento in pozzetto.",
+          "thingsToDo": [
+            "Nuotare a Es Talaier e Cala en Turqueta",
+            "Camminare un tratto del Camí de Cavalls",
+            "Esplorare le mura del Talaiot de Son Catlar",
+            "Prenotare una boa sulla posidonia in piena estate"
+          ],
+          "mooringTip": "Da luglio ad agosto qui bisogna stare su una boa segnalata sulla posidonia, circa 40–60 € a notte, riservata online in anticipo con il Govern Balear. Fuori da quei mesi si ancora su sabbia in 4–6 m, lontano dalle praterie."
+        },
+        "3": {
+          "shortDescription": "Sei miglia fino al ferro di cavallo di Cala Galdana, poi giro in tender fino a Macarella per il bagno più fotografato dell'isola.",
+          "description": "Cala Galdana è la baia che tutti hanno visto su un depliant, un anfiteatro di calcare con una gola fluviale, il Barranc d'Algendar, che scende alle sue spalle. Qui c'è un porto vero, il che la rende un buon posto per rifare acqua e concedere una doccia a chi la vuole. La vera attrazione sta un miglio a est, a Cala Macarella e nella sua piccola vicina Macarelleta, raggiungibili solo dal mare o a piedi. Noi ancoriamo davanti a Macarella per il pomeriggio, su sabbia tra quattro e sei metri, e usciamo prima del buio perché sopra la posidonia non si può passare la notte. Se le gambe collaborano, il Camí de Cavalls sale sulla falesia occidentale per una vista a picco sul turchese. Il pranzo è arròs de peix da Es Bruc, su in cima al promontorio.",
+          "thingsToDo": [
+            "Ancorare davanti a Cala Macarella per il pomeriggio",
+            "Arrivare a Macarelleta lungo il sentiero sulla falesia",
+            "Pranzo di arròs de peix da Es Bruc",
+            "Salire nella gola del Barranc d'Algendar"
+          ],
+          "mooringTip": "Il porto di Cala Galdana vi mette all'inglese a circa 100–160 € in alta stagione, ben al riparo da qualunque tramontana. Macarella, accanto, è solo ancoraggio diurno, sabbia in 4–6 m, senza pernottamento sopra la posidonia."
+        },
+        "4": {
+          "shortDescription": "Cinque miglia facili fino a Son Bou e alla spiaggia più lunga di Minorca, con i resti di una basilica paleocristiana mezzi persi tra le dune.",
+          "description": "Dopo la scenografia di Galdana, Son Bou sembra spalancata. La spiaggia corre per quasi due chilometri, con dune vere alle spalle e una fascia di zona umida che resta sorprendentemente verde. All'estremità occidentale si trovano le fondazioni di una basilica del V secolo, una chiesa paleocristiana ormai bassa tra i fiori selvatici e facile da mancare dal mare. Non c'è porto, quindi è una notte all'ancora: date fondo su sabbia tra cinque e sette metri, ben riparati quando il vento sta a nord. Tenete d'occhio le previsioni, però, perché con vento da sud l'intera baia diventa insostenibile e vorrete i posti di Galdana cinque miglia più indietro. Per cena a terra, Sa Paissa fa una buona oliaigua, il brodo di pomodoro e peperone verde dell'isola.",
+          "thingsToDo": [
+            "Camminare i due chilometri di spiaggia di Son Bou",
+            "Trovare i resti della basilica del V secolo tra le dune",
+            "Cena a base di oliaigua da Sa Paissa",
+            "Cercare i fenicotteri a S'Albufera des Grau"
+          ],
+          "mooringTip": "A Son Bou non c'è porto, quindi si conta sull'ancora: la sabbia tiene bene in 5–7 m e la spiaggia vi copre da nord. Se è previsto qualcosa da sud diventa in fretta una costa sottovento, e Cala Galdana cinque miglia a ovest è il vostro rifugio."
+        },
+        "5": {
+          "shortDescription": "Cinque miglia fino a Cala en Porter, un'insenatura chiusa dalle falesie e coronata dal bar Cova d'en Xoroi scavato nella roccia.",
+          "description": "Cala en Porter è corta e con i fianchi ripidi, il tipo di cala in cui parlano soprattutto le pareti. Il pezzo forte è la Cova d'en Xoroi, un dedalo di terrazze ricavate nella parete rocciosa una trentina di metri sopra il mare; apre per l'aperitivo al tramonto e diventa un bar a tutti gli effetti quando il DJ parte verso le dieci. Arrivate presto se volete i tavoli buoni nell'ora d'oro. Al livello dell'acqua ancoriamo su sabbia tra quattro e sei metri, con buona tenuta con i venti da nord, ma senza porto in cui rifugiarsi se il tempo gira. Una camminata sul sentiero della falesia regala un belvedere dopo l'altro. Per cena, Àmbit lavora dal produttore al piatto, e il loro calamaro ripieno di sobrasada è quello da ordinare.",
+          "thingsToDo": [
+            "Aperitivo al tramonto alla Cova d'en Xoroi",
+            "Bagno dall'ancora sotto le falesie di calcare",
+            "Calamaro con sobrasada da Àmbit",
+            "Seguire il sentiero della falesia fino ai belvedere"
+          ],
+          "mooringTip": "A Cala en Porter non ci sono posti in banchina, quindi si sta all'ancora su sabbia in 4–6 m, comodi finché il vento resta a nord. È una piccola tacca esposta, quindi continuate a guardare le previsioni invece di impegnarvi se sta montando qualcosa da sud."
+        },
+        "6": {
+          "shortDescription": "Otto miglia verso est fino a Mahón, su per uno dei porti naturali più lunghi del Mediterraneo, fino alla distilleria di gin attiva dal 1700.",
+          "description": "L'entrata a vela a Mahón è il pezzo da novanta della settimana. Si gira dentro passando tra i forti dell'imboccatura e si risale un porto profondo quasi cinque chilometri, uno dei più grandi ancoraggi naturali del Mediterraneo, con isolotti e vecchi ospedali di quarantena sparsi nel mezzo. Il porto turistico in fondo vi lascia a due passi dal centro storico. Minorca ha passato quasi tutto il Settecento sotto dominio britannico, e l'eredità si vede ovunque: gin, finestre a ghigliottina e il gusto per la pomada, gin allungato con limonata torbida. Xoriguer distilla sul lungomare dal 1700 circa e fa degustazioni quasi ogni giorno. Comprate il pesce direttamente dal banco del Mercat des Peix, oppure lasciate che Sa Llagosta ve lo cucini in un vero stufato isolano.",
+          "thingsToDo": [
+            "Visitare la distilleria di gin Xoriguer",
+            "Sorseggiare una pomada in banchina",
+            "Comprare il pesce al Mercat des Peix",
+            "Zuppa di pesce da Sa Llagosta"
+          ],
+          "mooringTip": "Marina di Mahón vi mette all'inglese per circa 100–160 € in alta stagione ed è riparata come pochi porti, qualunque cosa faccia il vento. Se preferite l'ancora, Cala Padera più giù nell'insenatura tiene su sabbia in 5–7 m."
+        },
+        "7": {
+          "shortDescription": "La tirata di rientro: ventiquattro miglia lungo la costa nord più selvaggia, con soste bagno a Cala Mesquida e a Port d'Addaia.",
+          "description": "Questa è la giornata impegnativa, quindi di solito siamo fuori dagli ormeggi entro le nove. Sono circa ventiquattro miglia per tornare a Ciutadella, e il percorso vi porta sulla costa nord: più rocciosa, più vuota e molto più esposta alla Tramontana del sud che avete navigato finora. Cala Mesquida, appena fuori Maó, è una buona sosta bagno di prima mattina, e la stretta insenatura delle saline di Port d'Addaia è un posto tranquillo per spezzare la traversata. Dopo di che è una tirata costante verso ovest, di solito con la brezza del pomeriggio che entra. Puntate a essere in banchina a Ciutadella nel primo pomeriggio per fare carburante e sciacquare tutto prima della riconsegna. Il porto è un canale lungo e stretto soggetto a improvvise oscillazioni chiamate rissaga, quindi lasciate cime davvero lasche. Chiudete con una greixonera, la crema alla cannella dell'isola, sulla Plaça des Born.",
+          "thingsToDo": [
+            "Bagno mattutino a Cala Mesquida",
+            "Spezzare la traversata a Port d'Addaia",
+            "Fare carburante e sciacquare la barca a Ciutadella",
+            "Greixonera sulla Plaça des Born"
+          ],
+          "mooringTip": "A Ciutadella si ormeggia all'inglese a circa 80–130 € in alta stagione; fate carburante alla banchina di rifornimento all'ingresso prima di infilarvi dentro. Il porto può oscillare con la rissaga, quindi raddoppiate le cime e confermate lo slot di riconsegna 24 ore prima."
+        }
+      }
+    },
+    "ciutadella-south": {
+      "metaTitle": "Da Minorca a Maiorca in 7 giorni | Boat4You",
+      "metaDesc": "Una settimana di vela da Ciutadella: Cala Galdana e Macarella, la traversata a Cala Ratjada, poi Alcúdia, Port de Pollença e Cala Sant Vicenç.",
+      "days": {
+        "1": {
+          "shortDescription": "Dodici miglia tranquille verso sud per aprire la settimana, con arrivo a Cala Galdana e il turchese di Macarella a un salto di tender.",
+          "description": "Entrate in settimana con calma, con la tappa breve lungo la costa sud di Minorca. Dodici miglia, un paio d'ore a vela se entra la brezza di mare, e nessun motivo per affrettare la partenza. Cala Galdana sta alla foce di una gola boscosa, con l'acqua che passa dal blu profondo a quel verde chiaro di calcare mentre vi avvicinate alla spiaggia. Il vero premio è accanto: Cala Macarella e la piccola Macarelleta, raggiungibili solo in barca o a piedi, meritano entrambe un pomeriggio all'ancora. Di solito ancoriamo davanti a Macarella per il bagno, poi facciamo un tratto del Camí de Cavalls sulla falesia. Tornati a Galdana, si ormeggia in porto e si mangia a terra. Es Bruc fa un vero arròs de la terra, il riso con coniglio e zafferano che fuori dall'isola non trovate su molti menù.",
+          "thingsToDo": [
+            "Ancorare e nuotare davanti a Cala Macarella",
+            "Percorrere il Camí de Cavalls sulla falesia",
+            "Provare l'arròs de la terra da Es Bruc",
+            "Andare in tender fino alla minuscola Cala Macarelleta"
+          ],
+          "mooringTip": "Il porto di Cala Galdana vi mette all'inglese ed è ben protetto da nord, circa 100–160 € a notte in alta stagione. A Macarella si può ancorare solo di giorno su sabbia in 4–6 m; la baia è protetta per la posidonia, quindi niente pernottamento."
+        },
+        "2": {
+          "shortDescription": "La traversata del canale verso Maiorca, 32 miglia di mare aperto fino a Cala Ratjada, meglio partire presto prima che la Tramontana trovi le gambe del pomeriggio.",
+          "description": "Questa è la giornata lunga, quella da pianificare intorno al vento. Il tratto di mare aperto tra le isole prende la Tramontana in pieno, e quello che a colazione è un pigro vento da nord a metà pomeriggio può soffiare a 25 nodi con onda corta. Vale la pena mollare gli ormeggi entro le nove e mettersi alle spalle la maggior parte delle 32 miglia prima di pranzo. L'approdo è l'angolo nordest di Maiorca, a Cala Ratjada, un vecchio porto di pesca che sbarca ancora il proprio pescato. Ormeggiate in porto, che è davvero riparato, oppure date fondo dietro il promontorio in Cala Agulla su sabbia pulita. Su in collina, il castello di Capdepera del XIV secolo è una passeggiata facile e un buon modo per sgranchirsi le gambe dopo una giornata al timone.",
+          "thingsToDo": [
+            "Salire al castello trecentesco di Capdepera",
+            "Nuotare a Cala Agulla sulla sabbia bianca",
+            "Llagosta amb sobrassada da Es Mollet",
+            "Fare il sentiero costiero fino a Cala Gat"
+          ],
+          "mooringTip": "Il porto di Cala Ratjada è completamente chiuso ed è la scelta sicura dopo la traversata; prenotate in luglio e agosto. Se è pieno o preferite stare all'ancora, Cala Agulla appena a nord tiene bene su sabbia in 4–6 m con tempo stabile."
+        },
+        "3": {
+          "shortDescription": "Quindici miglia facili nella Baia di Alcúdia fino a Colonia de Sant Pere, un paese tranquillo dove le dune finiscono nelle pinete.",
+          "description": "Dopo la faticata di ieri questa sembra un riposo. Quindici miglia verso ovest lungo la costa e dentro l'ampia Baia di Alcúdia, con le colline della Serra de Llevant a sinistra per quasi tutto il tempo. Colonia de Sant Pere è più un paese vero che una località turistica, e per questo più quieto. La sosta che gli equipaggi ricordano è Es Coll Baix, una spiaggia di ciottoli chiari sotto una parete di calcare raggiungibile solo in barca o per un ripido sentiero tra i pini. Noi di solito ancoriamo lì per un pranzo lungo e un bagno prima di proseguire verso il porticciolo del paese. Se la sera avete ancora gambe, noleggiate le bici e pedalate i quattro chilometri nell'entroterra fino a Betlem, un gruppo di case sul fianco della collina con la vista su tutta la baia. Ca'n Bernat in paese fa un buon tumbet.",
+          "thingsToDo": [
+            "Ancorare e nuotare a Es Coll Baix",
+            "Pedalare quattro chilometri fino a Betlem",
+            "Ordinare il tumbet da Ca'n Bernat",
+            "Camminare tra le dune e i pini al crepuscolo"
+          ],
+          "mooringTip": "Il porto di Colonia è piccolo e all'inglese, più economico dei grandi porti di Maiorca a circa 70–110 €, e ben rientrato da nord. Es Coll Baix è solo ancoraggio diurno, sabbia in 4–6 m; non c'è riparo se il vento gira, quindi tenete d'occhio le previsioni."
+        },
+        "4": {
+          "shortDescription": "Un salto di dieci miglia attraverso la baia fino ad Alcúdia, dove rovine romane e mura medievali stanno a due passi dietro il porto.",
+          "description": "Solo dieci miglia oggi, dritti attraverso il fondo della baia, quindi c'è tempo per un bagno davanti a Platja d'Alcúdia prima di pensare all'ormeggio. La lunga distesa di sabbia scende dolcemente e l'acqua resta calda fino a ottobre. Port d'Alcúdia è un porto grande e comodo, con le trappe già pronte e spazio in abbondanza, il che lo rende un posto rilassato per passare il pomeriggio a terra. Il centro storico è il motivo per fermarsi. Alcúdia conserva le mura del XIV secolo quasi intatte, e il giro si fa in mezz'ora. Appena fuori stanno le pietre della romana Pollentia, capitale dell'isola duemila anni fa. Chiudete la serata da Ca'n Costa, versando il palo, il liquore d'erbe amarodolce maiorchino prodotto qui dal 1761.",
+          "thingsToDo": [
+            "Percorrere l'intero giro delle mura trecentesche",
+            "Girare le rovine della romana Pollentia",
+            "Sorseggiare il palo da Ca'n Costa (dal 1761)",
+            "Nuotare lungo la sabbia di Platja d'Alcúdia"
+          ],
+          "mooringTip": "Port d'Alcúdia è all'inglese con le trappe pronte e raramente si riempie, quindi di solito potete presentarvi senza prenotare; mettete in conto 100–160 € in piena estate. È completamente chiuso, un posto comodo in cui aspettare che passi la Tramontana del pomeriggio."
+        },
+        "5": {
+          "shortDescription": "Solo otto miglia verso nord fino a Port de Pollença, rincantucciata sotto la Tramuntana, con la penisola di Formentor e le sue spiagge a poca vela di distanza.",
+          "description": "Passaggio breve, scenario enorme. Otto miglia vi portano nella baia di Port de Pollença con la muraglia grigia della Tramuntana che sale a picco dall'acqua dietro il paese. Prima di sistemarvi, vale la pena proseguire quattro miglia fino alla punta della penisola di Formentor. Platja de Formentor è un orlo di sabbia fine e chiara sotto i pini domestici, e l'ancoraggio davanti è uno dei più belli di questa costa. Tornati in paese, il porto è tranquillo e la passeggiata è fiancheggiata da vecchi platani. La camminata classica del mattino qui risale la valle di Boquer, una gola secca di calcare dove a fine estate i falchi della regina cacciano sopra il crinale. Per cena, Stay, in fondo al pontile, è un tavolo affidabile; la loro lechona al forno è quella da ordinare.",
+          "thingsToDo": [
+            "Ancorare davanti alla sabbia chiara di Platja de Formentor",
+            "Risalire la valle di Boquer per vedere i falchi",
+            "Ordinare la lechona allo Stay Restaurant",
+            "Salire alla torre di guardia Talaia d'Albercutx"
+          ],
+          "mooringTip": "Il porto di Port de Pollença è all'inglese e riparato da nord, intorno ai 100–160 € nelle settimane di punta. Se volete l'ancoraggio di Formentor, prendetelo come sosta pranzo e non per la notte: è aperto a nord e rolla appena entra la brezza del pomeriggio."
+        },
+        "6": {
+          "shortDescription": "Quattro miglia appena, dietro l'angolo, fino a Cala Sant Vicenç, un gruppo di piccole baie chiuse dalle falesie della Tramuntana.",
+          "description": "Quasi non è una navigazione, quattro miglia intorno al promontorio, quindi la mattina è tutta vostra. Cala Sant Vicenç è in realtà un insieme di piccole baie che condividono un nome, incise ai piedi delle montagne dove crollano nel mare. Cala Molins è la più ampia e quella davanti a cui ancorare; le altre, tra cui Cala Barques e Cala Carbó, sono tasche di sabbia e ghiaia a portata di tender. Portate la maschera. Vicino a Cala Molins c'è un breve tunnel di mare che si può attraversare a nuoto quando l'acqua è calma, e la roccia sott'acqua è spettacolare. Qui non c'è porto, quindi la notte si passa all'ancora su sabbia tra quattro e sei metri, ben coperti da nord. Il Restaurant Clivia, su nel borgo, fa un generoso frit de marisc.",
+          "thingsToDo": [
+            "Fare snorkeling nel tunnel di mare a Cala Molins",
+            "Spostarsi in tender tra Cala Barques e Cala Carbó",
+            "Mangiare il frit de marisc al Restaurant Clivia",
+            "Guardare il tramonto dal sentiero sulla falesia"
+          ],
+          "mooringTip": "Questo è un ancoraggio libero senza porto, quindi infilatevi in quella delle tre baie che si adatta al vento e piazzatevi su sabbia in 4–6 m. È accogliente con la tramontana ma esposto a qualunque cosa da est; fate provviste a Pollença prima di partire, perché qui c'è poco da comprare."
+        },
+        "7": {
+          "shortDescription": "La tirata di rientro, 38 miglia attraverso il canale fino a Ciutadella, partenza all'alba e un occhio fisso alla Tramontana.",
+          "description": "L'ultimo giorno rispecchia il secondo: una lunga traversata in mare aperto che ripaga la partenza presto. Trentotto miglia verso est per tornare a Minorca, e vale la stessa regola: macinare le miglia prima che la Tramontana rinforzi nel pomeriggio. Puntate ad alzare Cap d'Artrutx, il faro basso sull'angolo sudovest di Minorca, entro il primo pomeriggio; è il vostro riferimento per l'entrata. Appena oltre, Son Xoriguer e Cala en Bosch offrono un ultimo bagno nel turchese se avete fatto buon tempo. Da lì è una tappa corta fino a Ciutadella. Fate il pieno alla banchina di rifornimento vicino all'imboccatura del porto prima di andare a cercare l'ormeggio, così la riconsegna del mattino dopo è indolore. Tenetevi un'ora per il centro storico: una greixonera, la crema profumata di cannella, sulla Plaça des Born è l'ultima sosta giusta.",
+          "thingsToDo": [
+            "Nuotare nell'acqua turchese di Son Xoriguer",
+            "Fotografare il faro di Cap d'Artrutx",
+            "Provare la greixonera sulla Plaça des Born",
+            "Fare carburante prima della riconsegna a Ciutadella"
+          ],
+          "mooringTip": "Lo stretto porto di Ciutadella è all'inglese e si riempie in fretta d'estate, circa 80–130 € a notte; confermate il posto e l'orario di riconsegna il giorno prima. Fate carburante alla banchina vicino all'imboccatura prima di ormeggiare, perché diventa scomoda da raggiungere una volta che siete incastrati dentro."
+        }
+      }
+    },
+    "costa-brava-14-days": {
+      "metaTitle": "Barcellona e Costa Brava in 14 giorni | Boat4You",
+      "metaDesc": "Giro di 14 giorni da Barcellona (Port Olímpic) su per il Maresme fino alle cale della Costa Brava, ritorno via Sitges e Garraf. Tossa, gamberi di Palamós.",
+      "days": {
+        "1": {
+          "shortDescription": "Una breve tappa di rodaggio lungo il Maresme dalla città fino al porto ordinato di El Masnou e ai suoi noti pontili di barche d'occasione.",
+          "description": "Il primo giorno la maggior parte degli equipaggi lo usa per rodare la barca più che per macinare miglia, e questa tappa è perfetta. Sono circa otto miglia dal Port Olímpic su per la costa del Maresme, abbastanza vicine da tenere le torri di Barcellona sulla spalla per la prima ora. Il garbí di solito entra dopo pranzo, quindi se mollate gli ormeggi a metà mattina uscirete a motore dal porto e prenderete un leggero vento da sudovest per la risalita verso nord. Il porto di El Masnou sta dietro un solido molo foraneo e resta tranquillo con quasi tutte le condizioni. È noto in tutta la Spagna come il posto dove i broker parcheggiano gli yacht usati, quindi i pontili sono un bel giro di vetrine. A terra, il vecchio quartiere dei pescatori sale la collina in vicoli stretti, e ci sono abbastanza cantine e terrazze per entrare nel ritmo della crociera.",
+          "thingsToDo": [
+            "Curiosare tra gli yacht usati ai pontili di Port Masnou",
+            "Salire la collina nel vecchio quartiere dei pescatori",
+            "Aperitivo sulle terrazze della passeggiata del porto",
+            "Fare provviste al mercato del paese prima della Costa Brava"
+          ],
+          "mooringTip": "Port Masnou ha molti posti per i transiti e risponde sul VHF 09; chiamate in anticipo in luglio e agosto, perché il commercio delle barche usate tiene i pontili occupati. Il molo foraneo vi ripara dal garbí del pomeriggio."
+        },
+        "2": {
+          "shortDescription": "Un breve salto fino a Mataró, il porto più grande del Maresme e una città romana che merita un pomeriggio fuori dalla barca.",
+          "description": "Questa è appena una navigazione, cinque miglia di costeggio, quindi non c'è motivo di sbrigare la colazione. Di solito lasciamo la banchina verso le dieci, lasciamo consumare la calma del mattino e facciamo l'ultimo tratto a vela quando la brezza si stabilizza. Il porto di Mataró è il più grande di questa costa e ha un cantiere completo, se qualcosa va sistemato all'inizio del charter. La città stessa ripaga una passeggiata nell'entroterra. Era la romana Iluro, e la vecchia griglia di strade si legge ancora, con un mercato coperto e un nucleo di edifici modernisti di un giovane Gaudí. Fare provviste qui è facile, meglio che in qualunque altro posto fino a Palamós, quindi conviene riempire le cambuse prima di impegnarsi sulla costa più tranquilla che vi attende. Le serate sono senza fretta, con i bar del vermut vicino al lungomare che si riempiono lentamente dopo le otto.",
+          "thingsToDo": [
+            "Seguire la griglia stradale romana di Iluro",
+            "Vedere gli edifici modernisti del giovane Gaudí",
+            "Fare la spesa al mercato municipale coperto",
+            "Vermut in un bar sul lungomare dopo le otto"
+          ],
+          "mooringTip": "Il Port de Mataró è grande e raramente pieno, con posti per i transiti sui pontili esterni e un travel-lift se servono lavori. I fondali sono generosi in tutto il bacino, quindi l'avvicinamento è semplice anche al crepuscolo."
+        },
+        "3": {
+          "shortDescription": "Sei miglia fino ad Arenys de Mar, un porto di pesca attivo con l'asta del pesce all'alba e uno dei circoli velici più antichi della costa.",
+          "description": "Arenys pesca ancora per vivere, e questo dà al porto un'aria diversa dai marina turistici che lo circondano. Il passaggio è corto, sei miglia circa, e se il garbí è alzato si va di traverso lungo la costa con le vele piene e il motore spento. Il Club Nàutic qui è del 1952 e l'accoglienza verso gli equipaggi in transito è calorosa. Quello che attira di più è l'asta del pesce del tardo pomeriggio, la llotja, quando rientrano le barche giornaliere e il pescato viene venduto a un ritmo urlato che si può seguire dalla banchina. Prenotate un tavolo lì vicino e mangiate quello che è sbarcato un'ora prima. Il paese sale dall'acqua, e il vecchio cimitero sopra è curiosamente famoso: vale la salita per la vista sul porto.",
+          "thingsToDo": [
+            "Assistere all'asta del pesce del pomeriggio alla llotja",
+            "Mangiare il pescato del giorno accanto alla banchina",
+            "Salire al belvedere del cimitero in collina",
+            "Visitare il Club Nàutic, fondato nel 1952"
+          ],
+          "mooringTip": "Arenys è un vero porto di pesca, quindi in entrata state lontani dal canale dei pescherecci e dalla banchina dell'asta. Il Club Nàutic tiene posti per i transiti; chiamate sul VHF 09 e aspettatevi un bel po' di movimento dalle barche da lavoro."
+        },
+        "4": {
+          "shortDescription": "Sette miglia fino a Calella, riconoscibile da miglia di distanza per il suo vecchio faro, con una lunga spiaggia davanti a cui ancorare con tempo stabile.",
+          "description": "Calella non ha un vero porto, e questo cambia la forma della giornata. Si punta il faro, il Far de Calella, bianco sul suo promontorio dagli anni Cinquanta dell'Ottocento e visibile molto prima che il paese emerga dalla foschia. Con tempo calmo l'ancoraggio davanti alla spiaggia principale va benissimo per una sosta pranzo o per la notte, con la sabbia che tiene bene su cinque o sei metri. Tenete d'occhio le previsioni, perché qualunque cosa con dentro dell'est entra dritta e l'ancoraggio diventa scomodo in fretta. A terra Calella è una località affollata con una lunga passeggiata, ma il nucleo antico dietro conserva il cuore di un paese-mercato catalano. Salite alla Torre de les Bruixes sulla collina per la vista d'insieme, poi scendete per un bagno prima che la spiaggia si svuoti al crepuscolo.",
+          "thingsToDo": [
+            "Vedere il Far de Calella, faro degli anni 1850",
+            "Salire alla Torre de les Bruixes",
+            "Fare il bagno lungo la spiaggia del paese",
+            "Girare il mercato catalano del centro storico"
+          ],
+          "mooringTip": "Qui non c'è porto, solo un ancoraggio aperto davanti alla spiaggia che funziona con i venti da ovest e in bonaccia. Date fondo su cinque-sei metri di sabbia e andate via al primo segnale di onda da est, che si mette senza troppo preavviso."
+        },
+        "5": {
+          "shortDescription": "Nove miglia verso nord fino a Blanes, dove lo scoglio di Sa Palomera segna il vero inizio della Costa Brava e vi attende un autentico paese di pescatori.",
+          "description": "Blanes è il punto in cui la costa cambia carattere. Le spiagge piatte del Maresme lasciano il posto alla riva più rocciosa e coronata di pini che la gente immagina quando pensa alla Costa Brava, e lo scoglio di Sa Palomera davanti al paese è il segnale tradizionale di quel confine. Da Calella sono circa nove miglia, una mattinata facile se partite entro le nove prima che il garbí rinforzi. Il paese mantiene una flotta di pesca seria, e l'asta quotidiana rifornisce ristoranti come Can Flores, aperto vicino al mercato dal 1958 e ancora il posto dove i locali vi mandano. Sopra il porto stanno due giardini botanici, Marimurtra il più bello dei due, con i sentieri che scendono a belvederi proprio sopra il mare. Il porto è ben gestito e riparato, una base comoda per una notte prima che il mattino dopo comincino le cale vere.",
+          "thingsToDo": [
+            "Percorrere i sentieri sulla falesia dei giardini di Marimurtra",
+            "Mangiare pesce fresco da Can Flores",
+            "Vedere da vicino lo scoglio di Sa Palomera",
+            "Girare il mercato del pesce del porto all'alba"
+          ],
+          "mooringTip": "Marina Blanes e il Club de Vela accettano i transiti e ascoltano il VHF 09, con buon riparo dietro il molo foraneo. Prenotate il posto in anticipo in piena estate, perché questa è una prima o ultima sosta gettonata su molti charter della Costa Brava."
+        },
+        "6": {
+          "shortDescription": "Un breve salto di quattro miglia fino a Lloret de Mar, movimentata a terra ma circondata da cale più tranquille come Santa Cristina e Cala Boadella.",
+          "description": "Quattro miglia sono niente, quindi trattatela come una giornata di cale più che come una navigazione. La spiaggia del paese di Lloret è rumorosa in stagione, ma gli ancoraggi ai suoi due lati sono il motivo per venire. Santa Cristina, appena a sudovest, è un'ampia baia sabbiosa con un eremo sulla punta e buona tenuta in acqua chiara. Girando ancora un po', Cala Boadella è più piccola e più verde, frequentata dalle barche giornaliere ma abbastanza tranquilla per un bagno e un pranzo all'ancora. Di solito ancoriamo davanti a una delle due per il pomeriggio e ci spostiamo alla banchina del paese solo se c'è tempo in arrivo. Lloret stessa ha più storia di quanto la sua fama suggerisca, con un castello-capriccio in cima alla scogliera sul mare e un cimitero modernista che vale un'ora se volete sgranchirvi a terra prima del buio.",
+          "thingsToDo": [
+            "Ancorare per pranzo a Cala Boadella",
+            "Nuotare davanti alla spiaggia di Santa Cristina",
+            "Visitare il castello-capriccio sul mare",
+            "Girare il cimitero modernista"
+          ],
+          "mooringTip": "Lloret ha solo un piccolo porticciolo, quindi mettete in conto di ancorare. Santa Cristina e Cala Boadella tengono bene su sabbia tra quattro e otto metri ma sono aperte a sud; spostatevi al porto di Blanes se per la notte è previsto vento da sud."
+        },
+        "7": {
+          "shortDescription": "Cinque miglia fino a Tossa de Mar, con le mura medievali che scendono a picco sull'acqua e cale riparate come Giverola poco più su lungo la costa.",
+          "description": "Tossa è la cartolina che tutti hanno visto, la Vila Vella, una città medievale murata con torri rotonde che stanno proprio sopra il mare. Arrivando da Lloret ne prendete il meglio, con i bastioni dorati dalla luce del pomeriggio mentre girate dentro la baia. Tossa non ha porto e la baia principale è solo una sosta da bel tempo, ma potete ancorare sotto la fortezza sul lato sud o prendere una boa per qualche ora a terra. Per la notte, la maggior parte degli equipaggi scivola verso nord a Cala Giverola o Cala Futadera, entrambe incise tra pini e falesia ed entrambe riparate dalla tramontana, con sabbia tra cinque e dieci metri. Camminate sulle mura prima di cena, quando i gitanti sono andati e la luce si ammorbidisce, poi mangiate nei vicoli del centro storico sotto.",
+          "thingsToDo": [
+            "Camminare sui bastioni medievali della Vila Vella",
+            "Passare la notte all'ancora nella riparata Cala Giverola",
+            "Nuotare a Cala Futadera, incorniciata dai pini",
+            "Cenare nei vicoli del centro storico dopo il tramonto"
+          ],
+          "mooringTip": "La baia di Tossa ha boe di ormeggio e spazio per ancorare sotto la Vila Vella, ma è sostenibile solo in bonaccia o con venti da nord. Per una notte tranquilla spostatevi a Cala Giverola o Cala Futadera, che si bevono entrambe la tramontana."
+        },
+        "8": {
+          "shortDescription": "Poi tocca a Sant Feliu de Guíxols, una vera città portuale nove miglia più su, con un monastero, un porto attrezzato e le cale di S'Agaró a pochi passi verso nord.",
+          "description": "La costa tra Tossa e Sant Feliu è tra le più belle di questo tratto, una sequenza di falesie e cale con la strada che sale alta sopra di voi. Sono circa nove miglia e, se la tramontana è quieta, è un traverso delizioso in acqua piatta sotto costa. Sant Feliu è una città vera con un porto di lavoro e un marina all'altezza, quindi è un buon posto per rifare provviste o prendere un posto in banchina dopo una serie di ancoraggi. Il vecchio monastero benedettino e la sua Porta Ferrada ancorano il centro, e il passeig sul mare ha il movimento di un posto che vive tutto l'anno. Appena a nord, le cale di S'Agaró e Sa Conca sono a un salto di tender o a piedi, eleganti e tranquille, con il Camí de Ronda che le collega lungo le falesie.",
+          "thingsToDo": [
+            "Vedere la Porta Ferrada e il monastero",
+            "Nuotare alla spiaggia di Sa Conca",
+            "Percorrere il Camí de Ronda di S'Agaró",
+            "Rifare provviste al mercato sul fronte porto"
+          ],
+          "mooringTip": "Il Port de Sant Feliu de Guíxols è un marina a servizio completo con carburante e posti per i transiti; chiamate in anticipo sul VHF 09 d'estate. Il porto è aperto a sud e a est, quindi un llevant forte può rendere mossa l'imboccatura."
+        },
+        "9": {
+          "shortDescription": "Sette miglia fino a Palamós, la capitale del gambero su questa costa, dove l'asta del pesce del pomeriggio e una cena di gamberi rossi sono tutto il senso della giornata.",
+          "description": "Se su questa crociera mangiate una cosa sola, che siano i gamberi di qui. La gamba de Palamós è un animale davvero speciale, rosso cupo e dolce, sbarcato da una flotta che lavora ancora dal paese, e ha prezzi all'altezza della sua fama. La navigazione è corta, circa sette miglia, con l'opzione di indugiare nelle cale sotto Sant Feliu lungo la strada. Palamós ha un marina grande e sicuro, 866 posti che accolgono barche fino a trenta metri, quindi una notte in banchina si organizza facilmente. Calcolate l'arrivo per l'asta del pesce e vedrete le cassette sbarcare prima di mangiare la sera stessa quello stesso pescato. Nàutic Palamós e Can Blau lo cuociono entrambi in modo semplice, che è il modo giusto. Il museo della pesca del paese, l'Espai del Peix, è un buon ripiego per un'ora di pioggia.",
+          "thingsToDo": [
+            "Mangiare la gamba de Palamós rossa alla griglia",
+            "Assistere all'asta del pesce del pomeriggio in banchina",
+            "Visitare il museo della pesca Espai del Peix",
+            "Ancorare davanti alle casette dei pescatori di Cala S'Alguer"
+          ],
+          "mooringTip": "Marina Palamós è uno dei più grandi della costa e ha quasi sempre posto, con fondali fino a dieci metri e un avvicinamento semplice. Prenotate solo per i fine settimana di punta di agosto; altrimenti chiamate sul VHF 09 mentre vi avvicinate al porto."
+        },
+        "10": {
+          "shortDescription": "Comincia il ritorno verso sud, sette miglia facili verso Sant Feliu con il tempo per indugiare nelle cale dei pescatori lungo la strada.",
+          "description": "Questa tappa ripercorre l'acqua di ieri, ma il punto non è farla di corsa. La costa tra Palamós e Sant Feliu è cucita di piccole cale che ripagano una mattina lenta e, con solo sette miglia da coprire, avete tutto il giorno da passare all'ancora. Cala S'Alguer, appena a sud di Palamós, è la migliore: un'insenatura stretta orlata di vecchie casette bianche dei pescatori e senza accesso stradale, quindi resta tranquilla. Più giù, Cala del Castell sta sotto le rovine di un insediamento iberico e tiene bene su sabbia. Di solito ne scegliamo una per il pranzo e un bagno lungo, poi entriamo a Sant Feliu nel tardo pomeriggio per prendere un posto e cenare a terra. Se però la tramontana rinforza, tagliate corto sulle cale ed entrate presto in porto.",
+          "thingsToDo": [
+            "Ancorare a Cala S'Alguer, orlata di casette",
+            "Nuotare sotto le rovine di Cala del Castell",
+            "Fare snorkeling sulle punte rocciose tra le cale",
+            "Rientrare a Sant Feliu per cena a terra"
+          ],
+          "mooringTip": "Cala S'Alguer e Cala del Castell danno entrambe buona tenuta su sabbia tra tre e otto metri ma sono aperte a est, quindi vanno bene con bonaccia o con vento da terra. Tenetevi il marina di Sant Feliu come ripiego se il vento gira."
+        },
+        "11": {
+          "shortDescription": "Nove miglia di ritorno lungo la costa a falesie fino a Tossa de Mar, calcolate per camminare di nuovo sulle mura quando le barche giornaliere sono andate.",
+          "description": "Il rientro verso Tossa ripercorre le stesse belle falesie superate all'andata, e con la luce contraria si legge in modo diverso. Se lasciate Sant Feliu dopo colazione potete infilarvi in una cala o due lungo la strada; Cala Salionç e Canyet sono entrambe buone soste pranzo, con sabbia e riparo dai venti da nord. Nove miglia sono al massimo mezza giornata. L'idea è arrivare a Tossa con il pomeriggio ancora davanti, ancorare sotto la Vila Vella o prendere una boa, e scendere a terra per un secondo giro, più tranquillo, del centro storico quando i bus turistici sono partiti. Salite sui bastioni nell'ora d'oro, quando le mura si accendono e i rondoni escono sopra la baia. Per la notte, risalite a Cala Giverola se minaccia qualcosa da sud.",
+          "thingsToDo": [
+            "Sosta pranzo a Cala Salionç",
+            "Nuotare nella riparata Cala Canyet",
+            "Camminare sui bastioni di Tossa nell'ora d'oro",
+            "Ripiegare su Cala Giverola se il tempo gira"
+          ],
+          "mooringTip": "Come all'andata, la baia di Tossa è un ormeggio solo da bel tempo, con boe e ancoraggio sotto la fortezza. Se le previsioni danno un po' di sud, passate la notte a Cala Giverola, rincantucciati dietro il promontorio."
+        },
+        "12": {
+          "shortDescription": "La lunga tirata verso sud, quasi cinquanta miglia oltre Barcellona fino a Sitges, quindi partite prima dell'alba e trattatela come una giornata di navigazione.",
+          "description": "Questa è l'unica vera navigazione della quindicina. Sitges sta ben a sudovest di Barcellona e da Tossa sono quasi cinquanta miglia, quindi si merita una partenza presto. Di solito lasciamo la boa prima delle prime luci, usciamo a motore nella calma e prendiamo il garbí quando entra a metà giornata per una bella vela lungo la città. Restate ben al largo del porto di Barcellona, dove il traffico è intenso e lo schema di separazione va rispettato. A metà pomeriggio le colline del Garraf si alzano davanti e Sitges si mostra, bianca contro il verde. Il Port d'Aiguadolç è un marina grande e riparato appena a est del paese, con 742 posti e molti ristoranti lungo la banchina. Ormeggiate, andate a piedi a Sitges per la serata e lasciate che la giornata lunga si sedimenti su una cena tardiva.",
+          "thingsToDo": [
+            "Navigare al largo davanti allo skyline di Barcellona",
+            "Esplorare il centro storico e il lungomare di Sitges",
+            "Vedere il museo Cau Ferrat sul mare",
+            "Cena sulla banchina del marina di Aiguadolç"
+          ],
+          "mooringTip": "Il Port d'Aiguadolç è grande e ben protetto, accoglie barche fino a trentadue metri e ascolta il VHF 09. Dopo una giornata da cinquanta miglia, chiamate mentre passate Barcellona così il posto è pronto quando arrivate stanchi."
+        },
+        "13": {
+          "shortDescription": "Un salto di tre miglia fino alla minuscola Garraf, un gruppo di casette modernistiche sotto falesie imponenti, e la notte più tranquilla del viaggio.",
+          "description": "Dopo le miglia di ieri, Garraf è il premio: appena tre miglia a ovest di Sitges e un cambio di scala completo. Il paese è una fila di casette bianche con le rifiniture verdi, costruite nei primi anni del Novecento su un disegno legato alla cerchia di Gaudí, sotto il calcare ripido del massiccio del Garraf. C'è un piccolo porto e una spiaggia corta, e non molto altro, che è esattamente il suo fascino. Passate la mattina all'ancora o in banchina, fate il bagno dalla barca e girate le poche strade prima di pranzare in uno dei ristoranti sulla spiaggia. Il massiccio dietro sale in un parco naturale intrecciato di sentieri se le gambe vogliono muoversi. È una giornata lenta e tranquilla per scelta, quella che permette a un viaggio di due settimane di scaricare invece di sprintare verso il traguardo.",
+          "thingsToDo": [
+            "Vedere le casette modernistiche della cerchia di Gaudí",
+            "Fare il bagno alla piccola spiaggia di Garraf",
+            "Pranzare in un ristorante sulla spiaggia",
+            "Fare un sentiero nel massiccio del Garraf"
+          ],
+          "mooringTip": "Il porto di Garraf è piccolo e si riempie d'estate, quindi chiamate in anticipo o arrivate presto per un posto. L'ancoraggio davanti alla spiaggia va bene con il garbí dominante ma è aperto a sud, quindi controllate le previsioni della sera."
+        },
+        "14": {
+          "shortDescription": "L'ultima tappa verso casa, dodici miglia di rientro al Port Olímpic, con lo skyline di Barcellona che cresce davanti per tutta la strada.",
+          "description": "L'ultima mattina è una tirata semplice di dodici miglia fino alla base, e non serve correre. Se il garbí collabora farete quasi tutta la strada a vela, con le colline del Garraf che restano indietro e la città che si costruisce piano davanti finché la Sagrada Família e le torri degli alberghi ritagliano lo skyline. Datevi tempo. Le società di charter vogliono la barca indietro a un'ora precisa, di solito a metà mattina o a mezzogiorno, quindi una partenza alle nove lascia margine per riconsegnare senza stress. Avvicinandovi a Barcellona, state fuori dall'imboccatura del porto commerciale e seguite il canale segnalato dalle boe fino al Port Olímpic. Una volta date le cime a terra restano ancora un pomeriggio e una serata in città da spendere, che è il modo giusto di chiudere due settimane a bordo, con una passeggiata nella Barceloneta e un ultimo piatto di pesce.",
+          "thingsToDo": [
+            "Navigare verso lo skyline di Barcellona",
+            "Seguire il canale segnalato dalle boe fino al Port Olímpic",
+            "Passeggiare sul lungomare della Barceloneta",
+            "Ultima cena di pesce in città"
+          ],
+          "mooringTip": "Il rientro al Port Olímpic è vincolato all'orario di riconsegna di metà mattina, quindi lasciate Garraf presto. State ben lontani dall'avvicinamento del porto commerciale ed entrate attraverso il canale segnalato; chiamate il marina sul VHF 09 per l'assegnazione del posto."
+        }
+      }
+    }
+  },
+  "areas": {
+    "catalonia": {
+      "metaTitle": "Itinerari Catalogna e Costa Brava | Boat4You",
+      "metaDesc": "Rotte da Barcellona, Sitges e Palamós: cale della Costa Brava, entroterra di Girona sul mare e settimane città-e-mare che funzionano davvero.",
+      "title": "Una capitale con una costa in dotazione",
+      "description": "La Catalogna è il charter per gli equipaggi che vogliono la civiltà insieme alla vela. Si parte sotto lo skyline di Barcellona e in un giorno siete o a sud tra le spiagge di Sitges o a nord sulla Costa Brava, dove i pini si sporgono su piccole cale rocciose e l'acqua diventa verde bottiglia. Palamós e Roses fanno da porti onesti per la notte, con ristoranti seri — è la costa che ha nutrito elBulli — e la tramontana, quando soffia, è forte ma ben prevista. Le tappe sono flessibili: si sta sotto costa con giornate da venti miglia o si allunga quando l'equipaggio trova il suo ritmo. È anche la rara settimana di vela in cui un giorno di riposo significa Gaudí e non un'altra spiaggia. Si arriva in aereo, si sale a bordo, senza traghetti di mezzo."
+    },
+    "ibiza": {
+      "metaTitle": "Itinerari a vela Ibiza e Formentera | Boat4You",
+      "metaDesc": "Rotte da Marina Eivissa attorno a Ibiza e Formentera: Es Palmador, Cala Saona e gli ancoraggi più limpidi di Spagna, notte per notte.",
+      "title": "Due isole, una laguna senza fine",
+      "description": "Togliete i manifesti dei club e quel che resta è la migliore acqua in cui nuotare di tutta la Spagna. Il canale tra Ibiza e Formentera è una laguna dal fondo sabbioso dove le barche all'ancora sembrano sospese in aria, e una settimana basta per girare entrambe le isole senza mai navigare tre ore di fila. Formentera è la metà tranquilla — i tramonti di Cala Saona, i ristoranti sulla spiaggia che prendono l'ancoraggio sul serio — mentre la costa nord di Ibiza nasconde cale tra i pini dove la folla delle feste non arriva. Se volete il rumore c'è anche quello, a un giro di tender di distanza. La posidonia è protetta e controllata: ancorate sempre su sabbia, oppure prendete una boa. Giugno e settembre vi danno la stessa acqua con metà delle barche."
+    },
+    "mallorca": {
+      "metaTitle": "Itinerari a vela a Maiorca | Boat4You",
+      "metaDesc": "Rotte da Palma, Alcúdia e Minorca: le falesie della Tramuntana, il parco nazionale di Cabrera e le cale minorchine, giorno per giorno.",
+      "title": "Un'isola che si naviga come tre",
+      "description": "La fama di Maiorca appartiene alle sue spiagge; il suo lato migliore appartiene ai velisti. Il sudovest vi dà Palma — una vera capitale marittima con la cattedrale sopra il campo boe — e salti facili da un porto all'altro. La costa della Tramuntana è la scenografia: falesie alte seicento metri, la gola di Sa Calobra e il piccolo porto di Sóller che si accende al crepuscolo. A sud sta Cabrera, isola-parco nazionale dove una boa autorizzata vi compra quel cielo stellato che la terraferma ha dimenticato. Aggiungete Ciutadella a Minorca e le sue cale intatte se avete la seconda settimana. I venti sono gestibili tutto l'anno e le infrastrutture sono le migliori delle Baleari. Prenotate le boe di Cabrera settimane prima: sono poche, e valgono la fatica."
+    }
+  }
+}
