@@ -408,6 +408,492 @@
           "mooringTip": "Ihr müsst am späten Morgen zur Übergabe im Port Olímpic sein, verlasst Garraf also früh. Halten euch weit frei von der Ansteuerung des Handelshafens und laufen durch das markierte Fahrwasser ein; ruft die Marina auf VHF 09 für die Liegeplatzzuweisung."
         }
       }
+    },
+    "ibiza": {
+      "metaTitle": "7 Tage Ibiza & Formentera segeln | Boat4You",
+      "metaDesc": "Sieben Tage Ibiza und Formentera ab Marina Eivissa: Santa Eulària, Portinatx, Sant Antoni, Cala Vedella, Ses Salines und die Sandbänke Formenteras.",
+      "days": {
+        "1": {
+          "shortDescription": "Ein entspannter Auftakt über 8 Meilen ostwärts von Eivissa nach Santa Eulària, mit dem ersten Bad in der Cala Martina, bevor ihr in der Marina festmacht.",
+          "description": "Der erste Schlag ist bewusst kurz, und das kommt allen zugute. Acht Meilen die Ostküste hinauf geben der Crew Zeit herauszufinden, wo die Winschen sitzen und wie das Boot liegt, bevor es anspruchsvoller wird. Im Sommer spürt ihr meist die Tramuntana, die mit 15 bis 25 Knoten von Norden herunterdrückt und nachmittags manchmal einem sanfteren westlichen Mestral weicht. Wir werfen den Anker gern zuerst in der Cala Martina, einer ruhigen, von Pinien gesäumten Bucht, in der die Posidonia-Wiesen unter dem Kiel Maske und Schnorchel lohnen. In der Marina von Santa Eulària geht ihr mit dem Heck an den Steg und liegt bei fast jedem Wetter ruhig, genau deshalb ist sie schnell voll. Bucht rechtzeitig, wenn ihr im August unterwegs seid. An Land lohnt der Aufstieg zur Kapelle Puig de Missa in der Dämmerung, und im Es Trull de Ca Palai bekommt ihr einen richtigen Bullit de Peix.",
+          "thingsToDo": [
+            "In den Posidonia-Wiesen der Cala Martina schnorcheln",
+            "Zur Kapelle Puig de Missa in der Dämmerung hinauf",
+            "Bullit de Peix im Es Trull de Ca Palai bestellen",
+            "Im geschützten Sand der Cala Llonga schwimmen"
+          ],
+          "mooringTip": "In Santa Eulària liegt ihr mit dem Heck zum Steg und seid aus jeder Richtung geschützt, aber es ist eine der belebtesten Marinas der Insel. Reserviert für August weit im Voraus und rechnet in der Hochsaison mit rund 100–160 € pro Nacht."
+        },
+        "2": {
+          "shortDescription": "Fünfzehn Meilen nach Norden nach Portinatx, dem ruhigsten Badeort Ibizas, mit goldenem Sand an der S'Arenal und einem Piratenturm zum Anpaddeln.",
+          "description": "Portinatx liegt ganz oben auf der Insel, und der Weg dorthin führt am leereren Stück der Nordküste entlang. Fünfzehn Meilen, das meiste davon auf bequemem Halbwindkurs, wenn die Tramuntana mitspielt. Der Hafen selbst ist klein und natürlich, geschützt hinter Landzungen, die den Schwell wegnehmen. Ich ankere meist zuerst in der S'Arenal Petit, wo der Sand auf vier bis sechs Metern gut hält und das Wasser dieses helle Türkis annimmt, das es nur über sauberem Grund gibt. Die S'Arenal Gros nebenan ist die größere Bucht, wenn ihr Strandtag wollt. Eine Kajaktour nach Westen bringt euch zum Wachturm von Xarraca, einem gedrungenen Ausguck aus dem 16. Jahrhundert, gebaut gegen die Korsaren aus der Berberei. Abends lohnt der Gang hinaus zum Leuchtturm mit Blick zurück über die Bucht, danach probiert ihr im S'Espartar die einheimischen Hierbas Ibicencas.",
+          "thingsToDo": [
+            "In der S'Arenal Petit ankern und schwimmen",
+            "Im Kajak westwärts zum Wachturm Xarraca",
+            "Zum Leuchtturm von Portinatx für den Blick über die Bucht",
+            "Hierbas Ibicencas im Restaurante S'Espartar probieren"
+          ],
+          "mooringTip": "Die kleine Marina von Portinatx nimmt euch mit dem Heck zum Steg auf und liegt gut geschützt vor Nord, in der Saison für etwa 70–110 € pro Nacht. Ist sie voll, hält der Sand in der S'Arenal Petit auf vier bis sechs Metern zuverlässig."
+        },
+        "3": {
+          "shortDescription": "Eine Etappe über 15 Meilen die wilde Nordwestküste hinunter nach Sant Antoni, zum Abschluss Sundowner dort, wo die Sunset-Bar-Szene der Insel begann.",
+          "description": "Das ist der ungeschützteste Schlag der Woche, fünfzehn Meilen entlang einer Küste mit kaum Schlupflöchern, deshalb laufe ich lieber um neun aus und habe ihn hinter mir, bevor der Nachmittagswind aufbaut. Die Belohnung wartet kurz vor Schluss. Die Cala Salada ist nur vom Wasser aus zu erreichen, eine Bucht mit terrakottafarbenen Wänden, in der ihr auf vier bis sechs Metern über Sand ankert und an einen Strand schwimmt, den die meisten Autoreisenden nie finden. Die Marina von Sant Antoni liegt einen kurzen Sprung weiter, geschützt aus Nord und Ost, auch wenn sie bei Westwind arbeitet. Der Ort hat einen gemischten Ruf, aber der Sunset Strip macht seinem Namen alle Ehre. Im Café del Mar werden seit 1980 Drinks Richtung Horizont ausgeschenkt, und es ist immer noch der ehrliche Platz, um die Sonne gehen zu sehen.",
+          "thingsToDo": [
+            "In die nur per Boot erreichbare Cala Salada ankern und schwimmen",
+            "Auf den Cap Nunó wandern für den Blick auf Conillera",
+            "Sonnenuntergang im originalen Café del Mar",
+            "Paella de Marisco im El Chiringuito teilen"
+          ],
+          "mooringTip": "Die Marina von Sant Antoni nimmt euch mit dem Heck zum Steg auf und deckt gut nach Nord und Ost, aber die Liegeplätze spüren jeden Westwind, wählt die Nacht also mit Bedacht. In der Hochsaison liegt der Preis bei 100–160 €. Die Cala Salada taugt nur als Mittagsankerplatz, auf Sand in vier bis sechs Metern."
+        },
+        "4": {
+          "shortDescription": "Ein kurzer Schlag über 8 Meilen nach Süden zur Cala Vedella und ihrem berühmten Nachbarn, dem 380 Meter hohen Kalksteinzahn Es Vedrà vor der Küste.",
+          "description": "Acht Meilen sind kaum ein Vormittag Arbeit, es eilt also nicht mit dem Ablegen. Die Cala Vedella ist eine ruhigere Ecke der Westküste, eine Sandbucht, in der der Anker auf vier bis sechs Metern leicht fasst und in der ihr geborgen liegt, wenn der Nordwind einsetzt. Der eigentliche Magnet liegt ein paar Meilen vor der Küste. Es Vedrà steigt 380 Meter senkrecht aus dem Meer, ein Kalksteinzahn, um den sich mehr Legenden ranken als um manche ganze Insel, von Behauptungen über Magnetismus bis zur New-Age-Szene, die seine Anziehung spüren will. Wir motoren für eine langsame Runde und ein Bad darunter hinaus, aber der Grund ist felsig und der Ankerplatz ungeschützt, deshalb bleibt es ein Tagesstopp. Zurück in der Bucht schnorchelt ihr vor dem Abendessen die flachen Bögen an den Felsen.",
+          "thingsToDo": [
+            "Tagsüber unter Es Vedrà ankern",
+            "Die flachen Bögen vor der Cala Vedella schnorcheln",
+            "Mittagessen von der Liege im El Chiringuito",
+            "Sonnenuntergang über Es Vedrà von der Klippe"
+          ],
+          "mooringTip": "Die Cala Vedella bietet auf vier bis sechs Metern guten Sandhalt und schützt nach Nord, ideal für eine unkomplizierte Nacht. Es Vedrà bleibt ein reiner Tagesbesuch: Der Grund ist auf acht bis zehn Metern felsig, und für die Nacht gibt es dort keinerlei Deckung."
+        },
+        "5": {
+          "shortDescription": "Sechs Meilen südwärts ins Salinen-Schutzgebiet Ses Salines, wo geschütztes Seegras Bojen statt Anker bedeutet und an Land eine legendäre Strandbar wartet.",
+          "description": "Der Schlag hinunter nach Ses Salines ist kurz und setzt euch mitten ins Naturschutzgebiet der Insel, wo die Salinen hinter dem Strand schon zu phönizischer Zeit bewirtschaftet wurden. Das Seegras steht hier seit 1999 unter UNESCO-Schutz, und das ändert die Art, wie ihr ankommt. Freies Ankern gibt es nicht: Ihr nehmt eine ausgewiesene Boje, vorab über den Govern Balear gebucht, und wer außerhalb der Zonen den Anker fallen lässt, zahlt über 500 €. Wenn ihr erst einmal liegt, ist das Schwimmen großartig und die Küste hat echten Charakter. Das Sa Trinxa draußen an der Landzunge ist seit den 1980ern eine Barfuß-Institution und läuft immer noch in seinem eigenen, lockeren Rhythmus. Wer es ruhiger mag, geht nach Süden zum Cavallet und sucht am Spülsaum nach Meerglas. Reserviert im Salinas einen Tisch, wenn ihr den Bullit de Peix wollt.",
+          "thingsToDo": [
+            "Eine gebuchte Boje in der Seegras-Zone übernehmen",
+            "Drinks in der bohemien Strandbar Sa Trinxa",
+            "Am Cavallet Beach nach Meerglas suchen",
+            "Bullit de Peix im Salinas reservieren"
+          ],
+          "mooringTip": "In Ses Salines gilt über der geschützten Posidonia Bojenpflicht; reserviert die Zonen-Mooring vorab online beim Govern Balear, für rund 40–80 € pro Nacht. Ankern außerhalb der markierten Zonen ist verboten und kostet 500 € oder mehr."
+        },
+        "6": {
+          "shortDescription": "Vier Meilen über die Freus-Straße nach Formentera, Heimat von Sandbänken, die es locker mit der Karibik aufnehmen.",
+          "description": "Vier Meilen über die Freus, und ihr seid auf einer anderen Insel. Formentera ist flach, niedrig und dreht sich um Sand statt um Nachtleben, und die Überfahrt verlangt etwas Respekt, wenn Wind auf den Strom trifft, der durch die Straße setzt. La Savina ist der einzige Hafen, dort macht ihr also für die Nacht mit dem Heck zum Steg fest. Vorher aber ist der Abstecher hinaus nach Ses Illetes der eigentliche Grund, hierherzukommen: eine schmale Sandbank mit Wasser, das kaum noch nach Meer aussieht. Sie liegt in einer Schutzzone, also gilt die gebuchte Boje, nicht der Anker. Bleibt Zeit, leiht euch am Hafen Räder und rollt die flache Straße ostwärts zum Leuchtturm von La Mola. Beim Abendessen muss man nicht lange überlegen: Im Juan y Andrea gibt es seit Jahrzehnten Espardeñas direkt am Strand.",
+          "thingsToDo": [
+            "An der Sandbank Ses Illetes festmachen",
+            "Die flache Straße zum Leuchtturm La Mola radeln",
+            "Espardeñas im Juan y Andrea essen",
+            "An der Südseite von Ses Salines schwimmen"
+          ],
+          "mooringTip": "La Savina ist Formenteras einziger Hafen und nimmt euch in der Saison für 120–200 € pro Nacht mit dem Heck zum Steg auf, bucht also vor. In Ses Illetes müsst ihr eine Boje der Schutzzone nehmen, rund 40–80 € pro Nacht, statt den Anker in den Sand zu werfen."
+        },
+        "7": {
+          "shortDescription": "Acht Meilen zurück nach Eivissa, mit einem letzten Stopp an Espalmador, dem kleinen Inselchen mit dem berühmten Naturschlammbad.",
+          "description": "Der letzte Tag ist bewusst kurz, so bleibt Platz für ein letztes Bad, bevor das Boot zurückgeht. Espalmador, das flache Privatinselchen zwischen den beiden großen Inseln, ist die naheliegende Wahl. An seiner Nordseite liegt ein flaches Becken, in dem sich die Leute mit grauem Schlick einreiben und ihn in der Sonne trocknen lassen, ein raues kleines Inselritual, das es seit Jahren gibt. Von dort sind es gemütliche acht Meilen nach Hause. Die Marina Botafoch ist die elegante Wahl für die letzte Nacht, nah an der Altstadt und ihren Hafenbars, während die Stadtpier der Marina Eivissa weniger kostet und euch für die Übergabe näher ans Zentrum bringt. Bunkert am Steg neben der Hafeneinfahrt und spült das Boot ab, bevor ihr die Schlüssel zurückgebt. Wenn der Abend noch etwas hergibt, verabschiedet das Lío an der Uferpromenade die Woche stilvoll.",
+          "thingsToDo": [
+            "Schlammbad und Schwimmen vor Espalmador",
+            "Sonnenuntergang über den Klippen der Cala Saona",
+            "Bunkern und Boot abspülen in der Marina Botafoch",
+            "Zum Abschluss Cocktails im Lío an der Uferpromenade"
+          ],
+          "mooringTip": "Die Marina Botafoch ist die Premium-Adresse für die letzte Nacht, in der Hochsaison 200–350 €, während die Stadtpier der Marina Eivissa mit 120–180 € günstiger und zentraler liegt. Bunkert vor der Übergabe am Steg neben der Hafeneinfahrt."
+        }
+      }
+    },
+    "ibiza-formentera-14-days": {
+      "metaTitle": "14 Tage Ibiza & Formentera Törn | Boat4You",
+      "metaDesc": "Zwei Wochen ab Marina Eivissa rund um Ibiza und Formentera: Ses Salines, Es Vedrà, die Bojenfelder von Illetes und die ruhige Nordküste bei Portinatx.",
+      "days": {
+        "1": {
+          "shortDescription": "Ein kurzer erster Schlag von Ibiza-Stadt nach Süden zu den Salinenstränden, damit die Crew ankommt, bevor die echten Distanzen beginnen.",
+          "description": "Nur fünf Meilen trennen die Marina von Ibiza-Stadt von Ses Salines, es eilt also nicht mit dem Ablegen. Wir bunkern meist Wasser, sortieren den Kühlschrank und sind am späten Vormittag aus dem Hafen. Hinter der Landzunge am Flughafen öffnen sich die Salinen hinter den Dünen, und das Wasser wechselt von Marineblau in dieses helle Grün, das die Posidonia ihm gibt. Werft den Anker auf sauberem Sand, gut abseits der Wiese, auf fünf bis sieben Metern. An Land läuft das Sa Trinxa noch im selben lockeren Strandbar-Rhythmus wie seit Jahren, und im Beso Beach bekommt ihr auf Reservierung ein anständiges baskisches Mittagessen. Die Bucht bleibt den Nachmittag über belebt und leert sich, sobald die Tagesboote abziehen. Vor dem Abendessen schwimmen, zusehen, wie das Licht über den Salinen weich wird, und den Törn ankommen lassen.",
+          "thingsToDo": [
+            "Strandlunch im Chiringuito Sa Trinxa",
+            "Cocktails im Sand des Beso Beach",
+            "Bei Sonnenuntergang über die Salinen laufen",
+            "Die Posidonia neben den Sandflecken schnorcheln"
+          ],
+          "mooringTip": "Ankert ausschließlich auf den hellen Sandflecken, nie auf der dunklen Posidonia, in fünf bis acht Metern. Die Bucht ist nach Süden offen, bei angesagtem Südwind über Nacht also lieber um die Ecke nach Es Cavallet oder gleich hinüber nach Formentera."
+        },
+        "2": {
+          "shortDescription": "Eine kurze Überfahrt durch den Es-Freus-Kanal nach La Savina auf Formentera, die letzte richtige Proviantstation vor den Tagen an den Bojenfeldern.",
+          "description": "Der Sprung über die Es Freus ist kurz, will aber Aufmerksamkeit. Der Kanal zwischen den Inseln ist flach und mit Inselchen gespickt, Es Penjats und s'Espardell darunter, haltet euch also an die betonnte Linie und passt auf die Ausflugsfähren auf, die zwischen Ibiza und La Savina Gas geben. Rechnet mit vier bis fünf Meilen, unter Segeln eine Stunde, wenn die Brise mitmacht. La Savina ist Formenteras einziger richtiger Hafen und im Juli schnell voll, ruft also vor oder bucht den Liegeplatz, lange bevor ihr Salines verlasst. Sobald ihr fest seid, gehört euch die Insel per Roller oder Rad: flach hinaus zum Leuchtturm am Cap de Barbaria oder nach Osten zu den Weinbars rund um Sant Ferran. Proviant gibt es hier problemlos, Diesel auch. Praktisch, um vor den Ankertagen aufzufüllen.",
+          "thingsToDo": [
+            "Mit dem Roller zum Leuchtturm Cap de Barbaria",
+            "Sundowner in Sant Ferran",
+            "Die flache Straße nach Es Pujols radeln",
+            "Proviant und Diesel vor den Ankerplätzen"
+          ],
+          "mooringTip": "La Savina ist in der Hochsaison ausgebucht, und spontan frei werdender Platz ist im Juli und August selten. Reserviert vorab und denkt daran: Die Marina liegt offen nach West, was an den äußeren Stegen für Schwell und Hackwelle sorgen kann."
+        },
+        "3": {
+          "shortDescription": "Das kurze Stück nach Norden zur Sandbank Illetes und nach Espalmador motoren, in eines der klarsten Ankerreviere der Balearen.",
+          "description": "Kaum drei Meilen trennen La Savina von Ses Illetes, und der Lohn kommt sofort. Das ist das Postkartenmotiv, für das alle herkommen: eine flache Sandzunge mit Wasser, das so seicht und hell ist, dass ihr die Rippel am Grund zählen könnt. Das ganze Gebiet liegt im Naturpark Ses Salines, und die Regeln sind streng. Nehmt eine der ökologischen Bojen, statt den Anker zu werfen, entweder im Feld vor Illetes oder weiter oben Richtung Espalmador, und bucht sie über das System des Parks oder auf UKW-Kanal 77. Danach läuft der Tag von allein. Watet über die Sandbank auf die andere Seite, schwimmt bei Stromstille die Lücke nach Espalmador hinüber oder lauft über die flachen Dünen des Inselchens. Am Strand reihen sich einfache Grillfisch-Lokale für ein träges Mittagessen an Land. Gegen Abend dünnen die Boote aus und der Ankerplatz wird still.",
+          "thingsToDo": [
+            "Über die Sandbank Illetes Richtung Espalmador waten",
+            "Grillfisch-Mittagessen am Strand",
+            "Im Flachwasser vor Illetes schnorcheln",
+            "In der Dämmerung über Espalmadors flache Dünen"
+          ],
+          "mooringTip": "Ankern auf der Posidonia ist hier verboten und wird kontrolliert; nehmt eine ökologische Boje im Feld von Illetes oder Espalmador, bis 25 Meter Länge, gebucht über das Parksystem oder UKW-Kanal 77. Greift früh zu, im Sommer sind sie am späten Vormittag weg."
+        },
+        "4": {
+          "shortDescription": "Eine längere Etappe um Ibizas Südwestecke, vorbei an Es Vedrà zur geschützten Sonnenuntergangsbucht Cala Vedella.",
+          "description": "Das ist der erste richtige Schlag des Törns, rund zwanzig Meilen zurück über die Freus und die Südwestküste hinauf. Lauft um neun aus, bevor die Nachmittagsbrise auf die Nase kommt. Die Belohnung folgt vor Cap Blanc, wo Es Vedrà aus dem Meer aufragt, eine kahle Kalksteinpyramide, die den ganzen Weg nach Norden beherrscht. Im späten Nachmittagslicht sieht sie am besten aus, timt also eure Annäherung, wenn es geht. Die Cala Vedella selbst ist ein schmaler, gut geschützter Einschnitt mit Sandstrand am Ende und ein paar Villen an den Pinienhängen. Ankert in der Mitte auf sechs bis zehn Metern, Sand mit Seegras gemischt. Direkt am Strand kocht ein Familienbetrieb ehrliche Paella, und die Bucht schaut nach Westen, der Sonnenuntergang legt sich also genau übers Wasser vor euer Heck.",
+          "thingsToDo": [
+            "Es Vedrà vor Cap Blanc fotografieren",
+            "Paella im Restaurant direkt am Strand",
+            "Sundowner mit Blick nach Westen im Cockpit",
+            "Im geschützten Ende der Bucht schwimmen"
+          ],
+          "mooringTip": "Die Cala Vedella liegt eingeschnitten und hält in der üblichen Seebrise gut, ist aber eng und beliebt, seid also am frühen Nachmittag da, um einen Platz in der Mitte zu bekommen. Bei Schwell aus West ist sie offen, prüft die Vorhersage, bevor ihr die Nacht dort plant."
+        },
+        "5": {
+          "shortDescription": "Ein gemütlicher Küstenschlag nach Norden in die weite Bucht von Sant Antoni, mit Cala Bassa und dem berühmten Sunset Strip.",
+          "description": "Kurzer Tag, vielleicht acht Meilen die Küste hinauf, es bleibt also Zeit für einen Stopp vor dem Hafen. Cala Bassa und Cala Conta liegen beide auf dem Weg, weite Sandbuchten, in denen ihr auf fünf bis acht Metern ankern und vor dem Mittagessen vom Boot schwimmen könnt. Beide sind nach Westen offen, morgens bei wenig Wind also fein, sobald die Brise einsetzt aber rollig. Die Bucht von Sant Antoni ist riesig, und die Marina des Club Nàutic ist gut geführt, auch wenn die Liegeplätze in der Saison nicht billig sind. Festmachen, die Promenade ablaufen und sich einen Platz am Sunset Strip sichern. Das Café del Mar und das Café Mambo spielen die Sonne seit Jahrzehnten über den Conejera-Inseln herunter. Touristisch, keine Frage, aber das Licht über diesem Stück Wasser rechtfertigt den Andrang.",
+          "thingsToDo": [
+            "In der Cala Bassa ankern und schwimmen",
+            "Sunset-Set im Café del Mar",
+            "Die Promenade von S'Arenal entlang",
+            "Proviant auf dem Markt von Sant Antoni"
+          ],
+          "mooringTip": "Der Club Nàutic Sant Antoni nimmt auch größere Yachten, ist im Juli und August aber ausgebucht, reserviert also vorab; rechnet mit rund 130 bis 150 Euro pro Nacht für ein mittelgroßes Boot. Ankern in der äußeren Bucht geht, ist aber offen nach West und dem ständigen Schwell der Tagesboote ausgesetzt."
+        },
+        "6": {
+          "shortDescription": "Um die wilden Nordwestklippen nach Portinatx, das ruhige, unaufgeregte Ende Ibizas, wo die Küste endlich langsamer wird.",
+          "description": "Der Weg hinauf und um die Nordwestecke ist der spektakulärste des Törns, rund fünfzehn Meilen hohe Steilküste und fast keine Bebauung. Hinter der Cala Salada wird die Küste schroff und die Ankerplätze werden rar, nehmt also genug Diesel und Wasser für den Tag mit. Portinatx liegt ganz oben auf der Insel, drei zusammenhängende Buchten, die ihre geschützteste Ecke bilden. Die Hauptbucht S'Arenal Gran hält auf Sand in vier bis sechs Metern gut und bleibt ruhig, außer bei kräftigem Nordwind. Das ist die entspannte Seite Ibizas, alles Pinien und niedrige weiße Häuser, weit weg von den Clubs der Westküste. An Land gibt es ein paar ehrliche Strandrestaurants und einen kurzen Spaziergang hinaus zum alten Leuchtturm. Wir bleiben hier meist zwei Nächte, wenn der Plan es hergibt.",
+          "thingsToDo": [
+            "In der ruhigen S'Arenal Gran ankern",
+            "Zum Leuchtturm von Portinatx laufen",
+            "Die Felsen der Cala Xarraca schnorcheln",
+            "Sundowner oberhalb der Cala Xuclar"
+          ],
+          "mooringTip": "Portinatx bietet den besten Schutz der Nordküste und hält auf Sand gut, doch die drei Buchten füllen sich bis Mittag mit Tagesbooten. Kommt früher für einen Platz, und traut dem Platz nur über Nacht, wenn kein Nordwind angesagt ist."
+        },
+        "7": {
+          "shortDescription": "Die grünere Ostküste hinunter nach Santa Eulària, einer Stadt am Fluss mit ordentlicher Marina und angenehm unaufgeregtem Tempo.",
+          "description": "Die Ostküste ist sanfter als der Norden, grüner und flacher, und der Weg hinunter nach Santa Eulària misst etwa zwölf Meilen, meist mit dem Wind von achtern. Ein Stopp in der Cala Sant Vicent oder vor Tagomago lohnt sich, der Privatinsel, vor der das Wasser tief und klar über Sand steht. Santa Eulària selbst ist die entspannteste der drei Städte Ibizas, gebaut an der Mündung des einzigen Flusses der Insel. Die Marina ist modern und ruhig, ein guter Ort, um mitten im Törn Proviant zu fassen und Wäsche zu waschen. An Land machen die palmengesäumte Promenade und die Restaurants im Carrer Sant Vicent den Abend leicht. Ist Mittwoch, lohnt der kurze Taxiweg zum alten Hippiemarkt an der Punta Arabí im nahen Es Canar. Ruhiger als Ibiza-Stadt, und genau das ist der Vorteil.",
+          "thingsToDo": [
+            "Vor der Insel Tagomago ankern und schwimmen",
+            "Über die palmengesäumte Uferpromenade schlendern",
+            "Mittwochs zum Hippiemarkt Punta Arabí",
+            "Abendessen im Carrer Sant Vicent"
+          ],
+          "mooringTip": "Der Puerto Deportivo Santa Eulària liegt geschützt und ist gut ausgestattet, ein guter Zwischenstopp für Wasser, Diesel und Wäsche; bucht in den Spitzenwochen vor. Ankern vor dem Stadtstrand ist möglich, liegt aber offen nach Süd und Ost."
+        },
+        "8": {
+          "shortDescription": "Eine kurze Etappe nach Süden zurück nach Ibiza-Stadt, die erste Runde schließt sich unter den Mauern von Dalt Vila.",
+          "description": "Ein entspannter letzter Schlag der ersten Woche, rund acht Meilen nach Süden, mit ein oder zwei Stopps, wenn ihr mögt. Die Cala Llonga ist ein tiefer, geschützter Einschnitt gleich die Küste hinunter, gut für ein Bad am Morgen, und darunter hat Sol d'en Serra ein solides Strandrestaurant auf den Felsen. Von dort geht es geradeaus an Talamanca vorbei nach Ibiza-Stadt, mit den Wällen von Dalt Vila, die beim Anlaufen des Hafens die Silhouette füllen. Die Altstadt ist UNESCO-Welterbe und den Aufstieg wert, durch das Portal de ses Taules hinauf zur Kathedrale und dem Blick zurück über den eigenen Masttopp. Von der Marina Eivissa sind es ein paar Schritte zu den Bars am Hafen und in das Gassengewirr von La Marina. Ein guter Abend, um gut zu essen und die Ankerplätze gegen Kopfsteinpflaster zu tauschen.",
+          "thingsToDo": [
+            "Morgenbad in der Cala Llonga",
+            "Mittagessen auf den Felsen im Sol d'en Serra",
+            "Zur Kathedrale hinauf durch Dalt Vila",
+            "Abend in den Gassen von La Marina"
+          ],
+          "mooringTip": "Die Marina Eivissa liegt direkt unter der Altstadt und ist begehrt, bestätigt euren Rückliegeplatz also vor dem Auslaufen. Ruhiger und günstiger ist die Marina Botafoch gegenüber, von der ein kurzes Wassertaxi zum selben Nachtleben bringt."
+        },
+        "9": {
+          "shortDescription": "Zum Auftakt der zweiten Woche wieder hinaus nach Ses Salines, diesmal ebenso wegen der Salinen und der Vögel wie wegen des Strands.",
+          "description": "Zweite Woche, derselbe kurze Schlag nach Süden, aber es gibt keinen Grund zu hetzen oder an derselben Stelle zu ankern. Diesmal gehen wir um die Landspitze herum nach Es Cavallet, dem langen Strand an der Ostseite, der bei leichtem Südwind meist ruhiger und eine Spur weniger voll ist als Salines selbst. Die noch bewirtschafteten Salinen hinter den Dünen sind der Grund, warum es den Park überhaupt gibt, und zur richtigen Jahreszeit stelzen Flamingos durchs Flachwasser. Ankert auf Sand in fünf bis sieben Metern und nehmt das Dinghy an Land. Lauft den Pfad zwischen den Becken entlang oder treibt hinüber zum Sa Trinxa am anderen Ende von Salines, wo der DJ seit Jahren dieselbe Sonnenuntergangsrunde begleitet. Ein sanfter Neustart vor der erneuten Überfahrt nach Formentera.",
+          "thingsToDo": [
+            "Vor dem ruhigeren Strand Es Cavallet ankern",
+            "Nach Flamingos auf den Salinen Ausschau halten",
+            "Sunset-Session im Sa Trinxa",
+            "Den Pfad zwischen den Salzbecken laufen"
+          ],
+          "mooringTip": "Es Cavallet, gleich östlich der Landspitze, ist bei leichtem Südwind die ruhigere Alternative zum Hauptstrand von Salines. Ankert nur auf den Sandflecken; im ganzen Park gelten dieselben Posidonia-Regeln und Kontrollen."
+        },
+        "10": {
+          "shortDescription": "Diesmal direkt hinüber nach Espalmador, dem flachen unbewohnten Inselchen vor Formenteras Nordspitze, mit eigenem Öko-Bojenfeld.",
+          "description": "Statt La Savina zu wiederholen, quert ihr die Freus und nehmt eine Boje vor Espalmador, dem unbewohnten Inselchen vor Formenteras Nordspitze. Der große Ankerplatz hier ist S'Alga an der geschützten Ostseite, Teil eines Feldes ökologischer Bojen, das sich Richtung Sandbank Illetes hinunterzieht. Er liegt geschützt vor den vorherrschenden Westwinden und trägt tagsüber eine Menge Boote, ohne voll zu wirken. Nehmt das Beiboot an Land und geht hinüber zur Meerseite, wo hinter dem Strand eine flache Lagune liegt. Die alten Schlammbäder sind heute aus Naturschutzgründen abgesperrt, also anschauen und weiterziehen. Ansonsten heißt es schwimmen, an den Rändern des Seegrases nach den Fischen schnorcheln, die dort stehen, und ein langer, träger Nachmittag auf einer kahlen Insel ohne ein einziges Gebäude in Sicht.",
+          "thingsToDo": [
+            "Eine Boje in der Bucht S'Alga übernehmen",
+            "Über Espalmador zur Lagune laufen",
+            "An den Seegrasrändern nach Fischen schnorcheln",
+            "Das Beiboot an der Meerseite auf den Strand ziehen"
+          ],
+          "mooringTip": "S'Alga an Espalmadors Ostseite ist bei Westwind das ruhigste Bojenfeld, bis 25 Meter Länge; bucht über die Park-App oder UKW-Kanal 77. Ist alles belegt, fallt auf sauberen Sand deutlich abseits der Wiese und der Bojenreihen zurück."
+        },
+        "11": {
+          "shortDescription": "Der Südwestschlag zurück an Es Vedrà vorbei, unterbrochen von einem Badestopp in der Cala Saona auf dem Weg hinaus.",
+          "description": "Der Weg zurück hinauf zur Cala Vedella misst dieselben gut zwanzig Meilen, startet also früh und nutzt das glatte Morgenwasser. Die Cala Saona an Formenteras Westküste ist ein schöner erster Stopp, eine Bucht mit roten Klippen und Sandgrund, in dem der Anker für eine Badestunde gut hält. Von dort geht es wieder hinaus an Es Vedrà vorbei, und das wird nie langweilig; der Fels sieht in jedem Licht und aus jedem Winkel der Annäherung anders aus. Wenn die See mitspielt, geht dicht unter ihn heran, bevor ihr nach Norden abdreht. Die Cala Vedella wird bei eurer Ankunft voller sein, zielt also auf den frühen Nachmittag und nehmt, was in der Mitte des Einschnitts noch frei ist. Dieselbe ehrliche Paella am Strand, derselbe klare Sonnenuntergang nach Westen. Manche Orte verdienen eine zweite Nacht.",
+          "thingsToDo": [
+            "Badestopp unter den Klippen der Cala Saona",
+            "Dicht unter Es Vedrà heranfahren",
+            "Mitten im Einschnitt der Cala Vedella ankern",
+            "Zweites Abendessen bei Sonnenuntergang am Strand"
+          ],
+          "mooringTip": "Die Cala Saona ist ein guter Mittagsankerplatz, aber weit offen nach West und nur an einem ruhigen Morgen zu empfehlen. In der Cala Vedella seid ihr im Verkehr der zweiten Woche besser am frühen Nachmittag da und setzt den Anker klar außerhalb der Schwimmer am Strand."
+        },
+        "12": {
+          "shortDescription": "Wieder der leichte Küstenschlag nach Norden, diesmal mit längerem Halt an den Sandbänken der Cala Comte, bevor die Bucht von Sant Antoni ruft.",
+          "description": "Wieder eine kurze Etappe, aber mit anderem Stopp. Heute ist es die Cala Comte, die Reihe niedriger Felsinselchen und Sandbänke etwas südlich von Sant Antoni. Das Wasser über den Bänken leuchtet in einem unwirklichen Hellblau, und ihr könnt auf fünf bis sieben Metern davor ankern und zwischen den Inselchen schwimmen. Einer der besten Badeplätze der Insel, allerdings füllt er sich mit Tagesbooten, kommt also am Vormittag, solange er noch euch gehört. Wenn ihr genug habt, sind es ein paar Meilen nach Sant Antoni für die Nacht. Habt ihr ihn beim letzten Mal ausgelassen, ist das der Abend für den Sunset Strip und einen Drink im Mambo, danach ein richtiges Essen in den Straßen hinter der Marina. Der Stadthafen ist außerdem eure letzte bequeme Proviantstation vor dem langen Schlag nach Osten.",
+          "thingsToDo": [
+            "Zwischen den Inselchen der Cala Comte schwimmen",
+            "Über den hellen Sandbänken ankern",
+            "Sundowner im Café Mambo",
+            "Letzter Proviant in Sant Antoni"
+          ],
+          "mooringTip": "Die Cala Comte ist grandios, aber weit offen und nahe den Inselchen flach, ankert also außerhalb der Badezone in mindestens fünf Metern und achtet auf euren Schwojkreis. Für die Nacht ist der Liegeplatz im Club Nàutic sicherer als die ungeschützte Außenbucht."
+        },
+        "13": {
+          "shortDescription": "Die lange Strecke um die Nordküste, von der Bucht von Sant Antoni bis nach Santa Eulària ganz im Osten.",
+          "description": "Das ist der längste Schlag der zwei Wochen, knapp fünfundzwanzig Meilen rund um die Nordspitze Ibizas, also früher Start und ein voller Segeltag. Räumt die Bucht von Sant Antoni, passiert die Zwillingsbuchten der Cala Salada und stellt euch auf die von Klippen gesäumte Nordwestküste ein, die ihr an Tag sechs gesehen habt. Unterbrecht in Portinatx, wenn die Crew ein Bad und einen Happen will, und schiebt dann nach Osten weiter, vorbei an der Cala Sant Vicent und dem vorgelagerten Buckel von Tagomago. Auf diesem Stück füllt der Wind nachmittags gern aus Osten ein, die letzten Meilen nach Santa Eulària kreuzt ihr also womöglich am Wind. Ihr lauft müde ein und seid dankbar für einen Marinaplatz, eine Dusche und ein stilles Cockpit. Ein großer Tag, aber das wilde Ende der Insel in einem Rutsch zu runden ist genau der Törn, der einer Crew im Gedächtnis bleibt.",
+          "thingsToDo": [
+            "Morgenbad in den Zwillingsbuchten der Cala Salada",
+            "Mittagsstopp noch einmal in Portinatx",
+            "Dicht unter der Insel Tagomago vorbei",
+            "Festmachen und durchatmen in Santa Eulària"
+          ],
+          "mooringTip": "Das ist ein verbindlicher Schlag mit wenigen Ausweichankerplätzen an den Nordwestklippen, lauft also früh aus, mit vollen Tanks und einem Auge auf den nachmittäglichen Ostwind. Bucht den Liegeplatz in Santa Eulària vor, damit eine müde Crew einen sicheren Platz hat."
+        },
+        "14": {
+          "shortDescription": "Die letzte kurze Etappe zurück nach Ibiza-Stadt, mit Zeit für ein letztes Bad, bevor ihr das Boot übergebt.",
+          "description": "Nur noch acht Meilen, und der letzte Morgen muss nicht gehetzt sein. Die meisten Crews frühstücken in Ruhe vor Anker und legen dann einen letzten Stopp ein, entweder wieder in der Cala Llonga oder um die Ecke in Talamanca gleich vor Ibiza-Stadt, für ein letztes Bad vom Heck. Von Talamanca seht ihr schon die angestrahlten Mauern von Dalt Vila, und der Weg in die Marina Eivissa dauert zwanzig Minuten. Endet der Törn erst am nächsten Morgen, macht früh fest und verbringt den Abend an Land, ein letzter Aufstieg durch die Altstadt und ein Tisch irgendwo in La Marina. Zwei Wochen und rund hundertvierzig Meilen später habt ihr beide Inseln umrundet, den wilden Norden und den belebten Westen gesegelt und gelernt, welche Buchten den zweiten Blick verdienen. Salz abspülen, Diesel abrechnen und auf die Runde anstoßen.",
+          "thingsToDo": [
+            "Letztes Bad vor dem Strand von Talamanca",
+            "Gemütliches Frühstück vor Anker in der Cala Llonga",
+            "Abschiedsessen in La Marina",
+            "Letzter Gang hinauf durch Dalt Vila"
+          ],
+          "mooringTip": "Lauft am frühen Nachmittag ein, um euren Platz in der Marina Eivissa zu sichern und Zeit für Bunkern und ordentliches Abspülen vor der Übergabe zu haben. Ist die Marina an eurem Rückgabetag voll, ist die Marina Botafoch gegenüber der verlässliche Rückfall."
+        }
+      }
+    },
+    "mallorca-round-island-14-days": {
+      "metaTitle": "14 Tage Mallorca-Umrundung | Boat4You",
+      "metaDesc": "Zwei Wochen unter Segeln ab Palma de Mallorca: die Tramuntana-Küste, Formentor, die stillen Calas im Osten und die geschützten Gewässer von Cabrera.",
+      "days": {
+        "1": {
+          "shortDescription": "Ein kurzer Einstiegsschlag westwärts aus Palma in die Meeresschutzzone vor der Illa del Toro, ideal für eine erste Nacht zum Ankommen.",
+          "description": "Die meisten Crews nutzen den ersten Nachmittag, um sich einzufinden, statt Meilen zu machen. Von Palmas Marina sind es rund fünfzehn Meilen hinaus, am Cap de Cala Figuera vorbei zur kleinen Insel El Toro, hinter der Port Adriano liegt. Legt am späten Vormittag ab, sortiert die Segel in der offenen Bucht, dann bleibt vor dem Abendessen noch Zeit zum Schwimmen.\n\nDas Inselchen El Toro und die Malgrats etwas nördlich liegen in einem Meeresschutzgebiet, das Wasser ist also klar und die Fische an Schnorchler gewöhnt. Port Adriano selbst ist eine moderne Marina mit guten Liegeplätzen und ein paar Restaurants. Ist die Vorhersage ruhig, ankert stattdessen am Rand der Schutzzone und haltet die Nacht still.",
+          "thingsToDo": [
+            "In der Schutzzone Malgrats und El Toro schnorcheln",
+            "In der Marina Port Adriano festmachen oder essen",
+            "Am klaren Rand der Schutzzone schwimmen",
+            "Das Rigg in der Bucht von Santa Ponsa einfahren"
+          ],
+          "mooringTip": "Port Adriano hat Muringliegeplätze und ist bei jedem Westwind die verlässliche Wahl. Der Ankerplatz vor El Toro trägt nur bei beständigem Wetter, sucht euch also Sand zwischen den Seegrasflecken und prüft euren Schwojkreis, bevor es dunkel wird."
+        },
+        "2": {
+          "shortDescription": "Ein langer Schlag um die Südwestecke und die Tramuntana-Wand hinauf in die hufeisenförmige Bucht von Sóller, einen der schönsten Häfen der Küste.",
+          "description": "Das ist der größte einzelne Schlag der zwei Wochen, wir werfen die Leinen deshalb meist um neun los. Rundet das Cap de Cala Figuera, passiert Port d'Andratx und Sant Elm, dann fällt die Serra de Tramuntana Stunde um Stunde senkrecht ins Meer. Auf diesem Stück gibt es kaum Schutz, behaltet also die nachmittägliche Seebrise im Auge; Sa Foradada ist ein guter Mittagsstopp, wenn der Schwell es zulässt.\n\nSóller öffnet sich als fast kreisrunde, von Bergen umringte Bucht. Nehmt die alte Straßenbahn hinauf in den Ort Sóller oder lauft zum Leuchtturm Far des Cap Gros für den Blick zurück über den Ankerplatz. Die Küchen an der Hafenfront machen ordentliche Reisgerichte und frischen Fisch. So eine Ankunft lässt einen langen Tag verdient wirken.",
+          "thingsToDo": [
+            "Mit der Straßenbahn von 1913 nach Sóller",
+            "Hinauf zum Far des Cap Gros laufen",
+            "Mittagsstopp unter der Landzunge Sa Foradada",
+            "Reis und Fisch an der Hafenfront essen"
+          ],
+          "mooringTip": "Ankert in der Mitte der Bucht auf Sand oder nehmt einen Liegeplatz an den Stegen der Marina Tramontana und des Club Nàutic. Die Bucht ist gut geschützt, außer bei Nordwind, wenn Schwell hereinläuft und ein vorab gebuchter Liegeplatz Gold wert ist."
+        },
+        "3": {
+          "shortDescription": "Weiter an den Tramuntana-Klippen vorbei an Sa Calobra und um das wilde Cap de Formentor zum von Felswänden gerahmten Ankerplatz der Cala Sant Vicenç.",
+          "description": "Wieder ein verbindlicher Küstentag, und wieder lohnt der frühe Start. Die Berge stürzen weiter ins Wasser, vorbei an Sa Calobra und der Schlucht Torrent de Pareis, beide eine langsame Vorbeifahrt mit der Kamera wert. Das große Thema ist das Cap de Formentor, die Nordspitze der Insel, wo der Wind um das Kap kräftig düsen kann und die See sich aufstellt, wenn Brise auf Schwell trifft.\n\nHabt ihr die Ecke gerundet, liegt die Cala Sant Vicenç unter hohen roten Klippen mit Blick nach Nordost. Der Ankerplatz ist am Ende der Bucht über Sand, so weit hinein, wie die Tiefe es erlaubt. Kleine Strände an Land bieten Platz, um das Beiboot anzulanden. Sie ist offen für alles aus Nord oder Ost, behandelt sie also als Schönwetterstopp und behaltet die Abendvorhersage im Auge.",
+          "thingsToDo": [
+            "Den Torrent de Pareis bei Sa Calobra fotografieren",
+            "Die Klippen des Cap de Formentor runden",
+            "Das Beiboot am Strand der Cala Sant Vicenç anlanden",
+            "Die Felsköpfe unter den Klippen schnorcheln"
+          ],
+          "mooringTip": "Das ist eine reine Ankerbucht ohne jede Infrastruktur. Werft den Anker über dem Sandfleck am Buchtende und zieht ihn kräftig ein, aber seid bereit, nach Pollença auszuweichen, wenn der Wind über Nacht auf Nord oder Ost dreht."
+        },
+        "4": {
+          "shortDescription": "Ein gemütlicher halber Tag um Formentor in die geschützte Bucht von Pollença, unterwegs ein Badestopp an einer Mooringboje unter den Pinien.",
+          "description": "Nach zwei harten Küstentagen ist das eine Verschnaufpause. Es sind nur ein paar Meilen zurück um das Cap de Formentor und in die weite Bucht von Pollença, es eilt also nicht. In der Cala Formentor, dem langen, von Pinien gesäumten Strand an der Nordseite, liegen Mooringbojen zum Schutz des Seegrases; nehmt euch eine für Mittagessen und ein Bad, bevor die Ausflugsboote kommen.\n\nPort de Pollença selbst liegt am Kopf der Bucht, ein unaufgeregter Ferienort, in dem auch Einheimische noch ihren Sommer verbringen. Der Real Club Náutico nimmt Yachten bis rund fünfundzwanzig Meter, und für den Abendspaziergang gibt es eine lange Promenade. Fasst hier Proviant, wenn nötig; im Ort gibt es richtige Supermärkte, und sonntags ist Markt oben im Dorf Pollença im Landesinneren.",
+          "thingsToDo": [
+            "Eine Boje vor dem Strand der Cala Formentor nehmen",
+            "Unter den Pinien von Formentor schwimmen",
+            "Über die Uferpromenade von Pollença schlendern",
+            "Proviant in den Supermärkten des Orts"
+          ],
+          "mooringTip": "Die Bojen der Cala Formentor werden in der Saison nach Reihenfolge vergeben und sind am späten Vormittag weg. In Port de Pollença nehmt ihr einen Liegeplatz im Club Náutico oder ankert vor dem Ort auf Sand; die Bucht ist in der üblichen Seebrise ruhig, aber offen nach Nordost."
+        },
+        "5": {
+          "shortDescription": "Eine kurze Überfahrt über die Landzunge in die Bucht von Alcúdia, wo moderne Marina und die römisch geprägte Altstadt hinter Mauern zusammenkommen.",
+          "description": "Heute sind es kaum zehn Meilen, über die Landzunge Cap des Pinar, die die beiden großen Nordbuchten trennt. Die Bucht von Alcúdia ist weit und flach, mit verlässlichem Thermikwind, der über den Nachmittag aufbaut, sie segelt sich also besser, als sie auf der Karte aussieht. Viele Crews machen daraus einen entspannten Vormittag und ein langes Mittagessen.\n\nDie Marina von Alcúdia ist gut ausgestattet, mit Diesel und Service, und der Weg in die Altstadt ist der eigentliche Grund für den Stopp. Alcúdia war die römische Hauptstadt der Insel, und die mittelalterlichen Mauern, engen Gassen und die Ruinen von Pollentia liegen alle in Gehweite. Kommt zum gegrillten Fisch und einem kalten Bier zurück in den Hafen. Wollen die Kinder Sand, zieht sich die Platja d'Alcúdia meilenweit an der Bucht entlang.",
+          "thingsToDo": [
+            "Über die mittelalterlichen Mauern der Altstadt Alcúdia",
+            "Die römischen Ruinen von Pollentia ansehen",
+            "In der Marina bunkern und Proviant fassen",
+            "Strandnachmittag an der Platja d'Alcúdia"
+          ],
+          "mooringTip": "Die Marina von Alcúdia ist die bequeme Wahl und hat Diesel und Wasser am Kai. Ihr könnt auch vor dem langen Strand in zwei bis vier Metern auf Sand ankern, doch der Halt ist weiter draußen besser und der Platz nach Norden offen."
+        },
+        "6": {
+          "shortDescription": "Aus der Bucht hinaus und um die Nordostkaps nach Cala Ratjada, einem echten Arbeitshafen mit guten Stränden und einem Leuchtturm auf der Klippe.",
+          "description": "Heute verlasst ihr die Nordbuchten endgültig und quert in die äußerste Ecke der Insel. Rundet das Cap des Freu mit Abstand zu den Felsen, dann dreht die Küste nach Süden Richtung Cala Ratjada. Fast die ganze Strecke ist offenes Wasser, also ein Vormittag echten Segelns, wenn der Nordost mitspielt.\n\nCala Ratjada ist ein alter Fischereihafen, der zum Ferienort wuchs, ohne seinen Hafen zu verlieren. Die Marina fasst rund zweihundert Boote, und drinnen bleibt das Wasser über Nacht ruhig. An Land liegen die Strände Cala Agulla und Cala Gat einen kurzen Fußweg entfernt, und der Leuchtturm von Capdepera auf der Landzunge lohnt den Aufstieg, an klaren Tagen mit Blick bis Menorca. Die Fischrestaurants rund um den Hafen sind der lokale Klassiker.",
+          "thingsToDo": [
+            "In der Cala Agulla oder Cala Gat schwimmen",
+            "Zum Leuchtturm Capdepera für den Ausblick",
+            "Frischen Fisch am Fischereihafen essen",
+            "Abends über die Hafenpromenade bummeln"
+          ],
+          "mooringTip": "Der Club Nàutic Cala Ratjada hat Gastliegeplätze und schützt vor dem vorherrschenden Nord und Ost; ruft im Juli und August vorher an. Ankern vor der Cala Agulla klappt tagsüber bei beständigem Wetter, ist für eine bequeme Nacht aber zu offen."
+        },
+        "7": {
+          "shortDescription": "Die Ostküste hinunter nach Porto Cristo, einem schmalen Naturhafen, der die Fischerflotte schützt und über den berühmten Drach-Höhlen liegt.",
+          "description": "Die Ostküste ist gemütlicheres Revier als der Westen, eine Folge niedriger Klippen, unterbrochen von schmalen Einschnitten. Porto Cristo liegt rund fünfundzwanzig Meilen südlich, geduckt in einen Schlitz in der Küste, der seit Jahrhunderten Fischerboote schützt. Der Weg dorthin ist unkompliziert, die Nachmittagsbrise füllt meist aus Südost ein.\n\nDie größte Attraktion des Orts liegt unter der Erde: die Coves del Drac, ein riesiges Höhlensystem mit unterirdischem See und täglichen Konzerten, fünf Gehminuten vom Kai. Der Hafen selbst ist eng und freundlich und schützt besser als die offenen Calas zu beiden Seiten. Holt euch ein Eis an der Front, streift über den kleinen Strand am Ende des Einschnitts und genießt einen ruhigeren Abend nach einer Woche mit größeren Schlägen.",
+          "thingsToDo": [
+            "Den unterirdischen See der Coves del Drac besuchen",
+            "Über den Strand am Ende des Einschnitts laufen",
+            "Durch den alten Fischereihafen bummeln",
+            "Den Sonnenuntergang vom Kai aus sehen"
+          ],
+          "mooringTip": "Der Club Náutico Porto Cristo nimmt Boote bis etwa zwanzig Meter und vier Meter Tiefgang; die Einfahrt ist eng, kommt also langsam herein und meldet den Liegeplatz vorher an. Zum Ankern ist drinnen kaum Platz, bucht also, wenn ihr die Nacht bleiben wollt."
+        },
+        "8": {
+          "shortDescription": "Ein kurzer Sprung nach Süden nach Portocolom, einem großen Naturhafen mit reservierbarem Bojenfeld und einem der ruhigsten Nachtplätze der Küste.",
+          "description": "Ein leichter Vormittag, nur ein gutes Dutzend Meilen die Küste hinunter, es gibt also keinen Grund, früh loszulaufen. Portocolom ist einer der größten Naturhäfen der Insel, eine weite, geschützte Lagune mit schmaler Einfahrt und echtem Arbeitsdorf-Charakter. An Teilen des Ufers stehen noch die alten Bootshäuser der Fischer.\n\nDrinnen gibt euch ein großes Feld Mooringbojen eine ruhige, sichere Nacht bei jedem Wind, und es hält deutlich besser als eine offene Cala. Die kleine Marina und die Bojen lassen sich beide vorab buchen. An Land markiert der Leuchtturm Far de Portocolom die Einfahrt, und der Strand Cala Marçal ist einen kurzen Fußweg entfernt, wenn ihr Sand wollt. Ein guter Ort, um herunterzuschalten, Wäsche zu machen und ohne Gedränge gut zu essen.",
+          "thingsToDo": [
+            "Eine Boje im Naturhafen übernehmen",
+            "Hinaus zum Leuchtturm von Portocolom laufen",
+            "Strandnachmittag an der Cala Marçal",
+            "Abendessen zwischen den alten Bootshäusern"
+          ],
+          "mooringTip": "Bucht eine Mooringboje oder einen Marinaliegeplatz im Voraus; das Bojenfeld ist der geschützteste Nachtplatz dieser Küste und in der Saison voll. Das Einfahrtsfahrwasser ist betonnt, aber an den Rändern flach, haltet euch also mittig."
+        },
+        "9": {
+          "shortDescription": "An den Klippen nach Süden zur Cala Santanyí, einer kompakten Sandbucht im Pinienkranz, mit dem Felsbogen Es Pontàs gleich um die Ecke.",
+          "description": "Die Küste wirkt hier schon südlicher, die Klippen niedriger und die Calas sandiger. Es sind rund achtzehn Meilen hinunter zur Cala Santanyí, in der üblichen Brise ein leichter Halbwindkurs. Die Bucht ist klein, vielleicht siebzig Meter feiner Sand vor Pinien und niedrigem Fels, und das Wasser fällt sanft über einen Sandgrund ab, der gut hält.\n\nGleich westlich liegt Es Pontàs, der natürliche Steinbogen, den Kletterer berühmt gemacht haben; fahrt unter Segeln daran vorbei, das ist der beste Blick darauf. Die Cala selbst füllt sich im Hochsommer mit Tagesgästen vom Strand, eine Ankunft am Nachmittag bedeutet also oft mehr Platz, während sich die Menge lichtet. Es ist ein Schönwetterankerplatz, gut geschützt von Nord bis Nordost, aber offen nach Süden.",
+          "thingsToDo": [
+            "Vor dem Sandstrand der Cala Santanyí ankern",
+            "Am Steinbogen Es Pontàs vorbeisegeln",
+            "Die felsigen Ränder der Bucht schnorcheln",
+            "Sundowner-Bad, bevor die Tagesboote gehen"
+          ],
+          "mooringTip": "Ankert auf dem Sandfleck in der Mitte der Bucht in drei bis fünf Metern; er hält gut und schützt euch vor Nord und Nordost. Bojen oder Infrastruktur gibt es nicht, und nach Süden ist sie offen, behaltet also die Vorhersage im Blick."
+        },
+        "10": {
+          "shortDescription": "Um die Südspitze der Insel am Cap de ses Salines und die flache Südküste entlang zum schmalen, von Klippen gerahmten Einschnitt der Cala Pi.",
+          "description": "Heute rundet ihr den südlichsten Punkt Mallorcas. Das Cap de ses Salines ist flach und felsig mit einem Leuchtturm, und Strom gegen Wind kann davor eine kurze, steile See aufbauen, legt die Passage also in die ruhigeren Morgenstunden. Hinter dem Kap flacht die Küste ab und öffnet sich zu den Salinen und langen Stränden des Südens.\n\nDie Cala Pi ist die Belohnung: ein tiefer, schmaler Canyon von einem Einschnitt in den Klippen, mit kleinem Sandstrand am Ende und alten Fischerhütten im Fels. Ein beeindruckender Platz, um den Anker fallen zu lassen, auch wenn der Raum knapp ist und die Tiefe nach hinten schnell ausgeht. Nach der großen Kulisse der Westküste ist das ein kleineres, stilleres Loch im Fels, und die fummelige Einfahrt wert.",
+          "thingsToDo": [
+            "Den Leuchtturm am Cap de ses Salines runden",
+            "Im Canyon-Einschnitt der Cala Pi ankern",
+            "Hinauf zum Wachturm auf der Klippe laufen",
+            "Vom kleinen Sandstrand aus schwimmen"
+          ],
+          "mooringTip": "Der Platz in der Cala Pi ist begrenzt und der Einschnitt wird schnell enger, kommt also früh und überlegt eine Landleine, um das Schwojen zu stoppen. Sie ist gut geschützt, außer aus Süd und Südwest, von dort läuft der Schwell direkt hinein."
+        },
+        "11": {
+          "shortDescription": "Südwärts hinaus zum Nationalpark Cabrera, einem geschützten Archipel mit klarem Wasser und Bergburg, wo jede Mooring vorab gebucht sein muss.",
+          "description": "Das ist der Tag, der schon lange vor dem Ablegen geplant sein will. Cabrera ist Nationalpark, und die einzige Möglichkeit zu bleiben ist eine der fünfzig Mooringbojen im Haupthafen, vorab über die Seite der balearischen Regierung mit Genehmigung gebucht. Ankern ist im gesamten Park verboten.\n\nDie Überfahrt sind rund zehn Meilen offenes Wasser nach Süden, meist ein angenehmer Halbwindkurs. Liegt ihr erst an der Boje, ist der Lohn echt: Wasser so klar, dass ihr die Ankerkette des Nachbarboots zählen könnt, eine Burg aus napoleonischer Zeit auf dem Hügel über dem Hafen und Wanderwege an Land unter den Augen der Ranger. Fahrt mit dem Beiboot oder einem kurzen Ausflug in die Meereshöhle Cova Blava, wo das Licht durchs Wasser mittags tiefblau leuchtet.",
+          "thingsToDo": [
+            "Die gebuchte Boje im Hafen von Cabrera übernehmen",
+            "Hinauf zur Burg auf dem Hügel wandern",
+            "Mit dem Beiboot in die Cova Blava",
+            "Im geschützten klaren Wasser des Parks schnorcheln"
+          ],
+          "mooringTip": "In Cabrera dürft ihr nirgends ankern; ihr müsst vorab online eine der fünfzig Bojen reservieren und die Genehmigung mitführen, und Juli und August sind früh ausgebucht. Die Bojen sind nach Bootsgröße farbcodiert, bucht also die passende für die Länge eurer Yacht."
+        },
+        "12": {
+          "shortDescription": "Zurück nach Norden zur Hauptinsel für einen Tag am Es Trenc, Mallorcas längstem unverbautem Strand, heller Sand und flaches Wasser hinter den alten Salinen.",
+          "description": "Eine kurze Überfahrt zurück zur Hauptinsel, rund zehn Meilen, setzt euch vor einen der letzten langen unverbauten Küstenabschnitte der Balearen. Der Es Trenc zieht sich über ein paar Meilen hellen Sands hinter den alten Salinen, ohne Hotels am Ufer, und das Wasser wechselt über sauberem Sandgrund von Türkis zu tiefem Blau.\n\nDas Ankern ist bei gutem Wetter einfach: Sucht euch vor dem Strand eure Tiefe auf Sand und schwimmt für einen Spaziergang durch die Dünen an Land. Schutz gibt es praktisch keinen, das ist also strikt ein Schönwetterstopp und keine Nacht, in der man überrascht werden möchte. Kommt für den Nachmittag, genießt den Platz und die Farbe des Wassers und zieht vor dem Abend in einen geschützten Hafen weiter, wenn die Vorhersage auch nur ein wenig unsicher ist.",
+          "thingsToDo": [
+            "Im türkisen Flachwasser des Es Trenc schwimmen",
+            "Durch die Dünen hinter den Salinen laufen",
+            "Vor dem Strand auf sauberem Sand ankern",
+            "Langes Mittagessen an Bord vor Anker"
+          ],
+          "mooringTip": "Ankert in zwei bis vier Metern auf Sand, gut abseits vom Strand; der Halt ist ausgezeichnet, doch Schutz gibt es überhaupt keinen, stoppt hier also nur bei beständiger Vorhersage und plant niemals eine Nacht bei zweifelhaftem Wetter."
+        },
+        "13": {
+          "shortDescription": "Ostwärts zur Cala Figuera, einem fjordartigen Fischerhafen, der noch täglich anlandet und hinter zwei Felsarmen ruhig bleibt.",
+          "description": "Ein entspannter Schlag zurück nach Osten an der Südküste, teils über das Wasser von gestern, bevor die Küste wieder zu niedrigen Klippen ansteigt. Die Cala Figuera ist der hübscheste der Arbeitshäfen auf dieser Seite, ein Y-förmiger Einschnitt, in dem die Fischerhäuser bis ans Wasser reichen und die Boote noch im Morgengrauen auslaufen und ihren Fang bei der Rückkehr verkaufen.\n\nDer Einschnitt ist eng und wird zu den Enden hin flach, lotst euch also vorsichtig hinein und nehmt einen Liegeplatz im kleinen Hafen, statt im engen Fahrwasser zu ankern. An Land bleibt es ruhig, mit ein paar guten Fischterrassen über den Booten und Klippenwegen Richtung Cala Santanyí. Nach Cabrera und Es Trenc ist ein Abend, an dem man den Fischerbooten beim Einlaufen zusieht, der richtige Ton zum Abschluss der Runde.",
+          "thingsToDo": [
+            "Im Morgengrauen den Fischerbooten beim Löschen zusehen",
+            "Meeresfrüchte auf einer Terrasse über dem Hafen",
+            "Den Klippenweg Richtung Cala Santanyí laufen",
+            "Die fjordartigen Zwillingsarme fotografieren"
+          ],
+          "mooringTip": "Der Einschnitt ist eng und wird an den Enden flach, nehmt also einen Liegeplatz im kleinen Port de Cala Figuera, statt zu ankern. Ruft vorher an, der Gastplatz ist knapp; sie liegt gut geschützt aus West und Nordwest, doch bei kräftigem Ostwind ist die Einfahrt ungemütlich."
+        },
+        "14": {
+          "shortDescription": "Die lange Schlussetappe westwärts um das Cap de ses Salines und Cap Blanc in die Bucht von Palma, wo sich der Kreis schließt.",
+          "description": "Der letzte Tag ist ein richtiger Schlag, ein früher Start zahlt sich also aus. Von der Cala Figuera geht es zurück hinunter zum Cap de ses Salines und dann nach Westen an der flachen Südküste entlang, wieder am Es Trenc und den Klippen unter Cap Blanc vorbei, dann in die weite Bucht von Palma. Rechnet mit einem vollen Segeltag, gut dreißig Meilen, je nachdem, wie weit der Wind euch nach draußen drückt.\n\nDie Bucht liefert für den Weg hinein meist eine gute Seebrise, mit Kathedrale und Stadtsilhouette, die vor euch wachsen, während ihr die Küste anlauft. Lasst Zeit zum Bunkern, Wasser fassen und Klarmachen, bevor am nächsten Morgen die Übergabe ansteht. Ein passender Abschluss der Runde: zwei Wochen, fast die ganze Küstenlinie und so ziemlich jede Art von Ankerplatz, die die Insel hat, von offenem Sand bis zu den Bojen im Nationalpark.",
+          "thingsToDo": [
+            "Die lange Südküste an Cap Blanc vorbei segeln",
+            "Unter Segeln in die Bucht von Palma einlaufen",
+            "Vor der Übergabe bunkern und Wasser fassen",
+            "Auf die Runde anstoßen, die Kathedrale im Blick"
+          ],
+          "mooringTip": "Bucht euren Rückliegeplatz oder die Mooring der Charterbasis in Palma vor der Ankunft, die Marinas der Bucht sind in der Saison voll. Kommt vor dem Höhepunkt der Nachmittagsbrise herein, dann fallen Anlauf und Anlegen leichter."
+        }
+      }
+    },
+    "marbella": {
+      "metaTitle": "7 Tage Costa del Sol ab Marbella | Boat4You",
+      "metaDesc": "Einwöchiger Yachtcharter ab Marbella entlang der Costa del Sol, mit Stopps in Cabopino, Fuengirola, Benalmádena, Torremolinos und Málaga.",
+      "days": {
+        "1": {
+          "shortDescription": "Ein leichter Auftakt über 8 Meilen ostwärts an den Superyachten von Puerto Banús vorbei zur unaufgeregten Marina und den goldenen Dünen von Cabopino.",
+          "description": "Der erste Schlag ist bewusst kurz, es gibt also keinen Grund, vor dem späten Vormittag abzulegen. Verlasst Marbella und lauft acht Meilen nach Osten, dicht an einer Küste aus Golfgrün und weißen Apartmentblöcken. Unterwegs passiert ihr Puerto Banús, dessen Stege sich mit Megayachten stapeln, die man vom Cockpit aus gut anstaunen kann. Cabopino kommt danach wie eine Erleichterung: eine kompakte, unprätentiöse Marina hinter Pinien und den Artola-Dünen, einem der letzten wilden Sandabschnitte dieser Küste. Ankert vor dem Strand für ein Bad, bevor ihr einlauft. An Land sucht ihr euch ein Chiringuito, das Espetos grillt, Sardinen auf Rohrstöcken über Olivenholzglut in einem sandgefüllten Boot gegart. Das ist der Geschmack der ganzen Küste von Málaga in einem Bissen.",
+          "thingsToDo": [
+            "Vor dem Naturdenkmal der Artola-Dünen schwimmen",
+            "Espeto de Sardinas im Chiringuito essen",
+            "Megayachten in Puerto Banús bestaunen",
+            "Hinaus zum Wachturm Torre Ladrones laufen"
+          ],
+          "mooringTip": "In Cabopino liegt ihr mit dem Heck zum Steg und ruhig bei Nordwind, doch die Marina ist klein und im August schnell voll, meldet euch also über Funk an oder bucht. Puerto Banús, vier Meilen zurück, ist die teurere, auffälligere Ausweichlösung."
+        },
+        "2": {
+          "shortDescription": "Zwölf Meilen ostwärts nach Fuengirola, wo eine restaurierte maurische Burg über eine der längsten Strandpromenaden der Costa blickt.",
+          "description": "Heute ein längerer Sprung, aber nichts Anstrengendes: zwölf Meilen offenes Wasser, die Seebrise füllt meist gegen Mittag ein. Fuengirola ist ohne Umschweife ein Ferienort, trägt das aber gut. Die Marina liegt hinter der Mole mit reichlich Platz, um einen Liegeplatz müsst ihr euch selten sorgen. Oben auf dem Hügel über der Flussmündung steht das Castillo Sohail, eine maurische Festung aus dem 10. Jahrhundert, in der es an Sommerabenden Open-Air-Konzerte gibt. Lauft den Paseo Marítimo ab, der kilometerweit an Bars und Spielplätzen vorbeiführt. Familien mit Kindern an Bord sollten sich Zeit für den Bioparc nehmen, einen wirklich guten Zoo mit begehbaren Dschungelgehegen. Das Abendessen ist hier leicht: einen Tisch am Strand suchen, frittierten Fisch und ein kaltes Bier bestellen und die Promenade an sich vorbeiziehen lassen.",
+          "thingsToDo": [
+            "Zum Castillo Sohail aus dem 10. Jahrhundert hinauf",
+            "Den begehbaren Bioparc Fuengirola besuchen",
+            "Den langen Paseo Marítimo entlangschlendern",
+            "Frittierter Fisch und kaltes Bier im Chiringuito"
+          ],
+          "mooringTip": "Die Marina von Fuengirola nimmt euch mit dem Heck zum Steg auf und ist bei fast jedem Wetter gut geschützt, mit mehr freien Plätzen als die kleineren Häfen dieser Küste. Selbst in der Hochsaison kommt ihr meist ohne Reservierung unter."
+        },
+        "3": {
+          "shortDescription": "Ein gemütlicher Sechs-Meilen-Schlag zur fotogenen Puerto Marina von Benalmádena, mit einer europaweit rekordverdächtigen buddhistischen Stupa am Hang darüber.",
+          "description": "Heute nur sechs Meilen, unter Segeln gut eine Stunde, der Nachmittag bleibt also frei. Die Puerto Marina von Benalmádena ist der Grund herzukommen: eine Achtzigerjahre-Fantasie aus Bogenbrücken, gefliesten Wegen und Gebäuden, die aus dem Wasser zu wachsen scheinen, wohl die meistfotografierte Marina des Landes. Sie ist beliebt, reserviert also einen Liegeplatz, wenn ihr im August segelt. Wenn ihr fest seid, nehmt die Seilbahn hinter dem Ort hinauf auf den Monte Calamorro für den weiten Blick die Küste hinunter. Noch höher steht die Stupa der Erleuchtung, ein weißes buddhistisches Bauwerk von dreiunddreißig Metern Höhe und das größte seiner Art in Europa. Zurück am Wasser sucht ihr euch einen schattigen Tisch und einen Tinto de Verano, die ehrliche Antwort der Einheimischen auf Sangría, und schaut den Booten zu.",
+          "thingsToDo": [
+            "Durch die venezianisch-maurischen Kais der Puerto Marina",
+            "Mit der Seilbahn auf den Monte Calamorro",
+            "Die 33 Meter hohe Stupa der Erleuchtung besuchen",
+            "Tinto de Verano im Marina-Café trinken"
+          ],
+          "mooringTip": "Festgemacht wird mit dem Heck zum Steg, und das Becken ist komplett geschlossen, ihr schlaft also ungestört. Es ist allerdings eine belebte Marina, und der August ist Wochen im Voraus voll, bucht also lieber vor der Ankunft, statt es über UKW zu versuchen."
+        },
+        "4": {
+          "shortDescription": "Ein kurzer Vier-Meilen-Hüpfer nach Torremolinos und La Carihuela, dem alten Fischerviertel, das noch immer den besten Pescaíto dieser Küste frittiert.",
+          "description": "Kaum vier Meilen trennen die beiden Marinas, das ist also ein Vormittag zum Langsammachen. In Torremolinos selbst gibt es keinen Hafen; stattdessen werft ihr vor La Carihuela in vier bis sechs Metern auf gut haltendem Sand den Anker, geschützt vor allem, was aus Norden kommt. La Carihuela ist das alte Fischerviertel des Orts und hat seinen Charakter trotz der Hotels ringsum behalten. Enge Gassen münden auf eine Uferzeile voller Marisquerías, in denen der Fang des Tages direkt auf den Grill wandert. Kommt hungrig an Land. Bestellt Gambas al Ajillo, einen Teller frittierte Sardellen und weitere Espetos, die im Sand vor sich hin räuchern. Wollt ihr die Beine abseits des Strands vertreten, umgeben die Gärten des Molino de Inca oberhalb des Orts eine restaurierte alte Wassermühle mit Palmen und sprudelndem Quellwasser.",
+          "thingsToDo": [
+            "Vor dem Sandstrand von La Carihuela ankern",
+            "Gambas al Ajillo im Fischerviertel essen",
+            "Durch die alten Uferstraßen von La Carihuela",
+            "Die Mühlengärten Molino de Inca besuchen"
+          ],
+          "mooringTip": "Das ist ein Ankerstopp, keine Marinanacht, wählt also das Wetter mit Bedacht; der Sand hält gut, doch die Reede ist nur nach Norden geschützt. Dreht der Wind auflandig, liegt die Marina von Benalmádena vier Meilen zurück und nimmt auch Spätankömmlinge."
+        },
+        "5": {
+          "shortDescription": "Acht Meilen bis nach Málaga selbst, festgemacht an der Muelle Uno unter einer maurischen Festung in Picassos Heimatstadt.",
+          "description": "Heute schenkt euch die Küste endlich eine richtige Stadt. Acht Meilen bringen euch in Málagas alten Hafen, wo ihr an der Muelle Uno zwei Gehminuten von der Kathedrale entfernt festmacht. Das ist der Tag, an dem das Boot Boot bleibt. Steigt durch die Wälle der Alcazaba hinauf, der maurischen Zitadelle aus dem 11. Jahrhundert, die sich den Hang zur Burg Gibralfaro hinaufstaffelt, und taucht dann in die Gassen zum Museo Picasso hinunter, in der Stadt, in der der Maler geboren wurde. Das Mittagessen gehört in den Mercado de Atarazanas, unter sein altes Eisendach und das maurische Portal: luftgetrockneter Jamón Ibérico, marinierte Oliven, ein Glas süßer Málaga-Vermut aus dem Fass. Wenn das Licht golden wird, landet man am besten auf den Terrassen der Muelle Uno, Hafen auf der einen, Kathedralenturm auf der anderen Seite.",
+          "thingsToDo": [
+            "Die Alcazaba aus dem 11. Jahrhundert erklimmen",
+            "Das Museo Picasso in seiner Geburtsstadt besuchen",
+            "Jamón und Vermut im Mercado Atarazanas",
+            "Sundowner auf den Terrassen der Muelle Uno"
+          ],
+          "mooringTip": "Die Muelle Uno liegt vollständig geschützt und setzt euch mitten in die Stadt, doch die Liegeplätze sind in der Saison teuer und früh vergeben, bucht also weit im Voraus. Wer sparen will, nimmt die Marina von Benalmádena zwölf Meilen zurück als günstigere Basis, mit Küstenzug direkt in die Stadt."
+        },
+        "6": {
+          "shortDescription": "Sechs ruhige Meilen östlich der Stadt nach Torre de Benagalbón, einem echten Fischerdorf mit altem Wachturm und Meereshöhlen in der Nähe.",
+          "description": "Nach dem Trubel von Málaga setzen euch sechs kurze Meilen nach Osten an einen ganz anderen Ort. Torre de Benagalbón liegt am Rand von Rincón de la Victoria, noch immer ein arbeitendes Fischerdorf, dessen Boote im Morgengrauen auslaufen. Ankert vor dem Strand auf Sand in vier bis sechs Metern, bei Nordwind liegt ihr ruhig. Ein gedrungener Wachturm aus dem 16. Jahrhundert steht auf der Landzunge Wache, einer aus der Kette, die vor den Korsaren aus der Berberei warnen sollte. An Land führt der Küstenweg Sendero Litoral nach Osten am Ufer entlang und durch alte, in die Klippen geschlagene Eisenbahntunnel. Habt ihr ein Paddleboard dabei, sind die Buchten schnell erkundet; die Cueva del Tesoro, eine der wenigen vom Meer geformten Höhlen Europas, liegt gleich die Küste hinauf. Mittagessen ist, was das nächste Chiringuito gerade grillt.",
+          "thingsToDo": [
+            "Unter dem Wachturm aus dem 16. Jahrhundert ankern",
+            "Die Eisenbahntunnel des Sendero Litoral laufen",
+            "Mit dem Paddleboard zur Cueva del Tesoro",
+            "Mittagessen im Chiringuito am Strand"
+          ],
+          "mooringTip": "Wieder ein Ankerplatz statt eines Liegeplatzes, nur nach Norden geschützt, behaltet die Vorhersage über Nacht also im Auge. Dreht es, liegt die kleine Marina von Vélez vier Meilen weiter östlich und nimmt euch längsseits."
+        },
+        "7": {
+          "shortDescription": "Die lange Heimreise: zweiunddreißig Meilen westwärts zurück nach Marbella, mit Badestopp und Tanken in Puerto Banús.",
+          "description": "Der letzte Tag ist der große: gut dreißig Meilen zurück nach Westen, wir sind deshalb meist um acht ankerauf. Ein langer, gleichmäßiger Halbwindkurs an allem vorbei, was ihr die ganze Woche gesehen habt, die Küste spult sich rückwärts ab. Unterbrecht mit einem Bad, wenn die Hitze steigt und die Crew unruhig wird. Kurz vor Marbella lauft ihr in Puerto Banús ein, um Diesel zu bunkern und das Salz vor der Übergabe abzuspülen; Charterbasen erwarten volle Tanks und ein aufgeräumtes Boot. Zielt darauf, am frühen Nachmittag längsseits zu liegen, damit die Schlüsselübergabe nicht in Hektik ausartet. So bleibt der Abend frei für den Teil, an den sich ohnehin alle erinnern: ein letztes Crew-Dinner auf Marbellas Paseo Marítimo, Füße hoch, sonnenverbrannt, in bester Laune streitend, welcher Ankerplatz der beste war.",
+          "thingsToDo": [
+            "Badestopp auf der langen Etappe nach Westen",
+            "In Puerto Banús bunkern und abspülen",
+            "Das Boot am frühen Nachmittag übergeben",
+            "Abschiedsessen auf Marbellas Paseo Marítimo"
+          ],
+          "mooringTip": "Puerto Banús nimmt euch mit dem Heck zum Steg auf und lässt sich die Adresse gut bezahlen; der Tanksteg liegt an der Einfahrt, bunkert also, bevor ihr einen Platz sucht. Erlaubt es die Basis, ist die Marina la Bajadilla gleich östlich für die letzte Nacht etwa halb so teuer."
+        }
+      }
     }
   },
   "areas": {
