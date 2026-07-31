@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import { Box, Button, Stack, Typography } from '@mui/material';
 import { useLocale, useTranslations } from 'next-intl';
@@ -12,6 +12,7 @@ import Layout from '@/components/Layout';
 import LoadingSection from '@/components/LoadingSection';
 import ReservationOverview from '@/components/ReservationOverview';
 import Check from '@/components/SvgIcons/Check';
+import { trackPurchase } from '@/lib/trackPurchase';
 import { ReservationDetails } from '@/models/reservation.model';
 import colors from '@/styles/themes/colors';
 import { ReservationData } from '@/types/reservation.type';
@@ -38,6 +39,9 @@ const PaymentSuccessPage = () => {
   const [reservationId, setReservationId] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
+  // The success page can re-run its effect (or the customer can refresh it);
+  // the purchase conversion must go out exactly once per reservation.
+  const purchaseTracked = useRef(false);
 
   useEffect(() => {
     const fetchReservation = async () => {
@@ -56,11 +60,21 @@ const PaymentSuccessPage = () => {
         return;
       }
 
+      // Payment went through and the reservation exists → this is the sale.
+      // Guarded by the ref so a refresh cannot count the booking twice.
+      const firePurchase = (amount?: number) => {
+        if (purchaseTracked.current) return;
+
+        purchaseTracked.current = true;
+        trackPurchase({ ref: id, value: amount });
+      };
+
       try {
         const result = await getReservationDetails(Number(id));
 
         if (result.payload && Object.keys(result.payload).length > 0) {
           setReservationData(result.payload);
+          firePurchase(result.payload.totalPrice);
         } else {
           // Guest flow: `/secured/reservations/my-reservations/{id}` needs an
           // auth token. Fall back to the local booking payload we saved during
@@ -68,14 +82,18 @@ const PaymentSuccessPage = () => {
           // pick-up info + totals.
           const saved = getDataFromLocalStorage<ReservationData>('yachtReservation');
 
-          if (saved) setGuestFallback(saved);
-          else setHasError(true);
+          if (saved) {
+            setGuestFallback(saved);
+            firePurchase(saved.totalPriceEur);
+          } else setHasError(true);
         }
       } catch (error) {
         const saved = getDataFromLocalStorage<ReservationData>('yachtReservation');
 
-        if (saved) setGuestFallback(saved);
-        else setHasError(true);
+        if (saved) {
+          setGuestFallback(saved);
+          firePurchase(saved.totalPriceEur);
+        } else setHasError(true);
       } finally {
         setIsLoading(false);
       }
