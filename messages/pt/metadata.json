@@ -48,6 +48,8 @@
     }
   },
   "boat": {
-    "forRent": "para alugar"
+    "forRent": "para alugar",
+    "titleTail": "Aluguer {city}",
+    "titleTailNoCity": "Aluguer"
   }
 }

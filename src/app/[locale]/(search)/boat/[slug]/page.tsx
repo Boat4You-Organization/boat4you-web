@@ -261,31 +261,17 @@ export async function generateMetadata({
   type MetaLocale = 'en' | 'hr' | 'de' | 'fr' | 'es' | 'it' | 'pt' | 'pl' | 'nl';
 
   const lc = (locale as MetaLocale) || 'en';
-  const titleSuffixCharter: Record<MetaLocale, string> = {
-    en: 'Charter',
-    hr: 'Najam',
-    de: 'Charter',
-    fr: 'Location',
-    es: 'Alquiler',
-    it: 'Charter',
-    pt: 'Aluguer',
-    pl: 'Czarter',
-    nl: 'Charter',
-  };
-  const charterWord = titleSuffixCharter[lc] ?? 'Charter';
 
-  // Title pattern by locale:
-  //   EN/DE/IT/NL: "Lagoon 39 'Gin Tonic' (2017) — Sukosan Charter"
-  //   HR:          "Lagoon 39 'Gin Tonic' (2017) — Najam Sukosan"
-  //   FR:          "Lagoon 39 'Gin Tonic' (2017) — Location Sukosan"
-  //   ES/PT:       "Lagoon 39 'Gin Tonic' (2017) — Alquiler Sukosan" / "Aluguer …"
-  //   PL:          "Lagoon 39 'Gin Tonic' (2017) — Czarter Sukosan"
-  const verbBeforeCity = lc === 'hr' || lc === 'fr' || lc === 'es' || lc === 'pt' || lc === 'pl';
-  const titleTail = cityOnly
-    ? verbBeforeCity
-      ? `${charterWord} ${cityOnly}`
-      : `${cityOnly} ${charterWord}`
-    : charterWord;
+  // Title tail comes from the metadata.boat catalog so both the charter word
+  // AND the word order localize per locale (the old hard-coded map shipped
+  // English "Charter" + English word order to de/it/nl — the strongest SERP /
+  // Google Ads headline signal read English on every non-EN page):
+  //   EN: "Lagoon 39 'Gin Tonic' (2017) — Sukosan Charter"
+  //   DE: "Lagoon 39 'Gin Tonic' (2017) — Yachtcharter Sukosan"
+  //   HR: "Lagoon 39 'Gin Tonic' (2017) — Najam Sukosan"
+  //   FR: "Lagoon 39 'Gin Tonic' (2017) — Location Sukosan"
+  //   IT/NL/ES/PT/PL: "Noleggio / Jachtcharter / Alquiler / Aluguer / Czarter Sukosan"
+  const titleTail = cityOnly ? tBoat('titleTail', { city: cityOnly }) : tBoat('titleTailNoCity');
   const title = [`${fullName}${yearSuffix}`, titleTail].filter(Boolean).join(' — ');
 
   // Description — fully localised for EN+HR, EN-fallback for others. Keep

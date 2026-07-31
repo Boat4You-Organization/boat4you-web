@@ -48,6 +48,8 @@
     }
   },
   "boat": {
-    "forRent": "do wynajęcia"
+    "forRent": "do wynajęcia",
+    "titleTail": "Czarter {city}",
+    "titleTailNoCity": "Czarter"
   }
 }

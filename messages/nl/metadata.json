@@ -48,6 +48,8 @@
     }
   },
   "boat": {
-    "forRent": "te huur"
+    "forRent": "te huur",
+    "titleTail": "Jachtcharter {city}",
+    "titleTailNoCity": "Jachtcharter"
   }
 }

@@ -48,6 +48,8 @@
     }
   },
   "boat": {
-    "forRent": "zu vermieten"
+    "forRent": "zu vermieten",
+    "titleTail": "Yachtcharter {city}",
+    "titleTailNoCity": "Yachtcharter"
   }
 }
