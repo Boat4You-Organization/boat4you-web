@@ -22,6 +22,10 @@ jobs:
           echo "NEXT_PUBLIC_BOAT_WS_GAID=${{ secrets.PRODUCTION_NEXT_PUBLIC_BOAT_WS_GAID }}" >> .env
           echo "NEXT_PUBLIC_BOAT_WS_API_URL=${{ secrets.PRODUCTION_NEXT_PUBLIC_BOAT_WS_API_URL }}" >> .env
           echo "NEXT_PUBLIC_BASE_URL=${{ secrets.PRODUCTION_NEXT_PUBLIC_BASE_URL }}" >> .env
+          echo "NEXT_PUBLIC_STRIPE_KEY=${{ secrets.PRODUCTION_NEXT_PUBLIC_STRIPE_KEY }}" >> .env
+          echo "NEXT_PUBLIC_IMAGE_CDN_URL=${{ secrets.PRODUCTION_NEXT_PUBLIC_IMAGE_CDN_URL }}" >> .env
+          echo "NEXT_PUBLIC_GOOGLE_CLIENT_ID=${{ secrets.PRODUCTION_NEXT_PUBLIC_GOOGLE_CLIENT_ID }}" >> .env
+          echo "NEXT_PUBLIC_FACEBOOK_APP_ID=${{ secrets.PRODUCTION_NEXT_PUBLIC_FACEBOOK_APP_ID }}" >> .env
           echo "NODEMAILER_USERNAME=${{ secrets.PRODUCTION_NODEMAILER_USERNAME }}" >> .env
           echo "NODEMAILER_PASSWORD=${{ secrets.PRODUCTION_NODEMAILER_PASSWORD }}" >> .env
 

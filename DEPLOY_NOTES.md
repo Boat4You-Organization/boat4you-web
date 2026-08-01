@@ -6,6 +6,44 @@ cusma1 source resynced to git HEAD on 2026-06-01.
 
 ---
 
+## 2026-08-01 — CI `deploy_prod.yml`: full secret set required — ⚠️ SECRETS NOT YET CREATED
+
+The workflow has **never had a successful run**: `gh secret list` is **empty** (no repo secrets
+at all), so run 30663101753 failed prerendering `/de` with `fetch('')` — an empty
+`NEXT_PUBLIC_WORDPRESS_API_URL` baked into the build. Additionally the "Create .env file" step
+wrote only 6 vars while the code needs 10 (`grep "process.env." src/`); the 4 missing ones
+(Stripe key, image CDN, Google client id, Facebook app id) are now added to the workflow.
+A build without them would ship with **broken Stripe checkout** (`usePaymentSubmit.tsx`,
+`useStripeCheckout.ts`), **broken image CDN** (`imageUtils.ts`) and **disabled Google login**
+(`GoogleSignInButton`).
+
+**Before the first CI deploy, create ALL of these repo secrets** (repo → Settings → Secrets and
+variables → Actions). Values live in **`/home/cusma1/nextapp/.env`** on the server — copy them
+from there; Mario must enter the sensitive ones (especially `PRODUCTION_SSH_PASSWORD` and
+`PRODUCTION_NODEMAILER_PASSWORD`).
+
+| Secret                                     | Value                                                                                                                       |
+| ------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------- |
+| `PRODUCTION_NEXT_PUBLIC_WORDPRESS_API_URL` | `https://wp.boat4you.com/graphql`                                                                                           |
+| `PRODUCTION_NEXT_PUBLIC_BOAT_WS_GAID`      | `G-8B2LL2CCE9`                                                                                                              |
+| `PRODUCTION_NEXT_PUBLIC_BOAT_WS_API_URL`   | `https://api.boat4you.com`                                                                                                  |
+| `PRODUCTION_NEXT_PUBLIC_BASE_URL`          | `https://www.boat4you.com`                                                                                                  |
+| `PRODUCTION_NEXT_PUBLIC_STRIPE_KEY`        | live publishable key (`pk_live_…`) from server `.env`                                                                       |
+| `PRODUCTION_NEXT_PUBLIC_IMAGE_CDN_URL`     | `https://boat4you.b-cdn.net`                                                                                                |
+| `PRODUCTION_NEXT_PUBLIC_GOOGLE_CLIENT_ID`  | from server `.env`                                                                                                          |
+| `PRODUCTION_NEXT_PUBLIC_FACEBOOK_APP_ID`   | **intentionally empty on prod** — leave this secret unset; an unset secret expands to `""`, which matches the server `.env` |
+| `PRODUCTION_NODEMAILER_USERNAME`           | from server `.env`                                                                                                          |
+| `PRODUCTION_NODEMAILER_PASSWORD`           | **Mario enters** (from server `.env`)                                                                                       |
+| `PRODUCTION_SSH_HOST`                      | cusma1's IP — **Mario enters**                                                                                              |
+| `PRODUCTION_SSH_USERNAME`                  | `cusma1`                                                                                                                    |
+| `PRODUCTION_SSH_PORT`                      | `22` (unless changed on the server)                                                                                         |
+| `PRODUCTION_SSH_PASSWORD`                  | **Mario enters**                                                                                                            |
+
+Checklist before triggering the workflow: every secret above created (13 secrets; the Facebook
+one stays unset) — a missing secret does NOT fail the build, it silently bakes an empty string.
+
+---
+
 ## 2026-06-02 — Raleway → Latin-subset woff2 (commit `29bfbfa`) — ✅ DEPLOYED
 
 **Deployed 2026-06-02 to cusma1, build-on-server** (CI `deploy_prod.yml` couldn't be triggered
