@@ -6,6 +6,31 @@ cusma1 source resynced to git HEAD on 2026-06-01.
 
 ---
 
+## 2026-08-01 — Localized boat-page `<title>` for all 9 locales (commit `c593c35e`) — ✅ DEPLOYED
+
+**Deployed 2026-08-01 to cusma1, build-on-Mac + ship `.next`** (recipe below). The boat detail
+`<title>` tail is now a translatable ICU message in `metadata.boat` (`titleTail` / `titleTailNoCity`)
+instead of the hard-coded map that served English "Charter" to de/it/nl. Live BUILD_ID
+`aal5x7mmNLnztmqStt92Q`. Verified on www.boat4you.com: all 9 locales render native tails
+(de "Yachtcharter …", it "Noleggio …", nl "Jachtcharter …", fr "Location …", es "Alquiler …",
+pt "Aluguer …", pl "Czarter …", hr "Najam …", en unchanged), canonical + `<html lang>` intact,
+home/search/JS chunks 200, `pk_live` baked (no `pk_test`), 0 `localhost:8443`.
+
+Deploy-mechanics updates:
+
+- cusma1 now accepts **key-based SSH** (`ssh-copy-id` of the Mac's `~/.ssh/id_ed25519.pub`,
+  2026-08-01) → `scp`/`ssh` need no password; only `sudo systemctl stop/start nextapp` still
+  prompts, so the server-side swap script is run by Mario (`ssh -t cusma1@91.98.209.180 '<script>'`).
+- **⚠️ CI `deploy_prod.yml` is BROKEN — do not use until fixed.** First-ever run (31.7.2026,
+  run 30663101753) failed prerendering `/de` with `fetch('')`: NO repo secrets are configured
+  (`gh secret list` is empty), and even with secrets the workflow writes only 6 of the 10 env
+  vars the code needs — it misses `NEXT_PUBLIC_STRIPE_KEY`, `NEXT_PUBLIC_IMAGE_CDN_URL`,
+  `NEXT_PUBLIC_GOOGLE_CLIENT_ID`, `NEXT_PUBLIC_FACEBOOK_APP_ID`, so a "successful" CI deploy
+  would ship a build with broken Stripe checkout, broken boat images and disabled Google login.
+  A fix task is open (add the 4 echo lines + document the full PRODUCTION\_\* secret set).
+
+---
+
 ## 2026-06-02 — Raleway → Latin-subset woff2 (commit `29bfbfa`) — ✅ DEPLOYED
 
 **Deployed 2026-06-02 to cusma1, build-on-server** (CI `deploy_prod.yml` couldn't be triggered
