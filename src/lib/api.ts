@@ -1,5 +1,6 @@
 import { RankMathSEOData } from '@/types/blog.type';
 import { CursorConnectionUtils } from '@/utils/static/CursorConnectionUtils';
+import { decodeHtmlEntities } from '@/utils/static/decodeHtmlEntities';
 
 import fetchAPI from './fetchApi';
 import {
@@ -97,24 +98,28 @@ export async function getRankMathSEO(url: string): Promise<RankMathSEOData | nul
       return null;
     }
 
+    // Every scraped display string / URL is decoded right here, at the parse
+    // source, so no consumer downstream can hand Next a still-encoded value and
+    // have it escaped a second time. `robots` (token list) and `jsonld` (raw
+    // JSON payload) stay untouched — decoding those could only corrupt them.
     const parseHtml = (html: string) => {
       const getMetaContent = (selector: string) => {
         const regex = new RegExp(`<${selector}\\s+[^>]*content=["']([^"']*)["']`, 'i');
         const match = html.match(regex);
 
-        return match ? match[1] : undefined;
+        return match ? decodeHtmlEntities(match[1]) : undefined;
       };
 
       const getTitle = () => {
         const match = html.match(/<title[^>]*>([^<]*)<\/title>/i);
 
-        return match ? match[1] : undefined;
+        return match ? decodeHtmlEntities(match[1]) : undefined;
       };
 
       const getCanonical = () => {
         const match = html.match(/<link[^>]*rel=["']canonical["'][^>]*href=["']([^"']*)["']/i);
 
-        return match ? match[1] : undefined;
+        return match ? decodeHtmlEntities(match[1]) : undefined;
       };
 
       const getRobots = () => {
