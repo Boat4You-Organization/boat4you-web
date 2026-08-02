@@ -15,12 +15,46 @@ import { meta } from '@/config/meta';
 import { Currency } from '@/models/user.model';
 import { CHARTER_TYPE_LABEL_MAP, CharterType, YachtModel } from '@/models/yacht.model';
 import { buildMetadata, localizedUrl } from '@/utils/static/buildMetadata';
+import { getBoatImageUrl } from '@/utils/static/imageUtils';
 import { toTitleCase } from '@/utils/static/toTitleCase';
 import BoatContentSection from '@/views/Boat/BoatContentSection';
 import BoatHeroSection from '@/views/Boat/BoatHeroSection';
 import BoatMobileNavigation from '@/views/Boat/BoatMobileNavigation';
 import { BoatTransitionProvider } from '@/views/Boat/BoatTransitionProvider';
 import RelatedBoats from '@/views/Boat/RelatedBoats';
+
+/**
+ * Absolute CDN URL of the yacht photo used for sharing + rich results, or
+ * null when the yacht has no media synced (~5-10% of the catalogue at any
+ * time) so callers can fall back to the site-wide OG asset.
+ *
+ * The detail payload ships `yachtImages[].url = null` — only the id is
+ * populated (same partner-sync quirk the listing cards work around), so
+ * reading `.url` silently yielded undefined and both og:image and the
+ * Product schema fell back to the boat4you logo on EVERY yacht page: a
+ * shared link showed our logo instead of the boat, and Google's Product
+ * rich result did the same (found 2.8.2026). Build the URL from the id
+ * instead. 1200px matches the OG recommendation and is a width Bunny
+ * already caches for the listing cards.
+ */
+const yachtShareImageUrl = (yacht: YachtModel): string | null => {
+  const images = yacht.yachtImages || [];
+  const imageId = images.find(i => i.mainImage)?.id ?? images[0]?.id;
+
+  if (!imageId) return null;
+
+  const url = getBoatImageUrl(imageId, 1200);
+
+  // The image origin comes from a build-time env var, so a build with the
+  // wrong (or no) env bakes a localhost or `undefined/...` URL into every
+  // yacht page. Crawlers cache og:image for weeks — far longer than it takes
+  // to notice and roll back — so anything that isn't a public https origin
+  // falls back to the site-wide asset instead. See the env-bake gotcha in
+  // DEPLOY_NOTES: local builds resolve this to https://localhost:8443.
+  const isPubliclyFetchable = /^https:\/\//.test(url) && !/localhost|127\.0\.0\.1/.test(url);
+
+  return isPubliclyFetchable ? url : null;
+};
 
 /**
  * Build a `Product` JSON-LD schema for a yacht detail page.
@@ -48,14 +82,7 @@ import RelatedBoats from '@/views/Boat/RelatedBoats';
  */
 function buildYachtProductSchema(yacht: YachtModel, locale: LocaleType) {
   const url = localizedUrl(locale, `/boat/${yacht.slug}`);
-  // Image fallback: yachts synced from a partner without a media payload
-  // (~5-10% of catalogue at any given time) leave `yachtImages` empty. We
-  // fall back to the site-wide OG image so Google still has *something*
-  // to render in rich results — better than a missing image and a Schema
-  // validator warning. The fallback URL is the same one Layout uses for
-  // og:image when the page omits a custom one.
-  const mainImage =
-    yacht.yachtImages.find(i => i.mainImage)?.url || yacht.yachtImages[0]?.url || `${meta.url}/meta/og-image.png`;
+  const mainImage = yachtShareImageUrl(yacht) || `${meta.url}/meta/og-image.png`;
 
   // Brand fallback: partner sync occasionally lands `manufacturerName` as
   // null even when the model name carries the brand (e.g. model="Lagoon 42"
@@ -308,7 +335,7 @@ export async function generateMetadata({
     description,
     path: `/boat/${yacht.slug}`,
     image: {
-      src: yacht.yachtImages.find(el => el.mainImage)?.url,
+      src: yachtShareImageUrl(yacht) ?? undefined,
       alt: `${yacht.modelName} ${yacht.name || ''} boat image`,
     },
   });

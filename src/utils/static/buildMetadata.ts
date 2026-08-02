@@ -19,6 +19,14 @@ type MetadataOptions = {
   image?: {
     src?: string;
     alt?: string;
+    /**
+     * Pixel dimensions, when the caller actually knows them. Omitted for
+     * partner photos (yacht images come back resized to a requested width
+     * with a free aspect ratio), and declaring wrong dimensions makes
+     * Facebook render a stretched or badly-cropped preview card.
+     */
+    width?: number;
+    height?: number;
   };
   titleAbsolute?: string;
   /**
@@ -65,7 +73,13 @@ export const buildMetadata = ({
   robots,
 }: MetadataOptions): Metadata => {
   const fullUrl = localizedUrl(locale, path);
+  const hasCustomImage = Boolean(image?.src);
   const ogImage = image?.src || `${meta.url}/meta/og-image.png`;
+  // Dimensions are only ever declared when they're true: the site-wide asset
+  // is a known 1200x630, a caller may pass its own, and everything else (WP
+  // featured images, partner yacht photos) ships without them so Facebook
+  // measures the file itself instead of trusting a wrong hint.
+  const ogDimensions = hasCustomImage ? { width: image?.width, height: image?.height } : { width: 1200, height: 630 };
 
   return {
     title: titleAbsolute ? { absolute: titleAbsolute } : title,
@@ -97,8 +111,7 @@ export const buildMetadata = ({
         {
           url: ogImage,
           alt: image?.alt || title,
-          width: 1200,
-          height: 630,
+          ...ogDimensions,
         },
       ],
     },
