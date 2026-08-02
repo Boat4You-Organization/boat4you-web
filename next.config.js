@@ -69,10 +69,65 @@ const nextConfig = {
       // search results (reported by a visitor 25.7.2026). The article lives
       // on Europe Yachts nowadays; our own equivalent is the cost breakdown
       // pillar — 301 there so the visitor lands on live content and any
-      // remaining link equity transfers. Locale-prefixed variants included.
+      // remaining link equity transfers. Locale-prefixed variants included
+      // (pl/nl added 2.8.2026 — the original group missed them and access
+      // logs show both locales being crawled).
       {
-        source: '/:locale(de|es|fr|it|pt|hr|en)?/blog/how-much-does-it-cost-to-charter-a-yacht',
+        source: '/:locale(de|es|fr|it|pt|hr|en|pl|nl)?/blog/how-much-does-it-cost-to-charter-a-yacht',
         destination: '/blog/yacht-charter-cost-2026-full-breakdown',
+        permanent: true,
+      },
+      // Meta's crawler farm (57.141.0.0/16) holds a stale URL inventory with
+      // a literal "/boat/null" per locale — ~1.1k hits/day, ZERO real users
+      // (measured 2.8.2026), and because that crawler executes JS it fired
+      // our GA tag and pushed "Yacht Not Found" to the top of Analytics. No
+      // real yacht slug can ever be "null" (slugs always end in -<id>), so a
+      // blanket 301 to search is safe and teaches crawlers the URL is gone.
+      {
+        source: '/:locale(de|es|fr|it|pt|hr|en|pl|nl)?/boat/null',
+        destination: '/search',
+        permanent: true,
+      },
+      {
+        source: '/null',
+        destination: '/',
+        permanent: true,
+      },
+      // Legacy WordPress-era blog slugs (pre-2026 FAQ-style posts) still
+      // crawled by bots and reachable from stale links — top 404 offenders
+      // from access logs (2.8.2026), each mapped to the closest live
+      // equivalent so visitors land on real content instead of a 404.
+      {
+        source:
+          '/:locale(de|es|fr|it|pt|hr|en|pl|nl)?/blog/how-much-does-it-cost-to-rent-a-boat-a-complete-price-guide',
+        destination: '/blog/yacht-charter-cost-2026-full-breakdown',
+        permanent: true,
+      },
+      {
+        source:
+          '/:locale(de|es|fr|it|pt|hr|en|pl|nl)?/blog/do-i-need-a-license-to-rent-a-boat-a-country-by-country-guide',
+        destination: '/blog/do-i-need-sailing-license-charter-yacht-croatia-greece-italy-spain-turkey-2026',
+        permanent: true,
+      },
+      {
+        source:
+          '/:locale(de|es|fr|it|pt|hr|en|pl|nl)?/blog/are-life-jackets-and-safety-equipment-provided-on-the-yacht',
+        destination: '/faq',
+        permanent: true,
+      },
+      {
+        source: '/:locale(de|es|fr|it|pt|hr|en|pl|nl)?/blog/what-documentation-is-required-for-chartering-a-yacht',
+        destination: '/faq',
+        permanent: true,
+      },
+      {
+        source: '/:locale(de|es|fr|it|pt|hr|en|pl|nl)?/blog/the-ultimate-guide-to-renting-a-boat-for-the-first-time',
+        destination: '/how-we-work',
+        permanent: true,
+      },
+      {
+        source: '/:locale(de|es|fr|it|pt|hr|en|pl|nl)?/blog/what-should-i-pack-for-a-yacht-trip-in-the-mediterranean',
+        destination: '/blog/provisioning-a-charter-yacht-galley-and-food-guide',
         permanent: true,
       },
     ];
