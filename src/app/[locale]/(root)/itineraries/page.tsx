@@ -31,7 +31,9 @@ export async function generateMetadata({ params }: ItinerariesPageParams): Promi
     titleAbsolute: t('meta.title'),
     description: t('meta.description'),
     path: '/itineraries',
-    image: { alt: t('meta.imageAlt') },
+    // Same banner the hero renders below, so a shared link previews the
+    // page instead of the site logo. Dimensions are the asset's real ones.
+    image: { src: '/images/itinerary/banner.webp', alt: t('meta.imageAlt'), width: 1440, height: 593 },
   });
 }
 
