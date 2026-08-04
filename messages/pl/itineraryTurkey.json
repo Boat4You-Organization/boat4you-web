@@ -1,1 +1,838 @@
-{}
+{
+  "routes": {
+    "bodrum": {
+      "metaTitle": "7 dni: pętla Zatoki Gökova z Bodrum | Boat4You",
+      "metaDesc": "Tygodniowy czarter jachtu z Bodrum wokół Zatoki Gökova: ciepłe źródła na Kara Ada, boje w Çökertme, plaża Kleopatry i spokojny Mersincik.",
+      "days": {
+        "1": {
+          "shortDescription": "Spokojne cztery mile na południe, do Kara Ada, gdzie ciepłe źródła mineralne biją tuż obok piaszczystej zatoczki stworzonej do pierwszej kąpieli.",
+          "description": "Kara Ada leży zaledwie cztery mile na południe od Bodrum, więc pierwszy dzień to nie tyle przelot, co rozgrzewka. Zwykle rzucamy cumy w marinie wczesnym popołudniem, kiedy łódź jest już poukładana, a papiery załatwione, i pozwalamy załodze złapać morskie nogi na płaskiej wodzie. Wyspa jest pochodzenia wulkanicznego, a przy jej południowym krańcu leżą płytkie sadzawki zasilane ciepłymi źródłami mineralnymi; miejscowi moczą się w nich od pokoleń, więc krótki skok pontonem na brzeg naprawdę się opłaca. Kotwicę rzuć w zatoczce, na dobrze trzymającym piasku, na czterech do sześciu metrach, schowany od północy. To ma znaczenie w lipcu i sierpniu, kiedy meltemi wieje z północy z siłą piętnastu do dwudziestu pięciu węzłów i po południu jeszcze przybiera. Nie ma tu ani nabrzeża, ani sklepu, więc wodę i prowiant uzupełnij przed wyjściem.",
+          "thingsToDo": [
+            "Kąpiel w ciepłych sadzawkach na brzegu",
+            "Nurkowanie z maską przy czarnych półkach lawy",
+            "Drink o zachodzie i meze w zatoczce",
+            "Kozie ścieżki na górę po widok"
+          ],
+          "mooringTip": "Kotwiczenie w zatoczce jest darmowe; piasek dobrze trzyma na czterech do sześciu metrach i osłania cię od północnego wiatru. Na brzegu nie ma do czego się przywiązać, więc jeśli chcesz prąd i wodę, Bodrum Marina jest cztery mile z powrotem i kosztuje 80–130 € za noc w szczycie sezonu."
+        },
+        "2": {
+          "shortDescription": "Piętnaście mil na wschód, w spokojniejsze wody zatoki, do Çökertme — otoczonej sosnami zatoki, gdzie boje restauracji są za darmo, jeśli zjesz kolację na brzegu.",
+          "description": "Skręć na wschód od Kara Ada, a charakter żeglugi się zmienia. Kiedy wejdziesz w Zatokę Gökova, fala się uspokaja, a wiatr słabnie w porównaniu z otwartym wybrzeżem, więc piętnaście mil do Çökertme mija zwykle lekko, na półwietrze. Zatoka otwiera się szeroką podkową, sosny schodzą do samej wody, a cisza jest taka, że cykady usłyszysz wcześniej, niż zobaczysz boje. Kilka rodzinnych restauracji wystawia własne boje, a układ jest stary i prosty: bierzesz boję, jesz kolację pod winoroślą i za nocleg nie płacisz nic. Ta nazwa należy do starej pieśni marynarzy, którą wciąż się na tym wybrzeżu śpiewa. Jeśli wolisz stanąć na własnej kotwicy, piasek trzyma na pięciu do siedmiu metrach, z dobrą osłoną od północy. Wieczór zamyka zwykle köfte z grilla i zimne Efes.",
+          "thingsToDo": [
+            "Köfte z grilla na drewnie oliwnym",
+            "Nocna kąpiel w nieruchomej zatoce",
+            "Spacer w górę, między sosny nad zatoką",
+            "Posłuchaj starej pieśni o Çökertme"
+          ],
+          "mooringTip": "Weź jedną z restauracyjnych boi, a jedynym rachunkiem będzie kolacja. Jeśli są zajęte albo wolisz prywatność, stań na kotwicy na środku zatoki, na piasku, na pięciu do siedmiu metrach, dobrze osłonięty od północy. Poza sierpniowym szczytem nie trzeba nic rezerwować."
+        },
+        "3": {
+          "shortDescription": "Głębiej w zatokę, na wyspę Sedir, z legendarną złotą plażą, do której możesz dopłynąć, ale po której nigdy nie przejdziesz.",
+          "description": "Kolejne piętnaście mil na wschód prowadzi do Sedir Adası, znanej za granicą jako Wyspa Kleopatry. Legenda mówi, że Marek Antoniusz sprowadził tu dla królowej drobny złoty piasek z Afryki Północnej, a analiza ziaren rzeczywiście wskazuje na pochodzenie daleko na południe od Morza Egejskiego — więc ta opowieść trzyma się lepiej niż większość. Haczyk: plaża jest chroniona i strażnicy pozwalają pływać od strony wody, ale na piasek nie wolno postawić stopy. Przypłyń pontonem i unoś się na wodzie, nie spaceruj. Nad brzegiem leżą mury i mały teatr antycznego Kedreai, przyjemny spacer wśród sosen i przewróconych kolumn. Z maską wypatrzysz dawne mola portowe tuż pod powierzchnią. Kotwiczymy w kanale po północnej stronie, na piasku, na pięciu do siedmiu metrach, w osłonie od przeważającego wiatru z północy. Przypłyń wczesnym popołudniem — łodzie wycieczkowe z Marmaris przerzedzają się dopiero później.",
+          "thingsToDo": [
+            "Dopłyń wpław do odgrodzonej plaży Kleopatry",
+            "Zwiedź ruiny antycznego Kedreai",
+            "Obejrzyj zatopione mola portowe z maską",
+            "Labraks i rakı przy stoliku na nabrzeżu"
+          ],
+          "mooringTip": "Stań na kotwicy przy północnym kanale, na piasku, na pięciu do siedmiu metrach, w osłonie od północy. To strefa parku narodowego, więc uszanuj liny odgradzające plażę i nie wchodź na piasek. Wejdź do zatoki, zanim popołudniowe łodzie wycieczkowe ją zatłoczą."
+        },
+        "4": {
+          "shortDescription": "Krótkie dwanaście mil w poprzek, na cichy południowy brzeg zatoki, do Karaca — rybackiej osady obrośniętej oleandrem, z kamienistą plażą.",
+          "description": "Karaca leży dwanaście mil w poprzek zatoki, na jej południowym brzegu — w fałdzie wybrzeża, gdzie za kamienistą plażą chowa się mała rybacka wioska. Oleandry tłoczą się przy samej wodzie, a tempo spada o kolejny stopień; to takie miejsce, gdzie popołudnie spędza się na niczym. Restauracje działają tu na tej samej zasadzie co w Çökertme: stolik na brzegu to darmowa noc na boi. Zwykle przypływamy wczesnym popołudniem, kąpiemy się z rufy, a potem wiosłujemy na brzeg na wczesne rakı. Trzymanie w zatoczce jest dobre, piasek na czterech do sześciu metrach, a wzgórza całkowicie odcinają północny wiatr. Zapytaj o jagnięcinę z rożna — to lokalna specjalność i warto na nią poczekać. Weź gotówkę, bo terminale są tu zawodne.",
+          "thingsToDo": [
+            "Poszukaj szkiełek z morza na żwirze",
+            "Tryktrak pod starym drzewem figowym",
+            "Jagnięcina z rożna przy rodzinnym stole",
+            "Ochłoda z rufy w szklistej wodzie"
+          ],
+          "mooringTip": "Weź boję restauracji i rozlicz postój ceną kolacji. Wolisz niezależność? Zatoczka dobrze trzyma na piasku, na czterech do sześciu metrach, i jest w pełni zamknięta od północy. Rzadko się zapełnia, więc rezerwacja jest zbędna."
+        },
+        "5": {
+          "shortDescription": "Powrót piętnaście mil na zachód do Mersincik — zatoki strzeżonej granitem, z grotą morską w głębi, tymiankiem na wzgórzach i żadnym światłem w promieniu mil.",
+          "description": "Skieruj dziób na zachód i wróć piętnaście mil wzdłuż zatoki do Mersincik, jednego z dzikszych kotwicowisk na tej pętli. Wejście zwęża się między szarym granitem, a w głębi zatoki niska grota morska aż prosi się, żeby wpłynąć do niej kajakiem albo pontonem. Nie ma tu nic zbudowanego — i o to właśnie chodzi. Za plażą nierówna ścieżka wspina się na grzbiet gęsto porośnięty dzikim tymiankiem; rozetrzyj gałązkę w palcach, a zrozumiesz, dlaczego miód z tego wybrzeża jest tak ceniony. Trzymanie jest pewne, piasek na czterech do sześciu metrach, a okoliczne wzgórza odcinają falę z każdej strony. Zatoka leży w chronionym rezerwacie Gökova, więc nie ma tu sklepu ani paliwa — zapełnij lodówkę i zbiorniki jeszcze w Karaca. Po zmroku niebo się otwiera; bez miasta w promieniu wielu mil gwiazdy schodzą do samej wody.",
+          "thingsToDo": [
+            "Wpłyń kajakiem do groty morskiej",
+            "Wejdź na tymiankowy grzbiet nad zatoką",
+            "Zimne zeytinyağlı podane na pokładzie",
+            "Gwiazdy bez śladu sztucznego światła"
+          ],
+          "mooringTip": "Kotwiczenie wszędzie za darmo, na piasku, na czterech do sześciu metrach, z osłoną ze wszystkich stron od granitowych wzgórz. Nie ma tu mariny ani zaopatrzenia, więc przypłyń z pełnymi zapasami oraz pełną wodą i paliwem."
+        },
+        "6": {
+          "shortDescription": "Ostatni etap z powrotem do Bodrum, gdzie portu strzeże zamek krzyżowców, a w nim jeden z najstarszych wydobytych kiedykolwiek wraków.",
+          "description": "Ostatni przelot to piętnaście mil z powrotem do Bodrum, najlepiej pod żaglami rano, zanim rozkręci się meltemi. Kiedy miasto wyrasta przed dziobem, nad wejściem do portu góruje miodowy Zamek św. Piotra, postawiony przez joannitów w XV wieku. Dziś mieści Muzeum Archeologii Podwodnej, a jego perłą jest wrak z Uluburun — kupiecki statek z epoki brązu, który poszedł na dno ponad trzy tysiące lat temu z ładunkiem miedzi, szkła i kości słoniowej. Zarezerwuj na to całe popołudnie. Potem boczne uliczki i bazar wynagradzają powolne włóczenie się, zwłaszcza jeśli szukasz ręcznie tkanej bawełny i miejscowych ręczników peştemal; targowanie jest tu oczekiwane i to połowa zabawy. Zadzwoń do mariny dzień wcześniej, żeby potwierdzić miejsce, i zajrzyj po drodze na stację paliw, zanim staniesz rufą do nabrzeża na noc.",
+          "thingsToDo": [
+            "Muzeum w Zamku św. Piotra",
+            "Znaleziska z wraku Uluburun",
+            "Potarguj się o ręczniki peştemal na bazarze",
+            "Zatankuj przy stanowisku w porcie"
+          ],
+          "mooringTip": "W Bodrum Marina stajesz rufą na lazy line, około 80–130 € za noc w szczycie. Zatankuj przy stanowisku obok wejścia, zanim wpłyniesz, i zadzwoń wcześniej, żeby zaklepać miejsce — w pełni lata jest ciasno."
+        },
+        "7": {
+          "shortDescription": "Spokojny ostatni poranek przy kei: zdanie łodzi, ostatnia kąpiel i turecka kawa przed krótkim skokiem na lotnisko.",
+          "description": "Zdanie łodzi wypada wcześnie. Większość baz chce mieć jacht przy nabrzeżu i przekazany do dziewiątej, więc opłaca się spakować poprzedniego wieczoru i o świcie jeszcze raz przejrzeć schowki i zęzy. Kierownik bazy obchodzi z tobą pokład, sprawdza inwentarz i notuje wszelkie usterki; sfotografuj każdy ślad, który trafia na protokół, zanim go podpiszesz, i zachowaj kopię. Kaucja zwykle wraca na kartę w ciągu tygodnia. Jeśli masz lot później, nie ma po co uciekać z nabrzeża: zamów turecką kawę w kawiarni przy porcie albo wyskocz do pobliskiego beach clubu na ostatnią kąpiel. Kiedy przyjdzie pora, na lotnisko w Bodrum jedzie się spokojnie trzydzieści pięć minut, a marina pomoże zorganizować transfer. Spokojne zakończenie tygodnia, który przez cały czas trzymał się osłoniętych wód.",
+          "thingsToDo": [
+            "Zdawanie łodzi z kierownikiem bazy",
+            "Ostatnia kąpiel w beach clubie w Bodrum",
+            "Turecka kawa na nabrzeżu przy porcie",
+            "Zamów transfer na lotnisko w Bodrum"
+          ],
+          "mooringTip": "Miej łódź z powrotem przy pomoście przed dziewiątą, na zdanie. Sfotografuj wszystko, co zostanie wpisane jako uszkodzenie, zanim podpiszesz protokół. Kaucja wraca zwykle w ciągu siedmiu dni."
+        }
+      }
+    },
+    "bodrum-akyaka": {
+      "metaTitle": "7 dni: Bodrum – Akyaka i z powrotem | Boat4You",
+      "metaDesc": "Siedem dni po Zatoce Gökova z Bodrum: grota morska w Mersincik, rzeka Azmak w Akyaka, ruiny Keramos w Ören i podkowa zatoki Çökertme.",
+      "days": {
+        "1": {
+          "shortDescription": "Spokojny pierwszy etap: 15 mil na południe z Bodrum do Mersincik — zatoki o granitowym wejściu, z grotą morską do zwiedzenia kajakiem i bez tłumów.",
+          "description": "Wyjdź z Bodrum Marina po załatwieniu papierów i skieruj dziób na południowy wschód. Piętnaście mil otwartej wody pozwala poczuć łódź, zanim zrobi się technicznie, a wczesnym popołudniem po lewej wyrastają ściany Mersincik, strzegące zatoki, do której wchodzi się szczeliną w granicie. Rzuć kotwicę na piasku, na czterech do sześciu metrów; trzymanie jest dobre, a fala rzadko tu wchodzi. Na brzegu nie ma nic i o to chodzi. W głębi zatoki czeka niska grota morska w sam raz na kajak, a skaliste obrzeża kryją groty warte maski i płetw. Zwykle przed kolacją wchodzimy na porośnięty tymiankiem grzbiet, po dobre światło. Lodówkę zapełnij jeszcze w Bodrum, bo najbliższy sklep został daleko z tyłu.",
+          "thingsToDo": [
+            "Kajakiem do groty morskiej Mersincik",
+            "Granitowe groty przy wejściu, z maską",
+            "Grzbiet dzikiego tymianku nad zatoką",
+            "Drink o zachodzie na pustym kotwicowisku"
+          ],
+          "mooringTip": "Kotwiczenie za darmo, na piasku, 4–6 m bliżej głębi zatoki; trzymanie jest pewne, a przy typowym wietrze z północnego zachodu woda zostaje płaska. Nie ma tu nabrzeża, wody ani paliwa, więc uzupełnij zbiorniki i prowiant w Bodrum."
+        },
+        "2": {
+          "shortDescription": "Krótki skok osiem mil na wschód do Kairos — cichej zatoczki, gdzie jedyna restauracja przy nabrzeżu użycza swoich boi, a z góry patrzą likijskie kamienie.",
+          "description": "Tu nie ma po co się spieszyć. Osiem mil płaskiej porannej wody i jesteś w Kairos, w fałdzie południowego brzegu, o którym większość załóg nigdy nie słyszała. Jedyną restaurację nad wodą prowadzi rodzina, a jej boje są twoje za cenę kolacji — złap cumę i rozgość się. Kamienista plaża szybko opada w przejrzystą wodę; za nią nierówna ścieżka wspina się do rozsypanych kamieni likijskiej strażnicy, najlepiej pokonać ją w chłodzie wieczoru. Lunch jest tu prosty. Zamów balık ekmek przy grillu na nabrzeżu, zjedz go z nogami w morzu i pozwól popołudniu płynąć wolno. Noce są naprawdę ciche — najwyżej jakaś mewa i łódź kołysząca się leniwie na boi.",
+          "thingsToDo": [
+            "Złap boję restauracji w Kairos",
+            "Wejdź do ruin likijskiej strażnicy",
+            "Balık ekmek przy grillu na nabrzeżu",
+            "Maska i płetwy prosto z kamienistej plaży"
+          ],
+          "mooringTip": "Weź jedną z boi restauracji i zapłać, jedząc na brzegu; zatoczka jest przytulna i chowa cię przed północnym wiatrem. Jeśli boje są zajęte, stań na kotwicy na piasku i żwirze na 4–6 m, rufą w stronę plaży."
+        },
+        "3": {
+          "shortDescription": "Dwanaście mil na wschód i jesteś w Karaca — rybackiej zatoczce w sosnach i oleandrach, gdzie dzienny połów ląduje na grillu przy nabrzeżu.",
+          "description": "Wyjdź z Kairos po śniadaniu na dwunastomilowy odcinek do Karaca — pracującej zatoczki, gdzie łodzie rybackie wciąż przeważają nad czarterowymi jachtami. Podejście jest zielone: sosny schodzą do samej wody, a oleandry obrastają kamienisty brzeg. Jak w poprzednich zatoczkach, boje należą do miejscowej restauracji, a kolacja zapewnia ci miejsce. Wejdź na ścieżkę biegnącą zboczem wśród sosen i tymianku; sam zapach wart jest podejścia, a widok z góry na zakotwiczoną flotyllę jest naprawdę dobry. Zsuń się do wody przy skałach, a w płyciznach zobaczysz wiszące ławice garbików. Kiedy rybacy wracają, szklanka çay na nabrzeżu kupuje godzinę rozmowy. Poproś o barwenę z grilla, prosto z cytryną i oliwą — nic więcej nie będzie ci potrzebne.",
+          "thingsToDo": [
+            "Ścieżka wśród sosen i tymianku",
+            "Ławice ryb przy skałach, z maską",
+            "Szklanka çay z rybakami z Karaca",
+            "Barwena z grilla w tawernie przy kei"
+          ],
+          "mooringTip": "Karaca działa tak samo jak sąsiednie zatoki: bierzesz boję restauracji i rozliczasz rachunek przy kolacji. Miejsca na kotwiczenie jest mało, więc jeśli rzucasz kotwicę, celuj w piasek na 4–6 m i trzymaj się z dala od kręgów obrotu łodzi na bojach."
+        },
+        "4": {
+          "shortDescription": "Osiem mil w głąb zatoki, do Akyaka — miasteczka o drewnianych balkonach nad rzeką Azmak, gdzie po południu wiatr należy do kitesurferów.",
+          "description": "To głowa zatoki i wiatr o tym wie. Lej Gökova przepycha przez Akyaka porządny podmuch niemal każdego letniego popołudnia — dlatego bazuje tu ekipa od kite'a i windsurfingu — więc te osiem mil pokonaj w porannej ciszy i bądź przycumowany, zanim się rozkręci. Miasteczko wynagradza wysiłek. Domy w stylu osmańskim, z rzeźbionymi drewnianymi balkonami, wspinają się po zboczu, a rzeka Azmak wypływa z gór za nimi, zimna i przejrzysta jak szkło. Wejdź na nią kajakiem dwa kilometry w górę, mijając czaple w trzcinach, a jeśli będziesz cichy i dopisze ci szczęście, także wydrę. W miasteczku znajdź lokantę nad rzeką i zamów manti, małe pierożki topione w czosnkowym jogurcie. To żywszy przystanek niż zatoczki — i to w najlepszym sensie.",
+          "thingsToDo": [
+            "Kajakiem dwa kilometry w górę rzeki Azmak",
+            "Starówka z osmańskimi balkonami",
+            "Manti w lokancie nad rzeką",
+            "Kitesurferzy z plaży w Akyaka"
+          ],
+          "mooringTip": "Mała marina w Akyaka przyjmuje rufą, około 60–90 € za noc — w lipcu i sierpniu warto rezerwować. Przypłyń przed południem: wiatr termiczny rozkręca się tu szybko i cumowanie robi się nieprzyjemne, kiedy porządnie wieje. Kotwiczenie w zatoce jest możliwe, na piasku 4–6 m, ale wystawione na popołudniową bryzę."
+        },
+        "5": {
+          "shortDescription": "Dwanaście mil z powrotem wzdłuż południowego brzegu do Ören — wioski oliwiarzy, gdzie antyczne kamienie Keramos leżą rozrzucone wśród polnych kwiatów.",
+          "description": "Rzuć cumy, póki jest jeszcze cicho, i przejdź dwanaście mil w dół południowego brzegu do Ören. Za plażą wznoszą się tarasy oliwne, a tempo wraca do wiejskiego po zgiełku Akyaka. Powodem, żeby się zatrzymać, jest Keramos — miasto z IV wieku p.n.e., którego mury i bębny kolumn leżą do połowy zagubione w trawie i polnych kwiatach kawałek w głąb lądu; idź rano, przed upałem, a najpewniej będziesz miał ruiny dla siebie. Jeśli trafisz na dzień targowy, plac zapełnia się workami przypraw i stosami miejscowej ceramiki, w których warto pogrzebać. Lunch jest tu plażowy: talerz z mangalu i zimny ayran pod słomianym parasolem. Wieczorem po piasku niesie się zapach jagnięciny natartej kminem, dochodzącej nad węglami — trudno się oprzeć.",
+          "thingsToDo": [
+            "Ruiny Keramos z IV wieku p.n.e.",
+            "Cotygodniowy targ w Ören",
+            "Lunch na plaży z zimnym ayranem",
+            "Jagnięcina z kminem z mangalu na piasku"
+          ],
+          "mooringTip": "Mała marina w Ören to najtańszy postój całej trasy — rufą, około 40–60 € za noc. Zapełnia się rzadziej niż Akyaka, ale w szczycie sezonu telefon wcześniej nie zaszkodzi. Kotwiczenie przy plaży na piasku 4–6 m sprawdza się dobrze przy przeważającym wietrze z północnego zachodu."
+        },
+        "6": {
+          "shortDescription": "Piętnaście mil na zachód do Çökertme — podkowy w sosnach, znanej z ludowej pieśni, rodzinnych tawern i późnoletniej poświaty w wodzie.",
+          "description": "Dziś dłuższy etap: piętnaście mil na zachód, przez wylot zatoki, do Çökertme — podkowiastej zatoki otulonej sosnami. Tureccy żeglarze znają ją ze starej ludowej pieśni i w letnie noce ktoś na nabrzeżu zwykle bierze saz i ją gra. Zatoka działa na znanym już układzie boja za kolację, a kilka rodzinnych tawern łagodnie rywalizuje o gości. Zamów köfte z grilla na drewnie oliwnym, a zrozumiesz całe zamieszanie. Pod koniec sierpnia, gdy zakwitają glony, kąpiel z rufy po zmroku rozświetla wodę wokół ramion na niebiesko-zielono — jedna z tych rzeczy, w które nikt nie wierzy, dopóki jej nie zobaczy. Dla niespokojnych: nad kotwicowiskiem biegnie grzbietowa ścieżka przez sosny. Poza tym to zatoka, która prosi, żeby zostać i nie robić prawie nic.",
+          "thingsToDo": [
+            "Nocna kąpiel w świecącej wodzie (koniec sierpnia)",
+            "Köfte z drewna oliwnego w tawernie",
+            "Ludowa muzyka na sazie przy nabrzeżu",
+            "Ścieżka grzbietem wśród sosen nad zatoką"
+          ],
+          "mooringTip": "Ten sam układ co w zatoczkach: bierzesz boję tawerny i płacisz kolacją, którą tutejsze restauracje traktują poważnie. Kotwiczenie też jest w porządku, na piasku 5–7 m naprzeciw plaży, a podkowa trzyma cię przytulnie od północy. Sierpniowe weekendy bywają tłoczne, więc przypłyń późnym popołudniem po dobre miejsce."
+        },
+        "7": {
+          "shortDescription": "Ostatnie piętnaście mil do Bodrum, z czasem na jedną kąpiel przed mariną, zamkiem i pożegnalnym drinkiem nad portem.",
+          "description": "Ostatni etap to spokojne piętnaście mil do Bodrum i nie ma powodu, żeby się z nim spieszyć. Jeśli załoga ma ochotę, stań jeszcze raz na kotwicy przy Çökertme na poranną kąpiel, a potem weź kurs na zachód, do mariny. Zadzwoń dzień wcześniej, żeby zaklepać godzinę zdania łodzi, i zajrzyj na stację paliw przy wejściu do portu, zanim staniesz na lazy line. Kiedy łódź jest już poukładana, popołudnie należy do brzegu. Zamek św. Piotra strzeże portu z XV-wiecznych fundamentów i mieści dziś muzeum archeologii podwodnej — warte godziny. Potem zgub się na bazarze i potarguj o skórę i szafran. Zakończ rejs jak należy: drinkiem w meyhane nad portem, kiedy słońce schodzi za maszty.",
+          "thingsToDo": [
+            "XV-wieczny Zamek św. Piotra",
+            "Targowanie o skórę i szafran na bazarze",
+            "Ostatnia kąpiel przy Çökertme o świcie",
+            "Drink o zachodzie w meyhane nad portem"
+          ],
+          "mooringTip": "Bodrum Marina przyjmuje rufą, na lazy line, około 80–130 € za noc w szczycie sezonu. Potwierdź godzinę zdania łodzi z bazą 24 godziny wcześniej i zatankuj przy stanowisku obok wejścia, zanim wejdziesz na swoje miejsce."
+        }
+      }
+    },
+    "bodrum-didim": {
+      "metaTitle": "7 dni: z Bodrum do Efezu | Boat4You",
+      "metaDesc": "7-dniowy czarter z Bodrum wzdłuż tureckiego Egeju: Yalıkavak, Güllük, świątynia Apollina w Didim, Kuşadası i Efez, potem powrót z wiatrem.",
+      "days": {
+        "1": {
+          "shortDescription": "Spokojny start w Bodrum Marina: zaopatrz łódź, wejdź na Zamek św. Piotra i stań wśród kamieni Mauzoleum.",
+          "description": "Większość załóg pierwszy dzień poświęca na przygotowanie łodzi, zamiast pędzić w morze — a Bodrum wynagradza tę pauzę. Marina leży pod Zamkiem św. Piotra, XV-wieczną twierdzą krzyżowców, w której mieści się dziś Muzeum Archeologii Podwodnej — wrak z Uluburun jest jednym z najstarszych, jakie kiedykolwiek wydobyto. Daj sobie na to dwie godziny. Krótki spacer w głąb lądu prowadzi do rozrzuconych kamieni Mauzoleum w Halikarnasie, zaliczanego kiedyś do siedmiu cudów świata. Niewiele stoi, ale skala wciąż robi wrażenie. Zabierz świeże warzywa, wodę i lód, zanim rozkręci się popołudniowe meltemi, a o zmierzchu znajdź meyhane nad wodą na meze i kieliszek rakı. Zatankuj przy stanowisku obok wejścia, żeby jutro wyjść z pełnymi zbiornikami.",
+          "thingsToDo": [
+            "Muzeum Archeologii Podwodnej",
+            "Kamienie Mauzoleum w Halikarnasie",
+            "Przyprawy na bazarze w Bodrum",
+            "Meze i rakı w meyhane nad wodą"
+          ],
+          "mooringTip": "Bodrum Marina przyjmuje rufą na lazy line i osłania w pełni; licz na 80–130 € za noc w szczycie. Uzupełnij paliwo przy stanowisku obok wejścia do portu, zanim ruszysz na północ."
+        },
+        "2": {
+          "shortDescription": "Opłyń czubek półwyspu do wystawnego Yalıkavak albo schowaj się w spokojniejszym Göltürkbükü, gdzie drewniane pomosty wiszą nad wodą.",
+          "description": "Dwanaście mil zabiera cię za północno-zachodni róg półwyspu, więc na ostatnim odcinku spodziewaj się meltemi w dziób — warto wyjść przed dziewiątą, żeby wyprzedzić popołudniowy przyrost. Palmarina w Yalıkavak to przystanek na pokaz: superjachty, designerskie uliczki i marmurowe nabrzeże otwarte w 2014 roku. Łatwo tu stracić popołudnie na oglądaniu witryn, trudniej — utrzymać portfel. Cztery mile na wschód Göltürkbükü jest łagodniejszym wyborem. Zatokę otaczają sosny, a beach cluby wysuwają swoje pomosty do kąpieli nad płytką wodę. Stań na kotwicy, popływaj przed lunchem, a potem weź ponton na długi, leniwy posiłek. Gümüşlük z zatopionymi ruinami Myndos leży kawałek na zachód, jeśli masz ochotę na rybną kolację i zachód słońca na brzegu.",
+          "thingsToDo": [
+            "Nabrzeże superjachtów w Palmarinie",
+            "Kąpiel z pomostów w Göltürkbükü",
+            "Ryba o zachodzie nad zatopionym Myndos",
+            "Butiki w uliczkach Palmariny"
+          ],
+          "mooringTip": "Palmarina przyjmuje rufą, ale liczy sobie sporo — często 200–400 € za noc w lipcu. Mały port w Göltürkbükü to 100–160 €, albo po prostu stań na kotwicy przy beach clubach, na piasku 4–6 m."
+        },
+        "3": {
+          "shortDescription": "Przez Zatokę Mandalya do Güllük — pracującego miasteczka rybackiego, z karyjskimi ruinami Iasos na cyplu.",
+          "description": "Na południowy zachód, przez Zatokę Mandalya: Güllük wydaje się o cały świat oddalone od blichtru marin, które zostały z tyłu. To prawdziwy port rybacki — łodzie wyładowują połów przy nabrzeżu, a ryba, którą jesz na kolację, najpewniej zeszła z jednej z nich tego ranka. Tempo zwalnia w chwili, gdy rzucisz cumy. Powodem, żeby tu przystanąć — poza ciszą — jest Iasos. Antyczne karyjsko-greckie miasto leży na cyplu, krótki spacer albo skok pontonem na południe, z rzymską agorą, bizantyjskimi murami i teatrem patrzącym na wodę. Idź w chłodniejszym świetle wieczoru. Potem grille przy nabrzeżu robią çöp şiş, cienkie jagnięce szaszłyki, z których słynie ten kawałek Egei, a sama zatoka robi się szklista, gdy meltemi opada.",
+          "thingsToDo": [
+            "Karyjskie i rzymskie ruiny Iasos",
+            "Çöp şiş przy rybackim nabrzeżu",
+            "Kąpiel w szklistej zatoce Güllük",
+            "Poranny wyładunek dziennego połowu"
+          ],
+          "mooringTip": "Mała marina w Güllük przyjmuje rufą za 60–100 € za noc i dobrze osłania od północy. Jeśli jest pełna, stań na kotwicy w zatoce, na dobrze trzymającym piasku, na 5–7 m."
+        },
+        "4": {
+          "shortDescription": "Dwadzieścia mil na północ do Didim, gdzie wciąż stoi kolosalna świątynia Apollina, a milę dalej czeka złoty piasek Altınkum.",
+          "description": "Dwudziestomilowy etap prowadzi do Didim i jednego z największych zabytków tureckiego wybrzeża. Świątynia Apollina w Didymie była jedną z największych, jakie wznieśli Grecy, i nawet w połowie zrujnowana jej kolumny sięgają dziewiętnastu metrów w niebo. To tutaj działała wyrocznia Branchidów, w swoim czasie ustępująca tylko Delfom. Leży dwa kilometry w głąb lądu, kilka minut taksówką z mariny. D-Marin Didim to duży, dobrze prowadzony port i standardowy nocleg na tym odcinku, osłonięty niezależnie od tego, co robi wiatr. Po świątyni zjedź milę na południe, do Altınkum, po miękki złoty piasek i płytkie kąpiele. Zanim wypłyniesz, kup w mieście pudełko lokum u rodzinnego cukiernika.",
+          "thingsToDo": [
+            "Kolumny świątyni Apollina w Didymie",
+            "Kąpiel na złotym piasku Altınkum",
+            "Lokum od rodzinnego cukiernika",
+            "Tkaniny na bazarze przy porcie"
+          ],
+          "mooringTip": "D-Marin Didim przyjmuje rufą na lazy line, w pełni osłonięty, około 100–160 € za noc w szczycie. W sezonie jest popularny, więc zadzwoń wcześniej po miejsce i zatankuj przy stanowisku na wejściu."
+        },
+        "5": {
+          "shortDescription": "Długi, 32-milowy przelot na północ do Kuşadası — twojej bazy wypadowej do Efezu, największego rzymskiego miasta na tym wybrzeżu.",
+          "description": "To najdłuższy odcinek w drodze na północ: trzydzieści dwie mile pod przeważający wiatr północny, więc potraktuj go jak porządny dzień żeglowania i wyjdź wcześnie. Nagrodą na końcu jest Efez i wart jest każdego halsu. Kuşadası to ruchliwy port wycieczkowców z mariną z pełnym zapleczem, więc zarezerwuj miejsce. Stamtąd do Efezu jest krótki kurs taksówką i pół dnia na nogach: Biblioteka Celsusa, Wielki Teatr, który mieścił dwadzieścia pięć tysięcy widzów, marmurowe ulice, po których wciąż się chodzi. Idź z samego rana, przed autokarami i upałem. W mieście Ladies Beach (Kadınlar Denizi) to plaża miejscowych, a portu strzeże mały zamek na Güvercinada. Bazar jest dobry na jedwab i przyprawy, jeśli zostanie czas.",
+          "thingsToDo": [
+            "Efez i Biblioteka Celsusa",
+            "Kamienne rzędy Wielkiego Teatru",
+            "Kąpiel na Ladies Beach (Kadınlar Denizi)",
+            "Zamek na Güvercinada nad portem"
+          ],
+          "mooringTip": "Setur Kuşadası Marina przyjmuje rufą, w pełni osłonięta, około 100–160 € za noc w szczycie. W sezonie wycieczkowców jest tłoczno, więc rezerwuj wcześniej i zatankuj przy stanowisku na wejściu przed długą drogą powrotną."
+        },
+        "6": {
+          "shortDescription": "Spokojne piętnaście mil do cichego Özdere, z wyrocznią w Klaros w głębi lądu i pustymi zatoczkami dla deski SUP.",
+          "description": "Po tłumach Kuşadası Özdere jest świadomą zmianą biegu. Piętnaście lekkich mil w górę wybrzeża prowadzi do spokojnego pasa nadmorskiego, który większość tras czarterowych pomija — i w tym cała jego zaleta. Plaże ciągną się długo i płytko, zatoczki między nimi zostają ciche, a deska SUP to najlepszy sposób, żeby powęszyć wzdłuż brzegu. W głębi lądu, nad Ahmetbeyli, leżą ruiny Klaros — sanktuarium wyroczni Apollina ze świątynią i resztkami kolosalnych posągów. Odwiedza je ułamek tych, co Efez. Na pokładzie warto pamiętać, że to kraina oliwy: szukaj potraw zeytinyağlı na miejscowym oleju i chłodnego egejskiego białego wina do kolacji w tawernie na brzegu. Spokojna, wypoczęta noc przed długim skokiem na południe.",
+          "thingsToDo": [
+            "Ruiny wyroczni w Klaros",
+            "SUP po cichych zatoczkach wzdłuż brzegu",
+            "Potrawy zeytinyağlı w tawernie",
+            "Chłodne białe wino znad Egei"
+          ],
+          "mooringTip": "Mały port w Özdere jest skromny i tani, około 40–70 € za noc, osłonięty od północy. Infrastruktura jest ograniczona, więc jeśli wolisz stać swobodnie, rzuć kotwicę w zatoce, na piasku, na 4–6 m."
+        },
+        "7": {
+          "shortDescription": "Sześćdziesiąt mil z wiatrem do domu, do Bodrum, z opcjonalną kąpielą w gorących źródłach Kara Ada przed ostatnim cumowaniem.",
+          "description": "Ostatni dzień jest tym dużym: sześćdziesiąt mil z powrotem do Bodrum. Ratunkiem jest kierunek. Wszystko, pod co wdrapywałeś się w drodze na północ, masz teraz za rufą, więc to bieg z wiatrem, a meltemi robi robotę — szybko, ale potrafi rozkołysać, więc refuj wcześnie i wychodź o pierwszym świetle. Celuj w to, żeby minąć półwysep do wczesnego popołudnia. Jeśli starczy czasu i morze pozwoli, Kara Ada, wyspa naprzeciw Bodrum, ma ciepłe źródła siarkowe, przy których można stanąć na kotwicy i wykąpać się w wodzie o temperaturze wanny. To dobry ostatni przystanek. Zatankuj przed wejściem na miejsce, opłucz łódź i potwierdź poranną godzinę zdania. Potem jeszcze jeden zachód słońca nad zamkiem i pożegnalna kolacja załogi na brzegu.",
+          "thingsToDo": [
+            "Ciepłe źródła siarkowe Kara Ada",
+            "Mycie i tankowanie w Bodrum Marina",
+            "Ostatnia kolacja załogi nad portem",
+            "Ostatni zachód nad Zamkiem św. Piotra"
+          ],
+          "mooringTip": "W Bodrum Marina znów rufą, na lazy line, 80–130 € za noc. Zatankuj przy stanowisku na wejściu w drodze do środka i potwierdź godzinę zdania łodzi 24 godziny wcześniej, żeby poranek był spokojny."
+        }
+      }
+    },
+    "fethiye": {
+      "metaTitle": "7 dni: rejs Blue Cruise z Fethiye | Boat4You",
+      "metaDesc": "Siedmiodniowa pętla z Fethiye: Gemiler, Dolina Motyli, Błękitna Laguna Ölüdeniz, Kapı Creek, Ruin Bay i Sarsala — wszystko w osłoniętej zatoce.",
+      "days": {
+        "1": {
+          "shortDescription": "Łagodna rozgrzewka: osiem mil na południe na wyspę Gemiler, gdzie bizantyjskie ruiny wspinają się po zboczu, a po drugiej stronie zatoki zimna woda źródlana spotyka morze.",
+          "description": "Pierwszy etap jest celowo spokojny: osiem mil w dół wybrzeża, żeby wszyscy złapali morskie nogi i ustalili, gdzie leżą korby do kabestanów. Gemiler leży tuż przy lądzie, a jej zbocze zastawione jest bezdachowymi skorupami bizantyjskich kościołów i cystern. To była Wyspa św. Mikołaja na długo przed tym, jak relikwie świętego wywieziono do Bari, a ścieżki wijące się między ruinami warte są godziny, zanim światło zrobi się płaskie. Na noc zwykle przechodzimy do Coldwater Bay. Płycizny zasilają tu słodkowodne źródła i czuje się to od razu przy skoku do wody: zimna warstwa wsuwa się pod ciepłą powierzchnię. Weź maskę i przepłyń wzdłuż skał. Kolacja to meze w tawernie przy nabrzeżu, a boja jest gratis do stolika.",
+          "thingsToDo": [
+            "Ruiny bizantyjskich kościołów na Gemiler",
+            "Sklepiona ścieżka do kościoła na szczycie",
+            "Zimna warstwa źródlana w Coldwater Bay",
+            "Kolacja meze w tawernie w Coldwater"
+          ],
+          "mooringTip": "Coldwater Bay ma darmowe boje restauracyjne — weź jedną i rozlicz rachunek przy kolacji. Jeśli są zajęte, piasek dobrze trzyma na pięciu do siedmiu metrach tuż obok pola boi."
+        },
+        "2": {
+          "shortDescription": "Cztery mile do stromego kanionu Doliny Motyli, a potem za róg, na nocleg pod słynną laguną Ölüdeniz i paralotniami z Babadağ.",
+          "description": "Krótki dzień, więc nigdzie się nie spieszymy. Dolina Motyli otwiera się zieloną szczeliną w klifach — wąwozem, który wspina się ponad trzysta metrów w głąb lądu, do wodospadu w swojej głowie. Motyle krasopani hera, od których wzięła nazwę, zlatują się tu w pełni lata i nigdzie indziej na tym wybrzeżu. Stań na kotwicy, wejdź przez trzciny i idź do wodospadu, jeśli woda płynie. To przystanek wyłącznie dzienny; kanion przepycha popołudniowy, porywisty przeciąg, który psuje noc. Na nocleg schodzimy milę na wschód, do Ölüdeniz. Sama laguna jest chroniona, ale otwarta zatoka na zewnątrz dobrze trzyma na piasku, na pięciu do siedmiu metrach. Spójrz w górę koło szóstej, a zwykle zobaczysz paralotnie schodzące spiralą z Babadağ.",
+          "thingsToDo": [
+            "Wąwozem do wodospadu w Dolinie Motyli",
+            "Kąpiel przy Błękitnej Lagunie Ölüdeniz",
+            "Paralotnie lądujące spod góry Babadağ",
+            "Wypatruj motyli krasopani hera latem"
+          ],
+          "mooringTip": "Dolinę Motyli traktuj wyłącznie jako przystanek na lunch, kotwicząc na skalistym dnie na sześciu do ośmiu metrach i pilnując obrotu łodzi. Na noc stań w otwartej zatoce Ölüdeniz, na piasku, na pięciu do siedmiu metrach, poza oznaczoną strefą kąpielową."
+        },
+        "3": {
+          "shortDescription": "Najdłuższy etap tygodnia, dwanaście mil w osłoniętą zatokę, z metą w Kapı Creek — wąskiej zatoczce z kamienistą plażą i jedną tawerną.",
+          "description": "To największy przelot rejsu, więc lubimy rzucić boję przed dziewiątą i zrobić mile, zanim wypełni się popołudniowa bryza. Po wejściu w Skopea Limanı woda się wygładza, a sosnowe wzgórza zamykają się wokół ciebie. Kapı Creek chowa się na końcu szczeliny, która przy wejściu zwęża się do jakichś osiemdziesięciu metrów, przez co bardziej przypomina norweski fiord niż turecką zatokę. W środku jest szklisto i całkiem zacisznie. W głębi czeka kamienista plaża do kąpieli i mała tawerna, która obsługuje pole boi. Stań rufą, podaj długą cumę na brzeg, jeśli chłopak o to poprosi, i rozgość się. Zamów mezes i słoik tymiankowego miodu na rano, a załoga niech przed kolacją wypłynie do przewężenia.",
+          "thingsToDo": [
+            "Podpłyń do 80-metrowego wejścia do zatoczki",
+            "Kąpiel z kamienistej plaży w głębi",
+            "Cumowanie rufą przy tawernie Kapı Creek",
+            "Tymiankowy miód i rakı przy nabrzeżu"
+          ],
+          "mooringTip": "W Kapı Creek stajesz rufą do pomostu tawerny albo na jej bojach — jedno i drugie za darmo, jeśli jesz na brzegu — a lipcowe wieczory zapełniają je szybko. W szczycie sezonu przypłyń wczesnym popołudniem, żeby mieć pewne miejsce; piasek na pięciu do siedmiu metrach to twoja rezerwa."
+        },
+        "4": {
+          "shortDescription": "Spokojne cztery mile do Ruin Bay, gdzie zatopione ruiny z czasów rzymskich leżą w dwóch metrach wody pod likijskimi grobowcami.",
+          "description": "Znów można wyspać się do późna, bo do Ruin Bay są tylko cztery mile. Atrakcja jest tu pod łodzią, nie na brzegu. Część dawnej likijskiej osady dawno zsunęła się do morza, a jej kamieniarka leży teraz w dwóch, trzech metrach przejrzystej wody u podstawy klifu — na tyle płytko, że wystarczy maska i nie trzeba nurkować głębiej. Płyń powoli, a wypatrzysz obrobione bloki i bębny kolumn obrośnięte glonami. Nad zatoką nierówna ścieżka prowadzi do rozrzuconych ruin Lydae, dzielonych dziś z kozami i starymi drzewami oliwnymi. To dobre miejsce na drinka o zachodzie. Rozpal grill na pokładzie, kiedy klif robi się złoty, i miej oko na pogodę — zatoka jest na tyle otwarta, że nocny wiatr z północy potrafi tu wejść.",
+          "thingsToDo": [
+            "Zatopione ruiny wzdłuż klifu, z maską",
+            "Podejście do ruin Lydae",
+            "Grill na pokładzie o zachodzie słońca",
+            "Kąpiel z dziobu w ciepłej płyciźnie"
+          ],
+          "mooringTip": "Ruin Bay ma darmowe boje tawerny i dobry piasek na pięciu do siedmiu metrach, ale otwiera się na północ, więc sprawdź prognozę, zanim zdecydujesz się tu nocować. Jeśli zapowiadają wiatr z północy, Kapı Creek albo wyspa Tersane kawałek dalej są spokojniejszym wyborem."
+        },
+        "5": {
+          "shortDescription": "Sześć mil do mariny w Göcek, z przystankiem na kąpiel przy niskich wyspach Yassıca albo Domuz Adası, zanim staniesz przy prysznicach i sklepach.",
+          "description": "W połowie tygodnia warto zamienić dziką zatokę na porządną marinę, a Göcek jest oczywistym wyborem. To tylko sześć mil, więc zrób sobie poranek na wyspach po drodze. Grupa Yassıca ledwo wystaje nad wodę — skupisko płaskich skał i turkusowych kanałów, gdzie nad łąkami trawy morskiej wiszą gęste ławice ryb; rzuć kotwicę, popływaj i pozwól lunchowi się przeciągnąć. Domuz Adası obok oferuje tę samą przejrzystą płyciznę, jeśli przy Yassıca jest tłoczno. Do D-Marin wejdź wczesnym popołudniem, najpierw na stację paliw przy wejściu, a potem na lazy line i rufą do pomostu. Wieczór jest dla twardego gruntu: prysznic, lody, spacer po sklepach żeglarskich i ceramice oraz stolik w jednej z meyhane w bocznej uliczce.",
+          "thingsToDo": [
+            "Kanały trawy morskiej przy wyspach Yassıca",
+            "Kąpiel w przejrzystej płyciźnie Domuz Adası",
+            "Sklepy z ceramiką przy D-Marin Göcek",
+            "Kolacja w meyhane niedaleko rynku w Göcek"
+          ],
+          "mooringTip": "D-Marin Göcek to cumowanie rufą na lazy line, około stu do stu sześćdziesięciu euro za noc w szczycie sezonu, więc w lipcu i sierpniu rezerwuj wcześniej. Zatankuj przy stacji paliw obok wejścia, zanim zajmiesz miejsce, a nie po."
+        },
+        "6": {
+          "shortDescription": "Krótkie pięć mil do Sarsala — zatoczki w ścianie sosen, bez mariny i bez świateł, zostawionej na ostatnią noc z gwiazdami i grillem.",
+          "description": "Zapełnij lodówkę i uzupełnij wodę w Göcek, zanim wyjdziesz, bo w Sarsala nie ma nic poza sosnami i ciszą. To pięciomilowy spacer w dół zatoki do głębokiej, zielonej zatoczki otoczonej lasem na zboczach i osłoniętej właściwie z każdej strony, z której wiatr zechce zawiać. Stań na kotwicy na piasku, na czterech do sześciu metrach, i podaj długą cumę do drzewa, jeśli chcesz przespać noc bez ruchu. Płycizny w głębi warte są powolnego przepłynięcia; o świcie i o zmierzchu brzegami chodzą czaple, a przy skalistych krawędziach zwykle znajdzie się ośmiornica dla kogoś z maską. Najlepsze zapasy zostaw na dziś wieczór. Zgrilluj coś prostego na pokładzie, zgaś światła w kabinach i pozwól niebu zrobić resztę, z dala od miejskiej łuny.",
+          "thingsToDo": [
+            "Kotwiczenie z długą cumą do sosny",
+            "Ośmiornice przy skalistych krawędziach",
+            "Czaple w płyciznach o zmierzchu",
+            "Gwiazdy bez pobliskiej łuny miasta"
+          ],
+          "mooringTip": "Sarsala to darmowe kotwiczenie na dobrym piasku, na czterech do sześciu metrach, zwykle z długą cumą na brzeg do drzewa, bo zatoczka jest wąska. Nie ma tu sklepów ani wody, więc zrób pełne zaopatrzenie w Göcek, zanim tu zejdziesz."
+        },
+        "7": {
+          "shortDescription": "Ostatnie dwanaście mil do Fethiye, wyliczone na przyjście wczesnym popołudniem, z ostatnią kąpielą pod likijskimi grobowcami i spacerem po targu.",
+          "description": "Dzień powrotu, ale nie musi być udręką. Do mariny jest dwanaście mil, więc wyjdź w połowie poranka, póki woda jest jeszcze oleista, a bryza się nie rozkręciła. Weź kurs na wschód-południowy wschód i niech to będzie żeglowanie, jeśli wiatr się zgodzi. Po drodze jest jeszcze czas na kąpiel, najlepiej pod likijskimi grobowcami wykutymi wysoko w klifach za Fethiye — od strony wody wyglądają najlepiej. Jeśli trafisz na wtorek, miejski targ idzie pełną parą, więc zacumuj wcześniej i idź po figi, oliwki i torbę granatów. Celuj w to, żeby stanąć przy ECE koło drugiej, co zostawia popołudnie na tankowanie, spłukanie soli i pakowanie. Potwierdź godzinę zdania łodzi dzień wcześniej, żeby zdawanie poszło gładko.",
+          "thingsToDo": [
+            "Ostatnia kąpiel pod likijskimi grobowcami",
+            "Wtorkowy targ w Fethiye",
+            "Tankowanie i mycie w ECE Marina",
+            "Sok z granatów w kawiarni przy nabrzeżu"
+          ],
+          "mooringTip": "Marina di Fethiye ECE to cumowanie rufą na lazy line, około siedemdziesięciu do stu dziesięciu euro za noc w szczycie sezonu. Zatankuj przy stacji paliw na wejściu w drodze do środka i potwierdź godzinę zdania łodzi dwadzieścia cztery godziny wcześniej, żeby miejsce i zdawanie były gotowe."
+        }
+      }
+    },
+    "gocek-7-days": {
+      "metaTitle": "Göcek: 12 wysp w 7 dni | Boat4You",
+      "metaDesc": "Tygodniowy rejs z Göcek przez Sarsala, Fethiye, Gemiler, Ölüdeniz, Kapı Creek i Ruin Bay po Zatoce Fethiye.",
+      "days": {
+        "1": {
+          "shortDescription": "Spokojna, pięciomilowa rozgrzewka na południe z D-Marin Göcek do Sarsala – zatoki w obręczy sosen, która pozostaje cicha niezależnie od wiatru.",
+          "description": "Pierwszy dzień rzadko bywa dniem długich mil. Zwykle odbijamy od D-Marin Göcek koło południa, kiedy prowiant jest już poupychany, a załoga przestała szukać kostiumów kąpielowych, i bierzemy kurs na południe, do Sarsala. Pięć mil dalej rzucasz kotwicę na piasku, na czterech do sześciu metrach, wciśnięty pod sosnowe grzbiety, które zdają się domykać ze wszystkich stron. Wiatr, który tu wieje, to imbat – termiczna bryza morska wchodząca z zachodu wczesnym popołudniem, dziesięć do piętnastu węzłów, gasnąca razem ze słońcem. Nic wspólnego z egejskim meltemi. Skok z pawęży do wody, a potem ścieżką po grzbiecie, przez tymianek i sosny, po widok na całą zatokę. Noce są tu ciemne i ciche. Coś z grilla na rufie, liczenie satelitów i wcześnie do koi.",
+          "thingsToDo": [
+            "Snorkeling przy skalistym brzegu w poszukiwaniu dorad",
+            "Spacer grzbietem tymianku i sosen nad zatoką",
+            "Świeża ryba z grilla na rufie o zmierzchu",
+            "Obserwacja gwiazd bez śladu miejskiego światła"
+          ],
+          "mooringTip": "W Sarsala kotwiczy się za darmo, na dobrym piasku, na czterech do sześciu metrach, z osłoną ze wszystkich stron – nic nie trzeba rezerwować. Nie ma tu mariny ani pewnego sklepu, więc wodę i prowiant uzupełnij jeszcze w Göcek."
+        },
+        "2": {
+          "shortDescription": "Dwanaście mil na wschód do Fethiye, gdzie w skale nad miastem wykuto licyjskie grobowce, a we wtorki targ zalewa boczne uliczki.",
+          "description": "Fethiye to jedyne prawdziwe miasto na tej pętli, więc należy mu się nocleg. Przejście liczy około dwunastu mil na wschód-południowy wschód i jeśli imbat dopisze, większość zrobisz w półwietrze. Cumujemy w Marina di Fethiye, czyli marinie ECE, a do miasta idzie się kawałek nabrzeżem. Nad dachami domów patrzy w dół z urwiska grobowiec Amyntasa – pełna jońska fasada wykuta w skale w IV wieku p.n.e. Wspinaczkę na górę warto zaliczyć, zanim zrobi się upał. Potem przechadzka po bazarze Paspatur, a na koniec targ rybny, gdzie kupujesz rybę na stoisku, a któraś z okolicznych restauracji grilluje ci ją na miejscu. Jeśli trafisz tu we wtorek, rozlewający się cotygodniowy targ sam w sobie jest powodem, żeby zostać na lądzie.",
+          "thingsToDo": [
+            "Wspinaczka do skalnego grobowca Amyntasa",
+            "Kup rybę na targu i zjedz ją prosto z grilla",
+            "Spacer po starym bazarze Paspatur",
+            "Wtorkowy targ uliczny po przyprawy"
+          ],
+          "mooringTip": "Marina di Fethiye (ECE) to cumowanie rufą na muringach, mniej więcej 70–110 € za noc w szczycie sezonu i pełna osłona. W lipcu i sierpniu rezerwuj dzień lub dwa wcześniej, a paliwo uzupełnij przy stacji tuż za wejściem, po drodze na miejsce postoju."
+        },
+        "3": {
+          "shortDescription": "Osiem mil na południe na wyspę Gemiler, do bizantyjskiego sanktuarium św. Mikołaja, a na noc kotwica naprzeciwko, w Coldwater Bay, gdzie zimne źródła studzą morze.",
+          "description": "Wyspa Gemiler, na części map opisana jako St Nicholas Island, to jedna z cichszych niespodzianek tej zatoki. Osiem mil na południe od Fethiye, a jej zbocza pokrywają bizantyjskie ruiny, kościoły i kryta droga procesyjna, która wspina się aż na szczyt – zbudowane między IV a VI wiekiem, kiedy było to miejsce pielgrzymek związane ze świętym Mikołajem z Miry, na długo zanim jego szczątki wywieziono do Bari w 1087 roku. Na ląd schodź późnym popołudniem, kiedy łodzie z wycieczkami zaczynają rzednąć. Na noc przenieś się naprzeciwko, do Coldwater Bay, czyli Soğuksu po stronie stałego lądu. Słodka woda ze źródeł wpływa tu prosto do morza i czujesz to w chwili, gdy przepływasz przez zimną plamę w skądinąd ciepłej wodzie. Miejscowa sztuczka, której warto spróbować choć raz.",
+          "thingsToDo": [
+            "Przejdź bizantyjską drogę procesyjną na Gemiler",
+            "Przepłyń przez zimne słodkowodne źródła",
+            "Zachód słońca nad ruinami Gemiler",
+            "Meze przy pomoście w Coldwater Bay"
+          ],
+          "mooringTip": "W Coldwater Bay działa system restauracyjnych boi: łapiesz darmowy muring, a rachunek wyrównujesz kolacją na lądzie. Jeśli wolisz kotwicę, jest piasek na pięciu do siedmiu metrach, z osłoną od północy."
+        },
+        "4": {
+          "shortDescription": "Krótki, czteromilowy skok do kanionu Butterfly Valley, a potem za cypel do Ölüdeniz na noc pod paralotniami spływającymi z Babadağ.",
+          "description": "Dziś tylko cztery mile, ale prowadzą w miejsce, które się pamięta. Butterfly Valley leży u stóp kanionu, którego ściany wznoszą się na 350 metrów niemal pionowej skały, a w pełni lata wypełniają je krasopanie – pomarańczowo-kremowe skrzydła, które wypatrzysz w drodze na wodospad w głębi wąwozu. Zakotwicz przy kamienistej plaży, zejdź na ląd i wróć na pokład, zanim popołudniowy wiatr zacznie zsuwać się doliną. To postój dzienny, nie miejsce na nocleg. Ostatnią milę przejdź za cypel do Ölüdeniz, gdzie słynna laguna zawija się za piaszczystą mierzeją, a paralotnie spiralą schodzą z Babadağ – góry, która stoi 1969 metrów nad plażą. Patrzenie, jak lądują, kiedy sam kąpiesz się przy burcie, jakoś się nie nudzi.",
+          "thingsToDo": [
+            "Wędrówka wąwozem do wodospadu Butterfly Valley",
+            "Wypatruj endemicznych motyli krasopani",
+            "Kąpiel prosto z pokładu w Ölüdeniz",
+            "Paralotnie lądujące po locie z Babadağ"
+          ],
+          "mooringTip": "Butterfly Valley to kotwicowisko wyłącznie dzienne, na skale na sześciu do ośmiu metrach, a po południu kanionem schodzi porywisty wiatr katabatyczny – nie zostawaj tam dłużej niż do wczesnego popołudnia. Na noc przejdź do Ölüdeniz i stań na piasku, na pięciu do siedmiu metrach."
+        },
+        "5": {
+          "shortDescription": "Dwanaście mil z powrotem do Skopea Limanı, do Kapı Creek – fiordowej szczeliny szerokiej u wlotu ledwie osiemdziesiąt metrów.",
+          "description": "Po otwartej przestrzeni Ölüdeniz Kapı Creek jest zupełnym przeciwieństwem. Zatoczka wcina się głęboko we wzgórza Skopea Limanı i zwęża się przy wejściu do jakichś osiemdziesięciu metrów, więc wchodzisz przez przesmyk, który naprawdę przypomina fiord, zanim woda otworzy się w środku. Osłona jest tu na każdą pogodę. Weź boję przy małej restauracji w głębi, gdzie kamienista plaża robi za wygodny stopień do kąpieli. Późnym popołudniem warto podpłynąć pontonem do przewężenia i z powrotem, dla światła na skałach. Kolacja na lądzie to zwykle ryba z grilla, górskie zioła i kieliszek rakı, a jeśli na stole pojawi się miejscowy miód tymiankowy, kup słoik. Ze skałami zamykającymi się nad głową gwiazdy wychodzą w wąskim pasie nieba.",
+          "thingsToDo": [
+            "Kąpiel z kamienistej plaży w głębi zatoczki",
+            "Pontonem do osiemdziesięciometrowego przewężenia",
+            "Spróbuj rakı i miodu tymiankowego na lądzie",
+            "Gwiazdy w ramie ścian zatoczki"
+          ],
+          "mooringTip": "Kapı Creek działa na restauracyjnych bojach: postój jest darmowy, jeśli zjesz w tawernie w głębi zatoczki. Miejsca jest mało, a w sezonie bywa tłoczno, więc przychodź do wczesnego popołudnia, żeby mieć pewność boi, albo rzuć kotwicę na piasku, na pięciu do siedmiu metrach."
+        },
+        "6": {
+          "shortDescription": "Cztery spokojne mile do Ruin Bay, gdzie tuż pod powierzchnią leży zatopiona licyjska osada, a rzymskie kolumny spoczywają na głębokości fajki.",
+          "description": "Kolejne łatwe cztery mile i jesteś w Ruin Bay, zwanej czasem Tomb Bay – nazwa nie wzięła się znikąd. Pod skałami, przy samej wodzie, leżą pozostałości licyjskiej osady, która wieki temu osunęła się pod powierzchnię. Maska i płetwy w zupełności wystarczą: bębny rzymskich kolumn i obrobiony kamień leżą na dwóch, trzech metrach czystej wody, na wyciągnięcie jednego wdechu. Nad zatoką stoją ruiny antycznego Lydae, do połowy pochłonięte przez drzewa oliwne i pasące się kozy – kawałek ostrego podejścia pod górę dla tych, którzy chcą się przejść. Zwykle zostawiamy ruiny na późne popołudnie, a środek dnia spędzamy w wodzie. Grill na rufie, köfte i zimne piwo dobrze to zamykają. Ciepłe noce, gładka woda, żadnego powodu do pośpiechu.",
+          "thingsToDo": [
+            "Snorkeling nad zatopionymi rzymskimi kolumnami",
+            "Podejście pod ruiny antycznego Lydae",
+            "Jagnięce köfte z grilla na rufie o zachodzie",
+            "Skok z dziobu w ciepłą wodę"
+          ],
+          "mooringTip": "W Ruin Bay obowiązuje ten sam układ z restauracyjnymi bojami: za darmo, jeśli zjesz kolację na lądzie, i z osłoną od północy. Jeśli boje są zajęte, rzuć kotwicę na piasku, na pięciu do siedmiu metrach, i dopłyń pontonem."
+        },
+        "7": {
+          "shortDescription": "Sześć spokojnych mil z powrotem do Göcek, z ostatnią kąpielą przy niskich, piaszczystych wyspach Yassıca, zanim zatankujesz i zdasz jacht.",
+          "description": "Ostatni etap jest krótki, raptem sześć mil do D-Marin Göcek, więc zostaje czas na jeszcze jedną kąpiel. Wyspy Yassıca leżą mniej więcej po drodze – garść niskich, skalistych wysepek z piaszczystymi mierzejami i płycizną, która nad dnem robi się bladozielona. Rzuć kotwicę, wskocz do wody i daj załodze porządny ostatni poranek, zanim trzeba będzie ogarnąć jacht. Celuj w to, żeby stanąć w Göcek koło drugiej – zostaje wtedy popołudnie na tankowanie, spłukanie soli i poskładanie sprzętu do zdania. Samo Göcek warto obejść: promenada przy marinie to małe butiki i kawiarnie, a w niejednym sklepie dadzą ci spróbować lokalnego miodu z nutą szafranu, zanim kupisz. Spokojna kolacja w miasteczku to dobre domknięcie tygodnia.",
+          "thingsToDo": [
+            "Kotwica i kąpiel przy wyspach Yassıca",
+            "Butiki na promenadzie D-Marin",
+            "Degustacja lokalnego miodu szafranowego",
+            "Tankowanie i spłukanie jachtu przed zdaniem"
+          ],
+          "mooringTip": "D-Marin Göcek to cumowanie rufą na muringach, około 100–160 € za noc w szczycie i pełna osłona. Godzinę zdania jachtu potwierdź 24 godziny wcześniej, a paliwo uzupełnij przy stacji obok wejścia, zanim wejdziesz na swoje miejsce."
+        }
+      }
+    },
+    "gocek-kizikuyruk-koyu": {
+      "metaTitle": "Rejs Göcek i Ekincik w 7 dni | Boat4You",
+      "metaDesc": "7-dniowa pętla z Göcek do Ekincik i delty Dalyan, a potem powrót przez wyspę Gemiler, Fethiye i Wall Bay wśród Dwunastu Wysp.",
+      "days": {
+        "1": {
+          "shortDescription": "Spokojna, ośmiomilowa rozgrzewka na południe z Göcek, z kąpielą przy wyspach Yassıca i kolacją w wąskiej, skalistej Kapı Creek.",
+          "description": "Pierwszy etap jest celowo łatwy. Osiem mil w dół od D-Marin Göcek daje załodze czas, żeby znaleźć kabestany i czajnik, zanim zrobi się cokolwiek wymagającego. Zwykle przerywamy przejście przy wyspach Yassıca – niskiej rozsypce skał i turkusowych płycizn, która aż prosi się o pierwszy skok z pawęży.\n\nKapı Creek leży na końcu Skopea Limanı, ciasnego skupiska zatok i wysepek, dzięki któremu to najgęstszy akwen żeglarski na tym wybrzeżu. Sama zatoczka to szczelina między porośniętymi sosnami skałami, ledwie szersza niż dwie długości jachtu. Bierzesz restauracyjną boję, a kolacja płaci za postój. Wieczorem woda jest jak szkło, skały odbijają resztki światła, a şakşuka zjedzona na pokładzie smakuje lepiej, niż ma do tego jakiekolwiek prawo.",
+          "thingsToDo": [
+            "Kąpiel w turkusowych płyciznach wysp Yassıca",
+            "Snorkeling pod sosnowymi skałami Kapı Creek",
+            "Kolacja przy restauracyjnej boi w Kapı Creek",
+            "Gwiazdy w ramie ścian zatoczki"
+          ],
+          "mooringTip": "Weź jedną z restauracyjnych boi w głębi zatoczki – postój jest darmowy, kiedy zadeklarujesz kolację na lądzie. Jeśli wszystkie są zajęte, rzuć kotwicę na piasku, na 5 do 7 metrach. Zatoka jest w pełni osłonięta, cokolwiek pokazuje prognoza."
+        },
+        "2": {
+          "shortDescription": "20 mil półwiatrem na zachód do Ekincik – bazy wypadowej na rejs rzeką do skalnych grobowców Kaunos i żółwiej plaży İztuzu.",
+          "description": "Dwadzieścia mil to najdłuższy skok tygodnia, więc lubimy rzucić boję wcześnie i wykorzystać poranną bryzę, zanim rozkręci się ta z zachodu. Ekincik otwiera się jako szeroka, obramowana sosnami zatoka z dobrym trzymaniem na piasku, nieźle zasłonięta od wiatrów północnych.\n\nZatoka jest tak naprawdę bazą wypadową. Zostawiasz jacht i bierzesz miejscową łódkę w deltę Dalyan, gdzie nurt wije się między wysokimi ścianami trzcin aż do jeziora Köyceğiz. Licyjskie grobowce Kaunos wykuto prosto w skale nad wodą – cztery wieki przed naszą erą i wciąż patrzą w dół na każdą przepływającą łódź. Plaża İztuzu przy ujściu rzeki to chroniony teren lęgowy żółwi karetta, więc piasek pozostaje przyjemnie niezabudowany. Kto chce pełnego rytuału, kończy w kąpielach błotnych Sultaniye.",
+          "thingsToDo": [
+            "Rejs łodzią w górę delty Dalyan",
+            "Licyjskie skalne grobowce Kaunos",
+            "Spacer po chronionej żółwiej plaży İztuzu",
+            "Kąpiel w błocie Sultaniye"
+          ],
+          "mooringTip": "Rzuć kotwicę na piasku pośrodku zatoki Ekincik, na 5 do 7 metrach – trzyma pewnie, a wiatry północne przechodzą górą. Jeśli od południa zacznie wchodzić fala, spokojniejszym wyborem są restauracyjne pomosty na południowym brzegu."
+        },
+        "3": {
+          "shortDescription": "20 mil z powrotem na wschód na wyspę Gemiler: bizantyjskie kaplice w ruinie nad wodą i orzeźwiająca kąpiel w zimnych źródłach naprzeciwko.",
+          "description": "Znów dłuższy etap, tym razem na wschód-południowy wschód, i często najlepsze żeglowanie całego rejsu, jeśli popołudniowa bryza dopisze. Wyspa Gemiler wyrasta z lewej burty, cały jej bok tarasowany ruinami bizantyjskich kościołów i krytą drogą procesyjną, która kiedyś chroniła pielgrzymów przed słońcem i deszczem.\n\nTo ta wyspa, od dawna wiązana ze świętym Mikołajem z Miry, którego kości wywieziono do Bari w XI wieku. Na lądzie ścieżki pną się obok cystern i na wpół stojących apsyd, z morzem tuż pod tobą. Kotwiczymy po drugiej stronie przesmyku, w Coldwater Bay, gdzie źródła biją przez dno, a górna warstwa wody robi się nagle przenikliwie zimna. Zanurkuj metr i poczujesz tę granicę. Kolacja na lądzie, talerz meze polany granatem, i ruiny złocieją o zmierzchu.",
+          "thingsToDo": [
+            "Wejście na bizantyjskie ruiny wyspy Gemiler",
+            "Znajdź warstwę zimnych źródeł w Coldwater Bay",
+            "Przejdź krytą drogę procesyjną pielgrzymów",
+            "Meze z granatem w tawernie nad zatoką"
+          ],
+          "mooringTip": "W Coldwater Bay po drugiej stronie przesmyku restauracje wystawiają boje na cały sezon – weź jedną i zjedz na lądzie albo zakotwicz obok na piasku, na 5 do 7 metrach. Kotwicowisko przy samym Gemiler potrafi się zafalować przy popołudniowym zachodniaku, więc na noc zatoka naprzeciwko jest zwykle spokojniejsza."
+        },
+        "4": {
+          "shortDescription": "Zaledwie sześć mil na północ do cichej, kamienistej zatoki w sosnach, z grotami morskimi do przepłynięcia i ścieżką na grzbiet nad kotwicowiskiem.",
+          "description": "Po dwóch dużych przejściach czwarty dzień jest nagrodą: ledwie sześć mil do Kızıkuyruk Koyu, kamienistej zatoczki wtulonej w sosny. Rzuć kotwicę na piasku, na czterech do sześciu metrach, i masz przed sobą cały dzień na nierobienie prawie niczego.\n\nPołudniowa ściana zatoki kryje ciąg niskich grot morskich, na tyle płytkich, że przy spokojnej wodzie da się do nich zajrzeć kajakiem albo deską. Snorkelujący znajdą jeżowce wciśnięte w szczeliny i pojedyncze rozgwiazdy na piaszczystych łatach między nimi. Kto ma niespokojne nogi, wejdzie nierówną ścieżką na pachnący tymiankiem grzbiet za plażą, po szeroki widok na wodę. Wieczorem rozpalamy grilla: krewetki, cytryna, szczypta oregano, jedzone jeszcze z mokrymi stopami. Noce są tu ciche, kiedy tylko odpłyną łódki jednodniowe.",
+          "thingsToDo": [
+            "Kajakiem do grot morskich w południowej ścianie",
+            "Snorkeling po jeżowce i rozgwiazdy",
+            "Wejście na tymiankowy grzbiet po widok na morze",
+            "Krewetki z cytryną i oregano z grilla"
+          ],
+          "mooringTip": "Rzuć kotwicę na piasku, na 4 do 6 metrach, wciśnięty pod północny brzeg, który trzyma meltemi z dala od pleców. Zatoczka jest mała, więc w lipcu i sierpniu bądź na miejscu do wczesnego popołudnia albo weź jedną z restauracyjnych cum po południowej stronie."
+        },
+        "5": {
+          "shortDescription": "Sześć mil na wschód do Fethiye: miejsce w marinie, gwarne miasto i jońska fasada grobowca Amyntasa wykuta wysoko w skale.",
+          "description": "Łagodne sześć mil i jesteś w Fethiye, a po kilku nocach na kotwicy porządne miejsce w marinie ma swój urok: prąd z lądu, gorący prysznic i miasto, które naprawdę siedzi do późna. Cumujemy rufą, muringi podaje obsługa nabrzeża.\n\nFethiye zasługuje na całe popołudnie. Numerem jeden jest grobowiec Amyntasa, pełny front jońskiej świątyni wykuty w ścianie skalnej nad dachami – najlepiej wejść tam w chłodniejszym, wieczornym świetle. Niżej, w starej dzielnicy, uliczki wychodzą na targ rybny, gdzie kupujesz rybę, a kucharz obok grilluje ją za drobną opłatą. Jeśli trafisz na wtorek, rozległy targ wart jest godziny na przyprawy i ręcznie wiązane dywany. Zamów kabak çiçeği dolması, wznieś toast za tydzień zimnym rakı i przejdź się nabrzeżem.",
+          "thingsToDo": [
+            "Wejście do skalnego grobowca Amyntasa o zmierzchu",
+            "Wybierz rybę na targu rybnym w Fethiye",
+            "Wtorkowy targ: dywany i przyprawy",
+            "Kabak çiçeği dolması w lokandzie na zapleczu",
+            "Zimne rakı na nabrzeżu portu"
+          ],
+          "mooringTip": "Stań rufą na muringach w miejskiej marinie – obsługa odbierze cumy, a basen jest w pełni zamknięty na każdy wiatr. W szczycie sezonu noc kosztuje mniej więcej 70 do 110 €, zależnie od długości jachtu, a w pełni lata opłaca się zgłosić przez radio z wyprzedzeniem."
+        },
+        "6": {
+          "shortDescription": "Sześć mil na południe do Wall Bay – wapiennej zatoki o stromych ścianach, bez mariny, z dobrym trzymaniem i najlepszym snorkelingiem tygodnia.",
+          "description": "Najkrótszy etap tygodnia i załoga potrafi go już zrobić niemal przez sen. Sześć mil na południe od Fethiye brzeg zagina się w siebie i pojawia się Wall Bay, otoczona bladym wapieniem, który wpada prosto w głęboką, przejrzystą wodę.\n\nNie ma tu mariny ani wioski, i o to właśnie chodzi. Zrób zapasy w Fethiye przed wyjściem, bo jedyne, co zatoka oferuje, to kąpiel – za to wyśmienita. Maska na twarz, wzdłuż podnóża skały, a znajdziesz podwodne szczeliny i wąwozy, gdzie ośmiornice chowają się w rysach, a ryby papuzie przesuwają się nad skałą. Podpłyń na desce do mniejszej plaży na leniwy lunch z chlebem oliwnym i labneh. Trzyma dobrze, na piasku, na czterech do sześciu metrach, a kiedy słońce zajdzie za ścianę, gwiazdy wychodzą całą mocą.",
+          "thingsToDo": [
+            "Snorkeling po podwodnych wąwozach za ośmiornicami",
+            "Wypatruj ryb papuzich przy wapiennej ścianie",
+            "Przepłyń na dalszą plażę na lunch",
+            "Chleb oliwny i labneh na dziobie",
+            "Gwiazdy nad skalną ścianą"
+          ],
+          "mooringTip": "Rzuć kotwicę na piasku, na 4 do 6 metrach, dobrze wciśnięty pod skały – sama ściana zasłania północny wiatr. W zatoce nie ma mariny, wody ani sklepu, więc paliwo, wodę i jedzenie uzupełnij w Fethiye przed wyjściem."
+        },
+        "7": {
+          "shortDescription": "Ostatnie osiem mil do Göcek, z kąpielą nad zatopioną stocznią wyspy Tersane, zanim zatankujesz i zdasz jacht w D-Marin.",
+          "description": "Ostatni poranek jest krótki i bez pośpiechu, osiem mil z powrotem do Göcek. Nie ma powodu, żeby gnać do zdania jachtu, więc zostawiamy czas na jeszcze jedną kąpiel po drodze. Wyspa Tersane jest do tego idealna: zakotwicz w jej niemal zamkniętej zatoce i przepłyń z maską nad pozostałościami starej stoczni – niskie mury i pochylnie wciąż widać przez płyciznę.\n\nStamtąd jest już prosto do D-Marin Göcek. Zajrzyj po paliwo do stacji przy wejściu, zanim staniesz, żeby jacht wrócił zatankowany. Cumowanie rufą na muringach, marina jest w pełni osłonięta, choć tak elegancka baza swoje kosztuje – mniej więcej 100 do 160 € za noc w szczycie sezonu. Kiedy cumy są już założone, przejdź się promenadą, zajrzyj do butików i zamknij tydzień turecką kawą pod bugenwillą.",
+          "thingsToDo": [
+            "Snorkeling nad zatopioną stocznią na Tersane",
+            "Tankowanie przy stacji paliw D-Marin",
+            "Spacer po butikach promenady D-Marin",
+            "Turecka kawa pod bugenwillą"
+          ],
+          "mooringTip": "Zatankuj przy stacji paliw D-Marin tuż za wejściem, zanim wejdziesz na swoje miejsce, żeby oddać jacht z pełnym zbiornikiem. Cumowanie rufą na muringach w całkowicie osłoniętym basenie; w pełni sezonu licz na mniej więcej 100 do 160 € za noc i zarezerwuj termin powrotu z wyprzedzeniem."
+        }
+      }
+    },
+    "gokova-gulf-14-days": {
+      "metaTitle": "Rejs Gökova i Güllük w 14 dni | Boat4You",
+      "metaDesc": "Dwutygodniowa pętla z Bodrum przez Zatokę Gökova, potem na północ do Güllük i Didim. Kąpiele błotne na Kara Ada, złoty piasek Kleopatry, ciche zatoki.",
+      "days": {
+        "1": {
+          "shortDescription": "Spokojny pierwszy skok z mariny na Kara Ada, gdzie źródło w grocie i pomarańczowe błoto robią z popołudnia łatwy rozruch.",
+          "description": "Nie musisz się dziś zrywać o świcie. Kara Ada leży ledwie pięć mil od Bodrum – zielony, porośnięty sosnami garb, do którego większość załóg dopływa na silniku w godzinę. Magnesem jest grota na wschodnim brzegu, gdzie siarkowe źródło ma temperaturę ciała, a błoto wokół barwi się dziwnym pomarańczem. Ludzie smarują się nim, pieką na słońcu, a potem spłukują w zatoce. Turystyczne to jest, a w południe zjeżdża tu flota gulet, więc lubię zakotwiczyć wcześnie, zaliczyć błotny cyrk przed tłumem, a potem przenieść się na spokojniejszą zatoczkę po południowej stronie na lunch i kąpiel. Popołudnie wykorzystaj na ogarnięcie jachtu, sprawdzenie pontonu i domknięcie zapasów. Jutro czeka prawdziwe przejście.",
+          "thingsToDo": [
+            "Kąpiel w siarkowym źródle w grocie Kara Ada",
+            "Nasmaruj się pomarańczowym leczniczym błotem",
+            "Kąpiel w spokojniejszej zatoce od południa",
+            "Uzupełnij zapasy przed wyjściem z Bodrum"
+          ],
+          "mooringTip": "Zakotwicz przed grotą na 4–8 m, na piasku i trawie morskiej; przed południem robi się tu tłoczno od łódek jednodniowych, więc rzuć kotwicę wcześnie, a jeśli brakuje miejsca na cyrkulację, podaj cumę na brzeg."
+        },
+        "2": {
+          "shortDescription": "Duże przejście na południe do Çökertme – porywistej zatoki drewnianych pomostów, gdzie tawerny wymieniają postój na kolację.",
+          "description": "To dzień, w którym rejs się otwiera. Dziób na południe, przez otwartą wodę, i masz przed sobą piętnaście do dwudziestu mil, trzy do czterech godzin, zależnie od meltemi. Nagrodą jest Çökertme, zatoka w kształcie podkowy, za którą stoją gaje oliwne i garść rodzinnych tawern zbudowanych nad wodą. To klasyczny postój gulet i nie bez powodu. Haczykiem jest wiatr: porywy zsuwają się ze wzgórz bez ostrzeżenia, a dno z piasku i trawy trzyma kiepsko. Większość załóg w ogóle odpuszcza kotwiczenie i cumuje do jednego z restauracyjnych pomostów, co daje gotowy muring i niepisaną umowę, że zje się na lądzie. U kapitana İbrahima karmią żeglarzy od lat. Zamów meze, popatrz, jak grzbiet nad zatoką różowieje, i wcześnie do koi.",
+          "thingsToDo": [
+            "Kolacja na pomoście u kapitana İbrahima",
+            "Zamów pełen zestaw egejskich meze",
+            "Zachód słońca na grzbiecie nad zatoką",
+            "Kąpiel, zanim wejdą popołudniowe porywy"
+          ],
+          "mooringTip": "O kotwicy tutaj zapomnij, chyba że lubisz kłaść ją po raz drugi. Weź pomost tawerny z gotowym muringiem; w lipcu bądź na miejscu do wczesnego popołudnia, bo trzy pomosty zapełniają się szybko, i licz się z nagłymi porywami katabatycznymi w nocy."
+        },
+        "3": {
+          "shortDescription": "Krótki skok na wschód do Ören – spokojnej wioski na równinie Keramos, z mariną, kamienistą plażą i karyjskimi ruinami na zboczu.",
+          "description": "Po dramaturgii Çökertme Ören wydaje się spokojne. To skromna nadmorska wioska na południowym brzegu zatoki, położona na równinie, gdzie stało niegdyś antyczne miasto Keramos. Przejście na wschód jest łatwe, dwie godziny po gładkiej porannej wodzie, zanim wejdzie wiatr. Jest tu mała marina miejska i długa plaża z szarych otoczaków, cicha nawet w sierpniu – i o to dokładnie chodzi. Wejdź do starej części wioski, a znajdziesz kamienne domy, bugenwille i rozrzucone pozostałości Keramos na zboczach powyżej. To miejsce, które nie ma nic do udowodnienia. Zwykle robimy długi lunch, wypożyczamy rowery albo idziemy pod ruiny w chłodniejszy wieczór, i dajemy załodze złapać oddech przed jutrzejszym końcem zatoki.",
+          "thingsToDo": [
+            "Wejście do ruin antycznego Keramos",
+            "Spacer po kamiennej starej części Ören",
+            "Odpoczynek na długiej plaży z szarych otoczaków",
+            "Postój w małej marinie miejskiej"
+          ],
+          "mooringTip": "Mała marina w Ören przyjmuje jachty na muringi i rzadko bywa pełna; w szczycie sezonu zadzwoń wcześniej. Jeśli wolisz kotwicę, zatoka przy plaży dobrze trzyma na piasku, ale jest otwarta na popołudniowy zachodniak, więc wciśnij się tak głęboko, jak pozwala głębokość."
+        },
+        "4": {
+          "shortDescription": "Żegluga w głąb zatoki, do Akyaki, gdzie źródlana rzeka wije się wśród trzcin, a wiatry termiczne ściągają kitesurferów.",
+          "description": "Akyaka leży u samego szczytu zatoki, tam gdzie góry zamykają się nad wodą, a ta robi się szklisto zielona. Podejście to często halsowanie pod popołudniowy termik, więc zwykle wychodzimy z Ören przed dziewiątą, a spokojniejsze wczesne godziny robimy na motorożaglu. Sama wioska to rozkosz drewnianych balkonów i architektury osmańsko-greckiej, budowanej pod ostrymi lokalnymi przepisami, które utrzymały sieciowe hotele z dala. Jej znakiem firmowym jest Azmak, krótka rzeka zasilana krasowymi źródłami, tak przejrzysta, że policzysz ryby; weź ponton albo wypożyczony kajak i podpłyń przez trzciny do źródeł i nadrzecznych kawiarni. Na zatoce ten sam równy wiatr, który utrudnia podejście, robi z Akyaki jedno z lepszych miejsc do kitesurfingu w Turcji. Zjedz rybę z grilla nad wodą i pozwól dniu zwolnić.",
+          "thingsToDo": [
+            "Kajakiem przejrzystą rzeką Azmak do źródeł",
+            "Lunch z ryby z grilla nad samą wodą",
+            "Kitesurferzy w popołudniowym termiku",
+            "Spacer po Akyace pełnej drewnianych balkonów"
+          ],
+          "mooringTip": "Zatoka na końcu akwenu jest głęboka, a popołudniowy wiatr wpycha falę, więc kotwicz blisko pod północnym brzegiem i podaj cumę na ląd. Kilka miejsc przy pomostach restauracji we wsi pozwala zjeść i zostać na noc, jeśli wolisz."
+        },
+        "5": {
+          "shortDescription": "Powrót na zachód, na wyspę Sedir, do słynnego złotego piasku Kleopatry i rozsypanych ruin antycznego Kedreai.",
+          "description": "Wyspa Sedir, znana lepiej jako Wyspa Kleopatry, jest tą, którą wszyscy chcą zobaczyć – i tym razem szum jest uzasadniony. Plaża składa się z drobniutkich, złotych ziaren oolitu, których praktycznie nigdzie w okolicy nie ma, i stąd wzięła się legenda o Kleopatrze sprowadzającej piasek z Egiptu. Dziś ten piasek jest zaciekle chroniony: idziesz pomostem, kąpiesz się z plaży, ale nie wolno na niej leżeć ani wynieść z niej jednego ziarna. Za brzegiem stoją mury, teatr i agora antycznego Kedreai – warte krótkiego spaceru w porannym chłodzie. Przypłyń wcześnie. Łódki z wycieczkami z Marmaris i Bodrum walą tu od późnego przedpołudnia, więc lubimy stać na kotwicy i być na lądzie przed ósmą, a przed lunchem zniknąć do spokojniejszej zatoki na noc. Woda ma tu zaskakujący, bladoturkusowy kolor nad piaskiem.",
+          "thingsToDo": [
+            "Spacer pomostem wzdłuż złotej plaży Kleopatry",
+            "Ruiny i teatr antycznego Kedreai",
+            "Snorkeling w bladoturkusowych płyciznach Sedir",
+            "Przypłyń wcześnie, przed flotą wycieczkową"
+          ],
+          "mooringTip": "Nocleg przy samej plaży nie wchodzi w grę; kotwicz na piasku od północy lub wschodu wyspy, a jeszcze lepiej – odwiedź ją na kotwicy za dnia i na noc przejdź do osłoniętej zatoki. Trzyma dobrze, ale miejsce łapie falę od nieustannego ruchu łodzi wycieczkowych."
+        },
+        "6": {
+          "shortDescription": "Wyluzowany etap do Karacasöğüt – głębokiej, otoczonej sosnami zatoki z pomostami tawern, która dobrze osłania, gdy meltemi się rozkręci.",
+          "description": "Karaca, czyli Karacasöğüt, to jedna z wielkich wszechpogodowych dziur tej zatoki. Leży na południowym brzegu, głęboka zatoka pod Karaca Ada, otulona sosnowym lasem i tak dobrze osłonięta, że miejscowe łodzie tu zimują. Po ekspozycji Sedir ta cisza jest mile widziana. Zatoka rozgałęzia się na kilka ramion, a w każdym rozsypane pomosty i proste rodzinne restauracje, gdzie cumujesz dziobem i jesz pod drzewami. Przejście jest łagodne, może dwie, trzy godziny, z równą bryzą z grzbietu na trawersie. To dzień na nierobienie prawie niczego. Kąpiel, książka, ponton w porośniętą trzciną odnogę w głębi zatoki i spokojna noc. Jeśli prognoza pokazuje mocne meltemi, nie ma w tej zatoce lepszego miejsca, żeby je przeczekać.",
+          "thingsToDo": [
+            "Cumowanie dziobem przy pomoście tawerny w cieniu sosen",
+            "Pontonem w trzcinową odnogę w głębi zatoki",
+            "Kąpiel w osłoniętych wewnętrznych ramionach",
+            "Przeczekaj meltemi na spokojnej wodzie"
+          ],
+          "mooringTip": "Wybierz pomost restauracji i przycumuj rufą albo dziobem – dostaniesz gotowy muring i pewną spokojną noc; woda jest głęboka tuż przy brzegu, więc podchodź wolno. Kotwiczenie na własną rękę też działa w ramionach zatoki, na 6–10 m, na mule, który dobrze trzyma."
+        },
+        "7": {
+          "shortDescription": "Żegluga na zachód, ku wyjściu z zatoki, do Mersincik – dzikiego, pustego kotwicowiska w strefie chronionej Gökova.",
+          "description": "Mersincik to miejsce, w którym zatoka zaczyna być odludna. Wciśnięte na północnym brzegu, blisko zachodniego wyjścia, należy do specjalnej strefy ochronnej Gökova, więc nie ma tu zabudowy ani drogi dojazdowej – tylko sosny, skała i czysta woda. Przejście na zachód prowadzi wzdłuż odsłoniętej północnej strony i przy świeżym meltemi przez większość drogi można nieść dobrą prędkość półwiatrem. Główna zatoka jest piękna, ale łapie wiatr północny; jeśli mocno wieje, schowaj się do mniejszej zatoczki na północny zachód, choć miejsca na cyrkulację jest tam mało i przyda się cuma na brzeg. Wieczorem wzdłuż brzegu chodzą dzikie kozy. Nie ma tu czego kupić i nie ma nic do roboty poza kąpielą, spacerem po pustych cyplach i nocą bez jednego światła na lądzie. Wodę i prowiant uzupełnij przed wyjściem z Karaca.",
+          "thingsToDo": [
+            "Kąpiel przy pustym, niezabudowanym brzegu",
+            "Spacer po sosnowych cyplach z widokiem na zatokę",
+            "Wypatruj dzikich kóz o zmierzchu",
+            "Gwiazdy bez jednego światła na lądzie"
+          ],
+          "mooringTip": "Kotwicz w głównej zatoce na 5–8 m, na piasku, i podaj cumę do skał; jest otwarta na północ, więc gdy meltemi wieje, wejdź do ciaśniejszej zatoczki na północnym zachodzie i załóż cumę brzegową, bo miejsca na cyrkulację prawie nie ma. Przypłyń samowystarczalny, bo żadnej infrastruktury tu nie ma."
+        },
+        "8": {
+          "shortDescription": "Powrót na południe do Çökertme na drugą noc przy pomostach tawern, zanim zacznie się droga do domu.",
+          "description": "Dziś pętla zawraca do domu. Z Mersincik przecinasz wyjście z zatoki z powrotem do znajomej podkowy Çökertme – kilka godzin, które przy sprzyjającym meltemi bywają szybkim, kołyszącym półwiatrem. Za drugim razem znasz już sztuczki tej zatoki. Te same porywy schodzą ze wzgórz, te same pomosty czekają, ale wiesz już, jak to działa. Wejdź na inny pomost niż tydzień temu i spróbuj nowej tawerny; Rosemary i pozostałe rodzinne kuchnie wzdłuż brzegu mają każda swoich stałych bywalców. To dobry wieczór na pranie, na dokarmienie załogi długą kolacją na lądzie i na wymianę zdań o najlepszych kąpielach rejsu. Popatrz, jak światła kotwiczne spóźnialskich kołyszą się, kiedy po zmroku przechodzą porywy.",
+          "thingsToDo": [
+            "Spróbuj innej tawerny, choćby Rosemary",
+            "Jeszcze jedna kąpiel w podkowie zatoki",
+            "Dokarm załogę długą kolacją na lądzie",
+            "Podsumujcie najlepsze kąpiele przy meze"
+          ],
+          "mooringTip": "Tak jak poprzednio, weź cumę przy pomoście zamiast kotwicy, i wybierz inny pomost niż za pierwszym razem, dla odmiany. Załóż porządny amortyzator cumy i dodatkowe odbijacze; nocne porywy przesuwają tu jachty na muringach."
+        },
+        "9": {
+          "shortDescription": "Ten sam kurs na północny zachód, na Kara Ada, na ostatnią kąpiel w zatoce i drugie podejście do błotnej groty.",
+          "description": "Przez wodę z powrotem na Kara Ada, co zamyka gökovską część rejsu. To to samo długie, otwarte przejście co drugiego dnia, tylko na odwrót, więc pilnuj prognozy i wychodź wcześnie, jeśli meltemi ma się rozkręcić. Załoga jest już prawdziwą załogą i mile schodzą lekko. Kara Ada to dobry ostatni przystanek w zatoce – na tyle blisko Bodrum, że masz marinę w zasięgu, a przy tym wciąż zielona wyspa z tą dziwną, regenerującą grotą. Daj kąpielom błotnym drugą szansę, jeśli za pierwszym razem było za tłoczno, albo po prostu znajdź czystą zatoczkę po południowej stronie i popływaj. Spłucz sól, ogarnij jacht i zaznaj spokojnego kotwicowiska, zanim rejs zmieni charakter. Jutro opłyniesz półwysep i cały klimat wybrzeża się przestawi.",
+          "thingsToDo": [
+            "Wróć do błotnej groty na spokojniejszą kąpiel",
+            "Znajdź czystą zatoczkę na południu wyspy",
+            "Spłucz i ogarnij jacht po zatoce",
+            "Toast na koniec pętli Gökova"
+          ],
+          "mooringTip": "Tak jak pierwszego dnia: kotwica na piasku i trawie przy grocie albo przejście do zatoczek na południu, gdzie trzyma czyściej, a wieczorem stoi mniej jachtów. Tak blisko Bodrum robi się tłoczno od wracających czarterów, więc zajmij miejsce przed zachodem słońca."
+        },
+        "10": {
+          "shortDescription": "Opłyń półwysep do modnego Göltürkbükü, gdzie kluby plażowe i restauracje na pomostach obstawiają zatokę osłoniętą od meltemi.",
+          "description": "Dziś wybrzeże zmienia się całkowicie. Opływasz zachodni cypel półwyspu Bodrum, mijasz Gümüşlük i Yalıkavak, i wychodzisz na wystawny brzeg północny, do Göltürkbükü. W kanale na zewnątrz meltemi potrafi dmuchnąć solidne trzydzieści węzłów, więc opłynięcie zaplanuj na rano i refuj wcześnie, jeśli masz wątpliwości. W środku to inny świat: długa, osłonięta zatoka obstawiona drewnianymi platformami wyciągniętymi nad morze, eleganckie kluby plażowe i słynny hotel Maçakızı, gdzie lato spędza śmietanka Stambułu. To dawka blichtru w tym rejsie. Zarezerwuj leżak, każ przysłać koktajl na jacht albo po prostu obserwuj ludzi z kokpitu, kiedy pontony przewożą gości między jachtami. Od pustych cypli Mersincik dzieli to lata świetlne i ten kontrast jest częścią zabawy.",
+          "thingsToDo": [
+            "Leżak w klubie plażowym w Türkbükü",
+            "Kolacja na platformie nad wodą",
+            "Obserwacja pontonowego ruchu z kokpitu",
+            "Zajrzyj na scenę hotelu Maçakızı"
+          ],
+          "mooringTip": "Większość nabrzeża Göltürkbükü należy do klubów plażowych, które kładą własne muringi i oczekują rezerwacji stolika albo leżaków; zadzwoń w sezonie wcześniej, a przyślą ponton po twoje cumy. Miejsca na swobodne kotwiczenie jest mało, a trzymanie bywa różne, więc muring jest prostszym wyborem."
+        },
+        "11": {
+          "shortDescription": "Na północ, w Zatokę Güllük, do starego miasteczka rybackiego: ryby z grilla, przyjazna marina i ruiny Iasos tuż obok.",
+          "description": "Güllük to odtrutka na Türkbükü. Robocze miasteczko rybackie nad własną zatoką, na północ od półwyspu, zamienia celebrycki połysk na kutry, herbaciarnie i jedne z najlepszych cenowo owoców morza na tym wybrzeżu. Podejście jest proste: z Türkbükü na północ, w szeroką, osłoniętą Zatokę Güllük, często wygodnym półwiatrem. Jest tu porządna marina z kilkuset miejscami, jeśli chcesz prąd i wodę, ale charakter siedzi przy miejskim nabrzeżu. Przejdź się wieczorem po froncie, wybierz rybę z lodu w lokandzie i zjedz ją z grilla, do tego rakı i zachód słońca nad zatoką. Miłośnicy historii wezmą taksówkę albo pójdą dłuższy spacer do ruin antycznego Iasos na sąsiednim cyplu – karyjskiego miasta, które wzbogaciło się dokładnie na tych rybach, które właśnie jesz. Cicho, uczciwie i dobrze na uzupełnienie zapasów.",
+          "thingsToDo": [
+            "Wybierz świeżą rybę z lodu w lokandzie",
+            "Karyjskie ruiny antycznego Iasos",
+            "Spacer po nabrzeżu roboczego portu rybackiego",
+            "Zrób zapasy na targu przed Didim"
+          ],
+          "mooringTip": "Weź miejsce w marinie w Güllük, jeśli chcesz pełną obsługę, albo stań rufą przy miejskim nabrzeżu, bliżej życia i rybnych restauracji. Zatoka jest dobrze osłonięta, więc przy stabilnej pogodzie noc na kotwicy przed miastem, na 4–6 m na mule, jest zupełnie wygodna."
+        },
+        "12": {
+          "shortDescription": "Dłuższy etap na północ, do wielkiej mariny w Didim – bramy do Świątyni Apollina i złotej plaży Altınkum.",
+          "description": "Didim to szczyt tej pętli i najbardziej zabudowany przystanek dwóch tygodni, ale zasługuje na swoje miejsce. Przejście z Güllük jest najdłuższe z tych północnych dni, więc zaplanuj wczesne wyjście i miej oko na meltemi, które na otwartych podejściach potrafi się rozkręcić. D-Marin Didim to duża, dobrze prowadzona marina z wszystkim, czego trzeba, żeby ustawić jacht na drogę powrotną. Prawdziwy powód, by tu przypłynąć, leży w głębi lądu: Świątynia Apollina w Didymie, jedno z wielkich sanktuariów wyroczni świata antycznego, którego ogromne kolumny stoją po ponad dwóch tysiącach lat. To krótka i tania taksówka z mariny, warta niespiesznego poranka. Potem schłodź się na długim, złotym łuku plaży Altınkum albo zjedz lunch w miasteczku, zanim znów skręcisz na południe.",
+          "thingsToDo": [
+            "Świątynia Apollina i wyrocznia w Didymie",
+            "Kąpiel na długich, złotych piaskach Altınkum",
+            "Serwis i tankowanie w D-Marin Didim",
+            "Lunch w Didim po zwiedzaniu ruin"
+          ],
+          "mooringTip": "D-Marin Didim to marina z pełną obsługą; zgłoś się wcześniej przez VHF po przydział miejsca, zwłaszcza w pełni lata, kiedy ruch katamaranów i superjachtów jest duży. To najłatwiejsze miejsce na trasie, żeby wziąć paliwo, wodę i świeży prowiant przed dwudniową drogą powrotną do Bodrum."
+        },
+        "13": {
+          "shortDescription": "Zwrot na południe i powrót do Göltürkbükü na ostatnią elegancką noc przed skokiem do Bodrum.",
+          "description": "Dziób kieruje się do domu. Z Didim wracasz na południe, z powrotem w zawietrzną półwyspu Bodrum i do Göltürkbükü na drugą, spokojniejszą noc. Znasz już tę zatokę, więc możesz odpuścić walkę o muring i po prostu się wprowadzić. To ostatni prawdziwy wieczór rejsu, więc warto go dobrze wykorzystać. Jeśli pierwsza noc w Türkbükü była dla klimatu miejsca, tę przeznacz na dobrą kolację i wczesną, spokojną kąpiel z jachtu. Północne podejścia potrafią popołudniami wiać, więc z Didim wychodzimy zwykle w połowie przedpołudnia, żeby przyjść przy wysokim jeszcze słońcu i wietrze przed szczytem. Zaplanuj leniwe popołudnie na platformie nad wodą, poskładaj sprzęt i domknij ostatnie sprawy z jachtem. Do Bodrum zostaje jutro tylko krótki skok.",
+          "thingsToDo": [
+            "Zarezerwuj stolik w klubie na pomoście w Türkbükü",
+            "Spokojna, wczesna kąpiel z jachtu",
+            "Ostatnie leniwe popołudnie na platformie",
+            "Domknij sprawy jachtowe przed ostatnim etapem"
+          ],
+          "mooringTip": "Tak jak dziesiątego dnia, umów muring w klubie plażowym przed przyjściem; to powrót, więc wiesz już, która platforma ci pasowała. Celuj w to, żeby stać na cumach do wczesnego popołudnia, zanim północny wiatr wciśnie się w zatokę, a kolejka do pontonów urośnie."
+        },
+        "14": {
+          "shortDescription": "Ostatni krótki skok z powrotem do Bodrum, z czasem na jedną kąpiel przed zdaniem jachtu.",
+          "description": "Ostatni poranek jest łatwy. Bodrum leży tuż za wschodnim ramieniem półwyspu, dwie godziny od Göltürkbükü, więc nie ma po co gnać z cumami. Większość baz czarterowych chce jacht z powrotem późnym przedpołudniem albo w południe, więc zwykle wychodzimy wcześnie, po drodze robimy jeszcze jedną kąpiel na kotwicy, a potem podchodzimy do mariny w cieniu wielkiego Zamku św. Piotra. Przybycie do Bodrum od strony morza to właściwy sposób, żeby tu dotrzeć: forteca, białe miasto pnące się po wzgórzach, las masztów w porcie. Odbijacze i cumy miej gotowe długo przed wejściem, słuchaj wskazówek obsługi nabrzeża i daj tym dwóm tygodniom osiąść. Dwa tygodnie, dwie zatoki, błotna grota i wyrocznia. Nie najgorsza pętla.",
+          "thingsToDo": [
+            "Ostatnia kąpiel na kotwicy po drodze",
+            "Podejście pod Zamkiem św. Piotra w Bodrum",
+            "Zdjęcie lasu masztów w porcie",
+            "Zdaj jacht przed południem"
+          ],
+          "mooringTip": "Godzinę powrotu i miejsce postoju potwierdź z bazą czarterową poprzedniego wieczoru, a odbijacze i cumy przygotuj po obu burtach przed wejściem do zatłoczonego portu w Bodrum. Wchodź za wskazaniami obsługi mariny na miejsce rufą; podejście w południe potrafi być zapchane łódkami jednodniowymi."
+        }
+      }
+    },
+    "lycian-coast-14-days": {
+      "metaTitle": "Wybrzeże Licyjskie: 14 dni | Boat4You",
+      "metaDesc": "Dwa tygodnie w pętli z Göcek: zatoki Skopea Limani, port Fethiye, Ölüdeniz, ruiny Gemiler i Ekincik z rejsem po rzece Dalyan.",
+      "days": {
+        "1": {
+          "shortDescription": "Wyjdź spokojnie z pasa marin Göcek w Skopea Limani i rzuć kotwicę w szerokiej, obramowanej sosnami Sarsala na łagodną pierwszą noc.",
+          "description": "Göcek to miejsce, w którym zaczyna się niemal każdy licyjski czarter, i pierwszego dnia nikt się nie spieszy. Zrób zapasy na targu przy placu, dobierz wodę i lód, a potem wyjdź na silniku między zalesione wyspy Skopea Limani. Sarsala leży po północnej stronie Boz Burun – szeroka zatoka za plecami sosny czerwonej i garść mniejszych zatoczek. Trzyma dobrze na piasku i trawie, a większość załóg podaje cumę na brzeg bliżej głowy zatoki, żeby stać spokojnie. Jest mała restauracja na pomoście, jeśli pierwszego wieczoru nie chcesz gotować. Zwykle celujemy w przyjście do wczesnego popołudnia, kąpiel z rufy, kiedy światło schodzi za grzbiet, i pozwalamy wszystkim złapać morskie nogi przed dłuższymi etapami. Poranki są tu jak szkło.",
+          "thingsToDo": [
+            "Zapasy na porannym targu w Göcek",
+            "Kąpiel przy piaszczystym pomoście Sarsala",
+            "Spacer sosnową ścieżką nad zatoką",
+            "Kolacja w tawernie na pomoście"
+          ],
+          "mooringTip": "Kotwicz na 6-8 m, na piasku i trawie, i podaj długą cumę na brzeg bliżej głowy zatoki. W lipcu zachodnie zatoczki zapełniają się pierwsze, więc bądź na miejscu wczesnym popołudniem, jeśli chcesz mieć wybór."
+        },
+        "2": {
+          "shortDescription": "Krótki skok w głąb zatoki do Kapı Creek – wąskiej, fiordowej zatoczki z przyjazną tawerną na pomoście w jej głowie.",
+          "description": "Przejście do Kapı Creek to ledwie godzina, więc jest jeszcze czas na leniwą poranną kąpiel. Zatoczka wcina się szczeliną między strome, zarośnięte zbocza i bardziej przypomina norweski fiord niż wybrzeże Turcji, dopóki nie poczujesz dymu z tawerny. Jachty cumują rufą do drewnianego pomostu, gdzie rodzina prowadząca to miejsce odbiera cumy, a później wynosi meze i ryby z grilla. Woda jest głęboka niemal do samego pomostu, więc nieś prędkość w jego stronę i rzuć kotwicę dobrze na zewnątrz. Zejdź na ląd na krótką wspinaczkę do kozich zagród nad głową zatoczki. To ulubione miejsce flotylli, więc w pełni lata warto zadzwonić wcześniej, żeby mieć pewne miejsce.",
+          "thingsToDo": [
+            "Cumowanie rufą do pomostu w Kapı Creek",
+            "Meze i ryba z grilla na lądzie",
+            "Podejście do kozich zagród powyżej",
+            "Snorkeling przy stromych skalnych ścianach"
+          ],
+          "mooringTip": "Głębokości utrzymują się aż niemal do pomostu, więc podchodź wolno i rzuć kotwicę na 10-12 m, zanim zaczniesz cofać do pomostu po muringi. W lipcu i sierpniu zgłoś się przez radio albo zadzwoń wcześniej, bo tych kilka miejsc rozchodzi się z góry."
+        },
+        "3": {
+          "shortDescription": "Przejście do Ruin Bay, gdzie ciosany rzymski kamień leży tuż pod powierzchnią w głowie zatoki, a woda jest bodaj najczystsza w całej zatoce.",
+          "description": "Ruin Bay, zwana też Łaźnią Kleopatry, leży dwie godziny na zachód, w poprzek wejścia do zatoki. Największa atrakcja jest pod wodą: niskie mury i ciosany kamień z osady z czasów rzymskich spoczywają tuż pod powierzchnią w głowie zatoki, na tyle czytelnie, że da się je odczytać przez maskę. Zakotwicz na zewnątrz i dopłyń nad ruiny wpław, zamiast wciskać jacht za daleko na płyciznę. Chwiejna restauracja na pomoście serwuje zimne piwo i proste grille pod sosnami. Sąsiednia Tomb Bay, krótki kurs pontonem za cypel, ma licyjskie grobowce wykute wysoko w skale – warto zajrzeć w miękkim, wieczornym świetle. Popołudniami ze wzgórz potrafi zawiewać kręcącym się wiatrem, więc kotwicę kładź starannie.",
+          "thingsToDo": [
+            "Snorkeling nad zatopionymi rzymskimi murami",
+            "Pontonem do licyjskich grobowców w Tomb Bay",
+            "Zimne piwo w grillu na pomoście",
+            "Zdjęcia skał o zmierzchu"
+          ],
+          "mooringTip": "W głowie zatoki nad ruinami robi się płytko, więc kotwicz na 5-8 m z dala od kamieni i dopłyń wpław, zamiast wchodzić tam na silniku. Uważaj na porywy schodzące popołudniami doliną i porządnie zaryj kotwicę."
+        },
+        "4": {
+          "shortDescription": "Za cypel do Wall Bay pod pionowymi skałami, cumowanie rufą do restauracji dostępnej tylko od wody i kolacja niemal nad samą wodą.",
+          "description": "Wall Bay, na mapie Duvar Bükü, bierze nazwę od pionowej ściany skalnej, która zamyka jedną stronę kotwicowiska. Z Ruin Bay to krótki odcinek, więc zaplanuj po drodze postój na kąpiel. Dno opada szybko, przez co miejsca na swobodną cyrkulację jest mało, więc większość jachtów staje rufą do małego pomostu należącego do Adaii – rodzinnej restauracji, do której dopłyniesz wyłącznie łodzią. Pomogą przy cumach i ugotują porządny turecki stół, kiedy słońce zejdzie ze skał. Snorkeling wzdłuż ściany należy do najlepszych w tym rogu zatoki, z czystą wodą i stromymi uskokami. Po zmroku cisza, w towarzystwie tylko cykad i przypadkowego koziego dzwonka.",
+          "thingsToDo": [
+            "Cumowanie rufą do pomostu Adaii, dostępnego tylko od wody",
+            "Snorkeling przy pionowej podwodnej ścianie",
+            "Turecki stół meze w restauracji",
+            "Kajakiem wzdłuż podnóża skał"
+          ],
+          "mooringTip": "Dno opada stromo, więc miejsca na swobodne kotwiczenie jest niewiele; podaj cumę na pomost restauracji i zarezerwuj stolik, co zwykle załatwia miejsce postoju. Rzuć kotwicę na 8-10 m i cofnij blisko pod skałę."
+        },
+        "5": {
+          "shortDescription": "Zostaw zatoczki na noc w Fethiye – roboczym mieście portowym z żywym targiem rybnym, bazarem i skalnymi grobowcami nad dachami.",
+          "description": "Czas uzupełnić zapasy i rozprostować nogi w prawdziwym mieście. Fethiye leży w głowie własnej zatoki, dwie godziny żeglugi od Wall Bay, zwykle z pomocną popołudniową bryzą na trawersie. Stań w Ece Marina albo przy miejskim nabrzeżu i wejdź na bazar po przyprawy, tureckie delicje i, jeśli masz ochotę, do fryzjera. Rytuałem jest tu targ rybny: kupujesz rybę na stoisku, a potem oddajesz ją którejś z okolicznych restauracji, która grilluje ją za drobną opłatą. Nad miastem wykuty w skale Grobowiec Amyntasa świeci bursztynem o zachodzie – ostre podejście po schodach, ale warte wysiłku. Porządnie zapełnij lodówkę, zanim wrócisz w dziksze zatoki.",
+          "thingsToDo": [
+            "Kup rybę na krytym targu",
+            "Wejście do Grobowca Amyntasa",
+            "Stary bazar i przyprawy",
+            "Zapasy w sklepach przy nabrzeżu"
+          ],
+          "mooringTip": "Ece Marina jest spokojna i dobrze prowadzona, ale w szczycie sezonu rezerwuj wcześniej; miejskie nabrzeże jest tańsze i bardziej centralne, choć potrafi kołysać, kiedy przechodzą promy. Cumowanie rufą na muringach i ceny marinowe."
+        },
+        "6": {
+          "shortDescription": "Wyjście z Zatoki Fethiye na wyspę Gemiler, opasaną ruinami bizantyjskich kościołów, z jednym z najlepszych zachodów słońca na tym wybrzeżu.",
+          "description": "Gemiler, zwana czasem Wyspą św. Mikołaja, strzeże wejścia do osłoniętego przesmyku na południowy zachód od Fethiye. Cała wyspa jest przykryta warstwami bizantyjskich ruin: kościoły, cysterny i kryta droga procesyjna wspinająca się do kaplicy na szczycie. Zakotwicz w zatoce po południowej stronie wyspy, na 6 do 9 metrach na piasku, i podaj cumę na brzeg, żeby nie krążyć. Dwie proste restauracje na lądzie załatwią wodę i zimne picie. Zostaw czas, żeby wylądować pontonem i wejść przez ruiny, gdy światło robi się złote; to widok przez przesmyk na stały ląd sprawia, że ludzie tu zostają. Kotwicowisko jest spokojne przy zwykłych zachodniakach, ale odsłonięte, jeśli wiatr skręci na południe.",
+          "thingsToDo": [
+            "Ruinami aż do kaplicy na szczycie",
+            "Zaplanuj wejście na złotą godzinę",
+            "Cuma na brzeg w południowej zatoce",
+            "Snorkeling w przesmyku do brzegu"
+          ],
+          "mooringTip": "Kotwicz na 6-9 m na piasku w południowej zatoce i podaj cumę do skał na brzegu, bo miejsca na cyrkulację jest mało. W sezonie przypływaj do późnego popołudnia, bo tych kilka dobrych miejsc rozchodzi się wcześnie."
+        },
+        "7": {
+          "shortDescription": "Krótki etap do Ölüdeniz, gdzie piaszczysta mierzeja słynnej Błękitnej Laguny, a nad nią paralotnie spływające z Babadağ.",
+          "description": "Ölüdeniz to widokówka, którą zna każdy: spokojna laguna za łukiem białego piasku pod zieloną górą. Sama laguna jest dziś chronionym parkiem przyrody, zamkniętym dla jachtów, więc cumujesz pod cyplem przy plaży Belcekız i schodzisz na ląd pontonem albo wpław. Nad głową niemal nieprzerwany strumień paralotni schodzących spiralą z Babadağ, która przy prawie dwóch tysiącach metrów należy do najwyższych komercyjnych startowisk na świecie. To najbardziej ruchliwe miejsce na trasie, więc potraktuj je jako żywy postój dzienny, a nie dziką noc. Popatrz, jak jedna czy druga czasza ląduje na plaży, zjedz lody, a potem zdecyduj, czy zostajesz, czy wracasz do cichszej zatoczki.",
+          "thingsToDo": [
+            "Wpław do parku przyrody Błękitnej Laguny",
+            "Lądujące paralotnie na plaży Belcekız",
+            "Pontonem na lunch przy plaży",
+            "Spacer po mierzei o zmierzchu"
+          ],
+          "mooringTip": "Laguna jest zamknięta dla łodzi, więc kotwicz przed Belcekız pod cyplem na 8-12 m i licz się z kołyszącą, odsłoniętą nocą, jeśli wejdzie cokolwiek z południa. Wiele załóg traktuje to jako postój dzienny i idzie dalej, na spokojniejsze kotwicowisko."
+        },
+        "8": {
+          "shortDescription": "Kotwica przed Butterfly Valley – stromym wąwozem schodzącym do plaży dostępnej tylko od wody, ze szlakiem do wodospadu.",
+          "description": "Tuż za cyplem Butterfly Valley otwiera się jako rozpadlina w boku Babadağ, a jej plaża jest dostępna wyłącznie od strony wody. Dolina bierze nazwę od krasopani, które się tu rozmnażają, a nierówna ścieżka prowadzi w głąb, obok małego gospodarstwa, do wodospadu na końcu wąwozu. Załóż porządne buty; ostatni odcinek to gramolenie się po skale z pomocą liny. Kotwicowisko dla większości jest postojem dziennym – otwarte na południe i głębokie tuż przy brzegu, więc rzucasz kotwicę dość głęboko i podajesz długą cumę na plażę. Zjedz lunch na pokładzie, wędrówkę zrób w porannym chłodzie i odejdź, zanim popołudniowa bryza zrobi tu nieprzyjemnie. Na lądzie jest rustykalny bar pod drzewami.",
+          "thingsToDo": [
+            "Wędrówka wąwozem do wodospadu",
+            "Wypatruj krasopani w głębi doliny",
+            "Kotwica z długą cumą na brzeg",
+            "Drink w rustykalnym barze na plaży"
+          ],
+          "mooringTip": "To odsłonięte kotwicowisko dzienne, głębokie aż do samej plaży; rzuć kotwicę na 15-20 m i podaj długą cumę na brzeg, trzymając wachtę kotwiczną. Odejdź, zanim rozkręci się popołudniowy południowo-zachodni wiatr, bo wpycha falę prosto do środka."
+        },
+        "9": {
+          "shortDescription": "Powrót w Skopea Limani do Coldwater Bay, gdzie źródła ze zbocza studzą morze, a kąpiel orzeźwia jak nic innego.",
+          "description": "Z odsłoniętymi południowymi zatokami za rufą trasa wraca w osłonę Skopea Limani i do Coldwater Bay, na mapach opisanej jako Soğuksu. Słodka woda ze źródeł spływa z zalesionego zbocza prosto do morza i podczas kąpieli czujesz zimno w plamach – szarpnięcie po ciepłej wodzie gdzie indziej. To spokojne, pachnące sosną kotwicowisko z dobrym trzymaniem i miejscem, żeby podać cumę na brzeg między drzewa. Zwykle jest też mała restauracja na pomoście wciśnięta w jeden róg, jeśli chcesz, żeby kolację przyniesiono. Po ścisku w Ölüdeniz wygląda to jak wydech całego wybrzeża. Kiedy plan pozwala, często zostajemy na dwie noce, używając zatoki jako bazy do pływania, czytania i pozwalania dniom płynąć.",
+          "thingsToDo": [
+            "Kąpiel przez plamy zimnych źródeł",
+            "Cuma na brzeg między sosnami",
+            "Kolacja w restauracji na pomoście w rogu zatoki",
+            "Deska SUP po spokojnej porannej wodzie"
+          ],
+          "mooringTip": "Trzyma dobrze na piasku i trawie, na 6-10 m; podaj cumę do drzew na brzegu, bo zatoka jest wąska i miejsca na cyrkulację mało. Przy przeważających zachodniakach zostaje spokojna, więc to pewny nocleg."
+        },
+        "10": {
+          "shortDescription": "Powrót na wyspę Gemiler na drugą noc: ruiny w wolniejszym tempie i dobre miejsce na zachód słońca zajęte odpowiednio wcześnie.",
+          "description": "Powrót do Gemiler w drodze na zachód daje ci wyspę po raz drugi, bez presji odhaczania jej z listy. Przyjdź wcześniej niż jednodniowe gulety, a będziesz mieć wybór w południowej zatoce i czas na snorkeling w przesmyku, zanim popołudniowy tłum zacznie rzednąć ku wieczorowi. Jeśli poprzednio odpuściłeś pełne wejście, zrób je teraz: ścieżka wije się między bezdachymi kościołami i starymi cysternami aż do kaplicy na szczycie, najlepiej w słabnącym upale. Po powrocie na pokład kotwicowisko uspokaja się, kiedy odpływają łódki z wycieczkami, a zachód słońca nad ruinami jest cichą nagrodą. Wodę i zimne picie weź z restauracji na lądzie. To krótki, łatwy dzień, więc nie musisz wychodzić z Coldwater Bay wcześnie.",
+          "thingsToDo": [
+            "Ponownie ścieżką do kaplicy na szczycie",
+            "Snorkeling w przesmyku wyspy w południe",
+            "Zajmij miejsce w południowej zatoce wcześnie",
+            "Drinki o zachodzie, gdy gulety odpływają"
+          ],
+          "mooringTip": "Tak jak poprzednio, kotwica na 6-9 m na piasku w południowej zatoce, z cumą na brzeg; wejście przed popołudniowym ruchem gulet daje spokojniejsze i lepiej położone miejsce. Uważaj na skręt wiatru na południe, przy którym nocleg przestaje wchodzić w grę."
+        },
+        "11": {
+          "shortDescription": "Najdłuższy etap rejsu, na zachód do Ekincik – punktu wypadowego na rejs rzeką do Kaunos i błotnych kąpieli w Dalyan.",
+          "description": "Ekincik to zachodni zwrot trasy i najdłuższy pojedynczy skok, więc zwykle wychodzimy przed dziewiątą, żeby wejść, zanim popołudniowa bryza zacznie dmuchać w nos. Zatoka jest szeroka i piaszczysta, ułożona pod wzgórzami na skraju delty Dalyan, z małą mariną o dwóch pomostach w jednym rogu, jeśli wolisz cumę od kotwicy. Prawdziwy powód, żeby tu przyjść, leży dalej: miejscowe łodzie chodzą stąd w górę obrośniętej trzciną rzeki Dalyan do skalnych grobowców antycznego Kaunos, siarkowych kąpieli błotnych w Sultaniye i İztuzu – plaży lęgowej żółwi przy ujściu rzeki. Wycieczkę umów przez marinę albo restaurację na plaży w wieczór przyjścia. Otwarta zatoka potrafi wpuścić falę, jeśli wiatr skręci na południe.",
+          "thingsToDo": [
+            "Umów rejs łodzią po rzece Dalyan",
+            "Wymocz się w błocie Sultaniye",
+            "Skalne grobowce Kaunos",
+            "Spacer po żółwiej plaży İztuzu w delcie"
+          ],
+          "mooringTip": "Kotwicz na 5-10 m na dobrym piasku w północnym rogu albo weź miejsce przy małych pomostach My Marina, jeśli chcesz większej pewności. Zatoka jest otwarta na południe i południowy zachód, więc na nocleg wybieraj stabilną prognozę."
+        },
+        "12": {
+          "shortDescription": "Łagodna żegluga na wschód do cichego Kızılkuyruk – zalesionej zatoczki z dala od głównego szlaku, gdzie noc to cykady i gwiazdy.",
+          "description": "Po zgiełku wycieczki do Dalyan Kızılkuyruk jest odtrutką: mała, obrośnięta drzewami zatoka na półwyspie Boz Burun, do której zagląda niewiele jachtów i która niczego nie komplikuje. Żegluga z Ekincik jest krótka i łatwa, wzdłuż brzegu pustych zatoczek i stromych sosen. Na lądzie praktycznie nic nie ma i o to chodzi; kotwiczysz, podajesz cumę do drzewa i pływasz w wodzie, która zostaje czysta i nieruchoma. Zabierz wszystko, czego potrzebujesz na wieczór, bo nie ma tawerny na ratunek. To ten rodzaj kotwicowiska, który załogi pamiętają długo po tym, jak głośne przystanki wyblakną – ostatni smak ciszy, zanim trasa skręci do domu. Kiedy światło gaśnie, gwiazdy wychodzą gęsto.",
+          "thingsToDo": [
+            "Cuma do cienistej sosny na brzegu",
+            "Kąpiel w pustej, czystej zatoce",
+            "Gotowanie na pokładzie pod gwiazdami",
+            "Kajakiem po bezludnych sąsiednich zatoczkach"
+          ],
+          "mooringTip": "Kotwicz na 6-10 m i podaj cumę do drzewa, bo zatoczka jest wąska i prawie nie ma miejsca na cyrkulację. Przy typowych letnich zachodniakach jest dobrze osłonięta, ale nie ma tu żadnej infrastruktury, więc zapasy i wodę zrób wcześniej w Ekincik."
+        },
+        "13": {
+          "shortDescription": "Powrót w Skopea Limani do Sarsala – pętla domyka się tam, gdzie się zaczęła, ostatnią spokojną nocą na kotwicy.",
+          "description": "Przedostatni dzień przywraca cię w znajomą osłonę Skopea Limani i za cypel do Sarsala, tej samej szerokiej zatoki, którą rejs się zaczął. Powrót na koniec ma inny smak: znasz już procedurę, bez ceregieli wybierasz miejsce na cumę brzegową i wprowadzasz się jak stały bywalec. Żegluga to wyluzowany półwiatr przez zatokę, z czasem na jeszcze jeden długi postój na kąpiel po drodze. Trzymanie w Sarsala i restauracja na pomoście robią z niej łatwą ostatnią noc, na tyle blisko Göcek, że poranny powrót zostaje bezstresowy. Popołudnie wykorzystaj na wypłynięcie resztek energii, poskładanie sprzętu i toast za te dwa tygodnie. Jeśli w tawernie jest tłoczno, zarezerwuj stolik, gdy tylko rzucisz kotwicę.",
+          "thingsToDo": [
+            "Ostatni długi postój na kąpiel na środku zatoki",
+            "Pożegnalna kolacja w tawernie na pomoście w Sarsala",
+            "Cuma na brzeg blisko głowy zatoki",
+            "Poskładaj i spakuj sprzęt przed Göcek"
+          ],
+          "mooringTip": "Wróć do tej samej rutyny: kotwica na 6-8 m, na piasku i trawie, z cumą na brzeg blisko głowy zatoki. Blisko bazy możesz pozwolić sobie na niespieszny start, ale jeśli chcesz zjeść na lądzie, zarezerwuj tawernę wcześnie."
+        },
+        "14": {
+          "shortDescription": "Krótkie poranne przejście na silniku do Göcek, żeby zdać jacht, z czasem na ostatnią kawę nad wodą.",
+          "description": "Ostatni etap to ledwie godzina, więc budzik może poczekać. Większość czarterów chce jacht z powrotem w połowie przedpołudnia, co zostawia czas na spokojną kąpiel, zanim podniesiesz kotwicę i po raz ostatni wyjdziesz z Sarsala. Droga przez Skopea Limani powtarza pierwszy dzień, tylko zalesione wyspy przesuwają się w odwrotnej kolejności. Uzupełnij paliwo i wodę po drodze, jeśli baza tego wymaga, a potem podprowadź jacht do nabrzeża w Göcek i pozwól załodze zająć się cumami. Po odprawie zwykle zostaje jeszcze czas na kawę albo ostatni lunch nad wodą przed transferem. Czternaście dni, a zatoka wciąż trzyma w zanadrzu zatoczki, do których nie dotarłeś.",
+          "thingsToDo": [
+            "Ostatnia poranna kąpiel przy Sarsala",
+            "Uzupełnij paliwo przed zdaniem jachtu",
+            "Kawa na nabrzeżu w Göcek",
+            "Sklepy przy marinie przed transferem"
+          ],
+          "mooringTip": "Zasady tankowania i godzinę zdania jachtu potwierdź z bazą poprzedniego wieczoru, żeby się nie spieszyć. Do mariny w Göcek podchodź wolno i zgłoś się wcześniej przez VHF po wskazówki co do miejsca; obsługa odbierze cumy na miejscu."
+        }
+      }
+    }
+  },
+  "areas": {
+    "bodrum": {
+      "metaTitle": "Trasy: Bodrum i Zatoka Gökova | Boat4You",
+      "metaDesc": "Trasy z Bodrum: sosnowe zatoczki zatoki Gökova, wyspa Kleopatry i długie kąpiele — żeglowanie po tureckim wybrzeżu, dzień po dniu.",
+      "title": "Wybrzeże guletów, po swojemu",
+      "description": "Bodrum patrzy na zatokę stworzoną do włóczęgi. Gökova wcina się trzydzieści mil w turecki ląd, a jej brzegi układają się w zatokę za zatoką, wszystkie w sosnach, gdzie rytm dnia pisze się sam: kąpiel, śniadanie, dwie godziny żeglowania, kolejna zatoka. Wyspa Sedir strzeże antycznego teatru i plaży z piasku, który — jak chce legenda — sprowadziła Kleopatra; English Harbour chowa się tak dobrze, że w czasie wojny korzystała z niego Royal Navy. Restauracje z własnymi pomostami przyjmą twoje cumy, nakarmią meze i policzą uczciwie za tę przyjemność. Meltemi dociera tu złagodzone, bardziej bryza niż pogoda. Bodrum samo w sobie — zamek, targ, marina — porządnie domyka tydzień. To najłatwiejsze wprowadzenie w Turcję, jakie żeglarz może dostać."
+    },
+    "gocek": {
+      "metaTitle": "Trasy żeglugi: Göcek i Fethiye | Boat4You",
+      "metaDesc": "Trasy z Göcek i Fethiye przez dwanaście wysp Skopea Limani: restauracje z pomostami, ruiny nad kotwicowiskami, łatwe mile.",
+      "title": "Dwanaście wysp w jednej osłoniętej zatoce",
+      "description": "Göcek leży w głowie Skopea Limani — zatoki tak osłoniętej i tak pełnej wysp, że można spędzić w niej tydzień, nie biorąc ani jednej fali na dziób. Dla mieszanych załóg to układ nie do pobicia: kotwica idzie w dziesięć metrów przejrzystej, zielonej wody, długa cuma na brzeg do sosny, a kolacja dzieje się w rodzinnej restauracji, która zbudowała swój pomost dokładnie dla ciebie. Likijskie ruiny stoją tuż nad kilkoma kotwicowiskami — Łaźnie Kleopatry, grobowce w Kaya — a targ w Fethiye porządnie zaopatrzy kambuz. Wiatry są lekkie i termiczne, nawigacja odbywa się na oko, marin w Göcek jest sporo i są sprawne. Jeśli Turcja ma oślą łączkę dla czarteru, to właśnie tutaj — a przy okazji jest tu pięknie."
+    }
+  }
+}

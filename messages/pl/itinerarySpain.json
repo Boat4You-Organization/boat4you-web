@@ -408,6 +408,827 @@
           "mooringTip": "Wracaj do Port Olímpic pod presją terminu zdania w połowie przedpołudnia, więc wyjdź z Garraf wcześnie. Trzymaj się dobrze z dala od podejścia do portu handlowego i wchodź oznakowanym torem; zawołaj marinę na VHF 09 po przydział miejsca."
         }
       }
+    },
+    "ibiza": {
+      "metaTitle": "Ibiza i Formentera w 7 dni | Boat4You",
+      "metaDesc": "7-dniowy rejs po Ibizie i Formenterze z Marina Eivissa: Santa Eulària, Portinatx, Sant Antoni, Cala Vedella, Ses Salines i piaszczyste łachy Formentery.",
+      "days": {
+        "1": {
+          "shortDescription": "Spokojna rozgrzewka: 8 mil na wschód z Eivissy do Santa Eulària, z pierwszą kąpielą w Cala Martina przed wejściem do mariny.",
+          "description": "Pierwszy etap jest celowo krótki i wszystkim to pasuje. Osiem mil wzdłuż wschodniego wybrzeża daje załodze czas, żeby znaleźć kabestany i wyczuć, jak jacht się prowadzi, zanim zrobi się poważnie. Latem zwykle poczujesz Tramuntanę spychającą z północy z siłą 15 do 25 węzłów, a po południu czasem zmienia ją łagodniejszy zachodni Mestral. Lubimy najpierw rzucić kotwicę w Cala Martina, cichej zatoczce w otoczeniu sosen, gdzie łąki posidonii pod kilem naprawdę warto obejrzeć z maską i fajką. Marina w Santa Eulària przyjmuje rufą do nabrzeża i pozostaje spokojna niemal przy każdej pogodzie, dlatego zapełnia się błyskawicznie. Rezerwuj z wyprzedzeniem, jeśli płyniesz w sierpniu. Na lądzie wspinaczka do kaplicy Puig de Missa odwdzięcza się o zmierzchu, a Es Trull de Ca Palai serwuje porządne bullit de peix.",
+          "thingsToDo": [
+            "Snorkeling nad łąkami posidonii w Cala Martina",
+            "Wejście do kaplicy Puig de Missa o zmierzchu",
+            "Bullit de peix w Es Trull de Ca Palai",
+            "Kąpiel na osłoniętym piasku Cala Llonga"
+          ],
+          "mooringTip": "W Santa Eulària cumujesz rufą do nabrzeża i masz osłonę ze wszystkich stron, ale to jedna z najbardziej obleganych marin na wyspie. Na sierpień rezerwuj z dużym wyprzedzeniem i licz się z ok. 100–160 € za noc w szczycie sezonu."
+        },
+        "2": {
+          "shortDescription": "Piętnaście mil na północ do Portinatx, najspokojniejszego kurortu Ibizy, ze złotym piaskiem S'Arenal i piracką wieżą w zasięgu kajaka.",
+          "description": "Portinatx leży na samej górze wyspy, a droga tam prowadzi wzdłuż pustszego odcinka północnego wybrzeża. Piętnaście mil, w większości wygodnym półwiatrem, jeśli Tramuntana zechce współpracować. Sam port jest mały i naturalny, schowany za cyplami, które tłumią falę. Zwykle najpierw staję na kotwicy w S'Arenal Petit, gdzie piasek dobrze trzyma na czterech do sześciu metrach, a woda ma ten blady turkus, jaki daje wyłącznie czyste dno. Sąsiednia S'Arenal Gros to większy półksiężyc, jeśli macie ochotę na plażowanie. Kajakiem na zachód dopłyniesz do wieży strażniczej Xarraca, przysadzistej szesnastowiecznej strażnicy wzniesionej przeciw korsarzom berberyjskim. Wieczorem przejdź się do latarni morskiej, żeby zobaczyć całą zatokę, a potem spróbuj lokalnych hierbas ibicencas w S'Espartar.",
+          "thingsToDo": [
+            "Postój na kotwicy i kąpiel w S'Arenal Petit",
+            "Kajakiem na zachód do wieży Xarraca",
+            "Spacer do latarni Portinatx z widokiem na zatokę",
+            "Hierbas ibicencas w Restaurante S'Espartar"
+          ],
+          "mooringTip": "Mała marina w Portinatx przyjmuje rufą do nabrzeża i jest dobrze osłonięta od północy, kosztuje ok. 70–110 € za noc w sezonie. Jeśli jest pełna, piasek w S'Arenal Petit pewnie trzyma na czterech do sześciu metrach."
+        },
+        "3": {
+          "shortDescription": "15-milowy przelot wzdłuż dzikiego północno-zachodniego wybrzeża do Sant Antoni, zakończony drinkiem tam, gdzie narodziły się sunset bary wyspy.",
+          "description": "To najbardziej odsłonięty etap tygodnia, piętnaście mil wzdłuż wybrzeża z niewieloma kryjówkami, więc wolę wyjść przed dziewiątą i mieć go za sobą, zanim rozbuja się popołudniowa bryza. Nagroda czeka pod koniec. Do Cala Salada dotrzesz wyłącznie od strony wody: to zatoczka o terakotowych ścianach, gdzie rzucasz kotwicę na piasku na czterech do sześciu metrach i dopływasz do plaży, której większość podróżujących samochodem nigdy nie znajdzie. Marina w Sant Antoni jest kawałek dalej, osłonięta od północy i wschodu, choć wyraźnie czuje zachodni wiatr. Miasto ma mieszaną prasę, ale Sunset Strip zasługuje na swoją nazwę. Café del Mar nalewa drinki w stronę horyzontu od 1980 roku i wciąż jest najuczciwszym miejscem na oglądanie zachodu słońca.",
+          "thingsToDo": [
+            "Kotwica i kąpiel w dostępnej tylko od wody Cala Salada",
+            "Wejście na Cap Nunó z widokiem na Conillerę",
+            "Zachód słońca w oryginalnej Café del Mar",
+            "Paella de marisco do podziału w El Chiringuito"
+          ],
+          "mooringTip": "Marina w Sant Antoni przyjmuje rufą do nabrzeża i dobrze osłania od północy i wschodu, ale stanowiska czują każdy zachodni wiatr, więc dobierz noc rozważnie. W szczycie sezonu 100–160 €. Cala Salada nadaje się wyłącznie na kotwicowisko obiadowe, na piasku na czterech do sześciu metrach."
+        },
+        "4": {
+          "shortDescription": "Krótki, 8-milowy skok na południe do Cala Vedella i jej słynnego sąsiada, 380-metrowej wapiennej iglicy Es Vedrà tuż przy brzegu.",
+          "description": "Osiem mil to ledwie poranek pracy, więc nie ma po co spieszyć się z rzuceniem cum. Cala Vedella to spokojniejszy zakątek zachodniego wybrzeża, zatoczka z piaszczystym dnem, które łatwo trzyma kotwicę na czterech do sześciu metrach i pozostaje przytulna, gdy wypełnia się północny wiatr. Prawdziwa atrakcja leży parę mil od brzegu. Es Vedrà wznosi się 380 metrów prosto z morza, wapienny kieł owinięty w więcej legend, niż udaje się zebrać większości wysp, od opowieści o magnetyzmie po ludzi z kręgu New Age, którzy przypływają poczuć jego przyciąganie. Wychodzimy tam na silniku na powolne okrążenie i kąpiel u jego stóp, ale dno jest skaliste, a kotwicowisko odsłonięte, więc zostaje to postojem dziennym. Po powrocie do zatoczki, przed kolacją warto ponurkować przy niskich łukach skalnych.",
+          "thingsToDo": [
+            "Dzienny postój na kotwicy pod Es Vedrà",
+            "Snorkeling przy niskich łukach skalnych Cala Vedella",
+            "Obiad z leżaka w El Chiringuito",
+            "Zachód słońca nad Es Vedrà z klifu"
+          ],
+          "mooringTip": "Cala Vedella daje dobre trzymanie na piasku na czterech do sześciu metrach i osłonę od północy, więc nocleg jest bezproblemowy. Es Vedrà traktuj wyłącznie jako postój dzienny: dno jest skaliste na ośmiu do dziesięciu metrach i nie ma tam żadnej osłony na noc."
+        },
+        "5": {
+          "shortDescription": "Sześć mil na południe do rezerwatu solnisk Ses Salines, gdzie chronione trawy morskie oznaczają wyłącznie boje, a na brzegu czeka legendarny bar plażowy.",
+          "description": "Skok do Ses Salines jest krótki i ląduje cię w wyspiarskim rezerwacie przyrody, gdzie warzelnie soli za plażą pracują od czasów fenickich. Tutejsze trawy morskie są pod ochroną UNESCO od 1999 roku, co zmienia sposób, w jaki tu przypływasz. Kotwiczenie za darmo nie wchodzi w grę: bierzesz wyznaczoną boję, zarezerwowaną wcześniej przez Govern Balear, a rzucenie kotwicy poza strefami kończy się mandatem powyżej 500 €. Kiedy już staniesz, kąpiel jest znakomita, a brzeg ma prawdziwy charakter. Sa Trinxa, na końcu przy cyplu, jest bosonogą instytucją od lat 80. i wciąż działa we własnym, luźnym rytmie. Jeśli chcesz ciszej, przejdź się na południe do Cavallet i poszukaj morskiego szkła wzdłuż linii przyboju. Zarezerwuj stolik w Salinas, jeśli zależy ci na bullit de peix.",
+          "thingsToDo": [
+            "Zajęcie zarezerwowanej boi w strefie traw morskich",
+            "Drink w bohemskim barze plażowym Sa Trinxa",
+            "Poszukiwanie morskiego szkła na plaży Cavallet",
+            "Rezerwacja bullit de peix w Salinas"
+          ],
+          "mooringTip": "Ses Salines to wyłącznie boje nad chronioną posidonią; zarezerwuj postój w strefie online przez Govern Balear przed wypłynięciem, ok. 40–80 € za noc. Kotwiczenie poza oznaczonymi strefami jest zabronione i grozi mandatem od 500 € w górę."
+        },
+        "6": {
+          "shortDescription": "Czteromilowe przejście cieśniny Freus na Formenterę, gdzie piaszczyste łachy śmiało konkurują z Karaibami.",
+          "description": "Cztery mile przez Freus i jesteś na zupełnie innej wyspie. Formentera jest płaska, niska i zbudowana wokół piasku, a nie życia nocnego, a samo przejście wymaga odrobiny szacunku, gdy wiatr spotyka się z prądem płynącym cieśniną. La Savina to jedyny port, więc tam właśnie cumujesz rufą na noc. Zanim się przywiążesz, wypad do Ses Illetes jest w zasadzie sensem całej wyprawy: smukła łacha piasku z wodą tak bladą, że ledwie czyta się ją jako morze. Leży w strefie chronionej, więc obowiązuje zarezerwowana boja, a nie kotwica. Jeśli zostanie czas, wypożycz rowery w porcie i przejedź płaską drogą na wschód do latarni La Mola. Z kolacją nie ma dylematu. Juan y Andrea serwuje espardeñas prosto z plaży od dziesięcioleci.",
+          "thingsToDo": [
+            "Postój przy piaszczystej łasze Ses Illetes",
+            "Rower płaską drogą do latarni La Mola",
+            "Espardeñas w Juan y Andrea",
+            "Kąpiel po południowej stronie Ses Salines"
+          ],
+          "mooringTip": "La Savina to jedyny port Formentery, przyjmuje rufą do nabrzeża za 120–200 € za noc w sezonie, więc rezerwuj. W Ses Illetes musisz skorzystać z boi w strefie chronionej, ok. 40–80 € za noc, zamiast rzucać kotwicę na piasku."
+        },
+        "7": {
+          "shortDescription": "Osiem mil z powrotem do Eivissy z ostatnim postojem przy Espalmador, wysepce słynącej z naturalnej kąpieli błotnej.",
+          "description": "Ostatni dzień jest z założenia krótki, co zostawia miejsce na jeszcze jedną kąpiel przed zdaniem jachtu. Espalmador, niska prywatna wysepka między dwiema dużymi wyspami, to oczywisty wybór. Na jej północnym brzegu jest płytka sadzawka, w której ludzie oblepiają się szarą gliną i wysuszają ją na słońcu, trochę niechlujny wyspiarski rytuał uprawiany od lat. Stamtąd zostaje spokojne osiem mil do domu. Marina Botafoch to sprytny wybór na ostatnią noc, blisko starego miasta i portowych barów, choć nabrzeże miejskie w Marina Eivissa kosztuje mniej i stawia cię bliżej centrum na zdanie jachtu. Zatankuj przy stanowisku obok wejścia i spłucz jacht, zanim oddasz klucze. Jeśli wieczór ma w sobie jeszcze jedną noc, Lío nad wodą odprowadzi rejs w wielkim stylu.",
+          "thingsToDo": [
+            "Kąpiel błotna przy Espalmador",
+            "Zachód słońca nad klifami Cala Saona",
+            "Tankowanie i mycie jachtu w Marina Botafoch",
+            "Koktajle na finał w nadmorskim Lío"
+          ],
+          "mooringTip": "Marina Botafoch to najbardziej ekskluzywna ostatnia noc, 200–350 € w szczycie sezonu, a nabrzeże miejskie w Marina Eivissa jest tańszą i bardziej centralną opcją za 120–180 €. Zatankuj przy stanowisku obok wejścia do portu przed zdaniem jachtu."
+        }
+      }
+    },
+    "ibiza-formentera-14-days": {
+      "metaTitle": "Ibiza i Formentera: pętla 14 dni | Boat4You",
+      "metaDesc": "Dwa tygodnie z Marina Eivissa wokół Ibizy i Formentery: Ses Salines, Es Vedrà, pola boi przy Illetes i ciche północne wybrzeże w Portinatx.",
+      "days": {
+        "1": {
+          "shortDescription": "Krótki pierwszy etap na południe z Ibiza Town do plaż przy solniskach, żeby załoga weszła w rytm, zanim zacznie się prawdziwe pływanie.",
+          "description": "Marinę w Ibiza Town od Ses Salines dzieli zaledwie pięć mil, więc nie ma po co spieszyć się z rzuceniem cum. Zwykle uzupełniamy wodę, ogarniamy lodówkę i wychodzimy z portu późnym przedpołudniem. Za cyplem przy lotnisku otwierają się solniska za wydmami, a woda przechodzi z granatu w tę bladą zieleń, którą daje jej posidonia. Kotwicę rzuć na czystym piasku, z dala od łąki, na pięciu do siedmiu metrach. Na brzegu Sa Trinxa wciąż trzyma ten sam luźny rytm baru plażowego co od lat, a Beso Beach robi porządny obiad w stylu baskijskim, jeśli zarezerwujesz. Zatoka jest ruchliwa przez całe popołudnie, a potem pustoszeje, gdy odpływają łodzie jednodniowe. Popływaj przed kolacją, popatrz, jak światło miękko schodzi nad solniskami, i pozwól rejsowi się rozkręcić.",
+          "thingsToDo": [
+            "Obiad na plaży w chiringuito Sa Trinxa",
+            "Koktajle na piasku w Beso Beach",
+            "Spacer po solniskach o zachodzie słońca",
+            "Snorkeling nad posidonią przy piaszczystych łatach"
+          ],
+          "mooringTip": "Kotwicz wyłącznie na jasnych łatach piasku, nigdy na ciemnej posidonii, na pięciu do ośmiu metrach. Zatoka jest otwarta na południe, więc jeśli na noc prognozują wiatr z południa, przejdź do Es Cavallet albo na Formenterę."
+        },
+        "2": {
+          "shortDescription": "Szybkie przejście kanałem Es Freus do La Savina na Formenterze, ostatnie porządne zaopatrzenie przed dniami na bojach.",
+          "description": "Skok przez Es Freus jest krótki, ale wymaga uwagi. Kanał między wyspami jest płytki i usiany wysepkami, między innymi Es Penjats i s'Espardell, więc trzymaj się oznakowanej linii i uważaj na promy z turystami pędzące między Ibizą a La Savina. Licz cztery, pięć mil, godzinę pod żaglami, jeśli bryza zechce współpracować. La Savina to jedyny prawdziwy port Formentery i w lipcu zapełnia się błyskawicznie, więc zadzwoń wcześniej albo zarezerwuj miejsce na długo przed wyjściem z Salines. Po zacumowaniu wyspa stoi przed tobą otworem, skuterem albo rowerem: płaska trasa do latarni na Cap de Barbaria albo na wschód do winiarni wokół Sant Ferran. Zaopatrzenie jest tu łatwe, paliwo też. Warto zrobić zapasy przed dniami na kotwicy, które nadchodzą.",
+          "thingsToDo": [
+            "Skuterem do latarni Cap de Barbaria",
+            "Drinki o zachodzie słońca w Sant Ferran",
+            "Rowerem płaską drogą do Es Pujols",
+            "Zaopatrzenie i tankowanie przed kotwicowiskami"
+          ],
+          "mooringTip": "La Savina wyprzedaje się w szczycie sezonu, a wolne miejsce z marszu to rzadkość w lipcu i sierpniu. Rezerwuj z wyprzedzeniem i pamiętaj, że marina jest odsłonięta na wiatry zachodnie, które potrafią wpuścić falę na zewnętrzne pomosty."
+        },
+        "3": {
+          "shortDescription": "Krótki odcinek na silniku na północ do łachy Illetes i Espalmador, gdzie woda należy do najczystszych na Balearach.",
+          "description": "La Savinę od Ses Illetes dzielą ledwie trzy mile, a nagroda przychodzi natychmiast. To ta pocztówka, po którą wszyscy tu przypływają: niski piaszczysty szpic i woda tak płytka i jasna, że policzysz zmarszczki na dnie. Cały ten obszar leży w parku przyrody Ses Salines, a przepisy są surowe. Weź jedną z boi ekologicznych zamiast rzucać kotwicę, w polu przy Illetes albo bliżej Espalmador, i zarezerwuj ją przez system parku lub na kanale VHF 77. Kiedy już staniesz, dzień układa się sam. Przejdź łachę w bród na drugą stronę, przepłyń przesmyk do Espalmador przy stojącej wodzie albo przespaceruj się po niskich wydmach wysepki. Wzdłuż plaży ciągną się proste knajpki z rybą z grilla na leniwy obiad na lądzie. Wieczorem większość jachtów się rozjeżdża i na kotwicowisku robi się cicho.",
+          "thingsToDo": [
+            "Przejście łachy Illetes w bród w stronę Espalmador",
+            "Obiad z rybą z grilla na plaży",
+            "Snorkeling na płyciznach przy Illetes",
+            "Spacer po niskich wydmach Espalmador o zmierzchu"
+          ],
+          "mooringTip": "Kotwiczenie na posidonii jest tu zabronione i kontrolowane; weź boję ekologiczną w polu przy Illetes lub Espalmador, do 25 metrów długości, rezerwując przez system parku albo VHF 77. Bierz ją wcześnie, latem znikają przed południem."
+        },
+        "4": {
+          "shortDescription": "Dłuższy etap wokół południowo-zachodniego narożnika Ibizy, obok Es Vedrà, do osłoniętej zatoki zachodów słońca Cala Vedella.",
+          "description": "To pierwszy poważny przelot rejsu, około dwudziestu mil z powrotem przez Freus i w górę południowo-zachodniego wybrzeża. Wyjdź przed dziewiątą, żeby wyprzedzić popołudniową bryzę wchodzącą prosto w dziób. Nagroda przychodzi przy Cap Blanc, gdzie Es Vedrà wyrasta wprost z morza, naga wapienna piramida, która dominuje nad całą drogą na północ. Najlepiej wypada na zdjęciach w późnopopołudniowym świetle, więc jeśli możesz, dobierz porę podejścia. Sama Cala Vedella to wąska, dobrze osłonięta zatoczka z piaszczystą plażą w głębi i willami rozrzuconymi po sosnowych zboczach. Kotwicz na środku, na sześciu do dziesięciu metrach, dno to mieszanka piasku i trawy. Prosto na plaży działa rodzinna restauracja z uczciwą paellą, a zatoka patrzy na zachód, co oznacza, że zachód słońca ląduje ci prosto za rufą.",
+          "thingsToDo": [
+            "Zdjęcia Es Vedrà przy Cap Blanc",
+            "Paella w restauracji przy plaży",
+            "Drinki w kokpicie twarzą na zachód",
+            "Kąpiel w osłoniętej głębi zatoki"
+          ],
+          "mooringTip": "Cala Vedella jest dobrze schowana i trzyma nieźle przy typowej bryzie morskiej, ale jest ciasna i popularna, więc przypłyń przed późnym popołudniem po miejsce bliżej środka. Jest odsłonięta na falę z zachodu, więc sprawdź prognozę, zanim zdecydujesz się na nocleg."
+        },
+        "5": {
+          "shortDescription": "Spokojny skok wzdłuż brzegu na północ do wielkiej zatoki Sant Antoni, z Cala Bassa i słynnym pasem sunset barów pod ręką.",
+          "description": "Krótki dzień, może osiem mil wzdłuż wybrzeża, więc starczy czasu na postój przed wejściem do portu. Cala Bassa i Cala Conta leżą po drodze, obie to szerokie piaszczyste zatoki, gdzie zakotwiczysz na pięciu do ośmiu metrach i popływasz z burty przed obiadem. Obie są otwarte na zachód, więc przy spokojnym poranku są w porządku, ale zaczynają kołysać, gdy wypełni się bryza. Zatoka Sant Antoni jest ogromna, a marina w Club Nàutic dobrze prowadzona, choć miejsca w sezonie nie należą do tanich. Zacumuj, przejdź się nabrzeżem i zajmij miejsce na Sunset Strip. Café del Mar i Café Mambo od dziesięcioleci odprowadzają słońce za wyspy Conejera. Turystyczne, nie ma co dyskutować, ale światło nad tym kawałkiem wody usprawiedliwia tłum.",
+          "thingsToDo": [
+            "Kotwica i kąpiel w Cala Bassa",
+            "Set o zachodzie słońca w Café del Mar",
+            "Spacer promenadą S'Arenal",
+            "Zaopatrzenie na targu w Sant Antoni"
+          ],
+          "mooringTip": "Club Nàutic Sant Antoni przyjmuje większe jachty, ale wyprzedaje się w lipcu i sierpniu, więc rezerwuj wcześniej; licz mniej więcej 130 do 150 euro za noc za jacht średniej wielkości. Kotwiczenie w zewnętrznej zatoce jest możliwe, ale odsłonięte na zachód i na nieustanną falę od łodzi wycieczkowych."
+        },
+        "6": {
+          "shortDescription": "Wokół dzikich klifów północnego zachodu do Portinatx, cichego, bohemskiego końca Ibizy, gdzie wybrzeże wreszcie zwalnia.",
+          "description": "Droga w górę i wokół północno-zachodniego narożnika jest najbardziej efektowną częścią pętli, jakieś piętnaście mil wysokich klifów i niemal zerowej zabudowy. Za Cala Salada brzeg staje się pionowy, a kotwicowiska się przerzedzają, więc weź na ten dzień zapas paliwa i wody. Portinatx leży na szczycie wyspy, to trzy połączone zatoczki tworzące jej najlepiej osłonięty zakątek. Główna zatoka, S'Arenal Gran, dobrze trzyma na piasku na czterech do sześciu metrach i pozostaje spokojna przy wszystkim poza ostrym wiatrem z północy. To ta wyluzowana strona Ibizy, sosny i niskie białe domy, świat oddalony od klubów zachodniego wybrzeża. Na lądzie znajdziesz kilka uczciwych restauracji plażowych i krótki spacer do starej latarni. Zwykle zostajemy tu na dwie noce, jeśli plan pozwala.",
+          "thingsToDo": [
+            "Kotwica w spokoju S'Arenal Gran",
+            "Spacer do latarni Portinatx",
+            "Snorkeling przy skałach Cala Xarraca",
+            "Drinki o zachodzie słońca nad Cala Xuclar"
+          ],
+          "mooringTip": "Portinatx to najlepsza osłona na północnym wybrzeżu i dobrze trzyma na piasku, ale trzy zatoczki zapełniają się łodziami wycieczkowymi do południa. Przypłyń wcześniej po miejsce i ufaj temu na noc tylko wtedy, gdy nie ma prognozy wiatru z północy."
+        },
+        "7": {
+          "shortDescription": "W dół zieleńszym wschodnim wybrzeżem do Santa Eulària, nadrzecznego miasteczka z porządną mariną i niespiesznym klimatem.",
+          "description": "Wschodnie wybrzeże jest łagodniejsze niż północne, bardziej zielone i niższe, a droga do Santa Eulària to jakieś dwanaście mil, zwykle z wiatrem od rufy. Warto zatrzymać się w Cala Sant Vicent albo przy Tagomago, prywatnej wyspie, gdzie woda jest głęboka i przejrzysta nad piaskiem. Samo Santa Eulària to najbardziej wyluzowane z trzech miast Ibizy, zbudowane wokół ujścia jedynej rzeki na wyspie. Marina jest nowoczesna i spokojna, dobre miejsce na uzupełnienie zapasów i pranie w połowie czarteru. Na lądzie promenada obsadzona palmami i restauracje przy Carrer Sant Vicent składają się na leniwy wieczór. Jeśli trafisz na środę, stary hipisowski targ w Punta Arabí w pobliskim Es Canar wart jest krótkiej taksówki. Ciszej niż w Ibiza Town i tym lepiej.",
+          "thingsToDo": [
+            "Kotwica przy wyspie Tagomago na kąpiel",
+            "Spacer nadmorską promenadą wśród palm",
+            "Hipisowski targ Punta Arabí w środy",
+            "Kolacja przy Carrer Sant Vicent"
+          ],
+          "mooringTip": "Puerto Deportivo Santa Eulària jest osłonięte i dobrze wyposażone, to dobry przystanek w połowie rejsu na wodę, paliwo i pranie; w szczycie sezonu rezerwuj wcześniej. Można kotwiczyć przy miejskiej plaży, ale jest tam otwarcie na południe i wschód."
+        },
+        "8": {
+          "shortDescription": "Krótki etap na południe z powrotem do Ibiza Town, zamykający pierwszą pętlę pod murami Dalt Vila.",
+          "description": "Łatwy ostatni etap pierwszego tygodnia, jakieś osiem mil na południe, z jednym czy dwoma postojami, jeśli masz ochotę. Cala Llonga to głęboka, osłonięta zatoczka kawałek dalej wzdłuż brzegu, dobra na poranną kąpiel, a Sol d'en Serra poniżej ma przyzwoitą restaurację na skałach. Stamtąd prowadzi prosta droga obok Talamanki do Ibiza Town, z murami Dalt Vila wypełniającymi panoramę, gdy podchodzisz do portu. Stare miasto jest na liście UNESCO i warto się wspiąć, przez Portal de ses Taules do katedry, żeby spojrzeć z góry na własny topmaszt. Marina Eivissa stawia cię kilka kroków od portowych barów i plątaniny uliczek La Marina. Dobra noc, żeby zjeść porządnie i zamienić kotwicowiska na bruk.",
+          "thingsToDo": [
+            "Poranna kąpiel w Cala Llonga",
+            "Obiad na skałach w Sol d'en Serra",
+            "Wejście przez Dalt Vila do katedry",
+            "Wieczór w zaułkach La Marina"
+          ],
+          "mooringTip": "Marina Eivissa leży tuż pod starym miastem i ma duże wzięcie, więc potwierdź miejsce na powrót przed wypłynięciem. Jako spokojniejsza i tańsza opcja, Marina Botafoch po drugiej stronie portu jest krótkim rejsem wodną taksówką od tego samego życia nocnego."
+        },
+        "9": {
+          "shortDescription": "Znów do Ses Salines na otwarcie drugiego tygodnia, tym razem tyle dla solnisk i ptaków, co dla plaży.",
+          "description": "Drugi tydzień, ten sam krótki skok na południe, ale nie ma powodu, żeby się spieszyć ani stawać w tym samym miejscu. Tym razem chowamy się za cyplem do Es Cavallet, długiej plaży po wschodniej stronie, gdzie przy słabym wietrze z południa jest zwykle spokojniej i odrobinę mniej tłoczno niż na samych Salines. Czynne warzelnie soli za wydmami są powodem, dla którego cały park w ogóle istnieje, sól zbiera się tam do dziś, a w odpowiedniej porze roku zobaczysz flamingi brodzące po płyciznach. Kotwicz na piasku na pięciu do siedmiu metrach i wjedź pontonem na brzeg. Przejdź ścieżką między warzelniami albo przespaceruj się do Sa Trinxa na drugim końcu Salines, gdzie DJ od lat prowadzi tę samą publiczność ku zachodowi słońca. Łagodny reset przed kolejnym przejściem na Formenterę.",
+          "thingsToDo": [
+            "Kotwica przy spokojniejszej plaży Es Cavallet",
+            "Wypatrywanie flamingów na solniskach",
+            "Sesja o zachodzie słońca w Sa Trinxa",
+            "Spacer ścieżką między solniskami"
+          ],
+          "mooringTip": "Es Cavallet, tuż na wschód od cypla, jest spokojniejszą alternatywą dla głównej plaży Salines przy słabym wietrze z południa. Kotwicz wyłącznie na łatach piasku; w całym parku obowiązują te same przepisy o posidonii i te same kontrole."
+        },
+        "10": {
+          "shortDescription": "Tym razem prosto do Espalmador, niskiej, niezamieszkanej wysepki przy cyplu Formentery z własnym polem boi ekologicznych.",
+          "description": "Zamiast powtarzać La Savinę, przejdź Freus i weź boję przy Espalmador, niezamieszkanej wysepce u północnego cypla Formentery. Największe kotwicowisko to tutaj S'Alga po osłoniętej wschodniej stronie, część pola boi ekologicznych ciągnącego się w stronę łachy Illetes. Jest osłonięte od przeważających wiatrów zachodnich i mieści przez dzień spory tłum jachtów, nie robiąc się przy tym ciasne. Weź ponton na brzeg i przejdź na stronę otwartego morza, gdzie za plażą leży płytka laguna. Dawne kąpiele błotne są dziś ogrodzone ze względów ochronnych, więc popatrz i idź dalej. Poza tym zostaje pływanie, snorkeling przy krawędziach łąk trawy morskiej, gdzie trzymają się ryby, i długie leniwe popołudnie na gołej wyspie bez jednego budynku w zasięgu wzroku.",
+          "thingsToDo": [
+            "Boja w zatoce S'Alga",
+            "Przejście przez Espalmador do laguny",
+            "Snorkeling przy krawędziach łąk trawy morskiej",
+            "Wyciągnięcie pontonu na plażę od strony morza"
+          ],
+          "mooringTip": "S'Alga po wschodniej stronie Espalmador to najspokojniejsze pole boi przy wietrze z zachodu, do 25 metrów długości; rezerwuj przez aplikację parku albo VHF 77. Jeśli wszystko zajęte, cofnij się na czysty piasek z dala od łąki i linii boi."
+        },
+        "11": {
+          "shortDescription": "Powrót południowo-zachodnią trasą obok Es Vedrà, z przerwą na kąpiel w Cala Saona po drodze.",
+          "description": "Droga powrotna do Cala Vedella to te same dwadzieścia kilka mil, więc wyrusz wcześnie i wykorzystaj gładką poranną wodę. Cala Saona na zachodnim wybrzeżu Formentery to świetny pierwszy postój, zatoka o czerwonych klifach z piaszczystym dnem, które dobrze trzyma kotwicę przez godzinną kąpiel. Stamtąd znów obok Es Vedrà, i to się nigdy nie nudzi; skała wygląda inaczej w każdym świetle i pod każdym kątem podejścia. Jeśli morze będzie łaskawe, podejdź blisko pod nią, zanim skręcisz na północ. Cala Vedella będzie już bardziej zatłoczona, więc celuj we wczesne popołudnie i weź, co zostanie na środku zatoczki. Ta sama uczciwa paella na plaży, ten sam czysty zachód słońca prosto na zachód. Niektóre miejsca zasługują na drugą noc.",
+          "thingsToDo": [
+            "Postój na kąpiel pod klifami Cala Saona",
+            "Podejście blisko pod Es Vedrà",
+            "Kotwica na środku zatoczki Cala Vedella",
+            "Druga kolacja na plaży o zachodzie słońca"
+          ],
+          "mooringTip": "Cala Saona to dobre kotwicowisko obiadowe, ale całkiem otwarte na zachód, więc nadaje się wyłącznie na spokojny poranek. Do Cala Vedella przypłyń wczesnym popołudniem, bo w drugim tygodniu jest tam większy ruch, i rzuć kotwicę z dala od pływających przy plaży."
+        },
+        "12": {
+          "shortDescription": "Znów łatwy odcinek wzdłuż brzegu na północ, tym razem z dłuższym postojem nad piaszczystymi ławicami Cala Comte przed zatoką Sant Antoni.",
+          "description": "Znów krótki etap, ale zmień postój. Dziś Cala Comte, sznur niskich skalistych wysepek i piaszczystych ławic nieco na południe od Sant Antoni. Woda nad łachami świeci nieprawdopodobnym bladym błękitem, a ty możesz zakotwiczyć na pięciu do siedmiu metrach i przepływać między wysepkami. To jedno z najlepszych miejsc do pływania na wyspie, choć zapełnia się łodziami wycieczkowymi, więc przypłyń przed południem, póki jeszcze jest twoje. Kiedy będzie dość, do Sant Antoni zostaje parę mil na noc. Jeśli poprzednio to odpuściłeś, to jest wieczór na Sunset Strip i drinka w Mambo, a potem porządny posiłek w uliczkach za mariną. Port miasteczka to też twoje ostatnie łatwe zaopatrzenie przed długim odcinkiem na wschód.",
+          "thingsToDo": [
+            "Pływanie między wysepkami Cala Comte",
+            "Kotwica nad bladymi piaszczystymi ławicami",
+            "Drink o zachodzie słońca w Café Mambo",
+            "Ostatnie zaopatrzenie w Sant Antoni"
+          ],
+          "mooringTip": "Cala Comte zachwyca, ale jest zupełnie otwarta i płytka przy wysepkach, więc kotwicz poza strefą kąpielową na pięciu metrach i więcej, i pilnuj cyrkulacji na kotwicy. Na noc miejsce w Club Nàutic jest pewniejsze niż odsłonięta zewnętrzna zatoka."
+        },
+        "13": {
+          "shortDescription": "Długi przelot wokół północnego wybrzeża, z zatoki Sant Antoni aż do Santa Eulària po drugiej, wschodniej stronie.",
+          "description": "To najdłuższy odcinek tych dwóch tygodni, blisko dwadzieścia pięć mil dookoła szczytu Ibizy, więc czeka cię wczesna pobudka i pełen dzień pod żaglami. Wyjdź z zatoki Sant Antoni, minij bliźniacze zatoczki Cala Salada i wejdź w klifowe północno-zachodnie wybrzeże, które widziałeś szóstego dnia. Przerwij w Portinatx, jeśli załoga chce kąpieli i czegoś do jedzenia, a potem naciśnij na wschód obok Cala Sant Vicent i garbu wyspy Tagomago. Wiatr na tym odcinku ma tendencję do wypełniania się ze wschodu po południu, więc ostatnie mile do Santa Eulària możesz płynąć ostro na wiatr. Wejdziesz zmęczony i wdzięczny za miejsce w marinie, prysznic i nieruchomy kokpit. To duży dzień, ale opłynięcie dzikiego końca wyspy za jednym zamachem to ten rodzaj żeglugi, który zostaje z załogą.",
+          "thingsToDo": [
+            "Poranna kąpiel w bliźniaczych zatoczkach Cala Salada",
+            "Postój na obiad z powrotem w Portinatx",
+            "Przejście blisko pod wyspą Tagomago",
+            "Cumowanie i odpoczynek w Santa Eulària"
+          ],
+          "mooringTip": "To wymagający przelot z niewieloma kotwicowiskami awaryjnymi na północno-zachodnich klifach, więc wyjdź wcześnie z pełnym paliwem i wodą oraz okiem na popołudniowy wiatr ze wschodu. Zarezerwuj miejsce w Santa Eulària wcześniej, żeby zmęczona załoga miała pewne stanowisko."
+        },
+        "14": {
+          "shortDescription": "Ostatni krótki etap do domu, do Ibiza Town, z czasem na jeszcze jedną kąpiel przed zdaniem jachtu.",
+          "description": "Zostało tylko osiem mil i nie ma po co poganiać ostatniego poranka. Większość załóg je powolne śniadanie na kotwicy, a potem robi ostatni postój, albo znów w Cala Llonga, albo za rogiem w Talamance tuż pod Ibiza Town, na ostatnią kąpiel z pawęży. Z Talamanki widać już podświetlone mury Dalt Vila, a wejście do Marina Eivissa zajmuje dwadzieścia minut. Jeśli czarter kończy się dopiero nazajutrz rano, zacumuj wcześnie i spędź wieczór na lądzie, jeszcze jedno wejście przez stare miasto i stolik gdzieś w La Marina. Dwa tygodnie i jakieś sto czterdzieści mil później masz za sobą okrążenie obu wysp, dziką północ i ruchliwy zachód, i wiesz, które zatoczki zasługują na drugie spojrzenie. Spłucz sól, rozlicz paliwo i wznieś toast za tę pętlę.",
+          "thingsToDo": [
+            "Ostatnia kąpiel przy plaży Talamanca",
+            "Powolne śniadanie na kotwicy w Cala Llonga",
+            "Pożegnalna kolacja w La Marina",
+            "Ostatni spacer przez Dalt Vila"
+          ],
+          "mooringTip": "Wejdź do portu przed wczesnym popołudniem, żeby zapewnić sobie miejsce w Marina Eivissa i mieć czas na tankowanie i porządne spłukanie jachtu przed zdaniem. Jeśli w dniu powrotu marina będzie pełna, Marina Botafoch po drugiej stronie wody jest pewnym rozwiązaniem awaryjnym."
+        }
+      }
+    },
+    "mallorca-round-island-14-days": {
+      "metaTitle": "Majorka dookoła w 14 dni | Boat4You",
+      "metaDesc": "Dwa tygodnie pod żaglami z Palma de Mallorca: wybrzeże Tramuntany, Formentor, ciche kalanki wschodu i chronione wody Cabrery.",
+      "days": {
+        "1": {
+          "shortDescription": "Krótki rozruch na zachód z Palmy do wód rezerwatu morskiego przy Illa del Toro, idealny na pierwszą noc na aklimatyzację.",
+          "description": "Większość załóg wykorzystuje pierwsze popołudnie na złapanie rytmu, a nie na zbieranie mil. Z mariny w Palmie za Cap de Cala Figuera do wysepki El Toro jest jakieś piętnaście mil, a tuż za nią chowa się Port Adriano. Odejdź od pomostu przed południem, poukładaj żagle na otwartej zatoce, a i tak zostanie czas na kąpiel przed kolacją.\n\nWysepka El Toro i Malgrats trochę na północ leżą w rezerwacie morskim, więc woda jest przejrzysta, a ryby przyzwyczajone do snorkelujących. Sam Port Adriano to nowoczesna marina z dobrymi stanowiskami i paroma restauracjami. Jeśli prognoza jest spokojna, stań zamiast tego na kotwicy przy granicy rezerwatu i miej cichą noc.",
+          "thingsToDo": [
+            "Snorkeling w rezerwacie Malgrats i El Toro",
+            "Postój albo kolacja w marinie Port Adriano",
+            "Kąpiel przy przejrzystej granicy rezerwatu",
+            "Rozruch takielunku w zatoce Santa Ponsa"
+          ],
+          "mooringTip": "Port Adriano ma martwe kotwice na stanowiskach i jest pewnym wyborem przy każdym wietrze z zachodu. Kotwicowisko w rezerwacie przy El Toro trzyma tylko przy ustabilizowanej pogodzie, więc wybierz piasek między płatami trawy morskiej i sprawdź cyrkulację przed zmrokiem."
+        },
+        "2": {
+          "shortDescription": "Długi przelot wokół południowo-zachodniego narożnika i w górę ściany Tramuntany do podkowiastej zatoki Sóller, jednego z najlepszych portów tego wybrzeża.",
+          "description": "To najdłuższy pojedynczy przelot tych dwóch tygodni, więc zwykle rzucamy cumy przed dziewiątą. Opłyń Cap de Cala Figuera, minij Port d'Andratx i Sant Elm, a potem Serra de Tramuntana godzinami spada prosto do morza. Na tym odcinku jest niewiele osłony, więc uważaj na popołudniową bryzę morską, a Sa Foradada to dobry postój na obiad, jeśli fala pozwoli.\n\nSóller otwiera się jako niemal okrągła zatoka otoczona górami. Wjedź zabytkowym tramwajem do miasteczka Sóller albo przejdź się do latarni Far des Cap Gros po widok na całe kotwicowisko z góry. Kuchnie przy nabrzeżu robią porządny ryż i świeżą rybę. To takie przybycie, przy którym długi dzień wydaje się zasłużony.",
+          "thingsToDo": [
+            "Przejazd tramwajem z 1913 roku do Sóller",
+            "Spacer do Far des Cap Gros",
+            "Postój na obiad pod cyplem Sa Foradada",
+            "Ryż i ryba przy nabrzeżu portowym"
+          ],
+          "mooringTip": "Kotwicz na środku zatoki na piasku albo weź miejsce przy pomostach Marina Tramontana i Club Nàutic. Zatoka jest dobrze osłonięta poza wiatrem z północy, kiedy fala zawija do środka i warto mieć zarezerwowane stanowisko."
+        },
+        "3": {
+          "shortDescription": "Kolejne klify Tramuntany obok Sa Calobra i wokół dzikiego Cap de Formentor do kotwicowiska pod klifami w Cala Sant Vicenç.",
+          "description": "Kolejny wymagający dzień wzdłuż wybrzeża i znów warto wyjść wcześnie. Góry dalej spadają do wody za Sa Calobra i wąwozem Torrent de Pareis, oba warte powolnego przejścia z aparatem w ręku. Głównym punktem jest Cap de Formentor, północny cypel wyspy, gdzie wiatr potrafi mocno dusić wokół przylądka, a morze się piętrzy, gdy bryza spotyka falę.\n\nGdy już skręcisz za róg, Cala Sant Vicenç leży pod wysokimi czerwonymi klifami, zwrócona na północny wschód. Kotwicowisko jest w głębi zatoki nad piaskiem, wciśnięte tak daleko, jak pozwala głębokość. Małe plaże na brzegu dają gdzie wyciągnąć ponton. Zatoka jest odsłonięta na wszystko z północy i wschodu, więc traktuj ją jako postój przy dobrej pogodzie i miej oko na wieczorną prognozę.",
+          "thingsToDo": [
+            "Zdjęcia Torrent de Pareis przy Sa Calobra",
+            "Opłynięcie klifów Cap de Formentor",
+            "Wyciągnięcie pontonu na plażę Cala Sant Vicenç",
+            "Snorkeling przy skalnych głowach pod klifami"
+          ],
+          "mooringTip": "To zatoczka wyłącznie kotwiczna, bez żadnej infrastruktury. Rzuć kotwicę na piaszczystej łacie w głębi zatoki i porządnie zabuksuj, ale bądź gotów przejść do Pollençy, jeśli wiatr przejdzie w nocy na północ lub wschód."
+        },
+        "4": {
+          "shortDescription": "Spokojne pół dnia wokół Formentora do osłoniętej zatoki Pollença, z postojem na boi i kąpielą pod sosnami po drodze.",
+          "description": "Po dwóch ciężkich dniach wzdłuż wybrzeża ten jest wytchnieniem. To ledwie parę mil z powrotem wokół Cap de Formentor i do szerokiej zatoki Pollença, więc nie ma po co się spieszyć z wyjściem. Cala Formentor, długa plaża w otoczeniu sosen po północnej stronie, ma wyłożone boje chroniące trawę morską; weź jedną na obiad i kąpiel, zanim zjawią się łodzie z turystami.\n\nSamo Port de Pollença leży w głębi zatoki, to spokojne miasteczko wypoczynkowe, w którym miejscowi wciąż spędzają lato. Real Club Náutico przyjmuje jachty do jakichś dwudziestu pięciu metrów, a długa promenada zaprasza na wieczorny spacer. Zrób tu zapasy, jeśli trzeba; miasteczko ma porządne supermarkety, a w niedzielę odbywa się targ w Pollençy w głębi lądu.",
+          "thingsToDo": [
+            "Boja przy plaży Cala Formentor",
+            "Kąpiel pod sosnami Formentora",
+            "Spacer nadmorską promenadą Pollençy",
+            "Zaopatrzenie w miejskich supermarketach"
+          ],
+          "mooringTip": "Boje w Cala Formentor są w sezonie na zasadzie kto pierwszy, ten lepszy i znikają przed południem. W Port de Pollença weź miejsce w Club Náutico albo stań na kotwicy przy miasteczku na piasku; zatoka jest spokojna przy typowej bryzie, ale otwarta na północny wschód."
+        },
+        "5": {
+          "shortDescription": "Krótkie przejście za cypel do zatoki Alcúdia, łączące nowoczesną marinę z otoczonym murami rzymskim starym miastem tuż w głębi lądu.",
+          "description": "Dziś ledwie dziesięć mil, przez cypel Cap des Pinar oddzielający dwie wielkie północne zatoki. Zatoka Alcúdia jest szeroka i płytka, z pewnym wiatrem termicznym narastającym po południu, więc żegluje się po niej lepiej, niż wygląda na mapie. Wiele załóg traktuje to jako spokojny poranek i długi obiad.\n\nMarina w Alcúdii jest dobrze wyposażona, z paliwem i serwisem, a powodem do postoju jest spacer do starego miasta. Alcúdia była rzymską stolicą wyspy, a jej średniowieczne mury, wąskie uliczki i ruiny Pollentii leżą w zasięgu krótkiego spaceru. Wróć do portu na rybę z grilla i zimne piwo. Jeśli rodzina chce piasku, Platja d'Alcúdia ciągnie się kilometrami wzdłuż zatoki.",
+          "thingsToDo": [
+            "Spacer po średniowiecznych murach starej Alcúdii",
+            "Rzymskie ruiny Pollentii",
+            "Tankowanie i zaopatrzenie w marinie",
+            "Popołudnie na plaży Platja d'Alcúdia"
+          ],
+          "mooringTip": "Marina w Alcúdii to wygodny wybór, z paliwem i wodą przy nabrzeżu. Możesz też stanąć na kotwicy przy długiej plaży na dwóch do czterech metrach piasku, ale trzyma lepiej dalej od brzegu, a kotwicowisko jest otwarte na północ."
+        },
+        "6": {
+          "shortDescription": "Z zatoki i wokół północno-wschodnich przylądków do Cala Ratjada, portowego miasteczka z dobrymi plażami i latarnią na klifie.",
+          "description": "Dziś na dobre opuszczasz północne zatoki i przechodzisz na przeciwległy narożnik wyspy. Opłyń Cap des Freu z zapasem od skał, a wybrzeże skręci na południe w stronę Cala Ratjada. Niemal całą drogę masz otwartą wodę, więc jeśli północno-wschodni wiatr zechce współpracować, czeka cię poranek porządnej żeglugi.\n\nCala Ratjada to stary port rybacki, który wyrósł na kurort, nie tracąc przy tym portu. Marina mieści około dwustu jednostek, a woda w środku pozostaje spokojna przez całą noc. Na lądzie plaże Cala Agulla i Cala Gat są w zasięgu krótkiego spaceru, a latarnia Capdepera na cyplu warta jest wspinaczki dla widoku aż po Minorkę przy dobrej widoczności. Restauracje rybne wokół portu to lokalny magnes.",
+          "thingsToDo": [
+            "Kąpiel w Cala Agulla albo Cala Gat",
+            "Wejście do latarni Capdepera po widok",
+            "Świeża ryba wokół portu rybackiego",
+            "Wieczorny spacer po nabrzeżu"
+          ],
+          "mooringTip": "Club Nàutic Cala Ratjada ma miejsca dla gości i osłania od przeważającej północy i wschodu; w lipcu i sierpniu dzwoń wcześniej. Kotwiczenie przy Cala Agulla działa za dnia przy ustabilizowanej pogodzie, ale jest zbyt odsłonięte na wygodną noc."
+        },
+        "7": {
+          "shortDescription": "W dół wschodniego wybrzeża do Porto Cristo, wąskiej naturalnej zatoki osłaniającej flotę rybacką, tuż nad słynnymi jaskiniami Drach.",
+          "description": "Wschodnie wybrzeże żegluje się łagodniej niż zachodnie, to pasmo niskich klifów poprzecinanych wąskimi zatoczkami. Porto Cristo leży jakieś dwadzieścia pięć mil na południe, wciśnięte w szczelinę wybrzeża, która od stuleci chroni łodzie rybackie. Droga w dół jest prosta, a popołudniowa bryza zwykle wypełnia się z południowego wschodu.\n\nGłówna atrakcja miasteczka jest pod ziemią: Coves del Drac, ogromny system jaskiń z podziemnym jeziorem i codziennymi koncertami, leży pięć minut spacerem od nabrzeża. Sam port jest przytulny i przyjazny, z lepszą osłoną niż otwarte kalanki po obu stronach. Weź lody na nabrzeżu, przespaceruj się po małej plaży w głębi zatoki i ciesz się łatwiejszym wieczorem po tygodniu dłuższych przelotów.",
+          "thingsToDo": [
+            "Zwiedzanie podziemnego jeziora w Coves del Drac",
+            "Spacer po plaży w głębi zatoki",
+            "Włóczęga po starym porcie rybackim",
+            "Zachód słońca z nabrzeża"
+          ],
+          "mooringTip": "Club Náutico Porto Cristo przyjmuje jednostki do jakichś dwudziestu metrów i czterech metrów zanurzenia; wejście jest wąskie, więc wchodź wolno i zadzwoń wcześniej po miejsce. W środku jest mało miejsca na kotwicę, więc rezerwuj, jeśli chcesz zostać na noc."
+        },
+        "8": {
+          "shortDescription": "Krótki skok na południe do Portocolom, wielkiego naturalnego portu z rezerwowalnym polem boi i jednym z najspokojniejszych noclegów tego wybrzeża.",
+          "description": "Łatwy poranek, ledwie kilkanaście mil w dół wybrzeża, więc nie ma powodu wychodzić wcześnie. Portocolom to jeden z największych naturalnych portów na wyspie, szeroka osłonięta laguna z wąskim wejściem i prawdziwym klimatem roboczej wioski. Stare szopy rybackie wciąż stoją wzdłuż części brzegu.\n\nW środku duże pole boi daje spokojną, pewną noc przy każdym wietrze i trzyma znacznie lepiej niż otwarta kalanka. Małą marinę i boje można zarezerwować z wyprzedzeniem. Na lądzie latarnia Far de Portocolom znaczy wejście, a plaża Cala Marçal jest w zasięgu krótkiego spaceru, jeśli marzy ci się piasek. To dobre miejsce, żeby zwolnić, zrobić pranie i zjeść dobrze bez tłumu.",
+          "thingsToDo": [
+            "Boja w naturalnym porcie",
+            "Spacer do latarni Portocolom",
+            "Popołudnie na plaży Cala Marçal",
+            "Kolacja wśród starych szop rybackich"
+          ],
+          "mooringTip": "Zarezerwuj boję albo miejsce w marinie z wyprzedzeniem; pole boi to najlepiej osłonięty nocleg na tym wybrzeżu i w sezonie się zapełnia. Kanał wejściowy jest oznakowany, ale płytki po bokach, więc wchodź jego środkiem."
+        },
+        "9": {
+          "shortDescription": "Na południe wzdłuż klifów do Cala Santanyí, zwartej piaszczystej zatoczki w otoczeniu sosen, ze skalnym łukiem Es Pontàs tuż za rogiem.",
+          "description": "Wybrzeże zaczyna tu wyglądać bardziej południowo, klify są niższe, a kalanki bardziej piaszczyste. Do Cala Santanyí jest jakieś osiemnaście mil, łatwy półwiatr przy typowej bryzie. Zatoczka jest mała, może siedemdziesiąt metrów drobnego piasku w otoczeniu sosen i niskich skał, a woda opada łagodnie nad piaszczystym dnem, które dobrze trzyma.\n\nTuż na zachód leży Es Pontàs, naturalny kamienny łuk rozsławiony przez wspinaczy; przejdź obok pod żaglami, żeby zobaczyć go w najlepszym ujęciu. Sama kalanka zapełnia się latem jednodniowymi turystami z plaży, więc popołudniowe przybycie często oznacza więcej miejsca, gdy tłum się przerzedza. To kotwicowisko na dobrą pogodę, dobrze osłonięte od północy po północny wschód, ale otwarte na południe.",
+          "thingsToDo": [
+            "Kotwica przy piaszczystej plaży Cala Santanyí",
+            "Przejście pod żaglami obok łuku Es Pontàs",
+            "Snorkeling przy skalistych krawędziach zatoczki",
+            "Kąpiel o zachodzie słońca, zanim odpłyną łodzie"
+          ],
+          "mooringTip": "Kotwicz na piaszczystej łacie na środku zatoczki, na trzech do pięciu metrach; trzyma dobrze i osłania od północy i północnego wschodu. Nie ma tu boi ani żadnej infrastruktury, a zatoczka jest otwarta na każdy wiatr z południa, więc pilnuj prognozy."
+        },
+        "10": {
+          "shortDescription": "Wokół południowego cypla wyspy przy Cap de ses Salines i wzdłuż niskiego południowego brzegu do wąskiej, otoczonej klifami zatoki Cala Pi.",
+          "description": "Dziś opływasz najbardziej wysunięty na południe punkt Majorki. Cap de ses Salines jest niski i skalisty, z latarnią, a prąd przeciwny wiatrowi potrafi wzbić przy nim krótką falę, więc zaplanuj przejście na spokojniejsze godziny poranne. Za przylądkiem wybrzeże się wypłaszcza i otwiera w stronę solnisk i długich plaż południa.\n\nNagrodą jest Cala Pi: głęboka, wąska zatoka niczym kanion wcięty w klify, z małą piaszczystą plażą w głębi i starymi szopami rybackimi na skale. To efektowne miejsce na rzucenie kotwicy, choć miejsca jest mało, a głębokość szybko się kończy w głębi. Po wielkiej scenografii zachodniego wybrzeża to mniejsza, cichsza dziura w skale, warta trochę upierdliwego podejścia.",
+          "thingsToDo": [
+            "Opłynięcie latarni Cap de ses Salines",
+            "Kotwica w kanionie zatoki Cala Pi",
+            "Spacer do wieży strażniczej na klifie",
+            "Kąpiel przy małej piaszczystej plaży"
+          ],
+          "mooringTip": "Miejsca w Cala Pi jest niewiele, a zatoka szybko się zwęża, więc przypłyń wcześnie po stanowisko i rozważ linę na brzeg, żeby ograniczyć cyrkulację. Jest dobrze osłonięta poza południem i południowym zachodem, które wpuszczają falę prosto do środka."
+        },
+        "11": {
+          "shortDescription": "Na południe, w morze, do parku narodowego Cabrera, chronionego archipelagu przejrzystej wody i zamku na wzgórzu, gdzie każdy postój trzeba zarezerwować wcześniej.",
+          "description": "To dzień, który wymaga planowania na długo przed odejściem od nabrzeża. Cabrera jest parkiem narodowym, a jedyny sposób, by tu zostać, to jedna z pięćdziesięciu boi w głównym porcie, zarezerwowana wcześniej na stronie rządu Balearów wraz z zezwoleniem. Kotwiczenie gdziekolwiek w parku jest zabronione.\n\nPrzejście to około dziesięciu mil otwartej wody na południe od wybrzeża, zwykle przyjemnym półwiatrem. Kiedy już staniesz na boi, nagroda jest realna: woda tak przejrzysta, że policzysz ogniwa łańcucha sąsiedniego jachtu, zamek z czasów napoleońskich na wzgórzu nad portem i szlaki na lądzie pod okiem strażników. Weź ponton albo krótki rejs do groty morskiej Cova Blava, gdzie światło przechodzące przez wodę świeci w południe głębokim błękitem.",
+          "thingsToDo": [
+            "Zajęcie zarezerwowanej boi w porcie Cabrera",
+            "Wejście do zamku na wzgórzu",
+            "Ponton do groty Cova Blava",
+            "Snorkeling w chronionej, przejrzystej wodzie parku"
+          ],
+          "mooringTip": "W Cabrerze nie wolno kotwiczyć nigdzie; musisz zarezerwować online jedną z pięćdziesięciu boi z wyprzedzeniem i mieć przy sobie zezwolenie, a lipiec i sierpień wyprzedają się wcześnie. Boje są oznaczone kolorami według wielkości jednostki, więc rezerwuj właściwą dla długości swojego jachtu."
+        },
+        "12": {
+          "shortDescription": "Z powrotem na północ, na wyspę, na dzień przy Es Trenc, najdłuższej niezabudowanej plaży Majorki, z bladym piaskiem i płytką wodą za starymi solniskami.",
+          "description": "Krótkie przejście z powrotem na główną wyspę, jakieś dziesięć mil, wysadza cię przy jednym z ostatnich długich odcinków niezabudowanego wybrzeża na Balearach. Es Trenc ciągnie się przez parę mil bladego piasku za dawnymi solniskami, bez hoteli tłoczących się przy brzegu, a woda przechodzi z turkusu w głęboki błękit nad czystym piaszczystym dnem.\n\nKotwiczenie przy dobrej pogodzie jest proste: wybierz głębokość od plaży na piasku i dopłyń wpław na spacer po wydmach. Osłony tu praktycznie nie ma, więc to postój wyłącznie na ustabilizowaną pogodę i nie noc, w którą chcesz dać się zaskoczyć. Przypłyń na popołudnie, nacieszy się przestrzenią i kolorem wody, a przed wieczorem przejdź do osłoniętego portu, jeśli prognoza jest choć trochę niepewna.",
+          "thingsToDo": [
+            "Kąpiel na turkusowych płyciznach Es Trenc",
+            "Spacer po wydmach za solniskami",
+            "Kotwica na czystym piasku przy plaży",
+            "Długi obiad na pokładzie na kotwicy"
+          ],
+          "mooringTip": "Kotwicz na dwóch do czterech metrów piasku, dobry kawałek od plaży; trzyma znakomicie, ale nie ma tu żadnej osłony, więc zatrzymuj się tylko przy ustabilizowanej prognozie i nigdy nie planuj noclegu przy niepewnej pogodzie."
+        },
+        "13": {
+          "shortDescription": "Na wschód do Cala Figuera, fiordowego portu rybackiego, który wciąż codziennie wyładowuje połów i pozostaje spokojny między dwoma skalnymi ramionami.",
+          "description": "Wyluzowana żegluga z powrotem na wschód wzdłuż południowego wybrzeża, po części po wczorajszej wodzie, zanim brzeg znów podniesie się w niskie klify. Cala Figuera jest najładniejszym z roboczych portów po tej stronie, zatoką w kształcie litery Y, gdzie domy rybaków schodzą prosto do wody, a łodzie wciąż wychodzą o świcie i sprzedają połów po powrocie.\n\nZatoka jest wąska i płytka w głębi odnóg, więc pilotuj ostrożnie i weź miejsce w małym porcie zamiast próbować kotwiczyć w ciasnym kanale. Na lądzie jest cicho, z paroma dobrymi tarasami z owocami morza patrzącymi na łodzie z góry i spacerami po klifach w stronę Cala Santanyí. Po Cabrerze i Es Trenc wieczór przy wracających kutrach to właściwa nuta na zamknięcie pętli.",
+          "thingsToDo": [
+            "Wyładunek kutrów o świcie",
+            "Owoce morza na tarasie nad portem",
+            "Ścieżka po klifie w stronę Cala Santanyí",
+            "Zdjęcia fiordowych bliźniaczych odnóg"
+          ],
+          "mooringTip": "Zatoka jest ciasna i mieliznowata w głębi odnóg, więc weź miejsce w małym Port de Cala Figuera zamiast kotwiczyć. Zadzwoń wcześniej, bo miejsc dla gości jest niewiele; port jest dobrze osłonięty od zachodu i północnego zachodu, ale wejście robi się nieprzyjemne przy silnym wietrze ze wschodu."
+        },
+        "14": {
+          "shortDescription": "Długi ostatni etap na zachód wokół Cap de ses Salines i Cap Blanc do zatoki Palma, żeby zamknąć krąg.",
+          "description": "Ostatni dzień to porządny przelot, więc wczesny start się opłaca. Z Cala Figuera schodzisz z powrotem do Cap de ses Salines i skręcasz na zachód wzdłuż niskiego południowego brzegu, znów obok Es Trenc i klifów pod Cap Blanc, a potem w szeroką zatokę Palma. Licz na pełen dzień pod żaglami, trzydzieści kilka mil, zależnie od tego, jak daleko w morze zepchnie cię wiatr.\n\nZatoka zwykle daje dobrą bryzę morską na drogę do środka, a katedra i panorama miasta rosną przed dziobem, gdy podchodzisz do brzegu. Zostaw czas na tankowanie, wodę i ogarnięcie jachtu przed porannym zdaniem. To właściwe zakończenie pętli: dwa tygodnie, niemal całe wybrzeże i praktycznie każdy rodzaj postoju, jaki wyspa ma do zaoferowania, od otwartego piasku po boje w parku narodowym.",
+          "thingsToDo": [
+            "Żegluga długim południowym wybrzeżem obok Cap Blanc",
+            "Wejście do zatoki Palma pod żaglami",
+            "Tankowanie i woda przed zdaniem jachtu",
+            "Toast za pętlę z katedrą w tle"
+          ],
+          "mooringTip": "Zarezerwuj miejsce na powrót albo postój bazy czarterowej w Palmie przed przybyciem, bo mariny w zatoce są w sezonie oblegane. Wejdź, zanim popołudniowa bryza osiągnie szczyt, żeby ostatnie podejście i cumowanie było łatwiejsze."
+        }
+      }
+    },
+    "marbella": {
+      "metaTitle": "Costa del Sol z Marbelli w 7 dni | Boat4You",
+      "metaDesc": "Tygodniowy czarter jachtu z Marbelli wzdłuż Costa del Sol, z postojami w Cabopino, Fuengirola, Benalmádena, Torremolinos i Málaga.",
+      "days": {
+        "1": {
+          "shortDescription": "Łatwa 8-milowa rozgrzewka na wschód, obok superjachtów Puerto Banús, do kameralnej mariny i złotych wydm Cabopino.",
+          "description": "Pierwszy etap jest z założenia krótki, więc nie ma powodu rzucać cum przed późnym przedpołudniem. Wyjdź z Marbelli i przejdź osiem mil na wschód, wzdłuż wybrzeża pełnego pól golfowych i białych bloków apartamentów. Po drodze minisz Puerto Banús z pomostami zastawionymi megajachtami, na które warto pogapić się z kokpitu. Cabopino jest po tym wszystkim ulgą: zwarta, bezpretensjonalna marina w otoczeniu sosen i wydm Artola, jednego z ostatnich odcinków dzikiego piasku na tym wybrzeżu. Zanim wejdziesz do środka, stań na kotwicy przy plaży na kąpiel. Na lądzie znajdź chiringuito grillujące espetos, sardynki nadziane na trzcinę i pieczone nad żarem z drewna oliwnego w łódce wypełnionej piaskiem. To smak całego wybrzeża Málagi w jednym kęsie.",
+          "thingsToDo": [
+            "Kąpiel przy pomniku przyrody, wydmach Artola",
+            "Espeto de sardinas w chiringuito",
+            "Podziwianie megajachtów w Puerto Banús",
+            "Spacer do wieży strażniczej Torre Ladrones"
+          ],
+          "mooringTip": "W Cabopino cumujesz rufą do nabrzeża i przy wiatrach z północy jest spokojnie, ale marina jest mała i w sierpniu zapełnia się szybko, więc zgłoś się przez radio albo rezerwuj. Puerto Banús, cztery mile z powrotem, to droższa i bardziej ostentacyjna alternatywa."
+        },
+        "2": {
+          "shortDescription": "Dwanaście mil na wschód do Fuengiroli, gdzie odrestaurowany maurytański zamek patrzy z góry na jedną z najdłuższych promenad Costa del Sol.",
+          "description": "Dziś dłuższy skok, choć nic męczącego: dwanaście mil otwartej wody, z bryzą morską zwykle wypełniającą się koło południa. Fuengirola bez kompleksów jest miastem kurortowym, ale nosi to dobrze. Marina chowa się za falochronem i ma sporo miejsca, więc rzadko musisz się martwić o stanowisko. Na wzgórzu nad ujściem rzeki stoi Castillo Sohail, dziesiątowieczna maurytańska twierdza, która latem gości koncerty pod gołym niebem. Przejdź się po Paseo Marítimo, ciągnącym się kilometrami obok barów i placów zabaw. Załogi z dziećmi powinny znaleźć czas na Bioparc, naprawdę dobre zoo zbudowane wokół wybiegów, przez które się przechodzi. Kolacja jest tu prosta. Wybierz stolik przy plaży, zamów smażoną rybę i zimne piwo i patrz, jak promenada płynie obok.",
+          "thingsToDo": [
+            "Wejście do dziesięciowiecznego Castillo Sohail",
+            "Zoo Bioparc Fuengirola z wybiegami do przejścia",
+            "Spacer długą promenadą Paseo Marítimo",
+            "Smażona ryba i zimne piwo w chiringuito"
+          ],
+          "mooringTip": "Marina w Fuengiroli przyjmuje rufą do nabrzeża i jest dobrze osłonięta przy większości pogody, z większą liczbą wolnych miejsc niż mniejsze porty na tym wybrzeżu. Nawet w szczycie sezonu zwykle wejdziesz bez rezerwacji."
+        },
+        "3": {
+          "shortDescription": "Spokojne sześć mil do fotogenicznej Puerto Marina w Benalmádenie, z buddyjską stupą, rekordzistką Europy, na wzgórzu powyżej.",
+          "description": "Dziś tylko sześć mil, jakaś godzina pod żaglami, więc popołudnie zostaje wolne. Puerto Marina w Benalmádenie jest powodem, żeby tu przypłynąć: fantazja z lat 80. pełna łukowatych mostków, wykładanych płytkami przejść i budynków, które zdają się wyrastać z wody, i prawdopodobnie najczęściej fotografowana marina w kraju. Jest popularna, więc jeśli płyniesz w sierpniu, zarezerwuj miejsce. Po zacumowaniu wjedź kolejką linową znad kurortu na Monte Calamorro po długi widok w dół wybrzeża. Jeszcze wyżej stoi Enlightenment Stupa, biały buddyjski pomnik wysoki na trzydzieści trzy metry, największy tego rodzaju w Europie. Po powrocie nad wodę zajmij stolik w cieniu, zamów tinto de verano, uczciwą lokalną odpowiedź na sangríę, i popatrz, jak jachty wchodzą i wychodzą.",
+          "thingsToDo": [
+            "Spacer po wenecko-maurytańskich nabrzeżach Puerto Marina",
+            "Kolejka linowa na Monte Calamorro",
+            "33-metrowa Enlightenment Stupa",
+            "Tinto de verano w kawiarni przy marinie"
+          ],
+          "mooringTip": "Cumujesz rufą do nabrzeża, a basen jest całkowicie zamknięty, więc prześpisz noc bez zakłóceń. To jednak ruchliwa marina, a sierpień zapełnia się z tygodniowym wyprzedzeniem, więc rezerwuj przed przybyciem, zamiast liczyć na szczęście przez UKF."
+        },
+        "4": {
+          "shortDescription": "Krótki, czteromilowy przeskok do Torremolinos i La Carihuela, starej dzielnicy rybackiej, która wciąż smaży najlepsze pescaíto na tym brzegu.",
+          "description": "Obie mariny dzielą ledwie cztery mile, więc to poranek, który można potraktować leniwie. W samym Torremolinos nie ma portu; zamiast tego rzucasz kotwicę przy La Carihuela na czterech do sześciu metrach dobrze trzymającego piasku, osłonięty od każdego wiatru z północy. La Carihuela to stara rybacka dzielnica miasta i zachowała swój charakter mimo hoteli, które wyrosły dookoła. Wąskie uliczki wychodzą na nadmorski deptak obstawiony marisquerías, gdzie dzienny połów trafia prosto na grill. Zejdź na ląd głodny. Zamów gambas al ajillo, talerz smażonych sardeli i kolejne espetos dymiące na piasku. Jeśli chcesz rozprostować nogi z dala od plaży, ogrody Molino de Inca nad miastem otulają odrestaurowany stary młyn wodny palmami i bijącymi źródłami.",
+          "thingsToDo": [
+            "Kotwica przy piaszczystej plaży La Carihuela",
+            "Gambas al ajillo w dzielnicy rybackiej",
+            "Włóczęga starymi uliczkami La Carihuela",
+            "Ogrody z młynem wodnym Molino de Inca"
+          ],
+          "mooringTip": "To postój na kotwicy, a nie noc w marinie, więc dobierz pogodę; piasek trzyma dobrze, ale redę osłania tylko północ. Jeśli wiatr przejdzie na dopychający, marina w Benalmádenie leży cztery mile z powrotem i przyjmuje spóźnialskich."
+        },
+        "5": {
+          "shortDescription": "Osiem mil do samej Málagi, z cumowaniem przy Muelle Uno pod maurytańską twierdzą, w rodzinnym mieście Picassa.",
+          "description": "Dziś wybrzeże wreszcie daje ci prawdziwe miasto. Osiem mil prowadzi do starego portu Málagi, gdzie przy Muelle Uno zacumujesz dwie minuty spacerem od katedry. To dzień, żeby zostawić jacht za sobą. Wejdź przez mury Alkazaby, jedenastowiecznej maurytańskiej cytadeli piętrzącej się po zboczu w stronę zamku Gibralfaro, a potem zejdź w uliczki do Museo Picasso, w mieście, w którym malarz się urodził. Obiad należy się w Mercado de Atarazanas, pod starym żelaznym dachem i maurytańską bramą: dojrzewający jamón ibérico, marynowane oliwki, kieliszek słodkiego málagijskiego vermútu prosto z beczki. Kiedy światło robi się złote, tarasy wzdłuż Muelle Uno są miejscem na finał, port z jednej strony, wieża katedry z drugiej.",
+          "thingsToDo": [
+            "Wejście do jedenastowiecznej twierdzy Alcazaba",
+            "Museo Picasso w mieście jego urodzenia",
+            "Jamón i vermút w Mercado Atarazanas",
+            "Drinki o zachodzie słońca na tarasach Muelle Uno"
+          ],
+          "mooringTip": "Muelle Uno jest w pełni osłonięte i stawia cię w samym mieście, ale miejsca są w sezonie drogie i szybko znikają, więc rezerwuj mocno z wyprzedzeniem. Przy ograniczonym budżecie marina w Benalmádenie dwanaście mil wstecz jest tańszą bazą, z pociągiem nadmorskim prosto do centrum."
+        },
+        "6": {
+          "shortDescription": "Sześć spokojnych mil na wschód od miasta do Torre de Benagalbón, rybackiej wioski ze starą wieżą strażniczą i grotami morskimi w pobliżu.",
+          "description": "Po zgiełku Málagi krótkie sześć mil na wschód wysadza cię w zupełnie innym świecie. Torre de Benagalbón leży na skraju Rincón de la Victoria i wciąż jest czynną wioską rybacką, z której łodzie wychodzą o świcie. Kotwicz przy plaży na piasku na czterech do sześciu metrach, przy wietrze z północy stoi się tu pewnie. Przysadzista szesnastowieczna wieża strażnicza pilnuje cypla, jedna z całego łańcucha zbudowanego, by ostrzegać przed korsarzami berberyjskimi. Na lądzie nadmorska ścieżka Sendero Litoral biegnie na wschód wzdłuż brzegu i przez stare tunele kolejowe wykute w klifach. Jeśli masz na pokładzie deskę SUP, do zatoczek jest tylko kawałek wiosłowania; Cueva del Tesoro, jedna z nielicznych w Europie grot wyżłobionych przez morze, leży kawałek dalej wzdłuż wybrzeża. Obiad to cokolwiek grilluje najbliższe chiringuito.",
+          "thingsToDo": [
+            "Kotwica pod szesnastowieczną wieżą strażniczą",
+            "Tunele kolejowe na ścieżce Sendero Litoral",
+            "SUP po zatoczkach w stronę Cueva del Tesoro",
+            "Obiad w chiringuito przy plaży"
+          ],
+          "mooringTip": "Znów kotwicowisko, a nie miejsce w marinie, osłonięte wyłącznie od północy, więc miej oko na nocną prognozę. Jeśli się zmieni, mała marina w Vélez leży cztery mile dalej na wschód i przyjmie cię burtą do nabrzeża."
+        },
+        "7": {
+          "shortDescription": "Długa droga do domu: trzydzieści dwie mile na zachód z powrotem do Marbelli, z postojem na kąpiel i tankowaniem w Puerto Banús.",
+          "description": "Ostatni dzień jest tym największym: ponad trzydzieści mil z powrotem na zachód, więc zwykle podnosimy kotwicę o ósmej. To długi, równy półwiatr wzdłuż wszystkiego, co mijałeś przez cały tydzień, wybrzeże odwija się w odwrotnej kolejności. Przerwij go kąpielą, gdy upał narasta, a załoga zaczyna się wiercić. Podchodząc pod Marbellę, wpadnij do Puerto Banús, żeby dobić paliwo i spłukać sól przed zdaniem jachtu; bazy czarterowe oczekują pełnych zbiorników i posprzątanego pokładu. Celuj w cumowanie przed wczesnym popołudniem, żeby nie było szarpaniny przy oddawaniu kluczy. Wieczór zostaje wtedy wolny na to, co i tak wszyscy zapamiętają: ostatnią załogową kolację na Paseo Marítimo w Marbelli, z nogami do góry, spalonym nosem i wesołym sporem o to, które kotwicowisko było najlepsze.",
+          "thingsToDo": [
+            "Postój na kąpiel na długim przelocie na zachód",
+            "Tankowanie i spłukanie jachtu w Puerto Banús",
+            "Zdanie jachtu przed wczesnym popołudniem",
+            "Pożegnalna kolacja na Paseo Marítimo w Marbelli"
+          ],
+          "mooringTip": "Puerto Banús przyjmuje rufą do nabrzeża i liczy sobie za adres; stanowisko paliwowe jest przy wejściu, więc zatankuj, zanim ruszysz szukać miejsca. Jeśli baza na to pozwala, Marina la Bajadilla tuż na wschód kosztuje mniej więcej połowę tego za ostatnią noc."
+        }
+      }
+    },
+    "palamos": {
+      "metaTitle": "7 dni: Costa Brava z Palamós | Boat4You",
+      "metaDesc": "Siedem dni żeglugi z Palamós wzdłuż Costa Brava przez Tossa, Lloret i Blanes, a potem wybrzeżem Maresme do Calella i Mataró i z powrotem.",
+      "days": {
+        "1": {
+          "shortDescription": "Spokojny, sześciomilowy skok na południe, żeby załoga się rozkręciła, obok wysepek Formigues, gdzie kiedyś starły się dwie floty.",
+          "description": "Pierwszy etap jest krótki i to zamierzone. Sześć mil wzdłuż brzegu wystarczy, żeby załoga złapała równowagę, ogarnęła liny i poczuła łódź, zanim ruszymy na coś dłuższego. Jakąś milę od brzegu wynurzają się wysepki Formigues, niskie i skaliste; w 1285 roku starły się tu floty francuska i aragońska, a dziś dno wokół nich daje świetny snorkeling, jeśli woda jest spokojna. Port d'Aro przyjmuje rufą do kei i osłania od każdego wiatru z północy, choć przy stabilnej pogodzie zatoka tuż za portem dobrze trzyma na piasku, na pięciu do siedmiu metrach. Na lądzie ścieżka Camí de Ronda prowadzi przez cyple na północ i południe od plaży. Dzień zwykle kończymy miską suquet de peix w Villa Mas — tę rybną zupę to wybrzeże robi lepiej niż większość.",
+          "thingsToDo": [
+            "Snorkeling nad polem bitwy przy Illes Formigues",
+            "Spacer cyplami szlakiem Camí de Ronda",
+            "Suquet de peix w Villa Mas",
+            "Kąpiel w długim łuku plaży Platja d'Aro"
+          ],
+          "mooringTip": "Port d'Aro przyjmuje rufą do kei i jest spokojny nawet przy wietrze z północy; w lipcu i sierpniu rezerwuj z wyprzedzeniem. Przy stabilnej prognozie otwarta zatoka dobrze trzyma na piasku, na pięciu do siedmiu metrach."
+        },
+        "2": {
+          "shortDescription": "Ledwie cztery mile do korkowego miasteczka, gdzie klasztor z X wieku wciąż trzyma starą dzielnicę nad portem.",
+          "description": "Cztery mile to nic, więc nie ma po co spieszyć się z rzucaniem cum. Sant Feliu dorobiło się na korku i modernizmie, i jedno, i drugie wciąż widać na uliczkach za nabrzeżem. W centrum stoi stary klasztor benedyktynów, którego rdzawoczerwone łuki podkowiaste pamiętają X wiek i warte są dziesięciu minut marszu pod górę. Marina trzyma cię rufą do kei i zdejmuje północny wiatr z burty. Z nabrzeża Camí de Ronda biegnie na północ wokół klifów do Cala Salionç — zatoczki, do której dotrzesz tylko pieszo albo pontonem, dlatego jest cicha nawet w sierpniu. Przed kolacją zamów w Bar Bistrot cremat, płonącą mieszankę rumu z kawą, którą warzyli tu rybacy. W warsztatach starego miasta wciąż kupisz korek na arkusze, jeśli szukasz nietypowej pamiątki.",
+          "thingsToDo": [
+            "Zobacz klasztor benedyktynów z X wieku",
+            "Podskocz pontonem do zatoczki Cala Salionç",
+            "Kawa cremat w Bar Bistrot",
+            "Kup korek w warsztatach starego miasta"
+          ],
+          "mooringTip": "Marina w Sant Feliu przyjmuje rufą do kei i blokuje północny wiatr. Na postój kąpielowy Cala Salionç trzyma na skalistym dnie, na pięciu do siedmiu metrach, ale tylko przy stabilnej pogodzie."
+        },
+        "3": {
+          "shortDescription": "Sześć mil do jedynego katalońskiego miasteczka nad morzem, które zachowało pełny pierścień średniowiecznych murów — lepiej dopłynąć, zanim port się zapełni.",
+          "description": "Wychodź do dziewiątej, jeśli dasz radę. Port w Tossa jest mały, a miejsca schodzą wcześnie — w szczycie sezonu zwykle nie ma ich już po czwartej, więc wczesny start się opłaca. Wszyscy przypływają tu dla Vila Vella, dwunastowiecznych murów, które wciąż wieńczą cypel nad plażą. Żadne inne miasto na tym wybrzeżu nie utrzymało swoich murów tak jak Tossa, a wejście przez bramy o zmierzchu, gdy w dole zapalają się latarnie, to widok, który zostaje w głowie. Jeśli port jest pełny, rzuć kotwicę w Cala Giverola kawałek na północ: czyste piaszczyste dno na czterech do sześciu metrach i woda w kolorze basenu. Na kolację Can Simón robi porządne mar i muntanya, czyli krewetki w parze z królikiem albo kurczakiem. Zarezerwuj stolik.",
+          "thingsToDo": [
+            "Przejdź średniowieczne mury Vila Vella",
+            "Kotwica i kąpiel w Cala Giverola",
+            "Mar i muntanya w Can Simón",
+            "Zachód słońca z murów nad klifem"
+          ],
+          "mooringTip": "Miejsca w Tossa kończą się wczesnym popołudniem; bądź przycumowany przed czwartą albo stań na kotwicy w pobliskiej Cala Giverola — piaszczyste dno, cztery do sześciu metrów."
+        },
+        "4": {
+          "shortDescription": "Kolejne sześć mil do najgłośniejszego kurortu wybrzeża, który ratuje tarasowy renesansowy ogród zawieszony nad morzem.",
+          "description": "Lloret to miejsce, w którym Costa Brava przechodzi na komercję — albo kupisz ten gwar, albo poszukasz spokojniejszych kątów. Czego nie wolno przegapić, to ogród Santa Clotilde, założony w 1919 roku na tarasach schodzących klifem ku wodzie: aleje cyprysów i kamienne schody, a w prześwitach samo morze. Milę na południe od promenady Cala Banys wtula się w sosny i daje spokojniejsze kotwicowisko niż główna plaża — dobre trzymanie na piasku, cztery do sześciu metrów. Marina przyjmie cię rufą do kei, jeśli wolisz spać przy pomoście. Sprzęt wodny bez problemu wypożyczysz z centralnej plaży, a na drinka z widokiem świetnie nadają się tarasy nad skałami. Potem miasto się budzi i możesz się przyłączyć albo wrócić na pokład.",
+          "thingsToDo": [
+            "Spacer po tarasowych ogrodach Santa Clotilde",
+            "Kotwiczenie w sosnach Cala Banys",
+            "Skuter wodny z centralnej plaży",
+            "Drink o zachodzie na tarasach nad klifem"
+          ],
+          "mooringTip": "Marina w Lloret cumuje rufą do kei; kotwicowisko przy miejskiej plaży kołysze przy każdej fali z południa. Na spokojniejszą noc Cala Banys milę na południe trzyma na piasku, na czterech do sześciu metrach."
+        },
+        "5": {
+          "shortDescription": "Krótkie cztery mile tam, gdzie skalista Costa Brava się kończy i zaczynają długie piaski Maresme, pod ogrodem botanicznym na klifie.",
+          "description": "Blanes to szew wybrzeża. Na południe stąd klify ustępują płaskim piaskom Maresme, więc to na jakiś czas ostatnia prawdziwa zatoczka Costa Brava. Nad portem od 1928 roku rośnie ogród Marimurtra, kolekcja kaktusów i roślin śródziemnomorskich rozłożona na klifie, z pionowym urwiskiem do błękitu w dole; tamtejszy belweder daje jeden z najlepszych widoków na morze na całym wybrzeżu. Podpłyń w stronę Coves d'Ànfores, a znajdziesz skalne łuki, które przy przejrzystej wodzie pięknie się nurkuje z maską. Port osłania od północy, ewentualnie rzuć kotwicę za cyplem w Cala Sant Francesc, na piasku, na czterech do sześciu metrach. Sa Palomera, wielka skała dzieląca miejską plażę, wyznacza oficjalny początek Costa Brava i warta jest krótkiej wspinaczki. Spróbuj sałatki esqueixada z solonego dorsza w El Trull.",
+          "thingsToDo": [
+            "Odwiedź ogród botaniczny Marimurtra z 1928 roku",
+            "Snorkeling przy łukach Coves d'Ànfores",
+            "Sałatka esqueixada z solonego dorsza w El Trull",
+            "Wejdź na Sa Palomera dla widoku"
+          ],
+          "mooringTip": "Port de Blanes osłania od północy i wygodnie leży przy mieście. Przy stabilnej pogodzie Cala Sant Francesc za cyplem trzyma na piasku, na czterech do sześciu metrach."
+        },
+        "6": {
+          "shortDescription": "Osiem mil wzdłuż piaszczystego Maresme do cypla z latarnią, a po drodze zatoczka dostępna tylko od wody na kąpiel.",
+          "description": "Dziś zmienia się charakter trasy. To już Maresme: długie plaże z linią kolejową za nimi i ani śladu dramatu skalnego wybrzeża, które zostawiasz za rufą. Wychodząc z Blanes, zajrzyj na kąpiel do Cala Sant Francesc, zanim piasek przejmie wszystko — dopłyniesz tam tylko od wody, dlatego tłoku nie ma. Znakiem rozpoznawczym miasteczka Calella jest latarnia, dziewiętnastowieczna wieża na cyplu, do której dojdziesz pieszo szlakiem Camí de Ronda; niezłe rozprostowanie nóg, z morzem po jednej stronie przez całą drogę. Port przyjmuje rufą do kei i osłania od północy. Zaopatrzenie jest tu proste. Weź talerz pa amb tomàquet, chleba natartego pomidorem i oliwą, który stoi na każdym katalońskim stole, w którymś z barów przy nabrzeżu, a jeśli na promenadzie ktoś tańczy sardanę, zatrzymaj się i popatrz, jak krąg się obraca.",
+          "thingsToDo": [
+            "Przejdź szlakiem Camí de Ronda do latarni",
+            "Kąpiel w Cala Sant Francesc, dostępnej tylko od wody",
+            "Pa amb tomàquet w barze przy nabrzeżu",
+            "Zobacz sardanę na promenadzie"
+          ],
+          "mooringTip": "Port de Calella cumuje rufą do kei i osłania od północy. Po drodze z Blanes Cala Sant Francesc trzyma na piasku, na czterech do sześciu metrach, w sam raz na postój kąpielowy."
+        },
+        "7": {
+          "shortDescription": "Długi powrót do Palamós, po drodze opcjonalna ostatnia kąpiel przy Mataró, a przy cumowaniu zapala się latarnia.",
+          "description": "Ostatni dzień jest ten długi, jakieś dwadzieścia cztery mile, więc nastaw kawę i rzucaj cumy wcześnie. Jeśli załoga chce jeszcze jednej kąpieli, Cala Sant Simó po południowej stronie Mataró to przyzwoity postój, zanim wejdziesz w przelot. Potem już równy bieg z powrotem do Palamós, portu macierzystego, więc miej oko na popołudniową bryzę morską: zwykle buduje się z południowego zachodu i potrafi rozkołysać wodę wczesnym popołudniem. Zadzwoń wcześniej po paliwo i zatankuj przy stanowisku obok wejścia do mariny, zanim zajmiesz swoje miejsce; oszczędzi ci to bieganiny rano. Marina Palamós trzyma rufą do kei na martwych cumach i jest osłonięta od północy. Gdy światło gaśnie, zapala się latarnia Palamós — ostatnie zdjęcie z rejsu — a restauracje przy nabrzeżu są tuż obok, na pożegnalną kolację.",
+          "thingsToDo": [
+            "Ostatnia kąpiel w Cala Sant Simó, Mataró",
+            "Tankowanie przy stanowisku Marina Palamós",
+            "Zdjęcie latarni Palamós o zmierzchu",
+            "Pożegnalna kolacja na nabrzeżu w Palamós"
+          ],
+          "mooringTip": "Marina Palamós przyjmuje rufą do kei na martwych cumach i osłania od północy. Zatankuj przy stanowisku na wejściu, zanim staniesz na swoim miejscu, a w letni weekend zarezerwuj je z wyprzedzeniem."
+        }
+      }
+    },
+    "palma-de-mallorca": {
+      "metaTitle": "7 dni: wielka pętla wokół wyspy Mallorca | Boat4You",
+      "metaDesc": "7-dniowy czarter jachtu dookoła wyspy Mallorca z Palma de Mallorca: Soller, Formentor, Alcudia, Colonia de Sant Pere i Coves del Drac w Porto Cristo.",
+      "days": {
+        "1": {
+          "shortDescription": "Krótki, ośmiomilowy rozruch na południowy zachód do El Toro na popołudniowym embat, a na koniec kąpiel nad piaskiem w Cala Caragol.",
+          "description": "Pierwszy dzień to tak naprawdę rozruch, a osiem mil w zupełności wystarczy, żeby sprawdzić, co działa, zanim porwiesz się na coś dłuższego. Z Real Club Nautico de Palma wychodzimy w połowie przedpołudnia, kiedy embat wypełni się już z południowego zachodu i ustabilizuje na zwykłych 8 do 15 węzłów. Ta bryza wykona większość roboty na kursie w dół do El Toro. Tutejsza zatoka chowa się za cyplem i dobrze trzyma łódź, jest też mała marina, jeśli wolisz stanąć przy kei niż na kotwicy. Rzuć kotwicę w Cala Caragol nad piaskiem, na czterech do sześciu metrach, i popływaj z pawęży, kiedy załoga ogarnia pokrowce żagli. Sa Dragonera, niska zielona wysepka cztery mile na zachód, warta jest spojrzenia, jeśli starczy światła. Na lądzie zamów arros brut i zobacz, jak siada.",
+          "thingsToDo": [
+            "Kąpiel nad piaskiem w Cala Caragol",
+            "Wypad pod żaglami do parku Sa Dragonera",
+            "Zamów arros brut w chiringuito",
+            "Spacer wzdłuż pomostów Port Adriano"
+          ],
+          "mooringTip": "Port Adriano w sąsiedniej zatoce na wschód cumuje rufą do kei, jest elegancki, ale drogi: 150 do 250 euro w szczycie sezonu. Mniejsza marina w El Toro kosztuje 100 do 160 i spełnia zadanie tak samo dobrze. Tak czy inaczej, w lipcu i sierpniu dzwoń wcześniej."
+        },
+        "2": {
+          "shortDescription": "Najważniejszy etap rejsu: 32 mile pod klifami Serra de Tramuntana do osłoniętej podkowy Port de Soller i jej zabytkowego tramwaju.",
+          "description": "To najdłuższy i najlepszy etap rejsu. Trzydzieści dwie mile w górę północno-zachodniego wybrzeża stawiają cię pod Serra de Tramuntana, gdzie szczyty przekraczają 1400 metrów i opadają niemal pionowo do wody. Po drodze schronienia jest niewiele, więc lubimy odchodzić od kei przed dziewiątą i dać sobie zapas czasu. Port de Soller otwiera się niemal idealną podkową, osłoniętą od fali niezależnie od tego, co robi wiatr, co na tym wybrzeżu jest rzadkością. Kiedy już się urządzisz, wsiądź w drewniany tramwaj z 1912 roku, który turkocze przez gaje pomarańczowe do miasteczka Soller i jego placu. Jeśli nogi pozwolą, wyjście do Sa Foradada i jej przebitej skały to jedna z najpiękniejszych krótkich wędrówek na wyspie. Na kolację llampuga w Sa Cova, kiedy jest sezon.",
+          "thingsToDo": [
+            "Przejazd tramwajem z 1912 roku do Soller",
+            "Wędrówka do skały Sa Foradada",
+            "Llampuga w sezonie w Sa Cova",
+            "Plac pomarańczy w miasteczku Soller"
+          ],
+          "mooringTip": "Marina przyjmuje rufą do kei za 120 do 180 euro w szczycie sezonu i pozostaje spokojna przy niemal każdym wietrze. Jeśli jest pełna, stań na kotwicy tuż za wejściem, na piasku, na pięciu do siedmiu metrach. Trzymanie jest dobre, ale uważaj na katabatyczne szkwały, które po zmroku spadają z gór."
+        },
+        "3": {
+          "shortDescription": "Opłyń 384-metrowe klify Cap de Formentor do Port de Pollenca, a po drodze kąpiel przy otoczonej sosnami Platja de Formentor.",
+          "description": "Kolejny trzydziestodwumilowy dzień, tym razem z zakrętem wokół Cap de Formentor na północnym krańcu wyspy. Przylądek nie bez powodu nazywają miejscem spotkania wiatrów: strumień znad Tramuntany zderza się tu z tym, co schodzi wzdłuż północnego brzegu, więc spodziewaj się, że przy opływaniu bryza się zmieni i wzmocni. Klify sięgają 384 metrów i jest pod nimi małe kotwicowisko, ale ufałbym mu tylko w dzień i przy stabilnej pogodzie. Lepiej iść dalej w głąb zatoki. Zanim staniesz przy kei, zajdź na Platja de Formentor i rzuć kotwicę przy tym jasnym, otoczonym sosnami piasku na kąpiel. Sam Port de Pollenca jest dobrze osłonięty od północy. Na lądzie przejedź rowerem stary Pine Walk pod wielkimi drzewami, a potem zarezerwuj stolik w Stay na prosiaka pieczonego na drewnie migdałowym.",
+          "thingsToDo": [
+            "Kąpiel przy sosnowej Platja de Formentor",
+            "Rower po stuletnim Pine Walk",
+            "Pieczony prosiak w Stay Restaurant",
+            "Migdałowa horchata w kawiarni na klifie"
+          ],
+          "mooringTip": "Marina w Port de Pollenca cumuje rufą do kei za 100 do 160 euro w szczycie sezonu i jest dobrze schowana przed wiatrami z północy. Kotwicowisko pod przylądkiem to wyłącznie postój na lunch przy dobrej pogodzie — dno skaliste i otwarte na falę, więc nie planuj tam noclegu."
+        },
+        "4": {
+          "shortDescription": "Tylko sześć mil przez zatokę do Alcudia, gdzie rzymska Pollentia i średniowieczne mury wypełnią spokojne popołudnie na lądzie.",
+          "description": "Po dwóch mocnych dniach należy się coś łagodnego. Sześć mil w poprzek zatoki wysadza cię w Alcudia, a krótki skok zostawia całe popołudnie na miasto. To była Pollentia, rzymska stolica wyspy w I wieku p.n.e., i zachowało się jej na tyle dużo, że przy odrobinie wyobraźni przejdziesz się starymi ulicami i forum. Mury średniowieczne przyszły później, w XIV wieku, a odrestaurowane obwarowania dają łatwą pętlę ponad dachami. Jeśli możesz, zgraj wizytę z wtorkiem, kiedy targ zapełnia plac starego miasta straganami i gwarem. Na kolację poszukaj tumbet, warstwowego dania z bakłażana, ziemniaka i papryki, w jednej z tawern na dziedzińcu. Port ma dużo miejsca i rzadko zmusza do szukania kei na ostatnią chwilę.",
+          "thingsToDo": [
+            "Przejdź po XIV-wiecznych murach miejskich",
+            "Zwiedź ruiny rzymskiego miasta Pollentia",
+            "Wtorkowy targ na starym mieście",
+            "Spróbuj tumbet w tawernie na dziedzińcu"
+          ],
+          "mooringTip": "Port d'Alcudia cumuje rufą do kei na martwych cumach za 100 do 160 euro w szczycie sezonu i jest w pełni osłonięty, a miejsca ma tyle, że zwykle wejdziesz bez rezerwacji. Przydatne, jeśli plany z poprzedniego wieczoru się rozjechały."
+        },
+        "5": {
+          "shortDescription": "Osiem spokojnych mil do sennej Colonia de Sant Pere, kąpiel w dostępnej tylko od wody Cala Mitjana i gulasz z langusty w Sa Sinia.",
+          "description": "Osiem cichych mil na wschód wzdłuż zatoki doprowadza do Colonia de Sant Pere, małej roboczej wioski z surowym półwyspem Arta za plecami. Niewiele się tu dzieje i o to właśnie chodzi po tłumach w Alcudia. Mała marina jest tania jak na majorkańskie standardy i osłonięta od północy. Jeśli pogoda dopisze, odpuść keję i stań na kotwicy w Cala Mitjana, zatoczce dostępnej tylko od wody, nad piaskiem, na czterech do sześciu metrach. Na lądzie lokalną instytucją jest Sa Sinia, gdzie caldereta de langosta ściąga ludzi od lat i warta jest ceny porządnego gulaszu z langusty. Chętni na marsz mogą pójść szlakiem wybrzeża na cypel Arta po szeroki widok z powrotem na Badia d'Alcudia. Potem zejdź na wioskową promenadę na zachód słońca.",
+          "thingsToDo": [
+            "Kotwica w Cala Mitjana, dostępnej tylko od wody",
+            "Caldereta de langosta w Sa Sinia",
+            "Szlak na półwyspie Arta",
+            "Zachód słońca z wioskowej promenady"
+          ],
+          "mooringTip": "Marina w wiosce przyjmuje rufą do kei za 70 do 110 euro i jest chroniona od północy — najtańsza noc w tygodniu. Przy stabilnej prognozie lepszym wyborem jest kotwiczenie w Cala Mitjana, na piasku, na czterech do sześciu metrach."
+        },
+        "6": {
+          "shortDescription": "Piętnaście mil na południe do Porto Cristo i Coves del Drac: cztery kilometry jaskiń i kwartet grający na podziemnym jeziorze.",
+          "description": "Piętnaście mil w dół wschodniego wybrzeża do Porto Cristo, wąskiej podkowy portu wyciętej w wapieniu. Powód, dla którego wszyscy się tu zatrzymują, leży kawałek w głębi lądu: Coves del Drac, cztery kilometry zmapowanych jaskiń z podziemnym jeziorem, po którym w największej komorze pływa łódź z kwartetem smyczkowym. Brzmi jak pułapka na turystów i w połowie nią jest, ale akustyka tej sali naprawdę broni się sama. Przyjdź wcześnie, żeby wyprzedzić autokary. Z powrotem na wodzie: Cala Anguila kawałek na północ to postój kąpielowy, piasek na czterech do sześciu metrach i woda na tyle czysta, że zobaczysz, jak kotwica się zakopuje. Jeśli wolisz rozprostować nogi, spacer dookoła do Cala Manacor prowadzi obok starej dzielnicy rybackiej. Na kolację sobrassada w Celler Sa Premsa załatwia sprawę.",
+          "thingsToDo": [
+            "Zwiedź jaskinie Coves del Drac",
+            "Kąpiel nad piaskiem w Cala Anguila",
+            "Spacer dookoła do Cala Manacor",
+            "Sobrassada w Celler Sa Premsa"
+          ],
+          "mooringTip": "Porto Cristo cumuje rufą do kei za 80 do 130 euro w szczycie sezonu i osłania od wiatrów z północy, ale port się zwęża i miejsca jest mało, więc zgłoś się wcześniej przez radio. Cala Anguila tuż na północ działa jako alternatywa kotwiczna, na piasku, na czterech do sześciu metrach."
+        },
+        "7": {
+          "shortDescription": "Długi, 32-milowy bieg na zachód z powrotem do Palma, ostatnia kąpiel przy Platja de Palma i tankowanie przed zdaniem jachtu w bazie.",
+          "description": "Ostatni prawdziwy dzień żeglugi i do tego długi, z powrotem na zachód. Trzydzieści dwie mile wzdłuż południowego wybrzeża prowadzą pod Palma, a Ca'n Pastilla i długi pas Platja de Palma same proszą się o ostatnią kąpiel — jest tam dobrze osłonięte, kiedy wieje z południa. Jeśli chcesz jeszcze jednej zatoczki, Cala Vinyes to krótki zajazd, który się opłaca. Większość czarterów oczekuje łodzi w bazie około drugiej po południu, więc wieczór zostaje na ogarnięcie sprzętu i pakowanie. Uzupełnij zbiorniki przy stanowisku paliwowym w drodze do Real Club Nautico, żeby nie biegać z tym przy zdawaniu. A jeśli zostanie ci w Palma poranek, ensaimada i gęsta gorąca czekolada w Ca'n Joan de S'Aigo, działającym od 1700 roku, to właściwy sposób na zamknięcie tygodnia.",
+          "thingsToDo": [
+            "Ostatnia kąpiel przy Platja de Palma",
+            "Zajazd do zatoczki Cala Vinyes",
+            "Tankowanie w Real Club Nautico",
+            "Ensaimada w Ca'n Joan de S'Aigo"
+          ],
+          "mooringTip": "Real Club Nautico de Palma cumuje rufą do kei za 150 do 250 euro w szczycie sezonu, a Marina Port de Mallorca to tańsza alternatywa za 120 do 200. Zatankuj przy stanowisku paliwowym obok wejścia, zanim wejdziesz na swoje miejsce, a nie po."
+        }
+      }
+    },
+    "palma-de-mallorca-south": {
+      "metaTitle": "7 dni: Palma i Cabrera pod żaglami | Boat4You",
+      "metaDesc": "7-dniowy czarter jachtu z Palma de Mallorca wzdłuż południowego wybrzeża do Parku Narodowego Cabrera, Es Trenc, Cala Figuera i Portocolom.",
+      "days": {
+        "1": {
+          "shortDescription": "Łagodny, piętnastomilowy rozruch na południe z Palma do wciętej w sosny zatoczki Cala Pi, ze strażniczą wieżą u jej wejścia.",
+          "description": "Piętnaście mil pozwala załodze wejść w rytm, zanim zrobi się trudniej. Zwykle wychodzimy z Real Club Náutico w połowie przedpołudnia, schodzimy wzdłuż wybrzeża półwiatrem i wczesnym popołudniem klify zamykają się wokół Cala Pi. Wcięcie jest ledwie szersze niż dwie długości łodzi, las sosnowy napiera z obu stron, a ze wschodniej krawędzi pilnuje stara kamienna wieża strażnicza. Postawiono ją w XVII wieku przeciwko korsarzom berberyjskim, a wejście na górę warte jest wysiłku dla widoku z powrotem na wodę. Rzuć kotwicę na piasku, na czterech do sześciu metrach; trzymanie jest dobre, a wiatr z północy ledwie marszczy tu powierzchnię. Na lądzie Sa Sinia robi porządne arròs brut, pieprzny majorkański gulasz ryżowy, który po dniu na wodzie smakuje jeszcze lepiej.",
+          "thingsToDo": [
+            "Wejdź na XVII-wieczną wieżę strażniczą w Cala Pi",
+            "Przepłyń deską SUP wąskie wcięcie do jego końca",
+            "Ścieżka po klifach wybrzeża Migjorn",
+            "Zamów arròs brut w Sa Sinia"
+          ],
+          "mooringTip": "W Cala Pi wyłącznie kotwiczenie, w samym wcięciu nie ma mariny. Piasek na czterech do sześciu metrach dobrze trzyma, a zatoczka leży poza zasięgiem wiatrów z północy."
+        },
+        "2": {
+          "shortDescription": "Osiem spokojnych mil na wschód do Es Trenc, najdłuższego niezabudowanego pasa białego piasku na wyspie, z salinami i flamingami tuż za wydmami.",
+          "description": "Dziś tylko osiem mil, więc nie ma po co spieszyć się z wyjściem. Es Trenc ciągnie się przez trzy kilometry bez jednego hotelu za plecami, co na Mallorca graniczy z cudem. Piasek jest jasny i drobny, woda przechodzi od mlecznej do głębokiego błękitu tam, gdzie dno ucieka, a spokojnym rankiem możesz stanąć sto metrów od brzegu i dopłynąć wpław. Za wydmami leżą Salinas de Levante, czynne saliny, po których płyciznach chodzą flamingi; między basenami biegnie płaska ścieżka rowerowa, jeśli załoga chce rozprostować nogi. Na keję marina Sa Ràpita leży dwie mile na wschód i cumuje rufą do kei. Weź pa amb oli, chleb natarty pomidorem, oliwą i solą, w jednej z budek na plaży, zanim wejdzie popołudniowa bryza.",
+          "thingsToDo": [
+            "Kąpiel przy trzykilometrowym piasku Es Trenc",
+            "Rower ścieżkami między basenami Salinas de Levante",
+            "Flamingi na płyciznach salin",
+            "Spróbuj pa amb oli w budce na plaży"
+          ],
+          "mooringTip": "Marina Sa Ràpita cumuje rufą do kei za mniej więcej €80–130 za noc w szczycie sezonu i osłania od północy. Jeśli wolisz zostać na wodzie, stań na kotwicy przy Es Trenc, na piasku, na czterech do sześciu metrach, ale nie ma tam żadnego zaplecza."
+        },
+        "3": {
+          "shortDescription": "Cabrera leży osiem mil na południe: chroniony archipelag, gdzie każda łódź rezerwuje boję, a przejrzystość wody trudno opisać.",
+          "description": "To dzień, do którego cały rejs się przygotowywał. Cabrera jest parkiem narodowym od 1991 roku i to właśnie tamtejsze zasady sprawiają, że woda wygląda tak, jak wygląda. Kotwicy nie rzucisz ot tak; każda odwiedzająca łódź bierze jedną z pięćdziesięciu boi w Es Port, osłoniętej głównej zatoce, a boje trzeba rezerwować online z dużym wyprzedzeniem. Na lipiec i sierpień zwykle znikają do połowy maja, więc planuj wcześnie. Kiedy już się zamocujesz, nagroda jest oczywista: łąki posidonii widać z trzydziestu pięciu metrów głębokości, a snorkeling wokół Sa Cova Blava, błękitnej groty morskiej, jest najlepszy na całej trasie. Na lądzie ścieżka wspina się do czternastowiecznego zamku nad portem. Po zmroku, bez żadnych świateł dookoła, gwiazdy są nie do wiary.",
+          "thingsToDo": [
+            "Wejście do XIV-wiecznego zamku na Cabrera",
+            "Snorkeling w grocie Sa Cova Blava",
+            "Centrum informacyjne parku w Es Port",
+            "Nocne niebo bez zanieczyszczenia światłem"
+          ],
+          "mooringTip": "Boje w Es Port na Cabrera kosztują około €40–80 za noc w szczycie sezonu i trzeba je rezerwować online u władz Balearów, zwykle trzydzieści dni wcześniej. Kotwiczenie poza wyznaczonymi strefami jest zabronione i grozi karą od €500 w górę."
+        },
+        "4": {
+          "shortDescription": "Dwanaście mil z powrotem na Mallorca, do Cala Figuera: czynnego portu rybackiego, gdzie niebieskie kadłuby wciąż stoją wzdłuż stromego wcięcia.",
+          "description": "Dwanaście mil z powrotem na wybrzeże Mallorca doprowadza do Cala Figuera i ulgą jest znaleźć rybacką wioskę, która nie sprzedała się kurortom. Wcięcie rozwidla się między stromymi ścianami, a przy wodzie stoją drewniane llaüty, kadłuby malowane głębokim kobaltem, którego tutejsi rybacy używają od pokoleń. Łodzie wciąż stąd wychodzą, sieci wciąż schną, a całe miejsce zwalnia ci tempo. Możesz stanąć w małej marinie, rufą do kei, albo rzucić kotwicę w środku, na piasku, na czterech do sześciu metrach, jeśli wolisz zostać na łodzi. Kajakiem na wschód dopłyniesz do wapiennych klifów Cala Santanyí w niecałą milę. Na kolację Es Port od 1954 roku podaje gęsty gulasz z langusty caldereta w stylu menorkańskim.",
+          "thingsToDo": [
+            "Przejdź brukowanymi uliczkami nad portem",
+            "Kajakiem na wschód pod klify Cala Santanyí",
+            "Gulasz z langusty caldereta w Es Port",
+            "Zdjęcia kobaltowych łodzi llaüt"
+          ],
+          "mooringTip": "Mała marina w Cala Figuera cumuje rufą do kei za około €60–100 za noc i jest dobrze odcięta od północy. Miejsca jest mało, więc dobijaj wcześnie albo stań na kotwicy w samym wcięciu, na piasku, na czterech do sześciu metrach."
+        },
+        "5": {
+          "shortDescription": "Portocolom leży piętnaście mil na północ: szeroki port w kształcie podkowy, obwiedziony malowanymi szopami na łodzie, jedno z najbezpieczniejszych kotwicowisk wschodniego wybrzeża.",
+          "description": "Piętnaście mil w górę wybrzeża i charakter znowu się zmienia. Portocolom otacza szeroką naturalną podkowę — port tego rodzaju, który zostaje płaski, kiedy na zewnątrz mocno wieje, dlatego jest ulubioną kryjówką na tym odcinku. Brzeg obstawiają stare rybackie szopy na łodzie w wyblakłych czerwieniach, błękitach i zieleniach, z pochylniami schodzącymi prosto do wody. Miejsca do cumowania zwykle jest pod dostatkiem, więc po ciasnych zatoczkach z początku tygodnia ciśnienie spada. Cala Marçal, kawałek spacerem albo milę pontonem na południe, daje porządną piaszczystą plażę na popołudniową kąpiel. W głębi lądu, w stronę Felanitx, majątek Can Gaià uprawia winorośl na tyle blisko morza, że na gronach osadza się solna mgiełka; ich czerwone wina warto zabrać na pokład na wieczór.",
+          "thingsToDo": [
+            "Kąpiel z piasku w Cala Marçal",
+            "Degustacja słonych od morza czerwonych win w Can Gaià",
+            "Spacer wśród malowanych szop na łodzie w Portocolom",
+            "Ponton przez port-podkowę o zmierzchu"
+          ],
+          "mooringTip": "Marina w Portocolom cumuje rufą do kei za mniej więcej €80–130 za noc w szczycie sezonu, a port jest w pełni osłonięty przy każdym wietrze. Zwykle jest tu zapas miejsc, więc rezerwacja zazwyczaj nie jest konieczna."
+        },
+        "6": {
+          "shortDescription": "Z powrotem na południe, osiem mil do Cala Santanyí: zatoczka zamknięta wapiennymi klifami i poprzetykana podwodnymi łukami stworzonymi do snorkelingu.",
+          "description": "Krótki skok na południe i znów jesteś między klifami. Cala Santanyí wgryza się w jasny wapień, a skała nie kończy się na linii wody; pod powierzchnią biegnie dalej łukami i przepustami, przez które da się przepłynąć, i to właśnie robi tutejszy snorkeling naprawdę dobrym. Weź maskę i dobrą godzinę. W zatoczce nie ma mariny, więc stajesz na kotwicy na piasku, na czterech do sześciu metrach, dobrze schowany przed północą. Jeśli fala jednak tu wejdzie, Cala Mondragó dwie mile dalej wzdłuż wybrzeża to zatoka w parku przyrody z bojami i jeszcze lepszą osłoną. Na lądzie zapaleni piechurzy mogą wybrać się w głąb wyspy do czternastowiecznego zamku Santueri, ruiny na wzgórzu z widokiem przez całe południe wyspy. Z powrotem na poziomie morza Sa Cova nalewa miejscowe hierbas, likier anyżowo-ziołowy, jeśli masz ochotę na kielich przed snem.",
+          "thingsToDo": [
+            "Snorkeling przy podwodnych łukach Cala Santanyí",
+            "Likier hierbas w Sa Cova",
+            "Wypad w głąb wyspy do ruin zamku Santueri",
+            "Lunch na piasku w Cala Llombards"
+          ],
+          "mooringTip": "W Cala Santanyí nie ma mariny, więc planuj kotwiczenie na piasku, na czterech do sześciu metrach, w osłonie od północy. Jeśli wiatr się odkręci albo wejdzie fala, przejdź dwie mile na południe do Cala Mondragó, parku przyrody z bojami cumowniczymi."
+        },
+        "7": {
+          "shortDescription": "Dłuższy, dwudziestoczteromilowy bieg na zachód do Palma, z czasem na ostatnią kąpiel w Cala Llombards przed wieczorem zdania jachtu.",
+          "description": "Długi etap do domu. Dwadzieścia cztery mile na zachód oznaczają wczesny start; lubimy zrzucać boję przed dziewiątą i wchodzić w przelot, póki poranek jest jeszcze chłodny. Cala Llombards sama prosi się o postój w połowie drogi, osłonięta piaszczysta zatoczka na ostatnią kąpiel, zanim Palma wciągnie cię z powrotem w świat marin. Celuj w keję około drugiej, żeby popołudnie zostało na paliwo, mycie pokładu i uporządkowanie łodzi przed zdaniem. Real Club Náutico leży w samym sercu miasta; stań rufą do kei, a do centrum dojdziesz w kilka minut. Przejdź się Passeig des Born, promenadą pod platanami, i zamknij rejs jak należy: ensaimada, zwinięte migdałowe ciasto, i gęsta gorąca czekolada w Ca'n Joan de S'Aigo, działającym od XVIII wieku.",
+          "thingsToDo": [
+            "Kąpiel po drodze w Cala Llombards",
+            "Spacer promenadą Passeig des Born w Palma",
+            "Ensaimada w Ca'n Joan de S'Aigo",
+            "Tankowanie i mycie pokładu w Real Club Náutico"
+          ],
+          "mooringTip": "Real Club Náutico de Palma cumuje rufą do kei za około €150–250 za noc w szczycie sezonu; pobliska Marina Port de Mallorca jest nieco tańsza, €120–200. Uzupełnij paliwo przy stanowisku na wejściu, zanim staniesz na keję do zdania jachtu."
+        }
+      }
+    },
+    "sitges": {
+      "metaTitle": "7 dni: Sitges i wybrzeże Barcelony | Boat4You",
+      "metaDesc": "Siedem dni żeglugi z Sitges wzdłuż klifów Garraf i wybrzeża Maresme, z postojami w Castelldefels, Barcelona, Badalona, El Masnou i Mataró.",
+      "days": {
+        "1": {
+          "shortDescription": "Łagodny, czteromilowy skok na zachód do miniaturowego portu rybackiego Garraf, z całym popołudniem na wapienne szlaki parku.",
+          "description": "Cztery mile to ledwie rozgrzewka i o to właśnie chodzi pierwszego dnia. Zwykle rzucamy cumy w połowie przedpołudnia, dajemy załodze złapać rytm i suniemy na zachód pod klifami masywu Garraf, które wznoszą się prawie 600 metrów prosto z wody. Sama miejscowość Garraf jest malutka: rząd białych domków z krwistoczerwonymi obwódkami, rybackie nabrzeże i niewiele więcej. Popołudnie zostaje więc wolne. Wapienne szlaki za wioską wynagradzają godzinę marszu dalekim widokiem w dół wybrzeża. Nad portem stoi stary Celler Güell, winiarnia z przełomu wieków z kręgu Gaudiego, warta krótkiej wspinaczki. Na kolację Can Toni robi porządne suquet de peix, miejscową zupę rybną zagęszczoną ziemniakiem. Spokojny początek.",
+          "thingsToDo": [
+            "Wapienne szlaki masywu Garraf",
+            "Wejdź do modernistycznej winiarni Celler Güell",
+            "Suquet de peix w Can Toni",
+            "Przejdź się między biało-czerwonymi domkami rybaków"
+          ],
+          "mooringTip": "Mały port w Garraf cumuje rufą do kei za mniej więcej €60–90 za noc i dobrze osłania od północy, ale w lipcu zapełnia się błyskawicznie. Jeśli jest pełny, Port Aiguadolç w Sitges, cztery mile na wschód, ma i miejsce, i paliwo."
+        },
+        "2": {
+          "shortDescription": "Sześć mil na wschód, obok flamingowych rozlewisk delty Llobregat, do Castelldefels: pięć kilometrów otwartego piasku pod zamkiem na wzgórzu.",
+          "description": "Kurs na wschód prowadzi przez ujście Llobregat, gdzie rzeka spotyka morze w plątaninie lagun i trzcinowisk. Przy odrobinie szczęścia zobaczysz flamingi brodzące po płyciznach, dziwnie zestawione ze ścieżką podejścia lotniska w Barcelonie tuż w głębi lądu. Castelldefels zapowiada się piaskiem: prawie pięć kilometrów, a za nimi niskie wzgórze, na którym Castell de Fels stoi od X wieku. Port Ginesta to duża, robocza marina z zapasem miejsc, więc nie ma po co się spieszyć. Wejdź do zamku na zachód słońca, a potem zejdź na arròs negre, czarny i słony ryż z atramentem kałamarnicy, w Restaurant Voramar. Plaża jest tu na tyle szeroka, że nawet w sierpniu znajdziesz spokojny kawałek.",
+          "thingsToDo": [
+            "Wypatrz flamingi w delcie Llobregat",
+            "Wejdź do Castell de Fels z X wieku",
+            "Arròs negre w Restaurant Voramar",
+            "Długi spacer plażą Platja de Castelldefels"
+          ],
+          "mooringTip": "Port Ginesta to jedna z większych marin na tym wybrzeżu i rzadko kogoś odprawia; miejsce rufą do kei kosztuje około €70–110 w szczycie sezonu. Leży w pełni osłonięty za falochronem, choć na plażę kąpielową idzie się z pomostów piętnaście minut."
+        },
+        "3": {
+          "shortDescription": "Osiem mil w samo serce Barcelony, cumowanie pod złotą rybą Gehry'ego, z Gaudím i dzielnicą gotycką na wyciągnięcie ręki.",
+          "description": "Niewiele marin stawia cię tak blisko wielkiego miasta jak Port Vell. Schodzisz z pomostu i dziesięć minut spacerem masz dzielnicę gotycką, z uliczkami tak wąskimi, że średniowieczne kamienice niemal stykają się nad głową. Barcelona wynagradza cały dzień na lądzie. Gaudí jest oczywistym magnesem — Sagrada Família wciąż nieukończona po ponad stu latach i Casa Batlló rozpływająca się przy Passeig de Gràcia — ale bezcelowe włóczenie się po mieście daje tyle samo. Rezerwuj miejsce mocno wcześniej latem; Port Vell i Port Olímpic zapełniają się oba. W Port Olímpic wielka złota ryba Franka Gehry'ego łapie światło nad promenadą. Na lunch odpuść turystyczne tarasy i znajdź La Cova Fumada w dzielnicy Barceloneta, ciasny bar z 1944 roku, w którym narodziła się bomba, smażona kula ziemniaczana z ostrym kopniakiem.",
+          "thingsToDo": [
+            "Przejdź średniowieczne uliczki dzielnicy gotyckiej",
+            "Zobacz Sagrada Família i Casa Batlló Gaudiego",
+            "Sfotografuj złotą rybę Gehry'ego w Port Olímpic",
+            "Bomba w La Cova Fumada w dzielnicy Barceloneta"
+          ],
+          "mooringTip": "Port Vell i Port Olímpic cumują rufą do kei w samym środku miasta, odpowiednio za mniej więcej €120–200 i €100–160 w szczycie sezonu. Na lato rezerwuj kilka tygodni wcześniej; miejsca w centrum Barcelony znikają jako pierwsze na całym wybrzeżu."
+        },
+        "4": {
+          "shortDescription": "Pięciomilowy skok na północ do Badalona, gdzie pod ulicami leży rzymskie miasto, a stare molo naftowe służy dziś za platformę do kąpieli.",
+          "description": "Ledwie godzina drogi — ten etap to właściwie pretekst, żeby się wyspać. Badalona leży kawałek na północ od Barcelony i większość załóg ją omija, i właśnie dlatego warto tu przenocować. Rzymskie miasto Baetulo leży pod współczesnymi ulicami, a muzeum miejskie pozwala przejść pod ziemią odcinkiem oryginalnego, brukowanego decumanus. Od strony morza Pont del Petroli sięga ćwierć kilometra w wodę: żelazne molo do przeładunku ropy z lat 60., które odrodziło się jako promenada i trampolina; miejscowi skaczą z jego końca przez całe lato. Stara destylarnia Anís del Mono na nabrzeżu, modernistyczny zabytek, wciąż produkuje swój anyżowy likier. Weź esqueixada, sałatkę z szarpanego solonego dorsza, w Can Xim, zanim kolacja przeciągnie się do późna.",
+          "thingsToDo": [
+            "Przejdź rzymskim decumanus pod muzeum",
+            "Kąpiel z molo Pont del Petroli",
+            "Zobacz modernistyczną destylarnię Anís del Mono",
+            "Esqueixada z solonym dorszem w Can Xim"
+          ],
+          "mooringTip": "Marina Badalona cumuje rufą do kei na martwych cumach za około €70–110 w szczycie sezonu i jest spokojna za falochronem. Zwykle znajdziesz miejsce bez rezerwacji, co tak blisko Barcelony jest rzadkim luksusem."
+        },
+        "5": {
+          "shortDescription": "Kolejny krótki skok na północ do El Masnou, miasteczka kapitanów i willi powracających z Kuby, ze ścieżką po klifach na północ do Premià.",
+          "description": "El Masnou dorobiło się na morzu w XIX wieku, kiedy miejscowi płynęli na Kubę i wracali bogaci. Ich ozdobne rezydencje wciąż stoją przy ulicach za mariną — przypomnienie, że ten kawałek Maresme był kiedyś poważną krainą żeglarzy. Port jest mały i dobrze osłonięty. Zostaw łódź i wejdź na Camí de Ronda, nadmorską ścieżkę biegnącą na północ w stronę Premià de Mar, obok klifów porośniętych sosnami i kieszonek żwiru, gdzie popływasz bez żywej duszy w zasięgu wzroku. Skaliste wysepki tuż przy brzegu są dobre na maskę i fajkę. Wieczorem El Racó de la Mar podaje fideuà, makaronowego kuzyna paelli gotowanego na wywarze z owoców morza. Winnice z pobliskiej Alella nalewają do tego wytrawne białe, które warto zamówić.",
+          "thingsToDo": [
+            "Przejdź szlakiem Camí de Ronda do Premià",
+            "Snorkeling przy skalistych wysepkach",
+            "Fideuà w El Racó de la Mar",
+            "Kąpiel na Platja del Masnou",
+            "Zobacz rezydencje kapitanów indianos"
+          ],
+          "mooringTip": "Marina del Masnou trzyma rufą do kei na martwych cumach za około €60–100 w szczycie sezonu i jest całkowicie odcięta od fali. Jest kompaktowa, więc w letnie weekendy, kiedy przychodzą jednodniowe łodzie z Barcelony, dzwoń wcześniej."
+        },
+        "6": {
+          "shortDescription": "Sześć mil do Mataró, stolicy Maresme, gdzie stoi pierwszy budynek Gaudiego, a sobotni targ wart jest zgrania z nim postoju.",
+          "description": "Mataró to największe miasto Maresme i nosi swoją historię na wierzchu. Tędy w 1848 roku pojechała pierwsza kolej w Hiszpanii i tu zaczynał młody Antoni Gaudí: Nau Gaudí, hala bielarni zaprojektowana przez niego dla spółdzielni robotniczej w latach 80. XIX wieku, to najstarszy zachowany jego budynek, dziś mieszczący kolekcję sztuki. Drugim punktem programu jest Casa Coll i Regàs, wystawna rezydencja modernistyczna Puiga i Cadafalcha. Spróbuj trafić na sobotni targ, kiedy stare centrum wypełniają stragany z antykami i biżuterią. Między zwiedzaniem plaża Platja del Callao daje złoty piasek i łatwą kąpiel. Przed obiadem zrób jak miejscowi i wypij vermút w barze przy porcie, najlepiej z talerzem esqueixada obok.",
+          "thingsToDo": [
+            "Zobacz Nau Gaudí, jego najwcześniejszy budynek",
+            "Odwiedź rezydencję Casa Coll i Regàs",
+            "Rozejrzyj się po sobotnim targu antyków",
+            "Kąpiel na Platja del Callao",
+            "Vermút i esqueixada przy porcie"
+          ],
+          "mooringTip": "Port de Mataró cumuje rufą do kei na martwych cumach za mniej więcej €70–110 w szczycie sezonu i jest w pełni osłonięty. Centrum miasta i Nau Gaudí są kilka minut spacerem od bramy mariny."
+        },
+        "7": {
+          "shortDescription": "Długi etap do domu: dwadzieścia cztery mile na południe obok Barcelony do Sitges, z czasem na ostatnią kąpiel i pożegnalną kolację na starym mieście.",
+          "description": "Ostatni dzień jest najdłuższy — dwadzieścia cztery mile z powrotem do Sitges — więc opłaca się wyjść wcześnie. Rusz przed dziewiątą, a większość drogi zrobisz, zanim popołudniowa bryza wejdzie z południowego zachodu i ustawi ci wiatr w nos. Barcelona przesuwa się po lewej burcie; rzuć kotwicę przy Barceloneta na godzinę, jeśli załoga chce ostatniej kąpieli w miejskiej wodzie. Stamtąd już prosty kurs do Sitges, gdzie biały kościół Sant Bartomeu stoi na cyplu jak latarnia. Uzupełnij zbiorniki przy stanowisku paliwowym, zanim staniesz przy kei. Wieczór zostaw staremu miastu: Carrer de Sant Pere, deptak i kręgosłup Sitges, dobrze zamyka rejs, a El Vivero robi porządne xató, miejscową sałatkę z gorzkich liści, solonego dorsza i anchois.",
+          "thingsToDo": [
+            "Kotwica przy Barceloneta na ostatnią kąpiel",
+            "Tankowanie przy stanowisku paliwowym Port Aiguadolç",
+            "Spacer po Carrer de Sant Pere w Sitges",
+            "Sałatka xató w El Vivero",
+            "Zobacz kościół Sant Bartomeu na cyplu"
+          ],
+          "mooringTip": "Port Aiguadolç de Sitges cumuje rufą do kei na martwych cumach za około €80–130 w szczycie sezonu i jest w pełni osłonięty; skorzystaj ze stanowiska paliwowego przy wejściu, żeby oddać łódź z pełnymi zbiornikami. Przy 24-milowym dniu wychodź wcześnie, żeby wyprzedzić wiatr z południowego zachodu."
+        }
+      }
     }
   },
   "areas": {

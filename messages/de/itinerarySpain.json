@@ -894,6 +894,341 @@
           "mooringTip": "Puerto Banús nimmt euch mit dem Heck zum Steg auf und lässt sich die Adresse gut bezahlen; der Tanksteg liegt an der Einfahrt, bunkert also, bevor ihr einen Platz sucht. Erlaubt es die Basis, ist die Marina la Bajadilla gleich östlich für die letzte Nacht etwa halb so teuer."
         }
       }
+    },
+    "palamos": {
+      "metaTitle": "7 Tage Costa Brava ab Palamós | Boat4You",
+      "metaDesc": "Sieben Tage ab Palamós die Costa Brava entlang: Tossa, Lloret und Blanes, dann die Maresme-Küste nach Calella und Mataró und zurück.",
+      "days": {
+        "1": {
+          "shortDescription": "Ein entspannter Sechs-Meilen-Schlag nach Süden zum Eingewöhnen, vorbei an den Formigues-Inselchen, wo einst zwei Flotten aufeinandertrafen.",
+          "description": "Der erste Schlag ist bewusst kurz gehalten. Sechs Meilen die Küste hinunter reichen, damit die Crew sich einfindet, die Leinen sortiert und ein Gefühl für das Schiff bekommt, bevor es länger wird. Rund eine Meile vor der Küste brechen die Formigues-Inselchen durch die Oberfläche, flach und felsig; 1285 trafen hier eine französische und eine aragonesische Flotte aufeinander, und heute ist der Grund ringsum bei ruhigem Wasser ein feines Schnorchelrevier. In Port d'Aro liegt man mit dem Heck zum Steg und geschützt vor jedem Nordwind, in einer ruhigen Nacht hält die Bucht davor aber ebenso gut auf Sand in fünf bis sieben Metern. An Land führt der Küstenpfad Camí de Ronda nördlich und südlich des Strandes über die Landzungen. Wir lassen den Tag meist mit einer Schüssel Suquet de Peix im Villa Mas ausklingen, dem Fischeintopf, den diese Küste besser hinbekommt als die meisten.",
+          "thingsToDo": [
+            "Am Schlachtort Illes Formigues schnorcheln",
+            "Über die Landzungen des Camí de Ronda wandern",
+            "Suquet de Peix im Villa Mas",
+            "Am langen Sichelstrand von Platja d'Aro baden"
+          ],
+          "mooringTip": "In Port d'Aro liegt man mit dem Heck zum Steg und ruhig selbst bei Nordwind; im Juli und August vorher reservieren. Bei stabiler Vorhersage hält die offene Bucht gut auf Sand in fünf bis sieben Metern."
+        },
+        "2": {
+          "shortDescription": "Knapp vier Meilen in eine lebendige Korkstadt, deren Kloster aus dem 10. Jahrhundert bis heute die Altstadt über dem Hafen prägt.",
+          "description": "Vier Meilen sind nichts, es besteht also kein Grund, früh loszuwerfen. Sant Feliu hat sein Geld mit Kork und Modernisme verdient, und beides sieht man den Straßen hinter der Uferpromenade bis heute an. Im Zentrum steht das alte Benediktinerkloster, dessen rostrote Hufeisenbögen ins 10. Jahrhundert zurückreichen und den zehnminütigen Bummel bergauf allemal wert sind. In der Marina liegt man mit dem Heck zum Steg und hat den Nordwind aus der Querlage. Vom Kai aus führt der Camí de Ronda nach Norden um die Felsen herum zur Cala Salionç, einer Bucht, die man nur zu Fuß oder mit dem Dinghi erreicht, weshalb es dort selbst im August ruhig bleibt. Vor dem Abendessen einen Cremat im Bar Bistrot bestellen, den flambierten Rum-Kaffee, den früher die Fischer ansetzten. In den Werkstätten der Altstadt gibt es Kork noch plattenweise zu kaufen, falls ein etwas anderes Souvenir mit nach Hause soll.",
+          "thingsToDo": [
+            "Das Benediktinerkloster aus dem 10. Jahrhundert ansehen",
+            "Mit dem Dinghi in die Bucht Cala Salionç",
+            "Cremat-Kaffee im Bar Bistrot",
+            "Kork in den Werkstätten der Altstadt kaufen"
+          ],
+          "mooringTip": "Die Marina von Sant Feliu nimmt einen mit dem Heck zum Steg und hält den Nordwind ab. Wer stattdessen nur zum Baden stoppt: Die Cala Salionç hält auf felsigem Grund in fünf bis sieben Metern, aber nur bei ruhigem Wetter."
+        },
+        "3": {
+          "shortDescription": "Sechs Meilen in den einzigen katalanischen Küstenort mit vollständig erhaltenem mittelalterlichem Mauerring, am besten bevor der Hafen voll ist.",
+          "description": "Wenn möglich vor neun ablegen. Der Hafen von Tossa ist klein und die Plätze sind früh vergeben, in der Hochsaison meist gegen vier Uhr weg, ein früher Start zahlt sich also aus. Alle kommen wegen der Vila Vella, der Wehrmauer aus dem 12. Jahrhundert, die noch immer die Landzunge über dem Strand krönt. Kein anderer Ort an dieser Küste hat seine Mauern so bewahrt wie Tossa, und der Gang durch die Tore in der Dämmerung, wenn unten die Lampen angehen, ist das Bild, das bleibt. Ist der Hafen voll, fällt der Anker in der Cala Giverola etwas weiter nördlich, sauberer Sandgrund in vier bis sechs Metern und Wasser in der Farbe eines Swimmingpools. Zum Abendessen macht Can Simón ein ordentliches Mar i Muntanya, Surf and Turf mit Garnelen und Kaninchen oder Huhn. Unbedingt reservieren.",
+          "thingsToDo": [
+            "Auf der mittelalterlichen Wehrmauer Vila Vella spazieren",
+            "In der Cala Giverola ankern und schwimmen",
+            "Mar i Muntanya im Can Simón",
+            "Sonnenuntergang von den Klippenmauern"
+          ],
+          "mooringTip": "In Tossa wird es an Sommernachmittagen früh eng; bis vier Uhr festgemacht sein oder stattdessen nebenan in der Cala Giverola schwojen, Sandgrund, vier bis sechs Meter."
+        },
+        "4": {
+          "shortDescription": "Weitere sechs Meilen zum lautesten Badeort der Küste, versöhnt durch einen Renaissance-Terrassengarten hoch über dem Meer.",
+          "description": "In Lloret wird die Costa Brava kommerziell, entweder man nimmt den Trubel mit oder sucht sich die ruhigen Ecken. Was man nicht auslassen sollte, ist der Garten Santa Clotilde, 1919 auf Terrassen angelegt, die sich die Klippe hinunter zum Wasser staffeln, lauter Zypressenalleen und Steintreppen, und dazwischen immer wieder das Meer. Eine Meile südlich der Promenade duckt sich die Cala Banys in die Pinien und ist als Ankerplatz ruhiger als der Hauptstrand, guter Halt auf Sand in vier bis sechs Metern. Wer lieber am Steg schläft, liegt in der Marina mit dem Heck zum Steg. Wassersportgeräte lassen sich am Hauptstrand problemlos mieten, und für einen Sundowner mit Aussicht taugen die Terrassen über den Felsen. Dann wacht die Stadt auf, und man kann mitmachen oder zurück an Bord verschwinden.",
+          "thingsToDo": [
+            "Durch die Terrassengärten von Santa Clotilde gehen",
+            "In der Cala Banys zwischen Pinien ankern",
+            "Jetski am Hauptstrand mieten",
+            "Sundowner auf den Klippenterrassen"
+          ],
+          "mooringTip": "In Lloret liegt man in der Marina mit dem Heck zum Steg; der Ankerplatz vor dem Stadtstrand rollt bei jeder Südwelle. Ruhiger wird die Nacht eine Meile südlich in der Cala Banys, Halt auf Sand in vier bis sechs Metern."
+        },
+        "5": {
+          "shortDescription": "Kurze vier Meilen dorthin, wo die felsige Costa Brava endet und der lange Maresme-Sand beginnt, unter einem botanischen Garten auf der Klippe.",
+          "description": "Blanes ist die Nahtstelle. Südlich davon weichen die Felsen dem flachen Sand des Maresme, das hier sind also vorerst die letzten echten Costa-Brava-Buchten. Über dem Hafen wächst seit 1928 der Garten Marimurtra, eine Sammlung aus Kakteen und Mittelmeerpflanzen auf der Klippe mit senkrechtem Abbruch ins Blau; der Aussichtspunkt dort zählt zu den schönsten Meerblicken der ganzen Küste. Um die Ecke bei den Coves d'Ànfores warten Felsbögen, die sich bei klarem Wasser wunderbar erschnorcheln lassen. Der Hafen hält den Nordwind ab, oder man ankert um die Landspitze herum in der Cala Sant Francesc auf Sand in vier bis sechs Metern. Sa Palomera, der große Fels, der den Stadtstrand teilt, markiert den offiziellen Beginn der Costa Brava und ist den kurzen Aufstieg wert. Im El Trull die Esqueixada probieren, den kalten Stockfischsalat.",
+          "thingsToDo": [
+            "Den botanischen Garten Marimurtra von 1928 besuchen",
+            "Die Felsbögen der Coves d'Ànfores erschnorcheln",
+            "Esqueixada-Stockfischsalat im El Trull",
+            "Auf den Sa Palomera steigen und die Aussicht genießen"
+          ],
+          "mooringTip": "Port de Blanes schützt vor Nord und liegt praktisch zur Stadt. Bei ruhigem Wetter hält die Cala Sant Francesc hinter der Landspitze auf Sand in vier bis sechs Metern."
+        },
+        "6": {
+          "shortDescription": "Acht Meilen den sandigen Maresme hinunter zu einer Leuchtturm-Landzunge, unterwegs eine nur per Boot erreichbare Badebucht.",
+          "description": "Heute wechselt der Charakter. Das hier ist der Maresme, lange Strände mit der Küstenbahn dahinter und nichts von der Dramatik der Felsküste im Rücken. Gleich hinter Blanes lohnt ein Badestopp in der Cala Sant Francesc, bevor der Sand übernimmt; sie ist nur vom Wasser aus erreichbar, was die Menge klein hält. Calellas Wahrzeichen ist der Leuchtturm, ein Turm aus dem 19. Jahrhundert draußen auf der Landzunge, den man zu Fuß über den Camí de Ronda erreicht, ein guter Beinstrecker mit dem Meer die ganze Zeit zur Seite. Im Hafen liegt man mit dem Heck zum Steg und geschützt vor Nord. Proviant bekommt man hier leicht. Dazu einen Teller Pa amb Tomàquet in einer der Kaibars, das mit Tomate und Öl eingeriebene Brot, das auf jedem katalanischen Tisch steht, und wenn auf der Promenade eine Sardana getanzt wird, kurz stehen bleiben und dem Kreis zusehen.",
+          "thingsToDo": [
+            "Über den Camí de Ronda zum Leuchtturm wandern",
+            "In der nur per Boot erreichbaren Cala Sant Francesc baden",
+            "Pa amb Tomàquet in einer Kaibar",
+            "Eine Sardana auf der Promenade erleben"
+          ],
+          "mooringTip": "In Port de Calella liegt man mit dem Heck zum Steg und geschützt vor Nord. Auf dem Weg von Blanes herunter hält die Cala Sant Francesc auf Sand in vier bis sechs Metern für einen Badestopp."
+        },
+        "7": {
+          "shortDescription": "Der lange Heimschlag nach Palamós, unterwegs ein letztes Bad vor Mataró, und beim Festmachen geht der Leuchtturm an.",
+          "description": "Der letzte Tag ist der lange, rund vierundzwanzig Meilen, also Kaffee aufsetzen und früh loswerfen. Will die Crew noch einmal ins Wasser, ist die Cala Sant Simó an der Südseite von Mataró ein guter Stopp, bevor der Schlag richtig losgeht. Danach geht es stetig zurück nach Palamós, dem Heimathafen, und dabei den Nachmittagsseewind im Auge behalten, der meist aus Südwest aufkommt und das Wasser am frühen Nachmittag kabbelig macht. Diesel vorher anmelden und an der Tankstelle neben der Hafeneinfahrt volltanken, bevor der Liegeplatz belegt wird; das erspart am Morgen die Hektik. In der Marina Palamós liegt man mit dem Heck zum Steg an Mooringleinen und geschützt vor Nord. Wenn das Licht geht, springt der Leuchtturm von Palamós an, das letzte Foto der Reise, und die Restaurants am Kai liegen für das Abschiedsessen direkt daneben.",
+          "thingsToDo": [
+            "Letztes Bad in der Cala Sant Simó bei Mataró",
+            "An der Tankstelle der Marina Palamós bunkern",
+            "Den Leuchtturm von Palamós in der Dämmerung fotografieren",
+            "Abschiedsessen am Kai von Palamós"
+          ],
+          "mooringTip": "Die Marina Palamós nimmt einen mit dem Heck zum Steg an Mooringleinen und schützt vor Nord. Vor dem Anlegen an der Tankstelle bei der Einfahrt bunkern und am Sommerwochenende den Platz vorher reservieren."
+        }
+      }
+    },
+    "palma-de-mallorca": {
+      "metaTitle": "7 Tage Mallorca-Rundtörn | Boat4You",
+      "metaDesc": "7-tägiger Yachtcharter rund um Mallorca ab Palma: Soller, Formentor, Alcudia, Colonia de Sant Pere und die Coves del Drac bei Porto Cristo.",
+      "days": {
+        "1": {
+          "shortDescription": "Kurzer Einlaufschlag über acht Meilen nach Südwesten zum El Toro, getragen vom Nachmittags-Embat, zum Abschluss ein Bad auf Sandgrund in der Cala Caragol.",
+          "description": "Der erste Tag draußen ist im Grunde ein Einlaufschlag, und acht Meilen reichen genau, um herauszufinden, was funktioniert, bevor es länger wird. Wir legen am späten Vormittag im Real Club Nautico de Palma ab, sobald der Embat aus Süd-Südwest eingesetzt und sich bei den üblichen 8 bis 15 Knoten eingependelt hat. Diese Brise erledigt auf dem Weg hinunter zum El Toro die meiste Arbeit. Die Bucht schmiegt sich hinter die Landzunge und hält ein Schiff gut, und wer lieber festmacht als schwojt, findet eine kleine Marina. In der Cala Caragol den Anker über Sand in vier bis sechs Metern fallen lassen und vom Heck aus schwimmen, während die Segelsäcke sortiert werden. Sa Dragonera, das flache grüne Eiland vier Meilen westlich, lohnt einen Blick, solange das Licht reicht. An Land den Arros Brut bestellen und schauen, was er hermacht.",
+          "thingsToDo": [
+            "Über Sand baden in der Cala Caragol",
+            "Zum Naturpark Sa Dragonera segeln",
+            "Arros Brut im Chiringuito bestellen",
+            "Durch die Stege von Port Adriano schlendern"
+          ],
+          "mooringTip": "Port Adriano in der Bucht östlich nebenan nimmt einen mit dem Heck zum Steg, schick, aber mit 150 bis 250 Euro in der Hochsaison teuer. Die kleinere Marina am El Toro liegt bei 100 bis 160 und tut es genauso gut. In jedem Fall im Juli und August vorher anrufen."
+        },
+        "2": {
+          "shortDescription": "Der große Schlag der Woche: 32 Meilen unter den Tramuntana-Klippen ins geschützte Hufeisen von Port de Soller mit seiner historischen Straßenbahn.",
+          "description": "Das ist der lange Schlag und das Beste der Reise. Zweiunddreißig Meilen die Nordwestküste hinauf führen unter die Serra de Tramuntana, wo die Gipfel über 1.400 Meter steigen und fast senkrecht ins Wasser abfallen. Unterwegs gibt es kaum Schutz, deshalb sind wir gern vor neun vom Steg weg und geben uns Zeit. Port de Soller öffnet sich als nahezu perfektes Hufeisen, gegen Schwell abgeschirmt, egal was der Wind macht, und das ist an dieser Küste eine Seltenheit. Wenn alles liegt, geht es mit der hölzernen Straßenbahn von 1912 durch die Orangenhaine hinauf ins Städtchen Soller und auf dessen Plaza. Wenn die Beine mitspielen, ist der Weg hinaus zum durchbrochenen Felsen von Sa Foradada eine der schönsten kurzen Wanderungen der Insel. Zum Abendessen Llampuga im Sa Cova, wenn Saison ist.",
+          "thingsToDo": [
+            "Mit der Straßenbahn von 1912 nach Soller fahren",
+            "Zum Felsen Sa Foradada hinauswandern",
+            "Llampuga zur Saison im Sa Cova essen",
+            "Über Sollers Plaza mit den Orangenbäumen bummeln"
+          ],
+          "mooringTip": "Die Marina nimmt einen mit dem Heck zum Steg für 120 bis 180 Euro in der Hochsaison und bleibt bei fast jedem Wind ruhig. Ist sie voll, ankert man draußen davor auf Sand in fünf bis sieben Metern. Der Halt ist gut, aber die Fallwinde im Auge behalten, die nach Einbruch der Dunkelheit von den Bergen herunterrollen."
+        },
+        "3": {
+          "shortDescription": "Um die 384 Meter hohen Klippen des Cap de Formentor nach Port de Pollenca, auf dem Weg hinein ein Bad vor der pinienbestandenen Platja de Formentor.",
+          "description": "Wieder ein Tag über zweiunddreißig Meilen, diesmal um das Cap de Formentor an der Nordspitze der Insel herum. Das Kap trägt seinen Beinamen Treffpunkt der Winde zu Recht: Hier stößt die Strömung von der Tramuntana auf alles, was die Nordküste herunterkommt, also mit drehender und auffrischender Brise rechnen, sobald man rundet. Die Klippen reichen bis 384 Meter hinauf, und darunter liegt ein kleiner Ankerplatz, dem ich allerdings nur bei ruhigem Wetter und tagsüber trauen würde. Besser weiter in die Bucht hinein. Vor dem Festmachen einen Abstecher zur Platja de Formentor machen und vor dem hellen, pinienbestandenen Sand für ein Bad den Anker fallen lassen. Port de Pollenca selbst liegt gut geschützt vor Nord. An Land den alten Pine Walk unter den großen Bäumen abradeln und dann im Stay einen Tisch für das Spanferkel aus dem Mandelholzofen reservieren.",
+          "thingsToDo": [
+            "Baden vor der pinienbestandenen Platja de Formentor",
+            "Den hundert Jahre alten Pine Walk abradeln",
+            "Spanferkel im Restaurant Stay",
+            "Mandel-Horchata in einem Klippencafé"
+          ],
+          "mooringTip": "Die Marina von Port de Pollenca nimmt einen mit dem Heck zum Steg für 100 bis 160 Euro in der Hochsaison und liegt gut vor Nordwinden weggesteckt. Der Ankerplatz unter dem Kap taugt bei gutem Wetter nur als Mittagsstopp, Felsgrund und offen zum Schwell, dort also nicht übernachten."
+        },
+        "4": {
+          "shortDescription": "Nur sechs Meilen quer durch die Bucht nach Alcudia, wo das römische Pollentia und die mittelalterliche Stadtmauer einen entspannten Nachmittag füllen.",
+          "description": "Nach zwei großen Tagen ein sanfter. Sechs Meilen quer über die Bucht setzen einen in Alcudia ab, und der kurze Schlag lässt den ganzen Nachmittag für die Stadt. Hier lag Pollentia, im 1. Jahrhundert v. Chr. die römische Hauptstadt der Insel, und es ist genug erhalten, dass man mit ein wenig Fantasie durch die alten Straßen und über das Forum gehen kann. Die mittelalterliche Mauer kam später, im 14. Jahrhundert, und der restaurierte Wehrgang ergibt eine leichte Runde über den Dächern. Wenn möglich, den Besuch auf einen Dienstag legen, wenn der Markt den Altstadtplatz mit Ständen und Lärm füllt. Zum Abendessen nach Tumbet Ausschau halten, dem geschichteten Gericht aus Aubergine, Kartoffel und Paprika, in einer der Innenhof-Tavernen. Der Hafen hat reichlich Platz und lässt einen selten um einen Liegeplatz bangen.",
+          "thingsToDo": [
+            "Auf der Stadtmauer aus dem 14. Jahrhundert gehen",
+            "Die Ruinen des römischen Pollentia erkunden",
+            "Über den Dienstagsmarkt in der Altstadt bummeln",
+            "Tumbet in einer Innenhof-Taverne probieren"
+          ],
+          "mooringTip": "Port d'Alcudia nimmt einen mit dem Heck zum Steg an Mooringleinen für 100 bis 160 Euro in der Hochsaison und ist rundum geschützt, mit so viel Kapazität, dass man meist ohne Reservierung auftauchen kann. Praktisch, wenn die Planung vom Vorabend gekippt ist."
+        },
+        "5": {
+          "shortDescription": "Acht entspannte Meilen ins verschlafene Colonia de Sant Pere, Baden in der nur per Boot erreichbaren Cala Mitjana und Hummereintopf im Sa Sinia.",
+          "description": "Acht ruhige Meilen nach Osten die Bucht entlang bringen einen nach Colonia de Sant Pere, ein kleines Arbeitsdorf mit der schroffen Halbinsel Arta im Rücken. Hier passiert nicht viel, was nach dem Trubel von Alcudia genau der Punkt ist. Die kleine Marina ist für mallorquinische Verhältnisse günstig und vor Nord geschützt. Spielt das Wetter mit, lässt man den Liegeplatz sausen und ankert in der Cala Mitjana, einer nur per Boot erreichbaren Bucht, über Sand in vier bis sechs Metern. An Land ist Sa Sinia die Institution, wo die Caldereta de Langosta seit Jahren die Leute anzieht und den Preis eines anständigen Hummereintopfs wert ist. Wanderer nehmen den Küstenpfad hinauf auf die Landzunge von Arta mit weitem Blick zurück über die Badia d'Alcudia. Und dann zum Sonnenuntergang hinunter an die Uferpromenade.",
+          "thingsToDo": [
+            "In der nur per Boot erreichbaren Cala Mitjana ankern",
+            "Caldereta de Langosta im Sa Sinia",
+            "Den Küstenpfad auf der Halbinsel Arta wandern",
+            "Sonnenuntergang an der Dorfpromenade"
+          ],
+          "mooringTip": "Die Dorfmarina nimmt einen mit dem Heck zum Steg für 70 bis 110 Euro und ist vor Nord geschützt, die günstigste Nacht der Woche. Bei stabiler Vorhersage ist der Ankerplatz in der Cala Mitjana auf Sand in vier bis sechs Metern die schönere Wahl."
+        },
+        "6": {
+          "shortDescription": "Fünfzehn Meilen nach Süden nach Porto Cristo und zu den Coves del Drac, vier Kilometer Höhlen mit einem Quartett, das auf dem See spielt.",
+          "description": "Fünfzehn Meilen die Ostküste hinunter nach Porto Cristo, einem schmalen Hufeisenhafen, der in den Kalkstein geschnitten ist. Der Grund, warum hier alle halten, liegt gleich landeinwärts: die Coves del Drac, vier Kilometer vermessene Höhlen mit einem unterirdischen See, auf dem in der größten Halle ein Streichquartett vom Boot aus spielt. Es klingt nach Touristenfalle und ist zur Hälfte auch eine, aber die Akustik in diesem Saal hält wirklich, was sie verspricht. Früh kommen, bevor die Busgruppen da sind. Zurück auf dem Wasser ist die Cala Anguila ein Stück nördlich der Badestopp, Sand in vier bis sechs Metern und klar genug, um dem Anker beim Eingraben zuzusehen. Wer lieber die Beine vertritt, geht hinüber zur Cala Manacor, vorbei am alten Fischerviertel. Zum Abendessen tut es ein Teller Sobrassada im Celler Sa Premsa.",
+          "thingsToDo": [
+            "Die Höhlen der Coves del Drac besichtigen",
+            "In der Cala Anguila über Sand baden",
+            "Hinüber zur Cala Manacor spazieren",
+            "Sobrassada im Celler Sa Premsa"
+          ],
+          "mooringTip": "Porto Cristo nimmt einen mit dem Heck zum Steg für 80 bis 130 Euro in der Hochsaison und ist gegen Nordwinde abgeschirmt, doch der Hafen verengt sich und der Platz ist knapp, also vorher über Funk anmelden. Die Cala Anguila gleich nördlich funktioniert als Ankeralternative auf Sand in vier bis sechs Metern."
+        },
+        "7": {
+          "shortDescription": "Langer 32-Meilen-Schlag nach Westen zurück nach Palma, ein letztes Bad an der Platja de Palma und Bunkern vor der Übergabe an der Basis.",
+          "description": "Der letzte richtige Segeltag, und er ist lang, zurück nach Westen. Zweiunddreißig Meilen an der Südküste entlang bringen einen wieder Richtung Palma, wobei Ca'n Pastilla und der lange Zug der Platja de Palma das natürliche Abschlussbad ergeben, gut geschützt bei südlichem Wind. Wer noch eine Bucht mitnehmen will, macht den kurzen Umweg zur Cala Vinyes, er lohnt sich. Die meisten Charterverträge erwarten das Schiff gegen zwei Uhr nachmittags zurück an der Basis, damit bleibt der Abend fürs Sortieren und Packen. Vor der Einfahrt in den Real Club Nautico an der Tankstelle volltanken, damit es bei der Übergabe keine Hektik gibt. Und wer noch einen Vormittag in Palma übrig hat: eine Ensaimada mit dicker heißer Schokolade im Ca'n Joan de S'Aigo, das es seit 1700 gibt, ist der richtige Abschluss der Woche.",
+          "thingsToDo": [
+            "Letztes Bad an der Platja de Palma",
+            "Abstecher in die Bucht Cala Vinyes",
+            "Bunkern im Real Club Nautico",
+            "Ensaimada im Ca'n Joan de S'Aigo"
+          ],
+          "mooringTip": "Der Real Club Nautico de Palma nimmt einen mit dem Heck zum Steg für 150 bis 250 Euro in der Hochsaison, die Marina Port de Mallorca ist die günstigere Rückfallebene mit 120 bis 200. An der Tankstelle bei der Einfahrt bunkern, bevor der Liegeplatz belegt wird, nicht danach."
+        }
+      }
+    },
+    "palma-de-mallorca-south": {
+      "metaTitle": "7 Tage Palma & Cabrera Yachtroute | Boat4You",
+      "metaDesc": "7-tägiger Yachtcharter ab Palma de Mallorca die Südküste entlang: Nationalpark Cabrera, Es Trenc, Cala Figuera und Portocolom.",
+      "days": {
+        "1": {
+          "shortDescription": "Sanfter Einlaufschlag über fünfzehn Meilen von Palma nach Süden in den pinienbestandenen Einschnitt der Cala Pi, mit Wachturm über der Einfahrt.",
+          "description": "Fünfzehn Meilen bringen die Crew in Fahrt, bevor es anspruchsvoller wird. Wir laufen meist am späten Vormittag aus dem Real Club Náutico aus, gehen die Küste mit halbem Wind hinunter, und am frühen Nachmittag schließen sich die Felsen um die Cala Pi. Der Einschnitt ist kaum breiter als zwei Schiffslängen, Pinienwald drängt von beiden Seiten heran, und ein alter steinerner Wachturm hält von der Ostkante aus Ausschau. Er entstand im 17. Jahrhundert gegen die Korsaren, und der Aufstieg lohnt den Schweiß für den Blick zurück über das Wasser. Anker auf Sand in vier bis sechs Metern; der Halt ist gut, und ein Nordwind kräuselt hier drinnen kaum die Oberfläche. An Land macht Sa Sinia einen ordentlichen Arròs Brut, den pfeffrigen mallorquinischen Reiseintopf, der nach einem Tag auf dem Wasser noch besser schmeckt.",
+          "thingsToDo": [
+            "Zum Wachturm der Cala Pi aus dem 17. Jahrhundert steigen",
+            "Mit dem SUP bis ans Ende des schmalen Einschnitts",
+            "Den Klippenweg der Migjorn-Küste wandern",
+            "Arròs Brut im Sa Sinia bestellen"
+          ],
+          "mooringTip": "In der Cala Pi wird nur geankert, eine Marina gibt es im Einschnitt nicht. Sand in vier bis sechs Metern hält gut, und die Bucht liegt aus jedem Nordwind heraus."
+        },
+        "2": {
+          "shortDescription": "Acht entspannte Meilen nach Osten zum Es Trenc, dem längsten unverbauten Weißsandstrand der Insel, dahinter die Salinen mit ihren Flamingos.",
+          "description": "Heute nur acht Meilen, es eilt also nicht mit dem Ablegen. Der Es Trenc zieht sich drei Kilometer ohne ein einziges Hotel dahinter, was auf Mallorca fast an ein Wunder grenzt. Der Sand ist hell und fein, das Wasser wechselt von milchig zu tiefem Blau, wo der Grund abfällt, und an einem ruhigen Morgen ankert man hundert Meter davor und schwimmt direkt an Land. Hinter den Dünen liegen die Salinas de Levante, aktive Salzgärten, in deren Flachwasser Flamingos staksen; ein flacher Radweg führt zwischen den Becken hindurch, wenn die Crew die Beine vertreten will. Für einen Liegeplatz gibt es zwei Meilen östlich die Marina Sa Ràpita, die einen mit dem Heck zum Steg nimmt. Vor dem Nachmittagswind noch schnell ein Pa amb Oli in einer der Strandbuden, Brot mit Tomate, Öl und Salz.",
+          "thingsToDo": [
+            "Am drei Kilometer langen Sand des Es Trenc schwimmen",
+            "Die Wege der Salinas de Levante abradeln",
+            "Flamingos im flachen Salzwasser beobachten",
+            "Pa amb Oli in einer Strandbude probieren"
+          ],
+          "mooringTip": "Die Marina Sa Ràpita nimmt einen mit dem Heck zum Steg für rund 80–130 € pro Nacht in der Hochsaison und schützt vor Nord. Wer lieber draußen bleibt, ankert vor dem Es Trenc auf Sand in vier bis sechs Metern, dort gibt es allerdings keinerlei Infrastruktur."
+        },
+        "3": {
+          "shortDescription": "Acht Meilen südlich liegt Cabrera, ein geschütztes Archipel, in dem jedes Boot eine Boje bucht und die Klarheit des Wassers kaum zu glauben ist.",
+          "description": "Das ist der Tag, auf den die Reise hingearbeitet hat. Cabrera ist seit 1991 Nationalpark, und genau die Regeln, die damit kommen, sind der Grund, warum das Wasser so bleibt, wie es ist. Einfach den Anker fallen lassen geht nicht; jedes Besucherboot nimmt eine der fünfzig Bojen in Es Port, der geschützten Hauptbucht, und diese Bojen müssen lange im Voraus online gebucht werden. Für Juli und August sind sie meist Mitte Mai weg, also früh planen. Ist man erst fest, ist der Lohn offensichtlich: Posidonia-Wiesen sind noch in fünfunddreißig Metern Tiefe zu erkennen, und das Schnorcheln rund um Sa Cova Blava, die blaue Meeresgrotte, ist das beste der ganzen Route. An Land führt ein Pfad hinauf zur Burg aus dem 14. Jahrhundert über dem Hafen. Nach Einbruch der Dunkelheit, ohne ein einziges Licht ringsum, sind die Sterne außergewöhnlich.",
+          "thingsToDo": [
+            "Zur Burg von Cabrera aus dem 14. Jahrhundert wandern",
+            "Die Meeresgrotte Sa Cova Blava erschnorcheln",
+            "Das Besucherzentrum des Parks in Es Port besuchen",
+            "Sterne ohne jede Lichtverschmutzung beobachten"
+          ],
+          "mooringTip": "Die Bojen in Es Port vor Cabrera kosten in der Hochsaison etwa 40–80 € pro Nacht und müssen online bei der balearischen Regierung reserviert werden, üblicherweise dreißig Tage im Voraus. Ankern außerhalb der markierten Zonen ist verboten und kostet ab 500 € aufwärts."
+        },
+        "4": {
+          "shortDescription": "Zwölf Meilen zurück nach Mallorca in die Cala Figuera, einen echten Fischerhafen, in dessen steilem Einschnitt noch immer blaue Rümpfe liegen.",
+          "description": "Zwölf Meilen zurück an die mallorquinische Küste führen in die Cala Figuera, und es ist eine Erleichterung, ein Fischerdorf zu finden, das sich nicht an den Tourismus verkauft hat. Der Einschnitt gabelt sich zwischen steilen Wänden, und am Wasser liegen die hölzernen Llaüts, die Rümpfe in jenem tiefen Kobaltblau gestrichen, das die hiesigen Fischer seit Generationen verwenden. Von hier laufen noch immer Boote aus, es hängen noch Netze zum Trocknen, und der ganze Ort entschleunigt einen. Man kann in der kleinen Marina mit dem Heck zum Steg festmachen oder drinnen auf Sand in vier bis sechs Metern ankern, wenn man lieber an Bord bleibt. Mit dem Kajak erreicht man nach Osten in weniger als einer Meile die Kalkfelsen der Cala Santanyí. Zum Abendessen serviert Es Port seit 1954 Caldereta, den kräftigen Hummereintopf nach menorquinischer Art.",
+          "thingsToDo": [
+            "Durch die Kopfsteingassen über dem Hafen schlendern",
+            "Mit dem Kajak nach Osten zu den Klippen der Cala Santanyí",
+            "Caldereta-Hummereintopf im Es Port essen",
+            "Die kobaltblauen Fischerboote Llaüts fotografieren"
+          ],
+          "mooringTip": "Die kleine Marina der Cala Figuera nimmt einen mit dem Heck zum Steg für rund 60–100 € pro Nacht und liegt gut gegen Nord abgeschottet. Der Platz ist knapp, also früh im Päckchen festmachen oder stattdessen im Einschnitt auf Sand in vier bis sechs Metern ankern."
+        },
+        "5": {
+          "shortDescription": "Fünfzehn Meilen nördlich liegt Portocolom, ein weiter Hufeisenhafen voller bunter Bootshäuser und einer der sichersten Ankerplätze der Ostküste.",
+          "description": "Fünfzehn Meilen die Küste hinauf, und der Charakter ändert sich erneut. Portocolom legt sich um ein weites natürliches Hufeisen, die Sorte Hafen, in der es glatt bleibt, während es draußen bläst, was ihn auf diesem Abschnitt zum beliebten Schlupfloch macht. Alte Fischerbootshäuser säumen das Ufer in verblichenem Rot, Blau und Grün, ihre Slipbahnen laufen direkt ins Wasser. Meist ist reichlich Platz zum Festmachen, nach den engen Buchten der Woche fällt der Druck also ab. Die Cala Marçal, ein kurzer Fußweg oder eine Meile mit dem Dinghi nach Süden, liefert einen richtigen Sandstrand für das Nachmittagsbad. Landeinwärts Richtung Felanitx zieht das Weingut Can Gaià seine Reben so nah am Meer, dass sich Salzgischt auf die Trauben legt; ihre Roten lohnen es, für den Abend mit an Bord genommen zu werden.",
+          "thingsToDo": [
+            "Am Sand der Cala Marçal baden",
+            "Salzige Rotweine bei Can Gaià verkosten",
+            "An den bunten Bootshäusern von Portocolom entlangschlendern",
+            "In der Dämmerung mit dem Dinghi durch den Hufeisenhafen"
+          ],
+          "mooringTip": "Die Marina von Portocolom nimmt einen mit dem Heck zum Steg für rund 80–130 € pro Nacht in der Hochsaison, und der Hafen ist bei jedem Wind vollständig geschützt. Normalerweise ist hier Kapazität frei, eine Reservierung ist meist nicht nötig."
+        },
+        "6": {
+          "shortDescription": "Wieder nach Süden, acht Meilen zur Cala Santanyí, einer Bucht zwischen Kalkklippen, durchzogen von Unterwasserbögen wie gemacht zum Schnorcheln.",
+          "description": "Ein kurzer Schlag nach Süden, und man ist zurück zwischen den Klippen. Die Cala Santanyí beißt sich in hellen Kalkstein, und der Fels endet nicht an der Wasserlinie; darunter setzt er sich als Bögen und Durchschwimmtunnel fort, die das Schnorcheln hier richtig gut machen. Maske mitnehmen und eine gute Stunde einplanen. In der Bucht gibt es keine Marina, man ankert also auf Sand in vier bis sechs Metern, gut vor Nord weggesteckt. Findet der Schwell doch herein, ist die Cala Mondragó zwei Meilen die Küste hinunter eine Naturparkbucht mit Mooringbojen und noch besserem Schutz. An Land kann es für Wanderfreudige landeinwärts zur Burg Santueri aus dem 14. Jahrhundert gehen, einer Ruine auf einem Hügel mit Blick über den ganzen Süden der Insel. Zurück auf Meereshöhe schenkt Sa Cova den hiesigen Hierbas aus, den Anis-Kräuter-Likör, falls es noch ein Absacker sein darf.",
+          "thingsToDo": [
+            "Die Unterwasserbögen der Cala Santanyí erschnorcheln",
+            "Hierbas-Likör im Sa Cova trinken",
+            "Abstecher landeinwärts zur Burgruine Santueri",
+            "Mittagessen am Sand der Cala Llombards"
+          ],
+          "mooringTip": "In der Cala Santanyí gibt es keine Marina, also auf Sand in vier bis sechs Metern ankern, geschützt vor Nord. Dreht der Wind oder läuft Schwell ein, zwei Meilen nach Süden in die Cala Mondragó verlegen, einen Naturpark mit Mooringbojen."
+        },
+        "7": {
+          "shortDescription": "Längerer Schlag über vierundzwanzig Meilen nach Westen zurück nach Palma, mit Zeit für ein letztes Bad in der Cala Llombards vor dem Übergabeabend.",
+          "description": "Der lange Heimschlag. Vierundzwanzig Meilen nach Westen heißen früh raus; wir lösen gern gegen neun die Boje und kommen in den Schlag, solange der Morgen noch kühl ist. Die Cala Llombards ist der natürliche Halbzeitstopp, eine geschützte Sandbucht für ein letztes Bad, bevor Palma einen zurück in die Marinawelt zieht. Ziel ist, gegen zwei längsseits zu liegen, dann bleibt der Nachmittag für Diesel, Waschen und das Klarschiff vor der Übergabe. Der Real Club Náutico liegt mitten in der Stadt; mit dem Heck zum Steg festgemacht ist man in Minuten in der Innenstadt. Über den Passeig des Born schlendern, die Platanenpromenade, und die Reise richtig ausklingen lassen mit einer Ensaimada, dem gedrehten Mandelgebäck, und einer dicken heißen Schokolade im Ca'n Joan de S'Aigo, das es seit den 1700er-Jahren gibt.",
+          "thingsToDo": [
+            "Unterwegs in der Cala Llombards baden",
+            "Über Palmas Promenade Passeig des Born gehen",
+            "Eine Ensaimada im Ca'n Joan de S'Aigo essen",
+            "Im Real Club Náutico bunkern und waschen"
+          ],
+          "mooringTip": "Der Real Club Náutico de Palma nimmt einen mit dem Heck zum Steg für rund 150–250 € pro Nacht in der Hochsaison; die Marina Port de Mallorca nebenan liegt mit 120–200 € etwas günstiger. Vor dem Festmachen zur Übergabe an der Tankstelle bei der Einfahrt volltanken."
+        }
+      }
+    },
+    "sitges": {
+      "metaTitle": "7 Tage Sitges & Barcelona-Küste | Boat4You",
+      "metaDesc": "Sieben Tage ab Sitges entlang der Garraf-Klippen und der Maresme-Küste: Castelldefels, Barcelona, Badalona, El Masnou und Mataró.",
+      "days": {
+        "1": {
+          "shortDescription": "Sanfter Vier-Meilen-Schlag nach Westen in den winzigen Fischerhafen von Garraf, mit dem ganzen Nachmittag für die Kalksteinpfade des Parks.",
+          "description": "Vier Meilen sind kaum ein Aufwärmen, und genau darum geht es an Tag eins. Wir legen meist am späten Vormittag ab, lassen die Crew ankommen und treiben nach Westen unter den Klippen des Garraf-Massivs, das an die 600 Meter direkt aus dem Wasser steigt. Garraf selbst ist winzig: eine Reihe weißer Häuschen mit blutrotem Zierwerk, ein Fischerkai, sonst nicht viel. Damit bleibt der Nachmittag frei. Die Kalksteinpfade hinter dem Dorf belohnen eine Stunde Gehen mit weiten Blicken zurück über die Küste. Über dem Hafen steht der alte Celler Güell, eine Weinkellerei aus dem Umfeld Gaudís von der Jahrhundertwende, den kurzen Aufstieg wert. Zum Abendessen macht Can Toni einen ordentlichen Suquet de Peix, den hiesigen Fischeintopf, mit Kartoffel gebunden. Ein leichter Auftakt.",
+          "thingsToDo": [
+            "Die Kalksteinpfade des Garraf-Massivs wandern",
+            "Zum modernistischen Celler Güell hinaufsteigen",
+            "Suquet de Peix im Can Toni",
+            "Durch die rot-weißen Fischerhäuschen bummeln"
+          ],
+          "mooringTip": "Garrafs kleiner Hafen nimmt einen mit dem Heck zum Steg für rund 60–90 € pro Nacht und schützt gut vor Nord, füllt sich im Juli allerdings schnell. Ist er voll, hat Port Aiguadolç in Sitges, vier Meilen östlich, den Platz und den Diesel."
+        },
+        "2": {
+          "shortDescription": "Sechs Meilen nach Osten an den Flamingoflächen des Llobregat-Deltas vorbei nach Castelldefels, fünf Kilometer offener Sand unter einer Hügelburg.",
+          "description": "Der Schlag nach Osten führt über die Mündung des Llobregat, wo der Fluss in einem Labyrinth aus Lagunen und Schilfgürteln aufs Meer trifft. Mit dem richtigen Timing sieht man Flamingos im Flachwasser staksen, ein seltsames Bild vor der Einflugschneise des Flughafens von Barcelona gleich dahinter. Castelldefels kündigt sich mit Sand an: knapp fünf Kilometer davon, dahinter der niedrige Hügel, auf dem das Castell de Fels seit dem 10. Jahrhundert steht. Port Ginesta ist eine große, zweckmäßige Marina mit reichlich Platz, es eilt also nicht mit dem Einlaufen. Zum Sonnenuntergang hinauf zur Burg und danach wieder hinunter zum Arròs Negre, dem schwarzen, salzigen Tintenfischreis, im Restaurant Voramar. Der Strand ist so breit, dass man selbst im August ein ruhiges Stück findet.",
+          "thingsToDo": [
+            "Flamingos im Llobregat-Delta beobachten",
+            "Zum Castell de Fels aus dem 10. Jahrhundert hinaufsteigen",
+            "Arròs Negre im Restaurant Voramar",
+            "Langer Strandspaziergang an der Platja de Castelldefels"
+          ],
+          "mooringTip": "Port Ginesta gehört zu den größeren Marinas der Küste und weist einen selten ab; Heckliegeplätze kosten in der Hochsaison etwa 70–110 €. Hinter der Mole liegt man völlig geschützt, zum Badestrand sind es von den Stegen allerdings fünfzehn Minuten zu Fuß."
+        },
+        "3": {
+          "shortDescription": "Acht Meilen mitten ins Herz von Barcelona, festmachen unter Gehrys goldenem Fisch, mit Gaudí und dem Gotischen Viertel vor der Tür.",
+          "description": "Kaum eine Marina bringt einen einer großen Stadt so nah wie Port Vell. Man tritt vom Steg, und das Gotische Viertel liegt zehn Gehminuten entfernt, seine Gassen so eng, dass sich die mittelalterlichen Häuser oben fast berühren. Barcelona lohnt einen ganzen Tag an Land. Gaudí ist der offensichtliche Grund, die Sagrada Família nach über einem Jahrhundert immer noch unvollendet und die Casa Batlló, die am Passeig de Gràcia dahinschmilzt, aber ziellos durch die Stadt zu treiben lohnt sich hier genauso. Liegeplätze im Sommer weit im Voraus buchen; Port Vell und Port Olímpic sind beide schnell voll. Im Port Olímpic fängt Frank Gehrys riesiger goldener Fisch über der Promenade das Licht. Zum Mittagessen die Touristenterrassen auslassen und in der Barceloneta La Cova Fumada suchen, die enge Bar von 1944, in der die Bomba erfunden wurde, ein frittierter Kartoffelball mit Schärfe.",
+          "thingsToDo": [
+            "Durch die mittelalterlichen Gassen des Gotischen Viertels gehen",
+            "Gaudís Sagrada Família und Casa Batlló ansehen",
+            "Gehrys goldenen Fisch im Port Olímpic fotografieren",
+            "Bomba im La Cova Fumada in der Barceloneta"
+          ],
+          "mooringTip": "Port Vell und Port Olímpic nehmen einen mitten in der Stadt mit dem Heck zum Steg, in der Hochsaison rund 120–200 € beziehungsweise 100–160 €. Für den Sommer Wochen im Voraus reservieren; die zentralen Liegeplätze in Barcelona sind die ersten, die an der ganzen Küste weg sind."
+        },
+        "4": {
+          "shortDescription": "Fünf-Meilen-Schlag nach Norden nach Badalona, wo unter den Straßen eine römische Stadt liegt und ein alter Ölpier als Badeplattform dient.",
+          "description": "Kaum eine Stunde unterwegs, dieser Schlag ist eigentlich ein Vorwand zum Ausschlafen. Badalona liegt direkt nördlich von Barcelona und wird von den meisten Crews übersprungen, was genau der Grund ist, warum sich eine Nacht lohnt. Die römische Stadt Baetulo liegt unter den heutigen Straßen, und im Stadtmuseum kann man unterirdisch ein Stück des originalen gepflasterten Decumanus abgehen. Draußen im Wasser reicht der Pont del Petroli einen Viertelkilometer hinaus, ein eiserner Öl-Verladepier aus den 1960ern, wiedergeboren als Steg und Sprungbrett; die Einheimischen springen den ganzen Sommer über am äußeren Ende ins Wasser. Die alte Destillerie Anís del Mono an der Promenade, ein Modernisme-Wahrzeichen, brennt noch immer ihren Anislikör. Vor dem späten Abendessen eine Esqueixada im Can Xim, den zerzupften Stockfischsalat.",
+          "thingsToDo": [
+            "Den römischen Decumanus unter dem Museum abgehen",
+            "Vom Pont del Petroli aus schwimmen",
+            "Die Modernisme-Destillerie Anís del Mono ansehen",
+            "Stockfisch-Esqueixada im Can Xim"
+          ],
+          "mooringTip": "Die Marina Badalona nimmt einen mit dem Heck zum Steg an Mooringleinen für etwa 70–110 € in der Hochsaison und bleibt hinter ihrer Mole ruhig. Meist ist auch ohne Buchung Platz, so nah an Barcelona ein seltener Luxus."
+        },
+        "5": {
+          "shortDescription": "Wieder ein kurzer Schlag nach Norden nach El Masnou, einem Kapitänsort voller Rückkehrervillen, mit Klippenpfad nach Norden bis Premià.",
+          "description": "El Masnou hat sein Geld im 19. Jahrhundert auf See verdient, als die Männer des Ortes nach Kuba segelten und reich zurückkamen. Ihre verspielten Villen stehen bis heute in den Straßen hinter der Marina, ein Hinweis darauf, dass dieser Abschnitt des Maresme einmal ernsthaftes Seefahrerland war. Der Hafen ist klein und gut geschützt. Das Schiff liegen lassen und den Camí de Ronda aufnehmen, den Küstenpfad, der nach Norden Richtung Premià de Mar an pinienbestandenen Klippen und kleinen Kieselbuchten vorbeiführt, in denen man ohne eine Menschenseele schwimmen kann. Die Felsinselchen vor der Küste sind gut für Maske und Schnorchel. Am Abend serviert El Racó de la Mar eine Fideuà, den Nudelvetter der Paella, gekocht mit Fischfond. Die Weinberge von Alella gleich landeinwärts liefern dazu einen frischen Weißen, den man ruhig bestellen sollte.",
+          "thingsToDo": [
+            "Auf dem Camí de Ronda nach Premià wandern",
+            "Die Felsinselchen vor der Küste erschnorcheln",
+            "Fideuà im El Racó de la Mar",
+            "An der Platja del Masnou baden",
+            "Die Villen der Indiano-Kapitäne ansehen"
+          ],
+          "mooringTip": "Die Marina del Masnou nimmt einen mit dem Heck zum Steg an Mooringleinen, rund 60–100 € in der Hochsaison, und ist komplett gegen Schwell abgeriegelt. Sie ist kompakt, also am Sommerwochenende vorher anrufen, wenn die Tagesboote aus Barcelona hochkommen."
+        },
+        "6": {
+          "shortDescription": "Sechs Meilen hinauf nach Mataró, der Hauptstadt des Maresme, mit Gaudís allererstem Bau und einem Samstagsmarkt, für den sich die Planung lohnt.",
+          "description": "Mataró ist die größte Stadt des Maresme und trägt ihre Geschichte offen. Hier fuhr 1848 Spaniens erste Eisenbahn, und hier fing ein junger Antoni Gaudí an: Die Nau Gaudí, eine Bleicherei, die er in den 1880ern für eine Arbeitergenossenschaft entwarf, ist sein frühestes erhaltenes Gebäude und beherbergt heute eine Kunstsammlung. Die Casa Coll i Regàs, eine prunkvolle Modernisme-Villa von Puig i Cadafalch, ist das zweite Glanzstück. Wenn möglich zum Samstagsmarkt eintreffen, wenn sich das alte Zentrum mit Ständen voller Antiquitäten und Schmuck füllt. Zwischen den Sehenswürdigkeiten bietet der Strand Platja del Callao goldenen Sand und leichtes Schwimmen. Vor dem Mittagessen machen, was die Einheimischen machen: einen Vermút in einer Hafenbar, am besten mit einem Teller Esqueixada dazu.",
+          "thingsToDo": [
+            "Die Nau Gaudí sehen, sein frühestes Gebäude",
+            "Die Villa Casa Coll i Regàs besuchen",
+            "Über den Antiquitätenmarkt am Samstag bummeln",
+            "An der Platja del Callao baden",
+            "Vermút und Esqueixada am Hafen"
+          ],
+          "mooringTip": "Port de Mataró nimmt einen mit dem Heck zum Steg an Mooringleinen für rund 70–110 € in der Hochsaison und liegt völlig geschützt. Stadtzentrum und Nau Gaudí sind vom Tor der Marina aus zu Fuß schnell erreicht."
+        },
+        "7": {
+          "shortDescription": "Der lange Heimschlag: vierundzwanzig Meilen nach Süden an Barcelona vorbei nach Sitges, mit Zeit für ein letztes Bad vor dem Abschiedsessen in der Altstadt.",
+          "description": "Der letzte Tag ist der längste, vierundzwanzig Meilen zurück hinunter nach Sitges, es zahlt sich also aus, früh loszukommen. Wer um neun weg ist, hat den Großteil der Strecke hinter sich, bevor der Nachmittagsseewind aus Südwest einsetzt und den Wind auf die Nase dreht. Barcelona zieht an Backbord vorbei; wer will, wirft vor der Barceloneta für eine Stunde den Anker, damit die Crew ein letztes Mal im Stadtwasser badet. Von dort geht es geradeaus hinunter nach Sitges, dessen weiße Kirche Sant Bartomeu wie ein Leuchtturm auf der Landspitze steht. Vor dem Festmachen an der Tankstelle volltanken. Den Abend für die Altstadt aufheben: Die Carrer de Sant Pere, die Fußgängerachse von Sitges, beendet die Reise gut, und El Vivero macht einen ordentlichen Xató, den hiesigen Salat aus Bitterblättern, Stockfisch und Sardellen.",
+          "thingsToDo": [
+            "Vor der Barceloneta für ein letztes Bad ankern",
+            "An der Tankstelle von Port Aiguadolç bunkern",
+            "Durch die Carrer de Sant Pere in Sitges schlendern",
+            "Xató-Salat im El Vivero",
+            "Die Kirche Sant Bartomeu auf der Landspitze ansehen"
+          ],
+          "mooringTip": "Port Aiguadolç de Sitges nimmt einen mit dem Heck zum Steg an Mooringleinen für etwa 80–130 € in der Hochsaison und liegt vollständig geschützt; die Tankstelle bei der Einfahrt nutzen, um das Schiff vollgetankt zurückzugeben. Bei 24 Meilen früh lossegeln, um dem Südwestwind zuvorzukommen."
+        }
+      }
     }
   },
   "areas": {

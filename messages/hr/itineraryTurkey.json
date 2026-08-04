@@ -1,1 +1,838 @@
-{}
+{
+  "routes": {
+    "bodrum": {
+      "metaTitle": "7 dana: krug Gökova zaljevom iz Bodruma | Boat4You",
+      "metaDesc": "Tjedan dana jedrenja iz Bodruma po Gökova zaljevu: termalni izvori Kara Ade, bove Çökertmea, Kleopatrina plaža i mirni Mersincik.",
+      "days": {
+        "1": {
+          "shortDescription": "Lagan skok od četiri milje na jug do Kara Ade, Crnog otoka, gdje topli mineralni izvori izviru uz pješčanu uvalu kao stvorenu za prvo kupanje.",
+          "description": "Kara Ada leži samo četiri milje ispod Bodruma, pa prvi dan i nije toliko plovidba koliko zagrijavanje. Konope obično odvezujemo sredinom poslijepodneva, kad je brod pospremljen i papirologija gotova, i pustimo posadu da na mirnom moru uhvati ravnotežu. Otok je vulkanski, a na južnom kraju ima plitke bazenčiće koje pune topli mineralni izvori; mještani se ovdje kupaju generacijama i kratka vožnja tenderom do obale itekako se isplati. Sidrimo u uvali na pijesku koji dobro drži, četiri do šest metara, zavučeni od sjevera. To je bitno u srpnju i kolovozu, kad meltemi puše sa sjevera petnaest do dvadeset pet čvorova i jača kroz poslijepodne. Nema ni rive ni dućana, pa vodu i namirnice nadopuni prije polaska.",
+          "thingsToDo": [
+            "Kupanje u toplim izvorskim bazenima na obali",
+            "Ronjenje s maskom uz crne vulkanske grebene",
+            "Piće uz zalazak i meze u uvali",
+            "Uspon kozjim stazama do vidikovca"
+          ],
+          "mooringTip": "Sidrenje u uvali je besplatno; pijesak dobro drži na četiri do šest metara i zaklanja te od sjevernjaka. Na kopnu se nema za što vezati, pa ako trebaš struju i vodu, Bodrum Marina je četiri milje natrag i stoji 80–130 € po noći u punoj sezoni."
+        },
+        "2": {
+          "shortDescription": "Petnaest milja na istok u mirnije vode zaljeva do Çökertmea, uvale okružene borovima gdje su restoranske bove besplatne ako večeraš na obali.",
+          "description": "Okreni pramac na istok od Kara Ade i jedrenje mijenja karakter. Čim uploviš u Gökova zaljev, valovi se smire, a vjetar s vanjske obale popusti, pa petnaest milja do Çökertmea obično prođe lako, u krmenom bočnjaku. Uvala se otvara kao široka potkova s borovima koji silaze do same obale, toliko tiha da cvrčke čuješ prije nego što ugledaš vezove. Nekoliko obiteljskih restorana postavlja bove, a dogovor je star i jednostavan: uzmi bovu, večeraj pod lozom i noćenje te ne košta ništa. To ime nosi i stara barkarijolska pjesma koja se još pjeva duž ove obale. Ako radije ležiš na svom sidru, pijesak drži na pet do sedam metara uz dobar zaklon od sjevera. Večer obično zatvore köfte s roštilja i hladan Efes.",
+          "thingsToDo": [
+            "Köfte s roštilja na maslinovom drvu",
+            "Noćno kupanje u mirnoj uvali",
+            "Šetnja kroz borovinu iznad uvale",
+            "Poslušaj staru pjesmu o Çökertmeu"
+          ],
+          "mooringTip": "Uhvati jednu od restoranskih bova i jedini račun ti je večera. Ako su pune, ili želiš mir, sidri se nasred uvale na pijesku, pet do sedam metara, dobro zaklonjen od sjevera. Izvan kolovoške špice nema potrebe za rezervacijom."
+        },
+        "3": {
+          "shortDescription": "Dublje u zaljev do otoka Sedira i njegove čuvene zlatne plaže do koje smiješ doplivati, ali po njoj nikad hodati.",
+          "description": "Još petnaest milja na istok vodi te do Sedir Adasıja, u svijetu poznatijeg kao Kleopatrin otok. Priča kaže da je Marko Antonije fini zlatni pijesak dopremio ovamo iz sjeverne Afrike za kraljicu, a analiza zrna doista smješta njegovo podrijetlo daleko južno od Egeja, pa ova legenda drži vodu bolje od većine. Kvaka: plaža je zaštićena i čuvari dopuštaju kupanje s mora, ali nijedan korak po samom pijesku. Dođi tenderom i plutaj, nemoj šetati. Iznad obale stoje zidine i malo kazalište antičke Kedreje, ugodna šetnja među borovima i srušenim stupovima. S maskom se lako prate stari lukobrani tik ispod površine. Sidri se u kanalu sa sjeverne strane, pijesak na pet do sedam metara, zaklonjeno od prevladavajućeg sjevernjaka. Stigni do ranog poslijepodneva; izletnički brodovi iz Marmarisa kasnije se prorijede.",
+          "thingsToDo": [
+            "Doplivaj do ograđene Kleopatrine plaže",
+            "Obilazak ruševina antičke Kedreje",
+            "Ronjenje s maskom nad potopljenim lukobranima",
+            "Brancin i rakı za stolom na rivi"
+          ],
+          "mooringTip": "Sidri se uz sjeverni kanal na pijesku, pet do sedam metara, u zaklonu od sjevera. Ovo je zona nacionalnog parka, pa poštuj užad na plaži i ne stupaj na pijesak. Uđi prije nego što poslijepodnevni izletnički brodovi napune sidrište."
+        },
+        "4": {
+          "shortDescription": "Kratkih dvanaest milja preko zaljeva na mirnu južnu obalu, do Karace, ribarskog zaseoka obrubljenog oleandrom i šljunkom.",
+          "description": "Karaca leži dvanaest milja preko zaljeva, na njegovoj južnoj obali, u pregibu kopna gdje se malo ribarsko selo skrilo iza šljunčane plaže. Oleander se tiska do same vode, a ritam padne još jednu stepenicu; ovo je mjesto gdje se poslijepodne provodi u vrlo malo toga. Restorani i ovdje nude isti dogovor kao u Çökertmeu — bova za večeru — pa ti stol na obali donosi besplatnu noć na vezu. Obično stižemo sredinom poslijepodneva, skočimo s krme u more, pa se odveslamo na rani rakı. Držanje u uvalici je dobro, pijesak na četiri do šest metara, a brda je potpuno zatvaraju od sjevernjaka. Pitaj za janjetinu s ražnja; to je lokalni specijalitet i vrijedi čekanja. Ponesi gotovinu, jer kartičarski uređaji ovako daleko nisu pouzdani.",
+          "thingsToDo": [
+            "Traženje morskog stakla po šljunku",
+            "Partija tavle pod starom smokvom",
+            "Janjetina s ražnja za obiteljskim stolom",
+            "Osvježenje s krme u glatkom moru"
+          ],
+          "mooringTip": "Uzmi restoransku bovu i vez plati cijenom večere. Više voliš samostalnost? Uvalica dobro drži na pijesku, četiri do šest metara, i potpuno je zatvorena od sjevera. Rijetko se puni, pa rezervacija ne treba."
+        },
+        "5": {
+          "shortDescription": "Povratak na zapad do Mersincika, uvale koju čuva granit, s morskom špiljom u dnu, timijanom po brdima i bez ijednog svjetla nadaleko.",
+          "description": "Okreni pramac na zapad i vrati se petnaest milja duž zaljeva do Mersincika, jednog od divljijih sidrišta na ovom krugu. Ulaz se sužava između sivog granita, a u dnu uvale niska morska špilja doziva kajak ili tender. Ovdje nema ničega izgrađenog, i u tome je poanta. Iza plaže gruba se staza penje na greben gust od divljeg timijana; protrljaj grančicu među prstima i namirisat ćeš zašto se med s ove obale toliko cijeni. Držanje je pouzdano, pijesak na četiri do šest metara, a okolna brda odbijaju valove sa svih strana. Kako je unutar zaštićenog rezervata Gökova, nema ni dućana ni goriva, pa napuni hladnjak i tankove prije nego što napustiš Karacu. Kad padne mrak, nebo se otvori; bez ijednog grada nadaleko, zvijezde siđu do same vode.",
+          "thingsToDo": [
+            "Uvesli kajakom u morsku špilju",
+            "Uspon na greben timijana iznad uvale",
+            "Hladna zeytinyağlı jela na palubi",
+            "Gledanje zvijezda bez trunke svjetlosnog onečišćenja"
+          ],
+          "mooringTip": "Sidrenje je posvuda besplatno, na pijesku od četiri do šest metara, uz zaklon sa svih strana zahvaljujući granitnim brdima. Nema marine ni opskrbe, pa doplovi pun namirnica i s punim tankovima vode i goriva."
+        },
+        "6": {
+          "shortDescription": "Posljednja etapa natrag u Bodrum, gdje križarski kaštel čuva luku i u sebi drži jednu od najstarijih ikad izvađenih olupina.",
+          "description": "Zadnja plovidba nosi petnaest milja natrag do Bodruma, najbolje odjedrenih ujutro, prije nego što meltemi ojača. Kako grad raste pred pramcem, ulaz u luku nadvladava medeno žuti Kaštel svetog Petra, koji su u petnaestom stoljeću podigli ivanovci. U njemu je danas Muzej podvodne arheologije, a njegov je adut olupina Uluburun, brod trgovac iz brončanog doba koji je potonuo prije više od tri tisuće godina s teretom bakra, stakla i bjelokosti. Ostavi si poslijepodne za njega. Poslije toga sporo razgledavanje sporednih ulica i bazara donosi svoje, osobito ručno tkani pamuk i domaće peştemal ručnike; cjenkanje se očekuje i pola je gušta. Nazovi marinu dan ranije da potvrdiš vez, a prije nego što se privežeš krmom za noć, svrati na gorivni vez i napuni tank.",
+          "thingsToDo": [
+            "Obilazak muzeja u Kaštelu svetog Petra",
+            "Nalazi s olupine Uluburun uživo",
+            "Cjenkanje za peştemal ručnike u bazaru",
+            "Punjenje goriva na vezu u luci"
+          ],
+          "mooringTip": "Bodrum Marina veže krmom na mrtve veze, otprilike 80–130 € po noći u špici. Natoči gorivo na vezu kraj ulaza prije nego što uđeš i nazovi unaprijed da ti se vez zaključa, jer je mjesta usred ljeta malo."
+        },
+        "7": {
+          "shortDescription": "Mirno posljednje jutro na vezu: primopredaja broda, još jedno kupanje i turska kava prije kratke vožnje do zračne luke.",
+          "description": "Odjava je rana. Većina baza želi brod na vezu i predan do devet, pa se isplati spakirati večer prije i u prvo svjetlo još jednom proći ormariće i kaljuže. Voditelj baze prolazi palubom s tobom, provjerava inventar i bilježi sve što ne štima; fotografiraj svaku oznaku koja završi na zapisniku prije nego što potpišeš i zadrži kopiju. Depozit se obično vrati na karticu unutar tjedan dana. Ako ti je let kasnije, nema žurbe s odlaskom s rive: naruči tursku kavu u kafiću uz luku ili skokni do obližnjeg beach cluba na posljednje kupanje. Kad dođe vrijeme, do zračne luke Bodrum je jednostavnih trideset pet minuta vožnje, a marina može organizirati transfer. Opušten kraj tjedna koji je cijelim krugom ostao u zaklonu.",
+          "thingsToDo": [
+            "Primopredaja u obilasku s voditeljem baze",
+            "Posljednje kupanje u bodrumskom beach clubu",
+            "Turska kava na rivi uz luku",
+            "Dogovor transfera do zračne luke Bodrum"
+          ],
+          "mooringTip": "Vrati brod na vez prije devet radi primopredaje. Fotografiraj sve što se upiše kao šteta prije nego što potpišeš zapisnik. Depozit se u pravilu vraća u roku od sedam dana."
+        }
+      }
+    },
+    "bodrum-akyaka": {
+      "metaTitle": "7 dana: Bodrum – Akyaka i natrag | Boat4You",
+      "metaDesc": "Sedam dana jedrenja Gökova zaljevom iz Bodruma: špilja Mersincika, rijeka Azmak u Akyaki, Keramos kod Örena i potkova Çökertmea.",
+      "days": {
+        "1": {
+          "shortDescription": "Lagana prva etapa od 15 milja na jug iz Bodruma do Mersincika, uvale s granitnim ulazom, morskom špiljom za kajak i bez gužve.",
+          "description": "Isplovi iz Bodrum Marine čim papirologija primopredaje bude gotova i okreni pramac jug-jugoistok. Petnaest milja otvorenog mora daje ti vremena da upoznaš brod prije bilo čega tehničkog, a do ranog poslijepodneva stijene Mersincika izlaze na lijevoj strani pramca, čuvajući uvalu u koju se ulazi kroz procjep u granitu. Sidro na pijesak, četiri do šest metara; drži dobro, a valovi rijetko uđu za tobom. Na kopnu nema ničega, i u tome je stvar. U dnu uvale niska morska špilja čeka kajak, a stjenoviti rubovi kriju grote koje traže masku i peraje. Prije večere obično se popnemo na greben obrastao timijanom zbog svjetla. Hladnjak napuni još u Bodrumu, jer je najbliži dućan jako daleko.",
+          "thingsToDo": [
+            "Kajakom u morsku špilju Mersincika",
+            "Ronjenje s maskom po granitnim grotama kraj ulaza",
+            "Uspon na greben divljeg timijana iznad uvale",
+            "Piće uz zalazak na palubi, u sidrištu bez brodova"
+          ],
+          "mooringTip": "Besplatno sidrenje na pijesku u 4–6 m blizu dna uvale; držanje je pouzdano, a uvala ostaje mirna u uobičajenom sjeverozapadnjaku. Nema ni rive, ni vode, ni goriva, pa tankove i namirnice nadopuni u Bodrumu prije polaska."
+        },
+        "2": {
+          "shortDescription": "Kratak skok od osam milja na istok do Kairosa, tihe uvale gdje jedini restoran na rivi posuđuje svoje bove, a likijsko kamenje motri odozgo.",
+          "description": "Ovdje se ne treba žuriti. Osam milja mirnog jutarnjeg mora vodi te do Kairosa, uvale na južnoj obali za koju većina posada nikad nije čula. Jedina konoba na moru je obiteljska, a njihove su bove tvoje za cijenu večere, pa uhvati konop i smjesti se. Šljunčana plaža brzo propada u bistru vodu; iza nje se gruba staza penje do razbacanog kamenja likijske osmatračnice, najbolje prohodane u večernjoj svježini. Ručak je ovdje jednostavan. Naruči balık ekmek s roštilja na rivi, pojedi ga s nogama u moru i pusti da poslijepodne teče polako. Noći su uistinu tihe, s tek pokojim galebom za društvo i brodom koji se blago njiše na bovi.",
+          "thingsToDo": [
+            "Vez na restoransku bovu u Kairosu",
+            "Uspon do ruševina likijske osmatračnice",
+            "Balık ekmek s roštilja na rivi",
+            "Ronjenje s maskom ravno sa šljunčane plaže"
+          ],
+          "mooringTip": "Uzmi jednu od restoranskih bova i plati je večerom na obali; uvala je tijesna i drži te podalje od sjevernog vjetra. Ako su bove pune, sidri se na pijesku i šljunku u 4–6 m i priđi krmom prema plaži."
+        },
+        "3": {
+          "shortDescription": "Dvanaest milja na istok spušta te u Karacu, ribarsku uvalu pod borovima i oleandrom, gdje dnevni ulov završi na roštilju na rivi.",
+          "description": "Kreni iz Kairosa nakon doručka na dvanaest milja dugu etapu do Karace, žive uvale u kojoj ribarskih barki i dalje ima više nego čarter jahti. Prilaz je zelen: borovina silazi do same vode, a oleander obrubljuje šljunčani žal. Kao i u uvalama prije nje, bove drži lokalni restoran, a večera ti osigurava mjesto. Uhvati stazu koja se provlači kroz borove i timijan iznad uvale; već i miris vrijedi uspona, a pogled natrag na usidrenu flotu je odličan. Zaroniš li uz stijene, naći ćeš jata crneja kako lebde u plićaku. Kad se ribari vrate, čaša çaja na rivi kupi ti sat vremena razgovora. Traži trlju s roštilja, jednostavno s limunom i uljem, i više ti ništa neće trebati.",
+          "thingsToDo": [
+            "Staza kroz borove i timijan iznad mora",
+            "Ronjenje s maskom za crnejima uz stijene",
+            "Çay s ribarima iz Karace",
+            "Trlja s roštilja u konobi na rivi"
+          ],
+          "mooringTip": "Karaca radi isto kao i susjedi: uhvati restoransku bovu, račun podmiri večerom. Prostora za sidrenje je malo, pa ako baciš sidro, traži pijesak u 4–6 m i drži se podalje od kruga zaokreta brodova na bovama."
+        },
+        "4": {
+          "shortDescription": "Osam milja do dna zaljeva i Akyake, gradića s drvenim balkonima na Azmaku, gdje kajtaši jašu poslijepodnevni vjetar.",
+          "description": "Ovo je dno zaljeva i vjetar to dobro zna. Gökovin lijevak kroz Akyaku gura ozbiljan vjetar većinu ljetnih poslijepodneva, zbog čega tu bazu imaju kajtaši i jedriličari na dasci, pa kratkih osam milja odradi u jutarnjoj tišini i budi vezan prije nego što se digne. Gradić nagrađuje trud. Kuće u osmanskom stilu s izrezbarenim drvenim balkonima penju se uz padinu, a rijeka Azmak izlazi iz brda iza njih hladna i bistra kao staklo. Uzmi kajak i prijeđi koji kilometar uzvodno, pokraj čaplji u trstici i, ako imaš sreće i budeš tih, pokraj vidre. Natrag u mjestu potraži lokantu na obali rijeke i naruči manti, one male okruglice utopljene u jogurt s češnjakom. Živahnija je ovo postaja od uvala, i to u najboljem smislu.",
+          "thingsToDo": [
+            "Kajakom dva kilometra uzvodno Azmakom",
+            "Šetnja starom jezgrom s osmanskim drvenim balkonima",
+            "Manti u lokanti na obali rijeke",
+            "Kajtaši pred plažom"
+          ],
+          "mooringTip": "Mala marina u Akyaki prima te krmom za otprilike 60–90 € po noći i vrijedi je rezervirati u srpnju i kolovozu. Stigni do sredine prijepodneva: termički vjetar tu brzo ojača i privez postaje nezgodan čim zapuše. Sidrenje u uvali moguće je na pijesku u 4–6 m, ali si izložen poslijepodnevnom vjetru."
+        },
+        "5": {
+          "shortDescription": "Dvanaest milja natrag duž južne obale do Örena, sela maslinara gdje antičko kamenje Keramosa leži razbacano među poljskim cvijećem.",
+          "description": "Odveži se dok je još mirno i spusti se dvanaest milja niz južnu obalu do Örena. Maslinici se u terasama dižu iza plaže, a ritam se nakon vreve Akyake vraća na seosko vrijeme. Razlog za zaustavljanje je Keramos, grad iz četvrtog stoljeća prije Krista čije se zidine i bubnjevi stupova napola gube u travi i poljskom cvijeću odmah u zaleđu; idi ujutro prije vrućine i ruševine ćeš vjerojatno imati samo za sebe. Padne li ti dolazak na dan sajma, trg se napuni vrećama začina i hrpama domaće keramike vrijednima prekapanja. Ručak je ovdje plažni: tanjur s mangala i hladan ayran pod slamnatim suncobranom. Predvečer se pijeskom širi miris janjetine natrljane kimom nad žeravicom, i teško joj je odoljeti.",
+          "thingsToDo": [
+            "Obilazak ruševina Keramosa iz 4. st. pr. Kr.",
+            "Razgledavanje tjednog sajma u Örenu",
+            "Ručak na plaži uz hladan ayran",
+            "Janjetina s kimom na mangalu, na pijesku"
+          ],
+          "mooringTip": "Mala marina u Örenu najjeftiniji je vez na putovanju, krmom za oko 40–60 € po noći. Puni se manje od Akyake, ali poziv unaprijed u vršnim tjednima ne škodi. Sidrenje pred plažom na pijesku u 4–6 m dobro funkcionira u prevladavajućem sjeverozapadnjaku."
+        },
+        "6": {
+          "shortDescription": "Petnaest milja na zapad do Çökertmea, potkove okružene borovima, poznate po narodnoj pjesmi, obiteljskim konobama i kasnoljetnom sjaju u moru.",
+          "description": "Danas je etapa duža, petnaest milja na zapad preko ulaza u zaljev do Çökertmea, potkovaste uvale umotane u borovinu. Turski je pomorci znaju po staroj narodnoj pjesmi, a ljetnim večerima netko na rivi obično uzme saz i odsvira je. Uvala radi po poznatom dogovoru bova-za-večeru, uz nekoliko obiteljskih konoba koje se blago natječu za tvoj stol. Naruči köfte s roštilja na maslinovom drvu i shvatit ćeš zbog čega frka. Krajem kolovoza, ako alge cvatu, kupanje s krme nakon mraka zapali more plavozeleno oko tvojih ruku — jedna od onih stvari u koje nitko ne vjeruje dok ih ne vidi. Za nemirne, iznad sidrišta ide staza po borovom grebenu. Inače, ovo je uvala koja traži da ostaneš na mjestu i radiš vrlo malo.",
+          "thingsToDo": [
+            "Noćno kupanje u bioluminiscentnom moru (kraj kolovoza)",
+            "Köfte s roštilja na maslinovom drvu u konobi",
+            "Živa svirka saza na rivi",
+            "Šetnja borovim grebenom iznad uvale"
+          ],
+          "mooringTip": "Isti dogovor kao u ostalim uvalama: uzmi konobinu bovu i plati je večerom, a večeru ovdje shvaćaju ozbiljno. Sidrenje je također u redu, na pijesku u 5–7 m pred plažom, a potkova te lijepo drži zaklonjenog od sjevera. Vikendima u kolovozu je gužva, pa stigni do kasnog poslijepodneva za dobro mjesto."
+        },
+        "7": {
+          "shortDescription": "Posljednjih petnaest milja natrag do Bodruma, uz vremena za još jedno kupanje prije marine, kaštela i oproštajnog pića nad lukom.",
+          "description": "Zadnja je etapa lakih petnaest milja natrag do Bodruma i nema razloga za žurbu. Usidri se još jednom pred Çökertmeom na jutarnje kupanje ako je posada za, pa uzmi kurs na zapad prema marini. Nazovi dan ranije da zaključaš termin primopredaje i svrati na gorivni vez kraj ulaza u luku prije nego što se privežeš na mrtve veze. Kad je brod složen, poslijepodne je tvoje na kopnu. Kaštel svetog Petra čuva luku s temelja iz petnaestog stoljeća i u sebi drži muzej podvodne arheologije — vrijedan sat vremena. Nakon toga se izgubi u bazaru i cjenkaj za kožu i šafran. Putovanje zatvori kako treba, uz piće u meyhani na rivi dok sunce pada iza jarbola.",
+          "thingsToDo": [
+            "Obilazak Kaštela svetog Petra iz 15. stoljeća",
+            "Cjenkanje za kožu i šafran u bazaru",
+            "Posljednje kupanje pred Çökertmeom u zoru",
+            "Piće uz zalazak u meyhani na rivi"
+          ],
+          "mooringTip": "Bodrum Marina te veže krmom na mrtve veze, otprilike 80–130 € po noći u visokoj sezoni. Termin primopredaje potvrdi s bazom 24 sata ranije, a prije nego što uđeš u svoj vez stani na gorivni vez kraj ulaza i natoči."
+        }
+      }
+    },
+    "bodrum-didim": {
+      "metaTitle": "7 dana jedrenja od Bodruma do Efeza | Boat4You",
+      "metaDesc": "7 dana jedrenja iz Bodruma turskim Egejem: Yalıkavak, Güllük, Apolonov hram u Didimu, Kuşadası i Efez, pa krmeni povratak kući.",
+      "days": {
+        "1": {
+          "shortDescription": "Lagan ulazak u čarter u Bodrum Marini: opskrba broda, uspon na Kaštel svetog Petra i šetnja među ruševinama Mauzoleja.",
+          "description": "Većina posada prvi dan potroši na pripremu broda umjesto na žurno isplovljavanje, a Bodrum tu stanku nagrađuje. Marina leži ispod Kaštela svetog Petra, križarske tvrđave iz petnaestog stoljeća u kojoj je danas Muzej podvodne arheologije — olupina Uluburun unutra jedna je od najstarijih ikad iskopanih. Odvoji joj dva sata. Kratka šetnja u unutrašnjost vodi do razbacanog kamenja Mauzoleja u Halikarnasu, nekoć jednog od Sedam svjetskih čuda. Malo toga stoji, ali mjerilo se i dalje osjeti. Ukrcaj svježe namirnice, vodu i led prije nego što se digne poslijepodnevni meltemi, pa u sumrak pronađi meyhanu na rivi za meze i čašu rakıja. Natoči gorivo na vezu kraj ulaza da sutra kreneš s punim tankovima.",
+          "thingsToDo": [
+            "Obilazak Muzeja podvodne arheologije",
+            "Potraga za kamenjem Mauzoleja u Halikarnasu",
+            "Cjenkanje za začine u bodrumskom bazaru",
+            "Meze i rakı u meyhani na rivi"
+          ],
+          "mooringTip": "Bodrum Marina veže krmom na mrtve veze i potpuno te zaklanja; računaj na 80–130 € po noći u špici. Natoči na gorivnom vezu kraj ulaza u luku prije nego što kreneš na sjever."
+        },
+        "2": {
+          "shortDescription": "Oplovi vrh poluotoka do sjajnog Yalıkavaka ili se skloni u mirniji Göltürkbükü, gdje drvene platforme vise nad morem.",
+          "description": "Dvanaest milja nosi te oko sjeverozapadnog ugla poluotoka, pa na zadnjem dijelu očekuj meltemi u pramac — vrijedi krenuti do devet i pobjeći poslijepodnevnom jačanju. Palmarina u Yalıkavaku je postaja za pokazivanje: superjahte, dizajnerske uličice i mramorna riva otvorena 2014. Tu je lako izgubiti poslijepodne u razgledavanju izloga, teže novčaniku. Četiri milje istočno, Göltürkbükü je blaži izbor. Uvalu okružuje borovina, a beach klubovi svoje platforme za kupanje izvlače nad plitko more. Usidri se pred njima, okupaj se prije ručka, pa tenderom na dug i lijen objed. Gümüşlük i njegove potonule ruševine Myndosa leže odmah zapadno, ako ti se da večera s ribom i zalazak na kopnu.",
+          "thingsToDo": [
+            "Šetnja rivom superjahti u Palmarini",
+            "Kupanje s platformi beach klubova u Göltürkbüküu",
+            "Riba uz zalazak nad potopljenim Myndosom u Gümüşlüku",
+            "Razgledavanje butika u uličicama Palmarine"
+          ],
+          "mooringTip": "Palmarina te prima krmom, ali po premium cijenama, često 200–400 € po noći u srpnju. Mala luka u Göltürkbüküu ide 100–160 €, ili se jednostavno usidri pred beach klubovima na pijesku u 4–6 m."
+        },
+        "3": {
+          "shortDescription": "Prijelaz u Mandalya zaljev do Güllüka, živog ribarskog mjesta s karijskim ruševinama Iasosa na rtu.",
+          "description": "Južno i zapadno preko Mandalya zaljeva, Güllük djeluje kao drugi svijet u odnosu na marinski sjaj koji ostaje iza tebe. Ovo je prava ribarska luka: brodice iskrcavaju ulov na rivi, a riba koju jedeš za večeru vjerojatno je tog jutra sišla s jedne od njih. Ritam se uspori istog trena kad se privežeš. Razlog za zaustavljanje, osim mira, jest Iasos. Antički karijsko-grčki grad leži na rtu južno, na kratkoj šetnji ili vožnji tenderom, s rimskom agorom, bizantskim zidinama i kazalištem koje gleda natrag na more. Idi u hladnijem večernjem svjetlu. Poslije toga roštilji na rivi rade çöp şiş, tanke janjeće ražnjiće po kojima je ovaj kut Egeja poznat, a sama uvala ostaje glatka kao staklo čim meltemi padne.",
+          "thingsToDo": [
+            "Šetnja karijskim i rimskim ruševinama Iasosa",
+            "Çöp şiş na ribarskoj rivi",
+            "Kupanje u glatkom Güllük zaljevu",
+            "Iskrcaj dnevnog ulova u zoru"
+          ],
+          "mooringTip": "Mala marina u Güllüku prima te krmom za 60–100 € po noći i dobro zaklanja od sjevera. Ako je puna, sidri se na pijesku koji dobro drži, u 5–7 m unutar uvale."
+        },
+        "4": {
+          "shortDescription": "Dvadeset milja na sjever do Didima, gdje još stoji kolosalni Apolonov hram, a zlatni pijesak Altınkuma čeka milju južnije.",
+          "description": "Etapa od dvadeset milja donosi te u Didim i pred jedan od najvećih prizora turske obale. Apolonov hram u Didimi bio je među najvećima koje su Grci ikad podigli, a i napola srušen njegovi stupovi sežu devetnaest metara u nebo. Ovo je bilo proročište Branhida, u svoje doba drugo samo Delfima. Nalazi se koji kilometar u unutrašnjosti, lak taksi iz marine. D-Marin Didim velika je i uredno vođena luka i standardno noćenje ovdje, zaklonjeno što god vjetar radio. Kad vidiš hram, spusti se do Altınkuma, milju južnije, na mekan zlatni pijesak i plitko kupanje. Prije odlaska uzmi kutiju lokuma kod obiteljskog slastičara u mjestu.",
+          "thingsToDo": [
+            "Pod stupovima Apolonova hrama",
+            "Kupanje sa zlatnog pijeska Altınkuma",
+            "Lokum kod obiteljskog slastičara",
+            "Razgledavanje tekstila na bazaru uz luku"
+          ],
+          "mooringTip": "D-Marin Didim veže krmom na mrtve veze, potpuno zaklonjeno, oko 100–160 € po noći u špici. U sezoni je tražen, pa nazovi unaprijed da zadržiš vez i natoči gorivo na vezu kraj ulaza."
+        },
+        "5": {
+          "shortDescription": "Duga etapa od 32 milje na sjever do Kuşadasıja, odskočne daske za Efez, najveći rimski grad na ovoj obali.",
+          "description": "Ovo je najduža plovidba prve polovice puta, trideset dvije milje u prevladavajući sjeverni vjetar, pa je shvati kao pravi jedriličarski dan i kreni rano. Nagrada na drugom kraju je Efez, i vrijedan je svakog okreta. Kuşadası je prometna kruzerska luka s marinom pune usluge, pa rezerviraj vez. Odatle je do Efeza kratak taksi i pola dana pješke: Celzova knjižnica, veliko kazalište koje je nekoć primalo dvadeset pet tisuća ljudi, mramorne ulice kojima se i danas hoda. Idi prvo ujutro, prije autobusa i vrućine. Natrag u mjestu, Ženska plaža (Kadınlar Denizi) je gdje se kupaju mještani, a mali kaštel na Güvercinadi čuva luku. Bazar je dobar za svilu i začine ako ostane vremena.",
+          "thingsToDo": [
+            "Obilazak Efeza i Celzove knjižnice",
+            "Sjedenje na kamenim redovima velikog kazališta",
+            "Kupanje na Ženskoj plaži (Kadınlar Denizi)",
+            "Uspon na kaštel Güvercinada iznad luke"
+          ],
+          "mooringTip": "Setur Kuşadası Marina veže krmom, potpuno zaklonjeno, i ide otprilike 100–160 € po noći u špici. U kruzerskoj sezoni je gužva, pa rezerviraj unaprijed i natoči na vezu kraj ulaza prije dugog povratka."
+        },
+        "6": {
+          "shortDescription": "Laganih petnaest milja do mirnog Özderea, s proročištem Klarosa u zaleđu i praznim uvalama za paddleboard.",
+          "description": "Nakon gužve Kuşadasıja, Özdere je namjerna promjena brzine. Petnaest lakih milja uz obalu vodi te do niskog turističkog niza koji većina čarter ruta preskače, i baš je u tome njegov šarm. Plaže su duge i plitke, uvale između njih ostaju tihe, a paddleboard je najbolji način da se njuška uz obalu. U zaleđu, iznad Ahmetbeylija, leže ruševine Klarosa, Apolonova proročišta s hramom i panjevima kolosalnih kipova. Vidi ga djelić posjetitelja koje vidi Efez. Natrag na brodu — ovo je kraj maslina, pa traži zeytinyağlı jela od povrća kuhana u domaćem ulju i hladno egejsko bijelo uz večeru u konobi na obali. Mirna, odmarajuća noć prije dugog spuštanja na jug.",
+          "thingsToDo": [
+            "Posjet ruševinama proročišta Klaros",
+            "Paddleboard po tihim uvalama uz obalu",
+            "Zeytinyağlı jela na maslinovom ulju u konobi",
+            "Čaša rashlađenog egejskog bijelog vina"
+          ],
+          "mooringTip": "Mala luka u Özdereu skromna je i jeftina, oko 40–70 € po noći, zaklonjena od sjevera. Infrastruktura je ograničena, pa ako radije ležiš slobodno, sidri se na pijesku u 4–6 m pred uvalom."
+        },
+        "7": {
+          "shortDescription": "Šezdeset milja niz vjetar kući u Bodrum, uz opcionalno namakanje u toplim izvorima Kara Ade prije zadnjeg veza.",
+          "description": "Zadnji je dan onaj veliki: šezdeset milja natrag do Bodruma. Spas je u smjeru. Sve ono što si na putu prema sjeveru grizao uz vjetar sad ti je iza leđa, pa je ovo krmena plovidba u kojoj meltemi radi posao — brza, ali zna postati gruba, pa skrati jedra na vrijeme i kreni u prvo svjetlo. Cilj je proći poluotok do sredine poslijepodneva. Ako bude vremena i more dopusti, Kara Ada, otok pred Bodrumom, ima tople sumporne izvore gdje se možeš usidriti i kupati u vodi temperature kade. To je pravi posljednji stanak. Natoči gorivo prije nego što se privežeš, isperi brod i potvrdi jutarnji termin primopredaje. Onda slijedi još jedan zalazak nad kaštelom i završna večera posade na kopnu za kraj tjedna.",
+          "thingsToDo": [
+            "Namakanje u toplim sumpornim izvorima Kara Ade",
+            "Ispiranje broda i gorivo u Bodrum Marini",
+            "Završna večera posade iznad luke",
+            "Posljednji zalazak nad Kaštelom svetog Petra"
+          ],
+          "mooringTip": "Natrag u Bodrum Marini vezuješ se krmom na mrtve veze, 80–130 € po noći. Natoči na vezu kraj ulaza na putu unutra i potvrdi termin primopredaje 24 sata ranije da jutro ostane opušteno."
+        }
+      }
+    },
+    "fethiye": {
+      "metaTitle": "7 dana: plavi krug iz Fethiye | Boat4You",
+      "metaDesc": "Sedam dana jedrenja u krug iz Fethiye: Gemiler, Dolina leptira, Plava laguna Ölüdeniz, Kapı Creek, Ruin Bay i Sarsala — sve u zaklonjenom zaljevu.",
+      "days": {
+        "1": {
+          "shortDescription": "Lagano zagrijavanje od osam milja na jug do otoka Gemilera, gdje se bizantske ruševine penju uz padinu, a preko uvale hladna izvorska voda ulazi u more.",
+          "description": "Prva je etapa namjerno blaga, osam milja niz obalu dok svi hvataju ravnotežu i shvaćaju gdje stoje ručke vinča. Gemiler leži tik uz kopno, a njegova je padina naslagana ostacima bizantskih crkava i cisterni bez krovova. Ovo je bio otok svetog Nikole davno prije nego što su svečeve moći odnesene u Bari, a staze koje se provlače kroz ruševine vrijede sat vremena prije nego što svjetlo splasne. Za noć obično prijeđemo u Coldwater Bay. Slatkovodni izvori tu hrane plićak i osjetiš to čim zaroniš: hladan sloj koji klizi ispod toplog površinskog. Uzmi masku i preplivaj uz rub stijena. Večera je meze u konobi na rivi, a bova dolazi besplatno uz stol.",
+          "thingsToDo": [
+            "Šetnja ruševinama bizantskih crkava na Gemileru",
+            "Uspon nadsvođenom stazom do crkve na vrhu",
+            "Ronjenje s maskom kroz hladni izvorski sloj u Coldwater Bayu",
+            "Meze večera u konobi na rivi Coldwatera"
+          ],
+          "mooringTip": "Coldwater Bay ima besplatne restoranske bove, pa uzmi jednu i račun podmiri večerom. Ako su pune, pijesak dobro drži na pet do sedam metara odmah uz polje bova."
+        },
+        "2": {
+          "shortDescription": "Skok od četiri milje do strmog kanjona Doline leptira, pa iza ugla na noćenje pod čuvenom lagunom Ölüdeniza i paraglajderima s Babadağa.",
+          "description": "Kratak dan, pa nema žurbe. Dolina leptira otvara se kao zeleni rasjek u liticama, klanac koji se penje više od tristo metara u unutrašnjost do slapa u svom dnu. Leptiri vrste Jersey tiger, po kojima nosi ime, okupljaju se ovdje usred ljeta i nigdje drugdje na obali. Usidri se pred njom, uđi kroz trstiku i idi do slapa ako voda teče. Ovo je postaja samo za dan; kanjon poslijepodne propuhuje na mahove i noć je loša. Za spavanje se pomičemo milju istočno, u Ölüdeniz. Sama je laguna zaštićena, ali otvorena uvala izvan nje dobro drži na pijesku od pet do sedam metara. Podigni pogled oko šest i obično ćeš vidjeti paraglajdere kako se spuštaju u spiralama s Babadağa.",
+          "thingsToDo": [
+            "Uspon klancem do slapa u Dolini leptira",
+            "Kupanje sa sidra pred Plavom lagunom Ölüdeniz",
+            "Slijetanje paraglajdera s planine Babadağ",
+            "Potraga za leptirima Jersey tiger usred ljeta"
+          ],
+          "mooringTip": "Dolinu leptira shvati samo kao stanku za ručak — sidro na kamenito dno u šest do osam metara i oko na zaokret broda. Za noć se sidri u otvorenoj uvali Ölüdeniz, na pijesku od pet do sedam metara, izvan označene zone za kupače."
+        },
+        "3": {
+          "shortDescription": "Najduža etapa tjedna, dvanaest milja u zaklonjeni zaljev, s krajem u Kapı Creeku, uskoj uvali sa šljunčanom plažom i jednom konobom.",
+          "description": "Ovo je najveća plovidba putovanja, pa volimo pustiti bovu do devet i odraditi milje prije nego što se digne poslijepodnevni vjetar. Čim uploviš u Skopea Limanı, more se izravna, a borova se brda sklope oko tebe. Kapı Creek je zavučen na kraju proreza koji se na ulazu stisne na osamdesetak metara, zbog čega više podsjeća na norveški fjord nego na tursku uvalu. Unutra je glatko i potpuno zatvoreno. U dnu je šljunčana plaža za kupanje i mala konoba koja drži polje bova. Veži se krmom, baci dugi konop na obalu ako te momak zamoli, i smjesti se. Naruči meze, staklenku meda od timijana za ujutro, i pusti posadu da prije večere odvesla do tjesnaca.",
+          "thingsToDo": [
+            "Veslanje do 80 metara uskog ulaza u uvalu",
+            "Kupanje sa šljunčane plaže u dnu uvale",
+            "Vez krmom uz konobu u Kapı Creeku",
+            "Med od timijana i rakı na rivi"
+          ],
+          "mooringTip": "U Kapı Creeku se vežeš krmom uz pontone konobe ili na njezine bove — oboje besplatno ako jedeš na obali — a puni se brzo srpanjskim večerima. U špici stigni do ranog poslijepodneva da budeš siguran u mjesto; pijesak na pet do sedam metara je rezerva."
+        },
+        "4": {
+          "shortDescription": "Laganih četiri milje do Ruin Baya, gdje potopljene ruševine iz rimskog doba leže u dva metra vode ispod likijskih grobnica.",
+          "description": "Još jedno lijeno jutro sasvim je u redu, jer je Ruin Bay udaljen samo četiri milje. Ovdje je atrakcija ispod broda, a ne na kopnu. Dio starog likijskog naselja davno je skliznuo u more, a njegovo kamenje sada leži u dva do tri metra bistre vode uz podnožje litice, dovoljno plitko da ga razgledaš s maskom bez ijednog dubljeg zarona. Plivaj polako i razaznat ćeš klesane blokove i bubnjeve stupova obrasle algama. Iznad uvale gruba staza vodi do razbacanih ruševina Lydae, koje danas dijele koze i stare masline. Dobro je to mjesto za piće uz zalazak. Zapali roštilj na palubi dok litica poprima zlatnu boju, i drži oko otvoreno — uvala je dovoljno otvorena da noćni sjevernjak zna naći put unutra.",
+          "thingsToDo": [
+            "Ronjenje s maskom nad potopljenim ruševinama uz liticu",
+            "Uspon do ruševina Lydae",
+            "Roštilj na palubi uz zalazak",
+            "Kupanje s pramca u toplom plićaku"
+          ],
+          "mooringTip": "Ruin Bay ima besplatne konobine bove i dobar pijesak na pet do sedam metara, ali je otvoren prema sjeveru, pa provjeri prognozu prije nego što se odlučiš tu prenoćiti. Najavi li se sjevernjak, Kapı Creek ili otok Tersane na skok odavde mirniji su izbor."
+        },
+        "5": {
+          "shortDescription": "Šest milja do marine u Göceku, uz kupanje kod niskih otočića Yassıca ili Domuz Adasıja prije veza, tuševa i dućana.",
+          "description": "Na polovici tjedna vrijedi zamijeniti divlju uvalu pravom marinom, a Göcek je očit izbor. Ima samo šest milja, pa napravi prijepodne od otoka usput. Skupina Yassıca jedva viri iznad mora, splet ravnih stijena i tirkiznih kanala gdje riba gusto visi nad livadama posidonije; baci sidro, okupaj se i pusti da ručak potraje. Obližnji Domuz Adası nudi isti bistri plićak ako je na Yassıci gužva. U D-Marin uđi rano poslijepodne, prvo na gorivni vez kraj ulaza, pa uhvati mrtvi vez i priđi krmom uz ponton. Večer je za čvrsto tlo: tuš, sladoled, obilazak dućana s brodskom opremom i keramikom, i stol u jednoj od meyhana iza glavne ulice.",
+          "thingsToDo": [
+            "Ronjenje s maskom po kanalima s posidonijom kod otoka Yassıca",
+            "Kupanje u bistrom plićaku Domuz Adasıja",
+            "Razgledavanje keramičarskih dućana u D-Marinu Göcek",
+            "Večera u meyhani nadomak glavnog trga u Göceku"
+          ],
+          "mooringTip": "D-Marin Göcek veže krmom na mrtve veze i ide otprilike sto do sto šezdeset eura po noći u špici, pa rezerviraj unaprijed u srpnju i kolovozu. Natoči gorivo na vezu kraj ulaza prije nego što uđeš u svoj vez, ne poslije."
+        },
+        "6": {
+          "shortDescription": "Kratkih pet milja do Sarsale, uvale u borovim zidovima, bez marine i bez svjetala, sačuvane za zadnju noć zvijezda i roštilja.",
+          "description": "Napuni hladnjak i vodu u Göceku prije polaska, jer u Sarsali nema ničega osim borova i tišine. Pet je milja lagane plovidbe niz zaljev do duboke zelene uvale okružene šumom na padinama i zaklonjene od gotovo svakog smjera iz kojeg se vjetar odluči javiti. Sidri se na pijesku u četiri do šest metara i baci dugi konop na stablo ako želiš mirno ležati preko noći. Plićak u dnu vrijedi sporog veslanja; čaplje rade po rubovima u zoru i sumrak, a uz stjenovite obale gotovo uvijek ima hobotnica za onoga tko ima masku. Sačuvaj najbolje namirnice za večeras. Ispeci nešto jednostavno na palubi, pogasi svjetla u kabinama i pusti nebo da odradi ostalo, daleko od svakog gradskog sjaja.",
+          "thingsToDo": [
+            "Sidrenje s dugim konopom na borove",
+            "Ronjenje s maskom uz stijene, u potrazi za hobotnicom",
+            "Čaplje u plićaku u sumrak",
+            "Zvijezde bez ijednog gradskog svjetla u blizini"
+          ],
+          "mooringTip": "Sarsala je besplatno sidrenje na dobrom pijesku od četiri do šest metara, obično s dugim konopom na stablo jer je uvala uska. Ovdje nema ni dućana ni vode, pa se do kraja opskrbi u Göceku prije nego što se spustiš."
+        },
+        "7": {
+          "shortDescription": "Posljednjih dvanaest milja do Fethiye, tempirano za dolazak rano poslijepodne, uz zadnje kupanje pod likijskim grobnicama u stijeni i obilazak tržnice.",
+          "description": "Dan povratka, i nema razloga da bude teret. Do marine je dvanaest milja, pa isplovi sredinom prijepodneva dok je more još uljasto, a vjetar se nije digao. Uzmi kurs istok-jugoistok i neka bude jedrenje ako vjetar surađuje. Ima vremena i za još jedno kupanje usput, najbolje pod likijskim grobnicama uklesanima visoko u litice iza Fethiye, koje najbolje izgledaju s mora. Padne li utorak, gradska je tržnica u punom jeku, pa se priveži ranije i idi po smokve, masline i vrećicu šipaka. Cilj je biti uz vez u ECE-u oko dva, što ti ostavlja poslijepodne za gorivo, ispiranje soli i pakiranje. Termin primopredaje potvrdi dan ranije da odjava prođe glatko.",
+          "thingsToDo": [
+            "Posljednje kupanje pod likijskim grobnicama u stijeni",
+            "Kupovina na utorčanoj tržnici u Fethiyi",
+            "Gorivo i ispiranje broda u ECE Marini",
+            "Sok od šipka u kafiću na rivi"
+          ],
+          "mooringTip": "Marina di Fethiye ECE veže krmom na mrtve veze, otprilike sedamdeset do sto deset eura po noći u špici. Natoči na gorivnom vezu kraj ulaza na putu unutra i potvrdi vrijeme primopredaje dvadeset četiri sata ranije da vez i odjava budu spremni."
+        }
+      }
+    },
+    "gocek-7-days": {
+      "metaTitle": "7 dana: Göcek i 12 otoka | Boat4You",
+      "metaDesc": "Tjedan dana jedrenja iz Göceka preko Sarsale, Fethiye, Gemilera, Ölüdeniza, Kapı Creeka i Ruin Baya po Fethiyskom zaljevu.",
+      "days": {
+        "1": {
+          "shortDescription": "Lagano zagrijavanje od pet milja prema jugu iz D-Marina Göcek do Sarsale, uvale okružene borovima koja ostaje mirna što god vjetar radio.",
+          "description": "Prvi dan rijetko je o miljama. Iz D-Marina Göcek obično odvezujemo oko podneva, kad je proviant složen i posada prestala kopati po torbama tražeći kupaće, pa krećemo na jug prema Sarsali. Pet milja kasnije baciš sidro u pijesak na četiri do šest metara, ušuškan pod borovim grebenima koji se čine kao da se sklapaju sa svih strana. Vjetar je ovdje imbat, termički vjetar s mora koji se sa zapada digne rano poslijepodne na deset do petnaest čvorova i utihne čim sunce padne. Ništa nalik egejskom meltemiju. Skoči s krme na kupanje, pa se popni stazom uz greben kroz majčinu dušicu i borovinu da vidiš zaljev odozgo. Noći su mračne i tihe. Ispeci nešto na roštilju na krmi, broji satelite i lezi rano.",
+          "thingsToDo": [
+            "Roni s maskom uz borove hridi u potrazi za šparima",
+            "Prošeći grebenom majčine dušice i borova iznad uvale",
+            "Ispeci svježu ribu na krmi u suton",
+            "Gledaj zvijezde bez trunke svjetlosnog onečišćenja"
+          ],
+          "mooringTip": "Sarsala je slobodno sidrenje na dobrom pijesku na četiri do šest metara, zaklonjeno sa svih strana, pa rezervacija nije potrebna. Nema marine ni pouzdane trgovine, zato dopuni vodu i namirnice u Göceku prije polaska."
+        },
+        "2": {
+          "shortDescription": "Dvanaest milja na istok do Fethiye, gdje su likijske grobnice uklesane u liticu iznad grada, a utorkom tržnica preplavi sporedne ulice.",
+          "description": "Fethiye je jedini pravi grad na ovoj ruti, pa zaslužuje noćenje. Plovidba je oko dvanaest milja prema istoku-jugoistoku i ako imbat surađuje, većinu ćeš odjedriti na pola vjetra. Vežeš se u Marina di Fethiye, ECE marini, a do grada je kratka šetnja rivom. Iznad kuća, iz litice te gleda Amintasova grobnica isklesana u stijeni, puno jonsko pročelje uklesano u kamen u četvrtom stoljeću prije Krista. Uspon se isplati odraditi prije nego pripeče. Poslije prošetaj bazarom Paspatur, pa na ribarnicu, gdje ribu kupiš na štandu, a restoran uokolo ti je ispeče. Ako slučajno budeš tu u utorak, razvučena tjedna tržnica sama je po sebi razlog da ostaneš na kopnu.",
+          "thingsToDo": [
+            "Popni se do Amintasove grobnice u stijeni",
+            "Kupi ribu na ribarnici i daj je ispeći",
+            "Prošeći starim bazarom Paspatur",
+            "Obiđi utorkovu tržnicu zbog začina"
+          ],
+          "mooringTip": "Marina di Fethiye (ECE) je vez krmom na muringe, otprilike 70–110 € po noći u punoj sezoni i potpuno zaklonjena. Rezerviraj dan-dva ranije u srpnju i kolovozu, a gorivo natoči na stanici kraj ulaza dok ulaziš."
+        },
+        "3": {
+          "shortDescription": "Osam milja na jug do otoka Gemiler, bizantskog svetišta sv. Nikole, pa sidrenje nasuprot u Coldwater Bayu gdje hladni izvori rashlade more.",
+          "description": "Otok Gemiler, na nekim kartama upisan kao otok sv. Nikole, jedno je od tiših iznenađenja ovog zaljeva. Osam milja južno od Fethiye, padine su mu prekrivene bizantskim ruševinama, crkvama i natkrivenim procesijskim putem koji se penje do vrha, građenim između četvrtog i šestog stoljeća, kad je ovo bila hodočasnička postaja vezana uz sv. Nikolu iz Mire, davno prije nego što su mu relikvije odnesene u Bari 1087. Iskrcaj se kasno poslijepodne, kad se izletnički brodovi prorijede. Za noćenje se vrati preko kanala u Coldwater Bay, Soğuksu na kopnenoj strani. Slatkovodni izvori ovdje izbijaju ravno u more i osjetiš to čim propliva kroz hladnu mrlju na inače toploj površini. Lokalni štos koji vrijedi probati barem jednom.",
+          "thingsToDo": [
+            "Prošeći bizantskim procesijskim putem na Gemileru",
+            "Zaplivaj kroz hladne slatkovodne izvore",
+            "Uhvati zalazak sunca nad ruševinama Gemilera",
+            "Naruči meze na pontonu u Coldwater Bayu"
+          ],
+          "mooringTip": "Coldwater Bay radi na sustavu restoranskih boja: uzmi besplatan vez i posao zaključi večerom na kopnu. Ako radije sidriš, pijesak je na pet do sedam metara, zaklonjeno od sjevera."
+        },
+        "4": {
+          "shortDescription": "Kratak skok od četiri milje do kanjona Butterfly Valleyja, pa oko rta do Ölüdeniza za noćenje pod paraglajderima koji se spuštaju s Babadağa.",
+          "description": "Danas samo četiri milje, ali vode nekamo pamtljivo. Butterfly Valley leži u podnožju kanjona koji se diže 350 metara gotovo okomite stijene, a u jeku ljeta napuni se leptirima medonjama, narančasto-krem krila koja ćeš vidjeti na usponu do slapa u dnu klanca. Usidri se pred šljunčanom plažom, iskrcaj se i vrati na brod prije nego poslijepodnevni vjetar propuše dolinom. Ovo je dnevna postaja, ne vez za noć. Prevali zadnju milju do Ölüdeniza, gdje se poznata laguna savija iza pješčanog spruda, a paraglajderi se u spirali spuštaju s Babadağa, planine koja stoji 1.969 metara iznad plaže. Gledati ih kako slijeću dok plivaš oko broda nikad ne dosadi.",
+          "thingsToDo": [
+            "Prošeći klancem do slapa u Butterfly Valleyju",
+            "Uoči endemske leptire medonje",
+            "Zaplivaj s broda u Ölüdenizu",
+            "Gledaj paraglajdere kako slijeću s Babadağa"
+          ],
+          "mooringTip": "Butterfly Valley je isključivo dnevno sidrište, na kamenu na šest do osam metara, a poslijepodne kanjonom propuše nagao katabatički vjetar, pa nemoj ostajati dulje od sredine poslijepodneva. Prenoći radije u Ölüdenizu na pijesku na pet do sedam metara."
+        },
+        "5": {
+          "shortDescription": "Dvanaest milja natrag u Skopea Limanı do Kapı Creeka, uvale nalik fjordu koja je na ulazu jedva osamdeset metara široka.",
+          "description": "Nakon otvorenog osjećaja Ölüdeniza, Kapı Creek dolazi kao potpuni kontrast. Uvala se duboko usijeca u brda Skopea Limanıja i na ulazu se suzi na nekih osamdeset metara, pa ulaziš kroz procjep koji stvarno djeluje kao fjord prije nego se voda unutra otvori. Zaklonjen je od svega što vrijeme može poslati. Uhvati bovu ispred malog restorana u dnu uvale, gdje šljunčana plaža služi kao lagan ulaz u more. Kasno poslijepodne odvezi tender do tjesnaca i natrag, zbog svjetla na liticama. Večera na kopnu obično znači ribu s roštilja, planinsko bilje i čašu rakıja, a ako se na stolu nađe domaći med od majčine dušice, kupi teglu. Dok se litice sklapaju iznad glave, zvijezde izađu uokvirene u uski pojas.",
+          "thingsToDo": [
+            "Zaplivaj sa šljunčane plaže u dnu uvale",
+            "Odvezi tender do osamdesetmetarskog tjesnaca",
+            "Probaj rakı i med od majčine dušice na kopnu",
+            "Gledaj zvijezde uokvirene zidovima uvale"
+          ],
+          "mooringTip": "Kapı Creek radi na restoranskim bovama: vez je besplatan ako večeraš u taverni u dnu uvale. Mjesta je malo i u sezoni je gužva, pa dođi do sredine poslijepodneva ako želiš bovu, ili se usidri na pijesku na pet do sedam metara."
+        },
+        "6": {
+          "shortDescription": "Četiri mirne milje do Ruin Baya, gdje potopljeno likijsko naselje leži tik ispod površine, a rimski stupovi počivaju na dohvat maske.",
+          "description": "Još četiri lagane milje dovode te u Ruin Bay, koji se ponekad zove i Tomb Bay, i ime je zasluženo. Pod liticama uz sam rub vode leže ostaci likijskog naselja koje je prije stoljeća skliznulo pod more. Trebaju ti samo maska i peraje: bubnjevi rimskih stupova i klesani kamen leže u dva-tri metra bistre vode, dovoljno plitko da ih dosegneš na jedan dah. Iznad uvale stoje ruševine antičke Lidae, napola progutane maslinama i kozama koje pasu, grub uspon za onoga tko želi šetnju. Ruševine obično ostavljamo za kasno poslijepodne, a sredinu dana provedemo u vodi. Roštilj na krmi, köfte i hladno pivo, to lijepo zatvori dan. Tople noći, mirno more, nema razloga za žurbu.",
+          "thingsToDo": [
+            "Roni s maskom nad potopljenim rimskim stupovima",
+            "Popni se do ruševina Lidae",
+            "Ispeci janjeći köfte na krmi u zalazak",
+            "Skoči s pramca u toplo more"
+          ],
+          "mooringTip": "Ruin Bay koristi isti sustav restoranskih boja, besplatno uz večeru na kopnu i zaklonjeno od sjevera. Ako su bove zauzete, usidri se na pijesku na pet do sedam metara i uzmi tender do obale."
+        },
+        "7": {
+          "shortDescription": "Šest laganih milja natrag do Göceka, uz posljednje kupanje kod niskih, pjeskovitih otoka Yassıca prije nego natočiš gorivo i vratiš brod.",
+          "description": "Zadnja etapa je kratka, samo šest milja natrag do D-Marina Göcek, pa ima vremena za još jedno kupanje. Otoci Yassıca leže otprilike usput, skupina niskih, kamenih otočića s pješčanim prudovima i plitkom vodom koja nad dnom postane blijedozelena. Baci sidro, skoči u more i pusti posadu da ima pravo zadnje jutro prije nego brod treba pospremiti. Ciljaj da budeš na vezu u Göceku oko dva, što ostavlja poslijepodne za gorivo, ispiranje soli i slaganje opreme za primopredaju. Sam Göcek nagrađuje šetnju: šetnica uz marinu puna je malih butika i kafića, a više od jednog dućana pustit će te da kušaš domaći med s mirisom šafrana prije kupnje. Mirna večera u gradu pravi je način da se zatvori tjedan.",
+          "thingsToDo": [
+            "Usidri se i zaplivaj kod otoka Yassıca",
+            "Prošeći buticima na šetnici D-Marina",
+            "Kušaj domaći med sa šafranom u gradu",
+            "Natoči gorivo i isperi brod prije primopredaje"
+          ],
+          "mooringTip": "D-Marin Göcek je vez krmom na muringe, oko 100–160 € po noći u vrhuncu sezone i potpuno zaklonjen. Potvrdi termin primopredaje 24 sata ranije, a gorivo natoči na stanici kraj ulaza prije nego uđeš na vez."
+        }
+      }
+    },
+    "gocek-kizikuyruk-koyu": {
+      "metaTitle": "7 dana jedrenja: Göcek i Ekincik | Boat4You",
+      "metaDesc": "Sedmodnevna ruta iz Göceka do Ekincika i delte Dalyana, pa natrag preko otoka Gemiler, Fethiye i Wall Baya kroz Dvanaest otoka.",
+      "days": {
+        "1": {
+          "shortDescription": "Lagano zagrijavanje od 8 milja južno od Göceka, uz kupanje kod otoka Yassıca prije nego se uvučeš u uski Kapı Creek pod liticama na večeru.",
+          "description": "Prva etapa je namjerno lagana. Osam milja niz obalu od D-Marina Göcek daje posadi vremena da nađe vinčeve i kuhalo prije bilo čega zahtjevnijeg. Rutu obično prekinemo kod otoka Yassıca, niskog rasapa kamena i tirkiznih plićaka koji prosto traži prvo kupanje s krme.\n\nKapı Creek leži na drugom kraju Skopea Limanıja, gustog spleta uvala i otočića zbog kojeg je ovo najbogatije krstarsko područje na obali. Sama uvala je procjep između litica obraslih borovima, jedva širi od dvije duljine broda. Uhvati restoransku bovu, večera ti plaća vez. Do večeri je more kao staklo, litice vraćaju zadnje svjetlo, a şakşuka pojedena na palubi ima okus bolji nego što ima pravo imati.",
+          "thingsToDo": [
+            "Zaplivaj u tirkiznim plićacima kod otoka Yassıca",
+            "Roni uz podnožje litice Kapı Creeka u sjeni borova",
+            "Večera na restoranskoj bovi u Kapı Creeku",
+            "Gledaj zvijezde uokvirene zidovima uvale"
+          ],
+          "mooringTip": "Uzmi jednu od restoranskih boja duboko u uvali; vez je besplatan čim se obvežeš na večeru na kopnu. Ako su sve zauzete, baci sidro na pijesak na 5 do 7 metara. Uvala je potpuno zaštićena bez obzira na prognozu."
+        },
+        "2": {
+          "shortDescription": "20 milja na zapad do Ekincika, polazišne uvale za izlet rijekom do stijenskih grobnica Kaunosa i İztuzua, plaže kornjača.",
+          "description": "Dvadeset milja najduži je skok u tjednu, pa volimo pustiti bovu rano i iskoristiti jutarnji povjetarac prije nego se ustali sa zapada. Ekincik se otvara kao široka uvala okružena borovima, s dobrim držanjem u pijesku i lijepo zaklonjena od sjevernjaka.\n\nUvala je zapravo bazni logor. Jahtu ostaviš ovdje i lokalnim riječnim brodom kreneš u deltu Dalyana, gdje se struja provlači između visokih trstika sve do jezera Köyceğiz. Likijske grobnice Kaunosa uklesane su ravno u liticu iznad vode, četiri stoljeća prije Krista, i još uvijek gledaju svaki brod koji prođe. Plaža İztuzu na ušću zaštićeno je gnijezdilište glavatih želvi, pa pijesak ostaje osvježavajuće neizgrađen. Tko želi cijeli ritual, završi u blatnim kupkama Sultaniye.",
+          "thingsToDo": [
+            "Izlet riječnim brodom kroz deltu Dalyana",
+            "Vidi likijske stijenske grobnice Kaunosa",
+            "Prošeći zaštićenom plažom kornjača İztuzu",
+            "Namoči se u blatnim kupkama Sultaniye"
+          ],
+          "mooringTip": "Usidri se na pijesku nasred uvale Ekincik na 5 do 7 metara; držanje je pouzdano, a sjevernjak prelazi preko. Ako s juga uđe valovlje, restoranski pontoni na južnoj obali mirnija su opcija."
+        },
+        "3": {
+          "shortDescription": "20 milja natrag na istok do otoka Gemiler, ruševnih bizantskih kapela iznad mora i iznenađujuće hladnog kupanja u uvali nasuprot.",
+          "description": "Još jedna poduža etapa, ovaj put istok-jugoistok, i često najbolje jedrenje na putu ako poslijepodnevni povjetarac surađuje. Otok Gemiler diže se s lijevog boka, cijeli bok terasast od ruševina bizantskih crkava i natkrivenog procesijskog puta koji je nekad hodočasnike štitio od sunca i kiše.\n\nOvo je otok davno vezan uz svetog Nikolu iz Mire, čije su kosti u jedanaestom stoljeću odnesene u Bari. Na kopnu se staze penju pokraj cisterni i napola stojećih apsida, s morem točno pod tobom. Mi se sidrimo preko kanala u Coldwater Bayu, gdje izvori probijaju kroz dno i gornji sloj vode odjednom postane oštro hladan. Zaroniš metar i osjetiš granicu. Večera na kopnu, tanjur meze glaziran narom, i ruševine u sumrak poprime zlatnu boju.",
+          "thingsToDo": [
+            "Popni se do bizantskih ruševina otoka Gemiler",
+            "Nađi sloj hladnog izvora u Coldwater Bayu",
+            "Prošeći natkrivenim hodočasničkim putem",
+            "Meze glaziran narom u taverni u uvali"
+          ],
+          "mooringTip": "Coldwater Bay preko kanala ima restoranske bove postavljene za sezonu; uzmi jednu i večeraj na kopnu, ili se usidri na pijesku na 5 do 7 metara u blizini. Sidrište pred samim Gemilerom zna biti valovito na poslijepodnevnom zapadnjaku, pa je uvala nasuprot obično mirnija za noćenje."
+        },
+        "4": {
+          "shortDescription": "Samo šest milja na sjever u tihu šljunčanu uvalu okruženu borovima, s morskim špiljama za veslanje i grebenskom stazom iznad sidrišta.",
+          "description": "Nakon dvije velike etape, četvrti dan je nagrada: jedva šest milja do uvale Kızıkuyruk Koyu, šljunčane uvale uvučene u borovinu. Baci sidro na pijesak na četiri do šest metara i imaš gotovo cijeli dan da ne radiš ništa.\n\nJužni zid uvale krije niz plitkih morskih špilja, dovoljno plitkih da uđeš kajakom ili daskom kad je more mirno. Ronioci s maskom naći će ježince zaglavljene u kamenju i pokoju zvjezdaču na pješčanim mrljama između. Za one s nemirnim nogama, gruba staza penje se grebenom iza plaže koji miriše na majčinu dušicu, do širokog pogleda natrag na more. Navečer palimo roštilj: škampi, limun, malo origana, pojedeno mokrih nogu. Tihe noći ovdje, čim izletnički brodovi odu.",
+          "thingsToDo": [
+            "Veslaj do morskih špilja na južnom zidu",
+            "Roni po kamenju za ježincima i zvjezdačama",
+            "Popni se grebenom majčine dušice zbog pogleda",
+            "Ispeci škampe s limunom i origanom na palubi"
+          ],
+          "mooringTip": "Usidri se na pijesku na 4 do 6 metara uvučen pod sjevernu obalu, koja ti drži meltemi s leđa. Uvala je mala, pa u srpnju i kolovozu dođi do sredine poslijepodneva ili uzmi jedno od restoranskih uža na južnoj strani."
+        },
+        "5": {
+          "shortDescription": "Šest milja na istok u Fethiye za vez u marini, živ grad i jonsko pročelje Amintasove grobnice visoko u litici.",
+          "description": "Laganih šest milja dovodi te u Fethiye, a nakon nekoliko noći na sidru pravi vez ima svoju draž: struja s obale, topao tuš i grad koji stvarno ostaje budan do kasno. Vežemo se krmom u marini, muringe ti doda osoblje s pontona.\n\nFethiye zaslužuje cijelo poslijepodne. Glavni prizor je Amintasova grobnica, puno pročelje jonskog hrama uklesano u stijenu iznad krovova, najbolje ga je popeti u hladnijem večernjem svjetlu. Dolje u starom dijelu, uličice se otvaraju na ribarnicu, gdje kupiš ribu, a obližnji kuhar ti je za sitnu naknadu ispeče. Ako upadneš u utorak, razvučena tržnica vrijedi sat vremena zbog začina i ručno vezanih ćilima. Naruči kabak çiçeği dolması, nazdravi tjednu hladnim rakıjem i prošeći rivom.",
+          "thingsToDo": [
+            "Popni se do Amintasove grobnice u suton",
+            "Izaberi ribu na ribarnici u Fethiye",
+            "Prošeći utorkovom tržnicom zbog ćilima i začina",
+            "Kabak çiçeği dolması u lokanti u sporednoj ulici",
+            "Hladan rakı na rivi"
+          ],
+          "mooringTip": "Veži se krmom na muringe u gradskoj marini; osoblje preuzme uža, a bazen je potpuno zatvoren od vjetra. Noćenje u punoj sezoni ide otprilike 70 do 110 €, ovisno o duljini broda, a u vrhuncu ljeta se isplati najaviti radiom."
+        },
+        "6": {
+          "shortDescription": "Šest milja na jug do Wall Baya, strme vapnenačke uvale bez marine, s dobrim držanjem i najboljim ronjenjem u tjednu.",
+          "description": "Najkraća etapa tjedna, a posada je do sad može odraditi gotovo u snu. Šest milja južno od Fethiye obala se preklopi u sebe i pojavi se Wall Bay, obrubljen blijedim vapnencem koji pada ravno u duboku, bistru vodu.\n\nOvdje nema ni marine ni sela, što je zapravo poanta. Namirnice nabavi u Fethiye prije polaska, jer jedino što uvala nudi je kupanje, a ono je izvrsno. Maska na lice, prati podnožje litice i naći ćeš podvodne pukotine i klance u kojima se hobotnice guraju u rupe, a ribe papige plove preko stijene. Odveslaj do manje plaže na lijen ručak s kruhom s maslinama i labnehom. Držanje je dobro na pijesku na četiri do šest metara, a čim sunce padne iza zida, zvijezde izađu na sav glas.",
+          "thingsToDo": [
+            "Roni podvodnim klancima u potrazi za hobotnicom",
+            "Uoči ribe papige uz vapnenački odron",
+            "Odveslaj do udaljene plaže na ručak",
+            "Kruh s maslinama i labneh na pramcu",
+            "Gledaj zvijezde nad zidom litice"
+          ],
+          "mooringTip": "Usidri se na pijesku na 4 do 6 metara dobro uvučen pod litice; sam zid blokira sjevernjak. U uvali nema marine, vode ni dućana, pa gorivo, vodu i hranu dopuni u Fethiye prije polaska."
+        },
+        "7": {
+          "shortDescription": "Zadnjih osam milja natrag do Göceka, uz kupanje nad potopljenim brodogradilištem otoka Tersane prije goriva i primopredaje u D-Marinu.",
+          "description": "Zadnje jutro je kratko i bez žurbe, osam milja natrag do Göceka. Nema razloga trčati na primopredaju, pa ostavljamo vremena za posljednje kupanje usput. Otok Tersane je to mjesto: usidri se u njegovoj gotovo zatvorenoj uvali i zaroni nad ostacima starog brodogradilišta, niski zidovi i navozi još se vide kroz plićak.\n\nOdatle je ravno do D-Marina Göcek. Svrati na benzinsku stanicu kraj ulaza prije nego se vežeš, da brod vratiš pun. Vez je krmom na muringe i marina je potpuno zaštićena, no ovako uređena baza to i naplati, otprilike 100 do 160 € po noći u vršnim tjednima. Kad su uža vezana, prošeći šetnicom, razgledaj butike i završi tjedan turskom kavom pod bugenvilijom.",
+          "thingsToDo": [
+            "Roni nad potopljenim brodogradilištem otoka Tersane",
+            "Natoči gorivo na stanici D-Marina",
+            "Prošeći buticima na šetnici D-Marina",
+            "Turska kava pod bugenvilijom"
+          ],
+          "mooringTip": "Gorivo natoči na stanici D-Marina odmah unutar ulaza prije nego uđeš na vez, da brod predaš pun. Vez je krmom na muringe u potpuno zaklonjenom bazenu; računaj na otprilike 100 do 160 € po noći u punoj sezoni i rezerviraj termin povratka unaprijed."
+        }
+      }
+    },
+    "gokova-gulf-14-days": {
+      "metaTitle": "14 dana: Gökova i Güllük | Boat4You",
+      "metaDesc": "Dva tjedna iz Bodruma kroz zaljev Gökova pa na sjever do Güllüka i Didima. Blatne kupke na Kara Adi, Kleopatrin zlatni pijesak, mirne uvale.",
+      "days": {
+        "1": {
+          "shortDescription": "Lagan prvi skok iz marine do Kara Ade, gdje izvor u špilji i narančasto blato čine opušteno poslijepodne za uhodavanje.",
+          "description": "Za ovo ti ne treba rani start. Kara Ada leži jedva pet milja od Bodruma, zeleni brežuljak pod borovima do kojeg većina posada stigne unutar sat vremena na motor. Mamac je špilja na istočnoj obali, gdje sumporni izvor teče na temperaturi tijela, a blato oko njega boji se u čudnu narančastu. Ljudi se njime namažu, peku na suncu, pa se isperu u uvali. Turistički je to, i do podneva stigne flota guleta, pa se ja volim usidriti rano, odraditi blatni cirkus prije gužve, pa se prebaciti u tišu uvalu na južnoj strani na ručak i kupanje. Poslijepodne iskoristi da posložiš brod, provjeriš tender i riješiš namirnice. Sutra je pravo prelaženje.",
+          "thingsToDo": [
+            "Namoči se u sumpornom izvoru u špilji Kara Ade",
+            "Namaži se narančastim ljekovitim blatom",
+            "Zaplivaj u tišoj uvali s južne strane",
+            "Dopuni namirnice prije izlaska iz Bodruma"
+          ],
+          "mooringTip": "Usidri se pred špiljom na 4–8 m po pijesku i travi; do kasnog jutra se napuni izletničkim brodovima, pa baci sidro rano i izvuci uže na kopno ako je prostora za okretanje malo."
+        },
+        "2": {
+          "shortDescription": "Veliko prelaženje na jug do Çökertmea, uvale na udaru vjetra s drvenim pontonima gdje taverne mijenjaju vez za večeru.",
+          "description": "Ovo je dan kad se putovanje otvori. Okreni pramac na jug preko otvorenog mora i gledaš petnaest do dvadeset milja, tri do četiri sata ovisno o meltemiju. Çökertme je nagrada, potkovasta uvala iza koje su maslinici i šačica obiteljskih taverni izgrađenih nad morem. Klasična gulet postaja, i to s razlogom. Kvaka je vjetar: udari se sruče s brda bez najave, a dno od pijeska i trave slabo drži. Većina posada uopće preskoči sidrenje i veže se na jedan od restoranskih pontona, što dolazi s položenim muringom i nepisanim dogovorom da se večera na kopnu. Kod kapetana İbrahima hrane mornare već godinama. Naruči meze, gledaj kako svjetlo porumeni greben i lezi rano.",
+          "thingsToDo": [
+            "Večeraj na pontonu kod kapetana İbrahima",
+            "Naruči puni izbor egejskog meze",
+            "Gledaj zalazak kako boji greben iza uvale",
+            "Zaplivaj prije nego se dignu poslijepodnevni udari"
+          ],
+          "mooringTip": "Zaboravi sidro ovdje osim ako uživaš u ponovnom sidrenju. Uzmi radije ponton taverne s položenim muringom; u srpnju dođi do sredine poslijepodneva jer se tri pontona brzo napune, i računaj na nagle katabatičke udare tijekom noći."
+        },
+        "3": {
+          "shortDescription": "Kratka plovidba na istok do Örena, mirnog sela na ravnici Keramosa s marinom, šljunčanom plažom i karijskim ruševinama u brdu.",
+          "description": "Nakon drame Çökertmea, Ören djeluje smireno. To je skromno primorsko selo na južnoj strani zaljeva, smješteno na ravnici gdje je nekad stajao antički grad Keramos. Plovidba na istok je lagana, dva sata po mirnom jutarnjem moru prije nego se digne vjetar. Ima malu općinsku marinu i dugu sivu šljunčanu plažu koja ostaje mirna i u kolovozu, što je upravo poanta. Prošeći do starog dijela i naći ćeš kamene kuće, bugenvilije i razasute ostatke Keramosa na padinama iznad mjesta. Ovo nije mjesto koje ima što dokazivati. Obično uzmemo spor ručak, iznajmimo bicikle ili se u hladnijoj večeri popnemo do ruševina, i pustimo posadu da uhvati dah prije dna zaljeva sutra.",
+          "thingsToDo": [
+            "Popni se do ruševina antičkog Keramosa",
+            "Prošeći starim dijelom Örena s kamenim kućama",
+            "Opusti se na dugoj sivoj šljunčanoj plaži",
+            "Veži se u maloj općinskoj marini"
+          ],
+          "mooringTip": "Örenska marina prima jahte na muringe i rijetko je puna; nazovi unaprijed u vršnim tjednima. Ako radije sidriš, uvala pred plažom dobro drži u pijesku, ali je otvorena poslijepodnevnom zapadnjaku, pa se uvuci koliko dubina dopušta."
+        },
+        "4": {
+          "shortDescription": "Jedrenje do dna zaljeva i Akyake, gdje rijeka iz izvora vijuga kroz trstike, a termički vjetrovi privlače kitesurfere.",
+          "description": "Akyaka leži na samom vrhu zaljeva, gdje se planine sklope, a voda postane staklasto zelena. Plovidba prema gore često je kruženje protiv poslijepodnevnog termika, pa nastojimo isploviti iz Örena do devet i mirnije rane sate odraditi na motor i jedra. Samo selo je užitak od drvenih balkona i osmansko-grčke arhitekture, sve građeno po strogim lokalnim pravilima koja su hotelske lance držala vani. Njegov potpis je Azmak, kratka krška rijeka toliko bistra da možeš prebrojati ribe; uzmi tender ili iznajmljeni kajak i popni se kroz trstike do izvora i kafića uz rijeku. Vani u zaljevu, isti postojani vjetar koji uzvodnu plovidbu čini teškom pretvara Akyaku u jedno od boljih turskih kitesurf mjesta. Jedi ribu s roštilja uz vodu i pusti dan da uspori.",
+          "thingsToDo": [
+            "Kajakom uz bistri Azmak do izvora",
+            "Ručak s ribom s roštilja uz obalu",
+            "Gledaj kitesurfere na poslijepodnevnom termiku",
+            "Prošeći Akyakinim ulicama s drvenim balkonima"
+          ],
+          "mooringTip": "Uvala u dnu zaljeva je duboka, a poslijepodnevni vjetar unosi valove, pa se usidri blizu pod sjevernu obalu i izvuci uže na kopno. Nekoliko pontonskih vezova pred seoskim restoranima omogućuje da večeraš i ostaneš na mjestu, ako ti je tako draže."
+        },
+        "5": {
+          "shortDescription": "Natrag na zapad do otoka Sedir, doma Kleopatrina slavnog zlatnog pijeska i razvaljenih ruševina antičke Kedreje.",
+          "description": "Otok Sedir, poznatiji kao Kleopatrin otok, onaj je koji svi žele vidjeti, i ovaj put pompa drži vodu. Plaža je od sitnih zlatnih oolitnih zrnaca kakva se gotovo nigdje u blizini ne nalaze, odakle i legenda da je Kleopatra pijesak dovozila iz Egipta. Danas je pijesak žestoko zaštićen: hodaš drvenom stazom, plivaš s plaže, ali ne smiješ leći na nju niti odnijeti jedno jedino zrno. Iza obale leže zidine, kazalište i agora antičke Kedreje, vrijedne kratke šetnje u jutarnjoj svježini. Dođi rano. Izletnički brodovi iz Marmarisa i Bodruma naviru od sredine jutra, pa mi volimo biti usidreni i na kopnu do osam, a otići do ručka u mirniju uvalu za noćenje. Voda je ovdje zapanjujuće blijedotirkizna nad pijeskom.",
+          "thingsToDo": [
+            "Prošeći drvenom stazom uz Kleopatrinu zlatnu plažu",
+            "Istraži ruševine i kazalište Kedreje",
+            "Roni po blijedotirkiznim plićacima kod Sedira",
+            "Dođi rano i pretekni flotu izletničkih brodova"
+          ],
+          "mooringTip": "Uz samu plažu nema noćenja; usidri se sa sjeverne ili istočne strane otoka u pijesku, ili još bolje, dođi na sidro po danu pa se za noć premjesti u zaklonjenu uvalu. Držanje je dobro, ali mjesto hvata valove stalnog izletničkog prometa."
+        },
+        "6": {
+          "shortDescription": "Opuštena etapa do Karacasöğüta, duboke uvale okružene borovima s pontonima taverni, koja dobro štiti kad meltemi propuše.",
+          "description": "Karaca, ili Karacasöğüt, jedna je od velikih svevremenskih rupa ovog zaljeva. Leži na južnoj obali, duboki zaljev ispod Karaca Ade, umotan u borovu šumu i toliko dobro zaštićen da lokalni brodovi ovdje zimuju. Nakon izloženosti Sedira, mir dobro dođe. Zaljev se grana u nekoliko krakova, svaki sa svojim rasapom pontona i jednostavnih obiteljskih restorana gdje se vežeš pramcem i jedeš pod drvećem. Prelazak je blag, možda dva do tri sata, s grebenom koji ti dostavlja postojan vjetar u bok. Ovo je dan za ne raditi gotovo ništa. Kupaj se, čitaj, odvezi tender u kanal obrubljen trstikom u dnu zaljeva i smjesti se za mirnu noć. Ako prognoza pokazuje jak meltemi, nema boljeg mjesta u zaljevu da ga prečekaš.",
+          "thingsToDo": [
+            "Veži se pramcem uz ponton taverne u sjeni borova",
+            "Odvezi tender u kanal s trstikom u dnu zaljeva",
+            "Zaplivaj u zaklonjenim unutarnjim kracima",
+            "Prečekaj meltemi u mirnoj vodi"
+          ],
+          "mooringTip": "Odaberi restoranski ponton i veži se krmom ili pramcem za položeni muring i zajamčeno mirnu noć; voda je duboka do blizu obale, pa prilazi polako. Slobodno sidrenje radi i u kracima, na 6–10 m po mulju koji dobro drži."
+        },
+        "7": {
+          "shortDescription": "Jedri na zapad prema ulazu u zaljev do Mersincika, divljeg, praznog sidrišta unutar zaštićene zone Gökova.",
+          "description": "Mersincik je mjesto gdje zaljev počne djelovati zabačeno. Uvučen na sjevernoj obali blizu zapadnog ulaza, dio je posebne zaštićene zone Gökova, pa nema izgradnje, nema ceste, samo bor, kamen i bistra voda. Plovidba na zapad vodi te uz izloženu sjevernu stranu i uz svjež meltemi možeš dobar dio odraditi brzo, na pola vjetra. Glavna uvala je prekrasna, ali hvata sjevernjak; ako puše jako, uvuci se u manju uvalu sjeverozapadno, iako je prostora za okretanje malo pa ćeš htjeti uže na kopno. Divlje koze navečer prebiru po obali. Nema se što kupiti ni raditi osim kupati se, hodati praznim rtovima i uživati u noći bez ijednog svjetla na kopnu. Vodu i namirnice napuni prije nego odeš iz Karace.",
+          "thingsToDo": [
+            "Zaplivaj uz praznu, neizgrađenu obalu",
+            "Prošeći borovim rtovima zbog pogleda na zaljev",
+            "Uoči divlje koze uz obalu u suton",
+            "Gledaj zvijezde bez ijednog svjetla s kopna"
+          ],
+          "mooringTip": "Usidri se u glavnoj uvali na 5–8 m po pijesku i izvuci uže na stijene; otvorena je prema sjeveru, pa ako meltemi puše, koristi tjesniju sjeverozapadnu uvalu i postavi sidro na kopnu jer prostora za okretanje gotovo nema. Dođi samodostatan, ovdje nema nikakvih sadržaja."
+        },
+        "8": {
+          "shortDescription": "Prijelaz natrag na jug do Çökertmea za drugu noć na pontonima taverni prije nego počne povratak.",
+          "description": "Danas se ruta okreće prema kući. Iz Mersincika prelaziš ulaz u zaljev natrag do poznate potkove Çökertmea, plovidba od nekoliko sati koja može biti brza i valjajuća, na pola vjetra, ako meltemi surađuje. Drugi put već znaš trikove uvale. Isti udari se sruče s brda, isti pontoni čekaju, ali sad znaš kako ide. Uđi na drugi ponton nego prošli tjedan i probaj novu tavernu; Rosemary i ostale obiteljske kuhinje uz obalu svaka ima svoje stalne goste. Ovo je dobra večer za rublje, dugu večeru na kopnu koja obnovi posadu i razmjenu dojmova o najboljim kupanjima dosad. Gledaj sidrena svjetla zakašnjelih dolazaka kako titraju dok vjetar propuhuje nakon mraka.",
+          "thingsToDo": [
+            "Probaj drugu tavernu, primjerice Rosemary",
+            "Zaplivaj u potkovastoj uvali još jednom",
+            "Obnovi posadu dugom večerom na kopnu",
+            "Usporedite najbolja kupanja uz meze"
+          ],
+          "mooringTip": "Kao i prije, uzmi uže s pontona umjesto da sidriš, i odaberi drugi ponton nego prvi put da bude svježe. Postavi dobar amortizer i dodatne bokobrane; noćni udari ovdje guraju brodove na položenim muringima."
+        },
+        "9": {
+          "shortDescription": "Vrati se sjeverozapadno do Kara Ade na posljednje kupanje u zaljevu i drugi pokušaj u blatnoj špilji.",
+          "description": "Natrag preko mora do Kara Ade, čime se zatvara gökovski dio putovanja. Isti je to dugi otvoreni prijelaz kao drugog dana, samo obrnuto, pa prati prognozu i kreni rano ako meltemi treba ojačati. Do sad je posada već prava, i milje prolaze lako. Kara Ada je prikladna zadnja postaja u zaljevu, dovoljno blizu Bodruma da si nadohvat marine, a opet zeleni otok s onom čudnom, okrepljujućom špiljom. Daj blatnim kupkama drugu priliku ako je prvi put bila gužva, ili samo nađi čistu uvalu na južnoj strani i kupaj se. Isperi sol, posloži brod i uživaj u mirnom sidrištu prije nego putovanje promijeni karakter. Sutra obilaziš poluotok i cijeli osjećaj obale se mijenja.",
+          "thingsToDo": [
+            "Vrati se u blatnu špilju na mirniju kupku",
+            "Nađi čistu uvalu na južnoj strani za kupanje",
+            "Isperi i posloži brod nakon zaljeva",
+            "Nazdravi kraju gökovskog kruga"
+          ],
+          "mooringTip": "Isto kao prvog dana: usidri se po pijesku i travi blizu špilje, ili se prebaci u južne uvale za čišće držanje i manje brodova navečer. Kako je blizu Bodruma, puni se charter brodovima u povratku, pa zauzmi mjesto prije zalaska."
+        },
+        "10": {
+          "shortDescription": "Oplovi poluotok do pomodnog Göltürkbükija, gdje beach klubovi i restorani na pontonima obrubljuju uvalu zaklonjenu od meltemija s otvorenog.",
+          "description": "Danas se obala potpuno mijenja. Obilaziš zapadni vrh poluotoka Bodrum, pokraj Gümüşlüka i Yalıkavaka, na glamuroznu sjevernu obalu i u Göltürkbükü. Vani u kanalu meltemi zna puhati punih trideset čvorova, pa obilazak tempiraj za jutro i skrati jedra rano ako si u nedoumici. Unutra je drugi svijet: duga, zaklonjena uvala obrubljena drvenim platformama izgrađenim nad morem, otmjeni beach klubovi i slavni hotel Maçakızı gdje ljetuje istanbulska elita. Ovo je doza sjaja na putovanju. Rezerviraj ležaljku, naruči koktel na brod ili samo iz kokpita promatraj ljude dok tenderi voze goste između jahti. Daleko je to, po osjećaju, od praznih rtova Mersincika, i taj kontrast je dio zabave.",
+          "thingsToDo": [
+            "Uzmi ležaljku u beach klubu u Türkbükiju",
+            "Večeraj na pontonskoj platformi nad morem",
+            "Promatraj promet tendera iz kokpita",
+            "Vidi izbliza scenu hotela Maçakızı"
+          ],
+          "mooringTip": "Većinom obale Göltürkbükija upravljaju beach klubovi koji postavljaju muringe i očekuju da rezerviraš stol ili ležaljke; nazovi u sezoni i poslat će tender po tvoja uža. Prostora za slobodno sidrenje je malo, a držanje neujednačeno, pa je položeni muring lakše rješenje."
+        },
+        "11": {
+          "shortDescription": "Jedri na sjever u zaljev Güllük do starog ribarskog gradića s roštiljanama, ugodnom marinom i ruševinama Iasosa u blizini.",
+          "description": "Güllük je protuotrov Türkbükiju. Radni ribarski gradić u vlastitom zaljevu sjeverno od poluotoka, koji celebrity sjaj mijenja za koče, čajane i neke od cjenovno najboljih plodova mora na ovoj obali. Plovidba je jednostavna, iz Türkbükija na sjever u široki, zaklonjeni zaljev Güllük, često ugodno na pola vjetra. Ima ovdje prava marina s nekoliko stotina vezova ako želiš struju i vodu, ali karakter je na gradskoj rivi. Prošeći rivom navečer, izaberi ribu s leda u lokanti i pojedi je s roštilja uz rakı i zalazak nad zaljevom. Ljubitelji povijesti mogu taksijem ili dugom šetnjom do ruševina antičkog Iasosa na susjednom rtu, karijskog grada koji se obogatio upravo na ribi koju jedeš. Tiho, pošteno i dobra postaja za dopunu namirnica.",
+          "thingsToDo": [
+            "Izaberi svježu ribu s leda u lokanti",
+            "Posjeti karijske ruševine antičkog Iasosa",
+            "Prošeći rivom radnog ribarskog gradića",
+            "Dopuni namirnice na tržnici prije Didima"
+          ],
+          "mooringTip": "Uzmi vez u marini Güllük za pune usluge, ili se veži krmom na gradskoj rivi za življu atmosferu i ribarske restorane nadohvat. Zaljev je dobro zaklonjen, pa je noć na sidru pred gradom na 4–6 m po mulju ugodna po mirnom vremenu."
+        },
+        "12": {
+          "shortDescription": "Duža etapa na sjever do velike marine u Didimu, ulaza u Apolonov hram i zlatnu plažu Altınkum.",
+          "description": "Didim je vrh ovog kruga i najizgrađenija postaja u ta dva tjedna, ali zaslužuje svoje mjesto. Prelazak iz Güllüka najduži je od ovih sjevernih dana, pa planiraj rani polazak i drži oko na meltemiju, koji zna ojačati na otvorenim prilazima. D-Marin Didim velika je, dobro vođena marina s ama baš svime što ti treba da brod posložiš za povratak. Pravi razlog dolaska je u unutrašnjosti: Apolonov hram u Didimi, jedno od velikih proročišta antičkog svijeta, čiji ogromni stupovi stoje i nakon više od dvije tisuće godina. Kratak je i jeftin taksi iz marine i vrijedan cijelog jutra bez žurbe. Poslije se rashladi na dugom zlatnom potezu plaže Altınkum ili ručaj u gradu prije nego opet okreneš na jug.",
+          "thingsToDo": [
+            "Obiđi proročište, Apolonov hram u Didimi",
+            "Zaplivaj s dugih zlatnih pijesaka Altınkuma",
+            "Posloži brod i natoči gorivo u D-Marinu Didim",
+            "Ručak u Didimu nakon ruševina"
+          ],
+          "mooringTip": "D-Marin Didim je marina s punom uslugom; najavi se preko VHF-a za dodjelu veza, pogotovo u vrhuncu ljeta kad je promet katamarana i superjahti gust. Ovo je najlakše mjesto na ruti za gorivo, vodu i svježe namirnice prije dvodnevnog povratka u Bodrum."
+        },
+        "13": {
+          "shortDescription": "Ponovno na jug, natrag u Göltürkbükü, na posljednju uglađenu noć prije zadnjeg skoka do Bodruma.",
+          "description": "Pramac gleda kući. Iz Didima se vraćaš na jug, natrag u zavjetrinu poluotoka Bodrum i u Göltürkbükü na drugu, opuštenu noć. Sad kad znaš uvalu, možeš preskočiti natezanje oko veza i odmah se smjestiti. Ovo je zadnja prava večer putovanja, pa je vrijedi iskoristiti. Ako je prva noć u Türkbükiju bila zbog scene, ovu iskoristi za dobru večeru i rano, mirno kupanje s broda. Sjeverni prilazi znaju biti vjetroviti poslijepodne, pa iz Didima obično krećemo sredinom jutra da stignemo dok je svjetlo još visoko, a vjetar još nije na vrhuncu. Uguraj još jedno lijeno poslijepodne na pontonskoj platformi, posloži opremu i riješi zadnju papirologiju oko broda. Bodrum je sutra samo kratak skok.",
+          "thingsToDo": [
+            "Rezerviraj povratni stol u klubu na pontonu u Türkbükiju",
+            "Zaplivaj rano, po mirnom moru, s broda",
+            "Uživaj u zadnjem lijenom poslijepodnevu na platformi",
+            "Riješi papirologiju broda prije zadnje etape"
+          ],
+          "mooringTip": "Kao i desetog dana, dogovori muring beach kluba prije dolaska; kako je ovo drugi posjet, znat ćeš koja ti je platforma odgovarala. Ciljaj da budeš vezan do sredine poslijepodneva, prije nego sjevernjak propuše u uvalu i naraste red za tender."
+        },
+        "14": {
+          "shortDescription": "Zadnji kratki skok natrag oko rta do Bodruma, uz vremena za posljednje kupanje prije primopredaje broda.",
+          "description": "Zadnje jutro je lagano. Bodrum leži odmah iza istočnog ramena poluotoka, dva sata od Göltürkbükija, pa nema potrebe žuriti s užadima. Većina charter baza želi brod natrag do kasnog jutra ili podneva, pa obično isplovimo rano, usidrimo se negdje usput na posljednje kupanje, pa priđemo marini u sjeni velike tvrđave sv. Petra. Doći u Bodrum morem pravi je način dolaska: tvrđava, bijeli grad koji se penje uz brda, šuma jarbola u luci. Pripremi bokobrane i uža dobro prije ulaza, slijedi upute marinera do veza i pusti da ti dva tjedna sjednu. Dva tjedna, dva zaljeva, blatna špilja i proročište. Nije loš krug.",
+          "thingsToDo": [
+            "Zaplivaj posljednji put na sidru usput",
+            "Uplovi ispod bodrumske tvrđave sv. Petra",
+            "Fotografiraj šumu jarbola u luci",
+            "Predaj brod prije podneva"
+          ],
+          "mooringTip": "Potvrdi vrijeme povratka i vez s charter bazom večer prije, i pripremi bokobrane i uža s obje strane prije ulaza u prometnu bodrumsku luku. Slijedi osoblje marine do veza krmom; prilaz zna biti krcat izletničkim brodovima u podne."
+        }
+      }
+    },
+    "lycian-coast-14-days": {
+      "metaTitle": "14 dana: odiseja likijskom obalom | Boat4You",
+      "metaDesc": "Dva tjedna iz Göceka: uvale Skopea Limanija, luka Fethiye, Ölüdeniz, ruševine Gemilera i Ekincik kao baza za izlet rijekom Dalyan.",
+      "days": {
+        "1": {
+          "shortDescription": "Isplovi iz göčekog pojasa marina u Skopea Limani i baci sidro u širokoj Sarsali, obrubljenoj borovima, za mirnu prvu noć.",
+          "description": "Göcek je mjesto gdje počinje gotovo svaki likijski charter, i prvi dan nema žurbe. Posloži namirnice na tržnici kraj trga, dopuni vodu i led, pa izađi na motor pokraj šumovitih otoka Skopea Limanija. Sarsala je na sjevernoj strani Boz Buruna, široki zaljev iza kojeg je crveni bor i rasap manjih uvala. Držanje je dobro po pijesku i travi, a većina posada izvuče uže na kopno blizu dna zaljeva da stoji mirno. Ima i mali restoran na pontonu ako prvu večer ne želiš kuhati. Obično ciljamo doći do sredine poslijepodneva, kupati se s krme dok svjetlo pada iza grebena i pustiti da svi nađu morske noge prije dužih etapa. Jutra su ovdje kao staklo.",
+          "thingsToDo": [
+            "Nabavi namirnice na jutarnjoj tržnici u Göceku",
+            "Zaplivaj s pješčanog pontona u Sarsali",
+            "Prošeći borovom stazom iza zaljeva",
+            "Večera u taverni na pontonu u uvali"
+          ],
+          "mooringTip": "Usidri se na 6-8 m po pijesku i travi i izvuci dugo uže na kopno prema dnu zaljeva. Zapadne uvale se u srpnju prve napune, pa dođi rano poslijepodne ako želiš mjesto."
+        },
+        "2": {
+          "shortDescription": "Kratak skok dublje u zaljev do Kapı Creeka, uske uvale nalik fjordu s ugodnom tavernom na pontonu u dnu.",
+          "description": "Do Kapı Creeka je jedva sat vremena, pa ima vremena za lijeno jutarnje kupanje. Uvala urezuje procjep između strmih, šumovitih padina i djeluje više kao norveški fjord nego turska obala, dok ne uhvatiš miris dima iz taverne. Jahte se vežu krmom uz drveni ponton, gdje ti obitelj koja to drži preuzme uža, a kasnije iznese meze i ribu s roštilja. Voda ostaje duboka do blizu obale, pa nosi brzinu prema pontonu i baci sidro dobro vani. Iskrcaj se na kratak uspon do malih kozjih torova iznad dna uvale. Omiljeno je to mjesto flotilnoj ekipi, pa se u vrhuncu ljeta isplati najaviti da budeš siguran u vez.",
+          "thingsToDo": [
+            "Veži se krmom uz ponton u Kapı Creeku",
+            "Naruči meze i ribu s roštilja na kopnu",
+            "Popni se do kozjih torova iznad uvale",
+            "Roni uz strme kamene bokove"
+          ],
+          "mooringTip": "Dubine ostaju velike do blizu pontona, pa prilazi polako i baci sidro na 10-12 m prije nego se ukrmiš na muringe. U srpnju i kolovozu javi se radiom ili nazovi, jer se šačica vezova rasproda."
+        },
+        "3": {
+          "shortDescription": "Prijelaz do Ruin Baya, gdje klesani rimski kamen leži tik pod površinom u dnu uvale, a kupanje je otprilike najbistrije u zaljevu.",
+          "description": "Ruin Bay, poznat i kao Kleopatrina kupelj, leži nekoliko sati zapadno, preko ulaza u zaljev. Mamac je pod vodom: niski zidovi i klesani kamen iz naselja iz rimskog doba počivaju tik ispod površine u dnu uvale, dovoljno bistro da ih čitaš kroz masku. Usidri se vani i doplivaj nad ruševine umjesto da brodom ulaziš predaleko u plićak. Klimav restoran na pontonu služi hladno pivo i jednostavan roštilj pod borovima. Susjedni Tomb Bay, kratka vožnja tenderom oko rta, ima likijske grobnice uklesane visoko u liticu, vrijedne pogleda u mekom večernjem svjetlu. Poslijepodne s brda zna doći vrtložni vjetar, pa sidro postavi pažljivo.",
+          "thingsToDo": [
+            "Roni nad potopljenim rimskim zidovima",
+            "Odvezi tender do likijskih grobnica u Tomb Bayu",
+            "Hladno pivo u roštiljani na pontonu",
+            "Fotografiraj litice u suton"
+          ],
+          "mooringTip": "Dno uvale se diže nad ruševinama, pa se usidri na 5-8 m podalje od kamenja i doplivaj do obale umjesto da ulaziš na motor. Pazi na udare koji poslijepodne propušu dolinom i dobro ukopaj sidro."
+        },
+        "4": {
+          "shortDescription": "Oko rta do Wall Baya pod visokim liticama, veži se krmom uz restoran do kojeg se dolazi samo brodom i večeraj gotovo nad morem.",
+          "description": "Wall Bay, na karti Duvar Bükü, ime nosi po okomitoj stijeni koja zatvara jednu stranu sidrišta. Kratko je jedrenje od Ruin Baya, pa planiraj usput postaju za kupanje. Dno naglo pada, zbog čega je prostora za slobodno okretanje malo, pa se većina brodova veže krmom uz mali ponton koji pripada Adaiji, obiteljskom restoranu do kojeg se može doći samo brodom. Pomoći će ti s užadima i skuhati pravu tursku spizu čim sunce siđe s litica. Ronjenje uz zid među najboljima je u ovom kutu zaljeva, s bistrom vodom i strmim odronima. Tiho je nakon mraka, u društvu samo cvrčaka i pokojeg kozjeg zvona.",
+          "thingsToDo": [
+            "Veži se krmom uz Adaijin ponton dostupan samo brodom",
+            "Roni uz okomiti podvodni zid",
+            "Probaj restoranski izbor turskih meza",
+            "Kajakom uz podnožje litice"
+          ],
+          "mooringTip": "Dno se naglo strmi, pa je prostora za slobodno sidrenje malo; uzmi uže s restoranskog pontona i rezerviraj stol, što ti obično osigura vez. Baci sidro na 8-10 m i ukrmi se blizu pod stijenu."
+        },
+        "5": {
+          "shortDescription": "Ostavi uvale za noć u Fethiye, radnom lučkom gradu sa živom ribarnicom, bazarom i stijenskim grobnicama iznad.",
+          "description": "Vrijeme je za dopunu namirnica i protezanje nogu u pravom gradu. Fethiye leži u dnu svog zaljeva, dva sata jedrenja od Wall Baya, obično uz koristan poslijepodnevni vjetar u bok. Veži se u Ece Marini ili na gradskoj rivi i prošeći do bazara po začine, ratluk i brijača ako ti se da. Ribarnica je ovdje ritual: kupiš ribu na štandu, pa je predaš jednom od okolnih restorana koji je za sitnu naknadu ispeče. Iznad grada, u stijenu uklesana Amintasova grobnica u zalazak zasja jantarno; uspon stubama je težak, ali vrijedi. Dobro napuni hladnjak prije nego opet kreneš u divlje uvale.",
+          "thingsToDo": [
+            "Kupi ribu na natkrivenoj tržnici",
+            "Popni se do Amintasove grobnice",
+            "Prošeći starim bazarom po začine",
+            "Dopuni namirnice u dućanima uz luku"
+          ],
+          "mooringTip": "Ece Marina je mirna i dobro vođena, ali rezerviraj unaprijed u vršnim tjednima; gradska riva je jeftinija i u centru, iako zna valjati kad prođu trajekti. Veži se krmom na položene muringe i računaj na marinske cijene."
+        },
+        "6": {
+          "shortDescription": "Isplovi iz zaljeva Fethiye do otoka Gemiler, okruženog ruševinama bizantskih crkava i s jednom od najljepših šetnji uz zalazak na ovoj obali.",
+          "description": "Gemiler, koji se ponekad zove i otok sv. Nikole, čuva ulaz u zaklonjen kanal jugozapadno od Fethiye. Cijeli je otok naslagan bizantskim ruševinama: crkve, cisterne i natkriveni procesijski put koji se penje do kapele na vrhu. Usidri se u uvali na južnoj strani otoka na 6 do 9 metara po pijesku i izvuci uže na kopno da se ne okrećeš. Dva jednostavna restorana na kopnu riješe vodu i hladno piće. Ostavi vremena da izvučeš tender i prošećeš kroz ruševine dok svjetlo postaje zlatno; pogled preko kanala na kopno razlog je zašto se ovdje zadržava. Sidrište je mirno na uobičajenim zapadnjacima, ali izloženo ako vjetar okrene na jug.",
+          "thingsToDo": [
+            "Prošeći ruševinama do kapele na vrhu",
+            "Tempiraj uspon za zlatni sat",
+            "Izvuci uže na kopno u južnoj uvali",
+            "Roni kanalom prema obali"
+          ],
+          "mooringTip": "Usidri se na 6-9 m po pijesku u južnoj uvali i izvuci uže na stijene, jer je prostora za okretanje malo. U sezoni dođi do kasnog poslijepodneva, jer šačica dobrih mjesta ode rano."
+        },
+        "7": {
+          "shortDescription": "Kratka etapa do Ölüdeniza, doma slavne Plave lagune i paraglajdera koji se spuštaju s Babadağa iznad.",
+          "description": "Ölüdeniz je razglednica koju svi znaju, mirna laguna iza zavoja bijelog pijeska pod zelenom planinom. Sama laguna danas je zaštićeni park prirode i zatvorena za jahte, pa se vežeš pod rtom kod plaže Belcekız, a na kopno ideš tenderom ili doplivaš. Iznad glave je gotovo neprekidan niz paraglajdera koji se u spirali spuštaju s Babadağa, koji s gotovo dvije tisuće metara spada među najviša komercijalna polazišta na svijetu. Ovo je najprometnije mjesto na ruti, pa ga tretiraj kao živu dnevnu postaju, a ne divlju noć. Gledaj kako jedno-dva krila slete na plažu, pojedi sladoled i onda odluči hoćeš li ostati ili se vratiti u mirniju uvalu.",
+          "thingsToDo": [
+            "Doplivaj do parka prirode Plava laguna",
+            "Gledaj paraglajdere kako slijeću na plažu Belcekız",
+            "Tenderom na kopno na ručak uz plažu",
+            "Prošeći pješčanim sprudom u suton"
+          ],
+          "mooringTip": "Laguna je zatvorena za brodove, pa se usidri pred Belcekızom pod rtom na 8-12 m i računaj na valjanje i izloženu noć ako uđe južina. Mnoge posade to koriste kao dnevnu postaju i idu dalje u mirnije sidrište."
+        },
+        "8": {
+          "shortDescription": "Baci sidro pred Butterfly Valleyjem, strmim klancem koji se spušta do plaže dostupne samo brodom, s pješačenjem do slapa u unutrašnjosti.",
+          "description": "Odmah iza rta, Butterfly Valley se otvara kao rascjep u boku Babadağa, s plažom do koje se dolazi samo s mora. Dolina ime nosi po leptirima medonjama koji se ovdje razmnožavaju, a gruba staza vodi u unutrašnjost pokraj malog imanja do slapa u dnu klanca. Obuj poštene cipele; zadnja dionica znači penjanje po kamenu uz pomoć užeta. Sidrište je za većinu dnevna postaja, otvoreno prema jugu i duboko blizu obale, pa sidro baciš prilično duboko i izvučeš dugo uže na plažu. Ručaj na brodu, pješači po jutarnjoj svježini i kreni dalje prije nego poslijepodnevni vjetar učini boravak neugodnim. Na kopnu je rustikalan bar pod drvećem.",
+          "thingsToDo": [
+            "Pješači klancem do slapa",
+            "Traži leptire medonje u unutrašnjosti",
+            "Usidri se uz dugo uže izvučeno na kopno",
+            "Popij nešto u rustikalnom baru na plaži"
+          ],
+          "mooringTip": "Ovo je otvoreno dnevno sidrište, duboko sve do plaže; baci sidro na 15-20 m i izvuci dugo uže na kopno, uz stalno praćenje sidra. Kreni prije nego se digne poslijepodnevni jugozapadnjak, jer valove šalje ravno unutra."
+        },
+        "9": {
+          "shortDescription": "Natrag u Skopea Limani do Coldwater Baya, gdje izvori s padine rashlade more, a kupanje je oštro osvježavajuće.",
+          "description": "S izloženim južnim uvalama iza sebe, ruta se vraća u zaklon Skopea Limanija i Coldwater Bay, na kartama Soğuksu. Slatkovodni izvori teku sa šumovite padine ravno u more i hladnoću osjetiš u mrljama dok plivaš, trzaj nakon tople vode drugdje. Mirno je to sidrište koje miriše na bor, s dobrim držanjem i mjesta da izvučeš uže na kopno među stabla. Obično ima i mali restoran na pontonu uguran u jedan kut ako želiš da ti večeru donesu. Nakon gužve u Ölüdenizu, ovo je kao da obala izdahne. Često ostanemo dvije noći kad raspored dopusti, koristeći uvalu kao bazu za kupanje, čitanje i puštanje dana da otplovi.",
+          "thingsToDo": [
+            "Zaplivaj kroz hladne mrlje izvora",
+            "Izvuci uže na kopno među borove",
+            "Večera u restoranu na pontonu u kutu uvale",
+            "Daska po mirnom jutarnjem moru"
+          ],
+          "mooringTip": "Držanje je dobro po pijesku i travi na 6-10 m; izvuci uže na kopno do stabala, jer je uvala uska i prostora za okretanje malo. Ostaje mirna na prevladavajućim zapadnjacima, pa je pouzdana za noćenje."
+        },
+        "10": {
+          "shortDescription": "Povratak na otok Gemiler na drugu noć, s ruševinama u laganijem ritmu i dobrim mjestom za zalazak zauzetim na vrijeme.",
+          "description": "Povratak na Gemiler na putu prema zapadu daje ti otok drugi put, bez pritiska da ga odradiš. Dođi prije izletničkih guleta i imat ćeš izbor mjesta u južnoj uvali, uz vremena da roniš kanalom prije nego se poslijepodnevna gužva prorijedi prema večeri. Ako si prošli put preskočio cijeli uspon, odradi ga sad: staza se provlači kroz crkve bez krova i stare cisterne do kapele na vrhu, najbolje kad vrućina popusti. Natrag na brodu, sidrište se smiri čim izletnici odu, a zalazak nad ruševinama tiha je nagrada. Uzmi vodu i hladno piće u restoranima na kopnu. Kratak je i lagan dan, pa nema potrebe rano kretati iz Coldwater Baya.",
+          "thingsToDo": [
+            "Prošeći ponovno stazom do kapele na vrhu",
+            "Roni kanalom oko otoka u podne",
+            "Zauzmi mjesto u južnoj uvali na vrijeme",
+            "Piće uz zalazak kad gulet flota ode"
+          ],
+          "mooringTip": "Kao i prije, usidri se na 6-9 m po pijesku u južnoj uvali uz uže na kopno; dolazak prije poslijepodnevnog gulet prometa osigura mirniji i bolje smješten vez. Pazi na okretanje vjetra na jug, koje bi noćenje učinilo neodrživim."
+        },
+        "11": {
+          "shortDescription": "Najduža etapa putovanja, na zapad do Ekincika, polazišta za izlet rijekom do Kaunosa i blatnih kupki Dalyana.",
+          "description": "Ekincik je zapadni okret rute i najduži pojedinačni skok, pa obično krećemo do devet da uđemo prije nego poslijepodnevni vjetar ojača u pramac. Uvala je široka i pjeskovita, smještena pod brdima na rubu delte Dalyana, s malom marinom od dva pontona u jednom kutu ako se radije vežeš nego sidriš. Pravi razlog dolaska je ono što leži dalje: lokalni brodovi odavde idu uz trstikom obrubljenu rijeku Dalyan do stijenskih grobnica antičkog Kaunosa, sumpornih blatnih kupki u Sultaniyi i İztuzua, plaže na ušću gdje se gnijezde kornjače. Izlet dogovori preko marine ili restorana na plaži one večeri kad dođeš. Otvorena uvala zna uhvatiti valove ako vjetar okrene na jug.",
+          "thingsToDo": [
+            "Rezerviraj izlet brodom rijekom Dalyan",
+            "Namoči se u blatnim kupkama Sultaniye",
+            "Vidi stijenske grobnice Kaunosa",
+            "Prošeći plažom kornjača İztuzu u delti"
+          ],
+          "mooringTip": "Usidri se na 5-10 m po dobrom pijesku u sjevernom kutu, ili uzmi vez na malim pontonima My Marine za više sigurnosti. Uvala je otvorena prema jugu i jugozapadu, pa za noćenje odaberi mirnu prognozu."
+        },
+        "12": {
+          "shortDescription": "Lagano jedrenje na istok do tihog Kızılkuyruka, šumovite uvale izvan glavne rute gdje su noći samo cvrčci i zvijezde.",
+          "description": "Nakon vreve dalyanskog izleta, Kızılkuyruk je protuotrov: mala, drvećem obrubljena uvala na poluotoku Boz Burun koja vidi malo brodova i drži stvari jednostavnima. Jedrenje iz Ekincika je kratko i lagano, uz obalu praznih uvala i strme borovine. Na kopnu nema ništa vrijedno spomena, što je i poanta; usidriš se, izvučeš uže do stabla i plivaš u vodi koja ostaje bistra i mirna. Ponesi sve što ti treba za večer, jer taverne na koju bi se oslonio nema. Ovo je vrsta sidrišta koje posade pamte dugo nakon što glavne postaje izblijede, zadnji okus tišine prije nego ruta okrene prema kući. Zvijezde izađu gusto čim svjetlo umre.",
+          "thingsToDo": [
+            "Izvuci uže do sjenovitog bora",
+            "Zaplivaj u praznoj bistroj uvali",
+            "Kuhaj na brodu pod zvijezdama",
+            "Kajakom do pustih susjednih uvala"
+          ],
+          "mooringTip": "Usidri se na 6-10 m i izvuci uže do stabla, jer je uvala uska i prostora za okretanje malo. Dobro je zaštićena na uobičajenim ljetnim zapadnjacima, ali nema nikakvih sadržaja, pa namirnice i vodu prvo dopuni u Ekinciku."
+        },
+        "13": {
+          "shortDescription": "Jedri natrag u Skopea Limani do Sarsale, zatvarajući krug ondje gdje je počeo, uz laganu zadnju noć na sidru.",
+          "description": "Pretposljednji dan vraća te u poznati zaklon Skopea Limanija i oko rta do Sarsale, istog širokog zaljeva kojim je putovanje počelo. Povratak na kraju djeluje drukčije: sad znaš kako ide, izvučeš uže na kopno bez natezanja i smjestiš se kao stalni gost. Jedrenje je opušteno, na pola vjetra preko zaljeva, uz vremena za posljednju dugu postaju za kupanje usput. Sarsalino držanje i restoran na pontonu čine je laganom zadnjom noći, dovoljno blizu Göceka da jutarnji povratak ostane bez stresa. Iskoristi poslijepodne da isplivaš zadnju energiju, posložiš opremu i nazdraviš dvama tjednima. Ako je taverna puna, rezerviraj stol čim baciš sidro.",
+          "thingsToDo": [
+            "Posljednja duga postaja za kupanje nasred zaljeva",
+            "Zadnja večera u taverni na pontonu u Sarsali",
+            "Izvuci uže na kopno blizu dna zaljeva",
+            "Posloži i spakiraj opremu prije Göceka"
+          ],
+          "mooringTip": "Vrati se na istu rutinu: usidri se na 6-8 m po pijesku i travi uz uže na kopno blizu dna zaljeva. Kako si blizu baze, možeš si priuštiti opušten start, ali tavernu rezerviraj rano ako želiš jesti na kopnu."
+        },
+        "14": {
+          "shortDescription": "Kratka jutarnja vožnja na motor natrag u Göcek na primopredaju broda, uz vremena za posljednju kavu na rivi.",
+          "description": "Zadnja etapa je jedva sat vremena, pa nema potrebe za ranim budilnikom. Većina chartera želi brod natrag sredinom jutra, što ostavlja vremena za mirno kupanje prije nego dignete sidro i polako izađete iz Sarsale posljednji put. Povratak preko Skopea Limanija ponavlja prvi dan, samo šumoviti otoci klize unatrag. Dopuni gorivo i vodu na putu ako baza tako traži, pa je privezi u Göceku i pusti posadu da odradi uža. Kad odjaviš brod, obično ostane vremena za kavu ili zadnji ručak na rivi prije transfera. Četrnaest dana svega toga, a zaljev i dalje ima uvale do kojih nisi stigao.",
+          "thingsToDo": [
+            "Zadnje kupanje u zoru kod Sarsale",
+            "Dopuni gorivo prije primopredaje",
+            "Kava na rivi u Göceku",
+            "Razgledaj dućane u marini prije transfera"
+          ],
+          "mooringTip": "Potvrdi pravila baze o gorivu i vremenu povratka večer prije da ne moraš žuriti. Prilazi göčekoj marini polako i najavi se preko VHF-a za upute o vezu; osoblje preuzme uža po dolasku."
+        }
+      }
+    }
+  },
+  "areas": {
+    "bodrum": {
+      "metaTitle": "Itinerari Bodrum i Gökova zaljev | Boat4You",
+      "metaDesc": "Rute iz Bodruma: borove uvale Gökova zaljeva, Kleopatrin otok i duga lijena kupanja — jedrenje turskom obalom, dan po dan.",
+      "title": "Obala guleta, odjedrena na tvoj način",
+      "description": "Bodrum gleda u zaljev stvoren za lutanje. Gökova siječe trideset milja u tursko kopno, a obale su mu presavijene u uvalu za uvalom pod borovima, gdje se rutina piše sama: kupanje, doručak, dva sata jedrenja, nova uvala. Otok Sedir čuva svoje antičko kazalište i plažu od pijeska koji je, kažu legende, dopremila Kleopatra; Engleska luka skriva se toliko dobro da ju je Kraljevska mornarica koristila u ratu. Restorani s vlastitim gatovima primit će tvoje konope, nahraniti te mezama i pošteno naplatiti taj gušt. Meltemi ovamo dopire ublažen, više povjetarac nego vrijeme. Sam Bodrum — kaštel, tržnica, marina — tjednu daje pravi početak i kraj. Lakšeg uvoda u Tursku jedriličar ne može dobiti."
+    },
+    "gocek": {
+      "metaTitle": "Itinerari jedrenja Göcek i Fethiye | Boat4You",
+      "metaDesc": "Rute iz Göceka i Fethiye kroz dvanaest otoka Skopea Limanija: restorani s gatovima, ruševine nad sidrištima, lagane milje.",
+      "title": "Dvanaest otoka u jednom zaklonjenom zaljevu",
+      "description": "Göcek leži u dnu Skopea Limanija, zaljeva toliko zaklonjenog i toliko punog otoka da možeš provesti tjedan a da ti nijedan val ne prijeđe preko pramca. Formula je nenadmašna za mješovite posade: sidro pada u deset metara bistre zelene vode, dugi konop ide na obalu za bor, a večera se događa u obiteljskom restoranu koji je svoj gat sagradio baš za tebe. Likijske ruševine stoje odmah iznad nekoliko sidrišta — Kleopatrine kupke, grobnice u Kayi — a tržnica u Fethiyi kako treba opskrbi kambuz. Vjetrovi su lagani i termički, navigacija je na dogled, a marina u Göceku ima napretek i sve rade glatko. Ako Turska ima jedriličarsku početničku stazu, onda je to ova — a slučajno je i prekrasna."
+    }
+  }
+}

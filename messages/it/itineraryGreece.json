@@ -1,1 +1,1359 @@
-{}
+{
+  "routes": {
+    "athens-key-syros-hydra": {
+      "metaTitle": "Cicladi e Saronico da Atene 7 giorni | Boat4You",
+      "metaDesc": "Sette giorni da Atene tra Cicladi e Saronico: Capo Sounion, Kea, Syros, Serifos, Hydra e Poros, i venti più vari di tutta la rotta.",
+      "days": {
+        "1": {
+          "shortDescription": "Quindici miglia tranquille verso est lungo la costa dell'Attica, per ancorare sotto il Tempio di Poseidone, illuminato dopo il tramonto.",
+          "description": "La prima tappa è volutamente facile: quindici miglia di mare aperto per sgranchire la barca e lasciare che l'equipaggio trovi il proprio equilibrio. Di solito la facciamo a motore-vela se il settentrionale è debole. Sounion non ha un porto turistico, quindi si dorme solo all'ancora: fondo di sabbia tra i cinque e gli otto metri, circa mezzo miglio al largo del promontorio, ben rincantucciati al riparo da nord. Sotto i diciotto nodi tiene bene; sopra, conviene fare le miglia in più fino a Lavrion. La ricompensa è il tempio. Le colonne catturano le ultime luci del sole, poi si accendono i fari e tutta la rovina brilla sopra l'acqua. Si va a terra col tender per un pesce alla griglia prima che cali il buio. Un'ora libera si riempie facilmente con lo snorkeling lungo i gradoni di roccia a est della punta.",
+          "thingsToDo": [
+            "Tramonto sotto le colonne del Tempio di Poseidone",
+            "Snorkeling sui gradoni di roccia a est della punta",
+            "Branzino alla griglia in una taverna di Sounion",
+            "Fotografare il tempio illuminato dopo il tramonto"
+          ],
+          "mooringTip": "Ancoraggio gratuito su sabbia a 5-8 m, circa mezzo miglio dal tempio; buona tenuta con vento da nord sotto i 18 nodi. Se rinforza, ripiegate sulla Lavrion Olympic Marina, 60-90 euro a notte."
+        },
+        "2": {
+          "shortDescription": "Venti miglia in poppa fino a Kea, poi una salita a piedi fino al Leone di pietra arcaico scolpito sopra Ioulida.",
+          "description": "Con il Meltemi alle spalle, le venti miglia fino a Kea sono il tipo di navigazione che fa innamorare della vela in Grecia: vele a farfalla, il solcometro che scorre, l'Attica che sprofonda a poppa. Vourkari, sull'angolo di nord-ovest, è la sosta sensata per la notte. L'ormeggio di poppa con le trappe costa dai venticinque ai trentacinque euro, e la baia tiene fuori l'onda meglio della banchina cittadina di Korissia. Puntate a essere ormeggiati per le quattro: nel pomeriggio la brezza si incanala e la manovra diventa scomoda. A terra il premio è il Leone di pietra, una bestia arcaica ricavata dalla roccia mezz'ora sopra Ioulida. Nessuno sa dire con certezza a cosa servisse. La salita tra i vicoli imbiancati vale il sudore, meglio affrontarla quando il caldo cala verso sera.",
+          "thingsToDo": [
+            "Camminata fino al Leone di pietra arcaico di Kea",
+            "Snorkeling sul relitto del piroscafo Patris a Koundouros",
+            "Carpaccio di polpo in un ouzeri di Vourkari",
+            "Passeggiata nei vicoli di marmo di Ioulida al crepuscolo"
+          ],
+          "mooringTip": "Ormeggio di poppa a Vourkari con le trappe, 25-35 euro; entrate prima delle 16:00, quando la brezza si incanala. La banchina cittadina di Korissia è gratuita ma esposta appena il settentrionale supera i 18 nodi."
+        },
+        "3": {
+          "shortDescription": "Un traverso rapido fino a Syros, dove l'indulgente banchina di Ermoupoli sta sotto una capitale neoclassica a terrazze pastello.",
+          "description": "Trentadue miglia al traverso e, con il Meltemi nel suo umore abituale, la barca se le mangia in fretta. Syros è il cuore amministrativo delle Cicladi e lo si capisce appena appare Ermoupoli: piazze di marmo, un municipio a cupola, case impilate su due colline in ocra e rosa sbiaditi. La banchina cittadina è quanto di più facile offra l'ormeggio di poppa da queste parti, con tenuta e riparo decenti qualunque cosa faccia il vento. Se preferite nuotare invece che passeggiare, Finikas sulla costa sud-occidentale vi mette su sabbia sotto una frangia di tamerici. Il mio voto va alla città. Salite per i vicoli fino ad Ano Syros, il vecchio quartiere cattolico, per la vista giù sui tetti, e fermatevi per una scatola di loukoumi lungo la strada.",
+          "thingsToDo": [
+            "Salire ad Ano Syros, il quartiere cattolico",
+            "Assaggiare il loukoumi in una pasticceria dell'Ottocento",
+            "Attraversare la piazza di marmo Miaouli dopo il tramonto",
+            "Bagno sulla sabbia di Finikas Bay"
+          ],
+          "mooringTip": "La banchina cittadina di Ermoupoli è gratuita con ancora propria e ripara da ogni direzione: uno degli ormeggi più tranquilli delle Cicladi. Per una notte di bagni, ancorate invece a Finikas su sabbia a 4-7 m, protetti da nord."
+        },
+        "4": {
+          "shortDescription": "Una lunga tappa in poppa fino a Serifos, dove Livadi incanala il Meltemi e la Chora corona una ripida mulattiera.",
+          "description": "Trentadue miglia verso sud-ovest, quasi tutte in poppa piena, che è una meraviglia finché non tocca ancorare all'arrivo. Livadi è un imbuto naturale: il Meltemi accelera dritto dentro la baia ed è qui che gli equipaggi in charter arano più spesso. Prendete l'ancora sul serio. Filate calumo abbondante sulla sabbia, scendete a controllare che abbia agguantato e restate in pozzetto la prima ora prima di fidarvi. Sopra i ventidue nodi io andrei in banchina, venti-trenta euro a notte. Poi alzate lo sguardo. La Chora sale sul crinale come una cascata bianca, mezz'ora di cammino sulla vecchia mulattiera, e i mulini in cima sono il posto del tramonto. Una scodella di revithada in un kafeneio del paese e la giornata è completa.",
+          "thingsToDo": [
+            "Salire alla Chora di Serifos sulla mulattiera",
+            "Revithada, zuppa di ceci, in un kafeneio",
+            "Bagno a Psili Ammos sulla costa sud",
+            "Tramonto ai mulini sopra la Chora"
+          ],
+          "mooringTip": "Ancorate a Livadi su sabbia a 5-8 m con calumo generoso e scendete a verificare che abbia fatto presa; qui sopra i 22 nodi si ara spesso. La banchina cittadina costa 20-30 euro se preferite non stare a guardare l'evitata."
+        },
+        "5": {
+          "shortDescription": "Trentotto miglia verso ovest, fuori dalle Cicladi e dentro il più calmo Saronico, fino a Hydra senza auto, dove i muli portano ancora i bagagli.",
+          "description": "È la giornata di transizione. Trentotto miglia su un lungo traverso vi portano fuori dalle Cicladi e dentro il Saronico e, da qualche parte a ovest di Kythnos, il vento cala di cinque-otto nodi e il mare si stende. Il porto di Hydra è minuscolo e tutti puntano agli stessi posti, quindi cercate di arrivare per le tre. Se la banchina è piena, date fondo a Mandraki Bay, un miglio a est, e fate la spola col tender: la tenuta su sabbia a sei-otto metri è buona e si è riparati da nord. Il paese è il vero spettacolo. Le auto non sono mai state ammesse e i muli portano ancora le valigie su per i vicoli a picco fino alle case di pietra. Bagno dagli scogli piatti di Spilia, quindici minuti a piedi verso ovest fino a Vlychos, oppure salita al monastero di Profitis Ilias per la vista lunga.",
+          "thingsToDo": [
+            "Girare i vicoli a picco senza auto",
+            "Bagno dagli scogli di Spilia",
+            "15 minuti a piedi verso ovest fino alla spiaggia di Vlychos",
+            "Salita al monastero di Profitis Ilias"
+          ],
+          "mooringTip": "La banchina di Hydra costa 30-50 euro e i posti finiscono entro le 15:00, quindi calcolate la tappa per arrivare presto. Se restate fuori, ancorate a Mandraki Bay un miglio a est, su sabbia a 6-8 m, riparati da nord, e scendete a terra col tender."
+        },
+        "6": {
+          "shortDescription": "Quindici miglia facili fino a Poros attraverso un canale orlato di pini, con un bagno a Russian Bay prima della banchina cittadina.",
+          "description": "Tappa corta oggi, solo quindici miglia, quindi nessuna fretta di mollare gli ormeggi. L'avvicinamento a Poros è la parte bella: il canale si stringe tra l'isola e il Peloponneso, i pendii di pini salgono da entrambi i lati, l'acqua piatta e verde. Spezzate la navigazione a Russian Bay, sulla costa nord, un vecchio ancoraggio militare dove si dà fondo su sabbia a cinque-sette metri e si fa il bagno dalla barca per tutta la parte centrale della giornata. Quando ne avete avuto abbastanza, fate il giro a motore fino alla banchina cittadina per la notte: ripara da ogni direzione e costa dai venticinque ai quaranta euro. Poros è dove la maggior parte degli equipaggi si prende la giornata di riposo, e il lungomare si riempie di taverne. Ordinate il saganaki fiammeggiato al tavolo e, se le gambe reggono, salite al vecchio Santuario di Poseidone.",
+          "thingsToDo": [
+            "Bagno all'ancora a Russian Bay",
+            "Tuffo a Love Bay, tra i pini",
+            "A piedi fino alle rovine del Santuario di Poseidone",
+            "Saganaki fiammeggiato sul lungomare"
+          ],
+          "mooringTip": "La banchina cittadina di Poros è ben riparata da ogni direzione e costa 25-40 euro con ormeggio di poppa. Usate Russian Bay sulla costa nord, sabbia a 5-7 m, come ancoraggio per il bagno di mezzogiorno prima di impegnarvi in città per la notte."
+        },
+        "7": {
+          "shortDescription": "Trenta miglia verso nord fino ad Alimos, con l'ultimo bagno al largo di Aegina e il rifornimento prima del posto di riconsegna.",
+          "description": "Trenta miglia dritte a nord chiudono il giro. Mollate a metà mattina e sarete di ritorno ad Alimos comodamente per le due, il che lascia spazio a un ultimo bagno se il vento collabora. Aegina si trova circa dieci miglia dentro la tappa e fa una sosta pranzo facile, con acqua e luce sulle spiagge del lato ovest. Dopo di che è una tirata dritta fino alla marina. Un'abitudine da tenere: fate il pieno alla banchina carburante all'ingresso prima di ormeggiare, così la barca è pronta per la riconsegna la mattina presto e non di corsa. Alimos è ormeggio di poppa con le trappe, dai settanta ai cento euro. Una volta assicurata, c'è tempo per una ripulita e per portare l'equipaggio a terra per la cena d'addio in una taverna di Glyfada.",
+          "thingsToDo": [
+            "Ultimo bagno sulle spiagge di Aegina",
+            "Rifornimento e lavaggio ad Alimos",
+            "Cena d'addio in una taverna di Glyfada",
+            "Passeggiata sul lungomare di Faliro"
+          ],
+          "mooringTip": "Alimos Marina è ormeggio di poppa con le trappe, 70-100 euro a notte. Fate carburante alla banchina all'ingresso prima di ormeggiare e confermate l'orario di riconsegna con la base 24 ore prima."
+        }
+      }
+    },
+    "athens-mykonos-paros": {
+      "metaTitle": "Mykonos e Paros da Atene: 7 giorni | Boat4You",
+      "metaDesc": "Sette giorni andata e ritorno da Atene nelle Cicladi: Kea, Syros, Mykonos, Paros, Serifos e Kythnos, con ancoraggi, taverne e consigli di ormeggio.",
+      "days": {
+        "1": {
+          "shortDescription": "Ventotto miglia di rodaggio verso sud da Alimos, oltre il tempio di Capo Sounion, fino alla riparata baia di Vourkari a Kea: la prima notte all'ancora nell'Egeo.",
+          "description": "La consegna della barca ad Alimos si mangia la mattina, così di solito molliamo gli ormeggi verso le undici e puntiamo a sud. Le prime ore corrono lungo la costa attica con Capo Sounion davanti e le colonne del tempio di Poseidone chiare sul promontorio. Superato il capo l'onda si apre e Kea riempie l'orizzonte. Vourkari sta sulla costa nord-occidentale, una baia di lavoro dove pescherecci e barche a noleggio si dividono lo specchio d'acqua. A terra le taverne del lungomare grigliano il pescato del mattino e il polpo sta ad asciugare sui fili. Se l'equipaggio ha ancora gambe, la strada sale a Ioulida, la capitale infilata tra le colline, e una breve camminata oltre il paese porta al Leone arcaico di Kea, scolpito direttamente nella roccia madre. Una prima giornata tranquilla. Le distanze vere cominciano domani.",
+          "thingsToDo": [
+            "Navigare davanti al Tempio di Poseidone a Capo Sounion",
+            "Salire a Ioulida, la capitale in collina",
+            "Trovare il Leone di Kea scolpito nella roccia",
+            "Polpo alla griglia sul lungomare di Vourkari"
+          ],
+          "mooringTip": "A Vourkari si sta di poppa in banchina oppure all'ancora su sabbia a 5-7 m nella baia; la tenuta è buona, anche se le raffiche scendono dalle colline quando il meltemi è in forma."
+        },
+        "2": {
+          "shortDescription": "Venti miglia verso sud-est fino a Ermoupoli, la grande capitale neoclassica delle Cicladi, dove a terra vi aspettano strade di marmo e il borgo cattolico in collina.",
+          "description": "Syros sorprende quasi tutti quelli che ci arrivano la prima volta. È il cuore amministrativo delle Cicladi ed Ermoupoli ne ha l'aspetto: palazzi signorili, una piazza principale di marmo e un teatro d'opera modellato sulla Scala. Ormeggiamo alla banchina cittadina, proprio in mezzo alle cose. Lungo il porto i vecchi cantieri lavorano ancora, quindi al mattino aspettatevi un po' di baccano. Sopra il porto due colline portano le chiese: l'ortodossa Anastasi su una, la cattolica San Giorgio sull'altra, a coronare il dedalo medievale di Ano Syros. Salite nel tardo pomeriggio, quando la luce si fa dorata sulle facciate pastello. Il rebetiko è nato in questi vicoli e qualche taverna lo suona ancora dal vivo. Prima di ripartire, comprate una scatola di loukoumi di Syros in una pasticceria vicino al lungomare.",
+          "thingsToDo": [
+            "Passeggiare nella piazza di marmo Miaouli a Ermoupoli",
+            "Salire ad Ano Syros fino alla cattedrale di San Giorgio",
+            "Ascoltare rebetiko dal vivo in una taverna dei vicoli",
+            "Comprare loukoumi di Syros vicino al lungomare"
+          ],
+          "mooringTip": "A Ermoupoli si dà poppa alla banchina cittadina con la propria ancora e d'estate i posti vanno a chi arriva prima. L'onda del meltemi trova la strada dentro il bacino, quindi filate catena abbondante e, ovunque una bitta lo permetta, date una lunga cima a terra."
+        },
+        "3": {
+          "shortDescription": "Quattordici miglia a est fino a Mykonos, con sosta UNESCO a Delos, la Chora imbiancata e i mulini sopra il porto vecchio.",
+          "description": "La tappa per Mykonos è corta, il che è un bene, perché il meltemi si incanala forte tra le isole e le ultime miglia verso il porto possono essere mosse. Questa è l'isola dei venti e il nome se lo merita. Ormeggiate a Tourlos, il porto nuovo a nord della città, poi andate in Chora a piedi o in bus. Il posto è affollato e caro e lo sa, ma il nucleo antico fa ancora il suo effetto: persiane cobalto, la fila di mulini a Kato Mili e il lungomare di Little Venice, dove il mare schiaffeggia i muri delle case. Programmate lì l'aperitivo della sera, all'ora del tramonto. Se preferite scambiare la folla con l'antichità, la piccola isola di Delos è a poche miglia di navigazione verso ovest e la sua città antica con la terrazza dei leoni è tra le rovine più belle di Grecia.",
+          "thingsToDo": [
+            "Gita in barca alle rovine di Delos",
+            "Fotografare la fila di mulini di Kato Mili",
+            "Aperitivo al tramonto a Little Venice",
+            "Girare i vicoli dalle persiane cobalto della Chora"
+          ],
+          "mooringTip": "In alta stagione prenotate per tempo un posto a Tourlos (porto nuovo); la banchina del porto vecchio è solo per soste brevi e l'imboccatura prende un'onda corta e sgradevole quando il meltemi soffia dritto dentro."
+        },
+        "4": {
+          "shortDescription": "Diciotto miglia in poppa verso sud fino a Paros, dividendo la giornata tra la chiesa bizantina di Parikia e il porticciolo pastello di Naoussa.",
+          "description": "Con il meltemi alle spalle, la discesa verso Paros è una delle navigazioni più facili della settimana, spesso un lasco veloce con il fiocco a farfalla sul tangone. Parikia è la capitale e il nodo dei traghetti, e ospita l'Ekatontapiliani, la chiesa dalle cento porte, una delle più antiche ancora in piedi in Grecia: vale un'ora all'interno prima che monti il caldo. La maggior parte degli equipaggi preferisce passare la notte a Naoussa, il vecchio porto di pescatori sulla costa nord, dove un forte veneziano in rovina sorveglia l'imboccatura e dopo il buio le taverne si allargano sulla banchina. Un giro in tender o un taxi vi porta a Kolymbithres, dove vento e mare hanno scolpito il granito in forme grigie e lisce tra cui si può nuotare. Se avete un pomeriggio libero, noleggiate uno scooter e salite a Lefkes.",
+          "thingsToDo": [
+            "Entrare nella chiesa dell'Ekatontapiliani",
+            "Nuotare tra le vasche di granito di Kolymbithres",
+            "Cena sulla banchina del porto di Naoussa",
+            "Salire al paese di marmo di Lefkes"
+          ],
+          "mooringTip": "D'estate la banchina cittadina di Parikia è caotica ed esposta; Naoussa è la notte più tranquilla, di poppa dentro il frangiflutti, anche se lo spazio è poco: puntate a entrare entro metà pomeriggio."
+        },
+        "5": {
+          "shortDescription": "Una traversata più lunga, trenta miglia verso ovest fino alla selvaggia e arida Serifos, dove la Chora incombe a 200 metri sopra il porto di Livadi.",
+          "description": "È la tappa lunga della settimana, trenta miglia di mare aperto verso ovest attraverso le Cicladi, quindi ci piace essere fuori dalla banchina entro le nove. Con il meltemi al traverso può essere una navigazione vivace, e tra le isole l'onda ha spazio per montare. Serifos ripaga la fatica. L'isola è brulla e rocciosa, un bel contrasto con la levigata Paros, e la sua Chora sale sul fianco della collina sopra Livadi in una pila di cubi bianchi coronata da un vecchio kastro. La salita per il sentiero a gradini prende quaranta minuti e dalla cima la vista arriva a Sifnos e oltre. A livello del mare, Livadi si curva attorno a una baia riparata, con un paio di belle spiagge per il bagno, Psili Ammos tra queste, a un salto di distanza. Notti tranquille, cucina onesta, poca folla.",
+          "thingsToDo": [
+            "Salire alla Chora per il sentiero a gradini",
+            "Esplorare le rovine del vecchio kastro",
+            "Bagno alla spiaggia di Psili Ammos",
+            "Tramonto dai mulini della Chora"
+          ],
+          "mooringTip": "A Livadi si sta di poppa alla banchina del porto oppure all'ancora su sabbia a 5-7 m nella baia; è ben riparata dai venti settentrionali, il che ne fa una notte affidabile anche quando il meltemi urla."
+        },
+        "6": {
+          "shortDescription": "Diciotto miglia su fino a Kythnos, un'isola che meriterebbe più attenzione, con la lingua di sabbia a due mari di Kolona e le sorgenti calde che gorgogliano a Loutra.",
+          "description": "Kythnos viene saltata dalle barche che corrono verso la base, ed è esattamente per questo che ci piace. La risalita da Serifos è semplice, quasi tutta al traverso con vento in calo. Il pezzo forte dell'isola è Kolona, una sottile lingua di sabbia con il mare da entrambi i lati che collega la costa all'isolotto di Agios Loukas; si ancora al largo e si nuota attraversando il tombolo. Merichas è il porto di lavoro, piccolo e cordiale, con taverne che servono sardine alla griglia a pochi passi dall'acqua. Più su lungo la costa est, Loutra ha sorgenti termali che scendono tiepide in mare, l'unica acqua naturalmente calda delle Cicladi. Nell'entroterra, il paese di Dryopida nasconde la grotta di Katafyki, una vecchia miniera di ferro in cui si può entrare a piedi. Una giornata calma e senza fronzoli prima del rientro.",
+          "thingsToDo": [
+            "Ancorare davanti al tombolo di Kolona e nuotare",
+            "Bagno nelle sorgenti termali di Loutra",
+            "Sardine alla griglia sulla banchina di Merichas",
+            "Entrare a piedi nella grotta di Katafyki a Dryopida"
+          ],
+          "mooringTip": "A Merichas si sta di poppa in banchina, ma per una notte più tranquilla ancorate davanti a Kolona o nella baia di Apokrousi su buona sabbia a 5-7 m; entrambe sono aperte a ovest, quindi occhio alla brezza di mare del pomeriggio."
+        },
+        "7": {
+          "shortDescription": "Ultime ventidue miglia verso nord dentro il Golfo Saronico e ritorno ad Alimos, con un'ultima occasione per doppiare Capo Sounion.",
+          "description": "L'ultima mattina è senza fretta. Colazione con calma, un ultimo bagno dalla barca, poi prua a nord-ovest verso l'Attica. La traversata è di circa ventidue miglia e il meltemi, se soffia, di solito sarà alle spalle per un finale comodo in poppa. Molti equipaggi passano un'ultima volta da Capo Sounion per vedere il tempio di Poseidone dal mare, una degna chiusura del cerchio. Da lì è una tirata dritta lungo la costa dentro il Golfo Saronico. Puntate ad arrivare ad Alimos con un po' di margine, perché il venerdì pomeriggio gli slot per il carburante e lo scarico delle acque nere si riempiono in fretta, e una riconsegna ordinata la sera prima evita la corsa. Sale sulla pelle, una settimana di ancoraggi alle spalle e Atene che aspetta di rimandarvi a casa.",
+          "thingsToDo": [
+            "Doppiare Capo Sounion per un'ultima vista del tempio",
+            "Ultimo bagno in un canale delle Cicladi",
+            "Fotografare il Tempio di Poseidone",
+            "Preparare la barca per la riconsegna"
+          ],
+          "mooringTip": "Alimos è la marina standard per la riconsegna e la base charter più affollata di Grecia; confermate 24 ore prima lo slot per carburante e scarico acque nere, e ormeggiate la sera prima se il contratto lo consente."
+        }
+      }
+    },
+    "athens-mykonos-santorini-paros": {
+      "metaTitle": "Mykonos e Santorini in barca: 14 giorni | Boat4You",
+      "metaDesc": "Giro delle Cicladi in 14 giorni da Atene: Mykonos, Paros e Santorini, ritorno via Milos e Sifnos. Ancoraggi, ormeggi e venti, giorno per giorno.",
+      "days": {
+        "1": {
+          "shortDescription": "Venti miglia tranquille di rodaggio da Alimos, doppiando Capo Sounion prima del salto facile verso la riparata baia di Vourkari a Kea.",
+          "description": "Il vettovagliamento porta sempre via tempo la prima mattina, quindi raramente lasciamo Alimos prima delle undici. Scaricati i carrelli e riempito il frigo, prua a est-sud-est e ci si sistema. Entro un'ora le colonne del tempio di Poseidone si alzano sul promontorio di Sounion, sulla dritta, e fanno un bel punto di riferimento per uscire in mare aperto. Il resto sono venti miglia al traverso fino a Kea, cavalcando qualunque settentrionale la giornata abbia costruito. Vourkari sta sulla spalla nord-occidentale dell'isola e fa bene il suo lavoro di prima notte: buona copertura dal Meltemi dominante, una banchina generosa per l'ormeggio di poppa e una fila di piccoli ouzeri di pesce dove il polpo alla griglia esce dritto dalla brace. Korissia, il paese dei traghetti qui accanto, è il ripiego più economico quando il vento resta leggero.",
+          "thingsToDo": [
+            "Salire nei vicoli di marmo di Ioulida al crepuscolo",
+            "Trovare il Leone di Kea del VI secolo a.C.",
+            "Snorkeling sul relitto della Patris a Koundouros",
+            "Polpo alla griglia in un ouzeri di Vourkari"
+          ],
+          "mooringTip": "Ormeggio di poppa a Vourkari con le trappe, circa €25-35 a notte per un 45 piedi, con buona copertura dal settentrionale. Quando la banchina è piena, date fondo due miglia a est a Otzias, sabbia a 6-8 m."
+        },
+        "2": {
+          "shortDescription": "Trentadue miglia a sud-est fino a Syros: aria leggera all'inizio, poi un traverso vivace col Meltemi e infine la banchina più facile delle Cicladi.",
+          "description": "Lasciate Vourkari poco dopo il caffè. L'aria del mattino di solito sta sotto i dodici nodi e il Meltemi tende a farsi vivo solo nel primo pomeriggio, il che vi regala una partenza morbida sulle trentadue miglia fino a Syros. Quando il vento entra, la seconda metà della tappa diventa un traverso veloce con mare in crescita: prendete una mano di terzaroli prima di averne bisogno, non dopo. Ermoupoli aspetta in fondo a un porto profondo e ben disegnato, con la città vecchia neoclassica impilata sulla collina in ocra e bianco. La banchina cittadina è quanto di più indulgente possa essere un ormeggio di poppa da queste parti: riparata qualunque cosa faccia il vento, con spazio in abbondanza e i caffè della capitale a due minuti dalla passerella.",
+          "thingsToDo": [
+            "Girare Ano Syros e il suo quartiere cattolico",
+            "Assaggiare il loukoumi in una pasticceria dell'Ottocento",
+            "Passeggiata serale sulla piazza di marmo Miaouli",
+            "Bagno dai gradoni di roccia di Asteria"
+          ],
+          "mooringTip": "L'ormeggio di poppa alla banchina cittadina di Ermoupoli è gratuito, ma portate la vostra ancora perché le trappe sono un terno al lotto. Il riparo è ottimo da ogni direzione. Per un posto con servizi, la marina Manna chiede circa €60-80 a notte."
+        },
+        "3": {
+          "shortDescription": "Quattordici miglia rapide al traverso fino a Tinos, in un canale che aggiunge puntualmente cinque nodi a quanto prometteva la previsione.",
+          "description": "Il braccio di mare tra Syros e Tinos è uno dei più ventosi del gruppo. La geografia incanala il Meltemi, così una previsione tranquilla di venti nodi può mostrarne venticinque sull'acqua entro metà pomeriggio, e a fine luglio le raffiche vanno anche più su. Prendetelo al traverso e godetevi l'andatura, ma abbiate la barca ormeggiata ben prima delle quattro, prima che l'onda cominci ad accumularsi all'imboccatura del porto. Tinos città ha posti di poppa nel bacino nuovo, anche se la tenuta è solo discreta; il porticciolo interno, riservato alle barche da charter e a quelle locali, è la scelta più tranquilla quando soffia forte. A terra, l'isola è il cuore della scultura in marmo dell'Egeo e il grande luogo di pellegrinaggio ortodosso, con la chiesa della Panagia Evangelistria che richiama i fedeli lungo il suo lungo accesso lastricato di marmo.",
+          "thingsToDo": [
+            "Vedere gli scultori del marmo al lavoro a Pyrgos",
+            "Percorrere il sentiero delle colombaie sopra Falatados",
+            "Carciofi alla polita in una taverna con cortile",
+            "Tramonto tra i massi di Volax"
+          ],
+          "mooringTip": "L'ormeggio di poppa nel porto nuovo costa circa €25-40; il fondo è sabbia media, quindi filate calumo lungo e agguantate bene. Se sono previsti più di 25 nodi di Meltemi, spostatevi nel più calmo porticciolo interno."
+        },
+        "4": {
+          "shortDescription": "Solo otto miglia a est fino a Mykonos, ma il canale aperto morde: prenotate Tourlos in anticipo e fate un bagno a Ornos lungo la strada.",
+          "description": "Tappa corta, questa, appena otto miglia fino a Mykonos. Non fatevi ingannare dalla distanza: la rotta diretta taglia un canale aperto dove il vento sta buoni cinque nodi sopra il dato regionale e il mare del pomeriggio si fa corto e scomodo. A luglio e agosto conviene davvero prenotare online, con ventiquattro ore di anticipo, un posto a Tourlos, la marina nuova a nord della città. La banchina del porto vecchio è gratuita ma completamente esposta all'onda e vale la pena solo con Meltemi sotto i diciotto nodi. Non c'è fretta di arrivare, quindi spezzate la navigazione con un bagno a Ornos o Psarou prima di ormeggiare. Mykonos si guadagna la fama dopo il tramonto, ma il piacere più quieto di giorno è la barca per Delos e i suoi viali di marmo in rovina.",
+          "thingsToDo": [
+            "Traversata in barca alle rovine di Delos",
+            "Pranzo in spiaggia a Agios Sostis, senza strade",
+            "Il lungomare di Little Venice al tramonto",
+            "Anello a piedi del faro di Armenistis"
+          ],
+          "mooringTip": "Prenotate online un posto di poppa alla Tourlos New Marina per l'alta stagione; mettete in conto €70-110 a notte. La banchina gratuita in città è sicura solo sotto i diciotto nodi circa di settentrionale, perché l'onda monta in fretta davanti all'imboccatura."
+        },
+        "5": {
+          "shortDescription": "Ventidue miglia in poppa verso sud-ovest fino a Naoussa, al gran lasco per tutto il tragitto: forse la più bella giornata di vela del viaggio.",
+          "description": "È la tappa che gli equipaggi ricordano. Ventidue miglia a sud-ovest fino a Paros, il Meltemi sistemato al giardinetto e la barca che scivola al gran lasco per quattro o cinque ore di vera navigazione d'altura. Tenete gli occhi aperti passando il canale di Naxos, dove le raffiche scendono dalle alture più forti di quanto vi aspettiate. Naoussa aspetta sulla costa nord, un vecchio porto di pescatori cicladico diventato un elegante villaggio portuale senza però perdere le barche che gli hanno dato il nome; il polpo sta ancora ad asciugare sui fili vicino all'acqua. Se il settentrionale spinge dentro il bacino interno, si ancora facilmente nella baia appena fuori. Tenete la serata per un bicchiere di ouzo sulla banchina dei pescatori mentre la luce se ne va.",
+          "thingsToDo": [
+            "Snorkeling tra le rocce scolpite di Kolymbithres",
+            "Degustazione di vini in una cantina di Marpissa",
+            "Ouzo sulla banchina dei pescatori di Naoussa",
+            "Passeggiata nei vicoli di marmo di Lefkes al crepuscolo"
+          ],
+          "mooringTip": "Il porto di Naoussa è piccolo, ormeggio di poppa, €30-50 a notte, e spesso pieno entro le cinque del pomeriggio: arrivate presto. Se è occupato, ancorate mezzo miglio a est nella baia di Plastira, sabbia a 5-7 m e riparo da nord."
+        },
+        "6": {
+          "shortDescription": "La giornata più ventosa del giro: ventotto miglia dure verso sud fino a Ios in pieno Meltemi, quindi terzarolate presto e siate dentro Ormos per le quattro.",
+          "description": "Il canale tra Naxos e Sikinos è dove il Meltemi mostra i denti. A differenza delle poppe che vi lasciate alle spalle, queste ventotto miglia mettono il vento davanti al traverso e, nel canale vero e proprio, potete aspettarvi un costante ventidue-trenta nodi su un duro lasco stretto mure a sinistra. Riducete la velatura prima di uscire dal riparo di Paros e puntate ad avere l'ancora sul fondo dentro Ormos ben prima delle quattro. Il porto è riparato e la marina è in ampliamento; la vecchia banchina funziona ancora, anche se i posti sono pochi. Un miglio a sud, Mylopotas è la baia da bagno del pomeriggio, un lungo arco di sabbia che si svuota appena se ne vanno le barche giornaliere. Ios ha fama di isola da festa, ma la salita ai mulini sopra la Chora al tramonto è un piacere più tranquillo.",
+          "thingsToDo": [
+            "Camminata fino alla presunta tomba di Omero",
+            "Bagno sulle sabbie di Manganari Bay",
+            "Aperitivo al tramonto vicino ai mulini della Chora",
+            "Rembetika a tarda ora in una piazza della Chora"
+          ],
+          "mooringTip": "Ormeggio di poppa nel porto di Ormos, €25-40 a notte, con posti prenotabili nella marina nuova quando è aperta. Mylopotas è solo un ancoraggio diurno, sabbia a 5-8 m: diventa insostenibile di notte appena entra il Meltemi."
+        },
+        "7": {
+          "shortDescription": "Diciotto miglia a sud fino a Santorini: partenza alle prime luci per Vlychada, perché la caldera è troppo profonda per ancorare.",
+          "description": "Le miglia sono poche, ma questa tappa vuole una finestra di calma e buona luce, perché arrivare a Santorini non è il posto giusto per avere fretta. Il consiglio onesto è scordarsi di ancorare nella caldera. L'acqua all'interno scende oltre i duecento metri a poca distanza dalle falesie, quindi stare sulla propria ancora è semplicemente impossibile; l'unica tenuta è al largo di Thirasia, alle boe delle navi da crociera, e nella migliore delle ipotesi è inaffidabile. Puntate invece su Vlychada, sulla costa sud, una vera marina riparata con accesso stradale per il cambio equipaggio. Lasciate Ios alle prime luci, siate ormeggiati per l'ora di pranzo e dedicate il pomeriggio a un taxi su fino a Oia. Il tramonto lassù è un cliché per un buon motivo, ma andate presto e prendetevi un posto prima che arrivino i pullman.",
+          "thingsToDo": [
+            "Taxi fino a Oia per il tramonto",
+            "Degustazione di vini da Santo Wines o Sigalas",
+            "Bagno sotto le falesie di Red Beach",
+            "Fava con capperi a Megalochori"
+          ],
+          "mooringTip": "Vlychada Marina è ormeggio di poppa a circa €60-100 a notte e in alta stagione va prenotata in anticipo. Considerate le boe delle crociere a Thirasia solo come ultima risorsa; la profondità della caldera esclude quasi ovunque l'ancoraggio libero."
+        },
+        "8": {
+          "shortDescription": "Comincia il ritorno: ventidue miglia a nord-ovest contro il Meltemi fino alla piccola Folegandros, con la Chora a picco sopra il porto.",
+          "description": "Da qui il viaggio gira verso casa, e casa significa risalire contro il Meltemi in tappe più corte e gestibili. Folegandros sta ventidue miglia a nord-ovest ed è la più piccola tra le soste cicladiche di grido, il che la rende ancora migliore. Karavostasi è l'unico vero porto, un posto modesto aperto a sud ma ben riparato finché il vento resta nel suo solito settore settentrionale. Prenderete un posto di poppa oppure starete all'ancora, a seconda di cosa è libero quando arrivate. La Chora sta in alto su una falesia sopra il porto, raggiungibile in taxi o con una bella mezz'ora di salita, e vale ogni passo: un dedalo di piazze illuminate a lanterne che sembra lontanissimo dalla folla di Santorini. La cena lassù, con il salto verso il mare sotto di voi, è il premio della serata.",
+          "thingsToDo": [
+            "Salire alla chiesa della Panagia sul bordo della falesia",
+            "Bagno nella cala di Katergo, raggiungibile solo via mare",
+            "Matsata, pasta fresca con ragù di capra",
+            "Percorrere il kalderimi fino ad Ano Meria"
+          ],
+          "mooringTip": "Karavostasi è ormeggio di poppa a €25-40 con pochissimi posti; quando è pieno, ancorate appena a est del porto su sabbia a 4-7 m. State alla larga se è previsto anche solo un po' di vento da sud, perché il porto è completamente aperto da quella parte."
+        },
+        "9": {
+          "shortDescription": "Venti miglia di bolina a nord-ovest fino a Milos, dove Adamas, in fondo alla sua lunga baia, è la notte più tranquilla dell'ovest.",
+          "description": "Altre venti miglia di bolina verso nord-ovest, il Meltemi in pieno sulla prua, quindi mettete in conto un paio di bordi lunghi e una media più bassa di quella che vi hanno regalato le giornate in poppa. Il premio è Adamas, infilata proprio in fondo alla profonda insenatura naturale di Milos. Una volta dentro la baia il vento cade e il riparo è completo quanto se ne trova nelle Cicladi occidentali. Spezzate la navigazione con una sosta a Sarakiniko se la giornata è tranquilla: la roccia vulcanica bianca sembra arrivare da un altro pianeta, anche se l'ancoraggio è esposto e ha senso solo con aria leggera. Milos meriterebbe più di una notte, ma Adamas vi mette comunque a portata del colle del castello di Plaka e delle rimesse per barche dipinte di Klima per un primo assaggio.",
+          "thingsToDo": [
+            "Bagno sotto le falesie lunari di Sarakiniko",
+            "Snorkeling nelle grotte marine di Papafragas",
+            "Salita al castello di Plaka per la vista",
+            "Passeggiata fotografica tra le rimesse di Klima"
+          ],
+          "mooringTip": "Ormeggio di poppa alla banchina cittadina di Adamas, €30-50 a notte, con riparo affidabile da ogni direzione. Pollonia, a nord-est, costa meno ma è aperta al Meltemi settentrionale: tenetela per i periodi stabili."
+        },
+        "10": {
+          "shortDescription": "Diciotto miglia a nord fino a Sifnos, la cucina delle Cicladi: ancoraggio a Kamares, o Platys Gialos se il vento gira a ovest.",
+          "description": "Diciotto miglia facili verso nord vi portano a Sifnos, e Kamares sulla costa ovest è la sosta naturale. La baia ripara bene da nord e nord-est, ma è aperta a ovest, quindi nei periodi di fine estate in cui il Meltemi prende una componente occidentale un'onda può insinuarsi e rendere la notte scomoda. È il segnale per spostarsi a Platys Gialos, sulla costa sud. Sifnos è, per opinione comune, l'isola del mangiare delle Cicladi: la revithada di ceci cotta lentamente tutta la notte nel forno a legna, l'agnello mastelo sigillato in pentole di terracotta, un'intera tradizione culinaria che si fa risalire a uno chef locale dell'Ottocento. Arrivate affamati. Il monastero a picco di Chrysopigi, oltre Faros, è la camminata con cui guadagnarsi la cena.",
+          "thingsToDo": [
+            "Camminata al monastero di Chrysopigi oltre Faros",
+            "Agnello mastelo in pentola di terracotta ad Artemonas",
+            "Visita a una bottega di ceramica a Vathy",
+            "Bagno nell'acqua calma di Vathi Bay"
+          ],
+          "mooringTip": "Ancorate su sabbia a 5-8 m a Kamares, oppure prendete uno dei pochi posti di poppa sulla banchinetta per €20-30. Quando il vento gira a ovest, spostatevi a Platys Gialos sul lato sud."
+        },
+        "11": {
+          "shortDescription": "Quattordici miglia a nord fino a Serifos, dove la baia di Livadi incanala il vento: filate calumo lungo e scendete a controllare l'ancora.",
+          "description": "Quattordici miglia tranquille separano Sifnos da Serifos, ma l'ancoraggio chiede più attenzione della navigazione. La baia di Livadi guarda dritto nel Meltemi e funziona come un imbuto e, per quanto la sabbia tenga bene, il vento riesce a strappare anche un'ancora ben agguantata. Arare è il classico incidente di Serifos. Filate calumo abbondante, scendete a vedere che sia ben interrata e non allontanatevi a terra nella prima ora finché non siete sicuri che tenga. Sopra il porto, la Chora è tra i più bei paesi collinari delle isole, una cascata bianca di case che sale fino a un castello in rovina. Salite per la vecchia mulattiera o in taxi e calcolate il tramonto, quando i mulini sul crinale prendono le ultime luci.",
+          "thingsToDo": [
+            "Salire alla Chora per la mulattiera",
+            "Revithada di ceci in un kafeneio del paese",
+            "Bagno alla spiaggia di Psili Ammos",
+            "Tramonto vicino ai mulini sul crinale"
+          ],
+          "mooringTip": "Due scelte a Livadi: dare fondo su sabbia a 5-8 m con calumo abbondante, oppure prendere la banchina cittadina di poppa per €20-30. Oltre i 22 nodi arare diventa un rischio concreto, quindi controllate l'ancora in apnea prima di lasciare la barca."
+        },
+        "12": {
+          "shortDescription": "Quindici miglia tranquille a nord fino a Kythnos e al tombolo di Kolona: una spiaggia a due mari raggiungibile solo via barca, e il più bel bagno del viaggio.",
+          "description": "Kythnos passa inosservata accanto alle vicine famose, ed è esattamente il suo fascino. Quindici miglia a nord di Serifos, non ha folla e ha un posto davvero speciale: Kolona, un paio di miglia lungo la costa dal piccolo porto traghetti di Merichas. Un nastro stretto di sabbia, forse duecento metri, unisce l'isolotto di Agios Loukas all'isola principale, così avete una spiaggia con il mare da entrambi i lati e acqua bassa e limpida da qualunque parte guardiate. È un posto in cui dare fondo e restare. Ancorate al largo, nuotate finché la luce si addolcisce e lasciate che la cena avvenga a bordo mentre le barche giornaliere si diradano. Se le gambe chiedono movimento, la strada di crinale su fino a Dryopida è una bella pedalata, e Loutra ha sorgenti termali per rilassare le spalle stanche.",
+          "thingsToDo": [
+            "Ancorare e nuotare al tombolo di Kolona",
+            "Bagno nelle sorgenti calde di Loutra",
+            "Pedalata sulla strada di crinale fino a Dryopida",
+            "Sfougato, torta al formaggio, in una taverna di Dryopida"
+          ],
+          "mooringTip": "L'ancoraggio a Kolona è gratuito, su sabbia a 4-6 m, e l'isolotto vi schermа dal Meltemi settentrionale. La banchina cittadina di Merichas è il ripiego a pagamento con ormeggio di poppa a €20-30, e Loutra ha sia le sorgenti termali sia qualche posto barca."
+        },
+        "13": {
+          "shortDescription": "La lunga tappa di rientro: trentacinque miglia a ovest-nord-ovest fino ad Alimos, in poppa nelle giornate buone, a motore-vela in quelle leggere.",
+          "description": "L'ultima vera giornata di vela è il salto singolo più lungo delle due settimane, trentacinque miglia a ovest-nord-ovest attraverso il Saronico aperto. Partite presto. Con il Meltemi dietro il traverso può essere una splendida planata in poppa, ma qui il vento è più capriccioso che tra le isole e in una giornata debole vi toccherà il motore-vela per arrivare a un'ora sensata nel tardo pomeriggio. Capo Sounion si alza sulla prua circa a metà traversata, le colonne del tempio a segnare la virata verso Atene, e dopo due settimane nelle Cicladi sembra il cancello che si chiude alle spalle. Passate dalla banchina carburante a fare il pieno prima di prendere il posto ad Alimos, così la barca è pronta per la base la mattina dopo. Tenete l'ultima sera per una lunga cena di equipaggio a Glyfada.",
+          "thingsToDo": [
+            "Un ultimo bagno sotto il tempio di Sounion",
+            "Rifornimento e lavaggio ad Alimos",
+            "Cena di equipaggio in una taverna di Glyfada",
+            "Sosta souvenir sul lungomare di Faliro"
+          ],
+          "mooringTip": "Prendete un posto di poppa con le trappe alla Alimos Marina, €70-100 a notte, e fate carburante alla banchina all'ingresso prima di ormeggiare. Confermate lo slot di riconsegna con la base 24 ore prima."
+        },
+        "14": {
+          "shortDescription": "Riconsegna prima delle nove ad Alimos: giro di controllo con la base, cauzione restituita entro una settimana, poi il breve trasferimento in aeroporto.",
+          "description": "L'ultima mattina è dolce. Abbiate la barca sgomberata e pronta per la riconsegna prima delle nove, quando qualcuno della base farà il giro con voi, controllandola mentre siete lì a rispondere di qualsiasi cosa. Se non emerge nulla, la cauzione torna indietro nel giro di una settimana circa. L'aeroporto è a soli venticinque minuti di strada da Alimos, anche se di venerdì conviene calcolare un'ora piena per il traffico. Non serve correre con i saluti. Prendetevi un ultimo frappé e un piatto di qualcosa sul lungomare di Glyfada mentre si caricano i bagagli, e regolate i conti con gli ormeggiatori se vi hanno trattato bene. Due settimane e un bel pezzo di Cicladi alle spalle: è un ottimo posto per finire.",
+          "thingsToDo": [
+            "Giro di controllo finale con il responsabile della base",
+            "Frappé sul lungomare di Glyfada",
+            "Trasferimento in aeroporto, 25 minuti",
+            "Mancia agli ormeggiatori per il buon servizio"
+          ],
+          "mooringTip": "Riconsegnate la barca ad Alimos prima delle nove. La cauzione viene normalmente sbloccata entro sette giorni dall'ispezione; fotografate e concordate eventuali note di danno prima di firmare qualsiasi cosa."
+        }
+      }
+    },
+    "athens-saronic-gulf": {
+      "metaTitle": "Golfo Saronico in barca: 7 giorni | Boat4You",
+      "metaDesc": "Charter da Atene nel Golfo Saronico: Aegina, Poros, Spetses, Hydra e Agistri. Tappe brevi, acque riparate, ormeggi facili.",
+      "days": {
+        "1": {
+          "shortDescription": "Quindici miglia facili verso sud-ovest da Alimos per far ambientare l'equipaggio, con i banchi di pistacchi di Aegina e il tempio di Aphaia ad aspettare all'arrivo.",
+          "description": "Il primo giorno serve soprattutto ad ambientarsi: stivare le provviste, capire dove stanno le manovelle dei winch, prendere confidenza con la barca prima di qualsiasi impegno. Da Alimos ad Aegina sono quindici miglia tranquille e il Saronico vi consegna acqua riparata fin da subito; le isole intorno e il Peloponneso tengono corto il fetch, così anche una brezza pomeridiana vivace raramente costruisce mare vero. Aegina città sta sulla costa ovest e ci si ormeggia di poppa lungo la banchina, proprio davanti ai caffè. Prendete i pistacchi ai banchi del porto: l'isola coltiva i migliori di Grecia. Se avete un pomeriggio libero, un breve taxi sale al Tempio di Aphaia, più antico del Partenone e degno della deviazione. Qui di solito ceniamo tardi, gourounopoulo allo spiedo.",
+          "thingsToDo": [
+            "Salire al Tempio di Aphaia",
+            "Comprare i pistacchi di Aegina ai banchi della banchina",
+            "Bagno alla spiaggia di Marathonas a sud della città",
+            "Provare il gourounopoulo in una taverna sul mare",
+            "Vedere la colonna solitaria di Kolona"
+          ],
+          "mooringTip": "La banchina cittadina è ormeggio di poppa e tiene bene, ma si riempie di barche di gitanti e l'onda dei traghetti passa di traverso; se volete calma, Perdika sulla costa sud è più tranquilla per la notte. Calcolate 25-40 euro per il posto in città."
+        },
+        "2": {
+          "shortDescription": "Quattordici miglia giù fino a Poros, dove uno stretto canale separa l'isola dalla terraferma e i pini di Love Bay ombreggiano il bagno di mezzogiorno.",
+          "description": "Poros è una tappa corta, quindi niente fretta: di solito lasciamo Aegina a metà mattina e ce la prendiamo comoda. L'avvicinamento è tra i più belli del golfo, infilando il canale tra l'isola e Galatas sul Peloponneso, abbastanza vicini da salutare la gente in banchina. Prima di ormeggiare, date fondo a Love Bay sul lato sud. I pini scendono fin sull'acqua, il fondo è sabbia a cinque-sette metri e tiene bene con vento da nord. La banchina cittadina corre lungo tutto il lungomare sotto la torre dell'orologio, quindi trovare posto è raramente un problema. Programma della sera: un piatto di saganaki fiammeggiato e una salita per i vicoli a gradini per la vista sullo stretto.",
+          "thingsToDo": [
+            "Ancorare e nuotare a Love Bay",
+            "Salire alla torre dell'orologio di Poros",
+            "Ordinare il saganaki fiammeggiato sul lungomare",
+            "Attraversare in tender fino ai limoneti di Galatas",
+            "Trovare le rovine del Tempio di Poseidone nell'entroterra"
+          ],
+          "mooringTip": "Ormeggio di poppa ovunque lungo la banchina cittadina; è ben riparata qualunque cosa faccia il vento, quindi la pressione sui posti è bassa. A Love Bay date fondo su cinque-sette metri di sabbia e starete comodi con il settentrionale."
+        },
+        "3": {
+          "shortDescription": "Venti miglia a sud-ovest fino a Spetses, l'isola senza auto dove le carrozze a cavallo passano davanti ai vecchi cantieri e il porto di Dapia si anima dopo il tramonto.",
+          "description": "Il salto più lungo finora, e quello in cui la brezza di solito si guadagna la giornata: il vento di mare del pomeriggio entra da sud, quindi partire presto ripaga se volete navigare a vela invece che a motore. Spetses tiene le auto fuori dal centro storico, e il risultato è un posto che va avanti a carrozze e biciclette. Dapia è il porto principale e il cuore sociale, con i caffè in fila e il vecchio, imponente hotel Poseidonion. Fate il giro fino al Porto Vecchio di Baltiza, dove gli artigiani costruiscono ancora i caicchi di legno alla maniera tradizionale e i bar in stile pirata si animano al tramonto. Se il sole è alto quando arrivate, ancorate prima a Zogeria sulla costa nord, tutta pini e sabbia chiara, e fate un bagno prima di impegnarvi in un posto d'ormeggio.",
+          "thingsToDo": [
+            "Vedere i maestri d'ascia dei caicchi al Porto Vecchio",
+            "Ancorare e nuotare nella baia di Zogeria",
+            "Pedalare la strada costiera fino a Agioi Anargyroi",
+            "Aperitivo al tramonto nei bar di Baltiza",
+            "Vedere la casa di Bouboulina vicino a Dapia"
+          ],
+          "mooringTip": "In alta stagione Dapia può diventare caotica e i posti hanno angoli scomodi, quindi arrivate entro metà pomeriggio e mettete in conto una notte vivace; il Porto Vecchio, più piccolo, è più calmo e molto più fotogenico se non vi spaventa la camminata dal tender fino in centro. Intorno ai 30-50 euro a notte."
+        },
+        "4": {
+          "shortDescription": "Venti miglia a nord fino a Hydra, tutta pietra a picco e niente auto; il porto si riempie presto, quindi arrivate prima di metà pomeriggio.",
+          "description": "Hydra è il gioiello del Saronico e lo sa, per cui il porto è l'unica vera bagarre della settimana. Sull'isola non ci sono auto: asini e muli portano ogni cosa su per i vicoli a gradini fino alle case in pietra grigia dei capitani, impilate sopra l'acqua. Il problema sono i posti. Quelli lungo la banchina se ne vanno in fretta e, se arrivate dopo le tre, potreste non trovare più nulla. Noi puntiamo a essere ormeggiati per le due, altrimenti diamo fondo a Mandraki, un miglio a est, e portiamo l'equipaggio a terra col tender. Una volta sistemati, il paese ripaga un giro senza alcun programma. Salite oltre i cannoni all'imboccatura del porto, trovate gli scogli di Spilia per un bagno e qualcosa di fresco, e lasciate che la serata succeda da sola.",
+          "thingsToDo": [
+            "Bagno dagli scogli di Spilia sotto il paese",
+            "Girare i vicoli di pietra sopra il porto",
+            "Camminata verso ovest fino a Kamini e alla spiaggia di Vlychos",
+            "Salita al monastero di Profitis Ilias",
+            "Un drink all'Hydronetta, sugli scogli a picco"
+          ],
+          "mooringTip": "La banchina principale è ormeggio di poppa ed è contesa: entrate nel primo pomeriggio a luglio e agosto o vi toccherà cercare. Se è piena, Mandraki Bay un miglio a est ha buona tenuta su sei-otto metri di sabbia e un breve salto in tender fino in paese. Circa 30-50 euro per il posto."
+        },
+        "5": {
+          "shortDescription": "La lunga risalita verso nord fino ad Aegina, venticinque miglia; questa volta saltate la città affollata e infilatevi nella tranquilla banchina dei pescatori di Perdika.",
+          "description": "Venticinque miglia fanno di questa la traversata più lunga del viaggio, quindi salpiamo presto e sfruttiamo l'acqua piatta del mattino prima che la brezza si svegli. È una rotta abbastanza dritta verso nord e nel primo pomeriggio siete di nuovo davanti ad Aegina. Invece di litigare una seconda volta per la banchina cittadina, puntate a Perdika, sulla punta meridionale. È un villaggio di pescatori vero, con una fila di taverne sull'acqua e nessuna confusione da traghetti. Lungo la strada, la spiaggia di Marathonas è un ancoraggio facile per un ultimo bagno prima di ormeggiare. A Perdika fanno bene le cose semplici: pesce appena sbarcato e una caraffa di bianco locale. Di fronte c'è la piccola Moni, un isolotto-riserva dove girano cervi e pavoni; vale un giro in tender se resta luce.",
+          "thingsToDo": [
+            "Mangiare pesce fresco sulla banchina di Perdika",
+            "Bagno alla spiaggia di Marathonas lungo la rotta",
+            "Tender fino alla riserva di cervi dell'isolotto di Moni",
+            "Visitare il monastero di Agios Nektarios",
+            "Guardare il tramonto dal molo del porto"
+          ],
+          "mooringTip": "Perdika è ormeggio di poppa su una banchina piccola e riparata, più calma di Aegina città, di solito 20-30 euro a notte; è gettonata per la cena, quindi arrivare nel primo pomeriggio vi assicura il posto. Marathonas offre un ancoraggio su sabbia pulita a cinque metri per la sosta bagno."
+        },
+        "6": {
+          "shortDescription": "Cinque miglia in scioltezza a nord-ovest fino ad Agistri, l'assonnata isola di pini che quasi tutti gli equipaggi si perdono, con Aponissos per il bagno e Skala per la notte.",
+          "description": "Dopo la folla di Hydra e Spetses, Agistri sembra un segreto che il golfo vi ha confidato. Sono cinque miglia da Aegina, appena il tempo di regolare le vele, quindi non c'è motivo di partire di corsa. L'isola è piccola e fitta di pini, e il ritmo cala nel momento in cui arrivate. Cominciate da Aponissos, sull'angolo sud-occidentale, un taglio d'acqua turchese e bassa dietro un isolotto minuscolo, dove il fondo è sabbia chiara e l'acqua diventa trasparente. Skala, sul lato est, è dove passerete la notte: un porticciolo modesto con taverne a conduzione familiare a pochi passi dalla banchina. Ordinate gli spaghetti all'astice se ci sono. Con il pomeriggio libero, noleggiate le bici e fate il giro tra i boschi di cipressi, oppure fate la breve salita al vecchio villaggio di Metochi per la vista su Aegina.",
+          "thingsToDo": [
+            "Ancorare e nuotare nella cala di Aponissos",
+            "Giro in bici dell'isola tra pini e cipressi",
+            "Spaghetti all'astice in una taverna di Skala",
+            "Salita al villaggio collinare di Metochi",
+            "Trovare la selvaggia spiaggia di ciottoli di Chalikiada"
+          ],
+          "mooringTip": "Il porto di Skala è piccolo, ormeggio di poppa, riparato da nord ed economico, 20-30 euro; prende poche barche, quindi nelle settimane di punta non arrivate troppo tardi. Aponissos è un ancoraggio diurno senza complicazioni, su sabbia a quattro-sei metri."
+        },
+        "7": {
+          "shortDescription": "Venti miglia di ritorno a nord-est fino ad Alimos, con un ultimo bagno possibile al largo della disabitata Moni prima del rifornimento e della riconsegna.",
+          "description": "Ultimo giorno, e sono venti miglia lineari di risalita fino ad Alimos. Di solito c'è tempo per un altro bagno, quindi se l'equipaggio lo chiede passate da Moni, davanti ad Aegina, e date fondo in una cala tranquilla prima di puntare a nord. Le cose importanti sono quelle pratiche. Fate il pieno alla banchina carburante della marina prima di ormeggiare, così i serbatoi sono pieni per la riconsegna e nessuno corre al check-in. Quasi tutte le basi rivogliono la barca entro il primo pomeriggio, quindi costruite la mattina attorno a questo e non attorno a un brunch con calma. Una volta assicurati, Glyfada è a un taxi di distanza per una vera cena d'addio, e il lungomare di Faliro è ottimo per un'ultima passeggiata e un souvenir prima che i trasferimenti disperdano tutti.",
+          "thingsToDo": [
+            "Ultimo bagno al largo dell'isolotto disabitato di Moni",
+            "Rifornimento e lavaggio ad Alimos",
+            "Cena d'addio in una taverna di Glyfada",
+            "Passeggiata sul lungomare di Faliro"
+          ],
+          "mooringTip": "Alimos è una grande marina con le trappe, ormeggio di poppa a 70-100 euro a notte; prendete prima la banchina carburante vicino all'ingresso e confermate l'orario di riconsegna il giorno prima, così il posto è pronto. Puntate a essere in banchina nel primo pomeriggio."
+        }
+      }
+    },
+    "athens-saronic-gulf-14-day": {
+      "metaTitle": "Da Atene a Monemvasia in 14 giorni | Boat4You",
+      "metaDesc": "14 giorni da Atene nel Golfo Saronico fino alla medievale Monemvasia e ritorno via Hydra, tra ancoraggi tranquilli del Peloponneso e borghi fortificati.",
+      "days": {
+        "1": {
+          "shortDescription": "Prima tappa di 28 miglia verso sud-ovest fino a Poros, con ormeggio di poppa alla banchina del paese sotto la torre dell'orologio.",
+          "description": "La prima tappa è più lunga della media, quindi conviene mollare gli ormeggi da Alimos a metà mattina, finché l'acqua è piatta. La discesa verso Poros resta per tutto il tempo nelle acque riparate del Saronico: una giornata indulgente per prendere le misure a barca ed equipaggio. Poros si affaccia su un canale stretto, di fronte agli agrumeti di Galatas, e la banchina del paese corre lungo tutto il lungomare sotto la torre dell'orologio. Prima di ormeggiare, dai fondo per un'ora a Love Bay, sul lato sud: una cala circondata di pini che degrada dolcemente sulla sabbia. A terra, le rovine del Santuario di Poseidone ripagano una breve salita, e le cucine del porto fiammeggiano il saganaki al tavolo. Acqua e gasolio qui si trovano senza problemi.",
+          "thingsToDo": [
+            "Ancoraggio e bagno a Love Bay",
+            "Salita alle rovine del Santuario di Poseidone",
+            "Saganaki flambé sul lungomare di Poros",
+            "In bici tra i limoneti del Lemonodasos a Galatas"
+          ],
+          "mooringTip": "L'ormeggio di poppa alla banchina di Poros costa €25–40 a notte ed è riparato da ogni direzione. In alta stagione arriva entro il tardo pomeriggio: i posti centrali si riempiono per primi."
+        },
+        "2": {
+          "shortDescription": "Venti miglia a sud-ovest fino a Spetses, isola senza auto: sosta bagno nella sabbiosa Zogeria e ormeggio a Dapia sotto i vecchi cannoni.",
+          "description": "Spetses tiene le auto fuori dal centro storico, così sul lungomare il rumore più forte che sentirai sarà quello degli zoccoli. Qui il lavoro lo fanno carrozze a cavallo e biciclette, e il porto di Dapia conserva ancora la sua fila di vecchi cannoni puntati verso il mare. Di solito spezziamo la traversata con un bagno a Zogeria, sulla costa nord-occidentale, dove il fondo è sabbia pulita su cinque-sette metri e i pini scendono fino a riva. A terra, cammina verso est fino al Porto Vecchio, oltre i cantieri dove si riparano ancora scafi in legno e le ville ottocentesche delle famiglie di armatori guardano l'acqua. La strada perimetrale è un bel giro in bici, tutto piano, se l'equipaggio ha energie. La sera i locali attorno all'insenatura di Baltiza si riempiono con calma.",
+          "thingsToDo": [
+            "Bagno nella baia sabbiosa di Zogeria",
+            "Passeggiata tra i cantieri del Porto Vecchio",
+            "Giro in bici sulla strada perimetrale pianeggiante",
+            "Aperitivo al tramonto attorno all'insenatura di Baltiza"
+          ],
+          "mooringTip": "Ormeggio di poppa nel porto di Dapia a €30–50 a notte: tiene bene ed è protetto dai venti di nord. Il Porto Vecchio, più piccolo, è l'alternativa tranquilla se vuoi le ville tutte per te."
+        },
+        "3": {
+          "shortDescription": "Impegnative 32 miglia verso sud fino a Kiparissi, borgo di pescatori sotto il Parnon che la strada raggiunge a stento e le flotte charter quasi mai.",
+          "description": "È la tappa che si lascia alle spalle il Saronico affollato. Trentadue miglia di mare aperto portano a Kiparissi, una manciata di case bianche ai piedi del Monte Parnon, sulla costa della Laconia. Quasi nessuna barca a noleggio spinge così a sud, e il premio è la notte più silenziosa delle due settimane. L'ancoraggio è nella baia sotto il paese, su buona sabbia a cinque-sette metri, riparato dai venti di nord. A terra non c'è molto oltre a qualche taverna e una spiaggia di ciottoli, che poi è esattamente il punto. Fai provviste per bene prima di lasciare Spetses, perché il negozio del paese è piccolo e le montagne lo tagliano fuori dai rifornimenti facili. Se l'equipaggio ha voglia di camminare, il vecchio borgo in pietra di Vrisi si arrampica sul pendio dietro il porto.",
+          "thingsToDo": [
+            "Salita a piedi al borgo in pietra di Vrisi",
+            "Snorkeling lungo la costa rocciosa a nord della baia",
+            "Pesce alla griglia in una taverna sulla banchina",
+            "Il tramonto dietro la cresta del Parnon"
+          ],
+          "mooringTip": "Ancoraggio gratuito nella baia di Kiparissi su sabbia a cinque-sette metri, ben riparato dai venti di nord. I servizi a terra sono minimi: fai acqua, gasolio e provviste prima di lasciare Spetses."
+        },
+        "4": {
+          "shortDescription": "Altre venti miglia fino a Monemvasia, città medievale saldata alla sua rocca: si dà fondo davanti a Gefyra e si attraversa il ponte a piedi.",
+          "description": "Monemvasia nasconde tutta la sua città sul lato opposto di una grande rocca, invisibile dal mare finché non la doppi. Qui la chiamano la Gibilterra d'Oriente, e il paragone regge. L'ancoraggio è davanti a Gefyra, il paese moderno sulla terraferma, su sabbia a cinque-otto metri con riparo dai venti di nord. Da lì un unico ponte-strada porta alla Città Bassa medievale, dove un centinaio di persone vive ancora tra vicoli in pietra, cappelle e passaggi voltati. Concediti la salita ripida alla Città Alta in rovina per la vista sul mare. Da questa costa prende il nome il vino Malvasia, il dolce Malmsey che la Venezia medievale spediva in tutta Europa, e le cantine locali lo versano ancora. Se il vento cresce, prenota un posto nel porticciolo di Gefyra.",
+          "thingsToDo": [
+            "Passeggiata nella Città Bassa medievale senza auto",
+            "Salita alle rovine della Città Alta",
+            "Degustazione del dolce vino Malvasia in cantina",
+            "Foto della rocca dal ponte all'imbrunire"
+          ],
+          "mooringTip": "Ancoraggio davanti a Gefyra su sabbia a cinque-otto metri, riparato dai venti di nord. Quando rinforza la brezza, un posto nel piccolo marina di Gefyra costa €30–40 e conviene prenotarlo."
+        },
+        "5": {
+          "shortDescription": "Corto salto di 12 miglia verso sud fino a Gerakas, profonda insenatura naturale di Capo Maleas che ripara da qualsiasi vento della rosa.",
+          "description": "Gerakas è uno di quei posti che ti restano addosso molto dopo la fine del charter. Un fiordo stretto morde la penisola di Capo Maleas e, una volta dentro, onda e vento semplicemente si fermano. È il porto naturale più meridionale della Grecia continentale, e il riparo a 360 gradi su sabbia compatta ne fa uno dei pernottamenti più sicuri dell'intero itinerario. La comunità è minuscola: qualche barca da pesca, un paio di taverne che servono quello che è arrivato la mattina e una sola strada che sale alle rovine antiche di Zarax, sulla rupe sopra di te. Fai il bagno nell'acqua ferma dell'insenatura, poi segui il sentiero tra gli uliveti lungo il crinale per la vista lunga sulla costa. Da fare, in senso organizzato, c'è poco: ed è esattamente per questo che ci fermiamo volentieri.",
+          "thingsToDo": [
+            "Camminata alle rovine antiche di Zarax",
+            "Bagno nell'insenatura interna, sempre calma",
+            "Polpo alla griglia in una taverna di pescatori",
+            "Sentiero di crinale tra gli uliveti"
+          ],
+          "mooringTip": "Ancoraggio gratuito su sabbia a cinque-sette metri con riparo a 360 gradi, oppure banchina del villaggio a €15–25 quando c'è posto. La tenuta è ottima."
+        },
+        "6": {
+          "shortDescription": "Trentadue miglia di ritorno verso nord fino a Leonidio, dove una falesia rossa di 600 metri domina gli agrumeti e il porticciolo di Plaka.",
+          "description": "Ora si punta a nord e si comincia a risalire la costa. Leonidio sta qualche miglio nell'entroterra, ai piedi di un'enorme parete di conglomerato rosso che si accende a fine giornata. Il porto è a Plaka, uno scalo piccolo tra gli agrumeti dove puoi ormeggiare di poppa alla banchina o dare fondo nella baia esterna. Il paese appartiene alla regione tsakonica, che conserva un dialetto antico tutto suo e coltiva la pregiata melanzana Tsakoniki, viola scura e dolce, che finisce in metà dei piatti locali. Gli arrampicatori conoscono bene queste pareti: nei mesi freschi arrivano da tutta Europa per le vie sportive sulla roccia rossa. Se hai voglia di camminare, la strada che risale la gola porta al Monastero di Elona, aggrappato alla parete alta sopra la valle.",
+          "thingsToDo": [
+            "Salita al Monastero di Elona nella gola",
+            "Assaggio della melanzana locale Tsakoniki",
+            "Capretto a cottura lenta in un cortile di Plaka",
+            "La falesia rossa che si accende al tramonto"
+          ],
+          "mooringTip": "Ormeggio di poppa nel porto di Plaka a €15–25 a notte, riparato dai venti di nord. Se la banchina è piena, dai fondo nella baia esterna su sabbia a cinque-sette metri."
+        },
+        "7": {
+          "shortDescription": "Pigra tappa di 15 miglia fino a Sampatiki, cala di ciottoli senza strade sotto una torre veneziana: il posto giusto per rubare un giorno di riposo.",
+          "description": "Sampatiki non ti chiede nulla, ed è proprio per questo che si merita una giornata di sosta. Una breve navigazione a nord di Leonidio porta a un'insenatura tranquilla, con una torre di guardia veneziana a presidiare il promontorio e nessuna strada vera che la colleghi alle direttrici del Peloponneso. La cala di ciottoli tiene bene su sabbia a quattro-sei metri con riparo dai venti di nord, e due piccole taverne coprono tutto ciò che serve per pranzo e cena. Passa la mattina a fare snorkeling sugli scogli sotto la torre, poi sali alle rovine per la vista sulla baia. Il pomeriggio è per il pozzetto e le cicale. Qui non ci sono servizi: fai provviste a Leonidio o prima, e arriva con i serbatoi dell'acqua pieni.",
+          "thingsToDo": [
+            "Snorkeling sugli scogli sotto la torre di guardia",
+            "Salita alle rovine della torre veneziana",
+            "Frittelle di ceci pitaroudia in una taverna sulla spiaggia",
+            "Un libro in coperta per tutto il pomeriggio"
+          ],
+          "mooringTip": "Ancoraggio gratuito su sabbia a quattro-sei metri, riparato dai venti di nord. Non ci sono servizi da marina: arriva con i serbatoi pieni e le provviste già a bordo."
+        },
+        "8": {
+          "shortDescription": "Venti miglia a nord fino a Nafplio, elegante prima capitale della Grecia, con ormeggio sotto la fortezza di Palamidi e la sua lunga scalinata.",
+          "description": "Nafplio è la cittadina più bella dell'itinerario, e lo sa. Fu la prima capitale della Grecia indipendente, e il passato veneziano si vede nelle mura delle fortezze, nelle piazze in marmo della città vecchia e nel castelletto di Bourtzi piantato sul suo isolotto in mezzo al porto. Le barche ormeggiano di poppa nel piccolo marina sotto il Palamidi, la grande fortezza in cima alla collina che si raggiunge, dice la leggenda, con novecentonovantanove gradini. Sali nel tardo pomeriggio, quando il caldo molla e la luce sul golfo diventa dorata. Giù in città vecchia, le vie pedonali sono fatte per una sera lenta: negozi di komboloi, scalinate di marmo e caffè che servono gli amygdalota alle mandorle per cui il posto è famoso. È un buon punto per rifare le provviste come si deve.",
+          "thingsToDo": [
+            "Salita dei 999 gradini al Palamidi",
+            "Giro tra le piazze in marmo della città vecchia",
+            "Acquisto di un komboloi, il rosario greco",
+            "Amygdalota alle mandorle in un caffè fuori mano"
+          ],
+          "mooringTip": "L'ormeggio di poppa nel marina di Nafplio costa €30–50 a notte, riparato dai venti di nord. La banchina cittadina non è aperta alle barche a noleggio: conta sul marina e approfittane per rifornirti."
+        },
+        "9": {
+          "shortDescription": "Traversata di 32 miglia verso est fino alla disabitata Dhokos: si dà fondo a Skindos Bay sopra il relitto più antico mai ritrovato.",
+          "description": "Dhokos è un'isola spoglia con un grande segreto sul fondale. Sta tra la penisola argolica e Hydra e non ha villaggio, né strade, né negozi: solo capre, muretti a secco e una cappella. I subacquei la conoscono come luogo di riposo del relitto di Dokos, un carico di ceramiche dell'Età del Bronzo affondato attorno al 2200 a.C. e considerato il naufragio più antico mai ritrovato. Le ceramiche stanno sui quindici metri, quindi ci arrivano solo i subacquei brevettati, ma con maschera e boccaglio si può galleggiare sopra i fondali più bassi lì accanto. Noi diamo fondo a Skindos Bay, sulla costa nord, su sabbia a cinque-sette metri, al riparo dai venti di sud. Porta tutto con te, perché qui non c'è nient'altro che l'isola. Il tramonto su un orizzonte vuoto è l'intero programma della serata.",
+          "thingsToDo": [
+            "Snorkeling sopra il sito del relitto dell'Età del Bronzo",
+            "Camminata tra i muretti a secco dell'isola",
+            "Esplorazione della spiaggia deserta a nord",
+            "Picnic in coperta a feta e fichi"
+          ],
+          "mooringTip": "Ancoraggio gratuito a Skindos Bay su sabbia a cinque-sette metri, riparato dai venti di sud. A Dhokos non ci sono servizi: arriva con provviste, acqua e gasolio al completo."
+        },
+        "10": {
+          "shortDescription": "Otto miglia veloci fino a Hydra, isola senza auto di dimore in pietra dei capitani, dove i muli portano ancora i bagagli su per i vicoli.",
+          "description": "Hydra va a forza di muli. Niente auto, niente motorini, nemmeno biciclette: muli e portatori trascinano ogni cosa su per i vicoli a gradini fino alle dimore in pietra grigia che i capitani si costruirono con le loro fortune. Il porto è un anfiteatro naturale, tra i più belli della Grecia, ed è per questo che i posti di poppa spariscono in fretta. Punta a essere ormeggiato entro metà pomeriggio; se la banchina è piena, dai fondo a Mandraki Bay, un miglio a est, e vai a terra col tender. Una volta sbarcato, l'isola si gira solo a piedi. Fai il bagno dagli scogli piatti di Spilia, sotto i vecchi cannoni, oppure cammina un quarto d'ora verso ovest fino ai ciottoli di Vlychos. Chi ha gambe può salire al monastero di Profitis Ilias per la vista. Al tramonto, il bar scavato nella roccia a Spilia è il posto verso cui finiscono tutti.",
+          "thingsToDo": [
+            "I vicoli in pietra senza auto, tutti in salita",
+            "Bagno dagli scogli di Spilia",
+            "Passeggiata a ovest fino ai ciottoli di Vlychos",
+            "Salita al monastero di Profitis Ilias"
+          ],
+          "mooringTip": "A Hydra si ormeggia di poppa a €30–50 a notte e i posti finiscono entro metà pomeriggio: arriva presto oppure dai fondo a Mandraki Bay, un miglio a est, su sabbia a sei-otto metri."
+        },
+        "11": {
+          "shortDescription": "Venti miglia a nord fino a Palaia Epidavros: snorkeling sopra una città romana sommersa e taxi fino al grande teatro antico.",
+          "description": "Palaia Epidavros è uno scalo tranquillo sulla terraferma con due attrazioni archeologiche, una bagnata e una all'asciutto. Appena al largo della spiaggia riposa la Città Sommersa, i resti di un complesso di ville romane sotto due o tre metri di acqua limpida, tanto vicini alla superficie che maschera e boccaglio bastano a vedere nitidamente muri e anfore. Di solito ci ancoriamo per il bagno e poi ci spostiamo alla banchina del paese per la notte. Il pezzo forte, però, è nell'entroterra: il teatro di Epidauro del IV secolo, con un'acustica così precisa che una moneta lasciata cadere sulla scena si sente fino all'ultima fila. È una corsa breve in taxi e vale il viaggio. Tornato in porto, cerca la ladenia sui menù delle taverne, la focaccia locale con pomodoro e cipolla.",
+          "thingsToDo": [
+            "Snorkeling sulla Città Sommersa",
+            "Taxi al teatro antico di Epidauro",
+            "Ladenia, la focaccia al pomodoro, sulla banchina",
+            "SUP davanti alla spiaggia del paese al tramonto"
+          ],
+          "mooringTip": "L'ormeggio di poppa alla banchina di Palaia Epidavros costa €15–25 a notte, riparato dai venti di nord. Prima di ormeggiare, ancoraggio diurno sopra la Città Sommersa su sabbia a tre-cinque metri."
+        },
+        "12": {
+          "shortDescription": "Venti miglia a est fino ad Aegina, con ormeggio nel tranquillo villaggio di pescatori di Perdika, a due passi dal tempio dorico di Aphaia.",
+          "description": "Aegina è terra di pistacchi, e le bancarelle vicino al porto vendono a sacchetti il Fistiki Aeginis locale, più dolce e più verde della media. Invece della trafficata cittadina principale, per la notte scendiamo a Perdika, sulla costa sud: un porticciolo di pescatori con le taverne di famiglia in fila sulla banchina e i caicchi che fanno la spola con l'isolotto di Moni. Il pezzo forte è il Tempio di Aphaia, tempio dorico del V secolo a.C. che sta quasi intatto su una collina di pini a nord-est, più antico del Partenone e tra i meglio conservati del paese. Da Perdika si arriva con una breve corsa in taxi. Chiudi la serata con una fetta di baklava al pistacchio e una passeggiata sull'acqua mentre rientrano i pescherecci.",
+          "thingsToDo": [
+            "Taxi al tempio dorico di Aphaia",
+            "Cena nelle taverne sulla banchina di Perdika",
+            "Pistacchi di Aegina da una bancarella",
+            "Baklava al pistacchio in un kafeneio"
+          ],
+          "mooringTip": "L'ormeggio di poppa nel porto di Perdika costa €20–30 a notte, in un contesto più calmo della cittadina principale. La banchina di Aegina città è l'alternativa se preferisci un lungomare più grande e i suoi caffè."
+        },
+        "13": {
+          "shortDescription": "Quindici miglia di rientro alla base di Alimos, con l'ultimo bagno davanti ad Agistri prima del rifornimento e della cena finale dell'equipaggio.",
+          "description": "L'ultima giornata piena è volutamente facile. Quindici miglia a nord-est riportano verso Alimos, e c'è tempo per spezzarla con un bagno d'addio: i bassi fondali sabbiosi davanti a Skala, sull'isola di Agistri appena a ovest di Aegina, sono l'ultimo tuffo giusto prima del marina. Punta ad arrivare a metà pomeriggio, così l'equipaggio non deve correre con il riassetto. Fai gasolio alla banchina carburante vicino all'ingresso prima di prendere il posto barca, e dai una pulita seria mentre si è ancora rilassati. Conferma lo slot di riconsegna con la base il giorno prima, così la mattina fila liscia. La sera, le taverne su a Glyfada sono una passeggiata o un taxi breve dal marina, e il lungomare di Faliro è il posto per l'ultima camminata tra i souvenir.",
+          "thingsToDo": [
+            "Ultimo bagno alla spiaggia di Skala, ad Agistri",
+            "Rifornimento e pulizia della barca ad Alimos",
+            "Cena d'equipaggio in una taverna di Glyfada",
+            "Passeggiata tra i souvenir sul lungomare di Faliro"
+          ],
+          "mooringTip": "Alimos Marina è ormeggio di poppa con trappe a €70–100 a notte. Fai gasolio alla banchina all'ingresso prima di ormeggiare e conferma lo slot di riconsegna con la base 24 ore prima."
+        },
+        "14": {
+          "shortDescription": "Riconsegna ad Alimos entro le nove, ispezione a bordo con il base manager e trasferimento su strada di 25 minuti all'aeroporto di Atene.",
+          "description": "Le mattine di check-out vanno veloci, quindi tieni ordinati i bagagli già dalla sera prima. La base vuole la barca riconsegnata entro le nove e l'ispezione si fa con lo skipper a bordo, così che qualsiasi cosa emerga venga concordata sul momento. Fotografa ogni segno o graffio che il responsabile annota prima di firmare i documenti; la cauzione di norma viene sbloccata entro una settimana, se torna tutto. Se il servizio è stato buono, una mancia al personale del pontile è apprezzata. L'aeroporto di Atene è a una venticinquina di minuti di strada, ma il traffico del venerdì può allungare i tempi: se voli a fine settimana, calcola un'ora piena. Se avanza tempo, il lungomare di Glyfada è a due passi per un ultimo caffè greco prima del transfer.",
+          "thingsToDo": [
+            "Ispezione a bordo con il base manager",
+            "Foto di ogni danno segnalato prima di firmare",
+            "Ultimo caffè greco sul lungomare di Glyfada",
+            "Mancia al personale del pontile, se meritata"
+          ],
+          "mooringTip": "Riconsegna ad Alimos entro le 09:00 per l'ispezione; la cauzione viene di solito sbloccata entro sette giorni. Fotografa ogni danno annotato dalla base prima di firmare."
+        }
+      }
+    },
+    "athens-saronic-gulf-poros": {
+      "metaTitle": "Golfo Saronico e templi in 7 giorni | Boat4You",
+      "metaDesc": "Charter andata e ritorno da Atene nel Saronico: Aegina, Poros, Ermioni, Methana, Palaia Epidavros e Agistri, tra templi e navigazione tranquilla.",
+      "days": {
+        "1": {
+          "shortDescription": "Rodaggio tranquillo di 15 miglia verso sud-ovest fino ad Aegina: un tempio in collina, bancarelle di pistacchi e una banchina di pescatori danno il tono alla settimana.",
+          "description": "Prima tappa facile. Quindici miglia in discesa da Alimos danno all'equipaggio il tempo di capire dove sta ogni cosa a bordo prima che la crociera entri nel vivo, e a luglio il Saronico raramente tira più di 15-18 nodi. La banchina di Aegina è sul lato ovest, quindi ormeggi di poppa con il sole del pomeriggio alle spalle; conta 25-40 euro. Il Tempio di Aphaia è il motivo per cui quasi tutti vengono qui: sta su un crinale di pini a nord-est, è più antico del Partenone e con un taxi ci arrivi prima che la luce si appiattisca. Tornato in porto, compra un sacchetto di pistacchi locali alle bancarelle e prova le revithokeftedes, le frittelle di ceci che l'isola fa bene. Se la banchina ti sembra troppo affollata, Perdika a sud è più calma.",
+          "thingsToDo": [
+            "Taxi fino al Tempio di Aphaia",
+            "Pistacchi DOP di Aegina alle bancarelle del porto",
+            "Bagno alla spiaggia di Marathonas a sud del paese",
+            "Revithokeftedes in una taverna del porto",
+            "Cena tra le taverne di pesce di Perdika"
+          ],
+          "mooringTip": "L'ormeggio di poppa alla banchina di Aegina costa 25-40 euro e ripara bene dai venti di nord, ma il risucchio di traghetti e aliscafi fa ballare i posti esterni fino a sera tardi. Per una notte tranquilla, dai fondo davanti a Perdika."
+        },
+        "2": {
+          "shortDescription": "Quattordici miglia fino a Poros, isola di pini separata dalla terraferma da un canale che quasi si attraversa a nuoto, con lunga banchina e ancoraggi tranquilli.",
+          "description": "Un'altra navigazione breve, che lascia libera la mattina. Di solito diamo fondo prima a Love Bay, sulla costa sud, sabbia a cinque-sette metri, e ci facciamo il bagno prima che arrivino le barche giornaliere dal paese. Poros sta dietro uno stretto passaggio, così l'acqua lungo la banchina resta piatta qualunque cosa faccia il vento fuori. Ormeggia di poppa sotto la torre bianca dell'orologio e cammina sul fronte porto la sera, quando le taverne accendono il saganaki. Due cose meritano la fatica a terra: le rovine sparse del Tempio di Poseidone sul crinale sopra il paese e i limoneti di Galatas dall'altra parte del canale, un muro verde di alberi che puoi girare a piedi o in bici. L'ormeggio costa 25-40 euro.",
+          "thingsToDo": [
+            "Ancoraggio e bagno a Love Bay",
+            "Salita alle rovine del Tempio di Poseidone",
+            "Giro tra i limoneti del Lemonodasos a Galatas",
+            "Saganaki flambé sul lungomare",
+            "Passeggiata serale fino alla torre dell'orologio"
+          ],
+          "mooringTip": "La banchina del paese abbraccia tutto il lungomare e tiene bene con qualsiasi vento grazie allo stretto, ma in alta stagione prendi posto entro il primo pomeriggio perché si riempie in fretta. Love Bay è solo ancoraggio diurno, sabbia a cinque-sette metri."
+        },
+        "3": {
+          "shortDescription": "Ermioni sta dieci miglia più a sud: cittadina di pescatori senza fronzoli nel Peloponneso, con due porti, un promontorio di pini e il ritmo più lento della settimana.",
+          "description": "A Ermioni il viaggio rallenta. È una vera cittadina di pescatori più che una località turistica, costruita su una lingua di terra con l'acqua da entrambi i lati, così puoi scegliere il porto in base al vento. La baia nord è più piccola e si presta meglio all'ancoraggio, su sabbia a quattro-sei metri; la banchina del paese, sul lato sud, è più lunga e costa quasi nulla, sui 15-25 euro. Spezza la navigazione a Bisti Beach, tre miglia prima del porto, dove una pineta scende quasi fino ai ciottoli. Sopra il paese, mezz'ora di cammino porta all'antico Tempio di Demetra e a una vista lunga sul golfo. La sera, sulla banchina, vedrai i polpi stesi ad asciugare e lo stifado su quasi tutti i menù.",
+          "thingsToDo": [
+            "Salita al Tempio di Demetra",
+            "Ancoraggio e bagno a Bisti Beach",
+            "Passeggiata sul promontorio di pini di Bisti",
+            "Stifado in una taverna con cortile",
+            "I polpi stesi ad asciugare sulla banchina del pesce"
+          ],
+          "mooringTip": "Prendi la banchina del paese sul lato sud, ormeggio di poppa a 15-25 euro: è ben protetta dai venti di nord. Se preferisci spazio per girare all'ancora, dai fondo nella baia nord su sabbia a quattro-sei metri e raggiungi le taverne col tender."
+        },
+        "4": {
+          "shortDescription": "Si punta a nord per quindici miglia fino a Methana, penisola vulcanica dove le sorgenti sulfuree gorgogliano in porto e sopra lo scalo aspetta il cratere.",
+          "description": "Methana è la sosta più bizzarra del giro, nel senso migliore. Tutta la penisola è un vecchio campo vulcanico, e l'acqua sulfurea calda filtra direttamente nel porto: scegli un posto sul lato opposto della darsena e l'odore ti resta alle spalle. L'ormeggio di poppa costa sui 20-30 euro. Il tardo pomeriggio è il momento per salire a Kameni Chora e camminare sulla colata di lava nera, un'ora buona per lato su un terreno che non somiglia a nient'altro in Grecia. Poi si scende per una sosta nelle terme sull'acqua e si cena a base di pesce alla griglia sulla banchina con un rosato locale fresco. Se prima vuoi un bagno, Vathy Bay appena a nord del porto ha acqua pulita e spazio per dare fondo.",
+          "thingsToDo": [
+            "Bagno nelle terme sulfuree accanto al porto",
+            "Camminata a Kameni Chora e sulla colata lavica",
+            "Ancoraggio e bagno a Vathy Bay",
+            "Pesce alla griglia e rosato locale sulla banchina"
+          ],
+          "mooringTip": "Ormeggio di poppa a 20-30 euro sulla banchina riparata dai venti di nord; scegli un posto lontano dall'uscita delle sorgenti in fondo al porto, dove lo zolfo si sente di più. Qui non serve prenotare nulla."
+        },
+        "5": {
+          "shortDescription": "Corto salto di otto miglia fino a Palaia Epidavros: snorkeling su una città romana sommersa in mattinata e taxi al grande teatro nel pomeriggio.",
+          "description": "La tappa più corta della settimana, otto miglia lungo costa, quindi nessuna fretta di partire. Entrando, ancora sopra la Città Sommersa nella cala nord, dove un porto romano riposa sotto due o tre metri d'acqua e in una mattina calma si legge benissimo con maschera e boccaglio. La banchina del paese è piccola ed economica, 15-25 euro, e il villaggio conserva un ritmo lento e poco levigato. Il piatto forte è nell'entroterra: il grande teatro di Epidavros, una delle antichità più belle di Grecia, sta a circa quattro chilometri su per la valle e si raggiunge con un taxi. Se preferisci restare vicino alla barca, il piccolo teatro antico proprio in paese ospita a volte concerti estivi. La ladenia, focaccia greca al pomodoro, è un ottimo pranzo sul fronte porto.",
+          "thingsToDo": [
+            "Snorkeling tra le rovine romane della Città Sommersa",
+            "Taxi al grande teatro di Epidavros",
+            "Concerto serale nel piccolo teatro antico",
+            "Pranzo con la ladenia, focaccia al pomodoro",
+            "SUP davanti alla banchina al tramonto"
+          ],
+          "mooringTip": "L'ormeggio di poppa alla banchina del paese è economico, 15-25 euro, e riparato dai venti di nord. Sopra la Città Sommersa ancora solo di giorno, su sabbia a tre-cinque metri, e rientra in porto prima che entri la brezza del pomeriggio."
+        },
+        "6": {
+          "shortDescription": "Quindici miglia attraverso il golfo fino ad Agistri, l'isola più tranquilla del giro, cinta di pini, cale di ciottoli e taverne di famiglia.",
+          "description": "Agistri è piccola, verde e in gran parte ignorata, ed è esattamente per questo che vale una notte. La traversata di ritorno verso est è di circa quindici miglia, con Aegina che sfila a sinistra verso la fine. Punta a Skala, sulla costa est, dove il porto è semplice e le taverne sono gestite dalle stesse famiglie anno dopo anno; la mossa locale sono gli spaghetti all'aragosta. L'ormeggio sta sui 20-30 euro. Prima di ormeggiare, fermati a Halikiada sulla costa sud, una cala di ciottoli sotto la falesia raggiungibile solo dall'acqua, e dai fondo su sabbia a quattro-sei metri per un bagno. Se avanza tempo, gira in kayak fino alle grotte marine di Dragonera o prendi le bici e fai l'anello all'ombra tra cipressi e pini dell'isola.",
+          "thingsToDo": [
+            "Ancoraggio e bagno alla cala di Halikiada",
+            "Kayak fino alle grotte marine di Dragonera",
+            "Anello in bici tra cipressi e pini all'ombra",
+            "Spaghetti all'aragosta in una taverna di famiglia a Skala",
+            "Pomeriggio in spiaggia sotto i pini di Dragonera"
+          ],
+          "mooringTip": "Il porto di Skala ti prende di poppa a 20-30 euro con buon riparo dai venti di nord. Halikiada non ha accesso stradale: trattala come ancoraggio diurno su sabbia a quattro-sei metri e vai via prima del vento serale."
+        },
+        "7": {
+          "shortDescription": "Venti miglia a nord-est di rientro ad Alimos, con l'ultimo bagno davanti alla disabitata Moni prima di gasolio, riassetto e riconsegna.",
+          "description": "Il rientro è la tratta più lunga della settimana, venti miglia, ma il Saronico di solito è gentile e con rotta a nord-est avrai il vento in poppa. Spezzala con un ultimo bagno davanti a Moni, l'isolotto disabitato appena a sud di Aegina, dove l'acqua sprofonda limpida e non c'è quasi mai nessuno. Quasi tutte le basi vogliono la barca indietro verso le due del pomeriggio, quindi lascia Agistri entro metà mattina e riempi i serbatoi alla banchina carburante di Alimos prima di infilarti nel posto barca. Una volta ormeggiata e sciacquata, la serata è tua: le taverne su a Glyfada sono a due passi dalla base e il lungomare di Faliro è il posto per un ultimo caffè e un souvenir prima del volo.",
+          "thingsToDo": [
+            "Ultimo bagno davanti all'isolotto disabitato di Moni",
+            "Rifornimento alla banchina carburante di Alimos",
+            "Cena d'equipaggio in una taverna di Glyfada",
+            "Caffè e souvenir sul lungomare di Faliro"
+          ],
+          "mooringTip": "Alimos è un marina con trappe a 70-100 euro: arriva con la prua verso l'esterno nel posto assegnato e recupera la trappa invece di dare fondo con l'ancora. Fai prima gasolio alla banchina d'ingresso e conferma lo slot di riconsegna 24 ore prima, così ti tengono il posto."
+        }
+      }
+    },
+    "corfu-kassiopi-sagiada": {
+      "metaTitle": "Corfù e isole Diapontie in 7 giorni | Boat4You",
+      "metaDesc": "Da Corfù alle isole Diapontie, Sagiada e alla Laguna Blu di Sivota in 7 giorni nello Ionio settentrionale: castelli, cale e porti di pescatori.",
+      "days": {
+        "1": {
+          "shortDescription": "Rodaggio tranquillo di 14 miglia lungo la verde costa orientale di Corfù fino a Kassiopi, porto di pescatori sotto un castello in rovina e il Pantokrator.",
+          "description": "Prendi la barca a Gouvia e lascia il marina entro metà mattina: il maestro resta leggero fino al primo pomeriggio, così le prime ore a vela sono di solito le più calme della settimana. La costa scorre tra terrazze di ulivi e qualche monastero imbiancato, con la montagna che cresce alla tua spalla. Kassiopi sta all'angolo nord-est, con il porto raccolto sotto una fortezza bizantina e angioina a cui sali in venti minuti. Di solito prima facciamo il bagno, a Bataria o Kanoni, due cale di ciottoli a due passi dalla banchina. L'Albania è così vicina, dall'altra parte del canale, che si distinguono le auto sulla strada di fronte. La sera è per le taverne del porto e un piatto di pastitsada, il manzo alla cannella con la pasta che a Corfù riesce meglio che altrove. A luglio e agosto prenota il posto in anticipo.",
+          "thingsToDo": [
+            "Salita alle rovine del castello bizantino-angioino",
+            "Bagno tra i ciottoli di Bataria e Kanoni",
+            "Salita al Monte Pantokrator (906 m)",
+            "Pastitsada in una taverna sul porto"
+          ],
+          "mooringTip": "La banchina del villaggio è piccola e in stagione si riempie in fretta: punta ad arrivare prima delle quattro o prenota. La baia di Avlaki, un miglio a est, dà buona tenuta su sabbia a 4-6 m se il porto è pieno."
+        },
+        "2": {
+          "shortDescription": "Diciotto miglia al largo dell'angolo nord-ovest di Corfù c'è Ereikoussa, la più piccola delle tre Diapontie, dove i caicchi da pesca superano ancora i turisti.",
+          "description": "È la prima vera tratta in mare aperto, quindi parti presto. Doppiato il capo nord la costa si allontana e restano solo i tre puntini delle Diapontie all'orizzonte. Ereikoussa è la più vicina e la più piccola: qualche decina di residenti d'inverno e un pugno di case attorno a un unico porto. Qui da fare c'è poco, che poi è il punto. Bragini, la spiaggia sabbiosa dell'isola, degrada dolcemente e resta calda; un sentiero sale alla cappella in cima alla collina per una vista lunga verso le montagne albanesi. Lo snorkeling sugli scogli è limpido e senza fretta. A terra le taverne vanno con quello che hanno portato le barche, e il bianco, la zuppa locale di pesce bianco carica d'aglio, è la cosa da ordinare. Le notti qui sono buie e silenziosissime.",
+          "thingsToDo": [
+            "Bagno e ozio alla spiaggia di Bragini",
+            "Salita alla cappella in cima alla collina",
+            "Snorkeling nei bassi fondali rocciosi",
+            "Bianco, la zuppa di pesce bianco all'aglio"
+          ],
+          "mooringTip": "La banchina del porticciolo è a chi arriva prima ed è bassa: entra scandagliando. Con tempo stabile dai fondo su sabbia davanti alla spiaggia di Bragini a 4-6 m, ben riparato da sud e sud-est."
+        },
+        "3": {
+          "shortDescription": "Giornata pigra a Ereikoussa, con l'opzione di quattro miglia fino a Othonoi, l'isola abitata più occidentale della Grecia e la mitica grotta di Calipso.",
+          "description": "Una giornata per fare pochissimo, oppure per spostarsi a ovest verso Othonoi se l'equipaggio ha voglia di navigare. Othonoi è la più grande e la più occidentale delle Diapontie, quattro miglia di mare aperto, con un porticciolo sul lato sud e un paio di taverne ad Ammos. L'attrazione è Aspri Ammos, una cala bianca che si raggiunge meglio col tender, e la grotta marina lì accanto che la gente del posto lega al mito di Calipso. A Ereikoussa il ritmo è spiaggia, ombra, un pranzo lungo di pomodori e feta, e poco altro. All'imbrunire il kafeneio sull'acqua si riempie dei pochi habitué dell'isola tra raki e carte. Se fai la puntata a Othonoi, trattala come gita in giornata e torna al tuo posto a Ereikoussa prima della brezza serale.",
+          "thingsToDo": [
+            "Tender fino ad Aspri Ammos e alla grotta di Calipso",
+            "Picnic all'ombra a Bragini",
+            "Veleggiata opzionale di 4 miglia fino a Othonoi",
+            "Raki e carte al kafeneio"
+          ],
+          "mooringTip": "Il porto di Othonoi ad Ammos è una piccola banchina a chi arriva prima, meglio usarla di giorno. Tieni il posto per la notte a Ereikoussa invece di fidarti di un posto last minute a Othonoi."
+        },
+        "4": {
+          "shortDescription": "Venti miglia verso est fino a Sagiada, villaggio di pescatori sulla terraferma al confine albanese, accanto al delta del Kalamas ricco di uccelli.",
+          "description": "Torna verso la terraferma al lasco, venti miglia a est fino a Sagiada. Qui c'è un porto di lavoro vero, non una località di villeggiatura: reti stese ad asciugare sulla banchina, barchette che entrano ed escono e una fila di taverne di pesce affacciate sull'acqua. Il delta del Kalamas si apre appena a sud, una zona umida di canneti e lagune tra le migliori della regione per il birdwatching: aironi e, nella stagione giusta, fenicotteri lavorano le basse acque alle prime luci. I banchi di cozze e ostriche dell'estuario riforniscono le tavole, quindi qui mangia frutti di mare e mangiali freschi. Il villaggio è una manciata di viuzze che si svuotano già a metà serata. Da Sagiada il confine è vicinissimo, e l'antica Butrinto in Albania è raggiungibile in giornata se hai le carte in regola.",
+          "thingsToDo": [
+            "Birdwatching all'alba sul delta del Kalamas",
+            "Cozze dell'estuario in una taverna sulla banchina",
+            "Giro nel porto peschereccio in attività",
+            "Gita all'antica Butrinto, in Albania"
+          ],
+          "mooringTip": "Sagiada è una piccola banchina da porto peschereccio, a chi arriva prima, e va imboccata piano. Per entrare in Albania serve un transit log preparato in anticipo: sistema i documenti prima di partire se Butrinto è in programma."
+        },
+        "5": {
+          "shortDescription": "Breve navigazione costiera verso sud fino agli isolotti di Sivota e alla Laguna Blu, una fascia bassa color acquamarina su sabbia bianca.",
+          "description": "Tappa facile lungo costa fino a Sivota, dove un grumo di isolotti bassi ripara l'acqua per cui tutti vengono qui. La Laguna Blu sta tra le isole Mourtos, così bassa e chiara che la barca sembra galleggiare sulla luce: dai fondo lì fuori e passaci le ore centrali del giorno, a nuoto o sulla tavola. Bella Vraka, il banco di sabbia che unisce due degli isolotti, merita la traversata a piedi con la bassa marea. La sera spostati dentro Sivota e prendi un posto lungo il fronte porto, dove le taverne arrivano fin sulla banchina. Il bourdeto, la focosa zuppa rossa di scorfano, è il piatto da provare. Dopo il buio la baia si riempie di luci di fanale e il lungomare resta vivace: è la serata sociale della settimana, non quella tranquilla.",
+          "thingsToDo": [
+            "Ancoraggio e bagno nella Laguna Blu",
+            "Traversata a piedi del banco di Bella Vraka",
+            "SUP tra gli isolotti Mourtos",
+            "Bourdeto di scorfano sul fronte porto di Sivota"
+          ],
+          "mooringTip": "Per la notte prendi un ormeggio di poppa lungo il fronte porto di Sivota, arrivando presto in stagione per un posto in prima fila. La Laguna Blu è solo un ancoraggio diurno da bagno: è esposta e affollata, non contarci per la notte."
+        },
+        "6": {
+          "shortDescription": "Ventidue miglia di ritorno a Corfù, con sosta facoltativa nelle cale sotto le falesie di Paleokastritsa e ultima notte in città vecchia.",
+          "description": "Il rientro è la navigazione più lunga della settimana, quindi lascia il fronte porto di Sivota con buon anticipo. Se l'equipaggio ci sta, spezza la tratta a Paleokastritsa, sulla costa occidentale di Corfù: una serie di cale sotto falesie boscose con un monastero in cima a guardarle; da sempre i lettori di Omero collocano da queste parti il naufragio di Ulisse. Da lì si doppia l'isola per l'avvicinamento finale a Corfù città. Il centro storico è patrimonio UNESCO e ripaga il vagabondare senza meta: il Liston con i portici costruiti dai francesi, i vicoli veneziani stretti, le botteghe che vendono liquore al kumquat e ricami a filo d'oro. Per l'ultima cena, trova una taverna con cortile e ordina il sofrito, il vitello corfiota brasato lentamente in vino, aglio e aceto. Per la notte torna a Gouvia, a meno che tu non abbia organizzato una sosta breve in città.",
+          "thingsToDo": [
+            "Sosta lungo il percorso nelle cale di Paleokastritsa",
+            "Visita al monastero della Theotokos sul promontorio",
+            "Giro tra il Liston e i vicoli veneziani",
+            "Sofrito di vitello in una taverna con cortile"
+          ],
+          "mooringTip": "Gouvia Marina è la scelta pratica per la notte ed è la base di riconsegna. Le banchine cittadine sono solo per soste brevi e si congestionano: tratta Corfù città come tappa da passeggiata e cena, non come ormeggio, se non hai prenotato."
+        },
+        "7": {
+          "shortDescription": "Ultima mattina a Gouvia per la riconsegna, con il tempo per un caffè d'addio sotto il Liston e un giro sulla Spianada.",
+          "description": "L'ultima mattina è della riconsegna. Fai pulire la barca e riempi i serbatoi la sera prima, così il check-out a Gouvia è senza affanni, e conferma per tempo lo slot del carburante. Se resta tempo prima di partire, prendi il bus o un taxi per il centro e concediti un congedo corfiota come si deve. Siediti sotto i portici del Liston con un caffè e guarda la Spianada, l'enorme spianata verde dove, grazie agli inglesi, d'estate si gioca ancora a cricket. Il Museo d'Arte Asiatica, nel vecchio palazzo, è un'ora ben spesa se il tempo peggiora. Al ritorno prendi qualcosa in legno d'ulivo o una bottiglia di kumquat. È un finale morbido per una settimana che ha messo insieme isole al largo, una costa di confine che lavora e la laguna più affollata dello Ionio.",
+          "thingsToDo": [
+            "Caffè sotto i portici del Liston",
+            "Passeggiata sulla spianata della Spianada",
+            "Visita al Museo d'Arte Asiatica",
+            "Liquore al kumquat e legno d'ulivo da portare a casa"
+          ],
+          "mooringTip": "La riconsegna è a Gouvia Marina. Pulisci la barca e sistema il carburante la sera prima, così check-out e inventario della mattina filano veloci."
+        }
+      }
+    },
+    "corfu-lefkas-ithaka-14-days": {
+      "metaTitle": "Da Corfù a Itaca: Ionio in 14 giorni | Boat4You",
+      "metaDesc": "Due settimane a vela da Corfù: Paxos, Antipaxos, Lefkas, Meganisi, Cefalonia e Itaca, poi le tranquille Diapontie sulla via del ritorno.",
+      "days": {
+        "1": {
+          "shortDescription": "Trenta miglia giù per il Canale di Corfù fino a Gaios, insenatura veneziana protetta da due isolotti: dai volta prima della calca del pomeriggio.",
+          "description": "Lascia Gouvia presto e lascia che il libeccio entri appena fuori dall'imboccatura. La discesa lungo il canale è semplice e, quando Paxos si alza a prua, i pendii sono più verdi di quanto ti aspetti, con gli uliveti che arrivano fin sulla roccia. Gaios è il porto a cui puntano tutti. Due isolotti bassi, Agios Nikolaos e Panagia, schermano l'ingresso e lo trasformano in un canale largo appena quanto basta a far passare due barche. Il centro storico avvolge la darsena interna in pietra, con l'impianto rimasto quello che i veneziani tracciarono attorno al campiello. Dai volta per bene, poi cerca un tavolo sulla banchina. Chiedi il ladotyri, il formaggio locale conservato sott'olio, e l'orata alla griglia se il pescato del giorno lo consente. La tappa di domani è brevissima, quindi non c'è motivo di correre con la serata.",
+          "thingsToDo": [
+            "Tender fino all'arco marino di Tripitos",
+            "Espresso sul fronte porto azzurro pastello",
+            "Assaggio del ladotyri, il formaggio sott'olio dell'isola",
+            "Passeggiata sull'acciottolato fino alla cappella di Panagia",
+            "Orata fresca alla griglia sulla banchina del paese"
+          ],
+          "mooringTip": "La banchina del paese offre trappe e ormeggio di poppa a poco prezzo, con acqua sul pontile, ma in piena estate arriva prima delle 15:00: è una darsena stretta che si riempie in fretta. Rimasto fuori? Dai fondo su sabbia nella cala di Mongonissi, un paio di miglia a sud, oppure prendi una boa gratuita a Lakka."
+        },
+        "2": {
+          "shortDescription": "Quattro miglia verso sud fino ad Antipaxos, dove i fondali di sabbia fanno l'acqua color acquamarina: bagno, pranzo e ritorno a Paxos prima del buio.",
+          "description": "Tra le due isole ci sono appena quattro miglia, quindi questa è una giornata da bagno più che da vela. Antipaxos non ha porti né pernottamenti, il che la tiene più tranquilla di quanto la folla lasci pensare. Dai fondo a Vrika o Voutoumi, entrambe con fondo di sabbia chiara a tre-sette metri e senza le chiazze di alga che altrove spengono il colore. La luce rimbalza dritta dal fondo e restituisce il turchese su cui l'isola ha costruito la sua fama. Sopra la spiaggia di Voutoumi c'è una sola taverna, pochi tavoli e una pasta all'aragosta attorno a cui la gente organizza la giornata. Sopra Vrika, un piccolo vigneto produce ancora la Verdea, il bianco ambrato di casa che non troverai imbottigliato altrove. Nel pomeriggio risali la costa occidentale e affacciati alle grotte nella falesia prima che la luce se ne vada e tu debba salpare.",
+          "thingsToDo": [
+            "Ancoraggio davanti a Voutoumi per un bagno lungo",
+            "Salita al vigneto della Verdea",
+            "Spaghetti all'aragosta alla taverna di Voutoumi",
+            "Traversata a pagaia sui bassi fondali fino a Vrika",
+            "Foto alle grotte della costa occidentale"
+          ],
+          "mooringTip": "Solo ancoraggio. Vrika e Voutoumi tengono bene su sabbia a tre-sette metri, ma non si passa la notte: rientra a Gaios, Mongonissi o Lakka entro il tramonto. Entrambe le baie sono aperte a sud, quindi se è previsto vento da sud-est fai il bagno presto e spostati."
+        },
+        "3": {
+          "shortDescription": "L'unica traversata impegnativa: quaranta miglia a sud-est in mare aperto fino a Nydri, con bagno a metà strada davanti a Kastos o Kalamos.",
+          "description": "È la tirata lunga delle due settimane, l'unica tappa in cui lo Ionio ti fa davvero lavorare. Non c'è un porto comodo a metà strada, quindi conta di salpare per le otto e sfruttare le ore calme del mattino. Prima scendi a sud sotto costa di Paxos, poi piega a est verso Kastos o Kalamos, dove una sosta pranzo e un bagno cadono quasi esattamente a metà traversata. La termica da ovest di solito entra verso l'una; nei rari giorni in cui supera i diciotto nodi vorrai avere già Lefkas a prua. Nydri è senza pudore una località turistica di servizio, tutta taxi d'acqua e taverne capaci di prenderti le cime a occhi chiusi. Se arrivi al canale con luce da vendere, passa vicino a Skorpios entrando. La vecchia isola di Onassis tiene ancora la cima tesa davanti all'unica spiaggetta, ma l'acqua fuori dal capo è di tutti.",
+          "thingsToDo": [
+            "Sosta bagno davanti a Kastos o Kalamos",
+            "Passaggio davanti all'ancoraggio di Skorpios",
+            "Sofrito di vitello sul lungomare di Nydri",
+            "Sentiero delle cascate di Nydri",
+            "Caffè al kafenio sulla banchina"
+          ],
+          "mooringTip": "La lunga banchina di Nydri prende una ventina di barche di poppa (piccola tariffa, acqua e corrente), ma in stagione aspettati il pieno entro le quattro. Alternative più tranquille sono Tranquil Bay, un miglio a sud su sabbia a 5-8 m, o il porticciolo di Vlicho un altro miglio oltre."
+        },
+        "4": {
+          "shortDescription": "Pigro salto di sei miglia fino a Meganisi e alle sue tre baie riparate: scegli dove dormire entro pranzo e lascia il pomeriggio all'acqua.",
+          "description": "Dopo ieri, sei miglia sembrano un giorno di riposo, e Meganisi è fatta apposta. L'isola sta appena oltre un canale largo un miglio da Nydri e piega dentro la sua costa tre baie profonde e ben protette, con un perimetro che potresti girare in auto prima di pranzo. La grotta di Papanikolis, sulla punta occidentale, è la prima sosta ovvia: un nascondiglio per sommergibili usato in guerra dalla marina greca per sfuggire alle pattuglie tedesche, oggi dieci minuti di curiosità col tender. Sopra la baia occidentale, Spartochori si arrampica sulla falesia in terrazze bianche; la scalinata ripaga con tutta Lefkas distesa alle spalle. Le taverne delle baie hanno boe proprie, tra cui Niagas ad Atheni ed Errikos a Vathy, e la boa è gratis se ceni a terra: sali in mattinata e prenotane una. Decidi presto la tua baia. Il resto della giornata è bagni, snorkeling e sano far niente.",
+          "thingsToDo": [
+            "Snorkeling alla grotta dei sommergibili di Papanikolis",
+            "Salita a gradini fino al villaggio di Spartochori",
+            "Polpo alla griglia sulla banchina di Atheni",
+            "Giro col tender attorno a Skorpios",
+            "Bagno in una cala di ciottoli sulla costa sud"
+          ],
+          "mooringTip": "Vathy, Atheni e Spilia hanno tutte boe delle taverne: la boa è tua al prezzo della cena, prenotandola in mattinata. Per un posto formale, il piccolo marina di Vathy ha trappe e tariffa. La tenuta è affidabile su sabbia a 4-8 m e il riparo è ottimo con qualsiasi vento da nord."
+        },
+        "5": {
+          "shortDescription": "Diciotto miglia a sud fino a Fiskardo, l'unico villaggio di Cefalonia risparmiato dal sisma del 1953 e oggi il porto più fotografato dello Ionio.",
+          "description": "Diciotto miglia lungo il canale portano a Fiskardo, raccolta sotto il capo settentrionale di Cefalonia. Quando il terremoto del 1953 rase al suolo quasi ogni villaggio dell'isola, questo se la cavò, e da allora la sua fila di case neoclassiche pastello attorno a una darsena stretta è stata fotografata fino allo sfinimento. La banchina è gratuita ma spietata ad agosto: chiama il porto sul canale 12 prima dell'una, oppure dai fondo dietro l'angolo a Foulis Bay, un miglio a sud, su sabbia a 4-6 m. Attento al risucchio delle barche di passaggio in darsena. Con un'auto a noleggio arrivi al belvedere di Myrtos e alla mezzaluna di calcare bianco sotto, oppure alla caverna allagata di Melissani vicino a Sami: mezza giornata ciascuna, comodamente. In acqua, il piccolo relitto davanti alla cala di Emplisi è un bello snorkeling. Cena da Tselenti su per la salita o al Lagoudera sul fronte porto.",
+          "thingsToDo": [
+            "Passeggiata sul lungomare neoclassico pastello",
+            "Salita in auto al belvedere di Myrtos Beach",
+            "Visita al lago sotterraneo di Melissani",
+            "Snorkeling sul piccolo relitto davanti a Emplisi",
+            "Aperitivo al tramonto da Tselenti, su per la salita"
+          ],
+          "mooringTip": "La banchina di Fiskardo è gratuita ma ad agosto è piena già nel primo pomeriggio, e il risucchio del traffico di passaggio la rende movimentata: chiama il porto sul canale 12 prima delle 13:00. Foulis Bay, un miglio a sud, è il ripiego tranquillo su sabbia a 4-6 m con buona tenuta."
+        },
+        "6": {
+          "shortDescription": "Cinque miglia a est fino a Frikes, il più piccolo dei porti di Itaca, dove le taverne cucinano ancora il pescato del mattino sotto un vecchio mulino.",
+          "description": "Frikes è il meno visitato dei tre porti di Itaca, quello che gli equipaggi diretti a Vathy saltano: cinque miglia di mare aperto e ci sei. Resta prima di tutto un porto di pescatori e solo dopo una tappa da charter, con un vecchio mulino a vento sulla punta sopra il paese e una manciata di taverne dove in cucina si lavora ancora quello che è entrato la mattina. Ordina lo stifado di polpo: Symposium e Penelope lo fanno bene entrambi. Nell'entroterra, lo scavo di Stavros rivendica le fondamenta del palazzo di Ulisse, e il piccolo museo dello stesso villaggio è onesto su quanto la cosa resti dibattuta. Se le gambe reggono, la mulattiera verso nord fino a Kioni è circa quarantacinque minuti per lato, più dolce di quanto la mappa faccia credere. Chiudi la serata di nuovo sotto il mulino con un bicchiere di Robola.",
+          "thingsToDo": [
+            "Camminata nell'entroterra fino allo scavo di Stavros",
+            "Mulattiera a piedi fino a Kioni",
+            "Bagno a Polis Bay a sud del paese",
+            "Degustazione di Robola in un ouzeri",
+            "Aperitivo al tramonto sotto il mulino del porto"
+          ],
+          "mooringTip": "A Frikes si ormeggia di poppa sulla propria ancora, gratis ma senza servizi, e ci stanno solo 8-10 barche: conviene arrivare nel primo pomeriggio. Se è pieno, Kioni due miglia a sud è un'altra banchina gratuita, oppure dai fondo su sabbia a Polis Bay. Il riparo è solido con tutto tranne un forte vento da sud."
+        },
+        "7": {
+          "shortDescription": "Quattordici miglia facili verso nord fino a Nydri, la sosta di metà charter per gasolio, lavanderia e provviste, con bagno a Skorpios lungo la strada.",
+          "description": "Quattordici miglia a nord al riparo della costa orientale di Lefkas sono un pomeriggio gentile, e un buon modo di spezzare in due il viaggio. Se il mare è clemente, fermati a Skorpios passando: la spiaggetta occidentale è l'unico punto dove è consentito sbarcare, ma nessuno ha da ridire se fai il bagno al largo del capo. Nydri è la sosta pratica delle due settimane. È trafficata e un po' turistica, ed è esattamente il punto: lavanderia, banchina carburante, supermercato e negozio di telefonia stanno tutti entro un paio di centinaia di metri dal molo, così le commissioni prendono un'ora invece di una mattina. A luglio e agosto i mezedopoleia sul fronte porto mettono musica dal vivo quasi ogni sera, laouto e bouzouki, a volte un violino. Scegline uno con il cortile sul retro. Fai gasolio prima delle sei, così la mattina resta libera.",
+          "thingsToDo": [
+            "Bagno al largo del capo di Skorpios",
+            "Rifornimento alla banchina carburante di Nydri",
+            "Spesa al supermercato del porto",
+            "Un carico in lavanderia a gettoni",
+            "Laouto dal vivo in un mezedopoleio"
+          ],
+          "mooringTip": "La banchina di Nydri è ormeggio di poppa a piccola tariffa con acqua, corrente e carburante lì accanto, e la manovra è facile su un muro lungo, ma ad agosto è esaurita entro le cinque. Tranquil Bay, un miglio a sud, è l'opzione tranquilla per la notte su sabbia a 5-8 m."
+        },
+        "8": {
+          "shortDescription": "Venticinque miglia lungo la terraferma fino a Parga, sui tempi del ponte del Canale di Lefkas, per finire sotto un castello veneziano con i gamberi in banchina.",
+          "description": "La giornata comincia con il ponte girevole sul Canale di Lefkas, che apre a ogni ora piena: punta a mollare gli ormeggi verso le otto e mettiti in coda per tempo; il bacino di attesa a nord tiene una trentina di barche e il personale ti fa passare con ordine. Una volta fuori, il libeccio in genere imbastisce un traverso comodo su per la costa dell'Epiro, oltre le insenature di Sivota verso Parga. Il paese scende dal fianco della collina sotto un castello veneziano del Trecento, con le case pastello impilate sopra una baia curva. Dai fondo davanti alla spiaggia di Valtos, un miglio a ovest, per il bagno, poi spostati nell'ancoraggio del paese o prendi una boa davanti a Krioneri per la notte. Sul fronte porto si ordinano i gamberi saganaki, e la salita alle mura del castello al tramonto si guadagna ogni passo del cliché.",
+          "thingsToDo": [
+            "Bagno nei bassi fondali di Valtos Beach",
+            "Salita al castello veneziano per il tramonto",
+            "Gamberi saganaki sul fronte porto",
+            "Scalinate della città vecchia illuminate dalle lanterne",
+            "Caffè al bar sulla spiaggia di Krioneri"
+          ],
+          "mooringTip": "Dai fondo nella baia di Parga su sabbia a 5-10 m con buona tenuta, oppure prendi uno dei pochi posti di poppa sulla piccola banchina del paese. La baia è aperta a sud e sud-ovest: se arriva vento da sud, infilati nella cala di Valtos un miglio a ovest."
+        },
+        "9": {
+          "shortDescription": "Quattordici miglia lungo costa fino a Sivota, sulla terraferma, e alla sua Laguna Blu, dove uno stretto varco tra due isolotti accende l'acqua di turchese.",
+          "description": "Altre quattordici miglia verso nord ti portano a Sivota, quella della terraferma in Tesprozia e non l'omonima su Lefkas, e parecchio più piccola. L'attrazione è la Laguna Blu, un canale di duecento metri tra gli isolotti di Mavro Oros e Mourtemeno dove l'acqua prende davvero la tonalità improbabile che il nome promette. Dai fondo su cinque-otto metri di sabbia davanti a Bella Vraka per un bagno lungo, con il banco di sabbia tra gli isolotti come sfondo che tutti fotografano. Per la notte spostati sulla banchina del paese, dove ci sono acqua, corrente e una piccola tariffa, e una fila di taverne che fanno del bourdeto, la piccante zuppa di scorfano, il proprio biglietto da visita. Prima di cena, il sentiero tra i pini sopra la cala di Mega Trafos è un'ora di camminata tranquilla con la baia che si apre sotto. Una mastiha con ghiaccio sul lungomare chiude la giornata.",
+          "thingsToDo": [
+            "Snorkeling nella Laguna Blu tra gli isolotti",
+            "Bourdeto, zuppa di pesce, sulla banchina",
+            "Tender fino al banco di sabbia di Bella Vraka",
+            "Sentiero tra i pini sopra Mega Trafos",
+            "Mastiha come ultimo bicchiere sul lungomare"
+          ],
+          "mooringTip": "Ormeggio di poppa alla banchina del paese a piccola tariffa con acqua e corrente, oppure ancoraggio davanti a Bella Vraka su sabbia a 5-8 m. È ben riparata da nord e nord-ovest e va bene per la notte, ma nei weekend si affolla: chiama il porto sul canale 9 se la banchina sembra stretta."
+        },
+        "10": {
+          "shortDescription": "Diciotto miglia a nord fino a Sagiada, villaggio di pescatori all'estremo margine della Grecia, con un delta da birdwatcher e l'Albania appena oltre.",
+          "description": "Sagiada sta più o meno dove la Grecia finisce su questa sponda, diciotto miglia su per la costa, con la frontiera albanese un paio di miglia più in là e le zone umide del fiume Kalamas distese appena a sud. Il cambio di passo rispetto ai marina di Corfù è il motivo per venirci: una banchina allineata di caicchi da lavoro, una fila di ouzeria con un tavolo ciascuna e una quiete che spiega molte cose della carta geografica. Questa sponda del canale è sempre stata la parente povera dell'isola di fronte. I birdwatcher puntano al delta del Kalamas alle prime luci, quando fenicotteri e aironi lavorano i canneti, e una passerella corre a sud dal villaggio lungo la riserva. Con il transit log in mano, la traversata verso Butrinto, sul lato albanese, ti porta in meno di un'ora a uno dei siti ellenistici e romani meglio conservati del Mediterraneo.",
+          "thingsToDo": [
+            "Birdwatching all'alba al delta del Kalamas",
+            "Giro nel porto dei caicchi da lavoro",
+            "Cozze fresche in un ouzeri sulla banchina",
+            "Traversata alle rovine di Butrinto, in Albania",
+            "Tramonto sulla costa albanese"
+          ],
+          "mooringTip": "La piccola banchina peschereccia è a chi arriva prima, gratuita ed essenziale, con riparo eccellente da ogni direzione. Per entrare in Albania e visitare Butrinto serve un transit log preparato in anticipo: depositalo all'ufficio del marina a Corfù prima di partire, non il giorno stesso."
+        },
+        "11": {
+          "shortDescription": "Una dozzina di miglia al largo fino a Ereikoussa, la più piccola delle Diapontie: un solo porto e una spiaggia, due taverne e a stento cinquanta residenti.",
+          "description": "Dodici miglia dalla terraferma ti sollevano sulle isole Diapontie, tre puntini — Ereikoussa, Othonoi e Mathraki — a nord-ovest di Corfù, più vicini all'Italia che ad Atene e silenziosi come la grande isola ha smesso di essere decenni fa. Ereikoussa è la più piccola e la più facile da raggiungere: un porto, una spiaggia all'ombra dei cedri a Braghini, due taverne e meno di cinquanta persone che ci passano l'inverno. La salita alla cappella in cima alla collina prende una quarantina di minuti e, in giornata limpida, apre tutto il Canale d'Otranto, con le montagne albanesi da un lato e il tacco d'Italia dall'altro. Othonoi, quattro miglia a ovest, è una buona aggiunta pomeridiana, con la cosiddetta grotta di Calipso sulla costa sud e un porticciolo suo. Torna qui per la notte: raki e domino al kafeneio è il modo in cui la serata si spegne da queste parti.",
+          "thingsToDo": [
+            "Salita alla cappella in cima alla collina",
+            "Ozio sulla spiaggia ombreggiata dai cedri di Braghini",
+            "Quattro miglia a vela verso ovest fino a Othonoi",
+            "Bianco, zuppa di pesce all'aglio, in una taverna di famiglia",
+            "Raki a tarda ora al kafeneio del porto"
+          ],
+          "mooringTip": "La banchina di Ereikoussa è minuscola e a chi arriva prima, oppure dai fondo su sabbia davanti alla spiaggia principale a 4-6 m, riparato da sud e sud-est. Qui non c'è carburante né un negozio degno del nome: riempi serbatoi e cambusa a Corfù città prima della traversata."
+        },
+        "12": {
+          "shortDescription": "Sedici miglia a sud-est fino alla costa nord di Corfù e a Kassiopi, villaggio-porto sotto un forte bizantino in rovina, con l'Albania di fronte allo stretto.",
+          "description": "Tornato sul lato greco, sedici miglia a sud-est, Kassiopi si avvolge attorno al suo promontorio sotto un forte bizantino del Duecento. Il castello è un rudere: i veneziani abbatterono le mura alte nel 1386 perché i genovesi non potessero riusarle, ma la corte interna e le cortine basse stanno ancora in piedi e la visita è una passeggiata facile. La banchina del villaggio è piccola, otto o dieci barche di poppa sulla propria ancora, e in stagione si esaurisce: se il tuo agente non ti ha tenuto un posto, scendi nella baia di Avlaki un miglio a est su sabbia a 4-6 m, sicura con tutto tranne un forte vento da nord-est. La pastitsada nelle piazzette all'ombra dei platani, manzo alla cannella sui bucatini, è il piatto da cercare. Se hai gambe, il sentiero sul Monte Pantokrator raggiunge i 906 metri della vetta e il suo monastero, con lo sguardo che corre fino all'Albania e indietro su tutta Corfù.",
+          "thingsToDo": [
+            "Esplorazione delle rovine del castello bizantino",
+            "Bagno alla spiaggia di ciottoli di Bataria",
+            "Sentiero del Monte Pantokrator",
+            "Pastitsada di manzo sui bucatini nel vecchio villaggio",
+            "Aperitivo al tramonto nella taverna sulla spiaggia di Avlaki"
+          ],
+          "mooringTip": "Il porto di Kassiopi è piccolo e d'estate conviene prenotarlo, cosa di cui gli agenti charter di solito si occupano. Se non c'è posto, l'alternativa standard è la baia di Avlaki un miglio a est, all'ancora su sabbia a 4-6 m e riparata dai venti di nord."
+        },
+        "13": {
+          "shortDescription": "Dodici miglia verso sud fino a Gouvia, con deviazione facoltativa a Paleokastritsa e ultima notte nella città vecchia UNESCO di Corfù.",
+          "description": "L'ultima navigazione è clemente, appena dodici miglia lungo la costa orientale fino a Gouvia, il che lascia libera quasi tutta la giornata. Se il tempo tiene e ti va, il giro attorno alla punta nord-occidentale fino a Paleokastritsa vale mezza giornata: le cale di calcare di Agios Spyridon e la salita in falesia al monastero della Theotokos, sul promontorio dove Omero fece naufragare Ulisse tra i Feaci. Altrimenti scendi dritto a sud, ormeggia entro metà pomeriggio e prendi un taxi per la città vecchia in serata. I portici del Liston, costruiti dai francesi sotto Napoleone nel 1807, corrono lungo la Spianada di fronte alla Fortezza Vecchia; prendi un tavolo da quel lato per il sofrito, vitello brasato in vino bianco e aglio, e chiudi con un liquore al kumquat comprato in una delle botteghe di N. Theotoki. D'estate lo spettacolo di suoni e luci della fortezza comincia verso le nove.",
+          "thingsToDo": [
+            "Bagno facoltativo lungo la costa a falesie di Paleokastritsa",
+            "Passeggiata sotto i portici del Liston",
+            "Visita alla Fortezza Vecchia al tramonto",
+            "Sofrito di vitello sul Liston",
+            "Liquore al kumquat dal Porto Vecchio"
+          ],
+          "mooringTip": "Gouvia è il consueto ormeggio dell'ultima notte, con servizi completi, carburante lì accanto e un posteggio taxi per il trasferimento della riconsegna. Se preferisci cenare a terra, la banchina del NAOK di fronte alla Fortezza Vecchia è un'opzione per sosta breve, ma lì non si pernotta."
+        },
+        "14": {
+          "shortDescription": "Ultima mattina a Gouvia: riconsegna della barca, poi un taxi veloce in città per un cappuccino sotto il Liston prima dell'aeroporto.",
+          "description": "Riconsegnare la barca a Gouvia fila liscio quando i preparativi sono fatti: slot del rifornimento prenotato la sera prima, finestra di pulizia concordata con il base manager, documenti sistemati in ufficio. Il controllo tecnico ti vuole in banchina entro le nove di sabato. Le ore che avanzano si spendono bene a Corfù città, un quarto d'ora di taxi. Le domeniche d'estate la Spianada — la piazza pubblica più grande dei Balcani — ospita il cricket sotto la Fortezza Vecchia, una stranezza sopravvissuta al dominio britannico. Dentro il palazzo di San Michele e San Giorgio, il Museo d'Arte Asiatica custodisce la più ricca raccolta cinese e indiana del paese. Per caffè e loukoumades sotto i portici del Liston non c'è di meglio. Prendi una saponetta all'olio d'oliva prima di tornare al marina; da lì il varco dell'aeroporto è a venti minuti di taxi.",
+          "thingsToDo": [
+            "Cappuccino sotto i portici del Liston",
+            "Cricket sulla Spianada",
+            "Visita al Museo d'Arte Asiatica di Corfù",
+            "Saponetta all'olio d'oliva come regalo d'addio",
+            "Pulizia e valigie per la riconsegna"
+          ],
+          "mooringTip": "Questa è una riconsegna a Gouvia: conferma con il base manager lo slot del carburante e l'orario di pulizia la sera prima, e riporta la barca entro le 09:00 di sabato per il controllo tecnico. L'aeroporto è a circa venti minuti di taxi dal varco del marina."
+        }
+      }
+    },
+    "corfu-paxos-parga": {
+      "metaTitle": "Ionio in 7 giorni: Corfu, Paxos e Parga | Boat4You",
+      "metaDesc": "Charter di 7 giorni da Corfu verso sud fino a Paxos e Antipaxos, poi la costa continentale con Parga, Sivota e Plataria prima del rientro.",
+      "days": {
+        "1": {
+          "shortDescription": "La lunga tappa di 30 miglia verso sud, da Gouvia a Gaios, la raccolta capitale di Paxos nascosta dietro due isolotti boscosi su un canale naturale.",
+          "description": "È la tappa più lunga della settimana, quindi di solito molliamo gli ormeggi a Gouvia entro le nove. Il maistro, il maestrale pomeridiano dello Ionio, rinforza dopo pranzo e ti prende al giardinetto mentre scendi verso sud: le miglia passano via lisce a vela. Gaios ti aspetta dietro Panagia e Agios Nikolaos, due isolotti verdi che trasformano l'avvicinamento in un canale riparato più che in un porto aperto. Ormeggia di poppa lungo la banchina del paese se c'è spazio: le case pastello e la vecchia piazza veneziana sono a due minuti dalla passerella. Paxos vive del suo olio d'oliva, e vale la pena cercare il ladotyri, il formaggio locale stagionato nell'olio, in una taverna sul molo. Arriva presto: la banchina è corta e a luglio si riempie in fretta.",
+          "thingsToDo": [
+            "Passeggia nella piazza veneziana di Gaios",
+            "Tender fino alla cappella dell'isolotto di Panagia",
+            "Compra il formaggio ladotyri sulla banchina",
+            "Tramonto dal forte di Agios Nikolaos"
+          ],
+          "mooringTip": "La banchina di Gaios è di poppa con trappe, ma corta: punta a essere ormeggiato entro metà pomeriggio, prima che rientrino le barche giornaliere. Se è piena, la grande baia settentrionale di Lakka o la banchina di Loggos sono due alternative tranquille."
+        },
+        "2": {
+          "shortDescription": "Tre miglia verso sud fino ad Antipaxos, le cui due spiagge, Vrika e Voutoumi, custodiscono l'acqua più limpida dello Ionio.",
+          "description": "Poco più di un'ora a motore o una bolina pigra di prima mattina: Antipaxos è più una gita in giornata che una destinazione vera e propria. Non c'è porto, quindi diamo fondo davanti a Vrika o Voutoumi su sabbia pulita, tra i quattro e i sei metri, e ci facciamo il bagno prima che verso le undici arrivino le barche da Gaios. Qui l'acqua ha una luminosità pallida, controluce, che le foto raramente restituiscono. Alle spalle delle spiagge l'isola è un unico grande vigneto: i paxioti producono qui da generazioni la Verdea, il vino ambrato, e una caraffa alla taverna sopra Voutoumi chiude il bagno nel modo giusto. Vieni presto o fermati fino a tardi per avere la baia tutta per te. Quando nel pomeriggio l'ancoraggio si svuota, il ritorno a Paxos per la notte è una breve veleggiata.",
+          "thingsToDo": [
+            "Ancoraggio e bagno davanti alla spiaggia di Vrika",
+            "Il sentiero fino alla caletta di Voutoumi",
+            "Vino Verdea alla taverna Bella Vista",
+            "Snorkeling nei bassi fondali turchesi"
+          ],
+          "mooringTip": "Antipaxos è un ancoraggio solo diurno, con buona tenuta su sabbia tra i quattro e i sei metri davanti a entrambe le spiagge. Dai fondo con cura: la brezza pomeridiana può farti girare, e non ci sono posti per la notte, quindi calcola di essere di ritorno a Paxos al tramonto."
+        },
+        "3": {
+          "shortDescription": "Dodici miglia facili al traverso verso est fino al continente e a Parga, un tumulto di case pastello sotto un castello veneziano del Cinquecento.",
+          "description": "La traversata verso Parga è una delle tappe più belle della settimana: dodici miglia al traverso con le montagne del continente che crescono a prua. Il paese si arrampica su una conca ripida di baia, tutto ocra e terracotta, coronato dalla fortezza veneziana che qui chiamano Kastro. Sali nel tardo pomeriggio, quando cala il caldo: dai bastioni si vede tutta la costa e la cappella dell'isolotto di Panagia poco al largo. Oltre il promontorio si apre Valtos, una lunga distesa di sabbia dove si nuota fino a sera. Se hai una mattina libera, le sorgenti dell'Acheron e l'antico oracolo dei morti, nell'entroterra, valgono l'escursione. La cena qui è semplice e a base di pesce: un saganaki e del pescato alla griglia a un tavolo sul porto fanno il loro dovere.",
+          "thingsToDo": [
+            "Sali alla fortezza veneziana del Kastro",
+            "Bagno nella lunga spiaggia di Valtos",
+            "Gita in barca alle sorgenti dell'Acheron",
+            "Pescato alla griglia in una taverna sul porto"
+          ],
+          "mooringTip": "Parga non ha un marina e la banchina del paese è solo per soste brevi, quindi quasi tutti gli equipaggi passano la notte all'ancora. La baia di Valtos a ovest o quella di Lichnos a est tengono bene su sabbia tra i cinque e i sette metri: scegli quella riparata dalla brezza pomeridiana."
+        },
+        "4": {
+          "shortDescription": "Sivota è a un breve salto verso nord: i suoi isolotti coperti di pini riparano quell'acqua pallida sul banco di sabbia che tutti fotografano.",
+          "description": "Sivota è una tranquilla veleggiata mattutina lungo costa, e la ricompensa è uno degli ancoraggi più belli di tutta la costa continentale. Un gruppo di isolotti bassi, coperti di pini, sta appena fuori dal villaggio, e i bassi fondali tra loro brillano di quell'azzurro lattiginoso quasi improbabile. Di solito diamo fondo davanti a Bella Vraka, il banco di sabbia che si attraversa a piedi con l'acqua al ginocchio tra due isolotti, e passiamo il cuore della giornata a nuotare e a giocare con i paddleboard. Il paese è piccolo e senza pretese, una curva di banchina con una fila di taverne di pesce. Ordina il bourdeto se c'è: è lo stufato piccante di scorfano al pomodoro che in tutta la zona riesce bene. Per la notte, o prendi un posto di poppa sulla banchina del villaggio o infilati in una delle baie più tranquille poco più dentro.",
+          "thingsToDo": [
+            "Attraversa a piedi il banco di sabbia di Bella Vraka",
+            "Ancoraggio nella laguna riparata dagli isolotti",
+            "Paddleboard tra gli isolotti di pini",
+            "Bourdeto di pesce sulla banchina"
+          ],
+          "mooringTip": "Puoi ormeggiare di poppa sulla banchina del villaggio di Sivota, anche se in stagione si riempie: arriva entro metà pomeriggio o metti in conto di stare all'ancora. La laguna tra gli isolotti è una sosta bagno, non un ormeggio notturno: quando le barche giornaliere se ne vanno, scegli una caletta più profonda e più protetta."
+        },
+        "5": {
+          "shortDescription": "Otto miglia tranquille verso nord portano a Plataria, una baia di pescatori vicino a Igoumenitsa davanti alla quale quasi tutti i charter passano dritti.",
+          "description": "Dopo la folla di Sivota, Plataria sa di ritorno alla Grecia normale, ed è proprio questo il suo fascino. È una tappa breve verso nord, un villaggio di pescatori veri, poche miglia prima del porto traghetti di Igoumenitsa, con una baia che si apre a ovest verso Corfu e prende bene il maestrale pomeridiano. Qui non succede granché, che è esattamente il punto dopo qualche giorno intenso. C'è un piccolo marina e un tratto di banchina comunale, e le taverne sul lungomare sono a conduzione familiare, con prezzi da gente del posto e non da barche a noleggio. Prendi la fasolada, la zuppa di fagioli a cottura lenta che vale come piatto nazionale quotidiano dei greci, e guarda i pescatori sistemare le reti. È anche una buona preparazione per domani: la traversata di ritorno a Corfu si fa meglio nella calma del mattino, quindi una serata tranquilla e presto a letto ci stanno.",
+          "thingsToDo": [
+            "Zuppa di fagioli fasolada in una taverna familiare",
+            "Passeggiata tra le colline di ulivi",
+            "Guarda i pescatori rammendare le reti",
+            "Aperitivo al tramonto guardando Corfu a ovest"
+          ],
+          "mooringTip": "Plataria ha un piccolo marina accanto alla banchina comunale, ed entrambi restano tranquilli con il maestrale dominante, ma i posti sono pochi. A luglio e agosto conviene chiamare prima o arrivare presto per trovare un ormeggio di poppa."
+        },
+        "6": {
+          "shortDescription": "La traversata di diciotto miglia verso Corfu, calcolata sulla calma del mattino, si chiude sotto i bastioni della città vecchia patrimonio UNESCO.",
+          "description": "Fai questa traversata presto. Il canale di ritorno verso Corfu è semplice, ma nel pomeriggio il maestrale può alzare un'onda corta e scomoda, quindi partire alle nove la rende comoda. Lascia la barca a Gouvia e prendi l'autobus o un taxi fino a Corfu Town per l'ultima sera, perché la città vecchia se lo merita. Le due fortezze veneziane, il colonnato del Liston costruito dai francesi con i suoi tavolini, e l'ampia distesa verde della Spianada sono tutti a pochi passi l'uno dall'altro. La cucina di Corfu è un mondo a sé, plasmata da secoli di dominio veneziano: prova il sofrito, fettine di vitello in salsa d'aglio e vino bianco, o la pastitsada al pomodoro. Chiudi con il liquore di kumquat locale. Gli equipaggi con un giorno in più aggiungono spesso le calette della costa ovest a Paleokastritsa, che vale la deviazione se il programma lo permette.",
+          "thingsToDo": [
+            "Cammina sui bastioni della Fortezza Vecchia",
+            "Caffè sotto i portici del Liston",
+            "Vitello sofrito nella città vecchia",
+            "Degustazione di liquore al kumquat dopo cena"
+          ],
+          "mooringTip": "Gouvia Marina è la base e il posto dove si riconsegna la barca, quindi prenota in anticipo l'ormeggio di rientro. Le banchine di Corfu Town sono per soste brevi ed esposte al moto ondoso: meglio una sosta pranzo che una notte."
+        },
+        "7": {
+          "shortDescription": "Mattina di riconsegna a Gouvia, con tempo per un ultimo espresso in città e magari il cricket sulla Spianada, se il volo lo permette.",
+          "description": "Il check-out a Gouvia è di solito a metà mattina, quindi il lavoro utile si fa la sera prima: rifornimento, barca pulita e valigie quasi fatte. Così l'ultima mattina resta lenta. Se c'è tempo prima del transfer, vale un'ultima passeggiata a Corfu Town per un caffè allo storico Café Liston sotto i portici, dove i tavoli si allargano sulla Spianada. Nei fine settimana d'estate puoi capitare in una partita di cricket sul prato, eredità del periodo britannico dell'isola e una cosa splendidamente fuori posto da guardare nello Ionio. Il mercato coperto è il posto giusto per un vasetto di miele di timo greco da portare a casa. Poi si torna al marina, alle scartoffie e alla riconsegna. Lo Ionio settentrionale tende a richiamare gli equipaggi per una seconda stagione.",
+          "thingsToDo": [
+            "Espresso al Café Liston",
+            "Guarda una partita di cricket sulla Spianada",
+            "Compra miele di timo al mercato",
+            "Rifornimento, pulizie e valigie per la riconsegna"
+          ],
+          "mooringTip": "Questa è una riconsegna a Gouvia Marina, quindi organizza il pieno di carburante e lo slot per le pulizie la sera prima e non la mattina. Conferma l'orario di check-out con la base e lascia un margine per la coda al distributore in alta stagione."
+        }
+      }
+    },
+    "kos": {
+      "metaTitle": "Dodecaneso nord in 7 giorni | Boat4You",
+      "metaDesc": "Da Kos a Leros, Patmos, Lipsi, Arki e Kalymnos: una settimana nel Dodecaneso settentrionale, tra banchine tranquille e ancoraggi cristallini.",
+      "days": {
+        "1": {
+          "shortDescription": "32 miglia di rodaggio lungo la costa di Kalymnos fino a Leros, dove Lakki offre uno dei più grandi porti naturali del Mediterraneo.",
+          "description": "La prima tappa corre per circa 32 miglia in direzione NNO, seguendo il fianco di calcare chiaro di Kalymnos finché Leros non si apre a prua. Parti presto. Qui il Meltemi entra da nord già nel primo pomeriggio, spesso 18-25 nodi quando esci dal canale, quindi mollare gli ormeggi alle nove ti compra acqua più tranquilla. Lakki, sulla costa sud, è la scelta sicura per la notte: è uno dei porti naturali più grandi del Mediterraneo, circondato da larghi viali e da un'architettura italiana anni Trenta dal sapore stranamente monumentale per una piccola isola greca. Se le previsioni sono morbide puoi invece infilarti ad Agia Marina, sul lato nord, con la sua banchina pastello e il castello sopra. Ma oltre i 22 nodi di tramontana Agia Marina diventa mossa, e io resterei a sud.",
+          "thingsToDo": [
+            "Passeggiata sul lungomare Art Deco di Lakki",
+            "Salita al punto panoramico del castello di Pandeli",
+            "Bagno a Xerokambos, sulla costa sud",
+            "Frittelle di ceci pitaroudia in taverna"
+          ],
+          "mooringTip": "Il marina di Lakki ti prende di poppa con trappe per circa EUR 40-60 a notte e resta piatto con quasi ogni tempo. La banchina comunale di Agia Marina costa meno, EUR 25-40, ma diventa scomoda appena la tramontana supera i 22 nodi."
+        },
+        "2": {
+          "shortDescription": "Ventidue miglia a nord fino a Patmos, l'isola di pellegrinaggio dove san Giovanni scrisse l'Apocalisse, con la grande banchina riparata di Skala per la notte.",
+          "description": "Ventidue miglia costanti verso nord ti portano a Patmos, che pesa molto più di quanto le sue dimensioni lascino pensare. È qui che si dice san Giovanni abbia dettato il Libro dell'Apocalisse nel 95 d.C., e da allora l'isola è meta di pellegrinaggio ortodosso. Skala, sulla costa est, è il porto di lavoro e l'ormeggio abituale: una lunga banchina che si scrolla di dosso la tramontana. Da lì una sola strada sale a Chora, passando davanti alla Grotta dell'Apocalisse e al Monastero di San Giovanni, simile a una fortezza: entrambi meritano la salita. Vacci nel tardo pomeriggio, quando la luce si ammorbidisce e i gruppi dei pullman si diradano. Tornato a Chora, i vicoli in ombra nascondono qualche buon locale che serve cocktail al mastiha. Se preferisci nuotare invece di visitare, dai fondo nella baia di Grikos, più a sud.",
+          "thingsToDo": [
+            "Sali alla Grotta dell'Apocalisse",
+            "Visita il Monastero di San Giovanni, dell'XI secolo",
+            "Sentiero a piedi fino alla spiaggia di Psili Ammos",
+            "Cocktail al mastiha nei vicoli di Chora"
+          ],
+          "mooringTip": "Ormeggia di poppa lungo la banchina principale di Skala per EUR 30-50 a notte: è ampia e riparata da nord, quindi in condizioni normali non serve prenotare. Per una notte di soli bagni, la baia di Grikos poco a sud tiene bene su sabbia."
+        },
+        "3": {
+          "shortDescription": "Un salto breve di 12 miglia a sud-est fino a Lipsi, isola senza fretta con 700 abitanti, un forno e taverne familiari attorno alla banchina.",
+          "description": "Da Patmos a Lipsi ci sono solo 12 miglia, quindi non c'è nessuna fretta di mollare gli ormeggi. Lipsi è il tipo di posto per cui gli equipaggi tornano: circa 700 residenti, un solo forno e una piazza costruita attorno al campanile della chiesa. La banchina comunale è l'unico posto dove ormeggiare, e le taverne sul fronte sono a conduzione familiare, di quelle in cui il menù del giorno dipende da cos'è arrivato la mattina. Prova il formaggio locale lipsiako con un filo di miele di timo, e prendi un sacchetto di koulouria caldi al forno per la navigazione dell'indomani. Due miglia a est c'è Aspronissi, una baia bassa su sabbia chiara dove si fa uno snorkeling splendido con luce piatta. Fai anche due passi fino alla cappelletta di Panagia tou Charou: l'icona all'interno porta con sé una leggenda locale molto amata.",
+          "thingsToDo": [
+            "Snorkeling nella baia di Aspronissi, due miglia a est",
+            "Visita la cappella di Panagia tou Charou",
+            "Assaggia il formaggio lipsiako con miele di timo",
+            "Compra koulouria caldi al forno del paese"
+          ],
+          "mooringTip": "La banchina comunale di Lipsi è l'unico ormeggio, di poppa per modesti EUR 15-25 a notte e ben riparata da nord. Se preferisci nuotare, dai fondo davanti ad Aspronissi su sabbia tra i 4 e i 6 metri e restaci per il pomeriggio."
+        },
+        "4": {
+          "shortDescription": "Solo otto miglia a est fino alla minuscola Arki, 40 abitanti e una taverna, e ai bassi fondali turchesi della baia di Tiganakia.",
+          "description": "Più che una navigazione è un trasferimento, otto miglia facili verso est, ma la ricompensa è uno degli ancoraggi più belli del Dodecaneso. Arki ha una quarantina di residenti stabili, nessun traghetto di linea e una sola taverna sul porto. Si viene qui per rallentare del tutto. Tiganakia, sul lato sud, è il motivo per cui quasi tutti fanno la deviazione: un pugno di isolotti ripara un'acqua così limpida e bassa che la barca sembra sospesa sopra la sabbia bianca. Ancora, bagno, e lascia andare il pomeriggio. A terra, Stavento è l'unica cucina aperta, gestita da un pescatore che porta a riva il pescato di persona, quindi l'astakomakaronada, la pasta all'aragosta, è fresca quanto può esserlo. Se le gambe chiedono movimento, il sentiero fino alla cappella di Panagia in cima alla collina ti regala tutto l'arcipelago disteso sotto.",
+          "thingsToDo": [
+            "Bagno nei bassi fondali turchesi della baia di Tiganakia",
+            "Pasta all'aragosta astakomakaronada da Stavento",
+            "Sentiero fino alla cappella di Panagia in collina",
+            "Leggere in coperta con il canto delle cicale"
+          ],
+          "mooringTip": "Ormeggia di poppa sulla piccola banchina del porto di Arki per EUR 15-20 a notte, al riparo da nord. Quasi tutti preferiscono dare fondo proprio a Tiganakia, su sabbia tra i 3 e i 5 metri, per il bagno, e rientrare in porto per cena."
+        },
+        "5": {
+          "shortDescription": "Ventidue miglia a sud fino a Kalymnos, l'isola dei pescatori di spugne diventata mecca dell'arrampicata, con il vivace porto di Pothia e Telendos al largo.",
+          "description": "Ora si punta a sud per 22 miglia fino a Kalymnos, un'isola con due reputazioni molto diverse. Per generazioni i suoi uomini si sono immersi a cercare spugne in tutto il Mediterraneo orientale, e quella storia continua a plasmare il posto. Più di recente il suo calcare verticale l'ha resa un magnete per gli arrampicatori, che ogni autunno riempiono le falesie della costa ovest per il festival di ottobre. Pothia, il porto principale sulla costa sud, è dove passerai la notte: un porto vero, rumoroso e colorato, che si arrampica sulla collina. Al di là di uno stretto braccio di mare, la piramide spoglia di Telendos si alza a un miglio dalla costa e dà il meglio al tramonto. Se arrampichi, i settori di Massouri e Armeos sono a un breve taxi dalla banchina, e la Grande Grotta sopra di essi è la parete simbolo dell'isola. Altrimenti fai il giro con il tender fino a Vathy, un fiordo verde di agrumeti inciso nella costa est.",
+          "thingsToDo": [
+            "Vedi la grotta di arrampicata Grande Grotta sopra Massouri",
+            "Visita il Museo della Pesca delle Spugne a Pothia",
+            "Snorkeling nella stretta insenatura della baia di Vathy",
+            "Prova i calamari ripieni in un ouzeri di Pothia"
+          ],
+          "mooringTip": "Ormeggio di poppa nel porto di Pothia per EUR 30-50 a notte, riparato da nord ma vivace, con il moto ondoso dei traghetti di giorno. Per una notte più calma e più scenografica, l'insenatura a fiordo di Vathy sulla costa est vale le miglia in più."
+        },
+        "6": {
+          "shortDescription": "Quindici miglia a sud per rientrare alla base di Kos Marina, con bagno facoltativo alla piccola Pserimos lungo la rotta.",
+          "description": "L'ultima vera giornata di navigazione sono 15 miglia tranquille verso sud, di ritorno a Kos. Spezzala a metà a Pserimos se il vento lo consente: un'isola bassa e sabbiosa, con buona tenuta tra i 4 e i 6 metri e una baia riparata per un ultimo lungo bagno. Kos Marina è la base charter più grande del Dodecaneso, con servizi completi, trappe e riparo da tutte le direzioni, quindi l'accosto è semplice. Fai il pieno alla banchina carburante vicino all'ingresso prima di ormeggiare per la notte, e conferma alla base lo slot di riconsegna con un giorno d'anticipo, così la mattina fila liscia. Sistemata la barca, resta ancora tempo per Kos Town: l'antico Asklepion sopra il porto, la sorgente termale che si riversa in mare a Therma e l'agnello kleftiko a cottura lenta sotto il vecchio platano della piazza.",
+          "thingsToDo": [
+            "Bagno a Pserimos scendendo verso sud",
+            "Visita l'antico Asklepion sopra Kos Town",
+            "Bagno nelle sorgenti a mare di Therma",
+            "Agnello kleftiko sotto il platano di Ippocrate"
+          ],
+          "mooringTip": "Kos Marina ti prende di poppa con trappe a EUR 60-90 a notte e riparo totale. Fai carburante alla banchina vicino all'ingresso prima di ormeggiare, e telefona alla base per confermare l'orario di riconsegna con 24 ore di anticipo."
+        },
+        "7": {
+          "shortDescription": "Riconsegna a Kos Marina entro le nove, poi un ultimo bagno a Tigaki prima dei 25 minuti di strada per l'aeroporto.",
+          "description": "L'ultima mattina è semplice. Fai trovare la barca sgombra e pronta per la riconsegna a Kos Marina prima delle nove, quando il base manager fa il giro di ispezione. Se è tutto in ordine, la cauzione viene svincolata nel giro di circa una settimana. Se il volo è più tardi, non c'è motivo di restare seduti in banchina: Kos Town è a due passi per un caffè greco fatto bene e un giro nel porto vecchio, e la lunga spiaggia di sabbia di Tigaki, sulla costa nord, è il posto giusto per un ultimo bagno prima di chiudere le valigie. L'aeroporto di Kos dista solo 25 minuti di strada dal marina, quindi i transfer sono facili da calcolare. Una settimana nel Dodecaneso settentrionale lascia quasi tutti gli equipaggi già a immaginare dove andare al prossimo charter.",
+          "thingsToDo": [
+            "Ispezione finale con il base manager",
+            "Ultimo bagno sulla sabbia di Tigaki, costa nord",
+            "Caffè greco in un locale di Kos Town",
+            "Venticinque minuti di transfer per l'aeroporto di Kos"
+          ],
+          "mooringTip": "Riconsegna la barca a Kos Marina prima delle 09:00 per l'ispezione. La cauzione viene di norma restituita entro sette giorni, una volta che la base ha controllato tutto."
+        }
+      }
+    },
+    "kos-14-days": {
+      "metaTitle": "Dodecaneso da Kos in 14 giorni | Boat4You",
+      "metaDesc": "Giro ad anello da Kos tra Kalymnos, Patmos, Astypalaia, Nisyros, Rhodes e Symi: due settimane nelle isole più selvagge e tranquille del Dodecaneso.",
+      "days": {
+        "1": {
+          "shortDescription": "Un tranquillo salto di 15 miglia verso nord per far entrare l'equipaggio in ritmo, tra la storia dei pescatori di spugne a Pothia e le falesie di calcare di fronte.",
+          "description": "La prima tappa è breve di proposito. Quindici miglia dritte a nord danno a tutti il tempo di trovare le manovelle dei winch e di ricordare a cosa serve ogni cima, prima che nel pomeriggio il vento rinforzi. Pothia, sulla costa sud, è il paese di lavoro dove ormeggia quasi tutto: barche delle spugne, un mercato del pesce decente e il Museo della Pesca delle Spugne poco dietro la banchina. Guarda a ovest e vedrai Telendos sorgere dal canale, con le sue vie di arrampicata che ogni ottobre attirano gente da tutta Europa. Se preferisci un bagno a una serata in paese, Vathy sulla costa est si ripiega in una stretta insenatura verde che resta piatta con quasi ogni brezza. Di solito ci accontentiamo di un tavolo in un ouzeri e di un piatto di mououri, i calamari ripieni locali, prima di andare a dormire presto.",
+          "thingsToDo": [
+            "Visita il Museo della Pesca delle Spugne a Pothia",
+            "Bagno nella verde insenatura riparata di Vathy",
+            "Guarda gli arrampicatori su Telendos, oltre il canale",
+            "Ordina i calamari ripieni mououri in un ouzeri"
+          ],
+          "mooringTip": "Di poppa sulla banchina di Pothia, circa €30–50 a notte; il porto si riempie di barche locali, quindi punta ad arrivare entro metà pomeriggio. Per una notte tranquilla all'ancora, l'insenatura di Vathy sul lato est tiene bene quasi sempre."
+        },
+        "2": {
+          "shortDescription": "Dodici miglia fino a Leros, dovendo scegliere tra l'enorme conca riparata di Lakki e la banchina pastello di Agia Marina.",
+          "description": "Leros ti offre due notti molto diverse, e di solito è il vento a scegliere per te. Lakki, sul lato sud, è uno dei porti naturali più grandi del Mediterraneo, un bacino protetto enorme bordato da edifici Art Deco italiani degli anni Trenta che sembrano stranamente monumentali per un'isola piccola. Resta piatto anche quando il meltemi soffia forte. Agia Marina, sulla costa nord, è più bella sul fronte mare ma prende la tramontana in pieno una volta sopra i venti nodi. A terra, la salita al castello di Panteli ripaga la fatica con la vista su entrambi i porti insieme. A Xerokambos, sulla costa sud, c'è una spiaggia comoda per il bagno. Ordina i pitaroudia, le frittelle di ceci locali, in una taverna sulla banchina e capirai perché gli equipaggi qui si fermano volentieri.",
+          "thingsToDo": [
+            "Passeggia sulla banchina Art Deco anni Trenta di Lakki",
+            "Sali al castello di Panteli per la vista",
+            "Bagno sulla sabbia di Xerokambos, costa sud",
+            "Prova le frittelle di ceci pitaroudia in taverna"
+          ],
+          "mooringTip": "Lakki Marina ti prende di poppa con trappe attorno ai €40–60 e resta calmo con quasi qualsiasi tempo. La banchina comunale di Agia Marina costa meno, €25–40, ma rolla appena la tramontana supera i venti nodi: leggi le previsioni prima di decidere."
+        },
+        "3": {
+          "shortDescription": "Una tappa breve verso nord fino a Patmos, dove la strada per Chora sale oltre la Grotta dell'Apocalisse fino a un monastero UNESCO.",
+          "description": "Patmos porta la sua storia con leggerezza, per essere un luogo così sacro. Skala, il porto, ha una lunga banchina ben riparata da nord, quindi quasi tutti ormeggiano lì e poi salgono. La strada per Chora passa davanti alla Grotta dell'Apocalisse, dove si dice che san Giovanni abbia ricevuto le sue visioni, prima di arrivare al Monastero di San Giovanni, simile a una fortezza: un sito UNESCO dell'XI secolo ancora abitato da una comunità viva. I vicoli imbiancati di Chora meritano un'ora di vagabondaggio senza meta, meglio se chiusa da un cocktail al mastiha. Se l'equipaggio vuole sabbia, Psili Ammos sulla costa sud è una caletta dorata raggiungibile a piedi o con il tender. Le sere in banchina sono silenziose e senza fretta, che poi è esattamente il motivo per cui si arriva fin qui.",
+          "thingsToDo": [
+            "Visita la Grotta dell'Apocalisse",
+            "Visita il Monastero di San Giovanni, dell'XI secolo",
+            "Perditi nei vicoli bianchi di Chora",
+            "Tender fino alla sabbia dorata di Psili Ammos"
+          ],
+          "mooringTip": "La banchina di Skala è lunga e ben protetta da nord, con ormeggi di poppa attorno ai €30–50. Lo spazio raramente è un problema, ma se vuoi un posto tranquillo ormeggia prima che nel pomeriggio comincino le manovre dei traghetti."
+        },
+        "4": {
+          "shortDescription": "Ventiquattro miglia al traverso fino alle vecchie isole dei pirati di Fourni, ben fuori dalle rotte charter e proprio per questo migliori.",
+          "description": "È la tappa che ti porta fuori dalla folla. Fourni sta nel canale tra Ikaria e Samos, un pugno di isolette che un tempo davano riparo ai pirati e oggi non danno riparo quasi a nessuno. Ventiquattro miglia a nord-ovest ti portano a Fourni Korseon, l'unico porto con una banchina vera e buona copertura da nord. Poche barche a noleggio spingono fin qui, quindi il fronte mare va ancora al proprio ritmo: pescatori che rammendano le reti, una o due taverne, un artigiano che intaglia modellini di barche in legno. A terra, la camminata fino alla cappella di Christos ti mette sotto gli occhi tutto l'arcipelago. Petrokopio, raggiungibile solo dall'acqua, vale il giro con il tender per un bagno. La sera ordina l'astakomakaronada, la pasta all'aragosta per cui queste isole sono note, e lascia che la giornata rallenti del tutto.",
+          "thingsToDo": [
+            "Sali al punto panoramico della cappella di Christos",
+            "Tender fino alla baia di Petrokopio per un bagno",
+            "Pasta all'aragosta astakomakaronada a Kambi",
+            "Compra un modellino di barca intagliato a mano"
+          ],
+          "mooringTip": "Fourni Korseon è l'unico ormeggio pratico per la notte, di poppa in banchina per circa €20–30 e riparato da nord. Se è pieno o vuoi fare il bagno dalla barca, dai fondo su sabbia nella baia di Kambi tra i quattro e i sei metri."
+        },
+        "5": {
+          "shortDescription": "Di nuovo a sud fino alla piccola Lipsi, isola di settecento abitanti, un forno e una baia da snorkeling un paio di miglia a est.",
+          "description": "Lipsi va al passo d'uomo e ti chiede di fare lo stesso. Ci vivono circa settecento persone, servite da un solo forno e da una piazza con un unico campanile, e le taverne sul mare sono di quelle in cui il proprietario cucina quello che le barche hanno portato la mattina. La banchina comunale è l'unico posto per ormeggiare, di poppa e ben coperta da nord. Al mattino vale la pena fare le due miglia a est verso Aspronissi, dove l'acqua sopra la sabbia prende un azzurro quasi irreale e lo snorkeling è il migliore della rotta finora. Tornato in paese, chiedi il formaggio lipsiako con un filo di miele di timo, e prendi un sacchetto di koulouria freschi al forno prima che le barche giornaliere svuotino gli scaffali. Non c'è niente verso cui correre, ed è proprio questo il bello.",
+          "thingsToDo": [
+            "Snorkeling nell'acqua blu della baia di Aspronissi",
+            "Passeggiata fino allo scoglio della cappella di Panagia",
+            "Prova il formaggio lipsiako con miele di timo",
+            "Compra koulouria freschi al forno del paese"
+          ],
+          "mooringTip": "Qui la banchina comunale è l'unico ormeggio, di poppa per modesti €15–25 e riparata da nord. È piccola, quindi in stagione arriva presto; se ti chiama il bagno, dai fondo su sabbia davanti alla baia di Aspronissi."
+        },
+        "6": {
+          "shortDescription": "Una traversata di 22 miglia verso ovest fino a Levitha, sei abitanti, una taverna e il cielo più buio che troverai nell'Egeo.",
+          "description": "Levitha è il punto più remoto di tutto il viaggio. Sull'intera isola vivono sei persone, non c'è traghetto, non c'è bancomat né negozio, e un'unica famiglia di allevatori di capre gestisce la sola taverna sopra l'ancoraggio. Qui si viene per il vuoto. La baia di Ammoudi entra profonda nel lato sud e ti tiene su sabbia tra i cinque e i sette metri, ben al riparo dalla tramontana; verso sera la tua potrebbe essere una delle pochissime barche all'ancora. Sali fino alla fattoria, dai una mano con le capre se la famiglia te lo lascia fare, e mettiti comodo per un'astakomakaronada cucinata dalle stesse persone che hanno pescato l'aragosta. Poi resta in coperta dopo cena: senza una luce per miglia, il cielo stellato sopra di te è il motivo per cui gli skipper ricordano questa notte per anni.",
+          "thingsToDo": [
+            "Ancoraggio e bagno nella baia di Ammoudi",
+            "Dai una mano alla famiglia con le capre",
+            "Pasta all'aragosta nell'unica taverna dell'isola",
+            "Guarda le stelle in coperta senza inquinamento luminoso"
+          ],
+          "mooringTip": "Qui non si paga nulla e non c'è marina: dai fondo su sabbia nella baia di Ammoudi tra i cinque e i sette metri, completamente riparato da nord. Porta contanti e provviste a sufficienza, perché sull'isola non ci sono bancomat né negozi."
+        },
+        "7": {
+          "shortDescription": "Ventidue miglia a sud fino ad Astypalaia, la più occidentale del Dodecaneso, con il castello veneziano Querini sopra il porto di Pera Gialos.",
+          "description": "Astypalaia segna l'angolo più occidentale del Dodecaneso, e sembra più cicladica delle sue vicine: tutta cubi bianchi e cupole azzurre. Si passa la notte a Pera Gialos, il porto sotto il kastro sul lato est, riparato da nord e a due passi da tutto ciò che vale la pena vedere. Sopra si alza il castello Querini, la fortezza veneziana su cui l'intero paese sembra appoggiarsi: la salita attraverso Chora all'imbrunire è la cosa da fare qui. Per il bagno, Vatses sulla costa sud alterna sabbia e ghiaia sotto basse falesie. A tavola, la trasferta fino alla taverna Kaminakia per la ladenia, la focaccia dell'isola con pomodoro e cipolla, è un piccolo pellegrinaggio di cui gli equipaggi non si pentono. Gli appassionati di storia possono andare a caccia dei mosaici romani vicino a Mesa Nisi. È una bella tappa di metà percorso prima della corsa verso il vulcano.",
+          "thingsToDo": [
+            "Sali attraverso Chora fino al castello Querini",
+            "Bagno tra sabbia e ghiaia a Vatses",
+            "Focaccia ladenia alla Kaminakia Taverna",
+            "Cerca i mosaici romani vicino a Mesa Nisi"
+          ],
+          "mooringTip": "Pera Gialos ti prende di poppa attorno ai €25–40, raccolto sotto il castello e protetto da nord. Se il porto è affollato o il vento gira, Maltezana sulla costa sud è un'alternativa tranquilla per l'ancoraggio."
+        },
+        "8": {
+          "shortDescription": "Una lunga tappa di 38 miglia al traverso verso sud-est fino a Nisyros, un vulcano attivo dentro cui puoi scendere a piedi, sul fondo della caldera.",
+          "description": "Oggi è il salto singolo più lungo delle due settimane, trentotto miglia al traverso se il meltemi collabora, quindi di solito molliamo gli ormeggi entro le nove. Nisyros è la ricompensa: un vulcano davvero attivo, e la camminata sul fondo della caldera fino al cratere Stefanos non somiglia a nient'altro su questa rotta. Scendi in un'ampia conca grigia che sibila vapore e sa di zolfo, con la crosta che scricchiola sotto gli scarponi. Pali, sulla costa nord, è il porto a cui puntare: riparato da nord e comoda base per l'escursione all'interno. Dopo, gira per i vicoli acciottolati di Mandraki, o metti a bagno le gambe stanche nelle sorgenti termali di Loutra. Prendi un vasetto di capperi dell'isola prima di tornare a bordo: cresciuti su terreno vulcanico, hanno una spinta che non dimentichi in fretta.",
+          "thingsToDo": [
+            "Scendi nel cratere fumante di Stefanos",
+            "Gira per i vicoli acciottolati di Mandraki",
+            "Bagno nelle sorgenti termali di Loutra",
+            "Compra capperi di terreno vulcanico da portare a casa"
+          ],
+          "mooringTip": "Pali, sulla costa nord, è la scelta tranquilla: di poppa per circa €25–35 e riparato da nord. Mandraki, sul lato ovest, è più vicino alle attrazioni ma più piccolo ed esposto appena il vento ha una componente da nord-ovest."
+        },
+        "9": {
+          "shortDescription": "Quindici miglia dolci verso est portano a Tilos, prima isola della Grecia a rifiuti zero, dove un borgo abbandonato riapre ogni sera come taverna.",
+          "description": "Tilos porta le sue credenziali verdi senza nasconderle: va a solare ed eolico, e i sacchetti di plastica sono vietati dal 2018, il che ne fa la prima isola della Grecia a rifiuti zero. Dopo il vulcano, le quindici miglia verso est sembrano una tappa di recupero. Livadia, sulla costa est, è il porto: riparato da nord e silenzioso la sera. Il pezzo forte è Mikro Chorio, un villaggio dell'Ottocento svuotato decenni fa che nelle notti d'estate torna a vivere come una sola taverna con bar in cima alla collina, tra le rovine. Sali per un bicchiere a tarda ora e all'atmosfera pensa il posto. Di giorno la camminata fino al monastero di Agios Panteleimon è l'escursione classica, e le piccole cantine dell'isola stanno tirando fuori bottiglie biologiche che valgono un assaggio. Prova la mizithra con miele di timo in un kafeneio di paese.",
+          "thingsToDo": [
+            "Un bicchiere tra le rovine di Mikro Chorio",
+            "Camminata fino al monastero di Agios Panteleimon",
+            "Degusta il vino biologico di Tilos",
+            "Prova la mizithra con miele di timo"
+          ],
+          "mooringTip": "Quasi tutti gli equipaggi ormeggiano di poppa a Livadia, sulla costa orientale, attorno ai €20–30 a notte e al riparo dai venti di nord. Preferisci stare all'ancora e nuotare? Punta alla baia di Eristos, un'ampia distesa di sabbia sulla costa sud."
+        },
+        "10": {
+          "shortDescription": "Quindici miglia a sud fino a Chalki, senza auto: trecento abitanti, un castello dei Cavalieri sul crinale e snorkeling blu neon un miglio a est.",
+          "description": "Chalki è minuscola e quasi del tutto senza auto: ci vivono circa trecento persone, tutte attorno al ferro di cavallo del porto di Emporio. I palazzi che circondano la baia furono costruiti dai mercanti di spugne dell'Ottocento, e l'intero fronte mare è stato restaurato con delicatezza invece che ricostruito. Ormeggia di poppa sulla banchina di Emporio, riparata da nord. Una breve camminata o un giro a motore verso est ti portano a Pontamos, una caletta dove l'acqua sopra la sabbia chiara brilla di un blu quasi artificiale, e lo snorkeling lì è il motivo per cui molti equipaggi deviano su Chalki. A terra, la salita al vecchio Castello dei Cavalieri sul crinale ti mette Rhodes all'orizzonte. Per cena cerca la pougia, il polpo essiccato al sole, alla Taverna Giorgos, e chiudi con un bicchierino di souma, il distillato di fichi che Yiannis produce poco più su nel vicolo.",
+          "thingsToDo": [
+            "Snorkeling nell'acqua blu neon della caletta di Pontamos",
+            "Sali al Castello dei Cavalieri sul crinale",
+            "Polpo essiccato pougia alla Taverna Giorgos",
+            "Assaggia il distillato di fichi souma di Yiannis"
+          ],
+          "mooringTip": "La banchina di Emporio è il tuo ormeggio, di poppa attorno ai €20–30 e riparata da nord. Lo spazio su quest'isola piccola è limitato, quindi se preferisci nuotare dai fondo su sabbia davanti a Pontamos tra i quattro e i sei metri."
+        },
+        "11": {
+          "shortDescription": "Trentadue miglia a est fino a Rhodes e alla sua città vecchia medievale cinta da mura, la più grande d'Europa, con bagno ad Anthony Quinn Bay lungo la rotta.",
+          "description": "A Rhodes lo scenario cambia marcia. Trentadue miglia verso est ti portano a Mandraki, il marina proprio sotto la città medievale, e vale la pena spezzare la traversata con un bagno ad Anthony Quinn Bay poco più a sud, dove i pini scendono fino all'acqua. La città vecchia è il più grande centro medievale abitato d'Europa, un labirinto patrimonio UNESCO dentro mura imponenti. Percorri la Via dei Cavalieri fino al Palazzo del Gran Maestro, poi lasciati perdere nei vicoli sul retro. La sera, quando i turisti giornalieri si diradano, i cortili danno il meglio: il bar con giardino nascosto in Socratous è un buon posto dove finire. Dopo una settimana di isole quasi deserte, il brusio di una vera città è una scossa, ma per quasi tutti gli equipaggi è una scossa benvenuta.",
+          "thingsToDo": [
+            "Percorri la Via dei Cavalieri",
+            "Visita il Palazzo del Gran Maestro",
+            "Bagno ad Anthony Quinn Bay, tra i pini",
+            "Trova il bar con giardino in Socratous"
+          ],
+          "mooringTip": "Mandraki Marina ti mette di poppa con trappe per €60–90, proprio sotto le mura. Fai carburante alla banchina all'ingresso prima di ormeggiare, e metti in conto che in piena estate il marina è affollato."
+        },
+        "12": {
+          "shortDescription": "Ventiquattro miglia fino a Symi, con i suoi palazzi ocra e pesca a terrazze che salgono dal porto: l'immagine da cartolina del Dodecaneso.",
+          "description": "Symi è il colpo di teatro del Dodecaneso, e lo sa. Il porto di Gialos si arrampica sulle colline in terrazze di palazzi ocra, pesca e azzurro sbiadito, costruiti quasi tutti sulla ricchezza dell'antico commercio delle spugne. Il problema è trovare posto: la banchina interna è piccola e si riempie in fretta, quindi in alta stagione spingiamo per arrivare entro le quattro del pomeriggio, oppure scegliamo la comoda opzione dell'ancoraggio nella baia di Pedi, un paio di miglia a est. Una volta sistemati, il paese è tutto scalinate, gatti e gioiellerie. Compra una spugna naturale direttamente da una bancarella del porto, ordina i piccoli gamberetti dolci di Symi fritti interi in una taverna sul molo e, se resta tempo, fai un giro con il tender fino a Nanou per un bagno raggiungibile solo dall'acqua. Il monastero di Panormitis, più giù lungo la costa, ripaga la deviazione.",
+          "thingsToDo": [
+            "Compra una spugna naturale da una bancarella del porto",
+            "Gamberetti di Symi fritti interi sul molo",
+            "Tender fino alla spiaggia di Nanou per un bagno",
+            "Visita il Monastero di Panormitis, del Settecento"
+          ],
+          "mooringTip": "La banchina interna è di poppa a €30–50 ma stretta, e in stagione è di solito piena verso le quattro del pomeriggio, quindi arriva presto. Se non c'è posto, dai fondo su sabbia nella baia di Pedi, due miglia a est, tra i cinque e i sette metri."
+        },
+        "13": {
+          "shortDescription": "Un'ultima lunga navigazione di trentotto miglia verso Kos, che si chiude sotto un platano in piedi da ben oltre duemila anni.",
+          "description": "L'ultima vera giornata di navigazione è lunga: trentotto miglia a nord-ovest, di solito con un comodo lasco di ritorno a Kos. Kos Marina è la base charter più grande del Dodecaneso, con servizi completi e banchina carburante, quindi fai il pieno prima di ormeggiare per evitare grane domattina. La città merita un ultimo giro: l'antico santuario di guarigione dell'Asklepion sta sulla collina sopra, e Therma Beach, a est, ha una sorgente calda naturale che finisce dritta in mare. Per la cena d'addio il posto è la piazza di Platia Platanou, dove si mangia il kleftiko, agnello a cottura lenta, sotto un platano che si dice abbia circa duemilacinquecento anni. Dai una pulita alla barca stasera: rende la riconsegna di domani molto più rapida.",
+          "thingsToDo": [
+            "Visita l'antico santuario di guarigione dell'Asklepion",
+            "Bagno nella sorgente calda di Therma Beach",
+            "Agnello kleftiko in Platia Platanou",
+            "Carburante e pulizie della barca al marina"
+          ],
+          "mooringTip": "Kos Marina è di poppa con trappe a €60–90, con banchina carburante all'ingresso per fare il pieno prima di ormeggiare. Conferma alla base lo slot di riconsegna con un giorno d'anticipo, così la mattina fila liscia."
+        },
+        "14": {
+          "shortDescription": "Riconsegna entro le nove, un ultimo bagno a Tigaki se c'è tempo e venticinque minuti di strada per l'aeroporto di Kos.",
+          "description": "I giorni di sbarco lasciano sempre un po' di malinconia, ma Kos rende il finale semplice. La base vuole la barca indietro prima delle nove, quindi conviene avere le borse fatte e la coperta in ordine già la sera prima. La riconsegna è lineare: fai il giro della barca con il base manager, lui controlla tutto, e la cauzione viene di norma svincolata entro sette giorni una volta firmato. Se il volo è più tardi c'è tempo per un ultimo bagno: Tigaki, lunga spiaggia bassa e sabbiosa sulla costa nord, è la scelta più comoda, oppure puoi far durare un frappé in un caffè di Kos town guardando arrivare i prossimi equipaggi. L'aeroporto è a circa venticinque minuti di strada, quindi non serve bere l'ultimo caffè di corsa. Due settimane e un giro completo del Dodecaneso alle spalle.",
+          "thingsToDo": [
+            "Giro della barca con il base manager",
+            "Ultimo bagno alla spiaggia di Tigaki",
+            "Un frappé a Kos town",
+            "Transfer per l'aeroporto di Kos, 25 minuti"
+          ],
+          "mooringTip": "Riconsegna la barca a Kos Marina prima delle nove, poi lascia che la base faccia l'ispezione. La cauzione si sblocca di solito entro sette giorni dalla firma della checklist."
+        }
+      }
+    },
+    "lavrion-kea-kythnos-sifnos": {
+      "metaTitle": "Cicladi occidentali in 7 giorni | Boat4You",
+      "metaDesc": "Giro di 7 giorni da Lavrion tra Kea, Kythnos, Sifnos e Serifos: sorgenti termali, banchine tranquille e la cucina migliore delle Cicladi.",
+      "days": {
+        "1": {
+          "shortDescription": "Diciotto miglia tranquille al traverso verso sud-est, via dal continente, fino a Kea: prima notte sulla banchina gratuita di Korissia o nella riparata Vourkari.",
+          "description": "Il primo pomeriggio fuori da Lavrion è facile: diciotto miglia est-sud-est in mare aperto fino a Kea, una tappa di riscaldamento per far prendere confidenza all'equipaggio con la barca. Korissia, il porto principale sull'angolo nord-ovest dell'isola, ha una banchina comunale gratuita, ma è aperta a nord e diventa mossa appena il Meltemi supera i diciotto nodi. Quando succede ci infiliamo un miglio più a nord a Vourkari, dove la tenuta è migliore e le trappe rendono indolore l'ormeggio di poppa. Punta a essere ormeggiato entro le quattro, perché all'imboccatura di Korissia l'onda si irrigidisce con il passare del pomeriggio. A terra, gli ouzeri di pesce sul lungomare di Vourkari sono il vero motivo per cui la maggior parte degli equipaggi si ferma qui. Prima di cena sali a Ioulida e perditi un'ora tra i suoi vicoli di marmo.",
+          "thingsToDo": [
+            "Il Leone di pietra di Kea, del VI secolo",
+            "Immersione sul relitto del Patris, al largo di Koundouros",
+            "Polpo e ouzo sul fronte mare di Vourkari",
+            "Gira per i vicoli di marmo di Ioulida"
+          ],
+          "mooringTip": "La banchina comunale di Korissia è gratuita ma completamente esposta quando il Meltemi gira a nord. Sopra i diciotto nodi, spostati un miglio più a nord a Vourkari, dove trovi posti con trappe (circa EUR 25-35) e una tenuta più costante."
+        },
+        "2": {
+          "shortDescription": "Venti miglia di lasco verso sud fino a Kythnos, dove l'acqua minerale calda sgorga dritta nel porto di Loutra e il banco di Kolona chiama un bagno a pranzo.",
+          "description": "Con il Meltemi al giardinetto, le venti miglia fino a Kythnos sono il tipo di navigazione per cui si prende una barca a noleggio: brezza portante costante e barca che rolla dolcemente verso sud. Spezza la rotta a Kolona, la sottile lingua di sabbia che unisce l'isola principale all'isolotto di Agios Loukas, e dai fondo per un bagno dove l'acqua digrada dal turchese al blu profondo su entrambi i lati del banco. Loutra, sulla costa nord-est, è il premio della giornata. Le sorgenti termali naturali scendono dentro il porto stesso, così una volta ormeggiato di poppa bastano pochi metri a piedi per immergersi in un'acqua vicina ai trentotto gradi. Niente scioglie le spalle dopo una giornata di vela come questo. I posti costano attorno a EUR 25-40 con trappe, ben riparati da nord.",
+          "thingsToDo": [
+            "Bagno nelle sorgenti termali di Loutra",
+            "Nuota sul banco di sabbia della doppia baia di Kolona",
+            "Percorri la strada di crinale da Chora a Driopida",
+            "Torta salata sfougato al formaggio a Driopida"
+          ],
+          "mooringTip": "Ormeggia di poppa con le trappe dentro il porticciolo di Loutra (EUR 25-40), ben protetto da nord. Se in alta stagione si riempie, Merichas sulla costa ovest è il piano B."
+        },
+        "3": {
+          "shortDescription": "Ventotto miglia veloci al traverso oltre Serifos fino a Sifnos, l'isola-cucina delle Cicladi, all'ancora a Kamares prima che arrivi l'onda da ovest.",
+          "description": "Ventotto miglia oggi, un traverso vero con il Meltemi standard che mangia in fretta la distanza, mentre Serifos scorre a dritta. Kamares, la baia dei traghetti sulla costa ovest di Sifnos, è la meta di quasi tutti. Ripara bene da nord e nord-est, ma l'imboccatura guarda a ovest e a fine agosto, quando il Meltemi prende una componente occidentale, l'onda si infila dentro e l'ancoraggio diventa irrequieto. In quelle notti giriamo a Platys Gialos, sulla costa sud, e dormiamo come si deve. Sifnos si guadagna il nome a tavola. È la patria della revithada, i ceci lasciati tutta la notte nel forno a legna, e del mastelo, l'agnello cotto lentamente in pentola di terracotta con aneto e vino rosso. Prenota un tavolo su ad Artemonas e mangia come l'isola mangia da generazioni.",
+          "thingsToDo": [
+            "Agnello mastelo su ad Artemonas",
+            "Passeggiata fino al monastero di Chrysopigi, a Faros",
+            "Guarda i vasai al tornio a Vathy",
+            "Bagno nelle lunghe sabbie di Platys Gialos"
+          ],
+          "mooringTip": "Dai fondo su sabbia tra i cinque e gli otto metri a Kamares, oppure prendi la breve banchina di poppa per EUR 20-30. Quando il vento gira a ovest e l'onda entra, spostati a Platys Gialos sulla costa sud."
+        },
+        "4": {
+          "shortDescription": "Solo quattordici miglia a nord fino a Serifos: sosta snorkeling a Koutalas, poi una notte vigile a Livadi, dove il Meltemi si incanala forte.",
+          "description": "Giornata corta, appena quattordici miglia lungo costa, il che lascia libera la mattina. Prima dai fondo a Koutalas, sulla costa sud, dove un promontorio blocca la tramontana e lo snorkeling sugli scogli vale un'ora o due. Livadi, il porto principale, è l'ormeggio notturno, e va rispettato: la baia funziona da imbuto e accelera il Meltemi che scende dalle colline. La tenuta su sabbia è buona una volta che l'ancora è davvero dentro, ma se c'è una storia di Serifos che tutti gli skipper si scambiano è quella di aver arato fuori da Livadi nel cuore della notte. Filaci calumo abbondante, immergiti a controllare che l'ancora abbia davvero preso, e non mandare nessuno a terra finché non sei sicuro. Quando poi sali, la mulattiera per Chora è mezz'ora di tornanti, ripagata da mulini a vento e da una lunga vista sulla baia.",
+          "thingsToDo": [
+            "Snorkeling sugli scogli della baia di Koutalas",
+            "Sali la mulattiera fino a Chora",
+            "Revithada in un kafeneio di Chora",
+            "Tramonto tra i mulini a vento di Chora"
+          ],
+          "mooringTip": "Ancoraggio diurno a Koutalas su sabbia tra i cinque e i sette metri. Per la notte a Livadi ancora tra i cinque e gli otto metri con calumo lungo, oppure di poppa sulla banchina comunale per EUR 20-30; in ogni caso, immergiti a controllare l'ancora prima di rilassarti."
+        },
+        "5": {
+          "shortDescription": "Quindici miglia di nuovo a nord fino a Kythnos, stavolta a Merichas, con una lunga sosta pranzo nella riparata caletta di Apokrousi.",
+          "description": "Si risale a nord: quindici miglia riportano a Kythnos, questa volta a Merichas sulla costa ovest. È una sosta più casalinga di Loutra: una modesta banchina traghetti, una fila di taverne gestite dalle famiglie che le possiedono, e un ormeggio molto più semplice da manovrare dell'esposto ancoraggio di Kolona quando è in arrivo del vento. Fermati per pranzo ad Apokrousi, un'ampia caletta sabbiosa poco più a nord che resta calma con la tramontana, e fai il bagno dalla barca prima di scendere in porto. Più tardi, sali a piedi o in macchina fino a Chora: la salita da Merichas è un bel pezzo di strada nell'entroterra, e dal crinale in cima si spalanca una vista larga sul canale. Taverne tranquille, vino fresco, a letto presto.",
+          "thingsToDo": [
+            "Pranzo e bagno nella caletta di Apokrousi",
+            "Percorri la strada di crinale da Merichas a Chora",
+            "Vista dall'alto sul canale da Chora",
+            "Aperitivo al tramonto sulla banchina di Merichas"
+          ],
+          "mooringTip": "Ormeggia di poppa sulla banchina comunale di Merichas (EUR 20-30), riparata dal Meltemi di tramontana. È una notte più tranquilla e più indulgente di Kolona se il vento è previsto sopra i venticinque nodi."
+        },
+        "6": {
+          "shortDescription": "Finalmente verso casa, ventidue miglia a nord-ovest fino a Lavrion, con un ultimo tuffo sotto il tempio di Poseidone che corona Capo Sounion.",
+          "description": "Il rientro è di ventidue miglia a nord-ovest, e porta con sé un ultimo regalo. Capo Sounion sta sull'avvicinamento a Lavrion, e il tempio di Poseidone si erge sul promontorio sopra un buon ancoraggio a mezzo miglio dalla costa. Dai fondo su sabbia tra i cinque e gli otto metri, riparato da nord, e concediti un ultimo bagno con duemilacinquecento anni di marmo che ti guardano dall'alto. Calcolalo per la metà della giornata e avrai l'acqua tutta per te prima che arrivino i pullman. Da lì è un salto breve fino a Lavrion. Passa dalla banchina carburante in ingresso e fai il pieno, così la barca è pronta per la riconsegna. Quasi tutte le basi all'Olympic Marina ti vogliono in banchina entro le cinque della sera prima del check-out.",
+          "thingsToDo": [
+            "Bagno sotto il Tempio di Poseidone",
+            "Ancoraggio a Capo Sounion a mezzogiorno",
+            "Carburante e lavaggio a Lavrion",
+            "Cena d'addio sul lungomare di Lavrion"
+          ],
+          "mooringTip": "Fai carburante alla banchina d'ingresso prima di ormeggiare, poi prendi un posto di poppa con trappe all'Olympic Marina (EUR 60-90). Conferma l'orario di riconsegna con un giorno d'anticipo e punta a essere in banchina entro le cinque della sera prima."
+        },
+        "7": {
+          "shortDescription": "Riconsegna prima delle nove, ispezione con il base manager, poi un ultimo caffè sul porto prima dei cinquanta minuti fino all'aeroporto di Atene.",
+          "description": "Il check-out a Lavrion è indolore se hai tenuto la barca in ordine durante la settimana. La riconsegna è di solito prima delle nove, quindi fai le valigie la sera prima e sfai le cuccette presto. Fai il giro d'ispezione insieme al base manager invece di lasciarglielo fare da solo, e fotografa qualsiasi cosa venga messa a verbale come danno prima di firmare: la cauzione dovrebbe tornare sul tuo conto entro una settimana. Poi arriva il rito che chiude ogni charter: un caffè lento in uno dei kafeneia sul fronte di Lavrion, mentre l'equipaggio si scambia le storie della settimana. L'aeroporto di Atene è a circa cinquanta minuti di strada, anche se il traffico del venerdì può allungarli, quindi lascia un margine se voli via lo stesso giorno. E lascia una mancia ai ragazzi del pontile, se ti hanno dato una mano.",
+          "thingsToDo": [
+            "Fai l'ispezione finale con il base manager",
+            "Fotografa ogni danno a verbale prima di firmare",
+            "Ultimo caffè sul lungomare di Lavrion",
+            "Cinquanta minuti di transfer per l'aeroporto di Atene"
+          ],
+          "mooringTip": "Riconsegna prima delle nove dopo il giro d'ispezione con il base manager. Fotografa tutto ciò che viene segnalato come danno prima di firmare, e aspettati la cauzione entro sette giorni da un'ispezione senza rilievi."
+        }
+      }
+    }
+  },
+  "areas": {
+    "cyclades": {
+      "metaTitle": "Itinerari a vela nelle Cicladi | Boat4You",
+      "metaDesc": "Rotte da Atene, Lavrio, Mykonos, Paros e Santorini attraverso le Cicladi — sinceri sul meltemi, precisi sulle miglia.",
+      "title": "Villaggi bianchi, acqua blu, vento vero",
+      "description": "Le Cicladi sono la cartolina — i mulini di Mykonos, la caldera di Santorini, le cappelle sulle colline spoglie — ma sono anche la vela più onesta dell'Egeo. A luglio e agosto il meltemi soffia duro, 20–30 nodi da nord per giorni di fila, e questo trasforma le tappe in navigazione vera e premia gli equipaggi che gli pianificano attorno. Scendete a sud con lui, non contro; partite presto; considerate i giorni di riposo parte della rotta. Giugno e settembre addolciscono tutto. Paros e Naxos sono le migliori basi di metà settimana, con paesi veri dietro le banchine, e Lavrio vi risparmia un'ora di traffico ateniese il primo giorno. È l'area per gli equipaggi che vogliono che la storia sia la navigazione stessa."
+    },
+    "dodecanese": {
+      "metaTitle": "Itinerari a vela nel Dodecaneso | Boat4You",
+      "metaDesc": "Rotte da Kos e Rhodes: il porto ad anfiteatro di Symi, il vulcano di Nisyros e la quiete di Kalymnos — con note vere su venti e ormeggi.",
+      "title": "Isole di frontiera con due bandiere in vista",
+      "description": "Navigare nel Dodecaneso significa infilare una catena di isole che hanno conservato castelli crociati, porti italiani in stile déco e villaggi di pescatori greci, tutto a vista della costa turca. Symi è lo spettacolo: un anfiteatro neoclassico attorno a un porto per cui litigherete alle sei di sera e che perdonerete alle sette. Nisyros vi fa camminare dentro un vulcano attivo; a Kalymnos si pesca ancora la spugna; la città vecchia di Rhodes è una città medievale con una marina attaccata. Il meltemi si incanala tra le isole, quindi le tappe pomeridiane possono farsi vivaci: programmatele presto e tenete un ancoraggio di riserva. Funzionano sia i charter da Kos sia quelli da Rhodes; Kos accorcia le tappe, Rhodes aggiunge il gran finale."
+    },
+    "ionian": {
+      "metaTitle": "Itinerari a vela nello Ionio | Boat4You",
+      "metaDesc": "Rotte da Lefkas, Corfu e Preveza: Meganisi, Ithaca, Kefalonia, Paxos — mare piatto e brezza pomeridiana, giorno per giorno.",
+      "title": "La Grecia con la difficoltà abbassata",
+      "description": "Lo Ionio funziona con un orario su cui potete regolare l'orologio: mattine di vetro, una brezza amichevole da nord-ovest dall'ora di pranzo al tramonto, poi di nuovo calma per la cena in banchina. Niente meltemi, tappe corte, baie profonde e riparate: è qui che le flottiglie greche imparano a camminare ed è qui che gli equipaggi esperti vengono per riposare davvero. Da Lefkas raggiungete i fiordi di Meganisi in un pomeriggio; Ithaca e Kefalonia riempiono la metà della settimana con montagne verdi e porti da una taverna sola; Fiskardo e Kioni sono belli quanto può esserlo un villaggio greco. Più a nord, Corfu aggiunge le strade veneziane e Paxos le sue famose falesie occidentali. Portate una cima lunga per dare poppa alla banchina di una taverna: la userete ogni sera."
+    },
+    "sporades": {
+      "metaTitle": "Itinerari a vela nelle Sporadi | Boat4You",
+      "metaDesc": "Rotte da Volos e Skiathos verso Skopelos e Alonissos — pinete, baie da film e il più antico parco marino d'Europa.",
+      "title": "Isole verdi che le carte sottovalutano",
+      "description": "Le Sporadi non finiscono mai sui manifesti, il che va benissimo a chi ci naviga. Sono isole boscose — pineta fino alla battigia — sparse in un mare che ospita il più antico parco marino d'Europa, dove le foche monache si riposano ancora sulle rocce e i delfini lavorano i canali. Skiathos porta l'aeroporto e la vita notturna; Skopelos porta la cappella di Mamma Mia e un paese portuale che profuma di prugne e resina; Alonissos porta il silenzio. Le tappe sono corte, gli ancoraggi sabbiosi, e il meltemi arriva qui più morbido che nelle Cicladi. Partire da Volos aggiunge una giornata continentale attraverso il golfo Pagasetico, calmo come un lago. Una settimana qui sembra più lunga di quello che è, nel modo migliore."
+    }
+  }
+}

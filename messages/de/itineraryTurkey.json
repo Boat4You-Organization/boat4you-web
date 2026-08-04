@@ -1,1 +1,838 @@
-{}
+{
+  "routes": {
+    "bodrum": {
+      "metaTitle": "7 Tage Golf von Gökova ab Bodrum | Boat4You",
+      "metaDesc": "Eine Woche Yachtcharter ab Bodrum rund um den Golf von Gökova: Thermalquellen auf Kara Ada, Bojen in Çökertme, Kleopatras Strand und stilles Mersincik.",
+      "days": {
+        "1": {
+          "shortDescription": "Ein entspannter Vier-Meilen-Schlag nach Süden zur Schwarzen Insel Kara Ada, wo warme Mineralquellen neben einer Sandbucht sprudeln, wie gemacht fürs erste Bad.",
+          "description": "Kara Ada liegt nur vier Meilen südlich von Bodrum, deshalb ist der erste Tag weniger eine Etappe als ein Warmlaufen. Meist werfen wir die Marinaleinen am frühen Nachmittag los, wenn das Boot verstaut und der Papierkram erledigt ist, und lassen die Crew auf flachem Wasser die Seebeine finden. Die Insel ist vulkanisch, und an ihrem Südende liegen flache Becken, die von warmen Mineralquellen gespeist werden; die Einheimischen baden hier seit Generationen, und der kurze Törn mit dem Beiboot an Land lohnt sich. Der Anker fällt in der Bucht auf gut haltenden Sand, vier bis sechs Meter, schön eingerückt gegen Norden. Das zählt im Juli und August, wenn der Meltemi mit fünfzehn bis fünfundzwanzig Knoten von Norden herunterkommt und über den Nachmittag zulegt. Es gibt weder Kai noch Laden, also Wasser und Proviant vor dem Ablegen auffüllen.",
+          "thingsToDo": [
+            "In den warmen Quellbecken an Land baden",
+            "Über die schwarzen Vulkankanten schnorcheln",
+            "Sundowner und Meze in der Bucht",
+            "Über die Ziegenpfade hinauf zur Aussicht"
+          ],
+          "mooringTip": "Ankern ist in der Bucht kostenlos; der Sand hält auf vier bis sechs Metern gut und schirmt dich gegen den Nordwind ab. An Land gibt es nichts zum Festmachen – wer Strom und Wasser braucht, fährt die vier Meilen zurück zur Bodrum Marina, in der Hochsaison 80–130 € pro Nacht."
+        },
+        "2": {
+          "shortDescription": "Fünfzehn Meilen ostwärts ins ruhigere Golfwasser nach Çökertme, eine von Pinien gesäumte Bucht, in der die Restaurantbojen gratis sind, wenn man an Land isst.",
+          "description": "Ab Kara Ada geht es nach Osten, und der Charakter des Segelns ändert sich. Sobald du in den Golf von Gökova einbiegst, legt sich die Dünung und der Wind lässt gegenüber der Außenküste nach, sodass die fünfzehn Meilen nach Çökertme meist entspannt auf raumem Kurs vergehen. Die Bucht öffnet sich als weites Hufeisen, die Pinien reichen bis ans Ufer, und es ist so still, dass man die Zikaden hört, bevor man die Bojen sieht. Ein paar Familienrestaurants legen Bojen aus, und die Abmachung ist alt und einfach: Boje nehmen, unter den Weinreben zu Abend essen, und die Nacht kostet nichts. Der Name gehört zu einem alten Bootsmannslied, das an dieser Küste noch immer gesungen wird. Wer lieber am eigenen Anker liegt, findet auf fünf bis sieben Metern gut haltenden Sand mit sicherem Schutz von Norden. Gegrillte Köfte und ein kaltes Efes beschließen den Abend.",
+          "thingsToDo": [
+            "Köfte über Olivenholz gegrillt an Land",
+            "Nachtschwimmen in der stillen Bucht",
+            "Durch die Pinien oberhalb der Bucht wandern",
+            "Dem alten Çökertme-Lied lauschen"
+          ],
+          "mooringTip": "Nimm eine der Restaurantbojen, dann ist das Abendessen die einzige Rechnung. Sind sie belegt oder magst du es privater, ankerst du mitten in der Bucht auf Sand in fünf bis sieben Metern, gut geschützt von Norden. Außerhalb der August-Spitze musst du nicht vorbuchen."
+        },
+        "3": {
+          "shortDescription": "Tiefer in den Golf hinein zur Insel Sedir mit ihrem sagenumwobenen goldenen Strand, zu dem du schwimmen, den du aber nie betreten darfst.",
+          "description": "Weitere fünfzehn Meilen ostwärts bringen dich nach Sedir Adası, im Ausland besser bekannt als Kleopatra-Insel. Die Legende sagt, Marcus Antonius habe den feinen goldenen Sand für die Königin aus Nordafrika herbringen lassen – und Kornanalysen verorten seinen Ursprung tatsächlich weit südlich der Ägäis, die Geschichte hat also mehr Substanz als die meisten. Der Haken: Der Strand steht unter Schutz, die Ranger erlauben das Schwimmen vom Wasser aus, aber keinen Schritt auf den Sand. Also mit dem Beiboot hin und treiben lassen, nicht flanieren. Oberhalb des Strandes liegen die Mauern und das kleine Theater des antiken Kedreai, ein leichter Bummel zwischen Pinien und umgestürzten Säulen. Schnorchler können die alten Hafenmolen knapp unter der Oberfläche verfolgen. Geankert wird im Kanal an der Nordseite, Sand in fünf bis sieben Metern, geschützt vor dem vorherrschenden Nordwind. Sei am frühen Nachmittag da; die Ausflugsboote aus Marmaris werden später weniger.",
+          "thingsToDo": [
+            "Zum abgesperrten Kleopatra-Strand schwimmen",
+            "Durch die Ruinen des antiken Kedreai streifen",
+            "Über die versunkenen Hafenmauern schnorcheln",
+            "Wolfsbarsch und Rakı am Tisch an der Pier"
+          ],
+          "mooringTip": "Der Anker fällt im Nordkanal auf Sand in fünf bis sieben Metern, abgedeckt gegen Norden. Das Gebiet ist Nationalpark, also die Seile am Strand respektieren und den Sand nicht betreten. Früh genug ankommen, bevor die Ausflugsboote am Nachmittag den Ankerplatz füllen."
+        },
+        "4": {
+          "shortDescription": "Knappe zwölf Meilen hinüber ans stille Südufer des Golfs nach Karaca, ein Fischerweiler zwischen Oleander und Kieselstrand.",
+          "description": "Karaca liegt zwölf Meilen quer über den Golf an dessen Südufer, eine Falte in der Küste, in der sich ein kleines Fischerdorf hinter einem Kieselstrand versteckt. Oleander drängt bis ans Wasser, und das Tempo fällt noch eine Stufe; das ist die Sorte Ort, an dem man den Nachmittag damit verbringt, sehr wenig zu tun. Die Restaurants machen hier dasselbe Boje-gegen-Abendessen-Geschäft wie in Çökertme, ein Tisch an Land bringt dir also eine kostenlose Nacht an der Muring. Wir kommen meist am frühen Nachmittag an, springen vom Heck ins Wasser und rudern dann für einen frühen Rakı hinein. Der Grund in der Bucht ist guter Sand in vier bis sechs Metern, und die Hügel riegeln sie vollständig gegen den Nordwind ab. Frag nach dem Lamm vom Spieß, das ist die lokale Spezialität und das Warten wert. Bargeld mitbringen, so weit draußen sind die Kartenlesegeräte unzuverlässig.",
+          "thingsToDo": [
+            "Am Kiesstrand nach Meerglas suchen",
+            "Backgammon unter dem alten Feigenbaum",
+            "Lamm vom Spieß an einem Familientisch",
+            "Vom Heck ins spiegelglatte Wasser springen"
+          ],
+          "mooringTip": "Nimm eine Restaurantboje und begleiche die Muring mit dem Preis des Abendessens. Lieber unabhängig? Die Bucht hält gut auf Sand in vier bis sechs Metern und ist nach Norden komplett dicht. Sie wird selten voll, Reservieren erübrigt sich."
+        },
+        "5": {
+          "shortDescription": "Zurück nach Westen nach Mersincik, eine von Granit bewachte Bucht mit Meereshöhle am Ende, Thymian an den Hängen und meilenweit kein Licht.",
+          "description": "Den Bug nach Westen und fünfzehn Meilen den Golf zurück nach Mersincik, einem der wilderen Ankerplätze dieser Runde. Die Einfahrt verengt sich zwischen grauem Granit, und am Ende der Bucht lädt eine flache Meereshöhle dazu ein, mit Kajak oder Beiboot hineinzupaddeln. Gebaut ist hier nichts, und genau das ist der Punkt. Hinter dem Strand klettert ein rauer Pfad auf einen Kamm voller wildem Thymian; zerreib einen Zweig zwischen den Fingern, und du weißt, warum der Honig dieser Küste so geschätzt wird. Der Grund ist verlässlicher Sand in vier bis sechs Metern, und die umliegenden Hügel halten den Schwell aus jeder Richtung draußen. Weil die Bucht im geschützten Gökova-Reservat liegt, gibt es weder Laden noch Diesel – Kühlschrank füllen und Tanks vollmachen, bevor du Karaca verlässt. Nach Einbruch der Dunkelheit öffnet sich der Himmel; ohne Stadt in Reichweite kommen die Sterne bis aufs Wasser herunter.",
+          "thingsToDo": [
+            "Mit dem Kajak in die Meereshöhle paddeln",
+            "Auf den Thymiankamm über der Bucht steigen",
+            "Kalte Zeytinyağlı-Gerichte an Deck",
+            "Sterne schauen ganz ohne Lichtverschmutzung"
+          ],
+          "mooringTip": "Überall freies Ankern auf Sand in vier bis sechs Metern, rundum geschützt von den Granithügeln. Es gibt keine Marina und keine Versorgung, also voll bestückt und mit vollem Wasser- und Dieseltank anreisen."
+        },
+        "6": {
+          "shortDescription": "Die letzte Etappe zurück nach Bodrum, wo eine Kreuzritterburg den Hafen bewacht und eines der ältesten je gehobenen Schiffswracks beherbergt.",
+          "description": "Die Schlussetappe führt fünfzehn Meilen zurück nach Bodrum, am besten am Morgen gesegelt, bevor der Meltemi aufbaut. Wenn die Stadt voraus auftaucht, beherrscht die honigfarbene Burg St. Peter die Hafeneinfahrt, im fünfzehnten Jahrhundert von den Johannitern hochgezogen. Heute sitzt darin das Museum für Unterwasserarchäologie, und sein Herzstück ist das Wrack von Uluburun, ein bronzezeitlicher Händler, der vor mehr als dreitausend Jahren mit einer Ladung Kupfer, Glas und Elfenbein sank. Nimm dir dafür einen Nachmittag Zeit. Danach lohnen die Gassen und der Basar ein langsames Stöbern, vor allem für handgewebte Baumwolle und die örtlichen Peştemal-Tücher; gefeilscht wird erwartet, und das ist der halbe Spaß. Ruf die Marina einen Tag vorher an, um den Liegeplatz zu bestätigen, und lauf an der Tankstelle vorbei zum Auffüllen, bevor du für die Nacht rückwärts in die Box gehst.",
+          "thingsToDo": [
+            "Das Museum in der Burg St. Peter besuchen",
+            "Vor den Funden des Uluburun-Wracks stehen",
+            "Im Basar um Peştemal-Tücher feilschen",
+            "An der Tankstelle im Hafen volltanken"
+          ],
+          "mooringTip": "In der Bodrum Marina liegst du rückwärts an Mooringleinen, in der Hochsaison rund 80–130 € pro Nacht. Vor dem Einlaufen an der Tankstelle bei der Einfahrt volltanken und vorher anrufen, um den Platz zu sichern – im Hochsommer wird es eng."
+        },
+        "7": {
+          "shortDescription": "Ein ruhiger letzter Morgen am Steg: Boot übergeben, ein letztes Bad und ein türkischer Kaffee vor der kurzen Fahrt zum Flughafen.",
+          "description": "Der Checkout kommt früh. Die meisten Basen wollen das Boot bis neun Uhr längsseits und übergeben haben, also lohnt es sich, am Abend vorher zu packen und im ersten Licht noch einmal durch Backskisten und Bilgen zu gehen. Der Basismanager geht mit dir übers Deck, prüft das Inventar und notiert, was nicht stimmt; fotografiere jede Macke, die auf dem Protokoll landet, bevor du unterschreibst, und behalte eine Kopie. Die Kaution ist normalerweise innerhalb einer Woche zurück auf der Karte. Geht dein Flug erst später, musst du den Kai nicht eilig verlassen: Bestell einen türkischen Kaffee in einem Hafencafé oder fahr für ein letztes Bad zu einem Beachclub in der Nähe. Wenn es soweit ist, sind es unkomplizierte fünfunddreißig Minuten mit dem Auto zum Flughafen Bodrum, und die Marina organisiert gern einen Transfer. Ein entspanntes Ende einer Woche, die von Anfang bis Ende im Geschützten blieb.",
+          "thingsToDo": [
+            "Die Übergabe mit dem Basismanager durchgehen",
+            "Letztes Bad in einem Beachclub in Bodrum",
+            "Türkischer Kaffee am Hafenkai",
+            "Den Transfer zum Flughafen Bodrum organisieren"
+          ],
+          "mooringTip": "Das Boot vor neun Uhr zurück am Liegeplatz haben, dann läuft die Übergabe glatt. Alles, was als Schaden protokolliert wird, vor der Unterschrift fotografieren. Die Kaution kommt in der Regel innerhalb von sieben Tagen zurück."
+        }
+      }
+    },
+    "bodrum-akyaka": {
+      "metaTitle": "7 Tage Bodrum – Akyaka und zurück | Boat4You",
+      "metaDesc": "Sieben Tage rund um den Golf von Gökova ab Bodrum: Meereshöhle Mersincik, Azmak-Fluss in Akyaka, Keramos bei Ören und die Bucht von Çökertme.",
+      "days": {
+        "1": {
+          "shortDescription": "Eine entspannte erste Etappe über 15 Meilen von Bodrum nach Süden zur Bucht Mersincik: Granitkulisse, Meereshöhle fürs Kajak, kein Trubel.",
+          "description": "Nach dem Übergabepapierkram aus der Bodrum Marina auslaufen und den Bug nach Südsüdost legen. Fünfzehn Meilen offenes Wasser reichen, um sich am Boot zurechtzufinden, bevor es technisch wird, und am frühen Nachmittag kommen die Wände von Mersincik an Backbord auf – sie bewachen eine Bucht, die du durch eine Lücke im Granit betrittst. Der Anker fällt auf Sand in vier bis sechs Metern; der Grund hält gut, und Schwell folgt dir hier selten hinein. An Land gibt es nichts, und genau darum geht es. Am Ende der Bucht wartet eine flache Meereshöhle aufs Kajak, und die felsigen Ränder verstecken Grotten, für die sich Maske und Flossen lohnen. Vor dem Abendessen steigen wir meist wegen des Lichts auf den thymianbewachsenen Kamm. Den Kühlschrank vorher in Bodrum füllen, denn der nächste Laden ist weit zurück.",
+          "thingsToDo": [
+            "Mit dem Kajak in die Meereshöhle von Mersincik",
+            "Die Granitgrotten nahe der Einfahrt beschnorcheln",
+            "Auf den Thymiankamm über der Bucht wandern",
+            "Sundowner an Deck in einer bootsfreien Bucht"
+          ],
+          "mooringTip": "Kostenlos ankern auf Sand in 4–6 m nahe dem Buchtende; der Grund hält verlässlich, und bei üblichem Nordwest bleibt es flach. Kein Kai, kein Wasser, kein Diesel – Tanks und Proviant vorher in Bodrum auffüllen."
+        },
+        "2": {
+          "shortDescription": "Ein kurzer Achtmeilenschlag ostwärts nach Kairos, eine stille Bucht, in der ein einziges Restaurant am Kai seine Bojen vergibt und lykische Steine zusehen.",
+          "description": "Hier muss nichts gehetzt werden. Acht Meilen flaches Morgenwasser bringen dich nach Kairos, eine Falte im Südufer, von der die meisten Crews nie gehört haben. Eine Familie betreibt das einzige Restaurant am Wasser, und ihre Bojen gehören dir für den Preis des Abendessens – also Leine aufnehmen und einrichten. Der Kieselstrand fällt schnell in klares Wasser ab; dahinter klettert ein rauer Pfad zu den umgestürzten Steinen eines lykischen Wachpostens, am besten in der Abendkühle. Mittagessen ist hier einfach: ein Balık Ekmek vom Grill am Kai, mit den Füßen im Meer gegessen, und der Nachmittag darf sich ziehen. Die Nächte sind wirklich still, mit kaum mehr Gesellschaft als der einen oder anderen Möwe und dem Boot, das sanft an der Boje schwoit.",
+          "thingsToDo": [
+            "In Kairos eine Restaurantboje aufnehmen",
+            "Zu den Ruinen des lykischen Wachpostens steigen",
+            "Balık Ekmek vom Grill am Kai",
+            "Direkt vom Kieselstrand aus schnorcheln"
+          ],
+          "mooringTip": "Nimm eine der Restaurantbojen und bezahl mit dem Essen an Land; die Bucht ist eng und hält den Nordwind draußen. Sind die Bojen belegt, ankerst du auf Sand und Kies in 4–6 m und gehst rückwärts Richtung Strand."
+        },
+        "3": {
+          "shortDescription": "Zwölf Meilen ostwärts bringen dich nach Karaca, eine Fischerbucht hinter Pinien und Oleander, wo der Tagesfang gegrillt am Kai landet.",
+          "description": "Nach dem Frühstück raus aus Kairos, zwölf Meilen bis Karaca, einer arbeitenden Bucht, in der die Fischerboote noch immer zahlreicher sind als die Charteryachten. Die Ansteuerung ist grün: Pinien reichen bis ans Wasser, Oleander säumt den Kiesstrand. Wie in den Buchten davor gehören die Bojen dem Restaurant, und das Abendessen sichert dir den Platz. Nimm den Klippenpfad, der sich durch Pinien und Thymian über der Bucht entlangzieht; allein der Duft lohnt den Aufstieg, und der Blick zurück über die ankernde Flotte ist großartig. Gleitest du an den Felsen ins Wasser, hängen dort Mönchsfische im Flachen. Wenn die Fischer einlaufen, kauft dir ein Glas Çay am Kai eine Stunde Gespräch. Bestell die Rotbarbe, schlicht mit Zitrone und Öl gegrillt, und mehr brauchst du an dem Abend nicht.",
+          "thingsToDo": [
+            "Den Klippenpfad durch Pinien und Thymian gehen",
+            "An den Felsen nach Mönchsfischen schnorcheln",
+            "Çay mit den Fischern von Karaca trinken",
+            "Gegrillte Rotbarbe in der Taverne am Kai"
+          ],
+          "mooringTip": "Karaca funktioniert wie seine Nachbarn: Restaurantboje aufnehmen, Rechnung beim Abendessen begleichen. Zum Ankern ist wenig Platz – wenn, dann auf Sand in 4–6 m und weg von den Schwojkreisen der Bojen."
+        },
+        "4": {
+          "shortDescription": "Acht Meilen bis ans Ende des Golfs nach Akyaka, ein Ort mit geschnitzten Holzbalkonen am Azmak, wo Kitesurfer den Nachmittagswind reiten.",
+          "description": "Das ist das Ende des Golfs, und der Wind weiß das. Der Gökova-Trichter schiebt an den meisten Sommernachmittagen eine ordentliche Brise durch Akyaka, weshalb die Kite- und Windsurf-Szene hier ihre Basis hat – also die kurzen acht Meilen in der Morgenruhe segeln und festmachen, bevor es einsetzt. Der Ort lohnt die Mühe. Häuser im osmanischen Stil mit geschnitzten Holzbalkonen klettern den Hang hinauf, und der Azmak kommt kalt und glasklar aus den Bergen dahinter. Nimm das Kajak ein paar Kilometer flussaufwärts, vorbei an Reihern im Schilf und, mit Glück und Ruhe, an einem Fischotter. Zurück im Ort findest du eine Lokanta am Flussufer und bestellst Mantı, die kleinen Teigtaschen, ertränkt in Knoblauchjoghurt. Ein lebhafterer Stopp als die Buchten, im besten Sinne.",
+          "thingsToDo": [
+            "Zwei Kilometer den Azmak hinaufpaddeln",
+            "Durch die osmanische Altstadt mit Holzbalkonen",
+            "Mantı in einer Lokanta am Flussufer",
+            "Den Kitesurfern vor dem Strand zusehen"
+          ],
+          "mooringTip": "Akyakas kleine Marina nimmt dich rückwärts für rund 60–90 € pro Nacht, im Juli und August besser vorbuchen. Sei am späten Vormittag da: Der thermische Wind baut hier schnell auf, und das Anlegen wird unangenehm, sobald es richtig bläst. Ankern in der Bucht geht auf Sand in 4–6 m, liegt aber offen zur Nachmittagsbrise."
+        },
+        "5": {
+          "shortDescription": "Zwölf Meilen zurück am Südufer nach Ören, ein Olivenbauerndorf, wo die antiken Steine von Keramos zwischen Wildblumen verstreut liegen.",
+          "description": "Leinen los, solange es noch ruhig ist, und zwölf Meilen das Südufer hinunter nach Ören. Hinter dem Strand steigen Oliventerrassen an, und nach dem Trubel von Akyaka fällt das Tempo zurück auf Dorfzeit. Der Grund zu bleiben heißt Keramos, eine Stadt aus dem 4. Jahrhundert v. Chr., deren Mauern und Säulentrommeln halb verloren im Gras und in den Wildblumen landeinwärts liegen; geh am Morgen vor der Hitze, dann hast du die Ruinen wahrscheinlich für dich. Trifft dein Timing den Markttag, füllt sich der Platz mit Gewürzsäcken und Stapeln lokaler Keramik, in denen sich das Stöbern lohnt. Mittag ist hier Strandsache, ein Teller vom Mangal und ein kaltes Ayran unter dem Strohschirm. Am Abend zieht der Duft von Lamm mit Kreuzkümmel über der Glut den Sand entlang, und dem entkommt man schwer.",
+          "thingsToDo": [
+            "Die Keramos-Ruinen aus dem 4. Jh. v. Chr. erkunden",
+            "Über die Marktstände von Ören schlendern",
+            "Mittagessen am Strand mit kaltem Ayran",
+            "Kreuzkümmel-Lamm vom Mangal im Sand"
+          ],
+          "mooringTip": "Örens kleine Marina ist der günstigste Liegeplatz der Reise, rückwärts für rund 40–60 € pro Nacht. Sie wird weniger voll als Akyaka, ein Anruf in den Spitzenwochen schadet aber nicht. Ankern vor dem Strand auf Sand in 4–6 m funktioniert bei vorherrschendem Nordwest gut."
+        },
+        "6": {
+          "shortDescription": "Fünfzehn Meilen westwärts nach Çökertme, ein pinienumstandenes Hufeisen, berühmt für sein Volkslied, die Familientavernen und das Leuchten im Wasser.",
+          "description": "Heute eine längere Etappe, fünfzehn Meilen westwärts quer über die Golfmündung nach Çökertme, eine Hufeisenbucht in Pinien gehüllt. Türkische Segler kennen sie aus einem alten Volkslied, und in Sommernächten greift am Kai meist jemand zur Saz und spielt es. Die Bucht läuft nach dem bekannten Boje-gegen-Abendessen-Prinzip, mit einer Handvoll Familientavernen, die sanft um deine Gunst konkurrieren. Bestell Köfte über Olivenholz gegrillt, dann verstehst du das Aufheben. Ende August, wenn die Algen blühen, leuchtet ein Bad vom Heck nach Einbruch der Dunkelheit blaugrün um deine Arme – eines dieser Dinge, die niemand glaubt, bevor er sie gesehen hat. Für die Unruhigen gibt es einen Kammweg durch die Pinien über dem Ankerplatz. Ansonsten ist das eine Bucht, die darum bittet, zu bleiben und sehr wenig zu tun.",
+          "thingsToDo": [
+            "Nachtschwimmen im leuchtenden Wasser (Ende Aug.)",
+            "Köfte über Olivenholz in einer Taverne",
+            "Live-Saz-Volksmusik am Kai",
+            "Über den Pinienkamm oberhalb der Bucht gehen"
+          ],
+          "mooringTip": "Dasselbe Spiel wie in den anderen Buchten: Tavernenboje nehmen und mit dem Abendessen bezahlen, was die Restaurants hier ernst nehmen. Ankern geht ebenso, auf Sand in 5–7 m vor dem Strand, und das Hufeisen hält dich sicher vor Norden. An Augustwochenenden wird es voll, also am späten Nachmittag da sein, um einen guten Platz zu bekommen."
+        },
+        "7": {
+          "shortDescription": "Letzte fünfzehn Meilen zurück nach Bodrum, mit Zeit für ein letztes Bad vor Marina, Burg und einem Abschiedsdrink über dem Hafen.",
+          "description": "Die letzte Etappe sind entspannte fünfzehn Meilen zurück nach Bodrum, und es gibt keinen Grund zur Eile. Wenn die Crew mitmacht, noch einmal vor Çökertme ankern für ein Morgenbad, dann Kurs West auf die Marina. Ruf am Vortag an, um den Übergabetermin festzumachen, und geh vor dem Anlegen an Mooringleinen an der Tankstelle bei der Hafeneinfahrt vorbei. Ist das Boot verstaut, gehört der Nachmittag dem Land. Die Burg St. Peter bewacht den Hafen von einem Fundament aus dem fünfzehnten Jahrhundert und beherbergt heute das Museum für Unterwasserarchäologie, gut eine Stunde wert. Danach verlierst du dich im Basar und feilschst um Leder und Safran. Beende die Reise richtig, mit einem Drink in einer Meyhane am Hafen, während die Sonne hinter den Masten versinkt.",
+          "thingsToDo": [
+            "Die Burg St. Peter aus dem 15. Jh. besichtigen",
+            "Im Basar um Leder und Safran feilschen",
+            "Letztes Bad vor Çökertme im Morgengrauen",
+            "Sonnenuntergangsdrink in einer Meyhane am Hafen"
+          ],
+          "mooringTip": "Die Bodrum Marina nimmt dich rückwärts an Mooringleinen, in der Hochsaison rund 80–130 € pro Nacht. Bestätige die Übergabezeit 24 Stunden vorher mit der Basis und halte an der Tankstelle bei der Einfahrt zum Volltanken, bevor du in deine Box gehst."
+        }
+      }
+    },
+    "bodrum-didim": {
+      "metaTitle": "7 Tage von Bodrum nach Ephesos | Boat4You",
+      "metaDesc": "7 Tage Yachtcharter ab Bodrum die türkische Ägäis hinauf: Yalıkavak, Güllük, Apollon-Tempel in Didim, Kuşadası für Ephesos, dann raumschots zurück.",
+      "days": {
+        "1": {
+          "shortDescription": "Entspannter Start in der Bodrum Marina: Boot bebunkern, hinauf zur Burg St. Peter und zwischen den Ruinen des Mausoleums stehen.",
+          "description": "Die meisten Crews verbringen den ersten Tag damit, das Boot herzurichten, statt gleich loszupreschen – und Bodrum belohnt die Pause. Die Marina liegt unterhalb der Burg St. Peter, einer Kreuzritterfestung aus dem fünfzehnten Jahrhundert, in der heute das Museum für Unterwasserarchäologie untergebracht ist; das Uluburun-Wrack darin gehört zu den ältesten je ausgegrabenen. Plan ein paar Stunden dafür ein. Ein kurzer Weg landeinwärts bringt dich zu den verstreuten Steinen des Mausoleums von Halikarnassos, einst eines der Sieben Weltwunder. Es steht nicht mehr viel, aber die Dimension wirkt noch. Frisches Gemüse, Wasser und Eis an Bord bringen, bevor der Nachmittagsmeltemi einsetzt, und in der Dämmerung eine Meyhane am Wasser für Meze und ein Glas Rakı suchen. An der Tankstelle bei der Einfahrt volltanken, damit du morgen mit vollen Tanks losfährst.",
+          "thingsToDo": [
+            "Das Museum für Unterwasserarchäologie besuchen",
+            "Die Steine des Mausoleums von Halikarnassos finden",
+            "Im Basar von Bodrum um Gewürze feilschen",
+            "Meze und Rakı in einer Meyhane am Wasser"
+          ],
+          "mooringTip": "Die Bodrum Marina nimmt dich rückwärts an Mooringleinen und schützt dich vollständig; rechne in der Hochsaison mit 80–130 € pro Nacht. Vor der Fahrt nach Norden an der Tankstelle bei der Hafeneinfahrt auffüllen."
+        },
+        "2": {
+          "shortDescription": "Um die Spitze der Halbinsel ins glänzende Yalıkavak oder ins ruhigere Göltürkbükü, wo Holzplattformen über dem Wasser liegen.",
+          "description": "Zwölf Meilen führen um die Nordwestecke der Halbinsel, auf dem letzten Stück ist also mit Meltemi von vorn zu rechnen – besser vor neun losfahren, bevor er am Nachmittag zulegt. Yalıkavaks Palmarina ist der Schaustopp: Superyachten, Designergassen und ein Marmorkai, der 2014 eröffnet wurde. Man verliert dort leicht einen Nachmittag beim Schaufensterbummel, weniger leicht bleibt der Geldbeutel voll. Vier Meilen östlich ist Göltürkbükü die sanftere Wahl. Die Bucht ist von Pinien gesäumt, und die Beachclubs schieben ihre Badeplattformen über das flache Wasser hinaus. Davor ankern, vor dem Mittag schwimmen, dann mit dem Beiboot rein zu einem langen, faulen Essen. Gümüşlük mit den versunkenen Ruinen von Myndos liegt gleich westlich, falls dir nach Fisch und Sonnenuntergang an Land ist.",
+          "thingsToDo": [
+            "Den Superyacht-Kai der Palmarina entlanggehen",
+            "Von den Badeplattformen in Göltürkbükü springen",
+            "Fisch bei Sonnenuntergang am Myndos in Gümüşlük",
+            "Durch die Boutiquen in den Gassen der Palmarina"
+          ],
+          "mooringTip": "Die Palmarina nimmt dich rückwärts, verlangt aber Spitzenpreise, im Juli oft 200–400 € pro Nacht. Göltürkbükü kostet im kleinen Hafen 100–160 €, oder du ankerst einfach vor den Beachclubs auf Sand in 4–6 m."
+        },
+        "3": {
+          "shortDescription": "Hinüber in den Golf von Mandalya nach Güllük, eine echte Fischerstadt mit den karischen Ruinen von Iasos auf der Landzunge.",
+          "description": "Nach Südwesten über den Golf von Mandalya: Güllük fühlt sich meilenweit entfernt an vom Marina-Glanz hinter dir. Das ist ein echter Fischerhafen, die Boote löschen ihren Fang am Kai, und der Fisch am Abend kam wahrscheinlich morgens von einem davon. Das Tempo fällt in dem Moment, in dem du festmachst. Der Grund zu bleiben, neben der Ruhe, ist Iasos. Die antike karisch-griechische Stadt liegt auf der Landzunge, einen kurzen Spaziergang oder eine Beibootfahrt südlich, mit römischer Agora, byzantinischen Mauern und einem Theater mit Blick übers Wasser. Geh im kühleren Abendlicht hin. Danach machen die Grills am Kai Çöp Şiş, die dünnen Lammspieße, für die diese Ecke der Ägäis bekannt ist, und die Bucht wird spiegelglatt, sobald der Meltemi einschläft.",
+          "thingsToDo": [
+            "Durch die karischen und römischen Ruinen von Iasos",
+            "Çöp Şiş am Fischerkai essen",
+            "In der spiegelglatten Bucht von Güllük baden",
+            "Im Morgengrauen den Fang anlanden sehen"
+          ],
+          "mooringTip": "Güllüks kleine Marina nimmt dich rückwärts für 60–100 € pro Nacht und schützt gut von Norden. Ist sie voll, ankerst du in der Bucht auf gut haltendem Sand in 5–7 m."
+        },
+        "4": {
+          "shortDescription": "Zwanzig Meilen nordwärts nach Didim, wo der gewaltige Apollon-Tempel noch steht und eine Meile südlich der goldene Sand von Altınkum wartet.",
+          "description": "Eine Etappe von zwanzig Meilen bringt dich nach Didim und zu einer der großen Sehenswürdigkeiten der türkischen Küste. Der Apollon-Tempel von Didyma gehörte zu den größten, die die Griechen je errichtet haben, und selbst halb zerfallen ragen seine Säulen neunzehn Meter in den Himmel. Hier saß das Orakel der Branchiden, zu seiner Zeit nur Delphi nachgeordnet. Der Tempel liegt ein paar Kilometer landeinwärts, mit dem Taxi leicht von der Marina zu erreichen. D-Marin Didim ist ein großer, gut geführter Hafen und der übliche Übernachtungsstopp hier, geschützt bei jedem Wind. Wenn du den Tempel gesehen hast, fahr eine Meile südlich nach Altınkum, weicher goldener Sand und flaches Badewasser. Nimm vor der Abfahrt eine Schachtel Lokum von einem Familienkonditor aus der Stadt mit.",
+          "thingsToDo": [
+            "Unter den Säulen des Apollon-Tempels stehen",
+            "Am goldenen Sand von Altınkum baden",
+            "Lokum beim Familienkonditor kaufen",
+            "Im Hafenbasar nach Textilien stöbern"
+          ],
+          "mooringTip": "D-Marin Didim nimmt dich rückwärts an Mooringleinen, vollständig geschützt, in der Hochsaison rund 100–160 € pro Nacht. In der Saison ist die Marina beliebt, also vorher anrufen, den Platz sichern und an der Tankstelle bei der Einfahrt auffüllen."
+        },
+        "5": {
+          "shortDescription": "Ein langer 32-Meilen-Schlag nordwärts nach Kuşadası, dein Sprungbrett nach Ephesos, der größten Römerstadt dieser Küste.",
+          "description": "Das ist die längste Etappe der Hinreise, zweiunddreißig Meilen gegen den vorherrschenden Nordwind, also behandle sie als richtigen Segeltag und starte früh. Die Belohnung am anderen Ende heißt Ephesos, und sie ist jeden Schlag wert. Kuşadası ist ein betriebsamer Kreuzfahrthafen mit Full-Service-Marina, den Liegeplatz also buchen. Von dort ist Ephesos eine kurze Taxifahrt und ein halber Tag zu Fuß: die Celsus-Bibliothek, das Große Theater, in dem einst fünfundzwanzigtausend Menschen Platz fanden, Marmorstraßen, die man noch begehen kann. Geh gleich morgens, bevor Reisebusse und Hitze eintreffen. Zurück in der Stadt ist Ladies Beach (Kadınlar Denizi) der Strand der Einheimischen, und die kleine Burg auf Güvercinada bewacht den Hafen. Der Basar lohnt sich für Seide und Gewürze, wenn Zeit bleibt.",
+          "thingsToDo": [
+            "Ephesos und die Celsus-Bibliothek erkunden",
+            "In den Steinrängen des Großen Theaters sitzen",
+            "Am Ladies Beach (Kadınlar Denizi) baden",
+            "Zur Hafenburg auf Güvercinada hinaufsteigen"
+          ],
+          "mooringTip": "Die Setur Kuşadası Marina nimmt dich rückwärts, vollständig geschützt, und kostet in der Hochsaison rund 100–160 € pro Nacht. In der Kreuzfahrtsaison ist sie voll, also vorher reservieren und vor dem langen Rückweg an der Tankstelle bei der Einfahrt auffüllen."
+        },
+        "6": {
+          "shortDescription": "Entspannte fünfzehn Meilen ins ruhige Özdere, mit dem Orakelheiligtum von Claros im Hinterland und leeren Buchten fürs SUP.",
+          "description": "Nach dem Trubel von Kuşadası ist Özdere ein bewusster Gangwechsel. Fünfzehn leichte Meilen die Küste hinauf bringen dich zu einem unaufgeregten Ferienstreifen, den die meisten Charterrouten auslassen – genau das ist sein Reiz. Die Strände sind lang und flach, die Buchten dazwischen bleiben still, und ein SUP ist die beste Art, die Küste entlangzustöbern. Landeinwärts, oberhalb von Ahmetbeyli, liegen die Ruinen von Claros, ein Orakelheiligtum des Apollon mit einem Tempel und den Stümpfen kolossaler Statuen. Es sieht einen Bruchteil der Besucher von Ephesos. Zurück an Bord: Das hier ist Olivenland, halte also nach Zeytinyağlı-Gemüsegerichten mit lokalem Öl Ausschau, dazu ein kühler ägäischer Weißwein zum Abendessen in einer Taverne an Land. Eine ruhige, erholsame Nacht vor dem langen Schlag nach Süden.",
+          "thingsToDo": [
+            "Die Orakelruinen von Claros besuchen",
+            "Mit dem SUP durch die stillen Buchten",
+            "Zeytinyağlı-Gerichte in einer Taverne probieren",
+            "Einen gekühlten ägäischen Weißwein kosten"
+          ],
+          "mooringTip": "Özderes kleiner Hafen ist bescheiden und günstig, rund 40–70 € pro Nacht, geschützt von Norden. Die Infrastruktur ist begrenzt – wer lieber frei schwojt, ankert vor der Bucht auf Sand in 4–6 m."
+        },
+        "7": {
+          "shortDescription": "Sechzig Meilen raumschots heim nach Bodrum, mit optionalem Bad in den heißen Quellen von Kara Ada vor dem letzten Festmachen.",
+          "description": "Der letzte Tag ist der große: sechzig Meilen zurück nach Bodrum. Die rettende Gnade ist die Richtung. Alles, wogegen du auf dem Hinweg angekreuzt hast, liegt jetzt hinter dir, das wird also ein Schlag vor dem Wind mit dem Meltemi als Motor – schnell, aber es kann ruppig werden, also früh reffen und bei Tagesanbruch los. Ziel ist, am frühen Nachmittag die Halbinsel abgesegelt zu haben. Wenn die Zeit reicht und die See mitspielt, hat Kara Ada, die Insel vor Bodrum, warme Schwefelquellen, vor denen du ankern und in badewannenwarmem Wasser schwimmen kannst. Ein passender letzter Stopp. Vor dem Anlegen tanken, das Boot abspülen und den Übergabetermin für den Morgen bestätigen. Dann bleibt noch ein Sonnenuntergang über der Burg und ein letztes Crew-Dinner an Land zum Abschluss der Woche.",
+          "thingsToDo": [
+            "In den warmen Schwefelquellen von Kara Ada baden",
+            "In der Bodrum Marina abspülen und tanken",
+            "Letztes Crew-Dinner über dem Hafen",
+            "Letzter Sonnenuntergang über der Burg St. Peter"
+          ],
+          "mooringTip": "Zurück in der Bodrum Marina liegst du rückwärts an Mooringleinen, 80–130 € pro Nacht. Auf dem Weg hinein an der Tankstelle bei der Einfahrt volltanken und den Übergabetermin 24 Stunden vorher bestätigen, damit der Morgen entspannt bleibt."
+        }
+      }
+    },
+    "fethiye": {
+      "metaTitle": "7 Tage Blaue Reise ab Fethiye | Boat4You",
+      "metaDesc": "Sieben Tage Törn ab Fethiye: Gemiler, Butterfly Valley, Blaue Lagune Ölüdeniz, Kapı Creek, Ruin Bay und Sarsala – alles im geschützten Golf.",
+      "days": {
+        "1": {
+          "shortDescription": "Ein leichtes Warmlaufen über acht Meilen nach Süden zur Insel Gemiler, wo byzantinische Ruinen den Hang hinaufklettern und kaltes Quellwasser ins Meer sickert.",
+          "description": "Die erste Etappe ist bewusst sanft, acht Meilen die Küste hinunter, während alle ihre Seebeine finden und herausbekommen, wo die Winschkurbeln liegen. Gemiler liegt direkt vor dem Festland, sein Hang gestapelt mit den dachlosen Hüllen byzantinischer Kirchen und Zisternen. Das war die Nikolausinsel, lange bevor die Reliquien des Heiligen nach Bari gebracht wurden, und die Pfade zwischen den Ruinen sind eine Stunde wert, bevor das Licht flach wird. Für die Nacht queren wir meist nach Coldwater Bay. Süßwasserquellen speisen hier das Flachwasser, und du spürst es im Moment des Eintauchens: eine kalte Schicht, die unter die warme Oberfläche gleitet. Nimm eine Maske und schwimm die Felskante ab. Zum Abendessen gibt es Meze in der Taverne am Kai, und die Boje ist mit dem Tisch inbegriffen.",
+          "thingsToDo": [
+            "Die byzantinischen Kirchenruinen auf Gemiler ablaufen",
+            "Über den Gewölbegang zur Gipfelkirche steigen",
+            "Die kalte Quellschicht in Coldwater Bay beschnorcheln",
+            "Meze-Abendessen in der Taverne am Kai"
+          ],
+          "mooringTip": "In Coldwater Bay gibt es kostenlose Restaurantbojen, also nimm eine und begleiche die Rechnung beim Abendessen. Sind sie belegt, hält der Sand knapp neben dem Bojenfeld auf fünf bis sieben Metern gut."
+        },
+        "2": {
+          "shortDescription": "Vier Meilen zur steilen Schlucht des Butterfly Valley, dann um die Ecke zur Nacht unter der berühmten Lagune von Ölüdeniz und den Gleitschirmen vom Babadağ.",
+          "description": "Kurzer Tag, also keine Eile. Das Butterfly Valley öffnet sich als grüner Spalt in den Klippen, eine Schlucht, die mehr als dreihundert Meter landeinwärts zu einem Wasserfall an ihrem Ende ansteigt. Die Russischen Bären, die ihm seinen Namen geben, sammeln sich im Hochsommer hier und sonst nirgends an dieser Küste. Davor ankern, durch das Schilf hineinlaufen und bis zum Wasserfall gehen, wenn er Wasser führt. Das ist nur ein Tagesstopp; der Canyon trichtert am Nachmittag einen böigen Fallwind herunter, der die Nacht verdirbt. Dafür gehen wir eine Meile weiter nach Osten nach Ölüdeniz. Die Lagune selbst steht unter Schutz, aber die offene Bucht davor hält gut auf Sand in fünf bis sieben Metern. Schau gegen sechs nach oben, dann siehst du meist die Gleitschirme vom Babadağ herunterkreisen.",
+          "thingsToDo": [
+            "Durch die Schlucht zum Wasserfall im Butterfly Valley",
+            "Vom Anker aus vor der Blauen Lagune Ölüdeniz baden",
+            "Den Gleitschirmen vom Babadağ beim Landen zusehen",
+            "Im Sommer die Russischen Bären entdecken"
+          ],
+          "mooringTip": "Behandle das Butterfly Valley nur als Mittagsstopp, Anker auf felsigem Grund in sechs bis acht Metern und den Schwojkreis im Auge behalten. Für die Nacht in der offenen Bucht von Ölüdeniz auf Sand in fünf bis sieben Metern ankern, klar der markierten Badezone."
+        },
+        "3": {
+          "shortDescription": "Die längste Etappe der Woche, zwölf Meilen in den geschützten Golf hinein, am Ende Kapı Creek, eine enge Bucht mit Kieselstrand und einer Taverne.",
+          "description": "Das ist der größte Schlag der Reise, deshalb lösen wir gern um neun die Boje und machen die Meilen, bevor die Nachmittagsbrise einsetzt. Sobald du ins Skopea Limanı einbiegst, flacht das Wasser ab und die Pinienhügel rücken heran. Kapı Creek steckt am Ende eines Schlitzes, der sich an der Mündung auf etwa achtzig Meter verengt, was mehr nach norwegischem Fjord als nach türkischer Bucht aussieht. Drinnen ist es spiegelglatt und vollständig geschlossen. Am Buchtende liegt ein Kieselstrand zum Baden und eine kleine Taverne, die das Bojenfeld betreibt. Rückwärts festmachen, eine lange Landleine ausbringen, wenn der Junge darum bittet, und einrichten. Bestell die Meze, ein Glas Thymianhonig für den Morgen, und lass die Crew vor dem Abendessen zur Engstelle hinauspaddeln.",
+          "thingsToDo": [
+            "Zur 80 Meter engen Einfahrt paddeln",
+            "Vom Kieselstrand am Buchtende baden",
+            "Rückwärts an der Taverne von Kapı Creek festmachen",
+            "Thymianhonig und Rakı am Kai kaufen"
+          ],
+          "mooringTip": "In Kapı Creek liegst du rückwärts am Ponton der Taverne oder an ihren Bojen, beides gratis, wenn du an Land isst – und an Juliabenden ist alles schnell belegt. In der Hochsaison am frühen Nachmittag da sein, um sicher einen Platz zu bekommen; der Sand in fünf bis sieben Metern ist die Rückfalloption."
+        },
+        "4": {
+          "shortDescription": "Entspannte vier Meilen zur Ruin Bay, wo eine versunkene Ruine aus römischer Zeit in zwei Metern Wasser unter den lykischen Gräbern liegt.",
+          "description": "Noch ein gemütlicher Morgen ist völlig in Ordnung, denn die Ruin Bay ist nur vier Meilen weiter. Der Reiz liegt hier unter dem Boot, nicht an Land. Ein Teil einer alten lykischen Siedlung rutschte vor langer Zeit ins Meer, und ihr Mauerwerk sitzt heute in zwei bis drei Metern klarem Wasser am Fuß der Klippe, nah genug, um es zu beschnorcheln, ohne je tief abzutauchen. Schwimm langsam, dann erkennst du behauene Blöcke und algenbewachsene Säulentrommeln. Über der Bucht führt ein rauer Weg hinauf zu den verstreuten Ruinen von Lydae, die man sich heute mit Ziegen und alten Olivenbäumen teilt. Ein guter Ort für den Sundowner. Wirf den Grill an Deck an, wenn die Klippe golden wird, und bleib wachsam: Die Bucht ist offen genug, dass ein nächtlicher Nordwind hereinfinden kann.",
+          "thingsToDo": [
+            "Die versunkenen Ruinen an der Klippe beschnorcheln",
+            "Hinauf zu den Ruinen von Lydae wandern",
+            "Grillen an Deck bei Sonnenuntergang",
+            "Vom Bug ins warme Flachwasser springen"
+          ],
+          "mooringTip": "Die Ruin Bay hat kostenlose Tavernenbojen und guten Sand in fünf bis sieben Metern, öffnet sich aber nach Norden – also den Wetterbericht prüfen, bevor du dort übernachtest. Ist Nordwind angesagt, sind Kapı Creek oder die Insel Tersane gleich nebenan die ruhigeren Optionen."
+        },
+        "5": {
+          "shortDescription": "Sechs Meilen zur Marina von Göcek, mit Badestopp an den flachen Yassıca-Inseln oder vor Domuz Adası, bevor es an den Steg mit Duschen und Läden geht.",
+          "description": "Zur Wochenmitte lohnt es sich, eine wilde Bucht gegen eine richtige Marina zu tauschen, und Göcek ist die naheliegende Wahl. Es sind nur sechs Meilen, also mach unterwegs einen Vormittag aus den Inseln. Die Yassıca-Gruppe liegt kaum über dem Wasser, ein Haufen flacher Felsen und türkisfarbener Kanäle, in denen die Fische dicht über dem Seegras stehen; Anker fallen lassen, schwimmen und das Mittagessen ausdehnen. Domuz Adası nebenan bietet dasselbe klare Flachwasser, falls Yassıca voll ist. Am frühen Nachmittag in die D-Marin einlaufen, zuerst an die Tankstelle bei der Einfahrt, dann Mooringleine aufnehmen und rückwärts an den Ponton. Der Abend gehört dem festen Boden: eine Dusche, ein Eis, ein Bummel durch Ausrüster und Töpferläden und ein Tisch in einer der Meyhanen abseits der Hauptstraße.",
+          "thingsToDo": [
+            "Die Seegraskanäle der Yassıca-Inseln beschnorcheln",
+            "Im klaren Flachwasser vor Domuz Adası baden",
+            "Durch die Töpferläden der D-Marin Göcek stöbern",
+            "Abendessen in einer Meyhane abseits des Platzes"
+          ],
+          "mooringTip": "D-Marin Göcek ist rückwärts an Mooringleinen und kostet in der Hochsaison rund hundert bis hundertsechzig Euro pro Nacht, im Juli und August also vorbuchen. Vor dem Anlegen an der Tankstelle bei der Einfahrt tanken, nicht danach."
+        },
+        "6": {
+          "shortDescription": "Kurze fünf Meilen nach Sarsala, eine von Pinien gesäumte Bucht ohne Marina und ohne Licht, aufgehoben für eine letzte Nacht mit Sternen und Grill.",
+          "description": "Kühlschrank füllen und Wasser bunkern, bevor du Göcek verlässt, denn in Sarsala gibt es nichts außer Pinien und Ruhe. Es ist ein Fünf-Meilen-Bummel den Golf hinunter zu einer tiefen, grünen Bucht, umringt von Hangwald und geschützt aus so ziemlich jeder Richtung, aus der der Wind kommen mag. Anker auf Sand in vier bis sechs Metern und eine lange Leine zurück an einen Baum, wenn du nachts ruhig liegen willst. Das Flachwasser am Buchtende lohnt eine langsame Paddelrunde; Reiher arbeiten die Ränder bei Sonnenauf- und -untergang ab, und an den Felskanten findet sich für jeden mit Maske meist ein Oktopus. Heb den besten Proviant für heute Abend auf. Grill etwas Einfaches an Deck, mach die Kabinenlichter aus und überlass den Rest dem Himmel, fern von jedem Stadtschein.",
+          "thingsToDo": [
+            "Ankern mit langer Leine an die Pinien",
+            "An den Felskanten nach Oktopus schnorcheln",
+            "In der Dämmerung Reihern im Flachen zusehen",
+            "Sterne schauen ohne Stadtlicht in der Nähe"
+          ],
+          "mooringTip": "In Sarsala ankerst du kostenlos auf gutem Sand in vier bis sechs Metern, meist mit einer langen Landleine an einen Baum, weil die Bucht schmal ist. Läden und Wasser gibt es hier nicht, also vorher in Göcek voll bebunkern."
+        },
+        "7": {
+          "shortDescription": "Die letzten zwölf Meilen nach Fethiye, getimt auf Ankunft am frühen Nachmittag, mit letztem Bad unter den lykischen Felsengräbern und einem Marktbummel.",
+          "description": "Heimtag, und es gibt keinen Grund, ihn zur Pflicht zu machen. Es sind zwölf Meilen zurück zur Marina, also am späten Vormittag ablegen, solange das Wasser noch ölig glatt ist und die Brise nicht steht. Kurs Ostsüdost, und wenn der Wind mitspielt, wird ein Segel daraus. Für ein letztes Bad ist unterwegs Zeit, am besten unter den in die Klippen hinter Fethiye geschlagenen lykischen Felsengräbern, die vom Wasser aus am besten aussehen. Ist Dienstag, läuft der Markt in der Stadt auf vollen Touren, also früh festmachen und Feigen, Oliven und eine Tüte Granatäpfel holen. Ziel ist, gegen zwei bei ECE längsseits zu liegen, dann bleibt der Nachmittag zum Tanken, Salz abspülen und Packen. Bestätige den Übergabetermin am Vortag, damit der Checkout sauber läuft.",
+          "thingsToDo": [
+            "Letztes Bad unter den lykischen Felsengräbern",
+            "Auf dem Dienstagsmarkt in Fethiye einkaufen",
+            "In der ECE Marina tanken und abspülen",
+            "Granatapfelsaft in einem Café am Kai"
+          ],
+          "mooringTip": "Die Marina di Fethiye ECE ist rückwärts an Mooringleinen, in der Hochsaison rund siebzig bis hundertzehn Euro pro Nacht. Auf dem Weg hinein an der Tankstelle bei der Einfahrt tanken und die Übergabezeit vierundzwanzig Stunden vorher bestätigen, damit Liegeplatz und Checkout bereitstehen."
+        }
+      }
+    },
+    "gocek-7-days": {
+      "metaTitle": "7 Tage Göcek: 12 Inseln Törn | Boat4You",
+      "metaDesc": "Einwöchiger Segeltörn ab Göcek über Sarsala, Fethiye, Gemiler, Ölüdeniz, Kapı Creek und Ruin Bay im Golf von Fethiye.",
+      "days": {
+        "1": {
+          "shortDescription": "Ein entspanntes Warmlaufen über fünf Meilen von der D-Marin Göcek nach Süden in die Sarsala-Bucht, pinienumsäumt und ruhig, egal was der Wind macht.",
+          "description": "Am ersten Tag geht es selten um Meilen. Wir werfen die Leinen in der D-Marin Göcek meist gegen Mittag los, sobald der Proviant verstaut ist und die Crew aufgehört hat, nach ihren Badesachen zu kramen, und halten Kurs Süd auf Sarsala. Fünf Meilen später fällt der Anker auf Sand in vier bis sechs Metern, eingebettet zwischen Pinienrücken, die von allen Seiten heranzurücken scheinen. Der Wind heißt hier Imbat, eine thermische Seebrise, die am frühen Nachmittag mit zehn bis fünfzehn Knoten aus West einsetzt und mit der Sonne wieder einschläft. Mit dem ägäischen Meltemi hat das nichts zu tun. Erst von der Badeplattform ins Wasser, dann den Kammweg durch Thymian und Pinien hinauf für den Blick zurück über die Bucht. Die Nächte sind dunkel und still. Etwas am Heck grillen, Satelliten zählen und früh in die Koje.",
+          "thingsToDo": [
+            "Am Pinienufer nach Brassen schnorcheln",
+            "Über den Thymian- und Pinienkamm der Bucht wandern",
+            "In der Dämmerung frischen Fisch am Heck grillen",
+            "Sterne schauen ohne jede Lichtverschmutzung"
+          ],
+          "mooringTip": "In Sarsala ankert man frei auf gutem Sand in vier bis sechs Metern, rundum geschützt, reservieren muss man also nichts. Marina oder verlässlichen Laden gibt es keinen, deshalb Wasser und Proviant schon in Göcek auffüllen."
+        },
+        "2": {
+          "shortDescription": "Zwölf Meilen nach Osten bis Fethiye, wo lykische Felsgräber über der Stadt im Fels stehen und dienstags der Markt die Gassen füllt.",
+          "description": "Fethiye ist die einzige richtige Stadt auf diesem Törn und damit eine Nacht wert. Der Schlag geht rund zwölf Meilen nach Ostsüdost, und wenn der Imbat mitspielt, segelt man das meiste davon auf Halbwindkurs. Festmachen in der Marina di Fethiye, der ECE-Marina, von dort sind es ein paar Schritte an der Promenade entlang in die Stadt. Über den Häusern blickt das Felsgrab des Amyntas von der Klippe herab, eine komplette ionische Fassade, im vierten Jahrhundert v. Chr. in den Stein geschlagen. Den Aufstieg macht man besser, bevor die Hitze steht. Danach durch den Paspatur-Basar bummeln und weiter zum Fischmarkt: Man kauft seinen Fang an den Ständen, und eines der umliegenden Restaurants grillt ihn. Wer an einem Dienstag hier ist, bleibt allein wegen des riesigen Wochenmarkts an Land.",
+          "thingsToDo": [
+            "Zum Felsgrab des Amyntas hinaufsteigen",
+            "Den Fang auf dem Fischmarkt kaufen und grillen lassen",
+            "Durch den alten Paspatur-Basar bummeln",
+            "Auf dem Dienstagsmarkt Gewürze einkaufen"
+          ],
+          "mooringTip": "In der Marina di Fethiye (ECE) liegt man mit dem Heck an Mooringleinen, in der Hochsaison etwa 70–110 € pro Nacht und rundum geschützt. Im Juli und August ein bis zwei Tage vorher reservieren und beim Einlaufen gleich an der Tankstelle neben der Hafeneinfahrt bunkern."
+        },
+        "3": {
+          "shortDescription": "Acht Meilen nach Süden zur Insel Gemiler mit den byzantinischen Nikolaus-Ruinen, dann Anker gegenüber in der Coldwater Bay, wo kalte Quellen das Meer kühlen.",
+          "description": "Gemiler Island, auf manchen Karten als St Nicholas Island geführt, gehört zu den stilleren Überraschungen des Golfs. Acht Meilen südlich von Fethiye, die Hänge übersät mit byzantinischen Ruinen, Kirchen und einem überdachten Prozessionsweg, der bis zum Gipfel hinaufführt, gebaut zwischen dem vierten und sechsten Jahrhundert, als hier eine Pilgerstation stand, die mit dem heiligen Nikolaus von Myra verbunden war, lange bevor seine Gebeine 1087 nach Bari gebracht wurden. Am späten Nachmittag an Land gehen, wenn die Ausflugsboote dünner werden. Für die Nacht setzt man wieder hinüber in die Coldwater Bay, Soğuksu auf der Festlandseite. Süßwasserquellen treten hier direkt ins Meer aus, und man spürt es sofort, wenn man beim Schwimmen durch eine kalte Schicht gleitet. Ein Erlebnis, das man einmal gehabt haben sollte.",
+          "thingsToDo": [
+            "Auf Gemiler den byzantinischen Prozessionsweg gehen",
+            "Durch die kalten Süßwasserquellen schwimmen",
+            "Den Sonnenuntergang über den Ruinen von Gemiler erleben",
+            "Meze am Steg in der Coldwater Bay bestellen"
+          ],
+          "mooringTip": "In der Coldwater Bay gilt das Restaurant-Bojen-Prinzip: Boje kostenlos übernehmen, der Deal wird beim Abendessen an Land beglichen. Wer lieber ankert, findet Sand in fünf bis sieben Metern, geschützt aus Nord."
+        },
+        "4": {
+          "shortDescription": "Ein kurzer Schlag von vier Meilen ins Schmetterlingstal mit seiner Felsschlucht, dann weiter nach Ölüdeniz, wo Gleitschirme vom Babadağ herabschweben.",
+          "description": "Nur vier Meilen heute, aber sie führen an einen Ort, den man behält. Das Schmetterlingstal liegt am Fuß einer Schlucht, deren Wände 350 Meter fast senkrecht aufragen, und im Hochsommer wimmelt es dort von Russischen Bären, orange-cremefarbenen Faltern, die einem auf dem Weg zum Wasserfall am Ende der Schlucht begegnen. Vor dem Kieselstrand ankern, an Land gehen und wieder an Bord sein, bevor der Nachmittagswind durch das Tal fällt. Das ist ein Tagesstopp, kein Liegeplatz für die Nacht. Die letzte Meile geht es dann um die Ecke nach Ölüdeniz, wo sich die berühmte Lagune hinter ihrer Sandzunge windet und Gleitschirme vom Babadağ herunterkreisen, dem Berg, der 1.969 Meter über dem Strand steht. Ihnen beim Landen zuzusehen, während man vom Boot aus schwimmt, wird nie langweilig.",
+          "thingsToDo": [
+            "Durch die Schlucht zum Wasserfall im Schmetterlingstal wandern",
+            "Die Falter des Schmetterlingstals aufspüren",
+            "Vor Ölüdeniz vom Boot aus schwimmen",
+            "Gleitschirmen vom Babadağ beim Landen zusehen"
+          ],
+          "mooringTip": "Das Schmetterlingstal ist reiner Tagesankerplatz, Fels in sechs bis acht Metern, und am Nachmittag fällt ein böiger Fallwind durch die Schlucht, also nicht bis in den späten Nachmittag bleiben. Übernachtet wird stattdessen vor Ölüdeniz auf Sand in fünf bis sieben Metern."
+        },
+        "5": {
+          "shortDescription": "Zwölf Meilen zurück ins Skopea Limanı nach Kapı Creek, einem fjordartigen Einschnitt, dessen Einfahrt kaum achtzig Meter misst.",
+          "description": "Nach der Weite von Ölüdeniz ist Kapı Creek der komplette Gegensatz. Der Einschnitt zieht sich tief in die Hügel des Skopea Limanı hinein und verengt sich an der Einfahrt auf etwa achtzig Meter, man schiebt sich also durch eine Lücke, die sich tatsächlich wie ein Fjord anfühlt, bevor sich das Wasser innen wieder öffnet. Geschützt ist es hier gegen alles, was das Wetter schickt. Man übernimmt eine Boje vor dem kleinen Restaurant am Ende der Bucht, wo ein Kieselstrand einen bequemen Einstieg ins Wasser bietet. Am späten Nachmittag lohnt eine Runde mit dem Dinghi bis zur Engstelle und zurück, allein wegen des Lichts auf den Felsen. Zum Abendessen an Land gibt es meist gegrillten Fisch, Bergkräuter und ein Glas Rakı, und wenn heimischer Thymianhonig auf dem Tisch steht, kauft man ein Glas. Mit den Felsen, die sich über einem schließen, kommen die Sterne in einem schmalen Streifen heraus.",
+          "thingsToDo": [
+            "Am Kieselstrand am Buchtende schwimmen",
+            "Mit dem Dinghi zur achtzig Meter schmalen Einfahrt paddeln",
+            "An Land Rakı und Thymianhonig probieren",
+            "Sterne zwischen den Felswänden beobachten"
+          ],
+          "mooringTip": "In Kapı Creek gilt das Bojensystem der Restaurants: Die Boje ist frei, wenn man in der Taverne am Buchtende isst. Der Platz ist knapp und in der Saison begehrt, also bis zum frühen Nachmittag da sein oder auf Sand in fünf bis sieben Metern ankern."
+        },
+        "6": {
+          "shortDescription": "Vier ruhige Meilen bis zur Ruin Bay, wo eine versunkene lykische Siedlung dicht unter der Oberfläche liegt und römische Säulen in Schnorcheltiefe ruhen.",
+          "description": "Weitere leichte vier Meilen bringen einen in die Ruin Bay, mancherorts Tomb Bay genannt, und der Name kommt nicht von ungefähr. Unter den Klippen am Wasserrand liegen die Reste einer lykischen Siedlung, die vor Jahrhunderten unter den Meeresspiegel gerutscht ist. Maske und Flossen genügen: Römische Säulentrommeln und behauene Steine liegen in zwei, drei Metern klarem Wasser, nah genug für einen einzigen Atemzug. Über der Bucht stehen die Ruinen des antiken Lydae, halb verschluckt von Olivenbäumen und weidenden Ziegen, ein rauer Aufstieg für alle, die laufen wollen. Wir heben uns die Ruinen meist für den späten Nachmittag auf und verbringen die Mittagsstunden im Wasser. Ein Barbecue am Heck, Köfte und kaltes Bier runden das gut ab. Warme Nächte, stilles Wasser, kein Grund zur Eile.",
+          "thingsToDo": [
+            "Über die versunkenen römischen Säulen schnorcheln",
+            "Zu den Ruinen von Lydae hinaufklettern",
+            "Bei Sonnenuntergang Lamm-Köfte am Heck grillen",
+            "Vom Bug ins warme Wasser springen"
+          ],
+          "mooringTip": "Auch die Ruin Bay läuft über Restaurantbojen, kostenlos, wenn man abends an Land isst, und geschützt aus Nord. Sind die Bojen belegt, ankert man auf Sand in fünf bis sieben Metern und fährt mit dem Dinghi hinüber."
+        },
+        "7": {
+          "shortDescription": "Sechs entspannte Meilen zurück nach Göcek, mit einem letzten Bad bei den flachen, sandigen Yassıca-Inseln, bevor getankt und das Boot übergeben wird.",
+          "description": "Der letzte Schlag ist kurz, nur sechs Meilen zurück in die D-Marin Göcek, es bleibt also Zeit für ein letztes Bad. Die Yassıca-Inseln liegen ungefähr auf dem Weg, eine Streuung flacher Felseilande mit Sandzungen und seichtem Wasser, das über dem Grund blassgrün wird. Anker fallen lassen, hineinspringen und der Crew einen richtigen letzten Vormittag gönnen, bevor das Boot klar Schiff bekommt. Ziel ist, gegen zwei in Göcek längsseits zu sein, dann bleibt der Nachmittag zum Tanken, Salz abspülen und Sortieren der Ausrüstung für die Übergabe. Göcek selbst lohnt einen Bummel: Die Marinapromenade ist gesäumt von kleinen Boutiquen und Cafés, und in mehr als einem Laden darf man den heimischen Honig mit Safrannote vor dem Kauf probieren. Ein ruhiges Abendessen in der Stadt ist ein passender Abschluss der Woche.",
+          "thingsToDo": [
+            "Bei den Yassıca-Inseln ankern und schwimmen",
+            "Durch die Boutiquen der D-Marin-Promenade stöbern",
+            "In der Stadt heimischen Safranhonig probieren",
+            "Vor der Übergabe tanken und abspülen"
+          ],
+          "mooringTip": "In der D-Marin Göcek liegt man mit dem Heck an Mooringleinen, in der Hochsaison rund 100–160 € pro Nacht, rundum geschützt. Den Übergabetermin 24 Stunden vorher bestätigen und vor dem Anlegen an der Tankstelle neben der Hafeneinfahrt auffüllen."
+        }
+      }
+    },
+    "gocek-kizikuyruk-koyu": {
+      "metaTitle": "7 Tage Göcek & Ekincik Segeltörn | Boat4You",
+      "metaDesc": "7-Tage-Törn ab Göcek nach Ekincik und ins Dalyan-Delta, zurück über Gemiler Island, Fethiye und Wall Bay durch die Zwölf Inseln.",
+      "days": {
+        "1": {
+          "shortDescription": "Ein ruhiges Warmlaufen über 8 Meilen südwärts ab Göcek, mit Badestopp bei den Yassıca-Inseln, bevor es zum Abendessen in den engen Kapı Creek geht.",
+          "description": "Der erste Schlag ist bewusst leicht gehalten. Acht Meilen südwärts ab der D-Marin Göcek geben der Crew Zeit, die Winschen und den Wasserkocher zu finden, bevor irgendetwas anspruchsvoll wird. Wir unterbrechen die Strecke meist bei den Yassıca-Inseln, einer flachen Streuung aus Fels und türkisem Flachwasser, die geradezu nach dem ersten Sprung von der Badeplattform verlangt.\n\nKapı Creek liegt am hinteren Ende des Skopea Limanı, jenem dichten Gewirr aus Buchten und Inselchen, das dieses Revier zum abwechslungsreichsten der ganzen Küste macht. Die Bucht selbst ist ein Spalt zwischen pinienbewachsenen Felsen, kaum breiter als zwei Schiffslängen. Man übernimmt eine Restaurantboje, das Abendessen bezahlt den Liegeplatz. Gegen Abend wird das Wasser spiegelglatt, die Felsen werfen das letzte Licht zurück, und Şakşuka an Deck schmeckt besser, als es eigentlich dürfte.",
+          "thingsToDo": [
+            "Im türkisen Flachwasser der Yassıca-Inseln schwimmen",
+            "Am pinienbeschatteten Felsfuß von Kapı Creek schnorcheln",
+            "Abendessen an einer Restaurantboje in Kapı Creek",
+            "Sterne zwischen den Felswänden der Bucht beobachten"
+          ],
+          "mooringTip": "Eine der Restaurantbojen tief in der Bucht übernehmen; die Boje ist frei, sobald man sich zum Abendessen an Land verpflichtet. Sind alle belegt, fällt der Anker auf Sand in 5 bis 7 Metern. Die Bucht ist bei jeder Wetterlage vollständig geschützt."
+        },
+        "2": {
+          "shortDescription": "20 Meilen raumschots nach Westen bis Ekincik, Ausgangsbucht für die Flussfahrt zu den Felsgräbern von Kaunos und zum Schildkrötenstrand İztuzu.",
+          "description": "Zwanzig Meilen sind der längste Schlag der Woche, deshalb lassen wir die Boje gern früh los und nutzen die Morgenbrise, bevor der Wind aus West auffrischt. Ekincik öffnet sich als weite, von Pinien gesäumte Bucht mit gutem Sandgrund, gut gedeckt gegen die Nordwinde.\n\nDie Bucht ist eigentlich ein Basislager. Man lässt die Yacht hier und nimmt ein einheimisches Flussboot ins Dalyan-Delta, wo sich die Strömung zwischen hohen Schilfwänden bis zum Köyceğiz-See hinaufzieht. Die lykischen Gräber von Kaunos sind direkt über dem Wasser in die Felswand geschlagen, vier Jahrhunderte vor Christus, und blicken noch immer auf jedes vorbeifahrende Boot herab. Der Strand İztuzu an der Flussmündung ist geschütztes Brutgebiet der Unechten Karettschildkröte, der Sand bleibt also erfreulich unverbaut. Wer das ganze Ritual will, endet in den Schlammbädern von Sultaniye.",
+          "thingsToDo": [
+            "Flussbootfahrt hinauf ins Dalyan-Delta",
+            "Die lykischen Felsgräber von Kaunos ansehen",
+            "Über den geschützten Schildkrötenstrand İztuzu laufen",
+            "In den Schlammbädern von Sultaniye baden"
+          ],
+          "mooringTip": "Auf Sand mitten in der Bucht von Ekincik in 5 bis 7 Metern ankern; der Grund hält zuverlässig, und die Nordwinde ziehen darüber hinweg. Setzt von Süden Schwell ein, sind die Restaurantpontons am Südufer die ruhigere Wahl."
+        },
+        "3": {
+          "shortDescription": "20 Meilen zurück nach Osten zur Insel Gemiler: byzantinische Kapellenruinen über dem Wasser und ein überraschend kaltes Quellbad in der Bucht gegenüber.",
+          "description": "Wieder ein längerer Schlag, diesmal nach Ostsüdost, und mit etwas Glück beim Nachmittagswind das beste Segeln der Reise. Gemiler Island schiebt sich über den Backbordbug, die ganze Flanke terrassiert von den Ruinen byzantinischer Kirchen und einem überdachten Prozessionsweg, der Pilger einst vor Sonne und Regen schützte.\n\nDies ist die Insel, die seit jeher mit dem heiligen Nikolaus von Myra verbunden wird, dessen Gebeine im elften Jahrhundert nach Bari gebracht wurden. An Land führen die Pfade an Zisternen und halb stehenden Apsiden vorbei, das Meer direkt unter einem. Wir ankern gegenüber auf der anderen Seite des Kanals in der Coldwater Bay, wo Quellen durch den Grund drücken und die oberste Wasserschicht schlagartig und erfrischend kalt wird. Einen Meter tiefer tauchen, und man spürt die Grenze. Abendessen an Land, ein Teller Meze mit Granatapfelsirup, und die Ruinen werden in der Dämmerung golden.",
+          "thingsToDo": [
+            "Die byzantinischen Ruinen von Gemiler Island erklimmen",
+            "In der Coldwater Bay die kalte Quellschicht finden",
+            "Den überdachten Pilgerweg entlanggehen",
+            "Meze mit Granatapfelsirup in einer Taverne an der Bucht"
+          ],
+          "mooringTip": "In der Coldwater Bay gegenüber liegen für die Saison Restaurantbojen aus; eine übernehmen und an Land essen, oder in der Nähe auf Sand in 5 bis 7 Metern ankern. Der Ankerplatz vor Gemiler selbst wird bei nachmittäglichem Westwind kabbelig, deshalb ist die Bucht gegenüber meist die ruhigere Nacht."
+        },
+        "4": {
+          "shortDescription": "Nur sechs Meilen nach Norden in eine stille, pinienumringte Kiesbucht, mit Meereshöhlen zum Paddeln und einem Kammweg über dem Ankerplatz.",
+          "description": "Nach zwei großen Schlägen ist Tag vier die Belohnung: knapp sechs Meilen hinauf nach Kızıkuyruk Koyu, einer kieselgesäumten Bucht, eingefaltet in die Pinien. Anker auf Sand in vier bis sechs Metern, und man hat fast den ganzen Tag, um sehr wenig zu tun.\n\nIn der Südwand der Bucht verbirgt sich eine Reihe niedriger Meereshöhlen, flach genug, um bei ruhigem Wasser mit Kajak oder SUP hineinzuschauen. Schnorchler finden Seeigel in den Felsspalten und hier und da einen Seestern auf den Sandflecken dazwischen. Wer nicht stillsitzen kann, folgt einem groben Pfad den thymianduftenden Kamm hinter dem Strand hinauf zu einem weiten Blick über das Wasser. Abends wird der Grill angeworfen: Garnelen, Zitrone, eine Prise Oregano, gegessen mit noch feuchten Füßen. Ruhige Nächte hier, sobald die Tagesboote weg sind.",
+          "thingsToDo": [
+            "Die Meereshöhlen an der Südwand erpaddeln",
+            "An den Felsen nach Seeigeln und Seesternen schnorcheln",
+            "Den Thymiankamm hinauf für den Blick aufs Meer",
+            "Garnelen mit Zitrone und Oregano an Deck grillen"
+          ],
+          "mooringTip": "Auf Sand in 4 bis 6 Metern dicht unter dem Nordufer ankern, dort hält der Meltemi einem den Rücken frei. Die Bucht ist klein, also im Juli und August bis zum frühen Nachmittag da sein oder stattdessen eine der Restaurantleinen an der Südseite nehmen."
+        },
+        "5": {
+          "shortDescription": "Sechs Meilen nach Osten in die Marina von Fethiye: eine quirlige Stadt und die ionische Fassade des Amyntas-Grabs hoch oben im Fels.",
+          "description": "Gemächliche sechs Meilen bringen einen nach Fethiye, und nach mehreren Nächten vor Anker hat ein richtiger Liegeplatz durchaus Reiz: Landstrom, eine heiße Dusche und eine Stadt, die tatsächlich lange wach bleibt. Wir machen mit dem Heck in der Marina fest, die Mooringleinen reicht die Hafencrew herüber.\n\nFethiye verdient einen ganzen Nachmittag. Das Highlight ist das Grab des Amyntas, eine komplette ionische Tempelfront, in die Felswand über den Dächern geschlagen, am besten im kühleren Abendlicht erstiegen. Unten in der Altstadt münden die Gassen auf den Fischmarkt, wo man seinen Fang kauft und ihn nebenan gegen ein kleines Entgelt grillen lässt. Wer an einem Dienstag ankommt, sollte dem weitläufigen Markt eine Stunde für Gewürze und handgeknüpfte Teppiche gönnen. Kabak çiçeği dolması bestellen, mit kaltem Rakı auf die Woche anstoßen und über die Uferpromenade schlendern.",
+          "thingsToDo": [
+            "In der Dämmerung zum Felsgrab des Amyntas steigen",
+            "Auf dem Fischmarkt von Fethiye den Fisch aussuchen",
+            "Auf dem Dienstagsmarkt Teppiche und Gewürze sichten",
+            "Kabak çiçeği dolması in einer Lokanta in den Gassen",
+            "Kalter Rakı an der Hafenpromenade"
+          ],
+          "mooringTip": "Mit dem Heck an Mooringleinen in der Stadtmarina festmachen; die Crew nimmt die Leinen an, und das Becken ist rundum gegen jeden Wind geschlossen. In der Hochsaison kostet die Nacht je nach Schiffslänge etwa 70 bis 110 €, und im Hochsommer lohnt es, vorher per Funk anzumelden."
+        },
+        "6": {
+          "shortDescription": "Sechs Meilen nach Süden in die Wall Bay, eine steile Kalksteinbucht ohne Marina, mit gutem Ankergrund und dem besten Schnorcheln der Woche.",
+          "description": "Der kürzeste Schlag der Woche, und inzwischen könnte die Crew ihn fast im Schlaf fahren. Sechs Meilen südlich von Fethiye faltet sich die Küste in sich zusammen, und die Wall Bay taucht auf, gesäumt von hellem Kalkstein, der senkrecht in tiefes, klares Wasser abfällt.\n\nEs gibt hier weder Marina noch Dorf, und genau darum geht es. Vor dem Ablegen in Fethiye bunkern, denn das Einzige, was die Bucht bietet, ist das Schwimmen, und das ist hervorragend. Maske auf, dem Felsfuß folgen, und man findet Unterwasserspalten und Schluchten, in deren Ritzen sich Kraken verstecken und über deren Fels Papageifische ziehen. Mit dem SUP hinüber zu einem kleineren Strand für ein gemächliches Mittagessen mit Olivenbrot und Labneh. Der Sandgrund hält gut in vier bis sechs Metern, und sobald die Sonne hinter der Wand verschwindet, kommen die Sterne mit voller Wucht.",
+          "thingsToDo": [
+            "In den Unterwasserschluchten nach Kraken schnorcheln",
+            "Papageifische an der Kalksteinkante entdecken",
+            "Zum entfernten Strand zum Mittagessen paddeln",
+            "Olivenbrot und Labneh auf dem Vordeck",
+            "Die Sterne über der Felswand beobachten"
+          ],
+          "mooringTip": "Auf Sand in 4 bis 6 Metern weit unter den Klippen ankern; die Wand selbst hält den Nordwind ab. In der Bucht gibt es weder Marina noch Wasser oder Laden, also Treibstoff, Wasser und Proviant vor dem Ablegen in Fethiye auffüllen."
+        },
+        "7": {
+          "shortDescription": "Letzte acht Meilen zurück nach Göcek, mit einem Bad über der versunkenen Werft von Tersane Island, bevor in der D-Marin getankt und übergeben wird.",
+          "description": "Der letzte Vormittag ist kurz und ohne Hektik, acht Meilen zurück nach Göcek. Es gibt keinen Grund, die Übergabe zu überstürzen, also lassen wir unterwegs Zeit für ein allerletztes Bad. Tersane Island ist der Ort dafür: In der fast rundum geschlossenen Bucht ankern und über den Resten einer alten Werft schnorcheln, deren niedrige Mauern und Slipanlagen noch durchs Flachwasser zu sehen sind.\n\nVon dort ist es ein gerader Kurs zur D-Marin Göcek. Vor dem Festmachen an der Tankstelle neben der Einfahrt vorbeischauen, damit das Boot vollgetankt zurückgeht. Angelegt wird mit dem Heck an Mooringleinen, die Marina ist rundum geschützt, aber eine so schicke Basis lässt sich das bezahlen, in Spitzenwochen rund 100 bis 160 € pro Nacht. Sind die Leinen fest, über die Promenade schlendern, durch die Boutiquen stöbern und die Woche bei einem türkischen Kaffee unter der Bougainvillea ausklingen lassen.",
+          "thingsToDo": [
+            "Über der versunkenen Werft von Tersane Island schnorcheln",
+            "An der Tankstelle der D-Marin auffüllen",
+            "Über die Promenade der D-Marin bummeln",
+            "Türkischer Kaffee unter der Bougainvillea"
+          ],
+          "mooringTip": "Vor dem Anlegen an der Tankstelle gleich hinter der Hafeneinfahrt der D-Marin bunkern, damit das Boot voll zurückgeht. Festgemacht wird mit dem Heck an Mooringleinen in einem rundum geschützten Becken; in der Hochsaison sind rund 100 bis 160 € pro Nacht fällig, und der Rückgabeplatz will vorher reserviert sein."
+        }
+      }
+    },
+    "gokova-gulf-14-days": {
+      "metaTitle": "14 Tage Gökova & Güllük Törn | Boat4You",
+      "metaDesc": "Zweiwöchiger Törn ab Bodrum durch den Golf von Gökova, dann nach Güllük und Didim. Schlammbad auf Kara Ada, Kleopatras Goldsand, stille Buchten.",
+      "days": {
+        "1": {
+          "shortDescription": "Ein sanfter erster Schlag aus der Marina nach Kara Ada, wo Höhlenquelle und oranger Schlamm einen entspannten Einlaufnachmittag ergeben.",
+          "description": "Für diesen Tag braucht es keinen frühen Start. Kara Ada liegt knapp fünf Meilen vor Bodrum, ein grüner, pinienbewachsener Buckel, den die meisten Crews unter Maschine in einer Stunde erreichen. Der Reiz ist die Höhle am Ostufer, wo eine Schwefelquelle mit Körpertemperatur austritt und der Schlamm ringsum sich seltsam orange färbt. Man schmiert ihn sich auf, backt in der Sonne und spült ihn in der Bucht wieder ab. Touristisch ist das schon, und bis Mittag ist die Gulet-Flotte da, deshalb ankere ich gern früh, mache den Schlammzirkus vor dem Andrang und verhole dann für Mittagessen und Bad in eine ruhigere Bucht an der Südseite. Der Nachmittag geht fürs Klarieren drauf: Boot durchsehen, Dinghi prüfen, Proviant verstauen. Morgen steht ein richtiger Schlag an.",
+          "thingsToDo": [
+            "In der Schwefelquelle der Höhle von Kara Ada baden",
+            "Sich mit dem orangen Heilschlamm einreiben",
+            "In der ruhigeren Bucht an der Südseite schwimmen",
+            "Vor dem Ablegen in Bodrum Proviant auffüllen"
+          ],
+          "mooringTip": "Vor der Höhle in 4–8 m über Sand und Seegras ankern; ab dem späten Vormittag wird es voll mit Tagesbooten, also früh den Anker fallen lassen und bei knappem Schwojraum eine Landleine ausbringen."
+        },
+        "2": {
+          "shortDescription": "Der große Schlag nach Süden bis Çökertme, eine böige Bucht mit Holzstegen, wo Tavernenpontons den Liegeplatz gegen ein Abendessen tauschen.",
+          "description": "Heute öffnet sich der Törn. Bug nach Süden über offenes Wasser, das sind fünfzehn bis zwanzig Meilen, drei bis vier Stunden, je nach Meltemi. Çökertme ist die Belohnung: eine hufeisenförmige Bucht hinter Olivenhainen, mit einer Handvoll Familientavernen, die auf Stelzen über dem Wasser gebaut sind. Ein Klassiker unter den Gulet-Stopps, und das aus gutem Grund. Der Haken ist der Wind: Böen fallen ohne Vorwarnung von den Hügeln, und der Grund aus Sand und Seegras hält schlecht. Die meisten Crews verzichten ganz aufs Ankern und machen an einem der Restaurantpontons fest, wo eine ausgelegte Mooring wartet und dazu die stillschweigende Abmachung, an Land zu essen. Bei Kapitän İbrahim werden Segler seit Jahren verköstigt. Meze bestellen, zusehen, wie das Licht auf dem Bergrücken rosa wird, und früh in die Koje.",
+          "thingsToDo": [
+            "Auf dem Ponton bei Kapitän İbrahim essen",
+            "Eine volle Runde ägäischer Meze bestellen",
+            "Zusehen, wie der Sonnenuntergang den Bergrücken färbt",
+            "Schwimmen, bevor die Nachmittagsböen einsetzen"
+          ],
+          "mooringTip": "Den Anker hier lieber vergessen, außer man setzt ihn gern mehrfach neu. Stattdessen einen Tavernenponton mit ausgelegter Mooring nehmen; im Juli bis zum frühen Nachmittag da sein, die drei Stege füllen sich schnell, und nachts mit plötzlichen Fallböen rechnen."
+        },
+        "3": {
+          "shortDescription": "Ein kurzer Schlag nach Osten bis Ören, ein unaufgeregtes Dorf in der Ebene von Keramos mit Marina, Kiesstrand und karischen Ruinen oberhalb.",
+          "description": "Nach dem Drama von Çökertme wirkt Ören ausgesprochen ruhig. Ein bescheidenes Küstendorf an der Südseite des Golfs, gelegen auf der Ebene, wo einst die antike Stadt Keramos stand. Der Schlag nach Osten ist leicht, ein paar Stunden über glattes Morgenwasser, bevor der Wind auffrischt. Es gibt eine kleine Gemeindemarina und einen langen grauen Kieselstrand, der selbst im August still bleibt, und genau darum geht es. Wer ins alte Viertel läuft, findet Steinhäuser, Bougainvillea und die verstreuten Reste von Keramos an den Hängen über dem Ort. Ein Platz, der nichts beweisen muss. Wir nehmen meist ein langes Mittagessen, leihen Räder oder gehen in der kühleren Abendluft zu den Ruinen hinauf und lassen die Crew durchatmen, bevor es morgen ans Ende des Golfs geht.",
+          "thingsToDo": [
+            "Hinauf zu den Ruinen des antiken Keramos",
+            "Durch Örens Altstadt mit ihren Steinhäusern schlendern",
+            "Am langen grauen Kieselstrand entspannen",
+            "In der kleinen Gemeindemarina festmachen"
+          ],
+          "mooringTip": "Örens kleine Marina nimmt Yachten an Mooringleinen und ist selten voll; in Spitzenwochen trotzdem vorher anrufen. Wer lieber ankert: Die Bucht vor dem Strand hält gut auf Sand, ist aber zum Nachmittagswestwind offen, also so weit hinein, wie die Tiefe es zulässt."
+        },
+        "4": {
+          "shortDescription": "Segeln bis ans Ende des Golfs nach Akyaka, wo sich ein Quellfluss durch Schilfgürtel windet und thermische Winde die Kitesurfer anziehen.",
+          "description": "Akyaka liegt ganz oben im Golf, dort, wo die Berge zusammenrücken und das Wasser glasig grün wird. Der Weg hinauf ist oft ein Kreuzschlag gegen die Nachmittagsthermik, deshalb legen wir in Ören meist gegen neun ab und motorsegeln die ruhigeren Morgenstunden. Das Dorf selbst ist eine Freude aus Holzbalkonen und osmanisch-griechischer Architektur, alles unter strengen örtlichen Auflagen gebaut, die die Hotelketten draußen gehalten haben. Sein Markenzeichen ist der Azmak, ein kurzer, karstgespeister Fluss, so klar, dass man die Fische zählen kann; mit dem Dinghi oder einem Leihkajak durch das Schilf hinauf zu den Quellen und den Flusscafés. Draußen in der Bucht macht derselbe stetige Wind, der den Anmarsch anstrengend macht, Akyaka zu einem der besseren Kitesurf-Spots der Türkei. Gegrillten Fisch am Wasser essen und den Tag langsamer werden lassen.",
+          "thingsToDo": [
+            "Mit dem Kajak den klaren Azmak zu seinen Quellen",
+            "Mittagessen mit gegrilltem Fisch an der Uferpromenade",
+            "Kitesurfern in der Nachmittagsthermik zusehen",
+            "Durch Akyakas Gassen mit Holzbalkonen streifen"
+          ],
+          "mooringTip": "Die Bucht am Ende des Golfs ist tief, und der Nachmittagswind schickt Kabbelwasser herein, also dicht unter dem Nordufer ankern und eine Landleine ausbringen. Vor den Dorfrestaurants gibt es ein paar Pontonplätze, an denen man essen und gleich liegen bleiben kann."
+        },
+        "5": {
+          "shortDescription": "Zurück nach Westen zur Insel Sedir, Heimat von Kleopatras berühmtem Goldsand und den zerfallenen Ruinen des antiken Kedreai.",
+          "description": "Sedir Island, besser bekannt als Kleopatra-Insel, ist die eine, die alle sehen wollen, und ausnahmsweise hält der Hype stand. Der Strand besteht aus winzigen goldenen Ooid-Körnern, die es in der Umgebung sonst kaum gibt, daher die Legende, Kleopatra habe den Sand aus Ägypten verschiffen lassen. Heute wird er streng geschützt: Man geht auf einem Steg, schwimmt vom Strand, darf sich aber nicht darauflegen und kein einziges Korn mitnehmen. Hinter dem Ufer liegen Mauern, Theater und Agora des antiken Kedreai, den kurzen Gang in der Morgenkühle wert. Früh kommen. Ab dem späten Vormittag strömen die Tagesausflugsboote aus Marmaris und Bodrum herein, deshalb sind wir gern um acht vor Anker und an Land und bis Mittag wieder weg, hin zu einer ruhigeren Bucht für die Nacht. Das Wasser hier ist ein verblüffend helles Türkis über Sand.",
+          "thingsToDo": [
+            "Über den Steg an Kleopatras Goldstrand entlang",
+            "Ruinen und Theater von Kedreai erkunden",
+            "Im hellen Türkis vor Sedir schnorcheln",
+            "Früh da sein, bevor die Ausflugsflotte kommt"
+          ],
+          "mooringTip": "Direkt am Strand darf nicht übernachtet werden; also nördlich oder östlich der Insel auf Sand ankern, besser noch tagsüber vor Anker besuchen und für die Nacht in eine geschützte Bucht verholen. Der Grund hält gut, aber der Platz fängt den Schwell des ständigen Ausflugsbootverkehrs ein."
+        },
+        "6": {
+          "shortDescription": "Ein entspannter Schlag nach Karacasöğüt, eine tiefe, pinienumringte Bucht mit Tavernenstegen, die bei auffrischendem Meltemi bestens schützt.",
+          "description": "Karaca, oder Karacasöğüt, ist eines der großen Allwetterlöcher des Golfs. Es liegt am Südufer, ein tiefer Einschnitt unterhalb von Karaca Ada, eingehüllt in Pinienwald und so gut geschützt, dass hiesige Boote hier überwintern. Nach der Ausgesetztheit vor Sedir ist die Ruhe willkommen. Die Bucht teilt sich in mehrere Arme, jeder mit seiner eigenen Ansammlung von Stegen und einfachen Familienrestaurants, wo man mit dem Bug festmacht und unter den Bäumen isst. Der Weg hinüber ist gemächlich, vielleicht zwei bis drei Stunden, mit stetiger Brise von der Bergkante halbwinds. Dies ist ein Tag, um sehr wenig zu tun. Schwimmen, lesen, mit dem Dinghi in den schilfgesäumten Bach am Buchtende und sich auf eine stille Nacht einrichten. Kündigt der Wetterbericht kräftigen Meltemi an, gibt es im ganzen Golf keinen besseren Ort, ihn auszusitzen.",
+          "thingsToDo": [
+            "Bug an einem pinienbeschatteten Tavernensteg festmachen",
+            "Mit dem Dinghi in den schilfgesäumten Bach am Buchtende",
+            "In den geschützten inneren Armen schwimmen",
+            "Einen Meltemi in ruhigem Wasser aussitzen"
+          ],
+          "mooringTip": "Einen Restaurantponton wählen und mit Heck oder Bug festmachen, dazu gibt es eine ausgelegte Leine und eine garantiert ruhige Nacht; das Wasser ist dicht unter Land tief, also langsam anlaufen. Freies Ankern klappt in den Armen ebenfalls, in 6–10 m über gut haltendem Schlick."
+        },
+        "7": {
+          "shortDescription": "Nach Westen Richtung Golfausgang bis Mersincik, ein wilder, menschenleerer Ankerplatz im Schutzgebiet von Gökova.",
+          "description": "In Mersincik beginnt sich der Golf abgelegen anzufühlen. Es liegt am Nordufer nahe der westlichen Mündung und gehört zum Sonderschutzgebiet Gökova, also keine Bebauung, keine Straße, nur Pinien, Fels und klares Wasser. Der Weg nach Westen führt an der ungeschützten Nordseite entlang, und bei frischem Meltemi lässt sich ein großer Teil davon zügig auf Raumschotkurs fahren. Die Hauptbucht ist wunderschön, fängt aber den Nordwind; weht es kräftig, weicht man in die kleinere Bucht im Nordwesten aus, wo allerdings der Schwojraum knapp ist und eine Landleine dazugehört. Abends klettern wilde Ziegen die Uferlinie entlang. Es gibt nichts zu kaufen und nichts zu tun außer zu schwimmen, die leeren Landzungen abzulaufen und eine Nacht ohne ein einziges Licht an Land zu genießen. Wasser und Proviant vor dem Ablegen in Karaca auffüllen.",
+          "thingsToDo": [
+            "An der leeren, unverbauten Uferlinie schwimmen",
+            "Über die Pinienlandzungen mit Blick über den Golf",
+            "In der Dämmerung wilde Ziegen am Ufer entdecken",
+            "Sterne ohne ein einziges Licht an Land"
+          ],
+          "mooringTip": "In der Hauptbucht in 5–8 m über Sand ankern und eine Leine an die Felsen geben; sie ist nach Norden offen, bei stehendem Meltemi also die engere Nordwestbucht nutzen und einen Landanker setzen, denn zum Schwojen ist kaum Platz. Autark anreisen, es gibt keinerlei Versorgung."
+        },
+        "8": {
+          "shortDescription": "Zurück nach Süden über den Golf nach Çökertme für eine zweite Nacht an den Tavernenpontons, bevor der Heimweg beginnt.",
+          "description": "Heute dreht die Runde nach Hause. Von Mersincik quert man die Golfmündung zurück zum vertrauten Hufeisen von Çökertme, ein Schlag von wenigen Stunden, der bei mitspielendem Meltemi zu einem schnellen, rollenden Raumschotkurs wird. Beim zweiten Mal kennt man die Tücken der Bucht schon. Dieselben Böen fallen von den Hügeln, dieselben Stege warten, aber jetzt weiß man, wie es läuft. Diesmal einen anderen Ponton als vergangene Woche belegen und eine neue Taverne ausprobieren; Rosemary und die anderen Familienküchen am Ufer haben jeweils ihre Stammgäste. Ein guter Abend, um Wäsche zu sortieren, die Crew bei einem langen Essen an Land aufzutanken und sich über die besten Badestellen der bisherigen Reise auszutauschen. Zusehen, wie die Ankerlichter der Spätankömmlinge hereinschaukeln, während der Wind nach Einbruch der Dunkelheit durchbläst.",
+          "thingsToDo": [
+            "Eine andere Taverne ausprobieren, etwa Rosemary",
+            "Noch einmal in der Hufeisenbucht schwimmen",
+            "Die Crew bei einem langen Essen an Land auftanken",
+            "Bei Meze die besten Badestellen der Reise vergleichen"
+          ],
+          "mooringTip": "Wie beim ersten Mal lieber eine Pontonleine nehmen als zu ankern, und einen anderen Steg als beim ersten Besuch wählen. Einen ordentlichen Ruckdämpfer und zusätzliche Fender ausbringen; die nächtlichen Böen schieben die Boote an den ausgelegten Moorings hin und her."
+        },
+        "9": {
+          "shortDescription": "Die Querung zurück nach Nordwesten nach Kara Ada, für ein letztes Bad im Golf und einen zweiten Versuch in der Schlammhöhle.",
+          "description": "Zurück über das Wasser nach Kara Ada, damit schließt sich der Gökova-Teil der Reise. Es ist dieselbe lange, offene Querung wie an Tag zwei, nur andersherum, also den Wetterbericht im Blick behalten und früh los, wenn der Meltemi zulegen soll. Inzwischen ist die Crew eingespielt, und die Meilen laufen leicht. Kara Ada ist ein passender letzter Halt im Golf, nah genug an Bodrum, um die Marina in Reichweite zu haben, und doch eine grüne Insel mit dieser seltsam wohltuenden Höhle. Wer beim ersten Mal im Gedränge stand, gibt den Schlammbädern eine zweite Chance, oder sucht sich einfach eine saubere Bucht an der Südseite zum Schwimmen. Salz abspülen, Boot aufklaren und einen ruhigen Ankerplatz genießen, bevor die Reise ihren Charakter wechselt. Morgen rundet man die Halbinsel, und das ganze Gefühl der Küste verschiebt sich.",
+          "thingsToDo": [
+            "Noch einmal in die Schlammhöhle, diesmal in Ruhe",
+            "Eine saubere Bucht an der Südseite zum Schwimmen suchen",
+            "Nach dem Golf Salz abspülen und aufklaren",
+            "Auf das Ende der Gökova-Runde anstoßen"
+          ],
+          "mooringTip": "Wie an Tag eins: über Sand und Seegras nahe der Höhle ankern oder in die Südbuchten verholen, wo der Grund sauberer hält und abends weniger Boote liegen. So dicht vor Bodrum füllt es sich mit heimkehrenden Charterbooten, also den Platz vor Sonnenuntergang sichern."
+        },
+        "10": {
+          "shortDescription": "Um die Halbinsel ins mondäne Göltürkbükü, wo Beach Clubs und Stegrestaurants eine vor dem Meltemi geschützte Bucht säumen.",
+          "description": "Heute wechselt die Küste komplett den Charakter. Man rundet die Westspitze der Halbinsel von Bodrum, vorbei an Gümüşlük und Yalıkavak, an die glamouröse Nordküste und hinein nach Göltürkbükü. Draußen im Kanal kann der Meltemi mit gut dreißig Knoten stehen, also die Rundung auf den Vormittag legen und im Zweifel früh reffen. Innen ist es eine andere Welt: eine lange, geschützte Bucht, gesäumt von Holzplattformen über dem Wasser, schicken Beach Clubs und dem berühmten Hotel Maçakızı, wo Istanbuls feine Gesellschaft den Sommer verbringt. Das ist die Dosis Glanz der Reise. Eine Liege buchen, sich einen Cocktail aufs Boot bringen lassen oder einfach aus dem Cockpit die Leute beobachten, während Tender Gäste zwischen den Yachten hin und her fahren. Vom Gefühl her ist das weit weg von den leeren Landzungen bei Mersincik, und genau dieser Kontrast macht den Reiz aus.",
+          "thingsToDo": [
+            "Eine Liege in einem Beach Club in Türkbükü ergattern",
+            "Auf einer Stegplattform über dem Wasser essen",
+            "Aus dem Cockpit den Tenderverkehr beobachten",
+            "Die Szene rund um das Hotel Maçakızı erleben"
+          ],
+          "mooringTip": "Der größte Teil der Uferzone von Göltürkbükü gehört Beach Clubs, die eigene Moorings auslegen und einen Tisch oder Liegen erwarten; in der Saison vorher anrufen, dann kommt ein Tender und nimmt die Leinen. Platz zum freien Ankern ist knapp und der Grund fleckig, eine ausgelegte Mooring ist also die einfachere Wahl."
+        },
+        "11": {
+          "shortDescription": "Nach Norden in den Golf von Güllük, zu einer alten Fischerstadt mit Fischgrills, freundlicher Marina und den Ruinen von Iasos nebenan.",
+          "description": "Güllük ist das Gegenmittel zu Türkbükü. Eine arbeitende Fischerstadt an ihrem eigenen Golf nördlich der Halbinsel, die den Promi-Glanz gegen Trawler, Teehäuser und die preiswertesten Fischgerichte dieser Küste tauscht. Der Weg hinauf ist unkompliziert, aus Türkbükü heraus und nach Norden in den weiten, geschützten Golf von Güllük, oft ein bequemer Raumschotkurs. Es gibt hier eine richtige Marina mit ein paar hundert Liegeplätzen, wenn man Strom und Wasser will, aber der Charakter sitzt am Stadtkai. Abends die Uferfront entlangschlendern, sich in einer Lokanta den Fisch vom Eis aussuchen und ihn gegrillt mit Rakı und Golfsonnenuntergang essen. Geschichtsinteressierte nehmen ein Taxi oder einen langen Fußmarsch zu den Ruinen des antiken Iasos auf der nächsten Landzunge, einer karischen Stadt, die genau mit dem Fisch reich wurde, den man gerade isst. Ruhig, ehrlich und ein guter Ort zum Nachbunkern.",
+          "thingsToDo": [
+            "In einer Lokanta frischen Fisch vom Eis aussuchen",
+            "Die karischen Ruinen des antiken Iasos besuchen",
+            "Die Uferfront der arbeitenden Fischerstadt entlang",
+            "Vor Didim auf dem Markt neu bunkern"
+          ],
+          "mooringTip": "Einen Liegeplatz in der Marina von Güllük nehmen, wenn man volle Versorgung will, oder mit dem Heck an den Stadtkai für das lebhaftere Bild und den kurzen Weg zu den Fischlokalen. Der Golf ist gut geschützt, eine Nacht vor Anker vor der Stadt in 4–6 m über Schlick ist bei ruhigem Wetter angenehm."
+        },
+        "12": {
+          "shortDescription": "Ein längerer Schlag nach Norden zur großen Marina von Didim, Tor zum Apollon-Tempel und zum Goldstrand von Altınkum.",
+          "description": "Didim markiert den nördlichen Wendepunkt der Runde und ist der am stärksten bebaute Stopp der zwei Wochen, aber er verdient seinen Platz. Der Schlag von Güllük herauf ist der längste dieser Nordtage, also früh los und den Meltemi im Auge behalten, der über die offenen Anmarschwege zulegen kann. Die D-Marin Didim ist eine große, gut geführte Marina mit allem, was man braucht, um das Boot für den Rückweg herzurichten. Der eigentliche Grund zu kommen liegt im Landesinneren: der Apollon-Tempel von Didyma, eines der großen Orakelheiligtümer der Antike, dessen mächtige Säulen nach mehr als zweitausend Jahren noch stehen. Vom Hafen ist es eine kurze, günstige Taxifahrt und einen gemächlichen Vormittag wert. Danach am langen goldenen Bogen des Strands von Altınkum abkühlen oder in der Stadt zu Mittag essen, bevor es wieder nach Süden geht.",
+          "thingsToDo": [
+            "Den Orakel-Tempel des Apollon in Didyma besichtigen",
+            "Am langen Goldsand von Altınkum schwimmen",
+            "In der D-Marin Didim herrichten und tanken",
+            "Nach den Ruinen in Didim zu Mittag essen"
+          ],
+          "mooringTip": "Die D-Marin Didim ist eine Full-Service-Marina; den Liegeplatz vorab über UKW erfragen, besonders im Hochsommer, wenn viel Katamaran- und Superyachtverkehr herrscht. Es ist der einfachste Ort der Route, um vor dem zweitägigen Rückweg nach Bodrum Treibstoff, Wasser und frischen Proviant zu übernehmen."
+        },
+        "13": {
+          "shortDescription": "Wieder nach Süden und zurück nach Göltürkbükü für eine letzte mondäne Nacht vor dem Schlussschlag nach Bodrum.",
+          "description": "Der Bug zeigt heimwärts. Von Didim geht es dasselbe Wasser nach Süden zurück, in den Windschatten der Halbinsel von Bodrum und hinein nach Göltürkbükü, für eine zweite, entspanntere Nacht. Man kennt die Bucht jetzt und kann sich das Gerangel um eine Mooring sparen. Das ist der letzte richtige Abend der Reise, es lohnt sich also, ihn auszukosten. War die erste Nacht in Türkbükü für die Szene, nimmt man diese für ein gutes Abendessen und ein frühes, ruhiges Bad vom Boot. Die nördlichen Anmarschwege können nachmittags windig sein, deshalb legen wir in Didim meist am späten Vormittag ab, um bei hohem Licht und vor dem Windmaximum anzukommen. Noch einen faulen Nachmittag auf einer Stegplattform mitnehmen, Ausrüstung sortieren und den letzten Papierkram des Bootes erledigen. Bodrum ist morgen nur einen kurzen Schlag entfernt.",
+          "thingsToDo": [
+            "Einen Tisch im vertrauten Stegclub in Türkbükü buchen",
+            "Früh und bei ruhigem Wasser vom Boot schwimmen",
+            "Einen letzten faulen Nachmittag auf der Plattform",
+            "Vor dem Schlussschlag den Bootspapierkram erledigen"
+          ],
+          "mooringTip": "Wie an Tag zehn die Beach-Club-Mooring vor der Ankunft klarmachen; beim zweiten Besuch weiß man ja, welche Plattform gepasst hat. Bis zum frühen Nachmittag festgemacht sein, bevor der Nordwind in die Bucht drückt und die Tenderschlange wächst."
+        },
+        "14": {
+          "shortDescription": "Der kurze Schlussschlag zurück nach Bodrum, mit Zeit für ein letztes Bad, bevor das Boot übergeben wird.",
+          "description": "Der letzte Vormittag ist einfach. Bodrum liegt gleich um die Ostschulter der Halbinsel, ein paar Stunden von Göltürkbükü, es besteht also kein Grund, die Leinen zu hetzen. Die meisten Charterbasen wollen das Boot am späten Vormittag oder mittags zurück, deshalb legen wir gern früh ab, nehmen unterwegs noch ein letztes Bad vor Anker und laufen dann im Schatten der großen Burg St. Peter in die Marina ein. Bodrum von See aus zu erreichen, ist die richtige Art anzukommen: die Festung, die weiße Stadt, die die Hügel hinaufklettert, der Mastenwald im Hafen. Fender und Leinen lange vor der Einfahrt klarlegen, den Anweisungen der Marineros zum Liegeplatz folgen und die zwei Wochen sacken lassen. Vierzehn Tage, zwei Golfe, eine Schlammhöhle und ein Orakel. Keine schlechte Runde.",
+          "thingsToDo": [
+            "Unterwegs ein letztes Bad vor Anker",
+            "Unter Bodrums Burg St. Peter einlaufen",
+            "Den Mastenwald im Hafen fotografieren",
+            "Das Boot vor Mittag übergeben"
+          ],
+          "mooringTip": "Rückgabezeit und Liegeplatz am Vorabend mit der Charterbasis abstimmen und Fender sowie Festmacher auf beiden Seiten klarlegen, bevor man in Bodrums vollen Hafen einläuft. Dem Marinapersonal zum Heckliegeplatz folgen; die Einfahrt kann mittags von Tagesbooten verstopft sein."
+        }
+      }
+    },
+    "lycian-coast-14-days": {
+      "metaTitle": "14 Tage Lykische Küste Odyssee | Boat4You",
+      "metaDesc": "Zwei Wochen ab Göcek: Buchten des Skopea Limani, Hafen von Fethiye, Ölüdeniz, Ruinen von Gemiler und Ekincik für die Dalyan-Flussfahrt.",
+      "days": {
+        "1": {
+          "shortDescription": "Gemütlich aus Göceks Marinagürtel ins Skopea Limani und Anker fallen lassen in der weiten, pinienumsäumten Sarsala-Bucht für eine ruhige erste Nacht.",
+          "description": "In Göcek beginnt praktisch jeder Lykien-Törn, und an Tag eins gibt es keine Eile. Proviant auf dem Markt am Platz besorgen, Wasser und Eis auffüllen, dann hinaus an den bewaldeten Inseln des Skopea Limani vorbei. Sarsala liegt an der Nordseite von Boz Burun, eine breite Bucht hinter Rotkiefern und einer Reihe kleinerer Nebenbuchten. Der Grund aus Sand und Seegras hält gut, und die meisten Crews geben nahe dem Buchtende eine Landleine aus, um ruhig zu liegen. Wer am ersten Abend nicht kochen will, findet ein kleines Steg-Restaurant. Wir versuchen, bis zum frühen Nachmittag da zu sein, vom Heck zu schwimmen, während das Licht hinter dem Kamm verschwindet, und alle ihre Seebeine finden zu lassen, bevor die längeren Schläge kommen. Die Morgen hier sind spiegelglatt.",
+          "thingsToDo": [
+            "Auf Göceks Morgenmarkt bunkern",
+            "Am sandigen Steg von Sarsala schwimmen",
+            "Den Pinienpfad hinter der Bucht entlanggehen",
+            "Abendessen in der Steg-Taverne der Bucht"
+          ],
+          "mooringTip": "In 6-8 m über Sand und Seegras ankern und eine lange Landleine Richtung Buchtende ausbringen. Die westlichen Buchten füllen sich im Juli zuerst, also bis zum frühen Nachmittag da sein, um einen Platz zu bekommen."
+        },
+        "2": {
+          "shortDescription": "Ein kurzer Schlag tiefer in den Golf nach Kapı Creek, einem schmalen, fjordartigen Einschnitt mit einer freundlichen Ponton-Taverne am Ende.",
+          "description": "Der Weg nach Kapı Creek dauert kaum eine Stunde, es bleibt also Zeit für ein gemütliches Bad am Morgen. Die Bucht schneidet einen Spalt zwischen steile, bewaldete Hänge, und sie wirkt eher wie ein norwegischer Fjord als wie die türkische Küste, bis einem der Holzrauch der Taverne in die Nase steigt. Yachten machen mit dem Heck am hölzernen Ponton fest, wo die Familie, die den Laden führt, die Leinen annimmt und später Mezze und gegrillten Fisch bringt. Das Wasser bleibt bis dicht unter Land tief, also mit Fahrt auf den Steg zuhalten und den Anker weit draußen fallen lassen. An Land lohnt der kurze Aufstieg zu den kleinen Ziegenpferchen über dem Buchtende. Bei der Flottillen-Gemeinde ist der Platz beliebt, im Hochsommer also besser vorher anrufen, um einen Liegeplatz sicher zu haben.",
+          "thingsToDo": [
+            "Mit dem Heck am Ponton von Kapı Creek festmachen",
+            "An Land Mezze und gegrillten Fisch bestellen",
+            "Zu den Ziegenpferchen oberhalb hinaufsteigen",
+            "An den steilen Felsseiten schnorcheln"
+          ],
+          "mooringTip": "Bis kurz vor den Ponton bleibt es tief, also langsam anlaufen und in 10-12 m ankern, bevor man an den Steg zurücksetzt und die Mooringleinen übernimmt. Im Juli und August per Funk oder Telefon vorher anmelden, die wenigen Plätze sind schnell vergeben."
+        },
+        "3": {
+          "shortDescription": "Hinüber in die Ruin Bay, wo behauene römische Steine am Buchtende dicht unter der Oberfläche liegen und das Wasser so klar ist wie kaum sonst im Golf.",
+          "description": "Die Ruin Bay, auch Cleopatra's Bath genannt, liegt ein paar Stunden westlich, quer über die Golfmündung. Der Reiz liegt unter Wasser: niedrige Mauern und behauener Stein einer Siedlung aus römischer Zeit ruhen direkt unter der Oberfläche am Buchtende, klar genug, um sie durch die Maske zu lesen. Davor ankern und über die Ruinen hineinschwimmen, statt das Boot zu weit ins Flache zu bringen. Ein klappriges Steg-Restaurant serviert kaltes Bier und einfache Grillgerichte unter den Pinien. Die benachbarte Tomb Bay, eine kurze Dinghifahrt um die Landspitze, hat lykische Felsgräber hoch in der Klippe, im weichen Abendlicht einen Blick wert. Nachmittags können wirbelnde Böen von den Hügeln kommen, also den Anker sorgfältig eingraben.",
+          "thingsToDo": [
+            "Über die versunkenen römischen Mauern schnorcheln",
+            "Mit dem Dinghi zu den lykischen Gräbern der Tomb Bay",
+            "Kaltes Bier am Steg-Grill",
+            "Die Klippen in der Dämmerung fotografieren"
+          ],
+          "mooringTip": "Das Buchtende wird über den Ruinen flach, also in 5-8 m abseits des Mauerwerks ankern und hinüberschwimmen, statt hineinzumotoren. Auf Fallböen achten, die nachmittags durch das Tal schießen, und den Anker gut einfahren."
+        },
+        "4": {
+          "shortDescription": "Um die Ecke in die Wall Bay unter hohen Klippen, mit dem Heck am nur per Boot erreichbaren Restaurant festmachen und praktisch über dem Wasser essen.",
+          "description": "Die Wall Bay, auf der Karte Duvar Bükü, hat ihren Namen von der senkrechten Felswand, die eine Seite des Ankerplatzes einfasst. Von der Ruin Bay ist es ein kurzer Schlag, also unterwegs einen Badestopp einplanen. Der Grund fällt schnell ab, freier Schwojraum ist entsprechend knapp, deshalb gehen die meisten Boote mit dem Heck an den kleinen Ponton von Adaia, dem Familienrestaurant hier, das man nur per Boot erreicht. Sie helfen mit den Leinen und kochen eine ordentliche türkische Tafel, sobald die Sonne von den Felsen ist. Das Schnorcheln entlang der Wand gehört zum Besten in dieser Ecke des Golfs, klares Wasser und steile Abbrüche. Nach Einbruch der Dunkelheit ist es still, nur Zikaden und ab und zu eine Ziegenglocke.",
+          "thingsToDo": [
+            "Mit dem Heck an Adaias nur per Boot erreichbarem Ponton",
+            "An der senkrechten Unterwasserwand schnorcheln",
+            "Die türkische Mezze-Tafel des Restaurants probieren",
+            "Mit dem Kajak am Felsfuß entlang"
+          ],
+          "mooringTip": "Der Grund fällt steil ab, freier Ankerraum ist also begrenzt; eine Leine an den Restaurantponton geben und einen Tisch reservieren, das sichert in der Regel den Liegeplatz. In 8-10 m fallen lassen und dicht unter den Fels zurücksetzen."
+        },
+        "5": {
+          "shortDescription": "Raus aus den Buchten für eine Nacht in Fethiye, einer echten Hafenstadt mit lebhaftem Fischmarkt, Basar und Felsgräbern darüber.",
+          "description": "Zeit zum Nachbunkern und für ein paar Schritte in einer richtigen Stadt. Fethiye liegt am Ende seines eigenen Golfs, ein paar Stunden Segeln von der Wall Bay, meist mit hilfreicher Nachmittagsbrise halbwinds. In der Ece Marina oder am Stadtkai festmachen und hinein in den Basar für Gewürze, Lokum und, wenn man mag, einen Besuch beim Barbier. Der Fischmarkt ist hier das Ritual: Man kauft seinen Fang an den Ständen und gibt ihn bei einem der umliegenden Restaurants ab, die ihn gegen eine kleine Gebühr grillen. Über der Stadt glüht das Felsgrab des Amyntas im Sonnenuntergang bernsteinfarben, ein zäher Aufstieg über die Stufen, aber er lohnt. Den Kühlschrank ordentlich füllen, bevor es zurück in die wilderen Buchten geht.",
+          "thingsToDo": [
+            "Fisch auf dem überdachten Markt kaufen",
+            "Zum Grab des Amyntas hinaufsteigen",
+            "Im alten Basar nach Gewürzen stöbern",
+            "In den Läden am Hafen nachbunkern"
+          ],
+          "mooringTip": "Die Ece Marina ist ruhig und gut geführt, in Spitzenwochen aber vorher buchen; der Stadtkai ist günstiger und zentral, kann aber rollen, wenn Fähren vorbeifahren. Mit dem Heck an ausgelegten Mooringleinen festmachen und mit Marinapreisen rechnen."
+        },
+        "6": {
+          "shortDescription": "Aus dem Golf von Fethiye hinaus zur Insel Gemiler, umringt von byzantinischen Kirchenruinen und mit einem der schönsten Sonnenuntergangswege der Küste.",
+          "description": "Gemiler, manchmal St Nicholas Island genannt, bewacht die Einfahrt eines geschützten Kanals südwestlich von Fethiye. Die ganze Insel ist mit byzantinischen Ruinen überzogen: Kirchen, Zisternen und ein überdachter Prozessionsweg, der zu einer Kapelle auf dem Gipfel hinaufführt. In der Bucht an der Südseite der Insel in 6 bis 9 Metern über Sand ankern und eine Landleine ausbringen, damit man nicht schwojt. Zwei einfache Restaurants an Land versorgen einen mit Wasser und einem kalten Getränk. Zeit einplanen, um das Dinghi anzulanden und im goldenen Licht durch die Ruinen hinaufzugehen; der Blick über den Kanal zum Festland ist der Grund, warum man hier hängen bleibt. Bei den üblichen Westwinden ist der Ankerplatz ruhig, dreht der Wind aber auf Süd, liegt man ungeschützt.",
+          "thingsToDo": [
+            "Durch die Ruinen hinauf zur Gipfelkapelle",
+            "Den Aufstieg auf die goldene Stunde legen",
+            "Landleine in der Südbucht ausbringen",
+            "Im Kanal Richtung Ufer schnorcheln"
+          ],
+          "mooringTip": "In der Südbucht in 6-9 m auf Sand ankern und eine Leine an die Felsen geben, denn der Schwojraum ist begrenzt. In der Saison bis zum späten Nachmittag da sein, die wenigen guten Plätze sind früh weg."
+        },
+        "7": {
+          "shortDescription": "Ein kurzer Schlag nach Ölüdeniz, Heimat der berühmten Sandzunge der Blauen Lagune und der Gleitschirme, die vom Babadağ herabschweben.",
+          "description": "Ölüdeniz ist das Postkartenmotiv, das jeder kennt: eine stille Lagune hinter einer Sichel weißen Sands unter einem grünen Berg. Die Lagune selbst ist heute Naturschutzpark und für Yachten gesperrt, man liegt also unter der Landzunge vor dem Belcekız-Strand und geht mit dem Dinghi an Land oder schwimmt hinein. Über einem zieht ein fast durchgehender Strom von Gleitschirmen vom Babadağ herunter, der mit knapp zweitausend Metern zu den höchsten kommerziellen Startplätzen überhaupt zählt. Das ist der belebteste Ort der Route, also besser als munterer Tagesstopp denn als Wildnisnacht behandeln. Ein, zwei Schirmen beim Landen am Strand zusehen, ein Eis essen und dann entscheiden, ob man bleibt oder in eine ruhigere Bucht zurückschlüpft.",
+          "thingsToDo": [
+            "In den Naturpark der Blauen Lagune schwimmen",
+            "Gleitschirmen beim Landen am Belcekız-Strand zusehen",
+            "Mit dem Dinghi zum Mittagessen an den Strand",
+            "In der Dämmerung über die Sandzunge laufen"
+          ],
+          "mooringTip": "Die Lagune ist für Boote gesperrt, also vor Belcekız unter der Landzunge in 8-12 m ankern und mit einer rolligen, ungeschützten Nacht rechnen, sobald etwas Südwind einläuft. Viele Crews nutzen den Ort als Tagesstopp und verholen zum Übernachten in eine ruhigere Bucht."
+        },
+        "8": {
+          "shortDescription": "Anker fallen lassen vor dem Schmetterlingstal, einer steilen Schlucht, die an einem nur per Boot erreichbaren Strand endet, mit Wanderung zum Wasserfall.",
+          "description": "Gleich um die Landzunge öffnet sich das Schmetterlingstal als Spalt in der Flanke des Babadağ, sein Strand ist nur vom Wasser aus erreichbar. Das Tal hat seinen Namen von den Russischen Bären, den Faltern, die hier brüten, und ein rauer Pfad führt landeinwärts an einem kleinen Bauernhof vorbei zu einem Wasserfall am Ende der Schlucht. Festes Schuhwerk anziehen; das letzte Stück heißt Klettern über Fels, mit einem Seil als Hilfe. Der Ankerplatz ist für die meisten ein Tagesstopp, offen nach Süden und dicht unter Land tief, man lässt also recht tief fallen und gibt eine lange Leine an den Strand. Mittagessen an Bord, die Wanderung in der Morgenkühle, und weiter, bevor die Nachmittagsbrise es ungemütlich macht. An Land gibt es eine rustikale Bar unter den Bäumen.",
+          "thingsToDo": [
+            "Durch die Schlucht zum Wasserfall wandern",
+            "Landeinwärts nach den Faltern Ausschau halten",
+            "Mit langer Landleine ankern",
+            "Ein Getränk in der rustikalen Strandbar"
+          ],
+          "mooringTip": "Das ist ein offener Tagesankerplatz, bis dicht an den Strand tief; in 15-20 m fallen lassen, eine lange Landleine geben und Ankerwache halten. Vor dem Auffrischen des nachmittäglichen Südwestwinds ablegen, der Schwell direkt hereinschickt."
+        },
+        "9": {
+          "shortDescription": "Zurück ins Skopea Limani in die Coldwater Bay, wo Quellen vom Hang das Meer kühlen und das Schwimmen erfrischend kalt ist.",
+          "description": "Mit den ungeschützten Südbuchten im Kielwasser dreht die Route zurück in den Schutz des Skopea Limani und in die Coldwater Bay, auf der Karte Soğuksu. Süßwasserquellen laufen vom bewaldeten Hang direkt ins Meer, und beim Schwimmen spürt man die Kälte in Schwaden, ein Schreck nach dem warmen Wasser anderswo. Ein friedlicher, pinienduftender Ankerplatz mit gutem Grund und Platz, eine Leine an die Bäume zu geben. In einer Ecke steckt meist ein kleines Ponton-Restaurant, wenn man sich das Abendessen bringen lassen will. Nach dem Gedränge von Ölüdeniz fühlt sich das an, als würde die Küste ausatmen. Wenn der Zeitplan es hergibt, bleiben wir oft zwei Nächte und nutzen die Bucht als Basis zum Schwimmen, Lesen und Treibenlassen.",
+          "thingsToDo": [
+            "Durch die kalten Quellschwaden schwimmen",
+            "Landleine zwischen den Pinien",
+            "Abendessen im Ponton-Restaurant in der Ecke",
+            "Am ruhigen Morgen mit dem SUP aufs Wasser"
+          ],
+          "mooringTip": "Der Grund aus Sand und Seegras hält gut in 6-10 m; eine Leine an die Bäume geben, denn die Bucht ist schmal und der Schwojraum begrenzt. Bei den vorherrschenden Westwinden bleibt es ruhig, was sie zu einem verlässlichen Übernachtungsplatz macht."
+        },
+        "10": {
+          "shortDescription": "Zurück zur Insel Gemiler für eine zweite Nacht: die Ruinen in Ruhe angehen und sich früh einen guten Sonnenuntergangsplatz sichern.",
+          "description": "Die Schleife zurück nach Gemiler auf dem Weg nach Westen schenkt einem die Insel ein zweites Mal, ohne den Druck, sie abhaken zu müssen. Wer vor den Ausflugsguleten ankommt, hat die freie Wahl in der Südbucht und Zeit, den Kanal zu schnorcheln, bevor sich der Nachmittagsandrang gegen Abend auflöst. Wer den vollen Aufstieg beim ersten Mal ausgelassen hat, macht ihn jetzt: Der Pfad führt durch dachlose Kirchen und alte Zisternen hinauf zur Gipfelkapelle, am besten, wenn die Hitze nachlässt. Zurück an Bord beruhigt sich der Ankerplatz, sobald die Ausflugsboote weg sind, und der Sonnenuntergang über den Ruinen ist die stille Belohnung. Wasser und ein kaltes Getränk gibt es in den Restaurants an Land. Ein kurzer, leichter Tag, es besteht also kein Grund, früh aus der Coldwater Bay zu starten.",
+          "thingsToDo": [
+            "Den Weg zur Gipfelkapelle noch einmal gehen",
+            "Mittags im Inselkanal schnorcheln",
+            "Früh einen Platz in der Südbucht sichern",
+            "Sundowner, wenn die Guleten ablegen"
+          ],
+          "mooringTip": "Wie zuvor in 6-9 m Sand in der Südbucht ankern und eine Landleine geben; wer vor dem nachmittäglichen Guletverkehr da ist, bekommt den ruhigeren, besser gelegenen Platz. Auf eine Süddrehung achten, die die Nacht hier unhaltbar machen würde."
+        },
+        "11": {
+          "shortDescription": "Der längste Schlag der Reise, nach Westen bis Ekincik, Ausgangspunkt für die Flussfahrt nach Kaunos und zu den Schlammbädern von Dalyan.",
+          "description": "Ekincik ist der westliche Wendepunkt der Route und der längste Einzelschlag, deshalb legen wir meist gegen neun ab, um da zu sein, bevor die Nachmittagsbrise von vorn auffrischt. Die Bucht ist weit und sandig, unter den Hügeln am Rand des Dalyan-Deltas gelegen, mit einer kleinen Marina aus zwei Pontons in einer Ecke, falls man lieber festmacht als ankert. Der eigentliche Grund zu kommen liegt dahinter: Einheimische Boote fahren von hier den schilfgesäumten Dalyan-Fluss hinauf zu den Felsgräbern des antiken Kaunos, zu den Schwefelschlammbädern von Sultaniye und nach İztuzu, dem Schildkrötenstrand an der Flussmündung. Die Tour am Abend der Ankunft über die Marina oder ein Strandrestaurant buchen. Die offene Bucht kann Schwell hereinschicken, wenn der Wind auf Süd dreht.",
+          "thingsToDo": [
+            "Die Bootstour auf dem Dalyan buchen",
+            "Im Schlammbad von Sultaniye suhlen",
+            "Die Felsgräber von Kaunos ansehen",
+            "Über den Schildkrötenstrand İztuzu am Delta laufen"
+          ],
+          "mooringTip": "In der nördlichen Ecke in 5-10 m über gutem Sand ankern oder für mehr Sicherheit einen Platz an den Pontons der kleinen My Marina nehmen. Die Bucht ist nach Süden und Südwesten offen, für eine Nacht hier also eine ruhige Wetterlage abwarten."
+        },
+        "12": {
+          "shortDescription": "Ein gemächlicher Schlag nach Osten ins stille Kızılkuyruk, eine bewaldete Bucht abseits der Route, wo die Nacht nur aus Zikaden und Sternen besteht.",
+          "description": "Nach dem Trubel der Dalyan-Tour ist Kızılkuyruk das Gegenmittel: eine kleine, baumgesäumte Bucht auf der Halbinsel Boz Burun, die wenige Boote sieht und es schlicht hält. Der Weg von Ekincik ist kurz und leicht, dicht an einer Küste aus leeren Buchten und steilen Pinien entlang. An Land gibt es nichts Nennenswertes, und genau das ist der Punkt; man ankert, gibt eine Leine an einen Baum und schwimmt in Wasser, das klar und still bleibt. Alles für den Abend mitbringen, denn es gibt keine Taverne als Rückfalloption. Das ist die Art Ankerplatz, an die sich Crews noch lange erinnern, wenn die berühmten Stopps längst verblasst sind, ein letzter Vorgeschmack auf die Stille, bevor die Route heimwärts dreht. Sobald das Licht geht, kommen die Sterne dicht heraus.",
+          "thingsToDo": [
+            "Landleine an eine schattige Pinie",
+            "In der leeren, klaren Bucht schwimmen",
+            "An Bord unter den Sternen kochen",
+            "Mit dem Kajak in die verlassenen Nachbarbuchten"
+          ],
+          "mooringTip": "In 6-10 m ankern und eine Leine an einen Baum geben, denn die Bucht ist schmal und bietet kaum Schwojraum. Bei den üblichen Sommerwestwinden ist sie gut geschützt, hat aber keinerlei Versorgung, also vorher in Ekincik bunkern und Wasser fassen."
+        },
+        "13": {
+          "shortDescription": "Zurück ins Skopea Limani nach Sarsala: Die Runde schließt sich dort, wo sie begann, mit einer entspannten letzten Nacht vor Anker.",
+          "description": "Der vorletzte Tag bringt einen zurück in den vertrauten Schutz des Skopea Limani und hinüber nach Sarsala, dieselbe weite Bucht, die den Törn eröffnet hat. Am Ende hierher zurückzukommen fühlt sich anders an: Man kennt den Ablauf, gibt seine Landleine ohne Aufhebens aus und richtet sich ein wie ein Stammgast. Der Schlag ist ein entspannter Raumschotkurs über den Golf, mit Zeit für einen letzten langen Badestopp unterwegs. Sarsalas Ankergrund und seine Steg-Taverne machen es zu einer einfachen letzten Nacht, nah genug an Göcek, dass der Rückweg am Morgen stressfrei bleibt. Den Nachmittag nutzen, um die letzte Energie wegzuschwimmen, Ausrüstung zu sortieren und auf die zwei Wochen anzustoßen. Ist die Taverne voll, gleich beim Ankern einen Tisch bestellen.",
+          "thingsToDo": [
+            "Letzter langer Badestopp mitten im Golf",
+            "Abschiedsessen in Sarsalas Steg-Taverne",
+            "Landleine nahe dem Buchtende",
+            "Ausrüstung vor Göcek sortieren und packen"
+          ],
+          "mooringTip": "Zurück zur alten Routine: in 6-8 m über Sand und Seegras ankern und nahe dem Buchtende eine Landleine ausbringen. So nah an der Basis kann man es morgens gemütlich angehen, sollte aber früh reservieren, wenn man an Land essen will."
+        },
+        "14": {
+          "shortDescription": "Am Morgen ein kurzer Motorschlag zurück nach Göcek zur Bootsübergabe, mit Zeit für einen letzten Kaffee an der Uferpromenade.",
+          "description": "Der letzte Schlag dauert kaum eine Stunde, ein früher Wecker ist also unnötig. Die meisten Charterbasen wollen das Boot am Vormittag zurück, es bleibt daher Zeit für ein ruhiges Bad, bevor man ankerauf geht und ein letztes Mal aus Sarsala hinaustuckert. Der Weg zurück über das Skopea Limani wiederholt den allerersten Tag, die bewaldeten Inseln ziehen in umgekehrter Reihenfolge vorbei. Unterwegs Treibstoff und Wasser auffüllen, falls die Basis es verlangt, dann in Göcek längsseits gehen und die Crew die Leinen machen lassen. Nach dem Auschecken bleibt meist Zeit für einen Kaffee oder ein letztes Mittagessen an der Promenade, bevor die Transfers kommen. Vierzehn Tage, und der Golf hat noch immer Buchten, die man nicht erreicht hat.",
+          "thingsToDo": [
+            "Letztes Bad im Morgengrauen vor Sarsala",
+            "Vor der Übergabe tanken",
+            "Kaffee an der Uferpromenade von Göcek",
+            "Vor dem Transfer durch die Marinaläden bummeln"
+          ],
+          "mooringTip": "Die Tank- und Rückgaberegeln der Basis am Vorabend klären, damit es morgens nicht hektisch wird. Langsam in die Marina von Göcek einlaufen und vorab über UKW nach dem Liegeplatz fragen; das Personal nimmt bei der Ankunft die Leinen."
+        }
+      }
+    }
+  },
+  "areas": {
+    "bodrum": {
+      "metaTitle": "Törns ab Bodrum & Golf von Gökova | Boat4You",
+      "metaDesc": "Törns ab Bodrum: die Pinienbuchten im Golf von Gökova, Kleopatras Insel und lange Badestopps – Segeln an der türkischen Küste, Tag für Tag.",
+      "title": "Die Gulet-Küste, gesegelt nach deinem Plan",
+      "description": "Bodrum blickt auf einen Golf, der zum Umherstreifen gemacht ist. Gökova schneidet dreißig Meilen ins türkische Festland, seine Ufer sind in Bucht um pinienbestandene Bucht gefaltet, und die Routine schreibt sich von selbst: schwimmen, frühstücken, zwei Stunden segeln, nächste Bucht. Die Insel Sedir bewahrt ihr antikes Theater und einen Strand aus Sand, den Kleopatra der Legende nach herbringen ließ; English Harbour versteckt sich so gut, dass die Royal Navy die Bucht im Krieg nutzte. Restaurants mit eigenem Steg nehmen deine Leinen an, servieren Meze und berechnen das Vergnügen fair. Der Meltemi kommt hier abgemildert an, mehr Brise als Wetter. Bodrum selbst – Burg, Markt, Marina – rahmt die Woche richtig ein. Es ist die leichteste Einführung in die Türkei, die ein Segler bekommen kann."
+    },
+    "gocek": {
+      "metaTitle": "Segeltörns ab Göcek & Fethiye | Boat4You",
+      "metaDesc": "Törns ab Göcek und Fethiye durch die zwölf Inseln von Skopea Limani: Restaurants mit Steg, Ruinen über den Ankerplätzen, entspannte Meilen.",
+      "title": "Zwölf Inseln in einem geschützten Golf",
+      "description": "Göcek liegt am Kopf des Skopea Limani, einem Golf, der so geschützt und so voller Inseln ist, dass du eine Woche segeln kannst, ohne je eine Welle über den Bug zu nehmen. Für gemischte Crews ist die Formel unschlagbar: Der Anker fällt in zehn Meter klares, grünes Wasser, eine lange Leine geht an Land an eine Pinie, und das Abendessen findet in einem Familienrestaurant statt, das seinen Steg genau für dich gebaut hat. Lykische Ruinen stehen direkt über mehreren Ankerplätzen – Kleopatras Bäder, die Gräber bei Kaya – und Fethiyes Markt versorgt die Kombüse ordentlich. Die Winde sind leicht und thermisch, navigiert wird auf Sicht, und die Marinas in Göcek sind zahlreich und gut in Schuss. Wenn die Türkei einen Übungshang fürs Chartern hat, dann diesen – und er ist zufällig auch noch wunderschön."
+    }
+  }
+}

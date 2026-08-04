@@ -1,1 +1,838 @@
-{}
+{
+  "routes": {
+    "bodrum": {
+      "metaTitle": "7-daagse Gökova-lus vanuit Bodrum | Boat4You",
+      "metaDesc": "Een week zeilen vanuit Bodrum rond de Golf van Gökova: warmwaterbronnen op Kara Ada, boeien in Çökertme, Cleopatra's strand en stil Mersincik.",
+      "days": {
+        "1": {
+          "shortDescription": "Een rustige hop van vier mijl zuidwaarts naar Kara Ada, het Zwarte Eiland, waar warme minerale bronnen opborrelen naast een zandbaai die gemaakt is voor de eerste duik.",
+          "description": "Kara Ada ligt maar vier mijl onder Bodrum, waardoor dag één eerder een opwarmertje is dan een echte overtocht. Meestal gooien we halverwege de middag los, zodra de boot is ingeruimd en het papierwerk klaar is, en laten we de bemanning haar zeebenen vinden op vlak water. Het eiland is vulkanisch en aan de zuidkant liggen ondiepe poelen die gevoed worden door warme minerale bronnen; de mensen hier baden er al generaties lang, en het korte ritje met de bijboot naar de wal is het waard. Laat de haak vallen in de baai op goed houdend zand, vier tot zes meter, mooi weggekropen voor het noorden. Dat telt in juli en augustus, wanneer de Meltemi uit het noorden naar binnen valt met vijftien tot vijfentwintig knopen en in de loop van de middag aantrekt. Er is geen kade en geen winkel, dus vul water en proviand aan voordat je vertrekt.",
+          "thingsToDo": [
+            "Baden in de warme bronpoelen aan wal",
+            "Snorkelen langs de zwarte vulkanische richels",
+            "Sundowners en meze in de baai",
+            "Over de geitenpaadjes omhoog voor het uitzicht"
+          ],
+          "mooringTip": "Ankeren is gratis in de baai; het zand houdt goed op vier tot zes meter en je ligt uit de noordenwind. Aan wal is niets om aan vast te maken, dus wil je stroom en water, dan ligt Bodrum Marina vier mijl terug voor €80–130 per nacht in het hoogseizoen."
+        },
+        "2": {
+          "shortDescription": "Vijftien mijl oostwaarts naar rustiger golfwater en Çökertme, een baai omzoomd met dennen waar de restaurantboeien gratis zijn als je aan wal eet.",
+          "description": "Draai vanaf Kara Ada naar het oosten en het karakter van het zeilen verandert. Zodra je de Golf van Gökova binnenvalt, gaat de deining liggen en neemt de wind af ten opzichte van de buitenkust, waardoor de vijftien mijl naar Çökertme meestal makkelijk voorbijgaan op een ruime koers. De baai opent zich als een breed hoefijzer met dennen tot aan het water, stil genoeg dat je de cicaden hoort voordat je de boeien ziet liggen. Een handvol familierestaurants legt boeien uit, en de afspraak is oud en simpel: neem een boei, eet onder de wingerd en je betaalt niets voor de nacht. Die naam hoort bij een oud schippersliedje dat langs deze kust nog altijd gezongen wordt. Wil je liever voor eigen anker liggen, dan houdt het zand goed op vijf tot zeven meter met prima beschutting uit het noorden. Gegrilde köfte en een koude Efes sluiten de avond meestal af.",
+          "thingsToDo": [
+            "Köfte van de olijfhoutgrill aan wal",
+            "Nachtzwemmen in de spiegelgladde baai",
+            "Omhoog wandelen door de dennen",
+            "Luisteren naar het oude lied van Çökertme"
+          ],
+          "mooringTip": "Pak een van de restaurantboeien en je enige rekening is het diner. Zijn ze bezet, of wil je liever privacy, anker dan midden in de baai op zand op vijf tot zeven meter, goed beschut uit het noorden. Buiten de piek in augustus hoef je niet vooruit te reserveren."
+        },
+        "3": {
+          "shortDescription": "Dieper de golf in naar het eiland Sedir, met een befaamd goudkleurig strand waar je naartoe mag zwemmen maar nooit overheen mag lopen.",
+          "description": "Nog eens vijftien mijl brengt je oostwaarts naar Sedir Adası, in het buitenland beter bekend als Cleopatra-eiland. Het verhaal gaat dat Marcus Antonius het fijne gouden zand hier voor de koningin liet aanvoeren uit Noord-Afrika, en korrelanalyse plaatst de herkomst inderdaad ver ten zuiden van de Egeïsche Zee, dus de legende houdt beter stand dan de meeste. Het addertje: het strand is beschermd, en de boswachters staan zwemmen vanaf het water toe, maar geen voetstap op het zand zelf. Kom met de bijboot en blijf drijven, niet flaneren. Boven het strand liggen de muren en het kleine theater van het antieke Kedreai, een makkelijke wandeling tussen dennen en omgevallen zuilen. Snorkelaars kunnen de oude havenhoofden vlak onder het oppervlak volgen. Anker in het kanaal aan de noordkant, zand op vijf tot zeven meter, beschut tegen de heersende noordenwind. Zorg dat je er vroeg in de middag bent; de dagboten uit Marmaris dunnen later uit.",
+          "thingsToDo": [
+            "Zwemmen naar het afgezette Cleopatra-strand",
+            "Dwalen door de ruïnes van het antieke Kedreai",
+            "Snorkelen boven de verzonken havenmuren",
+            "Zeebaars en rakı aan een tafel op de kade"
+          ],
+          "mooringTip": "Anker voor het noordelijke kanaal op zand op vijf tot zeven meter, uit de noordenwind. Dit is nationaal parkgebied, dus respecteer de touwen op het strand en blijf van het zand af. Kom binnen voordat de excursieboten in de middag de ankerplaats vullen."
+        },
+        "4": {
+          "shortDescription": "Een korte twaalf mijl over naar de stille zuidoever van de golf en Karaca, een vissersgehucht omzoomd met oleander en kiezels.",
+          "description": "Karaca ligt twaalf mijl aan de overkant van de golf, aan de zuidoever, in een plooi van de kust waar een klein vissersdorp achter een kiezelstrand wegduikt. Oleander dringt tot aan de waterkant en het tempo zakt nog een tandje; dit is het soort plek waar de middag opgaat aan bijna niets doen. De restaurants hier hanteren dezelfde boei-voor-diner-afspraak als in Çökertme, dus een tafel aan wal levert je een gratis nacht aan de boei op. Wij komen meestal halverwege de middag binnen, zwemmen vanaf het achterschip en roeien dan naar binnen voor een vroege rakı. De grond in de inham is goed houdend zand op vier tot zes meter, en de heuvels sluiten hem volledig af van de noordenwind. Vraag naar het lam aan het spit; dat is de lokale specialiteit en het wachten waard. Neem contant geld mee, want zo ver langs de kust werken de betaalautomaten lang niet altijd.",
+          "thingsToDo": [
+            "Zoeken naar zeeglas op het kiezelstrand",
+            "Backgammon onder de oude vijgenboom",
+            "Lam van het spit aan een familietafel",
+            "Afkoelen vanaf het achterschip in spiegelglad water"
+          ],
+          "mooringTip": "Neem een restaurantboei en reken de ligplaats af met de prijs van het diner. Liever onafhankelijk? De inham houdt goed op zand op vier tot zes meter en ligt volledig dicht voor het noorden. Hij loopt zelden vol, dus reserveren hoeft niet."
+        },
+        "5": {
+          "shortDescription": "Vijftien mijl terug naar het westen naar Mersincik, een baai bewaakt door graniet met een zeegrot achterin, tijm op de heuvels en mijlenver geen licht.",
+          "description": "Draai de boeg naar het westen en vaar vijftien mijl terug langs de golf naar Mersincik, een van de ruigere ankerplaatsen van deze ronde. De ingang versmalt tussen grijs graniet, en achter in de baai nodigt een lage zeegrot uit om er met de kajak of bijboot in te peddelen. Er is hier niets gebouwd, en dat is precies de bedoeling. Achter het strand klimt een ruw pad naar een rug vol wilde tijm; wrijf een takje fijn tussen je vingers en je ruikt waarom de honing langs deze kust zo geliefd is. De ankergrond is betrouwbaar zand op vier tot zes meter, en de omringende heuvels houden deining uit alle hoeken buiten. Omdat het binnen het beschermde Gökova-reservaat ligt, is er geen winkel en geen brandstof, dus vul de koelkast en de tanks voordat je uit Karaca vertrekt. Na donker gaat de hemel open; zonder stad in de wijde omtrek komen de sterren tot op het water.",
+          "thingsToDo": [
+            "Met de kajak de zeegrot in peddelen",
+            "De tijmrug boven de baai op klimmen",
+            "Koude zeytinyağlı gerechten aan dek",
+            "Sterrenkijken zonder een spoor van lichtvervuiling"
+          ],
+          "mooringTip": "Overal gratis ankeren op zand op vier tot zes meter, met beschutting uit alle richtingen dankzij de granieten heuvels. Er is geen marina en geen proviandering, dus kom volledig bevoorraad en met volle water- en brandstoftanks."
+        },
+        "6": {
+          "shortDescription": "De laatste etappe terug naar Bodrum, waar een kruisvaarderskasteel de haven bewaakt en een van de oudste ooit geborgen scheepswrakken herbergt.",
+          "description": "De laatste overtocht is vijftien mijl terug naar Bodrum, het liefst 's ochtends gezeild voordat de Meltemi opbouwt. Als de stad voor je opdoemt, domineert het honingkleurige Sint-Pieterskasteel de havenmond, in de vijftiende eeuw neergezet door de Ridders van Sint-Jan. Binnenin zit nu het Museum voor Onderwaterarcheologie, met als pronkstuk het wrak van Uluburun, een bronstijdhandelaar die ruim drieduizend jaar geleden verging met een lading koper, glas en ivoor. Trek er een middag voor uit. Daarna belonen de achterstraatjes en de bazaar een langzame ronde, zeker voor handgeweven katoen en de plaatselijke peştemal-handdoeken; afdingen hoort erbij en is het halve plezier. Bel de marina een dag van tevoren om je plek te bevestigen, en doe de brandstofsteiger aan voordat je voor de nacht met het achterschip aan de kade gaat.",
+          "thingsToDo": [
+            "Het museum in het Sint-Pieterskasteel bezoeken",
+            "Voor de vondsten van het Uluburun-wrak staan",
+            "Afdingen op peştemal-handdoeken in de bazaar",
+            "Bunkeren aan de brandstofsteiger in de haven"
+          ],
+          "mooringTip": "In Bodrum Marina lig je met het achterschip aan de kade op lazy lines, in het hoogseizoen ruwweg €80–130 per nacht. Bunker bij de steiger bij de ingang voordat je naar binnen gaat, en bel vooruit om je plek vast te leggen, want in de hoogzomer is het krap."
+        },
+        "7": {
+          "shortDescription": "Een rustige laatste ochtend aan de steiger: boot inleveren, nog één keer zwemmen en een Turkse koffie voor de korte rit naar het vliegveld.",
+          "description": "Uitchecken gebeurt vroeg. De meeste bases willen de boot om negen uur langszij en overgedragen hebben, dus loont het om de avond ervoor te pakken en bij het eerste licht nog één keer door de bakskisten en de bilge te gaan. De basismanager loopt met je over dek, controleert de inventaris en noteert wat er mist of stuk is; fotografeer elke beschadiging die op het formulier komt voordat je tekent, en houd een kopie. De borg staat meestal binnen een week terug op je kaart. Vertrekt je vlucht later op de dag, dan hoef je de kade niet af: bestel een Turkse koffie bij een café aan het water, of glip nog even naar een beachclub in de buurt voor een laatste duik. Als het zover is, is het vliegveld van Bodrum een simpele rit van vijfendertig minuten, en de marina kan een transfer regelen. Een ontspannen slot van een week die de hele ronde beschut bleef.",
+          "thingsToDo": [
+            "De overdracht doorlopen met de basismanager",
+            "Laatste duik bij een beachclub in Bodrum",
+            "Turkse koffie op de kade aan de haven",
+            "De transfer naar het vliegveld van Bodrum regelen"
+          ],
+          "mooringTip": "Zorg dat de boot voor negenen terug op zijn plek ligt voor de overdracht. Fotografeer alles wat als schade wordt genoteerd voordat je het inspectieformulier tekent. De borg komt normaal binnen zeven dagen terug."
+        }
+      }
+    },
+    "bodrum-akyaka": {
+      "metaTitle": "7-daagse route Bodrum–Akyaka v.v. | Boat4You",
+      "metaDesc": "Zeven dagen zeilen rond de Golf van Gökova vanuit Bodrum: de zeegrot van Mersincik, de Azmak bij Akyaka, Keramos bij Ören en de baai van Çökertme.",
+      "days": {
+        "1": {
+          "shortDescription": "Een rustige eerste etappe van 15 mijl zuidwaarts van Bodrum naar Mersincik, een baai met een granieten mond, een zeegrot voor de kajak en geen drukte.",
+          "description": "Vertrek uit Bodrum Marina zodra het overdrachtspapierwerk rond is en zet de boeg zuid-zuidoost. Vijftien mijl open water geeft je de tijd om aan de boot te wennen voordat er iets technisch komt, en vroeg in de middag doemen de wanden van Mersincik op aan bakboord, met daarachter een baai die je binnenkomt door een gat in het graniet. Laat de haak vallen op zand in vier tot zes meter; de grond houdt goed en de deining volgt je zelden naar binnen. Aan wal is niets, en dat is de bedoeling. Achter in de baai ligt een lage zeegrot te wachten op een kajak, en tussen de rotsranden zitten grotten die een duikbril en vinnen waard zijn. Wij klimmen meestal voor het eten nog even de met tijm begroeide rug op voor het licht. Vul de koelkast eerst in Bodrum, want de dichtstbijzijnde winkel ligt een heel eind terug.",
+          "thingsToDo": [
+            "Met de kajak de zeegrot van Mersincik in",
+            "Snorkelen in de granieten grotten bij de ingang",
+            "De rug met wilde tijm boven de baai op",
+            "Sundowners aan dek in een lege ankerplaats"
+          ],
+          "mooringTip": "Gratis ankeren op zand in 4–6 m dicht bij de kop van de baai; de grond houdt betrouwbaar en de baai blijft vlak bij de gebruikelijke noordwester. Geen kade, water of brandstof hier, dus vul tanks en proviand in Bodrum voordat je vertrekt."
+        },
+        "2": {
+          "shortDescription": "Een korte hop van acht mijl oostwaarts naar Kairos, een stille baai waar één restaurant aan de kade zijn boeien uitleent en Lycische stenen van boven toekijken.",
+          "description": "Hier hoef je niets te haasten. Acht mijl vlak ochtendwater brengt je naar Kairos, een plooi in de zuidoever waar de meeste bemanningen nog nooit van gehoord hebben. Eén familie runt het enige restaurant aan het water, en hun boeien zijn van jou voor de prijs van een diner, dus pak een lijn en maak het jezelf gemakkelijk. Het kiezelstrand loopt snel af in helder water; erachter klimt een ruw pad naar de omgevallen stenen van een Lycische uitkijkpost, het mooist gelopen in de koelte van de avond. Lunchen is hier simpel. Bestel een balık ekmek bij de grill op de kade, eet hem met je voeten in zee en laat de middag traag verlopen. De nachten zijn echt stil, met weinig meer gezelschap dan een enkele meeuw en de boot die zachtjes aan de boei zwaait.",
+          "thingsToDo": [
+            "Een restaurantboei pakken bij Kairos",
+            "Omhoog naar de ruïnes van de Lycische uitkijkpost",
+            "Balık ekmek bij de grill op de kade",
+            "Zo vanaf het kiezelstrand het water in snorkelen"
+          ],
+          "mooringTip": "Neem een van de boeien van het restaurant en betaal door aan wal te eten; de baai is knus en houdt je uit de noordenwind. Zijn de boeien bezet, anker dan op zand en kiezel in 4–6 m en werk achteruit richting het strand."
+        },
+        "3": {
+          "shortDescription": "Twaalf mijl oostwaarts land je in Karaca, een vissersinham achter dennen en oleander waar de vangst van de dag gegrild op de kade belandt.",
+          "description": "Vertrek na het ontbijt uit Kairos voor de twaalf mijl naar Karaca, een werkende inham waar vissersboten nog altijd in de meerderheid zijn tegenover charterjachten. De aanloop is groen: dennen komen tot aan het water en oleander zoomt het kiezelstrand af. Net als in de baaien ervoor is het restaurant eigenaar van de boeien, en een diner verzekert je van je plek. Neem het klifpad dat door dennen en tijm boven de baai loopt; de geur alleen al is de klim waard, en het uitzicht terug over de voor anker liggende vloot mag er zijn. Glijd langs de rotsen het water in en je vindt juffertjesvissen die in het ondiepe hangen. Als de vissers binnenkomen, koopt een glas çay op de kade je een uur gesprek. Vraag om de rode mul, simpel gegrild met citroen en olie, en je wilt verder weinig meer.",
+          "thingsToDo": [
+            "Het klifpad door dennen en tijm lopen",
+            "Snorkelen naar juffertjesvissen langs de rotsen",
+            "Çay drinken met de vissers van Karaca",
+            "Gegrilde rode mul in de taverna aan de kade"
+          ],
+          "mooringTip": "Karaca werkt net als zijn buren: pak de restaurantboei en reken af bij het diner. De ankerruimte is krap, dus laat je toch de haak vallen, gebruik dan zand in 4–6 m en blijf uit de zwaaicirkels van de boeien."
+        },
+        "4": {
+          "shortDescription": "Acht mijl naar de kop van de golf en Akyaka, een stadje met houten balkons aan de Azmak waar kitesurfers de middagwind rijden.",
+          "description": "Dit is de kop van de golf, en de wind weet dat. De trechter van Gökova zet de meeste zomermiddagen een stevige bries door Akyaka, en daarom zit de kite- en windsurfwereld hier; maak de korte overtocht van acht mijl dus in de rust van de ochtend en lig vast voordat het invalt. Het stadje beloont de moeite. Huizen in Ottomaanse stijl met gesneden houten balkons klimmen tegen de helling op, en de Azmak stroomt koud en glashelder uit de heuvels erachter. Neem de kajak een paar kilometer stroomopwaarts, langs reigers in het riet en, als je geluk hebt en stil bent, een otter. Terug in het stadje zoek je een lokanta aan de oever en bestel je mantı, de kleine dumplings verdronken in knoflookyoghurt. Het is een levendiger stop dan de baaien, in de beste zin.",
+          "thingsToDo": [
+            "Twee kilometer de Azmak op met de kajak",
+            "Door de oude stad met Ottomaanse houten balkons",
+            "Mantı in een lokanta aan de rivier",
+            "Kitesurfers kijken voor het strand"
+          ],
+          "mooringTip": "Het kleine haventje van Akyaka neemt je met het achterschip aan de kade voor ruwweg €60–90 per nacht; in juli en augustus is vooruit boeken verstandig. Kom halverwege de ochtend binnen: de thermische wind bouwt hier snel op en afmeren wordt lastig zodra het hard waait. Ankeren in de baai kan op zand in 4–6 m, maar je ligt open voor de middagbries."
+        },
+        "5": {
+          "shortDescription": "Twaalf mijl terug langs de zuidoever naar Ören, een olijfdorp waar de antieke stenen van Keramos tussen de wilde bloemen liggen.",
+          "description": "Gooi los zolang het nog rustig is en vaar twaalf mijl langs de zuidoever naar Ören. Achter het strand rijzen olijfterrassen op, en het tempo zakt na de drukte van Akyaka terug naar dorpstijd. De reden om te stoppen is Keramos, een stad uit de vierde eeuw v.Chr. waarvan de muren en zuiltrommels half verloren in het gras en de wilde bloemen landinwaarts liggen; ga 's ochtends voor de hitte en je hebt de ruïnes waarschijnlijk voor jezelf. Valt je timing samen met de marktdag, dan vult het plein zich met zakken specerijen en stapels lokaal aardewerk waar je gerust in mag rommelen. Lunchen doe je hier op het strand, een bord van de mangal en een koude ayran onder een rieten parasol. Tegen de avond drijft de geur van met komijn ingewreven lam boven de kolen over het zand, en dat is moeilijk te weerstaan.",
+          "thingsToDo": [
+            "De ruïnes van Keramos uit de 4e eeuw v.Chr. verkennen",
+            "Langs de kramen van de weekmarkt in Ören",
+            "Lunchen op het strand met een koude ayran",
+            "Mangal-barbecue met komijnlam op het zand"
+          ],
+          "mooringTip": "Het haventje van Ören is de goedkoopste ligplaats van de reis, met het achterschip aan de kade voor zo'n €40–60 per nacht. Het loopt minder snel vol dan Akyaka, maar in piekweken kan een telefoontje vooraf geen kwaad. Ankeren voor het strand op zand in 4–6 m gaat prima bij de heersende noordwester."
+        },
+        "6": {
+          "shortDescription": "Vijftien mijl westwaarts naar Çökertme, een hoefijzer vol dennen, beroemd om zijn volkslied, familietaverna's en een gloed in het water in de nazomer.",
+          "description": "Vandaag een langere etappe, vijftien mijl westwaarts over de mond van de golf naar Çökertme, een hoefijzervormige baai omgeven door dennen. Turkse zeelui kennen hem van een oud volkslied, en op zomeravonden pakt iemand op de kade meestal een saz en speelt het. De baai werkt volgens de vertrouwde boei-voor-diner-afspraak, met een handvol familietaverna's die zachtjes om je gunst strijden. Bestel köfte van de olijfhoutgrill en je begrijpt de ophef. Laat in augustus, als de algen bloeien, licht een duik van het achterschip na donker het water blauwgroen op rond je armen, zo'n ding dat niemand gelooft tot hij het zelf ziet. Voor de onrustigen loopt er een wandeling over de rug door de dennen boven de ankerplaats. Verder is dit een baai die vraagt of je wilt blijven liggen en vooral weinig wilt doen.",
+          "thingsToDo": [
+            "Nachtzwemmen in bioluminescent water (eind aug.)",
+            "Köfte van de olijfhoutgrill in een taverna",
+            "Live sazmuziek op de kade",
+            "Over de dennenrug boven de baai wandelen"
+          ],
+          "mooringTip": "Zelfde afspraak als in de andere baaien: neem de boei van een taverna en betaal met het diner, wat de restaurants hier serieus nemen. Ankeren kan ook, op zand in 5–7 m voor het strand, en het hoefijzer houdt je knus uit het noorden. In augustus is het in het weekend druk, dus kom laat in de middag binnen voor een goede plek."
+        },
+        "7": {
+          "shortDescription": "Een laatste vijftien mijl terug naar Bodrum, met tijd voor een laatste duik voor de marina, het kasteel en een afscheidsborrel boven de haven.",
+          "description": "De laatste etappe is een makkelijke vijftien mijl terug naar Bodrum, en er is geen reden om te jakkeren. Anker desnoods nog één keer voor Çökertme voor een ochtendduik als de bemanning zin heeft, en zet dan koers west naar de marina. Bel de dag ervoor om je overdrachtsmoment vast te leggen, en doe de brandstofsteiger bij de havenmond aan voordat je op lazy lines je plek inneemt. Met de boot opgeruimd is de middag aan wal van jou. Het Sint-Pieterskasteel bewaakt de haven vanaf een vijftiende-eeuws fundament en herbergt nu het museum voor onderwaterarcheologie, een uur meer dan waard. Verdwaal daarna in de bazaar en ding af op leer en saffraan. Sluit de reis af zoals het hoort, met een drankje bij een meyhane aan de haven terwijl de zon achter de masten zakt.",
+          "thingsToDo": [
+            "Het 15e-eeuwse Sint-Pieterskasteel bezoeken",
+            "Afdingen op leer en saffraan in de bazaar",
+            "Laatste duik voor Çökertme bij zonsopgang",
+            "Zonsondergangborrel bij een meyhane aan de haven"
+          ],
+          "mooringTip": "In Bodrum Marina lig je met het achterschip aan de kade op lazy lines, in het hoogseizoen ruwweg €80–130 per nacht. Bevestig je overdrachtstijd 24 uur van tevoren bij de basis en stop bij de brandstofsteiger bij de ingang om te bunkeren voordat je je plek in draait."
+        }
+      }
+    },
+    "bodrum-didim": {
+      "metaTitle": "7-daagse zeilreis Bodrum–Efeze | Boat4You",
+      "metaDesc": "7 dagen zeilen vanuit Bodrum langs de Turkse Egeïsche kust: Yalıkavak, Güllük, de Apollotempel bij Didim, Kuşadası voor Efeze en ruimwinds terug.",
+      "days": {
+        "1": {
+          "shortDescription": "Rustig beginnen in Bodrum Marina: de boot bevoorraden, het Sint-Pieterskasteel op en tussen de resten van het Mausoleum staan.",
+          "description": "De meeste bemanningen besteden de eerste dag aan het klaarmaken van de boot in plaats van meteen weg te varen, en Bodrum beloont dat oponthoud. De marina ligt onder het Sint-Pieterskasteel, een vijftiende-eeuws kruisvaardersfort waarin nu het Museum voor Onderwaterarcheologie zit — het wrak van Uluburun daarbinnen is een van de oudste ooit opgegraven. Trek er een paar uur voor uit. Een korte wandeling landinwaarts brengt je bij de verspreide stenen van het Mausoleum van Halicarnassus, ooit een van de Zeven Wereldwonderen. Er staat niet veel meer overeind, maar de schaal komt nog altijd binnen. Laad verse producten, water en ijs voordat de meltemi in de middag aantrekt, en zoek bij schemer een meyhane aan het water op voor meze en een glas rakı. Tank bij de brandstofsteiger bij de ingang, zodat je morgen met volle tanks vertrekt.",
+          "thingsToDo": [
+            "Het Museum voor Onderwaterarcheologie bezoeken",
+            "De stenen van het Mausoleum van Halicarnassus zoeken",
+            "Afdingen op specerijen in de bazaar van Bodrum",
+            "Meze en rakı bij een meyhane aan het water"
+          ],
+          "mooringTip": "Bodrum Marina legt je met het achterschip aan de kade op lazy lines en biedt volledige beschutting; reken in het hoogseizoen op €80–130 per nacht. Tank bij de brandstofsteiger bij de havenmond voordat je noordwaarts gaat."
+        },
+        "2": {
+          "shortDescription": "Om de punt van het schiereiland naar het glanzende Yalıkavak, of duik weg in het rustiger Göltürkbükü met zijn houten vlonders boven het water.",
+          "description": "Twaalf mijl brengt je om de noordwesthoek van het schiereiland, dus verwacht de meltemi op de neus voor het laatste stuk — het loont om voor negenen te vertrekken en de middagopbouw voor te blijven. Palmarina in Yalıkavak is de stop om je te vergapen: superjachten, designersteegjes en een marmeren kade die in 2014 openging. Een middag window-shoppen is er zo voorbij, minder makkelijk voor de portemonnee. Vier mijl oostelijker is Göltürkbükü de zachtere keuze. De baai is omzoomd met dennen en de beachclubs schuiven hun zwemvlonders uit over ondiep water. Anker ervoor, zwem voor de lunch en ga dan met de bijboot naar binnen voor een lange, luie maaltijd. Gümüşlük met de verzonken resten van Myndos ligt net ten westen als je zin hebt in een visdiner en een zonsondergang aan wal.",
+          "thingsToDo": [
+            "Over de superjachtkade van Palmarina lopen",
+            "Zwemmen bij de vlonderbeachclubs van Göltürkbükü",
+            "Vis bij zonsondergang boven het verzonken Myndos in Gümüşlük",
+            "Langs de boetieks in de steegjes van Palmarina"
+          ],
+          "mooringTip": "Palmarina neemt je met het achterschip aan de kade maar rekent topprijzen, in juli vaak €200–400 per nacht. Het haventje van Göltürkbükü zit op €100–160, of je ankert simpelweg voor de beachclubs op zand in 4–6 m."
+        },
+        "3": {
+          "shortDescription": "De Golf van Mandalya over naar Güllük, een werkende vissersplaats met de Karische ruïnes van Iasos op de landtong.",
+          "description": "Zuidwest de Golf van Mandalya over voelt Güllük als een wereld verwijderd van de marinaglamour achter je. Dit is een echte vissershaven: boten lossen hun vangst aan de kade, en de vis op je bord kwam waarschijnlijk die ochtend van een van die boten. Het tempo zakt zodra je vastligt. De reden om te stoppen, behalve de rust, is Iasos. De antieke Karisch-Griekse stad ligt op de landtong, een korte wandeling of ritje met de bijboot naar het zuiden, met een Romeinse agora, Byzantijnse muren en een theater dat over het water uitkijkt. Ga in het koelere avondlicht. Daarna doen de grills aan de kade çöp şiş, de dunne lamsspiesjes waar deze hoek van de Egeïsche kust om bekendstaat, en de baai zelf blijft spiegelglad zodra de meltemi wegvalt.",
+          "thingsToDo": [
+            "Door de Karische en Romeinse ruïnes van Iasos lopen",
+            "Çöp şiş eten op de visserskade",
+            "Zwemmen in de spiegelgladde baai van Güllük",
+            "Bij zonsopgang de vangst zien binnenkomen"
+          ],
+          "mooringTip": "Het kleine haventje van Güllük neemt je met het achterschip aan de kade voor €60–100 per nacht en beschut goed uit het noorden. Is het vol, anker dan in de baai op goed houdend zand in 5–7 m."
+        },
+        "4": {
+          "shortDescription": "Twintig mijl noordwaarts naar Didim, waar de kolossale Apollotempel nog overeind staat en het gouden zand van Altınkum een mijl zuidelijker wacht.",
+          "description": "Een etappe van twintig mijl brengt je naar Didim en een van de grote bezienswaardigheden van de Turkse kust. De Apollotempel van Didyma hoorde bij de grootste die de Grieken ooit optrokken, en zelfs half in ruïnes reiken de zuilen negentien meter de lucht in. Dit was het orakel van de Branchiden, in zijn tijd alleen door Delphi overtroffen. Hij ligt een paar kilometer landinwaarts, een makkelijk taxiritje vanaf de marina. D-Marin Didim is een grote, goed geleide haven en de standaardovernachting hier, beschut wat de wind ook doet. Zak na de tempel af naar Altınkum, een mijl zuidelijker, voor zacht goudkleurig zand en ondiep zwemwater. Neem in het stadje een doos lokum mee bij een familiebanketbakker voordat je vertrekt.",
+          "thingsToDo": [
+            "Onder de zuilen van de Apollotempel staan",
+            "Zwemmen bij het gouden zand van Altınkum",
+            "Lokum kopen bij een familiebanketbakker",
+            "Door de havenbazaar op zoek naar textiel"
+          ],
+          "mooringTip": "D-Marin Didim legt je met het achterschip aan de kade op lazy lines, volledig beschut, rond €100–160 per nacht in het hoogseizoen. Het is populair in het seizoen, dus bel vooruit om een plek vast te houden en tank bij de steiger bij de ingang."
+        },
+        "5": {
+          "shortDescription": "Een lange run van 32 mijl noordwaarts naar Kuşadası, je springplank naar Efeze, de grootste Romeinse stad aan deze kust.",
+          "description": "Dit is de langste overtocht van de heenweg, tweeëndertig mijl tegen de heersende noordenwind in, dus behandel het als een echte zeildag en vertrek vroeg. De beloning aan het eind is Efeze, en die is elke slag waard. Kuşadası is een drukke cruisehaven met een volwaardige marina, dus reserveer de ligplaats. Vandaar is Efeze een kort taxiritje en een halve dag te voet: de Bibliotheek van Celsus, het Grote Theater dat ooit vijfentwintigduizend mensen hield, marmeren straten waar je nog steeds overheen loopt. Ga meteen 's ochtends, voordat de touringcars en de hitte er zijn. Terug in de stad is Ladies Beach (Kadınlar Denizi) waar de locals zwemmen, en het kasteeltje op Güvercinada bewaakt de haven. De bazaar is goed voor zijde en specerijen als je tijd hebt.",
+          "thingsToDo": [
+            "Efeze en de Bibliotheek van Celsus verkennen",
+            "In de stenen rangen van het Grote Theater zitten",
+            "Zwemmen bij Ladies Beach (Kadınlar Denizi)",
+            "Het havenkasteel op Güvercinada beklimmen"
+          ],
+          "mooringTip": "Setur Kuşadası Marina legt je met het achterschip aan de kade, volledig beschut, voor ruwweg €100–160 per nacht in het hoogseizoen. Het is druk in het cruiseseizoen, dus reserveer vooruit en tank bij de steiger bij de ingang voor de lange tocht terug."
+        },
+        "6": {
+          "shortDescription": "Een rustige vijftien mijl naar het stille Özdere, met het orakelheiligdom van Claros landinwaarts en lege baaitjes voor de sup.",
+          "description": "Na de drukte van Kuşadası is Özdere een bewuste versnelling terug. Vijftien makkelijke mijl langs de kust brengen je bij een ingetogen badplaatsstrook die de meeste charterroutes overslaan, en precies dat is de charme. De stranden zijn lang en ondiep, de baaitjes ertussen blijven stil, en met een supboard neus je het prettigst langs de kust. Landinwaarts, boven Ahmetbeyli, liggen de ruïnes van Claros, een orakelheiligdom van Apollo met een tempel en de stompen van kolossale beelden. Het krijgt een fractie van de bezoekers van Efeze. Terug aan boord: dit is olijfland, dus zoek naar zeytinyağlı groentegerechten bereid in lokale olie en een koele Egeïsche witte wijn bij een taverna-diner aan wal. Een rustige nacht voor de lange tocht zuidwaarts.",
+          "thingsToDo": [
+            "De orakelruïnes van Claros bezoeken",
+            "Suppen langs de stille baaitjes aan de kust",
+            "Zeytinyağlı olijfoliegerechten proeven in een taverna",
+            "Een gekoelde Egeïsche witte wijn proberen"
+          ],
+          "mooringTip": "Het haventje van Özdere is bescheiden en goedkoop, rond €40–70 per nacht, beschut uit het noorden. De voorzieningen zijn beperkt, dus lig je liever vrij, anker dan op zand in 4–6 m voor de baai."
+        },
+        "7": {
+          "shortDescription": "Zestig mijl ruimwinds terug naar Bodrum, met onderweg een optioneel bad in de warmwaterbronnen van Kara Ada voor de laatste keer afmeren.",
+          "description": "De laatste dag is de zware: zestig mijl terug naar Bodrum. De redding zit in de richting. Alles waar je op de heenweg tegenop hebt gekruist, ligt nu achter je, dus dit wordt een ruimwindse run met de meltemi die het werk doet — snel, maar het kan hobbelig worden, dus reef op tijd en vertrek bij het eerste licht. Probeer halverwege de middag ter hoogte van het schiereiland te zijn. Is er tijd en laat de zee het toe, dan heeft Kara Ada, het eiland voor Bodrum, warme zwavelbronnen waar je kunt ankeren en in badwater kunt zwemmen. Een passende laatste stop. Tank voordat je afmeert, spoel de boot af en bevestig je overdrachtsmoment voor de ochtend. Dan is er nog één zonsondergang boven het kasteel en een laatste bemanningsdiner aan wal om de week af te sluiten.",
+          "thingsToDo": [
+            "Baden in de warme zwavelbronnen van Kara Ada",
+            "Afspoelen en tanken terug in Bodrum Marina",
+            "Laatste bemanningsdiner boven de haven",
+            "Laatste zonsondergang boven het Sint-Pieterskasteel"
+          ],
+          "mooringTip": "Terug in Bodrum Marina is het met het achterschip aan de kade op lazy lines, €80–130 per nacht. Tank onderweg naar binnen bij de steiger bij de ingang en bevestig je overdrachtsmoment 24 uur vooruit, zodat de ochtend rustig blijft."
+        }
+      }
+    },
+    "fethiye": {
+      "metaTitle": "7-daagse Blue Cruise vanuit Fethiye | Boat4You",
+      "metaDesc": "Zeven dagen zeilen vanuit Fethiye: Gemiler, Butterfly Valley, de Blue Lagoon van Ölüdeniz, Kapı Creek, Ruin Bay en Sarsala in de luwe golf.",
+      "days": {
+        "1": {
+          "shortDescription": "Een makkelijke opwarmer van acht mijl zuidwaarts naar het eiland Gemiler, waar Byzantijnse ruïnes tegen de helling op klimmen en aan de overkant koud bronwater de zee in loopt.",
+          "description": "De eerste etappe is met opzet rustig, acht mijl langs de kust terwijl iedereen zijn zeebenen vindt en uitzoekt waar de lierhandels liggen. Gemiler ligt net voor de wal, de helling volgestapeld met de dakloze rompen van Byzantijnse kerken en cisternen. Dit was Sint-Nicolaaseiland lang voordat de relieken van de heilige naar Bari werden gebracht, en de paden die door de ruïnes lopen zijn een uurtje waard voordat het licht vlak wordt. Wij steken meestal over naar Coldwater Bay voor de nacht. Zoetwaterbronnen voeden hier het ondiepe, en je voelt het meteen als je duikt: een koude laag die onder de warme bovenlaag door schuift. Neem een duikbril en zwem de rotsrand af. Het diner is meze bij de taverna aan de kade, en de boei is gratis bij de tafel.",
+          "thingsToDo": [
+            "Langs de Byzantijnse kerkruïnes op Gemiler lopen",
+            "Het overwelfde pad naar de kerk op de top op",
+            "Snorkelen in de koude bronlaag in Coldwater Bay",
+            "Mezediner bij de taverna aan de kade van Coldwater"
+          ],
+          "mooringTip": "Coldwater Bay heeft gratis restaurantboeien, dus neem er een en reken af bij het diner. Zijn ze bezet, dan houdt het zand goed op vijf tot zeven meter net buiten het boeienveld."
+        },
+        "2": {
+          "shortDescription": "Vier mijl door naar de steile kloof van Butterfly Valley, en dan om de hoek overnachten onder de befaamde lagune van Ölüdeniz en de paragliders van de Babadağ.",
+          "description": "Korte dag, dus haast is nergens voor nodig. Butterfly Valley opent zich als een groene spleet in de kliffen, een kloof die meer dan driehonderd meter landinwaarts omhoog loopt naar een waterval achterin. De Spaanse vlaggen, de vlinders die de vallei haar naam geven, verzamelen zich hier in de hoogzomer en nergens anders langs deze kust. Anker ervoor, loop door het riet naar binnen en ga voor de waterval als er water staat. Het is puur een dagstop; de kloof trechtert een vlagerige middagval die de nacht ongemakkelijk maakt. Daarvoor verkassen we een mijl oostwaarts naar Ölüdeniz. De lagune zelf is beschermd, maar de open baai ervoor houdt prima op zand in vijf tot zeven meter. Kijk rond zessen omhoog en meestal zie je de paragliders van de Babadağ naar beneden spiralen.",
+          "thingsToDo": [
+            "Door de kloof naar de waterval van Butterfly Valley",
+            "Vanaf het anker zwemmen bij de Blue Lagoon van Ölüdeniz",
+            "Paragliders zien landen vanaf de Babadağ",
+            "Spaanse vlag-vlinders spotten in de zomer"
+          ],
+          "mooringTip": "Behandel Butterfly Valley puur als lunchstop, met de haak op rotsbodem in zes tot acht meter en een oogje op de zwaai. Voor de nacht anker je in de open baai van Ölüdeniz op zand op vijf tot zeven meter, ruim buiten de gemarkeerde zwemzone."
+        },
+        "3": {
+          "shortDescription": "De langste etappe van de week, twaalf mijl de beschutte golf in, met als eindpunt Kapı Creek, een smalle inham met een kiezelstrand en één taverna.",
+          "description": "Dit is de grootste overtocht van de reis, dus wij gooien graag voor negenen de boei los om de mijlen te maken voordat de middagbries invalt. Zodra je Skopea Limanı binnenvalt, vlakt het water af en sluiten de dennenheuvels zich om je heen. Kapı Creek ligt achter in een gleuf die zich bij de mond tot zo'n tachtig meter vernauwt, waardoor het meer aanvoelt als een Noorse fjord dan als een Turkse baai. Binnen is het spiegelglad en volledig omsloten. Achterin ligt een kiezelstrand om te zwemmen en een tavernaatje dat het boeienveld beheert. Ga met het achterschip naar de steiger, breng een lange landvast uit als de jongen erom vraagt, en installeer je. Bestel de meze, een pot tijmhoning voor de ochtend, en laat de bemanning voor het eten naar de vernauwing peddelen.",
+          "thingsToDo": [
+            "Naar de 80 meter brede monding van de creek peddelen",
+            "Zwemmen vanaf het kiezelstrand achterin",
+            "Met het achterschip aan de steiger van de Kapı Creek-taverna",
+            "Tijmhoning en rakı kopen op de kade"
+          ],
+          "mooringTip": "In Kapı Creek lig je met het achterschip aan de tavernasteiger of aan de boeien, beide gratis als je aan wal eet, en het loopt op juli-avonden snel vol. Kom in het hoogseizoen vroeg in de middag binnen om zeker te zijn van een plek; het zand op vijf tot zeven meter is je terugvaloptie."
+        },
+        "4": {
+          "shortDescription": "Een rustige vier mijl naar Ruin Bay, waar een verdronken ruïne uit de Romeinse tijd in twee meter water ligt onder de Lycische graven.",
+          "description": "Nog een luie ochtend kan prima, want Ruin Bay ligt maar vier mijl verder. De trekpleister zit hier onder de boot in plaats van aan wal. Een deel van een oude Lycische nederzetting is lang geleden de zee in gegleden, en het metselwerk ligt nu in twee of drie meter helder water langs de voet van de klif, ondiep genoeg om te snorkelen zonder ooit diep te hoeven duiken. Zwem langzaam en je herkent bewerkte blokken en zuiltrommels, dik begroeid met wier. Boven de baai leidt een ruw pad omhoog naar de verspreide ruïnes van Lydae, tegenwoordig gedeeld met geiten en oude olijfbomen. Het is een goede plek voor een borrel bij zonsondergang. Steek de barbecue aan als de klif goud kleurt, en blijf opletten, want de baai ligt open genoeg dat een noordenwind 's nachts naar binnen kan vinden.",
+          "thingsToDo": [
+            "Snorkelen boven de verzonken ruïnes langs de klif",
+            "Omhoog wandelen naar de ruïnes van Lydae",
+            "Barbecueën aan dek bij zonsondergang",
+            "Vanaf de boeg zwemmen in het warme ondiep"
+          ],
+          "mooringTip": "Ruin Bay heeft gratis tavernaboeien en goed zand op vijf tot zeven meter, maar de baai ligt open naar het noorden, dus check het weerbericht voordat je er de nacht doorbrengt. Staat er noord op de kaart, dan zijn Kapı Creek of het eiland Tersane, een klein stukje verderop, rustiger keuzes."
+        },
+        "5": {
+          "shortDescription": "Zes mijl naar de marina van Göcek, met een zwemstop bij de lage Yassıca-eilanden of Domuz Adası voordat je afmeert voor douches en winkels.",
+          "description": "Halverwege de week is het de moeite waard een wilde baai in te ruilen voor een echte marina, en Göcek is de logische keuze. Het is maar zes mijl, dus maak er onderweg een ochtend van bij de eilanden. De Yassıca-groep steekt nauwelijks boven water uit, een cluster vlakke rots en turquoise geulen waar de vis dik boven het zeegras hangt; laat de haak vallen, zwem, en laat de lunch lang duren. Domuz Adası vlakbij biedt hetzelfde heldere ondiep als het druk is bij Yassıca. Kom vroeg in de middag D-Marin binnen, doe eerst de brandstofsteiger bij de ingang aan, pak dan een lazy line en werk achteruit de steiger op. De avond is voor vaste grond: een douche, een ijsje, een rondje langs de scheepswinkels en pottenbakkerijen, en een tafel bij een van de meyhanes net van de hoofdstraat.",
+          "thingsToDo": [
+            "Snorkelen in de zeegrasgeulen bij de Yassıca-eilanden",
+            "Zwemmen in het heldere ondiep van Domuz Adası",
+            "Langs de pottenbakkerswinkels bij D-Marin Göcek",
+            "Dineren bij een meyhane net van het plein in Göcek"
+          ],
+          "mooringTip": "D-Marin Göcek is met het achterschip aan de kade op lazy lines en kost in het hoogseizoen ruwweg honderd tot honderdzestig euro per nacht, dus boek vooruit in juli en augustus. Tank bij de brandstofsteiger bij de ingang voordat je je ligplaats inneemt, niet erna."
+        },
+        "6": {
+          "shortDescription": "Een korte vijf mijl naar Sarsala, een inham met dennenwanden, zonder marina en zonder lichten, bewaard voor een laatste nacht met sterren en barbecue.",
+          "description": "Vul de koelkast en de watertanks in Göcek voordat je vertrekt, want Sarsala heeft niets dan dennen en stilte. Het is vijf mijl kuieren de golf af naar een diepe, groene inham omringd door bos tegen de helling en beschut tegen zo'n beetje elke richting waar de wind uit besluit te komen. Anker op zand in vier tot zes meter en breng een lange landvast naar een boom als je 's nachts stil wilt liggen. Het ondiep achterin is een langzame peddeltocht waard; bij zonsopgang en schemer werken reigers de randen af, en langs de rotskanten zit meestal wel een octopus of twee voor wie een duikbril meeneemt. Bewaar je beste proviand voor vanavond. Gril iets simpels aan dek, doe de kajuitverlichting uit en laat de hemel de rest doen, ver van elke stadsgloed.",
+          "thingsToDo": [
+            "Ankeren met een lange landvast naar de dennen",
+            "Langs de rotskanten snorkelen naar octopus",
+            "Reigers kijken in het ondiep bij schemer",
+            "Sterrenkijken zonder stadslicht in de buurt"
+          ],
+          "mooringTip": "Sarsala is gratis ankeren op goed zand op vier tot zes meter, meestal met een lange landvast naar een boom omdat de inham smal is. Er zijn hier geen winkels en geen water, dus proviandeer volledig in Göcek voordat je afzakt."
+        },
+        "7": {
+          "shortDescription": "De laatste twaalf mijl naar Fethiye, getimed op aankomst vroeg in de middag, met een laatste duik onder de Lycische rotsgraven en een rondje over de markt.",
+          "description": "Thuisdag, en er is geen reden om er een klus van te maken. Het is twaalf mijl terug naar de marina, dus vertrek halverwege de ochtend terwijl het water nog olieglad is en de bries nog niet is opgebouwd. Zet koers oost-zuidoost en maak er een zeiltje van als de wind meewerkt. Er is tijd voor nog één duik onderweg, het liefst onder de uit de rots gehouwen Lycische graven hoog in de kliffen achter Fethiye, die er vanaf het water het mooist uitzien. Is het dinsdag, dan draait de markt in de stad op volle toeren, dus meer vroeg af en ga voor vijgen, olijven en een zak granaatappels. Probeer rond twee uur langszij te liggen bij ECE, dan houd je de middag over om te tanken, het zout eraf te spoelen en te pakken. Bevestig je overdrachtsmoment de dag ervoor, dan verloopt het uitchecken soepel.",
+          "thingsToDo": [
+            "Laatste duik onder de Lycische rotsgraven",
+            "De dinsdagmarkt in Fethiye afstruinen",
+            "Tanken en afspoelen bij ECE Marina",
+            "Granaatappelsap bij een café aan de kade"
+          ],
+          "mooringTip": "Marina di Fethiye ECE is met het achterschip aan de kade op lazy lines, in het hoogseizoen ruwweg zeventig tot honderdtien euro per nacht. Tank bij de brandstofsteiger bij de ingang op weg naar binnen, en bevestig je overdrachtstijd vierentwintig uur vooruit, zodat ligplaats en uitcheck klaarstaan."
+        }
+      }
+    },
+    "gocek-7-days": {
+      "metaTitle": "7-daagse Göcek 12 Eilanden Route | Boat4You",
+      "metaDesc": "Een week zeilen vanaf Göcek langs Sarsala, Fethiye, Gemiler, Ölüdeniz, Kapı Creek en Ruin Bay door de Golf van Fethiye.",
+      "days": {
+        "1": {
+          "shortDescription": "Een rustige warming-up van vijf mijl zuidwaarts vanaf D-Marin Göcek naar Sarsala, een door dennen omzoomde baai die kalm blijft, wat de wind ook doet.",
+          "description": "De eerste dag draait zelden om mijlen maken. Meestal gooien we rond het middaguur los in D-Marin Göcek, zodra de proviand is opgeborgen en de bemanning klaar is met zoeken naar hun zwemkleding, en zetten we koers zuidwaarts naar Sarsala. Vijf mijl later valt het anker in het zand op vier tot zes meter, weggestopt onder dennenruggen die van alle kanten lijken dicht te vallen. De wind hier is de imbat, een thermische zeebries die vanaf het begin van de middag uit het westen invult met tien tot vijftien knopen en wegvalt zodra de zon zakt. Niets vergeleken met de Egeïsche Meltemi. Duik van de spiegel het water in en loop daarna het pad over de bergkam door tijm en dennen voor het uitzicht terug over de baai. De nachten zijn donker en stil. Gooi iets op de grill achterop, tel satellieten en kruip vroeg in je kooi.",
+          "thingsToDo": [
+            "Snorkelen langs de dennenrotsen op zoek naar zeebrasem",
+            "Wandelen over de tijm-en-dennenkam boven de baai",
+            "Verse vis grillen achterop bij zonsondergang",
+            "Sterrenkijken zonder een spoor van lichtvervuiling"
+          ],
+          "mooringTip": "In Sarsala anker je vrij op goed zand op vier tot zes meter, beschut uit alle richtingen, dus reserveren hoeft niet. Er is geen jachthaven en geen betrouwbare winkel, dus vul water en proviand aan in Göcek voordat je vertrekt."
+        },
+        "2": {
+          "shortDescription": "Twaalf mijl oostwaarts naar Fethiye, waar Lycische graven in de rotswand boven de stad zijn uitgehakt en de dinsdagmarkt de achterstraatjes vult.",
+          "description": "Fethiye is de enige echte stad op deze route, en verdient dus een overnachting. De oversteek is zo'n twaalf mijl oost-zuidoost, en als de imbat meewerkt zeil je het grootste deel halve wind. Meer aan in Marina di Fethiye, de ECE-marina, en de stad ligt op een korte wandeling langs de boulevard. Boven de huizen staart het uit de rots gehakte graf van Amyntas naar beneden, een complete Ionische gevel die in de vierde eeuw voor Christus in de steen is uitgehouwen. Doe de klim voordat de hitte toeslaat. Slenter daarna door de Paspatur-bazaar en ga dan naar de vismarkt, waar je je vangst bij de kramen koopt en een van de omringende restaurants hem voor je grilt. Ben je hier toevallig op dinsdag, dan is de uitgestrekte weekmarkt reden genoeg om aan wal te blijven.",
+          "thingsToDo": [
+            "Klimmen naar het rotsgraf van Amyntas",
+            "Je eigen vis kopen en laten grillen op de vismarkt",
+            "Dwalen door de oude Paspatur-bazaar",
+            "Kruiden scoren op de dinsdagse straatmarkt"
+          ],
+          "mooringTip": "Marina di Fethiye (ECE) ligt je met de kont naar de kade aan lazy lines, ongeveer €70–110 per nacht in het hoogseizoen en volledig beschut. Reserveer in juli en augustus een dag of twee vooruit en tank onderweg naar binnen bij de brandstofsteiger naast de ingang."
+        },
+        "3": {
+          "shortDescription": "Acht mijl zuidwaarts naar Gemiler Island, de Byzantijnse Sint-Nicolaassite, en daarna ankeren aan de overkant in Coldwater Bay, waar koude bronnen de zee afkoelen.",
+          "description": "Gemiler Island, op sommige kaarten aangeduid als St Nicholas Island, is een van de stillere verrassingen van de golf. Acht mijl ten zuiden van Fethiye liggen de hellingen vol Byzantijnse ruïnes, kerken en een overdekte processieweg die naar de top klimt, gebouwd tussen de vierde en zesde eeuw toen dit een pelgrimshalte was die verbonden was met Sint-Nicolaas van Myra, lang voordat zijn resten in 1087 naar Bari werden overgebracht. Ga laat in de middag aan wal, als de dagboten uitdunnen. Zak voor de nacht terug naar de overkant, naar Coldwater Bay, Soğuksu aan de vastelandzijde. Zoetwaterbronnen lopen hier rechtstreeks de zee in, en je voelt het op het moment dat je door een koude plek zwemt in verder warm water. Een lokaal trucje dat je minstens één keer geprobeerd moet hebben.",
+          "thingsToDo": [
+            "De Byzantijnse processieweg op Gemiler lopen",
+            "Door de koude zoetwaterbronnen zwemmen",
+            "Zonsondergang pakken boven de ruïnes van Gemiler",
+            "Meze bestellen aan een steiger in Coldwater Bay"
+          ],
+          "mooringTip": "Coldwater Bay werkt met het restaurantboeiensysteem: pak een gratis boei en reken af door aan wal te eten. Wil je liever ankeren, dan ligt er zand op vijf tot zeven meter, beschut uit het noorden."
+        },
+        "4": {
+          "shortDescription": "Een kort sprongetje van vier mijl naar de rotskloof van Butterfly Valley, en dan om naar Ölüdeniz voor de nacht, onder paragliders die van de Babadağ komen zweven.",
+          "description": "Vandaag maar vier mijl, maar ze brengen je ergens die je niet snel vergeet. Butterfly Valley ligt aan de voet van een kloof die 350 meter bijna verticaal omhoog gaat, en in de hoogzomer zit het er vol Spaanse vlaggen, oranje-crème vlinders die je ziet op de wandeling naar de waterval achter in de kloof. Anker voor het kiezelstrand, ga aan wal en wees weer aan boord voordat de middagwind door het dal naar beneden trechtert. Dit is een stop voor overdag, geen ligplaats voor de nacht. Vaar de laatste mijl door naar Ölüdeniz, waar de beroemde lagune achter zijn zandtong krult en paragliders naar beneden spiralen van de Babadağ, de berg die 1.969 meter boven het strand uittorent. Toekijken hoe ze landen terwijl je van de boot af zwemt, gaat eigenlijk nooit vervelen.",
+          "thingsToDo": [
+            "Door de kloof hiken naar de waterval van Butterfly Valley",
+            "De endemische Spaanse vlaggen spotten",
+            "Vanaf de boot zwemmen bij Ölüdeniz",
+            "Kijken hoe paragliders van de Babadağ landen"
+          ],
+          "mooringTip": "Butterfly Valley is alleen een dagankerplaats, op rots op zes tot acht meter, en tegen de middag valt er een gierige katabatische wind door de kloof, dus blijf er niet hangen tot laat in de middag. Overnacht in plaats daarvan bij Ölüdeniz op zand op vijf tot zeven meter."
+        },
+        "5": {
+          "shortDescription": "Een tocht van twaalf mijl terug het Skopea Limanı in naar Kapı Creek, een fjordachtige spleet die bij de monding amper tachtig meter breed is.",
+          "description": "Na het open gevoel van Ölüdeniz is Kapı Creek een compleet contrast. De inham snijdt diep de heuvels van Skopea Limanı in en versmalt bij de ingang tot zo'n tachtig meter, dus je neust naar binnen door een gat dat echt als een fjord aanvoelt voordat het water zich binnenin opent. Hij is beschut tegen alles wat het weer je toewerpt. Pak een boei voor het restaurantje achter in de kreek, waar een kiezelstrandje een makkelijke instap biedt. Peddel laat in de middag met de bijboot naar de vernauwing en terug voor het licht op de rotsen. Het eten aan wal is meestal gegrilde vis, bergkruiden en een glas rakı, en ligt er lokale tijmhoning op tafel, koop dan een pot. Met de rotsen die zich boven je sluiten, komen de sterren tevoorschijn in een smalle strook.",
+          "thingsToDo": [
+            "Zwemmen vanaf het kiezelstrand achter in de kreek",
+            "Met de bijboot naar de vernauwing van tachtig meter",
+            "Rakı en tijmhoning proberen aan wal",
+            "Sterrenkijken tussen de wanden van de kreek"
+          ],
+          "mooringTip": "Kapı Creek draait op restaurantboeien: de ligplaats is gratis als je eet bij de taverne achter in de inham. Het is er krap en in het seizoen populair, dus kom halverwege de middag aan om zeker te zijn van een boei, of anker op zand op vijf tot zeven meter."
+        },
+        "6": {
+          "shortDescription": "Vier rustige mijlen naar Ruin Bay, waar een verdronken Lycische nederzetting net onder het oppervlak ligt en Romeinse zuilen op snorkeldiepte rusten.",
+          "description": "Weer een makkelijke vier mijl brengt je naar Ruin Bay, ook wel Tomb Bay genoemd, en die naam is verdiend. Onder de rotsen aan de waterlijn liggen de resten van een Lycische nederzetting die eeuwen geleden onder de zeespiegel verdween. Masker en vinnen is alles wat je nodig hebt: Romeinse zuiltrommels en bewerkte steen liggen in twee of drie meter helder water, dichtbij genoeg om op één ademteug te bereiken. Boven de baai staan de ruïnes van het oude Lydae, half opgeslokt door olijfbomen en grazende geiten, een ruwe klim bergop voor wie zin heeft in de wandeling. Wij bewaren de ruïnes meestal voor laat in de middag en brengen het midden van de dag in het water door. Een barbecue achterop, köfte en koud bier, sluit de dag prima af. Warme nachten, stil water, geen enkele reden om te haasten.",
+          "thingsToDo": [
+            "Snorkelen boven de verzonken Romeinse zuilen",
+            "Omhoog klauteren naar de ruïnes van Lydae",
+            "Lamsköfte grillen achterop bij zonsondergang",
+            "Vanaf de boeg het warme water in duiken"
+          ],
+          "mooringTip": "Ruin Bay gebruikt dezelfde restaurantboeien, gratis als je aan wal eet, en beschut uit het noorden. Zijn de boeien bezet, anker dan op zand op vijf tot zeven meter en ga met de bijboot naar binnen."
+        },
+        "7": {
+          "shortDescription": "Zes makkelijke mijlen terug naar Göcek, met een laatste duik bij de lage, zandige Yassıca Islands voordat je tankt en de boot inlevert.",
+          "description": "Het laatste stuk is kort, maar zes mijl terug naar D-Marin Göcek, dus er is tijd voor nog een duik. De Yassıca Islands liggen ongeveer op de route, een verzameling lage, rotsige eilandjes met zandtongen en ondiep water dat bleekgroen kleurt boven de bodem. Anker, spring erin en gun de bemanning een echte laatste ochtend voordat de boot opgeruimd moet worden. Mik erop rond twee uur in Göcek langszij te liggen, dan houd je de middag over om te tanken, het zout eraf te spoelen en de spullen klaar te leggen voor de overdracht. Göcek zelf is een wandeling waard: de promenade langs de marina staat vol kleine boetieks en cafés, en meer dan één winkel laat je lokale honing met saffraan proeven voordat je koopt. Een rustig diner in het dorp is een mooi einde van de week.",
+          "thingsToDo": [
+            "Ankeren en zwemmen bij de Yassıca Islands",
+            "Langs de boetieks op de D-Marin-promenade",
+            "Lokale saffraanhoning proeven in het dorp",
+            "Tanken en afspoelen voor de overdracht"
+          ],
+          "mooringTip": "D-Marin Göcek ligt je met de kont naar de kade aan lazy lines, rond €100–160 per nacht in het hoogseizoen en volledig beschut. Bevestig je overdrachtstijd 24 uur van tevoren en tank bij de brandstofsteiger naast de ingang voordat je de ligplaats inneemt."
+        }
+      }
+    },
+    "gocek-kizikuyruk-koyu": {
+      "metaTitle": "7-daagse zeilroute Göcek & Ekincik | Boat4You",
+      "metaDesc": "Zeilroute van 7 dagen vanaf Göcek naar Ekincik en de Dalyan-delta, terug via Gemiler Island, Fethiye en Wall Bay door de Twaalf Eilanden.",
+      "days": {
+        "1": {
+          "shortDescription": "Een rustige warming-up van 8 mijl zuidwaarts vanaf Göcek, zwemmen bij de Yassıca Islands en dan de smalle, door rotsen omsloten Kapı Creek in voor het diner.",
+          "description": "Het eerste stuk is bewust makkelijk. Acht mijl vanaf D-Marin Göcek geeft de bemanning tijd om de lieren en de waterkoker te vinden voordat er iets veeleisends komt. Meestal onderbreken we de tocht bij de Yassıca Islands, een lage verzameling rotsen en turquoise ondieptes die schreeuwt om een eerste duik van de spiegel.\n\nKapı Creek ligt helemaal achterin Skopea Limanı, de dichte cluster baaien en eilandjes die dit het rijkste vaargebied van de kust maakt. De kreek zelf is een spleet tussen rotsen met dennen op de rand, amper breder dan een paar scheepslengtes. Pak een restaurantboei; het diner betaalt de ligplaats. Tegen de avond is het water spiegelglad, de rotsen kaatsen het laatste licht terug en şakşuka aan dek smaakt beter dan redelijkerwijs mag.",
+          "thingsToDo": [
+            "Zwemmen in de turquoise ondieptes bij de Yassıca Islands",
+            "Snorkelen langs de dennenbeschaduwde rotsvoet van Kapı Creek",
+            "Dineren aan een restaurantboei in Kapı Creek",
+            "Sterrenkijken tussen de wanden van de kreek"
+          ],
+          "mooringTip": "Pak een van de restaurantboeien diep in de kreek; de ligplaats is gratis zodra je aan wal komt eten. Zijn ze allemaal bezet, gooi dan het anker op zand op 5 tot 7 meter. De baai is volledig beschut, wat het weerbericht ook zegt."
+        },
+        "2": {
+          "shortDescription": "20 mijl halve wind westwaarts naar Ekincik, de uitvalsbaai voor een riviertocht naar de rotsgraven van Kaunos en het schildpaddenstrand van İztuzu.",
+          "description": "Twintig mijl is de langste sprong van de week, dus we laten de boei graag vroeg los en maken gebruik van de ochtendbries voordat die uit het westen invult. Ekincik opent zich als een brede baai met dennen op de achtergrond en goede houdgrond op zand, mooi weggestopt voor de noordenwind.\n\nDe baai is eigenlijk een basiskamp. Je laat het jacht hier achter en neemt een lokale rivierboot de Dalyan-delta in, waar de stroom zich tussen torenhoge rietvelden door slingert tot aan het Köyceğiz-meer. De Lycische graven van Kaunos zijn recht in de rotswand boven het water uitgehakt, vier eeuwen voor Christus, en staren nog altijd neer op elke passerende boot. Het strand van İztuzu bij de riviermonding is beschermd broedgebied voor onechte karetschildpadden, dus het zand blijft verfrissend onbebouwd. Wie het hele ritueel wil, eindigt in de modderbaden van Sultaniye.",
+          "thingsToDo": [
+            "Rivierboottocht de Dalyan-delta op",
+            "De Lycische rotsgraven van Kaunos bekijken",
+            "Over het beschermde schildpaddenstrand İztuzu lopen",
+            "Weken in de modderbaden van Sultaniye"
+          ],
+          "mooringTip": "Anker op zand midden in Ekincik Bay op 5 tot 7 meter; de houdgrond is betrouwbaar en de noordenwind gaat er recht overheen. Loopt er deining vanuit het zuiden binnen, dan zijn de restaurantpontons aan de zuidoever de rustigere keuze."
+        },
+        "3": {
+          "shortDescription": "20 mijl terug oostwaarts naar Gemiler Island, vervallen Byzantijnse kapellen boven het water en een verrassend koude bronduik in de baai ertegenover.",
+          "description": "Alweer een wat langer stuk, dit keer oost-zuidoost, en vaak het beste zeilen van de reis als de middagbries meewerkt. Gemiler Island rijst op aan bakboord voor de boeg, de hele flank geterrasseerd met de ruïnes van Byzantijnse kerken en een overdekte processieweg die pelgrims ooit beschutte tegen zon en regen.\n\nDit is het eiland dat al eeuwen verbonden is met Sint-Nicolaas van Myra, wiens gebeente in de elfde eeuw naar Bari werd overgebracht. Aan wal klimmen de paden langs cisternen en halfstaande apsissen met de zee recht onder je. Wij ankeren aan de overkant van het kanaal in Coldwater Bay, waar bronnen door de bodem omhoog persen en de bovenste waterlaag opeens ijzig koud wordt. Zwem een meter naar beneden en je voelt de grens. Eten aan wal, een bord meze met granaatappelglazuur, en de ruïnes worden goud bij schemer.",
+          "thingsToDo": [
+            "Klimmen door de Byzantijnse ruïnes van Gemiler Island",
+            "De koude bronlaag zoeken in Coldwater Bay",
+            "De overdekte pelgrimsprocessieweg lopen",
+            "Meze met granaatappelglazuur in een taverne aan de baai"
+          ],
+          "mooringTip": "In Coldwater Bay aan de overkant van het kanaal liggen voor het seizoen restaurantboeien; pak er een en eet aan wal, of anker in de buurt op zand op 5 tot 7 meter. De ankerplaats bij Gemiler zelf kan kabbelig worden bij een middagwesten, dus de baai ertegenover is meestal de rustigere overnachting."
+        },
+        "4": {
+          "shortDescription": "Slechts zes mijl noordwaarts naar een stille kiezelbaai omringd door dennen, met zeegrotten om in te peddelen en een kamwandeling boven de ankerplaats.",
+          "description": "Na twee grote overtochten is dag vier een beloning: amper zes mijl omhoog naar Kızıkuyruk Koyu, een met kiezels omzoomde baai die zich in de dennen vouwt. Anker op zand op vier tot zes meter en je hebt vrijwel de hele dag om heel weinig te doen.\n\nIn de zuidwand van de baai schuilt een reeks lage zeegrotten, ondiep genoeg om er bij vlak water met de kajak of het suppboard in te neuzen. Snorkelaars vinden zee-egels in de rotsspleten en af en toe een zeester op de zandplekken ertussen. Voor wie niet stil kan zitten, klimt een ruw pad de naar tijm geurende kam achter het strand op naar een weids uitzicht over het water. 's Avonds gaat de grill aan: garnalen, citroen, een handvol oregano, gegeten met nog natte voeten. Stille nachten hier, zodra de dagboten weg zijn.",
+          "thingsToDo": [
+            "Peddelen door de zeegrotten in de zuidwand",
+            "Snorkelen langs de rotsen voor zee-egels en zeesterren",
+            "De tijmkam op voor uitzicht over zee",
+            "Garnalen met citroen en oregano grillen aan dek"
+          ],
+          "mooringTip": "Anker op zand op 4 tot 6 meter, dicht onder de noordoever, dan houd je de meltemi uit je rug. Het is een kleine baai, dus kom in juli en augustus halverwege de middag aan, of neem anders een van de restaurantlijnen aan de zuidkant."
+        },
+        "5": {
+          "shortDescription": "Zes mijl oostwaarts naar Fethiye voor een ligplaats in de marina, een bruisende stad en de Ionische gevel van het Amyntas-graf, hoog in de rotswand uitgehakt.",
+          "description": "Een rustige zes mijl brengt je Fethiye binnen, en na een paar nachten voor anker heeft een echte ligplaats zo zijn charme: walstroom, een warme douche en een stad die daadwerkelijk laat doorgaat. Wij liggen met de kont naar de kade in de marina, de lazy lines aangereikt door de havenploeg.\n\nFethiye verdient een hele middag. De blikvanger is het graf van Amyntas, een complete Ionische tempelgevel uitgehakt in de rotswand boven de daken, het mooiste beklommen in het koelere avondlicht. Beneden in de oude wijk komen de steegjes uit op de vismarkt, waar je je vangst koopt en een kok in de buurt hem voor een klein bedrag grilt. Val je op een dinsdag binnen, dan is de uitgestrekte markt een uurtje waard voor kruiden en handgeknoopte tapijten. Bestel kabak çiçeği dolması, proost op de week met koude rakı en slenter langs de waterkant.",
+          "thingsToDo": [
+            "Bij schemer klimmen naar het rotsgraf van Amyntas",
+            "Je vis uitkiezen op de vismarkt van Fethiye",
+            "Snuffelen op de dinsdagmarkt naar tapijten en kruiden",
+            "Kabak çiçeği dolması in een lokanta in een zijstraat",
+            "Koude rakı aan de havenkade"
+          ],
+          "mooringTip": "Meer met de kont naar de kade aan lazy lines in de stadsmarina; de ploeg pakt je lijnen aan en het bassin ligt volledig dicht tegen elke wind. In het hoogseizoen kost een nacht ruwweg €70 tot €110, afhankelijk van de bootlengte, en in de zomer loont het om vooruit te roepen op de marifoon."
+        },
+        "6": {
+          "shortDescription": "Zes mijl zuidwaarts naar Wall Bay, een steile kalkstenen baai zonder jachthaven, met goede houdgrond en het beste snorkelen van de week.",
+          "description": "Het kortste stuk van de week, en inmiddels kan de bemanning het bijna slapend. Zes mijl ten zuiden van Fethiye vouwt de kust zich naar binnen en verschijnt Wall Bay, ingesloten door bleek kalksteen dat recht in diep, helder water duikt.\n\nEr is geen jachthaven en geen dorp, en dat is nu juist de bedoeling. Doe je inkopen in Fethiye voordat je vertrekt, want het enige wat de baai te bieden heeft is het zwemwater, en dat is uitstekend. Masker op, volg de rotsvoet en je vindt onderwaterspleten en kloven waar octopussen zich in de scheuren wringen en papegaaivissen over de rots drijven. Peddel om naar een kleiner strandje voor een luie lunch van olijvenbrood en labneh. De houdgrond is goed op zand op vier tot zes meter, en zodra de zon achter de wand zakt, komen de sterren hard tevoorschijn.",
+          "thingsToDo": [
+            "Snorkelen door de onderwaterkloven op zoek naar octopus",
+            "Papegaaivissen spotten langs de kalkstenen wand",
+            "Peddelen naar het verre strandje voor de lunch",
+            "Olijvenbrood en labneh op het voordek",
+            "De sterren bekijken boven de rotswand"
+          ],
+          "mooringTip": "Anker op zand op 4 tot 6 meter goed onder de rotsen; de wand zelf houdt de noordenwind tegen. Er is geen jachthaven, water of winkel in de baai, dus vul brandstof, water en eten aan in Fethiye voordat je losgooit."
+        },
+        "7": {
+          "shortDescription": "Een laatste acht mijl terug naar Göcek, met een duik boven de verzonken scheepswerf van Tersane Island voordat je tankt en de boot inlevert bij D-Marin.",
+          "description": "De laatste ochtend is kort en ongehaast, acht mijl terug omhoog naar Göcek. Er is geen reden om de overdracht af te raffelen, dus we houden onderweg tijd over voor een laatste duik. Tersane Island is de plek: anker in de bijna volledig ingesloten baai en snorkel boven de resten van een oude scheepswerf, waarvan lage muren en hellingen nog door het ondiepe water schemeren.\n\nVan daaruit is het rechtstreeks naar D-Marin Göcek. Doe de brandstofsteiger bij de ingang aan voordat je afmeert, dan gaat de boot vol terug. Je meert met de kont naar de kade aan lazy lines en de marina is volledig beschut, al laat zo'n chique thuisbasis zich ervoor betalen: ruwweg €100 tot €160 per nacht in de topweken. Zodra de lijnen vast zijn, loop je de promenade af, snuffel je langs de boetieks en sluit je de week af met een Turkse koffie onder de bougainville.",
+          "thingsToDo": [
+            "Snorkelen boven de verzonken scheepswerf van Tersane Island",
+            "Bijtanken bij de brandstofsteiger van D-Marin",
+            "Langs de boetieks op de D-Marin-promenade",
+            "Turkse koffie onder de bougainville"
+          ],
+          "mooringTip": "Tank bij de brandstofsteiger van D-Marin net binnen de ingang voordat je je ligplaats inneemt, zodat je de boot vol teruggeeft. Je meert met de kont naar de kade aan lazy lines in een volledig beschut bassin; reken op ruwweg €100 tot €160 per nacht in het hoogseizoen en reserveer je retourplek vooruit."
+        }
+      }
+    },
+    "gokova-gulf-14-days": {
+      "metaTitle": "14-daagse cruise Gökova & Güllük | Boat4You",
+      "metaDesc": "Twee weken vanaf Bodrum door de Golf van Gökova naar Güllük en Didim. Modderbaden op Kara Ada, Cleopatra's gouden zand, stille dennenbaaien.",
+      "days": {
+        "1": {
+          "shortDescription": "Een rustige eerste sprong de marina uit naar Kara Ada, waar een grotbron en oranje modder zorgen voor een makkelijke inloopmiddag.",
+          "description": "Hier hoef je niet vroeg voor op. Kara Ada ligt amper vijf mijl uit Bodrum, een groene, met dennen bedekte bult die de meeste bemanningen binnen een uur op de motor halen. De trekpleister is de grot aan de oostkust, waar een zwavelbron op lichaamstemperatuur loopt en de modder eromheen een vreemde oranje kleur afgeeft. Mensen smeren zich ermee in, bakken in de zon en spoelen zich af in de baai. Het is toeristisch, en tegen het middaguur is de guletvloot gearriveerd, dus ik anker liever vroeg, doe het modderritueel voor de drukte en verkas daarna naar een stillere baai aan de zuidkant voor de lunch en een duik. Gebruik de middag om de boot op orde te brengen, de bijboot te checken en de proviand weg te werken. Morgen staat er een echte oversteek op het programma.",
+          "thingsToDo": [
+            "Weken in de zwavelbron in de grot van Kara Ada",
+            "Jezelf insmeren met de oranje heilmodder",
+            "Zwemmen in de rustigere baai aan de zuidkant",
+            "Proviand aanvullen voordat je Bodrum verlaat"
+          ],
+          "mooringTip": "Anker voor de grot op 4–8 m boven zand en wier; tegen het eind van de ochtend wordt het druk met dagboten, dus gooi het anker vroeg en breng een landvast uit als er weinig zwaairuimte is."
+        },
+        "2": {
+          "shortDescription": "De grote oversteek zuidwaarts naar Çökertme, een winderige baai met houten steigers waar tavernepontons een ligplaats ruilen tegen een diner.",
+          "description": "Dit is de dag waarop de reis zich opent. Zet de boeg zuidwaarts over open water en je kijkt tegen vijftien tot twintig mijl aan, drie tot vier uur afhankelijk van de meltemi. Çökertme is de beloning, een hoefijzervormige baai met olijfgaarden erachter en een handvol familietavernes die over het water zijn gebouwd. Niet voor niets een klassieke guletstop. De adder onder het gras is de wind: vlagen vallen zonder waarschuwing van de heuvels naar beneden en de bodem van zand en wier houdt slecht. De meeste bemanningen slaan het ankeren helemaal over en meren af aan een van de restaurantpontons, wat een uitgelegde meerlijn oplevert en de stilzwijgende afspraak om aan wal te eten. Captain İbrahim's voedt hier al jaren zeilers. Bestel de meze, kijk hoe het licht roze wordt op de bergkam en kruip vroeg in je kooi.",
+          "thingsToDo": [
+            "Dineren op het ponton van Captain İbrahim's",
+            "Een compleet Egeïsch mezefestijn bestellen",
+            "Kijken hoe de zon de bergkam achter de baai kleurt",
+            "Zwemmen voordat de middagvlagen opbouwen"
+          ],
+          "mooringTip": "Vergeet het anker hier, tenzij je het leuk vindt om het steeds opnieuw te zetten. Pak in plaats daarvan een taverneponton met uitgelegde lijn; kom in juli halverwege de middag aan, want de drie steigers lopen snel vol, en reken 's nachts op plotselinge katabatische vlagen."
+        },
+        "3": {
+          "shortDescription": "Een kort stukje oostwaarts naar Ören, een ingetogen dorp op de vlakte van Keramos met een jachthaven, een kiezelstrand en Karische ruïnes op de helling.",
+          "description": "Na het spektakel van Çökertme voelt Ören kalm. Het is een bescheiden kustdorp aan de zuidkant van de golf, gelegen op de vlakte waar ooit de antieke stad Keramos stond. De tocht oostwaarts is makkelijk, een paar uur over vlak ochtendwater voordat de wind invult. Er is een kleine gemeentelijke jachthaven en een lang grijs kiezelstrand dat zelfs in augustus rustig blijft, en dat is precies de bedoeling. Loop de oude wijk in en je vindt stenen huizen, bougainville en de verspreide resten van Keramos op de hellingen boven het dorp. Het is geen plek die zich hoeft te bewijzen. Meestal nemen we een lange lunch, huren we fietsen of lopen we in de koelere avond naar de ruïnes, en laten we de bemanning op adem komen voordat we morgen de kop van de golf in gaan.",
+          "thingsToDo": [
+            "Omhoog wandelen naar de ruïnes van het antieke Keramos",
+            "Slenteren door de oude stenen wijk van Ören",
+            "Bijkomen op het lange grijze kiezelstrand",
+            "Afmeren in de kleine gemeentelijke jachthaven"
+          ],
+          "mooringTip": "Het jachthaventje van Ören neemt jachten aan lazy lines en zit zelden vol; bel in de drukste weken vooruit. Anker je liever, dan houdt de baai voor het strand goed in zand, maar hij ligt open voor de middagwesten, dus kruip zo ver naar binnen als de diepte toelaat."
+        },
+        "4": {
+          "shortDescription": "Zeil naar de kop van de golf en Akyaka, waar een door bronnen gevoede rivier zich door rietvelden slingert en thermische winden de kitesurfers trekken.",
+          "description": "Akyaka ligt helemaal boven in de golf, waar de bergen dichtklappen en het water glasgroen wordt. Het opzeilen is vaak kruisen tegen de middagthermiek in, dus we vertrekken meestal om negen uur uit Ören en motorzeilen de rustigere vroege uren. Het dorp zelf is een lust: houten balkons en Ottomaans-Griekse architectuur, allemaal gebouwd onder strenge lokale regels die de ketenhotels buiten hebben gehouden. Het handelsmerk is de Azmak, een korte, door karstbronnen gevoede rivier die zo helder is dat je de vissen kunt tellen; neem de bijboot of een gehuurde kajak door het riet omhoog naar de bronnen en de rivierterrasjes. Buiten op de baai maakt diezelfde constante wind die het opzeilen zwaar maakt van Akyaka een van de betere kitesurfplekken van Turkije. Eet gegrilde vis aan het water en laat de dag langzaam gaan.",
+          "thingsToDo": [
+            "Kajakken over de heldere Azmak naar de bronnen",
+            "Lunchen met gegrilde vis aan de waterkant",
+            "Kitesurfers zien werken in de middagthermiek",
+            "Dwalen door de straten met houten balkons van Akyaka"
+          ],
+          "mooringTip": "De baai aan de kop van de golf is diep en de middagwind stuurt er golfslag in, dus anker dicht onder de noordoever en breng een landvast uit. Een paar pontonplaatsen bij de dorpsrestaurants laten je eten en meteen blijven liggen als je dat liever hebt."
+        },
+        "5": {
+          "shortDescription": "Terug westwaarts naar Sedir Island, thuis van Cleopatra's beroemde gouden zand en de omgevallen ruïnes van het antieke Kedreai.",
+          "description": "Sedir Island, beter bekend als Cleopatra Island, is het eiland dat iedereen wil zien, en voor één keer maakt de hype het waar. Het strand bestaat uit piepkleine gouden oölietkorrels die in de wijde omtrek vrijwel nergens anders voorkomen, en daar komt de legende vandaan dat Cleopatra zand liet aanvoeren uit Egypte. Tegenwoordig is het zand fel beschermd: je loopt over een vlonderpad, je zwemt vanaf het strand, maar je mag er niet op liggen en geen korrel meenemen. Achter de kust liggen de muren, het theater en de agora van het antieke Kedreai, de korte wandeling waard in de ochtendkoelte. Kom vroeg. Vanaf een uur of tien stromen de dagboten uit Marmaris en Bodrum binnen, dus wij liggen graag om acht uur voor anker en aan wal, en zijn rond lunchtijd weg naar een rustigere baai voor de nacht. Het water is hier een verbluffend bleek turquoise boven zand.",
+          "thingsToDo": [
+            "Over het vlonderpad langs Cleopatra's gouden strand lopen",
+            "De ruïnes en het theater van Kedreai verkennen",
+            "Snorkelen in de bleekturquoise ondieptes bij Sedir",
+            "Vroeg aankomen om de dagbotenvloot voor te zijn"
+          ],
+          "mooringTip": "Overnachten voor het strand kan niet; anker aan de noord- of oostkant van het eiland in zand, of beter: kom overdag voor anker en verkas voor de nacht naar een beschutte baai. De houdgrond is goed, maar de plek vangt de golfslag van het constante dagbotenverkeer."
+        },
+        "6": {
+          "shortDescription": "Een ontspannen etappe naar Karacasöğüt, een diepe, met dennen omzoomde baai vol tavernesteigers die goede beschutting geeft als de meltemi aantrekt.",
+          "description": "Karaca, of Karacasöğüt, is een van de grote alle-weer-gaten van de golf. Hij ligt aan de zuidoever, een diepe inham onder Karaca Ada, ingepakt in dennenbos en zo goed beschut dat lokale boten er overwinteren. Na de blootstelling bij Sedir is de kalmte welkom. De baai splitst zich in verschillende armen, elk met zijn eigen verzameling steigers en eenvoudige familierestaurants waar je met de boeg naar de kade afmeert en onder de bomen eet. De oversteek is rustig, zo'n twee tot drie uur, met de bergkam die je een constante bries op de zij levert. Dit is een dag om heel weinig te doen. Zwemmen, lezen, met de bijboot de met riet omzoomde kreek achter in de baai in, en dan een stille nacht. Voorspelt het weerbericht een stevige meltemi, dan is er geen betere plek in de golf om die uit te zitten.",
+          "thingsToDo": [
+            "Met de boeg naar de kade aan een dennenbeschaduwd taverneponton",
+            "Met de bijboot de rietkreek achter in de baai in",
+            "Zwemmen in de beschutte binnenarmen",
+            "Een meltemi uitzitten in vlak water"
+          ],
+          "mooringTip": "Kies een restaurantponton en meer met de kont of de boeg naar de kade voor een uitgelegde lijn en een gegarandeerd rustige nacht; het water is vlak bij de kant diep, dus nader langzaam. Vrij ankeren kan ook in de armen, op 6–10 m boven modder die goed houdt."
+        },
+        "7": {
+          "shortDescription": "Westwaarts zeilen richting de monding van de golf naar Mersincik, een wilde, lege ankerplaats binnen het beschermde gebied van Gökova.",
+          "description": "Bij Mersincik begint de golf afgelegen aan te voelen. Weggestopt aan de noordoever bij de westelijke monding maakt het deel uit van het speciale beschermingsgebied Gökova, dus er is geen bebouwing, geen weg naartoe, alleen dennen, rots en helder water. De tocht westwaarts voert je langs de open noordkant, en met een frisse meltemi haal je er ruime vaart op een halve windse koers. De hoofdbaai is prachtig maar vangt de noordenwind; waait het hard, duik dan de kleinere baai in het noordwesten in, al is de zwaairuimte krap en wil je een landvast uitbrengen. 's Avonds scharrelen wilde geiten over de kustlijn. Er is niets te koop en niets te doen behalve zwemmen, over de lege kapen lopen en genieten van een nacht zonder één lichtje aan wal. Vul water en proviand aan voordat je Karaca verlaat.",
+          "thingsToDo": [
+            "Zwemmen langs de lege, onbebouwde kustlijn",
+            "Over de dennenkapen lopen voor uitzicht over de golf",
+            "Wilde geiten spotten langs de kust bij schemer",
+            "Sterrenkijken zonder enig licht aan wal"
+          ],
+          "mooringTip": "Anker in de hoofdbaai op 5–8 m boven zand en breng een landvast uit naar de rotsen; hij ligt open naar het noorden, dus staat de meltemi, gebruik dan de krappere noordwestbaai en zet een ankertje aan wal, want er is nauwelijks zwaairuimte. Kom volledig zelfvoorzienend aan, want er zijn geen voorzieningen."
+        },
+        "8": {
+          "shortDescription": "Terug zuidwaarts oversteken naar Çökertme voor een tweede nacht aan de tavernepontons, voordat de terugreis begint.",
+          "description": "Vandaag draait de lus richting huis. Van Mersincik steek je de monding van de golf over terug naar het vertrouwde hoefijzer van Çökertme, een tocht van een paar uur die een snelle, rollende halve windse koers kan zijn als de meltemi meewerkt. De tweede keer ken je de trucjes van de baai al. Dezelfde vlagen storten van de heuvels, dezelfde steigers wachten, maar nu weet je hoe het werkt. Kies een ander ponton dan vorige week en probeer een nieuwe taverne; Rosemary en de andere familiekeukens langs de oever hebben elk hun vaste gasten. Dit is een goede avond om de was te doen, de bemanning bij te tanken met een lang diner aan wal en aantekeningen uit te wisselen over de beste duiken tot nu toe. Kijk hoe de ankerlichten van late aankomers heen en weer wiegen als de wind na donker doorzet.",
+          "thingsToDo": [
+            "Een andere taverne proberen, zoals Rosemary",
+            "Nog een keer zwemmen in de hoefijzerbaai",
+            "De bemanning bijtanken met een lang diner aan wal",
+            "De beste duiken van de reis vergelijken bij de meze"
+          ],
+          "mooringTip": "Neem net als eerder een pontonlijn in plaats van te ankeren, en kies een andere steiger dan bij je eerste bezoek om het fris te houden. Zet een goede schokdemper en extra stootwillen: de nachtelijke vlagen duwen boten hier heen en weer aan de uitgelegde meerlijnen."
+        },
+        "9": {
+          "shortDescription": "De oversteek noordwestwaarts terug naar Kara Ada voor een laatste duik in de golf en een tweede poging in de moddergrot.",
+          "description": "Terug over het water naar Kara Ada, waarmee het Gökova-deel van de reis wordt gesloten. Het is dezelfde lange open oversteek als op dag twee, maar dan omgekeerd, dus houd het weerbericht in de gaten en vertrek vroeg als de meltemi zal aanwakkeren. Inmiddels is de bemanning volleerd en gaan de mijlen vanzelf. Kara Ada is een passende laatste stop in de golf, dicht genoeg bij Bodrum om de marina binnen bereik te hebben en toch een groen eiland met die vreemde, weldadige grot. Geef de modderbaden een tweede kans als het de eerste keer te druk was, of zoek gewoon een schone baai aan de zuidkant en zwem. Spoel het zout eraf, ruim de boot op en geniet van een rustige ankerplaats voordat de reis van karakter verandert. Morgen rond je het schiereiland en verandert het hele gevoel van de kust.",
+          "thingsToDo": [
+            "Terug naar de moddergrot voor een rustiger bad",
+            "Een schone baai aan de zuidkant zoeken om te zwemmen",
+            "De boot afspoelen en opruimen na de golf",
+            "Proosten op het einde van de Gökova-lus"
+          ],
+          "mooringTip": "Net als op dag één: anker boven zand en wier bij de grot, of ga om naar de zuidelijke baaien voor schonere houdgrond en tegen de avond minder boten. Zo dicht bij Bodrum loopt het vol met terugkerende charterboten, dus claim je plek voor zonsondergang."
+        },
+        "10": {
+          "shortDescription": "Rond het schiereiland naar het mondaine Göltürkbükü, waar beachclubs en steigerrestaurants een baai omzomen die beschut ligt voor de meltemi op open water.",
+          "description": "Vandaag verandert de kust volledig. Je rondt de westpunt van het schiereiland van Bodrum, langs Gümüşlük en Yalıkavak, de glamoureuze noordkust op en Göltürkbükü in. Buitenom kan de meltemi met een stevige dertig knopen staan, dus plan het ronden voor de ochtend en rif vroeg bij twijfel. Binnen is het een andere wereld: een lange, beschutte baai omzoomd met houten platforms die over zee zijn gebouwd, chique beachclubs en het beroemde Maçakızı-hotel waar de betere kringen uit Istanbul de zomer doorbrengen. Dit is de glansdosis van de reis. Boek een ligbed, laat een cocktail naar de boot brengen, of kijk gewoon vanuit de kuip naar de bijboten die gasten tussen de jachten heen en weer varen. Het ligt qua sfeer mijlenver van de lege kapen van Mersincik, en dat contrast is een deel van de lol.",
+          "thingsToDo": [
+            "Een ligbed pakken bij een beachclub in Türkbükü",
+            "Dineren op een steigerplatform boven het water",
+            "Vanuit de kuip het bijbotenverkeer bekijken",
+            "De scene van hotel Maçakızı van dichtbij zien"
+          ],
+          "mooringTip": "Het grootste deel van de waterkant van Göltürkbükü wordt gerund door beachclubs die eigen meerboeien uitleggen en verwachten dat je een tafel of ligbedden boekt; bel in het seizoen vooruit en ze sturen een bijboot om je lijnen aan te nemen. Ruimte om vrij te ankeren is beperkt en de houdgrond wisselvallig, dus een uitgelegde meerboei is de makkelijkere keuze."
+        },
+        "11": {
+          "shortDescription": "Noordwaarts zeilen de Golf van Güllük in, naar een oud vissersstadje met visgrills, een gemoedelijke jachthaven en de ruïnes van Iasos vlakbij.",
+          "description": "Güllük is het tegengif voor Türkbükü. Een werkend vissersstadje aan zijn eigen golf ten noorden van het schiereiland, dat de sterrenglans inruilt voor trawlers, theehuizen en de beste prijs-kwaliteit in vis van deze kust. Het opzeilen is eenvoudig, Türkbükü uit en noordwaarts de wijde, beschutte Golf van Güllük in, vaak een comfortabele halve windse koers. Er is hier een echte jachthaven met een paar honderd ligplaatsen als je stroom en water wilt, maar het karakter zit aan de stadskade. Slenter 's avonds over de boulevard, kies je vis van het ijs bij een lokanta en eet hem gegrild met rakı en een zonsondergang boven de golf. Liefhebbers van geschiedenis nemen een taxi of een lange wandeling naar de ruïnes van het antieke Iasos op de volgende kaap, een Karische stad die rijk werd van precies de vis die jij zit te eten. Rustig, eerlijk en een goede plek om opnieuw in te slaan.",
+          "thingsToDo": [
+            "Verse vis van het ijs kiezen bij een lokanta",
+            "De Karische ruïnes van het antieke Iasos bezoeken",
+            "Slenteren langs de waterkant van dit vissersstadje",
+            "Op de markt inslaan voor Didim"
+          ],
+          "mooringTip": "Neem een ligplaats in de jachthaven van Güllük voor volledige service, of ga met de kont naar de stadskade voor de levendigere sfeer en de visrestaurants om de hoek. De golf ligt goed beschut, dus een nacht voor anker voor de stad op 4–6 m boven modder is bij bestendig weer prima."
+        },
+        "12": {
+          "shortDescription": "Een langere etappe noordwaarts naar de grote jachthaven van Didim, poort naar de Apollotempel en het gouden strand van Altınkum.",
+          "description": "Didim markeert de top van de lus en is de meest bebouwde stop van de twee weken, maar hij verdient zijn plek. De tocht omhoog vanaf Güllük is de langste van deze noordelijke dagen, dus plan een vroeg vertrek en houd de meltemi in de gaten, die over de open aanloop flink kan opsteken. D-Marin Didim is een grote, goed gerunde jachthaven met alles wat je nodig hebt om de boot klaar te maken voor de terugreis. De echte reden om te komen ligt landinwaarts: de Apollotempel bij Didyma, een van de grote orakelheiligdommen van de antieke wereld, waarvan de enorme zuilen na ruim tweeduizend jaar nog altijd overeind staan. Het is een korte, goedkope taxirit vanaf de marina en een ongehaaste ochtend waard. Koel daarna af aan de lange gouden boog van het strand van Altınkum of lunch in het dorp voordat je weer zuidwaarts draait.",
+          "thingsToDo": [
+            "De Apollotempel met orakel bij Didyma bezoeken",
+            "Zwemmen aan het lange gouden zand van Altınkum",
+            "Klaarmaken en tanken bij D-Marin Didim",
+            "Lunchen in Didim na de ruïnes"
+          ],
+          "mooringTip": "D-Marin Didim is een jachthaven met volledige service; roep vooruit op de marifoon voor een ligplaats, zeker in de hoogzomer als het druk is met catamarans en superjachten. Het is de makkelijkste plek op de route om brandstof, water en verse proviand in te nemen voor de tweedaagse terugtocht naar Bodrum."
+        },
+        "13": {
+          "shortDescription": "Weer zuidwaarts en terug naar Göltürkbükü voor een laatste mondaine nacht voor de laatste sprong naar Bodrum.",
+          "description": "De boeg wijst naar huis. Vanaf Didim volg je het water terug zuidwaarts, weer om in de luwte van het schiereiland van Bodrum en Göltürkbükü in voor een tweede, ontspannener nacht. Nu je de baai kent, kun je het gedoe om een ligplaats overslaan en meteen gaan zitten. Dit is de laatste echte avond van de reis, dus het loont om er iets van te maken. Was de eerste avond in Türkbükü voor de scene, gebruik deze dan voor een goed diner en een vroege, rustige duik van de boot. De noordelijke aanloop kan 's middags winderig zijn, dus we vertrekken meestal halverwege de ochtend uit Didim om aan te komen terwijl het licht nog hoog staat en de wind nog niet op zijn top is. Pak nog een luie middag mee op een steigerplatform, sorteer de spullen en handel de laatste bootadministratie af. Bodrum ligt morgen maar een sprongetje verderop.",
+          "thingsToDo": [
+            "Opnieuw een tafel boeken bij een steigerclub in Türkbükü",
+            "Een rustige vroege duik nemen van de boot",
+            "Genieten van een laatste luie middag op een platform",
+            "De bootadministratie afhandelen voor de laatste etappe"
+          ],
+          "mooringTip": "Regel net als op dag tien vooraf een meerboei bij een beachclub; als terugkerende gast weet je welk platform je beviel. Zorg dat je halverwege de middag vastligt, voordat de noordenwind de baai in trechtert en de rij bijboten aangroeit."
+        },
+        "14": {
+          "shortDescription": "De laatste korte sprong terug om naar Bodrum, met tijd voor een allerlaatste duik voordat je de boot inlevert.",
+          "description": "De laatste ochtend is een makkelijke. Bodrum ligt net om de oostelijke schouder van het schiereiland, een paar uur van Göltürkbükü, dus je hoeft de lijnen niet te haasten. De meeste charterbases willen de boot laat in de ochtend of rond het middaguur terug, dus wij glippen meestal vroeg weg, nemen onderweg nog één duik voor anker en maken dan onze aanloop naar de marina in de schaduw van het grote Sint-Pieterskasteel. Bodrum vanaf zee binnenkomen is de juiste manier om te arriveren: het fort, de witte stad die tegen de heuvels op klimt, het woud van masten in de haven. Leg stootwillen en lijnen ruim voor de invaart klaar, volg de aanwijzingen van de marineros naar je ligplaats en laat de twee weken bezinken. Twee weken, twee golven, een moddergrot en een orakel. Geen slechte lus.",
+          "thingsToDo": [
+            "Onderweg nog een laatste duik voor anker",
+            "Binnenlopen onder het Sint-Pieterskasteel van Bodrum",
+            "Het mastenwoud in de haven fotograferen",
+            "De boot voor het middaguur inleveren"
+          ],
+          "mooringTip": "Bevestig de avond ervoor je terugkomsttijd en ligplaats bij de charterbase, en leg stootwillen en meerlijnen aan beide zijden klaar voordat je de drukke haven van Bodrum binnenvaart. Volg het marinapersoneel naar binnen voor een ligplaats met de kont naar de kade; de aanloop kan rond het middaguur vol dagboten zitten."
+        }
+      }
+    },
+    "lycian-coast-14-days": {
+      "metaTitle": "14-daagse Lycische Kust Odyssee | Boat4You",
+      "metaDesc": "Twee weken rondreis vanaf Göcek: de baaien van Skopea Limani, de haven van Fethiye, Ölüdeniz, Gemiler en Ekincik voor de Dalyan-rivier.",
+      "days": {
+        "1": {
+          "shortDescription": "Rustig de marinagordel van Göcek uit het Skopea Limani in en het anker laten vallen in het brede, met dennen omzoomde Sarsala voor een kalme eerste nacht.",
+          "description": "In Göcek begint vrijwel elke Lycische charter, en op dag één is er geen haast. Doe de boodschappen op de markt bij het plein, vul water en ijs aan en motor dan langs de beboste eilanden van Skopea Limani naar buiten. Sarsala ligt aan de noordkant van Boz Burun, een brede baai met rode dennen erachter en een reeks kleinere baaitjes. De houdgrond is goed boven zand en wier, en de meeste bemanningen brengen achter in de baai een landvast uit om stil te liggen. Er is een klein steigerrestaurant als je de eerste avond liever niet kookt. Wij komen graag halverwege de middag aan, zwemmen van de spiegel terwijl het licht achter de bergkam wegzakt en laten iedereen zeebenen krijgen voor de langere etappes die komen. De ochtenden zijn hier spiegelglad.",
+          "thingsToDo": [
+            "Inkopen doen op de ochtendmarkt van Göcek",
+            "Zwemmen bij de zandsteiger van Sarsala",
+            "Het dennenpad achter de baai lopen",
+            "Dineren in de steigertaverne van de baai"
+          ],
+          "mooringTip": "Anker op 6-8 m boven zand en wier en breng een lange landvast uit richting de kop van de baai. De westelijke baaitjes lopen in juli als eerste vol, dus kom vroeg in de middag aan voor een plek."
+        },
+        "2": {
+          "shortDescription": "Een korte sprong dieper de golf in naar Kapı Creek, een smalle, fjordachtige inham met een gastvrije pontontaverne achterin.",
+          "description": "De tocht naar Kapı Creek duurt amper een uur, dus er is eerst nog tijd voor een luie ochtendduik. De kreek snijdt een spleet tussen steile, beboste hellingen, en het voelt meer als een Noorse fjord dan als de Turkse kust totdat je de houtrook van de taverne ruikt. Jachten meren met de kont naar het houten ponton, waar de familie die de zaak runt je lijnen aanneemt en later meze en gegrilde vis brengt. Het water blijft tot dicht bij de kant diep, dus houd je vaart richting de steiger en laat het anker ruim vallen. Ga aan wal voor de korte klim naar de geitenkralen boven de kop van de kreek. Het is een favoriet bij de flottieljes, dus in de hoogzomer loont het om vooruit te bellen voor een ligplaats.",
+          "thingsToDo": [
+            "Met de kont naar het ponton van Kapı Creek meren",
+            "Meze en gegrilde vis bestellen aan wal",
+            "Klimmen naar de geitenkralen erboven",
+            "Snorkelen langs de steile rotswanden"
+          ],
+          "mooringTip": "Het blijft diep tot vlak bij het ponton, dus nader langzaam en laat vallen op 10-12 m voordat je achteruit naar de steiger gaat voor de lazy lines. Roep of bel in juli en augustus vooruit, want het handjevol plekken raakt vol."
+        },
+        "3": {
+          "shortDescription": "Steek over naar Ruin Bay, waar bewerkte Romeinse steen net onder het oppervlak achter in de baai ligt en het water zo ongeveer het helderste van de golf is.",
+          "description": "Ruin Bay, ook wel Cleopatra's Bath genoemd, ligt een paar uur westwaarts aan de overkant van de monding van de golf. De trekpleister ligt onder water: lage muren en bewerkte steen van een Romeinse nederzetting rusten net onder het oppervlak achter in de baai, helder genoeg om vanaf een duikbril te lezen. Anker ervoor en zwem over de ruïnes naar binnen in plaats van de boot te ver het ondiepe in te varen. Een gammel steigerrestaurant schenkt koud bier en serveert eenvoudige grills onder de dennen. Het naburige Tomb Bay, een kort ritje met de bijboot om de punt, heeft Lycische rotsgraven hoog in de klif uitgehakt, de moeite waard in het zachte avondlicht. 's Middags kan er een draaiende bries van de heuvels komen, dus zet het anker zorgvuldig.",
+          "thingsToDo": [
+            "Snorkelen boven de verzonken Romeinse muren",
+            "Met de bijboot naar de Lycische graven van Tomb Bay",
+            "Koud bier bij de steigergrill",
+            "De rotswanden fotograferen in de schemer"
+          ],
+          "mooringTip": "Achter in de baai verondiept het boven de ruïnes, dus anker op 5-8 m vrij van het steenwerk en zwem aan land in plaats van naar binnen te motoren. Let op vlagen die 's middags door het dal naar beneden trechteren en graaf het anker goed in."
+        },
+        "4": {
+          "shortDescription": "Om naar Wall Bay onder torenhoge rotswanden, met de kont naar het restaurant dat alleen per boot bereikbaar is, en eten met je voeten bijna boven het water.",
+          "description": "Wall Bay, Duvar Bükü op de kaart, dankt zijn naam aan de loodrechte rotswand die één kant van de ankerplaats afsluit. Het is een korte zeiltocht vanaf Ruin Bay, dus plan onderweg een zwemstop. De bodem loopt snel weg, waardoor er weinig zwaairuimte is, en de meeste boten gaan dus met de kont naar het kleine ponton van Adaia, het familierestaurant hier dat je alleen per boot bereikt. Ze helpen met je lijnen en koken een echte Turkse dis zodra de zon van de rotsen af is. Het snorkelen langs de wand hoort bij het beste in deze hoek van de golf, met helder water en steile afgronden. Na donker is het stil, met alleen krekels en een enkele geitenbel als gezelschap.",
+          "thingsToDo": [
+            "Met de kont afmeren aan Adaia's ponton, alleen per boot bereikbaar",
+            "Snorkelen langs de loodrechte onderwaterwand",
+            "De Turkse mezedis van het restaurant proberen",
+            "Kajakken langs de voet van de rotswand"
+          ],
+          "mooringTip": "De bodem loopt steil weg, dus er is weinig ruimte om vrij te ankeren; neem een lijn naar het restaurantponton en reserveer een tafel, wat je ligplaats meestal zeker stelt. Laat vallen op 8-10 m en steek dicht onder de rots naar achteren."
+        },
+        "5": {
+          "shortDescription": "Verruil de baaien voor een nacht in Fethiye, een werkende havenstad met een levendige vismarkt, een bazaar en rotsgraven erboven.",
+          "description": "Tijd om in te slaan en de benen te strekken in een echte stad. Fethiye ligt achter in zijn eigen golf, een paar uur zeilen vanaf Wall Bay, meestal met een behulpzame middagbries op de zij. Meer af in Ece Marina of aan de stadskade en loop de bazaar in voor kruiden, Turks fruit en desgewenst een barbier. De vismarkt is hier het ritueel: koop je vangst bij de kramen en geef hem aan een van de omringende restaurants, die hem voor een klein bedrag grilt. Boven de stad gloeit het uit de rots gehakte Amyntas-graf amberkleurig bij zonsondergang, een stevige klim over de trappen maar de moeite waard. Vul de koelkast goed voordat je weer naar de wildere baaien vertrekt.",
+          "thingsToDo": [
+            "Vis kopen op de overdekte markt",
+            "Klimmen naar het graf van Amyntas",
+            "Snuffelen in de oude bazaar naar kruiden",
+            "Inslaan bij de winkels aan de haven"
+          ],
+          "mooringTip": "Ece Marina is rustig en goed gerund, maar reserveer in de topweken vooruit; de stadskade is goedkoper en centraal, al kan het er rollen als er veerboten passeren. Meer Med-moor aan uitgelegde lijnen en reken op marinatarieven."
+        },
+        "6": {
+          "shortDescription": "Zeil de Golf van Fethiye uit naar Gemiler Island, omringd door Byzantijnse kerkruïnes en met een van de mooiste zonsondergangwandelingen van de kust.",
+          "description": "Gemiler, soms St Nicholas Island genoemd, bewaakt de ingang van een beschut kanaal ten zuidwesten van Fethiye. Het hele eiland is gelaagd met Byzantijnse ruïnes: kerken, cisternen en een overdekte processieweg die naar een kapel op de top klimt. Anker in de baai aan de zuidkant van het eiland op 6 tot 9 meter boven zand en breng een landvast uit om niet te zwaaien. Twee eenvoudige restaurants aan wal regelen water en een koud drankje. Houd tijd over om de bijboot aan land te zetten en door de ruïnes omhoog te lopen als het licht goud wordt; het uitzicht over het kanaal naar het vasteland is waarom mensen hier blijven hangen. De ankerplaats is rustig bij de gebruikelijke westenwind, maar ligt open als de wind naar het zuiden krimpt.",
+          "thingsToDo": [
+            "Door de ruïnes naar de kapel op de top lopen",
+            "De klim plannen voor het gouden uur",
+            "Landvast uitbrengen in de zuidelijke baai",
+            "Het kanaal naar de kust oversnorkelen"
+          ],
+          "mooringTip": "Anker op 6-9 m op zand in de zuidelijke baai en breng een landvast uit naar de rotsen, want de zwaairuimte is beperkt. Kom in het seizoen laat in de middag aan, want het handjevol goede plekken is vroeg vergeven."
+        },
+        "7": {
+          "shortDescription": "Een korte etappe naar Ölüdeniz, met de beroemde zandtong van de Blue Lagoon en de paragliders die van de Babadağ komen zweven.",
+          "description": "Ölüdeniz is de ansichtkaart die iedereen kent: een stille lagune achter een krul wit zand onder een groene berg. De lagune zelf is nu beschermd natuurpark en gesloten voor jachten, dus je meert onder de kaap voor het strand van Belcekız en gaat met de bijboot of zwemmend aan wal. Boven je hangt een vrijwel onafgebroken stroom paragliders die van de Babadağ naar beneden spiralen, met bijna tweeduizend meter een van de hoogste commerciële startplaatsen ter wereld. Dit is de drukste plek op de route, dus behandel hem als een levendige dagstop en niet als een nacht in de wildernis. Kijk hoe een schermpje of twee op het strand landt, eet een ijsje en beslis dan of je blijft liggen of terugglipt naar een rustigere baai.",
+          "thingsToDo": [
+            "Het natuurpark van de Blue Lagoon in zwemmen",
+            "Paragliders zien landen op het strand van Belcekız",
+            "Met de bijboot aan wal voor een lunch aan het strand",
+            "Bij schemer over de zandtong lopen"
+          ],
+          "mooringTip": "De lagune is gesloten voor boten, dus anker voor Belcekız onder de kaap op 8-12 m en reken op een rollende, open nacht als er zuidenwind inloopt. Veel bemanningen gebruiken het als dagstop en varen door naar een rustiger ankerplaats."
+        },
+        "8": {
+          "shortDescription": "Gooi het anker voor Butterfly Valley, een steile kloof die uitkomt op een strand dat alleen per boot bereikbaar is, met een watervalwandeling landinwaarts.",
+          "description": "Net om de kaap opent Butterfly Valley zich als een spleet in de flank van de Babadağ, met een strand dat alleen vanaf het water te bereiken is. Het dal dankt zijn naam aan de Spaanse vlaggen die hier broeden, en een ruw pad leidt landinwaarts langs een boerderijtje naar een waterval achter in de kloof. Trek goede schoenen aan; het laatste stuk betekent klauteren over rots met een touw als hulp. De ankerplaats is voor de meesten een dagstop, open naar het zuiden en diep tot dicht onder de kust, dus je laat vrij diep vallen en brengt een lange landvast naar het strand. Lunch aan boord, doe de wandeling in de koelte van de ochtend en vertrek voordat de middagbries het er ongemakkelijk maakt. Aan wal staat een rustieke bar onder de bomen.",
+          "thingsToDo": [
+            "Door de kloof hiken naar de waterval",
+            "Landinwaarts zoeken naar Spaanse vlaggen",
+            "Ankeren met een lange landvast",
+            "Drinken in de rustieke strandbar"
+          ],
+          "mooringTip": "Dit is een open dagankerplaats, diep tot vlak voor het strand; laat vallen op 15-20 m, breng een lange landvast uit en houd ankerwacht. Vertrek voordat de middagzuidwester opbouwt, want die stuurt de deining er recht in."
+        },
+        "9": {
+          "shortDescription": "Terug het Skopea Limani in naar Coldwater Bay, waar bronnen van de heuvel de zee afkoelen en het zwemmen verkwikkend koud is.",
+          "description": "Met de open zuidelijke baaien achter je draait de route terug de luwte van Skopea Limani in, naar Coldwater Bay, op de kaart Soğuksu. Zoetwaterbronnen lopen van de beboste helling rechtstreeks de zee in, en je voelt de kou in vlagen terwijl je zwemt, een schok na het warme water elders. Het is een vredige, naar dennen geurende ankerplaats met goede houdgrond en ruimte om een landvast tussen de bomen uit te brengen. In een hoek ligt meestal een klein pontonrestaurant als je het eten liever laat komen. Na de drukte bij Ölüdeniz voelt dit als de kust die uitademt. Als het schema het toelaat blijven we hier vaak twee nachten, als uitvalsbasis om te zwemmen, te lezen en de dag te laten drijven.",
+          "thingsToDo": [
+            "Door de koude bronvlagen zwemmen",
+            "Landvast uitbrengen tussen de dennen",
+            "Dineren bij het pontonrestaurant in de hoek",
+            "Suppen over het kalme ochtendwater"
+          ],
+          "mooringTip": "De houdgrond is goed boven zand en wier op 6-10 m; breng een landvast uit naar de bomen, want de baai is smal met weinig zwaairuimte. Bij de heersende westenwind blijft het er kalm, wat het een betrouwbare overnachting maakt."
+        },
+        "10": {
+          "shortDescription": "Terug naar Gemiler Island voor een tweede nacht, de ruïnes op je gemak en vroeg een goede zonsondergangplek claimen.",
+          "description": "Door op de terugweg westwaarts weer langs Gemiler te gaan, krijg je het eiland een tweede keer zonder de druk om het af te vinken. Kom eerder aan dan de dagtochtguletten en je hebt de keus in de zuidelijke baai, met tijd om het kanaal over te snorkelen voordat de middagdrukte richting de avond wegebt. Sloeg je de volledige klim de vorige keer over, doe hem dan nu: het pad draait langs dakloze kerken en oude cisternen omhoog naar de kapel op de top, het mooiste gelopen als de hitte afneemt. Terug aan boord komt de ankerplaats tot rust zodra de dagboten weg zijn, en de zonsondergang boven de ruïnes is de stille beloning. Haal water en een koud drankje bij de restaurants aan wal. Het is een korte, makkelijke dag, dus je hoeft Coldwater Bay niet vroeg te verlaten.",
+          "thingsToDo": [
+            "Opnieuw het pad naar de kapel op de top lopen",
+            "Midden op de dag het eilandkanaal oversnorkelen",
+            "Vroeg een plek claimen in de zuidelijke baai",
+            "Borrelen bij zonsondergang als de guletten vertrekken"
+          ],
+          "mooringTip": "Anker net als eerder op 6-9 m zand in de zuidelijke baai met een landvast aan wal; binnenkomen voor het middagverkeer van guletten levert een rustigere en beter gelegen plek op. Let op een zuidelijke winddraai, die het er 's nachts onhoudbaar zou maken."
+        },
+        "11": {
+          "shortDescription": "De langste etappe van de reis, westwaarts naar Ekincik, vertrekpunt voor de riviertocht naar Kaunos en de modderbaden van Dalyan.",
+          "description": "Ekincik is de westelijke omslag van de route en de langste sprong in één keer, dus we vertrekken meestal om negen uur om binnen te zijn voordat de middagbries op de neus opbouwt. De baai is breed en zandig, gelegen onder de heuvels aan de rand van de Dalyan-delta, met in een hoek een klein marinaatje van twee pontons als je liever afmeert dan ankert. De echte reden om te komen ligt verderop: lokale boten varen van hier de met riet omzoomde Dalyan-rivier op naar de uit de rots gehakte graven van het antieke Kaunos, de zwavelmodderbaden bij Sultaniye en İztuzu, het schildpaddenbroedstrand bij de riviermonding. Regel de tocht via de marina of een strandrestaurant op de avond van aankomst. De open baai kan deining binnenkrijgen als de wind naar het zuiden gaat.",
+          "thingsToDo": [
+            "De rivierboottocht op de Dalyan boeken",
+            "Rondwentelen in de modderbaden van Sultaniye",
+            "De rotsgraven van Kaunos bekijken",
+            "Over het schildpaddenstrand İztuzu in de delta lopen"
+          ],
+          "mooringTip": "Anker op 5-10 m boven goed zand in de noordelijke hoek, of neem een ligplaats aan de kleine pontons van My Marina voor meer zekerheid. De baai ligt open naar het zuiden en zuidwesten, dus kies een bestendig weerbericht als je hier wilt overnachten."
+        },
+        "12": {
+          "shortDescription": "Een rustige zeiltocht oostwaarts naar het stille Kızılkuyruk, een beboste baai buiten de gebaande paden waar de nacht bestaat uit krekels en sterren.",
+          "description": "Na de drukte van de Dalyan-tocht is Kızılkuyruk het tegengif: een kleine, met bomen omzoomde baai op het schiereiland Boz Burun die weinig boten ziet en het simpel houdt. Het zeilen vanaf Ekincik is kort en makkelijk, langs een kust van lege baaien en steile dennen. Aan wal is er zo goed als niets, en dat is precies het punt; je ankert, brengt een lijn naar een boom en zwemt in water dat helder en stil blijft. Neem mee wat je 's avonds nodig hebt, want er is geen taverne om op terug te vallen. Dit is het soort ankerplaats dat bemanningen zich nog herinneren als de bekende stops allang zijn vervaagd, een laatste smaak van rust voordat de route naar huis draait. Zodra het licht wegvalt, komen de sterren dik tevoorschijn.",
+          "thingsToDo": [
+            "Landvast uitbrengen naar een schaduwrijke den",
+            "Zwemmen in de lege, heldere baai",
+            "Aan boord koken onder de sterren",
+            "Kajakken langs de verlaten buurbaaien"
+          ],
+          "mooringTip": "Anker op 6-10 m en breng een lijn naar een boom, want de baai is smal met weinig zwaairuimte. Hij is goed beschut bij de gebruikelijke zomerse westenwind, maar heeft geen voorzieningen, dus sla eerst proviand en water in bij Ekincik."
+        },
+        "13": {
+          "shortDescription": "Terugzeilen het Skopea Limani in naar Sarsala, waar de lus zich sluit met een makkelijke laatste nacht voor anker.",
+          "description": "De voorlaatste dag brengt je terug in de vertrouwde luwte van Skopea Limani en om naar Sarsala, dezelfde brede baai waar de reis begon. Er aan het eind terugkomen voelt anders: je kent de handelingen inmiddels, kiest je landvast zonder gedoe en installeert je als een vaste gast. Het zeilen is een ontspannen halve windse koers over de golf, met tijd voor nog één lange zwemstop onderweg. De houdgrond van Sarsala en de steigertaverne maken het een makkelijke laatste nacht, dicht genoeg bij Göcek om de terugtocht 's ochtends stressvrij te houden. Gebruik de middag om de laatste energie eruit te zwemmen, de spullen te sorteren en te proosten op de twee weken. Is de taverne druk, reserveer dan een tafel zodra het anker valt.",
+          "thingsToDo": [
+            "Laatste lange zwemstop midden in de golf",
+            "Afscheidsdiner in de steigertaverne van Sarsala",
+            "Landvast uitbrengen bij de kop van de baai",
+            "Spullen sorteren en pakken voor Göcek"
+          ],
+          "mooringTip": "Terug naar de vaste routine: anker op 6-8 m boven zand en wier met een landvast bij de kop van de baai. Zo dicht bij de basis kun je je een ontspannen start veroorloven, maar reserveer de taverne op tijd als je aan wal wilt eten."
+        },
+        "14": {
+          "shortDescription": "Een kort ochtendstukje op de motor terug naar Göcek om de boot in te leveren, met tijd voor een laatste koffie aan de waterkant.",
+          "description": "Het laatste stuk duurt amper een uur, dus de wekker hoeft niet vroeg. De meeste charters willen de boot halverwege de ochtend terug, wat tijd laat voor een stille duik voordat je het anker licht en voor de laatste keer Sarsala uit tuft. De terugweg over Skopea Limani volgt precies de allereerste dag, met de beboste eilanden die in omgekeerde volgorde voorbijglijden. Vul onderweg naar binnen brandstof en water bij als de basis daarom vraagt, breng haar dan langszij in Göcek en laat de bemanning de lijnen doen. Zodra je bent uitgecheckt, is er meestal tijd voor een koffie of een laatste lunch aan de waterkant voordat het vervoer komt. Veertien dagen, en de golf houdt nog altijd baaien achter die je niet hebt gehaald.",
+          "thingsToDo": [
+            "Laatste duik bij zonsopkomst voor Sarsala",
+            "Bijtanken voor de overdracht",
+            "Koffie aan de waterkant van Göcek",
+            "Langs de marinawinkels voor het vervoer komt"
+          ],
+          "mooringTip": "Bevestig de avond ervoor de regels van de basis voor tanken en terugkomsttijd, zodat je niet hoeft te haasten. Nader de marina van Göcek langzaam en roep vooruit op de marifoon voor aanwijzingen naar je ligplaats; het personeel neemt bij aankomst je lijnen aan."
+        }
+      }
+    }
+  },
+  "areas": {
+    "bodrum": {
+      "metaTitle": "Routes Bodrum & Golf van Gökova | Boat4You",
+      "metaDesc": "Routes vanuit Bodrum: dennenbaaien in de Golf van Gökova, het eiland van Cleopatra en lang zwemmen — de Turkse kust, dag voor dag.",
+      "title": "De guletkust, op jouw manier gezeild",
+      "description": "Bodrum kijkt uit op een golf die gemaakt is om in rond te dwalen. Gökova snijdt dertig mijl het Turkse vasteland in, met oevers die zich vouwen tot baai na baai met dennen erachter, waar de routine zichzelf schrijft: zwemmen, ontbijt, twee uur zeilen, weer een baai. Het eiland Sedir bewaart zijn antieke theater en een strand met zand dat volgens de legende voor Cleopatra werd aangevoerd; English Harbour verstopt zich zo goed dat de Royal Navy het in oorlogstijd gebruikte. Restaurants met een eigen steiger nemen je lijnen aan, voeren je meze en rekenen er een eerlijke prijs voor. De meltemi komt hier verzacht binnen, meer bries dan weer. Bodrum zelf — kasteel, markt, marina — sluit de week aan beide kanten netjes af. Het is de makkelijkste kennismaking met Turkije die een zeiler kan krijgen."
+    },
+    "gocek": {
+      "metaTitle": "Zeilroutes Göcek & Fethiye | Boat4You",
+      "metaDesc": "Routes vanuit Göcek en Fethiye door de twaalf eilanden van Skopea Limani: restaurants met eigen steiger, ruïnes boven de ankerplaatsen.",
+      "title": "Twaalf eilanden in één beschutte golf",
+      "description": "Göcek ligt aan de kop van Skopea Limani, een golf die zo beschut en zo vol eilanden is dat je er een week kunt varen zonder ooit een golf over de boeg te krijgen. De formule is onverslaanbaar voor gemengde bemanningen: het anker valt in tien meter helder groen water, een lange landvast gaat naar een den aan wal, en het diner vindt plaats bij een familierestaurant dat zijn steiger precies voor jou bouwde. Boven verschillende ankerplaatsen staan Lycische ruïnes — de Baden van Cleopatra, de graven bij Kaya — en de markt van Fethiye bevoorraadt de kombuis naar behoren. De wind is licht en thermisch, navigeren gaat op zicht, en de marina's in Göcek zijn talrijk en strak. Als Turkije een oefenhelling voor chartervaren heeft, is dit het — en toevallig is het ook nog prachtig."
+    }
+  }
+}
