@@ -90,13 +90,26 @@ const CustomBuilder = () => {
     return day?.description || day?.shortDescription || '';
   };
 
+  // Any change to the day list unmounts the hovered suggestion card; a
+  // Popover left anchored to that detached node renders at the viewport's
+  // top-left corner (Mario 7.8), so every mutation also closes the popup.
+  const closeInfo = () => {
+    setInfoAnchor(null);
+    setInfoSug(null);
+  };
+
   const pickSuggestion = (sug: Suggestion) => {
+    closeInfo();
     setDays(prev => [...prev, { stop: sug.stop, nm: sug.nm, content: sug.content }]);
   };
 
-  const removeLastDay = () => setDays(prev => prev.slice(0, -1));
+  const removeLastDay = () => {
+    closeInfo();
+    setDays(prev => prev.slice(0, -1));
+  };
 
   const resetAll = () => {
+    closeInfo();
     setDays([]);
     setStartKey('');
   };
@@ -180,7 +193,7 @@ const CustomBuilder = () => {
           ))}
         </Select>
         {days.length > 0 && (
-          <Button size="small" onClick={resetAll} sx={{ color: colors.blue600 }}>
+          <Button size="small" onClick={resetAll} sx={{ color: colors.white, whiteSpace: 'nowrap', flexShrink: 0 }}>
             {t('builder.reset')}
           </Button>
         )}
@@ -227,7 +240,7 @@ const CustomBuilder = () => {
                     <Typography sx={{ fontSize: 12, color: '#64708a' }}>~{d.nm} NM</Typography>
                   </Box>
                   {i === days.length - 1 && (
-                    <Button size="small" onClick={removeLastDay} sx={{ color: '#b3261e', minWidth: 0 }}>
+                    <Button size="small" onClick={removeLastDay} sx={{ color: colors.white, minWidth: 0 }}>
                       ✕
                     </Button>
                   )}
@@ -351,7 +364,7 @@ const CustomBuilder = () => {
 
           {/* bočni info-popup lokacije */}
           <Popover
-            open={!!infoAnchor && !!infoSug}
+            open={!!infoAnchor && !!infoSug && infoAnchor.isConnected}
             anchorEl={infoAnchor}
             anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
             transformOrigin={{ vertical: 'top', horizontal: 'left' }}
