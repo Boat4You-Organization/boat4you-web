@@ -5,10 +5,10 @@ export const dynamic = 'force-dynamic';
 
 /**
  * Sitemap for the config-driven itinerary pages: the /itineraries hub,
- * every /itineraries/{area} page and every /itineraries/{area}/{route}
- * detail — each in all 9 locales (mirrors sitemap-static's locale-prefix
- * scheme). The URL set is fully static (itineraries.config), so no
- * upstream fetch is needed.
+ * the /itineraries/builder tool, every /itineraries/{area} page and every
+ * /itineraries/{area}/{route} detail — each in all 9 locales (mirrors
+ * sitemap-static's locale-prefix scheme). The URL set is fully static
+ * (itineraries.config), so no upstream fetch is needed.
  */
 export async function GET() {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
@@ -16,6 +16,7 @@ export async function GET() {
   const areas = itineraries.flatMap(group => group.itinerary);
   const pages = [
     { path: '/itineraries', priority: '0.7', changefreq: 'weekly' },
+    { path: '/itineraries/builder', priority: '0.6', changefreq: 'monthly' },
     ...areas.map(area => ({ path: `/itineraries/${area.id}`, priority: '0.6', changefreq: 'weekly' })),
     ...areas.flatMap(area =>
       area.routes.map(route => ({
