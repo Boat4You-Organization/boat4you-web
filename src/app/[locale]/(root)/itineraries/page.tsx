@@ -11,6 +11,7 @@ import { buildMetadata } from '@/utils/static/buildMetadata';
 import { resolveBoatsSearchHref } from '@/utils/static/itinerarySearchHref';
 import { serializeJsonLd } from '@/utils/static/serializeJsonLd';
 import ItinerariesHub from '@/views/Itineraries/ItinerariesHub';
+import ItineraryBuilderPromo from '@/views/Itineraries/ItineraryBuilderPromo';
 import ItineraryEndCta from '@/views/Itineraries/ItineraryEndCta';
 import ItineraryHero from '@/views/Itineraries/ItineraryHero';
 
@@ -87,13 +88,15 @@ const ItinerariesPage = async ({ params }: ItinerariesPageParams) => {
         lede={t('listHero.lede')}
         image={{ src: '/images/itinerary/banner.webp', alt: t('listHero.imageAlt') }}
       />
-      <ItinerariesHub countrySearchHrefs={countrySearchHrefs} />
-      <ItineraryEndCta
-        title={t('builder.hubCta')}
+      <ItineraryBuilderPromo
+        kicker={t('builder.kicker')}
+        eyebrow={t('builder.eyebrow')}
+        title={t('builder.title')}
+        italic={t('builder.italic')}
         lede={t('builder.hubCtaLede')}
-        action={t('builder.title')}
-        to="/itineraries/builder"
+        action={t('builder.hubCta')}
       />
+      <ItinerariesHub countrySearchHrefs={countrySearchHrefs} />
       <ItineraryEndCta title={t('listCta.title')} lede={t('listCta.lede')} action={t('listCta.action')} to="/search" />
     </Layout>
   );
