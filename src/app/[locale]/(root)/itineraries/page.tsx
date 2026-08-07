@@ -88,6 +88,12 @@ const ItinerariesPage = async ({ params }: ItinerariesPageParams) => {
         image={{ src: '/images/itinerary/banner.webp', alt: t('listHero.imageAlt') }}
       />
       <ItinerariesHub countrySearchHrefs={countrySearchHrefs} />
+      <ItineraryEndCta
+        title={t('builder.hubCta')}
+        lede={t('builder.hubCtaLede')}
+        action={t('builder.title')}
+        to="/itineraries/builder"
+      />
       <ItineraryEndCta title={t('listCta.title')} lede={t('listCta.lede')} action={t('listCta.action')} to="/search" />
     </Layout>
   );
