@@ -627,5 +627,14 @@
     "welcomeTitle": "Bienvenue sur le chat boat4you !",
     "welcomeText": "Notre équipe répond directement à vos messages, avec IRIS, notre assistante IA pour les questions de flotte, d'itinéraires et de prix. Les conversations peuvent être relues pour améliorer le service — n'indiquez que les informations nécessaires à votre demande.",
     "privacyLink": "Politique de confidentialité"
-  }
+  },
+  "voucherHaveOne": "Vous avez un bon ?",
+  "voucherCodePlaceholder": "Saisissez le code du bon",
+  "voucherApply": "Appliquer",
+  "voucherApplied": "Bon appliqué",
+  "voucherRemove": "Retirer",
+  "voucherRow": "Bon de réduction",
+  "voucherInvalid": "Ce code de bon est invalide, expiré ou déjà utilisé.",
+  "voucherMinTotal": "Les bons sont utilisables sur les locations à partir de {amount}.",
+  "voucherFirstPaymentNote": "Comprend votre bon de {amount}, déduit de ce premier versement."
 }

@@ -13,6 +13,7 @@ import { PaymentInstallment, PaymentMethod } from '@/config/paymentMethods.confi
 import { PaymentPhase } from '@/models/reservation.model';
 import { UserModel } from '@/models/user.model';
 import { ReservationData } from '@/types/reservation.type';
+import { AppliedVoucher } from '@/types/voucher.type';
 import { clearDataFromLocalStorage, getDataFromLocalStorage } from '@/utils/static/localStorageUtils';
 import { clearDataFromSessionStorage, getDataFromSessionStorage } from '@/utils/static/sessionStorageUtils';
 import { loadPaymentMethod, loadSelectedInstallment, setActiveStep } from '@/valtio/booking/booking.actions';
@@ -48,6 +49,10 @@ const Booking = ({ isAdmin, user, initialStep = 0 }: BookingProps) => {
   const [isLoading, setIsLoading] = useState(true);
   const [previewPhases, setPreviewPhases] = useState<PaymentPhase[]>([]);
   const [isLoadingPreviewPhases, setIsLoadingPreviewPhases] = useState(false);
+  // Loyalty voucher applied in DetailsStep — lifted here so the sidebar
+  // breakdown and the preview schedule show the same discounted numbers.
+  // Survives the /enter-your-details → /payment navigation via sessionStorage.
+  const [appliedVoucher, setAppliedVoucher] = useState<AppliedVoucher | null>(null);
   const router = useRouter();
   const isInitialMount = useRef(true);
 
@@ -73,6 +78,7 @@ const Booking = ({ isAdmin, user, initialStep = 0 }: BookingProps) => {
     const savedReservationId = getDataFromSessionStorage<number>('reservationId');
 
     setReservationData(savedReservation);
+    setAppliedVoucher(getDataFromSessionStorage<AppliedVoucher>('appliedVoucher'));
 
     if (!savedReservation) {
       router.back();
@@ -148,7 +154,7 @@ const Booking = ({ isAdmin, user, initialStep = 0 }: BookingProps) => {
     let cancelled = false;
 
     setIsLoadingPreviewPhases(true);
-    previewPaymentPhases(yachtId, dateFrom, dateTo, totalPriceEur)
+    previewPaymentPhases(yachtId, dateFrom, dateTo, totalPriceEur, appliedVoucher?.value)
       .then(({ payload }) => {
         if (cancelled) return;
 
@@ -161,7 +167,7 @@ const Booking = ({ isAdmin, user, initialStep = 0 }: BookingProps) => {
     return () => {
       cancelled = true;
     };
-  }, [reservationData]);
+  }, [reservationData, appliedVoucher]);
 
   if (isLoading || !reservationData) {
     return (
@@ -181,6 +187,8 @@ const Booking = ({ isAdmin, user, initialStep = 0 }: BookingProps) => {
             user={user}
             paymentPhases={previewPhases}
             isLoadingPhases={isLoadingPreviewPhases}
+            appliedVoucher={appliedVoucher}
+            onVoucherChange={setAppliedVoucher}
           />
         );
       case 1:
@@ -219,6 +227,7 @@ const Booking = ({ isAdmin, user, initialStep = 0 }: BookingProps) => {
                 reservationData={reservationData}
                 paymentPhases={previewPhases}
                 isLoadingPhases={isLoadingPreviewPhases}
+                appliedVoucher={appliedVoucher}
               />
               <Box className={styles.divider} />
               <PaymentPoliciesCard

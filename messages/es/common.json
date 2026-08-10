@@ -627,5 +627,14 @@
     "welcomeTitle": "¡Bienvenido al chat de boat4you!",
     "welcomeText": "Nuestro equipo responde directamente a sus mensajes, junto con IRIS, nuestra asistente de IA para dudas sobre flota, rutas y precios. Las conversaciones pueden revisarse para mejorar el servicio — indique solo los datos necesarios para su consulta.",
     "privacyLink": "Política de privacidad"
-  }
+  },
+  "voucherHaveOne": "¿Tienes un cupón?",
+  "voucherCodePlaceholder": "Ingresa el código del cupón",
+  "voucherApply": "Aplicar",
+  "voucherApplied": "Cupón aplicado",
+  "voucherRemove": "Quitar",
+  "voucherRow": "Cupón",
+  "voucherInvalid": "Este código de cupón no es válido, ha caducado o ya se ha utilizado.",
+  "voucherMinTotal": "Los cupones se pueden usar en chárteres a partir de {amount}.",
+  "voucherFirstPaymentNote": "Incluye tu cupón de {amount}, descontado de este primer pago."
 }

@@ -627,5 +627,14 @@
     "welcomeTitle": "Welcome to boat4you chat!",
     "welcomeText": "Our team answers your messages directly, together with IRIS, our AI assistant for fleet, route and price questions. Conversations may be reviewed by our team to improve the experience — share only the details needed for your enquiry.",
     "privacyLink": "Privacy Policy"
-  }
+  },
+  "voucherHaveOne": "Have a voucher?",
+  "voucherCodePlaceholder": "Enter voucher code",
+  "voucherApply": "Apply",
+  "voucherApplied": "Voucher applied",
+  "voucherRemove": "Remove",
+  "voucherRow": "Voucher",
+  "voucherInvalid": "This voucher code is invalid, expired or already used.",
+  "voucherMinTotal": "Vouchers can be used on charters of {amount} or more.",
+  "voucherFirstPaymentNote": "Includes your {amount} voucher, deducted from this first payment."
 }

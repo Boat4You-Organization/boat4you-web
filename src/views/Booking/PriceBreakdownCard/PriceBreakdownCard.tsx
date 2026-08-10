@@ -10,6 +10,7 @@ import { PaymentMethod } from '@/config/paymentMethods.config';
 import { PaymentPhase } from '@/models/reservation.model';
 import colors from '@/styles/themes/colors';
 import { ReservationData } from '@/types/reservation.type';
+import { AppliedVoucher } from '@/types/voucher.type';
 import DateTime from '@/utils/static/DateTime';
 import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
 import { calculatePaymentPhases } from '@/utils/static/paymentPhases';
@@ -24,6 +25,8 @@ interface PriceBreakdownCardProps {
   isLoadingPhases?: boolean;
   selectedPaymentMethod?: PaymentMethod;
   reservationId?: number;
+  /** Loyalty voucher applied at checkout — renders the green discount row. */
+  appliedVoucher?: AppliedVoucher | null;
 }
 
 const PriceBreakdownCard = ({
@@ -34,6 +37,7 @@ const PriceBreakdownCard = ({
   isLoadingPhases = false,
   selectedPaymentMethod,
   reservationId,
+  appliedVoucher = null,
 }: PriceBreakdownCardProps) => {
   const { pricePerDayEur, pricePerDayInfo, totalPriceEur, totalPriceInfo, dateFrom, dateTo } = reservationData;
   const numberOfDays = DateTime.daysBetween(DateTime.date(dateFrom), DateTime.date(dateTo));
@@ -55,6 +59,28 @@ const PriceBreakdownCard = ({
   const formattedFullPrice = formatPriceWithCurrency({
     clientPriceEur: totalPriceEur,
     clientPriceInfo: totalPriceInfo ?? undefined,
+    locale,
+  });
+
+  // Voucher-discounted grand total. The display-currency amount scales by the
+  // same ratio as the EUR total (standard per-phase conversion idiom).
+  const voucherValue = appliedVoucher?.value ?? 0;
+  const discountedTotalEur = Math.max(0, totalPriceEur - voucherValue);
+  const discountedTotalInfo =
+    totalPriceInfo && totalPriceEur > 0
+      ? { ...totalPriceInfo, amount: totalPriceInfo.amount * (discountedTotalEur / totalPriceEur) }
+      : totalPriceInfo;
+  const formattedDiscountedTotal = formatPriceWithCurrency({
+    clientPriceEur: discountedTotalEur,
+    clientPriceInfo: discountedTotalInfo ?? undefined,
+    locale,
+  });
+  const formattedVoucherValue = formatPriceWithCurrency({
+    clientPriceEur: voucherValue,
+    clientPriceInfo:
+      totalPriceInfo && totalPriceEur > 0
+        ? { ...totalPriceInfo, amount: totalPriceInfo.amount * (voucherValue / totalPriceEur) }
+        : undefined,
     locale,
   });
 
@@ -130,12 +156,22 @@ const PriceBreakdownCard = ({
         }}
       />
       <Stack gap={2}>
+        {appliedVoucher && (
+          <Stack direction="row" justifyContent="space-between" alignItems="center">
+            <Typography variant="body1" sx={{ color: '#15803d', fontWeight: 700 }}>
+              {t('common.voucherRow')} · {appliedVoucher.code}
+            </Typography>
+            <Typography variant="body1" sx={{ color: '#15803d', fontWeight: 700 }}>
+              −{formattedVoucherValue}
+            </Typography>
+          </Stack>
+        )}
         <Stack direction="row" justifyContent="space-between" alignItems="center">
           <Typography variant="h2" component="p">
             {t('common.total')}
           </Typography>
           <Typography variant="h2" component="p">
-            {formattedFullPrice}
+            {appliedVoucher ? formattedDiscountedTotal : formattedFullPrice}
           </Typography>
         </Stack>
       </Stack>

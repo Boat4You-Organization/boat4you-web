@@ -30,6 +30,7 @@ import { PaymentMethod } from '@/config/paymentMethods.config';
 import { PaymentPhase as ApiPaymentPhase } from '@/models/reservation.model';
 import colors from '@/styles/themes/colors';
 import { ReservationData } from '@/types/reservation.type';
+import { AppliedVoucher } from '@/types/voucher.type';
 import { usePaymentSubmit } from '@/utils/hooks/usePaymentSubmit';
 import { bankFeeShareForPhase } from '@/utils/static/bankTransferFee';
 import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
@@ -73,6 +74,11 @@ const UnifiedPaymentStep = ({ reservationData }: UnifiedPaymentStepProps) => {
   // bookings, several days for long-lead. Showing the wrong window risks
   // the customer paying after the partner already released the yacht.
   const reservationExpiresAt = getDataFromSessionStorage<string>('reservationExpiresAt');
+  // Loyalty voucher applied in DetailsStep. Display-only here: the backend
+  // already absorbed it into phase[0], so every amount on this screen (and
+  // what Stripe charges) is correct without further math — do NOT subtract
+  // it again.
+  const appliedVoucher = getDataFromSessionStorage<AppliedVoucher>('appliedVoucher');
   // Customer-facing booking number for bank transfer reference / notices.
   // Falls back to the internal id for historical reservations that predate the
   // booking-number feature.
@@ -234,6 +240,13 @@ const UnifiedPaymentStep = ({ reservationData }: UnifiedPaymentStepProps) => {
               date: dateFormatter(dueNowDeadline),
             })}
           </Typography>
+          {appliedVoucher && (
+            <Typography variant="body2" sx={{ color: '#15803d', fontWeight: 700, mt: 0.5 }}>
+              {t('voucherFirstPaymentNote', {
+                amount: formatPriceWithCurrency({ clientPriceEur: appliedVoucher.value }),
+              })}
+            </Typography>
+          )}
         </Alert>
       )}
 

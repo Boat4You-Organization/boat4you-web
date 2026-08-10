@@ -627,5 +627,14 @@
     "welcomeTitle": "Welkom bij de boat4you chat!",
     "welcomeText": "Ons team beantwoordt uw berichten rechtstreeks, samen met IRIS, onze AI-assistent voor vragen over vloot, routes en prijzen. Gesprekken kunnen worden teruggelezen om de service te verbeteren — deel alleen de gegevens die nodig zijn voor uw vraag.",
     "privacyLink": "Privacybeleid"
-  }
+  },
+  "voucherHaveOne": "Heb je een voucher?",
+  "voucherCodePlaceholder": "Voer vouchercode in",
+  "voucherApply": "Toepassen",
+  "voucherApplied": "Voucher toegepast",
+  "voucherRemove": "Verwijderen",
+  "voucherRow": "Voucher",
+  "voucherInvalid": "Deze vouchercode is ongeldig, verlopen of al gebruikt.",
+  "voucherMinTotal": "Vouchers zijn te gebruiken bij charters vanaf {amount}.",
+  "voucherFirstPaymentNote": "Inclusief je voucher van {amount}, verrekend met deze eerste betaling."
 }

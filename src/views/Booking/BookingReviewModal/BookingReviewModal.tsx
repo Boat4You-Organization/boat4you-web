@@ -11,6 +11,7 @@ import Modal from '@/components/ModalRoot/Modal';
 import VerticalTimeline from '@/components/VerticalTimeline';
 import { PaymentPhase } from '@/models/reservation.model';
 import colors from '@/styles/themes/colors';
+import { AppliedVoucher } from '@/types/voucher.type';
 import DateTime from '@/utils/static/DateTime';
 import { generateCancellationTimeline } from '@/utils/static/cancellationUtils';
 import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
@@ -42,6 +43,8 @@ interface BookingReviewModalProps {
    * legacy 5-day fallback inside generateCancellationTimeline.
    */
   freeUntil?: string | null;
+  /** Loyalty voucher applied at checkout — shows the discounted total. */
+  appliedVoucher?: AppliedVoucher | null;
 }
 
 /**
@@ -61,6 +64,7 @@ const BookingReviewModal = ({
   paymentPhases = [],
   isLoadingPhases = false,
   freeUntil = null,
+  appliedVoucher = null,
 }: BookingReviewModalProps) => {
   const t = useTranslations('common');
   const locale = useLocale();
@@ -85,9 +89,16 @@ const BookingReviewModal = ({
 
   const today = dayjs().startOf('day');
 
+  // Voucher-discounted grand total — display-currency amount scales by the
+  // same ratio as the EUR total (standard per-phase conversion idiom).
+  const voucherValue = appliedVoucher?.value ?? 0;
+  const discountedTotalEur = Math.max(0, totalPriceEur - voucherValue);
   const formattedTotal = formatPriceWithCurrency({
-    clientPriceEur: totalPriceEur,
-    clientPriceInfo: totalPriceInfo ?? undefined,
+    clientPriceEur: discountedTotalEur,
+    clientPriceInfo:
+      totalPriceInfo && totalPriceEur > 0
+        ? { ...totalPriceInfo, amount: totalPriceInfo.amount * (discountedTotalEur / totalPriceEur) }
+        : (totalPriceInfo ?? undefined),
     locale,
   });
 
@@ -105,6 +116,15 @@ const BookingReviewModal = ({
           <Typography className={styles.rowLabel}>{t('totalPrice')}</Typography>
           <Typography className={styles.priceValue}>{formattedTotal}</Typography>
         </Box>
+
+        {appliedVoucher && (
+          <Box className={styles.row}>
+            <Typography className={styles.rowLabel}>{t('voucherRow')}</Typography>
+            <Typography className={styles.rowValue} sx={{ color: '#15803d', fontWeight: 700 }}>
+              {appliedVoucher.code} · −{formatPriceWithCurrency({ clientPriceEur: appliedVoucher.value })}
+            </Typography>
+          </Box>
+        )}
 
         <Box className={styles.row}>
           <Typography className={styles.rowLabel}>{t('paymentSchedule')}</Typography>

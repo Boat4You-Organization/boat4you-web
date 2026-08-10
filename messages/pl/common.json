@@ -627,5 +627,14 @@
     "welcomeTitle": "Witamy na czacie boat4you!",
     "welcomeText": "Na wiadomości odpowiada bezpośrednio nasz zespół wraz z IRIS — naszą asystentką AI od pytań o flotę, trasy i ceny. Rozmowy mogą być przeglądane w celu poprawy jakości obsługi — podawaj tylko dane potrzebne do zapytania.",
     "privacyLink": "Polityka prywatności"
-  }
+  },
+  "voucherHaveOne": "Masz bon?",
+  "voucherCodePlaceholder": "Wpisz kod bonu",
+  "voucherApply": "Zastosuj",
+  "voucherApplied": "Bon zastosowany",
+  "voucherRemove": "Usuń",
+  "voucherRow": "Bon",
+  "voucherInvalid": "Ten kod bonu jest nieprawidłowy, wygasł lub został już wykorzystany.",
+  "voucherMinTotal": "Bony można wykorzystać przy czarterach o wartości od {amount}.",
+  "voucherFirstPaymentNote": "Uwzględnia Twój bon o wartości {amount}, odliczony od tej pierwszej płatności."
 }

@@ -1,10 +1,11 @@
 import { startTransition, useActionState, useEffect, useMemo, useState } from 'react';
 
-import { Box, Button, Stack, Typography } from '@mui/material';
+import { Box, Button, Stack, TextField, Typography } from '@mui/material';
 import { useTranslations } from 'next-intl';
 import { useParams, useRouter } from 'next/navigation';
 
 import { createReservation } from '@/actions/reservation.actions';
+import { validateVoucher } from '@/actions/voucher.actions';
 import Form from '@/components/Forms/Form';
 import FormInput from '@/components/Forms/FormInput';
 import PhoneInput from '@/components/PhoneInput';
@@ -16,8 +17,10 @@ import { UserModel } from '@/models/user.model';
 import { YachtModel } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
 import { ReservationData } from '@/types/reservation.type';
+import { AppliedVoucher } from '@/types/voucher.type';
 import { FormValidator } from '@/utils/static/FormValidator';
-import { saveDataToSessionStorage } from '@/utils/static/sessionStorageUtils';
+import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
+import { clearDataFromSessionStorage, saveDataToSessionStorage } from '@/utils/static/sessionStorageUtils';
 import { toTitleCase } from '@/utils/static/toTitleCase';
 import { toggleLoginModal } from '@/valtio/auth/auth.actions';
 import { showToast } from '@/valtio/global/global.actions';
@@ -40,6 +43,9 @@ interface DetailsStepProps {
    *  real MMK/NauSys schedule instead of a client-side approximation. */
   paymentPhases?: PaymentPhase[];
   isLoadingPhases?: boolean;
+  /** Loyalty voucher — lifted to Booking so the sidebar shows the discount too. */
+  appliedVoucher?: AppliedVoucher | null;
+  onVoucherChange?: (voucher: AppliedVoucher | null) => void;
 }
 
 const defaultValues: BookingFormValues = {
@@ -59,6 +65,8 @@ const DetailsStep = ({
   user,
   paymentPhases = [],
   isLoadingPhases = false,
+  appliedVoucher = null,
+  onVoucherChange,
 }: DetailsStepProps) => {
   const { name, model, locationFrom } = reservationData;
   const [state, createReservationAction, createReservationPending] = useActionState(createReservation, undefined);
@@ -68,6 +76,12 @@ const DetailsStep = ({
   const validator = FormValidator.withTranslation(t);
   const { boatInquiryModalOpen } = useYachtStore();
   const [bookingReviewOpen, setBookingReviewOpen] = useState(false);
+  // Loyalty voucher input — local UI state; the applied voucher itself lives
+  // in Booking (lifted) + sessionStorage so the sidebar and /payment see it.
+  const [voucherOpen, setVoucherOpen] = useState(false);
+  const [voucherInput, setVoucherInput] = useState('');
+  const [voucherChecking, setVoucherChecking] = useState(false);
+  const [voucherError, setVoucherError] = useState<string | null>(null);
   // `user` prop comes from the SSR `getLoggedInUser()` snapshot at page-load.
   // After the "Sign in to pre-fill" link opens LoginModal and the user logs in,
   // the new profile lands in `useUserStore` (Valtio) immediately — so we prefer
@@ -156,6 +170,14 @@ const DetailsStep = ({
         errorMessage = t('validation.phoneNumberInvalidLength');
       }
 
+      // Voucher raced out between apply and submit (expired / someone else
+      // redeemed it) — drop it so the retry books without the discount.
+      if (state.message.toLowerCase().includes('vouchercode') || state.message.toLowerCase().includes('voucher code')) {
+        errorMessage = t('voucherInvalid');
+        clearDataFromSessionStorage('appliedVoucher');
+        onVoucherChange?.(null);
+      }
+
       showToast({
         status: 'error',
         text: errorMessage || t('reservationCreationFailed'),
@@ -178,6 +200,38 @@ const DetailsStep = ({
         selectedExtras: selectedExtrasKeys,
       }
     : defaultValues;
+
+  const applyVoucher = async () => {
+    const code = voucherInput.trim().toUpperCase();
+
+    if (!code) return;
+
+    setVoucherChecking(true);
+    setVoucherError(null);
+
+    const result = await validateVoucher(code, reservationData.totalPriceEur);
+
+    if (result.valid && result.value) {
+      const voucher = { code, value: result.value };
+
+      saveDataToSessionStorage('appliedVoucher', voucher);
+      onVoucherChange?.(voucher);
+      setVoucherOpen(false);
+      setVoucherInput('');
+    } else if (result.reason === 'MIN_TOTAL_NOT_MET') {
+      setVoucherError(t('voucherMinTotal', { amount: formatPriceWithCurrency({ clientPriceEur: 1500 }) }));
+    } else {
+      setVoucherError(t('voucherInvalid'));
+    }
+
+    setVoucherChecking(false);
+  };
+
+  const removeVoucher = () => {
+    clearDataFromSessionStorage('appliedVoucher');
+    onVoucherChange?.(null);
+    setVoucherError(null);
+  };
 
   const handleSubmit = async (data: BookingFormValues) => {
     const invalidData =
@@ -219,6 +273,10 @@ const DetailsStep = ({
       }
     });
 
+    if (appliedVoucher) {
+      formData.append('voucherCode', appliedVoucher.code);
+    }
+
     startTransition(() => {
       createReservationAction(formData);
     });
@@ -255,6 +313,7 @@ const DetailsStep = ({
         totalPriceInfo={reservationData.totalPriceInfo}
         paymentPhases={paymentPhases}
         isLoadingPhases={isLoadingPhases}
+        appliedVoucher={appliedVoucher}
       />
       <Box className={styles.container}>
         {/* "This is a rare find" scarcity card — kept for conversion psychology,
@@ -335,6 +394,95 @@ const DetailsStep = ({
               placeholder={t('inputSpecialRequest')}
               multiline
             />
+            {/* Loyalty voucher — collapsed link → code input → green applied chip.
+                Applied BEFORE the reservation exists so the backend can absorb
+                the discount into the first installment (Stripe + wire emails). */}
+            <Box>
+              {!appliedVoucher && !voucherOpen && (
+                <Box
+                  component="button"
+                  type="button"
+                  onClick={() => setVoucherOpen(true)}
+                  sx={{
+                    background: 'none',
+                    border: 0,
+                    p: 0,
+                    color: colors.blue500,
+                    cursor: 'pointer',
+                    textDecoration: 'underline',
+                    font: 'inherit',
+                    fontSize: '0.875rem',
+                  }}
+                >
+                  {t('voucherHaveOne')}
+                </Box>
+              )}
+              {!appliedVoucher && voucherOpen && (
+                <Stack gap={1}>
+                  <Stack direction={{ xs: 'column', sm: 'row' }} gap={1.5}>
+                    <TextField
+                      value={voucherInput}
+                      onChange={event => {
+                        setVoucherInput(event.target.value.toUpperCase());
+                        setVoucherError(null);
+                      }}
+                      placeholder={t('voucherCodePlaceholder')}
+                      size="small"
+                      error={!!voucherError}
+                      helperText={voucherError}
+                      inputProps={{ style: { textTransform: 'uppercase' }, maxLength: 20 }}
+                      sx={{ minWidth: { sm: 260 } }}
+                    />
+                    <Button
+                      type="button"
+                      size="medium"
+                      onClick={applyVoucher}
+                      disabled={voucherChecking || !voucherInput.trim()}
+                      sx={{ flexShrink: 0, whiteSpace: 'nowrap' }}
+                    >
+                      {voucherChecking ? t('processing') : t('voucherApply')}
+                    </Button>
+                  </Stack>
+                </Stack>
+              )}
+              {appliedVoucher && (
+                <Stack
+                  direction="row"
+                  alignItems="center"
+                  gap={1.5}
+                  sx={{
+                    backgroundColor: '#ecfdf5',
+                    border: '1px solid #a7f3d0',
+                    borderRadius: 1.5,
+                    px: 2,
+                    py: 1.25,
+                    width: 'fit-content',
+                  }}
+                >
+                  <Typography variant="body2" sx={{ color: '#15803d', fontWeight: 700 }}>
+                    ✓ {t('voucherApplied')} · {appliedVoucher.code} · −
+                    {formatPriceWithCurrency({ clientPriceEur: appliedVoucher.value })}
+                  </Typography>
+                  <Box
+                    component="button"
+                    type="button"
+                    onClick={removeVoucher}
+                    sx={{
+                      background: 'none',
+                      border: 0,
+                      p: 0,
+                      color: colors.black600,
+                      cursor: 'pointer',
+                      textDecoration: 'underline',
+                      font: 'inherit',
+                      fontSize: '0.8125rem',
+                    }}
+                  >
+                    {t('voucherRemove')}
+                  </Box>
+                </Stack>
+              )}
+            </Box>
             <Stack gap={2}>
               <Stack direction={{ xs: 'column-reverse', sm: 'row' }} justifyContent="flex-end" gap={2}>
                 <Button

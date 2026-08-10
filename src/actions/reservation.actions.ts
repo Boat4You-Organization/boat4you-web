@@ -84,6 +84,7 @@ export async function createReservation(
     phoneNumber: data.get('phoneNumber'),
     specialRequest: data.get('specialRequest'),
     selectedExtras: JSON.parse((data.get('selectedExtras') as string) || '[]'),
+    voucherCode: (data.get('voucherCode') as string) || undefined,
   };
 
   // Logged-in customers go through /secured/ so the booking is attributed to
@@ -264,7 +265,8 @@ export async function previewPaymentPhases(
   yachtId: number,
   dateFrom: string,
   dateTo: string,
-  clientTotalPrice: number
+  clientTotalPrice: number,
+  voucherValue?: number
 ): Promise<PayloadResponse<PaymentPhase[]>> {
   try {
     const params = new URLSearchParams({
@@ -273,6 +275,11 @@ export async function previewPaymentPhases(
       dateTo,
       clientTotalPrice: clientTotalPrice.toString(),
     });
+
+    // First installment absorbs the voucher — mirrors createReservation.
+    if (voucherValue && voucherValue > 0) {
+      params.set('voucherValue', voucherValue.toString());
+    }
 
     const response = await fetch(
       `${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/reservations/payment-phases-preview?${params.toString()}`
