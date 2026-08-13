@@ -23,6 +23,23 @@ const FooterBottomBar = () => {
         <Typography variant="caption" component="p" color={colors.black600} sx={{ mt: 0.5, opacity: 0.75 }}>
           Cusmanich d.o.o. · Vrboran 37, 21000 Split, Croatia · OIB 87394862517
         </Typography>
+        {/* Agency credit (Mario 13.8.2026) — same line on every site in the
+            family. Brand credit, deliberately not localized. */}
+        <Typography variant="caption" component="p" color={colors.black600} sx={{ mt: 0.5, opacity: 0.75 }}>
+          Made with{' '}
+          <Box component="span" sx={{ color: '#e25555' }}>
+            ♥
+          </Box>{' '}
+          by{' '}
+          <a
+            href="https://adriapixel.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: 'inherit', fontWeight: 600, textDecoration: 'underline' }}
+          >
+            AdriaPixel
+          </a>
+        </Typography>
         {/* Storyset free-licence attribution — REQUIRED while the promo-banner
             character illustration is live (storyset.com licence terms). */}
         <Typography variant="caption" component="p" sx={{ mt: 0.5, opacity: 0.45, fontSize: '0.62rem' }}>
