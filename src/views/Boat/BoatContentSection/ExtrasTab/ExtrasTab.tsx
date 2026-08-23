@@ -30,7 +30,14 @@ const ExtrasTab = ({ yacht }: ExtrasTabProps) => {
     }
   }, [selectedOffer?.obligatoryExtrasKeys, yacht.slug]);
 
-  const sortedServices = yacht.services.sort(sortByObligatoryExtras(selectedOffer?.obligatoryExtrasKeys || []));
+  // Wrong-period siblings of this offer's obligatory rows (partner models one
+  // charge as "Comfort Pack" / "… 2 weeks" / "… 3 weeks", all obligatory; the
+  // offer says which one applies) are not listed at all — LUNA Lagoon 46
+  // showed three Comfort Packs on a one-week charter (Mario 23.8.2026).
+  const supersededKeys = new Set(selectedOffer?.supersededExtrasKeys || []);
+  const sortedServices = yacht.services
+    .filter(s => !supersededKeys.has(s.key))
+    .sort(sortByObligatoryExtras(selectedOffer?.obligatoryExtrasKeys || []));
 
   // Split by obligatory flag so the list mirrors the competitor layout:
   // "Selected services" groups everything the client can't opt out of

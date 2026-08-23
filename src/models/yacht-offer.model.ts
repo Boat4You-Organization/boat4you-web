@@ -55,6 +55,10 @@ export interface YachtOfferModel {
   listPriceInfo?: PriceInfo | null;
   status: Status;
   obligatoryExtrasKeys: string[];
+  // Yacht-level obligatory rows that are wrong-period siblings of an obligatory
+  // row on THIS offer ("Comfort Pack 2 weeks" on a one-week charter) — hidden
+  // from the services list; the price calc never charges them.
+  supersededExtrasKeys?: string[];
   extras: YachtServiceModel[];
   locationFrom: LocationFromTo;
   locationTo: LocationFromTo;
