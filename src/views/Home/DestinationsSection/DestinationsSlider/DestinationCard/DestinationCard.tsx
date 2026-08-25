@@ -23,10 +23,12 @@ interface DestinationCardProps extends CountryCountModel {
 const DestinationCard = ({ id, name, countryCode, yachtCount, priority = false }: DestinationCardProps) => {
   const t = useTranslations('home');
   const image = getImageByCountryCode(countryCode);
-  const alt = getTranslationKeyByCountryCode(countryCode);
 
   const translationKey = getTranslationKeyByCountryCode(countryCode) || getTranslationKeyByDestinationName(name);
   const localizedName = translationKey ? t(translationKey) : name;
+  // The image alt used to leak the raw i18n KEY ("destinationsSection.
+  // destinations.croatia") — use the localized destination name instead.
+  const alt = localizedName;
 
   return (
     <Link href={`/search?destinations=${name}&did=${id}`} className={styles.card}>

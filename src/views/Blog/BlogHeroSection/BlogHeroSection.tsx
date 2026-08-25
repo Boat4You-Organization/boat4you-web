@@ -107,7 +107,7 @@ const BlogHeroSection = ({ initialFeatured }: { initialFeatured?: BlogTeaser }) 
             <Box className={styles.imageWrapper}>
               <Image
                 src={featureBlog.featuredImage.sourceUrl}
-                alt={featureBlog.featuredImage.altText}
+                alt={featureBlog.featuredImage.altText || featureBlog.title}
                 fill
                 sizes="(max-width: 899px) 100vw, 58vw"
                 className={styles.image}

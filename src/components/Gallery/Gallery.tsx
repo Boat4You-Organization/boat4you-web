@@ -27,6 +27,17 @@ const Gallery = ({ yacht, images, showShareAndFavorite = false, maxDisplayedImag
   const [imageIndex, setImageIndex] = useState<number>(0);
   const t = useTranslations('common');
 
+  // "Fountaine Pajot Elba 45 KARINA — photo 3" instead of the old
+  // "Image slide 236378" (internal id says nothing to Google Images / AI).
+  // Partners often bake the brand into the model ("Lagoon 46") — skip the
+  // manufacturer when the model already starts with it, else "Lagoon Lagoon 46".
+  const manufacturerPrefix =
+    yacht?.manufacturerName && !yacht.modelName?.toLowerCase().startsWith(yacht.manufacturerName.toLowerCase())
+      ? yacht.manufacturerName
+      : undefined;
+  const yachtLabel = [manufacturerPrefix, yacht?.modelName, yacht?.name].filter(Boolean).join(' ');
+  const yachtPhotoLabel = (index: number) => `${yachtLabel || 'Yacht'} — photo ${index + 1}`;
+
   const yachtImages = [...(images || yacht?.yachtImages || [])].sort((a, b) => {
     if (a.mainImage !== b.mainImage) return a.mainImage ? -1 : 1;
 
@@ -88,7 +99,7 @@ const Gallery = ({ yacht, images, showShareAndFavorite = false, maxDisplayedImag
             >
               <Image
                 src={getBoatImageUrl(id, 1200)}
-                alt={`Image slide ${id}`}
+                alt={yachtPhotoLabel(index)}
                 fill
                 sizes="(max-width: 600px) 100vw, 50vw"
                 draggable={false}

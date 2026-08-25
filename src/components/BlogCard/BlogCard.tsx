@@ -9,6 +9,7 @@ import Link from 'next/link';
 import colors from '@/styles/themes/colors';
 import { BlogTeaser } from '@/types/blog.type';
 import DateTime from '@/utils/static/DateTime';
+import { decodeHtmlEntities } from '@/utils/static/decodeHtmlEntities';
 
 import styles from './BlogCard.module.scss';
 
@@ -23,7 +24,7 @@ const BlogCard = ({ variant = 'blog', slug, title, date, featuredImage }: BlogCa
         <Box className={cx(styles.imageWrapper, { [styles.blogWrapper]: variant === 'blog' })}>
           <Image
             src={featuredImage.sourceUrl}
-            alt={featuredImage.sourceUrl}
+            alt={featuredImage.altText || decodeHtmlEntities(title)}
             fill
             sizes="(max-width: 899px) 100vw, 400px"
             className={styles.image}

@@ -172,7 +172,7 @@ const ItineraryBuilderPromo = ({ kicker, eyebrow, title, italic, lede, action }:
           >
             <Image
               src="/images/itinerary/croatia/destinations/krknjasi.webp"
-              alt=""
+              alt="Krknjasi Blue Lagoon anchorage, Croatia"
               fill
               sizes="240px"
               style={{ objectFit: 'cover' }}
@@ -194,7 +194,7 @@ const ItineraryBuilderPromo = ({ kicker, eyebrow, title, italic, lede, action }:
           >
             <Image
               src="/images/itinerary/croatia/destinations/hvar.webp"
-              alt=""
+              alt="Hvar town waterfront, Croatia"
               fill
               sizes="240px"
               style={{ objectFit: 'cover' }}
