@@ -41,6 +41,7 @@ export type BlogTeaser = {
 // (~150 KB+ off the SSR payload, PageSpeed mobile 28.5.2026).
 export type Blog = Omit<BlogTeaser, 'excerpt'> & {
   content: string;
+  modified?: string;
   categories: Nodes<BlogCategory[]>;
   seo?: RankMathSEOData | null;
 };

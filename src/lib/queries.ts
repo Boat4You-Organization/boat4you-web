@@ -43,6 +43,7 @@ query GetBlog($id: ID!, $pageSize: Int!) {
     slug
     title
     date
+    modified
     categories {
       nodes {
         id

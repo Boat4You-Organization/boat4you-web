@@ -11,9 +11,9 @@ import PillTab from '@/components/PillTab';
 import blogCategories from '@/config/blogCategories.config';
 import { useBlogStore } from '@/valtio/blog/blog.store';
 
-import useBlogParams from './useBlogsParams';
+import useBlogParams, { InitialBlogList } from './useBlogsParams';
 
-const BlogsSection = () => {
+const BlogsSection = ({ initial }: { initial?: InitialBlogList }) => {
   const { featureBlogId } = useBlogStore();
 
   const t = useTranslations('common.blog');
@@ -25,7 +25,7 @@ const BlogsSection = () => {
     activeCategory,
     handleCategoryChange,
     handlePageChange,
-  } = useBlogParams();
+  } = useBlogParams(initial);
 
   const handleTabsChange = (_: React.ChangeEvent<{}>, newValue: string) => {
     handleCategoryChange(newValue);

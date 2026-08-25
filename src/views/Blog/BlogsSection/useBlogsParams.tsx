@@ -12,6 +12,15 @@ import { BlogTeaser } from '@/types/blog.type';
 const DEFAULT_CATEGORY = 'all';
 const VALID_CATEGORIES = blogCategories.map(cat => cat.slug);
 
+// Server-rendered first page (blog/page.tsx) — seeds the state so the listing
+// HTML already carries the post links and the client skips the initial fetch.
+export interface InitialBlogList {
+  category: string;
+  blogs: BlogTeaser[];
+  nextPage: string | null;
+  hasNextPage: boolean;
+}
+
 interface BlogType {
   blogs: BlogTeaser[];
   isLoading: boolean;
@@ -20,7 +29,7 @@ interface BlogType {
   hasNextPage: boolean;
 }
 
-const useBlogParams = () => {
+const useBlogParams = (initial?: InitialBlogList) => {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -29,12 +38,15 @@ const useBlogParams = () => {
   const urlCategory = searchParams.get('category') || DEFAULT_CATEGORY;
   const category = VALID_CATEGORIES.includes(urlCategory) ? urlCategory : DEFAULT_CATEGORY;
 
+  const seededFromServer = initial !== undefined && initial.category === category;
+  const skipNextFetchRef = useRef(seededFromServer);
+
   const [state, setState] = useState<BlogType>({
-    blogs: [],
+    blogs: seededFromServer ? initial.blogs : [],
     isLoading: false,
     isLoadingMore: false,
-    nextPage: null,
-    hasNextPage: false,
+    nextPage: seededFromServer ? initial.nextPage : null,
+    hasNextPage: seededFromServer ? initial.hasNextPage : false,
   });
 
   const updateUrl = useCallback(
@@ -94,6 +106,14 @@ const useBlogParams = () => {
   }, []);
 
   useEffect(() => {
+    // First run with server-seeded state: the list is already correct for this
+    // category, refetching would only blank it out and refetch the same page.
+    if (skipNextFetchRef.current) {
+      skipNextFetchRef.current = false;
+
+      return;
+    }
+
     fetchBlogs(category);
   }, [category, fetchBlogs]);
 

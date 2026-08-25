@@ -16,6 +16,7 @@ export async function GET() {
     { path: '/privacy-policy', priority: '0.4', changefreq: 'monthly' },
     { path: '/terms-and-conditions', priority: '0.4', changefreq: 'monthly' },
     { path: '/search', priority: '0.4', changefreq: 'monthly' },
+    { path: '/itineraries/builder', priority: '0.6', changefreq: 'monthly' },
     ...PROMO_CAMPAIGNS.map(({ slug }) => ({ path: `/deals/${slug}`, priority: '0.7', changefreq: 'daily' })),
   ];
 

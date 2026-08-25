@@ -9,6 +9,7 @@ import RelatedItineraries from '@/components/RelatedItineraries';
 import { LocaleType } from '@/config/locales.config';
 import { meta } from '@/config/meta';
 import { getBlog, getBlogWithSEO } from '@/lib/api';
+import { buildBlogPostingLd, extractFaqLd } from '@/utils/static/blogJsonLd';
 import { buildMetadata, localizedUrl } from '@/utils/static/buildMetadata';
 import { decodeHtmlEntities } from '@/utils/static/decodeHtmlEntities';
 import { stripBrandSuffix } from '@/utils/static/stripBrandSuffix';
@@ -82,12 +83,11 @@ export async function generateMetadata({
       description: seo?.twitter_description || seo?.og_description || seo?.description || description,
       images: seo?.twitter_image ? [seo.twitter_image] : baseMetadata.twitter?.images,
     },
-    robots: seo?.robots && !seo.robots.includes('noindex') ? seo.robots : { index: true, follow: true },
   };
 }
 
-const SingleBlogPage = async ({ params }: { params: Promise<{ slug: string }> }) => {
-  const { slug } = await params;
+const SingleBlogPage = async ({ params }: { params: Promise<{ slug: string; locale: Locale }> }) => {
+  const { slug, locale } = await params;
 
   const blog = await getBlog(slug, 10);
 
@@ -95,8 +95,26 @@ const SingleBlogPage = async ({ params }: { params: Promise<{ slug: string }> })
     return notFound();
   }
 
+  // BlogPosting (+ FAQPage when the body carries an FAQ section) structured
+  // data — the boat/itinerary pages already describe themselves with schema,
+  // blog posts were the one editorial surface without it (AI-guide audit 25.8).
+  const blogPostingLd = buildBlogPostingLd(blog.post, locale as LocaleType);
+  const faqLd = extractFaqLd(blog.post.content);
+
   return (
     <Layout>
+      <script
+        type="application/ld+json"
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingLd) }}
+      />
+      {faqLd && (
+        <script
+          type="application/ld+json"
+          // eslint-disable-next-line react/no-danger
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+        />
+      )}
       <SingleBlogContent {...blog.post} />
       <RelatedItineraries
         title={blog.post.title}

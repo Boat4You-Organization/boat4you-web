@@ -18,9 +18,11 @@ import { selectFeatureBlog } from '@/valtio/blog/blog.actions';
 
 import styles from './BlogHeroSection.module.scss';
 
-const BlogHeroSection = () => {
+const BlogHeroSection = ({ initialFeatured }: { initialFeatured?: BlogTeaser }) => {
   const [isLoading, setIsLoading] = useState(false);
-  const [featureBlog, setFeatureBlog] = useState<BlogTeaser | null>(null);
+  // Server-seeded featured post (blog/page.tsx) renders in the SSR HTML; the
+  // client fetch only runs when the server had nothing to pass down.
+  const [featureBlog, setFeatureBlog] = useState<BlogTeaser | null>(initialFeatured ?? null);
   const [isHovered, setIsHovered] = useState(false);
   const t = useTranslations('common');
 
@@ -42,7 +44,14 @@ const BlogHeroSection = () => {
   };
 
   useEffect(() => {
+    if (initialFeatured) {
+      selectFeatureBlog(initialFeatured.id);
+
+      return;
+    }
+
     fetchBlogs();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (isLoading) {
