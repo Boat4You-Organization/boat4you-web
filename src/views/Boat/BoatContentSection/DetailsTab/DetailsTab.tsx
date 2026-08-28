@@ -59,6 +59,16 @@ const DetailsTab = ({ yacht }: DetailsTabProps) => {
   const locale = useLocale();
 
   const generateDescription = useBoatEquipmentDescription();
+
+  // Smart description template (Mario 29.8.2026): every paragraph exists in
+  // five genuinely different phrasings and each yacht picks its combination
+  // deterministically from its id — 5^5 combinations across the catalogue
+  // instead of one identical text on every page (thin-content signal that
+  // kept boat pages in Google's "Crawled — currently not indexed" bucket).
+  // Deterministic => SSR and client always agree (no hydration mismatch).
+  const DESC_VARIANTS = 5;
+  const descVariant = (salt: number): number =>
+    (((yacht.id ?? 0) % 100003) * (2 * salt + 1) + salt * 31) % DESC_VARIANTS;
   const description = generateDescription(yacht);
 
   // Display-friendly name + "Marina Kaštela, Croatia" suffix. Country lookup
@@ -256,30 +266,65 @@ const DetailsTab = ({ yacht }: DetailsTabProps) => {
           // parsers. Translations use <b>…</b> markers and `t.rich()`
           // renders them through a <strong> handler to keep semantic HTML.
           <Stack direction="column" spacing={2}>
-            <Typography variant="body1" color={colors.black500}>
-              {yacht.cabins ? `${yacht.cabins}${t('yacht.lineCabin')} ${vesselTypeLabel}` : vesselTypeLabel}{' '}
-              <strong>{yacht.model}</strong> – <strong>{displayName}</strong>
-              {t('yacht.wasBuilt')} <strong>{yacht.buildYear}</strong>
-              {locationLabel && (
-                <>
-                  {' '}
-                  {t('yacht.andDockedIn')} <strong>{locationLabel}</strong>
-                </>
-              )}
-              .
-            </Typography>
-            {(yacht.maxPersons || yacht.cabins) && (
+            {yacht.cabins && yacht.buildYear && locationLabel && yacht.model ? (
               <Typography variant="body1" color={colors.black500}>
-                <strong>{displayName}</strong> {t('yacht.canAccommodate')}
-                <strong>{yacht.maxPersons}</strong> {t('yacht.peopleIn')} <strong>{yacht.cabins}</strong>{' '}
-                {t('yacht.pillowIncluded')}
+                {t.rich(
+                  `yacht.descIntroV${descVariant(1)}` as never,
+                  {
+                    cabins: String(yacht.cabins),
+                    vesselType: vesselTypeLabel,
+                    model: yacht.model,
+                    name: displayName,
+                    year: String(yacht.buildYear),
+                    location: locationLabel,
+                    b: (chunks: React.ReactNode) => <strong>{chunks}</strong>,
+                  } as never
+                )}
+              </Typography>
+            ) : (
+              // Legacy fragment sentence — survives missing cabins/year/location.
+              <Typography variant="body1" color={colors.black500}>
+                {yacht.cabins ? `${yacht.cabins}${t('yacht.lineCabin')} ${vesselTypeLabel}` : vesselTypeLabel}{' '}
+                <strong>{yacht.model}</strong> – <strong>{displayName}</strong>
+                {t('yacht.wasBuilt')} <strong>{yacht.buildYear}</strong>
+                {locationLabel && (
+                  <>
+                    {' '}
+                    {t('yacht.andDockedIn')} <strong>{locationLabel}</strong>
+                  </>
+                )}
+                .
               </Typography>
             )}
-            {yacht.wc && (
+            {yacht.maxPersons && yacht.cabins && yacht.wc ? (
               <Typography variant="body1" color={colors.black500}>
-                {t(VESSEL_TYPE_LABEL_MAP[yacht.vesselType])} <strong>{displayName}</strong> {t('yacht.offers')}{' '}
-                <strong>{yacht.wc}</strong> {t('yacht.toiletsWithShower')}.
+                {t.rich(
+                  `yacht.descAccomV${descVariant(2)}` as never,
+                  {
+                    name: displayName,
+                    maxPersons: String(yacht.maxPersons),
+                    cabins: String(yacht.cabins),
+                    wc: String(yacht.wc),
+                    b: (chunks: React.ReactNode) => <strong>{chunks}</strong>,
+                  } as never
+                )}
               </Typography>
+            ) : (
+              <>
+                {(yacht.maxPersons || yacht.cabins) && (
+                  <Typography variant="body1" color={colors.black500}>
+                    <strong>{displayName}</strong> {t('yacht.canAccommodate')}
+                    <strong>{yacht.maxPersons}</strong> {t('yacht.peopleIn')} <strong>{yacht.cabins}</strong>{' '}
+                    {t('yacht.pillowIncluded')}
+                  </Typography>
+                )}
+                {yacht.wc && (
+                  <Typography variant="body1" color={colors.black500}>
+                    {t(VESSEL_TYPE_LABEL_MAP[yacht.vesselType])} <strong>{displayName}</strong> {t('yacht.offers')}{' '}
+                    <strong>{yacht.wc}</strong> {t('yacht.toiletsWithShower')}.
+                  </Typography>
+                )}
+              </>
             )}
             {description && (
               <Typography variant="body1" color={colors.black500}>
@@ -288,31 +333,42 @@ const DetailsTab = ({ yacht }: DetailsTabProps) => {
             )}
             {lengthValue && beamValue && (yacht.fuelTank || yacht.waterTank) && (
               <Typography variant="body1" color={colors.black500}>
-                {t.rich(yacht.enginePower ? 'yacht.descSpecs' : 'yacht.descSpecsShort', {
-                  name: displayName,
-                  length: lengthValue,
-                  beam: beamValue,
-                  engine: String(yacht.enginePower ?? ''),
-                  fuel: String(yacht.fuelTank ?? 0),
-                  water: String(yacht.waterTank ?? 0),
-                  b: chunks => <strong>{chunks}</strong>,
-                })}
+                {t.rich(
+                  (yacht.enginePower
+                    ? `yacht.descSpecsV${descVariant(3)}`
+                    : `yacht.descSpecsShortV${descVariant(3)}`) as never,
+                  {
+                    name: displayName,
+                    length: lengthValue,
+                    beam: beamValue,
+                    engine: String(yacht.enginePower ?? ''),
+                    fuel: String(yacht.fuelTank ?? 0),
+                    water: String(yacht.waterTank ?? 0),
+                    b: (chunks: React.ReactNode) => <strong>{chunks}</strong>,
+                  } as never
+                )}
               </Typography>
             )}
             {yacht.location?.name && (
               <Typography variant="body1" color={colors.black500}>
-                {t.rich(countryName ? 'yacht.descSailingRegion' : 'yacht.descSailingRegionNoCountry', {
-                  location: yacht.location.name,
-                  country: countryName ?? '',
-                  b: chunks => <strong>{chunks}</strong>,
-                })}
+                {t.rich(
+                  (countryName ? `yacht.descRegionV${descVariant(4)}` : 'yacht.descSailingRegionNoCountry') as never,
+                  {
+                    location: yacht.location.name,
+                    country: countryName ?? '',
+                    b: (chunks: React.ReactNode) => <strong>{chunks}</strong>,
+                  } as never
+                )}
               </Typography>
             )}
             <Typography variant="body1" color={colors.black500}>
-              {t.rich('yacht.descCTA', {
-                name: displayName,
-                b: chunks => <strong>{chunks}</strong>,
-              })}
+              {t.rich(
+                `yacht.descCtaV${descVariant(5)}` as never,
+                {
+                  name: displayName,
+                  b: (chunks: React.ReactNode) => <strong>{chunks}</strong>,
+                } as never
+              )}
             </Typography>
           </Stack>
         )}
