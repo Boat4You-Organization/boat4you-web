@@ -173,6 +173,16 @@ export const getLocalizedJsonLd = async (locale: LocaleType) => {
         '@type': 'Organization',
         '@id': `${meta.url}/#organization`,
         name: meta.name,
+        // Brand-entity block (Mario 29.8.2026): legalName + Brand node teach
+        // Google/LLMs that Boat4You is an ORGANIZATION entity.
+        legalName: 'Cusmanich d.o.o.',
+        alternateName: 'boat4you.com',
+        foundingDate: '2013',
+        brand: {
+          '@type': 'Brand',
+          name: 'Boat4You',
+          logo: `${meta.url}/meta/logo.svg`,
+        },
         url: meta.url,
         logo: `${meta.url}/meta/logo.svg`,
         email: 'info@boat4you.com',
@@ -203,6 +213,8 @@ export const getLocalizedJsonLd = async (locale: LocaleType) => {
         // icons in the Knowledge Panel, and (c) reinforce brand authority.
         // Drop / re-add a profile here whenever a new platform launches.
         sameAs: [
+          // Wikidata item (created 29.8.2026) — Knowledge Graph reconciliation.
+          'https://www.wikidata.org/wiki/Q141206019',
           'https://www.facebook.com/boat4youcom',
           'https://www.instagram.com/boat4you_/',
           'https://x.com/Boat4you_com',

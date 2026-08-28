@@ -34,7 +34,13 @@ export const buildBlogPostingLd = (post: Blog, locale: LocaleType) => {
     inLanguage: locale,
     articleSection: post.categories?.nodes?.map(c => c.name),
     author: { '@type': 'Organization', name: 'Boat4You', url: 'https://www.boat4you.com' },
-    publisher: { '@type': 'Organization', name: 'Boat4You', url: 'https://www.boat4you.com' },
+    // Same @id as the site-wide Organization node — one KG entity.
+    publisher: {
+      '@type': 'Organization',
+      '@id': 'https://www.boat4you.com/#organization',
+      name: 'Boat4You',
+      url: 'https://www.boat4you.com',
+    },
   };
 };
 
