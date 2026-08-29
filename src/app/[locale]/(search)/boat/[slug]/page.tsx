@@ -17,6 +17,7 @@ import { CHARTER_TYPE_LABEL_MAP, CharterType, YachtModel } from '@/models/yacht.
 import { buildMetadata, localizedUrl } from '@/utils/static/buildMetadata';
 import { getBoatImageUrl } from '@/utils/static/imageUtils';
 import { toTitleCase } from '@/utils/static/toTitleCase';
+import { buildYachtFaq, buildYachtFaqSchema } from '@/utils/static/yachtFaq';
 import BoatContentSection from '@/views/Boat/BoatContentSection';
 import BoatHeroSection from '@/views/Boat/BoatHeroSection';
 import BoatMobileNavigation from '@/views/Boat/BoatMobileNavigation';
@@ -404,6 +405,13 @@ const BoatPage = async ({
     item: localizedUrl(locale as LocaleType, `/boat/${yacht.slug}`),
   });
 
+  // Per-yacht FAQ — server-built so the questions/answers are in the SSR
+  // HTML (unique indexable content, variant-rotated per yacht id) and the
+  // FAQPage JSON-LD below always mirrors the visible accordion.
+  const tYacht = await getTranslations({ locale, namespace: 'yacht' });
+  const yachtFaq = buildYachtFaq(yacht, (key, values) => tYacht(key as never, values as never), locale);
+  const yachtFaqSchema = buildYachtFaqSchema(yachtFaq);
+
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -434,9 +442,16 @@ const BoatPage = async ({
         // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
+      {yachtFaqSchema && (
+        <script
+          type="application/ld+json"
+          // eslint-disable-next-line react/no-danger
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(yachtFaqSchema) }}
+        />
+      )}
       <BoatTransitionProvider>
         <BoatHeroSection yacht={yacht} />
-        <BoatContentSection yacht={yacht} />
+        <BoatContentSection yacht={yacht} yachtFaq={yachtFaq} />
         {/* Post-content upsell order fixed by Mario (21.7.2026): similar
             boats FIRST, day-by-day itineraries for the marina below. */}
         <RelatedBoats yacht={yacht} user={user} locale={locale} currency={currency} />

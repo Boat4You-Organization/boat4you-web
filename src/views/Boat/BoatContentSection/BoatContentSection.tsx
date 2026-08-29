@@ -15,6 +15,7 @@ import useScrollSpy from '@/utils/hooks/useScrollSpy';
 import { useYachtPriceCalculation } from '@/utils/hooks/useYachtPriceCalculation';
 import { clearDataFromLocalStorage } from '@/utils/static/localStorageUtils';
 import { clearDataFromSessionStorage } from '@/utils/static/sessionStorageUtils';
+import { YachtFaqEntry } from '@/utils/static/yachtFaq';
 import {
   setCalculatedPrice,
   setOffersToDisplay,
@@ -36,10 +37,11 @@ import PriceDetailsTab from './PriceDetailsTab';
 import VideoTab from './VideoTab';
 
 interface BoatContentSectionProps {
+  yachtFaq?: YachtFaqEntry[];
   yacht: YachtModel;
 }
 
-const BoatContentSection = ({ yacht }: BoatContentSectionProps) => {
+const BoatContentSection = ({ yacht, yachtFaq }: BoatContentSectionProps) => {
   const { selectedOffer, boatInquiryModalOpen } = useYachtStore();
   const { calculatePrice } = useYachtPriceCalculation();
   const boatTransition = useContext(BoatTransitionContext);
@@ -119,7 +121,7 @@ const BoatContentSection = ({ yacht }: BoatContentSectionProps) => {
       case 'video':
         return <VideoTab yacht={yacht} />;
       case 'faq':
-        return <FAQTab yacht={yacht} />;
+        return <FAQTab yacht={yacht} yachtFaq={yachtFaq} />;
       default:
         return null;
     }

@@ -9,13 +9,15 @@ import AccordionMenu from '@/components/AccordionMenu';
 import FAQ from '@/components/SvgIcons/FAQ';
 import { YachtModel } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
+import { YachtFaqEntry } from '@/utils/static/yachtFaq';
 import BrochureDownloadBox from '@/views/Boat/BoatContentSection/BrochureDownloadBox';
 
 interface FAQTabProps {
   yacht: YachtModel;
+  yachtFaq?: YachtFaqEntry[];
 }
 
-const FAQTab = ({ yacht }: FAQTabProps) => {
+const FAQTab = ({ yacht, yachtFaq }: FAQTabProps) => {
   const [brochureState, getBrochureAction] = useActionState(getYachtBrochureUrl, { success: false });
   const [faqAction, getFAQAction] = useActionState(getFAQByCategoryAction, undefined);
   const t = useTranslations('yacht');
@@ -95,6 +97,11 @@ const FAQTab = ({ yacht }: FAQTabProps) => {
           <FAQ variant="secondary" size={32} />
           {t('FAQTitle')}
         </Typography>
+        {/* Per-yacht Q&A first (server-built, variant-rotated, mirrors the
+            FAQPage JSON-LD) — the generic licence FAQ from WP follows. */}
+        {yachtFaq && yachtFaq.length > 0 && (
+          <AccordionMenu accordionList={yachtFaq.map(f => ({ title: f.question, content: f.answer }))} />
+        )}
         {faqAction && <AccordionMenu accordionList={faqAction} />}
       </Stack>
     </Stack>
