@@ -183,6 +183,24 @@ export const getLocalizedJsonLd = async (locale: LocaleType) => {
           name: 'Boat4You',
           logo: `${meta.url}/meta/logo.svg`,
         },
+        // Boat4You is the MAIN group brand (Mario 29.8.2026) — the charter
+        // brands of the family are its sub-organizations, mirroring the
+        // Wikidata P355 subsidiary statements.
+        subOrganization: [
+          { '@type': 'Organization', name: 'Europe Yachts Charter', url: 'https://www.europe-yachts.com' },
+          {
+            '@type': 'Organization',
+            name: 'Catamaran Charter Greece',
+            url: 'https://www.catamaran-charter-greece.com',
+          },
+          {
+            '@type': 'Organization',
+            name: 'Catamaran Charter Croatia',
+            url: 'https://www.catamaran-croatia-charter.com',
+          },
+          { '@type': 'Organization', name: 'Catamaran Charter Italy', url: 'https://www.catamarancharteritaly.com' },
+          { '@type': 'Organization', name: 'Yacht Charter Croatia', url: 'https://www.croatia-yachting.com' },
+        ],
         url: meta.url,
         logo: `${meta.url}/meta/logo.svg`,
         email: 'info@boat4you.com',
