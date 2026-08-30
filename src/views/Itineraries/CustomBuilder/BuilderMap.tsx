@@ -57,7 +57,7 @@ const BuilderMap = ({ stops, previewStop = null }: { stops: CustomStop[]; previe
       scrollWheelZoom={false}
       attributionControl={false}
     >
-      <TileLayer url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png" />
+      <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" className="tiles-light-mute" />
       <Polyline
         positions={stops.map(s => [s.lat, s.lng] as [number, number])}
         pathOptions={{ color: '#2856ff', weight: 3, dashArray: '8 7' }}

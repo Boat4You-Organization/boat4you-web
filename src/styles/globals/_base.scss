@@ -24,3 +24,10 @@ a {
 * {
   box-sizing: border-box;
 }
+
+// Positron-like muted basemap on free OSM tiles — CARTO began watermarking
+// keyless raster tiles ("API KEY REQUIRED", 30.8.2026), so itinerary maps
+// use openstreetmap.org and recreate the light look with a filter instead.
+.tiles-light-mute {
+  filter: grayscale(0.6) saturate(0.5) brightness(1.07) contrast(0.94);
+}

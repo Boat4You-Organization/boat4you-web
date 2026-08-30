@@ -36,9 +36,9 @@ interface Props {
   /** Decorative / scroll-driven mode: disables every user gesture so the map
    *  never traps page scroll or touch. Defaults to fully interactive. */
   interactive?: boolean;
-  /** Use the lighter CartoDB Positron basemap instead of standard OSM colours —
-   *  keeps the scroll-driven background map from mirroring the top map and lets
-   *  the floating day cards read more clearly over it. */
+  /** Mute the basemap to a light Positron-like look (CSS filter over the same
+   *  free OSM tiles) — keeps the scroll-driven background map from mirroring
+   *  the top map and lets the floating day cards read more clearly over it. */
   lightTiles?: boolean;
 }
 
@@ -182,9 +182,9 @@ const ItineraryRouteLeafletMap = ({
     >
       {lightTiles ? (
         <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>'
-          url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"
-          subdomains="abcd"
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          className="tiles-light-mute"
         />
       ) : (
         <TileLayer

@@ -109,11 +109,11 @@ const drawFallbackBase = (ctx: CanvasRenderingContext2D) => {
 };
 
 /**
- * Real course chart for the PDF: Carto light tiles (same basemap as the
- * builder's live Leaflet map; CORS-open so the canvas stays untainted)
- * stitched around the route's bounding box, with the dashed course and
- * numbered pins drawn on top. Mario 7.8: the schematic-only chart read
- * as "no map" — the PDF must show real coastline like the web map does.
+ * Real course chart for the PDF: OSM tiles (same basemap as the builder's
+ * live Leaflet map; CORS-open so the canvas stays untainted) stitched
+ * around the route's bounding box, with the dashed course and numbered
+ * pins drawn on top. Mario 7.8: the schematic-only chart read as "no map"
+ * — the PDF must show real coastline like the web map does.
  */
 const drawCourseMap = async (stops: CustomStop[]): Promise<string> => {
   const canvas = document.createElement('canvas');
@@ -152,7 +152,7 @@ const drawCourseMap = async (stops: CustomStop[]): Promise<string> => {
 
   const loaded = await Promise.all(
     tiles.map(({ tx, ty }, i) =>
-      loadTile(`https://${'abcd'[i % 4]}.basemaps.cartocdn.com/light_all/${zoom}/${tx}/${ty}.png`)
+      loadTile(`https://tile.openstreetmap.org/${zoom}/${tx}/${ty}.png`)
         .then(img => ({ tx, ty, img }))
         .catch(() => null)
     )
@@ -165,11 +165,15 @@ const drawCourseMap = async (stops: CustomStop[]): Promise<string> => {
     ctx.fillStyle = '#dbe7f5';
     ctx.fillRect(0, 0, MAP_W, MAP_H);
     drawn.forEach(({ tx, ty, img }) => ctx.drawImage(img, tx * TILE - originX, ty * TILE - originY, TILE, TILE));
+    // Same Positron-like muting as the web maps' .tiles-light-mute filter —
+    // ctx.filter isn't supported in every browser, a white wash is.
+    ctx.fillStyle = 'rgba(255, 255, 255, 0.45)';
+    ctx.fillRect(0, 0, MAP_W, MAP_H);
     ctx.font = '400 11px Arial';
     ctx.textAlign = 'right';
     ctx.textBaseline = 'bottom';
     ctx.fillStyle = 'rgba(20, 24, 87, 0.55)';
-    ctx.fillText('© OpenStreetMap contributors © CARTO', MAP_W - 8, MAP_H - 6);
+    ctx.fillText('© OpenStreetMap contributors', MAP_W - 8, MAP_H - 6);
   }
 
   drawCourse(ctx, stops, px, py);
