@@ -210,6 +210,20 @@
     "total": "Razem",
     "disclaimer": "Odległości to przybliżone szacunki wzdłuż wybrzeża przy prędkości podróżnej. Przed wypłynięciem prosimy zawsze sprawdzić prognozę i lokalne komunikaty; ostatnie słowo w sprawie planu dnia należy do skippera.",
     "hubCta": "Ułóż własną trasę rejsu",
-    "hubCtaLede": "Na miarę, dzień po dniu, z realnych etapów — a na końcu PDF."
+    "hubCtaLede": "Na miarę, dzień po dniu, z realnych etapów — a na końcu PDF.",
+    "promoP1": "To dokładnie to samo narzędzie, którym nasz zespół czarterowy szkicuje trasy dla klientów: każdy proponowany etap pochodzi z tras ułożonych przez naszych skipperów — z prawdziwych dziennych rejsów, z dystansami, marinami i lokalnymi atrakcjami, a nie z przypadkowych linii na mapie.",
+    "promoP2": "Wystarczy zacząć od mariny startowej, a kreator zaproponuje wyłącznie przystanki, do których załoga realnie dopłynie w ciągu jednego dnia — i zawsze zostawi drogę powrotną, więc trasa kończy się tam, gdzie zaczyna się Państwa czarter.",
+    "howTitle": "Jak to działa",
+    "step1Title": "Proszę wybrać punkt startowy",
+    "step1Text": "Wystarczy wskazać marinę startową i długość rejsu — 7, 10 lub 14 dni. Trasa domknie się w tej samej marinie, dokładnie jak prawdziwy tydzień czarteru.",
+    "step2Title": "Proszę ułożyć rejs dzień po dniu",
+    "step2Text": "Na każdy dzień podpowiadamy realne kolejne przystanki — każdy z dystansem w milach morskich i krótkim opisem miejsca, więc wybór jest w pełni świadomy.",
+    "step3Title": "Proszę pobrać własny plan",
+    "step3Text": "Gdy pętla się domknie, można pobrać trasę w bezpłatnym PDF — z mapą kursu i atrakcjami dzień po dniu. To idealny punkt wyjścia do czarteru z nami.",
+    "hl1": "Realne dzienne etapy z tras ułożonych przez skipperów",
+    "hl2": "9 kierunków czarterowych — od Chorwacji po Karaiby",
+    "hl3": "Dystans w milach morskich (NM) przy każdym odcinku — żadnych nierealnych planów",
+    "hl4": "Bezpłatny, spersonalizowany PDF z mapą kursu",
+    "emptyHint": "Proszę zacząć od wyboru mariny startowej powyżej — mapa na żywo i propozycje dzień po dniu pojawią się od razu."
   }
 }

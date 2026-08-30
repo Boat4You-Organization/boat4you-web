@@ -210,6 +210,20 @@
     "total": "Total",
     "disclaimer": "Les distances sont des estimations côtières approximatives à vitesse de croisière. Vérifiez toujours la météo et les avis locaux avant le départ ; votre skipper a le dernier mot sur le programme de la journée.",
     "hubCta": "Créez votre propre itinéraire",
-    "hubCtaLede": "Sur mesure, jour après jour, à partir d'étapes réalistes — avec un PDF à la fin."
+    "hubCtaLede": "Sur mesure, jour après jour, à partir d'étapes réalistes — avec un PDF à la fin.",
+    "promoP1": "C’est l’outil que notre équipe charter utilise elle-même pour esquisser des routes pour nos clients : chaque étape proposée provient de nos itinéraires conçus par des skippers — de vraies navigations d’une journée, avec les distances, les marinas et les incontournables locaux, et non des traits tracés au hasard sur une carte.",
+    "promoP2": "Commencez par votre marina de départ : le créateur ne vous propose que des escales qu’un équipage peut réellement atteindre en une journée — et il garde toujours un chemin de retour, pour que votre route se termine là où commence votre location.",
+    "howTitle": "Comment ça marche",
+    "step1Title": "Choisissez votre point de départ",
+    "step1Text": "Sélectionnez votre marina de départ et la durée de votre croisière — 7, 10 ou 14 jours. Votre route revient à la même marina, exactement comme une vraie semaine de location.",
+    "step2Title": "Composez votre croisière jour après jour",
+    "step2Text": "Pour chaque journée, nous vous suggérons des escales réalistes, chacune avec la distance en milles nautiques et une courte description du lieu — pour choisir en toute confiance.",
+    "step3Title": "Téléchargez votre plan personnalisé",
+    "step3Text": "Une fois la boucle refermée, téléchargez votre itinéraire en PDF gratuit, avec la carte du parcours et les incontournables jour par jour — le point de départ idéal pour votre location chez nous.",
+    "hl1": "De vraies étapes journalières, issues de routes conçues par des skippers",
+    "hl2": "9 destinations de location, de la Croatie aux Caraïbes",
+    "hl3": "Distances en NM pour chaque étape — aucun plan irréaliste",
+    "hl4": "PDF personnalisé gratuit avec la carte de votre parcours",
+    "emptyHint": "Commencez par choisir votre marina de départ ci-dessus — la carte interactive et les suggestions jour après jour apparaissent aussitôt."
   }
 }

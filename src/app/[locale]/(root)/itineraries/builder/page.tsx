@@ -5,6 +5,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Layout from '@/components/Layout';
 import { LocaleType } from '@/config/locales.config';
 import { buildMetadata } from '@/utils/static/buildMetadata';
+import BuilderIntro from '@/views/Itineraries/CustomBuilder/BuilderIntro';
 import CustomBuilder from '@/views/Itineraries/CustomBuilder/CustomBuilder';
 import ItineraryHero from '@/views/Itineraries/ItineraryHero';
 
@@ -46,6 +47,7 @@ const BuilderPage = async ({ params }: BuilderPageParams) => {
         lede={t('builder.lede')}
         image={{ src: '/images/itinerary/banner.webp', alt: 'Itinerary builder' }}
       />
+      <BuilderIntro />
       <CustomBuilder />
     </Layout>
   );

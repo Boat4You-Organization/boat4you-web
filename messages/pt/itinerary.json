@@ -210,6 +210,20 @@
     "total": "Total",
     "disclaimer": "As distâncias são estimativas costeiras aproximadas à velocidade de cruzeiro. Verifique sempre a previsão meteorológica e os avisos locais antes de partir; o seu skipper tem a última palavra sobre o plano do dia.",
     "hubCta": "Crie o seu próprio itinerário",
-    "hubCtaLede": "À medida, dia a dia, com etapas realistas — e um PDF no final."
+    "hubCtaLede": "À medida, dia a dia, com etapas realistas — e um PDF no final.",
+    "promoP1": "Esta é a mesma ferramenta que a nossa equipa de charter usa para esboçar rotas para os clientes: cada etapa sugerida vem dos nossos itinerários criados por skippers — navegações diárias reais, com distâncias, marinas e pontos de interesse locais, e não linhas ao acaso num mapa.",
+    "promoP2": "Comece pela sua marina de partida e o criador só lhe propõe paragens que uma tripulação consegue mesmo alcançar num dia — e mantém sempre um caminho de regresso, para que a sua rota termine onde começa o seu charter.",
+    "howTitle": "Como funciona",
+    "step1Title": "Escolha o seu ponto de partida",
+    "step1Text": "Selecione a sua marina de partida e a duração da viagem — 7, 10 ou 14 dias. A sua rota volta a fechar na mesma marina, tal como numa verdadeira semana de charter.",
+    "step2Title": "Desenhe a sua viagem dia a dia",
+    "step2Text": "Para cada dia sugerimos paragens seguintes realistas, cada uma com a distância em milhas náuticas e uma breve descrição do local — para escolher com confiança.",
+    "step3Title": "Descarregue o seu plano pessoal",
+    "step3Text": "Assim que o circuito fechar, descarregue o seu itinerário num PDF gratuito, com mapa do percurso e destaques dia a dia — o ponto de partida perfeito para o seu charter connosco.",
+    "hl1": "Etapas diárias reais, de rotas criadas por skippers",
+    "hl2": "9 destinos de charter, da Croácia às Caraíbas",
+    "hl3": "Distâncias em NM para cada etapa — sem planos irrealistas",
+    "hl4": "PDF personalizado e gratuito com o mapa do seu percurso",
+    "emptyHint": "Comece por escolher a sua marina de partida acima — o mapa interativo e as sugestões dia a dia aparecem no momento em que o fizer."
   }
 }

@@ -210,6 +210,20 @@
     "total": "Total",
     "disclaimer": "Distances are approximate coastal estimates at cruising speed. Always check the forecast and local notices before departure; your skipper has the final word on the day's plan.",
     "hubCta": "Build your own itinerary",
-    "hubCtaLede": "Tailor-made, day by day, from realistic hops — with a PDF at the end."
+    "hubCtaLede": "Tailor-made, day by day, from realistic hops — with a PDF at the end.",
+    "promoP1": "This is the same tool our charter team uses to sketch routes for clients: every suggested hop comes from our skipper-curated itineraries — real day sails with distances, marinas and local highlights, not random lines on a map.",
+    "promoP2": "Start with your departure marina and the builder only offers stops a crew can genuinely reach in a day — and it always keeps a way back, so your route ends where your charter begins.",
+    "howTitle": "How it works",
+    "step1Title": "Choose your starting point",
+    "step1Text": "Pick your departure marina and trip length — 7, 10 or 14 days. Your route will loop back to the same marina, exactly like a real charter week.",
+    "step2Title": "Shape your trip day by day",
+    "step2Text": "For every day we suggest realistic next stops, each with the distance in nautical miles and a short description of the place — so you choose with confidence.",
+    "step3Title": "Download your personal plan",
+    "step3Text": "Once the loop closes, download your itinerary as a free PDF with a course map and day-by-day highlights — the perfect starting point for your charter with us.",
+    "hl1": "Real day hops from skipper-curated routes",
+    "hl2": "9 charter destinations, from Croatia to the Caribbean",
+    "hl3": "Distances in NM for every leg — no unrealistic plans",
+    "hl4": "Free personalised PDF with your course map",
+    "emptyHint": "Start by choosing your departure marina above — the live map and day-by-day suggestions appear the moment you do."
   }
 }

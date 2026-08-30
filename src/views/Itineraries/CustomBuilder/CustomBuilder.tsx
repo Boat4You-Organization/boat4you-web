@@ -199,6 +199,12 @@ const CustomBuilder = () => {
         )}
       </Stack>
 
+      {!start && (
+        <Box sx={{ p: 2, bgcolor: '#f6f8ff', borderRadius: 2, border: '1px dashed #b9c4ee', maxWidth: 640 }}>
+          <Typography sx={{ fontSize: 14, lineHeight: 1.6, color: '#3c4257' }}>{t('builder.emptyHint')}</Typography>
+        </Box>
+      )}
+
       {start && (
         <Stack direction={{ xs: 'column', md: 'row' }} gap={3}>
           {/* lijevo: dnevni plan + prijedlozi */}

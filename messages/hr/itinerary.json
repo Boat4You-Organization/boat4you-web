@@ -210,6 +210,20 @@
     "total": "Ukupno",
     "disclaimer": "Udaljenosti su približne procjene uz obalu pri krstarećoj brzini. Prije isplovljenja uvijek provjerite prognozu i lokalne obavijesti; posljednju riječ o planu dana ima vaš skiper.",
     "hubCta": "Složite vlastiti plan plovidbe",
-    "hubCtaLede": "Po mjeri, dan po dan, od realnih etapa — s PDF-om na kraju."
+    "hubCtaLede": "Po mjeri, dan po dan, od realnih etapa — s PDF-om na kraju.",
+    "promoP1": "Ovo je isti alat kojim naš charter tim skicira rute za klijente: svaka predložena etapa dolazi iz naših itinerara koje su složili skiperi — stvarne dnevne plovidbe s udaljenostima, marinama i lokalnim znamenitostima, a ne nasumične crte na karti.",
+    "promoP2": "Krenite od polazne marine i planer će vam nuditi samo postaje do kojih posada doista može stići u jednom danu — a uvijek čuva i put natrag, pa vaša ruta završava ondje gdje vaš charter počinje.",
+    "howTitle": "Kako funkcionira",
+    "step1Title": "Odaberite polazište",
+    "step1Text": "Odaberite polaznu marinu i trajanje putovanja — 7, 10 ili 14 dana. Vaša se ruta vraća u istu marinu, baš kao pravi charter-tjedan.",
+    "step2Title": "Oblikujte putovanje dan po dan",
+    "step2Text": "Za svaki dan predlažemo realne sljedeće postaje, svaku s udaljenošću u nautičkim miljama i kratkim opisom mjesta — pa birate sa sigurnošću.",
+    "step3Title": "Preuzmite svoj osobni plan",
+    "step3Text": "Kad se ruta zatvori u krug, preuzmite svoj itinerar kao besplatan PDF s kartom rute i najzanimljivijim dijelovima svakog dana — savršeno polazište za vaš charter s nama.",
+    "hl1": "Realne dnevne etape iz ruta koje su složili skiperi",
+    "hl2": "9 charter destinacija, od Hrvatske do Kariba",
+    "hl3": "Udaljenost u NM za svaku etapu — bez nerealnih planova",
+    "hl4": "Besplatan personalizirani PDF s kartom vaše rute",
+    "emptyHint": "Za početak gore odaberite polaznu marinu — karta uživo i prijedlozi dan po dan pojavljuju se istog trena."
   }
 }

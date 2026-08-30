@@ -210,6 +210,20 @@
     "total": "Total",
     "disclaimer": "Las distancias son estimaciones costeras aproximadas a velocidad de crucero. Consulte siempre la previsión meteorológica y los avisos locales antes de zarpar; su patrón tiene la última palabra sobre el plan del día.",
     "hubCta": "Cree su propio itinerario",
-    "hubCtaLede": "A medida, día a día, con etapas realistas y un PDF al final."
+    "hubCtaLede": "A medida, día a día, con etapas realistas y un PDF al final.",
+    "promoP1": "Esta es la misma herramienta que utiliza nuestro equipo de chárter para trazar rutas a los clientes: cada etapa propuesta procede de nuestros itinerarios seleccionados por patrones, singladuras reales con distancias, marinas y lugares imprescindibles de la zona, y no líneas trazadas al azar sobre un mapa.",
+    "promoP2": "Empiece por su marina de salida y el creador solo le ofrecerá escalas a las que una tripulación pueda llegar de verdad en un día, y siempre reserva el camino de vuelta, para que su ruta termine allí donde empieza su chárter.",
+    "howTitle": "Cómo funciona",
+    "step1Title": "Elija su punto de partida",
+    "step1Text": "Escoja su marina de salida y la duración del viaje: 7, 10 o 14 días. Su ruta regresará a la misma marina, exactamente igual que en una semana de chárter real.",
+    "step2Title": "Diseñe su viaje día a día",
+    "step2Text": "Para cada día le proponemos escalas realistas, cada una con la distancia en millas náuticas y una breve descripción del lugar, para que elija con total confianza.",
+    "step3Title": "Descargue su plan personalizado",
+    "step3Text": "Cuando el circuito se cierre, descargue su itinerario en un PDF gratuito con el mapa del recorrido y los imprescindibles de cada día: el punto de partida perfecto para su chárter con nosotros.",
+    "hl1": "Etapas diarias reales, tomadas de rutas seleccionadas por patrones",
+    "hl2": "9 destinos de chárter, de Croacia al Caribe",
+    "hl3": "Distancias en NM en cada tramo: nada de planes irreales",
+    "hl4": "PDF personalizado y gratuito con el mapa de su recorrido",
+    "emptyHint": "Empiece eligiendo arriba su marina de salida: el mapa en directo y las propuestas día a día aparecerán en ese mismo instante."
   }
 }
