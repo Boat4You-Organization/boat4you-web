@@ -6,6 +6,34 @@ cusma1 source resynced to git HEAD on 2026-06-01.
 
 ---
 
+## 2026-08-30 — 🗺️ CARTO→OSM basemaps + builder promo content (commits `dc34db7e`, `8cc167fb`) — ✅ DEPLOYED
+
+**Deployed 2026-08-30 to cusma1, build-on-Mac + ship `.next`.** Live BUILD_ID `ew49nPYLK-voUuzLrnQqp`.
+
+1. **Maps:** CARTO started requiring an API key for `basemaps.cartocdn.com` raster tiles —
+   keyless requests now render an "API KEY REQUIRED" watermark on every tile (Mario spotted it
+   on the builder map). Builder map, day-detail light maps and the custom-itinerary PDF canvas
+   now use free `tile.openstreetmap.org` tiles; the light Positron look is recreated with a
+   `.tiles-light-mute` CSS filter (web) / white wash (PDF canvas). OSM serves
+   `Access-Control-Allow-Origin: *`, so the PDF canvas stays untainted. Same fix shipped to all
+   6 sisters (their day-detail maps used the same CARTO URL). If we ever want true Positron
+   back: CARTO issues free keys per domain (email + domain at carto.com/basemaps/apikey,
+   5M tiles/mo), but the free tier is "intended for non-commercial use".
+2. **Builder content:** `/itineraries/builder` had no copy below the hero — added
+   server-rendered `BuilderIntro` (2 promo paragraphs, 3 how-it-works cards, 4 highlight
+   chips) + an empty-state hint in `CustomBuilder`; 14 new `itinerary.builder` keys × 9 locales.
+
+**⚠️ Ship-recipe hardening (incident during this deploy):** the macOS tar carried AppleDouble
+`._*` entries, so on the server `rmdir _stage` failed and — because the swap script ran with
+`set -e` — it died AFTER `mv .next` but BEFORE `systemctl start nextapp` → ~2 min downtime
+until a manual restart. Rules from now on: **(a)** always create the tarball with
+`COPYFILE_DISABLE=1 tar czf …` (documented 25.8, forgotten tonight), **(b)** in the swap script
+put the service `start` IMMEDIATELY after the `mv`, with cleanup (`rm -rf _stage`, `rm .next.prev`)
+strictly afterwards, so no cleanup hiccup can leave the site down. nextapp serves on **port 3001**
+(health check `curl localhost:3001/en` → 307 is normal, root serves 200).
+
+---
+
 ## 2026-08-01 — Localized boat-page `<title>` for all 9 locales (commit `c593c35e`) — ✅ DEPLOYED
 
 **Deployed 2026-08-01 to cusma1, build-on-Mac + ship `.next`** (recipe below). The boat detail
