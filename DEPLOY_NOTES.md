@@ -6,6 +6,18 @@ cusma1 source resynced to git HEAD on 2026-06-01.
 
 ---
 
+## 2026-09-03 — ⚡🔒 Fleet-audit quick wins: i18n payload 2.35 MB → 330 KB, blog/sitemap robustness, newsletter hardening, headers (commit `2723b201`) — ✅ DEPLOYED
+
+**Deployed 2026-09-03 ~22:30 UTC, build-on-Mac + ship `.next` (COPYFILE_DISABLE=1, start-before-cleanup recipe). Live BUILD_ID `UIT5afA6HjB2sFJbkBi6e`.**
+
+1. **i18n payload (the big one):** `[locale]/layout.tsx` handed ALL 25 message namespaces (2.2 MB, incl. 12 `itinerary*` country catalogues) to `NextIntlClientProvider`, so every page's HTML carried a ~2.2 MB flight payload — measured `en.html` 2,349,987 B; this was also the driver behind the cusma1 ISR disk-full incidents and nextapp memory pressure. Now `src/i18n/clientMessages.ts` lists the 11 namespaces client components actually use (derived from an import-graph walk of all 'use client' roots) and the root layout passes `pickMessages(...)`; the `/itineraries` segment has its own provider adding the `itinerary*` namespaces (builder + route pages read them via `useMessages`). `SuggestedItineraries` (boat page) gets localized route titles from the server instead of pulling `itinerary*` client-side. **en.html 2,349,987 → 330,152 B**; live home 330 KB raw. Itinerary pages unchanged (~2.2 MB, by design). Watch the nextapp journal for `MISSING_MESSAGE` in the first days — adding a namespace back is one line in `clientMessages.ts`.
+2. **Blog:** RankMath getHead fetch 1h Data Cache + 5 s timeout, `getBlog` in react `cache()`; `blog/[slug]` metadata + page catch WP failures → notFound() (a WP outage used to 500 every /blog/\* URL in 9 locales).
+3. **Sitemaps:** `fetchYachts` throws on `!response.ok` so the 503 fallback branches in `sitemap.xml` / `sitemap-yachts/[page]` are finally reachable — a backend blip returns 503 (GSC retries) instead of publishing an empty/404 yacht index. Search/related/deals callers keep the empty-list UX via `.catch`.
+4. **/api/newsletter:** email validation + HTML escaping, unknown fields ignored, per-IP limit 10/h (x-real-ip / last XFF).
+5. **Headers:** `poweredByHeader: false` + X-Content-Type-Options / X-Frame-Options SAMEORIGIN / Referrer-Policy / Permissions-Policy from Next. nginx on cusma1 already sends CSP/HSTS/XFO DENY/nosniff/Referrer → some headers are now duplicated (XFO DENY+SAMEORIGIN conflict fails safe). Cosmetic; could drop the Next-level duplicates on b4y later.
+
+**Ops shipped together (one restart):** nextapp `--max-old-space-size` 512 → **1536**, cgroup MemoryHigh/Max 700/800 → **1800/2200 MB** (box 3.8 GB) — the app was heap-OOM-crashing every few days and swapping 1.8 GB. **Server `next.config.js` resynced** to git HEAD (was 64 lines stale — `next start` reads `poweredByHeader` and images config from the server copy, so runtime-read config must be shipped with every deploy that touches it).
+
 ## 2026-08-30 — 🗺️ CARTO→OSM basemaps + builder promo content (commits `dc34db7e`, `8cc167fb`) — ✅ DEPLOYED
 
 **Deployed 2026-08-30 to cusma1, build-on-Mac + ship `.next`.** Live BUILD_ID `ew49nPYLK-voUuzLrnQqp`.
