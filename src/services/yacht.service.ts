@@ -30,42 +30,44 @@ export async function fetchYachts(
   currency: Currency = Currency.EUR,
   locale: string = 'en'
 ): Promise<PaginatedResponse<YachtModelShortInfo>> {
-  try {
-    const { boatTypes, ...restParams } = searchParams;
+  const { boatTypes, ...restParams } = searchParams;
 
-    const paramsWithCurrency = {
-      ...restParams,
-      // Default sort is "Recommended" — backend treats empty/missing sortBy
-      // as the recommended-agency boost path. Earlier this defaulted to
-      // 'asc' (Lowest price) which silently bypassed the boost for any URL
-      // that didn't explicitly set sortBy. The tab UI already defaults to
-      // Recommended when sortBy is missing, so aligning the fetch default
-      // keeps tab + result list consistent.
-      sortBy: restParams.sortBy ?? '',
-      ...(boatTypes && { vesselType: boatTypes }),
-      ...(currency && { currency }),
-    };
+  const paramsWithCurrency = {
+    ...restParams,
+    // Default sort is "Recommended" — backend treats empty/missing sortBy
+    // as the recommended-agency boost path. Earlier this defaulted to
+    // 'asc' (Lowest price) which silently bypassed the boost for any URL
+    // that didn't explicitly set sortBy. The tab UI already defaults to
+    // Recommended when sortBy is missing, so aligning the fetch default
+    // keeps tab + result list consistent.
+    sortBy: restParams.sortBy ?? '',
+    ...(boatTypes && { vesselType: boatTypes }),
+    ...(currency && { currency }),
+  };
 
-    const queryParams = createYachtQueryParams(paramsWithCurrency);
+  const queryParams = createYachtQueryParams(paramsWithCurrency);
 
-    const response = await fetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/yachts${queryParams}`, {
-      // Yacht catalogue + offer state changes constantly (partner sync,
-      // dual-source dedup, manual price overrides). Cached SSR responses
-      // make the search page lag behind reality (e.g. a freshly-mapped
-      // Sardinia marina taking up to an hour to surface). Always go to
-      // the backend; the backend itself has its own short-window cache
-      // for the expensive joins.
-      cache: 'no-store',
-      headers: {
-        'Accept-Language': locale,
-        'Content-Type': 'application/json',
-      },
-    });
+  const response = await fetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/yachts${queryParams}`, {
+    // Yacht catalogue + offer state changes constantly (partner sync,
+    // dual-source dedup, manual price overrides). Cached SSR responses
+    // make the search page lag behind reality (e.g. a freshly-mapped
+    // Sardinia marina taking up to an hour to surface). Always go to
+    // the backend; the backend itself has its own short-window cache
+    // for the expensive joins.
+    cache: 'no-store',
+    headers: {
+      'Accept-Language': locale,
+      'Content-Type': 'application/json',
+    },
+  });
 
-    return await response.json();
-  } catch {
-    return { content: [] };
+  // Throws on HTTP/network failure (no more silent `{ content: [] }`): the
+  // sitemaps answer 503 so GSC retries; listing callers catch and fall back.
+  if (!response.ok) {
+    throw new Error(`Failed to fetch yachts: ${response.status}`);
   }
+
+  return response.json();
 }
 
 export async function fetchYachtAvailability(params: YachtAvailabilityParams): Promise<YachtAvailability[]> {

@@ -24,7 +24,8 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug, locale } = await params;
 
-  const blog = await getBlogWithSEO(slug);
+  // WP outage must not 500 the route (the page body calls notFound()).
+  const blog = await getBlogWithSEO(slug).catch(() => null);
 
   if (!blog?.post) {
     return {
@@ -89,9 +90,10 @@ export async function generateMetadata({
 const SingleBlogPage = async ({ params }: { params: Promise<{ slug: string; locale: Locale }> }) => {
   const { slug, locale } = await params;
 
-  const blog = await getBlog(slug, 10);
+  // WP down / GraphQL error → 404, not a 500 across 9 locale URLs.
+  const blog = await getBlog(slug, 10).catch(() => null);
 
-  if (!blog) {
+  if (!blog?.post) {
     return notFound();
   }
 

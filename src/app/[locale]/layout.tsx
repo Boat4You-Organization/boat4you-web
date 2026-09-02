@@ -13,6 +13,7 @@ import InstallPrompt from '@/components/InstallPrompt';
 import ServiceWorkerRegister from '@/components/ServiceWorkerRegister';
 import { LocaleType } from '@/config/locales.config';
 import { meta } from '@/config/meta';
+import { CLIENT_NAMESPACES, pickMessages } from '@/i18n/clientMessages';
 import { routing } from '@/i18n/routing';
 import '@/styles/index.scss';
 import { buildAlternateLanguages, getLocalizedJsonLd, localizedUrl } from '@/utils/static/buildMetadata';
@@ -100,7 +101,10 @@ const RootLayout = async ({ children, params }: RootLayoutProps) => {
 
   setRequestLocale(locale);
 
-  const messages = await getMessages();
+  // Only client-consumed namespaces go to the browser (the full catalogue
+  // is 2.2 MB and was serialized into every page). The /itineraries segment
+  // layout re-provides the per-country itinerary namespaces it needs.
+  const messages = pickMessages(await getMessages(), CLIENT_NAMESPACES);
   const localizedJsonLd = await getLocalizedJsonLd(locale as LocaleType);
 
   return (

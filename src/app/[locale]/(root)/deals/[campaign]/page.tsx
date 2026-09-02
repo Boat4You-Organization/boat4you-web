@@ -78,7 +78,9 @@ const DealsPage = async ({ params }: DealsPageParams) => {
           { startDate, endDate, sortBy: 'discount', size: PER_TYPE_SIZE, boatTypes: [vesselType] } as YachtSearchParams,
           Currency.EUR,
           locale
-        ).then(res => res?.content ?? [])
+        )
+          .then(res => res?.content ?? [])
+          .catch(() => [])
       )
     ),
     getTranslations('promo'),

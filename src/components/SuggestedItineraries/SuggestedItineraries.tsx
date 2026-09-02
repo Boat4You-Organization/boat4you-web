@@ -5,7 +5,6 @@ import { FC } from 'react';
 import { Box, Stack, Typography } from '@mui/material';
 import { useTranslations } from 'next-intl';
 
-import { itineraryNamespace, resolveRouteText } from '@/helper/itineraryI18n';
 import { areaForMarina, findItineraryArea, suggestedRoutesForArea } from '@/helper/itineraryMatch';
 import { Link } from '@/i18n/navigation';
 import colors from '@/styles/themes/colors';
@@ -32,6 +31,12 @@ interface SuggestedItinerariesProps {
   areaId?: string | null;
   /** Cap on rendered route cards. */
   maxRoutes?: number;
+  /**
+   * Localized route metaTitles keyed by route id (see suggestedRouteTitles).
+   * Resolved on the server because the per-country itinerary namespaces are
+   * not shipped to the client outside /itineraries; falls back to config.
+   */
+  routeTitles?: Record<string, string | undefined>;
 }
 
 const SuggestedItineraries: FC<SuggestedItinerariesProps> = ({
@@ -42,16 +47,12 @@ const SuggestedItineraries: FC<SuggestedItinerariesProps> = ({
   headingOverride,
   areaId,
   maxRoutes = 4,
+  routeTitles,
 }) => {
   const t = useTranslations('itinerary');
 
   const resolvedAreaId = areaId ?? areaForMarina(marinaName, countryCode);
   const area = findItineraryArea(resolvedAreaId);
-
-  // Route metaTitles live in the area's per-country namespace. Hooks must
-  // run unconditionally, so a missing area falls back to the default
-  // namespace (the resolve* helpers t.has-guard every lookup anyway).
-  const tArea = useTranslations(itineraryNamespace(area ?? {}));
 
   if (!area) return null;
 
@@ -113,7 +114,7 @@ const SuggestedItineraries: FC<SuggestedItinerariesProps> = ({
           const pathLabel = [route.startingPoint, ...(route.otherPoints || [])].join(' → ');
           // Card label = metaTitle minus the "| Brand" SEO suffix — the
           // suffix belongs in <title>, not on a route card.
-          const shortName = resolveRouteText(route, 'metaTitle', route.metaTitle, tArea)?.split(' | ')[0];
+          const shortName = (routeTitles?.[route.id] ?? route.metaTitle)?.split(' | ')[0];
 
           return (
             <Box

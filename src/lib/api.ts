@@ -1,3 +1,5 @@
+import { cache } from 'react';
+
 import { RankMathSEOData } from '@/types/blog.type';
 import { CursorConnectionUtils } from '@/utils/static/CursorConnectionUtils';
 import { decodeHtmlEntities } from '@/utils/static/decodeHtmlEntities';
@@ -86,7 +88,9 @@ export async function getRankMathSEO(url: string): Promise<RankMathSEOData | nul
 
     const apiUrl = `${baseUrl}/wp-json/rankmath/v1/getHead?url=${encodeURIComponent(url)}`;
 
-    const response = await fetch(apiUrl);
+    // Cached + bounded: RankMath was hit uncached per blog view and a slow
+    // WP hung the whole render (EY 1.9 incident pattern).
+    const response = await fetch(apiUrl, { next: { revalidate: 3600 }, signal: AbortSignal.timeout(5000) });
 
     if (!response.ok) {
       return null;
@@ -176,30 +180,34 @@ export async function getBlogs(pageSize: number, categoryName?: string, after?: 
   return swapWpHost(CursorConnectionUtils.unwrapNodesAndEdges(data.posts));
 }
 
-export async function getBlog(id: string, pageSize: number): Promise<GetUnwrapedBlogAndRelatedBlogsResult | null> {
-  const variables = { id, pageSize };
+// React cache(): generateMetadata (via getBlogWithSEO) and the page body share
+// one WP fetch per request instead of two.
+export const getBlog = cache(
+  async (id: string, pageSize: number): Promise<GetUnwrapedBlogAndRelatedBlogsResult | null> => {
+    const variables = { id, pageSize };
 
-  const data = await fetchAPI<GetBlogAndRelatedBlogsResult>(GET_BLOG, { variables });
+    const data = await fetchAPI<GetBlogAndRelatedBlogsResult>(GET_BLOG, { variables });
 
-  if (!data.post) {
-    return null;
+    if (!data.post) {
+      return null;
+    }
+
+    const relatedData = data.posts.nodes.filter(post => post.id !== data.post.id);
+
+    const result = swapWpHost({
+      post: CursorConnectionUtils.unwrapNodesAndEdges(data.post),
+      posts: CursorConnectionUtils.unwrapNodesAndEdges(relatedData),
+    });
+
+    // Strip the duplicate-title <h1> from the body so the template title is the
+    // page's only H1 (fixes the double-H1 SEO fault on blog posts).
+    if (result?.post?.content) {
+      result.post.content = sanitizeBlogContentHeadings(result.post.content, result.post.title);
+    }
+
+    return result;
   }
-
-  const relatedData = data.posts.nodes.filter(post => post.id !== data.post.id);
-
-  const result = swapWpHost({
-    post: CursorConnectionUtils.unwrapNodesAndEdges(data.post),
-    posts: CursorConnectionUtils.unwrapNodesAndEdges(relatedData),
-  });
-
-  // Strip the duplicate-title <h1> from the body so the template title is the
-  // page's only H1 (fixes the double-H1 SEO fault on blog posts).
-  if (result?.post?.content) {
-    result.post.content = sanitizeBlogContentHeadings(result.post.content, result.post.title);
-  }
-
-  return result;
-}
+);
 
 export async function getBlogWithSEO(slug: string) {
   const blogData = await getBlog(slug, 10);

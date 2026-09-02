@@ -12,7 +12,9 @@ import {
 import { getInquiry } from '@/actions/yacht.actions';
 import { AllSearchParams } from '@/config/form-models.config';
 import { Currency, UserRoleName } from '@/models/user.model';
+import { YachtModelShortInfo } from '@/models/yacht.model';
 import { fetchYachts } from '@/services/yacht.service';
+import { PaginatedResponse } from '@/types/response.type';
 
 import BoatsSection from './BoatsSection';
 
@@ -110,7 +112,8 @@ const BoatsWrapper = async ({ searchParams }: BoatsWrapperProps) => {
       : Promise.resolve([]);
 
   const [data, popularDestinations] = await Promise.all([
-    fetchYachts(searchParams, currency, locale),
+    // Backend blip → empty list (pre-existing soft behaviour; fetchYachts now throws).
+    fetchYachts(searchParams, currency, locale).catch((): PaginatedResponse<YachtModelShortInfo> => ({ content: [] })),
     popularDestinationsPromise,
   ]);
 

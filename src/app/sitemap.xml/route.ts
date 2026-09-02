@@ -13,10 +13,6 @@ const XML_HEADERS = {
   'X-Content-Type-Options': 'nosniff',
 };
 
-const FALLBACK_SITEMAP = `<?xml version="1.0" encoding="UTF-8"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-</sitemapindex>`;
-
 export async function GET() {
   try {
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
@@ -65,6 +61,8 @@ ${yachtSitemaps}
 
     return new Response(sitemap, { headers: XML_HEADERS });
   } catch {
-    return new Response(FALLBACK_SITEMAP, { headers: XML_HEADERS });
+    // Backend down → 503 so GSC retries, instead of a 200 index with zero
+    // yacht sitemaps that crawlers would treat as the real catalogue.
+    return new Response('Service Unavailable', { status: 503 });
   }
 }

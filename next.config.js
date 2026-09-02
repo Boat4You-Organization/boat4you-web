@@ -35,6 +35,7 @@ const withNextIntl = createNextIntlPlugin({
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  poweredByHeader: false,
   // Home SSG (9 locales, live API fetches) needs >60s per page when the
   // build machine is under load from parallel builds — the default 60s
   // limit killed three builds on 17.7.2026 alone. The pages themselves
@@ -155,6 +156,17 @@ const nextConfig = {
   // enough to absorb traffic spikes. /api/* stays uncached (auth-sensitive).
   async headers() {
     return [
+      // Baseline security headers on every response (audit 2.9.2026). No CSP/HSTS
+      // here — HSTS is nginx's job, CSP needs a nonce pipeline first.
+      {
+        source: '/(.*)',
+        headers: [
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
+          { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+          { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
+        ],
+      },
       {
         source: '/((?!api/|_next/static/|_next/image|favicons/).*)',
         headers: [

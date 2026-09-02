@@ -46,7 +46,7 @@ const RelatedBoats = async ({ yacht, user, locale, currency }: RelatedBoatsProps
     { locations: [], did: [String(marinaDid)], size: 12 },
     currency,
     locale
-  );
+  ).catch(() => ({ content: [] as YachtModelShortInfo[] }));
 
   const currentLenFt = yachtLengthFt(yacht.lengthInfo, yacht.length);
 
