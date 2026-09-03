@@ -127,6 +127,13 @@ const BoatListingItemCard = ({
   })();
   const { isMobile } = useBreakpoint();
   const t = useTranslations();
+
+  // Social proof — same demo logic as the sister sites' BoatListingItemCard
+  // (Mario 3.9.2026: "ista logika na boat4you kao na ostalim stranicama"):
+  // ~60% of yachts show "X people are also interested", count derived from
+  // the id so it is stable across renders/navigation.
+  const showSocialProof = id % 10 < 6;
+  const interestedCount = 30 + (id % 51);
   const locale = useLocale();
   // Track WHICH marina the map modal shows, so a one-way card can open either
   // the pickup or the drop-off. null = closed. (Replaces the single-location
@@ -596,6 +603,38 @@ const BoatListingItemCard = ({
             {/* Price + Boat details — pushed to bottom-right corner */}
             <Box className={cx(styles.priceBlock, { [styles.gridView]: isGridView, [styles.mobileStacked]: isMobile })}>
               <Stack alignItems="flex-end">
+                {/* Social proof chip. Desktop reserves its height so cards
+                  without it keep the price at the same vertical position;
+                  mobile is too tight for a placeholder. */}
+                <Box
+                  sx={{
+                    minHeight: isMobile ? 0 : 22,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'flex-end',
+                    mb: showSocialProof ? 0.25 : 0,
+                  }}
+                >
+                  {showSocialProof && (
+                    <Stack
+                      direction="row"
+                      alignItems="center"
+                      gap={0.5}
+                      sx={{
+                        px: 0.75,
+                        py: 0.25,
+                        borderRadius: 1,
+                        backgroundColor: colors.blue50,
+                        whiteSpace: 'nowrap',
+                      }}
+                    >
+                      <AccessTime sx={{ fontSize: 11, color: colors.blue500 }} />
+                      <Typography color={colors.blue500} sx={{ fontSize: 11, fontWeight: 500, whiteSpace: 'nowrap' }}>
+                        {t('common.peopleAlsoInterested', { count: String(interestedCount) })}
+                      </Typography>
+                    </Stack>
+                  )}
+                </Box>
                 {/* Redundant on mobile — the user already set the search
                   window (e.g. "7 days"), repeating it on every card just
                   wastes scarce vertical space. Keep on desktop as reminder. */}

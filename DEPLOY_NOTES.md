@@ -6,6 +6,24 @@ cusma1 source resynced to git HEAD on 2026-06-01.
 
 ---
 
+## 2026-09-03 — 👥 Social-proof chip on listing cards ("X people are also interested") + es/fr/pt diacritics — ✅ LIVE (00:08 UTC, swap 1 s, chips verified in SSR HTML en/de)
+
+**Why:** Mario (3.9.2026): "napravi istu logiku na boat4you kao na ostalim stranicama — broj ljudi je interesantno za ovaj brod — samo boat4you nema." The urgency cues (social proof, countdown) are INTENTIONAL across the group and must stay.
+
+**What:** `src/components/BoatListingItemCard/BoatListingItemCard.tsx` — same demo logic as the six sister sites'
+card: `showSocialProof = id % 10 < 6` (~60 % of yachts), `interestedCount = 30 + (id % 51)` (stable per id).
+Chip = blue50 pill, AccessTime 11 px, 11 px/500 text, right-aligned at the top of the price block (list AND grid
+view). Desktop reserves 22 px so cards without the chip keep the price at the same height; mobile renders no
+placeholder (vertical space is scarce there). Text key already existed in all 9 locales
+(`common.peopleAlsoInterested`) but was unused; es/fr/pt strings had lost their diacritics → fixed
+("también están", "intéressées", "também estão").
+
+**Ship:** build-on-Mac with cusma1's prod `.env` as `.env.production.local` (`.env.local` stashed), explicit repo
+`cd`, pre-ship greps (`https://localhost:8443` in `.next/server` = 0; `api.boat4you.com` present in chunks;
+key present in card chunk) → `COPYFILE_DISABLE=1 tar` → cusma1 `/tmp/b4y_swap.sh <BUILD_ID>` (stage-extract,
+BUILD_ID check, stop → one `.next.prev` → start IMMEDIATELY → cleanup). Live BUILD_ID `IScT8nRZeE9h1YmDePLsW`.
+Verify: `curl -s https://www.boat4you.com/search | grep -c "people are also interested"` > 0 (card is SSR'd).
+
 ## 2026-09-03 — ⚡🔒 Fleet-audit quick wins: i18n payload 2.35 MB → 330 KB, blog/sitemap robustness, newsletter hardening, headers (commit `2723b201`) — ✅ DEPLOYED
 
 **Deployed 2026-09-03 22:29 UTC (bad build, see incident) → corrected 22:47 UTC, build-on-Mac + ship `.next` (COPYFILE_DISABLE=1, start-before-cleanup recipe). Live BUILD_ID `VTaL35q5zxNTg-2xr8YeM`.**
