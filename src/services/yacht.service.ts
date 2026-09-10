@@ -70,6 +70,48 @@ export async function fetchYachts(
   return response.json();
 }
 
+/** How long a fleet-directory chunk stays in the Data Cache (6 h). */
+export const FLEET_REVALIDATE_SECONDS = 21600;
+
+/**
+ * Catalogue read for the crawlable /fleet directory — deliberately NOT
+ * `fetchYachts`.
+ *
+ * `fetchYachts` above is `cache: 'no-store'` on purpose: search results must
+ * mirror partner state minute by minute. The directory has the opposite
+ * requirement — it is one flat list of every promoted boat, walked ~122
+ * pages deep, and it must not re-hit the backend per visitor or per locale.
+ *
+ * Locale and currency are pinned here so all 9 locales share ONE Data Cache
+ * entry per API page: the directory renders no prices and no
+ * partner-translated copy, only manufacturer/model + vessel name, so the
+ * response is locale-independent. Without pinning, a walk would cost 9 × 122
+ * backend calls instead of 122.
+ *
+ * Throws on a bad response (same contract as `fetchYachts`) so a partial
+ * walk can never silently replace the good cached directory with a shorter
+ * one — see `getFleet`.
+ */
+export async function fetchFleetChunk(
+  searchParams: YachtSearchParams
+): Promise<PaginatedResponse<YachtModelShortInfo>> {
+  const queryParams = createYachtQueryParams({ ...searchParams, currency: Currency.EUR });
+
+  const response = await fetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/yachts${queryParams}`, {
+    next: { revalidate: FLEET_REVALIDATE_SECONDS },
+    headers: {
+      'Accept-Language': 'en',
+      'Content-Type': 'application/json',
+    },
+  });
+
+  if (!response.ok) {
+    throw new Error(`Failed to fetch fleet chunk: ${response.status}`);
+  }
+
+  return response.json();
+}
+
 export async function fetchYachtAvailability(params: YachtAvailabilityParams): Promise<YachtAvailability[]> {
   try {
     const query = new URLSearchParams();

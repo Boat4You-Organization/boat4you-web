@@ -45,11 +45,25 @@
       "title": "Informativa sulla Privacy",
       "description": "Leggi come Boat4You raccoglie, utilizza e protegge i tuoi dati personali durante l'uso del nostro sito web e servizi.",
       "path": "/privacy-policy"
+    },
+    "fleet": {
+      "title": "Directory della flotta a noleggio",
+      "description": "Sfoglia tutte le barche a vela, i catamarani e i motoscafi della flotta Boat4You: Croazia, Grecia, Italia, Francia, Turchia, Spagna, Montenegro, Seychelles e Caraibi.",
+      "path": "/fleet"
     }
   },
   "boat": {
     "forRent": "in affitto",
     "titleTail": "Noleggio {city}",
     "titleTailNoCity": "Noleggio"
+  },
+  "fleet": {
+    "heading": "Directory della flotta",
+    "lede": "Tutte le barche della nostra flotta, ordinate per marina di partenza: barche a vela, catamarani, yacht a motore e caicchi in Croazia, Grecia, Italia, Francia, Turchia, Spagna, Montenegro, alle Seychelles e ai Caraibi. Apri una barca per vedere foto, caratteristiche, disponibilità e prezzi.",
+    "summary": "{total, number} barche · pagina {page} di {pages}",
+    "otherBases": "Altre basi",
+    "cabins": "{count, plural, one {# cabina} other {# cabine}}",
+    "guests": "{count, plural, one {# ospite} other {# ospiti}}",
+    "paginationLabel": "Pagine della directory della flotta"
   }
 }

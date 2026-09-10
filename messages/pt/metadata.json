@@ -45,11 +45,25 @@
       "title": "Política de Privacidade",
       "description": "Leia como a Boat4You coleta, usa e protege seus dados pessoais ao usar nosso site e serviços.",
       "path": "/privacy-policy"
+    },
+    "fleet": {
+      "title": "Diretório da frota de aluguel de barcos",
+      "description": "Veja todos os veleiros, catamarãs e barcos a motor da frota Boat4You: Croácia, Grécia, Itália, França, Turquia, Espanha, Montenegro, Seychelles e Caribe.",
+      "path": "/fleet"
     }
   },
   "boat": {
     "forRent": "para alugar",
     "titleTail": "Aluguer {city}",
     "titleTailNoCity": "Aluguer"
+  },
+  "fleet": {
+    "heading": "Diretório da frota",
+    "lede": "Todos os barcos da nossa frota, organizados por marina de partida: veleiros, catamarãs, iates a motor e gulets na Croácia, Grécia, Itália, França, Turquia, Espanha, Montenegro, nas Seychelles e no Caribe. Abra qualquer barco para ver fotos, características, disponibilidade e preços.",
+    "summary": "{total, number} barcos · página {page} de {pages}",
+    "otherBases": "Outras bases",
+    "cabins": "{count, plural, one {# cabine} other {# cabines}}",
+    "guests": "{count, plural, one {# pessoa} other {# pessoas}}",
+    "paginationLabel": "Páginas do diretório da frota"
   }
 }

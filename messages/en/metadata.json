@@ -45,11 +45,25 @@
       "title": "Privacy Policy",
       "description": "Read how Boat4You collects, uses, and protects your personal data while using our website and services.",
       "path": "/privacy-policy"
+    },
+    "fleet": {
+      "title": "Yacht Charter Fleet Directory",
+      "description": "Browse every sailing yacht, catamaran and motorboat in the Boat4You fleet — Croatia, Greece, Italy, France, Türkiye, Spain, Montenegro, the Seychelles and the Caribbean.",
+      "path": "/fleet"
     }
   },
   "boat": {
     "forRent": "for rent",
     "titleTail": "{city} Charter",
     "titleTailNoCity": "Charter"
+  },
+  "fleet": {
+    "heading": "Yacht charter fleet directory",
+    "lede": "Every boat we charter, listed by home marina — sailing yachts, catamarans, motor yachts and gulets across Croatia, Greece, Italy, France, Türkiye, Spain, Montenegro, the Seychelles and the Caribbean. Open any boat for photos, specifications, availability and prices.",
+    "summary": "{total, number} boats · page {page} of {pages}",
+    "otherBases": "Other bases",
+    "cabins": "{count, plural, one {# cabin} other {# cabins}}",
+    "guests": "{count, plural, one {# guest} other {# guests}}",
+    "paginationLabel": "Fleet directory pages"
   }
 }

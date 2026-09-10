@@ -45,11 +45,25 @@
       "title": "Privacybeleid",
       "description": "Lees hoe Boat4You je persoonlijke gegevens verzamelt, gebruikt en beschermt tijdens het gebruik van onze website en diensten.",
       "path": "/privacy-policy"
+    },
+    "fleet": {
+      "title": "Vlootoverzicht voor jachtcharter",
+      "description": "Bekijk alle zeiljachten, catamarans en motorboten uit de vloot van Boat4You — Kroatië, Griekenland, Italië, Frankrijk, Turkije, Spanje, Montenegro, de Seychellen en de Caraïben.",
+      "path": "/fleet"
     }
   },
   "boat": {
     "forRent": "te huur",
     "titleTail": "Jachtcharter {city}",
     "titleTailNoCity": "Jachtcharter"
+  },
+  "fleet": {
+    "heading": "Vlootoverzicht",
+    "lede": "Alle boten uit onze vloot, gesorteerd op thuishaven — zeiljachten, catamarans, motorjachten en gulets in Kroatië, Griekenland, Italië, Frankrijk, Turkije, Spanje, Montenegro, op de Seychellen en in de Caraïben. Open een boot voor foto's, specificaties, beschikbaarheid en prijzen.",
+    "summary": "{total, number} boten · pagina {page} van {pages}",
+    "otherBases": "Overige thuishavens",
+    "cabins": "{count, plural, one {# hut} other {# hutten}}",
+    "guests": "{count, plural, one {# gast} other {# gasten}}",
+    "paginationLabel": "Pagina's van het vlootoverzicht"
   }
 }

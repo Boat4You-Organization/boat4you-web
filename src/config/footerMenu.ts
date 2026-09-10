@@ -13,6 +13,14 @@ const footerMenu: NavigationLink[] = [
         text: 'aboutUs',
         href: '/about-us',
       },
+      // Sitewide entry point into the crawlable /fleet directory. /search
+      // renders zero boats on a parameter-free request (the only request
+      // Googlebot makes), so without this link the catalogue had a sitemap
+      // entry and no internal link anywhere on the site.
+      {
+        text: 'fleet',
+        href: '/fleet',
+      },
       {
         text: 'howWeWork',
         href: '/how-we-work',

@@ -45,11 +45,25 @@
       "title": "Pravila privatnosti",
       "description": "Pročitajte kako Boat4You prikuplja, koristi i štiti vaše osobne podatke tijekom korištenja naše web stranice i usluga.",
       "path": "/privacy-policy"
+    },
+    "fleet": {
+      "title": "Katalog flote za najam plovila",
+      "description": "Pregledajte sve jedrilice, katamarane i motorne brodove iz Boat4You flote — Hrvatska, Grčka, Italija, Francuska, Turska, Španjolska, Crna Gora, Sejšeli i Karibi.",
+      "path": "/fleet"
     }
   },
   "boat": {
     "forRent": "za najam",
     "titleTail": "Najam {city}",
     "titleTailNoCity": "Najam"
+  },
+  "fleet": {
+    "heading": "Katalog flote",
+    "lede": "Sva plovila iz naše flote, poredana po matičnoj marini — jedrilice, katamarani, motorne jahte i gulete u Hrvatskoj, Grčkoj, Italiji, Francuskoj, Turskoj, Španjolskoj, Crnoj Gori, na Sejšelima i Karibima. Otvorite bilo koje plovilo za fotografije, specifikacije, dostupnost i cijene.",
+    "summary": "{total, number} plovila · stranica {page} od {pages}",
+    "otherBases": "Ostale baze",
+    "cabins": "{count, plural, one {# kabina} few {# kabine} other {# kabina}}",
+    "guests": "{count, plural, one {# osoba} few {# osobe} other {# osoba}}",
+    "paginationLabel": "Stranice kataloga flote"
   }
 }

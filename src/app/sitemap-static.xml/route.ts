@@ -16,6 +16,10 @@ export async function GET() {
     { path: '/privacy-policy', priority: '0.4', changefreq: 'monthly' },
     { path: '/terms-and-conditions', priority: '0.4', changefreq: 'monthly' },
     { path: '/search', priority: '0.4', changefreq: 'monthly' },
+    // Crawlable fleet directory — the hub that links every promoted boat.
+    // Only page 1 is listed here; /fleet/2… are reached by the in-page
+    // pagination links, which is how a directory is meant to be walked.
+    { path: '/fleet', priority: '0.8', changefreq: 'daily' },
     { path: '/itineraries/builder', priority: '0.6', changefreq: 'monthly' },
     ...PROMO_CAMPAIGNS.map(({ slug }) => ({ path: `/deals/${slug}`, priority: '0.7', changefreq: 'daily' })),
   ];

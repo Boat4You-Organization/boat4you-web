@@ -1,0 +1,137 @@
+@use '@/styles/settings/variables' as *;
+@use '@/styles/utils/rem-calc' as *;
+
+.root {
+  max-width: rem-calc(1200);
+  margin: 0 auto;
+  padding: rem-calc(32) rem-calc(16) rem-calc(64);
+}
+
+.title {
+  margin: 0;
+  color: $blue-950;
+  font-size: rem-calc(28);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.lede {
+  max-width: rem-calc(760);
+  margin: rem-calc(12) 0 0;
+  color: $black-700;
+  font-size: rem-calc(15);
+  line-height: 1.7;
+}
+
+.summary {
+  margin: rem-calc(8) 0 rem-calc(32);
+  color: $black-600;
+  font-size: rem-calc(13);
+}
+
+.group {
+  margin-bottom: rem-calc(32);
+}
+
+.groupTitle {
+  margin: 0 0 rem-calc(12);
+  padding-bottom: rem-calc(6);
+  border-bottom: 1px solid $blue-100;
+  color: $blue-950;
+  font-size: rem-calc(15);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0 rem-calc(40);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.row {
+  border-bottom: 1px solid $black-100;
+}
+
+.link {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: rem-calc(8);
+  padding: rem-calc(8) 0;
+  color: $black-950;
+  text-decoration: none;
+  transition: color 0.15s ease;
+
+  &:hover {
+    color: $blue-500;
+  }
+}
+
+.model {
+  font-size: rem-calc(14);
+  font-weight: 600;
+}
+
+.name {
+  color: $black-600;
+  font-size: rem-calc(14);
+}
+
+.specs {
+  margin-left: auto;
+  color: $black-500;
+  font-size: rem-calc(12);
+}
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  gap: rem-calc(6);
+  margin-top: rem-calc(40);
+}
+
+.pageLink,
+.pageCurrent {
+  display: inline-block;
+  min-width: rem-calc(36);
+  padding: rem-calc(6) rem-calc(10);
+  border: 1px solid $blue-100;
+  border-radius: rem-calc(6);
+  font-size: rem-calc(13);
+  text-align: center;
+  text-decoration: none;
+}
+
+.pageLink {
+  color: $blue-700;
+
+  &:hover {
+    border-color: $blue-500;
+  }
+}
+
+.pageCurrent {
+  border-color: $blue-500;
+  background-color: $blue-500;
+  color: #fff;
+  font-weight: 700;
+}
+
+@media (width >= 600px) {
+  .root {
+    padding: rem-calc(48) rem-calc(24) rem-calc(80);
+  }
+
+  .title {
+    font-size: rem-calc(34);
+  }
+
+  .list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
