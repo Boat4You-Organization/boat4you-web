@@ -1,5 +1,38 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-09-10 — 🔗 Crawlable /fleet katalog (svako plovilo dobiva HTML link) — ✅ DEPLOYED
+
+**Problem:** `/search` na zahtjev bez URL parametara — a Googlebot uvijek dolazi bez njih — server-renderira
+samo 18 plovila, naslovnica nijedno. Cijeli promovirani katalog je za Google postojao samo kao redak u
+`sitemap-yachts`, bez ijednog internog linka: otkrivanje jednom, ne put za ponovno indeksiranje. GSC potvrda
+s Greecea (ista arhitektura): stranice plovila nose ~3% impresija sajta.
+
+**Rješenje:** `/fleet` + `/fleet/2…41` — server-renderirani katalog svih **12.128** promoviranih plovila
+(scope = `PROMOTED_COUNTRY_CODES`, isti kao yacht sitemap), 300 po stranici, grupirano po marini, linkano
+sitewide iz footera (`footerMenu.ts`, company kolona) i upisano u `sitemap-static.xml` za svih 9 jezika.
+
+- **Stranica dohvaća SAMO svoja plovila**, ne cijeli katalog: `FLEET_PAGE_SIZE` (300) = točno 3 backend chunka,
+  pa je stranica N = chunkovi 3N-2…3N u jednom round tripu. Prva verzija je hodala svih 122 chunka i mjerila
+  **213–226 s** — nginx reže na 60 s, pa bi `/fleet` uvijek pucao na prvi zahtjev nakon deploya.
+  Live izmjereno nakon zamjene: **/fleet 281 ms**, `/de/fleet` i `/hr/fleet` isto (dijele Data Cache).
+- `fetchFleetChunk` je odvojen od `fetchYachts` (koji NAMJERNO ostaje `no-store` — pretraga mora biti živa):
+  pina Accept-Language `en` i valutu EUR pa svih 9 jezika dijeli JEDAN cache entry, `revalidate 21600`,
+  baca iznimku na loš odgovor uz **jedan retry** (700 ms) na prolazni 429/502.
+- `getFleetPage` baca iznimku ako je stranica u rasponu a prazna (inače bi se linkless stranica keširala 6 h);
+  `MAX_FLEET_PAGES = 100` odbija apsurdan broj stranice PRIJE ijednog backend poziva.
+- **Deploy je išao standardnim putem** (lokalni build s `.env.production.local` s cusma1 → tar → cusma3 →
+  cusma1 → staged swap uz guard na `_stage/.next/server/app/en.html`). Integrity: tar warnings 0,
+  `tar -tzf` valid, root html 11/11, BUILD_ID `Xo4DzsNEgidUxjCvYAXF0`, `.next.prev` obrisan prije `mv`.
+  Nakon swapa provjereno: `/`, `/search`, `/faq`, `/about-us`, `/blog`, `/de`, `/hr` svi 200.
+
+**Datoteke:** `src/utils/static/fleetIndex.ts`, `src/app/[locale]/(root)/fleet/[[...page]]/page.tsx`,
+`src/views/Fleet/FleetDirectory/*`, `fetchFleetChunk` u `src/services/yacht.service.ts`,
+`src/config/footerMenu.ts`, `src/app/sitemap-static.xml/route.ts`, `messages/<9 locales>/{metadata,navigation}.json`.
+
+**Otvoreno (zaseban ticket):** backend paginacija nije determinističa — 122 chunka vrate 12.128 redaka ali
+~12.014 jedinstvenih, tj. ~114 plovila (0,9%) ne uhvati nijedan chunk. Isto pogađa i `sitemap-yachts`, koji
+uz to nema dedupe. Fix = pinati `sortBy` + tiebreak po id-u na backend upitu.
+
 Infra: **cusma1** FE (`nextapp.service`, port 3001, `/home/cusma1/nextapp`, `yarn start`) +
 nginx (`/etc/nginx/conf.d/boat4you.conf`); **cusma2/cusma3** backend; **cusma4** DB.
 cusma1 source resynced to git HEAD on 2026-06-01.
