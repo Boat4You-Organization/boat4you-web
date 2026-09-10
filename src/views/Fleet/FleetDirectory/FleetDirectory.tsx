@@ -67,7 +67,11 @@ const FleetDirectory = async ({ slice }: { slice: FleetPage }) => {
 
               return (
                 <li key={entry.slug} className={styles.row}>
-                  <Link href={`/boat/${entry.slug}`} className={styles.link}>
+                  {/* prefetch off: 300 boat rows would otherwise queue 300
+                      route prefetches as soon as they scroll into view. The
+                      href is resolved server-side either way, so crawlers
+                      and the locale prefix are unaffected. */}
+                  <Link href={`/boat/${entry.slug}`} prefetch={false} className={styles.link}>
                     <span className={styles.model}>{entry.modelName}</span>
                     <span className={styles.name}>{entry.name}</span>
                     {specs && <span className={styles.specs}>{specs}</span>}

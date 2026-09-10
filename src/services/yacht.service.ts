@@ -73,14 +73,17 @@ export async function fetchYachts(
 /** How long a fleet-directory chunk stays in the Data Cache (6 h). */
 export const FLEET_REVALIDATE_SECONDS = 21600;
 
+/** Backoff before the single retry in `fetchFleetChunk`. */
+const FLEET_RETRY_DELAY_MS = 700;
+
 /**
  * Catalogue read for the crawlable /fleet directory — deliberately NOT
  * `fetchYachts`.
  *
  * `fetchYachts` above is `cache: 'no-store'` on purpose: search results must
  * mirror partner state minute by minute. The directory has the opposite
- * requirement — it is one flat list of every promoted boat, walked ~122
- * pages deep, and it must not re-hit the backend per visitor or per locale.
+ * requirement — it lists the whole promoted catalogue and must not re-hit
+ * the backend per visitor or per locale.
  *
  * Locale and currency are pinned here so all 9 locales share ONE Data Cache
  * entry per API page: the directory renders no prices and no
@@ -89,21 +92,34 @@ export const FLEET_REVALIDATE_SECONDS = 21600;
  * backend calls instead of 122.
  *
  * Throws on a bad response (same contract as `fetchYachts`) so a partial
- * walk can never silently replace the good cached directory with a shorter
- * one — see `getFleet`.
+ * page can never silently replace the good cached directory with a shorter
+ * one — see `getFleetPage`.
  */
 export async function fetchFleetChunk(
   searchParams: YachtSearchParams
 ): Promise<PaginatedResponse<YachtModelShortInfo>> {
   const queryParams = createYachtQueryParams({ ...searchParams, currency: Currency.EUR });
+  const url = `${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/yachts${queryParams}`;
 
-  const response = await fetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/yachts${queryParams}`, {
-    next: { revalidate: FLEET_REVALIDATE_SECONDS },
-    headers: {
-      'Accept-Language': 'en',
-      'Content-Type': 'application/json',
-    },
-  });
+  const request = () =>
+    fetch(url, {
+      next: { revalidate: FLEET_REVALIDATE_SECONDS },
+      headers: {
+        'Accept-Language': 'en',
+        'Content-Type': 'application/json',
+      },
+    });
+
+  // One retry, because throwing is the right contract but a single transient
+  // 429/502 from the API should not take a whole directory page down with it.
+  let response = await request();
+
+  if (!response.ok) {
+    await new Promise(resolve => {
+      setTimeout(resolve, FLEET_RETRY_DELAY_MS);
+    });
+    response = await request();
+  }
 
   if (!response.ok) {
     throw new Error(`Failed to fetch fleet chunk: ${response.status}`);

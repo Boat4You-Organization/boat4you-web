@@ -8,7 +8,7 @@ import Layout from '@/components/Layout';
 import { LocaleType } from '@/config/locales.config';
 import { buildBreadcrumbJsonLd } from '@/utils/static/buildItineraryJsonLd';
 import { buildMetadata } from '@/utils/static/buildMetadata';
-import { MAX_FLEET_PAGES, fleetPagePath, getFleet, sliceFleet } from '@/utils/static/fleetIndex';
+import { MAX_FLEET_PAGES, fleetPagePath, getFleetPage } from '@/utils/static/fleetIndex';
 import { serializeJsonLd } from '@/utils/static/serializeJsonLd';
 import FleetDirectory from '@/views/Fleet/FleetDirectory';
 
@@ -22,9 +22,10 @@ import FleetDirectory from '@/views/Fleet/FleetDirectory';
  * makes), which left the catalogue with a sitemap entry and no inbound
  * internal link at all.
  *
- * ISR at 6 h; the catalogue walk behind `getFleet` is cached for the same
- * window with locale + currency pinned, so a regeneration costs one walk of
- * the catalogue — not one per page and not one per language.
+ * ISR at 6 h. Each directory page maps straight onto the backend's own
+ * pagination (see `getFleetPage`), so rendering one costs three cached
+ * requests rather than a walk of the whole catalogue — and locale plus
+ * currency are pinned, so all nine languages share those cache entries.
  */
 export const revalidate = 21600;
 
@@ -70,13 +71,12 @@ const FleetDirectoryPage = async ({ params }: FleetDirectoryPageProps) => {
 
   if (Number.isNaN(pageNumber)) notFound();
 
-  // Reject an absurd page number BEFORE paying for the catalogue walk —
-  // otherwise /fleet/<any big number> mints a separate ISR entry per number
-  // for the same 404.
+  // Reject an absurd page number before touching the backend — otherwise
+  // /fleet/<any big number> mints a separate ISR entry per number for the
+  // same 404.
   if (pageNumber > MAX_FLEET_PAGES) notFound();
 
-  const fleet = await getFleet();
-  const slice = sliceFleet(fleet, pageNumber);
+  const slice = await getFleetPage(pageNumber);
 
   if (!slice) notFound();
 
