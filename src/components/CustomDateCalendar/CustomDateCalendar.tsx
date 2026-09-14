@@ -151,6 +151,13 @@ const CustomDateCalendar = ({
         value={null}
         referenceDate={currentMonth}
         views={['day']}
+        // Always lay out six week rows. Without it a five-row month sat on
+        // the 276px floor below while a six-row one grew to 291px, so the
+        // dialog gained 15px the first time the calendar reached such a
+        // month and never gave it back. The extra row renders as empty
+        // cells (days outside the month stay hidden), which is the space
+        // the minHeight was already reserving.
+        fixedWeekNumber={6}
         dayOfWeekFormatter={date => formatDayOfWeek(date, locale)}
         disableHighlightToday
         sx={calendarStyles}
