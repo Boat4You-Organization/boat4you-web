@@ -1,5 +1,21 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-09-14 — 📅 Change Dates dijalog više ne mijenja visinu — ✅ DEPLOYED
+
+Isti razred greške koji je Mario prijavio na sister sajtovima, ovdje puno manji: MUI dnevna mreža sjedila je
+na podu od `minHeight: 276px` za peteroredni mjesec, a narasla na 291px za šesteroredni — dijalog je pri
+prvom prelasku (rujan→listopad 2026) dobio **15px (564 → 579)** i zadržao ih.
+
+**Fix:** `fixedWeekNumber={6}` na `MuiDateCalendar` u `src/components/CustomDateCalendar` — uvijek šest
+tjednih redova; dodatni red su prazne ćelije (dani izvan mjeseca ostaju skriveni), što je točno prostor koji
+je `minHeight` ionako rezervirao.
+
+**Live provjereno:** dijalog konstantan na **564px kroz 8 mjeseci** (prije 564 → 579).
+Deploy standardnim putem: lokalni build s prod `.env` s cusma1 → tar (0 upozorenja, valid, 11/11 root html,
+bez AppleDouble) → cusma3 → cusma1 → staged swap uz guard na `_stage/.next/server/app/en.html`,
+`.next.prev` obrisan prije `mv`. BUILD_ID `Qfk0rgB8mUSJEGyqCActh`. Nakon swapa provjereno: `/`, `/search`,
+`/faq`, `/about-us`, `/blog`, `/fleet`, `/de`, `/hr` i detalj plovila — svi 200.
+
 ## 2026-09-10 — 🔗 Crawlable /fleet katalog (svako plovilo dobiva HTML link) — ✅ DEPLOYED
 
 **Problem:** `/search` na zahtjev bez URL parametara — a Googlebot uvijek dolazi bez njih — server-renderira
