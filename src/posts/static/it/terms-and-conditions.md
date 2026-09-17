@@ -1589,6 +1589,18 @@ tua posizione e della natura della controversia, potresti avere il diritto di
 utilizzare una piattaforma o un meccanismo di risoluzione alternativa delle
 controversie. Ad esempio:
 
+- Se risiedi nell'UE, puoi ricorrere alla **risoluzione stragiudiziale
+  (alternativa) delle controversie** invece di rivolgerti al tribunale.
+  In Croazia, le controversie dei consumatori possono essere sottoposte
+  a un ente ADR notificato, ad esempio il Centro di mediazione della
+  Camera dell'economia croata (Centar za mirenje pri HGK, Rooseveltov
+  trg 2, Zagreb) o il Centro di mediazione e Corte d'onore della Camera
+  dell'artigianato croata (HOK, Ilica 49/II, Zagreb); l'elenco
+  aggiornato degli enti ADR notificati è pubblicato dal Ministero
+  dell'Economia croato. Nota, questa è un'**opzione** per te; non
+  sostituisce il nostro accordo di cui sopra sulla giurisdizione, ma è
+  uno strumento che potrebbe aiutare a mediare una controversia fuori
+  dal tribunale.
 - Boat4You non è impegnata a utilizzare alcun ente ADR specifico a meno
   che non sia richiesto dalla legge, ma esamineremo qualsiasi suggerimento
   di ADR in buona fede.

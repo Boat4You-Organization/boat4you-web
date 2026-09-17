@@ -1455,6 +1455,16 @@ out without legal action when you give us a chance to help.
 location and the nature of the dispute, you may have the right to use an
 alternative dispute resolution platform or mechanism. For example:
 
+- If you reside in the EU, you may use **out-of-court (alternative)
+  dispute resolution** instead of going to court. In Croatia, consumer
+  disputes may be submitted to a notified ADR body, for example the
+  Mediation Centre of the Croatian Chamber of Economy (Centar za mirenje
+  pri HGK, Rooseveltov trg 2, Zagreb) or the Mediation Centre and Court
+  of Honour of the Croatian Chamber of Trades and Crafts (HOK, Ilica
+  49/II, Zagreb); the current list of notified ADR bodies is published
+  by the Croatian Ministry of Economy. Note, this is an **option** for
+  you; it doesn't replace our agreement above about jurisdiction, but
+  it's a tool that might help mediate a dispute out of court.
 - Boat4You is not committed to using any specific ADR entity unless
   required by law, but we will review any suggestion of ADR in good
   faith.

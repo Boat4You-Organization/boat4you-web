@@ -1,5 +1,21 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-09-17 — ⚖️ Uvjeti 12.4: hrvatska ADR tijela umjesto ugašene EU ODR platforme — ⏳ ČEKA DEPLOY
+
+EU ODR platforma (ec.europa.eu/consumers/odr) ugašena je 20.7.2025. (Uredba (EU) 2024/3228 ukinula 524/2013).
+Link je uklonjen 30.5. (f0129d65), ali je u 12.4 ostao "Primjerice:" bez ijednog navedenog mehanizma. ZZP
+(NN 19/22, 59/23, 59/26) čl. 60 st. 1 t. 26 i dalje traži informaciju o izvansudskom rješavanju sporova
+(tijelo + način pristupa) — samo ODR link više ne.
+
+**Fix:** u `src/posts/static/{en,hr,de,es,fr,it,nl,pl,pt}/terms-and-conditions.md` u 12.4 vraćen prvi bullet:
+izvansudsko (alternativno) rješavanje sporova, notificirana tijela — Centar za mirenje pri HGK (Rooseveltov trg 2,
+Zagreb) i Centar za mirenje / Sud časti HOK (Ilica 49/II, Zagreb), popis objavljuje Ministarstvo gospodarstva
+(izvor: szp.hr, ARPS). Bez URL-a (da opet ne zastari). Drugi bullet ("Boat4You nije obvezan…") i sav ostali
+tekst Uvjeta netaknuti; završna rečenica bulleta preuzeta doslovno iz stare verzije po jeziku.
+
+**Deploy:** samo statični sadržaj (.md) — standardni web build → tar → cusma1 staged swap; provjera `/terms` i
+`/hr/terms` (sekcija 12.4 ima dva bulleta, `curl | grep -c ec.europa.eu` = 0).
+
 ## 2026-09-14 — 📅 Change Dates dijalog više ne mijenja visinu — ✅ DEPLOYED
 
 Isti razred greške koji je Mario prijavio na sister sajtovima, ovdje puno manji: MUI dnevna mreža sjedila je

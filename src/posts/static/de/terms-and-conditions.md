@@ -474,6 +474,7 @@ Bevor Sie formelle rechtliche Schritte einleiten, **bitten wir Sie höflich, uns
 
 Abhängig von Ihrem Standort und der Art des Konflikts haben Sie möglicherweise das Recht, eine Plattform oder einen Mechanismus zur alternativen Streitbeilegung zu nutzen. Zum Beispiel:
 
+- Wenn Sie in der EU ansässig sind, können Sie anstelle eines Gerichtsverfahrens die **außergerichtliche (alternative) Streitbeilegung** nutzen. In Kroatien können Verbraucherstreitigkeiten einer notifizierten ADR-Stelle vorgelegt werden, beispielsweise dem Mediationszentrum der Kroatischen Wirtschaftskammer (Centar za mirenje pri HGK, Rooseveltov trg 2, Zagreb) oder dem Mediationszentrum und Ehrengericht der Kroatischen Handwerkskammer (HOK, Ilica 49/II, Zagreb); die aktuelle Liste der notifizierten ADR-Stellen wird vom kroatischen Wirtschaftsministerium veröffentlicht. Beachten Sie, dass dies eine **Option** für Sie ist; sie ersetzt nicht unsere obige Vereinbarung über die Gerichtsbarkeit, ist aber ein Werkzeug, das bei der außergerichtlichen Beilegung eines Konflikts helfen könnte.
 - Boat4You ist nicht zur Nutzung einer bestimmten ADR-Stelle verpflichtet, es sei denn, dies ist gesetzlich vorgeschrieben, wird jedoch jeden Vorschlag zur ADR in gutem Glauben prüfen.
 
 ### 12.5. Anwaltskosten

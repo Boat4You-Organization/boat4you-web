@@ -1715,6 +1715,18 @@ emplacement et la nature du litige, vous pourriez avoir le droit
 d'utiliser une plateforme ou un mécanisme de règlement extrajudiciaire
 des litiges. Par exemple :
 
+- Si vous résidez dans l'UE, vous pouvez recourir au **règlement
+  extrajudiciaire (alternatif) des litiges** plutôt que de saisir les
+  tribunaux. En Croatie, les litiges de consommation peuvent être soumis
+  à une entité REL notifiée, par exemple le Centre de médiation de la
+  Chambre économique croate (Centar za mirenje pri HGK, Rooseveltov trg
+  2, Zagreb) ou le Centre de médiation et Tribunal d'honneur de la
+  Chambre des métiers et de l'artisanat croate (HOK, Ilica 49/II,
+  Zagreb) ; la liste actuelle des entités REL notifiées est publiée par
+  le ministère croate de l'Économie. Notez qu'il s'agit d'une **option**
+  pour vous ; elle ne remplace pas notre accord ci-dessus concernant la
+  juridiction, mais c'est un outil qui pourrait aider à arbitrer un
+  litige hors cour.
 - Boat4You n'est pas tenu d'utiliser une entité REL spécifique, sauf
   si la loi l'exige, mais nous examinerons toute suggestion de REL de
   bonne foi.
