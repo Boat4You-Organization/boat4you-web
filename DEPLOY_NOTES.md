@@ -1,6 +1,6 @@
 # Boat4You (main) — Production Deploy Notes
 
-## 2026-09-17 — ⚖️ Uvjeti 12.4: hrvatska ADR tijela umjesto ugašene EU ODR platforme — ⏳ ČEKA DEPLOY
+## 2026-09-17 — ⚖️ Uvjeti 12.4: hrvatska ADR tijela umjesto ugašene EU ODR platforme — ✅ DEPLOYED 18.9.2026.
 
 EU ODR platforma (ec.europa.eu/consumers/odr) ugašena je 20.7.2025. (Uredba (EU) 2024/3228 ukinula 524/2013).
 Link je uklonjen 30.5. (f0129d65), ali je u 12.4 ostao "Primjerice:" bez ijednog navedenog mehanizma. ZZP
@@ -15,6 +15,14 @@ tekst Uvjeta netaknuti; završna rečenica bulleta preuzeta doslovno iz stare ve
 
 **Deploy:** samo statični sadržaj (.md) — standardni web build → tar → cusma1 staged swap; provjera `/terms` i
 `/hr/terms` (sekcija 12.4 ima dva bulleta, `curl | grep -c ec.europa.eu` = 0).
+
+**✅ Deploy 18.9.2026. (Mario: „sredi”) — BEZ builda i BEZ prekida:** `/terms-and-conditions` se NE prerenderira
+(nema ga u `prerender-manifest.json`); `getPage()` čita `.md` s diska (`process.cwd()/src/posts/static/<locale>/`) pri
+svakom zahtjevu. Commit dira samo 9 `.md`, pa je dovoljno poslati te datoteke na cusma1 (kroz cusma3 jumphost) —
+novi `.next` ne treba, restart ne treba. Prije zamjene svih 9 na serveru md5-identično staroj git verziji; rollback kopija
+`/home/cusma1/terms_md_backup_2026-09-18.tgz`; nakon zamjene md5 = lokalni HEAD. Uživo svih 9 jezika: status 200,
+„Rooseveltov” + „Ilica 49/II” prisutni, `ec.europa.eu` = 0 (HR piše puni naziv komore umjesto „HGK”). ⚠️ Ispravak
+gornje upute: URL je `/terms-and-conditions`, ne `/terms`.
 
 ## 2026-09-14 — 📅 Change Dates dijalog više ne mijenja visinu — ✅ DEPLOYED
 
