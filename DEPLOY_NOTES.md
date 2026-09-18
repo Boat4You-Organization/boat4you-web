@@ -1,6 +1,6 @@
 # Boat4You (main) — Production Deploy Notes
 
-## 2026-09-18 — 🔴 Boat page: hard-coded "free before 14 Feb 2025" removed + catalogue lists cached — ⏳ DEPLOYING
+## 2026-09-18 — 🔴 Boat page: hard-coded "free before 14 Feb 2025" removed + catalogue lists cached — ✅ LIVE 18.9. 20:34 UTC (BUILD_ID `53ZK-Ln4ywrBv16qhyqZt`, swap 1 s; verified: boat page en/hr/de shows the 72 h text and no 2025 date, /terms-and-conditions carries the ADR bullet)
 
 **Found during the 16.-18.9.2026 cusma2 load incident review** (see backend DEPLOY_NOTES same date).
 
