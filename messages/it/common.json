@@ -113,6 +113,7 @@
   "aCodeHasBeenSentToYourEmail": "È stato inviato un codice all'email <strong>{email}</strong>",
   "paymentPolicies": "Politiche di pagamento",
   "100PercentBookingPrepayment": "Prepagamento completo della prenotazione al 100%",
+  "freeCancellationWithin72Hours": "Cancellazione gratuita entro 72 ore dalla prenotazione",
   "bestPriceOnTheMarket": "Tariffa più bassa, garantita",
   "depositInsurance": "Assicurazione Deposito",
   "earlyBoatCheckIn": "Check-in anticipato della barca {time}",

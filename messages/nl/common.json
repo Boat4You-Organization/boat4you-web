@@ -148,6 +148,7 @@
   "aCodeHasBeenSentToYourEmail": "Er is een code gestuurd naar <strong>{email}</strong>",
   "paymentPolicies": "Betalingsvoorwaarden",
   "100PercentBookingPrepayment": "100% vooruitbetaling boeking",
+  "freeCancellationWithin72Hours": "Gratis annuleren binnen 72 uur na de boeking",
   "bestPriceOnTheMarket": "Laagste tarief, gegarandeerd",
   "depositInsurance": "Borgsomverzekering",
   "earlyBoatCheckIn": "Vroege check-in boot {time}",

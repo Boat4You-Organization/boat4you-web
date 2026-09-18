@@ -164,6 +164,7 @@
   "aCodeHasBeenSentToYourEmail": "A code has been sent to email <strong>{email}</strong>",
   "paymentPolicies": "Payment policies",
   "100PercentBookingPrepayment": "100% booking prepayment",
+  "freeCancellationWithin72Hours": "Free cancellation within 72 hours of booking",
   "bestPriceOnTheMarket": "Lowest rate, guaranteed",
   "depositInsurance": "Deposit Insurance",
   "earlyBoatCheckIn": "Early boat check-in {time}",

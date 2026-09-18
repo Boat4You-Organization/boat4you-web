@@ -1,5 +1,26 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-09-18 — 🔴 Boat page: hard-coded "free before 14 Feb 2025" removed + catalogue lists cached — ⏳ DEPLOYING
+
+**Found during the 16.-18.9.2026 cusma2 load incident review** (see backend DEPLOY_NOTES same date).
+
+**1. `src/config/availabilityCard.config.ts` + `AvailabilityCard.tsx`:** the Availability tab's three payment-policy
+bullets were literal ENGLISH strings from the initial commit, and the green one read _"Cancel and reschedule for free
+before 14 Feb 2025"_ — on every boat page, in all 9 locales. The config now stores i18n keys from the `common`
+namespace (`100PercentBookingPrepayment`, `bestPriceOnTheMarket` already existed) and one new key
+**`freeCancellationWithin72Hours`** in all 9 locales ("Free cancellation within 72 hours of booking" /
+"Besplatno otkazivanje unutar 72 sata od rezervacije"). Business rule: free cancellation is the 72-hour cooling-off
+window from the moment of booking; on a boat page no booking or option exists yet, so NO date is shown. Rendering is
+unchanged (same colours, tooltip = same string).
+
+**2. `src/actions/catalogue.actions.ts`:** the static public catalogue lists were uncached `fetch()` calls — every
+listing render hit the API for data that changes once a night. They now carry `next: { revalidate: 3600 }`.
+`getModels` stays UNCACHED on purpose: it is the free-text model typeahead (a cacheable fetch writes one persistent
+disk entry per distinct URL).
+
+This deploy also ships the pending 17.9. Terms 12.4 change (`1f9fc97a`, Croatian ADR bodies).
+Build-on-Mac with cusma1's prod `.env` as `.env.production.local`, pre-ship greps, COPYFILE_DISABLE tar, staged swap.
+
 ## 2026-09-17 — ⚖️ Uvjeti 12.4: hrvatska ADR tijela umjesto ugašene EU ODR platforme — ✅ DEPLOYED 18.9.2026.
 
 EU ODR platforma (ec.europa.eu/consumers/odr) ugašena je 20.7.2025. (Uredba (EU) 2024/3228 ukinula 524/2013).

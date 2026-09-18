@@ -17,6 +17,15 @@ interface ModelsActionState {
   error: string | null;
 }
 
+/**
+ * Catalogue lists (amenities, charter types, services, manufacturers) change
+ * at most once per night when the partner sync runs, but Next 16 leaves an
+ * `fetch` without `next.revalidate` uncached — every search render hit the API
+ * again, which showed up as ~150-195k identical catalogue calls per day during
+ * the 16.9.2026 cusma2 load incident.
+ */
+const CATALOGUE_REVALIDATE = 3600;
+
 export async function getManufacturers(
   name?: string,
   pageable?: PageableParams
@@ -24,7 +33,8 @@ export async function getManufacturers(
   try {
     const queryParams = createResourceParams({ name }, pageable);
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/catalogue/manufacturers${queryParams}`
+      `${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/catalogue/manufacturers${queryParams}`,
+      { next: { revalidate: CATALOGUE_REVALIDATE } }
     );
 
     if (!response.ok) {
@@ -136,7 +146,9 @@ export async function getModels(
 
 export async function getAmenities(): Promise<AmenityModel[]> {
   try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/catalogue/amenities`);
+    const response = await fetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/catalogue/amenities`, {
+      next: { revalidate: CATALOGUE_REVALIDATE },
+    });
 
     if (!response.ok) {
       throw new Error(`Failed to fetch models: ${response.status}`);
@@ -150,7 +162,9 @@ export async function getAmenities(): Promise<AmenityModel[]> {
 
 export async function getCharterTypes(): Promise<CharterTypeModel[]> {
   try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/catalogue/charterTypes`);
+    const response = await fetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/catalogue/charterTypes`, {
+      next: { revalidate: CATALOGUE_REVALIDATE },
+    });
 
     if (!response.ok) {
       throw new Error(`Failed to fetch charter types: ${response.status}`);
@@ -164,7 +178,9 @@ export async function getCharterTypes(): Promise<CharterTypeModel[]> {
 
 export async function getServices(): Promise<ServiceModel[]> {
   try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/catalogue/services`);
+    const response = await fetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/catalogue/services`, {
+      next: { revalidate: CATALOGUE_REVALIDATE },
+    });
 
     if (!response.ok) {
       throw new Error(`Failed to fetch services: ${response.status}`);

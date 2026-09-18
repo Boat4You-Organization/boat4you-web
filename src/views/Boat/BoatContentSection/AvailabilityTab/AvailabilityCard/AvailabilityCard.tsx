@@ -118,10 +118,10 @@ const AvailabilityCard = ({ yacht, offer }: AvailabilityCardProps) => {
                     fontWeight: policy.textColor === 'success' ? 700 : 'normal',
                   }}
                 >
-                  {policy.title}{' '}
-                  {policy.tooltip && (
+                  {tCommon(policy.titleKey)}{' '}
+                  {policy.tooltipKey && (
                     <Tooltip
-                      title={policy.tooltip}
+                      title={tCommon(policy.tooltipKey)}
                       placement="right-end"
                       slotProps={{
                         transition: { timeout: 0 },
