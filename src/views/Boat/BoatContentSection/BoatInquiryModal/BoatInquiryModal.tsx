@@ -21,14 +21,35 @@ import { FormValidator } from '@/utils/static/FormValidator';
 import { showToast } from '@/valtio/global/global.actions';
 import { useUserStore } from '@/valtio/user/user.store';
 
+/** Contact block the customer has already typed elsewhere (booking form), so
+ *  the inquiry does not ask a guest to retype everything. */
+export interface InquiryContact {
+  name?: string;
+  surname?: string;
+  email?: string;
+  phone?: string;
+}
+
 interface BoatInquiryModalProps {
   isOpen: boolean;
   onOpen: () => void;
   onClose: () => void;
   yacht: YachtModel;
+  /** Optional pre-fill — /boat call sites pass nothing and behave as before. */
+  initialContact?: InquiryContact | null;
+  dateFrom?: string;
+  dateTo?: string;
 }
 
-const BoatInquiryModal = ({ isOpen, onOpen, onClose, yacht }: BoatInquiryModalProps) => {
+const BoatInquiryModal = ({
+  isOpen,
+  onOpen,
+  onClose,
+  yacht,
+  initialContact,
+  dateFrom,
+  dateTo,
+}: BoatInquiryModalProps) => {
   const { params } = useQueryParams();
   const [state, action, pending] = useActionState(sendYachtInquiry, undefined);
   const t = useTranslations('common');
@@ -40,15 +61,20 @@ const BoatInquiryModal = ({ isOpen, onOpen, onClose, yacht }: BoatInquiryModalPr
     yachtId: 0,
     dateFrom: '',
     dateTo: '',
-    name: user?.name ?? '',
-    surname: user?.surname ?? '',
-    email: user?.email ?? '',
-    phone: '',
+    name: initialContact?.name || user?.name || '',
+    surname: initialContact?.surname || user?.surname || '',
+    email: initialContact?.email || user?.email || '',
+    phone: initialContact?.phone ?? '',
     message: '',
   };
 
-  const startDate = dayjs(params.startDate);
-  const endDate = dayjs(params.endDate);
+  // The booking flow knows the real period; on /boat it still comes from the
+  // search query string.
+  const from = dateFrom || params.startDate;
+  const to = dateTo || params.endDate;
+
+  const startDate = dayjs(from);
+  const endDate = dayjs(to);
 
   useEffect(() => {
     if (!state) {
@@ -67,8 +93,8 @@ const BoatInquiryModal = ({ isOpen, onOpen, onClose, yacht }: BoatInquiryModalPr
     const updatedFormValues: BoatInquiryFormValues = {
       ...formValues,
       yachtId: yacht.id,
-      dateFrom: params.startDate,
-      dateTo: params.endDate,
+      dateFrom: from,
+      dateTo: to,
     };
 
     const formData = new FormData();

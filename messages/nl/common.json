@@ -637,5 +637,8 @@
   "voucherRow": "Voucher",
   "voucherInvalid": "Deze vouchercode is ongeldig, verlopen of al gebruikt.",
   "voucherMinTotal": "Vouchers zijn te gebruiken bij charters vanaf {amount}.",
-  "voucherFirstPaymentNote": "Inclusief je voucher van {amount}, verrekend met deze eerste betaling."
+  "voucherFirstPaymentNote": "Inclusief je voucher van {amount}, verrekend met deze eerste betaling.",
+  "bookingFailedTitle": "We konden je boeking niet voltooien",
+  "bookingFailedExternal": "Je boeking is niet voltooid en er is niets afgeschreven. Ons team is op de hoogte en neemt snel contact met je op — je kunt ons je aanvraag ook meteen sturen, dan regelen we de boeking per e-mail.",
+  "bookingFailedReference": "Referentie: {code}"
 }

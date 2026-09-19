@@ -110,11 +110,16 @@ export async function createReservation(
     }
 
     if (!response.ok) {
-      const body: ErrorModel = await response
-        .json()
-        .catch(() => ({ message: `HTTP ${response.status}` }) as ErrorModel);
+      // Partial: a gateway error (nginx intercepting the 502) has neither
+      // field, so neither may be assumed present.
+      const body: Partial<ErrorModel> = await response.json().catch(() => ({}));
 
-      return { payload: null, message: body.message ?? `HTTP ${response.status}` };
+      // Nothing else records a failed booking — log status + code only, never
+      // the customer's contact block.
+      // eslint-disable-next-line no-console
+      console.error('Reservation creation failed:', { status: response.status, code: body.code });
+
+      return { payload: null, message: body.message ?? `HTTP ${response.status}`, code: body.code };
     }
 
     return { payload: await response.json() };

@@ -637,5 +637,8 @@
   "voucherRow": "Vaučer",
   "voucherInvalid": "Ovaj kod vaučera nije valjan, istekao je ili je već iskorišten.",
   "voucherMinTotal": "Vaučeri se mogu iskoristiti na charterima od {amount} naviše.",
-  "voucherFirstPaymentNote": "Uključuje vaš vaučer od {amount}, odbijen od ovog prvog plaćanja."
+  "voucherFirstPaymentNote": "Uključuje vaš vaučer od {amount}, odbijen od ovog prvog plaćanja.",
+  "bookingFailedTitle": "Nismo uspjeli dovršiti vašu rezervaciju",
+  "bookingFailedExternal": "Rezervacija nije dovršena i ništa vam nije naplaćeno. Naš tim je obaviješten i uskoro će vas kontaktirati — možete nam upit poslati i odmah pa ćemo rezervaciju dogovoriti e-poštom.",
+  "bookingFailedReference": "Referenca: {code}"
 }

@@ -1,6 +1,7 @@
 import { startTransition, useActionState, useEffect, useMemo, useState } from 'react';
+import { useFormContext } from 'react-hook-form';
 
-import { Box, Button, Stack, TextField, Typography } from '@mui/material';
+import { Alert, Box, Button, ButtonProps, Stack, TextField, Typography } from '@mui/material';
 import { useTranslations } from 'next-intl';
 import { useParams, useRouter } from 'next/navigation';
 
@@ -20,14 +21,18 @@ import { ReservationData } from '@/types/reservation.type';
 import { AppliedVoucher } from '@/types/voucher.type';
 import { FormValidator } from '@/utils/static/FormValidator';
 import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
-import { clearDataFromSessionStorage, saveDataToSessionStorage } from '@/utils/static/sessionStorageUtils';
+import {
+  clearDataFromSessionStorage,
+  getDataFromSessionStorage,
+  saveDataToSessionStorage,
+} from '@/utils/static/sessionStorageUtils';
 import { toTitleCase } from '@/utils/static/toTitleCase';
 import { toggleLoginModal } from '@/valtio/auth/auth.actions';
 import { showToast } from '@/valtio/global/global.actions';
 import { useUserStore } from '@/valtio/user/user.store';
 import { toggleBoatInquiryModalOpen } from '@/valtio/yacht/yacht.actions';
 import { useYachtStore } from '@/valtio/yacht/yacht.store';
-import BoatInquiryModal from '@/views/Boat/BoatContentSection/BoatInquiryModal';
+import BoatInquiryModal, { InquiryContact } from '@/views/Boat/BoatContentSection/BoatInquiryModal';
 import BookingModal from '@/views/Booking/BookingModal';
 import BookingReviewModal from '@/views/Booking/BookingReviewModal';
 import TrustBadges from '@/views/Booking/TrustBadges';
@@ -47,6 +52,35 @@ interface DetailsStepProps {
   appliedVoucher?: AppliedVoucher | null;
   onVoucherChange?: (voucher: AppliedVoucher | null) => void;
 }
+
+interface BookingContact {
+  name: string;
+  surname: string;
+  email: string;
+  phoneNumber: string;
+}
+
+/** "Request a quote" trigger. Lives inside <Form/> so it can hand over the
+ *  contact block the customer has just typed — guests are not logged in, so
+ *  the inquiry modal has nothing else to pre-fill from. */
+const RequestQuoteButton = ({
+  onQuote,
+  ...buttonProps
+}: ButtonProps & { onQuote: (contact: InquiryContact) => void }) => {
+  const { getValues } = useFormContext<BookingFormValues>();
+
+  return (
+    <Button
+      {...buttonProps}
+      type="button"
+      onClick={() => {
+        const { name, surname, email, phoneNumber } = getValues();
+
+        onQuote({ name, surname, email, phone: phoneNumber });
+      }}
+    />
+  );
+};
 
 const defaultValues: BookingFormValues = {
   yachtId: 0,
@@ -76,6 +110,14 @@ const DetailsStep = ({
   const validator = FormValidator.withTranslation(t);
   const { boatInquiryModalOpen } = useYachtStore();
   const [bookingReviewOpen, setBookingReviewOpen] = useState(false);
+  // Booking failures the customer cannot fix (partner/orchestration 5xx) need a
+  // surface that survives the 3 s toast — `code` is the support reference.
+  const [failure, setFailure] = useState<{ code?: number } | null>(null);
+  const [inquiryPrefill, setInquiryPrefill] = useState<InquiryContact | null>(null);
+  // Bumped on every open so the inquiry modal remounts with the current
+  // pre-fill — on tablet/mobile it is a `keepMounted` drawer, whose form would
+  // otherwise keep the empty defaults it mounted with at page load.
+  const [inquiryKey, setInquiryKey] = useState(0);
   // Loyalty voucher input — local UI state; the applied voucher itself lives
   // in Booking (lifted) + sessionStorage so the sidebar and /payment see it.
   const [voucherOpen, setVoucherOpen] = useState(false);
@@ -164,24 +206,22 @@ const DetailsStep = ({
     }
 
     if (state?.message) {
-      let errorMessage = state.message;
-
-      if (state.message.includes('phoneNumber') && state.message.includes('must match')) {
-        errorMessage = t('validation.phoneNumberInvalidLength');
-      }
-
       // Voucher raced out between apply and submit (expired / someone else
       // redeemed it) — drop it so the retry books without the discount.
       if (state.message.toLowerCase().includes('vouchercode') || state.message.toLowerCase().includes('voucher code')) {
-        errorMessage = t('voucherInvalid');
         clearDataFromSessionStorage('appliedVoucher');
         onVoucherChange?.(null);
+        showToast({ status: 'error', text: t('voucherInvalid') });
+      } else if (state.message.includes('phoneNumber') && state.message.includes('must match')) {
+        showToast({ status: 'error', text: t('validation.phoneNumberInvalidLength') });
+      } else {
+        // Anything else (partner/orchestration 5xx — code 3005 — or a gateway
+        // error) is nothing the customer can fix by retyping, and the backend
+        // message is a hard-coded English sentence, so it is never shown. The
+        // toast stays as a cue; the panel below explains and stays on screen.
+        setFailure({ code: state.code });
+        showToast({ status: 'error', text: t('reservationCreationFailed') });
       }
-
-      showToast({
-        status: 'error',
-        text: errorMessage || t('reservationCreationFailed'),
-      });
     }
   }, [createReservationPending, t, state, isAdmin, router]);
 
@@ -233,7 +273,25 @@ const DetailsStep = ({
     setVoucherError(null);
   };
 
+  // Pre-fill the inquiry with the live form values; fall back to the contact
+  // block saved on submit, because <Form resetDefaultValues/> blanks the fields
+  // of a guest whenever this component re-renders.
+  const openInquiry = (contact: InquiryContact) => {
+    const saved = getDataFromSessionStorage<BookingContact>('bookingContact');
+
+    setInquiryPrefill({
+      name: contact.name || saved?.name,
+      surname: contact.surname || saved?.surname,
+      email: contact.email || saved?.email,
+      phone: contact.phone || saved?.phoneNumber,
+    });
+    setInquiryKey(current => current + 1);
+    toggleBoatInquiryModalOpen();
+  };
+
   const handleSubmit = async (data: BookingFormValues) => {
+    setFailure(null);
+
     const invalidData =
       data.name === '' ||
       data.surname === '' ||
@@ -298,10 +356,14 @@ const DetailsStep = ({
     <>
       <BookingModal isOpen={createReservationPending} />
       <BoatInquiryModal
+        key={inquiryKey}
         isOpen={boatInquiryModalOpen}
         onOpen={toggleBoatInquiryModalOpen}
         onClose={toggleBoatInquiryModalOpen}
         yacht={yachtForInquiry}
+        initialContact={inquiryPrefill}
+        dateFrom={reservationData.dateFrom}
+        dateTo={reservationData.dateTo}
       />
       <BookingReviewModal
         open={bookingReviewOpen}
@@ -484,17 +546,39 @@ const DetailsStep = ({
               )}
             </Box>
             <Stack gap={2}>
+              {failure && (
+                <Alert severity="error" sx={{ '& .MuiAlert-message': { width: '100%' } }}>
+                  <Typography variant="body1" fontWeight={700} mb={0.5}>
+                    {t('bookingFailedTitle')}
+                  </Typography>
+                  <Typography variant="body2" color={colors.black700}>
+                    {t('bookingFailedExternal')}
+                  </Typography>
+                  {failure.code != null && (
+                    <Typography variant="caption" color={colors.black600} display="block" mt={0.5}>
+                      {t('bookingFailedReference', { code: String(failure.code) })}
+                    </Typography>
+                  )}
+                  <RequestQuoteButton
+                    size="medium"
+                    color="secondary"
+                    onQuote={openInquiry}
+                    sx={{ mt: 2, width: { xs: '100%', sm: 'auto' } }}
+                  >
+                    {t('requestAQuote')}
+                  </RequestQuoteButton>
+                </Alert>
+              )}
               <Stack direction={{ xs: 'column-reverse', sm: 'row' }} justifyContent="flex-end" gap={2}>
-                <Button
+                <RequestQuoteButton
                   size="large"
                   color="secondary"
-                  onClick={toggleBoatInquiryModalOpen}
+                  onQuote={openInquiry}
                   disabled={createReservationPending}
                   sx={{ width: { xs: '100%', sm: 210 } }}
-                  type="button"
                 >
                   {t('requestAQuote')}
-                </Button>
+                </RequestQuoteButton>
                 <Button
                   size="large"
                   disabled={createReservationPending}

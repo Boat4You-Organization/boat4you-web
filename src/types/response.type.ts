@@ -21,6 +21,9 @@ export type PaginatedResponse<T> = {
 export type PayloadResponse<T> = {
   payload: T;
   message?: string;
+  /** Numeric backend error code (ErrorModel.code) — lets the view pick a
+   *  translated message instead of showing the English backend string. */
+  code?: number;
 };
 
 export interface PaymentStatusResponse {

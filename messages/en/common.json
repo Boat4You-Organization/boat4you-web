@@ -637,5 +637,8 @@
   "voucherRow": "Voucher",
   "voucherInvalid": "This voucher code is invalid, expired or already used.",
   "voucherMinTotal": "Vouchers can be used on charters of {amount} or more.",
-  "voucherFirstPaymentNote": "Includes your {amount} voucher, deducted from this first payment."
+  "voucherFirstPaymentNote": "Includes your {amount} voucher, deducted from this first payment.",
+  "bookingFailedTitle": "We couldn't complete your booking",
+  "bookingFailedExternal": "Your booking was not completed and nothing has been charged. Our team has been notified and will contact you shortly — you can also send us your request right now and we'll arrange the booking by email.",
+  "bookingFailedReference": "Reference: {code}"
 }

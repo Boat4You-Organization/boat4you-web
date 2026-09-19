@@ -637,5 +637,8 @@
   "voucherRow": "Cupón",
   "voucherInvalid": "Este código de cupón no es válido, ha caducado o ya se ha utilizado.",
   "voucherMinTotal": "Los cupones se pueden usar en chárteres a partir de {amount}.",
-  "voucherFirstPaymentNote": "Incluye tu cupón de {amount}, descontado de este primer pago."
+  "voucherFirstPaymentNote": "Incluye tu cupón de {amount}, descontado de este primer pago.",
+  "bookingFailedTitle": "No hemos podido completar tu reserva",
+  "bookingFailedExternal": "Tu reserva no se ha completado y no se te ha cobrado nada. Nuestro equipo ya está avisado y se pondrá en contacto contigo en breve — también puedes enviarnos tu solicitud ahora mismo y organizaremos la reserva por correo electrónico.",
+  "bookingFailedReference": "Referencia: {code}"
 }

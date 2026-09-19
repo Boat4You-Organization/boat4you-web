@@ -637,5 +637,8 @@
   "voucherRow": "Bon",
   "voucherInvalid": "Ten kod bonu jest nieprawidłowy, wygasł lub został już wykorzystany.",
   "voucherMinTotal": "Bony można wykorzystać przy czarterach o wartości od {amount}.",
-  "voucherFirstPaymentNote": "Uwzględnia Twój bon o wartości {amount}, odliczony od tej pierwszej płatności."
+  "voucherFirstPaymentNote": "Uwzględnia Twój bon o wartości {amount}, odliczony od tej pierwszej płatności.",
+  "bookingFailedTitle": "Nie udało się dokończyć Twojej rezerwacji",
+  "bookingFailedExternal": "Rezerwacja nie została dokończona i nie pobraliśmy żadnej płatności. Nasz zespół został powiadomiony i wkrótce się z Tobą skontaktuje — możesz też od razu wysłać nam zapytanie, a zajmiemy się rezerwacją mailowo.",
+  "bookingFailedReference": "Numer referencyjny: {code}"
 }

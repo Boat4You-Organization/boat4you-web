@@ -637,5 +637,8 @@
   "voucherRow": "Gutschein",
   "voucherInvalid": "Dieser Gutscheincode ist ungültig, abgelaufen oder bereits eingelöst.",
   "voucherMinTotal": "Gutscheine sind bei Charterbuchungen ab {amount} einlösbar.",
-  "voucherFirstPaymentNote": "Enthält Ihren Gutschein über {amount}, der von dieser ersten Zahlung abgezogen wird."
+  "voucherFirstPaymentNote": "Enthält Ihren Gutschein über {amount}, der von dieser ersten Zahlung abgezogen wird.",
+  "bookingFailedTitle": "Wir konnten Ihre Buchung nicht abschließen",
+  "bookingFailedExternal": "Ihre Buchung wurde nicht abgeschlossen und es wurde nichts abgebucht. Unser Team ist bereits informiert und meldet sich in Kürze bei Ihnen — Sie können uns Ihre Anfrage auch sofort senden, dann organisieren wir die Buchung per E-Mail.",
+  "bookingFailedReference": "Referenz: {code}"
 }
