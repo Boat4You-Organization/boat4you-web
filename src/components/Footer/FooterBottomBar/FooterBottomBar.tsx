@@ -5,6 +5,7 @@ import AssuranceBadges from '@/components/AssuranceBadges';
 import CookieSettingsButton from '@/components/Footer/CookieSettingsButton';
 import TripAdvisorRating from '@/components/TripAdvisorRating';
 import colors from '@/styles/themes/colors';
+import { GOOGLE_PREFERRED_SOURCE_URL } from '@/utils/static/googlePreferredSource';
 
 import styles from './FooterBottomBar.module.scss';
 
@@ -45,6 +46,20 @@ const FooterBottomBar = () => {
         <Typography variant="caption" component="p" sx={{ mt: 0.5, opacity: 0.45, fontSize: '0.62rem' }}>
           <a href="https://storyset.com" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit' }}>
             Illustrations by Storyset
+          </a>
+        </Typography>
+        {/* Google "preferred source" deeplink — a signed-in reader can mark
+            boat4you as a preferred source so our pages rank higher for them in
+            Top Stories / AI Mode. Plain link, no script; styled like the legal
+            lines above. Domain derives from NEXT_PUBLIC_BASE_URL at build time. */}
+        <Typography variant="caption" component="p" color={colors.black600} sx={{ mt: 0.5, opacity: 0.75 }}>
+          <a
+            href={GOOGLE_PREFERRED_SOURCE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: 'inherit', textDecoration: 'underline' }}
+          >
+            ★ {t('googlePreferredSource')}
           </a>
         </Typography>
         {/* Cookie-consent withdrawal (audit C4) — re-opens the consent UI; GDPR Art. 7(3). */}
