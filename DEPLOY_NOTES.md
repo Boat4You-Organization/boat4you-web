@@ -1,5 +1,14 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-09-24 — 🔠 toTitleCase: samo pravi rimski brojevi, elizija — ✅ DEPLOYED
+
+Nastavak „' Sunny'" popravka (isti dan). Commit `05b07fd9`, BUILD_ID `ryyExLpWs0fiHHcdctuIk`, rollback `.next.prev` =
+`2KnEbAAsuK9IcbaF3iWy7`. `src/utils/static/toTitleCase.ts`: velika slova ostaju samo za PRAVE rimske brojeve (stari „bilo koja
+slova MDCLXVI" ostavljao je „LILI"/„MIMI" velikim slovima) + veliko slovo nakon elizije jednog slova („L'AVVENTURA" →
+„L'Avventura"; „OCEAN'S" → „Ocean's"). Isti helper sad na svih 7 stranica (sisteri istog dana dobili title-case imena na
+stranici broda; EY/CY i bez ponovljenog proizvođača). Uživo: `/boat/lagoon-40-lavventura-8273` → „Lagoon 40 'L'Avventura'
+(2020)", H1 „Lagoon 40 | L'Avventura"; rute 200.
+
 ## 2026-09-24 — ✂️ Ime broda bez zalutalih razmaka („' Sunny'" → „'Sunny'") — ✅ DEPLOYED
 
 Mario 24.9.: „sredi to". Partneri šalju ime s razmakom na početku/kraju ili dvostrukim u sredini — skenirano svih 41
