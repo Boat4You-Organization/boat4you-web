@@ -1,5 +1,21 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-09-24 — ✂️ Ime broda bez zalutalih razmaka („' Sunny'" → „'Sunny'") — ✅ DEPLOYED
+
+Mario 24.9.: „sredi to". Partneri šalju ime s razmakom na početku/kraju ili dvostrukim u sredini — skenirano svih 41
+`/fleet` stranica: **342 od 12.100** brodova („ Sunny", „BARNEY ", „FILIPPOS I Boat location…"). Stranica broda ime stavlja u
+navodnike, pa su naslov, meta description i H1 glasili „Oceanis 52 ' Sunny' (2027)" / „'Barney '". Commit `bedf97e0`,
+BUILD_ID `2KnEbAAsuK9IcbaF3iWy7`, rollback `.next.prev` = `orL7SfFl75a2EpCB43flr`.
+
+**Fix:** `src/utils/static/toTitleCase.ts` (koristi se na svih 21 mjesta prikaza) → `trim()` + svaki niz razmaka = jedan razmak;
+stranica broda `displayName` fallback `yacht.name?.trim()`; tri sirova spajanja model+ime (Product JSON-LD ime, breadcrumb,
+`/search` ItemList) → `.replace(/\s+/g, ' ').trim()`. Ostatak ponašanja `toTitleCase` nepromijenjen (test na 11 primjera).
+DB/sync nije diran (ime ostaje kako ga partner šalje — prikaz se normalizira, kao i velika/mala slova).
+
+**Provjera uživo:** 40 od 40 pogođenih brodova ima čist naslov (`'Sunny'`, `'Antonela M'`, `'Maresol (pax 12)'`), EN i DE; rute 200.
+Sister stranice nemaju ovaj problem (ne stavljaju ime u navodnike). **Uočeno usput (nije dirano):** EY/CY naslovi ponavljaju
+proizvođača („Lagoon Lagoon 40 L'Avventura", „D&D Yachts D&D Kufner 54") i ostavljaju ime velikim slovima („OCEAN'S BLUE").
+
 ## 2026-09-24 — 🌍 Meta description stranica brodova na svih 9 jezika — ✅ DEPLOYED
 
 Mario 24.9.: „Na sve jezike treba biti" (nakon GSC pregleda: meta description na stranicama brodova bio je native samo EN
