@@ -5,6 +5,7 @@ import { getLoggedInUser } from '@/actions/auth.actions';
 import { getAmenities, getCharterTypes, getFilters, getManufacturers, getServices } from '@/actions/catalogue.actions';
 import HeaderSearch from '@/components/HeaderSearch';
 import HeaderSearchMobile from '@/components/HeaderSearchMobile';
+import HeaderSearchSwitch from '@/components/HeaderSearchSwitch';
 import { MANUFACTURERS_PAGE_SIZE } from '@/config/constants.config';
 import { CatalogueData } from '@/models/catalogue.model';
 import { Currency } from '@/models/user.model';
@@ -39,11 +40,11 @@ const HeaderSearchLayout = async ({ children }: HeaderSearchLayoutProps) => {
 
   return (
     <>
-      {isMobile ? (
-        <HeaderSearchMobile catalogueData={catalogueData} catalogueFilters={catalogueFilters} />
-      ) : (
-        <HeaderSearch user={user} />
-      )}
+      <HeaderSearchSwitch
+        initialIsMobile={isMobile}
+        mobile={<HeaderSearchMobile catalogueData={catalogueData} catalogueFilters={catalogueFilters} />}
+        desktop={<HeaderSearch user={user} />}
+      />
       {children}
     </>
   );

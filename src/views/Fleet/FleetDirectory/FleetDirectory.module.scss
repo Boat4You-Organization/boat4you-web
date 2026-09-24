@@ -1,10 +1,18 @@
 @use '@/styles/settings/variables' as *;
 @use '@/styles/utils/rem-calc' as *;
+@use '@/styles/mixins/breakpoints' as *;
 
 .root {
   max-width: rem-calc(1200);
   margin: 0 auto;
-  padding: rem-calc(32) rem-calc(16) rem-calc(64);
+
+  // Clears the fixed site header (89px desktop / 81px phone) the way the
+  // blog hero does — the H1 used to render entirely underneath it.
+  padding: rem-calc(120) rem-calc(16) rem-calc(64);
+
+  @include media(0, 'md') {
+    padding-top: rem-calc(104);
+  }
 }
 
 .title {

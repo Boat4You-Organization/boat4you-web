@@ -60,6 +60,24 @@ export default function InstallPrompt() {
   const [deferred, setDeferred] = useState<BeforeInstallPromptEvent | null>(null);
   const [iosHint, setIosHint] = useState(false);
   const [visible, setVisible] = useState(false);
+  // Held back until the visitor has scrolled past the first screen. Shown on
+  // load, the chip sat over the hero's Search button on short viewports
+  // (iPhone Duo closed, 466x678: the button is the last thing above the
+  // fold) — an install nudge must never cover the primary action.
+  const [engaged, setEngaged] = useState(false);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return undefined;
+
+    const onScroll = (): void => {
+      if (window.scrollY > 160) setEngaged(true);
+    };
+
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   useEffect(() => {
     if (typeof window === 'undefined') return undefined;
@@ -118,7 +136,7 @@ export default function InstallPrompt() {
     }
   };
 
-  if (!visible) return null;
+  if (!visible || !engaged) return null;
 
   return (
     <div role="dialog" aria-label={t('pwa.installTitle')} style={wrap}>

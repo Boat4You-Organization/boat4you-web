@@ -16,7 +16,6 @@ import ChevronLeft from '@/components/SvgIcons/ChevronLeft';
 import ChevronRight from '@/components/SvgIcons/ChevronRight';
 import colors from '@/styles/themes/colors';
 import { DateDisableReason } from '@/types/dateDisabledReason.type';
-import useToggleState from '@/utils/hooks/useToggleState';
 
 import styles from './DatePickerDropdown.module.scss';
 
@@ -48,32 +47,30 @@ const DatePickerDropdown = <T extends FieldValues>({
   openSignal,
 }: DatePickerDropdownProps<T>) => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-  const [isModalOpen, toggleModal] = useToggleState();
+  // ONE open flag for both presentations. The desktop <Menu> and the mobile
+  // sheet used to keep separate flags (anchorEl vs a blind toggle) and
+  // `handleClose` flipped both — so closing the menu ARMED the sheet. On a
+  // foldable that crosses `md` mid-session (iPhone Duo: pick dates on the
+  // 890px inner screen, fold to the 466px cover) the sheet then mounted
+  // already open over the home page; unfolding the other way lost the
+  // calendar mid-selection. One flag survives the breakpoint flip.
+  const [isOpen, setIsOpen] = useState(false);
   const { setValue, watch } = useFormContext<T>();
   const startDate = watch(startDateFieldName);
   const endDate = watch(endDateFieldName);
-  const open = Boolean(anchorEl);
   const t = useTranslations();
   const locale = useLocale();
   const customBreakpoint = useMediaQuery((theme: Theme) => theme.breakpoints.down('md'));
   const buttonRef = useRef<HTMLDivElement | null>(null);
 
-  const isOpen = !customBreakpoint ? open : isModalOpen;
-
   const formatDateWithLocale = useCallback((date: Dayjs) => date.locale(locale).format('DD MMM'), [locale]);
 
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
-    if (customBreakpoint) {
-      toggleModal();
-    } else {
-      setAnchorEl(event.currentTarget);
-    }
+    setAnchorEl(event.currentTarget);
+    setIsOpen(true);
   };
 
-  const handleClose = useCallback(() => {
-    setAnchorEl(null);
-    toggleModal();
-  }, [toggleModal]);
+  const handleClose = useCallback(() => setIsOpen(false), []);
 
   const [localCurrentMonth, setLocalCurrentMonth] = useState<Dayjs>(dayjs());
 
@@ -101,13 +98,10 @@ const DatePickerDropdown = <T extends FieldValues>({
 
       if (isOpen) return;
 
-      if (customBreakpoint) {
-        if (!isModalOpen) toggleModal();
-      } else if (buttonRef.current) {
-        setAnchorEl(buttonRef.current);
-      }
+      setAnchorEl(buttonRef.current);
+      setIsOpen(true);
     }
-  }, [openSignal, isOpen, isModalOpen, customBreakpoint, toggleModal]);
+  }, [openSignal, isOpen]);
 
   const handleDayClick = useCallback(
     (date: Dayjs) => {
@@ -130,7 +124,7 @@ const DatePickerDropdown = <T extends FieldValues>({
         handleClose();
       }
     },
-    [startDate, endDate, setValue, startDateFieldName, endDateFieldName, customBreakpoint, handleClose]
+    [startDate, endDate, setValue, startDateFieldName, endDateFieldName, handleClose]
   );
 
   const handleClear = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -329,8 +323,8 @@ const DatePickerDropdown = <T extends FieldValues>({
         <Menu
           id="calendar-menu"
           aria-labelledby="calendar-button"
-          anchorEl={anchorEl}
-          open={open}
+          anchorEl={anchorEl ?? buttonRef.current}
+          open={isOpen}
           onClose={handleClose}
           // Center the 2-month popover under the date button. Default
           // `left/left` anchored the 720px panel to the button's left edge,
@@ -356,14 +350,14 @@ const DatePickerDropdown = <T extends FieldValues>({
       {customBreakpoint && (
         <ModalRoot
           title={t('common.selectDates')}
-          open={isModalOpen}
-          onOpen={toggleModal}
-          onClose={toggleModal}
+          open={isOpen}
+          onOpen={() => setIsOpen(true)}
+          onClose={handleClose}
           hideCancelButton
           // Bottom-sheet (80dvh) — calendar sits lower on screen, home
           // hero peeks through at the top, no visual "wall of white".
           customButton={
-            <Button variant="contained" size="large" onClick={toggleModal} fullWidth>
+            <Button variant="contained" size="large" onClick={handleClose} fullWidth>
               {t('common.selectDates')}
             </Button>
           }
@@ -372,7 +366,7 @@ const DatePickerDropdown = <T extends FieldValues>({
               list ONLY while the sheet is open — otherwise ~686 MUI day cells
               mount on every home page load and blow up TBT. They mount on
               first open instead. Mario 28.6.2026. */}
-          {isModalOpen && renderCalendarContent()}
+          {isOpen && renderCalendarContent()}
         </ModalRoot>
       )}
     </>
