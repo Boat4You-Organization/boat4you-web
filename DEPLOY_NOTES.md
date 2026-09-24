@@ -1,5 +1,53 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-09-24 — 📱 iPhone Duo: datumski prozor nakon preklapanja, /search header po širini, /fleet naslov, install chip — ✅ DEPLOYED
+
+Mario 19.9. („Apple duo je izašao”) → audit svih 7 stranica na formatima iPhone Dua (zatvoren 466×678 / 678×466,
+otvoren 890×626, Split View ~445×626); 24.9. „kreni”. Popravljeni nalazi za boat4you.com (commits `1230bdd9` +
+`c01dae35`, BUILD_ID `z6DeUMJ49T_rYzZrCVUOw`, rollback `.next.prev` = `7LJoWH_n9LEPNHZQZxO63`).
+
+**1. „Select Dates” sheet otvarao se SAM nakon preklapanja (jedini bug koji postoji samo zbog preklapanja).**
+`src/components/DatePickerDropdown/DatePickerDropdown.tsx` držao je DVA open-flaga — `anchorEl` za desktop `<Menu>`
+(≥ md = 768) i `isModalOpen` toggle za mobilni sheet — a `handleClose` je okretao oba: zatvaranje menija je „naoružalo”
+sheet. Odabir datuma na otvorenom ekranu (890) → preklop na 466 → sheet montiran već otvoren preko početne. Obrnuto
+(sheet otvoren na 466 → rasklop na 890) kalendar je nestajao usred odabira. Sad jedan `isOpen` + `anchorEl` samo za
+pozicioniranje (`anchorEl ?? buttonRef.current`); `useToggleState` više se ne koristi ovdje.
+
+**2. /search i /boat header biran je jednom, po user-agentu, na serveru.**
+`src/app/[locale]/(search)/layout.tsx` + novi `src/components/HeaderSearchSwitch/` (client): UA sada samo sije
+`defaultMatches` za prvi render (server HTML = hydration), potom `useMediaQuery(breakpoints.down('lg'))` odlučuje
+uživo i prati svaki resize/rotaciju/preklop. ⚠️ Na Duu otvorenom (890) header je i DALJE telefonski — namjerno: cijela
+stranica je ispod 1024 px „telefon” (hamburger, filter sidebar `display:none` < lg), pa je ikona filtera u telefonskom
+headeru jedini ulaz u filtere. Nuspojava (poboljšanje): desktop prozor 640–1023 px sad dobiva telefonski header s
+filterima — prije je dobivao desktop header BEZ ikakvog ulaza u filtere.
+
+**3. /fleet — H1 potpuno ispod fixed headera na SVIM širinama (moja greška od 10.9.).**
+`src/views/Fleet/FleetDirectory/FleetDirectory.module.scss`: `.root` padding-top 104 px (telefon) / 120 px u
+`@media (width >= 600px)` bloku. Prvi pokušaj (`1230bdd9`) stavio je 120 samo u osnovno pravilo, a blok ≥ 600 px na
+kraju datoteke vraćao je 48 → drugi build `c01dae35`. Pouka: pročitati CIJELU scss datoteku, ne samo `.root`.
+
+**4. „Install Boat4You” chip prekrivao gumb „Search boats” na 466×678.**
+`src/components/InstallPrompt/InstallPrompt.tsx`: prikazuje se tek kad se posjetitelj poskrola > 160 px (scroll
+listener, passive). Cookie sheet nije diran.
+
+**Provjera uživo (headless Chrome, iPhone UA, DPR 3, promjena viewporta BEZ reloada = preklapanje):**
+
+- #1: dates @890 → odabir raspona → sheet zatvoren → preklop na 466: `openLayers=[]` ✅; sheet @466 → rasklop 890:
+  `MuiMenu` otvoren, 61 dana vidljivo ✅; natrag na 466: drawer otvoren ✅ (stanje preživi oba smjera).
+- #2: /search @890 iPhone UA: telefonski header + 1 ulaz u filtere; resize na 1100 bez reloada → desktop header;
+  natrag na 890 → telefonski ✅.
+- #3: /fleet H1 top 120/120/104 @1280/890/466, header 89/81/81, `h1Covered=false` ✅ (prije: 48 pod headerom).
+- #4: chip na učitavanju `false`, nakon scrolla 600 px `true` ✅.
+- Rute /, /fleet, /search, /boat, /hr/ = 200.
+
+**Deploy:** lokalni `next build` s prod `.env` (cusma1 `.env` → `.env.production.local`, obrisan poslije; ⚠️ NIJE u
+.gitignore) → pre-ship grepovi (localhost:8443 = 0, api.boat4you.com u chunks = 66, en.html) → tar `.next` (29 MB,
+0 AppleDouble) → cusma3 → cusma1 staged swap (guard BUILD_ID + en.html, `sudo -S` iz `/tmp/.p1` chmod 600, obrisan)
+→ restart `nextapp`. Gotcha: `ssh -n` na UNUTARNJEM ssh-u odbaci `bash -s < script` (stdin = /dev/null) — prvi
+pokušaj swapa tiho ništa nije izveo.
+
+**Nije dirano (svjesno):** cookie sheet na prvom posjetu; „Choose a boat”/sort tab sitnice iz audita.
+
 ## 2026-09-24 — Phone dial code defaults to the visitor's GeoIP country (48b35996 + 8c2c0c16, ✅ LIVE cusma1 BUILD_ID 7eVerb8DY51E4vKwAEFnQ)
 
 Owner: clients who never touch the dial-code dropdown sent US-prefixed (the old hard default,
