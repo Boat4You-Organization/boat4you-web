@@ -125,7 +125,7 @@ function buildYachtProductSchema(yacht: YachtModel, locale: LocaleType, tDesc: B
   // ~5-10% of synced yachts have no description/sysDescription, which tripped
   // the "Missing field description" warning in Search Console — build a
   // spec-based fallback so the field is always present.
-  const productName = [yacht.model, yacht.name].filter(Boolean).join(' ').trim();
+  const productName = [yacht.model, yacht.name].filter(Boolean).join(' ').replace(/\s+/g, ' ').trim();
   const fallbackDescription = buildBoatDescription(tDesc, {
     name: `${productName}${yacht.buildYear ? ` (${yacht.buildYear})` : ''}`,
     marina: yacht.location?.name,
@@ -256,7 +256,7 @@ export async function generateMetadata({
   // Yacht name comes from partner systems uppercase ("GIN TONIC", "AF-LAG40AN") —
   // title-case it for SEO display so SERP previews don't shout. Same util the
   // detail page H1 uses (memory: project_yacht_name_title_case).
-  const displayName = toTitleCase(yacht.name) || yacht.name || '';
+  const displayName = toTitleCase(yacht.name) || yacht.name?.trim() || '';
   const fullName = [yacht.model, displayName ? `'${displayName}'` : null].filter(Boolean).join(' ').trim();
   const yearSuffix = yacht.buildYear ? ` (${yacht.buildYear})` : '';
   const cityOnly = yacht.location?.name?.split(',')[0]?.trim() ?? '';
@@ -363,7 +363,7 @@ const BoatPage = async ({
   }
 
   breadcrumbItems.push({
-    name: [yacht.model, yacht.name].filter(Boolean).join(' ').trim(),
+    name: [yacht.model, yacht.name].filter(Boolean).join(' ').replace(/\s+/g, ' ').trim(),
     item: localizedUrl(locale as LocaleType, `/boat/${yacht.slug}`),
   });
 

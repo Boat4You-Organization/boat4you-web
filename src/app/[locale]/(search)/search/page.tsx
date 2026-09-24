@@ -309,7 +309,8 @@ function buildSearchProductsLd(
 
   const items = priced.slice(0, PRODUCT_SCHEMA_LIMIT).map((y, idx) => {
     const yachtUrl = `${baseUrl}/boat/${y.slug}`;
-    const fullName = [y.modelName, y.name].filter(Boolean).join(' ').trim() || y.name || 'Yacht';
+    const fullName =
+      [y.modelName, y.name].filter(Boolean).join(' ').replace(/\s+/g, ' ').trim() || y.name?.trim() || 'Yacht';
     const brandFirstWord = (y.modelName || '').trim().split(/\s+/)[0] || null;
     // Google Merchant listings REQUIRES `image` on every Product — a missing
     // field is a critical GSC error. Always set it, falling back to the site

@@ -10,15 +10,20 @@
 //  - Roman numeral suffix ("II", "III", "IV", "XL") → stays upper so
 //    "Find Us Ii" doesn't happen.
 //  - Tokens that are entirely digits / entirely punctuation → left alone.
+//  - Stray whitespace is dropped: partner names arrive as " Sunny", "BARNEY "
+//    or "FILIPPOS I  Boat location…" (342 of 12,100 boats, 24.9.2026), which
+//    the boat page's quoted title rendered as "' Sunny'" / "'Barney '".
+//    Leading/trailing space is trimmed and inner runs collapse to one space.
 const ROMAN_NUMERAL_RE = /^(?:[MDCLXVI]+)$/;
 
 export const toTitleCase = (value: string | null | undefined): string => {
   if (value == null) return '';
 
   return value
+    .trim()
     .split(/(\s+)/)
     .map(part => {
-      if (/^\s+$/.test(part)) return part;
+      if (/^\s+$/.test(part)) return ' ';
 
       if (part.length === 0) return part;
 
