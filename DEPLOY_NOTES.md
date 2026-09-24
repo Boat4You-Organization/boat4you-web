@@ -1,5 +1,38 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-09-24 — 🔎 GSC: robots za parametarske kopije brodova + blog canonical na EN — ✅ DEPLOYED
+
+Mario 24.9. (GSC Page indexing, www.boat4you.com, stanje 21.9.: indeksirano 53,3K, neindeksirano 232K) → „1 i 2 odradi,
+ali želim da čita brodove i na drugim jezicima". Commit `c26170dc`, BUILD_ID `ilJzTI3EjMd0V8fNM3hn3`, rollback
+`.next.prev` = `jIJbyOKhFcfJ0U0SySwbY` (build druge sesije, „preferred source" — uključen u ovaj build jer je iz HEAD-a).
+
+**1. robots.txt — `Disallow: /boat/*?` + `/<locale>/boat/*?` (`src/app/robots.ts`).** 51,5K brod-URL-ova s
+`?startDate=` / `?did=` / `?destinations=` („Alternate page with proper canonical") Google je obilazio jedan po jedan,
+iako svi canonicaliziraju na čisti `/boat/<slug>` — a 2.638 pravih novih brodova čeka u „Discovered – not indexed".
+**Jezične stranice brodova ostaju otvorene** (`/de/boat/<slug>` itd., self-canonical, hreflang ×9 + x-default, u sitemapu):
+provjereno da su stvarno prevedene (DE/HR dijele svega 16–20 % riječi s EN, opis broda preveden). `/search?…` kategorije
+netaknute (indeksirane, u sitemap-categories). Pravila testirana na 17 primjera (Googleova semantika `*`, najduže
+pravilo pobjeđuje): 0 odstupanja.
+
+**2. Blog — jedan engleski canonical.** WP daje tijelo posta SAMO na engleskom (`getBlog` ne zna za jezik), pa je
+`/nl/blog/<slug>` isti engleski članak u nizozemskom okviru; self-canonical lokalne kopije → 1.324 „Duplicate without
+user-selected canonical" (većinom nl/it). Sad: canonical svih lokala = `/blog/<slug>` (RankMath canonical i dalje ima
+prednost), hreflang samo `en` + `x-default`, `og:url` = canonical, BlogPosting JSON-LD `@id`/`inLanguage` = EN
+(`src/utils/static/blogJsonLd.ts`), `sitemap-blogs.xml` samo EN (504 → 56). Ako postovi jednom dobiju prave prijevode →
+vratiti per-locale canonical.
+
+**Provjera uživo:** robots.txt 9 novih pravila; rute /, /fleet, /search, /boat, /de/boat, /blog, /nl/blog = 200; `/nl/blog/…`
+i `/hr/blog/…` canonical `/blog/…`, hreflang en + x-default, BlogPosting `inLanguage` en; sitemap-blogs 56 URL-a, 0 s
+jezičnim prefiksom; `/boat/…` i `/de/boat/…` self-canonical, hreflang 10, index — nepromijenjeno.
+
+**Deploy:** lokalni build s prod `.env` (obrisan) → pre-ship grepovi (localhost:8443 = 0, api chunks 66, en.html) → tar
+30 MB → cusma3 → cusma1 staged swap s guardom „live BUILD_ID se nije promijenio od provjere" (druga sesija danas
+deploya) → `nextapp` active.
+
+**Otvoreno (predloženo Mariju):** meta description na stranicama brodova je preveden samo za EN i HR — fr/de/pt/it/es/pl/nl
+dobivaju engleski („Charter the … Check availability…"), `src/app/[locale]/(search)/boat/[slug]/page.tsx`
+`buildDescriptionEN` fallback. GSC „Validate fix" za 25 × 5xx (svi danas 200/404) — ručno.
+
 ## 2026-09-24 — Google preferred source made prominent: footer pill + blog cards (ac9fb841, ✅ LIVE cusma1 BUILD_ID jIJbyOKhFcfJ0U0SySwbY)
 
 Owner: the footer text link "jedva se vidi". Decision: keep yacht/booking pages quiet (their CTA is
