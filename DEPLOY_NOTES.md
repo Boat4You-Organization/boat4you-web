@@ -1,5 +1,34 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-09-24 — 🌍 Meta description stranica brodova na svih 9 jezika — ✅ DEPLOYED
+
+Mario 24.9.: „Na sve jezike treba biti" (nakon GSC pregleda: meta description na stranicama brodova bio je native samo EN
+i HR; fr/de/pt/it/es/pl/nl dobivali engleski „Charter the … Check availability and book directly on boat4you.com." —
+tekst koji Google prikazuje ispod naslova). Commit `dce7b2ad`, BUILD_ID `orL7SfFl75a2EpCB43flr`, rollback `.next.prev` =
+`ilJzTI3EjMd0V8fNM3hn3`.
+
+**Kod:** novi `src/utils/static/boatMetaDescription.ts` (`buildBoatDescription(t, {name, marina, cabins, berths, guests})`
+→ `lead. specs. cta`) iz ICU ključeva `metadata.boat.descLead / descLeadFrom / descCabins / descBerths / descGuests /
+descCta` u svih 9 `messages/<loc>/metadata.json`. Koristi se na 3 mjesta: meta description stranice broda, Product JSON-LD
+fallback stranice broda (kad partner nema opis) i Product opisi u ItemList JSON-LD-u na `/search` (i oni su bili engleski
+na svim jezicima). Stari `buildDescriptionEN/HR` + `pluralizeHR` uklonjeni. EN i HR ispis **bajt-identičan** starom
+(uspoređeno 2.352 kombinacije marina × kabine 0–40 × kreveti).
+
+**Prijevodi (workflow: 1 nacrt + 7 nativnih recenzenata, svaki renderirao sve oblike kroz `intl-messageformat` iz repoa):**
+DE „Yachtcharter {name} ab {marina}… Verfügbarkeit prüfen und direkt auf boat4you.com buchen." · FR „Location {name},
+départ {marina}… Vérifiez les disponibilités…" · IT „Noleggio {name} in partenza da {marina}…" · ES „Alquiler de {name}
+en {marina}…" · PT (pt-PT) „Aluguer do barco {name} em {marina}…" · PL „Czarter {name} z bazy {marina}…" (sve 4 CLDR
+kategorije) · NL „Jachtcharter {name} vanuit {marina}…". Pravila: isti čarter-izraz kao `titleTail` u naslovu, register
+kao ostatak stranice na tom jeziku, bez člana/padeža uz proizvoljno ime broda/marine, bez ravnog apostrofa uz `{`/`}`
+(ICU), uzorak ≤ 165 znakova. Recenzenti ispravili: „do/up to" nedostajao u jednini (6 jezika), PL „z mariny Alimos Marina"
+→ „z bazy", ES „Alquiler {name}" → „Alquiler de {name}", PT „camas" → „beliches" (riječ stranice), IT „dal porto di …
+Marina" → „in partenza da".
+
+**Provjera uživo:** meta description na `/…/boat/beneteau-oceanis-52-sunny-19915` na svih 9 jezika na svom jeziku (142–167
+znakova); `/de/search` i `/pl/search` ItemList Product opisi na njemačkom/poljskom; rute 200; next-intl 0 grešaka.
+
+**Pre-existing (nije dirano):** ime broda od partnera ponekad ima vodeći razmak („' Sunny'") — `toTitleCase` ne trimma.
+
 ## 2026-09-24 — 🔎 GSC: robots za parametarske kopije brodova + blog canonical na EN — ✅ DEPLOYED
 
 Mario 24.9. (GSC Page indexing, www.boat4you.com, stanje 21.9.: indeksirano 53,3K, neindeksirano 232K) → „1 i 2 odradi,
