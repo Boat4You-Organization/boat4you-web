@@ -55,7 +55,13 @@
   "boat": {
     "forRent": "do wynajęcia",
     "titleTail": "Czarter {city}",
-    "titleTailNoCity": "Czarter"
+    "titleTailNoCity": "Czarter",
+    "descLead": "Czarter {name}",
+    "descLeadFrom": "Czarter {name} z bazy {marina}",
+    "descCabins": "{count, plural, one {# kabina} few {# kabiny} many {# kabin} other {# kabiny}}",
+    "descBerths": "{count, plural, one {# koja} few {# koje} many {# koi} other {# koi}}",
+    "descGuests": "{count, plural, one {do # osoby} few {do # osób} many {do # osób} other {do # osoby}}",
+    "descCta": "Sprawdź dostępność i zarezerwuj bezpośrednio na boat4you.com."
   },
   "fleet": {
     "heading": "Katalog floty",

@@ -55,7 +55,13 @@
   "boat": {
     "forRent": "en alquiler",
     "titleTail": "Alquiler {city}",
-    "titleTailNoCity": "Alquiler"
+    "titleTailNoCity": "Alquiler",
+    "descLead": "Alquiler de {name}",
+    "descLeadFrom": "Alquiler de {name} en {marina}",
+    "descCabins": "{count, plural, one {# camarote} other {# camarotes}}",
+    "descBerths": "{count, plural, one {# litera} other {# literas}}",
+    "descGuests": "{count, plural, one {hasta # persona} other {hasta # personas}}",
+    "descCta": "Consulta la disponibilidad y reserva directamente en boat4you.com."
   },
   "fleet": {
     "heading": "Directorio de la flota",

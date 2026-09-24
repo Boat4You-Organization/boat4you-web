@@ -15,6 +15,7 @@ import { LocaleType } from '@/config/locales.config';
 import { meta } from '@/config/meta';
 import { Currency } from '@/models/user.model';
 import { CHARTER_TYPE_LABEL_MAP, CharterType, YachtModel } from '@/models/yacht.model';
+import { BoatDescTranslate, buildBoatDescription } from '@/utils/static/boatMetaDescription';
 import { buildMetadata, localizedUrl } from '@/utils/static/buildMetadata';
 import { getBoatImageUrl } from '@/utils/static/imageUtils';
 import { toTitleCase } from '@/utils/static/toTitleCase';
@@ -82,7 +83,7 @@ const yachtShareImageUrl = (yacht: YachtModel): string | null => {
  * markup as spam and removes the rich result entirely. Re-add only when a
  * real review platform (Trustpilot / Google Reviews / internal) is wired up.
  */
-function buildYachtProductSchema(yacht: YachtModel, locale: LocaleType) {
+function buildYachtProductSchema(yacht: YachtModel, locale: LocaleType, tDesc: BoatDescTranslate) {
   const url = localizedUrl(locale, `/boat/${yacht.slug}`);
   const mainImage = yachtShareImageUrl(yacht) || `${meta.url}/meta/og-image.png`;
 
@@ -125,16 +126,12 @@ function buildYachtProductSchema(yacht: YachtModel, locale: LocaleType) {
   // the "Missing field description" warning in Search Console — build a
   // spec-based fallback so the field is always present.
   const productName = [yacht.model, yacht.name].filter(Boolean).join(' ').trim();
-  const descSpecs: string[] = [];
-
-  if (yacht.cabins) descSpecs.push(`${yacht.cabins} cabin${yacht.cabins === 1 ? '' : 's'}`);
-
-  if (yacht.berths) descSpecs.push(`${yacht.berths} berth${yacht.berths === 1 ? '' : 's'}`);
-
-  const descMarina = yacht.location?.name ? ` from ${yacht.location.name}` : '';
-  const fallbackDescription =
-    `Charter the ${productName}${yacht.buildYear ? ` (${yacht.buildYear})` : ''}${descMarina}.` +
-    `${descSpecs.length ? ` ${descSpecs.join(', ')}.` : ''} Check availability and book directly on boat4you.com.`;
+  const fallbackDescription = buildBoatDescription(tDesc, {
+    name: `${productName}${yacht.buildYear ? ` (${yacht.buildYear})` : ''}`,
+    marina: yacht.location?.name,
+    cabins: yacht.cabins || null,
+    berths: yacht.berths || null,
+  });
   const description = (yacht.description || yacht.sysDescription || fallbackDescription).slice(0, 5000);
 
   // Charter country (used for the offer's return/shipping region declarations).
@@ -265,31 +262,10 @@ export async function generateMetadata({
   const cityOnly = yacht.location?.name?.split(',')[0]?.trim() ?? '';
   const locationFull = yacht.location?.name ?? '';
 
-  // Locale-aware meta builder. EN + HR get fully native phrasing (Mario's
-  // primary markets); the other 7 locales fall back to EN charter-vocab so
-  // we don't ship hybrid HR/EN strings to a German reader (regression Mario
-  // flagged on /hr/boat where description leaked "charter in" mid-sentence).
   // SERP windows: title ~60 chars, description ~155 chars. Keep within both
   // even when year+specs add ~12 chars to the body.
   const cabins = yacht.cabins ?? null;
   const berths = yacht.berths ?? yacht.maxPersons ?? null;
-
-  const pluralizeHR = (n: number, sg: string, pl2to4: string, pl5plus: string): string => {
-    const last2 = n % 100;
-    const last1 = n % 10;
-
-    if (last2 >= 11 && last2 <= 14) return `${n} ${pl5plus}`;
-
-    if (last1 === 1) return `${n} ${sg}`;
-
-    if (last1 >= 2 && last1 <= 4) return `${n} ${pl2to4}`;
-
-    return `${n} ${pl5plus}`;
-  };
-
-  type MetaLocale = 'en' | 'hr' | 'de' | 'fr' | 'es' | 'it' | 'pt' | 'pl' | 'nl';
-
-  const lc = (locale as MetaLocale) || 'en';
 
   // Title tail comes from the metadata.boat catalog so both the charter word
   // AND the word order localize per locale (the old hard-coded map shipped
@@ -303,33 +279,15 @@ export async function generateMetadata({
   const titleTail = cityOnly ? tBoat('titleTail', { city: cityOnly }) : tBoat('titleTailNoCity');
   const title = [`${fullName}${yearSuffix}`, titleTail].filter(Boolean).join(' — ');
 
-  // Description — fully localised for EN+HR, EN-fallback for others. Keep
-  // under ~155 chars even when specs added.
-  const buildDescriptionEN = (): string => {
-    const specs: string[] = [];
-
-    if (cabins != null) specs.push(`${cabins} cabin${cabins === 1 ? '' : 's'}`);
-
-    if (berths != null) specs.push(`${berths} berth${berths === 1 ? '' : 's'}`);
-
-    const specsStr = specs.length ? ` ${specs.join(', ')}.` : '';
-    const fromMarina = locationFull ? ` from ${locationFull}` : '';
-
-    return `Charter the ${fullName}${yearSuffix}${fromMarina}.${specsStr} Check availability and book directly on boat4you.com.`;
-  };
-  const buildDescriptionHR = (): string => {
-    const specs: string[] = [];
-
-    if (cabins != null) specs.push(pluralizeHR(cabins, 'kabina', 'kabine', 'kabina'));
-
-    if (berths != null) specs.push(pluralizeHR(berths, 'osoba', 'osobe', 'osoba'));
-
-    const specsStr = specs.length ? ` ${specs.join(', ')}.` : '';
-    const fromMarina = locationFull ? ` iz marine ${locationFull}` : '';
-
-    return `Najam ${fullName}${yearSuffix}${fromMarina}.${specsStr} Provjerite raspoloživost i rezervirajte direktno na boat4you.com.`;
-  };
-  const description = lc === 'hr' ? buildDescriptionHR() : buildDescriptionEN();
+  // Description — native in every locale from `metadata.boat.desc*` (only EN
+  // and HR were native before; the other seven showed English in the SERP
+  // snippet). Keep under ~155 chars even with specs added.
+  const description = buildBoatDescription((key, values) => tBoat(key as never, values as never), {
+    name: `${fullName}${yearSuffix}`,
+    marina: locationFull,
+    cabins,
+    berths,
+  });
 
   return buildMetadata({
     locale: locale as LocaleType,
@@ -371,7 +329,10 @@ const BoatPage = async ({
     return notFound();
   }
 
-  const productSchema = buildYachtProductSchema(yacht, locale as LocaleType);
+  const tBoatMeta = await getTranslations({ locale, namespace: 'metadata.boat' });
+  const productSchema = buildYachtProductSchema(yacht, locale as LocaleType, (key, values) =>
+    tBoatMeta(key as never, values as never)
+  );
 
   // BreadcrumbList — surfaces a navigation chip in the SERP
   // ("Home › Catamaran › Marina Kastela › Lagoon 42 …") and helps

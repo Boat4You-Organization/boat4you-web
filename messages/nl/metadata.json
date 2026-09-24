@@ -55,7 +55,13 @@
   "boat": {
     "forRent": "te huur",
     "titleTail": "Jachtcharter {city}",
-    "titleTailNoCity": "Jachtcharter"
+    "titleTailNoCity": "Jachtcharter",
+    "descLead": "Jachtcharter {name}",
+    "descLeadFrom": "Jachtcharter {name} vanuit {marina}",
+    "descCabins": "{count, plural, one {# hut} other {# hutten}}",
+    "descBerths": "{count, plural, one {# slaapplaats} other {# slaapplaatsen}}",
+    "descGuests": "{count, plural, one {max. # gast} other {max. # gasten}}",
+    "descCta": "Bekijk de beschikbaarheid en boek direct op boat4you.com."
   },
   "fleet": {
     "heading": "Vlootoverzicht",

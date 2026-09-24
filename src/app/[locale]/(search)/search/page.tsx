@@ -9,6 +9,7 @@ import { LocaleType } from '@/config/locales.config';
 import { Currency } from '@/models/user.model';
 import { VESSEL_TYPE_LABEL_MAP_FOR_RENTAL, VesselType, YachtModelShortInfo } from '@/models/yacht.model';
 import { fetchYachts } from '@/services/yacht.service';
+import { BoatDescTranslate, buildBoatDescription } from '@/utils/static/boatMetaDescription';
 import { buildMetadata } from '@/utils/static/buildMetadata';
 import { getBoatImageUrl } from '@/utils/static/imageUtils';
 import SearchView from '@/views/Search/SearchView/SearchView';
@@ -291,7 +292,12 @@ function buildSearchBreadcrumb(args: { baseUrl: string; joinedNominative: string
  */
 const PRODUCT_SCHEMA_LIMIT = 10;
 
-function buildSearchProductsLd(yachts: YachtModelShortInfo[] | undefined, baseUrl: string, currency: string) {
+function buildSearchProductsLd(
+  yachts: YachtModelShortInfo[] | undefined,
+  baseUrl: string,
+  currency: string,
+  tDesc: BoatDescTranslate
+) {
   if (!yachts?.length) return null;
 
   // Google requires `offers` (or reviews) on every merchant-listing Product,
@@ -310,12 +316,6 @@ function buildSearchProductsLd(yachts: YachtModelShortInfo[] | undefined, baseUr
     // OG image when the yacht has no photo (a valid fallback beats no image),
     // mirroring the boat-detail Product schema.
     const imageUrl = y.mainImageId ? getBoatImageUrl(y.mainImageId, 1200) : `${baseUrl}/meta/og-image.png`;
-    const specs: string[] = [];
-
-    if (y.cabins) specs.push(`${y.cabins} cabin${y.cabins === 1 ? '' : 's'}`);
-
-    if (y.maxPersons) specs.push(`up to ${y.maxPersons} guests`);
-
     const country = y.location?.countryCode;
     const product: Record<string, unknown> = {
       '@type': 'Product',
@@ -323,10 +323,12 @@ function buildSearchProductsLd(yachts: YachtModelShortInfo[] | undefined, baseUr
       name: fullName,
       image: imageUrl,
       url: yachtUrl,
-      description:
-        `Charter the ${fullName}${y.buildYear ? ` (${y.buildYear})` : ''}` +
-        `${y.location?.name ? ` from ${y.location.name}` : ''}.` +
-        `${specs.length ? ` ${specs.join(', ')}.` : ''} Check availability and book directly on boat4you.com.`,
+      description: buildBoatDescription(tDesc, {
+        name: `${fullName}${y.buildYear ? ` (${y.buildYear})` : ''}`,
+        marina: y.location?.name,
+        cabins: y.cabins || null,
+        guests: y.maxPersons || null,
+      }),
     };
 
     if (brandFirstWord) product.brand = { '@type': 'Brand', name: brandFirstWord };
@@ -428,8 +430,11 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
   try {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const yachtsResp = await fetchYachts(params as any, currency, locale);
+    const tBoatMeta = await getTranslations({ locale, namespace: 'metadata.boat' });
 
-    productsLd = buildSearchProductsLd(yachtsResp?.content, baseUrl, currency);
+    productsLd = buildSearchProductsLd(yachtsResp?.content, baseUrl, currency, (key, values) =>
+      tBoatMeta(key as never, values as never)
+    );
   } catch {
     // Soft fail — page still renders without Product schema.
   }

@@ -55,7 +55,13 @@
   "boat": {
     "forRent": "zu vermieten",
     "titleTail": "Yachtcharter {city}",
-    "titleTailNoCity": "Yachtcharter"
+    "titleTailNoCity": "Yachtcharter",
+    "descLead": "Yachtcharter {name}",
+    "descLeadFrom": "Yachtcharter {name} ab {marina}",
+    "descCabins": "{count, plural, one {# Kabine} other {# Kabinen}}",
+    "descBerths": "{count, plural, one {# Koje} other {# Kojen}}",
+    "descGuests": "{count, plural, one {bis zu # Person} other {bis zu # Personen}}",
+    "descCta": "Verfügbarkeit prüfen und direkt auf boat4you.com buchen."
   },
   "fleet": {
     "heading": "Yachtcharter-Flotte im Überblick",

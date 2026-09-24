@@ -55,7 +55,13 @@
   "boat": {
     "forRent": "za najam",
     "titleTail": "Najam {city}",
-    "titleTailNoCity": "Najam"
+    "titleTailNoCity": "Najam",
+    "descLead": "Najam {name}",
+    "descLeadFrom": "Najam {name} iz marine {marina}",
+    "descCabins": "{count, plural, one {# kabina} few {# kabine} other {# kabina}}",
+    "descBerths": "{count, plural, one {# osoba} few {# osobe} other {# osoba}}",
+    "descGuests": "{count, plural, one {do # osobe} few {do # osobe} other {do # osoba}}",
+    "descCta": "Provjerite raspoloživost i rezervirajte direktno na boat4you.com."
   },
   "fleet": {
     "heading": "Katalog flote",

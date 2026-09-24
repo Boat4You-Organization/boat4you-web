@@ -55,7 +55,13 @@
   "boat": {
     "forRent": "for rent",
     "titleTail": "{city} Charter",
-    "titleTailNoCity": "Charter"
+    "titleTailNoCity": "Charter",
+    "descLead": "Charter the {name}",
+    "descLeadFrom": "Charter the {name} from {marina}",
+    "descCabins": "{count, plural, one {# cabin} other {# cabins}}",
+    "descBerths": "{count, plural, one {# berth} other {# berths}}",
+    "descGuests": "{count, plural, one {up to # guest} other {up to # guests}}",
+    "descCta": "Check availability and book directly on boat4you.com."
   },
   "fleet": {
     "heading": "Yacht charter fleet directory",
