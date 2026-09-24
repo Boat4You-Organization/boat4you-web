@@ -34,30 +34,54 @@ const findCountry = (iso2Code: string | null | undefined): PhoneCountry | undefi
 
 const getDefaultCountry = (): PhoneCountry => findCountry('US') || phoneCountries[0];
 
-// Locales that imply exactly one country. `en` is spoken everywhere, so it
-// maps to nothing and falls through to the hard US default.
+// Locales whose speakers are overwhelmingly in one country. `en` is spoken
+// everywhere and `es` / `pt` span two continents (the site's own geo→locale
+// map sends BR to `pt` and MX/AR to `es`), so those map to nothing and fall
+// through to the hard US default. Only consulted when there is no GeoIP cookie.
 const LOCALE_COUNTRY_MAP: Record<string, string> = {
   de: 'DE',
   fr: 'FR',
   it: 'IT',
-  es: 'ES',
   hr: 'HR',
-  pt: 'PT',
   pl: 'PL',
   nl: 'NL',
 };
 
+// Main country of each dial code that several countries share. The list is
+// alphabetical, so the first match would be Canada for +1, Guernsey for +44,
+// the Vatican for +39 — and +39 is not cosmetic: Italy keeps the trunk 0 in
+// E.164, the Vatican entry would drop it.
+const PRIMARY_BY_DIAL: Record<string, string> = {
+  '+1': 'US',
+  '+44': 'GB',
+  '+39': 'IT',
+  '+7': 'RU',
+  '+358': 'FI',
+  '+262': 'RE',
+  '+47': 'NO',
+  '+61': 'AU',
+  '+64': 'NZ',
+  '+590': 'GP',
+  '+599': 'CW',
+  '+212': 'MA',
+  '+500': 'FK',
+  '+672': 'NF',
+};
+
 // A prefilled E.164 value (logged-in profile, previous inquiry) already names
 // its country. Longest matching dial code wins (+1264 Anguilla over +1); among
-// countries sharing one code (+1 US/CA/PR, +44 GB/GG/IM/JE, +39 IT/VA) the
-// detected country wins, else the first listed — the E.164 output is identical
-// either way, only the flag differs.
+// countries sharing one code the GeoIP/locale-detected country wins, then the
+// code's main country (PRIMARY_BY_DIAL), then the first listed.
 const findCountryByDialCode = (e164: string, preferred: PhoneCountry): PhoneCountry | undefined => {
   const matches = phoneCountries.filter(country => e164.startsWith(country.dialCode));
   const longest = Math.max(0, ...matches.map(country => country.dialCode.length));
   const candidates = matches.filter(country => country.dialCode.length === longest);
 
-  return candidates.find(country => country.iso2Code === preferred.iso2Code) ?? candidates[0];
+  return (
+    candidates.find(country => country.iso2Code === preferred.iso2Code) ??
+    candidates.find(country => country.iso2Code === PRIMARY_BY_DIAL[country.dialCode]) ??
+    candidates[0]
+  );
 };
 
 // MUI's default Autocomplete filter uses `getOptionLabel`, which we render as
