@@ -1,4 +1,5 @@
 import { LocaleType } from '@/config/locales.config';
+import { routing } from '@/i18n/routing';
 import { Blog } from '@/types/blog.type';
 import { decodeHtmlEntities } from '@/utils/static/decodeHtmlEntities';
 
@@ -18,8 +19,11 @@ const stripTags = (html: string): string =>
  * describe editorial pages — the sister sites already emit it, boat4you's blog
  * didn't (audit 25.8.2026).
  */
-export const buildBlogPostingLd = (post: Blog, locale: LocaleType) => {
-  const url = localizedUrl(locale, `/blog/${post.slug}`);
+// Posts come from WordPress in English only, so the article's identity is the
+// English URL and its language is English on every locale shell — the same
+// canonical the page's <head> declares.
+export const buildBlogPostingLd = (post: Blog) => {
+  const url = localizedUrl(routing.defaultLocale as LocaleType, `/blog/${post.slug}`);
   const description = stripTags(post.content).slice(0, 300);
 
   return {
@@ -31,7 +35,7 @@ export const buildBlogPostingLd = (post: Blog, locale: LocaleType) => {
     image: post.featuredImage?.sourceUrl ? [post.featuredImage.sourceUrl] : undefined,
     datePublished: post.date,
     dateModified: post.modified || post.date,
-    inLanguage: locale,
+    inLanguage: routing.defaultLocale,
     articleSection: post.categories?.nodes?.map(c => c.name),
     author: { '@type': 'Organization', name: 'Boat4You', url: 'https://www.boat4you.com' },
     // Same @id as the site-wide Organization node — one KG entity.

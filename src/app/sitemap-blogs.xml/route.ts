@@ -1,13 +1,12 @@
 /* eslint-disable no-await-in-loop */
-import { routing } from '@/i18n/routing';
 import { getBlogs } from '@/lib/api';
 import { BlogTeaser } from '@/types/blog.type';
 
 export const dynamic = 'force-dynamic';
 
 // Hard ceiling — protects the WP GraphQL endpoint from a runaway loop if
-// pageInfo.hasNextPage somehow returns true forever. 5,000 posts × 9 locales
-// = 45,000 URLs, well under the per-sitemap 50k limit. If we ever cross
+// pageInfo.hasNextPage somehow returns true forever. 5,000 posts = 5,000
+// URLs, well under the per-sitemap 50k limit. If we ever cross
 // this, paginate this sitemap into sitemap-blogs/[page]/blog.xml the same
 // way sitemap-yachts is paginated.
 const MAX_POSTS = 5000;
@@ -42,18 +41,17 @@ export async function GET() {
 
   const blogs = await fetchAllBlogs();
 
+  // English URLs only. Post bodies are English-only, so the eight locale
+  // copies canonicalise to the English original (see blog/[slug]/page.tsx) —
+  // a sitemap must list canonical URLs, not their duplicates.
   const urls = blogs
-    .flatMap((blog: BlogTeaser) =>
-      routing.locales.map(locale => {
-        const prefix = locale === routing.defaultLocale ? '' : `/${locale}`;
-
-        return `  <url>
-    <loc>${baseUrl}${prefix}/blog/${blog.slug}</loc>
+    .map(
+      (blog: BlogTeaser) => `  <url>
+    <loc>${baseUrl}/blog/${blog.slug}</loc>
     <lastmod>${new Date(blog.date).toISOString()}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-  </url>`;
-      })
+  </url>`
     )
     .join('\n');
 

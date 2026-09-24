@@ -14,11 +14,22 @@ const protectedPaths = [
   '/forgot-password',
 ];
 
+/**
+ * Boat pages carrying ANY query string (`?startDate=…`, `?did=l-…`,
+ * `?destinations=…`). Every such variant canonicalises to the clean
+ * `/boat/<slug>`, but Google still crawled them one by one — 51.5K of them
+ * in Search Console (24.9.2026) — while 2.6K genuinely new boats waited in
+ * "Discovered – currently not indexed". The clean boat URLs in every language
+ * (`/boat/<slug>`, `/de/boat/<slug>`, …) stay fully crawlable and in the
+ * sitemap; only the parameter copies are closed, as on the sister sites.
+ */
+const boatQueryPattern = '/boat/*?';
+
 export default function robots(): MetadataRoute.Robots {
   const disallow = routing.locales.flatMap(locale => {
     const prefix = locale === routing.defaultLocale ? '' : `/${locale}`;
 
-    return protectedPaths.map(path => `${prefix}${path}`);
+    return [...protectedPaths.map(path => `${prefix}${path}`), `${prefix}${boatQueryPattern}`];
   });
 
   return {

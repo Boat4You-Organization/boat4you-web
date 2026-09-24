@@ -8,6 +8,7 @@ import Layout from '@/components/Layout';
 import RelatedItineraries from '@/components/RelatedItineraries';
 import { LocaleType } from '@/config/locales.config';
 import { meta } from '@/config/meta';
+import { routing } from '@/i18n/routing';
 import { getBlog, getBlogWithSEO } from '@/lib/api';
 import { buildBlogPostingLd, extractFaqLd } from '@/utils/static/blogJsonLd';
 import { buildMetadata, localizedUrl } from '@/utils/static/buildMetadata';
@@ -63,16 +64,24 @@ export async function generateMetadata({
     image,
   });
 
+  // Blog bodies come from WordPress in ENGLISH ONLY — /nl/blog/<slug> is the
+  // same English article inside a Dutch page shell. Self-canonical locale
+  // copies made Search Console file 1.3K of them as "Duplicate without
+  // user-selected canonical" (24.9.2026). Every locale now points at the one
+  // English original, and hreflang lists only that (no fake language
+  // versions). Author-supplied canonical (WP-CMS field) still wins. If posts
+  // ever get real translations, switch back to per-locale canonicals.
+  const canonical = seo?.canonical || localizedUrl(routing.defaultLocale as LocaleType, path);
+
   return {
     ...baseMetadata,
     alternates: {
-      ...baseMetadata.alternates,
-      // Author-supplied canonical (WP-CMS field) wins; otherwise fall back to
-      // the locale-prefixed URL so each language indexes its own copy.
-      canonical: seo?.canonical || localizedUrl(locale as LocaleType, path),
+      canonical,
+      languages: { en: canonical, 'x-default': canonical },
     },
     openGraph: {
       ...baseMetadata.openGraph,
+      url: canonical,
       type: 'article',
       publishedTime: post.date,
       title: stripBrand(seo?.og_title || seo?.title || postTitle),
@@ -88,7 +97,7 @@ export async function generateMetadata({
 }
 
 const SingleBlogPage = async ({ params }: { params: Promise<{ slug: string; locale: Locale }> }) => {
-  const { slug, locale } = await params;
+  const { slug } = await params;
 
   // WP down / GraphQL error → 404, not a 500 across 9 locale URLs.
   const blog = await getBlog(slug, 10).catch(() => null);
@@ -100,7 +109,7 @@ const SingleBlogPage = async ({ params }: { params: Promise<{ slug: string; loca
   // BlogPosting (+ FAQPage when the body carries an FAQ section) structured
   // data — the boat/itinerary pages already describe themselves with schema,
   // blog posts were the one editorial surface without it (AI-guide audit 25.8).
-  const blogPostingLd = buildBlogPostingLd(blog.post, locale as LocaleType);
+  const blogPostingLd = buildBlogPostingLd(blog.post);
   const faqLd = extractFaqLd(blog.post.content);
 
   return (
