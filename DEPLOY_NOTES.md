@@ -1,5 +1,21 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-09-24 — Google preferred source made prominent: footer pill + blog cards (ac9fb841, ✅ LIVE cusma1 BUILD_ID jIJbyOKhFcfJ0U0SySwbY)
+
+Owner: the footer text link "jedva se vidi". Decision: keep yacht/booking pages quiet (their CTA is
+the inquiry), make it prominent where it has an effect — the blog (Top Stories / AI Mode for users
+who add us).
+
+- `src/components/SvgIcons/GoogleG.tsx` (4-colour Google "G", inline SVG, no Google script).
+- `FooterBottomBar.tsx`: caption link → outlined pill (`<a>`, border black200, hover blue50), same
+  slot, same key `common.googlePreferredSource`.
+- `src/components/GooglePreferredSourceCard/`: blue50 panel + primary button, rendered after the
+  article body in `SingleBlogContent.tsx` (before related itineraries/posts) and once under the
+  post grid in `BlogsSection.tsx` (`/blog`). Copy `common.googlePreferred.{title,body,button}`
+  with `{brand}` = "Boat4you", all 9 locales.
+  Verified: served `/` has the pill SVG, `/blog` and a post page render the card (SSR), link
+  `google.com/preferences/source?q=boat4you.com`. Rollback `.next.prev` (BUILD_ID yrcu9Ij1HUZkNUWPXwCuY).
+
 ## 2026-09-24 — Footer: "★ Add us as a preferred source on Google" (2a909f7d, ✅ LIVE cusma1 BUILD_ID yrcu9Ij1HUZkNUWPXwCuY)
 
 Owner (google.com/preferences): let readers add every site of the family as a Google "preferred
