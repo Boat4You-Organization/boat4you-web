@@ -1,5 +1,24 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-09-24 — Footer: "★ Add us as a preferred source on Google" (2a909f7d, ✅ LIVE cusma1 BUILD_ID yrcu9Ij1HUZkNUWPXwCuY)
+
+Owner (google.com/preferences): let readers add every site of the family as a Google "preferred
+source" (Top Stories / AI Mode ranking for that signed-in user). Google's publisher deeplink:
+`https://www.google.com/preferences/source?q=<apex domain>`; plain link, no Google script.
+
+- `src/utils/static/googlePreferredSource.ts` (new): `GOOGLE_PREFERRED_SOURCE_URL` from
+  `NEXT_PUBLIC_BASE_URL` hostname minus `www.`, fallback `boat4you.com`. ⚠️ local `.env.local`
+  has `NEXT_PUBLIC_BASE_URL=http://localhost:3000` → a local build bakes `q=localhost`; the
+  deploy recipe (prod `.env` → `.env.production.local`) bakes `q=boat4you.com` (verified in the
+  served HTML).
+- `FooterBottomBar.tsx`: one caption line under the Storyset attribution, `target=_blank
+rel=noopener noreferrer`; key `common.googlePreferredSource` in all 9 locales. Footer is global
+  (hidden by design only on payment-pending/success/cancelled).
+
+Deploy: same recipe as this morning (build 60 s, tar 30 MB, staged swap). Verified: www 200,
+served HTML contains `preferences/source?q=boat4you.com`. Rollback `.next.prev` (BUILD_ID
+7eVerb8DY51E4vKwAEFnQ = the GeoIP phone default build, also from today).
+
 ## 2026-09-24 — 📱 iPhone Duo: datumski prozor nakon preklapanja, /search header po širini, /fleet naslov, install chip — ✅ DEPLOYED
 
 Mario 19.9. („Apple duo je izašao”) → audit svih 7 stranica na formatima iPhone Dua (zatvoren 466×678 / 678×466,
