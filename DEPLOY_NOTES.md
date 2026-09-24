@@ -1,5 +1,34 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-09-24 — Phone dial code defaults to the visitor's GeoIP country (48b35996 + 8c2c0c16, ✅ LIVE cusma1 BUILD_ID 7eVerb8DY51E4vKwAEFnQ)
+
+Owner: clients who never touch the dial-code dropdown sent US-prefixed (the old hard default,
+ipapi.co often blocked) or brand-prefixed numbers. nginx on cusma1 now runs GeoIP2
+(`libnginx-mod-http-geoip2`, DB-IP country lite mmdb copied from cusma5, `conf.d/00-geoip2.conf`)
+and forwards `X-Country-Code` to the app (`location /` in `boat4you.conf`; restart ~1 s).
+
+- `src/proxy.ts`: `withGeoCountryCookie()` sets `b4y_country` (validated 2-letter, upper-case;
+  1 y, path /, lax, secure, NOT httpOnly) on all four return paths (intl response, protected
+  redirects, token-refresh response). Header absent → no cookie.
+- `src/utils/static/geoCountryCookie.ts` (new): `readGeoCountryCookie()`, browser-only, validated.
+- `src/components/PhoneInput/PhoneInput.tsx`: default = country in the prefilled form value →
+  `b4y_country` cookie → ipapi.co ONLY when the cookie is absent → UI locale when unambiguous
+  (de/fr/it/hr/pl/nl; en/es/pt map to nothing) → US. Applied only until the user types or picks.
+  Shared dial codes resolve detected country → main country (`PRIMARY_BY_DIAL`: +1 US, +44 GB,
+  +39 IT — Italy keeps the trunk 0 in E.164, the Vatican entry would drop it) → first listed.
+  E.164 output, formatting, validation (still required) and callers unchanged.
+
+Deploy: prod `.env` → `.env.production.local` → `yarn build` (59 s) → tar `.next` (30 MB) → scp →
+`_stage` → stop → `mv .next .next.prev` → start → `chown cusma1`. Verified: www 200,
+`Set-Cookie: b4y_country=HR` for a Croatian caller, inquiry modal on a boat page shows 🇭🇷 +385
+(was 🇺🇸 +1). Rollback: `.next.prev` (BUILD_ID y4M4frrDu66tpFBorIi6t).
+Pre-ship guard gotcha: `grep -rl localhost:8443 .next/server` hits a code COMMENT inside a
+source map — check the context before aborting.
+
+Known pre-existing (not touched): `PhoneInput` never displays a prefilled form value (a logged-in
+user with a stored number sees an empty required field while the form silently holds `+385…`);
+the US-style placeholder `(123) 456-7890` shows for every country.
+
 ## 2026-09-18 — 🔴 Boat page: hard-coded "free before 14 Feb 2025" removed + catalogue lists cached — ✅ LIVE 18.9. 20:34 UTC (BUILD_ID `53ZK-Ln4ywrBv16qhyqZt`, swap 1 s; verified: boat page en/hr/de shows the 72 h text and no 2025 date, /terms-and-conditions carries the ADR bullet)
 
 **Found during the 16.-18.9.2026 cusma2 load incident review** (see backend DEPLOY_NOTES same date).
