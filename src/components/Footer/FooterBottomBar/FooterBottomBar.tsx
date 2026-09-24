@@ -3,6 +3,7 @@ import { useTranslations } from 'next-intl';
 
 import AssuranceBadges from '@/components/AssuranceBadges';
 import CookieSettingsButton from '@/components/Footer/CookieSettingsButton';
+import GoogleG from '@/components/SvgIcons/GoogleG';
 import TripAdvisorRating from '@/components/TripAdvisorRating';
 import colors from '@/styles/themes/colors';
 import { GOOGLE_PREFERRED_SOURCE_URL } from '@/utils/static/googlePreferredSource';
@@ -50,18 +51,41 @@ const FooterBottomBar = () => {
         </Typography>
         {/* Google "preferred source" deeplink — a signed-in reader can mark
             boat4you as a preferred source so our pages rank higher for them in
-            Top Stories / AI Mode. Plain link, no script; styled like the legal
-            lines above. Domain derives from NEXT_PUBLIC_BASE_URL at build time. */}
-        <Typography variant="caption" component="p" color={colors.black600} sx={{ mt: 0.5, opacity: 0.75 }}>
-          <a
+            Top Stories / AI Mode. An outlined pill with Google's "G" so it
+            reads as an action (the plain caption link was barely visible),
+            while the muted border and 12px text keep it secondary to the real
+            CTAs. Plain link, no script; domain derives from
+            NEXT_PUBLIC_BASE_URL at build time. */}
+        <Box sx={{ mt: 1.5 }}>
+          <Box
+            component="a"
             href={GOOGLE_PREFERRED_SOURCE_URL}
             target="_blank"
             rel="noopener noreferrer"
-            style={{ color: 'inherit', textDecoration: 'underline' }}
+            sx={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: 0.75,
+              maxWidth: '100%',
+              px: 1.5,
+              py: 0.75,
+              borderRadius: '999px',
+              border: `1px solid ${colors.black200}`,
+              color: colors.black600,
+              fontSize: 12,
+              fontWeight: 600,
+              lineHeight: 1.3,
+              textDecoration: 'none',
+              transition: 'background-color .2s ease, border-color .2s ease',
+              '&:hover': { backgroundColor: colors.blue50, borderColor: colors.blue200 },
+            }}
           >
-            ★ {t('googlePreferredSource')}
-          </a>
-        </Typography>
+            <Box component="span" sx={{ display: 'inline-flex', flexShrink: 0 }}>
+              <GoogleG size={16} />
+            </Box>
+            {t('googlePreferredSource')}
+          </Box>
+        </Box>
         {/* Cookie-consent withdrawal (audit C4) — re-opens the consent UI; GDPR Art. 7(3). */}
         <Box sx={{ mt: 0.5 }}>
           <CookieSettingsButton />

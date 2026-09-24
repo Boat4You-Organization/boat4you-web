@@ -417,6 +417,11 @@
   "madeBy": "realizzato da",
   "allRightsReserved": "Tutti i diritti riservati.",
   "googlePreferredSource": "Aggiungici come fonte preferita su Google",
+  "googlePreferred": {
+    "title": "Ti piacciono le nostre guide? Trovale per prime su Google.",
+    "body": "Aggiungi {brand} come fonte preferita: Google mostrerà i nostri articoli più in alto nelle Notizie principali e nelle risposte IA. Un clic, gratis, con il tuo account Google.",
+    "button": "Aggiungi come fonte preferita"
+  },
   "shortDescription": "Una piattaforma charter globale che serve oltre 10 mila clienti soddisfatti con più di 23 mila yacht premium nella nostra flotta.",
   "validation": {
     "required": "Obbligatorio",

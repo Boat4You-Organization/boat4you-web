@@ -477,6 +477,11 @@
   "madeBy": "made by",
   "allRightsReserved": "All rights reserved.",
   "googlePreferredSource": "Add us as a preferred source on Google",
+  "googlePreferred": {
+    "title": "Like our guides? Get them first on Google.",
+    "body": "Add {brand} as a preferred source and Google will show our articles higher in your Top Stories and AI answers. One click, free, with your Google account.",
+    "button": "Add us as a preferred source"
+  },
   "shortDescription": "A global charter platform serving over 10k happy customers with over 23k premium yachts in our fleet.",
   "validation": {
     "required": "Required",

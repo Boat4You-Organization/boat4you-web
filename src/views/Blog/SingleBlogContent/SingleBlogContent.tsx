@@ -7,6 +7,7 @@ import dayjs from 'dayjs';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
+import GooglePreferredSourceCard from '@/components/GooglePreferredSourceCard';
 import SocialIcon from '@/components/SocialIcon';
 import LinkIcon from '@/components/SvgIcons/Link';
 import Facebook from '@/components/SvgIcons/Socials/Facebook';
@@ -80,6 +81,12 @@ const SingleBlogContent = ({ slug, title, date, categories, featuredImage, conte
         </Box>
       </Stack>
       <div dangerouslySetInnerHTML={{ __html: content }} className={styles.body} />
+      {/* Google "preferred source" nudge right where the reader finishes the
+          article, ahead of the itinerary / related-post strips. Same 846px
+          column as the body so it reads as the article's closing block. */}
+      <Box maxWidth={846} marginInline="auto" mt={{ xs: 5, md: 7 }}>
+        <GooglePreferredSourceCard />
+      </Box>
     </Container>
   );
 };

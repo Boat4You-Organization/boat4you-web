@@ -461,6 +461,11 @@
   "madeBy": "gemaakt door",
   "allRightsReserved": "Alle rechten voorbehouden.",
   "googlePreferredSource": "Voeg ons toe als voorkeursbron op Google",
+  "googlePreferred": {
+    "title": "Bevallen onze gidsen? Zie ze als eerste op Google.",
+    "body": "Voeg {brand} toe als voorkeursbron en Google toont onze artikelen hoger in Topnieuws en AI-antwoorden. Eén klik, gratis, met je Google-account.",
+    "button": "Toevoegen als voorkeursbron"
+  },
   "shortDescription": "Een wereldwijd charterplatform dat meer dan 10.000 tevreden klanten bedient met meer dan 23.000 premium jachten in onze vloot.",
   "validation": {
     "required": "Verplicht",

@@ -417,6 +417,11 @@
   "madeBy": "feito por",
   "allRightsReserved": "Todos os direitos reservados.",
   "googlePreferredSource": "Adicione-nos como fonte preferida no Google",
+  "googlePreferred": {
+    "title": "Gosta dos nossos guias? Encontre-os primeiro no Google.",
+    "body": "Adicione a {brand} como fonte preferida e o Google mostrará os nossos artigos mais acima nas Principais notícias e nas respostas de IA. Um clique, grátis, com a sua conta Google.",
+    "button": "Adicionar como fonte preferida"
+  },
   "shortDescription": "Uma plataforma global de charter que atende mais de 10 mil clientes satisfeitos com mais de 23 mil iates premium em nossa frota.",
   "validation": {
     "required": "Obrigatório",

@@ -2,10 +2,11 @@
 
 import React from 'react';
 
-import { Button, CircularProgress, Container, Grid, Stack, Tabs, Typography } from '@mui/material';
+import { Box, Button, CircularProgress, Container, Grid, Stack, Tabs, Typography } from '@mui/material';
 import { useTranslations } from 'next-intl';
 
 import BlogCard from '@/components/BlogCard';
+import GooglePreferredSourceCard from '@/components/GooglePreferredSourceCard';
 import BlogsSectionLoader from '@/components/Loaders/Blog/BlogsSectionLoader';
 import PillTab from '@/components/PillTab';
 import blogCategories from '@/config/blogCategories.config';
@@ -77,6 +78,11 @@ const BlogsSection = ({ initial }: { initial?: InitialBlogList }) => {
               </Grid>
             ))}
           </Grid>
+          {/* Google "preferred source" nudge — once per listing, under the
+              grid and above Load More so it never interleaves with the cards. */}
+          <Box mb="22px">
+            <GooglePreferredSourceCard />
+          </Box>
           {hasNextPage && (
             <Stack direction="column" justifyContent="center" alignItems="center" mb="22px">
               {isLoadingMore ? (

@@ -422,6 +422,11 @@
   "madeBy": "izradio",
   "allRightsReserved": "Sva prava pridržana.",
   "googlePreferredSource": "Dodajte nas kao preferirani izvor na Googleu",
+  "googlePreferred": {
+    "title": "Sviđaju vam se naši vodiči? Čitajte ih prvi na Googleu.",
+    "body": "Dodajte {brand} kao preferirani izvor i Google će naše članke prikazivati više u Glavnim vijestima i AI odgovorima. Jedan klik, besplatno, s vašim Google računom.",
+    "button": "Dodaj kao preferirani izvor"
+  },
   "shortDescription": "Globalna charter platforma koja opslužuje preko 10 tisuća zadovoljnih klijenata s preko 23 tisuće premium jahti u našoj floti.",
   "validation": {
     "required": "Obavezno",
