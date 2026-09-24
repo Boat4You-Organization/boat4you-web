@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Controller, type ControllerProps, type FieldError, type Validate, useFormContext } from 'react-hook-form';
 
 import Autocomplete, { createFilterOptions } from '@mui/material/Autocomplete';
@@ -9,9 +9,11 @@ import FormControl from '@mui/material/FormControl';
 import FormHelperText from '@mui/material/FormHelperText';
 import FormLabel from '@mui/material/FormLabel';
 import TextField, { TextFieldProps } from '@mui/material/TextField';
+import { useLocale } from 'next-intl';
 
 import ChevronDown from '@/components/SvgIcons/ChevronDown';
 import { PhoneCountry, phoneCountries } from '@/config/phone-countries.config';
+import { readGeoCountryCookie } from '@/utils/static/geoCountryCookie';
 
 import styles from './PhoneInput.module.scss';
 
@@ -27,10 +29,35 @@ export interface PhoneInputProps extends Omit<TextFieldProps, 'name'> {
 const getNestedError = (name: string, errors: any): FieldError | undefined =>
   name.split(/[.[\]]+/).reduce((acc, key) => acc?.[key], errors);
 
-const getDefaultCountry = (): PhoneCountry => {
-  const defaultCountry = phoneCountries.find(country => country.iso2Code === 'US');
+const findCountry = (iso2Code: string | null | undefined): PhoneCountry | undefined =>
+  iso2Code ? phoneCountries.find(country => country.iso2Code === iso2Code) : undefined;
 
-  return defaultCountry || phoneCountries[0];
+const getDefaultCountry = (): PhoneCountry => findCountry('US') || phoneCountries[0];
+
+// Locales that imply exactly one country. `en` is spoken everywhere, so it
+// maps to nothing and falls through to the hard US default.
+const LOCALE_COUNTRY_MAP: Record<string, string> = {
+  de: 'DE',
+  fr: 'FR',
+  it: 'IT',
+  es: 'ES',
+  hr: 'HR',
+  pt: 'PT',
+  pl: 'PL',
+  nl: 'NL',
+};
+
+// A prefilled E.164 value (logged-in profile, previous inquiry) already names
+// its country. Longest matching dial code wins (+1264 Anguilla over +1); among
+// countries sharing one code (+1 US/CA/PR, +44 GB/GG/IM/JE, +39 IT/VA) the
+// detected country wins, else the first listed — the E.164 output is identical
+// either way, only the flag differs.
+const findCountryByDialCode = (e164: string, preferred: PhoneCountry): PhoneCountry | undefined => {
+  const matches = phoneCountries.filter(country => e164.startsWith(country.dialCode));
+  const longest = Math.max(0, ...matches.map(country => country.dialCode.length));
+  const candidates = matches.filter(country => country.dialCode.length === longest);
+
+  return candidates.find(country => country.iso2Code === preferred.iso2Code) ?? candidates[0];
 };
 
 // MUI's default Autocomplete filter uses `getOptionLabel`, which we render as
@@ -42,7 +69,17 @@ const countryFilter = createFilterOptions<PhoneCountry>({
   stringify: option => `${option.name} ${option.iso2Code} ${option.dialCode}`,
 });
 
-const detectUserCountry = (): Promise<PhoneCountry> =>
+// Priority: (1) the `b4y_country` cookie the proxy mirrors from nginx GeoIP2
+// — a US client on the Greek site must get +1, not the brand's +30 — then
+// (2) ipapi.co ONLY when that cookie is absent (dev, or a request that did
+// not pass through nginx), then (3) the UI locale when it implies one
+// country, then (4) US.
+const detectUserCountry = (locale: string): Promise<PhoneCountry> => {
+  const fallback = findCountry(LOCALE_COUNTRY_MAP[locale]) ?? getDefaultCountry();
+  const geoCountryCode = readGeoCountryCookie();
+
+  if (geoCountryCode) return Promise.resolve(findCountry(geoCountryCode) ?? fallback);
+
   // ipapi.co is third-party — ad-blockers / privacy extensions / corporate
   // proxies routinely block it. Some Chrome extensions even override
   // window.fetch and throw synchronously *before* the await runs ("Failed
@@ -50,18 +87,19 @@ const detectUserCountry = (): Promise<PhoneCountry> =>
   // as an uncaught rejection that the Next.js dev overlay surfaces.
   // Returning the chain instead of awaiting keeps every failure mode —
   // sync throw, network error, non-OK status, malformed body — funneled
-  // through a single .catch that returns the default country.
-  Promise.resolve()
+  // through a single .catch that returns the fallback country.
+  return Promise.resolve()
     .then(() => fetch('https://ipapi.co/json/'))
     .then(response => (response.ok ? response.json() : null))
-    .then((data: { country_code?: string } | null) => {
-      const countryCode = data?.country_code;
+    .then((data: { country_code?: string } | null) => findCountry(data?.country_code) ?? fallback)
+    .catch(() => fallback);
+};
 
-      if (!countryCode) return getDefaultCountry();
-
-      return phoneCountries.find(country => country.iso2Code === countryCode) ?? getDefaultCountry();
-    })
-    .catch(() => getDefaultCountry());
+// (a) a country already in the form value beats (b)-(d) the detected default.
+const resolveInitialCountry = (prefilledValue: unknown, locale: string): Promise<PhoneCountry> =>
+  detectUserCountry(locale).then(
+    detected => (typeof prefilledValue === 'string' && findCountryByDialCode(prefilledValue, detected)) || detected
+  );
 
 export const PhoneInput = ({
   name,
@@ -73,17 +111,27 @@ export const PhoneInput = ({
   placeholder,
   ...textFieldProps
 }: PhoneInputProps) => {
-  const { control, formState } = useFormContext();
+  const { control, formState, getValues } = useFormContext();
+  const locale = useLocale();
   const [selectedCountry, setSelectedCountry] = useState<PhoneCountry>(getDefaultCountry());
   const [phoneNumber, setPhoneNumber] = useState<string>('');
+  // Once the visitor typed digits or picked a country, the (async) detected
+  // default must not yank their choice away from under them.
+  const userTouchedRef = useRef(false);
 
   const error = getNestedError(name, formState.errors);
 
   useEffect(() => {
-    detectUserCountry().then(country => {
-      setSelectedCountry(country);
+    let cancelled = false;
+
+    resolveInitialCountry(getValues(name), locale).then(country => {
+      if (!cancelled && !userTouchedRef.current) setSelectedCountry(country);
     });
-  }, []);
+
+    return () => {
+      cancelled = true;
+    };
+  }, [getValues, locale, name]);
 
   const formatPhoneNumber = (value: string, country: PhoneCountry): string => {
     const cleaned = value.replace(/\D/g, '');
@@ -129,6 +177,7 @@ export const PhoneInput = ({
     const inputValue = event.target.value;
     const formatted = formatPhoneNumber(inputValue, selectedCountry);
 
+    userTouchedRef.current = true;
     setPhoneNumber(formatted);
 
     const e164 = getE164Format(selectedCountry, formatted);
@@ -138,6 +187,7 @@ export const PhoneInput = ({
 
   const handleCountryChange = (newCountry: PhoneCountry | null, onChange: (value: string) => void) => {
     if (newCountry) {
+      userTouchedRef.current = true;
       setSelectedCountry(newCountry);
 
       const e164 = getE164Format(newCountry, phoneNumber);

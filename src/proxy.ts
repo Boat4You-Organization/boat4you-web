@@ -3,6 +3,7 @@ import { NextRequest, NextResponse } from 'next/server';
 
 import { AuthKeys, POST_REQUEST_PARAMETERS } from './config/constants.config';
 import { routing } from './i18n/routing';
+import { GEO_COUNTRY_COOKIE_NAME, normalizeCountryCode } from './utils/static/geoCountryCookie';
 
 const intlMiddleware = createIntlMiddleware(routing);
 // `/enter-your-details`, `/payment`, `/payment-pending`, `/payment-success` and
@@ -36,6 +37,25 @@ async function refreshAccessToken(refreshToken: string): Promise<string | null> 
   return null;
 }
 
+// nginx GeoIP2 sends `X-Country-Code` on every proxied request. Mirror it into
+// a cookie the browser can read (NOT httpOnly) so client components — the phone
+// field's dial-code default — know the visitor's country without a third-party
+// lookup. Absent header (dev, no nginx) → leave whatever cookie is there.
+function withGeoCountryCookie(req: NextRequest, response: NextResponse): NextResponse {
+  const country = normalizeCountryCode(req.headers.get('x-country-code'));
+
+  if (country && req.cookies.get(GEO_COUNTRY_COOKIE_NAME)?.value !== country) {
+    response.cookies.set(GEO_COUNTRY_COOKIE_NAME, country, {
+      path: '/',
+      maxAge: 60 * 60 * 24 * 365,
+      sameSite: 'lax',
+      secure: true,
+    });
+  }
+
+  return response;
+}
+
 export async function proxy(req: NextRequest) {
   const { pathname } = req.nextUrl;
   const pathnameWithoutLocale = pathname.replace(/^\/[a-z]{2}(?=\/|$)/, '') || '/';
@@ -62,19 +82,19 @@ export async function proxy(req: NextRequest) {
         maxAge: 60 * 60 * 24 * 7,
       });
 
-      return response;
+      return withGeoCountryCookie(req, response);
     }
 
     if (isProtectedRoute) {
-      return NextResponse.redirect(new URL(`/${currentLocale}`, req.url));
+      return withGeoCountryCookie(req, NextResponse.redirect(new URL(`/${currentLocale}`, req.url)));
     }
   }
 
   if (isProtectedRoute && !accessToken) {
-    return NextResponse.redirect(new URL(`/${currentLocale}`, req.url));
+    return withGeoCountryCookie(req, NextResponse.redirect(new URL(`/${currentLocale}`, req.url)));
   }
 
-  return intlMiddleware(req) || NextResponse.next();
+  return withGeoCountryCookie(req, intlMiddleware(req) || NextResponse.next());
 }
 
 export const config = {
