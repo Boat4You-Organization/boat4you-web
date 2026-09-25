@@ -10,6 +10,7 @@ import {
   DestinationIndex,
   ResolvedDestination,
   fleetCountForDid,
+  fleetTotalForDid,
   loadDestinationIndex,
   resolveDestinationName,
 } from '@/utils/server/destinationDid';
@@ -135,22 +136,34 @@ export const evaluateLanding = async (
 
   if (!(await inOffer(resolved))) return NOT_INDEXABLE;
 
+  const dids = resolved.dids.join(',');
+
   // A promoted country is always a landing (owner rule) — as long as the
   // catalogue has boats there at all (0 = API trouble or an empty page).
+  // `resolved.count` comes from /public/countries-count, which also counts
+  // boats outside the bookable catalogue (Croatia 5,658 vs 3,866 listed), so
+  // the fleet reported (and shown next to links) is the listing total; the
+  // count endpoint is only the fallback when that query fails.
   if (!boatType && resolved.kind === LocationType.COUNTRY) {
-    return { fleet: resolved.count, indexableLocales: resolved.count > 0 ? ALL_LOCALES : [] };
+    const fleet = (await fleetTotalForDid(dids)) ?? resolved.count;
+
+    return { fleet, indexableLocales: fleet > 0 ? ALL_LOCALES : [] };
   }
 
   // The text check is a directory lookup — do it before the fleet query, so
   // a place × type without its own page costs no API call (the fleet is then
-  // reported as unknown: 0 for a type landing).
+  // reported as unknown: 0 for a type landing; the count endpoint's figure
+  // for a place, which callers never display for a hub without a link).
   const files = await Promise.all(
     routing.locales.map(locale => curatedFileFor(locale, resolved.name, boatType, { typeSpecificOnly: !!boatType }))
   );
 
   if (!files.some(Boolean)) return { fleet: boatType ? 0 : resolved.count, indexableLocales: [] };
 
-  const fleet = boatType ? await fleetCountForDid(resolved.dids.join(','), boatType) : resolved.count;
+  // The gate counts what the landing lists (/public/yachts totalElements):
+  // /public/locations-count disagrees both ways (Paros l-151: 10 there, 29
+  // listed; Paros port l-1845: 70 there, 44 listed). One cached size=1 query.
+  const fleet = await fleetCountForDid(dids, boatType);
 
   if (fleet < MIN_LANDING_FLEET) return { fleet, indexableLocales: [] };
 

@@ -151,22 +151,32 @@ export const loadDestinationIndex = cache(async (): Promise<DestinationIndex | n
 /**
  * Fleet size behind one did (or a comma-joined did list), optionally for one
  * boat type and/or restricted to a country whitelist (comma-joined ISO
- * codes) — shared with the itinerary CTA resolver and the landing gate.
+ * codes): the `/public/yachts` totalElements, i.e. exactly the number the
+ * landing lists — unlike `/public/countries-count` / `locations-count`,
+ * which also count boats outside the bookable catalogue. Shared with the
+ * itinerary CTA resolver and the landing gate. null when the API failed.
  * The backend reads the boat type as `vesselType` (see fetchYachts).
  */
-export const fleetCountForDid = async (
+export const fleetTotalForDid = async (
   did: string,
   boatType?: string | null,
   countryCodes?: string | null
-): Promise<number> => {
+): Promise<number | null> => {
   const typeQuery = boatType ? `&vesselType=${encodeURIComponent(boatType)}` : '';
   const countryQuery = countryCodes ? `&countryCodes=${encodeURIComponent(countryCodes)}` : '';
   const json = await fetchJson<{ page?: { totalElements?: number }; totalElements?: number }>(
     `${apiBase()}/public/yachts?did=${encodeURIComponent(did)}${typeQuery}${countryQuery}&size=1`
   );
 
-  return json?.page?.totalElements ?? json?.totalElements ?? 0;
+  return json ? (json.page?.totalElements ?? json.totalElements ?? 0) : null;
 };
+
+/** fleetTotalForDid with an API failure read as 0. */
+export const fleetCountForDid = async (
+  did: string,
+  boatType?: string | null,
+  countryCodes?: string | null
+): Promise<number> => (await fleetTotalForDid(did, boatType, countryCodes)) ?? 0;
 
 const countFor = async (index: DestinationIndex, location: IndexedLocation): Promise<number> => {
   // Countries and marinas come with a count; a country/marina missing from
