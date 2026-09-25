@@ -5,6 +5,10 @@
 Grana `feat/models-facts-reviews` (worktree `boat4you-web/b4y-web-wave2`, od `fc1ee504`), NIJE pushano ni deployano.
 Commiti: `ca063d26` prag · `8e7f7778` model stranice · `ed52be78` charter facts · `e9e9ded2` review forma ·
 `9c84af6b` memo kataloga · `041ed4c9` PL/HR množina · `8f5ba69e` sitemap-models bez build prerendera.
+Popravci recenzije: `081fdc66` GA/Ads se ne učitavaju na `/review/*` (token više ne ide u `page_location`) ·
+`ed8d3c7c` facts tablica stane na 375 px · `50cda4c2` model stranice: rasponi p5–p95 (bez outliera iz partnerskih
+podataka), bez „46–46 ft", meta = tipičan tjedan p25–p75, gumb bez broja, link s broda samo za 12 promoviranih
+zemalja, „Lagoon 450 Sport" → 450 S, Motor Sailer / Sunsail / The Moorings / „Gulet"-jezgre bez stranice.
 
 **1. Prag landinga (Mario 25.9.):** `MIN_LANDING_FLEET = 10` u `src/utils/server/landingGate.ts` (jedino mjesto).
 Promovirana država (12) = uvijek indeksabilna (ako ima brodova, sva 9 jezika); regija / baza / destinacija × tip / model
@@ -58,8 +62,8 @@ Namespace `review` (klijentski samo u tom segmentu).
 
 **Pre-existing (nije dirano):** backend spaja „Marina Frapa | Rogoznica" (l-2029) s „Marina Frapa Dubrovnik" (l-775) u
 jedan red `/public/locations` → landing „marina frapa dubrovnik" nosi i Rogoznicu; FR/IT/PT H1 na /search „à Grèce" /
-„a Grecia" / „em Grécia" (predlošci `searchH1NoBoatType`); GA `page_location` nosi token na /review, /unsubscribe,
-/trip (isti obrazac kao postojeće token stranice); inquiry server action ide s IP-a web servera pa svi dijele backend
+„a Grecia" / „em Grécia" (predlošci `searchH1NoBoatType`); GA `page_location` nosi token na /unsubscribe i
+/trip (/review popravljen u `081fdc66`); inquiry server action ide s IP-a web servera pa svi dijele backend
 rate-limit (5/min); ISR piše zapis i za 404 na `/yachts/<bilo što>` (kao /boat).
 
 ## 2026-09-25 — 🧭 /search landing: filtriranje, SSR tekstovi, sitemap = index gate — ⏳ NIJE DEPLOYANO
