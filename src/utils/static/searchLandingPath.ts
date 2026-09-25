@@ -29,7 +29,10 @@ export const buildSearchLandingPath = (
   const unique = Array.from(new Set(list));
   const query: string[] = [];
 
-  if (unique.length) query.push(`destinations=${encodeURIComponent(unique.join(','))}`);
+  // `'` is left alone by encodeURIComponent but percent-encoded by the URL
+  // parser in a query (WHATWG "special-query" set), so the canonical Next
+  // renders read `%27` while the sitemap said `'` — encode it here too.
+  if (unique.length) query.push(`destinations=${encodeURIComponent(unique.join(',')).replace(/'/g, '%27')}`);
 
   if (boatType) query.push(`boatTypes=${encodeURIComponent(boatType)}`);
 

@@ -1,29 +1,44 @@
 import 'server-only';
 
+import { POPULAR_SEARCHES } from '@/config/popular-searches.config';
+import { PROMOTED_COUNTRY_CODES, isPromotedCountry } from '@/config/promoted-countries.config';
 import { routing } from '@/i18n/routing';
 import { VesselType } from '@/models/yacht.model';
-import { hasCuratedSeoFile } from '@/utils/server/curatedSeoContent';
-import { ResolvedDestination, fleetCountForDid } from '@/utils/server/destinationDid';
-import { isLandingExpressible } from '@/utils/static/searchLandingPath';
+import { LocationType } from '@/types/location.type';
+import { curatedFileFor } from '@/utils/server/curatedSeoContent';
+import {
+  DestinationIndex,
+  ResolvedDestination,
+  fleetCountForDid,
+  loadDestinationIndex,
+  resolveDestinationName,
+} from '@/utils/server/destinationDid';
+import { aliasNamesForDestSlug, parseCuratedFileSlug, slugifyDestination } from '@/utils/static/curatedSeoSlug';
+import { destinationSlug, isLandingExpressible } from '@/utils/static/searchLandingPath';
 
 /**
  * ONE index predicate for the destination landing pages, shared by the
- * /search generateMetadata (robots + hreflang) and the location / category
- * sitemaps, so the sitemaps submit exactly the URLs the page lets Google
- * index (before, ~96% of sitemap-locations answered noindex).
+ * /search generateMetadata (robots + hreflang), the location / category
+ * sitemaps and every internal link that should only point at indexable hubs
+ * (boat breadcrumb, blog and itinerary link blocks), so the sitemaps submit
+ * exactly the URLs the page lets Google index.
  *
- * A landing `/search?destinations=<name>[&boatTypes=<TYPE>]` is indexable in
- * a locale when:
- *   - the name resolves to a catalogue place whose name can carry the URL
- *     (no comma), and the URL spelling is that canonical name;
- *   - the fleet behind it is at least MIN_LANDING_FLEET — for a boat-type
- *     landing the fleet OF THAT TYPE (a 0-catamaran page is "No exact
- *     matches", not a landing);
- *   - the curated corpus has a page for it in that locale — for a boat-type
- *     landing a boat-type page, not the destination overview it falls back
- *     to for display (that would duplicate the destination landing).
+ * Owner decision 25.9.2026:
+ *   - the 12 promoted countries are always landings (any boats at all);
+ *   - every other generated landing — region, base/marina, destination ×
+ *     boat type — needs at least MIN_LANDING_FLEET active boats (of that
+ *     type, for a type landing) AND unique curated text in that locale.
+ *
+ * "Unique" means the text is this landing's own: a type landing needs a
+ * type page (not the destination overview it falls back to for display),
+ * and a place that reads its text through an alias (curatedSeoSlug.ts)
+ * loses it when another catalogue place owns that file by name.
+ *
+ * Only places in the offer (the promoted countries) qualify; a region the
+ * catalogue lists without a country (MMK's "Dubrovnik / Montenegro") counts
+ * when its whole fleet lies in promoted countries.
  */
-export const MIN_LANDING_FLEET = 1;
+export const MIN_LANDING_FLEET = 10;
 
 export interface LandingGate {
   /** Fleet behind the landing (of the boat type, when there is one). */
@@ -33,22 +48,113 @@ export interface LandingGate {
 }
 
 const NOT_INDEXABLE: LandingGate = { fleet: 0, indexableLocales: [] };
+const ALL_LOCALES: string[] = [...routing.locales];
+const PROMOTED_CODES = Array.from(PROMOTED_COUNTRY_CODES).join(',');
+
+/** Whole fleet behind `dids` sits in promoted countries (for regions listed
+ *  without a country). One cached size=1 query with the backend's country
+ *  whitelist, compared with the unfiltered count. */
+const fleetIsPromoted = async (dids: string, total: number): Promise<boolean> => {
+  if (total <= 0) return false;
+
+  const promoted = await fleetCountForDid(dids, null, PROMOTED_CODES);
+
+  return promoted === total;
+};
+
+const slugOwners = new WeakMap<DestinationIndex, Map<string, string[]>>();
+
+/** File-name prefix → catalogue names (and popular labels) that read it by
+ *  their own slug. Built once per index. */
+export const directOwnersOf = (index: DestinationIndex, destSlug: string): string[] => {
+  let map = slugOwners.get(index);
+
+  if (!map) {
+    map = new Map();
+
+    const add = (name: string) => {
+      const slug = slugifyDestination(name);
+      const list = map!.get(slug) ?? [];
+
+      if (!list.includes(name)) list.push(name);
+
+      map!.set(slug, list);
+    };
+
+    // byName keys are normalised names ("marina kastela"), which slugify to
+    // the same prefix as the display name.
+    index.byName.forEach((_, key) => add(key));
+    POPULAR_SEARCHES.forEach(spec => add(spec.displayLabel));
+    slugOwners.set(index, map);
+  }
+
+  return map.get(destSlug) ?? [];
+};
+
+/**
+ * Whether the text in `file` belongs to the landing `name`. A place that
+ * reads the file under its own slug owns it. A place that borrows it through
+ * an alias owns it only when no other place resolves to it by name, and —
+ * among several borrowers — when it sorts first (deterministic, so exactly
+ * one landing carries each text).
+ */
+const ownsCuratedFile = async (index: DestinationIndex, name: string, file: string): Promise<boolean> => {
+  const key = parseCuratedFileSlug(file);
+
+  if (!key) return false;
+
+  const self = destinationSlug(name);
+  const others = async (names: string[]) =>
+    (await Promise.all(names.map(n => resolveDestinationName(index, n)))).filter(
+      (r): r is ResolvedDestination => !!r && destinationSlug(r.name) !== self && isLandingExpressible(r.name)
+    );
+
+  if ((await others(directOwnersOf(index, key.dest))).length) return false;
+
+  if (slugifyDestination(name) === key.dest) return true;
+
+  const borrowers = await others(aliasNamesForDestSlug(key.dest));
+
+  return borrowers.every(b => destinationSlug(b.name) > self);
+};
+
+const inOffer = async (resolved: ResolvedDestination): Promise<boolean> => {
+  if (resolved.countryCode) return isPromotedCountry(resolved.countryCode);
+
+  // Countries always carry a code; a code-less region qualifies when its
+  // whole fleet is in promoted countries.
+  return resolved.kind !== LocationType.COUNTRY && fleetIsPromoted(resolved.dids.join(','), resolved.count);
+};
 
 export const evaluateLanding = async (
   resolved: ResolvedDestination | null,
-  boatType: VesselType | null
+  boatType: VesselType | null,
+  indexArg?: DestinationIndex | null
 ): Promise<LandingGate> => {
   if (!resolved || !isLandingExpressible(resolved.name)) return NOT_INDEXABLE;
 
+  if (!(await inOffer(resolved))) return NOT_INDEXABLE;
+
   const fleet = boatType ? await fleetCountForDid(resolved.dids.join(','), boatType) : resolved.count;
+
+  // A promoted country is always a landing (owner rule) — as long as the
+  // catalogue has boats there at all (0 = API trouble or an empty page).
+  if (!boatType && resolved.kind === LocationType.COUNTRY) {
+    return { fleet, indexableLocales: fleet > 0 ? ALL_LOCALES : [] };
+  }
 
   if (fleet < MIN_LANDING_FLEET) return { fleet, indexableLocales: [] };
 
-  const hasText = await Promise.all(
-    routing.locales.map(locale => hasCuratedSeoFile(locale, resolved.name, boatType, { typeSpecificOnly: !!boatType }))
-  );
+  const index = indexArg ?? (await loadDestinationIndex());
 
-  return { fleet, indexableLocales: routing.locales.filter((_, i) => hasText[i]) };
+  if (!index) return { fleet, indexableLocales: [] };
+
+  const files = await Promise.all(
+    routing.locales.map(locale => curatedFileFor(locale, resolved.name, boatType, { typeSpecificOnly: !!boatType }))
+  );
+  const owned = await Promise.all(files.map(file => (file ? ownsCuratedFile(index, resolved.name, file) : false)));
+
+  return { fleet, indexableLocales: routing.locales.filter((_, i) => owned[i]) };
 };
 
 /**

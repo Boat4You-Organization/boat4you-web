@@ -1,6 +1,6 @@
 import { cache } from 'react';
 
-import { readFile } from 'node:fs/promises';
+import { readFile, readdir } from 'node:fs/promises';
 import path from 'node:path';
 import 'server-only';
 
@@ -88,7 +88,7 @@ const CORPUS_LABEL_TARGET: Record<string, string> = {
 
 /** Boat-type value from any of the corpus spellings (boat_types=Sailing Yacht,
  *  boatType=MotorYacht, vesselType=CATAMARAN…), or null when not a known type. */
-const corpusBoatType = (params: URLSearchParams): VesselType | null => {
+export const corpusBoatType = (params: URLSearchParams): VesselType | null => {
   const raw =
     params.get('boatTypes') ??
     params.get('boat_types') ??
@@ -156,7 +156,7 @@ const resolveLabel = async (index: DestinationIndex, label: string): Promise<Res
  * when the did is just the country of a more specific label
  * (`Calabria&did=c-110`).
  */
-const corpusLinkTarget = async (
+export const corpusLinkTarget = async (
   index: DestinationIndex,
   label: string,
   didParam: string,
@@ -255,23 +255,70 @@ const rewriteSearchLinks = async (html: string, locale: string): Promise<string>
   return out + html.slice(cursor);
 };
 
+const corpusListings = new Map<string, Promise<Set<string>>>();
+
 /**
- * Whether the corpus has a page for (destination × boat type) in `locale`.
- * Cheap (memoised file reads, no link rewriting) — the index gate and the
- * sitemaps use it. `typeSpecificOnly` ignores the overview fallback.
+ * The corpus page slugs of one locale (a directory listing, static per
+ * deploy, so read once per process and locale). The gate and the sitemaps
+ * check existence against it instead of reading ~12.9K files.
  */
+const corpusSlugSet = (locale: string): Promise<Set<string>> => {
+  if (!isLocale(locale)) return Promise.resolve(new Set());
+
+  let listing = corpusListings.get(locale);
+
+  if (!listing) {
+    listing = readdir(path.join(CONTENT_ROOT, locale))
+      .then(
+        names =>
+          new Set(
+            names
+              .filter(name => name.endsWith('.html'))
+              .map(name => name.slice(0, -'.html'.length))
+              .filter(slug => SLUG_PATTERN.test(slug))
+          )
+      )
+      .catch(() => {
+        // Retry on the next call rather than caching a failed listing.
+        corpusListings.delete(locale);
+
+        return new Set<string>();
+      });
+    corpusListings.set(locale, listing);
+  }
+
+  return listing;
+};
+
+/** Every corpus page slug of the English folder (the other eight mirror it). */
+export const listCorpusSlugs = async (): Promise<string[]> =>
+  Array.from(await corpusSlugSet(routing.defaultLocale)).sort();
+
+/**
+ * Slug of the corpus file a (destination × boat type) landing reads in
+ * `locale` — the first existing candidate — or null. The index gate uses it
+ * to check that the text is this landing's own. `typeSpecificOnly` ignores
+ * the overview fallback.
+ */
+export const curatedFileFor = async (
+  locale: string,
+  destination: string,
+  boatType: string | null,
+  options: { typeSpecificOnly?: boolean } = {}
+): Promise<string | null> => {
+  const type = isVesselType(boatType) ? boatType : null;
+  const existing = await corpusSlugSet(locale);
+
+  return resolveCuratedSlugCandidates(destination, type, options).find(slug => existing.has(slug)) ?? null;
+};
+
+/** Whether the corpus has a page for (destination × boat type) in `locale`. */
 export const hasCuratedSeoFile = async (
   locale: string,
   destination: string,
   boatType: string | null,
   options: { typeSpecificOnly?: boolean } = {}
-): Promise<boolean> => {
-  const type = isVesselType(boatType) ? boatType : null;
-  const candidates = resolveCuratedSlugCandidates(destination, type, options);
-  const files = await Promise.all(candidates.map(slug => readCuratedFile(locale, slug)));
-
-  return files.some(Boolean);
-};
+): Promise<boolean> => !!(await curatedFileFor(locale, destination, boatType, options));
 
 /**
  * First existing curated file for (destination × boat type) in `locale`,

@@ -150,13 +150,19 @@ export const loadDestinationIndex = cache(async (): Promise<DestinationIndex | n
 
 /**
  * Fleet size behind one did (or a comma-joined did list), optionally for one
- * boat type — shared with the itinerary CTA resolver and the landing gate.
+ * boat type and/or restricted to a country whitelist (comma-joined ISO
+ * codes) — shared with the itinerary CTA resolver and the landing gate.
  * The backend reads the boat type as `vesselType` (see fetchYachts).
  */
-export const fleetCountForDid = async (did: string, boatType?: string | null): Promise<number> => {
+export const fleetCountForDid = async (
+  did: string,
+  boatType?: string | null,
+  countryCodes?: string | null
+): Promise<number> => {
   const typeQuery = boatType ? `&vesselType=${encodeURIComponent(boatType)}` : '';
+  const countryQuery = countryCodes ? `&countryCodes=${encodeURIComponent(countryCodes)}` : '';
   const json = await fetchJson<{ page?: { totalElements?: number }; totalElements?: number }>(
-    `${apiBase()}/public/yachts?did=${encodeURIComponent(did)}${typeQuery}&size=1`
+    `${apiBase()}/public/yachts?did=${encodeURIComponent(did)}${typeQuery}${countryQuery}&size=1`
   );
 
   return json?.page?.totalElements ?? json?.totalElements ?? 0;
