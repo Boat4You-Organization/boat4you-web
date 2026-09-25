@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "indexTitle": "Noleggio barche per modello: {models, number} modelli più richiesti",
+    "indexDescription": "Confronta i {models, number} modelli di barche a vela e catamarani con più unità a noleggio su Boat4You: caratteristiche, basi e prezzi settimanali tipici di ciascuno.",
+    "brandTitle": "Noleggio {brand}: {models, number} modelli, {count, number} barche",
+    "brandDescription": "Noleggia una {brand}: {count, number} barche in {models, number} modelli su Boat4You. Confronta caratteristiche, basi e prezzi settimanali tipici e prenota direttamente.",
+    "modelTitle": "Noleggio {model}: {count, number} barche, basi e prezzi",
+    "modelDescription": "Confronta {count, number} barche {model} a noleggio: {cabins} cabine, anno di costruzione {years}, prezzi settimanali da {price}. Destinazioni: {countries}. Prenota direttamente su Boat4You.",
+    "modelDescriptionNoPrice": "Confronta {count, number} barche {model} a noleggio: {cabins} cabine, anno di costruzione {years}. Destinazioni: {countries}. Prenota direttamente su Boat4You."
+  },
+  "breadcrumbLabel": "Percorso di navigazione",
+  "yachtModels": "Modelli di barche",
+  "boats": "{count, plural, one {# barca} other {# barche}}",
+  "cabins": "{count, plural, one {# cabina} other {# cabine}}",
+  "guests": "{count, plural, one {# ospite} other {# ospiti}}",
+  "cabinsRange": "{range} cabine",
+  "priceBand": "{p25} – {p75} a settimana",
+  "index": {
+    "h1": "Noleggio barche per modello",
+    "lede": "I {models, number} modelli con più barche a noleggio su Boat4You, per un totale di {count, number} barche. Ogni pagina modello elenca tutte le barche, le basi di partenza e quanto costa di solito una settimana di noleggio."
+  },
+  "brand": {
+    "h1": "Noleggio barche {brand}",
+    "lede": "Su Boat4You puoi noleggiare {count, plural, one {# barca {brand}} other {# barche {brand}}} di {models, number} modelli diversi. Scegli un modello per vedere caratteristiche, basi e prezzi settimanali tipici.",
+    "modelsHeading": "Modelli {brand} a noleggio"
+  },
+  "model": {
+    "h1": "Noleggio {model}",
+    "lede": "Su Boat4You {count, plural, one {è disponibile a noleggio # barca {model}} other {sono disponibili a noleggio # barche {model}}}, con base in {countryCount, plural, one {# paese} other {# paesi}}.",
+    "ledeYears": "La flotta è stata costruita tra il {from} e il {to}.",
+    "ledeYear": "Tutte le barche della flotta sono state costruite nel {year}.",
+    "ledePrice": "Una settimana di noleggio costa di solito tra {p25} e {p75}.",
+    "specsHeading": "Caratteristiche {model}",
+    "specFleet": "Barche a noleggio",
+    "specLength": "Lunghezza",
+    "specCabins": "Cabine",
+    "specGuests": "Ospiti",
+    "specBerths": "Posti letto",
+    "specHeads": "Bagni (WC)",
+    "specBuildYears": "Anni di costruzione",
+    "lengthValue": "{m} m ({ft} piedi)",
+    "specNote": "Gli intervalli comprendono tutte le barche {model} in elenco. Posti letto e bagni: la configurazione più diffusa.",
+    "whereHeading": "Dove noleggiare {model}",
+    "whereCountry": "Paese",
+    "whereBoats": "Barche",
+    "whereBases": "Basi principali",
+    "priceHeading": "Prezzi di noleggio {model}",
+    "priceBody": "La metà delle barche {model} in elenco costa tra {p25} e {p75} a settimana. L’importo riguarda il solo noleggio della barca ed è rilevato sulla prossima settimana disponibile di ciascuna ({n, number} barche): skipper, extra obbligatori e cauzione sono esclusi.",
+    "boatsHeading": "Barche {model} a noleggio",
+    "showAll": "Mostra tutte le {count, number} barche {model}",
+    "fromPerWeek": "da {price} a settimana",
+    "blogHeading": "Dal nostro blog",
+    "otherModels": "Altri modelli {brand}"
+  },
+  "boatLink": "Tutte le barche {model} ({count, number})"
+}

@@ -24,6 +24,7 @@ import BoatContentSection from '@/views/Boat/BoatContentSection';
 import BoatHeroSection from '@/views/Boat/BoatHeroSection';
 import BoatMobileNavigation from '@/views/Boat/BoatMobileNavigation';
 import { BoatTransitionProvider } from '@/views/Boat/BoatTransitionProvider';
+import ModelPageLink from '@/views/Boat/ModelPageLink';
 import RelatedBoats from '@/views/Boat/RelatedBoats';
 
 /**
@@ -414,6 +415,7 @@ const BoatPage = async ({
       <BoatTransitionProvider>
         <BoatHeroSection yacht={yacht} />
         <BoatContentSection yacht={yacht} yachtFaq={yachtFaq} />
+        <ModelPageLink manufacturerName={yacht.manufacturerName} modelName={yacht.model} locale={locale} />
         {/* Post-content upsell order fixed by Mario (21.7.2026): similar
             boats FIRST, day-by-day itineraries for the marina below. */}
         <RelatedBoats yacht={yacht} user={user} locale={locale} currency={currency} />

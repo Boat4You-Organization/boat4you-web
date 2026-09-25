@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "indexTitle": "Charter by yacht model: {models, number} popular models",
+    "indexDescription": "Compare the {models, number} yacht and catamaran models with the most boats for charter on Boat4You: specifications, bases and typical weekly prices for each one.",
+    "brandTitle": "{brand} charter: {models, number} models, {count, number} boats",
+    "brandDescription": "Charter a {brand}: {count, number} boats across {models, number} models on Boat4You. Compare specifications, bases and typical weekly prices, then book directly.",
+    "modelTitle": "{model} charter: {count, number} boats, bases and prices",
+    "modelDescription": "Compare {count, number} {model} boats for charter: {cabins} cabins, built {years}, weekly prices from {price}. Destinations: {countries}. Book directly on Boat4You.",
+    "modelDescriptionNoPrice": "Compare {count, number} {model} boats for charter: {cabins} cabins, built {years}. Destinations: {countries}. Book directly on Boat4You."
+  },
+  "breadcrumbLabel": "Breadcrumb",
+  "yachtModels": "Yacht models",
+  "boats": "{count, plural, one {# boat} other {# boats}}",
+  "cabins": "{count, plural, one {# cabin} other {# cabins}}",
+  "guests": "{count, plural, one {# guest} other {# guests}}",
+  "cabinsRange": "{range} cabins",
+  "priceBand": "{p25} – {p75} / week",
+  "index": {
+    "h1": "Charter by yacht model",
+    "lede": "The {models, number} models with the most boats for charter on Boat4You, {count, number} boats in total. Each model page lists every boat, where it is based and what a charter week typically costs."
+  },
+  "brand": {
+    "h1": "{brand} yacht charter",
+    "lede": "Boat4You has {count, plural, one {# {brand} boat} other {# {brand} boats}} for charter across {models, number} models. Choose a model to see its specifications, bases and typical weekly prices.",
+    "modelsHeading": "{brand} models for charter"
+  },
+  "model": {
+    "h1": "{model} charter",
+    "lede": "{count, plural, one {# {model} is} other {# {model} boats are}} available for charter on Boat4You, based in {countryCount, plural, one {# country} other {# countries}}.",
+    "ledeYears": "The fleet was built between {from} and {to}.",
+    "ledeYear": "Every boat in the fleet was built in {year}.",
+    "ledePrice": "A charter week typically costs between {p25} and {p75}.",
+    "specsHeading": "{model} specifications",
+    "specFleet": "Boats for charter",
+    "specLength": "Length",
+    "specCabins": "Cabins",
+    "specGuests": "Guests",
+    "specBerths": "Berths",
+    "specHeads": "Heads (WC)",
+    "specBuildYears": "Build years",
+    "lengthValue": "{m} m ({ft} ft)",
+    "specNote": "Ranges cover every {model} we list. Berths and heads show the most common layout.",
+    "whereHeading": "Where to charter a {model}",
+    "whereCountry": "Country",
+    "whereBoats": "Boats",
+    "whereBases": "Main bases",
+    "priceHeading": "{model} charter prices",
+    "priceBody": "Half of the {model} boats we list cost between {p25} and {p75} for a charter week. The figure covers the boat hire only and is taken from each boat’s next available week ({n, number} boats), so a skipper, obligatory extras and the security deposit come on top.",
+    "boatsHeading": "{model} boats for charter",
+    "showAll": "Show all {count, number} {model} boats",
+    "fromPerWeek": "from {price} / week",
+    "blogHeading": "From our blog",
+    "otherModels": "Other {brand} models"
+  },
+  "boatLink": "All {model} boats ({count, number})"
+}

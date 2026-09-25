@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "indexTitle": "Location de bateaux par modèle : {models, number} modèles populaires",
+    "indexDescription": "Comparez les {models, number} modèles de voiliers et catamarans les plus proposés à la location sur Boat4You : caractéristiques, bases et prix habituels à la semaine pour chacun.",
+    "brandTitle": "Location {brand} : {models, number} modèles, {count, number} bateaux",
+    "brandDescription": "Louez un {brand} : {count, number} bateaux répartis sur {models, number} modèles sur Boat4You. Comparez caractéristiques, bases et prix à la semaine, puis réservez en direct.",
+    "modelTitle": "Location {model} : {count, number} bateaux, bases et prix",
+    "modelDescription": "Comparez {count, number} {model} à louer : {cabins} cabines, construction {years}, prix à la semaine dès {price}. Destinations : {countries}. Réservation directe sur Boat4You.",
+    "modelDescriptionNoPrice": "Comparez {count, number} {model} à louer : {cabins} cabines, construction {years}. Destinations : {countries}. Réservation directe sur Boat4You."
+  },
+  "breadcrumbLabel": "Fil d’Ariane",
+  "yachtModels": "Modèles de bateaux",
+  "boats": "{count, plural, one {# bateau} other {# bateaux}}",
+  "cabins": "{count, plural, one {# cabine} other {# cabines}}",
+  "guests": "{count, plural, one {# personne} other {# personnes}}",
+  "cabinsRange": "{range} cabines",
+  "priceBand": "{p25} – {p75} / semaine",
+  "index": {
+    "h1": "Location de bateaux par modèle",
+    "lede": "Les {models, number} modèles les plus proposés à la location sur Boat4You, soit {count, number} bateaux au total. Chaque page modèle présente tous les bateaux, leurs bases et le prix habituel d’une semaine de location."
+  },
+  "brand": {
+    "h1": "Location de bateaux {brand}",
+    "lede": "Boat4You propose {count, plural, one {# bateau {brand}} other {# bateaux {brand}}} à la location, répartis sur {models, number} modèles. Choisissez un modèle pour voir ses caractéristiques, ses bases et ses prix habituels à la semaine.",
+    "modelsHeading": "Modèles {brand} à louer"
+  },
+  "model": {
+    "h1": "Location {model}",
+    "lede": "Boat4You propose {count, number} {model} à la location, répartis dans {countryCount, plural, one {# pays} other {# pays}}.",
+    "ledeYears": "La flotte a été construite entre {from} et {to}.",
+    "ledeYear": "Tous les bateaux de la flotte ont été construits en {year}.",
+    "ledePrice": "Une semaine de location coûte généralement entre {p25} et {p75}.",
+    "specsHeading": "Caractéristiques du {model}",
+    "specFleet": "Bateaux à louer",
+    "specLength": "Longueur",
+    "specCabins": "Cabines",
+    "specGuests": "Personnes",
+    "specBerths": "Couchettes",
+    "specHeads": "Toilettes (WC)",
+    "specBuildYears": "Années de construction",
+    "lengthValue": "{m} m ({ft} pieds)",
+    "specNote": "Les fourchettes couvrent tous les {model} proposés. Couchettes et toilettes : l’aménagement le plus courant.",
+    "whereHeading": "Où louer un {model}",
+    "whereCountry": "Pays",
+    "whereBoats": "Bateaux",
+    "whereBases": "Bases principales",
+    "priceHeading": "Prix de location du {model}",
+    "priceBody": "La moitié des {model} proposés coûtent entre {p25} et {p75} la semaine. Ce montant correspond à la seule location du bateau, relevé sur la prochaine semaine disponible de chacun ({n, number} bateaux) : skipper, suppléments obligatoires et caution s’y ajoutent.",
+    "boatsHeading": "{model} à louer",
+    "showAll": "Voir les {count, number} {model}",
+    "fromPerWeek": "dès {price} / semaine",
+    "blogHeading": "Sur notre blog",
+    "otherModels": "Autres modèles {brand}"
+  },
+  "boatLink": "Tous les {model} ({count, number})"
+}

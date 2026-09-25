@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "indexTitle": "Najam plovila po modelu: {models, plural, one {# popularan model} few {# popularna modela} other {# popularnih modela}}",
+    "indexDescription": "Usporedite najpopularnije modele jedrilica i katamarana za najam na Boat4You: tehničke podatke, baze i uobičajene tjedne cijene za svaki model.",
+    "brandTitle": "Najam {brand}: modeli {models, number}, {count, plural, one {# brod} few {# broda} other {# brodova}}",
+    "brandDescription": "Unajmite {brand} na Boat4You: {count, plural, one {# brod} few {# broda} other {# brodova}} u {models, plural, one {# modelu} other {# modela}}. Usporedite tehničke podatke, baze i uobičajene tjedne cijene te rezervirajte izravno.",
+    "modelTitle": "Najam {model}: {count, plural, one {# brod} few {# broda} other {# brodova}}, baze i cijene",
+    "modelDescription": "Usporedite {count, plural, one {# brod} few {# broda} other {# brodova}} {model} za najam: kabine {cabins}, godina gradnje {years}, tjedne cijene od {price}. Destinacije: {countries}. Rezervirajte izravno na Boat4You.",
+    "modelDescriptionNoPrice": "Usporedite {count, plural, one {# brod} few {# broda} other {# brodova}} {model} za najam: kabine {cabins}, godina gradnje {years}. Destinacije: {countries}. Rezervirajte izravno na Boat4You."
+  },
+  "breadcrumbLabel": "Navigacijski put",
+  "yachtModels": "Modeli plovila",
+  "boats": "{count, plural, one {# brod} few {# broda} other {# brodova}}",
+  "cabins": "{count, plural, one {# kabina} few {# kabine} other {# kabina}}",
+  "guests": "{count, plural, one {# osoba} few {# osobe} other {# osoba}}",
+  "cabinsRange": "kabine: {range}",
+  "priceBand": "{p25} – {p75} tjedno",
+  "index": {
+    "h1": "Najam plovila po modelu",
+    "lede": "Modeli s najviše brodova za najam na Boat4You ({models, number}), ukupno {count, plural, one {# brod} few {# broda} other {# brodova}}. Stranica svakog modela prikazuje sve brodove, njihove baze i koliko tjedan najma obično stoji."
+  },
+  "brand": {
+    "h1": "Najam plovila {brand}",
+    "lede": "Na Boat4You možete unajmiti {count, plural, one {# brod} few {# broda} other {# brodova}} {brand} u {models, plural, one {# modelu} other {# modela}}. Odaberite model za tehničke podatke, baze i uobičajene tjedne cijene.",
+    "modelsHeading": "Modeli {brand} za najam"
+  },
+  "model": {
+    "h1": "Najam {model}",
+    "lede": "Na Boat4You za najam {count, plural, one {je dostupan # brod {model}} few {su dostupna # broda {model}} other {je dostupno # brodova {model}}}, {countryCount, plural, one {u # zemlji} few {u # zemlje} other {u # zemalja}}.",
+    "ledeYears": "Flota je građena od {from}. do {to}. godine.",
+    "ledeYear": "Svi brodovi u floti izgrađeni su {year}. godine.",
+    "ledePrice": "Tjedan najma obično stoji između {p25} i {p75}.",
+    "specsHeading": "{model}: tehnički podaci",
+    "specFleet": "Brodovi za najam",
+    "specLength": "Duljina",
+    "specCabins": "Kabine",
+    "specGuests": "Osobe",
+    "specBerths": "Ležajevi",
+    "specHeads": "Toaleti (WC)",
+    "specBuildYears": "Godine gradnje",
+    "lengthValue": "{m} m ({ft} ft)",
+    "specNote": "Rasponi obuhvaćaju sve ponuđene brodove {model}. Ležajevi i toaleti: najčešći raspored.",
+    "whereHeading": "Gdje unajmiti {model}",
+    "whereCountry": "Zemlja",
+    "whereBoats": "Brodovi",
+    "whereBases": "Glavne baze",
+    "priceHeading": "Cijene najma {model}",
+    "priceBody": "Polovica ponuđenih brodova {model} stoji između {p25} i {p75} za tjedan najma. Iznos se odnosi samo na najam broda i uzet je iz prvog slobodnog tjedna svakog broda (ukupno {n, number}); skiper, obvezni dodaci i polog plaćaju se dodatno.",
+    "boatsHeading": "Brodovi {model} za najam",
+    "showAll": "Prikaži sve brodove {model} ({count, number})",
+    "fromPerWeek": "od {price} tjedno",
+    "blogHeading": "S našeg bloga",
+    "otherModels": "Ostali modeli {brand}"
+  },
+  "boatLink": "Svi brodovi {model} ({count, number})"
+}

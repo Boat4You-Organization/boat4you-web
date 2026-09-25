@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "indexTitle": "Czarter jachtów według modelu: {models, plural, one {# popularny model} few {# popularne modele} many {# popularnych modeli} other {# popularnego modelu}}",
+    "indexDescription": "Porównaj najpopularniejsze modele jachtów i katamaranów do czarteru w Boat4You ({models, number}): dane techniczne, bazy i typowe ceny tygodniowe każdego modelu.",
+    "brandTitle": "Czarter {brand}: modele {models, number}, {count, plural, one {# jacht} few {# jachty} many {# jachtów} other {# jachtu}}",
+    "brandDescription": "Wyczarteruj jacht {brand} w Boat4You: {count, plural, one {# jacht} few {# jachty} many {# jachtów} other {# jachtu}} w {models, plural, one {# modelu} other {# modelach}}. Porównaj dane techniczne, bazy i typowe ceny tygodniowe, a potem zarezerwuj bezpośrednio.",
+    "modelTitle": "Czarter {model}: {count, plural, one {# jacht} few {# jachty} many {# jachtów} other {# jachtu}}, bazy i ceny",
+    "modelDescription": "Porównaj jachty {model} do czarteru ({count, number}): kabiny {cabins}, rok budowy {years}, ceny tygodniowe od {price}. Kierunki: {countries}. Rezerwuj bezpośrednio w Boat4You.",
+    "modelDescriptionNoPrice": "Porównaj jachty {model} do czarteru ({count, number}): kabiny {cabins}, rok budowy {years}. Kierunki: {countries}. Rezerwuj bezpośrednio w Boat4You."
+  },
+  "breadcrumbLabel": "Ścieżka nawigacji",
+  "yachtModels": "Modele jachtów",
+  "boats": "{count, plural, one {# jacht} few {# jachty} many {# jachtów} other {# jachtu}}",
+  "cabins": "{count, plural, one {# kabina} few {# kabiny} many {# kabin} other {# kabiny}}",
+  "guests": "{count, plural, one {# osoba} few {# osoby} many {# osób} other {# osoby}}",
+  "cabinsRange": "kabiny: {range}",
+  "priceBand": "{p25} – {p75} za tydzień",
+  "index": {
+    "h1": "Czarter jachtów według modelu",
+    "lede": "Modele z największą liczbą jachtów do czarteru w Boat4You ({models, number}), łącznie {count, plural, one {# jacht} few {# jachty} many {# jachtów} other {# jachtu}}. Na stronie każdego modelu znajdziesz wszystkie jachty, ich bazy i typowy koszt tygodnia czarteru."
+  },
+  "brand": {
+    "h1": "Czarter jachtów {brand}",
+    "lede": "W Boat4You wyczarterujesz {count, plural, one {# jacht} few {# jachty} many {# jachtów} other {# jachtu}} {brand} w {models, plural, one {# modelu} other {# modelach}}. Wybierz model, aby zobaczyć dane techniczne, bazy i typowe ceny tygodniowe.",
+    "modelsHeading": "Modele {brand} do czarteru"
+  },
+  "model": {
+    "h1": "Czarter {model}",
+    "lede": "W Boat4You do czarteru {count, plural, one {jest # jacht {model}} few {są # jachty {model}} many {jest # jachtów {model}} other {jest # jachtu {model}}}, stacjonujących w {countryCount, plural, one {# kraju} other {# krajach}}.",
+    "ledeYears": "Flota powstała w latach {from}–{to}.",
+    "ledeYear": "Wszystkie jachty floty zbudowano w {year} roku.",
+    "ledePrice": "Tydzień czarteru kosztuje zwykle od {p25} do {p75}.",
+    "specsHeading": "{model}: dane techniczne",
+    "specFleet": "Jachty do czarteru",
+    "specLength": "Długość",
+    "specCabins": "Kabiny",
+    "specGuests": "Osoby",
+    "specBerths": "Koje",
+    "specHeads": "Toalety (WC)",
+    "specBuildYears": "Lata budowy",
+    "lengthValue": "{m} m ({ft} stóp)",
+    "specNote": "Zakresy obejmują wszystkie oferowane jachty {model}. Koje i toalety: najczęstszy układ.",
+    "whereHeading": "Gdzie wyczarterować {model}",
+    "whereCountry": "Kraj",
+    "whereBoats": "Jachty",
+    "whereBases": "Główne bazy",
+    "priceHeading": "Ceny czarteru {model}",
+    "priceBody": "Połowa oferowanych jachtów {model} kosztuje od {p25} do {p75} za tydzień czarteru. Kwota dotyczy samego wynajmu jachtu i pochodzi z najbliższego wolnego tygodnia każdej jednostki (liczba jachtów: {n, number}); skipper, obowiązkowe dodatki i kaucja są płatne osobno.",
+    "boatsHeading": "Jachty {model} do czarteru",
+    "showAll": "Pokaż wszystkie jachty {model} ({count, number})",
+    "fromPerWeek": "od {price} za tydzień",
+    "blogHeading": "Z naszego bloga",
+    "otherModels": "Inne modele {brand}"
+  },
+  "boatLink": "Wszystkie jachty {model} ({count, number})"
+}

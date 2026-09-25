@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "indexTitle": "Yachtcharter nach Modell: {models, number} beliebte Modelle",
+    "indexDescription": "Vergleichen Sie die {models, number} Yacht- und Katamaranmodelle mit den meisten Charterbooten bei Boat4You – mit technischen Daten, Stützpunkten und typischen Wochenpreisen für jedes Modell.",
+    "brandTitle": "{brand} chartern: {models, number} Modelle, {count, number} Boote",
+    "brandDescription": "{brand} chartern: {count, number} Boote in {models, number} Modellen bei Boat4You. Vergleichen Sie technische Daten, Stützpunkte und typische Wochenpreise und buchen Sie direkt.",
+    "modelTitle": "{model} chartern: {count, number} Boote, Stützpunkte und Preise",
+    "modelDescription": "{count, number} Boote vom Typ {model} im Vergleich: {cabins} Kabinen, Baujahr {years}, Wochenpreise ab {price}. Reviere: {countries}. Direkt bei Boat4You buchen.",
+    "modelDescriptionNoPrice": "{count, number} Boote vom Typ {model} im Vergleich: {cabins} Kabinen, Baujahr {years}. Reviere: {countries}. Direkt bei Boat4You buchen."
+  },
+  "breadcrumbLabel": "Brotkrümelnavigation",
+  "yachtModels": "Yachtmodelle",
+  "boats": "{count, plural, one {# Boot} other {# Boote}}",
+  "cabins": "{count, plural, one {# Kabine} other {# Kabinen}}",
+  "guests": "{count, plural, one {# Gast} other {# Gäste}}",
+  "cabinsRange": "{range} Kabinen",
+  "priceBand": "{p25} – {p75} pro Woche",
+  "index": {
+    "h1": "Yachtcharter nach Modell",
+    "lede": "Die {models, number} Modelle mit den meisten Charterbooten bei Boat4You, insgesamt {count, number} Boote. Jede Modellseite zeigt alle Boote, ihre Stützpunkte und was eine Charterwoche typischerweise kostet."
+  },
+  "brand": {
+    "h1": "{brand} Yachtcharter",
+    "lede": "Bei Boat4You können Sie {count, plural, one {# Boot} other {# Boote}} von {brand} in {models, number} Modellen chartern. Wählen Sie ein Modell für technische Daten, Stützpunkte und typische Wochenpreise.",
+    "modelsHeading": "{brand}-Modelle zum Chartern"
+  },
+  "model": {
+    "h1": "{model} chartern",
+    "lede": "Bei Boat4You {count, plural, one {steht # {model}} other {stehen # Boote vom Typ {model}}} zum Chartern bereit, verteilt auf {countryCount, plural, one {# Land} other {# Länder}}.",
+    "ledeYears": "Die Flotte wurde zwischen {from} und {to} gebaut.",
+    "ledeYear": "Alle Boote der Flotte wurden {year} gebaut.",
+    "ledePrice": "Eine Charterwoche kostet typischerweise zwischen {p25} und {p75}.",
+    "specsHeading": "{model}: technische Daten",
+    "specFleet": "Charterboote",
+    "specLength": "Länge",
+    "specCabins": "Kabinen",
+    "specGuests": "Gäste",
+    "specBerths": "Kojen",
+    "specHeads": "Toiletten (WC)",
+    "specBuildYears": "Baujahre",
+    "lengthValue": "{m} m ({ft} ft)",
+    "specNote": "Die Spannen umfassen alle gelisteten Boote vom Typ {model}. Kojen und Toiletten zeigen die häufigste Aufteilung.",
+    "whereHeading": "Wo Sie eine {model} chartern können",
+    "whereCountry": "Land",
+    "whereBoats": "Boote",
+    "whereBases": "Wichtigste Stützpunkte",
+    "priceHeading": "{model}: Charterpreise",
+    "priceBody": "Die Hälfte der gelisteten Boote vom Typ {model} kostet zwischen {p25} und {p75} pro Charterwoche. Der Wert gilt nur für die Bootsmiete und stammt aus der nächsten verfügbaren Woche jedes Bootes ({n, number} Boote); Skipper, Pflichtextras und Kaution kommen hinzu.",
+    "boatsHeading": "{model} Charterboote",
+    "showAll": "Alle {count, number} Boote vom Typ {model} anzeigen",
+    "fromPerWeek": "ab {price} pro Woche",
+    "blogHeading": "Aus unserem Blog",
+    "otherModels": "Weitere {brand}-Modelle"
+  },
+  "boatLink": "Alle Boote vom Typ {model} ({count, number})"
+}
