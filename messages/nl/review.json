@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "title": "Uw beoordeling"
+  },
+  "greeting": "Hallo {name},",
+  "greetingNoName": "Hallo,",
+  "heading": {
+    "BOOKING": "Hoe verliep uw boeking bij Boat4You?",
+    "YACHT": "Hoe was uw charter?"
+  },
+  "intro": {
+    "BOOKING": "Vertel ons hoe het boeken van de {yacht} bij ons verliep. Het kost een minuut en helpt ons beter te worden.",
+    "YACHT": "Vertel ons over uw week aan boord van de {yacht}: de boot, de thuishaven en de verhuurder. Uw beoordeling helpt andere zeilers kiezen."
+  },
+  "detailsLabel": "Uw boeking",
+  "yacht": "Boot",
+  "dates": "Periode",
+  "base": "Thuishaven",
+  "reservation": "Boeking",
+  "editNote": "U hebt deze beoordeling al verstuurd. U kunt haar nog wijzigen tot {date}.",
+  "backHome": "Terug naar Boat4You",
+  "expired": {
+    "title": "Deze beoordelingslink is niet geldig",
+    "body": "De link is mogelijk verlopen (links zijn 60 dagen geldig) of onvolledig. Wilt u uw ervaring toch delen, mail ons dan op info@boat4you.com."
+  },
+  "done": {
+    "title": "Bedankt, we hebben uw beoordeling ontvangen",
+    "body": "Een beoordeling kan tot 24 uur na het versturen worden gewijzigd. Wilt u iets toevoegen, mail ons dan op info@boat4you.com."
+  },
+  "unavailable": {
+    "title": "Het beoordelingsformulier is nu niet beschikbaar",
+    "body": "Probeer het over een paar minuten opnieuw. Uw link blijft geldig."
+  },
+  "stars": "{count, plural, one {# ster} other {# sterren}}",
+  "noRating": "Geen beoordeling",
+  "overall": "Totaalbeoordeling",
+  "required": "(verplicht)",
+  "scoresHeading": {
+    "BOOKING": "Beoordeel de details (optioneel)",
+    "YACHT": "Beoordeel de details (optioneel)"
+  },
+  "score": {
+    "easeOfBooking": "Gemak van boeken",
+    "communication": "Contact met ons",
+    "valueTransparency": "Duidelijke, eerlijke prijzen",
+    "boatCondition": "Staat van de boot",
+    "cleanliness": "Netheid",
+    "checkInOut": "Inchecken en uitchecken",
+    "charterCompany": "Verhuurder",
+    "value": "Prijs-kwaliteitverhouding"
+  },
+  "titleLabel": "Titel (optioneel)",
+  "textLabel": "Uw beoordeling (optioneel)",
+  "counter": "{count} / {max} tekens",
+  "consentLabel": "Boat4You mag mijn beoordeling publiceren",
+  "consentHelp": "Met dit vinkje kan uw beoordeling op boat4you.com verschijnen, alleen met uw voornaam en land, nooit met uw achternaam of e-mailadres. We lezen elke beoordeling voordat we haar publiceren. Zonder vinkje gebruiken we uw beoordeling alleen om onze service te verbeteren.",
+  "submit": "Beoordeling versturen",
+  "submitEdit": "Wijzigingen opslaan",
+  "submitting": "Bezig met versturen…",
+  "success": {
+    "title": "Bedankt!",
+    "body": "We hebben uw beoordeling ontvangen.",
+    "edited": "Uw wijzigingen zijn opgeslagen.",
+    "published": "Nadat we haar hebben gelezen, kan ze met uw voornaam en land op boat4you.com verschijnen."
+  },
+  "errors": {
+    "rating": "Kies een totaalbeoordeling van 1 tot 5 sterren.",
+    "score": "Beoordeel elk detail met 1 tot 5 sterren of laat het leeg.",
+    "title": "De titel mag maximaal 120 tekens lang zijn.",
+    "text": "De beoordeling mag maximaal 3.000 tekens lang zijn.",
+    "editClosed": "Deze beoordeling kan niet meer worden gewijzigd: beoordelingen zijn tot 24 uur na het versturen aan te passen.",
+    "rateLimited": "Te veel pogingen. Wacht een minuut en probeer het opnieuw.",
+    "generic": "Er ging iets mis en uw beoordeling is niet verstuurd. Probeer het opnieuw."
+  }
+}

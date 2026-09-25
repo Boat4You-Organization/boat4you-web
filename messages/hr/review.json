@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "title": "Vaša recenzija"
+  },
+  "greeting": "Pozdrav, {name},",
+  "greetingNoName": "Pozdrav,",
+  "heading": {
+    "BOOKING": "Kako je prošla rezervacija na Boat4You?",
+    "YACHT": "Kako je bilo na charteru?"
+  },
+  "intro": {
+    "BOOKING": "Recite nam kako je prošla rezervacija plovila {yacht} kod nas. Traje minutu, a pomaže nam da budemo bolji.",
+    "YACHT": "Recite nam kako vam je bilo tjedan dana na plovilu {yacht}: o brodu, bazi i charter kompaniji. Vaša recenzija pomaže drugim nautičarima u odabiru."
+  },
+  "detailsLabel": "Vaša rezervacija",
+  "yacht": "Plovilo",
+  "dates": "Termin",
+  "base": "Baza",
+  "reservation": "Rezervacija",
+  "editNote": "Ovu ste recenziju već poslali. Još je možete promijeniti do {date}.",
+  "backHome": "Natrag na Boat4You",
+  "expired": {
+    "title": "Ova poveznica za recenziju nije valjana",
+    "body": "Poveznica je možda istekla (vrijedi 60 dana) ili nije potpuna. Ako ipak želite podijeliti svoje iskustvo, pišite nam na info@boat4you.com."
+  },
+  "done": {
+    "title": "Hvala, vaša je recenzija zaprimljena",
+    "body": "Recenziju je moguće mijenjati 24 sata nakon slanja. Ako želite nešto dodati, pišite nam na info@boat4you.com."
+  },
+  "unavailable": {
+    "title": "Obrazac za recenziju trenutačno nije dostupan",
+    "body": "Pokušajte ponovno za nekoliko minuta. Vaša poveznica i dalje vrijedi."
+  },
+  "stars": "{count, plural, one {# zvjezdica} few {# zvjezdice} other {# zvjezdica}}",
+  "noRating": "Bez ocjene",
+  "overall": "Ukupna ocjena",
+  "required": "(obavezno)",
+  "scoresHeading": {
+    "BOOKING": "Ocijenite pojedinosti (neobavezno)",
+    "YACHT": "Ocijenite pojedinosti (neobavezno)"
+  },
+  "score": {
+    "easeOfBooking": "Jednostavnost rezervacije",
+    "communication": "Komunikacija s nama",
+    "valueTransparency": "Jasne i poštene cijene",
+    "boatCondition": "Stanje plovila",
+    "cleanliness": "Čistoća",
+    "checkInOut": "Ukrcaj i iskrcaj",
+    "charterCompany": "Charter kompanija",
+    "value": "Omjer cijene i kvalitete"
+  },
+  "titleLabel": "Naslov (neobavezno)",
+  "textLabel": "Vaša recenzija (neobavezno)",
+  "counter": "{count} / {max} znakova",
+  "consentLabel": "Boat4You smije objaviti moju recenziju",
+  "consentHelp": "Ako označite ovo polje, vaša se recenzija može pojaviti na boat4you.com samo s vašim imenom i državom, nikad s prezimenom ili e-mail adresom. Svaku recenziju pročitamo prije objave. Bez oznake recenziju koristimo samo za poboljšanje usluge.",
+  "submit": "Pošalji recenziju",
+  "submitEdit": "Spremi promjene",
+  "submitting": "Slanje…",
+  "success": {
+    "title": "Hvala!",
+    "body": "Zaprimili smo vašu recenziju.",
+    "edited": "Vaše su promjene spremljene.",
+    "published": "Nakon što je pročitamo, može se pojaviti na boat4you.com s vašim imenom i državom."
+  },
+  "errors": {
+    "rating": "Odaberite ukupnu ocjenu od 1 do 5 zvjezdica.",
+    "score": "Svaku pojedinost ocijenite s 1 do 5 zvjezdica ili je ostavite praznom.",
+    "title": "Naslov može imati najviše 120 znakova.",
+    "text": "Recenzija može imati najviše 3.000 znakova.",
+    "editClosed": "Ova se recenzija više ne može mijenjati: recenzije se mogu uređivati 24 sata nakon slanja.",
+    "rateLimited": "Previše pokušaja. Pričekajte minutu i pokušajte ponovno.",
+    "generic": "Nešto je pošlo po zlu i recenzija nije poslana. Pokušajte ponovno."
+  }
+}

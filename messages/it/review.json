@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "title": "La tua recensione"
+  },
+  "greeting": "Ciao {name},",
+  "greetingNoName": "Ciao,",
+  "heading": {
+    "BOOKING": "Com’è andata la prenotazione con Boat4You?",
+    "YACHT": "Com’è andato il tuo noleggio?"
+  },
+  "intro": {
+    "BOOKING": "Raccontaci com’è andata la prenotazione di {yacht} con noi. Basta un minuto e ci aiuta a migliorare.",
+    "YACHT": "Raccontaci la tua settimana a bordo di {yacht}: la barca, la base e la società di charter. La tua recensione aiuta altri velisti a scegliere."
+  },
+  "detailsLabel": "La tua prenotazione",
+  "yacht": "Barca",
+  "dates": "Date",
+  "base": "Base",
+  "reservation": "Prenotazione",
+  "editNote": "Hai già inviato questa recensione. Puoi ancora modificarla fino al {date}.",
+  "backHome": "Torna a Boat4You",
+  "expired": {
+    "title": "Questo link per la recensione non è valido",
+    "body": "Il link potrebbe essere scaduto (i link valgono 60 giorni) o incompleto. Se vuoi comunque raccontarci la tua esperienza, scrivici a info@boat4you.com."
+  },
+  "done": {
+    "title": "Grazie, abbiamo ricevuto la tua recensione",
+    "body": "Una recensione si può modificare per 24 ore dopo l’invio. Se vuoi aggiungere qualcosa, scrivici a info@boat4you.com."
+  },
+  "unavailable": {
+    "title": "Il modulo per la recensione non è disponibile in questo momento",
+    "body": "Riprova tra qualche minuto. Il tuo link resta valido."
+  },
+  "stars": "{count, plural, one {# stella} other {# stelle}}",
+  "noRating": "Nessuna valutazione",
+  "overall": "Valutazione complessiva",
+  "required": "(obbligatoria)",
+  "scoresHeading": {
+    "BOOKING": "Valuta i dettagli (facoltativo)",
+    "YACHT": "Valuta i dettagli (facoltativo)"
+  },
+  "score": {
+    "easeOfBooking": "Facilità di prenotazione",
+    "communication": "Comunicazione con noi",
+    "valueTransparency": "Prezzi chiari e corretti",
+    "boatCondition": "Condizioni della barca",
+    "cleanliness": "Pulizia",
+    "checkInOut": "Check-in e check-out",
+    "charterCompany": "Società di charter",
+    "value": "Rapporto qualità-prezzo"
+  },
+  "titleLabel": "Titolo (facoltativo)",
+  "textLabel": "La tua recensione (facoltativa)",
+  "counter": "{count} / {max} caratteri",
+  "consentLabel": "Boat4You può pubblicare la mia recensione",
+  "consentHelp": "Se selezioni questa casella, la tua recensione potrà comparire su boat4you.com solo con il tuo nome e il tuo paese, mai con il cognome o l’indirizzo e-mail. Leggiamo ogni recensione prima di pubblicarla. Senza la spunta la usiamo solo per migliorare il nostro servizio.",
+  "submit": "Invia recensione",
+  "submitEdit": "Salva le modifiche",
+  "submitting": "Invio in corso…",
+  "success": {
+    "title": "Grazie!",
+    "body": "Abbiamo ricevuto la tua recensione.",
+    "edited": "Le tue modifiche sono state salvate.",
+    "published": "Dopo averla letta, potrà comparire su boat4you.com con il tuo nome e il tuo paese."
+  },
+  "errors": {
+    "rating": "Scegli una valutazione complessiva da 1 a 5 stelle.",
+    "score": "Valuta ogni dettaglio da 1 a 5 stelle oppure lascialo vuoto.",
+    "title": "Il titolo può avere al massimo 120 caratteri.",
+    "text": "La recensione può avere al massimo 3.000 caratteri.",
+    "editClosed": "Questa recensione non si può più modificare: le recensioni sono modificabili per 24 ore dopo l’invio.",
+    "rateLimited": "Troppi tentativi. Attendi un minuto e riprova.",
+    "generic": "Si è verificato un problema e la recensione non è stata inviata. Riprova."
+  }
+}

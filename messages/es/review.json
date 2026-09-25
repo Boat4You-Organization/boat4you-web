@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "title": "Tu opinión"
+  },
+  "greeting": "Hola, {name}:",
+  "greetingNoName": "Hola:",
+  "heading": {
+    "BOOKING": "¿Qué tal fue tu reserva con Boat4You?",
+    "YACHT": "¿Qué tal fue tu chárter?"
+  },
+  "intro": {
+    "BOOKING": "Cuéntanos cómo fue la reserva de {yacht} con nosotros. Solo te llevará un minuto y nos ayuda a mejorar.",
+    "YACHT": "Cuéntanos cómo fue tu semana a bordo de {yacht}: el barco, la base y la empresa de chárter. Tu opinión ayuda a otros navegantes a elegir."
+  },
+  "detailsLabel": "Tu reserva",
+  "yacht": "Barco",
+  "dates": "Fechas",
+  "base": "Base",
+  "reservation": "Reserva",
+  "editNote": "Ya has enviado esta opinión. Todavía puedes cambiarla hasta el {date}.",
+  "backHome": "Volver a Boat4You",
+  "expired": {
+    "title": "Este enlace para opinar no es válido",
+    "body": "Puede que el enlace haya caducado (son válidos 60 días) o que esté incompleto. Si aun así quieres contarnos tu experiencia, escríbenos a info@boat4you.com."
+  },
+  "done": {
+    "title": "Gracias, ya hemos recibido tu opinión",
+    "body": "Una opinión se puede modificar durante las 24 horas siguientes al envío. Si quieres añadir algo, escríbenos a info@boat4you.com."
+  },
+  "unavailable": {
+    "title": "El formulario de opinión no está disponible en este momento",
+    "body": "Vuelve a intentarlo dentro de unos minutos. Tu enlace sigue siendo válido."
+  },
+  "stars": "{count, plural, one {# estrella} other {# estrellas}}",
+  "noRating": "Sin valoración",
+  "overall": "Valoración general",
+  "required": "(obligatoria)",
+  "scoresHeading": {
+    "BOOKING": "Valora los detalles (opcional)",
+    "YACHT": "Valora los detalles (opcional)"
+  },
+  "score": {
+    "easeOfBooking": "Facilidad de reserva",
+    "communication": "Comunicación con nosotros",
+    "valueTransparency": "Precios claros y justos",
+    "boatCondition": "Estado del barco",
+    "cleanliness": "Limpieza",
+    "checkInOut": "Check-in y check-out",
+    "charterCompany": "Empresa de chárter",
+    "value": "Relación calidad-precio"
+  },
+  "titleLabel": "Título (opcional)",
+  "textLabel": "Tu opinión (opcional)",
+  "counter": "{count} / {max} caracteres",
+  "consentLabel": "Boat4You puede publicar mi opinión",
+  "consentHelp": "Si marcas esta casilla, tu opinión podrá aparecer en boat4you.com solo con tu nombre y tu país, nunca con tus apellidos ni tu correo electrónico. Leemos cada opinión antes de publicarla. Sin la marca, la usamos únicamente para mejorar nuestro servicio.",
+  "submit": "Enviar opinión",
+  "submitEdit": "Guardar cambios",
+  "submitting": "Enviando…",
+  "success": {
+    "title": "¡Gracias!",
+    "body": "Hemos recibido tu opinión.",
+    "edited": "Tus cambios se han guardado.",
+    "published": "Cuando la hayamos leído, podrá aparecer en boat4you.com con tu nombre y tu país."
+  },
+  "errors": {
+    "rating": "Elige una valoración general de 1 a 5 estrellas.",
+    "score": "Valora cada detalle con 1 a 5 estrellas o déjalo en blanco.",
+    "title": "El título puede tener como máximo 120 caracteres.",
+    "text": "La opinión puede tener como máximo 3000 caracteres.",
+    "editClosed": "Esta opinión ya no se puede modificar: las opiniones se pueden editar durante las 24 horas siguientes al envío.",
+    "rateLimited": "Demasiados intentos. Espera un minuto y vuelve a intentarlo.",
+    "generic": "Algo ha fallado y tu opinión no se ha enviado. Vuelve a intentarlo."
+  }
+}

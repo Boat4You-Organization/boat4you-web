@@ -37,5 +37,8 @@ export const ITINERARY_NAMESPACES = [
   'itineraryGermany',
 ] as const satisfies readonly (keyof Messages)[];
 
+/** Review form copy — only the /review segment needs it client-side. */
+export const REVIEW_NAMESPACES = ['review'] as const satisfies readonly (keyof Messages)[];
+
 export const pickMessages = (messages: Messages, keys: readonly (keyof Messages)[]): Partial<Messages> =>
   Object.fromEntries(keys.map(key => [key, messages[key]])) as Partial<Messages>;
