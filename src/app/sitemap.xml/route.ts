@@ -13,10 +13,12 @@ const XML_HEADERS = {
   'X-Content-Type-Options': 'nosniff',
 };
 
+// No <lastmod> on the child sitemaps: none of them has a real modification
+// date (only the blog URLs do, inside sitemap-blogs), and a request-time
+// stamp on every fetch teaches Google to ignore the field.
 export async function GET() {
   try {
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
-    const lastmod = new Date().toISOString();
 
     // Pass the promoted-country whitelist to the backend so totalElements
     // is the EXACT count we'll later index — every sub-sitemap fills up
@@ -30,7 +32,6 @@ export async function GET() {
       { length: pages },
       (_, i) => `  <sitemap>
     <loc>${baseUrl}/sitemap-yachts/${i}/yacht.xml</loc>
-    <lastmod>${lastmod}</lastmod>
   </sitemap>`
     ).join('\n');
 
@@ -38,23 +39,18 @@ export async function GET() {
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
     <loc>${baseUrl}/sitemap-static.xml</loc>
-    <lastmod>${lastmod}</lastmod>
   </sitemap>
   <sitemap>
     <loc>${baseUrl}/sitemap-blogs.xml</loc>
-    <lastmod>${lastmod}</lastmod>
   </sitemap>
   <sitemap>
     <loc>${baseUrl}/sitemap-locations.xml</loc>
-    <lastmod>${lastmod}</lastmod>
   </sitemap>
   <sitemap>
     <loc>${baseUrl}/sitemap-categories.xml</loc>
-    <lastmod>${lastmod}</lastmod>
   </sitemap>
   <sitemap>
     <loc>${baseUrl}/sitemap-itineraries.xml</loc>
-    <lastmod>${lastmod}</lastmod>
   </sitemap>
 ${yachtSitemaps}
 </sitemapindex>`;

@@ -60,8 +60,8 @@ export async function GET(request: NextRequest, { params }: { params: Promise<{ 
       return new NextResponse('Not Found', { status: 404 });
     }
 
-    const lastmod = new Date().toISOString();
-
+    // No <lastmod>: the list API exposes no per-boat modification date, and
+    // a request-time stamp marks every URL as changed on every fetch.
     const urls = yachtsData.content
       .flatMap((yacht: YachtModelShortInfo) =>
         routing.locales.map(locale => {
@@ -69,7 +69,6 @@ export async function GET(request: NextRequest, { params }: { params: Promise<{ 
 
           return `  <url>
     <loc>${baseUrl}${prefix}/boat/${yacht.slug}</loc>
-    <lastmod>${lastmod}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>`;

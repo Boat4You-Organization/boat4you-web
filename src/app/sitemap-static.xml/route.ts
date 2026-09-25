@@ -32,7 +32,6 @@ export async function GET() {
 
         return `  <url>
     <loc>${loc}</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>${page.changefreq}</changefreq>
     <priority>${page.priority}</priority>
   </url>`;
