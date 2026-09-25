@@ -11,9 +11,9 @@ import { itineraries } from '@/config/itineraries.config';
 import { LocaleType } from '@/config/locales.config';
 import { isOneWayItinerary } from '@/helper/itineraryDaysHelper';
 import { itineraryNamespace, resolveDayText, resolveRouteText } from '@/helper/itineraryI18n';
+import { itinerarySearchPath } from '@/utils/server/itineraryBoats';
 import { buildBreadcrumbJsonLd, buildTouristTripJsonLd } from '@/utils/static/buildItineraryJsonLd';
 import { buildMetadata } from '@/utils/static/buildMetadata';
-import { resolveBoatsSearchHref } from '@/utils/static/itinerarySearchHref';
 import { serializeJsonLd } from '@/utils/static/serializeJsonLd';
 import ItineraryBoats from '@/views/Itineraries/ItineraryBoats';
 import ItineraryEndCta from '@/views/Itineraries/ItineraryEndCta';
@@ -89,14 +89,16 @@ const ItineraryRoutePage = async ({ params }: ItineraryRoutePageParams) => {
   }
 
   const t = await getTranslations('itinerary');
-  // did-carrying search link — a bare ?destinations= does NOT filter.
-  const boatsSearchHref = await resolveBoatsSearchHref(itineraryRoute.startingPoint, [
-    parent.sailingArea,
-    country ?? '',
-  ]);
+  // Nearest indexable landing above the route's start base (itineraryBoats.ts).
+  const boatsSearchHref = await itinerarySearchPath(
+    itineraryRoute.startingPoint,
+    [parent.sailingArea, country ?? ''],
+    locale
+  );
   // "Browse all boats" scoped to the route's country — a bare /search
   // shows the Croatia-heavy default fleet under a Greek route (Mario 22.7).
-  const countrySearchHref = country ? await resolveBoatsSearchHref(country) : '/search';
+  // The Caribbean group is no country: its area's own country then.
+  const countrySearchHref = country ? await itinerarySearchPath(country, [parent.sailingArea], locale) : '/search';
   // Per-route copy (metaDesc → hero lede) lives in the route's country
   // namespace; resolveRouteText t.has-guards → config fallback.
   const tRoute = await getTranslations({

@@ -3,7 +3,8 @@
     "base": {
       "title": "Yachtcharter & Bootsverleih Weltweit | Boat4You",
       "titleTemplate": "%s | Boat4You",
-      "description": "Yachten chartern & Boote mieten in über 100 Ländern. Segelyachten, Katamarane, Motorboote. Beste Preise, 24/7 Support, sichere Buchung.",
+      "description": "Yachten chartern & Boote mieten weltweit. Segelyachten, Katamarane, Motorboote. Beste Preise, 24/7 Support, sichere Buchung.",
+      "descriptionWithCount": "Yachten chartern & Boote mieten in {countries, plural, one {# Land} other {# Ländern}}. Segelyachten, Katamarane, Motorboote. Beste Preise, 24/7 Support, sichere Buchung.",
       "path": ""
     },
     "search": {

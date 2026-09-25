@@ -10,6 +10,7 @@ import {
   ModelIdentity,
   cleanModelName,
   foldName,
+  manufacturerPath,
   modelDisplayName,
   modelIdentity,
   modelPagePath,
@@ -288,10 +289,24 @@ export const findModelByIdentity = (
 };
 
 /**
- * Model page of one boat, or null — never throws and never waits longer
- * than `budgetMs` (the boat page must not hang on a cold catalogue build;
- * the build keeps running and fills the Data Cache for the next request).
+ * The catalogue, or null — never throws and never waits longer than
+ * `budgetMs` (a page must not hang on a cold catalogue build; the build
+ * keeps running and fills the Data Cache and the memo for the next request).
  */
+export const modelCatalogWithin = async (budgetMs: number): Promise<ModelCatalog | null> => {
+  let timer: ReturnType<typeof setTimeout> | undefined;
+  const timeout = new Promise<null>(resolve => {
+    timer = setTimeout(() => resolve(null), budgetMs);
+  });
+
+  try {
+    return await Promise.race([loadModelCatalog().catch(() => null), timeout]);
+  } finally {
+    if (timer) clearTimeout(timer);
+  }
+};
+
+/** Model page of one boat, or null (see modelCatalogWithin). */
 export const findModelForYacht = async (
   rawManufacturer?: string | null,
   rawModel?: string | null,
@@ -299,18 +314,29 @@ export const findModelForYacht = async (
 ): Promise<CatalogModel | null> => {
   if (!modelIdentity(rawManufacturer, rawModel)) return null;
 
-  let timer: ReturnType<typeof setTimeout> | undefined;
-  const timeout = new Promise<null>(resolve => {
-    timer = setTimeout(() => resolve(null), budgetMs);
-  });
+  const catalog = await modelCatalogWithin(budgetMs);
 
-  try {
-    const catalog = await Promise.race([loadModelCatalog().catch(() => null), timeout]);
+  return catalog ? findModelByIdentity(catalog, rawManufacturer, rawModel) : null;
+};
 
-    return catalog ? findModelByIdentity(catalog, rawManufacturer, rawModel) : null;
-  } finally {
-    if (timer) clearTimeout(timer);
-  }
+export interface BrandHubLink {
+  path: string;
+  /** Boats of the brand's model pages (the catalogue fleet the hub lists). */
+  fleet: number;
+}
+
+/** Brand hubs (brands with at least two model pages) by brand slug; empty when the catalogue is not ready. */
+export const brandHubsWithin = async (budgetMs: number): Promise<Record<string, BrandHubLink>> => {
+  const catalog = await modelCatalogWithin(budgetMs);
+
+  return Object.fromEntries(
+    (catalog?.brands ?? [])
+      .filter(brand => brand.hasHub)
+      .map(brand => [
+        brand.brandSlug,
+        { path: manufacturerPath(brand.brandSlug), fleet: brand.models.reduce((sum, m) => sum + m.fleet, 0) },
+      ])
+  );
 };
 
 // ---------------------------------------------------------------------------

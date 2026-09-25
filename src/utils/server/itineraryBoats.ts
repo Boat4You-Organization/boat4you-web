@@ -5,22 +5,24 @@ import { VesselType, YachtModelShortInfo } from '@/models/yacht.model';
 import { fetchYachts } from '@/services/yacht.service';
 import { LocationType } from '@/types/location.type';
 import { PaginatedResponse } from '@/types/response.type';
-import { Hub, hubFor, localePrefix, regionsForMarina } from '@/utils/server/catalogueHubs';
+import { Hub, countryPlaceFor, hubFor, localePrefix, regionHubAbove } from '@/utils/server/catalogueHubs';
 import {
+  DestinationIndex,
   ResolvedDestination,
   loadDestinationIndex,
   locationForDid,
   resolveDestinationName,
 } from '@/utils/server/destinationDid';
-import { resolveItineraryTarget } from '@/utils/static/itinerarySearchHref';
-import { buildDestinationHref } from '@/utils/static/searchLandingPath';
+import { ScoredTarget, resolveItineraryTarget } from '@/utils/static/itinerarySearchHref';
+import { buildDestinationHref, buildSearchLandingPath } from '@/utils/static/searchLandingPath';
 
 /**
  * Itinerary → bookable boats. For a route's start base (port → sailing area
  * → country fallback, the same resolver as the itinerary CTA) this returns
  * up to 12 boats for the SSR card grid, the landing to "see all" (the base,
- * else its region, when indexable), and the boat-type landings that pass the
- * index gate there ("Best boat types for this route").
+ * else its region, else its country — the nearest indexable one), and the
+ * boat-type landings that pass the index gate there ("Best boat types for
+ * this route").
  *
  * Every count is the `/public/yachts` total of the page it describes: the
  * heading counts the base's own listing, the "see all" link the landing it
@@ -63,6 +65,83 @@ const kindOf = (did: string): LocationType => {
   return did.startsWith('r-') ? LocationType.REGION : LocationType.MARINA;
 };
 
+/** The catalogue place behind an itinerary target, by name when the name lands on it. */
+const placeOfTarget = async (index: DestinationIndex, target: ScoredTarget): Promise<ResolvedDestination> => {
+  const targetDids = target.id
+    .split(',')
+    .map(d => d.trim())
+    .filter(Boolean);
+  const byName = await resolveDestinationName(index, target.name);
+
+  // The catalogue name resolves to this very place (not a bigger namesake)
+  // → use it (its landing URL filters to the same boats); else keep the did.
+  return byName && targetDids.every(d => byName.dids.includes(d))
+    ? byName
+    : {
+        dids: targetDids,
+        name: target.name.trim(),
+        count: target.count,
+        kind: kindOf(targetDids[0] ?? ''),
+        countryCode: locationForDid(index, targetDids[0] ?? '')?.countryCode,
+      };
+};
+
+/** Nearest indexable landing for a place: itself, its region (a marina), its country. */
+const nearestLanding = async (index: DestinationIndex, place: ResolvedDestination, locale: string) => {
+  const base = await hubFor(index, place, null, locale);
+
+  if (base?.href) return base;
+
+  const region = await regionHubAbove(index, place, locale);
+
+  if (region) return region;
+
+  const country = await countryPlaceFor(index, place.countryCode);
+  const countryHub = country && country.name !== place.name ? await hubFor(index, country, null, locale) : null;
+
+  return countryHub?.href ? countryHub : null;
+};
+
+/**
+ * "See the boats" CTA of an itinerary page (locale-less path for the
+ * locale-aware Link): the nearest indexable landing above the route's start
+ * base (base → region → country), trying the fallback names in turn when a
+ * name has none ("Caribbean" → the area's country). Before 25.9.2026 it was
+ * the base's own landing even when noindex (`/itineraries/split` →
+ * `marina kaštela`) or its did form (`bvi-route` → `?did=l-436`). The did
+ * form is the last resort when no name has an indexable landing.
+ */
+export const itinerarySearchPath = async (name: string, fallbacks: string[], locale: string): Promise<string> => {
+  const index = await loadDestinationIndex().catch(() => null);
+  const chain = [name, ...fallbacks].filter(Boolean);
+  let first: ResolvedDestination | null = null;
+
+  try {
+    // Sequential on purpose: the first name with an indexable landing wins.
+    // eslint-disable-next-line no-restricted-syntax
+    for (const [i, candidate] of chain.entries()) {
+      // eslint-disable-next-line no-await-in-loop
+      const target = await resolveItineraryTarget(candidate, i === 0 ? chain.slice(1) : [], undefined, i > 0);
+
+      if (index && target && target.count > 0) {
+        // eslint-disable-next-line no-await-in-loop
+        const place = await placeOfTarget(index, target);
+
+        first = first ?? place;
+
+        // eslint-disable-next-line no-await-in-loop
+        const hub = await nearestLanding(index, place, locale);
+
+        if (hub?.href) return buildSearchLandingPath(hub.name, null);
+      }
+    }
+  } catch {
+    // fall through to the did form / plain landing
+  }
+
+  return first ? buildDestinationHref(first.name, first.dids.join(',')) : buildSearchLandingPath(name);
+};
+
 export const itineraryBoats = async (
   startingPoint: string,
   fallbacks: string[],
@@ -73,57 +152,24 @@ export const itineraryBoats = async (
 
   if (!index || !target || target.count < 1) return null;
 
-  const targetDids = target.id
-    .split(',')
-    .map(d => d.trim())
-    .filter(Boolean);
-  const byName = await resolveDestinationName(index, target.name);
-  // The catalogue name resolves to this very place (not a bigger namesake)
-  // → use it (its landing URL filters to the same boats); else keep the did.
-  const resolved: ResolvedDestination =
-    byName && targetDids.every(d => byName.dids.includes(d))
-      ? byName
-      : {
-          dids: targetDids,
-          name: target.name.trim(),
-          count: target.count,
-          kind: kindOf(targetDids[0] ?? ''),
-          countryCode: locationForDid(index, targetDids[0] ?? '')?.countryCode,
-        };
+  const resolved = await placeOfTarget(index, target);
 
-  const [base, yachts, regionNames] = await Promise.all([
+  const [base, yachts, region] = await Promise.all([
     hubFor(index, resolved, null, locale),
     fetchYachts({ locations: [], did: resolved.dids, size: MAX_BOATS }, Currency.EUR, 'en', {
       revalidate: ITINERARY_BOATS_REVALIDATE_SECONDS,
     }).catch((): PaginatedResponse<YachtModelShortInfo> => ({ content: [] })),
-    resolved.kind === LocationType.MARINA && resolved.countryCode
-      ? regionsForMarina(resolved.countryCode, resolved.dids[0])
-      : Promise.resolve([] as string[]),
+    regionHubAbove(index, resolved, locale),
   ]);
 
   if (!base) return null;
 
-  const regions = (
-    await Promise.all(
-      regionNames.map(async name => hubFor(index, await resolveDestinationName(index, name), null, locale))
-    )
-  )
-    .filter((h): h is Hub => !!h?.href && h.kind !== LocationType.COUNTRY)
-    .sort((a, b) => a.fleet - b.fleet);
-  const region = regions[0] ?? null;
-  const countryRow = resolved.countryCode
-    ? Array.from(index.byName.values())
-        .flat()
-        .find(l => l.kind === LocationType.COUNTRY && l.countryCode === resolved.countryCode)
-    : null;
-  const country = countryRow ? await resolveDestinationName(index, countryRow.name) : null;
+  const country = resolved.kind === LocationType.COUNTRY ? null : await countryPlaceFor(index, resolved.countryCode);
 
   // Per type, the most specific indexable landing: base → region → country.
-  const levels = [
-    resolved,
-    region ? await resolveDestinationName(index, region.name) : null,
-    resolved.kind === LocationType.COUNTRY ? null : country,
-  ].filter((r): r is ResolvedDestination => !!r);
+  const levels = [resolved, region ? await resolveDestinationName(index, region.name) : null, country].filter(
+    (r): r is ResolvedDestination => !!r
+  );
   const typeHubs = (
     await Promise.all(
       ROUTE_TYPES.map(async type => {
@@ -143,11 +189,17 @@ export const itineraryBoats = async (
   if (base.href) seeAll = { href: base.href, count: listed, area: null };
   else if (region?.href) seeAll = { href: region.href, count: region.fleet, area: region.label };
   else {
-    seeAll = {
-      href: `${localePrefix(locale)}${buildDestinationHref(resolved.name, resolved.dids.join(','))}`,
-      count: listed,
-      area: null,
-    };
+    // No indexable base or region: the country landing (a promoted country
+    // always is one), else the base's did form (noindex, but its boats).
+    const countryHub = country ? await hubFor(index, country, null, locale) : null;
+
+    seeAll = countryHub?.href
+      ? { href: countryHub.href, count: countryHub.fleet, area: countryHub.label }
+      : {
+          href: `${localePrefix(locale)}${buildDestinationHref(resolved.name, resolved.dids.join(','))}`,
+          count: listed,
+          area: null,
+        };
   }
 
   return {

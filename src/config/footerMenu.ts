@@ -21,6 +21,12 @@ const footerMenu: NavigationLink[] = [
         text: 'fleet',
         href: '/fleet',
       },
+      // Sitewide entry point into the /yachts model pages (index → brand
+      // hubs → models), which had no internal link before 25.9.2026.
+      {
+        text: 'yachtModels',
+        href: '/yachts',
+      },
       {
         text: 'howWeWork',
         href: '/how-we-work',

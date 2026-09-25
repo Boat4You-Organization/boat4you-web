@@ -3,7 +3,8 @@
     "base": {
       "title": "Noleggio Yacht e Barche nel Mondo | Boat4You",
       "titleTemplate": "%s | Boat4You",
-      "description": "Noleggia yacht e barche in oltre 100 paesi. Vele, catamarani, motoscafi. Prezzi migliori, supporto 24/7, prenotazione sicura.",
+      "description": "Noleggia yacht e barche in tutto il mondo. Vele, catamarani, motoscafi. Prezzi migliori, supporto 24/7, prenotazione sicura.",
+      "descriptionWithCount": "Noleggia yacht e barche in {countries, plural, one {# paese} other {# paesi}}. Vele, catamarani, motoscafi. Prezzi migliori, supporto 24/7, prenotazione sicura.",
       "path": ""
     },
     "search": {

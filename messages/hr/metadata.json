@@ -3,12 +3,13 @@
     "base": {
       "title": "Najam jahti i brodova diljem svijeta | Boat4You",
       "titleTemplate": "%s | Boat4You",
-      "description": "Najam jahti i brodova u 100+ zemalja. Jedrilice, katamarani, motorni brodovi. Najbolje cijene, 24/7 podrška, sigurna rezervacija.",
+      "description": "Najam jahti i brodova diljem svijeta. Jedrilice, katamarani, motorni brodovi. Najbolje cijene, 24/7 podrška, sigurna rezervacija.",
+      "descriptionWithCount": "Najam jahti i brodova u {countries, plural, one {# zemlji} few {# zemlje} other {# zemalja}}. Jedrilice, katamarani, motorni brodovi. Najbolje cijene, 24/7 podrška, sigurna rezervacija.",
       "path": ""
     },
     "search": {
       "title": "Pretražite jahte",
-      "description": "Pretražite i rezervirajte brodove na više od 100 lokacija. Jedrilice, katamarani, motorni brodovi – sa ili bez skipera. Najbolje cijene. Sigurna rezervacija. Podrška 24/7.",
+      "description": "Pretražite i rezervirajte brodove u marinama diljem svijeta. Jedrilice, katamarani, motorni brodovi – sa ili bez skipera. Najbolje cijene. Sigurna rezervacija. Podrška 24/7.",
       "path": "/search"
     },
     "blog": {

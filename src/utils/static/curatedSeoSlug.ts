@@ -265,12 +265,27 @@ export const parseCuratedFileSlug = (slug: string): CuratedFileKey | null => {
 };
 
 /**
- * Strip everything outside `<body>...</body>`, then remove the first `<h1>`
- * (the search page renders its own H1 above the SEO block).
+ * Keep only the body content, then remove the first `<h1>` (the search page
+ * renders its own H1 above the SEO block).
+ *
+ * The body is taken from `<body>` to `</body>` OR the end of the file: 59
+ * translated files (25.9.2026) end mid-text without `</body>`, and the old
+ * `<body>…</body>` match then injected the WHOLE document — doctype, <head>,
+ * a second <title> and a second meta description — into the landing's body.
+ * Any head markup left over (2 EN files have no <body> at all) is stripped
+ * too, so the page never carries a second <title> or <meta>.
  */
 export const sanitizeCuratedHtml = (raw: string): string => {
-  const bodyMatch = raw.match(/<body[^>]*>([\s\S]*?)<\/body>/i);
-  let html = bodyMatch ? bodyMatch[1] : raw;
+  const bodyOpen = raw.match(/<body[^>]*>/i);
+  let html = bodyOpen?.index != null ? raw.slice(bodyOpen.index + bodyOpen[0].length) : raw;
+
+  html = html
+    .replace(/<\/body>[\s\S]*$/i, '')
+    .replace(/<!DOCTYPE[^>]*>/gi, '')
+    .replace(/<head\b[\s\S]*?<\/head>/gi, '')
+    .replace(/<\/?(?:html|head)\b[^>]*>/gi, '')
+    .replace(/<title\b[\s\S]*?<\/title>/gi, '')
+    .replace(/<meta\b[^>]*>/gi, '');
 
   // Drop the first H1 — duplicates the page title already rendered above.
   html = html.replace(/<h1\b[^>]*>[\s\S]*?<\/h1>/i, '');

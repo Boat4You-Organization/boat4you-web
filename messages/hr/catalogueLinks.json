@@ -17,5 +17,11 @@
     "seeAllBoats": "Pogledajte sve brodove ({count, number})",
     "seeAllBoatsIn": "Pogledajte sve brodove – {area} ({count, number})",
     "bestTypes": "Najbolji tipovi brodova za ovu rutu"
+  },
+  "landing": {
+    "boatTypesIn": "Vrste plovila {where}",
+    "popularModelsIn": "Popularni modeli {where}",
+    "itineraries": "Itinerari jedrenja",
+    "countedLink": "{name} ({count, number})"
   }
 }

@@ -26,6 +26,22 @@
   line-height: 1.7;
 }
 
+// Link to the /yachts model index under the lede.
+.modelsLink {
+  margin: rem-calc(12) 0 0;
+  font-size: rem-calc(14);
+  font-weight: 600;
+
+  a {
+    color: $blue-500;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
 .summary {
   margin: rem-calc(8) 0 rem-calc(32);
   color: $black-600;

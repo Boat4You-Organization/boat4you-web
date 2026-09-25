@@ -17,5 +17,11 @@
     "seeAllBoats": "Voir les {count, number} bateaux",
     "seeAllBoatsIn": "Voir les {count, number} bateaux – {area}",
     "bestTypes": "Les meilleurs types de bateaux pour cet itinéraire"
+  },
+  "landing": {
+    "boatTypesIn": "Types de bateaux {where}",
+    "popularModelsIn": "Modèles populaires {where}",
+    "itineraries": "Itinéraires de navigation",
+    "countedLink": "{name} ({count, number})"
   }
 }

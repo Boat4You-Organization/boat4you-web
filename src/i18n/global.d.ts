@@ -19,6 +19,7 @@ declare module 'next-intl' {
       promo: typeof import('../../messages/en/promo.json').default;
       catalogueLinks: typeof import('../../messages/en/catalogueLinks.json').default;
       siteFacts: typeof import('../../messages/en/siteFacts.json').default;
+      landing: typeof import('../../messages/en/landing.json').default;
       itinerary: typeof import('../../messages/en/itinerary.json').default;
       itineraryCroatia: typeof import('../../messages/en/itineraryCroatia.json').default;
       itineraryGreece: typeof import('../../messages/en/itineraryGreece.json').default;

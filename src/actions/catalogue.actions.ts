@@ -9,7 +9,9 @@ import {
   ServiceModel,
 } from '@/models/catalogue.model';
 import { PaginatedResponse } from '@/types/response.type';
+import { brandHubsWithin } from '@/utils/server/modelCatalog';
 import { PageableParams, createResourceParams } from '@/utils/static/queryParams';
+import { canonicalManufacturer, slugifyName } from '@/utils/static/yachtModelKey';
 
 interface ModelsActionState {
   models: BoatModel[];
@@ -63,13 +65,21 @@ export async function getManufacturers(
  * Composition:
  *   1. `/public/yachts/distribution` (faceted counts) → byManufacturer map
  *      `{ id: count }` — already covers the entire indexable catalogue
- *   2. `/public/catalogue/manufacturers?size=400` → id + name lookup
- *   3. Sort by count desc, slice top N, drop entries we couldn't name
+ *   2. `/public/catalogue/manufacturers?size=3000` → id + name lookup
+ *   3. Sort by count desc, drop entries we couldn't name and placeholder
+ *      makers, fold a brand's rows into its /yachts hub tile (when it has
+ *      one), slice top N
  *
  * Cached 1 hour — manufacturer counts move slowly; refreshing on every
  * home-page hit would burn the distribution endpoint unnecessarily.
  */
-export type ManufacturerCount = { id: number; name: string; count: number };
+export type ManufacturerCount = {
+  id: number;
+  name: string;
+  count: number;
+  /** /yachts brand hub the tile links (else the filtered search); `count` is then the hub's fleet. */
+  hubPath?: string | null;
+};
 
 export async function getTopManufacturers(limit = 24): Promise<ManufacturerCount[]> {
   const base = process.env.NEXT_PUBLIC_BOAT_WS_API_URL;
@@ -78,7 +88,7 @@ export async function getTopManufacturers(limit = 24): Promise<ManufacturerCount
   try {
     const [distRes, mansRes] = await Promise.all([
       fetch(`${base}/public/yachts/distribution`, { next: { revalidate: REVALIDATE } }),
-      fetch(`${base}/public/catalogue/manufacturers?size=400`, { next: { revalidate: REVALIDATE } }),
+      fetch(`${base}/public/catalogue/manufacturers?size=3000`, { next: { revalidate: REVALIDATE } }),
     ]);
 
     if (!distRes.ok || !mansRes.ok) return [];
@@ -89,11 +99,34 @@ export async function getTopManufacturers(limit = 24): Promise<ManufacturerCount
     const byManufacturer = distJson.byManufacturer || {};
     const nameById = new Map<number, string>((mansJson.content || []).map(m => [m.id as number, m.name as string]));
 
-    return Object.entries(byManufacturer)
-      .map(([id, count]) => ({ id: Number(id), name: nameById.get(Number(id)) || '', count }))
-      .filter(m => m.name && m.count > 0)
-      .sort((a, b) => b.count - a.count)
-      .slice(0, limit);
+    // A brand with a /yachts hub links the hub and shows the hub's fleet
+    // (its model pages, promoted countries); its manufacturer rows ("Lagoon"
+    // + "Lagoon-Bénéteau") fold into one tile. Never waits on a cold
+    // catalogue: without it every tile keeps the filtered search.
+    const brandHubs = await brandHubsWithin(1500);
+    const seenHubs = new Set<string>();
+
+    return (
+      Object.entries(byManufacturer)
+        .map(([id, count]): ManufacturerCount => ({ id: Number(id), name: nameById.get(Number(id)) || '', count }))
+        // Placeholder makers ("Unknown", "Custom Made") are no brand to browse.
+        .filter(m => m.name && m.count > 0 && canonicalManufacturer(m.name))
+        .sort((a, b) => b.count - a.count)
+        .flatMap((m): ManufacturerCount[] => {
+          const slug = slugifyName(canonicalManufacturer(m.name) ?? '');
+          const hub = slug ? brandHubs[slug] : undefined;
+
+          if (!slug || !hub) return [m];
+
+          if (seenHubs.has(slug)) return [];
+
+          seenHubs.add(slug);
+
+          return [{ ...m, count: hub.fleet, hubPath: hub.path }];
+        })
+        .sort((a, b) => b.count - a.count)
+        .slice(0, limit)
+    );
   } catch {
     return [];
   }

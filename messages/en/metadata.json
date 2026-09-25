@@ -3,7 +3,8 @@
     "base": {
       "title": "Yacht Charter & Boat Rental Worldwide | Boat4You",
       "titleTemplate": "%s | Boat4You",
-      "description": "Charter yachts & rent boats in 100+ countries. Sailing yachts, catamarans, motorboats. Best prices, 24/7 support, secure booking.",
+      "description": "Charter yachts & rent boats worldwide. Sailing yachts, catamarans, motorboats. Best prices, 24/7 support, secure booking.",
+      "descriptionWithCount": "Charter yachts & rent boats in {countries, plural, one {# country} other {# countries}}. Sailing yachts, catamarans, motorboats. Best prices, 24/7 support, secure booking.",
       "path": "/"
     },
     "search": {
