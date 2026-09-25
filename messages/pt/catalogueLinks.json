@@ -15,6 +15,7 @@
   "itinerary": {
     "boatsFromBase": "Barcos disponíveis com partida de {base} ({count, number})",
     "seeAllBoats": "Ver os {count, number} barcos",
+    "seeAllBoatsIn": "Ver os {count, number} barcos – {area}",
     "bestTypes": "Os melhores tipos de barco para esta rota"
   }
 }

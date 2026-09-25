@@ -4,6 +4,7 @@ import { Currency } from '@/models/user.model';
 import { VesselType, YachtModelShortInfo } from '@/models/yacht.model';
 import { fetchYachts } from '@/services/yacht.service';
 import { LocationType } from '@/types/location.type';
+import { PaginatedResponse } from '@/types/response.type';
 import { Hub, hubFor, localePrefix, regionsForMarina } from '@/utils/server/catalogueHubs';
 import {
   ResolvedDestination,
@@ -20,6 +21,11 @@ import { buildDestinationHref } from '@/utils/static/searchLandingPath';
  * up to 12 boats for the SSR card grid, the landing to "see all" (the base,
  * else its region, when indexable), and the boat-type landings that pass the
  * index gate there ("Best boat types for this route").
+ *
+ * Every count is the `/public/yachts` total of the page it describes: the
+ * heading counts the base's own listing, the "see all" link the landing it
+ * opens (a region shows more boats than its base; the count endpoints do not
+ * match the listing at all).
  */
 
 const MAX_BOATS = 12;
@@ -41,10 +47,13 @@ const ITINERARY_BOATS_REVALIDATE_SECONDS = 3600;
 export interface ItineraryBoats {
   /** Display name of the start base (catalogue name, localized for countries). */
   baseLabel: string;
+  /** Boats the base's own listing shows. */
   fleet: number;
   boats: YachtModelShortInfo[];
-  /** Where "see all" points (indexable base / region landing, else the base's filtered search). */
-  seeAllHref: string;
+  /** Where "see all" points (indexable base / region landing, else the base's
+   *  filtered search), how many boats that page lists, and — when it is not
+   *  the base itself — the area's label. */
+  seeAll: { href: string; count: number; area: string | null };
   typeHubs: Hub[];
 }
 
@@ -86,7 +95,7 @@ export const itineraryBoats = async (
     hubFor(index, resolved, null, locale),
     fetchYachts({ locations: [], did: resolved.dids, size: MAX_BOATS }, Currency.EUR, 'en', {
       revalidate: ITINERARY_BOATS_REVALIDATE_SECONDS,
-    }).catch(() => ({ content: [] as YachtModelShortInfo[] })),
+    }).catch((): PaginatedResponse<YachtModelShortInfo> => ({ content: [] })),
     resolved.kind === LocationType.MARINA && resolved.countryCode
       ? regionsForMarina(resolved.countryCode, resolved.dids[0])
       : Promise.resolve([] as string[]),
@@ -128,14 +137,24 @@ export const itineraryBoats = async (
     .sort((a, b) => b.fleet - a.fleet)
     .slice(0, MAX_TYPES);
 
+  const listed = yachts.page?.totalElements ?? yachts.content?.length ?? 0;
+  let seeAll: ItineraryBoats['seeAll'];
+
+  if (base.href) seeAll = { href: base.href, count: listed, area: null };
+  else if (region?.href) seeAll = { href: region.href, count: region.fleet, area: region.label };
+  else {
+    seeAll = {
+      href: `${localePrefix(locale)}${buildDestinationHref(resolved.name, resolved.dids.join(','))}`,
+      count: listed,
+      area: null,
+    };
+  }
+
   return {
     baseLabel: base.label,
-    fleet: resolved.count,
+    fleet: listed,
     boats: (yachts.content ?? []).slice(0, MAX_BOATS),
-    seeAllHref:
-      base.href ??
-      region?.href ??
-      `${localePrefix(locale)}${buildDestinationHref(resolved.name, resolved.dids.join(','))}`,
+    seeAll,
     typeHubs,
   };
 };

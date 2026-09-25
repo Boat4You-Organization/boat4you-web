@@ -15,6 +15,7 @@
   "itinerary": {
     "boatsFromBase": "Dostupni brodovi – polazna luka: {base} ({count, number})",
     "seeAllBoats": "Pogledajte sve brodove ({count, number})",
+    "seeAllBoatsIn": "Pogledajte sve brodove – {area} ({count, number})",
     "bestTypes": "Najbolji tipovi brodova za ovu rutu"
   }
 }

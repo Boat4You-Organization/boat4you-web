@@ -44,6 +44,12 @@ const ItineraryBoats = async ({ startingPoint, fallbacks, locale }: ItineraryBoa
     )
   );
 
+  // The link counts the page it opens: a region landing lists more boats
+  // than the base in the heading, so it names the region too.
+  const seeAllLabel = data.seeAll.area
+    ? t('itinerary.seeAllBoatsIn', { area: data.seeAll.area, count: data.seeAll.count })
+    : t('itinerary.seeAllBoats', { count: data.seeAll.count });
+
   return (
     <Container maxWidth="xl" component="section" sx={{ py: { xs: 4, md: 6 } }}>
       <Stack
@@ -56,8 +62,8 @@ const ItineraryBoats = async ({ startingPoint, fallbacks, locale }: ItineraryBoa
         <Typography component="h2" variant="h3" fontWeight={700} color={colors.blue950}>
           {t('itinerary.boatsFromBase', { base: data.baseLabel, count: data.fleet })}
         </Typography>
-        <Box component="a" href={data.seeAllHref} sx={linkSx}>
-          {t('itinerary.seeAllBoats', { count: data.fleet })} →
+        <Box component="a" href={data.seeAll.href} sx={linkSx}>
+          {seeAllLabel} →
         </Box>
       </Stack>
       <Grid container spacing={3}>

@@ -15,6 +15,7 @@
   "itinerary": {
     "boatsFromBase": "Bateaux disponibles au départ de {base} ({count, number})",
     "seeAllBoats": "Voir les {count, number} bateaux",
+    "seeAllBoatsIn": "Voir les {count, number} bateaux – {area}",
     "bestTypes": "Les meilleurs types de bateaux pour cet itinéraire"
   }
 }

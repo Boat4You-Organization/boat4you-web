@@ -15,6 +15,7 @@
   "itinerary": {
     "boatsFromBase": "Beschikbare boten vanuit {base} ({count, number})",
     "seeAllBoats": "Bekijk alle {count, number} boten",
+    "seeAllBoatsIn": "Bekijk alle {count, number} boten in {area}",
     "bestTypes": "De beste boottypes voor deze route"
   }
 }
