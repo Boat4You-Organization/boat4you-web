@@ -70,6 +70,10 @@
 
 .tableWrap {
   max-width: rem-calc(560);
+
+  // Last resort on narrow phones with long prices / currency symbols: the
+  // table scrolls inside the card instead of pushing past it.
+  overflow-x: auto;
 }
 
 .table {
@@ -86,10 +90,14 @@
     white-space: nowrap;
   }
 
+  // Localised headers ("Moitié centrale des bateaux") wrap; only the
+  // figures stay on one line.
   thead th {
     color: $black-700;
     font-size: rem-calc(12);
     font-weight: 700;
+    vertical-align: bottom;
+    white-space: normal;
   }
 
   tbody th {
