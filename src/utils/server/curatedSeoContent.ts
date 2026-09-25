@@ -312,14 +312,6 @@ export const curatedFileFor = async (
   return resolveCuratedSlugCandidates(destination, type, options).find(slug => existing.has(slug)) ?? null;
 };
 
-/** Whether the corpus has a page for (destination × boat type) in `locale`. */
-export const hasCuratedSeoFile = async (
-  locale: string,
-  destination: string,
-  boatType: string | null,
-  options: { typeSpecificOnly?: boolean } = {}
-): Promise<boolean> => !!(await curatedFileFor(locale, destination, boatType, options));
-
 /**
  * First existing curated file for (destination × boat type) in `locale`,
  * sanitised (body only, first <h1> dropped) and with search links mapped to

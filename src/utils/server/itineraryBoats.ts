@@ -36,7 +36,7 @@ const ROUTE_TYPES: VesselType[] = [
 ];
 
 // Itinerary pages are ISR; the list is cached as long as the page.
-export const ITINERARY_BOATS_REVALIDATE_SECONDS = 3600;
+const ITINERARY_BOATS_REVALIDATE_SECONDS = 3600;
 
 export interface ItineraryBoats {
   /** Display name of the start base (catalogue name, localized for countries). */
