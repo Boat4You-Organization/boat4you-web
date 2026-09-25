@@ -2,7 +2,7 @@
   "meta": {
     "indexTitle": "Czarter jachtów według modelu: {models, plural, one {# popularny model} few {# popularne modele} many {# popularnych modeli} other {# popularnego modelu}}",
     "indexDescription": "Porównaj najpopularniejsze modele jachtów i katamaranów do czarteru w Boat4You ({models, number}): dane techniczne, bazy i typowe ceny tygodniowe każdego modelu.",
-    "brandTitle": "Czarter {brand}: modele {models, number}, {count, plural, one {# jacht} few {# jachty} many {# jachtów} other {# jachtu}}",
+    "brandTitle": "Czarter {brand}: {models, plural, one {# model} few {# modele} many {# modeli} other {# modelu}}, {count, plural, one {# jacht} few {# jachty} many {# jachtów} other {# jachtu}}",
     "brandDescription": "Wyczarteruj jacht {brand} w Boat4You: {count, plural, one {# jacht} few {# jachty} many {# jachtów} other {# jachtu}} w {models, plural, one {# modelu} other {# modelach}}. Porównaj dane techniczne, bazy i typowe ceny tygodniowe, a potem zarezerwuj bezpośrednio.",
     "modelTitle": "Czarter {model}: {count, plural, one {# jacht} few {# jachty} many {# jachtów} other {# jachtu}}, bazy i ceny",
     "modelDescription": "Porównaj jachty {model} do czarteru ({count, number}): kabiny {cabins}, rok budowy {years}, ceny tygodniowe od {price}. Kierunki: {countries}. Rezerwuj bezpośrednio w Boat4You.",

@@ -2,7 +2,7 @@
   "meta": {
     "indexTitle": "Najam plovila po modelu: {models, plural, one {# popularan model} few {# popularna modela} other {# popularnih modela}}",
     "indexDescription": "Usporedite najpopularnije modele jedrilica i katamarana za najam na Boat4You: tehničke podatke, baze i uobičajene tjedne cijene za svaki model.",
-    "brandTitle": "Najam {brand}: modeli {models, number}, {count, plural, one {# brod} few {# broda} other {# brodova}}",
+    "brandTitle": "Najam {brand}: {models, plural, one {# model} few {# modela} other {# modela}}, {count, plural, one {# brod} few {# broda} other {# brodova}}",
     "brandDescription": "Unajmite {brand} na Boat4You: {count, plural, one {# brod} few {# broda} other {# brodova}} u {models, plural, one {# modelu} other {# modela}}. Usporedite tehničke podatke, baze i uobičajene tjedne cijene te rezervirajte izravno.",
     "modelTitle": "Najam {model}: {count, plural, one {# brod} few {# broda} other {# brodova}}, baze i cijene",
     "modelDescription": "Usporedite {count, plural, one {# brod} few {# broda} other {# brodova}} {model} za najam: kabine {cabins}, godina gradnje {years}, tjedne cijene od {price}. Destinacije: {countries}. Rezervirajte izravno na Boat4You.",
