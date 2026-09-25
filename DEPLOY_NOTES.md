@@ -1,5 +1,21 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-09-25 — Wave 2 LIVE: manifest sitemaps, boat breadcrumbs, blog/itinerary links, counts, /yachts model pages, charter facts block, review form — ✅ LIVE ~13:56 UTC
+
+Merge `49380893` (main wave 2 `d9201e58…9b421877` + branch `feat/models-facts-reviews` `ca063d26…148bc650`), BUILD_ID
+`Exdbl9XqGGF0iWgTMyMIq`. Verified on production: croatia 3,866 / greece 3,407 / paros 29 boats (index, distinct lists);
+sitemap index 127 files, 0 lastmod except blogs; sitemap-locations 576, categories 3,240, models 342, static 198;
+/yachts, /yachts/lagoon, /yachts/lagoon/lagoon-42 (+/de) 200 index, 24 boat cards; boat page `<nav aria-label="Breadcrumb">`
+
+- "More catamarans in Zadar (139)" + "All Lagoon 42 boats (438)"; blog post: Explore block, 0 did= / 0 startDate hrefs;
+  /itineraries/split: 12 boat cards "Boats available from Marina Kastela (301)", 1.29 MB (was 2.47 MB); /about-us SSR
+  13.600 / 58 / 50; /review/<bad token> 200 noindex,nofollow + Referrer-Policy no-referrer; robots.txt 9 × Disallow review.
+  Charter facts block renders nothing until the backend's first nightly run (08:00 UTC 26.9.; endpoint 404 today).
+  **Gotcha:** the deploy ships only `.next` — a stale `public/llms.txt` (1.8.2026, "100+ countries") on cusma1 shadowed the new
+  route handler; moved to `/home/cusma1/llms.txt.bak-20260925` + `systemctl restart nextapp` (Next caches the public file
+  list at start). Any future public/ removal or addition must be synced by hand.
+  Rollback `.next.prev` (= release A1 `PNhZDQdC3LxKlsbbcJvKl`).
+
 ## 2026-09-25 — 🌊 Wave 2: sitemap iz korpusa (prag 10), lastmod, cache landinga, linkovi brod/blog/itinerari → hubovi, jedan izvor brojki — ⏳ NIJE DEPLOYANO
 
 Commiti `d9201e58` … `6cd95cdc` (8, na HEAD iznad `fc1ee504`). Nije pushano, nije deployano.
