@@ -6,12 +6,13 @@ import { POPULAR_SEARCHES } from '@/config/popular-searches.config';
 import { isPromotedCountry } from '@/config/promoted-countries.config';
 import { VesselType } from '@/models/yacht.model';
 import { LocationType } from '@/types/location.type';
-import { Hub, hubFor, localePrefix } from '@/utils/server/catalogueHubs';
+import { Hub, boatHubs, hubFor, localePrefix } from '@/utils/server/catalogueHubs';
 import { corpusBoatType, corpusLinkTarget } from '@/utils/server/curatedSeoContent';
 import {
   DestinationIndex,
   ResolvedDestination,
   loadDestinationIndex,
+  locationForDid,
   resolveDestinationName,
 } from '@/utils/server/destinationDid';
 import { normalizeDestinationName } from '@/utils/static/searchLandingPath';
@@ -37,6 +38,23 @@ const CATALOGUE_HREF = new RegExp(
 );
 
 const decodeHref = (href: string): string => href.replace(/&#0?38;/g, '&').replace(/&amp;/g, '&');
+
+/** Nearest indexable landing above a did (locale-prefixed), or null. */
+const hubAbove = async (
+  index: DestinationIndex,
+  didParam: string,
+  boatType: VesselType | null,
+  locale: string
+): Promise<string | null> => {
+  const did = didParam.split(',')[0]?.trim() ?? '';
+  const row = did ? locationForDid(index, did) : null;
+
+  if (!row?.countryCode) return null;
+
+  const hubs = await boatHubs({ id: did, name: row.name, countryCode: row.countryCode }, boatType, locale);
+
+  return hubs.typeHub?.href ?? hubs.area?.href ?? hubs.country?.href ?? null;
+};
 
 /** Where one catalogue link in a post should point (null = leave it). */
 const targetFor = async (index: DestinationIndex | null, href: string, locale: string): Promise<string | null> => {
@@ -64,9 +82,21 @@ const targetFor = async (index: DestinationIndex | null, href: string, locale: s
   // (the noindex did form or a raw label) are mapped to their landing.
   if ((!label.trim() && !did.trim()) || !index) return null;
 
-  const landing = await corpusLinkTarget(index, label, did, corpusBoatType(url.searchParams));
+  const boatType = corpusBoatType(url.searchParams);
+  const landing = await corpusLinkTarget(index, label, did, boatType);
 
-  return landing ? `${prefix}${landing}` : null;
+  if (!landing) return null;
+
+  const landingDid = new URL(landing, SITE_ORIGIN).searchParams.get('did');
+
+  if (!landingDid) return `${prefix}${landing}`;
+
+  // The place has no landing URL of its own (its catalogue name carries a
+  // comma: "Trogir, Yachtclub Seget (Marina Baotić)"), so corpusLinkTarget
+  // fell back to the noindex did form. Walk up to the nearest indexable hub
+  // the boat breadcrumb would use (type hub, region, country); keep the did
+  // link only when none is indexable.
+  return (await hubAbove(index, landingDid, boatType, locale)) ?? `${prefix}${landing}`;
 };
 
 export const rewriteBlogCatalogueLinks = async (html: string, locale: string): Promise<string> => {
@@ -190,6 +220,9 @@ const MIN_LINKS = 3;
 const MAX_LINKS = 6;
 const TITLE_WEIGHT = 5;
 const MIN_BODY_MENTIONS = 2;
+// Seas shared by several countries that the catalogue lists as one
+// country's region ("Aegean" = Turkish Aegean, "Ionian" = Greek Ionian).
+const AMBIGUOUS_SEA_NAMES = new Set(['aegean', 'ionian', 'adriatic', 'mediterranean', 'caribbean', 'tyrrhenian']);
 
 /** Promoted countries with an indexable landing, biggest fleet first. */
 export const topCountryHubs = async (index: DestinationIndex, locale: string, limit: number): Promise<Hub[]> => {
@@ -220,7 +253,7 @@ export const blogExploreHubs = async (
 
   const heading = ` ${normalizeDestinationName([post.title, ...(post.categories ?? [])].join(' '))} `;
   const body = ` ${normalizeDestinationName(stripHtml(post.content))} `;
-  const scores = new Map<string, number>();
+  const matches: Array<{ key: string; name: string; inHeading: number; inBody: number }> = [];
 
   placeNames(index).forEach((name, key) => {
     const needle = ` ${key} `;
@@ -231,24 +264,42 @@ export const blogExploreHubs = async (
     // what the post is about.
     if (!inHeading && inBody < MIN_BODY_MENTIONS) return;
 
-    scores.set(name, (scores.get(name) ?? 0) + inHeading * TITLE_WEIGHT + inBody);
+    matches.push({ key, name, inHeading, inBody });
   });
+
+  const resolvedMatches = await Promise.all(
+    matches.map(async m => ({ ...m, resolved: await resolveDestinationName(index, m.name) }))
+  );
+  // Countries the post is about: those of the places its title / categories
+  // name (sea names excluded — they are what this check is for).
+  const headingCountries = new Set(
+    resolvedMatches
+      .filter(m => m.inHeading && !AMBIGUOUS_SEA_NAMES.has(m.key) && m.resolved?.countryCode)
+      .map(m => m.resolved!.countryCode!)
+  );
+  const inPostCountry = (countryCode?: string) => !!countryCode && headingCountries.has(countryCode);
 
   // Same landing under several spellings ("Split", "Split Region") adds up.
   const ranked = new Map<string, { resolved: ResolvedDestination; score: number }>();
 
-  await Promise.all(
-    Array.from(scores.entries()).map(async ([name, score]) => {
-      const resolved = await resolveDestinationName(index, name);
+  resolvedMatches.forEach(({ key, inHeading, inBody, resolved }) => {
+    if (!resolved) return;
 
-      if (!resolved) return;
+    // A sea name means the catalogue region of ONE country ("Aegean" is the
+    // Turkish Aegean), so it counts only in a post about that country; a
+    // place named only in the body must lie in a country the title names
+    // (a BVI post comparing itself with Croatia is not about Croatia).
+    if (AMBIGUOUS_SEA_NAMES.has(key)) {
+      if (!inPostCountry(resolved.countryCode)) return;
+    } else if (!inHeading && headingCountries.size && !inPostCountry(resolved.countryCode)) {
+      return;
+    }
 
-      const entry = ranked.get(resolved.name) ?? { resolved, score: 0 };
+    const entry = ranked.get(resolved.name) ?? { resolved, score: 0 };
 
-      entry.score += score;
-      ranked.set(resolved.name, entry);
-    })
-  );
+    entry.score += inHeading * TITLE_WEIGHT + inBody;
+    ranked.set(resolved.name, entry);
+  });
 
   const top = Array.from(ranked.values())
     .sort((a, b) => b.score - a.score)
