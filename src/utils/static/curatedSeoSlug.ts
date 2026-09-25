@@ -266,11 +266,10 @@ export const parseCuratedFileSlug = (slug: string): CuratedFileKey | null => {
 
 /**
  * Strip everything outside `<body>...</body>`, then remove the first `<h1>`
- * (the search page renders its own H1 above the SEO block). A file cut off
- * before `</body>` still drops its `<head>` (title/meta must not render).
+ * (the search page renders its own H1 above the SEO block).
  */
 export const sanitizeCuratedHtml = (raw: string): string => {
-  const bodyMatch = raw.match(/<body[^>]*>([\s\S]*?)(?:<\/body>|$)/i);
+  const bodyMatch = raw.match(/<body[^>]*>([\s\S]*?)<\/body>/i);
   let html = bodyMatch ? bodyMatch[1] : raw;
 
   // Drop the first H1 — duplicates the page title already rendered above.
