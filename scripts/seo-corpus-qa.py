@@ -18,14 +18,24 @@ Rules (all locales unless noted), in this order:
              (the first occurrence wins), a later FAQ section left with only
              new questions is merged into the first one, empty FAQ headings
              and exact duplicate <h2> sections are dropped
-  facts      targeted factual fixes (ACI, kuna as current currency,
-             "Boat4You base" ownership claims, sea names, …) — see FACTS
-  counts     hard-coded fleet counts ("Over 1,642 vessels", "Catamarans
-             (506)", "a 395-yacht inventory") → count-free wording
-  headings   untranslated place names in headings (non-EN)
   brand      "Boat4You" dropped from the text: EN sentences without a subject
              ("<p> arranges skippers…", "'s fleet", "Why Sailors Return to"),
              headings "Why Choose for …" in EN/FR/ES/IT/PT/PL/HR
+  facts      targeted factual fixes (ACI, kuna as current currency,
+             "Boat4You base" ownership claims, sea names, …) — see FACTS
+  claims     Boat4You as owner/operator of fleets, bases or their insurance
+             ("Boat4You maintains a curated fleet …", "Boat4You's Ionian
+             fleet") → "Our partner network maintains …", "our partners' …
+             fleet" (singular collective subject in all 9 languages)
+  counts     hard-coded fleet counts ("Over 1,642 vessels", "Catamarans
+             (506)", "a 395-yacht inventory") → count-free wording; a number
+             after a comparison/limiting word ("exceeds", "fewer than",
+             "only", "moins de", "nur") stays, one set off by a dash or colon
+             gets a size phrase ("—hundreds of vessels—")
+  headings   untranslated place names in headings (non-EN)
+
+Unfilled page templates (PLACEHOLDER / "Key Advantage Section 1") are only
+reported, and fail --check: they must be written or removed by hand.
 
 Usage:
   python3 scripts/seo-corpus-qa.py            # fix in place, print summary
@@ -45,7 +55,7 @@ ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'public', 
 LOCALES = ['en', 'de', 'fr', 'it', 'es', 'pt', 'nl', 'pl', 'hr']
 # brand runs before facts/counts: a restored "Boat4You's … base" or
 # "Boat4You's 395-yacht" is then handled in the same pass.
-RULES = ['foreign', 'structure', 'faq', 'brand', 'facts', 'counts', 'headings']
+RULES = ['foreign', 'structure', 'faq', 'brand', 'facts', 'claims', 'counts', 'headings']
 
 
 class Ctx:
@@ -239,6 +249,14 @@ FOREIGN_FIXES = [
     ('es', 'tyrrhenian-sea-gulet-charter.html', re.compile(r'(?: a la\{anchor\}){3,}[\s\S]*$'), ''),
     ('es', 'tyrrhenian-sea-gulet-charter.html', re.compile(r'a la\{anchor\}'), 'al ancla'),
 ]
+# An unfilled page template ("TITLE_PLACEHOLDER", "Key Advantage Section 1",
+# "First benefit paragraph providing …") and its translations. Such a file
+# cannot be fixed by a rule — it has to be written or removed — so it is only
+# reported (and fails --check). A translation is flagged when its EN source
+# is, whatever its own heading reads ("Ključne prednosti").
+TEMPLATE_LEFT = re.compile(
+    r'PLACEHOLDER|Key Advantage Section|benefit paragraph|Sektion \d<|Sezione \d<|Sección \d<|Seção \d<|Secção \d<|'
+    r'Sectie \d<|Sekcja \d|Section \d<', re.I)
 FOREIGN_LEFT = re.compile(r'[\u0400-\u04ff]{2,}|[\u3040-\u30ff\u4e00-\u9fff\u0600-\u06ff]|\{[a-z_]+\}')
 
 
@@ -896,6 +914,35 @@ COUNT_SKIP_ANY = (r'compared|Vergleich|compar|rispetto|vergeleken|porównan|uspo
                   r'storage|Winterlager|stockage|rimessaggio|almacen|armazen|stalling|zimowani|zimovanj|ancorag|anchorage')
 COUNT_OTHER = r'\b(?:other|weitere|andere|anderen|autres|altri|altre|otros|otras|outros|outras|innych|drugih)\b'
 
+# A comparison or limiting word right before the number ("exceeds 792 vessels",
+# "fewer than 100 yachts", "With only 6 catamarans", "moins de 100 bateaux",
+# "Mit nur 9 Schiffen"): deleting the number or swapping in a size phrase
+# breaks the sentence ("exceeds vessels", "Avec seulement plusieurs"), so the
+# number stays.
+COUNT_LIMIT = {
+    'en': r"\b(?:fewer|less|more|greater|no more|not more|no fewer|little more|slightly more|just over|just under|well under)\s+than"
+          r"|\b(?:under|below|exceed(?:s|ed|ing)?|surpass(?:es|ed|ing)?|tops|topping|only|just|merely|mere|barely|solely|as few as|as many as)",
+    'de': r"\b(?:weniger|nicht mehr|kaum mehr|mehr)\s+als|\b(?:unter|nur|lediglich|bloß|gerade(?:\s+(?:mal|einmal))?|"
+          r"übersteig\w*|übertr[ei]ff\w*|überschreit\w*|höchstens|maximal)",
+    'fr': r"\b(?:moins|pas plus|guère plus|plus)\s+(?:de|d['’])|\b(?:seulement|uniquement|à peine|tout juste|dépass\w*|"
+          r"excéd\w*|surpass\w*)|(?:\bne\s+|\bn['’])\w+(?:\s+\w+)?\s+que",
+    'it': r"\b(?:meno|non più|più)\s+di|\b(?:solo|soltanto|solamente|appena|supera\w*|oltrepass\w*|ecced\w*)",
+    'es': r"\b(?:menos|no más|más)\s+de|\b(?:solo|sólo|solamente|únicamente|apenas|supera\w*|exced\w*|sobrepasa\w*)",
+    'pt': r"\b(?:menos|não mais|mais)\s+de|\b(?:só|somente|apenas|unicamente|supera\w*|ultrapassa\w*|exced\w*)",
+    'nl': r"\b(?:minder|niet meer|nauwelijks meer|meer)\s+dan|\b(?:slechts|maar|alleen|amper|nauwelijks|onder|overschrijd\w*|overtre\w*)",
+    'pl': r"\b(?:mniej|nie więcej|więcej)\s+niż|\b(?:tylko|jedynie|zaledwie|raptem|poniżej|przekracza\w*|przewyższa\w*)",
+    'hr': r"\b(?:manje|ne više|ne manje|više)\s+od|\b(?:samo|svega|tek|jedva|ispod|premašuj\w*|nadmašuj\w*)",
+}
+# The number set off by a dash or a colon ("the largest fleet in Greece—301
+# vessels—all based …", "unmatched choice: 395 sailing yachts") cannot simply
+# go: the delete-mode locales write a size phrase there instead ("—hundreds of
+# vessels—"); EN uses its `phrase`, DE/NL these.
+COUNT_DASH_PHRASE = {
+    'de': ('Tausende', 'Hunderte', 'Dutzende', 'mehrere'),
+    'nl': ('duizenden', 'honderden', 'tientallen', 'enkele'),
+}
+DASH_OR_COLON = re.compile(r'(?:[—–:]|\s-)\s*$')
+
 
 def fix_counts(src, ctx):
     cfg = COUNT_LOCALES[ctx.locale]
@@ -951,6 +998,8 @@ def fix_counts(src, ctx):
         after_text = re.sub(r'<[^>]+>', ' ', body_now[m.end(): m.end() + 60])
         if re.search(COUNT_SKIP_AFTER, after_text, re.I) or re.search(COUNT_OTHER, m.group('rest'), re.I):
             return m.group(0)
+        if re.search(rf'(?:{COUNT_LIMIT[ctx.locale]})\s*$', sentence_before, re.I):
+            return m.group(0)  # "exceeds 792 vessels", "fewer than 100 yachts", "Mit nur 9 Schiffen"
         rest, noun = m.group('rest'), m.group('noun')
         prev = re.search(r"([\w'’]+)\s*$", re.sub(r'<[^>]+>', ' ', before))
         prev_word = prev.group(1) if prev else ''
@@ -972,6 +1021,12 @@ def fix_counts(src, ctx):
                         # "<strong>Sailing Yachts:</strong> 46 vessels. …" — a bare count fragment
                         ctx.record('counts', m.group(0) + after.strip()[:1], '(count fragment removed)')
                         return '\x03'
+                if not prev_word and DASH_OR_COLON.search(re.sub(r'<[^>]+>', ' ', before)):
+                    # "fleet in Greece—301 vessels—all based": a size phrase, not a gap
+                    phrases = cfg.get('phrase') or COUNT_DASH_PHRASE.get(ctx.locale)
+                    if not phrases or (ctx.locale == 'de' and re.search(r'(?:boot|schiff|katamaran|fahrzeug)en$|seglern$', noun, re.I)):
+                        return m.group(0)
+                    new = f"{_magnitude(n, phrases)} {rest}"
         elif mode == 'pl':
             forms = next(v for k, v in sorted(PL_FORMS.items(), reverse=True) if n >= k)
             if re.search(r'(?:ami|mi)$', noun):
@@ -1218,6 +1273,197 @@ def fix_brand(src, ctx):
 
 
 
+# ------------------------------------------------------------------ claims
+
+# Boat4You is a booking platform: the fleets, bases and their insurance belong
+# to the charter companies. "Boat4You maintains a curated fleet of catamarans
+# at Marina Benitses", "Boat4You bases its Ionian fleet here", "Boat4You
+# maintains comprehensive hull … insurance" (EN, partly restored by `brand`)
+# and their translations ("Boat4You unterhält eine Flotte …") get a singular
+# collective subject — "Our partner network maintains …" — so the verb, any
+# coordinated verb and "its" stay grammatical in all 9 languages. EN
+# "Boat4You's … fleet" becomes "our partners' … fleet".
+#
+# A claim = subject Boat4You + claim verb whose object (the next few words of
+# the same sentence) names boats or a fleet before any relationship/service
+# noun ("maintains partnerships with gulet operators" stays).
+CLAIM_SUBJECT = {
+    'en': ('Our partner network', 'our partner network'),
+    'de': ('Unser Partnernetzwerk', 'unser Partnernetzwerk'),
+    'fr': ('Notre réseau de partenaires', 'notre réseau de partenaires'),
+    'it': ('La nostra rete di partner', 'la nostra rete di partner'),
+    'es': ('Nuestra red de socios', 'nuestra red de socios'),
+    'pt': ('A nossa rede de parceiros', 'a nossa rede de parceiros'),
+    'nl': ('Ons partnernetwerk', 'ons partnernetwerk'),
+    'pl': ('Nasza sieć partnerów', 'nasza sieć partnerów'),
+    'hr': ('Naša mreža partnera', 'naša mreža partnera'),
+}
+CLAIM_VERBS = {
+    'en': r'maintains|operates|keeps|bases|stations|owns|houses|moors|has',
+    'de': r'unterhält|betreibt|stationiert|besitzt|hält',
+    'fr': r'entretient|exploite|maintient|stationne|possède|opère|base|gère',
+    'it': r'mantiene|gestisce|possiede|opera|ormeggia|staziona|basa|tiene',
+    'es': r'mantiene|opera|gestiona|posee|estaciona|basa|tiene|amarra',
+    'pt': r'mantém|opera|gere|gerencia|possui|estaciona|baseia|tem',
+    'nl': r'onderhoudt|exploiteert|beheert|stationeert|bezit|baseert|houdt|heeft',
+    'pl': r'utrzymuje|posiada|eksploatuje|stacjonuje|bazuje|prowadzi|ma',
+    'hr': r'održava|posjeduje|upravlja|bazira|drži|stacionira|ima',
+}
+# Verbs that are a claim only with a fleet object right behind them (a short
+# window): "Boat4You has 12 catamarans here" vs "Boat4You has years of …".
+CLAIM_WEAK_VERBS = {'has', 'houses', 'moors', 'hält', 'tiene', 'tem', 'houdt', 'heeft', 'ma', 'ima', 'gère', 'gestisce'}
+CLAIM_FLEET = {
+    'en': r'fleets?|vessels?|catamarans?|yachts?|monohulls?|motorboats?|boats?|gulets?|sailboats?|superyachts?|motorsailers?|RIBs?|trimarans?|bases',
+    'de': r'\w*(?:[Ff]lotte|[Ff]lotten|[Kk]atamaran|[Yy]acht|[Jj]acht|[Bb]oot|[Ss]chiff|[Gg]ulet|[Ee]inrumpf|[Ss]egler|Stützpunkt|[Bb]asis|[Bb]asen|[Vv]ersicherung)\w*',
+    'fr': r'flottes?|catamarans?|voiliers?|yachts?|bateaux|bateau|navires?|vedettes?|goélettes?|gulets?|monocoques?|unités|bases|assurances?',
+    'it': r'flott[ae]|catamarani|catamarano|yacht|barche|barca|imbarcazion[ei]|velieri|veliero|motoscafi|gulet|caicchi|monoscafi|basi|base|assicurazion[ei]|assicurativ\w*',
+    'es': r'flotas?|catamaranes|catamarán|yates?|veleros?|barcos?|embarcaciones|embarcación|lanchas?|goletas?|gulets?|monocascos?|bases|cobertura|pólizas?',
+    'pt': r'frotas?|catamarãs|catamarã|iates?|veleiros?|barcos?|embarcações|embarcação|lanchas?|goletas?|gulets?|monocascos?|bases|cobertura|apólices?',
+    'nl': r'\w*vloot\w*|\w*vloten|catamarans?|\w*jachten|\w*jacht|\w*boten|\w*boot|schepen|schip|vaartuigen|gulets?|eenrompers?|\w*basis|bases|\w*verzekering\w*',
+    'pl': r'flot\w*|katamaran\w*|jacht\w*|łodzi\w*|łód\w*|jednost\w*|żaglów\w*|motorów\w*|gulet\w*|baz[aęyi]\w*|ubezpiecz\w*',
+    'hr': r'flot\w*|katamaran\w*|jaht\w*|jedrilic\w*|brod\w*|plovil\w*|gliser\w*|gulet\w*|brodic\w*|baz[aeiu]\w*|osiguranj\w*',
+}
+CLAIM_STOP = {
+    'en': r'aspects?|details?|logistics|documentation|pages?|articles?|guides?|alliances?|partnerships?|relationships?|contacts?|standards?|knowledge|records?|polic\w*|pricing|prices?|quotes?|communications?|presence|offices?|teams?|staff|network|cooperation|access|links?|ties|agreements?|relations|liaison|charters|rentals?|bookings?|website|platform|listings?|availability|every|a\s+\w+\s+of\s+(?:partner|operator)',
+    'de': r'Aspekt\w*|Detail\w*|Dokumentation|Seiten|Allianz\w*|Partnerschaft\w*|Beziehung\w*|Kontakt\w*|Kommunikation|Zugang|Zugriff|Standard\w*|Logistik|Büro\w*|Team\w*|Netzwerk\w*|Zusammenarbeit|Preis\w*|Angebot\w*|Charter\b|Liegepl\w*|Website|Plattform',
+    'fr': r'aspects?|détails?|logistique|documentation|pages?|alliances?|partenariats?|relations?|contacts?|communication|accès|normes?|standards?|réseau\w*|équipes?|bureaux?|bureau|collaboration\w*|prix|tarifs?|locations?|plateforme|site',
+    'it': r'aspett\w*|dettagl\w*|logistica|documentazion\w*|pagine|alleanz\w*|partnership|rapport\w*|relazion\w*|contatt\w*|comunicazion\w*|accesso|standard|rete|team|uffic\w*|collaborazion\w*|prezz\w*|tariff\w*|noleggi\w*|piattaforma|sito',
+    'es': r'aspectos?|detalles?|logística|documentaci\w*|páginas|alianzas?|asociaci\w*|relaci\w*|contactos?|comunicaci\w*|acceso|estándar\w*|red|redes|equipos?|oficinas?|colaboraci\w*|precios?|tarifas?|alquiler\w*|plataforma|sitio',
+    'pt': r'aspetos?|aspectos?|detalhes?|logística|documentaç\w*|páginas|alianças?|parceri\w*|relaç\w*|contact\w*|contat\w*|comunicaç\w*|acesso|padr\w*|rede|equipas?|equipes?|escritório\w*|colabora\w*|preços?|tarifas?|aluguer\w*|plataforma|site',
+    'nl': r'aspect\w*|detail\w*|logistiek|documentatie|pagina\w*|allianties?|partnerschap\w*|relatie\w*|contact\w*|communicatie|toegang|standaard\w*|netwerk\w*|team\w*|kantor\w*|kantoor|samenwerking\w*|prijz\w*|tarie\w*|verhuur\w*|platform|website',
+    'pl': r'aspekt\w*|szczeg[oó]ł\w*|logistyk\w*|dokumentacj\w*|stron\w*|sojusz\w*|partnerstw\w*|relacj\w*|kontakt\w*|komunikacj\w*|dostęp\w*|standard\w*|sie[ćc]\w*|zesp[oó]ł\w*|biur\w*|współprac\w*|cen\w*|taryf\w*|wynajem\w*|platform\w*|stron\w*',
+    'hr': r'aspekt\w*|detalj\w*|logistik\w*|dokumentacij\w*|stranic\w*|savez\w*|partnerstv\w*|odnos\w*|kontakt\w*|komunikacij\w*|pristup\w*|standard\w*|mrež\w*|tim\w*|ured\w*|suradnj\w*|cijen\w*|tarif\w*|najam\w*|platform\w*|stranic\w*',
+}
+# Boat4You as the object of a preposition is not the subject of the verb.
+CLAIM_NOT_AFTER = re.compile(
+    r"\b(?:with|by|at|for|through|from|via|mit|von|bei|für|über|durch|avec|par|chez|pour|de|con|per|di|da|por|para|com|pela|pelo|"
+    r"met|door|bij|voor|van|przez|dla|od|z|ze|u|s|sa|kod|za|preko)\s*$", re.I)
+# "gestiona la selección de la flota, la logística …" = Boat4You's service
+# (the selection process, not "a selection of yachts").
+CLAIM_STOP_START = {
+    'en': r'the\s+selection', 'de': r'die\s+Auswahl', 'fr': r"la\s+sélection|l['’]\s*sélection|(?:des\s+)?bases\s+de\s+données", 'it': r'la\s+selezione|(?:le\s+)?banche\s+dati',
+    'es': r'la\s+selección|(?:las\s+)?bases\s+de\s+datos', 'pt': r'a\s+seleção|(?:as\s+)?bases\s+de\s+dados', 'nl': r'de\s+selectie',
+    'pl': r'wyb[oó]r\s+(?:jednostki|jachtu|łodzi)|baz\w*\s+danych', 'hr': r'odabir\s+(?:plovila|broda|jahte)|baz\w*\s+podataka',
+}
+CLAIM_WINDOW = 9
+CLAIM_WEAK_WINDOW = 3
+# EN only: the insurance / damage-waiver promises the brand restore produced.
+CLAIM_INSURANCE_EN = re.compile(
+    r'(?P<subj>(?:<strong>)?\bBoat4You(?:</strong>)?)(?P<mid>\s+(?:[a-z]+ly\s+)?)(?P<verb>maintains|includes|provides|carries|offers)\b')
+CLAIM_INSURANCE_WORD = re.compile(r'insurance|damage\s+waiver', re.I)
+CLAIM_INSURANCE_STOP = re.compile(r'\b(?:pricing|prices?|quotes?|transparent|all-inclusive|all-in|travel|medical|cancellation|knowledge|records?)\b', re.I)
+CLAIM_POSSESSIVE_EN = re.compile(
+    r"(?P<subj>(?:<strong>)?\bBoat4You(?:</strong>)?)['’]s\s+"
+    r"(?P<mid>(?:(?!(?:the|a|an|to|at|in|of|for|from|on|with|by|is|are|was|has|have|had|can|will|lets?|allows?|filters?|shows?|"
+    r"includes?|offers?|provides?|covers?|website|platform|search|team|booking|site|app|staff|experts?|advisors?|partners?|"
+    r"network|service|support|approach|policy|commitment|expertise|experience|knowledge|reputation|operators?|own)\b)[\w’'&-]+\s+){0,5}?)(?P<fleet>fleets?)\b")
+SENTENCE_END = re.compile(r'[.!?;](?=\s|<|$)|</(?:p|li|h[1-6]|td|dd|blockquote)\s*>')
+
+
+def _claim_object_is_fleet(text, locale, window):
+    """True when the first words of `text` (up to the sentence end) name boats
+    or a fleet before any relationship/service noun."""
+    end = SENTENCE_END.search(text)
+    # Bare numbers don't count towards the window: `counts` removes them later,
+    # which must not bring a fleet noun into the window on a second run.
+    words = [w for w in re.sub(r'<[^>]+>', ' ', text[: end.start() if end else len(text)]).split()
+             if not re.fullmatch(r'[\d.,+–-]+', w)][:window]
+    fleet = re.compile(rf'(?:{CLAIM_FLEET[locale]})[,;:)]*', re.I if locale != 'de' else 0)
+    stop = re.compile(rf'(?:{CLAIM_STOP[locale]})[,;:)]*', re.I)
+    if re.match(CLAIM_STOP_START[locale], ' '.join(words), re.I):
+        return False
+    for w in words:
+        w = w.strip('("“”„«»')
+        # A hyphenated compound ("Luxus-Katamarane", "Segelyacht-Inventar",
+        # "Katamaran-Liegeplatzvereinbarungen"): its last part is the head.
+        parts = [p for p in w.split('-') if p]
+        if stop.fullmatch(w) or (parts and stop.fullmatch(parts[-1])):
+            return False
+        if fleet.fullmatch(w) or any(fleet.fullmatch(p) for p in parts):
+            return True
+    return False
+
+
+def fix_claims(src, ctx):
+    loc = ctx.locale
+    head, body, tail = split_body(src)
+    cap, low = CLAIM_SUBJECT[loc]
+    body_now = body
+
+    def subject(m, start):
+        return cap if at_sentence_start(body_now, start, colon=False) else low
+
+    # 1) EN "Boat4You's Ionian fleet" → "our partners' Ionian fleet"; an
+    #    earlier pass left "through our partners's platform" (40 files).
+    if loc == 'en':
+        def partners_s(m):
+            new = m.group(1) + "'"
+            ctx.record('claims', m.group(0), new)
+            return new
+        body = re.sub(r"\b([Oo]ur partners)['’]s\b", partners_s, body)
+        body_now = body
+        def poss(m):
+            new_subj = "Our partners'" if at_sentence_start(body_now, m.start(), colon=False) else "our partners'"
+            new = f"{new_subj} {m.group('mid')}{m.group('fleet')}"
+            ctx.record('claims', plain(m.group(0)), plain(new))
+            return new
+        body = CLAIM_POSSESSIVE_EN.sub(poss, body)
+        body_now = body
+
+    # 2) Subject + claim verb (+ inverted "betreibt Boat4You" in DE/NL).
+    article = r'(?:\b[Aa]\s+)?' if loc == 'pt' else ''
+    forward = re.compile(
+        rf'(?P<subj>{article}(?:<strong>)?\bBoat4You(?:</strong>)?)(?P<mid>\s+(?:(?:also|still|now|currently|auch|aussi|également|anche|también|também|ook|również|także|također|još|[\w-]+(?:ly|lich|ment|mente|nie))\s+)?)(?P<verb>{CLAIM_VERBS[loc]})\b(?![-’\'])')
+
+    def fwd(m):
+        if CLAIM_NOT_AFTER.search(re.sub(r'<[^>]+>', ' ', body_now[max(0, m.start() - 20): m.start()])):
+            return m.group(0)
+        weak = m.group('verb') in CLAIM_WEAK_VERBS
+        if not _claim_object_is_fleet(body_now[m.end(): m.end() + 600], loc, CLAIM_WEAK_WINDOW if weak else CLAIM_WINDOW):
+            return m.group(0)
+        new = f"{subject(m, m.start())}{m.group('mid')}{m.group('verb')}"
+        ctx.record('claims', plain(m.group(0)) + ' …', plain(new) + ' …',
+                   plain(body_now[m.end(): m.end() + 120])[:80])
+        return new
+
+    body = forward.sub(fwd, body)
+    body_now = body
+
+    if loc in ('de', 'nl'):
+        inverted = re.compile(rf'\b(?P<verb>{CLAIM_VERBS[loc]})(?P<mid>\s+)(?P<subj>(?:<strong>)?Boat4You(?:</strong>)?)(?=\s)')
+
+        def inv(m):
+            weak = m.group('verb') in CLAIM_WEAK_VERBS
+            if not _claim_object_is_fleet(body_now[m.end(): m.end() + 600], loc, CLAIM_WEAK_WINDOW if weak else CLAIM_WINDOW):
+                return m.group(0)
+            new = f"{m.group('verb')}{m.group('mid')}{low}"
+            ctx.record('claims', plain(m.group(0)) + ' …', plain(new) + ' …',
+                       plain(body_now[m.end(): m.end() + 120])[:80])
+            return new
+
+        body = inverted.sub(inv, body)
+        body_now = body
+
+    # 3) EN insurance / damage-waiver promises.
+    if loc == 'en':
+        def ins(m):
+            if CLAIM_NOT_AFTER.search(re.sub(r'<[^>]+>', ' ', body_now[max(0, m.start() - 20): m.start()])):
+                return m.group(0)
+            rest = body_now[m.end(): m.end() + 600]
+            end = SENTENCE_END.search(rest)
+            words = re.sub(r'<[^>]+>', ' ', rest[: end.start() if end else len(rest)]).split()[:6]
+            text = ' '.join(words)
+            if not CLAIM_INSURANCE_WORD.search(text) or CLAIM_INSURANCE_STOP.search(text):
+                return m.group(0)
+            new = f"{subject(m, m.start())}{m.group('mid')}{m.group('verb')}"
+            ctx.record('claims', plain(m.group(0)) + ' …', plain(new) + ' …', text)
+            return new
+
+        body = CLAIM_INSURANCE_EN.sub(ins, body)
+
+    return head + body + tail
+
+
 # ------------------------------------------------------------------ driver
 
 def rule_functions():
@@ -1229,6 +1475,7 @@ def rule_functions():
         'counts': fix_counts,
         'headings': fix_headings,
         'brand': fix_brand,
+        'claims': fix_claims,
     }
 
 
@@ -1292,6 +1539,21 @@ def main():
     if not args.check:
         print(f'foreign-script / placeholder fragments left: {len(left)}' + (f' ({", ".join(left[:10])})' if left else ''))
 
+    templates = []
+    for locale in LOCALES:
+        folder = os.path.join(args.root, locale)
+        for name in sorted(os.listdir(folder)):
+            if not name.endswith('.html'):
+                continue
+            paths = [os.path.join(folder, name), os.path.join(args.root, 'en', name)]
+            for path in paths:
+                if os.path.exists(path):
+                    with open(path, encoding='utf-8') as fh:
+                        if TEMPLATE_LEFT.search(fh.read()):
+                            templates.append(f'{locale}/{name}')
+                            break
+    print(f'unfilled templates (write or remove): {len(templates)}' + (f' ({", ".join(templates[:12])}{" …" if len(templates) > 12 else ""})' if templates else ''))
+
     if args.log:
         with open(args.log, 'w', encoding='utf-8') as fh:
             fh.write('rule\tfile\tbefore\tafter\tcontext\n')
@@ -1299,7 +1561,7 @@ def main():
                 cells = [rule, f, before, after, context]
                 fh.write('\t'.join(squash(c).replace('\t', ' ') for c in cells) + '\n')
 
-    if args.check and sum(changed.values()):
+    if args.check and (sum(changed.values()) or templates):
         sys.exit(1)
 
 
