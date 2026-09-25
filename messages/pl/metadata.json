@@ -3,7 +3,8 @@
     "base": {
       "title": "Czarter jachtów i wynajem łodzi na świecie | Boat4You",
       "titleTemplate": "%s | Boat4You",
-      "description": "Czarter jachtów i wynajem łodzi w ponad 100 krajach. Żaglówki, katamarany, motorówki. Najlepsze ceny, wsparcie 24/7, bezpieczna rezerwacja.",
+      "description": "Czarter jachtów i wynajem łodzi na całym świecie. Żaglówki, katamarany, motorówki. Najlepsze ceny, wsparcie 24/7, bezpieczna rezerwacja.",
+      "descriptionWithCount": "Czarter jachtów i wynajem łodzi w {countries, plural, one {# kraju} other {# krajach}}. Żaglówki, katamarany, motorówki. Najlepsze ceny, wsparcie 24/7, bezpieczna rezerwacja.",
       "path": "/"
     },
     "search": {
