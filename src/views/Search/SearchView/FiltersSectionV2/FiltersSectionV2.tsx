@@ -33,6 +33,13 @@ interface FiltersSectionV2Props {
   catalogueData: CatalogueData;
   catalogueFilters?: CatalogueFilters | null;
   isMobile?: boolean;
+  /**
+   * The listing total the server fetched for these params. Rendered in the
+   * SSR HTML, where the store is still empty (crawlers read "0 boats
+   * available · live" next to an H2 of 895). Absent in the mobile header
+   * modal, which opens after hydration and reads the store.
+   */
+  serverTotalCount?: number | null;
 }
 
 /**
@@ -50,10 +57,13 @@ interface FiltersSectionV2Props {
  * polish task; the functional contract (URL params, cascading) stays
  * intact.
  */
-const FiltersSectionV2 = ({ catalogueData, catalogueFilters, isMobile }: FiltersSectionV2Props) => {
+const FiltersSectionV2 = ({ catalogueData, catalogueFilters, isMobile, serverTotalCount }: FiltersSectionV2Props) => {
   const { user } = useUserStore();
   const { params, setMultipleParams } = useQueryParams();
-  const liveCount = useYachtStore().searchTotalCount;
+  const storeCount = useYachtStore().searchTotalCount;
+  // The server's figure always belongs to the current URL (it re-renders with
+  // every filter change); the store only catches up after the list mounts.
+  const liveCount = serverTotalCount ?? storeCount;
   const distribution = useFilterDistribution();
   // Catalogue display name for URL values without a translation entry.
   const { labels: resolvedLabels } = useResolvedDestination();

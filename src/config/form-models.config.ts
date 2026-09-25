@@ -108,6 +108,8 @@ export interface YachtSearchParams {
   boatTypes?: VesselType[];
   /** Sitemap-only — restrict the result to a 2-letter country whitelist. */
   countryCodes?: string[];
+  /** `week` — an undated search prices each boat by its cheapest bookable week (searchLanding.ts). */
+  priceBasis?: 'week';
   currentDate?: string;
   reservationDateFrom?: string;
   price?: number;

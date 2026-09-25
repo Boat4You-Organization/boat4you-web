@@ -4,6 +4,7 @@ import { AllSearchParams } from '@/config/form-models.config';
 import { Currency } from '@/models/user.model';
 import { isVesselType } from '@/models/yacht.model';
 import { ResolvedDestination, resolveDestinationDids } from '@/utils/server/destinationDid';
+import { isUndatedSearch } from '@/utils/static/listingPrice';
 
 /**
  * Next leaves a comma-separated query value as one string (`?destinations=A%2CB`
@@ -171,8 +172,18 @@ export const landingFetchRevalidate = (params: AllSearchParams, landing: SearchL
  * boat types, page, currency — so every spelling of one landing shares one
  * cache entry (the backend filters by did and ignores `destinations`).
  * Otherwise the request's own params minus tracking parameters.
+ *
+ * Undated (every cached landing, and any other search without dates): ask
+ * for `priceBasis=week` — each boat priced by its cheapest bookable 7-night
+ * offer instead of the API's default MIN(per-day) × MIN(days) over all its
+ * offers, which put "1 day 211 €", "3 days 318 €" and "7 days 0 €" side by
+ * side on the Greece landing. A boat without a bookable week comes back
+ * without a price and its card reads "Price on request" (hasListingPrice).
+ * An API that predates the parameter ignores it (old prices, same cards).
  */
 export const yachtFetchParams = (params: AllSearchParams, cached: boolean): AllSearchParams => {
+  const priceBasis = isUndatedSearch(params) ? { priceBasis: 'week' as const } : {};
+
   if (cached) {
     const boatTypes = Array.from(new Set(splitSearchParam(params.boatTypes))).sort();
     const page = landingPage(params.page);
@@ -183,10 +194,16 @@ export const yachtFetchParams = (params: AllSearchParams, cached: boolean): AllS
       ...(boatTypes.length ? { boatTypes } : {}),
       ...(page ? { page } : {}),
       ...(hasValue(params.currency) ? { currency: splitSearchParam(params.currency)[0] } : {}),
+      ...priceBasis,
     } as unknown as AllSearchParams;
   }
 
-  return Object.fromEntries(
-    Object.entries(params as unknown as Record<string, unknown>).filter(([key]) => !isTrackingParam(key))
-  ) as unknown as AllSearchParams;
+  return {
+    ...Object.fromEntries(
+      Object.entries(params as unknown as Record<string, unknown>).filter(
+        ([key]) => !isTrackingParam(key) && key !== 'priceBasis'
+      )
+    ),
+    ...priceBasis,
+  } as unknown as AllSearchParams;
 };

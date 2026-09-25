@@ -25,6 +25,7 @@ import { BoatDescTranslate, buildBoatDescription } from '@/utils/static/boatMeta
 import { buildMetadata, localizedUrl } from '@/utils/static/buildMetadata';
 import { getBoatImageUrl } from '@/utils/static/imageUtils';
 import { serializeJsonLd } from '@/utils/static/jsonLd';
+import { hasListingPrice, listingPriceDays } from '@/utils/static/listingPrice';
 import { buildSearchLandingPath, isLandingExpressible } from '@/utils/static/searchLandingPath';
 import { charterFactsTargetFor } from '@/views/Search/CharterFacts/charterFactsTarget';
 import { ResolvedDestinationProvider } from '@/views/Search/SearchView/ResolvedDestinationContext';
@@ -214,18 +215,14 @@ function buildSearchBreadcrumb(locale: LocaleType, crumbs: LandingCrumb[]) {
  */
 const PRODUCT_SCHEMA_LIMIT = 10;
 
-function buildSearchProductsLd(
-  yachts: YachtModelShortInfo[] | undefined,
-  baseUrl: string,
-  currency: string,
-  tDesc: BoatDescTranslate
-) {
+function buildSearchProductsLd(yachts: YachtModelShortInfo[] | undefined, baseUrl: string, tDesc: BoatDescTranslate) {
   if (!yachts?.length) return null;
 
   // Google requires `offers` (or reviews) on every merchant-listing Product,
-  // and a 0 € price is sync noise, not a bookable offer — keep only yachts
-  // with a real price in the ItemList, mirroring the boat-detail schema.
-  const priced = yachts.filter(y => y.clientPriceEur != null && y.clientPriceEur > 0);
+  // and the Offer must carry the price the page shows — so only the yachts
+  // whose card shows a price (hasListingPrice; the rest read "Price on
+  // request"): no 0 € sync noise, no boat without a bookable week.
+  const priced = yachts.filter(y => hasListingPrice(y));
 
   if (!priced.length) return null;
 
@@ -256,13 +253,27 @@ function buildSearchProductsLd(
 
     if (brandFirstWord) product.brand = { '@type': 'Brand', name: brandFirstWord };
 
+    // The card's own figure: the TOTAL for the period ("Price for 7 days
+    // 1,900 €" — per-day rate × days, rounded, in the page currency), not the
+    // per-day rate the API returns (the markup read 271 for that card). The
+    // period is stated as the reference quantity of a UnitPriceSpecification.
+    const days = listingPriceDays(y);
+    const info = y.clientPriceInfo;
+    const inPageCurrency = info?.amount != null && !!info.currency;
+    const total = Math.round((inPageCurrency ? info.amount : y.clientPriceEur) * days);
+    const priceCurrency = (inPageCurrency ? info.currency : 'EUR').toUpperCase();
+
     product.offers = {
       '@type': 'Offer',
       url: yachtUrl,
-      // Per-day price the search card shows. Round to integer so the
-      // SERP doesn't render trailing decimals where they aren't useful.
-      price: String(Math.round(y.clientPriceEur)),
-      priceCurrency: (currency || 'EUR').toUpperCase(),
+      price: String(total),
+      priceCurrency,
+      priceSpecification: {
+        '@type': 'UnitPriceSpecification',
+        price: total,
+        priceCurrency,
+        referenceQuantity: { '@type': 'QuantitativeValue', value: days, unitCode: 'DAY' },
+      },
       availability:
         y.offerStatus === 'FREE' || y.offerStatus === 'OPTION_EXPIRED'
           ? 'https://schema.org/InStock'
@@ -355,6 +366,9 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
   // Next.js's HTTP fetch cache can do happens automatically. We fail
   // soft: a backend hiccup just means no Product LD this render.
   let productsLd: ReturnType<typeof buildSearchProductsLd> = null;
+  // The listing total, rendered by the sidebar's "N boats available" pill in
+  // the SSR HTML (it read "0 boats available · live" until hydration).
+  let totalCount: number | null = null;
 
   try {
     const yachtsResp = await fetchYachts(yachtFetchParams(effectiveParams, !!fetchRevalidate), currency, locale, {
@@ -362,7 +376,8 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
     });
     const tBoatMeta = await getTranslations({ locale, namespace: 'metadata.boat' });
 
-    productsLd = buildSearchProductsLd(yachtsResp?.content, baseUrl, currency, (key, values) =>
+    totalCount = yachtsResp?.page?.totalElements ?? null;
+    productsLd = buildSearchProductsLd(yachtsResp?.content, baseUrl, (key, values) =>
       tBoatMeta(key as never, values as never)
     );
   } catch {
@@ -395,6 +410,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
           fetchRevalidate={fetchRevalidate}
           charterFacts={charterFacts}
           landingPlace={landingPlace}
+          totalCount={totalCount}
         />
       </Layout>
     </ResolvedDestinationProvider>

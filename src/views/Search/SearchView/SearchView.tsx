@@ -28,6 +28,8 @@ interface SearchViewProps {
   charterFacts?: CharterFactsTarget | null;
   /** Set on destination landings: the place (× type) whose link blocks and breadcrumb to show. */
   landingPlace?: LandingPlace | null;
+  /** Listing total from the page's own yacht fetch, for the sidebar count in the SSR HTML. */
+  totalCount?: number | null;
 }
 
 const SearchView = async ({
@@ -36,6 +38,7 @@ const SearchView = async ({
   fetchRevalidate,
   charterFacts = null,
   landingPlace = null,
+  totalCount = null,
 }: SearchViewProps) => {
   const locale = await getLocale();
   const currency = (searchParams.currency as Currency) || Currency.EUR;
@@ -60,7 +63,11 @@ const SearchView = async ({
   return (
     <Container maxWidth="xl" disableGutters classes={{ root: styles.root }} className={styles.container}>
       <SearchTransitionProvider>
-        <FiltersSectionV2 catalogueData={catalogueData} catalogueFilters={catalogueFilters} />
+        <FiltersSectionV2
+          catalogueData={catalogueData}
+          catalogueFilters={catalogueFilters}
+          serverTotalCount={totalCount}
+        />
         <SearchResultsTransitionWrapper>
           {/* Suspense fallback intentionally null — the previous
               `<BoatsSection />` skeleton produced a generic 4-box grey
