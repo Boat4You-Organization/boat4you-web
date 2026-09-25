@@ -1,7 +1,8 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 
 import { PROMOTED_COUNTRY_CODES } from '@/config/promoted-countries.config';
 import { routing } from '@/i18n/routing';
+import { Currency } from '@/models/user.model';
 import { YachtModelShortInfo } from '@/models/yacht.model';
 import { fetchYachts } from '@/services/yacht.service';
 
@@ -13,7 +14,23 @@ const PROMOTED = Array.from(PROMOTED_COUNTRY_CODES);
 // emits exactly once across the paginated set.
 const PAGE_SIZE = 100;
 
+/**
+ * ISR, like the other sitemaps (25.9.2026). The shards used to render on
+ * every request (build: ƒ) — the list fetch was `no-store` — so each crawl
+ * of a shard cost a 100-boat catalogue query: 2–4 s, up to 7.9 s measured.
+ * Now a shard renders on its first request, is served from the ISR cache
+ * for an hour, and then regenerates in the background.
+ *
+ * `generateStaticParams` returns nothing on purpose: no build-time render
+ * (113 backend queries per build), every shard on demand. `dynamicParams`
+ * stays true (the default) — false would turn every shard into a 404 (and
+ * break on-demand revalidation, NoFallbackError).
+ */
 export const revalidate = 3600;
+export const dynamicParams = true;
+
+/** Plain shard numbers only; anything else is a small, stable 404. */
+const SHARD_PATTERN = /^\d{1,4}$/;
 
 const XML_HEADERS = {
   'Content-Type': 'application/xml',
@@ -21,70 +38,71 @@ const XML_HEADERS = {
 };
 
 export async function generateStaticParams() {
-  try {
-    const data = await fetchYachts({ locations: [], page: 1, size: 1, countryCodes: PROMOTED });
-    const total = data.page?.totalElements ?? 0;
-    const pages = Math.ceil(total / PAGE_SIZE);
-
-    return Array.from({ length: pages }, (_, i) => ({
-      page: String(i),
-    }));
-  } catch {
-    return [];
-  }
+  return [];
 }
 
-export async function GET(request: NextRequest, { params }: { params: Promise<{ page: string }> }) {
+export async function GET(_request: Request, { params }: { params: Promise<{ page: string }> }) {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+  const { page: pageParam } = await params;
 
-  try {
-    const { page: pageParam } = await params;
-    const page = parseInt(pageParam, 10);
+  if (!SHARD_PATTERN.test(pageParam)) {
+    return new NextResponse('Not Found', { status: 404 });
+  }
 
-    // Push the promoted-country whitelist down to the backend so the page
-    // returns exactly PAGE_SIZE matching yachts (no client-side trim, no
-    // partially-empty pages). Mario decision 4.5.2026.
-    const yachtsData = await fetchYachts({
-      locations: [],
-      page: page + 1,
-      size: PAGE_SIZE,
-      countryCodes: PROMOTED,
-    });
+  const page = Number(pageParam);
 
-    // Out-of-range / empty page: return 404, NOT a 200 with an empty
-    // <urlset>. An empty urlset has no <url> child, which Google Search
-    // Console rejects ("Missing XML tag: parent urlset, tag url"). 404
-    // lets GSC cleanly drop stale page indices left over from when the
-    // catalogue was larger (e.g. before agencies were de-listed).
-    if (!yachtsData.content || yachtsData.content.length === 0) {
+  // No catch: ISR caches whatever this handler RETURNS for the hour, a 503
+  // included. A backend failure therefore THROWS — a regeneration that
+  // throws keeps serving the last good copy, and a first render answers 500
+  // (retried by Google) without caching anything. fetchYachts throws on a
+  // non-2xx answer, and the Data Cache below stores 200s only.
+  //
+  // Push the promoted-country whitelist down to the backend so the page
+  // returns exactly PAGE_SIZE matching yachts (no client-side trim, no
+  // partially-empty pages). Mario decision 4.5.2026. Locale and currency
+  // pinned: the XML carries neither.
+  const yachtsData = await fetchYachts(
+    { locations: [], page: page + 1, size: PAGE_SIZE, countryCodes: PROMOTED },
+    Currency.EUR,
+    'en',
+    { revalidate }
+  );
+
+  if (!yachtsData.content || yachtsData.content.length === 0) {
+    const total = yachtsData.page?.totalElements ?? 0;
+
+    // A shard past the end of a non-empty catalogue is really gone (the
+    // index lists fewer shards now): 404, NOT a 200 with an empty <urlset>,
+    // which GSC rejects ("Missing XML tag: parent urlset, tag url").
+    if (total > 0 && page * PAGE_SIZE >= total) {
       return new NextResponse('Not Found', { status: 404 });
     }
 
-    // No <lastmod>: the list API exposes no per-boat modification date, and
-    // a request-time stamp marks every URL as changed on every fetch.
-    const urls = yachtsData.content
-      .flatMap((yacht: YachtModelShortInfo) =>
-        routing.locales.map(locale => {
-          const prefix = locale === routing.defaultLocale ? '' : `/${locale}`;
+    // An empty page inside the catalogue — or an empty catalogue — is a
+    // backend blip, not a fact to cache for an hour: throw (see above).
+    throw new Error(`sitemap-yachts/${page}: empty page, catalogue total ${total}`);
+  }
 
-          return `  <url>
+  // No <lastmod>: the list API exposes no per-boat modification date, and
+  // a request-time stamp marks every URL as changed on every fetch.
+  const urls = yachtsData.content
+    .flatMap((yacht: YachtModelShortInfo) =>
+      routing.locales.map(locale => {
+        const prefix = locale === routing.defaultLocale ? '' : `/${locale}`;
+
+        return `  <url>
     <loc>${baseUrl}${prefix}/boat/${yacht.slug}</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>`;
-        })
-      )
-      .join('\n');
+      })
+    )
+    .join('\n');
 
-    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls}
 </urlset>`;
 
-    return new NextResponse(sitemap, { headers: XML_HEADERS });
-  } catch {
-    // Transient backend failure — 503 so GSC retries later instead of
-    // treating an empty/200 response as a permanently broken sitemap.
-    return new NextResponse('Service Unavailable', { status: 503 });
-  }
+  return new NextResponse(sitemap, { headers: XML_HEADERS });
 }
