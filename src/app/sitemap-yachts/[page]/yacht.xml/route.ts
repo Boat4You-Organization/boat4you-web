@@ -29,8 +29,12 @@ const PAGE_SIZE = 100;
 export const revalidate = 3600;
 export const dynamicParams = true;
 
-/** Plain shard numbers only; anything else is a small, stable 404. */
-const SHARD_PATTERN = /^\d{1,4}$/;
+/**
+ * Canonical shard numbers only (no leading zeros, at most 3 digits — 113 shards today): `01` used to answer
+ * a copy of shard 1 as its own ISR entry and backend call. Anything else is a small, stable 404. Note: ISR
+ * still caches those 404s per path (the proxy matcher skips /sitemap*), so the key space is kept small here.
+ */
+const SHARD_PATTERN = /^(?:0|[1-9]\d{0,2})$/;
 
 const XML_HEADERS = {
   'Content-Type': 'application/xml',
