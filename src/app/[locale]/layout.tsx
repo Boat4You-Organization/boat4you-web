@@ -16,7 +16,7 @@ import { meta } from '@/config/meta';
 import { CLIENT_NAMESPACES, pickMessages } from '@/i18n/clientMessages';
 import { routing } from '@/i18n/routing';
 import '@/styles/index.scss';
-import { getSiteStats } from '@/utils/server/siteStats';
+import { getSiteStatsWithin } from '@/utils/server/siteStats';
 import { buildAlternateLanguages, getLocalizedJsonLd, localizedUrl } from '@/utils/static/buildMetadata';
 
 import Providers from './providers';
@@ -93,6 +93,9 @@ interface RootLayoutProps {
 // want ISR/SSG opt in individually with their own static params +
 // setRequestLocale (see (root)/page.tsx).
 
+/** How long the layout waits for the catalogue counts (JSON-LD description). */
+const SITE_STATS_LAYOUT_BUDGET_MS = 1500;
+
 const RootLayout = async ({ children, params }: RootLayoutProps) => {
   const { locale } = await params;
 
@@ -106,7 +109,9 @@ const RootLayout = async ({ children, params }: RootLayoutProps) => {
   // is 2.2 MB and was serialized into every page). Itinerary pages add the
   // per-country itinerary namespace(s) they need (ItineraryMessages).
   const messages = pickMessages(await getMessages(), CLIENT_NAMESPACES);
-  const siteStats = await getSiteStats();
+  // Never block every page on the API: once cached this is instant; on a
+  // cold cache or a slow API the JSON-LD uses its static description.
+  const siteStats = await getSiteStatsWithin(SITE_STATS_LAYOUT_BUDGET_MS);
   const localizedJsonLd = await getLocalizedJsonLd(locale as LocaleType, siteStats?.display);
 
   return (
