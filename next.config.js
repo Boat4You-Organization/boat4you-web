@@ -180,6 +180,14 @@ const nextConfig = {
         source: '/_next/static/(.*)',
         headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
       },
+      // The curated SEO corpus is raw material for the /search landing pages
+      // (read server-side into the SSR HTML since 25.9.2026). Served bare from
+      // public/, each file is a full unstyled HTML document that would compete
+      // with its own landing page in the index — keep it out.
+      {
+        source: '/seo-content/:path*',
+        headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }],
+      },
     ];
   },
   images: {
