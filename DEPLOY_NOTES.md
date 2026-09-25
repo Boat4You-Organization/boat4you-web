@@ -1,5 +1,23 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-09-25 — 🧭 /search landing: filtriranje, SSR tekstovi, sitemap = index gate — ⏳ NIJE DEPLOYANO
+
+Release A (commiti `99695426`, `6bf68c45`, `d4594f6b`, `3f1da651` + popravci recenzije 25.9.). `/search?destinations=<ime>`
+filtrira po did-u na serveru, kurirani tekst je u SSR HTML-u, `/seo-content/*` šalje `X-Robots-Tag: noindex`.
+**Sitemapi se sad grade iz istog predikata kao robots tag** (`src/utils/server/landingGate.ts`): mjesto s brodovima (za
+boatType: brodovi TOG tipa) + kurirani tekst u tom jeziku (za boatType: tekst za taj tip, ne country overview).
+Lokalno uz prod API: `sitemap-locations` 5.175 → **171** URL-ova (19 × 9), `sitemap-categories` 1.296 → **468** (52 × 9);
+svih 639 odgovara `index` + canonical = `<loc>`, svi imaju brodove.
+
+**Akcije pred / nakon deploya:**
+
+- [ ] Deploy radi `public/seo-content/` na serveru (search stranica i sitemapi ga čitaju s diska, `process.cwd()/public`).
+- [ ] Build prerenderira sitemape protiv prod API-ja: ~150 malih `size=1` upita (max 6 paralelno) — ne pokretati build
+      u sync prozoru na cusma2.
+- [ ] Nakon deploya: GSC → ponovno poslati `sitemap.xml`; očekivano ~4,8K „Excluded by noindex" s landing URL-ova koji više
+      nisu u sitemapu (marine bez teksta, tip × zemlja bez teksta ili bez brodova tog tipa) — namjerno (plan, release A).
+- [ ] Prag flote je `MIN_LANDING_FLEET = 1` (landingGate.ts); plan predlaže N (regija ≥30, zemlja×tip ≥25) — čeka Mariovu odluku.
+
 ## 2026-09-24 — 🔠 toTitleCase: samo pravi rimski brojevi, elizija — ✅ DEPLOYED
 
 Nastavak „' Sunny'" popravka (isti dan). Commit `05b07fd9`, BUILD_ID `ryyExLpWs0fiHHcdctuIk`, rollback `.next.prev` =
