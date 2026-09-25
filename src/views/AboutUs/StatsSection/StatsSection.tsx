@@ -7,8 +7,22 @@ import colors from '@/styles/themes/colors';
 
 const Br = () => <br />;
 
-const StatsSection = () => {
+interface StatsSectionProps {
+  /** Live catalogue counts (siteStats.ts `display`); the config values stay for the rest. */
+  catalogue?: { boats: number; countries: number } | null;
+}
+
+const StatsSection = ({ catalogue }: StatsSectionProps) => {
   const t = useTranslations('about.stats');
+  // Fleet and destination counters come from the one count source (the
+  // backend catalogue), not from the static config (23,982 / 100 there).
+  const liveValue = (description: string): number | null => {
+    if (!catalogue) return null;
+
+    if (description === 'premiumYachtsFleet') return catalogue.boats;
+
+    return description === 'worldwideDestinations' ? catalogue.countries : null;
+  };
 
   return (
     <Container component="section" maxWidth="xl" disableGutters>
@@ -34,7 +48,7 @@ const StatsSection = () => {
             <Grid container columnSpacing={{ xs: 2, lg: 16 }} rowSpacing={8}>
               {stats.map(({ title, description }, index) => (
                 <Grid size={{ xs: 6 }} key={description}>
-                  <CounterNumber target={title} index={index} />
+                  <CounterNumber target={liveValue(description) ?? title} index={index} />
                   <Typography variant="body1" color={colors.black500}>
                     {t(description)}
                   </Typography>

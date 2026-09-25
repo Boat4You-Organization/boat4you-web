@@ -146,8 +146,20 @@ const localeToLanguageTag: Record<string, string> = {
   nl: 'nl-NL',
 };
 
-export const getLocalizedJsonLd = async (locale: LocaleType) => {
+/** Catalogue size for the entity description (src/utils/server/siteStats.ts `display`). */
+export interface EntityStats {
+  boats: number;
+  countries: number;
+  marinas: number;
+}
+
+export const getLocalizedJsonLd = async (locale: LocaleType, stats?: EntityStats | null) => {
   const t = await getTranslations({ locale, namespace: 'metadata' });
+  const tFacts = await getTranslations({ locale, namespace: 'siteFacts' });
+  // Entity description with the live catalogue size (one count source with
+  // /about-us, the home hero and llms.txt); the generic meta description
+  // ("100+ countries") only when the counts are unavailable.
+  const entityDescription = stats ? tFacts('entityDescription', { ...stats }) : t(meta.description);
 
   return {
     '@context': 'https://schema.org',
@@ -157,7 +169,7 @@ export const getLocalizedJsonLd = async (locale: LocaleType) => {
         '@id': `${meta.url}/#website`,
         name: t(meta.title),
         url: meta.url,
-        description: t(meta.description),
+        description: entityDescription,
         image: `${meta.url}/meta/og-image.png`,
         inLanguage: localeToLanguageTag[locale] || 'en-US',
         // Sitelinks Searchbox eligibility — when a user searches the brand
@@ -186,7 +198,7 @@ export const getLocalizedJsonLd = async (locale: LocaleType) => {
         // Brand-entity block (Mario 29.8.2026): legalName + Brand node teach
         // Google/LLMs that Boat4You is an ORGANIZATION entity.
         legalName: 'Cusmanich d.o.o.',
-        alternateName: 'boat4you.com',
+        alternateName: ['Boat4You', 'boat4you.com'],
         foundingDate: '2013',
         brand: {
           '@type': 'Brand',
@@ -214,7 +226,7 @@ export const getLocalizedJsonLd = async (locale: LocaleType) => {
         url: meta.url,
         logo: `${meta.url}/meta/logo.svg`,
         email: 'info@boat4you.com',
-        description: t(meta.description),
+        description: entityDescription,
         address: {
           '@type': 'PostalAddress',
           streetAddress: 'Vrboran 37',
@@ -261,7 +273,7 @@ export const getLocalizedJsonLd = async (locale: LocaleType) => {
         '@type': ['Service', 'TravelAgency'],
         '@id': `${meta.url}/#service`,
         name: meta.name,
-        description: t(meta.description),
+        description: entityDescription,
         serviceType: 'Yacht Booking Platform',
         provider: {
           '@id': `${meta.url}/#organization`,

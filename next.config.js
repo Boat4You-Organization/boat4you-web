@@ -16,6 +16,7 @@ const withNextIntl = createNextIntlPlugin({
       './messages/en/cookieConsent.json',
       './messages/en/promo.json',
       './messages/en/catalogueLinks.json',
+      './messages/en/siteFacts.json',
       './messages/en/itinerary.json',
       './messages/en/itineraryCroatia.json',
       './messages/en/itineraryGreece.json',

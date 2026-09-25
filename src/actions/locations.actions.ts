@@ -5,6 +5,7 @@ import { POPULAR_SEARCHES, PopularSearchMember, PopularSearchSpec } from '@/conf
 import { CountryCountModel, LocationModel } from '@/models/locations.model';
 import { LocationType } from '@/types/location.type';
 import { PaginatedResponse } from '@/types/response.type';
+import { getSiteStats } from '@/utils/server/siteStats';
 import { createQueryParams } from '@/utils/static/queryParams';
 import { buildDestinationHref } from '@/utils/static/searchLandingPath';
 
@@ -236,11 +237,14 @@ export default async function getCountriesCount(): Promise<CountryCountModel[]> 
 export type HeroStats = { yachts: number; marinas: number };
 
 export async function getHeroStats(): Promise<HeroStats> {
-  // Hardcoded hero trust stats (Mario, 2026-06-02): pinned to their current
-  // values so the numbers never drift between renders and the home no longer
-  // makes two upstream fetches (/public/yachts + /public/locations-count) just
-  // to render the pills. Bump these by hand if the headline figures change.
-  return { yachts: 11982, marinas: 647 };
+  // One count source (siteStats.ts, 25.9.2026): the pills were pinned by
+  // hand at 11,982 / 647 on 2.6.2026 (no drift between renders, no extra
+  // fetches) and drifted from the catalogue instead. The shared helper keeps
+  // both properties — six-hour Data Cache, one fetch set for every surface —
+  // and matches /about-us, the JSON-LD and llms.txt. 0 hides the pills.
+  const stats = await getSiteStats();
+
+  return { yachts: stats?.boats ?? 0, marinas: stats?.marinas ?? 0 };
 }
 
 /**

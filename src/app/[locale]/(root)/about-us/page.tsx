@@ -6,6 +6,7 @@ import dynamic from 'next/dynamic';
 import { getYachtFleet } from '@/actions/yacht.actions';
 import Layout from '@/components/Layout';
 import { LocaleType } from '@/config/locales.config';
+import { getSiteStats } from '@/utils/server/siteStats';
 import { buildMetadata } from '@/utils/static/buildMetadata';
 
 const HeroSection = dynamic(() => import('@/components/HeroSection'));
@@ -28,12 +29,12 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: L
 }
 
 const AboutUsPage = async () => {
-  const fleet = await getYachtFleet();
+  const [fleet, siteStats] = await Promise.all([getYachtFleet(), getSiteStats()]);
 
   return (
     <Layout>
       <HeroSection namespace="about" image={{ src: '/images/howWeWork/hero.webp', alt: 'How we work' }} />
-      <StatsSection />
+      <StatsSection catalogue={siteStats?.display} />
       <WhoWeAreSection />
       <WhyChooseUsSection />
       <OurPromiseSection />

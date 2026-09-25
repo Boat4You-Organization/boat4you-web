@@ -16,6 +16,7 @@ import { meta } from '@/config/meta';
 import { CLIENT_NAMESPACES, pickMessages } from '@/i18n/clientMessages';
 import { routing } from '@/i18n/routing';
 import '@/styles/index.scss';
+import { getSiteStats } from '@/utils/server/siteStats';
 import { buildAlternateLanguages, getLocalizedJsonLd, localizedUrl } from '@/utils/static/buildMetadata';
 
 import Providers from './providers';
@@ -102,10 +103,11 @@ const RootLayout = async ({ children, params }: RootLayoutProps) => {
   setRequestLocale(locale);
 
   // Only client-consumed namespaces go to the browser (the full catalogue
-  // is 2.2 MB and was serialized into every page). The /itineraries segment
-  // layout re-provides the per-country itinerary namespaces it needs.
+  // is 2.2 MB and was serialized into every page). Itinerary pages add the
+  // per-country itinerary namespace(s) they need (ItineraryMessages).
   const messages = pickMessages(await getMessages(), CLIENT_NAMESPACES);
-  const localizedJsonLd = await getLocalizedJsonLd(locale as LocaleType);
+  const siteStats = await getSiteStats();
+  const localizedJsonLd = await getLocalizedJsonLd(locale as LocaleType, siteStats?.display);
 
   return (
     <html lang={locale} suppressHydrationWarning>

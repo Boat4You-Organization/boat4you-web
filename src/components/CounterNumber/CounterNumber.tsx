@@ -8,7 +8,10 @@ import colors from '@/styles/themes/colors';
 import { formatNumber } from '@/utils/static/formatNumber';
 
 const CounterNumber = ({ target, index }: { target: number; index: number }) => {
-  const [count, setCount] = useState(0);
+  // Start at the target so the server HTML carries the real number (it used
+  // to render "0+" for crawlers and no-JS readers); the count-up restarts
+  // from 0 once the counter scrolls into view.
+  const [count, setCount] = useState(target);
   const [started, setStarted] = useState(false);
   const ref = useRef<HTMLParagraphElement>(null);
 
@@ -17,6 +20,7 @@ const CounterNumber = ({ target, index }: { target: number; index: number }) => 
       ([entry]) => {
         if (entry.isIntersecting && !started) {
           setStarted(true);
+          setCount(0);
 
           let current = 0;
           const increment = target / 100;
