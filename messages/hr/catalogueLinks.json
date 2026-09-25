@@ -1,0 +1,20 @@
+{
+  "breadcrumb": {
+    "ariaLabel": "Navigacijski put",
+    "home": "Početna"
+  },
+  "moreOfType": "Još {type, select, CATAMARAN {katamarana} GULET {guleta} HOUSE_BOAT {house boatova} LUXURY_MOTOR_YACHT {luksuznih motornih jahti} MINI_CRUISER {mini cruisera} MOTORBOAT {motornih čamaca} MOTOR_YACHT {motornih jahti} MOTORSAILER {motornih jedrilica} POWER_CATAMARAN {motornih katamarana} SAILING_YACHT {jedrilica} TRIMARAN {trimarana} RUBBER_BOAT {gumenih čamaca} other {brodova}}: {area} ({count, number})",
+  "hubLink": "{area} · {count, plural, one {# brod} few {# broda} other {# brodova}}",
+  "typedHubLink": "{type}: {area} ({count, number})",
+  "explore": {
+    "title": "Istražite brodove",
+    "leadPost": "Brodovi za najam u odredištima o kojima govori ovaj članak.",
+    "leadIndex": "Brodovi za najam u našim najpopularnijim odredištima.",
+    "itineraryLink": "Itinerari: {area}"
+  },
+  "itinerary": {
+    "boatsFromBase": "Dostupni brodovi – polazna luka: {base} ({count, number})",
+    "seeAllBoats": "Pogledajte sve brodove ({count, number})",
+    "bestTypes": "Najbolji tipovi brodova za ovu rutu"
+  }
+}

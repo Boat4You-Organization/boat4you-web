@@ -1,0 +1,20 @@
+{
+  "breadcrumb": {
+    "ariaLabel": "Kruimelpad",
+    "home": "Home"
+  },
+  "moreOfType": "Meer {type, select, CATAMARAN {catamarans} GULET {guletten} HOUSE_BOAT {woonboten} LUXURY_MOTOR_YACHT {luxe motorjachten} MINI_CRUISER {minicruisers} MOTORBOAT {motorboten} MOTOR_YACHT {motorjachten} MOTORSAILER {motorzeilers} POWER_CATAMARAN {motorcatamarans} SAILING_YACHT {zeiljachten} TRIMARAN {trimarans} RUBBER_BOAT {rubberboten} other {boten}} in {area} ({count, number})",
+  "hubLink": "{area} · {count, plural, one {# boot} other {# boten}}",
+  "typedHubLink": "{type}: {area} ({count, number})",
+  "explore": {
+    "title": "Ontdek de boten",
+    "leadPost": "Charterboten in de vaargebieden waar dit artikel over gaat.",
+    "leadIndex": "Charterboten in onze populairste vaargebieden.",
+    "itineraryLink": "Zeilroutes: {area}"
+  },
+  "itinerary": {
+    "boatsFromBase": "Beschikbare boten vanuit {base} ({count, number})",
+    "seeAllBoats": "Bekijk alle {count, number} boten",
+    "bestTypes": "De beste boottypes voor deze route"
+  }
+}

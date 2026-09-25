@@ -1,0 +1,20 @@
+{
+  "breadcrumb": {
+    "ariaLabel": "Ścieżka nawigacji",
+    "home": "Strona główna"
+  },
+  "moreOfType": "Więcej {type, select, CATAMARAN {katamaranów} GULET {gulettów} HOUSE_BOAT {łodzi mieszkalnych} LUXURY_MOTOR_YACHT {luksusowych jachtów motorowych} MINI_CRUISER {mini-rejsowców} MOTORBOAT {łodzi motorowych} MOTOR_YACHT {jachtów motorowych} MOTORSAILER {żaglowców motorowych} POWER_CATAMARAN {katamaranów motorowych} SAILING_YACHT {jachtów żaglowych} TRIMARAN {trimaranów} RUBBER_BOAT {łodzi gumowych} other {łodzi}}: {area} ({count, number})",
+  "hubLink": "{area} · {count, plural, one {# łódź} few {# łodzie} many {# łodzi} other {# łodzi}}",
+  "typedHubLink": "{type}: {area} ({count, number})",
+  "explore": {
+    "title": "Odkryj łodzie",
+    "leadPost": "Łodzie do wynajęcia w miejscach, o których jest ten artykuł.",
+    "leadIndex": "Łodzie do wynajęcia w naszych najpopularniejszych miejscach.",
+    "itineraryLink": "Trasy rejsów: {area}"
+  },
+  "itinerary": {
+    "boatsFromBase": "Dostępne łodzie – port startowy: {base} ({count, number})",
+    "seeAllBoats": "Zobacz wszystkie łodzie ({count, number})",
+    "bestTypes": "Najlepsze typy łodzi na tę trasę"
+  }
+}

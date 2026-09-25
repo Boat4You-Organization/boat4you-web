@@ -22,6 +22,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
     metadata: (await import(`../../messages/${locale}/metadata.json`)).default,
     cookieConsent: (await import(`../../messages/${locale}/cookieConsent.json`)).default,
     promo: (await import(`../../messages/${locale}/promo.json`)).default,
+    catalogueLinks: (await import(`../../messages/${locale}/catalogueLinks.json`)).default,
     itinerary: (await import(`../../messages/${locale}/itinerary.json`)).default,
     itineraryCroatia: (await import(`../../messages/${locale}/itineraryCroatia.json`)).default,
     itineraryGreece: (await import(`../../messages/${locale}/itineraryGreece.json`)).default,

@@ -1,0 +1,20 @@
+{
+  "breadcrumb": {
+    "ariaLabel": "Brotkrümelnavigation",
+    "home": "Startseite"
+  },
+  "moreOfType": "Weitere {type, select, CATAMARAN {Katamarane} GULET {Gulets} HOUSE_BOAT {Hausboote} LUXURY_MOTOR_YACHT {Luxus-Motoryachten} MINI_CRUISER {Mini-Cruiser} MOTORBOAT {Motorboote} MOTOR_YACHT {Motoryachten} MOTORSAILER {Motorsegler} POWER_CATAMARAN {Motor-Katamarane} SAILING_YACHT {Segelyachten} TRIMARAN {Trimarane} RUBBER_BOAT {Schlauchboote} other {Boote}} in {area} ({count, number})",
+  "hubLink": "{area} · {count, plural, one {# Boot} other {# Boote}}",
+  "typedHubLink": "{type}: {area} ({count, number})",
+  "explore": {
+    "title": "Boote entdecken",
+    "leadPost": "Charterboote in den Revieren, um die es in diesem Artikel geht.",
+    "leadIndex": "Charterboote in unseren beliebtesten Revieren.",
+    "itineraryLink": "Reiserouten: {area}"
+  },
+  "itinerary": {
+    "boatsFromBase": "Verfügbare Boote ab {base} ({count, number})",
+    "seeAllBoats": "Alle {count, number} Boote ansehen",
+    "bestTypes": "Die besten Bootstypen für diese Route"
+  }
+}

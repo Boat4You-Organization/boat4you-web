@@ -15,13 +15,16 @@ import { LocaleType } from '@/config/locales.config';
 import { meta } from '@/config/meta';
 import { Currency } from '@/models/user.model';
 import { CHARTER_TYPE_LABEL_MAP, CharterType, YachtModel } from '@/models/yacht.model';
+import { boatHubs } from '@/utils/server/catalogueHubs';
 import { BoatDescTranslate, buildBoatDescription } from '@/utils/static/boatMetaDescription';
 import { buildMetadata, localizedUrl } from '@/utils/static/buildMetadata';
 import { getBoatImageUrl } from '@/utils/static/imageUtils';
+import { serializeJsonLd } from '@/utils/static/jsonLd';
 import { toTitleCase } from '@/utils/static/toTitleCase';
 import { buildYachtFaq, buildYachtFaqSchema } from '@/utils/static/yachtFaq';
 import BoatContentSection from '@/views/Boat/BoatContentSection';
 import BoatHeroSection from '@/views/Boat/BoatHeroSection';
+import BoatHubLinks from '@/views/Boat/BoatHubLinks';
 import BoatMobileNavigation from '@/views/Boat/BoatMobileNavigation';
 import { BoatTransitionProvider } from '@/views/Boat/BoatTransitionProvider';
 import RelatedBoats from '@/views/Boat/RelatedBoats';
@@ -334,36 +337,33 @@ const BoatPage = async ({
     tBoatMeta(key as never, values as never)
   );
 
-  // BreadcrumbList — surfaces a navigation chip in the SERP
-  // ("Home › Catamaran › Marina Kastela › Lagoon 42 …") and helps
-  // Google understand the page's place in the site hierarchy. Items
-  // are server-rendered so the crawler reads them on first hit. URLs
-  // pick up the active locale prefix so the breadcrumb chip in the SERP
-  // points at the same language the user landed on.
-  const cityName = yacht.location?.name?.split(',')[0]?.trim() || '';
+  // Hubs above this boat (country, region/base, boat type) — linked only
+  // when their landing passes the index gate. The visible breadcrumb
+  // (BoatHubLinks) and the BreadcrumbList JSON-LD use the same URLs, so the
+  // SERP chip and the page point at the indexable landing pages (before
+  // 25.9.2026 wave 2 the JSON-LD linked `/search?boatTypes=X` and
+  // `?destinations=<city>`, both noindex, and the page body linked neither).
+  const hubs = await boatHubs(yacht.location, yacht.vesselType ?? null, locale);
+  const boatName = [yacht.model, toTitleCase(yacht.name) || yacht.name]
+    .filter(Boolean)
+    .join(' ')
+    .replace(/\s+/g, ' ')
+    .trim();
   const breadcrumbItems: Array<{ name: string; item: string }> = [
     { name: 'Boat4You', item: localizedUrl(locale as LocaleType, '/') },
   ];
 
-  if (yacht.vesselType) {
-    breadcrumbItems.push({
-      name: yacht.vesselType
-        .replace(/_/g, ' ')
-        .toLowerCase()
-        .replace(/\b\w/g, c => c.toUpperCase()),
-      item: localizedUrl(locale as LocaleType, `/search?boatTypes=${yacht.vesselType}`),
-    });
-  }
+  [hubs.country, hubs.area, hubs.typeHub].forEach(hub => {
+    if (!hub?.href) return;
 
-  if (cityName) {
     breadcrumbItems.push({
-      name: cityName,
-      item: localizedUrl(locale as LocaleType, `/search?destinations=${encodeURIComponent(cityName)}`),
+      name: hub === hubs.typeHub && hubs.typeLabel ? hubs.typeLabel : hub.label,
+      item: `${meta.url}${hub.href}`,
     });
-  }
+  });
 
   breadcrumbItems.push({
-    name: [yacht.model, yacht.name].filter(Boolean).join(' ').replace(/\s+/g, ' ').trim(),
+    name: boatName,
     item: localizedUrl(locale as LocaleType, `/boat/${yacht.slug}`),
   });
 
@@ -396,24 +396,25 @@ const BoatPage = async ({
         <script
           type="application/ld+json"
           // eslint-disable-next-line react/no-danger
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+          dangerouslySetInnerHTML={{ __html: serializeJsonLd(productSchema) }}
         />
       )}
       <script
         type="application/ld+json"
         // eslint-disable-next-line react/no-danger
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        dangerouslySetInnerHTML={{ __html: serializeJsonLd(breadcrumbSchema) }}
       />
       {yachtFaqSchema && (
         <script
           type="application/ld+json"
           // eslint-disable-next-line react/no-danger
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(yachtFaqSchema) }}
+          dangerouslySetInnerHTML={{ __html: serializeJsonLd(yachtFaqSchema) }}
         />
       )}
       <BoatTransitionProvider>
         <BoatHeroSection yacht={yacht} />
         <BoatContentSection yacht={yacht} yachtFaq={yachtFaq} />
+        <BoatHubLinks hubs={hubs} boatName={boatName} locale={locale} />
         {/* Post-content upsell order fixed by Mario (21.7.2026): similar
             boats FIRST, day-by-day itineraries for the marina below. */}
         <RelatedBoats yacht={yacht} user={user} locale={locale} currency={currency} />

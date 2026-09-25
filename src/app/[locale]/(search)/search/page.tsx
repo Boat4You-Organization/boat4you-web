@@ -20,38 +20,12 @@ import {
 } from '@/utils/server/searchLanding';
 import { BoatDescTranslate, buildBoatDescription } from '@/utils/static/boatMetaDescription';
 import { buildMetadata, localizedUrl } from '@/utils/static/buildMetadata';
+import { DESTINATION_KEY_BY_LABEL } from '@/utils/static/destinationLabelKey';
 import { getBoatImageUrl } from '@/utils/static/imageUtils';
 import { serializeJsonLd } from '@/utils/static/jsonLd';
 import { buildSearchLandingPath, isLandingExpressible } from '@/utils/static/searchLandingPath';
 import { ResolvedDestinationProvider } from '@/views/Search/SearchView/ResolvedDestinationContext';
 import SearchView from '@/views/Search/SearchView/SearchView';
-
-/**
- * Maps the lowercased URL `?destinations=` value (also used by the FE
- * client lookup in BoatsSection) to the matching JSON key under
- * `home.destinationsSection.destinations` / `destinationsLocative`. Keep
- * this in sync with the analogous client-side dict in BoatsSection.tsx —
- * any new POPULAR_SEARCHES entry needs an entry in both maps so the H1
- * (server-rendered title) and the page H1 (client-rendered) agree.
- */
-const DESTINATION_KEY_BY_LABEL: Record<string, string> = {
-  bahamas: 'bahamas',
-  caribbean: 'caribbean',
-  croatia: 'croatia',
-  france: 'france',
-  greece: 'greece',
-  italy: 'italy',
-  martinique: 'martinique',
-  montenegro: 'montenegro',
-  seychelles: 'seychelles',
-  spain: 'spain',
-  turkey: 'türkiye',
-  türkiye: 'türkiye',
-  'virgin islands (british)': 'virginIslandsBritish',
-  grenada: 'grenada',
-  'split region': 'splitRegion',
-  'ionian region': 'ionianRegion',
-};
 
 interface SearchPageProps {
   params: Promise<{ locale: Locale }>;

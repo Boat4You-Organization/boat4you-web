@@ -1,0 +1,20 @@
+{
+  "breadcrumb": {
+    "ariaLabel": "Ruta de navegación",
+    "home": "Inicio"
+  },
+  "moreOfType": "Más {type, select, CATAMARAN {catamaranes} GULET {gulets} HOUSE_BOAT {casas flotantes} LUXURY_MOTOR_YACHT {yates a motor de lujo} MINI_CRUISER {minicruceros} MOTORBOAT {lanchas} MOTOR_YACHT {yates a motor} MOTORSAILER {motoveleros} POWER_CATAMARAN {catamaranes a motor} SAILING_YACHT {veleros} TRIMARAN {trimaranes} RUBBER_BOAT {botes inflables} other {barcos}} en {area} ({count, number})",
+  "hubLink": "{area} · {count, plural, one {# barco} other {# barcos}}",
+  "typedHubLink": "{type}: {area} ({count, number})",
+  "explore": {
+    "title": "Descubre los barcos",
+    "leadPost": "Barcos de alquiler en los destinos de los que habla este artículo.",
+    "leadIndex": "Barcos de alquiler en nuestros destinos más populares.",
+    "itineraryLink": "Itinerarios: {area}"
+  },
+  "itinerary": {
+    "boatsFromBase": "Barcos disponibles con salida desde {base} ({count, number})",
+    "seeAllBoats": "Ver los {count, number} barcos",
+    "bestTypes": "Los mejores tipos de barco para esta ruta"
+  }
+}

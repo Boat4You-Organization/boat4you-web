@@ -1,0 +1,20 @@
+{
+  "breadcrumb": {
+    "ariaLabel": "Breadcrumb",
+    "home": "Home"
+  },
+  "moreOfType": "More {type, select, CATAMARAN {catamarans} GULET {gulets} HOUSE_BOAT {houseboats} LUXURY_MOTOR_YACHT {luxury motor yachts} MINI_CRUISER {mini cruisers} MOTORBOAT {motorboats} MOTOR_YACHT {motor yachts} MOTORSAILER {motorsailers} POWER_CATAMARAN {power catamarans} SAILING_YACHT {sailing yachts} TRIMARAN {trimarans} RUBBER_BOAT {rubber boats} other {boats}} in {area} ({count, number})",
+  "hubLink": "{area} · {count, plural, one {# boat} other {# boats}}",
+  "typedHubLink": "{type}: {area} ({count, number})",
+  "explore": {
+    "title": "Explore boats",
+    "leadPost": "Boats you can charter in the places this article covers.",
+    "leadIndex": "Boats you can charter in our most popular destinations.",
+    "itineraryLink": "Sailing itineraries: {area}"
+  },
+  "itinerary": {
+    "boatsFromBase": "Boats available from {base} ({count, number})",
+    "seeAllBoats": "See all {count, number} boats",
+    "bestTypes": "Best boat types for this route"
+  }
+}

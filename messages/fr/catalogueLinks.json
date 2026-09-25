@@ -1,0 +1,20 @@
+{
+  "breadcrumb": {
+    "ariaLabel": "Fil d’Ariane",
+    "home": "Accueil"
+  },
+  "moreOfType": "Autres {type, select, CATAMARAN {catamarans} GULET {goélettes} HOUSE_BOAT {péniches} LUXURY_MOTOR_YACHT {yachts à moteur de luxe} MINI_CRUISER {mini-croiseurs} MOTORBOAT {bateaux à moteur} MOTOR_YACHT {yachts à moteur} MOTORSAILER {voiliers à moteur} POWER_CATAMARAN {catamarans à moteur} SAILING_YACHT {voiliers} TRIMARAN {trimarans} RUBBER_BOAT {bateaux pneumatiques} other {bateaux}} : {area} ({count, number})",
+  "hubLink": "{area} · {count, plural, one {# bateau} other {# bateaux}}",
+  "typedHubLink": "{type} : {area} ({count, number})",
+  "explore": {
+    "title": "Découvrir les bateaux",
+    "leadPost": "Les bateaux à louer dans les destinations évoquées dans cet article.",
+    "leadIndex": "Les bateaux à louer dans nos destinations les plus prisées.",
+    "itineraryLink": "Itinéraires : {area}"
+  },
+  "itinerary": {
+    "boatsFromBase": "Bateaux disponibles au départ de {base} ({count, number})",
+    "seeAllBoats": "Voir les {count, number} bateaux",
+    "bestTypes": "Les meilleurs types de bateaux pour cet itinéraire"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "breadcrumb": {
+    "ariaLabel": "Percorso di navigazione",
+    "home": "Home"
+  },
+  "moreOfType": "{type, select, CATAMARAN {Altri catamarani} GULET {Altri gulet} HOUSE_BOAT {Altre case galleggianti} LUXURY_MOTOR_YACHT {Altri yacht a motore di lusso} MINI_CRUISER {Altri mini cruiser} MOTORBOAT {Altri motoscafi} MOTOR_YACHT {Altri yacht a motore} MOTORSAILER {Altri motorsailer} POWER_CATAMARAN {Altri catamarani a motore} SAILING_YACHT {Altri yacht a vela} TRIMARAN {Altri trimarani} RUBBER_BOAT {Altri gommoni} other {Altre barche}}: {area} ({count, number})",
+  "hubLink": "{area} · {count, plural, one {# barca} other {# barche}}",
+  "typedHubLink": "{type}: {area} ({count, number})",
+  "explore": {
+    "title": "Scopri le barche",
+    "leadPost": "Le barche a noleggio nelle destinazioni di cui parla questo articolo.",
+    "leadIndex": "Le barche a noleggio nelle nostre destinazioni più amate.",
+    "itineraryLink": "Itinerari: {area}"
+  },
+  "itinerary": {
+    "boatsFromBase": "Barche disponibili con partenza da {base} ({count, number})",
+    "seeAllBoats": "Vedi tutte le {count, number} barche",
+    "bestTypes": "I tipi di barca migliori per questo itinerario"
+  }
+}

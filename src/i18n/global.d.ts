@@ -17,6 +17,7 @@ declare module 'next-intl' {
       metadata: typeof import('../../messages/en/metadata.json').default;
       cookieConsent: typeof import('../../messages/en/cookieConsent.json').default;
       promo: typeof import('../../messages/en/promo.json').default;
+      catalogueLinks: typeof import('../../messages/en/catalogueLinks.json').default;
       itinerary: typeof import('../../messages/en/itinerary.json').default;
       itineraryCroatia: typeof import('../../messages/en/itineraryCroatia.json').default;
       itineraryGreece: typeof import('../../messages/en/itineraryGreece.json').default;
