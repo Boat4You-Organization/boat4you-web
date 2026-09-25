@@ -1,5 +1,19 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-09-26 — 🔧 After-comparison fixes (Mario „sve ovo sredi odmah") — ✅ LIVE cusma1 ~23:00 UTC 25.9. (`eb711938`, BUILD_ID `zPqErlXO_gjrBO0zRIXwr`)
+
+Merges `a52ae599` (fix/linking incl. fix/metadata), `caa7ebe6` (fix/listing), `977549ec` (fix/corpus) + `eb711938` (canonical shard numbers).
+
+- **hreflang:** next-intl `alternateLinks: false` — no hreflang in the HTTP `Link` header anywhere; the in-HTML alternates (query kept) are the only source. Live: 0 header hreflang on landings, home, /yachts.
+- **Owner decisions:** croatia × CATAMARAN = "Catamaran rental in Croatia" (the exact phrase "Catamaran charter Croatia" belongs to catamaran-croatia-charter.com); Split Region title/H1 lead with "Split" (9 locales + × type); country count from siteStats in meta/copy (54), no "100+"/"more than 40"; LinkedIn `/company/boat4you-com` in footer + sameAs, foundingDate 2013.
+- **Titles/H1:** `messages/<locale>/landing.json` — 58 regions translated with their "in …" phrase (DE "in der Ägäis", FR "en Croatie", PL "na Karaibach"); 61 curated files lacking `</body>` no longer leak a 2nd `<title>`/meta into the page (sanitizeCuratedHtml).
+- **Links:** landing link blocks built from the landing manifest (never a noindex landing), "Boat types in {place}", "Popular models here" → /yachts, itineraries; homepage brand tiles → /yachts/<brand> hubs where a hub exists; itinerary did=/noindex leftovers fixed; landing BreadcrumbList Home > Country > Region > Place.
+- **Listing:** 0 € and non-positive prices → "Price on request"; Offer.price = card total + UnitPriceSpecification (referenceQuantity N DAY); SSR sidebar count; home country cards = landing totals (Croatia 3,864, Greece 3,408, France 428; was 5,658/5,573/1,587 from `/public/countries-count`, which counts inactive boats — backend endpoint NOT changed). Weekly-only prices on undated landings need backend `priceBasis=week` (branch fix/after-counts `c597759`, under review, not deployed) — until then Greece still mixes 1/2/3/7-day cards.
+- **Yacht sitemaps:** ISR 1 h (were dynamic 3–8 s), empty/failed backend page throws (keeps last good copy), only canonical shard numbers (`01` → 404).
+- **Corpus** (`scripts/seo-corpus-qa.py`, re-runnable, `--check`): FAQ duplicates removed, "ACI = Adriatic Croatia Insurance" fixed, kuna, hard-coded fleet counts, "Boat4You owns/operates the fleet" → partner network, country names in headings translated; 36 unfilled Sicily templates (motor-yacht/gulet/motorboat/luxury-motor-yacht × 9) deleted → those landings noindex + out of the sitemap. **public/ shipped by hand:** cusma1 has no rsync → tar + scp + directory swap (backup `/home/cusma1/seo-content.bak-20260926.tgz`); 12,870 files.
+- Live check 23:01 UTC: titles above ×1 each, Greece 0 × "0 €", 1 × "Price on request", sidebar 3,408 SSR, LinkedIn ×7 on home, shard 5 200 / 01 404, Sicily motor-yacht noindex.
+  Rollback: `.next.prev` (= `1XgW0PfIHzRDQsUaTzqnn`) + restore the corpus tarball.
+
 ## 2026-09-25 — Wave 2 LIVE: manifest sitemaps, boat breadcrumbs, blog/itinerary links, counts, /yachts model pages, charter facts block, review form — ✅ LIVE ~13:56 UTC
 
 Merge `49380893` (main wave 2 `d9201e58…9b421877` + branch `feat/models-facts-reviews` `ca063d26…148bc650`), BUILD_ID
