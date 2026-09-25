@@ -21,6 +21,9 @@ import { buildAlternateLanguages, getLocalizedJsonLd, localizedUrl } from '@/uti
 
 import Providers from './providers';
 
+/** How long the layout waits for the catalogue counts (meta + JSON-LD description). */
+const SITE_STATS_LAYOUT_BUDGET_MS = 1500;
+
 export async function generateMetadata({ params }: { params: Promise<{ locale: Locale }> }): Promise<Metadata> {
   const { locale } = await params;
 
@@ -28,6 +31,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: L
   // Locale-aware root URL — non-EN locales get `/hr`, `/de`, … so canonical
   // and openGraph point at the actually-rendered page, not the EN root.
   const homeUrl = localizedUrl(locale as LocaleType, '/');
+  // Country count from the one count source (siteStats.ts, shared with the
+  // JSON-LD, /about-us and llms.txt); the number-free text when it is not
+  // available within the layout budget.
+  const siteStats = await getSiteStatsWithin(SITE_STATS_LAYOUT_BUDGET_MS);
+  const description = siteStats
+    ? t('metadata.base.descriptionWithCount', { countries: siteStats.display.countries })
+    : t(meta.description);
 
   return {
     metadataBase: new URL(meta.url),
@@ -35,7 +45,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: L
       default: t(meta.title),
       template: t(meta.titleTemplate),
     },
-    description: t(meta.description),
+    description,
     alternates: {
       canonical: homeUrl,
       languages: buildAlternateLanguages('/'),
@@ -47,13 +57,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: L
       type: 'website',
       url: homeUrl,
       title: { default: t(meta.title), template: t(meta.titleTemplate) },
-      description: t(meta.description),
+      description,
       images: [{ url: `${meta.url}/meta/og-image.png`, width: 1200, height: 630, alt: meta.name }],
     },
     twitter: {
       card: 'summary_large_image',
       title: { default: t(meta.title), template: t(meta.titleTemplate) },
-      description: t(meta.description),
+      description,
       images: [`${meta.url}/meta/og-image.png`],
     },
     icons: {
@@ -92,9 +102,6 @@ interface RootLayoutProps {
 // need useSearchParams without Suspense) and break the build. Pages that
 // want ISR/SSG opt in individually with their own static params +
 // setRequestLocale (see (root)/page.tsx).
-
-/** How long the layout waits for the catalogue counts (JSON-LD description). */
-const SITE_STATS_LAYOUT_BUDGET_MS = 1500;
 
 const RootLayout = async ({ children, params }: RootLayoutProps) => {
   const { locale } = await params;

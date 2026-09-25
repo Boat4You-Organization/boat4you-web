@@ -19,8 +19,8 @@
     "bestTypes": "Best boat types for this route"
   },
   "landing": {
-    "boatTypesIn": "Boat types in {place}",
-    "popularModelsIn": "Popular models in {place}",
+    "boatTypesIn": "Boat types {where}",
+    "popularModelsIn": "Popular models {where}",
     "itineraries": "Sailing itineraries",
     "countedLink": "{name} ({count, number})"
   }

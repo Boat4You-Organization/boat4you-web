@@ -19,8 +19,8 @@
     "bestTypes": "De beste boottypes voor deze route"
   },
   "landing": {
-    "boatTypesIn": "Boottypes in {place}",
-    "popularModelsIn": "Populaire modellen in {place}",
+    "boatTypesIn": "Boottypes {where}",
+    "popularModelsIn": "Populaire modellen {where}",
     "itineraries": "Zeilroutes",
     "countedLink": "{name} ({count, number})"
   }

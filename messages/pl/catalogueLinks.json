@@ -19,8 +19,8 @@
     "bestTypes": "Najlepsze typy łodzi na tę trasę"
   },
   "landing": {
-    "boatTypesIn": "Rodzaje łodzi w {place}",
-    "popularModelsIn": "Popularne modele w {place}",
+    "boatTypesIn": "Rodzaje łodzi {where}",
+    "popularModelsIn": "Popularne modele {where}",
     "itineraries": "Trasy rejsów",
     "countedLink": "{name} ({count, number})"
   }

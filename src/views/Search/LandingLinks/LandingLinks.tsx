@@ -58,10 +58,10 @@ const LandingLinks = async ({ nav, locale }: LandingLinksProps) => {
 
   return (
     <Box sx={{ mt: 4 }}>
-      {nav.types.length > 0 && <Row title={t('landing.boatTypesIn', { place: nav.placeIn })} links={nav.types} />}
+      {nav.types.length > 0 && <Row title={t('landing.boatTypesIn', { where: nav.placeWhere })} links={nav.types} />}
       {nav.models.length > 0 && (
         <Row
-          title={t('landing.popularModelsIn', { place: nav.placeIn })}
+          title={t('landing.popularModelsIn', { where: nav.placeWhere })}
           links={nav.models}
           after={
             <Typography variant="body2" sx={{ mt: 1.5 }}>

@@ -5,6 +5,7 @@ import { VesselType } from '@/models/yacht.model';
 import { LocationType } from '@/types/location.type';
 import { factsDidFor } from '@/utils/server/charterFacts';
 import { evaluateLanding } from '@/utils/server/landingGate';
+import { placeText } from '@/utils/server/placeText';
 import { SearchLanding } from '@/utils/server/searchLanding';
 import { COUNTRY_LABEL_KEY } from '@/views/Models/modelsText';
 
@@ -36,8 +37,12 @@ export const charterFactsTargetFor = async (
   const countryKey =
     resolved.kind === LocationType.COUNTRY && resolved.countryCode ? COUNTRY_LABEL_KEY[resolved.countryCode] : null;
   const tHome = countryKey ? await getTranslations({ locale, namespace: 'home' }) : null;
+  // Countries by ISO code; regions and bases by name (placeText.ts, the
+  // same names as the landing title and H1).
   const areaLabel =
-    countryKey && tHome ? tHome(`destinationsSection.destinations.${countryKey}` as never) : resolved.name;
+    countryKey && tHome
+      ? tHome(`destinationsSection.destinations.${countryKey}` as never)
+      : (await placeText(locale, resolved.name)).name;
 
   return { did, vesselType: boatType, areaLabel };
 };

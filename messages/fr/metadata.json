@@ -3,7 +3,8 @@
     "base": {
       "title": "Location de Yacht & Bateau dans le Monde | Boat4You",
       "titleTemplate": "%s | Boat4You",
-      "description": "Louez yachts & bateaux dans 100+ pays. Voiliers, catamarans, bateaux à moteur. Meilleurs prix, support 24/7, réservation sécurisée.",
+      "description": "Louez yachts & bateaux dans le monde entier. Voiliers, catamarans, bateaux à moteur. Meilleurs prix, support 24/7, réservation sécurisée.",
+      "descriptionWithCount": "Louez yachts & bateaux dans {countries, plural, one {# pays} other {# pays}}. Voiliers, catamarans, bateaux à moteur. Meilleurs prix, support 24/7, réservation sécurisée.",
       "path": ""
     },
     "search": {

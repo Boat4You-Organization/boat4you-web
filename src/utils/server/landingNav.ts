@@ -5,7 +5,7 @@ import 'server-only';
 
 import type { PopularDestination } from '@/actions/locations.actions';
 import { itineraries } from '@/config/itineraries.config';
-import { VESSEL_TYPE_LABEL_MAP_FOR_RENTAL, VesselType, YachtModelShortInfo } from '@/models/yacht.model';
+import { VesselType, YachtModelShortInfo } from '@/models/yacht.model';
 import { LocationType } from '@/types/location.type';
 import {
   Hub,
@@ -25,10 +25,11 @@ import {
   locationForDid,
   resolveDestinationName,
 } from '@/utils/server/destinationDid';
+import { landingHeading } from '@/utils/server/landingCopy';
 import { evaluateLanding } from '@/utils/server/landingGate';
 import { LandingEntry, landingManifestWithin } from '@/utils/server/landingManifest';
 import { CatalogModel, modelCatalogWithin } from '@/utils/server/modelCatalog';
-import { DESTINATION_KEY_BY_LABEL } from '@/utils/static/destinationLabelKey';
+import { placeText } from '@/utils/server/placeText';
 import { buildSearchLandingPath } from '@/utils/static/searchLandingPath';
 import { modelIdentity } from '@/utils/static/yachtModelKey';
 
@@ -79,10 +80,11 @@ export interface LandingLink {
 }
 
 export interface LandingNav {
-  /** Heading area ("in {area}") and links of the popular-destinations block. */
-  popular: { area: string; links: PopularDestination[] };
-  /** Localized place name for the row headings, in its "in {place}" form. */
-  placeIn: string;
+  /** Area the popular-destinations links cover, as its localized phrase
+   *  ("in Croatia", "na Kornatima": placeText.ts `where`), and the links. */
+  popular: { where: string; links: PopularDestination[] };
+  /** This place as its localized phrase (placeText.ts `where`) for the row headings. */
+  placeWhere: string;
   types: LandingLink[];
   models: LandingLink[];
   itineraries: LandingLink[];
@@ -120,21 +122,6 @@ const fetchJson = async <T>(url: string, revalidate: number): Promise<T | null> 
     return response.ok ? ((await response.json()) as T) : null;
   } catch {
     return null;
-  }
-};
-
-/** "in {place}" form: the locative for the localized places (HR / PL decline), else the name. */
-const placeIn = async (locale: string, name: string): Promise<string> => {
-  const key = DESTINATION_KEY_BY_LABEL[name.trim().toLowerCase()];
-
-  if (!key) return placeLabel(locale, name);
-
-  const tHome = await getTranslations({ locale, namespace: 'home' });
-
-  try {
-    return tHome.raw(`destinationsSection.destinationsLocative.${key}` as never) as string;
-  } catch {
-    return placeLabel(locale, name);
   }
 };
 
@@ -266,33 +253,19 @@ const popularFor = async (
   }
 
   const top = entries.sort((a, b) => b.fleet - a.fleet || a.name.localeCompare(b.name)).slice(0, POPULAR_LIMIT);
-  const tCommon = await getTranslations({ locale, namespace: 'common' });
-  const forRental = (type: VesselType): string =>
-    tCommon.raw(VESSEL_TYPE_LABEL_MAP_FOR_RENTAL[type].replace(/^common\./, '') as never) as string;
 
   const links = await Promise.all(
-    top.map(async (entry): Promise<PopularDestination> => {
-      const label = await placeLabel(locale, entry.name);
-
-      return {
-        name: label,
-        href: buildSearchLandingPath(entry.name, entry.boatType),
-        templateIdx: stableTemplateIdx(entry.name),
-        // A type landing is linked by its own H1 ("Catamaran charter in
-        // Split Region"), not by a yacht-charter phrase.
-        ...(entry.boatType
-          ? {
-              label: tCommon('searchH1WithBoatType', {
-                boatType: forRental(entry.boatType),
-                destination: await placeIn(locale, entry.name),
-              }),
-            }
-          : {}),
-      };
-    })
+    top.map(async (entry): Promise<PopularDestination> => ({
+      name: await placeLabel(locale, entry.name),
+      href: buildSearchLandingPath(entry.name, entry.boatType),
+      templateIdx: stableTemplateIdx(entry.name),
+      // A type landing is linked by its own H1 ("Catamaran charter in the
+      // Split Region" — landingCopy.ts), not by a yacht-charter phrase.
+      ...(entry.boatType ? { label: await landingHeading(locale, entry.name, entry.boatType) } : {}),
+    }))
   );
 
-  return { area: await placeIn(locale, area.name), links };
+  return { where: (await placeText(locale, area.name)).where, links };
 };
 
 interface Distribution {
@@ -423,7 +396,7 @@ export const landingNav = async (
   const gate = await evaluateLanding(place, boatType, index);
   const t = await getTranslations({ locale, namespace: 'catalogueLinks' });
 
-  const [popular, typeEntries, models, itineraryLinks, placeInLabel] = await Promise.all([
+  const [popular, typeEntries, models, itineraryLinks, { where: placeWhere }] = await Promise.all([
     popularFor(pools, place, country, boatType, locale),
     Promise.all(
       manifest.typed
@@ -437,8 +410,8 @@ export const landingNav = async (
     // The facet query runs for indexable landings only (bounded Data Cache keys).
     gate.indexableLocales.includes(locale) ? modelsFor(place, boatType, cards, locale) : Promise.resolve([]),
     itinerariesFor(index, place, locale),
-    placeIn(locale, place.name),
+    placeText(locale, place.name),
   ]);
 
-  return { popular, placeIn: placeInLabel, types: typeEntries, models, itineraries: itineraryLinks };
+  return { popular, placeWhere, types: typeEntries, models, itineraries: itineraryLinks };
 };

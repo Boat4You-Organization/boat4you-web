@@ -3,7 +3,8 @@
     "base": {
       "title": "Alquiler de Yates y Barcos en el Mundo | Boat4You",
       "titleTemplate": "%s | Boat4You",
-      "description": "Alquila yates y barcos en más de 100 países. Veleros, catamaranes, lanchas. Mejores precios, soporte 24/7, reserva segura.",
+      "description": "Alquila yates y barcos en todo el mundo. Veleros, catamaranes, lanchas. Mejores precios, soporte 24/7, reserva segura.",
+      "descriptionWithCount": "Alquila yates y barcos en {countries, plural, one {# país} other {# países}}. Veleros, catamaranes, lanchas. Mejores precios, soporte 24/7, reserva segura.",
       "path": ""
     },
     "search": {

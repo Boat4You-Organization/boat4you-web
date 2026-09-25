@@ -157,8 +157,8 @@ export const getLocalizedJsonLd = async (locale: LocaleType, stats?: EntityStats
   const t = await getTranslations({ locale, namespace: 'metadata' });
   const tFacts = await getTranslations({ locale, namespace: 'siteFacts' });
   // Entity description with the live catalogue size (one count source with
-  // /about-us, the home hero and llms.txt); the generic meta description
-  // ("100+ countries") only when the counts are unavailable.
+  // /about-us, the home hero and llms.txt); the number-free meta description
+  // only when the counts are unavailable.
   const entityDescription = stats ? tFacts('entityDescription', { ...stats }) : t(meta.description);
 
   return {
@@ -257,6 +257,7 @@ export const getLocalizedJsonLd = async (locale: LocaleType, stats?: EntityStats
           'https://www.wikidata.org/wiki/Q141206019',
           'https://www.facebook.com/boat4youcom',
           'https://www.instagram.com/boat4you_/',
+          'https://www.linkedin.com/company/boat4you-com',
           'https://x.com/Boat4you_com',
           'https://www.youtube.com/@Boat4you_com',
         ],

@@ -12,6 +12,7 @@ import { fetchYachts } from '@/services/yacht.service';
 import { PaginatedResponse } from '@/types/response.type';
 import { getCuratedSeoHtml } from '@/utils/server/curatedSeoContent';
 import { landingCrumbs, landingNav } from '@/utils/server/landingNav';
+import { placeText } from '@/utils/server/placeText';
 import { yachtFetchParams } from '@/utils/server/searchLanding';
 import CharterFactsBlock, { CharterFactsTarget } from '@/views/Search/CharterFacts';
 import LandingLinks, { LandingBreadcrumb } from '@/views/Search/LandingLinks';
@@ -87,9 +88,15 @@ const BoatsWrapper = async ({
     inquiry = await getInquiry(searchParams.inquiryId);
   }
 
+  // The first destination by its catalogue name, and as the localized
+  // phrase the SEO block heading uses ("in the Cyclades", "u Hrvatskoj" —
+  // placeText.ts; the English catalogue name used to go into "…Reiseziele
+  // in Croatia"). The popular-destinations heading names the area its links
+  // cover (landingNav: the country when the place has too few of its own).
   const destRaw = searchParams.destinations;
   const firstDestination = (Array.isArray(destRaw) ? destRaw[0] : destRaw ? String(destRaw).split(',')[0] : '').trim();
   const destLabel = destinationLabels[firstDestination.toLowerCase()] ?? firstDestination;
+  const destWhere = destLabel ? (await placeText(locale, destLabel)).where : '';
 
   // Curated long-form SEO text, read from public/seo-content on the server
   // so it ships in the SSR HTML (it used to be fetched client-side after
@@ -109,7 +116,8 @@ const BoatsWrapper = async ({
       user={user}
       inquiry={inquiry}
       popularDestinations={nav?.popular.links ?? []}
-      popularDestinationsArea={nav?.popular.area ?? ''}
+      destinationWhere={destWhere}
+      popularDestinationsWhere={nav?.popular.where}
       curatedSeoHtml={curatedSeoHtml}
       charterFactsSlot={
         charterFacts ? (

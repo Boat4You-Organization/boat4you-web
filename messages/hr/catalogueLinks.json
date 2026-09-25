@@ -19,8 +19,8 @@
     "bestTypes": "Najbolji tipovi brodova za ovu rutu"
   },
   "landing": {
-    "boatTypesIn": "Vrste plovila u {place}",
-    "popularModelsIn": "Popularni modeli u {place}",
+    "boatTypesIn": "Vrste plovila {where}",
+    "popularModelsIn": "Popularni modeli {where}",
     "itineraries": "Itinerari jedrenja",
     "countedLink": "{name} ({count, number})"
   }

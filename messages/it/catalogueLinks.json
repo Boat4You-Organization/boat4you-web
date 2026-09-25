@@ -19,8 +19,8 @@
     "bestTypes": "I tipi di barca migliori per questo itinerario"
   },
   "landing": {
-    "boatTypesIn": "Tipi di barca: {place}",
-    "popularModelsIn": "Modelli più richiesti: {place}",
+    "boatTypesIn": "Tipi di barca {where}",
+    "popularModelsIn": "Modelli più richiesti {where}",
     "itineraries": "Itinerari in barca",
     "countedLink": "{name} ({count, number})"
   }
