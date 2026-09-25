@@ -91,3 +91,17 @@
   color: #6a6a6a;
   font-weight: 500;
 }
+
+// Link to the /yachts model index under the grid (same blue link as the tiles).
+.allModels {
+  display: inline-block;
+  margin-top: rem-calc(20);
+  color: #2856ff;
+  font-weight: 700;
+  font-size: rem-calc(14);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

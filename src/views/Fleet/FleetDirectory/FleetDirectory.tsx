@@ -2,6 +2,7 @@ import { getTranslations } from 'next-intl/server';
 
 import { Link } from '@/i18n/navigation';
 import { FleetEntry, FleetPage, fleetPagePath } from '@/utils/static/fleetIndex';
+import { yachtsIndexPath } from '@/utils/static/yachtModelKey';
 
 import styles from './FleetDirectory.module.scss';
 
@@ -19,7 +20,7 @@ interface FleetGroup {
  * pointless payload on a page whose only job is links.
  */
 const FleetDirectory = async ({ slice }: { slice: FleetPage }) => {
-  const t = await getTranslations('metadata.fleet');
+  const [t, tModels] = await Promise.all([getTranslations('metadata.fleet'), getTranslations('models')]);
 
   // Headings restart on every page — the home base is the single most
   // useful thing to scan a charter fleet by, and it keeps each page's
@@ -44,6 +45,11 @@ const FleetDirectory = async ({ slice }: { slice: FleetPage }) => {
     <section className={styles.root}>
       <h1 className={styles.title}>{t('heading')}</h1>
       <p className={styles.lede}>{t('lede')}</p>
+      <p className={styles.modelsLink}>
+        <Link href={yachtsIndexPath()} prefetch={false}>
+          {tModels('index.h1')} →
+        </Link>
+      </p>
       <p className={styles.summary}>
         {t('summary', {
           total: slice.totalBoats,
