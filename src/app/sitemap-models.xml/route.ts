@@ -3,7 +3,10 @@ import { MIN_LANDING_FLEET, mapWithLimit } from '@/utils/server/landingGate';
 import { loadModelCatalog, loadModelFleet } from '@/utils/server/modelCatalog';
 import { manufacturerPath, yachtsIndexPath } from '@/utils/static/yachtModelKey';
 
-export const revalidate = 3600;
+// Not prerendered at build time (the catalogue build reads a ~14 s
+// distribution aggregate and ~30 model fleets from cusma2); every read below
+// goes through the Data Cache and the process-level catalogue memo instead.
+export const dynamic = 'force-dynamic';
 
 const XML_HEADERS = {
   'Content-Type': 'application/xml',
