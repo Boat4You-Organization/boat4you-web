@@ -40,6 +40,7 @@ import colors from '@/styles/themes/colors';
 import useBreakpoint from '@/utils/hooks/useBreakpoint';
 import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
 import { getBoatImageUrl } from '@/utils/static/imageUtils';
+import { hasListingPrice, listingPriceDays } from '@/utils/static/listingPrice';
 import { roleGuard } from '@/utils/static/roleGuard';
 import { toTitleCase } from '@/utils/static/toTitleCase';
 import { toggleYachtSelection } from '@/valtio/yacht/yacht.actions';
@@ -130,7 +131,10 @@ const BoatListingItemCardView = ({
   // `clientPriceEur` from the search API is per-day, `numberOfDays` lets us
   // multiply back to the total. Falls back to a weekly assumption when the
   // backend hasn't yet started returning the field.
-  const days = numberOfDays && numberOfDays > 0 ? numberOfDays : 7;
+  const days = listingPriceDays({ numberOfDays });
+  // "Price on request" rather than a wrong price: none from the API (no
+  // bookable week on an undated search) or a 0 € total (sync noise).
+  const hasPrice = hasListingPrice({ clientPriceEur, numberOfDays });
   const totalClientPrice = clientPriceEur * days;
   const totalClientPriceInfo = clientPriceInfo
     ? { ...clientPriceInfo, amount: clientPriceInfo.amount * days }
@@ -141,7 +145,7 @@ const BoatListingItemCardView = ({
   const totalListPriceInfo =
     listPriceInfo && totalListPrice ? { ...listPriceInfo, amount: listPriceInfo.amount * days } : null;
 
-  const showListPrice = typeof totalListPrice === 'number' && totalListPrice > totalClientPrice;
+  const showListPrice = hasPrice && typeof totalListPrice === 'number' && totalListPrice > totalClientPrice;
   const discountPercent = showListPrice
     ? Math.round(((totalListPrice! - totalClientPrice) / totalListPrice!) * 100)
     : 0;
@@ -619,7 +623,7 @@ const BoatListingItemCardView = ({
                 {/* Redundant on mobile — the user already set the search
                   window (e.g. "7 days"), repeating it on every card just
                   wastes scarce vertical space. Keep on desktop as reminder. */}
-                {!isMobile && (
+                {!isMobile && hasPrice && (
                   <Typography variant="body2" color={colors.black600}>
                     {t('common.priceForXDays', { days: String(days) })}
                   </Typography>
@@ -655,9 +659,15 @@ const BoatListingItemCardView = ({
                       {formattedListPrice}
                     </Typography>
                   )}
-                  <Typography variant="h3" component="p" fontWeight={700} color="success">
-                    {formattedTotal}
-                  </Typography>
+                  {hasPrice ? (
+                    <Typography variant="h3" component="p" fontWeight={700} color="success">
+                      {formattedTotal}
+                    </Typography>
+                  ) : (
+                    <Typography component="p" fontWeight={700} color={colors.black700} sx={{ fontSize: 15 }}>
+                      {t('common.priceOnRequest')}
+                    </Typography>
+                  )}
                 </Stack>
               </Stack>
               {/* Availability badge + Boat details button in one row */}

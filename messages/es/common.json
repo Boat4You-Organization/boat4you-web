@@ -532,6 +532,7 @@
   "heating": "Calefaccion",
   "available": "Disponible",
   "onRequest": "Bajo solicitud",
+  "priceOnRequest": "Precio a consultar",
   "preReserved": "Pre-reservado",
   "closestDay": "Fecha cercana:",
   "specialPromotion": "PROMOCION ESPECIAL",
