@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { ReactNode, useCallback, useEffect, useMemo, useState } from 'react';
 
 import {
   Box,
@@ -69,6 +69,8 @@ interface BoatsSectionProps {
   /** Curated SEO text for this destination (× boat type), read on the
    *  server so it is part of the SSR HTML. null → no curated page. */
   curatedSeoHtml?: string | null;
+  /** Server-rendered charter facts block (gated landings only). */
+  charterFactsSlot?: ReactNode;
 }
 
 const BoatsSection = ({
@@ -78,6 +80,7 @@ const BoatsSection = ({
   popularDestinations = [],
   popularDestinationsArea = '',
   curatedSeoHtml = null,
+  charterFactsSlot = null,
 }: BoatsSectionProps) => {
   const { content, page } = data;
   const { totalElements = 0 } = page || {};
@@ -537,6 +540,7 @@ const BoatsSection = ({
             count={data.page?.totalPages ?? Math.ceil(totalElements / YACHT_PAGE_SIZE)}
           />
         )}
+        {charterFactsSlot}
         {/* SEO block — long-form content below the listings for organic
             traffic. Pop-destinations link cluster is rendered INSIDE
             this section's collapse so a single Show more toggle reveals

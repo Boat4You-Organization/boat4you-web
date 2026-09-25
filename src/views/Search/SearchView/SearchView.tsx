@@ -8,6 +8,7 @@ import { MANUFACTURERS_PAGE_SIZE } from '@/config/constants.config';
 import { AllSearchParams } from '@/config/form-models.config';
 import { CatalogueData } from '@/models/catalogue.model';
 import { Currency } from '@/models/user.model';
+import { CharterFactsTarget } from '@/views/Search/CharterFacts';
 
 import BoatsWrapper from './BoatsWrapper';
 import FiltersSectionV2 from './FiltersSectionV2';
@@ -20,9 +21,11 @@ interface SearchViewProps {
   searchParams: AllSearchParams;
   /** Lowercased `?destinations=` value → catalogue display name. */
   destinationLabels?: Record<string, string>;
+  /** Set on landings that pass the index gate in this locale: the charter facts block to show. */
+  charterFacts?: CharterFactsTarget | null;
 }
 
-const SearchView = async ({ searchParams, destinationLabels }: SearchViewProps) => {
+const SearchView = async ({ searchParams, destinationLabels, charterFacts = null }: SearchViewProps) => {
   const locale = await getLocale();
   const currency = (searchParams.currency as Currency) || Currency.EUR;
 
@@ -57,7 +60,11 @@ const SearchView = async ({ searchParams, destinationLabels }: SearchViewProps) 
               the previous route visible until BoatsWrapper streams in —
               SPA-feel transition, no jarring layout shock. */}
           <Suspense key={suspenseKey} fallback={null}>
-            <BoatsWrapper searchParams={searchParams} destinationLabels={destinationLabels} />
+            <BoatsWrapper
+              searchParams={searchParams}
+              destinationLabels={destinationLabels}
+              charterFacts={charterFacts}
+            />
           </Suspense>
         </SearchResultsTransitionWrapper>
       </SearchTransitionProvider>

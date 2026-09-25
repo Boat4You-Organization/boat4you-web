@@ -16,6 +16,7 @@ import { YachtModelShortInfo } from '@/models/yacht.model';
 import { fetchYachts } from '@/services/yacht.service';
 import { PaginatedResponse } from '@/types/response.type';
 import { getCuratedSeoHtml } from '@/utils/server/curatedSeoContent';
+import CharterFactsBlock, { CharterFactsTarget } from '@/views/Search/CharterFacts';
 
 import BoatsSection from './BoatsSection';
 
@@ -24,6 +25,8 @@ interface BoatsWrapperProps {
   searchParams: AllSearchParams;
   /** Lowercased `?destinations=` value → catalogue display name. */
   destinationLabels?: Record<string, string>;
+  /** Charter facts block for a gated landing (null → none). */
+  charterFacts?: CharterFactsTarget | null;
 }
 
 /**
@@ -92,7 +95,7 @@ const extractSingleBoatType = (searchParams: AllSearchParams): string | null => 
   return types.length === 1 ? types[0] : null;
 };
 
-const BoatsWrapper = async ({ searchParams, destinationLabels = {} }: BoatsWrapperProps) => {
+const BoatsWrapper = async ({ searchParams, destinationLabels = {}, charterFacts = null }: BoatsWrapperProps) => {
   const locale = await getLocale();
   const user = await getLoggedInUser();
 
@@ -143,6 +146,11 @@ const BoatsWrapper = async ({ searchParams, destinationLabels = {} }: BoatsWrapp
   // "Split Region") show the text of the canonical landing they fold onto.
   const curatedSeoHtml = firstDestination ? await getCuratedSeoHtml(locale, destLabel, boatType) : null;
 
+  // EUR → page currency rate as the listing reports it (clientPriceInfo is
+  // the backend's own conversion), so the facts read in the page currency.
+  const priceInfo = data.content?.find(y => y.clientPriceInfo?.currency === currency)?.clientPriceInfo;
+  const factsRate = priceInfo?.rate && priceInfo.rate > 0 ? priceInfo.rate : null;
+
   return (
     <BoatsSection
       data={data}
@@ -151,6 +159,11 @@ const BoatsWrapper = async ({ searchParams, destinationLabels = {} }: BoatsWrapp
       popularDestinations={popularDestinations}
       popularDestinationsArea={destLabel || ''}
       curatedSeoHtml={curatedSeoHtml}
+      charterFactsSlot={
+        charterFacts ? (
+          <CharterFactsBlock target={charterFacts} locale={locale} currency={currency} rate={factsRate} />
+        ) : null
+      }
     />
   );
 };
