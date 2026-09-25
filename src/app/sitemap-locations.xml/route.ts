@@ -2,7 +2,9 @@
 import { PROMOTED_COUNTRY_CODES } from '@/config/promoted-countries.config';
 import { routing } from '@/i18n/routing';
 import { CountryCountModel, LocationModel } from '@/models/locations.model';
-import { buildSearchLandingPath, isLandingExpressible } from '@/utils/static/searchLandingPath';
+import { loadDestinationIndex, resolveDestinationName } from '@/utils/server/destinationDid';
+import { evaluateLanding, mapWithLimit } from '@/utils/server/landingGate';
+import { buildSearchLandingPath, destinationSlug, isLandingExpressible } from '@/utils/static/searchLandingPath';
 
 export const revalidate = 3600;
 
@@ -47,7 +49,7 @@ export async function GET() {
     // by lowercase name so a marina that shares its country's name (rare but
     // happens in some data sets) doesn't emit two near-identical entries.
     const seen = new Set<string>();
-    const entries: Array<{ name: string }> = [];
+    const candidates: string[] = [];
 
     for (const item of [...countries, ...marinas]) {
       if (!item.name) continue;
@@ -62,8 +64,37 @@ export async function GET() {
       if (seen.has(key)) continue;
 
       seen.add(key);
-      entries.push({ name: item.name });
+      candidates.push(item.name);
     }
+
+    // Submit only what /search lets Google index: the shared landing gate
+    // (resolves to a place with boats + curated text in that locale), and
+    // only the canonical spelling ("Marina Kaštela" folds onto "Marina
+    // Kastela", "Lavrion, main port" onto "Lavrion Main Port"). Before this,
+    // ~96% of the submitted URLs answered noindex.
+    const index = await loadDestinationIndex();
+
+    if (!index) {
+      return new Response(EMPTY_SITEMAP, { headers: XML_HEADERS });
+    }
+
+    const gated = await mapWithLimit(candidates, 6, async name => {
+      const resolved = await resolveDestinationName(index, name);
+
+      if (!resolved || destinationSlug(resolved.name) !== destinationSlug(name)) return null;
+
+      const gate = await evaluateLanding(resolved, null);
+
+      return gate.indexableLocales.length ? { name: resolved.name, locales: gate.indexableLocales } : null;
+    });
+    const emitted = new Set<string>();
+    const entries = gated.filter((e): e is { name: string; locales: string[] } => {
+      if (!e || emitted.has(destinationSlug(e.name))) return false;
+
+      emitted.add(destinationSlug(e.name));
+
+      return true;
+    });
 
     if (entries.length === 0) {
       return new Response(EMPTY_SITEMAP, { headers: XML_HEADERS });
@@ -71,24 +102,27 @@ export async function GET() {
 
     const lastmod = new Date().toISOString();
 
-    // Each entry duplicates across all 9 locales, mirroring the pattern in
+    // Each entry duplicates across the locales that pass the gate (its
+    // curated text exists there), mirroring the pattern in
     // sitemap-yachts/sitemap-blogs/sitemap-static. Per-page hreflang is
     // already emitted from buildMetadata.alternates.languages, so we skip
     // inline xhtml:link alternates here (Boataround does the same — they
     // rely on head hreflang, not in-sitemap alternates).
     const urls = entries
       .flatMap(entry =>
-        routing.locales.map(locale => {
-          const prefix = locale === routing.defaultLocale ? '' : `/${locale}`;
-          // Same builder as the /search canonical + internal links, so the
-          // <loc> matches <link rel="canonical"> byte for byte.
-          const loc = `${baseUrl}${prefix}${buildSearchLandingPath(entry.name)}`;
+        routing.locales
+          .filter(locale => entry.locales.includes(locale))
+          .map(locale => {
+            const prefix = locale === routing.defaultLocale ? '' : `/${locale}`;
+            // Same builder as the /search canonical + internal links, so the
+            // <loc> matches <link rel="canonical"> byte for byte.
+            const loc = `${baseUrl}${prefix}${buildSearchLandingPath(entry.name)}`;
 
-          return `  <url>
+            return `  <url>
     <loc>${loc}</loc>
     <lastmod>${lastmod}</lastmod>
   </url>`;
-        })
+          })
       )
       .join('\n');
 

@@ -2,7 +2,9 @@ import { PROMOTED_COUNTRY_CODES } from '@/config/promoted-countries.config';
 import { routing } from '@/i18n/routing';
 import { CountryCountModel } from '@/models/locations.model';
 import { VesselType } from '@/models/yacht.model';
-import { buildSearchLandingPath } from '@/utils/static/searchLandingPath';
+import { loadDestinationIndex, resolveDestinationName } from '@/utils/server/destinationDid';
+import { evaluateLanding, mapWithLimit } from '@/utils/server/landingGate';
+import { buildSearchLandingPath, destinationSlug } from '@/utils/static/searchLandingPath';
 
 export const revalidate = 3600;
 
@@ -25,8 +27,12 @@ const escapeXml = (s: string): string =>
 // generateMetadata so each URL self-canonicalizes and stays index-eligible.
 //
 // Strategy:
-//   * 12 vessel types × 12 promoted countries × 9 locales
-//     ≈ 1,300 URLs that all resolve to a real, populated result set.
+//   * 12 vessel types × 12 promoted countries × 9 locales, filtered through
+//     the shared landing gate (landingGate.ts, same predicate as the /search
+//     robots tag): boats OF THAT TYPE in the country AND a boat-type-specific
+//     curated page in that locale. A combo with only the country overview
+//     text (the same body as the country landing) or with 0 boats of the
+//     type ("No exact matches") is noindex, so it is not submitted.
 //   * No global "boatTypes only" URLs — those would surface yachts from
 //     non-promoted countries (Norway, Australia, …) and dilute the
 //     promoted-country positioning. Country-anchored URLs always honour
@@ -67,20 +73,41 @@ export async function GET() {
     return new Response(EMPTY_SITEMAP, { headers: XML_HEADERS });
   }
 
-  const urls = VESSEL_TYPES.flatMap(type =>
-    promotedCountryNames.flatMap(country =>
-      routing.locales.map(locale => {
-        const prefix = locale === routing.defaultLocale ? '' : `/${locale}`;
-        // Same builder as the /search canonical + internal links.
-        const loc = `${baseUrl}${prefix}${buildSearchLandingPath(country, type)}`;
+  const index = await loadDestinationIndex();
 
-        return `  <url>
+  if (!index) {
+    return new Response(EMPTY_SITEMAP, { headers: XML_HEADERS });
+  }
+
+  const combos = VESSEL_TYPES.flatMap(type => promotedCountryNames.map(country => ({ country, type })));
+  const gated = await mapWithLimit(combos, 6, async ({ country, type }) => {
+    const resolved = await resolveDestinationName(index, country);
+
+    // Only the canonical spelling is submitted.
+    if (!resolved || destinationSlug(resolved.name) !== destinationSlug(country)) return [];
+
+    const gate = await evaluateLanding(resolved, type);
+
+    return gate.indexableLocales.map(locale => ({ name: resolved.name, type, locale }));
+  });
+
+  const urls = gated
+    .flat()
+    .map(({ name, type, locale }) => {
+      const prefix = locale === routing.defaultLocale ? '' : `/${locale}`;
+      // Same builder as the /search canonical + internal links.
+      const loc = `${baseUrl}${prefix}${buildSearchLandingPath(name, type)}`;
+
+      return `  <url>
     <loc>${escapeXml(loc)}</loc>
     <lastmod>${lastmod}</lastmod>
   </url>`;
-      })
-    )
-  ).join('\n');
+    })
+    .join('\n');
+
+  if (!urls) {
+    return new Response(EMPTY_SITEMAP, { headers: XML_HEADERS });
+  }
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">

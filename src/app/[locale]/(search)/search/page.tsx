@@ -7,9 +7,9 @@ import Layout from '@/components/Layout';
 import { AllSearchParams } from '@/config/form-models.config';
 import { LocaleType } from '@/config/locales.config';
 import { Currency } from '@/models/user.model';
-import { VESSEL_TYPE_LABEL_MAP_FOR_RENTAL, VesselType, YachtModelShortInfo } from '@/models/yacht.model';
+import { VESSEL_TYPE_LABEL_MAP_FOR_RENTAL, YachtModelShortInfo, isVesselType } from '@/models/yacht.model';
 import { fetchYachts } from '@/services/yacht.service';
-import { getCuratedSeoHtml } from '@/utils/server/curatedSeoContent';
+import { evaluateLanding } from '@/utils/server/landingGate';
 import {
   SearchLanding,
   resolveSearchLanding,
@@ -20,7 +20,8 @@ import {
 import { BoatDescTranslate, buildBoatDescription } from '@/utils/static/boatMetaDescription';
 import { buildMetadata, localizedUrl } from '@/utils/static/buildMetadata';
 import { getBoatImageUrl } from '@/utils/static/imageUtils';
-import { buildSearchLandingPath } from '@/utils/static/searchLandingPath';
+import { serializeJsonLd } from '@/utils/static/jsonLd';
+import { buildSearchLandingPath, isLandingExpressible } from '@/utils/static/searchLandingPath';
 import { ResolvedDestinationProvider } from '@/views/Search/SearchView/ResolvedDestinationContext';
 import SearchView from '@/views/Search/SearchView/SearchView';
 
@@ -111,8 +112,9 @@ export async function generateMetadata({ params: paramsPromise, searchParams }: 
   const boatTypes = splitSearchParam(params.boatTypes);
   // An unknown `boatTypes` value used to crash the metadata (undefined map
   // entry → .replace) and 500 the page; treat it as "no boat type" + noindex.
-  const hasUnknownBoatType = boatTypes.some(b => !(b in VESSEL_TYPE_LABEL_MAP_FOR_RENTAL));
-  const singleBoatType = boatTypes.length === 1 && !hasUnknownBoatType ? (boatTypes[0] as VesselType) : null;
+  // Own-value check: `in` also accepted toString / constructor / __proto__.
+  const hasUnknownBoatType = boatTypes.some(b => !isVesselType(b));
+  const singleBoatType = boatTypes.length === 1 && isVesselType(boatTypes[0]) ? boatTypes[0] : null;
   // VESSEL_TYPE_LABEL_MAP_FOR_RENTAL feeds the H1 sentence ("Najam
   // katamarana u Hrvatskoj" — genitive in HR, nominative in non-inflecting
   // locales, all driven by the per-locale common.json `*ForRental` keys).
@@ -152,7 +154,13 @@ export async function generateMetadata({ params: paramsPromise, searchParams }: 
   // (`Croatia`, `croatia`) hits the same URL. did never enters the canonical;
   // buildSearchLandingPath is shared with the sitemaps and internal links.
   const uniqueRawDestinations = uniqueCaseInsensitive(destinations);
-  const path = buildSearchLandingPath(uniqueRawDestinations, singleBoatType);
+  // A single destination that resolved canonicalises to its catalogue name,
+  // so aliases and member spellings (türkiye → turkey, split / ionian →
+  // the popular "Split Region" / "Ionian Region") fold onto ONE URL.
+  const singleResolved = uniqueRawDestinations.length === 1 && !landing.hasOwnDid ? landing.resolved[0] : null;
+  const canonicalDestinations =
+    singleResolved && isLandingExpressible(singleResolved.name) ? [singleResolved.name] : uniqueRawDestinations;
+  const path = buildSearchLandingPath(canonicalDestinations, singleBoatType);
 
   // Index gating — keep crawl budget on the headline (destination ×
   // boat-type) URLs, drop the long tail.
@@ -210,16 +218,19 @@ export async function generateMetadata({ params: paramsPromise, searchParams }: 
     return Array.isArray(v) ? v.length > 0 : v != null && String(v).length > 0;
   });
   // A destination landing (`?destinations=x[&boatTypes=Y]`) is only worth
-  // indexing when it is a real catalogue place with boats (the name resolved
-  // to a did) AND the curated SEO text exists for it in this locale —
-  // otherwise it is a thin copy of the listing; noindex,follow.
+  // indexing when it passes the shared landing gate (landingGate.ts — the
+  // same predicate the location / category sitemaps are built from): a
+  // catalogue place with boats (of that type), with curated text (for that
+  // type) in this locale. Otherwise noindex,follow. hreflang lists only the
+  // locales that pass.
   let weakLanding = false;
+  let alternateLocales: string[] | undefined;
 
   if (uniqueRawDestinations.length === 1 && !landing.hasOwnDid) {
-    const resolved = landing.resolved[0];
-    const curated = resolved?.count ? await getCuratedSeoHtml(locale, uniqueRawDestinations[0], singleBoatType) : null;
+    const gate = await evaluateLanding(singleResolved, singleBoatType);
 
-    weakLanding = !curated;
+    weakLanding = !gate.indexableLocales.includes(locale);
+    alternateLocales = gate.indexableLocales;
   }
 
   const noindex =
@@ -237,6 +248,7 @@ export async function generateMetadata({ params: paramsPromise, searchParams }: 
     description,
     path,
     robots: { noindex },
+    alternateLocales,
   });
 }
 
@@ -412,15 +424,20 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
   const effectiveParams = withLandingDid(params, landing);
 
   const boatTypes = splitSearchParam(params.boatTypes);
-  const singleBoatType = boatTypes.length === 1 ? boatTypes[0] : null;
+  const singleBoatType = boatTypes.length === 1 && isVesselType(boatTypes[0]) ? boatTypes[0] : null;
 
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.boat4you.com';
   const currency = (params.currency as Currency) || Currency.EUR;
 
+  // Destination crumb only from catalogue names that can carry a landing URL:
+  // an unresolved value is raw URL input (it was reflected into the JSON-LD)
+  // and has no landing page to crumb to.
+  const crumbNames = landing.resolved.map(r => r?.name ?? '');
+  const crumbDestinations = crumbNames.every(n => n && isLandingExpressible(n)) ? crumbNames : [];
   const breadcrumbSchema = buildSearchBreadcrumb({
     locale: locale as LocaleType,
-    destinations: landing.destinations,
-    destinationLabel: landing.destinations.map(d => landing.labels[d.toLowerCase()] ?? d).join(' and '),
+    destinations: crumbDestinations,
+    destinationLabel: crumbDestinations.join(' and '),
     singleBoatType,
   });
 
@@ -454,14 +471,14 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
           <script
             type="application/ld+json"
             // eslint-disable-next-line react/no-danger
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+            dangerouslySetInnerHTML={{ __html: serializeJsonLd(breadcrumbSchema) }}
           />
         )}
         {productsLd && (
           <script
             type="application/ld+json"
             // eslint-disable-next-line react/no-danger
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(productsLd) }}
+            dangerouslySetInnerHTML={{ __html: serializeJsonLd(productsLd) }}
           />
         )}
         <SearchView searchParams={effectiveParams} destinationLabels={landing.labels} />

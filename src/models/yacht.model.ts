@@ -82,6 +82,16 @@ export enum VesselType {
   RUBBER_BOAT = 'RUBBER_BOAT',
 }
 
+const VESSEL_TYPE_VALUES = new Set<string>(Object.values(VesselType));
+
+/**
+ * Own-value check for a URL `boatTypes` value. An `in` / index lookup on the
+ * label maps also accepts inherited keys (`toString`, `constructor`,
+ * `__proto__`), which then crash the H1/metadata builders.
+ */
+export const isVesselType = (value: unknown): value is VesselType =>
+  typeof value === 'string' && VESSEL_TYPE_VALUES.has(value);
+
 export const VESSEL_TYPE_LABEL_MAP = {
   [VesselType.CATAMARAN]: 'common.catamaran',
   [VesselType.GULET]: 'common.gulet',

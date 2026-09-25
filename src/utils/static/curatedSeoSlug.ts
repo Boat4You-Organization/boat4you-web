@@ -71,9 +71,20 @@ const DESTINATION_ALIAS: Record<string, string> = {
  *
  * Most specific (boat-type-bearing) patterns first, broader overviews after.
  * The first existing file wins.
+ *
+ * `typeSpecificOnly` returns just (a)/(b): a boat-type landing that only has
+ * the destination overview is the same text as the destination landing, so
+ * the index gate must not count the overview fallback as "curated" for it.
  */
-export const resolveCuratedSlugCandidates = (destination: string, boatType?: VesselType | null): string[] => {
-  const aliased = DESTINATION_ALIAS[destination.trim().toLowerCase()];
+export const resolveCuratedSlugCandidates = (
+  destination: string,
+  boatType?: VesselType | null,
+  { typeSpecificOnly = false }: { typeSpecificOnly?: boolean } = {}
+): string[] => {
+  const aliasKey = destination.trim().toLowerCase();
+  const aliased = Object.prototype.hasOwnProperty.call(DESTINATION_ALIAS, aliasKey)
+    ? DESTINATION_ALIAS[aliasKey]
+    : undefined;
   const dest = aliased ?? slugifyDestination(destination);
 
   if (!dest) return [];
@@ -81,13 +92,16 @@ export const resolveCuratedSlugCandidates = (destination: string, boatType?: Ves
   const candidates: string[] = [];
 
   if (boatType) {
-    const bt = VESSEL_SLUG[boatType];
+    // Own-key lookup: `boatTypes=constructor` must not pick up Object.prototype.
+    const bt = Object.prototype.hasOwnProperty.call(VESSEL_SLUG, boatType) ? VESSEL_SLUG[boatType] : undefined;
 
     if (bt) {
       candidates.push(`${dest}-${bt}-charter`); // (a) area-boat
       candidates.push(`${bt}-charter-${dest}`); // (b) boat-marina
     }
   }
+
+  if (typeSpecificOnly && boatType) return candidates;
 
   candidates.push(`${dest}-sailing-area-yacht-charter-and-boat-rental`); // (c) region overview
   candidates.push(`${dest}-yacht-charter-and-boat-rental`); // (d) country/city overview

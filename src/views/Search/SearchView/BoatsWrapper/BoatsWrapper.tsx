@@ -139,7 +139,9 @@ const BoatsWrapper = async ({ searchParams, destinationLabels = {} }: BoatsWrapp
   // Curated long-form SEO text, read from public/seo-content on the server
   // so it ships in the SSR HTML (it used to be fetched client-side after
   // hydration, leaving crawlers a generic template).
-  const curatedSeoHtml = firstDestination ? await getCuratedSeoHtml(locale, firstDestination, boatType) : null;
+  // Looked up by the catalogue name, so alias / member spellings (split →
+  // "Split Region") show the text of the canonical landing they fold onto.
+  const curatedSeoHtml = firstDestination ? await getCuratedSeoHtml(locale, destLabel, boatType) : null;
 
   return (
     <BoatsSection

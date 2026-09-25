@@ -32,8 +32,8 @@ import {
   VESSEL_TYPE_LABEL_MAP,
   VESSEL_TYPE_LABEL_MAP_FOR_RENTAL,
   VESSEL_TYPE_LABEL_MAP_PLURAL,
-  VesselType,
   YachtModelShortInfo,
+  isVesselType,
 } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
 import { PaginatedResponse } from '@/types/response.type';
@@ -233,8 +233,9 @@ const BoatsSection = ({
 
   const translatedBoatType = useMemo(() => {
     if (params.boatTypes?.length === 1) {
-      const boatType = params.boatTypes[0] as VesselType;
-      const translationKey = VESSEL_TYPE_LABEL_MAP_PLURAL[boatType];
+      const boatType = params.boatTypes[0];
+      // Own-value check: `boatTypes=toString` would hit Object.prototype.
+      const translationKey = isVesselType(boatType) ? VESSEL_TYPE_LABEL_MAP_PLURAL[boatType] : null;
 
       if (translationKey) {
         return t(translationKey);
@@ -250,8 +251,9 @@ const BoatsSection = ({
   // also selected we want the singular form to slot into the H1 sentence.
   const translatedBoatTypeSingular = useMemo(() => {
     if (params.boatTypes?.length === 1) {
-      const boatType = params.boatTypes[0] as VesselType;
-      const translationKey = VESSEL_TYPE_LABEL_MAP[boatType];
+      const boatType = params.boatTypes[0];
+      // Own-value check: `boatTypes=toString` would hit Object.prototype.
+      const translationKey = isVesselType(boatType) ? VESSEL_TYPE_LABEL_MAP[boatType] : null;
 
       if (translationKey) {
         return t(translationKey);
@@ -269,8 +271,9 @@ const BoatsSection = ({
   // read identically to before.
   const translatedBoatTypeForRental = useMemo(() => {
     if (params.boatTypes?.length === 1) {
-      const boatType = params.boatTypes[0] as VesselType;
-      const translationKey = VESSEL_TYPE_LABEL_MAP_FOR_RENTAL[boatType];
+      const boatType = params.boatTypes[0];
+      // Own-value check: `boatTypes=toString` would hit Object.prototype.
+      const translationKey = isVesselType(boatType) ? VESSEL_TYPE_LABEL_MAP_FOR_RENTAL[boatType] : null;
 
       if (translationKey) {
         return t(translationKey);

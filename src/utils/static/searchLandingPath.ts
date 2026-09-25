@@ -45,17 +45,23 @@ export const buildSearchLandingPath = (
 export const isLandingExpressible = (name: string): boolean => !name.includes(',');
 
 /**
- * Internal link to a known catalogue location: the canonical landing form
- * when the name can carry it, otherwise the did form (noindex, but it lands
- * on the right boats).
+ * The did form (`?destinations=Name&did=…`): noindex, but it always lands on
+ * exactly the boats behind `did`. For places whose name cannot carry a
+ * landing URL, or whose name resolves to a different place than the did.
  */
-export const buildDestinationHref = (name: string, did: string, boatType?: string | null): string => {
-  if (isLandingExpressible(name)) return buildSearchLandingPath(name, boatType);
-
+export const buildDidHref = (name: string, did: string, boatType?: string | null): string => {
   const boatTypeQuery = boatType ? `&boatTypes=${encodeURIComponent(boatType)}` : '';
 
   return `/search?destinations=${encodeURIComponent(name)}&did=${encodeURIComponent(did)}${boatTypeQuery}`;
 };
+
+/**
+ * Internal link to a known catalogue location: the canonical landing form
+ * when the name can carry it, otherwise the did form (noindex, but it lands
+ * on the right boats).
+ */
+export const buildDestinationHref = (name: string, did: string, boatType?: string | null): string =>
+  isLandingExpressible(name) ? buildSearchLandingPath(name, boatType) : buildDidHref(name, did, boatType);
 
 /**
  * Case-, diacritics- and punctuation-insensitive key for matching a URL

@@ -38,6 +38,12 @@ type MetadataOptions = {
    * full Product image + unrestricted description text.
    */
   robots?: { noindex?: boolean };
+  /**
+   * Locales to list as hreflang alternates (default: all). Pages indexable
+   * only in some locales (the /search landings) list just those, so hreflang
+   * never points at a noindexed variant.
+   */
+  alternateLocales?: readonly string[];
 };
 
 /**
@@ -54,13 +60,16 @@ export const localizedUrl = (locale: LocaleType, path: string): string => {
   return `${meta.url}${prefix}${normalized}`;
 };
 
-export const buildAlternateLanguages = (path: string) =>
+export const buildAlternateLanguages = (path: string, locales: readonly string[] = routing.locales) =>
   Object.fromEntries([
-    ...routing.locales.map(locale => [
-      locale,
-      locale === routing.defaultLocale ? `${meta.url}${path}` : `${meta.url}/${locale}${path}`,
-    ]),
-    ['x-default', `${meta.url}${path}`],
+    ...routing.locales
+      .filter(locale => locales.includes(locale))
+      .map(locale => [
+        locale,
+        locale === routing.defaultLocale ? `${meta.url}${path}` : `${meta.url}/${locale}${path}`,
+      ]),
+    // x-default is the default-locale URL — only while that one is listed.
+    ...(locales.includes(routing.defaultLocale) ? [['x-default', `${meta.url}${path}`]] : []),
   ]);
 
 export const buildMetadata = ({
@@ -71,6 +80,7 @@ export const buildMetadata = ({
   image,
   titleAbsolute,
   robots,
+  alternateLocales,
 }: MetadataOptions): Metadata => {
   const fullUrl = localizedUrl(locale, path);
   const hasCustomImage = Boolean(image?.src);
@@ -86,7 +96,7 @@ export const buildMetadata = ({
     description,
     alternates: {
       canonical: fullUrl,
-      languages: buildAlternateLanguages(path),
+      languages: buildAlternateLanguages(path, alternateLocales),
     },
     robots: {
       // index defaults to true; noindex flag flips it for deep-filter URLs

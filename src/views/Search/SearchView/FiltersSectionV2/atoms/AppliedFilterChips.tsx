@@ -3,7 +3,7 @@
 /* eslint-disable no-nested-ternary, react/no-array-index-key */
 import { Box } from '@mui/material';
 
-import { CharterType, MainSailType, VESSEL_TYPE_LABEL_MAP_PLURAL, VesselType } from '@/models/yacht.model';
+import { CharterType, MainSailType, VESSEL_TYPE_LABEL_MAP_PLURAL, isVesselType } from '@/models/yacht.model';
 import { searchV2 } from '@/styles/themes/searchV2';
 import { SearchParams } from '@/utils/hooks/useQueryParams';
 
@@ -27,7 +27,7 @@ const AppliedFilterChips = ({ params, setMultipleParams, t }: AppliedFilterChips
 
   // Vessel types
   (params.boatTypes || []).forEach(bt => {
-    const labelKey = VESSEL_TYPE_LABEL_MAP_PLURAL[bt as VesselType];
+    const labelKey = isVesselType(bt) ? VESSEL_TYPE_LABEL_MAP_PLURAL[bt] : null;
 
     chips.push({
       label: labelKey && t ? t(labelKey) : bt,
