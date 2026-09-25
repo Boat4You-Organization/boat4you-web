@@ -10,6 +10,7 @@ import { Currency } from '@/models/user.model';
 import { VESSEL_TYPE_LABEL_MAP_FOR_RENTAL, YachtModelShortInfo, isVesselType } from '@/models/yacht.model';
 import { fetchYachts } from '@/services/yacht.service';
 import { evaluateLanding } from '@/utils/server/landingGate';
+import { LandingCrumb, landingCrumbs, placeForDids } from '@/utils/server/landingNav';
 import {
   SearchLanding,
   landingFetchRevalidate,
@@ -230,53 +231,23 @@ export async function generateMetadata({ params: paramsPromise, searchParams }: 
 }
 
 /**
- * BreadcrumbList for the search page. Surfaces "Home › Catamaran ›
- * Croatia" navigation chip in the SERP and helps Google understand the
- * page's place in the site hierarchy. We only emit when at least one
- * filter (destination or boat type) is present — a bare `/search` page
- * is the search root and has nothing to crumb to.
- *
- * Item names use the catalogue display name ("Croatia", "ACI Marina
- * Split"); item URLs use the same canonical landing form as the page's
- * <link rel="canonical"> and the sitemaps (lowercased destination, no did,
- * locale-prefixed), so the last crumb IS the canonical URL.
+ * BreadcrumbList for a destination landing: Home › Country › Region › Place
+ * [› Type], the same crumbs as the visible trail above the H1 (landingCrumbs
+ * in landingNav.ts — each an indexable landing in its canonical URL, the
+ * last one this page's canonical). Other searches (several destinations, a
+ * did link, a boat type alone) have no place in the hierarchy to crumb.
  */
-function buildSearchBreadcrumb(args: {
-  locale: LocaleType;
-  destinations: string[];
-  destinationLabel: string;
-  singleBoatType: string | null;
-}) {
-  const { locale, destinations, destinationLabel, singleBoatType } = args;
-  const items: Array<{ name: string; item: string }> = [{ name: 'Boat4You', item: localizedUrl(locale, '/') }];
-
-  if (singleBoatType) {
-    items.push({
-      name: singleBoatType
-        .replace(/_/g, ' ')
-        .toLowerCase()
-        .replace(/\b\w/g, c => c.toUpperCase()),
-      item: localizedUrl(locale, buildSearchLandingPath(null, singleBoatType)),
-    });
-  }
-
-  if (destinations.length) {
-    items.push({
-      name: destinationLabel,
-      item: localizedUrl(locale, buildSearchLandingPath(destinations, singleBoatType)),
-    });
-  }
-
-  if (items.length <= 1) return null;
+function buildSearchBreadcrumb(locale: LocaleType, crumbs: LandingCrumb[]) {
+  if (crumbs.length < 2) return null;
 
   return {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
-    itemListElement: items.map((b, i) => ({
+    itemListElement: crumbs.map((crumb, i) => ({
       '@type': 'ListItem',
       position: i + 1,
-      name: b.name,
-      item: b.item,
+      name: crumb.label,
+      item: localizedUrl(locale, crumb.path),
     })),
   };
 }
@@ -411,17 +382,24 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
   // Charter facts block — only on landings the index gate lets Google index here.
   const charterFacts = await charterFactsTargetFor(landing, singleBoatType, boatTypes.length, locale);
 
-  // Destination crumb only from catalogue names that can carry a landing URL:
-  // an unresolved value is raw URL input (it was reflected into the JSON-LD)
-  // and has no landing page to crumb to.
-  const crumbNames = landing.resolved.map(r => r?.name ?? '');
-  const crumbDestinations = crumbNames.every(n => n && isLandingExpressible(n)) ? crumbNames : [];
-  const breadcrumbSchema = buildSearchBreadcrumb({
-    locale: locale as LocaleType,
-    destinations: crumbDestinations,
-    destinationLabel: crumbDestinations.join(' and '),
-    singleBoatType,
-  });
+  // A destination landing: one catalogue place that can carry a landing URL
+  // (an unresolved value is raw URL input), at most one known boat type — or
+  // a dropdown search whose own did is exactly one such place. Its breadcrumb
+  // and link blocks (landingNav.ts) are built from that place.
+  let place = !landing.hasOwnDid && landing.destinations.length === 1 ? landing.resolved[0] : null;
+
+  if (landing.hasOwnDid) {
+    place = await placeForDids(splitSearchParam(params.did)).catch(() => null);
+  }
+
+  const landingPlace =
+    place && isLandingExpressible(place.name) && boatTypes.length === (singleBoatType ? 1 : 0)
+      ? { name: place.name, boatType: singleBoatType }
+      : null;
+  const breadcrumbSchema = buildSearchBreadcrumb(
+    locale as LocaleType,
+    landingPlace ? await landingCrumbs(landingPlace.name, landingPlace.boatType, locale).catch(() => []) : []
+  );
 
   // Fetch the top-N yachts here so we can emit Product schema in the
   // initial HTML. This is a separate fetch from the one that powers the
@@ -469,6 +447,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
           destinationLabels={landing.labels}
           fetchRevalidate={fetchRevalidate}
           charterFacts={charterFacts}
+          landingPlace={landingPlace}
         />
       </Layout>
     </ResolvedDestinationProvider>

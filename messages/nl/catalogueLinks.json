@@ -17,5 +17,11 @@
     "seeAllBoats": "Bekijk alle {count, number} boten",
     "seeAllBoatsIn": "Bekijk alle {count, number} boten in {area}",
     "bestTypes": "De beste boottypes voor deze route"
+  },
+  "landing": {
+    "boatTypesIn": "Boottypes in {place}",
+    "popularModelsIn": "Populaire modellen in {place}",
+    "itineraries": "Zeilroutes",
+    "countedLink": "{name} ({count, number})"
   }
 }

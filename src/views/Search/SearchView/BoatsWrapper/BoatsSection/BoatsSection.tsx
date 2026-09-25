@@ -71,6 +71,10 @@ interface BoatsSectionProps {
   curatedSeoHtml?: string | null;
   /** Server-rendered charter facts block (gated landings only). */
   charterFactsSlot?: ReactNode;
+  /** Server-rendered breadcrumb above the H1 (destination landings only). */
+  breadcrumbSlot?: ReactNode;
+  /** Server-rendered link rows under the listing (destination landings only). */
+  landingLinksSlot?: ReactNode;
 }
 
 const BoatsSection = ({
@@ -81,6 +85,8 @@ const BoatsSection = ({
   popularDestinationsArea = '',
   curatedSeoHtml = null,
   charterFactsSlot = null,
+  breadcrumbSlot = null,
+  landingLinksSlot = null,
 }: BoatsSectionProps) => {
   const { content, page } = data;
   const { totalElements = 0 } = page || {};
@@ -398,6 +404,7 @@ const BoatsSection = ({
           </Box>
         )}
         <Stack className={styles.content}>
+          {breadcrumbSlot}
           <Stack width="100%" direction="row" justifyContent="space-between" alignItems="flex-start">
             <Stack>
               <Typography variant="h2" component="h1" fontWeight={700}>
@@ -541,6 +548,7 @@ const BoatsSection = ({
           />
         )}
         {charterFactsSlot}
+        {landingLinksSlot}
         {/* SEO block — long-form content below the listings for organic
             traffic. Pop-destinations link cluster is rendered INSIDE
             this section's collapse so a single Show more toggle reveals

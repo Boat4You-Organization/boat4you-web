@@ -178,7 +178,8 @@ const SeoTextSection = ({
  * flex-wrap list of anchor tags. The phrase template per link is
  * locale-driven (`popularDestinations.template0..7` in common.json) and
  * deterministic per destination name (server-side hash) so SEO bots see
- * stable anchor text on every crawl.
+ * stable anchor text on every crawl; boat-type links carry their own label
+ * (the target's H1). Every href is an indexable landing (landingNav.ts).
  */
 const PopularDestinationsBlock = ({
   destinations,
@@ -215,7 +216,8 @@ const PopularDestinationsBlock = ({
       {destinations.map(d => (
         <Box component="li" key={d.href}>
           <Link href={d.href} style={{ color: colors.blue500, textDecoration: 'underline', fontWeight: 500 }}>
-            {t(`popularDestinations.template${d.templateIdx}` as 'popularDestinations.template0', { dest: d.name })}
+            {d.label ??
+              t(`popularDestinations.template${d.templateIdx}` as 'popularDestinations.template0', { dest: d.name })}
           </Link>
         </Box>
       ))}

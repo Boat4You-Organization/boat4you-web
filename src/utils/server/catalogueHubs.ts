@@ -143,6 +143,36 @@ export const regionsForMarina = cache(async (countryCode: string, marinaDid: str
   return hits.filter((name): name is string => !!name);
 });
 
+/** The promoted-country landing place of a country code (resolved like /search), or null. */
+export const countryPlaceFor = async (
+  index: DestinationIndex,
+  countryCode?: string
+): Promise<ResolvedDestination | null> => {
+  if (!countryCode) return null;
+
+  const row = Array.from(index.byName.values())
+    .flat()
+    .find(l => l.kind === LocationType.COUNTRY && l.countryCode === countryCode);
+
+  return row ? resolveDestinationName(index, row.name) : null;
+};
+
+/** Indexable region hub above a marina (the most specific one: smallest fleet), or null. */
+export const regionHubAbove = async (
+  index: DestinationIndex,
+  place: ResolvedDestination,
+  locale: string
+): Promise<Hub | null> => {
+  if (place.kind !== LocationType.MARINA || !place.countryCode) return null;
+
+  const names = await regionsForMarina(place.countryCode, place.dids[0]);
+  const hubs = (await Promise.all(names.map(name => hubForName(index, name, null, locale)))).filter(
+    (h): h is Hub => !!h?.href && h.kind !== LocationType.COUNTRY && h.name !== place.name
+  );
+
+  return hubs.sort((a, b) => a.fleet - b.fleet)[0] ?? null;
+};
+
 export interface BoatHubs {
   country: Hub | null;
   /** Region of the boat's base (most specific indexable one), else the base itself. */

@@ -17,5 +17,11 @@
     "seeAllBoats": "Zobacz wszystkie łodzie ({count, number})",
     "seeAllBoatsIn": "Zobacz wszystkie łodzie – {area} ({count, number})",
     "bestTypes": "Najlepsze typy łodzi na tę trasę"
+  },
+  "landing": {
+    "boatTypesIn": "Rodzaje łodzi w {place}",
+    "popularModelsIn": "Popularne modele w {place}",
+    "itineraries": "Trasy rejsów",
+    "countedLink": "{name} ({count, number})"
   }
 }

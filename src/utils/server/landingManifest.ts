@@ -38,6 +38,11 @@ export interface LandingEntry {
   boatType: VesselType | null;
   fleet: number;
   locales: string[];
+  /** The resolved place behind the landing (for the landing link blocks:
+   *  which landings lie inside a country or a region). */
+  dids: string[];
+  kind: LocationType;
+  countryCode?: string;
 }
 
 export interface ManifestReport {
@@ -57,6 +62,8 @@ export interface LandingManifest {
 
 const TTL_MS = 60 * 60 * 1000;
 let memo: { at: number; value: Promise<LandingManifest> } | null = null;
+/** Last manifest that finished building (served while the next one builds). */
+let lastBuilt: LandingManifest | null = null;
 
 /** The catalogue landing a file prefix names (via a catalogue name or an alias key), if any. */
 const landingForDest = async (index: DestinationIndex, dest: string): Promise<ResolvedDestination | null> => {
@@ -131,7 +138,15 @@ const build = async (index: DestinationIndex): Promise<LandingManifest> => {
   await mapWithLimit(Array.from(combos.entries()), 6, async ([comboKey, { resolved, boatType }]) => {
     const gate = await evaluateLanding(resolved, boatType, index);
 
-    evaluated.set(comboKey, { name: resolved.name, boatType, fleet: gate.fleet, locales: gate.indexableLocales });
+    evaluated.set(comboKey, {
+      name: resolved.name,
+      boatType,
+      fleet: gate.fleet,
+      locales: gate.indexableLocales,
+      dids: resolved.dids,
+      kind: resolved.kind,
+      countryCode: resolved.countryCode,
+    });
   });
 
   fileCombo.forEach((comboKey, slug) => {
@@ -156,13 +171,47 @@ const build = async (index: DestinationIndex): Promise<LandingManifest> => {
 /** The manifest, rebuilt at most once an hour (shared by both sitemaps). */
 export const getLandingManifest = (index: DestinationIndex): Promise<LandingManifest> => {
   if (!memo || Date.now() - memo.at > TTL_MS) {
-    const value = build(index).catch(error => {
-      memo = null;
-      throw error;
-    });
+    const value = build(index).then(
+      manifest => {
+        lastBuilt = manifest;
+
+        return manifest;
+      },
+      error => {
+        memo = null;
+        throw error;
+      }
+    );
 
     memo = { at: Date.now(), value };
   }
 
   return memo.value;
+};
+
+/**
+ * The manifest for a page render (the /search landing link blocks): the last
+ * built one right away (stale while the hourly rebuild runs), else the first
+ * build — but never longer than `budgetMs`, so a cold process does not hold
+ * a landing on ~400 gate evaluations (the build keeps running and serves the
+ * next request). null → no manifest yet (the caller renders no link block).
+ */
+export const landingManifestWithin = async (
+  index: DestinationIndex,
+  budgetMs: number
+): Promise<LandingManifest | null> => {
+  const pending = getLandingManifest(index).catch(() => null);
+
+  if (lastBuilt) return lastBuilt;
+
+  let timer: ReturnType<typeof setTimeout> | undefined;
+  const timeout = new Promise<null>(resolve => {
+    timer = setTimeout(() => resolve(null), budgetMs);
+  });
+
+  try {
+    return await Promise.race([pending, timeout]);
+  } finally {
+    if (timer) clearTimeout(timer);
+  }
 };

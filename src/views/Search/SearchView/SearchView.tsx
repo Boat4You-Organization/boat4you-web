@@ -11,6 +11,7 @@ import { Currency } from '@/models/user.model';
 import { CharterFactsTarget } from '@/views/Search/CharterFacts';
 
 import BoatsWrapper from './BoatsWrapper';
+import type { LandingPlace } from './BoatsWrapper/BoatsWrapper';
 import FiltersSectionV2 from './FiltersSectionV2';
 import { SearchResultsTransitionWrapper } from './SearchResultsTransitionWrapper';
 import { SearchTransitionProvider } from './SearchTransitionContext';
@@ -25,6 +26,8 @@ interface SearchViewProps {
   fetchRevalidate?: number;
   /** Set on landings that pass the index gate in this locale: the charter facts block to show. */
   charterFacts?: CharterFactsTarget | null;
+  /** Set on destination landings: the place (× type) whose link blocks and breadcrumb to show. */
+  landingPlace?: LandingPlace | null;
 }
 
 const SearchView = async ({
@@ -32,6 +35,7 @@ const SearchView = async ({
   destinationLabels,
   fetchRevalidate,
   charterFacts = null,
+  landingPlace = null,
 }: SearchViewProps) => {
   const locale = await getLocale();
   const currency = (searchParams.currency as Currency) || Currency.EUR;
@@ -72,6 +76,7 @@ const SearchView = async ({
               destinationLabels={destinationLabels}
               fetchRevalidate={fetchRevalidate}
               charterFacts={charterFacts}
+              landingPlace={landingPlace}
             />
           </Suspense>
         </SearchResultsTransitionWrapper>

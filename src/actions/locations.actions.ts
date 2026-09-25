@@ -7,7 +7,6 @@ import { LocationType } from '@/types/location.type';
 import { PaginatedResponse } from '@/types/response.type';
 import { getSiteStats } from '@/utils/server/siteStats';
 import { createQueryParams } from '@/utils/static/queryParams';
-import { buildDestinationHref } from '@/utils/static/searchLandingPath';
 
 export interface PopularEntry {
   /** Synthetic id — not a real backend location id. */
@@ -248,155 +247,20 @@ export async function getHeroStats(): Promise<HeroStats> {
 }
 
 /**
- * Internal-link block for the bottom of `/search?destinations=X` pages.
- * Boataround calls this "Our most popular destinations" — 10 anchor links
- * to sub-destinations of the active country/region, each phrased
- * differently ("yacht charter X", "X yacht charter", "rent boat X", …)
- * so the block stacks long-tail keyword variations without looking like
- * keyword stuffing. We mirror that pattern but vary phrasing per locale.
- *
- * Today's scope (MVP — Mario asked for one working example before
- * expanding): country-level only. Calling this with a country code
- * returns top regions of that country + a couple of high-volume marinas
- * to fill out a 10-link block.
- *
- * Output: an array of `{ name, href, templateIdx }` objects. The
- * `templateIdx` is a deterministic 0..N index — the renderer uses it to
- * rotate phrasing templates so URL #3 reads differently from URL #4 even
- * though they're the same component. Deterministic (not random) so SEO
- * bots see stable text on every crawl.
+ * One link of the "Our most popular destinations in {area}" block at the
+ * bottom of `/search?destinations=X` landings (Boataround pattern: each link
+ * phrased differently — "yacht charter X", "X yacht charter", "rent boat X"
+ * … — deterministic per place so crawlers see stable anchors). Built on the
+ * server from the landing manifest (src/utils/server/landingNav.ts), so
+ * every link is an indexable landing in its canonical URL.
  */
 export interface PopularDestination {
-  /** Raw destination name as it appears in the location-count payload —
-   *  used both as the URL `?destinations=` value and as the template
-   *  placeholder. */
+  /** Localized place name, the `{dest}` of the phrase template. */
   name: string;
-  /** Pre-built href for the next-level search results page, with the
-   *  active boat-type filter preserved — canonical landing form (lowercased
-   *  name, no did; /search resolves the did server-side). */
+  /** Locale-less canonical landing path (the locale-aware Link adds the prefix). */
   href: string;
-  /** 0..7 index into the locale's phrase template array. Stable per
-   *  destination (hash of name) so the same place always renders with
-   *  the same phrasing on subsequent crawls. */
+  /** 0..7 index into the locale's phrase template array (stable per place). */
   templateIdx: number;
-}
-
-const POPULAR_DESTS_LIMIT = 10;
-const POPULAR_TEMPLATE_COUNT = 8;
-
-/**
- * Cheap hash → 0..(POPULAR_TEMPLATE_COUNT-1). Used to assign each
- * destination a stable phrase template across renders.
- */
-const stableTemplateIdx = (s: string): number => {
-  let h = 0;
-
-  // eslint-disable-next-line no-bitwise
-  for (let i = 0; i < s.length; i += 1) h = (h * 31 + s.charCodeAt(i)) | 0;
-
-  return Math.abs(h) % POPULAR_TEMPLATE_COUNT;
-};
-
-/**
- * Build the popular-destinations block for a single country page.
- * Returns an empty array on missing data so the caller can skip the
- * render without an error path.
- *
- * @param countryCode  ISO country code (e.g. "HR"). Pulled from the
- *                     URL's `did=c-X` segment + a country lookup; if the
- *                     URL has no country filter, callers shouldn't call
- *                     this.
- * @param boatType     Active single-boat-type filter (preserved in the
- *                     output hrefs so `Croatia + Catamaran` → links land
- *                     on `Split Region + Catamaran` etc).
- */
-export async function getPopularDestinationsForCountry(
-  countryCode: string,
-  boatType: string | null
-): Promise<PopularDestination[]> {
-  const base = process.env.NEXT_PUBLIC_BOAT_WS_API_URL;
-  const REVALIDATE = 600;
-
-  try {
-    const [regionsRes, marinasRes] = await Promise.all([
-      fetch(`${base}/public/regions?countryCode=${countryCode}`, { next: { revalidate: REVALIDATE } }),
-      fetch(`${base}/public/locations-count`, { next: { revalidate: REVALIDATE } }),
-    ]);
-
-    if (!regionsRes.ok) return [];
-
-    const regions = (await regionsRes.json()) as Array<{ id: string; name: string }>;
-    const marinas = marinasRes.ok
-      ? ((await marinasRes.json()) as Array<{ id: string; name: string; countryCode: string; yachtCount: number }>)
-      : [];
-
-    // Regions first — they're the higher-tier sub-destinations and the
-    // ones a country page should funnel traffic to. Cap at 6 (typical
-    // country has 5-6 regions; we leave room for 4 marina links to round
-    // the block out to 10 entries).
-    const regionEntries: PopularDestination[] = regions.slice(0, 6).map(r => ({
-      name: r.name,
-      href: buildDestinationHref(r.name, r.id, boatType),
-      templateIdx: stableTemplateIdx(r.name),
-    }));
-
-    // Top-yacht-count marinas in this country fill the remaining slots
-    // (10 − region count). Skip any marina whose name was already used
-    // by a region entry (rare, but possible — e.g. "Split" marina vs
-    // "Split region").
-    const usedNames = new Set(regionEntries.map(r => r.name.toLowerCase()));
-    const marinaEntries: PopularDestination[] = marinas
-      .filter(m => m.countryCode === countryCode && !usedNames.has(m.name.toLowerCase()))
-      .sort((a, b) => b.yachtCount - a.yachtCount)
-      .slice(0, POPULAR_DESTS_LIMIT - regionEntries.length)
-      .map(m => ({
-        name: m.name,
-        href: buildDestinationHref(m.name, m.id, boatType),
-        templateIdx: stableTemplateIdx(m.name),
-      }));
-
-    return [...regionEntries, ...marinaEntries];
-  } catch {
-    return [];
-  }
-}
-
-/**
- * Region-level variant of [getPopularDestinationsForCountry]. Powers
- * the "Most popular destinations in {region}" block on URLs like
- * `?destinations=Split+Region&did=r-5`. Backend filter (`regionId=`
- * query param on `/locations-count`) returns only the marinas/cities
- * inside that region — without the filter we'd dump all of Croatia.
- *
- * @param regionRealId  Numeric region id stripped from the `r-<id>`
- *                      URL slug (e.g. r-5 → 5). Backend uses this as
- *                      the `Region.id` in the JPA m2m join.
- */
-export async function getPopularDestinationsForRegion(
-  regionRealId: string,
-  boatType: string | null
-): Promise<PopularDestination[]> {
-  const base = process.env.NEXT_PUBLIC_BOAT_WS_API_URL;
-  const REVALIDATE = 600;
-
-  try {
-    const res = await fetch(`${base}/public/locations-count?regionId=${encodeURIComponent(regionRealId)}`, {
-      next: { revalidate: REVALIDATE },
-    });
-
-    if (!res.ok) return [];
-
-    const locations = (await res.json()) as Array<{ id: string; name: string; yachtCount: number }>;
-
-    return locations
-      .sort((a, b) => b.yachtCount - a.yachtCount)
-      .slice(0, POPULAR_DESTS_LIMIT)
-      .map(l => ({
-        name: l.name,
-        href: buildDestinationHref(l.name, l.id, boatType),
-        templateIdx: stableTemplateIdx(l.name),
-      }));
-  } catch {
-    return [];
-  }
+  /** Full anchor text instead of the template (boat-type landings use their H1). */
+  label?: string;
 }

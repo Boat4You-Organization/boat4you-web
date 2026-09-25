@@ -2,12 +2,13 @@ import { Box, Stack, Typography } from '@mui/material';
 import { getTranslations } from 'next-intl/server';
 
 import colors from '@/styles/themes/colors';
-import { Hub, boatTypePlural } from '@/utils/server/catalogueHubs';
+import { Hub, boatTypePlural, localePrefix } from '@/utils/server/catalogueHubs';
+import { yachtsIndexPath } from '@/utils/static/yachtModelKey';
 
 /**
  * "Explore boats" — server-rendered links from editorial pages (blog posts,
  * the blog index) to indexable destination landing hubs, plus the matching
- * itinerary area. Plain anchors, so crawlers read them in the SSR HTML.
+ * itinerary area and the /yachts model index. Plain anchors, so crawlers read them in the SSR HTML.
  * Renders nothing without hubs.
  */
 
@@ -18,7 +19,7 @@ interface ExploreBoatsLinksProps {
   lead: 'leadPost' | 'leadIndex';
 }
 
-const pillSx = {
+export const pillSx = {
   display: 'inline-flex',
   alignItems: 'center',
   minHeight: 40,
@@ -39,7 +40,16 @@ const ExploreBoatsLinks = async ({ hubs, itinerary, locale, lead }: ExploreBoats
 
   if (!linked.length) return null;
 
-  const t = await getTranslations({ locale, namespace: 'catalogueLinks' });
+  const [t, tModels] = await Promise.all([
+    getTranslations({ locale, namespace: 'catalogueLinks' }),
+    getTranslations({ locale, namespace: 'models' }),
+  ]);
+  const textLinkSx = {
+    color: colors.blue500,
+    fontWeight: 600,
+    textDecoration: 'none',
+    '&:hover': { textDecoration: 'underline' },
+  } as const;
   const labels = await Promise.all(
     linked.map(async hub =>
       hub.boatType
@@ -74,20 +84,16 @@ const ExploreBoatsLinks = async ({ hubs, itinerary, locale, lead }: ExploreBoats
       </Stack>
       {itinerary && (
         <Typography variant="body1" sx={{ mt: 2.5 }}>
-          <Box
-            component="a"
-            href={itinerary.href}
-            sx={{
-              color: colors.blue500,
-              fontWeight: 600,
-              textDecoration: 'none',
-              '&:hover': { textDecoration: 'underline' },
-            }}
-          >
+          <Box component="a" href={itinerary.href} sx={textLinkSx}>
             {t('explore.itineraryLink', { area: itinerary.area })} →
           </Box>
         </Typography>
       )}
+      <Typography variant="body1" sx={{ mt: itinerary ? 1 : 2.5 }}>
+        <Box component="a" href={`${localePrefix(locale)}${yachtsIndexPath()}`} sx={textLinkSx}>
+          {tModels('index.h1')} →
+        </Box>
+      </Typography>
     </Box>
   );
 };
