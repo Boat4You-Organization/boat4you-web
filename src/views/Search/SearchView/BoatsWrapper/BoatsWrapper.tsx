@@ -24,6 +24,8 @@ interface BoatsWrapperProps {
   searchParams: AllSearchParams;
   /** Lowercased `?destinations=` value → catalogue display name. */
   destinationLabels?: Record<string, string>;
+  /** Data Cache window for the yacht list; undefined = no-store. */
+  fetchRevalidate?: number;
 }
 
 /**
@@ -92,7 +94,7 @@ const extractSingleBoatType = (searchParams: AllSearchParams): string | null => 
   return types.length === 1 ? types[0] : null;
 };
 
-const BoatsWrapper = async ({ searchParams, destinationLabels = {} }: BoatsWrapperProps) => {
+const BoatsWrapper = async ({ searchParams, destinationLabels = {}, fetchRevalidate }: BoatsWrapperProps) => {
   const locale = await getLocale();
   const user = await getLoggedInUser();
 
@@ -117,7 +119,9 @@ const BoatsWrapper = async ({ searchParams, destinationLabels = {} }: BoatsWrapp
 
   const [data, popularDestinations] = await Promise.all([
     // Backend blip → empty list (pre-existing soft behaviour; fetchYachts now throws).
-    fetchYachts(searchParams, currency, locale).catch((): PaginatedResponse<YachtModelShortInfo> => ({ content: [] })),
+    fetchYachts(searchParams, currency, locale, { revalidate: fetchRevalidate }).catch(
+      (): PaginatedResponse<YachtModelShortInfo> => ({ content: [] })
+    ),
     popularDestinationsPromise,
   ]);
 

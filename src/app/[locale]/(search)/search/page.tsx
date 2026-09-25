@@ -12,6 +12,7 @@ import { fetchYachts } from '@/services/yacht.service';
 import { evaluateLanding } from '@/utils/server/landingGate';
 import {
   SearchLanding,
+  landingFetchRevalidate,
   resolveSearchLanding,
   splitSearchParam,
   uniqueCaseInsensitive,
@@ -422,6 +423,9 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
   // Re-resolved on every request — filter changes re-render this component.
   const landing: SearchLanding = await resolveSearchLanding(params);
   const effectiveParams = withLandingDid(params, landing);
+  // Undated landings read the yacht list through a 10-minute Data Cache
+  // window (see landingFetchRevalidate); anything dated/filtered stays live.
+  const fetchRevalidate = landingFetchRevalidate(params);
 
   const boatTypes = splitSearchParam(params.boatTypes);
   const singleBoatType = boatTypes.length === 1 && isVesselType(boatTypes[0]) ? boatTypes[0] : null;
@@ -451,7 +455,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
 
   try {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const yachtsResp = await fetchYachts(effectiveParams as any, currency, locale);
+    const yachtsResp = await fetchYachts(effectiveParams as any, currency, locale, { revalidate: fetchRevalidate });
     const tBoatMeta = await getTranslations({ locale, namespace: 'metadata.boat' });
 
     productsLd = buildSearchProductsLd(yachtsResp?.content, baseUrl, currency, (key, values) =>
@@ -481,7 +485,11 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
             dangerouslySetInnerHTML={{ __html: serializeJsonLd(productsLd) }}
           />
         )}
-        <SearchView searchParams={effectiveParams} destinationLabels={landing.labels} />
+        <SearchView
+          searchParams={effectiveParams}
+          destinationLabels={landing.labels}
+          fetchRevalidate={fetchRevalidate}
+        />
       </Layout>
     </ResolvedDestinationProvider>
   );

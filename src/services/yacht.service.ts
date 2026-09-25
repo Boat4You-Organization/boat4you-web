@@ -25,10 +25,21 @@ interface YachtPriceParams {
   currency?: string;
 }
 
+export interface FetchYachtsOptions {
+  /**
+   * Seconds to keep this exact query in the Next Data Cache. Omitted =
+   * `no-store` (the default: dated / filtered searches must mirror partner
+   * state). Only the undated destination landings pass it — see
+   * landingFetchRevalidate in src/utils/server/searchLanding.ts.
+   */
+  revalidate?: number;
+}
+
 export async function fetchYachts(
   searchParams: YachtSearchParams,
   currency: Currency = Currency.EUR,
-  locale: string = 'en'
+  locale: string = 'en',
+  options: FetchYachtsOptions = {}
 ): Promise<PaginatedResponse<YachtModelShortInfo>> {
   const { boatTypes, ...restParams } = searchParams;
 
@@ -51,10 +62,11 @@ export async function fetchYachts(
     // Yacht catalogue + offer state changes constantly (partner sync,
     // dual-source dedup, manual price overrides). Cached SSR responses
     // make the search page lag behind reality (e.g. a freshly-mapped
-    // Sardinia marina taking up to an hour to surface). Always go to
-    // the backend; the backend itself has its own short-window cache
-    // for the expensive joins.
-    cache: 'no-store',
+    // Sardinia marina taking up to an hour to surface), so by default go to
+    // the backend; the backend itself has its own short-window cache for
+    // the expensive joins. The caller opts into a short Data Cache window
+    // for the undated landing pages only (options.revalidate).
+    ...(options.revalidate ? { next: { revalidate: options.revalidate } } : { cache: 'no-store' as const }),
     headers: {
       'Accept-Language': locale,
       'Content-Type': 'application/json',

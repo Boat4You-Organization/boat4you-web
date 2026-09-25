@@ -66,3 +66,73 @@ export const resolveSearchLanding = async (params: AllSearchParams): Promise<Sea
 /** Search params with the resolved did applied (unchanged when there is none). */
 export const withLandingDid = (params: AllSearchParams, landing: SearchLanding): AllSearchParams =>
   landing.did.length ? { ...params, did: landing.did } : params;
+
+/**
+ * Data Cache window (seconds) for the yacht list of an UNDATED destination
+ * landing, or undefined → `no-store`.
+ *
+ * Why: the landings (`/search?destinations=x[&boatTypes=Y][&page=n]`) are
+ * what Googlebot crawls from the sitemaps, one URL at a time and rarely the
+ * same one twice within the page's 60 s s-maxage — so nearly every crawl hit
+ * the backend cold (~2 s single, far worse under parallel crawling, and
+ * cusma2 is the only API node). Without dates the list is the catalogue in
+ * "recommended" order with from-prices, which moves with the partner syncs,
+ * not by the minute; ten minutes stale is invisible to a visitor and makes
+ * repeat crawls and the page's second fetch (Product JSON-LD) warm.
+ *
+ * Kept `no-store` whenever the visitor asked for something specific: dates
+ * (availability and the exact-period price must be live), a did of their
+ * own (dropdown pick), any sidebar filter or sort, or an admin inquiry.
+ * Tracking parameters (utm_*, gclid) do not count as filters.
+ */
+export const LANDING_FETCH_REVALIDATE_SECONDS = 600;
+
+const USER_FILTER_PARAMS = [
+  'startDate',
+  'endDate',
+  'dateFrom',
+  'dateTo',
+  'did',
+  'inquiryId',
+  'search',
+  'manufacturers',
+  'models',
+  'mfid',
+  'mid',
+  'amenities',
+  'services',
+  'amenityLabels',
+  'servicesLabels',
+  'charterType',
+  'mainSailType',
+  'yid',
+  'sortBy',
+  'sortDirection',
+  'minPrice',
+  'maxPrice',
+  'minCabins',
+  'maxCabins',
+  'minPersons',
+  'maxPersons',
+  'minBerths',
+  'maxBerths',
+  'minLength',
+  'maxLength',
+  'minBuildYear',
+  'maxBuildYear',
+  'minWc',
+  'maxWc',
+  'minEnginePower',
+  'maxEnginePower',
+];
+
+/** Pass the ORIGINAL request params (before withLandingDid adds the resolved did). */
+export const landingFetchRevalidate = (params: AllSearchParams): number | undefined => {
+  const hasUserFilter = USER_FILTER_PARAMS.some(key => {
+    const value = (params as unknown as Record<string, unknown>)[key];
+
+    return Array.isArray(value) ? value.length > 0 : value != null && String(value).trim() !== '';
+  });
+
+  return hasUserFilter ? undefined : LANDING_FETCH_REVALIDATE_SECONDS;
+};

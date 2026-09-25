@@ -20,9 +20,11 @@ interface SearchViewProps {
   searchParams: AllSearchParams;
   /** Lowercased `?destinations=` value → catalogue display name. */
   destinationLabels?: Record<string, string>;
+  /** Data Cache window for the yacht list (undated landings only). */
+  fetchRevalidate?: number;
 }
 
-const SearchView = async ({ searchParams, destinationLabels }: SearchViewProps) => {
+const SearchView = async ({ searchParams, destinationLabels, fetchRevalidate }: SearchViewProps) => {
   const locale = await getLocale();
   const currency = (searchParams.currency as Currency) || Currency.EUR;
 
@@ -57,7 +59,11 @@ const SearchView = async ({ searchParams, destinationLabels }: SearchViewProps) 
               the previous route visible until BoatsWrapper streams in —
               SPA-feel transition, no jarring layout shock. */}
           <Suspense key={suspenseKey} fallback={null}>
-            <BoatsWrapper searchParams={searchParams} destinationLabels={destinationLabels} />
+            <BoatsWrapper
+              searchParams={searchParams}
+              destinationLabels={destinationLabels}
+              fetchRevalidate={fetchRevalidate}
+            />
           </Suspense>
         </SearchResultsTransitionWrapper>
       </SearchTransitionProvider>
