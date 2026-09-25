@@ -5,9 +5,9 @@ import { useState } from 'react';
 
 import { Box, Button, Collapse, Typography } from '@mui/material';
 import { useTranslations } from 'next-intl';
-import Link from 'next/link';
 
 import { PopularDestination } from '@/actions/locations.actions';
+import { Link } from '@/i18n/navigation';
 import colors from '@/styles/themes/colors';
 import { useResolvedDestination } from '@/views/Search/SearchView/ResolvedDestinationContext';
 
@@ -211,6 +211,7 @@ const PopularDestinationsBlock = ({
         lineHeight: 1.6,
       }}
     >
+      {/* Locale-aware Link: on /de/… the related landings are the /de/ ones. */}
       {destinations.map(d => (
         <Box component="li" key={d.href}>
           <Link href={d.href} style={{ color: colors.blue500, textDecoration: 'underline', fontWeight: 500 }}>

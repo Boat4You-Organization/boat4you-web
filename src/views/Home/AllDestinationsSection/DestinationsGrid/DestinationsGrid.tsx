@@ -2,10 +2,10 @@
 
 import { Grid, Stack, Typography } from '@mui/material';
 import { useTranslations } from 'next-intl';
-import Link from 'next/link';
 
 import ChevronRight from '@/components/SvgIcons/ChevronRight';
 import { getTranslationKeyByCountryCode, getTranslationKeyByDestinationName } from '@/config/destinations.config';
+import { Link } from '@/i18n/navigation';
 import { CountryCountModel } from '@/models/locations.model';
 import colors from '@/styles/themes/colors';
 import useBreakpoint from '@/utils/hooks/useBreakpoint';

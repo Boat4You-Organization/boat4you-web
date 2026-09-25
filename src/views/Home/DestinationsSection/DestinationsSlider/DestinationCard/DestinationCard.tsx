@@ -1,12 +1,12 @@
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
-import Link from 'next/link';
 
 import {
   getImageByCountryCode,
   getTranslationKeyByCountryCode,
   getTranslationKeyByDestinationName,
 } from '@/config/destinations.config';
+import { Link } from '@/i18n/navigation';
 import { CountryCountModel } from '@/models/locations.model';
 import { buildDestinationHref } from '@/utils/static/searchLandingPath';
 
@@ -33,7 +33,8 @@ const DestinationCard = ({ id, name, countryCode, yachtCount, priority = false }
 
   return (
     // Canonical landing URL (the sitemap form) — /search resolves the did
-    // itself; the old `&did=` link pointed at a noindexed variant.
+    // itself; the old `&did=` link pointed at a noindexed variant. The
+    // locale-aware Link keeps /de/ visitors on the /de/ landing.
     <Link href={buildDestinationHref(name, id)} className={styles.card}>
       <Image
         src={image.src}
