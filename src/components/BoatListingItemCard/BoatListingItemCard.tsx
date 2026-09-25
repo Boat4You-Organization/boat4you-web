@@ -70,7 +70,12 @@ interface BoatListingItemCardProps extends YachtModelShortInfo {
   isSelected?: boolean;
 }
 
-const BoatListingItemCard = ({
+interface BoatListingItemCardViewProps extends BoatListingItemCardProps {
+  /** Link to the boat page (with the searched dates, on /search). */
+  boatDetailHref: string;
+}
+
+const BoatListingItemCardView = ({
   id,
   slug,
   name,
@@ -99,32 +104,8 @@ const BoatListingItemCard = ({
   offerDateFrom,
   offerDateTo,
   matchKind,
-}: BoatListingItemCardProps) => {
-  // Boat detail's canonical ignores query params, so forwarding the live
-  // search filter (?destinations=/&did=) only spawns crawlable duplicate URLs
-  // (17.9K "alternate" + 1.96K "duplicate" in GSC). Forward ONLY the sailing
-  // dates: useful for the client, and absent when Googlebot crawls
-  // /search?destinations=X — so the bot follows a clean /boat/<slug>.
-  const searchParams = useSearchParams();
-  const boatDetailHref = (() => {
-    const q = new URLSearchParams();
-    const searchedStart = searchParams.get('startDate');
-    const searchedEnd = searchParams.get('endDate');
-
-    // Only carry dates when the visitor actually searched with dates — keeps
-    // Googlebot-crawled /search card links clean (no date-param duplicates).
-    // When dated, link to the matched OFFER's own week (offerDateFrom/To) so a
-    // "closest day" card opens the exact offer it displays — incl. its one-way
-    // pickup » drop-off — instead of the searched week (which may be a
-    // different, e.g. round-trip, offer). Falls back to the searched dates.
-    if (searchedStart) q.set('startDate', offerDateFrom || searchedStart);
-
-    if (searchedEnd) q.set('endDate', offerDateTo || searchedEnd);
-
-    const qs = q.toString();
-
-    return qs ? `/boat/${slug}?${qs}` : `/boat/${slug}`;
-  })();
+  boatDetailHref,
+}: BoatListingItemCardViewProps) => {
   const { isMobile } = useBreakpoint();
   const t = useTranslations();
 
@@ -748,6 +729,53 @@ const BoatListingItemCard = ({
       </Link>
     </>
   );
+};
+
+/**
+ * The listing card inside a search: links to the boat page with the
+ * searched dates (useSearchParams — so it needs a dynamic page or a
+ * Suspense boundary).
+ */
+const BoatListingItemCard = (props: BoatListingItemCardProps) => {
+  const { slug, offerDateFrom, offerDateTo } = props;
+  // Boat detail's canonical ignores query params, so forwarding the live
+  // search filter (?destinations=/&did=) only spawns crawlable duplicate URLs
+  // (17.9K "alternate" + 1.96K "duplicate" in GSC). Forward ONLY the sailing
+  // dates: useful for the client, and absent when Googlebot crawls
+  // /search?destinations=X — so the bot follows a clean /boat/<slug>.
+  const searchParams = useSearchParams();
+  const boatDetailHref = (() => {
+    const q = new URLSearchParams();
+    const searchedStart = searchParams.get('startDate');
+    const searchedEnd = searchParams.get('endDate');
+
+    // Only carry dates when the visitor actually searched with dates — keeps
+    // Googlebot-crawled /search card links clean (no date-param duplicates).
+    // When dated, link to the matched OFFER's own week (offerDateFrom/To) so a
+    // "closest day" card opens the exact offer it displays — incl. its one-way
+    // pickup » drop-off — instead of the searched week (which may be a
+    // different, e.g. round-trip, offer). Falls back to the searched dates.
+    if (searchedStart) q.set('startDate', offerDateFrom || searchedStart);
+
+    if (searchedEnd) q.set('endDate', offerDateTo || searchedEnd);
+
+    const qs = q.toString();
+
+    return qs ? `/boat/${slug}?${qs}` : `/boat/${slug}`;
+  })();
+
+  return <BoatListingItemCardView {...props} boatDetailHref={boatDetailHref} />;
+};
+
+/**
+ * The same card for statically rendered pages (itineraries): a plain
+ * `/boat/<slug>` link, no useSearchParams — which would otherwise switch the
+ * whole card tree to client-side rendering and drop it from the SSR HTML.
+ */
+export const StaticBoatListingItemCard = (props: BoatListingItemCardProps) => {
+  const { slug } = props;
+
+  return <BoatListingItemCardView {...props} boatDetailHref={`/boat/${slug}`} />;
 };
 
 export default BoatListingItemCard;

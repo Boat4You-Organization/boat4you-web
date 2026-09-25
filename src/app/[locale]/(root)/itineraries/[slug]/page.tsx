@@ -4,6 +4,7 @@ import { Locale } from 'next-intl';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 
+import ItineraryMessages from '@/components/ItineraryMessages';
 import Layout from '@/components/Layout';
 import { itineraries } from '@/config/itineraries.config';
 import { LocaleType } from '@/config/locales.config';
@@ -13,12 +14,17 @@ import { buildMetadata } from '@/utils/static/buildMetadata';
 import { resolveBoatsSearchHref } from '@/utils/static/itinerarySearchHref';
 import { serializeJsonLd } from '@/utils/static/serializeJsonLd';
 import ItineraryArea from '@/views/Itineraries/ItineraryArea';
+import ItineraryBoats from '@/views/Itineraries/ItineraryBoats';
 import ItineraryEndCta from '@/views/Itineraries/ItineraryEndCta';
 import ItineraryHero from '@/views/Itineraries/ItineraryHero';
 
 interface ItineraryAreaPageParams {
   params: Promise<{ locale: Locale; slug: string }>;
 }
+
+// ISR: the "Boats available from …" grid lists live boats, so the static
+// page is refreshed hourly (the boat list shares the same window).
+export const revalidate = 3600;
 
 export function generateStaticParams() {
   return itineraries.flatMap(group => group.itinerary.map(area => ({ slug: area.id })));
@@ -100,34 +106,45 @@ const ItineraryAreaPage = async ({ params }: ItineraryAreaPageParams) => {
   const primaryStart = itinerary.routes[0]?.startingPoint;
 
   return (
-    <Layout>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(breadcrumbLd) }} />
-      {tripLds.map(tripLd => (
-        <script
-          key={tripLd.url}
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: serializeJsonLd(tripLd) }}
+    <ItineraryMessages namespaces={[itineraryNamespace(itinerary)]}>
+      <Layout>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(breadcrumbLd) }} />
+        {tripLds.map(tripLd => (
+          <script
+            key={tripLd.url}
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: serializeJsonLd(tripLd) }}
+          />
+        ))}
+        <ItineraryHero
+          kicker={t('areaHero.kicker')}
+          eyebrow={t('areaHero.eyebrow', { country: country ?? 'Europe' })}
+          title={t('areaHero.title', { area: itinerary.sailingArea })}
+          italic={t('areaHero.italic')}
+          image={{ src: itinerary.backgroundImage.src, alt: itinerary.backgroundImage.alt }}
         />
-      ))}
-      <ItineraryHero
-        kicker={t('areaHero.kicker')}
-        eyebrow={t('areaHero.eyebrow', { country: country ?? 'Europe' })}
-        title={t('areaHero.title', { area: itinerary.sailingArea })}
-        italic={t('areaHero.italic')}
-        image={{ src: itinerary.backgroundImage.src, alt: itinerary.backgroundImage.alt }}
-      />
-      <ItineraryArea slug={slug} />
-      <ItineraryEndCta
-        title={t('areaCta.title')}
-        lede={t('areaCta.lede')}
-        action={primaryStart ? t('areaCta.action', { start: primaryStart }) : t('areaCta.actionFallback')}
-        to={
-          primaryStart ? await resolveBoatsSearchHref(primaryStart, [itinerary.sailingArea, country ?? '']) : '/search'
-        }
-        secondaryAction={t('areaCta.secondaryAction')}
-        secondaryTo="/search"
-      />
-    </Layout>
+        <ItineraryArea slug={slug} />
+        {primaryStart && (
+          <ItineraryBoats
+            startingPoint={primaryStart}
+            fallbacks={[itinerary.sailingArea, country ?? '']}
+            locale={locale}
+          />
+        )}
+        <ItineraryEndCta
+          title={t('areaCta.title')}
+          lede={t('areaCta.lede')}
+          action={primaryStart ? t('areaCta.action', { start: primaryStart }) : t('areaCta.actionFallback')}
+          to={
+            primaryStart
+              ? await resolveBoatsSearchHref(primaryStart, [itinerary.sailingArea, country ?? ''])
+              : '/search'
+          }
+          secondaryAction={t('areaCta.secondaryAction')}
+          secondaryTo="/search"
+        />
+      </Layout>
+    </ItineraryMessages>
   );
 };
 

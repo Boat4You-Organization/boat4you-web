@@ -1,3 +1,5 @@
-import BoatListingItemCard from './BoatListingItemCard';
+import BoatListingItemCard, { StaticBoatListingItemCard } from './BoatListingItemCard';
+
+export { StaticBoatListingItemCard };
 
 export default BoatListingItemCard;

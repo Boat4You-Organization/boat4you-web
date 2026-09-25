@@ -135,13 +135,22 @@ export const evaluateLanding = async (
 
   if (!(await inOffer(resolved))) return NOT_INDEXABLE;
 
-  const fleet = boatType ? await fleetCountForDid(resolved.dids.join(','), boatType) : resolved.count;
-
   // A promoted country is always a landing (owner rule) — as long as the
   // catalogue has boats there at all (0 = API trouble or an empty page).
   if (!boatType && resolved.kind === LocationType.COUNTRY) {
-    return { fleet, indexableLocales: fleet > 0 ? ALL_LOCALES : [] };
+    return { fleet: resolved.count, indexableLocales: resolved.count > 0 ? ALL_LOCALES : [] };
   }
+
+  // The text check is a directory lookup — do it before the fleet query, so
+  // a place × type without its own page costs no API call (the fleet is then
+  // reported as unknown: 0 for a type landing).
+  const files = await Promise.all(
+    routing.locales.map(locale => curatedFileFor(locale, resolved.name, boatType, { typeSpecificOnly: !!boatType }))
+  );
+
+  if (!files.some(Boolean)) return { fleet: boatType ? 0 : resolved.count, indexableLocales: [] };
+
+  const fleet = boatType ? await fleetCountForDid(resolved.dids.join(','), boatType) : resolved.count;
 
   if (fleet < MIN_LANDING_FLEET) return { fleet, indexableLocales: [] };
 
@@ -149,9 +158,6 @@ export const evaluateLanding = async (
 
   if (!index) return { fleet, indexableLocales: [] };
 
-  const files = await Promise.all(
-    routing.locales.map(locale => curatedFileFor(locale, resolved.name, boatType, { typeSpecificOnly: !!boatType }))
-  );
   const owned = await Promise.all(files.map(file => (file ? ownsCuratedFile(index, resolved.name, file) : false)));
 
   return { fleet, indexableLocales: routing.locales.filter((_, i) => owned[i]) };

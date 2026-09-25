@@ -3,9 +3,11 @@ import { Metadata } from 'next';
 import { Locale } from 'next-intl';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
+import ItineraryMessages from '@/components/ItineraryMessages';
 import Layout from '@/components/Layout';
 import { itineraries } from '@/config/itineraries.config';
 import { LocaleType } from '@/config/locales.config';
+import { ITINERARY_NAMESPACES } from '@/i18n/clientMessages';
 import { buildBreadcrumbJsonLd, buildItineraryCollectionJsonLd } from '@/utils/static/buildItineraryJsonLd';
 import { buildMetadata } from '@/utils/static/buildMetadata';
 import { resolveBoatsSearchHref } from '@/utils/static/itinerarySearchHref';
@@ -77,28 +79,35 @@ const ItinerariesPage = async ({ params }: ItinerariesPageParams) => {
   });
 
   return (
-    <Layout>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(breadcrumbLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(collectionLd) }} />
-      <ItineraryHero
-        kicker={t('listHero.kicker')}
-        eyebrow={t('listHero.eyebrow')}
-        title={t('listHero.title')}
-        italic={t('listHero.italic')}
-        lede={t('listHero.lede')}
-        image={{ src: '/images/itinerary/banner.webp', alt: t('listHero.imageAlt') }}
-      />
-      <ItineraryBuilderPromo
-        kicker={t('builder.kicker')}
-        eyebrow={t('builder.eyebrow')}
-        title={t('builder.title')}
-        italic={t('builder.italic')}
-        lede={t('builder.hubCtaLede')}
-        action={t('builder.hubCta')}
-      />
-      <ItinerariesHub countrySearchHrefs={countrySearchHrefs} />
-      <ItineraryEndCta title={t('listCta.title')} lede={t('listCta.lede')} action={t('listCta.action')} to="/search" />
-    </Layout>
+    <ItineraryMessages namespaces={ITINERARY_NAMESPACES}>
+      <Layout>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(breadcrumbLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(collectionLd) }} />
+        <ItineraryHero
+          kicker={t('listHero.kicker')}
+          eyebrow={t('listHero.eyebrow')}
+          title={t('listHero.title')}
+          italic={t('listHero.italic')}
+          lede={t('listHero.lede')}
+          image={{ src: '/images/itinerary/banner.webp', alt: t('listHero.imageAlt') }}
+        />
+        <ItineraryBuilderPromo
+          kicker={t('builder.kicker')}
+          eyebrow={t('builder.eyebrow')}
+          title={t('builder.title')}
+          italic={t('builder.italic')}
+          lede={t('builder.hubCtaLede')}
+          action={t('builder.hubCta')}
+        />
+        <ItinerariesHub countrySearchHrefs={countrySearchHrefs} />
+        <ItineraryEndCta
+          title={t('listCta.title')}
+          lede={t('listCta.lede')}
+          action={t('listCta.action')}
+          to="/search"
+        />
+      </Layout>
+    </ItineraryMessages>
   );
 };
 

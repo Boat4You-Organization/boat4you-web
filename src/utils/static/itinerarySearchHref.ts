@@ -55,7 +55,7 @@ const fetchCandidates = async (query: string): Promise<PublicLocation[]> => {
 
 const fleetCount = (did: string): Promise<number> => fleetCountForDid(did).catch(() => 0);
 
-interface ScoredTarget {
+export interface ScoredTarget {
   id: string;
   name: string;
   count: number;
@@ -122,25 +122,38 @@ const bestTargetForName = async (name: string, strict = false): Promise<ScoredTa
   return scored[0] ?? null;
 };
 
+/**
+ * The catalogue place an itinerary name stands for: the first name of the
+ * chain (port → sailing area → country) whose best match reaches
+ * `minFleet` boats, else the first (thin) hit. Null when nothing matches.
+ */
+export const resolveItineraryTarget = async (
+  name: string,
+  fallbacks: string[] = [],
+  minFleet: number = MIN_FLEET
+): Promise<ScoredTarget | null> => {
+  const chain = [name, ...fallbacks.filter(Boolean)];
+
+  // Walk the chain until a target reaches the fleet floor; remember the
+  // first (thin) hit so we never fall back to an unfiltered search.
+  const resolveChain = async (index: number, firstHit: ScoredTarget | null): Promise<ScoredTarget | null> => {
+    if (index >= chain.length) return firstHit;
+
+    const best = await bestTargetForName(chain[index], index > 0);
+
+    if (best && best.count >= minFleet) return best;
+
+    return resolveChain(index + 1, firstHit ?? best);
+  };
+
+  return resolveChain(0, null);
+};
+
 export const resolveBoatsSearchHref = async (name: string, fallbacks: string[] = []): Promise<string> => {
   const plain = buildSearchLandingPath(name);
 
   try {
-    const chain = [name, ...fallbacks.filter(Boolean)];
-
-    // Walk the chain until a target reaches the fleet floor; remember the
-    // first (thin) hit so we never fall back to an unfiltered search.
-    const resolveChain = async (index: number, firstHit: ScoredTarget | null): Promise<ScoredTarget | null> => {
-      if (index >= chain.length) return firstHit;
-
-      const best = await bestTargetForName(chain[index], index > 0);
-
-      if (best && best.count >= MIN_FLEET) return best;
-
-      return resolveChain(index + 1, firstHit ?? best);
-    };
-
-    const target = await resolveChain(0, null);
+    const target = await resolveItineraryTarget(name, fallbacks);
 
     if (!target) return plain;
 
