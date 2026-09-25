@@ -118,7 +118,7 @@
   "showMore": "Pokaż więcej",
   "showLess": "Pokaż mniej",
   "yourDestination": "Twoja destynacja",
-  "seoBlockTitle": "Dlaczego wyczarterować jacht w {destination}?",
+  "seoBlockTitle": "Dlaczego wyczarterować jacht {where}?",
   "day": "dzień",
   "days": "dni",
   "week": "tydzień",
@@ -569,7 +569,7 @@
   "boatsAvailableHeadingGeneric": "{count, number} łodzi dostępnych",
   "boatsAvailableHeading": "{count, number} dostępnych {type}",
   "popularDestinations": {
-    "heading": "Nasze najpopularniejsze kierunki w {area}",
+    "heading": "Nasze najpopularniejsze kierunki {area}",
     "template0": "Czarter jachtów {dest}",
     "template1": "{dest} czarter jachtów",
     "template2": "Wynajmij łódź {dest}",

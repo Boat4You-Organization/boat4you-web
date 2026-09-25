@@ -16,6 +16,7 @@ import { YachtModelShortInfo } from '@/models/yacht.model';
 import { fetchYachts } from '@/services/yacht.service';
 import { PaginatedResponse } from '@/types/response.type';
 import { getCuratedSeoHtml } from '@/utils/server/curatedSeoContent';
+import { placeText } from '@/utils/server/placeText';
 import { yachtFetchParams } from '@/utils/server/searchLanding';
 import CharterFactsBlock, { CharterFactsTarget } from '@/views/Search/CharterFacts';
 
@@ -140,14 +141,14 @@ const BoatsWrapper = async ({
     inquiry = await getInquiry(searchParams.inquiryId);
   }
 
-  // Build the human-readable area label for the block heading. We use
-  // the raw `?destinations=` value the user already chose — that way
-  // the heading reads "Most popular destinations in Croatia" / "in
-  // Hrvatska" depending on what the chip carried, without re-fetching
-  // a localised country name on the server.
+  // The first destination by its catalogue name, and as the localized
+  // phrase the SEO block and popular-destinations headings use ("in the
+  // Cyclades", "u Hrvatskoj" — placeText.ts; the English catalogue name
+  // used to go into "…Reiseziele in Croatia").
   const destRaw = searchParams.destinations;
   const firstDestination = (Array.isArray(destRaw) ? destRaw[0] : destRaw ? String(destRaw).split(',')[0] : '').trim();
   const destLabel = destinationLabels[firstDestination.toLowerCase()] ?? firstDestination;
+  const destWhere = destLabel ? (await placeText(locale, destLabel)).where : '';
 
   // Curated long-form SEO text, read from public/seo-content on the server
   // so it ships in the SSR HTML (it used to be fetched client-side after
@@ -167,7 +168,7 @@ const BoatsWrapper = async ({
       user={user}
       inquiry={inquiry}
       popularDestinations={popularDestinations}
-      popularDestinationsArea={destLabel || ''}
+      popularDestinationsArea={destWhere}
       curatedSeoHtml={curatedSeoHtml}
       charterFactsSlot={
         charterFacts ? (

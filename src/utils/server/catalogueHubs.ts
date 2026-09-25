@@ -14,7 +14,7 @@ import {
   resolveDestinationName,
 } from '@/utils/server/destinationDid';
 import { evaluateLanding } from '@/utils/server/landingGate';
-import { DESTINATION_KEY_BY_LABEL } from '@/utils/static/destinationLabelKey';
+import { placeText } from '@/utils/server/placeText';
 import { buildSearchLandingPath } from '@/utils/static/searchLandingPath';
 
 /**
@@ -43,20 +43,8 @@ const REVALIDATE_SECONDS = 3600;
 
 export const localePrefix = (locale: string): string => (locale === routing.defaultLocale ? '' : `/${locale}`);
 
-/** Localized name for a catalogue place (the /search H1 uses the same map). */
-export const placeLabel = async (locale: string, name: string): Promise<string> => {
-  const key = DESTINATION_KEY_BY_LABEL[name.trim().toLowerCase()];
-
-  if (!key) return name;
-
-  const tHome = await getTranslations({ locale, namespace: 'home.destinationsSection.destinations' });
-
-  try {
-    return tHome(key as never);
-  } catch {
-    return name;
-  }
-};
+/** Localized name for a catalogue place (the /search title and H1 use the same source). */
+export const placeLabel = async (locale: string, name: string): Promise<string> => (await placeText(locale, name)).name;
 
 /** Nominative plural of a boat type in `locale` ("Catamarans", "Katamarani"). */
 export const boatTypePlural = async (locale: string, boatType: VesselType): Promise<string> => {

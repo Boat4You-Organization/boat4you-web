@@ -539,7 +539,7 @@
   "showMore": "Mostrar más",
   "showLess": "Mostrar menos",
   "yourDestination": "tu destino",
-  "seoBlockTitle": "¿Por qué alquilar un yate en {destination}?",
+  "seoBlockTitle": "¿Por qué alquilar un yate {where}?",
   "address": "Dirección",
   "addressPlaceholder": "Calle y número",
   "addressDescription": "Opcional — algunas agencias de charter requieren tu dirección postal en la reserva",
@@ -569,7 +569,7 @@
   "boatsAvailableHeadingGeneric": "{count, number} barcos disponibles",
   "boatsAvailableHeading": "{count, number} {type} disponibles",
   "popularDestinations": {
-    "heading": "Nuestros destinos más populares en {area}",
+    "heading": "Nuestros destinos más populares {area}",
     "template0": "Alquiler de yates {dest}",
     "template1": "{dest} alquiler de yates",
     "template2": "Alquila barco {dest}",

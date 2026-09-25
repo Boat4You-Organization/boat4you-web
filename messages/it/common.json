@@ -539,7 +539,7 @@
   "showMore": "Mostra di più",
   "showLess": "Mostra meno",
   "yourDestination": "la tua destinazione",
-  "seoBlockTitle": "Perché noleggiare uno yacht in {destination}?",
+  "seoBlockTitle": "Perché noleggiare uno yacht {where}?",
   "address": "Indirizzo",
   "addressPlaceholder": "Via e numero civico",
   "addressDescription": "Facoltativo — alcune agenzie di charter richiedono il tuo indirizzo postale sulla prenotazione",
@@ -569,7 +569,7 @@
   "boatsAvailableHeadingGeneric": "{count, number} barche disponibili",
   "boatsAvailableHeading": "{count, number} {type} disponibili",
   "popularDestinations": {
-    "heading": "Le nostre destinazioni più popolari in {area}",
+    "heading": "Le nostre destinazioni più popolari {area}",
     "template0": "Noleggio yacht {dest}",
     "template1": "{dest} noleggio yacht",
     "template2": "Noleggia barca {dest}",

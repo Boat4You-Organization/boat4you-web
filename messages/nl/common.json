@@ -118,7 +118,7 @@
   "showMore": "Meer tonen",
   "showLess": "Minder tonen",
   "yourDestination": "je bestemming",
-  "seoBlockTitle": "Waarom een jacht charteren in {destination}?",
+  "seoBlockTitle": "Waarom een jacht charteren {where}?",
   "day": "dag",
   "days": "dagen",
   "week": "week",
@@ -569,7 +569,7 @@
   "boatsAvailableHeadingGeneric": "{count, number} boten beschikbaar",
   "boatsAvailableHeading": "{count, number} {type} beschikbaar",
   "popularDestinations": {
-    "heading": "Onze populairste bestemmingen in {area}",
+    "heading": "Onze populairste bestemmingen {area}",
     "template0": "Jachtcharter {dest}",
     "template1": "{dest} jachtcharter",
     "template2": "Boot huren {dest}",

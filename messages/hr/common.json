@@ -544,7 +544,7 @@
   "showMore": "Prikaži više",
   "showLess": "Prikaži manje",
   "yourDestination": "vašoj destinaciji",
-  "seoBlockTitle": "Zašto unajmiti jahtu u {destination}?",
+  "seoBlockTitle": "Zašto unajmiti jahtu {where}?",
   "paidInAdvance": "Plaća se unaprijed",
   "paidIncluded": "Uključeno",
   "withDepositInsurance": "S osiguranjem depozita",
@@ -569,7 +569,7 @@
   "boatsAvailableHeadingGeneric": "{count, number} dostupnih plovila",
   "boatsAvailableHeading": "{count, number} dostupnih {type}",
   "popularDestinations": {
-    "heading": "Naše najpopularnije destinacije u {area}",
+    "heading": "Naše najpopularnije destinacije {area}",
     "template0": "Najam jahti {dest}",
     "template1": "{dest} - charter jahti",
     "template2": "Iznajmi brod {dest}",

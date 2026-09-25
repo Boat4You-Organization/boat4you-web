@@ -23,6 +23,9 @@ export interface ResolvedDestinationValue {
   did: string[];
   /** Lowercased URL destination value → catalogue display name. */
   labels: Record<string, string>;
+  /** Localized landing H1, built on the server with the <title>
+   *  (landingCopy.ts); null/absent when the URL names no destination. */
+  heading?: string | null;
 }
 
 const EMPTY: ResolvedDestinationValue = { did: [], labels: {} };

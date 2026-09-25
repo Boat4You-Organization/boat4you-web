@@ -539,7 +539,7 @@
   "showMore": "Mostrar mais",
   "showLess": "Mostrar menos",
   "yourDestination": "seu destino",
-  "seoBlockTitle": "Porque alugar um iate em {destination}?",
+  "seoBlockTitle": "Porque alugar um iate {where}?",
   "address": "Morada",
   "addressPlaceholder": "Rua e número",
   "addressDescription": "Opcional — algumas agências de charter exigem a sua morada postal na reserva",
@@ -569,7 +569,7 @@
   "boatsAvailableHeadingGeneric": "{count, number} barcos disponíveis",
   "boatsAvailableHeading": "{count, number} {type} disponíveis",
   "popularDestinations": {
-    "heading": "Os nossos destinos mais populares em {area}",
+    "heading": "Os nossos destinos mais populares {area}",
     "template0": "Aluguer de iates {dest}",
     "template1": "{dest} aluguer de iates",
     "template2": "Alugar barco {dest}",

@@ -7,9 +7,12 @@ import Layout from '@/components/Layout';
 import { AllSearchParams } from '@/config/form-models.config';
 import { LocaleType } from '@/config/locales.config';
 import { Currency } from '@/models/user.model';
-import { VESSEL_TYPE_LABEL_MAP_FOR_RENTAL, YachtModelShortInfo, isVesselType } from '@/models/yacht.model';
+import { VesselType, YachtModelShortInfo, isVesselType } from '@/models/yacht.model';
 import { fetchYachts } from '@/services/yacht.service';
+import { boatTypePlural } from '@/utils/server/catalogueHubs';
+import { getLandingCopy } from '@/utils/server/landingCopy';
 import { evaluateLanding } from '@/utils/server/landingGate';
+import { placeText } from '@/utils/server/placeText';
 import {
   SearchLanding,
   landingFetchRevalidate,
@@ -21,7 +24,6 @@ import {
 } from '@/utils/server/searchLanding';
 import { BoatDescTranslate, buildBoatDescription } from '@/utils/static/boatMetaDescription';
 import { buildMetadata, localizedUrl } from '@/utils/static/buildMetadata';
-import { DESTINATION_KEY_BY_LABEL } from '@/utils/static/destinationLabelKey';
 import { getBoatImageUrl } from '@/utils/static/imageUtils';
 import { serializeJsonLd } from '@/utils/static/jsonLd';
 import { buildSearchLandingPath, isLandingExpressible } from '@/utils/static/searchLandingPath';
@@ -35,11 +37,12 @@ interface SearchPageProps {
 }
 
 /**
- * Dynamic per-(destination × boat type) metadata. Mirrors the H1 strategy on
- * the page: when both filters are set we lead with the boat type ("Catamaran
- * charter in Croatia"); destination-only uses the broader yacht/boat rental
- * phrasing; pure boat-type-only falls back to the singular noun. When neither
- * filter is set we keep the legacy generic "Search for yachts" copy.
+ * Dynamic per-(destination × boat type) metadata. Title and description come
+ * from getLandingCopy (landingCopy.ts), the same source as the page H1: with
+ * both filters we lead with the boat type ("Sailing Yacht charter in the
+ * Cyclades"); destination-only uses the broader yacht/boat rental phrasing;
+ * pure boat-type-only falls back to the singular noun. When neither filter
+ * is set we keep the legacy generic "Search for yachts" copy.
  *
  * Canonical includes the destination + boat-type query params so dual-source
  * pairs (e.g. Ionian + Ionian Islands collapsing to "Ionian Region") still
@@ -48,43 +51,15 @@ interface SearchPageProps {
 export async function generateMetadata({ params: paramsPromise, searchParams }: SearchPageProps): Promise<Metadata> {
   const { locale } = await paramsPromise;
   const params = await searchParams;
-  const tCommon = await getTranslations('common');
-  const tMeta = await getTranslations('metadata.metadata.search');
-  const tHome = await getTranslations('home');
 
-  // Comma-separated / repeated values split into a list (splitSearchParam);
-  // the popular dual-source regions share one display label, so the list is
-  // deduped case-insensitively further down before joining.
+  // Comma-separated / repeated values split into a list (splitSearchParam).
   const destinations = splitSearchParam(params.destinations);
   // Destination name → did, resolved on the server (the backend filters by
   // did only). Shared with the page render through React `cache`.
   const landing = await resolveSearchLanding(params);
-  // Lookup helper — translates a raw URL label into the locale's
-  // nominative / locative form. Falls back through (locative ➜ nominative
-  // ➜ catalogue name ➜ raw) so a label without a JSON entry still renders
-  // "ACI Marina Split" rather than the lowercased URL value.
-  const translate = (raw: string, useLocative: boolean): string => {
-    const key = DESTINATION_KEY_BY_LABEL[raw.toLowerCase()];
-
-    if (!key) return landing.labels[raw.toLowerCase()] ?? raw;
-
-    const ns = useLocative
-      ? `destinationsSection.destinationsLocative.${key}`
-      : `destinationsSection.destinations.${key}`;
-
-    try {
-      return tHome.raw(ns as Parameters<typeof tHome.raw>[0]) as string;
-    } catch {
-      return raw;
-    }
-  };
-
-  const translatedNominative = destinations.map(d => translate(d, false));
-  const translatedLocative = destinations.map(d => translate(d, true));
-  const uniqueLocative: string[] = Array.from(new Map(translatedLocative.map(d => [d.toLowerCase(), d])).values());
-  const uniqueNominative: string[] = Array.from(new Map(translatedNominative.map(d => [d.toLowerCase(), d])).values());
-  const joinedLocative = uniqueLocative.join(` ${tCommon('and')} `);
-  const joinedNominative = uniqueNominative.join(` ${tCommon('and')} `);
+  // Title / description / H1 in the locale (landingCopy.ts, shared with the
+  // page's H1 so the two never diverge).
+  const { title, description } = await getLandingCopy(locale, params);
 
   const boatTypes = splitSearchParam(params.boatTypes);
   // An unknown `boatTypes` value used to crash the metadata (undefined map
@@ -92,35 +67,6 @@ export async function generateMetadata({ params: paramsPromise, searchParams }: 
   // Own-value check: `in` also accepted toString / constructor / __proto__.
   const hasUnknownBoatType = boatTypes.some(b => !isVesselType(b));
   const singleBoatType = boatTypes.length === 1 && isVesselType(boatTypes[0]) ? boatTypes[0] : null;
-  // VESSEL_TYPE_LABEL_MAP_FOR_RENTAL feeds the H1 sentence ("Najam
-  // katamarana u Hrvatskoj" — genitive in HR, nominative in non-inflecting
-  // locales, all driven by the per-locale common.json `*ForRental` keys).
-  const boatTypeForRental = singleBoatType
-    ? (tCommon.raw(
-        VESSEL_TYPE_LABEL_MAP_FOR_RENTAL[singleBoatType].replace(/^common\./, '') as Parameters<typeof tCommon.raw>[0]
-      ) as string)
-    : null;
-
-  let title: string;
-  let description: string;
-
-  if (joinedLocative && boatTypeForRental) {
-    title = tCommon('searchH1WithBoatType', { boatType: boatTypeForRental, destination: joinedLocative });
-    description = tCommon('searchMetaDescWithBoatType', { boatType: boatTypeForRental, destination: joinedLocative });
-  } else if (joinedLocative) {
-    title = tCommon('searchH1NoBoatType', { destination: joinedLocative });
-    description = tCommon('searchMetaDescNoBoatType', { destination: joinedLocative });
-  } else if (boatTypeForRental) {
-    title = boatTypeForRental;
-    description = tMeta('description');
-  } else {
-    title = tMeta('title');
-    description = tMeta('description');
-  }
-
-  // Suppress unused-var lint — joinedNominative is exposed as a hook for
-  // future copy that needs the chip-style label (e.g. og:title variant).
-  void joinedNominative;
 
   // Canonical: include the headline filters so duplicate-sourced regions and
   // identical boat-type queries collapse to a single indexable URL. We
@@ -236,8 +182,9 @@ export async function generateMetadata({ params: paramsPromise, searchParams }: 
  * filter (destination or boat type) is present — a bare `/search` page
  * is the search root and has nothing to crumb to.
  *
- * Item names use the catalogue display name ("Croatia", "ACI Marina
- * Split"); item URLs use the same canonical landing form as the page's
+ * Item names are localized (boat type plural, place name as the landing
+ * copy shows it: "Kykladen", "ACI Marina Split"); item URLs use the same
+ * canonical landing form as the page's
  * <link rel="canonical"> and the sitemaps (lowercased destination, no did,
  * locale-prefixed), so the last crumb IS the canonical URL.
  */
@@ -245,17 +192,15 @@ function buildSearchBreadcrumb(args: {
   locale: LocaleType;
   destinations: string[];
   destinationLabel: string;
-  singleBoatType: string | null;
+  singleBoatType: VesselType | null;
+  boatTypeLabel: string | null;
 }) {
-  const { locale, destinations, destinationLabel, singleBoatType } = args;
+  const { locale, destinations, destinationLabel, singleBoatType, boatTypeLabel } = args;
   const items: Array<{ name: string; item: string }> = [{ name: 'Boat4You', item: localizedUrl(locale, '/') }];
 
   if (singleBoatType) {
     items.push({
-      name: singleBoatType
-        .replace(/_/g, ' ')
-        .toLowerCase()
-        .replace(/\b\w/g, c => c.toUpperCase()),
+      name: boatTypeLabel ?? singleBoatType,
       item: localizedUrl(locale, buildSearchLandingPath(null, singleBoatType)),
     });
   }
@@ -416,12 +361,18 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
   // and has no landing page to crumb to.
   const crumbNames = landing.resolved.map(r => r?.name ?? '');
   const crumbDestinations = crumbNames.every(n => n && isLandingExpressible(n)) ? crumbNames : [];
+  const tCommon = await getTranslations({ locale, namespace: 'common' });
+  const crumbLabels = await Promise.all(crumbDestinations.map(async n => (await placeText(locale, n)).name));
   const breadcrumbSchema = buildSearchBreadcrumb({
     locale: locale as LocaleType,
     destinations: crumbDestinations,
-    destinationLabel: crumbDestinations.join(' and '),
+    destinationLabel: crumbLabels.join(` ${tCommon('and')} `),
     singleBoatType,
+    boatTypeLabel: singleBoatType ? await boatTypePlural(locale, singleBoatType) : null,
   });
+  // H1 from the same source as the <title> (landingCopy.ts); null keeps the
+  // page's own heading (no destination).
+  const { h1 } = await getLandingCopy(locale, params);
 
   // Fetch the top-N yachts here so we can emit Product schema in the
   // initial HTML. This is a separate fetch from the one that powers the
@@ -448,7 +399,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
   // header's filter modal (FiltersSectionV2 → distribution fetch) lives in
   // the header and must see the resolved did too.
   return (
-    <ResolvedDestinationProvider value={{ did: landing.did, labels: landing.labels }}>
+    <ResolvedDestinationProvider value={{ did: landing.did, labels: landing.labels, heading: h1 }}>
       <Layout>
         {breadcrumbSchema && (
           <script

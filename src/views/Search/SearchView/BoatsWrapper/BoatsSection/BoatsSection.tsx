@@ -28,13 +28,7 @@ import { YACHT_PAGE_SIZE } from '@/config/constants.config';
 import { boatsTabs } from '@/config/tabs.config';
 import { InquiriesModel } from '@/models/inquiries.model';
 import { UserModel } from '@/models/user.model';
-import {
-  VESSEL_TYPE_LABEL_MAP,
-  VESSEL_TYPE_LABEL_MAP_FOR_RENTAL,
-  VESSEL_TYPE_LABEL_MAP_PLURAL,
-  YachtModelShortInfo,
-  isVesselType,
-} from '@/models/yacht.model';
+import { VESSEL_TYPE_LABEL_MAP_PLURAL, YachtModelShortInfo, isVesselType } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
 import { PaginatedResponse } from '@/types/response.type';
 import { SortByValue } from '@/types/sort.type';
@@ -63,8 +57,8 @@ interface BoatsSectionProps {
   /** Pre-fetched server-side internal-link block. Empty array hides the
    *  block — only country-level URLs return a non-empty list today. */
   popularDestinations?: PopularDestination[];
-  /** Human-readable area label for the popular-destinations heading
-   *  ("Most popular destinations in **{areaLabel}**"). */
+  /** The destination as a localized prepositional phrase ("in the
+   *  Cyclades") for the SEO block and popular-destinations headings. */
   popularDestinationsArea?: string;
   /** Curated SEO text for this destination (× boat type), read on the
    *  server so it is part of the SSR HTML. null → no curated page. */
@@ -96,11 +90,11 @@ const BoatsSection = ({
   const { adminInquiryModalOpen, selectedYachtIds } = useYachtStore();
   const tFilters = useTranslations('filters');
   const tCommon = useTranslations('common');
-  const tHome = useTranslations('home');
   const t = useTranslations();
-  // Catalogue display names for URL values without a translation entry
-  // (`?destinations=aci marina split` → "ACI Marina Split" in the H1).
-  const { labels: destinationLabels } = useResolvedDestination();
+  // Localized H1 built on the server with the <title> (landingCopy.ts);
+  // catalogue display names only bridge a client-side filter change until
+  // the server render for the new URL arrives.
+  const { labels: destinationLabels, heading: serverHeading } = useResolvedDestination();
 
   const isGridView = viewType === 'grid';
   const isEmpty = content?.length === 0;
@@ -121,162 +115,11 @@ const BoatsSection = ({
     setMultipleParams(updates);
   }, [relaxSuggestion, setMultipleParams]);
 
-  const destinationTranslations: Record<string, string> = useMemo(
-    () => ({
-      bahamas: tHome('destinationsSection.destinations.bahamas'),
-      caribbean: tHome('destinationsSection.destinations.caribbean'),
-      croatia: tHome('destinationsSection.destinations.croatia'),
-      france: tHome('destinationsSection.destinations.france'),
-      greece: tHome('destinationsSection.destinations.greece'),
-      italy: tHome('destinationsSection.destinations.italy'),
-      martinique: tHome('destinationsSection.destinations.martinique'),
-      montenegro: tHome('destinationsSection.destinations.montenegro'),
-      seychelles: tHome('destinationsSection.destinations.seychelles'),
-      spain: tHome('destinationsSection.destinations.spain'),
-      turkey: tHome('destinationsSection.destinations.türkiye'),
-      türkiye: tHome('destinationsSection.destinations.türkiye'),
-      'virgin islands (british)': tHome('destinationsSection.destinations.virginIslandsBritish'),
-      grenada: tHome('destinationsSection.destinations.grenada'),
-      // POPULAR_SEARCHES regions — keys mirror the lowercased displayLabel
-      // shown in the location dropdown. Ionian/Split appear here because the
-      // dropdown label and the URL `?destinations=` value differ from their
-      // raw backend names (which are HR-only and not localised by the API).
-      'split region': tHome('destinationsSection.destinations.splitRegion'),
-      'ionian region': tHome('destinationsSection.destinations.ionianRegion'),
-    }),
-    [tHome]
-  );
-
-  // Locative ("u Hrvatskoj", "à Croatie") form used by the H1 sentence.
-  // For locales that don't decline (EN/FR/IT/ES/PT/NL/DE) the value
-  // mirrors the nominative label, so the H1 reads correctly. For HR/PL
-  // the per-locale home.json exposes the actual locative — see
-  // `home.destinationsSection.destinationsLocative`. Falls back through
-  // (locative ➜ nominative ➜ raw) so a missing key never crashes the page.
-  const destinationLocativeTranslations: Record<string, string> = useMemo(
-    () => ({
-      bahamas: tHome('destinationsSection.destinationsLocative.bahamas'),
-      caribbean: tHome('destinationsSection.destinationsLocative.caribbean'),
-      croatia: tHome('destinationsSection.destinationsLocative.croatia'),
-      france: tHome('destinationsSection.destinationsLocative.france'),
-      greece: tHome('destinationsSection.destinationsLocative.greece'),
-      italy: tHome('destinationsSection.destinationsLocative.italy'),
-      martinique: tHome('destinationsSection.destinationsLocative.martinique'),
-      montenegro: tHome('destinationsSection.destinationsLocative.montenegro'),
-      seychelles: tHome('destinationsSection.destinationsLocative.seychelles'),
-      spain: tHome('destinationsSection.destinationsLocative.spain'),
-      turkey: tHome('destinationsSection.destinationsLocative.türkiye'),
-      türkiye: tHome('destinationsSection.destinationsLocative.türkiye'),
-      'virgin islands (british)': tHome('destinationsSection.destinationsLocative.virginIslandsBritish'),
-      grenada: tHome('destinationsSection.destinationsLocative.grenada'),
-      'split region': tHome('destinationsSection.destinationsLocative.splitRegion'),
-      'ionian region': tHome('destinationsSection.destinationsLocative.ionianRegion'),
-    }),
-    [tHome]
-  );
-
-  const translateDestination = useCallback(
-    (destination: string) => {
-      const key = destination.toLowerCase();
-
-      return destinationTranslations[key] || destinationLabels[key] || destination;
-    },
-    [destinationTranslations, destinationLabels]
-  );
-
-  const translateDestinationLocative = useCallback(
-    (destination: string) => {
-      const key = destination.toLowerCase();
-
-      return (
-        destinationLocativeTranslations[key] || destinationTranslations[key] || destinationLabels[key] || destination
-      );
-    },
-    [destinationLocativeTranslations, destinationTranslations, destinationLabels]
-  );
-
-  const translatedDestinations = useMemo(() => {
-    // Dedupe identical labels — popular dual-source regions (e.g. "Ionian
-    // Region") expand to two backend ids that share the same display label,
-    // and we don't want the H1 to read "X and X". Case-insensitive Set.
-    const seen = new Set<string>();
-    const out: string[] = [];
-
-    (params.destinations || []).forEach(raw => {
-      const label = translateDestination(raw);
-      const key = label.toLowerCase();
-
-      if (seen.has(key)) return;
-
-      seen.add(key);
-      out.push(label);
-    });
-
-    return out;
-  }, [params.destinations, translateDestination]);
-
-  // Same dedupe pattern but with locative forms — used only by the H1
-  // sentence so it composes grammatically ("u Hrvatskoj", not "u Hrvatska").
-  const translatedDestinationsLocative = useMemo(() => {
-    const seen = new Set<string>();
-    const out: string[] = [];
-
-    (params.destinations || []).forEach(raw => {
-      const label = translateDestinationLocative(raw);
-      const key = label.toLowerCase();
-
-      if (seen.has(key)) return;
-
-      seen.add(key);
-      out.push(label);
-    });
-
-    return out;
-  }, [params.destinations, translateDestinationLocative]);
-
   const translatedBoatType = useMemo(() => {
     if (params.boatTypes?.length === 1) {
       const boatType = params.boatTypes[0];
       // Own-value check: `boatTypes=toString` would hit Object.prototype.
       const translationKey = isVesselType(boatType) ? VESSEL_TYPE_LABEL_MAP_PLURAL[boatType] : null;
-
-      if (translationKey) {
-        return t(translationKey);
-      }
-    }
-
-    return null;
-  }, [params.boatTypes, t]);
-
-  // Singular variant for SEO H1 like "Catamaran charter in Sukošan" — the
-  // `_PLURAL` map is reused for the legacy "boat-type-only" path which still
-  // reads as a plural noun ("Catamarans"). When at least one destination is
-  // also selected we want the singular form to slot into the H1 sentence.
-  const translatedBoatTypeSingular = useMemo(() => {
-    if (params.boatTypes?.length === 1) {
-      const boatType = params.boatTypes[0];
-      // Own-value check: `boatTypes=toString` would hit Object.prototype.
-      const translationKey = isVesselType(boatType) ? VESSEL_TYPE_LABEL_MAP[boatType] : null;
-
-      if (translationKey) {
-        return t(translationKey);
-      }
-    }
-
-    return null;
-  }, [params.boatTypes, t]);
-
-  // Rental-context (genitive in HR/PL, nominative elsewhere) variant fed
-  // into the H1 template `searchH1WithBoatType`. Locales like HR turn this
-  // sentence into "Najam katamarana u Hrvatskoj" — the boat type slot is
-  // genitive ("katamarana"), not the chip-style nominative ("Katamaran").
-  // Non-inflecting locales mirror the nominative value so EN/FR/IT/etc.
-  // read identically to before.
-  const translatedBoatTypeForRental = useMemo(() => {
-    if (params.boatTypes?.length === 1) {
-      const boatType = params.boatTypes[0];
-      // Own-value check: `boatTypes=toString` would hit Object.prototype.
-      const translationKey = isVesselType(boatType) ? VESSEL_TYPE_LABEL_MAP_FOR_RENTAL[boatType] : null;
 
       if (translationKey) {
         return t(translationKey);
@@ -402,34 +245,22 @@ const BoatsSection = ({
             <Stack>
               <Typography variant="h2" component="h1" fontWeight={700}>
                 {(() => {
-                  // SEO H1 strategy:
-                  //   - destinations + boat type → "{BoatType} charter in {Destinations}"
-                  //   - destinations only       → "Yacht charter and Boat rental in {Destinations}"
-                  //   - boat type only          → plural label ("Catamarans") — legacy
-                  //   - neither                 → "All Destinations" fallback
+                  // SEO H1: the server's landing heading (same text as the
+                  // <title>); boat type only → plural label ("Catamarans").
                   if (isBoatTypeOnly) {
                     return (
                       translatedBoatType ?? formatListWithTranslation([], () => tCommon('and'), 'All Destinations')
                     );
                   }
 
-                  // H1 uses the *locative* destination list ("u Hrvatskoj") so
-                  // the inflected sentence reads correctly in HR/PL. Chips and
-                  // sidebar (nominative) keep using `translatedDestinations`.
-                  const destLocative = formatListWithTranslation(
-                    translatedDestinationsLocative,
-                    () => tCommon('and'),
-                    'All Destinations'
+                  return (
+                    serverHeading ??
+                    formatListWithTranslation(
+                      (params.destinations || []).map(d => destinationLabels[d.toLowerCase()] ?? d),
+                      () => tCommon('and'),
+                      'All Destinations'
+                    )
                   );
-
-                  if (translatedBoatTypeForRental) {
-                    return tCommon('searchH1WithBoatType', {
-                      boatType: translatedBoatTypeForRental,
-                      destination: destLocative,
-                    });
-                  }
-
-                  return tCommon('searchH1NoBoatType', { destination: destLocative });
                 })()}
               </Typography>
             </Stack>
@@ -546,7 +377,6 @@ const BoatsSection = ({
             this section's collapse so a single Show more toggle reveals
             both at once (no two competing toggles on the same page). */}
         <SeoTextSection
-          destination={Array.isArray(params.destinations) ? params.destinations[0] : params.destinations}
           curatedHtml={curatedSeoHtml}
           popularDestinations={popularDestinations}
           popularDestinationsArea={popularDestinationsArea}

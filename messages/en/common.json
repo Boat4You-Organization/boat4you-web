@@ -134,7 +134,7 @@
   "showMore": "Show more",
   "showLess": "Show less",
   "yourDestination": "your destination",
-  "seoBlockTitle": "Why charter a yacht in {destination}?",
+  "seoBlockTitle": "Why charter a yacht {where}?",
   "day": "day",
   "days": "days",
   "week": "week",
@@ -569,7 +569,7 @@
   "boatsAvailableHeadingGeneric": "{count, number} boats available",
   "boatsAvailableHeading": "{count, number} {type} available",
   "popularDestinations": {
-    "heading": "Our most popular destinations in {area}",
+    "heading": "Our most popular destinations {area}",
     "template0": "Yacht charter {dest}",
     "template1": "{dest} yacht charter",
     "template2": "Rent boat {dest}",
