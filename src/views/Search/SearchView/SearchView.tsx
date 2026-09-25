@@ -16,10 +16,13 @@ import { SearchTransitionProvider } from './SearchTransitionContext';
 import styles from './SearchView.module.scss';
 
 interface SearchViewProps {
+  /** Request params with the server-resolved `did` already applied (search/page.tsx). */
   searchParams: AllSearchParams;
+  /** Lowercased `?destinations=` value → catalogue display name. */
+  destinationLabels?: Record<string, string>;
 }
 
-const SearchView = async ({ searchParams }: SearchViewProps) => {
+const SearchView = async ({ searchParams, destinationLabels }: SearchViewProps) => {
   const locale = await getLocale();
   const currency = (searchParams.currency as Currency) || Currency.EUR;
 
@@ -54,7 +57,7 @@ const SearchView = async ({ searchParams }: SearchViewProps) => {
               the previous route visible until BoatsWrapper streams in —
               SPA-feel transition, no jarring layout shock. */}
           <Suspense key={suspenseKey} fallback={null}>
-            <BoatsWrapper searchParams={searchParams} />
+            <BoatsWrapper searchParams={searchParams} destinationLabels={destinationLabels} />
           </Suspense>
         </SearchResultsTransitionWrapper>
       </SearchTransitionProvider>

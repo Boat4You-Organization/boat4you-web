@@ -19,6 +19,7 @@ import DateTime from '@/utils/static/DateTime';
 import { metersToFeet } from '@/utils/static/metersToFeet';
 import { useUserStore } from '@/valtio/user/user.store';
 import { useYachtStore } from '@/valtio/yacht/yacht.store';
+import { useResolvedDestination } from '@/views/Search/SearchView/ResolvedDestinationContext';
 
 import CabinsPillSegment from './atoms/CabinsPillSegment';
 import CheckV2 from './atoms/CheckV2';
@@ -54,6 +55,8 @@ const FiltersSectionV2 = ({ catalogueData, catalogueFilters, isMobile }: Filters
   const { params, setMultipleParams } = useQueryParams();
   const liveCount = useYachtStore().searchTotalCount;
   const distribution = useFilterDistribution();
+  // Catalogue display name for URL values without a translation entry.
+  const { labels: resolvedLabels } = useResolvedDestination();
   const locale = useLocale();
   const isEnglishLocale = locale === 'en';
   const t = useTranslations('filters');
@@ -335,7 +338,7 @@ const FiltersSectionV2 = ({ catalogueData, catalogueFilters, isMobile }: Filters
   const destinationKey = destinationKeyByLabel[rawDestination.toLowerCase()];
   const destinationLabel = destinationKey
     ? (tHome.raw(`destinationsSection.destinations.${destinationKey}` as Parameters<typeof tHome.raw>[0]) as string)
-    : rawDestination;
+    : resolvedLabels[rawDestination.toLowerCase()] || rawDestination;
 
   return (
     <Stack

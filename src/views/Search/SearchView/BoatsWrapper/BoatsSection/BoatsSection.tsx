@@ -52,6 +52,7 @@ import {
 import { useYachtStore } from '@/valtio/yacht/yacht.store';
 import AdminInquiryModal from '@/views/Search/SearchView/AdminInquiryModal';
 import { AiHintStrip, AppliedFilterChips, useRelaxSuggestion } from '@/views/Search/SearchView/FiltersSectionV2';
+import { useResolvedDestination } from '@/views/Search/SearchView/ResolvedDestinationContext';
 
 import styles from './BoatsSection.module.scss';
 
@@ -65,6 +66,9 @@ interface BoatsSectionProps {
   /** Human-readable area label for the popular-destinations heading
    *  ("Most popular destinations in **{areaLabel}**"). */
   popularDestinationsArea?: string;
+  /** Curated SEO text for this destination (× boat type), read on the
+   *  server so it is part of the SSR HTML. null → no curated page. */
+  curatedSeoHtml?: string | null;
 }
 
 const BoatsSection = ({
@@ -73,6 +77,7 @@ const BoatsSection = ({
   inquiry,
   popularDestinations = [],
   popularDestinationsArea = '',
+  curatedSeoHtml = null,
 }: BoatsSectionProps) => {
   const { content, page } = data;
   const { totalElements = 0 } = page || {};
@@ -90,6 +95,9 @@ const BoatsSection = ({
   const tCommon = useTranslations('common');
   const tHome = useTranslations('home');
   const t = useTranslations();
+  // Catalogue display names for URL values without a translation entry
+  // (`?destinations=aci marina split` → "ACI Marina Split" in the H1).
+  const { labels: destinationLabels } = useResolvedDestination();
 
   const isGridView = viewType === 'grid';
   const isEmpty = content?.length === 0;
@@ -168,18 +176,20 @@ const BoatsSection = ({
     (destination: string) => {
       const key = destination.toLowerCase();
 
-      return destinationTranslations[key] || destination;
+      return destinationTranslations[key] || destinationLabels[key] || destination;
     },
-    [destinationTranslations]
+    [destinationTranslations, destinationLabels]
   );
 
   const translateDestinationLocative = useCallback(
     (destination: string) => {
       const key = destination.toLowerCase();
 
-      return destinationLocativeTranslations[key] || destinationTranslations[key] || destination;
+      return (
+        destinationLocativeTranslations[key] || destinationTranslations[key] || destinationLabels[key] || destination
+      );
     },
-    [destinationLocativeTranslations, destinationTranslations]
+    [destinationLocativeTranslations, destinationTranslations, destinationLabels]
   );
 
   const translatedDestinations = useMemo(() => {
@@ -530,7 +540,7 @@ const BoatsSection = ({
             both at once (no two competing toggles on the same page). */}
         <SeoTextSection
           destination={Array.isArray(params.destinations) ? params.destinations[0] : params.destinations}
-          boatType={params.boatTypes?.length === 1 ? (params.boatTypes[0] as VesselType) : null}
+          curatedHtml={curatedSeoHtml}
           popularDestinations={popularDestinations}
           popularDestinationsArea={popularDestinationsArea}
         />

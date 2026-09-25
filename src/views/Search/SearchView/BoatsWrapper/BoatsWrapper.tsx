@@ -15,11 +15,15 @@ import { Currency, UserRoleName } from '@/models/user.model';
 import { YachtModelShortInfo } from '@/models/yacht.model';
 import { fetchYachts } from '@/services/yacht.service';
 import { PaginatedResponse } from '@/types/response.type';
+import { getCuratedSeoHtml } from '@/utils/server/curatedSeoContent';
 
 import BoatsSection from './BoatsSection';
 
 interface BoatsWrapperProps {
+  /** Request params; `did` is already filled in from `?destinations=` by the page. */
   searchParams: AllSearchParams;
+  /** Lowercased `?destinations=` value → catalogue display name. */
+  destinationLabels?: Record<string, string>;
 }
 
 /**
@@ -88,7 +92,7 @@ const extractSingleBoatType = (searchParams: AllSearchParams): string | null => 
   return types.length === 1 ? types[0] : null;
 };
 
-const BoatsWrapper = async ({ searchParams }: BoatsWrapperProps) => {
+const BoatsWrapper = async ({ searchParams, destinationLabels = {} }: BoatsWrapperProps) => {
   const locale = await getLocale();
   const user = await getLoggedInUser();
 
@@ -129,7 +133,13 @@ const BoatsWrapper = async ({ searchParams }: BoatsWrapperProps) => {
   // Hrvatska" depending on what the chip carried, without re-fetching
   // a localised country name on the server.
   const destRaw = searchParams.destinations;
-  const destLabel = Array.isArray(destRaw) ? destRaw[0] : destRaw ? String(destRaw).split(',')[0] : '';
+  const firstDestination = (Array.isArray(destRaw) ? destRaw[0] : destRaw ? String(destRaw).split(',')[0] : '').trim();
+  const destLabel = destinationLabels[firstDestination.toLowerCase()] ?? firstDestination;
+
+  // Curated long-form SEO text, read from public/seo-content on the server
+  // so it ships in the SSR HTML (it used to be fetched client-side after
+  // hydration, leaving crawlers a generic template).
+  const curatedSeoHtml = firstDestination ? await getCuratedSeoHtml(locale, firstDestination, boatType) : null;
 
   return (
     <BoatsSection
@@ -138,6 +148,7 @@ const BoatsWrapper = async ({ searchParams }: BoatsWrapperProps) => {
       inquiry={inquiry}
       popularDestinations={popularDestinations}
       popularDestinationsArea={destLabel || ''}
+      curatedSeoHtml={curatedSeoHtml}
     />
   );
 };

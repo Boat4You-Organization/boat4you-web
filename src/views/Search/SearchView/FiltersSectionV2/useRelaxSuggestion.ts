@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react';
 
 import { useSearchParams } from 'next/navigation';
 
+import { useResolvedDestination, withResolvedDid } from '@/views/Search/SearchView/ResolvedDestinationContext';
+
 /**
  * Server-side suggestion of which active filter, if dropped, would
  * unlock the most additional boats for the current candidate set.
@@ -37,7 +39,10 @@ export const useRelaxSuggestion = (): RelaxSuggestion | null => {
   // Next.js 16 + Turbopack returns a new `URLSearchParams` ref on every render
   // even when the URL hasn't changed. Depend on the serialized string instead
   // so the effect only fires on real URL changes (avoids fetch loop).
-  const qs = searchParams.toString();
+  // Landing URLs (`?destinations=greece`) carry no did; the server resolved
+  // one for the list, so query the same candidate set here.
+  const { did } = useResolvedDestination();
+  const qs = withResolvedDid(searchParams.toString(), did);
   const [suggestion, setSuggestion] = useState<RelaxSuggestion | null>(null);
 
   useEffect(() => {

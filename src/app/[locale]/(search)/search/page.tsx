@@ -9,9 +9,19 @@ import { LocaleType } from '@/config/locales.config';
 import { Currency } from '@/models/user.model';
 import { VESSEL_TYPE_LABEL_MAP_FOR_RENTAL, VesselType, YachtModelShortInfo } from '@/models/yacht.model';
 import { fetchYachts } from '@/services/yacht.service';
+import { getCuratedSeoHtml } from '@/utils/server/curatedSeoContent';
+import {
+  SearchLanding,
+  resolveSearchLanding,
+  splitSearchParam,
+  uniqueCaseInsensitive,
+  withLandingDid,
+} from '@/utils/server/searchLanding';
 import { BoatDescTranslate, buildBoatDescription } from '@/utils/static/boatMetaDescription';
-import { buildMetadata } from '@/utils/static/buildMetadata';
+import { buildMetadata, localizedUrl } from '@/utils/static/buildMetadata';
 import { getBoatImageUrl } from '@/utils/static/imageUtils';
+import { buildSearchLandingPath } from '@/utils/static/searchLandingPath';
+import { ResolvedDestinationProvider } from '@/views/Search/SearchView/ResolvedDestinationContext';
 import SearchView from '@/views/Search/SearchView/SearchView';
 
 /**
@@ -64,30 +74,21 @@ export async function generateMetadata({ params: paramsPromise, searchParams }: 
   const tMeta = await getTranslations('metadata.metadata.search');
   const tHome = await getTranslations('home');
 
-  // Next.js leaves comma-separated query values as a single string (e.g.
-  // `?destinations=A%2CB` → "A,B") rather than splitting into an array, so
-  // we explicitly split on `,` here. The popular dual-source regions also
-  // expand to two backend ids that share the same display label, so the
-  // resulting list is deduped case-insensitively before joining.
-  const destinationsRaw = params.destinations;
-  const destinations: string[] = Array.isArray(destinationsRaw)
-    ? destinationsRaw
-        .flatMap(d => String(d).split(','))
-        .map(d => d.trim())
-        .filter(Boolean)
-    : destinationsRaw
-      ? String(destinationsRaw)
-          .split(',')
-          .map(d => d.trim())
-          .filter(Boolean)
-      : [];
+  // Comma-separated / repeated values split into a list (splitSearchParam);
+  // the popular dual-source regions share one display label, so the list is
+  // deduped case-insensitively further down before joining.
+  const destinations = splitSearchParam(params.destinations);
+  // Destination name → did, resolved on the server (the backend filters by
+  // did only). Shared with the page render through React `cache`.
+  const landing = await resolveSearchLanding(params);
   // Lookup helper — translates a raw URL label into the locale's
   // nominative / locative form. Falls back through (locative ➜ nominative
-  // ➜ raw) so a label without a JSON entry still renders something sane.
+  // ➜ catalogue name ➜ raw) so a label without a JSON entry still renders
+  // "ACI Marina Split" rather than the lowercased URL value.
   const translate = (raw: string, useLocative: boolean): string => {
     const key = DESTINATION_KEY_BY_LABEL[raw.toLowerCase()];
 
-    if (!key) return raw;
+    if (!key) return landing.labels[raw.toLowerCase()] ?? raw;
 
     const ns = useLocative
       ? `destinationsSection.destinationsLocative.${key}`
@@ -107,13 +108,11 @@ export async function generateMetadata({ params: paramsPromise, searchParams }: 
   const joinedLocative = uniqueLocative.join(` ${tCommon('and')} `);
   const joinedNominative = uniqueNominative.join(` ${tCommon('and')} `);
 
-  const boatTypesRaw = params.boatTypes;
-  const boatTypes: string[] = Array.isArray(boatTypesRaw)
-    ? boatTypesRaw.flatMap(b => String(b).split(',')).filter(Boolean)
-    : boatTypesRaw
-      ? String(boatTypesRaw).split(',').filter(Boolean)
-      : [];
-  const singleBoatType = boatTypes.length === 1 ? (boatTypes[0] as VesselType) : null;
+  const boatTypes = splitSearchParam(params.boatTypes);
+  // An unknown `boatTypes` value used to crash the metadata (undefined map
+  // entry → .replace) and 500 the page; treat it as "no boat type" + noindex.
+  const hasUnknownBoatType = boatTypes.some(b => !(b in VESSEL_TYPE_LABEL_MAP_FOR_RENTAL));
+  const singleBoatType = boatTypes.length === 1 && !hasUnknownBoatType ? (boatTypes[0] as VesselType) : null;
   // VESSEL_TYPE_LABEL_MAP_FOR_RENTAL feeds the H1 sentence ("Najam
   // katamarana u Hrvatskoj" — genitive in HR, nominative in non-inflecting
   // locales, all driven by the per-locale common.json `*ForRental` keys).
@@ -148,18 +147,12 @@ export async function generateMetadata({ params: paramsPromise, searchParams }: 
   // identical boat-type queries collapse to a single indexable URL. We
   // deliberately leave date params off the canonical — they don't change page
   // intent and would fragment the index across millions of variants. The
-  // canonical uses the *raw* URL labels (deduped case-insensitively) — NOT
-  // the locale-specific translations — so every language hits the same URL
-  // and Google indexes one canonical per (raw destination × boat type) pair.
-  const uniqueRawDestinations: string[] = Array.from(new Map(destinations.map(d => [d.toLowerCase(), d])).values());
-  const canonicalParams = new URLSearchParams();
-
-  if (uniqueRawDestinations.length) canonicalParams.set('destinations', uniqueRawDestinations.join(','));
-
-  if (singleBoatType) canonicalParams.set('boatTypes', singleBoatType);
-
-  const canonicalQuery = canonicalParams.toString();
-  const path = canonicalQuery ? `${tMeta('path')}?${canonicalQuery}` : tMeta('path');
+  // canonical uses the *raw* URL labels, LOWERCASED (the sitemap form) — NOT
+  // the locale-specific translations — so every language and every casing
+  // (`Croatia`, `croatia`) hits the same URL. did never enters the canonical;
+  // buildSearchLandingPath is shared with the sitemaps and internal links.
+  const uniqueRawDestinations = uniqueCaseInsensitive(destinations);
+  const path = buildSearchLandingPath(uniqueRawDestinations, singleBoatType);
 
   // Index gating — keep crawl budget on the headline (destination ×
   // boat-type) URLs, drop the long tail.
@@ -216,8 +209,27 @@ export async function generateMetadata({ params: paramsPromise, searchParams }: 
 
     return Array.isArray(v) ? v.length > 0 : v != null && String(v).length > 0;
   });
+  // A destination landing (`?destinations=x[&boatTypes=Y]`) is only worth
+  // indexing when it is a real catalogue place with boats (the name resolved
+  // to a did) AND the curated SEO text exists for it in this locale —
+  // otherwise it is a thin copy of the listing; noindex,follow.
+  let weakLanding = false;
+
+  if (uniqueRawDestinations.length === 1 && !landing.hasOwnDid) {
+    const resolved = landing.resolved[0];
+    const curated = resolved?.count ? await getCuratedSeoHtml(locale, uniqueRawDestinations[0], singleBoatType) : null;
+
+    weakLanding = !curated;
+  }
+
   const noindex =
-    pageNum > 1 || hasDates || uniqueRawDestinations.length > 1 || boatTypes.length > 1 || hasNonHeadlineFilter;
+    pageNum > 1 ||
+    hasDates ||
+    uniqueRawDestinations.length > 1 ||
+    boatTypes.length > 1 ||
+    hasUnknownBoatType ||
+    hasNonHeadlineFilter ||
+    weakLanding;
 
   return buildMetadata({
     locale: locale as LocaleType,
@@ -235,13 +247,19 @@ export async function generateMetadata({ params: paramsPromise, searchParams }: 
  * filter (destination or boat type) is present — a bare `/search` page
  * is the search root and has nothing to crumb to.
  *
- * Items use the *nominative* destination form (chip-style "Croatia",
- * not locative "Hrvatskoj") because that's the URL slug equivalent and
- * matches the visible link target.
+ * Item names use the catalogue display name ("Croatia", "ACI Marina
+ * Split"); item URLs use the same canonical landing form as the page's
+ * <link rel="canonical"> and the sitemaps (lowercased destination, no did,
+ * locale-prefixed), so the last crumb IS the canonical URL.
  */
-function buildSearchBreadcrumb(args: { baseUrl: string; joinedNominative: string; singleBoatType: string | null }) {
-  const { baseUrl, joinedNominative, singleBoatType } = args;
-  const items: Array<{ name: string; item: string }> = [{ name: 'Boat4You', item: baseUrl }];
+function buildSearchBreadcrumb(args: {
+  locale: LocaleType;
+  destinations: string[];
+  destinationLabel: string;
+  singleBoatType: string | null;
+}) {
+  const { locale, destinations, destinationLabel, singleBoatType } = args;
+  const items: Array<{ name: string; item: string }> = [{ name: 'Boat4You', item: localizedUrl(locale, '/') }];
 
   if (singleBoatType) {
     items.push({
@@ -249,14 +267,14 @@ function buildSearchBreadcrumb(args: { baseUrl: string; joinedNominative: string
         .replace(/_/g, ' ')
         .toLowerCase()
         .replace(/\b\w/g, c => c.toUpperCase()),
-      item: `${baseUrl}/search?boatTypes=${singleBoatType}`,
+      item: localizedUrl(locale, buildSearchLandingPath(null, singleBoatType)),
     });
   }
 
-  if (joinedNominative) {
+  if (destinations.length) {
     items.push({
-      name: joinedNominative,
-      item: `${baseUrl}/search?destinations=${encodeURIComponent(joinedNominative)}`,
+      name: destinationLabel,
+      item: localizedUrl(locale, buildSearchLandingPath(destinations, singleBoatType)),
     });
   }
 
@@ -386,37 +404,23 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
   const params = await searchParams;
   const locale = await getLocale();
 
-  // Re-derive the nominative destination + single boat type for
-  // breadcrumbs — generateMetadata already does this, but it runs in a
-  // separate request lifecycle and we don't want to thread the values
-  // through global state. Cheap to recompute (string ops only).
-  const destinationsRaw = params.destinations;
-  const destinations: string[] = Array.isArray(destinationsRaw)
-    ? destinationsRaw
-        .flatMap(d => String(d).split(','))
-        .map(d => d.trim())
-        .filter(Boolean)
-    : destinationsRaw
-      ? String(destinationsRaw)
-          .split(',')
-          .map(d => d.trim())
-          .filter(Boolean)
-      : [];
-  const uniqueDestinations: string[] = Array.from(new Map(destinations.map(d => [d.toLowerCase(), d])).values());
-  const boatTypesRaw = params.boatTypes;
-  const boatTypes: string[] = Array.isArray(boatTypesRaw)
-    ? boatTypesRaw.flatMap(b => String(b).split(',')).filter(Boolean)
-    : boatTypesRaw
-      ? String(boatTypesRaw).split(',').filter(Boolean)
-      : [];
+  // Destination name → did on the server: the backend filters by did only,
+  // so `/search?destinations=greece` needs `did=c-86` on every yacht fetch
+  // (Product LD below AND the visible list in SearchView → BoatsWrapper).
+  // Re-resolved on every request — filter changes re-render this component.
+  const landing: SearchLanding = await resolveSearchLanding(params);
+  const effectiveParams = withLandingDid(params, landing);
+
+  const boatTypes = splitSearchParam(params.boatTypes);
   const singleBoatType = boatTypes.length === 1 ? boatTypes[0] : null;
 
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.boat4you.com';
   const currency = (params.currency as Currency) || Currency.EUR;
 
   const breadcrumbSchema = buildSearchBreadcrumb({
-    baseUrl,
-    joinedNominative: uniqueDestinations.join(' and '),
+    locale: locale as LocaleType,
+    destinations: landing.destinations,
+    destinationLabel: landing.destinations.map(d => landing.labels[d.toLowerCase()] ?? d).join(' and '),
     singleBoatType,
   });
 
@@ -430,7 +434,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
 
   try {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const yachtsResp = await fetchYachts(params as any, currency, locale);
+    const yachtsResp = await fetchYachts(effectiveParams as any, currency, locale);
     const tBoatMeta = await getTranslations({ locale, namespace: 'metadata.boat' });
 
     productsLd = buildSearchProductsLd(yachtsResp?.content, baseUrl, currency, (key, values) =>
@@ -440,23 +444,28 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
     // Soft fail — page still renders without Product schema.
   }
 
+  // The provider wraps the whole Layout, not just SearchView: the mobile
+  // header's filter modal (FiltersSectionV2 → distribution fetch) lives in
+  // the header and must see the resolved did too.
   return (
-    <Layout>
-      {breadcrumbSchema && (
-        <script
-          type="application/ld+json"
-          // eslint-disable-next-line react/no-danger
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-        />
-      )}
-      {productsLd && (
-        <script
-          type="application/ld+json"
-          // eslint-disable-next-line react/no-danger
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(productsLd) }}
-        />
-      )}
-      <SearchView searchParams={params} />
-    </Layout>
+    <ResolvedDestinationProvider value={{ did: landing.did, labels: landing.labels }}>
+      <Layout>
+        {breadcrumbSchema && (
+          <script
+            type="application/ld+json"
+            // eslint-disable-next-line react/no-danger
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+          />
+        )}
+        {productsLd && (
+          <script
+            type="application/ld+json"
+            // eslint-disable-next-line react/no-danger
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(productsLd) }}
+          />
+        )}
+        <SearchView searchParams={effectiveParams} destinationLabels={landing.labels} />
+      </Layout>
+    </ResolvedDestinationProvider>
   );
 }
