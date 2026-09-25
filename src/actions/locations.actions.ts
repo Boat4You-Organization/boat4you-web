@@ -5,6 +5,7 @@ import { POPULAR_SEARCHES, PopularSearchMember, PopularSearchSpec } from '@/conf
 import { CountryCountModel, LocationModel } from '@/models/locations.model';
 import { LocationType } from '@/types/location.type';
 import { PaginatedResponse } from '@/types/response.type';
+import { fleetTotalForDid } from '@/utils/server/destinationDid';
 import { getSiteStats } from '@/utils/server/siteStats';
 import { createQueryParams } from '@/utils/static/queryParams';
 import { buildDestinationHref } from '@/utils/static/searchLandingPath';
@@ -202,6 +203,20 @@ export async function getAllCountriesCount(): Promise<CountryCountModel[]> {
   }
 }
 
+/**
+ * The promoted countries for the home destination cards (and the "All of our
+ * destinations" block), each with the number its landing lists.
+ *
+ * `/public/countries-count` counts every yacht whose HOME marina is in the
+ * country — inactive agencies, deactivated and offer-less boats included —
+ * so the cards drifted far from the landings they link to (25.9.2026: France
+ * 1,587 vs 428 on /search?destinations=france, Croatia 5,658 vs 3,864; the
+ * 12 cards summed to 17,815 vs 12,158 on /search). The card figure is now the
+ * landing's own total — `/public/yachts?did=c-X` totalElements, the very
+ * query the landing gate runs (fleetTotalForDid, Data Cache 1 h, shared) —
+ * and the count endpoint only picks the countries and fills in when that
+ * query fails. The order follows the corrected figures.
+ */
 export default async function getCountriesCount(): Promise<CountryCountModel[]> {
   try {
     const response = await fetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/countries-count`, {
@@ -212,9 +227,12 @@ export default async function getCountriesCount(): Promise<CountryCountModel[]> 
       throw new Error(`Failed to fetch countries: ${response.status}`);
     }
 
-    const allCountries = await response.json();
+    const countries = filterDisplayCountries(await response.json());
+    const listed = await Promise.all(countries.map(country => fleetTotalForDid(country.id)));
 
-    return filterDisplayCountries(allCountries);
+    return countries
+      .map((country, i) => ({ ...country, yachtCount: listed[i] ?? country.yachtCount }))
+      .sort((a, b) => b.yachtCount - a.yachtCount);
   } catch (error) {
     return [];
   }
