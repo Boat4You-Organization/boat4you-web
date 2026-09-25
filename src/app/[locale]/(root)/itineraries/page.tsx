@@ -8,9 +8,9 @@ import Layout from '@/components/Layout';
 import { itineraries } from '@/config/itineraries.config';
 import { LocaleType } from '@/config/locales.config';
 import { ITINERARY_NAMESPACES } from '@/i18n/clientMessages';
+import { itinerarySearchPath } from '@/utils/server/itineraryBoats';
 import { buildBreadcrumbJsonLd, buildItineraryCollectionJsonLd } from '@/utils/static/buildItineraryJsonLd';
 import { buildMetadata } from '@/utils/static/buildMetadata';
-import { resolveBoatsSearchHref } from '@/utils/static/itinerarySearchHref';
 import { serializeJsonLd } from '@/utils/static/serializeJsonLd';
 import ItinerariesHub from '@/views/Itineraries/ItinerariesHub';
 import ItineraryBuilderPromo from '@/views/Itineraries/ItineraryBuilderPromo';
@@ -46,9 +46,9 @@ const ItinerariesPage = async ({ params }: ItinerariesPageParams) => {
   setRequestLocale(locale);
 
   const t = await getTranslations('itinerary');
-  // did-carrying country links for the SEO guide (bare ?destinations= does not filter).
+  // Country landing links for the SEO guide (canonical, indexable landings).
   const [croatiaHref, greeceHref, italyHref, spainHref, turkeyHref] = await Promise.all(
-    ['Croatia', 'Greece', 'Italy', 'Spain', 'Turkey'].map(c => resolveBoatsSearchHref(c))
+    ['Croatia', 'Greece', 'Italy', 'Spain', 'Turkey'].map(c => itinerarySearchPath(c, [], locale))
   );
   const countrySearchHrefs = {
     croatia: croatiaHref,

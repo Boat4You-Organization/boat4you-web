@@ -1,8 +1,7 @@
 import { fleetCountForDid } from '@/utils/server/destinationDid';
-import { buildDestinationHref, buildSearchLandingPath } from '@/utils/static/searchLandingPath';
 
 /**
- * Build a WORKING /search link for a destination NAME. Itinerary pages
+ * The catalogue place an itinerary port NAME stands for. Itinerary pages
  * know their ports only by name, so we pick the best catalogue location
  * server-side at render (SSG), cached an hour.
  *
@@ -13,11 +12,8 @@ import { buildDestinationHref, buildSearchLandingPath } from '@/utils/static/sea
  * back through the caller-supplied chain (sailing area → country) so
  * the CTA never lands on an empty search.
  *
- * The link is the canonical landing form `/search?destinations=<name>`
- * (no did, 25.9.2026): the search page resolves the catalogue name to its
- * did on the server with the same fleet-size scoring, so the clean,
- * indexable URL filters. Before that the CTA carried `&did=`, which
- * filtered but pointed at a noindexed URL.
+ * The links built on it (src/utils/server/itineraryBoats.ts) point at the
+ * nearest indexable landing above that place, in its canonical URL.
  */
 
 interface PublicLocation {
@@ -130,7 +126,9 @@ const bestTargetForName = async (name: string, strict = false): Promise<ScoredTa
 export const resolveItineraryTarget = async (
   name: string,
   fallbacks: string[] = [],
-  minFleet: number = MIN_FLEET
+  minFleet: number = MIN_FLEET,
+  /** Match the first name strictly too (it is itself a fallback name). */
+  strictFirst = false
 ): Promise<ScoredTarget | null> => {
   const chain = [name, ...fallbacks.filter(Boolean)];
 
@@ -139,7 +137,7 @@ export const resolveItineraryTarget = async (
   const resolveChain = async (index: number, firstHit: ScoredTarget | null): Promise<ScoredTarget | null> => {
     if (index >= chain.length) return firstHit;
 
-    const best = await bestTargetForName(chain[index], index > 0);
+    const best = await bestTargetForName(chain[index], index > 0 || strictFirst);
 
     if (best && best.count >= minFleet) return best;
 
@@ -147,18 +145,4 @@ export const resolveItineraryTarget = async (
   };
 
   return resolveChain(0, null);
-};
-
-export const resolveBoatsSearchHref = async (name: string, fallbacks: string[] = []): Promise<string> => {
-  const plain = buildSearchLandingPath(name);
-
-  try {
-    const target = await resolveItineraryTarget(name, fallbacks);
-
-    if (!target) return plain;
-
-    return buildDestinationHref(target.name, target.id);
-  } catch {
-    return plain;
-  }
 };
