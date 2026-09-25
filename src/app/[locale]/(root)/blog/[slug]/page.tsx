@@ -1,15 +1,18 @@
+import { Box, Container } from '@mui/material';
 import { Metadata } from 'next';
 import { Locale } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import dynamic from 'next/dynamic';
 import { notFound } from 'next/navigation';
 
+import ExploreBoatsLinks from '@/components/ExploreBoatsLinks';
 import Layout from '@/components/Layout';
 import RelatedItineraries from '@/components/RelatedItineraries';
 import { LocaleType } from '@/config/locales.config';
 import { meta } from '@/config/meta';
 import { routing } from '@/i18n/routing';
 import { getBlog, getBlogWithSEO } from '@/lib/api';
+import { blogExploreHubs, rewriteBlogCatalogueLinks } from '@/utils/server/blogCatalogueLinks';
 import { buildBlogPostingLd, extractFaqLd } from '@/utils/static/blogJsonLd';
 import { buildMetadata, localizedUrl } from '@/utils/static/buildMetadata';
 import { decodeHtmlEntities } from '@/utils/static/decodeHtmlEntities';
@@ -97,7 +100,7 @@ export async function generateMetadata({
 }
 
 const SingleBlogPage = async ({ params }: { params: Promise<{ slug: string; locale: Locale }> }) => {
-  const { slug } = await params;
+  const { slug, locale } = await params;
 
   // WP down / GraphQL error → 404, not a 500 across 9 locale URLs.
   const blog = await getBlog(slug, 10).catch(() => null);
@@ -111,6 +114,18 @@ const SingleBlogPage = async ({ params }: { params: Promise<{ slug: string; loca
   // blog posts were the one editorial surface without it (AI-guide audit 25.8).
   const blogPostingLd = buildBlogPostingLd(blog.post);
   const faqLd = extractFaqLd(blog.post.content);
+  const categoryText = blog.post.categories?.nodes?.map(c => `${c.slug} ${c.name}`);
+
+  // Blog → catalogue: dated boat links and noindex `?did=` searches in the
+  // WordPress body point at the canonical boat / landing URL, and an
+  // "Explore boats" block links the landing hubs the post is about.
+  const [content, explore] = await Promise.all([
+    rewriteBlogCatalogueLinks(blog.post.content, locale),
+    blogExploreHubs(
+      { title: blog.post.title, slug: blog.post.slug, content: blog.post.content, categories: categoryText },
+      locale
+    ).catch(() => null),
+  ]);
 
   return (
     <Layout>
@@ -126,12 +141,15 @@ const SingleBlogPage = async ({ params }: { params: Promise<{ slug: string; loca
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
         />
       )}
-      <SingleBlogContent {...blog.post} />
-      <RelatedItineraries
-        title={blog.post.title}
-        slug={blog.post.slug}
-        categories={blog.post.categories?.nodes?.map(c => `${c.slug} ${c.name}`)}
-      />
+      <SingleBlogContent {...blog.post} content={content} />
+      {explore && (
+        <Container maxWidth="xl" disableGutters sx={{ px: { xs: 2, md: 3 } }}>
+          <Box maxWidth={846} marginInline="auto" pb={{ xs: 4, md: 6 }}>
+            <ExploreBoatsLinks hubs={explore.hubs} itinerary={explore.itinerary} locale={locale} lead="leadPost" />
+          </Box>
+        </Container>
+      )}
+      <RelatedItineraries title={blog.post.title} slug={blog.post.slug} categories={categoryText} />
       <RelatedBlogSection posts={blog.posts} />
     </Layout>
   );
