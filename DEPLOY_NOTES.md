@@ -44,20 +44,40 @@ Commiti `d9201e58` … `6cd95cdc` (8, na HEAD iznad `fc1ee504`). Nije pushano, n
 
 Novi namespaceovi (server-only): `catalogueLinks`, `siteFacts` — svih 9 jezika.
 
+**Popravci recenzije (25.9., commiti `1eb0d13b` … `53401c11`)**
+
+- **Cache landinga = allowlist** (`searchLanding.ts`): Data Cache samo kad su SVI parametri landing parametri s valjanom
+  vrijednošću (rezolvirana destinacija, poznati boatTypes, page 1–500, poznata valuta) ili tracking; backend upit se
+  gradi iz kanonskih vrijednosti (did, tip, page, valuta). `gclid`/`utm_*`/`fbclid`… se više NIKAD ne šalju backendu.
+  Prije: svaki gclid = novi ~22 KB zapis u fetch-cache (bez evikcije) + hladan poziv na cusma2. Lokalno: 7 varijanti
+  (gclid, utm, fbclid+page=2, izmišljeni param, nepoznata destinacija, krivi boatTypes/page) → +1 zapis (legit page=2).
+- **Brojke hubova = lista** (`landingGate.ts`): zemlje i mjesta s tekstom broje `/public/yachts` totalElements (kao
+  landing), ne countries-/locations-count. Blog pillovi sad Croatia 3.865 / Greece 3.407 / Türkiye 793 (prije 5.658 /
+  5.573 / 1.145). Prag 10 za netipizirane baze isto po listi → `sitemap-locations` lokalno **576 → 540** (60 × 9;
+  Paros l-151 sad ulazi, 29 brodova).
+- **Itinerari**: naslov = lista baze, „See all" = broj stranice na koju vodi; kad vodi na regiju, imenuje je
+  („See all 1,727 boats in Split Region") — novi ključ `catalogueLinks.itinerary.seeAllBoatsIn` ×9.
+- **Blog**: `?did=` link bez vlastitog landinga → najbliži indeksabilni hub (lagoon-47: Trogir → Split Region);
+  „Aegean"/„Ionian"/… samo u postu o toj zemlji (nestalo s Cyclades/Dodecanese/BVI postova).
+- **siteStats**: zemlje/marine = redovi čija lista nije prazna → **58 zemalja, 720+ marina** (prije 62 / 830+).
+  ~900 `size=1` upita, rezultat u `unstable_cache` 6 h (single-flight, rok 45 s). **Layout čeka max 1,5 s**, inače
+  JSON-LD sa statičnim opisom (i dalje „100+ countries", vidi otvoreno niže) dok se cache ne napuni.
+- [ ] Build: +~900 malih upita za siteStats (llms.txt / naslovnica). Ne buildati u sync prozoru cusma2.
+
 **Akcije pred / nakon deploya**
 
 - [ ] Build prerenderira sitemape: manifest = ~0,7–1K malih `size=1` upita (max 6 paralelno, 1 h Data Cache; prije ~150).
       Ne buildati u sync prozoru cusma2. Itinerari (ISR) pri buildu dohvaćaju listu brodova po bazi (jednom po bazi, EN).
 - [ ] nginx (cusma1/cusma5): provjeriti da `/llms.txt` NIJE statički serviran iz starog `public/` (sad je Next ruta).
 - [ ] Nakon deploya: GSC → ponovno poslati `sitemap.xml`; pratiti indexed/submitted za locations/categories 8 tjedana.
-- [ ] Provjera uživo: `curl -s https://www.boat4you.com/sitemap-locations.xml | grep -c '<loc>'` ≈ 576,
+- [ ] Provjera uživo: `curl -s https://www.boat4you.com/sitemap-locations.xml | grep -c '<loc>'` ≈ 540,
       `sitemap-categories` ≈ 3.240, `grep -c lastmod` = 0 (osim sitemap-blogs); `/boat/<slug>` ima
       `<nav aria-label=…>`; `/blog/<slug>` ima `explore-boats-title`; `/itineraries/split` < 1,5 MB i 12 `/boat/` linkova;
       `/about-us` bez „0+"; `/llms.txt` 200 text/plain.
 - [ ] Otvoreno (nije dirano): `metadata.base.description` (meta description naslovnice, 9 jezika) i dalje kaže „100+
       countries" — katalog ima 62 zemlje; promjena SERP snippeta = Mariova odluka.
 
-**Rollback:** `.next.prev` swap (kao inače). Kod: `git revert 6cd95cdc c6c24ea8 71ab7882 5cc0feab 6cb7e17e a629cad9
+**Rollback:** `.next.prev` swap (kao inače). Kod: `git revert 53401c11 793228fa 2ce6fb2f 1119fd7c 1eb0d13b 6cd95cdc c6c24ea8 71ab7882 5cc0feab 6cb7e17e a629cad9
 c0b20c60 d9201e58`.
 
 ## 2026-09-25 — 🧭 /search landing: filtriranje, SSR tekstovi, sitemap = index gate — ⏳ NIJE DEPLOYANO
