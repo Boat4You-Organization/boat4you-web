@@ -231,12 +231,45 @@ const buildCatalog = async (): Promise<ModelCatalog> => {
 };
 
 /**
- * The model catalogue (throws when the API cannot build it — callers that
- * must not fail, like the boat page link, use findModelForYacht).
- * React `cache` dedupes metadata + page within a request; the fetches
- * behind it are in the Data Cache.
+ * Process-level memo: the boat page asks for the catalogue on every view
+ * (12K boats × 9 locales), and rebuilding it — even from the Data Cache —
+ * is ~50 cache reads. Rebuilt at most every MEMO_TTL_MS; concurrent callers
+ * share one build; a failed rebuild keeps serving the previous catalogue.
  */
-export const loadModelCatalog = cache(buildCatalog);
+const MEMO_TTL_MS = 30 * 60 * 1000;
+let memo: { catalog: ModelCatalog; builtAt: number } | null = null;
+let building: Promise<ModelCatalog> | null = null;
+
+const memoisedCatalog = async (): Promise<ModelCatalog> => {
+  if (memo && Date.now() - memo.builtAt < MEMO_TTL_MS) return memo.catalog;
+
+  if (!building) {
+    building = buildCatalog()
+      .then(catalog => {
+        memo = { catalog, builtAt: Date.now() };
+
+        return catalog;
+      })
+      .finally(() => {
+        building = null;
+      });
+  }
+
+  try {
+    return await building;
+  } catch (error) {
+    if (memo) return memo.catalog;
+
+    throw error;
+  }
+};
+
+/**
+ * The model catalogue (throws when the API cannot build it and nothing was
+ * built before — callers that must not fail, like the boat page link, use
+ * findModelForYacht). React `cache` dedupes metadata + page within a request.
+ */
+export const loadModelCatalog = cache(memoisedCatalog);
 
 export const findCatalogModel = (catalog: ModelCatalog, brandSlug: string, modelSlug: string): CatalogModel | null =>
   catalog.models.find(m => m.brandSlug === brandSlug && m.modelSlug === modelSlug) ?? null;
