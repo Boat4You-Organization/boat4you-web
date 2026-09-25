@@ -6,6 +6,7 @@ import { CountryCountModel, LocationModel } from '@/models/locations.model';
 import { LocationType } from '@/types/location.type';
 import { PaginatedResponse } from '@/types/response.type';
 import { createQueryParams } from '@/utils/static/queryParams';
+import { buildDestinationHref } from '@/utils/static/searchLandingPath';
 
 export interface PopularEntry {
   /** Synthetic id — not a real backend location id. */
@@ -267,7 +268,8 @@ export interface PopularDestination {
    *  placeholder. */
   name: string;
   /** Pre-built href for the next-level search results page, with the
-   *  active boat-type filter preserved. */
+   *  active boat-type filter preserved — canonical landing form (lowercased
+   *  name, no did; /search resolves the did server-side). */
   href: string;
   /** 0..7 index into the locale's phrase template array. Stable per
    *  destination (hash of name) so the same place always renders with
@@ -324,14 +326,13 @@ export async function getPopularDestinationsForCountry(
       ? ((await marinasRes.json()) as Array<{ id: string; name: string; countryCode: string; yachtCount: number }>)
       : [];
 
-    const boatTypeQuery = boatType ? `&boatTypes=${encodeURIComponent(boatType)}` : '';
     // Regions first — they're the higher-tier sub-destinations and the
     // ones a country page should funnel traffic to. Cap at 6 (typical
     // country has 5-6 regions; we leave room for 4 marina links to round
     // the block out to 10 entries).
     const regionEntries: PopularDestination[] = regions.slice(0, 6).map(r => ({
       name: r.name,
-      href: `/search?destinations=${encodeURIComponent(r.name)}&did=${encodeURIComponent(r.id)}${boatTypeQuery}`,
+      href: buildDestinationHref(r.name, r.id, boatType),
       templateIdx: stableTemplateIdx(r.name),
     }));
 
@@ -346,7 +347,7 @@ export async function getPopularDestinationsForCountry(
       .slice(0, POPULAR_DESTS_LIMIT - regionEntries.length)
       .map(m => ({
         name: m.name,
-        href: `/search?destinations=${encodeURIComponent(m.name)}&did=${encodeURIComponent(m.id)}${boatTypeQuery}`,
+        href: buildDestinationHref(m.name, m.id, boatType),
         templateIdx: stableTemplateIdx(m.name),
       }));
 
@@ -383,14 +384,12 @@ export async function getPopularDestinationsForRegion(
 
     const locations = (await res.json()) as Array<{ id: string; name: string; yachtCount: number }>;
 
-    const boatTypeQuery = boatType ? `&boatTypes=${encodeURIComponent(boatType)}` : '';
-
     return locations
       .sort((a, b) => b.yachtCount - a.yachtCount)
       .slice(0, POPULAR_DESTS_LIMIT)
       .map(l => ({
         name: l.name,
-        href: `/search?destinations=${encodeURIComponent(l.name)}&did=${encodeURIComponent(l.id)}${boatTypeQuery}`,
+        href: buildDestinationHref(l.name, l.id, boatType),
         templateIdx: stableTemplateIdx(l.name),
       }));
   } catch {

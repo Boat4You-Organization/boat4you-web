@@ -9,6 +9,7 @@ import { getTranslationKeyByCountryCode, getTranslationKeyByDestinationName } fr
 import { CountryCountModel } from '@/models/locations.model';
 import colors from '@/styles/themes/colors';
 import useBreakpoint from '@/utils/hooks/useBreakpoint';
+import { buildDestinationHref } from '@/utils/static/searchLandingPath';
 
 import styles from './DestinationsGrid.module.scss';
 
@@ -30,7 +31,7 @@ const DestinationsGrid = ({ destinations }: DestinationsGridProps) => {
 
         return (
           <Grid key={destination.id} size={{ xs: 6, md: 3, xl: 2 }} height="100%" className={styles.itemWrapper}>
-            <Link href={`/search?destinations=${destination.name}&did=${destination.id}`} className={styles.item}>
+            <Link href={buildDestinationHref(destination.name, destination.id)} className={styles.item}>
               <Stack>
                 <Typography component="h3" variant="h4" fontWeight={700} color={colors.blue950}>
                   {localizedName}

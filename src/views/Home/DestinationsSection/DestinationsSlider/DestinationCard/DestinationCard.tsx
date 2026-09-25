@@ -8,6 +8,7 @@ import {
   getTranslationKeyByDestinationName,
 } from '@/config/destinations.config';
 import { CountryCountModel } from '@/models/locations.model';
+import { buildDestinationHref } from '@/utils/static/searchLandingPath';
 
 import styles from './DestinationCard.module.scss';
 
@@ -31,7 +32,9 @@ const DestinationCard = ({ id, name, countryCode, yachtCount, priority = false }
   const alt = localizedName;
 
   return (
-    <Link href={`/search?destinations=${name}&did=${id}`} className={styles.card}>
+    // Canonical landing URL (the sitemap form) — /search resolves the did
+    // itself; the old `&did=` link pointed at a noindexed variant.
+    <Link href={buildDestinationHref(name, id)} className={styles.card}>
       <Image
         src={image.src}
         alt={alt}

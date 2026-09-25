@@ -1,9 +1,10 @@
+import { fleetCountForDid } from '@/utils/server/destinationDid';
+import { buildDestinationHref, buildSearchLandingPath } from '@/utils/static/searchLandingPath';
+
 /**
- * Build a WORKING /search link for a destination NAME. The search page
- * filters by `did` ONLY — a bare `?destinations=Athens` renders the
- * unfiltered fleet (Sukošan boats under an Athens heading, Mario
- * 21.7.2026). Itinerary pages know their ports only by name, so we
- * resolve the did server-side at render (SSG), cached an hour.
+ * Build a WORKING /search link for a destination NAME. Itinerary pages
+ * know their ports only by name, so we pick the best catalogue location
+ * server-side at render (SSG), cached an hour.
  *
  * Candidates are scored by FLEET SIZE, not name order: dual-source
  * locations exist twice in the DB and the namesake city row can hold
@@ -11,6 +12,12 @@
  * (Mario 22.7). Names that resolve to fewer than MIN_FLEET boats fall
  * back through the caller-supplied chain (sailing area → country) so
  * the CTA never lands on an empty search.
+ *
+ * The link is the canonical landing form `/search?destinations=<name>`
+ * (no did, 25.9.2026): the search page resolves the catalogue name to its
+ * did on the server with the same fleet-size scoring, so the clean,
+ * indexable URL filters. Before that the CTA carried `&did=`, which
+ * filtered but pointed at a noindexed URL.
  */
 
 interface PublicLocation {
@@ -46,22 +53,7 @@ const fetchCandidates = async (query: string): Promise<PublicLocation[]> => {
   return json.content ?? [];
 };
 
-const fleetCount = async (did: string): Promise<number> => {
-  try {
-    const response = await fetch(
-      `${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/yachts?did=${encodeURIComponent(did)}&size=1`,
-      { next: { revalidate: 3600 } }
-    );
-
-    if (!response.ok) return 0;
-
-    const json = await response.json();
-
-    return json?.page?.totalElements ?? json?.totalElements ?? 0;
-  } catch {
-    return 0;
-  }
-};
+const fleetCount = (did: string): Promise<number> => fleetCountForDid(did).catch(() => 0);
 
 interface ScoredTarget {
   id: string;
@@ -131,7 +123,7 @@ const bestTargetForName = async (name: string, strict = false): Promise<ScoredTa
 };
 
 export const resolveBoatsSearchHref = async (name: string, fallbacks: string[] = []): Promise<string> => {
-  const plain = `/search?destinations=${encodeURIComponent(name)}`;
+  const plain = buildSearchLandingPath(name);
 
   try {
     const chain = [name, ...fallbacks.filter(Boolean)];
@@ -152,7 +144,7 @@ export const resolveBoatsSearchHref = async (name: string, fallbacks: string[] =
 
     if (!target) return plain;
 
-    return `/search?destinations=${encodeURIComponent(target.name)}&did=${encodeURIComponent(target.id)}`;
+    return buildDestinationHref(target.name, target.id);
   } catch {
     return plain;
   }

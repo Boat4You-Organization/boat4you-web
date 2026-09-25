@@ -16,9 +16,13 @@ interface ManufacturersSectionProps {
  * De-MUI'd (Jun-2026): was MUI Container/Typography/Box/Stack, now plain HTML +
  * CSS module so it stays a zero-JS server component and adds NOTHING to mobile
  * hydration. Visual gabarit unchanged — same container shape, h1-variant title
- * and grid as before (mirrors FAQSection's de-MUI conversion). Deep links into
- * `/search?mfid=` earn brand long-tail crawl budget; the names + counts are in
- * the server HTML on first paint so the crawler reads them without running JS.
+ * and grid as before (mirrors FAQSection's de-MUI conversion).
+ *
+ * The tiles deep-link into `/search?mfid=` for visitors, but that URL is
+ * noindex and canonicalises to bare `/search`, so as a crawl target it only
+ * cancelled itself (audit 25.9.2026). Until real manufacturer/model landing
+ * pages exist the links carry rel="nofollow": visitors still get the filtered
+ * list, crawlers stop spending the homepage's links on a self-cancelling URL.
  */
 const ManufacturersSection = ({ manufacturers }: ManufacturersSectionProps) => {
   const t = useTranslations('home');
@@ -38,6 +42,7 @@ const ManufacturersSection = ({ manufacturers }: ManufacturersSectionProps) => {
           <Link
             key={m.id}
             href={`/search?mfid=${m.id}&manufacturers=${encodeURIComponent(m.name)}`}
+            rel="nofollow"
             className={styles.tile}
           >
             <span className={styles.name}>{m.name}</span>
