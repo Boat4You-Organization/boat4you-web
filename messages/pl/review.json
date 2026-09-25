@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "title": "Twoja opinia"
+  },
+  "greeting": "Dzień dobry, {name},",
+  "greetingNoName": "Dzień dobry,",
+  "heading": {
+    "BOOKING": "Jak przebiegła rezerwacja w Boat4You?",
+    "YACHT": "Jak minął Twój czarter?"
+  },
+  "intro": {
+    "BOOKING": "Napisz nam, jak przebiegła rezerwacja jachtu {yacht}. To zajmie minutę, a nam pomoże działać lepiej.",
+    "YACHT": "Opowiedz nam o tygodniu na pokładzie jachtu {yacht}: o łodzi, bazie i firmie czarterowej. Twoja opinia pomoże innym żeglarzom w wyborze."
+  },
+  "detailsLabel": "Twoja rezerwacja",
+  "yacht": "Jacht",
+  "dates": "Termin",
+  "base": "Baza",
+  "reservation": "Rezerwacja",
+  "editNote": "Ta opinia została już wysłana. Możesz ją jeszcze zmienić do {date}.",
+  "backHome": "Wróć do Boat4You",
+  "expired": {
+    "title": "Ten link do opinii jest nieważny",
+    "body": "Link mógł wygasnąć (linki są ważne przez 60 dni) lub jest niepełny. Jeśli nadal chcesz podzielić się wrażeniami, napisz do nas na info@boat4you.com."
+  },
+  "done": {
+    "title": "Dziękujemy, Twoja opinia do nas dotarła",
+    "body": "Opinię można zmienić w ciągu 24 godzin od wysłania. Jeśli chcesz coś dodać, napisz do nas na info@boat4you.com."
+  },
+  "unavailable": {
+    "title": "Formularz opinii jest chwilowo niedostępny",
+    "body": "Spróbuj ponownie za kilka minut. Twój link pozostaje ważny."
+  },
+  "stars": "{count, plural, one {# gwiazdka} few {# gwiazdki} many {# gwiazdek} other {# gwiazdki}}",
+  "noRating": "Brak oceny",
+  "overall": "Ocena ogólna",
+  "required": "(wymagana)",
+  "scoresHeading": {
+    "BOOKING": "Oceń szczegóły (opcjonalnie)",
+    "YACHT": "Oceń szczegóły (opcjonalnie)"
+  },
+  "score": {
+    "easeOfBooking": "Łatwość rezerwacji",
+    "communication": "Kontakt z nami",
+    "valueTransparency": "Jasne, uczciwe ceny",
+    "boatCondition": "Stan jachtu",
+    "cleanliness": "Czystość",
+    "checkInOut": "Zaokrętowanie i wyokrętowanie",
+    "charterCompany": "Firma czarterowa",
+    "value": "Stosunek jakości do ceny"
+  },
+  "titleLabel": "Tytuł (opcjonalnie)",
+  "textLabel": "Twoja opinia (opcjonalnie)",
+  "counter": "{count} / {max} znaków",
+  "consentLabel": "Boat4You może opublikować moją opinię",
+  "consentHelp": "Jeśli zaznaczysz to pole, Twoja opinia może pojawić się na boat4you.com tylko z Twoim imieniem i krajem, nigdy z nazwiskiem ani adresem e-mail. Każdą opinię czytamy przed publikacją. Bez zaznaczenia wykorzystujemy ją wyłącznie do ulepszania naszych usług.",
+  "submit": "Wyślij opinię",
+  "submitEdit": "Zapisz zmiany",
+  "submitting": "Wysyłanie…",
+  "success": {
+    "title": "Dziękujemy!",
+    "body": "Otrzymaliśmy Twoją opinię.",
+    "edited": "Twoje zmiany zostały zapisane.",
+    "published": "Po przeczytaniu może się pojawić na boat4you.com z Twoim imieniem i krajem."
+  },
+  "errors": {
+    "rating": "Wybierz ocenę ogólną od 1 do 5 gwiazdek.",
+    "score": "Oceń każdy szczegół w skali od 1 do 5 gwiazdek albo pozostaw go pustym.",
+    "title": "Tytuł może mieć najwyżej 120 znaków.",
+    "text": "Opinia może mieć najwyżej 3000 znaków.",
+    "editClosed": "Tej opinii nie można już zmienić: opinie można edytować przez 24 godziny od wysłania.",
+    "rateLimited": "Zbyt wiele prób. Odczekaj minutę i spróbuj ponownie.",
+    "generic": "Coś poszło nie tak i opinia nie została wysłana. Spróbuj ponownie."
+  }
+}

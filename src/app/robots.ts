@@ -12,6 +12,8 @@ const protectedPaths = [
   '/payment-cancelled',
   '/payment-pending',
   '/forgot-password',
+  // Guest review form: every URL carries a personal magic-link token.
+  '/review/',
 ];
 
 /**

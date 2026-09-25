@@ -1,0 +1,29 @@
+@use '@/styles/settings/variables' as *;
+@use '@/styles/utils/rem-calc' as *;
+
+.container {
+  margin-top: rem-calc(24);
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: rem-calc(8);
+  padding: rem-calc(12) rem-calc(16);
+  border: 1px solid $blue-100;
+  border-radius: rem-calc(8);
+  background-color: $blue-50;
+  color: $blue-700;
+  font-size: rem-calc(15);
+  font-weight: 700;
+  text-decoration: none;
+
+  &:hover {
+    border-color: $blue-300;
+    text-decoration: underline;
+  }
+}
+
+.arrow {
+  font-weight: 400;
+}

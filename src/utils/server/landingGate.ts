@@ -38,7 +38,11 @@ import { destinationSlug, isLandingExpressible } from '@/utils/static/searchLand
  * Only places in the offer (the promoted countries) qualify; a region the
  * catalogue lists without a country (MMK's "Dubrovnik / Montenegro") counts
  * when its whole fleet lies in promoted countries.
+ *
+ * The same MIN_LANDING_FLEET applies to the /yachts model pages (models
+ * branch, 25.9.2026).
  */
+/** The one fleet threshold for generated pages (landings and /yachts model pages). */
 export const MIN_LANDING_FLEET = 10;
 
 export interface LandingGate {
@@ -164,6 +168,10 @@ export const evaluateLanding = async (
   // /public/locations-count disagrees both ways (Paros l-151: 10 there, 29
   // listed; Paros port l-1845: 70 there, 44 listed). One cached size=1 query.
   const fleet = await fleetCountForDid(dids, boatType);
+
+  if (!boatType && resolved.kind === LocationType.COUNTRY && isPromotedCountry(resolved.countryCode)) {
+    return { fleet, indexableLocales: fleet > 0 ? [...routing.locales] : [] };
+  }
 
   if (fleet < MIN_LANDING_FLEET) return { fleet, indexableLocales: [] };
 

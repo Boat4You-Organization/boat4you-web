@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "indexTitle": "Alquiler de barcos por modelo: {models, number} modelos populares",
+    "indexDescription": "Compara los {models, number} modelos de veleros y catamaranes con más unidades en alquiler en Boat4You: características, bases y precios semanales habituales de cada uno.",
+    "brandTitle": "Alquiler de {brand}: {models, number} modelos, {count, number} barcos",
+    "brandDescription": "Alquila un {brand}: {count, number} barcos en {models, number} modelos en Boat4You. Compara características, bases y precios semanales y reserva directamente.",
+    "modelTitle": "Alquiler de {model}: {count, number} barcos, bases y precios",
+    "modelDescription": "Compara {count, number} barcos {model} en alquiler: {cabins} camarotes, año de construcción {years}, una semana de alquiler suele costar {p25}–{p75}. Destinos: {countries}. Reserva directa en Boat4You.",
+    "modelDescriptionNoPrice": "Compara {count, number} barcos {model} en alquiler: {cabins} camarotes, año de construcción {years}. Destinos: {countries}. Reserva directa en Boat4You."
+  },
+  "breadcrumbLabel": "Ruta de navegación",
+  "yachtModels": "Modelos de barcos",
+  "boats": "{count, plural, one {# barco} other {# barcos}}",
+  "cabins": "{count, plural, one {# camarote} other {# camarotes}}",
+  "guests": "{count, plural, one {# persona} other {# personas}}",
+  "cabinsRange": "{range} camarotes",
+  "priceBand": "{p25} – {p75} por semana",
+  "index": {
+    "h1": "Alquiler de barcos por modelo",
+    "lede": "Los {models, number} modelos con más barcos en alquiler en Boat4You, {count, number} barcos en total. Cada página de modelo muestra todos los barcos, sus bases y lo que suele costar una semana de alquiler."
+  },
+  "brand": {
+    "h1": "Alquiler de barcos {brand}",
+    "lede": "En Boat4You puedes alquilar {count, plural, one {# barco {brand}} other {# barcos {brand}}} de {models, number} modelos. Elige un modelo para ver sus características, bases y precios semanales habituales.",
+    "modelsHeading": "Modelos {brand} en alquiler"
+  },
+  "model": {
+    "h1": "Alquiler de {model}",
+    "lede": "En Boat4You hay {count, plural, one {# barco {model}} other {# barcos {model}}} en alquiler, con base en {countryCount, plural, one {# país} other {# países}}.",
+    "ledeYears": "La flota se construyó entre {from} y {to}.",
+    "ledeYear": "Todos los barcos de la flota se construyeron en {year}.",
+    "ledePrice": "Una semana de alquiler cuesta normalmente entre {p25} y {p75}.",
+    "specsHeading": "Características del {model}",
+    "specFleet": "Barcos en alquiler",
+    "specLength": "Eslora",
+    "specCabins": "Camarotes",
+    "specGuests": "Personas",
+    "specBerths": "Literas",
+    "specHeads": "Baños (WC)",
+    "specBuildYears": "Años de construcción",
+    "lengthValue": "{m} m ({ft} pies)",
+    "specNote": "Camarotes, personas y eslora muestran el rango habitual de los barcos {model} publicados, sin los pocos valores atípicos de los socios. Literas y baños: la distribución más habitual.",
+    "whereHeading": "Dónde alquilar un {model}",
+    "whereCountry": "País",
+    "whereBoats": "Barcos",
+    "whereBases": "Bases principales",
+    "priceHeading": "Precios de alquiler del {model}",
+    "priceBody": "La mitad de los barcos {model} publicados cuesta entre {p25} y {p75} por semana de alquiler. La cifra corresponde solo al alquiler del barco y se toma de la próxima semana disponible de cada uno ({n, number} barcos): patrón, extras obligatorios y fianza van aparte.",
+    "boatsHeading": "Barcos {model} en alquiler",
+    "showAll": "Ver todos los barcos {model} en el buscador",
+    "fromPerWeek": "desde {price} por semana",
+    "blogHeading": "De nuestro blog",
+    "otherModels": "Otros modelos de {brand}"
+  },
+  "boatLink": "Todos los barcos {model} ({count, number})"
+}

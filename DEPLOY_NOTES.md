@@ -80,6 +80,72 @@ Novi namespaceovi (server-only): `catalogueLinks`, `siteFacts` — svih 9 jezika
 **Rollback:** `.next.prev` swap (kao inače). Kod: `git revert 53401c11 793228fa 2ce6fb2f 1119fd7c 1eb0d13b 6cd95cdc c6c24ea8 71ab7882 5cc0feab 6cb7e17e a629cad9
 c0b20c60 d9201e58`.
 
+## 2026-09-25 — 🛥️ Wave 2: /yachts model stranice, charter facts blok, /review forma, prag 10 brodova — ⏳ NIJE DEPLOYANO
+
+Grana `feat/models-facts-reviews` (worktree `boat4you-web/b4y-web-wave2`, od `fc1ee504`), NIJE pushano ni deployano.
+Commiti: `ca063d26` prag · `8e7f7778` model stranice · `ed52be78` charter facts · `e9e9ded2` review forma ·
+`9c84af6b` memo kataloga · `041ed4c9` PL/HR množina · `8f5ba69e` sitemap-models bez build prerendera.
+Popravci recenzije: `081fdc66` GA/Ads se ne učitavaju na `/review/*` (token više ne ide u `page_location`) ·
+`ed8d3c7c` facts tablica stane na 375 px · `50cda4c2` model stranice: rasponi p5–p95 (bez outliera iz partnerskih
+podataka), bez „46–46 ft", meta = tipičan tjedan p25–p75, gumb bez broja, link s broda samo za 12 promoviranih
+zemalja, „Lagoon 450 Sport" → 450 S, Motor Sailer / Sunsail / The Moorings / „Gulet"-jezgre bez stranice.
+
+**1. Prag landinga (Mario 25.9.):** `MIN_LANDING_FLEET = 10` u `src/utils/server/landingGate.ts` (jedino mjesto).
+Promovirana država (12) = uvijek indeksabilna (ako ima brodova, sva 9 jezika); regija / baza / destinacija × tip / model
+stranica = ≥ 10 aktivnih brodova I jedinstven sadržaj. Lokalno uz prod API: `sitemap-locations` 171 → **162** (ispada
+`marina aliki`), `sitemap-categories` 468 → **351** (ispada 13 kombinacija država × tip s < 10 brodova tog tipa, npr.
+`bahamas&boatTypes=SAILING_YACHT`, `turkey&boatTypes=MOTORBOAT`). Te stranice postaju noindex,follow.
+
+**2. Model stranice (plan #8):** `/[locale]/yachts`, `/yachts/{brand}` (samo brendovi s ≥ 2 model stranice),
+`/yachts/{brand}/{model}` — top 30 modela s ≥ 10 aktivnih brodova u 12 promoviranih zemalja. Rangiranje:
+`/public/yachts/distribution?did=<12 c- id>` (`byModel`, ~14 s hladno, Data Cache 24 h) + `/public/catalogue/models`
+po proizvođaču (24 h); MMK/NauSys varijante spojene u jedan ključ (`src/utils/static/yachtModelKey.ts`: „Dufour 460 GL /
+Grand Large", „Bavaria Cruiser 46 / 46 Cruiser", „Lagoon 450 F / Fly", „Elba 45 / Fountaine Pajot Elba 45",
+Lagoon-Bénéteau → Lagoon). Slug iz ključa (stabilan). Stranica: SSR specifikacije iz flote (duljina, kabine, osobe,
+kreveti/WC = najčešći raspored iz uzorka od 6 detalja, godine gradnje), „Where to charter" tablica (linkovi SAMO na
+landinge koje gate indeksira, prvo tip modela), tjedna cijena p25–p75 (×7 od dnevne, period total), 24 kartice brodova,
+link na blog ako naslov posta sadrži model, BreadcrumbList + ItemList JSON-LD (bez Product/Offer), canonical, hreflang ×9
+
+- x-default, novi namespace `models` (9 jezika). Ispod praga / nepoznat slug → 404. `sitemap-models.xml` (u indeksu,
+  **342 URL-a** = (1 + 7 hubova + 30 modela) × 9, bez lastmod, `force-dynamic`). Stranica broda: „All {model} boats (N)"
+  kad model stranica postoji (budžet 1,5 s, katalog memoiziran 30 min po procesu). ISR 12 h.
+
+**3. Charter facts blok (plan #6):** na landinzima koji prolaze gate u tom jeziku, iz
+`GET /public/charter-facts?did=…[&vesselType=…]` (backend V9_61, revalidate 3600, timeout 2,5 s). Aktivni brodovi,
+tjedne cijene po mjesecu (medijan + p25–p75, najjeftiniji/najskuplji mjesec), skiper/tjedno, obvezni extrasi/tjedno,
+polog, dan ukrcaja, medijan godine gradnje, top modeli (link na model stranicu) i top baze (link samo na gated landing).
+Valuta stranice preko tečaja iz liste (`clientPriceInfo.rate`), inače EUR s oznakom. 404 / greška → ništa (bez praznog
+okvira). Bez FAQPage sheme. Namespace `charterFacts`. **Prod endpoint danas vraća 500 (backend jar još nije na
+cusma2) → blok se ne prikazuje dok backend ne ode live i prvi 08:00 UTC run (ili ručni recompute) ne napuni tablicu.**
+Lokalno provjereno s fixture proxyjem (payload po `CharterFactsMath.buildPayload`): EN/DE, USD konverzija, did-link →
+nema bloka, 2 destinacije → nema bloka.
+
+**4. Review forma:** `/[locale]/review/{token}` (backend V9_62): SSR kontekst (GET, no-store), forma: ukupna ocjena 1–5
+(MUI Rating = nativna radio grupa u fieldset/legend), pod-ocjene tipa, naslov (120), tekst (3000, brojač), privola za
+objavu (ime + država). `?rating=1..5` iz maila predselektira. Submit = server action, prosljeđuje IP posjetitelja kao
+`X-Forwarded-For` (backend rate-limit 10/min po IP). Stanja: uspjeh (novo / izmjena), 404 istekao link, 409 prošao
+24 h prozor, 400 poruke po polju, 429, greška. noindex,nofollow bez canonical/hreflang/og:url, `Disallow: /review/`
+×9 u robots.txt, `Cache-Control: private, no-store` + `Referrer-Policy: no-referrer` (next.config.js), nije u sitemapu.
+Namespace `review` (klijentski samo u tom segmentu).
+
+**Akcije pred / nakon deploya:**
+
+- [ ] Backend V9_61 + V9_62 live PRIJE ili ZAJEDNO s ovim; `REVIEWS_ENABLED=true` na cusma2 + cusma3 tek kad je
+      `/review/<token>` live (inače mail vodi na 404 i troši jednokratni zahtjev).
+- [ ] Build: `/yachts*` i `sitemap-models.xml` se NE prerenderiraju. Nakon swapa jednom zagrijati: `curl /yachts`,
+      `/sitemap-models.xml` (prvi zahtjev ~15–30 s: distribution + 30 flota; poslije iz Data Cachea).
+- [ ] GSC: ponovno poslati `sitemap.xml` (novi `sitemap-models.xml`); očekivano +13 × 9 „Excluded by noindex" s
+      country × type kombinacija ispod 10 brodova.
+- [ ] Nakon prvog 08:00 UTC runa: `curl https://www.boat4you.com/search?destinations=croatia | grep charter-facts-heading`.
+- [ ] Lokalni dev iz worktreeja sa simlinkanim `node_modules`: Turbopack puca („Symlink node_modules is invalid") →
+      `next dev --webpack`.
+
+**Pre-existing (nije dirano):** backend spaja „Marina Frapa | Rogoznica" (l-2029) s „Marina Frapa Dubrovnik" (l-775) u
+jedan red `/public/locations` → landing „marina frapa dubrovnik" nosi i Rogoznicu; FR/IT/PT H1 na /search „à Grèce" /
+„a Grecia" / „em Grécia" (predlošci `searchH1NoBoatType`); GA `page_location` nosi token na /unsubscribe i
+/trip (/review popravljen u `081fdc66`); inquiry server action ide s IP-a web servera pa svi dijele backend
+rate-limit (5/min); ISR piše zapis i za 404 na `/yachts/<bilo što>` (kao /boat).
+
 ## 2026-09-25 — 🧭 /search landing: filtriranje, SSR tekstovi, sitemap = index gate — ⏳ NIJE DEPLOYANO
 
 **✅ LIVE 25.9.2026 ~12:27 UTC — BUILD_ID `PNhZDQdC3LxKlsbbcJvKl` (HEAD `1d7b9aa8`).** Verified on production: greece/italy/split/croatia×CATAMARAN/greece×CATAMARAN each render their own boat list (md5 differ; Greece first boat jeanneau-sun-odyssey-479-sirius-19668, heading "3,407 boats available"); curated H2 in raw HTML; "sought-after sailing destinations" template 0×; unknown destination (atlantis) → noindex; `/seo-content/*` → `x-robots-tag: noindex, nofollow`; `</script>` XSS probe → 0 hits; sitemap-locations 5,985 → 171 URLs, sitemap-categories 468. `public/seo-content/en` on cusma1 = 1,435 files. Rollback `.next.prev`.

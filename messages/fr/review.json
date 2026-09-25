@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "title": "Votre avis"
+  },
+  "greeting": "Bonjour {name},",
+  "greetingNoName": "Bonjour,",
+  "heading": {
+    "BOOKING": "Comment s’est passée votre réservation avec Boat4You ?",
+    "YACHT": "Comment s’est passée votre croisière ?"
+  },
+  "intro": {
+    "BOOKING": "Dites-nous comment s’est déroulée la réservation de {yacht}. Cela prend une minute et nous aide à nous améliorer.",
+    "YACHT": "Racontez-nous votre semaine à bord de {yacht} : le bateau, la base et le loueur. Votre avis aide d’autres navigateurs à choisir."
+  },
+  "detailsLabel": "Votre réservation",
+  "yacht": "Bateau",
+  "dates": "Dates",
+  "base": "Base",
+  "reservation": "Réservation",
+  "editNote": "Vous avez déjà envoyé cet avis. Vous pouvez encore le modifier jusqu’au {date}.",
+  "backHome": "Retour sur Boat4You",
+  "expired": {
+    "title": "Ce lien d’avis n’est pas valide",
+    "body": "Le lien a peut-être expiré (les liens sont valables 60 jours) ou il est incomplet. Si vous souhaitez tout de même partager votre expérience, écrivez-nous à info@boat4you.com."
+  },
+  "done": {
+    "title": "Merci, nous avons bien reçu votre avis",
+    "body": "Un avis peut être modifié pendant 24 heures après son envoi. Pour ajouter quelque chose, écrivez-nous à info@boat4you.com."
+  },
+  "unavailable": {
+    "title": "Le formulaire d’avis est momentanément indisponible",
+    "body": "Veuillez réessayer dans quelques minutes. Votre lien reste valable."
+  },
+  "stars": "{count, plural, one {# étoile} other {# étoiles}}",
+  "noRating": "Aucune note",
+  "overall": "Note globale",
+  "required": "(obligatoire)",
+  "scoresHeading": {
+    "BOOKING": "Notez les détails (facultatif)",
+    "YACHT": "Notez les détails (facultatif)"
+  },
+  "score": {
+    "easeOfBooking": "Facilité de réservation",
+    "communication": "Échanges avec nous",
+    "valueTransparency": "Prix clairs et justes",
+    "boatCondition": "État du bateau",
+    "cleanliness": "Propreté",
+    "checkInOut": "Embarquement et débarquement",
+    "charterCompany": "Loueur",
+    "value": "Rapport qualité-prix"
+  },
+  "titleLabel": "Titre (facultatif)",
+  "textLabel": "Votre avis (facultatif)",
+  "counter": "{count} / {max} caractères",
+  "consentLabel": "Boat4You peut publier mon avis",
+  "consentHelp": "En cochant cette case, votre avis pourra apparaître sur boat4you.com avec uniquement votre prénom et votre pays, jamais votre nom ni votre adresse e-mail. Chaque avis est lu avant publication. Sans cette case, nous utilisons votre avis uniquement pour améliorer notre service.",
+  "submit": "Envoyer l’avis",
+  "submitEdit": "Enregistrer les modifications",
+  "submitting": "Envoi en cours…",
+  "success": {
+    "title": "Merci !",
+    "body": "Nous avons bien reçu votre avis.",
+    "edited": "Vos modifications ont été enregistrées.",
+    "published": "Après relecture, il pourra apparaître sur boat4you.com avec votre prénom et votre pays."
+  },
+  "errors": {
+    "rating": "Veuillez choisir une note globale de 1 à 5 étoiles.",
+    "score": "Notez chaque détail de 1 à 5 étoiles, ou laissez-le vide.",
+    "title": "Le titre ne peut pas dépasser 120 caractères.",
+    "text": "L’avis ne peut pas dépasser 3 000 caractères.",
+    "editClosed": "Cet avis ne peut plus être modifié : un avis est modifiable pendant 24 heures après son envoi.",
+    "rateLimited": "Trop de tentatives. Patientez une minute puis réessayez.",
+    "generic": "Un problème est survenu et votre avis n’a pas été envoyé. Veuillez réessayer."
+  }
+}

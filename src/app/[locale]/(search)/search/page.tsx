@@ -25,6 +25,7 @@ import { DESTINATION_KEY_BY_LABEL } from '@/utils/static/destinationLabelKey';
 import { getBoatImageUrl } from '@/utils/static/imageUtils';
 import { serializeJsonLd } from '@/utils/static/jsonLd';
 import { buildSearchLandingPath, isLandingExpressible } from '@/utils/static/searchLandingPath';
+import { charterFactsTargetFor } from '@/views/Search/CharterFacts/charterFactsTarget';
 import { ResolvedDestinationProvider } from '@/views/Search/SearchView/ResolvedDestinationContext';
 import SearchView from '@/views/Search/SearchView/SearchView';
 
@@ -407,6 +408,8 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
 
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.boat4you.com';
   const currency = (params.currency as Currency) || Currency.EUR;
+  // Charter facts block — only on landings the index gate lets Google index here.
+  const charterFacts = await charterFactsTargetFor(landing, singleBoatType, boatTypes.length, locale);
 
   // Destination crumb only from catalogue names that can carry a landing URL:
   // an unresolved value is raw URL input (it was reflected into the JSON-LD)
@@ -465,6 +468,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
           searchParams={effectiveParams}
           destinationLabels={landing.labels}
           fetchRevalidate={fetchRevalidate}
+          charterFacts={charterFacts}
         />
       </Layout>
     </ResolvedDestinationProvider>

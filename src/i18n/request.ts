@@ -37,6 +37,9 @@ export default getRequestConfig(async ({ requestLocale }) => {
     itineraryThailand: (await import(`../../messages/${locale}/itineraryThailand.json`)).default,
     itineraryNetherlands: (await import(`../../messages/${locale}/itineraryNetherlands.json`)).default,
     itineraryGermany: (await import(`../../messages/${locale}/itineraryGermany.json`)).default,
+    models: (await import(`../../messages/${locale}/models.json`)).default,
+    charterFacts: (await import(`../../messages/${locale}/charterFacts.json`)).default,
+    review: (await import(`../../messages/${locale}/review.json`)).default,
   } as const;
 
   return {

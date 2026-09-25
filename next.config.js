@@ -30,6 +30,9 @@ const withNextIntl = createNextIntlPlugin({
       './messages/en/itineraryThailand.json',
       './messages/en/itineraryNetherlands.json',
       './messages/en/itineraryGermany.json',
+      './messages/en/models.json',
+      './messages/en/charterFacts.json',
+      './messages/en/review.json',
     ],
   },
 });
@@ -189,6 +192,18 @@ const nextConfig = {
       {
         source: '/seo-content/:path*',
         headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }],
+      },
+      // Guest review form (/[locale/]review/<token>): the token in the URL is
+      // the credential and the page shows the guest's booking. Never cached
+      // by a shared cache (overrides the s-maxage rule above — the last
+      // matching header wins), never sent on as a Referer, never indexed.
+      {
+        source: '/:locale(de|es|fr|it|pt|hr|pl|nl)?/review/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'private, no-store' },
+          { key: 'Referrer-Policy', value: 'no-referrer' },
+          { key: 'X-Robots-Tag', value: 'noindex, nofollow' },
+        ],
       },
     ];
   },

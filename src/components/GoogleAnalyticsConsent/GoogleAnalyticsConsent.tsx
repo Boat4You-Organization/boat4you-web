@@ -3,6 +3,7 @@
 import { useEffect } from 'react';
 
 import { GoogleAnalytics } from '@next/third-parties/google';
+import { usePathname } from 'next/navigation';
 
 import { shouldShowAnalytics, shouldShowMarketing } from '@/lib/cookie-consent';
 
@@ -15,6 +16,15 @@ type GtagFn = (...args: unknown[]) => void;
 
 const getGtag = (): GtagFn | undefined =>
   typeof window === 'undefined' ? undefined : (window as unknown as { gtag?: GtagFn }).gtag;
+
+/**
+ * Pages whose URL is a secret (the e-mailed review magic link, which also
+ * carries ?rating=). gtag.js is not loaded there at all: GA's page_view sends
+ * page_location = location.href, and even consent-denied cookieless pings
+ * carry it. Entry is always a full page load from the e-mail, so skipping
+ * the loader keeps the token out of every analytics hit.
+ */
+const NO_ANALYTICS_PATH = /^(?:\/[a-z]{2})?\/review(?:\/|$)/;
 
 // Google Consent Mode v2.
 //
@@ -30,6 +40,8 @@ const getGtag = (): GtagFn | undefined =>
 // MARKETING choice. GA4 is loaded eagerly by <GoogleAnalytics>; the Google Ads
 // conversion id(s) are configured here.
 export function GoogleAnalyticsConsent({ gaId, gAdsIds }: GoogleAnalyticsConsentProps) {
+  const disabled = NO_ANALYTICS_PATH.test(usePathname() ?? '');
+
   useEffect(() => {
     const sync = (): void => {
       const analytics = shouldShowAnalytics() ? 'granted' : 'denied';
@@ -56,12 +68,12 @@ export function GoogleAnalyticsConsent({ gaId, gAdsIds }: GoogleAnalyticsConsent
   useEffect(() => {
     const gtag = getGtag();
 
-    if (!gaId || !gtag || !gAdsIds?.length) return;
+    if (disabled || !gaId || !gtag || !gAdsIds?.length) return;
 
     gAdsIds.forEach(id => gtag('config', id));
-  }, [gaId, gAdsIds]);
+  }, [disabled, gaId, gAdsIds]);
 
-  if (!gaId) return null;
+  if (!gaId || disabled) return null;
 
   return <GoogleAnalytics gaId={gaId} />;
 }

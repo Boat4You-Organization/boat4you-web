@@ -8,6 +8,7 @@ import { MANUFACTURERS_PAGE_SIZE } from '@/config/constants.config';
 import { AllSearchParams } from '@/config/form-models.config';
 import { CatalogueData } from '@/models/catalogue.model';
 import { Currency } from '@/models/user.model';
+import { CharterFactsTarget } from '@/views/Search/CharterFacts';
 
 import BoatsWrapper from './BoatsWrapper';
 import FiltersSectionV2 from './FiltersSectionV2';
@@ -22,9 +23,16 @@ interface SearchViewProps {
   destinationLabels?: Record<string, string>;
   /** Data Cache window for the yacht list (undated landings only). */
   fetchRevalidate?: number;
+  /** Set on landings that pass the index gate in this locale: the charter facts block to show. */
+  charterFacts?: CharterFactsTarget | null;
 }
 
-const SearchView = async ({ searchParams, destinationLabels, fetchRevalidate }: SearchViewProps) => {
+const SearchView = async ({
+  searchParams,
+  destinationLabels,
+  fetchRevalidate,
+  charterFacts = null,
+}: SearchViewProps) => {
   const locale = await getLocale();
   const currency = (searchParams.currency as Currency) || Currency.EUR;
 
@@ -63,6 +71,7 @@ const SearchView = async ({ searchParams, destinationLabels, fetchRevalidate }: 
               searchParams={searchParams}
               destinationLabels={destinationLabels}
               fetchRevalidate={fetchRevalidate}
+              charterFacts={charterFacts}
             />
           </Suspense>
         </SearchResultsTransitionWrapper>

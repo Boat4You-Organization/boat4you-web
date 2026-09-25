@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "title": "Ihre Bewertung"
+  },
+  "greeting": "Hallo {name},",
+  "greetingNoName": "Hallo,",
+  "heading": {
+    "BOOKING": "Wie war Ihre Buchung bei Boat4You?",
+    "YACHT": "Wie war Ihr Törn?"
+  },
+  "intro": {
+    "BOOKING": "Erzählen Sie uns, wie die Buchung der {yacht} bei uns gelaufen ist. Das dauert nur eine Minute und hilft uns, besser zu werden.",
+    "YACHT": "Erzählen Sie uns von Ihrer Woche auf der {yacht}: vom Boot, vom Stützpunkt und vom Vercharterer. Ihre Bewertung hilft anderen Seglern bei der Wahl."
+  },
+  "detailsLabel": "Ihre Buchung",
+  "yacht": "Boot",
+  "dates": "Zeitraum",
+  "base": "Stützpunkt",
+  "reservation": "Buchung",
+  "editNote": "Sie haben diese Bewertung bereits abgeschickt. Sie können sie noch bis {date} ändern.",
+  "backHome": "Zurück zu Boat4You",
+  "expired": {
+    "title": "Dieser Bewertungslink ist nicht gültig",
+    "body": "Der Link ist möglicherweise abgelaufen (Links gelten 60 Tage) oder unvollständig. Wenn Sie uns trotzdem von Ihren Erfahrungen berichten möchten, schreiben Sie an info@boat4you.com."
+  },
+  "done": {
+    "title": "Vielen Dank, Ihre Bewertung ist bei uns angekommen",
+    "body": "Eine Bewertung kann bis 24 Stunden nach dem Absenden geändert werden. Möchten Sie etwas ergänzen, schreiben Sie uns an info@boat4you.com."
+  },
+  "unavailable": {
+    "title": "Das Bewertungsformular ist gerade nicht erreichbar",
+    "body": "Bitte versuchen Sie es in ein paar Minuten erneut. Ihr Link bleibt gültig."
+  },
+  "stars": "{count, plural, one {# Stern} other {# Sterne}}",
+  "noRating": "Keine Bewertung",
+  "overall": "Gesamtbewertung",
+  "required": "(Pflichtfeld)",
+  "scoresHeading": {
+    "BOOKING": "Einzelheiten bewerten (optional)",
+    "YACHT": "Einzelheiten bewerten (optional)"
+  },
+  "score": {
+    "easeOfBooking": "Einfachheit der Buchung",
+    "communication": "Kommunikation mit uns",
+    "valueTransparency": "Klare, faire Preise",
+    "boatCondition": "Zustand des Bootes",
+    "cleanliness": "Sauberkeit",
+    "checkInOut": "Check-in und Check-out",
+    "charterCompany": "Vercharterer",
+    "value": "Preis-Leistungs-Verhältnis"
+  },
+  "titleLabel": "Titel (optional)",
+  "textLabel": "Ihre Bewertung (optional)",
+  "counter": "{count} / {max} Zeichen",
+  "consentLabel": "Boat4You darf meine Bewertung veröffentlichen",
+  "consentHelp": "Mit diesem Häkchen kann Ihre Bewertung auf boat4you.com erscheinen – nur mit Ihrem Vornamen und Land, nie mit Nachnamen oder E-Mail-Adresse. Wir lesen jede Bewertung vor der Veröffentlichung. Ohne Häkchen nutzen wir Ihre Bewertung nur, um unseren Service zu verbessern.",
+  "submit": "Bewertung senden",
+  "submitEdit": "Änderungen speichern",
+  "submitting": "Wird gesendet …",
+  "success": {
+    "title": "Vielen Dank!",
+    "body": "Ihre Bewertung ist bei uns angekommen.",
+    "edited": "Ihre Änderungen wurden gespeichert.",
+    "published": "Nachdem wir sie gelesen haben, kann sie mit Ihrem Vornamen und Land auf boat4you.com erscheinen."
+  },
+  "errors": {
+    "rating": "Bitte wählen Sie eine Gesamtbewertung von 1 bis 5 Sternen.",
+    "score": "Bitte bewerten Sie jede Einzelheit mit 1 bis 5 Sternen oder lassen Sie sie leer.",
+    "title": "Der Titel darf höchstens 120 Zeichen lang sein.",
+    "text": "Die Bewertung darf höchstens 3.000 Zeichen lang sein.",
+    "editClosed": "Diese Bewertung kann nicht mehr geändert werden: Bewertungen lassen sich bis 24 Stunden nach dem Absenden bearbeiten.",
+    "rateLimited": "Zu viele Versuche. Bitte warten Sie eine Minute und versuchen Sie es erneut.",
+    "generic": "Etwas ist schiefgelaufen, Ihre Bewertung wurde nicht gesendet. Bitte versuchen Sie es erneut."
+  }
+}

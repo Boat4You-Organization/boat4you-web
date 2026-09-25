@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "title": "Your review"
+  },
+  "greeting": "Hello {name},",
+  "greetingNoName": "Hello,",
+  "heading": {
+    "BOOKING": "How was booking with Boat4You?",
+    "YACHT": "How was your charter?"
+  },
+  "intro": {
+    "BOOKING": "Tell us how booking {yacht} with us went. It takes a minute and helps us do better.",
+    "YACHT": "Tell us about your week on {yacht}: the boat, the base and the charter company. Your review helps other sailors choose."
+  },
+  "detailsLabel": "Your booking",
+  "yacht": "Boat",
+  "dates": "Dates",
+  "base": "Base",
+  "reservation": "Booking",
+  "editNote": "You have already sent this review. You can still change it until {date}.",
+  "backHome": "Back to Boat4You",
+  "expired": {
+    "title": "This review link is not valid",
+    "body": "The link may have expired (links are valid for 60 days) or may be incomplete. If you would still like to share your experience, write to us at info@boat4you.com."
+  },
+  "done": {
+    "title": "Thank you, we have your review",
+    "body": "A review can be changed for 24 hours after it is sent. If you would like to add something, write to us at info@boat4you.com."
+  },
+  "unavailable": {
+    "title": "The review form is not available right now",
+    "body": "Please try again in a few minutes. Your link stays valid."
+  },
+  "stars": "{count, plural, one {# star} other {# stars}}",
+  "noRating": "No rating",
+  "overall": "Overall rating",
+  "required": "(required)",
+  "scoresHeading": {
+    "BOOKING": "Rate the details (optional)",
+    "YACHT": "Rate the details (optional)"
+  },
+  "score": {
+    "easeOfBooking": "Ease of booking",
+    "communication": "Communication with us",
+    "valueTransparency": "Clear, fair pricing",
+    "boatCondition": "Condition of the boat",
+    "cleanliness": "Cleanliness",
+    "checkInOut": "Check-in and check-out",
+    "charterCompany": "Charter company",
+    "value": "Value for money"
+  },
+  "titleLabel": "Title (optional)",
+  "textLabel": "Your review (optional)",
+  "counter": "{count} / {max} characters",
+  "consentLabel": "Boat4You may publish my review",
+  "consentHelp": "If you tick this, your review may appear on boat4you.com with your first name and country only, never your surname or e-mail address. Every review is read before it is published. Without the tick we use your review only to improve our service.",
+  "submit": "Send review",
+  "submitEdit": "Save changes",
+  "submitting": "Sending…",
+  "success": {
+    "title": "Thank you!",
+    "body": "We have received your review.",
+    "edited": "Your changes have been saved.",
+    "published": "Once we have read it, it may appear on boat4you.com with your first name and country."
+  },
+  "errors": {
+    "rating": "Please choose an overall rating from 1 to 5 stars.",
+    "score": "Please rate each detail with 1 to 5 stars, or leave it empty.",
+    "title": "The title can be at most 120 characters long.",
+    "text": "The review can be at most 3,000 characters long.",
+    "editClosed": "This review can no longer be changed: reviews can be edited for 24 hours after they are sent.",
+    "rateLimited": "Too many attempts. Please wait a minute and try again.",
+    "generic": "Something went wrong and your review was not sent. Please try again."
+  }
+}

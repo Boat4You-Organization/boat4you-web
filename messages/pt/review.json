@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "title": "A sua avaliação"
+  },
+  "greeting": "Olá, {name},",
+  "greetingNoName": "Olá,",
+  "heading": {
+    "BOOKING": "Como correu a sua reserva com a Boat4You?",
+    "YACHT": "Como correu o seu charter?"
+  },
+  "intro": {
+    "BOOKING": "Diga-nos como correu a reserva do {yacht} connosco. Demora um minuto e ajuda-nos a melhorar.",
+    "YACHT": "Conte-nos como foi a sua semana a bordo do {yacht}: o barco, a base e a empresa de charter. A sua avaliação ajuda outros velejadores a escolher."
+  },
+  "detailsLabel": "A sua reserva",
+  "yacht": "Barco",
+  "dates": "Datas",
+  "base": "Base",
+  "reservation": "Reserva",
+  "editNote": "Já enviou esta avaliação. Ainda a pode alterar até {date}.",
+  "backHome": "Voltar à Boat4You",
+  "expired": {
+    "title": "Este link de avaliação não é válido",
+    "body": "O link pode ter expirado (os links são válidos durante 60 dias) ou estar incompleto. Se ainda quiser partilhar a sua experiência, escreva-nos para info@boat4you.com."
+  },
+  "done": {
+    "title": "Obrigado, já recebemos a sua avaliação",
+    "body": "Uma avaliação pode ser alterada durante 24 horas após o envio. Se quiser acrescentar algo, escreva-nos para info@boat4you.com."
+  },
+  "unavailable": {
+    "title": "O formulário de avaliação não está disponível neste momento",
+    "body": "Tente novamente dentro de alguns minutos. O seu link continua válido."
+  },
+  "stars": "{count, plural, one {# estrela} other {# estrelas}}",
+  "noRating": "Sem avaliação",
+  "overall": "Avaliação geral",
+  "required": "(obrigatória)",
+  "scoresHeading": {
+    "BOOKING": "Avalie os detalhes (opcional)",
+    "YACHT": "Avalie os detalhes (opcional)"
+  },
+  "score": {
+    "easeOfBooking": "Facilidade de reserva",
+    "communication": "Comunicação connosco",
+    "valueTransparency": "Preços claros e justos",
+    "boatCondition": "Estado do barco",
+    "cleanliness": "Limpeza",
+    "checkInOut": "Check-in e check-out",
+    "charterCompany": "Empresa de charter",
+    "value": "Relação qualidade-preço"
+  },
+  "titleLabel": "Título (opcional)",
+  "textLabel": "A sua avaliação (opcional)",
+  "counter": "{count} / {max} carateres",
+  "consentLabel": "A Boat4You pode publicar a minha avaliação",
+  "consentHelp": "Se assinalar esta opção, a sua avaliação poderá aparecer em boat4you.com apenas com o seu nome próprio e o país, nunca com o apelido ou o endereço de e-mail. Lemos todas as avaliações antes de as publicar. Sem esta opção, usamos a avaliação apenas para melhorar o nosso serviço.",
+  "submit": "Enviar avaliação",
+  "submitEdit": "Guardar alterações",
+  "submitting": "A enviar…",
+  "success": {
+    "title": "Obrigado!",
+    "body": "Recebemos a sua avaliação.",
+    "edited": "As suas alterações foram guardadas.",
+    "published": "Depois de a lermos, poderá aparecer em boat4you.com com o seu nome próprio e o país."
+  },
+  "errors": {
+    "rating": "Escolha uma avaliação geral de 1 a 5 estrelas.",
+    "score": "Avalie cada detalhe com 1 a 5 estrelas ou deixe-o em branco.",
+    "title": "O título pode ter no máximo 120 carateres.",
+    "text": "A avaliação pode ter no máximo 3000 carateres.",
+    "editClosed": "Esta avaliação já não pode ser alterada: as avaliações podem ser editadas durante 24 horas após o envio.",
+    "rateLimited": "Demasiadas tentativas. Aguarde um minuto e tente novamente.",
+    "generic": "Ocorreu um problema e a sua avaliação não foi enviada. Tente novamente."
+  }
+}

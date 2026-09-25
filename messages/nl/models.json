@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "indexTitle": "Boot huren per model: {models, number} populaire modellen",
+    "indexDescription": "Vergelijk de {models, number} zeiljacht- en catamaranmodellen met de meeste huurboten bij Boat4You: specificaties, thuishavens en gangbare weekprijzen per model.",
+    "brandTitle": "{brand} huren: {models, number} modellen, {count, number} boten",
+    "brandDescription": "Huur een {brand}: {count, number} boten in {models, number} modellen bij Boat4You. Vergelijk specificaties, thuishavens en gangbare weekprijzen en boek direct.",
+    "modelTitle": "{model} huren: {count, number} boten, havens en prijzen",
+    "modelDescription": "Vergelijk {count, number} {model} boten te huur: {cabins} hutten, bouwjaar {years}, een huurweek kost meestal {p25}–{p75}. Bestemmingen: {countries}. Direct boeken bij Boat4You.",
+    "modelDescriptionNoPrice": "Vergelijk {count, number} {model} boten te huur: {cabins} hutten, bouwjaar {years}. Bestemmingen: {countries}. Direct boeken bij Boat4You."
+  },
+  "breadcrumbLabel": "Kruimelpad",
+  "yachtModels": "Bootmodellen",
+  "boats": "{count, plural, one {# boot} other {# boten}}",
+  "cabins": "{count, plural, one {# hut} other {# hutten}}",
+  "guests": "{count, plural, one {# gast} other {# gasten}}",
+  "cabinsRange": "{range} hutten",
+  "priceBand": "{p25} – {p75} per week",
+  "index": {
+    "h1": "Boot huren per model",
+    "lede": "De {models, number} modellen met de meeste huurboten bij Boat4You, samen {count, number} boten. Elke modelpagina toont alle boten, hun thuishavens en wat een huurweek doorgaans kost."
+  },
+  "brand": {
+    "h1": "{brand} huren",
+    "lede": "Bij Boat4You huurt u {count, plural, one {# {brand} boot} other {# {brand} boten}} in {models, number} modellen. Kies een model voor de specificaties, thuishavens en gangbare weekprijzen.",
+    "modelsHeading": "{brand} modellen te huur"
+  },
+  "model": {
+    "h1": "{model} huren",
+    "lede": "Bij Boat4You {count, plural, one {is # {model} boot} other {zijn # {model} boten}} te huur, verspreid over {countryCount, plural, one {# land} other {# landen}}.",
+    "ledeYears": "De vloot is gebouwd tussen {from} en {to}.",
+    "ledeYear": "Alle boten in de vloot zijn gebouwd in {year}.",
+    "ledePrice": "Een huurweek kost doorgaans tussen {p25} en {p75}.",
+    "specsHeading": "Specificaties {model}",
+    "specFleet": "Boten te huur",
+    "specLength": "Lengte",
+    "specCabins": "Hutten",
+    "specGuests": "Gasten",
+    "specBerths": "Slaapplaatsen",
+    "specHeads": "Toiletten (WC)",
+    "specBuildYears": "Bouwjaren",
+    "lengthValue": "{m} m ({ft} ft)",
+    "specNote": "Hutten, gasten en lengte tonen het gebruikelijke bereik van de aangeboden {model} boten, zonder zeldzame uitschieters in partnergegevens. Slaapplaatsen en toiletten: de meest voorkomende indeling.",
+    "whereHeading": "Waar u een {model} kunt huren",
+    "whereCountry": "Land",
+    "whereBoats": "Boten",
+    "whereBases": "Belangrijkste havens",
+    "priceHeading": "Huurprijzen {model}",
+    "priceBody": "De helft van de aangeboden {model} boten kost tussen {p25} en {p75} per huurweek. Het bedrag geldt alleen voor de boothuur en komt uit de eerstvolgende beschikbare week van elke boot ({n, number} boten); schipper, verplichte extra’s en borg komen erbij.",
+    "boatsHeading": "{model} boten te huur",
+    "showAll": "Alle {model} boten bekijken in de zoekresultaten",
+    "fromPerWeek": "vanaf {price} per week",
+    "blogHeading": "Van ons blog",
+    "otherModels": "Andere {brand} modellen"
+  },
+  "boatLink": "Alle {model} boten ({count, number})"
+}
