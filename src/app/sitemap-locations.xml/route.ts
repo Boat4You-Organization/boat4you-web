@@ -2,6 +2,7 @@
 import { PROMOTED_COUNTRY_CODES } from '@/config/promoted-countries.config';
 import { routing } from '@/i18n/routing';
 import { CountryCountModel, LocationModel } from '@/models/locations.model';
+import { buildSearchLandingPath, isLandingExpressible } from '@/utils/static/searchLandingPath';
 
 export const revalidate = 3600;
 
@@ -51,6 +52,11 @@ export async function GET() {
     for (const item of [...countries, ...marinas]) {
       if (!item.name) continue;
 
+      // A name with a comma reads as two destinations in `?destinations=`
+      // (the page noindexes it as a multi-destination combo) — it can't be
+      // a landing page, so don't submit it.
+      if (!isLandingExpressible(item.name)) continue;
+
       const key = item.name.toLowerCase();
 
       if (seen.has(key)) continue;
@@ -74,8 +80,9 @@ export async function GET() {
       .flatMap(entry =>
         routing.locales.map(locale => {
           const prefix = locale === routing.defaultLocale ? '' : `/${locale}`;
-          const slug = entry.name.toLowerCase();
-          const loc = `${baseUrl}${prefix}/search?destinations=${encodeURIComponent(slug)}`;
+          // Same builder as the /search canonical + internal links, so the
+          // <loc> matches <link rel="canonical"> byte for byte.
+          const loc = `${baseUrl}${prefix}${buildSearchLandingPath(entry.name)}`;
 
           return `  <url>
     <loc>${loc}</loc>

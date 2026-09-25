@@ -2,6 +2,7 @@ import { PROMOTED_COUNTRY_CODES } from '@/config/promoted-countries.config';
 import { routing } from '@/i18n/routing';
 import { CountryCountModel } from '@/models/locations.model';
 import { VesselType } from '@/models/yacht.model';
+import { buildSearchLandingPath } from '@/utils/static/searchLandingPath';
 
 export const revalidate = 3600;
 
@@ -70,8 +71,8 @@ export async function GET() {
     promotedCountryNames.flatMap(country =>
       routing.locales.map(locale => {
         const prefix = locale === routing.defaultLocale ? '' : `/${locale}`;
-        const slug = country.toLowerCase();
-        const loc = `${baseUrl}${prefix}/search?destinations=${encodeURIComponent(slug)}&boatTypes=${type}`;
+        // Same builder as the /search canonical + internal links.
+        const loc = `${baseUrl}${prefix}${buildSearchLandingPath(country, type)}`;
 
         return `  <url>
     <loc>${escapeXml(loc)}</loc>
