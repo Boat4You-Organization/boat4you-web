@@ -25,8 +25,61 @@ const MANUFACTURER_ALIASES: { canonical: string; matches: RegExp }[] = [
   { canonical: 'Fountaine Pajot', matches: /^fountaine[\s-]*pajot/i },
 ];
 
-/** Placeholder makers that name no model family. */
-const EXCLUDED_MANUFACTURERS = new Set(['unknown', 'custom made', 'custom', 'other']);
+/** Makers that name no model family: placeholders, a vessel type
+ *  ("Motor Sailer") and charter operators whose rows rename other yards'
+ *  boats ("Sunsail 454", "Moorings 4500" are Leopard builds). Folded form. */
+const EXCLUDED_MANUFACTURERS = new Set([
+  'unknown',
+  'custom made',
+  'custom',
+  'other',
+  'motor sailer',
+  'sunsail',
+  'the moorings',
+  'moorings',
+  'more charter d o o',
+]);
+
+/** A model core made only of these words is a vessel type ("Gulet",
+ *  "Motor Yacht", "Catamaran"), not a model — no page for it. */
+const GENERIC_CORE_WORDS = new Set([
+  'gulet',
+  'gullet',
+  'caique',
+  'catamaran',
+  'trimaran',
+  'motor',
+  'motorboat',
+  'motoryacht',
+  'sailer',
+  'sailing',
+  'sail',
+  'sailboat',
+  'yacht',
+  'yachts',
+  'boat',
+  'boats',
+  'schooner',
+  'trawler',
+  'rib',
+  'houseboat',
+  'power',
+  'luxury',
+  'deluxe',
+  'classic',
+  'traditional',
+]);
+
+const isGenericCore = (core: string): boolean => core.split(' ').every(word => GENERIC_CORE_WORDS.has(word));
+
+/** Spellings of one model the general rules below cannot fold safely
+ *  (`<brand key>|<core>` → core). "Lagoon 450 Sport" is the 450 S
+ *  (Sportop); the bare "Lagoon 450" row is NOT folded into 450 F — most of
+ *  its boats were built after the 2016 F / S split, so it can be either. */
+const MODEL_CORE_ALIASES: Record<string, string> = {
+  'lagoon|450 sport': '450s',
+  'lagoon|450 sportop': '450s',
+};
 
 /** "Dufour Yachts" → "Dufour", "Bavaria Yachtbau" → "Bavaria"; a remainder
  *  shorter than 3 letters keeps the suffix ("Le Boat", "AD Boats"). */
@@ -115,11 +168,12 @@ export const modelIdentity = (rawManufacturer?: string | null, rawModel?: string
 
   if (!brand || !rawModel?.trim()) return null;
 
-  const core = modelCore(rawManufacturer, brand, rawModel);
-
-  if (!core) return null;
-
   const brandKey = foldName(brand);
+  const rawCore = modelCore(rawManufacturer, brand, rawModel);
+  const core = MODEL_CORE_ALIASES[`${brandKey}|${rawCore}`] ?? rawCore;
+
+  if (!core || isGenericCore(core)) return null;
+
   const brandSlug = slugifyName(brand);
 
   return {

@@ -16,11 +16,17 @@ export const COUNTRY_LABEL_KEY: Record<string, string> = {
   VG: 'virginIslandsBritish',
 };
 
-/** "3–6", or "4" when the range is one value. */
+/**
+ * "3–6", or "4" when both ends format to the same text — compared after
+ * formatting, so 13.9–14 m does not become "46–46 ft".
+ */
 export const formatRange = (range: Range | null, format: (n: number) => string = String): string | null => {
   if (!range) return null;
 
-  return range.min === range.max ? format(range.min) : `${format(range.min)}–${format(range.max)}`;
+  const min = format(range.min);
+  const max = format(range.max);
+
+  return min === max ? min : `${min}–${max}`;
 };
 
 export const M_PER_FT = 0.3048;

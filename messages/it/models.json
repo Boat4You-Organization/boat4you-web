@@ -5,7 +5,7 @@
     "brandTitle": "Noleggio {brand}: {models, number} modelli, {count, number} barche",
     "brandDescription": "Noleggia una {brand}: {count, number} barche in {models, number} modelli su Boat4You. Confronta caratteristiche, basi e prezzi settimanali tipici e prenota direttamente.",
     "modelTitle": "Noleggio {model}: {count, number} barche, basi e prezzi",
-    "modelDescription": "Confronta {count, number} barche {model} a noleggio: {cabins} cabine, anno di costruzione {years}, prezzi settimanali da {price}. Destinazioni: {countries}. Prenota direttamente su Boat4You.",
+    "modelDescription": "Confronta {count, number} barche {model} a noleggio: {cabins} cabine, anno di costruzione {years}, una settimana di noleggio di solito {p25}–{p75}. Destinazioni: {countries}. Prenota direttamente su Boat4You.",
     "modelDescriptionNoPrice": "Confronta {count, number} barche {model} a noleggio: {cabins} cabine, anno di costruzione {years}. Destinazioni: {countries}. Prenota direttamente su Boat4You."
   },
   "breadcrumbLabel": "Percorso di navigazione",
@@ -39,7 +39,7 @@
     "specHeads": "Bagni (WC)",
     "specBuildYears": "Anni di costruzione",
     "lengthValue": "{m} m ({ft} piedi)",
-    "specNote": "Gli intervalli comprendono tutte le barche {model} in elenco. Posti letto e bagni: la configurazione più diffusa.",
+    "specNote": "Cabine, ospiti e lunghezza indicano l’intervallo abituale delle barche {model} in elenco, esclusi i rari valori anomali dei partner. Posti letto e bagni: la configurazione più diffusa.",
     "whereHeading": "Dove noleggiare {model}",
     "whereCountry": "Paese",
     "whereBoats": "Barche",
@@ -47,7 +47,7 @@
     "priceHeading": "Prezzi di noleggio {model}",
     "priceBody": "La metà delle barche {model} in elenco costa tra {p25} e {p75} a settimana. L’importo riguarda il solo noleggio della barca ed è rilevato sulla prossima settimana disponibile di ciascuna ({n, number} barche): skipper, extra obbligatori e cauzione sono esclusi.",
     "boatsHeading": "Barche {model} a noleggio",
-    "showAll": "Mostra tutte le {count, number} barche {model}",
+    "showAll": "Vedi tutte le barche {model} nella ricerca",
     "fromPerWeek": "da {price} a settimana",
     "blogHeading": "Dal nostro blog",
     "otherModels": "Altri modelli {brand}"

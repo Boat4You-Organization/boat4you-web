@@ -41,10 +41,37 @@ export interface ModelFleetStats {
   vesselType: VesselType | null;
 }
 
-const rangeOf = (values: Array<number | null | undefined>): Range | null => {
-  const clean = values.filter((v): v is number => typeof v === 'number' && Number.isFinite(v) && v > 0);
+/**
+ * Share of boats left out at EACH end of a spec range. Partner data has
+ * outliers (a Lagoon 450 F "for 30 guests", a 12 m length on a 12.8 m
+ * model), so specs show the p5–p95 band — values real boats have, not the
+ * raw extremes. Under 20 boats nothing is trimmed.
+ */
+const SPEC_TRIM_SHARE = 0.05;
 
-  return clean.length ? { min: Math.min(...clean), max: Math.max(...clean) } : null;
+const cleanValues = (values: Array<number | null | undefined>): number[] =>
+  values.filter((v): v is number => typeof v === 'number' && Number.isFinite(v) && v > 0).sort((a, b) => a - b);
+
+/** Nearest-rank p5–p95: both ends are values some boat really has. */
+const typicalRange = (values: Array<number | null | undefined>): Range | null => {
+  const sorted = cleanValues(values);
+
+  if (!sorted.length) return null;
+
+  const cut = Math.floor(sorted.length * SPEC_TRIM_SHARE);
+
+  return { min: sorted[cut], max: sorted[sorted.length - 1 - cut] };
+};
+
+/**
+ * Build years are a real spread (old and new boats), so no trimming — only
+ * typos past next season's new builds are dropped.
+ */
+const buildYearRange = (values: Array<number | null | undefined>, now: Date): Range | null => {
+  const latest = now.getUTCFullYear() + 1;
+  const sorted = cleanValues(values).filter(year => year <= latest);
+
+  return sorted.length ? { min: sorted[0], max: sorted[sorted.length - 1] } : null;
 };
 
 /** Linear-interpolated percentile of a sorted list (0 ≤ q ≤ 1). */
@@ -64,7 +91,8 @@ export const weeklyPriceEur = (boat: YachtModelShortInfo): number | null =>
 export const computeModelFleetStats = (
   boats: YachtModelShortInfo[],
   total: number,
-  isCountryShown: (countryCode: string) => boolean
+  isCountryShown: (countryCode: string) => boolean,
+  now: Date = new Date()
 ): ModelFleetStats => {
   const weekly = boats
     .map(weeklyPriceEur)
@@ -114,10 +142,13 @@ export const computeModelFleetStats = (
 
   return {
     boats: total,
-    lengthM: rangeOf(boats.map(b => b.length)),
-    cabins: rangeOf(boats.map(b => b.cabins)),
-    guests: rangeOf(boats.map(b => b.maxPersons)),
-    buildYear: rangeOf(boats.map(b => b.buildYear)),
+    lengthM: typicalRange(boats.map(b => b.length)),
+    cabins: typicalRange(boats.map(b => b.cabins)),
+    guests: typicalRange(boats.map(b => b.maxPersons)),
+    buildYear: buildYearRange(
+      boats.map(b => b.buildYear),
+      now
+    ),
     weeklyPrice:
       weekly.length >= MIN_PRICE_SAMPLE
         ? {

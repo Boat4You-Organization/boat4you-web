@@ -5,7 +5,7 @@
     "brandTitle": "Czarter {brand}: {models, plural, one {# model} few {# modele} many {# modeli} other {# modelu}}, {count, plural, one {# jacht} few {# jachty} many {# jachtów} other {# jachtu}}",
     "brandDescription": "Wyczarteruj jacht {brand} w Boat4You: {count, plural, one {# jacht} few {# jachty} many {# jachtów} other {# jachtu}} w {models, plural, one {# modelu} other {# modelach}}. Porównaj dane techniczne, bazy i typowe ceny tygodniowe, a potem zarezerwuj bezpośrednio.",
     "modelTitle": "Czarter {model}: {count, plural, one {# jacht} few {# jachty} many {# jachtów} other {# jachtu}}, bazy i ceny",
-    "modelDescription": "Porównaj jachty {model} do czarteru ({count, number}): kabiny {cabins}, rok budowy {years}, ceny tygodniowe od {price}. Kierunki: {countries}. Rezerwuj bezpośrednio w Boat4You.",
+    "modelDescription": "Porównaj jachty {model} do czarteru ({count, number}): kabiny {cabins}, rok budowy {years}, tydzień czarteru zwykle {p25}–{p75}. Kierunki: {countries}. Rezerwuj bezpośrednio w Boat4You.",
     "modelDescriptionNoPrice": "Porównaj jachty {model} do czarteru ({count, number}): kabiny {cabins}, rok budowy {years}. Kierunki: {countries}. Rezerwuj bezpośrednio w Boat4You."
   },
   "breadcrumbLabel": "Ścieżka nawigacji",
@@ -39,7 +39,7 @@
     "specHeads": "Toalety (WC)",
     "specBuildYears": "Lata budowy",
     "lengthValue": "{m} m ({ft} stóp)",
-    "specNote": "Zakresy obejmują wszystkie oferowane jachty {model}. Koje i toalety: najczęstszy układ.",
+    "specNote": "Kabiny, osoby i długość to typowy zakres oferowanych jachtów {model}, bez rzadkich odstających wartości z danych partnerów. Koje i toalety: najczęstszy układ.",
     "whereHeading": "Gdzie wyczarterować {model}",
     "whereCountry": "Kraj",
     "whereBoats": "Jachty",
@@ -47,7 +47,7 @@
     "priceHeading": "Ceny czarteru {model}",
     "priceBody": "Połowa oferowanych jachtów {model} kosztuje od {p25} do {p75} za tydzień czarteru. Kwota dotyczy samego wynajmu jachtu i pochodzi z najbliższego wolnego tygodnia każdej jednostki (liczba jachtów: {n, number}); skipper, obowiązkowe dodatki i kaucja są płatne osobno.",
     "boatsHeading": "Jachty {model} do czarteru",
-    "showAll": "Pokaż wszystkie jachty {model} ({count, number})",
+    "showAll": "Zobacz wszystkie jachty {model} w wyszukiwarce",
     "fromPerWeek": "od {price} za tydzień",
     "blogHeading": "Z naszego bloga",
     "otherModels": "Inne modele {brand}"

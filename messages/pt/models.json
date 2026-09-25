@@ -5,7 +5,7 @@
     "brandTitle": "Aluguer de {brand}: {models, number} modelos, {count, number} barcos",
     "brandDescription": "Alugue um {brand}: {count, number} barcos em {models, number} modelos na Boat4You. Compare características, bases e preços semanais e reserve diretamente.",
     "modelTitle": "Aluguer de {model}: {count, number} barcos, bases e preços",
-    "modelDescription": "Compare {count, number} barcos {model} para alugar: {cabins} cabines, ano de construção {years}, preços semanais desde {price}. Destinos: {countries}. Reserve diretamente na Boat4You.",
+    "modelDescription": "Compare {count, number} barcos {model} para alugar: {cabins} cabines, ano de construção {years}, uma semana de aluguer custa habitualmente {p25}–{p75}. Destinos: {countries}. Reserve diretamente na Boat4You.",
     "modelDescriptionNoPrice": "Compare {count, number} barcos {model} para alugar: {cabins} cabines, ano de construção {years}. Destinos: {countries}. Reserve diretamente na Boat4You."
   },
   "breadcrumbLabel": "Navegação estrutural",
@@ -39,7 +39,7 @@
     "specHeads": "Casas de banho (WC)",
     "specBuildYears": "Anos de construção",
     "lengthValue": "{m} m ({ft} pés)",
-    "specNote": "Os intervalos abrangem todos os barcos {model} anunciados. Beliches e casas de banho: a configuração mais comum.",
+    "specNote": "Cabines, pessoas e comprimento mostram o intervalo habitual dos barcos {model} anunciados, sem os raros valores atípicos dos parceiros. Beliches e casas de banho: a configuração mais comum.",
     "whereHeading": "Onde alugar um {model}",
     "whereCountry": "País",
     "whereBoats": "Barcos",
@@ -47,7 +47,7 @@
     "priceHeading": "Preços de aluguer do {model}",
     "priceBody": "Metade dos barcos {model} anunciados custa entre {p25} e {p75} por semana de aluguer. O valor refere-se apenas ao aluguer do barco e é retirado da próxima semana disponível de cada um ({n, number} barcos): skipper, extras obrigatórios e caução pagam-se à parte.",
     "boatsHeading": "Barcos {model} para alugar",
-    "showAll": "Ver os {count, number} barcos {model}",
+    "showAll": "Ver todos os barcos {model} na pesquisa",
     "fromPerWeek": "desde {price} por semana",
     "blogHeading": "Do nosso blogue",
     "otherModels": "Outros modelos {brand}"

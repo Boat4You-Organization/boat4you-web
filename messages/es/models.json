@@ -5,7 +5,7 @@
     "brandTitle": "Alquiler de {brand}: {models, number} modelos, {count, number} barcos",
     "brandDescription": "Alquila un {brand}: {count, number} barcos en {models, number} modelos en Boat4You. Compara características, bases y precios semanales y reserva directamente.",
     "modelTitle": "Alquiler de {model}: {count, number} barcos, bases y precios",
-    "modelDescription": "Compara {count, number} barcos {model} en alquiler: {cabins} camarotes, año de construcción {years}, precios semanales desde {price}. Destinos: {countries}. Reserva directa en Boat4You.",
+    "modelDescription": "Compara {count, number} barcos {model} en alquiler: {cabins} camarotes, año de construcción {years}, una semana de alquiler suele costar {p25}–{p75}. Destinos: {countries}. Reserva directa en Boat4You.",
     "modelDescriptionNoPrice": "Compara {count, number} barcos {model} en alquiler: {cabins} camarotes, año de construcción {years}. Destinos: {countries}. Reserva directa en Boat4You."
   },
   "breadcrumbLabel": "Ruta de navegación",
@@ -39,7 +39,7 @@
     "specHeads": "Baños (WC)",
     "specBuildYears": "Años de construcción",
     "lengthValue": "{m} m ({ft} pies)",
-    "specNote": "Los rangos incluyen todos los barcos {model} publicados. Literas y baños: la distribución más habitual.",
+    "specNote": "Camarotes, personas y eslora muestran el rango habitual de los barcos {model} publicados, sin los pocos valores atípicos de los socios. Literas y baños: la distribución más habitual.",
     "whereHeading": "Dónde alquilar un {model}",
     "whereCountry": "País",
     "whereBoats": "Barcos",
@@ -47,7 +47,7 @@
     "priceHeading": "Precios de alquiler del {model}",
     "priceBody": "La mitad de los barcos {model} publicados cuesta entre {p25} y {p75} por semana de alquiler. La cifra corresponde solo al alquiler del barco y se toma de la próxima semana disponible de cada uno ({n, number} barcos): patrón, extras obligatorios y fianza van aparte.",
     "boatsHeading": "Barcos {model} en alquiler",
-    "showAll": "Ver los {count, number} barcos {model}",
+    "showAll": "Ver todos los barcos {model} en el buscador",
     "fromPerWeek": "desde {price} por semana",
     "blogHeading": "De nuestro blog",
     "otherModels": "Otros modelos de {brand}"

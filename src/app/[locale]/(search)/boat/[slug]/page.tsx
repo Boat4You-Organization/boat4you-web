@@ -415,7 +415,12 @@ const BoatPage = async ({
       <BoatTransitionProvider>
         <BoatHeroSection yacht={yacht} />
         <BoatContentSection yacht={yacht} yachtFaq={yachtFaq} />
-        <ModelPageLink manufacturerName={yacht.manufacturerName} modelName={yacht.model} locale={locale} />
+        <ModelPageLink
+          manufacturerName={yacht.manufacturerName}
+          modelName={yacht.model}
+          countryCode={yacht.location?.countryCode}
+          locale={locale}
+        />
         {/* Post-content upsell order fixed by Mario (21.7.2026): similar
             boats FIRST, day-by-day itineraries for the marina below. */}
         <RelatedBoats yacht={yacht} user={user} locale={locale} currency={currency} />

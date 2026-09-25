@@ -92,10 +92,13 @@ export async function generateMetadata({ params }: ModelPageProps): Promise<Meta
     years: formatRange(stats.buildYear) ?? '',
     countries,
   };
+  // The typical band (p25–p75), as on the page — not "from p25", which the
+  // cheaper boat cards on the same page would contradict.
   const description = stats.weeklyPrice
     ? t('meta.modelDescription', {
         ...values,
-        price: formatPriceWithCurrency({ clientPriceEur: stats.weeklyPrice.p25, locale }),
+        p25: formatPriceWithCurrency({ clientPriceEur: stats.weeklyPrice.p25, locale }),
+        p75: formatPriceWithCurrency({ clientPriceEur: stats.weeklyPrice.p75, locale }),
       })
     : t('meta.modelDescriptionNoPrice', values);
 
@@ -163,6 +166,8 @@ const ModelPage = async ({ params }: ModelPageProps) => {
     { name: model.displayName },
   ];
   const otherModels = (brand?.models ?? []).filter(m => m.path !== model.path);
+  // /search has no country filter, so it lists the model worldwide — the
+  // button therefore names no count (the page counts the 12 promoted countries).
   const showAllHref = `/search?mid=${model.modelIds.join(',')}`;
 
   const breadcrumbLd = {

@@ -5,7 +5,7 @@
     "brandTitle": "{brand} huren: {models, number} modellen, {count, number} boten",
     "brandDescription": "Huur een {brand}: {count, number} boten in {models, number} modellen bij Boat4You. Vergelijk specificaties, thuishavens en gangbare weekprijzen en boek direct.",
     "modelTitle": "{model} huren: {count, number} boten, havens en prijzen",
-    "modelDescription": "Vergelijk {count, number} {model} boten te huur: {cabins} hutten, bouwjaar {years}, weekprijzen vanaf {price}. Bestemmingen: {countries}. Direct boeken bij Boat4You.",
+    "modelDescription": "Vergelijk {count, number} {model} boten te huur: {cabins} hutten, bouwjaar {years}, een huurweek kost meestal {p25}–{p75}. Bestemmingen: {countries}. Direct boeken bij Boat4You.",
     "modelDescriptionNoPrice": "Vergelijk {count, number} {model} boten te huur: {cabins} hutten, bouwjaar {years}. Bestemmingen: {countries}. Direct boeken bij Boat4You."
   },
   "breadcrumbLabel": "Kruimelpad",
@@ -39,7 +39,7 @@
     "specHeads": "Toiletten (WC)",
     "specBuildYears": "Bouwjaren",
     "lengthValue": "{m} m ({ft} ft)",
-    "specNote": "De bereiken omvatten alle aangeboden {model} boten. Slaapplaatsen en toiletten: de meest voorkomende indeling.",
+    "specNote": "Hutten, gasten en lengte tonen het gebruikelijke bereik van de aangeboden {model} boten, zonder zeldzame uitschieters in partnergegevens. Slaapplaatsen en toiletten: de meest voorkomende indeling.",
     "whereHeading": "Waar u een {model} kunt huren",
     "whereCountry": "Land",
     "whereBoats": "Boten",
@@ -47,7 +47,7 @@
     "priceHeading": "Huurprijzen {model}",
     "priceBody": "De helft van de aangeboden {model} boten kost tussen {p25} en {p75} per huurweek. Het bedrag geldt alleen voor de boothuur en komt uit de eerstvolgende beschikbare week van elke boot ({n, number} boten); schipper, verplichte extra’s en borg komen erbij.",
     "boatsHeading": "{model} boten te huur",
-    "showAll": "Alle {count, number} {model} boten bekijken",
+    "showAll": "Alle {model} boten bekijken in de zoekresultaten",
     "fromPerWeek": "vanaf {price} per week",
     "blogHeading": "Van ons blog",
     "otherModels": "Andere {brand} modellen"

@@ -5,7 +5,7 @@
     "brandTitle": "Location {brand} : {models, number} modèles, {count, number} bateaux",
     "brandDescription": "Louez un {brand} : {count, number} bateaux répartis sur {models, number} modèles sur Boat4You. Comparez caractéristiques, bases et prix à la semaine, puis réservez en direct.",
     "modelTitle": "Location {model} : {count, number} bateaux, bases et prix",
-    "modelDescription": "Comparez {count, number} {model} à louer : {cabins} cabines, construction {years}, prix à la semaine dès {price}. Destinations : {countries}. Réservation directe sur Boat4You.",
+    "modelDescription": "Comparez {count, number} {model} à louer : {cabins} cabines, construction {years}, en général {p25}–{p75} la semaine de location. Destinations : {countries}. Réservation directe sur Boat4You.",
     "modelDescriptionNoPrice": "Comparez {count, number} {model} à louer : {cabins} cabines, construction {years}. Destinations : {countries}. Réservation directe sur Boat4You."
   },
   "breadcrumbLabel": "Fil d’Ariane",
@@ -39,7 +39,7 @@
     "specHeads": "Toilettes (WC)",
     "specBuildYears": "Années de construction",
     "lengthValue": "{m} m ({ft} pieds)",
-    "specNote": "Les fourchettes couvrent tous les {model} proposés. Couchettes et toilettes : l’aménagement le plus courant.",
+    "specNote": "Cabines, personnes et longueur : la fourchette habituelle des {model} proposés, sans les rares valeurs aberrantes des partenaires. Couchettes et toilettes : l’aménagement le plus courant.",
     "whereHeading": "Où louer un {model}",
     "whereCountry": "Pays",
     "whereBoats": "Bateaux",
@@ -47,7 +47,7 @@
     "priceHeading": "Prix de location du {model}",
     "priceBody": "La moitié des {model} proposés coûtent entre {p25} et {p75} la semaine. Ce montant correspond à la seule location du bateau, relevé sur la prochaine semaine disponible de chacun ({n, number} bateaux) : skipper, suppléments obligatoires et caution s’y ajoutent.",
     "boatsHeading": "{model} à louer",
-    "showAll": "Voir les {count, number} {model}",
+    "showAll": "Voir tous les {model} dans la recherche",
     "fromPerWeek": "dès {price} / semaine",
     "blogHeading": "Sur notre blog",
     "otherModels": "Autres modèles {brand}"

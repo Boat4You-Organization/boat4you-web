@@ -5,7 +5,7 @@
     "brandTitle": "{brand} charter: {models, number} models, {count, number} boats",
     "brandDescription": "Charter a {brand}: {count, number} boats across {models, number} models on Boat4You. Compare specifications, bases and typical weekly prices, then book directly.",
     "modelTitle": "{model} charter: {count, number} boats, bases and prices",
-    "modelDescription": "Compare {count, number} {model} boats for charter: {cabins} cabins, built {years}, weekly prices from {price}. Destinations: {countries}. Book directly on Boat4You.",
+    "modelDescription": "Compare {count, number} {model} boats for charter: {cabins} cabins, built {years}, a charter week typically {p25}–{p75}. Destinations: {countries}. Book directly on Boat4You.",
     "modelDescriptionNoPrice": "Compare {count, number} {model} boats for charter: {cabins} cabins, built {years}. Destinations: {countries}. Book directly on Boat4You."
   },
   "breadcrumbLabel": "Breadcrumb",
@@ -39,7 +39,7 @@
     "specHeads": "Heads (WC)",
     "specBuildYears": "Build years",
     "lengthValue": "{m} m ({ft} ft)",
-    "specNote": "Ranges cover every {model} we list. Berths and heads show the most common layout.",
+    "specNote": "Cabins, guests and length show the usual range across the {model} boats we list, leaving out rare outliers in partner data. Berths and heads show the most common layout.",
     "whereHeading": "Where to charter a {model}",
     "whereCountry": "Country",
     "whereBoats": "Boats",
@@ -47,7 +47,7 @@
     "priceHeading": "{model} charter prices",
     "priceBody": "Half of the {model} boats we list cost between {p25} and {p75} for a charter week. The figure covers the boat hire only and is taken from each boat’s next available week ({n, number} boats), so a skipper, obligatory extras and the security deposit come on top.",
     "boatsHeading": "{model} boats for charter",
-    "showAll": "Show all {count, number} {model} boats",
+    "showAll": "See all {model} boats in search",
     "fromPerWeek": "from {price} / week",
     "blogHeading": "From our blog",
     "otherModels": "Other {brand} models"

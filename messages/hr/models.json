@@ -5,7 +5,7 @@
     "brandTitle": "Najam {brand}: {models, plural, one {# model} few {# modela} other {# modela}}, {count, plural, one {# brod} few {# broda} other {# brodova}}",
     "brandDescription": "Unajmite {brand} na Boat4You: {count, plural, one {# brod} few {# broda} other {# brodova}} u {models, plural, one {# modelu} other {# modela}}. Usporedite tehničke podatke, baze i uobičajene tjedne cijene te rezervirajte izravno.",
     "modelTitle": "Najam {model}: {count, plural, one {# brod} few {# broda} other {# brodova}}, baze i cijene",
-    "modelDescription": "Usporedite {count, plural, one {# brod} few {# broda} other {# brodova}} {model} za najam: kabine {cabins}, godina gradnje {years}, tjedne cijene od {price}. Destinacije: {countries}. Rezervirajte izravno na Boat4You.",
+    "modelDescription": "Usporedite {count, plural, one {# brod} few {# broda} other {# brodova}} {model} za najam: kabine {cabins}, godina gradnje {years}, tjedan najma obično {p25}–{p75}. Destinacije: {countries}. Rezervirajte izravno na Boat4You.",
     "modelDescriptionNoPrice": "Usporedite {count, plural, one {# brod} few {# broda} other {# brodova}} {model} za najam: kabine {cabins}, godina gradnje {years}. Destinacije: {countries}. Rezervirajte izravno na Boat4You."
   },
   "breadcrumbLabel": "Navigacijski put",
@@ -39,7 +39,7 @@
     "specHeads": "Toaleti (WC)",
     "specBuildYears": "Godine gradnje",
     "lengthValue": "{m} m ({ft} ft)",
-    "specNote": "Rasponi obuhvaćaju sve ponuđene brodove {model}. Ležajevi i toaleti: najčešći raspored.",
+    "specNote": "Kabine, osobe i duljina prikazuju uobičajeni raspon ponuđenih brodova {model}, bez rijetkih odstupanja u podacima partnera. Ležajevi i toaleti: najčešći raspored.",
     "whereHeading": "Gdje unajmiti {model}",
     "whereCountry": "Zemlja",
     "whereBoats": "Brodovi",
@@ -47,7 +47,7 @@
     "priceHeading": "Cijene najma {model}",
     "priceBody": "Polovica ponuđenih brodova {model} stoji između {p25} i {p75} za tjedan najma. Iznos se odnosi samo na najam broda i uzet je iz prvog slobodnog tjedna svakog broda (ukupno {n, number}); skiper, obvezni dodaci i polog plaćaju se dodatno.",
     "boatsHeading": "Brodovi {model} za najam",
-    "showAll": "Prikaži sve brodove {model} ({count, number})",
+    "showAll": "Pogledajte sve brodove {model} u tražilici",
     "fromPerWeek": "od {price} tjedno",
     "blogHeading": "S našeg bloga",
     "otherModels": "Ostali modeli {brand}"

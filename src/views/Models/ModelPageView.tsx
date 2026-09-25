@@ -227,7 +227,7 @@ const ModelPageView = async ({
         {stats.boats > boats.length && (
           <div className={styles.actions}>
             <Link href={showAllHref} prefetch={false} className={styles.button} rel="nofollow">
-              {t('model.showAll', { count: stats.boats, model: name })}
+              {t('model.showAll', { model: name })}
             </Link>
           </div>
         )}
