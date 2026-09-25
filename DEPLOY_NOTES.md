@@ -1,5 +1,65 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-09-25 — 🌊 Wave 2: sitemap iz korpusa (prag 10), lastmod, cache landinga, linkovi brod/blog/itinerari → hubovi, jedan izvor brojki — ⏳ NIJE DEPLOYANO
+
+Commiti `d9201e58` … `6cd95cdc` (8, na HEAD iznad `fc1ee504`). Nije pushano, nije deployano.
+
+**Što i zašto**
+
+1. **Sitemap iz korpusa + prag (Mario 25.9.)** — `src/utils/server/landingManifest.ts` čita popis `public/seo-content/en`,
+   svaki file rezolvira u katalošku landing stranicu (isti resolver kao /search; `DESTINATION_ALIAS` u `curatedSeoSlug.ts`
+   proširen s ~80 ručno provjerenih imena, npr. Alimos Marina → `athens-alimos-marina`) i emitira ga ako prođe
+   `landingGate.ts`. **Prag (jedna konstanta, `MIN_LANDING_FLEET = 10`):** 12 promoted zemalja uvijek; sve ostalo (regija,
+   baza, destinacija × tip) ≥ 10 aktivnih brodova (tog tipa) + vlastiti kurirani tekst (tip-landing treba tip-tekst; alias
+   koji posuđuje tuđi file ne dobiva index). Regije bez countryCode (MMK „Dubrovnik / Montenegro") samo ako im je cijela
+   flota u promoted zemljama. Lokalno uz prod API: `sitemap-locations` **171 → 576** (64 × 9), `sitemap-categories`
+   **468 → 3.240** (360 × 9), 0 URL-ova sa zarezom; 180/180 uzorkovanih URL-ova = `index` + canonical = `<loc>`.
+   Apostrof u URL-u sad `%27` (canonical ga tako renderira). Korpus: 1.432 filea → 385 bez kataloškog mjesta (190
+   prefiksa: sibenik-region, athens, milazzo, zadar-region, pula, crete, epirus, istra, kvarner, trogir-yachtclub-seget…),
+   287 „shadowed" (drugi tekst za isto mjesto, npr. `split` uz `split-region`), ~336 ispod praga. Popis:
+   `SEO_MANIFEST_REPORT=1` → log `[seo-manifest]` pri generiranju sitemap-locations.
+2. **lastmod** — maknut request-time `<lastmod>` iz sitemap indeksa, static, itineraries, yachts, locations, categories.
+   Ostaje samo sitemap-blogs (pravi datum posta).
+3. **Cache landinga** — `fetchYachts` prima `revalidate`; landing BEZ datuma i filtera (samo destinations/boatTypes/page)
+   čita listu brodova kroz Data Cache **600 s** (`landingFetchRevalidate`, `searchLanding.ts`). Datumi, vlastiti did,
+   sidebar filteri, sort i admin inquiry ostaju `no-store`.
+4. **Brod → hubovi** — na `/boat/[slug]` (×9) vidljivi `<nav>` breadcrumb Početna › Zemlja › Regija/baza › Tip › brod
+   (link samo ako landing prolazi gate, inače tekst) + „Još {tip}: {regija} (N) →"; BreadcrumbList JSON-LD iste URL-ove
+   (prije: `/search?boatTypes=X` i `?destinations=<grad>`, oboje noindex). Blok je između sadržaja i „slični brodovi" —
+   hero netaknut, SSR, bez pomaka. Marina → regija: `/public/regions?countryCode` + `/public/locations-count?regionId`
+   (1 h cache). Product/FAQ JSON-LD broda sad kroz `serializeJsonLd`.
+5. **Blog → katalog** — u tijelu posta `/boat/<slug>?startDate…` → čisti URL, `/search?…did=` → kanonski landing;
+   SSR blok „Istražite brodove" (3–6 hubova iz naslova/kategorija/teksta + tip×mjesto kad je post o tipu/modelu + itinerar
+   područja); /blog: 6 najvećih promoted zemalja. Hreflang postova i dalje samo `en` + `x-default` (provjereno).
+6. **Itinerari → brodovi** — area i route stranice: „Dostupni brodovi – polazna luka: {baza} (N)" (12 kartica,
+   `StaticBoatListingItemCard` bez useSearchParams) + „Najbolji tipovi brodova za ovu rutu" (tip-landinzi koji prolaze gate).
+   Stranice su sad **ISR 1 h**. **Payload:** segment layout `/itineraries` je slao svih 12 itinerary namespaceova
+   (~1,9 MB od 2,47 MB) → layout obrisan, area/route dobivaju samo svoj (hub i builder i dalje sve). Lokalno (dev)
+   `/itineraries/split` 2,71 → 1,57 MB s karticama.
+7. **Jedan izvor brojki** — `src/utils/server/siteStats.ts` (6 h cache): brodovi = `/public/yachts` total (= /search
+   naslov), zemlje/marine s brodovima iz count endpointa. Koristi ga /about-us (SSR broj, ne „0+"), hero pillovi na
+   naslovnici (**zamjenjuje ručno fiksirane 11.982 / 647 od 2.6.**), JSON-LD opis (novi namespace `siteFacts`, 9 jezika)
+   i `llms.txt` (sad route handler, `public/llms.txt` obrisan). Organization: `alternateName ["Boat4You","boat4you.com"]`,
+   legalName i sameAs (Wikidata Q141206019 + 4 profila) nepromijenjeni.
+
+Novi namespaceovi (server-only): `catalogueLinks`, `siteFacts` — svih 9 jezika.
+
+**Akcije pred / nakon deploya**
+
+- [ ] Build prerenderira sitemape: manifest = ~0,7–1K malih `size=1` upita (max 6 paralelno, 1 h Data Cache; prije ~150).
+      Ne buildati u sync prozoru cusma2. Itinerari (ISR) pri buildu dohvaćaju listu brodova po bazi (jednom po bazi, EN).
+- [ ] nginx (cusma1/cusma5): provjeriti da `/llms.txt` NIJE statički serviran iz starog `public/` (sad je Next ruta).
+- [ ] Nakon deploya: GSC → ponovno poslati `sitemap.xml`; pratiti indexed/submitted za locations/categories 8 tjedana.
+- [ ] Provjera uživo: `curl -s https://www.boat4you.com/sitemap-locations.xml | grep -c '<loc>'` ≈ 576,
+      `sitemap-categories` ≈ 3.240, `grep -c lastmod` = 0 (osim sitemap-blogs); `/boat/<slug>` ima
+      `<nav aria-label=…>`; `/blog/<slug>` ima `explore-boats-title`; `/itineraries/split` < 1,5 MB i 12 `/boat/` linkova;
+      `/about-us` bez „0+"; `/llms.txt` 200 text/plain.
+- [ ] Otvoreno (nije dirano): `metadata.base.description` (meta description naslovnice, 9 jezika) i dalje kaže „100+
+      countries" — katalog ima 62 zemlje; promjena SERP snippeta = Mariova odluka.
+
+**Rollback:** `.next.prev` swap (kao inače). Kod: `git revert 6cd95cdc c6c24ea8 71ab7882 5cc0feab 6cb7e17e a629cad9
+c0b20c60 d9201e58`.
+
 ## 2026-09-25 — 🧭 /search landing: filtriranje, SSR tekstovi, sitemap = index gate — ⏳ NIJE DEPLOYANO
 
 **✅ LIVE 25.9.2026 ~12:27 UTC — BUILD_ID `PNhZDQdC3LxKlsbbcJvKl` (HEAD `1d7b9aa8`).** Verified on production: greece/italy/split/croatia×CATAMARAN/greece×CATAMARAN each render their own boat list (md5 differ; Greece first boat jeanneau-sun-odyssey-479-sirius-19668, heading "3,407 boats available"); curated H2 in raw HTML; "sought-after sailing destinations" template 0×; unknown destination (atlantis) → noindex; `/seo-content/*` → `x-robots-tag: noindex, nofollow`; `</script>` XSS probe → 0 hits; sitemap-locations 5,985 → 171 URLs, sitemap-categories 468. `public/seo-content/en` on cusma1 = 1,435 files. Rollback `.next.prev`.
