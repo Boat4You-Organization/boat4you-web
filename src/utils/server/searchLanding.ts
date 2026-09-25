@@ -1,6 +1,8 @@
 import 'server-only';
 
 import { AllSearchParams } from '@/config/form-models.config';
+import { Currency } from '@/models/user.model';
+import { isVesselType } from '@/models/yacht.model';
 import { ResolvedDestination, resolveDestinationDids } from '@/utils/server/destinationDid';
 
 /**
@@ -80,59 +82,111 @@ export const withLandingDid = (params: AllSearchParams, landing: SearchLanding):
  * not by the minute; ten minutes stale is invisible to a visitor and makes
  * repeat crawls and the page's second fetch (Product JSON-LD) warm.
  *
- * Kept `no-store` whenever the visitor asked for something specific: dates
- * (availability and the exact-period price must be live), a did of their
- * own (dropdown pick), any sidebar filter or sort, or an admin inquiry.
- * Tracking parameters (utm_*, gclid) do not count as filters.
+ * ALLOWLIST, not a filter denylist: the Data Cache is keyed on the backend
+ * URL and the self-hosted filesystem cache has no eviction, so a request is
+ * cached only when it is a real landing — every parameter it carries is a
+ * landing parameter with a valid value (a resolved destination, known boat
+ * types, a plain page number, a known currency) or a tracking parameter —
+ * and the backend query is then rebuilt from the canonical values alone
+ * (yachtFetchParams), so spelling variants and gclid/utm_* share one entry.
+ * Anything else — dates, a did of the visitor's own, a sidebar filter, sort,
+ * an admin inquiry, an unknown destination or a made-up parameter — stays
+ * `no-store`, as before this cache existed, so no query string can mint new
+ * cache entries.
  */
 export const LANDING_FETCH_REVALIDATE_SECONDS = 600;
 
-const USER_FILTER_PARAMS = [
-  'startDate',
-  'endDate',
-  'dateFrom',
-  'dateTo',
-  'did',
-  'inquiryId',
-  'search',
-  'manufacturers',
-  'models',
-  'mfid',
-  'mid',
-  'amenities',
-  'services',
-  'amenityLabels',
-  'servicesLabels',
-  'charterType',
-  'mainSailType',
-  'yid',
-  'sortBy',
-  'sortDirection',
-  'minPrice',
-  'maxPrice',
-  'minCabins',
-  'maxCabins',
-  'minPersons',
-  'maxPersons',
-  'minBerths',
-  'maxBerths',
-  'minLength',
-  'maxLength',
-  'minBuildYear',
-  'maxBuildYear',
-  'minWc',
-  'maxWc',
-  'minEnginePower',
-  'maxEnginePower',
-];
+const LANDING_CACHE_PARAMS = new Set(['destinations', 'boatTypes', 'page', 'currency']);
+const MAX_CACHED_PAGE = 500;
 
-/** Pass the ORIGINAL request params (before withLandingDid adds the resolved did). */
-export const landingFetchRevalidate = (params: AllSearchParams): number | undefined => {
-  const hasUserFilter = USER_FILTER_PARAMS.some(key => {
-    const value = (params as unknown as Record<string, unknown>)[key];
+// Ad-click and campaign identifiers: every Google Ads click carries a unique
+// gclid. They never change the yacht list, so they are never sent to the
+// backend (cached or not).
+const TRACKING_PARAMS = new Set([
+  'gclid',
+  'gbraid',
+  'wbraid',
+  'gclsrc',
+  'gad_source',
+  'gad_campaignid',
+  'dclid',
+  'fbclid',
+  'msclkid',
+  'ttclid',
+  'twclid',
+  'li_fat_id',
+  'igshid',
+  'yclid',
+  'mc_cid',
+  'mc_eid',
+  'srsltid',
+  '_gl',
+]);
 
-    return Array.isArray(value) ? value.length > 0 : value != null && String(value).trim() !== '';
-  });
+const isTrackingParam = (key: string): boolean => key.startsWith('utm_') || TRACKING_PARAMS.has(key);
 
-  return hasUserFilter ? undefined : LANDING_FETCH_REVALIDATE_SECONDS;
+const hasValue = (value: unknown): boolean =>
+  Array.isArray(value)
+    ? value.some(v => v != null && String(v).trim() !== '')
+    : value != null && String(value).trim() !== '';
+
+const CURRENCIES = new Set<string>(Object.values(Currency));
+
+/** `page` as a landing page number (1…MAX_CACHED_PAGE), else null. */
+const landingPage = (raw: unknown): number | null => {
+  const value = splitSearchParam(raw);
+
+  if (value.length !== 1 || !/^[1-9]\d{0,2}$/.test(value[0])) return null;
+
+  const page = Number(value[0]);
+
+  return page <= MAX_CACHED_PAGE ? page : null;
+};
+
+/**
+ * Pass the ORIGINAL request params (before withLandingDid adds the resolved
+ * did) and the resolved landing.
+ */
+export const landingFetchRevalidate = (params: AllSearchParams, landing: SearchLanding): number | undefined => {
+  const entries = Object.entries(params as unknown as Record<string, unknown>).filter(([, v]) => hasValue(v));
+
+  if (!entries.every(([key]) => LANDING_CACHE_PARAMS.has(key) || isTrackingParam(key))) return undefined;
+
+  // A destination must resolve (an unknown one lists the whole catalogue
+  // under a URL anyone can vary).
+  if (landing.destinations.length && (!landing.did.length || landing.resolved.some(r => !r))) return undefined;
+
+  if (!splitSearchParam(params.boatTypes).every(isVesselType)) return undefined;
+
+  if (hasValue(params.page) && landingPage(params.page) == null) return undefined;
+
+  if (hasValue(params.currency) && !splitSearchParam(params.currency).every(c => CURRENCIES.has(c))) return undefined;
+
+  return LANDING_FETCH_REVALIDATE_SECONDS;
+};
+
+/**
+ * The params to send to `/public/yachts`. Cached landing (see
+ * landingFetchRevalidate): only the canonical filter — resolved did, sorted
+ * boat types, page, currency — so every spelling of one landing shares one
+ * cache entry (the backend filters by did and ignores `destinations`).
+ * Otherwise the request's own params minus tracking parameters.
+ */
+export const yachtFetchParams = (params: AllSearchParams, cached: boolean): AllSearchParams => {
+  if (cached) {
+    const boatTypes = Array.from(new Set(splitSearchParam(params.boatTypes))).sort();
+    const page = landingPage(params.page);
+
+    return {
+      locations: [],
+      ...(params.did?.length ? { did: [...params.did].sort() } : {}),
+      ...(boatTypes.length ? { boatTypes } : {}),
+      ...(page ? { page } : {}),
+      ...(hasValue(params.currency) ? { currency: splitSearchParam(params.currency)[0] } : {}),
+    } as unknown as AllSearchParams;
+  }
+
+  return Object.fromEntries(
+    Object.entries(params as unknown as Record<string, unknown>).filter(([key]) => !isTrackingParam(key))
+  ) as unknown as AllSearchParams;
 };

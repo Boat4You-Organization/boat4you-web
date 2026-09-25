@@ -16,6 +16,7 @@ import { YachtModelShortInfo } from '@/models/yacht.model';
 import { fetchYachts } from '@/services/yacht.service';
 import { PaginatedResponse } from '@/types/response.type';
 import { getCuratedSeoHtml } from '@/utils/server/curatedSeoContent';
+import { yachtFetchParams } from '@/utils/server/searchLanding';
 
 import BoatsSection from './BoatsSection';
 
@@ -119,9 +120,9 @@ const BoatsWrapper = async ({ searchParams, destinationLabels = {}, fetchRevalid
 
   const [data, popularDestinations] = await Promise.all([
     // Backend blip → empty list (pre-existing soft behaviour; fetchYachts now throws).
-    fetchYachts(searchParams, currency, locale, { revalidate: fetchRevalidate }).catch(
-      (): PaginatedResponse<YachtModelShortInfo> => ({ content: [] })
-    ),
+    fetchYachts(yachtFetchParams(searchParams, !!fetchRevalidate), currency, locale, {
+      revalidate: fetchRevalidate,
+    }).catch((): PaginatedResponse<YachtModelShortInfo> => ({ content: [] })),
     popularDestinationsPromise,
   ]);
 

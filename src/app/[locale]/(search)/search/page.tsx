@@ -17,6 +17,7 @@ import {
   splitSearchParam,
   uniqueCaseInsensitive,
   withLandingDid,
+  yachtFetchParams,
 } from '@/utils/server/searchLanding';
 import { BoatDescTranslate, buildBoatDescription } from '@/utils/static/boatMetaDescription';
 import { buildMetadata, localizedUrl } from '@/utils/static/buildMetadata';
@@ -399,7 +400,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
   const effectiveParams = withLandingDid(params, landing);
   // Undated landings read the yacht list through a 10-minute Data Cache
   // window (see landingFetchRevalidate); anything dated/filtered stays live.
-  const fetchRevalidate = landingFetchRevalidate(params);
+  const fetchRevalidate = landingFetchRevalidate(params, landing);
 
   const boatTypes = splitSearchParam(params.boatTypes);
   const singleBoatType = boatTypes.length === 1 && isVesselType(boatTypes[0]) ? boatTypes[0] : null;
@@ -428,8 +429,9 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
   let productsLd: ReturnType<typeof buildSearchProductsLd> = null;
 
   try {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const yachtsResp = await fetchYachts(effectiveParams as any, currency, locale, { revalidate: fetchRevalidate });
+    const yachtsResp = await fetchYachts(yachtFetchParams(effectiveParams, !!fetchRevalidate), currency, locale, {
+      revalidate: fetchRevalidate,
+    });
     const tBoatMeta = await getTranslations({ locale, namespace: 'metadata.boat' });
 
     productsLd = buildSearchProductsLd(yachtsResp?.content, baseUrl, currency, (key, values) =>
