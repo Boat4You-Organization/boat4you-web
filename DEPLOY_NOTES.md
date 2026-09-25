@@ -2,6 +2,8 @@
 
 ## 2026-09-25 — 🧭 /search landing: filtriranje, SSR tekstovi, sitemap = index gate — ⏳ NIJE DEPLOYANO
 
+**✅ LIVE 25.9.2026 ~12:27 UTC — BUILD_ID `PNhZDQdC3LxKlsbbcJvKl` (HEAD `1d7b9aa8`).** Verified on production: greece/italy/split/croatia×CATAMARAN/greece×CATAMARAN each render their own boat list (md5 differ; Greece first boat jeanneau-sun-odyssey-479-sirius-19668, heading "3,407 boats available"); curated H2 in raw HTML; "sought-after sailing destinations" template 0×; unknown destination (atlantis) → noindex; `/seo-content/*` → `x-robots-tag: noindex, nofollow`; `</script>` XSS probe → 0 hits; sitemap-locations 5,985 → 171 URLs, sitemap-categories 468. `public/seo-content/en` on cusma1 = 1,435 files. Rollback `.next.prev`.
+
 Release A (commiti `99695426`, `6bf68c45`, `d4594f6b`, `3f1da651` + popravci recenzije 25.9.). `/search?destinations=<ime>`
 filtrira po did-u na serveru, kurirani tekst je u SSR HTML-u, `/seo-content/*` šalje `X-Robots-Tag: noindex`.
 **Sitemapi se sad grade iz istog predikata kao robots tag** (`src/utils/server/landingGate.ts`): mjesto s brodovima (za
