@@ -550,9 +550,6 @@
   "withDepositInsurance": "Mit Kautionsversicherung",
   "perRental": "pro Charter",
   "refundableSecurityDepositDescription": "Eine rückerstattbare Kaution wird bei der Übernahme der Yacht fällig und nach schadenfreier Rückgabe erstattet.",
-  "searchH1WithBoatType": "{boatType}-Charter in {destination}",
-  "searchH1NoBoatType": "Yachtcharter und Bootsverleih in {destination}",
-  "searchMetaDescWithBoatType": "Chartern Sie {boatType} in {destination}. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support.",
   "catamaranForRental": "Katamaran",
   "guletForRental": "Gulet",
   "houseBoatForRental": "Hausboot",
@@ -565,7 +562,6 @@
   "sailingYachtForRental": "Segelyacht",
   "trimaranForRental": "Trimaran",
   "rubberBoatForRental": "Schlauchboot",
-  "searchMetaDescNoBoatType": "Yachtcharter und Bootsverleih in {destination}. Tausende Yachten, transparente Preise, sichere Buchung, 24/7-Support.",
   "boatsAvailableHeadingGeneric": "{count, number} Boote verfügbar",
   "boatsAvailableHeading": "{count, number} {type} verfügbar",
   "popularDestinations": {

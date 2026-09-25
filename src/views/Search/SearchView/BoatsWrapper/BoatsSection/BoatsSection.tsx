@@ -58,8 +58,11 @@ interface BoatsSectionProps {
    *  block — only country-level URLs return a non-empty list today. */
   popularDestinations?: PopularDestination[];
   /** The destination as a localized prepositional phrase ("in the
-   *  Cyclades") for the SEO block and popular-destinations headings. */
-  popularDestinationsArea?: string;
+   *  Cyclades"; placeText.ts `where`) for the SEO block title. */
+  destinationWhere?: string;
+  /** The same kind of phrase for the popular-destinations heading when
+   *  its links cover another area; defaults to `destinationWhere`. */
+  popularDestinationsWhere?: string;
   /** Curated SEO text for this destination (× boat type), read on the
    *  server so it is part of the SSR HTML. null → no curated page. */
   curatedSeoHtml?: string | null;
@@ -72,7 +75,8 @@ const BoatsSection = ({
   user,
   inquiry,
   popularDestinations = [],
-  popularDestinationsArea = '',
+  destinationWhere = '',
+  popularDestinationsWhere,
   curatedSeoHtml = null,
   charterFactsSlot = null,
 }: BoatsSectionProps) => {
@@ -379,7 +383,8 @@ const BoatsSection = ({
         <SeoTextSection
           curatedHtml={curatedSeoHtml}
           popularDestinations={popularDestinations}
-          popularDestinationsArea={popularDestinationsArea}
+          where={destinationWhere}
+          popularWhere={popularDestinationsWhere}
         />
         {selectedYachtIds.length > 0 && (
           <FloatingButton selectedItems={selectedYachtIds.length} onClick={toggleAdminInquiryModalOpen} />

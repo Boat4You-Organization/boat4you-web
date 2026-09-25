@@ -550,9 +550,6 @@
   "withDepositInsurance": "Con seguro de depósito",
   "perRental": "por alquiler",
   "refundableSecurityDepositDescription": "Se requiere un depósito reembolsable al recoger el yate y se devolverá al devolver el yate sin daños.",
-  "searchH1WithBoatType": "Alquiler de {boatType} en {destination}",
-  "searchH1NoBoatType": "Alquiler de yates y barcos en {destination}",
-  "searchMetaDescWithBoatType": "Alquila un {boatType} en {destination}. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7.",
   "catamaranForRental": "Catamarán",
   "guletForRental": "Gulet",
   "houseBoatForRental": "Casa Flotante",
@@ -565,7 +562,6 @@
   "sailingYachtForRental": "Yacht de Vela",
   "trimaranForRental": "Trimarán",
   "rubberBoatForRental": "Bote Inflable",
-  "searchMetaDescNoBoatType": "Alquiler de yates y barcos en {destination}. Miles de barcos, precios transparentes, reserva segura, soporte 24/7.",
   "boatsAvailableHeadingGeneric": "{count, number} barcos disponibles",
   "boatsAvailableHeading": "{count, number} {type} disponibles",
   "popularDestinations": {

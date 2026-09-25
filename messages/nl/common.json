@@ -550,9 +550,6 @@
   "withDepositInsurance": "Met borgsomverzekering",
   "perRental": "per huur",
   "refundableSecurityDepositDescription": "Een restitueerbare borgsom is vereist bij het ophalen van het jacht en wordt teruggegeven wanneer het jacht zonder schade wordt teruggebracht.",
-  "searchH1WithBoatType": "{boatType}-charter in {destination}",
-  "searchH1NoBoatType": "Jachtcharter en bootverhuur in {destination}",
-  "searchMetaDescWithBoatType": "Charter een {boatType} in {destination}. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning.",
   "catamaranForRental": "Catamaran",
   "guletForRental": "Gulet",
   "houseBoatForRental": "Woonboot",
@@ -565,7 +562,6 @@
   "sailingYachtForRental": "Zeiljacht",
   "trimaranForRental": "Trimaran",
   "rubberBoatForRental": "Rubberboot",
-  "searchMetaDescNoBoatType": "Jachtcharter en bootverhuur in {destination}. Duizenden jachten, transparante prijzen, veilig boeken, 24/7 ondersteuning.",
   "boatsAvailableHeadingGeneric": "{count, number} boten beschikbaar",
   "boatsAvailableHeading": "{count, number} {type} beschikbaar",
   "popularDestinations": {

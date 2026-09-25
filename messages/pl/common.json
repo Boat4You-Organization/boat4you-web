@@ -550,9 +550,6 @@
   "withDepositInsurance": "Z ubezpieczeniem depozytu",
   "perRental": "za wynajem",
   "refundableSecurityDepositDescription": "Zwrotny depozyt jest wymagany przy odbiorze jachtu i zostanie zwrócony po zwrocie jachtu bez uszkodzeń.",
-  "searchH1WithBoatType": "Wynajem {boatType} w {destination}",
-  "searchH1NoBoatType": "Czarter jachtów i wynajem łodzi w {destination}",
-  "searchMetaDescWithBoatType": "Wyczarteruj {boatType} w {destination}. Porównaj ceny, prawdziwe zdjęcia, rezerwacja natychmiastowa. Bezpieczna płatność i wsparcie 24/7.",
   "catamaranForRental": "katamaranów",
   "guletForRental": "guletów",
   "houseBoatForRental": "domów na wodzie",
@@ -565,7 +562,6 @@
   "sailingYachtForRental": "jachtów żaglowych",
   "trimaranForRental": "trimaranów",
   "rubberBoatForRental": "łodzi pneumatycznych",
-  "searchMetaDescNoBoatType": "Czarter jachtów i wynajem łodzi w {destination}. Tysiące jachtów, przejrzyste ceny, bezpieczna rezerwacja, wsparcie 24/7.",
   "boatsAvailableHeadingGeneric": "{count, number} łodzi dostępnych",
   "boatsAvailableHeading": "{count, number} dostępnych {type}",
   "popularDestinations": {

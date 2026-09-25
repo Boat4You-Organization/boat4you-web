@@ -19,10 +19,14 @@ interface SeoTextSectionProps {
    *  inside this section's collapse so we don't render two separate
    *  Show more toggles on the same page. Empty array → block hidden. */
   popularDestinations?: PopularDestination[];
-  /** The destination as a localized prepositional phrase ("in the
-   *  Cyclades", "na Kikladima"; placeText.ts, server) for the section title
-   *  and the popular-destinations heading. */
-  popularDestinationsArea?: string;
+  /** The page's destination as a localized prepositional phrase ("in the
+   *  Cyclades", "na Kikladima": placeText.ts `where`, server) — the section
+   *  title. A bare name reads "Why charter a yacht Croatia?". */
+  where?: string;
+  /** The same kind of phrase for the popular-destinations heading when its
+   *  links cover another area than the page (e.g. the country); defaults to
+   *  `where`. */
+  popularWhere?: string;
 }
 
 /**
@@ -43,7 +47,8 @@ interface SeoTextSectionProps {
 const SeoTextSection = ({
   curatedHtml = null,
   popularDestinations = [],
-  popularDestinationsArea = '',
+  where = '',
+  popularWhere = where,
 }: SeoTextSectionProps) => {
   const t = useTranslations('common');
   const [expanded, setExpanded] = useState(false);
@@ -54,14 +59,14 @@ const SeoTextSection = ({
     // still renders (plain, no toggle) so the page keeps its related links.
     return hasPopular ? (
       <Box component="section" sx={{ mt: 4, mb: 2 }}>
-        <PopularDestinationsBlock destinations={popularDestinations} areaLabel={popularDestinationsArea} t={t} />
+        <PopularDestinationsBlock destinations={popularDestinations} areaLabel={popularWhere} t={t} />
       </Box>
     ) : null;
   }
 
   // The phrase carries its own preposition and case ("en Croatie",
   // "u Hrvatskoj"), so the template never declines a name itself.
-  const title = t('seoBlockTitle', { where: popularDestinationsArea });
+  const title = t('seoBlockTitle', { where });
 
   return (
     <Box component="section" sx={{ mt: 4, mb: 2 }} aria-label={title}>
@@ -100,7 +105,7 @@ const SeoTextSection = ({
           unmount) so crawlers always see them. */}
       {hasPopular && (
         <Collapse in={expanded} timeout="auto" unmountOnExit={false}>
-          <PopularDestinationsBlock destinations={popularDestinations} areaLabel={popularDestinationsArea} t={t} />
+          <PopularDestinationsBlock destinations={popularDestinations} areaLabel={popularWhere} t={t} />
         </Collapse>
       )}
 

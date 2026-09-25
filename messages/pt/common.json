@@ -550,9 +550,6 @@
   "withDepositInsurance": "Com seguro de depósito",
   "perRental": "por aluguel",
   "refundableSecurityDepositDescription": "É necessário um depósito reembolsável na entrega do iate, que será devolvido ao devolver o iate sem danos.",
-  "searchH1WithBoatType": "Charter de {boatType} em {destination}",
-  "searchH1NoBoatType": "Aluguer de iates e barcos em {destination}",
-  "searchMetaDescWithBoatType": "Alugue um {boatType} em {destination}. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7.",
   "catamaranForRental": "Catamarã",
   "guletForRental": "Gulet",
   "houseBoatForRental": "Casa Flutuante",
@@ -565,7 +562,6 @@
   "sailingYachtForRental": "Iate à Vela",
   "trimaranForRental": "Trimarã",
   "rubberBoatForRental": "Bote Inflável",
-  "searchMetaDescNoBoatType": "Aluguer de iates e barcos em {destination}. Milhares de barcos, preços transparentes, reserva segura, suporte 24/7.",
   "boatsAvailableHeadingGeneric": "{count, number} barcos disponíveis",
   "boatsAvailableHeading": "{count, number} {type} disponíveis",
   "popularDestinations": {

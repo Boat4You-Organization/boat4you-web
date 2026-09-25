@@ -550,9 +550,6 @@
   "withDepositInsurance": "Con assicurazione deposito",
   "perRental": "per noleggio",
   "refundableSecurityDepositDescription": "Un deposito cauzionale rimborsabile è richiesto al ritiro dello yacht e verrà restituito al rientro dello yacht senza danni.",
-  "searchH1WithBoatType": "Charter di {boatType} a {destination}",
-  "searchH1NoBoatType": "Noleggio yacht e barche a {destination}",
-  "searchMetaDescWithBoatType": "Noleggia un {boatType} a {destination}. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7.",
   "catamaranForRental": "Catamarano",
   "guletForRental": "Gulet",
   "houseBoatForRental": "Casa Galleggiante",
@@ -565,7 +562,6 @@
   "sailingYachtForRental": "Yacht a Vela",
   "trimaranForRental": "Trimarano",
   "rubberBoatForRental": "Gommone",
-  "searchMetaDescNoBoatType": "Noleggio yacht e barche a {destination}. Migliaia di barche, prezzi trasparenti, prenotazione sicura, supporto 24/7.",
   "boatsAvailableHeadingGeneric": "{count, number} barche disponibili",
   "boatsAvailableHeading": "{count, number} {type} disponibili",
   "popularDestinations": {

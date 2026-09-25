@@ -3,7 +3,7 @@ import 'server-only';
 
 import { AllSearchParams } from '@/config/form-models.config';
 import { VESSEL_TYPE_LABEL_MAP_FOR_RENTAL, VesselType, isVesselType } from '@/models/yacht.model';
-import { placeText } from '@/utils/server/placeText';
+import { PlaceText, placeText } from '@/utils/server/placeText';
 import { resolveSearchLanding, splitSearchParam, uniqueCaseInsensitive } from '@/utils/server/searchLanding';
 
 /**
@@ -31,39 +31,27 @@ export interface LandingCopy {
 
 type Override = { h1: string; metaDesc: string };
 
-export const getLandingCopy = async (locale: string, params: AllSearchParams): Promise<LandingCopy> => {
-  const [tCommon, tMeta, tLanding, landing] = await Promise.all([
+/** Rental-context label: genitive in HR/PL ("Najam katamarana"), the
+ *  nominative elsewhere (common.json `*ForRental`). */
+const rentalLabel = async (locale: string, type: VesselType): Promise<string> => {
+  const tCommon = await getTranslations({ locale, namespace: 'common' });
+
+  return tCommon.raw(
+    VESSEL_TYPE_LABEL_MAP_FOR_RENTAL[type].replace(/^common\./, '') as Parameters<typeof tCommon.raw>[0]
+  ) as string;
+};
+
+/** Title, description and H1 of a landing whose places are resolved (at least one). */
+const copyForPlaces = async (
+  locale: string,
+  places: PlaceText[],
+  singleBoatType: VesselType | null
+): Promise<LandingCopy & { h1: string }> => {
+  const [tCommon, tLanding] = await Promise.all([
     getTranslations({ locale, namespace: 'common' }),
-    getTranslations({ locale, namespace: 'metadata.metadata.search' }),
     getTranslations({ locale, namespace: 'landing' }),
-    resolveSearchLanding(params),
   ]);
-
-  const boatTypes = splitSearchParam(params.boatTypes);
-  const singleBoatType: VesselType | null = boatTypes.length === 1 && isVesselType(boatTypes[0]) ? boatTypes[0] : null;
-  // Rental-context label: genitive in HR/PL ("Najam katamarana"), the
-  // nominative elsewhere (common.json `*ForRental`).
-  const boatType = singleBoatType
-    ? (tCommon.raw(
-        VESSEL_TYPE_LABEL_MAP_FOR_RENTAL[singleBoatType].replace(/^common\./, '') as Parameters<typeof tCommon.raw>[0]
-      ) as string)
-    : null;
-
-  // Catalogue name for resolved values (aliases fold: split → Split Region),
-  // the raw URL value otherwise; dual-source pairs share one phrase.
-  const rawPlaces = await Promise.all(
-    uniqueCaseInsensitive(splitSearchParam(params.destinations)).map(d =>
-      placeText(locale, landing.labels[d.toLowerCase()] ?? d)
-    )
-  );
-  const places = Array.from(new Map(rawPlaces.map(p => [p.where.toLowerCase(), p])).values());
-
-  if (!places.length) {
-    return boatType
-      ? { title: boatType, description: tMeta('description'), h1: null }
-      : { title: tMeta('title'), description: tMeta('description'), h1: null };
-  }
-
+  const boatType = singleBoatType ? await rentalLabel(locale, singleBoatType) : null;
   const where = places.map(p => p.where).join(` ${tCommon('and')} `);
   const single = places.length === 1 ? places[0] : null;
   const lead = single?.key ? (tLanding.raw('lead' as never) as Record<string, string>)[single.key] : undefined;
@@ -85,3 +73,39 @@ export const getLandingCopy = async (locale: string, params: AllSearchParams): P
 
   return { title: h1, description: tLanding('metaDescNoBoatType', { where }), h1 };
 };
+
+export const getLandingCopy = async (locale: string, params: AllSearchParams): Promise<LandingCopy> => {
+  const [tMeta, landing] = await Promise.all([
+    getTranslations({ locale, namespace: 'metadata.metadata.search' }),
+    resolveSearchLanding(params),
+  ]);
+
+  const boatTypes = splitSearchParam(params.boatTypes);
+  const singleBoatType: VesselType | null = boatTypes.length === 1 && isVesselType(boatTypes[0]) ? boatTypes[0] : null;
+
+  // Catalogue name for resolved values (aliases fold: split → Split Region),
+  // the raw URL value otherwise; dual-source pairs share one phrase.
+  const rawPlaces = await Promise.all(
+    uniqueCaseInsensitive(splitSearchParam(params.destinations)).map(d =>
+      placeText(locale, landing.labels[d.toLowerCase()] ?? d)
+    )
+  );
+  const places = Array.from(new Map(rawPlaces.map(p => [p.where.toLowerCase(), p])).values());
+
+  if (!places.length) {
+    return singleBoatType
+      ? { title: await rentalLabel(locale, singleBoatType), description: tMeta('description'), h1: null }
+      : { title: tMeta('title'), description: tMeta('description'), h1: null };
+  }
+
+  return copyForPlaces(locale, places, singleBoatType);
+};
+
+/**
+ * H1 of the landing of one catalogue place [× one boat type], built from the
+ * same templates as that page (lead, override, `landing.h1*`): the anchor
+ * text other pages link the landing by, so a link never names a page
+ * differently from its own heading.
+ */
+export const landingHeading = async (locale: string, name: string, boatType: VesselType | null): Promise<string> =>
+  (await copyForPlaces(locale, [await placeText(locale, name)], boatType)).h1;

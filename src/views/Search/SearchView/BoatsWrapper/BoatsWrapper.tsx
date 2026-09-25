@@ -168,7 +168,7 @@ const BoatsWrapper = async ({
       user={user}
       inquiry={inquiry}
       popularDestinations={popularDestinations}
-      popularDestinationsArea={destWhere}
+      destinationWhere={destWhere}
       curatedSeoHtml={curatedSeoHtml}
       charterFactsSlot={
         charterFacts ? (

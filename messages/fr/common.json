@@ -550,9 +550,6 @@
   "withDepositInsurance": "Avec assurance caution",
   "perRental": "par location",
   "refundableSecurityDepositDescription": "Une caution remboursable est requise lors de la prise en charge du yacht et vous sera restituée au retour du yacht sans dommage.",
-  "searchH1WithBoatType": "Location de {boatType} à {destination}",
-  "searchH1NoBoatType": "Location de yachts et bateaux à {destination}",
-  "searchMetaDescWithBoatType": "Louez un {boatType} à {destination}. Comparez les prix, vraies photos, réservation instantanée. Paiement sécurisé et support 24/7.",
   "catamaranForRental": "Catamaran",
   "guletForRental": "Goélette",
   "houseBoatForRental": "Péniche",
@@ -565,7 +562,6 @@
   "sailingYachtForRental": "Voilier",
   "trimaranForRental": "Trimaran",
   "rubberBoatForRental": "Bateau pneumatique",
-  "searchMetaDescNoBoatType": "Location de yachts et bateaux à {destination}. Des milliers de bateaux, prix transparents, réservation sécurisée, support 24/7.",
   "boatsAvailableHeadingGeneric": "{count, number} bateaux disponibles",
   "boatsAvailableHeading": "{count, number} {type} disponibles",
   "popularDestinations": {
