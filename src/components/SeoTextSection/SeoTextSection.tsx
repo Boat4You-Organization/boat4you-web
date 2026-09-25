@@ -77,19 +77,7 @@ const SeoTextSection = ({
   const { labels } = useResolvedDestination();
   const [expanded, setExpanded] = useState(false);
   const hasPopular = popularDestinations.length >= 4;
-
-  if (!curatedHtml) {
-    // No curated page → no generic filler text. The internal-link block
-    // still renders (plain, no toggle) so the page keeps its related links.
-    return hasPopular ? (
-      <Box component="section" sx={{ mt: 4, mb: 2 }}>
-        <PopularDestinationsBlock destinations={popularDestinations} areaLabel={popularDestinationsArea} t={t} />
-      </Box>
-    ) : null;
-  }
-
   const rawDest = destination?.trim() || '';
-  const dest = labels[rawDest.toLowerCase()] || rawDest || t('yourDestination');
   // Use the locative form when the destination is a known popular entry
   // (e.g. HR "Hrvatskoj" instead of nominative "Hrvatska") so the H2
   // template "Zašto unajmiti jahtu u {destination}?" reads grammatically.
@@ -97,11 +85,27 @@ const SeoTextSection = ({
   // mirrors the nominative one (set in messages/{locale}/home.json), so
   // the same lookup works across all 9 locales without conditionals.
   const destLocativeKey = DESTINATION_LOCATIVE_KEY[rawDest.toLowerCase()];
-  const destForTitle = destLocativeKey
+  const destLocative = destLocativeKey
     ? (tHome.raw(
         `destinationsSection.destinationsLocative.${destLocativeKey}` as Parameters<typeof tHome.raw>[0]
       ) as string)
-    : dest;
+    : null;
+  // "Unsere beliebtesten Reiseziele in {area}" takes the same translated
+  // form: the catalogue name passed in is English ("…in Croatia" on /de).
+  const popularArea = destLocative ?? popularDestinationsArea;
+
+  if (!curatedHtml) {
+    // No curated page → no generic filler text. The internal-link block
+    // still renders (plain, no toggle) so the page keeps its related links.
+    return hasPopular ? (
+      <Box component="section" sx={{ mt: 4, mb: 2 }}>
+        <PopularDestinationsBlock destinations={popularDestinations} areaLabel={popularArea} t={t} />
+      </Box>
+    ) : null;
+  }
+
+  const dest = labels[rawDest.toLowerCase()] || rawDest || t('yourDestination');
+  const destForTitle = destLocative ?? dest;
   const title = t('seoBlockTitle', { destination: destForTitle });
 
   return (
@@ -141,7 +145,7 @@ const SeoTextSection = ({
           unmount) so crawlers always see them. */}
       {hasPopular && (
         <Collapse in={expanded} timeout="auto" unmountOnExit={false}>
-          <PopularDestinationsBlock destinations={popularDestinations} areaLabel={popularDestinationsArea} t={t} />
+          <PopularDestinationsBlock destinations={popularDestinations} areaLabel={popularArea} t={t} />
         </Collapse>
       )}
 
