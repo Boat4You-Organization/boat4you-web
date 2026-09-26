@@ -7,7 +7,7 @@ const primostenVisKorculaHvarSoltaRoute: ItineraryRoute = {
     '7-day yacht route from ACI Kremik (Primošten) via Krknjaši, Vis (Komiža & Vis Town), Blue Cave, Hvar, Stari Grad & Maslinica (Šolta) — sailor brief with NM.',
   id: 'primosten-vis-korcula-hvar-solta-route',
   startingPoint: 'Primošten',
-  otherPoints: ['Vis', 'Korcula', 'Hvar', 'Šolta'],
+  otherPoints: ['Vis', 'Korčula', 'Hvar', 'Šolta'],
   cardImage: {
     src: '/images/itinerary/croatia/split-dubrovnik-itinerary/routes/primosten-korcula-card-image.webp',
     alt: 'Card image',

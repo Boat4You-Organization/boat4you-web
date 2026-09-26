@@ -7,7 +7,7 @@ const biogradKornatiHvarKorculaVisSkradin14DaysRoute: ItineraryRoute = {
     'Sail a 14-day yacht charter from Biograd na Moru through Kornati, Hvar, Korčula, Vis, ending in Skradin. Discover hidden bays, historic islands & Adriatic beauty.',
   id: 'biograd-na-moru-kornati-hvar-korcula-vis-skradin-14days-route',
   startingPoint: 'Biograd na Moru',
-  otherPoints: ['Kornati', 'Hvar', 'Korcula', 'Vis', 'Skradin'],
+  otherPoints: ['Kornati', 'Hvar', 'Korčula', 'Vis', 'Skradin'],
   cardImage: {
     src: '/images/itinerary/croatia/zadar-itinerary/routes/biograd-kornati-14-card-image.webp',
     alt: 'Card image',

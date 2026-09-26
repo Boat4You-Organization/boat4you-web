@@ -7,7 +7,7 @@ const sibenikDubrovnikSibenikRoute: ItineraryRoute = {
     '14-day yacht route from Šibenik south to Dubrovnik via Brač, Hvar, Vis, Lastovo, Mljet & Korčula — return via Šolta. Sailor brief with NM and mooring notes.',
   id: 'sibenik-dubrovnik-sibenik-route',
   startingPoint: 'Šibenik',
-  otherPoints: ['Dubrovnik', '14 Days'],
+  otherPoints: ['Dubrovnik'],
   cardImage: {
     src: '/images/itinerary/croatia/split-dubrovnik-itinerary/routes/sibenik-dubrovnik-card-image.webp',
     alt: 'Card image',

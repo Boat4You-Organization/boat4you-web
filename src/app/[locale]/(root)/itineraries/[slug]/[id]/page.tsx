@@ -12,6 +12,7 @@ import { LocaleType } from '@/config/locales.config';
 import { isOneWayItinerary } from '@/helper/itineraryDaysHelper';
 import { itineraryNamespace, resolveDayText, resolveRouteText } from '@/helper/itineraryI18n';
 import { itinerarySearchPath } from '@/utils/server/itineraryBoats';
+import { placeText } from '@/utils/server/placeText';
 import { buildBreadcrumbJsonLd, buildTouristTripJsonLd } from '@/utils/static/buildItineraryJsonLd';
 import { buildMetadata } from '@/utils/static/buildMetadata';
 import { serializeJsonLd } from '@/utils/static/serializeJsonLd';
@@ -164,7 +165,7 @@ const ItineraryRoutePage = async ({ params }: ItineraryRoutePageParams) => {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(breadcrumbLd) }} />
         <ItineraryHero
           kicker={oneWay ? t('routeHero.kickerOneWay', { days }) : t('routeHero.kickerRoundTrip', { days })}
-          eyebrow={t('routeHero.eyebrow', { area: parent.sailingArea })}
+          eyebrow={t('routeHero.eyebrow', { area: (await placeText(locale, parent.sailingArea)).name })}
           title={itineraryRoute.startingPoint}
           italic={
             itineraryRoute.otherPoints?.length

@@ -27,9 +27,12 @@ const ALL_LABEL = '__ALL__';
 
 interface ItineraryAreaProps {
   slug: string;
+  /** The area's name in the page locale (placeText on the server); the
+   *  config's English name when not given. */
+  areaLabel?: string;
 }
 
-const ItineraryArea: FC<ItineraryAreaProps> = ({ slug }) => {
+const ItineraryArea: FC<ItineraryAreaProps> = ({ slug, areaLabel }) => {
   const t = useTranslations('itinerary');
 
   const itinerary = useMemo(() => itineraries.flatMap(group => group.itinerary).find(item => item.id === slug), [slug]);
@@ -44,10 +47,12 @@ const ItineraryArea: FC<ItineraryAreaProps> = ({ slug }) => {
   // unmigrated areas fall back to the raw config strings.
   const tArea = useTranslations(itineraryNamespace(itinerary ?? {}));
 
-  const formatRoutePath = (startingPoint: string, otherPoints: string[]) => {
+  // A loop returns to its start; a one-way route ends at its last stop
+  // ("Dubrovnik → Split", not "Dubrovnik → Split → Dubrovnik").
+  const formatRoutePath = (startingPoint: string, otherPoints: string[], oneWay: boolean) => {
     if (!otherPoints?.length) return t('area.roundTrip', { start: startingPoint });
 
-    return [startingPoint, ...otherPoints, startingPoint].join(' → ');
+    return [startingPoint, ...otherPoints, ...(oneWay ? [] : [startingPoint])].join(' → ');
   };
 
   const description = itinerary ? (resolveAreaText(itinerary, 'description', itinerary.description, tArea) ?? '') : '';
@@ -210,7 +215,7 @@ const ItineraryArea: FC<ItineraryAreaProps> = ({ slug }) => {
           {filteredRoutes.map((route, i) => {
             const days = route.routeDays?.length ?? 7;
             const oneWay = isOneWayItinerary(route);
-            const pathLabel = formatRoutePath(route.startingPoint, route.otherPoints || []);
+            const pathLabel = formatRoutePath(route.startingPoint, route.otherPoints || [], oneWay);
             const metaDesc = resolveRouteText(route, 'metaDesc', route.metaDesc, tArea);
 
             return (
@@ -283,7 +288,7 @@ const ItineraryArea: FC<ItineraryAreaProps> = ({ slug }) => {
                       mb: 1,
                     }}
                   >
-                    {t('area.routeCardKicker', { index: `0${i + 1}`, start: route.startingPoint })}
+                    {t('area.routeCardKicker', { index: String(i + 1).padStart(2, '0'), start: route.startingPoint })}
                   </Typography>
                   <Typography
                     component="h3"
@@ -347,7 +352,7 @@ const ItineraryArea: FC<ItineraryAreaProps> = ({ slug }) => {
                 fontWeight: 600,
               }}
             >
-              {t('area.aboutEyebrow', { area: itinerary.sailingArea })}
+              {t('area.aboutEyebrow', { area: areaLabel ?? itinerary.sailingArea })}
             </Typography>
             <Typography
               component="h2"

@@ -7,7 +7,7 @@ const kos14DaysRoute: ItineraryRoute = {
     'Sail a 14-day yacht charter from Kos via Kalymnos, Leros, Patmos, Fourni, Lipsi, Levitha, Astypalaia, Nisyros, Tilos, Chalki, Rhodes and Symi. Full Dodecanese grand tour.',
   id: 'kos-14-days',
   startingPoint: 'Kos',
-  otherPoints: ['14 days'],
+  otherPoints: [],
   cardImage: {
     src: '/images/itinerary/greece/dodecanese-itinerary/routes/kos-14-days.webp',
     alt: 'Card image',

@@ -60,7 +60,7 @@ interface FiltersSectionV2Props {
 const FiltersSectionV2 = ({ catalogueData, catalogueFilters, isMobile, serverTotalCount }: FiltersSectionV2Props) => {
   const { user } = useUserStore();
   const { params, setMultipleParams } = useQueryParams();
-  const storeCount = useYachtStore().searchTotalCount;
+  const { searchTotalCount: storeCount, searchResults } = useYachtStore();
   // The server's figure always belongs to the current URL (it re-renders with
   // every filter change); the store only catches up after the list mounts.
   const liveCount = serverTotalCount ?? storeCount;
@@ -74,7 +74,21 @@ const FiltersSectionV2 = ({ catalogueData, catalogueFilters, isMobile, serverTot
 
   const urlCurrency = params.currency as Currency;
   const currentCurrency = user?.currency || urlCurrency || Currency.EUR;
-  const currencySymbol = currencySymbols[currentCurrency];
+  // The price filter works in EUR (the URL minPrice/maxPrice and the
+  // backend's client_price column are EUR); it is SHOWN in the page currency
+  // at the rate the cards use (audit B18: in USD the slider relabelled
+  // "€500 – €200,000, median €5,795" as "$500 – $200,000, median $5,795"
+  // while the cards converted). The card rate (clientPriceInfo.rate of the
+  // listed boats) first, the catalogue filters' rate for the same currency
+  // second; without a known rate the filter stays in EUR, labelled as EUR.
+  const cardRate = searchResults.find(y => y.clientPriceInfo?.currency === currentCurrency)?.clientPriceInfo?.rate;
+  const filterRate =
+    catalogueFilters?.minPrice?.currency === currentCurrency ? catalogueFilters.minPrice.rate : undefined;
+  const knownRate = [cardRate, filterRate].find((r): r is number => typeof r === 'number' && r > 0);
+  const priceRate = currentCurrency === Currency.EUR ? 1 : (knownRate ?? null);
+  const currencySymbol = currencySymbols[priceRate ? currentCurrency : Currency.EUR];
+  /** An EUR amount in the display currency, formatted for the page locale. */
+  const displayPrice = (eur: number): string => Math.round(eur * (priceRate ?? 1)).toLocaleString(locale);
 
   // ── Slider local state ────────────────────────────────────────────
   // Range sliders push every tick to local state, then a 250ms
@@ -389,13 +403,13 @@ const FiltersSectionV2 = ({ catalogueData, catalogueFilters, isMobile, serverTot
           <Box sx={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', mb: '6px' }}>
             <Box sx={searchV2Type.numericBig}>
               {currencySymbol}
-              {priceRange[0].toLocaleString('en-US')} – {currencySymbol}
-              {priceRange[1].toLocaleString('en-US')}
+              {displayPrice(priceRange[0])} – {currencySymbol}
+              {displayPrice(priceRange[1])}
             </Box>
             <Box sx={{ fontSize: 11, color: searchV2.inkSoft }}>
               {distribution?.priceMedian != null
                 ? t('medianPrice', {
-                    amount: `${currencySymbol}${Math.round(Number(distribution.priceMedian)).toLocaleString('en-US')}`,
+                    amount: `${currencySymbol}${displayPrice(Number(distribution.priceMedian))}`,
                   })
                 : ''}
             </Box>
@@ -415,7 +429,11 @@ const FiltersSectionV2 = ({ catalogueData, catalogueFilters, isMobile, serverTot
               });
             }}
             hist={distribution?.priceHistogram}
-            format={v => `${currencySymbol}${v >= 1000 ? `${(v / 1000).toFixed(0)}k` : v.toLocaleString('en-US')}`}
+            format={v => {
+              const shown = v * (priceRate ?? 1);
+
+              return `${currencySymbol}${shown >= 1000 ? `${(shown / 1000).toFixed(0)}k` : displayPrice(v)}`;
+            }}
           />
         </FilterGroup>
 

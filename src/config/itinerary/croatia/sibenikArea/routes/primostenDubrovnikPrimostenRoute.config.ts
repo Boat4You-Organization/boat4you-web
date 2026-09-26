@@ -7,7 +7,7 @@ const primostenDubrovnikPrimostenRoute: ItineraryRoute = {
     '14-day yacht route from ACI Marina Kremik (Primošten) south to Dubrovnik via Brač, Hvar, Vis, Lastovo & Mljet — return via Korčula & Šolta. Sailor brief with NM.',
   id: 'primosten-dubrovnik-primosten-route',
   startingPoint: 'Primošten',
-  otherPoints: ['Dubrovnik', '14 Days'],
+  otherPoints: ['Dubrovnik'],
   cardImage: {
     src: '/images/itinerary/croatia/split-dubrovnik-itinerary/routes/primosten-dubrovnik-card-image.webp',
     alt: 'Card image',

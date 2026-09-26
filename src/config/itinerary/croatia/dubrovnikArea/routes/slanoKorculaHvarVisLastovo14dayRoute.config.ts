@@ -7,7 +7,7 @@ const slanoKorculaHvarVisLastovo14dayRoute: ItineraryRoute = {
     '14-day yacht route from Marina Frapa Slano via Mljet, Korčula, Vis (Blue Cave), Hvar Stari Grad & Lastovo — sailor brief with NM and mooring notes.',
   id: 'slano-korcula-hvar-vis-lastovo-14day-route',
   startingPoint: 'Slano',
-  otherPoints: ['Korčula', 'Hvar', 'Vis', 'Lastovo', '14 Days'],
+  otherPoints: ['Korčula', 'Hvar', 'Vis', 'Lastovo'],
   cardImage: {
     src: '/images/itinerary/croatia/split-dubrovnik-itinerary/routes/slano-hvar-vis-card-image.webp',
     alt: 'Card image',

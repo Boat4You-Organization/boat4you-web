@@ -7,7 +7,7 @@ const parosMilosSantoriniSyros14DaysRoute: ItineraryRoute = {
     'Sail a 14-day yacht charter from Paros via Naxos, Donousa, Amorgos, Small Cyclades, Santorini, Milos, Sifnos, Kythnos and Syros. Cyclades grand tour from Paros base.',
   id: 'paros-ios-santorini-14-days',
   startingPoint: 'Paros',
-  otherPoints: ['Milos', 'Santorini', 'Syros (14 days)'],
+  otherPoints: ['Milos', 'Santorini', 'Syros'],
   cardImage: {
     src: '/images/itinerary/greece/cyclades-itinerary/routes/paros-milos-santorini-syros-14-days.webp',
     alt: 'athens-saronic-gulf',

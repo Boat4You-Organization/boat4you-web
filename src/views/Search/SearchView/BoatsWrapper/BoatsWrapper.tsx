@@ -1,7 +1,7 @@
 /* eslint-disable no-nested-ternary */
 import React from 'react';
 
-import { getLocale } from 'next-intl/server';
+import { getLocale, getTranslations } from 'next-intl/server';
 
 import { getLoggedInUser } from '@/actions/auth.actions';
 import { getInquiry } from '@/actions/yacht.actions';
@@ -14,6 +14,7 @@ import { getCuratedSeoHtml } from '@/utils/server/curatedSeoContent';
 import { landingCrumbs, landingNav } from '@/utils/server/landingNav';
 import { placeText } from '@/utils/server/placeText';
 import { yachtFetchParams } from '@/utils/server/searchLanding';
+import { isUndatedSearch } from '@/utils/static/listingPrice';
 import CharterFactsBlock, { CharterFactsTarget } from '@/views/Search/CharterFacts';
 import LandingLinks, { LandingBreadcrumb } from '@/views/Search/LandingLinks';
 
@@ -105,6 +106,13 @@ const BoatsWrapper = async ({
   // "Split Region") show the text of the canonical landing they fold onto.
   const curatedSeoHtml = firstDestination ? await getCuratedSeoHtml(locale, destLabel, boatType) : null;
 
+  // Which week the undated cards are priced for (audit B19): each boat's
+  // cheapest bookable 7-night week (priceBasis=week, yachtFetchParams) — said
+  // once above the grid. A dated search prices the searched dates instead.
+  const priceNote = isUndatedSearch(searchParams)
+    ? (await getTranslations({ locale, namespace: 'landing' }))('weeklyPriceNote')
+    : null;
+
   // EUR → page currency rate as the listing reports it (clientPriceInfo is
   // the backend's own conversion), so the facts read in the page currency.
   const priceInfo = data.content?.find(y => y.clientPriceInfo?.currency === currency)?.clientPriceInfo;
@@ -119,6 +127,7 @@ const BoatsWrapper = async ({
       destinationWhere={destWhere}
       popularDestinationsWhere={nav?.popular.where}
       curatedSeoHtml={curatedSeoHtml}
+      priceNote={priceNote}
       charterFactsSlot={
         charterFacts ? (
           <CharterFactsBlock target={charterFacts} locale={locale} currency={currency} rate={factsRate} />

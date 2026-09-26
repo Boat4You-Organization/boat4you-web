@@ -7,7 +7,7 @@ const palermoLongRoute: ItineraryRoute = {
     'Sail a 7-day yacht charter from Palermo through Mondello, Cefalù, Lipari, Salina, Panarea and Ustica — Aeolian volcanic archipelago + Tyrrhenian island reserve.',
   id: 'palermoLong',
   startingPoint: 'Palermo',
-  otherPoints: ['Long'],
+  otherPoints: ['Cefalù', 'Lipari', 'Vulcano'],
   cardImage: { src: '/images/itinerary/italy/sicily-itinerary/routes/palermo-long.webp', alt: 'Card image' },
   gallery: [
     { src: '/images/itinerary/italy/banners/lipari-banner-large.webp', alt: '' },

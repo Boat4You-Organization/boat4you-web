@@ -7,7 +7,7 @@ const rhodes14DaysRoute: ItineraryRoute = {
     'Sail a 14-day yacht charter from Rhodes via Symi, Nisyros, Kos, Leros, Patmos, Lipsi, Levitha, Kalymnos, Astypalaia, Tilos, Chalki and Lindos. Full Dodecanese grand tour.',
   id: 'rhodes-14-days',
   startingPoint: 'Rhodes',
-  otherPoints: ['14 days'],
+  otherPoints: [],
   cardImage: {
     src: '/images/itinerary/greece/dodecanese-itinerary/routes/rhodes-14-days.webp',
     alt: 'Card image',

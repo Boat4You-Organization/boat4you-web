@@ -7,7 +7,7 @@ const mykanosSirosMilosIos14DaysRoute: ItineraryRoute = {
     'Sail a 14-day yacht charter round-trip from Paros via Sifnos, Serifos, Kythnos, Syros, Mykonos, Naxos, Ios, Santorini, Folegandros and Milos. Full grand-tour Cyclades.',
   id: 'mykanos-siros-milos-ios-14-days',
   startingPoint: 'Paros',
-  otherPoints: ['Siros', 'Milos', 'Ios (14 days)'],
+  otherPoints: ['Siros', 'Milos', 'Ios'],
   cardImage: {
     src: '/images/itinerary/greece/cyclades-itinerary/routes/paros-siros-milos-ios-14-days.webp',
     alt: 'athens-saronic-gulf',

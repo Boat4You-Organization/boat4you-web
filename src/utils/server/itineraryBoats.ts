@@ -156,7 +156,10 @@ export const itineraryBoats = async (
 
   const [base, yachts, region] = await Promise.all([
     hubFor(index, resolved, null, locale),
-    fetchYachts({ locations: [], did: resolved.dids, size: MAX_BOATS }, Currency.EUR, 'en', {
+    // Undated like the landings, so priced like them (audit B16): each boat's
+    // cheapest bookable 7-night week (`priceBasis=week`). Without it the
+    // cards mixed 3/4/5-day prices ("Preis für 3 Tage" on 7 of 12 cards).
+    fetchYachts({ locations: [], did: resolved.dids, size: MAX_BOATS, priceBasis: 'week' }, Currency.EUR, 'en', {
       revalidate: ITINERARY_BOATS_REVALIDATE_SECONDS,
     }).catch((): PaginatedResponse<YachtModelShortInfo> => ({ content: [] })),
     regionHubAbove(index, resolved, locale),

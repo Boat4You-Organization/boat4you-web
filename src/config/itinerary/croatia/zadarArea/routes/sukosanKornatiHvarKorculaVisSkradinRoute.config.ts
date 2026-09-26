@@ -7,7 +7,7 @@ const sukosanKornatiHvarKorculaVisSkradin14DaysRoute: ItineraryRoute = {
     'Embark on a 14-day yacht charter from Sukosan via Kornati, Hvar, Korčula & Vis to Skradin. Discover hidden bays, UNESCO towns & Adriatic island charm.',
   id: 'sukosan-kornati-hvar-korcula-vis-skradin-14days-route',
   startingPoint: 'Sukošan',
-  otherPoints: ['Kornati', 'Hvar', 'Korcula', 'Vis', 'Skradin'],
+  otherPoints: ['Kornati', 'Hvar', 'Korčula', 'Vis', 'Skradin'],
   cardImage: {
     src: '/images/itinerary/croatia/zadar-itinerary/routes/sukosan-hvar-card-image.webp',
     alt: 'Card image',

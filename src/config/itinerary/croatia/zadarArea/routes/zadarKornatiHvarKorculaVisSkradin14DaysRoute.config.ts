@@ -7,7 +7,7 @@ const zadarKornatiHvarKorculaVisSkradin14DaysRoute: ItineraryRoute = {
     'Embark on a 14-day yacht charter from Zadar through Kornati, Hvar, Korčula & Vis, ending in Skradin. Explore hidden bays, historic islands & Adriatic island bliss.',
   id: 'zadar-kornati-hvar-korcula-vis-skradin-14days-route',
   startingPoint: 'Zadar',
-  otherPoints: ['Kornati', 'Hvar', 'Korcula', 'Vis', 'Skradin'],
+  otherPoints: ['Kornati', 'Hvar', 'Korčula', 'Vis', 'Skradin'],
   cardImage: {
     src: '/images/itinerary/croatia/zadar-itinerary/routes/zadar-hvar-card-image.webp',
     alt: 'Card image',

@@ -7,7 +7,7 @@ const biogradVisHvarSoltaRoute: ItineraryRoute = {
     'Sail a 7-day yacht charter from Biograd na Moru via Vrgada, Primošten, Komiža & Hvar to Šolta. Discover hidden bays, iconic towns & Adriatic island charm.',
   id: 'biograd-na-moru-vis-hvar-solta-route',
   startingPoint: 'Biograd na Moru',
-  otherPoints: ['Vis', 'Hvar', 'Solta'],
+  otherPoints: ['Vis', 'Hvar', 'Šolta'],
   cardImage: {
     src: '/images/itinerary/croatia/zadar-itinerary/routes/biograd-hvar-card-image.webp',
     alt: 'Card image',

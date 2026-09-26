@@ -7,7 +7,7 @@ const kastelaDubrovnikKastela14DaysRoute: ItineraryRoute = {
     '14-day yacht route from Kaštela south to Dubrovnik via Šolta, Vis, Lastovo & Mljet — return via Korčula, Hvar & Brač. Sailor brief with NM.',
   id: 'kastela-dubrovnik-kastela-14day-route',
   startingPoint: 'Kaštela',
-  otherPoints: ['Dubrovnik', 'Kaštela (14 Days)'],
+  otherPoints: ['Dubrovnik', 'Korčula'],
   cardImage: {
     src: '/images/itinerary/croatia/split-dubrovnik-itinerary/routes/kastela-dubrovnik-card-image.webp',
     alt: 'Card image',

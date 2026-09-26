@@ -7,7 +7,7 @@ const palmaDeMallorcaSouthRoute: ItineraryRoute = {
     'Sail a 7-day yacht charter from Palma via Cala Pi, Es Trenc, Cabrera, Cala Figuera, Portocolom and Cala Santanyí — Mallorca south + Cabrera National Park loop.',
   id: 'palma-de-mallorca-south',
   startingPoint: 'Palma de Mallorca',
-  otherPoints: ['South'],
+  otherPoints: ['Cabrera', 'Cala Figuera', 'Portocolom'],
   cardImage: {
     src: '/images/itinerary/spain/mallorca-itinerary/routes/palma-de-mallorca-south.webp',
     alt: 'Card image',

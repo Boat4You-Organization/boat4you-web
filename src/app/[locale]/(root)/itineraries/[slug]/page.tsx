@@ -10,6 +10,7 @@ import { itineraries } from '@/config/itineraries.config';
 import { LocaleType } from '@/config/locales.config';
 import { itineraryNamespace, resolveAreaText } from '@/helper/itineraryI18n';
 import { itinerarySearchPath } from '@/utils/server/itineraryBoats';
+import { placeText } from '@/utils/server/placeText';
 import { buildBreadcrumbJsonLd, buildTouristTripJsonLd } from '@/utils/static/buildItineraryJsonLd';
 import { buildMetadata } from '@/utils/static/buildMetadata';
 import { serializeJsonLd } from '@/utils/static/serializeJsonLd';
@@ -87,6 +88,14 @@ const ItineraryAreaPage = async ({ params }: ItineraryAreaPageParams) => {
   }
 
   const t = await getTranslations('itinerary');
+  // The area and country as the landings name them in this locale
+  // ("Kykladen", "Griechenland") — the headings read "Über Cyclades" and
+  // "Segelrouten in Greece" on /de (audit B16). Unmapped places keep their
+  // own (proper-noun) name.
+  const [areaLabel, countryLabel] = await Promise.all([
+    placeText(locale, itinerary.sailingArea).then(p => p.name),
+    placeText(locale, country ?? 'Europe').then(p => p.name),
+  ]);
 
   const breadcrumbLd = buildBreadcrumbJsonLd([
     { name: t('breadcrumb.home'), url: '/' },
@@ -118,12 +127,12 @@ const ItineraryAreaPage = async ({ params }: ItineraryAreaPageParams) => {
         ))}
         <ItineraryHero
           kicker={t('areaHero.kicker')}
-          eyebrow={t('areaHero.eyebrow', { country: country ?? 'Europe' })}
-          title={t('areaHero.title', { area: itinerary.sailingArea })}
+          eyebrow={t('areaHero.eyebrow', { country: countryLabel })}
+          title={t('areaHero.title', { area: areaLabel })}
           italic={t('areaHero.italic')}
           image={{ src: itinerary.backgroundImage.src, alt: itinerary.backgroundImage.alt }}
         />
-        <ItineraryArea slug={slug} />
+        <ItineraryArea slug={slug} areaLabel={areaLabel} />
         {primaryStart && (
           <ItineraryBoats
             startingPoint={primaryStart}
