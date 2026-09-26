@@ -3,7 +3,7 @@ import { Container } from '@mui/material';
 import { Metadata } from 'next';
 import { Locale } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
-import { notFound } from 'next/navigation';
+import { notFound, permanentRedirect } from 'next/navigation';
 
 import { getLoggedInUser } from '@/actions/auth.actions';
 import { getSingleYacth } from '@/actions/yacht.actions';
@@ -13,15 +13,20 @@ import { suggestedRouteTitles } from '@/components/SuggestedItineraries/suggeste
 import { AllSearchParams } from '@/config/form-models.config';
 import { LocaleType } from '@/config/locales.config';
 import { meta } from '@/config/meta';
+import { routing } from '@/i18n/routing';
 import { Currency } from '@/models/user.model';
 import { CHARTER_TYPE_LABEL_MAP, CharterType, YachtModel } from '@/models/yacht.model';
 import { boatHubs } from '@/utils/server/catalogueHubs';
+import { loadManufacturerLookup } from '@/utils/server/manufacturerLookup';
 import { BoatDescTranslate, buildBoatDescription } from '@/utils/static/boatMetaDescription';
+import { buildBoatTitle, titleBoatName, titlePlace } from '@/utils/static/boatTitle';
 import { buildMetadata, localizedUrl } from '@/utils/static/buildMetadata';
 import { getBoatImageUrl } from '@/utils/static/imageUtils';
 import { serializeJsonLd } from '@/utils/static/jsonLd';
 import { toTitleCase } from '@/utils/static/toTitleCase';
+import { ManufacturerLookup, yachtBrandName } from '@/utils/static/yachtBrand';
 import { buildYachtFaq, buildYachtFaqSchema } from '@/utils/static/yachtFaq';
+import { cleanModelName } from '@/utils/static/yachtModelKey';
 import BoatContentSection from '@/views/Boat/BoatContentSection';
 import BoatHeroSection from '@/views/Boat/BoatHeroSection';
 import BoatHubLinks from '@/views/Boat/BoatHubLinks';
@@ -76,41 +81,58 @@ const yachtShareImageUrl = (yacht: YachtModel): string | null => {
  *   - `name` / `description` — same shape as the visible H1 / meta description
  *     so SERP and on-page content stay aligned
  *   - `image` — main yacht photo URL (already absolute from CDN)
- *   - `brand` — manufacturer name (Lagoon, Bavaria, Beneteau …)
+ *   - `brand` — the builder (Lagoon, Bavaria, Beneteau …), yachtBrand.ts
  *   - `category` — vessel type (Catamaran, Sailing yacht …)
  *   - `additionalProperty` — yacht specs (year, cabins, berths, max persons,
  *     length) so Google's product knowledge graph can match facets
- *   - `offers` — `AggregateOffer` with min/max charter price across the loaded
- *     date range; populated only when at least one offer carries a price >0
+ *   - `offers` — `AggregateOffer` with the min/max 7-night price of the
+ *     upcoming weeks; populated only when a week carries a price >0
  *
  * `aggregateRating` is intentionally OMITTED — Google flags fake/empty review
  * markup as spam and removes the rich result entirely. Re-add only when a
  * real review platform (Trustpilot / Google Reviews / internal) is wired up.
  */
-function buildYachtProductSchema(yacht: YachtModel, locale: LocaleType, tDesc: BoatDescTranslate) {
+/** Nights of one offer (dateFrom → dateTo), or null when unreadable. */
+const offerNights = (offer: { dateFrom?: string; dateTo?: string; numberOfDays?: number | null }): number | null => {
+  const from = Date.parse(offer.dateFrom?.slice(0, 10) ?? '');
+  const to = Date.parse(offer.dateTo?.slice(0, 10) ?? '');
+
+  if (Number.isFinite(from) && Number.isFinite(to)) return Math.round((to - from) / 86_400_000);
+
+  return offer.numberOfDays ?? null;
+};
+
+function buildYachtProductSchema(
+  yacht: YachtModel,
+  locale: LocaleType,
+  tDesc: BoatDescTranslate,
+  manufacturers: ManufacturerLookup | null
+) {
   const url = localizedUrl(locale, `/boat/${yacht.slug}`);
   const mainImage = yachtShareImageUrl(yacht) || `${meta.url}/meta/og-image.png`;
 
-  // Brand fallback: partner sync occasionally lands `manufacturerName` as
-  // null even when the model name carries the brand (e.g. model="Lagoon 42"
-  // with manufacturer null). Extract the first whitespace-separated token
-  // from `model` as the brand — works for the dominant catalogue patterns
-  // (Lagoon 42, Bavaria 51, Beneteau Oceanis 45, Bali 4.6 …). Only use the
-  // fallback when the token is alphabetic — purely numeric models like
-  // "60 Sunreef" would otherwise return "60" which is meaningless.
-  const brandName = (() => {
-    if (yacht.manufacturerName) return yacht.manufacturerName;
+  // The builder from data (yachtBrand.ts): the payload's manufacturer, else
+  // the catalogue manufacturer the model name starts with — canonicalised,
+  // and never a charter operator ("Sunsail 424" has no builder in the
+  // payload; the first-word guess used to publish brand "Sunsail").
+  const brandName = yachtBrandName(yacht, manufacturers);
 
-    const firstToken = (yacht.model || '').trim().split(/\s+/)[0];
-
-    return /^[A-Za-zÀ-ž][A-Za-zÀ-ž'’.-]*$/.test(firstToken) ? firstToken : null;
-  })();
-
-  // Pull every offer with a real EUR price; drop zero/null entries (sync
-  // partners occasionally emit them as placeholders for future weeks).
-  const offerPrices = (yacht.offers || [])
-    .map(o => o.clientPriceEur)
-    .filter((p): p is number => typeof p === 'number' && p > 0);
+  // Weekly figures only (audit B26): the range used to span every offer
+  // length — 3,116 € to 45,317 € over 233 mixed 7/14/21/28-night offers —
+  // while the page and the landings price by the week. Future Saturday-style
+  // 7-night offers with a real price; the bookable ones (FREE, or an expired
+  // option) when there are any, else the booked weeks as SoldOut.
+  const today = new Date().toISOString().slice(0, 10);
+  const weekly = (yacht.offers || []).filter(
+    o =>
+      typeof o.clientPriceEur === 'number' &&
+      o.clientPriceEur > 0 &&
+      offerNights(o) === 7 &&
+      (o.dateFrom ?? '').slice(0, 10) >= today
+  );
+  const bookable = weekly.filter(o => (o.status as string) === 'FREE' || (o.status as string) === 'OPTION_EXPIRED');
+  const priced = bookable.length ? bookable : weekly;
+  const offerPrices = priced.map(o => Math.round(o.clientPriceEur));
 
   const lowPrice = offerPrices.length ? Math.min(...offerPrices) : null;
   const highPrice = offerPrices.length ? Math.max(...offerPrices) : null;
@@ -205,7 +227,7 @@ function buildYachtProductSchema(yacht: YachtModel, locale: LocaleType, tDesc: B
             lowPrice,
             highPrice,
             offerCount: offerPrices.length,
-            availability: 'https://schema.org/InStock',
+            availability: bookable.length ? 'https://schema.org/InStock' : 'https://schema.org/SoldOut',
             url,
             shippingDetails: offerShippingDetails,
             hasMerchantReturnPolicy: merchantReturnPolicy,
@@ -216,6 +238,36 @@ function buildYachtProductSchema(yacht: YachtModel, locale: LocaleType, tDesc: B
 
   return schema;
 }
+
+/**
+ * 301 (Next answers 308) to the boat's own slug when the API answers a
+ * request with another one: an older slug of a renamed boat, or the id of a
+ * dual-source record the backend merged into its canonical boat
+ * (`…-desafinado-13163` → `…-desafinado-481`). Before, both URLs answered 200
+ * and both sat in the sitemap, the duplicate only declaring a canonical
+ * (audit B05). The query (the searched dates) is kept.
+ */
+const redirectToCanonicalBoat = (
+  locale: string,
+  requestedSlug: string,
+  yacht: YachtModel,
+  query: Record<string, string | string[] | undefined>
+): void => {
+  if (!yacht.slug || yacht.slug === requestedSlug) return;
+
+  const qs = new URLSearchParams();
+
+  Object.entries(query).forEach(([key, value]) => {
+    (Array.isArray(value) ? value : [value]).forEach(v => {
+      if (v != null) qs.append(key, String(v));
+    });
+  });
+
+  const prefix = locale === routing.defaultLocale ? '' : `/${locale}`;
+  const search = qs.toString();
+
+  permanentRedirect(`${prefix}/boat/${yacht.slug}${search ? `?${search}` : ''}`);
+};
 
 export async function generateMetadata({
   params,
@@ -229,6 +281,7 @@ export async function generateMetadata({
   const { slug, locale } = await params;
 
   const searchParamsData = await searchParams;
+  const requestQuery = { ...(searchParamsData as unknown as Record<string, string | string[] | undefined>) };
 
   if (searchParamsData.startDate) {
     searchParamsData.dateFrom = searchParamsData.startDate;
@@ -245,6 +298,8 @@ export async function generateMetadata({
       title: 'Yacht Not Found',
     };
   }
+
+  redirectToCanonicalBoat(locale, slug, yacht, requestQuery);
 
   const getCharterTypeLabel = (charterType: string) => {
     const labelKey = CHARTER_TYPE_LABEL_MAP[charterType as CharterType];
@@ -263,11 +318,12 @@ export async function generateMetadata({
   const displayName = toTitleCase(yacht.name) || yacht.name?.trim() || '';
   const fullName = [yacht.model, displayName ? `'${displayName}'` : null].filter(Boolean).join(' ').trim();
   const yearSuffix = yacht.buildYear ? ` (${yacht.buildYear})` : '';
-  const cityOnly = yacht.location?.name?.split(',')[0]?.trim() ?? '';
   const locationFull = yacht.location?.name ?? '';
 
-  // SERP windows: title ~60 chars, description ~155 chars. Keep within both
-  // even when year+specs add ~12 chars to the body.
+  // SERP windows: title ≤ 70 characters with " | Boat4You", description
+  // ≤ 160 (buildMetadata trims). The title uses the boat's own name without
+  // the partner's equipment notes and the base's town, dropping the brand
+  // suffix, then the year, when it would not fit (boatTitle.ts, audit B42).
   const cabins = yacht.cabins ?? null;
   const berths = yacht.berths ?? yacht.maxPersons ?? null;
 
@@ -280,8 +336,14 @@ export async function generateMetadata({
   //   HR: "Lagoon 39 'Gin Tonic' (2017) — Najam Sukosan"
   //   FR: "Lagoon 39 'Gin Tonic' (2017) — Location Sukosan"
   //   IT/NL/ES/PT/PL: "Noleggio / Jachtcharter / Alquiler / Aluguer / Czarter Sukosan"
-  const titleTail = cityOnly ? tBoat('titleTail', { city: cityOnly }) : tBoat('titleTailNoCity');
-  const title = [`${fullName}${yearSuffix}`, titleTail].filter(Boolean).join(' — ');
+  const town = titlePlace(locationFull);
+  const titleTail = town ? tBoat('titleTail', { city: town }) : tBoat('titleTailNoCity');
+  const boatTitle = buildBoatTitle({
+    model: cleanModelName(yacht.model) || yacht.model || '',
+    name: titleBoatName(displayName),
+    year: yacht.buildYear,
+    tail: titleTail,
+  });
 
   // Description — native in every locale from `metadata.boat.desc*` (only EN
   // and HR were native before; the other seven showed English in the SERP
@@ -295,7 +357,8 @@ export async function generateMetadata({
 
   return buildMetadata({
     locale: locale as LocaleType,
-    title,
+    title: boatTitle.title,
+    ...(boatTitle.absolute ? { titleAbsolute: boatTitle.title } : {}),
     description,
     path: `/boat/${yacht.slug}`,
     image: {
@@ -316,6 +379,7 @@ const BoatPage = async ({
   const { slug, locale } = await params;
 
   const searchParamsData = await searchParams;
+  const requestQuery = { ...(searchParamsData as unknown as Record<string, string | string[] | undefined>) };
 
   if (searchParamsData.startDate) {
     searchParamsData.dateFrom = searchParamsData.startDate;
@@ -333,9 +397,17 @@ const BoatPage = async ({
     return notFound();
   }
 
-  const tBoatMeta = await getTranslations({ locale, namespace: 'metadata.boat' });
-  const productSchema = buildYachtProductSchema(yacht, locale as LocaleType, (key, values) =>
-    tBoatMeta(key as never, values as never)
+  redirectToCanonicalBoat(locale, slug, yacht, requestQuery);
+
+  const [tBoatMeta, manufacturers] = await Promise.all([
+    getTranslations({ locale, namespace: 'metadata.boat' }),
+    loadManufacturerLookup(),
+  ]);
+  const productSchema = buildYachtProductSchema(
+    yacht,
+    locale as LocaleType,
+    (key, values) => tBoatMeta(key as never, values as never),
+    manufacturers
   );
 
   // Hubs above this boat (country, region/base, boat type) — linked only
