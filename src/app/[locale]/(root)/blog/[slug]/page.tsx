@@ -156,7 +156,7 @@ const SingleBlogPage = async ({ params }: { params: Promise<{ slug: string; loca
           </Box>
         </Container>
       )}
-      <RelatedItineraries title={blog.post.title} slug={blog.post.slug} categories={categoryText} />
+      <RelatedItineraries title={blog.post.title} slug={blog.post.slug} categories={categoryText} locale={locale} />
       <RelatedBlogSection posts={blog.posts} />
     </Layout>
   );

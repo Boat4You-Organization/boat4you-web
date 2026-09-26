@@ -732,6 +732,7 @@
   },
   "areas": {
     "atlantic-france": {
+      "name": "Bretagna e Atlantico",
       "metaTitle": "Rotte in Bretagna e Atlantico | Boat4You",
       "metaDesc": "Rotte charter nella Bretagna sud: Belle-Île, Houat, Hoëdic e il Golfo del Morbihan. Vento, maree e ancoraggi tra le isole, giorno per giorno.",
       "title": "Naviga isole e maree della Bretagna sud",
@@ -744,6 +745,7 @@
       "description": "La maggior parte degli equipaggi parte da Ajaccio e scende verso Bonifacio, una rotta che ripaga con termici costanti tra 10 e 20 nodi nei pomeriggi estivi. Qui la navigazione è lavoro onesto: la costa ovest tira ponenti da forza 3 a 6, e le Bocche di Bonifacio incanalano il libeccio in raffiche corte e secche, quindi tieni un piano B per la traversata verso le Îles Lavezzi. Quella riserva di isolotti di granito e basse baie turchesi è la ricompensa. A nord di Ajaccio, le falesie di porfido rosso di Scandola e il borgo raggiungibile solo per mare di Girolata sono un'alternativa più tranquilla al circuito sud. Le tappe stanno in gran parte tra 15 e 30 miglia nautiche, salti giornalieri comodi. Una nota pratica: il porto-fiordo di Bonifacio è pieno da metà luglio a tutto agosto, quindi chiama in VHF per un posto oppure ancora al largo e scendi col tender. Vieni a giugno o a settembre e gli stessi ancoraggi sembrano mezzi vuoti."
     },
     "cote-azur": {
+      "name": "Costa Azzurra",
       "metaTitle": "Itinerari a Vela in Costa Azzurra | Boat4You",
       "metaDesc": "Rotte charter giorno per giorno in Costa Azzurra: venti leggeri, tappe brevi da Cannes a Saint-Tropez, Port-Cros e le rade di Porquerolles.",
       "title": "Dal glamour di Cannes alle rade selvagge delle isole",

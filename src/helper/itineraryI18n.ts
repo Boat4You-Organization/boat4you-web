@@ -19,6 +19,8 @@ import { ItineraryDay, ItineraryRoute } from '@/types/itinerary.type';
  *
  * KEY LAYOUT under each country namespace (e.g. `itineraryCroatia`):
  *   areas.<areaId>.{metaTitle,metaDesc,title,description}
+ *   areas.<areaId>.name   (only where the landing name does not cover it —
+ *                          see utils/server/itineraryPlaceNames.ts)
  *   routes.<routeId>.{metaTitle,metaDesc}
  *   routes.<routeId>.days.<dayNumber>.{shortDescription,description,mooringTip}
  *   routes.<routeId>.days.<dayNumber>.thingsToDo   (string[])
@@ -120,7 +122,7 @@ const dayKey = (routeId: string, day: number, field: string) => `routes.${routeI
 export const resolveAreaText = (
   // index signature so any Itinerary-shaped object is assignable
   itinerary: { id?: string; i18nNamespace?: string; [key: string]: unknown },
-  field: 'metaTitle' | 'metaDesc' | 'title' | 'description',
+  field: 'metaTitle' | 'metaDesc' | 'title' | 'description' | 'name',
   fallback: string | undefined,
   t: Translate | undefined
 ): string | undefined => {

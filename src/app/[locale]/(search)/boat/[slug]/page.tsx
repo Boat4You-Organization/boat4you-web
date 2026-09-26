@@ -9,7 +9,7 @@ import { getLoggedInUser } from '@/actions/auth.actions';
 import { getSingleYacth } from '@/actions/yacht.actions';
 import Layout from '@/components/Layout';
 import SuggestedItineraries from '@/components/SuggestedItineraries';
-import { suggestedRouteTitles } from '@/components/SuggestedItineraries/suggestedRouteTitles';
+import { suggestedAreaLabel, suggestedRouteTitles } from '@/components/SuggestedItineraries/suggestedRouteTitles';
 import { AllSearchParams } from '@/config/form-models.config';
 import { LocaleType } from '@/config/locales.config';
 import { meta } from '@/config/meta';
@@ -518,6 +518,7 @@ const BoatPage = async ({
             countryCode={yacht.location?.countryCode}
             variant="full"
             routeTitles={await suggestedRouteTitles(yacht.location?.name, yacht.location?.countryCode)}
+            areaLabel={await suggestedAreaLabel(locale, yacht.location?.name, yacht.location?.countryCode)}
           />
         </Container>
         <BoatMobileNavigation yacht={yacht} />

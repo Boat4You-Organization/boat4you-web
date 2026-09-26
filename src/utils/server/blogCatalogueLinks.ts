@@ -15,6 +15,7 @@ import {
   locationForDid,
   resolveDestinationName,
 } from '@/utils/server/destinationDid';
+import { itineraryAreaName } from '@/utils/server/itineraryPlaceNames';
 import { buildSearchLandingPath, normalizeDestinationName } from '@/utils/static/searchLandingPath';
 
 /**
@@ -251,7 +252,10 @@ export const blogExploreHubs = async (
   const index = await loadDestinationIndex();
   const areaId = itineraryAreaForBlogText([post.slug, post.title, ...(post.categories ?? [])].join(' '));
   const area = areaId ? itineraries.flatMap(g => g.itinerary).find(a => a.id === areaId) : null;
-  const itinerary = area ? { href: `${localePrefix(locale)}/itineraries/${area.id}`, area: area.sailingArea } : null;
+  // The area's name in this locale, as the itinerary page heads it (audit B16).
+  const itinerary = area
+    ? { href: `${localePrefix(locale)}/itineraries/${area.id}`, area: await itineraryAreaName(locale, area) }
+    : null;
 
   if (!index) return { hubs: [], itinerary };
 

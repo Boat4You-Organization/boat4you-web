@@ -27,19 +27,18 @@ const ALL_LABEL = '__ALL__';
 
 interface ItineraryAreaProps {
   slug: string;
-  /** The area's name in the page locale (placeText on the server); the
-   *  config's English name when not given. */
-  areaLabel?: string;
+  /** The area's name in the page locale (itineraryAreaName on the server).
+   *  Every heading uses it — never the config's English `sailingArea`
+   *  ("Wählen Sie Ihre Woche ab Cyclades", audit B16). */
+  areaLabel: string;
+  /** The area's country in the page locale (itineraryCountryName). */
+  countryLabel: string;
 }
 
-const ItineraryArea: FC<ItineraryAreaProps> = ({ slug, areaLabel }) => {
+const ItineraryArea: FC<ItineraryAreaProps> = ({ slug, areaLabel, countryLabel }) => {
   const t = useTranslations('itinerary');
 
   const itinerary = useMemo(() => itineraries.flatMap(group => group.itinerary).find(item => item.id === slug), [slug]);
-  const country = useMemo(
-    () => itineraries.find(({ itinerary: items }) => items.some(item => item.id === slug))?.country,
-    [slug]
-  );
 
   // Per-country itinerary copy (area essay + per-route metaDesc) lives in
   // the area's namespace (itinerary.i18nNamespace, stamped in
@@ -118,14 +117,12 @@ const ItineraryArea: FC<ItineraryAreaProps> = ({ slug, areaLabel }) => {
             >
               {t('area.pickTitle')}{' '}
               <Box component="span" sx={{ fontStyle: 'italic', fontWeight: 400 }}>
-                {t('area.pickTitleItalic', { area: itinerary.sailingArea })}
+                {t('area.pickTitleItalic', { area: areaLabel })}
               </Box>
             </Typography>
-            {country && (
-              <Typography sx={{ mt: 1.5, color: colors.black600, fontSize: { xs: 14, md: 15 } }}>
-                {t('area.areaSubtitle', { country, area: itinerary.sailingArea })}
-              </Typography>
-            )}
+            <Typography sx={{ mt: 1.5, color: colors.black600, fontSize: { xs: 14, md: 15 } }}>
+              {t('area.areaSubtitle', { country: countryLabel, area: areaLabel })}
+            </Typography>
           </Box>
           <Typography
             component={Link}
@@ -352,7 +349,7 @@ const ItineraryArea: FC<ItineraryAreaProps> = ({ slug, areaLabel }) => {
                 fontWeight: 600,
               }}
             >
-              {t('area.aboutEyebrow', { area: areaLabel ?? itinerary.sailingArea })}
+              {t('area.aboutEyebrow', { area: areaLabel })}
             </Typography>
             <Typography
               component="h2"
@@ -365,7 +362,7 @@ const ItineraryArea: FC<ItineraryAreaProps> = ({ slug, areaLabel }) => {
                 mb: { xs: 3, md: 4 },
               }}
             >
-              {t('area.aboutHeading', { area: itinerary.sailingArea })}{' '}
+              {t('area.aboutHeading', { area: areaLabel })}{' '}
               <Box component="span" sx={{ fontStyle: 'italic', fontWeight: 400 }}>
                 {t('area.aboutHeadingItalic')}
               </Box>

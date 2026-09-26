@@ -9,6 +9,7 @@ import { itineraries } from '@/config/itineraries.config';
 import { LocaleType } from '@/config/locales.config';
 import { ITINERARY_NAMESPACES } from '@/i18n/clientMessages';
 import { itinerarySearchPath } from '@/utils/server/itineraryBoats';
+import { itineraryAreaName, itineraryCountryName } from '@/utils/server/itineraryPlaceNames';
 import { buildBreadcrumbJsonLd, buildItineraryCollectionJsonLd } from '@/utils/static/buildItineraryJsonLd';
 import { buildMetadata } from '@/utils/static/buildMetadata';
 import { serializeJsonLd } from '@/utils/static/serializeJsonLd';
@@ -57,6 +58,18 @@ const ItinerariesPage = async ({ params }: ItinerariesPageParams) => {
     spain: spainHref,
     turkey: turkeyHref,
   };
+  // Area and country names in this locale for the hub's headings and cards (audit B16).
+  const [areaNames, countryNames] = await Promise.all([
+    Promise.all(
+      itineraries
+        .flatMap(group => group.itinerary)
+        .map(async area => [area.id, await itineraryAreaName(locale, area)] as const)
+    ),
+    Promise.all(
+      itineraries.map(async group => [group.country, await itineraryCountryName(locale, group.country)] as const)
+    ),
+  ]);
+  const placeNames = { areas: Object.fromEntries(areaNames), countries: Object.fromEntries(countryNames) };
 
   // Flatten country-grouped itineraries → ListItems for the
   // CollectionPage schema. Each carries `id` and `sailingArea` + parent
@@ -99,7 +112,7 @@ const ItinerariesPage = async ({ params }: ItinerariesPageParams) => {
           lede={t('builder.hubCtaLede')}
           action={t('builder.hubCta')}
         />
-        <ItinerariesHub countrySearchHrefs={countrySearchHrefs} />
+        <ItinerariesHub countrySearchHrefs={countrySearchHrefs} placeNames={placeNames} />
         <ItineraryEndCta
           title={t('listCta.title')}
           lede={t('listCta.lede')}
