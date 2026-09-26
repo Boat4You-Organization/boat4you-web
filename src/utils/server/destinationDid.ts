@@ -138,7 +138,13 @@ const splitDids = (id: string): string[] =>
 export const requireDestinationIndex = cache(async (): Promise<DestinationIndex> => {
   const [locations, countryCounts, marinaCounts] = await Promise.all([
     fetchJson<{
-      content?: Array<{ id: string; name?: string; locationType?: string; countryCode?: string }>;
+      content?: Array<{
+        id: string;
+        name?: string;
+        locationType?: string;
+        countryCode?: string;
+        aliases?: string[] | null;
+      }>;
     }>(`${apiBase()}/public/locations?size=${LOCATIONS_PAGE_SIZE}`),
     fetchJson<Array<{ id: string; name?: string; yachtCount?: number }>>(`${apiBase()}/public/countries-count`),
     fetchJson<Array<{ id: string; name?: string; yachtCount?: number }>>(`${apiBase()}/public/locations-count`),
@@ -166,6 +172,23 @@ export const requireDestinationIndex = cache(async (): Promise<DestinationIndex>
     list.push(indexed);
     byName.set(key, list);
     splitDids(location.id).forEach(did => byDid.set(did, indexed));
+  });
+
+  // Region aliases from the backend (region_alias, V9_68): the spellings a
+  // region carried before its name became canonical and the partners'
+  // current names ("Zadar region" for r-3 "Zadar"). Each one finds its
+  // region, so an old URL resolves and 301s to the canonical landing. Never
+  // over a real catalogue name.
+  locations.content.forEach(location => {
+    const target = location.id ? byDid.get(splitDids(location.id)[0]) : undefined;
+
+    if (!target || !Array.isArray(location.aliases)) return;
+
+    location.aliases.forEach(alias => {
+      const key = normalizeDestinationName(alias);
+
+      if (key && !byName.has(key)) byName.set(key, [target]);
+    });
   });
 
   const counts = new Map<string, number>();
