@@ -107,7 +107,8 @@ export const rewriteBlogCatalogueLinks = async (html: string, locale: string): P
   if (!matches.length) return html;
 
   const index = await loadDestinationIndex();
-  const targets = await Promise.all(matches.map(([, href]) => targetFor(index, href, locale)));
+  // A catalogue outage mid-way leaves that link as written (the post renders).
+  const targets = await Promise.all(matches.map(([, href]) => targetFor(index, href, locale).catch(() => null)));
   let cursor = 0;
   let out = '';
 

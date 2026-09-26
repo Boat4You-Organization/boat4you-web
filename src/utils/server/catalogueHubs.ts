@@ -171,16 +171,18 @@ export interface BoatHubs {
   typeLabel: string | null;
 }
 
+const EMPTY_HUBS: BoatHubs = { country: null, area: null, typeHub: null, typeLabel: null };
+
 /**
  * Hubs above one boat: Home › Country › Region (or base) › Type. Soft-fails
  * to nulls when the catalogue lists are unavailable.
  */
-export const boatHubs = async (
+const boatHubsOrThrow = async (
   location: { id?: string; name?: string; countryCode?: string } | null | undefined,
   boatType: VesselType | null,
   locale: string
 ): Promise<BoatHubs> => {
-  const empty: BoatHubs = { country: null, area: null, typeHub: null, typeLabel: null };
+  const empty = EMPTY_HUBS;
   const index = await loadDestinationIndex();
   const countryCode = location?.countryCode;
 
@@ -222,3 +224,14 @@ export const boatHubs = async (
 
   return { country, area, typeHub, typeLabel: await boatTypePlural(locale, boatType) };
 };
+
+/**
+ * The hubs of one boat; empty when the catalogue cannot be read (the landing
+ * gate throws on an outage since 26.9.2026 — a boat page still renders, only
+ * without its hub links).
+ */
+export const boatHubs = async (
+  location: { id?: string; name?: string; countryCode?: string } | null | undefined,
+  boatType: VesselType | null,
+  locale: string
+): Promise<BoatHubs> => boatHubsOrThrow(location, boatType, locale).catch(() => EMPTY_HUBS);

@@ -5,6 +5,7 @@ import { Currency } from '@/models/user.model';
 import { isVesselType } from '@/models/yacht.model';
 import { ResolvedDestination, resolveDestinationDids } from '@/utils/server/destinationDid';
 import { isUndatedSearch } from '@/utils/static/listingPrice';
+import { destinationSlug, isLandingExpressible } from '@/utils/static/searchLandingPath';
 
 /**
  * Next leaves a comma-separated query value as one string (`?destinations=A%2CB`
@@ -64,6 +65,52 @@ export const resolveSearchLanding = async (params: AllSearchParams): Promise<Sea
   });
 
   return { destinations, hasOwnDid, resolved, did, labels };
+};
+
+const encodeQueryValue = (value: string): string => encodeURIComponent(value).replace(/'/g, '%27');
+
+/**
+ * Where a non-canonical spelling of a landing must 301 (locale-less path +
+ * query), or null when the URL already carries the canonical spelling.
+ *
+ * One destination that resolves to a place whose canonical name differs from
+ * the URL value — an alias ("virgin islands (british)" → "british virgin
+ * islands"), a member spelling ("split" → "split region"), a name a partner
+ * sync has since changed ("zadar region" → "zadar"), a case or diacritics
+ * variant — is redirected to the canonical URL with every other parameter
+ * kept, so old sitemap entries and links consolidate onto ONE indexable URL
+ * instead of rendering a duplicate or a noindex page (audit B01/B05). The
+ * canonical form is the sitemap's byte for byte (buildSearchLandingPath):
+ * destinations first, then boatTypes, then the rest in request order.
+ */
+export const landingRedirectPath = (params: AllSearchParams, landing: SearchLanding): string | null => {
+  if (landing.hasOwnDid || landing.destinations.length !== 1) return null;
+
+  const resolved = landing.resolved[0];
+
+  if (!resolved || !isLandingExpressible(resolved.name)) return null;
+
+  const canonical = destinationSlug(resolved.name);
+  const raw = params.destinations;
+
+  if (typeof raw === 'string' && raw === canonical) return null;
+
+  const entries = Object.entries(params as unknown as Record<string, unknown>).filter(
+    ([key, value]) => key !== 'destinations' && value != null
+  );
+  const ordered = [
+    ...entries.filter(([key]) => key === 'boatTypes'),
+    ...entries.filter(([key]) => key !== 'boatTypes'),
+  ];
+  const query = [`destinations=${encodeQueryValue(canonical)}`];
+
+  ordered.forEach(([key, value]) => {
+    (Array.isArray(value) ? value : [value]).forEach(v =>
+      query.push(`${encodeQueryValue(key)}=${encodeQueryValue(String(v))}`)
+    );
+  });
+
+  return `/search?${query.join('&')}`;
 };
 
 /** Search params with the resolved did applied (unchanged when there is none). */

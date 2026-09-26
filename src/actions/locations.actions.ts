@@ -227,7 +227,8 @@ export default async function getCountriesCount(): Promise<CountryCountModel[]> 
     }
 
     const countries = filterDisplayCountries(await response.json());
-    const listed = await Promise.all(countries.map(country => fleetTotalForDid(country.id)));
+    // One failed count falls back to the count endpoint's figure for that card.
+    const listed = await Promise.all(countries.map(country => fleetTotalForDid(country.id).catch(() => null)));
 
     return countries
       .map((country, i) => ({ ...country, yachtCount: listed[i] ?? country.yachtCount }))
