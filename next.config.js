@@ -37,52 +37,16 @@ const withNextIntl = createNextIntlPlugin({
   },
 });
 
-// Crawlers that must get the page metadata (title, meta robots, canonical,
-// hreflang, description) inside <head>. Next 16 streams metadata for every
-// other user agent: the <head> is flushed first and the tags arrive later in
-// <body> once generateMetadata resolves. Next's built-in list
-// (HTML_LIMITED_BOT_UA_RE in next/dist/shared/lib/router/utils/html-bots.js,
-// copied verbatim as the first alternative below) covers Bingbot and the
-// "-Google" crawlers but NOT "Googlebot/2.1" itself, so on cold renders the
-// real Googlebot read title/robots/canonical/hreflang after </head> — 27 of
-// 40 blog posts and the long tail of boat pages in the 26.9.2026 crawl (B06).
-// Search and AI crawlers are added explicitly; none of them should have to
-// execute JS or accept head tags in the body to see our metadata. Humans keep
-// streaming (fast first byte). Verified with a cold Googlebot fetch: the
-// <title> sits before </head>.
-const NEXT_DEFAULT_HTML_LIMITED_BOTS =
-  '[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight';
-const EXTRA_HTML_LIMITED_BOTS = [
-  'Googlebot',
-  'Storebot-Google',
-  'GoogleOther',
-  'bingbot',
-  'msnbot',
-  'adidxbot',
-  'SeznamBot',
-  'Qwantbot',
-  'Qwantify',
-  'Ecosia',
-  'MojeekBot',
-  'PetalBot',
-  'Amazonbot',
-  'GPTBot',
-  'OAI-SearchBot',
-  'ChatGPT-User',
-  'ClaudeBot',
-  'Claude-User',
-  'Claude-SearchBot',
-  'PerplexityBot',
-  'Perplexity-User',
-  'CCBot',
-  'Bytespider',
-  'meta-externalagent',
-  'DuckAssistBot',
-  'YouBot',
-  'AhrefsBot',
-  'SemrushBot',
-];
-const HTML_LIMITED_BOTS = new RegExp(`${NEXT_DEFAULT_HTML_LIMITED_BOTS}|${EXTRA_HTML_LIMITED_BOTS.join('|')}`, 'i');
+// Page metadata (title, meta robots, canonical, hreflang, description) must sit
+// inside <head> for EVERY request. Next 16 streams metadata into <body> for user
+// agents that do not match htmlLimitedBots, and an ISR page caches whatever the
+// first render produced — so a UA list is not enough: a cold ISR render served
+// title/robots/canonical after </head> even to Googlebot (26.9.2026, 11 of 12
+// cold blog posts; audit B06), and a page first rendered for a browser kept
+// body metadata for every later crawler. /.*/ is Next's documented switch to
+// disable metadata streaming entirely; the cost is a later first byte on a cold
+// render only (warm ISR pages are served from cache either way).
+const HTML_LIMITED_BOTS = /.*/;
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
