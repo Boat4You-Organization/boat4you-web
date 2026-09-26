@@ -6,9 +6,9 @@ import { AppBar, Box, Button, Container, Stack } from '@mui/material';
 import cx from 'clsx';
 import dayjs from 'dayjs';
 import { useTranslations } from 'next-intl';
-import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 
+import { Link } from '@/i18n/navigation';
 import Form from '@/components/Forms/Form';
 import Favorites from '@/components/Header/Favorites';
 import LanguageCurrency from '@/components/Header/LanguageCurrency';

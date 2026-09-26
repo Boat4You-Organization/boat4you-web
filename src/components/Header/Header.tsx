@@ -4,13 +4,13 @@ import { Suspense } from 'react';
 
 import { AppBar, Button, Container, Divider, Drawer, IconButton, Stack } from '@mui/material';
 import { useTranslations } from 'next-intl';
-import Link from 'next/link';
 
 import HamburgerMenu from '@/components/HamburgerMenu';
 import Favorites from '@/components/Header/Favorites';
 import NavigationMobile from '@/components/NavigationMobile';
 import ProfileDropdown from '@/components/ProfileDropdown';
 import Logo from '@/components/SvgIcons/Logo';
+import { Link } from '@/i18n/navigation';
 import colors from '@/styles/themes/colors';
 import { useAuthModal } from '@/utils/context/AuthModalContext';
 import useToggleState from '@/utils/hooks/useToggleState';

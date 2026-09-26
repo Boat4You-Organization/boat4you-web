@@ -99,7 +99,7 @@ const ItineraryHubSeoSection = ({ countrySearchHrefs }: { countrySearchHrefs?: C
         <Para>
           {t.rich('indexSeo.croatiaBody', {
             strong,
-            croatiaLink: inlineLink(countrySearchHrefs?.croatia ?? '/search?destinations=Croatia'),
+            croatiaLink: inlineLink(countrySearchHrefs?.croatia ?? '/search?destinations=croatia'),
           })}
         </Para>
 
@@ -107,7 +107,7 @@ const ItineraryHubSeoSection = ({ countrySearchHrefs }: { countrySearchHrefs?: C
         <Para>
           {t.rich('indexSeo.greeceBody', {
             strong,
-            greeceLink: inlineLink(countrySearchHrefs?.greece ?? '/search?destinations=Greece'),
+            greeceLink: inlineLink(countrySearchHrefs?.greece ?? '/search?destinations=greece'),
           })}
         </Para>
 
@@ -115,7 +115,7 @@ const ItineraryHubSeoSection = ({ countrySearchHrefs }: { countrySearchHrefs?: C
         <Para>
           {t.rich('indexSeo.italyBody', {
             strong,
-            italyLink: inlineLink(countrySearchHrefs?.italy ?? '/search?destinations=Italy'),
+            italyLink: inlineLink(countrySearchHrefs?.italy ?? '/search?destinations=italy'),
           })}
         </Para>
 
@@ -123,7 +123,7 @@ const ItineraryHubSeoSection = ({ countrySearchHrefs }: { countrySearchHrefs?: C
         <Para>
           {t.rich('indexSeo.spainBody', {
             strong,
-            spainLink: inlineLink(countrySearchHrefs?.spain ?? '/search?destinations=Spain'),
+            spainLink: inlineLink(countrySearchHrefs?.spain ?? '/search?destinations=spain'),
           })}
         </Para>
 
@@ -131,7 +131,7 @@ const ItineraryHubSeoSection = ({ countrySearchHrefs }: { countrySearchHrefs?: C
         <Para>
           {t.rich('indexSeo.turkeyBody', {
             strong,
-            turkeyLink: inlineLink(countrySearchHrefs?.turkey ?? '/search?destinations=Turkey'),
+            turkeyLink: inlineLink(countrySearchHrefs?.turkey ?? '/search?destinations=turkey'),
           })}
         </Para>
 

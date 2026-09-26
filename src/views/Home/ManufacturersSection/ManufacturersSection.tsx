@@ -1,5 +1,4 @@
 import { useTranslations } from 'next-intl';
-import Link from 'next/link';
 
 import type { ManufacturerCount } from '@/actions/catalogue.actions';
 import { Link as IntlLink } from '@/i18n/navigation';
@@ -53,14 +52,15 @@ const ManufacturersSection = ({ manufacturers }: ManufacturersSectionProps) => {
               {body}
             </IntlLink>
           ) : (
-            <Link
+            <IntlLink
               key={m.id}
               href={`/search?mfid=${m.id}&manufacturers=${encodeURIComponent(m.name)}`}
               rel="nofollow"
+              prefetch={false}
               className={styles.tile}
             >
               {body}
-            </Link>
+            </IntlLink>
           );
         })}
       </div>

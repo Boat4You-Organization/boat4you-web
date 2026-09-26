@@ -27,13 +27,13 @@ import { Box, Button, Card, CardContent, CardMedia, Stack, Typography } from '@m
 import cx from 'clsx';
 import { useLocale, useTranslations } from 'next-intl';
 import Image from 'next/image';
-import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 
 import BoatLocationModal from '@/components/BoatLocationModal';
 import Checkbox from '@/components/Checkbox';
 import FavoriteButton from '@/components/FavoriteButton';
 import FlagIcon from '@/components/FlagIcon';
+import { Link } from '@/i18n/navigation';
 import { UserModel, UserRoleName } from '@/models/user.model';
 import { MatchKind, OfferStatus, YachtModelShortInfo } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';

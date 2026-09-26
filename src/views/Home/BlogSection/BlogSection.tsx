@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
-import Link from 'next/link';
 
 import BlogCard from '@/components/BlogCard';
+import { Link } from '@/i18n/navigation';
 import { BlogTeaser } from '@/types/blog.type';
 
 import styles from './BlogSection.module.scss';
