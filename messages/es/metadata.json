@@ -49,7 +49,7 @@
     },
     "fleet": {
       "title": "Directorio de la flota de alquiler de barcos",
-      "description": "Consulta todos los veleros, catamaranes y barcos a motor de la flota de Boat4You: Croacia, Grecia, Italia, Francia, Turquía, España, Montenegro, Seychelles y el Caribe.",
+      "description": "Consulta todos los veleros, catamaranes y barcos a motor disponibles en Boat4You: Croacia, Grecia, Italia, Francia, Turquía, España, Montenegro, Seychelles y el Caribe.",
       "path": "/fleet"
     }
   },
@@ -66,7 +66,7 @@
   },
   "fleet": {
     "heading": "Directorio de la flota",
-    "lede": "Todos los barcos de nuestra flota, ordenados por marina base: veleros, catamaranes, yates a motor y goletas en Croacia, Grecia, Italia, Francia, Turquía, España, Montenegro, Seychelles y el Caribe. Abre cualquier barco para ver fotos, características, disponibilidad y precios.",
+    "lede": "Todos los barcos disponibles en Boat4You, ordenados por marina base: veleros, catamaranes, yates a motor y goletas en Croacia, Grecia, Italia, Francia, Turquía, España, Montenegro, Seychelles y el Caribe. Abre cualquier barco para ver fotos, características, disponibilidad y precios.",
     "summary": "{total, number} barcos · página {page} de {pages}",
     "otherBases": "Otras bases",
     "cabins": "{count, plural, one {# camarote} other {# camarotes}}",

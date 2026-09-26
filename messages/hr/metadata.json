@@ -49,7 +49,7 @@
     },
     "fleet": {
       "title": "Katalog flote za najam plovila",
-      "description": "Pregledajte sve jedrilice, katamarane i motorne brodove iz Boat4You flote — Hrvatska, Grčka, Italija, Francuska, Turska, Španjolska, Crna Gora, Sejšeli i Karibi.",
+      "description": "Pregledajte sve jedrilice, katamarane i motorne brodove na Boat4You — Hrvatska, Grčka, Italija, Francuska, Turska, Španjolska, Crna Gora, Sejšeli i Karibi.",
       "path": "/fleet"
     }
   },
@@ -66,7 +66,7 @@
   },
   "fleet": {
     "heading": "Katalog flote",
-    "lede": "Sva plovila iz naše flote, poredana po matičnoj marini — jedrilice, katamarani, motorne jahte i gulete u Hrvatskoj, Grčkoj, Italiji, Francuskoj, Turskoj, Španjolskoj, Crnoj Gori, na Sejšelima i Karibima. Otvorite bilo koje plovilo za fotografije, specifikacije, dostupnost i cijene.",
+    "lede": "Sva plovila na Boat4You, poredana po matičnoj marini — jedrilice, katamarani, motorne jahte i gulete u Hrvatskoj, Grčkoj, Italiji, Francuskoj, Turskoj, Španjolskoj, Crnoj Gori, na Sejšelima i Karibima. Otvorite bilo koje plovilo za fotografije, specifikacije, dostupnost i cijene.",
     "summary": "{total, number} plovila · stranica {page} od {pages}",
     "otherBases": "Ostale baze",
     "cabins": "{count, plural, one {# kabina} few {# kabine} other {# kabina}}",

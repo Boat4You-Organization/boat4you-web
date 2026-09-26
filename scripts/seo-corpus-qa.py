@@ -33,16 +33,28 @@ Rules (all locales unless noted), in this order:
              "only", "moins de", "nur") stays, one set off by a dash or colon
              gets a size phrase ("—hundreds of vessels—")
   headings   untranslated place names in headings (non-EN)
-  prune, junk, operators, inland, claims2, links, dupes, edits
-             added after the 26.9.2026 audit — see scripts/seo_corpus_rules.py
-             (charter-company names, houseboat/canal copy, fleet-ownership
-             claims, broken/relative/stale-did links, page furniture)
+  junk, subject, casing, claims2, operators, inland, compass, links, dupes,
+  edits, recap
+             added after the 26.9.2026 audit — see scripts/seo_corpus_rules.py:
+             charter-company names, houseboat/canal/river copy, fleet
+             ownership in every form ("Boat4You's fleet", "our yachts", "we
+             inspect our boats", Boat4You-Flotte, Boat4You-vloot, subjectless
+             upkeep sentences), sentences and "Warum … für" headings whose
+             subject the brand pass removed, founding year (2013) and
+             experience claims, compass directions around Split/Trogir/
+             Primošten and the ACI Split superlatives, HR/PL heading sentence
+             case, raw URLs and "[Brand]" placeholders as link text,
+             broken/relative/stale-did links, page furniture
 
 After the fixers, every file is checked (seo_corpus_rules.checks): operator
-names, inland terms, ownership claims, broken hrefs, did/label mismatch,
-nested links, Cyrillic, English text in a translation, a translation about
-other places than its EN source, duplicate paragraphs/headings. Any finding
-fails --check.
+names, inland terms, ownership claims (plus an independent deny-list that
+does not reuse the fixer patterns), raw URLs / "\">" / brackets in visible
+text, sentences starting in lower case, founded≠2013, compass directions,
+broken hrefs, did/label mismatch, nested links, Cyrillic, the wrong language,
+English text in a translation, a translation about other places than its EN
+source, numbers a retranslated page has that its EN source does not,
+duplicate paragraphs/headings — and the UI strings in messages/<locale>/*.json
+(seo_corpus_rules.message_checks). Any finding fails --check.
 
 Unfilled page templates (PLACEHOLDER / "Key Advantage Section 1") are only
 reported, and fail --check: they must be written or removed by hand.
@@ -60,6 +72,7 @@ import argparse
 import collections
 import html
 import json
+import multiprocessing
 import os
 import re
 import sys
@@ -72,8 +85,8 @@ ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'public', 
 LOCALES = ['en', 'de', 'fr', 'it', 'es', 'pt', 'nl', 'pl', 'hr']
 # brand runs before facts/counts: a restored "Boat4You's … base" or
 # "Boat4You's 395-yacht" is then handled in the same pass.
-RULES = ['foreign', 'structure', 'faq', 'brand', 'facts', 'claims', 'counts', 'headings',
-         'junk', 'operators', 'inland', 'claims2', 'links', 'dupes', 'edits']
+RULES = ['foreign', 'structure', 'faq', 'junk', 'brand', 'subject', 'facts', 'claims', 'casing', 'claims2', 'counts',
+         'headings', 'operators', 'inland', 'compass', 'links', 'dupes', 'edits', 'recap']
 
 
 class Ctx:
@@ -1209,6 +1222,7 @@ can will may is has also partnered typically specifically carefully frequently s
 strategically proudly deliberately consistently actively primarily readily expertly strictly clearly
 '''.split())
 BRAND_NOUNS = set('support staff team concierge coordinators specialists advisors consultants representatives professionals'.split())
+R.SUBJECT_VERBS['en'] = BRAND_VERBS | BRAND_NOUNS | {'brokers', 'catalogs', 'lists', 'believes'}
 SENTENCE_START = re.compile(
     r"(?:(?<=<p>)|(?<=<li>)|(?<=<td>)|(?<=<p> )|(?<=<li> )|(?<=[a-z0-9)%”\"'][.!?] ))"
     r"(?<!e\.g\. )(?<!i\.e\. )(?<!etc\. )(?<!approx\. )(?<!vs\. )(?<!incl\. )(?<!ca\. )(?<!cf\. )(?<!no\. )(?<!avg\. )"
@@ -1319,7 +1333,7 @@ CLAIM_SUBJECT = {
 }
 CLAIM_VERBS = {
     'en': r'maintains|operates|keeps|bases|stations|owns|houses|moors|has',
-    'de': r'unterhält|betreibt|stationiert|besitzt|hält',
+    'de': r'unterhält|betreibt|stationiert|besitzt|hält|wartet|pflegt|inspiziert|repariert',
     'fr': r'entretient|exploite|maintient|stationne|possède|opère|base|gère',
     'it': r'mantiene|gestisce|possiede|opera|ormeggia|staziona|basa|tiene',
     'es': r'mantiene|opera|gestiona|posee|estaciona|basa|tiene|amarra',
@@ -1494,15 +1508,51 @@ def rule_functions():
         'counts': fix_counts,
         'headings': fix_headings,
         'brand': fix_brand,
+        'subject': R.fix_subject,
         'claims': fix_claims,
         'junk': R.fix_junk,
         'operators': R.fix_operators,
         'inland': R.fix_inland,
         'claims2': R.fix_claims2,
+        'compass': R.fix_compass,
+        'casing': R.fix_casing,
+        'recap': R.fix_recap,
         'links': R.fix_links,
         'dupes': R.fix_dupes,
         'edits': R.fix_edits,
     }
+
+
+_WORKER = {}
+
+
+def _init_worker(common, en_text):
+    _WORKER['common'] = common
+    R.CORPUS_ROOT[:] = [common[0]]
+    _WORKER['en_text'] = en_text
+
+
+def _process_file(job):
+    """Run the selected rules and the checks on one corpus file.
+    Returns (log entries, check findings, changed?, final text)."""
+    locale, name = job
+    root, selected, corpus_slugs, check_only = _WORKER['common']
+    funcs = rule_functions()
+    path = os.path.join(root, locale, name)
+    with open(path, encoding='utf-8') as fh:
+        original = fh.read()
+    file_log = []
+    ctx = Ctx(locale, name, file_log, corpus_slugs)
+    text = original
+    for rule in selected:
+        text = funcs[rule](text, ctx)
+    if text != original and not check_only:
+        with open(path, 'w', encoding='utf-8') as fh:
+            fh.write(text)
+    en_src = text if locale == 'en' else _WORKER['en_text'].get(name)
+    file_findings = [(check, f'{locale}/{name}', squash(excerpt))
+                     for check, excerpt in R.checks(text, locale, name, en_src if locale != 'en' else None)]
+    return file_log, file_findings, text != original, (text if locale == 'en' else None)
 
 
 def main():
@@ -1512,6 +1562,8 @@ def main():
     ap.add_argument('--only', help='comma-separated subset of rules: ' + ','.join(RULES))
     ap.add_argument('--root', default=ROOT)
     ap.add_argument('--report', help='write every check finding as TSV (check, file, excerpt)')
+    ap.add_argument('--jobs', type=int, default=min(4, os.cpu_count() or 1),
+                    help='parallel worker processes (default 4)')
     ap.add_argument('--refresh-locations', action='store_true',
                     help='re-snapshot /public/locations into scripts/seo-corpus-locations.json first')
     args = ap.parse_args()
@@ -1548,33 +1600,45 @@ def main():
     pruned_set = {(l, n) for l, n, _ in pruned}
     corpus_slugs = frozenset(n[:-5] for n in os.listdir(os.path.join(args.root, 'en')) if n.endswith('.html'))
 
+    jobs = []
     for locale in LOCALES:
         folder = os.path.join(args.root, locale)
         for name in sorted(os.listdir(folder)):
-            if not name.endswith('.html') or (locale, name) in pruned_set:
-                continue
-            path = os.path.join(folder, name)
-            with open(path, encoding='utf-8') as fh:
-                original = fh.read()
-            scanned[locale] += 1
-            ctx = Ctx(locale, name, log, corpus_slugs)
-            text = original
-            for rule in selected:
-                before_len = len(log)
-                text = funcs[rule](text, ctx)
-                n = len(log) - before_len
-                if n:
-                    per_rule[rule][locale] += n
-                    files_per_rule[rule][locale].add(name)
-            if text != original:
-                changed[locale] += 1
-                if not args.check:
-                    with open(path, 'w', encoding='utf-8') as fh:
-                        fh.write(text)
-            if locale == 'en':
-                en_text[name] = text
-            for check, excerpt in R.checks(text, locale, name, en_text.get(name)):
-                findings.append((check, f'{locale}/{name}', squash(excerpt)))
+            if name.endswith('.html') and (locale, name) not in pruned_set:
+                jobs.append((locale, name))
+    common = (args.root, selected, corpus_slugs, args.check)
+    # corpus-wide statistics are taken before any worker writes a file
+    R.CORPUS_ROOT[:] = [args.root]
+    if 'casing' in selected:
+        for loc in ('hr', 'pl'):
+            R._casing_stats(loc)
+    # EN first: the translation checks compare against the fixed EN text.
+    en_jobs = [j for j in jobs if j[0] == 'en']
+    other_jobs = [j for j in jobs if j[0] != 'en']
+    results = []
+    workers = max(1, args.jobs)
+    if workers > 1:
+        ctx_mp = multiprocessing.get_context('fork')
+        with ctx_mp.Pool(workers, initializer=_init_worker, initargs=(common, {})) as pool:
+            results.extend(pool.map(_process_file, en_jobs, chunksize=16))
+            en_text = {name: text for (locale, name), (_, _, _, text) in zip(en_jobs, results)}
+        with ctx_mp.Pool(workers, initializer=_init_worker, initargs=(common, en_text)) as pool:
+            results.extend(pool.map(_process_file, other_jobs, chunksize=16))
+    else:
+        _init_worker(common, {})
+        results.extend(_process_file(j) for j in en_jobs)
+        en_text = {name: text for (locale, name), (_, _, _, text) in zip(en_jobs, results)}
+        _init_worker(common, en_text)
+        results.extend(_process_file(j) for j in other_jobs)
+    for (locale, name), (file_log, file_findings, was_changed, _) in zip(en_jobs + other_jobs, results):
+        scanned[locale] += 1
+        log.extend(file_log)
+        for entry in file_log:
+            per_rule[entry[0]][locale] += 1
+            files_per_rule[entry[0]][locale].add(name)
+        if was_changed:
+            changed[locale] += 1
+        findings.extend(file_findings)
 
     width = max(len(r) for r in RULES + ['prune'])
     print(f"{'rule':<{width}}  " + ' '.join(f'{l:>6}' for l in LOCALES) + '   total  (changes / files)')
@@ -1618,6 +1682,8 @@ def main():
                 cells = [rule, f, before, after, context]
                 fh.write('\t'.join(squash(c).replace('\t', ' ') for c in cells) + '\n')
 
+    for check, excerpt in R.message_checks():
+        findings.append((check, 'messages', squash(excerpt)))
     by_check = collections.Counter(c for c, _, _ in findings)
     files_by_check = collections.defaultdict(set)
     for check, f, _ in findings:

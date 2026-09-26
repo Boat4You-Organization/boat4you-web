@@ -28,12 +28,31 @@ Fixers (run in this order after the older rules):
              (scripts/seo-corpus-locations.json, refresh with
              --refresh-locations)
   dupes      a paragraph repeated verbatim in one file: later copies removed
+  subject    sentences and headings whose subject "Boat4You" an earlier pass
+             removed ("<p> arranges …", "Warum für …", "Why Choose for …"):
+             the brand or a subject is restored per language (fix_subject,
+             fix_heading_holes); recap re-runs it after the last rewrites
+  casing     HR/PL headings in Title Case → sentence case: a word is lowered
+             only when the corpus writes it in lower case mid-sentence (the
+             rule web-ui's sentence_case.py applied once, kept reproducible)
+  compass    wrong directions around Trogir/Split/Primošten/Rogoznica/
+             Kaštela and the airport (COMPASS_CASES, with the distance fixes
+             that go with them), ACI Split "largest/primary base" (ACI_FIXES)
+  (claims2 also covers "our yachts", "we inspect/maintain our boats",
+  subjectless upkeep sentences, Boat4You-Flotte / Boat4You-vloot compounds,
+  founded-in and "15+ years" experience claims)
 
 Checks (report; fail --check), see `checks()`: operator names, inland terms,
 ownership claims, broken/relative hrefs, did/label mismatch, un-localised
 static links, nested <a>, page furniture, Cyrillic, English text in a
 translated file, a translation about other places than its EN source,
-duplicate paragraphs/headings, "since 20xx" founding claims.
+duplicate paragraphs/headings, founding year ≠ 2013 and experience claims,
+and `independent_checks()`: a deny-list for fleet ownership written apart
+from the fixer patterns (CLAIM_DENY), raw URLs / '">' / "[…]" in visible
+text, sentences starting in lower case, compass directions (COMPASS_WRONG),
+ACI Split superlatives, the wrong language; numbers a retranslated page
+(RETRANSLATED) has that its EN source does not. `message_checks()` applies
+the owner rules to messages/<locale>/*.json.
 """
 
 import functools
@@ -237,6 +256,7 @@ LOOKALIKE = str.maketrans({chr(0x430): 'a', chr(0x435): 'e', chr(0x43E): 'o', ch
                            chr(0x41E): 'O', chr(0x420): 'P', chr(0x421): 'C', chr(0x425): 'X', chr(0x406): 'I'})
 _CYR = chr(0x400) + '-' + chr(0x4FF)
 LATIN_WORD_WITH_CYRILLIC = re.compile(rf'\b(?=[\w{_CYR}]*[A-Za-zÀ-ž])(?=[\w{_CYR}]*[{_CYR}])[\w{_CYR}]+\b')
+BRACKET_BRAND = re.compile(r"\[(?:Boat4You|Subject Missing|Subject|Company Name|Nome Azienda|Firma|Empresa|Bedrijfsnaam|Nazwa firmy|Naziv tvrtke|Nom de l['’]entreprise|Nome da empresa|Firmenname|Brand)\]")
 PLACEHOLDER_LINK = re.compile(r'<a\b[^>]*\shref="#?"[^>]*>((?:(?!</a\s*>)[\s\S])*)</a\s*>')
 BRAND_GAP_EN = [
     (re.compile(r'\b([Hh]ow) operates\b'), r'\1 Boat4You works'),
@@ -280,8 +300,148 @@ def unnest_anchors(body, ctx):
     return ''.join(out)
 
 
+# Links an earlier brand-removal pass broke: it cut '<a href="https://www.'
+# (and the words around it) out of call-to-action sentences, so readers saw
+# 'boat4you.com/search?…">catamaran fleet</a>' or a bare URL. The sentence is
+# rebuilt per file where words are missing (RAW_LINK_EDITS); anything else
+# gets a working link: the URL as visible text becomes "Boat4You" (a static
+# page's own name when the URL is the whole link text), and 'boat4you.com/x">'
+# becomes '<a href="https://www.boat4you.com/x">'.
+_S = f'{SITE}/search?destinations=Athens%2FSaronic+Gulf&did=r-165'
+_RIV = f'{SITE}/search?destinations=French+Riviera&did=r-184'
+_RAW_S = 'boat4you.com/search?destinations=Athens%2FSaronic+Gulf&did=r-165">'
+_RAW_RIV = 'boat4you.com/search?destinations=French+Riviera&did=r-184">'
+_OLY_C = 'catamaran-charter-olympic-marina.html'
+_NUR_C = 'catamaran-charter-sardinia-punta-nuraghe.html'
+_NUR_S = 'sailing-yacht-charter-sardinia-punta-nuraghe.html'
+_GRI = 'grimaud-catamaran-charter.html'
+_DRAGE_M = 'motorboat-charter-drage.html'
+_DRAGE_S = 'sailing-yacht-charter-drage.html'
+_PORT = 'sailing-yacht-charter-portisco.html'
+_CAG = 'sailing-yacht-charter-marina-cagliari.html'
+RAW_LINK_EDITS = [
+    ('en', _OLY_C, 'sailing waters. ' + _RAW_S, f'sailing waters. Browse the <a href="{_S}">'),
+    ('en', _NUR_C, 'how-we-work">how boat4you.com/about-us">', f'how-we-work">how Boat4You works</a> and meet the <a href="{SITE}/about-us">'),
+    ('en', _GRI, 'protected coves. ' + _RAW_RIV, f'protected coves. The <a href="{_RIV}">'),
+    ('en', 'kornati-motor-yacht-charter.html', 'how-we-work">how boat4you.com/faq">', f'how-we-work">how Boat4You works</a> and read our <a href="{SITE}/faq">'),
+    ('en', 'lavrion-catamaran-charter.html', 'departure advantage. ' + _RAW_S, f'departure advantage. Browse the <a href="{_S}">'),
+    ('en', 'lavrion-sailing-yacht-charter.html', 'on the horizon. ' + _RAW_S, f'on the horizon. Browse the <a href="{_S}">'),
+    ('en', 'motorboat-charter-brodogradiliste-filipi.html', '<p>Explore how boat4you.com/how-we-work">', f'<p>Explore how Boat4You works in our <a href="{SITE}/how-we-work">'),
+    ('en', _DRAGE_M, 'to learn how boat4you.com/faq">', f'to learn how Boat4You works, or see our <a href="{SITE}/faq">'),
+    ('en', 'motorboat-charter-olympic-marina.html', 'exactly that. ' + _RAW_S, f'exactly that. Check the <a href="{_S}">'),
+    ('en', _DRAGE_S, 'to understand how boat4you.com/faq">', f'to understand how Boat4You works, or see our <a href="{SITE}/faq">'),
+    ('en', _CAG, 'how-we-work">how boat4you.com/about-us">', f'how-we-work">how Boat4You works</a> and meet our <a href="{SITE}/about-us">'),
+    ('en', 'sailing-yacht-charter-marina-delta-kallithea.html', 'filling your sails. ' + _RAW_S, f'filling your sails. Browse the <a href="{_S}">'),
+    ('en', 'sailing-yacht-charter-olympic-marina.html', 'through the water. ' + _RAW_S, f'through the water. Browse the <a href="{_S}">'),
+    ('en', _PORT, 'how-we-work">how boat4you.com/about-us">', f'how-we-work">how Boat4You works</a> and meet the <a href="{SITE}/about-us">'),
+    ('en', _NUR_S, 'how-we-work">how boat4you.com/about-us">', f'how-we-work">how Boat4You works</a> and meet our <a href="{SITE}/about-us">'),
+    ('de', _NUR_C, 'Erfahren Sie <a href="/de/how-we-work">wie boat4you.com/about-us">Team widmet sich der Exzellenz im Segeln an abgelegenen Orten</a>.',
+     'Erfahren Sie, <a href="/de/how-we-work">wie Boat4You arbeitet</a>, und lernen Sie unser <a href="/de/about-us">Team</a> kennen, das sich dem Segeln an abgelegenen Orten verschrieben hat.'),
+    ('de', _DRAGE_S, 'um zu verstehen, wie boat4you.com/faq">FAQ</a> für Segelspezifische Fragen.',
+     'um zu verstehen, wie Boat4You arbeitet, oder lesen Sie unsere <a href="/de/faq">FAQ</a> zu Fragen rund ums Segeln.'),
+    ('fr', _GRI, 'Les annonces de catamarans sur ' + _RAW_RIV + 'French Riviera catamaran listings</a>',
+     f'Les <a href="{_RIV}">annonces de catamarans sur la Côte d\'Azur</a>'),
+    ('fr', _DRAGE_M, 'pour en savoir plus sur boat4you.com/faq">', 'pour en savoir plus sur Boat4You, ou consultez notre <a href="/fr/faq">'),
+    ('fr', _PORT, 'comment l\'équipe passionnée de boat4you.com/about-us">est derrière votre aventure de navigation</a>.',
+     'comment fonctionne Boat4You</a> et rencontrez l\'<a href="/fr/about-us">équipe passionnée derrière votre aventure de navigation</a>.'),
+    ('fr', _NUR_S, 'how-we-work">comment boat4you.com/about-us">', 'how-we-work">comment fonctionne Boat4You</a> et découvrez <a href="/fr/about-us">'),
+    ('it', _GRI, 'Le schede dei catamarani su ' + _RAW_RIV, f'Le schede dei catamarani in <a href="{_RIV}">'),
+    ('it', _DRAGE_M, 'per saperne di più su boat4you.com/faq">', 'per saperne di più su Boat4You, oppure consulta le nostre <a href="/it/faq">'),
+    ('it', 'motorboat-charter-olympic-marina.html', 'esattamente questo. ' + _RAW_S, f'esattamente questo. Verifica la <a href="{_S}">'),
+    ('it', _DRAGE_S, 'per capire come boat4you.com/faq">', 'per capire come funziona Boat4You, oppure consulta le nostre <a href="/it/faq">'),
+    ('it', _PORT, 'come il team appassionato di boat4you.com/about-us</a>', 'come lavora il team appassionato di Boat4You</a>'),
+    ('es', _OLY_C, 'en ' + _RAW_S + _RAW_S + 'catamaranes en la región de Atenas/Golfo Sarónico</a>', f'en <a href="{_S}">Boat4You</a>'),
+    ('es', _GRI, 'Los listados de catamaranes de ' + _RAW_RIV, f'Los <a href="{_RIV}">listados de '),
+    ('es', _DRAGE_S, 'cómo funciona boat4you.com/faq">FAQ</a> para preguntas específicas de navegación.',
+     'cómo funciona Boat4You, o consulte nuestras <a href="/es/faq">preguntas frecuentes</a> sobre navegación.'),
+    ('es', _PORT, 'cómo el apasionado equipo de boat4you.com/about-us detrás', 'cómo trabaja el apasionado equipo de Boat4You detrás'),
+    ('pt', _GRI, 'As listagens de catamarãs da ' + _RAW_RIV, f'As listagens de catamarãs da <a href="{_RIV}">'),
+    ('pt', 'lavrion-catamaran-charter.html', 'em ' + _RAW_S + 'frota de catamarãs na região de Atenas/Golfo Sarónico</a>', f'na <a href="{_S}">Boat4You</a>'),
+    ('pt', _DRAGE_S, 'para entender como boat4you.com/faq">', 'para entender como funciona a Boat4You, ou consulte as nossas <a href="/pt/faq">'),
+    ('pt', 'sailing-yacht-charter-marina-delta-kallithea.html', 'Visite ' + _RAW_S, f'Veja os <a href="{_S}">'),
+    ('nl', _NUR_C, 'how-we-work">hoe boat4you.com/about-us">team toegewijd aan uitmuntendheid in zeilen op afgelegen locaties</a>',
+     'how-we-work">hoe Boat4You werkt</a> en maak kennis met ons <a href="/nl/about-us">team, toegewijd aan uitmuntend zeilen op afgelegen locaties</a>'),
+    ('nl', _GRI, 'De catamaranaanbiedingen op ' + _RAW_RIV, f'De catamaranaanbiedingen aan de <a href="{_RIV}">'),
+    ('nl', 'kornati-motor-yacht-charter.html', 'how-we-work">hoe boat4you.com/faq">', 'how-we-work">hoe Boat4You werkt</a> en bekijk onze <a href="/nl/faq">'),
+    ('nl', _DRAGE_M, 'om te leren hoe boat4you.com/faq">', 'om te leren hoe Boat4You werkt, of bekijk onze <a href="/nl/faq">'),
+    ('nl', _DRAGE_S, 'om te begrijpen hoe boat4you.com/faq">', 'om te begrijpen hoe Boat4You werkt, of bekijk onze <a href="/nl/faq">'),
+    ('nl', _PORT, '<a href="/nl/how-we-work">hoe het gepassioneerde team achter uw zeilavontuur</a> werkt op boat4you.com/about-us.',
+     '<a href="/nl/how-we-work">hoe Boat4You werkt</a> en maak kennis met het <a href="/nl/about-us">gepassioneerde team achter uw zeilavontuur</a>.'),
+    ('pl', _NUR_C, 'how-we-work">jak działa boat4you.com/about-us">zespół dedykowany doskonałości w żeglarstwie w odległych lokalizacjach</a>',
+     'how-we-work">jak działa Boat4You</a> i poznaj nasz <a href="/pl/about-us">zespół oddany żeglarstwu w odległych lokalizacjach</a>'),
+    ('pl', _GRI, 'Katamarany dostępne na ' + _RAW_RIV, f'Katamarany dostępne na <a href="{_RIV}">'),
+    ('pl', 'motorboat-charter-brodogradiliste-filipi.html', '<p>Dowiedz się, jak działa boat4you.com/how-we-work">', '<p>Dowiedz się, jak działa Boat4You, w sekcji <a href="/pl/how-we-work">'),
+    ('hr', _OLY_C, '. flota katamarana u regiji Atena/Saronik (https://www.' + _RAW_S + ' flota katamarana u regiji Atena/Saronik</a>',
+     f'. Pregledajte <a href="{_S}">katamarane u regiji Atena/Saronik</a>'),
+    ('hr', _PORT, 'how-we-work">kako tim boat4you.com/about-us">strastveni tim stoji iza Vaše jedriličarske avanture</a>',
+     'how-we-work">kako radi Boat4You</a> i upoznajte <a href="/hr/about-us">strastveni tim koji stoji iza Vaše jedriličarske avanture</a>'),
+]
+PAGE_LABEL = {
+    '/how-we-work': {'en': 'How We Work', 'de': 'Wie wir arbeiten', 'fr': 'Comment nous fonctionnons', 'it': 'Come lavoriamo',
+                     'es': 'Cómo trabajamos', 'pt': 'Como trabalhamos', 'nl': 'Hoe wij werken', 'pl': 'Jak pracujemy', 'hr': 'Kako radimo'},
+    '/about-us': {'en': 'About Us', 'de': 'Über uns', 'fr': 'À propos', 'it': 'Chi siamo', 'es': 'Sobre nosotros',
+                  'pt': 'Sobre nós', 'nl': 'Over ons', 'pl': 'O nas', 'hr': 'O nama'},
+    '/faq': {loc: 'FAQ' for loc in LOCALES},
+}
+RAW_URL_TAIL = re.compile(r'(?<![\w/"=.@-])(?:https?://)?(?:www\.)?boat4you\.com(?P<path>/[^\s"<>]*)">', re.I)
+RAW_URL_TEXT = re.compile(r'(?<![\w/"=.@-])(?:https?://)?(?:www\.)?boat4you\.com(?P<path>/[^\s"<>]*)?(?P<label>\s*[—–]\s*[^<]*$)?', re.I)
+PT_BRAND_PREP = re.compile(r'\b([Ee])m (<a\b[^>]*>)Boat4You')
+
+
+def _in_anchor(body, pos):
+    return body.rfind('<a ', 0, pos) > body.rfind('</a>', 0, pos)
+
+
+def fix_raw_links(body, ctx):
+    for locale, name, old, new in RAW_LINK_EDITS:
+        if locale == ctx.locale and name == ctx.name:
+            pattern = tolerant(old)
+            if pattern.search(body):
+                body = pattern.sub(lambda m: new, body, count=1)
+                ctx.record('junk', old[:160], plain(new)[:160])
+
+    def tail(m):
+        new = f'<a href="{SITE}{m.group("path")}">'
+        ctx.record('junk', m.group(0), new)
+        return new
+
+    body = RAW_URL_TAIL.sub(tail, body)
+    out, pos = [], 0
+    for tm in re.finditer(r'<[^>]+>|\Z', body):
+        text = body[pos: tm.start()]
+        closes = tm.group(0).startswith('</a')
+        if 'boat4you.com' in text.lower():
+            def visible(m, start=pos, text=text, closes=closes):
+                if not m.group('path') and not re.match(r'https?:|www\.', m.group(0), re.I):
+                    return m.group(0)  # the domain named as a word ("at boat4you.com") is fine
+                path = (m.group('path') or '').rstrip('.,;:)')
+                rest = (m.group('path') or '')[len(path):]
+                inside = _in_anchor(body, start + m.start())
+                # "boat4you.com/search — Volos catamarans</a>": the dash label goes too
+                label_text = m.group('label') if (m.group('label') and inside and closes) else None
+                if m.group('label') and not label_text:
+                    rest += m.group('label')
+                whole = inside and closes and not text[: m.start()].strip() and not text[m.end():].strip() and not label_text
+                label = PAGE_LABEL.get(path.rstrip('/'), {}).get(ctx.locale) if whole else None
+                label = label or 'Boat4You'
+                new = label if inside else f'<a href="{SITE}{path}">{label}</a>'
+                ctx.record('junk', m.group(0), new)
+                return new + rest
+            text = RAW_URL_TEXT.sub(visible, text)
+        out.append(text)
+        out.append(tm.group(0))
+        pos = tm.end()
+        if not tm.group(0):
+            break
+    body = ''.join(out)
+    if ctx.locale == 'pt':
+        body = PT_BRAND_PREP.sub(lambda m: ('N' if m.group(1) == 'E' else 'n') + 'a ' + m.group(2) + 'Boat4You', body)
+    return body
+
+
 def fix_junk(src, ctx):
     head, body, tail = split_body(src)
+    body = fix_raw_links(body, ctx)
 
     def drop(m):
         ctx.record('junk', plain(m.group(0))[:160], '(removed)')
@@ -510,7 +670,7 @@ def fix_operators(src, ctx):
 # where a sea yacht sails up an estuary — Krka to Skradin, the Rance to
 # Dinan, the Ombla at Komolac, the Magra, Empuriabrava's Fluvià.
 RIVER_HARD = {
-    'all': r"house-?boats?|canal[- ]?boats?|canal[- ]cruis\w*|Canal du Midi|Canal d['’]Ille-et-Rance|Ille-et-Rance|"
+    'all': r"house-?boat\w*|(?-i:Sile)|Treviso\w* (?:river|Fluss|fiume|rivier)\w*|canal[- ]?boats?|canal[- ]cruis\w*|Canal du Midi|Canal d['’]Ille-et-Rance|Ille-et-Rance|"
            r"Canal de (?:la Marne|Nantes|Garonne|Bourgogne|Briare)\w*|Nantes[- ]Brest|narrowboats?|barge cruis\w*|"
            r"lock[- ]keepers?|Le Boat|Nicols|Linssen|Pénichette|IJsselmeer|Sile River|river Sile|fiume Sile|"
            r"Casale sul Sile|Niderviller|Marne au Rhin|canal (?:network|system)s?",
@@ -524,17 +684,25 @@ RIVER_HARD = {
     'hr': r"kuć\w* na vodi|brod\w*[- ]kuć\w*|kanalsk\w* brod\w*|brodic\w* za kanale|sustav\w* kanala",
 }
 RIVER_SOFT = {
-    'all': r"inland waterways?|river cruis\w*",
-    'de': r"Flusskreuzfahrt\w*",
-    'fr': r"croisières? fluviales?|navigation fluviale|voies navigables intérieures",
-    'it': r"crociere? fluviali?|navigazione fluviale|vie navigabili interne",
-    'es': r"cruceros? fluviales?|navegación fluvial|vías (?:navegables|fluviales) interiores",
-    'pt': r"cruzeiros? fluviais|cruzeiro fluvial|navegação fluvial|vias navegáveis interiores",
-    'nl': r"riviercruise\w*",
-    'pl': r"rejs\w* rzeczn\w*|śródlądow\w* drog\w* wodn\w*",
-    'hr': r"riječn\w* krstarenj\w*|unutarnj\w* plovn\w* put\w*",
+    'all': r"inland waterways?|river cruis\w*|inland rivers?|river (?:navigation|channels?|cruisers?|corridor|systems?)|"
+           r"canals and waterways|interconnected canals|towards? Treviso|lagoon and river",
+    'de': r"Flusskreuzfahrt\w*|Binnenflüss\w*|Flusskanäl\w*|Flusskreuzer\w*|Flussnavigation|Binnenwasserstra\w*|Flusssystem\w*|"
+          r"vernetzte Kanäle|Richtung Treviso",
+    'fr': r"croisières? fluviales?|navigation fluviale|voies navigables intérieures|rivières intérieures|canaux fluviaux|"
+          r"navigation en lagune et fluviale|croiseurs fluviaux|canaux et (?:les )?voies navigables interconnectés|vers Trévise",
+    'it': r"crociere? fluviali?|navigazione fluviale|vie navigabili interne|fiumi interni|canali fluviali|navigazione lagunare e fluviale|"
+          r"barche fluviali|imbarcazioni fluviali|corsi d'acqua interconnessi|verso Treviso",
+    'es': r"cruceros? fluviales?|navegación fluvial|vías (?:navegables|fluviales) interiores|ríos interiores|canales fluviales|"
+          r"navegación en lagunas y ríos|casas? flotantes?|vías fluviales interconectadas|hacia Treviso",
+    'pt': r"cruzeiros? fluviais|cruzeiro fluvial|navegação fluvial|vias navegáveis interiores|rios interiores|canais fluviais|"
+          r"navegação em lagoas e rios|casas? flutuantes?|vias navegáveis interligadas|direção a Treviso",
+    'nl': r"riviercruise\w*|binnenwater\w*|rivierkanal\w*|rivier\w*corridor|navigatie in lagunes en rivieren|verbonden kanalen|richting Treviso",
+    'pl': r"rejs\w* rzeczn\w*|śródlądow\w* drog\w* wodn\w*|rzekami w głąb lądu|kanały rzeczne|krążownik\w* rzeczn\w*|"
+          r"nawigacji po lagunach i rzekach|połączone kanały|kierunku Treviso",
+    'hr': r"riječn\w* krstarenj\w*|unutarnj\w* plovn\w* put\w*|unutarnjim rijekama|kanale rijeka|riječn\w* brodic\w*|"
+          r"navigaciju u lagunama i rijekama|povezane kanale|prema Trevisu",
 }
-RIVER_ALLOW = re.compile(r'Krka|Skradin|Zaton|Prokljan|Ombla|Komolac|Rijeka Dubrova\w*|Fluvi[aà]|Empuriabrava|Magra|Rance|Ebro|Neretva', re.I)
+RIVER_ALLOW = re.compile(r'Krka|Skradin|Šibenik|Sibenik|Zaton|Prokljan|Ombla|Komolac|Rijeka Dubrova\w*|Fluvi[aà]|Empuriabrava|Magra|Rance|Ebro|Neretva', re.I)
 
 
 @functools.lru_cache(maxsize=None)
@@ -610,11 +778,13 @@ def _cap(word, upper):
 # "our fleet" → "our partners' fleet". Words between the possessive and the
 # noun must be adjectives (no preposition), so "notre sélection de flotte"
 # or "our fleet team" are left alone; "Boat4You" in between is dropped.
-_MID_STOP = (r"of|Partners|de|di|da|du|des|del|della|van|von|od|z|ze|iz|the|la|le|les|a|e|and|und|et|y|en|i|oraz|for|für|"
+_MID_STOP = (r"of|Partners|Partnernetzwerk|partnernetwerk|network|sieć|mreža|réseau|rete|red|rede|de|di|da|du|des|del|della|van|von|od|z|ze|iz|the|la|le|les|a|e|and|und|et|y|en|i|oraz|for|für|"
              r"pour|per|para|voor|dla|za|with|mit|avec|con|com|met|s|sa|na|w|we|u|op|in|im|au|al|ao|do|entire|partners|partner")
 _SEP = r"(?:\s|</?(?:strong|em|b|a)\b[^>]*>)+"
 _MID = rf"(?P<mid>(?:{_SEP}(?!(?:{_MID_STOP})\b)[\w’'-]+){{0,2}}?)(?P<sep>{_SEP})"
-FLEET_MOD_NOUNS = r'team|teams|manager|managers|coordinator|coordinators|specialists?|experts?|partners?|database|operations|management'
+# EN allows one more modifier ("our complete Sardinia catamaran fleet")
+_MID_EN = rf"(?P<mid>(?:{_SEP}(?!(?:{_MID_STOP})\b)[\w’'-]+){{0,3}}?)(?P<sep>{_SEP})"
+FLEET_MOD_NOUNS = r'team|teams|coordinator|coordinators|specialists?|experts?|partners?|database|operations'
 
 
 def _mid(m):
@@ -639,7 +809,7 @@ def _cap_first_text(fragment):
 
 def _de_article(m):
     ending = m.group('e') or ''
-    art = {'': 'die', 'e': 'die', 'er': 'der', 'en': 'den' if m.group('n') == 'Flotten' else 'der'}[ending]
+    art = {'': 'die', 'e': 'die', 'er': 'der', 'en': 'den' if m.group('n').lower().endswith('flotten') else 'der'}[ending]
     return _cap(art, m.group('u') == 'U')
 
 
@@ -669,9 +839,9 @@ def _pt_article(m):
 
 # locale: (pattern, article/prefix(m), phrase appended after the noun)
 OUR_FLEET = {
-    'en': (re.compile(rf"\b(?P<o>[Oo])ur(?P<own>\s+own)?{_MID}(?P<n>[Ff]leets?)\b(?!\s+(?:{FLEET_MOD_NOUNS})\b)"),
+    'en': (re.compile(rf"\b(?P<o>[Oo])ur(?P<own>\s+own)?{_MID_EN}(?P<n>[Ff]leets?)\b(?!\s+(?:{FLEET_MOD_NOUNS})\b)"),
            lambda m: f"{m.group('o')}ur {'Partners' if m.group('n')[0] == 'F' else 'partners'}'", ''),
-    'de': (re.compile(rf"\b(?P<u>[Uu])nser(?P<e>e|er|en)?{_MID}(?P<n>Flotten?)\b"), _de_article, ' unserer Partner'),
+    'de': (re.compile(rf"\b(?P<u>[Uu])nser(?P<e>e|er|en)?{_MID}(?P<n>[\w-]*?[Ff]lotten?)\b(?!\s+unserer\s+Partner)"), _de_article, ' unserer Partner'),
     'fr': (re.compile(rf"\b(?P<n0>[Nn])(?P<pl>otre|os){_MID}(?P<n>[Ff]lottes?)\b"),
            lambda m: _cap('la' if m.group('pl') == 'otre' else 'les', m.group('n0') == 'N'), ' de nos partenaires'),
     'it': (re.compile(rf"\b(?:(?P<art>[Ll]a|[Dd]ella|[Nn]ella|[Aa]lla|[Dd]alla|[Ss]ulla|[Ll]e|[Dd]elle|[Nn]elle|[Aa]lle|[Dd]alle|[Ss]ulle)\s+)?(?P<n0>[Nn])ostr(?P<g>[ae]){_MID}(?P<n>[Ff]lott[ae])\b"),
@@ -680,11 +850,11 @@ OUR_FLEET = {
            _es_article, ' de nuestros socios'),
     'pt': (re.compile(rf"\b(?:(?P<pre>com a|para a|[Dd]a|[Nn]a|[Àà]|[Pp]ela|[Dd]e|[Ee]m|[Pp]or|[Cc]om|[Pp]ara|[Aa])\s+)?(?P<n0>[Nn])ossa(?P<pl>s?){_MID}(?P<n>[Ff]rotas?)\b"),
            _pt_article, ' dos nossos parceiros'),
-    'nl': (re.compile(rf"\b(?P<o>[Oo])nze{_MID}(?P<n>[Vv]loot|[Vv]loten)\b"),
+    'nl': (re.compile(rf"\b(?P<o>[Oo])nze{_MID}(?P<n>\w*[Vv]loot|\w*[Vv]loten)\b(?!\s+van\s+onze\s+partners)"),
            lambda m: _cap('de', m.group('o') == 'O'), ' van onze partners'),
-    'pl': (re.compile(rf"\b(?P<n0>[Nn])asz(?:a|ej|ą|ych|ymi|e|ym){_MID}(?P<n>[Ff]lot(?:a|y|ę|ą|cie|om|ami|ach))\b"),
+    'pl': (re.compile(rf"\b(?P<n0>[Nn])asz(?:a|ej|ą|ych|ymi|e|ym){_MID}(?P<n>[Ff]lot(?:a|y|ę|ą|cie|om|ami|ach)|[Ff]locie)\b"),
            lambda m: '', ' naszych partnerów'),
-    'hr': (re.compile(rf"\b(?P<n0>[Nn])aš(?:a|e|u|oj|om|im|ih|ega|em){_MID}(?P<n>[Ff]lot(?:a|e|u|i|om|ama))\b"),
+    'hr': (re.compile(rf"\b(?P<n0>[Nn])aš(?:a|e|u|oj|om|im|ih|ega|em)?{_MID}(?P<n>[Ff]lot(?:a|e|u|i|om|ama))\b"),
            lambda m: '', ' naših partnera'),
 }
 
@@ -701,7 +871,7 @@ FLEET_REORDER = {
     'es': re.compile(r"(?P<n>\b[Ff]lotas?)(?P<p> de nuestros socios)(?P<c> de (?:yates de vela|yates a motor|lanchas a motor|lanchas motoras|catamaranes(?: a motor)?|veleros|lanchas|embarcaciones|barcos|monocascos|goletas|yates|gulets))" + _END, re.I),
     'pt': re.compile(r"(?P<n>\b[Ff]rotas?)(?P<p> dos nossos parceiros)(?P<c> de (?:iates a motor|lanchas a motor|barcos a motor|catamarãs|catamarans|veleiros|lanchas|embarcações|barcos|monocascos|goletas|gulets|iates))" + _END, re.I),
     'nl': re.compile(r"(?P<n>\b[Vv]lo(?:ot|ten))(?P<p> van onze partners)(?P<c> van (?:(?:moderne|premium) )?(?:zeiljachten|motorjachten|motorboten|catamarans|zeilboten|schepen|vaartuigen|jachten|boten|monohulls))" + _END),
-    'pl': re.compile(r"(?P<n>\b[Ff]lot\w*)(?P<p> naszych partnerów)(?P<c> (?:(?:nowoczesnych|luksusowych) )?(?:jachtów żaglowych|jachtów motorowych|katamaranów(?: motorowych)?|motorówek|jednokadłubowców|dwukadłubowców|guletów|żaglowców|statków|jachtów|łodzi))" + _END),
+    'pl': re.compile(r"(?P<n>\b[Ff]lo[tc]\w*)(?P<p> naszych partnerów)(?P<c> (?:(?:nowoczesnych|luksusowych) )?(?:jachtów żaglowych|jachtów motorowych|katamaranów(?: motorowych)?|motorówek|jednokadłubowców|dwukadłubowców|guletów|żaglowców|statków|jachtów|łodzi))" + _END),
     'hr': re.compile(r"(?P<n>\b[Ff]lot\w*)(?P<p> naših partnera)(?P<c> (?:(?:modernih|motornih|jednotrupnih|samotrupnih|dvotrupnih) )?(?:katamarana|jedrilica|jahti|brodova|brodica|plovila|guleta))" + _END),
 }
 
@@ -718,6 +888,9 @@ def our_fleet_replacement(locale, m):
     return prefix + rest
 
 
+BRAND_POSS_BOATS_EN = re.compile(
+    r"(?:<strong>)?\bBoat4You(?:</strong>)?['’]s(?P<sep>(?:\s|<a\b[^>]*>)+)(?P<mods>(?:(?!partner|network|team|platform|search|website)[\w-]+\s+){0,3}?)"
+    r"(?P<n>boats|yachts|catamarans|vessels|monohulls|motorboats|gulets|sailboats|motorsailers|fleets?)\b(?!\s+(?:search|listings?|page|section|guide|specialists?|team)\b)")
 BRAND_BOATS_EN = re.compile(
     r"\b(?P<q>(?:[Aa]ll|[Mm]odern|[Mm]ost|[Mm]any|[Oo]ur|[Tt]he|[Ee]xperienced)\s+(?:(?:modern|new|experienced)\s+)?)?(?:<strong>|<a\b[^>]*>)?Boat4You(?:</strong>|</a\s*>)?\s+"
     r"(?P<n>(?:sailing |motor |power |luxury |charter |monohull |catamaran )?(?:monohulls|catamarans|yachts|motorboats|gulets|boats|vessels|motor yachts|sailing yachts|fleet|crews))\b(?P<poss>['’](?!s))?")
@@ -726,24 +899,51 @@ BRAND_BOATS_EN = re.compile(
 # flota": Boat4You as the owner of a fleet → our partners.
 _B = r"(?:<strong>|<a\b[^>]*>)?Boat4You(?:</strong>|</a\s*>)?"
 BRAND_FLEET = {
-    'de': [(re.compile(rf"(\b(?:Flotten?)(?:\s+von\s+[\w-]+)?)\s+von\s+{_B}(?![\w-])"), r"\1 unserer Partner"),
+    'de': [(re.compile(rf"(\b(?:[\w-]*[Ff]lotten?)(?:\s+von\s+[\w-]+)?)\s+von\s+{_B}(?![\w-])"), r"\1 unserer Partner"),
+           (re.compile(rf"(?<!über )(?<!bei )(?<!mit )(?<!auf )(?<!via )\b{_B}\s+(Flotten?|Katamarane|Segelyachten|Yachten|Motoryachten|Motorboote|Boote)\b"), r"\1 unserer Partner"),
            (re.compile(rf"\b{_B}-(Flotten?|Katamarane|Segelyachten|Yachten|Motoryachten|Motorboote|Boote)\b"), r"\1 unserer Partner"),
            (re.compile(r"\b([Uu])nsere\s+((?:Flotten?|Katamarane|Segelyachten|Yachten|Motoryachten|Motorboote|Boote)\s+unserer\s+Partner)\b"), lambda m: ('Die ' if m.group(1) == 'U' else 'die ') + m.group(2)),
            (re.compile(r"\b([Uu])nserer\s+((?:Flotten?)\s+unserer\s+Partner)\b"), lambda m: ('Der ' if m.group(1) == 'U' else 'der ') + m.group(2))],
     'fr': [(re.compile(rf"\b(catamarans|voiliers|bateaux|yachts|vedettes)\s+{_B}\s+(modernes|récents|récentes)\b"), r"\1 \2 de nos partenaires"),
            (re.compile(rf"(\b[Ff]lottes?(?:\s+de\s+[\w'-]+(?:\s+à\s+moteur)?)?)\s+de\s+{_B}(?![\w-])"), r"\1 de nos partenaires"),
-           (re.compile(rf"\b(catamarans|voiliers|bateaux|yachts|vedettes)\s+{_B}(?![\w-])"), r"\1 de nos partenaires")],
-    'it': [(re.compile(rf"(\b[Ff]lott[ae](?:\s+(?:di\s+[\w'-]+|velica|a\s+motore)(?:\s+a\s+(?:vela|motore))?)?)\s+di\s+{_B}(?![\w-])"), r"\1 dei nostri partner")],
+           (re.compile(rf"\b(catamarans|voiliers|bateaux|yachts|vedettes)\s+{_B}(?![\w-])"), r"\1 de nos partenaires"),
+           (re.compile(rf"(\b[Ff]lottes?)\s+{_B}(?![\w-])"), r"\1 de nos partenaires")],
+    'it': [(re.compile(rf"(\b[Ff]lott[ae](?:\s+(?:di\s+[\w'-]+|velica|a\s+motore)(?:\s+a\s+(?:vela|motore))?)?)\s+di\s+{_B}(?![\w-])"), r"\1 dei nostri partner"),
+           (re.compile(rf"(\b[Ff]lott[ae])\s+(?:da\s+)?{_B}(?![\w-])"), r"\1 dei nostri partner"),
+           (re.compile(rf"\b(catamarani|yacht|barche|imbarcazioni|velieri|monoscafi)\s+{_B}(?![\w-])"), r"\1 dei nostri partner")],
     'es': [(re.compile(rf"(\b[Ff]lotas?)\s+de\s+nuestros\s+socios\s+de\s+{_B}(?![\w-])"), r"\1 de nuestros socios"),
-           (re.compile(rf"(\b[Ff]lotas?(?:\s+de\s+[\w-]+(?:\s+(?:motoras|de\s+vela|a\s+motor))?)?(?:</a\s*>)?)\s+de\s+{_B}(?![\w-])"), r"\1 de nuestros socios")],
-    'pt': [(re.compile(rf"(\b[Ff]rotas?(?:\s+de\s+[\w-]+(?:\s+a\s+motor)?)?)\s+da\s+{_B}(?![\w-])"), r"\1 dos nossos parceiros")],
-    'nl': [(re.compile(rf"(\b[Vv]lo(?:ot|ten)(?:\s+van\s+[\w-]+)?)\s+van\s+{_B}(?![\w-])"), r"\1 van onze partners"),
+           (re.compile(rf"(\b[Ff]lotas?(?:\s+de\s+[\w-]+(?:\s+(?:motoras|de\s+vela|a\s+motor))?)?(?:</a\s*>)?)\s+de\s+{_B}(?![\w-])"), r"\1 de nuestros socios"),
+           (re.compile(rf"(\b[Ff]lotas?)\s+{_B}(?![\w-])"), r"\1 de nuestros socios"),
+           (re.compile(rf"\b(catamaranes|yates|veleros|barcos|embarcaciones)\s+{_B}(?![\w-])"), r"\1 de nuestros socios")],
+    'pt': [(re.compile(rf"(\b[Ff]rotas?(?:\s+de\s+[\w-]+(?:\s+a\s+motor)?)?)\s+da\s+{_B}(?![\w-])"), r"\1 dos nossos parceiros"),
+           (re.compile(rf"(\b[Ff]rotas?)\s+(?:de\s+)?{_B}(?![\w-])"), r"\1 dos nossos parceiros"),
+           (re.compile(rf"\b(catamarãs|iates|veleiros|barcos|embarcações)(</a\s*>)?\s+(?:da\s+)?{_B}(?![\w-])"), lambda m: m.group(1) + (m.group(2) or '') + ' dos nossos parceiros')],
+    'nl': [(re.compile(rf"(\b\w*[Vv]lo(?:ot|ten)(?:\s+van\s+[\w-]+)?)\s+van\s+{_B}(?![\w-])"), r"\1 van onze partners"),
+           (re.compile(rf"(?<!via )(?<!bij )(?<!met )(?<!op )\b{_B}\s+(vloot|vloten|catamarans|katamarans|jachten|zeiljachten|motorboten|motorjachten|motorcatamarans|boten|schepen|[Zz]eiljachten|[Cc]atamarans)\b"), lambda m: m.group(1).lower() + ' van onze partners'),
            (re.compile(rf"\b{_B}-(vloot|vloten|catamarans|jachten|zeiljachten|motorboten|motorjachten)\b"), r"\1 van onze partners"),
            (re.compile(r"\b([Oo])nze\s+((?:vloot|vloten|catamarans|jachten|zeiljachten|motorboten|motorjachten)\s+van\s+onze\s+partners)\b"), lambda m: ('De ' if m.group(1) == 'O' else 'de ') + m.group(2))],
-    'pl': [(re.compile(rf"(\b[Ff]lot\w*(?:</a\s*>)?(?:\s+(?:<strong>)?[\wąćęłńóśźż]+(?:ów|ych|ich|i)(?:</strong>)?){{0,2}})\s+{_B}(?![\w-])"), r"\1 naszych partnerów")],
-    'hr': [(re.compile(rf"(\b[Ff]lot\w*(?:</a\s*>)?(?:\s+(?:<strong>)?[\wčćđšž]+(?:a|ih)(?:</strong>)?){{0,2}})\s+{_B}(?![\w-])"), r"\1 naših partnera"),
+    'pl': [(re.compile(rf"\b([Kk]atamarany|[Kk]atamaranów|[Jj]achty|[Jj]achtów|[Łł]odzie|[Łł]odzi|[Jj]ednostki|[Jj]ednostek)\s+{_B}(?![\w-])"), r"\1 naszych partnerów"),
+           (re.compile(rf"(\b[Ff]lot\w*(?:</a\s*>)?(?:\s+(?:<strong>)?[\wąćęłńóśźż]+(?:ów|ych|ich|i)(?:</strong>)?){{0,2}})\s+{_B}(?![\w-])"), r"\1 naszych partnerów")],
+    'hr': [(re.compile(r"\b([Nn])aš\s+vozni\s+park(?P<c>\s+(?:katamarana|jedrilica|jahti|brodova|plovila|brodica))?\b"),
+            lambda m: _cap('vozni park', m.group(1) == 'N') + (m.group('c') or '') + ' naših partnera'),
+           (re.compile(rf"\b([Kk]atamarana|[Kk]atamarani|[Jj]edrilica|[Jj]edrilice|[Jj]ahti|[Jj]ahte|[Bb]rodova|[Pp]lovila)\s+{_B}(?:a|u)?(?![\w-])"), r"\1 naših partnera"),
+           (re.compile(rf"(\b[Ff]lot\w*(?:</a\s*>)?(?:\s+(?:<strong>)?[\wčćđšž]+(?:a|ih)(?:</strong>)?){{0,2}})\s+{_B}(?![\w-])"), r"\1 naših partnera"),
+           (re.compile(r"(\b[Ff]lot\w*)\s+(?:<strong>)?Boat4You(?:a|u|om|e)(?:</strong>)?\b"), r"\1 naših partnera"),
            (re.compile(rf"\b{_B}(?:ova|ove|ovu|ovoj|ovom)?\s+(flot\w*)\b"), r"\1 naših partnera")],
 }
+
+
+def _keep_close_tags(old, new):
+    """A replacement that swallowed the </a> or </strong> of an element
+    opened before the match gives it back (at the end of the new text)."""
+    for tag in ('a', 'strong'):
+        surplus = (len(re.findall(rf'</{tag}\s*>', old)) - len(re.findall(rf'<{tag}\b', old))) - \
+                  (len(re.findall(rf'</{tag}\s*>', new)) - len(re.findall(rf'<{tag}\b', new)))
+        new += f'</{tag}>' * max(0, surplus)
+    return new
+
+BRAND_BEFORE_BOATS = re.compile(
+    r'<strong>\s*(Boat4You)\s*</strong>(?=[\s-]+[A-Za-zÀ-ž]*(?:[Ff]lotten?|[Ff]leets?|[Vv]loot|[Kk]atamarane|[Cc]atamarans|[Yy]achten|[Yy]achts|[Jj]achten|[Bb]oote|[Bb]oats|[Bb]oten)\b)')
 
 
 # Strong operator verbs: Boat4You never operates boats or charters.
@@ -755,8 +955,86 @@ OPERATE = {
     'es': r'opera(?!\s+como\b)',
     'pt': r'opera(?!\s+como\b)',
     'nl': r'exploiteert',
-    'pl': r'prowadzi(?=\s+(?:czarter\w*|baz\w*|flot\w*|jednost\w*|operacj\w*|działalność\s+czarter\w*))',
+    'pl': r'prowadzi(?=\s+(?:czarter\w*|baz\w*|flot\w*|jednost\w*|operacj\w*|działalność\s+czarter\w*))|operuje(?=\s+(?:\w+\s+){0,2}?(?:jacht\w*|katamaran\w*|łodzi\w*|jednost\w*|flot\w*))',
     'hr': r'(?:posluje|operira)(?!\s+kao\b)',
+}
+# "Boat4You manages catamaran fleets / obsługuje kilka katamaranów / gestisce
+# la più grande flotta": managing or operating boats is the partners' job.
+# Choosing boats for a guest ("fleet selection", "wyborem") and handling
+# charters/bookings stay with Boat4You.
+_MANAGE_SKIP = (r"(?!(?:selection|selections|selezione|scelta|selección|sélection|selectie|keuze|wyborem|wybór|seleção|odabir\w*|"
+                r"charters?|czarter\w*|noleggi\w*|locations?|alquiler\w*|aluguer\w*|verhuur\w*|najm\w*|bookings?|rezerwacj\w*|"
+                r"logistics|logistyk\w*|every|each|all)\b)")
+
+
+def _manage(verb, nouns, words=3):
+    return verb + r"(?=\s+(?:" + _MANAGE_SKIP + r"[\w'’-]+\s+){0," + str(words) + r"}?" + nouns + r")"
+
+
+MANAGE = {
+    'en': _manage(r'manages', r"(?:fleets?|boats|yachts|catamarans|vessels)\b(?!\s+selection)"),
+    'de': _manage(r'verwaltet', r"\w*(?:[Ff]lotten?|[Bb]oote|[Yy]achten|[Kk]atamarane)\b"),
+    'fr': _manage(r'gère', r"(?:flottes?|bateaux|yachts|voiliers|catamarans)\b"),
+    'it': _manage(r'gestisce', r"(?:flott[ae]|imbarcazioni|barche|yacht|catamarani|velieri)\b", 4),
+    'es': _manage(r'gestiona', r"(?:flotas?|barcos|yates|veleros|catamaranes|embarcaciones)\b"),
+    'pt': _manage(r'gere', r"(?:frotas?|barcos|iates|veleiros|catamarãs|embarcações)\b"),
+    'nl': _manage(r'(?:opereert|beheert)', r"\w*(?:vloot|vloten|catamarans|jachten|boten)\b", 4),
+    'pl': _manage(r'(?:zarządza|obsługuje|dysponuje)', r"(?:flot\w*|katamaran\w*|\w*jacht\w*|łodzi\w*|łodzie|jednost\w*)", 5),
+    'hr': _manage(r'upravlja', r"(?:flot\w*|brodov\w*|jaht\w*|katamaran\w*|plovil\w*)"),
+}
+# "die Katamarane von Boat4You", "los yates de Boat4You", "jachty żaglowe
+# Boat4You": the translations of "Boat4You's catamarans", which the EN pass
+# turned into "catamarans on Boat4You". Same here: the boats are listed on
+# Boat4You, they are not its own.
+_B4Y = r"(?P<b>(?:<[Ss]trong>)?Boat4You(?:</[Ss]trong>)?)(?!['’]s|\w|-)"
+_C = r"(?P<c>(?:</[Ss]trong>)?)"
+BOATS_OF_BRAND = {
+    'de': (r"\b(?P<noun>[\w-]*(?:[Yy]achten|[Jj]achten|[Kk]atamarane|[Bb]oote|Gulets|Schiffe|Einrumpfer|Monohulls))" + _C + r"\s+von\s+" + _B4Y, r"\g<noun>\g<c> auf \g<b>"),
+    'fr': (r"\b(?P<noun>(?:catamarans|voiliers|bateaux|yachts|monocoques|navires|goélettes|gulets|vedettes)(?:\s+(?:à\s+(?:moteur|voile)|monocoques|de\s+luxe))?)" + _C + r"\s+de\s+" + _B4Y, r"\g<noun>\g<c> sur \g<b>"),
+    'it': (r"\b(?P<noun>(?:catamarani|barche|yacht|imbarcazioni|velieri|monoscafi|motoscafi|caicchi|gulet)(?:\s+a\s+(?:vela|motore))?)" + _C + r"\s+(?:di\s+|della\s+)?" + _B4Y
+           + r"(?!\s+(?:offre|propone|mette|è|ha|gestisce|consente|fornisce|garantisce|vi|ti|Le|può|dispone|seleziona|collabora|verifica|organizza|si)\b)", r"\g<noun>\g<c> su \g<b>"),
+    'es': (r"\b(?P<noun>(?:catamaranes|yates|veleros|barcos|embarcaciones|monocascos|goletas|lanchas|guletas)(?:\s+(?:de\s+vela|a\s+motor|de\s+lujo))?)" + _C + r"\s+de\s+(?:la\s+)?" + _B4Y, r"\g<noun>\g<c> en \g<b>"),
+    'pt': (r"\b(?P<noun>(?:catamarãs|iates|veleiros|barcos|embarcações|monocascos|goletas|lanchas)(?:\s+(?:à\s+vela|a\s+motor|de\s+luxo))?)" + _C + r"\s+(?:da|de|do)\s+" + _B4Y, r"\g<noun>\g<c> na \g<b>"),
+    'nl': (r"\b(?P<noun>(?:\w*jachten|catamarans|\w*boten|schepen|gulets|vaartuigen|monohulls))" + _C + r"\s+van\s+" + _B4Y, r"\g<noun>\g<c> op \g<b>"),
+    'pl': (r"\b(?P<noun>(?:jachty|jachtów|katamarany|katamaranów|łodzie|łodzi|jednostki|jednostek|motorówki|motorówek|gulety|guletów)(?:\s+(?:żaglowe|żaglowych|motorowe|motorowych))?)" + _C + r"\s+" + _B4Y, r"\g<noun>\g<c> na \g<b>"),
+    'hr': (r"\b(?P<noun>(?:jedrilice|jedrilica|katamarani|katamarana|brodovi|brodova|plovila|jahte|jahti|guleti|guleta)(?:\s+(?:na\s+jedra|motorne|motornih))?)" + _C + r"\s+" + _B4Y, r"\g<noun>\g<c> na \g<b>"),
+}
+# "Every Boat4You sailing yacht", "Uw Boat4You zeiljacht", "Boat4You
+# jedrilice imaju": the brand used as the boats' owner. It goes — "every
+# sailing yacht", "uw zeiljacht" — except in the booking sense ("Boat4You
+# catamaran charter"). DE/NL only after a determiner, so a subordinate clause
+# ("dass Boat4You Katamarane anbietet") keeps its subject.
+_MOD_B4Y = r"(?:<strong>)?Boat4You(?:</strong>)?\s+"
+BRAND_MODIFIER = {
+    'en': (r"(?<![\w/.-])" + _MOD_B4Y + r"(?=(?:sailing\s+|motor\s+|power\s+|luxury\s+|crewed\s+|bareboat\s+)?(?:yachts?|catamarans?|boats?|vessels?|gulets?|monohulls?|motorboats?|multihulls?|fleets?)\b"
+           r"(?!\s+(?:charters?|rentals?|search|listings?|page|guide|options|holidays?|vacations?|experiences?|trips?|bookings?|adventures?|hire|clients?|guests?|customers?)\b))"),
+    'nl': (r"(?P<det>\b(?:[Ee]en|[Dd]e|[Hh]et|[Uu]w|[Ee]lk|[Ee]lke|[Vv]eel|[Aa]lle|[Oo]nze|meeste|typisch|[Dd]eze|[Ee]nkele)\s)" + _MOD_B4Y
+           + r"(?=(?:\w*jachten|\w*jacht|catamarans?|catamaranvlo\w+|\w*boten|\w*boot|schepen|vaartuigen|gulets?|vloot)\b)"),
+    'de': (r"(?P<det>\b(?:[Ee]ine?|[Dd]ie|[Dd]er|[Dd]as|[Ii]hre?|[Jj]ede[rs]?|[Vv]iele|[Aa]lle|[Uu]nsere|meisten|typische[rn]?)\s)" + _MOD_B4Y
+           + r"(?=(?:[\w-]*[Yy]achte?n?|[Kk]atamarane?|[Bb]oote?|Gulets?|Flotte)\b)"),
+    'hr': (r"(?<!\bda\s)(?<!\bšto\s)(?<!\bjer\s)(?<!\bkako\s)(?<![\w/.-])" + _MOD_B4Y
+           + r"(?=(?:jedrilic\w*|katamaran\w*|brodov\w*|brodic\w*|plovil\w*|jaht\w*|gulet\w*|motorn\w+\s+jaht\w*|flot\w*)\b)"),
+    'pl': (r"(?<![\w/.-])" + _MOD_B4Y + r"(?=(?:jacht\w*|katamaran\w*|łodzi\w*|łodzie|jednost\w*|flot\w*)\b(?!\s+(?:z|od|w)\b))"),
+}
+# "maintained to Boat4You's rigorous standards", "nach den Standards von
+# Boat4You gewartet": the upkeep standards are the operators'; the brand goes.
+STANDARDS_OF_BRAND = {
+    'en': (r"(?<![\w>])(?:<strong>)?Boat4You(?:</strong>)?['’]s\s+(?P<s>(?:[\w-]+\s+)?standards)\b", r"\g<s>"),
+    'de': (r"(?P<s>\b\w*[Ss]tandards)\s+von\s+(?:<strong>)?Boat4You(?:</strong>)?(?![\w-])", r"\g<s>"),
+    'fr': (r"(?P<s>\bnormes(?:\s+\w+)?|\bstandards(?:\s+\w+)?)\s+(?:de\s+)?(?:<strong>)?Boat4You(?:</strong>)?(?![\w-])", r"\g<s>"),
+    'it': (r"(?P<s>\bstandard(?:\s+\w+)?)\s+(?:(?:di|della)\s+)?(?:<strong>)?Boat4You(?:</strong>)?(?![\w-])", r"\g<s>"),
+    'es': (r"(?P<s>\bestándares(?:\s+\w+)?|\bnormas(?:\s+\w+)?)\s+de\s+(?:<strong>)?Boat4You(?:</strong>)?(?![\w-])", r"\g<s>"),
+    'pt': (r"(?P<s>\bpadrões(?:\s+\w+)?|\bnormas(?:\s+\w+)?)\s+(?:(?:da|de|do)\s+)?(?:<strong>)?Boat4You(?:</strong>)?(?![\w-])", r"\g<s>"),
+    'nl': (r"(?P<s>\bnormen|\bstandaarden)\s+van\s+(?:<strong>)?Boat4You(?:</strong>)?(?![\w-])", r"\g<s>"),
+    'pl': (r"(?P<s>\bstandard(?:ami|ów|y)(?:\s+\w+)?)\s+(?:<strong>)?Boat4You(?:</strong>)?(?![\w-])", r"\g<s>"),
+    'hr': (r"(?P<s>\bstandard(?:ima|a|e)(?:\s+\w+)?)\s+(?:<strong>)?Boat4You(?:</strong>)?(?![\w-])", r"\g<s>"),
+}
+# Superlative fleet claims that come with it ("the largest catamaran fleet in
+# the region") — nobody can verify them.
+FLEET_SUPERLATIVE = {
+    'it': [(r"\bla più grande flotta\b", "un'ampia flotta"), (r"\bla flotta più grande\b", "un'ampia flotta")],
+    'pl': [(r"\bnajlepszą flotą\b", "starannie dobraną flotą"), (r"\bnajwiększą flotą\b", "dużą flotą")],
+    'en': [(r"\bthe largest (catamaran |yacht |sailing yacht |motor yacht )?fleet\b", r"a large \1fleet")],
 }
 # Upkeep / inspection promises only the charter company can make.
 UPKEEP = {
@@ -770,7 +1048,7 @@ UPKEEP = {
     'pl': r"(?:utrzymuje|stosuje|kontroluje|sprawdza)\s+(?:(?:rygorystyczne|wysokie|surowe)\s+standardy|każd\w+\s+(?:jednostk\w+|jacht\w*|łód\w*))",
     'hr': r"(?:održava|primjenjuje|pregledava|provjerava)\s+(?:(?:rigorozne|stroge|visoke)\s+standarde|svak\w+\s+(?:plovil\w+|brod\w*|jaht\w+))",
 }
-_NOT_SUBJECT = re.compile(r"\b(?:how|why|where|wie|warum|comment|come|cómo|como|hoe|jak|kako|with|by|at|for|through|via|mit|von|bei|für|über|durch|avec|par|chez|pour|con|per|di|da|por|para|com|met|door|bij|voor|van|przez|dla|od|z|ze|u|s|sa|kod|za|preko)\s+(?:(?:a|la|le|el|o)\s+|l['’])?$", re.I)
+_NOT_SUBJECT = re.compile(r"\b(?:how|why|where|wie|warum|comment|come|cómo|como|hoe|jak|kako|with|by|at|for|through|via|mit|von|bei|für|über|durch|avec|par|chez|pour|con|per|di|da|por|para|com|met|door|bij|voor|van|przez|dla|od|z|ze|u|s|sa|kod|za|preko|on|op|auf|sur|su|en|na|in)\s+(?:(?:a|la|le|el|o)\s+|l['’])?$", re.I)
 
 
 def _not_subject(before):
@@ -828,6 +1106,250 @@ def _drop_priority_berth(piece, locale):
     return None
 
 
+# "our catamarans / unsere Katamarane / nos voiliers": boats Boat4You would
+# own. Plural boat nouns only (a guest's "our yacht" in an FAQ stays); search
+# pages, specialists, charters … after the noun are ours ("our catamaran
+# search"). The partner phrase follows the noun, the article follows the
+# language ("die Katamarane unserer Partner", "les voiliers de nos
+# partenaires", "i catamarani dei nostri partner").
+_EN_BOAT = r'catamarans|yachts|vessels|boats|monohulls|motorboats|gulets|sailboats|motorsailers|superyachts'
+_EN_NOT_HEAD = r'(?:search|specialists?|experts?|charters?|listings?|inventory|collection|portal|packages?|page|guide|section|team|brokers?|crews?|skippers?)\b'
+OUR_BOATS = {
+    'en': re.compile(rf"\b(?P<o>[Oo])ur\s+(?!partner)(?P<tag>(?:<a\b[^>]*>)?)(?P<mods>(?:(?!(?:of|for|and|or|to|in|at|with|from|the|a|an|own|partner|partners)\b)[\w-]+\s+){{0,3}}?)"
+                     rf"(?P<n>{_EN_BOAT})\b(?!\s+{_EN_NOT_HEAD})"),
+    'de': re.compile(r"\b(?P<u>[Uu])nser(?P<e>e|en|er)\s+(?P<tag>(?:<a\b[^>]*>)?)(?P<mods>(?:(?:[a-zäöüß][\w-]*|\d+)\s+){0,2}?)"
+                     r"(?P<n>(?:[A-ZÄÖÜ\d][\w-]*?)?(?:[Kk]atamaranen?|[Yy]achten|[Jj]achten|[Bb]ooten?|[Ss]chiffen?|Gulets))\b(?!\s+unserer\s+Partner)(?!\s+[a-zäöüß]\w*ende[nrs]?\b)"),
+    'fr': re.compile(r"(?:(?P<pre>\b[Dd]e|\b[Àà])\s+)?\b(?P<n0>[Nn])os\s+(?P<tag>(?:<a\b[^>]*>)?)(?P<mods>(?:(?!(?:de|du|des|à|au|aux|en|et|pour|avec|sur|dans|les|la|le|partenaires)\b)[a-zàâçéèêëîïôûùüÿœ][\w-]*\s+|\d+\s+){0,2}?)"
+                     r"(?P<n>(?:catamarans|voiliers|yachts|bateaux|navires|vedettes|gulets|goélettes|monocoques|unités|embarcations)(?:\s+à\s+(?:moteur|voile|double coque))?)\b(?!\s+de\s+nos\s+partenaires)"),
+    'it': re.compile(r"(?P<art>\b(?:[Ii]|[Ll]e|[Gg]li|[Dd]ei|[Dd]elle|[Dd]egli|[Aa]i|[Aa]lle|[Aa]gli|[Nn]ei|[Nn]elle|[Nn]egli|[Ss]ui|[Ss]ulle|[Ss]ugli|[Dd]ai|[Dd]alle|[Dd]agli|[Cc]on\s+i|[Cc]on\s+le|[Pp]er\s+i|[Pp]er\s+le|[Tt]ra\s+i|[Tt]ra\s+le|[Ff]ra\s+i|[Ff]ra\s+le)\s+)nostr[ie]\s+(?P<tag>(?:<a\b[^>]*>)?)"
+                     r"(?P<mods>(?:(?!(?:di|del|della|dei|delle|da|in|a|e|con|per|su|tra|fra|il|la|le|gli|i|partner)\b)[a-zàèéìòù][\w-]*\s+|\d+\s+){0,2}?)"
+                     r"(?P<n>(?:catamarani|yacht|barche|imbarcazioni|velieri|monoscafi|motoscafi|caicchi|gulet|golette)(?:\s+a\s+(?:motore|vela|doppio scafo))?)\b(?!\s+dei\s+nostri\s+partner)"),
+    'es': re.compile(r"(?P<pre>\b(?:[Dd]e|[Aa]|[Ee]n|[Cc]on|[Pp]or|[Pp]ara|[Ee]ntre|[Ss]obre|[Dd]esde|[Tt]odos|[Tt]odas)\s+)?\b(?P<n0>[Nn])uestr(?P<g>[oa])s\s+(?P<tag>(?:<a\b[^>]*>)?)"
+                     r"(?P<mods>(?:(?!(?:de|del|en|a|y|con|para|por|la|el|los|las|socios)\b)[a-záéíóúñ][\w-]*\s+|\d+\s+){0,2}?)"
+                     r"(?P<n>(?:catamaranes|yates|veleros|barcos|embarcaciones|lanchas|goletas|gulets|monocascos|motoveleros)(?:\s+(?:a motor|de vela|de doble casco))?)\b(?!\s+de\s+nuestros\s+socios)"),
+    'pt': re.compile(r"(?:(?P<art>\b(?:[Oo]s|[Aa]s|[Dd]os|[Dd]as|[Nn]os|[Nn]as|[Aa]os|[Àà]s|[Pp]elos|[Pp]elas|[Tt]odos\s+os|[Tt]odas\s+as))\s+)?\b(?P<n0>[Nn])oss(?P<g>[oa])s\s+(?P<tag>(?:<a\b[^>]*>)?)"
+                     r"(?P<mods>(?:(?!(?:de|da|do|dos|das|em|na|no|a|e|com|para|por|o|os|as|parceiros)\b)[a-záâãéêíóôõúç][\w-]*\s+|\d+\s+){0,2}?)"
+                     r"(?P<n>(?:catamarãs|catamarans|iates|veleiros|barcos|embarcações|lanchas|goletas|gulets|monocascos)(?:\s+(?:a motor|à vela|de dois cascos))?)\b(?!\s+dos\s+nossos\s+parceiros)"),
+    'nl': re.compile(r"\b(?P<o>[Oo])nze\s+(?P<tag>(?:<a\b[^>]*>)?)(?P<mods>(?:(?!(?:van|voor|met|in|op|de|het|en|partners?)\b)(?:[A-Za-z][\w-]*|\d+)\s+){0,2}?)"
+                     r"(?P<n>\w*(?:catamarans|jachten|boten|schepen|vaartuigen|gulets|monohulls|eenrompers))\b(?!\s+van\s+onze\s+partners)"),
+    'pl': re.compile(r"\b(?P<n0>[Nn])asz(?:e|ych|ymi|ym|ymi)\s+(?P<tag>(?:<a\b[^>]*>)?)(?P<mods>(?:(?!(?:w|z|na|do|dla|i|oraz|od|po|przez|partnerów|partnera)\b)[a-ząćęłńóśźż][\w-]*\s+|\d+\s+){0,2}?)"
+                     r"(?P<n>katamarany|katamaranów|katamaranami|katamaranach|jachty|jachtów|jachtami|jachtach|łodzie|łodzi|łodziami|jednostki|jednostek|jednostkami|motorówki|motorówek|gulety|guletów|żaglówki|żaglówek)"
+                     r"(?P<post>(?:\s+(?:żaglow|motorow|czarterow)\w*)?)\b(?!\s+naszych\s+partnerów)"),
+    'hr': re.compile(r"\b(?P<n0>[Nn])aš(?:i|ih|im|e|ima|a)\s+(?P<tag>(?:<a\b[^>]*>)?)(?P<mods>(?:(?!(?:u|za|na|od|do|i|s|sa|iz|po|partnera)\b)[a-zčćđšž][\w-]*\s+|\d+\s+){0,2}?)"
+                     r"(?P<n>katamarani|katamarane|katamarana|katamaranima|jahte|jahti|jahtama|jedrilice|jedrilica|jedrilicama|brodovi|brodove|brodova|brodovima|plovila|plovilima|gulete|guleta|guletama|brodice|brodica|brodicama)\b(?!\s+naših\s+partnera)"),
+}
+
+# "our Marina di Cagliari fleet": a place name with a lower-case particle
+OUR_PLACE_EN = re.compile(rf"\b([Oo])ur\s+((?:[A-Z][\w’'-]*\s+(?:(?:di|de|del|della|da|dei|la|le|of)\s+)?){{1,4}})(fleets?|{_EN_BOAT})\b(?!\s+{_EN_NOT_HEAD})")
+
+# "notre gestion de flotte", "our catamaran base", "os nossos gestores de
+# frota": fleet operations that belong to the charter company.
+FLEET_ROLE = {
+    'fr': [(r"\b([Nn])otre\s+(gestion de (?:la )?flotte|coordinateur de flotte|base de (?:catamarans|voiliers|bateaux))", lambda m: _cap('la', m.group(1) == 'N') + ' ' + m.group(2) + ' de nos partenaires'),
+           (r"\bde\s+nos\s+(skippers de flotte|gestionnaires de flotte)", lambda m: 'des ' + m.group(1) + ' de nos partenaires'),
+           (r"(?<!de )\b([Nn])os\s+(gestionnaires de flotte|opérations de (?:catamarans|voiliers)|skippers de flotte)", lambda m: _cap('les', m.group(1) == 'N') + ' ' + m.group(2) + ' de nos partenaires')],
+    'it': [(r"\b([Ll]a)\s+nostra\s+(gestione della flotta|base di (?:catamarani|barche a vela))", lambda m: m.group(1) + ' ' + m.group(2) + ' dei nostri partner'),
+           (r"\b([Ii])\s+nostri\s+(gestori (?:della|di) flotta|responsabili della flotta)", lambda m: m.group(1) + ' ' + m.group(2) + ' dei nostri partner'),
+           (r"\bdei\s+nostri\s+(skipper di flotta)", lambda m: 'degli ' + m.group(1) + ' dei nostri partner'),
+           (r"\b(con la|alla|della|dalla|nella)\s+nostra\s+(base di (?:catamarani|barche a vela))", lambda m: m.group(1) + ' ' + m.group(2) + ' dei nostri partner')],
+    'es': [(r"\b([Nn])uestros\s+(gestores de flota|patrones de flota)", lambda m: _cap('los', m.group(1) == 'N') + ' ' + m.group(2) + ' de nuestros socios'),
+           (r"\bde\s+nuestros\s+(patrones de flota|gestores de flota)", lambda m: 'de los ' + m.group(1) + ' de nuestros socios'),
+           (r"\b([Nn])uestra\s+(gestión de flotas?|base de (?:catamaranes|veleros|yates de vela))", lambda m: _cap('la', m.group(1) == 'N') + ' ' + m.group(2) + ' de nuestros socios'),
+           (r"\b([Nn])uestras\s+(operaciones de (?:catamaranes|veleros))", lambda m: _cap('las', m.group(1) == 'N') + ' ' + m.group(2) + ' de nuestros socios')],
+    'pt': [(r"\b([Aa])\s+nossa\s+(gestão de frota|base de (?:catamarãs|veleiros)|diversidade de frota)", lambda m: m.group(1) + ' ' + m.group(2) + ' dos nossos parceiros'),
+           (r"\b([Oo]s)\s+nossos\s+(gestores de frota|skippers de frota)", lambda m: m.group(1) + ' ' + m.group(2) + ' dos nossos parceiros'),
+           (r"\b([Oo])\s+nosso\s+(coordenador de frota)", lambda m: m.group(1) + ' ' + m.group(2) + ' dos nossos parceiros'),
+           (r"\b([Aa]s)\s+nossas\s+(operações de (?:catamarãs|veleiros))", lambda m: m.group(1) + ' ' + m.group(2) + ' dos nossos parceiros'),
+           (r"\b(sobre|de|com)\s+as\s+nossas\s+(operações de (?:catamarãs|veleiros))", lambda m: m.group(1) + ' as ' + m.group(2) + ' dos nossos parceiros')],
+    'nl': [(r"\b([Oo])ns\s+(vlootbeheer)", lambda m: _cap('het', m.group(1) == 'O') + ' ' + m.group(2) + ' van onze partners'),
+           (r"(?:<strong>)?\bBoat4You(?:</strong>)?['’]s\s+(catamarans|gulets|jachten|zeiljachten|motorjachten|boten|schepen|vloot)\b", lambda m: 'de ' + m.group(1) + ' van onze partners')],
+    'pl': [(r"\b([Nn])asz(?:ą|a)\s+(baz[ęa] (?:katamaranów|jachtów))", lambda m: m.group(2) + ' naszych partnerów'),
+           (r"\b([Nn])asze\s+(zarządzanie flotą)", lambda m: _cap(m.group(2), m.group(1) == 'N') + ' naszych partnerów'),
+           (r"\bnaszych\s+(skipperów flotowych)", lambda m: m.group(1) + ' naszych partnerów')],
+    'hr': [(r"\b(s\s+)?[Nn]ašom\s+(bazom (?:katamarana|jedrilica))", lambda m: (m.group(1) or '') + m.group(2) + ' naših partnera'),
+           (r"\b([Nn])aše\s+(upravljanje flotom)", lambda m: _cap(m.group(2), m.group(1) == 'N') + ' naših partnera'),
+           (r"\b([Nn])aši\s+(upravitelji flote)", lambda m: _cap(m.group(2), m.group(1) == 'N') + ' naših partnera')],
+    'de': [(r"\b([Uu])nser(?:e)?\s+(Flottenmanagement|Flottenverwaltung|Katamaranbasis)", lambda m: _cap('das' if m.group(2) == 'Flottenmanagement' else 'die', m.group(1) == 'U') + ' ' + m.group(2) + ' unserer Partner')],
+    'en': [],
+}
+
+
+def _our_boats(loc, m):
+    n, mods = m.group('n'), (m.group('tag') or '') + (m.group('mods') or '')
+    if loc == 'en':
+        return f"{m.group('o')}ur partners' {mods}{n}"
+    if loc == 'de':
+        art = {'e': 'die', 'en': 'den', 'er': 'der'}[m.group('e')]
+        return f"{_cap(art, m.group('u') == 'U')} {mods}{n} unserer Partner"
+    if loc == 'fr':
+        pre = m.group('pre')
+        art = 'des' if pre and pre.lower() == 'de' else 'aux' if pre else 'les'
+        art = _cap(art, (pre or m.group('n0'))[0].isupper())
+        return f"{art} {mods}{n} de nos partenaires"
+    if loc == 'it':
+        return f"{m.group('art')}{mods}{n} dei nostri partner"
+    if loc == 'es':
+        pre = m.group('pre') or ''
+        art = 'los' if m.group('g') == 'o' else 'las'
+        if not pre:
+            art = _cap(art, m.group('n0') == 'N')
+        return f"{pre}{art} {mods}{n} de nuestros socios"
+    if loc == 'pt':
+        art = m.group('art') or _cap('os' if m.group('g') == 'o' else 'as', m.group('n0') == 'N')
+        return f"{art} {mods}{n} dos nossos parceiros"
+    if loc == 'nl':
+        return f"{_cap('de', m.group('o') == 'O')} {mods}{n} van onze partners"
+    if loc == 'pl':
+        out = f"{mods}{n}{m.group('post')} naszych partnerów"
+        return _cap(out, m.group('n0') == 'N')
+    if loc == 'hr':
+        return _cap(f"{mods}{n} naših partnera", m.group('n0') == 'N')
+    return m.group(0)
+
+
+# "We inspect every vessel", "Wir überprüfen jedes Schiff", "Verifichiamo
+# ogni imbarcazione": upkeep and inspection of the boats is the charter
+# company's job, so the sentence goes.
+WE_UPKEEP = {
+    'en': r"\b[Ww]e\s+(?:\w+ly\s+)?(?:inspect|verify|maintain|service|repair|check)\s+(?:every|each|all|our|the)?\s*(?:vessels?|boats?|yachts?|catamarans?|fleet|a\s+diverse\s+\w+\s+fleet)\b"
+          r"|\b[Oo]ur\s+(?:brokers|maintenance\s+team|technicians)\s+(?:inspect|ensures?|maintain)\w*\b|\bWe\s+maintain\s+fleet\s+integrity",
+    'de': r"\b[Ww]ir\s+(?:\w+\s+)?(?:überprüfen|prüfen|inspizieren|warten|pflegen|kontrollieren)\s+(?:jedes|jede|jeden|alle|unsere|die)\s+(?:\w+\s+)?\w*(?:Schiff|Boot|Yacht|Jacht|Katamaran|Flotte)\w*"
+          r"|\b[Uu]nser\s+Wartungsteam\b|\b[Uu]nsere\s+Makler\s+(?:prüfen|inspizieren|überprüfen)\s+(?:die\s+)?(?:Schiffe|Boote|Yachten)",
+    'fr': r"\b[Nn]ous\s+(?:\w+\s+)?(?:vérifions|inspectons|entretenons|contrôlons)\s+(?:chaque|tous\s+les|toutes\s+les|nos|les)\s+(?:navire|bateau|yacht|catamaran|flotte|unité)\w*"
+          r"|\b[Nn]otre\s+équipe\s+(?:de\s+)?maintenance\b|\b[Nn]os\s+courtiers\s+(?:inspectent|vérifient)\s+(?:les\s+)?(?:navires|bateaux|yachts)",
+    'it': r"\b(?:[Vv]erifichiamo|[Ii]spezioniamo|[Mm]anteniamo|[Cc]ontrolliamo)\s+(?:personalmente\s+)?(?:ogni|ciascuna|tutte\s+le|tutti\s+gli|le|gli|i|la)\s+(?:nostr\w+\s+)?(?:imbarcazion|barc|yacht|catamaran|flott|scaf)\w*"
+          r"|\b[Ii]l\s+nostro\s+team\s+di\s+manutenzione\b|\b[Ii]\s+nostri\s+broker\s+(?:ispezionano|verificano)\s+(?:le\s+)?(?:imbarcazioni|barche)",
+    'es': r"\b(?:[Vv]erificamos|[Ii]nspeccionamos|[Mm]antenemos|[Rr]evisamos)\s+(?:personalmente\s+)?(?:cada|todas\s+las|todos\s+los|las|los|nuestr\w+)\s+(?:embarcaci|barco|yate|catamar|flota)\w*"
+          r"|\b[Nn]uestro\s+equipo\s+de\s+mantenimiento\b|\b[Nn]uestros\s+corredores\s+(?:inspeccionan|revisan)\s+(?:las\s+)?(?:embarcaciones|barcos)",
+    'pt': r"\b(?:[Vv]erificamos|[Ii]nspecionamos|[Mm]antemos|[Rr]evemos)\s+(?:pessoalmente\s+)?(?:cada|todas\s+as|todos\s+os|as|os|os\s+nossos|as\s+nossas)\s+(?:embarca|barco|iate|catamar|frota)\w*"
+          r"|\b[Aa]\s+nossa\s+equipa\s+de\s+manutenção\b|\b[Oo]s\s+nossos\s+corretores\s+(?:inspecionam|verificam)\s+(?:as\s+)?(?:embarcações|barcos)",
+    'nl': r"\b[Ww]e\s+(?:\w+\s+)?(?:inspecteren|controleren|onderhouden|verifiëren)\s+(?:elk|elke|alle|onze|de)?\s*(?:schip|schepen|boot|boten|jacht|jachten|vaartuig\w*|catamaran\w*|vloot)\b"
+          r"|\b[Oo]ns\s+onderhoudsteam\b|\b[Oo]nze\s+makelaars\s+inspecteren\s+(?:de\s+)?(?:schepen|boten|jachten)",
+    'pl': r"\b(?:[Ww]eryfikujemy|[Ss]prawdzamy|[Kk]ontrolujemy|[Ss]erwisujemy|[Pp]rzeglądamy)\s+(?:osobiście\s+)?(?:każd\w+|wszystkie|nasze)\s+(?:statek|statk|jednost|łód|łodz|jacht|katamaran|flot)\w*"
+          r"|\b[Nn]asz\s+zespół\s+(?:serwisowy|techniczny|konserwacyjny)\b|\b[Nn]asi\s+brokerzy\s+(?:sprawdzają|kontrolują)\s+(?:jednostki|łodzie|jachty)",
+    'hr': r"\b(?:[Pp]rovjeravamo|[Pp]regledavamo|[Oo]državamo|[Ss]erviseramo)\s+(?:osobno\s+)?(?:svako|svaki|svaku|sva|sve|naša|naše|naše)\s+(?:plovil|brod|jaht|katamaran|flot)\w*"
+          r"|\b[Nn]aš\s+tim\s+za\s+održavanje\b|\b[Nn]aši\s+brokeri\s+pregledavaju\s+(?:plovila|brodove|jahte)",
+}
+# Boat4You + any verb + maintenance/repair within a few words: the upkeep is
+# the partner's ("Boat4You koordiniert präventive Wartung", "unterhält
+# schnelle Reaktionsprotokolle für Reparaturen").
+UPKEEP_NOUN = {
+    'en': r'maintenance|repairs?|upkeep|servicing|refits?', 'de': r'\w*[Ww]artung\w*|\w*[Rr]eparatur\w*|\w*[Ii]nstandhaltung\w*',
+    'fr': r'entretien|maintenance|réparations?', 'it': r'manutenzion\w*|riparazion\w*', 'es': r'mantenimiento|reparacion\w*',
+    'pt': r'manutenç\w*|reparaç\w*', 'nl': r'\w*onderhoud\w*|reparatie\w*', 'pl': r'konserwacj\w*|napraw\w*|serwis\w*',
+    'hr': r'održavanj\w*|popravk\w*|servis\w*',
+}
+UPKEEP_ADVISE = re.compile(
+    r'^(?:recommends|advises|suggests|explains|informs|explain|empfiehlt|rät|erklärt|informiert|recommande|conseille|explique|'
+    r'consiglia|raccomanda|spiega|recomienda|aconseja|explica|recomenda|aconselha|explica|raadt|adviseert|beveelt|legt|'
+    r'zaleca|poleca|wyjaśnia|preporučuje|savjetuje|objašnjava|publishes|veröffentlicht|publie|pubblica|publica|publiceert|publikuje|objavljuje)$')
+EXPERIENCE_WORD = re.compile(r'(?i)expertise|experience|Erfahrung|expérience|esperienza|experiencia|experiência|ervaring|doświadcz|iskust')
+EXPERIENCE_YEARS = {
+    'en': (r'\b(?:more than |over )?1[4-9]\+? years\b', 'more than 10 years'),
+    'de': (r'\b(?:über |mehr als )?1[4-9]\+? Jahre\b', 'über 10 Jahre'),
+    'fr': (r'\b(?:plus de )?1[4-9]\+? ans\b', 'plus de 10 ans'),
+    'it': (r'\b(?:oltre |più di )?1[4-9]\+? anni\b', 'oltre 10 anni'),
+    'es': (r'\b(?:más de )?1[4-9]\+? años\b', 'más de 10 años'),
+    'pt': (r'\b(?:mais de )?1[4-9]\+? anos\b', 'mais de 10 anos'),
+    'nl': (r'\b(?:meer dan )?1[4-9]\+? jaar\b', 'meer dan 10 jaar'),
+    'pl': (r'\b(?:ponad )?1[4-9]\+? lat\b', 'ponad 10 lat'),
+    'hr': (r'\b(?:više od )?1[4-9]\+? godina\b', 'više od 10 godina'),
+}
+FOUNDED_ANY = re.compile(r'\b((?:since|seit|depuis|dal|desde|sinds|od|od roku)\s+)(200\d|201[0-2])\b')
+COMPANY_VOICE = re.compile(
+    r'Boat4You|\b(?:[Ww]e|[Oo]ur|[Ww]ir|[Uu]nser\w*|[Nn]ous|[Nn]otre|[Nn]oi|[Nn]ostr\w|[Nn]osotros|[Nn]uestr\w|[Nn]ós|[Nn]oss\w|[Ww]ij|[Oo]nze|'
+    r'[Nn]asz\w*|[Nn]aš\w*|[Cc]hartering|[Cc]harteren|[Nn]oleggiamo|[Cc]harterujemy|[Ii]znajmljivanje)\b')
+
+
+def _claims_more(body, ctx):
+    loc = ctx.locale
+    cap, low = CLAIM_SUBJECT[loc]
+    # 5) our boats
+    body_now = body
+
+    def boats(m):
+        new = _our_boats(loc, m)
+        if at_sentence_start(body_now, m.start()) and not new[:1].isupper():
+            new = new[:1].upper() + new[1:]
+        ctx.record('claims2', m.group(0), new)
+        return new
+
+    body = OUR_BOATS[loc].sub(boats, body)
+    for rx, fn in FLEET_ROLE.get(loc, []):
+        body_now = body
+
+        def role(m, fn=fn):
+            new = fn(m)
+            if at_sentence_start(body_now, m.start()):
+                new = new[:1].upper() + new[1:]
+            ctx.record('claims2', m.group(0), new)
+            return new
+
+        body = re.sub(rx, role, body)
+    if loc == 'en':
+        body_now = body
+
+        def place(m):
+            new = f"{m.group(1)}ur partners' {m.group(2)}{m.group(3)}"
+            ctx.record('claims2', m.group(0), new)
+            return new
+
+        body = OUR_PLACE_EN.sub(place, body)
+
+    # 6) first-person upkeep sentences go
+    we = re.compile(WE_UPKEEP[loc])
+
+    def upkeep_block(tag, attrs, inner):
+        if not we.search(plain(inner)):
+            return inner
+        new, dropped = drop_sentences(inner, lambda t: bool(we.search(t)))
+        for d in dropped:
+            ctx.record('claims2', d[:200], '(sentence removed: we maintain/inspect the boats)')
+        return new if plain(new) else None
+
+    body = edit_blocks(body, upkeep_block)
+
+    # 7) Boat4You + verb + maintenance/repair → partner network
+    body_now = body
+    noun = UPKEEP_NOUN[loc]
+    rx = re.compile(rf"(?:<strong>)?\bBoat4You(?:</strong>)?(?P<mid>\s+(?:(?:also|auch|aussi|anche|también|também|ook|również|także|također|[\w-]+(?:ly|lich|ment|mente|nie))\s+)?)(?P<verb>[^\W\d_][\w-]*)(?P<obj>(?:\s+[\w'’-]+){{0,5}}?\s+(?:{noun})\b)")
+
+    def upkeep(m):
+        if UPKEEP_ADVISE.match(m.group('verb')) or re.search(r'[.!?;:]', m.group('obj')):
+            return m.group(0)
+        before = re.sub(r'<[^>]+>', ' ', body_now[max(0, m.start() - 25): m.start()])
+        if before.strip() and _not_subject(before):
+            return m.group(0)
+        who = cap if at_sentence_start(body_now, m.start()) else low
+        new = f"{who}{m.group('mid')}{m.group('verb')}{m.group('obj')}"
+        ctx.record('claims2', plain(m.group(0)), plain(new))
+        return new
+
+    body = rx.sub(upkeep, body)
+
+    # 8) founding year and years of experience in the company's own voice
+    years_rx, years_new = EXPERIENCE_YEARS[loc]
+
+    def company(tag, attrs, inner):
+        if not (FOUNDED_ANY.search(inner) or re.search(years_rx, inner)):
+            return inner
+        out = []
+        for piece in split_sentences(inner):
+            text = plain(piece)
+            new = piece
+            if FOUNDED_ANY.search(text) and COMPANY_VOICE.search(text):
+                new = FOUNDED_ANY.sub(lambda mm: mm.group(1) + '2013', new)
+            if 'Boat4You' in text and EXPERIENCE_WORD.search(text):
+                new = re.sub(years_rx, years_new, new)
+            if new != piece:
+                ctx.record('claims2', text[:160], plain(new)[:160])
+            out.append(new)
+        return ''.join(out)
+
+    body = edit_blocks(body, company)
+    return body
+
+
 def fix_claims2(src, ctx):
     head, body, tail = split_body(src)
     loc = ctx.locale
@@ -860,8 +1382,26 @@ def fix_claims2(src, ctx):
         body = reorder.sub(swap_complement, body)
 
     # 1b) EN "Boat4You catamarans / the Boat4You fleet": the boats listed on
-    #     Boat4You, not boats Boat4You owns.
+    #     Boat4You, not boats Boat4You owns; "Boat4You's 5 gulets" → "our
+    #     partners' 5 gulets".
     if loc == 'en':
+        body_now = body
+
+        def brand_poss(m):
+            tags = ''.join(re.findall(r'<a\b[^>]*>', m.group('sep')))
+            new = ("Our" if at_sentence_start(body_now, m.start()) else "our") + f" partners' {tags}{m.group('mods')}{m.group('n')}"
+            ctx.record('claims2', plain(m.group(0)), new)
+            return new
+
+        body = BRAND_POSS_BOATS_EN.sub(brand_poss, body)
+        body_now = body
+
+        def team(m):
+            new = ("The" if at_sentence_start(body_now, m.start()) else "the") + " charter operator's maintenance team"
+            ctx.record('claims2', plain(m.group(0)), new)
+            return new
+
+        body = re.sub(r"(?:<strong>)?\bBoat4You(?:</strong>)?['’]s\s+maintenance\s+team", team, body)
         body_now = body
 
         def brand_boats(m):
@@ -886,12 +1426,15 @@ def fix_claims2(src, ctx):
 
         body = BRAND_BOATS_EN.sub(brand_boats, body)
 
-    # 1c) possessive "fleet of Boat4You" in the translations
+    # 1c) possessive "fleet of Boat4You" in the translations ("Unsere
+    #     <strong>Boat4You</strong> Segelyachten": the emphasis goes first)
+    body = BRAND_BEFORE_BOATS.sub(r'\1', body)
+    body = re.sub(r'<strong>([^<]{1,40})</strong>(?=\s+(?:da|de|di|del|della|van|von|of|dos|das|do|des)\s+(?:<strong>)?Boat4You)', r'\1', body)
     for pattern, repl in BRAND_FLEET.get(loc, []):
         body_now = body
 
         def brand_fleet(m, repl=repl):
-            new = repl(m) if callable(repl) else m.expand(repl)
+            new = _keep_close_tags(m.group(0), repl(m) if callable(repl) else m.expand(repl))
             if at_sentence_start(body_now, m.start()):
                 new = new[:1].upper() + new[1:]
             ctx.record('claims2', plain(m.group(0)), plain(new))
@@ -901,9 +1444,10 @@ def fix_claims2(src, ctx):
 
     # 2) Boat4You operates … / maintains rigorous standards … → partner network
     body_now = body
-    verbs = rf"(?:{OPERATE[loc]})\b|{UPKEEP[loc]}"
+    verbs = rf"(?:{OPERATE[loc]})\b|{UPKEEP[loc]}|(?:{MANAGE[loc]})"
+    art_rx = r"(?P<art>\b[Aa]\s+)?" if loc == 'pt' else r"(?P<art>(?!))?"
     subj = re.compile(
-        rf"(?P<art>\b[Aa]\s+)?(?:<strong>)?\bBoat4You(?:</strong>)?(?P<mid>\s+(?:[\w-]+(?:ly|lich|ment|mente|nie|no)\s+)?)(?P<verb>{verbs})")
+        art_rx + rf"(?:<strong>)?\bBoat4You(?:</strong>)?(?P<mid>\s+(?:[\w-]+(?:ly|lich|ment|mente|nie|no)\s+)?)(?P<verb>{verbs})")
 
     def swap(m):
         before = re.sub(r'<[^>]+>', ' ', body_now[max(0, m.start() - 25): m.start()])
@@ -915,6 +1459,35 @@ def fix_claims2(src, ctx):
         return new
 
     body = subj.sub(swap, body)
+    if loc in BRAND_MODIFIER:
+        body_now = body
+
+        def modifier(m):
+            keep = m.groupdict().get('det') or ''
+            ctx.record('claims2', plain(body_now[m.start(): m.end() + 30]), plain(keep + body_now[m.end(): m.end() + 30]))
+            return keep
+        # a sentence that now starts with the boat noun gets its capital in
+        # the recap pass
+        body = re.sub(BRAND_MODIFIER[loc], modifier, body)
+    for rules in (BOATS_OF_BRAND, STANDARDS_OF_BRAND):
+        if loc not in rules:
+            continue
+        rx, repl = rules[loc]
+        body_now = body
+
+        def own(m, repl=repl):
+            new = m.expand(repl)
+            if at_sentence_start(body_now, m.start()):
+                new = new[:1].upper() + new[1:]
+            ctx.record('claims2', plain(m.group(0)), plain(new))
+            return new
+        body = re.sub(rx, own, body)
+    for rx, repl in FLEET_SUPERLATIVE.get(loc, []):
+        def tone(m, repl=repl):
+            new = m.expand(repl)
+            ctx.record('claims2', m.group(0), new)
+            return new
+        body = re.sub(rx, tone, body)
 
     # 3) priority-berth promises
     pb = re.compile(PRIORITY_BERTH[loc], re.I)
@@ -958,6 +1531,662 @@ def fix_claims2(src, ctx):
 
     if FOUNDED.search(body):
         body = edit_blocks(body, founded)
+    body = _claims_more(body, ctx)
+    if reorder:
+        body = reorder.sub(swap_complement, body)
+    return head + body + tail
+
+
+# ---------------------------------------------------------------- subject
+
+# An earlier pass deleted "Boat4You" from the texts and left sentences that
+# start with a lower-case verb: DE ". koordiniert die Verfügbarkeit von
+# Skippern", NL "<p> regelt professionele schippers", IT "ti collega",
+# FR "s'occupe des briefings". The subject goes back ("Boat4You koordiniert
+# …", PT "A Boat4You coordena …") when the first word is a verb the corpus
+# uses with Boat4You (SUBJECT_VERBS, collected from the corpus itself), or a
+# clitic/adverb followed by one ("se especializa", "también ofrece"); any
+# other sentence that starts in lower case is capitalised. The fleet/upkeep
+# claims then run on the restored subject (claims, claims2).
+SUBJECT_VERBS = {
+    'de': set('''
+wählte achtet aggregiert akzeptiert anerkennt arbeitet arrangiert basiert baut bedient befindet befolgt begrüßt behält
+beinhaltet beobachtet berechnet bereitet berät berücksichtigt beschleunigt bestellt bestätigt betankt beteiligt betont
+betreibt bewertet bietet bleibt bringt bucht chartert deckt empfiehlt engagiert enthält entwickelt entwirft erfordert
+erkennt erklärt erlaubt erleichtert ermutigt ermöglicht erweckt erweitert feiert filtert findet fordert fördert führt
+gewährleistet gibt glaubt grenzt hat hebt heißt hilft hält informiert ist kann kennt klärt kombiniert koordiniert
+koppelt kuratiert kümmert legt liefert listet lädt nutzt operiert optimiert orchestriert organisiert passt pflegt
+plant positioniert priorisiert pro-proviantiert profitiert präsentiert prüft repräsentiert reserviert respektiert
+richtet rät schafft schließt schlägt schult schätzt setzt sichert spezialisiert spezifiziert stationiert steht stellt
+stimmt strafft strukturiert teilt umarmt umfasst unterhält unterstützt verbindet vereinfacht verfolgt verfügt
+vergleicht verhandelt verifiziert verlangt vermittelt verpflichtet versorgt versteht verwaltet verwandelt
+veröffentlicht warnt weist wickelt widmet wird wählt zeigt übernimmt überprüft übertrifft überwacht
+'''.split()),
+    'nl': set('''
+accepteert accommodeert accomodateert adresseert adviseert aggregeert arrangeert assisteert bedient begeleidt begrijpt
+beheert behoudt benadrukt benut beoordeelt beschikt beschrijft beveelt bevestigt bevordert biedt blijft blokkeert
+boekt bouwt breidt brengt catalogiseert citeert combineert controleert coördineert creëert curateert erkent evalueert
+exploiteert faciliteert filtert gebruikt geeft handelt handhaaft hanteert heeft helpt houdt informeert interviewt is
+kan kent keurt koppelt legt levert maakt matcht moedigt monitort neemt nodigt omarmt omvat onderhandelt onderhoudt
+ondersteunt ontwerpt ontwikkelt opereert optimaliseert organiseert orkestreert overtreft past plaatst plant
+positioneert prioriteert profiteert promoot publiceert raadt regelt reserveert respecteert schat selecteert sluit somt
+specialiseert specificeert staat stelt stemt steunt streeft stroomlijnt toont transformeert verbindt verduidelijkt
+vereenvoudigt vereist vergelijkt verhoogt verifieert verwacht verwelkomt verwerkt verzekert viert vindt voert voorziet
+vraagt waardeert werkt wijst zal zet zorgt
+'''.split()),
+    'fr': set('''
+a aborde accepte accueille adapte affiche agrège aide applique apporte apprécie assiste associe assure attribue base
+catalogue clarifie collabore combine compare comprend confirme connecte conseille conserve conçoit coordonne crée
+dispose donne définit dépasse détaille effectue encourage entretient est examine exige exploite facilite fait filtre
+fournit garantit gère inclut informe liste livre maintient met négocie offre optimise opère orchestre organise
+orientera perpétue personnalise peut planifie positionne prend privilégie profite propose pré-organise précise prépare
+présente prône publie recommande reconnaît rend respecte reste répertorie réserve s'adapte s'aligne s'associe s'engage
+s'occupe sensibilise simplifie souligne source soutient spécifie surveille sécurise sélectionne traite transforme
+travaille utilise valorise vérifie éduque élimine élève établit étend évalue
+'''.split()),
+    'it': set('''
+abbina accetta accoglie adatta affronta aggrega aiuta apprezza assegna assicura assiste basa beneficia cataloga
+celebra chiarisce collabora collega combina comprende comunica conduce conferma consegna consiglia continua coordina
+corrisponde costruisce crea cura delinea dettaglia dispone dà educa effettua elenca eleva enfatizza esamina estende
+facilita filtra fornirà fornisce garantisce gestisce ha implementa include incoraggia indirizzerà informa intervista
+lavora mantiene monitora mostra negozia offre opera orchestra ordina organizza ospita ottimizza partecipa personalizza
+pianifica pone porta posiziona pre-approvvigiona pre-ordina pre-organizza prenota prepara presenta privilegia progetta
+promuove pubblica può raccomanda rappresenta richiede riconosce rimane riserva rispetta semplifica sfrutta sostiene
+sottolinea specifica supera supporta sviluppa trasferisce trasforma trasporta trova unisce utilizza valorizza valuta
+verifica visualizza è
+'''.split()),
+    'es': set('''
+aborda acepta aclara acomoda aconseja adapta admite advierte agiliza anima aporta apoya aprecia aprovecha aprovisiona
+asegura asigna asiste ayuda basa cataloga celebra coincide colabora combina compara comprende comunica conecta
+confirma confía continúa coordina cotiza crea cubre cuenta cumple da desarrolla describe destaca detalla diseña educa
+eleva eligió elimina empareja encuentra enfatiza entiende entrevista enumera es especifica está evalúa exige explica
+extiende facilita filtra fomenta garantiza gestiona ha iguala incluye informa invita lleva maneja mantiene monitorea
+monitoriza muestra negocia ofrece opera optimiza organiza orquesta participa permite personaliza planifica posiciona
+pre-aprovisiona pre-organiza presenta prioriza procesa promueve proporciona publica puede realiza recomienda reconoce
+representa requiere reserva respalda respeta revisa selecciona seleccionó significa sigue simplifica solicita soporta
+suele suministra tiene trae transforma traslada utiliza valora verifica
+'''.split()),
+    'pt': set('''
+aceita acomoda aconselha adapta adequa ajuda ajuda-o analisa aplica apoia aproveita auxilia avalia beneficia cataloga
+celebra clarifica colabora combina compreende conecta confirma constrói continua convida-o coordena coordena-se
+corresponde cria defende delineia descreve desenha educa enfatiza entrevista esclarece especializa-se especifica
+estabelece estrutura está exibe exige facilita faz filtra garante gere gerencia incentiva inclui irá liga liga-o lista
+mantém mantém-se monitoriza mostra negoceia negocia oferece opera organiza otimiza permite personaliza pode prioriza
+proporciona pré-abastece publica realiza recomenda reconhece requer reserva respeita revê seleciona selecionou
+simplifica suporta tem transfere transforma transporta trata traz valoriza verifica é
+'''.split()),
+    'pl': set('''
+agreguje akceptuje aranżuje buduje celebruje ceni cumuje docenia dopasowuje dopasuje doradza dostarcza dostosowuje
+działa edukuje filtruje informuje jest kataloguje kontynuuje koordynuje korzysta kuruje kładzie monitoruje może
+negocjuje obejmuje obsługuje ocenia oferuje określa operuje optymalizuje organizuje ożywia personalizuje planuje
+podaje podkreśla pokazuje poleca pomaga pomoże porównuje posiada potwierdza pozycjonuje projektuje promuje prowadzi
+przekazuje przekształca przeprowadza przydziela przydzieli przynosi przyspiesza publikuje rekomenduje rezerwuje
+rozszerza rozumie specjalizuje sprawdza stoi stosuje szanuje tworzy umożliwia upraszcza usprawnia ustala utrzymuje
+uwzględnia uznaje ułatwia weryfikuje wita wnosi wprowadza wspiera współpracuje wybrał wybrała wyjaśnia wykorzystuje
+wymaga wyświetla zachowuje zachęca zajmuje zaleca zaleci zapewnia zaprasza zarządza zastrzega zawiera zna znajduje
+zobowiązuje łączy
+'''.split()),
+    'hr': set('''
+agregira bazira brine cijeni daje definira dizajnira djeluje dodjeljuje dogovara donosi dopušta dovodi dočekuje
+educira eliminira filtrira ima intervjuira iskorištava isporučuje ističe je katalogizira koordinira koristi kurira
+može naglašava nalazi nastavlja navodi nosi nudi obavještava obavlja objavljuje obrađuje odabire odabrala odabrao
+odgovara održava olakšava omogućuje opskrbljuje optimizira organizira osigurava oživljava parira planira podržava
+podudara pojašnjava pojednostavljuje pomaže posjeduje posluje postavlja posvećen potiče potvrđuje povezuje pozdravlja
+pozicionira poziva poznaje poštuje prati predan predstavlja pregledava pregovara premašuje prenosi preporučuje
+prepoznaje pretvara pridržava prihvaća prikazuje prilagođava prioritetizira prioritizira procjenjuje promiče pronalazi
+provjerava provodi proširuje pruža radi razumije razvija rezervira rješava rukuje sastavlja savjetuje shvaća slavi
+spaja specijalizira specijaliziran specijalizirao spreman stoji stvara surađuje svakom svaku udovoljava uključuje
+upozorava upravlja usklađuje uspoređuje vrši zadržava zagovara zahtijeva će
+'''.split()),
+}
+
+SUBJECT_CLITIC = {
+    'fr': {'se', 'vous'}, 'it': {'si', 'ti', 'vi', 'ci', 'lo', 'la', 'le', 'gli'},
+    'es': {'se', 'le', 'les', 'lo', 'la', 'nos', 'te'}, 'pt': set(), 'nl': set(), 'de': set(),
+    'pl': set(), 'hr': {'se', 'vam', 'vas', 'vi'}, 'en': set(),
+}
+SUBJECT_PRONOUN = {
+    'es': {'se', 'le', 'les', 'te', 'nos'}, 'it': {'si', 'ti', 'vi', 'ci'}, 'fr': {'se', 'lui', 'leur'}, 'hr': {'se', 'vam', 'vas'},
+    'pt': set(), 'de': set(), 'nl': set(), 'pl': set(), 'en': set(),
+}
+SUBJECT_ADVERB = {
+    'es': {'también', 'normalmente', 'generalmente', 'típicamente', 'rara', 'siempre', 'además'},
+    'it': {'tipicamente', 'spesso', 'raramente', 'anche', 'inoltre', 'sempre', 'generalmente', 'normalmente'},
+    'pt': {'também', 'geralmente', 'normalmente', 'sempre'},
+    'fr': {'aussi', 'également', 'généralement', 'toujours'},
+    'pl': {'zazwyczaj', 'często', 'starannie', 'szczegółowo', 'wstępnie', 'dokładnie', 'codziennie', 'stale',
+           'priorytetowo', 'bezbłędnie', 'bezwzględnie', 'aktywnie', 'rzadko', 'wyraźnie', 'również', 'także', 'zawsze'},
+    'hr': {'obično', 'često', 'pažljivo', 'izravno', 'također', 'iskreno', 'detaljno', 'jasno', 'dodatno', 'transparentno',
+           'neprekidno', 'besprijekorno', 'posebno', 'svakodnevno', 'prethodno', 'unaprijed', 'rigorozno', 'apsolutno',
+           'kontinuirano', 'aktivno', 'rijetko', 'namjerno', 'uvijek'},
+    'de': set(), 'nl': set(), 'en': set(),
+}
+# Words the brand pass left in a wrong form: "arrange" (EN) in a DE text.
+SUBJECT_WORD_FIX = {
+    'de': {'arrange': 'arrangiert'}, 'fr': {'spécialise': 'se spécialise'}, 'it': {'specializza': 'si specializza'},
+    'es': {'estaciones': 'estaciona'},
+}
+SUBJECT_BRAND = {'pt': 'A Boat4You'}
+_INL = r'(?:a|strong|em|b|i|span|u)'
+SUBJECT_START = re.compile(
+    r'(?P<pre>^\s*|[.!?…](?:["”»’)]|</' + _INL + r'\s*>)*\s+)(?P<open>(?:<' + _INL + r'\b[^>]*>\s*)*)'
+    r'(?P<word>[^\W\d_][\w’\'-]*)(?P<gap>\s+)?(?P<next>[^\W\d_][\w’\'-]*)?')
+# a period that does not end a sentence: abbreviations, initials, ordinals
+# ("18. stoljeća", "7. dnia"), "490 v. Chr.", "p. m."
+SUBJECT_ABBR = re.compile(
+    r'(?:\b(?:vs|e\.g|i\.e|etc|approx|incl|ca|bzw|ggf|inkl|usw|evtl|Chr|J\.-C|n\.Chr|v\.Chr|av|apr|pr|Kr|ds|np|tj|tzw|'
+    r'tzn|npr|itd|tzv|sv|ul|wg|godz|tys|mln|min|max|Min|Vol|Std|nm|km|Nr|No|St|Ste|Mt|Dr|Sr|Jr|Prof|Sig|bijv|resp|evt|'
+    r'aprox|p\.\s?ej|p\.\s?ex|m\.in|n\.p\.m|p\.n\.e|n\.e|a\.C|d\.C|z\.\s?B|d\.\s?h|u\.\s?a|t\.o\.v|o\.a)|(?:^|(?<=[\s(.]))[A-Za-z]|\d)'
+    r'[.)]*$')
+SUBJECT_SKIP_WORDS = {'e.g', 'i.e', 'vs', 'iOS', 'eSIM', 'eBay', 'iPhone', 'iPad', 'km', 'nm', 'kn', 'www'}
+
+
+def _subject_action(loc, word, nxt):
+    verbs = SUBJECT_VERBS.get(loc, set())
+    if word in SUBJECT_SKIP_WORDS or word.split('.')[0] in SUBJECT_SKIP_WORDS or word.lower().startswith('boat4you'):
+        return 'skip'
+    # an object or reflexive pronoun cannot start a sentence: "se especializa",
+    # "si occupa", "ti collega", "le conecta", "vous aide"
+    if nxt and nxt[:1].islower() and word in SUBJECT_PRONOUN.get(loc, ()):
+        return 'brand'
+    if word in verbs or word in SUBJECT_WORD_FIX.get(loc, {}):
+        return 'brand'
+    if loc == 'fr' and re.match(r"s['’]\w", word):
+        return 'brand'
+    if loc == 'fr' and word == 'vous':
+        return 'brand' if nxt and not nxt.endswith('ez') else 'cap'
+    if nxt and (word in SUBJECT_CLITIC.get(loc, ()) or word in SUBJECT_ADVERB.get(loc, ())):
+        if nxt in verbs or (loc == 'es' and word == 'rara' and nxt == 'vez') or (loc == 'fr' and nxt in ('y', 'en')):
+            return 'brand'
+    return 'cap'
+
+
+# A block that ends in the middle of a sentence because the main clause
+# ("…, Boat4You delivers …") was cut when the texts were generated:
+# "Whether you're a first-time charterer or a seasoned skipper," — the
+# dangling clause goes; "…, and" at the very end becomes a full stop.
+DANGLING_CONJ = re.compile(r',\s*(?:and|und|et|e|y|en|i|a|oraz|kao i)(?P<tags>(?:\s*</?(?:strong|em|b|i|span)>)*)\s*$')
+_ENDS_COMMA = re.compile(r',(?P<tags>(?:\s*</?(?:strong|em|b|i|span)>)*)\s*$')
+
+
+def fix_dangling_end(body, ctx):
+    def block(tag, attrs, inner):
+        if tag not in ('p', 'li'):
+            return inner
+        m = DANGLING_CONJ.search(inner)
+        if m and re.search(r'[\w)]$', re.sub(r'<[^>]+>', '', inner[:m.start()]).rstrip()):
+            new = inner[:m.start()] + '.' + m.group('tags')
+            ctx.record('recap', plain(inner)[-120:], plain(new)[-120:])
+            return new
+        if not _ENDS_COMMA.search(inner):
+            return inner
+        pieces = split_sentences(inner)
+        if len(pieces) < 2:
+            ctx.record('recap', plain(inner)[:160], '(block removed: unfinished sentence)')
+            return None
+        new = ''.join(pieces[:-1]).rstrip()
+        ctx.record('recap', plain(pieces[-1])[:160], '(unfinished sentence removed)')
+        return new
+
+    return edit_blocks(body, block)
+
+
+def fix_recap(src, ctx):
+    """Last pass: a sentence that a later rule left starting in lower case is
+    capitalised (no brand is inserted this late); a block that ends in an
+    unfinished sentence loses the fragment."""
+    src = fix_subject(src, ctx, allow_brand=False)
+    head, body, tail = split_body(src)
+    return head + fix_dangling_end(body, ctx) + tail
+
+
+def fix_subject(src, ctx, allow_brand=True):
+    head, body, tail = split_body(src)
+    loc = ctx.locale
+
+    # "[Boat4You] verifica…", "[Subject Missing]", "[Nome Azienda]": a
+    # translator's marker for the brand the earlier pass removed.
+    def bracket(m):
+        ctx.record('subject', m.group(0), 'Boat4You')
+        return 'Boat4You'
+
+    body = BRACKET_BRAND.sub(bracket, body)
+
+    def block(tag, attrs, inner):
+        if tag == 'td':
+            return inner
+
+        def start(m):
+            word, nxt = m.group('word'), m.group('next')
+            if not word[:1].islower():
+                return m.group(0)
+            if m.group('pre').strip():
+                if m.group('pre').lstrip()[:1] == '.' and SUBJECT_ABBR.search(plain(inner[max(0, m.start() - 40): m.start()])):
+                    return m.group(0)
+            action = _subject_action(loc, word, nxt if m.group('gap') else None)
+            if action == 'brand' and not allow_brand:
+                action = 'cap'
+
+            rest = m.group(0)[len(m.group('pre')) + len(m.group('open')) + len(word):]
+            if action == 'skip':
+                return m.group(0)
+            if action == 'cap':
+                new_word = word[:1].upper() + word[1:]
+                ctx.record('subject', word, new_word, plain(inner)[:80])
+                return m.group('pre') + m.group('open') + new_word + rest
+            brand = SUBJECT_BRAND.get(loc, 'Boat4You')
+            new_word = SUBJECT_WORD_FIX.get(loc, {}).get(word, word)
+            if loc == 'hr' and nxt in ('je', 'se') and m.group('gap'):
+                # clitic second: "Boat4You je odabrao", "Boat4You se specijalizirao"
+                new = f"{brand} {nxt} {new_word}"
+                rest = rest[len(m.group('gap')) + len(nxt):]
+            else:
+                new = f"{brand} {new_word}"
+            ctx.record('subject', word, new, plain(inner)[:80])
+            return m.group('pre') + m.group('open') + new + rest
+        return SUBJECT_START.sub(start, inner)
+
+    body = edit_blocks(body, block)
+    body = fix_heading_holes(body, ctx)
+    return head + body + tail
+
+
+# Headings the brand pass left with a hole: "Warum für Ihren Segelyachtcharter?",
+# "Perché i Velisti Tornano da", "Waarom Zeilers Terugkeren naar",
+# "¿Qué se incluye en el precio del alquiler de catamarán de ?".
+_HEAD_END = r'\s*(?P<q>[?!:]?)\s*$'
+HEADING_HOLE = {
+    'en': [(r'^(?P<a>Why)\s+(?P<b>for\b)', r'\g<a> Boat4You \g<b>'),
+           (r'(?P<a>\b(?:Return|Returns|Come Back|Keep Coming Back) to|\bTrust|\bChoose|\bwith|\bat|\bthrough|\bhandled by)' + _HEAD_END, r'\g<a> Boat4You\g<q>')],
+    'de': [(r'^(?P<a>Warum)\s+(?P<b>für\b)', r'\g<a> Boat4You \g<b>'),
+           (r'(?P<a>\b(?:zurückkehren zu|kehren zurück zu|vertrauen|mit)|\bflotte bei)' + _HEAD_END, r'\g<a> Boat4You\g<q>')],
+    'fr': [(r'^(?P<a>Pourquoi)\s+(?P<b>pour\b)', r'\g<a> Boat4You \g<b>'),
+           (r'(?P<a>\breviennent chez|\bfont confiance à|\bchez|\bavec|\bde catamaran de|\bde location de)' + _HEAD_END, r'\g<a> Boat4You\g<q>')],
+    'it': [(r'^(?P<a>Perché)\s+(?P<b>per\b)', r'\g<a> Boat4You \g<b>'),
+           (r'(?P<a>\b[Tt]ornano (?:da|a)|\bsi [Aa]ffidano a|\bcon|\bdi catamarano di)' + _HEAD_END, r'\g<a> Boat4You\g<q>')],
+    'es': [(r'^(?P<a>¿?Por qué)\s+(?P<b>para\b)', r'\g<a> Boat4You \g<b>'),
+           (r'(?P<a>\b[Rr]egresan a|\b[Vv]uelven a|\b[Cc]onfían en|\bcon|\ba través de|\bde catamarán de|\b[Vv]ela en)' + _HEAD_END, r'\g<a> Boat4You\g<q>')],
+    'pt': [(r'^(?P<a>Porquê|Porque)\s+(?P<b>para\b)', r'\g<a> a Boat4You \g<b>'),
+           (r'(?P<a>\b[Rr]egressam) (?:à|a)' + _HEAD_END, r'\g<a> à Boat4You\g<q>'),
+           (r'(?P<a>\bcom|\bde catamarãs da|\b[Vv]eleiros em)' + _HEAD_END, r'\g<a> Boat4You\g<q>')],
+    'nl': [(r'^(?P<a>Waarom)\s+(?P<b>voor\b)', r'\g<a> Boat4You \g<b>'),
+           (r'(?P<a>\b[Tt]erugkeren naar|\b[Kk]eren terug naar|\b[Vv]ertrouwen op|\bcharterprijzen van)' + _HEAD_END, r'\g<a> Boat4You\g<q>')],
+    'pl': [(r'^(?P<a>Dlaczego)\s+(?P<b>dla\b)', r'\g<a> Boat4You \g<b>'),
+           (r'^(?P<a>Dlaczego wybrać)\s+(?P<b>(?:do|na|dla)\b)', r'\g<a> Boat4You \g<b>'),
+           (r'(?P<a>\b(?:[Ww]racają|[Ww]rócą|[Pp]owracają) do|\bufają|\bwe [Ww]łoszech z)' + _HEAD_END, r'\g<a> Boat4You\g<q>')],
+    'hr': [(r'^(?P<a>Zašto)\s+(?P<b>za\b)', r'\g<a> Boat4You \g<b>'),
+           (r'^(?P<z>Zašto) [Ss]e (?P<w>[\wčćđšž]+) [Vv]raćaju u' + _HEAD_END, r'\g<z> nam se \g<w> vraćaju\g<q>'),
+           (r'(?P<a>\bu Italiji s|\bflote jedrilica kod)' + _HEAD_END, r'\g<a> Boat4You\g<q>')],
+}
+
+
+def fix_heading_holes(body, ctx):
+    rules = [(re.compile(p), r) for p, r in HEADING_HOLE.get(ctx.locale, [])]
+    if not rules:
+        return body
+    space_q = ' ' if ctx.locale == 'fr' else ''
+
+    def heading(m):
+        inner = m.group(3)
+        if '<' in inner or 'Boat4You' in inner:
+            return m.group(0)
+        text = inner.strip()
+        new = text
+        for rx, repl in rules:
+            def sub(mm, repl=repl):
+                out = mm.expand(repl.replace(r'\g<q>', ''))
+                q = mm.groupdict().get('q') or ''
+                return out + (space_q + q if q else '')
+            new = rx.sub(sub, new)
+        if new == text:
+            return m.group(0)
+        ctx.record('subject', text, new)
+        return f'<h{m.group(1)}{m.group(2)}>{inner.replace(text, new)}</h{m.group(1)}>'
+
+    return re.sub(r'<h([2-4])(\b[^>]*)>([\s\S]*?)</h\1\s*>', heading, body)
+
+
+# ---------------------------------------------------------------- compass
+
+# Wrong compass directions and distances between Split-area places (B37).
+# Trogir lies west of Split (about 27 km by road, 15 nm by sea), east and
+# south-east of Rogoznica and Primošten; Split airport is next to Trogir;
+# Hvar and Šolta lie south / south-east of Trogir, the Kornati north-west.
+# Each case: files, anchor place, where the direction word sits relative to
+# the anchor (chars before, chars after), the right direction, and distance
+# corrections inside that window, and optionally the other place of the
+# pair: when it sits close to the anchor the window spans both ("nach
+# Norden von Split und besuchen … Trogir"). Direction words are swapped per language
+# with the grammar of the phrase ("nördlich von" → "westlich von", "au nord
+# de" → "à l'ouest de", "na sjever" → "na zapad").
+_AIRPORT = r"(?i:airport|flughafen|aéroport|aeroporto|aeropuerto|luchthaven|lotnisk\w*|zračn\w* luk\w*)"
+_TROGIR = r"Trogir\w*|Traù"
+COMPASS_CASES = [
+    (('croatia-gulet-charter', 'croatia-sailing-yacht-charter', 'split-catamaran-charter',
+      'split-motorsailer-charter', 'split-power-catamaran-charter', 'split-sailing-yacht-charter', 'split-region-catamaran-charter',
+      'split-region-sailing-area-yacht-charter-and-boat-rental', 'split-sailing-area-yacht-charter-and-boat-rental',
+      'gulet-charter-split-west-coast-zapadna-obala', 'split-motor-yacht-charter', 'split-region-gulet-charter'),
+     _TROGIR, (45, 55), 'west', 'north', {}, r'Split\w*|Spalat\w*'),
+    (('croatia-power-catamaran-charter',), _TROGIR, (0, 40), 'west', 'any', {}),
+    (('primosten-catamaran-charter', 'primosten-motorboat-charter', 'primosten-sailing-yacht-charter'),
+     _TROGIR + r"|[Kk]aštel\w*|[Kk]astel\w*|Castelli", (45, 55), 'south-east', 'north', {}),
+    (('rogoznica-motor-yacht-charter',), _TROGIR, (0, 60), 'east', 'north', {}),
+    (('catamaran-charter-marina-baotic',), _AIRPORT, (0, 60), 'east', 'any', {'25': '8'}),
+    (('catamaran-charter-port-of-split-west-harbour',), _AIRPORT, (0, 60), 'west', 'any', {'25': '20'}),
+    (('catamaran-charter-trogir-marina-trogir-exsct', 'motor-yacht-charter-trogir-marina-trogir-exsct',
+      'sailing-yacht-charter-trogir-marina-trogir-exsct'), _AIRPORT, (0, 60), 'east', 'any', {'25': '6'}),
+    (('trogir-catamaran-charter', 'trogir-motor-yacht-charter', 'trogir-motorboat-charter'), _AIRPORT, (0, 60), 'east', 'any', {'20': '6'}),
+    (('catamaran-charter-trogir',), r"Šolt\w*|Solt\w*", (0, 40), 'south', 'north', {}),
+    (('trogir-catamaran-charter',), r"Hvar\w*", (0, 70), 'south-east', 'north', {}),
+    (('trogir-motor-yacht-charter',), r"Kornat\w*", (40, 0), 'north-west', 'any', {}),
+    (('catamaran-charter-trogir-yachtclub-seget-marina-baotic', 'motor-yacht-charter-trogir-yachtclub-seget-marina-baotic'),
+     r"Kornat\w*", (0, 60), 'north-west', 'north', {'30': '40'}),
+    (('motor-yacht-charter-trogir-yachtclub-seget-marina-baotic', 'sailing-yacht-charter-trogir-yachtclub-seget-marina-baotic'),
+     _TROGIR, (0, 40), 'east', 'any', {}),
+    (('marina-catamaran-charter', 'marina-sailing-yacht-charter'), _TROGIR, (45, 0), 'west', 'north', {'25': '12'}),
+    (('power-catamaran-charter-trogir-yachtclub-seget-marina-baotic',), r"Split\w*|Spalato", (40, 0), 'west', 'north', {'8': '12'}),
+    (('motorboat-charter-marina-zadar-ex-tankerkomerc',), _TROGIR, (45, 60), 'south-east', 'north', {'25': '60'}),
+    (('trogir-sailing-yacht-charter',), r"[Kk]aštel\w*|[Kk]astel\w*|Castelli", (120, 0), 'east', 'north', {}),
+]
+_DIRS = ('west', 'east', 'south', 'south-east', 'north-west')
+_UNIT = (r'(?=\s*(?:km\b|kilomet\w*|Kilomet\w*|kilomèt\w*|chilometr\w*|kilómetr\w*|quil[óô]metr\w*|nm\b|nautical|nautische\w*|'
+         r'milles?|miglia|millas?|milhas?|zeemijl\w*|mil\w*|nautičk\w*|NM\b|Seemeilen))')
+
+
+def _d(*forms):
+    return dict(zip(_DIRS, forms))
+
+
+_EN_DIR = re.compile(r'(?i)(?<![-\w])(?P<d>north(?:-?east|-?west)?|south)(?P<suf>wards?|ern|erly|bound)?(?![-\w])')
+_EN_FORMS = {'west': 'west', 'east': 'east', 'south': 'south', 'south-east': 'south-east', 'north-west': 'north-west'}
+_EN_SUF = {'ward': {'south-east': '', 'north-west': ''}, 'wards': {'south-east': '', 'north-west': ''},
+           'ern': {'south-east': 'ern', 'north-west': 'ern'}, 'erly': {'south-east': 'erly', 'north-west': 'erly'}}
+
+# (pattern, replacement per target, family) — family "south" is only
+# replaced where the case allows any direction.
+COMPASS_WORDS = {
+    'de': [(r'nach Nord(?:osten|westen|en)|nach Süden|nordwärts|südwärts',
+            _d('nach Westen', 'nach Osten', 'nach Süden', 'nach Südosten', 'nach Nordwesten')),
+           (r'im Nord(?:osten|westen|en)|im Süden', _d('im Westen', 'im Osten', 'im Süden', 'im Südosten', 'im Nordwesten')),
+           (r'nordöstlich|nordwestlich|nördlich|südlich', _d('westlich', 'östlich', 'südlich', 'südöstlich', 'nordwestlich')),
+           (r'Nord(?:osten|westen|en)|Süden', _d('Westen', 'Osten', 'Süden', 'Südosten', 'Nordwesten')),
+           (r'nördliche', _d('westliche', 'östliche', 'südliche', 'südöstliche', 'nordwestliche')),
+           (r'nördlichen', _d('westlichen', 'östlichen', 'südlichen', 'südöstlichen', 'nordwestlichen')),
+           (r'nördlicher', _d('westlicher', 'östlicher', 'südlicher', 'südöstlicher', 'nordwestlicher'))],
+    'fr': [(r"au nord(?:-est|-ouest)?|au sud", _d("à l'ouest", "à l'est", 'au sud', 'au sud-est', 'au nord-ouest')),
+           (r"vers le nord(?:-est|-ouest)?|vers le sud", _d("vers l'ouest", "vers l'est", 'vers le sud', 'vers le sud-est', 'vers le nord-ouest')),
+           (r"du nord(?:-est|-ouest)?|du sud", _d("de l'ouest", "de l'est", 'du sud', 'du sud-est', 'du nord-ouest')),
+           (r"le nord(?:-est|-ouest)?|le sud", _d("l'ouest", "l'est", 'le sud', 'le sud-est', 'le nord-ouest')),
+           (r"nord-est|nord-ouest|nord|sud", _d('ouest', 'est', 'sud', 'sud-est', 'nord-ouest'))],
+    'it': [(r"a nord(?:-?est|-?ovest)?|a sud", _d('a ovest', 'a est', 'a sud', 'a sud-est', 'a nord-ovest')),
+           (r"verso nord(?:-?est|-?ovest)?|verso sud", _d('verso ovest', 'verso est', 'verso sud', 'verso sud-est', 'verso nord-ovest')),
+           (r"nord-?est|nord-?ovest|nord|sud", _d('ovest', 'est', 'sud', 'sud-est', 'nord-ovest')),
+           (r"settentrionale", _d('occidentale', 'orientale', 'meridionale', 'sud-orientale', 'nord-occidentale'))],
+    'es': [(r"al nor(?:te|este|oeste)|al sur", _d('al oeste', 'al este', 'al sur', 'al sureste', 'al noroeste')),
+           (r"hacia el nor(?:te|este|oeste)|hacia el sur", _d('hacia el oeste', 'hacia el este', 'hacia el sur', 'hacia el sureste', 'hacia el noroeste')),
+           (r"noreste|noroeste|norte|sur", _d('oeste', 'este', 'sur', 'sureste', 'noroeste'))],
+    'pt': [(r"a nor(?:te|deste|oeste)|ao norte|a sul", _d('a oeste', 'a leste', 'a sul', 'a sudeste', 'a noroeste')),
+           (r"para (?:o )?nor(?:te|deste)|para (?:o )?sul", _d('para oeste', 'para leste', 'para sul', 'para sudeste', 'para noroeste')),
+           (r"nordeste|noroeste|norte|sul", _d('oeste', 'leste', 'sul', 'sudeste', 'noroeste'))],
+    'nl': [(r"ten noord(?:oosten|westen|en)|ten zuiden", _d('ten westen', 'ten oosten', 'ten zuiden', 'ten zuidoosten', 'ten noordwesten')),
+           (r"noordwaarts|naar het noord(?:oosten|en)|naar het zuiden", _d('westwaarts', 'oostwaarts', 'zuidwaarts', 'naar het zuidoosten', 'naar het noordwesten')),
+           (r"noordoosten|noordwesten|noorden|zuiden", _d('westen', 'oosten', 'zuiden', 'zuidoosten', 'noordwesten')),
+           (r"noordelijke", _d('westelijke', 'oostelijke', 'zuidelijke', 'zuidoostelijke', 'noordwestelijke')),
+           (r"noordelijk", _d('westelijk', 'oostelijk', 'zuidelijk', 'zuidoostelijk', 'noordwestelijk')),
+           (r"noordwaartse", _d('westwaartse', 'oostwaartse', 'zuidwaartse', 'zuidoostwaartse', 'noordwestwaartse')),
+           (r"noord|zuid", _d('west', 'oost', 'zuid', 'zuidoost', 'noordwest'))],
+    'pl': [(r"na północny wschód|na północny zachód|na północ|na południe",
+            _d('na zachód', 'na wschód', 'na południe', 'na południowy wschód', 'na północny zachód')),
+           (r"na północy|na południu", _d('na zachodzie', 'na wschodzie', 'na południu', 'na południowym wschodzie', 'na północnym zachodzie')),
+           (r"w kierunku północnym|w kierunku północy|ku północy",
+            _d('w kierunku zachodnim', 'w kierunku wschodnim', 'w kierunku południowym', 'w kierunku południowo-wschodnim', 'w kierunku północno-zachodnim')),
+           (r"północn(?:ą|a|ej|y|e)\s+pętl\w*", _d('zachodnią pętlę', 'wschodnią pętlę', 'południową pętlę', 'południowo-wschodnią pętlę', 'północno-zachodnią pętlę')),
+           (r"pętla\s+północna", _d('pętla zachodnia', 'pętla wschodnia', 'pętla południowa', 'pętla południowo-wschodnia', 'pętla północno-zachodnia'))],
+    'hr': [(r"sjeveroistočno|sjeverozapadno|sjeverno|južno", _d('zapadno', 'istočno', 'južno', 'jugoistočno', 'sjeverozapadno')),
+           (r"na sjever(?:oistok|ozapad)?|na jug", _d('na zapad', 'na istok', 'na jug', 'na jugoistok', 'na sjeverozapad')),
+           (r"na sjeveru|na jugu", _d('na zapadu', 'na istoku', 'na jugu', 'na jugoistoku', 'na sjeverozapadu')),
+           (r"prema sjeveru|prema jugu", _d('prema zapadu', 'prema istoku', 'prema jugu', 'prema jugoistoku', 'prema sjeverozapadu')),
+           (r"sjevern(?:a|u|oj)\s+petlj\w*", _d('zapadna petlja', 'istočna petlja', 'južna petlja', 'jugoistočna petlja', 'sjeverozapadna petlja')),
+           (r"sjevernije", _d('zapadnije', 'istočnije', 'južnije', 'jugoistočnije', 'sjeverozapadnije')),
+           (r"sjeverni", _d('zapadni', 'istočni', 'južni', 'jugoistočni', 'sjeverozapadni')),
+           (r"sjevera", _d('zapada', 'istoka', 'juga', 'jugoistoka', 'sjeverozapada'))],
+}
+_SOUTHISH = re.compile(r'(?i)^(?:nach |im |au |vers le |a |verso |al |hacia el |ao |para (?:o )?|ten |naar het |na |prema )?(?:süd|sud|sur|sul|zuid|połud|jug|južn)')
+
+
+def _swap_direction(word, forms, target, family_any):
+    if not family_any and _SOUTHISH.match(word):
+        return word
+    new = forms[target]
+    # Only the first letter follows the original: "Pętla Północna" → "Pętla
+    # zachodnia", the sentence case the HR/PL casing pass would give it.
+    return new[:1].upper() + new[1:] if word[:1].isupper() else new
+
+
+def _compass_window(text, locale, target, family_any):
+    if locale == 'en':
+        def en(m):
+            d = m.group('d')
+            if d.lower() == 'south' and not family_any:
+                return m.group(0)
+            suf = m.group('suf') or ''
+            new = _EN_FORMS[target] + _EN_SUF.get(suf.lower(), {}).get(target, suf)
+            return new[:1].upper() + new[1:] if d[:1].isupper() else new
+        return _EN_DIR.sub(en, text)
+    for pattern, forms in COMPASS_WORDS[locale]:
+        rx = re.compile(r'(?i)(?<![-\w])(?:' + pattern + r')(?![-\w])')
+        text = rx.sub(lambda m, forms=forms: _swap_direction(m.group(0), forms, target, family_any), text)
+    return text
+
+
+def fix_compass(src, ctx):
+    src = fix_aci(src, ctx)
+    slug = ctx.name[:-5]
+    cases = [c for c in COMPASS_CASES if slug in c[0]]
+    if not cases:
+        return src
+    head, body, tail = split_body(src)
+
+    def block(tag, attrs, inner):
+        out = []
+        for piece in split_sentences(inner):
+            new = piece
+            for _, anchor, (before, after), target, family, numbers, *pair in cases:
+                spans = []
+                others = list(re.finditer(pair[0], new)) if pair else []
+                for am in re.finditer(anchor, new):
+                    lo, hi = am.start() - before, am.end() + after
+                    for om in others:
+                        if abs(om.start() - am.start()) <= 110:
+                            lo, hi = min(lo, om.start() - before), max(hi, om.end() + after)
+                    spans.append((max(0, lo), min(len(new), hi)))
+                # merge overlapping windows, apply once
+                merged = []
+                for lo, hi in sorted(spans):
+                    if merged and lo <= merged[-1][1]:
+                        merged[-1] = (merged[-1][0], max(hi, merged[-1][1]))
+                    else:
+                        merged.append((lo, hi))
+                for lo, hi in reversed(merged):
+                    window = new[lo: hi]
+                    changed = _compass_window(window, ctx.locale, target, family == 'any')
+                    if changed != window:
+                        for old, repl in numbers.items():
+                            changed = re.sub(rf'(?<![\d.,]){old}(?![\d.,]){_UNIT}', repl, changed)
+                    new = new[:lo] + changed + new[hi:]
+            if new != piece:
+                ctx.record('compass', plain(piece)[:200], plain(new)[:200])
+            out.append(new)
+        return ''.join(out)
+
+    body = edit_blocks(body, block)
+    return head + body + tail
+
+
+# ACI Marina Split is not the biggest base (the charter facts rank Baotić/
+# Seget, Kaštela and D-Marin Dalmacija above it): superlatives go, applied
+# only in sentences that name ACI (Marina) Split.
+ACI_FIXES = {
+    'en': [(r'\bMost (Split[\w -]*? (?:charters|catamarans|motorsailers|yachts|power catamarans)) depart', r'Many \1 depart'),
+           (r', the (?:region\'s )?largest facility(?: with full services)?,', r', a full-service marina,'),
+           (r'\(largest, busiest, central\)', '(central, busy)'), (r'\(the largest\)', '(in the city centre)'), (r'\(largest\)', '(city centre)'),
+           (r'\(largest fleet, full services\)', '(full services)'), (r'\(largest fleet\)', '(city centre)'),
+           (r'is the region\'s largest facility', 'is a full-service marina in the city centre'),
+           (r'is the primary bareboat base, with the largest fleet and most flexible', 'is a major bareboat base, with flexible'),
+           (r'is the primary base for', 'is a major base for'),
+           (r'anchors the region\'s primary charter operations, located within the city', 'is the charter marina in the city centre')],
+    'de': [(r'Die meisten ((?:Katamaran-Charter ab Split|Split-Motorsailer|in Split ansässigen Power-Katamarane|Segelyachten in Split)) starten', r'Viele \1 starten'),
+           (r', der größten Anlage(?: der Region)?(?:, die| mit)', lambda m: ', einer Marina mit vollem Service,' + (' die' if m.group(0).endswith('die') else ' mit')),
+           (r'\(größte, belebteste, zentral\)', '(zentral, belebt)'), (r'\(die größte\)', '(im Stadtzentrum)'),
+           (r'\(größte Flotte, volle Dienstleistungen\)', '(volle Dienstleistungen)'), (r'\(größte Flotte\)', '(im Stadtzentrum)'),
+           (r'ist die größte Anlage der Region', 'ist eine Marina mit vollem Service im Stadtzentrum'),
+           (r'ist die wichtigste Bareboat-Basis mit der größten Flotte und den flexibelsten', 'ist eine wichtige Bareboat-Basis mit flexiblen')],
+    'fr': [(r'La plupart des ((?:locations de catamarans basées à Split|motorsailers de Split|voiliers de Split|locations de luxe)) partent', r'De nombreux \1 partent'),
+           (r', la plus grande installation(?: de la région)?(?: avec des services complets)?,', ', une marina offrant tous les services,'),
+           (r'\(la plus grande, la plus fréquentée, centrale\)', '(centrale, animée)'), (r'\(la plus grande\)', '(en centre-ville)'),
+           (r'\(la plus grande flotte, services complets\)', '(services complets)'), (r'\(installation principale\)', '(en centre-ville)'),
+           (r'est la plus grande installation de la région', 'est une marina offrant tous les services en centre-ville'),
+           (r'est la principale base de location sans skipper, avec la plus grande flotte et les horaires d\'embarquement/débarquement les plus flexibles',
+            "est une base importante de location sans skipper, avec des horaires d'embarquement/débarquement flexibles"),
+           (r'est la base principale pour', 'est une base importante pour'),
+           (r'concentre les principales opérations de location de la région, située dans la ville', 'est la marina de location du centre-ville')],
+    'it': [(r'La maggior parte (dei (?:charter di lusso|motoryacht a vela di Spalato|catamarani a motore con base a Spalato)) (ha origine|parte)', r'Molti \1 \2'),
+           (r'\(struttura principale\)', '(in centro città)'), (r'\(flotta più grande, servizi completi\)', '(servizi completi)'),
+           (r'\(flotta più grande\)', '(in centro città)'), (r'\(la più grande, più trafficata, centrale\)', '(centrale, animata)'),
+           (r'è la base principale per', 'è una base importante per')],
+    'es': [(r'La mayoría de (los (?:alquileres de catamaranes con base en Split|alquileres de lujo|motorsailers de Split|catamaranes a motor con base en Split|yates de vela de Split)) (parten|se originan)', r'Muchos de \1 \2'),
+           (r', la (?:instalación más grande|mayor instalación de la región con servicios completos),', ', una marina con todos los servicios,'),
+           (r'\(instalación principal\)', '(en el centro)'), (r'\(la flota más grande, servicios completos\)', '(servicios completos)'),
+           (r'\(la flota más grande\)', '(en el centro)'), (r'\(la más grande, concurrida, céntrica\)', '(céntrica, concurrida)'),
+           (r'\(el más grande\)', '(en el centro)'), (r'\(la más grande\)', '(en el centro)'),
+           (r'es la instalación más grande de la región', 'es una marina con todos los servicios en el centro de la ciudad'),
+           (r'es la principal base de alquiler sin tripulación, con la mayor flota y las opciones de entrada/salida más flexibles',
+            'es una base importante de alquiler sin tripulación, con opciones de entrada y salida flexibles'),
+           (r'es la base principal para', 'es una base importante para'),
+           (r'alberga las principales operaciones de alquiler de la región, ubicada dentro de la ciudad', 'es la marina de alquiler del centro de la ciudad')],
+    'pt': [(r'A maioria dos ((?:alugueres de catamarãs com base em Split|alugueres de luxo|motosailers de Split|catamarãs a motor baseados em Split|veleiros de Split)) (parte|origina-se)', r'Muitos \1 \2'),
+           (r', a maior instalação(?: da região com serviços completos)?,', ', uma marina com todos os serviços,'),
+           (r'\(instalação principal\)', '(no centro)'), (r'\(maior frota, serviços completos\)', '(serviços completos)'), (r'\(maior frota\)', '(no centro)'),
+           (r'\(maior, mais movimentada, central\)', '(central, movimentada)'), (r'\(a maior\)', '(no centro)'),
+           (r'é a maior instalação da região', 'é uma marina com todos os serviços no centro da cidade'),
+           (r'é a principal base para aluguer sem skipper, com a maior frota e os horários de check-in/check-out mais flexíveis',
+            'é uma base importante para aluguer sem skipper, com horários de check-in/check-out flexíveis'),
+           (r'é a base principal para', 'é uma base importante para')],
+    'nl': [(r'De meeste ((?:catamaran charters vanuit Split|Split-motorsailers|motorcatamarans die vanuit Split vertrekken|zeiljachten in Split)) (vertrekken|doen)', r'Veel \1 \2'),
+           (r', de grootste faciliteit(?: van de regio met volledige diensten)?,', ', een jachthaven met volledige service,'),
+           (r'\(grootste, drukste, centraal\)', '(centraal, druk)'), (r'\(de grootste\)', '(in het centrum)'), (r'\(grootste\)', '(centrum)'),
+           (r'\(grootste vloot, volledige diensten\)', '(volledige diensten)'), (r'\(grootste vloot\)', '(in het centrum)'),
+           (r'is de grootste faciliteit van de regio', 'is een jachthaven met volledige service in het centrum'),
+           (r'is de belangrijkste bareboat basis, met de grootste vloot en de meest flexibele', 'is een belangrijke bareboatbasis, met flexibele'),
+           (r'is de belangrijkste basis voor', 'is een belangrijke basis voor')],
+    'pl': [(r'Większość ((?:czarterów katamaranów ze Splitu|motorówek żaglowych ze Splitu|katamaranów motorowych stacjonujących w Splicie|jachtów żaglowych ze Splitu)) (wylatuje|wypływa)', r'Wiele \1 wypływa'),
+           (r', największego obiektu(?: w regionie z pełnymi usługami)?,', ', mariny z pełną obsługą,'),
+           (r'\(największa, najbardziej ruchliwa, centralna\)', '(centralna, ruchliwa)'), (r'\(największa\)', '(w centrum)'),
+           (r'\(największa flota, pełne usługi\)', '(pełne usługi)'), (r'\(największa flota\)', '(w centrum)'),
+           (r'to największy obiekt w regionie', 'to marina z pełną obsługą w centrum miasta'),
+           (r'jest główną bazą dla czarterów bez załogi, z największą flotą i najbardziej elastycznymi', 'jest ważną bazą dla czarterów bez załogi, z elastycznymi'),
+           (r'jest główną bazą dla', 'jest ważną bazą dla')],
+    'hr': [(r'\(najveća, najprometnija, centralna\)', '(središnja, prometna)'), (r'\(najveća\)', '(u središtu grada)'),
+           (r'je najveća luka u regiji', 'je marina s punom uslugom u središtu grada'),
+           (r'glavno je polazište za najam bez posade, s najvećom flotom i najfleksibilnijim', 'važno je polazište za najam bez posade, s fleksibilnim'),
+           (r'glavna je baza za', 'važna je baza za'),
+           (r'sidri glavne čarter operacije regije, smještena unutar grada', 'je čarter marina u središtu grada')],
+}
+
+
+def fix_aci(src, ctx):
+    rules = ACI_FIXES.get(ctx.locale)
+    if not rules or 'ACI' not in src:
+        return src
+    head, body, tail = split_body(src)
+
+    def block(tag, attrs, inner):
+        out = []
+        for piece in split_sentences(inner):
+            if re.search(r'ACI\b[^.]{0,20}Split|Split[^.]{0,5}ACI|ACI Split', piece):
+                new = piece
+                for rx, repl in rules:
+                    new = re.sub(rx, repl, new)
+                if new != piece:
+                    ctx.record('compass', plain(piece)[:200], plain(new)[:200])
+                piece = new
+            out.append(piece)
+        return ''.join(out)
+
+    body = edit_blocks(body, block)
+    return head + body + tail
+
+
+# ----------------------------------------------------------------- casing
+
+# Croatian and Polish do not use Title Case in headings ("Zašto je Katamaran
+# Prikladan za Hrvatsku" → "Zašto je katamaran prikladan za Hrvatsku").
+# A capitalised word after the first is lowered only when the same corpus
+# writes it in lower case mid-sentence in at least 80 % of its uses, so names
+# stay ("… za Hrvatsku", "Kvarneru", "Boat4You"). Only H2/H3 headings in
+# which most longer words are capitalised are touched. (Rule of the
+# fix27/web-ui pass, kept here so a corpus run re-applies it.)
+CORPUS_ROOT = []
+_CASING_WORD = re.compile(r"[A-Za-zÀ-žĆČĐŠŽćčđšžŁłŃńŚśŹźŻżĄąĘęÓó]+")
+_CASING_STATS = {}
+
+
+def _casing_stats(locale):
+    if locale not in _CASING_STATS:
+        lower, capmid = {}, {}
+        folder = os.path.join(CORPUS_ROOT[0] if CORPUS_ROOT else os.path.join(REPO, 'public', 'seo-content'), locale)
+        for name in sorted(os.listdir(folder)):
+            if not name.endswith('.html'):
+                continue
+            src = _read(os.path.join(folder, name))
+            for p in re.findall(r'<p[^>]*>(.*?)</p>|<li[^>]*>(.*?)</li>', src, re.S):
+                txt = html.unescape(re.sub('<[^>]+>', ' ', p[0] or p[1]))
+                for sent in re.split(r'(?<=[.!?:])\s+', txt):
+                    for w in _CASING_WORD.findall(sent)[1:]:
+                        if w.islower():
+                            lower[w] = lower.get(w, 0) + 1
+                        elif w[0].isupper() and w[1:].islower():
+                            capmid[w.lower()] = capmid.get(w.lower(), 0) + 1
+        _CASING_STATS[locale] = (lower, capmid)
+    return _CASING_STATS[locale]
+
+
+def fix_casing(src, ctx):
+    if ctx.locale not in ('hr', 'pl'):
+        return src
+    lower, capmid = _casing_stats(ctx.locale)
+    head, body, tail = split_body(src)
+
+    def heading(m):
+        tag, attrs, inner = m.group(1), m.group(2), m.group(3)
+        text = html.unescape(re.sub('<[^>]+>', '', inner))
+        words = _CASING_WORD.findall(text)
+        longw = [w for w in words[1:] if len(w) > 3]
+        if not longw or sum(1 for w in longw if w[0].isupper()) / len(longw) <= 0.5:
+            return m.group(0)
+        first = [True]
+
+        def low(wm):
+            w = wm.group(0)
+            if first[0]:
+                first[0] = False
+                return w
+            if len(w) > 1 and w[0].isupper() and w[1:].islower():
+                lw = w.lower()
+                if lower.get(lw, 0) >= 1 and capmid.get(lw, 0) / (lower.get(lw, 0) + capmid.get(lw, 0)) < 0.2:
+                    return lw
+            if len(w) == 1 and w.isupper() and lower.get(w.lower(), 0) >= 50:
+                return w.lower()
+            return w
+
+        parts = re.split(r'(<[^>]+>)', inner)
+        new_inner = ''.join(p if p.startswith('<') else _CASING_WORD.sub(low, p) for p in parts)
+        if new_inner == inner:
+            return m.group(0)
+        ctx.record('casing', plain(inner), plain(new_inner))
+        return f'<{tag}{attrs}>{new_inner}</{tag}>'
+
+    body = re.sub(r'<(h[23])([^>]*)>(.*?)</\1>', heading, body, flags=re.S)
     return head + body + tail
 
 
@@ -1301,15 +2530,257 @@ UNLINKED_GUIDE = re.compile(
 _PLACE_RX = []
 
 
+_PLACE_WORD = re.compile(r'\b[A-ZČĆŠŽ][a-zà-žčćđšž]{3,}\b')
+
+
 def _place_rx():
+    """Catalogue place-name tokens (capitalised words of 4+ letters)."""
     if not _PLACE_RX:
         toks = set()
         for rows in catalogue().by_name.values():
             for row in rows:
                 if row.get('cc'):
                     toks.update(w for w in re.findall(r'[A-ZČĆŠŽ][a-zà-žčćđšž]{3,}', row['name']) if w not in PLACE_STOP)
-        _PLACE_RX.append(re.compile(r'\b(' + '|'.join(sorted(map(re.escape, toks), key=len, reverse=True)) + r')\b'))
+        _PLACE_RX.append(frozenset(toks))
     return _PLACE_RX[0]
+
+
+def _places_in(text):
+    return {w for w in _PLACE_WORD.findall(text) if w in _place_rx()}
+
+
+# ------------------------------------------------------ independent checks
+# Written separately from the fixers (and broader), so that what a fixer
+# misses still fails --check (26.9.2026 review: checks() reused the fixer
+# regexes and could not see their gaps).
+_DENY_NOT = {
+    'en': r'partner\w*|specialists?|charters?|availability|selection|search|team|network|rentals?|inventory|listings?|experts?|focus|options?|offers?|collection|catalogue|catalog|portfolio|range|expertise|diversity|process|operations|coordinator|directory|search|finder',
+    'de': r'Partner\w*|Spezialist\w*|Charter\w*|Verfügbarkeit|Auswahl|Suche|Team|Netzwerk|Vermietung|Inventar|Angebot\w*|Expert\w*|Fokus|Optionen|Liste\w*|Kollektion|Katalog|Portfolio|Sortiment|Expertise|Vielfalt|Prozess|Verzeichnis|Suchmaschine',
+    'fr': r'partenaires?|spécialistes?|locations?|disponibilités?|sélection|recherche|équipe|réseau|inventaire|listes?|annonces?|experts?|options?|offres?|collection|catalogue|portefeuille|gamme|expertise|diversité|processus|charters|répertoire|moteur|capitaines|skippers',
+    'it': r'partner|specialist\w*|specializzazione|noleggi\w*|charter|disponibilità|selezione|ricerca|team|rete|inventario|annunci|elenchi|esperti|focus|opzioni|offerta|collezione|catalogo|portfolio|gamma|competenza|diversità|processo|directory|esperienza|motore|skipper|gestori|offerte',
+    'es': r'socios?|especialistas?|especialización|alquiler\w*|chárteres|disponibilidad|selección|búsqueda|equipo|red|inventario|listados?|expertos|enfoque|opciones|oferta|colección|catálogo|cartera|gama|experiencia|diversidad|proceso|listas|directorio|buscador|ofertas|patrones|gestores',
+    'pt': r'parceiros?|especialistas?|especialização|alugue\w*|charters?|disponibilidade|seleção|pesquisa|equipa|rede|inventário|listagens?|foco|opções|oferta|coleção|catálogo|portfólio|gama|experiência|processo|FAQ|diretório|motor|ofertas|skippers|gestores',
+    'nl': r'partners?|specialist\w*|specialisatie|charters?|verhuur|beschikbaarheid|selectie|zoek\w*|team|netwerk|inventaris|lijst\w*|experts?|focus|opties|aanbod|makelaars|collectie|catalogus|portfolio|assortiment|expertise|diversiteit|proces|vlootopties|zoekmachine|overzicht',
+    'pl': r'partner\w*|specjali\w*|czarter\w*|dostępnoś\w*|wyb\w*|wyszuk\w*|zesp\w*|sie\w*|katalog\w*|list\w*|ofert\w*|selekcj\w*|proces\w*|koncentracj\w*|opcj\w*|kolekcj\w*|portfolio|asortyment\w*|koordynator\w*|różnorodnoś\w*|katalog\w*|wyszukiwark\w*|skipper\w*',
+    'hr': r'partner\w*|stručnjak\w*|specijalist\w*|najam\w*|najm\w*|charter\w*|dostupnost\w*|izbor\w*|pretrag\w*|tražilic\w*|tim\w*|mrež\w*|ponud\w*|popis\w*|fokus|opcij\w*|brokeri|inventar\w*|katalog\w*|kolekcij\w*|portfelj\w*|proces\w*|koordinator\w*|stručnjac\w*|direktorij\w*|pretraživač\w*|stručnost\w*|selekcij\w*|odabir\w*|flotil\w*|upravitelj\w*',
+}
+
+
+_FUNCTION = r'de|di|da|du|des|del|della|dei|of|van|von|z|ze|od|za|u|w|na|e|et|y|and|und|en|i|oraz|voor|für|pour|per|para|com|con|met|with|in|im|au|a|al|ao|do|dla|s|sa|iz'
+
+
+def _mid_words(loc, n):
+    return r'(?:(?!(?:' + _DENY_NOT[loc] + r'|' + _FUNCTION + r')\b)[\w-]+\s+){0,' + str(n) + r'}?'
+
+
+_BOAT_EN = r'fleets?|catamarans|yachts|vessels|boats|monohulls|motorboats|gulets|sailboats|motorsailers'
+CLAIM_DENY = {
+    'all': [
+        r"Boat4You['’]s\s+(?:[\w-]+\s+)?standards\b|\b(?:[\w-]*[Ss]tandards|normen|normes|estándares|padrões|normas|standardami|standardima)\s+(?:(?!(?:with|on|in|for|at|und|et|e|y|en|i)\b)\w+\s+)?"
+        r"(?:(?:of|von|de|di|van|da|della)\s+)?Boat4You\b(?!\s*[-'’])(?!\s+(?:charter\s+)?(?:partners?|listings?|search|process\w*))|"
+        r"\b(?:gli|degli|agli|negli|dagli|i)\s+standard\s+(?:\w+\s+)?(?:di\s+)?Boat4You\b",
+        r"\bBoat4You\s+(?:\w+\s+)?(?:manages|runs|gestisce|gère|verwaltet|beheert|gestiona|gere|zarządza|obsługuje|dysponuje|upravlja|opereert)\s+"
+        r"(?:(?!(?:selection|selezione|selección|sélection|selectie|seleção|wyborem|charters?|czarter\w*|noleggi\w*|locations?|alquiler\w*|"
+        r"aluguer\w*|verhuur\w*|najm\w*|bookings?|logistics|logistyk\w*|every|each|all|elk|alle)\b)[\w'’-]+\s+){0,4}?"
+        r"(?![\w-]*(?:charter|czarter|verhuur|noleggi|klant|gast))[\w-]*(?:fleets?|[Ff]lott[ae]n?|[Ff]lot[aąeyęo]\w*|vloot|vloten|flotas?|frotas?|boats|yachts|catamarans|vessels|Boote|Yachten|"
+        r"Katamarane|barche|imbarcazioni|catamarani|bateaux|voiliers|barcos|yates|catamaranes|iates|catamarãs|boten|jachten|"
+        r"katamaran\w*|jacht\w*|łodzi\w*|łodzie|brodov\w*|plovil\w*)\b(?!\s+selection)",
+        r"Boat4You\b(?!\s+(?:współpracuje|works\s+with|cooperates|collabora|coopera|werkt\s+samen|surađuje|arbeitet))[^.]{0,80}?(?:gestione della flotta|fleet management|Flottenmanagement|gestion de (?:la )?flotte|gestión de (?:la )?flota|"
+        r"gestão d[ae] frota|vlootbeheer|zarządzani\w+ flot\w+|upravljanj\w+ flot\w+)",
+        r"Boat4You['’]s?\s+(?:own\s+)?(?:(?!(?:partner\w*|inventory|inventaris|listings?|search|network|and|en)\b)[\w-]+\s+){0,2}?(?:" + _BOAT_EN + r")\b",
+        r"\b(?:[Ff]lott[ae]|[Ff]lotas?|[Ff]rotas?|[Ff]lottes?|\w*[Ff]lotten?|\w*[Vv]lo(?:ot|ten)|[Ff]lot[aęyąoiu]\w*)\s+(?:de\s+|di\s+|da\s+|do\s+|van\s+|von\s+|der\s+|des\s+|del\s+)?(?:la\s+|a\s+)?Boat4You\w*",
+        r"(?<!przez )(?<!through )(?<!via )(?<!über )(?<!par )(?<!tramite )(?<!preko )(?<!kroz )\bBoat4You[- ](?:Flotten?|flottes?|fleets?|vloot|vloten|catamarans|katamarans|Katamarane|jachten|zeiljachten|Segelyachten|Yachten|Boote|yachts|boats|flota|frota|flotta)\b",
+    ],
+    'en': [
+        r"\b(?:[Ee]very|[Ee]ach|[Yy]our|[Aa]|typical|[Mm]ost|[Mm]any|[Aa]ll)\s+Boat4You\s+(?:sailing\s+|motor\s+|power\s+|crewed\s+)?(?:yacht|catamaran|boat|vessel|gulet|monohull)s?\b(?!\s+(?:charters?|rentals?|clients?|guests?|customers?|partners?|listings?|owners?))",
+        r"\b[Oo]ur\s+(?!partner)(?:(?!(?:of|for|and|or|to|in|at|with|from|the|a|an|partner\w*|specialists?|team|network|search|selection)\b)[\w-]+\s+){0,3}?(?:" + _BOAT_EN + r")\b"
+        r"(?!\s+(?:search|specialists?|experts?|charters?|listings?|inventory|collection|portal|packages?|page|guide|section|team|brokers?|crews?|skippers?|management|managers?|coordinators?)\b)",
+        r"\b[Ww]e\s+(?:\w+ly\s+)?(?:inspect|maintain|service|repair|own|operate)\s+(?:every|each|all|our|the|a)?\s*(?:[\w-]+\s+){0,2}?(?:vessels?|boats?|yachts?|catamarans?|fleets?)\b",
+        r"\b(?:[Oo]ur|Boat4You['’]s?)\s+maintenance\s+team\b|\bfleet integrity\b",
+        r"Boat4You['’]s\s+(?:[\w-]+\s+){0,2}?operations?\s+(?:cent(?:er|re)|hub|base)\b|Boat4You['’]s\s+(?:[\w-]+\s+){0,2}?operations\s+(?:from|in|at)\b|"
+        r"\bBoat4You['’]s\s+\w+\s+operation\b",
+        r"\bBoat4You\s+(?:\w+ly\s+)?(?:owns|operates|maintains|inspects|services|repairs)\s+(?:(?:its|a|an|the|every|each|all|\d+)\s+)?(?:[\w-]+\s+){0,2}?(?:" + _BOAT_EN + r")\b",
+    ],
+    'de': [
+        r"\b[\w-]*(?:[Yy]achten|[Kk]atamarane|[Bb]oote|Gulets)\s+von\s+Boat4You\b",
+        r"\b[Uu]nser(?:e|er|en|es)?\s+(?:(?!(?:" + _DENY_NOT['de'] + r")\b)(?:[a-zäöüß][\w-]*|\d+)\s+){0,3}?[\w-]*(?:[Ff]lotten?|[Kk]atamarane\w*|[Yy]achten|[Bb]oote\w*|[Ss]chiffe\w*)\b(?!\s+unserer\s+Partner)(?!\s+[a-zäöüß]\w*ende)",
+        r"\b[Ww]ir\s+(?:\w+\s+)?(?:überprüfen|prüfen|inspizieren|warten|pflegen)\s+(?:jedes|jede|jeden|alle|unsere)\s+(?:\w+\s+)?\w*(?:Schiff|Boot|Yacht|Katamaran|Flotte)",
+        r"\bBoat4You\s+(?:\w+\s+)?(?:besitzt|betreibt|wartet|inspiziert|unterhält)\s+(?:(?:eine|die|ihre|seine|alle|jedes|\d+)\s+)?(?:[\w-]+\s+){0,2}?\w*(?:[Ff]lotte|[Kk]atamarane|[Yy]achten|[Bb]oote|[Ss]chiffe)\b",
+    ],
+    'fr': [
+        r"(?<!locations de )(?<!location de )(?<!recherche de )\b(?:catamarans|voiliers|bateaux|yachts|monocoques|navires)(?:\s+(?:à\s+(?:moteur|voile)|monocoques))?\s+de\s+Boat4You\b",
+        r"\b(?:[Nn]otre|[Nn]os)\s+" + _mid_words('fr', 2) + r"(?:flottes?|catamarans|voiliers|yachts|bateaux|navires|vedettes|monocoques)\b(?!\s+de\s+nos\s+partenaires)",
+        r"\b[Nn]ous\s+(?:\w+\s+)?(?:vérifions|inspectons|entretenons|contrôlons)\s+(?:chaque|tous les|toutes les|nos|les)\s+(?:navire|bateau|yacht|catamaran|flotte)",
+    ],
+    'it': [
+        r"(?<!charter di )(?<!noleggio di )(?<!noleggi di )(?<!charter )\b(?:catamarani|barche|yacht|imbarcazioni|velieri|caicchi)(?:\s+a\s+(?:vela|motore))?\s+(?:di\s+)?Boat4You\b(?!\s+(?:offre|propone|è|ha|gestisce|consente|fornisce|garantisce|può|dispone|seleziona|collabora|verifica|organizza|si|vi|ti|Le|mette)\b)",
+        r"\b[Nn]ostra\s+" + _mid_words('it', 2) + r"flott[ae]\b",
+        r"\b[Nn]ostr[ie]\s+" + _mid_words('it', 2) + r"(?:catamarani|yacht|barche|imbarcazioni|velieri|monoscafi|motoscafi)\b(?!\s+dei\s+nostri\s+partner)",
+        r"\b(?:[Vv]erifichiamo|[Ii]spezioniamo|[Mm]anteniamo|[Cc]ontrolliamo)\s+(?:\w+\s+)?(?:ogni|tutte|tutti|le|gli|i)\s+(?:\w+\s+)?(?:imbarcazion|barc|yacht|catamaran|flott)",
+    ],
+    'es': [
+        r"(?<!alquileres de )(?<!alquiler de )(?<!experiencias en )\b(?:catamaranes|yates|veleros|barcos|embarcaciones|goletas|lanchas)(?:\s+(?:de\s+vela|a\s+motor))?\s+de\s+(?:la\s+)?Boat4You\b",
+        r"\b[Nn]uestr[ao]s?\s+" + _mid_words('es', 2) + r"(?:flotas?|catamaranes|yates|veleros|barcos|embarcaciones|monocascos)\b(?!\s+de\s+nuestros\s+socios)",
+        r"\b(?:[Vv]erificamos|[Ii]nspeccionamos|[Mm]antenemos|[Rr]evisamos)\s+(?:\w+\s+)?(?:cada|todas|todos|las|los|nuestr\w+)\s+(?:\w+\s+)?(?:embarcaci|barco|yate|catamar|flota)",
+    ],
+    'pt': [
+        r"(?<!charter de )(?<!aluguer de )(?<!alugueres de )\b(?:catamarãs|iates|veleiros|barcos|embarcações|lanchas)(?:\s+(?:à\s+vela|a\s+motor))?\s+da\s+Boat4You\b",
+        r"\b[Nn]oss[ao]s?\s+" + _mid_words('pt', 2) + r"(?:frotas?|catamarãs|iates|veleiros|barcos|embarcações|monocascos)\b(?!\s+dos\s+nossos\s+parceiros)",
+        r"\b(?:[Vv]erificamos|[Ii]nspecionamos|[Mm]antemos|[Rr]evemos)\s+(?:\w+\s+)?(?:cada|todas|todos|as|os)\s+(?:\w+\s+)?(?:embarca|barco|iate|catamar|frota)",
+    ],
+    'nl': [
+        r"\b(?:\w*jachten|catamarans|\w*boten|schepen|vaartuigen)\s+van\s+Boat4You\b|\b(?:[Ee]en|[Uu]w|[Ee]lk|[Ee]lke|typisch|meeste)\s+Boat4You\s+(?:\w*jacht|\w*jachten|catamarans?|\w*boot|\w*boten|gulets?)\b",
+        r"\b[Oo]nze\s+" + _mid_words('nl', 2) + r"\w*(?:vloot|vloten|catamarans|jachten|boten|schepen|vaartuigen)\b(?!\s+van\s+onze\s+partners)",
+        r"\b[Ww]e\s+(?:\w+\s+)?(?:inspecteren|controleren|onderhouden)\s+(?:elk|elke|alle|onze|de)?\s*\w*(?:schip|schepen|boot|boten|jacht|jachten|vaartuig|catamaran|vloot)",
+    ],
+    'pl': [
+        r"(?<!czarteru )(?<!czarterów )(?<!czarter )\b(?:jachty|jachtów|katamarany|katamaranów|łodzie|jednostki)(?:\s+(?:żaglowe|żaglowych|motorowe|motorowych))?\s+Boat4You\b",
+        r"\b[Nn]asz(?:a|ej|ą|e|ych|ymi|ym)?\s+" + _mid_words('pl', 2) + r"(?:flot[aęyąo]\w*|katamaran[yóa]\w*|jacht[yóa]\w*|łodzie|jednostki)\b(?!\s+naszych\s+partnerów)",
+        r"\b(?:[Ww]eryfikujemy|[Ss]prawdzamy|[Kk]ontrolujemy|[Ss]erwisujemy)\s+(?:\w+\s+)?(?:każd\w+|wszystkie|nasze)\s+(?:statek|statk|jednost|łód|łodz|jacht|katamaran)",
+    ],
+    'hr': [
+        r"(?<![\w.])Boat4You\s+(?:jedrilic\w*|katamaran\w*|brodov\w*|plovil\w*|jaht\w*|gulet\w*)\b|\b(?:jedrilice|katamarani|brodovi|guleti)\s+Boat4You\b",
+        r"\b[Nn]aš\s+vozni\s+park\b",
+        r"\b[Nn]aš(?:a|u|oj|om)?\s+" + _mid_words('hr', 2) + r"flot[aeiu]\w*\b(?!\s+naših\s+partnera)",
+        r"\b[Nn]aš(?:a|ih|im|ima)\s+" + _mid_words('hr', 2) + r"plovil\w*\b(?!\s+naših\s+partnera)",
+        r"\b[Nn]aš(?:e|i|ih|im|ima)\s+" + _mid_words('hr', 2) + r"(?:katamaran[aie]\w*|jaht(?:e|i|ama)|jedrilic(?:e|a|ama)|brodov\w*)\b(?!\s+naših\s+partnera)",
+        r"\b(?:[Pp]rovjeravamo|[Pp]regledavamo|[Oo]državamo)\s+(?:\w+\s+)?(?:svako|svaki|svaku|sva|sve|naša|naše)\s+(?:plovil|brod|jaht|katamaran)",
+    ],
+}
+# A heading whose object (the brand) was removed: "Warum für …", "Dlaczego
+# wybrać do …" — written apart from HEADING_HOLE so a gap in it still shows.
+HEADING_HOLE_CHECK = re.compile(
+    r'^(?:Warum für|Why [Cc]hoose for|Why for|Pourquoi (?:choisir )?pour|Perché (?:scegliere )?per|¿?Por qué (?:elegir )?para|'
+    r'Porqu[eê] (?:escolher )?para|Waarom (?:kiezen )?voor voor|Dlaczego (?:wybrać )?(?:do|na|dla)|Zašto (?:odabrati )?za)\b')
+RAW_VISIBLE = re.compile(r'boat4you\.com/|https?://|\bwww\.[a-z]|">|\bhref=', re.I)
+BRACKET_VISIBLE = re.compile(r'\[[^\]\n]{1,40}\]')
+_YEAR_CLAIM = re.compile(r'\b(?:since|seit|depuis|dal|desde|sinds|od|od roku)\s+((?:19|20)\d\d)\b')
+_FOUNDED_WORD = re.compile(r'(?i)\b(?:founded|established|gegründet|fondée?|fondata|fundad[ao]|opgericht|założon\w*|osnovan\w*)\b')
+_EXPERIENCE_CLAIM = re.compile(r'\b(?:1[4-9]|[2-9]\d)\+?\s+(?:years?|Jahre\w*|ans|anni|años|anos|jaar|lat|godina)\b')
+COMPASS_WRONG = {  # (anchor, other place, wrong direction words, window spans both places)
+    # Trogir lies due west of Split: any "north" near the pair is wrong.
+    'Trogir~Split': (r'Trogir|Traù', r'Split|Spalat', {
+        'en': r'north(?:-?east|wards?|ern|erly|bound)?', 'de': r'nord(?:östlich|wärts|en)?|nördlich\w*|Norden|Nord-\w+',
+        'fr': r'nord(?:-est)?', 'it': r'nord(?:-?est)?|settentrional\w*', 'es': r'nor(?:te|este)', 'pt': r'nor(?:te|deste)',
+        'nl': r'noord(?!west)\w*', 'pl': r'półno(?!cno-zach)\w*', 'hr': r'sjever(?!ozapad)\w*'}, True),
+    # Trogir lies east-south-east of Primošten and Rogoznica.
+    'Trogir~Primošten/Rogoznica': (r'Trogir|Traù', r'Primo[sš]ten|Rogoznic', {
+        'en': r'north(?:ern|wards?|bound)?', 'de': r'nord(?!west)\w*|nördlich\w*|Norden', 'fr': r'nord', 'it': r'nord', 'es': r'norte',
+        'pt': r'norte', 'nl': r'noord(?!west)\w*', 'pl': r'półno(?!cno-zach)\w*', 'hr': r'sjever(?!ozapad)\w*'}, True),
+    # Hvar lies south-east of Trogir ("Hvar, north-west of Trogir").
+    'Hvar~Trogir': (r'Hvar', r'Trogir|Traù', {
+        'en': r'north-?west', 'de': r'nordwest\w*', 'fr': r'nord-ouest', 'it': r'nord-?ovest', 'es': r'noroeste', 'pt': r'noroeste',
+        'nl': r'noordwest\w*', 'pl': r'północno-zachod\w*', 'hr': r'sjeverozapad\w*'}, False),
+}
+ACI_SPLIT_SUPERLATIVE = re.compile(
+    r'ACI\s+(?:Marina\s+)?Split\b[^.]{0,60}?(?:\b(?:largest|biggest|busiest|größte\w*|größten|plus grand\w*|più grande|flotta più grande|más grande|mayor flota|la mayor|maior|grootste|największ\w*|najveć\w*)\b|'
+    r'\b(?:primary|principal\w*|main|wichtigste|principale|główn\w*|glavn\w*|belangrijkste)\s+(?:\w+\s+){0,2}?(?:base|basis|Basis|Bareboat-Basis|bazą|baza|polazište))',
+    re.I)
+LANG_STOPWORDS = {
+    'en': 'the and with your which from this that you will are have their there when where for is of to it be can our',
+    'de': 'der die das und mit ist sie ihr ihre ein eine den dem des nicht auch für von auf zu im wird werden oder sich',
+    'fr': 'le la les et des une un est vous votre vos pour avec dans sur qui que du au aux pas plus sont ce',
+    'it': 'il lo la gli le e di che per con una un è sono della del delle dei nel nella alla al questo più',
+    'es': 'el la los las y de que en con una un es por para su sus del al se más como está son',
+    'pt': 'o a os as e de que em com uma um é para por do da dos das no na ao mais seu sua são',
+    'nl': 'de het een en van in is met voor op dat die zijn u uw te bij naar ook niet of',
+    'pl': 'i w z na do się jest oraz dla że to od po jak przez są lub ich jego',
+    'hr': 'i u je na za se da s od su kao ili koji koja što po iz sa prema biti',
+    'tr': 've bir bu için ile da de olarak daha en çok gibi olan veya ise',
+}
+LANG_STOPWORDS = {k: set(v.split()) for k, v in LANG_STOPWORDS.items()}
+
+
+def language_of(text):
+    words = re.findall(r"[a-zà-žąćęłńóśźżçğışöü]+", text.lower())
+    if len(words) < 100:
+        return None
+    scores = {k: sum(1 for w in words if w in v) / len(words) for k, v in LANG_STOPWORDS.items()}
+    return max(scores, key=scores.get)
+
+
+def _sentences(text):
+    return re.split(r'(?<=[.!?])\s+', text)
+
+
+def independent_checks(body, locale, text):
+    out = []
+    for rx in CLAIM_DENY['all'] + CLAIM_DENY.get(locale, []):
+        for bm in BLOCK.finditer(body):
+            block_text = plain(bm.group(3))
+            for m in re.finditer(rx, block_text):
+                out.append(('claim', block_text[max(0, m.start() - 60): m.end() + 60]))
+    for bm in re.finditer(r'<(p|li)\b[^>]*>([\s\S]*?)</\1\s*>', body):
+        block_text = plain(bm.group(2))
+        if re.search(r',$|,\s*(?:and|und|et|e|y|en|i|oraz)$', block_text):
+            out.append(('dangling-end', block_text[-120:]))
+    for hm in re.finditer(r'<h[1-4]\b[^>]*>([\s\S]*?)</h[1-4]\s*>', body):
+        heading = plain(hm.group(1)).strip()
+        if HEADING_HOLE_CHECK.match(heading):
+            out.append(('heading-hole', heading[:120]))
+    for m in RAW_VISIBLE.finditer(text):
+        out.append(('raw-url', text[max(0, m.start() - 60): m.end() + 60]))
+    for m in BRACKET_VISIBLE.finditer(text):
+        out.append(('placeholder', text[max(0, m.start() - 60): m.end() + 60]))
+    for bm in BLOCK.finditer(body):
+        if bm.group(1) == 'td':
+            continue
+        block_text = plain(bm.group(3))
+        starts = [(0, block_text)] + [(sm.end(), block_text[sm.end():]) for sm in re.finditer(r'[.!?…]["”»’)]*\s+(?=\S)', block_text)
+                                      if not SUBJECT_ABBR.search(block_text[max(0, sm.start() - 40): sm.start()])]
+        for pos, rest in starts:
+            word = re.match(r"[^\s]*", rest).group(0)
+            if rest[:1].isalpha() and rest[:1].islower() and word.rstrip('.,;:') not in SUBJECT_SKIP_WORDS and not word.lower().startswith('boat4you'):
+                out.append(('lower-start', block_text[max(0, pos - 40): pos + 80]))
+    # Sentences per block: a heading never runs into the next paragraph.
+    sentences = [x for bm in BLOCK.finditer(body) for x in _sentences(plain(bm.group(3)))]
+    for sentence in sentences:
+        company = COMPANY_VOICE.search(sentence)
+        ym = _YEAR_CLAIM.search(sentence)
+        if ym and company and ym.group(1) != '2013' and (1990 <= int(ym.group(1)) < 2013) and (
+                _FOUNDED_WORD.search(sentence) or re.search(r'Boat4You|[Cc]harter\w*|noleggi\w*|czarter\w*|iznajm\w*|najm\w*', sentence)):
+            out.append(('founded', sentence[:200]))
+        if re.search(r'Boat4You\W+(?:\w+\W+){0,6}?' + _EXPERIENCE_CLAIM.pattern, sentence) and EXPERIENCE_WORD.search(sentence):
+            out.append(('founded', sentence[:200]))
+        for key, (a, b, dirs, span) in COMPASS_WRONG.items():
+            others = [m for m in re.finditer(b, sentence)] if dirs.get(locale) else []
+            if not others:
+                continue
+            wrong = re.compile(r'(?<![-\w])(?:' + dirs[locale] + r')(?![-\w])', re.I)
+            for am in re.finditer(a, sentence):
+                lo, hi = am.start() - 35, am.end() + 45
+                for bm in others if span else ():
+                    if abs(bm.start() - am.start()) <= 90:  # "north from Split, visiting Trogir"
+                        lo, hi = min(lo, bm.start() - 35), max(hi, bm.end() + 45)
+                if wrong.search(sentence[max(0, lo): hi]):
+                    out.append(('compass', f'{key}: {sentence[:200]}'))
+                    break
+        if ACI_SPLIT_SUPERLATIVE.search(sentence):
+            out.append(('aci-split', sentence[:200]))
+    lang = language_of(text)
+    if lang and lang != locale and not (locale in ('es', 'pt') and lang in ('es', 'pt')):
+        out.append(('wrong-language', f'text reads as {lang}'))
+    return out
+
+
+# Retranslated from the corrected EN text (26.9.2026): the translation may not
+# carry a number the EN page does not have (a stale "40 km" or "since 2008").
+RETRANSLATED = {
+    'italian-adriatic-sailing-area-yacht-charter-and-boat-rental.html', 'catamaran-charter-olbia.html',
+    'balearic-islands-sailing-yacht-charter.html', 'veneto-motor-yacht-charter.html',
+    'veneto-sailing-area-yacht-charter-and-boat-rental.html', 'epirus-sailing-area-yacht-charter-and-boat-rental.html',
+}
+_NUMBER = re.compile(r'(?<![\w.,])\d+(?:[.,]\d+)?(?![\w])')
+
+
+def _numbers(text):
+    """Numbers in a text, thousands separators removed ("1,800", "1.800",
+    "1 800" → 1800) and decimal commas read as points."""
+    prev = None
+    while prev != text:
+        prev = text
+        text = re.sub(r'(?<![\d.,])(\d{1,3})[\s\u00a0\u202f.,](\d{3})(?![\d])', r'\1\2', text)
+    return {n.replace(',', '.') for n in _NUMBER.findall(text)}
 
 
 def checks(src, locale, name, en_src=None):
@@ -1397,9 +2868,8 @@ def checks(src, locale, name, en_src=None):
             if ratio > 0.05:
                 out.append(('english', f'{ratio:.1%} English function words'))
         if en_src:
-            rx = _place_rx()
-            mine = set(rx.findall(text))
-            theirs = set(rx.findall(plain(split_body(en_src)[1])))
+            mine = _places_in(text)
+            theirs = _places_in(plain(split_body(en_src)[1]))
             extra = sorted(mine - theirs)
             if len(extra) >= 5:
                 out.append(('foreign-places', ', '.join(extra[:10])))
@@ -1412,6 +2882,11 @@ def checks(src, locale, name, en_src=None):
     heads = [plain(h).lower() for h in re.findall(r'<h[23]\b[^>]*>([\s\S]*?)</h[23]\s*>', body)]
     for h in {h for h in heads if heads.count(h) > 1 and h}:
         out.append(('dup-heading', h[:120]))
+    out.extend(independent_checks(body, locale, text))
+    if locale != 'en' and en_src and name in RETRANSLATED:
+        extra = sorted(_numbers(text) - _numbers(plain(split_body(en_src)[1])))
+        if extra:
+            out.append(('numbers-parity', 'numbers not in the EN page: ' + ', '.join(extra[:10])))
     return out
 
 
@@ -1668,9 +3143,22 @@ HREF_EDITS = [
     ('piso-livadi-port-paros-sailing-area-yacht-charter-and-boat-rental.html', '&did=l-1005&boatTypes=CATAMARAN', '&did=l-1005'),
 ]
 HEAD_INLAND = re.compile(r'(?:,\s*Canal du Midi(?=[,.\s])|Canal du Midi,\s*)')
+# Words the machine translation split in two: HR "ski pere" = "skipere".
+SPLIT_WORDS = {
+    'hr': [(re.compile(r'(?<![\wčćšžđČĆŠŽĐ])([Ss])ki per(eima|eom|a|e|om|ima|i|u|ska|sku|sko|ski|skom|skoj)?\b'),
+            lambda m: m.group(1) + 'kiper' + {'eima': 'ima', 'eom': 'om'}.get(m.group(2) or '', m.group(2) or ''))],
+}
 
 
 def fix_edits(src, ctx):
+    for rx, repl in SPLIT_WORDS.get(ctx.locale, []):
+        head, body, tail = split_body(src)
+
+        def join(m, repl=repl):
+            new = repl(m)
+            ctx.record('edits', m.group(0), new)
+            return new
+        src = head + rx.sub(join, body) + tail
     for locale, name, old, new in EDITS:
         if locale != ctx.locale or name != ctx.name:
             continue
@@ -1697,3 +3185,57 @@ def fix_edits(src, ctx):
         ctx.record('edits', 'Canal du Midi (title/meta)', '(removed)')
         head = new_head
     return head + body + tail
+
+
+# ------------------------------------------------------------ messages
+
+# The same owner rules for the UI strings (messages/<locale>/*.json): no fleet
+# ownership, no charter-company names, sea charter only, founding year 2013,
+# no internal notes or placeholders (synthesis 6.4, Stage A).
+MESSAGE_PLACEHOLDER = re.compile(r"\bTODO\b|\bFIXME\b|Mario rule|\{' '\}|\[(?:Subject|Company Name|Boat4You|Brand)[^\]]*\]|(?i:lorem ipsum)")
+_MESSAGE_TYPE_LABEL = re.compile(r'HOUSE_BOAT\s*\{[^}]*\}')
+
+
+def message_checks(repo=REPO):
+    out = []
+    root = os.path.join(repo, 'messages')
+    for locale in LOCALES:
+        folder = os.path.join(root, locale)
+        if not os.path.isdir(folder):
+            continue
+        for name in sorted(os.listdir(folder)):
+            if not name.endswith('.json'):
+                continue
+            data = json.loads(_read(os.path.join(folder, name)))
+            stack = [((), data)]
+            while stack:
+                path, node = stack.pop()
+                if isinstance(node, dict):
+                    stack.extend((path + (k,), v) for k, v in node.items())
+                    continue
+                if isinstance(node, list):
+                    stack.extend((path + (str(i),), v) for i, v in enumerate(node))
+                    continue
+                if not isinstance(node, str):
+                    continue
+                key = f"{locale}/{name}:{'.'.join(path)}"
+                if re.search(r'house_?boat', path[-1] if path else '', re.I):
+                    continue  # boat-type label for the HOUSE_BOAT enum, not a promotion
+                text = plain(_MESSAGE_TYPE_LABEL.sub('', node))
+                for rx in CLAIM_DENY['all'] + CLAIM_DENY.get(locale, []):
+                    m = re.search(rx, text)
+                    if m:
+                        out.append(('msg-claim', f'{key}: {text[max(0, m.start() - 40): m.end() + 40]}'))
+                if OPERATOR.search(text):
+                    out.append(('msg-operator', f'{key}: {text[:120]}'))
+                if river_hit(text, locale):
+                    out.append(('msg-inland', f'{key}: {text[:120]}'))
+                if MESSAGE_PLACEHOLDER.search(node):
+                    out.append(('msg-placeholder', f'{key}: {node[:120]}'))
+                for sentence in _sentences(text):
+                    ym = _YEAR_CLAIM.search(sentence)
+                    if ym and 1990 <= int(ym.group(1)) < 2013 and COMPANY_VOICE.search(sentence):
+                        out.append(('msg-founded', f'{key}: {sentence[:160]}'))
+                    if re.search(r'Boat4You\W+(?:\w+\W+){0,6}?' + _EXPERIENCE_CLAIM.pattern, sentence) and EXPERIENCE_WORD.search(sentence):
+                        out.append(('msg-founded', f'{key}: {sentence[:160]}'))
+    return out
