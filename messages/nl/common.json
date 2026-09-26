@@ -643,5 +643,6 @@
   "closeGallery": "Galerij sluiten",
   "goBack": "Terug",
   "openFilters": "Filters openen",
-  "editSearch": "Zoekopdracht wijzigen"
+  "editSearch": "Zoekopdracht wijzigen",
+  "photoAlt": "{label} — foto {n}"
 }

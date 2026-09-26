@@ -643,5 +643,6 @@
   "closeGallery": "Galerie schließen",
   "goBack": "Zurück",
   "openFilters": "Filter öffnen",
-  "editSearch": "Suche bearbeiten"
+  "editSearch": "Suche bearbeiten",
+  "photoAlt": "{label} — Foto {n}"
 }

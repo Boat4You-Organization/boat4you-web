@@ -655,5 +655,6 @@
   "closeGallery": "Zatvori galeriju",
   "goBack": "Natrag",
   "openFilters": "Otvori filtre",
-  "editSearch": "Uredi pretragu"
+  "editSearch": "Uredi pretragu",
+  "photoAlt": "{label} — fotografija {n}"
 }

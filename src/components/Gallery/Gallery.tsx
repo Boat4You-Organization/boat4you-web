@@ -42,7 +42,8 @@ const Gallery = ({ yacht, images, showShareAndFavorite = false, maxDisplayedImag
       ? yacht.manufacturerName
       : undefined;
   const yachtLabel = [manufacturerPrefix, yacht?.modelName, yacht?.name].filter(Boolean).join(' ');
-  const yachtPhotoLabel = (index: number) => `${yachtLabel || 'Yacht'} — photo ${index + 1}`;
+  const yachtPhotoLabel = (index: number): string =>
+    t('photoAlt' as never, { label: yachtLabel || 'Yacht', n: String(index + 1) } as never);
 
   const yachtImages = [...(images || yacht?.yachtImages || [])].sort((a, b) => {
     if (a.mainImage !== b.mainImage) return a.mainImage ? -1 : 1;
