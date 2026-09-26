@@ -2,8 +2,8 @@
   "meta": {
     "indexTitle": "Alquiler de barcos por modelo: {models, number} modelos populares",
     "indexDescription": "Compara los {models, number} modelos de veleros y catamaranes con más unidades en alquiler en Boat4You: características, bases y precios semanales habituales de cada uno.",
-    "brandTitle": "Alquiler de {brand}: {models, number} modelos, {count, number} barcos",
-    "brandDescription": "Alquila un {brand}: {count, number} barcos en {models, number} modelos en Boat4You. Compara características, bases y precios semanales y reserva directamente.",
+    "brandTitle": "Alquiler de {brand}: {count, number} barcos, {models, number} modelos populares",
+    "brandDescription": "Alquila un {brand}: {count, number} barcos en Boat4You, con {models, number} modelos populares comparados por tamaño, bases y precio semanal habitual. Reserva directamente.",
     "modelTitle": "Alquiler de {model}: {count, number} barcos, bases y precios",
     "modelDescription": "Compara {count, number} barcos {model} en alquiler: {cabins} camarotes, año de construcción {years}, una semana de alquiler suele costar {p25}–{p75}. Destinos: {countries}. Reserva directa en Boat4You.",
     "modelDescriptionNoPrice": "Compara {count, number} barcos {model} en alquiler: {cabins} camarotes, año de construcción {years}. Destinos: {countries}. Reserva directa en Boat4You."
@@ -21,8 +21,23 @@
   },
   "brand": {
     "h1": "Alquiler de barcos {brand}",
-    "lede": "En Boat4You puedes alquilar {count, plural, one {# barco {brand}} other {# barcos {brand}}} de {models, number} modelos. Elige un modelo para ver sus características, bases y precios semanales habituales.",
-    "modelsHeading": "Modelos {brand} en alquiler"
+    "lede": "En Boat4You hay {count, plural, one {# barco {brand}} other {# barcos {brand}}} en alquiler. {models, plural, one {# modelo popular tiene} other {# modelos populares tienen}} su propia página con datos técnicos, bases y precios semanales habituales.",
+    "modelsHeading": "Modelos {brand} en alquiler",
+    "compareHeading": "Comparativa de modelos {brand}",
+    "colModel": "Modelo",
+    "colBoats": "Barcos",
+    "colLength": "Eslora",
+    "colCabins": "Camarotes",
+    "colGuests": "Personas",
+    "colPrice": "Semana de alquiler habitual",
+    "whereHeading": "Dónde tienen su base los modelos {brand}",
+    "whereNote": "Barcos de los modelos de arriba, por país.",
+    "faqCountQ": "¿Cuántos barcos {brand} puedo alquilar en Boat4You?",
+    "faqCountA": "En Boat4You hay {count, plural, one {# barco {brand}} other {# barcos {brand}}} en alquiler. Los modelos más habituales tienen su propia página: {models}.",
+    "faqPriceQ": "¿Cuánto cuesta una semana de alquiler de un {brand}?",
+    "faqPriceA": "En los modelos {brand} de arriba, la mitad de los barcos cuesta entre {low} y {high} por semana de alquiler, según el modelo y la semana; el {cheapest} es el más asequible ({cheapestLow} – {cheapestHigh}). El importe cubre el alquiler del barco; patrón, extras obligatorios y fianza van aparte.",
+    "faqWhereQ": "¿Dónde puedo alquilar un {brand}?",
+    "faqWhereA": "Los modelos {brand} de arriba tienen su base en estos países: {countries}; la mayoría de los barcos están en {top} ({topCount, plural, one {# barco} other {# barcos}})."
   },
   "model": {
     "h1": "Alquiler de {model}",
@@ -50,7 +65,21 @@
     "showAll": "Ver todos los barcos {model} en el buscador",
     "fromPerWeek": "desde {price} por semana",
     "blogHeading": "De nuestro blog",
-    "otherModels": "Otros modelos de {brand}"
+    "otherModels": "Otros modelos de {brand}",
+    "faqPriceQ": "¿Cuánto cuesta alquilar un {model}?",
+    "faqPriceA": "La mitad de los barcos {model} publicados cuesta entre {p25} y {p75} por semana de alquiler ({n, plural, one {# barco} other {# barcos}} con precio). El importe cubre el alquiler del barco; patrón, extras obligatorios y fianza van aparte.",
+    "faqWhereQ": "¿Dónde puedo alquilar un {model}?",
+    "faqWhereA": "Los barcos {model} publicados tienen su base en estos países: {countries}.",
+    "faqWhereBases": "Las bases más grandes son {bases}.",
+    "faqLayoutQ": "¿Cuántos camarotes y personas tiene un {model}?",
+    "faqLayoutA": "Los barcos {model} publicados tienen {cabins} camarotes y admiten {guests} personas.",
+    "faqLayoutCommon": "La distribución más habitual tiene {berths, plural, one {# litera} other {# literas}} y {wc, plural, one {# baño} other {# baños}}.",
+    "faqYearsQ": "¿Qué antigüedad tienen los barcos {model}?",
+    "faqYearsA": "Los barcos {model} publicados se construyeron entre {from} y {to}.",
+    "faqYearA": "Todos los barcos {model} publicados se construyeron en {year}."
   },
-  "boatLink": "Todos los barcos {model} ({count, number})"
+  "boatLink": "Todos los barcos {model} ({count, number})",
+  "faqHeading": "Preguntas frecuentes",
+  "faqCancelQ": "¿Puedo cancelar el alquiler de un {name}?",
+  "faqCancelA": "Sí. Toda reserva se puede cancelar gratis en las 72 horas siguientes al momento en que se hace; después se aplica la política de cancelación que figura en la página del barco."
 }

@@ -2,8 +2,8 @@
   "meta": {
     "indexTitle": "Najam plovila po modelu: {models, plural, one {# popularan model} few {# popularna modela} other {# popularnih modela}}",
     "indexDescription": "Usporedite najpopularnije modele jedrilica i katamarana za najam na Boat4You: tehničke podatke, baze i uobičajene tjedne cijene za svaki model.",
-    "brandTitle": "Najam {brand}: {models, plural, one {# model} few {# modela} other {# modela}}, {count, plural, one {# brod} few {# broda} other {# brodova}}",
-    "brandDescription": "Unajmite {brand} na Boat4You: {count, plural, one {# brod} few {# broda} other {# brodova}} u {models, plural, one {# modelu} other {# modela}}. Usporedite tehničke podatke, baze i uobičajene tjedne cijene te rezervirajte izravno.",
+    "brandTitle": "Najam {brand}: {count, plural, one {# brod} few {# broda} other {# brodova}}, {models, plural, one {# popularan model} few {# popularna modela} other {# popularnih modela}}",
+    "brandDescription": "Unajmite {brand} na Boat4You: {count, plural, one {# brod} few {# broda} other {# brodova}}, uz usporedbu {models, plural, one {# popularnog modela} other {# popularnih modela}} po veličini, bazama i uobičajenoj tjednoj cijeni. Rezervirajte izravno.",
     "modelTitle": "Najam {model}: {count, plural, one {# brod} few {# broda} other {# brodova}}, baze i cijene",
     "modelDescription": "Usporedite {count, plural, one {# brod} few {# broda} other {# brodova}} {model} za najam: kabine {cabins}, godina gradnje {years}, tjedan najma obično {p25}–{p75}. Destinacije: {countries}. Rezervirajte izravno na Boat4You.",
     "modelDescriptionNoPrice": "Usporedite {count, plural, one {# brod} few {# broda} other {# brodova}} {model} za najam: kabine {cabins}, godina gradnje {years}. Destinacije: {countries}. Rezervirajte izravno na Boat4You."
@@ -21,8 +21,23 @@
   },
   "brand": {
     "h1": "Najam plovila {brand}",
-    "lede": "Na Boat4You možete unajmiti {count, plural, one {# brod} few {# broda} other {# brodova}} {brand} u {models, plural, one {# modelu} other {# modela}}. Odaberite model za tehničke podatke, baze i uobičajene tjedne cijene.",
-    "modelsHeading": "Modeli {brand} za najam"
+    "lede": "Na Boat4You za najam {count, plural, one {je dostupan # brod {brand}} few {su dostupna # broda {brand}} other {je dostupno # brodova {brand}}}. {models, plural, one {# popularan model ima} few {# popularna modela imaju} other {# popularnih modela ima}} vlastitu stranicu s tehničkim podacima, bazama i uobičajenim tjednim cijenama.",
+    "modelsHeading": "Modeli {brand} za najam",
+    "compareHeading": "Usporedba modela {brand}",
+    "colModel": "Model",
+    "colBoats": "Brodovi",
+    "colLength": "Duljina",
+    "colCabins": "Kabine",
+    "colGuests": "Osobe",
+    "colPrice": "Uobičajeni tjedan najma",
+    "whereHeading": "Gdje su baze modela {brand}",
+    "whereNote": "Brodovi gore navedenih modela, po zemljama.",
+    "faqCountQ": "Koliko brodova {brand} mogu unajmiti na Boat4You?",
+    "faqCountA": "Na Boat4You za najam {count, plural, one {je dostupan # brod {brand}} few {su dostupna # broda {brand}} other {je dostupno # brodova {brand}}}. Najčešći modeli imaju vlastitu stranicu: {models}.",
+    "faqPriceQ": "Koliko stoji tjedan najma broda {brand}?",
+    "faqPriceA": "Kod gore navedenih modela {brand} polovica brodova stoji između {low} i {high} za tjedan najma, ovisno o modelu i tjednu; najpovoljniji je {cheapest} ({cheapestLow} – {cheapestHigh}). Iznos se odnosi na najam broda; skiper, obvezni dodaci i polog plaćaju se dodatno.",
+    "faqWhereQ": "Gdje mogu unajmiti {brand}?",
+    "faqWhereA": "Gore navedeni modeli {brand} imaju baze u sljedećim zemljama: {countries}; najviše brodova je u zemlji {top} ({topCount, plural, one {# brod} few {# broda} other {# brodova}})."
   },
   "model": {
     "h1": "Najam {model}",
@@ -50,7 +65,21 @@
     "showAll": "Pogledajte sve brodove {model} u tražilici",
     "fromPerWeek": "od {price} tjedno",
     "blogHeading": "S našeg bloga",
-    "otherModels": "Ostali modeli {brand}"
+    "otherModels": "Ostali modeli {brand}",
+    "faqPriceQ": "Koliko stoji najam broda {model}?",
+    "faqPriceA": "Polovica ponuđenih brodova {model} stoji između {p25} i {p75} za tjedan najma ({n, plural, one {# brod} few {# broda} other {# brodova}} s cijenom). Iznos se odnosi na najam broda; skiper, obvezni dodaci i polog plaćaju se dodatno.",
+    "faqWhereQ": "Gdje mogu unajmiti {model}?",
+    "faqWhereA": "Ponuđeni brodovi {model} imaju baze u sljedećim zemljama: {countries}.",
+    "faqWhereBases": "Najveće baze su {bases}.",
+    "faqLayoutQ": "Koliko kabina i osoba ima {model}?",
+    "faqLayoutA": "Broj kabina na ponuđenim brodovima {model}: {cabins}; broj osoba: {guests}.",
+    "faqLayoutCommon": "Najčešći raspored ima {berths, plural, one {# ležaj} few {# ležaja} other {# ležajeva}} i {wc, plural, one {# toalet} few {# toaleta} other {# toaleta}}.",
+    "faqYearsQ": "Koliko su stari brodovi {model}?",
+    "faqYearsA": "Ponuđeni brodovi {model} izgrađeni su između {from}. i {to}. godine.",
+    "faqYearA": "Svi ponuđeni brodovi {model} izgrađeni su {year}. godine."
   },
-  "boatLink": "Svi brodovi {model} ({count, number})"
+  "boatLink": "Svi brodovi {model} ({count, number})",
+  "faqHeading": "Često postavljana pitanja",
+  "faqCancelQ": "Mogu li otkazati najam broda {name}?",
+  "faqCancelA": "Da. Svaku rezervaciju možete besplatno otkazati u roku od 72 sata od trenutka rezervacije; nakon toga vrijede uvjeti otkazivanja navedeni na stranici broda."
 }

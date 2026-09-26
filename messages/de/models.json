@@ -2,8 +2,8 @@
   "meta": {
     "indexTitle": "Yachtcharter nach Modell: {models, number} beliebte Modelle",
     "indexDescription": "Vergleichen Sie die {models, number} Yacht- und Katamaranmodelle mit den meisten Charterbooten bei Boat4You – mit technischen Daten, Stützpunkten und typischen Wochenpreisen für jedes Modell.",
-    "brandTitle": "{brand} chartern: {models, number} Modelle, {count, number} Boote",
-    "brandDescription": "{brand} chartern: {count, number} Boote in {models, number} Modellen bei Boat4You. Vergleichen Sie technische Daten, Stützpunkte und typische Wochenpreise und buchen Sie direkt.",
+    "brandTitle": "{brand} chartern: {count, number} Boote, {models, number} beliebte Modelle",
+    "brandDescription": "{brand} chartern: {count, number} Boote bei Boat4You, {models, number} beliebte Modelle im Vergleich nach Größe, Stützpunkten und typischem Wochenpreis. Direkt buchen.",
     "modelTitle": "{model} chartern: {count, number} Boote, Stützpunkte und Preise",
     "modelDescription": "{count, number} Boote vom Typ {model} im Vergleich: {cabins} Kabinen, Baujahr {years}, eine Charterwoche meist {p25}–{p75}. Reviere: {countries}. Direkt bei Boat4You buchen.",
     "modelDescriptionNoPrice": "{count, number} Boote vom Typ {model} im Vergleich: {cabins} Kabinen, Baujahr {years}. Reviere: {countries}. Direkt bei Boat4You buchen."
@@ -21,8 +21,23 @@
   },
   "brand": {
     "h1": "{brand} Yachtcharter",
-    "lede": "Bei Boat4You können Sie {count, plural, one {# Boot} other {# Boote}} von {brand} in {models, number} Modellen chartern. Wählen Sie ein Modell für technische Daten, Stützpunkte und typische Wochenpreise.",
-    "modelsHeading": "{brand}-Modelle zum Chartern"
+    "lede": "Bei Boat4You {count, plural, one {steht # Boot von {brand}} other {stehen # Boote von {brand}}} zum Chartern bereit. {models, plural, one {# beliebtes Modell hat} other {# beliebte Modelle haben}} eine eigene Seite mit technischen Daten, Stützpunkten und typischen Wochenpreisen.",
+    "modelsHeading": "{brand}-Modelle zum Chartern",
+    "compareHeading": "{brand}-Modelle im Vergleich",
+    "colModel": "Modell",
+    "colBoats": "Boote",
+    "colLength": "Länge",
+    "colCabins": "Kabinen",
+    "colGuests": "Gäste",
+    "colPrice": "Typische Charterwoche",
+    "whereHeading": "Wo die {brand}-Modelle liegen",
+    "whereNote": "Boote der oben aufgeführten Modelle, nach Land.",
+    "faqCountQ": "Wie viele Boote von {brand} kann ich bei Boat4You chartern?",
+    "faqCountA": "Bei Boat4You {count, plural, one {steht # Boot von {brand}} other {stehen # Boote von {brand}}} zum Chartern bereit. Die häufigsten Modelle haben eine eigene Seite: {models}.",
+    "faqPriceQ": "Was kostet eine Charterwoche mit einer {brand}?",
+    "faqPriceA": "Über die oben aufgeführten {brand}-Modelle kostet die Hälfte der Boote je nach Modell und Woche zwischen {low} und {high} pro Charterwoche; am günstigsten ist die {cheapest} ({cheapestLow} – {cheapestHigh}). Das gilt für die Bootsmiete; Skipper, Pflichtextras und Kaution kommen hinzu.",
+    "faqWhereQ": "Wo kann ich eine {brand} chartern?",
+    "faqWhereA": "Die oben aufgeführten {brand}-Modelle liegen in folgenden Ländern: {countries}; die meisten Boote liegen in {top} ({topCount, plural, one {# Boot} other {# Boote}})."
   },
   "model": {
     "h1": "{model} chartern",
@@ -50,7 +65,21 @@
     "showAll": "Alle Boote vom Typ {model} in der Suche ansehen",
     "fromPerWeek": "ab {price} pro Woche",
     "blogHeading": "Aus unserem Blog",
-    "otherModels": "Weitere {brand}-Modelle"
+    "otherModels": "Weitere {brand}-Modelle",
+    "faqPriceQ": "Was kostet es, eine {model} zu chartern?",
+    "faqPriceA": "Die Hälfte der gelisteten Boote vom Typ {model} kostet zwischen {p25} und {p75} pro Charterwoche ({n, plural, one {# Boot} other {# Boote}} mit Preis). Das gilt für die Bootsmiete; Skipper, Pflichtextras und Kaution kommen hinzu.",
+    "faqWhereQ": "Wo kann ich eine {model} chartern?",
+    "faqWhereA": "Die gelisteten Boote vom Typ {model} liegen in folgenden Ländern: {countries}.",
+    "faqWhereBases": "Die größten Stützpunkte sind {bases}.",
+    "faqLayoutQ": "Wie viele Kabinen und Gäste hat eine {model}?",
+    "faqLayoutA": "Die gelisteten Boote vom Typ {model} haben {cabins} Kabinen und bieten Platz für {guests} Gäste.",
+    "faqLayoutCommon": "Die häufigste Aufteilung hat {berths, plural, one {# Koje} other {# Kojen}} und {wc, plural, one {# Toilette} other {# Toiletten}}.",
+    "faqYearsQ": "Wie alt sind die Boote vom Typ {model}?",
+    "faqYearsA": "Die gelisteten Boote vom Typ {model} wurden zwischen {from} und {to} gebaut.",
+    "faqYearA": "Alle gelisteten Boote vom Typ {model} wurden {year} gebaut."
   },
-  "boatLink": "Alle Boote vom Typ {model} ({count, number})"
+  "boatLink": "Alle Boote vom Typ {model} ({count, number})",
+  "faqHeading": "Häufig gestellte Fragen",
+  "faqCancelQ": "Kann ich einen Charter mit einer {name} stornieren?",
+  "faqCancelA": "Ja. Jede Buchung lässt sich innerhalb von 72 Stunden ab dem Zeitpunkt der Buchung kostenlos stornieren; danach gelten die Stornobedingungen auf der Seite des Bootes."
 }

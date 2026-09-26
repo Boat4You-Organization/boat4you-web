@@ -25,6 +25,7 @@ import { computeModelFleetStats } from '@/utils/static/modelFleetStats';
 import { toTitleCase } from '@/utils/static/toTitleCase';
 import { isModelSlug, manufacturerPath, yachtsIndexPath } from '@/utils/static/yachtModelKey';
 import ModelPageView, { WhereRow } from '@/views/Models/ModelPageView';
+import { ModelsFaqEntry, modelsFaqSchema } from '@/views/Models/ModelsFaq';
 import { Crumb } from '@/views/Models/ModelsBreadcrumb';
 import { COUNTRY_LABEL_KEY, formatRange } from '@/views/Models/modelsText';
 
@@ -157,6 +158,74 @@ const ModelPage = async ({ params }: ModelPageProps) => {
     findModelBlogPost(model.displayName),
   ]);
 
+  // Data-driven FAQ (audit B51): price band, bases, layout, build years and
+  // the booking rule — from the same figures the page shows above.
+  const list = (items: string[]) => new Intl.ListFormat(locale, { type: 'conjunction' }).format(items);
+  const num = (n: number) => n.toLocaleString(locale);
+  const eur = (n: number) => formatPriceWithCurrency({ clientPriceEur: Math.round(n), locale });
+  const faq: ModelsFaqEntry[] = [];
+  const name = model.displayName;
+
+  if (stats.weeklyPrice) {
+    faq.push({
+      question: t('model.faqPriceQ', { model: name }),
+      answer: t('model.faqPriceA', {
+        model: name,
+        p25: eur(stats.weeklyPrice.p25),
+        p75: eur(stats.weeklyPrice.p75),
+        n: stats.weeklyPrice.n,
+      }),
+    });
+  }
+
+  if (where.length) {
+    const topBases = where
+      .flatMap(row => row.bases)
+      .sort((a, b) => b.count - a.count)
+      .slice(0, 3)
+      .map(base => `${base.name} (${num(base.count)})`);
+
+    faq.push({
+      question: t('model.faqWhereQ', { model: name }),
+      answer: [
+        t('model.faqWhereA', { model: name, countries: list(where.map(row => `${row.label} (${num(row.count)})`)) }),
+        topBases.length ? t('model.faqWhereBases', { bases: list(topBases) }) : null,
+      ]
+        .filter(Boolean)
+        .join(' '),
+    });
+  }
+
+  if (stats.cabins && stats.guests) {
+    faq.push({
+      question: t('model.faqLayoutQ', { model: name }),
+      answer: [
+        t('model.faqLayoutA', {
+          model: name,
+          cabins: formatRange(stats.cabins) ?? '',
+          guests: formatRange(stats.guests) ?? '',
+        }),
+        layout.berths && layout.wc ? t('model.faqLayoutCommon', { berths: layout.berths, wc: layout.wc }) : null,
+      ]
+        .filter(Boolean)
+        .join(' '),
+    });
+  }
+
+  if (stats.buildYear) {
+    faq.push({
+      question: t('model.faqYearsQ', { model: name }),
+      answer:
+        stats.buildYear.min === stats.buildYear.max
+          ? t('model.faqYearA', { model: name, year: String(stats.buildYear.min) })
+          : t('model.faqYearsA', { model: name, from: String(stats.buildYear.min), to: String(stats.buildYear.max) }),
+    });
+  }
+
+  faq.push({ question: t('faqCancelQ', { name }), answer: t('faqCancelA') });
+
+  const faqLd = modelsFaqSchema(faq);
+
   const boats = fleet.boats.slice(0, GRID_SIZE);
   const brandHref = brand?.hasHub ? manufacturerPath(brand.brandSlug) : null;
   const breadcrumb: Crumb[] = [
@@ -199,6 +268,7 @@ const ModelPage = async ({ params }: ModelPageProps) => {
     <Layout>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(breadcrumbLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(itemListLd) }} />
+      {faqLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(faqLd) }} />}
       <ModelPageView
         locale={locale}
         model={model}
@@ -211,6 +281,7 @@ const ModelPage = async ({ params }: ModelPageProps) => {
         blogPost={blogPost}
         showAllHref={showAllHref}
         breadcrumb={breadcrumb}
+        faq={faq}
       />
     </Layout>
   );

@@ -76,6 +76,11 @@ export interface CatalogBrand {
   brandSlug: string;
   /** Model pages of this brand, biggest first. */
   models: CatalogModel[];
+  /** Every active boat of the brand in the promoted countries (distribution
+   *  facets over all its manufacturer rows) — the brand total the hub and
+   *  the home brand tile state. The model pages cover only its biggest
+   *  models (Lagoon: 5 models, 1,156 boats of ~1,800). */
+  total: number;
   /** A brand hub exists only with at least two model pages (else it would
    *  repeat its one model page). */
   hasHub: boolean;
@@ -215,6 +220,7 @@ const buildCatalog = async (): Promise<ModelCatalog> => {
       brandSlug: model.brandSlug,
       models: [],
       hasHub: false,
+      total: brandTotals.get(model.brandSlug) ?? 0,
     };
 
     brand.models.push(model);
@@ -321,7 +327,7 @@ export const findModelForYacht = async (
 
 export interface BrandHubLink {
   path: string;
-  /** Boats of the brand's model pages (the catalogue fleet the hub lists). */
+  /** The brand's boats in the promoted countries (the number the hub states). */
   fleet: number;
 }
 
@@ -334,7 +340,13 @@ export const brandHubsWithin = async (budgetMs: number): Promise<Record<string, 
       .filter(brand => brand.hasHub)
       .map(brand => [
         brand.brandSlug,
-        { path: manufacturerPath(brand.brandSlug), fleet: brand.models.reduce((sum, m) => sum + m.fleet, 0) },
+        {
+          path: manufacturerPath(brand.brandSlug),
+          fleet: Math.max(
+            brand.total,
+            brand.models.reduce((sum, m) => sum + m.fleet, 0)
+          ),
+        },
       ])
   );
 };
