@@ -108,7 +108,7 @@ const AppliedFilterChips = ({ params, setMultipleParams, t }: AppliedFilterChips
     if (params.minCabins === params.maxCabins && params.minCabins > 0 && params.minCabins <= 5) {
       cabinsLabel = tf('cabinsChip', { count: params.minCabins });
     } else if (params.minCabins >= 6 && !params.maxCabins) {
-      cabinsLabel = tf('cabinsChipPlus', { count: 6 });
+      cabinsLabel = tf('cabinsChipPlus', { count: '6' });
     }
 
     if (cabinsLabel) {

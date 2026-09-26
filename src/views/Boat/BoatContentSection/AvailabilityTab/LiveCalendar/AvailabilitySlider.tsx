@@ -390,7 +390,7 @@ const AvailabilityDesktop = ({ weeks, selId, onSelect }: BranchProps) => {
         >
           {chunkLabel}
           <Box component="span" sx={{ ml: '10px', color: T.faint, fontSize: '11px', letterSpacing: '0.8px' }}>
-            {t('pageOf', { current: chunkIdx + 1, total: totalChunks })}
+            {t('pageOf', { current: String(chunkIdx + 1), total: String(totalChunks) })}
           </Box>
         </Typography>
         <ArrowBtn
@@ -623,7 +623,7 @@ const AvailabilityMobile = ({ weeks, selId, onSelect }: MobileProps) => {
               component="span"
               sx={{ display: 'block', mt: '2px', color: T.faint, fontSize: '10px', letterSpacing: '0.8px' }}
             >
-              {t('pageOf', { current: chunkIdx + 1, total: totalChunks })}
+              {t('pageOf', { current: String(chunkIdx + 1), total: String(totalChunks) })}
             </Box>
           </Box>
           <ArrowBtn
