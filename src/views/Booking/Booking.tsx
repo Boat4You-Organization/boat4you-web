@@ -30,6 +30,7 @@ import CancellationCard from './CancellationCard';
 import OverviewCard from './OverviewCard';
 import PaymentPoliciesCard from './PaymentPoliciesCard';
 import PriceBreakdownCard from './PriceBreakdownCard';
+import { TrustStats } from './TrustBadges';
 
 interface BookingProps {
   isAdmin: boolean;
@@ -41,9 +42,11 @@ interface BookingProps {
    *  - /payment            → 1 (UnifiedPaymentStep)
    */
   initialStep?: number;
+  /** Live catalogue counts for the checkout trust bar (server-read by the page). */
+  trustStats?: TrustStats | null;
 }
 
-const Booking = ({ isAdmin, user, initialStep = 0 }: BookingProps) => {
+const Booking = ({ isAdmin, user, initialStep = 0, trustStats = null }: BookingProps) => {
   const { activeStep } = useBookingStore();
   const [reservationData, setReservationData] = useState<ReservationData | null>(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -189,6 +192,7 @@ const Booking = ({ isAdmin, user, initialStep = 0 }: BookingProps) => {
             isLoadingPhases={isLoadingPreviewPhases}
             appliedVoucher={appliedVoucher}
             onVoucherChange={setAppliedVoucher}
+            trustStats={trustStats}
           />
         );
       case 1:

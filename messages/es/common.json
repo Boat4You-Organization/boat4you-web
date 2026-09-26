@@ -62,8 +62,6 @@
   "backToHome": "Volver al inicio",
   "statBoats": "Barcos en todo el mundo",
   "statMarinas": "Marinas",
-  "statSailors": "Navegantes satisfechos",
-  "statRating": "Valoración media",
   "assuranceSSL": "Pago cifrado con SSL",
   "assurance247": "Atención humana 24/7",
   "assuranceVerified": "Socios de charter verificados",
@@ -639,5 +637,7 @@
   "voucherFirstPaymentNote": "Incluye tu cupón de {amount}, descontado de este primer pago.",
   "bookingFailedTitle": "No hemos podido completar tu reserva",
   "bookingFailedExternal": "Tu reserva no se ha completado y no se te ha cobrado nada. Nuestro equipo ya está avisado y se pondrá en contacto contigo en breve — también puedes enviarnos tu solicitud ahora mismo y organizaremos la reserva por correo electrónico.",
-  "bookingFailedReference": "Referencia: {code}"
+  "bookingFailedReference": "Referencia: {code}",
+  "tripadvisorReviews": "{count, plural, one {# opinión} other {# opiniones}} en TripAdvisor",
+  "tripadvisorAria": "Valoración de {rating} sobre 5 según {count, plural, one {# opinión} other {# opiniones}} en TripAdvisor"
 }

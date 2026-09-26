@@ -2,27 +2,48 @@ import { Container, Grid, Stack, Typography } from '@mui/material';
 import { useTranslations } from 'next-intl';
 
 import CounterNumber from '@/components/CounterNumber/CounterNumber';
-import { stats } from '@/config/stats.config';
+import { TRIPADVISOR_RATING, TRIPADVISOR_REVIEW_COUNT } from '@/config/tripadvisor';
 import colors from '@/styles/themes/colors';
 
 const Br = () => <br />;
 
 interface StatsSectionProps {
-  /** Live catalogue counts (siteStats.ts `display`); the config values stay for the rest. */
-  catalogue?: { boats: number; countries: number } | null;
+  /** Live catalogue counts (siteStats.ts `display`). */
+  catalogue?: { boats: number; countries: number; marinas: number } | null;
+}
+
+interface StatItem {
+  key: string;
+  target: number;
+  suffix: string;
+  decimals?: number;
+  label: string;
 }
 
 const StatsSection = ({ catalogue }: StatsSectionProps) => {
   const t = useTranslations('about.stats');
-  // Fleet and destination counters come from the one count source (the
-  // backend catalogue), not from the static config (23,982 / 100 there).
-  const liveValue = (description: string): number | null => {
-    if (!catalogue) return null;
-
-    if (description === 'premiumYachtsFleet') return catalogue.boats;
-
-    return description === 'worldwideDestinations' ? catalogue.countries : null;
-  };
+  const tCommon = useTranslations('common');
+  // Every counter has a source (audit B32/B34, 26.9.2026): the catalogue
+  // counts from the one count source (siteStats.ts — home hero, checkout,
+  // llms.txt read the same) and the TripAdvisor rating the footer links. The
+  // static config ("23,982 yachts", "100 destinations", "10,000+ happy
+  // customers", "500+ partners", "50+ years") had none and is gone.
+  const items: StatItem[] = [
+    ...(catalogue
+      ? [
+          { key: 'boats', target: catalogue.boats, suffix: '+', label: t('premiumYachtsFleet') },
+          { key: 'countries', target: catalogue.countries, suffix: '', label: t('worldwideDestinations') },
+          { key: 'marinas', target: catalogue.marinas, suffix: '+', label: t('marinas') },
+        ]
+      : []),
+    {
+      key: 'tripadvisor',
+      target: Number(TRIPADVISOR_RATING),
+      suffix: '★',
+      decimals: 1,
+      label: tCommon('tripadvisorReviews', { count: Number(TRIPADVISOR_REVIEW_COUNT) }),
+    },
+  ];
 
   return (
     <Container component="section" maxWidth="xl" disableGutters>
@@ -46,11 +67,11 @@ const StatsSection = ({ catalogue }: StatsSectionProps) => {
           </Grid>
           <Grid size={{ xs: 12, lg: 6 }}>
             <Grid container columnSpacing={{ xs: 2, lg: 16 }} rowSpacing={8}>
-              {stats.map(({ title, description }, index) => (
-                <Grid size={{ xs: 6 }} key={description}>
-                  <CounterNumber target={liveValue(description) ?? title} index={index} />
+              {items.map(item => (
+                <Grid size={{ xs: 6 }} key={item.key}>
+                  <CounterNumber target={item.target} suffix={item.suffix} decimals={item.decimals} />
                   <Typography variant="body1" color={colors.black500}>
-                    {t(description)}
+                    {item.label}
                   </Typography>
                 </Grid>
               ))}

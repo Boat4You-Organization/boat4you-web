@@ -35,7 +35,7 @@ import { useYachtStore } from '@/valtio/yacht/yacht.store';
 import BoatInquiryModal, { InquiryContact } from '@/views/Boat/BoatContentSection/BoatInquiryModal';
 import BookingModal from '@/views/Booking/BookingModal';
 import BookingReviewModal from '@/views/Booking/BookingReviewModal';
-import TrustBadges from '@/views/Booking/TrustBadges';
+import TrustBadges, { TrustStats } from '@/views/Booking/TrustBadges';
 
 import styles from './DetailsStep.module.scss';
 
@@ -51,6 +51,8 @@ interface DetailsStepProps {
   /** Loyalty voucher — lifted to Booking so the sidebar shows the discount too. */
   appliedVoucher?: AppliedVoucher | null;
   onVoucherChange?: (voucher: AppliedVoucher | null) => void;
+  /** Live catalogue counts for the trust bar (null → the bar shows no counts). */
+  trustStats?: TrustStats | null;
 }
 
 interface BookingContact {
@@ -101,6 +103,7 @@ const DetailsStep = ({
   isLoadingPhases = false,
   appliedVoucher = null,
   onVoucherChange,
+  trustStats = null,
 }: DetailsStepProps) => {
   const { name, model, locationFrom } = reservationData;
   const [state, createReservationAction, createReservationPending] = useActionState(createReservation, undefined);
@@ -613,7 +616,7 @@ const DetailsStep = ({
             </Stack>
           </Stack>
         </Form>
-        <TrustBadges />
+        <TrustBadges stats={trustStats} />
       </Box>
     </>
   );

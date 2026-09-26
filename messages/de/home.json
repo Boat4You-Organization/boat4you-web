@@ -4,8 +4,8 @@
     "ctaTitle": "einem Klick.",
     "description": "Chartern Sie Ihre perfekte Yacht mit nur wenigen Klicks. Einfach, schnell und stressfrei — Ihr Traumsegelabenteuer beginnt hier.",
     "support": "Erstklassiger Kundenservice",
-    "yachtsCount": "{count} Yachten",
-    "marinasCount": "{count} Marinas"
+    "yachtsCount": "{count, plural, one {# Yacht} other {# Yachten}}",
+    "marinasCount": "{count, plural, one {# Marina} other {# Marinas}}"
   },
   "generalSearchBar": {
     "whereAreYouGoing": "Wohin reisen Sie?",
@@ -27,7 +27,6 @@
   "destinationsSection": {
     "theWorldIs": "Beste Yachtcharter",
     "yours": "Reiseziele",
-    "yachts": "Yachten",
     "destinations": {
       "bahamas": "Bahamas",
       "caribbean": "Karibik",
@@ -61,7 +60,8 @@
       "grenada": "Grenada",
       "splitRegion": "Region Split",
       "ionianRegion": "Ionische Region"
-    }
+    },
+    "yachtsCount": "{count, plural, one {# Yacht} other {# Yachten}}"
   },
   "whyChooseUsSection": {
     "whyChoose": "Warum uns als Ihr <strong>professioneller Charteranbieter</strong> wählen",
@@ -88,7 +88,6 @@
     "getToKnow": "Wir haben das Boot, das Sie wollen, ",
     "ourFleet": "egal welcher Typ es ist",
     "boatSelection": "Die beste Auswahl an Booten online zu den besten Preisen",
-    "boat": "Boot",
     "fleet": {
       "catamarans": "Katamarane",
       "gulets": "Gulets",
@@ -102,7 +101,8 @@
       "miniCruisers": "Mini-Cruiser",
       "trimarans": "Trimarane",
       "rubberBoats": "Schlauchboote"
-    }
+    },
+    "boatsCount": "{count, plural, one {# Boot} other {# Boote}}"
   },
   "chooseFromFiveHundredLocations": "Bootsverleih & Yachtcharter weltweit zu den besten Preisen",
   "riskFreeBooking": {

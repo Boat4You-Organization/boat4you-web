@@ -1,4 +1,5 @@
 import { CharterType, YachtModel } from '@/models/yacht.model';
+import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
 import { toTitleCase } from '@/utils/static/toTitleCase';
 
 /**
@@ -31,10 +32,14 @@ export const buildYachtFaq = (yacht: YachtModel, t: TranslateFn, locale: string)
   const entries: YachtFaqEntry[] = [];
   const v = (salt: number, count = 3) => yachtVariant(yacht.id, salt, count);
 
-  if (yacht.maxPersons && yacht.cabins) {
+  // Same guest figure as the description (DetailsTab): max persons, else
+  // berths — maxPersons is null on ~44 % of partner boats (audit B24).
+  const guests = [yacht.maxPersons, yacht.berths].find(n => typeof n === 'number' && n > 0) ?? null;
+
+  if (guests && yacht.cabins && yacht.cabins > 0) {
     entries.push({
       question: t('faqSleepsQ', { name }),
-      answer: t(`faqSleepsA${v(6)}`, { name, maxPersons: yacht.maxPersons, cabins: yacht.cabins }),
+      answer: t(`faqSleepsA${v(6)}`, { name, maxPersons: guests, cabins: yacht.cabins }),
     });
   }
 
@@ -77,7 +82,10 @@ export const buildYachtFaq = (yacht: YachtModel, t: TranslateFn, locale: string)
 
     entries.push({
       question: t('faqPriceQ', { name }),
-      answer: t(`faqPriceA${v(9)}`, { name, price: minPrice.toLocaleString('en-US') }),
+      // Page-locale amount with its currency sign ("4,976 €" / "4.976 €"),
+      // the site's price format — the template used to glue "€" to an
+      // en-US number on every locale.
+      answer: t(`faqPriceA${v(9)}`, { name, price: formatPriceWithCurrency({ clientPriceEur: minPrice, locale }) }),
     });
   }
 

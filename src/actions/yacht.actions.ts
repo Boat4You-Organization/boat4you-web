@@ -6,7 +6,7 @@ import { ErrorModel } from '@/models/error.model';
 import { InquiriesModel } from '@/models/inquiries.model';
 import { Currency } from '@/models/user.model';
 import { PriceCalcDto, YachtOfferModel } from '@/models/yacht-offer.model';
-import { YachtAvailability, YachtFleet, YachtModel } from '@/models/yacht.model';
+import { VesselType, YachtAvailability, YachtFleet, YachtModel } from '@/models/yacht.model';
 import { PayloadResponse } from '@/types/response.type';
 import { authFetch } from '@/utils/static/authFetch';
 import { getBoatImageBaseUrl } from '@/utils/static/imageUtils';
@@ -178,18 +178,38 @@ export async function getSingleYachtStandardOffers(
 }
 
 export async function getYachtFleet(): Promise<YachtFleet[]> {
+  // One count per page (audit B12, 26.9.2026): each card names what the
+  // /search?boatTypes=X page it links lists, so the counts are the facets of
+  // that very catalogue — `/public/yachts/distribution` byVesselType, the
+  // request (and Data Cache entry) the home brand tiles already read. The
+  // old `/public/catalogue/type-count` also counted boats the catalogue does
+  // not list: "4,498 catamarans" linked a page with 4,122, and the cards
+  // summed to 13,126 under a hero total of 12,098.
   try {
-    // Home OurFleetSection — counts shift daily as partner sync adjusts the
-    // catalogue, but per-request hits stack onto a backend cold path that
-    // dominates TTFB on PSI cold runs. 60s SWR keeps the numbers fresh and
-    // the home cacheable.
-    const response = await fetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/catalogue/type-count`, {
-      next: { revalidate: 60 },
+    const response = await fetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/yachts/distribution`, {
+      next: { revalidate: 3600 },
     });
 
-    return await response.json();
+    if (!response.ok) throw new Error(`distribution ${response.status}`);
+
+    const { byVesselType } = (await response.json()) as { byVesselType?: Record<string, number> };
+
+    return Object.entries(byVesselType ?? {})
+      .filter(([, count]) => count > 0)
+      .map(([vesselType, yachtCount]) => ({ vesselType: vesselType as VesselType, yachtCount }));
   } catch {
-    return [];
+    // Without the facets the cards still link their pages, just without a
+    // number (OurFleetCard hides a 0) — never a count from another source.
+    try {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/catalogue/type-count`, {
+        next: { revalidate: 3600 },
+      });
+      const types = (await response.json()) as YachtFleet[];
+
+      return (Array.isArray(types) ? types : []).map(({ vesselType }) => ({ vesselType, yachtCount: 0 }));
+    } catch {
+      return [];
+    }
   }
 }
 

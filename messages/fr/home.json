@@ -4,8 +4,8 @@
     "ctaTitle": "un seul clic.",
     "description": "Louez votre yacht parfait en quelques clics seulement. Simple, rapide et sans stress — votre aventure de navigation de rêve commence ici.",
     "support": "Service client excellent",
-    "yachtsCount": "{count} yachts",
-    "marinasCount": "{count} marinas"
+    "yachtsCount": "{count, plural, one {# yacht} other {# yachts}}",
+    "marinasCount": "{count, plural, one {# marina} other {# marinas}}"
   },
   "generalSearchBar": {
     "whereAreYouGoing": "Où allez-vous ?",
@@ -27,7 +27,6 @@
   "destinationsSection": {
     "theWorldIs": "Meilleures destinations de",
     "yours": "location de yachts",
-    "yachts": "yachts",
     "destinations": {
       "bahamas": "Bahamas",
       "caribbean": "Caraïbes",
@@ -61,7 +60,8 @@
       "grenada": "Grenade",
       "splitRegion": "Région de Split",
       "ionianRegion": "Région Ionienne"
-    }
+    },
+    "yachtsCount": "{count, plural, one {# yacht} other {# yachts}}"
   },
   "whyChooseUsSection": {
     "whyChoose": "Pourquoi nous choisir comme votre <strong>fournisseur de charter professionnel</strong>",
@@ -88,7 +88,6 @@
     "getToKnow": "Nous avons le bateau que vous voulez, ",
     "ourFleet": "peu importe le type",
     "boatSelection": "La meilleure sélection de bateaux en ligne aux meilleurs prix",
-    "boat": "bateau",
     "fleet": {
       "catamarans": "Catamarans",
       "gulets": "Goélettes",
@@ -102,7 +101,8 @@
       "miniCruisers": "Mini-croiseurs",
       "trimarans": "Trimaran",
       "rubberBoats": "Bateau pneumatique"
-    }
+    },
+    "boatsCount": "{count, plural, one {# bateau} other {# bateaux}}"
   },
   "chooseFromFiveHundredLocations": "Location de bateaux et de yachts dans le monde entier aux meilleurs prix",
   "riskFreeBooking": {

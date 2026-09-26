@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-use-before-define */
 import { Suspense } from 'react';
 
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 import GeneralSearchBarRoot from '@/components/GeneralSearchBarRoot';
 import { TRIPADVISOR_RATING, TRIPADVISOR_REVIEW_COUNT, TRIPADVISOR_URL } from '@/config/tripadvisor';
@@ -22,12 +22,17 @@ interface HeroSectionProps {
 // the LCP text paints from static HTML with zero JS attached.
 const HeroSection = ({ stats }: HeroSectionProps) => {
   const t = useTranslations('home');
+  const tCommon = useTranslations('common');
+  const locale = useLocale();
+  const reviews = Number(TRIPADVISOR_REVIEW_COUNT);
+  const rating = new Intl.NumberFormat(locale, { minimumFractionDigits: 1, maximumFractionDigits: 1 }).format(
+    Number(TRIPADVISOR_RATING)
+  );
 
   // Show the trust line only when both numbers came back non-zero —
   // a partial signal ("0 yachts · 680 marinas") looks broken and erodes
   // trust faster than no signal at all.
   const showStats = !!stats && stats.yachts > 0 && stats.marinas > 0;
-  const fmt = (n: number) => n.toLocaleString('en-US');
 
   return (
     <>
@@ -39,8 +44,8 @@ const HeroSection = ({ stats }: HeroSectionProps) => {
           {showStats && (
             <div className={styles.stats}>
               <TrustPill label={t('hero.support')} />
-              <TrustPill label={t('hero.yachtsCount', { count: fmt(stats!.yachts) })} />
-              <TrustPill label={t('hero.marinasCount', { count: fmt(stats!.marinas) })} />
+              <TrustPill label={t('hero.yachtsCount', { count: stats!.yachts })} />
+              <TrustPill label={t('hero.marinasCount', { count: stats!.marinas })} />
             </div>
           )}
           {/* TripAdvisor review rating — plain markup (no MUI) so the LCP hero
@@ -50,13 +55,13 @@ const HeroSection = ({ stats }: HeroSectionProps) => {
             href={TRIPADVISOR_URL}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label={`Rated ${TRIPADVISOR_RATING} out of 5 from ${TRIPADVISOR_REVIEW_COUNT} reviews on TripAdvisor`}
+            aria-label={tCommon('tripadvisorAria', { rating, count: reviews })}
           >
             <span className={styles.taStars} aria-hidden>
               ★★★★★
             </span>
-            <span className={styles.taScore}>{TRIPADVISOR_RATING}</span>
-            <span className={styles.taCount}>· {TRIPADVISOR_REVIEW_COUNT} reviews on TripAdvisor</span>
+            <span className={styles.taScore}>{rating}</span>
+            <span className={styles.taCount}>· {tCommon('tripadvisorReviews', { count: reviews })}</span>
           </a>
           <p className={styles.description}>{t('hero.description')}</p>
         </div>

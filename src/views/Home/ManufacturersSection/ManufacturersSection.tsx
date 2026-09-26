@@ -44,7 +44,7 @@ const ManufacturersSection = ({ manufacturers }: ManufacturersSectionProps) => {
           const body = (
             <>
               <span className={styles.name}>{m.name}</span>
-              <span className={styles.count}>{t('hero.yachtsCount', { count: m.count.toLocaleString('en-US') })}</span>
+              <span className={styles.count}>{t('hero.yachtsCount', { count: m.count })}</span>
             </>
           );
 

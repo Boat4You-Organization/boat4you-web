@@ -62,8 +62,6 @@
   "backToHome": "Retour à l'accueil",
   "statBoats": "Bateaux dans le monde",
   "statMarinas": "Marinas",
-  "statSailors": "Navigateurs satisfaits",
-  "statRating": "Note moyenne",
   "assuranceSSL": "Paiement chiffré SSL",
   "assurance247": "Assistance humaine 24h/24, 7j/7",
   "assuranceVerified": "Partenaires de charter vérifiés",
@@ -639,5 +637,7 @@
   "voucherFirstPaymentNote": "Comprend votre bon de {amount}, déduit de ce premier versement.",
   "bookingFailedTitle": "Nous n'avons pas pu finaliser votre réservation",
   "bookingFailedExternal": "Votre réservation n'a pas abouti et aucun montant n'a été débité. Notre équipe a été prévenue et vous contactera sous peu — vous pouvez aussi nous envoyer votre demande dès maintenant et nous organiserons la réservation par e-mail.",
-  "bookingFailedReference": "Référence : {code}"
+  "bookingFailedReference": "Référence : {code}",
+  "tripadvisorReviews": "{count, plural, one {# avis} other {# avis}} sur TripAdvisor",
+  "tripadvisorAria": "Noté {rating} sur 5 d'après {count, plural, one {# avis} other {# avis}} sur TripAdvisor"
 }

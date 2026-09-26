@@ -62,8 +62,6 @@
   "backToHome": "Zurück zur Startseite",
   "statBoats": "Boote weltweit",
   "statMarinas": "Marinas",
-  "statSailors": "Zufriedene Segler",
-  "statRating": "Durchschnittliche Bewertung",
   "assuranceSSL": "SSL-verschlüsselte Bezahlung",
   "assurance247": "24/7 menschlicher Support",
   "assuranceVerified": "Verifizierte Charterpartner",
@@ -639,5 +637,7 @@
   "voucherFirstPaymentNote": "Enthält Ihren Gutschein über {amount}, der von dieser ersten Zahlung abgezogen wird.",
   "bookingFailedTitle": "Wir konnten Ihre Buchung nicht abschließen",
   "bookingFailedExternal": "Ihre Buchung wurde nicht abgeschlossen und es wurde nichts abgebucht. Unser Team ist bereits informiert und meldet sich in Kürze bei Ihnen — Sie können uns Ihre Anfrage auch sofort senden, dann organisieren wir die Buchung per E-Mail.",
-  "bookingFailedReference": "Referenz: {code}"
+  "bookingFailedReference": "Referenz: {code}",
+  "tripadvisorReviews": "{count, plural, one {# Bewertung} other {# Bewertungen}} auf TripAdvisor",
+  "tripadvisorAria": "Bewertet mit {rating} von 5 aus {count, plural, one {# Bewertung} other {# Bewertungen}} auf TripAdvisor"
 }

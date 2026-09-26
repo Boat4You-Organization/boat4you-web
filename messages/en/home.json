@@ -4,8 +4,8 @@
     "ctaTitle": "one click.",
     "description": "Charter your perfect yacht in just a few clicks. Easy, fast, and stress-free — your dream sailing adventure starts here.",
     "support": "Excellent customer support",
-    "yachtsCount": "{count} yachts",
-    "marinasCount": "{count} marinas"
+    "yachtsCount": "{count, plural, one {# yacht} other {# yachts}}",
+    "marinasCount": "{count, plural, one {# marina} other {# marinas}}"
   },
   "generalSearchBar": {
     "whereAreYouGoing": "Where are you going?",
@@ -27,7 +27,6 @@
   "destinationsSection": {
     "theWorldIs": "Best yacht charter",
     "yours": "destinations",
-    "yachts": "yachts",
     "destinations": {
       "bahamas": "Bahamas",
       "caribbean": "Caribbean",
@@ -61,7 +60,8 @@
       "grenada": "Grenada",
       "splitRegion": "Split Region",
       "ionianRegion": "Ionian Region"
-    }
+    },
+    "yachtsCount": "{count, plural, one {# yacht} other {# yachts}}"
   },
   "whyChooseUsSection": {
     "whyChoose": "Why choose us as your <strong>professional charter provider</strong>",
@@ -88,7 +88,6 @@
     "getToKnow": "We have the boat you want, ",
     "ourFleet": "no matter what type it is",
     "boatSelection": "The best selection of boats online at the best prices",
-    "boat": "boat",
     "fleet": {
       "catamarans": "Catamarans",
       "gulets": "Gulets",
@@ -102,7 +101,8 @@
       "miniCruisers": "Mini Cruisers",
       "trimarans": "Trimaran",
       "rubberBoats": "Rubber Boat"
-    }
+    },
+    "boatsCount": "{count, plural, one {# boat} other {# boats}}"
   },
   "chooseFromFiveHundredLocations": "Boat rental & yacht charter around the world at the best prices",
   "riskFreeBooking": {

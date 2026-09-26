@@ -1,7 +1,10 @@
 import { getSiteStats } from '@/utils/server/siteStats';
 
-// Same window as the count helper — the numbers move with the catalogue.
-export const revalidate = 21600;
+// The counts themselves are cached once for every surface (siteStats.ts,
+// six hours); this route only re-reads that shared entry. It used to keep its
+// own six-hour snapshot on top, so llms.txt could lag the pages by a whole
+// stats cycle ("54 countries" here while the site said 53, audit B34).
+export const revalidate = 60;
 
 const numberFormat = new Intl.NumberFormat('en-US');
 

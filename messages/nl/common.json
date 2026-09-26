@@ -62,8 +62,6 @@
   "backToHome": "Terug naar home",
   "statBoats": "Boten wereldwijd",
   "statMarinas": "Jachthavens",
-  "statSailors": "Tevreden zeilers",
-  "statRating": "Gemiddelde beoordeling",
   "assuranceSSL": "SSL-versleutelde checkout",
   "assurance247": "24/7 menselijke ondersteuning",
   "assuranceVerified": "Geverifieerde charterpartners",
@@ -639,5 +637,7 @@
   "voucherFirstPaymentNote": "Inclusief je voucher van {amount}, verrekend met deze eerste betaling.",
   "bookingFailedTitle": "We konden je boeking niet voltooien",
   "bookingFailedExternal": "Je boeking is niet voltooid en er is niets afgeschreven. Ons team is op de hoogte en neemt snel contact met je op — je kunt ons je aanvraag ook meteen sturen, dan regelen we de boeking per e-mail.",
-  "bookingFailedReference": "Referentie: {code}"
+  "bookingFailedReference": "Referentie: {code}",
+  "tripadvisorReviews": "{count, plural, one {# review} other {# reviews}} op TripAdvisor",
+  "tripadvisorAria": "Beoordeeld met {rating} van 5 op basis van {count, plural, one {# review} other {# reviews}} op TripAdvisor"
 }

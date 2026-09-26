@@ -62,8 +62,6 @@
   "backToHome": "Powrót do strony głównej",
   "statBoats": "Łodzi na całym świecie",
   "statMarinas": "Marin",
-  "statSailors": "Zadowolonych żeglarzy",
-  "statRating": "Średnia ocena",
   "assuranceSSL": "Płatność szyfrowana SSL",
   "assurance247": "Wsparcie 24/7 prowadzone przez ludzi",
   "assuranceVerified": "Zweryfikowani partnerzy czarterowi",
@@ -639,5 +637,7 @@
   "voucherFirstPaymentNote": "Uwzględnia Twój bon o wartości {amount}, odliczony od tej pierwszej płatności.",
   "bookingFailedTitle": "Nie udało się dokończyć Twojej rezerwacji",
   "bookingFailedExternal": "Rezerwacja nie została dokończona i nie pobraliśmy żadnej płatności. Nasz zespół został powiadomiony i wkrótce się z Tobą skontaktuje — możesz też od razu wysłać nam zapytanie, a zajmiemy się rezerwacją mailowo.",
-  "bookingFailedReference": "Numer referencyjny: {code}"
+  "bookingFailedReference": "Numer referencyjny: {code}",
+  "tripadvisorReviews": "{count, plural, one {# opinia} few {# opinie} many {# opinii} other {# opinii}} w serwisie TripAdvisor",
+  "tripadvisorAria": "Ocena {rating} na 5 na podstawie {count, plural, one {# opinii} few {# opinii} many {# opinii} other {# opinii}} w serwisie TripAdvisor"
 }
