@@ -329,6 +329,12 @@ export interface YachtModel
   defaultCheckout: string;
   charterType: CharterType[];
   inquireOnly: boolean;
+  /**
+   * Set only on a second listing of a boat another channel already lists
+   * (backend yacht_listing_twin, V9_69; audit B05/B17): the slug of the copy
+   * the listings and the sitemap show — this page's canonical target.
+   */
+  listingCanonicalSlug?: string | null;
 }
 
 export interface YachtModelLocalStorage extends Pick<YachtModel, 'id' | 'name' | 'slug' | 'location' | 'model'> {

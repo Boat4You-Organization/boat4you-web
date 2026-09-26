@@ -69,6 +69,19 @@ const yachtShareImageUrl = (yacht: YachtModel): string | null => {
 };
 
 /**
+ * The boat's canonical path. A second listing of a boat another channel
+ * already lists (two partner systems, or an owner and a broker agency) names
+ * the copy the listings and the sitemap show: the backend sets
+ * `listingCanonicalSlug` on it (yacht_listing_twin, V9_69). Before, both
+ * copies were 200, index and self-canonical under one title
+ * (`…-ilia-8079` / `…-ilia-3528`, audit B05/B17). A canonical, not a
+ * redirect: dated searches keep both copies, and their availability can
+ * differ. canonical, og:url, hreflang, the Product URL and the last
+ * breadcrumb all use it.
+ */
+const canonicalBoatPath = (yacht: YachtModel): string => `/boat/${yacht.listingCanonicalSlug?.trim() || yacht.slug}`;
+
+/**
  * Build a `Product` JSON-LD schema for a yacht detail page.
  *
  * Yacht charter is a hybrid commerce object — Schema.org doesn't have a
@@ -108,7 +121,7 @@ function buildYachtProductSchema(
   tDesc: BoatDescTranslate,
   manufacturers: ManufacturerLookup | null
 ) {
-  const url = localizedUrl(locale, `/boat/${yacht.slug}`);
+  const url = localizedUrl(locale, canonicalBoatPath(yacht));
   const mainImage = yachtShareImageUrl(yacht) || `${meta.url}/meta/og-image.png`;
 
   // The builder from data (yachtBrand.ts): the payload's manufacturer, else
@@ -360,7 +373,7 @@ export async function generateMetadata({
     title: boatTitle.title,
     ...(boatTitle.absolute ? { titleAbsolute: boatTitle.title } : {}),
     description,
-    path: `/boat/${yacht.slug}`,
+    path: canonicalBoatPath(yacht),
     image: {
       src: yachtShareImageUrl(yacht) ?? undefined,
       alt: `${yacht.modelName} ${yacht.name || ''} boat image`,
@@ -437,7 +450,7 @@ const BoatPage = async ({
 
   breadcrumbItems.push({
     name: boatName,
-    item: localizedUrl(locale as LocaleType, `/boat/${yacht.slug}`),
+    item: localizedUrl(locale as LocaleType, canonicalBoatPath(yacht)),
   });
 
   // Per-yacht FAQ — server-built so the questions/answers are in the SSR
