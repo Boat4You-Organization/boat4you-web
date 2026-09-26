@@ -85,6 +85,7 @@ const BoatListingItemCardView = ({
   locationTo,
   buildYear,
   maxPersons,
+  berths,
   cabins,
   length,
   clientPriceEur,
@@ -502,10 +503,15 @@ const BoatListingItemCardView = ({
             )}
 
             {/* Year · Cabins · People — clean text only, no icons. From API. */}
-            {/* People falls back to a 'cabins × 2 + 2' estimate if the backend */}
-            {/* returns null/0 — keeps the row consistent across yachts. */}
+            {/* People: max persons, else berths (the figure the boat page's */}
+            {/* description uses, audit B24); the 'cabins × 2 + 2' estimate */}
+            {/* only when the payload carries neither. */}
             {(() => {
-              const peopleCount = maxPersons && maxPersons > 0 ? maxPersons : cabins ? cabins * 2 + 2 : null;
+              let peopleCount: number | null = null;
+
+              if (maxPersons && maxPersons > 0) peopleCount = maxPersons;
+              else if (berths && berths > 0) peopleCount = berths;
+              else if (cabins) peopleCount = cabins * 2 + 2;
 
               return (
                 <Stack

@@ -33,7 +33,7 @@ const CookieAccordion = ({ title, checked, onChange, disabled, children }: Cooki
     >
       <AccordionSummary className={styles.summary} expandIcon={<ChevronDown size={16} fill={colors.black400} />}>
         <Stack direction="row" alignItems="center" justifyContent="space-between" width="100%">
-          <Typography component="p" variant="h4" fontWeight={700}>
+          <Typography component="span" variant="h4" fontWeight={700}>
             {title}
           </Typography>
           <Stack width="fit-content" onClick={handleSwitchClick}>

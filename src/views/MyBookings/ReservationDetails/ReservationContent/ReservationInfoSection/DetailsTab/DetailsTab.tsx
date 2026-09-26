@@ -2,7 +2,7 @@
 import React from 'react';
 
 import { Box, Grid, Stack, Typography } from '@mui/material';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 import {
   Beam,
@@ -47,8 +47,13 @@ const formatMeasure = (info: DimensionInfo | null | undefined, fallback: number 
   return null;
 };
 
+/** A positive count, else null (partner data sends null, 0 and negatives). */
+const positiveOrNull = (value: number | null | undefined): number | null =>
+  typeof value === 'number' && Number.isFinite(value) && value > 0 ? value : null;
+
 const DetailsTab = ({ reservationDetails }: DetailsTabProps) => {
   const t = useTranslations();
+  const locale = useLocale();
 
   const generateDescription = useBoatEquipmentDescription();
   const description = generateDescription(reservationDetails);
@@ -57,6 +62,18 @@ const DetailsTab = ({ reservationDetails }: DetailsTabProps) => {
   const isNewYacht = Boolean(reservationDetails.buildYear && reservationDetails.buildYear >= currentYear - 1);
 
   const vesselKey = reservationDetails.vesselType as keyof typeof VESSEL_TYPE_LABEL_MAP;
+  const vesselTypeRaw = VESSEL_TYPE_LABEL_MAP[vesselKey] ? t(VESSEL_TYPE_LABEL_MAP[vesselKey]) : '';
+  const vesselTypeLabel = locale === 'de' ? vesselTypeRaw : vesselTypeRaw.toLowerCase();
+  const guests = positiveOrNull(reservationDetails.maxPersons) ?? positiveOrNull(reservationDetails.berths);
+  const cabins = positiveOrNull(reservationDetails.cabins);
+  const wc = positiveOrNull(reservationDetails.wc);
+  const bold = (chunks: React.ReactNode) => <strong>{chunks}</strong>;
+  let accommodationKey: string | null = null;
+
+  if (guests && cabins && wc) accommodationKey = 'yacht.descAccomV0';
+  else if (guests && cabins) accommodationKey = 'yacht.descAccomNoWc';
+  else if (cabins) accommodationKey = 'yacht.descCabinsOnly';
+  else if (guests) accommodationKey = 'yacht.descGuestsOnly';
 
   const leftRowsRaw: (FeatureRow | null)[] = [
     reservationDetails.buildYear
@@ -211,18 +228,27 @@ const DetailsTab = ({ reservationDetails }: DetailsTabProps) => {
       >
         <Description variant="secondary" size={32} /> {t('yacht.descriptionTitle')}
       </Typography>
+      {/* Same sentences as the public boat page (DetailsTab): ICU plurals,
+          no clause for a missing value ("up to  people", "1 toilets" and
+          "was built in ." were printed before). */}
       <Typography variant="body1" color={colors.black500}>
-        {reservationDetails.cabins && `${reservationDetails.cabins}${t('yacht.lineCabin')} `}
-        {reservationDetails.cabins
-          ? t(VESSEL_TYPE_LABEL_MAP[vesselKey]).toLowerCase()
-          : t(VESSEL_TYPE_LABEL_MAP[vesselKey])}{' '}
-        {reservationDetails.modelName} – {reservationDetails.yachtName}
-        {t('yacht.wasBuilt')} {reservationDetails.buildYear}
-        {reservationDetails.locationFrom && ` ${t('yacht.andDockedIn')} ${reservationDetails.locationFrom}`}.{' '}
-        {reservationDetails.yachtName} {t('yacht.canAccommodate')}
-        {reservationDetails.maxPersons} {t('yacht.peopleIn')} {reservationDetails.cabins} {t('yacht.pillowIncluded')}{' '}
-        {t(VESSEL_TYPE_LABEL_MAP[vesselKey])} {reservationDetails.yachtName} {t('yacht.offers')} {reservationDetails.wc}{' '}
-        {t('yacht.toiletsWithShower')}. {description}
+        {t.rich(
+          'yacht.descIntroShort' as never,
+          {
+            name: reservationDetails.yachtName,
+            vesselType: vesselTypeLabel,
+            model: reservationDetails.modelName || 'none',
+            year: reservationDetails.buildYear ? String(reservationDetails.buildYear) : 'none',
+            location: reservationDetails.locationFrom || 'none',
+            b: bold,
+          } as never
+        )}{' '}
+        {accommodationKey &&
+          t.rich(accommodationKey as never, { name: reservationDetails.yachtName, maxPersons: guests, cabins, wc, b: bold } as never)}{' '}
+        {wc &&
+          accommodationKey !== 'yacht.descAccomV0' &&
+          t.rich('yacht.descWcOnly' as never, { name: reservationDetails.yachtName, wc, b: bold } as never)}{' '}
+        {description}
       </Typography>
       {(leftRows.length > 0 || rightRows.length > 0) && (
         <Grid container columnSpacing={{ xs: 0, md: 8 }} rowSpacing={0} pt={1}>

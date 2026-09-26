@@ -2,6 +2,7 @@ import { Document, Image, Link, Page, Text, View } from '@react-pdf/renderer';
 
 import { YachtOfferModel } from '@/models/yacht-offer.model';
 import { YachtModel } from '@/models/yacht.model';
+import { presentAmenities } from '@/utils/static/amenities';
 import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
 import { toTitleCase } from '@/utils/static/toTitleCase';
 
@@ -170,7 +171,7 @@ const YachtPDF = ({
     specRows.push(['Check-in / Check-out', `${yacht.defaultCheckin} / ${yacht.defaultCheckout}`]);
   }
 
-  const amenities = (yacht.amenities || [])
+  const amenities = presentAmenities(yacht.amenities)
     .map(a => a.name)
     .filter(Boolean)
     .slice(0, 9);

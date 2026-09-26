@@ -15,6 +15,7 @@ import {
 } from '@/models/yacht-amenities.model';
 import { YachtModel } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
+import { presentAmenities } from '@/utils/static/amenities';
 
 interface AmenitiesTabProps {
   yacht: YachtModel;
@@ -197,7 +198,10 @@ const AmenitiesTab = ({ yacht }: AmenitiesTabProps) => {
     );
   }
 
-  const amenities = yacht.amenities || [];
+  // Rows whose partner value means "absent" are dropped and boolean / null
+  // literals never reach the page (utils/static/amenities.ts, audit B25);
+  // a row without any label is skipped too.
+  const amenities = presentAmenities(yacht.amenities).filter(amenity => renderAmenityLabel(amenity).trim() !== '');
 
   if (amenities.length === 0) return null;
 
