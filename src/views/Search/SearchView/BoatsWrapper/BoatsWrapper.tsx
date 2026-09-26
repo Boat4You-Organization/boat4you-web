@@ -121,7 +121,13 @@ const BoatsWrapper = async ({
       curatedSeoHtml={curatedSeoHtml}
       charterFactsSlot={
         charterFacts ? (
-          <CharterFactsBlock target={charterFacts} locale={locale} currency={currency} rate={factsRate} />
+          <CharterFactsBlock
+            target={charterFacts}
+            locale={locale}
+            currency={currency}
+            rate={factsRate}
+            listingTotal={data.page?.totalElements ?? null}
+          />
         ) : null
       }
       breadcrumbSlot={crumbs.length ? <LandingBreadcrumb crumbs={crumbs} locale={locale} /> : null}

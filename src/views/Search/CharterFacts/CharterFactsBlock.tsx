@@ -4,12 +4,14 @@ import { Link } from '@/i18n/navigation';
 import { Currency } from '@/models/user.model';
 import { VESSEL_TYPE_LABEL_MAP_PLURAL, VesselType } from '@/models/yacht.model';
 import { fetchCharterFacts } from '@/utils/server/charterFacts';
+import { loadDestinationIndex, locationForDid, resolveDestinationName } from '@/utils/server/destinationDid';
 import { gatedLandingPath } from '@/utils/server/landingLinks';
 import { findModelForYacht } from '@/utils/server/modelCatalog';
 import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
 import { canonicalManufacturer, modelDisplayName } from '@/utils/static/yachtModelKey';
 
 import styles from './CharterFactsBlock.module.scss';
+import { MIN_ROW_BOATS, isTypeNameModel, monthRanking, reliableMonths } from './factsMath';
 
 export interface CharterFactsTarget {
   /** The single did the facts row is keyed by (see factsDidFor). */
@@ -17,6 +19,9 @@ export interface CharterFactsTarget {
   vesselType: VesselType | null;
   /** Place name as the page shows it (localised for countries). */
   areaLabel: string;
+  /** Every did the landing lists (dual-source places have several) — the
+   *  listing facets the model counts are read from. */
+  placeDids: string[];
 }
 
 interface CharterFactsBlockProps {
@@ -25,6 +30,9 @@ interface CharterFactsBlockProps {
   /** Page currency; figures are converted only when `rate` (EUR → currency) is known. */
   currency: Currency;
   rate: number | null;
+  /** The listing total the page's count H2 shows; the "boats for charter"
+   *  tile repeats it so the page states one number (audit B12). */
+  listingTotal?: number | null;
 }
 
 const ISO_DAYS = ['MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY', 'SUNDAY'];
@@ -39,7 +47,33 @@ const MIN_DAY_SHARE = 0.05;
  *
  * Prices follow the site rule: totals per charter week, never per day.
  */
-const CharterFactsBlock = async ({ target, locale, currency, rate }: CharterFactsBlockProps) => {
+const DISTRIBUTION_REVALIDATE_SECONDS = 21600;
+
+/**
+ * byModel facets of this landing — the same request (URL + cache window) the
+ * landing's model links read (landingNav.ts), so a model row states the
+ * number its link does ("Bavaria Cruiser 46 (146)", not 139 here).
+ */
+const landingModelFacets = async (
+  dids: string[],
+  boatType: VesselType | null
+): Promise<Record<string, number> | null> => {
+  const did = [...dids].sort().join(',');
+  const typeQuery = boatType ? `&boatTypes=${encodeURIComponent(boatType)}` : '';
+
+  try {
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/yachts/distribution?did=${encodeURIComponent(did)}${typeQuery}`,
+      { next: { revalidate: DISTRIBUTION_REVALIDATE_SECONDS }, signal: AbortSignal.timeout(1500) }
+    );
+
+    return response.ok ? (((await response.json()) as { byModel?: Record<string, number> }).byModel ?? null) : null;
+  } catch {
+    return null;
+  }
+};
+
+const CharterFactsBlock = async ({ target, locale, currency, rate, listingTotal = null }: CharterFactsBlockProps) => {
   const facts = await fetchCharterFacts(target.did, target.vesselType);
 
   if (!facts) return null;
@@ -83,7 +117,10 @@ const CharterFactsBlock = async ({ target, locale, currency, rate }: CharterFact
     : null;
   const heading = t('heading', { area: typeLabel ? `${target.areaLabel} · ${typeLabel}` : target.areaLabel });
 
-  const months = (facts.priceByMonth ?? []).filter(m => m.median != null);
+  // Only months with a real sample and a real price are shown or ranked,
+  // and the ranking is taken from those months (factsMath.ts, audit B11).
+  const months = reliableMonths(facts.priceByMonth ?? []);
+  const ranking = monthRanking(months);
   const checkIn = (facts.checkInDays ?? [])
     .filter(d => d.share >= MIN_DAY_SHARE)
     .sort((a, b) => b.share - a.share)
@@ -93,33 +130,86 @@ const CharterFactsBlock = async ({ target, locale, currency, rate }: CharterFact
   // model catalogue, bases through the landing gate (the page's boat type
   // first, then the base's own landing).
   const [models, bases] = await Promise.all([
-    Promise.all(
-      (facts.topModels ?? []).map(async m => {
-        const page = await findModelForYacht(m.manufacturer, m.model, 800);
+    (async () => {
+      const rows = (facts.topModels ?? []).filter(
+        m => m.count >= MIN_ROW_BOATS && m.model && !isTypeNameModel(m.model, m.manufacturer)
+      );
+      const [facets, pages] = await Promise.all([
+        landingModelFacets(target.placeDids, target.vesselType),
+        Promise.all(rows.map(m => findModelForYacht(m.manufacturer, m.model, 800))),
+      ]);
+      const seen = new Set<string>();
 
-        const brand = canonicalManufacturer(m.manufacturer);
+      return rows
+        .map((m, i) => {
+          const page = pages[i];
+          const brand = canonicalManufacturer(m.manufacturer);
+          // A model with its own page: the listing facet (its link's number).
+          const listed = page && facets ? page.modelIds.reduce((sum, id) => sum + (facets[String(id)] ?? 0), 0) : 0;
 
-        return {
-          label: page?.displayName ?? (brand ? modelDisplayName(brand, m.model) : m.model),
-          count: m.count,
-          href: page?.path ?? null,
-        };
-      })
-    ),
-    Promise.all(
-      (facts.topBases ?? []).map(async b => ({
-        label: b.name,
-        count: b.count,
-        href:
-          (target.vesselType && (await gatedLandingPath(b.did, b.name, locale, target.vesselType))) ||
-          (await gatedLandingPath(b.did, b.name, locale)),
-      }))
-    ),
+          return {
+            label: page?.displayName ?? (brand ? modelDisplayName(brand, m.model) : m.model),
+            count: listed > 0 ? listed : m.count,
+            href: page?.path ?? null,
+          };
+        })
+        .filter(m => {
+          // Two partner spellings of one model page fold into one row.
+          if (seen.has(m.label)) return false;
+
+          seen.add(m.label);
+
+          return true;
+        });
+    })(),
+    (async () => {
+      // One row per catalogue place: the same marina imported by two partners
+      // under names the catalogue folds together (Kastela / Kaštela, combined
+      // rows like "l-57,l-1749") is one base — the backend groups by its own
+      // transliterated name (audit B13). Named and linked as its landing.
+      const index = await loadDestinationIndex().catch(() => null);
+      const groups = new Map<string, { label: string; count: number; did: string; dids: string[] }>();
+
+      await Promise.all(
+        (facts.topBases ?? []).map(async b => {
+          const location = index ? locationForDid(index, b.did) : null;
+          const resolved = index ? await resolveDestinationName(index, location?.name ?? b.name) : null;
+          const dids = resolved?.dids.includes(b.did) ? resolved.dids : [b.did];
+          const key = [...dids].sort().join(',');
+          const group = groups.get(key) ?? {
+            label: (resolved?.dids.includes(b.did) ? resolved.name : null) ?? location?.name ?? b.name,
+            count: 0,
+            did: b.did,
+            dids,
+          };
+
+          group.count += b.count;
+          groups.set(key, group);
+        })
+      );
+
+      return Promise.all(
+        Array.from(groups.values())
+          .sort((a, b) => b.count - a.count)
+          .map(async g => ({
+            label: g.label,
+            count: g.count,
+            href:
+              (target.vesselType && (await gatedLandingPath(g.did, g.label, locale, target.vesselType))) ||
+              (await gatedLandingPath(g.did, g.label, locale)),
+          }))
+      );
+    })(),
   ]);
 
   const tiles: Array<{ label: string; value: string }> = [
-    { label: t('activeBoats'), value: facts.activeBoats.toLocaleString(locale) },
-    ...(facts.skipperWeekly
+    // The page's own listing total (the count H2's number); the nightly
+    // weekly-offer count only when the listing total is unknown.
+    {
+      label: t('activeBoats'),
+      value: (listingTotal && listingTotal > 0 ? listingTotal : facts.activeBoats).toLocaleString(locale),
+    },
+    ...(facts.skipperWeekly && facts.skipperWeekly.median > 0
       ? [
           {
             label: t('skipper'),
@@ -134,10 +224,12 @@ const CharterFactsBlock = async ({ target, locale, currency, rate }: CharterFact
           },
         ]
       : []),
-    ...(facts.obligatoryExtrasWeekly
+    // A 0 € median means most boats list no obligatory extras — "0 €" read
+    // like the old "7 days 0 €" bug (audit B13), so the tile is left out.
+    ...(facts.obligatoryExtrasWeekly && facts.obligatoryExtrasWeekly.median > 0
       ? [{ label: t('obligatoryExtras'), value: money(facts.obligatoryExtrasWeekly.median) }]
       : []),
-    ...(facts.deposit
+    ...(facts.deposit && facts.deposit.median > 0
       ? [
           {
             label: t('deposit'),
@@ -181,14 +273,16 @@ const CharterFactsBlock = async ({ target, locale, currency, rate }: CharterFact
       {months.length > 0 && (
         <div className={styles.block}>
           <h3 className={styles.subtitle}>{t('pricesHeading')}</h3>
-          {(facts.cheapestMonth || facts.priciestMonth) && (
+          {ranking && (
             <p className={styles.text}>
+              {/* HR month names end with the ordinal dot ("listopad 2026."),
+                  which met the sentence's own full stop ("2026.."). */}
               {[
-                facts.cheapestMonth ? t('cheapestMonth', { month: monthName(facts.cheapestMonth) }) : null,
-                facts.priciestMonth ? t('priciestMonth', { month: monthName(facts.priciestMonth) }) : null,
+                t('cheapestMonth', { month: monthName(ranking.cheapest) }),
+                t('priciestMonth', { month: monthName(ranking.priciest) }),
               ]
-                .filter(Boolean)
-                .join(' ')}
+                .join(' ')
+                .replace(/\.\./g, '.')}
             </p>
           )}
           <div className={styles.tableWrap}>

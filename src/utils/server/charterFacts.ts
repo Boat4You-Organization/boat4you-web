@@ -15,7 +15,10 @@ import { VesselType } from '@/models/yacht.model';
  * run); any failure renders no block.
  */
 
-const REVALIDATE_SECONDS = 3600;
+// The row is recomputed once a night (08:00 UTC); a six-hour window keeps a
+// cached copy for stale-while-revalidate instead of a cold 2.5 s fetch that
+// dropped the block on slow renders (audit B13: EN italy, ES spain, PT france).
+const REVALIDATE_SECONDS = 21600;
 const TIMEOUT_MS = 2500;
 const DID_PATTERN = /^[clr]-\d{1,12}$/;
 
