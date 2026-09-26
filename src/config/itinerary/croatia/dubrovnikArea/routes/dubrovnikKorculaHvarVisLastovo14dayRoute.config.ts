@@ -7,7 +7,7 @@ const dubrovnikKorculaHvarVisLastovo14dayRoute: ItineraryRoute = {
     '14-day yacht route from Dubrovnik via Mljet, Korčula, Vis (Blue Cave), Hvar Stari Grad, Palmižana & the Elaphiti chain — sailor brief with NM and mooring notes.',
   id: 'dubrovnik-korcula-hvar-vis-lastovo-14day-route',
   startingPoint: 'Dubrovnik',
-  otherPoints: ['Korčula', 'Hvar', 'Vis', 'Lastovo', '14 Days'],
+  otherPoints: ['Korčula', 'Hvar', 'Vis', 'Lastovo'],
   cardImage: {
     src: '/images/itinerary/croatia/split-dubrovnik-itinerary/routes/dubrovnik-korcula-card-image.webp',
     alt: 'Card image',

@@ -41,9 +41,11 @@ const daysMinMax = (routes: { routeDays?: unknown[] }[]): { min: number; max: nu
  */
 const HubAreaCard: FC<{
   area: Itinerary;
-  country: string;
+  /** The area and its country in the page locale (ItineraryPlaceNames). */
+  areaLabel: string;
+  countryLabel: string;
   eager: boolean;
-}> = ({ area, country, eager }) => {
+}> = ({ area, areaLabel, countryLabel, eager }) => {
   const tUi = useTranslations('itinerary');
   const t = useTranslations(itineraryNamespace(area));
   const routeCount = area.routes?.length ?? 0;
@@ -126,11 +128,11 @@ const HubAreaCard: FC<{
             mb: 1,
           }}
         >
-          {country}
+          {countryLabel}
           {days ? ` · ${days}` : ''}
         </Typography>
         <Typography component="h3" sx={{ fontSize: { xs: 20, sm: 22 }, fontWeight: 700, color: colors.blue950, m: 0 }}>
-          {tUi('hub.sailingAreaCardTitle', { area: area.sailingArea })}
+          {tUi('hub.sailingAreaCardTitle', { area: areaLabel })}
         </Typography>
         <Typography
           sx={{
@@ -157,7 +159,7 @@ const HubAreaCard: FC<{
               fontWeight: 600,
             }}
           >
-            {tUi('hub.exploreRoutes', { area: area.sailingArea })} →
+            {tUi('hub.exploreRoutes', { area: areaLabel })} →
           </Typography>
         </Stack>
       </Stack>
@@ -165,7 +167,21 @@ const HubAreaCard: FC<{
   );
 };
 
-const ItinerariesHub: FC<{ countrySearchHrefs?: CountrySearchHrefs }> = ({ countrySearchHrefs }) => {
+/**
+ * Area (by id) and country (by config name) → name in the page locale,
+ * resolved on the server (itineraryPlaceNames.ts). The config names are
+ * English: /de read "Croatia Segelreviere" and "Segelrevier Cyclades"
+ * (audit B16).
+ */
+export interface ItineraryPlaceNames {
+  areas: Record<string, string>;
+  countries: Record<string, string>;
+}
+
+const ItinerariesHub: FC<{ countrySearchHrefs?: CountrySearchHrefs; placeNames: ItineraryPlaceNames }> = ({
+  countrySearchHrefs,
+  placeNames,
+}) => {
   const t = useTranslations('itinerary');
 
   return (
@@ -237,7 +253,7 @@ const ItinerariesHub: FC<{ countrySearchHrefs?: CountrySearchHrefs }> = ({ count
                   component="h3"
                   sx={{ fontSize: { xs: 24, md: 32 }, fontWeight: 800, color: colors.blue950, lineHeight: 1.1, m: 0 }}
                 >
-                  {country}{' '}
+                  {placeNames.countries[country] ?? country}{' '}
                   <Box component="span" sx={{ fontStyle: 'italic', fontWeight: 400 }}>
                     {t('hub.countryHeadingItalic')}
                   </Box>
@@ -264,7 +280,13 @@ const ItinerariesHub: FC<{ countrySearchHrefs?: CountrySearchHrefs }> = ({ count
                 }}
               >
                 {itinerary.map((area, i) => (
-                  <HubAreaCard key={area.id} area={area} country={country} eager={groupIdx === 0 && i === 0} />
+                  <HubAreaCard
+                    key={area.id}
+                    area={area}
+                    areaLabel={placeNames.areas[area.id] ?? area.sailingArea}
+                    countryLabel={placeNames.countries[country] ?? country}
+                    eager={groupIdx === 0 && i === 0}
+                  />
                 ))}
               </Box>
             </Box>

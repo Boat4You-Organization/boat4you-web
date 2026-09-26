@@ -37,6 +37,12 @@ interface SuggestedItinerariesProps {
    * not shipped to the client outside /itineraries; falls back to config.
    */
   routeTitles?: Record<string, string | undefined>;
+  /**
+   * The area's name in the page locale (suggestedAreaLabel / itineraryAreaName,
+   * server-side); the config's English name only where no server resolves
+   * it (my-bookings). "Alle Routen für Cyclades ansehen" on /de (audit B16).
+   */
+  areaLabel?: string;
 }
 
 const SuggestedItineraries: FC<SuggestedItinerariesProps> = ({
@@ -48,6 +54,7 @@ const SuggestedItineraries: FC<SuggestedItinerariesProps> = ({
   areaId,
   maxRoutes = 4,
   routeTitles,
+  areaLabel,
 }) => {
   const t = useTranslations('itinerary');
 
@@ -97,7 +104,7 @@ const SuggestedItineraries: FC<SuggestedItinerariesProps> = ({
             '&:hover': { textDecoration: 'underline' },
           }}
         >
-          {t('suggested.viewAll', { area: area.sailingArea })} →
+          {t('suggested.viewAll', { area: areaLabel ?? area.sailingArea })} →
         </Typography>
       </Stack>
       <Box

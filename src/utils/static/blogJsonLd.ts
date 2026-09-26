@@ -49,6 +49,31 @@ export const buildBlogPostingLd = (post: Blog) => {
 };
 
 /**
+ * BreadcrumbList for a post: Home › Blog › post (audit 26.9.2026, B44 — the
+ * posts were the one indexable template without it). English names and URLs,
+ * like the BlogPosting above: the English URL is the canonical of every
+ * locale copy of a post.
+ */
+export const buildBlogBreadcrumbLd = (post: Pick<Blog, 'slug' | 'title'>) => {
+  const locale = routing.defaultLocale as LocaleType;
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: localizedUrl(locale, '/') },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: localizedUrl(locale, '/blog') },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: decodeHtmlEntities(post.title),
+        item: localizedUrl(locale, `/blog/${post.slug}`),
+      },
+    ],
+  };
+};
+
+/**
  * FAQPage JSON-LD extracted from the post body. Our posts render FAQ as an
  * <h2> whose text contains "FAQ" / "Frequently Asked", followed by <h3>
  * question headings with the answer paragraphs between them (same extractor

@@ -1,6 +1,6 @@
-import { loadDestinationIndex } from '@/utils/server/destinationDid';
+import { requireDestinationIndex } from '@/utils/server/destinationDid';
 import { getLandingManifest } from '@/utils/server/landingManifest';
-import { EMPTY_URLSET, XML_HEADERS, landingUrlRows, urlset } from '@/utils/server/sitemapXml';
+import { XML_HEADERS, landingUrlRows, urlset } from '@/utils/server/sitemapXml';
 
 export const revalidate = 3600;
 
@@ -15,24 +15,25 @@ export const revalidate = 3600;
 export async function GET() {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
 
-  try {
-    const index = await loadDestinationIndex();
+  // No catch (audit B08): ISR caches whatever this handler RETURNS for the
+  // hour, so an empty <urlset> after a backend blip told Google every landing
+  // was gone. A failure THROWS instead — a regeneration that throws keeps
+  // serving the last good copy, a first render answers 500 (retried). Same
+  // rule as sitemap-yachts. requireDestinationIndex and the landing gate
+  // throw on an outage; an empty manifest is never a real answer either.
+  const index = await requireDestinationIndex();
+  const manifest = await getLandingManifest(index);
 
-    if (!index) return new Response(EMPTY_URLSET, { headers: XML_HEADERS });
-
-    const manifest = await getLandingManifest(index);
-
-    // Ops hook: `SEO_MANIFEST_REPORT=1` logs the corpus files that produce no
-    // landing (alias upkeep, see curatedSeoSlug.ts DESTINATION_ALIAS).
-    if (process.env.SEO_MANIFEST_REPORT === '1') {
-      // eslint-disable-next-line no-console
-      console.info(`[seo-manifest] ${JSON.stringify(manifest.report)}`);
-    }
-
-    const rows = landingUrlRows(baseUrl, manifest.destinations);
-
-    return new Response(rows ? urlset(rows) : EMPTY_URLSET, { headers: XML_HEADERS });
-  } catch {
-    return new Response(EMPTY_URLSET, { headers: XML_HEADERS });
+  // Ops hook: `SEO_MANIFEST_REPORT=1` logs the corpus files that produce no
+  // landing (alias upkeep, see curatedSeoSlug.ts DESTINATION_ALIAS).
+  if (process.env.SEO_MANIFEST_REPORT === '1') {
+    // eslint-disable-next-line no-console
+    console.info(`[seo-manifest] ${JSON.stringify(manifest.report)}`);
   }
+
+  const rows = landingUrlRows(baseUrl, manifest.destinations);
+
+  if (!rows) throw new Error('sitemap-locations: no indexable destination landing');
+
+  return new Response(urlset(rows), { headers: XML_HEADERS });
 }

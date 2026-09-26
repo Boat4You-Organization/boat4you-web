@@ -25,6 +25,7 @@ import {
   locationForDid,
   resolveDestinationName,
 } from '@/utils/server/destinationDid';
+import { itineraryAreaName } from '@/utils/server/itineraryPlaceNames';
 import { landingHeading } from '@/utils/server/landingCopy';
 import { evaluateLanding } from '@/utils/server/landingGate';
 import { LandingEntry, landingManifestWithin } from '@/utils/server/landingManifest';
@@ -364,9 +365,15 @@ const itinerariesFor = async (
     })
   );
 
-  return areas
-    .filter((_, i) => matches[i])
-    .map(({ area }) => ({ href: `${localePrefix(locale)}/itineraries/${area.id}`, label: area.sailingArea }));
+  // The area's name in this locale, as the itinerary page heads it (audit B16).
+  return Promise.all(
+    areas
+      .filter((_, i) => matches[i])
+      .map(async ({ area }) => ({
+        href: `${localePrefix(locale)}/itineraries/${area.id}`,
+        label: await itineraryAreaName(locale, area),
+      }))
+  );
 };
 
 /**

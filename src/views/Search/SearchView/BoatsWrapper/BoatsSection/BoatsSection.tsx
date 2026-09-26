@@ -72,6 +72,9 @@ interface BoatsSectionProps {
   breadcrumbSlot?: ReactNode;
   /** Server-rendered link rows under the listing (destination landings only). */
   landingLinksSlot?: ReactNode;
+  /** Which week an undated card is priced for (landing.weeklyPriceNote);
+   *  null on a dated search. */
+  priceNote?: string | null;
 }
 
 const BoatsSection = ({
@@ -85,6 +88,7 @@ const BoatsSection = ({
   charterFactsSlot = null,
   breadcrumbSlot = null,
   landingLinksSlot = null,
+  priceNote = null,
 }: BoatsSectionProps) => {
   const { content, page } = data;
   const { totalElements = 0 } = page || {};
@@ -356,6 +360,12 @@ const BoatsSection = ({
               {translatedBoatType
                 ? tCommon('boatsAvailableHeading', { count: totalElements, type: translatedBoatType })
                 : tCommon('boatsAvailableHeadingGeneric', { count: totalElements })}
+            </Typography>
+          )}
+          {/* The week behind "Price for 7 days" (audit B19), once, above the grid. */}
+          {!isEmpty && totalElements > 0 && priceNote && (
+            <Typography variant="caption" component="p" color={colors.black700} sx={{ mt: -0.5, mb: 1.5 }}>
+              {priceNote}
             </Typography>
           )}
           {isEmpty ? (

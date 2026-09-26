@@ -7,7 +7,7 @@ const pula14DaysRoute: ItineraryRoute = {
     'Embark on a 14-day yacht charter from Pula exploring Istria & Kvarner—Rovinj, Cres, Lošinj, Brijuni, Rabac & beyond—hidden coves, historic towns & Adriatic charm.',
   id: 'pula-14days',
   startingPoint: 'Pula',
-  otherPoints: ['14 Days'],
+  otherPoints: [],
   cardImage: {
     src: '/images/itinerary/croatia/istria-itinerary/routes/pula-14-days-card-image.webp',
     alt: 'Card image',

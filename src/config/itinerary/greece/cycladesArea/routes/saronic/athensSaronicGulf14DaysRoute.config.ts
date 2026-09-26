@@ -7,7 +7,7 @@ const athensSaronicGulf14DayRoute: ItineraryRoute = {
     'Sail a 14-day yacht charter from Athens through the Saronic and the Argolic Gulf to Monemvasia and back via Hydra. Mainland Peloponnese cruising for archaeology + quiet anchorages.',
   id: 'athens-saronic-gulf-14-day',
   startingPoint: 'Athens',
-  otherPoints: ['Saronic gulf (14 day)'],
+  otherPoints: ['Saronic gulf'],
   cardImage: {
     src: '/images/itinerary/greece/cyclades-itinerary/routes/athens-saronic-gulf-14-day.webp',
     alt: 'Card image',

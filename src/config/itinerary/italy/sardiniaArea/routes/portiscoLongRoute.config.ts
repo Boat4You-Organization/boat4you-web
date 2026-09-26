@@ -7,7 +7,7 @@ const portiscoLongRoute: ItineraryRoute = {
     'Sail a 7-day yacht charter from Portisco via Porto Cervo, La Maddalena, Bonifacio (Corsica), Porto Vecchio, Cala Santa Maria and Capriccioli. Sardinia + Corsica grand loop.',
   id: 'portisco-long',
   startingPoint: 'Portisco',
-  otherPoints: ['Long'],
+  otherPoints: ['La Maddalena', 'Bonifacio', 'Porto Vecchio'],
   cardImage: { src: '/images/itinerary/italy/sardinia-itinerary/routes/portisco-long.webp', alt: 'Card image' },
   gallery: [
     { src: '/images/itinerary/italy/banners/portisco-banner-large.webp', alt: '' },

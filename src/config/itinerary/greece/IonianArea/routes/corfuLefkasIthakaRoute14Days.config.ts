@@ -7,7 +7,7 @@ const corfuLefkasIthaka14DaysRoute: ItineraryRoute = {
     'Sail a 14-day yacht charter from Corfu through Lefkas and Ithaka. Paxos, Antipaxos, Meganisi, Kefalonia and the Diapontia outliers across two weeks in the Ionian.',
   id: 'corfu-lefkas-ithaka-14-days',
   startingPoint: 'Corfu',
-  otherPoints: ['Lefkas', 'Ithaka (14 Days)'],
+  otherPoints: ['Lefkas', 'Ithaka'],
   cardImage: {
     src: '/images/itinerary/greece/ionian-itinerary/routes/corfu-lefkas-ithaka.webp',
     alt: 'Card image',

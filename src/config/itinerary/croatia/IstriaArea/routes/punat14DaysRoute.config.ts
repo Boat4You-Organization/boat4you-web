@@ -7,7 +7,7 @@ const punat14DaysRoute: ItineraryRoute = {
     'Embark on a 14-day yacht charter from Punat exploring Istria & Kvarner—Rovinj, Cres, Lošinj, Brijuni, Rabac & beyond—hidden coves, historic towns & Adriatic charm.',
   id: 'punat-14days',
   startingPoint: 'Punat',
-  otherPoints: ['14 Days'],
+  otherPoints: [],
   cardImage: {
     src: '/images/itinerary/croatia/istria-itinerary/routes/punat-14-days-card-image.webp',
     alt: 'Card image',

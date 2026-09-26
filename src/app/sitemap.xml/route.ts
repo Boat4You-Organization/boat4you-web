@@ -17,25 +17,37 @@ const XML_HEADERS = {
 // date (only the blog URLs do, inside sitemap-blogs), and a request-time
 // stamp on every fetch teaches Google to ignore the field.
 export async function GET() {
-  try {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
 
-    // Pass the promoted-country whitelist to the backend so totalElements
-    // is the EXACT count we'll later index — every sub-sitemap fills up
-    // (≈100 URLs per backend page, no empty pages).
-    const promoted = Array.from(PROMOTED_COUNTRY_CODES);
-    const data = await fetchYachts({ locations: [], page: 1, size: 1, countryCodes: promoted });
-    const total = data.page?.totalElements ?? 0;
-    const pages = Math.ceil(total / PAGE_SIZE);
+  // Pass the promoted-country whitelist to the backend so totalElements
+  // is the EXACT count we'll later index — every sub-sitemap fills up
+  // (≈100 URLs per backend page, no empty pages).
+  //
+  // Data Cache + ISR (audit B09, 26.9.2026): the count query used to be
+  // `no-store`, which silently made this route dynamic — every fetch of the
+  // index Google reads first cost a catalogue query (10.0 s cold, 2.1–2.6 s
+  // warm). Now the index is regenerated at most hourly in the background.
+  // No catch: ISR caches whatever the handler RETURNS (a 503 included) for
+  // the hour; a failure THROWS, so a regeneration keeps the last good index
+  // and a first render answers 500 (retried) — same rule as the shards.
+  const promoted = Array.from(PROMOTED_COUNTRY_CODES);
+  const data = await fetchYachts({ locations: [], page: 1, size: 1, countryCodes: promoted }, undefined, undefined, {
+    revalidate,
+  });
+  const total = data.page?.totalElements ?? 0;
 
-    const yachtSitemaps = Array.from(
-      { length: pages },
-      (_, i) => `  <sitemap>
+  if (total <= 0) throw new Error('sitemap.xml: empty catalogue');
+
+  const pages = Math.ceil(total / PAGE_SIZE);
+
+  const yachtSitemaps = Array.from(
+    { length: pages },
+    (_, i) => `  <sitemap>
     <loc>${baseUrl}/sitemap-yachts/${i}/yacht.xml</loc>
   </sitemap>`
-    ).join('\n');
+  ).join('\n');
 
-    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
     <loc>${baseUrl}/sitemap-static.xml</loc>
@@ -58,10 +70,5 @@ export async function GET() {
 ${yachtSitemaps}
 </sitemapindex>`;
 
-    return new Response(sitemap, { headers: XML_HEADERS });
-  } catch {
-    // Backend down → 503 so GSC retries, instead of a 200 index with zero
-    // yacht sitemaps that crawlers would treat as the real catalogue.
-    return new Response('Service Unavailable', { status: 503 });
-  }
+  return new Response(sitemap, { headers: XML_HEADERS });
 }

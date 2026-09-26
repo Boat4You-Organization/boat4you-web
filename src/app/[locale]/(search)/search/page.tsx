@@ -2,19 +2,25 @@
 import { Metadata } from 'next';
 import { Locale } from 'next-intl';
 import { getLocale, getTranslations } from 'next-intl/server';
+import { notFound, permanentRedirect } from 'next/navigation';
 
 import Layout from '@/components/Layout';
 import { AllSearchParams } from '@/config/form-models.config';
 import { LocaleType } from '@/config/locales.config';
+import { meta } from '@/config/meta';
+import { routing } from '@/i18n/routing';
 import { Currency } from '@/models/user.model';
 import { YachtModelShortInfo, isVesselType } from '@/models/yacht.model';
 import { fetchYachts } from '@/services/yacht.service';
 import { getLandingCopy } from '@/utils/server/landingCopy';
 import { evaluateLanding } from '@/utils/server/landingGate';
 import { LandingCrumb, landingCrumbs, placeForDids } from '@/utils/server/landingNav';
+import { loadManufacturerLookup } from '@/utils/server/manufacturerLookup';
 import {
   SearchLanding,
+  hasUnknownDestination,
   landingFetchRevalidate,
+  landingRedirectPath,
   resolveSearchLanding,
   splitSearchParam,
   uniqueCaseInsensitive,
@@ -27,6 +33,7 @@ import { getBoatImageUrl } from '@/utils/static/imageUtils';
 import { serializeJsonLd } from '@/utils/static/jsonLd';
 import { hasListingPrice, listingPriceDays } from '@/utils/static/listingPrice';
 import { buildSearchLandingPath, isLandingExpressible } from '@/utils/static/searchLandingPath';
+import { ManufacturerLookup, yachtBrandName } from '@/utils/static/yachtBrand';
 import { charterFactsTargetFor } from '@/views/Search/CharterFacts/charterFactsTarget';
 import { ResolvedDestinationProvider } from '@/views/Search/SearchView/ResolvedDestinationContext';
 import SearchView from '@/views/Search/SearchView/SearchView';
@@ -35,6 +42,17 @@ interface SearchPageProps {
   params: Promise<{ locale: Locale }>;
   searchParams: Promise<AllSearchParams>;
 }
+
+/**
+ * 301 (Next answers 308) a non-canonical spelling of a landing to its one
+ * canonical URL (landingRedirectPath) — called from generateMetadata and the
+ * page, whichever runs first.
+ */
+const redirectToCanonicalLanding = (locale: string, params: AllSearchParams, landing: SearchLanding): void => {
+  const target = landingRedirectPath(params, landing);
+
+  if (target) permanentRedirect(`${locale === routing.defaultLocale ? '' : `/${locale}`}${target}`);
+};
 
 /**
  * Dynamic per-(destination × boat type) metadata. Title and description come
@@ -57,6 +75,13 @@ export async function generateMetadata({ params: paramsPromise, searchParams }: 
   // Destination name → did, resolved on the server (the backend filters by
   // did only). Shared with the page render through React `cache`.
   const landing = await resolveSearchLanding(params);
+
+  redirectToCanonicalLanding(locale, params, landing);
+
+  // A destination the catalogue does not know is no page (404), never the
+  // whole catalogue under the raw input (hasUnknownDestination).
+  if (hasUnknownDestination(landing)) notFound();
+
   // Title / description / H1 in the locale (landingCopy.ts, shared with the
   // page's H1 so the two never diverge).
   const { title, description } = await getLandingCopy(locale, params);
@@ -156,6 +181,15 @@ export async function generateMetadata({ params: paramsPromise, searchParams }: 
     alternateLocales = gate.indexableLocales;
   }
 
+  // Boat type without a destination (`/search?boatTypes=CATAMARAN`, linked
+  // from the home type cards): the worldwide catalogue of one type with a
+  // generic title and meta, in no sitemap. noindex,follow until these pages
+  // get their own copy (owner decision 26.9.2026, audit B04) — the links
+  // stay, and robots now agrees with the sitemaps (one gate).
+  const typeOnly = uniqueRawDestinations.length === 0 && !landing.hasOwnDid && boatTypes.length > 0;
+
+  if (typeOnly) alternateLocales = [];
+
   const noindex =
     pageNum > 1 ||
     hasDates ||
@@ -163,6 +197,7 @@ export async function generateMetadata({ params: paramsPromise, searchParams }: 
     boatTypes.length > 1 ||
     hasUnknownBoatType ||
     hasNonHeadlineFilter ||
+    typeOnly ||
     weakLanding;
 
   return buildMetadata({
@@ -215,7 +250,12 @@ function buildSearchBreadcrumb(locale: LocaleType, crumbs: LandingCrumb[]) {
  */
 const PRODUCT_SCHEMA_LIMIT = 10;
 
-function buildSearchProductsLd(yachts: YachtModelShortInfo[] | undefined, baseUrl: string, tDesc: BoatDescTranslate) {
+function buildSearchProductsLd(
+  yachts: YachtModelShortInfo[] | undefined,
+  locale: LocaleType,
+  tDesc: BoatDescTranslate,
+  manufacturers: ManufacturerLookup | null
+) {
   if (!yachts?.length) return null;
 
   // Google requires `offers` (or reviews) on every merchant-listing Product,
@@ -227,15 +267,18 @@ function buildSearchProductsLd(yachts: YachtModelShortInfo[] | undefined, baseUr
   if (!priced.length) return null;
 
   const items = priced.slice(0, PRODUCT_SCHEMA_LIMIT).map((y, idx) => {
-    const yachtUrl = `${baseUrl}/boat/${y.slug}`;
+    // The page's own locale (audit B31): /de landings listed English boat URLs.
+    const yachtUrl = localizedUrl(locale, `/boat/${y.slug}`);
     const fullName =
       [y.modelName, y.name].filter(Boolean).join(' ').replace(/\s+/g, ' ').trim() || y.name?.trim() || 'Yacht';
-    const brandFirstWord = (y.modelName || '').trim().split(/\s+/)[0] || null;
+    // The builder, from data (yachtBrand.ts) — not the model's first word,
+    // which read "Sun", "Oceanis", "Sunsail" on 32 % of products (B40).
+    const brand = yachtBrandName(y, manufacturers);
     // Google Merchant listings REQUIRES `image` on every Product — a missing
     // field is a critical GSC error. Always set it, falling back to the site
     // OG image when the yacht has no photo (a valid fallback beats no image),
     // mirroring the boat-detail Product schema.
-    const imageUrl = y.mainImageId ? getBoatImageUrl(y.mainImageId, 1200) : `${baseUrl}/meta/og-image.png`;
+    const imageUrl = y.mainImageId ? getBoatImageUrl(y.mainImageId, 1200) : `${meta.url}/meta/og-image.png`;
     const country = y.location?.countryCode;
     const product: Record<string, unknown> = {
       '@type': 'Product',
@@ -251,7 +294,7 @@ function buildSearchProductsLd(yachts: YachtModelShortInfo[] | undefined, baseUr
       }),
     };
 
-    if (brandFirstWord) product.brand = { '@type': 'Brand', name: brandFirstWord };
+    if (brand) product.brand = { '@type': 'Brand', name: brand };
 
     // The card's own figure: the TOTAL for the period ("Price for 7 days
     // 1,900 €" — per-day rate × days, rounded, in the page currency), not the
@@ -324,6 +367,11 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
   // (Product LD below AND the visible list in SearchView → BoatsWrapper).
   // Re-resolved on every request — filter changes re-render this component.
   const landing: SearchLanding = await resolveSearchLanding(params);
+
+  redirectToCanonicalLanding(locale, params, landing);
+
+  if (hasUnknownDestination(landing)) notFound();
+
   const effectiveParams = withLandingDid(params, landing);
   // Undated landings read the yacht list through a 10-minute Data Cache
   // window (see landingFetchRevalidate); anything dated/filtered stays live.
@@ -332,7 +380,6 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
   const boatTypes = splitSearchParam(params.boatTypes);
   const singleBoatType = boatTypes.length === 1 && isVesselType(boatTypes[0]) ? boatTypes[0] : null;
 
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.boat4you.com';
   const currency = (params.currency as Currency) || Currency.EUR;
   // Charter facts block — only on landings the index gate lets Google index here.
   const charterFacts = await charterFactsTargetFor(landing, singleBoatType, boatTypes.length, locale);
@@ -370,15 +417,30 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
   // the SSR HTML (it read "0 boats available · live" until hydration).
   let totalCount: number | null = null;
 
+  const yachtsResp = await fetchYachts(yachtFetchParams(effectiveParams, !!fetchRevalidate), currency, locale, {
+    revalidate: fetchRevalidate,
+  }).catch(error => {
+    // An undated landing (fetchRevalidate set) without its boats is not a
+    // page to show Google: answer 500 (retried) rather than an indexable
+    // landing with an empty list (audit B02, same rule as the boat pages).
+    // Other searches soft-fail as before — the list below retries on its own.
+    if (fetchRevalidate) throw error;
+
+    return null;
+  });
+
   try {
-    const yachtsResp = await fetchYachts(yachtFetchParams(effectiveParams, !!fetchRevalidate), currency, locale, {
-      revalidate: fetchRevalidate,
-    });
-    const tBoatMeta = await getTranslations({ locale, namespace: 'metadata.boat' });
+    const [tBoatMeta, manufacturers] = await Promise.all([
+      getTranslations({ locale, namespace: 'metadata.boat' }),
+      loadManufacturerLookup(),
+    ]);
 
     totalCount = yachtsResp?.page?.totalElements ?? null;
-    productsLd = buildSearchProductsLd(yachtsResp?.content, baseUrl, (key, values) =>
-      tBoatMeta(key as never, values as never)
+    productsLd = buildSearchProductsLd(
+      yachtsResp?.content,
+      locale as LocaleType,
+      (key, values) => tBoatMeta(key as never, values as never),
+      manufacturers
     );
   } catch {
     // Soft fail — page still renders without Product schema.

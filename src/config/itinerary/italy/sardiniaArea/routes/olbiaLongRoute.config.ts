@@ -7,7 +7,7 @@ const olbiaLongRoute: ItineraryRoute = {
     'Sail a 7-day yacht charter from Olbia through Tavolara, Caprera, Spargi, Bonifacio (Corsica), Santa Teresa Gallura and Palau — full Maddalena + Bonifacio Strait loop.',
   id: 'olbia-long',
   startingPoint: 'Olbia',
-  otherPoints: ['Long'],
+  otherPoints: ['Caprera', 'Bonifacio', 'Palau'],
   cardImage: { src: '/images/itinerary/italy/banners/olbia-banner-large.webp', alt: 'Olbia Banner Large' },
   gallery: [
     { src: '/images/itinerary/italy/banners/rotondo-banner-large.webp', alt: '' },

@@ -42,8 +42,10 @@ const RelatedBoats = async ({ yacht, user, locale, currency }: RelatedBoatsProps
 
   if (marinaDid == null) return null;
 
+  // Undated pool → weekly prices, like the landings (audit B16): 44 of 145
+  // similar-boat cards read "Price for 3 days 23 €" before.
   const { content: pool = [] } = await fetchYachts(
-    { locations: [], did: [String(marinaDid)], size: 12 },
+    { locations: [], did: [String(marinaDid)], size: 12, priceBasis: 'week' },
     currency,
     locale
   ).catch(() => ({ content: [] as YachtModelShortInfo[] }));

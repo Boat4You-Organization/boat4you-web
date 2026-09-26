@@ -73,16 +73,18 @@ export const statusColor = (s: WeekStatus): { fg: string; bg: string } => {
 /** Price-tier → heatmap cell background. */
 export const tierBg = (t: 0 | 1 | 2 | 3): string => [T.tierLow, T.tierMid, T.tierHigh, T.tierPeak][t];
 
-/** Croatian-locale price formatter — `9.945 €`, or `15.745 A$` when a currency
- *  is given. `maximumFractionDigits: 0` strips any trailing `.00` the Italy
- *  backend ships (Mario rule 12.5.2026 — "na italy, cijena bez .00"). The
- *  symbol mirrors `formatPriceWithCurrency` (CURRENCY_SYMBOL_MAP) so the week
- *  cards match the detail box + booking panel for AUD/USD/etc.; no `currency`
- *  → EUR. */
-export const fmtPrice = (n: number, currency?: string): string => {
+/** Week price — `9,945 €` on /en, `9.945 €` on /de and /hr, or `15,745 A$`
+ *  when a currency is given. `maximumFractionDigits: 0` strips any trailing
+ *  `.00` the Italy backend ships (Mario rule 12.5.2026 — "na italy, cijena bez
+ *  .00"). The symbol and the number format mirror `formatPriceWithCurrency`
+ *  (CURRENCY_SYMBOL_MAP, the page locale) so the week cards match the listing
+ *  cards, the detail box and the booking panel — they were hard-wired to
+ *  hr-HR, so an English page read "4.976 €" next to "1,900 €" (audit B26).
+ *  No `currency` → EUR; no `locale` → hr-HR (the old default). */
+export const fmtPrice = (n: number, currency?: string, locale: string = 'hr-HR'): string => {
   const symbol = currency ? (CURRENCY_SYMBOL_MAP[currency as Currency] ?? currency) : '€';
 
-  return `${new Intl.NumberFormat('hr-HR', { maximumFractionDigits: 0 }).format(n)} ${symbol}`;
+  return `${new Intl.NumberFormat(locale, { maximumFractionDigits: 0 }).format(n)} ${symbol}`;
 };
 
 /**

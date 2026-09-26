@@ -7,7 +7,7 @@ const sibenikHvarVisSoltaRoute: ItineraryRoute = {
     'Saturday-to-Saturday yacht route from Šibenik via Primošten, Vis, the Blue Cave, the Pakleni Islands and Šolta — full sailor brief with distances, marinas and mooring notes.',
   id: 'sibenik-hvar-vis-solta-route',
   startingPoint: 'Šibenik',
-  otherPoints: ['Hvar', 'Vis', 'Solta'],
+  otherPoints: ['Hvar', 'Vis', 'Šolta'],
   cardImage: {
     src: '/images/itinerary/croatia/split-dubrovnik-itinerary/routes/sibenik-vis-card-image.webp',
     alt: 'Card image',

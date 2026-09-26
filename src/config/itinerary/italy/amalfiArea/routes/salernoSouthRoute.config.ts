@@ -7,7 +7,7 @@ const salernoSouthRoute: ItineraryRoute = {
     'Sail a 7-day yacht charter from Salerno south to Cetara, Agropoli, Acciaroli, Casalvelino, Palinuro and Camerota — Cilento national park loop, quietest Tyrrhenian cruising.',
   id: 'salerno-south',
   startingPoint: 'Salerno',
-  otherPoints: ['South'],
+  otherPoints: ['Agropoli', 'Palinuro', 'Marina di Camerota'],
   cardImage: { src: '/images/itinerary/italy/amalfi-itinerary/routes/salerno-south.webp', alt: 'Card image' },
   gallery: [
     { src: '/images/itinerary/italy/banners/salerno-banner-large.webp', alt: '' },

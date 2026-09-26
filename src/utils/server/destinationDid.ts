@@ -2,6 +2,7 @@ import { cache } from 'react';
 
 import 'server-only';
 
+import { LANDING_IDENTITIES, LandingIdentity } from '@/config/landing-identity.config';
 import { POPULAR_SEARCHES } from '@/config/popular-searches.config';
 import { LocationType } from '@/types/location.type';
 import { normalizeDestinationName } from '@/utils/static/searchLandingPath';
@@ -68,13 +69,46 @@ const NAME_ALIAS: Record<string, string> = {
 
 const apiBase = () => process.env.NEXT_PUBLIC_BOAT_WS_API_URL;
 
-const fetchJson = async <T>(url: string): Promise<T | null> => {
-  try {
-    const response = await fetch(url, { next: { revalidate: REVALIDATE_SECONDS } });
+/** Longest a catalogue lookup waits before it counts as an outage. */
+const FETCH_TIMEOUT_MS = 20_000;
 
-    return response.ok ? ((await response.json()) as T) : null;
+/**
+ * The catalogue API could not answer (network error, timeout, 5xx). Thrown,
+ * never folded into "no such place" / "0 boats": before 26.9.2026 a failed
+ * lookup read as an unknown destination or an empty fleet, and the landing
+ * rendered the whole catalogue as noindex, or failed its fleet gate and went
+ * noindex, and the sitemaps dropped it for an hour (audit B01/B02/B08).
+ * Callers that can do without the catalogue catch it; the /search landing
+ * and the sitemaps let it through (500 / keep the last good copy).
+ */
+export class CatalogueUnavailableError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = 'CatalogueUnavailableError';
+  }
+}
+
+/** JSON of a catalogue GET; null only when the API answers "not found" (4xx). */
+const fetchJson = async <T>(url: string): Promise<T | null> => {
+  let response: Response;
+
+  try {
+    response = await fetch(url, {
+      next: { revalidate: REVALIDATE_SECONDS },
+      signal: AbortSignal.timeout(FETCH_TIMEOUT_MS),
+    });
+  } catch (error) {
+    throw new CatalogueUnavailableError(`${url}: ${error instanceof Error ? error.message : 'fetch failed'}`);
+  }
+
+  if (response.status >= 400 && response.status < 500) return null;
+
+  if (!response.ok) throw new CatalogueUnavailableError(`${url}: HTTP ${response.status}`);
+
+  try {
+    return (await response.json()) as T;
   } catch {
-    return null;
+    throw new CatalogueUnavailableError(`${url}: unreadable body`);
   }
 };
 
@@ -95,17 +129,30 @@ const splitDids = (id: string): string[] =>
 /**
  * The lookup lists, loaded once. React `cache` makes it once per RSC request;
  * route handlers (sitemaps) call it once and pass the index around.
+ *
+ * Throws CatalogueUnavailableError when any of the three lists fails or the
+ * catalogue comes back empty: a partial index resolves names wrongly (a
+ * region without its count loses to a same-named marina) — the flip class
+ * this file must never produce.
  */
-export const loadDestinationIndex = cache(async (): Promise<DestinationIndex | null> => {
+export const requireDestinationIndex = cache(async (): Promise<DestinationIndex> => {
   const [locations, countryCounts, marinaCounts] = await Promise.all([
     fetchJson<{
-      content?: Array<{ id: string; name?: string; locationType?: string; countryCode?: string }>;
+      content?: Array<{
+        id: string;
+        name?: string;
+        locationType?: string;
+        countryCode?: string;
+        aliases?: string[] | null;
+      }>;
     }>(`${apiBase()}/public/locations?size=${LOCATIONS_PAGE_SIZE}`),
     fetchJson<Array<{ id: string; name?: string; yachtCount?: number }>>(`${apiBase()}/public/countries-count`),
     fetchJson<Array<{ id: string; name?: string; yachtCount?: number }>>(`${apiBase()}/public/locations-count`),
   ]);
 
-  if (!locations?.content?.length) return null;
+  if (!locations?.content?.length || !countryCounts || !marinaCounts) {
+    throw new CatalogueUnavailableError('destination index: empty or missing catalogue lists');
+  }
 
   const byName = new Map<string, IndexedLocation[]>();
   const byDid = new Map<string, IndexedLocation>();
@@ -127,6 +174,23 @@ export const loadDestinationIndex = cache(async (): Promise<DestinationIndex | n
     splitDids(location.id).forEach(did => byDid.set(did, indexed));
   });
 
+  // Region aliases from the backend (region_alias, V9_68): the spellings a
+  // region carried before its name became canonical and the partners'
+  // current names ("Zadar region" for r-3 "Zadar"). Each one finds its
+  // region, so an old URL resolves and 301s to the canonical landing. Never
+  // over a real catalogue name.
+  locations.content.forEach(location => {
+    const target = location.id ? byDid.get(splitDids(location.id)[0]) : undefined;
+
+    if (!target || !Array.isArray(location.aliases)) return;
+
+    location.aliases.forEach(alias => {
+      const key = normalizeDestinationName(alias);
+
+      if (key && !byName.has(key)) byName.set(key, [target]);
+    });
+  });
+
   const counts = new Map<string, number>();
 
   [...(countryCounts ?? []), ...(marinaCounts ?? [])].forEach(row => {
@@ -145,8 +209,34 @@ export const loadDestinationIndex = cache(async (): Promise<DestinationIndex | n
     if (key && target && !byName.has(key)) byName.set(key, [target]);
   });
 
+  // Pinned landings (landing-identity.config.ts): their canonical name and
+  // every alias must be findable by name even when the catalogue currently
+  // spells the row differently — the corpus manifest looks places up by the
+  // file-name prefix (directOwnersOf), and each spelling then resolves to
+  // the pinned landing.
+  LANDING_IDENTITIES.forEach(identity => {
+    const rows = identity.dids.map(did => byDid.get(did)).filter((r): r is IndexedLocation => !!r);
+
+    if (!rows.length) return;
+
+    [identity.name, ...identity.aliases].forEach(spelling => {
+      const key = normalizeDestinationName(spelling);
+
+      if (key && !byName.has(key)) byName.set(key, [rows[0]]);
+    });
+  });
+
   return { byName, byDid, counts, resolved: new Map() };
 });
+
+/**
+ * The index, or null when the catalogue API is unavailable — for page blocks
+ * that can render without it (link blocks, breadcrumbs, blog links). The
+ * /search landing and the sitemaps use requireDestinationIndex.
+ */
+export const loadDestinationIndex = cache(
+  async (): Promise<DestinationIndex | null> => requireDestinationIndex().catch(() => null)
+);
 
 /**
  * Fleet size behind one did (or a comma-joined did list), optionally for one
@@ -154,8 +244,10 @@ export const loadDestinationIndex = cache(async (): Promise<DestinationIndex | n
  * codes): the `/public/yachts` totalElements, i.e. exactly the number the
  * landing lists — unlike `/public/countries-count` / `locations-count`,
  * which also count boats outside the bookable catalogue. Shared with the
- * itinerary CTA resolver and the landing gate. null when the API failed.
- * The backend reads the boat type as `vesselType` (see fetchYachts).
+ * itinerary CTA resolver and the landing gate. Throws
+ * CatalogueUnavailableError when the API fails (never a silent 0 — that
+ * failed the fleet gate and flipped landings to noindex); null only for a
+ * 4xx. The backend reads the boat type as `vesselType` (see fetchYachts).
  */
 export const fleetTotalForDid = async (
   did: string,
@@ -171,7 +263,7 @@ export const fleetTotalForDid = async (
   return json ? (json.page?.totalElements ?? json.totalElements ?? 0) : null;
 };
 
-/** fleetTotalForDid with an API failure read as 0. */
+/** fleetTotalForDid as a number (a 4xx reads as 0; an outage still throws). */
 export const fleetCountForDid = async (
   did: string,
   boatType?: string | null,
@@ -257,19 +349,88 @@ const resolvePopular = async (index: DestinationIndex, key: string): Promise<Res
   return { dids, name: spec.displayLabel, count, kind: spec.primaryType, countryCode: spec.countryCode };
 };
 
+const PINNED_BY_KEY = new Map<string, LandingIdentity>(
+  LANDING_IDENTITIES.flatMap(identity =>
+    [identity.name, ...identity.aliases].map(spelling => [normalizeDestinationName(spelling), identity] as const)
+  )
+);
+
+/** A pinned landing (landing-identity.config.ts), whatever the catalogue calls its rows today. */
+const resolvePinned = async (
+  index: DestinationIndex,
+  identity: LandingIdentity
+): Promise<ResolvedDestination | null> => {
+  // Only the records the catalogue still has (a removed record drops out;
+  // none left → the name resolves like any other).
+  const dids = identity.dids.filter(did => index.byDid.has(did)).sort();
+
+  if (!dids.length) return null;
+
+  const count = await fleetCountForDid(dids.join(','));
+
+  return { dids, name: identity.name, count, kind: identity.kind, countryCode: identity.countryCode };
+};
+
+const GENERIC_AREA_SUFFIX = / (?:region|area|sailing area)$/;
+
+/**
+ * Rename fallback for a name the catalogue no longer lists: the partner
+ * syncs rewrite region names between two spellings of one place ("Zadar" ↔
+ * "Zadar region", "Istria / Kvarner" ↔ "Kvarner"). A sitemap or external
+ * link to the old spelling must reach the region under its new name (and
+ * 301 there, search/page.tsx) instead of rendering the whole catalogue as
+ * noindex. Only REGION rows, and only a single unambiguous match:
+ *   "x region" / "x area" → "x";  "x" → "x region";
+ *   "x" → the region "a / x" (a part of a slash name);
+ *   "a / x" → the region "x" (a part of the requested name).
+ */
+const renamedRegionCandidates = (index: DestinationIndex, raw: string, key: string): IndexedLocation[] => {
+  const regionsNamed = (name: string) => (index.byName.get(name) ?? []).filter(l => l.kind === LocationType.REGION);
+  const parts = (value: string) =>
+    value
+      .split('/')
+      .map(p => normalizeDestinationName(p))
+      .filter(Boolean);
+
+  const bySuffix = GENERIC_AREA_SUFFIX.test(key) ? regionsNamed(key.replace(GENERIC_AREA_SUFFIX, '')) : [];
+  const withSuffix = regionsNamed(`${key} region`);
+  const containing = Array.from(index.byDid.values()).filter(
+    l => l.kind === LocationType.REGION && l.name.includes('/') && parts(l.name).includes(key)
+  );
+  const rawParts = raw.includes('/') ? parts(raw).flatMap(p => regionsNamed(p)) : [];
+
+  const unique = new Map<string, IndexedLocation>();
+
+  [...bySuffix, ...withSuffix, ...containing, ...rawParts].forEach(l => unique.set(l.id, l));
+
+  return Array.from(unique.values());
+};
+
 const resolveUncached = async (index: DestinationIndex, raw: string): Promise<ResolvedDestination | null> => {
   const normalized = normalizeDestinationName(raw);
 
   if (!normalized) return null;
 
   const key = NAME_ALIAS[normalized] ?? normalized;
+  const pinned = PINNED_BY_KEY.get(key);
+  const pinnedHit = pinned ? await resolvePinned(index, pinned) : null;
+
+  if (pinnedHit) return pinnedHit;
+
   const popular = await resolvePopular(index, key);
 
   if (popular) return popular;
 
   const candidates = index.byName.get(key);
 
-  if (!candidates?.length) return null;
+  if (!candidates?.length) {
+    const renamed = renamedRegionCandidates(index, raw, key);
+
+    // One region under its new name: resolve that name (pins, popular
+    // entries and dual-source siblings apply as usual).
+    // eslint-disable-next-line @typescript-eslint/no-use-before-define
+    return renamed.length === 1 ? resolveDestinationName(index, renamed[0].name) : null;
+  }
 
   // Same scoring as the itinerary CTA resolver: biggest fleet wins, regions
   // preferred on ties (the "Split" region holds the fleet, the "Split"
@@ -316,6 +477,10 @@ export const locationForDid = (index: DestinationIndex, did: string): IndexedLoc
  * Resolve the `?destinations=` values of one request. Returns one entry per
  * input value (null when the name is unknown). Keyed on a joined string so
  * React `cache` dedupes generateMetadata + page + list within a request.
+ *
+ * Throws CatalogueUnavailableError when the catalogue cannot be read: the
+ * landing answers 500 (retried) instead of treating a known place as an
+ * unknown name — the whole catalogue as noindex (audit B01/B02).
  */
 export const resolveDestinationDids = cache(
   async (joinedDestinations: string): Promise<Array<ResolvedDestination | null>> => {
@@ -326,9 +491,7 @@ export const resolveDestinationDids = cache(
 
     if (!values.length) return [];
 
-    const index = await loadDestinationIndex();
-
-    if (!index) return values.map(() => null);
+    const index = await requireDestinationIndex();
 
     return Promise.all(values.map(v => resolveDestinationName(index, v)));
   }

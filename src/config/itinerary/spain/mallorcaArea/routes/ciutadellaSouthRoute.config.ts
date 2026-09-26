@@ -7,7 +7,7 @@ const ciutadellaSouthRoute: ItineraryRoute = {
     'Sail a 7-day yacht charter from Ciutadella via Cala Galdana, Cala Ratjada (Mallorca), Colonia de Sant Pere, Alcúdia and Port de Pollença — Menorca + north Mallorca cross-island.',
   id: 'ciutadella-south',
   startingPoint: 'Ciutadella',
-  otherPoints: ['South'],
+  otherPoints: ['Cala Galdana', 'Cala Ratjada', 'Alcúdia'],
   cardImage: { src: '/images/itinerary/spain/mallorca-itinerary/routes/ciutadella-south.webp', alt: 'Card image' },
   gallery: [
     { src: '/images/itinerary/spain/banners/ciutadella-banner-large.webp', alt: '' },

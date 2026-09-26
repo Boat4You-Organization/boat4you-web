@@ -7,7 +7,7 @@ const rogoznicaVisHvarKorculaSoltaRoute: ItineraryRoute = {
     '7-day yacht route from Marina Frapa Rogoznica via Krknjaši, Komiža (Vis), Blue Cave, Hvar, Stari Grad & Maslinica (Šolta) — sailor brief with NM.',
   id: 'rogoznica-vis-hvar-korcula-solta-route',
   startingPoint: 'Rogoznica',
-  otherPoints: ['Vis', 'Hvar', 'Korcula', 'Solta'],
+  otherPoints: ['Vis', 'Hvar', 'Korčula', 'Šolta'],
   cardImage: {
     src: '/images/itinerary/croatia/split-dubrovnik-itinerary/routes/rogoznica-vis-hvar-card-image.webp',
     alt: 'Card image',

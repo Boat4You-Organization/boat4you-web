@@ -1,7 +1,7 @@
 import { Button, Container, Stack, Typography } from '@mui/material';
 import { useTranslations } from 'next-intl';
-import Link from 'next/link';
 
+import { Link } from '@/i18n/navigation';
 import colors from '@/styles/themes/colors';
 
 import styles from './NotFoundPage.module.scss';

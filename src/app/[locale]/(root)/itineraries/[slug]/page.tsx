@@ -10,6 +10,7 @@ import { itineraries } from '@/config/itineraries.config';
 import { LocaleType } from '@/config/locales.config';
 import { itineraryNamespace, resolveAreaText } from '@/helper/itineraryI18n';
 import { itinerarySearchPath } from '@/utils/server/itineraryBoats';
+import { itineraryAreaName, itineraryCountryName } from '@/utils/server/itineraryPlaceNames';
 import { buildBreadcrumbJsonLd, buildTouristTripJsonLd } from '@/utils/static/buildItineraryJsonLd';
 import { buildMetadata } from '@/utils/static/buildMetadata';
 import { serializeJsonLd } from '@/utils/static/serializeJsonLd';
@@ -87,11 +88,19 @@ const ItineraryAreaPage = async ({ params }: ItineraryAreaPageParams) => {
   }
 
   const t = await getTranslations('itinerary');
+  // The area and country in this locale ("Kykladen", "Griechenland") for
+  // every heading and the breadcrumb — they read "Über Cyclades" and
+  // "Segelrouten in Greece" on /de (audit B16). A proper noun no locale
+  // translates keeps its own name.
+  const [areaLabel, countryLabel] = await Promise.all([
+    itineraryAreaName(locale, itinerary),
+    itineraryCountryName(locale, country ?? 'Europe'),
+  ]);
 
   const breadcrumbLd = buildBreadcrumbJsonLd([
     { name: t('breadcrumb.home'), url: '/' },
     { name: t('breadcrumb.itinerary'), url: '/itineraries' },
-    { name: `${itinerary.sailingArea} ${t('breadcrumb.areaSuffix')}`, url: `/itineraries/${itinerary.id}` },
+    { name: `${areaLabel} ${t('breadcrumb.areaSuffix')}`, url: `/itineraries/${itinerary.id}` },
   ]);
 
   // Aggregate all routes within this sailing area into TouristTrip
@@ -118,12 +127,12 @@ const ItineraryAreaPage = async ({ params }: ItineraryAreaPageParams) => {
         ))}
         <ItineraryHero
           kicker={t('areaHero.kicker')}
-          eyebrow={t('areaHero.eyebrow', { country: country ?? 'Europe' })}
-          title={t('areaHero.title', { area: itinerary.sailingArea })}
+          eyebrow={t('areaHero.eyebrow', { country: countryLabel })}
+          title={t('areaHero.title', { area: areaLabel })}
           italic={t('areaHero.italic')}
           image={{ src: itinerary.backgroundImage.src, alt: itinerary.backgroundImage.alt }}
         />
-        <ItineraryArea slug={slug} />
+        <ItineraryArea slug={slug} areaLabel={areaLabel} countryLabel={countryLabel} />
         {primaryStart && (
           <ItineraryBoats
             startingPoint={primaryStart}

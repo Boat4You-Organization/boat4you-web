@@ -7,7 +7,7 @@ const dubrovnikSplitOnewayRoute: ItineraryRoute = {
     '7-day one-way yacht route from Dubrovnik via the Elaphiti Islands, Mljet, Korčula, Lastovo, Vis & Hvar into Split — sailor brief with NM and mooring notes.',
   id: 'dubrovnik-split-oneway-route',
   startingPoint: 'Dubrovnik',
-  otherPoints: ['Split', 'One way'],
+  otherPoints: ['Split'],
   cardImage: {
     src: '/images/itinerary/croatia/split-dubrovnik-itinerary/routes/dubrovnik-split-card-image.webp',
     alt: 'Card image',

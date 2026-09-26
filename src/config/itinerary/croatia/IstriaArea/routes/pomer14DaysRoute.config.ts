@@ -7,7 +7,7 @@ const pomer14DaysRoute: ItineraryRoute = {
     'Sail a 14-day catamaran loop from Marina Pomer: Susak, Dugi Otok, NP Kornati, Krka falls, Zadar and Silba. Day-by-day legs, mooring tips and park-fee advice.',
   id: 'pomer-14days',
   startingPoint: 'Pomer',
-  otherPoints: ['14 Days'],
+  otherPoints: [],
   cardImage: {
     src: '/images/itinerary/croatia/istria-itinerary/routes/pomer-14-days-card-image.webp',
     alt: 'Card image',

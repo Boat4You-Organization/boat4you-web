@@ -27,16 +27,18 @@ const ALL_LABEL = '__ALL__';
 
 interface ItineraryAreaProps {
   slug: string;
+  /** The area's name in the page locale (itineraryAreaName on the server).
+   *  Every heading uses it — never the config's English `sailingArea`
+   *  ("Wählen Sie Ihre Woche ab Cyclades", audit B16). */
+  areaLabel: string;
+  /** The area's country in the page locale (itineraryCountryName). */
+  countryLabel: string;
 }
 
-const ItineraryArea: FC<ItineraryAreaProps> = ({ slug }) => {
+const ItineraryArea: FC<ItineraryAreaProps> = ({ slug, areaLabel, countryLabel }) => {
   const t = useTranslations('itinerary');
 
   const itinerary = useMemo(() => itineraries.flatMap(group => group.itinerary).find(item => item.id === slug), [slug]);
-  const country = useMemo(
-    () => itineraries.find(({ itinerary: items }) => items.some(item => item.id === slug))?.country,
-    [slug]
-  );
 
   // Per-country itinerary copy (area essay + per-route metaDesc) lives in
   // the area's namespace (itinerary.i18nNamespace, stamped in
@@ -44,10 +46,12 @@ const ItineraryArea: FC<ItineraryAreaProps> = ({ slug }) => {
   // unmigrated areas fall back to the raw config strings.
   const tArea = useTranslations(itineraryNamespace(itinerary ?? {}));
 
-  const formatRoutePath = (startingPoint: string, otherPoints: string[]) => {
+  // A loop returns to its start; a one-way route ends at its last stop
+  // ("Dubrovnik → Split", not "Dubrovnik → Split → Dubrovnik").
+  const formatRoutePath = (startingPoint: string, otherPoints: string[], oneWay: boolean) => {
     if (!otherPoints?.length) return t('area.roundTrip', { start: startingPoint });
 
-    return [startingPoint, ...otherPoints, startingPoint].join(' → ');
+    return [startingPoint, ...otherPoints, ...(oneWay ? [] : [startingPoint])].join(' → ');
   };
 
   const description = itinerary ? (resolveAreaText(itinerary, 'description', itinerary.description, tArea) ?? '') : '';
@@ -113,14 +117,12 @@ const ItineraryArea: FC<ItineraryAreaProps> = ({ slug }) => {
             >
               {t('area.pickTitle')}{' '}
               <Box component="span" sx={{ fontStyle: 'italic', fontWeight: 400 }}>
-                {t('area.pickTitleItalic', { area: itinerary.sailingArea })}
+                {t('area.pickTitleItalic', { area: areaLabel })}
               </Box>
             </Typography>
-            {country && (
-              <Typography sx={{ mt: 1.5, color: colors.black600, fontSize: { xs: 14, md: 15 } }}>
-                {t('area.areaSubtitle', { country, area: itinerary.sailingArea })}
-              </Typography>
-            )}
+            <Typography sx={{ mt: 1.5, color: colors.black600, fontSize: { xs: 14, md: 15 } }}>
+              {t('area.areaSubtitle', { country: countryLabel, area: areaLabel })}
+            </Typography>
           </Box>
           <Typography
             component={Link}
@@ -210,7 +212,7 @@ const ItineraryArea: FC<ItineraryAreaProps> = ({ slug }) => {
           {filteredRoutes.map((route, i) => {
             const days = route.routeDays?.length ?? 7;
             const oneWay = isOneWayItinerary(route);
-            const pathLabel = formatRoutePath(route.startingPoint, route.otherPoints || []);
+            const pathLabel = formatRoutePath(route.startingPoint, route.otherPoints || [], oneWay);
             const metaDesc = resolveRouteText(route, 'metaDesc', route.metaDesc, tArea);
 
             return (
@@ -283,7 +285,7 @@ const ItineraryArea: FC<ItineraryAreaProps> = ({ slug }) => {
                       mb: 1,
                     }}
                   >
-                    {t('area.routeCardKicker', { index: `0${i + 1}`, start: route.startingPoint })}
+                    {t('area.routeCardKicker', { index: String(i + 1).padStart(2, '0'), start: route.startingPoint })}
                   </Typography>
                   <Typography
                     component="h3"
@@ -347,7 +349,7 @@ const ItineraryArea: FC<ItineraryAreaProps> = ({ slug }) => {
                 fontWeight: 600,
               }}
             >
-              {t('area.aboutEyebrow', { area: itinerary.sailingArea })}
+              {t('area.aboutEyebrow', { area: areaLabel })}
             </Typography>
             <Typography
               component="h2"
@@ -360,7 +362,7 @@ const ItineraryArea: FC<ItineraryAreaProps> = ({ slug }) => {
                 mb: { xs: 3, md: 4 },
               }}
             >
-              {t('area.aboutHeading', { area: itinerary.sailingArea })}{' '}
+              {t('area.aboutHeading', { area: areaLabel })}{' '}
               <Box component="span" sx={{ fontStyle: 'italic', fontWeight: 400 }}>
                 {t('area.aboutHeadingItalic')}
               </Box>

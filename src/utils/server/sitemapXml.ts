@@ -9,10 +9,6 @@ export const XML_HEADERS = {
   'X-Content-Type-Options': 'nosniff',
 };
 
-export const EMPTY_URLSET = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-</urlset>`;
-
 // XML-escape <loc> contents. Query-string URLs contain a literal `&`
 // (the `destinations=…&boatTypes=…` separator), and `&` is reserved in
 // XML — an unescaped one makes the whole sitemap unparseable (GSC

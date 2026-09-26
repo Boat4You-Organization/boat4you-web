@@ -21,6 +21,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: L
       title: t('title'),
       description: t('description'),
       path: t('path'),
+      // noindex → no hreflang cluster either (audit B07: the only two
+      // noindex pages that still announced 10 alternates).
+      alternateLocales: [],
     }),
     robots: {
       index: false,

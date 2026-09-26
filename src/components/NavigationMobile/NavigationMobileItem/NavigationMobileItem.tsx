@@ -1,13 +1,12 @@
 import { ListItem, ListItemButton, ListItemText, Stack } from '@mui/material';
 import cx from 'clsx';
 import { useTranslations } from 'next-intl';
-import Link from 'next/link';
 
 import Avatar from '@/components/Avatar/Avatar';
 import Badge from '@/components/Badge';
 import ChevronRight from '@/components/SvgIcons/ChevronRight';
 import { NavigationMobileItemLink, NavigationMobileItemTitle } from '@/config/navigationMobile.config';
-import { usePathname } from '@/i18n/navigation';
+import { Link, usePathname } from '@/i18n/navigation';
 
 import styles from './NavigationMobileItem.module.scss';
 

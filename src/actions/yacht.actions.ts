@@ -40,41 +40,65 @@ export interface BrochureResult {
   error?: string;
 }
 
+/**
+ * Longest a boat page waits for the detail API before answering 5xx. A hung
+ * backend otherwise holds the request for undici's 300 s header timeout.
+ */
+const YACHT_DETAIL_TIMEOUT_MS = 25_000;
+
+/**
+ * The yacht behind `slug`, or null when the API says it does not exist.
+ *
+ * ONLY a real "no such boat" (API 404 / 410, or 400 for a slug the API
+ * cannot parse) returns null — the page turns that into notFound(), a 404
+ * with noindex. Everything else — a 5xx, a timeout, a refused connection
+ * during a backend deploy or an OOM restart on cusma2, an unreadable body —
+ * THROWS, so the page answers 500 (retryable) instead of telling Google the
+ * boat is gone. Before 26.9.2026 both paths returned null: 22 of 22 boat
+ * requests during one backend deploy came back 404 + noindex with a
+ * canonical to the locale home (audit B02).
+ */
 export async function getSingleYacth(
   slug: string,
   searchParams: YachtSearchParams,
   currency: Currency = Currency.EUR,
   language: string = 'en'
 ): Promise<YachtModel | null> {
-  try {
-    // The detail endpoint expects dateFrom/dateTo, but URL search params are
-    // startDate/endDate (shared with the listing). Rename so the backend can
-    // actually find matching offers for the user's requested week.
-    const { startDate, endDate, ...filteredSearchParams } = searchParams;
+  // The detail endpoint expects dateFrom/dateTo, but URL search params are
+  // startDate/endDate (shared with the listing). Rename so the backend can
+  // actually find matching offers for the user's requested week.
+  const { startDate, endDate, ...filteredSearchParams } = searchParams;
 
-    const paramsWithCurrency = {
-      ...filteredSearchParams,
-      ...(startDate && { dateFrom: startDate }),
-      ...(endDate && { dateTo: endDate }),
-      ...(currency && { currency }),
-    };
+  const paramsWithCurrency = {
+    ...filteredSearchParams,
+    ...(startDate && { dateFrom: startDate }),
+    ...(endDate && { dateTo: endDate }),
+    ...(currency && { currency }),
+  };
 
-    const queryParams = createYachtQueryParams(paramsWithCurrency);
+  const queryParams = createYachtQueryParams(paramsWithCurrency);
 
-    const response = await fetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/yachts/${slug}${queryParams}`, {
+  // Encoded: a decoded `?` or `#` in the path segment would otherwise turn
+  // the request into the list endpoint.
+  const response = await fetch(
+    `${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/yachts/${encodeURIComponent(slug)}${queryParams}`,
+    {
       headers: {
         'Accept-Language': language,
       },
-    });
-
-    if (!response.ok) {
-      return null;
+      signal: AbortSignal.timeout(YACHT_DETAIL_TIMEOUT_MS),
     }
+  );
 
-    return await response.json();
-  } catch {
+  if (response.status === 404 || response.status === 410 || response.status === 400) {
     return null;
   }
+
+  if (!response.ok) {
+    throw new Error(`Yacht API answered ${response.status} for "${slug}"`);
+  }
+
+  return (await response.json()) as YachtModel;
 }
 
 export async function getYachtBrochureUrl(state: unknown, slug: string): Promise<BrochureResult> {

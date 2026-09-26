@@ -1,8 +1,8 @@
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
-import Link from 'next/link';
 
 import { VESSEL_TYPE_CONFIG } from '@/config/ourFleet.config';
+import { Link } from '@/i18n/navigation';
 import { YachtFleet } from '@/models/yacht.model';
 
 import styles from './OurFleetCard.module.scss';

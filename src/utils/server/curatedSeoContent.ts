@@ -16,6 +16,7 @@ import {
   resolveDestinationName,
 } from '@/utils/server/destinationDid';
 import { resolveCuratedSlugCandidates, sanitizeCuratedHtml } from '@/utils/static/curatedSeoSlug';
+import { localizeInternalLinks } from '@/utils/static/localizeInternalLinks';
 import {
   buildDidHref,
   buildSearchLandingPath,
@@ -326,6 +327,8 @@ export const getCuratedSeoHtml = cache(
     const files = await Promise.all(candidates.map(slug => readCuratedFile(locale, slug)));
     const raw = files.find((f): f is string => !!f);
 
-    return raw ? rewriteSearchLinks(sanitizeCuratedHtml(raw), locale) : null;
+    // Search links → their landing (locale-prefixed); other site links →
+    // the page in this locale (localizeInternalLinks, audit B31).
+    return raw ? localizeInternalLinks(await rewriteSearchLinks(sanitizeCuratedHtml(raw), locale), locale) : null;
   }
 );

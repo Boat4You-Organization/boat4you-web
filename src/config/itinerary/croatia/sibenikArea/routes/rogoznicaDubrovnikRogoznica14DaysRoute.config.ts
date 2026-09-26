@@ -7,7 +7,7 @@ const rogoznicaDubrovnikRogoznica14DaysRoute: ItineraryRoute = {
     '14-day yacht route from Marina Frapa Rogoznica south to Dubrovnik via Brač, Hvar, Vis, Lastovo & Mljet — return via Korčula & Šolta. Sailor brief with NM.',
   id: 'rogoznica-dubrovnik-rogoznica-route-14-days',
   startingPoint: 'Rogoznica',
-  otherPoints: ['Dubrovnik', '14 Days'],
+  otherPoints: ['Dubrovnik'],
   cardImage: {
     src: '/images/itinerary/croatia/split-dubrovnik-itinerary/routes/rogoznica-dubrovnik-card-image.webp',
     alt: 'Card image',

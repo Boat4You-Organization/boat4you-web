@@ -3,6 +3,7 @@ import 'server-only';
 
 import { AllSearchParams } from '@/config/form-models.config';
 import { VESSEL_TYPE_LABEL_MAP_FOR_RENTAL, VesselType, isVesselType } from '@/models/yacht.model';
+import { boatTypePlural } from '@/utils/server/catalogueHubs';
 import { PlaceText, placeText } from '@/utils/server/placeText';
 import { resolveSearchLanding, splitSearchParam, uniqueCaseInsensitive } from '@/utils/server/searchLanding';
 
@@ -84,7 +85,9 @@ export const getLandingCopy = async (locale: string, params: AllSearchParams): P
   const singleBoatType: VesselType | null = boatTypes.length === 1 && isVesselType(boatTypes[0]) ? boatTypes[0] : null;
 
   // Catalogue name for resolved values (aliases fold: split → Split Region),
-  // the raw URL value otherwise; dual-source pairs share one phrase.
+  // the raw URL value otherwise — only a did link's own label reaches here
+  // unresolved, an unknown name without a did answers 404 (search/page.tsx);
+  // dual-source pairs share one phrase.
   const rawPlaces = await Promise.all(
     uniqueCaseInsensitive(splitSearchParam(params.destinations)).map(d =>
       placeText(locale, landing.labels[d.toLowerCase()] ?? d)
@@ -93,8 +96,11 @@ export const getLandingCopy = async (locale: string, params: AllSearchParams): P
   const places = Array.from(new Map(rawPlaces.map(p => [p.where.toLowerCase(), p])).values());
 
   if (!places.length) {
+    // Boat type only (noindex, see search/page.tsx): the type's plural, the
+    // same word as the page heading — the rental-context label is a genitive
+    // in HR/PL, so the tab read "katamarana | Boat4You" (audit B04).
     return singleBoatType
-      ? { title: await rentalLabel(locale, singleBoatType), description: tMeta('description'), h1: null }
+      ? { title: await boatTypePlural(locale, singleBoatType), description: tMeta('description'), h1: null }
       : { title: tMeta('title'), description: tMeta('description'), h1: null };
   }
 

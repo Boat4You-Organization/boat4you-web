@@ -4,6 +4,7 @@ import { getTranslations } from 'next-intl/server';
 import { LocaleType } from '@/config/locales.config';
 import { meta } from '@/config/meta';
 import { routing } from '@/i18n/routing';
+import { fitDescription, fitsWithBrandSuffix } from '@/utils/static/metaLength';
 
 type MetadataOptions = {
   /**
@@ -83,6 +84,12 @@ export const buildMetadata = ({
   alternateLocales,
 }: MetadataOptions): Metadata => {
   const fullUrl = localizedUrl(locale, path);
+  // Snippet lengths (audit B42): a title that would pass 70 characters with
+  // the " | Boat4You" template suffix is served without it, and the meta
+  // description drops trailing sentences (the call to action first) to fit
+  // 160 — Google cut them mid-word before.
+  const metaTitle = titleAbsolute ?? (fitsWithBrandSuffix(title) ? null : title);
+  const metaDescription = fitDescription(description);
   const hasCustomImage = Boolean(image?.src);
   const ogImage = image?.src || `${meta.url}/meta/og-image.png`;
   // Dimensions are only ever declared when they're true: the site-wide asset
@@ -92,8 +99,8 @@ export const buildMetadata = ({
   const ogDimensions = hasCustomImage ? { width: image?.width, height: image?.height } : { width: 1200, height: 630 };
 
   return {
-    title: titleAbsolute ? { absolute: titleAbsolute } : title,
-    description,
+    title: metaTitle ? { absolute: metaTitle } : title,
+    description: metaDescription,
     alternates: {
       canonical: fullUrl,
       languages: buildAlternateLanguages(path, alternateLocales),
@@ -116,7 +123,7 @@ export const buildMetadata = ({
       type: 'website',
       url: fullUrl,
       title,
-      description,
+      description: metaDescription,
       images: [
         {
           url: ogImage,
@@ -128,7 +135,7 @@ export const buildMetadata = ({
     twitter: {
       card: 'summary_large_image',
       title,
-      description,
+      description: metaDescription,
       images: [ogImage],
     },
   };

@@ -15,7 +15,8 @@ import {
   locationForDid,
   resolveDestinationName,
 } from '@/utils/server/destinationDid';
-import { normalizeDestinationName } from '@/utils/static/searchLandingPath';
+import { itineraryAreaName } from '@/utils/server/itineraryPlaceNames';
+import { buildSearchLandingPath, normalizeDestinationName } from '@/utils/static/searchLandingPath';
 
 /**
  * Blog → catalogue. The 56 posts (WordPress, English only) are the site's
@@ -85,7 +86,10 @@ const targetFor = async (index: DestinationIndex | null, href: string, locale: s
   const boatType = corpusBoatType(url.searchParams);
   const landing = await corpusLinkTarget(index, label, did, boatType);
 
-  if (!landing) return null;
+  // A name the catalogue does not know, without a did, is no page: it
+  // answers 404 (search/page.tsx, audit B01). Send the reader to the search
+  // itself instead (the curated corpus drops such a link; a post keeps it).
+  if (!landing) return did.trim() ? null : `${prefix}${buildSearchLandingPath(null, boatType)}`;
 
   const landingDid = new URL(landing, SITE_ORIGIN).searchParams.get('did');
 
@@ -107,7 +111,8 @@ export const rewriteBlogCatalogueLinks = async (html: string, locale: string): P
   if (!matches.length) return html;
 
   const index = await loadDestinationIndex();
-  const targets = await Promise.all(matches.map(([, href]) => targetFor(index, href, locale)));
+  // A catalogue outage mid-way leaves that link as written (the post renders).
+  const targets = await Promise.all(matches.map(([, href]) => targetFor(index, href, locale).catch(() => null)));
   let cursor = 0;
   let out = '';
 
@@ -247,7 +252,10 @@ export const blogExploreHubs = async (
   const index = await loadDestinationIndex();
   const areaId = itineraryAreaForBlogText([post.slug, post.title, ...(post.categories ?? [])].join(' '));
   const area = areaId ? itineraries.flatMap(g => g.itinerary).find(a => a.id === areaId) : null;
-  const itinerary = area ? { href: `${localePrefix(locale)}/itineraries/${area.id}`, area: area.sailingArea } : null;
+  // The area's name in this locale, as the itinerary page heads it (audit B16).
+  const itinerary = area
+    ? { href: `${localePrefix(locale)}/itineraries/${area.id}`, area: await itineraryAreaName(locale, area) }
+    : null;
 
   if (!index) return { hubs: [], itinerary };
 

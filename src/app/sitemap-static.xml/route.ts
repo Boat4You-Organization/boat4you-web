@@ -13,8 +13,9 @@ export async function GET() {
     { path: '/contact-us', priority: '0.5', changefreq: 'monthly' },
     { path: '/faq', priority: '0.5', changefreq: 'monthly' },
     { path: '/how-we-work', priority: '0.3', changefreq: 'yearly' },
-    { path: '/privacy-policy', priority: '0.4', changefreq: 'monthly' },
-    { path: '/terms-and-conditions', priority: '0.4', changefreq: 'monthly' },
+    // No /privacy-policy or /terms-and-conditions: both pages are
+    // noindex,nofollow by choice, and a sitemap must list only URLs the page
+    // lets Google index (18 contradicting URLs in the 26.9.2026 audit, B07).
     { path: '/search', priority: '0.4', changefreq: 'monthly' },
     // Crawlable fleet directory — the hub that links every promoted boat.
     // Only page 1 is listed here; /fleet/2… are reached by the in-page

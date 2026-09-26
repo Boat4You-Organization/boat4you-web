@@ -21,9 +21,10 @@ const RouteDayDetailedJourney = dynamic(() => import('@/views/Itineraries/RouteD
 
 interface Props {
   route: ItineraryRoute;
+  /** The sailing area's name in the page locale (itineraryAreaName). */
   sailingArea: string;
   itinerarySlug: string;
-  /** Country label from the itineraries config group — feeds the PDF cover. */
+  /** The area's country in the page locale (itineraryCountryName) — feeds the PDF cover. */
   country: string;
   /** did-carrying /search link for the starting point (resolved server-side —
    *  a bare ?destinations= does not filter the listing). */

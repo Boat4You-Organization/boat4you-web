@@ -1,9 +1,9 @@
 import { List, ListItem, Stack, Typography } from '@mui/material';
 import cx from 'clsx';
 import { useTranslations } from 'next-intl';
-import Link from 'next/link';
 
 import { FooterSection } from '@/config/footerMenu';
+import { Link } from '@/i18n/navigation';
 import colors from '@/styles/themes/colors';
 import { NavigationLink } from '@/types/navigation-link';
 

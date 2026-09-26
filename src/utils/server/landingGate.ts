@@ -11,7 +11,7 @@ import {
   ResolvedDestination,
   fleetCountForDid,
   fleetTotalForDid,
-  loadDestinationIndex,
+  requireDestinationIndex,
   resolveDestinationName,
 } from '@/utils/server/destinationDid';
 import { aliasNamesForDestSlug, parseCuratedFileSlug, slugifyDestination } from '@/utils/static/curatedSeoSlug';
@@ -131,6 +131,11 @@ const inOffer = async (resolved: ResolvedDestination): Promise<boolean> => {
   return resolved.kind !== LocationType.COUNTRY && fleetIsPromoted(resolved.dids.join(','), resolved.count);
 };
 
+/**
+ * The index gate of one landing. Throws CatalogueUnavailableError when a
+ * fleet count or the catalogue cannot be read — a failed query used to read
+ * as 0 boats, which gated a live landing out (noindex, out of the sitemap).
+ */
 export const evaluateLanding = async (
   resolved: ResolvedDestination | null,
   boatType: VesselType | null,
@@ -175,9 +180,10 @@ export const evaluateLanding = async (
 
   if (fleet < MIN_LANDING_FLEET) return { fleet, indexableLocales: [] };
 
-  const index = indexArg ?? (await loadDestinationIndex());
-
-  if (!index) return { fleet, indexableLocales: [] };
+  // An unreadable catalogue throws (CatalogueUnavailableError) instead of
+  // gating the landing out: the gate decides index vs noindex, and an outage
+  // must never read as "noindex" (audit B01).
+  const index = indexArg ?? (await requireDestinationIndex());
 
   const owned = await Promise.all(files.map(file => (file ? ownsCuratedFile(index, resolved.name, file) : false)));
 

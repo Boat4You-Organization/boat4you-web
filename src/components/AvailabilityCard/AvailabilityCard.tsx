@@ -2,6 +2,7 @@
 
 import { Box, Stack, Typography } from '@mui/material';
 import dayjs from 'dayjs';
+import { useLocale } from 'next-intl';
 
 import {
   WeekData,
@@ -33,6 +34,8 @@ interface AvailabilityCardProps {
  * horizontal overflow.
  */
 const AvailabilityCard = ({ w, selected, onClick, size = 'desktop' }: AvailabilityCardProps) => {
+  // Page locale for the price (same format as the listing cards, B26).
+  const locale = useLocale();
   // Both RESERVATION ('booked') and SERVICE ('service') are hard-blocked: the
   // card is disabled (no click, grey price). The status pill text still
   // differentiates the two via statusLabel/statusColor (Reserved vs Unavailable).
@@ -179,7 +182,7 @@ const AvailabilityCard = ({ w, selected, onClick, size = 'desktop' }: Availabili
                 fontFeatureSettings: '"tnum"',
               }}
             >
-              {fmtPrice(regular, w.currency)}
+              {fmtPrice(regular, w.currency, locale)}
             </Typography>
             <Box
               component="span"
@@ -212,7 +215,7 @@ const AvailabilityCard = ({ w, selected, onClick, size = 'desktop' }: Availabili
               "Unavailable" gap filler, Mario 24.6.2026) shows an em-dash
               instead of a misleading "0 €"; real reserved weeks keep their
               greyed price. */}
-          {isBooked && w.price <= 0 ? '—' : fmtPrice(w.price, w.currency)}
+          {isBooked && w.price <= 0 ? '—' : fmtPrice(w.price, w.currency, locale)}
         </Typography>
       </Box>
     </Box>

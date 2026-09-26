@@ -12,6 +12,7 @@ import { LocaleType } from '@/config/locales.config';
 import { isOneWayItinerary } from '@/helper/itineraryDaysHelper';
 import { itineraryNamespace, resolveDayText, resolveRouteText } from '@/helper/itineraryI18n';
 import { itinerarySearchPath } from '@/utils/server/itineraryBoats';
+import { itineraryAreaName, itineraryCountryName } from '@/utils/server/itineraryPlaceNames';
 import { buildBreadcrumbJsonLd, buildTouristTripJsonLd } from '@/utils/static/buildItineraryJsonLd';
 import { buildMetadata } from '@/utils/static/buildMetadata';
 import { serializeJsonLd } from '@/utils/static/serializeJsonLd';
@@ -106,11 +107,18 @@ const ItineraryRoutePage = async ({ params }: ItineraryRoutePageParams) => {
     namespace: itineraryNamespace(itineraryRoute),
   });
   const routeMetaDesc = resolveRouteText(itineraryRoute, 'metaDesc', itineraryRoute.metaDesc, tRoute);
+  // The area and country in this locale for every visible label, the PDF and
+  // the JSON-LD — the config's English names read "Alle Routen ab Cyclades"
+  // on /de (audit B16, itineraryPlaceNames.ts).
+  const [areaLabel, countryLabel] = await Promise.all([
+    itineraryAreaName(locale, parent),
+    itineraryCountryName(locale, country ?? 'Europe'),
+  ]);
 
   const breadcrumbLd = buildBreadcrumbJsonLd([
     { name: t('breadcrumb.home'), url: '/' },
     { name: t('breadcrumb.itinerary'), url: '/itineraries' },
-    { name: `${parent.sailingArea} ${t('breadcrumb.areaSuffix')}`, url: `/itineraries/${parent.id}` },
+    { name: `${areaLabel} ${t('breadcrumb.areaSuffix')}`, url: `/itineraries/${parent.id}` },
     {
       name: [itineraryRoute.startingPoint, ...itineraryRoute.otherPoints].join(' – '),
       url: `/itineraries/${parent.id}/${itineraryRoute.id}`,
@@ -130,11 +138,11 @@ const ItineraryRoutePage = async ({ params }: ItineraryRoutePageParams) => {
   // namespace so the machine-facing JSON-LD matches the active locale.
   const tripDays = itineraryRoute.numberOfDays ?? itineraryRoute.routeDays?.length ?? 7;
   const tripRouteTitle = [itineraryRoute.startingPoint, ...itineraryRoute.otherPoints].join(' – ');
-  const tripL10nName = t('tripLd.name', { days: tripDays, area: parent.sailingArea, route: tripRouteTitle });
+  const tripL10nName = t('tripLd.name', { days: tripDays, area: areaLabel, route: tripRouteTitle });
   const tripL10nDescription = t('tripLd.description', {
     days: tripDays,
-    area: parent.sailingArea,
-    country: country ?? 'Europe',
+    area: areaLabel,
+    country: countryLabel,
     start: itineraryRoute.startingPoint,
   });
 
@@ -164,7 +172,7 @@ const ItineraryRoutePage = async ({ params }: ItineraryRoutePageParams) => {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(breadcrumbLd) }} />
         <ItineraryHero
           kicker={oneWay ? t('routeHero.kickerOneWay', { days }) : t('routeHero.kickerRoundTrip', { days })}
-          eyebrow={t('routeHero.eyebrow', { area: parent.sailingArea })}
+          eyebrow={t('routeHero.eyebrow', { area: areaLabel })}
           title={itineraryRoute.startingPoint}
           italic={
             itineraryRoute.otherPoints?.length
@@ -179,9 +187,9 @@ const ItineraryRoutePage = async ({ params }: ItineraryRoutePageParams) => {
         />
         <RouteDetailContent
           route={itineraryRoute}
-          sailingArea={parent.sailingArea}
+          sailingArea={areaLabel}
           itinerarySlug={parent.id}
-          country={country ?? 'Europe'}
+          country={countryLabel}
           boatsSearchHref={boatsSearchHref}
         />
         <ItineraryBoats

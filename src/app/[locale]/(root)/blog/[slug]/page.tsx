@@ -13,9 +13,10 @@ import { meta } from '@/config/meta';
 import { routing } from '@/i18n/routing';
 import { getBlog, getBlogWithSEO } from '@/lib/api';
 import { blogExploreHubs, rewriteBlogCatalogueLinks } from '@/utils/server/blogCatalogueLinks';
-import { buildBlogPostingLd, extractFaqLd } from '@/utils/static/blogJsonLd';
+import { buildBlogBreadcrumbLd, buildBlogPostingLd, extractFaqLd } from '@/utils/static/blogJsonLd';
 import { buildMetadata, localizedUrl } from '@/utils/static/buildMetadata';
 import { decodeHtmlEntities } from '@/utils/static/decodeHtmlEntities';
+import { serializeJsonLd } from '@/utils/static/jsonLd';
 import { stripBrandSuffix } from '@/utils/static/stripBrandSuffix';
 import RelatedBlogSection from '@/views/Blog/RelatedBlogSection';
 
@@ -113,6 +114,7 @@ const SingleBlogPage = async ({ params }: { params: Promise<{ slug: string; loca
   // data — the boat/itinerary pages already describe themselves with schema,
   // blog posts were the one editorial surface without it (AI-guide audit 25.8).
   const blogPostingLd = buildBlogPostingLd(blog.post);
+  const breadcrumbLd = buildBlogBreadcrumbLd(blog.post);
   const faqLd = extractFaqLd(blog.post.content);
   const categoryText = blog.post.categories?.nodes?.map(c => `${c.slug} ${c.name}`);
 
@@ -134,6 +136,11 @@ const SingleBlogPage = async ({ params }: { params: Promise<{ slug: string; loca
         // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingLd) }}
       />
+      <script
+        type="application/ld+json"
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{ __html: serializeJsonLd(breadcrumbLd) }}
+      />
       {faqLd && (
         <script
           type="application/ld+json"
@@ -149,7 +156,7 @@ const SingleBlogPage = async ({ params }: { params: Promise<{ slug: string; loca
           </Box>
         </Container>
       )}
-      <RelatedItineraries title={blog.post.title} slug={blog.post.slug} categories={categoryText} />
+      <RelatedItineraries title={blog.post.title} slug={blog.post.slug} categories={categoryText} locale={locale} />
       <RelatedBlogSection posts={blog.posts} />
     </Layout>
   );

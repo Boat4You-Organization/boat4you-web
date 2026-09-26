@@ -30,7 +30,10 @@ export const buildBoatDescription = (
   t: BoatDescTranslate,
   { name, marina, cabins, berths, guests }: BoatDescInput
 ): string => {
-  const lead = marina ? t('descLeadFrom', { name, marina }) : t('descLead', { name });
+  // "Marina Villa Igiea | Palermo" (the partner's base format) reads as
+  // "Marina Villa Igiea, Palermo" in a sentence.
+  const base = marina?.replace(/\s*\|\s*/g, ', ').trim();
+  const lead = base ? t('descLeadFrom', { name, marina: base }) : t('descLead', { name });
   const specs: string[] = [];
 
   if (cabins != null) specs.push(t('descCabins', { count: cabins }));
