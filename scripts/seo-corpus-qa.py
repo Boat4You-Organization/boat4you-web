@@ -33,6 +33,16 @@ Rules (all locales unless noted), in this order:
              "only", "moins de", "nur") stays, one set off by a dash or colon
              gets a size phrase ("—hundreds of vessels—")
   headings   untranslated place names in headings (non-EN)
+  prune, junk, operators, inland, claims2, links, dupes, edits
+             added after the 26.9.2026 audit — see scripts/seo_corpus_rules.py
+             (charter-company names, houseboat/canal copy, fleet-ownership
+             claims, broken/relative/stale-did links, page furniture)
+
+After the fixers, every file is checked (seo_corpus_rules.checks): operator
+names, inland terms, ownership claims, broken hrefs, did/label mismatch,
+nested links, Cyrillic, English text in a translation, a translation about
+other places than its EN source, duplicate paragraphs/headings. Any finding
+fails --check.
 
 Unfilled page templates (PLACEHOLDER / "Key Advantage Section 1") are only
 reported, and fail --check: they must be written or removed by hand.
@@ -42,29 +52,38 @@ Usage:
   python3 scripts/seo-corpus-qa.py --check    # report only; exit 1 if anything would change
   python3 scripts/seo-corpus-qa.py --log changes.tsv   # every change: rule, file, before, after
   python3 scripts/seo-corpus-qa.py --only faq,facts
+  python3 scripts/seo-corpus-qa.py --report findings.tsv   # every check finding
+  python3 scripts/seo-corpus-qa.py --refresh-locations     # re-snapshot /public/locations first
 """
 
 import argparse
 import collections
 import html
+import json
 import os
 import re
 import sys
+import urllib.request
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import seo_corpus_rules as R  # noqa: E402
 
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'public', 'seo-content')
 LOCALES = ['en', 'de', 'fr', 'it', 'es', 'pt', 'nl', 'pl', 'hr']
 # brand runs before facts/counts: a restored "Boat4You's … base" or
 # "Boat4You's 395-yacht" is then handled in the same pass.
-RULES = ['foreign', 'structure', 'faq', 'brand', 'facts', 'claims', 'counts', 'headings']
+RULES = ['foreign', 'structure', 'faq', 'brand', 'facts', 'claims', 'counts', 'headings',
+         'junk', 'operators', 'inland', 'claims2', 'links', 'dupes', 'edits']
 
 
 class Ctx:
     """Per-file context: locale, file name, change log."""
 
-    def __init__(self, locale, name, log):
+    def __init__(self, locale, name, log, corpus_slugs=frozenset()):
         self.locale = locale
         self.name = name
         self.log = log
+        self.corpus_slugs = corpus_slugs
 
     def record(self, rule, before, after, context=''):
         self.log.append((rule, f'{self.locale}/{self.name}', before, after, context))
@@ -1476,6 +1495,13 @@ def rule_functions():
         'headings': fix_headings,
         'brand': fix_brand,
         'claims': fix_claims,
+        'junk': R.fix_junk,
+        'operators': R.fix_operators,
+        'inland': R.fix_inland,
+        'claims2': R.fix_claims2,
+        'links': R.fix_links,
+        'dupes': R.fix_dupes,
+        'edits': R.fix_edits,
     }
 
 
@@ -1485,7 +1511,20 @@ def main():
     ap.add_argument('--log', help='write every change as TSV (rule, file, before, after)')
     ap.add_argument('--only', help='comma-separated subset of rules: ' + ','.join(RULES))
     ap.add_argument('--root', default=ROOT)
+    ap.add_argument('--report', help='write every check finding as TSV (check, file, excerpt)')
+    ap.add_argument('--refresh-locations', action='store_true',
+                    help='re-snapshot /public/locations into scripts/seo-corpus-locations.json first')
     args = ap.parse_args()
+
+    if args.refresh_locations:
+        api = os.environ.get('NEXT_PUBLIC_BOAT_WS_API_URL', 'https://api.boat4you.com')
+        with urllib.request.urlopen(f'{api}/public/locations?size=5000', timeout=60) as resp:
+            rows = json.load(resp)['content']
+        rows = sorted(({'id': r['id'], 'name': r['name'], 'type': r['locationType'], 'cc': r.get('countryCode')}
+                       for r in rows), key=lambda r: r['id'])
+        with open(R.LOCATIONS_FILE, 'w', encoding='utf-8') as fh:
+            fh.write('[\n' + ',\n'.join(json.dumps(r, ensure_ascii=False) for r in rows) + '\n]\n')
+        print(f'locations snapshot: {len(rows)} rows')
 
     selected = [r for r in RULES if not args.only or r in args.only.split(',')]
     funcs = rule_functions()
@@ -1494,17 +1533,31 @@ def main():
     per_rule = collections.defaultdict(collections.Counter)
     files_per_rule = collections.defaultdict(lambda: collections.defaultdict(set))
     scanned = collections.Counter()
+    findings = []
+    en_text = {}
+
+    # prune: pages about inland waterways only, and non-HTML files
+    pruned = R.prune_targets(args.root) if (not args.only or 'prune' in args.only.split(',')) else []
+    for locale, name, reason in pruned:
+        log.append(('prune', f'{locale}/{name}', reason, '(file deleted)', ''))
+        per_rule['prune'][locale] += 1
+        files_per_rule['prune'][locale].add(name)
+        changed[locale] += 1
+        if not args.check:
+            os.remove(os.path.join(args.root, locale, name))
+    pruned_set = {(l, n) for l, n, _ in pruned}
+    corpus_slugs = frozenset(n[:-5] for n in os.listdir(os.path.join(args.root, 'en')) if n.endswith('.html'))
 
     for locale in LOCALES:
         folder = os.path.join(args.root, locale)
         for name in sorted(os.listdir(folder)):
-            if not name.endswith('.html'):
+            if not name.endswith('.html') or (locale, name) in pruned_set:
                 continue
             path = os.path.join(folder, name)
             with open(path, encoding='utf-8') as fh:
                 original = fh.read()
             scanned[locale] += 1
-            ctx = Ctx(locale, name, log)
+            ctx = Ctx(locale, name, log, corpus_slugs)
             text = original
             for rule in selected:
                 before_len = len(log)
@@ -1518,10 +1571,14 @@ def main():
                 if not args.check:
                     with open(path, 'w', encoding='utf-8') as fh:
                         fh.write(text)
+            if locale == 'en':
+                en_text[name] = text
+            for check, excerpt in R.checks(text, locale, name, en_text.get(name)):
+                findings.append((check, f'{locale}/{name}', squash(excerpt)))
 
-    width = max(len(r) for r in RULES)
+    width = max(len(r) for r in RULES + ['prune'])
     print(f"{'rule':<{width}}  " + ' '.join(f'{l:>6}' for l in LOCALES) + '   total  (changes / files)')
-    for rule in selected:
+    for rule in (['prune'] if pruned else []) + selected:
         cells = [f'{per_rule[rule][l]:>6}' for l in LOCALES]
         total = sum(per_rule[rule].values())
         nfiles = sum(len(v) for v in files_per_rule[rule].values())
@@ -1561,7 +1618,22 @@ def main():
                 cells = [rule, f, before, after, context]
                 fh.write('\t'.join(squash(c).replace('\t', ' ') for c in cells) + '\n')
 
-    if args.check and (sum(changed.values()) or templates):
+    by_check = collections.Counter(c for c, _, _ in findings)
+    files_by_check = collections.defaultdict(set)
+    for check, f, _ in findings:
+        files_by_check[check].add(f)
+    print(f'check findings: {len(findings)}' + ('' if not findings else ' — ' + ', '.join(
+        f'{c} {n} ({len(files_by_check[c])} files)' for c, n in by_check.most_common())))
+    for check, _ in by_check.most_common():
+        for c, f, excerpt in [x for x in findings if x[0] == check][:3]:
+            print(f'  {c:<22} {f}: {excerpt[:150]}')
+    if args.report:
+        with open(args.report, 'w', encoding='utf-8') as fh:
+            fh.write('check\tfile\texcerpt\n')
+            for c, f, excerpt in findings:
+                fh.write(f'{c}\t{f}\t{excerpt}\n')
+
+    if args.check and (sum(changed.values()) or templates or findings):
         sys.exit(1)
 
 
