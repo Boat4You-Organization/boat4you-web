@@ -15,6 +15,7 @@ import { LandingCrumb, landingCrumbs, placeForDids } from '@/utils/server/landin
 import {
   SearchLanding,
   landingFetchRevalidate,
+  listsWholeLanding,
   resolveSearchLanding,
   splitSearchParam,
   uniqueCaseInsensitive,
@@ -334,8 +335,12 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
 
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.boat4you.com';
   const currency = (params.currency as Currency) || Currency.EUR;
-  // Charter facts block — only on landings the index gate lets Google index here.
-  const charterFacts = await charterFactsTargetFor(landing, singleBoatType, boatTypes.length, locale);
+  // Charter facts block — only on landings the index gate lets Google index
+  // here, and only when the page lists the landing's whole set (no dates or
+  // filters): the block's figures and its boat count are the whole place's.
+  const charterFacts = listsWholeLanding(params)
+    ? await charterFactsTargetFor(landing, singleBoatType, boatTypes.length, locale)
+    : null;
 
   // A destination landing: one catalogue place that can carry a landing URL
   // (an unresolved value is raw URL input), at most one known boat type — or

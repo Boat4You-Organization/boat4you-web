@@ -19,6 +19,8 @@ export interface CharterFactsTarget {
   vesselType: VesselType | null;
   /** Place name as the page shows it (localised for countries). */
   areaLabel: string;
+  /** ISO country of the place: the sailing season a month ranking must fit (factsMath.ts). */
+  countryCode: string | null;
   /** Every did the landing lists (dual-source places have several) — the
    *  listing facets the model counts are read from. */
   placeDids: string[];
@@ -30,8 +32,10 @@ interface CharterFactsBlockProps {
   /** Page currency; figures are converted only when `rate` (EUR → currency) is known. */
   currency: Currency;
   rate: number | null;
-  /** The listing total the page's count H2 shows; the "boats for charter"
-   *  tile repeats it so the page states one number (audit B12). */
+  /** The landing's listing total, the number its count H2 shows; the "boats
+   *  for charter" tile repeats it so the page states one number (audit B12).
+   *  The block is rendered on unfiltered, undated landings only (search
+   *  page), so this is never a filtered or dated count. */
   listingTotal?: number | null;
 }
 
@@ -117,10 +121,11 @@ const CharterFactsBlock = async ({ target, locale, currency, rate, listingTotal 
     : null;
   const heading = t('heading', { area: typeLabel ? `${target.areaLabel} · ${typeLabel}` : target.areaLabel });
 
-  // Only months with a real sample and a real price are shown or ranked,
-  // and the ranking is taken from those months (factsMath.ts, audit B11).
-  const months = reliableMonths(facts.priceByMonth ?? []);
-  const ranking = monthRanking(months);
+  // Only full months with a real sample and a real price are shown; a month
+  // is named cheapest / priciest only under the rules in factsMath.ts (B11).
+  const shownMonths = reliableMonths(facts);
+  const { months } = shownMonths;
+  const ranking = monthRanking(shownMonths, target.countryCode);
   const checkIn = (facts.checkInDays ?? [])
     .filter(d => d.share >= MIN_DAY_SHARE)
     .sort((a, b) => b.share - a.share)
@@ -278,9 +283,10 @@ const CharterFactsBlock = async ({ target, locale, currency, rate, listingTotal 
               {/* HR month names end with the ordinal dot ("listopad 2026."),
                   which met the sentence's own full stop ("2026.."). */}
               {[
-                t('cheapestMonth', { month: monthName(ranking.cheapest) }),
-                t('priciestMonth', { month: monthName(ranking.priciest) }),
+                ranking.cheapest ? t('cheapestMonth', { month: monthName(ranking.cheapest) }) : null,
+                ranking.priciest ? t('priciestMonth', { month: monthName(ranking.priciest) }) : null,
               ]
+                .filter(Boolean)
                 .join(' ')
                 .replace(/\.\./g, '.')}
             </p>
