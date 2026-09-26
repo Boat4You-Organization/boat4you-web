@@ -1,6 +1,6 @@
-import { loadDestinationIndex } from '@/utils/server/destinationDid';
+import { requireDestinationIndex } from '@/utils/server/destinationDid';
 import { getLandingManifest } from '@/utils/server/landingManifest';
-import { EMPTY_URLSET, XML_HEADERS, landingUrlRows, urlset } from '@/utils/server/sitemapXml';
+import { XML_HEADERS, landingUrlRows, urlset } from '@/utils/server/sitemapXml';
 
 export const revalidate = 3600;
 
@@ -17,16 +17,13 @@ export const revalidate = 3600;
 export async function GET() {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
 
-  try {
-    const index = await loadDestinationIndex();
+  // No catch (audit B08) — see sitemap-locations: a failure throws, so ISR
+  // keeps the last good copy instead of caching an empty <urlset> for an hour.
+  const index = await requireDestinationIndex();
+  const manifest = await getLandingManifest(index);
+  const rows = landingUrlRows(baseUrl, manifest.typed);
 
-    if (!index) return new Response(EMPTY_URLSET, { headers: XML_HEADERS });
+  if (!rows) throw new Error('sitemap-categories: no indexable destination × boat type landing');
 
-    const manifest = await getLandingManifest(index);
-    const rows = landingUrlRows(baseUrl, manifest.typed);
-
-    return new Response(rows ? urlset(rows) : EMPTY_URLSET, { headers: XML_HEADERS });
-  } catch {
-    return new Response(EMPTY_URLSET, { headers: XML_HEADERS });
-  }
+  return new Response(urlset(rows), { headers: XML_HEADERS });
 }

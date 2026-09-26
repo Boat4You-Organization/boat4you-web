@@ -38,10 +38,58 @@ const withNextIntl = createNextIntlPlugin({
   },
 });
 
+// Crawlers that must get the page metadata (title, meta robots, canonical,
+// hreflang, description) inside <head>. Next 16 streams metadata for every
+// other user agent: the <head> is flushed first and the tags arrive later in
+// <body> once generateMetadata resolves. Next's built-in list
+// (HTML_LIMITED_BOT_UA_RE in next/dist/shared/lib/router/utils/html-bots.js,
+// copied verbatim as the first alternative below) covers Bingbot and the
+// "-Google" crawlers but NOT "Googlebot/2.1" itself, so on cold renders the
+// real Googlebot read title/robots/canonical/hreflang after </head> — 27 of
+// 40 blog posts and the long tail of boat pages in the 26.9.2026 crawl (B06).
+// Search and AI crawlers are added explicitly; none of them should have to
+// execute JS or accept head tags in the body to see our metadata. Humans keep
+// streaming (fast first byte). Verified with a cold Googlebot fetch: the
+// <title> sits before </head>.
+const NEXT_DEFAULT_HTML_LIMITED_BOTS =
+  '[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight';
+const EXTRA_HTML_LIMITED_BOTS = [
+  'Googlebot',
+  'Storebot-Google',
+  'GoogleOther',
+  'bingbot',
+  'msnbot',
+  'adidxbot',
+  'SeznamBot',
+  'Qwantbot',
+  'Qwantify',
+  'Ecosia',
+  'MojeekBot',
+  'PetalBot',
+  'Amazonbot',
+  'GPTBot',
+  'OAI-SearchBot',
+  'ChatGPT-User',
+  'ClaudeBot',
+  'Claude-User',
+  'Claude-SearchBot',
+  'PerplexityBot',
+  'Perplexity-User',
+  'CCBot',
+  'Bytespider',
+  'meta-externalagent',
+  'DuckAssistBot',
+  'YouBot',
+  'AhrefsBot',
+  'SemrushBot',
+];
+const HTML_LIMITED_BOTS = new RegExp(`${NEXT_DEFAULT_HTML_LIMITED_BOTS}|${EXTRA_HTML_LIMITED_BOTS.join('|')}`, 'i');
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
+  htmlLimitedBots: HTML_LIMITED_BOTS,
   // Home SSG (9 locales, live API fetches) needs >60s per page when the
   // build machine is under load from parallel builds — the default 60s
   // limit killed three builds on 17.7.2026 alone. The pages themselves
@@ -185,6 +233,18 @@ const nextConfig = {
       {
         source: '/_next/static/(.*)',
         headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
+      },
+      // Sitemaps (audit B09): the landing/yacht sitemaps regenerate hourly
+      // (ISR), so a 60 s shared-cache window only invited cold re-renders.
+      // Hours of s-maxage plus a day of stale-while-revalidate; overrides the
+      // 60 s rule above (the last matching header wins).
+      {
+        source: '/:sitemap(sitemap\\.xml|sitemap-[a-z]+\\.xml)',
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=0, s-maxage=3600, stale-while-revalidate=86400' }],
+      },
+      {
+        source: '/sitemap-yachts/:page/yacht.xml',
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=0, s-maxage=3600, stale-while-revalidate=86400' }],
       },
       // The curated SEO corpus is raw material for the /search landing pages
       // (read server-side into the SSR HTML since 25.9.2026). Served bare from

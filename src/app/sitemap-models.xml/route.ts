@@ -13,10 +13,6 @@ const XML_HEADERS = {
   'X-Content-Type-Options': 'nosniff',
 };
 
-const EMPTY_SITEMAP = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-</urlset>`;
-
 /**
  * /yachts model layer: the index, the brand hubs (brands with ≥ 2 model
  * pages) and every model page, in all 9 locales — exactly the URLs those
@@ -37,7 +33,9 @@ export async function GET() {
     });
     const models = live.filter((m): m is NonNullable<typeof m> => !!m);
 
-    if (!models.length) return new Response(EMPTY_SITEMAP, { headers: XML_HEADERS });
+    // No model above the fleet floor means the fleet queries failed, not that
+    // the catalogue has no models: never answer an empty <urlset> (B08).
+    if (!models.length) throw new Error('sitemap-models: no model page passed the fleet check');
 
     const liveBrands = catalog.brands
       .map(brand => ({ brand, count: models.filter(m => m.brandSlug === brand.brandSlug).length }))
