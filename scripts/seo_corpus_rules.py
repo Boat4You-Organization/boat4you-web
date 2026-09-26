@@ -237,6 +237,7 @@ LOOKALIKE = str.maketrans({chr(0x430): 'a', chr(0x435): 'e', chr(0x43E): 'o', ch
                            chr(0x41E): 'O', chr(0x420): 'P', chr(0x421): 'C', chr(0x425): 'X', chr(0x406): 'I'})
 _CYR = chr(0x400) + '-' + chr(0x4FF)
 LATIN_WORD_WITH_CYRILLIC = re.compile(rf'\b(?=[\w{_CYR}]*[A-Za-zÀ-ž])(?=[\w{_CYR}]*[{_CYR}])[\w{_CYR}]+\b')
+PLACEHOLDER_LINK = re.compile(r'<a\b[^>]*\shref="#?"[^>]*>((?:(?!</a\s*>)[\s\S])*)</a\s*>')
 BRAND_GAP_EN = [
     (re.compile(r'\b([Hh]ow) operates\b'), r'\1 Boat4You works'),
 ]
@@ -296,6 +297,13 @@ def fix_junk(src, ctx):
 
     body = NESTED_WRAP.sub(wrap, body)
     body = unnest_anchors(body, ctx)
+
+    # Placeholder links (href="#" or empty) lead nowhere: keep the text.
+    def placeholder(m):
+        ctx.record('junk', m.group(0)[:160], m.group(1))
+        return m.group(1)
+
+    body = PLACEHOLDER_LINK.sub(placeholder, body)
 
     # Cyrillic look-alike letters inside Latin words ("Eginе"): transliterated.
     def lookalike(m):
@@ -714,6 +722,30 @@ BRAND_BOATS_EN = re.compile(
     r"\b(?P<q>(?:[Aa]ll|[Mm]odern|[Mm]ost|[Mm]any|[Oo]ur|[Tt]he|[Ee]xperienced)\s+(?:(?:modern|new|experienced)\s+)?)?(?:<strong>|<a\b[^>]*>)?Boat4You(?:</strong>|</a\s*>)?\s+"
     r"(?P<n>(?:sailing |motor |power |luxury |charter |monohull |catamaran )?(?:monohulls|catamarans|yachts|motorboats|gulets|boats|vessels|motor yachts|sailing yachts|fleet|crews))\b(?P<poss>['’](?!s))?")
 
+# "la flotta di catamarani di Boat4You", "die Boat4You-Flotte", "Boat4You
+# flota": Boat4You as the owner of a fleet → our partners.
+_B = r"(?:<strong>|<a\b[^>]*>)?Boat4You(?:</strong>|</a\s*>)?"
+BRAND_FLEET = {
+    'de': [(re.compile(rf"(\b(?:Flotten?)(?:\s+von\s+[\w-]+)?)\s+von\s+{_B}(?![\w-])"), r"\1 unserer Partner"),
+           (re.compile(rf"\b{_B}-(Flotten?|Katamarane|Segelyachten|Yachten|Motoryachten|Motorboote|Boote)\b"), r"\1 unserer Partner"),
+           (re.compile(r"\b([Uu])nsere\s+((?:Flotten?|Katamarane|Segelyachten|Yachten|Motoryachten|Motorboote|Boote)\s+unserer\s+Partner)\b"), lambda m: ('Die ' if m.group(1) == 'U' else 'die ') + m.group(2)),
+           (re.compile(r"\b([Uu])nserer\s+((?:Flotten?)\s+unserer\s+Partner)\b"), lambda m: ('Der ' if m.group(1) == 'U' else 'der ') + m.group(2))],
+    'fr': [(re.compile(rf"\b(catamarans|voiliers|bateaux|yachts|vedettes)\s+{_B}\s+(modernes|récents|récentes)\b"), r"\1 \2 de nos partenaires"),
+           (re.compile(rf"(\b[Ff]lottes?(?:\s+de\s+[\w'-]+(?:\s+à\s+moteur)?)?)\s+de\s+{_B}(?![\w-])"), r"\1 de nos partenaires"),
+           (re.compile(rf"\b(catamarans|voiliers|bateaux|yachts|vedettes)\s+{_B}(?![\w-])"), r"\1 de nos partenaires")],
+    'it': [(re.compile(rf"(\b[Ff]lott[ae](?:\s+(?:di\s+[\w'-]+|velica|a\s+motore)(?:\s+a\s+(?:vela|motore))?)?)\s+di\s+{_B}(?![\w-])"), r"\1 dei nostri partner")],
+    'es': [(re.compile(rf"(\b[Ff]lotas?)\s+de\s+nuestros\s+socios\s+de\s+{_B}(?![\w-])"), r"\1 de nuestros socios"),
+           (re.compile(rf"(\b[Ff]lotas?(?:\s+de\s+[\w-]+(?:\s+(?:motoras|de\s+vela|a\s+motor))?)?(?:</a\s*>)?)\s+de\s+{_B}(?![\w-])"), r"\1 de nuestros socios")],
+    'pt': [(re.compile(rf"(\b[Ff]rotas?(?:\s+de\s+[\w-]+(?:\s+a\s+motor)?)?)\s+da\s+{_B}(?![\w-])"), r"\1 dos nossos parceiros")],
+    'nl': [(re.compile(rf"(\b[Vv]lo(?:ot|ten)(?:\s+van\s+[\w-]+)?)\s+van\s+{_B}(?![\w-])"), r"\1 van onze partners"),
+           (re.compile(rf"\b{_B}-(vloot|vloten|catamarans|jachten|zeiljachten|motorboten|motorjachten)\b"), r"\1 van onze partners"),
+           (re.compile(r"\b([Oo])nze\s+((?:vloot|vloten|catamarans|jachten|zeiljachten|motorboten|motorjachten)\s+van\s+onze\s+partners)\b"), lambda m: ('De ' if m.group(1) == 'O' else 'de ') + m.group(2))],
+    'pl': [(re.compile(rf"(\b[Ff]lot\w*(?:</a\s*>)?(?:\s+(?:<strong>)?[\wąćęłńóśźż]+(?:ów|ych|ich|i)(?:</strong>)?){{0,2}})\s+{_B}(?![\w-])"), r"\1 naszych partnerów")],
+    'hr': [(re.compile(rf"(\b[Ff]lot\w*(?:</a\s*>)?(?:\s+(?:<strong>)?[\wčćđšž]+(?:a|ih)(?:</strong>)?){{0,2}})\s+{_B}(?![\w-])"), r"\1 naših partnera"),
+           (re.compile(rf"\b{_B}(?:ova|ove|ovu|ovoj|ovom)?\s+(flot\w*)\b"), r"\1 naših partnera")],
+}
+
+
 # Strong operator verbs: Boat4You never operates boats or charters.
 OPERATE = {
     'en': r'operates(?!\s+as\b)',
@@ -853,6 +885,19 @@ def fix_claims2(src, ctx):
             return new
 
         body = BRAND_BOATS_EN.sub(brand_boats, body)
+
+    # 1c) possessive "fleet of Boat4You" in the translations
+    for pattern, repl in BRAND_FLEET.get(loc, []):
+        body_now = body
+
+        def brand_fleet(m, repl=repl):
+            new = repl(m) if callable(repl) else m.expand(repl)
+            if at_sentence_start(body_now, m.start()):
+                new = new[:1].upper() + new[1:]
+            ctx.record('claims2', plain(m.group(0)), plain(new))
+            return new
+
+        body = pattern.sub(brand_fleet, body)
 
     # 2) Boat4You operates … / maintains rigorous standards … → partner network
     body_now = body
@@ -1299,6 +1344,11 @@ def checks(src, locale, name, en_src=None):
     if locale == 'en':
         for m in BRAND_BOATS_EN.finditer(text):
             add('claim-brand-boats', m, text)
+    for bm in BLOCK.finditer(body):
+        block_text = plain(bm.group(3))
+        for pattern, _ in BRAND_FLEET.get(locale, []):
+            for m in pattern.finditer(block_text):
+                add('claim-brand-fleet', m, block_text)
     for sentence in re.split(r'(?<=[.!?])\s+', text):
         if 'Boat4You' in sentence and FOUNDED.search(sentence):
             out.append(('founded', sentence[:160]))
@@ -1309,6 +1359,9 @@ def checks(src, locale, name, en_src=None):
     for m in ANCHOR.finditer(body):
         raw = html.unescape(m.group('href'))
         path_q = re.sub(r'^https?://(?:www\.)?boat4you\.com', '', raw)
+        if raw in ('#', ''):
+            out.append(('href-dead', 'placeholder href="' + raw + '"'))
+            continue
         if raw.startswith(('mailto:', 'tel:', '#')) or re.match(r'^https?://', path_q):
             continue
         path = path_q.split('?')[0].split('#')[0]
