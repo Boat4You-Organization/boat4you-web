@@ -46,7 +46,6 @@ export const COUNTRY_TO_NAMESPACE: Record<string, string> = {
   montenegro: 'itineraryMontenegro',
   seychelles: 'itinerarySeychelles',
   thailand: 'itineraryThailand',
-  netherlands: 'itineraryNetherlands',
   germany: 'itineraryGermany',
 };
 
@@ -82,7 +81,6 @@ export type ItineraryNamespace =
   | 'itineraryMontenegro'
   | 'itinerarySeychelles'
   | 'itineraryThailand'
-  | 'itineraryNetherlands'
   | 'itineraryGermany';
 
 /** Narrow a stamped area/route to its typed namespace (config fallback). */

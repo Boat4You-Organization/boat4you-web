@@ -44,7 +44,7 @@ However, outside of the peak periods we have more flexibility. In off-season or 
 
 Similarly, in tropical destinations during hurricane/off-peak season, or in winter for places like the Caribbean, shorter charters might be possible.
 
-If you only have time for a 3-5 day trip, let us know – we will check with our fleet and try to accommodate you. We might suggest a catamaran or motor yacht (as some of those have more flexible schedules or are privately managed and open to non-weekly plans).
+If you only have time for a 3-5 day trip, let us know – we will check with our charter partners and try to accommodate you. We might suggest a catamaran or motor yacht (as some of those have more flexible schedules or are privately managed and open to non-weekly plans).
 
 Do note that if you book a shorter charter, the daily rate can sometimes be slightly higher than the pro-rata weekly rate, or there may be a minimum charge (e.g. 4 days minimum billing). We will always be upfront about the cost. In any case, we strive to be flexible so you can enjoy a yacht experience even if you can't commit to a full week. Just reach out with your preferred dates and we'll find the best option for you.
 

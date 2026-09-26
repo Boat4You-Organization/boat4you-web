@@ -44,7 +44,7 @@ Tuttavia, al di fuori dei periodi di punta abbiamo maggiore flessibilità. Nei m
 
 Allo stesso modo, nelle destinazioni tropicali durante la stagione degli uragani/bassa stagione, o in inverno per luoghi come i Caraibi, i charter più brevi potrebbero essere possibili.
 
-Se hai tempo solo per un viaggio di 3-5 giorni, faccelo sapere – verificheremo con la nostra flotta e cercheremo di accontentarti. Potremmo suggerirti un catamarano o uno yacht a motore (poiché alcuni di essi hanno orari più flessibili o sono gestiti privatamente e aperti a piani non settimanali).
+Se hai tempo solo per un viaggio di 3-5 giorni, faccelo sapere – verificheremo con i nostri partner di noleggio e cercheremo di accontentarti. Potremmo suggerirti un catamarano o uno yacht a motore (poiché alcuni di essi hanno orari più flessibili o sono gestiti privatamente e aperti a piani non settimanali).
 
 Si noti che se prenoti un charter più breve, la tariffa giornaliera può talvolta essere leggermente superiore alla tariffa settimanale pro-rata, oppure potrebbe esserci un addebito minimo (ad esempio, fatturazione minima di 4 giorni). Saremo sempre chiari riguardo al costo. In ogni caso, ci sforziamo di essere flessibili in modo che tu possa goderti un'esperienza in yacht anche se non puoi impegnarti per una settimana intera. Contattaci con le tue date preferite e troveremo l'opzione migliore per te.
 

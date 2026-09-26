@@ -44,7 +44,7 @@ Sin embargo, fuera de los períodos pico tenemos más flexibilidad. En los meses
 
 De manera similar, en destinos tropicales durante la temporada de huracanes/baja, o en invierno para lugares como el Caribe, podrían ser posibles chárteres más cortos.
 
-Si solo tiene tiempo para un viaje de 3 a 5 días, háganoslo saber – consultaremos con nuestra flota e intentaremos acomodarle. Podríamos sugerir un catamarán o un yate a motor (ya que algunos de ellos tienen horarios más flexibles o son gestionados de forma privada y abiertos a planes no semanales).
+Si solo tiene tiempo para un viaje de 3 a 5 días, háganoslo saber – consultaremos con nuestros socios de chárter e intentaremos acomodarle. Podríamos sugerir un catamarán o un yate a motor (ya que algunos de ellos tienen horarios más flexibles o son gestionados de forma privada y abiertos a planes no semanales).
 
 Tenga en cuenta que si reserva un chárter más corto, la tarifa diaria a veces puede ser ligeramente superior a la tarifa semanal prorrateada, o puede haber un cargo mínimo (por ejemplo, facturación mínima de 4 días). Siempre seremos transparentes con el costo. En cualquier caso, nos esforzamos por ser flexibles para que pueda disfrutar de una experiencia en yate incluso si no puede comprometerse a una semana completa. Simplemente contáctenos con sus fechas preferidas y encontraremos la mejor opción para usted.
 

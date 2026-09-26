@@ -44,7 +44,7 @@ Buiten de piekperiodes hebben we echter meer flexibiliteit. In het laagseizoen o
 
 Evenzo kunnen in tropische bestemmingen tijdens het orkaanseizoen/laagseizoen, of in de winter voor plaatsen als het Caribisch gebied, kortere charters mogelijk zijn.
 
-Als u slechts tijd heeft voor een trip van 3-5 dagen, laat het ons weten – we zullen dit navragen bij onze vloot en proberen u te accommoderen. We kunnen een catamaran of motorjacht voorstellen (aangezien sommige daarvan flexibelere schema's hebben of privé beheerd worden en openstaan voor niet-wekelijkse plannen).
+Als u slechts tijd heeft voor een trip van 3-5 dagen, laat het ons weten – we zullen dit navragen bij onze charterpartners en proberen u te accommoderen. We kunnen een catamaran of motorjacht voorstellen (aangezien sommige daarvan flexibelere schema's hebben of privé beheerd worden en openstaan voor niet-wekelijkse plannen).
 
 Houd er rekening mee dat als u een kortere charter boekt, het dagtarief soms iets hoger kan zijn dan het pro rata weektarief, of er kan een minimumbedrag in rekening worden gebracht (bijv. 4 dagen minimale facturering). We zullen altijd open zijn over de kosten. In ieder geval streven we ernaar flexibel te zijn, zodat u kunt genieten van een jachtervaring, zelfs als u zich niet kunt committeren aan een volledige week. Neem gewoon contact met ons op met uw gewenste data en we vinden de beste optie voor u.
 

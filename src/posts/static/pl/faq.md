@@ -44,7 +44,7 @@ Jednak poza szczytowymi okresami mamy większą elastyczność. W miesiącach po
 
 Podobnie, w tropikalnych miejscach podczas sezonu huraganów/poza szczytem, lub zimą w miejscach takich jak Karaiby, krótsze czartery mogą być możliwe.
 
-Jeśli masz czas tylko na 3-5-dniową wycieczkę, daj nam znać – sprawdzimy naszą flotę i postaramy się Cię pomieścić. Możemy zasugerować katamaran lub jacht motorowy (ponieważ niektóre z nich mają bardziej elastyczne harmonogramy lub są zarządzane prywatnie i otwarte na plany inne niż tygodniowe).
+Jeśli masz czas tylko na 3-5-dniową wycieczkę, daj nam znać – sprawdzimy oferty naszych partnerów czarterowych i postaramy się Cię pomieścić. Możemy zasugerować katamaran lub jacht motorowy (ponieważ niektóre z nich mają bardziej elastyczne harmonogramy lub są zarządzane prywatnie i otwarte na plany inne niż tygodniowe).
 
 Należy pamiętać, że jeśli zarezerwujesz krótszy czarter, stawka dzienna może być czasami nieco wyższa niż stawka tygodniowa proporcjonalnie, lub może obowiązywać minimalna opłata (np. naliczenie za minimum 4 dni). Zawsze będziemy szczerzy co do kosztów. W każdym razie staramy się być elastyczni, abyś mógł cieszyć się doświadczeniem na jachcie, nawet jeśli nie możesz zobowiązać się do pełnego tygodnia. Po prostu skontaktuj się z nami, podając preferowane daty, a my znajdziemy dla Ciebie najlepszą opcję.
 
