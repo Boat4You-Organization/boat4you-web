@@ -49,7 +49,7 @@
     },
     "fleet": {
       "title": "Yachtcharter-Flotte im Überblick",
-      "description": "Alle Segelyachten, Katamarane und Motorboote der Boat4You-Flotte — Kroatien, Griechenland, Italien, Frankreich, Türkei, Spanien, Montenegro, Seychellen und Karibik.",
+      "description": "Alle auf Boat4You gelisteten Segelyachten, Katamarane und Motorboote — Kroatien, Griechenland, Italien, Frankreich, Türkei, Spanien, Montenegro, Seychellen und Karibik.",
       "path": "/fleet"
     }
   },
@@ -66,7 +66,7 @@
   },
   "fleet": {
     "heading": "Yachtcharter-Flotte im Überblick",
-    "lede": "Alle Boote unserer Flotte, nach Heimatmarina sortiert — Segelyachten, Katamarane, Motoryachten und Gulets in Kroatien, Griechenland, Italien, Frankreich, der Türkei, Spanien, Montenegro, auf den Seychellen und in der Karibik. Öffnen Sie ein Boot für Fotos, technische Daten, Verfügbarkeit und Preise.",
+    "lede": "Alle auf Boat4You gelisteten Boote, nach Heimatmarina sortiert — Segelyachten, Katamarane, Motoryachten und Gulets in Kroatien, Griechenland, Italien, Frankreich, der Türkei, Spanien, Montenegro, auf den Seychellen und in der Karibik. Öffnen Sie ein Boot für Fotos, technische Daten, Verfügbarkeit und Preise.",
     "summary": "{total, number} Boote · Seite {page} von {pages}",
     "otherBases": "Weitere Basen",
     "cabins": "{count, plural, one {# Kabine} other {# Kabinen}}",

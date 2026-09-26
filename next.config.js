@@ -29,7 +29,6 @@ const withNextIntl = createNextIntlPlugin({
       './messages/en/itineraryMontenegro.json',
       './messages/en/itinerarySeychelles.json',
       './messages/en/itineraryThailand.json',
-      './messages/en/itineraryNetherlands.json',
       './messages/en/itineraryGermany.json',
       './messages/en/models.json',
       './messages/en/charterFacts.json',

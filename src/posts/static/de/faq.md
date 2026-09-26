@@ -44,7 +44,7 @@ Außerhalb der Spitzenzeiten haben wir jedoch mehr Flexibilität. In der **Neben
 
 Ähnlich verhält es sich in tropischen Destinationen während der Hurrikan-/Nebensaison oder im Winter für Orte wie die Karibik, wo kürzere Charter möglich sein könnten.
 
-Wenn Sie nur Zeit für eine 3- bis 5-tägige Reise haben, lassen Sie es uns wissen – wir werden uns mit unserer Flotte in Verbindung setzen und versuchen, Sie unterzubringen. Wir könnten eine Katamaran- oder Motoryacht vorschlagen (da einige von diesen flexiblere Zeitpläne haben oder privat verwaltet werden und für nicht-wöchentliche Pläne offen sind).
+Wenn Sie nur Zeit für eine 3- bis 5-tägige Reise haben, lassen Sie es uns wissen – wir fragen bei unseren Charterpartnern nach und versuchen, Sie unterzubringen. Wir könnten eine Katamaran- oder Motoryacht vorschlagen (da einige von diesen flexiblere Zeitpläne haben oder privat verwaltet werden und für nicht-wöchentliche Pläne offen sind).
 
 Beachten Sie, dass bei Buchung eines kürzeren Charters der Tagespreis manchmal etwas höher sein kann als der anteilige Wochenpreis, oder es kann eine Mindestgebühr geben (z. B. Mindestabrechnung von 4 Tagen). Wir werden Ihnen die Kosten immer transparent mitteilen. Auf jeden Fall sind wir bestrebt, flexibel zu sein, damit Sie ein Yachterlebnis genießen können, auch wenn Sie sich nicht für eine ganze Woche festlegen können. Melden Sie sich einfach mit Ihren bevorzugten Daten bei uns, und wir finden die beste Option für Sie.
 

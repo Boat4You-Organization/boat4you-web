@@ -138,7 +138,7 @@ temporada, ou no inverno para lugares como o Caribe, _charters_ mais
 curtos podem ser possíveis.
 
 Se você só tem tempo para uma viagem de 3-5 dias, avise-nos –
-verificaremos com a nossa frota e tentaremos acomodá-lo. Podemos sugerir
+verificaremos com os nossos parceiros de charter e tentaremos acomodá-lo. Podemos sugerir
 um catamarã ou iate a motor (já que alguns deles têm horários mais
 flexíveis ou são geridos de forma privada e abertos a planos não
 semanais).

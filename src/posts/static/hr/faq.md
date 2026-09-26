@@ -44,7 +44,7 @@ Izvan sezone mogućnosti su fleksibilnije. U proljetnim i jesenskim mjesecima il
 
 Slično vrijedi i za tropske destinacije izvan sezone (npr. tijekom razdoblja uragana), gdje je kraći čarter često moguć.
 
-Ako imate samo 3–5 dana, javite nam se – provjerit ćemo flotu i pokušati vam izaći u susret. Ponekad možemo preporučiti katamaran ili motornu jahtu jer su ti brodovi često fleksibilniji i otvoreni za netjedne planove.
+Ako imate samo 3–5 dana, javite nam se – provjerit ćemo ponudu naših charter partnera i pokušati vam izaći u susret. Ponekad možemo preporučiti katamaran ili motornu jahtu jer su ti brodovi često fleksibilniji i otvoreni za netjedne planove.
 
 Važno je znati da cijena po danu za kraći čarter ponekad može biti nešto viša od proporcionalne tjedne cijene, ili može postojati minimalno trajanje (npr. najmanje 4 dana). Uvijek ćemo biti jasni oko troškova. Naš je cilj omogućiti vam iskustvo jedrenja čak i ako nemate vremena za puni tjedan – samo nam pošaljite datume i pronaći ćemo najbolju opciju za vas.
 

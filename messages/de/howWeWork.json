@@ -7,7 +7,7 @@
   "steps": {
     "step1": {
       "title": "Entdecken Sie Ihr perfektes Boot",
-      "subtitle": "Erkunden Sie unsere kuratierte Flotte",
+      "subtitle": "Entdecken Sie Boote unserer geprüften Partner",
       "items": {
         "item1": "Suchen Sie nach Reiseziel, Bootstyp oder Reisedaten.",
         "item2": "Verwenden Sie intelligente Filter, um genau das zu finden, was Ihren Bedürfnissen entspricht — von Luxuskatamaranen bis familienfreundlichen Motorbooten.",
@@ -16,7 +16,7 @@
       "question": "Brauchen Sie Hilfe bei der Auswahl?",
       "answer": "Unsere Charter-Spezialisten sind nur einen Klick entfernt. Wir helfen Ihnen beim Vergleichen, empfehlen Optionen und leiten Sie an, wenn Sie unsicher sind.",
       "link": {
-        "text": "Unsere Flotte durchsuchen"
+        "text": "Verfügbare Boote durchsuchen"
       }
     },
     "step2": {

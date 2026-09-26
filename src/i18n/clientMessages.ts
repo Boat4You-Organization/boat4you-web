@@ -33,7 +33,6 @@ export const ITINERARY_NAMESPACES = [
   'itineraryMontenegro',
   'itinerarySeychelles',
   'itineraryThailand',
-  'itineraryNetherlands',
   'itineraryGermany',
 ] as const satisfies readonly (keyof Messages)[];
 

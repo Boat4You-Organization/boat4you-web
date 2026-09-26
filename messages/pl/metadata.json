@@ -49,7 +49,7 @@
     },
     "fleet": {
       "title": "Katalog floty czarterowej",
-      "description": "Przejrzyj wszystkie jachty żaglowe, katamarany i łodzie motorowe we flocie Boat4You — Chorwacja, Grecja, Włochy, Francja, Turcja, Hiszpania, Czarnogóra, Seszele i Karaiby.",
+      "description": "Przejrzyj wszystkie jachty żaglowe, katamarany i łodzie motorowe dostępne na Boat4You — Chorwacja, Grecja, Włochy, Francja, Turcja, Hiszpania, Czarnogóra, Seszele i Karaiby.",
       "path": "/fleet"
     }
   },
@@ -66,7 +66,7 @@
   },
   "fleet": {
     "heading": "Katalog floty",
-    "lede": "Wszystkie jednostki naszej floty, uporządkowane według portu macierzystego — jachty żaglowe, katamarany, jachty motorowe i gulety w Chorwacji, Grecji, Włoszech, Francji, Turcji, Hiszpanii, Czarnogórze, na Seszelach i Karaibach. Otwórz dowolną jednostkę, aby zobaczyć zdjęcia, dane techniczne, dostępność i ceny.",
+    "lede": "Wszystkie jednostki dostępne na Boat4You, uporządkowane według portu macierzystego — jachty żaglowe, katamarany, jachty motorowe i gulety w Chorwacji, Grecji, Włoszech, Francji, Turcji, Hiszpanii, Czarnogórze, na Seszelach i Karaibach. Otwórz dowolną jednostkę, aby zobaczyć zdjęcia, dane techniczne, dostępność i ceny.",
     "summary": "{total, number} jednostek · strona {page} z {pages}",
     "otherBases": "Pozostałe porty",
     "cabins": "{count, plural, one {# kabina} few {# kabiny} many {# kabin} other {# kabiny}}",

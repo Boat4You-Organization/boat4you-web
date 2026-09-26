@@ -44,7 +44,7 @@ Cependant, en dehors des périodes de pointe, nous avons plus de flexibilité. P
 
 De même, dans les destinations tropicales pendant la saison des ouragans/hors pointe, ou en hiver pour des endroits comme les Caraïbes, des locations plus courtes pourraient être possibles.
 
-Si vous n'avez le temps que pour un voyage de 3 à 5 jours, faites-le nous savoir – nous vérifierons auprès de notre flotte et essaierons de vous accommoder. Nous pourrions suggérer un catamaran ou un yacht à moteur (car certains d'entre eux ont des horaires plus flexibles ou sont gérés de manière privée et ouverts à des plans non hebdomadaires).
+Si vous n'avez le temps que pour un voyage de 3 à 5 jours, faites-le nous savoir – nous vérifierons auprès de nos partenaires de location et essaierons de vous accommoder. Nous pourrions suggérer un catamaran ou un yacht à moteur (car certains d'entre eux ont des horaires plus flexibles ou sont gérés de manière privée et ouverts à des plans non hebdomadaires).
 
 Notez que si vous réservez une location plus courte, le tarif journalier peut parfois être légèrement supérieur au tarif hebdomadaire au prorata, ou il peut y avoir un **minimum facturable** (par exemple, un minimum de 4 jours de facturation). Nous serons toujours transparents sur le coût. Dans tous les cas, nous nous efforçons d'être flexibles afin que vous puissiez profiter d'une expérience en yacht même si vous ne pouvez pas vous engager pour une semaine complète. Contactez-nous simplement avec vos dates préférées et nous trouverons la meilleure option pour vous.
 

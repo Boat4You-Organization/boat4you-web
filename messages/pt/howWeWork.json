@@ -7,7 +7,7 @@
   "steps": {
     "step1": {
       "title": "Descubra Seu Barco Perfeito",
-      "subtitle": "Explore nossa frota selecionada",
+      "subtitle": "Explore os barcos dos nossos parceiros verificados",
       "items": {
         "item1": "Busque por destino, tipo de barco ou datas de viagem.",
         "item2": "Use filtros inteligentes para encontrar exatamente o que atende suas necessidades — de catamarãs de luxo a lanchas familiares.",
@@ -16,7 +16,7 @@
       "question": "Precisa de ajuda para escolher?",
       "answer": "Nossos especialistas em charter estão a apenas um clique de distância. Ajudaremos você a comparar, recomendar opções e orientar se tiver dúvidas.",
       "link": {
-        "text": "Navegar Nossa Frota"
+        "text": "Ver Barcos Disponíveis"
       }
     },
     "step2": {
