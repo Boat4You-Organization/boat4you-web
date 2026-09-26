@@ -307,5 +307,22 @@
   "descCabinsOnly": "<b>{name}</b> tem <b>{cabins}</b> {cabins, plural, one {cabine} other {cabines}}. Travesseiros e cobertores estão incluídos no preço.",
   "descGuestsOnly": "<b>{name}</b> pode acomodar até <b>{maxPersons}</b> {maxPersons, plural, one {pessoa} other {pessoas}}.",
   "descWcOnly": "<b>{name}</b> oferece <b>{wc}</b> {wc, plural, one {banheiro} other {banheiros}} com chuveiro.",
-  "descIntroShort": "<b>{name}</b>: {vesselType}{model, select, none {} other { <b>{model}</b>}}{year, select, none {} other {, construído em <b>{year}</b>}}{location, select, none {} other {, com base em <b>{location}</b>}}."
+  "descIntroShort": "<b>{name}</b>: {vesselType}{model, select, none {} other { <b>{model}</b>}}{year, select, none {} other {, construído em <b>{year}</b>}}{location, select, none {} other {, com base em <b>{location}</b>}}.",
+  "calendar": {
+    "seasonAtGlance": "A temporada num relance · toque numa semana",
+    "legendPrice": "Preço",
+    "legendLowPeak": "baixo → pico",
+    "available": "Disponível",
+    "option": "Pré-reservado",
+    "booked": "Reservado",
+    "service": "Indisponível",
+    "selected": "Selecionado",
+    "nights": "{count, plural, one {# noite} other {# noites}}",
+    "perWeek": "Por semana",
+    "forNights": "Preço para {count, plural, one {# noite} other {# noites}}",
+    "pageOf": "{current} de {total}",
+    "weeks": "{count, plural, one {# semana} other {# semanas}}",
+    "live": "Ao vivo",
+    "weekAria": "Semana de {from} a {to}, {price}, {status}"
+  }
 }

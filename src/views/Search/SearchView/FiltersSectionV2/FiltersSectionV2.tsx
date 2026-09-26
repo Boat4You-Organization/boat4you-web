@@ -75,6 +75,12 @@ const FiltersSectionV2 = ({ catalogueData, catalogueFilters, isMobile, serverTot
   const urlCurrency = params.currency as Currency;
   const currentCurrency = user?.currency || urlCurrency || Currency.EUR;
   const currencySymbol = currencySymbols[currentCurrency];
+  // Page-locale digits and the site's "amount symbol" order ("4.976 €",
+  // "4,976 €") — the sidebar is in the SSR HTML of every landing and read
+  // "€500 – €200,000" and "7,296 hp" on the German page (audit B29).
+  const number = useMemo(() => new Intl.NumberFormat(locale), [locale]);
+  const compact = useMemo(() => new Intl.NumberFormat(locale, { notation: 'compact' }), [locale]);
+  const money = useCallback((amount: number) => `${number.format(amount)} ${currencySymbol}`, [number, currencySymbol]);
 
   // ── Slider local state ────────────────────────────────────────────
   // Range sliders push every tick to local state, then a 250ms
@@ -388,20 +394,18 @@ const FiltersSectionV2 = ({ catalogueData, catalogueFilters, isMobile, serverTot
         <FilterGroup title={t('pricePerWeek')}>
           <Box sx={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', mb: '6px' }}>
             <Box sx={searchV2Type.numericBig}>
-              {currencySymbol}
-              {priceRange[0].toLocaleString('en-US')} – {currencySymbol}
-              {priceRange[1].toLocaleString('en-US')}
+              {money(priceRange[0])} – {money(priceRange[1])}
             </Box>
             <Box sx={{ fontSize: 11, color: searchV2.inkSoft }}>
               {distribution?.priceMedian != null
                 ? t('medianPrice', {
-                    amount: `${currencySymbol}${Math.round(Number(distribution.priceMedian)).toLocaleString('en-US')}`,
+                    amount: money(Math.round(Number(distribution.priceMedian))),
                   })
                 : ''}
             </Box>
           </Box>
           <FilterRangeSliderV2
-            ariaLabel="Weekly price"
+            ariaLabel={t('pricePerWeek')}
             min={minPrice}
             max={maxPrice}
             step={50}
@@ -415,7 +419,7 @@ const FiltersSectionV2 = ({ catalogueData, catalogueFilters, isMobile, serverTot
               });
             }}
             hist={distribution?.priceHistogram}
-            format={v => `${currencySymbol}${v >= 1000 ? `${(v / 1000).toFixed(0)}k` : v.toLocaleString('en-US')}`}
+            format={v => `${compact.format(v)} ${currencySymbol}`}
           />
         </FilterGroup>
 
@@ -430,7 +434,7 @@ const FiltersSectionV2 = ({ catalogueData, catalogueFilters, isMobile, serverTot
             {t('guestsRange', { min: String(people[0]), max: String(people[1]) })}
           </Box>
           <FilterRangeSliderV2
-            ariaLabel="Guests"
+            ariaLabel={t('peopleMaxGuests')}
             min={0}
             max={42}
             vMin={people[0]}
@@ -451,7 +455,7 @@ const FiltersSectionV2 = ({ catalogueData, catalogueFilters, isMobile, serverTot
             {t('berthsRange', { min: String(berths[0]), max: String(berths[1]) })}
           </Box>
           <FilterRangeSliderV2
-            ariaLabel="Berths"
+            ariaLabel={t('berths')}
             min={0}
             max={42}
             vMin={berths[0]}
@@ -475,7 +479,7 @@ const FiltersSectionV2 = ({ catalogueData, catalogueFilters, isMobile, serverTot
             </Box>
           </Box>
           <FilterRangeSliderV2
-            ariaLabel="Boat length in meters"
+            ariaLabel={t('length')}
             min={4}
             max={56}
             vMin={length[0]}
@@ -498,7 +502,7 @@ const FiltersSectionV2 = ({ catalogueData, catalogueFilters, isMobile, serverTot
             {year[0]} – {year[1]}
           </Box>
           <FilterRangeSliderV2
-            ariaLabel="Build year"
+            ariaLabel={t('yearBuilt')}
             min={2000}
             max={yearMax}
             vMin={year[0]}
@@ -519,7 +523,7 @@ const FiltersSectionV2 = ({ catalogueData, catalogueFilters, isMobile, serverTot
             {t('toiletsRange', { min: String(toilets[0]), max: String(toilets[1]), count: toilets[1] })}
           </Box>
           <FilterRangeSliderV2
-            ariaLabel="Toilets"
+            ariaLabel={t('toilets')}
             min={0}
             max={20}
             vMin={toilets[0]}
@@ -616,13 +620,13 @@ const FiltersSectionV2 = ({ catalogueData, catalogueFilters, isMobile, serverTot
         {/* Engine power ──────────────────────────────────────── */}
         <FilterGroup title={t('enginePower')}>
           <Box sx={{ ...searchV2Type.numericValue, mb: '6px' }}>
-            {t('engineRangeHp', { min: String(engine[0]), max: engine[1].toLocaleString('en-US') })}
+            {t('engineRangeHp', { min: number.format(engine[0]), max: number.format(engine[1]) })}
             <Box component="span" sx={{ fontWeight: 400, color: searchV2.inkSoft, ml: '6px', fontSize: 11 }}>
-              ({(engine[0] * 0.745).toFixed(1)}–{(engine[1] * 0.745).toFixed(0)} kW)
+              ({number.format(Math.round(engine[0] * 0.745))}–{number.format(Math.round(engine[1] * 0.745))} kW)
             </Box>
           </Box>
           <FilterRangeSliderV2
-            ariaLabel="Engine power in horsepower"
+            ariaLabel={t('enginePower')}
             min={5}
             max={7296}
             vMin={engine[0]}
@@ -636,7 +640,7 @@ const FiltersSectionV2 = ({ catalogueData, catalogueFilters, isMobile, serverTot
               });
             }}
             hist={distribution?.engineHistogram}
-            format={v => `${v.toLocaleString('en-US')} hp`}
+            format={v => t('engineHp', { value: number.format(v) })}
           />
         </FilterGroup>
       </Box>

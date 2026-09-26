@@ -561,7 +561,7 @@
   "sailingYachtForRental": "Iate à Vela",
   "trimaranForRental": "Trimarã",
   "rubberBoatForRental": "Bote Inflável",
-  "boatsAvailableHeadingGeneric": "{count, number} barcos disponíveis",
+  "boatsAvailableHeadingGeneric": "{count, plural, one {# barco disponível} other {# barcos disponíveis}}",
   "boatsAvailableHeading": "{count, number} {type} disponíveis",
   "popularDestinations": {
     "heading": "Os nossos destinos mais populares {area}",

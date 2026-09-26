@@ -561,7 +561,7 @@
   "withDepositInsurance": "With deposit insurance",
   "perRental": "per rental",
   "refundableSecurityDepositDescription": "A refundable deposit is required at yacht pick-up and will be returned to you when the yacht is returned without damage.",
-  "boatsAvailableHeadingGeneric": "{count, number} boats available",
+  "boatsAvailableHeadingGeneric": "{count, plural, one {# boat available} other {# boats available}}",
   "boatsAvailableHeading": "{count, number} {type} available",
   "popularDestinations": {
     "heading": "Our most popular destinations {area}",

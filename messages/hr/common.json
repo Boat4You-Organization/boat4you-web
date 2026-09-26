@@ -561,7 +561,7 @@
   "sailingYachtForRental": "jedrilice",
   "trimaranForRental": "trimarana",
   "rubberBoatForRental": "gumenog čamca",
-  "boatsAvailableHeadingGeneric": "{count, number} dostupnih plovila",
+  "boatsAvailableHeadingGeneric": "{count, plural, one {# dostupno plovilo} few {# dostupna plovila} other {# dostupnih plovila}}",
   "boatsAvailableHeading": "{count, number} dostupnih {type}",
   "popularDestinations": {
     "heading": "Naše najpopularnije destinacije {area}",
@@ -639,5 +639,17 @@
   "bookingFailedExternal": "Rezervacija nije dovršena i ništa vam nije naplaćeno. Naš tim je obaviješten i uskoro će vas kontaktirati — možete nam upit poslati i odmah pa ćemo rezervaciju dogovoriti e-poštom.",
   "bookingFailedReference": "Referenca: {code}",
   "tripadvisorReviews": "{count, plural, one {# recenzija} few {# recenzije} other {# recenzija}} na TripAdvisoru",
-  "tripadvisorAria": "Ocjena {rating} od 5 prema {count, plural, one {# recenziji} few {# recenzije} other {# recenzija}} na TripAdvisoru"
+  "tripadvisorAria": "Ocjena {rating} od 5 prema {count, plural, one {# recenziji} few {# recenzije} other {# recenzija}} na TripAdvisoru",
+  "boatsAvailableByType": {
+    "CATAMARAN": "{count, plural, one {# dostupan katamaran} few {# dostupna katamarana} other {# dostupnih katamarana}}",
+    "SAILING_YACHT": "{count, plural, one {# dostupna jedrilica} few {# dostupne jedrilice} other {# dostupnih jedrilica}}",
+    "MOTOR_YACHT": "{count, plural, one {# dostupna motorna jahta} few {# dostupne motorne jahte} other {# dostupnih motornih jahti}}",
+    "MOTORBOAT": "{count, plural, one {# dostupan motorni čamac} few {# dostupna motorna čamca} other {# dostupnih motornih čamaca}}",
+    "GULET": "{count, plural, one {# dostupan gulet} few {# dostupna guleta} other {# dostupnih guleta}}",
+    "POWER_CATAMARAN": "{count, plural, one {# dostupan motorni katamaran} few {# dostupna motorna katamarana} other {# dostupnih motornih katamarana}}",
+    "LUXURY_MOTOR_YACHT": "{count, plural, one {# dostupna luksuzna motorna jahta} few {# dostupne luksuzne motorne jahte} other {# dostupnih luksuznih motornih jahti}}",
+    "MOTORSAILER": "{count, plural, one {# dostupan motorni jedrenjak} few {# dostupna motorna jedrenjaka} other {# dostupnih motornih jedrenjaka}}",
+    "MINI_CRUISER": "{count, plural, one {# dostupan mini cruiser} few {# dostupna mini cruisera} other {# dostupnih mini cruisera}}",
+    "TRIMARAN": "{count, plural, one {# dostupan trimaran} few {# dostupna trimarana} other {# dostupnih trimarana}}"
+  }
 }

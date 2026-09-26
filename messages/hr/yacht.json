@@ -307,5 +307,22 @@
   "descCabinsOnly": "<b>{name}</b> ima <b>{cabins}</b> {cabins, plural, one {kabinu} few {kabine} other {kabina}}. Jastuci i deke uključeni su u cijenu.",
   "descGuestsOnly": "<b>{name}</b> može primiti do <b>{maxPersons}</b> {maxPersons, plural, one {osobe} few {osobe} other {osoba}}.",
   "descWcOnly": "<b>{name}</b> ima <b>{wc}</b> {wc, plural, one {toalet} few {toaleta} other {toaleta}} s tušem.",
-  "descIntroShort": "<b>{name}</b>: {vesselType}{model, select, none {} other { <b>{model}</b>}}{year, select, none {} other {, godina gradnje <b>{year}</b>}}{location, select, none {} other {, matična baza <b>{location}</b>}}."
+  "descIntroShort": "<b>{name}</b>: {vesselType}{model, select, none {} other { <b>{model}</b>}}{year, select, none {} other {, godina gradnje <b>{year}</b>}}{location, select, none {} other {, matična baza <b>{location}</b>}}.",
+  "calendar": {
+    "seasonAtGlance": "Sezona na jedan pogled · dodirnite tjedan",
+    "legendPrice": "Cijena",
+    "legendLowPeak": "niska → vrhunac",
+    "available": "Dostupno",
+    "option": "Pod opcijom",
+    "booked": "Rezervirano",
+    "service": "Nedostupno",
+    "selected": "Odabrano",
+    "nights": "{count, plural, one {# noć} few {# noći} other {# noći}}",
+    "perWeek": "Tjedno",
+    "forNights": "Cijena za {count, plural, one {# noć} few {# noći} other {# noći}}",
+    "pageOf": "{current} od {total}",
+    "weeks": "{count, plural, one {# tjedan} few {# tjedna} other {# tjedana}}",
+    "live": "Uživo",
+    "weekAria": "Tjedan {from} – {to}, {price}, {status}"
+  }
 }

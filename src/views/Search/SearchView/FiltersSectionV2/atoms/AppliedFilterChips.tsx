@@ -2,7 +2,10 @@
 
 /* eslint-disable no-nested-ternary, react/no-array-index-key */
 import { Box } from '@mui/material';
+import { useLocale, useTranslations } from 'next-intl';
 
+import { currencySymbols } from '@/config/currencies.config';
+import { Currency } from '@/models/user.model';
 import { CharterType, MainSailType, VESSEL_TYPE_LABEL_MAP_PLURAL, isVesselType } from '@/models/yacht.model';
 import { searchV2 } from '@/styles/themes/searchV2';
 import { SearchParams } from '@/utils/hooks/useQueryParams';
@@ -23,6 +26,11 @@ interface Chip {
 }
 
 const AppliedFilterChips = ({ params, setMultipleParams, t }: AppliedFilterChipsProps) => {
+  // Chip texts in the page language and number format (they were English
+  // literals with en-US digits on every locale, audit B29).
+  const tf = useTranslations('filters');
+  const number = new Intl.NumberFormat(useLocale());
+  const symbol = currencySymbols[(params.currency as Currency) || Currency.EUR] ?? params.currency;
   const chips: Chip[] = [];
 
   // Vessel types
@@ -38,7 +46,7 @@ const AppliedFilterChips = ({ params, setMultipleParams, t }: AppliedFilterChips
   // Charter types
   (params.charterType || []).forEach(ct => {
     chips.push({
-      label: ct === CharterType.BAREBOAT ? 'Bareboat' : ct === CharterType.CREWED ? 'Skippered' : ct,
+      label: ct === CharterType.BAREBOAT ? tf('bareboat') : ct === CharterType.CREWED ? tf('skippered') : ct,
       remove: { charterType: (params.charterType || []).filter(x => x !== ct) },
     });
   });
@@ -48,9 +56,9 @@ const AppliedFilterChips = ({ params, setMultipleParams, t }: AppliedFilterChips
     chips.push({
       label:
         ms === MainSailType.CLASSIC_SAIL
-          ? 'Classic mainsail'
+          ? tf('classicMainsail')
           : ms === MainSailType.ROLLING_SAIL
-            ? 'Rolling mainsail'
+            ? tf('rollingMainsail')
             : ms,
       remove: { mainSailType: (params.mainSailType || []).filter(x => x !== ms) },
     });
@@ -98,9 +106,9 @@ const AppliedFilterChips = ({ params, setMultipleParams, t }: AppliedFilterChips
     let cabinsLabel: string | null = null;
 
     if (params.minCabins === params.maxCabins && params.minCabins > 0 && params.minCabins <= 5) {
-      cabinsLabel = `${params.minCabins} cabin${params.minCabins > 1 ? 's' : ''}`;
+      cabinsLabel = tf('cabinsChip', { count: params.minCabins });
     } else if (params.minCabins >= 6 && !params.maxCabins) {
-      cabinsLabel = '6+ cabins';
+      cabinsLabel = tf('cabinsChipPlus', { count: 6 });
     }
 
     if (cabinsLabel) {
@@ -125,17 +133,23 @@ const AppliedFilterChips = ({ params, setMultipleParams, t }: AppliedFilterChips
     });
   };
 
-  rangeChip('minPersons', 'maxPersons', (lo, hi) => `${lo ?? 0} – ${hi ?? '∞'} guests`);
-  rangeChip('minBerths', 'maxBerths', (lo, hi) => `${lo ?? 0} – ${hi ?? '∞'} berths`);
-  rangeChip('minLength', 'maxLength', (lo, hi) => `${lo ?? 0} – ${hi ?? '∞'} m`);
+  const upTo = (hi?: number) => (hi ? number.format(hi) : '∞');
+
+  rangeChip('minPersons', 'maxPersons', (lo, hi) => tf('guestsRange', { min: number.format(lo ?? 0), max: upTo(hi) }));
+  rangeChip('minBerths', 'maxBerths', (lo, hi) => tf('berthsRange', { min: number.format(lo ?? 0), max: upTo(hi) }));
+  rangeChip('minLength', 'maxLength', (lo, hi) => tf('lengthRange', { min: number.format(lo ?? 0), max: upTo(hi) }));
   rangeChip('minBuildYear', 'maxBuildYear', (lo, hi) => `${lo ?? 2000} – ${hi ?? new Date().getFullYear() + 1}`);
-  rangeChip('minWc', 'maxWc', (lo, hi) => `${lo ?? 0} – ${hi ?? '∞'} toilets`);
+  rangeChip('minWc', 'maxWc', (lo, hi) =>
+    tf('toiletsRange', { min: number.format(lo ?? 0), max: upTo(hi), count: hi ?? 2 })
+  );
   rangeChip(
     'minPrice',
     'maxPrice',
-    (lo, hi) => `€${(lo ?? 500).toLocaleString()} – €${(hi ?? 200_000).toLocaleString()}`
+    (lo, hi) => `${number.format(lo ?? 500)} ${symbol} – ${number.format(hi ?? 200_000)} ${symbol}`
   );
-  rangeChip('minEnginePower', 'maxEnginePower', (lo, hi) => `${lo ?? 5} – ${hi ?? 7296} hp`);
+  rangeChip('minEnginePower', 'maxEnginePower', (lo, hi) =>
+    tf('engineRangeHp', { min: number.format(lo ?? 5), max: number.format(hi ?? 7296) })
+  );
 
   if (chips.length === 0) return null;
 

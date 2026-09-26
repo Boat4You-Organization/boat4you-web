@@ -561,7 +561,7 @@
   "sailingYachtForRental": "jachtów żaglowych",
   "trimaranForRental": "trimaranów",
   "rubberBoatForRental": "łodzi pneumatycznych",
-  "boatsAvailableHeadingGeneric": "{count, number} łodzi dostępnych",
+  "boatsAvailableHeadingGeneric": "{count, plural, one {# dostępna łódź} few {# dostępne łodzie} many {# dostępnych łodzi} other {# dostępnych łodzi}}",
   "boatsAvailableHeading": "{count, number} dostępnych {type}",
   "popularDestinations": {
     "heading": "Nasze najpopularniejsze kierunki {area}",
@@ -639,5 +639,17 @@
   "bookingFailedExternal": "Rezerwacja nie została dokończona i nie pobraliśmy żadnej płatności. Nasz zespół został powiadomiony i wkrótce się z Tobą skontaktuje — możesz też od razu wysłać nam zapytanie, a zajmiemy się rezerwacją mailowo.",
   "bookingFailedReference": "Numer referencyjny: {code}",
   "tripadvisorReviews": "{count, plural, one {# opinia} few {# opinie} many {# opinii} other {# opinii}} w serwisie TripAdvisor",
-  "tripadvisorAria": "Ocena {rating} na 5 na podstawie {count, plural, one {# opinii} few {# opinii} many {# opinii} other {# opinii}} w serwisie TripAdvisor"
+  "tripadvisorAria": "Ocena {rating} na 5 na podstawie {count, plural, one {# opinii} few {# opinii} many {# opinii} other {# opinii}} w serwisie TripAdvisor",
+  "boatsAvailableByType": {
+    "CATAMARAN": "{count, plural, one {# dostępny katamaran} few {# dostępne katamarany} many {# dostępnych katamaranów} other {# dostępnych katamaranów}}",
+    "SAILING_YACHT": "{count, plural, one {# dostępny jacht żaglowy} few {# dostępne jachty żaglowe} many {# dostępnych jachtów żaglowych} other {# dostępnych jachtów żaglowych}}",
+    "MOTOR_YACHT": "{count, plural, one {# dostępny jacht motorowy} few {# dostępne jachty motorowe} many {# dostępnych jachtów motorowych} other {# dostępnych jachtów motorowych}}",
+    "MOTORBOAT": "{count, plural, one {# dostępna łódź motorowa} few {# dostępne łodzie motorowe} many {# dostępnych łodzi motorowych} other {# dostępnych łodzi motorowych}}",
+    "GULET": "{count, plural, one {# dostępny gulet} few {# dostępne gulety} many {# dostępnych guletów} other {# dostępnych guletów}}",
+    "POWER_CATAMARAN": "{count, plural, one {# dostępny katamaran motorowy} few {# dostępne katamarany motorowe} many {# dostępnych katamaranów motorowych} other {# dostępnych katamaranów motorowych}}",
+    "LUXURY_MOTOR_YACHT": "{count, plural, one {# dostępny luksusowy jacht motorowy} few {# dostępne luksusowe jachty motorowe} many {# dostępnych luksusowych jachtów motorowych} other {# dostępnych luksusowych jachtów motorowych}}",
+    "MOTORSAILER": "{count, plural, one {# dostępny motorsailer} few {# dostępne motorsailery} many {# dostępnych motorsailerów} other {# dostępnych motorsailerów}}",
+    "MINI_CRUISER": "{count, plural, one {# dostępny mini cruiser} few {# dostępne mini cruisery} many {# dostępnych mini cruiserów} other {# dostępnych mini cruiserów}}",
+    "TRIMARAN": "{count, plural, one {# dostępny trimaran} few {# dostępne trimarany} many {# dostępnych trimaranów} other {# dostępnych trimaranów}}"
+  }
 }

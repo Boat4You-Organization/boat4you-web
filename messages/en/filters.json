@@ -12,8 +12,8 @@
   "cabins": "Cabins",
   "people": "People",
   "berths": "Berths",
-  "lengthMeters": "Lenght (m)",
-  "lengthFeet": "Lenght (ft)",
+  "lengthMeters": "Length (m)",
+  "lengthFeet": "Length (ft)",
   "manufacturer": "Manufacturer",
   "searchManufacturer": "Search manufacturer",
   "selectManufacturerFirst": "Select manufacturer first",
@@ -54,7 +54,7 @@
   "engineRangeHp": "{min} – {max} hp",
   "yourSearch": "Your search",
   "allDestinations": "All destinations",
-  "boatsAvailableLive": "boats available · live",
+  "boatsAvailableLive": "{count, plural, one {boat available · live} other {boats available · live}}",
   "dateRange": "{start} – {end}",
   "nightsCount": "{count, plural, one {# night} other {# nights}}",
   "vesselType": {
@@ -64,5 +64,12 @@
     "motoryacht": "Motoryacht",
     "gulet": "Gulet",
     "powerCat": "Power cat"
-  }
+  },
+  "any": "Any",
+  "engineHp": "{value} hp",
+  "cabinsChip": "{count, plural, one {# cabin} other {# cabins}}",
+  "cabinsChipPlus": "{count}+ cabins",
+  "lengthRange": "{min} – {max} m",
+  "relaxTip": "<b>Tip:</b> removing the <em>{filter}</em> filter would show <b>+{count, plural, one {# boat} other {# boats}}</b> with a comparable fit.",
+  "relaxAction": "Relax filter"
 }

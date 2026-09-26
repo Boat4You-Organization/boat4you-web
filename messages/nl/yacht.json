@@ -307,5 +307,22 @@
   "descCabinsOnly": "<b>{name}</b> heeft <b>{cabins}</b> {cabins, plural, one {hut} other {hutten}}. Kussens en dekens zijn bij de prijs inbegrepen.",
   "descGuestsOnly": "<b>{name}</b> biedt plaats aan maximaal <b>{maxPersons}</b> {maxPersons, plural, one {persoon} other {personen}}.",
   "descWcOnly": "<b>{name}</b> beschikt over <b>{wc}</b> {wc, plural, one {toilet} other {toiletten}} met douche.",
-  "descIntroShort": "<b>{name}</b>: {vesselType}{model, select, none {} other { <b>{model}</b>}}{year, select, none {} other {, bouwjaar <b>{year}</b>}}{location, select, none {} other {, thuishaven <b>{location}</b>}}."
+  "descIntroShort": "<b>{name}</b>: {vesselType}{model, select, none {} other { <b>{model}</b>}}{year, select, none {} other {, bouwjaar <b>{year}</b>}}{location, select, none {} other {, thuishaven <b>{location}</b>}}.",
+  "calendar": {
+    "seasonAtGlance": "Het seizoen in één oogopslag · tik op een week",
+    "legendPrice": "Prijs",
+    "legendLowPeak": "laag → piek",
+    "available": "Beschikbaar",
+    "option": "Voorlopig gereserveerd",
+    "booked": "Gereserveerd",
+    "service": "Niet beschikbaar",
+    "selected": "Geselecteerd",
+    "nights": "{count, plural, one {# nacht} other {# nachten}}",
+    "perWeek": "Per week",
+    "forNights": "Prijs voor {count, plural, one {# nacht} other {# nachten}}",
+    "pageOf": "{current} van {total}",
+    "weeks": "{count, plural, one {# week} other {# weken}}",
+    "live": "Live",
+    "weekAria": "Week {from} tot {to}, {price}, {status}"
+  }
 }

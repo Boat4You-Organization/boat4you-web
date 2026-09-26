@@ -561,7 +561,7 @@
   "sailingYachtForRental": "Yacht a Vela",
   "trimaranForRental": "Trimarano",
   "rubberBoatForRental": "Gommone",
-  "boatsAvailableHeadingGeneric": "{count, number} barche disponibili",
+  "boatsAvailableHeadingGeneric": "{count, plural, one {# barca disponibile} other {# barche disponibili}}",
   "boatsAvailableHeading": "{count, number} {type} disponibili",
   "popularDestinations": {
     "heading": "Le nostre destinazioni più popolari {area}",

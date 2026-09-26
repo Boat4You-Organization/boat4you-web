@@ -1,6 +1,7 @@
 'use client';
 
 import { Box, ButtonBase } from '@mui/material';
+import { useTranslations } from 'next-intl';
 
 import { searchV2, searchV2Type } from '@/styles/themes/searchV2';
 
@@ -21,8 +22,10 @@ interface CabinsPillSegmentProps {
  * Mapping happens in the parent (FiltersSectionV2); this atom stays
  * presentational.
  */
-const PILLS: Array<{ label: string; value: number | null }> = [
-  { label: 'Any', value: null },
+const PILLS: Array<{ label: string | null; value: number | null }> = [
+  // null label → the translated "Any" (filters.any) — the SSR sidebar read
+  // "Kabinen Any" on every German landing (audit B29).
+  { label: null, value: null },
   { label: '1', value: 1 },
   { label: '2', value: 2 },
   { label: '3', value: 3 },
@@ -31,34 +34,38 @@ const PILLS: Array<{ label: string; value: number | null }> = [
   { label: '6+', value: 6 },
 ];
 
-const CabinsPillSegment = ({ value, onChange }: CabinsPillSegmentProps) => (
-  <Box sx={{ display: 'flex', gap: '5px' }}>
-    {PILLS.map(pill => {
-      const on = pill.value === value;
+const CabinsPillSegment = ({ value, onChange }: CabinsPillSegmentProps) => {
+  const t = useTranslations('filters');
 
-      return (
-        <ButtonBase
-          key={pill.label}
-          onClick={() => onChange(pill.value)}
-          sx={{
-            flex: 1,
-            padding: '8px 0',
-            background: on ? searchV2.brand : '#fff',
-            color: on ? '#fff' : searchV2.ink,
-            border: `1px solid ${on ? searchV2.brand : searchV2.line}`,
-            borderRadius: '6px',
-            fontSize: 12,
-            fontWeight: 700,
-            fontFamily: searchV2Type.fontFamily,
-            transition: 'background .12s ease, color .12s ease, border-color .12s ease',
-            '&:hover': { borderColor: on ? searchV2.brand : searchV2.lineStrong },
-          }}
-        >
-          {pill.label}
-        </ButtonBase>
-      );
-    })}
-  </Box>
-);
+  return (
+    <Box sx={{ display: 'flex', gap: '5px' }}>
+      {PILLS.map(pill => {
+        const on = pill.value === value;
+
+        return (
+          <ButtonBase
+            key={pill.label ?? 'any'}
+            onClick={() => onChange(pill.value)}
+            sx={{
+              flex: 1,
+              padding: '8px 0',
+              background: on ? searchV2.brand : '#fff',
+              color: on ? '#fff' : searchV2.ink,
+              border: `1px solid ${on ? searchV2.brand : searchV2.line}`,
+              borderRadius: '6px',
+              fontSize: 12,
+              fontWeight: 700,
+              fontFamily: searchV2Type.fontFamily,
+              transition: 'background .12s ease, color .12s ease, border-color .12s ease',
+              '&:hover': { borderColor: on ? searchV2.brand : searchV2.lineStrong },
+            }}
+          >
+            {pill.label ?? t('any')}
+          </ButtonBase>
+        );
+      })}
+    </Box>
+  );
+};
 
 export default CabinsPillSegment;

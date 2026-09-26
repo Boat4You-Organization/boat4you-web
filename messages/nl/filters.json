@@ -54,7 +54,7 @@
   "engineRangeHp": "{min} – {max} pk",
   "yourSearch": "Uw zoekopdracht",
   "allDestinations": "Alle bestemmingen",
-  "boatsAvailableLive": "boten beschikbaar · live",
+  "boatsAvailableLive": "{count, plural, one {boot beschikbaar · live} other {boten beschikbaar · live}}",
   "dateRange": "{start} – {end}",
   "nightsCount": "{count, plural, one {# nacht} other {# nachten}}",
   "vesselType": {
@@ -64,5 +64,12 @@
     "motoryacht": "Motorjacht",
     "gulet": "Gulet",
     "powerCat": "Power cat"
-  }
+  },
+  "any": "Alle",
+  "engineHp": "{value} pk",
+  "cabinsChip": "{count, plural, one {# hut} other {# hutten}}",
+  "cabinsChipPlus": "{count}+ hutten",
+  "lengthRange": "{min} – {max} m",
+  "relaxTip": "<b>Tip:</b> zonder het filter <em>{filter}</em> zie je <b>+{count, plural, one {# boot} other {# boten}}</b> die net zo goed passen.",
+  "relaxAction": "Filter versoepelen"
 }

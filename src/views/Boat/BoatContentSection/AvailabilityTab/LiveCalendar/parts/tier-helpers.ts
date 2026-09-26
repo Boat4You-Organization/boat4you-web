@@ -44,17 +44,16 @@ export interface WeekData {
   dateToIso?: string;
 }
 
-/** Human-readable status label rendered inside the pill badge. */
-export const statusLabel = (s: WeekStatus): string =>
-  s === 'booked'
-    ? 'Reserved'
-    : s === 'service'
-      ? 'Unavailable'
-      : s === 'option'
-        ? 'Pre-reserved'
-        : s === 'selected'
-          ? 'Selected'
-          : 'Available';
+/** Message key (yacht.calendar.*) of the status pill — the labels used to be
+ *  English literals on every locale (audit B29). */
+export const statusKey = (s: WeekStatus): `calendar.${WeekStatus}` => `calendar.${s}`;
+
+/** Card / axis date labels in the page locale ("Jul 10" in EN, "10 srp." in HR). */
+export const weekLabel = (date: dayjs.Dayjs, locale = 'en'): string =>
+  locale.startsWith('en') ? date.locale('en').format('MMM DD') : date.locale(locale).format('D MMM');
+
+/** Short month name in the page locale (axis + chunk label). */
+export const monthLabel = (date: dayjs.Dayjs, locale = 'en'): string => date.locale(locale).format('MMM');
 
 /** Foreground + background colour pair for the status pill. */
 export const statusColor = (s: WeekStatus): { fg: string; bg: string } => {
@@ -73,16 +72,17 @@ export const statusColor = (s: WeekStatus): { fg: string; bg: string } => {
 /** Price-tier → heatmap cell background. */
 export const tierBg = (t: 0 | 1 | 2 | 3): string => [T.tierLow, T.tierMid, T.tierHigh, T.tierPeak][t];
 
-/** Croatian-locale price formatter — `9.945 €`, or `15.745 A$` when a currency
- *  is given. `maximumFractionDigits: 0` strips any trailing `.00` the Italy
- *  backend ships (Mario rule 12.5.2026 — "na italy, cijena bez .00"). The
- *  symbol mirrors `formatPriceWithCurrency` (CURRENCY_SYMBOL_MAP) so the week
- *  cards match the detail box + booking panel for AUD/USD/etc.; no `currency`
- *  → EUR. */
-export const fmtPrice = (n: number, currency?: string): string => {
+/** Page-locale price — `9,945 €` (EN) / `9.945 €` (HR), or `15.745 A$` when a
+ *  currency is given. `maximumFractionDigits: 0` strips any trailing `.00` the
+ *  Italy backend ships (Mario rule 12.5.2026 — "na italy, cijena bez .00").
+ *  The symbol mirrors `formatPriceWithCurrency` (CURRENCY_SYMBOL_MAP) so the
+ *  week cards match the detail box + booking panel for AUD/USD/etc.; no
+ *  `currency` → EUR. It was pinned to hr-HR, so the English page read
+ *  "4.976 €" (audit B26/B29). */
+export const fmtPrice = (n: number, currency?: string, locale = 'hr-HR'): string => {
   const symbol = currency ? (CURRENCY_SYMBOL_MAP[currency as Currency] ?? currency) : '€';
 
-  return `${new Intl.NumberFormat('hr-HR', { maximumFractionDigits: 0 }).format(n)} ${symbol}`;
+  return `${new Intl.NumberFormat(locale, { maximumFractionDigits: 0 }).format(n)} ${symbol}`;
 };
 
 /**
@@ -148,7 +148,8 @@ export const WEEKS_PER_CHUNK = 26;
 export const fillTimeline = (
   weeks: WeekData[],
   horizonIso?: string,
-  perChunk: number = WEEKS_PER_CHUNK
+  perChunk: number = WEEKS_PER_CHUNK,
+  locale = 'en'
 ): WeekData[] => {
   if (weeks.length === 0) return weeks;
 
@@ -165,9 +166,9 @@ export const fillTimeline = (
 
     return {
       id: opts.id ?? `gap|${fromIso}`,
-      from: from.format('MMM DD'),
-      to: to.format('MMM DD'),
-      fromMonth: from.format('MMM'),
+      from: weekLabel(from, locale),
+      to: weekLabel(to, locale),
+      fromMonth: monthLabel(from, locale),
       price: opts.price ?? 0,
       currency: opts.currency,
       status: opts.status ?? 'service',

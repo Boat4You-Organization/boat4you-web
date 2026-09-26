@@ -10,6 +10,7 @@ import { startTransition, useActionState, useCallback, useEffect, useMemo, useRe
 import { Box, Stack, Typography } from '@mui/material';
 import dayjs, { Dayjs } from 'dayjs';
 import weekOfYear from 'dayjs/plugin/weekOfYear';
+import { useLocale, useTranslations } from 'next-intl';
 
 import { getSingleYachtStandardOffers } from '@/actions/yacht.actions';
 import AvailabilityCard from '@/components/AvailabilityCard';
@@ -26,7 +27,15 @@ import ArrowBtn from './parts/ArrowBtn';
 import HeatmapStrip from './parts/HeatmapStrip';
 import Legend from './parts/Legend';
 import MonthAxis from './parts/MonthAxis';
-import { WEEKS_PER_CHUNK, WeekData, monthAxis as deriveMonthAxis, fillTimeline, withTiers } from './parts/tier-helpers';
+import {
+  WEEKS_PER_CHUNK,
+  WeekData,
+  monthAxis as deriveMonthAxis,
+  fillTimeline,
+  monthLabel,
+  weekLabel,
+  withTiers,
+} from './parts/tier-helpers';
 import { T } from './parts/tokens';
 
 dayjs.extend(weekOfYear);
@@ -57,7 +66,7 @@ const mapStatus = (s: Status | undefined): WeekData['status'] => {
   return 'available';
 };
 
-const toWeek = (offer: YachtOfferModel): WeekData => {
+const toWeek = (offer: YachtOfferModel, locale: string): WeekData => {
   const from = dayjs(offer.dateFrom);
   const to = dayjs(offer.dateTo);
   // Use the currency-converted amounts from the partner price-info (the backend
@@ -76,9 +85,9 @@ const toWeek = (offer: YachtOfferModel): WeekData => {
 
   return {
     id: String(offer.id ?? `${offer.dateFrom}|${offer.dateTo}`),
-    from: from.format('MMM DD'),
-    to: to.format('MMM DD'),
-    fromMonth: from.format('MMM'),
+    from: weekLabel(from, locale),
+    to: weekLabel(to, locale),
+    fromMonth: monthLabel(from, locale),
     price: finalPrice,
     regularPrice,
     currency: offer.clientPriceInfo?.currency,
@@ -90,6 +99,7 @@ const toWeek = (offer: YachtOfferModel): WeekData => {
 };
 
 const AvailabilitySlider = ({ yacht }: AvailabilitySliderProps) => {
+  const locale = useLocale();
   const { isBelowLg } = useBreakpoint();
   const [standardOffers, standardOffersAction] = useActionState(getSingleYachtStandardOffers, []);
   // One card per week, best status wins (20.7.2026): route/product variant rows
@@ -161,8 +171,15 @@ const AvailabilitySlider = ({ yacht }: AvailabilitySliderProps) => {
     // calendar/chunk label decades out ("JUN 2026 → FEB 2099" bug, 25.6.2026).
     const horizonIso = DateTime.formatFull(DateTime.now()?.add(18, 'month') as Dayjs);
 
-    return withTiers(fillTimeline(published.map(toWeek), horizonIso));
-  }, [safeYachtOffers]);
+    return withTiers(
+      fillTimeline(
+        published.map(offer => toWeek(offer, locale)),
+        horizonIso,
+        WEEKS_PER_CHUNK,
+        locale
+      )
+    );
+  }, [safeYachtOffers, locale]);
 
   const months = useMemo(() => deriveMonthAxis(weeks), [weeks]);
 
@@ -234,6 +251,8 @@ const VISIBLE_COUNT = 5;
 // can pad the tail to a full chunk width.
 
 const AvailabilityDesktop = ({ weeks, selId, onSelect }: BranchProps) => {
+  const t = useTranslations('yacht.calendar');
+  const locale = useLocale();
   const totalChunks = Math.max(1, Math.ceil(weeks.length / WEEKS_PER_CHUNK));
   const [chunkIdx, setChunkIdx] = useState(0);
 
@@ -317,7 +336,7 @@ const AvailabilityDesktop = ({ weeks, selId, onSelect }: BranchProps) => {
 
       const d = dayjs(iso);
 
-      return { m: d.format('MMM').toUpperCase(), y: d.format('YYYY') };
+      return { m: monthLabel(d, locale).toUpperCase(), y: d.format('YYYY') };
     };
     const from = parseMonth(first.dateFromIso);
     // Use `dateToIso` of the last week so "OCT 24 → 31" reads as OCT
@@ -329,7 +348,7 @@ const AvailabilityDesktop = ({ weeks, selId, onSelect }: BranchProps) => {
     }
 
     return `${from.m} ${from.y} → ${to.m} ${to.y}`;
-  }, [chunkWeeks]);
+  }, [chunkWeeks, locale]);
 
   return (
     <Box sx={{ fontFamily: 'inherit' }}>
@@ -349,7 +368,7 @@ const AvailabilityDesktop = ({ weeks, selId, onSelect }: BranchProps) => {
             textTransform: 'uppercase',
           }}
         >
-          Season at a glance · tap a week to jump
+          {t('seasonAtGlance')}
         </Typography>
         <Legend />
       </Stack>
@@ -371,7 +390,7 @@ const AvailabilityDesktop = ({ weeks, selId, onSelect }: BranchProps) => {
         >
           {chunkLabel}
           <Box component="span" sx={{ ml: '10px', color: T.faint, fontSize: '11px', letterSpacing: '0.8px' }}>
-            {chunkIdx + 1} of {totalChunks}
+            {t('pageOf', { current: chunkIdx + 1, total: totalChunks })}
           </Box>
         </Typography>
         <ArrowBtn
@@ -426,6 +445,8 @@ const AvailabilityDesktop = ({ weeks, selId, onSelect }: BranchProps) => {
 type MobileProps = BranchProps;
 
 const AvailabilityMobile = ({ weeks, selId, onSelect }: MobileProps) => {
+  const t = useTranslations('yacht.calendar');
+  const locale = useLocale();
   const totalChunks = Math.max(1, Math.ceil(weeks.length / WEEKS_PER_CHUNK));
   const [chunkIdx, setChunkIdx] = useState(0);
 
@@ -561,13 +582,13 @@ const AvailabilityMobile = ({ weeks, selId, onSelect }: MobileProps) => {
 
       const d = dayjs(iso);
 
-      return { m: d.format('MMM').toUpperCase(), y: d.format('YYYY') };
+      return { m: monthLabel(d, locale).toUpperCase(), y: d.format('YYYY') };
     };
     const from = parseMonth(first.dateFromIso);
     const to = parseMonth(last.dateToIso ?? last.dateFromIso);
 
     return from.y === to.y ? `${from.m} → ${to.m} ${from.y}` : `${from.m} ${from.y} → ${to.m} ${to.y}`;
-  }, [chunkWeeks]);
+  }, [chunkWeeks, locale]);
 
   return (
     <Box sx={{ fontFamily: 'inherit', background: T.card }}>
@@ -602,7 +623,7 @@ const AvailabilityMobile = ({ weeks, selId, onSelect }: MobileProps) => {
               component="span"
               sx={{ display: 'block', mt: '2px', color: T.faint, fontSize: '10px', letterSpacing: '0.8px' }}
             >
-              {chunkIdx + 1} of {totalChunks}
+              {t('pageOf', { current: chunkIdx + 1, total: totalChunks })}
             </Box>
           </Box>
           <ArrowBtn
@@ -617,7 +638,7 @@ const AvailabilityMobile = ({ weeks, selId, onSelect }: MobileProps) => {
           <Box
             sx={{ fontSize: '13px', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', color: T.muted }}
           >
-            {chunkWeeks.length} weeks
+            {t('weeks', { count: chunkWeeks.length })}
           </Box>
           <Stack
             direction="row"
@@ -645,7 +666,7 @@ const AvailabilityMobile = ({ weeks, selId, onSelect }: MobileProps) => {
                 boxShadow: `0 0 0 3px ${T.greenSoft}, 0 0 0 4px ${T.green}40`,
               }}
             />
-            Live
+            {t('live')}
           </Stack>
         </Stack>
         <Box

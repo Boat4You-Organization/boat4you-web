@@ -561,7 +561,7 @@
   "sailingYachtForRental": "Zeiljacht",
   "trimaranForRental": "Trimaran",
   "rubberBoatForRental": "Rubberboot",
-  "boatsAvailableHeadingGeneric": "{count, number} boten beschikbaar",
+  "boatsAvailableHeadingGeneric": "{count, plural, one {# boot beschikbaar} other {# boten beschikbaar}}",
   "boatsAvailableHeading": "{count, number} {type} beschikbaar",
   "popularDestinations": {
     "heading": "Onze populairste bestemmingen {area}",

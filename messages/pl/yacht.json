@@ -307,5 +307,22 @@
   "descCabinsOnly": "<b>{name}</b> ma <b>{cabins}</b> {cabins, plural, one {kabinę} few {kabiny} other {kabin}}. Poduszki i koce są wliczone w cenę.",
   "descGuestsOnly": "<b>{name}</b> może pomieścić do <b>{maxPersons}</b> {maxPersons, plural, one {osoby} other {osób}}.",
   "descWcOnly": "<b>{name}</b> ma <b>{wc}</b> {wc, plural, one {toaletę} few {toalety} other {toalet}} z prysznicem.",
-  "descIntroShort": "<b>{name}</b>: {vesselType}{model, select, none {} other { <b>{model}</b>}}{year, select, none {} other {, rocznik <b>{year}</b>}}{location, select, none {} other {, baza: <b>{location}</b>}}."
+  "descIntroShort": "<b>{name}</b>: {vesselType}{model, select, none {} other { <b>{model}</b>}}{year, select, none {} other {, rocznik <b>{year}</b>}}{location, select, none {} other {, baza: <b>{location}</b>}}.",
+  "calendar": {
+    "seasonAtGlance": "Sezon w skrócie · dotknij tygodnia",
+    "legendPrice": "Cena",
+    "legendLowPeak": "niska → szczyt",
+    "available": "Dostępne",
+    "option": "Wstępnie zarezerwowane",
+    "booked": "Zarezerwowane",
+    "service": "Niedostępne",
+    "selected": "Wybrane",
+    "nights": "{count, plural, one {# noc} few {# noce} many {# nocy} other {# nocy}}",
+    "perWeek": "Za tydzień",
+    "forNights": "Cena za {count, plural, one {# noc} few {# noce} many {# nocy} other {# nocy}}",
+    "pageOf": "{current} z {total}",
+    "weeks": "{count, plural, one {# tydzień} few {# tygodnie} many {# tygodni} other {# tygodnia}}",
+    "live": "Na żywo",
+    "weekAria": "Tydzień {from} – {to}, {price}, {status}"
+  }
 }

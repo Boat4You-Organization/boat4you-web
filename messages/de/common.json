@@ -561,7 +561,7 @@
   "sailingYachtForRental": "Segelyacht",
   "trimaranForRental": "Trimaran",
   "rubberBoatForRental": "Schlauchboot",
-  "boatsAvailableHeadingGeneric": "{count, number} Boote verfügbar",
+  "boatsAvailableHeadingGeneric": "{count, plural, one {# Boot verfügbar} other {# Boote verfügbar}}",
   "boatsAvailableHeading": "{count, number} {type} verfügbar",
   "popularDestinations": {
     "heading": "Unsere beliebtesten Reiseziele {area}",
