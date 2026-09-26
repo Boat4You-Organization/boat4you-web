@@ -309,7 +309,7 @@ const BoatsSection = ({
                   // <title>); boat type only → plural label ("Catamarans").
                   if (isBoatTypeOnly) {
                     return (
-                      translatedBoatType ?? formatListWithTranslation([], () => tCommon('and'), 'All Destinations')
+                      translatedBoatType ?? formatListWithTranslation([], () => tCommon('and'), tFilters('allDestinations'))
                     );
                   }
 
@@ -318,7 +318,7 @@ const BoatsSection = ({
                     formatListWithTranslation(
                       (params.destinations || []).map(d => destinationLabels[d.toLowerCase()] ?? d),
                       () => tCommon('and'),
-                      'All Destinations'
+                      tFilters('allDestinations')
                     )
                   );
                 })()}

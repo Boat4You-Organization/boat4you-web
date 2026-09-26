@@ -2,7 +2,12 @@ import { getTranslations } from 'next-intl/server';
 import 'server-only';
 
 import { AllSearchParams } from '@/config/form-models.config';
-import { VESSEL_TYPE_LABEL_MAP_FOR_RENTAL, VesselType, isVesselType } from '@/models/yacht.model';
+import {
+  VESSEL_TYPE_LABEL_MAP_FOR_RENTAL,
+  VESSEL_TYPE_LABEL_MAP_PLURAL,
+  VesselType,
+  isVesselType,
+} from '@/models/yacht.model';
 import { PlaceText, placeText } from '@/utils/server/placeText';
 import { resolveSearchLanding, splitSearchParam, uniqueCaseInsensitive } from '@/utils/server/searchLanding';
 
@@ -38,6 +43,15 @@ const rentalLabel = async (locale: string, type: VesselType): Promise<string> =>
 
   return tCommon.raw(
     VESSEL_TYPE_LABEL_MAP_FOR_RENTAL[type].replace(/^common\./, '') as Parameters<typeof tCommon.raw>[0]
+  ) as string;
+};
+
+/** Plural type label, the heading of a boat-type-only page (common.json `*Plural`). */
+const pluralLabel = async (locale: string, type: VesselType): Promise<string> => {
+  const tCommon = await getTranslations({ locale, namespace: 'common' });
+
+  return tCommon.raw(
+    VESSEL_TYPE_LABEL_MAP_PLURAL[type].replace(/^common\./, '') as Parameters<typeof tCommon.raw>[0]
   ) as string;
 };
 
@@ -93,8 +107,13 @@ export const getLandingCopy = async (locale: string, params: AllSearchParams): P
   const places = Array.from(new Map(rawPlaces.map(p => [p.where.toLowerCase(), p])).values());
 
   if (!places.length) {
-    return singleBoatType
-      ? { title: await rentalLabel(locale, singleBoatType), description: tMeta('description'), h1: null }
+    // Boat type only: the title is the page's own heading, the plural type
+    // label ("Catamarans", "Katamarani") — the rental label is a genitive in
+    // HR/PL ("katamarana | Boat4You") and lower case in the Romance locales.
+    const typeTitle = singleBoatType ? await pluralLabel(locale, singleBoatType) : null;
+
+    return typeTitle
+      ? { title: typeTitle, description: tMeta('description'), h1: null }
       : { title: tMeta('title'), description: tMeta('description'), h1: null };
   }
 
