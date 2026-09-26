@@ -5,6 +5,7 @@ import { useCallback, useState } from 'react';
 import { Box, Button, ImageList, ImageListItem, Stack } from '@mui/material';
 import cx from 'clsx';
 import { useTranslations } from 'next-intl';
+import dynamic from 'next/dynamic';
 import Image from 'next/image';
 
 import Photos from '@/components/SvgIcons/Photos';
@@ -13,7 +14,10 @@ import useToggleState from '@/utils/hooks/useToggleState';
 import { getBoatImageUrl } from '@/utils/static/imageUtils';
 
 import styles from './Gallery.module.scss';
-import Lightbox from './Lightbox';
+
+// The lightbox (Swiper + its CSS) is fetched on the first open, not with
+// the boat page: the page shipped 1.5 MB of JS on slow phones (audit B41).
+const Lightbox = dynamic(() => import('./Lightbox'));
 
 interface GalleryProps {
   yacht?: YachtModel;
@@ -25,6 +29,8 @@ interface GalleryProps {
 const Gallery = ({ yacht, images, showShareAndFavorite = false, maxDisplayedImages = 5 }: GalleryProps) => {
   const [isOpen, toggeIsOpen] = useToggleState();
   const [imageIndex, setImageIndex] = useState<number>(0);
+  // Mounted from the first open on (and kept, so it can animate closed).
+  const [lightboxMounted, setLightboxMounted] = useState(false);
   const t = useTranslations('common');
 
   // "Fountaine Pajot Elba 45 KARINA — photo 3" instead of the old
@@ -56,6 +62,7 @@ const Gallery = ({ yacht, images, showShareAndFavorite = false, maxDisplayedImag
       const newIndex = Number(index);
 
       setImageIndex(newIndex);
+      setLightboxMounted(true);
       toggeIsOpen();
     },
     [toggeIsOpen]
@@ -63,18 +70,21 @@ const Gallery = ({ yacht, images, showShareAndFavorite = false, maxDisplayedImag
 
   const handleButtonClick = useCallback(() => {
     setImageIndex(0);
+    setLightboxMounted(true);
     toggeIsOpen();
   }, [toggeIsOpen]);
 
   return (
     <>
-      <Lightbox
-        open={isOpen}
-        onClose={toggeIsOpen}
-        {...(yacht ? { yacht } : { images })}
-        selectedImage={imageIndex}
-        showShareAndFavorite={showShareAndFavorite}
-      />
+      {lightboxMounted && (
+        <Lightbox
+          open={isOpen}
+          onClose={toggeIsOpen}
+          {...(yacht ? { yacht } : { images })}
+          selectedImage={imageIndex}
+          showShareAndFavorite={showShareAndFavorite}
+        />
+      )}
       <Box position="relative" width="100%">
         <ImageList
           variant="quilted"
@@ -104,6 +114,11 @@ const Gallery = ({ yacht, images, showShareAndFavorite = false, maxDisplayedImag
                 sizes="(max-width: 600px) 100vw, 50vw"
                 draggable={false}
                 className={styles.image}
+                // The first photo is the boat page's LCP (painted at 8 s on
+                // slow 4G while lazy-loaded, audit B41).
+                preload={index === 0}
+                loading={index === 0 ? 'eager' : undefined}
+                fetchPriority={index === 0 ? 'high' : undefined}
               />
             </ImageListItem>
           ))}

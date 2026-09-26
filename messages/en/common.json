@@ -639,5 +639,9 @@
   "bookingFailedExternal": "Your booking was not completed and nothing has been charged. Our team has been notified and will contact you shortly — you can also send us your request right now and we'll arrange the booking by email.",
   "bookingFailedReference": "Reference: {code}",
   "tripadvisorReviews": "{count, plural, one {# review} other {# reviews}} on TripAdvisor",
-  "tripadvisorAria": "Rated {rating} out of 5 from {count, plural, one {# review} other {# reviews}} on TripAdvisor"
+  "tripadvisorAria": "Rated {rating} out of 5 from {count, plural, one {# review} other {# reviews}} on TripAdvisor",
+  "closeGallery": "Close gallery",
+  "goBack": "Go back",
+  "openFilters": "Open filters",
+  "editSearch": "Edit search"
 }

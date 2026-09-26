@@ -651,5 +651,9 @@
     "MOTORSAILER": "{count, plural, one {# dostępny motorsailer} few {# dostępne motorsailery} many {# dostępnych motorsailerów} other {# dostępnych motorsailerów}}",
     "MINI_CRUISER": "{count, plural, one {# dostępny mini cruiser} few {# dostępne mini cruisery} many {# dostępnych mini cruiserów} other {# dostępnych mini cruiserów}}",
     "TRIMARAN": "{count, plural, one {# dostępny trimaran} few {# dostępne trimarany} many {# dostępnych trimaranów} other {# dostępnych trimaranów}}"
-  }
+  },
+  "closeGallery": "Zamknij galerię",
+  "goBack": "Wstecz",
+  "openFilters": "Otwórz filtry",
+  "editSearch": "Edytuj wyszukiwanie"
 }

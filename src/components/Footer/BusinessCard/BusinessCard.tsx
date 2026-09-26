@@ -51,9 +51,16 @@ const BusinessCard = () => (
       </Stack>
     </Stack>
     <List disablePadding classes={{ root: styles.socials }} className={styles.socialList}>
-      {socials.map(({ href, icon: SocialIcon }, index) => (
+      {socials.map(({ href, icon: SocialIcon, name }, index) => (
         <ListItem disableGutters disablePadding key={`${href}-${index + 1}`} sx={{ width: 'auto' }}>
-          <Link href={href} className={styles.icon} target="_blank" aria-label="Social link">
+          {/* Each icon link is named by its network — all five read "Social link" (audit B50). */}
+          <Link
+            href={href}
+            className={styles.icon}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Boat4You · ${name}`}
+          >
             {SocialIcon && <SocialIcon size={24} fill={colors.black400} />}
           </Link>
         </ListItem>

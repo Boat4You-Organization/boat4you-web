@@ -324,5 +324,7 @@
     "weeks": "{count, plural, one {# tjedan} few {# tjedna} other {# tjedana}}",
     "live": "Uživo",
     "weekAria": "Tjedan {from} – {to}, {price}, {status}"
-  }
+  },
+  "notAvailableShort": "Nije dostupno za ove datume",
+  "readyToSail": "Spremni za plovidbu?"
 }

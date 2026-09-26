@@ -6,6 +6,7 @@ import { Locale, NextIntlClientProvider, hasLocale } from 'next-intl';
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import Script from 'next/script';
+import { preload } from 'react-dom';
 
 import ChatWidget from '@/components/ChatWidget';
 import GoogleAnalyticsConsent from '@/components/GoogleAnalyticsConsent';
@@ -121,6 +122,14 @@ const RootLayout = async ({ children, params }: RootLayoutProps) => {
   const siteStats = await getSiteStatsWithin(SITE_STATS_LAYOUT_BUDGET_MS);
   const localizedJsonLd = await getLocalizedJsonLd(locale as LocaleType, siteStats?.display);
 
+  // Hero H1 uses Raleway 500 (regular hero text) + 800 italic for the CTA
+  // span. Preloading those two weights eliminates the 3s FOIT window PSI
+  // flagged. Through ReactDOM.preload: React 19 hoists a JSX <link
+  // rel="preload"> as a resource AND kept the element, so every page sent
+  // each font preload twice (audit B50).
+  preload('/fonts/Raleway/Raleway-Medium.woff2', { as: 'font', type: 'font/woff2', crossOrigin: '' });
+  preload('/fonts/Raleway/Raleway-ExtraBoldItalic.woff2', { as: 'font', type: 'font/woff2', crossOrigin: '' });
+
   return (
     <html lang={locale} suppressHydrationWarning>
       <head>
@@ -145,17 +154,6 @@ const RootLayout = async ({ children, params }: RootLayoutProps) => {
             cheap when the host actually receives traffic. */}
         <link rel="preconnect" href="https://api.boat4you.com" crossOrigin="" />
         <link rel="preconnect" href="https://boat4you.b-cdn.net" crossOrigin="" />
-        {/* Hero H1 uses Raleway 500 (regular hero text) + 800 italic for the
-            CTA span. Preloading those two weights eliminates the 3s FOIT
-            window PSI flagged and lets the LCP element paint immediately. */}
-        <link rel="preload" href="/fonts/Raleway/Raleway-Medium.woff2" as="font" type="font/woff2" crossOrigin="" />
-        <link
-          rel="preload"
-          href="/fonts/Raleway/Raleway-ExtraBoldItalic.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin=""
-        />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localizedJsonLd) }} />
       </head>
       <body suppressHydrationWarning>

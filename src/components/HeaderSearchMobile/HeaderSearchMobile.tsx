@@ -4,15 +4,18 @@ import { useCallback, useState } from 'react';
 
 import { AppBar, Box, Container, Icon, IconButton, Stack, Typography } from '@mui/material';
 import dayjs from 'dayjs';
+import { useLocale, useTranslations } from 'next-intl';
 import { usePathname, useRouter } from 'next/navigation';
 
 import FiltersModal from '@/components/HeaderSearchMobile/FiltersModal';
 import ChevronLeft from '@/components/SvgIcons/ChevronLeft';
 import Filters from '@/components/SvgIcons/Filters';
+import { getTranslationKeyByDestinationName } from '@/config/destinations.config';
 import { CatalogueData, CatalogueFilters } from '@/models/catalogue.model';
+import { VESSEL_TYPE_LABEL_MAP_PLURAL, isVesselType } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
 import useQueryParams from '@/utils/hooks/useQueryParams';
-import DateTime from '@/utils/static/DateTime';
+import { useResolvedDestination } from '@/views/Search/SearchView/ResolvedDestinationContext';
 
 import GeneralSearchBarModal from './GeneralSearchBarModal';
 import styles from './HeaderSearchMobile.module.scss';
@@ -30,6 +33,29 @@ const HeaderSearchMobile = ({ catalogueData, catalogueFilters }: HeaderSearchMob
   const pathname = usePathname();
 
   const isBoatDetailPage = /^\/[a-z]{2}\/boat\/.+$|^\/boat\/.+$/.test(pathname);
+  const t = useTranslations();
+  const locale = useLocale();
+  const { labels } = useResolvedDestination();
+
+  // The pill read "croatia | - | • | CATAMARAN" on phones (raw URL values,
+  // placeholder dashes, enum names — audit B47): show display names, and
+  // leave out a part that is not set instead of printing "-".
+  const destinationText = (params.destinations ?? [])
+    .map(raw => {
+      const name = labels[raw.toLowerCase()] ?? raw;
+      const key = getTranslationKeyByDestinationName(name);
+
+      return key ? t(`home.${key}` as never) : name;
+    })
+    .join(', ');
+  const shortDate = (iso: string) =>
+    new Intl.DateTimeFormat(locale, { day: 'numeric', month: 'short' }).format(dayjs(iso).toDate());
+  const dateText =
+    params.startDate && params.endDate ? `${shortDate(params.startDate)} – ${shortDate(params.endDate)}` : null;
+  const typeText = (params.boatTypes ?? [])
+    .map(type => (isVesselType(type) ? t(VESSEL_TYPE_LABEL_MAP_PLURAL[type]) : type))
+    .join(', ');
+  const detailText = [dateText, typeText].filter(Boolean).join(' • ');
 
   const showFilterButton = !isBoatDetailPage;
 
@@ -71,12 +97,17 @@ const HeaderSearchMobile = ({ catalogueData, catalogueFilters }: HeaderSearchMob
       <GeneralSearchBarModal isOpen={generalSearchModalOpen} onClose={handleCloseGeneralSearchModal} />
       <AppBar elevation={0} classes={{ root: styles.root }} className={styles.container}>
         <Container disableGutters maxWidth="xl" className={styles.header}>
-          <IconButton size="large" onClick={handleGoBack} aria-label="Go back">
+          <IconButton size="large" onClick={handleGoBack} aria-label={t('common.goBack')}>
             <Icon>
               <ChevronLeft size={24} />
             </Icon>
           </IconButton>
-          <Box className={styles.searchBar} onClick={handleOpenGeneralSearchModal}>
+          <Box
+            className={styles.searchBar}
+            onClick={handleOpenGeneralSearchModal}
+            role="button"
+            aria-label={t('common.editSearch')}
+          >
             <Stack direction="column" justifyContent="center" alignItems="center" padding="6px 26px">
               <Typography
                 variant="body1"
@@ -89,56 +120,27 @@ const HeaderSearchMobile = ({ catalogueData, catalogueFilters }: HeaderSearchMob
                   maxWidth: '200px',
                 }}
               >
-                {params.destinations ? params.destinations.map(dest => dest).join(', ') : '-'}
+                {destinationText || t('filters.allDestinations')}
               </Typography>
 
-              <Stack direction="row" alignItems="center" spacing={1} width="fit-content" sx={{ minWidth: 0 }}>
+              {detailText && (
                 <Typography
                   variant="body2"
                   color={colors.black400}
                   sx={{
+                    overflow: 'hidden',
+                    textOverflow: 'ellipsis',
                     whiteSpace: 'nowrap',
-                    flexShrink: 0,
-                    width: 'fit-content',
+                    maxWidth: '200px',
                   }}
                 >
-                  {params.startDate && params.endDate ? (
-                    <>
-                      {DateTime.formatShortWithoutYear(dayjs(params.startDate))} -{' '}
-                      {DateTime.formatShortWithoutYear(dayjs(params.endDate))}
-                    </>
-                  ) : (
-                    '-'
-                  )}
+                  {detailText}
                 </Typography>
-
-                {params.boatTypes && params.boatTypes.length > 0 ? (
-                  <>
-                    <Typography variant="body2" color={colors.black400} sx={{ flexShrink: 0 }}>
-                      •
-                    </Typography>
-                    <Typography
-                      variant="body2"
-                      color={colors.black400}
-                      sx={{
-                        overflow: 'hidden',
-                        textOverflow: 'ellipsis',
-                        whiteSpace: 'nowrap',
-                        width: { xs: '75px', sm: 'fit-content' },
-                        minWidth: 0,
-                      }}
-                    >
-                      {params.boatTypes.map(dest => dest).join(', ')}
-                    </Typography>
-                  </>
-                ) : (
-                  '-'
-                )}
-              </Stack>
+              )}
             </Stack>
           </Box>
           {showFilterButton ? (
-            <IconButton size="large" onClick={handleOpenFiltersModal} aria-label="Open filters">
+            <IconButton size="large" onClick={handleOpenFiltersModal} aria-label={t('common.openFilters')}>
               <Icon>
                 <Filters size={24} />
               </Icon>

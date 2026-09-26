@@ -324,5 +324,7 @@
     "weeks": "{count, plural, one {# semaine} other {# semaines}}",
     "live": "En direct",
     "weekAria": "Semaine du {from} au {to}, {price}, {status}"
-  }
+  },
+  "notAvailableShort": "Indisponible à ces dates",
+  "readyToSail": "Prêt à larguer les amarres ?"
 }

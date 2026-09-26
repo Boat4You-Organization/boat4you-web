@@ -50,6 +50,9 @@ import { useResolvedDestination } from '@/views/Search/SearchView/ResolvedDestin
 
 import styles from './BoatsSection.module.scss';
 
+/** Image priority of the first cards (the rest lazy-load): the first photo is the LCP on phones. */
+const LCP_CARD_PRIORITY: Array<'preload' | 'eager'> = ['preload', 'eager'];
+
 /** Relax-suggestion URL keys → the sidebar title of their filter (filters.json). */
 const RELAX_FILTER_TITLE: Record<string, string> = {
   minBuildYear: 'yearBuilt',
@@ -416,6 +419,7 @@ const BoatsSection = ({
                     {...yacht}
                     user={user}
                     isSelected={selectedYachtIds.includes(yacht.id)}
+                    imagePriority={LCP_CARD_PRIORITY[index]}
                   />
                 </MuiGrid>
               ))}

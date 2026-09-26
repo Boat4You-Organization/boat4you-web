@@ -651,5 +651,9 @@
     "MOTORSAILER": "{count, plural, one {# dostupan motorni jedrenjak} few {# dostupna motorna jedrenjaka} other {# dostupnih motornih jedrenjaka}}",
     "MINI_CRUISER": "{count, plural, one {# dostupan mini cruiser} few {# dostupna mini cruisera} other {# dostupnih mini cruisera}}",
     "TRIMARAN": "{count, plural, one {# dostupan trimaran} few {# dostupna trimarana} other {# dostupnih trimarana}}"
-  }
+  },
+  "closeGallery": "Zatvori galeriju",
+  "goBack": "Natrag",
+  "openFilters": "Otvori filtre",
+  "editSearch": "Uredi pretragu"
 }

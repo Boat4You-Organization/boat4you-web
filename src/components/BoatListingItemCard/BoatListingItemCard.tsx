@@ -69,6 +69,9 @@ interface BoatListingItemCardProps extends YachtModelShortInfo {
   isGridView: boolean;
   user: UserModel | null;
   isSelected?: boolean;
+  /** Above-the-fold card: its photo is the page's LCP on phones, so it must
+   *  not wait for lazy loading ('preload' = first card, 'eager' = next ones). */
+  imagePriority?: 'preload' | 'eager';
 }
 
 interface BoatListingItemCardViewProps extends BoatListingItemCardProps {
@@ -107,6 +110,7 @@ const BoatListingItemCardView = ({
   offerDateTo,
   matchKind,
   boatDetailHref,
+  imagePriority,
 }: BoatListingItemCardViewProps) => {
   const { isMobile } = useBreakpoint();
   const t = useTranslations();
@@ -291,6 +295,11 @@ const BoatListingItemCardView = ({
               // per card instead of ~8KB, ~25 cards per page (Lighthouse
               // "Improve image delivery", 9.7.2026).
               sizes="(max-width: 899px) 140px, 388px"
+              // Slow 4G + 4x CPU: the first card's lazy photo painted at
+              // 6.8 s (audit B41); the first card preloads, the next load eagerly.
+              preload={imagePriority === 'preload'}
+              loading={imagePriority ? 'eager' : undefined}
+              fetchPriority={imagePriority ? 'high' : undefined}
             />
 
             {/* Favorite heart — moved to TOP-RIGHT so it doesn't collide with
@@ -626,11 +635,16 @@ const BoatListingItemCardView = ({
                     </Stack>
                   )}
                 </Box>
-                {/* Redundant on mobile — the user already set the search
-                  window (e.g. "7 days"), repeating it on every card just
-                  wastes scarce vertical space. Keep on desktop as reminder. */}
-                {!isMobile && hasPrice && (
-                  <Typography variant="body2" color={colors.black600}>
+                {/* The price's period, on every screen size: undated
+                  landings show a 7-day total and off-length searches mix
+                  periods, so a bare "4.976 €" on a phone said nothing about
+                  what it buys (audit B47). Compact type on mobile. */}
+                {hasPrice && (
+                  <Typography
+                    variant="body2"
+                    color={colors.black600}
+                    sx={isMobile ? { fontSize: 11, lineHeight: 1.3 } : undefined}
+                  >
                     {t('common.priceForXDays', { days: String(days) })}
                   </Typography>
                 )}

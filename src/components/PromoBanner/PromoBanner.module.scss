@@ -286,3 +286,12 @@
     }
   }
 }
+
+/* Phones: the subtitle ran under the "up to X%" blob (white text on the pale
+   blob at 375 px, audit B49). Keep it clear of the blob's column in every
+   variant. */
+@media (width <= 599px) {
+  .banner .sub {
+    max-width: min(34ch, calc(100% - 136px));
+  }
+}

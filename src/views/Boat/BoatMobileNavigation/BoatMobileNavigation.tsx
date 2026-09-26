@@ -39,7 +39,7 @@ const defaultValues: BoatCalendarFormValues = {
 const BoatMobileNavigation = ({ yacht }: BoatMobileNavigationProps) => {
   const t = useTranslations('common');
   const tYacht = useTranslations('yacht');
-  const { calculatedPrice, selectedOffer } = useYachtStore();
+  const { calculatedPrice, selectedOffer, isCalculatingPrice } = useYachtStore();
   const { params, setMultipleParams } = useQueryParams();
   const [isModalOpen, toggleModal] = useToggleState();
   const [modalVariant, setModalVariant] = useState<'price' | 'dates' | null>(null);
@@ -153,6 +153,14 @@ const BoatMobileNavigation = ({ yacht }: BoatMobileNavigationProps) => {
     <Form defaultValues={initialValues} onSubmit={handleSubmit} id={BOAT_CALENDAR_FORM} resetDefaultValues>
       {({ watch }) => {
         const { startDate, endDate } = watch();
+        // Chosen dates the boat cannot be reserved on: the desktop form says
+        // so, the phone bar only greyed out "Reserve" (audit B48). Say it, and
+        // turn the button into "Change dates".
+        const isUnavailableSelection =
+          !!(startDate && endDate) &&
+          !isInquireFlow &&
+          !isCalculatingPrice &&
+          (isSelectedOfferBlocked || !isCalculatedPrice);
 
         return (
           <>
@@ -179,6 +187,11 @@ const BoatMobileNavigation = ({ yacht }: BoatMobileNavigationProps) => {
                   </Typography>
                 )}
               </Stack>
+              {isUnavailableSelection && (
+                <Typography variant="body2" color={colors.red500} textAlign="center" role="status" sx={{ mb: 1 }}>
+                  {tYacht('notAvailableShort')}
+                </Typography>
+              )}
               <Stack spacing={1.5}>
                 <Button
                   size="large"
@@ -199,15 +212,21 @@ const BoatMobileNavigation = ({ yacht }: BoatMobileNavigationProps) => {
                     </>
                   )}
                 </Button>
-                <Button
-                  size="large"
-                  id={BOAT_CALENDAR_FORM}
-                  fullWidth
-                  onClick={handleReservationClick}
-                  disabled={isSelectedOfferBlocked || (!isInquireFlow && !isCalculatedPrice)}
-                >
-                  {isInquireFlow ? tYacht('inquireNow') : tYacht('reserve')}
-                </Button>
+                {isUnavailableSelection ? (
+                  <Button size="large" fullWidth onClick={handleChangeDatesOpen}>
+                    {t('changeDates')}
+                  </Button>
+                ) : (
+                  <Button
+                    size="large"
+                    id={BOAT_CALENDAR_FORM}
+                    fullWidth
+                    onClick={handleReservationClick}
+                    disabled={isSelectedOfferBlocked || (!isInquireFlow && !isCalculatedPrice)}
+                  >
+                    {isInquireFlow ? tYacht('inquireNow') : tYacht('reserve')}
+                  </Button>
+                )}
               </Stack>
             </Box>
             <ModalRoot

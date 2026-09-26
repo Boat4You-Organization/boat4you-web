@@ -143,7 +143,7 @@ const Lightbox = ({ yacht, images, open, onClose, selectedImage, showShareAndFav
         <Container maxWidth="xl" className={styles.container}>
           <Box className={styles.headerWrapper}>
             <Stack direction="row" justifyContent="space-between" alignItems="center" className={styles.header}>
-              <IconButton onClick={onClose}>
+              <IconButton onClick={onClose} aria-label={t('closeGallery')}>
                 <ArrowLeft size={24} fill={colors.black950} />
               </IconButton>
               {showShareAndFavorite && (
@@ -154,7 +154,7 @@ const Lightbox = ({ yacht, images, open, onClose, selectedImage, showShareAndFav
               {yacht && yachtWithMainImage && showShareAndFavorite && (
                 <>
                   <Stack direction="row" spacing={2} className={styles.iconsMobile}>
-                    <IconButton onClick={toggleShareModal}>
+                    <IconButton onClick={toggleShareModal} aria-label={t('share')}>
                       <Share fill={colors.black950} />
                     </IconButton>
                     <FavoriteButton yacht={yachtWithMainImage} color={colors.black950} />
@@ -163,7 +163,7 @@ const Lightbox = ({ yacht, images, open, onClose, selectedImage, showShareAndFav
                     <Button variant="containedInfo" startIcon={<Share />} onClick={toggleShareModal}>
                       {t('share')}
                     </Button>
-                    <FavoriteButton yacht={yachtWithMainImage} buttonText="Save" />
+                    <FavoriteButton yacht={yachtWithMainImage} buttonText={t('save')} />
                   </Stack>
                 </>
               )}

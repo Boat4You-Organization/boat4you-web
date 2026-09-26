@@ -639,5 +639,9 @@
   "bookingFailedExternal": "Votre réservation n'a pas abouti et aucun montant n'a été débité. Notre équipe a été prévenue et vous contactera sous peu — vous pouvez aussi nous envoyer votre demande dès maintenant et nous organiserons la réservation par e-mail.",
   "bookingFailedReference": "Référence : {code}",
   "tripadvisorReviews": "{count, plural, one {# avis} other {# avis}} sur TripAdvisor",
-  "tripadvisorAria": "Noté {rating} sur 5 d'après {count, plural, one {# avis} other {# avis}} sur TripAdvisor"
+  "tripadvisorAria": "Noté {rating} sur 5 d'après {count, plural, one {# avis} other {# avis}} sur TripAdvisor",
+  "closeGallery": "Fermer la galerie",
+  "goBack": "Retour",
+  "openFilters": "Ouvrir les filtres",
+  "editSearch": "Modifier la recherche"
 }
