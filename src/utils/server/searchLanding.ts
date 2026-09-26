@@ -67,6 +67,20 @@ export const resolveSearchLanding = async (params: AllSearchParams): Promise<Sea
   return { destinations, hasOwnDid, resolved, did, labels };
 };
 
+/**
+ * A `?destinations=` value the catalogue does not know, on a URL without a
+ * did of its own: a typo, free text, or an old or external link to a name
+ * that no pin, rename fallback or backend alias (destinationDid.ts) catches.
+ * Such a URL is no landing and answers 404 (search/page.tsx). Before, the
+ * filter was dropped and the page listed the whole catalogue ("12,100 boats")
+ * under the raw input as title and H1 (audit B01, review 26.9.2026). One
+ * unknown value among several counts too: the title would still carry it.
+ * A catalogue outage never gets here — the resolution throws and the page
+ * answers 500.
+ */
+export const hasUnknownDestination = (landing: SearchLanding): boolean =>
+  !landing.hasOwnDid && landing.resolved.some(r => !r);
+
 const encodeQueryValue = (value: string): string => encodeURIComponent(value).replace(/'/g, '%27');
 
 /**
@@ -200,8 +214,8 @@ export const landingFetchRevalidate = (params: AllSearchParams, landing: SearchL
 
   if (!entries.every(([key]) => LANDING_CACHE_PARAMS.has(key) || isTrackingParam(key))) return undefined;
 
-  // A destination must resolve (an unknown one lists the whole catalogue
-  // under a URL anyone can vary).
+  // A destination must resolve (an unknown one answers 404 before any
+  // fetch — hasUnknownDestination — but never mint a cache entry for it).
   if (landing.destinations.length && (!landing.did.length || landing.resolved.some(r => !r))) return undefined;
 
   if (!splitSearchParam(params.boatTypes).every(isVesselType)) return undefined;

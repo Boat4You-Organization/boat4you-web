@@ -15,7 +15,7 @@ import {
   locationForDid,
   resolveDestinationName,
 } from '@/utils/server/destinationDid';
-import { normalizeDestinationName } from '@/utils/static/searchLandingPath';
+import { buildSearchLandingPath, normalizeDestinationName } from '@/utils/static/searchLandingPath';
 
 /**
  * Blog → catalogue. The 56 posts (WordPress, English only) are the site's
@@ -85,7 +85,10 @@ const targetFor = async (index: DestinationIndex | null, href: string, locale: s
   const boatType = corpusBoatType(url.searchParams);
   const landing = await corpusLinkTarget(index, label, did, boatType);
 
-  if (!landing) return null;
+  // A name the catalogue does not know, without a did, is no page: it
+  // answers 404 (search/page.tsx, audit B01). Send the reader to the search
+  // itself instead (the curated corpus drops such a link; a post keeps it).
+  if (!landing) return did.trim() ? null : `${prefix}${buildSearchLandingPath(null, boatType)}`;
 
   const landingDid = new URL(landing, SITE_ORIGIN).searchParams.get('did');
 

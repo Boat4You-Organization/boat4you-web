@@ -2,7 +2,7 @@
 import { Metadata } from 'next';
 import { Locale } from 'next-intl';
 import { getLocale, getTranslations } from 'next-intl/server';
-import { permanentRedirect } from 'next/navigation';
+import { notFound, permanentRedirect } from 'next/navigation';
 
 import Layout from '@/components/Layout';
 import { AllSearchParams } from '@/config/form-models.config';
@@ -18,6 +18,7 @@ import { LandingCrumb, landingCrumbs, placeForDids } from '@/utils/server/landin
 import { loadManufacturerLookup } from '@/utils/server/manufacturerLookup';
 import {
   SearchLanding,
+  hasUnknownDestination,
   landingFetchRevalidate,
   landingRedirectPath,
   resolveSearchLanding,
@@ -76,6 +77,10 @@ export async function generateMetadata({ params: paramsPromise, searchParams }: 
   const landing = await resolveSearchLanding(params);
 
   redirectToCanonicalLanding(locale, params, landing);
+
+  // A destination the catalogue does not know is no page (404), never the
+  // whole catalogue under the raw input (hasUnknownDestination).
+  if (hasUnknownDestination(landing)) notFound();
 
   // Title / description / H1 in the locale (landingCopy.ts, shared with the
   // page's H1 so the two never diverge).
@@ -364,6 +369,8 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
   const landing: SearchLanding = await resolveSearchLanding(params);
 
   redirectToCanonicalLanding(locale, params, landing);
+
+  if (hasUnknownDestination(landing)) notFound();
 
   const effectiveParams = withLandingDid(params, landing);
   // Undated landings read the yacht list through a 10-minute Data Cache

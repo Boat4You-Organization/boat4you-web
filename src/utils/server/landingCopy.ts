@@ -85,7 +85,9 @@ export const getLandingCopy = async (locale: string, params: AllSearchParams): P
   const singleBoatType: VesselType | null = boatTypes.length === 1 && isVesselType(boatTypes[0]) ? boatTypes[0] : null;
 
   // Catalogue name for resolved values (aliases fold: split → Split Region),
-  // the raw URL value otherwise; dual-source pairs share one phrase.
+  // the raw URL value otherwise — only a did link's own label reaches here
+  // unresolved, an unknown name without a did answers 404 (search/page.tsx);
+  // dual-source pairs share one phrase.
   const rawPlaces = await Promise.all(
     uniqueCaseInsensitive(splitSearchParam(params.destinations)).map(d =>
       placeText(locale, landing.labels[d.toLowerCase()] ?? d)
