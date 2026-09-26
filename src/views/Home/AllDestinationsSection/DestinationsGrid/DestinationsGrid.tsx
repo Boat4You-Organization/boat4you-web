@@ -37,7 +37,7 @@ const DestinationsGrid = ({ destinations }: DestinationsGridProps) => {
                   {localizedName}
                 </Typography>
                 <Typography variant="body2" color={colors.black350}>
-                  {destination.yachtCount} {t('ourFleetSection.boat')}
+                  {t('ourFleetSection.boatsCount', { count: destination.yachtCount })}
                 </Typography>
               </Stack>
               <ChevronRight size={20} />

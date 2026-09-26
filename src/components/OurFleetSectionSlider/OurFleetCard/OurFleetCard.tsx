@@ -29,9 +29,7 @@ const OurFleetCard = ({ vesselType, yachtCount }: YachtFleet) => {
       <div className={styles.scrim} />
       <div className={styles.content}>
         <h3 className={styles.title}>{t(config.titleKey)}</h3>
-        <p className={styles.count}>
-          {yachtCount} {t('boat')}
-        </p>
+        {yachtCount > 0 && <p className={styles.count}>{t('boatsCount', { count: yachtCount })}</p>}
       </div>
     </Link>
   );

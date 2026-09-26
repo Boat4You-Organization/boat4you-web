@@ -81,7 +81,26 @@ export default class DateTime {
 
   public static formatShortWithoutYear = (date: Dayjs) => date.format(DATE_FORMAT_SHORT_WITHOUT_YEAR);
 
+  /**
+   * Long dates in the locale's own pattern. The dayjs pattern is English
+   * word order: in HR it printed "subota, 10 srpnja 2027" instead of
+   * "subota, 10. srpnja 2027." (audit B29), and in DE "10 Juli" without the
+   * ordinal dot. English keeps its dayjs form ("Saturday, 10 July 2027");
+   * every other locale goes through Intl.DateTimeFormat.
+   */
+  private static intlLong = (date: Dayjs, locale: string, withWeekday: boolean): string =>
+    new Intl.DateTimeFormat(locale, {
+      ...(withWeekday ? { weekday: 'long' as const } : {}),
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric',
+    }).format(date.toDate());
+
   public static formatLong = (date: Dayjs, locale?: string) => {
+    if (locale && !locale.startsWith('en')) {
+      return DateTime.intlLong(date, locale, true);
+    }
+
     if (locale) {
       return date.locale(locale).format(DATE_FORMAT_LONG);
     }
@@ -90,6 +109,10 @@ export default class DateTime {
   };
 
   public static formatLongWithoutDay = (date: Dayjs, locale?: string) => {
+    if (locale && !locale.startsWith('en')) {
+      return DateTime.intlLong(date, locale, false);
+    }
+
     if (locale) {
       return date.locale(locale).format(DATE_FORMAT_LONG_WITHOUT_DAY);
     }

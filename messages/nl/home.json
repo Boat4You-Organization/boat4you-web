@@ -4,8 +4,8 @@
     "ctaTitle": "één klik.",
     "description": "Charter je perfecte jacht in een paar klikken. Eenvoudig, snel en zonder stress — je droomzeilavontuur begint hier.",
     "support": "Uitstekende klantenservice",
-    "yachtsCount": "{count} jachten",
-    "marinasCount": "{count} jachthavens"
+    "yachtsCount": "{count, plural, one {# jacht} other {# jachten}}",
+    "marinasCount": "{count, plural, one {# jachthaven} other {# jachthavens}}"
   },
   "generalSearchBar": {
     "whereAreYouGoing": "Waar ga je naartoe?",
@@ -27,7 +27,6 @@
   "destinationsSection": {
     "theWorldIs": "Beste jachtcharter-",
     "yours": "bestemmingen",
-    "yachts": "jachten",
     "destinations": {
       "bahamas": "Bahama's",
       "caribbean": "Caribisch gebied",
@@ -61,7 +60,8 @@
       "grenada": "Grenada",
       "splitRegion": "Regio Split",
       "ionianRegion": "Ionische regio"
-    }
+    },
+    "yachtsCount": "{count, plural, one {# jacht} other {# jachten}}"
   },
   "whyChooseUsSection": {
     "whyChoose": "Waarom kies je ons als je <strong>professionele charteraanbieder</strong>",
@@ -88,7 +88,6 @@
     "getToKnow": "We hebben de boot die je wilt, ",
     "ourFleet": "ongeacht het type",
     "boatSelection": "De beste selectie boten online tegen de beste prijzen",
-    "boat": "boot",
     "fleet": {
       "catamarans": "Catamarans",
       "gulets": "Guletten",
@@ -102,7 +101,8 @@
       "miniCruisers": "Mini-cruisers",
       "trimarans": "Trimaran",
       "rubberBoats": "Rubberboot"
-    }
+    },
+    "boatsCount": "{count, plural, one {# boot} other {# boten}}"
   },
   "chooseFromFiveHundredLocations": "Bootverhuur en jachtcharter wereldwijd tegen de beste prijzen",
   "riskFreeBooking": {

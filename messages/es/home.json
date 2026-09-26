@@ -4,8 +4,8 @@
     "ctaTitle": "un solo clic.",
     "description": "Alquila tu yacht perfecto en solo unos clicks. Fácil, rápido y sin estrés — tu aventura de navegación soñada comienza aquí.",
     "support": "Excelente atención al cliente",
-    "yachtsCount": "{count} yates",
-    "marinasCount": "{count} puertos"
+    "yachtsCount": "{count, plural, one {# yate} other {# yates}}",
+    "marinasCount": "{count, plural, one {# puerto} other {# puertos}}"
   },
   "generalSearchBar": {
     "whereAreYouGoing": "¿A dónde vas?",
@@ -27,7 +27,6 @@
   "destinationsSection": {
     "theWorldIs": "Mejores destinos para",
     "yours": "alquiler de yates",
-    "yachts": "yates",
     "destinations": {
       "bahamas": "Bahamas",
       "caribbean": "Caribe",
@@ -61,7 +60,8 @@
       "grenada": "Granada",
       "splitRegion": "Región de Split",
       "ionianRegion": "Región Jónica"
-    }
+    },
+    "yachtsCount": "{count, plural, one {# yate} other {# yates}}"
   },
   "whyChooseUsSection": {
     "whyChoose": "Por qué elegirnos como tu <strong>proveedor profesional de chárter</strong>",
@@ -88,7 +88,6 @@
     "getToKnow": "Tenemos el barco que quieres, ",
     "ourFleet": "no importa el tipo que sea",
     "boatSelection": "La mejor selección de barcos online a los mejores precios",
-    "boat": "barco",
     "fleet": {
       "catamarans": "Catamaranes",
       "gulets": "Gulets",
@@ -102,7 +101,8 @@
       "miniCruisers": "Mini Cruceros",
       "trimarans": "Trimarán",
       "rubberBoats": "Bote Inflable"
-    }
+    },
+    "boatsCount": "{count, plural, one {# barco} other {# barcos}}"
   },
   "chooseFromFiveHundredLocations": "Alquiler de barcos y chárter de yates en todo el mundo con los mejores precios",
   "riskFreeBooking": {

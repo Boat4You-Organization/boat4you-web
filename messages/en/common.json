@@ -62,8 +62,6 @@
   "backToHome": "Back to home",
   "statBoats": "Boats worldwide",
   "statMarinas": "Marinas",
-  "statSailors": "Happy sailors",
-  "statRating": "Average rating",
   "assuranceSSL": "SSL-encrypted checkout",
   "assurance247": "24/7 human support",
   "assuranceVerified": "Verified charter partners",
@@ -563,7 +561,7 @@
   "withDepositInsurance": "With deposit insurance",
   "perRental": "per rental",
   "refundableSecurityDepositDescription": "A refundable deposit is required at yacht pick-up and will be returned to you when the yacht is returned without damage.",
-  "boatsAvailableHeadingGeneric": "{count, number} boats available",
+  "boatsAvailableHeadingGeneric": "{count, plural, one {# boat available} other {# boats available}}",
   "boatsAvailableHeading": "{count, number} {type} available",
   "popularDestinations": {
     "heading": "Our most popular destinations {area}",
@@ -639,5 +637,12 @@
   "voucherFirstPaymentNote": "Includes your {amount} voucher, deducted from this first payment.",
   "bookingFailedTitle": "We couldn't complete your booking",
   "bookingFailedExternal": "Your booking was not completed and nothing has been charged. Our team has been notified and will contact you shortly — you can also send us your request right now and we'll arrange the booking by email.",
-  "bookingFailedReference": "Reference: {code}"
+  "bookingFailedReference": "Reference: {code}",
+  "tripadvisorReviews": "{count, plural, one {# review} other {# reviews}} on TripAdvisor",
+  "tripadvisorAria": "Rated {rating} out of 5 from {count, plural, one {# review} other {# reviews}} on TripAdvisor",
+  "closeGallery": "Close gallery",
+  "goBack": "Go back",
+  "openFilters": "Open filters",
+  "editSearch": "Edit search",
+  "photoAlt": "{label} — photo {n}"
 }

@@ -11,6 +11,7 @@ import { toTitleCase } from '@/utils/static/toTitleCase';
 
 import styles from './Models.module.scss';
 import ModelsBreadcrumb, { Crumb } from './ModelsBreadcrumb';
+import ModelsFaq, { ModelsFaqEntry } from './ModelsFaq';
 import { M_PER_FT, formatRange } from './modelsText';
 
 export interface WhereRow {
@@ -33,6 +34,8 @@ interface ModelPageViewProps {
   blogPost: { slug: string; title: string } | null;
   showAllHref: string;
   breadcrumb: Crumb[];
+  /** Data-driven questions (built with the FAQPage JSON-LD in the route). */
+  faq: ModelsFaqEntry[];
 }
 
 /**
@@ -52,6 +55,7 @@ const ModelPageView = async ({
   blogPost,
   showAllHref,
   breadcrumb,
+  faq,
 }: ModelPageViewProps) => {
   const t = await getTranslations({ locale, namespace: 'models' });
   const price = (eur: number) => formatPriceWithCurrency({ clientPriceEur: Math.round(eur), locale });
@@ -243,6 +247,8 @@ const ModelPageView = async ({
           </Link>
         </section>
       )}
+
+      <ModelsFaq heading={t('faqHeading')} entries={faq} />
 
       {otherModels.length > 0 && (
         <section className={styles.section} aria-labelledby="model-other">

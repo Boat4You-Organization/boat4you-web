@@ -4,8 +4,8 @@
     "ctaTitle": "jednom kliku.",
     "description": "Unajmite savršenu jahtu u samo nekoliko klikova. Jednostavno, brzo i bez stresa — vaša morska avantura počinje ovdje.",
     "support": "Vrhunska korisnička podrška",
-    "yachtsCount": "{count} jahti",
-    "marinasCount": "{count} marina"
+    "yachtsCount": "{count, plural, one {# jahta} few {# jahte} other {# jahti}}",
+    "marinasCount": "{count, plural, one {# marina} few {# marine} other {# marina}}"
   },
   "generalSearchBar": {
     "whereAreYouGoing": "Gdje idete?",
@@ -27,7 +27,6 @@
   "destinationsSection": {
     "theWorldIs": "Najbolje destinacije za",
     "yours": "charter jahti",
-    "yachts": "jahta",
     "destinations": {
       "bahamas": "Bahami",
       "caribbean": "Karibi",
@@ -61,7 +60,8 @@
       "grenada": "Grenadi",
       "splitRegion": "Splitskoj regiji",
       "ionianRegion": "Jonskoj regiji"
-    }
+    },
+    "yachtsCount": "{count, plural, one {# jahta} few {# jahte} other {# jahti}}"
   },
   "whyChooseUsSection": {
     "whyChoose": "Zašto odabrati nas kao vašeg <strong>profesionalnog charter providera</strong>",
@@ -88,7 +88,6 @@
     "getToKnow": "Imamo brod koji želite, ",
     "ourFleet": "bez obzira na vrstu",
     "boatSelection": "Najbolji izbor brodova online po najpovoljnijim cijenama",
-    "boat": "brod",
     "fleet": {
       "catamarans": "Katamarani",
       "gulets": "Guleti",
@@ -102,7 +101,8 @@
       "miniCruisers": "Mini Kruzeri",
       "trimarans": "Trimarani",
       "rubberBoats": "Gumeni čamci"
-    }
+    },
+    "boatsCount": "{count, plural, one {# brod} few {# broda} other {# brodova}}"
   },
   "chooseFromFiveHundredLocations": "Najam plovila i charter jahti diljem svijeta po najboljim cijenama",
   "riskFreeBooking": {

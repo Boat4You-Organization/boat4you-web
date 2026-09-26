@@ -14,6 +14,7 @@ import {
   YachtEquipmentCategoryType,
 } from '@/models/yacht-amenities.model';
 import colors from '@/styles/themes/colors';
+import { presentAmenities } from '@/utils/static/amenities';
 
 interface AmenitiesTabProps {
   reservationDetails: ReservationDetails;
@@ -109,7 +110,9 @@ const AmenitiesTab = ({ reservationDetails }: AmenitiesTabProps) => {
     );
   };
 
-  const amenities = reservationDetails.amenities || [];
+  const amenities = presentAmenities(reservationDetails.amenities).filter(
+    amenity => renderAmenityLabel(amenity).trim() !== ''
+  );
 
   if (amenities.length === 0) return null;
 

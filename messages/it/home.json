@@ -4,8 +4,8 @@
     "ctaTitle": "un clic.",
     "description": "Noleggia il tuo yacht perfetto con pochi click. Facile, veloce e senza stress — la tua avventura di navigazione da sogno inizia qui.",
     "support": "Eccellente assistenza clienti",
-    "yachtsCount": "{count} yacht",
-    "marinasCount": "{count} porti"
+    "yachtsCount": "{count, plural, one {# yacht} other {# yacht}}",
+    "marinasCount": "{count, plural, one {# porto} other {# porti}}"
   },
   "generalSearchBar": {
     "whereAreYouGoing": "Dove stai andando?",
@@ -27,7 +27,6 @@
   "destinationsSection": {
     "theWorldIs": "Migliori destinazioni per",
     "yours": "il noleggio yacht",
-    "yachts": "yacht",
     "destinations": {
       "bahamas": "Bahamas",
       "caribbean": "Caraibi",
@@ -61,7 +60,8 @@
       "grenada": "Grenada",
       "splitRegion": "Regione di Split",
       "ionianRegion": "Regione Ionica"
-    }
+    },
+    "yachtsCount": "{count, plural, one {# yacht} other {# yacht}}"
   },
   "whyChooseUsSection": {
     "whyChoose": "Perché scegliere noi come tuo <strong>fornitore di charter professionale</strong>",
@@ -88,7 +88,6 @@
     "getToKnow": "Abbiamo la barca che desideri, ",
     "ourFleet": "non importa di che tipo sia",
     "boatSelection": "La migliore selezione di barche online ai migliori prezzi",
-    "boat": "barca",
     "fleet": {
       "catamarans": "Catamarani",
       "gulets": "Gulet",
@@ -102,7 +101,8 @@
       "miniCruisers": "Mini Cruiser",
       "trimarans": "Trimarano",
       "rubberBoats": "Gommone"
-    }
+    },
+    "boatsCount": "{count, plural, one {# barca} other {# barche}}"
   },
   "chooseFromFiveHundredLocations": "Noleggio di barche e yacht in tutto il mondo ai migliori prezzi",
   "riskFreeBooking": {

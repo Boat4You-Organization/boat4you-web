@@ -200,7 +200,7 @@ const BoatCalendarForm = ({ yacht, variant }: BoatCalendarFormProps) => {
           <Stack>
             {hasValidDateSelection && isCalculatedPrice && !isSelectedOfferBlocked ? (
               <Typography component="p" variant="h3" fontWeight={700} color={colors.blue500}>
-                Ready to sail?
+                {t('readyToSail')}
               </Typography>
             ) : (
               <Stack p={2} borderRadius={2.5} sx={{ backgroundColor: colors.red50 }}>

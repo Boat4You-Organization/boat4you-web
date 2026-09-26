@@ -44,5 +44,5 @@ export const charterFactsTargetFor = async (
       ? tHome(`destinationsSection.destinations.${countryKey}` as never)
       : (await placeText(locale, resolved.name)).name;
 
-  return { did, vesselType: boatType, areaLabel };
+  return { did, vesselType: boatType, areaLabel, placeDids: resolved.dids, countryCode: resolved.countryCode ?? null };
 };

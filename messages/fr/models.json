@@ -2,8 +2,8 @@
   "meta": {
     "indexTitle": "Location de bateaux par modèle : {models, number} modèles populaires",
     "indexDescription": "Comparez les {models, number} modèles de voiliers et catamarans les plus proposés à la location sur Boat4You : caractéristiques, bases et prix habituels à la semaine pour chacun.",
-    "brandTitle": "Location {brand} : {models, number} modèles, {count, number} bateaux",
-    "brandDescription": "Louez un {brand} : {count, number} bateaux répartis sur {models, number} modèles sur Boat4You. Comparez caractéristiques, bases et prix à la semaine, puis réservez en direct.",
+    "brandTitle": "Location {brand} : {count, number} bateaux, {models, number} modèles populaires",
+    "brandDescription": "Louez un {brand} : {count, number} bateaux sur Boat4You, {models, number} modèles populaires comparés par taille, bases et prix habituel de la semaine. Réservez en direct.",
     "modelTitle": "Location {model} : {count, number} bateaux, bases et prix",
     "modelDescription": "Comparez {count, number} {model} à louer : {cabins} cabines, construction {years}, en général {p25}–{p75} la semaine de location. Destinations : {countries}. Réservation directe sur Boat4You.",
     "modelDescriptionNoPrice": "Comparez {count, number} {model} à louer : {cabins} cabines, construction {years}. Destinations : {countries}. Réservation directe sur Boat4You."
@@ -21,8 +21,23 @@
   },
   "brand": {
     "h1": "Location de bateaux {brand}",
-    "lede": "Boat4You propose {count, plural, one {# bateau {brand}} other {# bateaux {brand}}} à la location, répartis sur {models, number} modèles. Choisissez un modèle pour voir ses caractéristiques, ses bases et ses prix habituels à la semaine.",
-    "modelsHeading": "Modèles {brand} à louer"
+    "lede": "Boat4You propose {count, plural, one {# bateau {brand}} other {# bateaux {brand}}} à la location. {models, plural, one {# modèle populaire a} other {# modèles populaires ont}} leur propre page avec caractéristiques, bases et prix habituels à la semaine.",
+    "modelsHeading": "Modèles {brand} à louer",
+    "compareHeading": "Les modèles {brand} comparés",
+    "colModel": "Modèle",
+    "colBoats": "Bateaux",
+    "colLength": "Longueur",
+    "colCabins": "Cabines",
+    "colGuests": "Personnes",
+    "colPrice": "Semaine de location habituelle",
+    "whereHeading": "Où sont basés les modèles {brand}",
+    "whereNote": "Bateaux des modèles ci-dessus, par pays.",
+    "faqCountQ": "Combien de bateaux {brand} puis-je louer sur Boat4You ?",
+    "faqCountA": "Boat4You propose {count, plural, one {# bateau {brand}} other {# bateaux {brand}}} à la location. Les modèles les plus courants ont leur propre page : {models}.",
+    "faqPriceQ": "Combien coûte une semaine de location d’un {brand} ?",
+    "faqPriceA": "Pour les modèles {brand} ci-dessus, la moitié des bateaux coûtent entre {low} et {high} la semaine, selon le modèle et la semaine ; le {cheapest} est le plus abordable ({cheapestLow} – {cheapestHigh}). Ce montant couvre la location du bateau ; skipper, suppléments obligatoires et caution s’y ajoutent.",
+    "faqWhereQ": "Où louer un {brand} ?",
+    "faqWhereA": "Les modèles {brand} ci-dessus sont basés dans les pays suivants : {countries} ; la plupart des bateaux se trouvent en {top} ({topCount, plural, one {# bateau} other {# bateaux}})."
   },
   "model": {
     "h1": "Location {model}",
@@ -50,7 +65,21 @@
     "showAll": "Voir tous les {model} dans la recherche",
     "fromPerWeek": "dès {price} / semaine",
     "blogHeading": "Sur notre blog",
-    "otherModels": "Autres modèles {brand}"
+    "otherModels": "Autres modèles {brand}",
+    "faqPriceQ": "Combien coûte la location d’un {model} ?",
+    "faqPriceA": "La moitié des {model} proposés coûtent entre {p25} et {p75} la semaine ({n, plural, one {# bateau} other {# bateaux}} avec un prix). Ce montant couvre la location du bateau ; skipper, suppléments obligatoires et caution s’y ajoutent.",
+    "faqWhereQ": "Où louer un {model} ?",
+    "faqWhereA": "Les {model} proposés sont basés dans les pays suivants : {countries}.",
+    "faqWhereBases": "Les principales bases sont {bases}.",
+    "faqLayoutQ": "Combien de cabines et de personnes pour un {model} ?",
+    "faqLayoutA": "Les {model} proposés ont {cabins} cabines et accueillent {guests} personnes.",
+    "faqLayoutCommon": "L’aménagement le plus courant compte {berths, plural, one {# couchette} other {# couchettes}} et {wc, plural, one {# salle d’eau} other {# toilettes}}.",
+    "faqYearsQ": "Quel âge ont les {model} ?",
+    "faqYearsA": "Les {model} proposés ont été construits entre {from} et {to}.",
+    "faqYearA": "Tous les {model} proposés ont été construits en {year}."
   },
-  "boatLink": "Tous les {model} ({count, number})"
+  "boatLink": "Tous les {model} ({count, number})",
+  "faqHeading": "Questions fréquentes",
+  "faqCancelQ": "Puis-je annuler une location de {name} ?",
+  "faqCancelA": "Oui. Toute réservation peut être annulée gratuitement dans les 72 heures suivant le moment où elle est faite ; ensuite, les conditions d’annulation indiquées sur la page du bateau s’appliquent."
 }

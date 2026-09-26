@@ -44,17 +44,16 @@ export interface WeekData {
   dateToIso?: string;
 }
 
-/** Human-readable status label rendered inside the pill badge. */
-export const statusLabel = (s: WeekStatus): string =>
-  s === 'booked'
-    ? 'Reserved'
-    : s === 'service'
-      ? 'Unavailable'
-      : s === 'option'
-        ? 'Pre-reserved'
-        : s === 'selected'
-          ? 'Selected'
-          : 'Available';
+/** Message key (yacht.calendar.*) of the status pill — the labels used to be
+ *  English literals on every locale (audit B29). */
+export const statusKey = (s: WeekStatus): `calendar.${WeekStatus}` => `calendar.${s}`;
+
+/** Card / axis date labels in the page locale ("Jul 10" in EN, "10 srp." in HR). */
+export const weekLabel = (date: dayjs.Dayjs, locale = 'en'): string =>
+  locale.startsWith('en') ? date.locale('en').format('MMM DD') : date.locale(locale).format('D MMM');
+
+/** Short month name in the page locale (axis + chunk label). */
+export const monthLabel = (date: dayjs.Dayjs, locale = 'en'): string => date.locale(locale).format('MMM');
 
 /** Foreground + background colour pair for the status pill. */
 export const statusColor = (s: WeekStatus): { fg: string; bg: string } => {
@@ -150,7 +149,8 @@ export const WEEKS_PER_CHUNK = 26;
 export const fillTimeline = (
   weeks: WeekData[],
   horizonIso?: string,
-  perChunk: number = WEEKS_PER_CHUNK
+  perChunk: number = WEEKS_PER_CHUNK,
+  locale = 'en'
 ): WeekData[] => {
   if (weeks.length === 0) return weeks;
 
@@ -167,9 +167,9 @@ export const fillTimeline = (
 
     return {
       id: opts.id ?? `gap|${fromIso}`,
-      from: from.format('MMM DD'),
-      to: to.format('MMM DD'),
-      fromMonth: from.format('MMM'),
+      from: weekLabel(from, locale),
+      to: weekLabel(to, locale),
+      fromMonth: monthLabel(from, locale),
       price: opts.price ?? 0,
       currency: opts.currency,
       status: opts.status ?? 'service',

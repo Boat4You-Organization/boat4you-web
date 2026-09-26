@@ -51,6 +51,10 @@ const formatMeasure = (
   return null;
 };
 
+/** A positive count, else null (partner data sends null, 0 and negatives). */
+const positiveOrNull = (value: number | null | undefined): number | null =>
+  typeof value === 'number' && Number.isFinite(value) && value > 0 ? value : null;
+
 // Title-case helper lives in src/utils/static/toTitleCase.ts so every yacht
 // name surface (search listing, hero, reservation, PDF) formats identically.
 
@@ -91,7 +95,25 @@ const DetailsTab = ({ yacht }: DetailsTabProps) => {
       ? `${yacht.location.name}, ${countryName}`
       : yacht.location.name
     : null;
-  const vesselTypeLabel = t(VESSEL_TYPE_LABEL_MAP[yacht.vesselType]).toLowerCase();
+  // German capitalises nouns ("Katamaran mit 4 Kabinen"); every other
+  // locale reads the type mid-sentence in lower case. Templates that open
+  // with the type use the capitalised form.
+  const vesselTypeRaw = t(VESSEL_TYPE_LABEL_MAP[yacht.vesselType]);
+  const vesselTypeLabel = locale === 'de' ? vesselTypeRaw : vesselTypeRaw.toLowerCase();
+  const vesselTypeCap = vesselTypeLabel.charAt(0).toUpperCase() + vesselTypeLabel.slice(1);
+  // Guest capacity for the description: the partner's max persons, else the
+  // berths (sleeping places). Many partner boats ship maxPersons=null — the
+  // sentence used to read "can accommodate up to  people" (audit B24).
+  const guests = positiveOrNull(yacht.maxPersons) ?? positiveOrNull(yacht.berths);
+  const cabins = positiveOrNull(yacht.cabins);
+  const wc = positiveOrNull(yacht.wc);
+  const bold = (chunks: React.ReactNode) => <strong>{chunks}</strong>;
+  let accommodationKey: string | null = null;
+
+  if (guests && cabins && wc) accommodationKey = `yacht.descAccomV${descVariant(2)}`;
+  else if (guests && cabins) accommodationKey = 'yacht.descAccomNoWc';
+  else if (cabins) accommodationKey = 'yacht.descCabinsOnly';
+  else if (guests) accommodationKey = 'yacht.descGuestsOnly';
 
   const currentYear = new Date().getFullYear();
   const isNewYacht = Boolean(yacht.buildYear && yacht.buildYear >= currentYear - 1);
@@ -266,65 +288,52 @@ const DetailsTab = ({ yacht }: DetailsTabProps) => {
           // parsers. Translations use <b>…</b> markers and `t.rich()`
           // renders them through a <strong> handler to keep semantic HTML.
           <Stack direction="column" spacing={2}>
-            {yacht.cabins && yacht.buildYear && locationLabel && yacht.model ? (
+            {cabins && yacht.buildYear && locationLabel && yacht.model ? (
               <Typography variant="body1" color={colors.black500}>
                 {t.rich(
                   `yacht.descIntroV${descVariant(1)}` as never,
                   {
-                    cabins: String(yacht.cabins),
+                    cabins,
                     vesselType: vesselTypeLabel,
+                    vesselTypeCap,
                     model: yacht.model,
                     name: displayName,
                     year: String(yacht.buildYear),
                     location: locationLabel,
-                    b: (chunks: React.ReactNode) => <strong>{chunks}</strong>,
+                    b: bold,
                   } as never
                 )}
               </Typography>
             ) : (
-              // Legacy fragment sentence — survives missing cabins/year/location.
-              <Typography variant="body1" color={colors.black500}>
-                {yacht.cabins ? `${yacht.cabins}${t('yacht.lineCabin')} ${vesselTypeLabel}` : vesselTypeLabel}{' '}
-                <strong>{yacht.model}</strong> – <strong>{displayName}</strong>
-                {t('yacht.wasBuilt')} <strong>{yacht.buildYear}</strong>
-                {locationLabel && (
-                  <>
-                    {' '}
-                    {t('yacht.andDockedIn')} <strong>{locationLabel}</strong>
-                  </>
-                )}
-                .
-              </Typography>
-            )}
-            {yacht.maxPersons && yacht.cabins && yacht.wc ? (
+              // Short intro that survives missing model / year / base — each
+              // part is an ICU select on the sentinel 'none', so a missing
+              // value drops its clause instead of printing "built in ." .
               <Typography variant="body1" color={colors.black500}>
                 {t.rich(
-                  `yacht.descAccomV${descVariant(2)}` as never,
+                  'yacht.descIntroShort' as never,
                   {
                     name: displayName,
-                    maxPersons: String(yacht.maxPersons),
-                    cabins: String(yacht.cabins),
-                    wc: String(yacht.wc),
-                    b: (chunks: React.ReactNode) => <strong>{chunks}</strong>,
+                    vesselType: vesselTypeLabel,
+                    model: yacht.model || 'none',
+                    year: yacht.buildYear ? String(yacht.buildYear) : 'none',
+                    location: locationLabel || 'none',
+                    b: bold,
                   } as never
                 )}
               </Typography>
-            ) : (
-              <>
-                {(yacht.maxPersons || yacht.cabins) && (
-                  <Typography variant="body1" color={colors.black500}>
-                    <strong>{displayName}</strong> {t('yacht.canAccommodate')}
-                    <strong>{yacht.maxPersons}</strong> {t('yacht.peopleIn')} <strong>{yacht.cabins}</strong>{' '}
-                    {t('yacht.pillowIncluded')}
-                  </Typography>
+            )}
+            {accommodationKey && (
+              <Typography variant="body1" color={colors.black500}>
+                {t.rich(
+                  accommodationKey as never,
+                  { name: displayName, maxPersons: guests, cabins, wc, b: bold } as never
                 )}
-                {yacht.wc && (
-                  <Typography variant="body1" color={colors.black500}>
-                    {t(VESSEL_TYPE_LABEL_MAP[yacht.vesselType])} <strong>{displayName}</strong> {t('yacht.offers')}{' '}
-                    <strong>{yacht.wc}</strong> {t('yacht.toiletsWithShower')}.
-                  </Typography>
-                )}
-              </>
+              </Typography>
+            )}
+            {wc && !accommodationKey?.startsWith('yacht.descAccomV') && (
+              <Typography variant="body1" color={colors.black500}>
+                {t.rich('yacht.descWcOnly' as never, { name: displayName, wc, b: bold } as never)}
+              </Typography>
             )}
             {description && (
               <Typography variant="body1" color={colors.black500}>

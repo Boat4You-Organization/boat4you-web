@@ -217,6 +217,9 @@ export interface YachtModelShortInfo extends Pick<
   id: number;
   slug: string;
   name: string;
+  /** Sleeping places; the guest figure when maxPersons is missing. Optional:
+   *  the search payload carries it only once the backend adds it. */
+  berths?: number | null;
   location: Location;
   /**
    * Drop-off location for one-way charters. Null when pickup == drop-off

@@ -87,9 +87,11 @@ const SearchSummaryCard = ({ destination, startDate, endDate, liveCount }: Searc
             whiteSpace: 'nowrap',
           }}
         >
-          {liveCount != null ? liveCount.toLocaleString('en-US') : '—'}
+          {liveCount != null ? new Intl.NumberFormat(locale).format(liveCount) : '—'}
         </Box>
-        <Box sx={{ fontSize: 12, color: searchV2.ink, fontWeight: 500, flex: 1 }}>{t('boatsAvailableLive')}</Box>
+        <Box sx={{ fontSize: 12, color: searchV2.ink, fontWeight: 500, flex: 1 }}>
+          {t('boatsAvailableLive', { count: liveCount ?? 0 })}
+        </Box>
         <Box
           sx={{
             width: 6,

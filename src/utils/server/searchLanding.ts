@@ -205,6 +205,23 @@ const landingPage = (raw: unknown): number | null => {
   return page <= MAX_CACHED_PAGE ? page : null;
 };
 
+// Parameters that never change WHICH boats a landing lists: the landing's own
+// key, paging, display currency and sort order (plus ad-click tracking).
+const WHOLE_LISTING_PARAMS = new Set([...LANDING_CACHE_PARAMS, 'size', 'sortBy', 'sortDirection']);
+
+/**
+ * True when the request lists its landing's whole set: no dates, no filters.
+ * The charter facts block describes the whole place and its "boats for
+ * charter" tile repeats the listing total, so it goes on such requests only —
+ * a filtered or dated list has another total (audit B12: "Boats for charter
+ * 349" on `?destinations=croatia&minCabins=6`, 2,531 on a June week).
+ * Pass the ORIGINAL request params (before withLandingDid adds the did).
+ */
+export const listsWholeLanding = (params: AllSearchParams): boolean =>
+  Object.entries(params as unknown as Record<string, unknown>)
+    .filter(([, v]) => hasValue(v))
+    .every(([key]) => WHOLE_LISTING_PARAMS.has(key) || isTrackingParam(key));
+
 /**
  * Pass the ORIGINAL request params (before withLandingDid adds the resolved
  * did) and the resolved landing.

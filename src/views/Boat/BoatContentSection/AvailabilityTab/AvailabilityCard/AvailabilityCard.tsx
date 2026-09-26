@@ -8,6 +8,7 @@ import { PolicyItem, availabilityCardConfig } from '@/config/availabilityCard.co
 import { YachtOfferModel } from '@/models/yacht-offer.model';
 import { YachtModel } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
+import { presentAmenities } from '@/utils/static/amenities';
 import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
 import { toTitleCase } from '@/utils/static/toTitleCase';
 import { toggleBoatInquiryModalOpen } from '@/valtio/yacht/yacht.actions';
@@ -149,12 +150,14 @@ const AvailabilityCard = ({ yacht, offer }: AvailabilityCardProps) => {
               {t('priceIncludes')}
             </Typography>
             <List sx={{ padding: 0, marginTop: 2 }}>
-              {amenities.slice(0, 3).map(amenity => (
-                <ListItem key={amenity.id}>
-                  <Check size={24} fill={colors.black300} />
-                  {amenity.name}
-                </ListItem>
-              ))}
+              {presentAmenities(amenities)
+                .slice(0, 3)
+                .map(amenity => (
+                  <ListItem key={amenity.id}>
+                    <Check size={24} fill={colors.black300} />
+                    {amenity.name}
+                  </ListItem>
+                ))}
             </List>
           </Grid>
         </Grid>

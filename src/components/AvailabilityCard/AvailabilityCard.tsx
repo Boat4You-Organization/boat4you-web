@@ -2,13 +2,13 @@
 
 import { Box, Stack, Typography } from '@mui/material';
 import dayjs from 'dayjs';
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 import {
   WeekData,
   fmtPrice,
   statusColor,
-  statusLabel,
+  statusKey,
 } from '@/views/Boat/BoatContentSection/AvailabilityTab/LiveCalendar/parts/tier-helpers';
 import { T } from '@/views/Boat/BoatContentSection/AvailabilityTab/LiveCalendar/parts/tokens';
 
@@ -34,8 +34,11 @@ interface AvailabilityCardProps {
  * horizontal overflow.
  */
 const AvailabilityCard = ({ w, selected, onClick, size = 'desktop' }: AvailabilityCardProps) => {
-  // Page locale for the price (same format as the listing cards, B26).
+  const t = useTranslations('yacht');
   const locale = useLocale();
+  // The partner's real period length (any check-in day / length is shown as
+  // published) — the card used to print "7 NIGHTS" / "Per week" on every one.
+  const nights = w.dateFromIso && w.dateToIso ? Math.max(1, dayjs(w.dateToIso).diff(dayjs(w.dateFromIso), 'day')) : 7;
   // Both RESERVATION ('booked') and SERVICE ('service') are hard-blocked: the
   // card is disabled (no click, grey price). The status pill text still
   // differentiates the two via statusLabel/statusColor (Reserved vs Unavailable).
@@ -90,7 +93,7 @@ const AvailabilityCard = ({ w, selected, onClick, size = 'desktop' }: Availabili
             whiteSpace: 'nowrap',
           }}
         >
-          {statusLabel(w.status)}
+          {t(statusKey(w.status))}
         </Box>
       </Stack>
 
@@ -123,7 +126,7 @@ const AvailabilityCard = ({ w, selected, onClick, size = 'desktop' }: Availabili
             letterSpacing: '1.2px',
           }}
         >
-          ↓ 7 NIGHTS
+          ↓ {t('calendar.nights', { count: nights }).toUpperCase()}
         </Typography>
         <Typography
           sx={{
@@ -139,7 +142,7 @@ const AvailabilityCard = ({ w, selected, onClick, size = 'desktop' }: Availabili
         </Typography>
         {compact && (
           <Typography sx={{ fontSize: '12px', color: T.muted, mt: '6px' }}>
-            {w.dateFromIso ? dayjs(w.dateFromIso).format('YYYY') : ''} · 7 nights
+            {w.dateFromIso ? dayjs(w.dateFromIso).format('YYYY') : ''} · {t('calendar.nights', { count: nights })}
           </Typography>
         )}
       </Box>
@@ -162,7 +165,7 @@ const AvailabilityCard = ({ w, selected, onClick, size = 'desktop' }: Availabili
               textTransform: 'uppercase',
             }}
           >
-            Per week
+            {nights === 7 ? t('calendar.perWeek') : t('calendar.forNights', { count: nights })}
           </Typography>
         )}
         {showRegular && (

@@ -372,6 +372,37 @@
   }
 }
 
+// Data-driven FAQ (model pages and brand hubs): every question and answer
+// open in the page, the FAQPage JSON-LD mirrors them verbatim.
+.faqList {
+  display: grid;
+  gap: rem-calc(12);
+  max-width: rem-calc(780);
+  margin: 0;
+}
+
+.faqItem {
+  padding: rem-calc(14) rem-calc(16);
+  border: 1px solid $blue-100;
+  border-radius: rem-calc(12);
+  background-color: $white;
+}
+
+.faqQuestion {
+  margin: 0;
+  color: $blue-950;
+  font-size: rem-calc(16);
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.faqAnswer {
+  margin: rem-calc(6) 0 0;
+  color: $black-800;
+  font-size: rem-calc(15);
+  line-height: 1.7;
+}
+
 @media (width >= 600px) {
   .root {
     padding: rem-calc(112) rem-calc(24) rem-calc(80);

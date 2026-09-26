@@ -2,8 +2,8 @@
   "meta": {
     "indexTitle": "Noleggio barche per modello: {models, number} modelli più richiesti",
     "indexDescription": "Confronta i {models, number} modelli di barche a vela e catamarani con più unità a noleggio su Boat4You: caratteristiche, basi e prezzi settimanali tipici di ciascuno.",
-    "brandTitle": "Noleggio {brand}: {models, number} modelli, {count, number} barche",
-    "brandDescription": "Noleggia una {brand}: {count, number} barche in {models, number} modelli su Boat4You. Confronta caratteristiche, basi e prezzi settimanali tipici e prenota direttamente.",
+    "brandTitle": "Noleggio {brand}: {count, number} barche, {models, number} modelli popolari",
+    "brandDescription": "Noleggia un {brand}: {count, number} barche su Boat4You, con {models, number} modelli popolari confrontati per dimensioni, basi e prezzo settimanale abituale. Prenota direttamente.",
     "modelTitle": "Noleggio {model}: {count, number} barche, basi e prezzi",
     "modelDescription": "Confronta {count, number} barche {model} a noleggio: {cabins} cabine, anno di costruzione {years}, una settimana di noleggio di solito {p25}–{p75}. Destinazioni: {countries}. Prenota direttamente su Boat4You.",
     "modelDescriptionNoPrice": "Confronta {count, number} barche {model} a noleggio: {cabins} cabine, anno di costruzione {years}. Destinazioni: {countries}. Prenota direttamente su Boat4You."
@@ -21,8 +21,23 @@
   },
   "brand": {
     "h1": "Noleggio barche {brand}",
-    "lede": "Su Boat4You puoi noleggiare {count, plural, one {# barca {brand}} other {# barche {brand}}} di {models, number} modelli diversi. Scegli un modello per vedere caratteristiche, basi e prezzi settimanali tipici.",
-    "modelsHeading": "Modelli {brand} a noleggio"
+    "lede": "Su Boat4You {count, plural, one {è disponibile a noleggio # barca {brand}} other {sono disponibili a noleggio # barche {brand}}}. {models, plural, one {# modello popolare ha} other {# modelli popolari hanno}} una pagina dedicata con dati tecnici, basi e prezzi settimanali abituali.",
+    "modelsHeading": "Modelli {brand} a noleggio",
+    "compareHeading": "I modelli {brand} a confronto",
+    "colModel": "Modello",
+    "colBoats": "Barche",
+    "colLength": "Lunghezza",
+    "colCabins": "Cabine",
+    "colGuests": "Ospiti",
+    "colPrice": "Settimana di noleggio abituale",
+    "whereHeading": "Dove si trovano i modelli {brand}",
+    "whereNote": "Barche dei modelli elencati sopra, per paese.",
+    "faqCountQ": "Quante barche {brand} posso noleggiare su Boat4You?",
+    "faqCountA": "Su Boat4You {count, plural, one {è disponibile a noleggio # barca {brand}} other {sono disponibili a noleggio # barche {brand}}}. I modelli più diffusi hanno una pagina dedicata: {models}.",
+    "faqPriceQ": "Quanto costa una settimana di noleggio di un {brand}?",
+    "faqPriceA": "Per i modelli {brand} elencati sopra, metà delle barche costa tra {low} e {high} a settimana, a seconda del modello e della settimana; il {cheapest} è il più conveniente ({cheapestLow} – {cheapestHigh}). L’importo riguarda il noleggio della barca; skipper, extra obbligatori e cauzione sono esclusi.",
+    "faqWhereQ": "Dove posso noleggiare un {brand}?",
+    "faqWhereA": "I modelli {brand} elencati sopra hanno base in questi paesi: {countries}; la maggior parte delle barche si trova in {top} ({topCount, plural, one {# barca} other {# barche}})."
   },
   "model": {
     "h1": "Noleggio {model}",
@@ -50,7 +65,21 @@
     "showAll": "Vedi tutte le barche {model} nella ricerca",
     "fromPerWeek": "da {price} a settimana",
     "blogHeading": "Dal nostro blog",
-    "otherModels": "Altri modelli {brand}"
+    "otherModels": "Altri modelli {brand}",
+    "faqPriceQ": "Quanto costa noleggiare un {model}?",
+    "faqPriceA": "Metà delle barche {model} in elenco costa tra {p25} e {p75} a settimana ({n, plural, one {# barca} other {# barche}} con prezzo). L’importo riguarda il noleggio della barca; skipper, extra obbligatori e cauzione sono esclusi.",
+    "faqWhereQ": "Dove posso noleggiare un {model}?",
+    "faqWhereA": "Le barche {model} in elenco hanno base in questi paesi: {countries}.",
+    "faqWhereBases": "Le basi principali sono {bases}.",
+    "faqLayoutQ": "Quante cabine e quanti ospiti ha un {model}?",
+    "faqLayoutA": "Le barche {model} in elenco hanno {cabins} cabine e ospitano {guests} persone.",
+    "faqLayoutCommon": "La configurazione più diffusa ha {berths, plural, one {# posto letto} other {# posti letto}} e {wc, plural, one {# bagno} other {# bagni}}.",
+    "faqYearsQ": "Quanti anni hanno le barche {model}?",
+    "faqYearsA": "Le barche {model} in elenco sono state costruite tra il {from} e il {to}.",
+    "faqYearA": "Tutte le barche {model} in elenco sono state costruite nel {year}."
   },
-  "boatLink": "Tutte le barche {model} ({count, number})"
+  "boatLink": "Tutte le barche {model} ({count, number})",
+  "faqHeading": "Domande frequenti",
+  "faqCancelQ": "Posso annullare il noleggio di un {name}?",
+  "faqCancelA": "Sì. Ogni prenotazione si può annullare gratuitamente entro 72 ore dal momento in cui viene effettuata; dopo, valgono le condizioni di cancellazione indicate nella pagina della barca."
 }

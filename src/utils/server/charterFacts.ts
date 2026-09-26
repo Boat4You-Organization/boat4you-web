@@ -15,7 +15,10 @@ import { VesselType } from '@/models/yacht.model';
  * run); any failure renders no block.
  */
 
-const REVALIDATE_SECONDS = 3600;
+// The row is recomputed once a night (08:00 UTC); a six-hour window keeps a
+// cached copy for stale-while-revalidate instead of a cold 2.5 s fetch that
+// dropped the block on slow renders (audit B13: EN italy, ES spain, PT france).
+const REVALIDATE_SECONDS = 21600;
 const TIMEOUT_MS = 2500;
 const DID_PATTERN = /^[clr]-\d{1,12}$/;
 
@@ -25,7 +28,11 @@ export interface MonthPrice {
   p25: number | null;
   median: number | null;
   p75: number | null;
+  /** Priced weeks starting in the month. */
   offers: number;
+  /** Boats priced in the month — rows computed since the backend's B11 fix
+   *  (full months, like-for-like panel) carry it; older rows do not. */
+  boats?: number;
 }
 
 export interface CharterFacts {
@@ -45,6 +52,8 @@ export interface CharterFacts {
   topModels?: Array<{ manufacturer: string | null; model: string; count: number }>;
   topBases?: Array<{ locationId: number; name: string; count: number; did: string }>;
   currency: string;
+  /** First day the month figures cover: the run day on older rows (whose
+   *  first month is then partial), the first full month since the B11 fix. */
   windowFrom?: string;
   windowTo?: string;
 }

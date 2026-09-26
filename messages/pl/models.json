@@ -2,8 +2,8 @@
   "meta": {
     "indexTitle": "Czarter jachtów według modelu: {models, plural, one {# popularny model} few {# popularne modele} many {# popularnych modeli} other {# popularnego modelu}}",
     "indexDescription": "Porównaj najpopularniejsze modele jachtów i katamaranów do czarteru w Boat4You ({models, number}): dane techniczne, bazy i typowe ceny tygodniowe każdego modelu.",
-    "brandTitle": "Czarter {brand}: {models, plural, one {# model} few {# modele} many {# modeli} other {# modelu}}, {count, plural, one {# jacht} few {# jachty} many {# jachtów} other {# jachtu}}",
-    "brandDescription": "Wyczarteruj jacht {brand} w Boat4You: {count, plural, one {# jacht} few {# jachty} many {# jachtów} other {# jachtu}} w {models, plural, one {# modelu} other {# modelach}}. Porównaj dane techniczne, bazy i typowe ceny tygodniowe, a potem zarezerwuj bezpośrednio.",
+    "brandTitle": "Czarter {brand}: {count, plural, one {# jacht} few {# jachty} many {# jachtów} other {# jachtu}}, {models, plural, one {# popularny model} few {# popularne modele} many {# popularnych modeli} other {# popularnego modelu}}",
+    "brandDescription": "Czarter {brand}: {count, plural, one {# jacht} few {# jachty} many {# jachtów} other {# jachtu}} w Boat4You, porównanie popularnych modeli pod względem wielkości, baz i typowej ceny tygodnia. Rezerwuj bezpośrednio.",
     "modelTitle": "Czarter {model}: {count, plural, one {# jacht} few {# jachty} many {# jachtów} other {# jachtu}}, bazy i ceny",
     "modelDescription": "Porównaj jachty {model} do czarteru ({count, number}): kabiny {cabins}, rok budowy {years}, tydzień czarteru zwykle {p25}–{p75}. Kierunki: {countries}. Rezerwuj bezpośrednio w Boat4You.",
     "modelDescriptionNoPrice": "Porównaj jachty {model} do czarteru ({count, number}): kabiny {cabins}, rok budowy {years}. Kierunki: {countries}. Rezerwuj bezpośrednio w Boat4You."
@@ -21,8 +21,23 @@
   },
   "brand": {
     "h1": "Czarter jachtów {brand}",
-    "lede": "W Boat4You wyczarterujesz {count, plural, one {# jacht} few {# jachty} many {# jachtów} other {# jachtu}} {brand} w {models, plural, one {# modelu} other {# modelach}}. Wybierz model, aby zobaczyć dane techniczne, bazy i typowe ceny tygodniowe.",
-    "modelsHeading": "Modele {brand} do czarteru"
+    "lede": "W Boat4You do czarteru {count, plural, one {jest # jacht {brand}} few {są # jachty {brand}} many {jest # jachtów {brand}} other {jest # jachtu {brand}}}. {models, plural, one {# popularny model ma} few {# popularne modele mają} many {# popularnych modeli ma} other {# popularnego modelu ma}} własną stronę z danymi technicznymi, bazami i typowymi cenami tygodniowymi.",
+    "modelsHeading": "Modele {brand} do czarteru",
+    "compareHeading": "Porównanie modeli {brand}",
+    "colModel": "Model",
+    "colBoats": "Jachty",
+    "colLength": "Długość",
+    "colCabins": "Kabiny",
+    "colGuests": "Osoby",
+    "colPrice": "Typowy tydzień czarteru",
+    "whereHeading": "Gdzie stacjonują modele {brand}",
+    "whereNote": "Jachty powyższych modeli według kraju.",
+    "faqCountQ": "Ile jachtów {brand} mogę wyczarterować w Boat4You?",
+    "faqCountA": "W Boat4You do czarteru {count, plural, one {jest # jacht {brand}} few {są # jachty {brand}} many {jest # jachtów {brand}} other {jest # jachtu {brand}}}. Najpopularniejsze modele mają własną stronę: {models}.",
+    "faqPriceQ": "Ile kosztuje tydzień czarteru jachtu {brand}?",
+    "faqPriceA": "W powyższych modelach {brand} połowa jachtów kosztuje od {low} do {high} za tydzień czarteru, zależnie od modelu i tygodnia; najtańszy jest {cheapest} ({cheapestLow} – {cheapestHigh}). Kwota dotyczy wynajmu jachtu; skipper, obowiązkowe dodatki i kaucja są płatne osobno.",
+    "faqWhereQ": "Gdzie mogę wyczarterować {brand}?",
+    "faqWhereA": "Powyższe modele {brand} stacjonują w tych krajach: {countries}; najwięcej jachtów jest w kraju {top} ({topCount, plural, one {# jacht} few {# jachty} many {# jachtów} other {# jachtu}})."
   },
   "model": {
     "h1": "Czarter {model}",
@@ -50,7 +65,21 @@
     "showAll": "Zobacz wszystkie jachty {model} w wyszukiwarce",
     "fromPerWeek": "od {price} za tydzień",
     "blogHeading": "Z naszego bloga",
-    "otherModels": "Inne modele {brand}"
+    "otherModels": "Inne modele {brand}",
+    "faqPriceQ": "Ile kosztuje czarter {model}?",
+    "faqPriceA": "Połowa oferowanych jachtów {model} kosztuje od {p25} do {p75} za tydzień czarteru (liczba jachtów z ceną: {n, number}). Kwota dotyczy wynajmu jachtu; skipper, obowiązkowe dodatki i kaucja są płatne osobno.",
+    "faqWhereQ": "Gdzie mogę wyczarterować {model}?",
+    "faqWhereA": "Oferowane jachty {model} stacjonują w tych krajach: {countries}.",
+    "faqWhereBases": "Największe bazy to {bases}.",
+    "faqLayoutQ": "Ile kabin i osób mieści {model}?",
+    "faqLayoutA": "Oferowane jachty {model} mają kabiny: {cabins} i mieszczą osoby: {guests}.",
+    "faqLayoutCommon": "Najczęstszy układ to {berths, plural, one {# koja} few {# koje} many {# koi} other {# koi}} i {wc, plural, one {# toaleta} few {# toalety} many {# toalet} other {# toalety}}.",
+    "faqYearsQ": "Ile lat mają jachty {model}?",
+    "faqYearsA": "Oferowane jachty {model} zbudowano w latach {from}–{to}.",
+    "faqYearA": "Wszystkie oferowane jachty {model} zbudowano w {year} roku."
   },
-  "boatLink": "Wszystkie jachty {model} ({count, number})"
+  "boatLink": "Wszystkie jachty {model} ({count, number})",
+  "faqHeading": "Najczęściej zadawane pytania",
+  "faqCancelQ": "Czy mogę anulować czarter {name}?",
+  "faqCancelA": "Tak. Każdą rezerwację można bezpłatnie anulować w ciągu 72 godzin od jej dokonania; później obowiązują warunki anulowania podane na stronie jachtu."
 }

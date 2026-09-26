@@ -54,7 +54,7 @@
   "engineRangeHp": "{min} – {max} KS",
   "yourSearch": "Vaša pretraga",
   "allDestinations": "Sve destinacije",
-  "boatsAvailableLive": "dostupnih plovila · uživo",
+  "boatsAvailableLive": "{count, plural, one {dostupno plovilo · uživo} few {dostupna plovila · uživo} other {dostupnih plovila · uživo}}",
   "dateRange": "{start} – {end}",
   "nightsCount": "{count, plural, one {# noć} few {# noći} other {# noći}}",
   "vesselType": {
@@ -64,5 +64,12 @@
     "motoryacht": "Motorna jahta",
     "gulet": "Gulet",
     "powerCat": "Motorni katamaran"
-  }
+  },
+  "any": "Sve",
+  "engineHp": "{value} KS",
+  "cabinsChip": "{count, plural, one {# kabina} few {# kabine} other {# kabina}}",
+  "cabinsChipPlus": "{count}+ kabina",
+  "lengthRange": "{min} – {max} m",
+  "relaxTip": "<b>Savjet:</b> bez filtra <em>{filter}</em> prikazalo bi se <b>još {count, plural, one {# plovilo} few {# plovila} other {# plovila}}</b> slične prikladnosti.",
+  "relaxAction": "Ublaži filtar"
 }

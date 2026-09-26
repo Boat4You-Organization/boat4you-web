@@ -54,7 +54,7 @@
   "engineRangeHp": "{min} – {max} CV",
   "yourSearch": "La tua ricerca",
   "allDestinations": "Tutte le destinazioni",
-  "boatsAvailableLive": "barche disponibili · live",
+  "boatsAvailableLive": "{count, plural, one {barca disponibile · live} other {barche disponibili · live}}",
   "dateRange": "{start} – {end}",
   "nightsCount": "{count, plural, one {# notte} other {# notti}}",
   "vesselType": {
@@ -64,5 +64,12 @@
     "motoryacht": "Yacht a motore",
     "gulet": "Caicco",
     "powerCat": "Power cat"
-  }
+  },
+  "any": "Tutte",
+  "engineHp": "{value} CV",
+  "cabinsChip": "{count, plural, one {# cabina} other {# cabine}}",
+  "cabinsChipPlus": "{count}+ cabine",
+  "lengthRange": "{min} – {max} m",
+  "relaxTip": "<b>Suggerimento:</b> senza il filtro <em>{filter}</em> vedresti <b>+{count, plural, one {# barca} other {# barche}}</b> altrettanto adatte.",
+  "relaxAction": "Allenta il filtro"
 }

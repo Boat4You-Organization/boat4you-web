@@ -1,7 +1,7 @@
 'use client';
 
 import { Box, ButtonBase } from '@mui/material';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 import { VesselType } from '@/models/yacht.model';
 import { searchV2, searchV2Type } from '@/styles/themes/searchV2';
@@ -40,6 +40,7 @@ const TILES: Array<{ id: VesselType; labelKey: string }> = [
 
 const YachtTypeGrid = ({ selected, onToggle, counts }: YachtTypeGridProps) => {
   const t = useTranslations('filters.vesselType');
+  const number = new Intl.NumberFormat(useLocale());
   const selectedSet = new Set(selected);
 
   return (
@@ -92,7 +93,7 @@ const YachtTypeGrid = ({ selected, onToggle, counts }: YachtTypeGridProps) => {
                 minHeight: 12,
               }}
             >
-              {count != null ? count.toLocaleString('en-US') : ' '}
+              {count != null ? number.format(count) : ' '}
             </Box>
           </ButtonBase>
         );

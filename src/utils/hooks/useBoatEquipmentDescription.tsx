@@ -3,6 +3,7 @@ import { useLocale, useTranslations } from 'next-intl';
 import { YachtEquipmentCategoryType } from '@/models/yacht-amenities.model';
 import { MAIN_SAIL_TYPE_LABEL_MAP, MainSailType } from '@/models/yacht.model';
 import { YachtDescriptionSource } from '@/types/yacht-description.type';
+import { presentAmenities } from '@/utils/static/amenities';
 
 // The "a/an" article machinery below is ENGLISH grammar and must never run
 // for other locales — it produced leaks like the Croatian "…pohvaliti a
@@ -96,15 +97,15 @@ const equipmentByCategory = (
   amenitiesT: (key: string) => string,
   lowercase: boolean
 ): string[] =>
-  yacht.amenities
-    ?.filter(amenity => amenity.equipment?.category === category)
-    ?.map(amenity => {
+  presentAmenities(yacht.amenities)
+    .filter(amenity => amenity.equipment?.category === category)
+    .map(amenity => {
       const label = amenitiesT(amenity.equipment!.labelCode).trim();
 
       return lowercase ? label.toLowerCase() : label;
     })
-    ?.filter(item => item && item.length > 0)
-    ?.sort((a, b) => a.localeCompare(b)) || [];
+    .filter(item => item && item.length > 0)
+    .sort((a, b) => a.localeCompare(b));
 
 export const useBoatEquipmentDescription = (): ((yacht: YachtDescriptionSource) => string) => {
   const t = useTranslations();

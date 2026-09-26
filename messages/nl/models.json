@@ -2,8 +2,8 @@
   "meta": {
     "indexTitle": "Boot huren per model: {models, number} populaire modellen",
     "indexDescription": "Vergelijk de {models, number} zeiljacht- en catamaranmodellen met de meeste huurboten bij Boat4You: specificaties, thuishavens en gangbare weekprijzen per model.",
-    "brandTitle": "{brand} huren: {models, number} modellen, {count, number} boten",
-    "brandDescription": "Huur een {brand}: {count, number} boten in {models, number} modellen bij Boat4You. Vergelijk specificaties, thuishavens en gangbare weekprijzen en boek direct.",
+    "brandTitle": "{brand} huren: {count, number} boten, {models, number} populaire modellen",
+    "brandDescription": "Huur een {brand}: {count, number} boten bij Boat4You, met {models, number} populaire modellen vergeleken op grootte, bases en gangbare weekprijs. Boek direct.",
     "modelTitle": "{model} huren: {count, number} boten, havens en prijzen",
     "modelDescription": "Vergelijk {count, number} {model} boten te huur: {cabins} hutten, bouwjaar {years}, een huurweek kost meestal {p25}–{p75}. Bestemmingen: {countries}. Direct boeken bij Boat4You.",
     "modelDescriptionNoPrice": "Vergelijk {count, number} {model} boten te huur: {cabins} hutten, bouwjaar {years}. Bestemmingen: {countries}. Direct boeken bij Boat4You."
@@ -21,8 +21,23 @@
   },
   "brand": {
     "h1": "{brand} huren",
-    "lede": "Bij Boat4You huurt u {count, plural, one {# {brand} boot} other {# {brand} boten}} in {models, number} modellen. Kies een model voor de specificaties, thuishavens en gangbare weekprijzen.",
-    "modelsHeading": "{brand} modellen te huur"
+    "lede": "Bij Boat4You {count, plural, one {is # {brand} boot} other {zijn # {brand} boten}} te huur. {models, plural, one {# populair model heeft} other {# populaire modellen hebben}} een eigen pagina met specificaties, bases en gangbare weekprijzen.",
+    "modelsHeading": "{brand} modellen te huur",
+    "compareHeading": "{brand} modellen vergeleken",
+    "colModel": "Model",
+    "colBoats": "Boten",
+    "colLength": "Lengte",
+    "colCabins": "Hutten",
+    "colGuests": "Gasten",
+    "colPrice": "Gangbare huurweek",
+    "whereHeading": "Waar de {brand} modellen liggen",
+    "whereNote": "Boten van de modellen hierboven, per land.",
+    "faqCountQ": "Hoeveel {brand} boten kan ik huren bij Boat4You?",
+    "faqCountA": "Bij Boat4You {count, plural, one {is # {brand} boot} other {zijn # {brand} boten}} te huur. De meest voorkomende modellen hebben een eigen pagina: {models}.",
+    "faqPriceQ": "Wat kost een huurweek met een {brand}?",
+    "faqPriceA": "Bij de {brand} modellen hierboven kost de helft van de boten tussen {low} en {high} per huurweek, afhankelijk van model en week; de {cheapest} is het voordeligst ({cheapestLow} – {cheapestHigh}). Dat geldt voor de boothuur; schipper, verplichte extra’s en borg komen erbij.",
+    "faqWhereQ": "Waar kan ik een {brand} huren?",
+    "faqWhereA": "De {brand} modellen hierboven liggen in deze landen: {countries}; de meeste boten liggen in {top} ({topCount, plural, one {# boot} other {# boten}})."
   },
   "model": {
     "h1": "{model} huren",
@@ -50,7 +65,21 @@
     "showAll": "Alle {model} boten bekijken in de zoekresultaten",
     "fromPerWeek": "vanaf {price} per week",
     "blogHeading": "Van ons blog",
-    "otherModels": "Andere {brand} modellen"
+    "otherModels": "Andere {brand} modellen",
+    "faqPriceQ": "Wat kost het om een {model} te huren?",
+    "faqPriceA": "De helft van de aangeboden {model} boten kost tussen {p25} en {p75} per huurweek ({n, plural, one {# boot} other {# boten}} met een prijs). Dat geldt voor de boothuur; schipper, verplichte extra’s en borg komen erbij.",
+    "faqWhereQ": "Waar kan ik een {model} huren?",
+    "faqWhereA": "De aangeboden {model} boten liggen in deze landen: {countries}.",
+    "faqWhereBases": "De grootste bases zijn {bases}.",
+    "faqLayoutQ": "Hoeveel hutten en gasten heeft een {model}?",
+    "faqLayoutA": "De aangeboden {model} boten hebben {cabins} hutten en bieden plaats aan {guests} gasten.",
+    "faqLayoutCommon": "De meest voorkomende indeling heeft {berths, plural, one {# slaapplaats} other {# slaapplaatsen}} en {wc, plural, one {# toilet} other {# toiletten}}.",
+    "faqYearsQ": "Hoe oud zijn de {model} boten?",
+    "faqYearsA": "De aangeboden {model} boten zijn gebouwd tussen {from} en {to}.",
+    "faqYearA": "Alle aangeboden {model} boten zijn gebouwd in {year}."
   },
-  "boatLink": "Alle {model} boten ({count, number})"
+  "boatLink": "Alle {model} boten ({count, number})",
+  "faqHeading": "Veelgestelde vragen",
+  "faqCancelQ": "Kan ik een huur van een {name} annuleren?",
+  "faqCancelA": "Ja. Elke boeking kan binnen 72 uur na het moment van boeken kosteloos worden geannuleerd; daarna gelden de annuleringsvoorwaarden op de pagina van de boot."
 }

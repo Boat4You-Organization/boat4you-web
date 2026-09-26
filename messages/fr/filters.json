@@ -54,7 +54,7 @@
   "engineRangeHp": "{min} – {max} ch",
   "yourSearch": "Votre recherche",
   "allDestinations": "Toutes les destinations",
-  "boatsAvailableLive": "bateaux disponibles · en direct",
+  "boatsAvailableLive": "{count, plural, one {bateau disponible · en direct} other {bateaux disponibles · en direct}}",
   "dateRange": "{start} – {end}",
   "nightsCount": "{count, plural, one {# nuit} other {# nuits}}",
   "vesselType": {
@@ -64,5 +64,12 @@
     "motoryacht": "Yacht à moteur",
     "gulet": "Gulet",
     "powerCat": "Catamaran à moteur"
-  }
+  },
+  "any": "Tous",
+  "engineHp": "{value} ch",
+  "cabinsChip": "{count, plural, one {# cabine} other {# cabines}}",
+  "cabinsChipPlus": "{count}+ cabines",
+  "lengthRange": "{min} – {max} m",
+  "relaxTip": "<b>Astuce :</b> sans le filtre <em>{filter}</em>, <b>+{count, plural, one {# bateau} other {# bateaux}}</b> tout aussi adaptés s’afficheraient.",
+  "relaxAction": "Assouplir le filtre"
 }

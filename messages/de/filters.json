@@ -29,8 +29,8 @@
   "searchCharterType": "Charter-Typ suchen",
   "typeOfMainsail": "Typ des Großsegels",
   "services": "Dienstleistungen",
-  "minLength": "Min Laenge",
-  "maxLength": "Max Laenge",
+  "minLength": "Min. Länge",
+  "maxLength": "Max. Länge",
   "beam": "Breite",
   "fuelTank": "Kraftstofftank",
   "waterTank": "Wassertank",
@@ -54,7 +54,7 @@
   "engineRangeHp": "{min} – {max} PS",
   "yourSearch": "Ihre Suche",
   "allDestinations": "Alle Reiseziele",
-  "boatsAvailableLive": "Boote verfügbar · live",
+  "boatsAvailableLive": "{count, plural, one {Boot verfügbar · live} other {Boote verfügbar · live}}",
   "dateRange": "{start} – {end}",
   "nightsCount": "{count, plural, one {# Nacht} other {# Nächte}}",
   "vesselType": {
@@ -64,5 +64,12 @@
     "motoryacht": "Motoryacht",
     "gulet": "Gulet",
     "powerCat": "Power-Kat"
-  }
+  },
+  "any": "Alle",
+  "engineHp": "{value} PS",
+  "cabinsChip": "{count, plural, one {# Kabine} other {# Kabinen}}",
+  "cabinsChipPlus": "{count}+ Kabinen",
+  "lengthRange": "{min} – {max} m",
+  "relaxTip": "<b>Tipp:</b> Ohne den Filter <em>{filter}</em> würden <b>+{count, plural, one {# Boot} other {# Boote}}</b> mit ähnlicher Eignung angezeigt.",
+  "relaxAction": "Filter lockern"
 }

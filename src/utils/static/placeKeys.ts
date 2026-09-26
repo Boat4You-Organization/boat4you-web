@@ -11,7 +11,12 @@ export const REGION_KEY_BY_NAME: Record<string, string> = {
   'istria kvarner': 'istriaKvarner',
   kornati: 'kornati',
   zadar: 'zadar',
+  // The partner sync renames these two regions back and forth ("Zadar" ↔
+  // "Zadar region", audit B01); both spellings read the same localised name
+  // so the titles do not flip with it.
+  'zadar region': 'zadar',
   sibenik: 'sibenik',
+  'sibenik region': 'sibenik',
   'dubrovnik montenegro': 'dubrovnikMontenegro',
   'athens saronic gulf': 'athensSaronicGulf',
   'athens area saronic peloponese': 'athensSaronicPeloponnese',
@@ -65,4 +70,26 @@ export const REGION_KEY_BY_NAME: Record<string, string> = {
   'new providence': 'newProvidence',
   mahe: 'mahe',
   'british virgin islands': 'britishVirginIslands',
+  zante: 'zante',
+  'st raphael': 'saintRaphael',
+  // Ports and harbours whose catalogue name carries an English generic word
+  // ("Port of Volos", "Paros port", "Lefkas main port"): every non-English
+  // title and H1 printed it verbatim (audit B30). Marinas keep their own
+  // (international) names.
+  'fethiye port': 'fethiyePort',
+  'lavrion main port': 'lavrionMainPort',
+  'lefkas main port': 'lefkasMainPort',
+  'preveza main port': 'prevezaMainPort',
+  'loutraki harbour': 'loutrakiHarbour',
+  'mandraki port': 'mandrakiPort',
+  'nydri port': 'nydriPort',
+  'paros port': 'parosPort',
+  'piso livadi port': 'pisoLivadiPort',
+  'port of lefkas': 'portOfLefkas',
+  'port of mykonos': 'portOfMykonos',
+  'port of split east harbour': 'portOfSplitEast',
+  'port of split west harbour': 'portOfSplitWest',
+  'port of volos': 'portOfVolos',
+  'sami port': 'samiPort',
+  'sant antoni de portmany port': 'santAntoniPort',
 };

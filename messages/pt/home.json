@@ -4,8 +4,8 @@
     "ctaTitle": "um clique.",
     "description": "Alugue seu iate perfeito em apenas alguns cliques. Fácil, rápido e sem estresse — sua aventura de navegação dos sonhos começa aqui.",
     "support": "Atendimento ao cliente excelente",
-    "yachtsCount": "{count} iates",
-    "marinasCount": "{count} marinas"
+    "yachtsCount": "{count, plural, one {# iate} other {# iates}}",
+    "marinasCount": "{count, plural, one {# marina} other {# marinas}}"
   },
   "generalSearchBar": {
     "whereAreYouGoing": "Para onde você vai?",
@@ -27,7 +27,6 @@
   "destinationsSection": {
     "theWorldIs": "Melhores destinos para",
     "yours": "aluguel de iates",
-    "yachts": "iates",
     "destinations": {
       "bahamas": "Bahamas",
       "caribbean": "Caribe",
@@ -61,7 +60,8 @@
       "grenada": "Granada",
       "splitRegion": "Região de Split",
       "ionianRegion": "Região Jónica"
-    }
+    },
+    "yachtsCount": "{count, plural, one {# iate} other {# iates}}"
   },
   "whyChooseUsSection": {
     "whyChoose": "Por que nos escolher como seu <strong>fornecedor profissional de charter</strong>",
@@ -88,7 +88,6 @@
     "getToKnow": "Temos o barco que você deseja, ",
     "ourFleet": "não importa o tipo",
     "boatSelection": "A melhor seleção de barcos online com os melhores preços",
-    "boat": "barco",
     "fleet": {
       "catamarans": "Catamarãs",
       "gulets": "Gulets",
@@ -102,7 +101,8 @@
       "miniCruisers": "Mini Cruzeiros",
       "trimarans": "Trimarãs",
       "rubberBoats": "Botes Infláveis"
-    }
+    },
+    "boatsCount": "{count, plural, one {# barco} other {# barcos}}"
   },
   "chooseFromFiveHundredLocations": "Aluguel de barcos e charter de iates em todo o mundo com os melhores preços",
   "riskFreeBooking": {

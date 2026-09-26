@@ -29,8 +29,8 @@
   "searchCharterType": "Buscar Tipo de Charter",
   "typeOfMainsail": "Tipo de Vela Principal",
   "services": "Serviços",
-  "minLength": "Comprimento min",
-  "maxLength": "Comprimento max",
+  "minLength": "Comprimento mín.",
+  "maxLength": "Comprimento máx.",
   "beam": "Boca",
   "fuelTank": "Tanque combustível",
   "waterTank": "Tanque água",
@@ -54,7 +54,7 @@
   "engineRangeHp": "{min} – {max} cv",
   "yourSearch": "A sua pesquisa",
   "allDestinations": "Todos os destinos",
-  "boatsAvailableLive": "barcos disponíveis · ao vivo",
+  "boatsAvailableLive": "{count, plural, one {barco disponível · ao vivo} other {barcos disponíveis · ao vivo}}",
   "dateRange": "{start} – {end}",
   "nightsCount": "{count, plural, one {# noite} other {# noites}}",
   "vesselType": {
@@ -64,5 +64,12 @@
     "motoryacht": "Iate a motor",
     "gulet": "Gulet",
     "powerCat": "Catamarã a motor"
-  }
+  },
+  "any": "Todas",
+  "engineHp": "{value} cv",
+  "cabinsChip": "{count, plural, one {# cabine} other {# cabines}}",
+  "cabinsChipPlus": "{count}+ cabines",
+  "lengthRange": "{min} – {max} m",
+  "relaxTip": "<b>Dica:</b> sem o filtro <em>{filter}</em> veria <b>+{count, plural, one {# barco} other {# barcos}}</b> igualmente adequados.",
+  "relaxAction": "Aliviar filtro"
 }

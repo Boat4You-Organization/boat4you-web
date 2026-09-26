@@ -50,6 +50,35 @@ import { useResolvedDestination } from '@/views/Search/SearchView/ResolvedDestin
 
 import styles from './BoatsSection.module.scss';
 
+/** Image priority of the first cards (the rest lazy-load): the first photo is the LCP on phones. */
+const LCP_CARD_PRIORITY: Array<'preload' | 'eager'> = ['preload', 'eager'];
+
+/** Relax-suggestion URL keys → the sidebar title of their filter (filters.json). */
+const RELAX_FILTER_TITLE: Record<string, string> = {
+  minBuildYear: 'yearBuilt',
+  maxBuildYear: 'yearBuilt',
+  minPrice: 'pricePerWeek',
+  maxPrice: 'pricePerWeek',
+  minCabins: 'cabins',
+  maxCabins: 'cabins',
+  minPersons: 'peopleMaxGuests',
+  maxPersons: 'peopleMaxGuests',
+  minBerths: 'berths',
+  maxBerths: 'berths',
+  minLength: 'length',
+  maxLength: 'length',
+  minWc: 'toilets',
+  maxWc: 'toilets',
+  minEnginePower: 'enginePower',
+  maxEnginePower: 'enginePower',
+  charterType: 'rentalType',
+  mainSailType: 'typeOfMainsail',
+  boatTypes: 'yachtType',
+  mfid: 'manufacturerAndModel',
+  mid: 'manufacturerAndModel',
+  amenities: 'amenities',
+};
+
 interface BoatsSectionProps {
   data: PaginatedResponse<YachtModelShortInfo>;
   user: UserModel | null;
@@ -129,6 +158,14 @@ const BoatsSection = ({
     setMultipleParams(updates);
   }, [relaxSuggestion, setMultipleParams]);
 
+  // The suggestion's label comes from the API in English ("Year ≥ 2018");
+  // name the filter by its translated sidebar title instead.
+  const relaxFilterLabel = useMemo(() => {
+    const titleKey = relaxSuggestion?.paramKeys.map(k => RELAX_FILTER_TITLE[k]).find(Boolean);
+
+    return titleKey ? tFilters(titleKey as never) : (relaxSuggestion?.label ?? '');
+  }, [relaxSuggestion, tFilters]);
+
   const translatedBoatType = useMemo(() => {
     if (params.boatTypes?.length === 1) {
       const boatType = params.boatTypes[0];
@@ -142,6 +179,21 @@ const BoatsSection = ({
 
     return null;
   }, [params.boatTypes, t]);
+
+  // Count H2. Inflecting locales (HR, PL) carry a full plural phrase per
+  // boat type — "896 dostupnih katamarana", not "896 dostupnih Katamarani"
+  // (audit B29); the rest slot the plural type label into one template.
+  const singleType = params.boatTypes?.length === 1 && isVesselType(params.boatTypes[0]) ? params.boatTypes[0] : null;
+  const typedCountKey = singleType ? `boatsAvailableByType.${singleType}` : null;
+  let countHeading: string;
+
+  if (typedCountKey && tCommon.has(typedCountKey as never)) {
+    countHeading = tCommon(typedCountKey as never, { count: totalElements } as never);
+  } else if (translatedBoatType) {
+    countHeading = tCommon('boatsAvailableHeading', { count: totalElements, type: translatedBoatType });
+  } else {
+    countHeading = tCommon('boatsAvailableHeadingGeneric', { count: totalElements });
+  }
 
   const isBoatTypeOnly = useMemo(() => !params.destinations || params.destinations.length === 0, [params.destinations]);
 
@@ -247,11 +299,7 @@ const BoatsSection = ({
       <Box className={styles.container}>
         {relaxSuggestion && (
           <Box sx={{ px: 3, pt: 2 }}>
-            <AiHintStrip
-              filterLabel={relaxSuggestion.label}
-              delta={relaxSuggestion.delta}
-              onRelax={handleRelaxFilter}
-            />
+            <AiHintStrip filterLabel={relaxFilterLabel} delta={relaxSuggestion.delta} onRelax={handleRelaxFilter} />
           </Box>
         )}
         <Stack className={styles.content}>
@@ -264,7 +312,8 @@ const BoatsSection = ({
                   // <title>); boat type only → plural label ("Catamarans").
                   if (isBoatTypeOnly) {
                     return (
-                      translatedBoatType ?? formatListWithTranslation([], () => tCommon('and'), 'All Destinations')
+                      translatedBoatType ??
+                      formatListWithTranslation([], () => tCommon('and'), tFilters('allDestinations'))
                     );
                   }
 
@@ -273,7 +322,7 @@ const BoatsSection = ({
                     formatListWithTranslation(
                       (params.destinations || []).map(d => destinationLabels[d.toLowerCase()] ?? d),
                       () => tCommon('and'),
-                      'All Destinations'
+                      tFilters('allDestinations')
                     )
                   );
                 })()}
@@ -357,9 +406,7 @@ const BoatsSection = ({
               UX subtle while giving crawlers the structural anchor. */}
           {!isEmpty && totalElements > 0 && (
             <Typography component="h2" variant="body2" fontWeight={700} color={colors.black700} sx={{ mt: 1, mb: 1 }}>
-              {translatedBoatType
-                ? tCommon('boatsAvailableHeading', { count: totalElements, type: translatedBoatType })
-                : tCommon('boatsAvailableHeadingGeneric', { count: totalElements })}
+              {countHeading}
             </Typography>
           )}
           {/* The week behind "Price for 7 days" (audit B19), once, above the grid. */}
@@ -379,6 +426,7 @@ const BoatsSection = ({
                     {...yacht}
                     user={user}
                     isSelected={selectedYachtIds.includes(yacht.id)}
+                    imagePriority={LCP_CARD_PRIORITY[index]}
                   />
                 </MuiGrid>
               ))}

@@ -190,7 +190,7 @@ const GeneralSearchBarMobile = () => {
     }
 
     if (activeField === 'boatType') {
-      return <BoatTypeContent onDeleteSingle={handleDeleteSingleBoatType} onSelect={handleBoatTypeConfirm} />;
+      return <BoatTypeContent onDeleteSingle={handleDeleteSingleBoatType} />;
     }
 
     return null;
@@ -292,7 +292,10 @@ const GeneralSearchBarMobile = () => {
             transformOrigin={{ vertical: 'top', horizontal: 'left' }}
             slotProps={{ paper: { sx: { ...popoverPaperSx, width: 320, p: 1 } } }}
           >
-            <BoatTypeContent onDeleteSingle={handleDeleteSingleBoatType} onSelect={handleBoatTypeConfirm} />
+            <BoatTypeContent onDeleteSingle={handleDeleteSingleBoatType} />
+            <Button fullWidth size="large" onClick={handleBoatTypeConfirm} sx={{ mt: 1 }}>
+              {t('generalSearchBar.searchBoats').trim()}
+            </Button>
           </Popover>
         </>
       )}
@@ -307,9 +310,12 @@ const GeneralSearchBarMobile = () => {
           onOpen={() => {}}
           onClose={handleClose}
           hideCancelButton
-          // Both pickers advance on selection (location → calendar, boat type →
-          // search), so neither needs a confirm button — close via the X.
-          hideConfirmButton
+          // The destination picker advances on selection (location →
+          // calendar); the boat-type picker lets you tick several types and
+          // searches on its own button.
+          hideConfirmButton={activeField !== 'boatType'}
+          onConfirm={handleBoatTypeConfirm}
+          confirmBtnText={t('generalSearchBar.searchBoats').trim()}
           // Destination uses full screen (long recent + popular + search
           // results lists). Boat-type sits in a bottom sheet — compact content
           // that shouldn't dominate the viewport.

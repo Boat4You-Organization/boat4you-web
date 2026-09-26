@@ -4,8 +4,8 @@
     "ctaTitle": "jednym kliknięciu.",
     "description": "Wynajmij idealny jacht w kilku kliknięciach. Łatwo, szybko i bez stresu — Twoja wymarzona przygoda żeglarska zaczyna się tutaj.",
     "support": "Doskonała obsługa klienta",
-    "yachtsCount": "{count} jachtów",
-    "marinasCount": "{count} marin"
+    "yachtsCount": "{count, plural, one {# jacht} few {# jachty} many {# jachtów} other {# jachtu}}",
+    "marinasCount": "{count, plural, one {# marina} few {# mariny} many {# marin} other {# mariny}}"
   },
   "generalSearchBar": {
     "whereAreYouGoing": "Dokąd się wybierasz?",
@@ -27,7 +27,6 @@
   "destinationsSection": {
     "theWorldIs": "Najlepsze destynacje",
     "yours": "czarteru jachtów",
-    "yachts": "jachty",
     "destinations": {
       "bahamas": "Bahamy",
       "caribbean": "Karaiby",
@@ -61,7 +60,8 @@
       "grenada": "Grenadzie",
       "splitRegion": "Regionie Splitu",
       "ionianRegion": "Regionie Jońskim"
-    }
+    },
+    "yachtsCount": "{count, plural, one {# jacht} few {# jachty} many {# jachtów} other {# jachtu}}"
   },
   "whyChooseUsSection": {
     "whyChoose": "Dlaczego wybrać nas jako Twojego <strong>profesjonalnego operatora czarteru</strong>",
@@ -88,7 +88,6 @@
     "getToKnow": "Mamy łódź, jakiej szukasz, ",
     "ourFleet": "niezależnie od typu",
     "boatSelection": "Najlepszy wybór łodzi online w najlepszych cenach",
-    "boat": "łódź",
     "fleet": {
       "catamarans": "Katamarany",
       "gulets": "Guletty",
@@ -102,7 +101,8 @@
       "miniCruisers": "Mini-rejsowce",
       "trimarans": "Trimaran",
       "rubberBoats": "Łódź gumowa"
-    }
+    },
+    "boatsCount": "{count, plural, one {# łódź} few {# łodzie} many {# łodzi} other {# łodzi}}"
   },
   "chooseFromFiveHundredLocations": "Wynajem łodzi i czarter jachtów na całym świecie w najlepszych cenach",
   "riskFreeBooking": {

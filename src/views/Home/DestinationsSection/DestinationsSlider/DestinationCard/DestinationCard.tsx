@@ -49,9 +49,7 @@ const DestinationCard = ({ id, name, countryCode, yachtCount, priority = false }
       <div className={styles.scrim} />
       <div className={styles.content}>
         <h3 className={styles.title}>{localizedName}</h3>
-        <p className={styles.count}>
-          {yachtCount} {t('destinationsSection.yachts')}
-        </p>
+        <p className={styles.count}>{t('destinationsSection.yachtsCount', { count: yachtCount })}</p>
       </div>
     </Link>
   );

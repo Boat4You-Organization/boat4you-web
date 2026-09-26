@@ -33,7 +33,9 @@ interface BoatsWrapperProps {
   destinationLabels?: Record<string, string>;
   /** Data Cache window for the yacht list; undefined = no-store. */
   fetchRevalidate?: number;
-  /** Charter facts block for a gated landing (null → none). */
+  /** Charter facts block for a gated landing listing its whole set — no
+   *  dates or filters (search page, listsWholeLanding) — so the listing total
+   *  below is the landing's own. Null → none. */
   charterFacts?: CharterFactsTarget | null;
   /** Set when the request is a destination landing: its link blocks and breadcrumb. */
   landingPlace?: LandingPlace | null;
@@ -130,7 +132,13 @@ const BoatsWrapper = async ({
       priceNote={priceNote}
       charterFactsSlot={
         charterFacts ? (
-          <CharterFactsBlock target={charterFacts} locale={locale} currency={currency} rate={factsRate} />
+          <CharterFactsBlock
+            target={charterFacts}
+            locale={locale}
+            currency={currency}
+            rate={factsRate}
+            listingTotal={data.page?.totalElements ?? null}
+          />
         ) : null
       }
       breadcrumbSlot={crumbs.length ? <LandingBreadcrumb crumbs={crumbs} locale={locale} /> : null}
