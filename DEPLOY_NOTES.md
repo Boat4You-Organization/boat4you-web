@@ -1,5 +1,18 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-09-26 — 🧹 26.9 audit fixes (web-tech, web-ui, web-content) + metadata always in <head> — ✅ LIVE cusma1 21:40 UTC (`68af4cd7`, BUILD_ID `o-jJN_zc-pZdGi49uqXa7`)
+
+Merges `f82370a1` (fix27/web-tech), `c4b60fbf` (fix27/web-ui), `dd932f7f` (fix27/web-content) + `68af4cd7`. Audit `_seo-audit-2026-09-26/synthesis.md`, defects B01–B51.
+
+- **web-tech:** API error → 5xx (never a cached 404+noindex); type-only `/search?boatTypes=X` noindex,follow; duplicate landings/boat URLs → one canonical + 308; stable landing identity via backend region aliases (B01); sitemaps never cache an empty/error answer, privacy/terms out of sitemap-static; locale-prefixed links; real manufacturer in ItemList `Product.brand`; titles/descriptions trimmed; blog BreadcrumbList; weekly prices on itinerary/similar-boat cards + "which week" note; price filter converts currency.
+- **web-ui:** guest number in the boat description; no raw true/null/false; FAQ H3 nesting; accents restored in 12 card labels (DE/HR/FR/ES/PT); localised number formats + UI strings; region/base names translated in titles/H1 (landing.json); unsourced "40,000+ happy sailors" removed; one boat total per page; model pages get data-driven FAQs; mobile price period, search pill, unavailable-week message, first paint.
+- **web-content** (`scripts/seo-corpus-qa.py --check` = 0 findings over 12,789 files): operator names out of copy, France/Normandy houseboat/canal copy rewritten to sea charter, COVID "flexible cancellation" string → 72 h from booking, "Boat4You owns/operates the fleet" → partner network, IT "Adriatico italiano" fixed, 146 dead corpus links fixed, facts contradictions, Greece guides linked; inland places (casale-sul-sile, european-inland, ile-de-france) removed.
+- **`htmlLimitedBots: /.*/`** (`68af4cd7`): cold ISR renders streamed title/robots/canonical/hreflang into `<body>` even for Googlebot (11/12 cold blog posts); now 12/12 in `<head>`.
+- **🔴 runtime files:** cusma1's `next.config.js` was from 2.9.2026 — the deploy shipped only `.next`, so runtime config never changed. `b4y_web_ship_tail.sh` now ships `next.config.js` + `messages/` + public/ diff since `DEPLOYED_COMMIT`, tests the config as cusma1 before the swap (first attempt aborted on root-owned messages — fixed: chown before the test), stops if the swap fails, warms `/sitemap-models.xml` (≈90 s cold) and key pages before the regression run.
+- public/: corpus shipped by tar (backup `/home/cusma1/seo-content.bak-20260926b.tgz`), `images/destinations/france.webp` + `turkey.webp` (backups in /home/cusma1).
+- **Regression (Stage B, 21:52 UTC):** 0 new FAIL, 59 known open rows (XFAIL), 17 audit defects confirmed fixed (XPASS). Known transient: charter-facts block empty until 27.9 08:00 UTC (table reset at the backend deploy); extras "0 €" await an owner decision (ADMIN session).
+  Rollback: `.next.prev` on cusma1 (= `D1x5HKkQn6e_xWl9fJm9J`), `next.config.js.prev`, messages backup `/home/cusma1/messages.bak-20260926.tgz`.
+
 ## 2026-09-26 — 🔧 After-comparison fixes (Mario „sve ovo sredi odmah") — ✅ LIVE cusma1 ~23:00 UTC 25.9. (`eb711938`, BUILD_ID `zPqErlXO_gjrBO0zRIXwr`)
 
 Merges `a52ae599` (fix/linking incl. fix/metadata), `caa7ebe6` (fix/listing), `977549ec` (fix/corpus) + `eb711938` (canonical shard numbers).
