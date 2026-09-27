@@ -34,6 +34,7 @@ declare module 'next-intl' {
       itineraryGermany: typeof import('../../messages/en/itineraryGermany.json').default;
       models: typeof import('../../messages/en/models.json').default;
       charterFacts: typeof import('../../messages/en/charterFacts.json').default;
+      priceGuide: typeof import('../../messages/en/priceGuide.json').default;
       review: typeof import('../../messages/en/review.json').default;
     };
   }

@@ -1,8 +1,10 @@
+import { getTranslations } from 'next-intl/server';
 import 'server-only';
 
 import { itineraryAreaForBlogText } from '@/components/RelatedItineraries/RelatedItineraries';
 import { itineraries } from '@/config/itineraries.config';
 import { POPULAR_SEARCHES } from '@/config/popular-searches.config';
+import { priceGuideByCountry, priceGuidePath } from '@/config/priceGuides.config';
 import { isPromotedCountry } from '@/config/promoted-countries.config';
 import { VesselType } from '@/models/yacht.model';
 import { LocationType } from '@/types/location.type';
@@ -16,6 +18,7 @@ import {
   resolveDestinationName,
 } from '@/utils/server/destinationDid';
 import { itineraryAreaName } from '@/utils/server/itineraryPlaceNames';
+import { placeText } from '@/utils/server/placeText';
 import { buildSearchLandingPath, normalizeDestinationName } from '@/utils/static/searchLandingPath';
 
 /**
@@ -219,7 +222,30 @@ export interface ExploreLinks {
   hubs: Hub[];
   /** Itinerary area matching the post, when one exists. */
   itinerary: { href: string; area: string } | null;
+  /** Price guides (/yacht-charter-prices/{country}) of the countries the post is about. */
+  priceGuides?: Array<{ href: string; label: string }>;
 }
+
+/** Price guide links of these countries (the ones with a guide), locale-prefixed. */
+const priceGuideLinks = async (
+  countryCodes: string[],
+  locale: string
+): Promise<Array<{ href: string; label: string }>> => {
+  const guides = Array.from(new Set(countryCodes))
+    .map(code => priceGuideByCountry(code))
+    .filter((g): g is NonNullable<typeof g> => !!g);
+
+  if (!guides.length) return [];
+
+  const t = await getTranslations({ locale, namespace: 'priceGuide' });
+
+  return Promise.all(
+    guides.map(async g => ({
+      href: `${localePrefix(locale)}${priceGuidePath(g.slug)}`,
+      label: t('landingLink', { where: (await placeText(locale, g.name)).where }),
+    }))
+  );
+};
 
 const MIN_LINKS = 3;
 const MAX_LINKS = 6;
@@ -352,5 +378,12 @@ export const blogExploreHubs = async (
     });
   }
 
-  return { hubs: hubs.slice(0, MAX_LINKS), itinerary };
+  // The country price guides of the post: the countries its title names,
+  // else the country of the place it mentions most.
+  const guideCountries = headingCountries.size
+    ? Array.from(headingCountries)
+    : [top[0]?.resolved.countryCode].filter((c): c is string => !!c);
+  const priceGuides = await priceGuideLinks(guideCountries, locale).catch(() => []);
+
+  return { hubs: hubs.slice(0, MAX_LINKS), itinerary, priceGuides };
 };

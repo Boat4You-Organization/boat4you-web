@@ -1,3 +1,4 @@
+import { PRICE_GUIDES, PRICE_GUIDE_HUB_PATH, priceGuidePath } from '@/config/priceGuides.config';
 import { getSiteStats } from '@/utils/server/siteStats';
 
 // The counts themselves are cached once for every surface (siteStats.ts,
@@ -35,6 +36,11 @@ Boat4You lets travellers search live availability and prices across thousands of
 - [FAQ](${baseUrl}/faq): common questions about chartering and booking.
 - [Blog](${baseUrl}/blog): sailing guides, destinations, and tips.
 - [Contact & support](${baseUrl}/contact-us): get in touch, 24/7 support.
+
+## Price guides
+
+- [Yacht charter prices](${baseUrl}${PRICE_GUIDE_HUB_PATH}): what a charter week costs by country, computed every night from live prices.
+${PRICE_GUIDES.map(({ slug, name }) => `- [Yacht charter prices in ${name}](${baseUrl}${priceGuidePath(slug)}): typical weekly price by month and boat type, skipper, extras and deposit.`).join('\n')}
 
 ## Legal
 

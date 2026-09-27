@@ -1,4 +1,5 @@
 import { PROMO_CAMPAIGNS } from '@/config/campaigns.config';
+import { PRICE_GUIDES, PRICE_GUIDE_HUB_PATH, priceGuidePath } from '@/config/priceGuides.config';
 import { routing } from '@/i18n/routing';
 
 export const dynamic = 'force-dynamic';
@@ -22,6 +23,9 @@ export async function GET() {
     // pagination links, which is how a directory is meant to be walked.
     { path: '/fleet', priority: '0.8', changefreq: 'daily' },
     { path: '/itineraries/builder', priority: '0.6', changefreq: 'monthly' },
+    // Price guides: the hub and one data page per country, recomputed nightly.
+    { path: PRICE_GUIDE_HUB_PATH, priority: '0.6', changefreq: 'daily' },
+    ...PRICE_GUIDES.map(({ slug }) => ({ path: priceGuidePath(slug), priority: '0.7', changefreq: 'daily' })),
     ...PROMO_CAMPAIGNS.map(({ slug }) => ({ path: `/deals/${slug}`, priority: '0.7', changefreq: 'daily' })),
   ];
 

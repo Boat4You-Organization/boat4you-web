@@ -15,6 +15,8 @@ import { yachtsIndexPath } from '@/utils/static/yachtModelKey';
 interface ExploreBoatsLinksProps {
   hubs: Hub[];
   itinerary?: { href: string; area: string } | null;
+  /** Country price guides (locale-prefixed href + label), for posts about those countries. */
+  priceGuides?: Array<{ href: string; label: string }>;
   locale: string;
   lead: 'leadPost' | 'leadIndex';
 }
@@ -35,7 +37,7 @@ export const pillSx = {
   '&:hover': { borderColor: colors.blue500, backgroundColor: colors.blue50 },
 } as const;
 
-const ExploreBoatsLinks = async ({ hubs, itinerary, locale, lead }: ExploreBoatsLinksProps) => {
+const ExploreBoatsLinks = async ({ hubs, itinerary, priceGuides = [], locale, lead }: ExploreBoatsLinksProps) => {
   const linked = hubs.filter(h => !!h.href);
 
   if (!linked.length) return null;
@@ -89,7 +91,14 @@ const ExploreBoatsLinks = async ({ hubs, itinerary, locale, lead }: ExploreBoats
           </Box>
         </Typography>
       )}
-      <Typography variant="body1" sx={{ mt: itinerary ? 1 : 2.5 }}>
+      {priceGuides.map((guide, i) => (
+        <Typography key={guide.href} variant="body1" sx={{ mt: itinerary || i > 0 ? 1 : 2.5 }}>
+          <Box component="a" href={guide.href} sx={textLinkSx}>
+            {guide.label} →
+          </Box>
+        </Typography>
+      ))}
+      <Typography variant="body1" sx={{ mt: itinerary || priceGuides.length ? 1 : 2.5 }}>
         <Box component="a" href={`${localePrefix(locale)}${yachtsIndexPath()}`} sx={textLinkSx}>
           {tModels('index.h1')} →
         </Box>
