@@ -37,3 +37,12 @@ export const formatPriceWithCurrency = ({
 
   return formatAmount(0, Currency.EUR);
 };
+
+/**
+ * Whether an amount is a price we may show: finite and more than 0 once
+ * rounded. A boat price of 0 € (a missing partner price, a gap week, a
+ * calculation without a total) reads as "free" — the widgets say "Price on
+ * request" instead (27.9.2026).
+ */
+export const isPositivePrice = (amount?: number | null): boolean =>
+  amount != null && Number.isFinite(Number(amount)) && Math.round(Number(amount)) > 0;

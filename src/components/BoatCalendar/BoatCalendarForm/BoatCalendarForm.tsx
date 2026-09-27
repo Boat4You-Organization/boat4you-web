@@ -24,7 +24,7 @@ import { useReservation } from '@/utils/hooks/useReservation';
 import useToggleState from '@/utils/hooks/useToggleState';
 import { useYachtAvailability } from '@/utils/hooks/useYachtAvailability';
 import DateTime from '@/utils/static/DateTime';
-import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
+import { formatPriceWithCurrency, isPositivePrice } from '@/utils/static/formatPriceCurrency';
 import { resolveGate } from '@/utils/static/offerStatusGate';
 import { toTitleCase } from '@/utils/static/toTitleCase';
 import { handleNextMonth, handlePrevMonth, toggleBoatInquiryModalOpen } from '@/valtio/yacht/yacht.actions';
@@ -65,7 +65,10 @@ const BoatCalendarForm = ({ yacht, variant }: BoatCalendarFormProps) => {
   // RESERVATION/SERVICE → hard-blocked). See offerStatusGate.ts.
   const gate = resolveGate(selectedOffer?.status, { custom: yacht.custom, inquireOnly });
   const isSelectedOfferBlocked = gate === 'blocked';
-  const isCalculatedPrice = calculatedPrice && Object.keys(calculatedPrice).length > 0;
+  // A calculation without a total above 0 is no price: "not available",
+  // never "0 €" next to Reserve.
+  const isCalculatedPrice =
+    calculatedPrice && Object.keys(calculatedPrice).length > 0 && isPositivePrice(totalPriceEur);
 
   const formattedClientPricePerDay = formatPriceWithCurrency({
     clientPriceEur: clientPricePerDayEur,

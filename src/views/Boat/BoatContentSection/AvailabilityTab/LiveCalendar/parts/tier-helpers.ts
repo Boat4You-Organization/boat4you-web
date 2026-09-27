@@ -4,6 +4,7 @@
 import dayjs from 'dayjs';
 
 import { CURRENCY_SYMBOL_MAP, Currency } from '@/models/user.model';
+import { isPositivePrice } from '@/utils/static/formatPriceCurrency';
 
 import { T } from './tokens';
 
@@ -84,6 +85,15 @@ export const fmtPrice = (n: number, currency?: string, locale: string = 'hr-HR')
   const symbol = currency ? (CURRENCY_SYMBOL_MAP[currency as Currency] ?? currency) : '€';
 
   return `${new Intl.NumberFormat(locale, { maximumFractionDigits: 0 }).format(n)} ${symbol}`;
+};
+
+/** The week's price as the cards and the heatmap show it — never "0 €"
+ *  (27.9.2026): a week without a price reads `onRequest` ("Price on
+ *  request"), or an em-dash when it is blocked anyway. */
+export const weekPriceLabel = (w: WeekData, locale: string, onRequest: string): string => {
+  if (isPositivePrice(w.price)) return fmtPrice(w.price, w.currency, locale);
+
+  return w.status === 'booked' || w.status === 'service' ? '—' : onRequest;
 };
 
 /**

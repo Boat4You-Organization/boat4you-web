@@ -18,7 +18,7 @@ import useQueryParams from '@/utils/hooks/useQueryParams';
 import { useReservation } from '@/utils/hooks/useReservation';
 import useToggleState from '@/utils/hooks/useToggleState';
 import DateTime from '@/utils/static/DateTime';
-import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
+import { formatPriceWithCurrency, isPositivePrice } from '@/utils/static/formatPriceCurrency';
 import { resolveGate } from '@/utils/static/offerStatusGate';
 import { toggleBoatInquiryModalOpen } from '@/valtio/yacht/yacht.actions';
 import { useYachtStore } from '@/valtio/yacht/yacht.store';
@@ -70,7 +70,9 @@ const BoatMobileNavigation = ({ yacht }: BoatMobileNavigationProps) => {
   // RESERVATION/SERVICE hard-block meaning (no longer the lossy UNAVAILABLE).
   const gate = resolveGate(selectedOffer?.status, { custom: yacht.custom, inquireOnly: yacht.inquireOnly });
   const isSelectedOfferBlocked = gate === 'blocked';
-  const isCalculatedPrice = calculatedPrice && Object.keys(calculatedPrice).length > 0;
+  // A calculation without a total above 0 is no price — never "0 €".
+  const isCalculatedPrice =
+    !!calculatedPrice && Object.keys(calculatedPrice).length > 0 && isPositivePrice(calculatedPrice.totalPriceEur);
   const isInquireFlow = gate === 'inquiry';
 
   const { handleReservation } = useReservation({ yacht });

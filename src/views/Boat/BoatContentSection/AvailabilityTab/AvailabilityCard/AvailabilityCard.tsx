@@ -9,7 +9,7 @@ import { YachtOfferModel } from '@/models/yacht-offer.model';
 import { YachtModel } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
 import { presentAmenities } from '@/utils/static/amenities';
-import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
+import { formatPriceWithCurrency, isPositivePrice } from '@/utils/static/formatPriceCurrency';
 import { toTitleCase } from '@/utils/static/toTitleCase';
 import { toggleBoatInquiryModalOpen } from '@/valtio/yacht/yacht.actions';
 
@@ -34,7 +34,9 @@ const AvailabilityCard = ({ yacht, offer }: AvailabilityCardProps) => {
         ? Math.round(clientPriceEur / clientPricePerDayEur)
         : 7;
 
-  const showListPrice = typeof listPriceEur === 'number' && listPriceEur > clientPriceEur;
+  // No total above 0 → "Price on request", never "0 €".
+  const hasPrice = isPositivePrice(clientPriceEur);
+  const showListPrice = hasPrice && typeof listPriceEur === 'number' && listPriceEur > clientPriceEur;
   const discountPercent = showListPrice ? Math.round(((listPriceEur! - clientPriceEur) / listPriceEur!) * 100) : 0;
 
   // Round to whole euros for cleaner display ("3,001 €" not "3,001.68 €")
@@ -84,9 +86,11 @@ const AvailabilityCard = ({ yacht, offer }: AvailabilityCardProps) => {
           )}
         </Typography>
         <Stack alignItems={{ xs: 'flex-start', md: 'flex-end' }}>
-          <Typography variant="body2" color={colors.black600}>
-            {tCommon('priceForXDays', { days: String(days) })}
-          </Typography>
+          {hasPrice && (
+            <Typography variant="body2" color={colors.black600}>
+              {tCommon('priceForXDays', { days: String(days) })}
+            </Typography>
+          )}
           {showListPrice && (
             <Typography variant="body2" color={colors.black950} fontWeight={800} sx={{ mt: 0.25 }}>
               − {discountPercent}%
@@ -98,9 +102,15 @@ const AvailabilityCard = ({ yacht, offer }: AvailabilityCardProps) => {
                 {formattedListPrice}
               </Typography>
             )}
-            <Typography variant="h3" component="p" fontWeight={700} color="success">
-              {formattedTotal}
-            </Typography>
+            {hasPrice ? (
+              <Typography variant="h3" component="p" fontWeight={700} color="success">
+                {formattedTotal}
+              </Typography>
+            ) : (
+              <Typography component="p" fontWeight={700} color={colors.black700} sx={{ fontSize: 15 }}>
+                {tCommon('priceOnRequest')}
+              </Typography>
+            )}
           </Stack>
         </Stack>
       </Stack>

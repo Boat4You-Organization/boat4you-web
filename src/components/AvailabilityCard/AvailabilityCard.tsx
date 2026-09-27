@@ -4,11 +4,13 @@ import { Box, Stack, Typography } from '@mui/material';
 import dayjs from 'dayjs';
 import { useLocale, useTranslations } from 'next-intl';
 
+import { isPositivePrice } from '@/utils/static/formatPriceCurrency';
 import {
   WeekData,
   fmtPrice,
   statusColor,
   statusKey,
+  weekPriceLabel,
 } from '@/views/Boat/BoatContentSection/AvailabilityTab/LiveCalendar/parts/tier-helpers';
 import { T } from '@/views/Boat/BoatContentSection/AvailabilityTab/LiveCalendar/parts/tokens';
 
@@ -35,6 +37,7 @@ interface AvailabilityCardProps {
  */
 const AvailabilityCard = ({ w, selected, onClick, size = 'desktop' }: AvailabilityCardProps) => {
   const t = useTranslations('yacht');
+  const tCommon = useTranslations('common');
   const locale = useLocale();
   // The partner's real period length (any check-in day / length is shown as
   // published) — the card used to print "7 NIGHTS" / "Per week" on every one.
@@ -51,6 +54,11 @@ const AvailabilityCard = ({ w, selected, onClick, size = 'desktop' }: Availabili
   // literal `0` rendering bug).
   const regular = w.regularPrice ?? 0;
   const showRegular = regular > 0 && w.price > 0 && !isBooked;
+  // An open week without a price says "Price on request" in a text size.
+  const isAmount = isPositivePrice(w.price) || isBooked;
+  const amountSize = compact ? '32px' : '18px';
+  const textSize = compact ? '18px' : '13px';
+  const amountSpacing = compact ? '-1px' : '-0.5px';
 
   return (
     <Box
@@ -203,22 +211,22 @@ const AvailabilityCard = ({ w, selected, onClick, size = 'desktop' }: Availabili
         )}
         <Typography
           sx={{
-            fontSize: compact ? '32px' : '18px',
+            fontSize: isAmount ? amountSize : textSize,
             fontWeight: 800,
-            letterSpacing: compact ? '-1px' : '-0.5px',
+            letterSpacing: isAmount ? amountSpacing : 0,
             color: isBooked ? T.faint : T.greenDeep,
             mt: compact ? 0 : '2px',
             fontFeatureSettings: '"tnum"',
-            whiteSpace: 'nowrap',
+            whiteSpace: isAmount ? 'nowrap' : 'normal',
           }}
         >
-          {/* Mario rule 12.5.2026: "makni gornju nulu, ostavi donju 0 €".
-              Strikethrough regular price already hidden when `price ≤ 0`
-              (guard above). A blocked week with no real price (a synthesised
-              "Unavailable" gap filler, Mario 24.6.2026) shows an em-dash
-              instead of a misleading "0 €"; real reserved weeks keep their
-              greyed price. */}
-          {isBooked && w.price <= 0 ? '—' : fmtPrice(w.price, w.currency, locale)}
+          {/* No "0 €" anywhere (27.9.2026 — replaces the 12.5.2026 "leave the
+              lower 0 €"): an open week without a price says "Price on
+              request"; a blocked one without a price (a synthesised
+              "Unavailable" gap filler, Mario 24.6.2026) an em-dash; real
+              reserved weeks keep their greyed price. The strikethrough
+              regular price is already hidden when `price ≤ 0`. */}
+          {weekPriceLabel(w, locale, tCommon('priceOnRequest'))}
         </Typography>
       </Box>
     </Box>

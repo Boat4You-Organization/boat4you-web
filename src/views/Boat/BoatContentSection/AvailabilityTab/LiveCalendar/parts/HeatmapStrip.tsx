@@ -4,7 +4,7 @@
 import { Box } from '@mui/material';
 import { useLocale, useTranslations } from 'next-intl';
 
-import { WeekData, fmtPrice, statusKey, tierBg } from './tier-helpers';
+import { WeekData, statusKey, tierBg, weekPriceLabel } from './tier-helpers';
 import { T } from './tokens';
 
 interface HeatmapStripProps {
@@ -25,6 +25,7 @@ interface HeatmapStripProps {
  */
 const HeatmapStrip = ({ weeks, activeId, visibleRange, onCellClick, height = 56 }: HeatmapStripProps) => {
   const t = useTranslations('yacht');
+  const tCommon = useTranslations('common');
   const locale = useLocale();
 
   return (
@@ -47,11 +48,11 @@ const HeatmapStrip = ({ weeks, activeId, visibleRange, onCellClick, height = 56 
               key={w.id}
               onClick={() => !isBlocked && onCellClick(w, i)}
               disabled={isBlocked}
-              title={`${w.from} → ${w.to} · ${fmtPrice(w.price, w.currency, locale)} · ${t(statusKey(w.status))}`}
+              title={`${w.from} → ${w.to} · ${weekPriceLabel(w, locale, tCommon('priceOnRequest'))} · ${t(statusKey(w.status))}`}
               aria-label={t('calendar.weekAria', {
                 from: w.from,
                 to: w.to,
-                price: fmtPrice(w.price, w.currency, locale),
+                price: weekPriceLabel(w, locale, tCommon('priceOnRequest')),
                 status: t(statusKey(w.status)),
               })}
               sx={{
