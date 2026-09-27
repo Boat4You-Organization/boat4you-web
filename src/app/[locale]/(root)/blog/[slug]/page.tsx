@@ -152,7 +152,13 @@ const SingleBlogPage = async ({ params }: { params: Promise<{ slug: string; loca
       {explore && (
         <Container maxWidth="xl" disableGutters sx={{ px: { xs: 2, md: 3 } }}>
           <Box maxWidth={846} marginInline="auto" pb={{ xs: 4, md: 6 }}>
-            <ExploreBoatsLinks hubs={explore.hubs} itinerary={explore.itinerary} locale={locale} lead="leadPost" />
+            <ExploreBoatsLinks
+              hubs={explore.hubs}
+              itinerary={explore.itinerary}
+              priceGuides={explore.priceGuides}
+              locale={locale}
+              lead="leadPost"
+            />
           </Box>
         </Container>
       )}

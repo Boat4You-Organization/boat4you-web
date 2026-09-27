@@ -27,6 +27,12 @@ const footerMenu: NavigationLink[] = [
         text: 'yachtModels',
         href: '/yachts',
       },
+      // Hub of the country price guides (/yacht-charter-prices/{country}),
+      // the data pages built from the nightly charter facts (27.9.2026).
+      {
+        text: 'priceGuides',
+        href: '/yacht-charter-prices',
+      },
       {
         text: 'howWeWork',
         href: '/how-we-work',
