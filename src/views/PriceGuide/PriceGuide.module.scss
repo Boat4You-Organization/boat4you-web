@@ -11,6 +11,13 @@
   font-size: rem-calc(13);
 }
 
+// Key-figure values: tabular digits like the model pages' `.numeric`, but free to
+// wrap — "1,650 € (usually 1,550 € – 1,900 €)" is wider than a phone tile.
+.figure {
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: break-word;
+}
+
 .cta {
   margin: rem-calc(14) 0 0;
   font-size: rem-calc(15);

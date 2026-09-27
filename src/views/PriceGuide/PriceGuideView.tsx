@@ -97,7 +97,7 @@ const PriceGuideView = async ({
           {tiles.map(tile => (
             <div key={tile.label} className={styles.spec}>
               <dt>{tile.label}</dt>
-              <dd className={styles.numeric}>{tile.value}</dd>
+              <dd className={guideStyles.figure}>{tile.value}</dd>
             </div>
           ))}
         </dl>
@@ -254,7 +254,7 @@ const PriceGuideView = async ({
           )}
           <p className={styles.body}>{t('method.median')}</p>
           <p className={styles.body}>{t('method.panel')}</p>
-          <p className={styles.body}>{t('method.costs')}</p>
+          <p className={styles.body}>{t('method.costs', { zero: money(0) })}</p>
           <p className={styles.note}>{t('method.updated', { date: fmt.date(facts.computedAt) })}</p>
         </div>
       </section>

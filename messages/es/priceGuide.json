@@ -16,7 +16,7 @@
     "fleet": "Hay {active, number} barcos en alquiler {where}, y {priced, number} de ellos tienen precios publicados para alquileres de 7 noches en los próximos 12 meses.",
     "range": "Según el mes, una semana de alquiler típica cuesta entre {low} y {high} por el barco.",
     "priciest": "El mes más caro es {month}: una semana típica cuesta entonces {median}.",
-    "priciestRange": "El mes más caro es {month}: una semana típica cuesta entonces {median}, y la mitad central de los barcos entre {p25} y {p75}.",
+    "priciestRange": "El mes más caro es {month}: una semana típica cuesta entonces {median}, y la mitad central de las semanas de alquiler, entre {p25} y {p75}.",
     "cheapest": "El mes más barato es {month}: una semana típica cuesta entonces {median}.",
     "skipperExtras": "Un patrón suele costar {skipper} por semana, y los extras obligatorios suman {extras}.",
     "skipper": "Un patrón suele costar {skipper} por semana.",
@@ -38,15 +38,15 @@
   "methodHeading": "Cómo se calculan estas cifras",
   "method": {
     "population": "Cada cifra de esta página se calcula cada noche a partir de las ofertas de alquiler actuales de los {priced, number} barcos con base {where} que tienen al menos un alquiler de 7 noches reservable en los próximos 12 meses. Las tablas mensuales abarcan los alquileres que empiezan entre {from} y {to}.",
-    "median": "La semana típica es el precio semanal mediano: la mitad de las semanas de alquiler con precio cuesta menos y la otra mitad, más. La mitad central de los barcos es el rango entre los percentiles 25 y 75, de modo que quedan fuera el cuarto más barato y el más caro.",
+    "median": "La semana típica es el precio semanal mediano: la mitad de las semanas de alquiler con precio cuesta menos y la otra mitad, más. La mitad central es el rango entre los percentiles 25 y 75 de esas semanas, de modo que quedan fuera el cuarto más barato y el más caro.",
     "panel": "Dentro de cada tabla, los meses se comparan en igualdad de condiciones: se calculan sobre los mismos barcos, los que tienen precio en al menos tres de cada cuatro meses mostrados. Un mes solo aparece si el número de barcos con precio en él llega al menos a la mitad del mes mejor cubierto, de modo que los meses de temporada baja con pocos datos quedan fuera. Las semanas por debajo de 300 € son valores de relleno y nunca cuentan; no se muestran las cifras basadas en menos de 5 barcos.",
-    "costs": "Los precios son por barco y semana de alquiler, tal como los publican nuestros socios. El patrón, los extras obligatorios y la fianza van aparte; sus cifras son medianas de los barcos que los indican.",
+    "costs": "Los precios son por barco y semana de alquiler, tal como los publican nuestros socios. El patrón, los extras obligatorios y la fianza van aparte. Las cifras del patrón y de la fianza son medianas de los barcos que los indican. Los extras obligatorios son los cargos por barco para una semana, contados como {zero} en un barco que no tiene ninguno; no se incluyen los conceptos por persona, como la tasa turística, y se excluyen los barcos con un cargo porcentual (el APA de los yates con tripulación).",
     "updated": "Última actualización: {date}. Importes en euros (EUR)."
   },
   "faqHeading": "Preguntas frecuentes",
   "faq": {
     "costQ": "¿Cuánto cuesta alquilar un yate {where} por semana?",
-    "costA": "Según el mes, una semana de alquiler típica {where} cuesta entre {low} y {high} por el barco: es el precio semanal mediano de los {priced, number} barcos con precios publicados. El patrón, los extras obligatorios y la fianza van aparte.",
+    "costA": "Según el mes, una semana de alquiler típica {where} cuesta entre {low} y {high} por el barco: es el precio semanal mediano del mes más barato y del más caro. El patrón, los extras obligatorios y la fianza van aparte.",
     "cheapQ": "¿Cuándo es más barato alquilar un yate {where}?",
     "peakQ": "¿Cuándo son más altos los precios del alquiler de yates {where}?",
     "typesQ": "¿Cómo varían los precios según el tipo de barco {where}?",
@@ -55,6 +55,7 @@
     "skipperA": "Un patrón suele costar {median} por semana, y en la mitad de los barcos cuesta entre {p25} y {p75} (precios de patrón de {n, number} barcos).",
     "skipperSingleA": "Un patrón suele costar {median} por semana (precios de patrón de {n, number} barcos).",
     "costsQ": "¿Qué otros gastos hay que prever además del precio del barco {where}?",
+    "extrasPerPerson": "No incluyen los cargos por persona, como la tasa turística.",
     "checkInQ": "¿Qué día empiezan los alquileres de yates {where}?",
     "checkInA": "La mayoría de los alquileres empiezan el {day}: el {share} de las semanas de alquiler.",
     "checkInSecond": "Le sigue el {day} ({share})."

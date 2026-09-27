@@ -16,7 +16,7 @@
     "fleet": "Há {active, number} barcos para alugar {where}, e {priced, number} deles têm preços publicados para alugueres de 7 noites nos próximos 12 meses.",
     "range": "Conforme o mês, uma semana de aluguer típica custa entre {low} e {high} pelo barco.",
     "priciest": "O mês mais caro é {month}: uma semana típica custa então {median}.",
-    "priciestRange": "O mês mais caro é {month}: uma semana típica custa então {median}, e a metade central dos barcos entre {p25} e {p75}.",
+    "priciestRange": "O mês mais caro é {month}: uma semana típica custa então {median}, e a metade central das semanas de aluguer fica entre {p25} e {p75}.",
     "cheapest": "O mês mais barato é {month}: uma semana típica custa então {median}.",
     "skipperExtras": "Um skipper custa normalmente {skipper} por semana, e os extras obrigatórios acrescentam {extras}.",
     "skipper": "Um skipper custa normalmente {skipper} por semana.",
@@ -38,15 +38,15 @@
   "methodHeading": "Como são calculados estes números",
   "method": {
     "population": "Todos os números desta página são calculados todas as noites a partir das ofertas de aluguer atuais dos {priced, number} barcos baseados {where} que têm pelo menos um aluguer de 7 noites reservável nos próximos 12 meses. As tabelas mensais abrangem alugueres com início entre {from} e {to}.",
-    "median": "A semana típica é o preço semanal mediano: metade das semanas de aluguer com preço custa menos e a outra metade custa mais. A metade central dos barcos é o intervalo entre os percentis 25 e 75, pelo que o quarto mais barato e o mais caro ficam de fora.",
+    "median": "A semana típica é o preço semanal mediano: metade das semanas de aluguer com preço custa menos e a outra metade custa mais. A metade central é o intervalo entre os percentis 25 e 75 dessas semanas, pelo que o quarto mais barato e o mais caro ficam de fora.",
     "panel": "Em cada tabela, os meses comparam-se em pé de igualdade: são calculados sobre os mesmos barcos, os que têm preço em pelo menos três de cada quatro meses apresentados. Um mês só aparece se o número de barcos com preço nesse mês chegar pelo menos a metade do mês mais bem coberto, pelo que os meses de época baixa com poucos dados ficam de fora. As semanas abaixo de 300 € são valores provisórios e nunca contam; os números baseados em menos de 5 barcos não são apresentados.",
-    "costs": "Os preços são por barco e por semana de aluguer, tal como publicados pelos nossos parceiros. O skipper, os extras obrigatórios e a caução pagam-se à parte; os respetivos valores são medianas dos barcos que os indicam.",
+    "costs": "Os preços são por barco e por semana de aluguer, tal como publicados pelos nossos parceiros. O skipper, os extras obrigatórios e a caução pagam-se à parte. Os valores do skipper e da caução são medianas dos barcos que os indicam. Os extras obrigatórios são as taxas por barco para uma semana, contadas como {zero} num barco que não tenha nenhuma; não se incluem os valores por pessoa, como a taxa turística, e ficam de fora os barcos com uma taxa percentual (o APA dos iates com tripulação).",
     "updated": "Última atualização: {date}. Valores em euros (EUR)."
   },
   "faqHeading": "Perguntas frequentes",
   "faq": {
     "costQ": "Quanto custa alugar um iate {where} por semana?",
-    "costA": "Conforme o mês, uma semana de aluguer típica {where} custa entre {low} e {high} pelo barco: é o preço semanal mediano dos {priced, number} barcos com preços publicados. O skipper, os extras obrigatórios e a caução pagam-se à parte.",
+    "costA": "Conforme o mês, uma semana de aluguer típica {where} custa entre {low} e {high} pelo barco: é o preço semanal mediano do mês mais barato e do mais caro. O skipper, os extras obrigatórios e a caução pagam-se à parte.",
     "cheapQ": "Quando é mais barato alugar um iate {where}?",
     "peakQ": "Quando são mais altos os preços do aluguer de iates {where}?",
     "typesQ": "Como variam os preços conforme o tipo de barco {where}?",
@@ -55,6 +55,7 @@
     "skipperA": "Um skipper custa normalmente {median} por semana, e em metade dos barcos custa entre {p25} e {p75} (preços de skipper de {n, number} barcos).",
     "skipperSingleA": "Um skipper custa normalmente {median} por semana (preços de skipper de {n, number} barcos).",
     "costsQ": "Que outros custos devo prever além do preço do barco {where}?",
+    "extrasPerPerson": "Não incluem os valores por pessoa, como a taxa turística.",
     "checkInQ": "Em que dia começam os alugueres de iates {where}?",
     "checkInA": "O dia de embarque mais comum é {day}: {share} das semanas de aluguer.",
     "checkInSecond": "Segue-se {day} ({share})."

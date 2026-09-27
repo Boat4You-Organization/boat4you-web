@@ -16,7 +16,7 @@
     "fleet": "{active, number} barche sono disponibili a noleggio {where}, e {priced, number} di queste hanno prezzi pubblicati per noleggi di 7 notti nei prossimi 12 mesi.",
     "range": "A seconda del mese, una settimana di noleggio tipo costa tra {low} e {high} per la barca.",
     "priciest": "Il mese più caro è {month}: una settimana tipo costa allora {median}.",
-    "priciestRange": "Il mese più caro è {month}: una settimana tipo costa allora {median}, e la metà centrale delle barche tra {p25} e {p75}.",
+    "priciestRange": "Il mese più caro è {month}: una settimana tipo costa allora {median}, e la metà centrale delle settimane di noleggio costa tra {p25} e {p75}.",
     "cheapest": "Il mese più economico è {month}: una settimana tipo costa allora {median}.",
     "skipperExtras": "Uno skipper costa di solito {skipper} a settimana, e gli extra obbligatori aggiungono {extras}.",
     "skipper": "Uno skipper costa di solito {skipper} a settimana.",
@@ -38,15 +38,15 @@
   "methodHeading": "Come vengono calcolati questi numeri",
   "method": {
     "population": "Ogni cifra di questa pagina viene ricalcolata ogni notte dalle offerte di noleggio aggiornate delle {priced, number} barche con base {where} che hanno almeno un noleggio di 7 notti prenotabile nei prossimi 12 mesi. Le tabelle mensili coprono i noleggi con inizio tra {from} e {to}.",
-    "median": "La settimana tipo è il prezzo settimanale mediano: metà delle settimane di noleggio con prezzo costa meno, l’altra metà di più. La metà centrale delle barche è l’intervallo tra il 25° e il 75° percentile, per cui il quarto più economico e quello più caro restano esclusi.",
+    "median": "La settimana tipo è il prezzo settimanale mediano: metà delle settimane di noleggio con prezzo costa meno, l’altra metà di più. La metà centrale è l’intervallo tra il 25° e il 75° percentile di queste settimane, per cui il quarto più economico e quello più caro restano esclusi.",
     "panel": "All’interno di ogni tabella i mesi sono confrontabili tra loro: sono calcolati sulle stesse barche, quelle con un prezzo in almeno tre mesi su quattro tra quelli mostrati. Un mese compare solo se almeno la metà delle barche del mese meglio coperto vi ha un prezzo, così i mesi di bassa stagione con pochi dati restano fuori. Le settimane sotto i 300 € sono valori segnaposto e non contano mai; i valori basati su meno di 5 barche non vengono mostrati.",
-    "costs": "I prezzi si riferiscono alla barca per settimana di noleggio, come pubblicati dai nostri partner. Skipper, extra obbligatori e cauzione sono a parte; i loro valori sono mediane calcolate sulle barche che li indicano.",
+    "costs": "I prezzi si riferiscono alla barca per settimana di noleggio, come pubblicati dai nostri partner. Skipper, extra obbligatori e cauzione sono a parte. Per skipper e cauzione si tratta di mediane calcolate sulle barche che li indicano. Gli extra obbligatori sono i costi per barca per una settimana, contati {zero} per una barca che non ne ha; le voci a persona, come la tassa di soggiorno, non sono incluse, e le barche con un costo in percentuale (l’APA degli yacht con equipaggio) restano escluse.",
     "updated": "Ultimo aggiornamento: {date}. Importi in euro (EUR)."
   },
   "faqHeading": "Domande frequenti",
   "faq": {
     "costQ": "Quanto costa noleggiare uno yacht {where} per una settimana?",
-    "costA": "A seconda del mese, una settimana di noleggio tipo {where} costa tra {low} e {high} per la barca: è il prezzo settimanale mediano delle {priced, number} barche con prezzi pubblicati. Skipper, extra obbligatori e cauzione sono a parte.",
+    "costA": "A seconda del mese, una settimana di noleggio tipo {where} costa tra {low} e {high} per la barca: è il prezzo settimanale mediano del mese più economico e di quello più caro. Skipper, extra obbligatori e cauzione sono a parte.",
     "cheapQ": "Qual è il periodo più economico per noleggiare uno yacht {where}?",
     "peakQ": "Quando i prezzi del noleggio yacht sono più alti {where}?",
     "typesQ": "Come cambiano i prezzi a seconda del tipo di barca {where}?",
@@ -55,6 +55,7 @@
     "skipperA": "Uno skipper costa di solito {median} a settimana, e per metà delle barche il prezzo è tra {p25} e {p75} (prezzi skipper di {n, number} barche).",
     "skipperSingleA": "Uno skipper costa di solito {median} a settimana (prezzi skipper di {n, number} barche).",
     "costsQ": "Quali altri costi considerare oltre al prezzo della barca {where}?",
+    "extrasPerPerson": "Le voci a persona, come la tassa di soggiorno, non sono incluse.",
     "checkInQ": "In che giorno iniziano i noleggi di yacht {where}?",
     "checkInA": "La maggior parte dei noleggi inizia di {day}: il {share} delle settimane di noleggio.",
     "checkInSecond": "Al secondo posto: {day} ({share})."

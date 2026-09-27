@@ -16,7 +16,7 @@
     "fleet": "{active, plural, one {Za najam {where} nudi se # brod} few {Za najam {where} nude se # broda} other {Za najam {where} nudi se # brodova}}, a {priced, plural, one {# od njih ima} few {# od njih imaju} other {# od njih ima}} objavljene cijene za tjedni najam (7 noćenja) u sljedećih 12 mjeseci.",
     "range": "Ovisno o mjesecu, uobičajeni tjedan najma stoji između {low} i {high} za brod.",
     "priciest": "Najskuplji je mjesec {month} – uobičajeni tjedan tada stoji {median}.",
-    "priciestRange": "Najskuplji je mjesec {month} – uobičajeni tjedan tada stoji {median}, a srednja polovica brodova {p25} – {p75}.",
+    "priciestRange": "Najskuplji je mjesec {month} – uobičajeni tjedan tada stoji {median}, a srednja polovica tjedana najma između {p25} i {p75}.",
     "cheapest": "Najjeftiniji je mjesec {month} – uobičajeni tjedan tada stoji {median}.",
     "skipperExtras": "Skiper obično stoji {skipper} tjedno, a obvezni dodaci još {extras}.",
     "skipper": "Skiper obično stoji {skipper} tjedno.",
@@ -38,15 +38,15 @@
   "methodHeading": "Kako računamo ove brojke",
   "method": {
     "population": "Svaka brojka na ovoj stranici izračunava se svake noći iz aktualnih ponuda za najam {priced, plural, one {# broda} few {# broda} other {# brodova}} s bazom {where} koji u sljedećih 12 mjeseci imaju barem jedan tjedni najam (7 noćenja) koji se može rezervirati. Tablice po mjesecima obuhvaćaju najmove s početkom u razdoblju {from} – {to}.",
-    "median": "Uobičajeni tjedan je medijan tjednih cijena: polovica tjedana najma s cijenom stoji manje, a polovica više. Srednja polovica brodova raspon je između 25. i 75. percentila – najjeftinija i najskuplja četvrtina nisu uključene.",
+    "median": "Uobičajeni tjedan je medijan tjednih cijena: polovica tjedana najma s cijenom stoji manje, a polovica više. Srednja polovica raspon je između 25. i 75. percentila tih tjedana – najjeftinija i najskuplja četvrtina nisu uključene.",
     "panel": "Unutar svake tablice mjeseci su usporedivi: računaju se na istim brodovima, onima koji imaju cijenu u najmanje tri od svaka četiri prikazana mjeseca. Mjesec se prikazuje samo ako u njemu cijenu ima barem upola onoliko brodova koliko u najbolje pokrivenom mjesecu, pa slabo pokriveni mjeseci izvan sezone otpadaju. Tjedni ispod 300 € samo su privremene oznake i nikad se ne računaju, a vrijednosti iz manje od 5 brodova ne prikazuju se.",
-    "costs": "Cijene se odnose na brod po tjednu najma, kako ih objavljuju naši partneri. Skiper, obvezni dodaci i polog plaćaju se posebno; njihove su vrijednosti medijani brodova koji ih navode.",
+    "costs": "Cijene se odnose na brod po tjednu najma, kako ih objavljuju naši partneri. Skiper, obvezni dodaci i polog plaćaju se posebno. Za skipera i polog to su medijani brodova koji ih navode. Obvezni dodaci su naknade po brodu za tjedan, računate kao {zero} za brod koji ih nema; stavke po osobi, poput boravišne pristojbe, nisu uključene, a brodovi s postotnom naknadom (APA na jahtama s posadom) izostavljeni su.",
     "updated": "Posljednje ažuriranje: {date} Iznosi u eurima (EUR)."
   },
   "faqHeading": "Često postavljana pitanja",
   "faq": {
     "costQ": "Koliko stoji tjedni najam jahte {where}?",
-    "costA": "Ovisno o mjesecu, uobičajeni tjedan najma {where} stoji između {low} i {high} za brod – to je medijan tjednih cijena {priced, plural, one {# broda} few {# broda} other {# brodova}} s objavljenim cijenama. Skiper, obvezni dodaci i polog plaćaju se posebno.",
+    "costA": "Ovisno o mjesecu, uobičajeni tjedan najma {where} stoji između {low} i {high} za brod – to je medijan tjednih cijena u najjeftinijem i u najskupljem mjesecu. Skiper, obvezni dodaci i polog plaćaju se posebno.",
     "cheapQ": "Kada je najam jahte {where} najjeftiniji?",
     "peakQ": "Kada su cijene najma jahti {where} najviše?",
     "typesQ": "Kako se cijene razlikuju prema vrsti plovila {where}?",
@@ -55,6 +55,7 @@
     "skipperA": "Skiper obično stoji {median} tjedno, a za polovicu brodova njegova je cijena između {p25} i {p75} (cijene skipera na {n, plural, one {# brodu} few {# broda} other {# brodova}}).",
     "skipperSingleA": "Skiper obično stoji {median} tjedno (cijene skipera na {n, plural, one {# brodu} few {# broda} other {# brodova}}).",
     "costsQ": "Koje troškove osim cijene broda treba predvidjeti {where}?",
+    "extrasPerPerson": "Stavke po osobi, poput boravišne pristojbe, nisu uključene.",
     "checkInQ": "Kojeg dana počinje najam jahti {where}?",
     "checkInA": "Najčešći dan ukrcaja je {day}: {share} tjedana najma.",
     "checkInSecond": "Slijedi {day} ({share})."

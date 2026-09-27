@@ -16,7 +16,7 @@
     "fleet": "{active, number} boats are listed for charter {where}, and {priced, number} of them have published prices for 7-night charters in the next 12 months.",
     "range": "Depending on the month, a typical charter week costs between {low} and {high} for the boat.",
     "priciest": "The most expensive month is {month}: a typical week then costs {median}.",
-    "priciestRange": "The most expensive month is {month}: a typical week then costs {median}, and the middle half of boats {p25} – {p75}.",
+    "priciestRange": "The most expensive month is {month}: a typical week then costs {median}, and the middle half of charter weeks cost between {p25} and {p75}.",
     "cheapest": "The cheapest month is {month}: a typical week then costs {median}.",
     "skipperExtras": "A skipper typically costs {skipper} a week, and obligatory extras add {extras}.",
     "skipper": "A skipper typically costs {skipper} a week.",
@@ -38,15 +38,15 @@
   "methodHeading": "How these numbers are computed",
   "method": {
     "population": "Every figure on this page is computed each night from the live charter offers of the {priced, number} boats based {where} that have at least one bookable 7-night charter in the next 12 months. The month tables cover charters starting from {from} to {to}.",
-    "median": "The typical week is the median weekly price: half of the priced charter weeks cost less, half cost more. The middle half of boats is the range between the 25th and the 75th percentile, so the cheapest and the most expensive quarter are left out.",
+    "median": "The typical week is the median weekly price: half of the priced charter weeks cost less, half cost more. The middle half is the range between the 25th and the 75th percentile of those weeks, so the cheapest and the most expensive quarter are left out.",
     "panel": "Within each table the months compare like with like: they are priced over the same boats, those with a price in at least three of every four months shown. A month appears only when at least half as many boats have a price in it as in the best-covered month, so thin off-season months are left out. Weeks priced under 300 € are placeholders and never count, and figures based on fewer than 5 boats are not shown.",
-    "costs": "Prices are for the boat per charter week, as published by our partners. A skipper, obligatory extras and the security deposit come on top; their figures are medians over the boats that list them.",
+    "costs": "Prices are for the boat per charter week, as published by our partners. A skipper, obligatory extras and the security deposit come on top. Skipper and deposit figures are medians over the boats that list them. Obligatory extras are the per-boat fees for a week, counted as {zero} for a boat without any; per-person items such as tourist tax are not included, and boats with a percentage-based fee (APA on crewed yachts) are left out.",
     "updated": "Last updated {date}. Amounts in euros (EUR)."
   },
   "faqHeading": "Frequently asked questions",
   "faq": {
     "costQ": "How much does a yacht charter {where} cost per week?",
-    "costA": "Depending on the month, a typical charter week {where} costs between {low} and {high} for the boat — the median weekly price of the {priced, number} boats with published prices. A skipper, obligatory extras and the security deposit come on top.",
+    "costA": "Depending on the month, a typical charter week {where} costs between {low} and {high} for the boat: the median weekly price in the cheapest and in the most expensive month. A skipper, obligatory extras and the security deposit come on top.",
     "cheapQ": "When is the cheapest time to charter a yacht {where}?",
     "peakQ": "When are yacht charter prices highest {where}?",
     "typesQ": "How do prices differ by boat type {where}?",
@@ -55,6 +55,7 @@
     "skipperA": "A skipper typically costs {median} a week, and half of the boats charge between {p25} and {p75} (skipper prices of {n, number} boats).",
     "skipperSingleA": "A skipper typically costs {median} a week (skipper prices of {n, number} boats).",
     "costsQ": "What else should I budget for on top of the boat price {where}?",
+    "extrasPerPerson": "Per-person charges such as tourist tax are not included.",
     "checkInQ": "On which day do yacht charters start {where}?",
     "checkInA": "Most charters start on {day}: {share} of charter weeks.",
     "checkInSecond": "The next most common day is {day} ({share})."

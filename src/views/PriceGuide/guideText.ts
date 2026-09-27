@@ -162,7 +162,7 @@ export const buildGuideText = async (data: PriceGuideData, locale: string): Prom
   if (all) {
     faq.push({
       question: t('faq.costQ', { where }),
-      answer: t('faq.costA', { where, low: money(all.low), high: money(all.high), priced }),
+      answer: t('faq.costA', { where, low: money(all.low), high: money(all.high) }),
     });
   }
 
@@ -202,7 +202,11 @@ export const buildGuideText = async (data: PriceGuideData, locale: string): Prom
   const extrasSentence = extras ? t('summary.extras', { extras: money(extras.median) }) : null;
 
   if (extrasSentence || depositSentence) {
-    faq.push({ question: t('faq.costsQ', { where }), answer: joinSentences([extrasSentence, depositSentence]) });
+    faq.push({
+      question: t('faq.costsQ', { where }),
+      // The extras figure is per-boat fees only (charter facts leave per-person items out).
+      answer: joinSentences([extrasSentence, extrasSentence ? t('faq.extrasPerPerson') : null, depositSentence]),
+    });
   }
 
   const [firstDay, secondDay] = mainCheckInDays(facts);

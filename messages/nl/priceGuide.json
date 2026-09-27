@@ -16,7 +16,7 @@
     "fleet": "Er liggen {active, number} boten te huur {where}, waarvan {priced, number} met gepubliceerde prijzen voor charters van 7 nachten in de komende 12 maanden.",
     "range": "Afhankelijk van de maand kost een gangbare charterweek tussen {low} en {high} voor de boot.",
     "priciest": "De duurste maand is {month}: een gangbare week kost dan {median}.",
-    "priciestRange": "De duurste maand is {month}: een gangbare week kost dan {median}, de middelste helft van de boten {p25} – {p75}.",
+    "priciestRange": "De duurste maand is {month}: een gangbare week kost dan {median}, de middelste helft van de charterweken tussen {p25} en {p75}.",
     "cheapest": "De goedkoopste maand is {month}: een gangbare week kost dan {median}.",
     "skipperExtras": "Een schipper kost doorgaans {skipper} per week, en verplichte extra’s komen er met {extras} bij.",
     "skipper": "Een schipper kost doorgaans {skipper} per week.",
@@ -38,15 +38,15 @@
   "methodHeading": "Zo worden deze cijfers berekend",
   "method": {
     "population": "Elk cijfer op deze pagina wordt elke nacht berekend uit het actuele charteraanbod van de {priced, number} boten met thuishaven {where} die in de komende 12 maanden minstens één boekbare charter van 7 nachten hebben. De maandtabellen omvatten charters die beginnen tussen {from} en {to}.",
-    "median": "De gangbare week is de mediane weekprijs: de helft van de geprijsde charterweken kost minder, de andere helft meer. De middelste helft van de boten is de spreiding tussen het 25e en het 75e percentiel, zodat het goedkoopste en het duurste kwart buiten beschouwing blijven.",
+    "median": "De gangbare week is de mediane weekprijs: de helft van de geprijsde charterweken kost minder, de andere helft meer. De middelste helft is de spreiding tussen het 25e en het 75e percentiel van die weken, zodat het goedkoopste en het duurste kwart buiten beschouwing blijven.",
     "panel": "Binnen elke tabel zijn de maanden onderling vergelijkbaar: ze worden berekend over dezelfde boten, namelijk die met een prijs in minstens drie van elke vier getoonde maanden. Een maand verschijnt alleen als er minstens half zoveel boten een prijs in hebben als in de best gedekte maand, zodat dunne maanden in het laagseizoen wegvallen. Weken onder 300 € zijn plaatshouders en tellen nooit mee; cijfers op basis van minder dan 5 boten worden niet getoond.",
-    "costs": "De prijzen gelden voor de boot per charterweek, zoals gepubliceerd door onze partners. Schipper, verplichte extra’s en borg komen erbij; hun cijfers zijn medianen over de boten die ze vermelden.",
+    "costs": "De prijzen gelden voor de boot per charterweek, zoals gepubliceerd door onze partners. Schipper, verplichte extra’s en borg komen erbij. Voor schipper en borg zijn het medianen over de boten die ze vermelden. Verplichte extra’s zijn de kosten per boot voor een week, geteld als {zero} voor een boot zonder zulke kosten; kosten per persoon, zoals toeristenbelasting, zijn niet meegerekend, en boten met een procentuele toeslag (APA bij jachten met bemanning) blijven buiten beschouwing.",
     "updated": "Laatst bijgewerkt op {date}. Bedragen in euro (EUR)."
   },
   "faqHeading": "Veelgestelde vragen",
   "faq": {
     "costQ": "Wat kost een jachtcharter {where} per week?",
-    "costA": "Afhankelijk van de maand kost een gangbare charterweek {where} tussen {low} en {high} voor de boot: de mediane weekprijs van de {priced, number} boten met gepubliceerde prijzen. Schipper, verplichte extra’s en borg komen erbij.",
+    "costA": "Afhankelijk van de maand kost een gangbare charterweek {where} tussen {low} en {high} voor de boot: de mediane weekprijs in de goedkoopste en in de duurste maand. Schipper, verplichte extra’s en borg komen erbij.",
     "cheapQ": "Wanneer is een jachtcharter {where} het goedkoopst?",
     "peakQ": "Wanneer zijn de prijzen voor jachtcharter {where} het hoogst?",
     "typesQ": "Hoe verschillen de prijzen per boottype {where}?",
@@ -55,6 +55,7 @@
     "skipperA": "Een schipper kost doorgaans {median} per week; bij de helft van de boten ligt de prijs tussen {p25} en {p75} (schipperprijzen van {n, number} boten).",
     "skipperSingleA": "Een schipper kost doorgaans {median} per week (schipperprijzen van {n, number} boten).",
     "costsQ": "Met welke kosten naast de bootprijs moet ik {where} rekening houden?",
+    "extrasPerPerson": "Kosten per persoon, zoals toeristenbelasting, zijn daarin niet meegerekend.",
     "checkInQ": "Op welke dag beginnen jachtcharters {where}?",
     "checkInA": "De meeste charters beginnen op {day}: {share} van de charterweken.",
     "checkInSecond": "Daarna volgt {day} ({share})."

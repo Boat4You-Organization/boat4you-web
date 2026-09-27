@@ -16,7 +16,7 @@
     "fleet": "{active, number} bateaux sont proposés à la location {where}, dont {priced, number} avec des prix publiés pour des locations de 7 nuits au cours des 12 prochains mois.",
     "range": "Selon le mois, une semaine de location type coûte entre {low} et {high} pour le bateau.",
     "priciest": "Le mois le plus cher est {month} : une semaine type coûte alors {median}.",
-    "priciestRange": "Le mois le plus cher est {month} : une semaine type coûte alors {median}, et la moitié centrale des bateaux entre {p25} et {p75}.",
+    "priciestRange": "Le mois le plus cher est {month} : une semaine type coûte alors {median}, et la moitié centrale des semaines de location se situe entre {p25} et {p75}.",
     "cheapest": "Le mois le moins cher est {month} : une semaine type coûte alors {median}.",
     "skipperExtras": "Un skipper coûte généralement {skipper} par semaine, et les suppléments obligatoires ajoutent {extras}.",
     "skipper": "Un skipper coûte généralement {skipper} par semaine.",
@@ -38,15 +38,15 @@
   "methodHeading": "Comment ces chiffres sont calculés",
   "method": {
     "population": "Chaque chiffre de cette page est recalculé chaque nuit à partir des offres de location en ligne des {priced, number} bateaux basés {where} qui ont au moins une location de 7 nuits réservable dans les 12 prochains mois. Les tableaux mensuels couvrent les locations qui débutent entre {from} et {to}.",
-    "median": "La semaine type est le prix hebdomadaire médian : la moitié des semaines de location tarifées coûte moins, l’autre moitié plus. La moitié centrale des bateaux correspond à l’intervalle entre le 25e et le 75e centile : le quart le moins cher et le quart le plus cher sont écartés.",
+    "median": "La semaine type est le prix hebdomadaire médian : la moitié des semaines de location tarifées coûte moins, l’autre moitié plus. La moitié centrale correspond à l’intervalle entre le 25e et le 75e centile de ces semaines : le quart le moins cher et le quart le plus cher sont écartés.",
     "panel": "Au sein d’un même tableau, les mois se comparent à flotte égale : ils sont calculés sur les mêmes bateaux, ceux qui ont un prix dans au moins trois mois affichés sur quatre. Un mois n’apparaît que si le nombre de bateaux qui y ont un prix atteint au moins la moitié de celui du mois le mieux couvert ; les mois de basse saison trop peu fournis sont ainsi écartés. Les semaines à moins de 300 € sont des valeurs fictives et ne comptent jamais ; les chiffres issus de moins de 5 bateaux ne sont pas affichés.",
-    "costs": "Les prix s’entendent pour le bateau, par semaine de location, tels que publiés par nos partenaires. Skipper, suppléments obligatoires et caution sont en sus ; leurs chiffres sont des médianes calculées sur les bateaux qui les indiquent.",
+    "costs": "Les prix s’entendent pour le bateau, par semaine de location, tels que publiés par nos partenaires. Skipper, suppléments obligatoires et caution sont en sus. Pour le skipper et la caution, il s’agit de médianes calculées sur les bateaux qui les indiquent. Les suppléments obligatoires sont les frais par bateau pour une semaine, comptés {zero} pour un bateau qui n’en a pas ; les frais par personne, comme la taxe de séjour, ne sont pas inclus, et les bateaux soumis à des frais en pourcentage (APA des yachts avec équipage) sont écartés.",
     "updated": "Dernière mise à jour le {date}. Montants en euros (EUR)."
   },
   "faqHeading": "Questions fréquentes",
   "faq": {
     "costQ": "Combien coûte la location d’un yacht {where} à la semaine ?",
-    "costA": "Selon le mois, une semaine de location type {where} coûte entre {low} et {high} pour le bateau : c’est le prix hebdomadaire médian des {priced, number} bateaux aux prix publiés. Skipper, suppléments obligatoires et caution sont en sus.",
+    "costA": "Selon le mois, une semaine de location type {where} coûte entre {low} et {high} pour le bateau : c’est le prix hebdomadaire médian du mois le moins cher et du mois le plus cher. Skipper, suppléments obligatoires et caution sont en sus.",
     "cheapQ": "Quand louer un yacht {where} au meilleur prix ?",
     "peakQ": "Quand les prix de location de yacht sont-ils les plus élevés {where} ?",
     "typesQ": "Comment les prix varient-ils selon le type de bateau {where} ?",
@@ -55,6 +55,7 @@
     "skipperA": "Un skipper coûte généralement {median} par semaine, et la moitié des bateaux le facturent entre {p25} et {p75} (tarifs skipper de {n, number} bateaux).",
     "skipperSingleA": "Un skipper coûte généralement {median} par semaine (tarifs skipper de {n, number} bateaux).",
     "costsQ": "Quels frais prévoir en plus du prix du bateau {where} ?",
+    "extrasPerPerson": "Les frais par personne, comme la taxe de séjour, ne sont pas inclus.",
     "checkInQ": "Quel jour commencent les locations de yacht {where} ?",
     "checkInA": "La plupart des locations commencent le {day} : {share} des semaines de location.",
     "checkInSecond": "Vient ensuite le {day} ({share})."
