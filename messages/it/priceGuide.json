@@ -4,7 +4,7 @@
   "landingLink": "Prezzi del noleggio yacht {where}, mese per mese",
   "h1": "Prezzi del noleggio yacht {where}",
   "meta": {
-    "title": "{h1} mese per mese",
+    "title": "{h1}, mese per mese",
     "descRange": "Quanto costa una settimana di noleggio {where}: una settimana tipo costa {low} – {high} per la barca, a seconda del mese.",
     "descTypes": "Prezzi mensili per {types}.",
     "descSkipper": "Skipper circa {skipper} a settimana.",

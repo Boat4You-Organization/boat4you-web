@@ -85,7 +85,7 @@ const PriceGuidePage = async ({ params }: PriceGuidePageProps) => {
   // it is in the landing manifest (never a noindex landing), models to their
   // /yachts page when one exists.
   const [models, bases] = await Promise.all([
-    factsModelRows(data.facts, placeDids, null),
+    factsModelRows(data.facts, placeDids, null, false),
     factsBaseGroups(data.facts).then(groups =>
       Promise.all(
         groups.map(async g => ({

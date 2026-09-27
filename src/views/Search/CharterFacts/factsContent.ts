@@ -209,13 +209,15 @@ export interface FactsRow {
 export const factsModelRows = async (
   facts: CharterFacts,
   placeDids: string[],
-  vesselType: VesselType | null
+  vesselType: VesselType | null,
+  /** false: always the facts row's own count (price guides: stable, equals the API; the facet times out cold). */
+  useFacets = true
 ): Promise<FactsRow[]> => {
   const rows = (facts.topModels ?? []).filter(
     m => m.count >= MIN_ROW_BOATS && m.model && !isTypeNameModel(m.model, m.manufacturer)
   );
   const [facets, pages] = await Promise.all([
-    placeModelFacets(placeDids, vesselType),
+    useFacets ? placeModelFacets(placeDids, vesselType) : Promise.resolve(null),
     Promise.all(rows.map(m => findModelForYacht(m.manufacturer, m.model, 800))),
   ]);
   const seen = new Set<string>();
