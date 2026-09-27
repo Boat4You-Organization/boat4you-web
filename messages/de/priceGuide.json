@@ -1,0 +1,73 @@
+{
+  "breadcrumbLabel": "Brotkrümelnavigation",
+  "hubCrumb": "Yachtcharter-Preise",
+  "landingLink": "Yachtcharter-Preise {where} nach Monat",
+  "h1": "Yachtcharter-Preise {where}",
+  "meta": {
+    "title": "{h1}: Wochenpreise nach Monat",
+    "descRange": "Was eine Charterwoche {where} kostet: typisch {low} – {high} für das Boot, je nach Monat.",
+    "descTypes": "Monatspreise für {types}.",
+    "descSkipper": "Skipper rund {skipper} pro Woche.",
+    "hubTitle": "Yachtcharter-Preise: {countries}",
+    "hubDescription": "Wochenpreise für den Yachtcharter nach Monat und Bootstyp, mit Skipper, Pflichtextras und Kaution: {countries}. Jede Nacht aus {boats, number} Booten berechnet."
+  },
+  "updated": "Stand: {date} · berechnet aus {boats, plural, one {# Boot} other {# Booten}} mit veröffentlichten Preisen",
+  "summary": {
+    "fleet": "Zum Chartern {where} stehen {active, number} Boote bereit; {priced, number} davon haben veröffentlichte Preise für 7-Nächte-Charter in den nächsten 12 Monaten.",
+    "range": "Je nach Monat kostet eine typische Charterwoche zwischen {low} und {high} für das Boot.",
+    "priciest": "Am teuersten ist der {month}: Eine typische Woche kostet dann {median}.",
+    "priciestRange": "Am teuersten ist der {month}: Eine typische Woche kostet dann {median}, die mittlere Hälfte der Boote {p25} – {p75}.",
+    "cheapest": "Am günstigsten ist der {month}: Eine typische Woche kostet dann {median}.",
+    "skipperExtras": "Ein Skipper kostet typischerweise {skipper} pro Woche, Pflichtextras kommen mit {extras} hinzu.",
+    "skipper": "Ein Skipper kostet typischerweise {skipper} pro Woche.",
+    "extras": "Pflichtextras kommen typischerweise mit {extras} pro Woche hinzu.",
+    "deposit": "Die Kaution beträgt typischerweise {median}, je nach Boot zwischen {min} und {max}.",
+    "depositSingle": "Die Kaution beträgt typischerweise {median}."
+  },
+  "figuresHeading": "Die wichtigsten Zahlen",
+  "typicalWeek": "Typische Woche, je nach Monat",
+  "rangeValue": "{low} – {high}",
+  "pricesHeading": "Wochenpreise nach Monat",
+  "allBoats": "Alle Boote",
+  "tableHeading": "{type}: Wochenpreise nach Monat",
+  "boatsColumn": "Boote",
+  "typeNote": "{boats, plural, one {# Boot} other {# Boote}} im Angebot · typische Woche {low} – {high}",
+  "browseHeading": "Boote {where} ansehen",
+  "browseAll": "Alle Boote {where}",
+  "browseType": "{type} {where}",
+  "methodHeading": "So werden die Zahlen berechnet",
+  "method": {
+    "population": "Jede Zahl auf dieser Seite wird jede Nacht aus den aktuellen Charterangeboten der {priced, number} Boote berechnet, die {where} stationiert sind und in den nächsten 12 Monaten mindestens einen buchbaren 7-Nächte-Charter haben. Die Monatstabellen umfassen Charter mit Beginn von {from} bis {to}.",
+    "median": "Die typische Woche ist der Median der Wochenpreise: Die Hälfte der Charterwochen mit Preis kostet weniger, die andere Hälfte mehr. Die mittlere Hälfte der Boote ist der Bereich zwischen dem 25. und dem 75. Perzentil – das günstigste und das teuerste Viertel bleiben außen vor.",
+    "panel": "Innerhalb einer Tabelle sind die Monate direkt vergleichbar: Sie werden über dieselben Boote berechnet, nämlich jene mit einem Preis in mindestens drei von vier gezeigten Monaten. Ein Monat erscheint nur, wenn darin mindestens halb so viele Boote einen Preis haben wie im am besten abgedeckten Monat; dünn besetzte Monate der Nebensaison fallen so heraus. Wochen unter 300 € sind Platzhalter und zählen nie, Werte aus weniger als 5 Booten werden nicht gezeigt.",
+    "costs": "Die Preise gelten für das Boot pro Charterwoche, wie von unseren Partnern veröffentlicht. Skipper, Pflichtextras und Kaution kommen hinzu; ihre Werte sind Mediane über die Boote, die sie angeben.",
+    "updated": "Zuletzt aktualisiert am {date}. Beträge in Euro (EUR)."
+  },
+  "faqHeading": "Häufig gestellte Fragen",
+  "faq": {
+    "costQ": "Was kostet ein Yachtcharter {where} pro Woche?",
+    "costA": "Je nach Monat kostet eine typische Charterwoche {where} zwischen {low} und {high} für das Boot – der Median der Wochenpreise der {priced, number} Boote mit veröffentlichten Preisen. Skipper, Pflichtextras und Kaution kommen hinzu.",
+    "cheapQ": "Wann ist ein Yachtcharter {where} am günstigsten?",
+    "peakQ": "Wann sind Yachtcharter {where} am teuersten?",
+    "typesQ": "Wie unterscheiden sich die Preise nach Bootstyp {where}?",
+    "typesA": "Typische Woche je nach Monat: {list}.",
+    "skipperQ": "Was kostet ein Skipper {where}?",
+    "skipperA": "Ein Skipper kostet typischerweise {median} pro Woche; bei der Hälfte der Boote liegt der Preis zwischen {p25} und {p75} (Skipperpreise von {n, number} Booten).",
+    "skipperSingleA": "Ein Skipper kostet typischerweise {median} pro Woche (Skipperpreise von {n, number} Booten).",
+    "costsQ": "Mit welchen Kosten muss ich {where} zusätzlich zum Bootspreis rechnen?",
+    "checkInQ": "An welchem Tag beginnen Yachtcharter {where}?",
+    "checkInA": "Die meisten Charter beginnen am {day}: {share} der Charterwochen.",
+    "checkInSecond": "Danach folgt der {day} ({share})."
+  },
+  "hub": {
+    "h1": "Yachtcharter-Preise nach Land",
+    "lede": "Was eine Woche Yachtcharter wirklich kostet – jede Nacht aus den aktuellen Preisen von {boats, number} Booten berechnet. Jeder Ratgeber zeigt den typischen Wochenpreis nach Monat und Bootstyp, mit Skipper, Pflichtextras und Kaution.",
+    "cardFacts": "{boats, number} Boote · typische Woche {low} – {high}",
+    "glanceHeading": "Die Preise im Überblick",
+    "country": "Land",
+    "typicalWeek": "Typische Woche",
+    "priciestMonth": "Teuerster Monat",
+    "deposit": "Typische Kaution",
+    "note": "Typische Woche: der niedrigste und der höchste Monatsmedian der nächsten 12 Monate, für das Boot pro Woche. Stand: {date}. Beträge in Euro (EUR)."
+  }
+}

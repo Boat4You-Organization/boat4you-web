@@ -1,0 +1,75 @@
+@use '@/styles/settings/variables' as *;
+@use '@/styles/utils/rem-calc' as *;
+
+// Price guides: the page shell, headings, tiles, lists and FAQ come from the
+// model pages (Models.module.scss), the month tables from the landing facts
+// block (CharterFactsBlock.module.scss). Only the arrangement lives here.
+
+.updated {
+  margin: rem-calc(8) 0 0;
+  color: $black-600;
+  font-size: rem-calc(13);
+}
+
+.cta {
+  margin: rem-calc(14) 0 0;
+  font-size: rem-calc(15);
+}
+
+.tables {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: rem-calc(16);
+}
+
+.tableCard {
+  min-width: 0;
+  padding: rem-calc(16) rem-calc(14);
+  border: 1px solid $blue-100;
+  border-radius: rem-calc(12);
+  background-color: $white;
+}
+
+.tableTitle {
+  margin: 0;
+  color: $blue-950;
+  font-size: rem-calc(17);
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.tableNote {
+  margin: rem-calc(4) 0 rem-calc(10);
+  color: $black-600;
+  font-size: rem-calc(13);
+  line-height: 1.5;
+}
+
+.tableRanking {
+  margin: rem-calc(-6) 0 rem-calc(10);
+  color: $black-800;
+  font-size: rem-calc(14);
+  line-height: 1.5;
+}
+
+.tableLink {
+  margin: rem-calc(12) 0 0;
+  font-size: rem-calc(14);
+}
+
+.method {
+  display: grid;
+  gap: rem-calc(12);
+}
+
+@media (width >= 600px) {
+  .tableCard {
+    padding: rem-calc(20);
+  }
+}
+
+@media (width >= 900px) {
+  .tables {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

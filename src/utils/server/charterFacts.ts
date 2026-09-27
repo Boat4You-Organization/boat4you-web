@@ -40,6 +40,9 @@ export interface CharterFacts {
   vesselType: VesselType | null;
   computedAt: string;
   activeBoats: number;
+  /** Boats with at least one bookable 7-night week here in the next 12
+   *  months — the population every price figure is computed from. */
+  boatsWithWeeklyPrices?: number;
   priceByMonth?: MonthPrice[];
   cheapestMonth?: string;
   priciestMonth?: string;
