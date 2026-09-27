@@ -1,5 +1,12 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-09-27 — 📊 Yacht charter price guides: Croatia, Greece, Italy + hub (9 locales) — ✅ LIVE cusma1 ~10:3x UTC (`a25f3497`, BUILD_ID `-lmVriz3biqnrAc5dmybb`)
+
+`/[locale]/yacht-charter-prices` (hub) and `/[locale]/yacht-charter-prices/{croatia|greece|italy}` (36 URLs, in sitemap-static and llms.txt), built only from `/public/charter-facts` (c-54, c-86, c-110; nightly 08:00 UTC): data-derived summary, month tables for all boats and each boat type with ≥6 months of data, skipper/extras/deposit/check-in tiles, top bases (plain text: all are noindex landings) and models (linked to /yachts pages), method section, 6 FAQs (FAQPage, visible). BreadcrumbList + WebPage `dateModified` = computedAt; no Dataset markup (no licence to declare). Keyword: "yacht charter prices" — NOT "catamaran charter croatia price" (sister CC owns /catamaran-charter-croatia-price). Linked from the country landings + type landings, the footer (hub) and blog Explore blocks.
+Review fixes: tile overflow at 375 px; p25–p75 are charter WEEKS ("middle half of weeks", also on the landing facts tables); FAQ no longer claims the priced-boat count as the sample; extras = per-boat weekly fees (0 € if none, per-person items and % APA excluded); stable model counts (facts row, not the cold listing facet); EN plural "Motor yachts" (site-wide); HR/IT wording.
+Deploy with the new tail: runtime files shipped (next.config.js registers priceGuide messages), public/ diff 1 file (the Croatia corpus fix `12c35fa9`), warm-up incl. the guides (0.2 s), sitemap-models 26 s cold. Regression Stage B: 0 new FAIL (51 known, 69 WARN).
+Pages render on demand (ƒ) with the facts fetch cached 6 h; a facts outage on a cold cache returns 5xx rather than an empty guide.
+
 ## 2026-09-26 — 🧹 26.9 audit fixes (web-tech, web-ui, web-content) + metadata always in <head> — ✅ LIVE cusma1 21:40 UTC (`68af4cd7`, BUILD_ID `o-jJN_zc-pZdGi49uqXa7`)
 
 Merges `f82370a1` (fix27/web-tech), `c4b60fbf` (fix27/web-ui), `dd932f7f` (fix27/web-content) + `68af4cd7`. Audit `_seo-audit-2026-09-26/synthesis.md`, defects B01–B51.
