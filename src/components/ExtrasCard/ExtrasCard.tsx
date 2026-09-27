@@ -10,7 +10,7 @@ import Checkbox from '@/components/Checkbox';
 import { UNIT_LABEL_MAP, YachtServiceExtrasKey, YachtServiceModel } from '@/models/yacht-service.model';
 import colors from '@/styles/themes/colors';
 import { useYachtPriceCalculation } from '@/utils/hooks/useYachtPriceCalculation';
-import { formatPriceWithCurrency, isPositivePrice } from '@/utils/static/formatPriceCurrency';
+import { formatPriceWithCurrency, isPositivePrice, unpricedExtraLabelKey } from '@/utils/static/formatPriceCurrency';
 import { addExtra, removeExtra } from '@/valtio/yacht/yacht.actions';
 import { useYachtStore } from '@/valtio/yacht/yacht.store';
 
@@ -32,6 +32,7 @@ const ExtrasCard = ({
   isStartingPrice,
   obligatory,
   description,
+  paymentType,
 }: ExtrasCardProps) => {
   const { selectedOffer, selectedExtrasKeys, calculatedPrice } = useYachtStore();
   const { calculatePrice } = useYachtPriceCalculation();
@@ -62,8 +63,8 @@ const ExtrasCard = ({
   const isSelected = selectedExtrasKeys.includes(extraKey);
   const isDisabled = isObligatoryExtras || !selectedOffer;
 
-  // No "0 €" (27.9.2026): an extra without a price above 0 says "Price on
-  // request".
+  // No "0 €" (27.9.2026): an extra without a price above 0 reads "Included"
+  // (backend INCLUDED) or "Price on request".
   const hasPrice = isPositivePrice(priceInfo?.amount ?? priceEur);
   const displayPrice = hasPrice
     ? formatPriceWithCurrency({
@@ -71,7 +72,7 @@ const ExtrasCard = ({
         clientPriceInfo: priceInfo,
         locale,
       })
-    : t('priceOnRequest');
+    : t(unpricedExtraLabelKey(paymentType));
 
   const handleToggle = async () => {
     if (isObligatoryExtras) {

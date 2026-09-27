@@ -24,7 +24,7 @@ import { useReservation } from '@/utils/hooks/useReservation';
 import useToggleState from '@/utils/hooks/useToggleState';
 import { useYachtAvailability } from '@/utils/hooks/useYachtAvailability';
 import DateTime from '@/utils/static/DateTime';
-import { formatPriceWithCurrency, isPositivePrice } from '@/utils/static/formatPriceCurrency';
+import { formatPriceWithCurrency, isPositivePrice, unpricedExtraLabelKey } from '@/utils/static/formatPriceCurrency';
 import { resolveGate } from '@/utils/static/offerStatusGate';
 import { toTitleCase } from '@/utils/static/toTitleCase';
 import { handleNextMonth, handlePrevMonth, toggleBoatInquiryModalOpen } from '@/valtio/yacht/yacht.actions';
@@ -387,13 +387,13 @@ const BoatCalendarForm = ({ yacht, variant }: BoatCalendarFormProps) => {
                   <Typography variant="body1" fontWeight={700} color={colors.blue500}>
                     {tCommon('paidNow')}
                   </Typography>
-                  {selectedExtrasInPrice?.map(({ id, name, priceEur, priceInfo, labelCode }) => {
+                  {selectedExtrasInPrice?.map(({ id, name, priceEur, priceInfo, labelCode, paymentType }) => {
                     const formattedPrice = isPositivePrice(priceInfo?.amount ?? priceEur)
                       ? formatPriceWithCurrency({
                           clientPriceEur: priceEur,
                           clientPriceInfo: priceInfo,
                         })
-                      : tCommon('priceOnRequest');
+                      : tCommon(unpricedExtraLabelKey(paymentType));
 
                     // Two-row layout: long descriptions wrap freely on the
                     // first row, the price (with €) stays on its own line
@@ -434,13 +434,20 @@ const BoatCalendarForm = ({ yacht, variant }: BoatCalendarFormProps) => {
                 // return). Renders the primary amount; insured deposit (if
                 // any) is a separate optional extra handled elsewhere.
                 const showSecurityDeposit = yacht.securityDeposit > 0;
-                const renderRow = ({ id, name, priceEur, priceInfo, labelCode }: (typeof inAdvance)[number]) => {
+                const renderRow = ({
+                  id,
+                  name,
+                  priceEur,
+                  priceInfo,
+                  labelCode,
+                  paymentType,
+                }: (typeof inAdvance)[number]) => {
                   const formattedPrice = isPositivePrice(priceInfo?.amount ?? priceEur)
                     ? formatPriceWithCurrency({
                         clientPriceEur: priceEur,
                         clientPriceInfo: priceInfo,
                       })
-                    : tCommon('priceOnRequest');
+                    : tCommon(unpricedExtraLabelKey(paymentType));
 
                   return (
                     <Stack

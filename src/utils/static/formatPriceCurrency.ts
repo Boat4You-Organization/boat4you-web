@@ -1,4 +1,5 @@
 import { CURRENCY_SYMBOL_MAP, Currency } from '@/models/user.model';
+import { ExtraPaymentType } from '@/models/yacht-service.model';
 
 interface PriceInfo {
   amount: number;
@@ -46,3 +47,12 @@ export const formatPriceWithCurrency = ({
  */
 export const isPositivePrice = (amount?: number | null): boolean =>
   amount != null && Number.isFinite(Number(amount)) && Math.round(Number(amount)) > 0;
+
+/**
+ * `common` key for an extra without a price above 0. The backend marks such
+ * an extra INCLUDED (free with the charter, e.g. unlimited Wi-Fi) and it reads
+ * "Included"; an unpriced extra without that mark reads "Price on request".
+ * Never "0 €" (27.9.2026).
+ */
+export const unpricedExtraLabelKey = (paymentType?: string | null): 'paidIncluded' | 'priceOnRequest' =>
+  paymentType === ExtraPaymentType.INCLUDED ? 'paidIncluded' : 'priceOnRequest';

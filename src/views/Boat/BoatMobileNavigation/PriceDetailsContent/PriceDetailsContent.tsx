@@ -10,7 +10,7 @@ import { YachtServiceExtrasKey } from '@/models/yacht-service.model';
 import { YachtModel } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
 import DateTime from '@/utils/static/DateTime';
-import { formatPriceWithCurrency, isPositivePrice } from '@/utils/static/formatPriceCurrency';
+import { formatPriceWithCurrency, isPositivePrice, unpricedExtraLabelKey } from '@/utils/static/formatPriceCurrency';
 import { useYachtStore } from '@/valtio/yacht/yacht.store';
 
 interface PriceDetailsContentProps {
@@ -100,14 +100,14 @@ const PriceDetailsContent = ({ yacht, isCalculatedPrice, isSelectedOfferUnavaila
             <Typography variant="body1" fontWeight={700} color={colors.blue500}>
               {tCommon('paidNow')}
             </Typography>
-            {selectedExtrasInPrice?.map(({ id, name, priceEur, priceInfo, labelCode }) => {
+            {selectedExtrasInPrice?.map(({ id, name, priceEur, priceInfo, labelCode, paymentType }) => {
               const formattedPrice = isPositivePrice(priceInfo?.amount ?? priceEur)
                 ? formatPriceWithCurrency({
                     clientPriceEur: priceEur,
                     clientPriceInfo: priceInfo,
                     locale,
                   })
-                : tCommon('priceOnRequest');
+                : tCommon(unpricedExtraLabelKey(paymentType));
 
               return (
                 <Stack
@@ -138,14 +138,14 @@ const PriceDetailsContent = ({ yacht, isCalculatedPrice, isSelectedOfferUnavaila
           // and always paid at the marina on handover — append it under the
           // "Paid at marina" group so the recap lines up with the extras tab.
           const showSecurityDeposit = yacht.securityDeposit > 0;
-          const renderRow = ({ id, name, priceEur, priceInfo, labelCode }: (typeof inAdvance)[number]) => {
+          const renderRow = ({ id, name, priceEur, priceInfo, labelCode, paymentType }: (typeof inAdvance)[number]) => {
             const formattedPrice = isPositivePrice(priceInfo?.amount ?? priceEur)
               ? formatPriceWithCurrency({
                   clientPriceEur: priceEur,
                   clientPriceInfo: priceInfo,
                   locale,
                 })
-              : tCommon('priceOnRequest');
+              : tCommon(unpricedExtraLabelKey(paymentType));
 
             return (
               <Stack
