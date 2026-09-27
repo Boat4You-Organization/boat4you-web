@@ -297,13 +297,22 @@ export async function sendYachtInquiry(state: any, formData: FormData): Promise<
     message: formData.get('message'),
   };
 
+  const ip = await requestIp();
+
   // One e-mail per inquiry: a repeat of the same inquiry within 10 minutes
   // gets the first answer without reaching the backend again, and a burst of
   // different ones from one IP is turned away (inquiryGuard.ts).
-  return guardInquiry(inquiryFingerprint(inquiryData), await requestIp(), async () => {
+  return guardInquiry(inquiryFingerprint(inquiryData), ip, async () => {
     try {
+      // The visitor's IP goes on as X-Forwarded-For: the backend limits
+      // inquiries per client IP (left-most X-Forwarded-For), and without it
+      // every visitor would share this web server's one budget.
       const response = await fetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/inquiries`, {
         ...POST_REQUEST_PARAMETERS,
+        headers: {
+          ...POST_REQUEST_PARAMETERS.headers,
+          ...(ip ? { 'X-Forwarded-For': ip } : {}),
+        },
         body: JSON.stringify(inquiryData),
       });
 
