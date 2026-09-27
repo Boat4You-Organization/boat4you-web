@@ -10,7 +10,7 @@ import Checkbox from '@/components/Checkbox';
 import { UNIT_LABEL_MAP, YachtServiceExtrasKey, YachtServiceModel } from '@/models/yacht-service.model';
 import colors from '@/styles/themes/colors';
 import { useYachtPriceCalculation } from '@/utils/hooks/useYachtPriceCalculation';
-import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
+import { formatPriceWithCurrency, isPositivePrice } from '@/utils/static/formatPriceCurrency';
 import { addExtra, removeExtra } from '@/valtio/yacht/yacht.actions';
 import { useYachtStore } from '@/valtio/yacht/yacht.store';
 
@@ -62,11 +62,16 @@ const ExtrasCard = ({
   const isSelected = selectedExtrasKeys.includes(extraKey);
   const isDisabled = isObligatoryExtras || !selectedOffer;
 
-  const displayPrice = formatPriceWithCurrency({
-    clientPriceEur: priceEur,
-    clientPriceInfo: priceInfo,
-    locale,
-  });
+  // No "0 €" (27.9.2026): an extra without a price above 0 says "Price on
+  // request".
+  const hasPrice = isPositivePrice(priceInfo?.amount ?? priceEur);
+  const displayPrice = hasPrice
+    ? formatPriceWithCurrency({
+        clientPriceEur: priceEur,
+        clientPriceInfo: priceInfo,
+        locale,
+      })
+    : t('priceOnRequest');
 
   const handleToggle = async () => {
     if (isObligatoryExtras) {
@@ -180,7 +185,7 @@ const ExtrasCard = ({
         <Box component="span" sx={{ color: colors.black300, fontSize: 12 }}>
           ·
         </Box>
-        {isStartingPrice && (
+        {isStartingPrice && hasPrice && (
           <Typography variant="body2" color={colors.black500}>
             {t('from')}
           </Typography>

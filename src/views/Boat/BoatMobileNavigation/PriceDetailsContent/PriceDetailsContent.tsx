@@ -10,7 +10,7 @@ import { YachtServiceExtrasKey } from '@/models/yacht-service.model';
 import { YachtModel } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
 import DateTime from '@/utils/static/DateTime';
-import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
+import { formatPriceWithCurrency, isPositivePrice } from '@/utils/static/formatPriceCurrency';
 import { useYachtStore } from '@/valtio/yacht/yacht.store';
 
 interface PriceDetailsContentProps {
@@ -101,11 +101,13 @@ const PriceDetailsContent = ({ yacht, isCalculatedPrice, isSelectedOfferUnavaila
               {tCommon('paidNow')}
             </Typography>
             {selectedExtrasInPrice?.map(({ id, name, priceEur, priceInfo, labelCode }) => {
-              const formattedPrice = formatPriceWithCurrency({
-                clientPriceEur: priceEur,
-                clientPriceInfo: priceInfo,
-                locale,
-              });
+              const formattedPrice = isPositivePrice(priceInfo?.amount ?? priceEur)
+                ? formatPriceWithCurrency({
+                    clientPriceEur: priceEur,
+                    clientPriceInfo: priceInfo,
+                    locale,
+                  })
+                : tCommon('priceOnRequest');
 
               return (
                 <Stack
@@ -137,11 +139,13 @@ const PriceDetailsContent = ({ yacht, isCalculatedPrice, isSelectedOfferUnavaila
           // "Paid at marina" group so the recap lines up with the extras tab.
           const showSecurityDeposit = yacht.securityDeposit > 0;
           const renderRow = ({ id, name, priceEur, priceInfo, labelCode }: (typeof inAdvance)[number]) => {
-            const formattedPrice = formatPriceWithCurrency({
-              clientPriceEur: priceEur,
-              clientPriceInfo: priceInfo,
-              locale,
-            });
+            const formattedPrice = isPositivePrice(priceInfo?.amount ?? priceEur)
+              ? formatPriceWithCurrency({
+                  clientPriceEur: priceEur,
+                  clientPriceInfo: priceInfo,
+                  locale,
+                })
+              : tCommon('priceOnRequest');
 
             return (
               <Stack

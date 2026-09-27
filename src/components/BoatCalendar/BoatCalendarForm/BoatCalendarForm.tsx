@@ -388,10 +388,12 @@ const BoatCalendarForm = ({ yacht, variant }: BoatCalendarFormProps) => {
                     {tCommon('paidNow')}
                   </Typography>
                   {selectedExtrasInPrice?.map(({ id, name, priceEur, priceInfo, labelCode }) => {
-                    const formattedPrice = formatPriceWithCurrency({
-                      clientPriceEur: priceEur,
-                      clientPriceInfo: priceInfo,
-                    });
+                    const formattedPrice = isPositivePrice(priceInfo?.amount ?? priceEur)
+                      ? formatPriceWithCurrency({
+                          clientPriceEur: priceEur,
+                          clientPriceInfo: priceInfo,
+                        })
+                      : tCommon('priceOnRequest');
 
                     // Two-row layout: long descriptions wrap freely on the
                     // first row, the price (with €) stays on its own line
@@ -433,10 +435,12 @@ const BoatCalendarForm = ({ yacht, variant }: BoatCalendarFormProps) => {
                 // any) is a separate optional extra handled elsewhere.
                 const showSecurityDeposit = yacht.securityDeposit > 0;
                 const renderRow = ({ id, name, priceEur, priceInfo, labelCode }: (typeof inAdvance)[number]) => {
-                  const formattedPrice = formatPriceWithCurrency({
-                    clientPriceEur: priceEur,
-                    clientPriceInfo: priceInfo,
-                  });
+                  const formattedPrice = isPositivePrice(priceInfo?.amount ?? priceEur)
+                    ? formatPriceWithCurrency({
+                        clientPriceEur: priceEur,
+                        clientPriceInfo: priceInfo,
+                      })
+                    : tCommon('priceOnRequest');
 
                   return (
                     <Stack
