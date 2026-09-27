@@ -1,23 +1,30 @@
 'use client';
 
-import { startTransition, useActionState, useEffect, useRef, useState } from 'react';
+import { MouseEvent, startTransition, useActionState, useEffect, useRef, useState } from 'react';
+import { useFormContext } from 'react-hook-form';
 
-import { Divider, Stack, Typography } from '@mui/material';
-import dayjs from 'dayjs';
+import { Divider, InputAdornment, Stack, Typography } from '@mui/material';
+import dayjs, { Dayjs } from 'dayjs';
 import { useLocale, useTranslations } from 'next-intl';
 
 import { sendYachtInquiry } from '@/actions/yacht.actions';
+import DateRangePicker from '@/components/DateRangePicker';
 import Form from '@/components/Forms/Form';
+import FormDateInput from '@/components/Forms/FormDateInput';
 import FormInput from '@/components/Forms/FormInput';
 import ModalRoot from '@/components/ModalRoot';
 import PhoneInput from '@/components/PhoneInput';
+import Calendar from '@/components/SvgIcons/Calendar';
 import YachtCard from '@/components/YachtCard';
 import { BoatInquiryFormValues } from '@/config/form-models.config';
 import { BOAT_INQUIRY_FORM } from '@/config/form-names.config';
 import { YachtModel } from '@/models/yacht.model';
+import colors from '@/styles/themes/colors';
 import useQueryParams from '@/utils/hooks/useQueryParams';
+import useToggleState from '@/utils/hooks/useToggleState';
 import DateTime from '@/utils/static/DateTime';
 import { FormValidator } from '@/utils/static/FormValidator';
+import { isInquiryOnlyBoat } from '@/utils/static/inquiryOnlyBoat';
 import { showToast } from '@/valtio/global/global.actions';
 import { useUserStore } from '@/valtio/user/user.store';
 
@@ -41,6 +48,66 @@ interface BoatInquiryModalProps {
   dateTo?: string;
 }
 
+/**
+ * Start and end date the visitor picks inside the inquiry form — for a boat
+ * without bookable offers (any dates), or when no dates were chosen before
+ * the form opened. Past days are disabled; the picker keeps its usual
+ * 2–28 night range.
+ */
+const InquiryDateFields = () => {
+  const t = useTranslations('yacht');
+  const tCommon = useTranslations('common');
+  const validator = FormValidator.withTranslation(tCommon);
+  const { setValue, watch } = useFormContext<BoatInquiryFormValues>();
+  const [isPickerOpen, togglePicker] = useToggleState();
+  const dateFrom = watch('dateFrom');
+  const dateTo = watch('dateTo');
+
+  const setDates = ([start, end]: [Dayjs | null, Dayjs | null]) => {
+    setValue('dateFrom', start ? DateTime.formatFull(start) : '', { shouldValidate: true });
+    setValue('dateTo', end ? DateTime.formatFull(end) : '', { shouldValidate: true });
+  };
+
+  const inputProps = {
+    type: 'text',
+    placeholder: t('pickDate'),
+    onClick: togglePicker,
+    // The picker takes the focus: without this the field blurs on the same
+    // click and shows "Required" before a date could be picked.
+    onMouseDown: (event: MouseEvent) => event.preventDefault(),
+    validate: validator.isNotEmpty,
+    slotProps: {
+      input: {
+        readOnly: true,
+        startAdornment: (
+          <InputAdornment position="start">
+            <Calendar size={24} fill={colors.black300} />
+          </InputAdornment>
+        ),
+      },
+    },
+  };
+
+  return (
+    <>
+      <Stack direction={{ xs: 'column', md: 'row' }} spacing={{ xs: 3, md: 2 }} mb={3}>
+        <FormDateInput name="dateFrom" formLabel={t('startDate')} {...inputProps} />
+        <FormDateInput name="dateTo" formLabel={t('endDate')} {...inputProps} />
+      </Stack>
+      <DateRangePicker
+        isBoatCalendar
+        isModalOpen={isPickerOpen}
+        toggleModal={togglePicker}
+        startDate={dateFrom ? dayjs(dateFrom) : null}
+        endDate={dateTo ? dayjs(dateTo) : null}
+        handleDateChange={setDates}
+        onConfirm={setDates}
+        monthsShown={1}
+      />
+    </>
+  );
+};
+
 const BoatInquiryModal = ({
   isOpen,
   onOpen,
@@ -57,17 +124,6 @@ const BoatInquiryModal = ({
   const validator = FormValidator.withTranslation(t);
   const { user } = useUserStore();
 
-  const initialValues: BoatInquiryFormValues = {
-    yachtId: 0,
-    dateFrom: '',
-    dateTo: '',
-    name: initialContact?.name || user?.name || '',
-    surname: initialContact?.surname || user?.surname || '',
-    email: initialContact?.email || user?.email || '',
-    phone: initialContact?.phone ?? '',
-    message: '',
-  };
-
   // The booking flow knows the real period; on /boat it still comes from the
   // search query string.
   const from = dateFrom || params.startDate;
@@ -75,6 +131,22 @@ const BoatInquiryModal = ({
 
   const startDate = dayjs(from);
   const endDate = dayjs(to);
+  // dayjs(undefined) is "now" — only real strings count as chosen dates.
+  const hasGivenDates = Boolean(from && to && startDate.isValid() && endDate.isValid());
+  // A boat without bookable offers takes any dates; so does a form opened
+  // before dates were chosen (it used to send the text "undefined").
+  const pickDates = isInquiryOnlyBoat(yacht) || !hasGivenDates;
+
+  const initialValues: BoatInquiryFormValues = {
+    yachtId: 0,
+    dateFrom: pickDates && hasGivenDates ? DateTime.formatFull(startDate) : '',
+    dateTo: pickDates && hasGivenDates ? DateTime.formatFull(endDate) : '',
+    name: initialContact?.name || user?.name || '',
+    surname: initialContact?.surname || user?.surname || '',
+    email: initialContact?.email || user?.email || '',
+    phone: initialContact?.phone ?? '',
+    message: '',
+  };
 
   // One inquiry per submit (27.9.2026: one visitor's inquiry reached the
   // owner six times in the same second). `pending` flips only after
@@ -132,8 +204,8 @@ const BoatInquiryModal = ({
     const updatedFormValues: BoatInquiryFormValues = {
       ...formValues,
       yachtId: yacht.id,
-      dateFrom: from,
-      dateTo: to,
+      dateFrom: pickDates ? formValues.dateFrom : from,
+      dateTo: pickDates ? formValues.dateTo : to,
     };
 
     const formData = new FormData();
@@ -153,9 +225,7 @@ const BoatInquiryModal = ({
         {t('dates')}
       </Typography>
       <Typography variant="body1" textTransform="capitalize">
-        {startDate && endDate && startDate.isValid() && endDate.isValid()
-          ? `${DateTime.formatLong(startDate, locale)} - ${DateTime.formatLong(endDate, locale)}`
-          : '-'}
+        {hasGivenDates ? `${DateTime.formatLong(startDate, locale)} - ${DateTime.formatLong(endDate, locale)}` : '-'}
       </Typography>
     </Stack>
   );
@@ -186,11 +256,13 @@ const BoatInquiryModal = ({
         locationCountryCode={yacht.location?.countryCode ?? ''}
         locationName={yacht.location?.name ?? ''}
       >
-        <Stack display={{ xs: 'none', md: 'flex' }}>{renderDates()}</Stack>
+        {!pickDates && <Stack display={{ xs: 'none', md: 'flex' }}>{renderDates()}</Stack>}
       </YachtCard>
-      <Stack display={{ xs: 'flex', md: 'none' }} mt={2}>
-        {renderDates()}
-      </Stack>
+      {!pickDates && (
+        <Stack display={{ xs: 'flex', md: 'none' }} mt={2}>
+          {renderDates()}
+        </Stack>
+      )}
       <Divider
         sx={{
           '&.MuiDivider-root': {
@@ -199,6 +271,7 @@ const BoatInquiryModal = ({
         }}
       />
       <Form defaultValues={initialValues} onSubmit={handleSubmit} id={BOAT_INQUIRY_FORM} mode="onBlur">
+        {pickDates && <InquiryDateFields />}
         <Stack direction={{ xs: 'column', md: 'row' }} spacing={{ xs: 3, md: 2 }}>
           <FormInput
             name="name"

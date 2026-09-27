@@ -1,5 +1,6 @@
 import { CharterType, YachtModel } from '@/models/yacht.model';
 import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
+import { isInquiryOnlyBoat } from '@/utils/static/inquiryOnlyBoat';
 import { toTitleCase } from '@/utils/static/toTitleCase';
 
 /**
@@ -72,10 +73,13 @@ export const buildYachtFaq = (yacht: YachtModel, t: TranslateFn, locale: string)
     answer: bareboat ? t(`faqLicenceBareboatA${v(8)}`, { name }) : t(`faqLicenceCrewedA${v(8, 2)}`, { name }),
   });
 
+  // No bookable future offer: no price to quote, and booking is by inquiry.
+  const inquiryOnly = isInquiryOnlyBoat(yacht);
+
   // "From €X per week" — cheapest FREE weekly offer in the loaded window.
-  const weekly = (yacht.offers || []).filter(
-    o => o.status === 'FREE' && (o.numberOfDays ?? 0) === 7 && o.clientPriceEur > 0
-  );
+  const weekly = inquiryOnly
+    ? []
+    : (yacht.offers || []).filter(o => o.status === 'FREE' && (o.numberOfDays ?? 0) === 7 && o.clientPriceEur > 0);
 
   if (weekly.length > 0) {
     const minPrice = Math.round(Math.min(...weekly.map(o => o.clientPriceEur)));
@@ -96,10 +100,11 @@ export const buildYachtFaq = (yacht: YachtModel, t: TranslateFn, locale: string)
     });
   }
 
-  entries.push({
-    question: t('faqBookQ', { name }),
-    answer: t(`faqBookA${v(11)}`, { name }),
-  });
+  entries.push(
+    inquiryOnly
+      ? { question: t('faqBookInquiryQ', { name }), answer: t('faqBookInquiryA', { name }) }
+      : { question: t('faqBookQ', { name }), answer: t(`faqBookA${v(11)}`, { name }) }
+  );
 
   return entries;
 };

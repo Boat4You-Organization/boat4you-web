@@ -13,6 +13,7 @@ import { YachtModel } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
 import useScrollSpy from '@/utils/hooks/useScrollSpy';
 import { useYachtPriceCalculation } from '@/utils/hooks/useYachtPriceCalculation';
+import { isInquiryOnlyBoat } from '@/utils/static/inquiryOnlyBoat';
 import { clearDataFromLocalStorage } from '@/utils/static/localStorageUtils';
 import { clearDataFromSessionStorage } from '@/utils/static/sessionStorageUtils';
 import { YachtFaqEntry } from '@/utils/static/yachtFaq';
@@ -64,6 +65,15 @@ const BoatContentSection = ({ yacht, yachtFaq }: BoatContentSectionProps) => {
   const activeIndex = sectionIds.indexOf(activeSectionId);
 
   useEffect(() => {
+    // An inquiry-only boat prices nothing — no offer to select or calculate
+    // (the PDF brochure then reads "On request" too).
+    if (isInquiryOnlyBoat(yacht)) {
+      setOffersToDisplay([]);
+      setselectedOffer(null);
+
+      return;
+    }
+
     if (yacht && Array.isArray(yacht.offers)) {
       setOffersToDisplay(yacht.offers);
 

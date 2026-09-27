@@ -338,6 +338,13 @@ export interface YachtModel
    * the listings and the sitemap show — this page's canonical target.
    */
   listingCanonicalSlug?: string | null;
+  /**
+   * False when the backend has no future offer anyone could book for this
+   * boat (27.9.2026: 859 of 13,125). The listings and sitemaps already leave
+   * such a boat out; its page stays up with an inquiry form and no price.
+   * Absent on an older backend — read it only through isInquiryOnlyBoat().
+   */
+  hasBookableFutureOffer?: boolean | null;
 }
 
 export interface YachtModelLocalStorage extends Pick<YachtModel, 'id' | 'name' | 'slug' | 'location' | 'model'> {

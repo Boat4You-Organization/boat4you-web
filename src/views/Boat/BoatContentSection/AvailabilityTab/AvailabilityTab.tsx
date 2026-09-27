@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl';
 
 import BoatLocationModal from '@/components/BoatLocationModal';
 import Form from '@/components/Forms/Form';
+import InquiryOnlyPanel from '@/components/InquiryOnlyPanel';
 import Availablity from '@/components/SvgIcons/Availablity';
 import Bulp from '@/components/SvgIcons/Bulp';
 import { BoatCalendarFormValues } from '@/config/form-models.config';
@@ -13,6 +14,7 @@ import colors from '@/styles/themes/colors';
 import useQueryParams from '@/utils/hooks/useQueryParams';
 import useToggleState from '@/utils/hooks/useToggleState';
 import DateTime from '@/utils/static/DateTime';
+import { isInquiryOnlyBoat } from '@/utils/static/inquiryOnlyBoat';
 import { isHardBlocked } from '@/utils/static/offerStatusGate';
 import { useYachtStore } from '@/valtio/yacht/yacht.store';
 import GoodToKnowItem from '@/views/Boat/BoatContentSection/GoodToKnowItem';
@@ -50,7 +52,10 @@ const AvailabilityTab = ({ yacht }: AvailabilityTabProps) => {
         }
       : defaultValues;
 
-  const displayAvailabilityDateSelector = initialValues.startDate && initialValues.endDate;
+  // No bookable future offer: the calendar would only show empty or blocked
+  // weeks — the inquiry takes its place.
+  const inquiryOnly = isInquiryOnlyBoat(yacht);
+  const displayAvailabilityDateSelector = !inquiryOnly && initialValues.startDate && initialValues.endDate;
 
   const handleSubmit = (formValues: BoatCalendarFormValues) => {
     const updates: Partial<{
@@ -95,7 +100,7 @@ const AvailabilityTab = ({ yacht }: AvailabilityTabProps) => {
             </Form>
           )}
           <Stack sx={{ p: { xs: 2, md: 3 } }}>
-            <LiveCalendar yacht={yacht} />
+            {inquiryOnly ? <InquiryOnlyPanel variant="inline" /> : <LiveCalendar yacht={yacht} />}
           </Stack>
         </Stack>
         {displayAvailabilityDateSelector &&

@@ -22,6 +22,7 @@ import { BoatDescTranslate, buildBoatDescription } from '@/utils/static/boatMeta
 import { buildBoatTitle, titleBoatName, titlePlace } from '@/utils/static/boatTitle';
 import { buildMetadata, localizedUrl } from '@/utils/static/buildMetadata';
 import { getBoatImageUrl } from '@/utils/static/imageUtils';
+import { isInquiryOnlyBoat } from '@/utils/static/inquiryOnlyBoat';
 import { serializeJsonLd } from '@/utils/static/jsonLd';
 import { toTitleCase } from '@/utils/static/toTitleCase';
 import { ManufacturerLookup, yachtBrandName } from '@/utils/static/yachtBrand';
@@ -121,6 +122,12 @@ function buildYachtProductSchema(
   tDesc: BoatDescTranslate,
   manufacturers: ManufacturerLookup | null
 ) {
+  // No bookable future offer (27.9.2026): the page asks for an inquiry and
+  // shows no price, so the markup carries none either — no price, no
+  // availability. A Product without offers, review or aggregateRating is
+  // an invalid item in Search Console (see below), so no Product at all.
+  if (isInquiryOnlyBoat(yacht)) return null;
+
   const url = localizedUrl(locale, canonicalBoatPath(yacht));
   const mainImage = yachtShareImageUrl(yacht) || `${meta.url}/meta/og-image.png`;
 

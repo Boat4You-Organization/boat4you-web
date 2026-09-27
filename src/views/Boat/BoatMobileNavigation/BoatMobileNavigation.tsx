@@ -19,6 +19,7 @@ import { useReservation } from '@/utils/hooks/useReservation';
 import useToggleState from '@/utils/hooks/useToggleState';
 import DateTime from '@/utils/static/DateTime';
 import { formatPriceWithCurrency, isPositivePrice } from '@/utils/static/formatPriceCurrency';
+import { isInquiryOnlyBoat } from '@/utils/static/inquiryOnlyBoat';
 import { resolveGate } from '@/utils/static/offerStatusGate';
 import { toggleBoatInquiryModalOpen } from '@/valtio/yacht/yacht.actions';
 import { useYachtStore } from '@/valtio/yacht/yacht.store';
@@ -74,6 +75,9 @@ const BoatMobileNavigation = ({ yacht }: BoatMobileNavigationProps) => {
   const isCalculatedPrice =
     !!calculatedPrice && Object.keys(calculatedPrice).length > 0 && isPositivePrice(calculatedPrice.totalPriceEur);
   const isInquireFlow = gate === 'inquiry';
+  // No bookable future offer: "Price on request" and the inquiry (dates are
+  // picked in its form) instead of dates, price and Reserve.
+  const inquiryOnly = isInquiryOnlyBoat(yacht);
 
   const { handleReservation } = useReservation({ yacht });
   const locale = useLocale();
@@ -150,6 +154,22 @@ const BoatMobileNavigation = ({ yacht }: BoatMobileNavigationProps) => {
     clientPriceInfo: calculatedPrice?.totalPriceInfo,
     locale,
   });
+
+  if (inquiryOnly) {
+    return (
+      <Box className={revealed ? `${styles.container} ${styles.revealed}` : styles.container}>
+        <Stack direction="row" justifyContent="space-between" alignItems="center" gap={2}>
+          <Typography variant="body1">{t('totalPrice')}</Typography>
+          <Typography variant="h4" component="p" color={colors.green500}>
+            {t('priceOnRequest')}
+          </Typography>
+        </Stack>
+        <Button size="large" fullWidth onClick={() => toggleBoatInquiryModalOpen(true)}>
+          {t('sendInquiry')}
+        </Button>
+      </Box>
+    );
+  }
 
   return (
     <Form defaultValues={initialValues} onSubmit={handleSubmit} id={BOAT_CALENDAR_FORM} resetDefaultValues>

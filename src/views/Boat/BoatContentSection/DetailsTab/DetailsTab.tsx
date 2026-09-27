@@ -22,6 +22,7 @@ import { MeasurementInfo } from '@/models/yacht-feature.model';
 import { MAIN_SAIL_TYPE_LABEL_MAP, MainSailType, VESSEL_TYPE_LABEL_MAP, YachtModel } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
 import { useBoatEquipmentDescription } from '@/utils/hooks/useBoatEquipmentDescription';
+import { isInquiryOnlyBoat } from '@/utils/static/inquiryOnlyBoat';
 import { toTitleCase } from '@/utils/static/toTitleCase';
 
 interface DetailsTabProps {
@@ -372,7 +373,9 @@ const DetailsTab = ({ yacht }: DetailsTabProps) => {
             )}
             <Typography variant="body1" color={colors.black500}>
               {t.rich(
-                `yacht.descCtaV${descVariant(5)}` as never,
+                // Booking copy ("book online", "real-time prices") would be
+                // wrong for a boat without bookable offers — ask for dates.
+                (isInquiryOnlyBoat(yacht) ? 'yacht.descCtaInquiry' : `yacht.descCtaV${descVariant(5)}`) as never,
                 {
                   name: displayName,
                   b: (chunks: React.ReactNode) => <strong>{chunks}</strong>,
