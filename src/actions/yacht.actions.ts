@@ -1,5 +1,7 @@
 'use server';
 
+import { headers } from 'next/headers';
+
 import { POST_REQUEST_PARAMETERS } from '@/config/constants.config';
 import { YachtSearchParams } from '@/config/form-models.config';
 import { ErrorModel } from '@/models/error.model';
@@ -8,6 +10,7 @@ import { Currency } from '@/models/user.model';
 import { PriceCalcDto, YachtOfferModel } from '@/models/yacht-offer.model';
 import { VesselType, YachtAvailability, YachtFleet, YachtModel } from '@/models/yacht.model';
 import { PayloadResponse } from '@/types/response.type';
+import { guardInquiry, inquiryFingerprint } from '@/utils/server/inquiryGuard';
 import { authFetch } from '@/utils/static/authFetch';
 import { getBoatImageBaseUrl } from '@/utils/static/imageUtils';
 import { createYachtQueryParams } from '@/utils/static/queryParams';
@@ -271,6 +274,17 @@ export async function getSingleYachtPrice({
   }
 }
 
+/** The visitor's IP as our nginx passes it on, or null (local runs). */
+const requestIp = async (): Promise<string | null> => {
+  const h = await headers();
+  const realIp = h.get('x-real-ip')?.trim();
+
+  if (realIp) return realIp;
+
+  // Last element = the address our own nginx appended.
+  return h.get('x-forwarded-for')?.split(',').pop()?.trim() || null;
+};
+
 export async function sendYachtInquiry(state: any, formData: FormData): Promise<PayloadResponse<boolean>> {
   const inquiryData = {
     yachtId: Number(formData.get('yachtId')),
@@ -283,22 +297,27 @@ export async function sendYachtInquiry(state: any, formData: FormData): Promise<
     message: formData.get('message'),
   };
 
-  try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/inquiries`, {
-      ...POST_REQUEST_PARAMETERS,
-      body: JSON.stringify(inquiryData),
-    });
+  // One e-mail per inquiry: a repeat of the same inquiry within 10 minutes
+  // gets the first answer without reaching the backend again, and a burst of
+  // different ones from one IP is turned away (inquiryGuard.ts).
+  return guardInquiry(inquiryFingerprint(inquiryData), await requestIp(), async () => {
+    try {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/inquiries`, {
+        ...POST_REQUEST_PARAMETERS,
+        body: JSON.stringify(inquiryData),
+      });
 
-    if (!response.ok) {
-      const body: ErrorModel = await response.json();
+      if (!response.ok) {
+        const body: ErrorModel = await response.json();
 
-      return { payload: false, message: body.message };
+        return { payload: false, message: body.message };
+      }
+
+      return { payload: true };
+    } catch (error) {
+      return { payload: false };
     }
-
-    return { payload: true };
-  } catch (error) {
-    return { payload: false };
-  }
+  });
 }
 
 export async function sendCustomOffer(state: any, formData: FormData): Promise<PayloadResponse<boolean>> {

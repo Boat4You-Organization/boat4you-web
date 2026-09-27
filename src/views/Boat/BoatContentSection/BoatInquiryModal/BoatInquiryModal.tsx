@@ -1,6 +1,6 @@
 'use client';
 
-import { startTransition, useActionState, useEffect } from 'react';
+import { startTransition, useActionState, useEffect, useRef, useState } from 'react';
 
 import { Divider, Stack, Typography } from '@mui/material';
 import dayjs from 'dayjs';
@@ -76,20 +76,59 @@ const BoatInquiryModal = ({
   const startDate = dayjs(from);
   const endDate = dayjs(to);
 
+  // One inquiry per submit (27.9.2026: one visitor's inquiry reached the
+  // owner six times in the same second). `pending` flips only after
+  // react-hook-form's async validation, so a double tap, a second Enter or a
+  // repeated submit event all got through before the button disabled. The
+  // ref closes the gate synchronously on the first submit; it opens again
+  // only when that inquiry failed (so it can be retried) or when the form is
+  // opened again after a sent inquiry.
+  const submitLock = useRef(false);
+  const [isLocked, setIsLocked] = useState(false);
+  const sent = useRef(false);
+  const isOpenRef = useRef(isOpen);
+  const handledState = useRef(state);
+
   useEffect(() => {
-    if (!state) {
+    isOpenRef.current = isOpen;
+
+    if (isOpen && sent.current) {
+      sent.current = false;
+      submitLock.current = false;
+      setIsLocked(false);
+    }
+  }, [isOpen]);
+
+  // Each answer is handled once — the effect also re-runs when `onClose` or
+  // `t` change, which used to repeat the toast.
+  useEffect(() => {
+    if (!state || handledState.current === state) {
       return;
     }
 
-    if (state?.payload) {
+    handledState.current = state;
+
+    if (state.payload) {
+      sent.current = true;
       showToast({ status: 'success', text: t('inquirySentSuccessfully') });
-      onClose();
+
+      // onClose toggles — never re-open a form the visitor already closed.
+      if (isOpenRef.current) onClose();
     } else {
-      showToast({ status: 'error', text: state?.message || t('inquirySentFailed') });
+      submitLock.current = false;
+      setIsLocked(false);
+      showToast({ status: 'error', text: state.message || t('inquirySentFailed') });
     }
-  }, [state?.payload, state?.message, state, onClose, t]);
+  }, [state, onClose, t]);
 
   const handleSubmit = (formValues: BoatInquiryFormValues) => {
+    if (submitLock.current) {
+      return;
+    }
+
+    submitLock.current = true;
+    setIsLocked(true);
+
     const updatedFormValues: BoatInquiryFormValues = {
       ...formValues,
       yachtId: yacht.id,
@@ -134,7 +173,7 @@ const BoatInquiryModal = ({
       ConfirmBtnProps={{
         form: BOAT_INQUIRY_FORM,
         type: 'submit',
-        disabled: pending,
+        disabled: pending || isLocked,
       }}
       CancelBtnProps={{
         disabled: pending,
