@@ -8,6 +8,7 @@ import { BoatCalendarFormValues } from '@/config/form-models.config';
 import { YachtServiceExtrasKey } from '@/models/yacht-service.model';
 import { YachtModel } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
+import { useDaysText } from '@/utils/hooks/usePluralization';
 import DateTime from '@/utils/static/DateTime';
 import { formatPriceWithCurrency, isPositivePrice, unpricedExtraLabelKey } from '@/utils/static/formatPriceCurrency';
 import { useYachtStore } from '@/valtio/yacht/yacht.store';
@@ -42,6 +43,7 @@ const PriceDetailsContent = ({ yacht, isCalculatedPrice, isSelectedOfferUnavaila
   } = calculatedPrice ?? {};
 
   const numberOfDays = dateFrom && dateTo ? DateTime.daysBetween(DateTime.date(dateFrom), DateTime.date(dateTo)) : 0;
+  const daysText = useDaysText(numberOfDays);
 
   const formattedClientPricePerDay = formatPriceWithCurrency({
     clientPriceEur: clientPricePerDayEur,
@@ -87,7 +89,7 @@ const PriceDetailsContent = ({ yacht, isCalculatedPrice, isSelectedOfferUnavaila
         {calculatedPrice && (
           <Stack direction="row" justifyContent="space-between">
             <Typography variant="body1">
-              {formattedClientPricePerDay} x {numberOfDays} {numberOfDays <= 1 ? 'day' : 'days'}
+              {formattedClientPricePerDay} x {numberOfDays} {daysText}
             </Typography>
             <Typography variant="body1">
               {startDate && endDate ? `${formattedTotalPrice}` : tCommon('priceOnRequest')}
