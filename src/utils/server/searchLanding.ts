@@ -195,7 +195,7 @@ const hasValue = (value: unknown): boolean =>
 const CURRENCIES = new Set<string>(Object.values(Currency));
 
 /** `page` as a landing page number (1…MAX_CACHED_PAGE), else null. */
-const landingPage = (raw: unknown): number | null => {
+export const landingPageNumber = (raw: unknown): number | null => {
   const value = splitSearchParam(raw);
 
   if (value.length !== 1 || !/^[1-9]\d{0,2}$/.test(value[0])) return null;
@@ -237,7 +237,7 @@ export const landingFetchRevalidate = (params: AllSearchParams, landing: SearchL
 
   if (!splitSearchParam(params.boatTypes).every(isVesselType)) return undefined;
 
-  if (hasValue(params.page) && landingPage(params.page) == null) return undefined;
+  if (hasValue(params.page) && landingPageNumber(params.page) == null) return undefined;
 
   if (hasValue(params.currency) && !splitSearchParam(params.currency).every(c => CURRENCIES.has(c))) return undefined;
 
@@ -258,19 +258,23 @@ export const landingFetchRevalidate = (params: AllSearchParams, landing: SearchL
  * side on the Greece landing. A boat without a bookable week comes back
  * without a price and its card reads "Price on request" (hasListingPrice).
  * An API that predates the parameter ignores it (old prices, same cards).
+ *
+ * `size` (cached landings only): the base-diversity window of the first
+ * pages (landingListing.ts) reads several pages in one request.
  */
-export const yachtFetchParams = (params: AllSearchParams, cached: boolean): AllSearchParams => {
+export const yachtFetchParams = (params: AllSearchParams, cached: boolean, size?: number): AllSearchParams => {
   const priceBasis = isUndatedSearch(params) ? { priceBasis: 'week' as const } : {};
 
   if (cached) {
     const boatTypes = Array.from(new Set(splitSearchParam(params.boatTypes))).sort();
-    const page = landingPage(params.page);
+    const page = landingPageNumber(params.page);
 
     return {
       locations: [],
       ...(params.did?.length ? { did: [...params.did].sort() } : {}),
       ...(boatTypes.length ? { boatTypes } : {}),
       ...(page ? { page } : {}),
+      ...(size ? { size } : {}),
       ...(hasValue(params.currency) ? { currency: splitSearchParam(params.currency)[0] } : {}),
       ...priceBasis,
     } as unknown as AllSearchParams;
@@ -284,4 +288,30 @@ export const yachtFetchParams = (params: AllSearchParams, cached: boolean): AllS
     ),
     ...priceBasis,
   } as unknown as AllSearchParams;
+};
+
+/** Pages of a landing whose cards are reordered by base (landingListing.ts). */
+export const BASE_DIVERSITY_PAGES = 3;
+
+/**
+ * Whether a request's cards are reordered for base diversity (audit R10,
+ * baseDiversity.ts): a destination landing of ONE country or region
+ * (`c-` / `r-` dids — a marina landing lists one base by definition), in the
+ * default order (no sortBy / sortDirection), listing its whole set (no dates,
+ * no filters: listsWholeLanding), read through the landing Data Cache
+ * (fetchRevalidate set — the window fetch shares it), on one of its first
+ * BASE_DIVERSITY_PAGES pages. Pass the ORIGINAL request params.
+ */
+export const diversifiesBases = (
+  params: AllSearchParams,
+  landing: SearchLanding,
+  fetchRevalidate: number | undefined
+): boolean => {
+  if (!fetchRevalidate || landing.hasOwnDid || landing.destinations.length !== 1) return false;
+
+  if (!landing.did.length || !landing.did.every(d => /^[cr]-/.test(d))) return false;
+
+  if (hasValue(params.sortBy) || hasValue(params.sortDirection) || !listsWholeLanding(params)) return false;
+
+  return (landingPageNumber(params.page) ?? 1) <= BASE_DIVERSITY_PAGES;
 };

@@ -24,6 +24,8 @@ interface SearchViewProps {
   destinationLabels?: Record<string, string>;
   /** Data Cache window for the yacht list (undated landings only). */
   fetchRevalidate?: number;
+  /** Reorder the first cards for base diversity (searchLanding.ts diversifiesBases). */
+  diversifyBases?: boolean;
   /** Set on landings that pass the index gate in this locale: the charter facts block to show. */
   charterFacts?: CharterFactsTarget | null;
   /** Set on destination landings: the place (× type) whose link blocks and breadcrumb to show. */
@@ -36,6 +38,7 @@ const SearchView = async ({
   searchParams,
   destinationLabels,
   fetchRevalidate,
+  diversifyBases = false,
   charterFacts = null,
   landingPlace = null,
   totalCount = null,
@@ -82,6 +85,7 @@ const SearchView = async ({
               searchParams={searchParams}
               destinationLabels={destinationLabels}
               fetchRevalidate={fetchRevalidate}
+              diversifyBases={diversifyBases}
               charterFacts={charterFacts}
               landingPlace={landingPlace}
             />

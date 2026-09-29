@@ -8,12 +8,11 @@ import { getInquiry } from '@/actions/yacht.actions';
 import { AllSearchParams } from '@/config/form-models.config';
 import { Currency, UserRoleName } from '@/models/user.model';
 import { VesselType, YachtModelShortInfo } from '@/models/yacht.model';
-import { fetchYachts } from '@/services/yacht.service';
 import { PaginatedResponse } from '@/types/response.type';
 import { getCuratedSeoHtml } from '@/utils/server/curatedSeoContent';
+import { fetchLandingListing } from '@/utils/server/landingListing';
 import { landingCrumbs, landingNav } from '@/utils/server/landingNav';
 import { placeText } from '@/utils/server/placeText';
-import { yachtFetchParams } from '@/utils/server/searchLanding';
 import { isUndatedSearch } from '@/utils/static/listingPrice';
 import CharterFactsBlock, { CharterFactsTarget } from '@/views/Search/CharterFacts';
 import LandingLinks, { LandingBreadcrumb } from '@/views/Search/LandingLinks';
@@ -33,6 +32,8 @@ interface BoatsWrapperProps {
   destinationLabels?: Record<string, string>;
   /** Data Cache window for the yacht list; undefined = no-store. */
   fetchRevalidate?: number;
+  /** Reorder the first cards for base diversity (searchLanding.ts diversifiesBases). */
+  diversifyBases?: boolean;
   /** Charter facts block for a gated landing listing its whole set — no
    *  dates or filters (search page, listsWholeLanding) — so the listing total
    *  below is the landing's own. Null → none. */
@@ -52,6 +53,7 @@ const BoatsWrapper = async ({
   searchParams,
   destinationLabels = {},
   fetchRevalidate,
+  diversifyBases = false,
   charterFacts = null,
   landingPlace = null,
 }: BoatsWrapperProps) => {
@@ -66,8 +68,9 @@ const BoatsWrapper = async ({
   // itineraries — landingNav.ts) and breadcrumb are built alongside the yacht
   // listing; the model row reads the listed cards when they arrive.
   // Backend blip → empty list (pre-existing soft behaviour; fetchYachts now throws).
-  const dataPromise = fetchYachts(yachtFetchParams(searchParams, !!fetchRevalidate), currency, locale, {
+  const dataPromise = fetchLandingListing(searchParams, currency, locale, {
     revalidate: fetchRevalidate,
+    diversify: diversifyBases,
   }).catch((): PaginatedResponse<YachtModelShortInfo> => ({ content: [] }));
 
   const [data, nav, crumbs] = await Promise.all([
