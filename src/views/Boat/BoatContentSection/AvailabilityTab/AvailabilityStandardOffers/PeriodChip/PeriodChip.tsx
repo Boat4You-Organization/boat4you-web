@@ -72,7 +72,7 @@ const PeriodChip = memo(
         label={
           <Stack spacing={1} alignItems="center">
             <Typography variant="body2" color={colors.black500} textAlign="center">
-              {`${DateTime.formatShortWithoutDay(dayjs(period.dateFrom))} - ${DateTime.formatShortWithoutDay(dayjs(period.dateTo))}`}
+              {`${DateTime.formatShortWithoutDay(dayjs(period.dateFrom), locale)} - ${DateTime.formatShortWithoutDay(dayjs(period.dateTo), locale)}`}
             </Typography>
 
             {isLoading ? (

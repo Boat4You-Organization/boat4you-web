@@ -105,8 +105,8 @@ const PastReservationCard = ({ reservation }: PastReservationCardProps) => {
             </Typography>
             <Stack mt={1}>
               <Typography variant="body1">
-                {DateTime.formatShortWithoutDay(DateTime.date(dateFrom))} →{' '}
-                {DateTime.formatShortWithoutDay(DateTime.date(dateTo))}
+                {DateTime.formatShortWithoutDay(DateTime.date(dateFrom), locale)} →{' '}
+                {DateTime.formatShortWithoutDay(DateTime.date(dateTo), locale)}
               </Typography>
             </Stack>
           </Stack>

@@ -4,7 +4,7 @@
 import { Box, Container, IconButton, Stack, Typography } from '@mui/material';
 import clsx from 'clsx';
 import dayjs from 'dayjs';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import Image from 'next/image';
 
 import GooglePreferredSourceCard from '@/components/GooglePreferredSourceCard';
@@ -24,6 +24,7 @@ import './styles.scss';
 const SingleBlogContent = ({ slug, title, date, categories, featuredImage, content }: Blog) => {
   const url = `${meta.url}/blog/${slug}`;
   const t = useTranslations('common');
+  const locale = useLocale();
 
   const handleCopyLink = () => {
     copyToClipboard(window.location.toString(), 'Link copied to clipboard');
@@ -37,7 +38,7 @@ const SingleBlogContent = ({ slug, title, date, categories, featuredImage, conte
         </Typography>
         <Stack direction="row" spacing={2}>
           <Typography variant="body1" component="span" color={colors.black500}>
-            {DateTime.formatDayForBlog(dayjs(date))}
+            {DateTime.formatDayForBlog(dayjs(date), locale)}
           </Typography>
           <Stack direction="row" spacing={2}>
             {categories.nodes?.map(category => (

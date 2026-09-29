@@ -142,17 +142,24 @@ export default class DateTime {
     return date.format(DATE_FORMAT_SHORT_WITHOUT_DAY);
   };
 
+  /**
+   * Blog-card and article dates: English keeps "September 28, 2026"; every
+   * other locale gets its own long form through Intl (HR "28. rujna 2026.",
+   * DE "28. September 2026") — the dayjs pattern kept the English word order
+   * on the 8 translated homes (audit 29.9.2026, R47).
+   */
   public static formatDayForBlog = (date: Dayjs, locale?: string) => {
-    if (locale) {
-      return date.locale(locale).format(DATE_FORMAT_BLOG);
+    if (locale && !locale.startsWith('en')) {
+      return DateTime.intlLong(date, locale, false);
     }
 
     return date.format(DATE_FORMAT_BLOG);
   };
 
+  /** Same pattern as formatShortWithoutDay ("2 Oct 2026"), in the locale's own form (HR "2. lis 2026.", DE "2. Okt. 2026"). */
   public static formatWithMonthName = (date: Dayjs, locale?: string) => {
     if (locale) {
-      return date.locale(locale).format(DATE_FORMAT_WITH_MONTH_NAME);
+      return DateTime.formatShortWithoutDay(date, locale);
     }
 
     return date.format(DATE_FORMAT_WITH_MONTH_NAME);

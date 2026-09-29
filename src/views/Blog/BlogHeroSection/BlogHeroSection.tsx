@@ -5,7 +5,7 @@ import React, { useEffect, useState } from 'react';
 import { Box, Button, Container, Divider, Grid, Stack, Typography } from '@mui/material';
 import clsx from 'clsx';
 import dayjs from 'dayjs';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -25,6 +25,7 @@ const BlogHeroSection = ({ initialFeatured }: { initialFeatured?: BlogTeaser }) 
   const [featureBlog, setFeatureBlog] = useState<BlogTeaser | null>(initialFeatured ?? null);
   const [isHovered, setIsHovered] = useState(false);
   const t = useTranslations('common');
+  const locale = useLocale();
 
   const fetchBlogs = async () => {
     try {
@@ -77,7 +78,7 @@ const BlogHeroSection = ({ initialFeatured }: { initialFeatured?: BlogTeaser }) 
         <Grid size={{ xs: 12, md: 6, lg: 5 }}>
           <Stack direction="column" spacing={{ xs: 2, md: 3 }}>
             <Typography variant="body1" color={colors.black500}>
-              {DateTime.formatDayForBlog(dayjs(featureBlog.date))}
+              {DateTime.formatDayForBlog(dayjs(featureBlog.date), locale)}
             </Typography>
             <Link
               href={`/blog/${featureBlog.slug}`}

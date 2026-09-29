@@ -34,18 +34,21 @@ function FormDateInput<T = string>({
   const { control } = useFormContext();
   const locale = useLocale();
 
+  // One long-date formatter for every locale (DateTime.formatLongWithoutDay):
+  // the dayjs pattern printed HR "10 listopada 2026" without the ordinal dot
+  // and DE "10 Oktober 2026" (audit 29.9.2026, R67).
   const formatDateWithLocale = (value: string) => {
     if (!value) return '';
 
     if (dayjs.isDayjs(value)) {
-      return value.locale(locale).format('DD MMMM YYYY');
+      return DateTime.formatLongWithoutDay(value, locale);
     }
 
     if (typeof value === 'string') {
-      return dayjs(value).locale(locale).format('DD MMMM YYYY');
+      return DateTime.formatLongWithoutDay(dayjs(value), locale);
     }
 
-    return DateTime.formatLongWithoutDay(value);
+    return DateTime.formatLongWithoutDay(value, locale);
   };
 
   const render: ControllerProps['render'] = (p): React.ReactElement => {
