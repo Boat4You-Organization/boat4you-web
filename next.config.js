@@ -112,6 +112,22 @@ const nextConfig = {
         destination: '/',
         permanent: true,
       },
+      // The one non-lower-case path of the site (audit 29.9.2026, R34): the
+      // Sicily route was published as /itineraries/sicily/palermoLong. The
+      // route id is now `palermo-long`; the old spelling 301s in every locale
+      // (the un-prefixed EN form and the eight prefixed ones separately, so
+      // the locale is kept — an optional `:locale?` cannot be re-used in the
+      // destination without leaving a double slash when it is absent).
+      {
+        source: '/itineraries/sicily/palermoLong',
+        destination: '/itineraries/sicily/palermo-long',
+        permanent: true,
+      },
+      {
+        source: '/:locale(de|es|fr|it|pt|hr|pl|nl)/itineraries/sicily/palermoLong',
+        destination: '/:locale/itineraries/sicily/palermo-long',
+        permanent: true,
+      },
       // Legacy WordPress-era blog slugs (pre-2026 FAQ-style posts) still
       // crawled by bots and reachable from stale links — top 404 offenders
       // from access logs (2.8.2026), each mapped to the closest live
@@ -207,6 +223,21 @@ const nextConfig = {
       {
         source: '/_next/static/(.*)',
         headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
+      },
+      // Files in /public (audit 29.9.2026, R64): destination photos, icons,
+      // favicons, the OG image and the self-hosted fonts were served with the
+      // HTML rule above (max-age=0, or Next's bare max-age=0 for /favicons),
+      // so every repeat visit revalidated each of them. They are not
+      // content-hashed, so no `immutable` year: a day in the browser plus a
+      // week of stale-while-revalidate (fonts: 30 days — they never change
+      // without a new file name). The catch-all HTML rule is untouched.
+      {
+        source: '/:dir(images|favicons|icons|meta)/:path*',
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=86400, stale-while-revalidate=604800' }],
+      },
+      {
+        source: '/fonts/:path*',
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=2592000, stale-while-revalidate=604800' }],
       },
       // Sitemaps (audit B09): the landing/yacht sitemaps regenerate hourly
       // (ISR), so a 60 s shared-cache window only invited cold re-renders.
