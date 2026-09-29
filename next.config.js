@@ -1,3 +1,7 @@
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
+const { PHASE_PRODUCTION_BUILD, PHASE_PRODUCTION_SERVER } = require('next/constants');
 const createNextIntlPlugin = require('next-intl/plugin');
 
 const withNextIntl = createNextIntlPlugin({
@@ -343,13 +347,63 @@ const nextConfig = {
   },
 };
 
-if (process.env.ANALYZE === 'true') {
-  const bundleAnalyerLocal = '@next/bundle-analyzer';
-  const withBundleAnalyzer = require(bundleAnalyerLocal)({
-    enabled: true,
-  });
+// Deployment id (Next skew protection, audit 29.9.2026 R62): every build gets one
+// id, used as BUILD_ID and as `deploymentId`, so the client's asset URLs carry
+// `?dpl=<id>` and its server-action requests an `x-deployment-id` header, and a
+// stale tab is recognisable as such. `next start` on cusma1 loads this file at
+// runtime, where the build's id is read back from .next/BUILD_ID — the same
+// value, without the deploy script having to pass anything. No id in
+// development. The git sha is the readable part; the time suffix keeps two
+// builds of one commit apart (the deploy verifies staged vs live BUILD_ID).
+const buildDeploymentId = () => {
+  let sha = 'nogit';
 
-  module.exports = withBundleAnalyzer(withNextIntl(nextConfig));
-} else {
-  module.exports = withNextIntl(nextConfig);
-}
+  try {
+    sha = execSync('git rev-parse --short=12 HEAD', { cwd: __dirname, stdio: ['ignore', 'pipe', 'ignore'] })
+      .toString()
+      .trim();
+  } catch {
+    // not a git checkout (a shipped tree) — the time suffix alone is unique enough
+  }
+
+  return `${sha}-${Date.now().toString(36)}`;
+};
+
+const deployedBuildId = () => {
+  try {
+    return fs.readFileSync(path.join(__dirname, '.next', 'BUILD_ID'), 'utf8').trim() || undefined;
+  } catch {
+    return undefined;
+  }
+};
+
+const configForPhase = phase => {
+  if (phase === PHASE_PRODUCTION_BUILD) {
+    const id = buildDeploymentId();
+
+    return { ...nextConfig, deploymentId: id, generateBuildId: async () => id };
+  }
+
+  if (phase === PHASE_PRODUCTION_SERVER) {
+    const id = deployedBuildId();
+
+    return id ? { ...nextConfig, deploymentId: id } : nextConfig;
+  }
+
+  return nextConfig;
+};
+
+module.exports = phase => {
+  const config = withNextIntl(configForPhase(phase));
+
+  if (process.env.ANALYZE === 'true') {
+    const bundleAnalyerLocal = '@next/bundle-analyzer';
+    const withBundleAnalyzer = require(bundleAnalyerLocal)({
+      enabled: true,
+    });
+
+    return withBundleAnalyzer(config);
+  }
+
+  return config;
+};
