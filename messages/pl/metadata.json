@@ -62,7 +62,8 @@
     "descCabins": "{count, plural, one {# kabina} few {# kabiny} many {# kabin} other {# kabiny}}",
     "descBerths": "{count, plural, one {# koja} few {# koje} many {# koi} other {# koi}}",
     "descGuests": "{count, plural, one {do # osoby} few {do # osób} many {do # osób} other {do # osoby}}",
-    "descCta": "Sprawdź dostępność i zarezerwuj bezpośrednio na boat4you.com."
+    "descCta": "Sprawdź dostępność i zarezerwuj bezpośrednio na boat4you.com.",
+    "descCtaInquiry": "Wyślij zapytanie o wybrane terminy na boat4you.com."
   },
   "fleet": {
     "heading": "Katalog floty",

@@ -62,7 +62,8 @@
     "descCabins": "{count, plural, =0 {# cabines} one {# cabine} other {# cabines}}",
     "descBerths": "{count, plural, =0 {# beliches} one {# beliche} other {# beliches}}",
     "descGuests": "{count, plural, =0 {até # pessoas} one {até # pessoa} other {até # pessoas}}",
-    "descCta": "Verifique a disponibilidade e reserve diretamente em boat4you.com."
+    "descCta": "Verifique a disponibilidade e reserve diretamente em boat4you.com.",
+    "descCtaInquiry": "Envie uma consulta para as suas datas em boat4you.com."
   },
   "fleet": {
     "heading": "Diretório da frota",

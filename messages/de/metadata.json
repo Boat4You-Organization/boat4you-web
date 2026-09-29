@@ -62,7 +62,8 @@
     "descCabins": "{count, plural, one {# Kabine} other {# Kabinen}}",
     "descBerths": "{count, plural, one {# Koje} other {# Kojen}}",
     "descGuests": "{count, plural, one {bis zu # Person} other {bis zu # Personen}}",
-    "descCta": "Verfügbarkeit prüfen und direkt auf boat4you.com buchen."
+    "descCta": "Verfügbarkeit prüfen und direkt auf boat4you.com buchen.",
+    "descCtaInquiry": "Anfrage für Ihre Wunschtermine auf boat4you.com senden."
   },
   "fleet": {
     "heading": "Yachtcharter-Flotte im Überblick",

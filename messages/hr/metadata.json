@@ -62,7 +62,8 @@
     "descCabins": "{count, plural, one {# kabina} few {# kabine} other {# kabina}}",
     "descBerths": "{count, plural, one {# osoba} few {# osobe} other {# osoba}}",
     "descGuests": "{count, plural, one {do # osobe} few {do # osobe} other {do # osoba}}",
-    "descCta": "Provjerite raspoloživost i rezervirajte direktno na boat4you.com."
+    "descCta": "Provjerite raspoloživost i rezervirajte direktno na boat4you.com.",
+    "descCtaInquiry": "Pošaljite upit za svoje termine na boat4you.com."
   },
   "fleet": {
     "heading": "Katalog flote",

@@ -62,7 +62,8 @@
     "descCabins": "{count, plural, one {# cabine} other {# cabines}}",
     "descBerths": "{count, plural, one {# couchette} other {# couchettes}}",
     "descGuests": "{count, plural, one {jusqu’à # personne} other {jusqu’à # personnes}}",
-    "descCta": "Vérifiez les disponibilités et réservez directement sur boat4you.com."
+    "descCta": "Vérifiez les disponibilités et réservez directement sur boat4you.com.",
+    "descCtaInquiry": "Envoyez une demande pour vos dates sur boat4you.com."
   },
   "fleet": {
     "heading": "Annuaire de la flotte",

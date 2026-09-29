@@ -11,7 +11,14 @@
  * The assembly is fixed (lead. specs. cta) so the catalog only carries short
  * fragments; word order inside each fragment is the translator's.
  */
-export type BoatDescKey = 'descLead' | 'descLeadFrom' | 'descCabins' | 'descBerths' | 'descGuests' | 'descCta';
+export type BoatDescKey =
+  | 'descLead'
+  | 'descLeadFrom'
+  | 'descCabins'
+  | 'descBerths'
+  | 'descGuests'
+  | 'descCta'
+  | 'descCtaInquiry';
 
 export type BoatDescTranslate = (key: BoatDescKey, values?: Record<string, string | number>) => string;
 
@@ -24,11 +31,17 @@ interface BoatDescInput {
   berths?: number | null;
   /** /search listing variant: "up to N guests" instead of berths. */
   guests?: number | null;
+  /**
+   * Boat without a bookable future offer (isInquiryOnlyBoat): its page asks
+   * for an inquiry and cannot be booked, so the sentence closes with the
+   * inquiry call (`descCtaInquiry`) instead of "book directly".
+   */
+  inquiryOnly?: boolean;
 }
 
 export const buildBoatDescription = (
   t: BoatDescTranslate,
-  { name, marina, cabins, berths, guests }: BoatDescInput
+  { name, marina, cabins, berths, guests, inquiryOnly }: BoatDescInput
 ): string => {
   // "Marina Villa Igiea | Palermo" (the partner's base format) reads as
   // "Marina Villa Igiea, Palermo" in a sentence.
@@ -42,5 +55,5 @@ export const buildBoatDescription = (
 
   if (guests != null) specs.push(t('descGuests', { count: guests }));
 
-  return `${lead}.${specs.length ? ` ${specs.join(', ')}.` : ''} ${t('descCta')}`;
+  return `${lead}.${specs.length ? ` ${specs.join(', ')}.` : ''} ${t(inquiryOnly ? 'descCtaInquiry' : 'descCta')}`;
 };

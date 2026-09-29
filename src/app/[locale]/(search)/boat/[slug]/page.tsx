@@ -367,12 +367,14 @@ export async function generateMetadata({
 
   // Description — native in every locale from `metadata.boat.desc*` (only EN
   // and HR were native before; the other seven showed English in the SERP
-  // snippet). Keep under ~155 chars even with specs added.
+  // snippet). Keep under ~155 chars even with specs added. An inquiry-only
+  // boat closes with the inquiry call, not "book directly".
   const description = buildBoatDescription((key, values) => tBoat(key as never, values as never), {
     name: `${fullName}${yearSuffix}`,
     marina: locationFull,
     cabins,
     berths,
+    inquiryOnly: isInquiryOnlyBoat(yacht),
   });
 
   return buildMetadata({
