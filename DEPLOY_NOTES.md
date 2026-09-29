@@ -703,3 +703,19 @@ After editing: `sudo nginx -t && sudo systemctl reload nginx`.
   `www.boat4you.com` in image remotePatterns (blog-image fix).
 - backend @ git `main` 95d0db2: extras period-correct selection, Damage-Waiver-with-skipper from NauSys,
   extras dedupe by partner `externalId`.
+
+## 2026-09-29 — Inquiry: one per submit; boats without a bookable future offer = inquiry-only page; never "0 €"
+
+Mario 27.9.2026: (1) boats without any future offer are hidden from listings/sitemaps (backend, ADMIN session: `/public/yachts` excludes them, `/public/yachts/{id}` returns `hasBookableFutureOffer`, live cusma2 27.9. 17:12 UTC); (2) their boat page STAYS 200 + index with an inquiry form without price; (3) an inquiry form sends exactly ONE inquiry (27.9. Samsung Internet visitor → 6 identical inquiries in one second on the Greece sister).
+
+Branch `fix/inq27` (worktree `../wt-inq27`), 18 commits (2800467a…416642ac), merged into main 29.9.:
+
+- `src/utils/static/inquiryOnlyBoat.ts` — `isInquiryOnlyBoat(yacht) = hasBookableFutureOffer === false` (missing/null = bookable, deploy order irrelevant). Inquiry-only page: `InquiryOnlyPanel` in booking box / availability tab / phone bar ("Price on request" + "Send inquiry"), no calendar, no Reserve, no Product JSON-LD (Breadcrumb + FAQ stay; a Product without offers is a Search Console error), FAQ + description + meta description (`metadata.boat.descCtaInquiry`, 9 locales) ask for an inquiry. Form gets free date fields (past days off).
+- One inquiry per submit: `BoatInquiryModal` locks on first submit (double tap / Enter / re-submit ignored, unlock only on failure or reopen); `src/utils/server/inquiryGuard.ts` (in-memory): same e-mail+boat+dates+phone+name+message within 10 min → first answer, no second forward; different inquiry from the same IP within 5 s → refused. `sendYachtInquiry` sends the visitor IP as `X-Forwarded-For` to `/public/inquiries` (backend limiter keys on it; before, every visitor shared cusma1's IP). Backend dedupe (advisory lock, same key) LIVE cusma2 29.9. 10:31 UTC (ADMIN, f5e6b02). Same lock on `AdminInquiryModal` (custom offers).
+- Never "0 €": `isPositivePrice`, `unpricedExtraLabelKey(paymentType)` → INCLUDED = "Included", else "Price on request" (boat page, calendar rows, phone price sheet, booking PaymentPoliciesCard, My Bookings PaymentTab); week cards/heatmap "Price on request" / "—"; "0 €" without dates → "Price on request".
+- i18n leftovers: phone price sheet days via `useDaysText`; phone bar dates in page locale (`DateTime.formatShortWithoutDay(locale)`, PT without "de" to fit one line).
+- Inquiry e-mail template untouched (backend). Tests (16 + 3) live in the session scratchpad (repo has no runner).
+
+Deploy: `infra/deploy-scripts/b4y_web_deploy.sh` (build + runtime files + swap + SEO regression).
+
+- Backend blips (29.9.: local/deploy `next build` prerender flooded the API → Hikari pool full → live 500s): `next.config.js` `experimental.cpus=1`, `staticGenerationMaxConcurrency=2`, `staticGenerationRetryCount=2` (builds slower, gentle on the API); `src/utils/server/fetchWithRetry.ts` — 5xx/429/network → retries 0.5/1/2 s, then typed `ApiUnavailableError` (page 500 = retryable; Next 16 pages cannot emit 503 — that needs nginx `error_page 500 502 504 =503` on cusma1, not done). Applied to boat page + metadata, /search landings, sitemaps, /fleet, model catalogue, destination lookup, charter facts. 404/410/400 still → notFound without retry.
