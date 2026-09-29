@@ -223,14 +223,16 @@ const BoatMobileNavigation = ({ yacht }: BoatMobileNavigationProps) => {
                   fullWidth
                 >
                   <Calendar size={24} fill={startDate && endDate ? colors.black300 : colors.black200} />
+                  {/* In the page's language: HR read "10 Oct 2026 - 17 Oct 2026". */}
                   {startDate && endDate ? (
                     <>
-                      {DateTime.formatShortWithoutDay(startDate)} - {DateTime.formatShortWithoutDay(endDate)}
+                      {DateTime.formatShortWithoutDay(startDate, locale)} -{' '}
+                      {DateTime.formatShortWithoutDay(endDate, locale)}
                     </>
                   ) : (
                     <>
-                      {DateTime.formatShortWithoutDay(DateTime.now())} -{' '}
-                      {DateTime.formatShortWithoutDay(DateTime.addWeek(DateTime.now()))}
+                      {DateTime.formatShortWithoutDay(DateTime.now(), locale)} -{' '}
+                      {DateTime.formatShortWithoutDay(DateTime.addWeek(DateTime.now()), locale)}
                     </>
                   )}
                 </Button>

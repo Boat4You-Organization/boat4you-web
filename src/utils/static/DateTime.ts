@@ -120,7 +120,21 @@ export default class DateTime {
     return date.format(DATE_FORMAT_LONG_WITHOUT_DAY);
   };
 
+  /**
+   * Short dates ("10 Oct 2026"), same rule as formatLong: English keeps its
+   * dayjs form, every other locale its own pattern through
+   * Intl.DateTimeFormat (HR "10. lis 2026.", DE "10. Okt. 2026"). Joining
+   * words are left out (PT "10 de out. de 2026" → "10 out. 2026"), so a
+   * range still fits one line of the phone booking bar.
+   */
   public static formatShortWithoutDay = (date: Dayjs, locale?: string) => {
+    if (locale && !locale.startsWith('en')) {
+      return new Intl.DateTimeFormat(locale, { day: 'numeric', month: 'short', year: 'numeric' })
+        .formatToParts(date.toDate())
+        .map(part => (part.type === 'literal' && /\p{L}/u.test(part.value) ? ' ' : part.value))
+        .join('');
+    }
+
     if (locale) {
       return date.locale(locale).format(DATE_FORMAT_SHORT_WITHOUT_DAY);
     }
