@@ -5,6 +5,7 @@ import 'server-only';
 import { PROMOTED_COUNTRY_CODES } from '@/config/promoted-countries.config';
 import { getBlogs } from '@/lib/api';
 import { YachtModelShortInfo } from '@/models/yacht.model';
+import { fetchWithRetry } from '@/utils/server/fetchWithRetry';
 import { MIN_LANDING_FLEET, mapWithLimit } from '@/utils/server/landingGate';
 import {
   ModelIdentity,
@@ -51,8 +52,9 @@ const apiBase = () => process.env.NEXT_PUBLIC_BOAT_WS_API_URL;
 
 const PROMOTED_CODES = Array.from(PROMOTED_COUNTRY_CODES).sort();
 
+/** A 5xx / 429 / network error is retried (fetchWithRetry) before it throws. */
 const fetchJson = async <T>(url: string, revalidate: number): Promise<T> => {
-  const response = await fetch(url, {
+  const response = await fetchWithRetry(url, {
     next: { revalidate },
     headers: { 'Accept-Language': 'en', 'Content-Type': 'application/json' },
   });

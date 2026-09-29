@@ -5,6 +5,7 @@ import 'server-only';
 import { LANDING_IDENTITIES, LandingIdentity } from '@/config/landing-identity.config';
 import { POPULAR_SEARCHES } from '@/config/popular-searches.config';
 import { LocationType } from '@/types/location.type';
+import { fetchWithRetry } from '@/utils/server/fetchWithRetry';
 import { normalizeDestinationName } from '@/utils/static/searchLandingPath';
 
 /**
@@ -88,12 +89,16 @@ export class CatalogueUnavailableError extends Error {
   }
 }
 
-/** JSON of a catalogue GET; null only when the API answers "not found" (4xx). */
+/**
+ * JSON of a catalogue GET; null only when the API answers "not found" (4xx).
+ * A 5xx / 429 / network error is retried within FETCH_TIMEOUT_MS
+ * (fetchWithRetry) before it counts as an outage.
+ */
 const fetchJson = async <T>(url: string): Promise<T | null> => {
   let response: Response;
 
   try {
-    response = await fetch(url, {
+    response = await fetchWithRetry(url, {
       next: { revalidate: REVALIDATE_SECONDS },
       signal: AbortSignal.timeout(FETCH_TIMEOUT_MS),
     });

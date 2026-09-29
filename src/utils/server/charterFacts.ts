@@ -3,6 +3,7 @@ import { cache } from 'react';
 import 'server-only';
 
 import { VesselType } from '@/models/yacht.model';
+import { fetchWithRetry } from '@/utils/server/fetchWithRetry';
 
 /**
  * Landing-page charter facts, precomputed nightly by the backend (V9_61,
@@ -67,7 +68,12 @@ const isFacts = (value: unknown): value is CharterFacts =>
   typeof (value as CharterFacts).activeBoats === 'number' &&
   typeof (value as CharterFacts).computedAt === 'string';
 
-/** Facts for one did (× boat type), or null — never throws, never waits past TIMEOUT_MS. */
+/**
+ * Facts for one did (× boat type), or null — never throws, never waits past
+ * TIMEOUT_MS. A 5xx / 429 / network error is retried inside that window
+ * (fetchWithRetry): the price guides throw on null, and a guide rendered in
+ * a backend restart answered 500.
+ */
 export const fetchCharterFacts = cache(
   async (did: string, vesselType: VesselType | null): Promise<CharterFacts | null> => {
     if (!DID_PATTERN.test(did)) return null;
@@ -77,10 +83,13 @@ export const fetchCharterFacts = cache(
     if (vesselType) query.set('vesselType', vesselType);
 
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/charter-facts?${query}`, {
-        next: { revalidate: REVALIDATE_SECONDS },
-        signal: AbortSignal.timeout(TIMEOUT_MS),
-      });
+      const response = await fetchWithRetry(
+        `${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/charter-facts?${query}`,
+        {
+          next: { revalidate: REVALIDATE_SECONDS },
+          signal: AbortSignal.timeout(TIMEOUT_MS),
+        }
+      );
 
       if (!response.ok) return null;
 

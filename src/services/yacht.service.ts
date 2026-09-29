@@ -3,6 +3,7 @@ import { Currency } from '@/models/user.model';
 import { PriceCalcDto, YachtOfferModel } from '@/models/yacht-offer.model';
 import { YachtAvailability, YachtModelShortInfo } from '@/models/yacht.model';
 import { PaginatedResponse } from '@/types/response.type';
+import { fetchWithRetry } from '@/utils/server/fetchWithRetry';
 import { createYachtQueryParams } from '@/utils/static/queryParams';
 
 interface YachtAvailabilityParams {
@@ -58,7 +59,8 @@ export async function fetchYachts(
 
   const queryParams = createYachtQueryParams(paramsWithCurrency);
 
-  const response = await fetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/yachts${queryParams}`, {
+  // A 5xx / 429 / network error is retried (0.5 s, 1 s, 2 s) before it throws.
+  const response = await fetchWithRetry(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/yachts${queryParams}`, {
     // Yacht catalogue + offer state changes constantly (partner sync,
     // dual-source dedup, manual price overrides). Cached SSR responses
     // make the search page lag behind reality (e.g. a freshly-mapped
@@ -85,9 +87,6 @@ export async function fetchYachts(
 /** How long a fleet-directory chunk stays in the Data Cache (6 h). */
 export const FLEET_REVALIDATE_SECONDS = 21600;
 
-/** Backoff before the single retry in `fetchFleetChunk`. */
-const FLEET_RETRY_DELAY_MS = 700;
-
 /**
  * Catalogue read for the crawlable /fleet directory — deliberately NOT
  * `fetchYachts`.
@@ -113,25 +112,17 @@ export async function fetchFleetChunk(
   const queryParams = createYachtQueryParams({ ...searchParams, currency: Currency.EUR });
   const url = `${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/yachts${queryParams}`;
 
-  const request = () =>
-    fetch(url, {
-      next: { revalidate: FLEET_REVALIDATE_SECONDS },
-      headers: {
-        'Accept-Language': 'en',
-        'Content-Type': 'application/json',
-      },
-    });
-
-  // One retry, because throwing is the right contract but a single transient
-  // 429/502 from the API should not take a whole directory page down with it.
-  let response = await request();
-
-  if (!response.ok) {
-    await new Promise(resolve => {
-      setTimeout(resolve, FLEET_RETRY_DELAY_MS);
-    });
-    response = await request();
-  }
+  // Retried (fetchWithRetry), because throwing is the right contract but a
+  // transient 429/502 from the API should not take a whole directory page
+  // down with it. (The plain second fetch() here before 29.9.2026 could get
+  // the first failed response back: Next memoises signal-less GETs per render.)
+  const response = await fetchWithRetry(url, {
+    next: { revalidate: FLEET_REVALIDATE_SECONDS },
+    headers: {
+      'Accept-Language': 'en',
+      'Content-Type': 'application/json',
+    },
+  });
 
   if (!response.ok) {
     throw new Error(`Failed to fetch fleet chunk: ${response.status}`);

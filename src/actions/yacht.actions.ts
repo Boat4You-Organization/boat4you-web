@@ -10,6 +10,7 @@ import { Currency } from '@/models/user.model';
 import { PriceCalcDto, YachtOfferModel } from '@/models/yacht-offer.model';
 import { VesselType, YachtAvailability, YachtFleet, YachtModel } from '@/models/yacht.model';
 import { PayloadResponse } from '@/types/response.type';
+import { fetchWithRetry } from '@/utils/server/fetchWithRetry';
 import { guardInquiry, inquiryFingerprint } from '@/utils/server/inquiryGuard';
 import { authFetch } from '@/utils/static/authFetch';
 import { getBoatImageBaseUrl } from '@/utils/static/imageUtils';
@@ -44,8 +45,9 @@ export interface BrochureResult {
 }
 
 /**
- * Longest a boat page waits for the detail API before answering 5xx. A hung
- * backend otherwise holds the request for undici's 300 s header timeout.
+ * Longest a boat page waits for the detail API before answering 5xx, retries
+ * included. A hung backend otherwise holds the request for undici's 300 s
+ * header timeout.
  */
 const YACHT_DETAIL_TIMEOUT_MS = 25_000;
 
@@ -60,6 +62,13 @@ const YACHT_DETAIL_TIMEOUT_MS = 25_000;
  * boat is gone. Before 26.9.2026 both paths returned null: 22 of 22 boat
  * requests during one backend deploy came back 404 + noindex with a
  * canonical to the locale home (audit B02).
+ *
+ * A 5xx, 429 or network error is retried three times (0.5 s / 1 s / 2 s,
+ * fetchWithRetry) before it throws ApiUnavailableError, so a backend restart
+ * of a few seconds no longer reaches Googlebot as a 500. What still throws
+ * stays a 500: an App Router page cannot answer 503 (Next 16 renders a
+ * thrown error as 500; only notFound / forbidden / unauthorized / redirect
+ * set another status).
  */
 export async function getSingleYacth(
   slug: string,
@@ -83,7 +92,7 @@ export async function getSingleYacth(
 
   // Encoded: a decoded `?` or `#` in the path segment would otherwise turn
   // the request into the list endpoint.
-  const response = await fetch(
+  const response = await fetchWithRetry(
     `${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/yachts/${encodeURIComponent(slug)}${queryParams}`,
     {
       headers: {
