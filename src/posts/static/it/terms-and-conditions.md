@@ -593,6 +593,10 @@ termini si applicheranno in aggiunta alle linee guida generali di seguito.
 **7.1. Cancellazione da Parte del Cliente (Tu):** Se devi annullare una
 prenotazione confermata, si applica generalmente quanto segue:
 
+- **Cancellazione gratuita entro 72 ore:** Ogni prenotazione si può
+  annullare gratuitamente entro 72 ore dal momento in cui viene effettuata;
+  dopo, valgono le condizioni di cancellazione indicate nella pagina della
+  barca.
 - **Politica di Cancellazione:** Ogni Fornitore di Yacht può stabilire i
   propri termini di cancellazione (ad esempio, Flessibile, Moderata,
   Rigorosa). Queste politiche delineano quale rimborso (se presente) ti

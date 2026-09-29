@@ -546,6 +546,9 @@ will apply in addition to the general guidelines below.
 **7.1. Cancellation by Client (You):** If you need to cancel a confirmed
 booking, the following generally applies:
 
+- **72-hour free cancellation:** Every booking can be cancelled free of
+  charge within 72 hours of the moment it is made; after that, the
+  cancellation policy shown on the boat’s page applies.
 - **Cancellation Policy:** Each Yacht Provider may set their own
   cancellation terms (e.g., Flexible, Moderate, Strict). These policies
   outline what refund (if any) you are entitled to based on how far in

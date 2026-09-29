@@ -640,6 +640,10 @@ ces conditions s'appliqueront en plus des directives générales ci-dessous.
 **7.1. Annulation par le Client (Vous) :** Si vous devez annuler une
 réservation confirmée, les règles générales suivantes s'appliquent :
 
+- **Annulation gratuite sous 72 heures :** Toute réservation peut être
+  annulée gratuitement dans les 72 heures suivant le moment où elle est
+  faite ; ensuite, les conditions d’annulation indiquées sur la page du
+  bateau s’appliquent.
 - **Politique d'Annulation :** Chaque Fournisseur de Yacht peut définir
   ses propres conditions d'annulation (par exemple, Flexible, Modérée,
   Stricte). Ces politiques décrivent le remboursement (le cas échéant)

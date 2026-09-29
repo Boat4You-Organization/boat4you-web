@@ -161,6 +161,7 @@ Razumijemo da se planovi mogu promijeniti. Ovaj odjeljak opisuje kako se na Boat
 
 **7.1. Otkazivanje od strane Klijenta (vas):** Ako trebate otkazati potvrđenu rezervaciju, općenito vrijedi:
 
+- **Besplatno otkazivanje unutar 72 sata:** Svaku rezervaciju možete besplatno otkazati u roku od 72 sata od trenutka rezervacije; nakon toga vrijede uvjeti otkazivanja navedeni na stranici broda.
 - **Politika otkazivanja:** Svaki Pružatelj jahti može postaviti vlastite uvjete otkazivanja (npr. fleksibilno, umjereno, strogo). Ove politike određuju na koji povrat imate pravo ovisno o tome koliko unaprijed otkažete u odnosu na početak najma. Primjerice, politika može glasiti: "Besplatno otkazivanje do 30 dana prije prijave; 50% povrata do 7 dana prije; bez povrata ako je manje od 7 dana." Boat4You će prikazati ili uključiti važeću politiku otkazivanja prilikom rezervacije i u potvrdi.
 - **Boat4You naknada za uslugu:** U mnogim slučajevima Boat4You naknada za uslugu (ako je posebno naplaćena) **nije povratna** ako vi otkažete, jer pokriva već pružene usluge Platforme. Međutim, ako otkažete dovoljno unaprijed, možemo vratiti naknadu po vlastitom nahođenju ili ako to zahtijevaju uvjeti promocije.
 - **Postupak:** Za otkazivanje koristite funkciju otkazivanja na Platformi u svom korisničkom sučelju ili zatražite otkazivanje putem e-maila Boat4You podršci. Datum i vrijeme kada primimo vaš zahtjev određuju vrijeme otkazivanja (sva vremena računaju se prema lokalnom vremenu lokacije jahte, osim ako nije drugačije navedeno).
