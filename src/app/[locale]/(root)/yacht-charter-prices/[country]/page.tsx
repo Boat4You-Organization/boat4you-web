@@ -11,6 +11,7 @@ import { PRICE_GUIDE_HUB_PATH, priceGuideBySlug, priceGuidePath } from '@/config
 import { routing } from '@/i18n/routing';
 import { guideBaseLanding, guideLandings, loadPriceGuide } from '@/utils/server/priceGuide';
 import { buildMetadata, localizedUrl } from '@/utils/static/buildMetadata';
+import { displayPlaceName } from '@/utils/static/croatianPlaceNames';
 import { serializeJsonLd } from '@/utils/static/jsonLd';
 import { Crumb } from '@/views/Models/ModelsBreadcrumb';
 import { modelsFaqSchema } from '@/views/Models/ModelsFaq';
@@ -89,7 +90,8 @@ const PriceGuidePage = async ({ params }: PriceGuidePageProps) => {
     factsBaseGroups(data.facts).then(groups =>
       Promise.all(
         groups.map(async g => ({
-          label: g.label,
+          // The catalogue's spelling may lack the diacritics ("Marina Kastela", R32).
+          label: displayPlaceName(g.label),
           count: g.count,
           href: await guideBaseLanding(landings, g.label, g.dids, locale),
         }))
