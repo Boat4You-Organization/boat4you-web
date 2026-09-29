@@ -1,7 +1,7 @@
 import 'server-only';
 
-import { AllSearchParams } from '@/config/form-models.config';
 import { YACHT_PAGE_SIZE } from '@/config/constants.config';
+import { AllSearchParams } from '@/config/form-models.config';
 import { Currency } from '@/models/user.model';
 import { YachtModelShortInfo } from '@/models/yacht.model';
 import { fetchYachts } from '@/services/yacht.service';
@@ -44,8 +44,8 @@ export const fetchLandingListing = async (
 
   const page = landingPageNumber(params.page) ?? 1;
   const windowSize = BASE_DIVERSITY_PAGES * YACHT_PAGE_SIZE;
-  const { page: _page, ...firstPage } = params;
-  const result = await fetchYachts(yachtFetchParams(firstPage as AllSearchParams, true, windowSize), currency, locale, {
+  const firstPage: AllSearchParams = { ...params, page: undefined };
+  const result = await fetchYachts(yachtFetchParams(firstPage, true, windowSize), currency, locale, {
     revalidate,
   });
   const ordered = diversifyByBase(result.content ?? [], BASE_CAP, CARD_WINDOW);
