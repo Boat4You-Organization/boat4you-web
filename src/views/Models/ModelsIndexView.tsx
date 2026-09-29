@@ -73,6 +73,7 @@ const ModelsIndexView = async ({ locale, catalog, breadcrumb }: ModelsIndexViewP
           <p className={styles.body}>{t('index.choose2')}</p>
           <p className={styles.body}>{t('index.choose3')}</p>
           <p className={styles.body}>{t('index.choose4')}</p>
+          <p className={styles.body}>{t('index.choose5')}</p>
         </div>
       </section>
     </article>

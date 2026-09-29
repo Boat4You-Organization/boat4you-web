@@ -58,6 +58,9 @@ const ContactExpectSection = () => {
         </ul>
 
         <Typography variant="body1" className={styles.hours}>
+          {t('expect.outro')}
+        </Typography>
+        <Typography variant="body1" className={styles.hours}>
           {t('expect.hours')}
         </Typography>
       </div>
