@@ -63,6 +63,23 @@ export const LANGUAGE_LABEL_MAP = {
   [Language.DUTCH]: 'Dutch',
 } as const;
 
+/**
+ * Each language in its own words — the one list a visitor can read whatever
+ * page language they landed on (audit 29.9.2026, R54: a German visitor on the
+ * English site had to recognise "German").
+ */
+export const LANGUAGE_NATIVE_NAME_MAP: Record<Language, string> = {
+  [Language.ENGLISH]: 'English',
+  [Language.FRENCH]: 'Français',
+  [Language.GERMAN]: 'Deutsch',
+  [Language.PORTUGUESE]: 'Português',
+  [Language.ITALIAN]: 'Italiano',
+  [Language.SPANISH]: 'Español',
+  [Language.CROATIAN]: 'Hrvatski',
+  [Language.POLISH]: 'Polski',
+  [Language.DUTCH]: 'Nederlands',
+};
+
 export const LANGUAGE_ARRAY = Object.values(Language);
 
 export const supportedLocales = LANGUAGE_ARRAY.map(code => code.toLowerCase());

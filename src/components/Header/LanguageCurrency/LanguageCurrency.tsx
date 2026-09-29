@@ -12,7 +12,7 @@ import Select from '@/components/Select/Select';
 import LanguageIcon from '@/components/SvgIcons/Language';
 import currencies from '@/config/currencies.config';
 import { usePathname } from '@/i18n/navigation';
-import { Currency, Language } from '@/models/user.model';
+import { Currency, LANGUAGE_ARRAY, LANGUAGE_NATIVE_NAME_MAP, Language } from '@/models/user.model';
 import colors from '@/styles/themes/colors';
 import useQueryParams from '@/utils/hooks/useQueryParams';
 import useToggleState from '@/utils/hooks/useToggleState';
@@ -42,17 +42,8 @@ const LanguageCurrency = ({ language, currency, id }: LanguageCurrencyProps) => 
   const [selectedCurrency, setSelectedCurrency] = useState<Currency>(currentCurrency);
   const [tempSelectedCurrency, setTempSelectedCurrency] = useState<Currency>(currentCurrency);
 
-  const locales = [
-    { id: Language.ENGLISH, label: t('languageModal.languages.en') },
-    { id: Language.FRENCH, label: t('languageModal.languages.fr') },
-    { id: Language.GERMAN, label: t('languageModal.languages.de') },
-    { id: Language.PORTUGUESE, label: t('languageModal.languages.pt') },
-    { id: Language.ITALIAN, label: t('languageModal.languages.it') },
-    { id: Language.SPANISH, label: t('languageModal.languages.es') },
-    { id: Language.CROATIAN, label: t('languageModal.languages.hr') },
-    { id: Language.POLISH, label: t('languageModal.languages.pl') },
-    { id: Language.DUTCH, label: t('languageModal.languages.nl') },
-  ];
+  // Native names — the same list as the phone drawer (R54).
+  const locales = LANGUAGE_ARRAY.map(code => ({ id: code, label: LANGUAGE_NATIVE_NAME_MAP[code] }));
 
   useEffect(() => {
     const currentLocale = locale.toUpperCase() as Language;
