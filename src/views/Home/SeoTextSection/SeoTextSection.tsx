@@ -37,9 +37,10 @@ const SeoTextSection = async () => {
       <p className={styles.paragraph}>{t('seoSection.closing')}</p>
       <p className={styles.linksLabel}>{t('seoSection.linksLabel')}</p>
       <ul className={styles.links}>
+        {/* Type-only searches are noindex (B04) — nofollow like the type cards (R59). */}
         {SEARCH_LINKS.map(link => (
           <li key={link.key}>
-            <Link href={link.href} className={styles.link}>
+            <Link href={link.href} rel="nofollow" className={styles.link}>
               {links[link.key]}
             </Link>
           </li>
