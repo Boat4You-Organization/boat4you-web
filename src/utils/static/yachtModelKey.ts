@@ -1,3 +1,5 @@
+import { isOperatorName } from '@/utils/static/operatorNames';
+
 /**
  * Pure (no fetch) identity rules for the /yachts model pages.
  *
@@ -25,20 +27,11 @@ const MANUFACTURER_ALIASES: { canonical: string; matches: RegExp }[] = [
   { canonical: 'Fountaine Pajot', matches: /^fountaine[\s-]*pajot/i },
 ];
 
-/** Makers that name no model family: placeholders, a vessel type
- *  ("Motor Sailer") and charter operators whose rows rename other yards'
- *  boats ("Sunsail 454", "Moorings 4500" are Leopard builds). Folded form. */
-const EXCLUDED_MANUFACTURERS = new Set([
-  'unknown',
-  'custom made',
-  'custom',
-  'other',
-  'motor sailer',
-  'sunsail',
-  'the moorings',
-  'moorings',
-  'more charter d o o',
-]);
+/** Makers that name no model family: placeholders and a vessel type
+ *  ("Motor Sailer"). Folded form. Charter operators ("Sunsail 454",
+ *  "Moorings 4500" are Leopard builds; "Odisej Ltd") are no maker either —
+ *  operatorNames.ts, the one list for that rule. */
+const EXCLUDED_MANUFACTURERS = new Set(['unknown', 'custom made', 'custom', 'other', 'motor sailer']);
 
 /** A model core made only of these words is a vessel type ("Gulet",
  *  "Motor Yacht", "Catamaran"), not a model — no page for it. */
@@ -99,11 +92,12 @@ export const foldName = (value?: string | null): string =>
 
 export const slugifyName = (value: string): string => foldName(value).replace(/\s+/g, '-');
 
-/** Display brand for a raw manufacturer name, or null for placeholders. */
+/** Display brand for a raw manufacturer name, or null for placeholders and
+ *  charter operators (never shown as a boat's brand, never a /yachts hub). */
 export const canonicalManufacturer = (raw?: string | null): string | null => {
   const name = (raw ?? '').replace(/\s+/g, ' ').trim();
 
-  if (!name || EXCLUDED_MANUFACTURERS.has(foldName(name))) return null;
+  if (!name || EXCLUDED_MANUFACTURERS.has(foldName(name)) || isOperatorName(name)) return null;
 
   const alias = MANUFACTURER_ALIASES.find(a => a.matches.test(name));
 

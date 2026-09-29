@@ -14,6 +14,7 @@ import { fetchWithRetry } from '@/utils/server/fetchWithRetry';
 import { guardInquiry, inquiryFingerprint } from '@/utils/server/inquiryGuard';
 import { authFetch } from '@/utils/static/authFetch';
 import { getBoatImageBaseUrl } from '@/utils/static/imageUtils';
+import { isOperatorName } from '@/utils/static/operatorNames';
 import { createYachtQueryParams } from '@/utils/static/queryParams';
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -110,7 +111,14 @@ export async function getSingleYacth(
     throw new Error(`Yacht API answered ${response.status} for "${slug}"`);
   }
 
-  return (await response.json()) as YachtModel;
+  const yacht = (await response.json()) as YachtModel;
+
+  // Owner rule: a charter operator the partner delivers as the manufacturer
+  // ("Odisej Ltd") never reaches the page — not the photo alt text, the RSC
+  // payload, the PDF nor the Product brand (operatorNames.ts).
+  if (isOperatorName(yacht.manufacturerName)) yacht.manufacturerName = '';
+
+  return yacht;
 }
 
 export async function getYachtBrochureUrl(state: unknown, slug: string): Promise<BrochureResult> {

@@ -10,6 +10,7 @@ import {
 } from '@/models/catalogue.model';
 import { PaginatedResponse } from '@/types/response.type';
 import { brandHubsWithin } from '@/utils/server/modelCatalog';
+import { isOperatorName } from '@/utils/static/operatorNames';
 import { PageableParams, createResourceParams } from '@/utils/static/queryParams';
 import { canonicalManufacturer, slugifyName } from '@/utils/static/yachtModelKey';
 
@@ -43,7 +44,12 @@ export async function getManufacturers(
       throw new Error(`Failed to fetch manufacturers: ${response.status}`);
     }
 
-    return response.json();
+    const page = (await response.json()) as PaginatedResponse<ManufacturerModel>;
+
+    // A charter operator listed as a manufacturer ("Odisej Ltd", "Sunsail")
+    // is no brand to filter by, and its name must not reach the page
+    // (operatorNames.ts).
+    return { ...page, content: (page.content ?? []).filter(m => !isOperatorName(m.name)) };
   } catch {
     return {
       content: [],
