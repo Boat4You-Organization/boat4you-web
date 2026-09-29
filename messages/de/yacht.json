@@ -58,6 +58,8 @@
   "crewedDescription": "Eine Yacht mit Crew bietet Komfort und Service mit einer professionellen Besatzung an Bord.",
   "reserve": "Reservieren",
   "inquireNow": "Jetzt anfragen",
+  "fromPerWeek": "Ab {price} / Woche",
+  "bookingTakesMinutes": "Die Buchung dauert nur 3 Minuten",
   "extrasAdded": "Zu Ihrer Reservierung hinzugefügt. Sie werden bei der Yacht-Abholung belastet.",
   "noOffersAvailable": "Derzeit sind keine Angebote verfügbar.",
   "preReserved": "Vorgemerkt",

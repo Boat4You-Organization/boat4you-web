@@ -42,15 +42,8 @@ const BoatCalendarForm = ({ yacht, variant }: BoatCalendarFormProps) => {
   const tCommon = useTranslations('common');
   const tServices = useTranslations('yacht.servicesList');
   const { slug, inquireOnly } = yacht;
-  const {
-    selectedExtrasInPrice,
-    selectedExtrasAtBase,
-    totalPriceEur,
-    totalPriceInfo,
-    clientPriceInfo,
-    clientPricePerDayEur,
-    clientPricePerDayInfo,
-  } = calculatedPrice ?? {};
+  const { selectedExtrasInPrice, selectedExtrasAtBase, totalPriceEur, totalPriceInfo, clientPriceInfo } =
+    calculatedPrice ?? {};
 
   const { handleReservation } = useReservation({ yacht });
   const [isModalOpen, toggleModal] = useToggleState();
@@ -68,12 +61,6 @@ const BoatCalendarForm = ({ yacht, variant }: BoatCalendarFormProps) => {
   // never "0 €" next to Reserve.
   const isCalculatedPrice =
     calculatedPrice && Object.keys(calculatedPrice).length > 0 && isPositivePrice(totalPriceEur);
-
-  const formattedClientPricePerDay = formatPriceWithCurrency({
-    clientPriceEur: clientPricePerDayEur,
-    clientPriceInfo: clientPricePerDayInfo,
-    locale,
-  });
 
   const formattedTotalPrice = formatPriceWithCurrency({
     clientPriceEur: totalPriceEur,
@@ -175,19 +162,23 @@ const BoatCalendarForm = ({ yacht, variant }: BoatCalendarFormProps) => {
     [setMultipleParams]
   );
 
-  const handleReserveClick = () => {
-    if (gate === 'blocked') return; // defensive — the button is disabled anyway
+  const hasValidDateSelection = startDate && endDate;
+  // The chosen dates can be reserved right now: a FREE offer with a price.
+  const isReservable = gate === 'reserve' && !!isCalculatedPrice;
 
-    if (gate === 'inquiry') {
-      toggleBoatInquiryModalOpen();
+  // Reserved, blocked or unpriced dates used to leave "Inquire now" / "Reserve"
+  // permanently disabled — no way to ask about the boat at all (audit
+  // 29.9.2026, R25). Every non-reservable selection now opens the inquiry
+  // form, pre-filled with the chosen dates (it reads them from the URL).
+  const handleReserveClick = () => {
+    if (isReservable) {
+      handleReservation();
 
       return;
     }
 
-    handleReservation();
+    toggleBoatInquiryModalOpen(true);
   };
-
-  const hasValidDateSelection = startDate && endDate;
 
   return (
     <>
@@ -255,7 +246,17 @@ const BoatCalendarForm = ({ yacht, variant }: BoatCalendarFormProps) => {
               {t('crewedDescription')}
             </Typography>
           )}
-          {hasValidDateSelection ? (
+          {hasValidDateSelection && !isReservable && (
+            <Button size="large" fullWidth onClick={handleReserveClick} disabled={isCalculatingPrice}>
+              {t('inquireNow')}
+            </Button>
+          )}
+          {!hasValidDateSelection && (
+            <Button size="large" fullWidth onClick={toggleModal}>
+              {t('chooseDates')}
+            </Button>
+          )}
+          {hasValidDateSelection && isReservable && (
             <Tooltip
               placement="top"
               arrow
@@ -275,7 +276,7 @@ const BoatCalendarForm = ({ yacht, variant }: BoatCalendarFormProps) => {
                   <Stack mt={1.5} gap={0.5}>
                     <Stack direction="row" justifyContent="space-between" gap={3}>
                       <Typography variant="body2" color={colors.black300}>
-                        Total length of rental
+                        {tCommon('totalLengthOfRental')}
                       </Typography>
                       <Typography variant="body2" fontWeight={700} color={colors.white}>
                         {computedNumberOfDays} {daysText}
@@ -283,23 +284,23 @@ const BoatCalendarForm = ({ yacht, variant }: BoatCalendarFormProps) => {
                     </Stack>
                     <Stack direction="row" justifyContent="space-between" gap={3}>
                       <Typography variant="body2" color={colors.black300}>
-                        Yacht pick-up
+                        {tCommon('yachtPickup')}
                       </Typography>
                       <Typography variant="body2" fontWeight={700} color={colors.white}>
-                        {startDate ? dayjs(startDate).format('D MMMM YYYY') : '-'}
+                        {startDate ? DateTime.formatLongWithoutDay(dayjs(startDate), locale) : '-'}
                       </Typography>
                     </Stack>
                     <Stack direction="row" justifyContent="space-between" gap={3}>
                       <Typography variant="body2" color={colors.black300}>
-                        Yacht drop-off
+                        {tCommon('yachtDropOff')}
                       </Typography>
                       <Typography variant="body2" fontWeight={700} color={colors.white}>
-                        {endDate ? dayjs(endDate).format('D MMMM YYYY') : '-'}
+                        {endDate ? DateTime.formatLongWithoutDay(dayjs(endDate), locale) : '-'}
                       </Typography>
                     </Stack>
                   </Stack>
                   <Typography variant="body2" fontWeight={700} color={colors.blue400} mt={1.5}>
-                    Only takes 3 minutes to book it
+                    {t('bookingTakesMinutes')}
                   </Typography>
                 </Box>
               }
@@ -320,20 +321,11 @@ const BoatCalendarForm = ({ yacht, variant }: BoatCalendarFormProps) => {
               }}
             >
               <Box sx={{ width: '100%' }}>
-                <Button
-                  size="large"
-                  fullWidth
-                  onClick={handleReserveClick}
-                  disabled={variant === 'inner' ? !isCalculatedPrice || isSelectedOfferBlocked : false}
-                >
-                  {variant === 'inner' && gate === 'reserve' ? t('reserve') : t('inquireNow')}
+                <Button size="large" fullWidth onClick={handleReserveClick} disabled={isCalculatingPrice}>
+                  {variant === 'inner' ? t('reserve') : t('inquireNow')}
                 </Button>
               </Box>
             </Tooltip>
-          ) : (
-            <Button size="large" fullWidth onClick={toggleModal}>
-              {t('chooseDates')}
-            </Button>
           )}
         </Stack>
 
@@ -374,7 +366,7 @@ const BoatCalendarForm = ({ yacht, variant }: BoatCalendarFormProps) => {
               {calculatedPrice && (
                 <Stack direction="row" justifyContent="space-between">
                   <Typography variant="body1">
-                    {formattedClientPricePerDay} x {computedNumberOfDays} {daysText}
+                    {tCommon('priceForXDays', { days: String(computedNumberOfDays) })}
                   </Typography>
                   <Typography variant="body1">
                     {startDate && endDate ? `${formattedTotalPrice}` : tCommon('priceOnRequest')}
@@ -391,6 +383,7 @@ const BoatCalendarForm = ({ yacht, variant }: BoatCalendarFormProps) => {
                       ? formatPriceWithCurrency({
                           clientPriceEur: priceEur,
                           clientPriceInfo: priceInfo,
+                          locale,
                         })
                       : tCommon(unpricedExtraLabelKey(paymentType));
 
@@ -445,6 +438,7 @@ const BoatCalendarForm = ({ yacht, variant }: BoatCalendarFormProps) => {
                     ? formatPriceWithCurrency({
                         clientPriceEur: priceEur,
                         clientPriceInfo: priceInfo,
+                        locale,
                       })
                     : tCommon(unpricedExtraLabelKey(paymentType));
 
@@ -488,7 +482,7 @@ const BoatCalendarForm = ({ yacht, variant }: BoatCalendarFormProps) => {
                               {tServices('refundable-security-deposit')}
                             </Typography>
                             <Typography variant="body1" whiteSpace="nowrap" sx={{ flexShrink: 0 }}>
-                              {formatPriceWithCurrency({ clientPriceEur: yacht.securityDeposit })}
+                              {formatPriceWithCurrency({ clientPriceEur: yacht.securityDeposit, locale })}
                             </Typography>
                           </Stack>
                         )}

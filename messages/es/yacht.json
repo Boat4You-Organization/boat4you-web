@@ -58,6 +58,8 @@
   "crewedDescription": "Un yacht con tripulación ofrece comodidad y servicio con una tripulación profesional a bordo.",
   "reserve": "Reservar",
   "inquireNow": "Consultar ahora",
+  "fromPerWeek": "Desde {price} / semana",
+  "bookingTakesMinutes": "Reservar solo lleva 3 minutos",
   "extrasAdded": "Agregado a tu reserva. Se te cobrará en la recogida del yacht.",
   "noOffersAvailable": "No hay ofertas disponibles en este momento.",
   "preReserved": "Pre-reservado",

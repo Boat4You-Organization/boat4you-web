@@ -58,6 +58,8 @@
   "crewedDescription": "A crewed yacht offers comfort and service with a professional crew onboard.",
   "reserve": "Reserve",
   "inquireNow": "Inquire now",
+  "fromPerWeek": "From {price} / week",
+  "bookingTakesMinutes": "Booking takes only 3 minutes",
   "extrasAdded": "Added to your reservation. You will be charged at the yacht pick-up.",
   "noOffersAvailable": "No offers available at the moment.",
   "preReserved": "Pre-reserved",

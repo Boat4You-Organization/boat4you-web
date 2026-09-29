@@ -58,6 +58,8 @@
   "crewedDescription": "Posada broda osigurava udobnost i vrhunsku uslugu tijekom plovidbe.",
   "reserve": "Rezerviraj",
   "inquireNow": "Pošaljite upit",
+  "fromPerWeek": "Od {price} / tjedan",
+  "bookingTakesMinutes": "Rezervacija traje samo 3 minute",
   "extrasAdded": "Dodano na Vašu rezervaciju. Naplata će biti izvršena prilikom preuzimanja jahte.",
   "noOffersAvailable": "Nema ponuda dostupnih u ovom trenutku.",
   "preReserved": "Pred-rezervirano",

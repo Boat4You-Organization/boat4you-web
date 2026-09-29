@@ -94,6 +94,10 @@ const BoatMobileNavigation = ({ yacht }: BoatMobileNavigationProps) => {
     handleReservation();
   };
 
+  // Dates the boat cannot be reserved on still deserve an answer: the inquiry
+  // form, pre-filled with the chosen dates (it reads them from the URL).
+  const handleInquireClick = () => toggleBoatInquiryModalOpen(true);
+
   const handlePriceDetailOpen = () => {
     toggleModal();
     setModalVariant('price');
@@ -175,78 +179,94 @@ const BoatMobileNavigation = ({ yacht }: BoatMobileNavigationProps) => {
     <Form defaultValues={initialValues} onSubmit={handleSubmit} id={BOAT_CALENDAR_FORM} resetDefaultValues>
       {({ watch }) => {
         const { startDate, endDate } = watch();
+        const hasDates = !!(startDate && endDate);
         // Chosen dates the boat cannot be reserved on: the desktop form says
-        // so, the phone bar only greyed out "Reserve" (audit B48). Say it, and
-        // turn the button into "Change dates".
+        // so, the phone bar only greyed out "Reserve" (audit B48). Say it —
+        // without a price above the notice (audit 29.9.2026, R25) — and offer
+        // "Change dates" or an inquiry for those dates.
         const isUnavailableSelection =
-          !!(startDate && endDate) &&
-          !isInquireFlow &&
-          !isCalculatingPrice &&
-          (isSelectedOfferBlocked || !isCalculatedPrice);
+          hasDates && !isInquireFlow && !isCalculatingPrice && (isSelectedOfferBlocked || !isCalculatedPrice);
 
         return (
           <>
             <Box className={revealed ? `${styles.container} ${styles.revealed}` : styles.container}>
-              <Stack direction="row" justifyContent="space-between">
-                <Typography variant="body1">{t('totalPrice')}</Typography>
-                {isInquireFlow ? (
-                  <Typography variant="h4" component="p" color={colors.green500}>
-                    {tYacht('priceOnInquiry')}
-                  </Typography>
-                ) : !isSelectedOfferBlocked && !isCalculatedPrice ? (
-                  <Typography variant="h4" component="p">
-                    -
-                  </Typography>
-                ) : (
-                  <Typography
-                    variant="h4"
-                    component="p"
-                    color={colors.green500}
-                    className={styles.price}
-                    onClick={handlePriceDetailOpen}
-                  >
-                    {formattedFullPrice}
-                  </Typography>
-                )}
-              </Stack>
-              {isUnavailableSelection && (
-                <Typography variant="body2" color={colors.red500} textAlign="center" role="status" sx={{ mb: 1 }}>
+              {/* No dates chosen yet: the calculated total belongs to the
+                  first bookable week, so it is a "from" price — never a
+                  period the visitor did not pick (the bar used to print
+                  "today – today + 7" beside it, audit 29.9.2026, R24). */}
+              {!hasDates && !isInquireFlow ? (
+                <Typography
+                  variant="h4"
+                  component="p"
+                  color={colors.green500}
+                  className={isCalculatedPrice ? styles.price : undefined}
+                  onClick={isCalculatedPrice ? handlePriceDetailOpen : undefined}
+                >
+                  {isCalculatedPrice ? tYacht('fromPerWeek', { price: formattedFullPrice }) : t('priceOnRequest')}
+                </Typography>
+              ) : isUnavailableSelection ? (
+                <Typography variant="body1" color={colors.red500} textAlign="center" role="status" sx={{ mb: 1 }}>
                   {tYacht('notAvailableShort')}
                 </Typography>
+              ) : (
+                <Stack direction="row" justifyContent="space-between">
+                  <Typography variant="body1">{t('totalPrice')}</Typography>
+                  {isInquireFlow ? (
+                    <Typography variant="h4" component="p" color={colors.green500}>
+                      {tYacht('priceOnInquiry')}
+                    </Typography>
+                  ) : !isCalculatedPrice ? (
+                    <Typography variant="h4" component="p">
+                      -
+                    </Typography>
+                  ) : (
+                    <Typography
+                      variant="h4"
+                      component="p"
+                      color={colors.green500}
+                      className={styles.price}
+                      onClick={handlePriceDetailOpen}
+                    >
+                      {formattedFullPrice}
+                    </Typography>
+                  )}
+                </Stack>
               )}
               <Stack spacing={1.5}>
                 <Button
                   size="large"
                   classes={{ root: styles.rootButton }}
-                  className={`${styles.customButton} ${!(startDate && endDate) ? styles.placeholder : ''}`}
+                  className={`${styles.customButton} ${!hasDates ? styles.placeholder : ''}`}
                   onClick={handleChangeDatesOpen}
                   fullWidth
                 >
-                  <Calendar size={24} fill={startDate && endDate ? colors.black300 : colors.black200} />
+                  <Calendar size={24} fill={hasDates ? colors.black300 : colors.black200} />
                   {/* In the page's language: HR read "10 Oct 2026 - 17 Oct 2026". */}
-                  {startDate && endDate ? (
+                  {hasDates ? (
                     <>
                       {DateTime.formatShortWithoutDay(startDate, locale)} -{' '}
                       {DateTime.formatShortWithoutDay(endDate, locale)}
                     </>
                   ) : (
-                    <>
-                      {DateTime.formatShortWithoutDay(DateTime.now(), locale)} -{' '}
-                      {DateTime.formatShortWithoutDay(DateTime.addWeek(DateTime.now()), locale)}
-                    </>
+                    tYacht('chooseDates')
                   )}
                 </Button>
                 {isUnavailableSelection ? (
-                  <Button size="large" fullWidth onClick={handleChangeDatesOpen}>
-                    {t('changeDates')}
-                  </Button>
+                  <Stack direction="row" spacing={1.5}>
+                    <Button size="large" fullWidth variant="outlined" onClick={handleChangeDatesOpen}>
+                      {t('changeDates')}
+                    </Button>
+                    <Button size="large" fullWidth onClick={handleInquireClick}>
+                      {tYacht('inquireNow')}
+                    </Button>
+                  </Stack>
                 ) : (
                   <Button
                     size="large"
                     id={BOAT_CALENDAR_FORM}
                     fullWidth
                     onClick={handleReservationClick}
-                    disabled={isSelectedOfferBlocked || (!isInquireFlow && !isCalculatedPrice)}
+                    disabled={!hasDates || isSelectedOfferBlocked || (!isInquireFlow && !isCalculatedPrice)}
                   >
                     {isInquireFlow ? tYacht('inquireNow') : tYacht('reserve')}
                   </Button>

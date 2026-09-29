@@ -58,6 +58,8 @@
   "crewedDescription": "Jacht z załogą oferuje komfort i obsługę profesjonalnej załogi na pokładzie.",
   "reserve": "Zarezerwuj",
   "inquireNow": "Zapytaj teraz",
+  "fromPerWeek": "Od {price} / tydzień",
+  "bookingTakesMinutes": "Rezerwacja zajmuje tylko 3 minuty",
   "extrasAdded": "Dodano do Twojej rezerwacji. Opłata zostanie pobrana przy odbiorze jachtu.",
   "noOffersAvailable": "Brak dostępnych ofert w tej chwili.",
   "preReserved": "Wstępnie zarezerwowane",

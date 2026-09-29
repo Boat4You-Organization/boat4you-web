@@ -58,6 +58,8 @@
   "crewedDescription": "Um iate com tripulação oferece conforto e serviço com uma tripulação profissional a bordo.",
   "reserve": "Reservar",
   "inquireNow": "Consultar agora",
+  "fromPerWeek": "Desde {price} / semana",
+  "bookingTakesMinutes": "A reserva demora apenas 3 minutos",
   "extrasAdded": "Adicionado à sua reserva. Você será cobrado na retirada do iate.",
   "noOffersAvailable": "Nenhuma oferta disponível no momento.",
   "preReserved": "Pré-reservado",

@@ -58,6 +58,8 @@
   "crewedDescription": "Un yacht avec équipage offre confort et service avec un équipage professionnel à bord.",
   "reserve": "Réserver",
   "inquireNow": "Demander maintenant",
+  "fromPerWeek": "À partir de {price} / semaine",
+  "bookingTakesMinutes": "La réservation ne prend que 3 minutes",
   "extrasAdded": "Ajouté à votre réservation. Vous serez facturé lors de la prise en charge du yacht.",
   "noOffersAvailable": "Aucune offre disponible pour le moment.",
   "preReserved": "Pré-réservé",
