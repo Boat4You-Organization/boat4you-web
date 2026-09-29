@@ -158,13 +158,13 @@ Kratki odgovor: **obično nisu**, osim ako ste posebno rezervirali čarter s kom
 
 **Bareboat čarter**: Nema posade (vi ste skiper). Nema dodatnih troškova za posadu.
 
-**Skippered čarter**: Ako zatražite skipera, njegova naknada se dodaje na bareboat cijenu. Naknada se često naplaćuje po danu (npr. €150–€200/dan, ovisno o lokaciji i kvalifikacijama, plus troškovi opskrbe). Kada vam damo ponudu za skippered čarter, obično ćemo posebno navesti naknadu skipera. Također ste odgovorni za hranu skipera tijekom čartera i, u nekim slučajevima, za rezerviranu kabinu kao ljubaznost.
+**Čarter sa skiperom**: Ako zatražite skipera, njegova naknada se dodaje na bareboat cijenu. Naknada se često naplaćuje po danu (npr. 150–200 €/dan, ovisno o lokaciji i kvalifikacijama, plus troškovi opskrbe). Kada vam damo ponudu za čarter sa skiperom, obično ćemo posebno navesti naknadu skipera. Također ste odgovorni za hranu skipera tijekom čartera i, u nekim slučajevima, za rezerviranu kabinu kao ljubaznost.
 
-**Crewed čarter (potpuno posadene jahte)**: Ovdje čarter dolazi s full-time posadom (kapetan, a možda i dodatna posada poput kuhara, hostese, palubara, ovisno o jahti). Za luksuzne posade i gulete, plaće posade su uglavnom uključene u čartersku naknadu. Ne plaćate posadu izravno (osim napojnica). Međutim, stavke poput **APA (Advance Provisioning Allowance)** pokrivaju opskrbu posade i ostale troškove.
+**Čarter s posadom (jahte s punom posadom)**: Ovdje čarter dolazi s full-time posadom (kapetan, a možda i dodatna posada poput kuhara, hostese, palubara, ovisno o jahti). Za luksuzne posade i gulete, plaće posade su uglavnom uključene u čartersku naknadu. Ne plaćate posadu izravno (osim napojnica). Međutim, stavke poput **APA (Advance Provisioning Allowance)** pokrivaju opskrbu posade i ostale troškove.
 
 **Velike jahte / Mega jahte**: Uvijek dolaze s posadom, a cijena uključuje njihove plaće. Ne očekuje se dodatno plaćanje posade, iako je APA dodatna, kao što je spomenuto.
 
-Ako na našoj stranici vidite cijenu npr. za 45ft jedrilicu "od €3,000/tjedan", to podrazumijeva bareboat (bez skipera). Ako želite skipera, može stajati "skiper +€1,050/tjedan" (primjer). Isto vrijedi za kuhara ili hostesu – to su dodatne usluge.
+Ako na našoj stranici vidite cijenu npr. za 45ft jedrilicu "od 3.000 €/tjedan", to podrazumijeva bareboat (bez skipera). Ako želite skipera, može stajati "skiper +1.050 €/tjedan" (primjer). Isto vrijedi za kuhara ili hostesu – to su dodatne usluge.
 
 **Važno**: Ako imate skipera ili posadu, očekuje se da pokrivate njihovu hranu i piće tijekom čartera. Ako jedete na brodu, pripremate ili osiguravate obroke i za njih. Ako jedete vani, pozivanje skipera i pokrivanje računa je poželjno, ali nije obavezno svaki put – možete dogovoriti aranžmane.
 
@@ -176,7 +176,7 @@ Skiper/posada su odvojeni od osnovne cijene čartera u većini slučajeva. Izuze
 
 **Sigurnosni depozit** je standardni dio gotovo svih čartera, slično depozitu za štetu kod najma automobila. To je **povratni depozit** koji ostavljate čarterskoj kompaniji prije polaska i vraća se na kraju putovanja ako je jahta vraćena u dobrom stanju bez štete ili gubitaka. Služi za pokriće franšize osiguranja i manjih šteta.
 
-**Iznos**: Varira prema veličini i vrijednosti jahte, obično nekoliko stotina do nekoliko tisuća eura. Npr. 40ft jedrilica može imati depozit €2,000, dok veći katamaran €4,000+. Luksuzne jahte s posadom ponekad nemaju depozit ili imaju manji "damage waiver".
+**Iznos**: Varira prema veličini i vrijednosti jahte, obično nekoliko stotina do nekoliko tisuća eura. Npr. 40ft jedrilica može imati depozit 2.000 €, dok veći katamaran 4.000 € i više. Luksuzne jahte s posadom ponekad nemaju depozit ili imaju manji "damage waiver".
 
 **Način plaćanja**: Obično nije potrebno davati gotovinu. Depozit se često naplaćuje kao **pre-autorizacija kartice** (hold) pri check-inu. Iznos se blokira, ali se ne tereći osim ako je potrebno. Ponekad, ako hold nije moguć, depozit se može platiti gotovinom ili transferom, ali kartica je najčešća.
 
@@ -192,7 +192,7 @@ Skiper/posada su odvojeni od osnovne cijene čartera u većini slučajeva. Izuze
 - Plovite pažljivo i prijavite štete odmah
 - Pri povratku, zajedno s osobljem provjerite stanje
 
-**Osiguranje depozita**: Mnogi klijenti uzimaju **Damage Waiver**. Može smanjiti depozit ili pokriti gubitak. Npr. za dodatni iznos (€100–€300), operator može ponuditi smanjen depozit (€300 umjesto €3,000).
+**Osiguranje depozita**: Mnogi klijenti uzimaju **Damage Waiver**. Može smanjiti depozit ili pokriti gubitak. Npr. za dodatni iznos (100–300 €), operator može ponuditi smanjen depozit (300 € umjesto 3.000 €).
 
 Sigurnosni depozit je potpuno povratan i služi kao sigurnosna mreža. Većina čartera završava s punim povratom depozita.
 
@@ -200,7 +200,7 @@ Sigurnosni depozit je potpuno povratan i služi kao sigurnosna mreža. Većina �
 
 **APA** znači **Advance Provisioning Allowance**, fond prikupljen unaprijed za troškove čartera s posadom. Najčešće se primjenjuje na **luksuzne jahte s posadom**. APA je novac koji kapetan koristi za opskrbu i gorivo jahte tijekom vašeg čartera.
 
-**Iznos**: Obično 20–30% od cijene čartera. Npr. čarter mega jahte €30,000/tjedan → 30% APA = €9,000. Točna vrijednost ovisi o jahti i dogovoru.
+**Iznos**: Obično 20–30% od cijene čartera. Npr. čarter mega jahte 30.000 €/tjedan → 30% APA = 9.000 €. Točna vrijednost ovisi o jahti i dogovoru.
 
 **Plaćanje i upravljanje**: APA se plaća prije čartera. Sredstva idu na poseban račun kojim upravlja kapetan ili purser.
 
@@ -221,19 +221,19 @@ APA osigurava transparentnost i fleksibilnost – plaćate samo ono što potroš
 
 Kada planirate budžet čartera, imajte na umu dodatne troškove koji nisu uključeni u osnovnu cijenu:
 
-**Transit Log / Charter Pack / Final Cleaning**: Obavezna naknada za čišćenje, posteljinu i osnovne potrepštine (€100–€300).
+**Transit Log / Charter Pack / Final Cleaning**: Obavezna naknada za čišćenje, posteljinu i osnovne potrepštine (100 €–300 €).
 
-**Turističke pristojbe ili dozvole**: Npr. Hrvatska €1–€2 po osobi/dan, BVI cruising permit itd.
+**Turističke pristojbe ili dozvole**: Npr. Hrvatska 1 €–2 € po osobi/dan, BVI cruising permit itd.
 
-**Gorivo**: Nije uključeno. Trošak ovisi o korištenju (€50–€150 za tjedan jedrilice, više za motorne jahte).
+**Gorivo**: Nije uključeno. Trošak ovisi o korištenju (50 €–150 € za tjedan jedrilice, više za motorne jahte).
 
-**Vez i marina**: Naknade za vezove ili pristajanje u marinu. Raspon €20–€300/noć ovisno o lokaciji.
+**Vez i marina**: Naknade za vezove ili pristajanje u marinu. Raspon 20 €–300 €/noć ovisno o lokaciji.
 
 **Opskrba (hrana i piće)**: Troškove hrane pokrivate sami. Ako imate posadu, morate osigurati i njih.
 
-**Opcionalna dodatna oprema**: Npr. tenderski motor, SUP, kajaci, Wi-Fi (€30–€50/tjedan), vodeni sportovi (€100–€200/tjedan).
+**Opcionalna dodatna oprema**: Npr. tenderski motor, SUP, kajaci, Wi-Fi (30 €–50 €/tjedan), vodeni sportovi (100 €–200 €/tjedan).
 
-**Naknade skipera ili posade**: Plaća se posebno. Skiper ~€150/dan (+hrana), hostesa ~€130/dan itd.
+**Naknade skipera ili posade**: Plaća se posebno. Skiper ~150 €/dan (+hrana), hostesa ~130 €/dan itd.
 
 **Damage Waiver osiguranje (opcionalno)**: Plaćate dodatno da smanjite depozit.
 
@@ -241,14 +241,14 @@ Kada planirate budžet čartera, imajte na umu dodatne troškove koji nisu uklju
 
 **Primjer tjednog bareboat čartera**:
 
-- Čarter: €3,000
-- Charter pack: €180
-- Turistička pristojba: €63
-- Gorivo: €150
-- Vezovi: €150
-- Hrana i piće: €600
-- Wi-Fi: €50
-- **Ukupno**: ~€4,193 (bez napojnica i depozita)
+- Čarter: 3.000 €
+- Charter pack: 180 €
+- Turistička pristojba: 63 €
+- Gorivo: 150 €
+- Vezovi: 150 €
+- Hrana i piće: 600 €
+- Wi-Fi: 50 €
+- **Ukupno**: ~4.193 € (bez napojnica i depozita)
 
 S **Boat4You**, nema skrivenih troškova – samo poznate naknade i varijabilni troškovi koje ćemo vam pomoći procijeniti.
 
@@ -284,7 +284,7 @@ _Savjet: prostor na brodovima je ograničen – koristite mekane torbe (lakše z
 
 **Opskrba (provisioning)** znači nabavljanje hrane i pića za vašu plovidbu. Način opskrbe ovisi o tipu čartera (bareboat ili s posadom) i vašim željama, ali općenito:
 
-**Bareboat ili Skippered čarter (vi nabavljate)**:
+**Bareboat čarter ili čarter sa skiperom (vi nabavljate)**:
 
 - **Ponijeti od kuće**: omiljene grickalice ili suhe proizvode koji dobro putuju.
 - **Kupovina u bazi**: većina marina je blizu trgovina. Obično provodite sat-dva prije ili odmah nakon ukrcaja na prvu kupovinu. Savjetuje se plan obroka unaprijed.
@@ -310,7 +310,7 @@ Opskrba je fleksibilna. **Možete kuhati sve obroke na brodu ili jesti vani – 
 
 Mnogi žele ostati povezani, i dobra vijest: **da, većina čartera omogućuje internet**, ali možda nije brza ili neograničena kao kod kuće. Opcije:
 
-**Wi-Fi uređaji na brodu**: Ponekad ponuđen kao **dodatna opcija** – 3G/4G router koji koristi lokalnu mrežu. Naknada je obično flat za određeni paket podataka ili neograničeno za tjedan (npr. €30–€50 u Hrvatskoj, $150 BVI).
+**Wi-Fi uređaji na brodu**: Ponekad ponuđen kao **dodatna opcija** – 3G/4G router koji koristi lokalnu mrežu. Naknada je obično flat za određeni paket podataka ili neograničeno za tjedan (npr. 30–50 € u Hrvatskoj, 150 USD na BVI).
 
 **Osobni mobilni podatci**: Ako imate otključan telefon s roamingom ili lokalnu SIM karticu + hotspot.
 
@@ -332,7 +332,7 @@ Ponekad je moguće, ali zahtijeva planiranje. **Boat4You je načelno pet-friendl
 
 **Sigurnost i udobnost ljubimca**: Ponesite **prsluk za psa**, netting po palubi, planirajte WC potrebe (astro-turf ili pup-pads).
 
-**Čišćenje i šteta**: Pripremite se na dodatno čišćenje. Oštri nokti mogu oštetiti palubu. Čarteri obično traže veći depozit ili naknadu (€100–€300) za dodatno čišćenje.
+**Čišćenje i šteta**: Pripremite se na dodatno čišćenje. Oštri nokti mogu oštetiti palubu. Čarteri obično traže veći depozit ili naknadu (100 €–300 €) za dodatno čišćenje.
 
 **Pravila marina i destinacija**: Provjerite uvozne ili karantenske zakone. Osigurajte cjepiva i EU/medicinske papire za ljubimca.
 
@@ -434,7 +434,7 @@ Check-in (ukrcaj) i check-out (iskrcaj) određuju početak i kraj čartera. Tipi
 
 Razumijemo da ponekad letovi ili osobni planovi ne odgovaraju standardnim vremenima check-in/check-out. Nastojimo biti fleksibilni, ali postoje određena ograničenja:
 
-**Rani check-in (ukrcaj)**: Mnoge čarter kompanije nude **"rani ukrcaj" uz dodatnu naknadu** (ovisno o dostupnosti). Na primjer, brod može biti spreman već oko 13:00 umjesto 17:00. Cijena obično iznosi **€100–€200**. Ako je brod u matičnoj marini i prethodni čarter se vratio u petak, često mogu prioritetno očistiti brod za vas.
+**Rani check-in (ukrcaj)**: Mnoge čarter kompanije nude **"rani ukrcaj" uz dodatnu naknadu** (ovisno o dostupnosti). Na primjer, brod može biti spreman već oko 13:00 umjesto 17:00. Cijena obično iznosi **100 €–200 €**. Ako je brod u matičnoj marini i prethodni čarter se vratio u petak, često mogu prioritetno očistiti brod za vas.
 
 Ako rani check-in nije dostupan ili ne želite dodatni trošak, možete doći ranije u subotu. Često omogućuju papirologiju i brifing čim je brod spreman. Možda ćete morati pričekati, ali obično su jahte očišćene sredinom poslijepodneva.
 

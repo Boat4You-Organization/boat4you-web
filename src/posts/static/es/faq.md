@@ -186,7 +186,7 @@ El **saldo restante** (el otro 50-70%) se debe pagar más cerca de su fecha de s
 
 Aceptamos **transferencias bancarias** y **principales tarjetas de crédito/débito** para los pagos. La transferencia bancaria es común para montos mayores, mientras que las tarjetas de crédito brindan comodidad y a veces un poco de protección de compra adicional. Tenga en cuenta que algunos operadores de chárter pueden agregar un pequeño recargo por pagos con tarjeta de crédito debido a las tarifas de procesamiento, pero le informaremos si ese es el caso. Todas las transacciones se facturan y documentan para su tranquilidad.
 
-**Ejemplo típico**: Suponga que su chárter cuesta \$5,000. Podría pagar el 50% (\$2,500) ahora para reservarlo, y el 50% restante (\$2,500) se pagaría uno o dos meses antes de su viaje. **Boat4You** le enviará recordatorios para el pago final, y siempre puede pagar antes si prefiere quitárselo de encima.
+**Ejemplo típico**: Suponga que su chárter cuesta 5.000 €. Podría pagar el 50% (2.500 €) ahora para reservarlo, y el 50% restante (2.500 €) se pagaría uno o dos meses antes de su viaje. **Boat4You** le enviará recordatorios para el pago final, y siempre puede pagar antes si prefiere quitárselo de encima.
 
 **Monedas**: **Boat4You** a menudo puede aceptar pagos en diferentes monedas (USD, EUR, etc.) dependiendo de la reserva. Por lo general, le cotizaremos en una moneda lógica – por ejemplo, los chárteres en Europa típicamente en Euros, los chárteres en el Caribe a menudo en USD. Si prefiere pagar en una moneda específica o mediante un método específico, solo pregunte y haremos todo lo posible para adaptarnos.
 
@@ -218,13 +218,13 @@ La respuesta corta es: **generalmente no**, a menos que haya reservado específi
 
 **Chárter sin tripulación (Bareboat)**: No incluye tripulación (usted es el patrón). Por lo tanto, no hay costo adicional por tripulación en el precio.
 
-**Chárter con patrón (Skippered)**: Si solicita un patrón, la tarifa del patrón se agregará además del precio del barco sin tripulación. Las tarifas de patrón a menudo se cobran por día (por ejemplo, €150-€200 por día, dependiendo de la ubicación y las cualificaciones, más el aprovisionamiento). Cuando le damos una cotización para un chárter con patrón, generalmente detallamos la tarifa del patrón por separado para que quede claro. Usted también es responsable de la comida del patrón durante el chárter y, en algunos casos, de un camarote designado para él, como cortesía.
+**Chárter con patrón**: Si solicita un patrón, la tarifa del patrón se agregará además del precio del barco sin tripulación. Las tarifas de patrón a menudo se cobran por día (por ejemplo, 150-200 € por día, dependiendo de la ubicación y las cualificaciones, más el aprovisionamiento). Cuando le damos una cotización para un chárter con patrón, generalmente detallamos la tarifa del patrón por separado para que quede claro. Usted también es responsable de la comida del patrón durante el chárter y, en algunos casos, de un camarote designado para él, como cortesía.
 
 **Chárter con tripulación (Yates totalmente tripulados)**: Este es el escenario donde el chárter viene con una tripulación a tiempo completo (capitán, y quizás tripulación adicional como un chef, azafata, marinero de cubierta dependiendo del yate). Para yates de lujo con tripulación y goletas, los salarios de la tripulación generalmente están incluidos en la tarifa del chárter. Usted no paga a la tripulación directamente (excepto las propinas al final). Sin embargo, elementos como el **APA (Asignación de Provisión por Adelantado)** cubrirán el aprovisionamiento de la tripulación y otros gastos.
 
 **Yates grandes / Megayates**: Siempre tienen tripulación y, de hecho, su precio es por un servicio con tripulación (salarios de la tripulación incluidos). No se esperaría que pague salarios de tripulación además de esto – aunque el APA es adicional como se mencionó.
 
-Por lo tanto, si ve un precio en nuestro sitio para un velero de 45 pies y dice "desde €3,000/semana", eso asume sin tripulación (sin patrón). Si desea un patrón, podríamos decir "patrón +€1,050/semana" (por ejemplo). Lo mismo ocurre con un cocinero o azafata contratados – esos son servicios adicionales.
+Por lo tanto, si ve un precio en nuestro sitio para un velero de 45 pies y dice "desde 3.000 €/semana", eso asume sin tripulación (sin patrón). Si desea un patrón, podríamos decir "patrón +1.050 €/semana" (por ejemplo). Lo mismo ocurre con un cocinero o azafata contratados – esos son servicios adicionales.
 
 **Nota importante**: Cuando tiene un patrón o tripulación contratada, se espera que cubra su comida y bebida durante el chárter. Esencialmente, si come a bordo, también prepararía o proporcionaría comidas para ellos. O si sale a comer, invitar a su patrón (y cubrir la cuenta) es apreciado, aunque no es obligatorio siempre – pueden discutir los arreglos.
 
@@ -236,7 +236,7 @@ Los servicios de patrón/tripulación son independientes de la tarifa base del c
 
 Un **Depósito de Seguridad** es una parte estándar de prácticamente todos los chárteres de yates, muy parecido al depósito por daños cuando alquila un coche. Es un **depósito reembolsable** que usted deja con la compañía de chárter antes de partir con el yate, y se le devuelve al final del viaje siempre y cuando el barco sea devuelto en buenas condiciones sin daños ni pérdidas. El propósito es cubrir la franquicia del seguro y daños menores si ocurren.
 
-**Monto**: El monto del depósito varía según el tamaño y valor del yate, generalmente oscilando entre unos pocos cientos y varios miles de euros (o dólares). Por ejemplo, un velero de 40 pies podría tener un depósito de €2,000, mientras que un catamarán grande podría tener €4,000 o más. Los yates de lujo con tripulación a veces no tienen depósito (ya que tienen tripulación encargándose de todo), o podrían tener una "exención de daños" más pequeña en su lugar.
+**Monto**: El monto del depósito varía según el tamaño y valor del yate, generalmente oscilando entre unos pocos cientos y varios miles de euros. Por ejemplo, un velero de 40 pies podría tener un depósito de 2.000 €, mientras que un catamarán grande podría tener 4.000 € o más. Los yates de lujo con tripulación a veces no tienen depósito (ya que tienen tripulación encargándose de todo), o podrían tener una "exención de daños" más pequeña en su lugar.
 
 **Método de Pago**: Por lo general, no tiene que entregar efectivo. El depósito a menudo se toma como una **pre-autorización de tarjeta de crédito** (retención) en la base durante el _check-in_. Bloquearán el monto en su tarjeta, pero en realidad no lo cargarán a menos que sea necesario. En algunos casos, especialmente si no puede hacer una retención, podrían aceptar el depósito en efectivo o mediante transferencia, pero la tarjeta de crédito es lo más común.
 
@@ -252,7 +252,7 @@ Un **Depósito de Seguridad** es una parte estándar de prácticamente todos los
 - Navegue con cuidado, siga las reglas y, si ocurre algún daño, repórtelo de inmediato
 - Al regresar, haga el _check-out_ junto con el personal y asegúrese de estar de acuerdo con los hallazgos
 
-**Seguro de Depósito**: Muchos clientes optan por una **Exención de Daños** o seguro de depósito. Esto puede reducir el monto del depósito o cubrirlo si pierde el depósito. Por ejemplo, por una tarifa adicional (no reembolsable, generalmente €100-€300 dependiendo del barco), algunos operadores ofrecen un esquema de depósito reducido – podría pagar €300 y luego solo dejar, por ejemplo, €500 en lugar de €3000 como depósito.
+**Seguro de Depósito**: Muchos clientes optan por una **Exención de Daños** o seguro de depósito. Esto puede reducir el monto del depósito o cubrirlo si pierde el depósito. Por ejemplo, por una tarifa adicional (no reembolsable, generalmente 100-300 € dependiendo del barco), algunos operadores ofrecen un esquema de depósito reducido – podría pagar 300 € y luego solo dejar, por ejemplo, 500 € en lugar de 3.000 € como depósito.
 
 El depósito de seguridad es totalmente reembolsable y está ahí solo como una red de seguridad para el barco. Trate el yate con cuidado y lo recuperará en su totalidad. La gran mayoría de nuestros chárteres terminan con el depósito completo devuelto. Los daños graves son bastante raros.
 
@@ -262,7 +262,7 @@ El depósito de seguridad es totalmente reembolsable y está ahí solo como una 
 
 Cuando alquila un yate totalmente tripulado bajo **términos MYBA** (Asociación Mediterránea de Corredores de Yates) o similares, la tarifa de chárter que paga cubre el alquiler del yate y los salarios de la tripulación, pero generalmente excluye gastos variables como alimentos, bebidas, combustible, tarifas de amarre, etc. En lugar de pedirle constantemente que pague por cosas durante el viaje, estiman esos costos por adelantado y recaudan un APA para que el capitán pueda pagar las cosas en su nombre sin problemas.
 
-**Monto**: El APA se calcula típicamente como un porcentaje de la tarifa del chárter, generalmente alrededor del **20-30%** del precio del chárter. Por ejemplo, si alquila un megayate por €30,000 por semana, un APA del 30% sería de €9,000. El porcentaje exacto depende del yate o del acuerdo.
+**Monto**: El APA se calcula típicamente como un porcentaje de la tarifa del chárter, generalmente alrededor del **20-30%** del precio del chárter. Por ejemplo, si alquila un megayate por 30.000 € por semana, un APA del 30% sería de 9.000 €. El porcentaje exacto depende del yate o del acuerdo.
 
 **Pago y Gestión**: Usted pagaría el monto del APA antes del chárter (generalmente al mismo tiempo que el pago final, o a veces directamente a la gerencia del yate justo antes del chárter). Estos fondos se destinan a una cuenta separada que el capitán o sobrecargo mantiene para realizar todos los pagos necesarios durante el viaje.
 
@@ -289,34 +289,34 @@ El APA es una cuenta de gastos prepagada para su chárter de yate con tripulaci�
 
 Al planificar su presupuesto de chárter, es importante considerar los gastos no incluidos en la tarifa base del chárter. La tarifa del chárter generalmente cubre el alquiler del yate con su equipo estándar y seguro, pero hay algunos costos adicionales comunes. Aquí hay un desglose de los costos adicionales típicos que debe presupuestar:
 
-**Log de Tránsito / Paquete de Chárter / Limpieza Final**: La mayoría de los chárteres tienen una tarifa obligatoria para la limpieza final del yate, la ropa de cama y algunos suministros básicos. Esto generalmente oscila entre **€100 y €300** dependiendo del tamaño del yate. A menudo cubre cosas como la limpieza final, un juego de ropa de cama, gas para cocinar y administración.
+**Log de Tránsito / Paquete de Chárter / Limpieza Final**: La mayoría de los chárteres tienen una tarifa obligatoria para la limpieza final del yate, la ropa de cama y algunos suministros básicos. Esto generalmente oscila entre **100 € y 300 €** dependiendo del tamaño del yate. A menudo cubre cosas como la limpieza final, un juego de ropa de cama, gas para cocinar y administración.
 
-**Impuestos Turísticos o Permisos de Navegación**: En algunos países, hay un impuesto turístico por persona o un permiso de navegación. Por ejemplo, Croacia tiene un impuesto turístico (alrededor de €1-€2 por persona por día). De manera similar, las Islas Vírgenes Británicas tienen tarifas de permiso de navegación, etc. Por lo general, son pequeños, pero deben pagarse en la base o incluirse en su factura.
+**Impuestos Turísticos o Permisos de Navegación**: En algunos países, hay un impuesto turístico por persona o un permiso de navegación. Por ejemplo, Croacia tiene un impuesto turístico (alrededor de 1 €-2 € por persona por día). De manera similar, las Islas Vírgenes Británicas tienen tarifas de permiso de navegación, etc. Por lo general, son pequeños, pero deben pagarse en la base o incluirse en su factura.
 
-**Combustible**: Recibirá el barco con el tanque lleno de combustible y se espera que lo devuelva lleno (o se le cobrará por el reabastecimiento). El combustible no está incluido en la tarifa del chárter. La cantidad que gaste en combustible depende de su uso – si navega mucho y usa poco el motor, apenas podría pagar algo. Para una semana en un velero, el combustible podría ser **€50-€150**; para un yate a motor podría ser mucho más (cientos o miles, dependiendo de las horas de motor).
+**Combustible**: Recibirá el barco con el tanque lleno de combustible y se espera que lo devuelva lleno (o se le cobrará por el reabastecimiento). El combustible no está incluido en la tarifa del chárter. La cantidad que gaste en combustible depende de su uso – si navega mucho y usa poco el motor, apenas podría pagar algo. Para una semana en un velero, el combustible podría ser **50 €-150 €**; para un yate a motor podría ser mucho más (cientos o miles, dependiendo de las horas de motor).
 
-**Tarifas de Amarre y Puerto Deportivo**: Cuando se aloja en puertos deportivos o boyas de amarre (aparte de su base de origen para la noche de inicio/final), habrá tarifas. Anclar en bahías suele ser gratuito, pero si desea atracar en un puerto deportivo para disfrutar de energía en tierra, recarga de agua, restaurantes, etc., hay un costo. Los precios varían ampliamente: un puerto pequeño podría cobrar **€20 por noche** por un barco de 40 pies, mientras que los destinos populares (St. Tropez, Ibiza, etc.) pueden cobrar **unos pocos cientos por noche**.
+**Tarifas de Amarre y Puerto Deportivo**: Cuando se aloja en puertos deportivos o boyas de amarre (aparte de su base de origen para la noche de inicio/final), habrá tarifas. Anclar en bahías suele ser gratuito, pero si desea atracar en un puerto deportivo para disfrutar de energía en tierra, recarga de agua, restaurantes, etc., hay un costo. Los precios varían ampliamente: un puerto pequeño podría cobrar **20 € por noche** por un barco de 40 pies, mientras que los destinos populares (St. Tropez, Ibiza, etc.) pueden cobrar **unos pocos cientos por noche**.
 
 **Aprovisionamiento (Comida y Bebida)**: El costo de sus compras y comidas corre por su cuenta. Si está navegando sin tripulación, abastecerá el barco con alimentos, bocadillos y bebidas. Esto puede ser tan bajo o alto como desee – podría presupuestar como lo haría para una semana normal de comidas de vacaciones. Si tiene un patrón o tripulación, recuerde que también debe aprovisionar para ellos.
 
-**Extras Opcionales (equipo/juguetes)**: Muchos yates ofrecen complementos opcionales. Por ejemplo: motor fuera de borda para el bote auxiliar, tablas de _stand-up paddle_, kayaks, equipo de pesca, unidades de Wi-Fi, etc. Estos conllevan tarifas de alquiler adicionales. El Wi-Fi, por ejemplo, podría ser **€30-€50/semana** para un _router_ en un barco sin tripulación. Los juguetes acuáticos pueden oscilar entre **€100-€200 cada uno por semana**.
+**Extras Opcionales (equipo/juguetes)**: Muchos yates ofrecen complementos opcionales. Por ejemplo: motor fuera de borda para el bote auxiliar, tablas de _stand-up paddle_, kayaks, equipo de pesca, unidades de Wi-Fi, etc. Estos conllevan tarifas de alquiler adicionales. El Wi-Fi, por ejemplo, podría ser **30 €-50 €/semana** para un _router_ en un barco sin tripulación. Los juguetes acuáticos pueden oscilar entre **100 €-200 € cada uno por semana**.
 
-**Tarifas de Patrón o Tripulación**: Si contrata un patrón, azafata, chef, etc., se pagan por separado. Un patrón cuesta aproximadamente **€150/día** (más comida), la azafata quizás **€130/día**, etc., aunque las tarifas varían según la ubicación.
+**Tarifas de Patrón o Tripulación**: Si contrata un patrón, azafata, chef, etc., se pagan por separado. Un patrón cuesta aproximadamente **150 €/día** (más comida), la azafata quizás **130 €/día**, etc., aunque las tarifas varían según la ubicación.
 
-**Seguro de Exención de Daños (Opcional)**: En algunos casos, puede optar por un seguro no reembolsable en lugar de un gran depósito de seguridad. Por ejemplo, pague **€250** para reducir su depósito de seguridad de €3000 a €500. Estos €250 son un costo adicional (y no se devuelven) pero limitan su responsabilidad.
+**Seguro de Exención de Daños (Opcional)**: En algunos casos, puede optar por un seguro no reembolsable en lugar de un gran depósito de seguridad. Por ejemplo, pague **250 €** para reducir su depósito de seguridad de 3.000 € a 500 €. Estos 250 € son un costo adicional (y no se devuelven) pero limitan su responsabilidad.
 
 **Propinas**: Si bien no son "obligatorias", si tiene tripulación profesional (patrón, azafata, especialmente tripulaciones completas en yates de lujo), es costumbre dejar una propina al final del chárter por un buen servicio. Para los chárteres con tripulación, **5-15% de la tarifa del chárter** es común como propina. Para un patrón contratado en un barco sin tripulación, la gente a menudo da una propina de quizás el salario de un día más o menos si quedaron contentos.
 
 **Estimación de ejemplo para un chárter de una semana sin tripulación**:
 
-- Tarifa del chárter: €3,000
-- Paquete de chárter obligatorio (limpieza, ropa de cama): €180
-- Impuesto turístico: €1.5/persona/día × 6 personas × 7 días = ~€63
-- Combustible: €150 (uso moderado del motor)
-- Amarres: si 3 noches en puertos deportivos a ~€50 cada uno = €150
-- Comestibles y bebidas: €600 para 6 personas
-- Wi-Fi opcional: €50
-- **Total**: ~€4,193 (excluyendo cenas fuera y depósito de seguridad que es reembolsable)
+- Tarifa del chárter: 3.000 €
+- Paquete de chárter obligatorio (limpieza, ropa de cama): 180 €
+- Impuesto turístico: 1,50 €/persona/día × 6 personas × 7 días = ~63 €
+- Combustible: 150 € (uso moderado del motor)
+- Amarres: si 3 noches en puertos deportivos a ~50 € cada uno = 150 €
+- Comestibles y bebidas: 600 € para 6 personas
+- Wi-Fi opcional: 50 €
+- **Total**: ~4.193 € (excluyendo cenas fuera y depósito de seguridad que es reembolsable)
 
 Nuestro objetivo es asegurarnos de que conozca estos posibles extras por adelantado, para que no lo tome por sorpresa. Detallaremos las tarifas obligatorias en su contrato y le aconsejaremos sobre los presupuestos típicos para combustible y amarre según su plan. Con **Boat4You**, puede esperar que no haya costos ocultos – solo los complementos conocidos y sus propios gastos variables que le ayudaremos a estimar.
 
@@ -380,7 +380,7 @@ El aprovisionamiento es tan flexible como usted quiera que sea. **Puede cocinar 
 
 Mantenerse conectado en el mar es una preocupación común, y la buena noticia es **sí, puede tener acceso a internet en la mayoría de los chárteres**, aunque podría no ser tan ilimitado o rápido como en casa. Hay algunas formas de obtener Wi-Fi a bordo:
 
-**Dispositivos Wi-Fi a Bordo**: Muchas compañías de chárter ofrecen un _router_ Wi-Fi portátil o _hotspot_ como un **extra opcional**. Por lo general, se trata de un _router_ 3G/4G que utiliza la red celular local para crear una señal Wi-Fi en el barco. Por lo general, paga una tarifa plana por un cierto paquete de datos o datos ilimitados durante la semana. Por ejemplo, una base en Croacia podría ofrecer un alquiler de _router_ Wi-Fi por **€30-€50 por la semana** que le da, por ejemplo, 5-10 GB de datos. En las Islas Vírgenes Británicas, algunos barcos vienen con una caja de Wi-Fi y cobran alrededor de **\$150 por uso ilimitado** durante la semana.
+**Dispositivos Wi-Fi a Bordo**: Muchas compañías de chárter ofrecen un _router_ Wi-Fi portátil o _hotspot_ como un **extra opcional**. Por lo general, se trata de un _router_ 3G/4G que utiliza la red celular local para crear una señal Wi-Fi en el barco. Por lo general, paga una tarifa plana por un cierto paquete de datos o datos ilimitados durante la semana. Por ejemplo, una base en Croacia podría ofrecer un alquiler de _router_ Wi-Fi por **30-50 € por la semana** que le da, por ejemplo, 5-10 GB de datos. En las Islas Vírgenes Británicas, algunos barcos vienen con una caja de Wi-Fi y cobran alrededor de **150 USD por uso ilimitado** durante la semana.
 
 El alcance de estos dispositivos Wi-Fi suele ser suficiente para cubrir todo el barco. Funcionan cuando está dentro del alcance de las torres celulares (cerca de las costas). En áreas muy remotas o lejos en el mar, la señal podría caer. La velocidad depende de la red móvil local. Está bien para correos electrónicos, navegación, WhatsApp e incluso _streaming_ ligero, pero no espere hacer videoconferencias pesadas o _streaming_ 4K sin problemas.
 
@@ -406,7 +406,7 @@ Traer a su amigo peludo a unas vacaciones de navegación es posible en algunos c
 
 **Seguridad y Comodidad de la Mascota**: Si trae una mascota, querrá garantizar su seguridad a bordo. Esto incluye tener un **chaleco salvavidas para mascotas** (hacen chalecos salvavidas para perros con asas, para que pueda levantarlos del agua si caen por la borda). También podría instalar redes a lo largo de las líneas de vida del yate como precaución adicional. También deberá planificar sus necesidades de baño – muchas personas traen un trozo de césped artificial o almohadillas para cachorros y entrenan a su perro para que use el área de proa con eso.
 
-**Limpieza y Daños**: Esté preparado para hacer un poco de limpieza adicional. Los perros mojados y el agua salada pueden ensuciar el barco, por lo que podría estar limpiando las superficies más. Además, las garras de las mascotas pueden potencialmente rayar las cubiertas de madera o teca, por lo que es aconsejable mantener sus uñas recortadas. Debido a esto, el operador de chárter generalmente requiere un **depósito de seguridad o una tarifa de limpieza mayor** para cubrir la limpieza adicional o cualquier daño menor. Hemos visto tarifas que oscilan entre **€100 y €300** extra por limpieza cuando hay una mascota a bordo.
+**Limpieza y Daños**: Esté preparado para hacer un poco de limpieza adicional. Los perros mojados y el agua salada pueden ensuciar el barco, por lo que podría estar limpiando las superficies más. Además, las garras de las mascotas pueden potencialmente rayar las cubiertas de madera o teca, por lo que es aconsejable mantener sus uñas recortadas. Debido a esto, el operador de chárter generalmente requiere un **depósito de seguridad o una tarifa de limpieza mayor** para cubrir la limpieza adicional o cualquier daño menor. Hemos visto tarifas que oscilan entre **100 € y 300 €** extra por limpieza cuando hay una mascota a bordo.
 
 **Reglas de Puertos Deportivos y Destinos**: Verifique las reglas de los países o islas que visitará.
 
@@ -444,7 +444,7 @@ Asegúrese de que sus planes de viaje se alineen (por ejemplo, no reserve un vue
 
 Entendemos que a veces los horarios de vuelo o los planes personales no se alinean perfectamente con los horarios estándar de _check-in/check-out_ de la compañía de chárter. Nuestro objetivo es ser lo más complacientes posible, pero existen algunas restricciones:
 
-**Check-in Anticipado (Embarque)**: Muchas compañías de chárter ofrecen un **servicio de "embarque anticipado" por una tarifa adicional** (sujeto a disponibilidad). Esto podría garantizar que su barco esté listo para la 1 PM del día del _check-in_ en lugar de las 5 PM. Por lo general, podría costar alrededor de **€100-€200**. Si el barco está en el puerto deportivo de origen de la flota y el chárter anterior regresó el viernes, a menudo pueden priorizar su limpieza primero para usted.
+**Check-in Anticipado (Embarque)**: Muchas compañías de chárter ofrecen un **servicio de "embarque anticipado" por una tarifa adicional** (sujeto a disponibilidad). Esto podría garantizar que su barco esté listo para la 1 PM del día del _check-in_ en lugar de las 5 PM. Por lo general, podría costar alrededor de **100 €-200 €**. Si el barco está en el puerto deportivo de origen de la flota y el chárter anterior regresó el viernes, a menudo pueden priorizar su limpieza primero para usted.
 
 Si una opción de _check-in_ anticipado no está disponible oficialmente o no desea el gasto adicional, aún puede presentarse en la base antes el sábado. A menudo le permitirán hacer el papeleo y la sesión informativa tan pronto como el barco esté listo. Es posible que tenga que esperar si llega demasiado temprano, pero muchas veces, los barcos se limpian a media tarde.
 
