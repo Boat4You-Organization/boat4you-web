@@ -15,7 +15,7 @@ import { YachtModel } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
 import copyToClipboard from '@/utils/static/copyToClipboard';
 import { getBoatImageUrl } from '@/utils/static/imageUtils';
-import { toTitleCase } from '@/utils/static/toTitleCase';
+import { toTitleCase, yachtLabel } from '@/utils/static/toTitleCase';
 
 import styles from './BoatShareModal.module.scss';
 
@@ -57,7 +57,7 @@ const BoatShareModal = ({ open, onOpen, onClose, yacht }: BoatShareModalProps) =
         )}
         <Stack direction="column" spacing={0.5}>
           <Typography variant="h4" color={colors.black950}>
-            {yacht.model} | {toTitleCase(yacht.name)}
+            {yachtLabel(yacht.model, toTitleCase(yacht.name))}
           </Typography>
           {yacht.location && (
             <Stack direction="row" alignItems="center" spacing={1}>

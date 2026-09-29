@@ -2,6 +2,7 @@ import { getTranslations } from 'next-intl/server';
 
 import { Link } from '@/i18n/navigation';
 import { FleetEntry, FleetPage, fleetPagePath } from '@/utils/static/fleetIndex';
+import { nameRepeatsModel } from '@/utils/static/toTitleCase';
 import { yachtsIndexPath } from '@/utils/static/yachtModelKey';
 
 import styles from './FleetDirectory.module.scss';
@@ -79,7 +80,9 @@ const FleetDirectory = async ({ slice }: { slice: FleetPage }) => {
                       and the locale prefix are unaffected. */}
                   <Link href={`/boat/${entry.slug}`} prefetch={false} className={styles.link}>
                     <span className={styles.model}>{entry.modelName}</span>
-                    <span className={styles.name}>{entry.name}</span>
+                    {!nameRepeatsModel(entry.modelName, entry.name) && (
+                      <span className={styles.name}>{entry.name}</span>
+                    )}
                     {specs && <span className={styles.specs}>{specs}</span>}
                   </Link>
                 </li>

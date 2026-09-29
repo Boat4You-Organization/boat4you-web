@@ -25,7 +25,7 @@ import { useYachtAvailability } from '@/utils/hooks/useYachtAvailability';
 import DateTime from '@/utils/static/DateTime';
 import { formatPriceWithCurrency, isPositivePrice, unpricedExtraLabelKey } from '@/utils/static/formatPriceCurrency';
 import { resolveGate } from '@/utils/static/offerStatusGate';
-import { toTitleCase } from '@/utils/static/toTitleCase';
+import { toTitleCase, yachtLabel } from '@/utils/static/toTitleCase';
 import { handleNextMonth, handlePrevMonth, toggleBoatInquiryModalOpen } from '@/valtio/yacht/yacht.actions';
 import { useYachtStore } from '@/valtio/yacht/yacht.store';
 
@@ -262,7 +262,7 @@ const BoatCalendarForm = ({ yacht, variant }: BoatCalendarFormProps) => {
               title={
                 <Box sx={{ p: 0.5 }}>
                   <Typography variant="body1" fontWeight={700} color={colors.white}>
-                    {yacht.model} | {toTitleCase(yacht.name)}
+                    {yachtLabel(yacht.model, toTitleCase(yacht.name))}
                   </Typography>
                   {yacht.location && (
                     <Stack direction="row" alignItems="center" gap={0.75} mt={0.5}>

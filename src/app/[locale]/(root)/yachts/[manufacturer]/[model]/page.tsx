@@ -22,7 +22,7 @@ import { buildMetadata, localizedUrl } from '@/utils/static/buildMetadata';
 import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
 import { serializeJsonLd } from '@/utils/static/jsonLd';
 import { computeModelFleetStats } from '@/utils/static/modelFleetStats';
-import { toTitleCase } from '@/utils/static/toTitleCase';
+import { toTitleCase, yachtLabel } from '@/utils/static/toTitleCase';
 import { isModelSlug, manufacturerPath, yachtsIndexPath } from '@/utils/static/yachtModelKey';
 import ModelPageView, { WhereRow } from '@/views/Models/ModelPageView';
 import { Crumb } from '@/views/Models/ModelsBreadcrumb';
@@ -260,7 +260,7 @@ const ModelPage = async ({ params }: ModelPageProps) => {
       '@type': 'ListItem',
       position: i + 1,
       url: localizedUrl(locale as LocaleType, `/boat/${boat.slug}`),
-      name: [toTitleCase(boat.modelName), toTitleCase(boat.name)].filter(Boolean).join(' '),
+      name: yachtLabel(toTitleCase(boat.modelName), toTitleCase(boat.name), ' '),
     })),
   };
 

@@ -42,7 +42,7 @@ import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
 import { getBoatImageUrl } from '@/utils/static/imageUtils';
 import { hasListingPrice, listingPriceDays } from '@/utils/static/listingPrice';
 import { roleGuard } from '@/utils/static/roleGuard';
-import { toTitleCase } from '@/utils/static/toTitleCase';
+import { toTitleCase, yachtLabel } from '@/utils/static/toTitleCase';
 import { toggleYachtSelection } from '@/valtio/yacht/yacht.actions';
 
 import styles from './BoatListingItemCard.module.scss';
@@ -286,7 +286,7 @@ const BoatListingItemCardView = ({
           <CardMedia className={cx(styles.imageWrapper, { [styles.gridView]: isGridView })}>
             <Image
               src={getBoatImageUrl(mainImageId, 800)}
-              alt={`${modelName} ${name || ''} boat image`}
+              alt={`${yachtLabel(modelName, name, ' ')} boat image`}
               fill
               className={styles.image}
               // Mobile thumb is hard-capped at 140px by the scss module (40%,
@@ -387,8 +387,7 @@ const BoatListingItemCardView = ({
                 fontWeight={700}
                 sx={isGridView ? { lineHeight: 1.3, minHeight: '2.6em' } : undefined}
               >
-                {displayModelName}
-                {name ? ` | ${toTitleCase(name)}` : ''}
+                {yachtLabel(displayModelName, toTitleCase(name))}
               </Typography>
               {isAdmin && !isGridView && !isMobile && <Checkbox checked={isSelected} onClick={handleCheckboxClick} />}
             </Stack>

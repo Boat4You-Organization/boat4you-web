@@ -21,7 +21,7 @@ import { getCancellationDisplayState } from '@/utils/static/cancellationUtils';
 import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
 import { generateGoogleMapsLink } from '@/utils/static/googleMapsUtils';
 import { getBoatImageUrl } from '@/utils/static/imageUtils';
-import { toTitleCase } from '@/utils/static/toTitleCase';
+import { toTitleCase, yachtLabel } from '@/utils/static/toTitleCase';
 
 import styles from './ActiveReservationCard.module.scss';
 
@@ -139,7 +139,7 @@ const ActiveReservationCard = ({ reservation }: ActiveReservationCardProps) => {
           />
         </Stack>
         <Typography variant="h2" mt={1}>
-          {modelName} | {toTitleCase(yachtName)}
+          {yachtLabel(modelName, toTitleCase(yachtName))}
         </Typography>
         <Stack
           mt={2.5}

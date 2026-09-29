@@ -15,7 +15,7 @@ import DateTime from '@/utils/static/DateTime';
 import { getCancellationDisplayState } from '@/utils/static/cancellationUtils';
 import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
 import { getBoatImageUrl } from '@/utils/static/imageUtils';
-import { toTitleCase } from '@/utils/static/toTitleCase';
+import { toTitleCase, yachtLabel } from '@/utils/static/toTitleCase';
 
 import styles from './PastReservationCard.module.scss';
 
@@ -101,7 +101,7 @@ const PastReservationCard = ({ reservation }: PastReservationCardProps) => {
               </Typography>
             </Stack>
             <Typography variant="h4" component="h3" mt={1}>
-              {modelName} | {toTitleCase(yachtName)}
+              {yachtLabel(modelName, toTitleCase(yachtName))}
             </Typography>
             <Stack mt={1}>
               <Typography variant="body1">

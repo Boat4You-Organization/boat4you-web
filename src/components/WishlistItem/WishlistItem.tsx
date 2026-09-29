@@ -11,7 +11,7 @@ import colors from '@/styles/themes/colors';
 import useQueryParams from '@/utils/hooks/useQueryParams';
 import useToggleState from '@/utils/hooks/useToggleState';
 import { getBoatImageUrl } from '@/utils/static/imageUtils';
-import { toTitleCase } from '@/utils/static/toTitleCase';
+import { toTitleCase, yachtLabel } from '@/utils/static/toTitleCase';
 
 import styles from './WishlistItem.module.scss';
 
@@ -41,7 +41,7 @@ const WishlistItem = ({ yacht }: WishlistItemProps) => {
           </CardMedia>
           <CardContent className={styles.content}>
             <Typography variant="h3" fontWeight={700} whiteSpace="wrap" className={styles.title}>
-              {yacht.model} | {toTitleCase(yacht.name)}
+              {yachtLabel(yacht.model, toTitleCase(yacht.name))}
             </Typography>
             <Stack direction="row" alignItems="center" gap={1}>
               {yacht.location && (

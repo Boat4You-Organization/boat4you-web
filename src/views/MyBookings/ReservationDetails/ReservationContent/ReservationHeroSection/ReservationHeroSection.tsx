@@ -23,7 +23,7 @@ import {
 import colors from '@/styles/themes/colors';
 import DateTime from '@/utils/static/DateTime';
 import { getCancellationDisplayState } from '@/utils/static/cancellationUtils';
-import { toTitleCase } from '@/utils/static/toTitleCase';
+import { toTitleCase, yachtLabel } from '@/utils/static/toTitleCase';
 
 import styles from './ReservationHeroSection.module.scss';
 
@@ -138,7 +138,7 @@ const ReservationHeroSection = ({ reservationDetails }: ReservationHeroSectionPr
       <Stack direction="column" spacing={0.5}>
         <Stack direction="row" alignItems="center" spacing={1.5} flexWrap="wrap">
           <Typography variant="h2" color={colors.black950}>
-            {modelName} | {toTitleCase(yachtName)}
+            {yachtLabel(modelName, toTitleCase(yachtName))}
           </Typography>
           {hasPendingCancellationRequest ? (
             <StatusChip label={t('cancellationInProgress')} color="warning" />

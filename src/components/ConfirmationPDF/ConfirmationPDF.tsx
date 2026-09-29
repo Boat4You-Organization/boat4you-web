@@ -7,7 +7,7 @@ import { UserModel } from '@/models/user.model';
 import DateTime from '@/utils/static/DateTime';
 import { formatPrice } from '@/utils/static/formatNumber';
 import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
-import { toTitleCase } from '@/utils/static/toTitleCase';
+import { toTitleCase, yachtLabel } from '@/utils/static/toTitleCase';
 
 import {
   renderBuyerSection,
@@ -141,7 +141,7 @@ const ConfirmationPDF = ({ reservationDetails, user, locale }: ConfirmationPDFPr
           title: t.details,
           locale,
           boatNameLabel: t.boatNameLabel,
-          boatName: `${modelName} | ${toTitleCase(yachtName)}`,
+          boatName: yachtLabel(modelName, toTitleCase(yachtName)),
           pickUpLabel: t.pickUp,
           pickUp: locationFrom,
           dateFromLabel: t.dateFromLabel,

@@ -25,7 +25,7 @@ import { YachtModel } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
 import useToggleState from '@/utils/hooks/useToggleState';
 import useYachtPdfDownload from '@/utils/hooks/useYachtPdfDownload';
-import { toTitleCase } from '@/utils/static/toTitleCase';
+import { toTitleCase, yachtLabel } from '@/utils/static/toTitleCase';
 import { useYachtStore } from '@/valtio/yacht/yacht.store';
 
 import styles from './BoatHeroSection.module.scss';
@@ -71,7 +71,7 @@ const BoatHeroSection = ({ yacht }: BoatHeroSectionProps) => {
         >
           <Stack direction="column" spacing={0.5}>
             <Typography component="h1" variant="h2" color={colors.black950}>
-              {yacht.model} | {toTitleCase(yacht.name)}
+              {yachtLabel(yacht.model, toTitleCase(yacht.name))}
             </Typography>
             {heroLocation?.name && (
               <Stack direction="row" alignItems="center" spacing={1} flexWrap="wrap">

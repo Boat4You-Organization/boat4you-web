@@ -7,7 +7,7 @@ import { CatalogModel } from '@/utils/server/modelCatalog';
 import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
 import { getBoatImageBaseUrl } from '@/utils/static/imageUtils';
 import { ModelFleetStats, weeklyPriceEur } from '@/utils/static/modelFleetStats';
-import { toTitleCase } from '@/utils/static/toTitleCase';
+import { toTitleCase, yachtLabel } from '@/utils/static/toTitleCase';
 
 import styles from './Models.module.scss';
 import ModelsBreadcrumb, { Crumb } from './ModelsBreadcrumb';
@@ -199,7 +199,7 @@ const ModelPageView = async ({
             ]
               .filter(Boolean)
               .join(' · ');
-            const title = [toTitleCase(boat.modelName), toTitleCase(boat.name)].filter(Boolean).join(' | ');
+            const title = yachtLabel(toTitleCase(boat.modelName), toTitleCase(boat.name));
 
             return (
               <li key={boat.id} className={styles.card}>

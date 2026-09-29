@@ -1,4 +1,5 @@
 import { TITLE_MAX, cutAtWord, fitsWithBrandSuffix } from '@/utils/static/metaLength';
+import { nameRepeatsModel } from '@/utils/static/toTitleCase';
 
 /**
  * <title> of a boat page within the 70-character SERP window (audit
@@ -73,8 +74,12 @@ export const buildBoatTitle = ({
 }): BoatTitle => {
   const cleanModel = model.replace(/\s+/g, ' ').trim();
   const cleanName = name.replace(/\s+/g, ' ').trim();
-  // "Bavaria Cruiser 40 'Bavaria Cruiser 40'" — a name that repeats the model says nothing.
-  const hasName = !!cleanName && !cleanModel.toLowerCase().includes(cleanName.toLowerCase());
+  // "Bavaria Cruiser 40 'Bavaria Cruiser 40'", "MS Custom Aurum Sky 'M/S Aurum Sky'" — a name
+  // that repeats the model says nothing.
+  const hasName =
+    !!cleanName &&
+    !cleanModel.toLowerCase().includes(cleanName.toLowerCase()) &&
+    !nameRepeatsModel(cleanModel, cleanName);
   const quoted = hasName ? ` '${cleanName}'` : '';
   const yearPart = year ? ` (${year})` : '';
   const withTail = (head: string) => (tail ? `${head} — ${tail}` : head);

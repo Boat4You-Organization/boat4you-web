@@ -34,6 +34,7 @@ import { getBoatImageUrl } from '@/utils/static/imageUtils';
 import { serializeJsonLd } from '@/utils/static/jsonLd';
 import { hasListingPrice, listingPriceDays } from '@/utils/static/listingPrice';
 import { buildSearchLandingPath, isLandingExpressible } from '@/utils/static/searchLandingPath';
+import { yachtLabel } from '@/utils/static/toTitleCase';
 import { ManufacturerLookup, yachtBrandName } from '@/utils/static/yachtBrand';
 import { charterFactsTargetFor } from '@/views/Search/CharterFacts/charterFactsTarget';
 import { ResolvedDestinationProvider } from '@/views/Search/SearchView/ResolvedDestinationContext';
@@ -270,8 +271,8 @@ function buildSearchProductsLd(
   const items = priced.slice(0, PRODUCT_SCHEMA_LIMIT).map((y, idx) => {
     // The page's own locale (audit B31): /de landings listed English boat URLs.
     const yachtUrl = localizedUrl(locale, `/boat/${y.slug}`);
-    const fullName =
-      [y.modelName, y.name].filter(Boolean).join(' ').replace(/\s+/g, ' ').trim() || y.name?.trim() || 'Yacht';
+    // The name only when it adds to the model ("MY Custom Anthea", not "MY Custom Anthea Anthea").
+    const fullName = yachtLabel(y.modelName, y.name, ' ').replace(/\s+/g, ' ').trim() || 'Yacht';
     // The builder, from data (yachtBrand.ts) — not the model's first word,
     // which read "Sun", "Oceanis", "Sunsail" on 32 % of products (B40).
     const brand = yachtBrandName(y, manufacturers);

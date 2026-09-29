@@ -12,6 +12,7 @@ import Photos from '@/components/SvgIcons/Photos';
 import { YachtImage, YachtModel } from '@/models/yacht.model';
 import useToggleState from '@/utils/hooks/useToggleState';
 import { getBoatImageUrl } from '@/utils/static/imageUtils';
+import { yachtLabel } from '@/utils/static/toTitleCase';
 
 import styles from './Gallery.module.scss';
 
@@ -37,13 +38,16 @@ const Gallery = ({ yacht, images, showShareAndFavorite = false, maxDisplayedImag
   // "Image slide 236378" (internal id says nothing to Google Images / AI).
   // Partners often bake the brand into the model ("Lagoon 46") — skip the
   // manufacturer when the model already starts with it, else "Lagoon Lagoon 46".
+  // A charter operator delivered as the manufacturer is blanked where the
+  // payload is fetched (getSingleYacth, operatorNames.ts).
   const manufacturerPrefix =
     yacht?.manufacturerName && !yacht.modelName?.toLowerCase().startsWith(yacht.manufacturerName.toLowerCase())
       ? yacht.manufacturerName
       : undefined;
-  const yachtLabel = [manufacturerPrefix, yacht?.modelName, yacht?.name].filter(Boolean).join(' ');
+  // The name only when it adds to the model ("MY Custom Anthea", not "… Anthea Anthea").
+  const photoLabel = [manufacturerPrefix, yachtLabel(yacht?.modelName, yacht?.name, ' ')].filter(Boolean).join(' ');
   const yachtPhotoLabel = (index: number): string =>
-    t('photoAlt' as never, { label: yachtLabel || 'Yacht', n: String(index + 1) } as never);
+    t('photoAlt' as never, { label: photoLabel || 'Yacht', n: String(index + 1) } as never);
 
   const yachtImages = [...(images || yacht?.yachtImages || [])].sort((a, b) => {
     if (a.mainImage !== b.mainImage) return a.mainImage ? -1 : 1;

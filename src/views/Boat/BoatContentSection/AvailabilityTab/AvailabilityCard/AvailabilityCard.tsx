@@ -10,7 +10,7 @@ import { YachtModel } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
 import { presentAmenities } from '@/utils/static/amenities';
 import { formatPriceWithCurrency, isPositivePrice } from '@/utils/static/formatPriceCurrency';
-import { toTitleCase } from '@/utils/static/toTitleCase';
+import { toTitleCase, yachtLabel } from '@/utils/static/toTitleCase';
 import { toggleBoatInquiryModalOpen } from '@/valtio/yacht/yacht.actions';
 
 interface AvailabilityCardProps {
@@ -72,7 +72,7 @@ const AvailabilityCard = ({ yacht, offer }: AvailabilityCardProps) => {
         sx={{ backgroundColor: colors.blue50 }}
       >
         <Typography variant="h3" fontWeight={700}>
-          {model} | {toTitleCase(name)}
+          {yachtLabel(model, toTitleCase(name))}
           {/* One-way / multi-base fleets list the same week once per route —
               without the route label the variants look like duplicate cards
               (Mario 20.7.2026, Salina 48 Shamane: 7x7 base matrix). */}

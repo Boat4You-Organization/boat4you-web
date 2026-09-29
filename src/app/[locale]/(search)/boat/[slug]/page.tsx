@@ -24,7 +24,7 @@ import { buildMetadata, localizedUrl } from '@/utils/static/buildMetadata';
 import { getBoatImageUrl } from '@/utils/static/imageUtils';
 import { isInquiryOnlyBoat } from '@/utils/static/inquiryOnlyBoat';
 import { serializeJsonLd } from '@/utils/static/jsonLd';
-import { toTitleCase } from '@/utils/static/toTitleCase';
+import { nameRepeatsModel, toTitleCase, yachtLabel } from '@/utils/static/toTitleCase';
 import { ManufacturerLookup, yachtBrandName } from '@/utils/static/yachtBrand';
 import { buildYachtFaq, buildYachtFaqSchema } from '@/utils/static/yachtFaq';
 import { cleanModelName } from '@/utils/static/yachtModelKey';
@@ -171,7 +171,8 @@ function buildYachtProductSchema(
   // ~5-10% of synced yachts have no description/sysDescription, which tripped
   // the "Missing field description" warning in Search Console — build a
   // spec-based fallback so the field is always present.
-  const productName = [yacht.model, yacht.name].filter(Boolean).join(' ').replace(/\s+/g, ' ').trim();
+  // The name only when it adds to the model ("MY Custom Anthea", not "MY Custom Anthea Anthea").
+  const productName = yachtLabel(yacht.model, yacht.name, ' ').replace(/\s+/g, ' ').trim();
   const fallbackDescription = buildBoatDescription(tDesc, {
     name: `${productName}${yacht.buildYear ? ` (${yacht.buildYear})` : ''}`,
     marina: yacht.location?.name,
@@ -336,7 +337,9 @@ export async function generateMetadata({
   // title-case it for SEO display so SERP previews don't shout. Same util the
   // detail page H1 uses (memory: project_yacht_name_title_case).
   const displayName = toTitleCase(yacht.name) || yacht.name?.trim() || '';
-  const fullName = [yacht.model, displayName ? `'${displayName}'` : null].filter(Boolean).join(' ').trim();
+  // A name that only repeats the model ("MY Custom Anthea" / "Anthea") is left out.
+  const quotedName = displayName && !nameRepeatsModel(yacht.model, displayName) ? `'${displayName}'` : null;
+  const fullName = [yacht.model, quotedName].filter(Boolean).join(' ').trim();
   const yearSuffix = yacht.buildYear ? ` (${yacht.buildYear})` : '';
   const locationFull = yacht.location?.name ?? '';
 
@@ -385,7 +388,7 @@ export async function generateMetadata({
     path: canonicalBoatPath(yacht),
     image: {
       src: yachtShareImageUrl(yacht) ?? undefined,
-      alt: `${yacht.modelName} ${yacht.name || ''} boat image`,
+      alt: `${yachtLabel(yacht.modelName, yacht.name, ' ')} boat image`,
     },
   });
 }
@@ -439,9 +442,7 @@ const BoatPage = async ({
   // 25.9.2026 wave 2 the JSON-LD linked `/search?boatTypes=X` and
   // `?destinations=<city>`, both noindex, and the page body linked neither).
   const hubs = await boatHubs(yacht.location, yacht.vesselType ?? null, locale);
-  const boatName = [yacht.model, toTitleCase(yacht.name) || yacht.name]
-    .filter(Boolean)
-    .join(' ')
+  const boatName = yachtLabel(yacht.model, toTitleCase(yacht.name) || yacht.name, ' ')
     .replace(/\s+/g, ' ')
     .trim();
   const breadcrumbItems: Array<{ name: string; item: string }> = [

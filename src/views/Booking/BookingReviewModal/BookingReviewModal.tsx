@@ -16,7 +16,7 @@ import DateTime from '@/utils/static/DateTime';
 import { generateCancellationTimeline } from '@/utils/static/cancellationUtils';
 import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
 import { calculatePaymentPhases } from '@/utils/static/paymentPhases';
-import { toTitleCase } from '@/utils/static/toTitleCase';
+import { toTitleCase, yachtLabel } from '@/utils/static/toTitleCase';
 
 import styles from './BookingReviewModal.module.scss';
 
@@ -108,7 +108,7 @@ const BookingReviewModal = ({
         <Box className={styles.row}>
           <Typography className={styles.rowLabel}>{t('yachtName')}</Typography>
           <Typography className={styles.rowValue} fontWeight={700}>
-            {yachtModel} {yachtName ? `| ${toTitleCase(yachtName)}` : ''}
+            {yachtLabel(yachtModel, toTitleCase(yachtName))}
           </Typography>
         </Box>
 
