@@ -284,6 +284,13 @@ export interface YachtModelShortInfo extends Pick<
    * they need to inquire instead of book directly.
    */
   custom?: boolean;
+  /**
+   * False when the backend has no future offer anyone could book for this
+   * boat; such a boat is inquiry-only (see isInquiryOnlyBoat). The listings
+   * leave these boats out today — the field guards the listing markup
+   * should one ever come through. Absent on an older backend.
+   */
+  hasBookableFutureOffer?: boolean | null;
 }
 
 export interface YachtModel

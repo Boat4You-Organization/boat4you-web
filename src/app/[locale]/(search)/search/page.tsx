@@ -31,6 +31,7 @@ import {
 import { BoatDescTranslate, buildBoatDescription } from '@/utils/static/boatMetaDescription';
 import { buildMetadata, localizedUrl } from '@/utils/static/buildMetadata';
 import { getBoatImageUrl } from '@/utils/static/imageUtils';
+import { isInquiryOnlyBoat } from '@/utils/static/inquiryOnlyBoat';
 import { serializeJsonLd } from '@/utils/static/jsonLd';
 import { hasListingPrice, listingPriceDays } from '@/utils/static/listingPrice';
 import { buildSearchLandingPath, isLandingExpressible } from '@/utils/static/searchLandingPath';
@@ -263,8 +264,10 @@ function buildSearchProductsLd(
   // Google requires `offers` (or reviews) on every merchant-listing Product,
   // and the Offer must carry the price the page shows — so only the yachts
   // whose card shows a price (hasListingPrice; the rest read "Price on
-  // request"): no 0 € sync noise, no boat without a bookable week.
-  const priced = yachts.filter(y => hasListingPrice(y));
+  // request"): no 0 € sync noise, no boat without a bookable week. A boat
+  // the backend marks inquiry-only (no bookable future offer) is never
+  // priced here either, whatever its listing row says (R69).
+  const priced = yachts.filter(y => hasListingPrice(y) && !isInquiryOnlyBoat(y));
 
   if (!priced.length) return null;
 
