@@ -6,13 +6,13 @@ import Extras from '@/components/SvgIcons/Extras';
 import Money from '@/components/SvgIcons/Payment/Money';
 import { SelectedExtra } from '@/models/reservation.model';
 import { Currency } from '@/models/user.model';
-import { UNIT_LABEL_MAP, Unit, YachtServiceModel } from '@/models/yacht-service.model';
+import { ExtraPaymentType, UNIT_LABEL_MAP, Unit, YachtServiceModel } from '@/models/yacht-service.model';
 import colors from '@/styles/themes/colors';
 import { PriceInfo } from '@/types/price-info.type';
 import { useDaysText } from '@/utils/hooks/usePluralization';
 import DateTime from '@/utils/static/DateTime';
 import { formatPrice } from '@/utils/static/formatNumber';
-import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
+import { formatPriceWithCurrency, isPositivePrice, unpricedExtraLabelKey } from '@/utils/static/formatPriceCurrency';
 
 interface PaymentTabProps {
   selectedExtras: SelectedExtra[];
@@ -62,6 +62,19 @@ const PaymentTab = ({
     clientPriceInfo: computedPricePerDayInfo,
     locale,
   });
+
+  // Never "0 €", as on the boat and booking pages: a price above 0 is shown,
+  // otherwise "Included" for an INCLUDED extra (e.g. Wi-Fi/Unlimited) and
+  // "Price on request" for anything else. The backend marks every 0-priced
+  // extra INCLUDED, so a row without paymentType counts as INCLUDED too.
+  const extraPriceLabel = ({
+    priceEur,
+    priceInfo,
+    paymentType,
+  }: Pick<SelectedExtra, 'priceEur' | 'priceInfo'> & { paymentType?: string | null }) =>
+    isPositivePrice(priceInfo?.amount ?? priceEur)
+      ? formatPriceWithCurrency({ clientPriceEur: priceEur, clientPriceInfo: priceInfo, locale })
+      : t(unpricedExtraLabelKey(paymentType ?? ExtraPaymentType.INCLUDED));
 
   // V1_57 split: items the partner expects bank-transferred to them BEFORE
   // embarkation (APA, Skipper, Hostess, Cook, equipment rental) vs cash/card
@@ -145,11 +158,7 @@ const PaymentTab = ({
           fontWeight={700}
           sx={{ whiteSpace: 'nowrap' }}
         >
-          {formatPriceWithCurrency({
-            clientPriceEur: extra.priceEur,
-            clientPriceInfo: extra.priceInfo,
-            locale,
-          })}
+          {extraPriceLabel(extra)}
         </Typography>
         <Typography variant="body2" color={colors.black500} sx={{ fontSize: 12, mt: 0.25 }}>
           {t(UNIT_LABEL_MAP[extra.unit ?? Unit.UNKNOWN])}
@@ -238,11 +247,7 @@ const PaymentTab = ({
                     {item.name}
                   </Typography>
                   <Typography variant="body1" whiteSpace="nowrap" sx={{ flexShrink: 0 }}>
-                    {formatPriceWithCurrency({
-                      clientPriceEur: item.priceEur,
-                      clientPriceInfo: item.priceInfo,
-                      locale,
-                    })}
+                    {extraPriceLabel(item)}
                   </Typography>
                 </Stack>
               ))}
@@ -266,11 +271,7 @@ const PaymentTab = ({
                     {item.name}
                   </Typography>
                   <Typography variant="body1" whiteSpace="nowrap" sx={{ flexShrink: 0 }}>
-                    {formatPriceWithCurrency({
-                      clientPriceEur: item.priceEur,
-                      clientPriceInfo: item.priceInfo,
-                      locale,
-                    })}
+                    {extraPriceLabel(item)}
                   </Typography>
                 </Stack>
               ))}
@@ -294,11 +295,7 @@ const PaymentTab = ({
                     {item.name}
                   </Typography>
                   <Typography variant="body1" whiteSpace="nowrap" sx={{ flexShrink: 0 }}>
-                    {formatPriceWithCurrency({
-                      clientPriceEur: item.priceEur,
-                      clientPriceInfo: item.priceInfo,
-                      locale,
-                    })}
+                    {extraPriceLabel(item)}
                   </Typography>
                 </Stack>
               ))}
