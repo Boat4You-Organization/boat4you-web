@@ -160,9 +160,19 @@ const nextConfig = {
   // pulls Critters in to inline above-the-fold CSS into the prerendered HTML
   // so the 10 render-blocking <link> chunks on the home no longer add up to
   // 1.6s of paint delay.
+  //
+  // Gentle static generation: one export worker, two pages at a time, two
+  // retries. The defaults (a worker per core, 8 pages each) fired ~2,100
+  // API requests a minute at api.boat4you.com during a local build on
+  // 29.9.2026 — sitemaps and landings — and emptied the backend's Hikari
+  // pool (35/35, 99 waiting): the live sites answered 500 to visitors and
+  // Googlebot at 11:11–11:13 UTC. Slower builds, no flood.
   experimental: {
     optimizePackageImports: ['@mui/material', '@mui/icons-material', '@mui/x-date-pickers'],
     optimizeCss: true,
+    cpus: 1,
+    staticGenerationMaxConcurrency: 2,
+    staticGenerationRetryCount: 2,
   },
   sassOptions: {
     silenceDeprecations: ['legacy-js-api'],
