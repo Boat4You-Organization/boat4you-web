@@ -167,10 +167,9 @@ function buildYachtProductSchema(
   // are unaffected and keep their valid Product below.
   if (!lowPrice || !highPrice) return null;
 
-  // Google Merchant-listing validation wants a `description` on every Product.
-  // ~5-10% of synced yachts have no description/sysDescription, which tripped
-  // the "Missing field description" warning in Search Console — build a
-  // spec-based fallback so the field is always present.
+  // Google Merchant-listing validation wants a `description` on every Product
+  // (a missing one tripped "Missing field description" in Search Console) —
+  // the spec-based sentence is always present.
   // The name only when it adds to the model ("MY Custom Anthea", not "MY Custom Anthea Anthea").
   const productName = yachtLabel(yacht.model, yacht.name, ' ').replace(/\s+/g, ' ').trim();
   const fallbackDescription = buildBoatDescription(tDesc, {
@@ -179,7 +178,11 @@ function buildYachtProductSchema(
     cabins: yacht.cabins || null,
     berths: yacht.berths || null,
   });
-  const description = (yacht.description || yacht.sysDescription || fallbackDescription).slice(0, 5000);
+  // A partner boat's description is the partner's prose (deposit policies,
+  // "Base fee must be transferred in advance!") — the Product gets the built
+  // sentence, the same one as the meta description. Admin-managed boats keep
+  // their own copy (partnerText.ts).
+  const description = ((yacht.custom && yacht.description) || fallbackDescription).slice(0, 5000);
 
   // Charter country (used for the offer's return/shipping region declarations).
   const country = yacht.location?.countryCode;

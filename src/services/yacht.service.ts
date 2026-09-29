@@ -4,6 +4,7 @@ import { PriceCalcDto, YachtOfferModel } from '@/models/yacht-offer.model';
 import { YachtAvailability, YachtModelShortInfo } from '@/models/yacht.model';
 import { PaginatedResponse } from '@/types/response.type';
 import { fetchWithRetry } from '@/utils/server/fetchWithRetry';
+import { withSafeExtraNames } from '@/utils/static/partnerText';
 import { createYachtQueryParams } from '@/utils/static/queryParams';
 
 interface YachtAvailabilityParams {
@@ -185,7 +186,11 @@ export async function fetchSingleYachtPrice(params: YachtPriceParams): Promise<P
       return null;
     }
 
-    return await response.json();
+    // Extra names reach the recap, the phone price sheet and the booking
+    // without partner-only parts (partnerText.ts).
+    const price = (await response.json()) as PriceCalcDto | null;
+
+    return price ? withSafeExtraNames(price) : price;
   } catch (error) {
     return null;
   }

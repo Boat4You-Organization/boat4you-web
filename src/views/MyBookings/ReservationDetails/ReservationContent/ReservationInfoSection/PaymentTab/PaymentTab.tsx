@@ -13,6 +13,7 @@ import { useDaysText } from '@/utils/hooks/usePluralization';
 import DateTime from '@/utils/static/DateTime';
 import { formatPrice } from '@/utils/static/formatNumber';
 import { formatPriceWithCurrency, isPositivePrice, unpricedExtraLabelKey } from '@/utils/static/formatPriceCurrency';
+import { oncePerPage, safePartnerName } from '@/utils/static/partnerText';
 
 interface PaymentTabProps {
   selectedExtras: SelectedExtra[];
@@ -96,6 +97,10 @@ const PaymentTab = ({
   const allServices = services ?? [];
   const obligatoryServices = allServices.filter(s => s.obligatory || obligatoryKeys.includes(s.key));
   const optionalServices = allServices.filter(s => !s.obligatory && !obligatoryKeys.includes(s.key));
+  // Partner descriptions as on the boat page: filtered, once per page (partnerText.ts).
+  const shownServices = [...obligatoryServices, ...optionalServices];
+  const serviceDescriptions = oncePerPage(shownServices.map(s => s.description));
+  const descriptionOf = (extra: YachtServiceModel) => serviceDescriptions[shownServices.indexOf(extra)] ?? null;
   const hasDeposit = typeof securityDeposit === 'number' && securityDeposit > 0;
   // Deposit insurance is a selectable OPTION only (yacht.insuredDeposit is the
   // yacht's AVAILABLE waiver amount, never auto-added — Mario 12.7.2026). A
@@ -138,11 +143,11 @@ const PaymentTab = ({
           color={colors.black950}
           sx={{ wordBreak: 'break-word' }}
         >
-          {extra.name}
+          {safePartnerName(extra.name)}
         </Typography>
-        {extra.description && (
+        {descriptionOf(extra) && (
           <Typography variant="body2" color={colors.black500} sx={{ fontSize: 12, mt: 0.25, whiteSpace: 'pre-line' }}>
-            {extra.description}
+            {descriptionOf(extra)}
           </Typography>
         )}
       </Box>
@@ -244,7 +249,7 @@ const PaymentTab = ({
                   gap={2}
                 >
                   <Typography variant="body1" sx={{ flex: 1, minWidth: 0 }}>
-                    {item.name}
+                    {safePartnerName(item.name)}
                   </Typography>
                   <Typography variant="body1" whiteSpace="nowrap" sx={{ flexShrink: 0 }}>
                     {extraPriceLabel(item)}
@@ -268,7 +273,7 @@ const PaymentTab = ({
                   gap={2}
                 >
                   <Typography variant="body1" sx={{ flex: 1, minWidth: 0 }}>
-                    {item.name}
+                    {safePartnerName(item.name)}
                   </Typography>
                   <Typography variant="body1" whiteSpace="nowrap" sx={{ flexShrink: 0 }}>
                     {extraPriceLabel(item)}
@@ -292,7 +297,7 @@ const PaymentTab = ({
                   gap={2}
                 >
                   <Typography variant="body1" sx={{ flex: 1, minWidth: 0 }}>
-                    {item.name}
+                    {safePartnerName(item.name)}
                   </Typography>
                   <Typography variant="body1" whiteSpace="nowrap" sx={{ flexShrink: 0 }}>
                     {extraPriceLabel(item)}

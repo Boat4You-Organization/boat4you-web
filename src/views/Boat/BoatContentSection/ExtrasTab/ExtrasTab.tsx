@@ -9,6 +9,7 @@ import Extras from '@/components/SvgIcons/Extras';
 import { YachtModel } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
 import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
+import { oncePerPage } from '@/utils/static/partnerText';
 import { sortByObligatoryExtras } from '@/utils/static/sortUtils';
 import { setObligatoryExtras } from '@/valtio/yacht/yacht.actions';
 import { useYachtStore } from '@/valtio/yacht/yacht.store';
@@ -62,6 +63,12 @@ const ExtrasTab = ({ yacht }: ExtrasTabProps) => {
     s => !s.obligatory && !obligatoryKeys.includes(s.key) && !dynamicObligatoryKeys.has(s.key)
   );
 
+  // Partner descriptions (already filtered on the server, partnerText.ts)
+  // once per page, on the first row that carries them: partners paste the
+  // same terms paragraph on every crew / transfer extra.
+  const descriptions = oncePerPage([...obligatoryServices, ...optionalServices].map(s => s.description));
+  const descriptionOf = (index: number) => descriptions[index] ?? null;
+
   const securityDepositPrice =
     yacht.securityDeposit > 0 ? formatPriceWithCurrency({ clientPriceEur: yacht.securityDeposit, locale }) : null;
 
@@ -90,10 +97,18 @@ const ExtrasTab = ({ yacht }: ExtrasTabProps) => {
             {t('selectedServices')}
           </Typography>
         )}
-        {obligatoryServices.map(extra => {
+        {obligatoryServices.map((extra, index) => {
           const { key, ...extraProps } = extra;
 
-          return <ExtrasCard key={extra.id} {...extraProps} yachtSlug={yacht.slug} extraKey={key} />;
+          return (
+            <ExtrasCard
+              key={extra.id}
+              {...extraProps}
+              description={descriptionOf(index)}
+              yachtSlug={yacht.slug}
+              extraKey={key}
+            />
+          );
         })}
         {securityDepositPrice && (
           // Refundable Security Deposit comes from `yacht.securityDeposit`
@@ -174,10 +189,18 @@ const ExtrasTab = ({ yacht }: ExtrasTabProps) => {
             {t('optionalServices')}
           </Typography>
         )}
-        {optionalServices.map(extra => {
+        {optionalServices.map((extra, index) => {
           const { key, ...extraProps } = extra;
 
-          return <ExtrasCard key={extra.id} {...extraProps} yachtSlug={yacht.slug} extraKey={key} />;
+          return (
+            <ExtrasCard
+              key={extra.id}
+              {...extraProps}
+              description={descriptionOf(obligatoryServices.length + index)}
+              yachtSlug={yacht.slug}
+              extraKey={key}
+            />
+          );
         })}
       </Stack>
     </Stack>

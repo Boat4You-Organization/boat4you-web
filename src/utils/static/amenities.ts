@@ -1,4 +1,5 @@
 import { type YachtAmenitiesModel, YachtEquipmentCategoryType } from '@/models/yacht-amenities.model';
+import { safePartnerText } from '@/utils/static/partnerText';
 
 /**
  * Partner equipment rows carry their value in `comment`, and the sync
@@ -15,11 +16,11 @@ import { type YachtAmenitiesModel, YachtEquipmentCategoryType } from '@/models/y
 const ABSENT = /^(false|no|0|none|n\/a)$/i;
 const EMPTY = /^(true|yes|null|undefined|nan|-|—)?$/i;
 
-/** The row's free-text qualifier ("Honda 20hp", "130 L"), or null. */
+/** The row's free-text qualifier ("Honda 20hp", "130 L"), or null — partner prose never (partnerText.ts). */
 export const amenityComment = (amenity: Pick<YachtAmenitiesModel, 'comment'>): string | null => {
   const comment = typeof amenity.comment === 'string' ? amenity.comment.trim() : '';
 
-  return comment && !EMPTY.test(comment) && !ABSENT.test(comment) ? comment : null;
+  return comment && !EMPTY.test(comment) && !ABSENT.test(comment) ? safePartnerText(comment) : null;
 };
 
 /** Whether the partner row means the boat has this equipment. */

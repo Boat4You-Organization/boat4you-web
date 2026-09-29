@@ -1201,3 +1201,110 @@ export const isOperatorName = (value?: string | null): boolean => {
     words.slice(start, start + MAX_WORDS).some((__, i) => FOLDED_NAMES.has(words.slice(start, start + i + 1).join(' ')))
   );
 };
+
+/** Generic words after an operator's own name: "Athenian Yachts", "Kavas Yachting", "Kanula d.o.o.". */
+const OPERATOR_SUFFIXES = new Set([
+  'yachts',
+  'yacht',
+  'yachting',
+  'yachtcharter',
+  'charter',
+  'charters',
+  'sailing',
+  'sails',
+  'sail',
+  'catamarans',
+  'cruises',
+  'ltd',
+  'd',
+  'o',
+  'marine',
+  'boats',
+  'nautika',
+  'nautica',
+]);
+
+/**
+ * First words of "<name> Yachting"-type operators that are ordinary words,
+ * places, marinas, winds, sea areas or boat models ("More", "Olympic" as in
+ * Olympic Marina, "Baotić" as in Marina Baotić, "Kornati", "Lagoon", "Genoa",
+ * "Posidonia", "Vito" as in Mercedes Vito) — never a sign of an operator on
+ * their own.
+ */
+const STEM_STOPLIST = new Set(
+  (
+    'active aegean aegeo aeolian aeolos aeolus albatros albatross aloha alpha ambassador anemos apollo aqua ' +
+    'aquamarine aquarius arca asia assos aurora azimuth azul bali baotic barefoot bella beta beyond bijoux ' +
+    'bonbon boreal bosfor brasil brava brod bura cagliari caldera caledonia canal canarias candor carloforte ' +
+    'cata cavo chalkidiki color conch coral cyclades darling deepsea discovery dream emerald enjoy eolia ' +
+    'eolian eolo euphoria europe expedition exploring falasarna faliro fancy fantasia feel finest foresail ' +
+    'friends funny fusion gamma gecko genoa global good gregale heads helios hellenic honey horizon ' +
+    'icelandic ikarian imbat inter ionian ionische iris jonio just kavala kornati lagoon laguna lampedusa ' +
+    'lava lebic lemon levante lighthouse luna luxe lycian magic mainsail majestic maldives malta mandalina ' +
+    'mango marea maris master mate matrix mediteran mediterra mediterranea messinia mint mistral more most ' +
+    'mystique nautilus nave navigator nemo nord nostalgia notos oasis ocean oceanis octopus odyssey olympic ' +
+    'omnia open orion ostria palm panda pandora passion perfect perla phantom ploce poole portofino ' +
+    'posidonia priceless prima prime quixotic ragusa relax rinia roses saronikos scirocco scorpion seafarer ' +
+    'seastar seaways sense seven shark sirocco skiathos smile solar southwest special spicy splendid sport ' +
+    'stadium starboard storm sunrise sunward tailwind tempo theta thrace time timeless touch trim turistico ' +
+    'ultra velvet venus vito viva vogue voyage wave waypoints yelkenli zest zoom'
+  ).split(' ')
+);
+
+/** Distinctive first words of operator names ("athenian", "navigare", "hermes"), folded. */
+const OPERATOR_STEMS = new Set(
+  Array.from(FOLDED_NAMES, name => name.split(' '))
+    .filter(
+      words =>
+        words.length >= 2 &&
+        words[0].length >= 4 &&
+        !/^\d+$/.test(words[0]) &&
+        words.slice(1).every(word => OPERATOR_SUFFIXES.has(word))
+    )
+    .map(words => words[0])
+    .filter(stem => !STEM_STOPLIST.has(stem))
+);
+
+/**
+ * Character ranges of charter-company names in free text: the whole-word
+ * folded match of `isOperatorName`, plus the operator's own word on its own
+ * when capitalised ("Athenian’s Pier", "only for Navigare clients",
+ * "Hermes’s base"). For partner prose (partnerText.ts), where any hit hides
+ * the text or is cut out of an extra's name.
+ */
+export const operatorNameRanges = (text?: string | null): Array<[number, number]> => {
+  const words = Array.from((text ?? '').matchAll(/[\p{L}\p{N}]+|&/gu)).flatMap(({ 0: token, index = 0 }) =>
+    fold(token)
+      .split(' ')
+      .filter(Boolean)
+      .map(word => ({ word, start: index, end: index + token.length, capital: /^\p{Lu}/u.test(token) }))
+  );
+
+  const ranges: Array<[number, number]> = [];
+
+  for (let i = 0; i < words.length; i += 1) {
+    let length = 0;
+
+    for (let n = Math.min(MAX_WORDS, words.length - i); n >= 1 && !length; n -= 1) {
+      if (
+        FOLDED_NAMES.has(
+          words
+            .slice(i, i + n)
+            .map(w => w.word)
+            .join(' ')
+        )
+      ) {
+        length = n;
+      }
+    }
+
+    if (!length && words[i].capital && OPERATOR_STEMS.has(words[i].word)) length = 1;
+
+    if (length) {
+      ranges.push([words[i].start, words[i + length - 1].end]);
+      i += length - 1;
+    }
+  }
+
+  return ranges;
+};

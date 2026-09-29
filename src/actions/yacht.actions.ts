@@ -12,6 +12,7 @@ import { VesselType, YachtAvailability, YachtFleet, YachtModel } from '@/models/
 import { PayloadResponse } from '@/types/response.type';
 import { fetchWithRetry } from '@/utils/server/fetchWithRetry';
 import { guardInquiry, inquiryFingerprint } from '@/utils/server/inquiryGuard';
+import { withSafePartnerText } from '@/utils/server/partnerYacht';
 import { authFetch } from '@/utils/static/authFetch';
 import { getBoatImageBaseUrl } from '@/utils/static/imageUtils';
 import { isOperatorName } from '@/utils/static/operatorNames';
@@ -118,7 +119,9 @@ export async function getSingleYacth(
   // payload, the PDF nor the Product brand (operatorNames.ts).
   if (isOperatorName(yacht.manufacturerName)) yacht.manufacturerName = '';
 
-  return yacht;
+  // Nor does partner prose written as the operator ("Athenian Yachts shall not
+  // be liable…", "the Athenian’s Pier", "(to update manually)") — partnerText.ts.
+  return withSafePartnerText(yacht);
 }
 
 export async function getYachtBrochureUrl(state: unknown, slug: string): Promise<BrochureResult> {
