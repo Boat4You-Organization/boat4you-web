@@ -4,6 +4,7 @@ import { PriceCalcDto, YachtOfferModel } from '@/models/yacht-offer.model';
 import { YachtAvailability, YachtModelShortInfo } from '@/models/yacht.model';
 import { PaginatedResponse } from '@/types/response.type';
 import { fetchWithRetry } from '@/utils/server/fetchWithRetry';
+import { withoutPartnerIds } from '@/utils/static/partnerIds';
 import { withSafeExtraNames } from '@/utils/static/partnerText';
 import { createYachtQueryParams } from '@/utils/static/queryParams';
 
@@ -82,7 +83,8 @@ export async function fetchYachts(
     throw new Error(`Failed to fetch yachts: ${response.status}`);
   }
 
-  return response.json();
+  // No agency / commission / source system on a listing row (partnerIds.ts).
+  return withoutPartnerIds((await response.json()) as PaginatedResponse<YachtModelShortInfo>);
 }
 
 /** How long a fleet-directory chunk stays in the Data Cache (6 h). */
@@ -129,7 +131,7 @@ export async function fetchFleetChunk(
     throw new Error(`Failed to fetch fleet chunk: ${response.status}`);
   }
 
-  return response.json();
+  return withoutPartnerIds((await response.json()) as PaginatedResponse<YachtModelShortInfo>);
 }
 
 export async function fetchYachtAvailability(params: YachtAvailabilityParams): Promise<YachtAvailability[]> {
@@ -217,7 +219,7 @@ export async function fetchSingleYachtStandardOffers(params: YachtOffersParams):
 
     const data: YachtOfferModel[] = await response.json();
 
-    return data;
+    return withoutPartnerIds(data);
   } catch {
     return [];
   }

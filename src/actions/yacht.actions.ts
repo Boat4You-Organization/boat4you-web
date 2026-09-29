@@ -16,6 +16,7 @@ import { withSafePartnerText } from '@/utils/server/partnerYacht';
 import { authFetch } from '@/utils/static/authFetch';
 import { getBoatImageBaseUrl } from '@/utils/static/imageUtils';
 import { isOperatorName } from '@/utils/static/operatorNames';
+import { withoutPartnerIds } from '@/utils/static/partnerIds';
 import { createYachtQueryParams } from '@/utils/static/queryParams';
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -121,7 +122,8 @@ export async function getSingleYacth(
 
   // Nor does partner prose written as the operator ("Athenian Yachts shall not
   // be liable…", "the Athenian’s Pier", "(to update manually)") — partnerText.ts.
-  return withSafePartnerText(yacht);
+  // Partner identifiers (externalId, agency) stay out of the page too (partnerIds.ts).
+  return withSafePartnerText(withoutPartnerIds(yacht));
 }
 
 export async function getYachtBrochureUrl(state: unknown, slug: string): Promise<BrochureResult> {
