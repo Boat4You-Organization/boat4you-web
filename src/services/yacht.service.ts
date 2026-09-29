@@ -1,5 +1,6 @@
 import { YachtSearchParams } from '@/config/form-models.config';
 import { Currency } from '@/models/user.model';
+import { MeasurementUnit } from '@/models/yacht-feature.model';
 import { PriceCalcDto, YachtOfferModel } from '@/models/yacht-offer.model';
 import { YachtAvailability, YachtModelShortInfo } from '@/models/yacht.model';
 import { PaginatedResponse } from '@/types/response.type';
@@ -38,6 +39,22 @@ export interface FetchYachtsOptions {
   revalidate?: number;
 }
 
+/**
+ * The `en` listing row carries the length in feet; every other locale shows
+ * metres, which is what `length` already holds (the backend's own rule,
+ * checked on 29.9.2026 for all nine locales).
+ */
+export const withMetricLength = (
+  data: PaginatedResponse<YachtModelShortInfo>
+): PaginatedResponse<YachtModelShortInfo> => ({
+  ...data,
+  content: (data.content ?? []).map(row =>
+    row.lengthInfo?.unit === MeasurementUnit.FEET && typeof row.length === 'number'
+      ? { ...row, lengthInfo: { unit: MeasurementUnit.METRE, amount: row.length } }
+      : row
+  ),
+});
+
 export async function fetchYachts(
   searchParams: YachtSearchParams,
   currency: Currency = Currency.EUR,
@@ -60,6 +77,15 @@ export async function fetchYachts(
   };
 
   const queryParams = createYachtQueryParams(paramsWithCurrency);
+  // A cached read (options.revalidate: the undated landings and the deals
+  // pages) is fetched as `en` so all nine locales share ONE Data Cache entry
+  // and one backend query — audit 29.9.2026 (R11): every locale copy of a
+  // landing paid its own 3–20 s cold catalogue query. The only
+  // locale-dependent field of a listing row is lengthInfo (feet for `en`,
+  // metres for every other locale; `length` is always metres), derived below
+  // for the non-EN locales. Same pinning as fetchFleetChunk; dated and
+  // filtered searches (no-store) still ask the backend in the visitor's locale.
+  const sharedAcrossLocales = !!options.revalidate;
 
   // A 5xx / 429 / network error is retried (0.5 s, 1 s, 2 s) before it throws.
   const response = await fetchWithRetry(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/yachts${queryParams}`, {
@@ -72,7 +98,7 @@ export async function fetchYachts(
     // for the undated landing pages only (options.revalidate).
     ...(options.revalidate ? { next: { revalidate: options.revalidate } } : { cache: 'no-store' as const }),
     headers: {
-      'Accept-Language': locale,
+      'Accept-Language': sharedAcrossLocales ? 'en' : locale,
       'Content-Type': 'application/json',
     },
   });
@@ -84,7 +110,9 @@ export async function fetchYachts(
   }
 
   // No agency / commission / source system on a listing row (partnerIds.ts).
-  return withoutPartnerIds((await response.json()) as PaginatedResponse<YachtModelShortInfo>);
+  const data = withoutPartnerIds((await response.json()) as PaginatedResponse<YachtModelShortInfo>);
+
+  return sharedAcrossLocales && locale !== 'en' ? withMetricLength(data) : data;
 }
 
 /** How long a fleet-directory chunk stays in the Data Cache (6 h). */
