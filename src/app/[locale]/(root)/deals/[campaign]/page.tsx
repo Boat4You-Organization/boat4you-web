@@ -4,7 +4,7 @@ import { Locale } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 
-import BoatListingItemCard from '@/components/BoatListingItemCard';
+import { StaticBoatListingItemCard } from '@/components/BoatListingItemCard';
 import Layout from '@/components/Layout';
 import PromoBanner from '@/components/PromoBanner';
 import { PROMO_CAMPAIGNS, getCampaignBySlug, resolveFeaturedWeek } from '@/config/campaigns.config';
@@ -144,9 +144,13 @@ const DealsPage = async ({ params }: DealsPageParams) => {
           </Typography>
         ) : (
           <Grid container columnSpacing={2} rowSpacing={3}>
+            {/* The static card (plain /boat/<slug> link, as on the itinerary
+                pages): the search card reads useSearchParams, which bails a
+                statically rendered page out to a 500 without a Suspense
+                boundary — and the deals URL carries no dates anyway. */}
             {boats.map(yacht => (
               <Grid key={yacht.id} size={{ xs: 12, md: 4 }}>
-                <BoatListingItemCard isGridView {...yacht} user={null} />
+                <StaticBoatListingItemCard isGridView {...yacht} user={null} />
               </Grid>
             ))}
           </Grid>

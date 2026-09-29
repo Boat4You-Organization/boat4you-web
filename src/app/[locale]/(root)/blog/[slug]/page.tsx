@@ -29,6 +29,15 @@ const SingleBlogContent = dynamic(() => import('@/views/Blog/SingleBlogContent')
 // on demand per slug; a failed revalidation keeps the last good copy.
 export const revalidate = 3600;
 
+// No path is prerendered at build time (the list would cost a WordPress
+// walk on every build); with an empty list the route is still static-capable,
+// so every slug is rendered on first request and then served from the route
+// cache (`x-nextjs-cache`). Without generateStaticParams the route stays
+// dynamic and `revalidate` only ever applied to the fetches.
+export function generateStaticParams() {
+  return [];
+}
+
 /**
  * Blog bodies exist in English only (WordPress): a locale copy of a post
  * (`/de/blog/<slug>`) is the English article in a German shell. It answers
