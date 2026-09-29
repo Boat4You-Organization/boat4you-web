@@ -87,6 +87,12 @@
   line-height: 1.7;
 }
 
+// Several .body paragraphs in a row (the hub guides of /yacht-charter-prices and /yachts).
+.prose {
+  display: grid;
+  gap: rem-calc(12);
+}
+
 // Specifications: label / value pairs, 2 columns on phones, 4 on desktop.
 .specs {
   display: grid;

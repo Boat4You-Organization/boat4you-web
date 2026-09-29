@@ -15,5 +15,36 @@
     "usaOffice": "Escritório EUA",
     "ukOffice": "Escritório Reino Unido",
     "croatiaHQ": "Número WhatsApp"
+  },
+  "expect": {
+    "title": "O que esperar quando nos contacta",
+    "intro": "A Boat4You liga hóspedes a barcos de aluguer desde 2013, a partir de um escritório na Croácia que trabalha toda a semana. Quer escreva, telefone ou envie um pedido a partir da página de um barco, cada pedido é lido e respondido por uma pessoa, e normalmente tem notícias nossas no próprio dia útil.",
+    "steps": [
+      {
+        "title": "1. Conte-nos a sua viagem",
+        "body": "As datas ou o mês que tem em mente, o país ou a base de partida, quantos vêm e se navegam sozinhos ou querem skipper. Um orçamento semanal aproximado ajuda-nos a deixar logo de fora o que não serve."
+      },
+      {
+        "title": "2. Enviamos opções, não uma brochura",
+        "body": "Recebe uma lista curta de barcos realmente livres nas suas datas, cada um com o preço semanal, os extras obrigatórios cobrados na base e a caução: o total real, não um preço de partida."
+      },
+      {
+        "title": "3. Bloquear, depois reservar",
+        "body": "Gostou de um? Podemos bloqueá-lo enquanto decide. A reserva faz-se online com cartão ou transferência, e toda a reserva inclui cancelamento gratuito durante 72 horas a partir do momento em que reserva."
+      },
+      {
+        "title": "4. Antes e durante o charter",
+        "body": "Depois de reservar recebe o plano de pagamentos, os dados do check-in e os documentos para a entrega do barco. Durante o charter, o número urgente indicado acima chega até nós também fora do horário de expediente."
+      }
+    ],
+    "includeHeading": "O que nos ajuda a responder mais depressa",
+    "include": [
+      "As suas datas, ou o mês e o número de noites",
+      "O país, a zona de navegação ou a marina de onde quer partir",
+      "O número de hóspedes e quantas cabines precisa",
+      "Navegar sozinhos (com carta válida) ou com skipper ou tripulação",
+      "Um orçamento semanal e o que é indispensável: ar condicionado, bote com motor fora de borda, dessalinizador"
+    ],
+    "hours": "O horário é de segunda a domingo, das 8 às 20 horas (CEST). Os e-mails que chegam fora deste horário são respondidos quando o escritório reabre; o número urgente destina-se aos hóspedes que já estão a bordo."
   }
 }

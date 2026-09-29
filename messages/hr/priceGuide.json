@@ -69,6 +69,20 @@
     "typicalWeek": "Uobičajeni tjedan",
     "priciestMonth": "Najskuplji mjesec",
     "deposit": "Uobičajeni polog",
-    "note": "Uobičajeni tjedan: najniži i najviši mjesečni medijan u sljedećih 12 mjeseci, za brod po tjednu. Ažurirano {date} Iznosi u eurima (EUR)."
+    "note": "Uobičajeni tjedan: najniži i najviši mjesečni medijan u sljedećih 12 mjeseci, za brod po tjednu. Ažurirano {date} Iznosi u eurima (EUR).",
+    "readHeading": "Kako čitati ove cijene",
+    "read1": "Svaka brojka na ovoj stranici cijena je broda za jedan tjedan, onakva kakvu partnerske flote objavljuju za sljedećih dvanaest mjeseci – isti ukupni iznos koji rezervacija pokazuje prije dodataka. To nije cijena po noći ni cijena po osobi. Uobičajeni tjedan medijan je svih tjedana s cijenom koji počinju u nekom mjesecu, pa ga nekoliko vrlo jeftinih ili vrlo skupih brodova ne pomiče; raspon u tablici ide od najjeftinijeg do najskupljeg mjeseca u godini.",
+    "read2": "Uz tjednu cijenu računajte na obvezne dodatke koji se plaćaju u bazi (završno čišćenje, posteljina, tranzitni log, boravišna pristojba), skipera ako nemate dozvolu, gorivo i vezove na putu te povratni depozit koji se pri prijavi blokira na kartici. Vodiči po zemljama navode uobičajene iznose za svaku od tih stavki, pa se tjedna cijena i stvarni ukupni trošak mogu čitati usporedno.",
+    "countriesHeading": "Zemlja po zemlja",
+    "countryTeaser": "{where} {boats, plural, one {# brod objavljuje} few {# broda objavljuju} other {# brodova objavljuje}} tjedne cijene za sljedeću godinu. Uobičajeni tjedan stoji {low} – {high} ovisno o mjesecu; {cheapest} je najjeftiniji mjesec, a {priciest} najskuplji.",
+    "countryTeaserRange": "{where} {boats, plural, one {# brod objavljuje} few {# broda objavljuju} other {# brodova objavljuje}} tjedne cijene za sljedeću godinu; uobičajeni tjedan stoji {low} – {high} ovisno o mjesecu.",
+    "countryTeaserNoPrices": "{where} {boats, plural, one {je uvršten # brod} few {su uvrštena # broda} other {je uvršteno # brodova}}; mjesečne brojke slijede čim dovoljno tjedana dobije cijenu.",
+    "countryTeaserSkipper": "Skiper obično stoji {skipper} tjedno.",
+    "countryTeaserDeposit": "Uobičajeni depozit iznosi {deposit}.",
+    "countryTeaserBases": "Najveće polazne baze: {bases}.",
+    "saveHeading": "Kada tjedan najma stoji manje",
+    "save1": "Sezona određuje cijenu. Srpanj i kolovoz najskuplji su tjedni gotovo svugdje na Mediteranu; isti brod u svibnju, lipnju, rujnu i početkom listopada stoji osjetno manje, dok je vrijeme još pouzdano, a marine mirnije. Ako sezona neke zemlje teče drukčije, to pokazuje tablica mjeseci u njezinu vodiču.",
+    "save2": "Rana rezervacija čuva izbor, kasna može spustiti cijenu. Popularni modeli i najbolji tjedni odlaze mjesecima unaprijed, a popusti za ranu rezervaciju nagrađuju one koji odluče ujesen ili zimi. Tjedni koji su još slobodni nekoliko tjedana prije polaska često dolaze s pravim last-minute sniženjima – vrijedi pogledati kad su datumi fleksibilni.",
+    "save3": "Sam brod važan je koliko i mjesec. Katamaran stoji više od jednotrupca iste duljine, ali prima više ljudi, pa cijena po kabini može biti slična; brod star pet godina jeftiniji je od novog istog modela; a motorna jahta tjednoj cijeni dodaje gorivo. Usporedba cijene po kabini između vrsta plovila obično je najpošteniji način odluke."
   }
 }

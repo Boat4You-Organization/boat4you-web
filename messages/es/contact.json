@@ -15,5 +15,36 @@
     "usaOffice": "Oficina USA",
     "ukOffice": "Oficina UK",
     "croatiaHQ": "Número Whatsapp"
+  },
+  "expect": {
+    "title": "Qué esperar cuando nos contacta",
+    "intro": "Boat4You pone en contacto a huéspedes y barcos de alquiler desde 2013, desde una oficina en Croacia que atiende toda la semana. Ya sea que escriba, llame o envíe una solicitud desde la página de un barco, cada solicitud la lee y la responde una persona, y normalmente tendrá noticias nuestras el mismo día laborable.",
+    "steps": [
+      {
+        "title": "1. Cuéntenos su viaje",
+        "body": "Las fechas o el mes que tiene en mente, el país o la base de salida, cuántos vienen y si navegan por su cuenta o quieren patrón. Un presupuesto semanal aproximado nos ayuda a descartar lo que no encaja."
+      },
+      {
+        "title": "2. Enviamos opciones, no un folleto",
+        "body": "Recibe una lista corta de barcos realmente libres en sus fechas, cada uno con el precio semanal, los extras obligatorios que se cobran en la base y la fianza: el total real, no un precio de partida."
+      },
+      {
+        "title": "3. Bloquear y después reservar",
+        "body": "¿Le gusta uno? Podemos bloquearlo mientras decide. La reserva se hace en línea con tarjeta o transferencia, y toda reserva incluye cancelación gratuita durante 72 horas desde el momento de reservar."
+      },
+      {
+        "title": "4. Antes y durante el chárter",
+        "body": "Tras reservar recibe el calendario de pagos, los datos del check-in y los documentos para la entrega del barco. Durante el chárter, el teléfono urgente indicado arriba nos localiza también fuera del horario de oficina."
+      }
+    ],
+    "includeHeading": "Qué nos ayuda a responder más rápido",
+    "include": [
+      "Sus fechas, o el mes y el número de noches",
+      "El país, la zona de navegación o el puerto desde el que quiere salir",
+      "El número de huéspedes y cuántos camarotes necesita",
+      "Si navegan por su cuenta (con titulación válida) o con patrón o tripulación",
+      "Un presupuesto semanal y sus imprescindibles: aire acondicionado, auxiliar con fueraborda, desalinizadora"
+    ],
+    "hours": "El horario de oficina es de lunes a domingo, de 8 a 20 h (CEST). Los correos que llegan fuera de ese horario se responden cuando la oficina vuelve a abrir; el número urgente es para huéspedes que ya están a bordo."
   }
 }

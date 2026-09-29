@@ -17,7 +17,13 @@
   "priceBand": "{p25} – {p75} / semaine",
   "index": {
     "h1": "Location de bateaux par modèle",
-    "lede": "Les {models, number} modèles les plus proposés à la location sur Boat4You, soit {count, number} bateaux au total. Chaque page modèle présente tous les bateaux, leurs bases et le prix habituel d’une semaine de location."
+    "lede": "Les {models, number} modèles les plus proposés à la location sur Boat4You, soit {count, number} bateaux au total. Chaque page modèle présente tous les bateaux, leurs bases et le prix habituel d’une semaine de location.",
+    "brandsLede": "Les marques qui comptent le plus de bateaux à louer : {brands}.",
+    "chooseHeading": "Comment choisir un modèle de yacht",
+    "choose1": "Commencez par l'équipage. Une cabine par couple plus une pour le skipper ou les bagages, c'est la règle confortable : un voilier de 40 pieds à trois cabines convient à quatre à six personnes, un catamaran de 45 pieds à quatre cabines en emmène huit sans que personne ne dorme dans le carré. Le nombre de couchages d'une annonce inclut ceux du carré ; comparez donc les cabines, pas les couchages.",
+    "choose2": "Ensuite le type. Un monocoque remonte mieux au vent et coûte moins cher la semaine ; un catamaran offre deux fois plus d'espace sur le pont, une plateforme stable au mouillage et un faible tirant d'eau pour les criques, à un prix hebdomadaire plus élevé et avec des frais de port plus lourds. Les yachts à moteur avalent plus de milles par jour et ajoutent le carburant au budget ; les goélettes et les bateaux avec équipage transforment la semaine en vacances servies.",
+    "choose3": "Regardez l'année de construction et la génération du modèle. Un nom de modèle couvre des bateaux construits sur dix ans ou plus, et les versions propriétaire d'un plan ont souvent des salles d'eau plus grandes, une meilleure ventilation et une électronique moderne. Un bateau de trois ans d'un modèle éprouvé est en général le meilleur rapport qualité-prix : plus récent que la plupart des bateaux de location, moins cher que la dernière génération.",
+    "choose4": "Vérifiez enfin où le modèle est basé. Chaque page de modèle liste tous les bateaux avec leur port d'attache, leur année et un prix hebdomadaire type, si bien qu'un Lagoon 42 à Split et un autre à Athènes se comparent directement. Si deux modèles se tiennent, les itinéraires et les guides de prix par pays aident à trancher selon la zone de navigation et le mois."
   },
   "brand": {
     "h1": "Location de bateaux {brand}",

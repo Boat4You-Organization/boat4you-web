@@ -17,7 +17,13 @@
   "priceBand": "{p25} – {p75} tjedno",
   "index": {
     "h1": "Najam plovila po modelu",
-    "lede": "Modeli s najviše brodova za najam na Boat4You ({models, number}), ukupno {count, plural, one {# brod} few {# broda} other {# brodova}}. Stranica svakog modela prikazuje sve brodove, njihove baze i koliko tjedan najma obično stoji."
+    "lede": "Modeli s najviše brodova za najam na Boat4You ({models, number}), ukupno {count, plural, one {# brod} few {# broda} other {# brodova}}. Stranica svakog modela prikazuje sve brodove, njihove baze i koliko tjedan najma obično stoji.",
+    "brandsLede": "Marke s najviše brodova za najam: {brands}.",
+    "chooseHeading": "Kako odabrati model jahte",
+    "choose1": "Krenite od posade. Kabina po paru plus jedna za skipera ili prtljagu udobno je pravilo: jedrilica od 40 stopa s tri kabine odgovara četvero do šestero ljudi, katamaran od 45 stopa s četiri kabine prima osmero, a da nitko ne spava u salonu. Broj ležajeva u oglasu uključuje i ležajeve u salonu, zato uspoređujte kabine, ne ležajeve.",
+    "choose2": "Zatim vrsta. Jednotrupac bolje jedri uz vjetar i stoji manje tjedno; katamaran nudi dvostruko više prostora na palubi, ravnu platformu na sidru i mali gaz za uvale, uz višu tjednu cijenu i više naknade u marinama. Motorne jahte prelaze više milja dnevno i dodaju gorivo u budžet; gulete i brodovi s posadom pretvaraju tjedan u odmor s domaćinom.",
+    "choose3": "Pogledajte godinu gradnje i generaciju modela. Ime modela pokriva brodove građene deset i više godina, a vlasničke verzije dizajna često imaju veće kupaonice, bolju ventilaciju i suvremenu elektroniku. Tri godine star brod provjerenog modela obično je najbolja vrijednost: noviji od većine čarter brodova, jeftiniji od najnovije generacije.",
+    "choose4": "Na kraju provjerite gdje je model baziran. Svaka stranica modela navodi svaki brod s matičnom marinom, godinom gradnje i uobičajenom tjednom cijenom, pa se Lagoon 42 u Splitu i onaj u Ateni mogu izravno usporediti. Ako su dva modela blizu, plovidbene rute i vodiči kroz cijene po zemljama pomažu odlučiti prema akvatoriju i mjesecu."
   },
   "brand": {
     "h1": "Najam plovila {brand}",

@@ -17,7 +17,13 @@
   "priceBand": "{p25} – {p75} por semana",
   "index": {
     "h1": "Aluguer de barcos por modelo",
-    "lede": "Os {models, number} modelos com mais barcos para alugar na Boat4You, {count, number} barcos no total. Cada página de modelo mostra todos os barcos, as respetivas bases e quanto custa habitualmente uma semana de aluguer."
+    "lede": "Os {models, number} modelos com mais barcos para alugar na Boat4You, {count, number} barcos no total. Cada página de modelo mostra todos os barcos, as respetivas bases e quanto custa habitualmente uma semana de aluguer.",
+    "brandsLede": "As marcas com mais barcos para aluguer: {brands}.",
+    "chooseHeading": "Como escolher o modelo de iate",
+    "choose1": "Comece pela tripulação. Uma cabine por casal mais uma para o skipper ou a bagagem é a regra confortável: um veleiro de 40 pés com três cabines serve quatro a seis pessoas, um catamarã de 45 pés com quatro cabines leva oito sem ninguém dormir no salão. O número de lugares de um anúncio inclui os do salão, por isso compare cabines, não lugares.",
+    "choose2": "Depois, o tipo. Um monocasco navega melhor contra o vento e custa menos por semana; um catamarã oferece o dobro do espaço no convés, uma plataforma estável ao fundear e pouco calado para as baías, a um preço semanal mais alto e com amarrações mais caras. Os iates a motor percorrem mais milhas por dia e somam combustível ao orçamento; os gulets e os barcos com tripulação transformam a semana em férias servidas.",
+    "choose3": "Veja o ano de construção e a geração do modelo. Um nome de modelo cobre barcos construídos ao longo de uma década ou mais, e as versões de armador de um desenho têm muitas vezes casas de banho maiores, melhor ventilação e eletrónica moderna. Um barco com três anos de um modelo comprovado é normalmente o melhor valor: mais recente do que a maioria dos barcos de aluguer, mais barato do que a última geração.",
+    "choose4": "Por fim, veja onde o modelo está baseado. Cada página de modelo lista todos os barcos com a sua marina de origem, ano de construção e preço semanal típico, pelo que um Lagoon 42 em Split e outro em Atenas se comparam diretamente. Se dois modelos estão próximos, os itinerários e os guias de preços por país ajudam a decidir pela zona de navegação e pelo mês."
   },
   "brand": {
     "h1": "Aluguer de barcos {brand}",

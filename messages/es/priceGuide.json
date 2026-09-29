@@ -69,6 +69,20 @@
     "typicalWeek": "Semana típica",
     "priciestMonth": "Mes más caro",
     "deposit": "Fianza típica",
-    "note": "Semana típica: la mediana mensual más baja y la más alta de los próximos 12 meses, por barco y semana. Actualizado el {date}. Importes en euros (EUR)."
+    "note": "Semana típica: la mediana mensual más baja y la más alta de los próximos 12 meses, por barco y semana. Actualizado el {date}. Importes en euros (EUR).",
+    "readHeading": "Cómo leer estos precios",
+    "read1": "Cada cifra de esta página es el precio del barco por una semana, tal como lo publican las flotas asociadas para los próximos doce meses: el mismo total que muestra una reserva antes de los extras. No es una tarifa por noche ni un precio por persona. La semana típica es la mediana de todas las semanas con precio que empiezan en un mes, así que unos pocos barcos muy baratos o muy caros no la mueven; el rango de la tabla va del mes más barato al más caro del año.",
+    "read2": "Además del precio semanal conviene contar con los extras obligatorios que se cobran en la base (limpieza final, ropa de cama, tránsito, tasa turística), un patrón si no tiene titulación, el combustible y los amarres durante la ruta, y una fianza reembolsable que se bloquea en una tarjeta en el check-in. Las guías por país indican los importes habituales de cada partida, para leer el precio semanal y el total real uno junto al otro.",
+    "countriesHeading": "País por país",
+    "countryTeaser": "{where}, {boats, plural, one {# barco publica} other {# barcos publican}} precios semanales para el próximo año. Una semana típica cuesta {low} – {high} según el mes; {cheapest} es el mes más barato y {priciest} el más caro.",
+    "countryTeaserRange": "{where}, {boats, plural, one {# barco publica} other {# barcos publican}} precios semanales para el próximo año; una semana típica cuesta {low} – {high} según el mes.",
+    "countryTeaserNoPrices": "{where} {boats, plural, one {hay # barco listado} other {hay # barcos listados}}; las cifras mensuales llegarán cuando haya suficientes semanas con precio.",
+    "countryTeaserSkipper": "Un patrón cuesta normalmente {skipper} a la semana.",
+    "countryTeaserDeposit": "La fianza habitual es de {deposit}.",
+    "countryTeaserBases": "La mayoría de los barcos salen de {bases}.",
+    "saveHeading": "Cuándo una semana de alquiler cuesta menos",
+    "save1": "La temporada marca el precio. Julio y agosto son las semanas más caras casi en todo el Mediterráneo; el mismo barco cuesta bastante menos en mayo, junio, septiembre y principios de octubre, cuando el tiempo sigue siendo fiable y los puertos están más tranquilos. Si la temporada de un país es distinta, la tabla de meses de su guía lo muestra.",
+    "save2": "Reservar pronto conserva la elección; reservar tarde puede bajar el precio. Los modelos populares y las mejores semanas se agotan con meses de antelación, y los descuentos por reserva anticipada premian a quien decide en otoño o invierno. Las semanas que siguen libres pocas semanas antes de la salida suelen llegar con rebajas de última hora reales; merece la pena mirar si las fechas son flexibles.",
+    "save3": "El barco importa tanto como el mes. Un catamarán cuesta más que un monocasco de la misma eslora, pero aloja a más personas, así que el precio por camarote puede ser parecido; un barco de cinco años es más barato que uno nuevo del mismo modelo; y un yate a motor suma el combustible al precio semanal. Comparar el precio por camarote entre tipos de barco suele ser la forma más justa de decidir."
   }
 }

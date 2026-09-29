@@ -15,5 +15,36 @@
     "usaOffice": "VS Kantoor",
     "ukOffice": "VK Kantoor",
     "croatiaHQ": "WhatsApp-nummer"
+  },
+  "expect": {
+    "title": "Wat u kunt verwachten als u contact opneemt",
+    "intro": "Boat4You brengt sinds 2013 gasten en charterboten samen, vanuit een kantoor in Kroatië dat de hele week bezet is. Of u nu schrijft, belt of een aanvraag verstuurt vanaf een bootpagina: elke aanvraag wordt door een mens gelezen en beantwoord, en meestal hoort u nog dezelfde werkdag van ons.",
+    "steps": [
+      {
+        "title": "1. Vertel ons over uw reis",
+        "body": "De data of de maand die u in gedachten hebt, het land of de vertrekbasis, met hoeveel u komt en of u zelf zeilt of een schipper wilt. Een globaal weekbudget helpt ons meteen weg te laten wat niet past."
+      },
+      {
+        "title": "2. Wij sturen opties, geen brochure",
+        "body": "U krijgt een korte lijst boten die op uw data echt vrij zijn, elk met de weekprijs, de verplichte extra's die in de basis worden afgerekend en de borg: het werkelijke totaal, geen vanafprijs."
+      },
+      {
+        "title": "3. Vasthouden, dan boeken",
+        "body": "Spreekt er een aan? Wij kunnen hem voor u vasthouden terwijl u beslist. Boeken gaat online met kaart of bankoverschrijving, en elke boeking komt met gratis annuleren gedurende 72 uur vanaf het moment van boeken."
+      },
+      {
+        "title": "4. Voor en tijdens de charter",
+        "body": "Na het boeken ontvangt u het betaalschema, de incheckgegevens en de documenten voor de overname van de boot. Tijdens de charter bereikt u ons via het bovenstaande noodnummer ook buiten kantooruren."
+      }
+    ],
+    "includeHeading": "Wat ons helpt sneller te antwoorden",
+    "include": [
+      "Uw data, of de maand en het aantal nachten",
+      "Het land, het vaargebied of de haven waar u wilt vertrekken",
+      "Het aantal gasten en hoeveel hutten u nodig hebt",
+      "Zelf zeilen (met een geldig vaarbewijs) of met schipper of bemanning",
+      "Een weekbudget en uw must-haves: airconditioning, bijboot met buitenboordmotor, watermaker"
+    ],
+    "hours": "Het kantoor is open van maandag tot en met zondag, van 8 tot 20 uur (CEST). E-mails die buiten die uren binnenkomen, worden beantwoord zodra het kantoor weer open is; het noodnummer is bedoeld voor gasten die al aan boord zijn."
   }
 }

@@ -15,5 +15,36 @@
     "usaOffice": "Biuro USA",
     "ukOffice": "Biuro Wielka Brytania",
     "croatiaHQ": "Numer WhatsApp"
+  },
+  "expect": {
+    "title": "Czego się spodziewać, gdy się z nami kontaktujesz",
+    "intro": "Boat4You od 2013 roku łączy gości z jachtami czarterowymi – z biura w Chorwacji, które pracuje przez cały tydzień. Niezależnie od tego, czy piszesz, dzwonisz, czy wysyłasz zapytanie ze strony jachtu, każde zapytanie czyta i odpisuje na nie człowiek, a odpowiedź zwykle dostajesz tego samego dnia roboczego.",
+    "steps": [
+      {
+        "title": "1. Opowiedz nam o rejsie",
+        "body": "Terminy lub miesiąc, który masz na myśli, kraj lub bazę startową, ile osób płynie i czy żeglujecie sami, czy chcecie skipera. Orientacyjny budżet tygodniowy pomaga nam od razu pominąć to, co nie pasuje."
+      },
+      {
+        "title": "2. Wysyłamy opcje, nie broszurę",
+        "body": "Otrzymujesz krótką listę jachtów naprawdę wolnych w Twoim terminie, każdy z ceną tygodniową, obowiązkowymi dodatkami pobieranymi w bazie i kaucją – rzeczywistą kwotę łączną, nie cenę „od”."
+      },
+      {
+        "title": "3. Wstrzymanie, potem rezerwacja",
+        "body": "Podoba Ci się jeden? Możemy go dla Ciebie wstrzymać, gdy się zastanawiasz. Rezerwację składa się online kartą lub przelewem, a każda rezerwacja ma bezpłatne anulowanie przez 72 godziny od chwili rezerwacji."
+      },
+      {
+        "title": "4. Przed czarterem i w jego trakcie",
+        "body": "Po rezerwacji otrzymujesz harmonogram płatności, szczegóły odbioru i dokumenty potrzebne przy przejęciu jachtu. W trakcie czarteru numer alarmowy podany wyżej działa także poza godzinami pracy biura."
+      }
+    ],
+    "includeHeading": "Co pomaga nam odpowiedzieć szybciej",
+    "include": [
+      "Twoje terminy albo miesiąc i liczba nocy",
+      "Kraj, akwen lub marina, z której chcesz wypłynąć",
+      "Liczba gości i potrzebna liczba kabin",
+      "Żegluga samodzielna (z ważnym patentem) czy ze skiperem lub załogą",
+      "Budżet tygodniowy i to, co jest konieczne: klimatyzacja, ponton z silnikiem, odsalarka"
+    ],
+    "hours": "Biuro pracuje od poniedziałku do niedzieli w godzinach 8–20 (CEST). Na e-maile, które przyjdą poza tymi godzinami, odpowiadamy po ponownym otwarciu biura; numer alarmowy jest dla gości, którzy są już na pokładzie."
   }
 }

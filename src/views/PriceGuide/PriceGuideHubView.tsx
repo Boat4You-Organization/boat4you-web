@@ -2,10 +2,15 @@ import { getTranslations } from 'next-intl/server';
 
 import { Link } from '@/i18n/navigation';
 import { PriceGuideData } from '@/utils/server/priceGuide';
+import { displayPlaceName } from '@/utils/static/croatianPlaceNames';
+import { isOperatorName } from '@/utils/static/operatorNames';
 import styles from '@/views/Models/Models.module.scss';
 import ModelsBreadcrumb, { Crumb } from '@/views/Models/ModelsBreadcrumb';
 
 import { GuideText } from './guideText';
+
+/** Bases named in a country teaser. */
+const TEASER_BASES = 3;
 
 export interface HubRow {
   data: PriceGuideData;
@@ -25,7 +30,11 @@ interface PriceGuideHubViewProps {
 
 /**
  * /yacht-charter-prices: one card per country guide and a comparison table
- * of the headline figures, all from the same facts rows as the guides.
+ * of the headline figures, all from the same facts rows as the guides — and,
+ * since the hub read as a 260-word list (audit 29.9.2026, R35), how the
+ * figures are to be read, a teaser per country in prose from the same live
+ * facts (boats, typical week, cheapest / priciest month, skipper, deposit,
+ * main bases) and when a charter week costs less.
  */
 const PriceGuideHubView = async ({ locale, rows, boats, computedAt, breadcrumb }: PriceGuideHubViewProps) => {
   const [t, tFacts] = await Promise.all([
@@ -35,6 +44,50 @@ const PriceGuideHubView = async ({ locale, rows, boats, computedAt, breadcrumb }
   const [{ text: firstText }] = rows;
   const { fmt } = firstText;
   const { money } = fmt;
+  const listFormat = new Intl.ListFormat(locale, { type: 'conjunction' });
+  // "in Croatia" → "In Croatia" at the start of the teaser sentence.
+  const sentenceCase = (phrase: string) => phrase.charAt(0).toLocaleUpperCase(locale) + phrase.slice(1);
+
+  /** One country in prose, from the guide's own facts row; only the figures the row has. */
+  const teaserFor = ({ data, text }: HubRow): string => {
+    const { facts, all } = data;
+    const where = sentenceCase(text.where);
+    const priced = facts.boatsWithWeeklyPrices ?? facts.activeBoats;
+    const ranking = all?.ranking;
+    const sentences: string[] = [];
+
+    if (all && ranking?.cheapest && ranking?.priciest) {
+      sentences.push(
+        t('hub.countryTeaser', {
+          where,
+          boats: priced,
+          low: money(all.low),
+          high: money(all.high),
+          cheapest: fmt.monthName(ranking.cheapest),
+          priciest: fmt.monthName(ranking.priciest),
+        })
+      );
+    } else if (all) {
+      sentences.push(t('hub.countryTeaserRange', { where, boats: priced, low: money(all.low), high: money(all.high) }));
+    } else {
+      sentences.push(t('hub.countryTeaserNoPrices', { where, boats: facts.activeBoats }));
+    }
+
+    if (facts.skipperWeekly?.median) sentences.push(t('hub.countryTeaserSkipper', { skipper: money(facts.skipperWeekly.median) }));
+
+    if (facts.deposit?.median) sentences.push(t('hub.countryTeaserDeposit', { deposit: money(facts.deposit.median) }));
+
+    // Marina names with their diacritics (R32); never a base named after a charter company.
+    const bases = (facts.topBases ?? [])
+      .map(base => base.name)
+      .filter(name => name && !isOperatorName(name))
+      .slice(0, TEASER_BASES)
+      .map(displayPlaceName);
+
+    if (bases.length) sentences.push(t('hub.countryTeaserBases', { bases: listFormat.format(bases) }));
+
+    return sentences.join(' ');
+  };
 
   return (
     <article className={styles.root}>
@@ -102,6 +155,45 @@ const PriceGuideHubView = async ({ locale, rows, boats, computedAt, breadcrumb }
           </tbody>
         </table>
         <p className={styles.note}>{t('hub.note', { date: fmt.date(computedAt) })}</p>
+      </section>
+
+      <section className={styles.section} aria-labelledby="hub-read">
+        <h2 id="hub-read" className={styles.sectionTitle}>
+          {t('hub.readHeading')}
+        </h2>
+        <div className={styles.prose}>
+          <p className={styles.body}>{t('hub.read1')}</p>
+          <p className={styles.body}>{t('hub.read2')}</p>
+        </div>
+      </section>
+
+      <section className={styles.section} aria-labelledby="hub-countries">
+        <h2 id="hub-countries" className={styles.sectionTitle}>
+          {t('hub.countriesHeading')}
+        </h2>
+        <div className={styles.faqList}>
+          {rows.map(row => (
+            <div key={row.href} className={styles.faqItem}>
+              <h3 className={styles.faqQuestion}>
+                <Link href={row.href} prefetch={false} className={styles.tableLink}>
+                  {row.text.countryName}
+                </Link>
+              </h3>
+              <p className={styles.faqAnswer}>{teaserFor(row)}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className={styles.section} aria-labelledby="hub-save">
+        <h2 id="hub-save" className={styles.sectionTitle}>
+          {t('hub.saveHeading')}
+        </h2>
+        <div className={styles.prose}>
+          <p className={styles.body}>{t('hub.save1')}</p>
+          <p className={styles.body}>{t('hub.save2')}</p>
+          <p className={styles.body}>{t('hub.save3')}</p>
+        </div>
       </section>
     </article>
   );

@@ -69,6 +69,20 @@
     "typicalWeek": "Gangbare week",
     "priciestMonth": "Duurste maand",
     "deposit": "Gangbare borg",
-    "note": "Gangbare week: de laagste en de hoogste maandmediaan van de komende 12 maanden, voor de boot per week. Bijgewerkt op {date}. Bedragen in euro (EUR)."
+    "note": "Gangbare week: de laagste en de hoogste maandmediaan van de komende 12 maanden, voor de boot per week. Bijgewerkt op {date}. Bedragen in euro (EUR).",
+    "readHeading": "Hoe u deze prijzen leest",
+    "read1": "Elk cijfer op deze pagina is de prijs van de boot voor één week, zoals de partnervloten die voor de komende twaalf maanden publiceren: hetzelfde totaal dat een boeking vóór de extra's toont. Het is geen prijs per nacht en geen prijs per persoon. De typische week is de mediaan van alle geprijsde weken die in een maand beginnen, dus enkele heel goedkope of heel dure boten verschuiven hem niet; de bandbreedte in de tabel loopt van de goedkoopste tot de duurste maand van het jaar.",
+    "read2": "Boven op de weekprijs rekent u op de verplichte extra's die in de basis worden afgerekend (eindschoonmaak, beddengoed, transitlog, toeristenbelasting), een schipper als u geen vaarbewijs hebt, brandstof en havengeld onderweg, en een terugbetaalbare borg die bij het inchecken op een kaart wordt geblokkeerd. De landengidsen noemen voor elk van deze posten de gebruikelijke bedragen, zodat weekprijs en werkelijke totaalprijs naast elkaar te lezen zijn.",
+    "countriesHeading": "Land voor land",
+    "countryTeaser": "{where} {boats, plural, one {publiceert # boot} other {publiceren # boten}} weekprijzen voor het komende jaar. Een typische week kost {low} – {high}, afhankelijk van de maand; {cheapest} is de goedkoopste maand en {priciest} de duurste.",
+    "countryTeaserRange": "{where} {boats, plural, one {publiceert # boot} other {publiceren # boten}} weekprijzen voor het komende jaar; een typische week kost {low} – {high}, afhankelijk van de maand.",
+    "countryTeaserNoPrices": "{where} {boats, plural, one {staat # boot} other {staan # boten}} in het aanbod; de maandcijfers volgen zodra genoeg weken een prijs hebben.",
+    "countryTeaserSkipper": "Een schipper kost doorgaans {skipper} per week.",
+    "countryTeaserDeposit": "De gebruikelijke borg is {deposit}.",
+    "countryTeaserBases": "De meeste boten vertrekken vanuit {bases}.",
+    "saveHeading": "Wanneer een charterweek minder kost",
+    "save1": "Het seizoen bepaalt de prijs. Juli en augustus zijn bijna overal in de Middellandse Zee de duurste weken; dezelfde boot kost in mei, juni, september en begin oktober merkbaar minder, terwijl het weer nog betrouwbaar is en de havens rustiger zijn. Loopt het seizoen van een land anders, dan laat de maandtabel van de gids dat zien.",
+    "save2": "Vroeg boeken houdt de keuze open; laat boeken kan de prijs drukken. Populaire modellen en de beste weken zijn maanden vooruit weg, en vroegboekkortingen belonen wie in de herfst of winter beslist. Weken die enkele weken voor vertrek nog vrij zijn, komen vaak met echte lastminutekortingen – het bekijken waard als de data flexibel zijn.",
+    "save3": "De boot telt even zwaar als de maand. Een catamaran kost meer dan een eenrompsjacht van dezelfde lengte, maar biedt plaats aan meer mensen, zodat de prijs per hut vergelijkbaar kan zijn; een boot van vijf jaar oud is goedkoper dan een nieuwe van hetzelfde model; en een motorjacht voegt brandstof toe aan de weekprijs. De prijs per hut vergelijken tussen boottypen is meestal de eerlijkste manier om te kiezen."
   }
 }

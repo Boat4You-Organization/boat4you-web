@@ -15,5 +15,36 @@
     "usaOffice": "Ufficio USA",
     "ukOffice": "Ufficio UK",
     "croatiaHQ": "Numero Whatsapp"
+  },
+  "expect": {
+    "title": "Cosa aspettarsi quando ci contattate",
+    "intro": "Boat4You mette in contatto ospiti e barche a noleggio dal 2013, da un ufficio in Croazia operativo tutta la settimana. Che scriviate, chiamiate o inviate una richiesta dalla pagina di una barca, ogni richiesta viene letta e gestita da una persona, e di norma ricevete risposta lo stesso giorno lavorativo.",
+    "steps": [
+      {
+        "title": "1. Raccontateci il viaggio",
+        "body": "Le date o il mese che avete in mente, il paese o la base di partenza, quanti siete e se navigate da soli o volete uno skipper. Un budget settimanale indicativo ci aiuta a scartare subito ciò che non fa al caso vostro."
+      },
+      {
+        "title": "2. Inviamo opzioni, non un dépliant",
+        "body": "Ricevete una breve lista di barche davvero libere nelle vostre date, ciascuna con il prezzo settimanale, gli extra obbligatori pagati in base e la cauzione: il totale reale, non un prezzo di partenza."
+      },
+      {
+        "title": "3. Bloccare, poi prenotare",
+        "body": "Ve ne piace una? Possiamo bloccarla mentre decidete. La prenotazione si fa online con carta o bonifico, e ogni prenotazione include la cancellazione gratuita per 72 ore dal momento in cui prenotate."
+      },
+      {
+        "title": "4. Prima e durante il charter",
+        "body": "Dopo la prenotazione ricevete il piano dei pagamenti, i dettagli del check-in e i documenti per la consegna della barca. Durante il charter il numero urgente indicato sopra ci raggiunge anche fuori dall'orario d'ufficio."
+      }
+    ],
+    "includeHeading": "Cosa ci aiuta a rispondere più in fretta",
+    "include": [
+      "Le vostre date, oppure il mese e il numero di notti",
+      "Il paese, la zona di navigazione o il porto da cui volete partire",
+      "Il numero di ospiti e quante cabine vi servono",
+      "Navigazione in autonomia (con patente valida) oppure con skipper o equipaggio",
+      "Un budget settimanale e gli irrinunciabili: aria condizionata, tender con fuoribordo, dissalatore"
+    ],
+    "hours": "L'ufficio è aperto dal lunedì alla domenica, dalle 8 alle 20 (CEST). Le e-mail che arrivano fuori orario ricevono risposta alla riapertura; il numero urgente è per gli ospiti già a bordo."
   }
 }
