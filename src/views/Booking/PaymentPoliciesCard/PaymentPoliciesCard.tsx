@@ -4,7 +4,7 @@ import { useLocale, useTranslations } from 'next-intl';
 
 import { SelectedExtras } from '@/models/yacht-offer.model';
 import { YachtServiceExtrasKey } from '@/models/yacht-service.model';
-import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
+import { formatPriceWithCurrency, isPositivePrice, unpricedExtraLabelKey } from '@/utils/static/formatPriceCurrency';
 
 import styles from './PaymentPoliciesCard.module.scss';
 
@@ -58,12 +58,16 @@ const PaymentPoliciesCard = ({
             <Typography variant="body1" fontWeight={700}>
               {t('paidNow')}
             </Typography>
-            {selectedExtrasInPrice.map(({ id, name, priceEur, priceInfo, labelCode }) => {
-              const formattedPrice = formatPriceWithCurrency({
-                clientPriceEur: priceEur,
-                clientPriceInfo: priceInfo,
-                locale,
-              });
+            {selectedExtrasInPrice.map(({ id, name, priceEur, priceInfo, labelCode, paymentType }) => {
+              // Never "0 €": an unpriced extra reads "Included" or "Price on
+              // request", as on the boat page.
+              const formattedPrice = isPositivePrice(priceInfo?.amount ?? priceEur)
+                ? formatPriceWithCurrency({
+                    clientPriceEur: priceEur,
+                    clientPriceInfo: priceInfo,
+                    locale,
+                  })
+                : t(unpricedExtraLabelKey(paymentType));
 
               // Two-column layout — description wraps freely on the left,
               // price stays right-aligned on the first row, never wraps.
@@ -92,12 +96,14 @@ const PaymentPoliciesCard = ({
           // everything payable outside our online total under "Paid at marina".
           const inAdvance = (selectedExtrasAtBase || []).filter(() => false);
           const onSite = selectedExtrasAtBase || [];
-          const renderRow = ({ id, name, priceEur, priceInfo, labelCode }: (typeof inAdvance)[number]) => {
-            const formattedPrice = formatPriceWithCurrency({
-              clientPriceEur: priceEur,
-              clientPriceInfo: priceInfo,
-              locale,
-            });
+          const renderRow = ({ id, name, priceEur, priceInfo, labelCode, paymentType }: (typeof inAdvance)[number]) => {
+            const formattedPrice = isPositivePrice(priceInfo?.amount ?? priceEur)
+              ? formatPriceWithCurrency({
+                  clientPriceEur: priceEur,
+                  clientPriceInfo: priceInfo,
+                  locale,
+                })
+              : t(unpricedExtraLabelKey(paymentType));
 
             return (
               <Stack key={id} direction="row" justifyContent="space-between" alignItems="flex-start" gap={2}>
