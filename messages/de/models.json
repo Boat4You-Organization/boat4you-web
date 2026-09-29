@@ -17,7 +17,14 @@
   "priceBand": "{p25} – {p75} pro Woche",
   "index": {
     "h1": "Yachtcharter nach Modell",
-    "lede": "Die {models, number} Modelle mit den meisten Charterbooten bei Boat4You, insgesamt {count, number} Boote. Jede Modellseite zeigt alle Boote, ihre Stützpunkte und was eine Charterwoche typischerweise kostet."
+    "lede": "Die {models, number} Modelle mit den meisten Charterbooten bei Boat4You, insgesamt {count, number} Boote. Jede Modellseite zeigt alle Boote, ihre Stützpunkte und was eine Charterwoche typischerweise kostet.",
+    "brandsLede": "Die Marken mit den meisten Charterbooten: {brands}.",
+    "chooseHeading": "So wählen Sie das Yachtmodell",
+    "choose1": "Beginnen Sie bei der Crew. Eine Kabine pro Paar plus eine für Skipper oder Gepäck ist die bequeme Regel: Eine 40-Fuß-Segelyacht mit drei Kabinen passt für vier bis sechs Personen, ein 45-Fuß-Katamaran mit vier Kabinen nimmt acht auf, ohne dass jemand im Salon schläft. Die Kojenzahl eines Angebots zählt die Salonkojen mit – vergleichen Sie also Kabinen, nicht Kojen.",
+    "choose2": "Dann der Typ. Eine Einrumpfyacht segelt besser gegen den Wind und kostet pro Woche weniger; ein Katamaran bietet doppelt so viel Deckfläche, eine ebene Plattform vor Anker und wenig Tiefgang für die Buchten – zu einem höheren Wochenpreis und höheren Marinagebühren. Motoryachten schaffen mehr Meilen am Tag und addieren den Treibstoff zum Budget; Gulets und Boote mit Crew machen aus der Woche einen betreuten Urlaub.",
+    "choose3": "Achten Sie auf Baujahr und Generation des Modells. Ein Modellname deckt Boote ab, die über ein Jahrzehnt oder länger gebaut wurden, und die Eignerversionen eines Entwurfs haben oft größere Nasszellen, bessere Belüftung und moderne Elektronik. Ein drei Jahre altes Boot eines bewährten Modells ist meist der beste Gegenwert: neuer als die meisten Charterboote, günstiger als die jüngste Generation.",
+    "choose4": "Prüfen Sie zuletzt, wo das Modell liegt. Jede Modellseite listet jedes Boot mit Heimatmarina, Baujahr und typischem Wochenpreis, sodass sich eine Lagoon 42 in Split und eine in Athen direkt vergleichen lassen. Liegen zwei Modelle nah beieinander, helfen die Törnvorschläge und die Länder-Preisratgeber, die Frage nach Revier und Monat zu klären.",
+    "choose5": "Was die Modellseiten zeigen. Jede Modellseite versammelt die Boote dieses Modells an einem Ort: wie viele zur Charter stehen, ihre Basen nach Land, die Baujahre, die Kabinen- und Kojenaufteilungen und den typischen Wochenpreis mit seiner Spanne – alles aus den aktuellen Angeboten berechnet. Ein kurzes FAQ beantwortet die häufigsten Fragen der Gäste zu dem Modell. Über die Markenseiten oben wechseln Sie zwischen den Modellen einer Werft, und über das Flottenverzeichnis blättern Sie lieber durch jedes einzelne Boot statt durch ein Modell."
   },
   "brand": {
     "h1": "{brand} Yachtcharter",

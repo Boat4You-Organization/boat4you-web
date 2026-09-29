@@ -4,7 +4,7 @@ import { Locale } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 
-import BoatListingItemCard from '@/components/BoatListingItemCard';
+import { StaticBoatListingItemCard } from '@/components/BoatListingItemCard';
 import Layout from '@/components/Layout';
 import PromoBanner from '@/components/PromoBanner';
 import { PROMO_CAMPAIGNS, getCampaignBySlug, resolveFeaturedWeek } from '@/config/campaigns.config';
@@ -12,6 +12,7 @@ import { YachtSearchParams } from '@/config/form-models.config';
 import { LocaleType } from '@/config/locales.config';
 import { routing } from '@/i18n/routing';
 import { Currency } from '@/models/user.model';
+import { YachtModelShortInfo } from '@/models/yacht.model';
 import { fetchCampaignMaxPct } from '@/services/promo.service';
 import { fetchYachts } from '@/services/yacht.service';
 import { buildMetadata } from '@/utils/static/buildMetadata';
@@ -29,11 +30,16 @@ interface DealsPageParams {
   params: Promise<{ locale: Locale; campaign: string }>;
 }
 
-// Rendered per request: the featured week is derived from `new Date()` and the
-// discounted-boat list is fetched no-store, so the page must never be frozen at
-// build time (would pin the dates + prices to the deploy moment).
-export const dynamic = 'force-dynamic';
+// ISR (audit 29.9.2026, R11): rendered per request, a campaign page cost
+// 0.5–2 s cold and 9–42 s in the worst cases (five dated catalogue queries
+// per render, no route cache). The featured week comes from `new Date()` and
+// the discounts move with the partner syncs, so the page is never frozen at
+// build time (that would pin dates and prices to the deploy) — but half an
+// hour of route cache is invisible next to the nightly price runs. The five
+// list fetches share the same window in the Data Cache.
+export const revalidate = 1800;
 
+const DEALS_FETCH_REVALIDATE_SECONDS = 1800;
 const LISTING_SIZE = 18;
 // Main charter vessel types, interleaved so the deals grid shows variety.
 const DEALS_VESSEL_TYPES = ['SAILING_YACHT', 'CATAMARAN', 'MOTORBOAT', 'MOTOR_YACHT', 'GULET'];
@@ -77,20 +83,26 @@ const DealsPage = async ({ params }: DealsPageParams) => {
         fetchYachts(
           { startDate, endDate, sortBy: 'discount', size: PER_TYPE_SIZE, boatTypes: [vesselType] } as YachtSearchParams,
           Currency.EUR,
-          locale
+          locale,
+          { revalidate: DEALS_FETCH_REVALIDATE_SECONDS }
         )
           .then(res => res?.content ?? [])
-          .catch(() => [])
+          .catch((): null => null)
       )
     ),
     getTranslations('promo'),
   ]);
 
+  // One type without boats just drops out of the interleave; every fetch
+  // failing is a backend outage — throw (500, not cached) rather than cache
+  // an empty "no boats" landing for the whole revalidate window.
+  if (perType.every(list => list === null)) throw new Error('Deals listing unavailable');
+
   // Round-robin the per-type lists (rank 0 of every type, then rank 1, …) so the
   // grid mixes catamarans, motorboats, gulets and sailing yachts instead of
   // being a wall of one type.
   const boats = Array.from({ length: PER_TYPE_SIZE })
-    .flatMap((_, rank) => perType.map(list => list[rank]).filter(Boolean))
+    .flatMap((_, rank) => perType.map(list => list?.[rank]).filter((y): y is YachtModelShortInfo => !!y))
     .slice(0, LISTING_SIZE);
   const formatDay = (iso: string) =>
     new Date(iso).toLocaleDateString(locale, { day: 'numeric', month: 'short', year: 'numeric' });
@@ -132,9 +144,13 @@ const DealsPage = async ({ params }: DealsPageParams) => {
           </Typography>
         ) : (
           <Grid container columnSpacing={2} rowSpacing={3}>
+            {/* The static card (plain /boat/<slug> link, as on the itinerary
+                pages): the search card reads useSearchParams, which bails a
+                statically rendered page out to a 500 without a Suspense
+                boundary — and the deals URL carries no dates anyway. */}
             {boats.map(yacht => (
               <Grid key={yacht.id} size={{ xs: 12, md: 4 }}>
-                <BoatListingItemCard isGridView {...yacht} user={null} />
+                <StaticBoatListingItemCard isGridView {...yacht} user={null} />
               </Grid>
             ))}
           </Grid>

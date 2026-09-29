@@ -15,5 +15,37 @@
     "usaOffice": "Bureau USA",
     "ukOffice": "Bureau Royaume-Uni",
     "croatiaHQ": "Numéro WhatsApp"
+  },
+  "expect": {
+    "title": "À quoi vous attendre quand vous nous contactez",
+    "intro": "Boat4You met en relation voyageurs et bateaux de location depuis 2013, depuis un bureau en Croatie ouvert toute la semaine. Que vous écriviez, appeliez ou envoyiez une demande depuis la page d'un bateau, chaque demande est lue et traitée par une personne, et vous avez en général une réponse le jour ouvré même.",
+    "steps": [
+      {
+        "title": "1. Parlez-nous de votre voyage",
+        "body": "Les dates ou le mois envisagé, le pays ou la base de départ, combien vous êtes et si vous naviguez vous-mêmes ou souhaitez un skipper. Un budget hebdomadaire approximatif nous aide à écarter d'emblée ce qui ne convient pas."
+      },
+      {
+        "title": "2. Nous envoyons des options, pas une brochure",
+        "body": "Vous recevez une courte liste de bateaux réellement libres à vos dates, chacun avec le prix de la semaine, les extras obligatoires réglés à la base et la caution : le total réel, pas un prix d'appel."
+      },
+      {
+        "title": "3. Bloquer, puis réserver",
+        "body": "Un bateau vous plaît ? Nous pouvons le bloquer pendant que vous décidez. La réservation se fait en ligne par carte ou virement, et chaque réservation s'accompagne d'une annulation gratuite pendant 72 heures à compter du moment où vous réservez."
+      },
+      {
+        "title": "4. Avant et pendant la croisière",
+        "body": "Après la réservation, vous recevez l'échéancier de paiement, les détails d'embarquement et les documents pour la prise en main du bateau. Pendant la croisière, le numéro d'urgence ci-dessus nous joint aussi en dehors des heures de bureau."
+      }
+    ],
+    "includeHeading": "Ce qui nous aide à répondre plus vite",
+    "include": [
+      "Vos dates, ou le mois et le nombre de nuits",
+      "Le pays, la zone de navigation ou le port de départ souhaité",
+      "Le nombre de passagers et le nombre de cabines nécessaires",
+      "Navigation en autonomie (avec un permis valide) ou avec skipper ou équipage",
+      "Un budget hebdomadaire et vos indispensables : climatisation, annexe avec hors-bord, dessalinisateur"
+    ],
+    "hours": "Le bureau est ouvert du lundi au dimanche, de 8 h à 20 h (CEST). Les e-mails reçus en dehors de ces heures sont traités à la réouverture ; le numéro d'urgence est destiné aux passagers déjà à bord.",
+    "outro": "Modifications et annulations. Pendant les 72 premières heures après la réservation, vous pouvez annuler sans frais ; ensuite s'applique le calendrier d'annulation de votre réservation, exactement tel qu'il vous a été présenté avant le paiement. Changer de dates ou de bateau reste possible tant que le partenaire peut le proposer : demandez-nous, nous vérifions la disponibilité et l'éventuelle différence de prix avant toute modification."
   }
 }

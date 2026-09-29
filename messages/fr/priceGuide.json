@@ -69,6 +69,20 @@
     "typicalWeek": "Semaine type",
     "priciestMonth": "Mois le plus cher",
     "deposit": "Caution type",
-    "note": "Semaine type : la médiane mensuelle la plus basse et la plus haute des 12 prochains mois, pour le bateau par semaine. Mis à jour le {date}. Montants en euros (EUR)."
+    "note": "Semaine type : la médiane mensuelle la plus basse et la plus haute des 12 prochains mois, pour le bateau par semaine. Mis à jour le {date}. Montants en euros (EUR).",
+    "readHeading": "Comment lire ces prix",
+    "read1": "Chaque chiffre de cette page est le prix du bateau pour une semaine, tel que les flottes partenaires le publient pour les douze prochains mois : le même total qu'une réservation affiche avant les extras. Ce n'est ni un tarif par nuit ni un prix par personne. La semaine type est la médiane de toutes les semaines tarifées qui commencent dans un mois ; quelques bateaux très bon marché ou très chers ne la déplacent donc pas. La fourchette du tableau va du mois le moins cher au mois le plus cher de l'année.",
+    "read2": "Au prix de la semaine s'ajoutent les extras obligatoires réglés à la base (nettoyage final, linge de lit, transit log, taxe de séjour), un skipper si vous n'avez pas de permis, le carburant et les frais de port en route, ainsi qu'une caution remboursable bloquée sur une carte à l'embarquement. Les guides par pays indiquent les montants habituels de chacun de ces postes, pour lire côte à côte le prix de la semaine et le coût réel.",
+    "countriesHeading": "Pays par pays",
+    "countryTeaser": "{where}, {boats, plural, one {# bateau publie} other {# bateaux publient}} des prix hebdomadaires pour l'année à venir. Une semaine type coûte {low} – {high} selon le mois ; {cheapest} est le mois le moins cher et {priciest} le plus cher.",
+    "countryTeaserRange": "{where}, {boats, plural, one {# bateau publie} other {# bateaux publient}} des prix hebdomadaires pour l'année à venir ; une semaine type coûte {low} – {high} selon le mois.",
+    "countryTeaserNoPrices": "{where}, {boats, plural, one {# bateau est référencé} other {# bateaux sont référencés}} ; les chiffres mensuels suivront dès qu'assez de semaines seront tarifées.",
+    "countryTeaserSkipper": "Un skipper coûte généralement {skipper} par semaine.",
+    "countryTeaserDeposit": "La caution habituelle est de {deposit}.",
+    "countryTeaserBases": "La plupart des bateaux partent de {bases}.",
+    "saveHeading": "Quand une semaine de location coûte moins cher",
+    "save1": "La saison fait le prix. Juillet et août sont les semaines les plus chères presque partout en Méditerranée ; le même bateau coûte nettement moins en mai, juin, septembre et début octobre, quand la météo reste fiable et les ports plus calmes. Si la saison d'un pays suit un autre rythme, le tableau des mois de son guide le montre.",
+    "save2": "Réserver tôt préserve le choix ; réserver tard peut faire baisser le prix. Les modèles recherchés et les meilleures semaines partent des mois à l'avance, et les remises de réservation anticipée récompensent ceux qui décident à l'automne ou en hiver. Les semaines encore libres quelques semaines avant le départ arrivent souvent avec de vraies baisses de dernière minute – à regarder quand les dates sont souples.",
+    "save3": "Le bateau compte autant que le mois. Un catamaran coûte plus cher qu'un monocoque de même longueur mais accueille plus de monde, si bien que le prix par cabine peut être proche ; un bateau de cinq ans est moins cher qu'un neuf du même modèle ; et un yacht à moteur ajoute le carburant au prix de la semaine. Comparer le prix par cabine entre les types de bateaux est en général la façon la plus juste de trancher."
   }
 }

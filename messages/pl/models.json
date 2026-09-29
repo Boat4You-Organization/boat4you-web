@@ -17,7 +17,14 @@
   "priceBand": "{p25} – {p75} za tydzień",
   "index": {
     "h1": "Czarter jachtów według modelu",
-    "lede": "Modele z największą liczbą jachtów do czarteru w Boat4You ({models, number}), łącznie {count, plural, one {# jacht} few {# jachty} many {# jachtów} other {# jachtu}}. Na stronie każdego modelu znajdziesz wszystkie jachty, ich bazy i typowy koszt tygodnia czarteru."
+    "lede": "Modele z największą liczbą jachtów do czarteru w Boat4You ({models, number}), łącznie {count, plural, one {# jacht} few {# jachty} many {# jachtów} other {# jachtu}}. Na stronie każdego modelu znajdziesz wszystkie jachty, ich bazy i typowy koszt tygodnia czarteru.",
+    "brandsLede": "Marki z największą liczbą jachtów do czarteru: {brands}.",
+    "chooseHeading": "Jak wybrać model jachtu",
+    "choose1": "Zacznij od załogi. Kabina na parę plus jedna dla skipera lub na bagaże to wygodna reguła: jacht żaglowy 40 stóp z trzema kabinami pasuje dla czterech do sześciu osób, katamaran 45 stóp z czterema kabinami zabiera osiem osób i nikt nie śpi w mesie. Liczba koi w ogłoszeniu obejmuje koje w mesie, więc porównuj kabiny, nie koje.",
+    "choose2": "Potem typ. Jednokadłubowiec lepiej żegluje na wiatr i kosztuje mniej za tydzień; katamaran daje dwa razy więcej pokładu, stabilną platformę na kotwicy i małe zanurzenie do zatok, ale za wyższą cenę tygodniową i droższe postoje w marinach. Jachty motorowe pokonują więcej mil dziennie i doliczają paliwo do budżetu; gulety i jachty z załogą zamieniają tydzień w wakacje z obsługą.",
+    "choose3": "Spójrz na rok budowy i generację modelu. Nazwa modelu obejmuje jachty budowane przez dekadę lub dłużej, a wersje armatorskie projektu często mają większe łazienki, lepszą wentylację i nowoczesną elektronikę. Trzyletni jacht sprawdzonego modelu to zwykle najlepsza wartość: nowszy niż większość jachtów czarterowych, tańszy niż najnowsza generacja.",
+    "choose4": "Na koniec sprawdź, gdzie model stacjonuje. Każda strona modelu wymienia każdy jacht z mariną macierzystą, rokiem budowy i typową ceną tygodniową, więc Lagoon 42 w Splicie i ten w Atenach dają się porównać wprost. Jeśli dwa modele są blisko siebie, trasy rejsów i przewodniki cenowe po krajach pomagają rozstrzygnąć według akwenu i miesiąca.",
+    "choose5": "Co pokazują strony modeli. Każda strona modelu zbiera w jednym miejscu jachty tego modelu: ile jest w czarterze, ich bazy według krajów, lata budowy, układy kabin i koi oraz typową cenę tygodniową z zakresem – wszystko obliczone z aktualnych ofert. Krótkie FAQ odpowiada na pytania, które goście zadają o modelu najczęściej. Strony marek powyżej pozwalają przechodzić między modelami jednej stoczni, a katalog floty przydaje się, gdy wolisz przeglądać każdy jacht z osobna zamiast modelu."
   },
   "brand": {
     "h1": "Czarter jachtów {brand}",

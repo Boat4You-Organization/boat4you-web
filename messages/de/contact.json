@@ -15,5 +15,37 @@
     "usaOffice": "USA-Büro",
     "ukOffice": "UK-Büro",
     "croatiaHQ": "WhatsApp-Nummer"
+  },
+  "expect": {
+    "title": "Was Sie erwartet, wenn Sie uns kontaktieren",
+    "intro": "Boat4You vermittelt seit 2013 Charterboote an Gäste – von einem Schreibtisch in Kroatien, der die ganze Woche besetzt ist. Ob Sie schreiben, anrufen oder eine Anfrage von einer Bootsseite senden: Jede Anfrage wird von einem Menschen gelesen und beantwortet, und in der Regel hören Sie noch am selben Arbeitstag von uns.",
+    "steps": [
+      {
+        "title": "1. Erzählen Sie uns von Ihrer Reise",
+        "body": "Termine oder der Monat, den Sie im Kopf haben, das Land oder die Startbasis, wie viele Sie sind und ob Sie selbst segeln oder einen Skipper möchten. Ein grobes Wochenbudget hilft uns, das Unpassende gleich auszulassen."
+      },
+      {
+        "title": "2. Wir schicken Optionen, keine Broschüre",
+        "body": "Sie erhalten eine kurze Liste von Booten, die an Ihren Terminen tatsächlich frei sind – jedes mit Wochenpreis, den in der Basis kassierten Pflichtextras und der Kaution: der tatsächliche Gesamtbetrag, kein Ab-Preis."
+      },
+      {
+        "title": "3. Reservieren, dann buchen",
+        "body": "Gefällt Ihnen eines? Wir halten es für Sie fest, während Sie entscheiden. Gebucht wird online per Karte oder Überweisung, und jede Buchung kommt mit kostenloser Stornierung für 72 Stunden ab dem Moment der Buchung."
+      },
+      {
+        "title": "4. Vor und während des Charters",
+        "body": "Nach der Buchung erhalten Sie den Zahlungsplan, die Check-in-Details und die Unterlagen für die Übernahme. Während des Charters erreichen Sie uns über die oben genannte Notfallnummer auch außerhalb der Bürozeiten."
+      }
+    ],
+    "includeHeading": "Was uns hilft, schneller zu antworten",
+    "include": [
+      "Ihre Termine oder der Monat und die Zahl der Nächte",
+      "Das Land, das Revier oder die Marina, von der Sie starten möchten",
+      "Die Zahl der Gäste und wie viele Kabinen Sie brauchen",
+      "Selbst segeln (mit gültigem Führerschein) oder mit Skipper bzw. Crew",
+      "Ein Wochenbudget und Ihre Must-haves: Klimaanlage, Dinghi mit Außenborder, Watermaker"
+    ],
+    "hours": "Die Bürozeiten sind Montag bis Sonntag von 8 bis 20 Uhr (MESZ). E-Mails, die außerhalb dieser Zeiten eintreffen, werden beantwortet, sobald das Büro wieder öffnet; die Notfallnummer ist für Gäste gedacht, die bereits an Bord sind.",
+    "outro": "Änderungen und Stornierungen. Innerhalb der ersten 72 Stunden nach der Buchung können Sie kostenlos stornieren; danach gilt der Stornoplan Ihrer Buchung, genau so, wie er Ihnen vor der Zahlung angezeigt wurde. Terminänderungen und ein Bootswechsel sind möglich, soweit der Partner sie anbieten kann – fragen Sie uns, wir prüfen Verfügbarkeit und eventuelle Preisunterschiede, bevor etwas geändert wird."
   }
 }

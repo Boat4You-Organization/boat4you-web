@@ -10,6 +10,7 @@ import { isOneWayItinerary } from '@/helper/itineraryDaysHelper';
 import { itineraryNamespace, resolveAreaText, resolveRouteText } from '@/helper/itineraryI18n';
 import { Link } from '@/i18n/navigation';
 import colors from '@/styles/themes/colors';
+import { displayPlaceName } from '@/utils/static/croatianPlaceNames';
 import { staticSrcSet } from '@/utils/static/staticImageSrcSet';
 
 /**
@@ -48,10 +49,11 @@ const ItineraryArea: FC<ItineraryAreaProps> = ({ slug, areaLabel, countryLabel }
 
   // A loop returns to its start; a one-way route ends at its last stop
   // ("Dubrovnik → Split", not "Dubrovnik → Split → Dubrovnik").
+  // Config names are ASCII ("Sibenik", "Komiza"); shown with diacritics (R32).
   const formatRoutePath = (startingPoint: string, otherPoints: string[], oneWay: boolean) => {
-    if (!otherPoints?.length) return t('area.roundTrip', { start: startingPoint });
+    if (!otherPoints?.length) return t('area.roundTrip', { start: displayPlaceName(startingPoint) });
 
-    return [startingPoint, ...otherPoints, ...(oneWay ? [] : [startingPoint])].join(' → ');
+    return [startingPoint, ...otherPoints, ...(oneWay ? [] : [startingPoint])].map(displayPlaceName).join(' → ');
   };
 
   const description = itinerary ? (resolveAreaText(itinerary, 'description', itinerary.description, tArea) ?? '') : '';
@@ -163,7 +165,7 @@ const ItineraryArea: FC<ItineraryAreaProps> = ({ slug, areaLabel, countryLabel }
                   point === ALL_LABEL
                     ? itinerary.routes.length
                     : itinerary.routes.filter(r => r.startingPoint === point).length;
-                const label = point === ALL_LABEL ? t('area.allStartingPoints') : point;
+                const label = point === ALL_LABEL ? t('area.allStartingPoints') : displayPlaceName(point);
 
                 return (
                   <Box
@@ -285,7 +287,10 @@ const ItineraryArea: FC<ItineraryAreaProps> = ({ slug, areaLabel, countryLabel }
                       mb: 1,
                     }}
                   >
-                    {t('area.routeCardKicker', { index: String(i + 1).padStart(2, '0'), start: route.startingPoint })}
+                    {t('area.routeCardKicker', {
+                      index: String(i + 1).padStart(2, '0'),
+                      start: displayPlaceName(route.startingPoint),
+                    })}
                   </Typography>
                   <Typography
                     component="h3"

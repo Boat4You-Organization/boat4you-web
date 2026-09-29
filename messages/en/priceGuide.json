@@ -69,6 +69,20 @@
     "typicalWeek": "Typical week",
     "priciestMonth": "Most expensive month",
     "deposit": "Typical deposit",
-    "note": "Typical week: the lowest and the highest monthly median over the next 12 months, for the boat per week. Updated {date}. Amounts in euros (EUR)."
+    "note": "Typical week: the lowest and the highest monthly median over the next 12 months, for the boat per week. Updated {date}. Amounts in euros (EUR).",
+    "readHeading": "How to read these prices",
+    "read1": "Every figure on this page is the price of the boat for one week, as the partner fleets publish it for the coming twelve months: the same total a booking shows before extras. It is not a per-night rate and not a price per person. The typical week is the median of all priced weeks that start in a month, so a few very cheap or very expensive boats do not move it; the range in the table runs from the cheapest to the most expensive month of the year.",
+    "read2": "On top of the weekly price you should plan for the obligatory extras collected at the base (final cleaning, bed linen, transit log, tourist tax), a skipper if you do not hold a licence, fuel and mooring fees on the way, and a refundable security deposit that is blocked on a card at check-in. The country guides list the typical amounts for each of these, so the weekly price and the real total can be read side by side.",
+    "countriesHeading": "Country by country",
+    "countryTeaser": "{where}, {boats, plural, one {# boat publishes} other {# boats publish}} weekly prices for the coming year. A typical week costs {low} – {high} depending on the month; {cheapest} is the cheapest month and {priciest} the most expensive.",
+    "countryTeaserRange": "{where}, {boats, plural, one {# boat publishes} other {# boats publish}} weekly prices for the coming year; a typical week costs {low} – {high} depending on the month.",
+    "countryTeaserNoPrices": "{where}, {boats, plural, one {# boat is} other {# boats are}} listed; the monthly figures follow as soon as enough weeks are priced.",
+    "countryTeaserSkipper": "A skipper is typically {skipper} a week.",
+    "countryTeaserDeposit": "The typical security deposit is {deposit}.",
+    "countryTeaserBases": "Most boats start from {bases}.",
+    "saveHeading": "When a charter week costs less",
+    "save1": "The season sets the price. July and August are the most expensive weeks almost everywhere in the Mediterranean; the same boat costs noticeably less in May, June, September and early October, when the weather is still reliable and the marinas are quieter. Where a country's season runs differently, the guide's month table shows it.",
+    "save2": "Booking early keeps the choice; booking late can lower the price. Popular models and the best weeks are gone months ahead, and early-booking discounts reward those who decide in autumn or winter. Weeks that are still free a few weeks before departure often come with genuine last-minute cuts — worth a look when the dates are flexible.",
+    "save3": "The boat itself matters as much as the month. A catamaran costs more than a monohull of the same length but sleeps more people, so the price per cabin can be similar; a five-year-old boat is cheaper than a new one of the same model; and a motor yacht adds fuel to the weekly price. Comparing the price per cabin between boat types is usually the fairest way to decide."
   }
 }

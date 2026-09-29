@@ -6,6 +6,7 @@ import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import colors from '@/styles/themes/colors';
 import { ItineraryRoute } from '@/types/itinerary.type';
+import { displayPlaceName } from '@/utils/static/croatianPlaceNames';
 
 interface RouteSeoExtrasProps {
   route: ItineraryRoute;
@@ -65,7 +66,7 @@ const RouteSeoExtras = ({ route, sailingArea, itinerarySlug, onDaySelect, boatsS
   const planCards: Array<{ href: string; title: string; subtitle: string }> = [
     {
       href: boatsSearchHref ?? `/search?destinations=${encodeURIComponent(route.startingPoint)}`,
-      title: t('extras.browseYachtsTitle', { start: route.startingPoint }),
+      title: t('extras.browseYachtsTitle', { start: displayPlaceName(route.startingPoint) }),
       subtitle: t('extras.browseYachtsSubtitle'),
     },
     {
@@ -135,7 +136,7 @@ const RouteSeoExtras = ({ route, sailingArea, itinerarySlug, onDaySelect, boatsS
             >
               <StatPill kicker={t('extras.bestSeasonLabel')} value={bestSeason} />
               <StatPill kicker={t('extras.durationLabel')} value={t('extras.durationValue', { days: numberOfDays })} />
-              <StatPill kicker={t('extras.departureLabel')} value={route.startingPoint} />
+              <StatPill kicker={t('extras.departureLabel')} value={displayPlaceName(route.startingPoint)} />
               <StatPill kicker={t('extras.sailingAreaLabel')} value={sailingArea} />
             </Box>
           </Box>

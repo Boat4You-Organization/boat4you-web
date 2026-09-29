@@ -10,6 +10,7 @@ import { buildMetadata } from '@/utils/static/buildMetadata';
 
 const HeroSection = dynamic(() => import('@/components/HeroSection'));
 const ContactSection = dynamic(() => import('@/views/ContactUs/ContactSection'));
+const ContactExpectSection = dynamic(() => import('@/views/ContactUs/ContactExpectSection'));
 const InternationalSupportSection = dynamic(() => import('@/views/ContactUs/InternationalSupportSection'));
 const WhyChooseUsSection = dynamic(() => import('@/components/WhyChooseUsSection'));
 const RiskFreeCtaSection = dynamic(() => import('@/components/RiskFreeCTA'));
@@ -32,6 +33,7 @@ const ContactUsPage = () => (
     <HeroSection namespace="contact" image={{ src: '/images/howWeWork/hero.webp', alt: 'Contact us' }} />
     <ContactSection />
     <InternationalSupportSection />
+    <ContactExpectSection />
     <WhyChooseUsSection translation="howWeWork" data={whyChooseUs} />
     <RiskFreeCtaSection />
     <FaqSection />

@@ -8,6 +8,7 @@ import { useTranslations } from 'next-intl';
 import { areaForMarina, findItineraryArea, suggestedRoutesForArea } from '@/helper/itineraryMatch';
 import { Link } from '@/i18n/navigation';
 import colors from '@/styles/themes/colors';
+import { displayPlaceName } from '@/utils/static/croatianPlaceNames';
 import { staticSrcSet } from '@/utils/static/staticImageSrcSet';
 
 /**
@@ -118,7 +119,7 @@ const SuggestedItineraries: FC<SuggestedItinerariesProps> = ({
       >
         {routes.map(route => {
           const days = route.numberOfDays ?? route.routeDays.length;
-          const pathLabel = [route.startingPoint, ...(route.otherPoints || [])].join(' → ');
+          const pathLabel = [route.startingPoint, ...(route.otherPoints || [])].map(displayPlaceName).join(' → ');
           // Card label = metaTitle minus the "| Brand" SEO suffix — the
           // suffix belongs in <title>, not on a route card.
           const shortName = (routeTitles?.[route.id] ?? route.metaTitle)?.split(' | ')[0];

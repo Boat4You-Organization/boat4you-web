@@ -17,7 +17,14 @@
   "priceBand": "{p25} – {p75} a settimana",
   "index": {
     "h1": "Noleggio barche per modello",
-    "lede": "I {models, number} modelli con più barche a noleggio su Boat4You, per un totale di {count, number} barche. Ogni pagina modello elenca tutte le barche, le basi di partenza e quanto costa di solito una settimana di noleggio."
+    "lede": "I {models, number} modelli con più barche a noleggio su Boat4You, per un totale di {count, number} barche. Ogni pagina modello elenca tutte le barche, le basi di partenza e quanto costa di solito una settimana di noleggio.",
+    "brandsLede": "I marchi con più barche a noleggio: {brands}.",
+    "chooseHeading": "Come scegliere il modello di yacht",
+    "choose1": "Partite dall'equipaggio. Una cabina per coppia più una per lo skipper o i bagagli è la regola comoda: una barca a vela di 40 piedi con tre cabine va bene per quattro-sei persone, un catamarano di 45 piedi con quattro cabine ne porta otto senza che nessuno dorma in dinette. Il numero di posti letto di un annuncio include quelli in dinette, quindi confrontate le cabine, non i posti letto.",
+    "choose2": "Poi il tipo. Un monoscafo risale meglio il vento e costa meno a settimana; un catamarano offre il doppio dello spazio in coperta, una piattaforma stabile all'ancora e poco pescaggio per le baie, a un prezzo settimanale più alto e con ormeggi più cari. Gli yacht a motore coprono più miglia al giorno e aggiungono il carburante al budget; caicchi e barche con equipaggio trasformano la settimana in una vacanza servita.",
+    "choose3": "Guardate l'anno di costruzione e la generazione del modello. Un nome di modello copre barche costruite in dieci anni o più, e le versioni armatoriali di un progetto hanno spesso bagni più grandi, migliore ventilazione ed elettronica moderna. Una barca di tre anni di un modello collaudato è di solito il miglior valore: più nuova della maggior parte delle barche a noleggio, meno cara dell'ultima generazione.",
+    "choose4": "Infine controllate dove è basato il modello. Ogni pagina modello elenca tutte le barche con porto base, anno e prezzo settimanale tipico, così un Lagoon 42 a Spalato e uno ad Atene si confrontano direttamente. Se due modelli sono vicini, gli itinerari e le guide ai prezzi per paese aiutano a decidere in base alla zona di navigazione e al mese.",
+    "choose5": "Cosa mostrano le pagine modello. Ogni pagina modello raccoglie in un solo posto le barche di quel modello: quante sono a noleggio, le loro basi per paese, gli anni di costruzione, le disposizioni di cabine e posti letto e il prezzo settimanale tipico con il suo intervallo, tutto calcolato dagli annunci in tempo reale. Una breve FAQ risponde alle domande che gli ospiti fanno più spesso sul modello. Usate le pagine dei marchi qui sopra per passare da un modello all'altro dello stesso cantiere, e l'elenco della flotta quando preferite scorrere ogni barca anziché un modello."
   },
   "brand": {
     "h1": "Noleggio barche {brand}",

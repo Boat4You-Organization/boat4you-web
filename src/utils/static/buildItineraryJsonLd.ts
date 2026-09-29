@@ -1,4 +1,5 @@
 import { meta } from '@/config/meta';
+import { displayPlaceName } from '@/utils/static/croatianPlaceNames';
 
 const SITE_URL = meta.url;
 
@@ -132,16 +133,20 @@ export const buildTouristTripJsonLd = (
   l10n: TouristTripL10n = {}
 ): TouristTripLd => {
   const url = `${SITE_URL}/itineraries/${slug}/${routeId}`;
-  const routeTitle = [route.startingPoint, ...route.otherPoints].join(' – ');
+  // Config names are ASCII ("Sibenik", "Komiza"); the schema names them with their diacritics (R32).
+  const area = displayPlaceName(sailingArea);
+  const start = displayPlaceName(route.startingPoint);
+  const via = route.otherPoints.map(displayPlaceName);
+  const routeTitle = [start, ...via].join(' – ');
   const days = route.routeDays ?? [];
 
   return {
     '@context': 'https://schema.org',
     '@type': 'TouristTrip',
-    name: l10n.name ?? `${route.numberOfDays ?? 7}-day ${sailingArea} yacht charter route — ${routeTitle}`,
+    name: l10n.name ?? `${route.numberOfDays ?? 7}-day ${area} yacht charter route — ${routeTitle}`,
     description:
       l10n.description ??
-      `Sample ${route.numberOfDays ?? 7}-day yacht charter itinerary in ${sailingArea}, ${country}. Departure from ${route.startingPoint}${route.otherPoints.length ? ` via ${route.otherPoints.join(', ')}` : ''}.`,
+      `Sample ${route.numberOfDays ?? 7}-day yacht charter itinerary in ${area}, ${country}. Departure from ${start}${via.length ? ` via ${via.join(', ')}` : ''}.`,
     url,
     touristType: 'Yacht charter',
     image: route.cardImage?.src
@@ -156,7 +161,7 @@ export const buildTouristTripJsonLd = (
           position: idx + 1,
           item: {
             '@type': 'Place',
-            name: `${d.routeFrom} → ${d.routeTo}`,
+            name: `${displayPlaceName(d.routeFrom)} → ${displayPlaceName(d.routeTo)}`,
             // Prefer the locale-resolved day prose (matches visible page);
             // fall back to the raw EN config description when not supplied.
             description: l10n.dayDescriptions?.[d.day] ?? d.description,
@@ -204,7 +209,7 @@ export const buildItineraryCollectionJsonLd = ({ itineraries, description }: Iti
       '@type': 'ListItem',
       position: idx + 1,
       url: `${SITE_URL}/itineraries/${it.id}`,
-      name: `${it.sailingArea} yacht charter routes — ${it.country}`,
+      name: `${displayPlaceName(it.sailingArea)} yacht charter routes — ${it.country}`,
     })),
   },
 });

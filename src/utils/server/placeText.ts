@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import 'server-only';
 
+import { displayPlaceName } from '@/utils/static/croatianPlaceNames';
 import { DESTINATION_KEY_BY_LABEL } from '@/utils/static/destinationLabelKey';
 import { REGION_KEY_BY_NAME } from '@/utils/static/placeKeys';
 import { normalizeDestinationName } from '@/utils/static/searchLandingPath';
@@ -14,7 +15,9 @@ import { normalizeDestinationName } from '@/utils/static/searchLandingPath';
  * "na Kikladima"), so templates never glue a fixed "in" / "à" / "u" to a
  * name that needs an article or a case ending; a place without its own
  * phrase gets the locale's `landing.inFallback` (HR/PL use a dash there,
- * since a base name cannot be declined automatically).
+ * since a base name cannot be declined automatically). A base name is shown
+ * with its Croatian diacritics (croatianPlaceNames.ts, audit R32) — the
+ * catalogue record may spell it "Marina Kastela".
  */
 export interface PlaceText {
   /** `landing.in` key (country, popular region or region); null for a base. */
@@ -31,7 +34,7 @@ export const placeText = async (locale: string, name: string): Promise<PlaceText
   const regionKey = homeKey ? null : (REGION_KEY_BY_NAME[normalizeDestinationName(name)] ?? null);
   const names = tLanding.raw('names' as never) as Record<string, string>;
   const phrases = tLanding.raw('in' as never) as Record<string, string>;
-  let display = name.trim();
+  let display = displayPlaceName(name.trim());
 
   if (homeKey) {
     const tHome = await getTranslations({ locale, namespace: 'home' });

@@ -15,5 +15,37 @@
     "usaOffice": "USA ured",
     "ukOffice": "UK ured",
     "croatiaHQ": "Whatsapp broj"
+  },
+  "expect": {
+    "title": "Što možete očekivati kad nam se obratite",
+    "intro": "Boat4You od 2013. spaja goste s brodovima za najam – iz ureda u Hrvatskoj koji radi cijeli tjedan. Bilo da pišete, zovete ili šaljete upit sa stranice broda, svaki upit čita i odgovara čovjek, a odgovor obično dobijete isti radni dan.",
+    "steps": [
+      {
+        "title": "1. Recite nam nešto o putovanju",
+        "body": "Datumi ili mjesec koji imate na umu, zemlja ili polazna baza, koliko vas dolazi i jedrite li sami ili želite skipera. Okvirni tjedni budžet pomaže nam da odmah preskočimo ono što ne odgovara."
+      },
+      {
+        "title": "2. Šaljemo opcije, ne brošuru",
+        "body": "Dobivate kratak popis brodova koji su na vaše datume doista slobodni, svaki s tjednom cijenom, obveznim dodacima koji se plaćaju u bazi i depozitom – stvarni ukupni iznos, ne početna cijena."
+      },
+      {
+        "title": "3. Zadržite, zatim rezervirajte",
+        "body": "Sviđa vam se jedan? Možemo ga zadržati za vas dok odlučujete. Rezervacija se obavlja online karticom ili bankovnom uplatom, a svaka rezervacija dolazi s besplatnim otkazivanjem 72 sata od trenutka rezervacije."
+      },
+      {
+        "title": "4. Prije i tijekom najma",
+        "body": "Nakon rezervacije dobivate plan plaćanja, podatke za prijavu i dokumente za preuzimanje broda. Tijekom najma hitni broj naveden gore dostupan vam je i izvan radnog vremena."
+      }
+    ],
+    "includeHeading": "Što nam pomaže da odgovorimo brže",
+    "include": [
+      "Vaši datumi ili mjesec i broj noćenja",
+      "Zemlja, akvatorij ili marina iz koje želite krenuti",
+      "Broj gostiju i koliko kabina trebate",
+      "Jedrite sami (s važećom dozvolom) ili sa skiperom odnosno posadom",
+      "Tjedni budžet i ono što vam je nužno: klima, gumenjak s vanbrodskim motorom, desalinizator"
+    ],
+    "hours": "Radno vrijeme je od ponedjeljka do nedjelje, od 8 do 20 sati (CEST). Na e-poštu koja stigne izvan tog vremena odgovaramo čim se ured ponovno otvori; hitni broj namijenjen je gostima koji su već na brodu.",
+    "outro": "Izmjene i otkazivanja. Unutar prva 72 sata od rezervacije možete otkazati besplatno; nakon toga vrijedi plan otkazivanja vaše rezervacije, točno onakav kakav vam je prikazan prije plaćanja. Promjena datuma i zamjena broda moguće su dok ih partner može ponuditi – pitajte nas, a mi provjeravamo dostupnost i eventualnu razliku u cijeni prije nego što se išta promijeni."
   }
 }

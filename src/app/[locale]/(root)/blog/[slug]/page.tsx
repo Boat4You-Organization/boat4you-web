@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import { Locale } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import dynamic from 'next/dynamic';
-import { notFound } from 'next/navigation';
+import { notFound, permanentRedirect } from 'next/navigation';
 
 import ExploreBoatsLinks from '@/components/ExploreBoatsLinks';
 import Layout from '@/components/Layout';
@@ -22,6 +22,33 @@ import RelatedBlogSection from '@/views/Blog/RelatedBlogSection';
 
 const SingleBlogContent = dynamic(() => import('@/views/Blog/SingleBlogContent'));
 
+// ISR (audit 29.9.2026, R11): a post cost ≈1.4 s on every request (WordPress
+// GraphQL + the catalogue link blocks) and carried no route cache at all.
+// The body is editorial, its link blocks read hourly-cached catalogue
+// indexes — an hour of route cache changes nothing a reader can see. Rendered
+// on demand per slug; a failed revalidation keeps the last good copy.
+export const revalidate = 3600;
+
+// No path is prerendered at build time (the list would cost a WordPress
+// walk on every build); with an empty list the route is still static-capable,
+// so every slug is rendered on first request and then served from the route
+// cache (`x-nextjs-cache`). Without generateStaticParams the route stays
+// dynamic and `revalidate` only ever applied to the fetches.
+export function generateStaticParams() {
+  return [];
+}
+
+/**
+ * Blog bodies exist in English only (WordPress): a locale copy of a post
+ * (`/de/blog/<slug>`) is the English article in a German shell. It answers
+ * 308 to the English URL (audit R40, QA rule SE2 of 26.9.2026) — the
+ * middleware serves `/blog/<slug>` to every visitor without locale
+ * detection (englishOnlyRoutes.ts), so the redirect never loops.
+ */
+const redirectLocaleCopy = (locale: Locale, slug: string): void => {
+  if (locale !== routing.defaultLocale) permanentRedirect(`/blog/${slug}`);
+};
+
 export async function generateMetadata({
   params,
 }: {
@@ -29,8 +56,12 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug, locale } = await params;
 
-  // WP outage must not 500 the route (the page body calls notFound()).
-  const blog = await getBlogWithSEO(slug).catch(() => null);
+  redirectLocaleCopy(locale, slug);
+
+  // A WordPress outage throws (500, retried by Google; an ISR revalidation
+  // keeps the last good copy) — swallowing it here would cache a 404 for a
+  // live post for the whole revalidate window. Only an unknown slug is 404.
+  const blog = await getBlogWithSEO(slug);
 
   if (!blog?.post) {
     return {
@@ -103,8 +134,10 @@ export async function generateMetadata({
 const SingleBlogPage = async ({ params }: { params: Promise<{ slug: string; locale: Locale }> }) => {
   const { slug, locale } = await params;
 
-  // WP down / GraphQL error → 404, not a 500 across 9 locale URLs.
-  const blog = await getBlog(slug, 10).catch(() => null);
+  redirectLocaleCopy(locale, slug);
+
+  // Unknown slug → 404; a WordPress error throws (see generateMetadata).
+  const blog = await getBlog(slug, 10);
 
   if (!blog?.post) {
     return notFound();

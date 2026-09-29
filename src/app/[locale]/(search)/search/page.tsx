@@ -11,13 +11,14 @@ import { meta } from '@/config/meta';
 import { routing } from '@/i18n/routing';
 import { Currency } from '@/models/user.model';
 import { YachtModelShortInfo, isVesselType } from '@/models/yacht.model';
-import { fetchYachts } from '@/services/yacht.service';
 import { getLandingCopy } from '@/utils/server/landingCopy';
 import { evaluateLanding } from '@/utils/server/landingGate';
+import { fetchLandingListing } from '@/utils/server/landingListing';
 import { LandingCrumb, landingCrumbs, placeForDids } from '@/utils/server/landingNav';
 import { loadManufacturerLookup } from '@/utils/server/manufacturerLookup';
 import {
   SearchLanding,
+  diversifiesBases,
   hasUnknownDestination,
   landingFetchRevalidate,
   landingRedirectPath,
@@ -26,7 +27,6 @@ import {
   splitSearchParam,
   uniqueCaseInsensitive,
   withLandingDid,
-  yachtFetchParams,
 } from '@/utils/server/searchLanding';
 import { BoatDescTranslate, buildBoatDescription } from '@/utils/static/boatMetaDescription';
 import { buildMetadata, localizedUrl } from '@/utils/static/buildMetadata';
@@ -381,6 +381,10 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
   // Undated landings read the yacht list through a 10-minute Data Cache
   // window (see landingFetchRevalidate); anything dated/filtered stays live.
   const fetchRevalidate = landingFetchRevalidate(params, landing);
+  // Country / region landings in their default order: the first cards are
+  // reordered so one base holds at most six of eighteen (audit R10) — the
+  // same list feeds the cards and the Product JSON-LD below.
+  const diversify = diversifiesBases(params, landing, fetchRevalidate);
 
   const boatTypes = splitSearchParam(params.boatTypes);
   const singleBoatType = boatTypes.length === 1 && isVesselType(boatTypes[0]) ? boatTypes[0] : null;
@@ -426,8 +430,9 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
   // the SSR HTML (it read "0 boats available · live" until hydration).
   let totalCount: number | null = null;
 
-  const yachtsResp = await fetchYachts(yachtFetchParams(effectiveParams, !!fetchRevalidate), currency, locale, {
+  const yachtsResp = await fetchLandingListing(effectiveParams, currency, locale, {
     revalidate: fetchRevalidate,
+    diversify,
   }).catch(error => {
     // An undated landing (fetchRevalidate set) without its boats is not a
     // page to show Google: answer 500 (retried) rather than an indexable
@@ -479,6 +484,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
           searchParams={effectiveParams}
           destinationLabels={landing.labels}
           fetchRevalidate={fetchRevalidate}
+          diversifyBases={diversify}
           charterFacts={charterFacts}
           landingPlace={landingPlace}
           totalCount={totalCount}

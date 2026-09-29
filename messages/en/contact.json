@@ -15,5 +15,37 @@
     "usaOffice": "USA Office",
     "ukOffice": "UK Office",
     "croatiaHQ": "Whatsapp Number"
+  },
+  "expect": {
+    "title": "What to expect when you contact us",
+    "intro": "Boat4You has been matching guests with charter boats since 2013, from a desk in Croatia that works the whole week. Whether you write, call or send an inquiry from a boat page, every inquiry is read and answered by a person, and you usually hear from us the same working day.",
+    "steps": [
+      {
+        "title": "1. Tell us about your trip",
+        "body": "Dates or the month you have in mind, the country or start base, how many of you are coming and whether you sail yourselves or want a skipper. A rough weekly budget helps us skip what does not fit."
+      },
+      {
+        "title": "2. We send options, not a brochure",
+        "body": "You get a short list of boats that are actually free on your dates, each with the weekly price, the obligatory extras collected at the base and the deposit — the real total, not a starting price."
+      },
+      {
+        "title": "3. Hold, then book",
+        "body": "Liked one? We can hold it for you while you decide. Booking is done online with a card or bank transfer, and every booking comes with free cancellation for 72 hours from the moment you book."
+      },
+      {
+        "title": "4. Before and during the charter",
+        "body": "After booking you receive the payment schedule, the check-in details and the documents for the handover. During the charter the urgent phone number above reaches us outside office hours too."
+      }
+    ],
+    "includeHeading": "What helps us answer faster",
+    "include": [
+      "Your dates, or the month and the number of nights",
+      "The country, sailing area or marina you would like to start from",
+      "The number of guests and how many cabins you need",
+      "Sailing yourselves (with a valid licence) or with a skipper or crew",
+      "A weekly budget and any must-haves: air conditioning, a dinghy with an outboard, a watermaker"
+    ],
+    "hours": "Office hours are Monday to Sunday, 8 am to 8 pm (CEST). E-mails that arrive outside these hours are answered when the desk opens again; the urgent number is for guests who are already on board.",
+    "outro": "Changes and cancellations. Within the first 72 hours after booking you can cancel free of charge; after that the cancellation schedule of your booking applies, exactly as it was shown to you before you paid. Date changes and boat swaps are possible as long as the partner can offer them — ask us, and we check availability and any price difference before anything is changed."
   }
 }

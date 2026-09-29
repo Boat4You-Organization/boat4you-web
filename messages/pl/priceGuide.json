@@ -69,6 +69,20 @@
     "typicalWeek": "Typowy tydzień",
     "priciestMonth": "Najdroższy miesiąc",
     "deposit": "Typowa kaucja",
-    "note": "Typowy tydzień: najniższa i najwyższa miesięczna mediana w najbliższych 12 miesiącach, za jacht na tydzień. Aktualizacja: {date}. Kwoty w euro (EUR)."
+    "note": "Typowy tydzień: najniższa i najwyższa miesięczna mediana w najbliższych 12 miesiącach, za jacht na tydzień. Aktualizacja: {date}. Kwoty w euro (EUR).",
+    "readHeading": "Jak czytać te ceny",
+    "read1": "Każda liczba na tej stronie to cena jachtu za jeden tydzień, taka, jaką floty partnerskie publikują na najbliższe dwanaście miesięcy – ta sama kwota łączna, którą rezerwacja pokazuje przed dodatkami. To nie jest stawka za noc ani cena za osobę. Typowy tydzień to mediana wszystkich wycenionych tygodni zaczynających się w danym miesiącu, więc kilka bardzo tanich lub bardzo drogich jachtów jej nie przesuwa; zakres w tabeli biegnie od najtańszego do najdroższego miesiąca w roku.",
+    "read2": "Do ceny tygodniowej trzeba doliczyć obowiązkowe dodatki pobierane w bazie (sprzątanie końcowe, pościel, transit log, opłatę turystyczną), skipera, jeśli nie masz patentu, paliwo i opłaty portowe po drodze oraz zwrotną kaucję blokowaną na karcie przy odbiorze. Przewodniki po krajach podają typowe kwoty każdej z tych pozycji, dzięki czemu cenę tygodniową i rzeczywisty koszt całkowity można czytać obok siebie.",
+    "countriesHeading": "Kraj po kraju",
+    "countryTeaser": "{where} {boats, plural, one {# jacht publikuje} few {# jachty publikują} many {# jachtów publikuje} other {# jachtu publikuje}} ceny tygodniowe na najbliższy rok. Typowy tydzień kosztuje {low} – {high} zależnie od miesiąca; {cheapest} to najtańszy miesiąc, a {priciest} – najdroższy.",
+    "countryTeaserRange": "{where} {boats, plural, one {# jacht publikuje} few {# jachty publikują} many {# jachtów publikuje} other {# jachtu publikuje}} ceny tygodniowe na najbliższy rok; typowy tydzień kosztuje {low} – {high} zależnie od miesiąca.",
+    "countryTeaserNoPrices": "{where} {boats, plural, one {dostępny jest # jacht} few {dostępne są # jachty} many {dostępnych jest # jachtów} other {dostępnych jest # jachtu}}; dane miesięczne pojawią się, gdy wystarczająco wiele tygodni będzie miało cenę.",
+    "countryTeaserSkipper": "Skiper kosztuje zwykle {skipper} za tydzień.",
+    "countryTeaserDeposit": "Typowa kaucja wynosi {deposit}.",
+    "countryTeaserBases": "Najwięcej jachtów wypływa z baz: {bases}.",
+    "saveHeading": "Kiedy tydzień czarteru kosztuje mniej",
+    "save1": "Sezon ustala cenę. Lipiec i sierpień to najdroższe tygodnie niemal wszędzie na Morzu Śródziemnym; ten sam jacht w maju, czerwcu, wrześniu i na początku października kosztuje wyraźnie mniej, gdy pogoda jest wciąż pewna, a mariny spokojniejsze. Jeśli sezon w danym kraju przebiega inaczej, pokazuje to tabela miesięcy w jego przewodniku.",
+    "save2": "Wczesna rezerwacja zachowuje wybór, późna może obniżyć cenę. Popularne modele i najlepsze tygodnie znikają z wyprzedzeniem wielu miesięcy, a rabaty za wczesną rezerwację nagradzają tych, którzy decydują się jesienią lub zimą. Tygodnie wciąż wolne na kilka tygodni przed wypłynięciem często mają prawdziwe obniżki last minute – warto sprawdzić, gdy terminy są elastyczne.",
+    "save3": "Sam jacht liczy się tak samo jak miesiąc. Katamaran kosztuje więcej niż jednokadłubowiec tej samej długości, ale mieści więcej osób, więc cena za kabinę może być podobna; jacht pięcioletni jest tańszy od nowego tego samego modelu; a jacht motorowy dolicza paliwo do ceny tygodniowej. Porównanie ceny za kabinę między typami jachtów jest zwykle najuczciwszym sposobem na decyzję."
   }
 }

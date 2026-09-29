@@ -69,6 +69,20 @@
     "typicalWeek": "Typische Woche",
     "priciestMonth": "Teuerster Monat",
     "deposit": "Typische Kaution",
-    "note": "Typische Woche: der niedrigste und der höchste Monatsmedian der nächsten 12 Monate, für das Boot pro Woche. Stand: {date}. Beträge in Euro (EUR)."
+    "note": "Typische Woche: der niedrigste und der höchste Monatsmedian der nächsten 12 Monate, für das Boot pro Woche. Stand: {date}. Beträge in Euro (EUR).",
+    "readHeading": "So lesen Sie diese Preise",
+    "read1": "Jede Zahl auf dieser Seite ist der Preis des Bootes für eine Woche, so wie die Partnerflotten ihn für die kommenden zwölf Monate veröffentlichen – derselbe Gesamtbetrag, den eine Buchung vor den Extras anzeigt. Es ist kein Preis pro Nacht und kein Preis pro Person. Die typische Woche ist der Median aller bepreisten Wochen, die in einem Monat beginnen; einige sehr günstige oder sehr teure Boote verschieben ihn also nicht. Die Spanne in der Tabelle reicht vom günstigsten bis zum teuersten Monat des Jahres.",
+    "read2": "Zum Wochenpreis kommen die Pflichtextras, die in der Basis kassiert werden (Endreinigung, Bettwäsche, Transitlog, Kurtaxe), ein Skipper, falls Sie keinen Führerschein haben, Treibstoff und Liegegebühren unterwegs sowie eine rückzahlbare Kaution, die beim Check-in auf einer Karte geblockt wird. Die Länderratgeber nennen für jeden dieser Posten die typischen Beträge, sodass Wochenpreis und tatsächliche Gesamtkosten nebeneinander stehen.",
+    "countriesHeading": "Land für Land",
+    "countryTeaser": "{where} {boats, plural, one {veröffentlicht # Boot} other {veröffentlichen # Boote}} Wochenpreise für das kommende Jahr. Eine typische Woche kostet je nach Monat {low} – {high}; {cheapest} ist der günstigste Monat, {priciest} der teuerste.",
+    "countryTeaserRange": "{where} {boats, plural, one {veröffentlicht # Boot} other {veröffentlichen # Boote}} Wochenpreise für das kommende Jahr; eine typische Woche kostet je nach Monat {low} – {high}.",
+    "countryTeaserNoPrices": "{where} {boats, plural, one {ist # Boot gelistet} other {sind # Boote gelistet}}; die Monatswerte folgen, sobald genügend Wochen bepreist sind.",
+    "countryTeaserSkipper": "Ein Skipper kostet typischerweise {skipper} pro Woche.",
+    "countryTeaserDeposit": "Die typische Kaution beträgt {deposit}.",
+    "countryTeaserBases": "Die meisten Boote starten in {bases}.",
+    "saveHeading": "Wann eine Charterwoche weniger kostet",
+    "save1": "Die Saison bestimmt den Preis. Juli und August sind fast überall im Mittelmeer die teuersten Wochen; dasselbe Boot kostet im Mai, Juni, September und Anfang Oktober spürbar weniger, wenn das Wetter noch verlässlich ist und die Marinas ruhiger sind. Verläuft die Saison eines Landes anders, zeigt es die Monatstabelle des Ratgebers.",
+    "save2": "Früh buchen sichert die Auswahl, spät buchen kann den Preis senken. Beliebte Modelle und die besten Wochen sind Monate im Voraus vergeben, und Frühbucherrabatte belohnen, wer im Herbst oder Winter entscheidet. Wochen, die wenige Wochen vor Abfahrt noch frei sind, kommen oft mit echten Last-Minute-Nachlässen – ein Blick lohnt sich, wenn die Termine flexibel sind.",
+    "save3": "Das Boot zählt so viel wie der Monat. Ein Katamaran kostet mehr als eine Einrumpfyacht gleicher Länge, bietet aber mehr Schlafplätze, sodass der Preis pro Kabine ähnlich ausfallen kann; ein fünf Jahre altes Boot ist günstiger als ein neues desselben Modells; und eine Motoryacht addiert den Treibstoff zum Wochenpreis. Der Vergleich des Preises pro Kabine zwischen den Bootstypen ist meist der fairste Weg zur Entscheidung."
   }
 }

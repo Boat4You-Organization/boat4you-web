@@ -7,6 +7,7 @@ import { VESSEL_TYPE_LABEL_MAP_PLURAL, VesselType } from '@/models/yacht.model';
 import { fetchCharterFacts } from '@/utils/server/charterFacts';
 import { gatedLandingPath } from '@/utils/server/landingLinks';
 import { placeText } from '@/utils/server/placeText';
+import { displayPlaceName } from '@/utils/static/croatianPlaceNames';
 
 import styles from './CharterFactsBlock.module.scss';
 import { factsBaseGroups, factsFormat, factsModelRows, factsTiles, joinSentences } from './factsContent';
@@ -79,7 +80,8 @@ const CharterFactsBlock = async ({ target, locale, currency, rate, listingTotal 
     factsBaseGroups(facts).then(groups =>
       Promise.all(
         groups.map(async g => ({
-          label: g.label,
+          // The catalogue's spelling may lack the diacritics ("Marina Kastela", R32).
+          label: displayPlaceName(g.label),
           count: g.count,
           href:
             (target.vesselType && (await gatedLandingPath(g.did, g.label, locale, target.vesselType))) ||

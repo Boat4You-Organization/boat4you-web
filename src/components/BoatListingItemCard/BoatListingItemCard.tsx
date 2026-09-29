@@ -38,6 +38,7 @@ import { UserModel, UserRoleName } from '@/models/user.model';
 import { MatchKind, OfferStatus, YachtModelShortInfo } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
 import useBreakpoint from '@/utils/hooks/useBreakpoint';
+import { displayPlaceName } from '@/utils/static/croatianPlaceNames';
 import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
 import { getBoatImageUrl } from '@/utils/static/imageUtils';
 import { hasListingPrice, listingPriceDays } from '@/utils/static/listingPrice';
@@ -460,7 +461,8 @@ const BoatListingItemCardView = ({
                       }}
                       aria-label={t('common.openInMap')}
                     >
-                      {location.name}
+                      {/* Shown with its diacritics (R32); openMapFor keeps the catalogue name. */}
+                      {displayPlaceName(location.name)}
                       <OpenInNew sx={{ fontSize: { xs: 14, md: 12 } }} />
                     </Box>
                     {locationTo?.name && (
@@ -498,7 +500,7 @@ const BoatListingItemCardView = ({
                           }}
                           aria-label={t('common.openInMap')}
                         >
-                          {locationTo.name}
+                          {displayPlaceName(locationTo.name)}
                           <OpenInNew sx={{ fontSize: { xs: 14, md: 12 } }} />
                         </Box>
                       </>
