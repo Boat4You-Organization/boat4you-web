@@ -1152,6 +1152,17 @@ const OPERATOR_NAMES: readonly string[] = [
   'Zoom Boats',
   'Zouras Yachting',
   'Zsolt Yachting',
+  // 29.9.2026: agencies delivered as "manufacturer" (also appended to operators.txt)
+  'Brodarstvo Marasovic Ltd',
+  'Coastal Leisure Ltd',
+  'Mariner Don 17 Ltd',
+  'Kanula d.o.o.',
+  'Manikela d.o.o.',
+  'Dunkić d.o.o.',
+  'Intermare d.o.o.',
+  'Kolotura',
+  'Houseboat Holidays Italia S.R.L.',
+  'Riverboating Holidays',
 ];
 
 /** Not in operators.txt: the bare "Moorings" is too common a word for a copy
