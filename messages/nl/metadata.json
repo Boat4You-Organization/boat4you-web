@@ -63,7 +63,7 @@
     "descBerths": "{count, plural, one {# slaapplaats} other {# slaapplaatsen}}",
     "descGuests": "{count, plural, one {max. # gast} other {max. # gasten}}",
     "descCta": "Bekijk de beschikbaarheid en boek direct op boat4you.com.",
-    "descCtaInquiry": "Stuur een aanvraag voor je gewenste data via boat4you.com."
+    "descCtaInquiry": "Stuur een aanvraag voor je reisdata via boat4you.com."
   },
   "fleet": {
     "heading": "Vlootoverzicht",
