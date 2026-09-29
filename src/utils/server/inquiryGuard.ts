@@ -12,19 +12,41 @@ export interface InquiryIdentity {
   yachtId: unknown;
   dateFrom: unknown;
   dateTo: unknown;
+  name: unknown;
+  surname: unknown;
   email: unknown;
+  phone: unknown;
   message: unknown;
 }
 
 const text = (value: unknown): string => (typeof value === 'string' ? value : '');
 
-/** What makes two inquiries "the same": e-mail, boat, dates and message. */
-export const inquiryFingerprint = ({ yachtId, dateFrom, dateTo, email, message }: InquiryIdentity): string =>
+const nameKey = (value: unknown): string => text(value).trim().toLowerCase();
+
+/**
+ * What makes two inquiries "the same": boat, dates, name, e-mail, phone and
+ * message. A double tap or a network retry sends identical data and is
+ * caught; a visitor who reopens the form to correct the phone number or the
+ * name sends a new inquiry, and the correction reaches us.
+ */
+export const inquiryFingerprint = ({
+  yachtId,
+  dateFrom,
+  dateTo,
+  name,
+  surname,
+  email,
+  phone,
+  message,
+}: InquiryIdentity): string =>
   JSON.stringify([
     Number(yachtId) || 0,
     text(dateFrom).slice(0, 10),
     text(dateTo).slice(0, 10),
+    nameKey(name),
+    nameKey(surname),
     text(email).trim().toLowerCase(),
+    text(phone).replace(/\D/g, ''),
     text(message).replace(/\s+/g, ' ').trim(),
   ]);
 
