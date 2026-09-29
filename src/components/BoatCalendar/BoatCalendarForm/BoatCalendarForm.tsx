@@ -14,7 +14,6 @@ import FormDateInput from '@/components/Forms/FormDateInput';
 import Calendar from '@/components/SvgIcons/Calendar';
 import { BoatCalendarFormValues } from '@/config/form-models.config';
 import { ReservationStatus } from '@/models/reservation.model';
-import { CURRENCY_SYMBOL_MAP, Currency } from '@/models/user.model';
 import { YachtServiceExtrasKey } from '@/models/yacht-service.model';
 import { YachtModel } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
@@ -378,7 +377,7 @@ const BoatCalendarForm = ({ yacht, variant }: BoatCalendarFormProps) => {
                     {formattedClientPricePerDay} x {computedNumberOfDays} {daysText}
                   </Typography>
                   <Typography variant="body1">
-                    {startDate && endDate ? `${formattedTotalPrice}` : `0 ${CURRENCY_SYMBOL_MAP[Currency.EUR]}`}
+                    {startDate && endDate ? `${formattedTotalPrice}` : tCommon('priceOnRequest')}
                   </Typography>
                 </Stack>
               )}

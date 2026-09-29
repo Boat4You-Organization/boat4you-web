@@ -5,7 +5,6 @@ import { Divider, Stack, Typography } from '@mui/material';
 import { useLocale, useTranslations } from 'next-intl';
 
 import { BoatCalendarFormValues } from '@/config/form-models.config';
-import { CURRENCY_SYMBOL_MAP, Currency } from '@/models/user.model';
 import { YachtServiceExtrasKey } from '@/models/yacht-service.model';
 import { YachtModel } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
@@ -91,7 +90,7 @@ const PriceDetailsContent = ({ yacht, isCalculatedPrice, isSelectedOfferUnavaila
               {formattedClientPricePerDay} x {numberOfDays} {numberOfDays <= 1 ? 'day' : 'days'}
             </Typography>
             <Typography variant="body1">
-              {startDate && endDate ? `${formattedTotalPrice}` : `0 ${CURRENCY_SYMBOL_MAP[Currency.EUR]}`}
+              {startDate && endDate ? `${formattedTotalPrice}` : tCommon('priceOnRequest')}
             </Typography>
           </Stack>
         )}
