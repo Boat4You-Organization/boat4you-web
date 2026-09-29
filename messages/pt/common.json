@@ -119,6 +119,7 @@
   "cancellationFee100Percent": "A taxa de cancelamento é 100% se você cancelar após {date}.",
   "cancellationFee50Percent": "A taxa de cancelamento é 50% se você cancelar após {date}.",
   "cancelAndRescheduleForFreeBefore": "Cancele e reagende gratuitamente antes de {date}.",
+  "freeCancellation72hUntil": "Cancelamento gratuito até 72 horas após a reserva — até {date}.",
   "yachtPickup": "Retirada do Iate",
   "thisIsARareFind": "Esta é uma descoberta rara",
   "yourTrip": "Sua Viagem",
@@ -460,7 +461,7 @@
   "dueNow": "A pagar agora",
   "paymentByDate": "Pagamento até {date}",
   "howWouldYouLikeToPay": "Como prefere pagar?",
-  "poweredByStripe": "Powered by Stripe",
+  "poweredByStripe": "Com tecnologia Stripe",
   "todayYouPay": "Hoje paga {amount} ({percent}% do preço total).",
   "bankTransferNotice": "Pagará {amount} até {date}. Enviaremos as instruções de transferência por e-mail.",
   "paymentReferenceNotice": "Por favor, utilize o seu número de reserva {reservationNumber} como referência do pagamento.",
@@ -644,5 +645,12 @@
   "goBack": "Voltar",
   "openFilters": "Abrir filtros",
   "editSearch": "Editar pesquisa",
-  "photoAlt": "{label} — foto {n}"
+  "photoAlt": "{label} — foto {n}",
+  "a11y": {
+    "close": "Fechar",
+    "back": "Voltar",
+    "openNavigation": "Abrir o menu de navegação",
+    "openList": "Abrir a lista",
+    "closeList": "Fechar a lista"
+  }
 }

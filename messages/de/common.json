@@ -119,6 +119,7 @@
   "cancellationFee100Percent": "Die Stornogebühr beträgt 100%, wenn Sie nach dem {date} stornieren.",
   "cancellationFee50Percent": "Die Stornogebühr beträgt 50%, wenn Sie nach dem {date} stornieren.",
   "cancelAndRescheduleForFreeBefore": "Kostenlos stornieren und umbuchen vor dem {date}.",
+  "freeCancellation72hUntil": "Kostenlose Stornierung innerhalb von 72 Stunden nach der Buchung — bis {date}.",
   "yachtPickup": "Yacht-Abholung",
   "thisIsARareFind": "Das ist ein seltener Fund",
   "yourTrip": "Ihre Reise",
@@ -460,7 +461,7 @@
   "dueNow": "Sofort fällig",
   "paymentByDate": "Zahlung bis {date}",
   "howWouldYouLikeToPay": "Wie möchten Sie bezahlen?",
-  "poweredByStripe": "Powered by Stripe",
+  "poweredByStripe": "Bereitgestellt von Stripe",
   "todayYouPay": "Heute zahlen Sie {amount} ({percent}% des Gesamtpreises).",
   "bankTransferNotice": "Sie zahlen {amount} bis zum {date}. Wir senden Ihnen die Überweisungsdaten per E-Mail.",
   "paymentReferenceNotice": "Bitte verwenden Sie Ihre Reservierungsnummer {reservationNumber} als Verwendungszweck.",
@@ -644,5 +645,12 @@
   "goBack": "Zurück",
   "openFilters": "Filter öffnen",
   "editSearch": "Suche bearbeiten",
-  "photoAlt": "{label} — Foto {n}"
+  "photoAlt": "{label} — Foto {n}",
+  "a11y": {
+    "close": "Schließen",
+    "back": "Zurück",
+    "openNavigation": "Navigationsmenü öffnen",
+    "openList": "Liste öffnen",
+    "closeList": "Liste schließen"
+  }
 }

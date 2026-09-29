@@ -119,6 +119,7 @@
   "cancellationFee100Percent": "Naknada za otkazivanje je 100% ako otkažete nakon {date}.",
   "cancellationFee50Percent": "Naknada za otkazivanje je 50% ako otkažete nakon {date}.",
   "cancelAndRescheduleForFreeBefore": "Otkažite i promijenite termin besplatno prije {date}.",
+  "freeCancellation72hUntil": "Besplatno otkazivanje unutar 72 sata od rezervacije — do {date}.",
   "yachtPickup": "Preuzimanje jahte",
   "thisIsARareFind": "Ovo je rijetka ponuda",
   "yourTrip": "Vaše putovanje",
@@ -569,7 +570,7 @@
     "template1": "{dest} - charter jahti",
     "template2": "Iznajmi brod {dest}",
     "template3": "Najam plovila {dest}",
-    "template4": "Bareboat charter {dest}",
+    "template4": "Najam broda bez skipera {dest}",
     "template5": "{dest} - jedrenje",
     "template6": "Charter brodova {dest}",
     "template7": "Jahting u {dest}"
@@ -656,5 +657,12 @@
   "goBack": "Natrag",
   "openFilters": "Otvori filtre",
   "editSearch": "Uredi pretragu",
-  "photoAlt": "{label} — fotografija {n}"
+  "photoAlt": "{label} — fotografija {n}",
+  "a11y": {
+    "close": "Zatvori",
+    "back": "Natrag",
+    "openNavigation": "Otvori navigacijski izbornik",
+    "openList": "Otvori popis",
+    "closeList": "Zatvori popis"
+  }
 }

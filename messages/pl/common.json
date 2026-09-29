@@ -151,6 +151,7 @@
   "cancellationFee100Percent": "Opłata za anulowanie wynosi 100%, jeśli anulujesz po {date}.",
   "cancellationFee50Percent": "Opłata za anulowanie wynosi 50%, jeśli anulujesz po {date}.",
   "cancelAndRescheduleForFreeBefore": "Anuluj i zmień termin bezpłatnie przed {date}.",
+  "freeCancellation72hUntil": "Bezpłatne anulowanie w ciągu 72 godzin od rezerwacji — do {date}.",
   "yachtPickup": "Odbiór jachtu",
   "thisIsARareFind": "To rzadka okazja",
   "yourTrip": "Twoja podróż",
@@ -231,7 +232,7 @@
   "bareboat": "Bareboat",
   "crewed": "Z załogą",
   "cruise": "Rejs",
-  "allInclusive": "All Inclusive",
+  "allInclusive": "Wszystko w cenie",
   "catamaran": "Katamaran",
   "gulet": "Gulet",
   "houseBoat": "Łódź mieszkalna",
@@ -656,5 +657,12 @@
   "goBack": "Wstecz",
   "openFilters": "Otwórz filtry",
   "editSearch": "Edytuj wyszukiwanie",
-  "photoAlt": "{label} — zdjęcie {n}"
+  "photoAlt": "{label} — zdjęcie {n}",
+  "a11y": {
+    "close": "Zamknij",
+    "back": "Wstecz",
+    "openNavigation": "Otwórz menu nawigacji",
+    "openList": "Otwórz listę",
+    "closeList": "Zamknij listę"
+  }
 }

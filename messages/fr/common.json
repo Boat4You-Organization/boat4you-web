@@ -119,6 +119,7 @@
   "cancellationFee100Percent": "Les frais d'annulation sont de 100% si vous annulez après le {date}.",
   "cancellationFee50Percent": "Les frais d'annulation sont de 50% si vous annulez après le {date}.",
   "cancelAndRescheduleForFreeBefore": "Annulez et reprogrammez gratuitement avant le {date}.",
+  "freeCancellation72hUntil": "Annulation gratuite dans les 72 heures suivant la réservation — jusqu’au {date}.",
   "yachtPickup": "Prise en charge du yacht",
   "thisIsARareFind": "C'est une trouvaille rare",
   "yourTrip": "Votre voyage",
@@ -644,5 +645,12 @@
   "goBack": "Retour",
   "openFilters": "Ouvrir les filtres",
   "editSearch": "Modifier la recherche",
-  "photoAlt": "{label} — photo {n}"
+  "photoAlt": "{label} — photo {n}",
+  "a11y": {
+    "close": "Fermer",
+    "back": "Retour",
+    "openNavigation": "Ouvrir le menu de navigation",
+    "openList": "Ouvrir la liste",
+    "closeList": "Fermer la liste"
+  }
 }

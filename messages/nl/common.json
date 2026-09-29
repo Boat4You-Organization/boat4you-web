@@ -151,6 +151,7 @@
   "cancellationFee100Percent": "Annuleringskosten zijn 100% als je na {date} annuleert.",
   "cancellationFee50Percent": "Annuleringskosten zijn 50% als je na {date} annuleert.",
   "cancelAndRescheduleForFreeBefore": "Gratis annuleren en omboeken vóór {date}.",
+  "freeCancellation72hUntil": "Gratis annuleren binnen 72 uur na de boeking — tot {date}.",
   "yachtPickup": "Jacht ophalen",
   "thisIsARareFind": "Dit is een zeldzame vondst",
   "yourTrip": "Je reis",
@@ -644,5 +645,12 @@
   "goBack": "Terug",
   "openFilters": "Filters openen",
   "editSearch": "Zoekopdracht wijzigen",
-  "photoAlt": "{label} — foto {n}"
+  "photoAlt": "{label} — foto {n}",
+  "a11y": {
+    "close": "Sluiten",
+    "back": "Terug",
+    "openNavigation": "Navigatiemenu openen",
+    "openList": "Lijst openen",
+    "closeList": "Lijst sluiten"
+  }
 }
