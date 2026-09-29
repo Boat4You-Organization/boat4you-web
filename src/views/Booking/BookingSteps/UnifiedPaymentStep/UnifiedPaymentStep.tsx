@@ -33,6 +33,7 @@ import { ReservationData } from '@/types/reservation.type';
 import { AppliedVoucher } from '@/types/voucher.type';
 import { usePaymentSubmit } from '@/utils/hooks/usePaymentSubmit';
 import { bankFeeShareForPhase } from '@/utils/static/bankTransferFee';
+import { freeCancellationEnd } from '@/utils/static/cancellationUtils';
 import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
 import { calculatePaymentPhases as calculateClientPhases } from '@/utils/static/paymentPhases';
 import { getDataFromSessionStorage } from '@/utils/static/sessionStorageUtils';
@@ -166,14 +167,13 @@ const UnifiedPaymentStep = ({ reservationData }: UnifiedPaymentStepProps) => {
   const dateFormatter = (d: dayjs.Dayjs) => d.locale(locale).format('D MMMM YYYY');
   const fmt = (eur: number) => formatPriceWithCurrency({ clientPriceEur: eur, locale });
 
-  // Free-cancellation trust tick — Mario rule (2.7.2026): the free window
-  // lasts EXACTLY as long as our option at the charter agency, so the date is
-  // the partner option expiry (reservationExpiresAt), the same source as the
-  // bank-transfer deadline banner. No partner expiry → no tick; we never
-  // invent a deadline (option-expiry-no-fallback rule). The sidebar
-  // CancellationCard receives the same date via Booking.tsx so the two
-  // surfaces always agree.
-  const freeCancellationUntil = reservationExpiresAt ? dateFormatter(dayjs(reservationExpiresAt)) : null;
+  // Free-cancellation trust tick — the partner option expiry
+  // (reservationExpiresAt) when the option exists (Mario 2.7.2026: free
+  // exactly as long as our option lasts), otherwise the 72 hours from the
+  // booking moment that the boat page promises. One helper feeds this tick,
+  // the sidebar CancellationCard and the conditions modal, so the three
+  // surfaces always name the same date (audit 29.9.2026, R04).
+  const freeCancellationUntil = dateFormatter(freeCancellationEnd(reservationExpiresAt));
 
   const cardBorder = (active: boolean) => (active ? `2px solid ${colors.blue500}` : `1px solid ${colors.black200}`);
 

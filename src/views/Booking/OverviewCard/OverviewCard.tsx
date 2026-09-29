@@ -12,6 +12,7 @@ import YachtCard from '@/components/YachtCard';
 import { ReservationData } from '@/types/reservation.type';
 import DateTime from '@/utils/static/DateTime';
 import { generateGoogleMapsLink } from '@/utils/static/googleMapsUtils';
+import { getDataFromSessionStorage } from '@/utils/static/sessionStorageUtils';
 import CancellationCard from '@/views/Booking/CancellationCard';
 
 import styles from './OverviewCard.module.scss';
@@ -94,7 +95,14 @@ const OverviewCard = ({ reservationData, isLastStep }: OverviewCardProps) => {
           },
         }}
       />
-      <CancellationCard compact isLastStep={isLastStep} dateFrom={dateFrom} />
+      {/* Same free-window source as the sidebar card on the earlier steps:
+          the partner option expiry once the option exists, else 72 h. */}
+      <CancellationCard
+        compact
+        isLastStep={isLastStep}
+        dateFrom={dateFrom}
+        freeUntil={getDataFromSessionStorage<string>('reservationExpiresAt')}
+      />
       <Box className={styles.divider} />
     </Box>
   );

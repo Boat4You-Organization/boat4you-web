@@ -15,19 +15,27 @@ interface CancellationCardProps {
   dateFrom: string;
   /**
    * Partner option expiry (ISO) — end of the free-cancellation window (Mario
-   * 2.7.2026: free exactly while our option lasts). Null → legacy 5-day
-   * fallback inside generateCancellationTimeline.
+   * 2.7.2026: free exactly while our option lasts). Null → 72 hours from the
+   * booking moment, the boat-page promise (see freeCancellationEnd).
    */
   freeUntil?: string | null;
+  /** Booking moment (ISO) of an existing reservation; the checkout leaves it out (= now). */
+  bookedAt?: string | null;
 }
 
-const CancellationCard = ({ compact, isLastStep, dateFrom, freeUntil = null }: CancellationCardProps) => {
+const CancellationCard = ({
+  compact,
+  isLastStep,
+  dateFrom,
+  freeUntil = null,
+  bookedAt = null,
+}: CancellationCardProps) => {
   const t = useTranslations('common');
   const locale = useLocale();
 
   const cancellationTimeline = useMemo(
-    () => generateCancellationTimeline(dateFrom, t, locale, freeUntil),
-    [dateFrom, t, locale, freeUntil]
+    () => generateCancellationTimeline(dateFrom, t, locale, freeUntil, bookedAt),
+    [dateFrom, t, locale, freeUntil, bookedAt]
   );
 
   return (

@@ -46,6 +46,7 @@ const ReservationInfoSection = ({ reservationDetails, userCurrency }: Reservatio
     securityDeposit,
     insuredSecurityDeposit,
     depositCurrency,
+    createdAt,
   } = reservationDetails;
   // Prefer the backend-provided number (matches BookingSummaryCard on
   // /enter-your-details); only fall back to the locally calculated span if
@@ -125,7 +126,7 @@ const ReservationInfoSection = ({ reservationDetails, userCurrency }: Reservatio
         return <GoodToKnowTab />;
 
       case 5:
-        return <CancellationTab dateFrom={dateFrom} />;
+        return <CancellationTab dateFrom={dateFrom} bookedAt={createdAt} />;
 
       case 6:
         return <FaqTab />;

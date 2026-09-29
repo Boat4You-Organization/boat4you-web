@@ -61,69 +61,112 @@ export interface CancellationTimelineItem {
   active?: boolean;
 }
 
+/**
+ * The promise on every boat page, FAQ and model page: "Free cancellation
+ * within 72 hours of booking" (Mario rule 8.5.2026 — a cooling-off period from
+ * the booking moment, never "before check-in").
+ */
+export const FREE_CANCELLATION_HOURS = 72;
+
+/**
+ * When the free-cancellation window closes. The partner option expiry when we
+ * have one (Mario 2.7.2026: free exactly as long as our option at the charter
+ * agency lasts); otherwise 72 hours after the booking moment — the promise
+ * the boat page makes, never a generic "today + 5 days" estimate and never an
+ * invented partner deadline. `bookedAt` is the reservation's creation time on
+ * an existing booking; on the checkout, before the booking exists, it is now.
+ */
+export const freeCancellationEnd = (freeUntil?: string | null, bookedAt?: string | null): dayjs.Dayjs => {
+  const partnerExpiry = freeUntil ? dayjs(freeUntil) : null;
+
+  if (partnerExpiry?.isValid()) return partnerExpiry;
+
+  const booked = bookedAt ? dayjs(bookedAt) : null;
+
+  return (booked?.isValid() ? booked : dayjs()).add(FREE_CANCELLATION_HOURS, 'hour');
+};
+
+/** "2 October 2026, 15:00" in the page's language — a window closes at a time, not on a day. */
+const formatDateTime = (date: dayjs.Dayjs, locale?: string): string =>
+  `${DateTime.formatLongWithoutDay(date, locale)}, ${date.format('HH:mm')}`;
+
+/**
+ * The cancellation timeline shown on the checkout sidebar, the booking
+ * conditions modal and My Bookings. Its first milestone is always the free
+ * window (audit 29.9.2026, R04: the checkout used to print "Cancellation fee
+ * is 100% if you cancel after <today>" for a charter within 44 days, beside a
+ * boat page promising 72 hours of free cancellation). The fee legs start
+ * where the free window closes and follow the offer's schedule: 50 % up to
+ * 44 days before pick-up, 100 % from then on.
+ */
 export const generateCancellationTimeline = (
   dateFrom: string,
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   t?: (key: any, values?: any) => string,
   locale?: string,
-  /**
-   * Partner option expiry (ISO). Mario rule (2.7.2026): the free-cancellation
-   * window lasts EXACTLY as long as our option at the charter agency — the
-   * expiry the partner returned, not the generic "today + 5 days" estimate.
-   * When absent (no option yet — boat page / details step, or the partner
-   * sent no expiry) the legacy 5-day estimate remains as the fallback; we
-   * never invent a partner deadline (option-expiry-no-fallback rule).
-   */
-  freeUntil?: string | null
+  freeUntil?: string | null,
+  bookedAt?: string | null
 ): CancellationTimelineItem[] => {
   const today = dayjs();
   const reservationStartDate = dayjs(dateFrom);
-  const freeWindowEnd = freeUntil ? dayjs(freeUntil) : today.add(5, 'day');
+  const booked = bookedAt && dayjs(bookedAt).isValid() ? dayjs(bookedAt) : today;
+  const windowEnd = freeCancellationEnd(freeUntil, bookedAt);
+  // The window never outlasts the charter itself (a last-minute booking).
+  const freeWindowEnd = windowEnd.isAfter(reservationStartDate) ? reservationStartDate : windowEnd;
+  const freeWindowEndText = formatDateTime(freeWindowEnd, locale);
+  const isPartnerWindow = !!freeUntil && dayjs(freeUntil).isValid();
   const daysUntilReservation = DateTime.daysBetween(today, reservationStartDate);
-  const isWithin44DayPeriod = daysUntilReservation <= 44;
   const timeline: CancellationTimelineItem[] = [];
 
-  if (isWithin44DayPeriod) {
-    timeline.push({
-      date: DateTime.formatWithMonthName(today, locale),
-      text: t
-        ? t('cancellationFee100Percent', { date: DateTime.formatLongWithoutDay(today, locale) })
-        : `Cancellation fee is 100% if you cancel after ${DateTime.formatLongWithoutDay(today, locale)}.`,
-      active: today.isSameOrAfter(today),
-    });
-  } else if (daysUntilReservation >= 45) {
-    timeline.push({
-      date: DateTime.formatWithMonthName(today, locale),
-      text: t
-        ? t('cancelAndRescheduleForFreeBefore', { date: DateTime.formatLongWithoutDay(freeWindowEnd, locale) })
-        : `Cancel and reschedule for free before ${DateTime.formatLongWithoutDay(freeWindowEnd, locale)}`,
-      active: today.isSameOrAfter(today),
-    });
+  const label = (date: dayjs.Dayjs) => DateTime.formatWithMonthName(date, locale);
 
-    const fiftyPercentStartDate = freeWindowEnd.add(1, 'day');
-    const hundredPercentStartDate = reservationStartDate.subtract(44, 'day');
+  let freeText: string;
 
-    timeline.push({
-      date: DateTime.formatWithMonthName(fiftyPercentStartDate, locale),
-      text: t
-        ? t('cancellationFee50Percent', { date: DateTime.formatLongWithoutDay(fiftyPercentStartDate, locale) })
-        : `Cancellation fee is 50% if you cancel after ${DateTime.formatLongWithoutDay(fiftyPercentStartDate, locale)}.`,
-      active: today.isSameOrAfter(fiftyPercentStartDate),
-    });
+  if (t) {
+    freeText = isPartnerWindow
+      ? t('cancelAndRescheduleForFreeBefore', { date: freeWindowEndText })
+      : t('freeCancellation72hUntil', { date: freeWindowEndText });
+  } else {
+    freeText = isPartnerWindow
+      ? `Cancel and reschedule for free before ${freeWindowEndText}.`
+      : `Free cancellation within ${FREE_CANCELLATION_HOURS} hours of booking — until ${freeWindowEndText}.`;
+  }
 
-    if (hundredPercentStartDate.isAfter(fiftyPercentStartDate)) {
+  timeline.push({ date: label(booked), text: freeText, active: today.isSameOrAfter(booked) });
+
+  const fee100Text = (date: string) =>
+    t ? t('cancellationFee100Percent', { date }) : `Cancellation fee is 100% if you cancel after ${date}.`;
+  const fee50Text = (date: string) =>
+    t ? t('cancellationFee50Percent', { date }) : `Cancellation fee is 50% if you cancel after ${date}.`;
+
+  if (freeWindowEnd.isBefore(reservationStartDate)) {
+    if (daysUntilReservation <= 44) {
       timeline.push({
-        date: DateTime.formatWithMonthName(hundredPercentStartDate, locale),
-        text: t
-          ? t('cancellationFee100Percent', { date: DateTime.formatLongWithoutDay(hundredPercentStartDate, locale) })
-          : `Cancellation fee is 100% if you cancel after ${DateTime.formatLongWithoutDay(hundredPercentStartDate, locale)}.`,
-        active: today.isSameOrAfter(hundredPercentStartDate),
+        date: label(freeWindowEnd),
+        text: fee100Text(freeWindowEndText),
+        active: today.isSameOrAfter(freeWindowEnd),
       });
+    } else {
+      const hundredPercentStartDate = reservationStartDate.subtract(44, 'day');
+
+      timeline.push({
+        date: label(freeWindowEnd),
+        text: fee50Text(freeWindowEndText),
+        active: today.isSameOrAfter(freeWindowEnd),
+      });
+
+      if (hundredPercentStartDate.isAfter(freeWindowEnd)) {
+        timeline.push({
+          date: label(hundredPercentStartDate),
+          text: fee100Text(DateTime.formatLongWithoutDay(hundredPercentStartDate, locale)),
+          active: today.isSameOrAfter(hundredPercentStartDate),
+        });
+      }
     }
   }
 
   timeline.push({
-    date: DateTime.formatWithMonthName(reservationStartDate, locale),
+    date: label(reservationStartDate),
     text: t ? t('yachtPickup') : 'Yacht Pick-up',
     active: today.isSameOrAfter(reservationStartDate),
   });

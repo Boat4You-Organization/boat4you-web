@@ -11,14 +11,19 @@ import { generateCancellationTimeline } from '@/utils/static/cancellationUtils';
 
 interface CancellationTabProps {
   dateFrom: string;
+  /** Booking moment (ISO): the 72-hour free window counts from it, not from today. */
+  bookedAt?: string | null;
 }
 
-const CancellationTab = ({ dateFrom }: CancellationTabProps) => {
+const CancellationTab = ({ dateFrom, bookedAt = null }: CancellationTabProps) => {
   const t = useTranslations('common');
   const locale = useLocale();
   const { isBelowLg } = useBreakpoint();
 
-  const cancellationTimeline = useMemo(() => generateCancellationTimeline(dateFrom, t, locale), [dateFrom, t, locale]);
+  const cancellationTimeline = useMemo(
+    () => generateCancellationTimeline(dateFrom, t, locale, null, bookedAt),
+    [dateFrom, t, locale, bookedAt]
+  );
 
   return (
     <Stack component="section" gap={3}>
