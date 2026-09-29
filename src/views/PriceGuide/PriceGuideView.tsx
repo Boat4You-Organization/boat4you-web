@@ -50,6 +50,14 @@ const PriceGuideView = async ({
   const tables: GuideTable[] = [...(all ? [all] : []), ...types];
   const landingOf = (table: GuideTable): GuideLanding | null =>
     table.vesselType ? (typeLandings.find(l => l.boatType === table.vesselType) ?? null) : countryLanding;
+  // Every boat count on the page comes from the same nightly facts row the
+  // figures come from — the link labels used to carry the live listing count
+  // and disagreed with the tiles by a boat or two (audit 29.9.2026, R36). A
+  // type landing without a facts table keeps the landing's own count.
+  const boatCount = (landing: GuideLanding): number =>
+    landing.boatType
+      ? (types.find(table => table.vesselType === landing.boatType)?.facts.activeBoats ?? landing.fleet)
+      : facts.activeBoats;
 
   const tiles = [
     ...(all
@@ -84,7 +92,7 @@ const PriceGuideView = async ({
       {countryLanding && (
         <p className={guideStyles.cta}>
           <Link href={countryLanding.href} prefetch={false} className={styles.tableLink}>
-            {`${t('browseAll', { where })} (${fmt.number(countryLanding.fleet)}) →`}
+            {`${t('browseAll', { where })} (${fmt.number(boatCount(countryLanding))}) →`}
           </Link>
         </p>
       )}
@@ -157,7 +165,7 @@ const PriceGuideView = async ({
                   {landing && table.vesselType && (
                     <p className={guideStyles.tableLink}>
                       <Link href={landing.href} prefetch={false} className={factsStyles.link}>
-                        {`${t('browseType', { type: text.typeLabel(table.vesselType), where })} (${fmt.number(landing.fleet)}) →`}
+                        {`${t('browseType', { type: text.typeLabel(table.vesselType), where })} (${fmt.number(boatCount(landing))}) →`}
                       </Link>
                     </p>
                   )}
@@ -227,7 +235,7 @@ const PriceGuideView = async ({
                       ? t('browseType', { type: text.typeLabel(landing.boatType), where })
                       : t('browseAll', { where })}
                   </span>
-                  <span className={styles.modelFacts}>{tFacts('boats', { count: landing.fleet })}</span>
+                  <span className={styles.modelFacts}>{tFacts('boats', { count: boatCount(landing) })}</span>
                 </Link>
               </li>
             ))}
@@ -254,7 +262,7 @@ const PriceGuideView = async ({
           )}
           <p className={styles.body}>{t('method.median')}</p>
           <p className={styles.body}>{t('method.panel')}</p>
-          <p className={styles.body}>{t('method.costs', { zero: money(0) })}</p>
+          <p className={styles.body}>{t('method.costs')}</p>
           <p className={styles.note}>{t('method.updated', { date: fmt.date(facts.computedAt) })}</p>
         </div>
       </section>
