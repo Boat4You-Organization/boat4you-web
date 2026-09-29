@@ -727,3 +727,31 @@ Full SEO regression (J3) found Product.brand = "Odisej Ltd" (a charter operator 
 ## 2026-09-29 (3) — Partner free text and partner identifiers never reach the public page
 
 Audit 29.9. (content-i18n-01, critical): partner extras/services descriptions were rendered verbatim (English on all 9 locales) and named the agency ("Athenian Yachts solely provides facilitation services…", "processed through Hermes's base", "(number of guests to update manually)"). New `src/utils/server/partnerText.ts` (server-only, tests in the session scratchpad): descriptions are shown only if ≤160 chars and free of operator names (operatorNames.ts), operator-voice/terms words (Yachts, Yachting, Charter, Sailing, Ltd, d.o.o., base, pier, pontoon, liable, Charterer, the Company, manually, to be confirmed, our/we/office/agency/owner, allowance), e-mails/phones/URLs and bracketed notes; unsafe bracketed parts are cut from extra names; partner boat descriptions hidden; repeated paragraphs (60+ chars) shown once; applies to boat page, recap, phone price sheet, booking recap, my-bookings, PDF, JSON-LD. Second commit strips partner identifiers (externalId ×100–990 per boat page, agencyName ×18 on landings, agencyCommission, sourceSystem, agency) from everything serialized to the client. Left for the backend: extra KEYS equal to partner text (4 of 40 boats), boat literally named "Rhodes Yachting" (8477). Commits: 90d98d92 968cc061
+
+## 2026-09-29 (4) — Re-audit fix release (fix/audit29-b4y-ux + fix/audit29-b4y-seo, 24 commits)
+
+Defects from \_seo-audit-2026-09-29/synthesis.md (R-ids in the commit subjects). Not adversarially reviewed (usage limit); verified by lint 0 / tsc 0 / Stage A 0 new FAIL on the merged main and the post-deploy Stage B regression. next.config.js is now a phase function (BUILD_ID + deploymentId = git sha + time; the ship script config test handles it). Merge gotcha: both branches regenerated messages/en/\*.d.json.ts — regenerate after merging. Commits:
+
+- a37395f1 fix: one Data Cache entry per landing for all nine locales (R11)
+- a9e047be chore: drop the unused rest binding in the landing listing (R10)
+- 02a0e48e fix: listing cards show the marina name with its diacritics (R32)
+- 0626953e feat: one more paragraph each on /yachts and /contact-us (R35)
+- dcbabdc3 fix: diacritics in the price-guide base rows and the itinerary JSON-LD (R32)
+- 603232c0 fix: make the deals and blog routes really static-capable (R11)
+- 055dd5a7 search: listing Product JSON-LD never prices an inquiry-only boat (R69)
+- 16c81589 deploy skew: deploymentId per build and a reload for stale tabs (R62)
+- 23c24bec language switch: native language names, applied on the tap (R54)
+- 7823c458 a11y: translated control labels and a country-specific phone placeholder (R56)
+- 74df2438 checkout: the cancellation timeline starts with the 72 h free window (R04, web part)
+- abaf198c boat page: honest mobile bar, an inquiry for unbookable dates, one price formatter (R24, R25, R53, R67)
+- 1e7edde7 dates: blog, availability chips, past bookings and date fields in the page locale (R47, R67)
+- 37e631a9 messages: 72 h timeline key, accessible labels, translations left in English (R04, R56, R52)
+- 95d3ca28 price guides: one boat count per page and no literal "0 €" (R33, R36)
+- d73a579b faq: euro formats and Croatian charter-type names in the HR and ES FAQ (R48)
+- 8e45a3ae feat: real content on the thin hubs /yacht-charter-prices, /yachts and /contact-us (R35)
+- 47a054ee fix: base diversity on the first cards of country and region landings (R10)
+- c71803d6 fix: Croatian diacritics in place labels, facts bases, fleet and itinerary hubs (R32)
+- ef705db4 fix: nofollow the home links to the noindex type pages (R59)
+- f3b10489 fix: ISR for the deals landings (R11)
+- fc838b94 fix: 308 locale copies of blog posts to EN, cookie-aware cache headers, blog ISR (R40, R55, R11)
+- 95407dd1 fix: lower-case Sicily route slug with 301s, day-long cache for /public assets (R34, R64)
