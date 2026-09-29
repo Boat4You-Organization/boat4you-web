@@ -297,7 +297,6 @@ const BoatInquiryModal = ({
           <PhoneInput
             name="phone"
             formLabel={t('inputPhoneNumber')}
-            placeholder="(123) 456-7890"
             validate={FormValidator.all(validator.isNotEmpty, FormValidator.isValidPhoneNumber)}
           />
         </Stack>

@@ -65,7 +65,7 @@ const Header = () => {
                 {t('signIn')}
               </Button>
             )}
-            <IconButton size="large" aria-label="Open navigation drawer" onClick={toggleNavigation}>
+            <IconButton size="large" aria-label={t('a11y.openNavigation')} onClick={toggleNavigation}>
               <HamburgerMenu open={navigationOpen} />
             </IconButton>
           </Stack>

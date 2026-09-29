@@ -109,7 +109,7 @@ const SwipeableModal = ({
           sx={{ flexShrink: 0 }}
         >
           {arrowBack && (
-            <IconButton size="large" onClick={onBack} sx={{ color: colors.black400 }}>
+            <IconButton aria-label={t('a11y.back')} size="large" onClick={onBack} sx={{ color: colors.black400 }}>
               <KeyboardBackspaceIcon />
             </IconButton>
           )}
@@ -126,7 +126,7 @@ const SwipeableModal = ({
           <Stack direction="row" alignItems="center" spacing={3}>
             {titleActions && <Box flex="none">{titleActions}</Box>}
             {!hideCloseButton && (
-              <IconButton size="large" onClick={onClose} sx={{ color: colors.black400 }}>
+              <IconButton aria-label={t('a11y.close')} size="large" onClick={onClose} sx={{ color: colors.black400 }}>
                 <CloseRounded />
               </IconButton>
             )}

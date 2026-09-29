@@ -9,7 +9,7 @@ import FormControl from '@mui/material/FormControl';
 import FormHelperText from '@mui/material/FormHelperText';
 import FormLabel from '@mui/material/FormLabel';
 import TextField, { TextFieldProps } from '@mui/material/TextField';
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 import ChevronDown from '@/components/SvgIcons/ChevronDown';
 import { PhoneCountry, phoneCountries } from '@/config/phone-countries.config';
@@ -119,6 +119,36 @@ const detectUserCountry = (locale: string): Promise<PhoneCountry> => {
     .catch(() => fallback);
 };
 
+// Example national numbers for the placeholder, in the mask the field applies
+// (audit 29.9.2026, R56: a Croatian visitor saw "(123) 456-7890" beside +385).
+// Countries not listed get a generic nine-digit example in the same mask.
+const EXAMPLE_DIGITS: Record<string, string> = {
+  US: '2015550123',
+  CA: '2045550123',
+  HR: '912345678',
+  DE: '15123456789',
+  AT: '664123456',
+  CH: '781234567',
+  FR: '612345678',
+  IT: '3123456789',
+  ES: '612345678',
+  PT: '912345678',
+  NL: '612345678',
+  BE: '470123456',
+  PL: '512345678',
+  GB: '7400123456',
+  IE: '851234567',
+  SI: '31234567',
+  CZ: '601123456',
+  SK: '912123456',
+  HU: '201234567',
+  SE: '701234567',
+  NO: '40612345',
+  DK: '32123456',
+  FI: '412345678',
+  AU: '412345678',
+};
+
 // (a) a country already in the form value beats (b)-(d) the detected default.
 const resolveInitialCountry = (prefilledValue: unknown, locale: string): Promise<PhoneCountry> =>
   detectUserCountry(locale).then(
@@ -137,6 +167,7 @@ export const PhoneInput = ({
 }: PhoneInputProps) => {
   const { control, formState, getValues } = useFormContext();
   const locale = useLocale();
+  const t = useTranslations('common');
   const [selectedCountry, setSelectedCountry] = useState<PhoneCountry>(getDefaultCountry());
   const [phoneNumber, setPhoneNumber] = useState<string>('');
   // Once the visitor typed digits or picked a country, the (async) detected
@@ -196,6 +227,11 @@ export const PhoneInput = ({
 
     return `${country.dialCode}${cleaned}`;
   };
+
+  const examplePlaceholder = formatPhoneNumber(
+    EXAMPLE_DIGITS[selectedCountry.iso2Code] ?? '912345678',
+    selectedCountry
+  );
 
   const handlePhoneChange = (event: React.ChangeEvent<HTMLInputElement>, onChange: (value: string) => void) => {
     const inputValue = event.target.value;
@@ -276,6 +312,8 @@ export const PhoneInput = ({
               )}
               disabled={disabled}
               disableClearable
+              openText={t('a11y.openList')}
+              closeText={t('a11y.closeList')}
               className={styles.autocomplete}
               slotProps={{
                 paper: {
@@ -317,7 +355,7 @@ export const PhoneInput = ({
             <TextField
               value={phoneNumber}
               onChange={(e: React.ChangeEvent<HTMLInputElement>) => handlePhoneChange(e, onChange)}
-              placeholder={placeholder || 'Enter phone number'}
+              placeholder={placeholder || examplePlaceholder}
               variant="outlined"
               disabled={disabled}
               error={!!error}
