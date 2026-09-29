@@ -1,4 +1,4 @@
-import { startTransition, useActionState, useCallback, useEffect, useState } from 'react';
+import { startTransition, useActionState, useCallback, useEffect, useRef, useState } from 'react';
 
 import { Stack } from '@mui/material';
 import { useLocale, useTranslations } from 'next-intl';
@@ -88,20 +88,52 @@ const AdminInquiryModal = ({ onOpen, onClose, isOpen, selectedYachtIds }: AdminI
     }
   }, [isOpen, selectedYachtIds, did, locations, locale, user?.currency]);
 
+  // One offer e-mail per submit, the boat inquiry form's lock
+  // (BoatInquiryModal). `isPending` flips only after react-hook-form's async
+  // validation, so a double click or a repeated Enter could send the client
+  // the same offer twice. The ref closes the gate synchronously on the first
+  // submit; it opens again only when that offer failed (so it can be
+  // retried) or when the form is opened again after a sent offer.
+  const submitLock = useRef(false);
+  const [isLocked, setIsLocked] = useState(false);
+  const sent = useRef(false);
+  const isOpenRef = useRef(isOpen);
+  const handledState = useRef(state);
+
   useEffect(() => {
-    if (!state) {
+    isOpenRef.current = isOpen;
+
+    if (isOpen && sent.current) {
+      sent.current = false;
+      submitLock.current = false;
+      setIsLocked(false);
+    }
+  }, [isOpen]);
+
+  // Each answer is handled once — the effect also re-runs when `t` or
+  // `handleClose` change, which would repeat the toast.
+  useEffect(() => {
+    if (!state || handledState.current === state) {
       return;
     }
 
-    if (state?.payload) {
+    handledState.current = state;
+
+    if (state.payload) {
+      sent.current = true;
       showToast({ status: 'success', text: t('offerSentSuccessfully') });
-      handleClose();
+
+      // onClose toggles — never re-open a form the admin already closed.
+      if (isOpenRef.current) handleClose();
+
       setSelectedYachts([]);
       setSelectedYachtIds([]);
     } else {
-      showToast({ status: 'error', text: state?.message || t('offerSentFailed') });
+      submitLock.current = false;
+      setIsLocked(false);
+      showToast({ status: 'error', text: state.message || t('offerSentFailed') });
     }
-  }, [state?.payload, state?.message, state, onClose, t, handleClose]);
+  }, [state, t, handleClose]);
 
   const handleNext = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
@@ -124,6 +156,13 @@ const AdminInquiryModal = ({ onOpen, onClose, isOpen, selectedYachtIds }: AdminI
   };
 
   const handleSubmit = (formValues: AdminInquiryFormValues) => {
+    if (submitLock.current) {
+      return;
+    }
+
+    submitLock.current = true;
+    setIsLocked(true);
+
     const updatedFormValues = {
       ...formValues,
       yachtIds: selectedYachtIds,
@@ -165,7 +204,7 @@ const AdminInquiryModal = ({ onOpen, onClose, isOpen, selectedYachtIds }: AdminI
         onClick: isLastStep ? noop : handleNext,
         type: isLastStep ? 'submit' : 'button',
         form: ADMIN_INQUIRY_FORM,
-        disabled: isLoading || isPending || selectedYachtIds.length === 0,
+        disabled: isLoading || isPending || isLocked || selectedYachtIds.length === 0,
       }}
       CancelBtnProps={{
         disabled: isPending,
