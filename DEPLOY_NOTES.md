@@ -1,8 +1,17 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-09-30 — 📱 Promo banners: countdown pill no longer breaks inside the time, phone balloons fade again — ⏳ NOT DEPLOYED (commit `fix(promo): countdown pill breaks only before the clock, restore bfade keyframes`)
+
+Fixes two regressions QA found in the refined phone/tablet commit below (deploy both together).
+
+- **Countdown pill:** below 900px the refined `.when:has(.dot)` rule lets the pill wrap, and the boxed digits (`.digit`, inline-block) allowed a break between any two digits: "Ends in 06:19:" / "33", "Ends in 10d 1" / "1:59". `DeadlinePill` now wraps days and time in a no-wrap `.clock` span, so the only break is before the clock ("Ends in" / "10d 11:59").
+- **Balloons (phone, Birthday Week):** `@keyframes bfade` sat in the prototype's base region, which the narrow-only sync skips, so the phone `.balloon` rule referenced a missing animation and the balloons rose at full opacity through the sticker. The keyframes are now in the base region. In `refine.html` the rule moved above the phone section header (no rendering change), so the phone block keeps its "phone containers" header on the next sync.
+- **Correction to the entry below:** the `/search` listing banner is about 854px wide at a 1400px viewport, so it uses the tablet (600–899px) layout and does change on desktop screens (rotated sticker off the bottom edge, sun above the mast, no cloud or gull behind the sub). Every other desktop banner is unchanged apart from the subtitle shadow.
+- **Deploy:** `.next` only.
+
 ## 2026-09-30 — 📱 Promo banners: refined phone/tablet layout, subtitle shadow, count-up clamp — ⏳ NOT DEPLOYED (commit `fix(promo): refined phone/tablet banner layout, subtitle shadow, count-up clamp`)
 
-The tablet (600–899px) and phone (<600px) blocks of `PromoBanner.module.scss` are re-synced from the refined prototype (`refine.html`, checked better than the live layout by independent QA) with `sync_narrow_css.py` (narrow region only). Desktop (≥900px) is unchanged apart from the subtitle shadow.
+The tablet (600–899px) and phone (<600px) blocks of `PromoBanner.module.scss` are re-synced from the refined prototype (`refine.html`, checked better than the live layout by independent QA) with `sync_narrow_css.py` (narrow region only). Desktop (≥900px) is unchanged apart from the subtitle shadow (but see the correction above: the `/search` banner is below 900px wide).
 
 - **Phone:** the character is sized from a pinned CTA row, the sun hangs under the CTA, price tags, lightning and fireworks fly in a masked band beside the character, balloons fade out at CTA height, and a countdown with days left breaks onto two lines inside the sticker. Title and sub are centred above the CTA in hero, tile and strip. The `/search` strip keeps them top-aligned, level with the sticker (title 15–17px from the top at 398–430px), with the CTA on the bottom row.
 - **Tablet:** from 680px the sailing boats and the strip's speedboat rock in place past the CTA (≥34px clear at 680–699px, was 7.7–13.5px). The sun moves between the copy and the character, and price tags stay inside the right edge.

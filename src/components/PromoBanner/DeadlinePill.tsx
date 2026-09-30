@@ -120,12 +120,16 @@ const DeadlinePill = ({ campaign, current = false }: DeadlinePillProps) => {
     const hhmm = time.slice(0, 5);
     const seconds = time.slice(5);
 
+    // The clock in one no-wrap span: the boxed digits are inline-blocks, so a pill that wraps (below 900px) could
+    // otherwise break inside the time ("Ends in 10d 1" / "1:59"); now it breaks only before the clock.
     text = (
       <>
         {before}
-        {days > 0 && boxDigits(`${days}${dayUnit} `)}
-        {boxDigits(hhmm)}
-        {days > 0 ? <span className={styles.secs}>{boxDigits(seconds)}</span> : boxDigits(seconds)}
+        <span className={styles.clock}>
+          {days > 0 && boxDigits(`${days}${dayUnit} `)}
+          {boxDigits(hhmm)}
+          {days > 0 ? <span className={styles.secs}>{boxDigits(seconds)}</span> : boxDigits(seconds)}
+        </span>
         {after}
       </>
     );

@@ -876,6 +876,19 @@
   }
 }
 
+/* phone only: rising balloons fade out mid-way */
+@keyframes bfade {
+  0%,
+  40% {
+    opacity: 1;
+  }
+
+  52%,
+  100% {
+    opacity: 0;
+  }
+}
+
 /* sync:base:end */
 
 /* sync:narrow:start — generated from the prototype by sync_narrow_css.py; edit the prototype, not this block */
@@ -1217,7 +1230,7 @@
   } /* above the mast, not behind the sail */
 }
 
-/* phone only: rising balloons fade out mid-way */
+/* ================= phone containers (< 600px) ================= */
 
 @container stage (width < 600px) {
   /* SPLIT: left column = title, sub, CTA; right column = discount sticker on top and the character standing large under it;
@@ -1977,6 +1990,13 @@
   .secs {
     display: none;
   }
+}
+
+/* integration: below 900px a countdown pill may wrap onto two lines (the prototype's `.when:has(.dot)` rule); the
+   boxed digits are inline-blocks, so without this the line could break inside the time ("Ends in 10d 1" / "1:59").
+   The days and the time stay together: the only break is before the clock ("Ends in" / "10d 11:59"). */
+.clock {
+  white-space: nowrap;
 }
 
 /* integration: the landing hero between 900 and 1231px wide (1024-1280px screens). The prototype places the character
