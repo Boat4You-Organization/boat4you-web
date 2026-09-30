@@ -632,7 +632,9 @@
   font-size: 15px;
   margin: 12px 0 0;
   max-width: 46ch;
-  text-shadow: 0 1px 3px rgb(0 0 0 / 30%);
+  text-shadow:
+    0 1px 2px rgb(0 0 0 / 38%),
+    0 0 14px rgb(0 0 0 / 20%);
 }
 
 .cta {
@@ -882,7 +884,8 @@
 
 @container stage (600px <= width < 900px) {
   /* SPLIT, wide: text column left; the character walks large through the middle-right towards the discount sticker
-     (bottom-right); the boat sails in the gap between copy and character, the sun fills the sky above it.
+     (bottom-right, bleeding off the bottom edge like desktop); the boat sails under the copy or rocks in place just past the
+     CTA, the sun fills the sky between copy and character.
      Sizes are tuned at 736px and scale with the container, so 600px and 899px keep the same gaps. */
   .banner {
     --cta: clamp(13px, 1.9cqw, 15px);
@@ -917,15 +920,18 @@
     white-space: nowrap;
   }
 
+  /* the sticker sits bottom-right and bleeds off the bottom edge, like desktop; slapped on at -6deg with a soft shadow */
   .blob {
     --bw: clamp(136px, 21.5cqw, 176px);
 
     right: 3%;
     top: auto;
-    bottom: 9%;
+    bottom: -5%;
     width: var(--bw);
     height: calc(var(--bw) * 0.875);
-    padding-bottom: 8px;
+    padding-bottom: 16px;
+    rotate: -6deg;
+    box-shadow: 0 10px 18px -12px rgb(0 0 0 / 50%);
   }
 
   .upto {
@@ -942,35 +948,51 @@
     padding: 3px 9px;
   }
 
-  .dude {
-    right: 16%;
-    bottom: -2%;
-    height: min(100%, 39.4cqw);
+  .when:has(.dot) {
+    display: inline-block;
+    white-space: normal;
+    max-width: calc(0.74 * var(--bw));
+    text-align: center;
+    line-height: 1.15;
+    border-radius: 0.9em;
+  } /* 'Ends in 13d …' breaks onto two lines */
+  .when:has(.dot) .dot {
+    display: inline-block;
+    vertical-align: 0.1em;
+    margin-right: 0.35em;
   }
 
-  /* the boat starts just past the widest CTA plus its 38px sail swing */
+  .dude {
+    right: 22%;
+    bottom: -2%;
+    height: min(100%, 39.4cqw);
+  } /* front foot/hand clear of the sticker */
+
+  /* the boat sails in the free sea under the copy, clear of the character's back leg */
   .boat,
   .boat.wide {
     right: auto;
-    left: max(70px + 17 * var(--cta), 42%);
-    bottom: 6%;
-    height: 26%;
+    left: 80px;
+    bottom: 3%;
+    height: 22%;
   }
 
   .boat.wide {
     height: 11%;
-    bottom: 8%;
+    bottom: 4%;
   }
 
+  /* the sun (the rising one too) sits in the sky between the copy and the character's head, clear of the boat, the
+     character's legs and her swinging calendar */
   .sun,
-  .sun.big {
+  .sun.big,
+  .sun.rise {
     top: 11%;
-    right: 43%;
+    right: 46%;
     bottom: auto;
     width: 44px;
     height: 44px;
-  }
-
+  } /* a little left, clear of the character's head */
   .sun.big {
     top: 7%;
     width: 60px;
@@ -978,21 +1000,42 @@
   }
 
   .sun.rise {
-    top: auto;
-    right: 48%;
-    bottom: 20%;
-    width: 54px;
-    height: 54px;
+    top: 9%;
+    width: 50px;
+    height: 50px;
   }
 
-  .tag,
   .fw,
   .bolt {
     margin-left: 6cqw;
   }
 
+  .tag {
+    margin-left: -2cqw;
+  } /* every price tag fully inside the right edge */
   .balloon {
     margin-left: 10cqw;
+  }
+
+  /* nothing decorative behind the copy: the sky props (and that sky's clouds and stars) fade out over the text column */
+  .plx:has(> .gull, > .tag, > .bolt, > .fw, > .conf, > .flake, > .balloon) {
+    --mk: linear-gradient(to right, transparent var(--copyR), #000 calc(var(--copyR) + 28px));
+
+    -webkit-mask-image: var(--mk);
+    mask-image: var(--mk);
+  }
+
+  /* price tags, lightning and fireworks stay in the upper sky, above the sticker, so none floats at its edge */
+  .plx:has(> .tag, > .bolt, > .fw) {
+    bottom: 45%;
+  }
+
+  .fmt-compact .plx:has(> .tag, > .bolt, > .fw) {
+    bottom: 0;
+  }
+
+  .banner {
+    --copyR: calc(28px + 0.46 * (100cqw - 56px));
   }
 
   .fmt-strip .banner {
@@ -1000,6 +1043,8 @@
 
     min-height: 214px;
     padding: 20px 24px;
+
+    --copyR: calc(24px + 0.46 * (100cqw - 48px));
   }
 
   .fmt-strip .title {
@@ -1028,20 +1073,26 @@
 
   .fmt-strip .dude {
     height: min(104%, 30.3cqw);
-    right: 20%;
+    right: 24%;
   }
 
   .fmt-strip .boat,
   .fmt-strip .boat.wide {
-    left: max(64px + 17 * var(--cta), 42%);
+    left: max(36px + 17 * var(--cta), 38%);
+    bottom: 6%;
     height: 33%;
   }
 
   .fmt-strip .boat.wide {
     height: 13%;
+    bottom: 8%;
   }
 
-  .fmt-strip .sun {
+  .fmt-strip .boat {
+    animation: heat 2.8s ease-in-out infinite alternate;
+  } /* rocks in place past the CTA */
+  .fmt-strip .sun,
+  .fmt-strip .sun.rise {
     width: 38px;
     height: 38px;
   }
@@ -1051,17 +1102,59 @@
     height: 50px;
   }
 
-  .fmt-strip .sun.rise {
-    right: 48%;
-    bottom: 28%;
-    width: 44px;
-    height: 44px;
+  /* wider tablets: the copy runs lower, so the sailing/catamaran boats rock in place just past the widest CTA (no sideways
+     sail, so they never slip behind the back leg) */
+  @container stage (width < 720px) {
+    .dude {
+      right: 22.5%;
+      height: min(100%, 37cqw);
+    } /* a touch smaller: balloons and board stay clear of the sub */
+    :is(.fmt-hero, .fmt-tile) .dude:has(img[src*='/bday']) {
+      right: 20.5%;
+    } /* her balloons trail far behind */
+    .fmt-strip .dude {
+      height: min(104%, 29cqw);
+      right: 24.5%;
+    }
+  }
+
+  /* narrow tablets: Birthday a touch smaller and further from the sticker, so her balloons clear the sub and her cake the
+     sticker; the strip's rocking boat a touch smaller, clear of July's back leg */
+  @container stage (width < 640px) {
+    :is(.fmt-hero, .fmt-tile) .dude:has(img[src*='/bday']) {
+      height: min(100%, 34.5cqw);
+      right: 21.5%;
+    }
+
+    .fmt-strip .boat:not(.wide) {
+      height: 31%;
+    }
+  }
+
+  /* from 680px the copy runs too close to a boat sailing under it: the hero/tile sailing boats and the strip's speedboat rock
+     in place just past the CTA instead */
+  @container stage (width < 680px) {
+    .fmt-strip .boat.wide {
+      left: 80px;
+      bottom: 2%;
+      animation: sail 14s ease-in-out infinite;
+    } /* the speedboat fits under the strip's copy */
+  }
+  @container stage (width >= 680px) {
+    :is(.fmt-hero, .fmt-tile) .boat:not(.wide) {
+      left: max(32px + 17 * var(--cta), 38%);
+      bottom: 6%;
+      height: 24%;
+      animation: heat 2.8s ease-in-out infinite alternate;
+    }
   }
 
   /* listings: the live strip hides the character below 900px; boat and sun take the middle, the sticker the right */
   .fmt-compact .banner {
     min-height: 176px;
     padding: 18px 22px;
+
+    --copyR: calc(22px + 0.56 * (100cqw - 44px));
   }
 
   .fmt-compact .copy {
@@ -1094,9 +1187,7 @@
 
     height: 128px;
     right: 4%;
-    bottom: auto;
-    top: 50%;
-    margin-top: -64px;
+    bottom: -8%;
   }
 
   .fmt-compact .pct {
@@ -1118,15 +1209,15 @@
   .fmt-compact .sun,
   .fmt-compact .sun.big,
   .fmt-compact .sun.rise {
-    top: auto;
+    top: 14%;
     right: 34%;
-    bottom: 40%;
+    bottom: auto;
     width: 36px;
     height: 36px;
-  }
+  } /* above the mast, not behind the sail */
 }
 
-/* ================= phone containers (< 600px) ================= */
+/* phone only: rising balloons fade out mid-way */
 
 @container stage (width < 600px) {
   /* SPLIT: left column = title, sub, CTA; right column = discount sticker on top and the character standing large under it;
@@ -1135,21 +1226,37 @@
   .banner {
     --pad: clamp(14px, 4.6cqw, 20px);
     --H: clamp(300px, 96cqw + 24px, 376px); /* banner height */
-    --copyH: clamp(164px, 47cqw, 186px); /* CTA bottom edge = pad + copyH */
+    --copyH: clamp(168px, 47cqw, 186px); /* CTA bottom edge = pad + copyH (fits a 2-line title + 3-line sub) */
     --blobW: clamp(112px, 33cqw, 138px);
     --col: calc(100cqw - 2 * var(--pad) - var(--blobW) - 10px);
     --r: 0.3; /* character image row (share of its height) level with the CTA's bottom edge */
     --shift: 8%; /* the character's transparent right margin bleeds off the edge */
+    --hd: 0.09; /* image row of the top of the head, hat or raised hand (per character below) */
+    --air: 10px; /* clear space between that row and the sticker's bottom edge (the sticker morphs 2% larger) */
 
     box-sizing: border-box;
     min-height: var(--H);
     padding: var(--pad);
   }
 
+  /* title and sub centred in the room above the pinned CTA row, so a one-line title or short sub splits the spare space
+     above and below instead of leaving one big gap */
   .copy {
     max-width: none;
     min-height: var(--copyH);
-    grid-template-rows: auto auto 1fr;
+    grid-template-rows: 1fr auto auto 1fr auto;
+  }
+
+  .copy > .title {
+    grid-row: 2;
+  }
+
+  .copy > .sub {
+    grid-row: 3;
+  }
+
+  .copy > .cta {
+    grid-row: 5;
   }
 
   .title {
@@ -1160,7 +1267,7 @@
   }
 
   .sub {
-    font-size: clamp(11.5px, 3.6cqw, 13.5px);
+    font-size: clamp(12px, 3.6cqw, 13.5px);
     line-height: 1.4;
     margin-top: 8px;
     max-width: var(--col);
@@ -1172,13 +1279,14 @@
   .cta {
     align-self: end;
     margin-top: 10px;
-    font-size: clamp(11.5px, 3.7cqw, 14px);
+    font-size: clamp(13px, 3.7cqw, 14px);
     padding: 0.72em 1.05em;
     gap: 0.5em;
     letter-spacing: 0;
     white-space: nowrap;
-  }
-
+    box-sizing: border-box;
+    min-height: 42px;
+  } /* thumb-sized tap target */
   .cta svg {
     width: 1.1em;
     height: 1.1em;
@@ -1189,8 +1297,9 @@
     width: var(--blobW);
     height: calc(var(--blobW) * 0.9);
     padding-bottom: 10px;
-  }
-
+    rotate: -6deg;
+    box-shadow: 0 10px 18px -12px rgb(0 0 0 / 50%);
+  } /* slapped-on sticker; rotate composes with the morph */
   .upto {
     font-size: clamp(10.5px, 3.2cqw, 13px);
     line-height: 1.3;
@@ -1201,18 +1310,35 @@
   }
 
   .when {
-    font-size: clamp(9.5px, 2.9cqw, 11.5px);
+    font-size: clamp(10px, 2.9cqw, 11.5px);
     margin-top: 4px;
     padding: 0.25em 0.6em;
     gap: 4px;
     letter-spacing: 0;
   }
 
-  /* character top: the lower of (a) the row that keeps the CTA beside the head and (b) just under the sticker (4px tuck) */
+  /* a countdown that shows days ('Ends in 13d 12:34:56') is too long for the sticker: it breaks onto two centred lines */
+  .when:has(.dot) {
+    display: inline-block;
+    white-space: normal;
+    max-width: calc(0.7 * var(--blobW));
+    text-align: center;
+    line-height: 1.15;
+    border-radius: 0.9em;
+  }
+
+  .when:has(.dot) .dot {
+    display: inline-block;
+    vertical-align: 0.1em;
+    margin-right: 0.35em;
+  } /* the live dot runs in the first line */
+
+  /* character top: the lower of (a) the row that keeps the CTA beside the head and (b) --hd row --air below the sticker
+     (its bottom edge = 10px top + .9 blobW + 10px padding) */
   .dude {
     top: max(
       calc((var(--pad) + var(--copyH) - var(--r) * 1.02 * var(--H)) / (1 - var(--r))),
-      calc((6px + 0.9 * var(--blobW) - 0.0816 * var(--H)) / 0.92)
+      calc((20px + 0.9 * var(--blobW) + var(--air) - var(--hd) * 1.02 * var(--H)) / (1 - var(--hd)))
     );
     bottom: -2%;
     height: auto;
@@ -1224,16 +1350,35 @@
   .dude:has(img[src*='/july']) {
     --r: 0.24;
     --shift: 6%;
+    --hd: 0.102;
   }
 
   .dude:has(img[src*='/hot']) {
     --r: 0.3;
+    --hd: 0.102;
   } /* the flamingo float sits at chest height */
   .dude:has(img[src*='/bday']) {
-    --r: 0.18;
+    --r: 0.13;
     --shift: 12%;
+    --hd: 0.043;
 
     scale: -1 1;
+  } /* hair kept ~15px clear of the CTA */
+  .dude:has(img[src*='/june']) {
+    --hd: 0.057;
+  } /* snorkel mask on the forehead */
+  .dude:has(img[src*='/xmas']) {
+    --hd: 0.076;
+  } /* santa hat */
+  .dude:has(img[src*='/ny']) {
+    --hd: 0.081;
+  } /* party hat */
+  .dude:has(img[src*='/flash']) {
+    --hd: 0.1;
+  }
+
+  .dude:has(img[src*='/last']) {
+    --hd: 0.107;
   }
 
   .boat,
@@ -1245,41 +1390,107 @@
   }
 
   .boat.wide {
-    height: 11%;
+    left: calc(var(--pad) + 18px);
+    height: 10.5%;
     bottom: 6%;
-  }
+  } /* the speedboat's stern stays clear of a runner's trailing foot */
 
+  /* the sun hangs just under the CTA row, right of the (sailing) boat's mast and left of the character */
   .sun,
   .sun.big,
   .sun.rise {
     display: block;
-    inset: auto auto 29% 34%;
+    inset: calc(var(--pad) + var(--copyH) + 11px) auto auto max(34%, var(--pad) + 98px);
     width: 40px;
     height: 40px;
   }
 
   .sun.big {
-    width: 52px;
-    height: 52px;
+    width: 48px;
+    height: 48px;
   }
 
   .sun.rise {
-    bottom: 22%;
-  }
+    top: calc(var(--pad) + var(--copyH) + 21px);
+  } /* it rises 8px */
 
-  /* sky props that are scattered over the middle (price tags, fireworks, lightning, rising balloons) move into the right
-     column, so none of them drift behind the copy */
-  .tag,
-  .fw,
-  .bolt,
+  /* sky props: rising balloons move into the right column; price tags, fireworks and lightning fly in the sky around the
+     character's head and shoulders (see the sky band below) */
   .balloon {
     margin-left: 16cqw;
+  }
+
+  .tag {
+    margin-left: -6cqw;
+  }
+
+  .bolt {
+    margin-left: -12cqw;
+  }
+
+  .fw {
+    margin-left: -2cqw;
+  }
+
+  /* nothing decorative behind the copy: gulls (with that sky's clouds and stars) glide in the scene band under the CTA row;
+     falling snow/confetti and rising balloons fade out over the text column and the CTA row (visible = under the CTA row, or
+     right of the text column above the CTA) */
+  .plx:has(> .gull) {
+    top: calc(var(--pad) + var(--copyH) + 18px);
+  }
+
+  /* price tags, fireworks and lightning (with that sky's clouds and stars): a sky band from just under the sticker down to
+     the horizon, faded at both ends and out of the text column above the CTA row, so none drifts behind the copy, peeks
+     out from under the sticker or bursts down at sea level */
+  .plx:has(> .tag, > .bolt, > .fw) {
+    top: calc(30px + 0.9 * var(--blobW));
+    bottom: 20%;
+
+    /* in band coordinates: y0 = CTA row bottom, x0 = text column's right edge, xc = past the widest CTA */
+    --x0: calc(var(--pad) + var(--col));
+    --y0: calc(var(--pad) + var(--copyH) - 30px - 0.9 * var(--blobW));
+    --xc: max(var(--x0), var(--pad) + 16 * clamp(13px, 3.7cqw, 14px) + 6px);
+
+    /* visible = band fade AND (under the CTA row OR right of the widest CTA OR right of the text column above the CTA row) */
+    --mk:
+      linear-gradient(to bottom, transparent, #000 12px, #000 calc(100% - 22px), transparent),
+      linear-gradient(to bottom, transparent calc(var(--y0) + 6px), #000 calc(var(--y0) + 20px)),
+      linear-gradient(to right, transparent var(--xc), #000 calc(var(--xc) + 12px)),
+      linear-gradient(to right, transparent calc(var(--x0) + 6px), #000 calc(var(--x0) + 18px)),
+      linear-gradient(to bottom, #000 calc(var(--y0) - 62px), transparent calc(var(--y0) - 48px));
+
+    -webkit-mask-image: var(--mk);
+    -webkit-mask-composite: source-in, source-over, source-over, source-in, source-over;
+    mask-image: var(--mk);
+    mask-composite: intersect, add, add, intersect, add;
+  }
+
+  /* rising balloons fade out at about CTA height, before they could reach the sticker */
+  .balloon {
+    animation:
+      float var(--t, 12s) linear infinite,
+      bfade var(--t, 12s) linear infinite;
+    animation-delay: var(--dl, 0s);
+  }
+
+  .plx:has(> .conf, > .flake, > .balloon) {
+    --y0: calc(var(--pad) + var(--copyH));
+    --x0: calc(var(--pad) + var(--col));
+    --mk:
+      linear-gradient(to bottom, transparent calc(var(--y0) + 6px), #000 calc(var(--y0) + 20px)),
+      linear-gradient(to right, transparent calc(var(--x0) + 6px), #000 calc(var(--x0) + 18px)),
+      linear-gradient(to bottom, #000 calc(var(--y0) - 64px), transparent calc(var(--y0) - 50px));
+
+    -webkit-mask-image: var(--mk);
+    -webkit-mask-composite: source-over, source-in;
+    mask-image: var(--mk);
+    mask-composite: add, intersect;
   }
 
   /* tile and strip: a little shorter, so the type steps down and the CTA row rises with it */
   .fmt-tile .banner {
     --H: clamp(290px, 86cqw + 24px, 320px);
-    --copyH: clamp(150px, 44cqw, 172px);
+    --copyH: clamp(164px, 44cqw + 1px, 176px);
   }
 
   .fmt-tile .title {
@@ -1287,12 +1498,12 @@
   }
 
   .fmt-tile .sub {
-    font-size: clamp(11px, 3.4cqw, 13px);
+    font-size: clamp(12px, 3.4cqw, 13px);
   }
 
   .fmt-strip .banner {
     --H: clamp(280px, 84cqw + 20px, 312px);
-    --copyH: clamp(146px, 42cqw, 166px);
+    --copyH: clamp(160px, 42cqw, 170px);
   }
 
   .fmt-strip .title {
@@ -1300,11 +1511,11 @@
   }
 
   .fmt-strip .sub {
-    font-size: clamp(11px, 3.3cqw, 12.5px);
+    font-size: clamp(12px, 3.3cqw, 12.5px);
   }
 
   .fmt-strip .cta {
-    font-size: clamp(11.5px, 3.5cqw, 13.5px);
+    font-size: clamp(13px, 3.5cqw, 13.5px);
   }
 
   /* listings on a phone: no character, like the live strip; the sticker takes the top of the right column and the boat
@@ -1349,7 +1560,103 @@
     display: none;
   }
 
-  /* bigger phones: more room beside the CTA, so the character can grow until its head meets the sticker */
+  /* its sky shows only beside the sticker: right of the text column and above the CTA row; price tags, fireworks, lightning
+     and balloons would only peek out from behind the sticker there, so the listing strip leaves them out */
+  .fmt-compact :is(.tag, .fw, .bolt, .balloon) {
+    display: none;
+  }
+
+  .fmt-compact .plx:has(> .gull, > .tag, > .bolt, > .fw) {
+    top: 0;
+    bottom: 0;
+  }
+
+  .fmt-compact .plx:has(> .gull, > .tag, > .bolt, > .fw, > .conf, > .flake, > .balloon) {
+    --x0: calc(var(--pad) + var(--col));
+    --y0: calc(var(--H) - var(--pad) - 42px);
+    --mk:
+      linear-gradient(to right, transparent calc(var(--x0) + 2px), #000 calc(var(--x0) + 14px)),
+      linear-gradient(to bottom, #000 calc(var(--y0) - 14px), transparent calc(var(--y0) - 2px));
+
+    -webkit-mask-image: var(--mk);
+    -webkit-mask-composite: source-in;
+    mask-image: var(--mk);
+    mask-composite: intersect;
+  }
+
+  @container stage (width < 335px) {
+    .fmt-hero .dude:has(img[src*='/bday']) {
+      --r: 0.07;
+    }
+  } /* small phones: her hair clear of the wider CTA */
+
+  /* iPhone SE: the sub runs to 4 lines in the narrow column, so the CTA row sits a little lower and the character is a
+     little smaller, its head beside the (wider, 13px) CTA */
+  @container stage (width < 310px) {
+    .banner {
+      --H: 314px;
+      --copyH: 175px;
+      --r: 0.24;
+    }
+
+    .fmt-tile .banner {
+      --H: 306px;
+      --copyH: 171px;
+    }
+
+    .fmt-strip .banner {
+      --H: 298px;
+      --copyH: 169px;
+    }
+
+    .cta {
+      padding-inline: 0.82em;
+      gap: 0.4em;
+    }
+
+    .dude:has(img[src*='/hot']) {
+      --r: 0.23;
+    }
+
+    :is(.fmt-hero, .fmt-tile, .fmt-strip) .dude:has(img[src*='/bday']) {
+      --r: 0.05;
+    }
+
+    /* these figures are narrow at CTA height, so they can stand taller, closer to the sticker */
+    .dude:is(:has(img[src*='/ny']), :has(img[src*='/flash']), :has(img[src*='/june'])) {
+      --r: 0.32;
+    }
+
+    .dude:is(:has(img[src*='/september']), :has(img[src*='/xmas'])) {
+      --r: 0.29;
+    } /* suitcase clear of the sun */
+  }
+  @container stage (width < 330px) {
+    .dude:has(img[src*='/bf']) {
+      --shift: 12%;
+    } /* her head sits left in the frame: use the transparent right margin */
+  }
+
+  /* listings below 330px: a taller strip keeps the 42px CTA row under the sticker (>= 4px air); the boat rocks in place
+     under the sticker instead of sailing into the CTA */
+  @container stage (width < 335px) {
+    .fmt-compact .banner {
+      --H: 180px;
+    }
+  } /* September's 2-line title + 3-line sub */
+  @container stage (width < 330px) {
+    .fmt-compact .boat,
+    .fmt-compact .banner:hover .boat {
+      animation: heat 2.8s ease-in-out infinite alternate;
+    }
+  }
+  @container stage (width < 295px) {
+    .fmt-compact .banner {
+      --H: 192px;
+    }
+  } /* iPhone SE: its sub runs to 5 lines */
+
+  /* bigger phones: more room beside the CTA, so the character can grow until its head is --air under the sticker */
   @container stage (width >= 370px) {
     .banner {
       --r: 0.36;
@@ -1368,9 +1675,13 @@
       --r: 0.4;
     }
   }
-  @container stage (width >= 410px) {
+  @container stage (width >= 390px) {
     .dude:has(img[src*='/july']) {
       --r: 0.3;
+    }
+
+    .fmt-hero .dude:has(img[src*='/july']) {
+      --r: 0.26;
     }
 
     .dude:has(img[src*='/hot']) {
@@ -1379,6 +1690,36 @@
 
     .dude:has(img[src*='/bday']) {
       --r: 0.28;
+    }
+  }
+  @container stage (width >= 410px) {
+    .fmt-hero .dude:has(img[src*='/july']) {
+      --r: 0.3;
+    }
+  }
+
+  /* July's board reaches far left at CTA height: her sun hangs at the far left instead, where the sailing mast never gets */
+  @container stage (width < 530px) {
+    .banner:has(.dude img[src*='/july']) .sun {
+      left: calc(var(--pad) + 2px);
+      width: 36px;
+      height: 36px;
+    }
+
+    /* the speedboat rocks in place near the left edge: sailing, its stern would leave the frame or drift into a runner's foot */
+    :is(.fmt-hero, .fmt-tile, .fmt-strip) .boat.wide {
+      animation: heat 2.8s ease-in-out infinite alternate;
+    }
+
+    /* clouds stay out of the price-tag/lightning/firework sky band: cut by its fades, a cloud reads as a smudge under the CTA
+       (the listing strip has no band: its clouds stay in the full sky) */
+    :is(.fmt-hero, .fmt-tile, .fmt-strip) .plx:has(> .tag, > .bolt, > .fw) > .cloud {
+      display: none;
+    }
+
+    /* listings: title and sub top-aligned, level with the sticker's top (not centred), the CTA on the bottom row */
+    .fmt-compact .copy {
+      grid-template-rows: 0 auto auto 1fr auto;
     }
   }
 
@@ -1411,15 +1752,21 @@
     .dude:has(img) {
       top: auto;
       bottom: -2%;
-      height: min(86%, 58cqw - 52px);
-      right: calc(43.6cqw - 169px);
+      height: min(76%, 58cqw - 76px);
+      right: calc(43.6cqw - 137px);
       translate: none;
-    }
-
+    } /* head, hat and raised hand clear of the sticker */
+    .dude:has(img[src*='/july']) {
+      right: calc(43.6cqw - 133px);
+    } /* her paddle tip clear of the sticker */
     .boat,
     .boat.wide {
       bottom: 3%;
       height: 22%;
+    }
+
+    :is(.fmt-hero, .fmt-tile, .fmt-strip) .boat.wide {
+      left: calc(var(--pad) + 38px);
     }
 
     .boat.wide {
@@ -1430,6 +1777,7 @@
     .sun,
     .sun.big,
     .sun.rise {
+      top: auto;
       left: 31%;
       bottom: 8%;
       width: 46px;
@@ -1441,6 +1789,45 @@
 
     .fmt-compact .copy {
       max-width: 60%;
+    }
+
+    .fmt-compact .sub {
+      max-width: 36ch;
+    } /* 3 lines at most, so every listing strip keeps the same height */
+
+    /* sky props: back in the full sky, faded out over the text column; price tags, lightning and fireworks stay under the
+       sticker so none peeks out from behind its edge */
+    .plx:has(> .gull, > .tag, > .bolt, > .fw) {
+      top: 0;
+    }
+
+    .plx:has(> .tag, > .bolt, > .fw) {
+      top: calc(28px + 0.9 * var(--blobW));
+      bottom: 0;
+    }
+
+    .tag,
+    .fw,
+    .bolt {
+      margin-left: 16cqw;
+    }
+
+    .plx:has(> .gull, > .tag, > .bolt, > .fw, > .conf, > .flake, > .balloon),
+    .fmt-compact .plx:has(> .gull, > .tag, > .bolt, > .fw, > .conf, > .flake, > .balloon) {
+      --mk: linear-gradient(to right, transparent var(--copyR), #000 calc(var(--copyR) + 28px));
+
+      -webkit-mask-image: var(--mk);
+      -webkit-mask-composite: source-over;
+      mask-image: var(--mk);
+      mask-composite: add;
+    }
+
+    .banner {
+      --copyR: calc(var(--pad) + 0.52 * (100cqw - 2 * var(--pad)));
+    }
+
+    .fmt-compact .banner {
+      --copyR: calc(var(--pad) + 0.6 * (100cqw - 2 * var(--pad)));
     }
   }
 }

@@ -29,7 +29,8 @@ const CountUpPct = ({ value, play, onDone, className }: CountUpPctProps) => {
     let frame = 0;
     const start = performance.now();
     const step = (time: number) => {
-      const k = Math.min(1, (time - start) / DURATION_MS);
+      // the first rAF timestamp can be earlier than `start`: never below 0 (no "-1%" frame)
+      const k = Math.min(1, Math.max(0, (time - start) / DURATION_MS));
 
       if (k < 1) {
         setShown(Math.round(value * (1 - (1 - k) ** 3)));

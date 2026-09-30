@@ -1,5 +1,17 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-09-30 — 📱 Promo banners: refined phone/tablet layout, subtitle shadow, count-up clamp — ⏳ NOT DEPLOYED (commit `fix(promo): refined phone/tablet banner layout, subtitle shadow, count-up clamp`)
+
+The tablet (600–899px) and phone (<600px) blocks of `PromoBanner.module.scss` are re-synced from the refined prototype (`refine.html`, checked better than the live layout by independent QA) with `sync_narrow_css.py` (narrow region only). Desktop (≥900px) is unchanged apart from the subtitle shadow.
+
+- **Phone:** the character is sized from a pinned CTA row, the sun hangs under the CTA, price tags, lightning and fireworks fly in a masked band beside the character, balloons fade out at CTA height, and a countdown with days left breaks onto two lines inside the sticker. Title and sub are centred above the CTA in hero, tile and strip. The `/search` strip keeps them top-aligned, level with the sticker (title 15–17px from the top at 398–430px), with the CTA on the bottom row.
+- **Tablet:** from 680px the sailing boats and the strip's speedboat rock in place past the CTA (≥34px clear at 680–699px, was 7.7–13.5px). The sun moves between the copy and the character, and price tags stay inside the right edge.
+- **Flash Deals, phone <530px:** no clouds in the lightning band (a cloud cut by the band's fade read as a smudge under the CTA).
+- **Subtitle:** the base shadow is stronger (`0 1px 2px` 38% + `0 0 14px` 20%). The text stays white. The phone block keeps its own shadow.
+- **Count-up:** the progress is clamped at 0, so the first frame can no longer show "-1%".
+- **Checks:** geometry port vs prototype is 0 differences at phone 341/398, tile 535, tablet 620/690/736 and desktop (also 0 vs the live prototype on desktop). At phone 286 one hero title (September) is 2px shorter, from the title-fit rule. deco and probe_anim report 0 issues. measure reports 4 more "sub-CTA gap" flags on the `/search` strip at 398px, the same gaps as the live layout. Build and tsc pass.
+- **Deploy:** `.next` only, no public, messages or config changes. The six sister sites still need the same re-sync.
+
 ## 2026-09-30 — 🎞️ Animated campaign banners (11 campaigns, all formats) — ⏳ NOT DEPLOYED (commit `feat(promo): animated campaign banners`)
 
 The approved animated prototype (Mario 30.9.2026) replaces the static PromoBanner: a layered scene (sky effects per campaign, three seas, an animated character and boat, parallax on hover), a morphing "up to X%" sticker with the campaign clock ("Book by …", a ticking countdown in the last 14 days, "Starts …"), and a CTA. The count-up runs when the banner scrolls into view. With reduced motion the banner shows static posters.
