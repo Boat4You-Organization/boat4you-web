@@ -5,9 +5,10 @@ import { PromoCampaign, resolveFeaturedWeek } from '@/config/campaigns.config';
  * aggregate (highest client-vs-list saving) over the campaign's featured
  * week, rounded DOWN to a step of 5 so the banner never overstates what a
  * visitor can actually find. Below 15% real discounts the number is not
- * worth advertising — fall back to the configured value (or null → the
- * banner hides the blob). Isomorphic: server pages pass the result as
- * initialPct, the search-listing banner calls it from the client.
+ * worth advertising: null → the banner's sticker keeps its place and
+ * carries only the campaign clock. Isomorphic: server pages and the search
+ * listing (BoatsWrapper) pass the result as initialPct; a banner without one
+ * calls it from the client.
  */
 export async function fetchCampaignMaxPct(campaign: PromoCampaign): Promise<number | null> {
   try {

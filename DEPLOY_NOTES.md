@@ -1,5 +1,32 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-09-30 — 🎞️ Animated campaign banners (11 campaigns, all formats) — ⏳ NOT DEPLOYED (commit `feat(promo): animated campaign banners`)
+
+The approved animated prototype (Mario 30.9.2026) replaces the static PromoBanner: a layered scene (sky effects per campaign, three seas, an animated character and boat, parallax on hover), a morphing "up to X%" sticker with the campaign clock ("Book by …", a ticking countdown in the last 14 days, "Starts …"), and a CTA. The count-up runs when the banner scrolls into view. With reduced motion the banner shows static posters.
+
+- **Formats:** deals hero `/deals/<slug>` (not a link, its CTA scrolls to the deals list), home tile in the destinations grid (the desktop layout from 1280px, a full-width row below), and the `/search` strip above the first boat.
+- **CSS:** `PromoBanner.module.scss` is a 1:1 port of the prototype between the `sync:*` markers, re-copied mechanically by `sync_narrow_css.py`. The site rules sit outside the markers.
+- **Data:** `campaigns.config.ts` gets bright gradients, sticker and sun colours, and the character, boat and sky per campaign. The windows are unchanged.
+- **Copy:** `messages/*/promo.json` (9 locales) adds `banner.bookBy`, `banner.endsIn`, `banner.startsOn` and a `cta` per campaign. Titles, subtitles and SEO texts are unchanged.
+- **Review fixes (30.9.):**
+  - Titles with a long single word (nl VROEGBOEKKORTING, de GEBURTSTAGSWOCHE) step down to fit their column.
+  - Below 900px the countdown drops its seconds while days are left. Its digits sit in fixed-width boxes, and it scales down to fit inside the sticker.
+  - The deals CTA scrolls by script, with no hash history entry, so Back works.
+  - Off-screen banners pause their animations, and the banner is `contain: layout paint`.
+  - Focus rings are visible, and the link is named by its title and CTA.
+  - `/search` resolves the campaign and its percentage on the server (BoatsWrapper). This avoids a hydration mismatch at the midnight switch and the no-discount state showing first.
+  - A cached banner past its end shows "Ends in 00:00:00" instead of next year's start.
+  - The hero at 900–1231px scales the character and boat, so they no longer overlap.
+  - Clouds and gulls cross the whole wide hero, and stay spread out with reduced motion.
+  - The CTA shine moves by transform.
+  - `PromoBannerServer` (unused) is removed.
+- **🔴 Deploy:** ship the new `public/promo/` directory by hand (30 files, 5.8 MB), then restart `nextapp`, because Next caches the public file list at start. Also ship `next.config.js` (`/promo/*` cache header: 1 day plus a week of stale-while-revalidate) and `messages/`.
+- **Open, for Mario:**
+  - White subtitle contrast on the bright gradients is 2.5–3.9:1.
+  - There is no pause control (WCAG 2.2.2).
+  - The phone copy/CTA/sun spacing for 3-line titles (hr, it) and the `/search` strip at 530–899px (it never reaches the desktop layout) are left to the refine pass on the narrow blocks.
+  - The six sister sites are not done yet.
+
 ## 2026-09-27 — 📊 Yacht charter price guides: Croatia, Greece, Italy + hub (9 locales) — ✅ LIVE cusma1 ~10:3x UTC (`a25f3497`, BUILD_ID `-lmVriz3biqnrAc5dmybb`)
 
 `/[locale]/yacht-charter-prices` (hub) and `/[locale]/yacht-charter-prices/{croatia|greece|italy}` (36 URLs, in sitemap-static and llms.txt), built only from `/public/charter-facts` (c-54, c-86, c-110; nightly 08:00 UTC): data-derived summary, month tables for all boats and each boat type with ≥6 months of data, skipper/extras/deposit/check-in tiles, top bases (plain text: all are noindex landings) and models (linked to /yachts pages), method section, 6 FAQs (FAQPage, visible). BreadcrumbList + WebPage `dateModified` = computedAt; no Dataset markup (no licence to declare). Keyword: "yacht charter prices" — NOT "catamaran charter croatia price" (sister CC owns /catamaran-charter-croatia-price). Linked from the country landings + type landings, the footer (hub) and blog Explore blocks.

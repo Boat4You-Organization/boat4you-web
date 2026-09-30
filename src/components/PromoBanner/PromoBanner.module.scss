@@ -1,54 +1,528 @@
-/* Boataround-style campaign hero: title/sub left, Storyset character running
-   toward the "up to X%" blob on the right, wave strip at the bottom. Colors
-   arrive inline from campaigns.config.ts (data-driven per campaign). */
-.wrapper {
-  display: block;
-  text-decoration: none;
+/* stylelint-disable custom-property-pattern, no-descending-specificity, no-duplicate-selectors, property-no-vendor-prefix -- 1:1 port of the approved prototype: its custom property names (--blobText, --H, ...), rule order and -webkit- fallbacks are kept so sync_narrow_css.py can re-copy the blocks mechanically */
+
+/*
+ * Animated campaign banner (Mario 30.9.2026). The rules between the sync markers are a 1:1 port of the approved
+ * prototype page (same class names, selectors and @container blocks; only formatted by prettier/stylelint), so the
+ * blocks can be re-copied mechanically with sync_narrow_css.py. Site-specific rules live outside the markers.
+ * The format class sits on the frame, which is the size container the @container blocks query:
+ * fmt-hero (deals landing), fmt-tile (b4y home grid), fmt-strip (sister home), fmt-compact (listing strip).
+ */
+
+/* integration: the frame is the size container; font and line-height the prototype page gave the banner */
+.frame {
+  --display: 'Raleway', 'Helvetica Neue', arial, sans-serif;
+
+  container: stage / inline-size;
+  width: 100%;
+  line-height: 1.5;
 }
 
+/* integration: the prototype page has no box-sizing reset, the site sets `* { box-sizing: border-box }`.
+   Keep the prototype's box model inside the banner; the tablet/phone blocks switch .banner to border-box. */
+.banner,
+.banner * {
+  box-sizing: content-box;
+}
+
+/* sync:base:start — generated from the prototype by sync_narrow_css.py --all; edit the prototype, not this block */
 .banner {
+  --bg: #0d6e6e;
+  --blob: #f2e2bd;
+  --blobText: #0a4747;
+  --sun: #ffe3a3;
+  --px: 0;
+  --py: 0;
+
   position: relative;
   overflow: hidden;
+  isolation: isolate;
   border-radius: 14px;
   min-height: 300px;
   padding: 30px 34px;
-
-  @media (width <= 899px) {
-    min-height: 210px;
-    padding: 20px 22px;
-  }
-}
-
-.title {
+  background: var(--bg);
   color: #fff;
-  font-size: 56px;
-  font-weight: 800;
-  letter-spacing: -0.01em;
-  line-height: 1;
-  margin: 0;
-  position: relative;
-  z-index: 2;
+  text-decoration: none;
+  display: block;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
 
-  @media (width <= 899px) {
-    font-size: 28px;
+.banner:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 34px -18px rgb(0 0 0 / 60%);
+}
+
+.banner:focus-visible {
+  outline: 3px solid var(--blob);
+  outline-offset: 3px;
+}
+
+.plx {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  transform: translate3d(calc(var(--px) * var(--d, 0) * 16px), calc(var(--py) * var(--d, 0) * 8px), 0);
+  transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+
+/* sky */
+
+.glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(90% 90% at 66% 20%, rgb(255 255 255 / 22%), transparent 62%);
+}
+
+.sun {
+  position: absolute;
+  top: 9%;
+  right: 47%;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--sun);
+  box-shadow:
+    0 0 0 10px color-mix(in srgb, var(--sun) 28%, transparent),
+    0 0 44px 16px color-mix(in srgb, var(--sun) 36%, transparent);
+  animation: pulse 5s ease-in-out infinite;
+}
+
+.sun.big {
+  width: 92px;
+  height: 92px;
+  top: 4%;
+  right: 44%;
+}
+
+.sun.rise {
+  top: auto;
+  bottom: 16%;
+  right: 44%;
+  width: 80px;
+  height: 80px;
+  animation:
+    pulse 5s ease-in-out infinite,
+    rise 12s ease-in-out infinite alternate;
+}
+
+@keyframes pulse {
+  50% {
+    box-shadow:
+      0 0 0 16px color-mix(in srgb, var(--sun) 18%, transparent),
+      0 0 60px 22px color-mix(in srgb, var(--sun) 26%, transparent);
   }
 }
 
-.sub {
-  color: #fff;
-  opacity: 0.92;
-  font-size: 15px;
-  margin: 12px 0 0;
-  max-width: 46ch;
-  position: relative;
-  z-index: 2;
+@keyframes rise {
+  from {
+    transform: translateY(10px);
+  }
 
-  @media (width <= 899px) {
-    font-size: 12.5px;
-    margin-top: 8px;
-    max-width: 34ch;
+  to {
+    transform: translateY(-8px);
   }
 }
+
+.star {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #fff;
+  opacity: 0.2;
+  animation: twinkle var(--t, 3s) ease-in-out infinite;
+  animation-delay: var(--dl, 0s);
+}
+
+@keyframes twinkle {
+  50% {
+    opacity: 0.95;
+    transform: scale(1.4);
+  }
+}
+
+.cloud {
+  position: absolute;
+  left: 0;
+  fill: #fff;
+  opacity: 0.18;
+  animation: cloud var(--t, 60s) linear infinite;
+  animation-delay: var(--dl, 0s);
+}
+
+@keyframes cloud {
+  from {
+    transform: translateX(-160px) scale(var(--s, 1));
+  }
+
+  to {
+    transform: translateX(1100px) scale(var(--s, 1));
+  }
+}
+
+.gull {
+  position: absolute;
+  left: 0;
+  width: 30px;
+  height: 14px;
+  animation: glide var(--t, 16s) linear infinite;
+  animation-delay: var(--dl, 0s);
+}
+
+.gull svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  animation: flap 0.55s ease-in-out infinite alternate;
+  transform-origin: center;
+}
+
+.gull path {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  opacity: 0.9;
+}
+
+@keyframes flap {
+  from {
+    transform: scaleY(1);
+  }
+
+  to {
+    transform: scaleY(0.35);
+  }
+}
+
+@keyframes glide {
+  0% {
+    transform: translate(-60px, 0);
+  }
+
+  25% {
+    transform: translate(260px, -10px);
+  }
+
+  50% {
+    transform: translate(540px, 4px);
+  }
+
+  75% {
+    transform: translate(820px, -8px);
+  }
+
+  100% {
+    transform: translate(1120px, 0);
+  }
+}
+
+.flake {
+  position: absolute;
+  top: -12px;
+  width: var(--s, 5px);
+  height: var(--s, 5px);
+  border-radius: 50%;
+  background: #fff;
+  opacity: 0.85;
+  animation: fall var(--t, 9s) linear infinite;
+  animation-delay: var(--dl, 0s);
+}
+
+@keyframes fall {
+  0% {
+    transform: translate(0, -20px);
+  }
+
+  50% {
+    transform: translate(14px, 160px);
+  }
+
+  100% {
+    transform: translate(-6px, 340px);
+  }
+}
+
+.conf {
+  position: absolute;
+  top: -12px;
+  width: 7px;
+  height: 11px;
+  border-radius: 2px;
+  background: var(--c, #fff);
+  animation: conf var(--t, 7s) linear infinite;
+  animation-delay: var(--dl, 0s);
+}
+
+@keyframes conf {
+  0% {
+    transform: translate(0, -20px) rotate(0);
+  }
+
+  50% {
+    transform: translate(18px, 160px) rotate(260deg);
+  }
+
+  100% {
+    transform: translate(-8px, 340px) rotate(540deg);
+  }
+}
+
+.balloon {
+  position: absolute;
+  bottom: -90px;
+  width: 34px;
+  height: 42px;
+  border-radius: 50% 50% 48% 48%;
+  background: var(--c, #ffd60a);
+  box-shadow: inset -6px -8px 0 rgb(0 0 0 / 8%);
+  animation: float var(--t, 12s) linear infinite;
+  animation-delay: var(--dl, 0s);
+}
+
+.balloon::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  width: 1.5px;
+  height: 46px;
+  background: rgb(255 255 255 / 70%);
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(16px, -200px);
+  }
+
+  100% {
+    transform: translate(-6px, -420px);
+  }
+}
+
+.tag {
+  position: absolute;
+  width: 26px;
+  height: 16px;
+  animation: tagfloat var(--t, 9s) ease-in-out infinite;
+  animation-delay: var(--dl, 0s);
+  opacity: 0.9;
+}
+
+.tag svg {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes tagfloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-14deg);
+  }
+
+  50% {
+    transform: translateY(-16px) rotate(12deg);
+  }
+}
+
+.bolt {
+  position: absolute;
+  width: 30px;
+  height: 52px;
+  opacity: 0;
+  animation: flash var(--t, 3.2s) ease-in-out infinite;
+  animation-delay: var(--dl, 0s);
+}
+
+.bolt path {
+  fill: #fff6a6;
+}
+
+@keyframes flash {
+  0%,
+  70%,
+  100% {
+    opacity: 0;
+  }
+
+  74% {
+    opacity: 1;
+  }
+
+  78% {
+    opacity: 0.2;
+  }
+
+  82% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 0;
+  }
+}
+
+.fw {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+}
+
+.fw i {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 3px;
+  height: 18px;
+  border-radius: 2px;
+  background: var(--c, #ffd60a);
+  transform-origin: 50% 0;
+  transform: rotate(var(--r)) translateY(0) scaleY(0.2);
+  opacity: 0;
+  animation: burst var(--t, 2.8s) ease-out infinite;
+  animation-delay: var(--dl, 0s);
+}
+
+@keyframes burst {
+  0% {
+    opacity: 0;
+    transform: rotate(var(--r)) translateY(0) scaleY(0.2);
+  }
+
+  12% {
+    opacity: 1;
+  }
+
+  60% {
+    opacity: 0.9;
+    transform: rotate(var(--r)) translateY(34px) scaleY(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: rotate(var(--r)) translateY(44px) scaleY(0.4);
+  }
+}
+
+.heat {
+  position: absolute;
+  inset: auto 0 18%;
+  height: 40%;
+  background: repeating-linear-gradient(0deg, rgb(255 255 255 / 7%) 0 3px, transparent 3px 14px);
+  animation: heat 2.4s ease-in-out infinite alternate;
+}
+
+@keyframes heat {
+  from {
+    transform: skewX(-4deg) translateY(2px);
+  }
+
+  to {
+    transform: skewX(4deg) translateY(-2px);
+  }
+}
+
+/* seas */
+
+.sea {
+  position: absolute;
+  left: 0;
+  width: 200%;
+}
+
+.sea path {
+  fill: #fff;
+}
+
+.sea.far {
+  bottom: 0;
+  height: 30%;
+  opacity: 0.09;
+  animation: drift 26s linear infinite;
+}
+
+.sea.mid {
+  bottom: 0;
+  height: 16%;
+  opacity: 0.14;
+  animation: drift 14s linear infinite reverse;
+}
+
+.sea.near {
+  bottom: 0;
+  height: 10%;
+  opacity: 0.24;
+  animation: drift 9s linear infinite;
+}
+
+@keyframes drift {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* boat + character */
+
+.boat {
+  position: absolute;
+  bottom: 5%;
+  right: 47%;
+  height: 50%;
+  animation: sail 14s ease-in-out infinite;
+}
+
+.boat img {
+  height: 100%;
+  width: auto;
+  display: block;
+}
+
+.boat.wide {
+  height: 19%;
+  bottom: 7%;
+  right: 45%;
+}
+
+@keyframes sail {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-38px);
+  }
+}
+
+.banner:hover .boat {
+  animation-duration: 7s;
+}
+
+.dude {
+  position: absolute;
+  right: 300px;
+  bottom: -6px;
+  height: 96%;
+  width: auto;
+}
+
+.dude img {
+  height: 100%;
+  width: auto;
+  display: block;
+}
+
+/* blob: discount + campaign clock */
 
 .blob {
   position: absolute;
@@ -56,242 +530,1166 @@
   bottom: -8%;
   width: 270px;
   height: 208px;
+  padding-bottom: 18px;
   border-radius: 54% 46% 58% 42% / 52% 55% 45% 48%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  z-index: 1;
+  background: var(--blob);
+  color: var(--blobText);
+  font-family: var(--display);
+  animation: morph 7s ease-in-out infinite;
+  pointer-events: none;
+}
 
-  @media (width <= 899px) {
-    width: 150px;
-    height: 118px;
-    right: 4%;
+@keyframes morph {
+  50% {
+    border-radius: 46% 54% 44% 56% / 58% 46% 54% 42%;
+    transform: scale(1.02);
+  }
+}
+
+.blob.pop {
+  animation:
+    morph 7s ease-in-out infinite,
+    pop 0.45s cubic-bezier(0.3, 1.6, 0.5, 1);
+}
+
+@keyframes pop {
+  40% {
+    transform: scale(1.09);
   }
 }
 
 .upto {
   font-size: 17px;
   font-weight: 500;
-
-  @media (width <= 899px) {
-    font-size: 12px;
-  }
 }
 
 .pct {
   font-size: 62px;
-  font-weight: 900;
+  font-weight: 800;
   letter-spacing: -0.03em;
   line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
 
-  @media (width <= 899px) {
-    font-size: 34px;
+.when {
+  margin-top: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--blobText) 12%, transparent);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.when .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #e0412f;
+  box-shadow: 0 0 0 0 rgb(224 65 47 / 60%);
+  animation: live 1.6s ease-out infinite;
+}
+
+@keyframes live {
+  to {
+    box-shadow: 0 0 0 7px rgb(224 65 47 / 0%);
   }
 }
 
-.dude {
-  position: absolute;
-  right: 330px;
-  bottom: -4px;
-  height: 74%;
-  width: auto;
-  z-index: 1;
+/* text column */
 
-  @media (width <= 899px) {
-    right: 160px;
-    height: 58%;
-  }
-
-  @media (width <= 599px) {
-    display: none;
-  }
+.copy {
+  position: relative;
+  z-index: 6;
+  display: grid;
+  justify-items: start;
+  max-width: 460px;
 }
 
-.sea {
+.title {
+  font-family: var(--display);
+  font-size: 56px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  line-height: 1;
+  margin: 0;
+  text-wrap: balance;
+  text-shadow: 0 2px 14px rgb(0 0 0 / 22%);
+}
+
+.sub {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 15px;
+  margin: 12px 0 0;
+  max-width: 46ch;
+  text-shadow: 0 1px 3px rgb(0 0 0 / 30%);
+}
+
+.cta {
+  position: relative;
+  overflow: hidden;
+  margin-top: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: 0.01em;
+  background: var(--blob);
+  color: var(--blobText);
+  padding: 13px 22px;
+  border-radius: 999px;
+  box-shadow: 0 6px 16px -8px rgb(0 0 0 / 60%);
+}
+
+.cta::after {
+  content: '';
   position: absolute;
-  left: 0;
-  right: 0;
+  top: 0;
   bottom: 0;
-  width: 100%;
-  height: 30px;
-  opacity: 0.25;
+  width: 40%;
+  left: -60%;
+  background: linear-gradient(100deg, transparent, rgb(255 255 255 / 65%), transparent);
+  animation: shine 4.5s ease-in-out infinite;
+}
 
-  path {
-    fill: #fff;
+@keyframes shine {
+  0%,
+  62% {
+    left: -60%;
+  }
+
+  100% {
+    left: 130%;
   }
 }
 
-/* Search-listing variant: shorter strip above the first boat card. */
-.compact {
-  .banner {
-    min-height: 170px;
-    padding: 18px 24px;
-  }
-
-  .title {
-    font-size: 30px;
-  }
-
-  .sub {
-    font-size: 13px;
-    margin-top: 6px;
-  }
-
-  .blob {
-    width: 170px;
-    height: 132px;
-  }
-
-  .pct {
-    font-size: 38px;
-  }
-
-  .upto {
-    font-size: 13px;
-  }
-
-  /* Character centred (Mario 12.7.2026 — on the wide search banner it was
-     cramped behind the blob on the right and barely visible). */
-  .dude {
-    left: 50%;
-    right: auto;
-    transform: translateX(-50%);
-    height: 80%;
-  }
-
-  @media (width <= 899px) {
-    .banner {
-      min-height: 130px;
-    }
-
-    .title {
-      font-size: 22px;
-    }
-
-    .blob {
-      width: 120px;
-      height: 94px;
-    }
-
-    .pct {
-      font-size: 26px;
-    }
-
-    .dude {
-      display: none;
-    }
-  }
+.cta svg {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.25s ease;
 }
 
-/* Tile variant: sits inside the home destinations grid as one card-row-tall
-   cell spanning up to 3 columns (Mario 12.7.2026 — blend in among countries,
-   don't tower over them). Fills its grid cell height. */
-.wrapperTile {
-  display: block;
-  height: 100%;
+.banner:hover .cta svg,
+.banner:focus-visible .cta svg {
+  transform: translateX(5px);
 }
 
-.tile {
-  height: 100%;
+/* ================= desktop containers (>= 900px): per-format sizes ================= */
 
-  /* Hero-style layout inside the tile (Mario 12.7.2026): title+sub top-left,
-     character centered, big discount blob bottom-right. */
-  .banner {
+@container stage (width >= 900px) {
+  /* b4y home: tile in the destinations grid, one card row tall */
+  .fmt-tile .banner {
     min-height: 0;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    height: 270px;
     padding: 22px 26px;
     border-radius: 16px;
   }
 
-  .title {
+  .fmt-tile .title {
     font-size: 46px;
-
-    @media (width <= 1099px) {
-      font-size: 38px;
-    }
-
-    @media (width <= 899px) {
-      font-size: 30px;
-    }
   }
 
-  .sub {
+  .fmt-tile .sub {
     font-size: 13.5px;
     margin-top: 10px;
-    max-width: 30ch;
-
-    @media (width <= 899px) {
-      font-size: 12px;
-      margin-top: 8px;
-    }
+    max-width: 32ch;
   }
 
-  /* Enlarged, in the bottom-right corner like the hero. It bleeds slightly at
-     the bottom but the "%" stays in the visible upper-centre of the blob. */
-  .blob {
-    width: 208px;
-    height: 164px;
+  .fmt-tile .cta {
+    margin-top: 16px;
+    font-size: 14.5px;
+    padding: 11px 18px;
+  }
+
+  .fmt-tile .blob {
+    width: 214px;
+    height: 168px;
     right: 3%;
-    bottom: -8%;
-    top: auto;
-    transform: none;
-
-    @media (width <= 1099px) {
-      width: 176px;
-      height: 140px;
-    }
-
-    @media (width <= 899px) {
-      width: 132px;
-      height: 104px;
-      right: 4%;
-      bottom: -10%;
-    }
   }
 
-  .pct {
+  .fmt-tile .pct {
     font-size: 48px;
-
-    @media (width <= 1099px) {
-      font-size: 40px;
-    }
-
-    @media (width <= 899px) {
-      font-size: 32px;
-    }
   }
 
-  .upto {
+  .fmt-tile .upto {
+    font-size: 15px;
+  }
+
+  .fmt-tile .dude {
+    height: 94%;
+    right: 250px;
+  }
+
+  .fmt-tile .boat {
+    right: 56%;
+    height: 46%;
+  }
+
+  .fmt-tile .boat.wide {
+    height: 19%;
+    bottom: 7%;
+  }
+
+  .fmt-tile .sun:not(.rise) {
+    right: 5%;
+    top: 9%;
+  }
+
+  /* sister home: full-width strip, content height */
+  .fmt-strip .banner {
+    min-height: 168px;
+    padding: 20px 28px;
+    border-radius: 16px;
+  }
+
+  .fmt-strip .title {
+    font-size: 40px;
+  }
+
+  .fmt-strip .sub {
+    font-size: 13.5px;
+    margin-top: 8px;
+    max-width: 44ch;
+  }
+
+  .fmt-strip .cta {
+    margin-top: 12px;
+    font-size: 14px;
+    padding: 10px 18px;
+  }
+
+  .fmt-strip .copy {
+    max-width: 520px;
+  }
+
+  .fmt-strip .blob {
+    width: 196px;
+    height: 150px;
+    right: 4%;
+    bottom: -10%;
+    padding-bottom: 12px;
+  }
+
+  .fmt-strip .pct {
+    font-size: 44px;
+  }
+
+  .fmt-strip .upto {
     font-size: 14px;
   }
 
-  /* Character centred horizontally, standing on the ground; hidden on the
-     narrowest screens where the full-width tile has no room for it. */
-  .dude {
-    left: 50%;
-    right: auto;
-    transform: translateX(-50%);
-    height: 82%;
+  .fmt-strip .when {
+    font-size: 11.5px;
+    margin-top: 5px;
+  }
 
-    @media (width <= 1099px) {
-      height: 70%;
+  .fmt-strip .dude {
+    right: 250px;
+    height: 104%;
+    bottom: -8px;
+  }
+
+  .fmt-strip .boat {
+    right: 44%;
+    height: 52%;
+  }
+
+  .fmt-strip .boat.wide {
+    height: 22%;
+  }
+
+  .fmt-strip .sun:not(.rise) {
+    top: 12%;
+    right: 58%;
+    width: 40px;
+    height: 40px;
+  }
+
+  /* listings: strip above the first boat card */
+  .fmt-compact .banner {
+    min-height: 170px;
+    padding: 18px 24px;
+  }
+
+  .fmt-compact .title {
+    font-size: 30px;
+  }
+
+  .fmt-compact .sub {
+    font-size: 13px;
+    margin-top: 6px;
+    max-width: 34ch;
+  }
+
+  .fmt-compact .cta {
+    margin-top: 12px;
+    font-size: 13.5px;
+    padding: 9px 16px;
+  }
+
+  .fmt-compact .blob {
+    width: 170px;
+    height: 132px;
+    padding-bottom: 10px;
+  }
+
+  .fmt-compact .pct {
+    font-size: 38px;
+  }
+
+  .fmt-compact .upto {
+    font-size: 13px;
+  }
+
+  .fmt-compact .when {
+    font-size: 11px;
+    margin-top: 5px;
+    padding: 3px 8px;
+  }
+
+  .fmt-compact .dude {
+    right: 38%;
+    height: 92%;
+  }
+
+  .fmt-compact .boat {
+    right: 58%;
+    height: 46%;
+  }
+
+  .fmt-compact .boat.wide {
+    height: 18%;
+  }
+}
+
+/* sync:base:end */
+
+/* sync:narrow:start — generated from the prototype by sync_narrow_css.py; edit the prototype, not this block */
+
+/* ================= tablet containers (600–899px) ================= */
+
+@container stage (600px <= width < 900px) {
+  /* SPLIT, wide: text column left; the character walks large through the middle-right towards the discount sticker
+     (bottom-right); the boat sails in the gap between copy and character, the sun fills the sky above it.
+     Sizes are tuned at 736px and scale with the container, so 600px and 899px keep the same gaps. */
+  .banner {
+    --cta: clamp(13px, 1.9cqw, 15px);
+
+    box-sizing: border-box;
+    min-height: 290px;
+    padding: 26px 28px;
+  }
+
+  .copy {
+    max-width: 46%;
+  }
+
+  .title {
+    font-size: clamp(36px, 6cqw, 50px);
+    line-height: 0.95;
+    width: min-content;
+  }
+
+  .sub {
+    font-size: clamp(12.5px, 1.84cqw, 14.5px);
+    line-height: 1.45;
+    margin-top: 10px;
+    max-width: 34ch;
+    text-wrap: pretty;
+  }
+
+  .cta {
+    font-size: var(--cta);
+    padding: 0.78em 1.28em;
+    margin-top: 16px;
+    white-space: nowrap;
+  }
+
+  .blob {
+    --bw: clamp(136px, 21.5cqw, 176px);
+
+    right: 3%;
+    top: auto;
+    bottom: 9%;
+    width: var(--bw);
+    height: calc(var(--bw) * 0.875);
+    padding-bottom: 8px;
+  }
+
+  .upto {
+    font-size: clamp(12px, 1.77cqw, 14px);
+  }
+
+  .pct {
+    font-size: clamp(36px, 5.7cqw, 46px);
+  }
+
+  .when {
+    font-size: clamp(10.5px, 1.5cqw, 12px);
+    margin-top: 5px;
+    padding: 3px 9px;
+  }
+
+  .dude {
+    right: 16%;
+    bottom: -2%;
+    height: min(100%, 39.4cqw);
+  }
+
+  /* the boat starts just past the widest CTA plus its 38px sail swing */
+  .boat,
+  .boat.wide {
+    right: auto;
+    left: max(70px + 17 * var(--cta), 42%);
+    bottom: 6%;
+    height: 26%;
+  }
+
+  .boat.wide {
+    height: 11%;
+    bottom: 8%;
+  }
+
+  .sun,
+  .sun.big {
+    top: 11%;
+    right: 43%;
+    bottom: auto;
+    width: 44px;
+    height: 44px;
+  }
+
+  .sun.big {
+    top: 7%;
+    width: 60px;
+    height: 60px;
+  }
+
+  .sun.rise {
+    top: auto;
+    right: 48%;
+    bottom: 20%;
+    width: 54px;
+    height: 54px;
+  }
+
+  .tag,
+  .fw,
+  .bolt {
+    margin-left: 6cqw;
+  }
+
+  .balloon {
+    margin-left: 10cqw;
+  }
+
+  .fmt-strip .banner {
+    --cta: clamp(12.5px, 1.84cqw, 14px);
+
+    min-height: 214px;
+    padding: 20px 24px;
+  }
+
+  .fmt-strip .title {
+    font-size: clamp(28px, 4.6cqw, 38px);
+  }
+
+  .fmt-strip .sub {
+    font-size: clamp(12px, 1.77cqw, 14px);
+    margin-top: 8px;
+  }
+
+  .fmt-strip .cta {
+    margin-top: 12px;
+    padding: 0.74em 1.18em;
+  }
+
+  .fmt-strip .blob {
+    --bw: clamp(134px, 20cqw, 164px);
+
+    height: calc(var(--bw) * 0.85);
+  }
+
+  .fmt-strip .pct {
+    font-size: clamp(32px, 5.2cqw, 42px);
+  }
+
+  .fmt-strip .dude {
+    height: min(104%, 30.3cqw);
+    right: 20%;
+  }
+
+  .fmt-strip .boat,
+  .fmt-strip .boat.wide {
+    left: max(64px + 17 * var(--cta), 42%);
+    height: 33%;
+  }
+
+  .fmt-strip .boat.wide {
+    height: 13%;
+  }
+
+  .fmt-strip .sun {
+    width: 38px;
+    height: 38px;
+  }
+
+  .fmt-strip .sun.big {
+    width: 50px;
+    height: 50px;
+  }
+
+  .fmt-strip .sun.rise {
+    right: 48%;
+    bottom: 28%;
+    width: 44px;
+    height: 44px;
+  }
+
+  /* listings: the live strip hides the character below 900px; boat and sun take the middle, the sticker the right */
+  .fmt-compact .banner {
+    min-height: 176px;
+    padding: 18px 22px;
+  }
+
+  .fmt-compact .copy {
+    max-width: 56%;
+  }
+
+  .fmt-compact .title {
+    font-size: 28px;
+    width: auto;
+  }
+
+  .fmt-compact .sub {
+    font-size: 13px;
+    margin-top: 6px;
+    max-width: 44ch;
+  }
+
+  .fmt-compact .cta {
+    margin-top: 12px;
+    font-size: 13.5px;
+    padding: 10px 16px;
+  }
+
+  .fmt-compact .dude {
+    display: none;
+  }
+
+  .fmt-compact .blob {
+    --bw: 150px;
+
+    height: 128px;
+    right: 4%;
+    bottom: auto;
+    top: 50%;
+    margin-top: -64px;
+  }
+
+  .fmt-compact .pct {
+    font-size: 38px;
+  }
+
+  .fmt-compact .boat,
+  .fmt-compact .boat.wide {
+    left: auto;
+    right: 30%;
+    height: 44%;
+  }
+
+  .fmt-compact .boat.wide {
+    right: 28%;
+    height: 16%;
+  }
+
+  .fmt-compact .sun,
+  .fmt-compact .sun.big,
+  .fmt-compact .sun.rise {
+    top: auto;
+    right: 34%;
+    bottom: 40%;
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/* ================= phone containers (< 600px) ================= */
+
+@container stage (width < 600px) {
+  /* SPLIT: left column = title, sub, CTA; right column = discount sticker on top and the character standing large under it;
+     boat and low sun in the sea bottom-left. The CTA row is pinned (copy min-height) and the character is sized from it, so the
+     button always sits next to the character's head and shoulders, where the figure is narrow. */
+  .banner {
+    --pad: clamp(14px, 4.6cqw, 20px);
+    --H: clamp(300px, 96cqw + 24px, 376px); /* banner height */
+    --copyH: clamp(164px, 47cqw, 186px); /* CTA bottom edge = pad + copyH */
+    --blobW: clamp(112px, 33cqw, 138px);
+    --col: calc(100cqw - 2 * var(--pad) - var(--blobW) - 10px);
+    --r: 0.3; /* character image row (share of its height) level with the CTA's bottom edge */
+    --shift: 8%; /* the character's transparent right margin bleeds off the edge */
+
+    box-sizing: border-box;
+    min-height: var(--H);
+    padding: var(--pad);
+  }
+
+  .copy {
+    max-width: none;
+    min-height: var(--copyH);
+    grid-template-rows: auto auto 1fr;
+  }
+
+  .title {
+    font-size: clamp(24px, 8.6cqw, 34px);
+    line-height: 0.95;
+    width: min-content;
+    max-width: var(--col);
+  }
+
+  .sub {
+    font-size: clamp(11.5px, 3.6cqw, 13.5px);
+    line-height: 1.4;
+    margin-top: 8px;
+    max-width: var(--col);
+    text-wrap: pretty;
+    text-shadow:
+      0 1px 2px rgb(0 0 0 / 35%),
+      0 0 10px rgb(0 0 0 / 18%);
+  } /* stays legible over snow and confetti */
+  .cta {
+    align-self: end;
+    margin-top: 10px;
+    font-size: clamp(11.5px, 3.7cqw, 14px);
+    padding: 0.72em 1.05em;
+    gap: 0.5em;
+    letter-spacing: 0;
+    white-space: nowrap;
+  }
+
+  .cta svg {
+    width: 1.1em;
+    height: 1.1em;
+  }
+
+  .blob {
+    inset: 10px 10px auto auto;
+    width: var(--blobW);
+    height: calc(var(--blobW) * 0.9);
+    padding-bottom: 10px;
+  }
+
+  .upto {
+    font-size: clamp(10.5px, 3.2cqw, 13px);
+    line-height: 1.3;
+  }
+
+  .pct {
+    font-size: clamp(28px, 9.4cqw, 40px);
+  }
+
+  .when {
+    font-size: clamp(9.5px, 2.9cqw, 11.5px);
+    margin-top: 4px;
+    padding: 0.25em 0.6em;
+    gap: 4px;
+    letter-spacing: 0;
+  }
+
+  /* character top: the lower of (a) the row that keeps the CTA beside the head and (b) just under the sticker (4px tuck) */
+  .dude {
+    top: max(
+      calc((var(--pad) + var(--copyH) - var(--r) * 1.02 * var(--H)) / (1 - var(--r))),
+      calc((6px + 0.9 * var(--blobW) - 0.0816 * var(--H)) / 0.92)
+    );
+    bottom: -2%;
+    height: auto;
+    right: 0;
+    translate: var(--shift) 0;
+  }
+
+  /* per-character fit: the SUP paddle reaches out at shoulder height; the balloons fly left of her head, so she turns to face the text */
+  .dude:has(img[src*='/july']) {
+    --r: 0.24;
+    --shift: 6%;
+  }
+
+  .dude:has(img[src*='/hot']) {
+    --r: 0.3;
+  } /* the flamingo float sits at chest height */
+  .dude:has(img[src*='/bday']) {
+    --r: 0.18;
+    --shift: 12%;
+
+    scale: -1 1;
+  }
+
+  .boat,
+  .boat.wide {
+    right: auto;
+    left: calc(var(--pad) + 38px);
+    bottom: 4%;
+    height: 27%;
+  }
+
+  .boat.wide {
+    height: 11%;
+    bottom: 6%;
+  }
+
+  .sun,
+  .sun.big,
+  .sun.rise {
+    display: block;
+    inset: auto auto 29% 34%;
+    width: 40px;
+    height: 40px;
+  }
+
+  .sun.big {
+    width: 52px;
+    height: 52px;
+  }
+
+  .sun.rise {
+    bottom: 22%;
+  }
+
+  /* sky props that are scattered over the middle (price tags, fireworks, lightning, rising balloons) move into the right
+     column, so none of them drift behind the copy */
+  .tag,
+  .fw,
+  .bolt,
+  .balloon {
+    margin-left: 16cqw;
+  }
+
+  /* tile and strip: a little shorter, so the type steps down and the CTA row rises with it */
+  .fmt-tile .banner {
+    --H: clamp(290px, 86cqw + 24px, 320px);
+    --copyH: clamp(150px, 44cqw, 172px);
+  }
+
+  .fmt-tile .title {
+    font-size: clamp(22px, 8cqw, 32px);
+  }
+
+  .fmt-tile .sub {
+    font-size: clamp(11px, 3.4cqw, 13px);
+  }
+
+  .fmt-strip .banner {
+    --H: clamp(280px, 84cqw + 20px, 312px);
+    --copyH: clamp(146px, 42cqw, 166px);
+  }
+
+  .fmt-strip .title {
+    font-size: clamp(21px, 7.6cqw, 30px);
+  }
+
+  .fmt-strip .sub {
+    font-size: clamp(11px, 3.3cqw, 12.5px);
+  }
+
+  .fmt-strip .cta {
+    font-size: clamp(11.5px, 3.5cqw, 13.5px);
+  }
+
+  /* listings on a phone: no character, like the live strip; the sticker takes the top of the right column and the boat
+     sails beneath it, its mast tucked behind the sticker */
+  .fmt-compact .banner {
+    --H: clamp(166px, 46cqw + 6px, 200px);
+    --blobW: clamp(112px, 33cqw, 132px);
+  }
+
+  .fmt-compact .copy {
+    min-height: calc(var(--H) - 2 * var(--pad));
+  } /* CTA on the bottom row, clear of the sticker */
+  .fmt-compact .title {
+    font-size: clamp(19px, 6.2cqw, 25px);
+    width: auto;
+    line-height: 1;
+  }
+
+  .fmt-compact .sub {
+    margin-top: 6px;
+  }
+
+  .fmt-compact .dude {
+    display: none;
+  }
+
+  .fmt-compact .boat {
+    left: auto;
+    right: 2.5%;
+    bottom: 5%;
+    height: 24%;
+  }
+
+  .fmt-compact .boat.wide {
+    height: 8%;
+    bottom: 7%;
+  }
+
+  .fmt-compact .sun,
+  .fmt-compact .sun.big,
+  .fmt-compact .sun.rise {
+    display: none;
+  }
+
+  /* bigger phones: more room beside the CTA, so the character can grow until its head meets the sticker */
+  @container stage (width >= 370px) {
+    .banner {
+      --r: 0.36;
     }
 
-    @media (width <= 599px) {
-      display: none;
+    .fmt-hero .banner {
+      --r: 0.34;
+    }
+  }
+  @container stage (width >= 390px) {
+    .banner {
+      --r: 0.42;
+    }
+
+    .fmt-hero .banner {
+      --r: 0.4;
+    }
+  }
+  @container stage (width >= 410px) {
+    .dude:has(img[src*='/july']) {
+      --r: 0.3;
+    }
+
+    .dude:has(img[src*='/hot']) {
+      --r: 0.38;
+    }
+
+    .dude:has(img[src*='/bday']) {
+      --r: 0.28;
+    }
+  }
+
+  /* the tablet tile and wide phones (530–599): room for the character to stand in the middle of the right half at full
+     size, its head just left of the sticker */
+  @container stage (width >= 530px) {
+    .banner.banner {
+      --H: clamp(280px, 56cqw, 320px);
+      --blobW: clamp(118px, 23cqw, 128px);
+    } /* doubled class = beats the per-format --H */
+    .copy {
+      min-height: 0;
+      max-width: 52%;
+    }
+
+    .cta {
+      align-self: start;
+      margin-top: 14px;
+    }
+
+    .when {
+      font-size: clamp(10px, 1.95cqw, 11px);
+    }
+
+    .sub {
+      max-width: 27ch;
+    }
+
+    .dude,
+    .dude:has(img) {
+      top: auto;
+      bottom: -2%;
+      height: min(86%, 58cqw - 52px);
+      right: calc(43.6cqw - 169px);
+      translate: none;
+    }
+
+    .boat,
+    .boat.wide {
+      bottom: 3%;
+      height: 22%;
+    }
+
+    .boat.wide {
+      height: 9%;
+      bottom: 5%;
+    }
+
+    .sun,
+    .sun.big,
+    .sun.rise {
+      left: 31%;
+      bottom: 8%;
+      width: 46px;
+      height: 46px;
+    } /* a low sun setting into the sea */
+    .fmt-compact .banner {
+      --H: 176px;
+    }
+
+    .fmt-compact .copy {
+      max-width: 60%;
     }
   }
 }
 
-/* Phones: the subtitle ran under the "up to X%" blob (white text on the pale
-   blob at 375 px, audit B49). Keep it clear of the blob's column in every
-   variant. */
-@media (width <= 599px) {
-  .banner .sub {
-    max-width: min(34ch, calc(100% - 136px));
+/* sync:narrow:end */
+
+/* sync:motion:start — generated from the prototype by sync_narrow_css.py --all */
+@media (prefers-reduced-motion: reduce) {
+  .banner *,
+  .banner *::after {
+    animation: none !important;
+  }
+
+  .plx {
+    transition: none;
+    transform: none;
+  }
+
+  .banner {
+    transition: none;
+  }
+}
+
+/* sync:motion:end */
+
+/* integration: on the b4y home the tile sits in a destinations-grid row from 1280px; DestinationsSection sets
+   --promo-tile-h: 100% and --promo-tile-box: border-box there, so the tile takes the country cards' row height.
+   In the full-width row below that it keeps the prototype's 270px plus padding. */
+.fmt-tile {
+  height: 100%;
+}
+
+@container stage (width >= 900px) {
+  .fmt-tile .banner {
+    box-sizing: var(--promo-tile-box, content-box);
+    height: var(--promo-tile-h, 270px);
+  }
+}
+
+/* integration: no live discount of 15% or more (pct null): the sticker keeps its place and carries only the
+   campaign clock, 1.25x larger. Capped at 74% of the sticker (x 1.25 = 92.5%), so a long countdown on a small
+   sticker wraps to two balanced lines instead of running over its edge. */
+.blob.solo .when {
+  box-sizing: border-box;
+  margin-top: 0;
+  max-width: 74%;
+  justify-content: center;
+  text-align: center;
+  text-wrap: balance;
+  white-space: normal;
+  scale: 1.25;
+}
+
+/* integration: the deals-landing hero is not a link, its CTA is (it scrolls to the deals list): no hover lift */
+.static:hover {
+  box-shadow: none;
+  transform: none;
+}
+
+.static:hover .cta svg {
+  transform: none;
+}
+
+.static .cta:hover svg,
+.static .cta:focus-visible svg {
+  transform: translateX(5px);
+}
+
+/* integration: focus rings that read (WCAG 1.4.11): the prototype's pale var(--blob) ring is 1.1-1.9:1 on the white
+   page. The banner link's ring sits outside it on the page: the dark sticker text colour. The landing CTA's ring sits
+   on the gradient, left where it is deepest and the white copy reads: white. */
+.banner:focus-visible {
+  outline-color: var(--blobText);
+}
+
+.cta:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+
+/* integration: a long single word in a translated title (nl VROEGBOEKKORTING, de GEBURTSTAGSWOCHE) steps the title
+   down until the word fits its text column, instead of running over the sticker or into the character. PromoBanner
+   sets --tw on .titleFit: the longest word's width in em (Raleway ExtraBold advance widths). --title-col is the width
+   the title may fill: the .copy column, or the phone's --col. It mirrors the synced blocks' .copy max-width and
+   padding per format: after a re-sync that changes those, update it here. A block of its own, so the lines take its
+   (smaller) line height. */
+.titleFit {
+  display: block;
+  font-size: min(1em, var(--title-col, 100vw) / var(--tw, 1));
+}
+
+@container stage (width >= 900px) {
+  .banner {
+    --title-col: 460px;
+  }
+
+  .fmt-strip .banner {
+    --title-col: 520px;
+  }
+}
+
+@container stage (600px <= width < 900px) {
+  .banner {
+    --title-col: calc(0.46 * (100cqw - 56px));
+  }
+
+  .fmt-strip .banner {
+    --title-col: calc(0.46 * (100cqw - 48px));
+  }
+
+  .fmt-compact .banner {
+    --title-col: calc(0.56 * (100cqw - 44px));
+  }
+}
+
+@container stage (width < 600px) {
+  .banner {
+    --title-col: var(--col);
+  }
+}
+
+@container stage (530px <= width < 600px) {
+  .banner {
+    --title-col: min(var(--col), 0.52 * (100cqw - 2 * var(--pad)));
+  }
+
+  .fmt-compact .banner {
+    --title-col: min(var(--col), 0.6 * (100cqw - 2 * var(--pad)));
+  }
+}
+
+/* integration: the countdown's seconds (with days left) and fixed-width digits, see DeadlinePill. Below 900px the
+   sticker is too narrow for "Mancano 8g 20:08:08", so it reads "Mancano 8g 20:08" until the last day. A clock that
+   is still wider than the sticker's curve at the pill's height ("Mancano 13g 20:08" on a phone) is scaled down to fit
+   (--fit, measured by DeadlinePill); the no-discount sticker's clock wraps and scales on its own rule instead. */
+.digit {
+  display: inline-block;
+  width: 1ch;
+  text-align: center;
+}
+
+.when {
+  scale: var(--fit, 1);
+}
+
+@container stage (width < 900px) {
+  .secs {
+    display: none;
+  }
+}
+
+/* integration: the landing hero between 900 and 1231px wide (1024-1280px screens). The prototype places the character
+   a fixed 300px from the right and the boat at 47%, so below its 1232px render the character walks through the boat.
+   Here both scale with the width and keep the 1232px render's spacing: the character 44px behind the sticker (fixed
+   270px), the boat's box 67px (the speedboat's 92px) behind the character's; at 1232px these equal the prototype. */
+@container stage (900px <= width < 1232px) {
+  .fmt-hero .dude {
+    right: calc(6% + 226px);
+    height: min(96%, 28cqw);
+  }
+
+  .fmt-hero .boat {
+    right: calc(28.6% + 226px);
+    height: min(50%, 14.6cqw);
+  }
+
+  .fmt-hero .boat.wide {
+    right: calc(26.6% + 226px);
+    height: min(19%, 5.55cqw);
+  }
+}
+
+/* integration: off-screen banners pause their endless animations (PromoBanner); the scene never lays out or paints
+   outside the banner. The CTA shine moves by transform instead of `left` (no layout, no layout-shift entries):
+   -60% -> 130% of the button is 4.75 widths of the 40%-wide shine. */
+.banner {
+  contain: layout paint;
+}
+
+.paused *,
+.paused *::after {
+  animation-play-state: paused !important;
+}
+
+.cta::after {
+  animation-name: shine-x;
+}
+
+@keyframes shine-x {
+  0%,
+  62% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(475%);
+  }
+}
+
+/* integration: clouds and gulls cross the whole banner also where it is wider than the prototype's ~1100px travel
+   (the 1232px+ landing hero); narrower banners keep the original keyframes' values. */
+.cloud {
+  animation-name: cloud-wide;
+}
+
+@keyframes cloud-wide {
+  from {
+    transform: translateX(-160px) scale(var(--s, 1));
+  }
+
+  to {
+    transform: translateX(max(1100px, 100cqw + 60px)) scale(var(--s, 1));
+  }
+}
+
+.gull {
+  animation-name: glide-wide;
+}
+
+@keyframes glide-wide {
+  0% {
+    transform: translate(-60px, 0);
+  }
+
+  25% {
+    transform: translate(max(260px, 0.25 * (100cqw + 100px) - 60px), -10px);
+  }
+
+  50% {
+    transform: translate(max(540px, 0.5 * (100cqw + 100px) - 60px), 4px);
+  }
+
+  75% {
+    transform: translate(max(820px, 0.75 * (100cqw + 100px) - 60px), -8px);
+  }
+
+  100% {
+    transform: translate(max(1120px, 100cqw + 40px), 0);
+  }
+}
+
+/* integration: with reduced motion the clouds and gulls hold the first frame of their flight (spread over the sky)
+   instead of all stacking at the left edge, where the prototype leaves them without their transform. */
+@media (prefers-reduced-motion: reduce) {
+  .banner .cloud {
+    animation: cloud-wide var(--t, 60s) linear var(--dl, 0s) infinite paused !important;
+  }
+
+  .banner .gull {
+    animation: glide-wide var(--t, 16s) linear var(--dl, 0s) infinite paused !important;
   }
 }

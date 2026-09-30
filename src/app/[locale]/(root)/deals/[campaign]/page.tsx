@@ -6,7 +6,7 @@ import { notFound } from 'next/navigation';
 
 import { StaticBoatListingItemCard } from '@/components/BoatListingItemCard';
 import Layout from '@/components/Layout';
-import PromoBanner from '@/components/PromoBanner';
+import PromoBanner, { DEALS_LIST_ID } from '@/components/PromoBanner';
 import { PROMO_CAMPAIGNS, getCampaignBySlug, resolveFeaturedWeek } from '@/config/campaigns.config';
 import { YachtSearchParams } from '@/config/form-models.config';
 import { LocaleType } from '@/config/locales.config';
@@ -134,7 +134,16 @@ const DealsPage = async ({ params }: DealsPageParams) => {
           {t('landing.intro')}
         </Typography>
 
-        <Typography component="h2" variant="h4" fontWeight={700} mt={{ xs: 3, md: 4 }} mb={2}>
+        {/* The hero's CTA scrolls here; the margin keeps the heading clear of the fixed AppBar. */}
+        <Typography
+          id={DEALS_LIST_ID}
+          component="h2"
+          variant="h4"
+          fontWeight={700}
+          mt={{ xs: 3, md: 4 }}
+          mb={2}
+          sx={{ scrollMarginTop: { xs: '96px', md: '104px' } }}
+        >
           {t('landing.boatsTitle', { from: formatDay(startDate), to: formatDay(endDate) })}
         </Typography>
 

@@ -64,14 +64,24 @@
   }
 }
 
-// Promo tile sits among the destination cards: full width on the 2/3-column
-// mobile grids (short, so it doesn't dominate), and 3-of-4 columns on desktop
-// at a rotating row so it never towers over the countries (Mario 12.7.2026).
+// Promo tile sits among the destination cards at a rotating row (never the
+// top one), full width on the 2/3-column mobile grids (Mario 12.7.2026).
+// The animated banner (30.9.2026) needs its desktop layout (>= 900px wide) to
+// fit in one card row (~265px): the 3-of-4 span is that wide only from
+// 1280px, where it takes the cards' row height (--promo-tile-*, read by
+// PromoBanner). Narrower, it keeps a full-width row at its own height instead
+// of squashing the tablet/phone layouts (they need 280–320px).
 .promoCell {
   grid-column: 1 / -1;
 
   @include media('md') {
-    grid-column: var(--promo-col) / span 3;
     grid-row: var(--promo-row);
+  }
+
+  @include media('xl') {
+    --promo-tile-h: 100%;
+    --promo-tile-box: border-box;
+
+    grid-column: var(--promo-col) / span 3;
   }
 }

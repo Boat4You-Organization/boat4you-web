@@ -15,9 +15,48 @@
  *
  * The "up to X%" figure is LIVE (promo.service.ts) — the biggest genuine
  * discount for the campaign's featured week, rounded DOWN to a step of 5 so we
- * never overstate. Colors come from the approved banner gallery.
+ * never overstate. Colors (bright gradients, sticker, sun) and the scene art
+ * (character, boat, sky effects) come from the approved animated banner
+ * prototype (Mario 30.9.2026); the art files live in public/promo.
  * Changing the schedule = edit this file + deploy (all sites).
  */
+
+/** Animated character loop: public/promo/<name>.webp + <name>_poster.webp (static first frame). */
+export type PromoCharacter =
+  | 'september'
+  | 'early'
+  | 'bf'
+  | 'xmas'
+  | 'ny'
+  | 'flash'
+  | 'bday'
+  | 'june'
+  | 'july'
+  | 'hot'
+  | 'last';
+
+/** Animated boat loop: public/promo/<name>.webp + <name>_poster.webp. */
+export type PromoBoat = 'boat_september' | 'boat_early' | 'boat_last' | 'boat_xmas';
+
+/** Sky of the banner scene. Positions are pseudo-random from `seed` (the
+ *  prototype's seed, so every campaign matches the approved renders) and the
+ *  same on the server and in the browser. Counts are numbers of elements. */
+export interface PromoSky {
+  seed: number;
+  glow?: boolean;
+  sun?: 'plain' | 'big' | 'rise';
+  clouds?: number;
+  gulls?: number;
+  stars?: number;
+  snow?: number;
+  confetti?: number;
+  balloons?: number;
+  tags?: number;
+  bolts?: number;
+  fireworks?: number;
+  heat?: boolean;
+}
+
 export interface PromoCampaign {
   /** URL slug under /deals/ and the sitemap entry. */
   slug: string;
@@ -48,7 +87,11 @@ export interface PromoCampaign {
   window: { type: 'rolling'; leadDays: number } | { type: 'seasonStart'; month: number };
   /** Shown when the live aggregate is missing or below the 15% floor; null hides the number. */
   fallbackPct: number | null;
-  colors: { bg: string; blob: string; blobText: string; shirt: string };
+  /** `bg` is a CSS background (gradient); `blob`/`blobText` the discount
+   *  sticker and CTA button; `sun` the sun disc (unused without a sun). */
+  colors: { bg: string; blob: string; blobText: string; sun: string };
+  /** `wideBoat`: the flat speedboat artwork, drawn lower and wider. */
+  art: { character: PromoCharacter; boat: PromoBoat; wideBoat?: boolean; sky: PromoSky };
 }
 
 // FIRST MATCH WINS — keep the short event overrides at the TOP, the continuous
@@ -63,7 +106,13 @@ export const PROMO_CAMPAIGNS: PromoCampaign[] = [
     activeTo: '11-30',
     window: { type: 'seasonStart', month: 5 },
     fallbackPct: 40,
-    colors: { bg: '#14171c', blob: '#FFB703', blobText: '#14171c', shirt: '#FFB703' },
+    colors: {
+      bg: 'linear-gradient(100deg,#1f2233 0%,#3b2f70 55%,#8a45b0 100%)',
+      blob: '#FFB703',
+      blobText: '#14171c',
+      sun: '#fff4c2',
+    },
+    art: { character: 'bf', boat: 'boat_last', wideBoat: true, sky: { seed: 209, glow: true, stars: 16, tags: 9 } },
   },
   {
     slug: 'christmas',
@@ -72,7 +121,13 @@ export const PROMO_CAMPAIGNS: PromoCampaign[] = [
     activeTo: '12-27',
     window: { type: 'seasonStart', month: 5 },
     fallbackPct: 30,
-    colors: { bg: '#0e5c3a', blob: '#f4d58d', blobText: '#08331f', shirt: '#f4d58d' },
+    colors: {
+      bg: 'linear-gradient(100deg,#178a55 0%,#25a86a 50%,#72d19c 100%)',
+      blob: '#ffe08a',
+      blobText: '#0b3d25',
+      sun: '#fff4c2',
+    },
+    art: { character: 'xmas', boat: 'boat_xmas', sky: { seed: 310, glow: true, snow: 40 } },
   },
   {
     slug: 'new-year',
@@ -81,7 +136,13 @@ export const PROMO_CAMPAIGNS: PromoCampaign[] = [
     activeTo: '01-06',
     window: { type: 'seasonStart', month: 5 },
     fallbackPct: 30,
-    colors: { bg: '#141a3c', blob: '#ffd60a', blobText: '#141a3c', shirt: '#ffd60a' },
+    colors: {
+      bg: 'linear-gradient(100deg,#2a3a8f 0%,#5b4bc4 55%,#b16fd8 100%)',
+      blob: '#ffd60a',
+      blobText: '#141a3c',
+      sun: '#fff4c2',
+    },
+    art: { character: 'ny', boat: 'boat_early', sky: { seed: 411, glow: true, stars: 26, fireworks: 4 } },
   },
   {
     slug: 'flash-deals',
@@ -90,7 +151,13 @@ export const PROMO_CAMPAIGNS: PromoCampaign[] = [
     activeTo: '03-08',
     window: { type: 'seasonStart', month: 5 },
     fallbackPct: 30,
-    colors: { bg: '#5b3fd6', blob: '#ffd43b', blobText: '#1e1147', shirt: '#ffd43b' },
+    colors: {
+      bg: 'linear-gradient(100deg,#6a4be3 0%,#8f6bf5 50%,#c79dff 100%)',
+      blob: '#ffd43b',
+      blobText: '#1e1147',
+      sun: '#fff4c2',
+    },
+    art: { character: 'flash', boat: 'boat_last', wideBoat: true, sky: { seed: 512, glow: true, clouds: 2, bolts: 3 } },
   },
   {
     slug: 'hot-week',
@@ -99,7 +166,13 @@ export const PROMO_CAMPAIGNS: PromoCampaign[] = [
     activeTo: '07-19',
     window: { type: 'rolling', leadDays: 5 },
     fallbackPct: 30,
-    colors: { bg: '#e8622a', blob: '#ffe08a', blobText: '#4a1c08', shirt: '#ffe08a' },
+    colors: {
+      bg: 'linear-gradient(100deg,#ee6428 0%,#ff8c3f 50%,#ffc56e 100%)',
+      blob: '#fff3b0',
+      blobText: '#5a2208',
+      sun: '#fff3b0',
+    },
+    art: { character: 'hot', boat: 'boat_september', sky: { seed: 916, glow: true, sun: 'big', gulls: 2, heat: true } },
   },
   // ─── Continuous seasonal base (covers every day of the year) ───
   {
@@ -109,7 +182,13 @@ export const PROMO_CAMPAIGNS: PromoCampaign[] = [
     activeTo: '05-31',
     window: { type: 'rolling', leadDays: 7 },
     fallbackPct: 30,
-    colors: { bg: '#b5306e', blob: '#ffd60a', blobText: '#3d0f27', shirt: '#ffd60a' },
+    colors: {
+      bg: 'linear-gradient(100deg,#d0417f 0%,#ea6aa0 50%,#ffa9c9 100%)',
+      blob: '#ffd60a',
+      blobText: '#3d0f27',
+      sun: '#fff4c2',
+    },
+    art: { character: 'bday', boat: 'boat_early', sky: { seed: 613, glow: true, balloons: 6, confetti: 26 } },
   },
   {
     slug: 'june-sails',
@@ -118,7 +197,17 @@ export const PROMO_CAMPAIGNS: PromoCampaign[] = [
     activeTo: '06-30',
     window: { type: 'rolling', leadDays: 10 },
     fallbackPct: 25,
-    colors: { bg: '#2a9d8f', blob: '#ffd166', blobText: '#10342e', shirt: '#ffd166' },
+    colors: {
+      bg: 'linear-gradient(100deg,#1f9a8b 0%,#35b8a6 50%,#90e0cf 100%)',
+      blob: '#ffd166',
+      blobText: '#10342e',
+      sun: '#ffe08a',
+    },
+    art: {
+      character: 'june',
+      boat: 'boat_september',
+      sky: { seed: 714, glow: true, sun: 'plain', clouds: 3, gulls: 2 },
+    },
   },
   {
     slug: 'july-sails',
@@ -127,7 +216,13 @@ export const PROMO_CAMPAIGNS: PromoCampaign[] = [
     activeTo: '07-31',
     window: { type: 'rolling', leadDays: 10 },
     fallbackPct: 25,
-    colors: { bg: '#1e88c9', blob: '#ffdd57', blobText: '#0a2f4a', shirt: '#ffdd57' },
+    colors: {
+      bg: 'linear-gradient(100deg,#1a86d0 0%,#3aa6ea 50%,#8ed3ff 100%)',
+      blob: '#ffdd57',
+      blobText: '#0a2f4a',
+      sun: '#fff1a6',
+    },
+    art: { character: 'july', boat: 'boat_early', sky: { seed: 815, glow: true, sun: 'plain', clouds: 3, gulls: 3 } },
   },
   {
     slug: 'last-minute',
@@ -136,7 +231,18 @@ export const PROMO_CAMPAIGNS: PromoCampaign[] = [
     activeTo: '08-31',
     window: { type: 'rolling', leadDays: 7 },
     fallbackPct: 30,
-    colors: { bg: '#3572d8', blob: '#f7c948', blobText: '#14224e', shirt: '#f7c948' },
+    colors: {
+      bg: 'linear-gradient(100deg,#2780e3 0%,#3f9cf0 50%,#86c9ff 100%)',
+      blob: '#ffd23f',
+      blobText: '#143063',
+      sun: '#fff1a6',
+    },
+    art: {
+      character: 'last',
+      boat: 'boat_last',
+      wideBoat: true,
+      sky: { seed: 1017, glow: true, sun: 'plain', clouds: 3, gulls: 2 },
+    },
   },
   {
     slug: 'september-sails',
@@ -145,7 +251,17 @@ export const PROMO_CAMPAIGNS: PromoCampaign[] = [
     activeTo: '09-30',
     window: { type: 'rolling', leadDays: 10 },
     fallbackPct: 20,
-    colors: { bg: '#0d6e6e', blob: '#f2e2bd', blobText: '#0a4747', shirt: '#f2e2bd' },
+    colors: {
+      bg: 'linear-gradient(100deg,#0e8f8a 0%,#19aaa2 45%,#63d3c6 100%)',
+      blob: '#fff0c9',
+      blobText: '#0a4f4c',
+      sun: '#ffd98a',
+    },
+    art: {
+      character: 'september',
+      boat: 'boat_september',
+      sky: { seed: 7, glow: true, sun: 'plain', clouds: 3, gulls: 3 },
+    },
   },
   {
     slug: 'early-booking',
@@ -154,7 +270,17 @@ export const PROMO_CAMPAIGNS: PromoCampaign[] = [
     activeTo: '05-24',
     window: { type: 'seasonStart', month: 5 },
     fallbackPct: 25,
-    colors: { bg: '#0B1B2B', blob: '#FFB703', blobText: '#0B1B2B', shirt: '#FFB703' },
+    colors: {
+      bg: 'linear-gradient(100deg,#3f59c9 0%,#7866d6 48%,#ff9f82 100%)',
+      blob: '#FFB703',
+      blobText: '#1b1f4b',
+      sun: '#ffd3a3',
+    },
+    art: {
+      character: 'early',
+      boat: 'boat_early',
+      sky: { seed: 108, glow: true, sun: 'rise', clouds: 3, gulls: 2, stars: 10 },
+    },
   },
 ];
 

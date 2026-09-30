@@ -24,6 +24,7 @@ import PromoBanner from '@/components/PromoBanner';
 import SeoTextSection from '@/components/SeoTextSection/SeoTextSection';
 import Grid from '@/components/SvgIcons/Grid';
 import List from '@/components/SvgIcons/List';
+import { PromoCampaign } from '@/config/campaigns.config';
 import { YACHT_PAGE_SIZE } from '@/config/constants.config';
 import { boatsTabs } from '@/config/tabs.config';
 import { InquiriesModel } from '@/models/inquiries.model';
@@ -81,6 +82,10 @@ const RELAX_FILTER_TITLE: Record<string, string> = {
 
 interface BoatsSectionProps {
   data: PaginatedResponse<YachtModelShortInfo>;
+  /** The campaign strip above the first boat, resolved on the server (BoatsWrapper); null = none active. */
+  promoCampaign: PromoCampaign | null;
+  /** Its live "up to X%" (null = below the 15% floor). */
+  promoPct: number | null;
   user: UserModel | null;
   inquiry: InquiriesModel | null;
   /** Pre-fetched server-side internal-link block. Empty array hides the
@@ -108,6 +113,8 @@ interface BoatsSectionProps {
 
 const BoatsSection = ({
   data,
+  promoCampaign,
+  promoPct,
   user,
   inquiry,
   popularDestinations = [],
@@ -395,7 +402,7 @@ const BoatsSection = ({
           {/* Campaign promo strip (replaced RiskFreeCTA, Mario 12.7.2026) —
               links to the active /deals landing; free-cancellation messaging
               lives on the cards' badge + the 72h seal. */}
-          <PromoBanner compact />
+          <PromoBanner compact campaign={promoCampaign} initialPct={promoPct} />
           {/* Count headline as a real <h2> — anchors the heading hierarchy
               between the page H1 and the per-yacht H3 cards. Without it
               Screaming Frog (and Google) flag a "skipped heading level"

@@ -1,6 +1,9 @@
 {
   "banner": {
-    "upTo": "até"
+    "upTo": "até",
+    "bookBy": "Até {date}",
+    "endsIn": "Faltam {time}",
+    "startsOn": "Início: {date}"
   },
   "campaigns": {
     "lastMinute": {
@@ -10,7 +13,8 @@
       "metaTitle": "Ofertas Last Minute de Aluguer de Iates",
       "metaDescription": "Descontos genuínos de última hora em aluguer de iates para as próximas semanas. Reduções reais dos operadores, cancelamento gratuito e disponibilidade imediata.",
       "seoTitle": "Como funcionam as nossas ofertas last minute",
-      "seoText": "Os operadores de charter descontam as semanas que continuam livres perto da data de partida — o mesmo barco que custava o preço de tabela no inverno pode ficar consideravelmente mais barato poucas semanas antes do check-in. Os descontos que vê aqui são reduções reais aplicadas pelos operadores parceiros: cada percentagem compara o preço de hoje com o preço de tabela do próprio operador para o mesmo barco e a mesma semana, nunca com um valor de referência inflacionado. A disponibilidade em cima da hora muda de hora a hora, por isso, se um barco e um preço lhe agradarem, vale a pena garantir a semana de imediato — os tamanhos mais procurados nas melhores marinas são os primeiros a esgotar."
+      "seoText": "Os operadores de charter descontam as semanas que continuam livres perto da data de partida — o mesmo barco que custava o preço de tabela no inverno pode ficar consideravelmente mais barato poucas semanas antes do check-in. Os descontos que vê aqui são reduções reais aplicadas pelos operadores parceiros: cada percentagem compara o preço de hoje com o preço de tabela do próprio operador para o mesmo barco e a mesma semana, nunca com um valor de referência inflacionado. A disponibilidade em cima da hora muda de hora a hora, por isso, se um barco e um preço lhe agradarem, vale a pena garantir a semana de imediato — os tamanhos mais procurados nas melhores marinas são os primeiros a esgotar.",
+      "cta": "Reserve last minute"
     },
     "septemberSails": {
       "title": "SETEMBRO A NAVEGAR",
@@ -19,7 +23,8 @@
       "metaTitle": "Ofertas de Aluguer de Iates em Setembro",
       "metaDescription": "Semanas de charter em setembro com descontos reais: mar quente, ventos estáveis, baías tranquilas e preços mais baixos do que no pico do verão.",
       "seoTitle": "Porque é setembro a semana inteligente para navegar",
-      "seoText": "Setembro conserva tudo o que torna o verão fantástico — mar quente, dias longos, restaurantes abertos — e dispensa as duas coisas que ninguém pede: multidões e preços de época alta. As marinas voltam a ter lugares livres, os fundeadouros estão tranquilos e os operadores de charter aplicam descontos ativamente para preencher as últimas semanas fortes da temporada. As percentagens nesta página são reduções genuínas dos operadores parceiros face ao preço de tabela do próprio operador para o mesmo barco e a mesma semana — o que poupa é dinheiro real, não marketing."
+      "seoText": "Setembro conserva tudo o que torna o verão fantástico — mar quente, dias longos, restaurantes abertos — e dispensa as duas coisas que ninguém pede: multidões e preços de época alta. As marinas voltam a ter lugares livres, os fundeadouros estão tranquilos e os operadores de charter aplicam descontos ativamente para preencher as últimas semanas fortes da temporada. As percentagens nesta página são reduções genuínas dos operadores parceiros face ao preço de tabela do próprio operador para o mesmo barco e a mesma semana — o que poupa é dinheiro real, não marketing.",
+      "cta": "Ver ofertas de setembro"
     },
     "earlyBooking": {
       "title": "RESERVA ANTECIPADA",
@@ -28,7 +33,8 @@
       "metaTitle": "Descontos de Reserva Antecipada de Iates",
       "metaDescription": "Reserve cedo o charter da próxima temporada: a maior escolha de barcos e datas e descontos genuínos de reserva antecipada. Com cancelamento gratuito.",
       "seoTitle": "Porque compensa reservar cedo",
-      "seoText": "As frotas de charter abrem os calendários da temporada seguinte no outono, e os operadores recompensam quem se compromete cedo com as suas melhores percentagens — é nessa altura que a escolha de barcos, marinas e semanas de férias escolares ainda está completa. Reservar cedo não é uma aposta às cegas: a sua reserva inclui um período de cancelamento gratuito, e o desconto que vê compara o preço atual com o preço de tabela do próprio operador para esse barco e essa semana. Quando a primavera chegar e as semanas mais procuradas tiverem desaparecido, os mesmos barcos vendem-se ao preço cheio."
+      "seoText": "As frotas de charter abrem os calendários da temporada seguinte no outono, e os operadores recompensam quem se compromete cedo com as suas melhores percentagens — é nessa altura que a escolha de barcos, marinas e semanas de férias escolares ainda está completa. Reservar cedo não é uma aposta às cegas: a sua reserva inclui um período de cancelamento gratuito, e o desconto que vê compara o preço atual com o preço de tabela do próprio operador para esse barco e essa semana. Quando a primavera chegar e as semanas mais procuradas tiverem desaparecido, os mesmos barcos vendem-se ao preço cheio.",
+      "cta": "Antecipe a reserva"
     },
     "blackFriday": {
       "title": "BLACK FRIDAY",
@@ -37,7 +43,8 @@
       "metaTitle": "Black Friday de Aluguer de Iates",
       "metaDescription": "A Black Friday traz as maiores reduções do ano em aluguer de iates para a próxima temporada. Descontos reais dos operadores, só durante uma semana, com cancelamento gratuito.",
       "seoTitle": "Porque a Black Friday é a semana para reservar",
-      "seoText": "Uma vez por ano, os operadores de charter abrem as tarifas de reserva antecipada mais agressivas da temporada — e concentram-nas numa única semana de Black Friday. É o momento em que a escolha de barcos, marinas e semanas de férias escolares ainda está completa e as percentagens vão ao mais fundo do ano. Cada desconto nesta página é uma redução real do operador parceiro, comparada com o preço de tabela do próprio operador para o mesmo barco e a mesma semana, nunca com um valor inflacionado. A janela fecha em poucos dias e não volta a este nível; se um barco lhe agrada, esta é a semana para garantir a próxima temporada."
+      "seoText": "Uma vez por ano, os operadores de charter abrem as tarifas de reserva antecipada mais agressivas da temporada — e concentram-nas numa única semana de Black Friday. É o momento em que a escolha de barcos, marinas e semanas de férias escolares ainda está completa e as percentagens vão ao mais fundo do ano. Cada desconto nesta página é uma redução real do operador parceiro, comparada com o preço de tabela do próprio operador para o mesmo barco e a mesma semana, nunca com um valor inflacionado. A janela fecha em poucos dias e não volta a este nível; se um barco lhe agrada, esta é a semana para garantir a próxima temporada.",
+      "cta": "Aproveite a Black Friday"
     },
     "christmas": {
       "title": "NATAL A NAVEGAR",
@@ -46,7 +53,8 @@
       "metaTitle": "Ofertas de Natal de Aluguer de Iates",
       "metaDescription": "Este Natal, ofereça um charter ou reserve a fuga da próxima temporada com descontos genuínos dos operadores. Escolha completa de barcos e datas, com cancelamento gratuito.",
       "seoTitle": "Um charter debaixo da árvore",
-      "seoText": "Poucos presentes duram como uma semana no mar com quem se ama — e o inverno é a altura ideal para a planear sem pressas. Enquanto o tempo lá fora convida a sonhar, os operadores de charter mantêm as suas melhores percentagens de reserva antecipada para a próxima temporada, com a frota ainda inteira à sua escolha. Cada desconto que vê aqui é uma redução real do operador parceiro, comparada com o preço de tabela do próprio operador para o mesmo barco e a mesma semana. Reserve agora com cancelamento gratuito, ofereça a viagem no Natal e deixe a família contar os dias até zarpar."
+      "seoText": "Poucos presentes duram como uma semana no mar com quem se ama — e o inverno é a altura ideal para a planear sem pressas. Enquanto o tempo lá fora convida a sonhar, os operadores de charter mantêm as suas melhores percentagens de reserva antecipada para a próxima temporada, com a frota ainda inteira à sua escolha. Cada desconto que vê aqui é uma redução real do operador parceiro, comparada com o preço de tabela do próprio operador para o mesmo barco e a mesma semana. Reserve agora com cancelamento gratuito, ofereça a viagem no Natal e deixe a família contar os dias até zarpar.",
+      "cta": "Ofereça uma semana"
     },
     "newYear": {
       "title": "ANO NOVO, MAR NOVO",
@@ -55,7 +63,8 @@
       "metaTitle": "Ofertas de Ano Novo de Aluguer de Iates",
       "metaDescription": "Comece o ano com a próxima temporada já reservada: descontos genuínos de reserva antecipada, escolha completa de barcos e datas e cancelamento gratuito.",
       "seoTitle": "Ano novo, horizonte novo",
-      "seoText": "Há poucas formas melhores de começar o ano do que com uma data no calendário à sua espera no mar. Enquanto muitos ainda adiam os planos, os operadores de charter oferecem as suas melhores percentagens de reserva antecipada e a frota inteira para escolher — os barcos mais procurados nas semanas de férias escolares são os primeiros a partir. Cada desconto nesta página é uma redução real do operador parceiro, comparada com o preço de tabela do próprio operador para o mesmo barco e a mesma semana. Marque a próxima temporada agora, com cancelamento gratuito, e comece o ano com o horizonte já traçado."
+      "seoText": "Há poucas formas melhores de começar o ano do que com uma data no calendário à sua espera no mar. Enquanto muitos ainda adiam os planos, os operadores de charter oferecem as suas melhores percentagens de reserva antecipada e a frota inteira para escolher — os barcos mais procurados nas semanas de férias escolares são os primeiros a partir. Cada desconto nesta página é uma redução real do operador parceiro, comparada com o preço de tabela do próprio operador para o mesmo barco e a mesma semana. Marque a próxima temporada agora, com cancelamento gratuito, e comece o ano com o horizonte já traçado.",
+      "cta": "Comece o ano no mar"
     },
     "flashDeals": {
       "title": "OFERTAS RELÂMPAGO",
@@ -64,7 +73,8 @@
       "metaTitle": "Ofertas Relâmpago de Aluguer de Iates",
       "metaDescription": "Uma explosão de descontos por tempo limitado em aluguer de iates para a temporada que se aproxima. Reduções reais dos operadores durante poucos dias, com cancelamento gratuito.",
       "seoTitle": "Como funcionam as ofertas relâmpago",
-      "seoText": "De vez em quando, os operadores de charter lançam uma janela curta de descontos para acelerar as reservas antes da temporada arrancar — e é isso que reunimos aqui. É primavera, a frota ainda está quase toda livre e os preços ficam afiados por poucos dias. Cada percentagem nesta página é uma redução real do operador parceiro, comparada com o preço de tabela do próprio operador para o mesmo barco e a mesma semana, nunca com um valor inflacionado. A janela é estreita e não avisa quando fecha; se um barco e uma semana lhe agradam, vale a pena garantir já a temporada que aí vem."
+      "seoText": "De vez em quando, os operadores de charter lançam uma janela curta de descontos para acelerar as reservas antes da temporada arrancar — e é isso que reunimos aqui. É primavera, a frota ainda está quase toda livre e os preços ficam afiados por poucos dias. Cada percentagem nesta página é uma redução real do operador parceiro, comparada com o preço de tabela do próprio operador para o mesmo barco e a mesma semana, nunca com um valor inflacionado. A janela é estreita e não avisa quando fecha; se um barco e uma semana lhe agradam, vale a pena garantir já a temporada que aí vem.",
+      "cta": "Ver ofertas relâmpago"
     },
     "hotWeek": {
       "title": "SEMANA QUENTE",
@@ -73,7 +83,8 @@
       "metaTitle": "Semana Quente de Ofertas de Aluguer de Iates",
       "metaDescription": "A semana mais quente do verão em descontos: semanas livres a poucos dias de distância, reduções reais dos operadores e disponibilidade imediata. Com cancelamento gratuito.",
       "seoTitle": "Porque esta é a semana mais quente do verão",
-      "seoText": "No auge do verão, sobram algumas semanas fortes que ainda estão por preencher a poucos dias do check-in — e é aí que os operadores de charter aplicam os seus descontos mais agressivos para as fechar. Reunimos essas oportunidades numa só semana quente: barcos prontos a zarpar já, com mar quente e dias longos à espera. Cada percentagem aqui é uma redução real do operador parceiro, comparada com o preço de tabela do próprio operador para o mesmo barco e a mesma semana. A disponibilidade em cima da hora muda de hora a hora — se um barco e um preço lhe agradam, garanta o verão agora."
+      "seoText": "No auge do verão, sobram algumas semanas fortes que ainda estão por preencher a poucos dias do check-in — e é aí que os operadores de charter aplicam os seus descontos mais agressivos para as fechar. Reunimos essas oportunidades numa só semana quente: barcos prontos a zarpar já, com mar quente e dias longos à espera. Cada percentagem aqui é uma redução real do operador parceiro, comparada com o preço de tabela do próprio operador para o mesmo barco e a mesma semana. A disponibilidade em cima da hora muda de hora a hora — se um barco e um preço lhe agradam, garanta o verão agora.",
+      "cta": "As ofertas mais quentes"
     },
     "birthdayWeek": {
       "title": "SEMANA DE ANIVERSÁRIO",
@@ -82,7 +93,8 @@
       "metaTitle": "Semana de Aniversário — Ofertas de Aluguer de Iates",
       "metaDescription": "A intermediar charters desde 2013, celebramos o aniversário com ofertas de agradecimento para as próximas semanas. Descontos reais dos operadores, com cancelamento gratuito.",
       "seoTitle": "A festejar consigo desde 2013",
-      "seoText": "Intermediamos charters desde 2013, e cada temporada existe graças aos clientes que voltam ao mar connosco — por isso, na semana do nosso aniversário, retribuímos. Reunimos ofertas de agradecimento para as próximas semanas, com barcos prontos a zarpar em cheia época. Cada percentagem que vê aqui é uma redução real do operador parceiro, comparada com o preço de tabela do próprio operador para o mesmo barco e a mesma semana, nunca com um valor inflacionado. É a nossa forma de dizer obrigado: escolha a sua semana, garanta o barco com cancelamento gratuito e festeje connosco com os pés à beira-mar."
+      "seoText": "Intermediamos charters desde 2013, e cada temporada existe graças aos clientes que voltam ao mar connosco — por isso, na semana do nosso aniversário, retribuímos. Reunimos ofertas de agradecimento para as próximas semanas, com barcos prontos a zarpar em cheia época. Cada percentagem que vê aqui é uma redução real do operador parceiro, comparada com o preço de tabela do próprio operador para o mesmo barco e a mesma semana, nunca com um valor inflacionado. É a nossa forma de dizer obrigado: escolha a sua semana, garanta o barco com cancelamento gratuito e festeje connosco com os pés à beira-mar.",
+      "cta": "Celebre com uma oferta"
     },
     "juneSails": {
       "title": "JUNHO A NAVEGAR",
@@ -91,7 +103,8 @@
       "metaTitle": "Ofertas de Aluguer de Iates em Junho",
       "metaDescription": "Semanas de charter em junho com descontos reais: mar já quente, ventos suaves e fundeadouros tranquilos antes da multidão do pico do verão.",
       "seoTitle": "Porque junho é o início de verão de quem sabe",
-      "seoText": "Junho traz o melhor do início da temporada: o mar já aquece, os dias são longos, os ventos são suaves e as baías ainda estão tranquilas antes de a multidão de julho e agosto chegar. As marinas têm lugar, os fundeadouros estão calmos e os operadores de charter aplicam descontos para preencher as primeiras semanas fortes do verão. Cada percentagem nesta página é uma redução genuína do operador parceiro face ao preço de tabela do próprio operador para o mesmo barco e a mesma semana — o que poupa é dinheiro real, não marketing. Escolha uma semana de junho e navegue antes da corrida."
+      "seoText": "Junho traz o melhor do início da temporada: o mar já aquece, os dias são longos, os ventos são suaves e as baías ainda estão tranquilas antes de a multidão de julho e agosto chegar. As marinas têm lugar, os fundeadouros estão calmos e os operadores de charter aplicam descontos para preencher as primeiras semanas fortes do verão. Cada percentagem nesta página é uma redução genuína do operador parceiro face ao preço de tabela do próprio operador para o mesmo barco e a mesma semana — o que poupa é dinheiro real, não marketing. Escolha uma semana de junho e navegue antes da corrida.",
+      "cta": "A sua semana em junho"
     },
     "julySails": {
       "title": "JULHO A NAVEGAR",
@@ -100,7 +113,8 @@
       "metaTitle": "Ofertas de Aluguer de Iates em Julho",
       "metaDescription": "Semanas de charter em julho, o pico do verão: dias longos, mar quente e noites cálidas, com descontos reais dos operadores e cancelamento gratuito.",
       "seoTitle": "Julho, o coração do verão no mar",
-      "seoText": "Julho é o verão no seu esplendor: dias longos que parecem não acabar, mar quente para mergulhos a toda a hora e noites cálidas de convívio no fundeadouro. É a semana de charter clássica que todos imaginam — e, mesmo em plena época alta, ainda há operadores de charter a descontar barcos para fechar as últimas vagas. Cada percentagem que vê aqui é uma redução real do operador parceiro, comparada com o preço de tabela do próprio operador para o mesmo barco e a mesma semana. As melhores semanas de julho esgotam depressa; escolha a sua e viva o coração do verão no mar."
+      "seoText": "Julho é o verão no seu esplendor: dias longos que parecem não acabar, mar quente para mergulhos a toda a hora e noites cálidas de convívio no fundeadouro. É a semana de charter clássica que todos imaginam — e, mesmo em plena época alta, ainda há operadores de charter a descontar barcos para fechar as últimas vagas. Cada percentagem que vê aqui é uma redução real do operador parceiro, comparada com o preço de tabela do próprio operador para o mesmo barco e a mesma semana. As melhores semanas de julho esgotam depressa; escolha a sua e viva o coração do verão no mar.",
+      "cta": "Zarpe em julho"
     }
   },
   "landing": {

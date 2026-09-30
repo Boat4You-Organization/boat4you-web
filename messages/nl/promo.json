@@ -1,6 +1,9 @@
 {
   "banner": {
-    "upTo": "tot"
+    "upTo": "tot",
+    "bookBy": "Boek vóór {date}",
+    "endsIn": "Nog {time}",
+    "startsOn": "Vanaf {date}"
   },
   "campaigns": {
     "lastMinute": {
@@ -10,7 +13,8 @@
       "metaTitle": "Last Minute Jachtcharter Deals",
       "metaDescription": "Echte last-minute kortingen op jachtcharters. Reële prijsverlagingen van partners, gratis annuleringsperiode en directe beschikbaarheid — dagelijks bijgewerkt.",
       "seoTitle": "Zo werken onze last-minute deals",
-      "seoText": "Charterbedrijven geven korting op weken die vlak voor vertrek nog vrij zijn — dezelfde boot die in de winter de volle prijs kostte, kan enkele weken voor het inschepen aanzienlijk goedkoper zijn. De kortingen die je hier ziet, zijn echte prijsverlagingen van onze partners: elk percentage vergelijkt de prijs van vandaag met de eigen catalogusprijs van de verhuurder voor dezelfde boot en dezelfde week, nooit met een kunstmatig opgehoogde referentieprijs. De beschikbaarheid op korte termijn verandert per uur, dus als een boot en een prijs je bevallen, is het de moeite waard om de week meteen vast te leggen — populaire formaten in de beste jachthavens gaan het eerst."
+      "seoText": "Charterbedrijven geven korting op weken die vlak voor vertrek nog vrij zijn — dezelfde boot die in de winter de volle prijs kostte, kan enkele weken voor het inschepen aanzienlijk goedkoper zijn. De kortingen die je hier ziet, zijn echte prijsverlagingen van onze partners: elk percentage vergelijkt de prijs van vandaag met de eigen catalogusprijs van de verhuurder voor dezelfde boot en dezelfde week, nooit met een kunstmatig opgehoogde referentieprijs. De beschikbaarheid op korte termijn verandert per uur, dus als een boot en een prijs je bevallen, is het de moeite waard om de week meteen vast te leggen — populaire formaten in de beste jachthavens gaan het eerst.",
+      "cta": "Scoor een lastminute"
     },
     "septemberSails": {
       "title": "SEPTEMBER OP ZEE",
@@ -19,7 +23,8 @@
       "metaTitle": "Jachtcharter Deals in September",
       "metaDescription": "Charterweken in september: warme zee, stabiele wind, rustige baaien en lagere prijzen dan in het hoogseizoen. Vergelijk echte kortingen van partners.",
       "seoTitle": "Waarom september de slimme keuze is om te zeilen",
-      "seoText": "September behoudt alles wat de zomer geweldig maakt — een warme zee, lange dagen, geopende restaurants — en laat de twee dingen weg waar niemand om vraagt: drukte en hoogseizoensprijzen. In de jachthavens zijn weer ligplaatsen vrij, de ankerbaaien zijn rustig en charterbedrijven geven actief korting om de laatste sterke weken van het seizoen te vullen. De percentages op deze pagina zijn echte prijsverlagingen van onze partners ten opzichte van de eigen catalogusprijs van de verhuurder voor dezelfde boot en dezelfde week — wat je bespaart is dus echt geld, geen marketing."
+      "seoText": "September behoudt alles wat de zomer geweldig maakt — een warme zee, lange dagen, geopende restaurants — en laat de twee dingen weg waar niemand om vraagt: drukte en hoogseizoensprijzen. In de jachthavens zijn weer ligplaatsen vrij, de ankerbaaien zijn rustig en charterbedrijven geven actief korting om de laatste sterke weken van het seizoen te vullen. De percentages op deze pagina zijn echte prijsverlagingen van onze partners ten opzichte van de eigen catalogusprijs van de verhuurder voor dezelfde boot en dezelfde week — wat je bespaart is dus echt geld, geen marketing.",
+      "cta": "Bekijk septemberdeals"
     },
     "earlyBooking": {
       "title": "VROEGBOEKKORTING",
@@ -28,7 +33,8 @@
       "metaTitle": "Vroegboekkorting op Jachtcharters",
       "metaDescription": "Boek je jachtcharter voor volgend seizoen vroeg: de ruimste keuze aan boten en data én echte vroegboekkortingen. Inclusief gratis annuleringsperiode.",
       "seoTitle": "Waarom vroeg boeken loont",
-      "seoText": "Chartervloten openen hun kalender voor het nieuwe seizoen in het najaar, en verhuurders belonen vroege beslissers met hun beste percentages — dan is de keuze aan boten, jachthavens en schoolvakantieweken nog compleet. Vroeg boeken is hier geen gok: je reservering omvat een gratis annuleringsperiode, en de korting die je ziet vergelijkt de actuele prijs met de eigen catalogusprijs van de verhuurder voor die boot en die week. Tegen de tijd dat het voorjaar aanbreekt en de populaire weken vergeven zijn, gaan dezelfde boten voor de volle prijs van de hand."
+      "seoText": "Chartervloten openen hun kalender voor het nieuwe seizoen in het najaar, en verhuurders belonen vroege beslissers met hun beste percentages — dan is de keuze aan boten, jachthavens en schoolvakantieweken nog compleet. Vroeg boeken is hier geen gok: je reservering omvat een gratis annuleringsperiode, en de korting die je ziet vergelijkt de actuele prijs met de eigen catalogusprijs van de verhuurder voor die boot en die week. Tegen de tijd dat het voorjaar aanbreekt en de populaire weken vergeven zijn, gaan dezelfde boten voor de volle prijs van de hand.",
+      "cta": "Pak je vroegboekkorting"
     },
     "blackFriday": {
       "title": "BLACK FRIDAY",
@@ -37,7 +43,8 @@
       "metaTitle": "Black Friday Jachtcharter Deals",
       "metaDescription": "Één week per jaar, de diepste kortingen: boek nu je jachtcharter voor volgend seizoen tegen de scherpste vroegboektarieven. Inclusief gratis annuleringsperiode.",
       "seoTitle": "Waarom Black Friday hét moment is om te boeken",
-      "seoText": "Black Friday is de enige week van het jaar waarin verhuurders hun diepste kortingen op tafel leggen — en ze doen dat op het nieuwe seizoen, wanneer de kalender nog volledig open ligt. Je kiest dus uit de complete vloot, de beste jachthavens en de gewilde vakantieweken, tegen tarieven die je later niet meer terugziet. De percentages op deze pagina zijn echte prijsverlagingen van onze partners ten opzichte van hun eigen catalogusprijs voor dezelfde boot en dezelfde week. Het aanbod loopt maar zeven dagen, dus wie volgend jaar op het water wil, legt de week nu vast."
+      "seoText": "Black Friday is de enige week van het jaar waarin verhuurders hun diepste kortingen op tafel leggen — en ze doen dat op het nieuwe seizoen, wanneer de kalender nog volledig open ligt. Je kiest dus uit de complete vloot, de beste jachthavens en de gewilde vakantieweken, tegen tarieven die je later niet meer terugziet. De percentages op deze pagina zijn echte prijsverlagingen van onze partners ten opzichte van hun eigen catalogusprijs voor dezelfde boot en dezelfde week. Het aanbod loopt maar zeven dagen, dus wie volgend jaar op het water wil, legt de week nu vast.",
+      "cta": "Bekijk Black Friday-deals"
     },
     "christmas": {
       "title": "KERSTAANBIEDINGEN",
@@ -46,7 +53,8 @@
       "metaTitle": "Kerst Jachtcharter Deals",
       "metaDescription": "Cadeau je dit jaar een zeilvakantie of plan alvast je ontsnapping voor volgend seizoen. Echte kortingen van partners, gratis annuleringsperiode.",
       "seoTitle": "Een charter onder de kerstboom",
-      "seoText": "Terwijl het buiten koud is, is dit het warmste moment om aan de volgende zomer te denken. Een jachtcharter is een cadeau dat blijft hangen — een week samen op zee in plaats van weer een ding onder de boom — en wie nu boekt, kiest uit de volle kalender van het nieuwe seizoen. De kortingen die je hier ziet, zijn echte prijsverlagingen van onze partners ten opzichte van hun eigen catalogusprijs voor dezelfde boot en dezelfde week. Met de gratis annuleringsperiode leg je de mooiste weken alvast vast, en beslis je later in alle rust over de details."
+      "seoText": "Terwijl het buiten koud is, is dit het warmste moment om aan de volgende zomer te denken. Een jachtcharter is een cadeau dat blijft hangen — een week samen op zee in plaats van weer een ding onder de boom — en wie nu boekt, kiest uit de volle kalender van het nieuwe seizoen. De kortingen die je hier ziet, zijn echte prijsverlagingen van onze partners ten opzichte van hun eigen catalogusprijs voor dezelfde boot en dezelfde week. Met de gratis annuleringsperiode leg je de mooiste weken alvast vast, en beslis je later in alle rust over de details.",
+      "cta": "Schenk een week op zee"
     },
     "newYear": {
       "title": "NIEUWJAAR OP ZEE",
@@ -55,7 +63,8 @@
       "metaTitle": "Nieuwjaar Jachtcharter Deals",
       "metaDescription": "Nieuw jaar, nieuwe horizon: begin het jaar goed door je charter voor het komende seizoen vast te leggen. Echte kortingen van partners, gratis annuleringsperiode.",
       "seoTitle": "Zet het nieuwe jaar in met een horizon voor de boeg",
-      "seoText": "Een nieuw jaar vraagt om iets om naar uit te kijken, en er is weinig dat zo goed werkt als een week op het water die al vaststaat. Begin januari ligt de kalender van het komende seizoen volledig open — de complete vloot, de beste jachthavens en de gewilde weken zijn nog vrij, en verhuurders belonen wie vroeg beslist met hun scherpste tarieven. De percentages op deze pagina zijn echte prijsverlagingen van onze partners ten opzichte van hun eigen catalogusprijs voor dezelfde boot en dezelfde week. Leg nu je horizon vast, met een gratis annuleringsperiode voor de zekerheid."
+      "seoText": "Een nieuw jaar vraagt om iets om naar uit te kijken, en er is weinig dat zo goed werkt als een week op het water die al vaststaat. Begin januari ligt de kalender van het komende seizoen volledig open — de complete vloot, de beste jachthavens en de gewilde weken zijn nog vrij, en verhuurders belonen wie vroeg beslist met hun scherpste tarieven. De percentages op deze pagina zijn echte prijsverlagingen van onze partners ten opzichte van hun eigen catalogusprijs voor dezelfde boot en dezelfde week. Leg nu je horizon vast, met een gratis annuleringsperiode voor de zekerheid.",
+      "cta": "Begin het jaar op zee"
     },
     "flashDeals": {
       "title": "FLASH DEALS",
@@ -64,7 +73,8 @@
       "metaTitle": "Flash Deals op Jachtcharters",
       "metaDescription": "Een korte voorjaarsweek met scherpe kortingen op charters voor het komende seizoen. Echte prijsverlagingen van partners, alleen zolang de actie loopt.",
       "seoTitle": "Snel beslissen loont deze week",
-      "seoText": "Flash Deals zijn precies wat de naam belooft: een korte voorjaarsburst met scherpe kortingen op het komende seizoen, en zodra de week voorbij is, zijn ze weg. Het aanbod is beperkt en gericht — een selectie boten en weken tegen tarieven die kort openstaan — dus wie twijfelt, mist ze. De percentages op deze pagina zijn echte prijsverlagingen van onze partners ten opzichte van hun eigen catalogusprijs voor dezelfde boot en dezelfde week, nooit een opgehoogde referentieprijs. Bevalt een boot en een prijs je, leg de week dan meteen vast — met de gratis annuleringsperiode achter de hand."
+      "seoText": "Flash Deals zijn precies wat de naam belooft: een korte voorjaarsburst met scherpe kortingen op het komende seizoen, en zodra de week voorbij is, zijn ze weg. Het aanbod is beperkt en gericht — een selectie boten en weken tegen tarieven die kort openstaan — dus wie twijfelt, mist ze. De percentages op deze pagina zijn echte prijsverlagingen van onze partners ten opzichte van hun eigen catalogusprijs voor dezelfde boot en dezelfde week, nooit een opgehoogde referentieprijs. Bevalt een boot en een prijs je, leg de week dan meteen vast — met de gratis annuleringsperiode achter de hand.",
+      "cta": "Scoor een flashdeal"
     },
     "hotWeek": {
       "title": "HOT WEEK",
@@ -73,7 +83,8 @@
       "metaTitle": "Hot Week Jachtcharter Deals",
       "metaDescription": "De heetste dealsweek van de zomer: charters die over enkele dagen vertrekken, tegen echte kortingen van partners. Directe beschikbaarheid, dagelijks bijgewerkt.",
       "seoTitle": "De heetste week van het seizoen",
-      "seoText": "Dit is de heetste week van de zomer, in elk opzicht: boten die over enkele dagen uitvaren en die verhuurders nog vol willen krijgen, tegen de scherpste percentages van het seizoen. Het gaat om weken die nú beginnen — je pakt je koffers, niet je agenda voor volgend jaar. De kortingen op deze pagina zijn echte prijsverlagingen van onze partners ten opzichte van hun eigen catalogusprijs voor dezelfde boot en dezelfde week. De beschikbaarheid op korte termijn verandert per uur, dus wie deze zomer nog wil uitvaren, legt de week meteen vast — de beste formaten gaan het eerst."
+      "seoText": "Dit is de heetste week van de zomer, in elk opzicht: boten die over enkele dagen uitvaren en die verhuurders nog vol willen krijgen, tegen de scherpste percentages van het seizoen. Het gaat om weken die nú beginnen — je pakt je koffers, niet je agenda voor volgend jaar. De kortingen op deze pagina zijn echte prijsverlagingen van onze partners ten opzichte van hun eigen catalogusprijs voor dezelfde boot en dezelfde week. De beschikbaarheid op korte termijn verandert per uur, dus wie deze zomer nog wil uitvaren, legt de week meteen vast — de beste formaten gaan het eerst.",
+      "cta": "Bekijk de heetste deals"
     },
     "birthdayWeek": {
       "title": "VERJAARDAGSWEEK",
@@ -82,7 +93,8 @@
       "metaTitle": "Verjaardagsweek Jachtcharter Deals",
       "metaDescription": "We bemiddelen charters sinds 2013 en vieren onze verjaardag met dank aan jou: echte kortingen van partners op de komende weken. Beperkte actie.",
       "seoTitle": "Onze verjaardag, jouw voordeel",
-      "seoText": "We bemiddelen jachtcharters sinds 2013, en elk jaar rond eind mei vieren we die verjaardag op de enige manier die telt: door onze klanten te bedanken met scherpe deals. Deze week draait om de komende weken op het water — de zomer is begonnen en de eerstvolgende vrije data staan klaar tegen feestelijke tarieven. De percentages op deze pagina zijn echte prijsverlagingen van onze partners ten opzichte van hun eigen catalogusprijs voor dezelfde boot en dezelfde week. Vier met ons mee en leg een week vast — het is onze verjaardag, maar het voordeel is voor jou."
+      "seoText": "We bemiddelen jachtcharters sinds 2013, en elk jaar rond eind mei vieren we die verjaardag op de enige manier die telt: door onze klanten te bedanken met scherpe deals. Deze week draait om de komende weken op het water — de zomer is begonnen en de eerstvolgende vrije data staan klaar tegen feestelijke tarieven. De percentages op deze pagina zijn echte prijsverlagingen van onze partners ten opzichte van hun eigen catalogusprijs voor dezelfde boot en dezelfde week. Vier met ons mee en leg een week vast — het is onze verjaardag, maar het voordeel is voor jou.",
+      "cta": "Vier mee met een deal"
     },
     "juneSails": {
       "title": "JUNI OP ZEE",
@@ -91,7 +103,8 @@
       "metaTitle": "Jachtcharter Deals in Juni",
       "metaDescription": "Charterweken in juni: een warme zee, rustige ankerbaaien en zachte wind vóór de zomerdrukte losbarst. Vergelijk echte kortingen van partners.",
       "seoTitle": "Waarom kenners in juni varen",
-      "seoText": "Juni is het seizoen op zijn mooist, nog voordat de zomer echt volloopt. De zee is warm genoeg om te zwemmen, de wind blaast zacht en stabiel, en de ankerbaaien zijn nog van jou alleen — geen wedloop om de mooiste plek als de zon ondergaat. Verhuurders geven in deze vroege weken graag korting om de kalender op gang te brengen, en de percentages op deze pagina zijn echte prijsverlagingen van onze partners ten opzichte van hun eigen catalogusprijs voor dezelfde boot en dezelfde week. Wie de zomer wil zonder de drukte, kiest juni — en de weken vullen zich nu."
+      "seoText": "Juni is het seizoen op zijn mooist, nog voordat de zomer echt volloopt. De zee is warm genoeg om te zwemmen, de wind blaast zacht en stabiel, en de ankerbaaien zijn nog van jou alleen — geen wedloop om de mooiste plek als de zon ondergaat. Verhuurders geven in deze vroege weken graag korting om de kalender op gang te brengen, en de percentages op deze pagina zijn echte prijsverlagingen van onze partners ten opzichte van hun eigen catalogusprijs voor dezelfde boot en dezelfde week. Wie de zomer wil zonder de drukte, kiest juni — en de weken vullen zich nu.",
+      "cta": "Vind je juniweek"
     },
     "julySails": {
       "title": "JULI OP ZEE",
@@ -100,7 +113,8 @@
       "metaTitle": "Jachtcharter Deals in Juli",
       "metaDescription": "Charterweken in juli: lange zonnige dagen, warme nachten en het bruisende hoogseizoen op zee. Vergelijk echte kortingen van partners.",
       "seoTitle": "Juli, de klassieke zomerweek op zee",
-      "seoText": "Juli is de zomer zoals je hem je voorstelt: lange dagen die pas laat uitdoven, warme nachten aan dek en havens en baaien die bruisen van leven. Dit is het hoogseizoen op zijn best, de klassieke week waarin alles openstaat, de restaurants vol zitten en het water precies goed aanvoelt. Ook in deze topweken duiken er nog echte deals op, want charterbedrijven willen elke boot varen — en de percentages op deze pagina zijn echte prijsverlagingen van onze partners ten opzichte van hun eigen catalogusprijs voor dezelfde boot en dezelfde week. De gewilde weken gaan snel, dus leg de jouwe op tijd vast."
+      "seoText": "Juli is de zomer zoals je hem je voorstelt: lange dagen die pas laat uitdoven, warme nachten aan dek en havens en baaien die bruisen van leven. Dit is het hoogseizoen op zijn best, de klassieke week waarin alles openstaat, de restaurants vol zitten en het water precies goed aanvoelt. Ook in deze topweken duiken er nog echte deals op, want charterbedrijven willen elke boot varen — en de percentages op deze pagina zijn echte prijsverlagingen van onze partners ten opzichte van hun eigen catalogusprijs voor dezelfde boot en dezelfde week. De gewilde weken gaan snel, dus leg de jouwe op tijd vast.",
+      "cta": "Boek een juliweek"
     }
   },
   "landing": {

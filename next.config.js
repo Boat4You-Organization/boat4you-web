@@ -235,8 +235,9 @@ const nextConfig = {
       // content-hashed, so no `immutable` year: a day in the browser plus a
       // week of stale-while-revalidate (fonts: 30 days — they never change
       // without a new file name). The catch-all HTML rule is untouched.
+      // promo = the animated banner loops and posters (30.9.2026).
       {
-        source: '/:dir(images|favicons|icons|meta)/:path*',
+        source: '/:dir(images|favicons|icons|meta|promo)/:path*',
         headers: [{ key: 'Cache-Control', value: 'public, max-age=86400, stale-while-revalidate=604800' }],
       },
       {

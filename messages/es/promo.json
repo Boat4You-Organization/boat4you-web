@@ -1,6 +1,9 @@
 {
   "banner": {
-    "upTo": "hasta"
+    "upTo": "hasta",
+    "bookBy": "Antes del {date}",
+    "endsIn": "Quedan {time}",
+    "startsOn": "Desde el {date}"
   },
   "campaigns": {
     "lastMinute": {
@@ -10,7 +13,8 @@
       "metaTitle": "Ofertas Last Minute de Alquiler de Barcos",
       "metaDescription": "Descuentos last minute reales en alquiler de barcos para las próximas semanas. Rebajas auténticas, cancelación gratuita y disponibilidad inmediata, al día.",
       "seoTitle": "Cómo funcionan nuestras ofertas last minute",
-      "seoText": "Las navieras de chárter rebajan las semanas que siguen libres cuando se acerca la salida: el mismo barco que en invierno se vendía a precio completo puede costar bastante menos pocas semanas antes del embarque. Los descuentos que ves aquí son rebajas reales de nuestros operadores asociados: cada porcentaje compara el precio de hoy con la tarifa oficial del propio operador para el mismo barco y la misma semana, nunca con una referencia inflada. La disponibilidad de última hora cambia hora a hora, así que si un barco y un precio te encajan, conviene asegurar la semana cuanto antes: las esloras más demandadas en las mejores marinas vuelan primero."
+      "seoText": "Las navieras de chárter rebajan las semanas que siguen libres cuando se acerca la salida: el mismo barco que en invierno se vendía a precio completo puede costar bastante menos pocas semanas antes del embarque. Los descuentos que ves aquí son rebajas reales de nuestros operadores asociados: cada porcentaje compara el precio de hoy con la tarifa oficial del propio operador para el mismo barco y la misma semana, nunca con una referencia inflada. La disponibilidad de última hora cambia hora a hora, así que si un barco y un precio te encajan, conviene asegurar la semana cuanto antes: las esloras más demandadas en las mejores marinas vuelan primero.",
+      "cta": "Reserva last minute"
     },
     "septemberSails": {
       "title": "SEPTIEMBRE A VELA",
@@ -19,7 +23,8 @@
       "metaTitle": "Ofertas de Alquiler de Barcos en Septiembre",
       "metaDescription": "Semanas de chárter en septiembre con descuentos reales: mar cálido, vientos estables, calas tranquilas y precios más bajos que en pleno verano.",
       "seoTitle": "Por qué septiembre es el mes inteligente para navegar",
-      "seoText": "Septiembre conserva todo lo que hace grande al verano —un mar cálido, días largos, restaurantes abiertos— y elimina las dos cosas que nadie pide: las aglomeraciones y los precios de temporada alta. Las marinas vuelven a tener amarres libres, los fondeaderos están tranquilos y los operadores de chárter aplican descuentos activamente para llenar las últimas semanas fuertes de la temporada. Los porcentajes de esta página son rebajas reales de nuestros operadores asociados sobre su propia tarifa oficial para el mismo barco y la misma semana, así que lo que ahorras es dinero de verdad, no marketing."
+      "seoText": "Septiembre conserva todo lo que hace grande al verano —un mar cálido, días largos, restaurantes abiertos— y elimina las dos cosas que nadie pide: las aglomeraciones y los precios de temporada alta. Las marinas vuelven a tener amarres libres, los fondeaderos están tranquilos y los operadores de chárter aplican descuentos activamente para llenar las últimas semanas fuertes de la temporada. Los porcentajes de esta página son rebajas reales de nuestros operadores asociados sobre su propia tarifa oficial para el mismo barco y la misma semana, así que lo que ahorras es dinero de verdad, no marketing.",
+      "cta": "Ofertas de septiembre"
     },
     "earlyBooking": {
       "title": "RESERVA ANTICIPADA",
@@ -28,7 +33,8 @@
       "metaTitle": "Descuentos por Reserva Anticipada de Barcos",
       "metaDescription": "Reserva pronto tu chárter de la próxima temporada: la mayor oferta de barcos y fechas con descuentos reales por reserva anticipada. Cancelación gratuita incluida.",
       "seoTitle": "Por qué compensa reservar con antelación",
-      "seoText": "Las flotas de chárter abren los calendarios de la próxima temporada en otoño, y los operadores premian los compromisos tempranos con sus mejores porcentajes: es entonces cuando la oferta de barcos, marinas y semanas de vacaciones escolares aún está completa. Reservar pronto aquí no es una apuesta: tu reserva incluye un periodo de cancelación gratuita, y el descuento que ves compara el precio actual con la tarifa oficial del propio operador para ese barco y esa semana. Cuando llega la primavera y las semanas más buscadas se han agotado, los mismos barcos se venden a precio completo."
+      "seoText": "Las flotas de chárter abren los calendarios de la próxima temporada en otoño, y los operadores premian los compromisos tempranos con sus mejores porcentajes: es entonces cuando la oferta de barcos, marinas y semanas de vacaciones escolares aún está completa. Reservar pronto aquí no es una apuesta: tu reserva incluye un periodo de cancelación gratuita, y el descuento que ves compara el precio actual con la tarifa oficial del propio operador para ese barco y esa semana. Cuando llega la primavera y las semanas más buscadas se han agotado, los mismos barcos se venden a precio completo.",
+      "cta": "Adelántate y reserva"
     },
     "blackFriday": {
       "title": "BLACK FRIDAY",
@@ -37,7 +43,8 @@
       "metaTitle": "Black Friday de Alquiler de Barcos",
       "metaDescription": "El Black Friday reúne los mayores descuentos del año en alquiler de barcos para la próxima temporada. Solo una semana: rebajas reales y cancelación gratuita.",
       "seoTitle": "Por qué el Black Friday es el mejor momento para reservar",
-      "seoText": "El Black Friday es, una sola semana al año, el momento en que los operadores de chárter aplican sus porcentajes más agresivos sobre la próxima temporada: el calendario acaba de abrirse, están todos los barcos, todas las marinas y todas las semanas de vacaciones, y las flotas quieren llenarlo cuanto antes. Los descuentos de esta página son rebajas reales de nuestros operadores asociados sobre su propia tarifa oficial para el mismo barco y la misma semana. Es el precio más bajo que verá ese barco en todo el año, y la ventana se cierra en siete días. Cuando termine el Black Friday, las tarifas vuelven a subir."
+      "seoText": "El Black Friday es, una sola semana al año, el momento en que los operadores de chárter aplican sus porcentajes más agresivos sobre la próxima temporada: el calendario acaba de abrirse, están todos los barcos, todas las marinas y todas las semanas de vacaciones, y las flotas quieren llenarlo cuanto antes. Los descuentos de esta página son rebajas reales de nuestros operadores asociados sobre su propia tarifa oficial para el mismo barco y la misma semana. Es el precio más bajo que verá ese barco en todo el año, y la ventana se cierra en siete días. Cuando termine el Black Friday, las tarifas vuelven a subir.",
+      "cta": "Ver ofertas Black Friday"
     },
     "christmas": {
       "title": "NAVIDAD",
@@ -46,7 +53,8 @@
       "metaTitle": "Ofertas de Navidad de Alquiler de Barcos",
       "metaDescription": "Estas Navidades, regala una semana a bordo o adelanta la escapada de la próxima temporada con descuentos reales y cancelación gratuita.",
       "seoTitle": "Un chárter, el regalo que espera al buen tiempo",
-      "seoText": "Hay pocos regalos como una semana a bordo esperando en el calendario: mar abierto, calas tranquilas y toda la familia junta cuando vuelva el buen tiempo. En Navidad los operadores de chárter abren la próxima temporada con sus mejores porcentajes, así que es el momento de asegurar el barco, la marina y las fechas antes de que se agoten las semanas más buscadas. Los descuentos de esta página son rebajas reales de nuestros operadores asociados sobre su propia tarifa oficial para el mismo barco y la misma semana, y tu reserva incluye un periodo de cancelación gratuita. Regala hoy la escapada que todos recordaréis mañana."
+      "seoText": "Hay pocos regalos como una semana a bordo esperando en el calendario: mar abierto, calas tranquilas y toda la familia junta cuando vuelva el buen tiempo. En Navidad los operadores de chárter abren la próxima temporada con sus mejores porcentajes, así que es el momento de asegurar el barco, la marina y las fechas antes de que se agoten las semanas más buscadas. Los descuentos de esta página son rebajas reales de nuestros operadores asociados sobre su propia tarifa oficial para el mismo barco y la misma semana, y tu reserva incluye un periodo de cancelación gratuita. Regala hoy la escapada que todos recordaréis mañana.",
+      "cta": "Regala una semana"
     },
     "newYear": {
       "title": "AÑO NUEVO",
@@ -55,7 +63,8 @@
       "metaTitle": "Ofertas de Año Nuevo de Alquiler de Barcos",
       "metaDescription": "Empieza el año reservando tu chárter de la próxima temporada con descuentos reales y cancelación gratuita. Nuevo año, nuevo horizonte.",
       "seoTitle": "Empieza el año con rumbo fijo",
-      "seoText": "Empezar el año con una semana a bordo ya reservada cambia todos los meses que vienen: hay una fecha en el horizonte, un barco elegido y un motivo para esperar el buen tiempo. En enero los operadores de chárter tienen la próxima temporada recién abierta —todos los barcos, todas las marinas, todas las semanas de vacaciones— y premian a quien se decide pronto. Los descuentos de esta página son rebajas reales de nuestros operadores asociados sobre su propia tarifa oficial para el mismo barco y la misma semana, y tu reserva incluye cancelación gratuita. El mejor propósito del año se cumple soltando amarras."
+      "seoText": "Empezar el año con una semana a bordo ya reservada cambia todos los meses que vienen: hay una fecha en el horizonte, un barco elegido y un motivo para esperar el buen tiempo. En enero los operadores de chárter tienen la próxima temporada recién abierta —todos los barcos, todas las marinas, todas las semanas de vacaciones— y premian a quien se decide pronto. Los descuentos de esta página son rebajas reales de nuestros operadores asociados sobre su propia tarifa oficial para el mismo barco y la misma semana, y tu reserva incluye cancelación gratuita. El mejor propósito del año se cumple soltando amarras.",
+      "cta": "Empieza el año a bordo"
     },
     "flashDeals": {
       "title": "FLASH DEALS",
@@ -64,7 +73,8 @@
       "metaTitle": "Flash Deals de Alquiler de Barcos",
       "metaDescription": "Una semana relámpago de descuentos reales en alquiler de barcos para la temporada que llega. Rebajas auténticas, cancelación gratuita y plazas limitadas.",
       "seoTitle": "Ofertas relámpago, ventana corta",
-      "seoText": "Las Flash Deals son un empujón de primavera: unos pocos días en los que los operadores de chárter sueltan porcentajes fuertes sobre las semanas de la temporada que ya está a la vuelta de la esquina. Con el buen tiempo acercándose, las flotas quieren cerrar el calendario, y esa prisa se traduce en rebajas reales. Los descuentos de esta página son rebajas de nuestros operadores asociados sobre su propia tarifa oficial para el mismo barco y la misma semana, nunca sobre una referencia inflada. La ventana es corta y las semanas más buscadas caen primero: si un barco y un precio te encajan, asegúralo antes de que termine la semana."
+      "seoText": "Las Flash Deals son un empujón de primavera: unos pocos días en los que los operadores de chárter sueltan porcentajes fuertes sobre las semanas de la temporada que ya está a la vuelta de la esquina. Con el buen tiempo acercándose, las flotas quieren cerrar el calendario, y esa prisa se traduce en rebajas reales. Los descuentos de esta página son rebajas de nuestros operadores asociados sobre su propia tarifa oficial para el mismo barco y la misma semana, nunca sobre una referencia inflada. La ventana es corta y las semanas más buscadas caen primero: si un barco y un precio te encajan, asegúralo antes de que termine la semana.",
+      "cta": "Caza una oferta flash"
     },
     "hotWeek": {
       "title": "HOT WEEK",
@@ -73,7 +83,8 @@
       "metaTitle": "Hot Week de Alquiler de Barcos",
       "metaDescription": "La semana más caliente de ofertas del verano: descuentos reales en barcos para las próximas semanas. Rebajas auténticas, cancelación gratuita, plazas al día.",
       "seoTitle": "Siete días al rojo vivo",
-      "seoText": "La Hot Week es el pico del verano también en las ofertas: siete días en los que los operadores de chárter rebajan con fuerza las semanas inminentes que aún siguen libres. Con el calor apretando, cada plaza que queda a unos días de la salida se abarata deprisa, y aquí lo ves en tiempo real. Los descuentos de esta página son rebajas reales de nuestros operadores asociados sobre su propia tarifa oficial para el mismo barco y la misma semana. La disponibilidad cambia hora a hora y estas fechas están a la vuelta de la esquina: si encuentras tu barco a buen precio, asegúralo ya, porque en pleno verano vuela."
+      "seoText": "La Hot Week es el pico del verano también en las ofertas: siete días en los que los operadores de chárter rebajan con fuerza las semanas inminentes que aún siguen libres. Con el calor apretando, cada plaza que queda a unos días de la salida se abarata deprisa, y aquí lo ves en tiempo real. Los descuentos de esta página son rebajas reales de nuestros operadores asociados sobre su propia tarifa oficial para el mismo barco y la misma semana. La disponibilidad cambia hora a hora y estas fechas están a la vuelta de la esquina: si encuentras tu barco a buen precio, asegúralo ya, porque en pleno verano vuela.",
+      "cta": "Ver ofertas calientes"
     },
     "birthdayWeek": {
       "title": "SEMANA DE CUMPLEAÑOS",
@@ -82,7 +93,8 @@
       "metaTitle": "Semana de Cumpleaños: Ofertas de Alquiler de Barcos",
       "metaDescription": "Celebramos nuestro cumpleaños desde 2013 con descuentos reales en barcos para las próximas semanas. Nuestra forma de daros las gracias, con cancelación gratuita.",
       "seoTitle": "Gracias por navegar con nosotros",
-      "seoText": "Llevamos organizando chárters desde 2013, y cada aniversario lo celebramos como más nos gusta: rebajando semanas para que salgáis al mar. Es nuestra manera de dar las gracias a quienes reservan con nosotros año tras año. Durante esta semana, nuestros operadores asociados abren descuentos reales sobre las semanas que llegan, y cada porcentaje compara el precio de hoy con la tarifa oficial del propio operador para el mismo barco y la misma semana. Tu reserva incluye un periodo de cancelación gratuita. Sopla la vela: elige tu barco, elige tus fechas y celebra con nosotros el mejor de los planes."
+      "seoText": "Llevamos organizando chárters desde 2013, y cada aniversario lo celebramos como más nos gusta: rebajando semanas para que salgáis al mar. Es nuestra manera de dar las gracias a quienes reservan con nosotros año tras año. Durante esta semana, nuestros operadores asociados abren descuentos reales sobre las semanas que llegan, y cada porcentaje compara el precio de hoy con la tarifa oficial del propio operador para el mismo barco y la misma semana. Tu reserva incluye un periodo de cancelación gratuita. Sopla la vela: elige tu barco, elige tus fechas y celebra con nosotros el mejor de los planes.",
+      "cta": "Súmate a la fiesta"
     },
     "juneSails": {
       "title": "JUNIO A VELA",
@@ -91,7 +103,8 @@
       "metaTitle": "Ofertas de Alquiler de Barcos en Junio",
       "metaDescription": "Semanas de chárter en junio con descuentos reales: mar ya templado, vientos suaves y calas tranquilas antes de que llegue el lleno de julio y agosto.",
       "seoTitle": "Junio, el verano antes del verano",
-      "seoText": "Junio es el secreto que comparten los que llevan años navegando: el mar ya está templado, los días son de los más largos del año y los vientos soplan suaves, pero las calas todavía están vacías y las marinas no han tocado el lleno de julio y agosto. Los operadores de chárter aún rebajan estas semanas para arrancar la temporada, y aquí lo ves al día. Los descuentos de esta página son rebajas reales de nuestros operadores asociados sobre su propia tarifa oficial para el mismo barco y la misma semana. Es la misma navegación del pleno verano, con la mitad de gente y mejor precio."
+      "seoText": "Junio es el secreto que comparten los que llevan años navegando: el mar ya está templado, los días son de los más largos del año y los vientos soplan suaves, pero las calas todavía están vacías y las marinas no han tocado el lleno de julio y agosto. Los operadores de chárter aún rebajan estas semanas para arrancar la temporada, y aquí lo ves al día. Los descuentos de esta página son rebajas reales de nuestros operadores asociados sobre su propia tarifa oficial para el mismo barco y la misma semana. Es la misma navegación del pleno verano, con la mitad de gente y mejor precio.",
+      "cta": "Elige tu semana de junio"
     },
     "julySails": {
       "title": "JULIO A VELA",
@@ -100,7 +113,8 @@
       "metaTitle": "Ofertas de Alquiler de Barcos en Julio",
       "metaDescription": "Semanas de chárter en julio con descuentos reales: días larguísimos, noches cálidas, baños interminables y la energía plena de la temporada alta.",
       "seoTitle": "Julio, la temporada alta en su punto",
-      "seoText": "Julio es el verano en estado puro: días larguísimos, noches templadas para cenar en cubierta, agua a la temperatura perfecta y esa energía de temporada alta que llena las marinas de vida. Es la semana clásica de vacaciones, la que se marca en el calendario con meses de antelación. Aunque es la fecha más buscada, todavía quedan semanas y barcos que nuestros operadores asociados rebajan, y aquí los ves en tiempo real. Los descuentos de esta página son rebajas reales sobre la tarifa oficial del propio operador para el mismo barco y la misma semana. En julio la disponibilidad vuela: si encuentras tu semana, asegúrala."
+      "seoText": "Julio es el verano en estado puro: días larguísimos, noches templadas para cenar en cubierta, agua a la temperatura perfecta y esa energía de temporada alta que llena las marinas de vida. Es la semana clásica de vacaciones, la que se marca en el calendario con meses de antelación. Aunque es la fecha más buscada, todavía quedan semanas y barcos que nuestros operadores asociados rebajan, y aquí los ves en tiempo real. Los descuentos de esta página son rebajas reales sobre la tarifa oficial del propio operador para el mismo barco y la misma semana. En julio la disponibilidad vuela: si encuentras tu semana, asegúrala.",
+      "cta": "Zarpa en julio"
     }
   },
   "landing": {

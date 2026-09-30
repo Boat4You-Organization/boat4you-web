@@ -5,9 +5,11 @@ import { getLocale, getTranslations } from 'next-intl/server';
 
 import { getLoggedInUser } from '@/actions/auth.actions';
 import { getInquiry } from '@/actions/yacht.actions';
+import { getActiveCampaign } from '@/config/campaigns.config';
 import { AllSearchParams } from '@/config/form-models.config';
 import { Currency, UserRoleName } from '@/models/user.model';
 import { VesselType, YachtModelShortInfo } from '@/models/yacht.model';
+import { fetchCampaignMaxPct } from '@/services/promo.service';
 import { PaginatedResponse } from '@/types/response.type';
 import { getCuratedSeoHtml } from '@/utils/server/curatedSeoContent';
 import { fetchLandingListing } from '@/utils/server/landingListing';
@@ -73,7 +75,12 @@ const BoatsWrapper = async ({
     diversify: diversifyBases,
   }).catch((): PaginatedResponse<YachtModelShortInfo> => ({ content: [] }));
 
-  const [data, nav, crumbs] = await Promise.all([
+  // The listing's campaign strip, resolved here so the server and the browser render the same campaign (a clock
+  // on either side of a campaign switch would not) and the "up to X%" arrives with the page (no no-discount
+  // state first). The aggregate is a Data Cache read (15 min).
+  const promoCampaign = getActiveCampaign();
+
+  const [data, nav, crumbs, promoPct] = await Promise.all([
     dataPromise,
     landingPlace
       ? landingNav(
@@ -86,6 +93,7 @@ const BoatsWrapper = async ({
     landingPlace
       ? landingCrumbs(landingPlace.name, landingPlace.boatType, locale).catch(() => [])
       : Promise.resolve([]),
+    promoCampaign ? fetchCampaignMaxPct(promoCampaign) : Promise.resolve(null),
   ]);
 
   let inquiry = null;
@@ -126,6 +134,8 @@ const BoatsWrapper = async ({
   return (
     <BoatsSection
       data={data}
+      promoCampaign={promoCampaign}
+      promoPct={promoPct}
       user={user}
       inquiry={inquiry}
       popularDestinations={nav?.popular.links ?? []}

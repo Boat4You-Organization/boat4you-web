@@ -1,5 +1,5 @@
 import PromoBanner from './PromoBanner';
 
-export { default as PromoBannerServer } from './PromoBannerServer';
+export { DEALS_LIST_ID } from './constants';
 
 export default PromoBanner;

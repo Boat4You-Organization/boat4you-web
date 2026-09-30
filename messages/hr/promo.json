@@ -1,6 +1,9 @@
 {
   "banner": {
-    "upTo": "do"
+    "upTo": "do",
+    "bookBy": "Vrijedi do {date}",
+    "endsIn": "Ističe za {time}",
+    "startsOn": "Od {date}"
   },
   "campaigns": {
     "lastMinute": {
@@ -10,7 +13,8 @@
       "metaTitle": "Last minute ponude za najam jahti",
       "metaDescription": "Stvarni last minute popusti na najam jahti za nadolazeće tjedne. Prava sniženja partnera, rok besplatnog otkazivanja i trenutna dostupnost — ažurirano dnevno.",
       "seoTitle": "Kako funkcioniraju naše last minute ponude",
-      "seoText": "Charter operateri snižavaju tjedne koji su blizu polaska još uvijek slobodni — isti brod koji je zimi bio po punoj cijeni može nekoliko tjedana prije ukrcaja koštati znatno manje. Popusti koje ovdje vidite stvarna su sniženja naših partnera: svaki postotak uspoređuje današnju cijenu s operaterovim vlastitim cjenikom za isti brod i isti tjedan, nikada s napuhanom referentnom cijenom. Dostupnost u posljednji trenutak mijenja se iz sata u sat, pa ako vam brod i cijena odgovaraju, vrijedi odmah osigurati termin — popularne veličine u najboljim marinama odlaze prve."
+      "seoText": "Charter operateri snižavaju tjedne koji su blizu polaska još uvijek slobodni — isti brod koji je zimi bio po punoj cijeni može nekoliko tjedana prije ukrcaja koštati znatno manje. Popusti koje ovdje vidite stvarna su sniženja naših partnera: svaki postotak uspoređuje današnju cijenu s operaterovim vlastitim cjenikom za isti brod i isti tjedan, nikada s napuhanom referentnom cijenom. Dostupnost u posljednji trenutak mijenja se iz sata u sat, pa ako vam brod i cijena odgovaraju, vrijedi odmah osigurati termin — popularne veličine u najboljim marinama odlaze prve.",
+      "cta": "Uhvatite last minute"
     },
     "septemberSails": {
       "title": "RUJAN POD JEDRIMA",
@@ -19,7 +23,8 @@
       "metaTitle": "Najam jahti u rujnu – najbolje ponude",
       "metaDescription": "Rujanski charter tjedni sa stvarnim popustima: toplo more, postojani vjetrovi, mirne uvale i niže cijene nego u špici sezone. Usporedite prava sniženja partnera.",
       "seoTitle": "Zašto je rujan pametan izbor za jedrenje",
-      "seoText": "Rujan zadržava sve ono što ljeto čini sjajnim — toplo more, duge dane, otvorene restorane — a izostavlja dvije stvari koje nitko ne naručuje: gužve i cijene vršne sezone. U marinama opet ima slobodnih vezova, sidrišta su mirna, a charter operateri aktivno snižavaju cijene kako bi popunili posljednje jake tjedne sezone. Postoci na ovoj stranici stvarna su sniženja partnera u odnosu na operaterov vlastiti cjenik za isti brod i isti tjedan — ono što uštedite pravi je novac, a ne marketing."
+      "seoText": "Rujan zadržava sve ono što ljeto čini sjajnim — toplo more, duge dane, otvorene restorane — a izostavlja dvije stvari koje nitko ne naručuje: gužve i cijene vršne sezone. U marinama opet ima slobodnih vezova, sidrišta su mirna, a charter operateri aktivno snižavaju cijene kako bi popunili posljednje jake tjedne sezone. Postoci na ovoj stranici stvarna su sniženja partnera u odnosu na operaterov vlastiti cjenik za isti brod i isti tjedan — ono što uštedite pravi je novac, a ne marketing.",
+      "cta": "Otkrijte rujanske ponude"
     },
     "earlyBooking": {
       "title": "RANI BOOKING",
@@ -28,7 +33,8 @@
       "metaTitle": "Rani booking popusti na najam jahti",
       "metaDescription": "Rezervirajte charter za sljedeću sezonu ranije: najširi izbor brodova i termina te stvarni rani booking popusti operatera. Uz rok besplatnog otkazivanja.",
       "seoTitle": "Zašto se rani booking isplati",
-      "seoText": "Charter flote otvaraju kalendare za sljedeću sezonu ujesen, a operateri ranu odluku nagrađuju svojim najboljim postocima — tada je izbor brodova, marina i tjedana školskih praznika još uvijek potpun. Rana rezervacija ovdje nije kockanje: vaša rezervacija uključuje rok besplatnog otkazivanja, a popust koji vidite uspoređuje trenutačnu cijenu s operaterovim vlastitim cjenikom za taj brod i tjedan. Kad dođe proljeće i popularni tjedni budu rasprodani, isti se brodovi prodaju po punoj cijeni."
+      "seoText": "Charter flote otvaraju kalendare za sljedeću sezonu ujesen, a operateri ranu odluku nagrađuju svojim najboljim postocima — tada je izbor brodova, marina i tjedana školskih praznika još uvijek potpun. Rana rezervacija ovdje nije kockanje: vaša rezervacija uključuje rok besplatnog otkazivanja, a popust koji vidite uspoređuje trenutačnu cijenu s operaterovim vlastitim cjenikom za taj brod i tjedan. Kad dođe proljeće i popularni tjedni budu rasprodani, isti se brodovi prodaju po punoj cijeni.",
+      "cta": "Rezervirajte unaprijed"
     },
     "blackFriday": {
       "title": "BLACK FRIDAY",
@@ -37,7 +43,8 @@
       "metaTitle": "Black Friday popusti na najam jahti",
       "metaDescription": "Black Friday tjedan s najvećim popustima u godini na charter za sljedeću sezonu. Stvarna sniženja partnera, najširi izbor termina i rok besplatnog otkazivanja.",
       "seoTitle": "Zašto je Black Friday najbolji trenutak za booking",
-      "seoText": "Black Friday dolazi jednom godišnje, a s njim i najveći popusti na charter koje ćete vidjeti u cijeloj sezoni. Ovaj tjedan operateri otvaraju kalendare za sljedeću godinu i ranu odluku nagrađuju svojim najdubljim sniženjima — dok je izbor brodova, marina i tjedana školskih praznika još potpun. Postotak na svakoj kartici stvarno je sniženje partnera u odnosu na njegov vlastiti cjenik za isti brod i isti tjedan, nikada na napuhanu referentnu cijenu. Ponuda traje samo tjedan dana, a vaša rezervacija uključuje rok besplatnog otkazivanja."
+      "seoText": "Black Friday dolazi jednom godišnje, a s njim i najveći popusti na charter koje ćete vidjeti u cijeloj sezoni. Ovaj tjedan operateri otvaraju kalendare za sljedeću godinu i ranu odluku nagrađuju svojim najdubljim sniženjima — dok je izbor brodova, marina i tjedana školskih praznika još potpun. Postotak na svakoj kartici stvarno je sniženje partnera u odnosu na njegov vlastiti cjenik za isti brod i isti tjedan, nikada na napuhanu referentnu cijenu. Ponuda traje samo tjedan dana, a vaša rezervacija uključuje rok besplatnog otkazivanja.",
+      "cta": "Iskoristite Black Friday"
     },
     "christmas": {
       "title": "BOŽIĆNA PONUDA",
@@ -46,7 +53,8 @@
       "metaTitle": "Božićne ponude za najam jahti",
       "metaDescription": "Blagdanski charter popusti: poklonite plovidbu ili unaprijed rezervirajte sljedeću sezonu. Stvarna sniženja partnera i rok besplatnog otkazivanja.",
       "seoTitle": "Plovidba kao najljepši blagdanski poklon",
-      "seoText": "Dok vani pada snijeg, more sljedeće sezone već čeka. Blagdani su pravo vrijeme da obitelji poklonite tjedan pod jedrima ili da na miru isplanirate zajednički bijeg dok su kalendari za sljedeću godinu tek otvoreni i izbor je najširi. Operateri ranu odluku nagrađuju svojim najboljim postocima, a svako sniženje koje ovdje vidite stvarno je — uspoređuje cijenu s operaterovim vlastitim cjenikom za isti brod i isti tjedan. Rezervacija uključuje rok besplatnog otkazivanja, pa poklon pod borom ostaje bez brige."
+      "seoText": "Dok vani pada snijeg, more sljedeće sezone već čeka. Blagdani su pravo vrijeme da obitelji poklonite tjedan pod jedrima ili da na miru isplanirate zajednički bijeg dok su kalendari za sljedeću godinu tek otvoreni i izbor je najširi. Operateri ranu odluku nagrađuju svojim najboljim postocima, a svako sniženje koje ovdje vidite stvarno je — uspoređuje cijenu s operaterovim vlastitim cjenikom za isti brod i isti tjedan. Rezervacija uključuje rok besplatnog otkazivanja, pa poklon pod borom ostaje bez brige.",
+      "cta": "Poklonite tjedan na moru"
     },
     "newYear": {
       "title": "NOVA GODINA, NOVI HORIZONT",
@@ -55,7 +63,8 @@
       "metaTitle": "Novogodišnje ponude za najam jahti",
       "metaDescription": "Započnite godinu rezervacijom charter tjedna za nadolazeću sezonu. Stvarni popusti partnera, najširi izbor termina i rok besplatnog otkazivanja.",
       "seoTitle": "Nova godina je pravi trenutak za novi plan plovidbe",
-      "seoText": "Najbolje odluke donose se na početku. Dok drugi tek sastavljaju popise želja, vi svoju već možete ostvariti — kalendari za nadolazeću sezonu upravo su otvoreni, a najljepši tjedni i najtraženiji brodovi još čekaju. Operateri ranu rezervaciju nagrađuju svojim najboljim postocima, a svako sniženje ovdje stvarno je: uspoređuje cijenu s operaterovim vlastitim cjenikom za isti brod i isti tjedan. Uz rok besplatnog otkazivanja novi horizont osiguravate bez rizika — a cijela godina pred vama da ga iščekujete."
+      "seoText": "Najbolje odluke donose se na početku. Dok drugi tek sastavljaju popise želja, vi svoju već možete ostvariti — kalendari za nadolazeću sezonu upravo su otvoreni, a najljepši tjedni i najtraženiji brodovi još čekaju. Operateri ranu rezervaciju nagrađuju svojim najboljim postocima, a svako sniženje ovdje stvarno je: uspoređuje cijenu s operaterovim vlastitim cjenikom za isti brod i isti tjedan. Uz rok besplatnog otkazivanja novi horizont osiguravate bez rizika — a cijela godina pred vama da ga iščekujete.",
+      "cta": "Zaplovite u novu godinu"
     },
     "flashDeals": {
       "title": "MUNJEVITE PONUDE",
@@ -64,7 +73,8 @@
       "metaTitle": "Flash ponude za najam jahti",
       "metaDescription": "Munjevite proljetne ponude na charter za nadolazeću sezonu — traju samo nekoliko dana. Stvarna sniženja partnera i rok besplatnog otkazivanja.",
       "seoTitle": "Kako iskoristiti naše munjevite ponude",
-      "seoText": "Proljeće je na pragu, sezona samo što nije počela, a ovo je kratak prozor u kojem operateri naglo snižavaju odabrane tjedne kako bi potaknuli rane rezervacije. Munjevite ponude traju samo nekoliko dana i mijenjaju se brzo — brod i tjedan koji su danas na popustu sutra možda više neće biti. Svaki postotak stvarno je sniženje partnera u odnosu na njegov vlastiti cjenik za isti brod i isti tjedan. Ako vam se termin poklopi, vrijedi rezervirati odmah; uz rok besplatnog otkazivanja, ne gubite ništa."
+      "seoText": "Proljeće je na pragu, sezona samo što nije počela, a ovo je kratak prozor u kojem operateri naglo snižavaju odabrane tjedne kako bi potaknuli rane rezervacije. Munjevite ponude traju samo nekoliko dana i mijenjaju se brzo — brod i tjedan koji su danas na popustu sutra možda više neće biti. Svaki postotak stvarno je sniženje partnera u odnosu na njegov vlastiti cjenik za isti brod i isti tjedan. Ako vam se termin poklopi, vrijedi rezervirati odmah; uz rok besplatnog otkazivanja, ne gubite ništa.",
+      "cta": "Ulovite ponudu"
     },
     "hotWeek": {
       "title": "VRUĆI TJEDAN",
@@ -73,7 +83,8 @@
       "metaTitle": "Vrući tjedan popusta na najam jahti",
       "metaDescription": "Najvrući tjedan ljetnih ponuda: charter termini za ovo ljeto, tek nekoliko dana od polaska, uz stvarna sniženja partnera. Dostupnost se mijenja iz sata u sat.",
       "seoTitle": "Zašto je ovo najvrući tjedan sezone",
-      "seoText": "Usred je ljeta, more je najtoplije, a ovo je tjedan u kojem se skupljaju najbolje ponude sezone. Termini o kojima govorimo polaze za samo nekoliko dana — brodove koji su još slobodni operateri snižavaju kako bi ih popunili prije vikenda ukrcaja. Zato se dostupnost mijenja iz sata u sat: ono što je jutros bilo slobodno do večeri može otići. Svaki postotak stvarno je sniženje partnera u odnosu na njegov vlastiti cjenik za isti brod i isti tjedan. Ako vam brod i cijena odgovaraju, ne čekajte — vrući termini nestaju prvi."
+      "seoText": "Usred je ljeta, more je najtoplije, a ovo je tjedan u kojem se skupljaju najbolje ponude sezone. Termini o kojima govorimo polaze za samo nekoliko dana — brodove koji su još slobodni operateri snižavaju kako bi ih popunili prije vikenda ukrcaja. Zato se dostupnost mijenja iz sata u sat: ono što je jutros bilo slobodno do večeri može otići. Svaki postotak stvarno je sniženje partnera u odnosu na njegov vlastiti cjenik za isti brod i isti tjedan. Ako vam brod i cijena odgovaraju, ne čekajte — vrući termini nestaju prvi.",
+      "cta": "Pogledajte vruće ponude"
     },
     "birthdayWeek": {
       "title": "ROĐENDANSKI TJEDAN",
@@ -82,7 +93,8 @@
       "metaTitle": "Rođendanski tjedan – ponude za najam jahti",
       "metaDescription": "Slavimo rođendan: od 2013. spajamo vas s najboljim charter brodovima. Zahvalne ponude na nadolazeće tjedne uz stvarna sniženja partnera.",
       "seoTitle": "Rođendanski tjedan – hvala što plovite s nama",
-      "seoText": "Od 2013. povezujemo goste s charter flotama diljem Mediterana i Kariba, a ovaj tjedan slavimo rođendan onako kako najviše volimo — sniženim tjednima za sve vas. Ovo je naš način da zahvalimo svima koji su plovili s nama i da dobrodošlicu poželimo onima koji tek kreću. Ponude vrijede za nadolazeće tjedne ove sezone, a svaki postotak stvarno je sniženje partnera u odnosu na njegov vlastiti cjenik za isti brod i isti tjedan. Rezervacija uključuje rok besplatnog otkazivanja — slavlje bez brige, na moru gdje mu je i mjesto."
+      "seoText": "Od 2013. povezujemo goste s charter flotama diljem Mediterana i Kariba, a ovaj tjedan slavimo rođendan onako kako najviše volimo — sniženim tjednima za sve vas. Ovo je naš način da zahvalimo svima koji su plovili s nama i da dobrodošlicu poželimo onima koji tek kreću. Ponude vrijede za nadolazeće tjedne ove sezone, a svaki postotak stvarno je sniženje partnera u odnosu na njegov vlastiti cjenik za isti brod i isti tjedan. Rezervacija uključuje rok besplatnog otkazivanja — slavlje bez brige, na moru gdje mu je i mjesto.",
+      "cta": "Proslavite uz popust"
     },
     "juneSails": {
       "title": "LIPANJ POD JEDRIMA",
@@ -91,7 +103,8 @@
       "metaTitle": "Najam jahti u lipnju – najbolje ponude",
       "metaDescription": "Lipanjski charter tjedni: toplo more, blagi vjetrovi i mirne uvale prije vrhunca sezone. Usporedite stvarna sniženja partnera na nadolazeće termine.",
       "seoTitle": "Zašto je lipanj najljepši početak sezone",
-      "seoText": "Lipanj je tajna onih koji plove godinama. More je već ugodno toplo, dani su najduži u godini, a marine i sidrišta još dišu mirno — velika ljetna navala tek stiže. Vjetrovi su blagi i predvidljivi, idealni za opušteno jedrenje i prve kupke sezone. Kako bi popunili termine prije špice, operateri ove tjedne rado snižavaju, a svaki postotak stvarno je sniženje partnera u odnosu na njegov vlastiti cjenik za isti brod i isti tjedan. Tko traži ljeto bez gužve, u lipnju ga nalazi u najljepšem izdanju."
+      "seoText": "Lipanj je tajna onih koji plove godinama. More je već ugodno toplo, dani su najduži u godini, a marine i sidrišta još dišu mirno — velika ljetna navala tek stiže. Vjetrovi su blagi i predvidljivi, idealni za opušteno jedrenje i prve kupke sezone. Kako bi popunili termine prije špice, operateri ove tjedne rado snižavaju, a svaki postotak stvarno je sniženje partnera u odnosu na njegov vlastiti cjenik za isti brod i isti tjedan. Tko traži ljeto bez gužve, u lipnju ga nalazi u najljepšem izdanju.",
+      "cta": "Odaberite tjedan u lipnju"
     },
     "julySails": {
       "title": "SRPANJ POD JEDRIMA",
@@ -100,7 +113,8 @@
       "metaTitle": "Najam jahti u srpnju – najbolje ponude",
       "metaDescription": "Srpanjski charter tjedni u jeku sezone: dugi sunčani dani, tople noći i živi ljetni ritam. Usporedite stvarna sniženja partnera na nadolazeće termine.",
       "seoTitle": "Srpanj – klasika vrhunca ljeta",
-      "seoText": "Srpanj je ljeto onakvo kakvim ga pamtimo — sunce od ranog jutra, more toplo do zalaska, večeri koje se otežu uz svjetla marina i pjesmu cvrčaka. Ovo je klasičan tjedan vršne sezone: uvale pune života, feste uz obalu i onaj poseban ritam kad je sve otvoreno i sve se događa. Popularni brodovi i najtraženiji termini u srpnju odlaze prvi, no operateri i dalje snižavaju pojedine slobodne tjedne — a svaki postotak stvarno je sniženje partnera u odnosu na njegov vlastiti cjenik za isti brod i isti tjedan. Tko želi ljeto u punom sjaju, srpanj mu ga daje."
+      "seoText": "Srpanj je ljeto onakvo kakvim ga pamtimo — sunce od ranog jutra, more toplo do zalaska, večeri koje se otežu uz svjetla marina i pjesmu cvrčaka. Ovo je klasičan tjedan vršne sezone: uvale pune života, feste uz obalu i onaj poseban ritam kad je sve otvoreno i sve se događa. Popularni brodovi i najtraženiji termini u srpnju odlaze prvi, no operateri i dalje snižavaju pojedine slobodne tjedne — a svaki postotak stvarno je sniženje partnera u odnosu na njegov vlastiti cjenik za isti brod i isti tjedan. Tko želi ljeto u punom sjaju, srpanj mu ga daje.",
+      "cta": "Rezervirajte svoj srpanj"
     }
   },
   "landing": {
