@@ -3,7 +3,11 @@
 ## 2026-10-01 — ⚡ Stranica broda 1 dohvat + rok 8 s · 🗺️ sitemap brodova po rasponu id-eva · ⚖️ Uvjeti: 72 h besplatno otkazivanje — ⏳ NIJE DEPLOYANO
 
 Codex audit 1.10. (F2, F7, F8), verificirano (`_seo-audit-2026-10-01/codex-review/`). Commitovi `723704c6` (F2),
-`9ffbc079` (F7), `62e0c1b9` (F8), samo lokalno, nije pushano.
+`9ffbc079` (F7), `62e0c1b9` (F8) + review popravci `da16e778` (RelatedBoats, F8 tekst), samo lokalno, nije pushano.
+
+**Redoslijed:** ovaj deploy ide PRIJE backend deploya teških upita (`boat4you-ws-main` `4f0f815` + `f4dbb23`) ili u istom
+prozoru — backend pod naletom namjerno vraća 503 + `Retry-After` na `/public/yachts`, a stari `RelatedBoats` je to
+ponavljao (~9,5 s po stranici broda).
 
 - **F2 — stranica broda (`yacht.actions.ts`, `boat/[slug]/page.tsx`):** `generateMetadata` i stranica su svaki
   dohvaćali `/public/yachts/{slug}` (zbog `signal` ih Next nije spajao → API je vidio dva ista GET-a u sekundi po
@@ -21,11 +25,22 @@ Codex audit 1.10. (F2, F7, F8), verificirano (`_seo-audit-2026-10-01/codex-revie
   (prazan katalog baca).
 - **F8 — Uvjeti (`src/posts/static/<9 jezika>/terms-and-conditions.md`):** Mario 1.10.: „klijent uzme plovilo, plati i u
   roku od 72 sata se odluči da ipak neće, mi mu sve vraćamo bez pitanja… sve ručno, samo treba pisati". 7.1 novi prvi
-  bullet: svaka rezervacija na Platformi može se besplatno otkazati u roku od 72 sata od trenutka rezervacije, bez
-  navođenja razloga; Boat4You vraća cijeli plaćeni iznos, uključujući service fee te naknade za obradu plaćanja i
-  bankovne naknade; nakon 72 h vrijede redovni uvjeti. 6.9 i bullet Service Fee: „nepovratno" / bankovne naknade
-  kupca sad imaju iznimku za 72 h. NL: u istom retku popravljen razbijeni bold (`\***\*Boat4You** …`). E-mailovi,
-  checkout, My Bookings i FAQ NEtaknuti (Mario).
+  bullet: svaka rezervacija na Platformi može se besplatno otkazati u roku od 72 sata od trenutka rezervacije, **a
+  najkasnije do početka najma**, bez navođenja razloga; Boat4You vraća cijeli plaćeni iznos, uključujući service fee i
+  **naknadu za plaćanje karticom ili bankovnim prijenosom koju je naplatio Boat4You; trošak povratne uplate snosi
+  Boat4You**; nakon 72 h vrijede redovni uvjeti. Uvod 7.1: „If you need to cancel a booking, the following applies"
+  (bez „confirmed" i „generally", koji su ublažavali bullet). 6.9 i bullet Service Fee: „nepovratno" / bankovne
+  naknade kupca sad imaju iznimku za 72 h. NL: u istom retku popravljen razbijeni bold (`\***\*Boat4You** …`).
+  E-mailovi, checkout, My Bookings i FAQ NEtaknuti (Mario). Review `da16e778`: granica „do početka najma" (inače
+  rezervacija < 72 h prije check-ina daje pravo na puni povrat i nakon isplovljavanja) i točan opseg povrata (prije
+  „payment processing and bank fees" — čitljivo i kao naknade kupčeve vlastite banke). ⚠️ Sisteri imaju istu klauzulu
+  bez granice početka najma (CC `termsOfService.config.ts:235` i ostalih 5) — izvan Mariova opsega F8 („samo b4y"),
+  NIJE dirano.
+- **Review — RelatedBoats (`views/Boat/RelatedBoats`, `services/yacht.service.ts`, `utils/server/fetchWithRetry.ts`):**
+  „slični brodovi" su lista `/public/yachts` (`did=l-…`, `size=12`), koju backend gate pod naletom odbija s 503 +
+  `Retry-After` (nakon do 1,5 s u redu). S uobičajenim retryjima (0,5/1/2 s) svaka stranica broda čekala je ~9,5 s pa se
+  ionako renderirala bez sekcije. Sad **jedan pokušaj, rok 2 s** (`fetchYachts` opcija `singleAttemptMs`;
+  `fetchWithRetry` prima listu backoffa pozivatelja, `[]` = bez retryja). Ostali pozivatelji nepromijenjeni.
 
 **Provjereno lokalno** (build `dfb4a5e2`+promjene, `next start :3143`, prod API, logger na `fetch`): lejla-11707 EN,
 HR s datumima, DE `?currency=USD`, IT bali-41 s datumima → **točno 1 poziv `/public/yachts/{slug}`** po renderu (+1
