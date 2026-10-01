@@ -254,7 +254,12 @@ const GeneralSearchBarMobile = () => {
             type="submit"
             size="large"
             id={GENERAL_SEARCH_FORM}
-            disabled={!destinations || destinations.length === 0}
+            // A destination can arrive as a name only: landing and sitemap URLs
+            // carry `?destinations=croatia` without a `did`, so the chip showed
+            // "croatia" while this button stayed disabled — changing just the
+            // dates was impossible until the boat-type step submitted the form
+            // by itself (Mario 1.10.2026). Either form of destination counts.
+            disabled={!destinations?.length && !destinationsName?.length}
             aria-label={t('generalSearchBar.searchBoats')}
             sx={{ width: { xs: '100%', md: 'auto' }, minWidth: 'auto' }}
           >

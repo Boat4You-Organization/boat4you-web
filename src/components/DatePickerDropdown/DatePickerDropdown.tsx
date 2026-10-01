@@ -18,6 +18,7 @@ import colors from '@/styles/themes/colors';
 import { DateDisableReason } from '@/types/dateDisabledReason.type';
 
 import styles from './DatePickerDropdown.module.scss';
+import LazyMonth from './LazyMonth';
 
 interface DatePickerDropdownProps<T extends FieldValues> {
   startDateFieldName: Path<T>;
@@ -213,17 +214,21 @@ const DatePickerDropdown = <T extends FieldValues>({
             },
           }}
         >
-          {mobileMonths.map(month => (
-            <CustomDateCalendar
-              key={month.format('YYYY-MM')}
-              currentMonth={month}
-              startDate={startDate}
-              endDate={endDate}
-              onDayClick={handleDayClick}
-              hoverDate={hoverDate}
-              onDayHover={handleDayHover}
-              getDateDisableReason={getDateDisableReason}
-            />
+          {/* Only the first two months mount with the sheet; the rest mount as
+              they approach the viewport (LazyMonth) — opening used to build all
+              15+ calendars at once. */}
+          {mobileMonths.map((month, index) => (
+            <LazyMonth key={month.format('YYYY-MM')} eager={index < 2}>
+              <CustomDateCalendar
+                currentMonth={month}
+                startDate={startDate}
+                endDate={endDate}
+                onDayClick={handleDayClick}
+                hoverDate={hoverDate}
+                onDayHover={handleDayHover}
+                getDateDisableReason={getDateDisableReason}
+              />
+            </LazyMonth>
           ))}
         </Stack>
       );
