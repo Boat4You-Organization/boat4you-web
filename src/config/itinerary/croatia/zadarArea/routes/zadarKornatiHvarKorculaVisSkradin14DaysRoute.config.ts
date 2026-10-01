@@ -270,14 +270,14 @@ const zadarKornatiHvarKorculaVisSkradin14DaysRoute: ItineraryRoute = {
       description:
         'Wander inland beside the Krka River, where waterfalls howl like dragons. Walk the boardwalks above the cascades of Skradinski Buk, then picnic on Pag cheese under dappled shadow. By night, eat in the medieval square of Skradin, where fireflies dance above stone arches.',
       shortDescription:
-        'Inland river leg up the Krka through the lower Šibenik basin to Skradin — a small medieval town inside Krka National Park. Park ticket gets you a boat transfer up to Skradinski Buk waterfall complex.',
+        'Inland river leg up the Krka through the lower Šibenik basin to Skradin — a small medieval town at the edge of Krka National Park. Park ticket gets you a boat transfer up to Skradinski Buk waterfall complex.',
       thingsToDo: [
         'Boat transfer up to Skradinski Buk',
         'Walk Skradin medieval lanes',
         'Cycle a Krka park trail',
         'Dalmatian prosciutto picnic',
       ],
-      mooringTip: 'ACI Marina Skradin sits at the river mouth. Pre-book in July-August.',
+      mooringTip: 'ACI Marina Skradin sits right in town. Pre-book in July-August.',
       gallery: [{ src: '/images/itinerary/croatia/destinations/skradin.webp', alt: 'Krka' }],
     },
     {

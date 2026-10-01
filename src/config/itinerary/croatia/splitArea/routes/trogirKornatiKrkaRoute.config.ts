@@ -137,7 +137,7 @@ const trogirKornatiKrkaRoute: ItineraryRoute = {
         mobile: { left: 12.1, top: 17.9 },
       },
       shortDescription:
-        '12 nm into the Krka River estuary to ACI Marina Skradin — a unique upriver passage past Šibenik, under the St. Anthony channel narrows, and into the freshwater section of Krka National Park.',
+        '12 nm into the Krka River estuary to ACI Marina Skradin — a unique upriver passage past Šibenik, under the St. Anthony channel narrows, and up the Krka estuary to Skradin, at the edge of Krka National Park.',
       description:
         'The Day 5 leg is one of the most unusual on the Croatian coast: 12 miles upriver into the Krka estuary, past the medieval city of Šibenik, under the narrow St. Anthony channel (a 600-metre rock-cut passage with a clearance of 49 metres under the Šibenik bridge — no issue for any charter mast), into the brackish lower river, and finally into the deep, hill-walled freshwater section that ends at ACI Marina Skradin. The marina sits at the gateway of Krka National Park, with the famous Skradinski Buk waterfalls a 15-minute Park-shuttle-boat ride upstream from the marina pontoon. Park entry is paid at the kiosk on the marina seawall; the shuttle boat is included in the ticket and runs every 30 minutes in season. At Skradinski Buk the waterfalls drop 46 metres in a series of 17 limestone cascades, with a wooden boardwalk that loops both sides of the river. Konoba dinner runs on Skradin risotto (slow-cooked beef and saffron), the local Babić, and the freshwater eels and trout pulled from the river upstream.',
       thingsToDo: [

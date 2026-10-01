@@ -116,14 +116,14 @@
         },
         "11": {
           "shortDescription": "Quest'ultimo tratto verso l'interno segue il Krka controcorrente fino a Skradin, un piccolo borgo medievale circondato dal parco nazionale, appena sotto le cascate di Skradinski Buk.",
-          "description": "La risalita fino a Skradin non somiglia a nient'altro del viaggio. Lasci il mare a Šibenik, passi sotto il ponte e navighi a motore su per un fiume che si allarga tra colline verdi finché l'acqua diventa salmastra e immobile. Skradin sta all'estremità del tratto navigabile, una piccola città di pietra che è qui dai tempi dei Romani e che oggi fa da porta d'accesso al Parco Nazionale di Krka. Ormeggia all'ACI marina alla foce del fiume. Dalla città, un battello del parco risale fino a Skradinski Buk, le cascate a gradoni che sono il motivo per cui la maggior parte della gente viene. Ci sono sentieri segnalati per camminare e pedalare nel parco se vuoi sgranchirti le gambe a terra. La sera la piazza del paese si anima, e un piatto di prosciutto dalmata e formaggio di pecora in riva all'acqua è difficile da battere.",
+          "description": "La risalita fino a Skradin non somiglia a nient'altro del viaggio. Lasci il mare a Šibenik, passi sotto il ponte e navighi a motore su per un fiume che si allarga tra colline verdi finché l'acqua diventa salmastra e immobile. Skradin sta all'estremità del tratto navigabile, una piccola città di pietra che è qui dai tempi dei Romani e che oggi fa da porta d'accesso al Parco Nazionale di Krka. Ormeggia all'ACI marina in paese. Dalla città, un battello del parco risale fino a Skradinski Buk, le cascate a gradoni che sono il motivo per cui la maggior parte della gente viene. Ci sono sentieri segnalati per camminare e pedalare nel parco se vuoi sgranchirti le gambe a terra. La sera la piazza del paese si anima, e un piatto di prosciutto dalmata e formaggio di pecora in riva all'acqua è difficile da battere.",
           "thingsToDo": [
             "In battello fino alle cascate di Skradinski Buk",
             "Pedala su un sentiero del parco di Krka",
             "Gira per la piazza medievale di Skradin",
             "Prosciutto e formaggio in riva all'acqua"
           ],
-          "mooringTip": "L'ACI Marina Skradin si trova proprio alla foce del fiume ed è la base naturale per il parco; prenota in anticipo a luglio e agosto, quando è una delle marine più affollate della costa. Il battello del parco per le cascate parte dal lungomare del paese."
+          "mooringTip": "L'ACI Marina Skradin si trova in pieno paese ed è la base naturale per il parco; prenota in anticipo a luglio e agosto, quando è una delle marine più affollate della costa. Il battello del parco per le cascate parte dal lungomare del paese."
         },
         "12": {
           "shortDescription": "Solo otto miglia di ritorno lungo il fiume e fuori fino a Tijat, una minuscola isola disabitata circondata da isolotti di pini, per una notte tranquilla all'ancora.",
@@ -217,7 +217,7 @@
             "Prova il risotto di Skradin a cottura lenta",
             "Assaggia il vino locale Debit in città"
           ],
-          "mooringTip": "L'ACI Marina Skradin si trova proprio alla foce del fiume, accanto al centro storico, e si riempie per tutto luglio e agosto, quindi prenota con largo anticipo. Fai attenzione al limite di velocità segnalato lungo l'avvicinamento sul fiume e resta nel canale segnalato dalle boe."
+          "mooringTip": "L'ACI Marina Skradin si trova proprio accanto al centro storico e si riempie per tutto luglio e agosto, quindi prenota con largo anticipo. Fai attenzione al limite di velocità segnalato lungo l'avvicinamento sul fiume e resta nel canale segnalato dalle boe."
         },
         "6": {
           "shortDescription": "Una giornata breve: fuori dal Krka, poi un salto costiero fino a Vrgada, una bassa isola senza auto la cui baia principale è davvero sabbiosa, cosa rara su questa costa, con una o due konobe a conduzione familiare per cena.",
@@ -1054,7 +1054,7 @@
           "mooringTip": "Ormeggiarsi di poppa sulla banchina di Zlarin con la propria ancora funziona bene; gli ormeggi centrali hanno acqua e corrente per una piccola tariffa. La baia ti protegge da ponente e da nord ma resta aperta allo scirocco. Se ne è previsto uno sopra i 15 nodi, fai quattro miglia fino a Šibenik e rifugiati all'ACI Mandalina."
         },
         "5": {
-          "shortDescription": "Una rara traversata di dodici miglia controcorrente oltre Šibenik e attraverso un canale scavato nella roccia fino al cuore d'acqua dolce del Krka e alle sue cascate.",
+          "shortDescription": "Una rara traversata di dodici miglia controcorrente oltre Šibenik e attraverso un canale scavato nella roccia fino a Skradin, porta d'accesso al cuore d'acqua dolce del Krka e alle sue cascate.",
           "description": "Questa è la tappa che gli equipaggi ricordano. Dodici miglia ti tolgono del tutto dal mare, su per l'estuario del Krka oltre la vecchia città di Šibenik, attraverso il canale di Sant'Antonio, una fenditura di 600 metri tagliata nella roccia con aria abbondante sotto il ponte per qualsiasi armo charter. Oltre, il fiume si allarga in un braccio profondo e costeggiato di colline che scorre fresco e verde fino all'ACI Marina Skradin. La marina ti mette sull'uscio del Parco Nazionale del Krka. Paga al chiosco sul muraglione, poi prendi il battello del parco, che in stagione parte ogni mezz'ora e in quindici minuti risale la corrente fino a Skradinski Buk. Skradinski Buk è di per sé diciassette gradoni di travertino accatastati in un salto di quarantasei metri, con una passerella che si infila lungo entrambe le rive e le pozze intrappolate tra loro. Tornato in banchina, Skradin cucina il suo piatto, un lento risotto di manzo tinto di zafferano che tiene un cuoco occupato per ore, mandato giù con il Babić locale.",
           "thingsToDo": [
             "Prendi il battello del parco fino a Skradinski Buk",
@@ -1063,7 +1063,7 @@
             "Sali al belvedere sopra le cascate",
             "Cammina le vie medievali dietro la marina"
           ],
-          "mooringTip": "L'ACI Skradin ti dà lazy line e servizi completi, con un pontile di carburante all'estremità verso la foce del fiume. Il canale d'ingresso è ben boato e profondo per qualsiasi pescaggio, ma calcola novanta minuti a velocità di dislocamento da Šibenik. Nel tratto del parco non si ancora, quindi o la marina o di nuovo giù per il fiume."
+          "mooringTip": "L'ACI Skradin ti dà lazy line e servizi completi, con un pontile di carburante vicino all'ingresso. Il canale d'ingresso è ben boato e profondo per qualsiasi pescaggio, ma calcola novanta minuti a velocità di dislocamento da Šibenik. Nel tratto del parco non si ancora, quindi o la marina o di nuovo giù per il fiume."
         },
         "6": {
           "shortDescription": "Venti miglia di ritorno fino al mare e lungo la costa fino a una cittadina su una penisola che custodisce un lago salato di marea chiamato l'Occhio del Drago.",
@@ -4022,7 +4022,7 @@
           "mooringTip": "Il molo di Zlarin è per soste brevi e poco profondo, quindi ancora fuori dal porto su sabbia tra i cinque e i sette metri e vai a terra col tender. La tenuta è discreta, ma controlla il tuo raggio di giro se la flotta si stipa."
         },
         "11": {
-          "shortDescription": "Una tranquilla risalita a motore del fiume Krka raggiunge Skradin, una piccola città medievale dentro il parco nazionale, appena sotto le cascate di Skradinski Buk.",
+          "shortDescription": "Una tranquilla risalita a motore del fiume Krka raggiunge Skradin, una piccola città medievale alle porte del parco nazionale, a breve distanza in battello del parco sotto le cascate di Skradinski Buk.",
           "description": "Dopo giorni di sale e mare aperto, la risalita della Krka è un cambio di scena: acqua verde e piatta tra sponde boscose, il profumo di pino e di fiume al posto della salsedine. Skradin sta dove il fiume si allarga, una compatta città medievale con una marina proprio ai suoi piedi. La barca non puoi portarla fino alle cascate; lasciala all'ACI Skradin e salta sul battello del parco fino a Skradinski Buk, un'ampia scalinata di cascate che puoi girare su passerelle. La città in sé vale una serata senza fretta. Ordina lo Skradinski rižot, cotto per ore fino a diventare quasi una crema, e chiudi con la torta al miele locale. Se hai una mattinata libera, noleggia una bici e percorri uno dei sentieri del parco lungo l'acqua.",
           "thingsToDo": [
             "Battello del parco fino alle cascate di Skradinski Buk",
@@ -4030,7 +4030,7 @@
             "Prova lo Skradinski rižot cotto a lungo",
             "Pedala su un sentiero del parco della Krka lungo il fiume"
           ],
-          "mooringTip": "ACI Marina Skradin alla foce del fiume è la base per il parco; prenotala per luglio e agosto. Prendi il battello del parco per salire alle cascate invece di provare a portare la barca controcorrente."
+          "mooringTip": "ACI Marina Skradin in paese è la base per il parco; prenotala per luglio e agosto. Prendi il battello del parco per salire alle cascate invece di provare a portare la barca controcorrente."
         },
         "12": {
           "shortDescription": "Una breve discesa di 8 miglia giù per il fiume e fuori fino a Tijat, una minuscola isola disabitata e coperta di pini nell'arcipelago di Šibenik.",
@@ -4362,7 +4362,7 @@
           "mooringTip": "La banchina del porto di Zlarin è per soste brevi e può essere affollata, quindi per la notte dai fondo appena fuori dalla baia sulla sabbia tra 5 e 7 m. È aperta a ovest, perciò scegli una serata stabile."
         },
         "11": {
-          "shortDescription": "Breve risalita del fiume Krka fino a Skradin, cittadina murata dentro il Parco Nazionale Krka e via d'ingresso alle cascate di Skradinski Buk.",
+          "shortDescription": "Breve risalita del fiume Krka fino a Skradin, piccola cittadina storica alle porte del Parco Nazionale Krka e via d'ingresso alle cascate di Skradinski Buk.",
           "description": "Oggi il mare lascia il posto a un fiume. Dal canale di Šibenik giri verso l'interno e risali il Krka a motore, dentro una gola verde dai fianchi ripidi, fino a Skradin, piccola città medievale che sta alla fine del tratto navigabile. È l'anticamera del Parco Nazionale Krka. Il biglietto del parco comprende la barca elettrica che sale fino a Skradinski Buk, il complesso di cascate a gradoni dove il fiume scende su terrazze di travertino dentro larghe pozze. Vacci presto, prima che arrivino i pullman delle gite da Split. In paese, Skradin merita una serata: vicoli stretti e silenziosi quando la folla si dirada, e una fama meritata per il pršut e l'agnello di lunga cottura. Ormeggia in marina e passa la notte sul fiume.",
           "thingsToDo": [
             "Prendere la navetta fino a Skradinski Buk",
@@ -4370,7 +4370,7 @@
             "Pedalare un sentiero del parco del Krka",
             "Pršut dalmata e agnello per cena"
           ],
-          "mooringTip": "ACI Marina Skradin è proprio alla foce, in paese, ed è l'ormeggio notturno ovvio; prenota per luglio e agosto. L'avvicinamento sul fiume è ben segnalato e tranquillo, una chiusura di giornata facile."
+          "mooringTip": "ACI Marina Skradin è proprio in paese ed è l'ormeggio notturno ovvio; prenota per luglio e agosto. L'avvicinamento sul fiume è ben segnalato e tranquillo, una chiusura di giornata facile."
         },
         "12": {
           "shortDescription": "Giù per il fiume e breve tratto costiero fino a Tijat, isolotto deserto nel canale di Šibenik, con nient'altro a terra che pini.",
@@ -4464,7 +4464,7 @@
             "Assaggiare il risotto di Skradin di lunga cottura",
             "Pedalare un sentiero lungo il Krka"
           ],
-          "mooringTip": "ACI Marina Skradin è proprio alla foce del fiume ed è la scelta pratica per la notte; prenota con largo anticipo per luglio e agosto. La banchina del paese è solo per soste brevi e nel fiume e nel lago di Prokljan non si può ancorare, quindi non contare di dare fondo qui."
+          "mooringTip": "ACI Marina Skradin è proprio in paese ed è la scelta pratica per la notte; prenota con largo anticipo per luglio e agosto. La banchina del paese è solo per soste brevi e nel fiume e nel lago di Prokljan non si può ancorare, quindi non contare di dare fondo qui."
         },
         "6": {
           "shortDescription": "Di nuovo in acqua salata e circa 18 miglia fino a Vrgada, isola senza auto vicino a Pirovac con una rara lingua di sabbia soffice.",
@@ -4715,7 +4715,7 @@
             "Girare i vicoli di epoca romana di Skradin",
             "Assaggiare il risotto di Skradin a cottura lenta"
           ],
-          "mooringTip": "L'ACI Marina Skradin sta proprio alla foce del fiume e a luglio e agosto va esaurita: prenota il posto in anticipo. Le acque del parco sopra Prokljan sono zona di divieto di ancoraggio, quindi metti in conto di passare la notte ormeggiato a Skradin."
+          "mooringTip": "L'ACI Marina Skradin sta proprio in paese e a luglio e agosto va esaurita: prenota il posto in anticipo. Le acque del parco sopra Prokljan sono zona di divieto di ancoraggio, quindi metti in conto di passare la notte ormeggiato a Skradin."
         },
         "6": {
           "shortDescription": "Diciotto miglia: giù per il fiume e poi su lungo costa fino a Vrgada, isoletta sabbiosa davanti a Pakoštane, senza auto e con una sola baia.",

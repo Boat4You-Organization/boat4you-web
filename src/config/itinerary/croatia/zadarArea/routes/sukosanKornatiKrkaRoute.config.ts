@@ -131,14 +131,14 @@ const sukosanKornatiKrkaRoute: ItineraryRoute = {
       description:
         "Track the Krka River inland, where waterfalls scream like dragons defending Eden. Dock in Skradin, a town with stone arches and figs blooming with summer's delicacy. Glide by park boat to Skradinski Buk and follow the boardwalks past natural pools and cascades creating misted rainbow patterns. Picnic on sun-warmed tomatoes and Pag cheese, dragonflies flying like jeweled messengers.",
       shortDescription:
-        'Inland river leg up the Krka through the lower Šibenik basin to Skradin — a small medieval town inside Krka National Park. Park ticket gets you a boat transfer up to Skradinski Buk waterfall complex.',
+        'Inland river leg up the Krka through the lower Šibenik basin to Skradin — a small medieval town at the edge of Krka National Park. Park ticket gets you a boat transfer up to Skradinski Buk waterfall complex.',
       thingsToDo: [
         'Boat transfer up to Skradinski Buk',
         'Walk Skradin medieval lanes',
         'Cycle a Krka park trail',
         'Dalmatian prosciutto picnic',
       ],
-      mooringTip: 'ACI Marina Skradin sits at the river mouth. Pre-book in July-August.',
+      mooringTip: 'ACI Marina Skradin sits right in town. Pre-book in July-August.',
       gallery: [{ src: '/images/itinerary/croatia/destinations/skradin.webp', alt: 'Krka' }],
     },
     {

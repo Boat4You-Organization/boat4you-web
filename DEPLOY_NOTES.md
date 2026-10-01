@@ -1,5 +1,22 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-10-02 — 🧭 Sadržaj: Krka/Skradin (gaz, ušće, UNESCO, ulaznica), UNESCO Kornati/Telašćica/Biograd, „osiguranje otkaza pri checkoutu", Dénia — ⏳ NIJE DEPLOYANO
+
+Ostaci reviewa `5352b36b`. Samo tekst: `public/seo-content` (37 stranica × 9 jezika), `messages/*/home.json` i `messages/*/itineraryCroatia.json` (9 jezika), `src/config/itinerary/croatia/**` (EN izvor). Ide u istom deployu.
+
+Izvori: npkrka.hr (cjenik 2026: 7 / 20 / 40 € po odrasloj osobi ovisno o sezoni, brod Skradin – Skradinski buk uključen 1.4.–31.10.; Skradinski most je jugozapadna granica parka i jedini vodeni ulaz, kanjonom plove samo brodovi parka), aci-marinas.com (ACI Skradin: 180 vezova, do 70 m; plovni put 7–40 m pa 7–11 m dubine), whc.unesco.org (Krka i Kornati nisu svjetska baština; „Kornati i Telašćica" samo na tentativnoj listi iz 2007.), NP Kornati (89 otoka, otočića i hridi), Uvjeti §7.1 (72 h).
+
+- **Izmišljena ograničenja gaza, duljine i plime na Krki** („jedva 4 m pri oseci", „nemoguće za katamarane > 40 ft", „motorne jahte ne mogu", „do 45 ft i < 1,8 m", „< 1,5 m", „standardne jedrilice od 40 ft ne mogu", „samo pri srednjoj plimi", „sezonska ograničenja", „Šibenik < 2,0 m") → označeni plovni put do Skradina prima sve charter jahte, ACI Skradin do 70 m; iznad Skradinskog mosta samo brodovi parka.
+- **Skradin „na ušću Krke" / „u parku" / „UNESCO"**, Vodice „na ušću Krke", „Skradinski buk vidi se iz marine", vodeni taksi ili unajmljeni brod do slapova, „brodovi parka iz Skradina do Roškog slapa" → estuarij, rub parka, brod parka ili staza 3,4 km od Skradinskog mosta.
+- **Ulaznica „~15 €" / „15–20 €"** → cijena ovisi o sezoni, brod parka uključen (bez iznosa, da ne zastari).
+- **„Inland Adventure … pokraj slapova"** i varijante (plovidba pokraj ili kroz slapove) → jahtom do Skradina, dalje brodom parka.
+- **UNESCO:** Kornati (6 stranica), Telašćica (2), Biograd „UNESCO Town" (naslov, meta, 2 rečenice). Netočni brojevi u istim rečenicama zamijenjeni provjerenima (Kornati „35 nm južno" od Biograda, NP „140 otoka" → 89).
+- **Naslovnica, FAQ (9 jezika):** „nudimo osiguranje otkaza pri checkoutu" (ne postoji, `hasInsurance = false`) → 72 h besplatni otkaz, zatim uvjeti operatera, preporuka putnog osiguranja (Uvjeti §7.1).
+- **Itinerari** (`itineraryCroatia` 9 jezika + config): ACI Skradin „na ušću" → u mjestu; Skradin „u NP-u" → na rubu NP-a; „slatkovodni dio NP Krka" → estuarij do Skradina; „u slatkovodno srce Krke i slapove" → do Skradina; gorivni ponton „na kraju prema ušću" → kod ulaza; „Skradin lock / 6 m" (config Šibenik).
+- **Dénia:** rupe brenda „'s …" (Real Club Náutico, fr/nl/pl/hr); Marina de Dénia „Boat4You 's / Boat4You-ova glavna baza" (8 jezika) → „glavna sjeverna charter baza" kao EN.
+- Uočeno, nedirano (izvan opsega): vez u Skradinu „15–25 €/noć" i „Marina Skradin 120 bova"; Betina „UNESCO"; Zadar „UNESCO katedrala" (Sukošan); Kornati „istočno od Šibenika"; proturječja o sidrenju u Prokljanu.
+- Provjere: `seo-corpus-qa.py --check` 0 nalaza i 0 izmjena, `check-corpus-holes` OK (12.789), JSON valjan, eslint (pre-commit).
+
 ## 2026-10-01 — 🧭 Sadržaj, review Krka + 72 h: dorade korpusa (9 jezika) — ⏳ NIJE DEPLOYANO
 
 Nezavisni review commita `8d9ddef4`. Samo `public/seo-content`, ide u istom deployu.
