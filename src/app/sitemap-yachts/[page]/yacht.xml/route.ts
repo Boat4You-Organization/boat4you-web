@@ -1,18 +1,8 @@
 import { NextResponse } from 'next/server';
 
-import { PROMOTED_COUNTRY_CODES } from '@/config/promoted-countries.config';
 import { routing } from '@/i18n/routing';
-import { Currency } from '@/models/user.model';
 import { YachtModelShortInfo } from '@/models/yacht.model';
-import { fetchYachts } from '@/services/yacht.service';
-
-const PROMOTED = Array.from(PROMOTED_COUNTRY_CODES);
-
-// Backend `/public/yachts` silently caps page size at 100 — passing 500
-// returned only the first 100 entries per page, dropping the other 80% of
-// the catalogue from the sitemap. Match the cap exactly so every yacht
-// emits exactly once across the paginated set.
-const PAGE_SIZE = 100;
+import { fetchSitemapCatalogueTop, fetchYachtShard } from '@/utils/server/yachtSitemapShards';
 
 /**
  * ISR, like the other sitemaps (25.9.2026). The shards used to render on
@@ -22,7 +12,7 @@ const PAGE_SIZE = 100;
  * for an hour, and then regenerates in the background.
  *
  * `generateStaticParams` returns nothing on purpose: no build-time render
- * (113 backend queries per build), every shard on demand. `dynamicParams`
+ * (up to ten backend queries per shard), every shard on demand. `dynamicParams`
  * stays true (the default) — false would turn every shard into a 404 (and
  * break on-demand revalidation, NoFallbackError).
  */
@@ -30,7 +20,7 @@ export const revalidate = 3600;
 export const dynamicParams = true;
 
 /**
- * Canonical shard numbers only (no leading zeros, at most 3 digits — 113 shards today): `01` used to answer
+ * Canonical shard numbers only (no leading zeros, at most 3 digits — 21 shards today): `01` used to answer
  * a copy of shard 1 as its own ISR entry and backend call. Anything else is a small, stable 404. Note: ISR
  * still caches those 404s per path (the proxy matcher skips /sitemap*), so the key space is kept small here.
  */
@@ -53,43 +43,32 @@ export async function GET(_request: Request, { params }: { params: Promise<{ pag
     return new NextResponse('Not Found', { status: 404 });
   }
 
-  const page = Number(pageParam);
+  const shard = Number(pageParam);
 
   // No catch: ISR caches whatever this handler RETURNS for the hour, a 503
   // included. A backend failure therefore THROWS — a regeneration that
   // throws keeps serving the last good copy, and a first render answers 500
   // (retried by Google) without caching anything. fetchYachts throws on a
-  // non-2xx answer, and the Data Cache below stores 200s only.
+  // non-2xx answer, and the Data Cache stores 200s only.
   //
-  // Push the promoted-country whitelist down to the backend so the page
-  // returns exactly PAGE_SIZE matching yachts (no client-side trim, no
-  // partially-empty pages). Mario decision 4.5.2026. Locale and currency
-  // pinned: the XML carries neither.
-  const yachtsData = await fetchYachts(
-    { locations: [], page: page + 1, size: PAGE_SIZE, countryCodes: PROMOTED },
-    Currency.EUR,
-    'en',
-    { revalidate }
-  );
+  // The boats of this fixed id range of the promoted catalogue, in id order
+  // (yachtSitemapShards.ts). Locale and currency pinned: the XML carries
+  // neither.
+  const yachts = await fetchYachtShard(shard, revalidate);
 
-  if (!yachtsData.content || yachtsData.content.length === 0) {
-    const total = yachtsData.page?.totalElements ?? 0;
+  if (yachts.length === 0) {
+    // No listed boat in this id range (a gap in the ids, or past the highest
+    // id): 404, NOT a 200 with an empty <urlset>, which GSC rejects ("Missing
+    // XML tag: parent urlset, tag url"). An empty catalogue, though, is a
+    // backend blip, not a fact to cache for an hour: that throws.
+    await fetchSitemapCatalogueTop(revalidate);
 
-    // A shard past the end of a non-empty catalogue is really gone (the
-    // index lists fewer shards now): 404, NOT a 200 with an empty <urlset>,
-    // which GSC rejects ("Missing XML tag: parent urlset, tag url").
-    if (total > 0 && page * PAGE_SIZE >= total) {
-      return new NextResponse('Not Found', { status: 404 });
-    }
-
-    // An empty page inside the catalogue — or an empty catalogue — is a
-    // backend blip, not a fact to cache for an hour: throw (see above).
-    throw new Error(`sitemap-yachts/${page}: empty page, catalogue total ${total}`);
+    return new NextResponse('Not Found', { status: 404 });
   }
 
   // No <lastmod>: the list API exposes no per-boat modification date, and
   // a request-time stamp marks every URL as changed on every fetch.
-  const urls = yachtsData.content
+  const urls = yachts
     .flatMap((yacht: YachtModelShortInfo) =>
       routing.locales.map(locale => {
         const prefix = locale === routing.defaultLocale ? '' : `/${locale}`;

@@ -1,10 +1,4 @@
-import { PROMOTED_COUNTRY_CODES } from '@/config/promoted-countries.config';
-import { fetchYachts } from '@/services/yacht.service';
-
-// Must match PAGE_SIZE in [page]/yacht.xml/route.ts — backend caps at 100,
-// so any larger value over-counts yacht-pages and emits 404s for trailing
-// indices that never resolve to a non-empty page.
-const PAGE_SIZE = 100;
+import { fetchSitemapCatalogueTop, yachtShardCount } from '@/utils/server/yachtSitemapShards';
 
 export const revalidate = 3600;
 
@@ -19,9 +13,9 @@ const XML_HEADERS = {
 export async function GET() {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
 
-  // Pass the promoted-country whitelist to the backend so totalElements
-  // is the EXACT count we'll later index — every sub-sitemap fills up
-  // (≈100 URLs per backend page, no empty pages).
+  // One yacht shard per fixed id range of the promoted catalogue, up to its
+  // highest id (yachtSitemapShards.ts): the shard a boat sits in never
+  // depends on when the index or the shard was rendered.
   //
   // Data Cache + ISR (audit B09, 26.9.2026): the count query used to be
   // `no-store`, which silently made this route dynamic — every fetch of the
@@ -30,18 +24,10 @@ export async function GET() {
   // No catch: ISR caches whatever the handler RETURNS (a 503 included) for
   // the hour; a failure THROWS, so a regeneration keeps the last good index
   // and a first render answers 500 (retried) — same rule as the shards.
-  const promoted = Array.from(PROMOTED_COUNTRY_CODES);
-  const data = await fetchYachts({ locations: [], page: 1, size: 1, countryCodes: promoted }, undefined, undefined, {
-    revalidate,
-  });
-  const total = data.page?.totalElements ?? 0;
-
-  if (total <= 0) throw new Error('sitemap.xml: empty catalogue');
-
-  const pages = Math.ceil(total / PAGE_SIZE);
+  const { maxId } = await fetchSitemapCatalogueTop(revalidate);
 
   const yachtSitemaps = Array.from(
-    { length: pages },
+    { length: yachtShardCount(maxId) },
     (_, i) => `  <sitemap>
     <loc>${baseUrl}/sitemap-yachts/${i}/yacht.xml</loc>
   </sitemap>`
