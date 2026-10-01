@@ -1,5 +1,30 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-10-01 — 🔎 Mobilna tražilica: promjena samo datuma + brz kalendar — ✅ DEPLOYED
+
+Mario 1.10. (screenshot, /search na mobitelu): „stavim datum i vrstu plovila, a kad idem promijeniti samo datum, ne mogu,
+moram ponovno pretisnuti vrstu plovila" + „grozno je sporo kada se pretisne datum, sporo otvara kalendar".
+Commit `a52960d9`, BUILD_ID `a52960d92b4f-mup5llj5`, rollback `.next.prev` = `0309268f` build.
+
+**1. Gumb „Pretraži brodove" neaktivan:** `GeneralSearchBarMobile.tsx` ga je palio samo kad forma ima `did`. Landing i sitemap
+URL-ovi nose `?destinations=croatia` BEZ `did` → chip „croatia" vidljiv, gumb sivi. Korak vrste plovila je „radio" jer sam zove
+`form.requestSubmit()` mimo gumba. Sad vrijedi i ime destinacije: `disabled={!did?.length && !destinations?.length}`.
+
+**2. Kalendar spor (izmjereno uživo, mobitel, CPU ×4):** otvaranje 4,0 s blokade glavne niti, tap na dan 1,7 s (bez usporavanja
+808 ms / 315 ms).
+
+- `CustomDateCalendar.tsx`: `slots.day` je bio inline arrow → novi tip komponente svaki render → React je rušio i ponovno gradio
+  svih ~460 dana na svaki render. Sad modul-level `CalendarDay`, vrijednosti kroz `slotProps.day`.
+- `DatePickerDropdown.tsx` + novi `LazyMonth.tsx`: mobilni sheet je montirao 15+ MUI kalendara odjednom. Sad prva 2 odmah, ostali
+  kad se približe (IntersectionObserver na scrolleru sheeta, `rootMargin` 600 px, placeholder iste visine 286 px).
+
+**Mjereno (CPU ×4):** otvaranje 4,0 s → **0,53 s** do vidljivih dana (live), tap na dan 1,7 s → **0,39 s**; mjeseci se dodaju
+skrolanjem do prosinca 2027; samo-datum tijek (04.–12. lis.) → gumb aktivan. Regresija na lokalnom prod buildu: desktop i mobilni
+kalendar naslovnice (raspon OK), kalendar na stranici broda (raspon 9 dana), 0 grešaka u konzoli.
+
+**Deploy:** jedan lokalni build (cpus=1) → provjera na `next start :3999` → `infra/deploy-scripts/b4y_web_ship.sh` (isti `.next`,
+bez drugog builda) → zagrijavanje 139/139 OK.
+
 ## 2026-10-01 — 📱 Kartica broda: oznaka „Dostupno"/„Pod opcijom" više ne ulazi pod sliku — ✅ DEPLOYED
 
 Mario 30.9. (screenshot s mobitela, /hr/search): oznaka dostupnosti na kartici broda ulazila je ispod fotografije.
