@@ -31,3 +31,18 @@ a {
 .tiles-light-mute {
   filter: grayscale(0.6) saturate(0.5) brightness(1.07) contrast(0.94);
 }
+
+// No zoom on field focus. iPhone Safari zooms the whole page in when a focused
+// field's text is smaller than 16px, and the visitor then has to pinch back out
+// (boat4you /search filter fields were 13px, the boat-page forms 14px — Mario
+// 1.10.2026: "ne smije biti zumiranja"). On touch screens no text field goes
+// below 16px; larger ones keep their size (`1em` = the field's inherited size,
+// e.g. an 18px MUI date field; Tailwind-sized `text-[20px]` fields are skipped).
+// Mouse/desktop layouts are untouched. Pinch-zoom stays available.
+@media (hover: none) and (pointer: coarse) {
+  input:not([type='checkbox'], [type='radio'], [type='range'], [type='file'], [type='hidden'], [class*='text-[']),
+  textarea:not([class*='text-[']),
+  select:not([class*='text-[']) {
+    font-size: max(16px, 1em) !important;
+  }
+}
