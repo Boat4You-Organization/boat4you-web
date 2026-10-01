@@ -1,5 +1,43 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-10-01 — ⚡ Stranica broda 1 dohvat + rok 8 s · 🗺️ sitemap brodova po rasponu id-eva · ⚖️ Uvjeti: 72 h besplatno otkazivanje — ⏳ NIJE DEPLOYANO
+
+Codex audit 1.10. (F2, F7, F8), verificirano (`_seo-audit-2026-10-01/codex-review/`). Commitovi `723704c6` (F2),
+`9ffbc079` (F7), `62e0c1b9` (F8), samo lokalno, nije pushano.
+
+- **F2 — stranica broda (`yacht.actions.ts`, `boat/[slug]/page.tsx`):** `generateMetadata` i stranica su svaki
+  dohvaćali `/public/yachts/{slug}` (zbog `signal` ih Next nije spajao → API je vidio dva ista GET-a u sekundi po
+  stranici). Sad je dohvat React `cache()` po (slug, query, jezik), a metadata pita s valutom i jezikom stranice (ne
+  mijenjaju nijedno polje koje metadata čita) → **jedan dohvat po renderu**. Rok cijelog poziva s retryjima
+  (`fetchWithRetry`) **25 s → 8 s**: zdrav detalj je 0,1–0,2 s; kad je backend pool iscrpljen čeka 20 s na vezu, pa je
+  25 s samo držalo posjetitelja do nginx 499. Nakon 8 s stranica daje 500 → nginx 503 + Retry-After.
+- **F7 — sitemap brodova (`sitemap.xml`, `sitemap-yachts/[page]/yacht.xml`, `utils/server/yachtSitemapShards.ts`):**
+  dijelovi su bili stranice živog „Recommended" poretka (po cijeni), svaki zaseban ISR unos u drugom trenutku → brod je
+  prelazio granicu: dupli i propušteni (B03 nije bio stvarno riješen). Sad dio k = brodovi s id-em u
+  **[k·1000, (k+1)·1000)**, backend `sortBy=id&idFrom&idTo`, po 100 keysetom (sljedeće čitanje kreće iza zadnjeg id-a,
+  nikad offset). Broj dijelova iz najvećeg id-a (`sortBy=idDesc&size=1`). **1000, ne 100:** danas je 20 od 202
+  stotke-raspona prazno (20 × 404 u indexu); nijedan tisućni nije (21 dio, najviše 768 brodova = 6.912 URL-ova).
+  Greška i dalje baca (ISR drži zadnju dobru verziju); odgovor izvan raspona ili ne po id-u baca; prazan raspon → 404
+  (prazan katalog baca).
+- **F8 — Uvjeti (`src/posts/static/<9 jezika>/terms-and-conditions.md`):** Mario 1.10.: „klijent uzme plovilo, plati i u
+  roku od 72 sata se odluči da ipak neće, mi mu sve vraćamo bez pitanja… sve ručno, samo treba pisati". 7.1 novi prvi
+  bullet: svaka rezervacija na Platformi može se besplatno otkazati u roku od 72 sata od trenutka rezervacije, bez
+  navođenja razloga; Boat4You vraća cijeli plaćeni iznos, uključujući service fee te naknade za obradu plaćanja i
+  bankovne naknade; nakon 72 h vrijede redovni uvjeti. 6.9 i bullet Service Fee: „nepovratno" / bankovne naknade
+  kupca sad imaju iznimku za 72 h. NL: u istom retku popravljen razbijeni bold (`\***\*Boat4You** …`). E-mailovi,
+  checkout, My Bookings i FAQ NEtaknuti (Mario).
+
+**Provjereno lokalno** (build `dfb4a5e2`+promjene, `next start :3143`, prod API, logger na `fetch`): lejla-11707 EN,
+HR s datumima, DE `?currency=USD`, IT bali-41 s datumima → **točno 1 poziv `/public/yachts/{slug}`** po renderu (+1
+lista related), title/description/canonical isti kao live; nepostojeći brod → 404 s 1 pozivom. Sitemap: index 200, **21
+dio, svi 200**, dio 21 → 404; **94.824 `<loc>`, 0 duplikata, 10.536 brodova × 9 jezika = API total 10.536 (razlika 0)**,
+svi id-evi u svom rasponu i rastućem redu. `/terms-and-conditions` u 9 jezika 200, klauzula prisutna (6 × „72" u tekstu).
+
+**Deploy:** F2 + F7 = standardni web build → tar → cusma1 swap. F8 sam ne treba build (getPage čita `.md` s diska,
+recept 18.9.), ali ide s istim deployem. Nakon deploya: `/sitemap.xml` lista `sitemap-yachts/0…20`; stari URL-ovi
+dijelova 21–105 postaju 404 (nisu više u indexu, Google ih ispušta). Provjera uživo: `curl /sitemap.xml | grep -c
+sitemap-yachts` = 21, dio 0 i 20 = 200, `/terms-and-conditions` + `/hr/…` imaju „72".
+
 ## 2026-10-01 — 🔗 Naslovnica: blok ključnih riječi i linkova na dnu (6 tabova, 140 linkova, 9 jezika) — ⏳ NIJE DEPLOYANO
 
 Mario 1.10.: „napravi to ali stavi na dnu main paiga od boat4you, neka bude kao što su napravili na Borrow a Boat… više nam je
