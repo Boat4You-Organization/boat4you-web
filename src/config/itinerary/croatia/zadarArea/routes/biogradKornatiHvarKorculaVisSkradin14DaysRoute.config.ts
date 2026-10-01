@@ -264,7 +264,7 @@ const biogradKornatiHvarKorculaVisSkradin14DaysRoute: ItineraryRoute = {
         mobile: { left: 43.4, top: 55.1 },
       },
       description:
-        'Wander inland beside the Krka River, where waterfalls howl like dragons. Swim under the cascades of Skradinski Buk, then picnic on Pag cheese under dappled shadow. By night, eat in the medieval square of Skradin, and see fireflies dancing over stone arches like live confetti.',
+        'Wander inland beside the Krka River, where waterfalls howl like dragons. Walk the boardwalks above the cascades of Skradinski Buk, then picnic on Pag cheese under dappled shadow. By night, eat in the medieval square of Skradin, and see fireflies dancing over stone arches like live confetti.',
       shortDescription:
         'Inland river leg up the Krka through the lower Šibenik basin to Skradin — a small medieval town inside Krka National Park. ACI Marina Skradin sits at the river mouth. Plan to boat transfer up to Skradinski Buk and cycle a Krka park trail.',
       thingsToDo: [

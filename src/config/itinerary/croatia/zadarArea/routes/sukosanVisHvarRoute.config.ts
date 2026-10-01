@@ -142,7 +142,7 @@ const sukosanVisHvarRoute: ItineraryRoute = {
         mobile: { left: 55.9, top: 52.6 },
       },
       description:
-        'Go back to Šibenik, where the crown gem of Croatia—the UNESCO-listed St. James Cathedral—medieval walls cradle. lose yourself in its lace-like stone façade, then cool off swimming under the thunderous cascade of Krka Waterfalls. Dine along the river on fritule, delicious doughnuts, as fireflies dance in the warm evening air like embers.',
+        'Go back to Šibenik, where the crown gem of Croatia—the UNESCO-listed St. James Cathedral—medieval walls cradle. lose yourself in its lace-like stone façade, then stroll the park boardwalks beside the thunderous cascade of Krka Waterfalls. Dine along the river on fritule, delicious doughnuts, as fireflies dance in the warm evening air like embers.',
       shortDescription:
         'Long 28 nm coastal leg back northwest to Šibenik — the medieval Croatian royal seat, with the UNESCO-listed Cathedral of St. James (built entirely of stone, no wood, no mortar) and the four hilltop forts surrounding the harbour.',
       thingsToDo: [

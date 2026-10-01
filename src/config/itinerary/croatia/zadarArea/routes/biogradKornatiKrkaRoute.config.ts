@@ -129,7 +129,7 @@ const biogradKornatiKrkaRoute: ItineraryRoute = {
         mobile: { left: 51.1, top: 56.3 },
       },
       description:
-        "Along the Krka River, drift inland where waterfalls howl like dragons defending Eden. Dock in Skradin, a town with stone arches and figs blooming with summer's delicacy. Glide by boat to Skradinski Buk—plunge into natural pools under cascades to make rainbows in the mist. Picnic on sun-warmed tomatoes and Pag cheese, dragonflies flying like jeweled messengers.",
+        "Along the Krka River, drift inland where waterfalls howl like dragons defending Eden. Dock in Skradin, a town with stone arches and figs blooming with summer's delicacy. Glide by park boat to Skradinski Buk and follow the boardwalks past natural pools and cascades that throw rainbows into the mist. Picnic on sun-warmed tomatoes and Pag cheese, dragonflies flying like jeweled messengers.",
       shortDescription:
         'Inland river leg up the Krka through the lower Šibenik basin to Skradin — a small medieval town inside Krka National Park. Park ticket gets you a boat transfer up to Skradinski Buk waterfall complex.',
       thingsToDo: [

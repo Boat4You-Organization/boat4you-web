@@ -129,7 +129,7 @@ const zadarKornatiKrkaRoute: ItineraryRoute = {
         mobile: { left: 49.9, top: 48.4 },
       },
       description:
-        'Follow the Krka River inland, where waterfalls roar like ancient gods. Dock in Skradin, a town of stone arches and timeworn courtyards. Trade sails for a wooden boat to Skradinski Buk—swim beneath cascades that sculpt natural pools, then picnic on prosciutto and Pag cheese as dragonflies dart through rainbows in the mist.',
+        'Follow the Krka River inland, where waterfalls roar like ancient gods. Dock in Skradin, a town of stone arches and timeworn courtyards. Trade sails for the park boat to Skradinski Buk—walk the boardwalks above cascades that sculpt natural pools, then picnic on prosciutto and Pag cheese as dragonflies dart through rainbows in the mist.',
       shortDescription:
         'Inland river leg up the Krka through the lower Šibenik basin to Skradin — a small medieval town inside Krka National Park. Park ticket gets you a boat transfer up to Skradinski Buk waterfall complex.',
       thingsToDo: [

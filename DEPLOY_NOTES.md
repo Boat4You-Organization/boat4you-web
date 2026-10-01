@@ -1,5 +1,16 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-10-01 — 🧭 Sadržaj: Krka (kupanje zabranjeno od 2021.) + povrat novca = pravilo 72 h — ⏳ NIJE DEPLOYANO
+
+Samo tekst, bez koda. Izvor za Krku: npkrka.hr (kupanje samo na Roškom slapu, Stinicama i Pisku 1.6.–30.9.; uzvodno od Skradinskog mosta voze samo brodovi parka; ulaznica uključuje brod Skradin → Skradinski buk; staza 3,4 km). Izvor za povrat: Uvjeti §7.1 (72 h od rezervacije, puni povrat; nakon toga uvjeti operatera prikazani prije plaćanja).
+
+- **Krka, `public/seo-content` (9 jezika, ~44 rečenice × 9):** maknuto kupanje na Skradinskom buku, „sidrenje kod slapova", plovidba vlastitim brodom / gumenjakom iznad Skradina, „UNESCO bazen", pristojbe „po plovilu"; Marina Zaton (katamaran + jedrilica) prepisana — brod parka ili staza od Skradina.
+- **Krka, `messages/*/itineraryCroatia.json` (9 jezika) + `src/config/itinerary/croatia/**` (EN fallback, custom builder):\*\* „zadnje kupanje pod slapovima" → šetnja drvenim stazama; „zabranjeno kupanje ravno pod slapovima" → kupanje na Skradinskom buku.
+- **Povrat novca, `public/seo-content` (9 jezika):** ~110 izmišljenih pravila („povrat do 60/30/14 dana prije", „48 h puni povrat", „fleksibilna otkazivanja", vrijeme/kvar = puni povrat) → 72 h besplatno otkazivanje + uvjeti operatera prije plaćanja; predložak „Booking Flexibility and Cancellation Protection" (91 stranica × 9) prepisan.
+- **`messages/*/home.json` `riskFreeBooking.cancellingDescription` (9 jezika):** „potpuno bez rizika i fleksibilno" → 72 h + uvjeti operatera.
+- Provjere: `scripts/seo-corpus-qa.py --check` 0 nalaza, `check-corpus-holes` OK.
+- Deploy: standardni b4y (novi `.next` + `messages` + `public`).
+
 ## 2026-10-01 — 🔒 Next.js 16.1.1 → 16.3.8 (sigurnosno izdanje 30.9.) + deploy sada mijenja i `node_modules` na cusma1 — ⏳ NIJE DEPLOYANO (commit `138ede62`)
 
 Codex audit F3 (`codexverify/next.md`). Na 16.1.1 je b4y imao objavljene DoS ranjivosti u Server Components i Server Actions (visoko), zaobilaženje proxyja, request smuggling u rewriteovima i trovanje ISR cachea kod `[locale]/[...rest]`. Zakrpa postoji samo u 16.3.8; zakrpanih 16.1.x ni 16.2.x nema. Samo lokalno, nije pushano.

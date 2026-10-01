@@ -147,7 +147,7 @@ const biogradVisHvarSoltaRoute: ItineraryRoute = {
         mobile: { left: 56, top: 53.2 },
       },
       description:
-        'Go back to Šibenik, where St. James Cathedral pierces the heavens with its stone lacework, designated by UNESCO. After swimming beneath the roaring falls of Krka Waterfalls, eat fritule (sweet doughnuts) by the river, fireflies dancing like embers in the warm night air.',
+        'Go back to Šibenik, where St. James Cathedral pierces the heavens with its stone lacework, designated by UNESCO. After watching the roaring falls of the Krka Waterfalls from the park boardwalks, eat fritule (sweet doughnuts) by the river, fireflies dancing like embers in the warm night air.',
       shortDescription:
         'Long 28 nm coastal leg back northwest to Šibenik — the medieval Croatian royal seat, with the UNESCO-listed Cathedral of St. James (built entirely of stone, no wood, no mortar) and the four hilltop forts surrounding the harbour.',
       thingsToDo: [

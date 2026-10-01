@@ -155,7 +155,7 @@ const zadarVisHvarRoute: ItineraryRoute = {
         mobile: { left: 55.6, top: 51.6 },
       },
       description:
-        'Return to Šibenik, where medieval walls cradle Croatia’s crown jewel: the UNESCO-listed St. James Cathedral. Lose yourself in its lace-like stone facade, then cool off with a swim beneath Krka River’s waterfalls. As twilight falls, join locals on the riva for crispy fritule doughnuts and tales of the city’s pirate-chasing past.',
+        'Return to Šibenik, where medieval walls cradle Croatia’s crown jewel: the UNESCO-listed St. James Cathedral. Lose yourself in its lace-like stone facade, then walk the park boardwalks beside the Krka River’s waterfalls. As twilight falls, join locals on the riva for crispy fritule doughnuts and tales of the city’s pirate-chasing past.',
       shortDescription:
         'Long 28 nm coastal leg back northwest to Šibenik — the medieval Croatian royal seat, with the UNESCO-listed Cathedral of St. James (built entirely of stone, no wood, no mortar) and the four hilltop forts surrounding the harbour.',
       thingsToDo: [
