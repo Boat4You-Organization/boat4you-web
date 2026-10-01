@@ -1,5 +1,15 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-10-01 — 🧭 Sadržaj, review Krka + 72 h: dorade korpusa (9 jezika) — ⏳ NIJE DEPLOYANO
+
+Nezavisni review commita `8d9ddef4`. Samo `public/seo-content`, ide u istom deployu.
+
+- **Pravilo 72 h točno po Uvjetima §7.1 (od trenutka rezervacije, ne od potvrde):** FR „suivant sa confirmation" → „après avoir été effectuée", IT „dalla sua conferma" → „dal momento in cui è stata effettuata" (po 142), HR „od njezina sklapanja" → „od trenutka kad je napravljena" (142).
+- **Izmišljena besplatna odgoda zbog vremena / „bez penala"** (11 rečenica × 9 jezika, 99): d'Arechi, Porto di Cecina (2), Arcipelago Toscano, Salivoli, Sitges, Cagliari, Cannigione, Naviera Balear, Porto Santa Maria Maggiore, Corfu Benitses → ista formulacija kao u `8d9ddef4` (ovisi o operateru i ugovoru, §7.3–7.4). HR d'Arechi je obećavao čak „otkažu najam bez financijske kazne".
+- **Prirodniji HR/PL:** „nadoknaditi ili refundirati" → „novim terminom ili povratom novca" (26); PL „zmiana … zostanie zwrócona" → „przysługuje nowy termin, czy zwrot pieniędzy" (26); PL „można ją" (krivi referent) ispravljen.
+- **Marina Zaton HR** (pre-existing tipfeleri): „Pluleći" → „Ploveći", „Smještena ušće" → „Smještena na ušću".
+- Provjere: `seo-corpus-qa.py --check` 0 nalaza, `check-corpus-holes` OK (12.789).
+
 ## 2026-10-01 — 🔁 Review nadogradnje na Next.js 16.3.8: `optimisticRouting` off, deploy tail (memorija, nohup, watchdog, deployment id, rollback) — ⏳ NIJE DEPLOYANO (commit `668e2c7c`)
 
 Review nadogradnje `138ede62` (1.10. navečer). Ide u istom deployu kao nadogradnja.
