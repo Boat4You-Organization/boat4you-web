@@ -188,12 +188,18 @@ const nextConfig = {
   // 29.9.2026 — sitemaps and landings — and emptied the backend's Hikari
   // pool (35/35, 99 waiting): the live sites answered 500 to visitors and
   // Googlebot at 11:11–11:13 UTC. Slower builds, no flood.
+  //
+  // No Turbopack build cache on disk: Next 16.3 turns it on by default and
+  // writes it to .next/cache/turbopack, which the deploy would tar up and ship
+  // to cusma1 with every build (1.10.2026, Next 16.3.8 upgrade). Deploy builds
+  // start from rm -rf .next anyway, so the cache would never be reused.
   experimental: {
     optimizePackageImports: ['@mui/material', '@mui/icons-material', '@mui/x-date-pickers'],
     optimizeCss: true,
     cpus: 1,
     staticGenerationMaxConcurrency: 2,
     staticGenerationRetryCount: 2,
+    turbopackFileSystemCacheForBuild: false,
   },
   sassOptions: {
     silenceDeprecations: ['legacy-js-api'],
@@ -381,13 +387,19 @@ const nextConfig = {
 };
 
 // Deployment id (Next skew protection, audit 29.9.2026 R62): every build gets one
-// id, used as BUILD_ID and as `deploymentId`, so the client's asset URLs carry
-// `?dpl=<id>` and its server-action requests an `x-deployment-id` header, and a
-// stale tab is recognisable as such. `next start` on cusma1 loads this file at
-// runtime, where the build's id is read back from .next/BUILD_ID — the same
-// value, without the deploy script having to pass anything. No id in
-// development. The git sha is the readable part; the time suffix keeps two
-// builds of one commit apart (the deploy verifies staged vs live BUILD_ID).
+// id, used as `deploymentId`, so the client's asset URLs carry `?dpl=<id>` and
+// its RSC and server-action requests an `x-deployment-id` header, and a stale
+// tab is recognisable as such. `next start` on cusma1 loads this file at
+// runtime, where the build's id is read back from
+// .next/required-server-files.json (the config the build ran with) — the same
+// value, without the deploy script having to pass anything. Not from
+// .next/BUILD_ID: since Next 16.3 a build with a deploymentId ignores
+// generateBuildId and writes the constant `build-TfctsWXpff2fKS` there, and a
+// runtime id that differs from the build's one makes the client treat every
+// RSC response as coming from another deployment, so each client-side
+// navigation becomes a full page load (1.10.2026, Next 16.3.8 upgrade). No id
+// in development. The git sha is the readable part; the time suffix keeps two
+// builds of one commit apart (the deploy verifies the staged vs live id).
 const buildDeploymentId = () => {
   let sha = 'nogit';
 
@@ -402,9 +414,11 @@ const buildDeploymentId = () => {
   return `${sha}-${Date.now().toString(36)}`;
 };
 
-const deployedBuildId = () => {
+const deployedDeploymentId = () => {
   try {
-    return fs.readFileSync(path.join(__dirname, '.next', 'BUILD_ID'), 'utf8').trim() || undefined;
+    const { config } = JSON.parse(fs.readFileSync(path.join(__dirname, '.next', 'required-server-files.json'), 'utf8'));
+
+    return (config && config.deploymentId) || undefined;
   } catch {
     return undefined;
   }
@@ -412,13 +426,11 @@ const deployedBuildId = () => {
 
 const configForPhase = phase => {
   if (phase === PHASE_PRODUCTION_BUILD) {
-    const id = buildDeploymentId();
-
-    return { ...nextConfig, deploymentId: id, generateBuildId: async () => id };
+    return { ...nextConfig, deploymentId: buildDeploymentId() };
   }
 
   if (phase === PHASE_PRODUCTION_SERVER) {
-    const id = deployedBuildId();
+    const id = deployedDeploymentId();
 
     return id ? { ...nextConfig, deploymentId: id } : nextConfig;
   }
