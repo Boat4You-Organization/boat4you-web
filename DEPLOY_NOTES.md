@@ -1,5 +1,25 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-10-01 — 📱 Kartica broda: oznaka „Dostupno"/„Pod opcijom" više ne ulazi pod sliku — ✅ DEPLOYED
+
+Mario 30.9. (screenshot s mobitela, /hr/search): oznaka dostupnosti na kartici broda ulazila je ispod fotografije.
+Commit `0309268f`, BUILD_ID `0309268fa172-mup4zjje`, rollback `.next.prev` = build 30.9. (13663438).
+
+**Uzrok:** `src/components/BoatListingItemCard/BoatListingItemCard.tsx` — oznaka (Dostupno / Pod opcijom / Na upit) i gumb
+„Detalji broda" u jednom `nowrap` redu, poravnatom desno na dnu stupca sadržaja. Na mobitelu je stupac uzak (slika 40 %), pa je
+red bio širi od stupca i „curio" ulijevo pod sliku. Izmjereno uživo prije popravka: 18/18 kartica pod slikom na 320/360/375 px,
+na 390 px oznaka već izvan stupca (veći sistemski font na iPhoneu = isto i na 390+).
+
+**Fix:** red smije prijeći u novi red (`flexWrap: wrap`, `rowGap`, `maxWidth: 100%`, desno poravnanje; grid prikaz zadržava
+lijevo) → kad nema mjesta, oznaka stane u svoj red IZNAD gumba; kad ima mjesta, sve kao prije.
+
+**Provjera uživo (headless Chrome, iPhone UA, DPR 3):** `/hr/search?destinations=croatia&boatTypes=MOTORBOAT`, `?destinations=croatia`
+i `?destinations=croatia&startDate=2026-10-10&endDate=2026-10-17` (ima 2 × „Pod opcijom") na 320/360/375/390/430/466/890/1280 px:
+0 oznaka pod slikom, 0 izvan stupca; do 390 px oznaka u svom redu, od 430 px pokraj gumba (široka „Pod opcijom" još u svom redu na 430).
+
+**Deploy:** `infra/deploy-scripts/b4y_web_deploy.sh` (build cpus=1, config test, swap) — aplikacija se ugasila nakon swapa, pa je
+zagrijavanje (5b) pokrenuto ručno iz iste skripte; SEO regresija (6) nije pokrenuta (promjena je samo CSS kartice).
+
 ## 2026-09-30 — 📱 Promo banners: countdown pill no longer breaks inside the time, phone balloons fade again — ⏳ NOT DEPLOYED (commit `fix(promo): countdown pill breaks only before the clock, restore bfade keyframes`)
 
 Fixes two regressions QA found in the refined phone/tablet commit below (deploy both together).
