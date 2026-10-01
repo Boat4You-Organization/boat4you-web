@@ -45,6 +45,13 @@ Rules (all locales unless noted), in this order:
              Primošten and the ACI Split superlatives, HR/PL heading sentence
              case, raw URLs and "[Brand]" placeholders as link text,
              broken/relative/stale-did links, page furniture
+  holes      added 1.10.2026 (audit N5), runs after subject so the claims
+             rules see the restored text: the brand cut from the middle of an
+             EN sentence ("Contact today", "Whether …, delivers", "Why Stands
+             Out", "coordinated by.", "facilities.partners with"), writer's
+             notes as headings ("Call to action: …", all locales) and raw
+             "Boat4You/search?…" paths printed after a link — see
+             scripts/seo_corpus_rules.py (holes)
 
 After the fixers, every file is checked (seo_corpus_rules.checks): operator
 names, inland terms, ownership claims (plus an independent deny-list that
@@ -53,7 +60,8 @@ text, sentences starting in lower case, founded≠2013, compass directions,
 broken hrefs, did/label mismatch, nested links, Cyrillic, the wrong language,
 English text in a translation, a translation about other places than its EN
 source, numbers a retranslated page has that its EN source does not,
-duplicate paragraphs/headings — and the UI strings in messages/<locale>/*.json
+duplicate paragraphs/headings, the deleted-brand shapes (HOLE_DENY) — and the
+UI strings in messages/<locale>/*.json
 (seo_corpus_rules.message_checks). Any finding fails --check.
 
 Unfilled page templates (PLACEHOLDER / "Key Advantage Section 1") are only
@@ -85,8 +93,8 @@ ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'public', 
 LOCALES = ['en', 'de', 'fr', 'it', 'es', 'pt', 'nl', 'pl', 'hr']
 # brand runs before facts/counts: a restored "Boat4You's … base" or
 # "Boat4You's 395-yacht" is then handled in the same pass.
-RULES = ['foreign', 'structure', 'faq', 'junk', 'brand', 'subject', 'facts', 'claims', 'casing', 'claims2', 'counts',
-         'headings', 'operators', 'inland', 'compass', 'links', 'dupes', 'edits', 'recap']
+RULES = ['foreign', 'structure', 'faq', 'junk', 'brand', 'subject', 'holes', 'facts', 'claims', 'casing', 'claims2',
+         'counts', 'headings', 'operators', 'inland', 'compass', 'links', 'dupes', 'edits', 'recap']
 
 
 class Ctx:
@@ -1509,6 +1517,7 @@ def rule_functions():
         'headings': fix_headings,
         'brand': fix_brand,
         'subject': R.fix_subject,
+        'holes': R.fix_holes,
         'claims': fix_claims,
         'junk': R.fix_junk,
         'operators': R.fix_operators,

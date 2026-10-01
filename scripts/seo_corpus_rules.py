@@ -1818,6 +1818,30 @@ HEADING_HOLE = {
            (r'^(?P<z>Zašto) [Ss]e (?P<w>[\wčćđšž]+) [Vv]raćaju u' + _HEAD_END, r'\g<z> nam se \g<w> vraćaju\g<q>'),
            (r'(?P<a>\bu Italiji s|\bflote jedrilica kod)' + _HEAD_END, r'\g<a> Boat4You\g<q>')],
 }
+# Variants found in the 1.10.2026 audit (N5): Title Case ("Reviennent Chez",
+# "Terugkeren Naar"), "zu zurückkehren", and verbs left without an object
+# ("Warum Segler wählen", "Perché i Velisti Scelgono per …").
+for _loc, _rules in {
+    'de': [(r'^(?P<a>Warum Segler) zu\s+zurückkehren' + _HEAD_END, r'\g<a> zu Boat4You zurückkehren\g<q>'),
+           (r'^(?P<a>Warum Segler) (?P<b>(?:für [^?]+ )?)wählen' + _HEAD_END, r'\g<a> Boat4You \g<b>wählen\g<q>'),
+           (r'(?P<a>\b[Ss]egelyachtflotte) bei' + _HEAD_END, r'\g<a> auf Boat4You\g<q>'),
+           (r'(?P<a>\b[Mm]ehr über)' + _HEAD_END, r'\g<a> Boat4You\g<q>')],
+    'fr': [(r'(?P<a>\b[Rr]eviennent [Cc]hez)' + _HEAD_END, r'\g<a> Boat4You\g<q>'),
+           (r'^(?P<a>Pourquoi les [Mm]arins [Cc]hoisissent) (?P<b>pour\b)', r'\g<a> Boat4You \g<b>')],
+    'nl': [(r'(?P<a>\b[Tt]erugkeren [Nn]aar|\b[Mm]eer [Ll]eren [Oo]ver)' + _HEAD_END, r'\g<a> Boat4You\g<q>')],
+    'it': [(r'^(?P<a>Perché i [Vv]elisti [Ss]celgono) (?P<b>per\b)', r'\g<a> Boat4You \g<b>'),
+           (r'^(?P<a>Perché i [Vv]elisti [Ss]celgono)' + _HEAD_END, r'\g<a> Boat4You\g<q>'),
+           (r'(?P<a>\b[Bb]arche a [Vv]ela) presso' + _HEAD_END, r'\g<a> su Boat4You\g<q>')],
+    'es': [(r'^(?P<a>¿?Por [Qq]ué(?: [Ee]legir)?) (?P<b>[Pp]ara\b)', r'\g<a> Boat4You \g<b>'),
+           (r'^(?P<a>¿?Por [Qq]ué los [Nn]avegantes [Ee]ligen)' + _HEAD_END, r'\g<a> Boat4You\g<q>')],
+    'pt': [(r'(?P<a>\bPorqu?[eê] (?:os|as) [\wçãõáéíóúâêô]+ [Rr]egressam)' + _HEAD_END, r'\g<a> à Boat4You\g<q>')],
+    'pl': [(r'^(?P<a>Dlaczego żeglarze wybierają) (?P<b>(?:do|dla)\b)', r'\g<a> Boat4You \g<b>'),
+           (r'^(?P<a>Dlaczego żeglarze wybierają)' + _HEAD_END, r'\g<a> Boat4You\g<q>')],
+    'hr': [(r'^(?P<a>Zašto jedriličari biraju)' + _HEAD_END, r'\g<a> Boat4You\g<q>'),
+           (r'^Zašto se (?P<w>jedriličari|mornari) vraćaju' + _HEAD_END, r'Zašto nam se \g<w> vraćaju\g<q>'),
+           (r'^Zašto se ističe\b', r'Zašto se Boat4You ističe')],
+}.items():
+    HEADING_HOLE[_loc] = HEADING_HOLE.get(_loc, []) + _rules
 
 
 def fix_heading_holes(body, ctx):
@@ -1844,6 +1868,273 @@ def fix_heading_holes(body, ctx):
         return f'<h{m.group(1)}{m.group(2)}>{inner.replace(text, new)}</h{m.group(1)}>'
 
     return re.sub(r'<h([2-4])(\b[^>]*)>([\s\S]*?)</h\1\s*>', heading, body)
+
+
+# ----------------------------------------------------------------- holes
+
+# The pass that deleted "Boat4You" also cut it out of the middle of
+# sentences, where fix_subject (sentence starts) and fix_heading_holes
+# (heading ends) never look: "…sailing facilities.partners with Marina
+# Paleros", "Contact today to reserve…", "Whether you're …, delivers
+# exceptional value", "Why Stands Out for Ionian Catamarans", "transfers are
+# coordinated by.", "Discover why has become…" (audit 1.10.2026, N5: ~300
+# EN sentences on ~250 pages; present since the corpus was first committed,
+# 26.5.2026). The brand goes back where the hole is unambiguous. A word
+# glued to the previous sentence that is not a brand verb only gets its
+# space and capital back (". Technicians conduct", no ownership restored).
+# The translations made from the broken EN text were repaired once, block
+# by block against the EN fix (one-off, see DEPLOY_NOTES 1.10.2026); what is
+# generic (glued sentences, internal "Call to action" headings, raw search
+# paths as link text) runs here in every locale.
+_HOLE_TLD = {'com', 'net', 'org', 'eu', 'io', 'hr', 'de', 'fr', 'it', 'es', 'pt', 'nl', 'pl', 'gr', 'co', 'uk', 'html',
+             'php', 'www'}
+_HOLE_LETTER = r'a-zà-ÿąćęłńóśźżčđšž'
+_HOLE_GLUED = re.compile(rf'(?<=[{_HOLE_LETTER}0-9)%])\.(?P<w>[{_HOLE_LETTER}][\w{_HOLE_LETTER}-]{{2,}})\b')
+_HOLE_EN_NOUN = {'crews', 'charters', 'charter', 'brokers', 'specialists', 'technicians', 'sailing', 'motorboat',
+                 'skippered-charter'}
+_HOLE_EN_VERBS_EXTRA = {
+    'describes', 'discusses', 'equips', 'curates', 'customizes', 'ensures', 'assists', 'helps', 'can', 'offers',
+    'provides', 'partners', 'maintains', 'connects', 'supports', 'advises', 'recommends', 'specializes', 'handles',
+    'arranges', 'coordinates', 'invests', 'understands', 'orchestrates', 'simplifies', 'schedules', 'knows', 'requires',
+    'transforms', 'tailors', 'accommodates', 'has', 'delivers', 'matches', 'manages', 'stands', 'is'}
+# Words SUBJECT_VERBS['en'] holds that are nouns or adverbs just as often.
+_HOLE_EN_NOT_VERB = {
+    'selected', 'partnered', 'lists', 'books', 'plans', 'values', 'checks', 'requests', 'details', 'designs',
+    'structures', 'pairs', 'positions', 'filters', 'quotes', 'works', 'supplies', 'sources', 'shows', 'hosts', 'covers',
+    'uses', 'stays', 'meets', 'champions', 'catalogs', 'brokers', 'staff', 'team', 'support', 'concierge',
+    'coordinators', 'specialists', 'advisors', 'consultants', 'representatives', 'professionals'}
+_HOLE_EN_ADVERBS = {
+    'also', 'typically', 'specifically', 'carefully', 'frequently', 'strongly', 'explicitly', 'honestly',
+    'strategically', 'proudly', 'deliberately', 'consistently', 'actively', 'primarily', 'readily', 'expertly',
+    'strictly', 'clearly', 'now', 'then', 'truly', 'simply', 'happily', 'often', 'usually', 'always', 'directly',
+    'personally'}
+
+
+def _hole_in_tag(body, pos):
+    return body.rfind('<', 0, pos) > body.rfind('>', 0, pos)
+
+
+def _hole_en_verbs():
+    return (SUBJECT_VERBS.get('en', set()) | _HOLE_EN_VERBS_EXTRA) - _HOLE_EN_NOT_VERB - _HOLE_EN_ADVERBS
+
+
+def _hole_glued(body, ctx):
+    """'…facilities.partners with' → '…facilities. Boat4You partners with'."""
+    loc = ctx.locale
+    verbs = _hole_en_verbs() if loc == 'en' else SUBJECT_VERBS.get(loc, set())
+
+    def sub(m):
+        word = m.group('w')
+        before = re.search(r'[^\s>]*$', body[max(0, m.start() - 60): m.start()]).group(0)
+        if (_hole_in_tag(body, m.start()) or word.lower() in _HOLE_TLD or body[m.end(): m.end() + 1] == '>'
+                or re.search(r'(?i)boat4you|www|https?:|/|@|\.', before) or len(re.sub(r'\W', '', before)) < 3):
+            return m.group(0)
+        if word in verbs and word not in _HOLE_EN_NOUN:
+            new = f'. {SUBJECT_BRAND.get(loc, "Boat4You")} {word}'
+        else:
+            new = f'. {word[:1].upper()}{word[1:]}'
+        ctx.record('holes', plain(body[max(0, m.start() - 30): m.end()]), new.strip())
+        return new
+
+    return _HOLE_GLUED.sub(sub, body)
+
+
+# EN imperatives, headings and prepositions that lost the brand.
+_HOLE_EN_FIXES = [
+    (r'\b(?P<v>[Cc]ontact)(?= (?:today|now)\b)', r'\g<v> Boat4You'),
+    (r'\b(?P<v>[Cc]ontact)(?= to (?!(?:the|a|an|your|our|their|its|this|these|those|be|any|all|local)\b)[a-z]+)',
+     r'\g<v> Boat4You'),
+    (r'\b(?P<v>[Cc]ontact)(?= for (?:a|an|your|personali[sz]ed|detailed|more|bespoke|tailored|custom|expert)\b)',
+     r'\g<v> Boat4You'),
+    (r'\b(?P<v>Trust)(?= to [a-z])', r'\g<v> Boat4You'),
+    (r'\b(?P<v>[Vv]isit)(?= to (?:browse|search|explore|find|compare|view|book|check|see|discover|reserve)\b)',
+     r'\g<v> Boat4You'),
+    (r'\b(?P<v>Choose)(?= for your\b)', r'\g<v> Boat4You'),
+    (r'\b(?P<v>Let)(?= be your\b)', r'\g<v> Boat4You'),
+    (r'\bWhy (?=(?:Stands|Sets|Excels|Shines|Leads)\b)', 'Why Boat4You '),
+    (r'\b(?P<v>Why (?:Sailors|Charterers|Guests|Families|Travell?ers|Clients|Crews) (?:Choose|Trust|Prefer|Love|Pick)) (?=for\b)',
+     r'\g<v> Boat4You '),
+    (r'\b(?P<v>[Dd]iscover why) (?=(?:has|is|stands|remains|offers|delivers|leads)\b)', r'\g<v> Boat4You '),
+    (r'(?P<v>\b(?:arranged|handled|coordinated|managed(?: transparently)?|organi[sz]ed|confirmed|processed) by)\s*(?=[.,;](?:\s|<|$))',
+     r'\g<v> Boat4You'),
+    (r'(?P<v>\b(?:booking|book|reserve|reserving|available dates|dates|options|availability) (?:via|on|through))\s*(?=\.(?:\s|<|$)|,\s+or\b)',
+     r'\g<v> Boat4You'),
+    # "<a …>Search available yachts in Andalusia</a> on." — the brand followed the link
+    (r'(?P<v></a>\s+(?:on|via|through))(?=\s*[.,](?:\s|<|$))', r'\g<v> Boat4You'),
+    (r'(?<=, )Our (?=team\b|partner network\b|partners\b)', 'our '),
+]
+_HOLE_EN_FIXES = [(re.compile(p), r) for p, r in _HOLE_EN_FIXES]
+_HOLE_EN_HEADING = re.compile(r'<h([2-4])(\b[^>]*)>\s*(Learn More About|About)\s*</h\1\s*>')
+_HOLE_EN_INTRO_RX = []
+
+
+def _hole_en_intro_rx():
+    """Sentence start, an introductory clause, a comma and a third-person verb
+    (or a modal) with no subject: "If you lack certification, arranges
+    professional skippers", "Whether …, delivers", "That said, recommends";
+    also "…with a deposit— handles all coordination". Built on first use: the
+    EN verb list is completed by seo-corpus-qa.py when it imports this
+    module."""
+    if not _HOLE_EN_INTRO_RX:
+        alt = '|'.join(sorted((re.escape(v) for v in _hole_en_verbs() | {'can', 'will', 'may'}), key=len, reverse=True))
+        adv = '|'.join(sorted(_HOLE_EN_ADVERBS, key=len, reverse=True))
+        _HOLE_EN_INTRO_RX.append(re.compile(
+            r'(?P<pre>(?:<p>|<li>|[.!?](?:["”’)]|</(?:strong|em|b)>)*\s)\s*(?:<(?:strong|em|b)>\s*)?)'
+            r'(?P<intro>(?:Whether|If|For|With|From|Beyond|When|Before|After|Since|Unlike|Upon|Once|Throughout)\b'
+            r'(?P<clause>[^.!?<>]{2,320}?)|That said),\s+'
+            r'(?P<adv>(?:' + adv + r') )?(?P<verb>' + alt + r')\b(?P<next> [^\s<]+)?'))
+        _HOLE_EN_INTRO_RX.append(re.compile(r'(?<=\w)—\s+(?P<verb>' + alt + r')\b(?= (?:all|every|each|the|your|you)\b)'))
+    return _HOLE_EN_INTRO_RX
+
+
+def _hole_en_intro(body, ctx):
+    intro_rx, dash_rx = _hole_en_intro_rx()
+
+    def sub(m):
+        intro, clause, verb = m.group('intro'), m.group('clause') or '', m.group('verb')
+        flat = re.sub(r'\([^()]*\)', '', clause)
+        if (_hole_in_tag(body, m.start('verb')) or '(' in flat or ')' in flat
+                or (',' in flat and not intro.startswith('Whether'))
+                or (verb in ('is', 'has', 'can', 'will', 'may') and not m.group('next'))):
+            return m.group(0)
+        cut = (m.start('adv') if m.group('adv') else m.start('verb')) - m.start()
+        new = m.group(0)[:cut] + 'Boat4You ' + m.group(0)[cut:]
+        ctx.record('holes', plain(m.group(0))[-90:], plain(new)[-100:])
+        return new
+
+    body = intro_rx.sub(sub, body)
+
+    def dash(m):
+        ctx.record('holes', m.group(0), f'—Boat4You {m.group("verb")}')
+        return f'—Boat4You {m.group("verb")}'
+
+    return dash_rx.sub(dash, body)
+
+
+# A writer's note left as a heading: "Call to Action", "Call to action:
+# Begin your Croatian sailing charter", "Handlungsaufforderung: …".
+_NOTE_HEADING = re.compile(
+    r"<h([2-4])(\b[^>]*)>\s*(?:Call[- ]to[- ][Aa]ction|Handlungsaufforderung|Aufruf zum Handeln|Appel à l['’][Aa]ction|"
+    r"Llamada a la [Aa]cción|Chamada para [Aa]ção|Wezwanie do działania|Poziv na akciju|Oproep tot actie|"
+    r"Invito all['’]azione)\s*(?::\s*(?P<rest>[^<]*?))?\s*</h\1\s*>")
+_NOTE_HEADING_ALONE = {
+    'en': 'Ready to Set Sail?', 'de': 'Bereit zum Ablegen?', 'fr': 'Prêt à larguer les amarres ?',
+    'it': 'Pronti a salpare?', 'es': '¿Listo para zarpar?', 'pt': 'Pronto para zarpar?', 'nl': 'Klaar om uit te varen?',
+    'pl': 'Gotowy do wypłynięcia?', 'hr': 'Spremni za isplovljavanje?'}
+# Myanmar letters the HR machine translation put between words
+# ("katamarana,ပေါjednotrupne"): always debris, so a space goes back.
+_STRAY_MYANMAR = re.compile(r'\s*[\u1000-\u109f]+\s*')
+# "Contact today to reserve …" in the translations: the object went with the
+# brand; only where a hole marker follows directly ("noch heute,", "oggi
+# stesso per"). "Neem contact op" (NL) and "Póngase en contacto" (ES) are
+# complete as they stand.
+_HOLE_IMPERATIVE = {loc: [(re.compile(p), r) for p, r in rules] for loc, rules in {
+    'de': [(r'\b(Kontaktieren Sie)(?= (?:noch )?heute(?:,| um\b| für (?:eine|ein|Ihre)\b|\.))', r'\1 Boat4You')],
+    'fr': [(r"\b([Cc]ontactez)(?= (?:dès )?aujourd['’]hui(?: pour\b|\.))", r'\1 Boat4You')],
+    'it': [(r'\b([Cc]ontatta(?:te)?)(?= oggi(?: stesso)?(?: per\b|\.))', r'\1 Boat4You')],
+    'es': [(r'\b([Cc]ont[aá]cte|[Cc]ontacta)(?= hoy(?: mismo)?(?: para\b|\.))', r'\1 con Boat4You')],
+    'pt': [(r'\b([Cc]ontacte)(?= hoje(?: mesmo)?(?: para\b|\.))', r'\1 a Boat4You')],
+    'pl': [(r'\b([Ss]kontaktuj się)(?= (?:już )?(?:dziś|dzisiaj),? aby\b)', r'\1 z Boat4You')],
+    'hr': [(r'\b([Kk]ontaktirajte)(?= danas,? kako\b)', r'\1 Boat4You')],
+}.items()}
+# "<a href=…>Boat4You</a>/search?destinations=Italy&did=c-110" — the path
+# printed as text after (or inside) the link.
+_RAW_PATH_TEXT = re.compile(r'(<a\b[^>]*>\s*Boat4You)(?:(</a>)/(?:search\?[^\s<]*?|about-us)|/(?:search\?[^\s<]*?|about-us)\s*(</a>))(?=[\s.,;<]|$)')
+
+
+def fix_holes(src, ctx):
+    head, body, tail = split_body(src)
+    loc = ctx.locale
+    body = _hole_glued(body, ctx)
+
+    def myanmar(m):
+        ctx.record('holes', m.group(0), '(stray Myanmar letters removed)')
+        return ' '
+
+    body = _STRAY_MYANMAR.sub(myanmar, body)
+
+    def note(m):
+        rest = (m.group('rest') or '').strip()
+        new = rest[:1].upper() + rest[1:] if rest else _NOTE_HEADING_ALONE[loc]
+        ctx.record('holes', plain(m.group(0)), new)
+        return f'<h{m.group(1)}{m.group(2)}>{new}</h{m.group(1)}>'
+
+    body = _NOTE_HEADING.sub(note, body)
+
+    def raw_path(m):
+        new = m.group(1) + '</a>'
+        ctx.record('holes', plain(m.group(0)), 'Boat4You (link text)')
+        return new
+
+    body = _RAW_PATH_TEXT.sub(raw_path, body)
+    for rx, repl in _HOLE_IMPERATIVE.get(loc, []):
+        def imp(m, repl=repl):
+            new = m.expand(repl)
+            ctx.record('holes', m.group(0), new)
+            return new
+        body = rx.sub(imp, body)
+    if loc != 'en':
+        return head + body + tail
+    for rx, repl in _HOLE_EN_FIXES:
+        def sub(m, repl=repl, now=body):
+            pre = now[max(0, m.start() - 14): m.start()].lower()
+            if _hole_in_tag(now, m.start()) or ('ontact' in m.group(0) and re.search(
+                    r'(?:support|first|direct|emergency|radio|daily|point of|marina|initial|main|single|key|vhf) $', pre)):
+                return m.group(0)
+            new = m.expand(repl)
+            ctx.record('holes', plain(now[max(0, m.start() - 40): m.end() + 20]), new.strip())
+            return new
+        body = rx.sub(sub, body)
+
+    def heading(m):
+        ctx.record('holes', m.group(3), f'{m.group(3)} Boat4You')
+        return f'<h{m.group(1)}{m.group(2)}>{m.group(3)} Boat4You</h{m.group(1)}>'
+
+    body = _HOLE_EN_HEADING.sub(heading, body)
+    body = _hole_en_intro(body, ctx)
+    return head + body + tail
+
+
+# Independent check (does not reuse the patterns above): shapes of a deleted
+# brand that must not come back, per locale, on the visible text.
+HOLE_DENY = {
+    'all': [r'(?<![\w./@-])[A-Za-zÀ-ž]{3,}\.(?!com\b|hr\b|net\b|org\b|eu\b)[a-zà-ž]{3,}\b(?![./@])',
+            r"\b(?:Call[- ]to[- ][Aa]ction|Handlungsaufforderung|Aufruf zum Handeln|Appel à l['’][Aa]ction|"
+            r"Llamada a la [Aa]cción|Chamada para [Aa]ção|Wezwanie do działania|Poziv na akciju)\b",
+            r'Boat4You\s*/(?:search|about)'],
+    'en': [r'\bWhy (?:Stands|Sets|Excels|Shines|Leads)\b', r'\b[Cc]ontact (?:today|now)\b',
+           r'\b[Cc]ontact (?:to (?:discuss|explore|reserve|book|arrange|plan|customi[sz]e|design|begin|select|browse)|'
+           r'for (?:a|your|personali[sz]ed|detailed|custom))\b',
+           r'\bTrust to\b', r'\bLet be\b', r'\bChoose for your\b', r'\b[Dd]iscover why (?:has|is|remains|stands)\b',
+           r'\b(?:arranged|handled|coordinated|managed) by\s*[.,;]', r'\bWhy Sailors (?:Choose|Trust) for\b',
+           r'\b(?:Whether|If you)\b[^.!?]{3,300}, (?:delivers|arranges|connects you|matches you|ensures your|has the perfect)\b'],
+    'de': [r'\bWarum Segler zu\s+zurückkehren\b', r'\bKontaktieren Sie (?:noch )?heute(?=[,.]| um\b| für (?:eine|ein|Ihre)\b)'],
+    'fr': [r'\bReviennent [Cc]hez\s*$', r'\bContactez (?:dès )?aujourd[\'’]hui(?=[,.]| pour\b)'],
+    'nl': [r'\b[Tt]erugkeren [Nn]aar\s*$'],
+    'it': [r'\bContatta(?:te)? oggi(?: stesso)?(?=[,.]| per\b)'],
+    'es': [r'\bPor [Qq]ué (?:[Ee]legir )?[Pp]ara\b'],
+    'pt': [r'\b[Rr]egressam\s*$'],
+    'pl': [r'\bwybierają (?:do|dla)\b'],
+    'hr': [r'\bZašto se ističe\b'],
+}
+
+
+FOREIGN_GLYPH = re.compile(r'[\u0900-\u09ff\u0e00-\u0e7f\u1000-\u109f]+|[A-Za-zß-ž][\u0370-\u03ff]+|[\u0370-\u03ff]+[a-zß-ž]')
+
+
+def hole_findings(body, locale):
+    out = []
+    for bm in BLOCK.finditer(body):
+        block_text = plain(bm.group(3))
+        for m in FOREIGN_GLYPH.finditer(block_text):
+            out.append(('foreign-glyph', block_text[max(0, m.start() - 60): m.end() + 60]))
+    rules = HOLE_DENY['all'] + HOLE_DENY.get(locale, [])
+    for bm in BLOCK.finditer(body):
+        block_text = plain(bm.group(3))
+        for rx in rules:
+            for m in re.finditer(rx, block_text):
+                out.append(('brand-hole', block_text[max(0, m.start() - 60): m.end() + 60]))
+    return out
 
 
 # ---------------------------------------------------------------- compass
@@ -2883,6 +3174,7 @@ def checks(src, locale, name, en_src=None):
     for h in {h for h in heads if heads.count(h) > 1 and h}:
         out.append(('dup-heading', h[:120]))
     out.extend(independent_checks(body, locale, text))
+    out.extend(hole_findings(body, locale))
     if locale != 'en' and en_src and name in RETRANSLATED:
         extra = sorted(_numbers(text) - _numbers(plain(split_body(en_src)[1])))
         if extra:
@@ -3122,6 +3414,105 @@ EDITS = [
     ('fr', _RITTER, 'Découvrez Pourquoi les Marins Font Confiance à Boat4You</h2> <p>La marina Ritter House', 'Vivez la Vraie Voile à Ritter House</h2> <p>La marina Ritter House'),
     ('it', _RITTER, 'Scoprite Perché i Velisti si Affidano a </h2> <p>La Ritter House Marina', 'Vivete la Vera Vela alla Ritter House</h2> <p>La Ritter House Marina'),
     ('hr', _ALBATROS, 'Planirajte svoj najam s nama</h2> <p>Najam jedrilice iz marine Albatros', 'Započnite jedriličarsku avanturu iz marine Albatros</h2> <p>Najam jedrilice iz marine Albatros'),
+    # N5 (audit 1.10.2026): sentences the brand pass cut short, or left with a
+    # hole no rule fills safely. Where one translation kept the whole sentence
+    # (PL piso-livadi "…przez Boat4You zapewnia najlepszy wybór łodzi i ceny",
+    # DE/FR/… italy-power "…Broker wie Boat4You unerlässlich") the others follow
+    # it. Each "old" ends at the block end, so a second run finds nothing.
+    ('en', 'catamaran-charter-dubrovnik-komolac-aci-marina-dubrovnik.html', 'operated by partners. Booking through </p>', 'operated by partners. You book them through Boat4You.</p>'),
+    ('de', 'catamaran-charter-dubrovnik-komolac-aci-marina-dubrovnik.html', 'die von Partnern betrieben werden. Die Buchung über </p>', 'die von Partnern betrieben werden. Gebucht wird über Boat4You.</p>'),
+    ('fr', 'catamaran-charter-dubrovnik-komolac-aci-marina-dubrovnik.html', 'gérées par des partenaires. La réservation via </p>', 'gérées par des partenaires. La réservation se fait via Boat4You.</p>'),
+    ('it', 'catamaran-charter-dubrovnik-komolac-aci-marina-dubrovnik.html', 'gestite da partner. La prenotazione tramite</p>', 'gestite da partner. La prenotazione avviene tramite Boat4You.</p>'),
+    ('nl', 'catamaran-charter-dubrovnik-komolac-aci-marina-dubrovnik.html', 'die door partners worden beheerd. Boeken via</p>', 'die door partners worden beheerd. Boeken gaat via Boat4You.</p>'),
+    ('pl', 'catamaran-charter-dubrovnik-komolac-aci-marina-dubrovnik.html', 'zarządzane przez partnerów. Rezerwacja przez </p>', 'zarządzane przez partnerów. Rezerwacja odbywa się przez Boat4You.</p>'),
+    ('hr', 'catamaran-charter-dubrovnik-komolac-aci-marina-dubrovnik.html', 'kojima upravljaju partneri. Rezervacija putem </p>', 'kojima upravljaju partneri. Rezervacija se obavlja putem Boat4You.</p>'),
+    ('pl', 'catamaran-charter-dubrovnik-komolac-aci-marina-dubrovnik.html', 'zaliczką – obsługuje', 'zaliczką – Boat4You obsługuje'),
+    ('en', 'piso-livadi-catamaran-charter.html', 'Early booking through </p>', 'Early booking through Boat4You secures the best choice of boats and prices.</p>'),
+    ('de', 'piso-livadi-catamaran-charter.html', 'Frühbuchungen über </p>', 'Frühbuchungen über Boat4You sichern die beste Auswahl an Booten und Preisen.</p>'),
+    ('fr', 'piso-livadi-catamaran-charter.html', 'La réservation anticipée via </p>', 'La réservation anticipée via Boat4You garantit le meilleur choix de bateaux et de prix.</p>'),
+    ('it', 'piso-livadi-catamaran-charter.html', 'La prenotazione anticipata tramite</p>', 'La prenotazione anticipata tramite Boat4You garantisce la migliore scelta di barche e prezzi.</p>'),
+    ('es', 'piso-livadi-catamaran-charter.html', 'La reserva anticipada a través de </p>', 'La reserva anticipada a través de Boat4You garantiza la mejor selección de barcos y precios.</p>'),
+    ('nl', 'piso-livadi-catamaran-charter.html', 'Vroege boeking via </p>', 'Vroeg boeken via Boat4You garandeert de beste keuze aan boten en prijzen.</p>'),
+    ('hr', 'piso-livadi-catamaran-charter.html', 'Rana rezervacija putem </p>', 'Rana rezervacija putem Boat4You osigurava najbolji izbor brodova i cijena.</p>'),
+    ('en', 'rovinj-sailing-yacht-charter.html', 'spots fill quickly in high season. Booking through </p>', 'spots fill quickly in high season. Book early through Boat4You.</p>'),
+    ('de', 'rovinj-sailing-yacht-charter.html', 'in der Hochsaison schnell belegt sind. Buchung über </p>', 'in der Hochsaison schnell belegt sind. Buchen Sie frühzeitig über Boat4You.</p>'),
+    ('fr', 'rovinj-sailing-yacht-charter.html', 'se remplissent rapidement en haute saison. La réservation via </p>', 'se remplissent rapidement en haute saison. Réservez tôt via Boat4You.</p>'),
+    ('it', 'rovinj-sailing-yacht-charter.html', 'si riempiono rapidamente in alta stagione. Prenotare tramite </p>', 'si riempiono rapidamente in alta stagione. Prenota in anticipo tramite Boat4You.</p>'),
+    ('es', 'rovinj-sailing-yacht-charter.html', 'se llenan rápidamente en temporada alta. Reservar a través de </p>', 'se llenan rápidamente en temporada alta. Reserve con antelación a través de Boat4You.</p>'),
+    ('pt', 'rovinj-sailing-yacht-charter.html', 'se esgotem rapidamente na época alta. Reservar através da </p>', 'se esgotem rapidamente na época alta. Reserve com antecedência através da Boat4You.</p>'),
+    ('nl', 'rovinj-sailing-yacht-charter.html', 'in het hoogseizoen snel vol raken. Boeken via </p>', 'in het hoogseizoen snel vol raken. Boek tijdig via Boat4You.</p>'),
+    ('pl', 'rovinj-sailing-yacht-charter.html', 'szybko się zapełniają w szczycie sezonu. Rezerwacja przez </p>', 'szybko się zapełniają w szczycie sezonu. Zarezerwuj wcześniej przez Boat4You.</p>'),
+    ('hr', 'rovinj-sailing-yacht-charter.html', 'brzo nestaju u visokoj sezoni. Rezervacija putem </p>', 'brzo nestaju u visokoj sezoni. Rezervirajte na vrijeme putem Boat4You.</p>'),
+    ('en', 'murcia-sailing-area-yacht-charter-and-boat-rental.html', '24-hour emergency support through </p>', '24-hour emergency support is available through Boat4You.</p>'),
+    ('de', 'murcia-sailing-area-yacht-charter-and-boat-rental.html', '24-Stunden-Notfallunterstützung durch </p>', '24-Stunden-Notfallunterstützung erhalten Sie über Boat4You.</p>'),
+    ('es', 'murcia-sailing-area-yacht-charter-and-boat-rental.html', 'Soporte de emergencia 24 horas a través de </p>', 'Boat4You ofrece soporte de emergencia las 24 horas.</p>'),
+    ('nl', 'murcia-sailing-area-yacht-charter-and-boat-rental.html', '24-uurs noodhulp via </p>', '24-uurs noodhulp is beschikbaar via Boat4You.</p>'),
+    ('hr', 'murcia-sailing-area-yacht-charter-and-boat-rental.html', '24-satna hitna podrška putem </p>', '24-satna hitna podrška dostupna je putem Boat4You.</p>'),
+    ('en', 'la-trinite-sur-mer-sailing-yacht-charter.html', 'company philosophy</a> to understand how </p>', 'company philosophy</a> to understand how Boat4You works.</p>'),
+    ('de', 'la-trinite-sur-mer-sailing-yacht-charter.html', 'Unternehmensphilosophie</a>, um zu verstehen, wie </p>', 'Unternehmensphilosophie</a>, um zu verstehen, wie Boat4You arbeitet.</p>'),
+    ('fr', 'la-trinite-sur-mer-sailing-yacht-charter.html', "philosophie d'entreprise</a> pour comprendre comment.</p>", "philosophie d'entreprise</a> pour comprendre comment fonctionne Boat4You.</p>"),
+    ('it', 'la-trinite-sur-mer-sailing-yacht-charter.html', 'filosofia aziendale</a> per capire come</p>', 'filosofia aziendale</a> per capire come funziona Boat4You.</p>'),
+    ('es', 'la-trinite-sur-mer-sailing-yacht-charter.html', 'filosofía de la empresa</a> para comprender cómo.</p>', 'filosofía de la empresa</a> para comprender cómo funciona Boat4You.</p>'),
+    ('pt', 'la-trinite-sur-mer-sailing-yacht-charter.html', 'filosofia da empresa</a> para compreender como</p>', 'filosofia da empresa</a> para compreender como funciona a Boat4You.</p>'),
+    ('nl', 'la-trinite-sur-mer-sailing-yacht-charter.html', 'bedrijfsfilosofie</a> om te begrijpen hoe </p>', 'bedrijfsfilosofie</a> om te begrijpen hoe Boat4You werkt.</p>'),
+    ('pl', 'la-trinite-sur-mer-sailing-yacht-charter.html', 'filozofią firmy</a>, aby zrozumieć, jak.</p>', 'filozofią firmy</a>, aby zrozumieć, jak działa Boat4You.</p>'),
+    ('hr', 'la-trinite-sur-mer-sailing-yacht-charter.html', 'filozofiju tvrtke</a> kako biste razumjeli kako </p>', 'filozofiju tvrtke</a> kako biste razumjeli kako Boat4You radi.</p>'),
+    ('en', 'italy-power-catamaran-charter.html', 'careful planning through brokers like </p>', 'careful planning through brokers like Boat4You is essential.</p>'),
+    ('en', 'catamaran-charter-marina-benitses.html', 'sailors and companies (like ) deliberately', 'sailors and companies (like Boat4You) deliberately'),
+    ('en', 'nikiti-chalkidiki-catamaran-charter.html', 'safety gear—is provided by.', 'safety gear—is provided by the charter company.'),
+    ('en', 'sailing-yacht-charter-mandraki-port.html', 'many include quality equipment provided by.', 'many boats carry good snorkelling equipment.'),
+    ('en', 'funtana-sailing-yacht-charter.html', 'should be communicated to, who can pre-load custom provisions.', 'should be communicated to Boat4You, who can arrange custom provisions.'),
+    ('en', 'motorboat-charter-ornos-bay.html', 'Ornos Bay awaits your arrival on.', 'Ornos Bay awaits your arrival.'),
+    ('en', 'motor-yacht-charter-trogir.html', 'Many <strong> charters</strong> offer', 'Many charters offer'),
+    ('en', 'virgin-islands-british-catamaran-charter.html', 'Sailing and solitude.strong>', 'Sailing and solitude.</strong>'),
+    ('en', 'greece-luxury-motor-yacht-charter.html', 'comfort and itinerary flexibility, recommends motor yachts.', 'comfort and itinerary flexibility, Boat4You recommends motor yachts.'),
+    ('en', 'tyrrhenian-sea-sailing-area-yacht-charter-and-boat-rental.html', 'less-experienced groups—facilitates all such arrangements', 'less-experienced groups—Boat4You facilitates all such arrangements'),
+    ('en', 'athens-saronic-gulf-gulet-charter.html', 'when booking; <strong> confirms chef capabilities', 'when booking; <strong>Boat4You confirms chef capabilities'),
+    ('en', 'cannigione-sailing-yacht-charter.html', 'Boat4You equips every sailing yacht with', 'Every sailing yacht carries'),
+    ('es', 'cannigione-sailing-yacht-charter.html', 'Equipa cada yate de vela con', 'Cada velero lleva'),
+    ('de', 'luxury-motor-yacht-charter-split-harbour.html', 'Sourced und koordiniert', 'Boat4You beschafft und koordiniert'),
+    ('de', 'british-virgin-islands-catamaran-charter.html', 'Entdecken Sie, warum die vertrauenswürdigste', 'Entdecken Sie, warum Boat4You die vertrauenswürdigste'),
+    ('de', 'motor-yacht-charter-athens-alimos-marina.html', 'entdecken Sie, warum bei sorgenfreier, komfortabler Erkundung der Ägäis vertraut wird', 'entdecken Sie, warum man Boat4You bei sorgenfreier, komfortabler Erkundung der Ägäis vertraut'),
+    ('de', 'cyclades-motorsailer-charter.html', 'kennt Boat4You jeden einzelnen Schiff', 'kennt Boat4You jedes einzelne Schiff'),
+    # Machine-translation debris (stray Devanagari, Bengali, Myanmar and Greek
+    # letters inside words), found while checking N5.
+    ('de', 'catalonia-sailing-area-yacht-charter-and-boat-rental.html', 'künstlerischsten und μποέμsten Form', 'künstlerischsten und unkonventionellsten Form'),
+    ('de', 'catalonia-sailing-area-yacht-charter-and-boat-rental.html', 'mit einem μποέmischen künstlerischen Erbe', 'mit einem unkonventionellen künstlerischen Erbe'),
+    ('de', 'catamaran-charter-piso-livadi-port-paros.html', 'Der Dor सुपरmarkt führt Grundnah', 'Der Dorfsupermarkt führt Grundnah'),
+    ('de', 'catamaran-charter-piso-livadi-port-paros.html', 'Der Dor सुपरmarkt führt Essentia', 'Der Dorfsupermarkt führt Essentia'),
+    ('fr', 'epirus-motor-yacht-charter.html', 'la préparation des dî সৌন্দর্য, la gestion', 'la préparation des dîners, la gestion'),
+    ('fr', 'sailing-yacht-charter-cote-d-azur-port-pin-rolland.html', 'et le त्याची (talonnage) satisfaisant que recherchent', 'et la gîte franche que recherchent'),
+    ('nl', 'catamaran-charter-bahamas-abacos-boat-harbour-marina.html', 'Aanbevolen voor पहली बार Abaco-bezoekers.', 'Aanbevolen voor wie Abaco voor het eerst bezoekt.'),
+    ('nl', 'catamaran-charter-novi.html', 'vooral voor पहली बार bezoekers.', 'vooral voor wie hier voor het eerst aanlegt.'),
+    ('nl', 'catamaran-charter-porto-montenegro.html', 'voor charters metपहली keer in de Adriatische Zee', 'voor wie voor het eerst in de Adriatische Zee chartert'),
+    ('pl', 'croatia-yacht-charter-and-boat-rental.html', 'praktykρεςowe szkolenie', 'praktyczne szkolenie'),
+    ('de', 'marina-sailing-yacht-charter.html', 'M আধীনs Lage – in einer geschützten Bucht', 'Die Lage der Marina – in einer geschützten Bucht'),
+    ('de', 'solta-catamaran-charter.html', 'Der Dor सुपरmarkt bietet', 'Der Dorfsupermarkt bietet'),
+    ('nl', 'golfo-aranci-motorboat-charter.html', 'waaronder पहली बार bootvaarders', 'waaronder beginnende bootvaarders'),
+    ('nl', 'power-catamaran-charter-bahamas-abacos-boat-harbour-marina.html', 'Ideaal voor पहली बार Abaco-bezoekers', 'Ideaal voor wie Abaco voor het eerst bezoekt'),
+    ('nl', 'sailing-yacht-charter-la-lonja-marina-charter.html', 'huren schippers voor leerd তবে, en stappen', 'huren eerst een schipper om te leren en stappen'),
+    ('hr', 'trogir-motorboat-charter.html', 'ili pečenuडेंटica (ribu zubatac)', 'ili pečenog zubaca'),
+    ('hr', 'trogir-motorboat-charter.html', 'ili pečenuडेंटica uz čašu', 'ili pečenog zubaca uz čašu'),
+    # B21 (audit 1.10.2026, static check A-RIVER): the Krka read as inland
+    # waterway cruising. Sea charter only: the river is a park to visit, the
+    # estuary a sea route up to Skradin.
+    ('en', 'sailing-yacht-charter-sibenik-marina-zaton.html', "The Krka River represents one of Europe's most scenic inland waterways.", "The Krka is one of Europe's most scenic rivers."),
+    ('de', 'sailing-yacht-charter-sibenik-marina-zaton.html', 'Der Krka-Fluss stellt eine der landschaftlich reizvollsten Binnenwasserstraßen Europas dar.', 'Die Krka ist einer der landschaftlich reizvollsten Flüsse Europas.'),
+    ('fr', 'sailing-yacht-charter-sibenik-marina-zaton.html', "La rivière Krka représente l'une des voies navigables intérieures les plus pittoresques d'Europe.", "La Krka est l'une des rivières les plus pittoresques d'Europe."),
+    ('it', 'sailing-yacht-charter-sibenik-marina-zaton.html', "Il fiume Krka rappresenta una delle vie navigabili interne più panoramiche d'Europa.", "La Krka è uno dei fiumi più suggestivi d'Europa."),
+    ('es', 'sailing-yacht-charter-sibenik-marina-zaton.html', 'El río Krka representa una de las vías fluviales interiores más pintorescas de Europa.', 'El Krka es uno de los ríos más pintorescos de Europa.'),
+    ('pt', 'sailing-yacht-charter-sibenik-marina-zaton.html', 'O rio Krka representa uma das vias navegáveis interiores mais cénicas da Europa.', 'O Krka é um dos rios mais cénicos da Europa.'),
+    ('nl', 'sailing-yacht-charter-sibenik-marina-zaton.html', "De Krka-rivier is een van Europa's meest schilderachtige binnenwateren.", 'De Krka is een van de schilderachtigste rivieren van Europa.'),
+    ('pl', 'sailing-yacht-charter-sibenik-marina-zaton.html', 'Rzeka Krka jest jednym z najbardziej malowniczych śródlądowych dróg wodnych Europy.', 'Krka to jedna z najbardziej malowniczych rzek Europy.'),
+    ('hr', 'sailing-yacht-charter-sibenik-marina-zaton.html', 'Rijeka Krka predstavlja jedan od najslikovitijih europskih unutarnjih plovnih putova.', 'Krka je jedna od najslikovitijih europskih rijeka.'),
+    ('en', 'sibenik-region-sailing-area-yacht-charter-and-boat-rental.html', 'Šibenik city marks the mouth of the Krka River, making it accessible to shallow-draft catamarans and motorboats exploring inland waterways.', 'Šibenik city sits where the Krka estuary meets the sea; yachts can follow the estuary up to Skradin.'),
+    ('de', 'sibenik-region-sailing-area-yacht-charter-and-boat-rental.html', 'Die Stadt Šibenik markiert die Mündung des Flusses Krka und ist somit für Katamarane und Motorboote mit geringem Tiefgang zugänglich, die die Binnenwasserstraßen erkunden.', 'Die Stadt Šibenik liegt dort, wo die Krka-Mündung ins Meer übergeht; Yachten können der Mündung bis Skradin folgen.'),
+    ('fr', 'sibenik-region-sailing-area-yacht-charter-and-boat-rental.html', "La ville de Šibenik marque l'embouchure de la rivière Krka, la rendant accessible aux catamarans et bateaux à moteur à faible tirant d'eau explorant les voies navigables intérieures.", "La ville de Šibenik se trouve là où l'estuaire de la Krka rejoint la mer ; les bateaux peuvent remonter l'estuaire jusqu'à Skradin."),
+    ('it', 'sibenik-region-sailing-area-yacht-charter-and-boat-rental.html', "La città di Sebenico segna la foce del fiume Cherca, rendendola accessibile a catamarani e motoscafi a basso pescaggio che esplorano i corsi d'acqua interni.", "La città di Sebenico sorge dove l'estuario della Cherca incontra il mare; le barche possono risalire l'estuario fino a Skradin."),
+    ('es', 'sibenik-region-sailing-area-yacht-charter-and-boat-rental.html', 'La ciudad de Šibenik marca la desembocadura del río Krka, lo que la hace accesible para catamaranes de calado reducido y lanchas motoras que exploran las vías fluviales interiores.', 'La ciudad de Šibenik se encuentra donde el estuario del Krka se une al mar; los barcos pueden remontar el estuario hasta Skradin.'),
+    ('pt', 'sibenik-region-sailing-area-yacht-charter-and-boat-rental.html', 'A cidade de Šibenik marca a foz do Rio Krka, tornando-a acessível a catamarãs e lanchas de calado reduzido que exploram as vias navegáveis interiores.', 'A cidade de Šibenik fica onde o estuário do Krka encontra o mar; os barcos podem subir o estuário até Skradin.'),
+    ('nl', 'sibenik-region-sailing-area-yacht-charter-and-boat-rental.html', 'De stad Šibenik markeert de monding van de rivier de Krka, waardoor deze toegankelijk is voor catamarans en motorboten met geringe diepgang die de binnenwateren verkennen.', 'De stad Šibenik ligt waar het estuarium van de Krka in zee uitmondt; boten kunnen het estuarium opvaren tot Skradin.'),
+    ('pl', 'sibenik-region-sailing-area-yacht-charter-and-boat-rental.html', 'Miasto Szybenik znajduje się u ujścia rzeki Krka, co czyni je dostępnym dla katamaranów i łodzi motorowych o niewielkim zanurzeniu, eksplorujących śródlądowe drogi wodne.', 'Miasto Szybenik leży tam, gdzie estuarium Krki łączy się z morzem; jachty mogą płynąć estuarium aż do Skradina.'),
 ]
 # Headings the brand-removal pass left dangling ("Why Sailors Return to").
 HEADING_BRAND_GAP = {

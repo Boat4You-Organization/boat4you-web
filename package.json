@@ -16,8 +16,9 @@
     "start": "next start",
     "lint:base": "pretty-quick --staged && eslint --ext .ts,.tsx ./",
     "lint:styles": "stylelint '**/*.scss' --fix",
-    "lint": "yarn lint:base --fix --cache --cache-location=./node_modules/.cache/ && yarn lint:styles && yarn check:home-hub",
+    "lint": "yarn lint:base --fix --cache --cache-location=./node_modules/.cache/ && yarn lint:styles && yarn check:home-hub && yarn check:corpus-holes --staged",
     "check:home-hub": "node scripts/check-home-hub.mjs",
+    "check:corpus-holes": "node scripts/check-corpus-holes.mjs",
     "upgrade": "yarn upgrade"
   },
   "dependencies": {

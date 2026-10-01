@@ -36,6 +36,10 @@ interface YachtPDFProps {
   baseUrl: string;
   /** Pre-formatted generation date, e.g. "10 July 2026". */
   generatedDate: string;
+  /** Page locale (next-intl, e.g. "de"): prices, lengths, tanks and the
+   *  deposit are formatted for it, one convention for every number in the
+   *  document (audit B29: the tanks and deposit were en-US, the prices hr-HR). */
+  locale: string;
 }
 
 const MONTHS = [
@@ -99,7 +103,15 @@ const YachtPDF = ({
   qrDataUrl,
   baseUrl,
   generatedDate,
+  locale,
 }: YachtPDFProps) => {
+  const num = (value: number, fractionDigits?: number): string =>
+    new Intl.NumberFormat(
+      locale,
+      fractionDigits === undefined
+        ? undefined
+        : { minimumFractionDigits: fractionDigits, maximumFractionDigits: fractionDigits }
+    ).format(value);
   const name = toTitleCase(yacht.name).toUpperCase();
   const modelLine = [yacht.model, yacht.buildYear].filter(Boolean).join('  ·  ');
   const isCrewed = Boolean(yacht.crewNumber);
@@ -118,11 +130,11 @@ const YachtPDF = ({
     : null;
 
   const priceOf = (o: YachtOfferModel): string =>
-    formatPriceWithCurrency({ clientPriceEur: o.clientPriceEur, clientPriceInfo: o.clientPriceInfo });
+    formatPriceWithCurrency({ clientPriceEur: o.clientPriceEur, clientPriceInfo: o.clientPriceInfo, locale });
 
   const stats: Array<{ value: string; unit?: string; label: string }> = [
-    { value: yacht.length ? yacht.length.toFixed(1) : '—', unit: yacht.length ? ' m' : '', label: 'LENGTH' },
-    { value: yacht.beam ? yacht.beam.toFixed(1) : '—', unit: yacht.beam ? ' m' : '', label: 'BEAM' },
+    { value: yacht.length ? num(yacht.length, 1) : '—', unit: yacht.length ? ' m' : '', label: 'LENGTH' },
+    { value: yacht.beam ? num(yacht.beam, 1) : '—', unit: yacht.beam ? ' m' : '', label: 'BEAM' },
     { value: String(guests), label: 'GUESTS' },
     { value: String(yacht.cabins), label: 'CABINS' },
     { value: String(yacht.wc), label: 'BATHROOMS' },
@@ -132,10 +144,10 @@ const YachtPDF = ({
   const specRows: Array<[string, string]> = [
     ['Model', yacht.model],
     ['Year', String(yacht.buildYear)],
-    ['Length', `${yacht.length} m`],
+    ['Length', yacht.length != null ? `${num(yacht.length)} m` : '—'],
   ];
 
-  if (yacht.beam) specRows.push(['Beam', `${yacht.beam} m`]);
+  if (yacht.beam) specRows.push(['Beam', `${num(yacht.beam)} m`]);
 
   specRows.push(['Cabins', String(yacht.cabins)], ['Berths', String(yacht.berths)], ['Bathrooms', String(yacht.wc)]);
 
@@ -153,16 +165,15 @@ const YachtPDF = ({
 
   if (yacht.enginePower) specRows.push(['Engine power', `${yacht.enginePower} HP`]);
 
-  if (yacht.fuelTank) specRows.push(['Fuel tank', `${yacht.fuelTank.toLocaleString('en-US')} L`]);
+  if (yacht.fuelTank) specRows.push(['Fuel tank', `${num(yacht.fuelTank)} L`]);
 
-  if (yacht.waterTank) specRows.push(['Water tank', `${yacht.waterTank.toLocaleString('en-US')} L`]);
+  if (yacht.waterTank) specRows.push(['Water tank', `${num(yacht.waterTank)} L`]);
 
   if (yacht.securityDeposit) {
-    const depositFmt = new Intl.NumberFormat('en-US', {
-      style: 'currency',
-      currency: yacht.depositCurrency || 'EUR',
-      maximumFractionDigits: 0,
-    }).format(yacht.securityDeposit);
+    const depositFmt = formatPriceWithCurrency({
+      clientPriceInfo: { amount: yacht.securityDeposit, currency: yacht.depositCurrency || 'EUR' },
+      locale,
+    });
 
     specRows.push(['Security deposit', depositFmt]);
   }

@@ -12,6 +12,7 @@ import ChatWidget from '@/components/ChatWidget';
 import GoogleAnalyticsConsent from '@/components/GoogleAnalyticsConsent';
 import InstallPrompt from '@/components/InstallPrompt';
 import ServiceWorkerRegister from '@/components/ServiceWorkerRegister';
+import { LINKER_SET_SNIPPET } from '@/config/crossDomainLinker';
 import { LocaleType } from '@/config/locales.config';
 import { meta } from '@/config/meta';
 import { CLIENT_NAMESPACES, pickMessages } from '@/i18n/clientMessages';
@@ -139,13 +140,15 @@ const RootLayout = async ({ children, params }: RootLayoutProps) => {
             no cookies and tracks nothing; analytics_storage follows the
             analytics choice, ad_* follows marketing. A returning visitor who
             already consented starts granted (read synchronously from the
-            consent cookie). */}
+            consent cookie). The cross-domain linker is set in the same
+            script, before gtag.js runs its first config: a visit arriving
+            from a sister site with ?_gl= keeps its GA client id and Ads click
+            (crossDomainLinker.ts). */}
         <Script
           id="gtag-consent-default"
           strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
-            __html:
-              "window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}var a='denied',m='denied';try{var c=document.cookie.match(/(?:^|; )boat4you_cookie_consent=([^;]*)/);if(c){var o=JSON.parse(decodeURIComponent(c[1]));if(o&&o.consentGiven){if(o.analytics)a='granted';if(o.marketing)m='granted';}}}catch(e){}gtag('consent','default',{analytics_storage:a,ad_storage:m,ad_user_data:m,ad_personalization:m,functionality_storage:'granted',security_storage:'granted'});",
+            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}var a='denied',m='denied';try{var c=document.cookie.match(/(?:^|; )boat4you_cookie_consent=([^;]*)/);if(c){var o=JSON.parse(decodeURIComponent(c[1]));if(o&&o.consentGiven){if(o.analytics)a='granted';if(o.marketing)m='granted';}}}catch(e){}gtag('consent','default',{analytics_storage:a,ad_storage:m,ad_user_data:m,ad_personalization:m,functionality_storage:'granted',security_storage:'granted'});${LINKER_SET_SNIPPET}`,
           }}
         />
         {/* Pre-resolve DNS + TLS to the two hosts every page fetches from

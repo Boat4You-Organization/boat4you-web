@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { pdf } from '@react-pdf/renderer';
+import { useLocale } from 'next-intl';
 import QRCode from 'qrcode';
 
 import YachtPDF from '@/components/YachtPDF/YachtPDF';
@@ -74,6 +75,7 @@ const MONTHS = [
  */
 const useYachtPdfDownload = ({ yacht, selectedOffer }: UseYachtPdfDownloadProps): UseYachtPdfDownloadPayload => {
   const [isDownloading, setIsDownloading] = React.useState(false);
+  const locale = useLocale();
 
   const downloadYachtPDF = async (): Promise<void> => {
     if (!yacht || isDownloading) return;
@@ -112,6 +114,7 @@ const useYachtPdfDownload = ({ yacht, selectedOffer }: UseYachtPdfDownloadProps)
           qrDataUrl={qrDataUrl}
           baseUrl={baseUrl}
           generatedDate={generatedDate}
+          locale={locale}
         />
       ).toBlob();
 
