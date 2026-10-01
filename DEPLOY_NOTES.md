@@ -1,5 +1,25 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-10-01 — 🔍 Review vala 2: FR PDF brojevi, web-vitals samo u GA4, `<lastmod>` iz `updatedAt`, korpus bez lažnih usluga i rupa — ⏳ NIJE DEPLOYANO (commit `da26d56f`, nadograđuje `73c4afaf`)
+
+Adversarijalni review vala 2 (`73c4afaf` / `1e52b4c4`). Samo lokalno, nije pushano.
+
+- **FR PDF broda (P2, regresija B29):** `Intl` za francuski grupira tisućice znakom U+202F, a ugrađeni Helvetica u PDF-u (WinAnsi) ga ne zna kodirati pa je ispisao `3/702 €` i `1/000 L`. Novi `src/components/YachtPDF/pdfNumber.ts` mijenja U+202F / U+2009 / U+2007 / U+200A u U+00A0 za sve brojeve, cijene i depozit. `yarn test:pdf` (5 testova); pdftotext renderiranog FR PDF-a: `3 702 €`, `1 000 L`.
+- **Web-vitals (P3):** eventi imaju `send_to` = GA4 id, pa LCP/INP/CLS više ne idu u Google Ads tag kao remarketing eventi. Callback je stabilan po GA id-u.
+- **N7 `<lastmod>`:** id-range yacht shardovi ispisuju `updatedAt` broda iz liste (backend `4d3a303`, V9_71) odmah iza `<loc>`. Bez zapisa ili sa starim jarom nema `<lastmod>`, nikad vrijeme requesta (`src/utils/static/sitemapLastmod.ts`, `yarn test:sitemap` 6 testova). **Deploy tek nakon backend jara**; do tada se ništa ne mijenja.
+- **Korpus (`public/seo-content`, 9 jezika):**
+  - **Lažne usluge neutralizirane** (subjekt je „your charter operator"/„the charter operator", nikad ime): carina za Albaniju (D-Marin Gouvia ×3), transferi (Tourlos ×2), concierge osoblje u D-Marinu, 24/7 hitna pomoć (Murcia, Taranto, Mandalina ×3, Fethiye i Greece gulet, Kos, Nassau, Athens, Campania), osiguranje (Komolac, BVI, Split west coast), partnerstvo s marinom (Palairos), „release the yacht" (Hotel Armonia), produljenje najma (San Vincenzo, Talamone, Road Town).
+  - **Superlativi maknuti:** „most trusted platform / provider / operator / broker / sailing company", „premier choice / provider", „the region's leading charter operator", „unmatched fleet quality" (11 stranica × 9 jezika).
+  - **EN rupe koje prvi prolaz nije znao:** „why has become / why is your trusted partner / why remains", „sailors choose for / trust for", „Trust for", „book again with because" (41 stranica), „us's" (20), „with us support", „Learn more about and our", „how works". Nova pravila `holes` + neovisni `HOLE_DENY`.
+  - **Prijevodi:** ~85 prijedloga ispred interpunkcije („Schiffe von , die", „par .", „fornite da .", „przez .") i prijevodi EN rupa („warum der Ihr vertrauenswürdiger Partner", „perché è il tuo partner", „Confíe en para", „con perché") — ime ili „naši partneri" vraćeni ručno. HR „Krpanje u Albaniju" → „Krstarenje".
+  - **Ostalo:** putanje iza Boat4You linka na bilo kojem jeziku („Boat4You/recherche?…", „Boat4You /how-we-work", „/o-nama"; 60 na Cannigione stranicama), Cannigione dvostruko „na Boat4You" (9 jezika), FR naslovi „Voiliers/Voileux" → „Navigateurs", DE „pro viantieren".
+  - **Zaštita:** `HOLE_DENY` i `scripts/check-corpus-holes.mjs` znaju nove oblike te po jeziku prijedlog iza kojeg je samo interpunkcija (na tekstu bez tagova, pa „an</a>." nije nalaz) i prijedlog ispred „because/weil/perché…". `check-corpus-holes --staged` sada čita index, ne radnu kopiju. `python3 scripts/seo-corpus-qa.py --check`: 0 promjena, 0 nalaza.
+- **Nije rađeno (svjesno):** proširenje `claims` prepisivanja na sve glagole usluga — korpus ima ~2.500 takvih fraza (B23, otvoreno, posebna odluka); neutralizirane su samo rizične kategorije. Filtriranje localhost pingova u GA4 je postavka u GA4 adminu (filter po hostnameu), ne kod.
+
+**Provjere:** `tsc` čist; eslint i prettier čisti na promijenjenom kodu; `yarn test:pdf` 5/5, `yarn test:sitemap` 6/6; `check-corpus-holes` OK (12.789 datoteka, cijeli korpus i `--staged`). Build nije rađen (mala promjena koda; tsc + testovi).
+
+**Deploy:** standardni b4y (`reference_boat4you_web_manual_deploy`). Korpus je u `public/`, pa ide s buildom. `<lastmod>` se pojavi tek nakon backend jara i prvog yacht synca.
+
 ## 2026-10-01 — ✍️ SEO korpus: vraćen „Boat4You" u rečenice (N5) · 🔗 `_gl` sa 6 sistera (N6) · 📈 INP/LCP/CLS u GA4 (E5) · 🧾 PDF brojevi po jeziku (B29) — ⏳ NIJE DEPLOYANO
 
 Codex audit 1.10., val 2 (`codexverify/full_review.md`: N5, N6, N7, E5, B21, B29). Commit `73c4afaf`, samo lokalno,
