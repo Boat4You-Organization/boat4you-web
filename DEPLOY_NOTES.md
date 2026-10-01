@@ -1,5 +1,98 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-10-01 — 🔒 Next.js 16.1.1 → 16.3.8 (sigurnosno izdanje 30.9.) + deploy sada mijenja i `node_modules` na cusma1 — ⏳ NIJE DEPLOYANO (commit `138ede62`)
+
+Codex audit F3 (`codexverify/next.md`). Na 16.1.1 je b4y imao objavljene DoS ranjivosti u Server Components i Server Actions (visoko), zaobilaženje proxyja, request smuggling u rewriteovima i trovanje ISR cachea kod `[locale]/[...rest]`. Zakrpa postoji samo u 16.3.8; zakrpanih 16.1.x ni 16.2.x nema. Samo lokalno, nije pushano.
+
+- **Verzije:** `next`, `@next/third-parties` i `@next/bundle-analyzer` na točno `16.3.8`. `yarn.lock` mijenja samo `next`, `@next/*`, `@swc/helpers`, `postcss`, `sharp` 0.35 (opcionalan, ne koristi se jer je loader custom), `baseline-browser-mapping`, `nanoid`, `semver` i `source-map-js`.
+- **`eslint-config-next` ostaje na 15.5.x.** Verzija 16.x je samo flat config i traži ESLint ≥ 9, a b4y je na ESLint 8 + `.eslintrc` + airbnb (airbnb ne podržava ESLint 9). Migracija lint stacka je zaseban posao i ne utječe na runtime.
+- **`next.config.js`:**
+  - `experimental.turbopackFileSystemCacheForBuild: false`. Ključ je provjeren u `config-shared.js` 16.3.8, gdje je zadana vrijednost `true`. Inače bi `.next/cache/turbopack` išao u deploy tar.
+  - `cpus`, `staticGenerationMaxConcurrency` i `staticGenerationRetryCount` u 16.3.8 i dalje postoje (`config-schema`) i ostaju.
+- **Regresija nađena u smoke testu i popravljena (deployment id):**
+  - 16.3 uz `deploymentId` u `.next/BUILD_ID` piše konstantu `build-TfctsWXpff2fKS` i ignorira `generateBuildId`.
+  - Config je id za runtime čitao iz `BUILD_ID`. Zato su dinamički renderi miješali dva id-a: na `/search` je bilo 751× pravi `dpl=` i 90× `dpl=build-Tfcts…`. Klijent bi svaki RSC odgovor s tuđim id-om shvatio kao drugi deployment i klijentsku navigaciju pretvorio u full page load.
+  - Sada se id čita iz `.next/required-server-files.json` (`config.deploymentId`). Isto polje postoji i u 16.1.1 buildovima (provjereno na cusma1 `.next` i `.next.prev`), pa novi config radi i nakon rollbacka. `generateBuildId` je maknut.
+  - **Marker builda je deployment id, ne `BUILD_ID`.** Deploy skripte su prilagođene.
+
+**Provjere:**
+
+- `tsc` 0 grešaka.
+- eslint 0 grešaka (18 starih warninga). Generirani `messages/*.d.json.ts` su izuzeti jer su ignorirani u gitu, a `yarn lint --fix` ih ionako prepravi.
+- prettier čist; husky `yarn lint` prošao.
+- Build pod lockom, prod API, `cpus=1`: 106–116 s (16.1.1: 118 s). `.next` ima 146 MB, od toga cache 4,3 MB (samo fetch-cache, bez turbopacka); tar je 39 MB. Tablica ruta je identična 16.1.1 buildu.
+
+**Smoke test** (`next start` :3162, curl + headless Chrome, sekvencijalno):
+
+- **Curl:**
+  - Početna EN/DE 200. Cookie `NEXT_LOCALE=de` na `/` daje 307 na `/de` s `Vary: Cookie, Accept-Language` i `private`.
+  - Brod 200 (title, canonical, 10 hreflang, JSON-LD Product + Breadcrumb + FAQ). Krivi slug daje 308 (i s `/de` i query).
+  - `/fleet` i `/fleet/2` 200 (canonical `/fleet/2`). `/deals/early-booking` 200 s bannerom.
+  - `/search` s filterima 200 (ItemList). Terms 200 (noindex).
+  - `sitemap.xml`, shard `/sitemap-yachts/0/yacht.xml` (6.705 `<url>`) i `robots.txt` 200.
+  - 404 URL i nepostojeći brod daju 404 (noindex).
+  - `/_next/image?url=…&w=640&q=75` daje 404 (dva URL-a).
+  - `/my-profile` bez prijave daje 307 i završi na `/`.
+  - `/pdf-image/94856?width=800` 200 `image/webp`. `/llms.txt` i `/api/me` 200.
+- **Chrome:**
+  - Nema hidracijskih upozorenja ni iznimaka.
+  - Link hub: 12 tabova, 140 linkova. Promo banner na početnoj, DE početnoj i deals stranici.
+  - Klik na banner (`<Link>`) je soft navigacija: isti dokument, RSC 200, isti deployment id u zahtjevu i odgovoru. Svih oko 25 RSC prefetcha po stranici je 200.
+  - Server akcije kalendara broda daju 200 `text/x-component`.
+  - Upitna forma: prazan submit daje 5 × „Required”. Nijedan POST nije poslan (Fetch interceptor bi ga srušio).
+  - `?currency=USD` prikazuje cijene u $.
+- **Produkcijski Origin u Chromeu (samo lokalno):** API i Bunny origin odbijaju `Origin: localhost` (CORS, „Invalid CORS request” na cache MISS za `/pdf-image`). Zato je Chrome test pušten i s Originom prepisanim na www i bez CORS provjere. Tada:
+  - Kalendar dostupnosti se učita.
+  - Klik na tjedan, pa „Reserve”, je soft navigacija na `/enter-your-details` s formom (ništa nije poslano).
+  - PDF broda se preuzme (464 KB, 5 × `/pdf-image` 200).
+- **Usporedba s live (16.1.1):**
+  - JSON-LD početne i broda identičan po svim listovima (111 i 177).
+  - Struktura bodyja identična (linkovi, H2/H3, slike, sekcije, gumbi, tekst).
+  - Response headeri isti.
+  - U `<head>` su 2 async chunk skripte više (drugačiji bundling). Lokalno nema GA preloada jer build nema GAID.
+  - `/fleet/2` lokalno nema CSS preload u `Link` headeru. To je kozmetika.
+- **Stripe nije testiran do checkouta.** `/payment` traži rezervaciju kreiranu na produkcijskom API-ju, a to bi bio submit. Stripe.js se učitava na `/enter-your-details` i `/payment`.
+- **Postojeće, nije regresija:**
+  - 404 stranica u Chromeu nakon hidracije nosi naslov početne. Isto je na live.
+  - Upozorenja „CSS preloaded but not used” javljaju se u istom broju kao na live.
+  - `/payment` sa spremljenom rezervacijom, a bez `reservationId`: 16.3 preusmjeri na `/`, ali `previewPaymentPhases` iz `Booking.tsx` (zove se i kad se preusmjerava) ode na `/` i u konzoli javi `UnrecognizedActionError`. Live 16.1.1 u istom slučaju baci „Connection closed” i ne preusmjeri. Korisnik završi na `/`.
+- **Nije dirano:** `next dev` (pisao bi `AGENTS.md`) nije pokretan. `next-env.d.ts` je i prije bio izmijenjen u radnoj kopiji (build ga generira; 16.3 dodaje `root-params.d.ts`) i nije commitan.
+
+**Deploy (NOVI recept, `infra/deploy-scripts`, backupi `*.bak-1-10`):** prije se na cusma1 slao samo `.next` (+ config, messages, public), a `node_modules` je ostajao iz kolovoza. Build sa 16.3.8 bi se tako vrtio na runtimeu 16.1.1. Sada:
+
+1. **Lokalno (2b):** `node_modules/next` mora biti verzija iz `yarn.lock`, inače ABORT prije slanja. `package.json` i `yarn.lock` idu u runtime tar.
+2. **Na serveru, dok nextapp radi:** ako se `package.json` ili `yarn.lock` razlikuju od živih, ili živi `node_modules/next` nije verzija builda:
+   - provjera da je slobodno ≥ 4 GB i da je stage na istom filesystemu;
+   - `sudo -u cusma1 HUSKY=0 timeout 1800 nice -n 19 ionice -c2 -n7 yarn install --frozen-lockfile --production=false --network-concurrency 4 --child-concurrency 1` u `/home/cusma1/nextapp_nm_stage` (vlastiti yarn cache u stageu, briše se);
+   - provjere: verzija `next` jednaka buildu, postoji `.bin/next`, `require('next/dist/server/next')` prolazi;
+   - config test s tim `node_modules`.
+
+   Svaki neuspjeh do ovdje je ABORT, a živo ostaje netaknuto (`.next`, `node_modules`, config, messages).
+
+3. **Prozor (samo preimenovanja):** stop → `.next` → `.next.prev` → `node_modules` → `node_modules.prev` → staged unutra → `package.json.prev` i `yarn.lock.prev` → start. Neuspjeh unutar prozora vraća staro i ponovno starta.
+   - `.next.prev` i stari `node_modules.prev` brišu se prije stopa, pa je downtime kraći.
+   - Na kraju se provjeri `next-server (v16.3.8)` u `ps` i ispiše rollback naredba.
+   - Deployment id se ispiše za staged i live, a u koraku 5 broji se `dpl=<id>` na živom `/contact-us` (mora biti > 0).
+   - Bez promjene ovisnosti tok je isti kao prije.
+4. **Dry run** u Docker kontejneru (Debian, node 24, lažni systemctl):
+   - instalacija 952 MB za oko 65 s, swap, `next-server (v16.3.8)`, deployment id u HTML-u;
+   - drugi deploy bez instalacije;
+   - ABORT (živo netaknuto) na lockfileu koji ne odgovara, na krivoj verziji i na pokvarenom configu;
+   - ispisani rollback radi.
+
+   Na cusma1 (2 jezgre) instalacija će trajati nekoliko minuta i odvija se prije stopa.
+
+**Nakon deploya:**
+
+- `ps` mora pokazati `next-server (v16.3.8)`, a `dpl=<deployment id>` mora biti na živom HTML-u.
+- Smoke: soft navigacija, server akcije kalendara, PDF.
+- Deploy izvan sync prozora.
+
+**Rollback:**
+
+- **(a) Brzi**, dok je `.next.prev` prethodnik ovog deploya: naredbu ispiše skripta. Stop, vrate se `.next.prev`, `node_modules.prev`, `package.json.prev`, `yarn.lock.prev` i `next.config.js.prev`, `DEPLOYED_COMMIT`, start. Novi `next.config.js` radi i na 16.1.1.
+- **(b) Uvijek:** `git revert 138ede62`, `HUSKY=0 yarn install`, rebuild i standardni deploy. Tail sam vidi drugačiji `yarn.lock` i instalira staru verziju u stage. `node_modules.prev` se čuva.
+
 ## 2026-10-01 — 🔍 Review vala 2: FR PDF brojevi, web-vitals samo u GA4, `<lastmod>` iz `updatedAt`, korpus bez lažnih usluga i rupa — ⏳ NIJE DEPLOYANO (commit `da26d56f`, nadograđuje `73c4afaf`)
 
 Adversarijalni review vala 2 (`73c4afaf` / `1e52b4c4`). Samo lokalno, nije pushano.
