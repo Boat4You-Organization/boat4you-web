@@ -1,5 +1,19 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-10-01 — 📱 Mobitel: nema više zumiranja kad se dotakne polje — ✅ DEPLOYED
+
+Mario 1.10. (screenshot, filteri na /search): „kada se na mobitelu traži filter, onda radi zum… ne smije biti zumiranja".
+iOS Safari sam zumira stranicu kad polje ima font < 16 px; nakon toga klijent teško vraća pravu veličinu.
+Commit `bcc59495`, BUILD_ID `bcc59495e3ce-mup71x3r`, rollback `.next.prev` = `a52960d9` build.
+
+- `src/styles/globals/_base.scss`: samo na zaslonima na dodir (`(hover: none) and (pointer: coarse)`) `input`/`textarea`/
+  `select` dobivaju `font-size: max(16px, 1em) !important`. Izuzeti: checkbox/radio/range/file/hidden i Tailwind
+  `text-[…]` polja. Pinch-zoom ostaje (nismo dirali `viewport`, pristupačnost).
+- **Mjereno uživo (iPhone UA, touch, 390×844):** naslovnica, /search, filteri, stranica broda, kontakt → 0 polja ispod 16 px
+  (prije 13/14 px). **Desktop (1440, miš):** nepromijenjeno, polja filtera ostaju 13 px.
+- **Deploy:** `infra/deploy-scripts/b4y_web_deploy.sh` → zagrijavanje 139/139 OK, SEO regresija bez novih grešaka.
+- Isto pravilo na svih 6 sistera (isti dan).
+
 ## 2026-10-01 — 🔎 Mobilna tražilica: promjena samo datuma + brz kalendar — ✅ DEPLOYED
 
 Mario 1.10. (screenshot, /search na mobitelu): „stavim datum i vrstu plovila, a kad idem promijeniti samo datum, ne mogu,
