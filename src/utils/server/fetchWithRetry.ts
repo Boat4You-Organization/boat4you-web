@@ -10,7 +10,9 @@
  * When every attempt fails it throws ApiUnavailableError.
  *
  * A caller's `signal` is the deadline of the whole call, retries and
- * backoff included (a hung backend is not retried past it).
+ * backoff included (a hung backend is not retried past it). A caller can
+ * pass its own backoff list — `[]` is one attempt, no retry (an optional
+ * page part that must not hold the page while the backend sheds load).
  *
  * No `server-only`: fetchYachts (services/yacht.service.ts) also runs in the
  * browser, and a node test imports this file directly.
@@ -24,10 +26,10 @@ export class ApiUnavailableError extends Error {
   /** Last HTTP status, or null when the last attempt got no response. */
   readonly status: number | null;
 
-  constructor(url: string, status: number | null, cause?: unknown) {
+  constructor(url: string, status: number | null, cause?: unknown, retries: number = RETRY_DELAYS_MS.length) {
     const answer = status ? `HTTP ${status}` : 'no response';
 
-    super(`${url.replace(/\?.*$/, '')}: ${answer} after ${RETRY_DELAYS_MS.length} retries`, { cause });
+    super(`${url.replace(/\?.*$/, '')}: ${answer} after ${retries} retries`, { cause });
     this.name = 'ApiUnavailableError';
     this.status = status;
   }
@@ -50,15 +52,19 @@ const backoff = (ms: number, signal?: AbortSignal | null): Promise<void> =>
     );
   });
 
-// eslint-disable-next-line no-undef -- DOM type, not a runtime global the rule knows
-export async function fetchWithRetry(url: string, init: RequestInit = {}): Promise<Response> {
+export async function fetchWithRetry(
+  url: string,
+  // eslint-disable-next-line no-undef -- DOM type, not a runtime global the rule knows
+  init: RequestInit = {},
+  retryDelaysMs: readonly number[] = RETRY_DELAYS_MS
+): Promise<Response> {
   let status: number | null = null;
   let cause: unknown;
 
-  for (let attempt = 0; attempt <= RETRY_DELAYS_MS.length; attempt += 1) {
+  for (let attempt = 0; attempt <= retryDelaysMs.length; attempt += 1) {
     // Sequential by design: each retry waits for the previous answer.
     // eslint-disable-next-line no-await-in-loop
-    if (attempt > 0) await backoff(RETRY_DELAYS_MS[attempt - 1], init.signal);
+    if (attempt > 0) await backoff(retryDelaysMs[attempt - 1], init.signal);
 
     try {
       // A retry always carries a signal: Next memoises signal-less GETs for
@@ -83,5 +89,5 @@ export async function fetchWithRetry(url: string, init: RequestInit = {}): Promi
     }
   }
 
-  throw new ApiUnavailableError(url, status, cause);
+  throw new ApiUnavailableError(url, status, cause, retryDelaysMs.length);
 }

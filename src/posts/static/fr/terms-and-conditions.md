@@ -640,16 +640,18 @@ réservation** (souvent indiquée dans l'Annonce ou la confirmation), car
 ces conditions s'appliqueront en plus des directives générales ci-dessous.
 
 **7.1. Annulation par le Client (Vous) :** Si vous devez annuler une
-réservation confirmée, les règles générales suivantes s'appliquent :
+réservation, les règles suivantes s'appliquent :
 
 - **Annulation Gratuite dans les 72 Heures :** Toute réservation
   effectuée sur la Plateforme peut être annulée gratuitement dans les
-  72 heures suivant le moment où elle a été effectuée, sans avoir à en
-  indiquer le motif. Boat4You vous rembourse alors l'intégralité du
-  montant que vous avez payé pour cette réservation, y compris les frais
-  de service Boat4You ainsi que les éventuels frais de traitement du
-  paiement et frais bancaires. Passé ce délai de 72 heures, les
-  conditions d'annulation habituelles décrites ci-dessous s'appliquent.
+  72 heures suivant le moment où elle a été effectuée, et au plus tard
+  avant le début de la location, sans avoir à en indiquer le motif.
+  Boat4You vous rembourse alors l'intégralité du montant que vous avez
+  payé pour cette réservation, y compris les frais de service Boat4You
+  ainsi que les éventuels frais de paiement par carte ou par virement
+  facturés par Boat4You ; Boat4You prend également en charge les frais du
+  virement de remboursement. Passé ce délai de 72 heures, les conditions
+  d'annulation habituelles décrites ci-dessous s'appliquent.
 - **Politique d'Annulation :** Chaque Fournisseur de Yacht peut définir
   ses propres conditions d'annulation (par exemple, Flexible, Modérée,
   Stricte). Ces politiques décrivent le remboursement (le cas échéant)

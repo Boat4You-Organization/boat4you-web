@@ -18,6 +18,15 @@ import { fetchYachts } from '@/services/yacht.service';
 const M_PER_FT = 0.3048;
 const TOLERANCE_FT = 5;
 
+/**
+ * One attempt, at most 2 s (review of audit 1.10.2026): the pool is a
+ * /public/yachts listing, which the backend sheds with 503 + Retry-After when
+ * its listing slots are busy (after up to 1.5 s in its queue). With the usual
+ * retries that held every boat page ~9.5 s before rendering it without this
+ * section anyway — an optional block never delays the page by more than 2 s.
+ */
+const RELATED_DEADLINE_MS = 2_000;
+
 const yachtLengthFt = (info: MeasurementInfo | null | undefined, metric: number | null | undefined): number | null => {
   if (info && info.unit === MeasurementUnit.FEET && Number.isFinite(info.amount)) return info.amount;
 
@@ -47,7 +56,8 @@ const RelatedBoats = async ({ yacht, user, locale, currency }: RelatedBoatsProps
   const { content: pool = [] } = await fetchYachts(
     { locations: [], did: [String(marinaDid)], size: 12, priceBasis: 'week' },
     currency,
-    locale
+    locale,
+    { singleAttemptMs: RELATED_DEADLINE_MS }
   ).catch(() => ({ content: [] as YachtModelShortInfo[] }));
 
   const currentLenFt = yachtLengthFt(yacht.lengthInfo, yacht.length);

@@ -37,6 +37,13 @@ export interface FetchYachtsOptions {
    * landingFetchRevalidate in src/utils/server/searchLanding.ts.
    */
   revalidate?: number;
+  /**
+   * One attempt with this deadline (ms), no retry: for an optional page part
+   * (the boat page's RelatedBoats) that must not hold the page while the
+   * backend sheds listing requests with 503 + Retry-After (heavy-query gate,
+   * audit 1.10.2026). Omitted = the usual retries (0.5 s, 1 s, 2 s).
+   */
+  singleAttemptMs?: number;
 }
 
 /**
@@ -87,21 +94,27 @@ export async function fetchYachts(
   // filtered searches (no-store) still ask the backend in the visitor's locale.
   const sharedAcrossLocales = !!options.revalidate;
 
-  // A 5xx / 429 / network error is retried (0.5 s, 1 s, 2 s) before it throws.
-  const response = await fetchWithRetry(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/yachts${queryParams}`, {
-    // Yacht catalogue + offer state changes constantly (partner sync,
-    // dual-source dedup, manual price overrides). Cached SSR responses
-    // make the search page lag behind reality (e.g. a freshly-mapped
-    // Sardinia marina taking up to an hour to surface), so by default go to
-    // the backend; the backend itself has its own short-window cache for
-    // the expensive joins. The caller opts into a short Data Cache window
-    // for the undated landing pages only (options.revalidate).
-    ...(options.revalidate ? { next: { revalidate: options.revalidate } } : { cache: 'no-store' as const }),
-    headers: {
-      'Accept-Language': sharedAcrossLocales ? 'en' : locale,
-      'Content-Type': 'application/json',
+  // A 5xx / 429 / network error is retried (0.5 s, 1 s, 2 s) before it throws
+  // — unless the caller asked for a single attempt (options.singleAttemptMs).
+  const response = await fetchWithRetry(
+    `${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/yachts${queryParams}`,
+    {
+      // Yacht catalogue + offer state changes constantly (partner sync,
+      // dual-source dedup, manual price overrides). Cached SSR responses
+      // make the search page lag behind reality (e.g. a freshly-mapped
+      // Sardinia marina taking up to an hour to surface), so by default go to
+      // the backend; the backend itself has its own short-window cache for
+      // the expensive joins. The caller opts into a short Data Cache window
+      // for the undated landing pages only (options.revalidate).
+      ...(options.revalidate ? { next: { revalidate: options.revalidate } } : { cache: 'no-store' as const }),
+      headers: {
+        'Accept-Language': sharedAcrossLocales ? 'en' : locale,
+        'Content-Type': 'application/json',
+      },
+      ...(options.singleAttemptMs && { signal: AbortSignal.timeout(options.singleAttemptMs) }),
     },
-  });
+    options.singleAttemptMs ? [] : undefined
+  );
 
   // Throws on HTTP/network failure (no more silent `{ content: [] }`): the
   // sitemaps answer 503 so GSC retries; listing callers catch and fall back.

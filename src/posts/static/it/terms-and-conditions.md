@@ -593,14 +593,16 @@ prenotazione** (spesso indicata nell'Annuncio o nella conferma), poiché tali
 termini si applicheranno in aggiunta alle linee guida generali di seguito.
 
 **7.1. Cancellazione da Parte del Cliente (Tu):** Se devi annullare una
-prenotazione confermata, si applica generalmente quanto segue:
+prenotazione, si applica quanto segue:
 
 - **Cancellazione Gratuita entro 72 Ore:** Qualsiasi prenotazione
   effettuata sulla Piattaforma può essere annullata gratuitamente entro
-  72 ore dal momento in cui è stata effettuata, senza dover indicare alcun
-  motivo. In tal caso Boat4You ti rimborsa l'intero importo che hai pagato
-  per quella prenotazione, inclusa la commissione di servizio Boat4You ed
-  eventuali commissioni di elaborazione del pagamento e spese bancarie.
+  72 ore dal momento in cui è stata effettuata, e comunque non oltre
+  l'inizio del charter, senza dover indicare alcun motivo. In tal caso
+  Boat4You ti rimborsa l'intero importo che hai pagato per quella
+  prenotazione, inclusa la commissione di servizio Boat4You ed eventuali
+  maggiorazioni per il pagamento con carta o bonifico addebitate da
+  Boat4You; il costo del bonifico di rimborso è a carico di Boat4You.
   Trascorse queste 72 ore, si applicano le normali condizioni di
   cancellazione descritte di seguito.
 - **Politica di Cancellazione:** Ogni Fornitore di Yacht può stabilire i

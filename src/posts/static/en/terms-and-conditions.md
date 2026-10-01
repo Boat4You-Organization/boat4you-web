@@ -545,15 +545,17 @@ specific cancellation policy for your yacht charter during the booking
 process** (often stated in the Listing or confirmation), as those terms
 will apply in addition to the general guidelines below.
 
-**7.1. Cancellation by Client (You):** If you need to cancel a confirmed
-booking, the following generally applies:
+**7.1. Cancellation by Client (You):** If you need to cancel a booking,
+the following applies:
 
 - **72-Hour Free Cancellation:** Any booking made on the Platform can be
-  cancelled free of charge within 72 hours of the moment it was made,
-  without giving a reason. Boat4You then refunds the full amount you have
-  paid for that booking, including the Boat4You service fee and any
-  payment processing and bank fees. After these 72 hours, the regular
-  cancellation terms described below apply.
+  cancelled free of charge within 72 hours of the moment it was made, but
+  no later than the start of the charter, without giving a reason.
+  Boat4You then refunds the full amount you have paid for that booking,
+  including the Boat4You service fee and any card or bank-transfer
+  surcharge charged by Boat4You; Boat4You also bears the cost of the
+  refund transfer. After these 72 hours, the regular cancellation terms
+  described below apply.
 - **Cancellation Policy:** Each Yacht Provider may set their own
   cancellation terms (e.g., Flexible, Moderate, Strict). These policies
   outline what refund (if any) you are entitled to based on how far in
