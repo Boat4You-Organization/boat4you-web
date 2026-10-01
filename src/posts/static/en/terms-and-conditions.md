@@ -507,11 +507,13 @@ per Section 7 or other cases) will be processed by Boat4You back to the
 original payment method whenever possible. The timing of refunds can
 vary depending on your bank or card issuer (typically 5-10 business days
 for cards). Boat4You's service fees (if charged) may be non-refundable,
-except in cases of provider cancellation or error (we will clarify this
-in Section 7). We will communicate with you regarding any refund
+except within the 72-hour free cancellation window (Section 7.1) and in
+cases of provider cancellation or error (we will clarify this in
+Section 7). We will communicate with you regarding any refund
 transaction. If you paid via bank transfer, we'll arrange a return
 transfer; you might need to provide bank details and note that bank fees
-(if any) are your responsibility.
+(if any) are your responsibility, except within the 72-hour free
+cancellation window (Section 7.1).
 
 **6.10. Late or Failed Payments:** If your payment method is declined or
 a scheduled payment fails:
@@ -546,6 +548,12 @@ will apply in addition to the general guidelines below.
 **7.1. Cancellation by Client (You):** If you need to cancel a confirmed
 booking, the following generally applies:
 
+- **72-Hour Free Cancellation:** Any booking made on the Platform can be
+  cancelled free of charge within 72 hours of the moment it was made,
+  without giving a reason. Boat4You then refunds the full amount you have
+  paid for that booking, including the Boat4You service fee and any
+  payment processing and bank fees. After these 72 hours, the regular
+  cancellation terms described below apply.
 - **Cancellation Policy:** Each Yacht Provider may set their own
   cancellation terms (e.g., Flexible, Moderate, Strict). These policies
   outline what refund (if any) you are entitled to based on how far in
@@ -555,8 +563,9 @@ booking, the following generally applies:
   days." Boat4You will display or include the applicable cancellation
   policy at the time of booking and in your confirmation.
 - **Boat4You Service Fee:** In many cases, the Boat4You service fee (if
-  a separate fee was charged) is **non-refundable** if you cancel,
-  because it covers the services already rendered by our Platform.
+  a separate fee was charged) is **non-refundable** if you cancel (except
+  within the 72-hour free cancellation window above), because it covers
+  the services already rendered by our Platform.
   However, if you cancel far in advance, we may refund the service fee
   at our discretion or if required by the specific promotion terms.
 - **Process:** To cancel, you should use the Platform's cancellation

@@ -596,12 +596,14 @@ chaque fois que cela est possible. Le délai de remboursement peut varier
 en fonction de votre banque ou de l'émetteur de votre carte
 (généralement 5 à 10 jours ouvrables pour les cartes). Les frais de
 service de Boat4You (s'ils sont facturés) peuvent être
-non-remboursables, sauf en cas d'annulation ou d'erreur du fournisseur
-(nous clarifierons cela dans la Section 7). Nous communiquerons avec
-vous concernant toute transaction de remboursement. Si vous avez payé par
+non-remboursables, sauf en cas d'annulation gratuite dans les 72 heures
+(Section 7.1) et en cas d'annulation ou d'erreur du fournisseur (nous
+clarifierons cela dans la Section 7). Nous communiquerons avec vous
+concernant toute transaction de remboursement. Si vous avez payé par
 virement bancaire, nous organiserons un virement de retour ; vous
 pourriez avoir besoin de fournir des détails bancaires et noter que les
-frais bancaires (le cas échéant) sont de votre responsabilité.
+frais bancaires (le cas échéant) sont de votre responsabilité, sauf en
+cas d'annulation gratuite dans les 72 heures (Section 7.1).
 
 **6.10. Paiements en Retard ou Échec de Paiement :** Si votre mode de
 paiement est refusé ou si un paiement prévu échoue :
@@ -640,6 +642,14 @@ ces conditions s'appliqueront en plus des directives générales ci-dessous.
 **7.1. Annulation par le Client (Vous) :** Si vous devez annuler une
 réservation confirmée, les règles générales suivantes s'appliquent :
 
+- **Annulation Gratuite dans les 72 Heures :** Toute réservation
+  effectuée sur la Plateforme peut être annulée gratuitement dans les
+  72 heures suivant le moment où elle a été effectuée, sans avoir à en
+  indiquer le motif. Boat4You vous rembourse alors l'intégralité du
+  montant que vous avez payé pour cette réservation, y compris les frais
+  de service Boat4You ainsi que les éventuels frais de traitement du
+  paiement et frais bancaires. Passé ce délai de 72 heures, les
+  conditions d'annulation habituelles décrites ci-dessous s'appliquent.
 - **Politique d'Annulation :** Chaque Fournisseur de Yacht peut définir
   ses propres conditions d'annulation (par exemple, Flexible, Modérée,
   Stricte). Ces politiques décrivent le remboursement (le cas échéant)
@@ -652,7 +662,8 @@ réservation confirmée, les règles générales suivantes s'appliquent :
   réservation et dans votre confirmation.
 - **Frais de Service Boat4You :** Dans de nombreux cas, les frais de
   service Boat4You (si des frais distincts ont été facturés) sont
-  **non-remboursables** si vous annulez, car ils couvrent les services
+  **non-remboursables** si vous annulez (sauf dans le délai d'annulation
+  gratuite de 72 heures indiqué ci-dessus), car ils couvrent les services
   déjà rendus par notre Plateforme. Cependant, si vous annulez
   suffisamment à l'avance, nous pourrions rembourser les frais de service
   à notre discrétion ou si les conditions de la promotion spécifique

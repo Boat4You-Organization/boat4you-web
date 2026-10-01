@@ -553,11 +553,13 @@ Sezione 7 o altri casi) saranno elaborati da Boat4You di nuovo al metodo di
 pagamento originale, ove possibile. La tempistica dei rimborsi può variare a
 seconda della tua banca o dell'emittente della carta (in genere 5-10 giorni
 lavorativi per le carte). Le commissioni di servizio Boat4You (se addebitate)
-possono non essere rimborsabili, tranne in caso di cancellazione o errore del
-fornitore (chiariremo questo nella Sezione 7). Comunicheremo con te in merito
-a qualsiasi transazione di rimborso. Se hai pagato tramite bonifico bancario,
-organizzeremo un bonifico di ritorno; potresti dover fornire i dettagli bancari
-e notare che le commissioni bancarie (se presenti) sono a tuo carico.
+possono non essere rimborsabili, tranne in caso di cancellazione gratuita entro
+72 ore (Sezione 7.1) e in caso di cancellazione o errore del fornitore
+(chiariremo questo nella Sezione 7). Comunicheremo con te in merito a qualsiasi
+transazione di rimborso. Se hai pagato tramite bonifico bancario, organizzeremo
+un bonifico di ritorno; potresti dover fornire i dettagli bancari e notare che
+le commissioni bancarie (se presenti) sono a tuo carico, tranne in caso di
+cancellazione gratuita entro 72 ore (Sezione 7.1).
 
 **6.10. Pagamenti in Ritardo o Falliti:** Se il tuo metodo di pagamento viene
 rifiutato o un pagamento programmato fallisce:
@@ -593,6 +595,14 @@ termini si applicheranno in aggiunta alle linee guida generali di seguito.
 **7.1. Cancellazione da Parte del Cliente (Tu):** Se devi annullare una
 prenotazione confermata, si applica generalmente quanto segue:
 
+- **Cancellazione Gratuita entro 72 Ore:** Qualsiasi prenotazione
+  effettuata sulla Piattaforma può essere annullata gratuitamente entro
+  72 ore dal momento in cui è stata effettuata, senza dover indicare alcun
+  motivo. In tal caso Boat4You ti rimborsa l'intero importo che hai pagato
+  per quella prenotazione, inclusa la commissione di servizio Boat4You ed
+  eventuali commissioni di elaborazione del pagamento e spese bancarie.
+  Trascorse queste 72 ore, si applicano le normali condizioni di
+  cancellazione descritte di seguito.
 - **Politica di Cancellazione:** Ogni Fornitore di Yacht può stabilire i
   propri termini di cancellazione (ad esempio, Flessibile, Moderata,
   Rigorosa). Queste politiche delineano quale rimborso (se presente) ti
@@ -605,7 +615,8 @@ prenotazione confermata, si applica generalmente quanto segue:
   conferma.
 - **Commissione di Servizio Boat4You:** In molti casi, la commissione di
   servizio Boat4You (se è stata addebitata una commissione separata) è
-  **non rimborsabile** se annulli, perché copre i servizi già forniti
+  **non rimborsabile** se annulli (tranne entro il periodo di cancellazione
+  gratuita di 72 ore indicato sopra), perché copre i servizi già forniti
   dalla nostra Piattaforma. Tuttavia, se annulli con largo anticipo,
   potremmo rimborsare la commissione di servizio a nostra discrezione o se
   richiesto dai termini specifici della promozione.
