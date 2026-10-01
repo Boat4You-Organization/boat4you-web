@@ -1,5 +1,19 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-10-02 — 🧭 Sadržaj, review `8338ed40`: Skradin „okružen parkom", jahtom „do slapova", 8 čv na Krki, „nudimo osiguranje otkaza" u korpusu — ⏳ NIJE DEPLOYANO
+
+Nezavisni review commita `8338ed40`. Samo tekst: `public/seo-content` (25 rečenica × 9 jezika, 207 datoteka), `messages/*/itineraryCroatia.json` (9 jezika), `src/config/itinerary/croatia/IstriaArea/routes/pomer14DaysRoute.config.ts`. Ide u istom deployu.
+
+Izvori: npkrka.hr (Skradinski most je granica parka i jedini vodeni ulaz, kanjonom plove samo brodovi parka; staza Skradinski most – Skradinski buk 3,4 km; Krka ima 7 slapova), Pravilnik o sigurnosti pomorske plovidbe čl. 66.a (ušće Krke od crte Martinska – Crnica do luke Skradin: najviše 8 čv), Uvjeti §3 i §7.6 (Boat4You ne pruža osiguranje; osiguranje od otkaza „not offered by us").
+
+- **Skradin „okružen nacionalnim parkom, tik ispod slapova"** (itinerar Biograd 14 dana, dan 11, 9 jezika; propušteno u `8338ed40`) → na rubu parka, kratko brodom parka ispod slapova (kao Sukošan 14 dana).
+- **„Posljednja dionica rijeke kojom nijedna kobilica ne može"** (Pomer 14 dana, dan 9, 9 jezika) i „last unnavigable stretch" (config) → dionica zatvorena za privatne brodove; brodovi parka njome plove.
+- **Jahtom „do slapova":** gulet „u Skradinu čeka sedam slapova" → brod parka do Skradinskog buka, najpoznatijeg od 7 slapova Krke; motorni brod „navigirate do slapova" i power-cat „do Skradina i slapova" → do Skradina, ulaza prema slapovima; Vodice „poludnevni izlet uz Krku da vidite Skradinski buk" → jednodnevni do Skradina.
+- **Brzina na Krki** (motorni brodovi, regija Šibenik): „brzina pada na 8–10 čv" i „9 nm za ~45 min" → ograničenje od 8 čv (čl. 66.a), „nešto više od sat vremena".
+- **„Nudimo osiguranje od otkaza" u korpusu** (isti propust kao FAQ naslovnice u `8338ed40`): „available at booking", „Boat4You includes cancellation insurance options", „Secure your charter with … optional cancellation insurance", „Boat4You can provide travel insurance", „Travel insurance partnerships" — d'Arechi ×3, Salerno ×3, Tropea ×2, Pirovac, Porto Santa Maria Maggiore, Milazzo, Porto Antico, Epir ×4, Korzika, Mare Fun; Mali Lošinj „8–12 % cijene najma" → 72 h besplatnog otkaza od rezervacije (gdje toga nije bilo), zatim uvjeti operatera i preporuka putnog osiguranja kod neovisnog osiguravatelja.
+- Uočeno, nedirano (izvan opsega): oko 25 stranica s tvrdnjom „osiguranje pokriva kašnjenja ili promjene zbog vremena" (npr. Salerno, d'Arechi, Marmaris, Pollença); vrijeme plovidbe Vodice – Skradin „< 30 min" i Vodice „Krka 12 nm sjeverno, 30 min" (uz 8 čv nemoguće); most kod Šibenika „49 m" visine (sea-help.eu: najmanje 27 m), neprovjereno; „jedrenje zabranjeno iznad ušća" (u Pravilniku smo našli zabranu jedrenja samo za kanal sv. Ante, za ušće Krke 8 čv); UNESCO Betina, Šibenik „UNESCO zidine" i „UNESCO grad"; oko 137 rečenica koje počinju s „'s".
+- Provjere: `seo-corpus-qa.py --check` 0 nalaza, `check-corpus-holes` OK (12.789), JSON valjan.
+
 ## 2026-10-02 — 🧭 Sadržaj: Krka/Skradin (gaz, ušće, UNESCO, ulaznica), UNESCO Kornati/Telašćica/Biograd, „osiguranje otkaza pri checkoutu", Dénia — ⏳ NIJE DEPLOYANO
 
 Ostaci reviewa `5352b36b`. Samo tekst: `public/seo-content` (37 stranica × 9 jezika), `messages/*/home.json` i `messages/*/itineraryCroatia.json` (9 jezika), `src/config/itinerary/croatia/**` (EN izvor). Ide u istom deployu.
