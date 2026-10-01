@@ -1,5 +1,94 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-10-01 — 🔁 Review nadogradnje na Next.js 16.3.8: `optimisticRouting` off, deploy tail (memorija, nohup, watchdog, deployment id, rollback) — ⏳ NIJE DEPLOYANO (commit `668e2c7c`)
+
+Review nadogradnje `138ede62` (1.10. navečer). Ide u istom deployu kao nadogradnja.
+
+**1. `next.config.js`: `experimental.optimisticRouting: false`.**
+
+- 16.3 prefetcha po već naučenim uzorcima ruta (zadano uključeno). `<Link>` čiji href preusmjerava (`redirects()`, 308 starog sluga broda, `/my-*` za goste) tada se prefetcha u krug.
+- Na Catamaran Charter Italy jedan footer link je poslao oko 2.200 RSC zahtjeva u 16 s iz jednog otvorenog taba. Next issue vercel/next.js#97329; na 16.3.8 se i dalje reproducira.
+- Na 9 probanih b4y stranica petlje nije bilo. Isključeno preventivno, jer je dovoljan jedan takav link. Prefetch tada radi kao na 16.1, što je i sada u produkciji. Next 16.1.1 za nepoznati ključ samo ispiše upozorenje, pa brzi rollback i dalje starta.
+- Problem s jezikom koji prefetch mijenja (`NEXT_LOCALE`, popravljen na 6 sistera) b4y nema. EN-only stranice ovdje zaobilaze next-intl, a na live `/fr` nijedan prefetch ne postavlja `NEXT_LOCALE`.
+
+**Provjere** (lokalno, 16.3.8, prod API, build lock, `cpus=1`):
+
+- eslint 0 (pre-commit), prettier.
+- Build 108 s, `.next` 146 MB, u `cache/` samo `fetch-cache`. U build logu stoji `⨯ optimisticRouting`.
+- `next start :3162`: 15/15 PASS.
+  - `/` i `/de` 200. `/boat/old-slug-3445` daje 308 na kanonski URL, a brod ima JSON-LD.
+  - `/fleet`, `/fleet/2`, `/deals/early-booking`, `sitemap.xml`, `robots.txt`, `/search?destinations=croatia` i `/contact-us` daju 200. 404 radi, a `/_next/image` vraća 404.
+  - **Deployment id (nalaz 4):** `/contact-us` i `/search?destinations=croatia` (headeri + HTML) nose točno jedan `dpl=`, onaj iz builda.
+- **Headless Chrome**, 9 stranica s cookiejem `fr`:
+  - 449 prefetcha, najviše 9 po URL-u, dakle nema petlje.
+  - Cookie ostaje `fr`.
+  - Jedina greška u konzoli je poznati lokalni artefakt: kalendar dostupnosti ne prolazi CORS, jer API odbija `Origin: localhost`.
+- **Memorija:** RSS nakon zagrijavanja 417 MB (macOS). Live nextapp sada troši 1316 MB (cgroup, s page cacheom) uz `MemoryHigh` 1800 MB.
+
+**2. Deploy tail** (`infra/deploy-scripts/b4y_web_ship_tail.sh`; `b4y_web_deploy.sh` i `b4y_web_ship.sh`; backupi `*.bak-1-10-review`):
+
+- **2b (nalaz 10):** `.next/diagnostics/framework.json` mora biti verzija iz `yarn.lock`, inače ABORT. Tako se ne može poslati stari `.next` uz novi `node_modules`.
+- **3b (nalaz 10):** ponovni deploy commita koji je već živ (`DEPLOYED_COMMIT`) odbija se bez `FORCE_REDEPLOY=1`. Inače bi `.next.prev` postao kopija živog builda.
+- **Instalacija na cusma1 (nalaz 3):** traži se `MemAvailable` ≥ 1200 MB i dostupan `registry.yarnpkg.com`.
+  - `yarn install` radi u `systemd-run --scope -p MemoryMax=1100M -p MemorySwapMax=0 -p CPUWeight=10 -p IOWeight=10`. Vršno zauzeće izmjereno 1.10. je 683 MB RSS (hladan cache). Ako dođe do OOM-a, ubija se instalacija, a ne nextapp.
+  - Ako `systemd-run` ne radi, ABORT.
+  - `ionice` je maknut jer diskovi koriste `none`/`mq-deadline`, koji prioritete ignoriraju.
+- **Config test (nalaz 4):** novi `next.config.js` učitava se u diru čiji je `.next` staged build (`NM_STAGE` sa symlinkom ili `_stage`). Runtime `deploymentId` mora biti jednak onom iz builda, inače ABORT, a config i messages se vraćaju.
+- **Prozor (nalaz 6):**
+  - `chown` staged builda ide prije stopa.
+  - `boat4you-watchdog.timer` i `.service` stoje za vrijeme prozora, jer watchdog restarta nextapp čim port odbija vezu.
+  - `trap ERR` uz `restore_window` vraća `.next` i `node_modules` te starta nextapp i watchdog. Novi build ostaje kao `.next.failed` do idućeg deploya.
+- **nohup (nalaz 6):** remote skripta radi pod `nohup` s logom `/home/cusma1/nextapp-deploy-<sha>-<hhmmss>.log`. Prekinuta SSH veza je ne prekida, a lokalna skripta ispiše kako pratiti log.
+- **Korak 5 (nalaz 4):** `dpl=` na `/contact-us` i `/search?destinations=croatia` mora biti točno jedan i jednak deployment id-u. `/_next/image` mora vraćati 404.
+- **Rollback naredbe (nalaz 7):** nema više `&&` lanca. Zamijenjeno ide u `*.bad`, start je uvijek zadnji, a `*.bad` se briše tek nakon starta. `messages.prev` se čuva i vraća, a vraća se i `DEPLOYED_COMMIT`.
+- **Par za rollback:** nakon idućeg deploya bez instalacije skripta javi da `node_modules.prev` više nije par s `.next.prev`.
+- **Lokalni radni dir:** `S=${DEPLOY_TMP:-~/.cache/boat4you-deploy}` (prije scratchpad stare sesije). Ako nema `/tmp/.aud_pw1`, odmah ABORT.
+
+**Dry run** (Docker `node:24-bookworm-slim`; lažni `systemctl`/`sudo`/`systemd-run`; lažni `sshpass` koji ssh/scp šalje u kontejner; prava instalacija; `.next` iz ovog builda):
+
+- **Instalacija:** 952 MB za 61–65 s. Config daje isti deployment id kao build, slijedi swap, a proces je `next-server (v16.3.8)`. `dpl` je točno jedan.
+- **Isti commit** ponovno daje ABORT. S `FORCE` i bez instalacije sve prolazi.
+- **Config s id-om iz `BUILD_ID`** (simulirana regresija 16.3) daje ABORT. Config ostaje star, servis nije diran.
+- **Pad starta u prozoru:** prethodni build opet služi, a watchdog je ponovno pokrenut.
+- **Ispisani rollback**, puni i bez `node_modules`, izvršen je u kontejneru. Vraćeni su stari build, `node_modules`, `package.json` i `DEPLOYED_COMMIT`, a `*.bad` nije ostao.
+
+**Deploy:**
+
+```
+bash /Users/mariokuzmanic/Downloads/boat4you-delivery/infra/deploy-scripts/b4y_web_deploy.sh
+```
+
+- **Preduvjet:** `git status` čist osim `next-env.d.ts`. Deploy builda radnu kopiju, a ne commit.
+- Deploy ide izvan sync prozora.
+- Nosi i `8d9ddef4` (Krka i pravilo 72 h, drugi agent; vlastiti unos ispod). Svi commiti od živog `77c9d126`: `138ede62`, `0e420b03`, `668e2c7c`, `8d9ddef4` i ovaj note.
+- Na cusma1 se instalira novi `node_modules`, jer se `package.json` i `yarn.lock` razlikuju. To traje nekoliko minuta, a nextapp za to vrijeme radi.
+
+**Nakon deploya:**
+
+```
+sshpass -f /tmp/.aud_pw1 ssh cusma1@91.98.209.180 'ps -eo args | grep "[n]ext-server"; node -p "require(\"/home/cusma1/nextapp/.next/required-server-files.json\").config.deploymentId"; systemctl show -p MemoryCurrent nextapp'
+ID=<deployment id iz prethodne naredbe>
+for u in /contact-us "/search?destinations=croatia"; do curl -s -D - "https://www.boat4you.com$u" | grep -o 'dpl=[A-Za-z0-9_-]*' | sort -u; done     # samo dpl=$ID
+curl -s -o /dev/null -w '%{http_code}\n' 'https://www.boat4you.com/_next/image?url=https%3A%2F%2Fflagcdn.com%2Fw320%2Fhr.png&w=640&q=75'     # 404
+for u in / /de /fleet /fleet/2 /deals/early-booking /sitemap.xml /robots.txt /boat/beneteau-oceanis-461-liberty-5467 "/search?destinations=croatia"; do curl -s -o /dev/null -w "%{http_code} $u\n" "https://www.boat4you.com$u"; done     # sve 200
+curl -s -o /dev/null -w '%{http_code} %{redirect_url}\n' https://www.boat4you.com/boat/old-slug-3445     # 308
+```
+
+U Chromeu provjeriti soft navigaciju (klik na promo banner), server akcije kalendara i PDF broda. Nakon 24 h ponovno pogledati memoriju.
+
+**Rollback:**
+
+- **Brzi:** naredbu ispiše skripta, i to samo dok je `.next.prev` prethodnik ovog deploya.
+- **Kroz git:** commit nadogradnje se ne revertira, vraćaju se samo ovisnosti:
+
+  ```
+  git checkout 77c9d126 -- package.json yarn.lock && git commit -m "revert: Next.js 16.1.1" -- package.json yarn.lock
+  ```
+
+  Zatim `HUSKY=0 yarn install` i `b4y_web_deploy.sh`. Tail vidi drugi `yarn.lock` i staru verziju instalira u stage. `next.config.js` ostaje: 16.1.1 čita deployment id iz `required-server-files.json`, a na `optimisticRouting` samo upozori.
+
+- **Nakon 48 h promatranja** obrisati `/home/cusma1/nextapp/node_modules.prev` (~1 GB, kao cusma1).
+
 ## 2026-10-01 — 🧭 Sadržaj: Krka (kupanje zabranjeno od 2021.) + povrat novca = pravilo 72 h — ⏳ NIJE DEPLOYANO
 
 Samo tekst, bez koda. Izvor za Krku: npkrka.hr (kupanje samo na Roškom slapu, Stinicama i Pisku 1.6.–30.9.; uzvodno od Skradinskog mosta voze samo brodovi parka; ulaznica uključuje brod Skradin → Skradinski buk; staza 3,4 km). Izvor za povrat: Uvjeti §7.1 (72 h od rezervacije, puni povrat; nakon toga uvjeti operatera prikazani prije plaćanja).
@@ -69,40 +158,7 @@ Codex audit F3 (`codexverify/next.md`). Na 16.1.1 je b4y imao objavljene DoS ran
   - `/payment` sa spremljenom rezervacijom, a bez `reservationId`: 16.3 preusmjeri na `/`, ali `previewPaymentPhases` iz `Booking.tsx` (zove se i kad se preusmjerava) ode na `/` i u konzoli javi `UnrecognizedActionError`. Live 16.1.1 u istom slučaju baci „Connection closed” i ne preusmjeri. Korisnik završi na `/`.
 - **Nije dirano:** `next dev` (pisao bi `AGENTS.md`) nije pokretan. `next-env.d.ts` je i prije bio izmijenjen u radnoj kopiji (build ga generira; 16.3 dodaje `root-params.d.ts`) i nije commitan.
 
-**Deploy (NOVI recept, `infra/deploy-scripts`, backupi `*.bak-1-10`):** prije se na cusma1 slao samo `.next` (+ config, messages, public), a `node_modules` je ostajao iz kolovoza. Build sa 16.3.8 bi se tako vrtio na runtimeu 16.1.1. Sada:
-
-1. **Lokalno (2b):** `node_modules/next` mora biti verzija iz `yarn.lock`, inače ABORT prije slanja. `package.json` i `yarn.lock` idu u runtime tar.
-2. **Na serveru, dok nextapp radi:** ako se `package.json` ili `yarn.lock` razlikuju od živih, ili živi `node_modules/next` nije verzija builda:
-   - provjera da je slobodno ≥ 4 GB i da je stage na istom filesystemu;
-   - `sudo -u cusma1 HUSKY=0 timeout 1800 nice -n 19 ionice -c2 -n7 yarn install --frozen-lockfile --production=false --network-concurrency 4 --child-concurrency 1` u `/home/cusma1/nextapp_nm_stage` (vlastiti yarn cache u stageu, briše se);
-   - provjere: verzija `next` jednaka buildu, postoji `.bin/next`, `require('next/dist/server/next')` prolazi;
-   - config test s tim `node_modules`.
-
-   Svaki neuspjeh do ovdje je ABORT, a živo ostaje netaknuto (`.next`, `node_modules`, config, messages).
-
-3. **Prozor (samo preimenovanja):** stop → `.next` → `.next.prev` → `node_modules` → `node_modules.prev` → staged unutra → `package.json.prev` i `yarn.lock.prev` → start. Neuspjeh unutar prozora vraća staro i ponovno starta.
-   - `.next.prev` i stari `node_modules.prev` brišu se prije stopa, pa je downtime kraći.
-   - Na kraju se provjeri `next-server (v16.3.8)` u `ps` i ispiše rollback naredba.
-   - Deployment id se ispiše za staged i live, a u koraku 5 broji se `dpl=<id>` na živom `/contact-us` (mora biti > 0).
-   - Bez promjene ovisnosti tok je isti kao prije.
-4. **Dry run** u Docker kontejneru (Debian, node 24, lažni systemctl):
-   - instalacija 952 MB za oko 65 s, swap, `next-server (v16.3.8)`, deployment id u HTML-u;
-   - drugi deploy bez instalacije;
-   - ABORT (živo netaknuto) na lockfileu koji ne odgovara, na krivoj verziji i na pokvarenom configu;
-   - ispisani rollback radi.
-
-   Na cusma1 (2 jezgre) instalacija će trajati nekoliko minuta i odvija se prije stopa.
-
-**Nakon deploya:**
-
-- `ps` mora pokazati `next-server (v16.3.8)`, a `dpl=<deployment id>` mora biti na živom HTML-u.
-- Smoke: soft navigacija, server akcije kalendara, PDF.
-- Deploy izvan sync prozora.
-
-**Rollback:**
-
-- **(a) Brzi**, dok je `.next.prev` prethodnik ovog deploya: naredbu ispiše skripta. Stop, vrate se `.next.prev`, `node_modules.prev`, `package.json.prev`, `yarn.lock.prev` i `next.config.js.prev`, `DEPLOYED_COMMIT`, start. Novi `next.config.js` radi i na 16.1.1.
-- **(b) Uvijek:** `git revert 138ede62`, `HUSKY=0 yarn install`, rebuild i standardni deploy. Tail sam vidi drugačiji `yarn.lock` i instalira staru verziju u stage. `node_modules.prev` se čuva.
+**Deploy, provjera i rollback:** zamijenjeno unosom „Review nadogradnje na Next.js 16.3.8" iznad (tail s guardovima za memoriju i deployment id, `nohup`, watchdog i robusnim rollbackom).
 
 ## 2026-10-01 — 🔍 Review vala 2: FR PDF brojevi, web-vitals samo u GA4, `<lastmod>` iz `updatedAt`, korpus bez lažnih usluga i rupa — ⏳ NIJE DEPLOYANO (commit `da26d56f`, nadograđuje `73c4afaf`)
 
