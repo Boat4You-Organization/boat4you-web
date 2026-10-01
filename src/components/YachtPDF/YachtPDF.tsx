@@ -7,6 +7,7 @@ import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
 import { toTitleCase } from '@/utils/static/toTitleCase';
 
 import { styles } from './YachtPDF.styles';
+import { formatPdfNumber, pdfSafeText } from './pdfNumber';
 
 /**
  * Client-shareable yacht presentation PDF (2×A4) — generated fully in the
@@ -105,13 +106,7 @@ const YachtPDF = ({
   generatedDate,
   locale,
 }: YachtPDFProps) => {
-  const num = (value: number, fractionDigits?: number): string =>
-    new Intl.NumberFormat(
-      locale,
-      fractionDigits === undefined
-        ? undefined
-        : { minimumFractionDigits: fractionDigits, maximumFractionDigits: fractionDigits }
-    ).format(value);
+  const num = (value: number, fractionDigits?: number): string => formatPdfNumber(value, locale, fractionDigits);
   const name = toTitleCase(yacht.name).toUpperCase();
   const modelLine = [yacht.model, yacht.buildYear].filter(Boolean).join('  ·  ');
   const isCrewed = Boolean(yacht.crewNumber);
@@ -130,7 +125,9 @@ const YachtPDF = ({
     : null;
 
   const priceOf = (o: YachtOfferModel): string =>
-    formatPriceWithCurrency({ clientPriceEur: o.clientPriceEur, clientPriceInfo: o.clientPriceInfo, locale });
+    pdfSafeText(
+      formatPriceWithCurrency({ clientPriceEur: o.clientPriceEur, clientPriceInfo: o.clientPriceInfo, locale })
+    );
 
   const stats: Array<{ value: string; unit?: string; label: string }> = [
     { value: yacht.length ? num(yacht.length, 1) : '—', unit: yacht.length ? ' m' : '', label: 'LENGTH' },
@@ -170,10 +167,12 @@ const YachtPDF = ({
   if (yacht.waterTank) specRows.push(['Water tank', `${num(yacht.waterTank)} L`]);
 
   if (yacht.securityDeposit) {
-    const depositFmt = formatPriceWithCurrency({
-      clientPriceInfo: { amount: yacht.securityDeposit, currency: yacht.depositCurrency || 'EUR' },
-      locale,
-    });
+    const depositFmt = pdfSafeText(
+      formatPriceWithCurrency({
+        clientPriceInfo: { amount: yacht.securityDeposit, currency: yacht.depositCurrency || 'EUR' },
+        locale,
+      })
+    );
 
     specRows.push(['Security deposit', depositFmt]);
   }

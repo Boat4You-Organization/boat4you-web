@@ -291,6 +291,13 @@ export interface YachtModelShortInfo extends Pick<
    * should one ever come through. Absent on an older backend.
    */
   hasBookableFutureOffer?: boolean | null;
+  /**
+   * When the boat's own public record last changed (backend V9_71: name,
+   * model, base, specs, main image, active / inquiry-only), ISO-8601 UTC in
+   * whole seconds; null or absent when no change is recorded or on an older
+   * backend. The yacht sitemap's <lastmod> (sitemapLastmod.ts, audit N7).
+   */
+  updatedAt?: string | null;
 }
 
 export interface YachtModel

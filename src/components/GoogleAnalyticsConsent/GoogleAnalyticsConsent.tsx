@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useCallback, useEffect } from 'react';
 
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { usePathname } from 'next/navigation';
@@ -85,11 +85,14 @@ const vitalsTarget = (metric: VitalsMetric): string | undefined => {
  * documents for GA4 (value = delta, CLS × 1000; metric_id groups the updates
  * of one page view). Sent only with the visitor's ANALYTICS consent — the
  * tag would otherwise send cookieless consent-mode pings — and never on the
- * review magic-link pages. The observers are the ones Next ships
- * (next/web-vitals); nothing here runs before the page is interactive.
+ * review magic-link pages. `send_to` keeps the event on the GA4 property:
+ * without it gtag sends it to every configured target, the Google Ads tag
+ * included (review 1.10.2026: LCP/INP/CLS arrived in Ads as remarketing
+ * events). The observers are the ones Next ships (next/web-vitals); nothing
+ * here runs before the page is interactive.
  */
-const reportWebVital = (metric: VitalsMetric): void => {
-  if (!REPORTED_VITALS.has(metric.name) || NO_ANALYTICS_PATH.test(window.location.pathname)) return;
+const reportWebVital = (metric: VitalsMetric, gaId: string): void => {
+  if (!gaId || !REPORTED_VITALS.has(metric.name) || NO_ANALYTICS_PATH.test(window.location.pathname)) return;
 
   if (!shouldShowAnalytics()) return;
 
@@ -101,6 +104,7 @@ const reportWebVital = (metric: VitalsMetric): void => {
   const eventType = metric.name === 'INP' ? metric.entries[0]?.name : undefined;
 
   gtag('event', metric.name, {
+    send_to: gaId,
     value: Math.round(metric.name === 'CLS' ? metric.delta * 1000 : metric.delta),
     metric_id: metric.id,
     metric_value: metric.value,
@@ -128,7 +132,11 @@ const reportWebVital = (metric: VitalsMetric): void => {
 export function GoogleAnalyticsConsent({ gaId, gAdsIds }: GoogleAnalyticsConsentProps) {
   const disabled = NO_ANALYTICS_PATH.test(usePathname() ?? '');
 
-  useReportWebVitals(reportWebVital);
+  // Stable per gaId: useReportWebVitals registers its observers again
+  // whenever the callback changes.
+  const reportVital = useCallback((metric: VitalsMetric) => reportWebVital(metric, gaId), [gaId]);
+
+  useReportWebVitals(reportVital);
 
   useEffect(() => {
     const sync = (): void => {

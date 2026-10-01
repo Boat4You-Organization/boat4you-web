@@ -19,6 +19,8 @@
     "lint": "yarn lint:base --fix --cache --cache-location=./node_modules/.cache/ && yarn lint:styles && yarn check:home-hub && yarn check:corpus-holes --staged",
     "check:home-hub": "node scripts/check-home-hub.mjs",
     "check:corpus-holes": "node scripts/check-corpus-holes.mjs",
+    "test:pdf": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test scripts/pdf-number.test.mjs",
+    "test:sitemap": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test scripts/sitemap-lastmod.test.mjs",
     "upgrade": "yarn upgrade"
   },
   "dependencies": {

@@ -3,6 +3,7 @@ import { NextResponse } from 'next/server';
 import { routing } from '@/i18n/routing';
 import { YachtModelShortInfo } from '@/models/yacht.model';
 import { fetchSitemapCatalogueTop, fetchYachtShard } from '@/utils/server/yachtSitemapShards';
+import { lastmodElement } from '@/utils/static/sitemapLastmod';
 
 /**
  * ISR, like the other sitemaps (25.9.2026). The shards used to render on
@@ -66,15 +67,17 @@ export async function GET(_request: Request, { params }: { params: Promise<{ pag
     return new NextResponse('Not Found', { status: 404 });
   }
 
-  // No <lastmod>: the list API exposes no per-boat modification date, and
-  // a request-time stamp marks every URL as changed on every fetch.
+  // <lastmod>: the boat's own `updatedAt` from the list API (V9_71, audit
+  // N7), left out when none is recorded or the backend does not send it
+  // (sitemapLastmod.ts). Never the request time — that marks every URL as
+  // changed on every fetch.
   const urls = yachts
     .flatMap((yacht: YachtModelShortInfo) =>
       routing.locales.map(locale => {
         const prefix = locale === routing.defaultLocale ? '' : `/${locale}`;
 
         return `  <url>
-    <loc>${baseUrl}${prefix}/boat/${yacht.slug}</loc>
+    <loc>${baseUrl}${prefix}/boat/${yacht.slug}</loc>${lastmodElement(yacht.updatedAt)}
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>`;

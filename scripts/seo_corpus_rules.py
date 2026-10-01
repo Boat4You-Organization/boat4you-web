@@ -1961,6 +1961,21 @@ _HOLE_EN_FIXES = [
      r'\g<v> Boat4You'),
     # "<a …>Search available yachts in Andalusia</a> on." — the brand followed the link
     (r'(?P<v></a>\s+(?:on|via|through))(?=\s*[.,](?:\s|<|$))', r'\g<v> Boat4You'),
+    # Review of 1.10.2026 (wave 2): shapes the first pass did not know.
+    # "Learn more about why has become…", "understand why is your trusted partner", "why remains sailors' …"
+    (r'(?P<v>\b(?:[Aa]bout|[Ll]earn|[Uu]nderstand|[Dd]iscover|into|see|[Ee]xplore) why)'
+     r'(?= (?:has become|is (?:your|the trusted|trusted)|remains (?:the|sailors[\'’]))\b)', r'\g<v> Boat4You'),
+    # "Discover why thousands of sailors choose for…", "charterers trust for…", "Trust for seamless booking"
+    (r'(?P<v>\b(?:sailors|charterers|travell?ers|guests|groups|families|enthusiasts|crews|clients)'
+     r'(?: (?:consistently|often|always|increasingly))? (?:choose|trust))(?= for\b)', r'\g<v> Boat4You'),
+    (r'(?P<v>\bTrust)(?= for (?!the\b))', r'\g<v> Boat4You'),
+    # "Clients book again with because…", "Learn more about and our mission", "how works"
+    (r'(?P<v>\bbook again with)(?= because\b)', r'\g<v> Boat4You'),
+    (r'(?P<v>\b[Ll]earn more about)(?= and our\b)', r'\g<v> Boat4You'),
+    (r'(?P<v>(?<![\w-])how)(?= works\b)', r'\g<v> Boat4You'),
+    # "with us's expertise", "with us support": the brand replaced by "us" (never English)
+    (r"(?<![\w’'])us['’]s\b", "Boat4You's"),
+    (r'(?P<v>\bwith) us(?= [Ss]upport\b)', r"\g<v> Boat4You's"),
     (r'(?<=, )Our (?=team\b|partner network\b|partners\b)', 'our '),
 ]
 _HOLE_EN_FIXES = [(re.compile(p), r) for p, r in _HOLE_EN_FIXES]
@@ -2038,8 +2053,10 @@ _HOLE_IMPERATIVE = {loc: [(re.compile(p), r) for p, r in rules] for loc, rules i
     'hr': [(r'\b([Kk]ontaktirajte)(?= danas,? kako\b)', r'\1 Boat4You')],
 }.items()}
 # "<a href=…>Boat4You</a>/search?destinations=Italy&did=c-110" — the path
-# printed as text after (or inside) the link.
-_RAW_PATH_TEXT = re.compile(r'(<a\b[^>]*>\s*Boat4You)(?:(</a>)/(?:search\?[^\s<]*?|about-us)|/(?:search\?[^\s<]*?|about-us)\s*(</a>))(?=[\s.,;<]|$)')
+# printed as text after (or inside) the link; any path, also the localised
+# ones ("/recherche?…", "/a-propos", "/how-we-work", "/o-nama"; review
+# 1.10.2026: 60 such paths on the Cannigione pages in 9 locales).
+_RAW_PATH_TEXT = re.compile(r'(<a\b[^>]*>\s*Boat4You)(?:(</a>)\s*/[\w?=&%.+/-]+|/[\w?=&%.+/-]+\s*(</a>))(?=[\s.,;<]|$)')
 
 
 def fix_holes(src, ctx):
@@ -2101,22 +2118,55 @@ HOLE_DENY = {
     'all': [r'(?<![\w./@-])[A-Za-zÀ-ž]{3,}\.(?!com\b|hr\b|net\b|org\b|eu\b)[a-zà-ž]{3,}\b(?![./@])',
             r"\b(?:Call[- ]to[- ][Aa]ction|Handlungsaufforderung|Aufruf zum Handeln|Appel à l['’][Aa]ction|"
             r"Llamada a la [Aa]cción|Chamada para [Aa]ção|Wezwanie do działania|Poziv na akciju)\b",
-            r'Boat4You\s*/(?:search|about)'],
+            r'Boat4You\s*/\s*[A-Za-z?]'],
     'en': [r'\bWhy (?:Stands|Sets|Excels|Shines|Leads)\b', r'\b[Cc]ontact (?:today|now)\b',
            r'\b[Cc]ontact (?:to (?:discuss|explore|reserve|book|arrange|plan|customi[sz]e|design|begin|select|browse)|'
            r'for (?:a|your|personali[sz]ed|detailed|custom))\b',
            r'\bTrust to\b', r'\bLet be\b', r'\bChoose for your\b', r'\b[Dd]iscover why (?:has|is|remains|stands)\b',
            r'\b(?:arranged|handled|coordinated|managed) by\s*[.,;]', r'\bWhy Sailors (?:Choose|Trust) for\b',
-           r'\b(?:Whether|If you)\b[^.!?]{3,300}, (?:delivers|arranges|connects you|matches you|ensures your|has the perfect)\b'],
-    'de': [r'\bWarum Segler zu\s+zurückkehren\b', r'\bKontaktieren Sie (?:noch )?heute(?=[,.]| um\b| für (?:eine|ein|Ihre)\b)'],
-    'fr': [r'\bReviennent [Cc]hez\s*$', r'\bContactez (?:dès )?aujourd[\'’]hui(?=[,.]| pour\b)'],
-    'nl': [r'\b[Tt]erugkeren [Nn]aar\s*$'],
-    'it': [r'\bContatta(?:te)? oggi(?: stesso)?(?=[,.]| per\b)'],
-    'es': [r'\bPor [Qq]ué (?:[Ee]legir )?[Pp]ara\b'],
-    'pt': [r'\b[Rr]egressam\s*$'],
-    'pl': [r'\bwybierają (?:do|dla)\b'],
-    'hr': [r'\bZašto se ističe\b'],
+           r'\b(?:Whether|If you)\b[^.!?]{3,300}, (?:delivers|arranges|connects you|matches you|ensures your|has the perfect)\b',
+           r'\b(?:[Aa]bout|[Ll]earn|[Uu]nderstand|[Dd]iscover|into|see|[Ee]xplore) why (?:has become|is (?:your|the trusted|trusted)|remains (?:the|sailors[\'’]))\b',
+           r'(?<!\bto )\b(?:[Cc]hoose|[Tt]rust) for\b', r'\bwith because\b', r"(?<![\w’'])us['’]s\b", r'\bwith us [Ss]upport\b',
+           r'\babout and our\b', r'(?<![\w-])how works\b', r'\b(?:with|by|at|from|through) because\b'],
+    'de': [r'\bWarum Segler zu\s+zurückkehren\b', r'\bKontaktieren Sie (?:noch )?heute(?=[,.]| um\b| für (?:eine|ein|Ihre)\b)',
+           r'\b(?:bei|mit|von|über) (?:weil|denn)\b', r'\bwarum (?:der|die|das) (?:Ihr|vertrauenswürdig)'],
+    'fr': [r'\bReviennent [Cc]hez\s*$', r'\bContactez (?:dès )?aujourd[\'’]hui(?=[,.]| pour\b)',
+           r'\b(?:chez|par|à|de) (?:car|parce|pour)\b', r'(?<![Nn]ous )(?<![Vv]ous )\bchoisissent (?:constamment )?pour\b'],
+    'nl': [r'\b[Tt]erugkeren [Nn]aar\s*$', r'\b(?:bij|met|van) omdat\b', r'\bwaarom (?:uw|de|het) vertrouwde\b'],
+    'it': [r'\bContatta(?:te)? oggi(?: stesso)?(?=[,.]| per\b)', r'\b(?:a|con) (?:per|perché)\b', r'\bdi per (?!sé\b)',
+           r'(?<![Cc]i )(?<![Vv]i )\bscelgono (?:costantemente )?per\b'],
+    'es': [r'\bPor [Qq]ué (?:[Ee]legir )?[Pp]ara\b', r'\b(?:con|en) (?:porque|para)\b', r'\bde porque\b',
+           r'(?<![Nn]os )(?<![Ll]os )(?<![Ss]e )\beligen (?:consistentemente )?para\b'],
+    'pt': [r'\b[Rr]egressam\s*$', r'\b(?:com|em|na|da|pela) porque\b'],
+    'pl': [r'\bwybierają (?:do|dla)\b', r'\b(?:z|u|przez|w) ponieważ\b', r'\bdlaczego jest (?:Twoim|zaufan)'],
+    'hr': [r'\bZašto se ističe\b', r'\b(?:kod|s|sa|od|uz) jer\b', r'\bzašto je (?:vaš|Vaš|pouzdan)'],
 }
+
+
+# A preposition with nothing after it but punctuation ("Schiffe von , die", "par .", "fornite da .", "przez ."),
+# where "Boat4You" or "our partners" was cut (review 1.10.2026: ~85 in the translations). Run on the block text
+# with tags removed WITHOUT a space, so a separable particle before a closing tag ("an</a>.") is not one; French
+# puts a space before ":" and ";" by typography, so only "." and "," there.
+PREP_HOLE = {
+    'en': r'by|with|at|through|via|from|to|for|on|of|about',
+    'de': r'von|vom|bei|beim|mit|für|zu|über|durch',
+    'fr': r'par|chez|avec|de|du|à|pour|sur|via',
+    'it': r'da|di|con|presso|su|per|tramite|attraverso',
+    'es': r'por|con|de|en|para|mediante',
+    'pt': r'por|pela|pelo|com|de|da|do|em|na|no|para',
+    'nl': r'door|bij|met|van|voor|op|via|naar',
+    'pl': r'przez|z|ze|w|we|u|od|dla|do|na',
+    'hr': r'od|s|sa|kod|preko|putem|za|u|na|iz|uz',
+}
+
+
+def _prep_hole_rx(locale):
+    marks = r'[.,]' if locale == 'fr' else r'[.,;:]'
+    return re.compile(r'(?<![\w’\'-])(?:' + PREP_HOLE[locale] + r')\s+' + marks + r'(?=\s|$)', re.I)
+
+
+def _tight(fragment):
+    return squash(html.unescape(re.sub(r'<[^>]+>', '', fragment)))
 
 
 FOREIGN_GLYPH = re.compile(r'[\u0900-\u09ff\u0e00-\u0e7f\u1000-\u109f]+|[A-Za-zß-ž][\u0370-\u03ff]+|[\u0370-\u03ff]+[a-zß-ž]')
@@ -2129,11 +2179,16 @@ def hole_findings(body, locale):
         for m in FOREIGN_GLYPH.finditer(block_text):
             out.append(('foreign-glyph', block_text[max(0, m.start() - 60): m.end() + 60]))
     rules = HOLE_DENY['all'] + HOLE_DENY.get(locale, [])
+    prep = _prep_hole_rx(locale) if locale in PREP_HOLE else None
     for bm in BLOCK.finditer(body):
         block_text = plain(bm.group(3))
         for rx in rules:
             for m in re.finditer(rx, block_text):
                 out.append(('brand-hole', block_text[max(0, m.start() - 60): m.end() + 60]))
+        if prep:
+            tight = _tight(bm.group(3))
+            for m in prep.finditer(tight):
+                out.append(('brand-hole', tight[max(0, m.start() - 60): m.end() + 60]))
     return out
 
 
