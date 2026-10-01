@@ -14,36 +14,110 @@
       "CATAMARAN": {
         "h1": "Catamarans à louer en Croatie",
         "metaDesc": "Louez un catamaran en Croatie. Comparez les prix, vraies photos, réservation instantanée. Paiement sécurisé et support 24/7."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Catamarans à moteur à louer en Croatie",
+        "metaDesc": "Louez un catamaran à moteur en Croatie. Comparez les prix, vraies photos, réservation instantanée. Paiement sécurisé et support 24/7."
       }
     },
     "greece": {
       "CATAMARAN": {
         "h1": "Catamarans à louer en Grèce",
         "metaDesc": "Louez un catamaran en Grèce. Comparez les prix, vraies photos, réservation instantanée. Paiement sécurisé et support 24/7."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Catamarans à moteur à louer en Grèce",
+        "metaDesc": "Louez un catamaran à moteur en Grèce. Comparez les prix, vraies photos, réservation instantanée. Paiement sécurisé et support 24/7."
       }
     },
     "italy": {
       "CATAMARAN": {
         "h1": "Catamarans à louer en Italie",
         "metaDesc": "Louez un catamaran en Italie. Comparez les prix, vraies photos, réservation instantanée. Paiement sécurisé et support 24/7."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Catamarans à moteur à louer en Italie",
+        "metaDesc": "Louez un catamaran à moteur en Italie. Comparez les prix, vraies photos, réservation instantanée. Paiement sécurisé et support 24/7."
       }
     },
     "britishVirginIslands": {
       "CATAMARAN": {
         "h1": "Catamarans à louer aux Îles Vierges britanniques",
         "metaDesc": "Louez un catamaran aux Îles Vierges britanniques. Comparez les prix, vraies photos, réservation instantanée. Paiement sécurisé et support 24/7."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Catamarans à moteur à louer aux Îles Vierges britanniques",
+        "metaDesc": "Louez un catamaran à moteur aux Îles Vierges britanniques. Comparez les prix, vraies photos, réservation instantanée. Paiement sécurisé et support 24/7."
       }
     },
     "virginIslandsBritish": {
       "CATAMARAN": {
         "h1": "Catamarans à louer aux Îles Vierges britanniques",
         "metaDesc": "Louez un catamaran aux Îles Vierges britanniques. Comparez les prix, vraies photos, réservation instantanée. Paiement sécurisé et support 24/7."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Catamarans à moteur à louer aux Îles Vierges britanniques",
+        "metaDesc": "Louez un catamaran à moteur aux Îles Vierges britanniques. Comparez les prix, vraies photos, réservation instantanée. Paiement sécurisé et support 24/7."
       }
     },
     "martinique": {
       "CATAMARAN": {
         "h1": "Catamarans à louer en Martinique",
         "metaDesc": "Louez un catamaran en Martinique. Comparez les prix, vraies photos, réservation instantanée. Paiement sécurisé et support 24/7."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Catamarans à moteur à louer en Martinique",
+        "metaDesc": "Louez un catamaran à moteur en Martinique. Comparez les prix, vraies photos, réservation instantanée. Paiement sécurisé et support 24/7."
+      }
+    },
+    "italianAdriatic": {
+      "CATAMARAN": {
+        "h1": "Catamarans à louer sur l'Adriatique italienne",
+        "metaDesc": "Louez un catamaran sur l'Adriatique italienne. Comparez les prix, vraies photos, réservation instantanée. Paiement sécurisé et support 24/7."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Catamarans à moteur à louer sur l'Adriatique italienne",
+        "metaDesc": "Louez un catamaran à moteur sur l'Adriatique italienne. Comparez les prix, vraies photos, réservation instantanée. Paiement sécurisé et support 24/7."
+      }
+    },
+    "northernGreeceAegean": {
+      "CATAMARAN": {
+        "h1": "Catamarans à louer en Grèce du Nord et en mer Égée",
+        "metaDesc": "Louez un catamaran en Grèce du Nord et en mer Égée. Comparez les prix, vraies photos, réservation instantanée. Paiement sécurisé et support 24/7."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Catamarans à moteur à louer en Grèce du Nord et en mer Égée",
+        "metaDesc": "Louez un catamaran à moteur en Grèce du Nord et en mer Égée. Comparez les prix, vraies photos, réservation instantanée. Paiement sécurisé et support 24/7."
+      }
+    },
+    "bahamas": {
+      "CATAMARAN": {
+        "h1": "Catamarans à louer aux Bahamas",
+        "metaDesc": "Louez un catamaran aux Bahamas. Comparez les prix, vraies photos, réservation instantanée. Paiement sécurisé et support 24/7."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Catamarans à moteur à louer aux Bahamas",
+        "metaDesc": "Louez un catamaran à moteur aux Bahamas. Comparez les prix, vraies photos, réservation instantanée. Paiement sécurisé et support 24/7."
+      }
+    },
+    "grenada": {
+      "CATAMARAN": {
+        "h1": "Catamarans à louer à la Grenade",
+        "metaDesc": "Louez un catamaran à la Grenade. Comparez les prix, vraies photos, réservation instantanée. Paiement sécurisé et support 24/7."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Catamarans à moteur à louer à la Grenade",
+        "metaDesc": "Louez un catamaran à moteur à la Grenade. Comparez les prix, vraies photos, réservation instantanée. Paiement sécurisé et support 24/7."
+      }
+    },
+    "caribbean": {
+      "CATAMARAN": {
+        "h1": "Catamarans à louer dans les Caraïbes",
+        "metaDesc": "Louez un catamaran dans les Caraïbes. Comparez les prix, vraies photos, réservation instantanée. Paiement sécurisé et support 24/7."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Catamarans à moteur à louer dans les Caraïbes",
+        "metaDesc": "Louez un catamaran à moteur dans les Caraïbes. Comparez les prix, vraies photos, réservation instantanée. Paiement sécurisé et support 24/7."
       }
     }
   },

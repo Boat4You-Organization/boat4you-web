@@ -14,36 +14,110 @@
       "CATAMARAN": {
         "h1": "Catamaran rental in Croatia",
         "metaDesc": "Rent a catamaran in Croatia. Compare prices, real photos, instant booking. Secure payment and 24/7 expert support."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Power catamaran rental in Croatia",
+        "metaDesc": "Rent a power catamaran in Croatia. Compare prices, real photos, instant booking. Secure payment and 24/7 expert support."
       }
     },
     "greece": {
       "CATAMARAN": {
         "h1": "Catamaran rental in Greece",
         "metaDesc": "Rent a catamaran in Greece. Compare prices, real photos, instant booking. Secure payment and 24/7 expert support."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Power catamaran rental in Greece",
+        "metaDesc": "Rent a power catamaran in Greece. Compare prices, real photos, instant booking. Secure payment and 24/7 expert support."
       }
     },
     "italy": {
       "CATAMARAN": {
         "h1": "Catamaran rental in Italy",
         "metaDesc": "Rent a catamaran in Italy. Compare prices, real photos, instant booking. Secure payment and 24/7 expert support."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Power catamaran rental in Italy",
+        "metaDesc": "Rent a power catamaran in Italy. Compare prices, real photos, instant booking. Secure payment and 24/7 expert support."
       }
     },
     "britishVirginIslands": {
       "CATAMARAN": {
         "h1": "Catamaran rental in the British Virgin Islands",
         "metaDesc": "Rent a catamaran in the British Virgin Islands. Compare prices, real photos, instant booking. Secure payment and 24/7 expert support."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Power catamaran rental in the British Virgin Islands",
+        "metaDesc": "Rent a power catamaran in the British Virgin Islands. Compare prices, real photos, instant booking. Secure payment and 24/7 expert support."
       }
     },
     "virginIslandsBritish": {
       "CATAMARAN": {
         "h1": "Catamaran rental in the British Virgin Islands",
         "metaDesc": "Rent a catamaran in the British Virgin Islands. Compare prices, real photos, instant booking. Secure payment and 24/7 expert support."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Power catamaran rental in the British Virgin Islands",
+        "metaDesc": "Rent a power catamaran in the British Virgin Islands. Compare prices, real photos, instant booking. Secure payment and 24/7 expert support."
       }
     },
     "martinique": {
       "CATAMARAN": {
         "h1": "Catamaran rental in Martinique",
         "metaDesc": "Rent a catamaran in Martinique. Compare prices, real photos, instant booking. Secure payment and 24/7 expert support."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Power catamaran rental in Martinique",
+        "metaDesc": "Rent a power catamaran in Martinique. Compare prices, real photos, instant booking. Secure payment and 24/7 expert support."
+      }
+    },
+    "italianAdriatic": {
+      "CATAMARAN": {
+        "h1": "Catamaran rental on the Italian Adriatic",
+        "metaDesc": "Rent a catamaran on the Italian Adriatic. Compare prices, real photos, instant booking. Secure payment and 24/7 expert support."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Power catamaran rental on the Italian Adriatic",
+        "metaDesc": "Rent a power catamaran on the Italian Adriatic. Compare prices, real photos, instant booking. Secure payment and 24/7 expert support."
+      }
+    },
+    "northernGreeceAegean": {
+      "CATAMARAN": {
+        "h1": "Catamaran rental in Northern Greece and the Aegean",
+        "metaDesc": "Rent a catamaran in Northern Greece and the Aegean. Compare prices, real photos, instant booking. Secure payment and 24/7 expert support."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Power catamaran rental in Northern Greece and the Aegean",
+        "metaDesc": "Rent a power catamaran in Northern Greece and the Aegean. Compare prices, real photos, instant booking. Secure payment and 24/7 expert support."
+      }
+    },
+    "bahamas": {
+      "CATAMARAN": {
+        "h1": "Catamaran rental in the Bahamas",
+        "metaDesc": "Rent a catamaran in the Bahamas. Compare prices, real photos, instant booking. Secure payment and 24/7 expert support."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Power catamaran rental in the Bahamas",
+        "metaDesc": "Rent a power catamaran in the Bahamas. Compare prices, real photos, instant booking. Secure payment and 24/7 expert support."
+      }
+    },
+    "grenada": {
+      "CATAMARAN": {
+        "h1": "Catamaran rental in Grenada",
+        "metaDesc": "Rent a catamaran in Grenada. Compare prices, real photos, instant booking. Secure payment and 24/7 expert support."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Power catamaran rental in Grenada",
+        "metaDesc": "Rent a power catamaran in Grenada. Compare prices, real photos, instant booking. Secure payment and 24/7 expert support."
+      }
+    },
+    "caribbean": {
+      "CATAMARAN": {
+        "h1": "Catamaran rental in the Caribbean",
+        "metaDesc": "Rent a catamaran in the Caribbean. Compare prices, real photos, instant booking. Secure payment and 24/7 expert support."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Power catamaran rental in the Caribbean",
+        "metaDesc": "Rent a power catamaran in the Caribbean. Compare prices, real photos, instant booking. Secure payment and 24/7 expert support."
       }
     }
   },

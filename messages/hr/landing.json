@@ -14,36 +14,110 @@
       "CATAMARAN": {
         "h1": "Najam katamarana u Hrvatskoj",
         "metaDesc": "Unajmite katamaran u Hrvatskoj. Usporedite cijene, prave slike, instant rezervacija. Sigurno plaćanje i podrška 24/7."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Najam motornih katamarana u Hrvatskoj",
+        "metaDesc": "Unajmite motorni katamaran u Hrvatskoj. Usporedite cijene, prave slike, instant rezervacija. Sigurno plaćanje i podrška 24/7."
       }
     },
     "greece": {
       "CATAMARAN": {
         "h1": "Najam katamarana u Grčkoj",
         "metaDesc": "Unajmite katamaran u Grčkoj. Usporedite cijene, prave slike, instant rezervacija. Sigurno plaćanje i podrška 24/7."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Najam motornih katamarana u Grčkoj",
+        "metaDesc": "Unajmite motorni katamaran u Grčkoj. Usporedite cijene, prave slike, instant rezervacija. Sigurno plaćanje i podrška 24/7."
       }
     },
     "italy": {
       "CATAMARAN": {
         "h1": "Najam katamarana u Italiji",
         "metaDesc": "Unajmite katamaran u Italiji. Usporedite cijene, prave slike, instant rezervacija. Sigurno plaćanje i podrška 24/7."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Najam motornih katamarana u Italiji",
+        "metaDesc": "Unajmite motorni katamaran u Italiji. Usporedite cijene, prave slike, instant rezervacija. Sigurno plaćanje i podrška 24/7."
       }
     },
     "britishVirginIslands": {
       "CATAMARAN": {
         "h1": "Najam katamarana na Britanskim Djevičanskim otocima",
         "metaDesc": "Unajmite katamaran na Britanskim Djevičanskim otocima. Usporedite cijene, prave slike, instant rezervacija. Sigurno plaćanje i podrška 24/7."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Najam motornih katamarana na Britanskim Djevičanskim otocima",
+        "metaDesc": "Unajmite motorni katamaran na Britanskim Djevičanskim otocima. Usporedite cijene, prave slike, instant rezervacija. Sigurno plaćanje i podrška 24/7."
       }
     },
     "virginIslandsBritish": {
       "CATAMARAN": {
         "h1": "Najam katamarana na Britanskim Djevičanskim otocima",
         "metaDesc": "Unajmite katamaran na Britanskim Djevičanskim otocima. Usporedite cijene, prave slike, instant rezervacija. Sigurno plaćanje i podrška 24/7."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Najam motornih katamarana na Britanskim Djevičanskim otocima",
+        "metaDesc": "Unajmite motorni katamaran na Britanskim Djevičanskim otocima. Usporedite cijene, prave slike, instant rezervacija. Sigurno plaćanje i podrška 24/7."
       }
     },
     "martinique": {
       "CATAMARAN": {
         "h1": "Najam katamarana na Martiniku",
         "metaDesc": "Unajmite katamaran na Martiniku. Usporedite cijene, prave slike, instant rezervacija. Sigurno plaćanje i podrška 24/7."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Najam motornih katamarana na Martiniku",
+        "metaDesc": "Unajmite motorni katamaran na Martiniku. Usporedite cijene, prave slike, instant rezervacija. Sigurno plaćanje i podrška 24/7."
+      }
+    },
+    "italianAdriatic": {
+      "CATAMARAN": {
+        "h1": "Najam katamarana na talijanskom Jadranu",
+        "metaDesc": "Unajmite katamaran na talijanskom Jadranu. Usporedite cijene, prave slike, instant rezervacija. Sigurno plaćanje i podrška 24/7."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Najam motornih katamarana na talijanskom Jadranu",
+        "metaDesc": "Unajmite motorni katamaran na talijanskom Jadranu. Usporedite cijene, prave slike, instant rezervacija. Sigurno plaćanje i podrška 24/7."
+      }
+    },
+    "northernGreeceAegean": {
+      "CATAMARAN": {
+        "h1": "Najam katamarana u sjevernoj Grčkoj i Egeju",
+        "metaDesc": "Unajmite katamaran u sjevernoj Grčkoj i Egeju. Usporedite cijene, prave slike, instant rezervacija. Sigurno plaćanje i podrška 24/7."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Najam motornih katamarana u sjevernoj Grčkoj i Egeju",
+        "metaDesc": "Unajmite motorni katamaran u sjevernoj Grčkoj i Egeju. Usporedite cijene, prave slike, instant rezervacija. Sigurno plaćanje i podrška 24/7."
+      }
+    },
+    "bahamas": {
+      "CATAMARAN": {
+        "h1": "Najam katamarana na Bahamima",
+        "metaDesc": "Unajmite katamaran na Bahamima. Usporedite cijene, prave slike, instant rezervacija. Sigurno plaćanje i podrška 24/7."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Najam motornih katamarana na Bahamima",
+        "metaDesc": "Unajmite motorni katamaran na Bahamima. Usporedite cijene, prave slike, instant rezervacija. Sigurno plaćanje i podrška 24/7."
+      }
+    },
+    "grenada": {
+      "CATAMARAN": {
+        "h1": "Najam katamarana na Grenadi",
+        "metaDesc": "Unajmite katamaran na Grenadi. Usporedite cijene, prave slike, instant rezervacija. Sigurno plaćanje i podrška 24/7."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Najam motornih katamarana na Grenadi",
+        "metaDesc": "Unajmite motorni katamaran na Grenadi. Usporedite cijene, prave slike, instant rezervacija. Sigurno plaćanje i podrška 24/7."
+      }
+    },
+    "caribbean": {
+      "CATAMARAN": {
+        "h1": "Najam katamarana na Karibima",
+        "metaDesc": "Unajmite katamaran na Karibima. Usporedite cijene, prave slike, instant rezervacija. Sigurno plaćanje i podrška 24/7."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Najam motornih katamarana na Karibima",
+        "metaDesc": "Unajmite motorni katamaran na Karibima. Usporedite cijene, prave slike, instant rezervacija. Sigurno plaćanje i podrška 24/7."
       }
     }
   },

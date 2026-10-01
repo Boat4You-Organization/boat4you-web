@@ -14,36 +14,110 @@
       "CATAMARAN": {
         "h1": "Affitto catamarani in Croazia",
         "metaDesc": "Affitta un catamarano in Croazia. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Affitto catamarani a motore in Croazia",
+        "metaDesc": "Affitta un catamarano a motore in Croazia. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
       }
     },
     "greece": {
       "CATAMARAN": {
         "h1": "Affitto catamarani in Grecia",
         "metaDesc": "Affitta un catamarano in Grecia. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Affitto catamarani a motore in Grecia",
+        "metaDesc": "Affitta un catamarano a motore in Grecia. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
       }
     },
     "italy": {
       "CATAMARAN": {
         "h1": "Affitto catamarani in Italia",
         "metaDesc": "Affitta un catamarano in Italia. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Affitto catamarani a motore in Italia",
+        "metaDesc": "Affitta un catamarano a motore in Italia. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
       }
     },
     "britishVirginIslands": {
       "CATAMARAN": {
         "h1": "Affitto catamarani nelle Isole Vergini Britanniche",
         "metaDesc": "Affitta un catamarano nelle Isole Vergini Britanniche. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Affitto catamarani a motore nelle Isole Vergini Britanniche",
+        "metaDesc": "Affitta un catamarano a motore nelle Isole Vergini Britanniche. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
       }
     },
     "virginIslandsBritish": {
       "CATAMARAN": {
         "h1": "Affitto catamarani nelle Isole Vergini Britanniche",
         "metaDesc": "Affitta un catamarano nelle Isole Vergini Britanniche. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Affitto catamarani a motore nelle Isole Vergini Britanniche",
+        "metaDesc": "Affitta un catamarano a motore nelle Isole Vergini Britanniche. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
       }
     },
     "martinique": {
       "CATAMARAN": {
         "h1": "Affitto catamarani in Martinica",
         "metaDesc": "Affitta un catamarano in Martinica. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Affitto catamarani a motore in Martinica",
+        "metaDesc": "Affitta un catamarano a motore in Martinica. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
+      }
+    },
+    "italianAdriatic": {
+      "CATAMARAN": {
+        "h1": "Affitto catamarani sull'Adriatico italiano",
+        "metaDesc": "Affitta un catamarano sull'Adriatico italiano. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Affitto catamarani a motore sull'Adriatico italiano",
+        "metaDesc": "Affitta un catamarano a motore sull'Adriatico italiano. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
+      }
+    },
+    "northernGreeceAegean": {
+      "CATAMARAN": {
+        "h1": "Affitto catamarani nella Grecia settentrionale e nell'Egeo",
+        "metaDesc": "Affitta un catamarano nella Grecia settentrionale e nell'Egeo. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Affitto catamarani a motore nella Grecia settentrionale e nell'Egeo",
+        "metaDesc": "Affitta un catamarano a motore nella Grecia settentrionale e nell'Egeo. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
+      }
+    },
+    "bahamas": {
+      "CATAMARAN": {
+        "h1": "Affitto catamarani alle Bahamas",
+        "metaDesc": "Affitta un catamarano alle Bahamas. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Affitto catamarani a motore alle Bahamas",
+        "metaDesc": "Affitta un catamarano a motore alle Bahamas. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
+      }
+    },
+    "grenada": {
+      "CATAMARAN": {
+        "h1": "Affitto catamarani a Grenada",
+        "metaDesc": "Affitta un catamarano a Grenada. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Affitto catamarani a motore a Grenada",
+        "metaDesc": "Affitta un catamarano a motore a Grenada. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
+      }
+    },
+    "caribbean": {
+      "CATAMARAN": {
+        "h1": "Affitto catamarani ai Caraibi",
+        "metaDesc": "Affitta un catamarano ai Caraibi. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Affitto catamarani a motore ai Caraibi",
+        "metaDesc": "Affitta un catamarano a motore ai Caraibi. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
       }
     }
   },

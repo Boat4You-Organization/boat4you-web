@@ -14,36 +14,110 @@
       "CATAMARAN": {
         "h1": "Katamaran mieten in Kroatien",
         "metaDesc": "Mieten Sie einen Katamaran in Kroatien. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Motor-Katamaran mieten in Kroatien",
+        "metaDesc": "Mieten Sie einen Motor-Katamaran in Kroatien. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
       }
     },
     "greece": {
       "CATAMARAN": {
         "h1": "Katamaran mieten in Griechenland",
         "metaDesc": "Mieten Sie einen Katamaran in Griechenland. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Motor-Katamaran mieten in Griechenland",
+        "metaDesc": "Mieten Sie einen Motor-Katamaran in Griechenland. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
       }
     },
     "italy": {
       "CATAMARAN": {
         "h1": "Katamaran mieten in Italien",
         "metaDesc": "Mieten Sie einen Katamaran in Italien. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Motor-Katamaran mieten in Italien",
+        "metaDesc": "Mieten Sie einen Motor-Katamaran in Italien. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
       }
     },
     "britishVirginIslands": {
       "CATAMARAN": {
         "h1": "Katamaran mieten auf den Britischen Jungferninseln",
         "metaDesc": "Mieten Sie einen Katamaran auf den Britischen Jungferninseln. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Motor-Katamaran mieten auf den Britischen Jungferninseln",
+        "metaDesc": "Mieten Sie einen Motor-Katamaran auf den Britischen Jungferninseln. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
       }
     },
     "virginIslandsBritish": {
       "CATAMARAN": {
         "h1": "Katamaran mieten auf den Britischen Jungferninseln",
         "metaDesc": "Mieten Sie einen Katamaran auf den Britischen Jungferninseln. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Motor-Katamaran mieten auf den Britischen Jungferninseln",
+        "metaDesc": "Mieten Sie einen Motor-Katamaran auf den Britischen Jungferninseln. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
       }
     },
     "martinique": {
       "CATAMARAN": {
         "h1": "Katamaran mieten auf Martinique",
         "metaDesc": "Mieten Sie einen Katamaran auf Martinique. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Motor-Katamaran mieten auf Martinique",
+        "metaDesc": "Mieten Sie einen Motor-Katamaran auf Martinique. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
+      }
+    },
+    "italianAdriatic": {
+      "CATAMARAN": {
+        "h1": "Katamaran mieten an der italienischen Adria",
+        "metaDesc": "Mieten Sie einen Katamaran an der italienischen Adria. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Motor-Katamaran mieten an der italienischen Adria",
+        "metaDesc": "Mieten Sie einen Motor-Katamaran an der italienischen Adria. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
+      }
+    },
+    "northernGreeceAegean": {
+      "CATAMARAN": {
+        "h1": "Katamaran mieten in Nordgriechenland und der Ägäis",
+        "metaDesc": "Mieten Sie einen Katamaran in Nordgriechenland und der Ägäis. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Motor-Katamaran mieten in Nordgriechenland und der Ägäis",
+        "metaDesc": "Mieten Sie einen Motor-Katamaran in Nordgriechenland und der Ägäis. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
+      }
+    },
+    "bahamas": {
+      "CATAMARAN": {
+        "h1": "Katamaran mieten auf den Bahamas",
+        "metaDesc": "Mieten Sie einen Katamaran auf den Bahamas. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Motor-Katamaran mieten auf den Bahamas",
+        "metaDesc": "Mieten Sie einen Motor-Katamaran auf den Bahamas. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
+      }
+    },
+    "grenada": {
+      "CATAMARAN": {
+        "h1": "Katamaran mieten auf Grenada",
+        "metaDesc": "Mieten Sie einen Katamaran auf Grenada. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Motor-Katamaran mieten auf Grenada",
+        "metaDesc": "Mieten Sie einen Motor-Katamaran auf Grenada. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
+      }
+    },
+    "caribbean": {
+      "CATAMARAN": {
+        "h1": "Katamaran mieten in der Karibik",
+        "metaDesc": "Mieten Sie einen Katamaran in der Karibik. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Motor-Katamaran mieten in der Karibik",
+        "metaDesc": "Mieten Sie einen Motor-Katamaran in der Karibik. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
       }
     }
   },

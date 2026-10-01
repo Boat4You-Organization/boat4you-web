@@ -14,36 +14,110 @@
       "CATAMARAN": {
         "h1": "Catamaran huren in Kroatië",
         "metaDesc": "Huur een catamaran in Kroatië. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Power catamaran huren in Kroatië",
+        "metaDesc": "Huur een power catamaran in Kroatië. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
       }
     },
     "greece": {
       "CATAMARAN": {
         "h1": "Catamaran huren in Griekenland",
         "metaDesc": "Huur een catamaran in Griekenland. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Power catamaran huren in Griekenland",
+        "metaDesc": "Huur een power catamaran in Griekenland. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
       }
     },
     "italy": {
       "CATAMARAN": {
         "h1": "Catamaran huren in Italië",
         "metaDesc": "Huur een catamaran in Italië. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Power catamaran huren in Italië",
+        "metaDesc": "Huur een power catamaran in Italië. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
       }
     },
     "britishVirginIslands": {
       "CATAMARAN": {
         "h1": "Catamaran huren op de Britse Maagdeneilanden",
         "metaDesc": "Huur een catamaran op de Britse Maagdeneilanden. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Power catamaran huren op de Britse Maagdeneilanden",
+        "metaDesc": "Huur een power catamaran op de Britse Maagdeneilanden. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
       }
     },
     "virginIslandsBritish": {
       "CATAMARAN": {
         "h1": "Catamaran huren op de Britse Maagdeneilanden",
         "metaDesc": "Huur een catamaran op de Britse Maagdeneilanden. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Power catamaran huren op de Britse Maagdeneilanden",
+        "metaDesc": "Huur een power catamaran op de Britse Maagdeneilanden. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
       }
     },
     "martinique": {
       "CATAMARAN": {
         "h1": "Catamaran huren op Martinique",
         "metaDesc": "Huur een catamaran op Martinique. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Power catamaran huren op Martinique",
+        "metaDesc": "Huur een power catamaran op Martinique. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
+      }
+    },
+    "italianAdriatic": {
+      "CATAMARAN": {
+        "h1": "Catamaran huren aan de Italiaanse Adriatische kust",
+        "metaDesc": "Huur een catamaran aan de Italiaanse Adriatische kust. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Power catamaran huren aan de Italiaanse Adriatische kust",
+        "metaDesc": "Huur een power catamaran aan de Italiaanse Adriatische kust. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
+      }
+    },
+    "northernGreeceAegean": {
+      "CATAMARAN": {
+        "h1": "Catamaran huren in Noord-Griekenland en de Egeïsche Zee",
+        "metaDesc": "Huur een catamaran in Noord-Griekenland en de Egeïsche Zee. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Power catamaran huren in Noord-Griekenland en de Egeïsche Zee",
+        "metaDesc": "Huur een power catamaran in Noord-Griekenland en de Egeïsche Zee. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
+      }
+    },
+    "bahamas": {
+      "CATAMARAN": {
+        "h1": "Catamaran huren op de Bahama's",
+        "metaDesc": "Huur een catamaran op de Bahama's. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Power catamaran huren op de Bahama's",
+        "metaDesc": "Huur een power catamaran op de Bahama's. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
+      }
+    },
+    "grenada": {
+      "CATAMARAN": {
+        "h1": "Catamaran huren op Grenada",
+        "metaDesc": "Huur een catamaran op Grenada. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Power catamaran huren op Grenada",
+        "metaDesc": "Huur een power catamaran op Grenada. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
+      }
+    },
+    "caribbean": {
+      "CATAMARAN": {
+        "h1": "Catamaran huren in het Caribisch gebied",
+        "metaDesc": "Huur een catamaran in het Caribisch gebied. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Power catamaran huren in het Caribisch gebied",
+        "metaDesc": "Huur een power catamaran in het Caribisch gebied. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
       }
     }
   },

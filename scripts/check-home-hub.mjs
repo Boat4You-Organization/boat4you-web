@@ -22,9 +22,18 @@
  *      the rental word that translates "yacht charter" (alquiler de yates,
  *      location de yacht, noleggio yacht, najam jahti, aluguer de iates,
  *      wynajem jachtów, jachtverhuur) counts as the head term.
- *   4. the same keyword rule for the landing heading overrides
- *      (landing.json `override`: h1 + meta description), which rename the
- *      landings whose default heading would be a sister's head term.
+ *   4. the same keyword rule for every landing heading the templates can
+ *      build: each place of `landing.in` × no boat type / each boat type
+ *      (`common.*ForRental`), as landingCopy.ts builds it — the override
+ *      when there is one, else the lead or default template — h1 (= the
+ *      <title>) and meta description. A place × boat type whose default
+ *      heading names a head term needs a `landing.override` entry.
+ *      PENDING (Mario): the yacht rule on the sailing / motor / luxury motor
+ *      yacht and the no-boat-type headings ("Sailing yacht charter in
+ *      Croatia", DE "Yachtcharter und Bootsverleih in Kroatien") predates
+ *      the hub and waits for the owner's call (review 1.10.2026, finding 2;
+ *      the hub links 8 of those landings and the 3 price guides "Yacht
+ *      charter prices in Croatia/Greece/Italy") — reported, not failed.
  * The patterns run a self-test first (known bad / known good strings).
  *
  * The config is read by transpiling the .ts file with TypeScript (it holds
@@ -58,8 +67,9 @@ const normalize = text =>
     .trim();
 
 const CHARTER = '(?:charter|carter|czarter)[a-z]*'; // charter, čarter, czarter
-const CATAMARAN = '[ck]atamara[a-z]*'; // catamaran(s), katamaran(a), catamarã
-const YACHT = '(?:yacht|yate|jacht|jaht|iate)[a-z]*'; // yacht, yate, jacht, jahta, iate
+// A compound may carry a prefix: Motorkatamaran, Segelyacht, Zeiljacht, Motoryacht.
+const CATAMARAN = '[a-z]*[ck]atamara[a-z]*'; // catamaran(s), katamaran(a), catamarã
+const YACHT = '(?:[a-z]*(?:yacht|jacht|jaht)[a-z]*|yates?|iates?)'; // yacht, jacht, jahta, yate, iate
 const WORDS = n => `(?: [a-z0-9]+){0,${n}}`;
 
 // The sister sites' ES/FR/IT/PT head nouns ("Alquiler de catamaranes", "Location catamaran").
@@ -81,8 +91,8 @@ const YACHT_TERMS = [
   `alug[a-z]*${WORDS(2)} iates?`,
   `fretamento${WORDS(2)} iates?`,
   `wynajem${WORDS(2)} jacht[a-z]*`,
-  'jachtverhuur',
-  'yachtvermietung',
+  '[a-z]*jachtverhuur',
+  '[a-z]*yachtvermietung',
 ];
 
 // Place stems (normalized, matched at a word start): en, de, es, fr, hr, it, nl, pl, pt.
@@ -144,6 +154,62 @@ const forbiddenIn = text => {
   return FORBIDDEN.filter(rule => rule.patterns.some(p => p.test(normalized))).map(rule => rule.label);
 };
 
+// ---------------------------------------------------------------------------
+// Landing headings (landingCopy.ts templates)
+// ---------------------------------------------------------------------------
+
+const YACHT_RULE = FORBIDDEN[1].label;
+
+/** Boat types whose yacht-rule headings wait for Mario's decision (null = no boat type). */
+const PENDING_YACHT_TYPES = new Set([null, 'SAILING_YACHT', 'MOTOR_YACHT', 'LUXURY_MOTOR_YACHT']);
+
+const fill = (template, values) => template.replace(/\{(\w+)\}/g, (match, name) => values[name] ?? match);
+
+/** `sailingYachtForRental` → `SAILING_YACHT` (VESSEL_TYPE_LABEL_MAP_FOR_RENTAL). */
+const vesselTypeOf = key =>
+  key
+    .replace(/ForRental$/, '')
+    .replace(/([A-Z])/g, '_$1')
+    .toUpperCase();
+
+/**
+ * Every heading the landing templates build for a place of `landing.in`, as
+ * landingCopy.ts does: no boat type (lead or default template), and each
+ * boat type of `common.*ForRental` (override, else lead or default template).
+ */
+const landingHeadings = (landing, common) => {
+  const rentalLabels = Object.entries(common)
+    .filter(([key, value]) => key.endsWith('ForRental') && typeof value === 'string')
+    .map(([key, label]) => [vesselTypeOf(key), label]);
+
+  return Object.entries(landing.in ?? {}).flatMap(([place, where]) => {
+    const lead = landing.lead?.[place];
+    const name = landing.names?.[place] ?? place;
+    const untyped = {
+      place,
+      boatType: null,
+      h1: lead ? fill(landing.leadH1NoBoatType, { lead, where }) : fill(landing.h1NoBoatType, { where }),
+      metaDesc: fill(landing.metaDescNoBoatType, { where }),
+    };
+    const typed = rentalLabels.map(([boatType, label]) => {
+      const override = landing.override?.[place]?.[boatType];
+
+      if (override) return { place, boatType, h1: override.h1, metaDesc: override.metaDesc };
+
+      return {
+        place,
+        boatType,
+        h1: lead
+          ? fill(landing.leadH1WithBoatType, { boatType: label, lead, name })
+          : fill(landing.h1WithBoatType, { boatType: label, where }),
+        metaDesc: fill(landing.metaDescWithBoatType, { boatType: label, where }),
+      };
+    });
+
+    return [untyped, ...typed];
+  });
+};
+
 const MUST_FAIL = [
   'Catamaran charter Croatia',
   'Catamaran Charter in Croatia',
@@ -185,6 +251,20 @@ const MUST_FAIL = [
   'Noleggio catamarano in Croazia',
   'Aluguer de Catamarã na Croácia',
   'Location de catamaran aux Îles Vierges britanniques',
+  // Compounds (review 1.10.2026, finding 3) and the default landing headings it found.
+  'Segelyacht-Charter in Kroatien',
+  'Segelyachtcharter Kroatien',
+  'Motoryacht-Charter in Griechenland',
+  'Zeiljachtcharter Kroatië',
+  'Motorjachtcharter Griekenland',
+  'Motoryacht charter in Croatia',
+  'Zeiljachtverhuur Kroatië',
+  'Power Catamaran charter in Croatia',
+  'Motor-Katamaran-Charter in Kroatien',
+  'Motorkatamaran-Charter Kroatien',
+  'Catamaran charter in Northern Greece and the Aegean',
+  'Catamaran charter in the Bahamas',
+  'Catamaran charter in Grenada',
 ];
 
 const MUST_PASS = [
@@ -209,6 +289,12 @@ const MUST_PASS = [
   'Louer un catamaran en Croatie',
   'Catamarãs para alugar na Croácia',
   'Explore boat rental destinations',
+  'Jachthavens',
+  'Power catamaran rental in Croatia',
+  'Motor-Katamaran mieten in Kroatien',
+  'Catamaran rental on the Italian Adriatic',
+  'Catamaranes a motor de alquiler en Croacia',
+  'Motorjachten in Griekenland',
 ];
 
 const selfTest = () => {
@@ -329,20 +415,52 @@ const main = async () => {
     if (errors.length) failures.push([`messages/${locale}/${FILE_NAME}`, errors]);
   });
 
-  // Landing heading overrides (landing.json `override`) — headings too.
+  // Landing headings: the overrides and every heading the templates build.
+  let headings = 0;
+  let pending = 0;
+
   locales.forEach(locale => {
     const file = path.join(MESSAGES_DIR, locale, 'landing.json');
+    const commonFile = path.join(MESSAGES_DIR, locale, 'common.json');
 
-    if (!existsSync(file)) return;
+    if (!existsSync(file) || !existsSync(commonFile)) return;
 
-    const overrides = JSON.parse(readFileSync(file, 'utf8')).override ?? {};
-    const errors = leaves(overrides).flatMap(([key, value]) =>
-      typeof value === 'string'
-        ? forbiddenIn(value).map(label => `forbidden head term (${label}) in override.${key}: "${value}"`)
-        : []
+    const landing = JSON.parse(readFileSync(file, 'utf8'));
+    const common = JSON.parse(readFileSync(commonFile, 'utf8'));
+    const errors = new Set(
+      leaves(landing.override ?? {}).flatMap(([key, value]) =>
+        typeof value === 'string'
+          ? forbiddenIn(value).map(label => `forbidden head term (${label}) in override.${key}: "${value}"`)
+          : []
+      )
     );
 
-    if (errors.length) failures.push([`messages/${locale}/landing.json`, errors]);
+    landingHeadings(landing, common).forEach(({ place, boatType, h1, metaDesc }) => {
+      headings += 1;
+
+      [
+        ['h1', h1],
+        ['metaDesc', metaDesc],
+      ].forEach(([field, text]) => {
+        const labels = forbiddenIn(text);
+
+        if (!labels.length) return;
+
+        if (labels.every(label => label === YACHT_RULE) && PENDING_YACHT_TYPES.has(boatType)) {
+          pending += 1;
+
+          return;
+        }
+
+        const fix = boatType ? `add override.${place}.${boatType}` : 'change the template';
+
+        errors.add(
+          `forbidden head term (${labels.join(', ')}) in the ${field} of ${place} × ${boatType ?? 'no boat type'}: "${text}" — ${fix}`
+        );
+      });
+    });
+
+    if (errors.size) failures.push([`messages/${locale}/landing.json`, [...errors]]);
   });
 
   if (failures.length) {
@@ -354,8 +472,14 @@ const main = async () => {
   }
 
   console.log(
-    `✓ home hub: ${tabs.length} tabs, ${ids.length} links, ${locales.length} locales (${locales.join(', ')}) — complete, unique, no sister head terms (anchors + landing overrides)`
+    `✓ home hub: ${tabs.length} tabs, ${ids.length} links, ${locales.length} locales (${locales.join(', ')}) — complete, unique, no sister head terms (anchors, ${headings} landing headings)`
   );
+
+  if (pending) {
+    console.log(
+      `  pending (Mario): ${pending} yacht-type / no-boat-type landing title or meta texts with "yacht charter + Croatia/Greece/Italy/Spain/Türkiye" (review 1.10.2026, finding 2)`
+    );
+  }
 };
 
 main().catch(error => {

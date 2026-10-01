@@ -24,8 +24,10 @@ import { resolveSearchLanding, splitSearchParam, uniqueCaseInsensitive } from '@
  *   - `landing.override` (every locale) replaces a phrase another site of the
  *     group owns: "Catamaran charter Croatia" is catamaran-croatia-charter.com's
  *     keyword, so the boat4you page reads "Catamaran rental in Croatia" (also
- *     catamarans in Greece, Italy, the BVI and Martinique; checked by
- *     `yarn check:home-hub`);
+ *     catamarans and power catamarans in Greece, Italy, the BVI, Martinique,
+ *     the Bahamas, Grenada, the Caribbean, Northern Greece and the Italian
+ *     Adriatic; `yarn check:home-hub` builds every place × boat type heading
+ *     and fails on a sister head term without an override);
  *   - boat type only → the type label; neither → the generic search copy.
  *
  * `h1` is null when the page keeps its own heading (no destination).

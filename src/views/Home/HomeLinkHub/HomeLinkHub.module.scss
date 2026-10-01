@@ -60,30 +60,27 @@ $max-tabs: 8;
   left: 0;
 }
 
-// One row; scrolls sideways on a phone instead of wrapping.
+// Phones and tablets: the tabs wrap as chips, so every tab is visible and
+// the row never scrolls sideways (a hidden scroller hid 3 of 6 tabs on a
+// phone, could not be wheel-scrolled at 768-970 px and was an extra Tab
+// stop; QA 1.10.2026). From lg: one underlined row (wraps if it ever must).
 .tabList {
   display: flex;
-  gap: rem-calc(24);
+  flex-wrap: wrap;
+  gap: rem-calc(8);
   margin-top: rem-calc(16);
-  overflow-x: auto;
-  overscroll-behavior-x: contain;
-  scrollbar-width: none;
-  box-shadow: inset 0 -1px 0 $black-200;
 
-  &::-webkit-scrollbar {
-    display: none;
-  }
-
-  @include media('md') {
-    gap: rem-calc(32);
+  @include media('lg') {
+    gap: 0 rem-calc(32);
+    box-shadow: inset 0 -1px 0 $black-200;
   }
 }
 
 .tab {
-  flex-shrink: 0;
-  padding-block: rem-calc(12);
-  border-bottom: 2px solid transparent;
-  font-size: rem-calc(15);
+  padding: rem-calc(9 14);
+  border: 1px solid $black-200;
+  border-radius: rem-calc(999);
+  font-size: rem-calc(14);
   font-weight: 600;
   line-height: 1.3;
   white-space: nowrap;
@@ -94,6 +91,14 @@ $max-tabs: 8;
   &:hover {
     color: $blue-500;
   }
+
+  @include media('lg') {
+    padding: rem-calc(12 0);
+    border-width: 0 0 2px;
+    border-color: transparent;
+    border-radius: 0;
+    font-size: rem-calc(15);
+  }
 }
 
 .panel {
@@ -103,13 +108,21 @@ $max-tabs: 8;
 
 @for $i from 1 through $max-tabs {
   .radio:nth-of-type(#{$i}):checked ~ .tabList > .tab:nth-child(#{$i}) {
-    border-bottom-color: $blue-500;
+    border-color: $blue-500;
+    background-color: $blue-50;
     color: $blue-950;
+
+    @include media('lg') {
+      background-color: transparent;
+    }
   }
 
-  // Inset ring: the scrolling tab row would clip an outside one.
+  // Outside the label (an inset ring covered its first and last letters);
+  // the tab row no longer scrolls, so nothing clips it. No radius change:
+  // the outline follows the chip.
   .radio:nth-of-type(#{$i}):focus-visible ~ .tabList > .tab:nth-child(#{$i}) {
-    @include focus-ring(-2px);
+    outline: 2px solid $blue-500;
+    outline-offset: 2px;
   }
 
   .radio:nth-of-type(#{$i}):checked ~ .panels > .panel:nth-child(#{$i}) {
@@ -135,8 +148,10 @@ $max-tabs: 8;
   }
 }
 
-.extra {
+// The links past HOME_HUB_VISIBLE_LINKS, below the "Show more" toggle.
+.extraList {
   display: none;
+  margin-top: rem-calc(4);
 }
 
 .link {
@@ -199,9 +214,10 @@ $max-tabs: 8;
   display: none;
 }
 
-// The toggle sits after the list (focus order), so :has() reads its state.
-.panel:has(.moreToggle:checked) .extra {
-  display: block;
+// The toggle sits between the two lists (focus order: the first links, the
+// toggle, then the links it opened), so collapsing never moves it.
+.more:has(.moreToggle:checked) + .extraList {
+  display: grid;
 }
 
 .more:has(.moreToggle:checked) {
@@ -224,8 +240,8 @@ $max-tabs: 8;
 
 // No :has() (old browsers): every link shown, no toggle.
 @supports not selector(:has(*)) {
-  .extra {
-    display: block;
+  .extraList {
+    display: grid;
   }
 
   .more {
@@ -234,10 +250,16 @@ $max-tabs: 8;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .tab,
   .link,
   .more {
     transition: color $animation-duration-fast $timing-function;
+  }
+
+  .tab {
+    transition:
+      color $animation-duration-fast $timing-function,
+      background-color $animation-duration-fast $timing-function,
+      border-color $animation-duration-fast $timing-function;
   }
 
   .more::after {

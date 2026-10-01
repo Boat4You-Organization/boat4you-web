@@ -14,36 +14,110 @@
       "CATAMARAN": {
         "h1": "Catamaranes de alquiler en Croacia",
         "metaDesc": "Alquila un catamarán en Croacia. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Catamaranes a motor de alquiler en Croacia",
+        "metaDesc": "Alquila un catamarán a motor en Croacia. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
       }
     },
     "greece": {
       "CATAMARAN": {
         "h1": "Catamaranes de alquiler en Grecia",
         "metaDesc": "Alquila un catamarán en Grecia. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Catamaranes a motor de alquiler en Grecia",
+        "metaDesc": "Alquila un catamarán a motor en Grecia. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
       }
     },
     "italy": {
       "CATAMARAN": {
         "h1": "Catamaranes de alquiler en Italia",
         "metaDesc": "Alquila un catamarán en Italia. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Catamaranes a motor de alquiler en Italia",
+        "metaDesc": "Alquila un catamarán a motor en Italia. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
       }
     },
     "britishVirginIslands": {
       "CATAMARAN": {
         "h1": "Catamaranes de alquiler en las Islas Vírgenes Británicas",
         "metaDesc": "Alquila un catamarán en las Islas Vírgenes Británicas. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Catamaranes a motor de alquiler en las Islas Vírgenes Británicas",
+        "metaDesc": "Alquila un catamarán a motor en las Islas Vírgenes Británicas. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
       }
     },
     "virginIslandsBritish": {
       "CATAMARAN": {
         "h1": "Catamaranes de alquiler en las Islas Vírgenes Británicas",
         "metaDesc": "Alquila un catamarán en las Islas Vírgenes Británicas. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Catamaranes a motor de alquiler en las Islas Vírgenes Británicas",
+        "metaDesc": "Alquila un catamarán a motor en las Islas Vírgenes Británicas. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
       }
     },
     "martinique": {
       "CATAMARAN": {
         "h1": "Catamaranes de alquiler en Martinica",
         "metaDesc": "Alquila un catamarán en Martinica. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Catamaranes a motor de alquiler en Martinica",
+        "metaDesc": "Alquila un catamarán a motor en Martinica. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
+      }
+    },
+    "italianAdriatic": {
+      "CATAMARAN": {
+        "h1": "Catamaranes de alquiler en el Adriático italiano",
+        "metaDesc": "Alquila un catamarán en el Adriático italiano. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Catamaranes a motor de alquiler en el Adriático italiano",
+        "metaDesc": "Alquila un catamarán a motor en el Adriático italiano. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
+      }
+    },
+    "northernGreeceAegean": {
+      "CATAMARAN": {
+        "h1": "Catamaranes de alquiler en el norte de Grecia y el Egeo",
+        "metaDesc": "Alquila un catamarán en el norte de Grecia y el Egeo. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Catamaranes a motor de alquiler en el norte de Grecia y el Egeo",
+        "metaDesc": "Alquila un catamarán a motor en el norte de Grecia y el Egeo. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
+      }
+    },
+    "bahamas": {
+      "CATAMARAN": {
+        "h1": "Catamaranes de alquiler en las Bahamas",
+        "metaDesc": "Alquila un catamarán en las Bahamas. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Catamaranes a motor de alquiler en las Bahamas",
+        "metaDesc": "Alquila un catamarán a motor en las Bahamas. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
+      }
+    },
+    "grenada": {
+      "CATAMARAN": {
+        "h1": "Catamaranes de alquiler en Granada",
+        "metaDesc": "Alquila un catamarán en Granada. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Catamaranes a motor de alquiler en Granada",
+        "metaDesc": "Alquila un catamarán a motor en Granada. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
+      }
+    },
+    "caribbean": {
+      "CATAMARAN": {
+        "h1": "Catamaranes de alquiler en el Caribe",
+        "metaDesc": "Alquila un catamarán en el Caribe. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Catamaranes a motor de alquiler en el Caribe",
+        "metaDesc": "Alquila un catamarán a motor en el Caribe. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
       }
     }
   },

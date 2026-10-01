@@ -14,36 +14,110 @@
       "CATAMARAN": {
         "h1": "Catamarãs para alugar na Croácia",
         "metaDesc": "Alugue um catamarã na Croácia. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Catamarãs a motor para alugar na Croácia",
+        "metaDesc": "Alugue um catamarã a motor na Croácia. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
       }
     },
     "greece": {
       "CATAMARAN": {
         "h1": "Catamarãs para alugar na Grécia",
         "metaDesc": "Alugue um catamarã na Grécia. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Catamarãs a motor para alugar na Grécia",
+        "metaDesc": "Alugue um catamarã a motor na Grécia. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
       }
     },
     "italy": {
       "CATAMARAN": {
         "h1": "Catamarãs para alugar em Itália",
         "metaDesc": "Alugue um catamarã em Itália. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Catamarãs a motor para alugar em Itália",
+        "metaDesc": "Alugue um catamarã a motor em Itália. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
       }
     },
     "britishVirginIslands": {
       "CATAMARAN": {
         "h1": "Catamarãs para alugar nas Ilhas Virgens Britânicas",
         "metaDesc": "Alugue um catamarã nas Ilhas Virgens Britânicas. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Catamarãs a motor para alugar nas Ilhas Virgens Britânicas",
+        "metaDesc": "Alugue um catamarã a motor nas Ilhas Virgens Britânicas. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
       }
     },
     "virginIslandsBritish": {
       "CATAMARAN": {
         "h1": "Catamarãs para alugar nas Ilhas Virgens Britânicas",
         "metaDesc": "Alugue um catamarã nas Ilhas Virgens Britânicas. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Catamarãs a motor para alugar nas Ilhas Virgens Britânicas",
+        "metaDesc": "Alugue um catamarã a motor nas Ilhas Virgens Britânicas. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
       }
     },
     "martinique": {
       "CATAMARAN": {
         "h1": "Catamarãs para alugar na Martinica",
         "metaDesc": "Alugue um catamarã na Martinica. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Catamarãs a motor para alugar na Martinica",
+        "metaDesc": "Alugue um catamarã a motor na Martinica. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
+      }
+    },
+    "italianAdriatic": {
+      "CATAMARAN": {
+        "h1": "Catamarãs para alugar no Adriático italiano",
+        "metaDesc": "Alugue um catamarã no Adriático italiano. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Catamarãs a motor para alugar no Adriático italiano",
+        "metaDesc": "Alugue um catamarã a motor no Adriático italiano. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
+      }
+    },
+    "northernGreeceAegean": {
+      "CATAMARAN": {
+        "h1": "Catamarãs para alugar no norte da Grécia e no Egeu",
+        "metaDesc": "Alugue um catamarã no norte da Grécia e no Egeu. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Catamarãs a motor para alugar no norte da Grécia e no Egeu",
+        "metaDesc": "Alugue um catamarã a motor no norte da Grécia e no Egeu. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
+      }
+    },
+    "bahamas": {
+      "CATAMARAN": {
+        "h1": "Catamarãs para alugar nas Bahamas",
+        "metaDesc": "Alugue um catamarã nas Bahamas. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Catamarãs a motor para alugar nas Bahamas",
+        "metaDesc": "Alugue um catamarã a motor nas Bahamas. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
+      }
+    },
+    "grenada": {
+      "CATAMARAN": {
+        "h1": "Catamarãs para alugar em Granada",
+        "metaDesc": "Alugue um catamarã em Granada. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Catamarãs a motor para alugar em Granada",
+        "metaDesc": "Alugue um catamarã a motor em Granada. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
+      }
+    },
+    "caribbean": {
+      "CATAMARAN": {
+        "h1": "Catamarãs para alugar no Caribe",
+        "metaDesc": "Alugue um catamarã no Caribe. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
+      },
+      "POWER_CATAMARAN": {
+        "h1": "Catamarãs a motor para alugar no Caribe",
+        "metaDesc": "Alugue um catamarã a motor no Caribe. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
       }
     }
   },

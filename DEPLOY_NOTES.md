@@ -3,24 +3,36 @@
 ## 2026-10-01 — 🔗 Naslovnica: blok ključnih riječi i linkova na dnu (6 tabova, 140 linkova, 9 jezika) — ⏳ NIJE DEPLOYANO
 
 Mario 1.10.: „napravi to ali stavi na dnu main paiga od boat4you, neka bude kao što su napravili na Borrow a Boat… više nam je
-to da Google vidi ključnu riječ i link na to". Commit: ovaj (samo lokalno, nije pushano).
+to da Google vidi ključnu riječ i link na to". Commitovi: `211705e3` + review popravci (`fix(home): link hub review fixes`),
+samo lokalno, nije pushano.
 
 - **Gdje:** zadnja sekcija naslovnice, odmah iznad footera (iza `SeoTextSection`). `src/views/Home/HomeLinkHub/` (server
   komponenta, bez MUI i bez vlastitog JS-a), popis u `src/config/homeHub.config.ts`, filtar u `src/utils/server/homeHubLinks.ts`.
 - **Kako:** tabovi su radio + label, „Prikaži više" je checkbox (samo CSS). Svih 140 linkova svih tabova je u server HTML-u
-  (12 vidljivo po tabu, ostatak skriva CSS), bez `title`, bez `nofollow`, bez brojeva; `prefetch={false}`.
+  (12 vidljivo po tabu, ostatak skriva CSS), bez `title`, bez `nofollow`, bez brojeva. Linkovi su obični `<a>` s
+  `getPathname` hrefom (ne next-intl `Link`, koji je klijentska komponenta → 140 hidratacija), bez prefetcha.
+- **Izgled:** mobitel i tablet (< 1024 px): tabovi su „chipovi" koji se lome u 2–3 reda (svih 6 vidljivo, nema skrivenog
+  bočnog scrolla); desktop: jedan podvučeni red. „Prikaži više/manje" stoji između prvih 12 linkova i ostatka, pa se kod
+  „Prikaži manje" ne pomiče s ekrana.
 - **Filtar:** /search landing se linka samo dok ga landing manifest drži indeksabilnim u tom jeziku (isti URL builder kao
   sitemap); itinerari i vodiči cijena dok su u configu; modeli dok su u katalogu modela. Tijekom `next build` hub se ne renderira
-  (bez navale na produkcijski API); hladan manifest = hub izostane do sljedeće ISR revalidacije (60 s).
+  (bez navale na produkcijski API). Spor ili pao izvor (manifest, indeks destinacija, katalog modela, > 3 s ukupno) više ne
+  briše linkove: služi se zadnja dobra lista tog procesa (po jeziku) uz `console.warn` `[homeHub] …`; link otpada samo kad ga
+  svježa lista izostavi. Bez huba je samo hladan proces koji još ništa nije složio.
 - **Prijevodi:** `messages/<9 jezika>/homeHub.json`. **Pravilo vlasništva ključnih riječi:** nijedan anchor ni naslov ne smije
   sadržavati „catamaran charter Croatia/Greece/Italy/Caribbean/BVI" ni „yacht charter Croatia/Greece/Italy/Spain/Türkiye" (ni
   prijevode, ni ES/FR/IT/PT „alquiler/location/noleggio/aluguer" oblike koje sisteri koriste). „Yacht charter Split" je naš.
 - **Landing naslovi (`landing.json` `override`, svih 9 jezika):** katamaran × Hrvatska/Grčka/Italija/BVI/Martinique dobiva
   naslov bez sisterovog head terma (EN „Catamaran rental in Greece", DE „Katamaran mieten in Griechenland", PL „Wynajem
-  katamaranów w Chorwacji"…). Mijenja `<title>`, H1 i meta description 44 landinga (5 mjesta × 9 jezika; EN croatia je već
-  postojao). Kod (`landingCopy.ts`) je već čitao override za svaki jezik.
-- **Provjera:** `yarn check:home-hub` (sada dio `yarn lint`, pre-commit): ključevi, jedinstveni anchori, zabranjeni izrazi
-  (anchori + landing override), samotest 40 loših / 21 dobar izraz.
+  katamaranów w Chorwacji"…). Review popravak: i **motorni katamaran** × Hrvatska/Grčka/Italija/BVI/Martinique te katamaran
+  i motorni katamaran × Bahami/Grenada/Karibi/Sjeverna Grčka i Egej/talijanski Jadran (EN „Power catamaran rental in Croatia",
+  „Catamaran rental in the Bahamas", DE „Motor-Katamaran mieten in Kroatien") — +144 overridea (16 kombinacija × 9 jezika).
+  Mijenja `<title>`, H1 i meta description tih landinga (gdje landing postoji). Kod (`landingCopy.ts`) čita override za
+  svaki jezik.
+- **Provjera:** `yarn check:home-hub` (dio `yarn lint`, pre-commit): ključevi, jedinstveni anchori, zabranjeni izrazi u
+  anchorima i u **svakom landing naslovu koji predlošci mogu složiti** (mjesto iz `landing.in` × bez tipa / svaki tip broda,
+  override → lead → default, h1 + meta; 10.413 tekstova), složenice (Segelyacht-Charter, Zeiljachtcharter, Motoryacht charter,
+  Motorkatamaran) i samotest 53 loša / 27 dobrih izraza. Jahte (vidi Otvoreno) se ispisuju kao „pending", ne ruše provjeru.
 
 **Provjereno lokalno** (`next start :3130`, prod API, build `8e341f07`+promjene): na `/`, `/de`, `/es`, `/fr`, `/hr`, `/it`, `/nl`,
 `/pl`, `/pt` hub je zadnji prije footera, **140/140 linkova u svakom jeziku, 0 filtriranih**, redoslijed = config; svih 1.260 hrefova
@@ -29,7 +41,26 @@ je u live sitemapovima (30.9.), ispravan jezični prefiks, 0 `title`/`rel`, 0 za
 Headless Chrome bez JS-a (1400 px i 375 px): tabovi i „Prikaži više/manje" rade, nema horizontalnog scrolla stranice; tipkovnica:
 Tab → tab, strelica → sljedeći tab, 12 × Tab kroz linkove, Space na „Prikaži više".
 
-**Veličina naslovnice:** +≈99 KB raw / **+≈8,5–9 KB gzip** po jeziku (HTML huba ≈30 KB + RSC payload ≈67 KB).
+**Veličina naslovnice:** nakon review popravka **+≈72 KB raw / +≈7 KB gzip** po jeziku (EN 445.358 → 516.945 B; HTML huba
+≈27 KB + RSC payload ≈44 KB), prije +≈119 KB raw / +≈9,7 KB gzip s next-intl `Link`.
+
+**Review popravci provjereni lokalno** (build `211705e3`+popravci, `next start :3132`, prod API): 9 jezika × 140 = **1.260
+hrefova** = sitemap `<loc>` (30.9.), ispravan prefiks, redoslijed = config, „Prikaži više" između listi (12 + 13/8). Headless
+Chrome (de 390/1400, fr 360/900, pl 768): svih 6 tabova vidljivo, bez bočnog scrolla; „Prikaži manje" ostaje na istom mjestu
+(y prije = y poslije); strelica → zadnji tab vidljiv, prsten 2 px izvan labele, jedan Tab → prvi link; 0 JS grešaka. Landing:
+EN croatia×motorni katamaran, DE bahamas×katamaran, FR grenada×katamaran → title = H1 = override, index.
+
+**Otvoreno, za Marija:**
+
+- **Jahte × „yacht charter + zemlja" (postojalo prije huba):** landing naslovi jedrilica/motornih jahti × Hrvatska/Grčka/
+  Italija/Španjolska/Türkiye (EN „Sailing yacht charter in Croatia", „Motoryacht charter in Greece") i vodiči cijena „Yacht
+  charter prices in Croatia/Greece/Italy" — hub linka 11 takvih stranica (anchori su čisti: „Sailboat charter in Croatia",
+  „Croatia charter prices by month"). Isto vrijedi za naslove država bez tipa u de/es/fr/it/nl/pt („Yachtcharter und
+  Bootsverleih in Kroatien"). Odluka: override (+ novi naslov vodiča cijena) ili maknuti tih 11 linkova. Do odluke ostaju,
+  a provjera ih ispisuje kao pending (278 tekstova).
+- **ES/FR/PT obiteljski oblici:** „Catamaranes de alquiler", „Catamarans à louer", „Catamarãs para alugar" su blizu sisterovih
+  „Alquiler/Location/Aluguer de catamarã…" (Google ih tretira kao istu obitelj riječi) — potvrditi sva tri zajedno.
+- **Pre-existing (nije hub):** na mobitelu chat gumb prekriva „Install Boat4You" traku (gumb Instaliraj i ×).
 
 **Deploy napomena:** prerenderana naslovnica iz builda nema hub; pojavi se na prvoj ISR revalidaciji (zagrijati naslovnice
 ×9 dvaput, s razmakom). Provjera nakon deploya: `curl -s https://www.boat4you.com/de | grep -c 'home-hub-title'` = 1.
