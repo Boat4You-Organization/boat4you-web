@@ -1,5 +1,7 @@
 'use server';
 
+import { cache } from 'react';
+
 import { headers } from 'next/headers';
 
 import { POST_REQUEST_PARAMETERS } from '@/config/constants.config';
@@ -49,10 +51,61 @@ export interface BrochureResult {
 
 /**
  * Longest a boat page waits for the detail API before answering 5xx, retries
- * included. A hung backend otherwise holds the request for undici's 300 s
- * header timeout.
+ * included (the deadline of the whole fetchWithRetry call). A hung backend
+ * otherwise holds the request for undici's 300 s header timeout.
+ *
+ * 8 s, not 25 s (audit 1.10.2026, F2): the detail answers in 0.1–0.2 s when
+ * the backend is healthy. When its DB pool is exhausted it waits 20 s for a
+ * connection, and 25 s per fetch (twice per render until then) only held
+ * the visitor until nginx gave up (499). After 8 s the page answers 500,
+ * which nginx serves as 503 + Retry-After.
  */
-const YACHT_DETAIL_TIMEOUT_MS = 25_000;
+const YACHT_DETAIL_TIMEOUT_MS = 8_000;
+
+/**
+ * One detail fetch per boat page render: generateMetadata and the page ask
+ * for the same boat (same slug, query, currency and locale), and React
+ * cache() hands the second caller the first one's promise — its result or
+ * its error. Next's own fetch dedupe cannot do this: the deadline signal
+ * makes every call a separate request (before 1.10.2026 the API saw two
+ * identical GETs in the same second for every boat page). Primitive
+ * arguments only: cache() compares them with Object.is.
+ */
+const fetchYachtDetail = cache(
+  async (slug: string, queryParams: string, language: string): Promise<YachtModel | null> => {
+    // Encoded: a decoded `?` or `#` in the path segment would otherwise turn
+    // the request into the list endpoint.
+    const response = await fetchWithRetry(
+      `${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/yachts/${encodeURIComponent(slug)}${queryParams}`,
+      {
+        headers: {
+          'Accept-Language': language,
+        },
+        signal: AbortSignal.timeout(YACHT_DETAIL_TIMEOUT_MS),
+      }
+    );
+
+    if (response.status === 404 || response.status === 410 || response.status === 400) {
+      return null;
+    }
+
+    if (!response.ok) {
+      throw new Error(`Yacht API answered ${response.status} for "${slug}"`);
+    }
+
+    const yacht = (await response.json()) as YachtModel;
+
+    // Owner rule: a charter operator the partner delivers as the manufacturer
+    // ("Odisej Ltd") never reaches the page — not the photo alt text, the RSC
+    // payload, the PDF nor the Product brand (operatorNames.ts).
+    if (isOperatorName(yacht.manufacturerName)) yacht.manufacturerName = '';
+
+    // Nor does partner prose written as the operator ("Athenian Yachts shall not
+    // be liable…", "the Athenian’s Pier", "(to update manually)") — partnerText.ts.
+    // Partner identifiers (externalId, agency) stay out of the page too (partnerIds.ts).
+    return withSafePartnerText(withoutPartnerIds(yacht));
+  }
+);
 
 /**
  * The yacht behind `slug`, or null when the API says it does not exist.
@@ -72,6 +125,8 @@ const YACHT_DETAIL_TIMEOUT_MS = 25_000;
  * stays a 500: an App Router page cannot answer 503 (Next 16 renders a
  * thrown error as 500; only notFound / forbidden / unauthorized / redirect
  * set another status).
+ *
+ * Within one render, equal arguments share one fetch (fetchYachtDetail).
  */
 export async function getSingleYacth(
   slug: string,
@@ -91,39 +146,7 @@ export async function getSingleYacth(
     ...(currency && { currency }),
   };
 
-  const queryParams = createYachtQueryParams(paramsWithCurrency);
-
-  // Encoded: a decoded `?` or `#` in the path segment would otherwise turn
-  // the request into the list endpoint.
-  const response = await fetchWithRetry(
-    `${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/yachts/${encodeURIComponent(slug)}${queryParams}`,
-    {
-      headers: {
-        'Accept-Language': language,
-      },
-      signal: AbortSignal.timeout(YACHT_DETAIL_TIMEOUT_MS),
-    }
-  );
-
-  if (response.status === 404 || response.status === 410 || response.status === 400) {
-    return null;
-  }
-
-  if (!response.ok) {
-    throw new Error(`Yacht API answered ${response.status} for "${slug}"`);
-  }
-
-  const yacht = (await response.json()) as YachtModel;
-
-  // Owner rule: a charter operator the partner delivers as the manufacturer
-  // ("Odisej Ltd") never reaches the page — not the photo alt text, the RSC
-  // payload, the PDF nor the Product brand (operatorNames.ts).
-  if (isOperatorName(yacht.manufacturerName)) yacht.manufacturerName = '';
-
-  // Nor does partner prose written as the operator ("Athenian Yachts shall not
-  // be liable…", "the Athenian’s Pier", "(to update manually)") — partnerText.ts.
-  // Partner identifiers (externalId, agency) stay out of the page too (partnerIds.ts).
-  return withSafePartnerText(withoutPartnerIds(yacht));
+  return fetchYachtDetail(slug, createYachtQueryParams(paramsWithCurrency), language);
 }
 
 export async function getYachtBrochureUrl(state: unknown, slug: string): Promise<BrochureResult> {

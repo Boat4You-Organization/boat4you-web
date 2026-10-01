@@ -14,7 +14,7 @@ import { AllSearchParams } from '@/config/form-models.config';
 import { LocaleType } from '@/config/locales.config';
 import { meta } from '@/config/meta';
 import { routing } from '@/i18n/routing';
-import { Currency } from '@/models/user.model';
+import { Currency, UserModel } from '@/models/user.model';
 import { CHARTER_TYPE_LABEL_MAP, CharterType, YachtModel } from '@/models/yacht.model';
 import { boatHubs } from '@/utils/server/catalogueHubs';
 import { loadManufacturerLookup } from '@/utils/server/manufacturerLookup';
@@ -293,6 +293,15 @@ const redirectToCanonicalBoat = (
   permanentRedirect(`${prefix}/boat/${yacht.slug}${search ? `?${search}` : ''}`);
 };
 
+/**
+ * The page's currency: the signed-in user's, else `?currency=`, else EUR.
+ * generateMetadata asks for the boat with this currency and the page's
+ * locale too — neither changes a field the metadata reads — so both calls
+ * get equal arguments and share ONE detail fetch (getSingleYacth).
+ */
+const boatCurrency = (user: UserModel | null, searchParamsData: AllSearchParams): Currency =>
+  user?.currency || (searchParamsData.currency as Currency) || Currency.EUR;
+
 export async function generateMetadata({
   params,
   searchParams,
@@ -302,6 +311,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const tBoat = await getTranslations('metadata.boat');
   const t = await getTranslations();
+  const user = await getLoggedInUser();
   const { slug, locale } = await params;
 
   const searchParamsData = await searchParams;
@@ -315,7 +325,7 @@ export async function generateMetadata({
     searchParamsData.dateTo = searchParamsData.endDate;
   }
 
-  const yacht = await getSingleYacth(slug, searchParamsData);
+  const yacht = await getSingleYacth(slug, searchParamsData, boatCurrency(user, searchParamsData), locale);
 
   if (!yacht) {
     return {
@@ -417,7 +427,7 @@ const BoatPage = async ({
     searchParamsData.dateTo = searchParamsData.endDate;
   }
 
-  const currency = user?.currency || (searchParamsData.currency as Currency) || Currency.EUR;
+  const currency = boatCurrency(user, searchParamsData);
 
   const yacht = await getSingleYacth(slug, searchParamsData, currency, locale);
 
