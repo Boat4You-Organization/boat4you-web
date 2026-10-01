@@ -21,9 +21,11 @@ import { resolveSearchLanding, splitSearchParam, uniqueCaseInsensitive } from '@
  *   - a place with a `landing.lead` (Split Region, owner decision 25.9.2026)
  *     leads with that keyword: "Yacht charter Split – boat rental in the
  *     Split Region";
- *   - `landing.override` (EN only) replaces a phrase another site of the
+ *   - `landing.override` (every locale) replaces a phrase another site of the
  *     group owns: "Catamaran charter Croatia" is catamaran-croatia-charter.com's
- *     keyword, so the boat4you page reads "Catamaran rental in Croatia";
+ *     keyword, so the boat4you page reads "Catamaran rental in Croatia" (also
+ *     catamarans in Greece, Italy, the BVI and Martinique; checked by
+ *     `yarn check:home-hub`);
  *   - boat type only → the type label; neither → the generic search copy.
  *
  * `h1` is null when the page keeps its own heading (no destination).

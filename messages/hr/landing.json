@@ -9,7 +9,44 @@
   "lead": {
     "splitRegion": "Split"
   },
-  "override": {},
+  "override": {
+    "croatia": {
+      "CATAMARAN": {
+        "h1": "Najam katamarana u Hrvatskoj",
+        "metaDesc": "Unajmite katamaran u Hrvatskoj. Usporedite cijene, prave slike, instant rezervacija. Sigurno plaćanje i podrška 24/7."
+      }
+    },
+    "greece": {
+      "CATAMARAN": {
+        "h1": "Najam katamarana u Grčkoj",
+        "metaDesc": "Unajmite katamaran u Grčkoj. Usporedite cijene, prave slike, instant rezervacija. Sigurno plaćanje i podrška 24/7."
+      }
+    },
+    "italy": {
+      "CATAMARAN": {
+        "h1": "Najam katamarana u Italiji",
+        "metaDesc": "Unajmite katamaran u Italiji. Usporedite cijene, prave slike, instant rezervacija. Sigurno plaćanje i podrška 24/7."
+      }
+    },
+    "britishVirginIslands": {
+      "CATAMARAN": {
+        "h1": "Najam katamarana na Britanskim Djevičanskim otocima",
+        "metaDesc": "Unajmite katamaran na Britanskim Djevičanskim otocima. Usporedite cijene, prave slike, instant rezervacija. Sigurno plaćanje i podrška 24/7."
+      }
+    },
+    "virginIslandsBritish": {
+      "CATAMARAN": {
+        "h1": "Najam katamarana na Britanskim Djevičanskim otocima",
+        "metaDesc": "Unajmite katamaran na Britanskim Djevičanskim otocima. Usporedite cijene, prave slike, instant rezervacija. Sigurno plaćanje i podrška 24/7."
+      }
+    },
+    "martinique": {
+      "CATAMARAN": {
+        "h1": "Najam katamarana na Martiniku",
+        "metaDesc": "Unajmite katamaran na Martiniku. Usporedite cijene, prave slike, instant rezervacija. Sigurno plaćanje i podrška 24/7."
+      }
+    }
+  },
   "names": {
     "dubrovnikRegion": "Dubrovačka regija",
     "istriaKvarner": "Istra / Kvarner",

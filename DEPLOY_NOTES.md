@@ -1,5 +1,39 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-10-01 — 🔗 Naslovnica: blok ključnih riječi i linkova na dnu (6 tabova, 140 linkova, 9 jezika) — ⏳ NIJE DEPLOYANO
+
+Mario 1.10.: „napravi to ali stavi na dnu main paiga od boat4you, neka bude kao što su napravili na Borrow a Boat… više nam je
+to da Google vidi ključnu riječ i link na to". Commit: ovaj (samo lokalno, nije pushano).
+
+- **Gdje:** zadnja sekcija naslovnice, odmah iznad footera (iza `SeoTextSection`). `src/views/Home/HomeLinkHub/` (server
+  komponenta, bez MUI i bez vlastitog JS-a), popis u `src/config/homeHub.config.ts`, filtar u `src/utils/server/homeHubLinks.ts`.
+- **Kako:** tabovi su radio + label, „Prikaži više" je checkbox (samo CSS). Svih 140 linkova svih tabova je u server HTML-u
+  (12 vidljivo po tabu, ostatak skriva CSS), bez `title`, bez `nofollow`, bez brojeva; `prefetch={false}`.
+- **Filtar:** /search landing se linka samo dok ga landing manifest drži indeksabilnim u tom jeziku (isti URL builder kao
+  sitemap); itinerari i vodiči cijena dok su u configu; modeli dok su u katalogu modela. Tijekom `next build` hub se ne renderira
+  (bez navale na produkcijski API); hladan manifest = hub izostane do sljedeće ISR revalidacije (60 s).
+- **Prijevodi:** `messages/<9 jezika>/homeHub.json`. **Pravilo vlasništva ključnih riječi:** nijedan anchor ni naslov ne smije
+  sadržavati „catamaran charter Croatia/Greece/Italy/Caribbean/BVI" ni „yacht charter Croatia/Greece/Italy/Spain/Türkiye" (ni
+  prijevode, ni ES/FR/IT/PT „alquiler/location/noleggio/aluguer" oblike koje sisteri koriste). „Yacht charter Split" je naš.
+- **Landing naslovi (`landing.json` `override`, svih 9 jezika):** katamaran × Hrvatska/Grčka/Italija/BVI/Martinique dobiva
+  naslov bez sisterovog head terma (EN „Catamaran rental in Greece", DE „Katamaran mieten in Griechenland", PL „Wynajem
+  katamaranów w Chorwacji"…). Mijenja `<title>`, H1 i meta description 44 landinga (5 mjesta × 9 jezika; EN croatia je već
+  postojao). Kod (`landingCopy.ts`) je već čitao override za svaki jezik.
+- **Provjera:** `yarn check:home-hub` (sada dio `yarn lint`, pre-commit): ključevi, jedinstveni anchori, zabranjeni izrazi
+  (anchori + landing override), samotest 40 loših / 21 dobar izraz.
+
+**Provjereno lokalno** (`next start :3130`, prod API, build `8e341f07`+promjene): na `/`, `/de`, `/es`, `/fr`, `/hr`, `/it`, `/nl`,
+`/pl`, `/pt` hub je zadnji prije footera, **140/140 linkova u svakom jeziku, 0 filtriranih**, redoslijed = config; svih 1.260 hrefova
+je u live sitemapovima (30.9.), ispravan jezični prefiks, 0 `title`/`rel`, 0 zabranjenih izraza. Landing override radi
+(`/search?destinations=greece&boatTypes=CATAMARAN` EN + DE, PL croatia, FR BVI, IT martinique: title = H1 = override, index).
+Headless Chrome bez JS-a (1400 px i 375 px): tabovi i „Prikaži više/manje" rade, nema horizontalnog scrolla stranice; tipkovnica:
+Tab → tab, strelica → sljedeći tab, 12 × Tab kroz linkove, Space na „Prikaži više".
+
+**Veličina naslovnice:** +≈99 KB raw / **+≈8,5–9 KB gzip** po jeziku (HTML huba ≈30 KB + RSC payload ≈67 KB).
+
+**Deploy napomena:** prerenderana naslovnica iz builda nema hub; pojavi se na prvoj ISR revalidaciji (zagrijati naslovnice
+×9 dvaput, s razmakom). Provjera nakon deploya: `curl -s https://www.boat4you.com/de | grep -c 'home-hub-title'` = 1.
+
 ## 2026-10-01 — 📱 Mobitel: nema više zumiranja kad se dotakne polje — ✅ DEPLOYED
 
 Mario 1.10. (screenshot, filteri na /search): „kada se na mobitelu traži filter, onda radi zum… ne smije biti zumiranja".

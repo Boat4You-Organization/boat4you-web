@@ -9,7 +9,44 @@
   "lead": {
     "splitRegion": "Split"
   },
-  "override": {},
+  "override": {
+    "croatia": {
+      "CATAMARAN": {
+        "h1": "Wynajem katamaranów w Chorwacji",
+        "metaDesc": "Wynajmij katamaran w Chorwacji. Porównaj ceny, prawdziwe zdjęcia, rezerwacja natychmiastowa. Bezpieczna płatność i wsparcie 24/7."
+      }
+    },
+    "greece": {
+      "CATAMARAN": {
+        "h1": "Wynajem katamaranów w Grecji",
+        "metaDesc": "Wynajmij katamaran w Grecji. Porównaj ceny, prawdziwe zdjęcia, rezerwacja natychmiastowa. Bezpieczna płatność i wsparcie 24/7."
+      }
+    },
+    "italy": {
+      "CATAMARAN": {
+        "h1": "Wynajem katamaranów we Włoszech",
+        "metaDesc": "Wynajmij katamaran we Włoszech. Porównaj ceny, prawdziwe zdjęcia, rezerwacja natychmiastowa. Bezpieczna płatność i wsparcie 24/7."
+      }
+    },
+    "britishVirginIslands": {
+      "CATAMARAN": {
+        "h1": "Wynajem katamaranów na Brytyjskich Wyspach Dziewiczych",
+        "metaDesc": "Wynajmij katamaran na Brytyjskich Wyspach Dziewiczych. Porównaj ceny, prawdziwe zdjęcia, rezerwacja natychmiastowa. Bezpieczna płatność i wsparcie 24/7."
+      }
+    },
+    "virginIslandsBritish": {
+      "CATAMARAN": {
+        "h1": "Wynajem katamaranów na Brytyjskich Wyspach Dziewiczych",
+        "metaDesc": "Wynajmij katamaran na Brytyjskich Wyspach Dziewiczych. Porównaj ceny, prawdziwe zdjęcia, rezerwacja natychmiastowa. Bezpieczna płatność i wsparcie 24/7."
+      }
+    },
+    "martinique": {
+      "CATAMARAN": {
+        "h1": "Wynajem katamaranów na Martynice",
+        "metaDesc": "Wynajmij katamaran na Martynice. Porównaj ceny, prawdziwe zdjęcia, rezerwacja natychmiastowa. Bezpieczna płatność i wsparcie 24/7."
+      }
+    }
+  },
   "names": {
     "dubrovnikRegion": "Region Dubrownika",
     "istriaKvarner": "Istria / Kvarner",

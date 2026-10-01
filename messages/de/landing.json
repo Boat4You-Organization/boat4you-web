@@ -9,7 +9,44 @@
   "lead": {
     "splitRegion": "Split"
   },
-  "override": {},
+  "override": {
+    "croatia": {
+      "CATAMARAN": {
+        "h1": "Katamaran mieten in Kroatien",
+        "metaDesc": "Mieten Sie einen Katamaran in Kroatien. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
+      }
+    },
+    "greece": {
+      "CATAMARAN": {
+        "h1": "Katamaran mieten in Griechenland",
+        "metaDesc": "Mieten Sie einen Katamaran in Griechenland. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
+      }
+    },
+    "italy": {
+      "CATAMARAN": {
+        "h1": "Katamaran mieten in Italien",
+        "metaDesc": "Mieten Sie einen Katamaran in Italien. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
+      }
+    },
+    "britishVirginIslands": {
+      "CATAMARAN": {
+        "h1": "Katamaran mieten auf den Britischen Jungferninseln",
+        "metaDesc": "Mieten Sie einen Katamaran auf den Britischen Jungferninseln. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
+      }
+    },
+    "virginIslandsBritish": {
+      "CATAMARAN": {
+        "h1": "Katamaran mieten auf den Britischen Jungferninseln",
+        "metaDesc": "Mieten Sie einen Katamaran auf den Britischen Jungferninseln. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
+      }
+    },
+    "martinique": {
+      "CATAMARAN": {
+        "h1": "Katamaran mieten auf Martinique",
+        "metaDesc": "Mieten Sie einen Katamaran auf Martinique. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
+      }
+    }
+  },
   "names": {
     "dubrovnikRegion": "Region Dubrovnik",
     "istriaKvarner": "Istrien / Kvarner",

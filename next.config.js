@@ -38,6 +38,7 @@ const withNextIntl = createNextIntlPlugin({
       './messages/en/charterFacts.json',
       './messages/en/priceGuide.json',
       './messages/en/review.json',
+      './messages/en/homeHub.json',
     ],
   },
 });

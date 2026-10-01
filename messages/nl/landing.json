@@ -9,7 +9,44 @@
   "lead": {
     "splitRegion": "Split"
   },
-  "override": {},
+  "override": {
+    "croatia": {
+      "CATAMARAN": {
+        "h1": "Catamaran huren in Kroatië",
+        "metaDesc": "Huur een catamaran in Kroatië. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
+      }
+    },
+    "greece": {
+      "CATAMARAN": {
+        "h1": "Catamaran huren in Griekenland",
+        "metaDesc": "Huur een catamaran in Griekenland. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
+      }
+    },
+    "italy": {
+      "CATAMARAN": {
+        "h1": "Catamaran huren in Italië",
+        "metaDesc": "Huur een catamaran in Italië. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
+      }
+    },
+    "britishVirginIslands": {
+      "CATAMARAN": {
+        "h1": "Catamaran huren op de Britse Maagdeneilanden",
+        "metaDesc": "Huur een catamaran op de Britse Maagdeneilanden. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
+      }
+    },
+    "virginIslandsBritish": {
+      "CATAMARAN": {
+        "h1": "Catamaran huren op de Britse Maagdeneilanden",
+        "metaDesc": "Huur een catamaran op de Britse Maagdeneilanden. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
+      }
+    },
+    "martinique": {
+      "CATAMARAN": {
+        "h1": "Catamaran huren op Martinique",
+        "metaDesc": "Huur een catamaran op Martinique. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
+      }
+    }
+  },
   "names": {
     "dubrovnikRegion": "Regio Dubrovnik",
     "istriaKvarner": "Istrië / Kvarner",

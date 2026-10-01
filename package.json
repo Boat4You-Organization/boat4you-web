@@ -16,7 +16,8 @@
     "start": "next start",
     "lint:base": "pretty-quick --staged && eslint --ext .ts,.tsx ./",
     "lint:styles": "stylelint '**/*.scss' --fix",
-    "lint": "yarn lint:base --fix --cache --cache-location=./node_modules/.cache/ && yarn lint:styles",
+    "lint": "yarn lint:base --fix --cache --cache-location=./node_modules/.cache/ && yarn lint:styles && yarn check:home-hub",
+    "check:home-hub": "node scripts/check-home-hub.mjs",
     "upgrade": "yarn upgrade"
   },
   "dependencies": {

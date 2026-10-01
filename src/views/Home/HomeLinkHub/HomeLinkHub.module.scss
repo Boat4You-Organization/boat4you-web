@@ -1,0 +1,246 @@
+@use '@/styles/settings/variables' as *;
+@use '@/styles/utils/rem-calc' as *;
+@use '@/styles/mixins/breakpoints' as *;
+
+// CSS-only tabs: the radios come first (siblings of .tabList and .panels),
+// radio N drives label N and panel N. Covers up to $max-tabs tabs.
+$max-tabs: 8;
+
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+@mixin focus-ring($offset: 2px) {
+  outline: 2px solid $blue-500;
+  outline-offset: $offset;
+  border-radius: rem-calc(2);
+}
+
+// Same container as SeoTextSection right above it; a hairline marks the
+// hub as the closing link block before the footer.
+.hub {
+  position: relative;
+  width: 100%;
+  max-width: rem-calc(1280);
+  margin-inline: auto;
+  padding-inline: rem-calc(16);
+  padding-block: rem-calc(36 48);
+  border-top: 1px solid $black-100;
+
+  @include media('md') {
+    padding-inline: rem-calc(24);
+    padding-block: rem-calc(44 60);
+  }
+}
+
+.title {
+  margin: 0;
+  font-size: rem-calc(22);
+  font-weight: 700;
+  line-height: 1.3;
+  color: $blue-950;
+
+  @include media('md') {
+    font-size: rem-calc(24);
+  }
+}
+
+.radio {
+  @include visually-hidden;
+
+  top: 0;
+  left: 0;
+}
+
+// One row; scrolls sideways on a phone instead of wrapping.
+.tabList {
+  display: flex;
+  gap: rem-calc(24);
+  margin-top: rem-calc(16);
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+  box-shadow: inset 0 -1px 0 $black-200;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @include media('md') {
+    gap: rem-calc(32);
+  }
+}
+
+.tab {
+  flex-shrink: 0;
+  padding-block: rem-calc(12);
+  border-bottom: 2px solid transparent;
+  font-size: rem-calc(15);
+  font-weight: 600;
+  line-height: 1.3;
+  white-space: nowrap;
+  color: $black-600;
+  cursor: pointer;
+  user-select: none;
+
+  &:hover {
+    color: $blue-500;
+  }
+}
+
+.panel {
+  display: none;
+  padding-top: rem-calc(16);
+}
+
+@for $i from 1 through $max-tabs {
+  .radio:nth-of-type(#{$i}):checked ~ .tabList > .tab:nth-child(#{$i}) {
+    border-bottom-color: $blue-500;
+    color: $blue-950;
+  }
+
+  // Inset ring: the scrolling tab row would clip an outside one.
+  .radio:nth-of-type(#{$i}):focus-visible ~ .tabList > .tab:nth-child(#{$i}) {
+    @include focus-ring(-2px);
+  }
+
+  .radio:nth-of-type(#{$i}):checked ~ .panels > .panel:nth-child(#{$i}) {
+    display: block;
+  }
+}
+
+// 1 column on a phone, 2 on a tablet, 3 from desktop.
+.list {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  column-gap: rem-calc(32);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include media('sm') {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @include media('lg') {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.extra {
+  display: none;
+}
+
+.link {
+  display: inline-block;
+  padding-block: rem-calc(8);
+  font-size: rem-calc(15);
+  font-weight: 500;
+  line-height: 1.4;
+  color: $black-800;
+  text-decoration: none;
+
+  &:hover {
+    color: $blue-500;
+    text-decoration: underline;
+    text-underline-offset: rem-calc(3);
+  }
+
+  &:focus-visible {
+    @include focus-ring;
+  }
+
+  @include media('md') {
+    padding-block: rem-calc(5);
+  }
+}
+
+.moreToggle {
+  @include visually-hidden;
+}
+
+.more {
+  display: inline-flex;
+  align-items: center;
+  gap: rem-calc(8);
+  margin-top: rem-calc(8);
+  padding-block: rem-calc(8);
+  font-size: rem-calc(15);
+  font-weight: 600;
+  color: $blue-500;
+  cursor: pointer;
+  user-select: none;
+
+  // Chevron: down while collapsed, up when expanded.
+  &::after {
+    content: '';
+    width: rem-calc(7);
+    height: rem-calc(7);
+    border-right: 2px solid currentcolor;
+    border-bottom: 2px solid currentcolor;
+    transform: translateY(-2px) rotate(45deg);
+  }
+
+  &:hover {
+    text-decoration: underline;
+    text-underline-offset: rem-calc(3);
+  }
+}
+
+.lessText {
+  display: none;
+}
+
+// The toggle sits after the list (focus order), so :has() reads its state.
+.panel:has(.moreToggle:checked) .extra {
+  display: block;
+}
+
+.more:has(.moreToggle:checked) {
+  .moreText {
+    display: none;
+  }
+
+  .lessText {
+    display: inline;
+  }
+
+  &::after {
+    transform: translateY(2px) rotate(-135deg);
+  }
+}
+
+.more:has(.moreToggle:focus-visible) {
+  @include focus-ring;
+}
+
+// No :has() (old browsers): every link shown, no toggle.
+@supports not selector(:has(*)) {
+  .extra {
+    display: block;
+  }
+
+  .more {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .tab,
+  .link,
+  .more {
+    transition: color $animation-duration-fast $timing-function;
+  }
+
+  .more::after {
+    transition: transform $animation-duration-fast $timing-function;
+  }
+}

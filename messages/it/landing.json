@@ -9,7 +9,44 @@
   "lead": {
     "splitRegion": "a Split"
   },
-  "override": {},
+  "override": {
+    "croatia": {
+      "CATAMARAN": {
+        "h1": "Affitto catamarani in Croazia",
+        "metaDesc": "Affitta un catamarano in Croazia. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
+      }
+    },
+    "greece": {
+      "CATAMARAN": {
+        "h1": "Affitto catamarani in Grecia",
+        "metaDesc": "Affitta un catamarano in Grecia. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
+      }
+    },
+    "italy": {
+      "CATAMARAN": {
+        "h1": "Affitto catamarani in Italia",
+        "metaDesc": "Affitta un catamarano in Italia. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
+      }
+    },
+    "britishVirginIslands": {
+      "CATAMARAN": {
+        "h1": "Affitto catamarani nelle Isole Vergini Britanniche",
+        "metaDesc": "Affitta un catamarano nelle Isole Vergini Britanniche. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
+      }
+    },
+    "virginIslandsBritish": {
+      "CATAMARAN": {
+        "h1": "Affitto catamarani nelle Isole Vergini Britanniche",
+        "metaDesc": "Affitta un catamarano nelle Isole Vergini Britanniche. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
+      }
+    },
+    "martinique": {
+      "CATAMARAN": {
+        "h1": "Affitto catamarani in Martinica",
+        "metaDesc": "Affitta un catamarano in Martinica. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
+      }
+    }
+  },
   "names": {
     "dubrovnikRegion": "Regione di Dubrovnik",
     "istriaKvarner": "Istria / Quarnaro",

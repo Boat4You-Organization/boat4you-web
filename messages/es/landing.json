@@ -9,7 +9,44 @@
   "lead": {
     "splitRegion": "en Split"
   },
-  "override": {},
+  "override": {
+    "croatia": {
+      "CATAMARAN": {
+        "h1": "Catamaranes de alquiler en Croacia",
+        "metaDesc": "Alquila un catamarán en Croacia. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
+      }
+    },
+    "greece": {
+      "CATAMARAN": {
+        "h1": "Catamaranes de alquiler en Grecia",
+        "metaDesc": "Alquila un catamarán en Grecia. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
+      }
+    },
+    "italy": {
+      "CATAMARAN": {
+        "h1": "Catamaranes de alquiler en Italia",
+        "metaDesc": "Alquila un catamarán en Italia. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
+      }
+    },
+    "britishVirginIslands": {
+      "CATAMARAN": {
+        "h1": "Catamaranes de alquiler en las Islas Vírgenes Británicas",
+        "metaDesc": "Alquila un catamarán en las Islas Vírgenes Británicas. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
+      }
+    },
+    "virginIslandsBritish": {
+      "CATAMARAN": {
+        "h1": "Catamaranes de alquiler en las Islas Vírgenes Británicas",
+        "metaDesc": "Alquila un catamarán en las Islas Vírgenes Británicas. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
+      }
+    },
+    "martinique": {
+      "CATAMARAN": {
+        "h1": "Catamaranes de alquiler en Martinica",
+        "metaDesc": "Alquila un catamarán en Martinica. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
+      }
+    }
+  },
   "names": {
     "dubrovnikRegion": "Región de Dubrovnik",
     "istriaKvarner": "Istria / Kvarner",

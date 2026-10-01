@@ -41,6 +41,9 @@ export default getRequestConfig(async ({ requestLocale }) => {
     charterFacts: (await import(`../../messages/${locale}/charterFacts.json`)).default,
     priceGuide: (await import(`../../messages/${locale}/priceGuide.json`)).default,
     review: (await import(`../../messages/${locale}/review.json`)).default,
+    // Home link hub (server only). Optional: a locale without the file shows
+    // no hub (HomeLinkHub) instead of failing every page of that locale.
+    homeHub: (await import(`../../messages/${locale}/homeHub.json`).catch(() => ({ default: {} }))).default,
   } as const;
 
   return {
