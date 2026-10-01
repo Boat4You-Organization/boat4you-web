@@ -691,8 +691,23 @@ const BoatListingItemCardView = ({
                   )}
                 </Stack>
               </Stack>
-              {/* Availability badge + Boat details button in one row */}
-              <Stack direction="row" alignItems="center" gap={1}>
+              {/* Availability badge + Boat details button in one row. The row
+                may wrap: both pieces are nowrap, so on narrow phones (≤ 375px,
+                or a larger system font) the unwrapped row was wider than the
+                content column and, right-aligned, slid left UNDER the photo
+                (Mario 30.9.2026, "Pod opcijom" / "Dostupno"). Wrapped, the
+                badge sits on its own line above the button, same alignment. */}
+              <Stack
+                direction="row"
+                alignItems="center"
+                gap={1}
+                sx={{
+                  flexWrap: 'wrap',
+                  rowGap: 0.5,
+                  justifyContent: isGridView ? 'flex-start' : 'flex-end',
+                  maxWidth: '100%',
+                }}
+              >
                 {custom ? (
                   // Custom (admin-managed) yacht — no offer rows, only a
                   // lowPrice placeholder. Inquiry-only flow, so swap the
