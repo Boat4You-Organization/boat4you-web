@@ -200,6 +200,14 @@ const nextConfig = {
     staticGenerationMaxConcurrency: 2,
     staticGenerationRetryCount: 2,
     turbopackFileSystemCacheForBuild: false,
+    // Next 16.3 prefetches from route patterns it has already learned
+    // (optimisticRouting, default on), and a <Link> whose href redirects
+    // (redirects() or a proxy 308) is then prefetched again and again:
+    // Catamaran Charter Italy's footer link /destinations/amalfi (308 to
+    // /destinations/campania) fired ~2,200 RSC requests in 16 s from one idle
+    // tab (review 1.10.2026; Next issue vercel/next.js#97329). Off: prefetches
+    // ask the server, as on 16.1. Next 16.1 only warns about the unknown key.
+    optimisticRouting: false,
   },
   sassOptions: {
     silenceDeprecations: ['legacy-js-api'],
