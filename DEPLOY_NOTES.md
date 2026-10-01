@@ -1,5 +1,75 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-10-01 — ✍️ SEO korpus: vraćen „Boat4You" u rečenice (N5) · 🔗 `_gl` sa 6 sistera (N6) · 📈 INP/LCP/CLS u GA4 (E5) · 🧾 PDF brojevi po jeziku (B29) — ⏳ NIJE DEPLOYANO
+
+Codex audit 1.10., val 2 (`codexverify/full_review.md`: N5, N6, N7, E5, B21, B29). Commit `73c4afaf`, samo lokalno,
+nije pushano.
+
+- **N5 — kurirani korpus (`public/seo-content`, 974 datoteke, 9 jezika):** prolaz koji je generirao tekstove izbacio je
+  „Boat4You" i iz sredine rečenica: „Why Stands Out for Ionian Catamarans", „Contact today to reserve…", „Whether …,
+  delivers exceptional value", „facilities.partners with", „transfers are coordinated by.", „Discover why has become…".
+  Prisutno od prvog commita (26.5.). **Uzrok nije sanitizer:** `sanitizeCuratedHtml` reže samo head i prvi H1, a ime ne
+  dira. Prijevodi rađeni iz pokidanog EN nasljeđuju rupe (DE „Warum Segler zu zurückkehren" ×60, FR „Reviennent Chez",
+  NL „Terugkeren Naar", HR „Zašto se ističe" …).
+  - Vraćeno je oko 350 EN rečenica i oko 770 mjesta u prijevodima. Nova pravila `holes` u `scripts/seo_corpus_rules.py`
+    vrte se nakon `subject`, pa claims pravila odmah prepišu vraćene tvrdnje o vlasništvu („Boat4You has the perfect
+    catamaran" → „our partner network has …"). Dodani su i naslovi bez obzira na velika slova te jednokratni EDITS za
+    prekinute rečenice. Gdje je jedan prijevod sačuvao original (PL piso-livadi, DE/FR italy-power), ostali su poravnati
+    prema njemu. Prijevodi su jednom popravljeni blok po blok prema EN popravku (skripta izvan repoa); generičko ide kroz
+    pravila.
+  - Usput popravljeno: interna bilješka „Call to action:" kao naslov (6 stranica × 9 jezika), putanje
+    „Boat4You/search?destinations=…" ispisane kao tekst iza linka (Cannigione), zalutala devanagari, bengalska, mjanmarska
+    i grčka slova u prijevodima (NL „पहली बार", HR „ပေါ", DE „μποέμsten").
+  - **B21:** Krka više nije „inland waterways" (Zaton i Šibenik regija, 9 jezika). ⚠️ Stranica Marina Zaton i dalje
+    opisuje plovidbu rijekom i kupanje na Skradinskom buku (zabranjeno od 2021.); treba prepisati, nije dirano.
+  - **Da se ne vrati:** `python3 scripts/seo-corpus-qa.py --check` ima neovisne provjere `brand-hole` i `foreign-glyph`
+    (sada 0 promjena, 0 nalaza). Novi `scripts/check-corpus-holes.mjs` je u `yarn lint` (`--staged`, ispod 1 s; cijeli
+    korpus oko 5 s). Samoprovjera na HEAD kopijama hvata sve oblike.
+- **N6 — cross-domain (`src/config/crossDomainLinker.ts`, `[locale]/layout.tsx`):** `gtag('set','linker',{domains: 7
+domena, accept_incoming: true})` u istoj inline head skripti kao consent default, prije nego gtag.js vrti prvi
+  `config`. Posjet sa sistera s `?_gl=` zadržava GA client id i Ads klik (AW-11060948992 je isti na svih 7). Consent
+  Mode je nepromijenjen: bez pristanka linker ne piše kolačić. Isti popis dekorira i naše linkove prema sisterima
+  (footer). Sisteri moraju dekorirati „Reserve" link (njihov dio).
+- **E5 — Web Vitals (`GoogleAnalyticsConsent.tsx`):** `next/web-vitals` (bez nove ovisnosti) šalje INP, LCP i CLS kao
+  GA4 evente imena metrike, s parametrima `value`, `metric_id`, `metric_value`, `metric_delta`, `metric_rating`,
+  `debug_target` (element) i `debug_event` (tip interakcije za INP). Šalje se samo uz ANALYTICS pristanak i nikad na
+  `/review`. **Mario:** u GA4 Admin → Custom definitions registrirati `metric_rating`, `debug_target`, `debug_event`
+  (dimenzije) i `metric_value` (metrika), inače se ne vide u izvještajima.
+- **B29 — PDF broda (`YachtPDF.tsx`, `useYachtPdfDownload.tsx`):** cijene, duljina, širina, tankovi i depozit sada su u
+  jeziku stranice. Prije su tankovi i depozit bili en-US, a cijene hr-HR. Oznake PDF-a ostaju engleske (dizajn 10.7.).
+- **FR `itineraryGreece`:** „grotte Cave of the Wall" → „grotte du Mur (Cave of the Wall)".
+- **N7 — `<lastmod>`: TODO, nije implementirano.** Backend `updatedAt` (`boat4you-ws-main` `4d3a303`, V9_71) nije live:
+  `GET /public/yachts?sortBy=id&idFrom=3400&idTo=3500` 1.10. poslijepodne nema polje. Nakon backend deploya treba:
+  `updatedAt?: string | null` u `YachtModelShortInfo`, `<lastmod>` u `sitemap-yachts/[page]/yacht.xml` samo kad nije
+  `null`, a prazno ili staro polje znači bez `<lastmod>`. Nikad vrijeme requesta.
+- **Lažno pozitivni iz statičkih provjera (Codex), bez promjene:**
+  - B38 „nested `<a>`" (checker ne prepoznaje `</a >`; html.parser nalazi 0 u 12.789 datoteka);
+  - B32 TrustBadges (literal je samo u komentaru);
+  - B29 „7 NIGHTS" (samo u komentaru);
+  - B06 `htmlLimitedBots` (postoji kao `HTML_LIMITED_BOTS`).
+  - B23 („Boat4You manages") i B35 (did/natpis) ostaju otvoreni (P3).
+
+**Provjereno lokalno** (build `73c4afaf` pod build lockom, `next start :3153`, prod API):
+
+- EN `/search?destinations=palairos&boatTypes=CATAMARAN`: „Why Boat4You Stands Out for Ionian Catamarans", „Contact
+  Boat4You today", „facilities. Boat4You partners". HR: „Zašto se Boat4You ističe za jonske katamarane". DE: „Warum
+  Boat4You für Katamarane im Ionischen Meer herausragt".
+- `dataLayer` redom: consent default (denied) → `set linker` (7 domena, `accept_incoming`) → `js` → `config`. `?_gl=`
+  ostaje u URL-u, a krivi slug broda (`/boat/old-slug-3445?_gl=…`) daje 308 s `_gl` u `Location`.
+- Vitals:
+  - bez pristanka nijedan event;
+  - s analytics pristankom (gtag zamijenjen snimačem, ništa nije otišlo u GA) LCP event s
+    `debug_target: h1.HeroSection…` i `metric_rating: good`.
+- PDF `/de/boat/…-3445`: „12,4 m", „12,35 m", „3.702 €", „Security deposit 3.000 €" (prije „€3,000").
+- Shard `sitemap-yachts/3`: 5.904 `<loc>`, 0 `<lastmod>`.
+- tsc čist, eslint `src` 0 grešaka, `seo-corpus-qa.py --check` exit 0.
+
+**Deploy:** standardni web build → tar → cusma1 swap, **s `public/`** (korpus) i `messages/`. Provjera uživo:
+
+- `curl -s 'https://www.boat4you.com/search?destinations=palairos&boatTypes=CATAMARAN' | grep -c 'Why Boat4You Stands Out'`
+  daje ≥ 1;
+- `curl -s https://www.boat4you.com/ | grep -c "set','linker'"` daje ≥ 1.
+
 ## 2026-10-01 — ⚡ Stranica broda 1 dohvat + rok 8 s · 🗺️ sitemap brodova po rasponu id-eva · ⚖️ Uvjeti: 72 h besplatno otkazivanje — ⏳ NIJE DEPLOYANO
 
 Codex audit 1.10. (F2, F7, F8), verificirano (`_seo-audit-2026-10-01/codex-review/`). Commitovi `723704c6` (F2),
