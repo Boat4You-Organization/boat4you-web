@@ -118,11 +118,11 @@ const capoDorlandoRoute: ItineraryRoute = {
         mobile: { left: 93.7, top: 13.4 },
       },
       description:
-        '12 nm southwest to Panarea — smallest, most fashionable Aeolian. Cala Junco UNESCO Bronze Age archaeological cove on the south coast. Basiluzzo islet 1 nm east has Roman remains underwater. Marina San Pietro on the east coast for overnight. Cala Junco day-anchor on sand at 4-6 m as alternative. Plan to black-sand swim at Spiaggia degli Zimmari and aperol spritz at Raya Bar (cliff-cut DJ bar).',
+        '12 nm southwest to Panarea — smallest, most fashionable Aeolian. Cala Junco cove on the south coast, below the Bronze Age village of Punta Milazzese. Basiluzzo islet 1 nm east has Roman remains underwater. Marina San Pietro on the east coast for overnight. Cala Junco day-anchor on sand at 4-6 m as alternative. Plan to black-sand swim at Spiaggia degli Zimmari and aperol spritz at Raya Bar (cliff-cut DJ bar).',
       shortDescription:
-        '12 nm SW to Panarea — smallest, most fashionable Aeolian. Cala Junco UNESCO cove + Basiluzzo Roman underwater remains 1 nm E. Marina San Pietro stern-to, €100-160/night peak, sheltered from N. Plan to black-sand swim at Spiaggia degli Zimmari and aperol spritz at Raya Bar (cliff-cut DJ bar).',
+        '12 nm SW to Panarea — smallest, most fashionable Aeolian. Cala Junco cove + Basiluzzo Roman underwater remains 1 nm E. Marina San Pietro stern-to, €100-160/night peak, sheltered from N. Plan to black-sand swim at Spiaggia degli Zimmari and aperol spritz at Raya Bar (cliff-cut DJ bar).',
       thingsToDo: [
-        'Snorkel Cala Junco UNESCO Bronze Age cove',
+        'Snorkel Cala Junco cove below the Bronze Age village',
         'Snorkel Basiluzzo underwater Roman columns',
         'Black-sand swim at Spiaggia degli Zimmari',
         'Aperol spritz at Raya Bar (cliff-cut DJ bar)',

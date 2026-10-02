@@ -23,6 +23,13 @@
  * punctuation after it ("Schiffe von , die", "par .", "przez .") — checked on
  * the block text with tags removed without a space, so a separable particle
  * before a closing tag ("an</a>.") is not one.
+ *
+ * 2.10.2026 added `brand-s`: a possessive "'s" with no word before it — the
+ * same deleted "Boat4You" ("…seamless.'s dedicated team", "'s Transparante
+ * proces", "El proceso transparente de 's aclara", "zespół wsparcia 's") —
+ * and "Boat4You 's" with a real space. Also checked on the tight block text,
+ * so "<strong>Boat4You</strong>'s" passes; Dutch "'s avonds / 's ochtends /
+ * 's late namiddag"-type words are allowed.
  */
 import { execFileSync } from 'node:child_process';
 import { readFileSync, readdirSync } from 'node:fs';
@@ -134,6 +141,14 @@ const prepHole = locale =>
       )
     : null;
 
+// "'s" with no word before it (a deleted "Boat4You"), and "Boat4You 's".
+const BRAND_S = /(?<![\p{L}\p{N}_’'])['’]s\s+(?=[\p{L}\p{N}])|Boat4You\s+['’]s(?!\p{L})/gu;
+// Dutch adverbial genitives that legitimately start with "'s".
+const NL_S_OK =
+  /^['’]s\s+(?:avonds|ochtends|morgens|middags|nachts|winters|zomers|werelds|lands|late|mensen|jaars|konings|rijks)(?!\p{L})/iu;
+const brandS = (locale, text) =>
+  Array.from(text.matchAll(BRAND_S)).find(m => !(locale === 'nl' && NL_S_OK.test(text.slice(m.index))));
+
 const BLOCK = /<(p|li|td|dd|blockquote|h[1-6])\b[^>]*>([\s\S]*?)<\/\1\s*>/g;
 
 const decode = text =>
@@ -231,6 +246,15 @@ files.forEach(([locale, name]) => {
     if (hole) {
       findings.push(
         `${'prep-hole'.padEnd(15)} ${locale}/${name}: …${flat.slice(Math.max(0, hole.index - 60), hole.index + 80)}…`
+      );
+    }
+
+    const tightText = tight(inner);
+    const possessive = brandS(locale, tightText);
+
+    if (possessive) {
+      findings.push(
+        `${'brand-s'.padEnd(15)} ${locale}/${name}: …${tightText.slice(Math.max(0, possessive.index - 60), possessive.index + 80)}…`
       );
     }
   });

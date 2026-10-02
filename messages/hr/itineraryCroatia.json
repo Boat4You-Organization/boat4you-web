@@ -134,7 +134,7 @@
             "Ležaljka između maslina na obali",
             "Ulov s roštilja na palubi"
           ],
-          "mooringTip": "Besplatno sidrite na pijesku i morskoj travi, 5 do 8 m. Na Tijatu nema nikakvih usluga, pa dopunite vodu, gorivo i namirnice u Skradinu ili Šibeniku na izlasku, i odaberite uvalu zaklonjenu od prevladavajućeg popodnevnog sjeverozapadnjaka."
+          "mooringTip": "Besplatno sidrite na pijesku i morskoj travi, 5 do 8 m. Na Tijatu nema nikakvih usluga, pa na izlasku dopunite vodu i namirnice u Skradinu ili Šibeniku, a gorivo u Šibeniku, i odaberite uvalu zaklonjenu od prevladavajućeg popodnevnog sjeverozapadnjaka."
         },
         "13": {
           "shortDescription": "Još laganih osam milja do Murtera, otoka koji je matična luka većini kornatskih chartera i gdje zapravo živi mnogo vlasnika konoba.",
@@ -1063,7 +1063,7 @@
             "Popnite se na vidikovac nad slapovima",
             "Prošećite srednjovjekovnim ulicama iza marine"
           ],
-          "mooringTip": "ACI Skradin nudi mrtve vezove i punu uslugu, s pontonom za gorivo kod ulaza. Ulazni je kanal dobro obilježen bovama i dubok za svaki gaz, ali predvidite devedeset minuta pri deplasmanskoj brzini od Šibenika. U dionici parka nema sidrenja, pa je izbor marina ili natrag nizvodno."
+          "mooringTip": "ACI Skradin nudi mrtve vezove i punu uslugu, ali ne i gorivo: natočite ga u Šibeniku prije plovidbe uzvodno. Ulazni je kanal dobro obilježen bovama i dubok za svaki gaz, ali predvidite devedeset minuta pri deplasmanskoj brzini od Šibenika. U riječnom kanalu do Skradina sidrenje nije dopušteno, pa je izbor marina ili natrag nizvodno."
         },
         "6": {
           "shortDescription": "Dvadeset milja natrag do mora i uz obalu do mjesta na poluotoku koje čuva plimno slano jezero zvano Zmajevo oko.",
@@ -1612,7 +1612,7 @@
         },
         "2": {
           "shortDescription": "Plovidba uzvodno pokraj Šibenika i kroz kanal svetog Ante u slatkovodni kanjon Krke, s privezom ondje gdje rijeka postane slatka, u Skradinu.",
-          "description": "Ovo je plovidba koju većina posada pamti. Iz Zlarina se provučeš kanalom pokraj šibenske stare jezgre, prošuljaš ispod cestovnog mosta s njegovih 49 metara visine i pratiš kanal svetog Ante u slatkovodni kanjon obrubljen stijenama kakvog na ovoj obali zapravo nema. Računaj devedeset minuta pri istisninskoj brzini od ušća; ulaz je dobro obilježen bovama i dovoljno dubok za svaki charter gaz. ACI marina Skradin čeka u dnu rijeke, muringe na svakom vezu i gorivo kraj ulaza. Kupi ulaznicu za park na kiosku uz obalu i uzmi uključeni brodić do Skradinskog buka, gdje voda pada 46 metara preko sedamnaest sedrenih stepenica. Šetnica u krug obilazi obje obale. Natrag u mjestu naruči skradinski rižot, govedinu i šafran kuhane satima.",
+          "description": "Ovo je plovidba koju većina posada pamti. Iz Zlarina se provučeš kanalom pokraj šibenske stare jezgre, prošuljaš ispod cestovnog mosta i pratiš kanal svetog Ante u slatkovodni kanjon obrubljen stijenama kakvog na ovoj obali zapravo nema. Računaj devedeset minuta pri istisninskoj brzini od ušća; ulaz je dobro obilježen bovama i dovoljno dubok za svaki charter gaz. ACI marina Skradin čeka u dnu rijeke, muringe na svakom vezu, ali goriva nema, pa natočite u Šibeniku. Kupi ulaznicu za park na kiosku uz obalu i uzmi uključeni brodić do Skradinskog buka, gdje voda pada 46 metara preko sedamnaest sedrenih stepenica. Šetnica u krug obilazi obje obale. Natrag u mjestu naruči skradinski rižot, govedinu i šafran kuhane satima.",
           "thingsToDo": [
             "Odvezi se parkovnim brodićem do Skradinskog buka",
             "Prošeći kružnom šetnicom ispod slapova",
@@ -1620,7 +1620,7 @@
             "Prošeći stazom kroz kanjon od 3,4 km uzvodno",
             "Natoči gorivo na pontonu marine"
           ],
-          "mooringTip": "ACI marina Skradin ima muringe i potpunu opremu, s pontonom za gorivo odmah na ulazu. Riječni kanal dobro je obilježen i dubok, ali računaj 90 minuta uzvodno od šibenskog ušća pri maloj brzini i zapamti da sidrenje nigdje unutar parka nije dopušteno."
+          "mooringTip": "ACI marina Skradin ima muringe i potpunu opremu, ali bez benzinske postaje; gorivo natočite prije u Šibeniku. Riječni kanal dobro je obilježen i dubok, ali računaj 90 minuta uzvodno od šibenskog ušća pri maloj brzini i zapamti da sidrenje u riječnom kanalu do Skradina nije dopušteno."
         },
         "3": {
           "shortDescription": "Natrag niz Krku i na zapad do Kaprija, tihog otoka obraslog kaparima sa 140 stanovnika, jednom lukom i kapelom na grebenu.",
@@ -2516,7 +2516,7 @@
         },
         "2": {
           "shortDescription": "Dvanaest milja uz estuarij Krke pokraj Šibenika do ACI marine Skradin, odakle parkovni brod vozi do slapa Skradinski buk.",
-          "description": "Od Zlarina je kratkih dvanaest milja, ali karakter se posve mijenja. Obiđete staru jezgru Šibenika, prođete ispod mosta s 49 metara visine, i uplovite u slatkovodni dio Krke. Jedrenje je iznad ušća zabranjeno, pa je motor upaljen na deplasmanskoj brzini cijeli ostatak puta do ACI marine Skradin. Marina je dvije milje ispod slapova; ulaznicu za park kupite na kiosku uz obalu, pa uhvatite brodić nacionalnog parka koji u sezoni vozi do Skradinskog buka svakih pola sata. Sedamnaest sedrenih stepenica spušta rijeku četrdesetak metara, a drvena staza obilazi obje obale. Natrag u gradu naručite skradinski rižot, jelo od govedine i šafrana koje mještani miješaju gotovo cijeli dan. Radije pješice? Kanjonska staza od 3,4 kilometra vodi do slapova.",
+          "description": "Od Zlarina je kratkih dvanaest milja, ali karakter se posve mijenja. Obiđete staru jezgru Šibenika, prođete ispod cestovnog mosta, i uplovite u slatkovodni dio Krke. Jedrenje je zabranjeno u kanalu sv. Ante, a do Skradina vrijedi ograničenje od 8 čvorova, pa je motor upaljen na deplasmanskoj brzini cijeli ostatak puta do ACI marine Skradin. Marina je dvije milje ispod slapova; ulaznicu za park kupite na kiosku uz obalu, pa uhvatite brodić nacionalnog parka koji u sezoni vozi do Skradinskog buka svakih pola sata. Sedamnaest sedrenih stepenica spušta rijeku četrdesetak metara, a drvena staza obilazi obje obale. Natrag u gradu naručite skradinski rižot, jelo od govedine i šafrana koje mještani miješaju gotovo cijeli dan. Radije pješice? Kanjonska staza od 3,4 kilometra vodi do slapova.",
           "thingsToDo": [
             "Odvezite se parkovnim brodićem do Skradinskog buka",
             "Obiđite drvene staze uz obje obale rijeke",
@@ -2524,7 +2524,7 @@
             "Prošećite kanjonskom stazom od 3,4 km do slapova",
             "Uzmite brod uzvodno do otoka Visovca"
           ],
-          "mooringTip": "ACI marina Skradin ima mrtve vezove na svakom vezu, punu uslugu i ponton za gorivo uz ulaz. Dolazeći od ušća, računajte otprilike devedeset minuta na deplasmanskoj brzini, i nazovite unaprijed za srpanj i kolovoz kad se slatkovodni vezovi brzo popune."
+          "mooringTip": "ACI marina Skradin ima mrtve vezove na svakom vezu, punu uslugu, ali ne i benzinsku postaju, pa gorivo natočite u Šibeniku. Dolazeći od ušća, računajte otprilike devedeset minuta na deplasmanskoj brzini, i nazovite unaprijed za srpanj i kolovoz kad se slatkovodni vezovi brzo popune."
         },
         "3": {
           "shortDescription": "Natrag niz estuarij i van do Kaprija bez automobila, otoka s jednim selom i šetnjom po otočnom hrptu koja se otvara prema Kornatima.",
@@ -3619,7 +3619,7 @@
             "Prošvrljaj starim kamenim kalama iznad rive",
             "Prošeći do vidikovca iznad vrha slapova"
           ],
-          "mooringTip": "ACI Skradin ima mrtve vezove na svakom vezu, punu infrastrukturu i pontonsku benzinsku na ulazu. Riječni je kanal dobro obilježen bovama i dubok za svaki gaz; računaj oko devedeset minuta pri deplasmanskoj brzini od ušća kod Šibenika, i imaj na umu da u dijelu unutar parka nema sidrenja, dakle marina ili ništa."
+          "mooringTip": "ACI Skradin ima mrtve vezove na svakom vezu, punu infrastrukturu, ali ne i benzinsku postaju; gorivo natočite u Šibeniku. Riječni je kanal dobro obilježen bovama i dubok za svaki gaz; računaj oko devedeset minuta pri deplasmanskoj brzini od ušća kod Šibenika, i imaj na umu da u riječnom kanalu do Skradina nema sidrenja, dakle marina ili ništa."
         },
         "6": {
           "shortDescription": "Dvadeset milja natrag do mora i prema jugoistoku do Rogoznice, mjesta na rtu iznad neobičnog slanog jezera Zmajevo oko, s velikom Marinom Frapa za noćenje.",
@@ -3871,7 +3871,7 @@
             "Razapni visaljku među borovima",
             "Ispeci srdele na sidru"
           ],
-          "mooringTip": "Na Tijatu nema bova ni infrastrukture, pa se sidri na pijesku i posidoniji na 5-8 m i dobro zagrizi sidro. Hranu, vodu i gorivo uzmi ranije u Skradinu ili Šibeniku jer ovdje nećeš naći ništa."
+          "mooringTip": "Na Tijatu nema bova ni infrastrukture, pa se sidri na pijesku i posidoniji na 5-8 m i dobro zagrizi sidro. Hranu i vodu uzmi ranije u Skradinu ili Šibeniku, a gorivo u Šibeniku, jer ovdje nećeš naći ništa."
         },
         "13": {
           "shortDescription": "Lakih 8 milja do Murtera, radnih vrata Kornata i doma mnogih obitelji koje drže konobe u arhipelagu.",
@@ -3954,7 +3954,7 @@
             "Kušaj sporo kuhani skradinski rižot",
             "Provozaj biciklom stazu uz Krku"
           ],
-          "mooringTip": "ACI marina Skradin je u samom mjestu i praktičan je izbor za noćenje; za srpanj i kolovoz rezerviraj dobro unaprijed. Gradska riva je samo za kratko zadržavanje, a sidrenje u rijeci i Prokljanskom jezeru nije dopušteno, pa ne računaj da ćeš ovdje baciti sidro."
+          "mooringTip": "ACI marina Skradin je u samom mjestu i praktičan je izbor za noćenje; za srpanj i kolovoz rezerviraj dobro unaprijed. Gradska riva je samo za kratko zadržavanje, a sidrenje u riječnom kanalu do Skradina nije dopušteno, pa ne računaj da ćeš ovdje baciti sidro."
         },
         "6": {
           "shortDescription": "Natrag na slanu vodu i otprilike 18 milja do Vrgade, otoka bez automobila kod Pirovca s rijetkim potezom mekanog pijeska.",
@@ -4384,7 +4384,7 @@
             "Naručite dugo kuhani skradinski rižot sa šafranom",
             "Prošećite srednjovjekovnim uličicama iza marine"
           ],
-          "mooringTip": "Svaki vez u ACI marini Skradin ima muring, servis je pun, a gorivo je usput, kod ulaza. Obilježeni riječni kanal nosi dovoljno dubine za svaki charter gaz; računajte oko sat i pol brzinom trupa od ušća kod Šibenika. Park ne dopušta sidrenje nigdje na svom dijelu rijeke, pa je izbor marina ili ništa."
+          "mooringTip": "Svaki vez u ACI marini Skradin ima muring, servis je pun, ali goriva nema, pa natočite usput u Šibeniku. Obilježeni riječni kanal nosi dovoljno dubine za svaki charter gaz; računajte oko sat i pol brzinom trupa od ušća kod Šibenika. Park ne dopušta sidrenje nigdje na svom dijelu rijeke, pa je izbor marina ili ništa."
         },
         "6": {
           "shortDescription": "Dvadeset milja natrag niz rijeku, pa na otvorenu obalu prema Rogoznici, s neobičnim slanim jezerom Zmajevo oko uz veliku Marinu Frapa.",
@@ -4715,7 +4715,7 @@
             "Lutanje skradinskim ulicama iz rimskog doba",
             "Kušanje sporo kuhanog skradinskog rižota"
           ],
-          "mooringTip": "ACI marina Skradin je u samom mjestu i rasproda se u srpnju i kolovozu, pa vez rezervirajte unaprijed. Voda parka iznad Prokljana je zona zabrane sidrenja, pa računajte da ćete noć provesti vezani u Skradinu."
+          "mooringTip": "ACI marina Skradin je u samom mjestu i rasproda se u srpnju i kolovozu, pa vez rezervirajte unaprijed. U riječnom kanalu do Skradina sidrenje je zabranjeno, pa računajte da ćete noć provesti vezani u Skradinu."
         },
         "6": {
           "shortDescription": "Osamnaest milja natrag niz rijeku i uz obalu do Vrgade, malenog pješčanog otoka kod Pakoštana, bez automobila i s jednom uvalom.",

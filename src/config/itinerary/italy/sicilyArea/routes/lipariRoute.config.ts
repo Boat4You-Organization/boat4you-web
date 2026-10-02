@@ -117,11 +117,11 @@ const lipariRoute: ItineraryRoute = {
         mobile: { left: 94.9, top: 21.7 },
       },
       description:
-        '12 nm southwest to Panarea — smallest and most fashionable of the Aeolians, the favourite of the Milanese summer set. Cala Junco UNESCO Bronze Age archaeological cove on the south coast. Lisca Bianca underwater fumaroles 1 nm east for snorkel. Marina San Pietro on the east coast is the small charter port.',
+        '12 nm southwest to Panarea — smallest and most fashionable of the Aeolians, the favourite of the Milanese summer set. Cala Junco cove on the south coast, below the Bronze Age village of Punta Milazzese. Lisca Bianca underwater fumaroles 1 nm east for snorkel. Marina San Pietro on the east coast is the small charter port.',
       shortDescription:
-        '12 nm SW to Panarea — smallest, most fashionable Aeolian. Cala Junco UNESCO Bronze Age cove. Lisca Bianca underwater fumaroles 1 nm E. Marina San Pietro stern-to, €100-160/night peak, sheltered from N. Plan to aperol spritz at Raya Bar (cliff-cut DJ bar) and hand-painted ceramics at San Pietro studios.',
+        '12 nm SW to Panarea — smallest, most fashionable Aeolian. Cala Junco cove below a Bronze Age village. Lisca Bianca underwater fumaroles 1 nm E. Marina San Pietro stern-to, €100-160/night peak, sheltered from N. Plan to aperol spritz at Raya Bar (cliff-cut DJ bar) and hand-painted ceramics at San Pietro studios.',
       thingsToDo: [
-        'Snorkel Cala Junco UNESCO Bronze Age cove',
+        'Snorkel Cala Junco cove below the Bronze Age village',
         'Snorkel Lisca Bianca underwater fumaroles (champagne bubbles)',
         'Aperol spritz at Raya Bar (cliff-cut DJ bar)',
         'Hand-painted ceramics at San Pietro studios',

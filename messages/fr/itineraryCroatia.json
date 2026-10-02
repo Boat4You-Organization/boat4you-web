@@ -134,7 +134,7 @@
             "Un hamac entre les oliviers du rivage",
             "Griller sa pêche sur le pont"
           ],
-          "mooringTip": "Mouillage gratuit sur sable et herbiers par 5 à 8 m. Tijat n'a aucun service : faites le plein d'eau, de carburant et de vivres à Skradin ou Šibenik en chemin, et choisissez une crique abritée du nord-ouest dominant de l'après-midi."
+          "mooringTip": "Mouillage gratuit sur sable et herbiers par 5 à 8 m. Tijat n'a aucun service : faites le plein d'eau et de vivres à Skradin ou Šibenik et de carburant à Šibenik en chemin, et choisissez une crique abritée du nord-ouest dominant de l'après-midi."
         },
         "13": {
           "shortDescription": "Encore huit milles tranquilles jusqu'à Murter, l'île qui sert de port d'attache à la plupart des charters des Kornati et où vivent bon nombre des patrons de konoba.",
@@ -1063,7 +1063,7 @@
             "Monter au belvédère au-dessus des chutes",
             "Arpenter les rues médiévales derrière la marina"
           ],
-          "mooringTip": "L'ACI Skradin vous offre pendilles et services complets, avec un ponton à carburant près de l'entrée. Le chenal d'accès est bien balisé et profond pour tout tirant d'eau, mais comptez quatre-vingt-dix minutes à vitesse de déplacement depuis Šibenik. Le mouillage est interdit sur la portion du parc, alors c'est la marina ou le retour vers l'aval."
+          "mooringTip": "L'ACI Skradin vous offre pendilles et services complets, mais pas de carburant : faites le plein à Šibenik avant de remonter le fleuve. Le chenal d'accès est bien balisé et profond pour tout tirant d'eau, mais comptez quatre-vingt-dix minutes à vitesse de déplacement depuis Šibenik. Le mouillage est interdit dans le chenal de la rivière jusqu'à Skradin, alors c'est la marina ou le retour vers l'aval."
         },
         "6": {
           "shortDescription": "Vingt milles pour redescendre à la mer et longer la côte jusqu'à une ville en presqu'île qui veille sur un lac d'eau salée à marée, appelé l'Œil du Dragon.",
@@ -1612,7 +1612,7 @@
         },
         "2": {
           "shortDescription": "Une remontée de rivière au-delà de Šibenik, sous les gorges de Saint-Antoine, jusqu'au canyon d'eau douce de la Krka ; amarrage à Skradin, là où l'eau devient douce.",
-          "description": "C'est une navigation dont la plupart des équipages se souviennent. Depuis Zlarin, vous enfilez le chenal qui longe la vieille ville de Šibenik, passez sous le pont routier et ses 49 mètres de tirant d'air, et suivez les gorges de Saint-Antoine jusqu'à un canyon d'eau douce encaissé, sans véritable équivalent sur cette côte. Comptez quatre-vingt-dix minutes à vitesse de déplacement depuis l'embouchure ; l'entrée est bien balisée et assez profonde pour n'importe quel tirant d'eau de location. L'ACI Marina Skradin attend en amont, pendilles à chaque place et carburant près de l'entrée. Achetez votre billet du parc au kiosque de la digue et prenez la navette incluse jusqu'à Skradinski Buk, où l'eau chute de 46 mètres sur dix-sept gradins de travertin. Une passerelle fait le tour des deux rives. De retour en ville, commandez le risotto de Skradin, bœuf et safran mijotés des heures durant.",
+          "description": "C'est une navigation dont la plupart des équipages se souviennent. Depuis Zlarin, vous enfilez le chenal qui longe la vieille ville de Šibenik, passez sous le pont routier, et suivez les gorges de Saint-Antoine jusqu'à un canyon d'eau douce encaissé, sans véritable équivalent sur cette côte. Comptez quatre-vingt-dix minutes à vitesse de déplacement depuis l'embouchure ; l'entrée est bien balisée et assez profonde pour n'importe quel tirant d'eau de location. L'ACI Marina Skradin attend en amont, pendilles à chaque place mais pas de carburant : faites le plein à Šibenik. Achetez votre billet du parc au kiosque de la digue et prenez la navette incluse jusqu'à Skradinski Buk, où l'eau chute de 46 mètres sur dix-sept gradins de travertin. Une passerelle fait le tour des deux rives. De retour en ville, commandez le risotto de Skradin, bœuf et safran mijotés des heures durant.",
           "thingsToDo": [
             "Prendre la navette du parc jusqu'à Skradinski Buk",
             "Faire la boucle de la passerelle sous les chutes",
@@ -1620,7 +1620,7 @@
             "Randonner les 3,4 km du sentier du canyon en amont",
             "Faire le plein au ponton de la marina"
           ],
-          "mooringTip": "L'ACI Marina Skradin propose des pendilles et tous les services, avec le ponton carburant juste à l'entrée. Le chenal de la rivière est bien balisé et profond, mais prévoyez 90 minutes de remontée depuis l'embouchure de Šibenik à vitesse réduite, et rappelez-vous qu'il est interdit de mouiller où que ce soit dans le parc."
+          "mooringTip": "L'ACI Marina Skradin propose des pendilles et tous les services, mais pas de station de carburant ; faites le plein à Šibenik avant. Le chenal de la rivière est bien balisé et profond, mais prévoyez 90 minutes de remontée depuis l'embouchure de Šibenik à vitesse réduite, et rappelez-vous qu'il est interdit de mouiller dans le chenal de la rivière jusqu'à Skradin."
         },
         "3": {
           "shortDescription": "Redescente de la Krka puis cap à l'ouest vers Kaprije, île tranquille couverte de câpriers, 140 habitants, un seul port et une chapelle sur la crête.",
@@ -2516,7 +2516,7 @@
         },
         "2": {
           "shortDescription": "Douze milles à remonter l'estuaire de la Krka au-delà de Šibenik jusqu'à l'ACI Marina Skradin, d'où la navette du parc monte aux chutes de Skradinski Buk.",
-          "description": "Depuis Zlarin, ce ne sont que douze petits milles, mais le caractère change du tout au tout. Vous contournez la vieille ville de Šibenik, passez sous le pont et ses 49 mètres de tirant d'air, et entrez au moteur dans la partie d'eau douce de la Krka. La navigation à la voile est interdite en amont de l'embouchure, alors c'est moteur en marche à vitesse de déplacement jusqu'à l'ACI Marina Skradin. La marina se trouve deux milles en aval des chutes ; achetez l'entrée du parc au kiosque de la digue, puis prenez la navette du parc national qui monte à Skradinski Buk toutes les demi-heures en saison. Dix-sept gradins de travertin font dévaler la rivière d'une quarantaine de mètres, et une passerelle boucle les deux rives. De retour en ville, commandez le risotto de Skradin, une affaire de bœuf et de safran que les gens du coin remuent près d'une journée entière. Vous préférez marcher ? Un sentier de canyon de 3,4 kilomètres mène aux chutes à pied.",
+          "description": "Depuis Zlarin, ce ne sont que douze petits milles, mais le caractère change du tout au tout. Vous contournez la vieille ville de Šibenik, passez sous le pont routier, et entrez au moteur dans la partie d'eau douce de la Krka. La voile est interdite dans le chenal Saint-Antoine et la vitesse est limitée à 8 nœuds jusqu'à Skradin, alors c'est moteur en marche à vitesse de déplacement jusqu'à l'ACI Marina Skradin. La marina se trouve deux milles en aval des chutes ; achetez l'entrée du parc au kiosque de la digue, puis prenez la navette du parc national qui monte à Skradinski Buk toutes les demi-heures en saison. Dix-sept gradins de travertin font dévaler la rivière d'une quarantaine de mètres, et une passerelle boucle les deux rives. De retour en ville, commandez le risotto de Skradin, une affaire de bœuf et de safran que les gens du coin remuent près d'une journée entière. Vous préférez marcher ? Un sentier de canyon de 3,4 kilomètres mène aux chutes à pied.",
           "thingsToDo": [
             "Prendre la navette du parc jusqu'à Skradinski Buk",
             "Faire le tour des passerelles sur les deux rives",
@@ -2524,7 +2524,7 @@
             "Suivre le sentier de canyon de 3,4 km jusqu'aux chutes",
             "Prendre le bateau en amont jusqu'à l'île de Visovac"
           ],
-          "mooringTip": "L'ACI Marina Skradin a des pendilles à chaque place, tous les services et un ponton carburant à l'entrée. En remontant depuis l'embouchure, comptez environ quatre-vingt-dix minutes à vitesse de déplacement, et appelez à l'avance pour juillet et août, quand les places en eau douce se réservent vite."
+          "mooringTip": "L'ACI Marina Skradin a des pendilles à chaque place, tous les services, mais pas de station de carburant : faites le plein à Šibenik. En remontant depuis l'embouchure, comptez environ quatre-vingt-dix minutes à vitesse de déplacement, et appelez à l'avance pour juillet et août, quand les places en eau douce se réservent vite."
         },
         "3": {
           "shortDescription": "On redescend l'estuaire vers Kaprije, sans voitures, une île d'un seul village avec une marche sur la crête qui s'ouvre sur les Kornati.",
@@ -3793,7 +3793,7 @@
             "Commander le risotto de Skradin mijoté au safran",
             "Flâner dans les ruelles médiévales derrière la marina"
           ],
-          "mooringTip": "Chaque place d'ACI Marina Skradin dispose d'une pendille, le chantier assure tous les services, et il y a du carburant à l'entrée en arrivant. Le chenal balisé de la rivière offre assez de fond pour n'importe quel tirant d'eau de location ; comptez environ une heure et demie à la vitesse de coque depuis l'embouchure à Šibenik. Le parc n'autorise le mouillage nulle part sur sa portion de rivière, donc c'est la marina ou rien."
+          "mooringTip": "Chaque place d'ACI Marina Skradin dispose d'une pendille, le chantier assure tous les services, mais il n'y a pas de carburant : faites le plein à Šibenik en chemin. Le chenal balisé de la rivière offre assez de fond pour n'importe quel tirant d'eau de location ; comptez environ une heure et demie à la vitesse de coque depuis l'embouchure à Šibenik. Le parc n'autorise le mouillage nulle part sur sa portion de rivière, donc c'est la marina ou rien."
         },
         "6": {
           "shortDescription": "Vingt milles pour redescendre la rivière, puis on rejoint la côte ouverte en direction de Rogoznica, avec son étrange lac salé de l'Œil du Dragon jouxtant la vaste Marina Frapa.",
@@ -4129,7 +4129,7 @@
             "Flâner dans les vieilles ruelles de pierre au-dessus du quai",
             "Monter au belvédère qui domine les chutes"
           ],
-          "mooringTip": "L'ACI Skradin propose des pendilles sur toutes les places, tous les services et un ponton carburant à l'entrée. Le chenal de la rivière est bien balisé et profond quel que soit votre tirant d'eau ; comptez environ quatre-vingt-dix minutes au moteur depuis l'embouchure devant Šibenik, et sachez qu'il est interdit de mouiller dans la portion du parc : c'est la marina ou rien."
+          "mooringTip": "L'ACI Skradin propose des pendilles sur toutes les places, tous les services, mais pas de station de carburant ; faites le plein à Šibenik. Le chenal de la rivière est bien balisé et profond quel que soit votre tirant d'eau ; comptez environ quatre-vingt-dix minutes au moteur depuis l'embouchure devant Šibenik, et sachez qu'il est interdit de mouiller dans le chenal de la rivière jusqu'à Skradin : c'est la marina ou rien."
         },
         "6": {
           "shortDescription": "Vingt milles pour redescendre à la mer puis cap au sud-est sur Rogoznica, ville de presqu'île posée au-dessus de l'étrange lac salé de l'Œil du Dragon, avec l'immense Marina Frapa pour la nuit.",
@@ -4381,7 +4381,7 @@
             "Suspendre un hamac sous les pins",
             "Griller des sardines au mouillage"
           ],
-          "mooringTip": "Il n'y a ni bouée ni service à Tijat : mouillez sur sable et herbiers par 5-8 m et assurez-vous que l'ancre est bien croche. Faites le plein de vivres, d'eau et de carburant à Skradin ou à Šibenik d'abord, car vous ne trouverez rien ici."
+          "mooringTip": "Il n'y a ni bouée ni service à Tijat : mouillez sur sable et herbiers par 5-8 m et assurez-vous que l'ancre est bien croche. Faites d'abord le plein de vivres et d'eau à Skradin ou à Šibenik, et de carburant à Šibenik, car vous ne trouverez rien ici."
         },
         "13": {
           "shortDescription": "8 milles tranquilles jusqu'à Murter, la porte d'entrée des Kornati et le village d'origine de nombreuses familles de konoba de l'archipel.",
@@ -4464,7 +4464,7 @@
             "Goûter le risotto de Skradin, mijoté longuement",
             "Faire à vélo un sentier au bord de la Krka"
           ],
-          "mooringTip": "L'ACI Marina Skradin se trouve en pleine ville et reste le choix pratique pour la nuit ; réservez bien à l'avance pour juillet et août. Le quai de ville n'accepte que les escales courtes, et le mouillage est interdit dans la rivière comme sur le lac de Prokljan : ne comptez pas jeter l'ancre ici."
+          "mooringTip": "L'ACI Marina Skradin se trouve en pleine ville et reste le choix pratique pour la nuit ; réservez bien à l'avance pour juillet et août. Le quai de ville n'accepte que les escales courtes, et le mouillage est interdit dans le chenal de la rivière jusqu'à Skradin : ne comptez pas jeter l'ancre ici."
         },
         "6": {
           "shortDescription": "Retour en eau salée et environ 18 milles jusqu'à Vrgada, île sans voiture près de Pirovac, avec une rare étendue de sable fin.",
@@ -4715,7 +4715,7 @@
             "Flâner dans les ruelles d'époque romaine de Skradin",
             "Goûter le risotto de Skradin, mijoté des heures"
           ],
-          "mooringTip": "L'ACI Marina Skradin se trouve en pleine ville et affiche complet en juillet et août : réservez votre place à l'avance. Les eaux du parc au-delà de Prokljan sont interdites au mouillage, prévoyez donc d'être amarrés à Skradin pour la nuit."
+          "mooringTip": "L'ACI Marina Skradin se trouve en pleine ville et affiche complet en juillet et août : réservez votre place à l'avance. Le mouillage est interdit dans le chenal de la rivière jusqu'à Skradin, prévoyez donc d'être amarrés à Skradin pour la nuit."
         },
         "6": {
           "shortDescription": "Dix-huit milles pour redescendre la rivière et remonter la côte jusqu'à Vrgada, minuscule île sableuse au large de Pakoštane, sans voitures et avec une seule baie.",

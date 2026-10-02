@@ -49,7 +49,7 @@ const rogoznicaNpKornatiRoute: ItineraryRoute = {
       shortDescription:
         '12 nm into the Krka River estuary to ACI Marina Skradin — gateway to Krka National Park, with the Park shuttle to Skradinski Buk waterfalls.',
       description:
-        'Twelve miles upriver: past Šibenik old town, under the St. Anthony channel narrows (49 m clearance under the Šibenik bridge), into the freshwater section of the Krka River that ends at ACI Marina Skradin. Park entry paid at the kiosk on the marina seawall; the shuttle boat to Skradinski Buk waterfalls (15 minutes upstream) runs every 30 minutes in season. The waterfalls drop 46 metres in 17 limestone cascades. Konoba dinner runs on Skradin risotto (slow-cooked beef and saffron).',
+        'Twelve miles upriver: through the St. Anthony channel, past Šibenik old town and under the road bridge, into the freshwater section of the Krka River that ends at ACI Marina Skradin. Park entry paid at the kiosk on the marina seawall; the shuttle boat to Skradinski Buk waterfalls (15 minutes upstream) runs every 30 minutes in season. The waterfalls drop 46 metres in 17 limestone cascades. Konoba dinner runs on Skradin risotto (slow-cooked beef and saffron).',
       thingsToDo: [
         'Take the Park shuttle boat to Skradinski Buk waterfalls',
         'Walk the boardwalk loop on both sides of the river',
@@ -58,7 +58,7 @@ const rogoznicaNpKornatiRoute: ItineraryRoute = {
         'Hike up the lookout point above the waterfalls',
       ],
       mooringTip:
-        'ACI Marina Skradin lazy lines on every berth, full services, fuel pontoon at the entrance. Allow 90 minutes from Šibenik river mouth at displacement speed.',
+        'ACI Marina Skradin lazy lines on every berth, full services, but no fuel station: fill up in Šibenik. Allow 90 minutes from Šibenik river mouth at displacement speed.',
       gallery: [{ src: '/images/itinerary/croatia/destinations/skradin.webp', alt: 'Krka' }],
     },
     {

@@ -49,7 +49,7 @@ const primostenNpKornatiRoute: ItineraryRoute = {
       shortDescription:
         '12 nm into the Krka River estuary to ACI Marina Skradin — unique upriver passage past Šibenik, under the St. Anthony channel narrows, up the Krka estuary to Skradin, at the edge of Krka National Park.',
       description:
-        'Twelve miles upriver: past Šibenik old town, under the St. Anthony channel narrows (49 m clearance under the Šibenik bridge), into the deep, hill-walled freshwater section that ends at ACI Marina Skradin. Park entry paid at the kiosk on the marina seawall; the shuttle boat to Skradinski Buk waterfalls (15 minutes upstream) is included in the ticket and runs every 30 minutes in season. The waterfalls drop 46 metres in 17 limestone cascades, with a wooden boardwalk that loops both sides of the river. Konoba dinner runs on Skradin risotto (slow-cooked beef and saffron).',
+        'Twelve miles upriver: through the St. Anthony channel, past Šibenik old town and under the road bridge, into the deep, hill-walled freshwater section that ends at ACI Marina Skradin. Park entry paid at the kiosk on the marina seawall; the shuttle boat to Skradinski Buk waterfalls (15 minutes upstream) is included in the ticket and runs every 30 minutes in season. The waterfalls drop 46 metres in 17 limestone cascades, with a wooden boardwalk that loops both sides of the river. Konoba dinner runs on Skradin risotto (slow-cooked beef and saffron).',
       thingsToDo: [
         'Take the Park shuttle boat to Skradinski Buk waterfalls',
         'Walk the boardwalk loop on both sides of the river',
@@ -58,7 +58,7 @@ const primostenNpKornatiRoute: ItineraryRoute = {
         'Hike up the lookout point above the waterfalls',
       ],
       mooringTip:
-        'ACI Marina Skradin lazy lines on every berth, full services, fuel pontoon at the entrance. River entrance well-marked, deep enough for any charter draft; allow 90 minutes from Šibenik river mouth at displacement speed. No anchoring in the Park section.',
+        'ACI Marina Skradin lazy lines on every berth, full services, but no fuel station: fill up in Šibenik. River entrance well-marked, deep enough for any charter draft; allow 90 minutes from Šibenik river mouth at displacement speed. Anchoring is prohibited in the river channel up to Skradin.',
       gallery: [{ src: '/images/itinerary/croatia/destinations/skradin.webp', alt: 'Krka' }],
     },
     {

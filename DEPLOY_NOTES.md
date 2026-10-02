@@ -1,5 +1,20 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-10-02 — 🧭 Sadržaj: lažni UNESCO, nemogući smjerovi i vremena, „osiguranje pokriva vrijeme", neprovjerene naknade (Kornati, Skradin, most „49 m"), rupe brenda „'s" — ⏳ NIJE DEPLOYANO
+
+Samo tekst: `public/seo-content` (1.435 datoteka, 9 jezika), `messages/*/itineraryCroatia.json` (9 jezika), `src/config/itinerary/**` (EN izvor, 14 datoteka) + `scripts/check-corpus-holes.mjs` (nova provjera `brand-s`). Ide u istom deployu.
+
+Izvori: whc.unesco.org (popis svjetske baštine i tentativne liste), Pravilnik o sigurnosti pomorske plovidbe (NN 40/26) čl. 66. i 66.a (jedrenje zabranjeno samo u kanalu sv. Ante; ušće Krke od crte Martinska – Crnica do Skradina najviše 8 čv; sidrenje zabranjeno u kanalu sv. Josipa i od rta Oštrica do Skradina), aci-marinas.com (ACI Skradin: 180 vezova, do 70 m, bez benzinske postaje), NP Kornati cjenik 2026 (ulaznica po plovilu, prema duljini i sezoni, jeftinija kupljena prije ulaska u park). Uvjeti (ne prodajemo osiguranje; promjena zbog vremena ide po uvjetima operatera i ugovoru).
+
+- **UNESCO** (701 rečenica korpusa, 9 u configu): Šibenik „UNESCO grad / zidine" → katedrala sv. Jakova i tvrđava sv. Nikole; Zadar → venecijanske zidine; Kornati, Telašćica, Korčula, Ston, Primošten → tentativna lista ili bez UNESCO-a; Monemvasia, Cala Junco („UNESCO Bronze Age"), Kekova, Bodrum, La Maddalena, Tavolara, Cabrera → bez UNESCO-a; Palermo „uNESCO" → UNESCO.
+- **Smjerovi, udaljenosti i vremena** (330 rečenica korpusa): vremena plovidbe na Krki uz ograničenje od 8 čv, krivi smjerovi; „jedrenje zabranjeno iznad ušća" (7, itinerari) → zabrana u kanalu sv. Ante, do Skradina 8 čv.
+- **Vrijeme i osiguranje** (388): „osiguranje pokriva kašnjenja zbog vremena", „besplatno pomičemo ili vraćamo novac", „nudimo osiguranje" → ovisi o uvjetima operatera i ugovoru o najmu; preporuka putnog osiguranja kod neovisnog osiguravatelja.
+- **Naknade i podaci** (434 korpus + 133 itinerari + 21 config): Kornati (148 datoteka; „8–12 €/dan", „40–100 €" i sl.) → po plovilu, prema duljini i sezoni, jeftinije prije ulaska u park, bez iznosa; Skradin vez „15–25 €" i „120 bova" maknuto; gorivo u ACI Skradin → nema, gorivo u Šibeniku; most kod Šibenika „49 m" maknut (neprovjereno) i više nije „u kanalu sv. Ante" (uzvodno: kanal sv. Ante → Šibenik → most); sidrenje „u parku / u Prokljanu" → zabranjeno u riječnom kanalu do Skradina.
+- **Rupe brenda „'s" / „Boat4You 's"** (298): vraćen subjekt. Gdje je time ispalo „Boat4You's fleet", `seo-corpus-qa` (claims) → flota naših partnera (41). Nova provjera `brand-s` u `check-corpus-holes.mjs` (iznimka NL „'s avonds" i sl.): lint pada ako se rupa vrati.
+- Wiener: u b4y nema rečenica o osiguranju uplata kod Wienera.
+- Uočeno, nedirano (izvan opsega): „€20–50/dan" za NP (croatia-motorboat), Mandalina „12–18 nm po litri", Kreta (položaj Kalivianija), „equidistant" (luxury Croatia), Gouvia „we handle … comprehensive insurance", Zadar Borik „damage waiver insurance included", Grenada „10–15 % premium", Halki „UNESCO programme", Pioppi „UNESCO rodno mjesto mediteranske prehrane", Ibiza „UNESCO zabranjuje sidrenje".
+- Provjere: `seo-corpus-qa.py --check` 0 izmjena i 0 nalaza, `check-corpus-holes` OK (12.789), JSON valjan, prettier, eslint (pre-commit).
+
 ## 2026-10-02 — 🧭 Sadržaj, review `8338ed40`: Skradin „okružen parkom", jahtom „do slapova", 8 čv na Krki, „nudimo osiguranje otkaza" u korpusu — ⏳ NIJE DEPLOYANO
 
 Nezavisni review commita `8338ed40`. Samo tekst: `public/seo-content` (25 rečenica × 9 jezika, 207 datoteka), `messages/*/itineraryCroatia.json` (9 jezika), `src/config/itinerary/croatia/IstriaArea/routes/pomer14DaysRoute.config.ts`. Ide u istom deployu.

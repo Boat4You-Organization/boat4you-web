@@ -164,7 +164,7 @@ const palermoRoute: ItineraryRoute = {
         mobile: { left: 29.7, top: 76.4 },
       },
       description:
-        '15 nm east back to Palermo. Optional swim stop at Capo Gallo nature reserve + Isola delle Femmine on the way. Marina Cala (or Marina di Villa Igiea) inside Palermo bay for the final overnight. Refuel before tying up. Marina Cala stern-to, €100-160/night peak. Plan to walk Vucciria Market chaos at sunset and uNESCO Palatine Chapel mosaics tour.',
+        '15 nm east back to Palermo. Optional swim stop at Capo Gallo nature reserve + Isola delle Femmine on the way. Marina Cala (or Marina di Villa Igiea) inside Palermo bay for the final overnight. Refuel before tying up. Marina Cala stern-to, €100-160/night peak. Plan to walk Vucciria Market chaos at sunset and UNESCO-listed Palatine Chapel mosaics tour.',
       shortDescription:
         '15 nm E back to Palermo. Optional Capo Gallo + Isola delle Femmine swim stop. Marina Cala (or Villa Igiea) inside Palermo bay. Refuel before mooring.',
       thingsToDo: [

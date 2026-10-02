@@ -97,9 +97,9 @@ const athensSaronicGulf14DayRoute: ItineraryRoute = {
         mobile: { left: 16.5, top: 55.9 },
       },
       description:
-        '20 nm south to Monemvasia — UNESCO-listed medieval rock-fortress town on a tidal islet connected to the mainland by a single causeway. Anchorage off the small port at Gefyra (the mainland-side modern town), sand 5-8 m, sheltered from N. Walk across the causeway to the medieval Lower Town (car-free, working population around 100); steep stairs up to the Upper Town for panoramic views.',
+        '20 nm south to Monemvasia — medieval rock-fortress town on a tidal islet connected to the mainland by a single causeway. Anchorage off the small port at Gefyra (the mainland-side modern town), sand 5-8 m, sheltered from N. Walk across the causeway to the medieval Lower Town (car-free, working population around 100); steep stairs up to the Upper Town for panoramic views.',
       shortDescription:
-        '20 nm south to Monemvasia — UNESCO medieval fortress town on a tidal rock. Anchor off Gefyra mainland port; walk the causeway into the medieval Lower Town.',
+        '20 nm south to Monemvasia — medieval fortress town on a tidal rock. Anchor off Gefyra mainland port; walk the causeway into the medieval Lower Town.',
       thingsToDo: [
         'Walk car-free medieval Lower Town',
         'Climb to the Upper Town for the panorama',

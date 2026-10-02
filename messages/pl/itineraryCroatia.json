@@ -134,7 +134,7 @@
             "Hamak między oliwkami na brzegu",
             "Zgrilluj swój połów na pokładzie"
           ],
-          "mooringTip": "Kotwicz za darmo na piasku i trawie morskiej na 5 do 8 m. Na Tijacie nie ma żadnych usług, więc uzupełnij wodę, paliwo i jedzenie w Skradinie albo Šibeniku po drodze, i wybierz zatoczkę osłoniętą od przeważającego popołudniowego wiatru z północnego zachodu."
+          "mooringTip": "Kotwicz za darmo na piasku i trawie morskiej na 5 do 8 m. Na Tijacie nie ma żadnych usług, więc po drodze uzupełnij wodę i jedzenie w Skradinie albo Šibeniku, a paliwo w Šibeniku, i wybierz zatoczkę osłoniętą od przeważającego popołudniowego wiatru z północnego zachodu."
         },
         "13": {
           "shortDescription": "Kolejne łagodne osiem mil do Murteru — wyspy, którą większość kornackich czarterów nazywa domem i gdzie naprawdę mieszka wielu właścicieli konob.",
@@ -1063,7 +1063,7 @@
             "Wejdź na punkt widokowy nad wodospadami",
             "Przejdź się średniowiecznymi uliczkami za mariną"
           ],
-          "mooringTip": "ACI Skradin daje ci leniwe liny i pełną obsługę, z pontonem paliwowym przy wejściu. Kanał wejściowy jest dobrze oznakowany bojami i głęboki dla każdego zanurzenia, ale zaplanuj dziewięćdziesiąt minut przy prędkości wypornościowej z Šibenika. W parkowym odcinku nie ma kotwiczenia, więc albo marina, albo z powrotem w dół rzeki."
+          "mooringTip": "ACI Skradin daje ci leniwe liny i pełną obsługę, ale bez paliwa: zatankuj w Šibeniku przed wpłynięciem w górę rzeki. Kanał wejściowy jest dobrze oznakowany bojami i głęboki dla każdego zanurzenia, ale zaplanuj dziewięćdziesiąt minut przy prędkości wypornościowej z Šibenika. Na rzecznym torze wodnym do Skradinu nie wolno kotwiczyć, więc albo marina, albo z powrotem w dół rzeki."
         },
         "6": {
           "shortDescription": "Dwadzieścia mil z powrotem do morza i wzdłuż wybrzeża do miasteczka na półwyspie strzegącego pływowego, słonego jeziora zwanego Smoczym Okiem.",
@@ -1612,7 +1612,7 @@
         },
         "2": {
           "shortDescription": "Rejs w górę rzeki obok Šibenika i przez cieśninę św. Antoniego w słodkowodny kanion Krki, z cumowaniem tam, gdzie rzeka staje się słodka, w Skradinie.",
-          "description": "To przejście, które większość załóg zapamiętuje. Ze Zlarina przewlekasz się kanałem obok starówki Šibenika, przechodzisz pod mostem drogowym o prześwicie 49 metrów i podążasz cieśniną św. Antoniego w słodkowodny kanion o pionowych ścianach, jakiemu na tym wybrzeżu nic nie dorównuje. Licz na dziewięćdziesiąt minut z prędkością wypornościową od ujścia rzeki; wejście jest dobrze oznakowane bojami i wystarczająco głębokie dla każdego czarterowego zanurzenia. ACI Marina Skradin czeka u szczytu rzeki, muringi przy każdym miejscu i paliwo przy wejściu. Kup bilet do parku w kiosku przy falochronie i wsiądź w wliczony w cenę autobus do Skradinskiego Buku, gdzie woda spada 46 metrów po siedemnastu trawertynowych stopniach. Kładka okrąża oba brzegi. W miasteczku zamów risotto skradyńskie — wołowinę z szafranem duszone godzinami.",
+          "description": "To przejście, które większość załóg zapamiętuje. Ze Zlarina przewlekasz się kanałem obok starówki Šibenika, przechodzisz pod mostem drogowym i podążasz cieśniną św. Antoniego w słodkowodny kanion o pionowych ścianach, jakiemu na tym wybrzeżu nic nie dorównuje. Licz na dziewięćdziesiąt minut z prędkością wypornościową od ujścia rzeki; wejście jest dobrze oznakowane bojami i wystarczająco głębokie dla każdego czarterowego zanurzenia. ACI Marina Skradin czeka u szczytu rzeki, muringi przy każdym miejscu, ale bez paliwa, więc zatankuj w Šibeniku. Kup bilet do parku w kiosku przy falochronie i wsiądź w wliczony w cenę autobus do Skradinskiego Buku, gdzie woda spada 46 metrów po siedemnastu trawertynowych stopniach. Kładka okrąża oba brzegi. W miasteczku zamów risotto skradyńskie — wołowinę z szafranem duszone godzinami.",
           "thingsToDo": [
             "Podjedź parkowym autobusem do Skradinskiego Buku",
             "Przejdź kładką pętlą poniżej wodospadów",
@@ -1620,7 +1620,7 @@
             "Przejdź 3,4 km ścieżki kanionu w górę rzeki",
             "Zatankuj przy pontonie mariny"
           ],
-          "mooringTip": "ACI Marina Skradin ma muringi i pełne usługi, z pontonowym dystrybutorem paliwa tuż przy wejściu. Koryto rzeki jest dobrze oznakowane i głębokie, ale zaplanuj 90 minut w górę od ujścia w Šibeniku przy małej prędkości, i pamiętaj, że w granicach parku nigdzie nie wolno kotwiczyć."
+          "mooringTip": "ACI Marina Skradin ma muringi i pełne usługi, ale bez stacji paliw; zatankuj wcześniej w Šibeniku. Koryto rzeki jest dobrze oznakowane i głębokie, ale zaplanuj 90 minut w górę od ujścia w Šibeniku przy małej prędkości, i pamiętaj, że na rzecznym torze wodnym do Skradinu nie wolno kotwiczyć."
         },
         "3": {
           "shortDescription": "Z powrotem w dół Krki i na zachód do Kaprije, cichej, porośniętej kaparami wyspy 140 mieszkańców, z jednym portem i kapliczką na grzbiecie.",
@@ -2516,7 +2516,7 @@
         },
         "2": {
           "shortDescription": "Dwanaście mil w górę estuarium Krki, obok Šibenika, do ACI Marina Skradin, skąd parkowy prom kursuje do wodospadów Skradinski Buk.",
-          "description": "Ze Zlarina to krótkie dwanaście mil, ale charakter zmienia się całkowicie. Opływasz starówkę Šibenika, przechodzisz pod mostem z 49 metrami prześwitu i wpływasz na silniku w słodkowodny odcinek Krki. Żeglowanie powyżej ujścia rzeki jest zakazane, więc do samej ACI Marina Skradin idziesz na silniku, z prędkością wypornościową. Marina leży dwie mile poniżej wodospadów; kup wstęp do parku w kiosku przy falochronie, a potem złap łódkę parku narodowego, która w sezonie co pół godziny dowozi do Skradinski Buk. Siedemnaście trawertynowych progów spuszcza rzekę o jakieś czterdzieści metrów, a pomost dla pieszych obiega oba brzegi. Z powrotem w miasteczku zamów risotto ze Skradina, danie z wołowiny i szafranu, które miejscowi mieszają przez sporą część dnia. Wolisz spacer? Do wodospadów prowadzi pieszo 3,4-kilometrowa ścieżka przez kanion.",
+          "description": "Ze Zlarina to krótkie dwanaście mil, ale charakter zmienia się całkowicie. Opływasz starówkę Šibenika, przechodzisz pod mostem drogowym i wpływasz na silniku w słodkowodny odcinek Krki. Żeglowanie powyżej ujścia rzeki jest zakazane, więc do samej ACI Marina Skradin idziesz na silniku, z prędkością wypornościową. Marina leży dwie mile poniżej wodospadów; kup wstęp do parku w kiosku przy falochronie, a potem złap łódkę parku narodowego, która w sezonie co pół godziny dowozi do Skradinski Buk. Siedemnaście trawertynowych progów spuszcza rzekę o jakieś czterdzieści metrów, a pomost dla pieszych obiega oba brzegi. Z powrotem w miasteczku zamów risotto ze Skradina, danie z wołowiny i szafranu, które miejscowi mieszają przez sporą część dnia. Wolisz spacer? Do wodospadów prowadzi pieszo 3,4-kilometrowa ścieżka przez kanion.",
           "thingsToDo": [
             "Popłyń parkową łódką do Skradinski Buk",
             "Obejdź pomosty na obu brzegach rzeki",
@@ -2524,7 +2524,7 @@
             "Przejdź 3,4 km ścieżką przez kanion do wodospadów",
             "Popłyń łódką w górę rzeki na wyspę Visovac"
           ],
-          "mooringTip": "ACI Marina Skradin ma muringi na każdym miejscu, pełną obsługę i ponton paliwowy przy wejściu. Płynąc w górę od ujścia rzeki, licz na jakieś dziewięćdziesiąt minut z prędkością wypornościową i dzwoń wcześniej na lipiec i sierpień, gdy słodkowodne miejsca szybko się zapełniają."
+          "mooringTip": "ACI Marina Skradin ma muringi na każdym miejscu, pełną obsługę, ale bez stacji paliw, więc zatankuj w Šibeniku. Płynąc w górę od ujścia rzeki, licz na jakieś dziewięćdziesiąt minut z prędkością wypornościową i dzwoń wcześniej na lipiec i sierpień, gdy słodkowodne miejsca szybko się zapełniają."
         },
         "3": {
           "shortDescription": "Z powrotem w dół estuarium i dalej do wolnego od aut Kaprije, wyspy z jedną wioską i grzbietowym szlakiem, który otwiera się na Kornaty.",
@@ -3619,7 +3619,7 @@
             "Pochodź po starych kamiennych uliczkach nad nabrzeżem",
             "Podejdź na punkt widokowy nad koroną wodospadu"
           ],
-          "mooringTip": "ACI Skradin ma martwe cumy przy każdym miejscu, pełne media i stację paliw przy wejściu. Tor wodny jest dobrze oznakowany i głęboki dla każdego zanurzenia; licz około dziewięćdziesięciu minut na silniku od ujścia rzeki pod Szibenikiem, a pamiętaj, że na parkowym odcinku kotwiczyć nie wolno – zostaje marina albo nic."
+          "mooringTip": "ACI Skradin ma martwe cumy przy każdym miejscu, pełne media, ale bez stacji paliw; zatankuj w Šibeniku. Tor wodny jest dobrze oznakowany i głęboki dla każdego zanurzenia; licz około dziewięćdziesięciu minut na silniku od ujścia rzeki pod Szibenikiem, a pamiętaj, że na rzecznym torze wodnym do Skradinu kotwiczyć nie wolno – zostaje marina albo nic."
         },
         "6": {
           "shortDescription": "Dwadzieścia mil z powrotem ku morzu i na południowy wschód do Rogoznicy – miasteczka na cyplu nad osobliwym słonym jeziorkiem Smocze Oko, z ogromną Mariną Frapa na noc.",
@@ -3871,7 +3871,7 @@
             "Rozwieś hamak w sosnach",
             "Grillowane sardynki na kotwicy"
           ],
-          "mooringTip": "Na Tijacie nie ma bój ani żadnych mediów, więc kotwicz na piasku i trawie morskiej na 5-8 m i porządnie zaklinuj kotwicę. Jedzenie, wodę i paliwo uzupełnij wcześniej w Skradinie albo Szibeniku, bo tutaj nie znajdziesz nic."
+          "mooringTip": "Na Tijacie nie ma bój ani żadnych mediów, więc kotwicz na piasku i trawie morskiej na 5-8 m i porządnie zaklinuj kotwicę. Jedzenie i wodę uzupełnij wcześniej w Skradinie albo Szibeniku, a paliwo w Szibeniku, bo tutaj nie znajdziesz nic."
         },
         "13": {
           "shortDescription": "Spokojne 8 mil na Murter, roboczą bramę Kornatów i dom wielu rodzin prowadzących konoby w archipelagu.",
@@ -3954,7 +3954,7 @@
             "Spróbuj wolno duszonego skradinskiego risotta",
             "Przejedź rowerem szlakiem nad Krką"
           ],
-          "mooringTip": "ACI Marina Skradin leży w samym miasteczku i jest praktycznym wyborem na nocleg; na lipiec i sierpień rezerwuj mocno z wyprzedzeniem. Nabrzeże miejskie jest tylko krótkopostojowe, a kotwiczenie na rzece i jeziorze Prokljan jest zabronione, więc nie licz tu na rzucenie kotwicy."
+          "mooringTip": "ACI Marina Skradin leży w samym miasteczku i jest praktycznym wyborem na nocleg; na lipiec i sierpień rezerwuj mocno z wyprzedzeniem. Nabrzeże miejskie jest tylko krótkopostojowe, a kotwiczenie na rzecznym torze wodnym do Skradinu jest zabronione, więc nie licz tu na rzucenie kotwicy."
         },
         "6": {
           "shortDescription": "Z powrotem na słoną wodę i jakieś 18 mil na Vrgadę, wyspę bez samochodów przy Pirovacu, z rzadkim tu pasem miękkiego piasku.",
@@ -4384,7 +4384,7 @@
             "Zamów wolno gotowane skradińskie risotto z szafranem",
             "Powłócz się średniowiecznymi uliczkami za mariną"
           ],
-          "mooringTip": "Każde miejsce w ACI Marina Skradin ma lazy line, marina daje pełne zaplecze, a paliwo jest po drodze, przy wejściu. Oznakowany tor rzeczny ma dość wody dla każdego czarterowego zanurzenia; licz jakieś półtorej godziny na prędkości kadłubowej od ujścia rzeki przy Šibeniku. Park nie pozwala kotwiczyć nigdzie na swoim odcinku rzeki, więc zostaje marina albo nic."
+          "mooringTip": "Każde miejsce w ACI Marina Skradin ma lazy line, marina daje pełne zaplecze, ale paliwa nie ma, więc zatankuj po drodze w Šibeniku. Oznakowany tor rzeczny ma dość wody dla każdego czarterowego zanurzenia; licz jakieś półtorej godziny na prędkości kadłubowej od ujścia rzeki przy Šibeniku. Park nie pozwala kotwiczyć nigdzie na swoim odcinku rzeki, więc zostaje marina albo nic."
         },
         "6": {
           "shortDescription": "Dwadzieścia mil: powrót rzeką, a potem otwarte wybrzeże w stronę Rogoznicy z jej osobliwym słonym jeziorem Smocze Oko i sporą Marina Frapa.",
@@ -4715,7 +4715,7 @@
             "Włóczęga rzymskimi uliczkami Skradinu",
             "Skradinskie risotto duszone godzinami"
           ],
-          "mooringTip": "ACI Marina Skradin leży w samym miasteczku i w lipcu oraz sierpniu jest wyprzedana, więc rezerwuj miejsce z wyprzedzeniem. Wody parku powyżej jeziora Prokljan to strefa zakazu kotwiczenia, więc planuj noc przy nabrzeżu w Skradinie."
+          "mooringTip": "ACI Marina Skradin leży w samym miasteczku i w lipcu oraz sierpniu jest wyprzedana, więc rezerwuj miejsce z wyprzedzeniem. Na rzecznym torze wodnym do Skradinu obowiązuje zakaz kotwiczenia, więc planuj noc przy nabrzeżu w Skradinie."
         },
         "6": {
           "shortDescription": "Osiemnaście mil w dół rzeki i wzdłuż wybrzeża do Vrgada — maleńkiej piaszczystej wyspy koło Pakoštane, bez samochodów, z jedną zatoką.",

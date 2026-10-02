@@ -134,7 +134,7 @@
             "Hängematte zwischen den Olivenbäumen am Ufer",
             "Den Fang an Deck grillen"
           ],
-          "mooringTip": "Gratis über Sand und Seegras auf 5 bis 8 Metern ankern. Auf Tijat gibt es keine Versorgung, also füllt Wasser, Diesel und Vorräte auf dem Weg hinaus in Skradin oder Šibenik auf und wählt eine Bucht mit Schutz vor dem vorherrschenden nachmittäglichen Nordwest."
+          "mooringTip": "Gratis über Sand und Seegras auf 5 bis 8 Metern ankern. Auf Tijat gibt es keine Versorgung, also füllt auf dem Weg hinaus Wasser und Vorräte in Skradin oder Šibenik und Diesel in Šibenik auf und wählt eine Bucht mit Schutz vor dem vorherrschenden nachmittäglichen Nordwest."
         },
         "13": {
           "shortDescription": "Weitere gemächliche acht Meilen nach Murter, der Insel, die die meisten Kornaten-Charter als Heimat haben und auf der viele der Konoba-Wirte tatsächlich wohnen.",
@@ -1063,7 +1063,7 @@
             "Zum Aussichtspunkt über den Fällen steigen",
             "Durch die mittelalterlichen Gassen hinter der Marina gehen"
           ],
-          "mooringTip": "Die ACI Skradin bietet Muringleinen und vollen Service, mit einem Tankponton an der Einfahrt. Der Kanal hinein ist gut betonnt und tief für jeden Tiefgang, aber plane neunzig Minuten in Verdrängerfahrt ab Šibenik ein. Im Parkabschnitt darf nicht geankert werden, also heißt es Marina oder zurück flussabwärts."
+          "mooringTip": "Die ACI Skradin bietet Muringleinen und vollen Service, aber keinen Treibstoff: Tankt in Šibenik, bevor ihr flussaufwärts fahrt. Der Kanal hinein ist gut betonnt und tief für jeden Tiefgang, aber plane neunzig Minuten in Verdrängerfahrt ab Šibenik ein. Im Flussfahrwasser bis Skradin darf nicht geankert werden, also heißt es Marina oder zurück flussabwärts."
         },
         "6": {
           "shortDescription": "Zwanzig Meilen zurück zum Meer und die Küste entlang zu einer Halbinselstadt, die einen von Gezeiten gespeisten Salzwassersee namens Drachenauge bewacht.",
@@ -1612,7 +1612,7 @@
         },
         "2": {
           "shortDescription": "Ein Flusslauf hinauf an Šibenik vorbei und durch den St.-Anton-Kanal in Krkas Süßwasserschlucht, festgemacht dort, wo das Wasser bei Skradin süß wird.",
-          "description": "An diese Passage erinnern sich die meisten Crews. Von Zlarin fädelst du dich durch den Kanal an Šibeniks Altstadt vorbei, schlüpfst unter der Straßenbrücke mit ihren 49 Metern Durchfahrtshöhe hindurch und folgst dem St.-Anton-Kanal in eine von Felsen gesäumte Süßwasserschlucht ohne echtes Gegenstück an dieser Küste. Rechne mit neunzig Minuten in Verdrängerfahrt ab der Flussmündung; die Einfahrt ist gut betonnt und tief genug für jeden Chartertiefgang. Die ACI Marina Skradin wartet am Kopf des Flusses, Muringleinen an jedem Liegeplatz und Treibstoff an der Einfahrt. Kauf dein Parkticket am Kiosk an der Kaimauer und nimm das inbegriffene Shuttle hinauf zum Skradinski Buk, wo das Wasser 46 Meter über siebzehn Travertinstufen stürzt. Ein Bohlenweg umrundet beide Ufer. Zurück im Ort bestell das Skradiner Risotto, Rind und Safran, über Stunden eingekocht.",
+          "description": "An diese Passage erinnern sich die meisten Crews. Von Zlarin fädelst du dich durch den Kanal an Šibeniks Altstadt vorbei, schlüpfst unter der Straßenbrücke hindurch und folgst dem St.-Anton-Kanal in eine von Felsen gesäumte Süßwasserschlucht ohne echtes Gegenstück an dieser Küste. Rechne mit neunzig Minuten in Verdrängerfahrt ab der Flussmündung; die Einfahrt ist gut betonnt und tief genug für jeden Chartertiefgang. Die ACI Marina Skradin wartet am Kopf des Flusses, Muringleinen an jedem Liegeplatz, aber kein Treibstoff – also vorher in Šibenik tanken. Kauf dein Parkticket am Kiosk an der Kaimauer und nimm das inbegriffene Shuttle hinauf zum Skradinski Buk, wo das Wasser 46 Meter über siebzehn Travertinstufen stürzt. Ein Bohlenweg umrundet beide Ufer. Zurück im Ort bestell das Skradiner Risotto, Rind und Safran, über Stunden eingekocht.",
           "thingsToDo": [
             "Mit dem Park-Shuttle zum Skradinski Buk fahren",
             "Den Bohlenweg unterhalb der Fälle ablaufen",
@@ -1620,7 +1620,7 @@
             "Den 3,4 km langen Schluchtweg flussaufwärts wandern",
             "Am Marina-Ponton Treibstoff aufnehmen"
           ],
-          "mooringTip": "Die ACI Marina Skradin hat Muringleinen und volle Services, mit dem Tankponton direkt an der Einfahrt. Das Flussfahrwasser ist gut betonnt und tief, doch plane 90 Minuten ab der Mündung von Šibenik bei langsamer Fahrt ein, und denk daran: Innerhalb des Parks ist Ankern nirgends erlaubt."
+          "mooringTip": "Die ACI Marina Skradin hat Muringleinen und volle Services, aber keine Tankstelle; tankt vorher in Šibenik. Das Flussfahrwasser ist gut betonnt und tief, doch plane 90 Minuten ab der Mündung von Šibenik bei langsamer Fahrt ein, und denk daran: Im Flussfahrwasser bis Skradin ist Ankern verboten."
         },
         "3": {
           "shortDescription": "Die Krka wieder hinab und westwärts nach Kaprije, einer stillen, kapernbewachsenen Insel mit 140 Menschen, einem Hafen und einer Kapelle auf dem Grat.",
@@ -2516,7 +2516,7 @@
         },
         "2": {
           "shortDescription": "Zwölf Meilen das Krka-Ästuar hinauf, an Šibenik vorbei, zur ACI Marina Skradin, von wo das Parkboot hinauf zu den Skradinski-Buk-Fällen fährt.",
-          "description": "Von Zlarin sind es kurze zwölf Meilen, doch der Charakter ändert sich vollständig. Sie umrunden die Altstadt von Šibenik, passieren die Brücke mit ihren 49 Metern Durchfahrtshöhe und motoren in den Süßwasserabschnitt der Krka hinein. Segeln ist oberhalb der Flussmündung verboten, also läuft die Maschine mit Verdrängerfahrt den Rest des Weges bis zur ACI Marina Skradin. Die Marina liegt zwei Meilen unterhalb der Fälle; kaufen Sie den Parkeintritt am Kiosk an der Ufermauer und nehmen Sie dann das Nationalparkboot, das in der Saison halbstündlich hinauf nach Skradinski Buk pendelt. Siebzehn Travertinstufen lassen den Fluss gut vierzig Meter fallen, und ein Holzsteg umrundet beide Ufer. Zurück im Ort bestellen Sie das Skradiner Risotto, eine Angelegenheit aus Rind und Safran, die die Einheimischen fast einen ganzen Tag lang rühren. Lieber zu Fuß? Ein 3,4 Kilometer langer Schluchtpfad erreicht die Fälle.",
+          "description": "Von Zlarin sind es kurze zwölf Meilen, doch der Charakter ändert sich vollständig. Sie umrunden die Altstadt von Šibenik, passieren die Straßenbrücke und motoren in den Süßwasserabschnitt der Krka hinein. Im Kanal des hl. Antonius ist Segeln verboten, und bis Skradin gilt ein Limit von 8 Knoten, also läuft die Maschine mit Verdrängerfahrt den Rest des Weges bis zur ACI Marina Skradin. Die Marina liegt zwei Meilen unterhalb der Fälle; kaufen Sie den Parkeintritt am Kiosk an der Ufermauer und nehmen Sie dann das Nationalparkboot, das in der Saison halbstündlich hinauf nach Skradinski Buk pendelt. Siebzehn Travertinstufen lassen den Fluss gut vierzig Meter fallen, und ein Holzsteg umrundet beide Ufer. Zurück im Ort bestellen Sie das Skradiner Risotto, eine Angelegenheit aus Rind und Safran, die die Einheimischen fast einen ganzen Tag lang rühren. Lieber zu Fuß? Ein 3,4 Kilometer langer Schluchtpfad erreicht die Fälle.",
           "thingsToDo": [
             "Mit dem Parkboot nach Skradinski Buk fahren",
             "Die Holzstege an beiden Flussufern ablaufen",
@@ -2524,7 +2524,7 @@
             "Den 3,4 km langen Schluchtpfad zu den Fällen gehen",
             "Das flussaufwärts fahrende Boot zur Insel Visovac nehmen"
           ],
-          "mooringTip": "Die ACI Marina Skradin hat Muringleinen an jedem Liegeplatz, volle Versorgung und einen Tankponton an der Einfahrt. Von der Flussmündung herauf rechnen Sie mit etwa neunzig Minuten in Verdrängerfahrt, und rufen Sie für Juli und August vorab an, wenn die Süßwasser-Liegeplätze schnell ausgebucht sind."
+          "mooringTip": "Die ACI Marina Skradin hat Muringleinen an jedem Liegeplatz, volle Versorgung, aber keine Tankstelle – also in Šibenik tanken. Von der Flussmündung herauf rechnen Sie mit etwa neunzig Minuten in Verdrängerfahrt, und rufen Sie für Juli und August vorab an, wenn die Süßwasser-Liegeplätze schnell ausgebucht sind."
         },
         "3": {
           "shortDescription": "Zurück das Ästuar hinab und hinaus zum autofreien Kaprije, einer Ein-Dorf-Insel mit einer Kammwanderung, die den Blick auf die Kornaten freigibt.",
@@ -3793,7 +3793,7 @@
             "Das langgeschmorte Skradin-Safranrisotto bestellen",
             "Durch die mittelalterlichen Gassen hinter der Marina schlendern"
           ],
-          "mooringTip": "Jeder Liegeplatz der ACI Marina Skradin hat eine Muringleine, die Anlage bietet volle Versorgung, und Diesel gibt es auf dem Weg herein an der Einfahrt. Das betonnte Flussfahrwasser führt genug Tiefe für jeden Chartertiefgang; rechnen Sie etwa anderthalb Stunden mit Rumpfgeschwindigkeit von der Flussmündung bei Šibenik. Der Park erlaubt entlang seines Flussabschnitts nirgends das Ankern, es läuft also auf die Marina hinaus oder auf nichts."
+          "mooringTip": "Jeder Liegeplatz der ACI Marina Skradin hat eine Muringleine, die Anlage bietet volle Versorgung, Diesel gibt es dort aber nicht, also unterwegs in Šibenik tanken. Das betonnte Flussfahrwasser führt genug Tiefe für jeden Chartertiefgang; rechnen Sie etwa anderthalb Stunden mit Rumpfgeschwindigkeit von der Flussmündung bei Šibenik. Der Park erlaubt entlang seines Flussabschnitts nirgends das Ankern, es läuft also auf die Marina hinaus oder auf nichts."
         },
         "6": {
           "shortDescription": "Zwanzig Seemeilen den Fluss zurück, dann hinaus an die offene Küste Richtung Rogoznica, mit seinem eigenartigen Salzsee Drachenauge neben der stattlichen Marina Frapa.",
@@ -4129,7 +4129,7 @@
             "Durch die alten Steingassen über dem Kai streifen",
             "Zum Aussichtspunkt über den Fällen hinaufwandern"
           ],
-          "mooringTip": "ACI Skradin hat an jedem Platz Mooringleinen, volle Versorgung und eine Tankstelle an der Einfahrt. Das Flussfahrwasser ist gut betonnt und für jeden Tiefgang tief genug; rechne von der Šibenik-Flussmündung mit rund neunzig Minuten in Verdrängerfahrt, und beachte: Im Parkabschnitt ist Ankern verboten, es heißt also Marina oder gar nichts."
+          "mooringTip": "ACI Skradin hat an jedem Platz Mooringleinen, volle Versorgung, aber keine Tankstelle; tankt in Šibenik. Das Flussfahrwasser ist gut betonnt und für jeden Tiefgang tief genug; rechne von der Šibenik-Flussmündung mit rund neunzig Minuten in Verdrängerfahrt, und beachte: Im Flussfahrwasser bis Skradin ist Ankern verboten, es heißt also Marina oder gar nichts."
         },
         "6": {
           "shortDescription": "Zwanzig Meilen zurück ans Meer und nach Südosten nach Rogoznica, einem Ort auf einer Landzunge über dem sonderbaren Salzsee Zmajevo Oko, mit der riesigen Marina Frapa für die Nacht.",
@@ -4381,7 +4381,7 @@
             "Eine Hängematte zwischen die Kiefern spannen",
             "Sardinen vor Anker grillen"
           ],
-          "mooringTip": "In Tijat gibt es weder Bojen noch Versorgung, anker also auf Sand und Seegras in 5-8 m und setz den Anker sorgfältig. Bunkere vorher in Skradin oder Šibenik Proviant, Wasser und Diesel, denn hier findest du nichts."
+          "mooringTip": "In Tijat gibt es weder Bojen noch Versorgung, anker also auf Sand und Seegras in 5-8 m und setz den Anker sorgfältig. Bunkere vorher Proviant und Wasser in Skradin oder Šibenik und Diesel in Šibenik, denn hier findest du nichts."
         },
         "13": {
           "shortDescription": "Gemütliche 8 Meilen nach Murter, dem betriebsamen Tor zu den Kornaten und Heimat vieler Konoba-Familien des Archipels.",
@@ -4464,7 +4464,7 @@
             "Langsam gekochtes Skradiner Risotto probieren",
             "Einen Radweg entlang der Krka fahren"
           ],
-          "mooringTip": "Die ACI Marina Skradin liegt mitten im Ort und ist die praktische Wahl für die Nacht; für Juli und August früh buchen. Der Stadtkai ist nur für kurze Stopps, und im Fluss wie im Prokljan-See ist Ankern verboten, rechne hier also nicht damit, den Anker zu werfen."
+          "mooringTip": "Die ACI Marina Skradin liegt mitten im Ort und ist die praktische Wahl für die Nacht; für Juli und August früh buchen. Der Stadtkai ist nur für kurze Stopps, und im Flussfahrwasser bis Skradin ist Ankern verboten, rechne hier also nicht damit, den Anker zu werfen."
         },
         "6": {
           "shortDescription": "Zurück ins Salzwasser und rund 18 Meilen nach Vrgada, einer autofreien Insel bei Pirovac mit einem seltenen Streifen weichen Sandes.",
@@ -4715,7 +4715,7 @@
             "Durch Skradins Gassen aus römischer Zeit schlendern",
             "Das langsam gegarte Skradiner Risotto probieren"
           ],
-          "mooringTip": "Die ACI Marina Skradin liegt direkt am Fluss und ist im Juli und August ausgebucht – Liegeplatz also vorab reservieren. Im Parkgewässer oberhalb des Prokljan-Sees gilt Ankerverbot, plane die Nacht daher fest vertäut in Skradin ein."
+          "mooringTip": "Die ACI Marina Skradin liegt direkt am Fluss und ist im Juli und August ausgebucht – Liegeplatz also vorab reservieren. Im Flussfahrwasser bis Skradin gilt Ankerverbot, plane die Nacht daher fest vertäut in Skradin ein."
         },
         "6": {
           "shortDescription": "Achtzehn Meilen den Fluss zurück und die Küste hinauf nach Vrgada, einer winzigen Sandinsel vor Pakoštane – keine Autos, eine Bucht.",
