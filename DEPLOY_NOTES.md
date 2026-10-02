@@ -1,5 +1,18 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-10-02 — 🔎 Review sadržaja (2. prolaz): još ~150 krivih smjerova, naknade NP-a, „osiguranje pokriva vrijeme", UNESCO, rupe brenda; strože `check-corpus-holes` — ⏳ NIJE DEPLOYANO
+
+Nastavak unosa ispod. Samo tekst: `public/seo-content` (1.397 datoteka, 9 jezika), `messages/*/itineraryCroatia.json` (9 jezika), 4 configa (EN izvor) + `scripts/check-corpus-holes.mjs`. Smjerovi provjereni koordinatama (gazeter ~120 mjesta), naknade prema cjenicima NP Mljet 2026, NP Kornati 2026, Cabrera i La Maddalena.
+
+- **Smjerovi i udaljenosti** (1.457 izmjena, 92 stranice × jezici): npr. Šibenik → Kornati zapad (ne jug/istok), Murter → Kornati zapad/jugozapad, Dubrovnik → Mljet i Korčula sjeverozapad (ne jug), Kotor/Tivat → Dubrovnik sjeverozapad, Cavtat jugoistočno od Dubrovnika, Pomer → Brijuni i Limski kanal sjeverozapad, Baška Voda: Brela sjeverozapad, Tučepi i Igrane jugoistok, Punat: Cres zapad, Rab jugoistok, Lošinj jugozapad, Sukošan/Biograd: Pašman i Ugljan preko kanala na zapadu. Netočne brojke (npr. Kornati „8 nm", Telašćica „12 nm", Orebić → Korčula „10 nm, 3 h", Rovinj „85 km") maknute u svim jezicima. Itinerar Zadar – Pag: Silba → Ilovik sjeverozapad, Ilovik → Pag istok.
+- **Naknade** (148): Kornati, Hramina, Rogoznica, Pakleni, NP Mljet „12–15 € po osobi" i „noćenje u parku nije dopušteno" (sidrenje je dopušteno u Polačama i Pomeni), Brijuni/Fažana, Cabrera „6 € po plovilu" (dozvola je besplatna, bove po duljini i sezoni), La Maddalena „€100+ dnevno", Egadi „20–60 € u Capo d'Orlandu".
+- **Vrijeme i osiguranje** (83): „Boat4You includes travel insurance", „insurance covers weather-related changes", „credit your account for lost days" → preporuka putnog osiguranja kod neovisnog osiguravatelja; povrat ovisi o uvjetima operatera i ugovoru o najmu.
+- **UNESCO** (63): Cilento/Salerno (park s Paestumom i Velijom), Scandola, posidonija Ibize, Serra de Tramuntana, Rías Baixas (Cíes su na tentativnoj listi).
+- **Rupe brenda** (404): rečenice bez subjekta („; provides…", „Yes, arranges…", „Does offer…?") i upitnici bez riječi u 9 jezika.
+- **`check-corpus-holes.mjs`**: nova pravila — „'s"/„Boat4You 's" i ispred interpunkcije, rupe u pitanjima („ ?"), EN rečenice bez subjekta nakon „;", „Yes,", „Does/Can/Will".
+- Za Marija (nedirano): Polače „€40/noć s ulazom u park" (~60 rečenica), „Boat4You handles/arranges insurance" (~160 EN), cijene skippera/hostese, preostali smjerovi u dugim tekstovima (npr. „talijanska obala Istre", Lošinj → Italija „35–50 nm sjeverno").
+- Provjere: `seo-corpus-qa.py --check` 0 nalaza, `check-corpus-holes` OK (12.789 datoteka), JSON valjan, prettier.
+
 ## 2026-10-02 — 🧭 Sadržaj: lažni UNESCO, nemogući smjerovi i vremena, „osiguranje pokriva vrijeme", neprovjerene naknade (Kornati, Skradin, most „49 m"), rupe brenda „'s" — ⏳ NIJE DEPLOYANO
 
 Samo tekst: `public/seo-content` (1.435 datoteka, 9 jezika), `messages/*/itineraryCroatia.json` (9 jezika), `src/config/itinerary/**` (EN izvor, 14 datoteka) + `scripts/check-corpus-holes.mjs` (nova provjera `brand-s`). Ide u istom deployu.

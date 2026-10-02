@@ -79,7 +79,7 @@ const sukosanPagRoute: ItineraryRoute = {
         mobile: { left: 2.3, top: 23.3 },
       },
       description:
-        'Follow the horizon to car-free Silba, a bohemian paradise where sailors and artists exchange stories under fig trees. Swim at Torta Beach, where the shallows sparkle topaz, then sail south to Ilovik, the "Island of Flowers." Drop anchor across Paradise Bay, snorkel over shimmering fish clouds. Dine under bougainvillea on lamb under the bell, slow-cooked with rosemary and island wine, as fireflies dance to the sea.',
+        'Follow the horizon to car-free Silba, a bohemian paradise where sailors and artists exchange stories under fig trees. Swim at Torta Beach, where the shallows sparkle topaz, then sail north-west to Ilovik, the "Island of Flowers." Drop anchor across Paradise Bay, snorkel over shimmering fish clouds. Dine under bougainvillea on lamb under the bell, slow-cooked with rosemary and island wine, as fireflies dance to the sea.',
       shortDescription:
         'Long 18 nm leg west to Silba — the artist colony of the Zadar archipelago: car-free, unique sandstone-arched alleys, and a long-running summer festival of art exhibitions in the village. Torta Beach on the western shore is the headline swim spot.',
       thingsToDo: [
@@ -101,7 +101,7 @@ const sukosanPagRoute: ItineraryRoute = {
         mobile: { left: 15.5, top: 18.9 },
       },
       description:
-        "Sail west to Pag's extreme splendor, where blue edge of the sea meets moonlike stone. Dock at Šimuni, a fishing community where salt pans sparkle like broken glass. Cycle across Lun's ancient olive grove, gnarled giants older than memory, then eat Pag's smoky lamb at a seashore grill, the tang of sheep cheese sharp on your tongue. The melodies of klapa singers will help you to relax into Pag's star-strewn evening.",
+        "Sail east to Pag's extreme splendor, where blue edge of the sea meets moonlike stone. Dock at Šimuni, a fishing community where salt pans sparkle like broken glass. Cycle across Lun's ancient olive grove, gnarled giants older than memory, then eat Pag's smoky lamb at a seashore grill, the tang of sheep cheese sharp on your tongue. The melodies of klapa singers will help you to relax into Pag's star-strewn evening.",
       shortDescription:
         'Easy 14 nm crossing east into the Pag channel and Šimuni — a quiet fishing village mid-island, with a small marina and the famous Lun olive groves a short bike ride to the north (1600 trees, some over 2000 years old).',
       thingsToDo: [

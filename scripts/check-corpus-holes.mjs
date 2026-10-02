@@ -30,6 +30,13 @@
  * and "Boat4You 's" with a real space. Also checked on the tight block text,
  * so "<strong>Boat4You</strong>'s" passes; Dutch "'s avonds / 's ochtends /
  * 's late namiddag"-type words are allowed.
+ *
+ * 2.10.2026 (rv5) extended `brand-s` to an "'s" before punctuation or the end
+ * ("…stručnošću 's,", "…wsparcia 's."), and added `question-hole` (a word then
+ * " ?": "Why Charter Through ?", "Warum über ?"; in French only a preposition
+ * before " ?") and, for EN, `aux-hole` ("What support does provide?", "Can
+ * arrange provisioning?") plus `subject-hole` for a clause after ";" or "Yes,"
+ * that starts with the verb ("…in peak season; coordinates advance positioning").
  */
 import { execFileSync } from 'node:child_process';
 import { readFileSync, readdirSync } from 'node:fs';
@@ -49,6 +56,17 @@ const ALL = [
   ['foreign-glyph', /[ऀ-৿฀-๿က-႟]|[A-Za-zß-ž][Ͱ-Ͽ]|[Ͱ-Ͽ][a-zß-ž]/u],
   ['raw-path', /Boat4You\s*\/\s*[A-Za-z?]/u],
 ];
+// "Why Charter Through ?", "Warum über ?", "zapewnia ?" (rv5): a word, a space, then "?" —
+// a deleted brand; French puts a space before "?" by typography, so there only a preposition
+// right before it ("gérées par ?") counts.
+const QUESTION_HOLE = locale => (locale === 'fr' ? /\b(?:par|chez|avec|via|pour) \?/u : /[\p{L}\p{N})] \?/u);
+// Verbs that "Boat4You" was the subject of (rv5, 2.10.2026) — base form after "does"/"Can",
+// third person after ";" / "Yes,".
+const EN_VERB =
+  '(?:provide|offer|handle|include|charge|arrange|cover|support|recommend|work|help|operate|manage|ensure|guarantee|deliver|assist|book|coordinate|maintain|verify|check|vet|select|partner|serve|accommodate|facilitate|source|negotiate|secure|match|tailor|connect|require|have|organi[sz]e)';
+const EN_VERB3 =
+  '(?:coordinates|arranges|handles|provides|offers|maintains|recommends|works|partners|helps|ensures|monitors|supports|connects|vets|lists|negotiates|manages|organi[sz]es|selects|verifies|reviews|checks|sources|includes|specializes|specialises|assists|matches|tailors|facilitates|guarantees|operates|designs|confirms|estimates|briefs|adjusts|advises|suggests|plans|can|will)';
+
 const BY_LOCALE = {
   en: [
     ['why-hole', /\bWhy (?:Stands|Sets|Excels|Shines|Leads)\b/u],
@@ -69,6 +87,13 @@ const BY_LOCALE = {
       'subject-hole',
       /\b(?:Whether|If you)\b[^.!?]{3,300}, (?:delivers|arranges|connects you|matches you|ensures your)\b/u,
     ],
+    // 2.10.2026 (rv5): a question whose subject is gone ("What support does provide?",
+    // "Can arrange provisioning?") and a clause after ";" or "Yes," that starts with the
+    // verb ("…in peak season; coordinates advance positioning", "Yes, arranges chefs").
+    ['aux-hole', new RegExp(`\\b[Dd]oes (?:not )?${EN_VERB}\\b[^.!?]*\\?`, 'u')],
+    ['aux-hole', new RegExp(`(?:^|[.?!] )(?:Can|Will) ${EN_VERB}\\b[^.!?]*\\?`, 'u')],
+    ['subject-hole', new RegExp(`;\\s*${EN_VERB3} `, 'u')],
+    ['subject-hole', new RegExp(`(?:^|[.?!] )(?:Yes|No|Absolutely)[,.] ${EN_VERB3} `, 'u')],
   ],
   de: [
     ['heading-hole', /\bWarum Segler zu\s+zurückkehren\b/u],
@@ -142,7 +167,7 @@ const prepHole = locale =>
     : null;
 
 // "'s" with no word before it (a deleted "Boat4You"), and "Boat4You 's".
-const BRAND_S = /(?<![\p{L}\p{N}_’'])['’]s\s+(?=[\p{L}\p{N}])|Boat4You\s+['’]s(?!\p{L})/gu;
+const BRAND_S = /(?<![\p{L}\p{N}_’'])['’]s(?:\s+(?=[\p{L}\p{N}])|(?=\s*(?:[.,;:!?)]|$)))|Boat4You\s+['’]s(?!\p{L})/gu;
 // Dutch adverbial genitives that legitimately start with "'s".
 const NL_S_OK =
   /^['’]s\s+(?:avonds|ochtends|morgens|middags|nachts|winters|zomers|werelds|lands|late|mensen|jaars|konings|rijks)(?!\p{L})/iu;
@@ -239,6 +264,16 @@ files.forEach(([locale, name]) => {
         );
       }
     });
+
+    // On the tight text, so "<a>Milazzo</a> ?" spacing from markup does not count twice.
+    const tightQ = tight(inner);
+    const question = QUESTION_HOLE(locale).exec(tightQ);
+
+    if (question) {
+      findings.push(
+        `${'question-hole'.padEnd(15)} ${locale}/${name}: …${tightQ.slice(Math.max(0, question.index - 60), question.index + 20)}…`
+      );
+    }
 
     const flat = prep ? tight(inner) : '';
     const hole = prep?.exec(flat);

@@ -79,9 +79,9 @@ const zadarPagRoute: ItineraryRoute = {
         mobile: { left: 3, top: 26.5 },
       },
       description:
-        'Chase the horizon to car-free Silba, a bohemian oasis where cobbled paths lead to secret art studios. Swim at Torta Beach, then sail south to Ilovik, the “Island of Flowers.” Drop anchor in Paradise Bay, snorkeling through schools of glittering sardines. Dine under bougainvillea on lamb under the bell, its rosemary perfume mingling with the salt-kissed breeze.',
+        'Chase the horizon to car-free Silba, a bohemian oasis where cobbled paths lead to secret art studios. Swim at Torta Beach, then sail north-west to Ilovik, the “Island of Flowers.” Drop anchor in Paradise Bay, snorkeling through schools of glittering sardines. Dine under bougainvillea on lamb under the bell, its rosemary perfume mingling with the salt-kissed breeze.',
       shortDescription:
-        'Long passage day with two stops — Silba (car-free, the artist colony of the Zadar archipelago) for a Torta Beach swim, then south to Ilovik. The Ilovik–Sveti Petar channel is one of the best protected anchorages in the entire Kvarner.',
+        'Long passage day with two stops — Silba (car-free, the artist colony of the Zadar archipelago) for a Torta Beach swim, then north-west to Ilovik. The Ilovik–Sveti Petar channel is one of the best protected anchorages in the entire Kvarner.',
       thingsToDo: [
         'Lunch swim at Silba Torta Beach',
         'Walk Silba car-free art alleys',
@@ -102,7 +102,7 @@ const zadarPagRoute: ItineraryRoute = {
         mobile: { left: 16.6, top: 21 },
       },
       description:
-        'Sail west to Pag’s moonlike terrain, where stone and salt sculpt the landscape. Dock in Šimuni, a village of fishermen mending nets under olive trees. Cycle through Lun’s ancient olive grove—gnarled giants older than empires—then devour Pag’s famed lamb at a beach grill, its smoky richness paired with the sharp tang of sheep cheese.',
+        'Sail east to Pag’s moonlike terrain, where stone and salt sculpt the landscape. Dock in Šimuni, a village of fishermen mending nets under olive trees. Cycle through Lun’s ancient olive grove—gnarled giants older than empires—then devour Pag’s famed lamb at a beach grill, its smoky richness paired with the sharp tang of sheep cheese.',
       shortDescription:
         'Easy 14 nm crossing east into the Pag channel and Šimuni — a quiet fishing village mid-island, with a small marina and the famous Lun olive groves a short bike ride to the north (1600 trees, some over 2000 years old).',
       thingsToDo: [
