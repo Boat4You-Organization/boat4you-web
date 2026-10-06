@@ -1,5 +1,87 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-10-06 — 🛏️ Kapacitet broda točno kao kod partnera: kabine, ležajevi, WC, osobe, bilješke, jedra i motor na svim površinama (+ review popravci) — ⏳ NIJE DEPLOYANO; ⛔ tek NAKON backend capacity releasea i gate SQL-a
+
+Mario (6.10.): kapacitet i raspored broda 100 % kao u MMK-u (Booking Manager) i NauSysu na svakoj površini, da klijent nikad ne mora pitati koliko kabina i ležajeva brod ima. Capacity contract v1 (6.10.2026) s adversarial kritikom (B-1…B-7) i Mariovim odlukama 1–4.
+
+**⛔ Gate za SVAKI deploy s maina:** od `2183ac26f` nadalje b4y main ne smije live prije backenda (`c374579`…`a96efe8` + njegovi review popravci) na cusma2 i cusma3 i prolaska gate SQL-a (korak 4 dolje). Današnji API u pretrazi ne šalje `berths` ni `capacity`, pa brodovi bez `maxPersons` gube brojku osoba na kartici (16 od 18 jedrilica u Sukošanu — razlog reverta `7303d5758`), a stranice partnerskih brodova gube redove Motor i Glavno jedro te rečenicu o motoru dok backend ne pošalje `rig`. Vrijedi i za nepovezane hotfixeve: do tada hotfix rezati s `7303d5758` (zadnji commit prije ovog releasea) ili revertati `c0071d987 6cc0d6e4e 2183ac26f`.
+
+**Commiti:**
+
+- `2183ac26f` zajednički formatter `src/utils/static/yachtCapacity.ts` (bajt-identičan ugovoru i adminu, kopira se u 6 sistera; izvan eslinta i prettiera), `messages/*/capacity.json` ×9 (ICU plurali; es Literas, pt Beliches, pl Koje, de Kojen), pregledani prijevodi MMK bilješki `src/utils/static/capacityNotes/<locale>.json` (37 bilješki; neviđena ostaje engleska s `lang="en"`), `capacity` u `CLIENT_NAMESPACES`, `request.ts` i deklaracijama (`next.config.js`).
+- `6cc0d6e4e` sve površine:
+  - kartica (i slični brodovi, ponude, itinerari): Kabine · Ležajevi · Maks. osoba, svaka skrivena kad je nepoznata, s kratkom bilješkom ili splitom („10 (8+2)", „13 (12 + 1 crew)"); bez procjene „kabine × 2 + 2" (ponovno `cee3cf183`).
+  - spec grid stranice broda (`capacityRows`): bilješke doslovno ili iz tablice prijevoda, crew kabine i crew WC kao zasebni redovi (nikad zbrojeni), posada samo za crewed charter, jedra i motor iz `rig`, gaz; custom `engineText` ima prednost.
+  - opis i FAQ (i FAQPage JSON-LD): ležajevi iz `berths`, „za goste" samo iz partnerova splita, maks. osoba na brodu kao zasebna rečenica, tuš samo kad partner pošalje `showers`, bez obećanja posteljine; meta i Product JSON-LD samo brojke (+ WC); `/search` JSON-LD maks. osoba umjesto „guests".
+  - YachtPDF (WC umjesto BATHROOMS, bez „null"), checkout (BookingHero), my-bookings, TripHub, chat kartice, stranice modela, branda i flote („max. people" umjesto „guests"). Mrtvi ključevi maknuti.
+- `c0071d987` review (6.10.):
+  - `descLayoutV0–V3` i `faqSleepsA0–A2` ×9 više ne smještaju ležajeve u kabine. „8 ležajeva u 3 kabine" bilo je izmišljeno (Le Petite Prince ima 2 od 8 ležajeva u salonu; Marea i Jangada imaju crew kabine), a išlo je i u FAQPage JSON-LD. Sada: „ima 8 ležajeva i 3 kabine"; partnerov split za goste ostaje. fr i pl V2 već su bili takvi.
+  - rečenica o opremi više ne čita filter enum `mainSailType` (bilo: „Ausstattungsmerkmale des Bootes Rollgroßsegel." za full batten); jedra su u spec redovima. Stranica broda i my-bookings.
+  - `withResolvedNotes` (server): klijentske komponente stranice broda dobivaju brod bez bilješki i oznaka koje stranica ne prikazuje (operator lista, kontakt, pravila bilješki), pa ih nema ni u RSC payloadu. Druga linija iza backend sanitizera.
+  - chat kartica prosljeđuje `wc` → čip „N WC".
+  - `ReservationDetails`: opcionalni `custom` i `customDetails.engineText` za red motora custom broda u my-bookings, čim ih backend pošalje.
+
+**Nedirano:** zaključani inquiry predlošci, cijene i extrasi (`maxPersons` null ostaje null), potvrđene cijene, „N people interested" / countdown / „rare find". Bilješke kapaciteta NE idu kroz `safePartnerText` / `sanitizePartnerYacht` (kritika B-1); javna imena polja ne odgovaraju `/agency|external|partner|company|source|mmk|nausys|operator/i`.
+
+**Provjere:**
+
+- `yarn test:capacity` 32/32:
+  - 7 referentnih brodova × 9 jezika (redovi, čipovi, kartice); paritet ključeva, ICU i plurali; tablice bilješki; stari payload;
+  - svaka nova rečenica u svakom jeziku za 1 / 2 / 5 / 13 / 22 (bez `{}` / NaN);
+  - guard da nijedna rečenica rasporeda ili FAQ-a ne stavlja ležajeve u kabine (9 jezika, sa splitom i bez njega);
+  - `withResolvedNotes` s imenom operatera i brojem telefona u bilješkama;
+  - React render DetailsTaba (Dione II en/de/pl, Marea de, Le Petite Prince na današnjem API-ju).
+- Ugovor `node --test` 22/22. Formatter sha256 `502365cc08c9…` isti u ugovoru, b4y i adminu.
+- `tsc` 0. eslint 0 grešaka (pre-commit `yarn lint`). Upozorenja: `charterTypeLabel` u `boat/[slug]/page.tsx` (od prije) i `useReservation` exhaustive-deps (po postojećem uzorku).
+- Nezavisni review (6.10.):
+  - 7 živih payloada (8351, 11399, 1161, 2405, 1155, 8958, 8964) i 7 referentnih kroz retke, čipove, kartice, opis, FAQ i meta u 9 jezika: 0 × `null` / `NaN` / `undefined` / `{` / „0 cabins";
+  - buildane stranice (Dione en/de, LPP, fleet, model, brand) bez `null` / `NaN` / `MISSING`;
+  - `capacity` stiže do svakog `NextIntlClientProvider`;
+  - nijedna od 121 oznake motora s jedinicom nije skrivena operator provjerom;
+  - nove rečenice ne postoje u porukama 6 sistera (za 7 ključeva × 9 jezika iz `c0071d987` ponovljeno: 0 pogodaka u 1.242 datoteke).
+- `c0071d987` nije buildan; provjeren testovima, tsc-om i lintom.
+
+**Otvoreno / nije provjereno:**
+
+- Native review novih rečenica u 8 jezika i prijevoda bilješki (prvo hr, pl, nl).
+- U pravom pregledniku s pravim backend `capacity` blokom još nisu viđeni: my-bookings, checkout zaglavlje, varijante kartica (slični brodovi, ponude, itinerari) i prijelom dugih čipova na 375 px. Zadnja promjena stila čipa kartice nije rebuildana.
+- Red motora custom broda u my-bookings: backend `MyReservationDetailsDto` mora poslati `custom` i `customDetails.engineText` (tip u b4y je spreman). Do tada takva rezervacija nema red motora.
+- Opis ne spominje crew kabine ni crew WC (spec grid ih ima kao zasebne redove; za Mareu piše „5 WC", a 2 crew WC su samo u gridu).
+- Meta description nema WC, a ni maks. osoba kad su ležajevi poznati (duljina). Product JSON-LD ima sve četiri brojke.
+- Formatter je izvan linta na dva načina: b4y ignorira datoteku u eslintu i prettieru, admin gasi 5 pravila. Odabrati jedan prije kopiranja u 6 sistera.
+- Mrtva `src/config/boat-faq.config.ts` sadrži „certified to carry 8 passengers" i „head with shower". Ne renderira se (od prije); može se obrisati.
+- B8 SQL postoji samo u scratchpadu sesije (`/private/tmp/…/capacity/contract/B8_trigger_later.sql`, briše se). Prije koraka 8 mora postati backend `V9_<next>` migracija.
+
+**Obavezni redoslijed deploya (cijeli capacity release):**
+
+1. **Backend cusma2** (`c374579`…`a96efe8` + review popravci): prvo ručno primijeniti idempotentnu `V9_72__yacht_partner_capacity.sql` kao `boat4you_owner` (drugo pokretanje izlazi na provjeri stupaca bez locka), zatim jar i restart. Izvan SVIH sync slotova (vrijeme servera, UTC): MMK availability 08:40 / 12:40 / 16:40 / 20:40 (~17 min), MMK near-term 10:50 / 16:50, MMK full 06:00–07:30, NauSys availability 10:20 / 16:20 / 22:20, NauSys near-term 10:40 / 16:40, NauSys noćni 23:20 → ~06:00, NauSys search-retry svakih 15 min, osvježavanje matviewa svakih 10 min (ALTER se natječe s njim).
+2. **Backend cusma3** (scheduler), tvrdi gate u istoj skripti: `n=$(journalctl --since '10 minutes ago' | grep -ci 'nausys\|mmk'); [ "$n" -gt 0 ] && { echo ABORT; exit 1; }`.
+3. **Pričekati jedan puni sync ciklus na novom jaru:** NauSys (23:20) i MMK (06:10). Do prvog NauSys synca API šalje crew WC iz starog, krivog `crew_wc` — zato nijedan frontend prije koraka 4.
+4. **Gate SQL** (samo čitanje, ugovor §4) mora proći:
+
+   ```sql
+   WITH s AS (SELECT y.*, em.external_system_id AS sys
+                FROM yacht y JOIN external_mapping em ON em.system_id = y.id AND em.type = 'Yacht'
+               WHERE y.sys_active)
+   SELECT sys,                                                         -- 1 = MMK, 2 = NauSys
+          count(*)                                                       AS active,
+          count(*) FILTER (WHERE sys = 2 AND salon_berths IS NULL)       AS ns_salon_null,     -- expect ~0
+          count(*) FILTER (WHERE sys = 2 AND wc > 0 AND crew_wc = wc)    AS ns_crew_wc_eq_wc,  -- was ~7.6k, expect small
+          count(*) FILTER (WHERE sys = 1 AND mainsail_label IS NULL)     AS mmk_mainsail_null, -- expect ~0
+          count(*) FILTER (WHERE sys = 1 AND berths_note IS NOT NULL)    AS mmk_berths_note,   -- expect 40-50 %
+          count(*) FILTER (WHERE mainsail_type = 'ROLLING_SAIL')         AS rolling,           -- furling only now
+          count(*) FILTER (WHERE mainsail_type = 'CLASSIC_SAIL')         AS classic
+     FROM s GROUP BY sys;
+   ```
+
+   i dva dodatna upita iz ugovora (NauSys agencije sa `salon_berths IS NULL`; vrijednosti `mainsail_label` samo EN / bez jezika).
+
+5. **Admin** (`9d3edc1`, `4c9f299`) → 6. **b4y** (ovaj unos) → 7. **6 sistera** → 8. **kasnije, tek kad b4y i 6 sistera renderiraju nove blokove:** migracija B8 (`B8_trigger_later.sql`). Ona stavlja `yacht_content_modified` za ~13,6 tisuća aktivnih brodova → val recrawla po sitemap `<lastmod>`; javiti Mariju / GSC praćenje.
+
+**Deploy (b4y):** `b4y_web_deploy.sh` (šalje i `next.config.js` i `messages/` — novi namespace `capacity`). Lokalni build: jedan na stroju (`build.lock`), cpus=1, prod API. Nakon deploya na en i de: Dione II, Le Petite Prince i Marea — spec grid (Kabine, Ležajevi, WC, Maks. osoba, Glavno jedro, Motor, Gaz), FAQ, kartica u pretrazi s ležajevima.
+
+**Rollback:** `git revert c0071d987 6cc0d6e4e 2183ac26f` + redeploy (`b4y_web_deploy.sh`). Brzo: rollback naredba koju ispiše deploy (`.next.prev` + `next.config.js.prev` + `messages.prev` + `src/posts.prev`).
+
 ## 2026-10-06 — 🪪 Dozvole za voditelja u SEO korpusu, 9 jezika (EN + 8 prijevoda + review) — ⏳ NIJE DEPLOYANO
 
 Codexov re-audit (2.10.): korpus je tvrdio da za bareboat vrijede „International Yacht Certificate (IYC)", ISAF, iskustvo, logbook, preporuke ili tečaj umjesto dozvole, da motorni brodovi ne trebaju dozvolu („ispod 5 m / 15 KS", „ispod 7 m", „ispod 12 m za građane EU") i da Boat4You prima, traži ili provjerava dokumente. Samo tekst: `public/seo-content` (SSR na svakom `/search` landingu) i QA skripte; nema promjene koda, builda ni messages.
