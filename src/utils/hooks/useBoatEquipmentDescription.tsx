@@ -1,7 +1,6 @@
 import { useLocale, useTranslations } from 'next-intl';
 
 import { YachtEquipmentCategoryType } from '@/models/yacht-amenities.model';
-import { MAIN_SAIL_TYPE_LABEL_MAP, MainSailType } from '@/models/yacht.model';
 import { YachtDescriptionSource } from '@/types/yacht-description.type';
 import { presentAmenities } from '@/utils/static/amenities';
 
@@ -123,22 +122,11 @@ export const useBoatEquipmentDescription = (): ((yacht: YachtDescriptionSource) 
   const generateStructuredEquipmentDescription = (yacht: YachtDescriptionSource): string => {
     const sentences: string[] = [];
 
-    // Sail type + navigation/safety equipment folded into one sentence:
-    // "Boat equipment features a classic mainsail, a generator and an
-    // outside GPS plotter." If no sail type, start directly with the
-    // equipment list so grammar still reads.
-    let sailType: string | null = null;
-
-    if (yacht.mainSailType !== MainSailType.UNKNOWN) {
-      const sailTypeKey = MAIN_SAIL_TYPE_LABEL_MAP[yacht.mainSailType];
-
-      if (sailTypeKey) {
-        const resolved = t(sailTypeKey);
-
-        if (resolved && resolved !== sailTypeKey) sailType = lowercaseLabels ? resolved.toLowerCase() : resolved;
-      }
-    }
-
+    // Navigation / safety equipment: "Boat equipment features a generator
+    // and an outside GPS plotter." No sail here: the spec rows show the
+    // partner's own mainsail / headsail, and the flat mainSailType is only
+    // the search-filter value ("Rolling mainsail" for a full batten main —
+    // capacity contract 7.1, B-4).
     const navigationItems = equipmentByCategory(
       yacht,
       YachtEquipmentCategoryType.NAVIGATION_AND_SAFETY,
@@ -146,14 +134,8 @@ export const useBoatEquipmentDescription = (): ((yacht: YachtDescriptionSource) 
       lowercaseLabels
     );
 
-    const equipmentItems: string[] = [];
-
-    if (sailType) equipmentItems.push(sailType);
-
-    equipmentItems.push(...navigationItems);
-
-    if (equipmentItems.length > 0) {
-      sentences.push(`${t('yacht.boatEquipmentFeatures')} ${joinList(equipmentItems)}`);
+    if (navigationItems.length > 0) {
+      sentences.push(`${t('yacht.boatEquipmentFeatures')} ${joinList(navigationItems)}`);
     }
 
     const saloonItems = equipmentByCategory(

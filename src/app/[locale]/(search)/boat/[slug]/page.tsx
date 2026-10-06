@@ -18,7 +18,7 @@ import { Currency, UserModel } from '@/models/user.model';
 import { CHARTER_TYPE_LABEL_MAP, CharterType, YachtModel } from '@/models/yacht.model';
 import { boatHubs } from '@/utils/server/catalogueHubs';
 import { loadManufacturerLookup } from '@/utils/server/manufacturerLookup';
-import { resolveYachtCapacity } from '@/utils/server/yachtCapacity';
+import { resolveYachtCapacity, withResolvedNotes } from '@/utils/server/yachtCapacity';
 import { BoatDescTranslate, buildBoatDescription } from '@/utils/static/boatMetaDescription';
 import { buildBoatTitle, titleBoatName, titlePlace } from '@/utils/static/boatTitle';
 import { buildMetadata, localizedUrl } from '@/utils/static/buildMetadata';
@@ -460,6 +460,9 @@ const BoatPage = async ({
     resolveYachtCapacity(yacht, locale),
   ]);
   const facts = capacityFacts(capacity);
+  // What the client components get: the same yacht without the partner notes
+  // this page does not show (second line behind the backend sanitizer).
+  const clientYacht = withResolvedNotes(yacht, capacity);
   const productSchema = buildYachtProductSchema(
     yacht,
     locale as LocaleType,
@@ -541,8 +544,8 @@ const BoatPage = async ({
         />
       )}
       <BoatTransitionProvider>
-        <BoatHeroSection yacht={yacht} />
-        <BoatContentSection yacht={yacht} yachtFaq={yachtFaq} capacity={capacity} />
+        <BoatHeroSection yacht={clientYacht} />
+        <BoatContentSection yacht={clientYacht} yachtFaq={yachtFaq} capacity={capacity} />
         <BoatHubLinks hubs={hubs} boatName={boatName} locale={locale} />
         <ModelPageLink
           manufacturerName={yacht.manufacturerName}
@@ -571,7 +574,7 @@ const BoatPage = async ({
             areaLabel={await suggestedAreaLabel(locale, yacht.location?.name, yacht.location?.countryCode)}
           />
         </Container>
-        <BoatMobileNavigation yacht={yacht} />
+        <BoatMobileNavigation yacht={clientYacht} />
       </BoatTransitionProvider>
     </Layout>
   );

@@ -362,11 +362,11 @@ const ChatWidget = () => {
                               <p className={styles.cardName}>{c.name}</p>
                               <p className={styles.cardMeta}>
                                 {[
-                                  // "4 cabins · 10 berths · max. 12 people" in the page
-                                  // language; unknown (0) figures are left out.
+                                  // "4 cabins · 10 berths · 4 WC · max. 12 people" in the
+                                  // page language; unknown (0) figures are left out.
                                   ...capacityChips(
                                     fromYacht(
-                                      { cabins: c.cabins, berths: c.berths, maxPersons: c.maxPersons },
+                                      { cabins: c.cabins, berths: c.berths, wc: c.wc, maxPersons: c.maxPersons },
                                       { locale }
                                     ),
                                     capacityT

@@ -114,6 +114,10 @@ export interface ReservationDetails extends ReservationShortInfo {
   /** The boat's capacity and rig (capacity contract v1); absent on an older backend — read through fromYacht(). */
   capacity?: CapacityDto | null;
   rig?: RigDto | null;
+  /** Custom (admin-built) yacht and its engine text, for the engine row (fromYacht: engineText first). Not sent by
+   *  the backend's MyReservationDetailsDto yet — until it is, a custom yacht's booking shows no engine row. */
+  custom?: boolean | null;
+  customDetails?: { engineText?: string | null } | null;
   amenities?: YachtAmenitiesModel[];
   cancellationRequest?: string;
   /** Admin's explanation when the cancellation request was rejected; rendered

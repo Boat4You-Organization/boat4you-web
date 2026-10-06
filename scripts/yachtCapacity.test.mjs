@@ -16,10 +16,22 @@
 import { createTranslator } from 'next-intl';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
+import { registerHooks } from 'node:module';
 import { describe, test } from 'node:test';
 import { fileURLToPath } from 'node:url';
 
 import './tsLoader.mjs';
+
+// src/utils/server/yachtCapacity.ts outside Next: 'server-only' and next-intl/server (next/headers) are stubbed.
+registerHooks({
+  resolve: (specifier, context, nextResolve) =>
+    specifier === 'server-only' || specifier === 'next-intl/server'
+      ? {
+          url: 'data:text/javascript,export const getTranslations = () => null; export default {};',
+          shortCircuit: true,
+        }
+      : nextResolve(specifier, context),
+});
 
 const ROOT = fileURLToPath(new URL('../', import.meta.url));
 
@@ -165,6 +177,7 @@ describe('the 7 reference boats render as the contract says, with next-intl and 
     const walk = obj =>
       Object.entries(obj ?? {}).forEach(([k, v]) => {
         keys.add(k);
+
         if (v && typeof v === 'object') walk(v);
       });
 
@@ -249,6 +262,7 @@ describe('boat description, FAQ and meta (capacity contract 7.4)', () => {
         l
       );
     });
+
     const en = JSON.stringify(messages.en.yacht);
 
     [
@@ -301,22 +315,51 @@ describe('boat description, FAQ and meta (capacity contract 7.4)', () => {
       accommodationProse(facts(l), () => 0).map(p => markup(l, p.key, { ...p.values, name: 'Dione II' }));
 
     assert.deepEqual(parts('en'), [
-      'Dione II has 13 berths in 6 cabins, 12 of them for guests.',
+      'Dione II has 13 berths (12 of them for guests) and 6 cabins.',
       'There are 6 toilets on board.',
       'Up to 14 people can be on board.',
       'Bed linen, pillows and blankets come with some boats and are rented at the base on others — ask us and we will tell you how it works on Dione II.',
     ]);
-    assert.equal(parts('de')[0], 'Dione II hat 13 Kojen in 6 Kabinen, davon 12 für Gäste.');
-    assert.equal(parts('pl')[0], 'Dione II ma 13 koi w 6 kabinach, w tym 12 dla gości.');
+    assert.equal(parts('de')[0], 'Dione II hat 13 Kojen (davon 12 für Gäste) und 6 Kabinen.');
+    assert.equal(parts('pl')[0], 'Dione II ma 13 koi (w tym 12 dla gości) i 6 kabin.');
     assert.equal(parts('pl')[2], 'Na pokładzie może przebywać maksymalnie 14 osób.');
-    assert.equal(parts('hr')[0], 'Dione II ima 13 ležajeva u 6 kabina, od toga 12 za goste.');
+    assert.equal(parts('hr')[0], 'Dione II ima 13 ležajeva (od toga 12 za goste) i 6 kabina.');
     assert.equal(
       markup('pl', 'descLayoutV0', { name: 'X', berths: 4, cabins: 2, guestBerths: 0 }),
-      'X ma 4 koje w 2 kabinach.'
+      'X ma 4 koje i 2 kabiny.'
     );
     assert.equal(
       markup('hr', 'descLayoutV0', { name: 'X', berths: 21, cabins: 4, guestBerths: 0 }),
-      'X ima 21 ležaj u 4 kabine.'
+      'X ima 21 ležaj i 4 kabine.'
+    );
+  });
+
+  test('no layout / FAQ sentence puts the berths inside the cabins (Le Petite Prince: 2 of 8 berths in the saloon)', () => {
+    // "8 berths in 3 cabins" / "3 cabins with 8 berths" / "sleeps 8 in 3 cabins" would be invented: NauSys saloon
+    // berths are common, and crew cabins are their own figure. Cabins and berths are two separate facts.
+    const placed = {
+      en: /\b(in|across) 3 cabins\b|cabins with \d+ berths|people in 3 cabins/,
+      de: /\b(in|auf) 3 Kabinen\b|Kabinen mit/,
+      es: /\ben 3 camarotes\b|camarotes con/,
+      fr: /\b(dans|sur) 3 cabines\b|cabines avec/,
+      hr: /\bu 3 kabin|kabine s ukupno/,
+      it: /\bin 3 cabine\b|cabine con/,
+      nl: /\b(in|over) 3 hutten\b|hutten met/,
+      pl: /\bw 3 kabinach\b/,
+      pt: /\b(em|por) 3 cabines\b|cabines com/,
+    };
+    const keys = Object.keys(messages.en.yacht).filter(k => /^(descLayoutV\d|faqSleepsA\d)$/.test(k));
+
+    assert.equal(keys.length, 5 + 3);
+    LOCALES.forEach(l =>
+      keys.forEach(key =>
+        [0, 6].forEach(guestBerths => {
+          const out = markup(l, key, { name: 'Le Petite Prince', berths: 8, cabins: 3, guestBerths });
+
+          assert.ok(out.includes('8') && out.includes('3'), `${l} ${key}: ${out}`);
+          assert.ok(!placed[l].test(out), `${l} ${key}: ${out}`);
+        })
+      )
     );
   });
 
@@ -368,5 +411,56 @@ describe('source guards', () => {
   test('no cabins × 2 + 2 estimate on the card; capacity / rig never go through the partner-text filter', () => {
     assert.ok(!/cabins\s*\*\s*2/.test(read('components/BoatListingItemCard/BoatListingItemCard.tsx')));
     assert.ok(!/capacity|\brig\b/.test(read('utils/server/partnerYacht.ts')));
+  });
+
+  test('the equipment sentence never names a sail from the flat mainSailType filter enum (contract 7.1, B-4)', () => {
+    assert.ok(
+      !/\.mainSailType|MAIN_SAIL_TYPE_LABEL_MAP|MainSailType/.test(read('utils/hooks/useBoatEquipmentDescription.tsx'))
+    );
+  });
+
+  test('the boat page hands client components no partner note it does not show (withResolvedNotes)', async () => {
+    const { resolveYachtCapacity, withResolvedNotes } = await import('@/utils/server/yachtCapacity');
+    const yacht = {
+      charterType: ['BAREBOAT'],
+      capacity: {
+        cabins: { value: 6, note: '(5 double +1 for the hostess + 1 bow/skippers cabin)' },
+        berths: { value: 13, note: '(12 pax + 1 Sunsail)', split: { guests: 12, crew: 1 } },
+        heads: { value: 6, note: 'call +385 91 123 4567' },
+        maxPersons: 14,
+      },
+      rig: {
+        mainsail: { kind: 'FULL_BATTEN', label: 'Full batten' },
+        headsail: { kind: null, label: 'Sunsail genoa' },
+        engine: { label: '2x60HP' },
+        draught: 1.3,
+      },
+    };
+
+    assert.ok(isOperatorName('Sunsail'));
+
+    const resolved = await Promise.all(['en', 'de'].map(locale => resolveYachtCapacity(yacht, locale)));
+
+    resolved.forEach(capacity => {
+      const out = withResolvedNotes(yacht, capacity);
+
+      assert.equal(out.capacity.cabins.note, yacht.capacity.cabins.note);
+      assert.equal(out.capacity.berths.note, null, 'operator name hidden on the page and out of the payload');
+      assert.deepEqual(out.capacity.berths.split, { guests: 12, crew: 1 });
+      assert.equal(out.capacity.heads.note, null, 'contact data');
+      assert.equal(out.capacity.maxPersons, 14);
+      assert.equal(out.rig.mainsail.label, null);
+      assert.equal(out.rig.headsail.label, null);
+      assert.equal(out.rig.engine.label, '2x60HP');
+      assert.equal(out.rig.draught, 1.3);
+    });
+
+    assert.equal(yacht.capacity.heads.note, 'call +385 91 123 4567', 'the input is not mutated');
+
+    const power = { rig: { engine: { label: 'Yanmar 2 x 57', count: 2, powerEach: 57 } } };
+    const flat = { cabins: 3, berths: 8 };
+
+    assert.equal(withResolvedNotes(power, await resolveYachtCapacity(power, 'en')).rig.engine.label, null);
+    assert.equal(withResolvedNotes(flat, await resolveYachtCapacity(flat, 'en')), flat);
   });
 });

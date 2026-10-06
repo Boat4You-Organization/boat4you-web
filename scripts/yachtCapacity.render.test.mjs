@@ -120,7 +120,8 @@ describe('boat page DetailsTab with the new capacity / rig blocks', () => {
       'Engine 2x60HP',
       'Draught 1.3 m',
     ].forEach(row => assert.ok(page.includes(row), `row: ${row}\n${page}`));
-    assert.ok(page.includes('13 berths in 6 cabins, 12 of them for guests') || page.includes('13 berths'), page);
+    assert.ok(/13 berths|13 people/.test(page), page);
+    assert.ok(!/berths? (in|across) \d+ cabins|people in \d+ cabins|cabins with \d+ berths/.test(page), page);
     assert.ok(/Up to 14 people can be on board\.|takes a maximum of 14 people on board\./.test(page), page);
     ['Rolling mainsail', '120 hp', 'with a shower', 'Pillows and blankets are included', 'sleeps up to 14'].forEach(
       wrong => assert.ok(!page.includes(wrong), `must not say: ${wrong}`)
@@ -144,7 +145,8 @@ describe('boat page DetailsTab with the new capacity / rig blocks', () => {
   test('Dione II (pl): Polish plural forms in the rows and the paragraph', async () => {
     const page = text(await render(dione, 'pl'));
 
-    assert.ok(page.includes('13 koi w 6 kabinach') || page.includes('13 koi'), page);
+    assert.ok(/13 koi|13 osób/.test(page), page);
+    assert.ok(!/koi w 6 kabinach/.test(page), page);
     assert.ok(page.includes('Maks. osób na pokładzie 14'), page);
   });
 
@@ -186,10 +188,11 @@ describe("boat page DetailsTab on today's API (no capacity / rig)", () => {
       'Pillows and blankets are included',
     ].forEach(wrong => assert.ok(!page.includes(wrong), `must not say: ${wrong}`));
     assert.ok(
-      /has 8 berths in 3 cabins|8 berths spread across 3 cabins|3 cabins with 8 berths|sleeps up to 8 people in 3 cabins|3 cabins and 8 berths/.test(
+      /has 8 berths and 3 cabins|are 8 berths and 3 cabins|3 cabins and 8 berths in total|has 3 cabins and sleeps up to 8 people|3 cabins and 8 berths/.test(
         page
       ),
       page
     );
+    assert.ok(!/berths? (in|across) 3 cabins|people in 3 cabins|cabins with 8 berths/.test(page), page);
   });
 });
