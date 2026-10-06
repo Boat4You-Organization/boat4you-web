@@ -23,7 +23,10 @@ import { fetchYachts } from '@/services/yacht.service';
  * period, with the request shape of a dated search: the cards then show that
  * period's price and availability, and link to it — before, an undated pool
  * linked every card to the boat's own next free week (10.–17.10. on a page
- * for 17.–24.10.). Undated pages keep the weekly-priced undated pool.
+ * for 17.–24.10.). Undated pages keep the weekly-priced undated pool, and so
+ * do pages whose period has started already (an old shared link) or whose
+ * dated pool comes back empty — the section then still shows the marina's
+ * boats instead of disappearing (review 6.10.2026).
  */
 
 const M_PER_FT = 0.3048;
@@ -45,17 +48,21 @@ const RELATED_COUNT = 3;
 
 const ISO_DAY = /^\d{4}-\d{2}-\d{2}$/;
 
+type Period = { startDate: string; endDate: string };
+
 /**
  * The page's charter period when it carries a usable one: two plain
- * YYYY-MM-DD days, the end after the start (a repeated or malformed
- * parameter leaves the pool undated rather than sending it to the API).
+ * YYYY-MM-DD days, the end after the start, the start not in the past (a
+ * repeated or malformed parameter, or a week gone by, leaves the pool undated
+ * rather than sending it to the API).
  */
-const pagePeriod = (startDate: unknown, endDate: unknown): { startDate: string; endDate: string } | null =>
+const pagePeriod = (startDate: unknown, endDate: unknown): Period | null =>
   typeof startDate === 'string' &&
   typeof endDate === 'string' &&
   ISO_DAY.test(startDate) &&
   ISO_DAY.test(endDate) &&
-  endDate > startDate
+  endDate > startDate &&
+  startDate >= new Date().toISOString().slice(0, 10)
     ? { startDate, endDate }
     : null;
 
@@ -94,14 +101,18 @@ const RelatedBoats = async ({ yacht, user, locale, currency, startDate, endDate 
   // priceBasis). Undated: weekly prices, like the landings (audit B16) — 44
   // of 145 similar-boat cards read "Price for 3 days 23 €" before.
   // null = the request failed (503 shed, timeout).
-  const fetchPool = (boatTypes: VesselType[] | undefined, timeoutMs: number): Promise<YachtModelShortInfo[] | null> =>
+  const fetchPool = (
+    poolPeriod: Period | null,
+    boatTypes: VesselType[] | undefined,
+    timeoutMs: number
+  ): Promise<YachtModelShortInfo[] | null> =>
     fetchYachts(
       {
         locations: [],
         did: [String(marinaDid)],
         size: 12,
         ...(boatTypes ? { boatTypes } : {}),
-        ...(period ?? { priceBasis: 'week' as const }),
+        ...(poolPeriod ?? { priceBasis: 'week' as const }),
       },
       currency,
       locale,
@@ -115,7 +126,7 @@ const RelatedBoats = async ({ yacht, user, locale, currency, startDate, endDate 
   // Other boats within ±5 ft (any length when either is unknown), closest
   // first; on a dated page the ones offered for exactly that period before
   // the closest-dates matches.
-  const pick = (pool: YachtModelShortInfo[], exclude: Set<number>): YachtModelShortInfo[] =>
+  const pick = (pool: YachtModelShortInfo[], exclude: Set<number>, dated: boolean): YachtModelShortInfo[] =>
     pool
       .filter(candidate => candidate.id !== yacht.id && !exclude.has(candidate.id))
       .filter(candidate => {
@@ -128,7 +139,7 @@ const RelatedBoats = async ({ yacht, user, locale, currency, startDate, endDate 
         return Math.abs(candidateLenFt - currentLenFt) <= TOLERANCE_FT;
       })
       .sort((a, b) => {
-        if (period) {
+        if (dated) {
           const exact = (boat: YachtModelShortInfo) => (boat.matchKind && boat.matchKind !== MatchKind.EXACT ? 1 : 0);
           const byPeriod = exact(a) - exact(b);
 
@@ -148,18 +159,32 @@ const RelatedBoats = async ({ yacht, user, locale, currency, startDate, endDate 
       });
 
   // One request for the boat's own type; the marina's whole pool only when
-  // that leaves fewer than three — both inside the one 2 s deadline, and no
-  // second request after a failed first one (the backend is shedding).
-  const sameTypePool = vesselType ? await fetchPool([vesselType], RELATED_DEADLINE_MS) : [];
-  let related = pick(sameTypePool ?? [], new Set()).slice(0, RELATED_COUNT);
-  const remainingMs = deadline - Date.now();
+  // that leaves fewer than three — all inside the one 2 s deadline, and no
+  // further request after a failed one (the backend is shedding).
+  // `failed` = a request failed, so no undated retry either.
+  const findRelated = async (poolPeriod: Period | null): Promise<{ boats: YachtModelShortInfo[]; failed: boolean }> => {
+    const sameTypePool = vesselType ? await fetchPool(poolPeriod, [vesselType], deadline - Date.now()) : [];
 
-  if (sameTypePool && related.length < RELATED_COUNT && remainingMs >= MIN_FILL_MS) {
-    const taken = new Set(related.map(boat => boat.id));
-    const others = pick((await fetchPool(undefined, remainingMs)) ?? [], taken);
+    if (!sameTypePool) return { boats: [], failed: true };
 
-    related = [...related, ...others].slice(0, RELATED_COUNT);
-  }
+    const boats = pick(sameTypePool, new Set(), !!poolPeriod).slice(0, RELATED_COUNT);
+    const remainingMs = deadline - Date.now();
+
+    if (boats.length >= RELATED_COUNT || remainingMs < MIN_FILL_MS) return { boats, failed: false };
+
+    const othersPool = await fetchPool(poolPeriod, undefined, remainingMs);
+    const others = pick(othersPool ?? [], new Set(boats.map(boat => boat.id)), !!poolPeriod);
+
+    return { boats: [...boats, ...others].slice(0, RELATED_COUNT), failed: !othersPool };
+  };
+
+  const first = await findRelated(period);
+  // Nothing offered around the page's dates (e.g. a week far ahead): the
+  // undated pool, while the deadline allows, rather than no section at all.
+  const related =
+    period && first.boats.length === 0 && !first.failed && deadline - Date.now() >= MIN_FILL_MS
+      ? (await findRelated(null)).boats
+      : first.boats;
 
   if (related.length === 0) return null;
 
