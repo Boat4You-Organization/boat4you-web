@@ -61,11 +61,12 @@ const PaymentPoliciesCard = ({
             {selectedExtrasInPrice.map(({ id, name, priceEur, priceInfo, labelCode, paymentType }) => {
               // Never "0 €": an unpriced extra reads "Included" or "Price on
               // request", as on the boat page.
-              const formattedPrice = isPositivePrice(priceInfo?.amount ?? priceEur)
+              const formattedPrice = isPositivePrice(priceInfo?.amount ?? priceEur, { cents: 'auto' })
                 ? formatPriceWithCurrency({
                     clientPriceEur: priceEur,
                     clientPriceInfo: priceInfo,
                     locale,
+                    cents: 'auto',
                   })
                 : t(unpricedExtraLabelKey(paymentType));
 
@@ -97,11 +98,12 @@ const PaymentPoliciesCard = ({
           const inAdvance = (selectedExtrasAtBase || []).filter(() => false);
           const onSite = selectedExtrasAtBase || [];
           const renderRow = ({ id, name, priceEur, priceInfo, labelCode, paymentType }: (typeof inAdvance)[number]) => {
-            const formattedPrice = isPositivePrice(priceInfo?.amount ?? priceEur)
+            const formattedPrice = isPositivePrice(priceInfo?.amount ?? priceEur, { cents: 'auto' })
               ? formatPriceWithCurrency({
                   clientPriceEur: priceEur,
                   clientPriceInfo: priceInfo,
                   locale,
+                  cents: 'auto',
                 })
               : t(unpricedExtraLabelKey(paymentType));
 

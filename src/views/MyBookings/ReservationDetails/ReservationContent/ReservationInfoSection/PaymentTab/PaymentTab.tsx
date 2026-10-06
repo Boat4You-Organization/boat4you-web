@@ -73,8 +73,8 @@ const PaymentTab = ({
     priceInfo,
     paymentType,
   }: Pick<SelectedExtra, 'priceEur' | 'priceInfo'> & { paymentType?: string | null }) =>
-    isPositivePrice(priceInfo?.amount ?? priceEur)
-      ? formatPriceWithCurrency({ clientPriceEur: priceEur, clientPriceInfo: priceInfo, locale })
+    isPositivePrice(priceInfo?.amount ?? priceEur, { cents: 'auto' })
+      ? formatPriceWithCurrency({ clientPriceEur: priceEur, clientPriceInfo: priceInfo, locale, cents: 'auto' })
       : t(unpricedExtraLabelKey(paymentType ?? ExtraPaymentType.INCLUDED));
 
   // V1_57 split: items the partner expects bank-transferred to them BEFORE

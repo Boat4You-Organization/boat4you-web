@@ -379,11 +379,12 @@ const BoatCalendarForm = ({ yacht, variant }: BoatCalendarFormProps) => {
                     {tCommon('paidNow')}
                   </Typography>
                   {selectedExtrasInPrice?.map(({ id, name, priceEur, priceInfo, labelCode, paymentType }) => {
-                    const formattedPrice = isPositivePrice(priceInfo?.amount ?? priceEur)
+                    const formattedPrice = isPositivePrice(priceInfo?.amount ?? priceEur, { cents: 'auto' })
                       ? formatPriceWithCurrency({
                           clientPriceEur: priceEur,
                           clientPriceInfo: priceInfo,
                           locale,
+                          cents: 'auto',
                         })
                       : tCommon(unpricedExtraLabelKey(paymentType));
 
@@ -434,11 +435,12 @@ const BoatCalendarForm = ({ yacht, variant }: BoatCalendarFormProps) => {
                   labelCode,
                   paymentType,
                 }: (typeof inAdvance)[number]) => {
-                  const formattedPrice = isPositivePrice(priceInfo?.amount ?? priceEur)
+                  const formattedPrice = isPositivePrice(priceInfo?.amount ?? priceEur, { cents: 'auto' })
                     ? formatPriceWithCurrency({
                         clientPriceEur: priceEur,
                         clientPriceInfo: priceInfo,
                         locale,
+                        cents: 'auto',
                       })
                     : tCommon(unpricedExtraLabelKey(paymentType));
 

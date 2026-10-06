@@ -65,12 +65,13 @@ const ExtrasCard = ({
 
   // No "0 €" (27.9.2026): an extra without a price above 0 reads "Included"
   // (backend INCLUDED) or "Price on request".
-  const hasPrice = isPositivePrice(priceInfo?.amount ?? priceEur);
+  const hasPrice = isPositivePrice(priceInfo?.amount ?? priceEur, { cents: 'auto' });
   const displayPrice = hasPrice
     ? formatPriceWithCurrency({
         clientPriceEur: priceEur,
         clientPriceInfo: priceInfo,
         locale,
+        cents: 'auto',
       })
     : t(unpricedExtraLabelKey(paymentType));
 

@@ -1,6 +1,6 @@
-import { Messages } from 'next-intl';
+import type { Messages } from 'next-intl';
 
-import { PriceInfo } from '@/types/price-info.type';
+import type { PriceInfo } from '@/types/price-info.type';
 
 export type YachtServiceExtrasKey = keyof Messages['yacht']['servicesList'];
 

@@ -102,11 +102,12 @@ const PriceDetailsContent = ({ yacht, isCalculatedPrice, isSelectedOfferUnavaila
               {tCommon('paidNow')}
             </Typography>
             {selectedExtrasInPrice?.map(({ id, name, priceEur, priceInfo, labelCode, paymentType }) => {
-              const formattedPrice = isPositivePrice(priceInfo?.amount ?? priceEur)
+              const formattedPrice = isPositivePrice(priceInfo?.amount ?? priceEur, { cents: 'auto' })
                 ? formatPriceWithCurrency({
                     clientPriceEur: priceEur,
                     clientPriceInfo: priceInfo,
                     locale,
+                    cents: 'auto',
                   })
                 : tCommon(unpricedExtraLabelKey(paymentType));
 
@@ -140,11 +141,12 @@ const PriceDetailsContent = ({ yacht, isCalculatedPrice, isSelectedOfferUnavaila
           // "Paid at marina" group so the recap lines up with the extras tab.
           const showSecurityDeposit = yacht.securityDeposit > 0;
           const renderRow = ({ id, name, priceEur, priceInfo, labelCode, paymentType }: (typeof inAdvance)[number]) => {
-            const formattedPrice = isPositivePrice(priceInfo?.amount ?? priceEur)
+            const formattedPrice = isPositivePrice(priceInfo?.amount ?? priceEur, { cents: 'auto' })
               ? formatPriceWithCurrency({
                   clientPriceEur: priceEur,
                   clientPriceInfo: priceInfo,
                   locale,
+                  cents: 'auto',
                 })
               : tCommon(unpricedExtraLabelKey(paymentType));
 
