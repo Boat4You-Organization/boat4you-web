@@ -514,14 +514,14 @@ const BoatListingItemCardView = ({
 
             {/* Year · Cabins · People — clean text only, no icons. From API. */}
             {/* People: max persons, else berths (the figure the boat page's */}
-            {/* description uses, audit B24); the 'cabins × 2 + 2' estimate */}
-            {/* only when the payload carries neither. */}
+            {/* description uses, audit B24) — never an estimate: the old */}
+            {/* 'cabins × 2 + 2' read 14 on a card whose boat page says 12 */}
+            {/* (Codex re-audit 2.10.2026). Neither known → no people figure. */}
             {(() => {
               let peopleCount: number | null = null;
 
               if (maxPersons && maxPersons > 0) peopleCount = maxPersons;
               else if (berths && berths > 0) peopleCount = berths;
-              else if (cabins) peopleCount = cabins * 2 + 2;
 
               return (
                 <Stack
