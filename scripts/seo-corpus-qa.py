@@ -61,10 +61,13 @@ broken hrefs, did/label mismatch, nested links, Cyrillic, the wrong language,
 English text in a translation, a translation about other places than its EN
 source, numbers a retranslated page has that its EN source does not,
 duplicate paragraphs/headings, the deleted-brand shapes (HOLE_DENY), licence
-names that do not exist — "International Yacht Certificate (IYC)" and the
-International Sailing Federation (ISAF) as a licence body, in all 9 locales
-with their translations (LICENCE_NAME_DENY, check "licence-name"; added
-6.10.2026, the licence is the ICC or a national licence) — and the
+names that do not exist — "International Yacht Certificate (IYC)", "IYCC",
+"Izaslanica za Brodicu", "International Boating License", "Internationaler
+Segelschein" and the International Sailing Federation (ISAF) as a licence
+body (only next to licence wording, so regatta history passes), in all 9
+locales with their translations (LICENCE_NAME_DENY / LICENCE_BODY_DENY, check
+"licence-name"; added 6.10.2026, the licence is the ICC or a national
+licence) — and the
 UI strings in messages/<locale>/*.json
 (seo_corpus_rules.message_checks). Any finding fails --check.
 
