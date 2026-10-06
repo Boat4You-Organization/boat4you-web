@@ -532,7 +532,14 @@ const BoatPage = async ({
         />
         {/* Post-content upsell order fixed by Mario (21.7.2026): similar
             boats FIRST, day-by-day itineraries for the marina below. */}
-        <RelatedBoats yacht={yacht} user={user} locale={locale} currency={currency} />
+        <RelatedBoats
+          yacht={yacht}
+          user={user}
+          locale={locale}
+          currency={currency}
+          startDate={searchParamsData.startDate}
+          endDate={searchParamsData.endDate}
+        />
         {/* SuggestedItineraries has no Container of its own (it was born
             inside BoatContentSection's) — wrap it or it bleeds full-width. */}
         <Container maxWidth="xl">
