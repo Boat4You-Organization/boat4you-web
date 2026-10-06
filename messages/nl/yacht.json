@@ -332,5 +332,6 @@
     "weekAria": "Week {from} tot {to}, {price}, {status}"
   },
   "notAvailableShort": "Niet beschikbaar op deze data",
-  "readyToSail": "Klaar om uit te varen?"
+  "readyToSail": "Klaar om uit te varen?",
+  "checkingAvailability": "Beschikbaarheid controleren…"
 }

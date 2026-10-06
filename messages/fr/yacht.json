@@ -332,5 +332,6 @@
     "weekAria": "Semaine du {from} au {to}, {price}, {status}"
   },
   "notAvailableShort": "Indisponible à ces dates",
-  "readyToSail": "Prêt à larguer les amarres ?"
+  "readyToSail": "Prêt à larguer les amarres ?",
+  "checkingAvailability": "Vérification de la disponibilité…"
 }

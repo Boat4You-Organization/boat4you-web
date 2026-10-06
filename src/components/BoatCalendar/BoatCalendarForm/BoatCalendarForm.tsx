@@ -27,7 +27,7 @@ import { formatPriceWithCurrency, isPositivePrice, unpricedExtraLabelKey } from 
 import { resolveGate } from '@/utils/static/offerStatusGate';
 import { toTitleCase, yachtLabel } from '@/utils/static/toTitleCase';
 import { handleNextMonth, handlePrevMonth, toggleBoatInquiryModalOpen } from '@/valtio/yacht/yacht.actions';
-import { useYachtStore } from '@/valtio/yacht/yacht.store';
+import { priceSettledKey, useYachtStore } from '@/valtio/yacht/yacht.store';
 
 interface BoatCalendarFormProps {
   yacht: YachtModel;
@@ -36,7 +36,7 @@ interface BoatCalendarFormProps {
 
 const BoatCalendarForm = ({ yacht, variant }: BoatCalendarFormProps) => {
   const locale = useLocale();
-  const { activeDate, calculatedPrice, isCalculatingPrice, selectedOffer } = useYachtStore();
+  const { activeDate, calculatedPrice, isCalculatingPrice, selectedOffer, priceSettledFor } = useYachtStore();
   const { setMultipleParams } = useQueryParams();
   const t = useTranslations('yacht');
   const tCommon = useTranslations('common');
@@ -57,10 +57,14 @@ const BoatCalendarForm = ({ yacht, variant }: BoatCalendarFormProps) => {
   // RESERVATION/SERVICE → hard-blocked). See offerStatusGate.ts.
   const gate = resolveGate(selectedOffer?.status, { custom: yacht.custom, inquireOnly });
   const isSelectedOfferBlocked = gate === 'blocked';
+  // The price of THIS boat + offer is known (calculated, failed, or no offer
+  // for the dates). Before that — server HTML, hydration, the request itself,
+  // another boat's or dates' leftover price — nothing is said about the dates.
+  const isPriceSettled = priceSettledFor === priceSettledKey(slug, selectedOffer?.id);
   // A calculation without a total above 0 is no price: "not available",
   // never "0 €" next to Reserve.
   const isCalculatedPrice =
-    calculatedPrice && Object.keys(calculatedPrice).length > 0 && isPositivePrice(totalPriceEur);
+    isPriceSettled && calculatedPrice && Object.keys(calculatedPrice).length > 0 && isPositivePrice(totalPriceEur);
 
   const formattedTotalPrice = formatPriceWithCurrency({
     clientPriceEur: totalPriceEur,
@@ -165,6 +169,15 @@ const BoatCalendarForm = ({ yacht, variant }: BoatCalendarFormProps) => {
   const hasValidDateSelection = startDate && endDate;
   // The chosen dates can be reserved right now: a FREE offer with a price.
   const isReservable = gate === 'reserve' && !!isCalculatedPrice;
+  // Dates chosen, answer not in yet: "Checking availability…" instead of the
+  // red "not available" + "Inquire now" the server HTML used to carry for
+  // every dated boat (re-audit 2.10.2026). A known price being recalculated
+  // (extras, currency) keeps showing it, as before.
+  const isCheckingAvailability =
+    !!hasValidDateSelection &&
+    variant !== 'crewed' &&
+    !(isCalculatedPrice && !isSelectedOfferBlocked) &&
+    (!isPriceSettled || isCalculatingPrice);
 
   // Reserved, blocked or unpriced dates used to leave "Inquire now" / "Reserve"
   // permanently disabled — no way to ask about the boat at all (audit
@@ -191,17 +204,35 @@ const BoatCalendarForm = ({ yacht, variant }: BoatCalendarFormProps) => {
           </Stack>
         ) : (
           <Stack>
-            {hasValidDateSelection && isCalculatedPrice && !isSelectedOfferBlocked ? (
-              <Typography component="p" variant="h3" fontWeight={700} color={colors.blue500}>
-                {t('readyToSail')}
-              </Typography>
-            ) : (
-              <Stack p={2} borderRadius={2.5} sx={{ backgroundColor: colors.red50 }}>
-                <Typography variant="body1" color={colors.red500} textAlign="center">
-                  {!hasValidDateSelection ? t('noDateSelected') : t('notAvailable')}
+            {isCheckingAvailability && (
+              <Stack
+                direction="row"
+                alignItems="center"
+                justifyContent="center"
+                gap={1.5}
+                p={2}
+                borderRadius={2.5}
+                role="status"
+                sx={{ backgroundColor: colors.black50 }}
+              >
+                <CircularProgress size={18} />
+                <Typography variant="body1" color={colors.black600} textAlign="center">
+                  {t('checkingAvailability')}
                 </Typography>
               </Stack>
             )}
+            {!isCheckingAvailability &&
+              (hasValidDateSelection && isCalculatedPrice && !isSelectedOfferBlocked ? (
+                <Typography component="p" variant="h3" fontWeight={700} color={colors.blue500}>
+                  {t('readyToSail')}
+                </Typography>
+              ) : (
+                <Stack p={2} borderRadius={2.5} sx={{ backgroundColor: colors.red50 }}>
+                  <Typography variant="body1" color={colors.red500} textAlign="center">
+                    {!hasValidDateSelection ? t('noDateSelected') : t('notAvailable')}
+                  </Typography>
+                </Stack>
+              ))}
           </Stack>
         )}
 
@@ -246,7 +277,12 @@ const BoatCalendarForm = ({ yacht, variant }: BoatCalendarFormProps) => {
               {t('crewedDescription')}
             </Typography>
           )}
-          {hasValidDateSelection && !isReservable && (
+          {isCheckingAvailability && (
+            <Button size="large" fullWidth disabled aria-busy="true">
+              {t('reserve')}
+            </Button>
+          )}
+          {hasValidDateSelection && !isReservable && !isCheckingAvailability && (
             <Button size="large" fullWidth onClick={handleReserveClick} disabled={isCalculatingPrice}>
               {t('inquireNow')}
             </Button>

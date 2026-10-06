@@ -3,7 +3,7 @@ import { useCallback } from 'react';
 import { Currency } from '@/models/user.model';
 import { fetchSingleYachtPrice } from '@/services/yacht.service';
 import { useUserStore } from '@/valtio/user/user.store';
-import { setCalculatedPrice, setCalculatingPrice } from '@/valtio/yacht/yacht.actions';
+import { setCalculatedPrice, setCalculatingPrice, setPriceSettled } from '@/valtio/yacht/yacht.actions';
 import { useYachtStore } from '@/valtio/yacht/yacht.store';
 
 import useQueryParams from './useQueryParams';
@@ -47,6 +47,9 @@ export const useYachtPriceCalculation = () => {
         return null;
       } finally {
         setCalculatingPrice(false);
+        // Known now for this boat + offer, priced or not: the page may say
+        // "not available" from here on, never while it is still asking.
+        setPriceSettled(yachtSlug, offerId);
       }
     },
     [selectedOffer, currentCurrency]

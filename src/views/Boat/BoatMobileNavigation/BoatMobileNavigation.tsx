@@ -7,6 +7,7 @@ import { Box, Button, Stack, Typography } from '@mui/material';
 import dayjs from 'dayjs';
 import { useLocale, useTranslations } from 'next-intl';
 
+import CircularProgress from '@/components/CircularProgress';
 import Form from '@/components/Forms/Form';
 import ModalRoot from '@/components/ModalRoot';
 import Calendar from '@/components/SvgIcons/Calendar';
@@ -22,7 +23,7 @@ import { formatPriceWithCurrency, isPositivePrice } from '@/utils/static/formatP
 import { isInquiryOnlyBoat } from '@/utils/static/inquiryOnlyBoat';
 import { resolveGate } from '@/utils/static/offerStatusGate';
 import { toggleBoatInquiryModalOpen } from '@/valtio/yacht/yacht.actions';
-import { useYachtStore } from '@/valtio/yacht/yacht.store';
+import { priceSettledKey, useYachtStore } from '@/valtio/yacht/yacht.store';
 
 import styles from './BoatMobileNavigation.module.scss';
 import ChangeDatesContent from './ChangeDatesContent';
@@ -40,7 +41,7 @@ const defaultValues: BoatCalendarFormValues = {
 const BoatMobileNavigation = ({ yacht }: BoatMobileNavigationProps) => {
   const t = useTranslations('common');
   const tYacht = useTranslations('yacht');
-  const { calculatedPrice, selectedOffer, isCalculatingPrice } = useYachtStore();
+  const { calculatedPrice, selectedOffer, isCalculatingPrice, priceSettledFor } = useYachtStore();
   const { params, setMultipleParams } = useQueryParams();
   const [isModalOpen, toggleModal] = useToggleState();
   const [modalVariant, setModalVariant] = useState<'price' | 'dates' | null>(null);
@@ -71,9 +72,14 @@ const BoatMobileNavigation = ({ yacht }: BoatMobileNavigationProps) => {
   // RESERVATION/SERVICE hard-block meaning (no longer the lossy UNAVAILABLE).
   const gate = resolveGate(selectedOffer?.status, { custom: yacht.custom, inquireOnly: yacht.inquireOnly });
   const isSelectedOfferBlocked = gate === 'blocked';
+  // The price of THIS boat + offer is known (mirror of BoatCalendarForm).
+  const isPriceSettled = priceSettledFor === priceSettledKey(yacht.slug, selectedOffer?.id);
   // A calculation without a total above 0 is no price — never "0 €".
   const isCalculatedPrice =
-    !!calculatedPrice && Object.keys(calculatedPrice).length > 0 && isPositivePrice(calculatedPrice.totalPriceEur);
+    isPriceSettled &&
+    !!calculatedPrice &&
+    Object.keys(calculatedPrice).length > 0 &&
+    isPositivePrice(calculatedPrice.totalPriceEur);
   const isInquireFlow = gate === 'inquiry';
   // No bookable future offer: "Price on request" and the inquiry (dates are
   // picked in its form) instead of dates, price and Reserve.
@@ -184,8 +190,16 @@ const BoatMobileNavigation = ({ yacht }: BoatMobileNavigationProps) => {
         // so, the phone bar only greyed out "Reserve" (audit B48). Say it —
         // without a price above the notice (audit 29.9.2026, R25) — and offer
         // "Change dates" or an inquiry for those dates.
+        // Not before the answer is in: the first render (server HTML) used to
+        // say "Not available on these dates" for every dated boat
+        // (re-audit 2.10.2026). A known price being recalculated stays shown.
+        const isCheckingAvailability =
+          hasDates &&
+          !isInquireFlow &&
+          !(isCalculatedPrice && !isSelectedOfferBlocked) &&
+          (!isPriceSettled || isCalculatingPrice);
         const isUnavailableSelection =
-          hasDates && !isInquireFlow && !isCalculatingPrice && (isSelectedOfferBlocked || !isCalculatedPrice);
+          hasDates && !isInquireFlow && !isCheckingAvailability && (isSelectedOfferBlocked || !isCalculatedPrice);
 
         return (
           <>
@@ -204,6 +218,13 @@ const BoatMobileNavigation = ({ yacht }: BoatMobileNavigationProps) => {
                 >
                   {isCalculatedPrice ? tYacht('fromPerWeek', { price: formattedFullPrice }) : t('priceOnRequest')}
                 </Typography>
+              ) : isCheckingAvailability ? (
+                <Stack direction="row" alignItems="center" justifyContent="center" gap={1} role="status" sx={{ mb: 1 }}>
+                  <CircularProgress size={16} />
+                  <Typography variant="body1" color={colors.black600} textAlign="center">
+                    {tYacht('checkingAvailability')}
+                  </Typography>
+                </Stack>
               ) : isUnavailableSelection ? (
                 <Typography variant="body1" color={colors.red500} textAlign="center" role="status" sx={{ mb: 1 }}>
                   {tYacht('notAvailableShort')}

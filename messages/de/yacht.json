@@ -332,5 +332,6 @@
     "weekAria": "Woche {from} bis {to}, {price}, {status}"
   },
   "notAvailableShort": "An diesen Daten nicht verfügbar",
-  "readyToSail": "Bereit zum Ablegen?"
+  "readyToSail": "Bereit zum Ablegen?",
+  "checkingAvailability": "Verfügbarkeit wird geprüft…"
 }

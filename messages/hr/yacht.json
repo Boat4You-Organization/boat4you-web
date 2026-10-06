@@ -332,5 +332,6 @@
     "weekAria": "Tjedan {from} – {to}, {price}, {status}"
   },
   "notAvailableShort": "Nije dostupno za ove datume",
-  "readyToSail": "Spremni za plovidbu?"
+  "readyToSail": "Spremni za plovidbu?",
+  "checkingAvailability": "Provjeravamo dostupnost…"
 }

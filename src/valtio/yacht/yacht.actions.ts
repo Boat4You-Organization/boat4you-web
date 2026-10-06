@@ -3,7 +3,7 @@ import { Dayjs } from 'dayjs';
 import { PriceCalcDto, YachtOfferModel } from '@/models/yacht-offer.model';
 import { YachtModelShortInfo } from '@/models/yacht.model';
 
-import { yachtStore } from './yacht.store';
+import { priceSettledKey, yachtStore } from './yacht.store';
 
 export const handlePrevMonth = () => {
   yachtStore.activeDate = yachtStore.activeDate.subtract(1, 'month');
@@ -57,6 +57,10 @@ export const setCalculatedPrice = (price: PriceCalcDto | null) => {
 
 export const setCalculatingPrice = (isCalculating: boolean) => {
   yachtStore.isCalculatingPrice = isCalculating;
+};
+
+export const setPriceSettled = (yachtSlug: string, offerId?: number | null) => {
+  yachtStore.priceSettledFor = priceSettledKey(yachtSlug, offerId);
 };
 
 export const clearSelectedExtras = () => {
@@ -120,6 +124,7 @@ export const setOffersToDisplay = (offers: YachtOfferModel[]) => {
 export const resetData = () => {
   yachtStore.selectedOffer = null;
   yachtStore.calculatedPrice = null;
+  yachtStore.priceSettledFor = null;
   yachtStore.selectedExtrasKeys = [];
   yachtStore.offersToDisplay = [];
 };

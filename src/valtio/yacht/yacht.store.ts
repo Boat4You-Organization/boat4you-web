@@ -20,6 +20,11 @@ interface YachtStore {
   searchTotalCount: number;
   selectedOffer: YachtOfferModel | null;
   offersToDisplay: YachtOfferModel[];
+  /** `priceSettledKey` of the boat + offer whose price is known: the
+   *  calculation finished or failed, or the dates have no offer. Until then a
+   *  dated boat page reads "Checking availability…", never "not available"
+   *  (that was in the server HTML and through hydration, re-audit 2.10.2026). */
+  priceSettledFor: string | null;
 }
 
 export const yachtStore = proxy<YachtStore>({
@@ -34,6 +39,11 @@ export const yachtStore = proxy<YachtStore>({
   adminInquiryModalOpen: false,
   searchResults: [],
   searchTotalCount: 0,
+  priceSettledFor: null,
 });
+
+/** Key of a settled price: the boat and its selected offer ("none" = no offer for the dates). */
+export const priceSettledKey = (yachtSlug: string, offerId?: number | null): string =>
+  `${yachtSlug}|${offerId ?? 'none'}`;
 
 export const useYachtStore = () => useSnapshot(yachtStore) as YachtStore;

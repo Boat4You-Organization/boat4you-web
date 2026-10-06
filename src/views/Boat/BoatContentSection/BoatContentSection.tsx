@@ -20,6 +20,7 @@ import { YachtFaqEntry } from '@/utils/static/yachtFaq';
 import {
   setCalculatedPrice,
   setOffersToDisplay,
+  setPriceSettled,
   setselectedOffer,
   toggleBoatInquiryModalOpen,
 } from '@/valtio/yacht/yacht.actions';
@@ -91,7 +92,9 @@ const BoatContentSection = ({ yacht, yachtFaq }: BoatContentSectionProps) => {
 
       calculatePrice(yacht.slug, obligatoryExtrasKeys);
     } else {
+      // No offer for these dates: nothing to ask, the answer is "not available".
       setCalculatedPrice(null);
+      setPriceSettled(yacht.slug, null);
     }
   }, [selectedOffer, yacht.slug, calculatePrice]);
 
