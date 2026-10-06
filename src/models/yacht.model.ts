@@ -205,7 +205,7 @@ export interface YachtCustomDetails {
   /**
    * Free-text engine descriptor — admin types verbatim ("2x Volvo IPS
    * 1050"). DetailsTab renders this in the Engine row instead of
-   * "{enginePower} kW" when present.
+   * "{enginePower} hp" when present.
    */
   engineText: string | null;
 }

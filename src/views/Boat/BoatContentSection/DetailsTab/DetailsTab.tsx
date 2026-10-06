@@ -128,7 +128,9 @@ const DetailsTab = ({ yacht }: DetailsTabProps) => {
   // Custom yachts get a labelled 4+4 "Specifications" grid instead so the
   // Cabins/Berths/Guests/Crew column reads as a clean accommodation
   // summary; the right column carries the boat-itself specs and prefers
-  // customDetails.engineText over the kW numeric.
+  // customDetails.engineText over the numeric engine power. That figure is
+  // horsepower — the total of all engines, as both partner feeds deliver it
+  // (MMK "2 x 45 HP", NauSys power × engines), not kW (Codex re-audit 2.10.2026).
   const leftRowsRaw: (FeatureRow | null)[] = yacht.custom
     ? [
         yacht.cabins ? { key: 'cabins', icon: Cabin, label: t('filters.cabins'), value: String(yacht.cabins) } : null,
@@ -186,7 +188,12 @@ const DetailsTab = ({ yacht }: DetailsTabProps) => {
         yacht.customDetails?.engineText
           ? { key: 'engine', icon: Engine, label: t('filters.engine'), value: yacht.customDetails.engineText }
           : yacht.enginePower
-            ? { key: 'engine', icon: Engine, label: t('filters.engine'), value: `${yacht.enginePower} kW` }
+            ? {
+                key: 'engine',
+                icon: Engine,
+                label: t('filters.engine'),
+                value: t('filters.engineHp', { value: String(yacht.enginePower) }),
+              }
             : null,
         yacht.fuelTank
           ? { key: 'fuelTank', icon: Fuel, label: t('filters.fuelTank'), value: `${yacht.fuelTank} l` }
@@ -214,7 +221,12 @@ const DetailsTab = ({ yacht }: DetailsTabProps) => {
           ? { key: 'waterTank', icon: WaterTank, label: t('filters.waterTank'), value: `${yacht.waterTank} l` }
           : null,
         yacht.enginePower
-          ? { key: 'engine', icon: Engine, label: t('filters.engine'), value: `${yacht.enginePower} kW` }
+          ? {
+              key: 'engine',
+              icon: Engine,
+              label: t('filters.engine'),
+              value: t('filters.engineHp', { value: String(yacht.enginePower) }),
+            }
           : null,
       ];
 

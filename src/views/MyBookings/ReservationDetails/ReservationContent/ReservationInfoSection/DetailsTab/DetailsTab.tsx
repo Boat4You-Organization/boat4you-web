@@ -168,7 +168,7 @@ const DetailsTab = ({ reservationDetails }: DetailsTabProps) => {
           key: 'engine',
           icon: Engine,
           label: t('filters.engine'),
-          value: `${reservationDetails.enginePower} kW`,
+          value: t('filters.engineHp', { value: String(reservationDetails.enginePower) }),
         }
       : null,
   ];
