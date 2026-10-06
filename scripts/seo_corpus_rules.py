@@ -44,10 +44,12 @@ Fixers (run in this order after the older rules):
 
 Checks (report; fail --check), see `checks()`: operator names, inland terms,
 ownership claims, broken/relative hrefs, did/label mismatch, un-localised
-static links, nested <a>, page furniture, Cyrillic, English text in a
-translated file, a translation about other places than its EN source,
-duplicate paragraphs/headings, founding year ≠ 2013 and experience claims,
-and `independent_checks()`: a deny-list for fleet ownership written apart
+static links, nested <a>, page furniture, licence names that do not exist
+(IYC / International Yacht Certificate, ISAF / International Sailing
+Federation as a licence body, in every locale: LICENCE_NAME_DENY), Cyrillic,
+English text in a translated file, a translation about other places than its
+EN source, duplicate paragraphs/headings, founding year ≠ 2013 and experience
+claims, and `independent_checks()`: a deny-list for fleet ownership written apart
 from the fixer patterns (CLAIM_DENY), raw URLs / '">' / "[…]" in visible
 text, sentences starting in lower case, compass directions (COMPASS_WRONG),
 ACI Split superlatives, the wrong language; numbers a retranslated page
@@ -2873,6 +2875,21 @@ UNLINKED_GUIDE = re.compile(
     r"\b(?:our|the)\s+(?:[\w-]+\s+){0,4}(?:price|pricing|licen[cs]e|licensing|documentation|first-time|packing|safety|"
     r"country-by-country)[\w-]*\s+(?:guide|article|breakdown)\b|\bwe have a detailed breakdown\b|"
     r"\bour (?:comprehensive )?guide (?:to|on) (?:renting|chartering|yacht|packing)", re.I)
+# Licence names that do not exist (2.10.2026 audit): the "International Yacht
+# Certificate (IYC)" and the International Sailing Federation (ISAF, today World
+# Sailing) as the body that issues or recognises boating licences. The licence
+# is the ICC or a national licence; World Sailing is left out (regatta copy).
+# All locales, with the translations the corpus used.
+LICENCE_NAME_DENY = re.compile(
+    r"\bIYC\b|\bInternational\s+Yacht(?:ing)?\s+Certificate|\bInternationale[nrs]?\s+Yacht(?:schein|-?[Zz]ertifikat)|"
+    r"\bCertificado\s+Internacional\s+de\s+(?:Yate|Yachting|Iate)\b|\bCertificat\s+International\s+de\s+(?:Yacht|Yachting|plaisance)\b|"
+    r"\bCertificato\s+Internazionale\s+(?:di\s+|da\s+)?(?:Yacht|diporto)\b|\bInternationaal\s+Jachtcertificaat|"
+    r"\bMiędzynarodow\w*\s+Certyfikat\w*\s+Jachtow\w*|\bMeđunarodn\w*\s+certifikat\w*\s+za\s+jaht\w*|"
+    r"\bISAF\b|\bInternational\s+Sailing\s+Federation|\bInternationale[nrs]?\s+Segel(?:verband|föderation)|"
+    r"\bFederaci[óo]n\s+Internacional\s+de\s+Vela|\bFederação\s+Internacional\s+de\s+Vela|\bFédération\s+Internationale\s+de\s+Voile|"
+    r"\bFederazione\s+Internazionale\s+(?:di\s+|della\s+)?Vela|\bInternationale\s+Zeilfederatie|"
+    r"\bMiędzynarodow\w*\s+Federacj\w*\s+Żeglarsk\w*|"
+    r"\bMeđunarodn\w*\s+(?:jedriličarsk\w*\s+(?:federacij\w*|savez\w*)|federacij\w*\s+jedriličarsk\w*)", re.I)
 _PLACE_RX = []
 
 
@@ -3197,6 +3214,9 @@ def checks(src, locale, name, en_src=None):
         out.append(('nested-a', nested.group(0)[:160]))
     if COPYRIGHT_BLOCK.search(body) or NAV_BAR.search(body):
         out.append(('furniture', (COPYRIGHT_BLOCK.search(body) or NAV_BAR.search(body)).group(0)[:160]))
+    licence_text = text + ' ' + head_text
+    for m in LICENCE_NAME_DENY.finditer(licence_text):
+        add('licence-name', m, licence_text)
     m = CYRILLIC.search(src)
     if m:
         add('cyrillic', m, src)
