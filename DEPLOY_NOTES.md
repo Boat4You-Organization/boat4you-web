@@ -1,5 +1,62 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-10-06 — 🛥️ Re-audit 2.10. (stranica broda, cijene, kartice) + review; deploy skripta šalje točno HEAD i `src/posts/` — ⏳ NIJE DEPLOYANO
+
+Popravci nalaza Codexova re-audita (2.10.) i nezavisni adversarial review tih commita (6.10.). U istom deployu ide i `31a6c7c8b` (sadržaj, licence u EN korpusu) — nije dio ovog unosa.
+
+**Commiti (redom):**
+
+- `e8f84e2b2` slični brodovi: cijena za datume stranice, prvo isti tip plovila.
+- `cee3cf183` kartica: max osoba, inače vezovi, nikad procjena „kabine × 2 + 2".
+- `1c94e2404` FAQ broda: bez „nitko na sofi" kad gostiju ima više od 2 po kabini.
+- `273c0a620` snaga motora u KS (ne kW), 9 jezika.
+- `f5c66fb92` extrasi i naknade s centima (boravišna 1,33 €, ne 1 €).
+- `a28673f35` „Provjeravamo dostupnost…" dok se cijena učitava, ne „nije dostupno".
+- `247821a27` checkout: bez horizontalnog scrolla na mobitelu (razdjelnici `100vw` → `-16px` paddinga kontejnera).
+- Review: `a45d1dc40` vrijedi samo zadnji odgovor cijene + „Provjeravamo dostupnost…" u mobilnom „Promijeni datume"; `768add073` „Plaća se sada" cijeli iznosi kao total; `ee5de6705` čip motora s jedinicom (samo stari `FiltersSection`, koji se nigdje ne renderira; živi čipovi `AppliedFilterChips` već imaju „hp"); `75ee78721` slični brodovi: prošli datumi i prazan dated pool → pool bez datuma.
+
+**Što se mijenja na webu:**
+
+- **Dostupnost (desktop, traka i sheet na mobitelu):** s datumima se do odgovora vidi neutralno „Provjeravamo dostupnost…". Server HTML više nema crveno „nije dostupno" za svaki brod s datumima.
+  - Zakašnjeli odgovor za prethodni tjedan se odbacuje. Prije je ostavljao „Provjeravamo…" s ugašenim Reserve zauvijek i skrivao stvarno „nije dostupno".
+  - Desktop gumb za vrijeme provjere: „Inquire now" za opciju, blokiran tjedan ili brod samo na upit; „Reserve" samo za slobodan tjedan.
+  - pt „Verificando disponibilidade…" (brazilski kao ostatak), nl „Beschikbaarheid wordt gecontroleerd…".
+- **Cijene:** extrasi i naknade plative u marini imaju centi (9,31 €, 10,43 $); redovi „Plaća se sada" su cijeli kao „Total due now", da se zbroj vidljivo slaže. Ukupni iznosi, rate i depozit su cijeli kao prije.
+- **Kartice, FAQ, motor:**
+  - kartica bez procjene broja osoba;
+  - motor „90 hp / KS / PS…" umjesto „kW";
+  - FAQ o ležajevima: rečenice „svi u kabinama, nitko na sofi" samo kad gosti stanu po 2 u kabinu; inače nova A3 (kabine, gosti, „pitajte nas za raspored ležajeva"), 9 jezika.
+- **Slični brodovi:**
+  - cijena i link za datume stranice;
+  - prvo isti tip plovila;
+  - prošli datumi (stari link) i tjedan bez ponuda → brodovi marine bez datuma, umjesto da sekcija nestane.
+
+**⚠️ Prije deploya:**
+
+- **`cee3cf183` traži backend `berths`.** `YachtSearchResponseDto.kt` ima samo `maxPersons` i `cabins`, a `toReplacementDto` u `YachtQueryingService.kt` nema `berths`. Bez backend dodatka kartice brodova bez `maxPersons` nemaju broj osoba. Opcije: deployati zajedno s backendom ili nakon njega, ili svjesno prihvatiti (Mario).
+- **Backend, otvoreno:** MMK `extractAndMultiplyNumbers` (`Utils.kt:92-105`) množi bilo koja dva broja iz teksta: „Volvo D2-40" → 80, „Yanmar 4JH57" → 228. Takvi brodovi sada pišu „228 hp", prije „228 kW"; vrijednost je kriva i prije i poslije. Parsirati samo „N x M hp/kW", inače null.
+- **Deploy skripte** (`infra/deploy-scripts`, nisu u gitu, backupi `*.bak-6-10` i `*.bak-6-10-review`):
+  - **Deploy sada šalje `src/posts/`** (Uvjeti, Privatnost, FAQ; `getPage()` ih čita u runtimeu). Na cusma1 su Uvjeti od 17.9., pa klauzula 7.1 (72 h besplatnog otkaza) nije živa ni na jednom jeziku. Korak 5 provjerava naslov 7.1 na `/terms-and-conditions` i `/de/terms-and-conditions`; FAIL → `exit 2` na kraju skripte, bez rollbacka.
+  - **`b4y_web_deploy.sh` korak 0:** ABORT ako `src`, `messages`, `public`, `next.config.js`, `package.json`, `yarn.lock` ili `tsconfig.json` imaju necommitane ili nepraćene datoteke. Tuđi necommitan rad bi se izgradio i deployao kao HEAD.
+  - **Korak 2c (oba puta):** deployment id `.next` mora počinjati sa sha HEAD-a, `robots.txt` mora biti za `https://www.boat4you.com/`, runtime datoteke moraju biti commitane. Inače ABORT „nothing shipped". `b4y_web_ship.sh` s lokalnim `.next` (localhost) zato više ne može proći — koristiti `b4y_web_deploy.sh`.
+  - Promijenjene `public/` datoteke idu iz HEAD-a, ne iz radnog stabla.
+
+**Provjereno:**
+
+- `yarn lint` 0 grešaka (pre-commit), `tsc --noEmit` 0, `yarn test:price` prolazi.
+- Lokalni build `75ee78721` (prod API, pod lockom) + `next start -p 3172`, headless Chrome, prod API kroz proxy, Lagoon 39 „Gin Tonic":
+  - **Utrka** (prvi poziv cijene zadržan 9 s, klik na drugi tjedan): READY, Reserve upaljen i ostaje; zakašnjeli odgovor u 10,4 s ništa ne mijenja.
+  - **Bez ponude** (navigacija na 18.–25.10. dok prvi poziv visi): NOT_AVAILABLE u 3,3 s i ostaje; kontrola bez kašnjenja isto.
+  - **Mobilni sheet** (nova cijena zadržana 5 s): „Checking availability…" 5,5–10,9 s, zatim „Up to 1,663 €", nikad „not available".
+  - 0 hidracijskih poruka (desktop i mobitel, en i de).
+  - **Sintetski extra 37,50 € „Plaća se sada":** desktop i mobilni sheet „38 €" uz total 1.663 €; marina 9,31 €.
+  - **SSR sličnih brodova:** 17.–24.10. dated linkovi; 5.–12.9. (prošlost) i 2028. → pool bez datuma; bez datuma nepromijenjeno.
+- Guardovi skripti: na pravom repou stari `.next` → ABORT sha, lokalni build → ABORT robots; sintetski repo za sve grane (detalji u `infra/deploy-scripts/README.md`).
+
+**Nije testirano:** checkout `PaymentPoliciesCard` i My bookings `PaymentTab` (isti uzorak, samo iz koda); gumb „Inquire now" za vrijeme provjere na stvarnoj opciji; prijelaz brod→brod bez reloada.
+
+**Rollback:** `git revert 75ee78721 ee5de6705 768add073 a45d1dc40 247821a27 a28673f35 f5c66fb92 273c0a620 1c94e2404 cee3cf183 e8f84e2b2` + redeploy (`b4y_web_deploy.sh`). Brzo: rollback naredba koju ispiše deploy (`.next.prev` + `messages.prev` + `src/posts.prev`). Skripte: `cp *.bak-6-10-review` preko izvornih (samo guardovi) ili `*.bak-6-10` (i bez `src/posts/`).
+
 ## 2026-10-02 — 🔎 Review sadržaja (2. prolaz): još ~150 krivih smjerova, naknade NP-a, „osiguranje pokriva vrijeme", UNESCO, rupe brenda; strože `check-corpus-holes` — ⏳ NIJE DEPLOYANO
 
 Nastavak unosa ispod. Samo tekst: `public/seo-content` (1.397 datoteka, 9 jezika), `messages/*/itineraryCroatia.json` (9 jezika), 4 configa (EN izvor) + `scripts/check-corpus-holes.mjs`. Smjerovi provjereni koordinatama (gazeter ~120 mjesta), naknade prema cjenicima NP Mljet 2026, NP Kornati 2026, Cabrera i La Maddalena.
