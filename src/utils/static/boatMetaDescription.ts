@@ -16,7 +16,7 @@ export type BoatDescKey =
   | 'descLeadFrom'
   | 'descCabins'
   | 'descBerths'
-  | 'descGuests'
+  | 'descMaxPeople'
   | 'descCta'
   | 'descCtaInquiry';
 
@@ -27,10 +27,11 @@ interface BoatDescInput {
   name: string;
   /** Home base as the partner spells it; omitted from the sentence when empty. */
   marina?: string | null;
+  /** The partner's cabins and berths (berths never stand in for people). */
   cabins?: number | null;
   berths?: number | null;
-  /** /search listing variant: "up to N guests" instead of berths. */
-  guests?: number | null;
+  /** The partner's max. people on board ("max. 12 people on board"), never a berth count. */
+  maxPeople?: number | null;
   /**
    * Boat without a bookable future offer (isInquiryOnlyBoat): its page asks
    * for an inquiry and cannot be booked, so the sentence closes with the
@@ -41,7 +42,7 @@ interface BoatDescInput {
 
 export const buildBoatDescription = (
   t: BoatDescTranslate,
-  { name, marina, cabins, berths, guests, inquiryOnly }: BoatDescInput
+  { name, marina, cabins, berths, maxPeople, inquiryOnly }: BoatDescInput
 ): string => {
   // "Marina Villa Igiea | Palermo" (the partner's base format) reads as
   // "Marina Villa Igiea, Palermo" in a sentence.
@@ -53,7 +54,7 @@ export const buildBoatDescription = (
 
   if (berths != null) specs.push(t('descBerths', { count: berths }));
 
-  if (guests != null) specs.push(t('descGuests', { count: guests }));
+  if (maxPeople != null) specs.push(t('descMaxPeople', { count: maxPeople }));
 
   return `${lead}.${specs.length ? ` ${specs.join(', ')}.` : ''} ${t(inquiryOnly ? 'descCtaInquiry' : 'descCta')}`;
 };

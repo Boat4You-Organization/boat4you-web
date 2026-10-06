@@ -5,7 +5,9 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import Link from 'next/link';
 
+import useCapacityFmt from '@/utils/hooks/useCapacityFmt';
 import { getBoatImageUrl } from '@/utils/static/imageUtils';
+import { capacityChips, fromYacht } from '@/utils/static/yachtCapacity';
 
 import styles from './ChatWidget.module.scss';
 
@@ -26,6 +28,9 @@ interface YachtCard {
   totalPriceEur: number;
   days: number;
   cabins: number;
+  /** Sent once the backend adds them (capacity contract 2.6); 0 / absent = unknown. */
+  berths?: number;
+  wc?: number;
   maxPersons: number;
   year: number;
   location: string;
@@ -43,6 +48,7 @@ interface YachtCard {
  */
 const ChatWidget = () => {
   const t = useTranslations('common.chatWidget');
+  const capacityT = useCapacityFmt();
   const locale = useLocale();
   const [open, setOpen] = useState(false);
   const [disabled, setDisabled] = useState(false);
@@ -355,9 +361,20 @@ const ChatWidget = () => {
                             <div className={styles.cardBody}>
                               <p className={styles.cardName}>{c.name}</p>
                               <p className={styles.cardMeta}>
-                                {c.cabins > 0 ? `${c.cabins} cab · ` : ''}
-                                {c.maxPersons > 0 ? `${c.maxPersons} pax · ` : ''}
-                                {c.year > 0 ? c.year : ''}
+                                {[
+                                  // "4 cabins · 10 berths · max. 12 people" in the page
+                                  // language; unknown (0) figures are left out.
+                                  ...capacityChips(
+                                    fromYacht(
+                                      { cabins: c.cabins, berths: c.berths, maxPersons: c.maxPersons },
+                                      { locale }
+                                    ),
+                                    capacityT
+                                  ).map(chip => chip.text),
+                                  c.year > 0 ? c.year : null,
+                                ]
+                                  .filter(Boolean)
+                                  .join(' · ')}
                               </p>
                               <p className={styles.cardPrice}>€{c.totalPriceEur.toLocaleString('de-DE')}</p>
                             </div>

@@ -5,6 +5,7 @@ import { YachtModel } from '@/models/yacht.model';
 import { presentAmenities } from '@/utils/static/amenities';
 import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
 import { toTitleCase } from '@/utils/static/toTitleCase';
+import { Fmt, capacityRows, fromYacht } from '@/utils/static/yachtCapacity';
 
 import { styles } from './YachtPDF.styles';
 import { formatPdfNumber, pdfSafeText } from './pdfNumber';
@@ -41,6 +42,8 @@ interface YachtPDFProps {
    *  deposit are formatted for it, one convention for every number in the
    *  document (audit B29: the tanks and deposit were en-US, the prices hr-HR). */
   locale: string;
+  /** The EN `capacity` messages as a formatter: the document is English. */
+  capacityFmt: Fmt;
 }
 
 const MONTHS = [
@@ -105,17 +108,26 @@ const YachtPDF = ({
   baseUrl,
   generatedDate,
   locale,
+  capacityFmt,
 }: YachtPDFProps) => {
   const num = (value: number, fractionDigits?: number): string => formatPdfNumber(value, locale, fractionDigits);
   const name = toTitleCase(yacht.name).toUpperCase();
   const modelLine = [yacht.model, yacht.buildYear].filter(Boolean).join('  ·  ');
-  const isCrewed = Boolean(yacht.crewNumber);
+  // The partner's capacity and rig (yachtCapacity.ts), English wording and the
+  // partner's notes as they are; numbers in the page locale like the rest of
+  // the document. Unknown figures are left out, never printed as "null".
+  const capacity = fromYacht(yacht, { locale });
+  const capacityRowList = capacityRows(capacity, capacityFmt).map(row => ({
+    ...row,
+    value: pdfSafeText(row.value),
+  }));
+  // Crewed only when the boat comes with crew and has no bareboat option.
+  const isCrewed = Boolean(capacity.crew && !capacity.crew.alsoBareboat);
   const vessel = VESSEL_LABEL[yacht.vesselType] || 'Yacht';
   const countryCode = yacht.location?.countryCode || '';
   const country = COUNTRY_NAMES[countryCode] || countryCode;
   const kicker = [isCrewed ? 'Crewed' : 'Bareboat', vessel, country].filter(Boolean).join('  ·  ');
   const baseName = (yacht.location?.name || '').replace('|', '·');
-  const guests = yacht.maxPersons || yacht.berths;
 
   // Dateless card: cheapest still-FREE weekly slot from the 12-month offers
   // the detail endpoint already returns.
@@ -129,38 +141,32 @@ const YachtPDF = ({
       formatPriceWithCurrency({ clientPriceEur: o.clientPriceEur, clientPriceInfo: o.clientPriceInfo, locale })
     );
 
+  const count = (n: number | null | undefined): string => (n ? String(n) : '—');
   const stats: Array<{ value: string; unit?: string; label: string }> = [
     { value: yacht.length ? num(yacht.length, 1) : '—', unit: yacht.length ? ' m' : '', label: 'LENGTH' },
     { value: yacht.beam ? num(yacht.beam, 1) : '—', unit: yacht.beam ? ' m' : '', label: 'BEAM' },
-    { value: String(guests), label: 'GUESTS' },
-    { value: String(yacht.cabins), label: 'CABINS' },
-    { value: String(yacht.wc), label: 'BATHROOMS' },
-    isCrewed ? { value: String(yacht.crewNumber), label: 'CREW' } : { value: String(yacht.buildYear), label: 'YEAR' },
+    // People on board when the partner gives it, else the berths — each
+    // under its own label (a berth count is not a number of guests).
+    capacity.maxPersons
+      ? { value: String(capacity.maxPersons), label: 'MAX. PEOPLE' }
+      : { value: count(capacity.berths?.value), label: 'BERTHS' },
+    { value: count(capacity.cabins?.value), label: 'CABINS' },
+    { value: count(capacity.heads?.value), label: 'WC' },
+    isCrewed && capacity.crew
+      ? { value: String(capacity.crew.count), label: 'CREW' }
+      : { value: count(yacht.buildYear), label: 'YEAR' },
   ];
 
-  const specRows: Array<[string, string]> = [
-    ['Model', yacht.model],
-    ['Year', String(yacht.buildYear)],
-    ['Length', yacht.length != null ? `${num(yacht.length)} m` : '—'],
-  ];
+  const specRows: Array<[string, string]> = [['Model', yacht.model]];
+
+  if (yacht.buildYear) specRows.push(['Year', String(yacht.buildYear)]);
+
+  specRows.push(['Length', yacht.length != null ? `${num(yacht.length)} m` : '—']);
 
   if (yacht.beam) specRows.push(['Beam', `${num(yacht.beam)} m`]);
 
-  specRows.push(['Cabins', String(yacht.cabins)], ['Berths', String(yacht.berths)], ['Bathrooms', String(yacht.wc)]);
-
-  if (isCrewed) specRows.push(['Professional crew', String(yacht.crewNumber)]);
-
-  if (yacht.mainSailType && yacht.mainSailType !== 'UNKNOWN') {
-    specRows.push([
-      'Mainsail',
-      yacht.mainSailType
-        .replace(/_/g, ' ')
-        .toLowerCase()
-        .replace(/\b\w/g, c => c.toUpperCase()),
-    ]);
-  }
-
-  if (yacht.enginePower) specRows.push(['Engine power', `${yacht.enginePower} HP`]);
+  // Cabins … crew, sails, engine, draught: the partner's own figures and notes.
+  capacityRowList.forEach(row => specRows.push([row.label, row.value]));
 
   if (yacht.fuelTank) specRows.push(['Fuel tank', `${num(yacht.fuelTank)} L`]);
 

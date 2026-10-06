@@ -12,7 +12,6 @@
   "yachtModels": "Modelos de barcos",
   "boats": "{count, plural, one {# barco} other {# barcos}}",
   "cabins": "{count, plural, one {# camarote} other {# camarotes}}",
-  "guests": "{count, plural, one {# persona} other {# personas}}",
   "cabinsRange": "{range} camarotes",
   "priceBand": "{p25} – {p75} por semana",
   "index": {
@@ -35,7 +34,6 @@
     "colBoats": "Barcos",
     "colLength": "Eslora",
     "colCabins": "Camarotes",
-    "colGuests": "Personas",
     "colPrice": "Semana de alquiler habitual",
     "whereHeading": "Dónde tienen su base los modelos {brand}",
     "whereNote": "Barcos de los modelos de arriba, por país.",
@@ -56,7 +54,6 @@
     "specFleet": "Barcos en alquiler",
     "specLength": "Eslora",
     "specCabins": "Camarotes",
-    "specGuests": "Personas",
     "specBerths": "Literas",
     "specHeads": "Baños (WC)",
     "specBuildYears": "Años de construcción",

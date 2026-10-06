@@ -61,7 +61,7 @@
     "descLeadFrom": "Charter the {name} from {marina}",
     "descCabins": "{count, plural, one {# cabin} other {# cabins}}",
     "descBerths": "{count, plural, one {# berth} other {# berths}}",
-    "descGuests": "{count, plural, one {up to # guest} other {up to # guests}}",
+    "descMaxPeople": "{count, plural, one {max. # person on board} other {max. # people on board}}",
     "descCta": "Check availability and book directly on boat4you.com.",
     "descCtaInquiry": "Send an inquiry for your dates on boat4you.com."
   },
@@ -71,7 +71,6 @@
     "summary": "{total, number} boats · page {page} of {pages}",
     "otherBases": "Other bases",
     "cabins": "{count, plural, one {# cabin} other {# cabins}}",
-    "guests": "{count, plural, one {# guest} other {# guests}}",
     "paginationLabel": "Fleet directory pages"
   }
 }

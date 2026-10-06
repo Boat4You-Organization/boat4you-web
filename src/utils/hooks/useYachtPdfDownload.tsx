@@ -8,6 +8,7 @@ import YachtPDF from '@/components/YachtPDF/YachtPDF';
 import { YachtOfferModel } from '@/models/yacht-offer.model';
 import { YachtModel } from '@/models/yacht.model';
 import { toTitleCase } from '@/utils/static/toTitleCase';
+import { createFmt } from '@/utils/static/yachtCapacity';
 
 interface UseYachtPdfDownloadProps {
   yacht: YachtModel;
@@ -103,6 +104,9 @@ const useYachtPdfDownload = ({ yacht, selectedOffer }: UseYachtPdfDownloadProps)
 
       const now = new Date();
       const generatedDate = `${now.getDate()} ${MONTHS[now.getMonth()]} ${now.getFullYear()}`;
+      // The document is English on every locale: the EN capacity wording,
+      // loaded only when a PDF is made.
+      const capacityFmt = createFmt((await import('../../../messages/en/capacity.json')).default, 'en');
 
       const blob = await pdf(
         <YachtPDF
@@ -115,6 +119,7 @@ const useYachtPdfDownload = ({ yacht, selectedOffer }: UseYachtPdfDownloadProps)
           baseUrl={baseUrl}
           generatedDate={generatedDate}
           locale={locale}
+          capacityFmt={capacityFmt}
         />
       ).toBlob();
 

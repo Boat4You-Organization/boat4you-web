@@ -38,12 +38,14 @@ import { UserModel, UserRoleName } from '@/models/user.model';
 import { MatchKind, OfferStatus, YachtModelShortInfo } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
 import useBreakpoint from '@/utils/hooks/useBreakpoint';
+import useCapacityFmt from '@/utils/hooks/useCapacityFmt';
 import { displayPlaceName } from '@/utils/static/croatianPlaceNames';
 import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
 import { getBoatImageUrl } from '@/utils/static/imageUtils';
 import { hasListingPrice, listingPriceDays } from '@/utils/static/listingPrice';
 import { roleGuard } from '@/utils/static/roleGuard';
 import { toTitleCase, yachtLabel } from '@/utils/static/toTitleCase';
+import { cardChips, fromYacht } from '@/utils/static/yachtCapacity';
 import { toggleYachtSelection } from '@/valtio/yacht/yacht.actions';
 
 import styles from './BoatListingItemCard.module.scss';
@@ -91,6 +93,7 @@ const BoatListingItemCardView = ({
   maxPersons,
   berths,
   cabins,
+  capacity,
   length,
   clientPriceEur,
   clientPriceInfo,
@@ -115,6 +118,7 @@ const BoatListingItemCardView = ({
 }: BoatListingItemCardViewProps) => {
   const { isMobile } = useBreakpoint();
   const t = useTranslations();
+  const capacityT = useCapacityFmt();
 
   // Social proof — same demo logic as the sister sites' BoatListingItemCard
   // (Mario 3.9.2026: "ista logika na boat4you kao na ostalim stranicama"):
@@ -132,6 +136,10 @@ const BoatListingItemCardView = ({
   const openMapFor = (marinaName: string) => setMapMarinaName(marinaName);
 
   const isAdmin = roleGuard(user?.roles || [], [UserRoleName.SYSTEM_ADMIN]);
+  // Cabins · Berths · Max. people as the partner sends them (no WC, no crew
+  // cabins on a card: "Cabins 7" next to "crew cabins 2" reads as 9). A
+  // card's note is language-neutral by construction, so no note table here.
+  const capacityCardChips = cardChips(fromYacht({ capacity, cabins, berths, maxPersons }, { locale }), capacityT);
 
   // Price block — compute TOTAL for the booking period, optional discount.
   // `clientPriceEur` from the search API is per-day, `numberOfDays` lets us
@@ -512,64 +520,42 @@ const BoatListingItemCardView = ({
               </Stack>
             )}
 
-            {/* Year · Cabins · People — clean text only, no icons. From API. */}
-            {/* People: max persons, else berths (the figure the boat page's */}
-            {/* description uses, audit B24); the 'cabins × 2 + 2' estimate */}
-            {/* only when the payload carries neither. */}
-            {(() => {
-              let peopleCount: number | null = null;
-
-              if (maxPersons && maxPersons > 0) peopleCount = maxPersons;
-              else if (berths && berths > 0) peopleCount = berths;
-              else if (cabins) peopleCount = cabins * 2 + 2;
-
-              return (
-                <Stack
-                  direction="row"
-                  alignItems="center"
-                  gap={{ xs: 1, md: 2.5 }}
-                  flexWrap="nowrap"
-                  sx={{ overflowX: 'hidden' }}
+            {/* Year · Cabins · Berths · Max. people — clean text only, no icons. */}
+            {/* The partner's own figures (cardChips, capacity contract v1): a */}
+            {/* short language-neutral note or split ("10 (8+2)", "13 (12 + 1 */}
+            {/* crew)"), each hidden when unknown. Never an estimate: the old */}
+            {/* 'cabins × 2 + 2' read 14 on a card whose boat page says 12 */}
+            {/* (Codex re-audit 2.10.2026), and berths never stand in for people. */}
+            {/* The row wraps (de / pl labels are long at 375 px), and a chip */}
+            {/* longer than the card ("Slaapplaatsen 12 (8 + 2 in de salon + */}
+            {/* 2 voor de bemanning)") wraps inside itself instead of being cut. */}
+            <Stack direction="row" alignItems="center" columnGap={{ xs: 1, md: 2.5 }} rowGap={0.25} flexWrap="wrap">
+              {buildYear && (
+                <Typography
+                  variant="body2"
+                  color={colors.black600}
+                  sx={{ fontSize: { xs: 11, md: 14 }, whiteSpace: 'nowrap' }}
                 >
-                  {buildYear && (
-                    <Typography
-                      variant="body2"
-                      color={colors.black600}
-                      sx={{ fontSize: { xs: 11, md: 14 }, whiteSpace: 'nowrap' }}
-                    >
-                      {t('filters.year')}{' '}
-                      <Box component="span" fontWeight={700} color={colors.black950}>
-                        {buildYear}
-                      </Box>
-                    </Typography>
-                  )}
-                  {cabins && (
-                    <Typography
-                      variant="body2"
-                      color={colors.black600}
-                      sx={{ fontSize: { xs: 11, md: 14 }, whiteSpace: 'nowrap' }}
-                    >
-                      {t('filters.cabins')}{' '}
-                      <Box component="span" fontWeight={700} color={colors.black950}>
-                        {cabins}
-                      </Box>
-                    </Typography>
-                  )}
-                  {peopleCount && (
-                    <Typography
-                      variant="body2"
-                      color={colors.black600}
-                      sx={{ fontSize: { xs: 11, md: 14 }, whiteSpace: 'nowrap' }}
-                    >
-                      {t('filters.people')}{' '}
-                      <Box component="span" fontWeight={700} color={colors.black950}>
-                        {peopleCount}
-                      </Box>
-                    </Typography>
-                  )}
-                </Stack>
-              );
-            })()}
+                  {t('filters.year')}{' '}
+                  <Box component="span" fontWeight={700} color={colors.black950}>
+                    {buildYear}
+                  </Box>
+                </Typography>
+              )}
+              {capacityCardChips.map(chip => (
+                <Typography
+                  key={chip.key}
+                  variant="body2"
+                  color={colors.black600}
+                  sx={{ fontSize: { xs: 11, md: 14 }, minWidth: 0 }}
+                >
+                  {chip.label}{' '}
+                  <Box component="span" fontWeight={700} color={colors.black950}>
+                    {chip.value}
+                  </Box>
+                </Typography>
+              ))}
+            </Stack>
 
             {/* Highlights — up to 3 real amenities from the backend (empty when
               the yacht has no equipment rows). */}

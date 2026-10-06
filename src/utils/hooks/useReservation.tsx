@@ -18,7 +18,23 @@ export const useReservation = ({ yacht }: UseReservationProps) => {
   const searchParams = useSearchParams();
   const { selectedExtrasKeys, selectedOffer, calculatedPrice } = useYachtStore();
 
-  const { name: yachtName, model, yachtImages, slug, agency, charterType, vesselType, buildYear, maxPersons, berths, cabins, securityDeposit } = yacht;
+  const {
+    name: yachtName,
+    model,
+    yachtImages,
+    slug,
+    agency,
+    charterType,
+    vesselType,
+    buildYear,
+    maxPersons,
+    berths,
+    cabins,
+    wc,
+    crewNumber,
+    capacity,
+    securityDeposit,
+  } = yacht;
   const { locationFrom } = selectedOffer ?? {};
   const mainImage = yachtImages.find(image => image.mainImage);
 
@@ -71,6 +87,9 @@ export const useReservation = ({ yacht }: UseReservationProps) => {
         maxPersons,
         berths,
         cabins,
+        wc,
+        crewNumber,
+        capacity,
         yachtImages,
         securityDeposit,
       };

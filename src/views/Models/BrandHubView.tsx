@@ -39,7 +39,10 @@ interface BrandHubViewProps {
  * the model list alone (~160 words, audit B33).
  */
 const BrandHubView = async ({ locale, brand, models, totalBoats, breadcrumb, where, faq }: BrandHubViewProps) => {
-  const t = await getTranslations({ locale, namespace: 'models' });
+  const [t, tCapacity] = await Promise.all([
+    getTranslations({ locale, namespace: 'models' }),
+    getTranslations({ locale, namespace: 'capacity' }),
+  ]);
   const price = (eur: number) => formatPriceWithCurrency({ clientPriceEur: Math.round(eur), locale });
   const number = (n: number) => n.toLocaleString(locale);
   const metres = (n: number) => n.toLocaleString(locale, { maximumFractionDigits: 1 });
@@ -89,7 +92,7 @@ const BrandHubView = async ({ locale, brand, models, totalBoats, breadcrumb, whe
               <th scope="col">{t('brand.colBoats')}</th>
               <th scope="col">{t('brand.colLength')}</th>
               <th scope="col">{t('brand.colCabins')}</th>
-              <th scope="col">{t('brand.colGuests')}</th>
+              <th scope="col">{tCapacity('card.maxPeople')}</th>
               <th scope="col">{t('brand.colPrice')}</th>
             </tr>
           </thead>
@@ -110,7 +113,7 @@ const BrandHubView = async ({ locale, brand, models, totalBoats, breadcrumb, whe
                 <td className={styles.numeric} data-label={t('brand.colCabins')}>
                   {formatRange(stats.cabins) ?? '—'}
                 </td>
-                <td className={styles.numeric} data-label={t('brand.colGuests')}>
+                <td className={styles.numeric} data-label={tCapacity('card.maxPeople')}>
                   {formatRange(stats.guests) ?? '—'}
                 </td>
                 <td className={styles.numeric} data-label={t('brand.colPrice')}>

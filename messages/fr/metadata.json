@@ -61,7 +61,7 @@
     "descLeadFrom": "Location {name}, départ {marina}",
     "descCabins": "{count, plural, one {# cabine} other {# cabines}}",
     "descBerths": "{count, plural, one {# couchette} other {# couchettes}}",
-    "descGuests": "{count, plural, one {jusqu’à # personne} other {jusqu’à # personnes}}",
+    "descMaxPeople": "{count, plural, one {# personne max. à bord} other {# personnes max. à bord}}",
     "descCta": "Vérifiez les disponibilités et réservez directement sur boat4you.com.",
     "descCtaInquiry": "Envoyez une demande pour vos dates sur boat4you.com."
   },
@@ -71,7 +71,6 @@
     "summary": "{total, number} bateaux · page {page} sur {pages}",
     "otherBases": "Autres bases",
     "cabins": "{count, plural, one {# cabine} other {# cabines}}",
-    "guests": "{count, plural, one {# personne} other {# personnes}}",
     "paginationLabel": "Pages de l'annuaire de la flotte"
   }
 }

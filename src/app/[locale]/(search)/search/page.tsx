@@ -37,6 +37,7 @@ import { hasListingPrice, listingPriceDays } from '@/utils/static/listingPrice';
 import { buildSearchLandingPath, isLandingExpressible } from '@/utils/static/searchLandingPath';
 import { yachtLabel } from '@/utils/static/toTitleCase';
 import { ManufacturerLookup, yachtBrandName } from '@/utils/static/yachtBrand';
+import { capacityFacts, fromYacht } from '@/utils/static/yachtCapacity';
 import { charterFactsTargetFor } from '@/views/Search/CharterFacts/charterFactsTarget';
 import { ResolvedDestinationProvider } from '@/views/Search/SearchView/ResolvedDestinationContext';
 import SearchView from '@/views/Search/SearchView/SearchView';
@@ -285,17 +286,21 @@ function buildSearchProductsLd(
     // mirroring the boat-detail Product schema.
     const imageUrl = y.mainImageId ? getBoatImageUrl(y.mainImageId, 1200) : `${meta.url}/meta/og-image.png`;
     const country = y.location?.countryCode;
+    const facts = capacityFacts(fromYacht(y, { locale }));
     const product: Record<string, unknown> = {
       '@type': 'Product',
       '@id': yachtUrl,
       name: fullName,
       image: imageUrl,
       url: yachtUrl,
+      // The card's own figures (capacity contract 7.4): cabins, berths and
+      // max. people on board — max. persons used to read as "up to N guests".
       description: buildBoatDescription(tDesc, {
         name: `${fullName}${y.buildYear ? ` (${y.buildYear})` : ''}`,
         marina: y.location?.name,
-        cabins: y.cabins || null,
-        guests: y.maxPersons || null,
+        cabins: facts.cabins,
+        berths: facts.berths,
+        maxPeople: facts.maxPersons,
       }),
     };
 

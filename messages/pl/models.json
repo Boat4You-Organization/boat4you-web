@@ -12,7 +12,6 @@
   "yachtModels": "Modele jachtów",
   "boats": "{count, plural, one {# jacht} few {# jachty} many {# jachtów} other {# jachtu}}",
   "cabins": "{count, plural, one {# kabina} few {# kabiny} many {# kabin} other {# kabiny}}",
-  "guests": "{count, plural, one {# osoba} few {# osoby} many {# osób} other {# osoby}}",
   "cabinsRange": "kabiny: {range}",
   "priceBand": "{p25} – {p75} za tydzień",
   "index": {
@@ -35,7 +34,6 @@
     "colBoats": "Jachty",
     "colLength": "Długość",
     "colCabins": "Kabiny",
-    "colGuests": "Osoby",
     "colPrice": "Typowy tydzień czarteru",
     "whereHeading": "Gdzie stacjonują modele {brand}",
     "whereNote": "Jachty powyższych modeli według kraju.",
@@ -56,7 +54,6 @@
     "specFleet": "Jachty do czarteru",
     "specLength": "Długość",
     "specCabins": "Kabiny",
-    "specGuests": "Osoby",
     "specBerths": "Koje",
     "specHeads": "Toalety (WC)",
     "specBuildYears": "Lata budowy",

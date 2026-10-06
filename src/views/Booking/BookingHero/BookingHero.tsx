@@ -11,12 +11,16 @@ import FlagIcon from '@/components/FlagIcon';
 import { VESSEL_TYPE_LABEL_MAP } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
 import { ReservationData } from '@/types/reservation.type';
+import useCapacityFmt from '@/utils/hooks/useCapacityFmt';
 import useToggleState from '@/utils/hooks/useToggleState';
 import DateTime from '@/utils/static/DateTime';
 import { getBoatImageUrl } from '@/utils/static/imageUtils';
 import { toTitleCase, yachtLabel } from '@/utils/static/toTitleCase';
+import { CardKey, ChipKey, capacityChips, cardChips, fromYacht } from '@/utils/static/yachtCapacity';
 
 import styles from './BookingHero.module.scss';
+
+const CARD_CHIP_KEYS: readonly ChipKey[] = ['cabins', 'berths', 'maxPeople'] satisfies readonly CardKey[];
 
 interface BookingHeroProps {
   reservationData: ReservationData;
@@ -41,11 +45,16 @@ const BookingHero = ({ reservationData }: BookingHeroProps) => {
     maxPersons,
     berths,
     cabins,
+    wc,
+    crewNumber,
+    capacity: capacityDto,
+    charterType,
     dateTo,
   } = reservationData;
 
   const t = useTranslations('common');
   const tFilters = useTranslations('filters');
+  const capacityT = useCapacityFmt();
   const locale = useLocale();
 
   const charterEndDate = dateTo ? DateTime.formatLong(dayjs(dateTo), locale) : '';
@@ -62,13 +71,26 @@ const BookingHero = ({ reservationData }: BookingHeroProps) => {
   // Thumbnail strip: up to 3 non-main images from the gallery.
   const thumbnails = (yachtImages ?? []).filter(img => img && img.id !== mainImage?.id).slice(0, 3);
 
-  // Stats row — only show values we actually have.
+  // Stats row — only values we actually have: the year, then the partner's
+  // cabins · berths · max. people (cardChips: "13 (12 + 1 crew)", never an
+  // estimate, berths never as people). A cart saved before the capacity
+  // block, or from an older backend, falls back to the flat numbers.
+  const capacity = fromYacht(
+    { capacity: capacityDto, cabins, berths, wc, maxPersons, crewNumber, charterType },
+    { locale }
+  );
   const stats = [
-    buildYear ? { value: String(buildYear), label: tFilters('year') } : null,
-    maxPersons ? { value: String(maxPersons), label: tFilters('people') } : null,
-    berths ? { value: String(berths), label: tFilters('berths') } : null,
-    cabins ? { value: String(cabins), label: tFilters('cabins') } : null,
-  ].filter((s): s is { value: string; label: string } => s !== null);
+    buildYear ? { key: 'year', value: String(buildYear), label: tFilters('year') } : null,
+    ...cardChips(capacity, capacityT).map(chip => ({ key: chip.key, value: chip.value, label: chip.label })),
+  ].filter((s): s is { key: string; value: string; label: string } => s !== null);
+  // The rest of the compact form (WC, crew cabins, crew WC) as one line. The
+  // crew count only when the boat has no bareboat option: on a boat offered
+  // both ways, "1 crew member" would read as part of a bareboat booking.
+  const moreCapacity = capacityChips(capacity, capacityT)
+    .filter(chip => !CARD_CHIP_KEYS.includes(chip.key))
+    .filter(chip => chip.key !== 'crew' || !capacity.crew?.alsoBareboat)
+    .map(chip => chip.text)
+    .join(' · ');
 
   return (
     <>
@@ -170,8 +192,8 @@ const BookingHero = ({ reservationData }: BookingHeroProps) => {
 
               {stats.length > 0 && (
                 <Stack direction="row" gap={{ xs: 3, md: 5 }} flexWrap="wrap" sx={{ pt: 1 }}>
-                  {stats.map(({ value, label }) => (
-                    <Stack key={label} gap={0.25}>
+                  {stats.map(({ key, value, label }) => (
+                    <Stack key={key} gap={0.25}>
                       <Typography variant="h3" fontWeight={700} color={colors.black950}>
                         {value}
                       </Typography>
@@ -181,6 +203,12 @@ const BookingHero = ({ reservationData }: BookingHeroProps) => {
                     </Stack>
                   ))}
                 </Stack>
+              )}
+
+              {moreCapacity && (
+                <Typography variant="body2" color={colors.black600}>
+                  {moreCapacity}
+                </Typography>
               )}
 
               <Stack gap={0.75} sx={{ pt: 1 }}>

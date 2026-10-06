@@ -61,7 +61,7 @@
     "descLeadFrom": "Alquiler de {name} en {marina}",
     "descCabins": "{count, plural, one {# camarote} other {# camarotes}}",
     "descBerths": "{count, plural, one {# litera} other {# literas}}",
-    "descGuests": "{count, plural, one {hasta # persona} other {hasta # personas}}",
+    "descMaxPeople": "{count, plural, one {máx. # persona a bordo} other {máx. # personas a bordo}}",
     "descCta": "Consulta la disponibilidad y reserva directamente en boat4you.com.",
     "descCtaInquiry": "Envía una consulta para tus fechas en boat4you.com."
   },
@@ -71,7 +71,6 @@
     "summary": "{total, number} barcos · página {page} de {pages}",
     "otherBases": "Otras bases",
     "cabins": "{count, plural, one {# camarote} other {# camarotes}}",
-    "guests": "{count, plural, one {# persona} other {# personas}}",
     "paginationLabel": "Páginas del directorio de la flota"
   }
 }

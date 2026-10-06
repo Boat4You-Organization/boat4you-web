@@ -1,0 +1,372 @@
+/**
+ * Yacht capacity on b4y (capacity contract v1, 6.10.2026): the shared
+ * formatter src/utils/static/yachtCapacity.ts (a byte-identical copy across
+ * b4y, the 6 sisters and the admin), wired to next-intl's real translator, the
+ * per-locale note tables, the `capacity` messages, the accommodation / FAQ
+ * prose and the meta numbers.
+ *
+ * scripts/fixtures/capacity-reference-boats.json is the contract's
+ * expectations/reference_boats.json: 7 reference boats (Dione II, Jangada MMK +
+ * its NauSys twin, PNOE, Le Petite Prince, Marea, Corali) as the backend will
+ * send them (`detail` = capacity + rig, `search` = the search row's capacity)
+ * and their rows / chips / card chips in all 9 locales.
+ *
+ *   yarn test:capacity
+ */
+import { createTranslator } from 'next-intl';
+import assert from 'node:assert/strict';
+import { readFileSync, readdirSync } from 'node:fs';
+import { describe, test } from 'node:test';
+import { fileURLToPath } from 'node:url';
+
+import './tsLoader.mjs';
+
+const ROOT = fileURLToPath(new URL('../', import.meta.url));
+
+const F = await import('@/utils/static/yachtCapacity');
+const { capacityFmt } = await import('@/utils/static/capacityFmt');
+const { CAPACITY_NOTE_LOCALES, loadCapacityNoteLookup } = await import('@/utils/static/capacityNoteTable');
+const { accommodationProse, shownGuestBerths } = await import('@/utils/static/capacityProse');
+const { isOperatorName } = await import('@/utils/static/operatorNames');
+const { buildYachtFaq } = await import('@/utils/static/yachtFaq');
+const { buildBoatDescription } = await import('@/utils/static/boatMetaDescription');
+
+const LOCALES = ['en', 'de', 'es', 'fr', 'hr', 'it', 'nl', 'pl', 'pt'];
+const PARTNER_ID_KEY_RX = /agency|external|partner|company|source|mmk|nausys|operator/i;
+const readJson = path => JSON.parse(readFileSync(`${ROOT}${path}`, 'utf8'));
+const messages = Object.fromEntries(
+  LOCALES.map(l => [
+    l,
+    {
+      capacity: readJson(`messages/${l}/capacity.json`),
+      yacht: readJson(`messages/${l}/yacht.json`),
+      metadata: readJson(`messages/${l}/metadata.json`),
+    },
+  ])
+);
+// next-intl's own translator (the same ICU engine the pages run), as the formatter's Fmt.
+const translator = (l, namespace) => createTranslator({ locale: l, messages: messages[l], namespace });
+const fmts = Object.fromEntries(LOCALES.map(l => [l, capacityFmt(translator(l, 'capacity'))]));
+const lookups = Object.fromEntries(await Promise.all(LOCALES.map(async l => [l, await loadCapacityNoteLookup(l)])));
+const REF = readJson('scripts/fixtures/capacity-reference-boats.json');
+const CHARTER_TYPES = {
+  dione: ['CREWED', 'BAREBOAT'],
+  jangadaMmk: ['BAREBOAT'],
+  jangadaNs: ['BAREBOAT'],
+  pnoe: ['BAREBOAT'],
+  lpp: ['BAREBOAT'],
+  marea: ['ALL_INCLUSIVE', 'CREWED'],
+  corali: ['CREWED'],
+};
+// As the boat page resolves it on the server (utils/server/yachtCapacity.ts).
+const view = (yacht, l) =>
+  F.fromYacht(yacht, { locale: l, noteLookup: lookups[l], findOperatorName: text => isOperatorName(text) });
+const detail = key => ({ ...REF[key].detail, charterType: CHARTER_TYPES[key] });
+const searchRow = key => ({ capacity: REF[key].search, charterType: CHARTER_TYPES[key][0] });
+const keyPaths = (obj, prefix = '') =>
+  Object.entries(obj)
+    .flatMap(([k, v]) => (v && typeof v === 'object' ? keyPaths(v, `${prefix}${k}.`) : [`${prefix}${k}`]))
+    .sort();
+const leafValues = obj => Object.values(obj).flatMap(v => (v && typeof v === 'object' ? leafValues(v) : [v]));
+
+describe('messages/<locale>/capacity.json', () => {
+  test('key parity across the 9 locales, valid ICU, plural forms cover each locale', () => {
+    const en = keyPaths(messages.en.capacity);
+
+    LOCALES.forEach(l => {
+      assert.deepEqual(keyPaths(messages[l].capacity), en, l);
+      leafValues(messages[l].capacity).forEach(message => {
+        assert.ok(typeof message === 'string' && message.trim(), `${l}: empty message`);
+        F.validateIcu(message);
+        F.icuPlurals(message).forEach(({ arg, options }) => {
+          F.pluralCategories(l).forEach(category =>
+            assert.ok(options.includes(category) || options.includes('other'), `${l} ${arg}: ${category}`)
+          );
+        });
+      });
+    });
+  });
+
+  test('nautical terms kept: es Literas, pt Beliches, pl Koje, de Kojen; WC stays "WC"', () => {
+    assert.equal(messages.es.capacity.label.berths, 'Literas');
+    assert.equal(messages.pt.capacity.label.berths, 'Beliches');
+    assert.equal(messages.pl.capacity.label.berths, 'Koje');
+    assert.equal(messages.de.capacity.label.berths, 'Kojen');
+    LOCALES.forEach(l => assert.equal(messages[l].capacity.label.heads, 'WC', l));
+  });
+});
+
+describe('note tables (src/utils/static/capacityNotes/<locale>.json)', () => {
+  const dir = `${ROOT}src/utils/static/capacityNotes/`;
+
+  test('one slice per non-English locale, each carrying only its own locale', () => {
+    assert.deepEqual(readdirSync(dir).sort(), CAPACITY_NOTE_LOCALES.map(l => `${l}.json`).sort());
+    CAPACITY_NOTE_LOCALES.forEach(l => {
+      const slice = readJson(`src/utils/static/capacityNotes/${l}.json`);
+
+      assert.equal(Object.keys(slice).length, 37, l);
+      Object.entries(slice).forEach(([note, entry]) => {
+        assert.deepEqual(Object.keys(entry).sort(), ['dims', l].sort(), `${l}: ${note}`);
+        assert.ok(!F.isLanguageNeutral(note), `${l}: neutral note in the table: ${note}`);
+        assert.equal(F.normalizeNote(note), note, `${l}: key not normalized: ${note}`);
+      });
+    });
+  });
+
+  test("every note and translation passes the sanitizer with b4y's operator list, unchanged", () => {
+    CAPACITY_NOTE_LOCALES.forEach(l => {
+      Object.entries(readJson(`src/utils/static/capacityNotes/${l}.json`)).forEach(([note, entry]) => {
+        [note, entry[l]].forEach(text =>
+          assert.equal(
+            F.safeCapacityNote(text, t => isOperatorName(t)),
+            text,
+            `${l}: hidden: ${text}`
+          )
+        );
+      });
+    });
+  });
+
+  test('English pages need no table; an unseen note stays English with lang="en"', async () => {
+    assert.equal(await loadCapacityNoteLookup('en'), undefined);
+
+    const note = '(two convertible saloon berths)';
+    const c = F.fromYacht({ capacity: { berths: { value: 9, note } } }, { locale: 'de', noteLookup: lookups.de });
+
+    assert.deepEqual(c.berths.note, { en: note, text: note, lang: 'en', short: false });
+  });
+});
+
+describe('the 7 reference boats render as the contract says, with next-intl and the b4y note tables', () => {
+  Object.keys(REF).forEach(key => {
+    test(key, () => {
+      LOCALES.forEach(l => {
+        const expected = REF[key].render[l];
+        const rows = F.capacityRows(view(detail(key), l), fmts[l]).map(r => ({
+          key: r.key,
+          label: r.label,
+          value: r.value,
+          ...(r.segments.some(s => s.lang) ? { segments: r.segments } : {}),
+        }));
+
+        assert.deepEqual(rows, expected.rows, `${key} ${l} rows`);
+        assert.deepEqual(
+          F.capacityChips(view(detail(key), l), fmts[l]).map(c => c.text),
+          expected.chips,
+          `${key} ${l} chips`
+        );
+        assert.deepEqual(F.cardChips(view(searchRow(key), l), fmts[l]), expected.card, `${key} ${l} card`);
+      });
+    });
+  });
+
+  test("public capacity keys never match the sisters' partner-id filter", () => {
+    const keys = new Set();
+    const walk = obj =>
+      Object.entries(obj ?? {}).forEach(([k, v]) => {
+        keys.add(k);
+        if (v && typeof v === 'object') walk(v);
+      });
+
+    Object.values(REF).forEach(boat => {
+      walk(boat.detail);
+      walk(boat.search);
+    });
+    keys.forEach(k => assert.ok(!PARTNER_ID_KEY_RX.test(k), k));
+  });
+});
+
+describe('an older backend (no capacity / rig): numbers only', () => {
+  // Le Petite Prince - OW (NauSys, live 1161) as the live API sends it today.
+  const lpp = {
+    cabins: 3,
+    berths: 8,
+    wc: 2,
+    maxPersons: null,
+    crewNumber: null,
+    enginePower: 60,
+    mainSailType: 'ROLLING_SAIL',
+  };
+
+  test('card: Cabins 3 · Berths 8 — no people estimate (was cabins × 2 + 2 = 8 people)', () => {
+    assert.deepEqual(F.cardChips(F.fromYacht(lpp, { locale: 'en' }), fmts.en), [
+      { key: 'cabins', label: 'Cabins', value: '3' },
+      { key: 'berths', label: 'Berths', value: '8' },
+    ]);
+  });
+
+  test('a search row of an older backend (no berths) shows cabins and max. people only', () => {
+    assert.deepEqual(
+      F.cardChips(F.fromYacht({ cabins: 6, maxPersons: null }, { locale: 'de' }), fmts.de).map(c => c.key),
+      ['cabins']
+    );
+  });
+
+  test('spec rows: no sail (filter enum), no partner engine (filter value), no "null" / "0"', () => {
+    const rows = F.capacityRows(F.fromYacht({ ...lpp, wc: 0 }, { locale: 'en' }), fmts.en);
+
+    assert.deepEqual(
+      rows.map(r => `${r.label}: ${r.value}`),
+      ['Cabins: 3', 'Berths: 8']
+    );
+  });
+
+  test('custom yacht: engineText before enginePower; the crew only for a crewed charter', () => {
+    const custom = {
+      custom: true,
+      cabins: 5,
+      crewNumber: 3,
+      enginePower: 1600,
+      customDetails: { engineText: '2x Volvo IPS 1050' },
+      charterType: ['CREWED'],
+    };
+    const rows = F.capacityRows(F.fromYacht(custom, { locale: 'en' }), fmts.en);
+
+    assert.equal(rows.find(r => r.key === 'engine').value, '2x Volvo IPS 1050');
+    assert.equal(rows.find(r => r.key === 'crew').value, '3');
+    assert.equal(
+      F.capacityRows(F.fromYacht({ ...custom, charterType: ['BAREBOAT'] }, { locale: 'en' }), fmts.en).some(
+        r => r.key === 'crew'
+      ),
+      false
+    );
+  });
+});
+
+describe('boat description, FAQ and meta (capacity contract 7.4)', () => {
+  const dione = { id: 8351, name: 'Dione II', model: 'Aura 51', ...detail('dione'), offers: [] };
+  const facts = l => F.capacityFacts(view(detail('dione'), l));
+  const markup = (l, key, values) =>
+    translator(l, 'yacht').markup(key, { ...values, b: chunks => chunks, engineLabel: chunks => chunks });
+
+  test('no promise of bedding, no shower per toilet, no "certified", no "bathrooms" claim left in the copy', () => {
+    LOCALES.forEach(l => {
+      const yacht = JSON.stringify(messages[l].yacht);
+
+      // "certified for N" capacity claims (the VHF licence "certificate" is fine).
+      assert.ok(
+        !/\bcertified\b|zertifiziert|certifiée?s?\b|gecertificeerd|certyfikowan|certificiran|omologat/i.test(yacht),
+        l
+      );
+    });
+    const en = JSON.stringify(messages.en.yacht);
+
+    [
+      'Pillows and blankets are included',
+      'with a shower',
+      'with showers',
+      'shower-equipped',
+      'bedding is included',
+    ].forEach(claim => assert.ok(!en.includes(claim), claim));
+    assert.ok(
+      !/\{engine\} (hp|PS|KS|KM|CV|ch|pk|cv)\b/.test(LOCALES.map(l => JSON.stringify(messages[l].yacht)).join())
+    );
+  });
+
+  test('every new sentence renders in every locale for 1 / 2 / 5 / 13 / 22 (no braces, no NaN)', () => {
+    const keys = Object.keys(messages.en.yacht).filter(k =>
+      /^(descLayout|descHeads|descOnBoard|descBedding|descSpecsV|faqSleeps|faqOnBoard)/.test(k)
+    );
+
+    // layout 7, WC 2, on board 2, bedding 3, specs 5, FAQ sleeps 6 (Q, A0-A2, no cabins, no berths), on board 1
+    assert.equal(keys.length, 7 + 2 + 2 + 3 + 5 + 6 + 1);
+    LOCALES.forEach(l => {
+      keys.forEach(key => {
+        [1, 2, 5, 13, 22].forEach(n => {
+          [0, n].forEach(extra => {
+            const out = markup(l, key, {
+              name: 'Dione II',
+              cabins: n,
+              berths: n + 1,
+              guestBerths: extra,
+              wc: n,
+              showers: extra,
+              maxPersons: n,
+              length: '15.2 m',
+              beam: '8.1 m',
+              engine: '2 × 115 hp',
+              fuel: '700',
+              water: '600',
+            });
+
+            assert.ok(out && !/[{}]|NaN|undefined|null/.test(out), `${l} ${key} ${n}/${extra}: ${out}`);
+          });
+        });
+      });
+    });
+  });
+
+  test('Dione II paragraph: 13 berths, 12 of them for guests, 6 toilets, max. 14 on board (en, de, pl, hr)', () => {
+    const parts = l =>
+      accommodationProse(facts(l), () => 0).map(p => markup(l, p.key, { ...p.values, name: 'Dione II' }));
+
+    assert.deepEqual(parts('en'), [
+      'Dione II has 13 berths in 6 cabins, 12 of them for guests.',
+      'There are 6 toilets on board.',
+      'Up to 14 people can be on board.',
+      'Bed linen, pillows and blankets come with some boats and are rented at the base on others — ask us and we will tell you how it works on Dione II.',
+    ]);
+    assert.equal(parts('de')[0], 'Dione II hat 13 Kojen in 6 Kabinen, davon 12 für Gäste.');
+    assert.equal(parts('pl')[0], 'Dione II ma 13 koi w 6 kabinach, w tym 12 dla gości.');
+    assert.equal(parts('pl')[2], 'Na pokładzie może przebywać maksymalnie 14 osób.');
+    assert.equal(parts('hr')[0], 'Dione II ima 13 ležajeva u 6 kabina, od toga 12 za goste.');
+    assert.equal(
+      markup('pl', 'descLayoutV0', { name: 'X', berths: 4, cabins: 2, guestBerths: 0 }),
+      'X ma 4 koje w 2 kabinach.'
+    );
+    assert.equal(
+      markup('hr', 'descLayoutV0', { name: 'X', berths: 21, cabins: 4, guestBerths: 0 }),
+      'X ima 21 ležaj u 4 kabine.'
+    );
+  });
+
+  test('showers only when the partner sends them; guest berths only from the partner split', () => {
+    const marea = F.capacityFacts(view(detail('marea'), 'en'));
+    const showersOf = f => accommodationProse({ ...f, showers: 5 }, () => 0).find(p => p.key.startsWith('descHeads'));
+
+    assert.equal(accommodationProse(marea, () => 0).find(p => p.key.startsWith('descHeads')).values.showers, 0);
+    assert.equal(markup('en', 'descHeadsV0', showersOf(marea).values), 'There are 5 toilets on board and 5 showers.');
+    assert.equal(shownGuestBerths(marea), 10, 'Marea 12 (10 in cabins + 2 crew)');
+    assert.equal(shownGuestBerths(F.capacityFacts(view(detail('lpp'), 'en'))), 0, 'LPP 8 = 6 + 2 saloon: all guests');
+    assert.equal(shownGuestBerths(F.capacityFacts(view(detail('pnoe'), 'en'))), 0, 'no split, no claim');
+  });
+
+  test('FAQ: berths, then max. people on board as a sentence of its own — never "sleeps up to {maxPersons}"', () => {
+    const t = (key, values) => translator('en', 'yacht')(key, values);
+    const [sleeps] = buildYachtFaq(dione, t, 'en', facts('en'));
+
+    assert.equal(sleeps.question, 'How many people can sleep aboard Dione II?');
+    assert.match(sleeps.answer, /13 (berths|people)/);
+    assert.match(sleeps.answer, /12 (of them for guests|berths for guests)/);
+    assert.match(sleeps.answer, /Up to 14 people can be on board Dione II in total\.$/);
+    assert.ok(!/(sleeps|sleep) up to 14/.test(sleeps.answer));
+
+    const noBerths = buildYachtFaq({ ...dione, capacity: null, cabins: 6, berths: null, maxPersons: 10 }, t, 'en');
+
+    assert.equal(
+      noBerths[0].answer,
+      'The listing for Dione II gives no berth count — ask us how the berths are arranged before you book. Up to 10 people can be on board Dione II in total.'
+    );
+  });
+
+  test('meta: berths from berths; max. people on board only as such (never "N berths")', () => {
+    const t = (key, values) => translator('en', 'metadata.boat')(key, values);
+
+    assert.equal(
+      buildBoatDescription(t, { name: 'Bali 4.2', marina: 'Kaštela', cabins: 4, berths: null, maxPeople: 10 }),
+      'Charter the Bali 4.2 from Kaštela. 4 cabins, max. 10 people on board. Check availability and book directly on boat4you.com.'
+    );
+    LOCALES.forEach(l =>
+      assert.ok(messages[l].metadata.boat.descMaxPeople && !messages[l].metadata.boat.descGuests, l)
+    );
+  });
+});
+
+describe('source guards', () => {
+  const read = path => readFileSync(`${ROOT}src/${path}`, 'utf8');
+
+  test('no cabins × 2 + 2 estimate on the card; capacity / rig never go through the partner-text filter', () => {
+    assert.ok(!/cabins\s*\*\s*2/.test(read('components/BoatListingItemCard/BoatListingItemCard.tsx')));
+    assert.ok(!/capacity|\brig\b/.test(read('utils/server/partnerYacht.ts')));
+  });
+});

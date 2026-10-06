@@ -1,0 +1,5030 @@
+{
+  "dione": {
+    "detail": {
+      "capacity": {
+        "cabins": {
+          "value": 6,
+          "note": "(5 double +1 for the hostess + 1 bow/skippers cabin)",
+          "split": null
+        },
+        "berths": {
+          "value": 13,
+          "note": "(12 pax + 1 Crew)",
+          "split": {
+            "guests": 12,
+            "inCabins": null,
+            "saloon": null,
+            "crew": 1,
+            "skipper": null
+          }
+        },
+        "heads": {
+          "value": 6,
+          "note": "(5+1 for the crew)",
+          "split": {
+            "guests": 5,
+            "inCabins": null,
+            "saloon": null,
+            "crew": 1,
+            "skipper": null
+          }
+        },
+        "crewCabins": null,
+        "crewHeads": null,
+        "showers": null,
+        "crewShowers": null,
+        "maxPersons": 14,
+        "recommendedPersons": null,
+        "crewNumber": 1
+      },
+      "rig": {
+        "mainsail": {
+          "kind": "FULL_BATTEN",
+          "label": null
+        },
+        "headsail": {
+          "kind": "FURLING",
+          "label": null
+        },
+        "engine": {
+          "label": "2x60HP",
+          "count": null,
+          "powerEach": null
+        },
+        "draught": 1.3
+      }
+    },
+    "search": {
+      "cabins": {
+        "value": 6,
+        "note": null,
+        "split": null
+      },
+      "berths": {
+        "value": 13,
+        "note": null,
+        "split": {
+          "guests": 12,
+          "inCabins": null,
+          "saloon": null,
+          "crew": 1,
+          "skipper": null
+        }
+      },
+      "heads": {
+        "value": 6,
+        "note": null,
+        "split": {
+          "guests": 5,
+          "inCabins": null,
+          "saloon": null,
+          "crew": 1,
+          "skipper": null
+        }
+      },
+      "crewCabins": null,
+      "crewHeads": null,
+      "showers": null,
+      "crewShowers": null,
+      "maxPersons": 14,
+      "recommendedPersons": null,
+      "crewNumber": 1
+    },
+    "render": {
+      "en": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Cabins",
+            "value": "6 (5 double +1 for the hostess + 1 bow/skippers cabin)"
+          },
+          {
+            "key": "berths",
+            "label": "Berths",
+            "value": "13 (12 pax + 1 Crew)"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "6 (5+1 for the crew)"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Max. people on board",
+            "value": "14"
+          },
+          {
+            "key": "crew",
+            "label": "Crew (crewed charter)",
+            "value": "1"
+          },
+          {
+            "key": "mainsail",
+            "label": "Mainsail",
+            "value": "Full batten"
+          },
+          {
+            "key": "headsail",
+            "label": "Headsail",
+            "value": "Furling"
+          },
+          {
+            "key": "engine",
+            "label": "Engine",
+            "value": "2x60HP"
+          },
+          {
+            "key": "draught",
+            "label": "Draught",
+            "value": "1.3 m"
+          }
+        ],
+        "chips": ["6 cabins", "13 berths (12 + 1 crew)", "6 WC (5 + 1 crew)", "max. 14 people", "1 crew member"],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Cabins",
+            "value": "6"
+          },
+          {
+            "key": "berths",
+            "label": "Berths",
+            "value": "13 (12 + 1 crew)"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Max. people",
+            "value": "14"
+          }
+        ]
+      },
+      "de": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Kabinen",
+            "value": "6 (5 Doppelkabinen +1 für die Hostess + 1 Bug-/Skipperkabine)"
+          },
+          {
+            "key": "berths",
+            "label": "Kojen",
+            "value": "13 (12 Gäste + 1 Crew)"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "6 (5+1 für die Crew)"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Max. Personen an Bord",
+            "value": "14"
+          },
+          {
+            "key": "crew",
+            "label": "Crew (bei Charter mit Crew)",
+            "value": "1"
+          },
+          {
+            "key": "mainsail",
+            "label": "Großsegel",
+            "value": "Durchgelattet"
+          },
+          {
+            "key": "headsail",
+            "label": "Vorsegel",
+            "value": "Rollreff"
+          },
+          {
+            "key": "engine",
+            "label": "Motor",
+            "value": "2x60HP",
+            "segments": [
+              {
+                "text": "2x60HP",
+                "lang": "en"
+              }
+            ]
+          },
+          {
+            "key": "draught",
+            "label": "Tiefgang",
+            "value": "1,3 m"
+          }
+        ],
+        "chips": ["6 Kabinen", "13 Kojen (12 + 1 Crew)", "6 WC (5 + 1 Crew)", "max. 14 Personen", "1 Crew-Mitglied"],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Kabinen",
+            "value": "6"
+          },
+          {
+            "key": "berths",
+            "label": "Kojen",
+            "value": "13 (12 + 1 Crew)"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Max. Personen",
+            "value": "14"
+          }
+        ]
+      },
+      "es": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Camarotes",
+            "value": "6 (5 dobles +1 para la azafata + 1 camarote de proa/del patrón)"
+          },
+          {
+            "key": "berths",
+            "label": "Literas",
+            "value": "13 (12 pasajeros + 1 tripulante)"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "6 (5+1 para la tripulación)"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Máx. personas a bordo",
+            "value": "14"
+          },
+          {
+            "key": "crew",
+            "label": "Tripulación (alquiler con tripulación)",
+            "value": "1"
+          },
+          {
+            "key": "mainsail",
+            "label": "Vela mayor",
+            "value": "Sables completos"
+          },
+          {
+            "key": "headsail",
+            "label": "Vela de proa",
+            "value": "Enrollable"
+          },
+          {
+            "key": "engine",
+            "label": "Motor",
+            "value": "2x60HP",
+            "segments": [
+              {
+                "text": "2x60HP",
+                "lang": "en"
+              }
+            ]
+          },
+          {
+            "key": "draught",
+            "label": "Calado",
+            "value": "1,3 m"
+          }
+        ],
+        "chips": [
+          "6 camarotes",
+          "13 literas (12 + 1 para la tripulación)",
+          "6 WC (5 + 1 para la tripulación)",
+          "máx. 14 personas",
+          "1 tripulante"
+        ],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Camarotes",
+            "value": "6"
+          },
+          {
+            "key": "berths",
+            "label": "Literas",
+            "value": "13 (12 + 1 para la tripulación)"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Máx. personas",
+            "value": "14"
+          }
+        ]
+      },
+      "fr": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Cabines",
+            "value": "6 (5 doubles +1 pour l’hôtesse + 1 cabine avant/skipper)"
+          },
+          {
+            "key": "berths",
+            "label": "Couchettes",
+            "value": "13 (12 passagers + 1 membre d’équipage)"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "6 (5+1 pour l’équipage)"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Personnes max. à bord",
+            "value": "14"
+          },
+          {
+            "key": "crew",
+            "label": "Équipage (location avec équipage)",
+            "value": "1"
+          },
+          {
+            "key": "mainsail",
+            "label": "Grand-voile",
+            "value": "Entièrement lattée"
+          },
+          {
+            "key": "headsail",
+            "label": "Voile d’avant",
+            "value": "Enrouleur"
+          },
+          {
+            "key": "engine",
+            "label": "Moteur",
+            "value": "2x60HP",
+            "segments": [
+              {
+                "text": "2x60HP",
+                "lang": "en"
+              }
+            ]
+          },
+          {
+            "key": "draught",
+            "label": "Tirant d’eau",
+            "value": "1,3 m"
+          }
+        ],
+        "chips": [
+          "6 cabines",
+          "13 couchettes (12 + 1 pour l’équipage)",
+          "6 WC (5 + 1 pour l’équipage)",
+          "14 personnes max.",
+          "1 membre d’équipage"
+        ],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Cabines",
+            "value": "6"
+          },
+          {
+            "key": "berths",
+            "label": "Couchettes",
+            "value": "13 (12 + 1 pour l’équipage)"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Pers. max.",
+            "value": "14"
+          }
+        ]
+      },
+      "hr": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Kabine",
+            "value": "6 (5 dvokrevetnih +1 za hostesu + 1 pramčana/skiperska kabina)"
+          },
+          {
+            "key": "berths",
+            "label": "Ležajevi",
+            "value": "13 (12 gostiju + 1 član posade)"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "6 (5+1 za posadu)"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Maks. osoba na brodu",
+            "value": "14"
+          },
+          {
+            "key": "crew",
+            "label": "Posada (najam s posadom)",
+            "value": "1"
+          },
+          {
+            "key": "mainsail",
+            "label": "Glavno jedro",
+            "value": "Pune letve"
+          },
+          {
+            "key": "headsail",
+            "label": "Prednje jedro",
+            "value": "Rolo"
+          },
+          {
+            "key": "engine",
+            "label": "Motor",
+            "value": "2x60HP",
+            "segments": [
+              {
+                "text": "2x60HP",
+                "lang": "en"
+              }
+            ]
+          },
+          {
+            "key": "draught",
+            "label": "Gaz",
+            "value": "1,3 m"
+          }
+        ],
+        "chips": [
+          "6 kabina",
+          "13 ležajeva (12 + 1 za posadu)",
+          "6 WC (5 + 1 za posadu)",
+          "maks. 14 osoba",
+          "1 član posade"
+        ],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Kabine",
+            "value": "6"
+          },
+          {
+            "key": "berths",
+            "label": "Ležajevi",
+            "value": "13 (12 + 1 za posadu)"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Maks. osoba",
+            "value": "14"
+          }
+        ]
+      },
+      "it": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Cabine",
+            "value": "6 (5 doppie +1 per la hostess + 1 cabina di prua/skipper)"
+          },
+          {
+            "key": "berths",
+            "label": "Posti letto",
+            "value": "13 (12 ospiti + 1 membro dell’equipaggio)"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "6 (5+1 per l’equipaggio)"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Max. persone a bordo",
+            "value": "14"
+          },
+          {
+            "key": "crew",
+            "label": "Equipaggio (noleggio con equipaggio)",
+            "value": "1"
+          },
+          {
+            "key": "mainsail",
+            "label": "Randa",
+            "value": "Steccata"
+          },
+          {
+            "key": "headsail",
+            "label": "Vela di prua",
+            "value": "Avvolgibile"
+          },
+          {
+            "key": "engine",
+            "label": "Motore",
+            "value": "2x60HP",
+            "segments": [
+              {
+                "text": "2x60HP",
+                "lang": "en"
+              }
+            ]
+          },
+          {
+            "key": "draught",
+            "label": "Pescaggio",
+            "value": "1,3 m"
+          }
+        ],
+        "chips": [
+          "6 cabine",
+          "13 posti letto (12 + 1 per l’equipaggio)",
+          "6 WC (5 + 1 per l’equipaggio)",
+          "max. 14 persone",
+          "1 membro dell’equipaggio"
+        ],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Cabine",
+            "value": "6"
+          },
+          {
+            "key": "berths",
+            "label": "Posti letto",
+            "value": "13 (12 + 1 per l’equipaggio)"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Max. persone",
+            "value": "14"
+          }
+        ]
+      },
+      "nl": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Hutten",
+            "value": "6 (5 tweepersoons +1 voor de hostess + 1 voor-/schippershut)"
+          },
+          {
+            "key": "berths",
+            "label": "Slaapplaatsen",
+            "value": "13 (12 gasten + 1 bemanningslid)"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "6 (5+1 voor de bemanning)"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Max. personen aan boord",
+            "value": "14"
+          },
+          {
+            "key": "crew",
+            "label": "Bemanning (charter met bemanning)",
+            "value": "1"
+          },
+          {
+            "key": "mainsail",
+            "label": "Grootzeil",
+            "value": "Doorgelat"
+          },
+          {
+            "key": "headsail",
+            "label": "Voorzeil",
+            "value": "Rolreef"
+          },
+          {
+            "key": "engine",
+            "label": "Motor",
+            "value": "2x60HP",
+            "segments": [
+              {
+                "text": "2x60HP",
+                "lang": "en"
+              }
+            ]
+          },
+          {
+            "key": "draught",
+            "label": "Diepgang",
+            "value": "1,3 m"
+          }
+        ],
+        "chips": [
+          "6 hutten",
+          "13 slaapplaatsen (12 + 1 voor de bemanning)",
+          "6 WC (5 + 1 voor de bemanning)",
+          "max. 14 personen",
+          "1 bemanningslid"
+        ],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Hutten",
+            "value": "6"
+          },
+          {
+            "key": "berths",
+            "label": "Slaapplaatsen",
+            "value": "13 (12 + 1 voor de bemanning)"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Max. personen",
+            "value": "14"
+          }
+        ]
+      },
+      "pl": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Kabiny",
+            "value": "6 (5 dwuosobowych +1 dla hostessy + 1 kabina dziobowa/skippera)"
+          },
+          {
+            "key": "berths",
+            "label": "Koje",
+            "value": "13 (12 gości + 1 członek załogi)"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "6 (5+1 dla załogi)"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Maks. osób na pokładzie",
+            "value": "14"
+          },
+          {
+            "key": "crew",
+            "label": "Załoga (czarter z załogą)",
+            "value": "1"
+          },
+          {
+            "key": "mainsail",
+            "label": "Grot",
+            "value": "Pełnolistwowy"
+          },
+          {
+            "key": "headsail",
+            "label": "Żagiel przedni",
+            "value": "Rolowany"
+          },
+          {
+            "key": "engine",
+            "label": "Silnik",
+            "value": "2x60HP",
+            "segments": [
+              {
+                "text": "2x60HP",
+                "lang": "en"
+              }
+            ]
+          },
+          {
+            "key": "draught",
+            "label": "Zanurzenie",
+            "value": "1,3 m"
+          }
+        ],
+        "chips": [
+          "6 kabin",
+          "13 koi (12 + 1 dla załogi)",
+          "6 WC (5 + 1 dla załogi)",
+          "maks. 14 osób",
+          "1 osoba załogi"
+        ],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Kabiny",
+            "value": "6"
+          },
+          {
+            "key": "berths",
+            "label": "Koje",
+            "value": "13 (12 + 1 dla załogi)"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Maks. osób",
+            "value": "14"
+          }
+        ]
+      },
+      "pt": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Cabines",
+            "value": "6 (5 duplas +1 para a hostess + 1 cabine de proa/do skipper)"
+          },
+          {
+            "key": "berths",
+            "label": "Beliches",
+            "value": "13 (12 passageiros + 1 tripulante)"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "6 (5+1 para a tripulação)"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Máx. pessoas a bordo",
+            "value": "14"
+          },
+          {
+            "key": "crew",
+            "label": "Tripulação (aluguel com tripulação)",
+            "value": "1"
+          },
+          {
+            "key": "mainsail",
+            "label": "Vela mestra",
+            "value": "Talas inteiras"
+          },
+          {
+            "key": "headsail",
+            "label": "Vela de proa",
+            "value": "Enrolável"
+          },
+          {
+            "key": "engine",
+            "label": "Motor",
+            "value": "2x60HP",
+            "segments": [
+              {
+                "text": "2x60HP",
+                "lang": "en"
+              }
+            ]
+          },
+          {
+            "key": "draught",
+            "label": "Calado",
+            "value": "1,3 m"
+          }
+        ],
+        "chips": [
+          "6 cabines",
+          "13 beliches (12 + 1 para a tripulação)",
+          "6 WC (5 + 1 para a tripulação)",
+          "máx. 14 pessoas",
+          "1 tripulante"
+        ],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Cabines",
+            "value": "6"
+          },
+          {
+            "key": "berths",
+            "label": "Beliches",
+            "value": "13 (12 + 1 para a tripulação)"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Máx. pessoas",
+            "value": "14"
+          }
+        ]
+      }
+    }
+  },
+  "jangadaMmk": {
+    "detail": {
+      "capacity": {
+        "cabins": {
+          "value": 4,
+          "note": null,
+          "split": null
+        },
+        "berths": {
+          "value": 10,
+          "note": "8+2",
+          "split": null
+        },
+        "heads": {
+          "value": 2,
+          "note": null,
+          "split": null
+        },
+        "crewCabins": null,
+        "crewHeads": null,
+        "showers": null,
+        "crewShowers": null,
+        "maxPersons": 12,
+        "recommendedPersons": null,
+        "crewNumber": null
+      },
+      "rig": {
+        "mainsail": {
+          "kind": "FULL_BATTEN",
+          "label": null
+        },
+        "headsail": {
+          "kind": "SELF_TACKING_JIB",
+          "label": null
+        },
+        "engine": {
+          "label": "2x30 HP",
+          "count": null,
+          "powerEach": null
+        },
+        "draught": 1.35
+      }
+    },
+    "search": {
+      "cabins": {
+        "value": 4,
+        "note": null,
+        "split": null
+      },
+      "berths": {
+        "value": 10,
+        "note": "8+2",
+        "split": null
+      },
+      "heads": {
+        "value": 2,
+        "note": null,
+        "split": null
+      },
+      "crewCabins": null,
+      "crewHeads": null,
+      "showers": null,
+      "crewShowers": null,
+      "maxPersons": 12,
+      "recommendedPersons": null,
+      "crewNumber": null
+    },
+    "render": {
+      "en": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Cabins",
+            "value": "4"
+          },
+          {
+            "key": "berths",
+            "label": "Berths",
+            "value": "10 (8+2)"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "2"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Max. people on board",
+            "value": "12"
+          },
+          {
+            "key": "mainsail",
+            "label": "Mainsail",
+            "value": "Full batten"
+          },
+          {
+            "key": "headsail",
+            "label": "Headsail",
+            "value": "Self-tacking jib"
+          },
+          {
+            "key": "engine",
+            "label": "Engine",
+            "value": "2x30 HP"
+          },
+          {
+            "key": "draught",
+            "label": "Draught",
+            "value": "1.35 m"
+          }
+        ],
+        "chips": ["4 cabins", "10 berths (8+2)", "2 WC", "max. 12 people"],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Cabins",
+            "value": "4"
+          },
+          {
+            "key": "berths",
+            "label": "Berths",
+            "value": "10 (8+2)"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Max. people",
+            "value": "12"
+          }
+        ]
+      },
+      "de": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Kabinen",
+            "value": "4"
+          },
+          {
+            "key": "berths",
+            "label": "Kojen",
+            "value": "10 (8+2)"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "2"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Max. Personen an Bord",
+            "value": "12"
+          },
+          {
+            "key": "mainsail",
+            "label": "Großsegel",
+            "value": "Durchgelattet"
+          },
+          {
+            "key": "headsail",
+            "label": "Vorsegel",
+            "value": "Selbstwendefock"
+          },
+          {
+            "key": "engine",
+            "label": "Motor",
+            "value": "2x30 HP",
+            "segments": [
+              {
+                "text": "2x30 HP",
+                "lang": "en"
+              }
+            ]
+          },
+          {
+            "key": "draught",
+            "label": "Tiefgang",
+            "value": "1,35 m"
+          }
+        ],
+        "chips": ["4 Kabinen", "10 Kojen (8+2)", "2 WC", "max. 12 Personen"],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Kabinen",
+            "value": "4"
+          },
+          {
+            "key": "berths",
+            "label": "Kojen",
+            "value": "10 (8+2)"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Max. Personen",
+            "value": "12"
+          }
+        ]
+      },
+      "es": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Camarotes",
+            "value": "4"
+          },
+          {
+            "key": "berths",
+            "label": "Literas",
+            "value": "10 (8+2)"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "2"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Máx. personas a bordo",
+            "value": "12"
+          },
+          {
+            "key": "mainsail",
+            "label": "Vela mayor",
+            "value": "Sables completos"
+          },
+          {
+            "key": "headsail",
+            "label": "Vela de proa",
+            "value": "Foque autovirante"
+          },
+          {
+            "key": "engine",
+            "label": "Motor",
+            "value": "2x30 HP",
+            "segments": [
+              {
+                "text": "2x30 HP",
+                "lang": "en"
+              }
+            ]
+          },
+          {
+            "key": "draught",
+            "label": "Calado",
+            "value": "1,35 m"
+          }
+        ],
+        "chips": ["4 camarotes", "10 literas (8+2)", "2 WC", "máx. 12 personas"],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Camarotes",
+            "value": "4"
+          },
+          {
+            "key": "berths",
+            "label": "Literas",
+            "value": "10 (8+2)"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Máx. personas",
+            "value": "12"
+          }
+        ]
+      },
+      "fr": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Cabines",
+            "value": "4"
+          },
+          {
+            "key": "berths",
+            "label": "Couchettes",
+            "value": "10 (8+2)"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "2"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Personnes max. à bord",
+            "value": "12"
+          },
+          {
+            "key": "mainsail",
+            "label": "Grand-voile",
+            "value": "Entièrement lattée"
+          },
+          {
+            "key": "headsail",
+            "label": "Voile d’avant",
+            "value": "Foc autovireur"
+          },
+          {
+            "key": "engine",
+            "label": "Moteur",
+            "value": "2x30 HP",
+            "segments": [
+              {
+                "text": "2x30 HP",
+                "lang": "en"
+              }
+            ]
+          },
+          {
+            "key": "draught",
+            "label": "Tirant d’eau",
+            "value": "1,35 m"
+          }
+        ],
+        "chips": ["4 cabines", "10 couchettes (8+2)", "2 WC", "12 personnes max."],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Cabines",
+            "value": "4"
+          },
+          {
+            "key": "berths",
+            "label": "Couchettes",
+            "value": "10 (8+2)"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Pers. max.",
+            "value": "12"
+          }
+        ]
+      },
+      "hr": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Kabine",
+            "value": "4"
+          },
+          {
+            "key": "berths",
+            "label": "Ležajevi",
+            "value": "10 (8+2)"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "2"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Maks. osoba na brodu",
+            "value": "12"
+          },
+          {
+            "key": "mainsail",
+            "label": "Glavno jedro",
+            "value": "Pune letve"
+          },
+          {
+            "key": "headsail",
+            "label": "Prednje jedro",
+            "value": "Samookretni flok"
+          },
+          {
+            "key": "engine",
+            "label": "Motor",
+            "value": "2x30 HP",
+            "segments": [
+              {
+                "text": "2x30 HP",
+                "lang": "en"
+              }
+            ]
+          },
+          {
+            "key": "draught",
+            "label": "Gaz",
+            "value": "1,35 m"
+          }
+        ],
+        "chips": ["4 kabine", "10 ležajeva (8+2)", "2 WC", "maks. 12 osoba"],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Kabine",
+            "value": "4"
+          },
+          {
+            "key": "berths",
+            "label": "Ležajevi",
+            "value": "10 (8+2)"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Maks. osoba",
+            "value": "12"
+          }
+        ]
+      },
+      "it": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Cabine",
+            "value": "4"
+          },
+          {
+            "key": "berths",
+            "label": "Posti letto",
+            "value": "10 (8+2)"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "2"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Max. persone a bordo",
+            "value": "12"
+          },
+          {
+            "key": "mainsail",
+            "label": "Randa",
+            "value": "Steccata"
+          },
+          {
+            "key": "headsail",
+            "label": "Vela di prua",
+            "value": "Fiocco autovirante"
+          },
+          {
+            "key": "engine",
+            "label": "Motore",
+            "value": "2x30 HP",
+            "segments": [
+              {
+                "text": "2x30 HP",
+                "lang": "en"
+              }
+            ]
+          },
+          {
+            "key": "draught",
+            "label": "Pescaggio",
+            "value": "1,35 m"
+          }
+        ],
+        "chips": ["4 cabine", "10 posti letto (8+2)", "2 WC", "max. 12 persone"],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Cabine",
+            "value": "4"
+          },
+          {
+            "key": "berths",
+            "label": "Posti letto",
+            "value": "10 (8+2)"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Max. persone",
+            "value": "12"
+          }
+        ]
+      },
+      "nl": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Hutten",
+            "value": "4"
+          },
+          {
+            "key": "berths",
+            "label": "Slaapplaatsen",
+            "value": "10 (8+2)"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "2"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Max. personen aan boord",
+            "value": "12"
+          },
+          {
+            "key": "mainsail",
+            "label": "Grootzeil",
+            "value": "Doorgelat"
+          },
+          {
+            "key": "headsail",
+            "label": "Voorzeil",
+            "value": "Zelfwendende fok"
+          },
+          {
+            "key": "engine",
+            "label": "Motor",
+            "value": "2x30 HP",
+            "segments": [
+              {
+                "text": "2x30 HP",
+                "lang": "en"
+              }
+            ]
+          },
+          {
+            "key": "draught",
+            "label": "Diepgang",
+            "value": "1,35 m"
+          }
+        ],
+        "chips": ["4 hutten", "10 slaapplaatsen (8+2)", "2 WC", "max. 12 personen"],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Hutten",
+            "value": "4"
+          },
+          {
+            "key": "berths",
+            "label": "Slaapplaatsen",
+            "value": "10 (8+2)"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Max. personen",
+            "value": "12"
+          }
+        ]
+      },
+      "pl": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Kabiny",
+            "value": "4"
+          },
+          {
+            "key": "berths",
+            "label": "Koje",
+            "value": "10 (8+2)"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "2"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Maks. osób na pokładzie",
+            "value": "12"
+          },
+          {
+            "key": "mainsail",
+            "label": "Grot",
+            "value": "Pełnolistwowy"
+          },
+          {
+            "key": "headsail",
+            "label": "Żagiel przedni",
+            "value": "Fok samohalsujący"
+          },
+          {
+            "key": "engine",
+            "label": "Silnik",
+            "value": "2x30 HP",
+            "segments": [
+              {
+                "text": "2x30 HP",
+                "lang": "en"
+              }
+            ]
+          },
+          {
+            "key": "draught",
+            "label": "Zanurzenie",
+            "value": "1,35 m"
+          }
+        ],
+        "chips": ["4 kabiny", "10 koi (8+2)", "2 WC", "maks. 12 osób"],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Kabiny",
+            "value": "4"
+          },
+          {
+            "key": "berths",
+            "label": "Koje",
+            "value": "10 (8+2)"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Maks. osób",
+            "value": "12"
+          }
+        ]
+      },
+      "pt": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Cabines",
+            "value": "4"
+          },
+          {
+            "key": "berths",
+            "label": "Beliches",
+            "value": "10 (8+2)"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "2"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Máx. pessoas a bordo",
+            "value": "12"
+          },
+          {
+            "key": "mainsail",
+            "label": "Vela mestra",
+            "value": "Talas inteiras"
+          },
+          {
+            "key": "headsail",
+            "label": "Vela de proa",
+            "value": "Buja autovirante"
+          },
+          {
+            "key": "engine",
+            "label": "Motor",
+            "value": "2x30 HP",
+            "segments": [
+              {
+                "text": "2x30 HP",
+                "lang": "en"
+              }
+            ]
+          },
+          {
+            "key": "draught",
+            "label": "Calado",
+            "value": "1,35 m"
+          }
+        ],
+        "chips": ["4 cabines", "10 beliches (8+2)", "2 WC", "máx. 12 pessoas"],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Cabines",
+            "value": "4"
+          },
+          {
+            "key": "berths",
+            "label": "Beliches",
+            "value": "10 (8+2)"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Máx. pessoas",
+            "value": "12"
+          }
+        ]
+      }
+    }
+  },
+  "jangadaNs": {
+    "detail": {
+      "capacity": {
+        "cabins": {
+          "value": 4,
+          "note": null,
+          "split": null
+        },
+        "berths": {
+          "value": 12,
+          "note": null,
+          "split": {
+            "guests": null,
+            "inCabins": 8,
+            "saloon": 2,
+            "crew": 2,
+            "skipper": null
+          }
+        },
+        "heads": {
+          "value": 2,
+          "note": null,
+          "split": null
+        },
+        "crewCabins": 2,
+        "crewHeads": null,
+        "showers": null,
+        "crewShowers": null,
+        "maxPersons": 10,
+        "recommendedPersons": null,
+        "crewNumber": null
+      },
+      "rig": {
+        "mainsail": {
+          "kind": "FULL_BATTEN",
+          "label": null
+        },
+        "headsail": {
+          "kind": "SELF_TACKING_JIB",
+          "label": null
+        },
+        "engine": {
+          "label": null,
+          "count": 2,
+          "powerEach": 30
+        },
+        "draught": 1.35
+      }
+    },
+    "search": {
+      "cabins": {
+        "value": 4,
+        "note": null,
+        "split": null
+      },
+      "berths": {
+        "value": 12,
+        "note": null,
+        "split": {
+          "guests": null,
+          "inCabins": 8,
+          "saloon": 2,
+          "crew": 2,
+          "skipper": null
+        }
+      },
+      "heads": {
+        "value": 2,
+        "note": null,
+        "split": null
+      },
+      "crewCabins": 2,
+      "crewHeads": null,
+      "showers": null,
+      "crewShowers": null,
+      "maxPersons": 10,
+      "recommendedPersons": null,
+      "crewNumber": null
+    },
+    "render": {
+      "en": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Cabins",
+            "value": "4"
+          },
+          {
+            "key": "crewCabins",
+            "label": "Crew cabins",
+            "value": "2"
+          },
+          {
+            "key": "berths",
+            "label": "Berths",
+            "value": "12 (8 in cabins + 2 in the saloon + 2 crew)"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "2"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Max. people on board",
+            "value": "10"
+          },
+          {
+            "key": "mainsail",
+            "label": "Mainsail",
+            "value": "Full batten"
+          },
+          {
+            "key": "headsail",
+            "label": "Headsail",
+            "value": "Self-tacking jib"
+          },
+          {
+            "key": "engine",
+            "label": "Engine",
+            "value": "2 × 30 hp"
+          },
+          {
+            "key": "draught",
+            "label": "Draught",
+            "value": "1.35 m"
+          }
+        ],
+        "chips": ["4 cabins", "2 crew cabins", "12 berths (8 + 2 in the saloon + 2 crew)", "2 WC", "max. 10 people"],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Cabins",
+            "value": "4"
+          },
+          {
+            "key": "berths",
+            "label": "Berths",
+            "value": "12 (8 + 2 in the saloon + 2 crew)"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Max. people",
+            "value": "10"
+          }
+        ]
+      },
+      "de": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Kabinen",
+            "value": "4"
+          },
+          {
+            "key": "crewCabins",
+            "label": "Crew-Kabinen",
+            "value": "2"
+          },
+          {
+            "key": "berths",
+            "label": "Kojen",
+            "value": "12 (8 in Kabinen + 2 im Salon + 2 Crew)"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "2"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Max. Personen an Bord",
+            "value": "10"
+          },
+          {
+            "key": "mainsail",
+            "label": "Großsegel",
+            "value": "Durchgelattet"
+          },
+          {
+            "key": "headsail",
+            "label": "Vorsegel",
+            "value": "Selbstwendefock"
+          },
+          {
+            "key": "engine",
+            "label": "Motor",
+            "value": "2 × 30 PS"
+          },
+          {
+            "key": "draught",
+            "label": "Tiefgang",
+            "value": "1,35 m"
+          }
+        ],
+        "chips": ["4 Kabinen", "2 Crew-Kabinen", "12 Kojen (8 + 2 im Salon + 2 Crew)", "2 WC", "max. 10 Personen"],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Kabinen",
+            "value": "4"
+          },
+          {
+            "key": "berths",
+            "label": "Kojen",
+            "value": "12 (8 + 2 im Salon + 2 Crew)"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Max. Personen",
+            "value": "10"
+          }
+        ]
+      },
+      "es": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Camarotes",
+            "value": "4"
+          },
+          {
+            "key": "crewCabins",
+            "label": "Camarotes de la tripulación",
+            "value": "2"
+          },
+          {
+            "key": "berths",
+            "label": "Literas",
+            "value": "12 (8 en camarotes + 2 en el salón + 2 para la tripulación)"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "2"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Máx. personas a bordo",
+            "value": "10"
+          },
+          {
+            "key": "mainsail",
+            "label": "Vela mayor",
+            "value": "Sables completos"
+          },
+          {
+            "key": "headsail",
+            "label": "Vela de proa",
+            "value": "Foque autovirante"
+          },
+          {
+            "key": "engine",
+            "label": "Motor",
+            "value": "2 × 30 CV"
+          },
+          {
+            "key": "draught",
+            "label": "Calado",
+            "value": "1,35 m"
+          }
+        ],
+        "chips": [
+          "4 camarotes",
+          "2 camarotes de tripulación",
+          "12 literas (8 + 2 en el salón + 2 para la tripulación)",
+          "2 WC",
+          "máx. 10 personas"
+        ],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Camarotes",
+            "value": "4"
+          },
+          {
+            "key": "berths",
+            "label": "Literas",
+            "value": "12 (8 + 2 en el salón + 2 para la tripulación)"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Máx. personas",
+            "value": "10"
+          }
+        ]
+      },
+      "fr": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Cabines",
+            "value": "4"
+          },
+          {
+            "key": "crewCabins",
+            "label": "Cabines équipage",
+            "value": "2"
+          },
+          {
+            "key": "berths",
+            "label": "Couchettes",
+            "value": "12 (8 en cabine + 2 dans le carré + 2 pour l’équipage)"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "2"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Personnes max. à bord",
+            "value": "10"
+          },
+          {
+            "key": "mainsail",
+            "label": "Grand-voile",
+            "value": "Entièrement lattée"
+          },
+          {
+            "key": "headsail",
+            "label": "Voile d’avant",
+            "value": "Foc autovireur"
+          },
+          {
+            "key": "engine",
+            "label": "Moteur",
+            "value": "2 × 30 ch"
+          },
+          {
+            "key": "draught",
+            "label": "Tirant d’eau",
+            "value": "1,35 m"
+          }
+        ],
+        "chips": [
+          "4 cabines",
+          "2 cabines équipage",
+          "12 couchettes (8 + 2 dans le carré + 2 pour l’équipage)",
+          "2 WC",
+          "10 personnes max."
+        ],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Cabines",
+            "value": "4"
+          },
+          {
+            "key": "berths",
+            "label": "Couchettes",
+            "value": "12 (8 + 2 dans le carré + 2 pour l’équipage)"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Pers. max.",
+            "value": "10"
+          }
+        ]
+      },
+      "hr": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Kabine",
+            "value": "4"
+          },
+          {
+            "key": "crewCabins",
+            "label": "Kabine za posadu",
+            "value": "2"
+          },
+          {
+            "key": "berths",
+            "label": "Ležajevi",
+            "value": "12 (8 u kabinama + 2 u salonu + 2 za posadu)"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "2"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Maks. osoba na brodu",
+            "value": "10"
+          },
+          {
+            "key": "mainsail",
+            "label": "Glavno jedro",
+            "value": "Pune letve"
+          },
+          {
+            "key": "headsail",
+            "label": "Prednje jedro",
+            "value": "Samookretni flok"
+          },
+          {
+            "key": "engine",
+            "label": "Motor",
+            "value": "2 × 30 KS"
+          },
+          {
+            "key": "draught",
+            "label": "Gaz",
+            "value": "1,35 m"
+          }
+        ],
+        "chips": [
+          "4 kabine",
+          "2 kabine za posadu",
+          "12 ležajeva (8 + 2 u salonu + 2 za posadu)",
+          "2 WC",
+          "maks. 10 osoba"
+        ],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Kabine",
+            "value": "4"
+          },
+          {
+            "key": "berths",
+            "label": "Ležajevi",
+            "value": "12 (8 + 2 u salonu + 2 za posadu)"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Maks. osoba",
+            "value": "10"
+          }
+        ]
+      },
+      "it": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Cabine",
+            "value": "4"
+          },
+          {
+            "key": "crewCabins",
+            "label": "Cabine equipaggio",
+            "value": "2"
+          },
+          {
+            "key": "berths",
+            "label": "Posti letto",
+            "value": "12 (8 in cabina + 2 in dinette + 2 per l’equipaggio)"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "2"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Max. persone a bordo",
+            "value": "10"
+          },
+          {
+            "key": "mainsail",
+            "label": "Randa",
+            "value": "Steccata"
+          },
+          {
+            "key": "headsail",
+            "label": "Vela di prua",
+            "value": "Fiocco autovirante"
+          },
+          {
+            "key": "engine",
+            "label": "Motore",
+            "value": "2 × 30 CV"
+          },
+          {
+            "key": "draught",
+            "label": "Pescaggio",
+            "value": "1,35 m"
+          }
+        ],
+        "chips": [
+          "4 cabine",
+          "2 cabine equipaggio",
+          "12 posti letto (8 + 2 in dinette + 2 per l’equipaggio)",
+          "2 WC",
+          "max. 10 persone"
+        ],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Cabine",
+            "value": "4"
+          },
+          {
+            "key": "berths",
+            "label": "Posti letto",
+            "value": "12 (8 + 2 in dinette + 2 per l’equipaggio)"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Max. persone",
+            "value": "10"
+          }
+        ]
+      },
+      "nl": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Hutten",
+            "value": "4"
+          },
+          {
+            "key": "crewCabins",
+            "label": "Bemanningshutten",
+            "value": "2"
+          },
+          {
+            "key": "berths",
+            "label": "Slaapplaatsen",
+            "value": "12 (8 in hutten + 2 in de salon + 2 voor de bemanning)"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "2"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Max. personen aan boord",
+            "value": "10"
+          },
+          {
+            "key": "mainsail",
+            "label": "Grootzeil",
+            "value": "Doorgelat"
+          },
+          {
+            "key": "headsail",
+            "label": "Voorzeil",
+            "value": "Zelfwendende fok"
+          },
+          {
+            "key": "engine",
+            "label": "Motor",
+            "value": "2 × 30 pk"
+          },
+          {
+            "key": "draught",
+            "label": "Diepgang",
+            "value": "1,35 m"
+          }
+        ],
+        "chips": [
+          "4 hutten",
+          "2 bemanningshutten",
+          "12 slaapplaatsen (8 + 2 in de salon + 2 voor de bemanning)",
+          "2 WC",
+          "max. 10 personen"
+        ],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Hutten",
+            "value": "4"
+          },
+          {
+            "key": "berths",
+            "label": "Slaapplaatsen",
+            "value": "12 (8 + 2 in de salon + 2 voor de bemanning)"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Max. personen",
+            "value": "10"
+          }
+        ]
+      },
+      "pl": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Kabiny",
+            "value": "4"
+          },
+          {
+            "key": "crewCabins",
+            "label": "Kabiny załogi",
+            "value": "2"
+          },
+          {
+            "key": "berths",
+            "label": "Koje",
+            "value": "12 (8 w kabinach + 2 w mesie + 2 dla załogi)"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "2"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Maks. osób na pokładzie",
+            "value": "10"
+          },
+          {
+            "key": "mainsail",
+            "label": "Grot",
+            "value": "Pełnolistwowy"
+          },
+          {
+            "key": "headsail",
+            "label": "Żagiel przedni",
+            "value": "Fok samohalsujący"
+          },
+          {
+            "key": "engine",
+            "label": "Silnik",
+            "value": "2 × 30 KM"
+          },
+          {
+            "key": "draught",
+            "label": "Zanurzenie",
+            "value": "1,35 m"
+          }
+        ],
+        "chips": ["4 kabiny", "2 kabiny załogi", "12 koi (8 + 2 w mesie + 2 dla załogi)", "2 WC", "maks. 10 osób"],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Kabiny",
+            "value": "4"
+          },
+          {
+            "key": "berths",
+            "label": "Koje",
+            "value": "12 (8 + 2 w mesie + 2 dla załogi)"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Maks. osób",
+            "value": "10"
+          }
+        ]
+      },
+      "pt": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Cabines",
+            "value": "4"
+          },
+          {
+            "key": "crewCabins",
+            "label": "Cabines da tripulação",
+            "value": "2"
+          },
+          {
+            "key": "berths",
+            "label": "Beliches",
+            "value": "12 (8 nas cabines + 2 no salão + 2 para a tripulação)"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "2"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Máx. pessoas a bordo",
+            "value": "10"
+          },
+          {
+            "key": "mainsail",
+            "label": "Vela mestra",
+            "value": "Talas inteiras"
+          },
+          {
+            "key": "headsail",
+            "label": "Vela de proa",
+            "value": "Buja autovirante"
+          },
+          {
+            "key": "engine",
+            "label": "Motor",
+            "value": "2 × 30 cv"
+          },
+          {
+            "key": "draught",
+            "label": "Calado",
+            "value": "1,35 m"
+          }
+        ],
+        "chips": [
+          "4 cabines",
+          "2 cabines da tripulação",
+          "12 beliches (8 + 2 no salão + 2 para a tripulação)",
+          "2 WC",
+          "máx. 10 pessoas"
+        ],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Cabines",
+            "value": "4"
+          },
+          {
+            "key": "berths",
+            "label": "Beliches",
+            "value": "12 (8 + 2 no salão + 2 para a tripulação)"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Máx. pessoas",
+            "value": "10"
+          }
+        ]
+      }
+    }
+  },
+  "pnoe": {
+    "detail": {
+      "capacity": {
+        "cabins": {
+          "value": 4,
+          "note": "+2",
+          "split": null
+        },
+        "berths": {
+          "value": 10,
+          "note": "- 4 double ensuite cabins +2 at forepeak cabins - no toilet",
+          "split": null
+        },
+        "heads": {
+          "value": 4,
+          "note": null,
+          "split": null
+        },
+        "crewCabins": null,
+        "crewHeads": null,
+        "showers": null,
+        "crewShowers": null,
+        "maxPersons": 12,
+        "recommendedPersons": null,
+        "crewNumber": null
+      },
+      "rig": {
+        "mainsail": {
+          "kind": "FULL_BATTEN",
+          "label": null
+        },
+        "headsail": {
+          "kind": "SELF_TACKING_JIB",
+          "label": null
+        },
+        "engine": {
+          "label": "2x57 hp",
+          "count": null,
+          "powerEach": null
+        },
+        "draught": 1.35
+      }
+    },
+    "search": {
+      "cabins": {
+        "value": 4,
+        "note": "+2",
+        "split": null
+      },
+      "berths": {
+        "value": 10,
+        "note": null,
+        "split": null
+      },
+      "heads": {
+        "value": 4,
+        "note": null,
+        "split": null
+      },
+      "crewCabins": null,
+      "crewHeads": null,
+      "showers": null,
+      "crewShowers": null,
+      "maxPersons": 12,
+      "recommendedPersons": null,
+      "crewNumber": null
+    },
+    "render": {
+      "en": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Cabins",
+            "value": "4 +2"
+          },
+          {
+            "key": "berths",
+            "label": "Berths",
+            "value": "10 - 4 double ensuite cabins +2 at forepeak cabins - no toilet"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "4"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Max. people on board",
+            "value": "12"
+          },
+          {
+            "key": "mainsail",
+            "label": "Mainsail",
+            "value": "Full batten"
+          },
+          {
+            "key": "headsail",
+            "label": "Headsail",
+            "value": "Self-tacking jib"
+          },
+          {
+            "key": "engine",
+            "label": "Engine",
+            "value": "2x57 hp"
+          },
+          {
+            "key": "draught",
+            "label": "Draught",
+            "value": "1.35 m"
+          }
+        ],
+        "chips": ["4 cabins +2", "10 berths", "4 WC", "max. 12 people"],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Cabins",
+            "value": "4 +2"
+          },
+          {
+            "key": "berths",
+            "label": "Berths",
+            "value": "10"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Max. people",
+            "value": "12"
+          }
+        ]
+      },
+      "de": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Kabinen",
+            "value": "4 +2"
+          },
+          {
+            "key": "berths",
+            "label": "Kojen",
+            "value": "10 - 4 Doppelkabinen mit eigenem Bad +2 in Vorpiekkabinen - ohne WC"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "4"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Max. Personen an Bord",
+            "value": "12"
+          },
+          {
+            "key": "mainsail",
+            "label": "Großsegel",
+            "value": "Durchgelattet"
+          },
+          {
+            "key": "headsail",
+            "label": "Vorsegel",
+            "value": "Selbstwendefock"
+          },
+          {
+            "key": "engine",
+            "label": "Motor",
+            "value": "2x57 hp",
+            "segments": [
+              {
+                "text": "2x57 hp",
+                "lang": "en"
+              }
+            ]
+          },
+          {
+            "key": "draught",
+            "label": "Tiefgang",
+            "value": "1,35 m"
+          }
+        ],
+        "chips": ["4 Kabinen +2", "10 Kojen", "4 WC", "max. 12 Personen"],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Kabinen",
+            "value": "4 +2"
+          },
+          {
+            "key": "berths",
+            "label": "Kojen",
+            "value": "10"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Max. Personen",
+            "value": "12"
+          }
+        ]
+      },
+      "es": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Camarotes",
+            "value": "4 +2"
+          },
+          {
+            "key": "berths",
+            "label": "Literas",
+            "value": "10 - 4 camarotes dobles con baño privado +2 en camarotes de proa - sin WC"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "4"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Máx. personas a bordo",
+            "value": "12"
+          },
+          {
+            "key": "mainsail",
+            "label": "Vela mayor",
+            "value": "Sables completos"
+          },
+          {
+            "key": "headsail",
+            "label": "Vela de proa",
+            "value": "Foque autovirante"
+          },
+          {
+            "key": "engine",
+            "label": "Motor",
+            "value": "2x57 hp",
+            "segments": [
+              {
+                "text": "2x57 hp",
+                "lang": "en"
+              }
+            ]
+          },
+          {
+            "key": "draught",
+            "label": "Calado",
+            "value": "1,35 m"
+          }
+        ],
+        "chips": ["4 camarotes +2", "10 literas", "4 WC", "máx. 12 personas"],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Camarotes",
+            "value": "4 +2"
+          },
+          {
+            "key": "berths",
+            "label": "Literas",
+            "value": "10"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Máx. personas",
+            "value": "12"
+          }
+        ]
+      },
+      "fr": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Cabines",
+            "value": "4 +2"
+          },
+          {
+            "key": "berths",
+            "label": "Couchettes",
+            "value": "10 - 4 cabines doubles avec salle d’eau privative +2 en cabines de pointe avant - sans WC"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "4"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Personnes max. à bord",
+            "value": "12"
+          },
+          {
+            "key": "mainsail",
+            "label": "Grand-voile",
+            "value": "Entièrement lattée"
+          },
+          {
+            "key": "headsail",
+            "label": "Voile d’avant",
+            "value": "Foc autovireur"
+          },
+          {
+            "key": "engine",
+            "label": "Moteur",
+            "value": "2x57 hp",
+            "segments": [
+              {
+                "text": "2x57 hp",
+                "lang": "en"
+              }
+            ]
+          },
+          {
+            "key": "draught",
+            "label": "Tirant d’eau",
+            "value": "1,35 m"
+          }
+        ],
+        "chips": ["4 cabines +2", "10 couchettes", "4 WC", "12 personnes max."],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Cabines",
+            "value": "4 +2"
+          },
+          {
+            "key": "berths",
+            "label": "Couchettes",
+            "value": "10"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Pers. max.",
+            "value": "12"
+          }
+        ]
+      },
+      "hr": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Kabine",
+            "value": "4 +2"
+          },
+          {
+            "key": "berths",
+            "label": "Ležajevi",
+            "value": "10 - 4 dvokrevetne kabine s vlastitom kupaonicom +2 u pramčanim kabinama - bez WC-a"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "4"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Maks. osoba na brodu",
+            "value": "12"
+          },
+          {
+            "key": "mainsail",
+            "label": "Glavno jedro",
+            "value": "Pune letve"
+          },
+          {
+            "key": "headsail",
+            "label": "Prednje jedro",
+            "value": "Samookretni flok"
+          },
+          {
+            "key": "engine",
+            "label": "Motor",
+            "value": "2x57 hp",
+            "segments": [
+              {
+                "text": "2x57 hp",
+                "lang": "en"
+              }
+            ]
+          },
+          {
+            "key": "draught",
+            "label": "Gaz",
+            "value": "1,35 m"
+          }
+        ],
+        "chips": ["4 kabine +2", "10 ležajeva", "4 WC", "maks. 12 osoba"],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Kabine",
+            "value": "4 +2"
+          },
+          {
+            "key": "berths",
+            "label": "Ležajevi",
+            "value": "10"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Maks. osoba",
+            "value": "12"
+          }
+        ]
+      },
+      "it": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Cabine",
+            "value": "4 +2"
+          },
+          {
+            "key": "berths",
+            "label": "Posti letto",
+            "value": "10 - 4 cabine doppie con bagno privato +2 in cabine di prua - senza WC"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "4"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Max. persone a bordo",
+            "value": "12"
+          },
+          {
+            "key": "mainsail",
+            "label": "Randa",
+            "value": "Steccata"
+          },
+          {
+            "key": "headsail",
+            "label": "Vela di prua",
+            "value": "Fiocco autovirante"
+          },
+          {
+            "key": "engine",
+            "label": "Motore",
+            "value": "2x57 hp",
+            "segments": [
+              {
+                "text": "2x57 hp",
+                "lang": "en"
+              }
+            ]
+          },
+          {
+            "key": "draught",
+            "label": "Pescaggio",
+            "value": "1,35 m"
+          }
+        ],
+        "chips": ["4 cabine +2", "10 posti letto", "4 WC", "max. 12 persone"],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Cabine",
+            "value": "4 +2"
+          },
+          {
+            "key": "berths",
+            "label": "Posti letto",
+            "value": "10"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Max. persone",
+            "value": "12"
+          }
+        ]
+      },
+      "nl": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Hutten",
+            "value": "4 +2"
+          },
+          {
+            "key": "berths",
+            "label": "Slaapplaatsen",
+            "value": "10 - 4 tweepersoonshutten met eigen badkamer +2 in voorpiekhutten - geen toilet"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "4"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Max. personen aan boord",
+            "value": "12"
+          },
+          {
+            "key": "mainsail",
+            "label": "Grootzeil",
+            "value": "Doorgelat"
+          },
+          {
+            "key": "headsail",
+            "label": "Voorzeil",
+            "value": "Zelfwendende fok"
+          },
+          {
+            "key": "engine",
+            "label": "Motor",
+            "value": "2x57 hp",
+            "segments": [
+              {
+                "text": "2x57 hp",
+                "lang": "en"
+              }
+            ]
+          },
+          {
+            "key": "draught",
+            "label": "Diepgang",
+            "value": "1,35 m"
+          }
+        ],
+        "chips": ["4 hutten +2", "10 slaapplaatsen", "4 WC", "max. 12 personen"],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Hutten",
+            "value": "4 +2"
+          },
+          {
+            "key": "berths",
+            "label": "Slaapplaatsen",
+            "value": "10"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Max. personen",
+            "value": "12"
+          }
+        ]
+      },
+      "pl": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Kabiny",
+            "value": "4 +2"
+          },
+          {
+            "key": "berths",
+            "label": "Koje",
+            "value": "10 - 4 kabiny dwuosobowe z łazienką +2 w kabinach dziobowych - bez toalety"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "4"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Maks. osób na pokładzie",
+            "value": "12"
+          },
+          {
+            "key": "mainsail",
+            "label": "Grot",
+            "value": "Pełnolistwowy"
+          },
+          {
+            "key": "headsail",
+            "label": "Żagiel przedni",
+            "value": "Fok samohalsujący"
+          },
+          {
+            "key": "engine",
+            "label": "Silnik",
+            "value": "2x57 hp",
+            "segments": [
+              {
+                "text": "2x57 hp",
+                "lang": "en"
+              }
+            ]
+          },
+          {
+            "key": "draught",
+            "label": "Zanurzenie",
+            "value": "1,35 m"
+          }
+        ],
+        "chips": ["4 kabiny +2", "10 koi", "4 WC", "maks. 12 osób"],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Kabiny",
+            "value": "4 +2"
+          },
+          {
+            "key": "berths",
+            "label": "Koje",
+            "value": "10"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Maks. osób",
+            "value": "12"
+          }
+        ]
+      },
+      "pt": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Cabines",
+            "value": "4 +2"
+          },
+          {
+            "key": "berths",
+            "label": "Beliches",
+            "value": "10 - 4 cabines duplas com banheiro privativo +2 em cabines de proa - sem WC"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "4"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Máx. pessoas a bordo",
+            "value": "12"
+          },
+          {
+            "key": "mainsail",
+            "label": "Vela mestra",
+            "value": "Talas inteiras"
+          },
+          {
+            "key": "headsail",
+            "label": "Vela de proa",
+            "value": "Buja autovirante"
+          },
+          {
+            "key": "engine",
+            "label": "Motor",
+            "value": "2x57 hp",
+            "segments": [
+              {
+                "text": "2x57 hp",
+                "lang": "en"
+              }
+            ]
+          },
+          {
+            "key": "draught",
+            "label": "Calado",
+            "value": "1,35 m"
+          }
+        ],
+        "chips": ["4 cabines +2", "10 beliches", "4 WC", "máx. 12 pessoas"],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Cabines",
+            "value": "4 +2"
+          },
+          {
+            "key": "berths",
+            "label": "Beliches",
+            "value": "10"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Máx. pessoas",
+            "value": "12"
+          }
+        ]
+      }
+    }
+  },
+  "lpp": {
+    "detail": {
+      "capacity": {
+        "cabins": {
+          "value": 3,
+          "note": null,
+          "split": null
+        },
+        "berths": {
+          "value": 8,
+          "note": null,
+          "split": {
+            "guests": null,
+            "inCabins": 6,
+            "saloon": 2,
+            "crew": null,
+            "skipper": null
+          }
+        },
+        "heads": {
+          "value": 2,
+          "note": null,
+          "split": null
+        },
+        "crewCabins": null,
+        "crewHeads": null,
+        "showers": null,
+        "crewShowers": null,
+        "maxPersons": null,
+        "recommendedPersons": null,
+        "crewNumber": null
+      },
+      "rig": {
+        "mainsail": {
+          "kind": "FULL_BATTEN",
+          "label": null
+        },
+        "headsail": {
+          "kind": "SELF_TACKING_JIB",
+          "label": null
+        },
+        "engine": {
+          "label": null,
+          "count": 2,
+          "powerEach": 30
+        },
+        "draught": 1.1
+      }
+    },
+    "search": {
+      "cabins": {
+        "value": 3,
+        "note": null,
+        "split": null
+      },
+      "berths": {
+        "value": 8,
+        "note": null,
+        "split": {
+          "guests": null,
+          "inCabins": 6,
+          "saloon": 2,
+          "crew": null,
+          "skipper": null
+        }
+      },
+      "heads": {
+        "value": 2,
+        "note": null,
+        "split": null
+      },
+      "crewCabins": null,
+      "crewHeads": null,
+      "showers": null,
+      "crewShowers": null,
+      "maxPersons": null,
+      "recommendedPersons": null,
+      "crewNumber": null
+    },
+    "render": {
+      "en": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Cabins",
+            "value": "3"
+          },
+          {
+            "key": "berths",
+            "label": "Berths",
+            "value": "8 (6 in cabins + 2 in the saloon)"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "2"
+          },
+          {
+            "key": "mainsail",
+            "label": "Mainsail",
+            "value": "Full batten"
+          },
+          {
+            "key": "headsail",
+            "label": "Headsail",
+            "value": "Self-tacking jib"
+          },
+          {
+            "key": "engine",
+            "label": "Engine",
+            "value": "2 × 30 hp"
+          },
+          {
+            "key": "draught",
+            "label": "Draught",
+            "value": "1.1 m"
+          }
+        ],
+        "chips": ["3 cabins", "8 berths (6 + 2 in the saloon)", "2 WC"],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Cabins",
+            "value": "3"
+          },
+          {
+            "key": "berths",
+            "label": "Berths",
+            "value": "8 (6 + 2 in the saloon)"
+          }
+        ]
+      },
+      "de": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Kabinen",
+            "value": "3"
+          },
+          {
+            "key": "berths",
+            "label": "Kojen",
+            "value": "8 (6 in Kabinen + 2 im Salon)"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "2"
+          },
+          {
+            "key": "mainsail",
+            "label": "Großsegel",
+            "value": "Durchgelattet"
+          },
+          {
+            "key": "headsail",
+            "label": "Vorsegel",
+            "value": "Selbstwendefock"
+          },
+          {
+            "key": "engine",
+            "label": "Motor",
+            "value": "2 × 30 PS"
+          },
+          {
+            "key": "draught",
+            "label": "Tiefgang",
+            "value": "1,1 m"
+          }
+        ],
+        "chips": ["3 Kabinen", "8 Kojen (6 + 2 im Salon)", "2 WC"],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Kabinen",
+            "value": "3"
+          },
+          {
+            "key": "berths",
+            "label": "Kojen",
+            "value": "8 (6 + 2 im Salon)"
+          }
+        ]
+      },
+      "es": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Camarotes",
+            "value": "3"
+          },
+          {
+            "key": "berths",
+            "label": "Literas",
+            "value": "8 (6 en camarotes + 2 en el salón)"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "2"
+          },
+          {
+            "key": "mainsail",
+            "label": "Vela mayor",
+            "value": "Sables completos"
+          },
+          {
+            "key": "headsail",
+            "label": "Vela de proa",
+            "value": "Foque autovirante"
+          },
+          {
+            "key": "engine",
+            "label": "Motor",
+            "value": "2 × 30 CV"
+          },
+          {
+            "key": "draught",
+            "label": "Calado",
+            "value": "1,1 m"
+          }
+        ],
+        "chips": ["3 camarotes", "8 literas (6 + 2 en el salón)", "2 WC"],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Camarotes",
+            "value": "3"
+          },
+          {
+            "key": "berths",
+            "label": "Literas",
+            "value": "8 (6 + 2 en el salón)"
+          }
+        ]
+      },
+      "fr": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Cabines",
+            "value": "3"
+          },
+          {
+            "key": "berths",
+            "label": "Couchettes",
+            "value": "8 (6 en cabine + 2 dans le carré)"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "2"
+          },
+          {
+            "key": "mainsail",
+            "label": "Grand-voile",
+            "value": "Entièrement lattée"
+          },
+          {
+            "key": "headsail",
+            "label": "Voile d’avant",
+            "value": "Foc autovireur"
+          },
+          {
+            "key": "engine",
+            "label": "Moteur",
+            "value": "2 × 30 ch"
+          },
+          {
+            "key": "draught",
+            "label": "Tirant d’eau",
+            "value": "1,1 m"
+          }
+        ],
+        "chips": ["3 cabines", "8 couchettes (6 + 2 dans le carré)", "2 WC"],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Cabines",
+            "value": "3"
+          },
+          {
+            "key": "berths",
+            "label": "Couchettes",
+            "value": "8 (6 + 2 dans le carré)"
+          }
+        ]
+      },
+      "hr": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Kabine",
+            "value": "3"
+          },
+          {
+            "key": "berths",
+            "label": "Ležajevi",
+            "value": "8 (6 u kabinama + 2 u salonu)"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "2"
+          },
+          {
+            "key": "mainsail",
+            "label": "Glavno jedro",
+            "value": "Pune letve"
+          },
+          {
+            "key": "headsail",
+            "label": "Prednje jedro",
+            "value": "Samookretni flok"
+          },
+          {
+            "key": "engine",
+            "label": "Motor",
+            "value": "2 × 30 KS"
+          },
+          {
+            "key": "draught",
+            "label": "Gaz",
+            "value": "1,1 m"
+          }
+        ],
+        "chips": ["3 kabine", "8 ležajeva (6 + 2 u salonu)", "2 WC"],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Kabine",
+            "value": "3"
+          },
+          {
+            "key": "berths",
+            "label": "Ležajevi",
+            "value": "8 (6 + 2 u salonu)"
+          }
+        ]
+      },
+      "it": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Cabine",
+            "value": "3"
+          },
+          {
+            "key": "berths",
+            "label": "Posti letto",
+            "value": "8 (6 in cabina + 2 in dinette)"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "2"
+          },
+          {
+            "key": "mainsail",
+            "label": "Randa",
+            "value": "Steccata"
+          },
+          {
+            "key": "headsail",
+            "label": "Vela di prua",
+            "value": "Fiocco autovirante"
+          },
+          {
+            "key": "engine",
+            "label": "Motore",
+            "value": "2 × 30 CV"
+          },
+          {
+            "key": "draught",
+            "label": "Pescaggio",
+            "value": "1,1 m"
+          }
+        ],
+        "chips": ["3 cabine", "8 posti letto (6 + 2 in dinette)", "2 WC"],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Cabine",
+            "value": "3"
+          },
+          {
+            "key": "berths",
+            "label": "Posti letto",
+            "value": "8 (6 + 2 in dinette)"
+          }
+        ]
+      },
+      "nl": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Hutten",
+            "value": "3"
+          },
+          {
+            "key": "berths",
+            "label": "Slaapplaatsen",
+            "value": "8 (6 in hutten + 2 in de salon)"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "2"
+          },
+          {
+            "key": "mainsail",
+            "label": "Grootzeil",
+            "value": "Doorgelat"
+          },
+          {
+            "key": "headsail",
+            "label": "Voorzeil",
+            "value": "Zelfwendende fok"
+          },
+          {
+            "key": "engine",
+            "label": "Motor",
+            "value": "2 × 30 pk"
+          },
+          {
+            "key": "draught",
+            "label": "Diepgang",
+            "value": "1,1 m"
+          }
+        ],
+        "chips": ["3 hutten", "8 slaapplaatsen (6 + 2 in de salon)", "2 WC"],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Hutten",
+            "value": "3"
+          },
+          {
+            "key": "berths",
+            "label": "Slaapplaatsen",
+            "value": "8 (6 + 2 in de salon)"
+          }
+        ]
+      },
+      "pl": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Kabiny",
+            "value": "3"
+          },
+          {
+            "key": "berths",
+            "label": "Koje",
+            "value": "8 (6 w kabinach + 2 w mesie)"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "2"
+          },
+          {
+            "key": "mainsail",
+            "label": "Grot",
+            "value": "Pełnolistwowy"
+          },
+          {
+            "key": "headsail",
+            "label": "Żagiel przedni",
+            "value": "Fok samohalsujący"
+          },
+          {
+            "key": "engine",
+            "label": "Silnik",
+            "value": "2 × 30 KM"
+          },
+          {
+            "key": "draught",
+            "label": "Zanurzenie",
+            "value": "1,1 m"
+          }
+        ],
+        "chips": ["3 kabiny", "8 koi (6 + 2 w mesie)", "2 WC"],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Kabiny",
+            "value": "3"
+          },
+          {
+            "key": "berths",
+            "label": "Koje",
+            "value": "8 (6 + 2 w mesie)"
+          }
+        ]
+      },
+      "pt": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Cabines",
+            "value": "3"
+          },
+          {
+            "key": "berths",
+            "label": "Beliches",
+            "value": "8 (6 nas cabines + 2 no salão)"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "2"
+          },
+          {
+            "key": "mainsail",
+            "label": "Vela mestra",
+            "value": "Talas inteiras"
+          },
+          {
+            "key": "headsail",
+            "label": "Vela de proa",
+            "value": "Buja autovirante"
+          },
+          {
+            "key": "engine",
+            "label": "Motor",
+            "value": "2 × 30 cv"
+          },
+          {
+            "key": "draught",
+            "label": "Calado",
+            "value": "1,1 m"
+          }
+        ],
+        "chips": ["3 cabines", "8 beliches (6 + 2 no salão)", "2 WC"],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Cabines",
+            "value": "3"
+          },
+          {
+            "key": "berths",
+            "label": "Beliches",
+            "value": "8 (6 + 2 no salão)"
+          }
+        ]
+      }
+    }
+  },
+  "marea": {
+    "detail": {
+      "capacity": {
+        "cabins": {
+          "value": 5,
+          "note": null,
+          "split": null
+        },
+        "berths": {
+          "value": 12,
+          "note": null,
+          "split": {
+            "guests": null,
+            "inCabins": 10,
+            "saloon": null,
+            "crew": 2,
+            "skipper": null
+          }
+        },
+        "heads": {
+          "value": 5,
+          "note": null,
+          "split": null
+        },
+        "crewCabins": 2,
+        "crewHeads": 2,
+        "showers": null,
+        "crewShowers": null,
+        "maxPersons": 12,
+        "recommendedPersons": 10,
+        "crewNumber": 2
+      },
+      "rig": {
+        "mainsail": {
+          "kind": "FULL_BATTEN",
+          "label": null
+        },
+        "headsail": null,
+        "engine": {
+          "label": null,
+          "count": 2,
+          "powerEach": 115
+        },
+        "draught": 1.48
+      }
+    },
+    "search": {
+      "cabins": {
+        "value": 5,
+        "note": null,
+        "split": null
+      },
+      "berths": {
+        "value": 12,
+        "note": null,
+        "split": {
+          "guests": null,
+          "inCabins": 10,
+          "saloon": null,
+          "crew": 2,
+          "skipper": null
+        }
+      },
+      "heads": {
+        "value": 5,
+        "note": null,
+        "split": null
+      },
+      "crewCabins": 2,
+      "crewHeads": 2,
+      "showers": null,
+      "crewShowers": null,
+      "maxPersons": 12,
+      "recommendedPersons": 10,
+      "crewNumber": 2
+    },
+    "render": {
+      "en": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Cabins",
+            "value": "5"
+          },
+          {
+            "key": "crewCabins",
+            "label": "Crew cabins",
+            "value": "2"
+          },
+          {
+            "key": "berths",
+            "label": "Berths",
+            "value": "12 (10 in cabins + 2 crew)"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "5"
+          },
+          {
+            "key": "crewHeads",
+            "label": "Crew WC",
+            "value": "2"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Max. people on board",
+            "value": "12 (recommended 10)"
+          },
+          {
+            "key": "crew",
+            "label": "Crew",
+            "value": "2"
+          },
+          {
+            "key": "mainsail",
+            "label": "Mainsail",
+            "value": "Full batten"
+          },
+          {
+            "key": "engine",
+            "label": "Engine",
+            "value": "2 × 115 hp"
+          },
+          {
+            "key": "draught",
+            "label": "Draught",
+            "value": "1.48 m"
+          }
+        ],
+        "chips": [
+          "5 cabins",
+          "2 crew cabins",
+          "12 berths (10 + 2 crew)",
+          "5 WC",
+          "2 crew WC",
+          "max. 12 people",
+          "2 crew members"
+        ],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Cabins",
+            "value": "5"
+          },
+          {
+            "key": "berths",
+            "label": "Berths",
+            "value": "12 (10 + 2 crew)"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Max. people",
+            "value": "12"
+          }
+        ]
+      },
+      "de": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Kabinen",
+            "value": "5"
+          },
+          {
+            "key": "crewCabins",
+            "label": "Crew-Kabinen",
+            "value": "2"
+          },
+          {
+            "key": "berths",
+            "label": "Kojen",
+            "value": "12 (10 in Kabinen + 2 Crew)"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "5"
+          },
+          {
+            "key": "crewHeads",
+            "label": "Crew-WC",
+            "value": "2"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Max. Personen an Bord",
+            "value": "12 (empfohlen: 10)"
+          },
+          {
+            "key": "crew",
+            "label": "Crew",
+            "value": "2"
+          },
+          {
+            "key": "mainsail",
+            "label": "Großsegel",
+            "value": "Durchgelattet"
+          },
+          {
+            "key": "engine",
+            "label": "Motor",
+            "value": "2 × 115 PS"
+          },
+          {
+            "key": "draught",
+            "label": "Tiefgang",
+            "value": "1,48 m"
+          }
+        ],
+        "chips": [
+          "5 Kabinen",
+          "2 Crew-Kabinen",
+          "12 Kojen (10 + 2 Crew)",
+          "5 WC",
+          "2 Crew-WC",
+          "max. 12 Personen",
+          "2 Crew-Mitglieder"
+        ],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Kabinen",
+            "value": "5"
+          },
+          {
+            "key": "berths",
+            "label": "Kojen",
+            "value": "12 (10 + 2 Crew)"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Max. Personen",
+            "value": "12"
+          }
+        ]
+      },
+      "es": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Camarotes",
+            "value": "5"
+          },
+          {
+            "key": "crewCabins",
+            "label": "Camarotes de la tripulación",
+            "value": "2"
+          },
+          {
+            "key": "berths",
+            "label": "Literas",
+            "value": "12 (10 en camarotes + 2 para la tripulación)"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "5"
+          },
+          {
+            "key": "crewHeads",
+            "label": "WC de la tripulación",
+            "value": "2"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Máx. personas a bordo",
+            "value": "12 (recomendado: 10)"
+          },
+          {
+            "key": "crew",
+            "label": "Tripulación",
+            "value": "2"
+          },
+          {
+            "key": "mainsail",
+            "label": "Vela mayor",
+            "value": "Sables completos"
+          },
+          {
+            "key": "engine",
+            "label": "Motor",
+            "value": "2 × 115 CV"
+          },
+          {
+            "key": "draught",
+            "label": "Calado",
+            "value": "1,48 m"
+          }
+        ],
+        "chips": [
+          "5 camarotes",
+          "2 camarotes de tripulación",
+          "12 literas (10 + 2 para la tripulación)",
+          "5 WC",
+          "2 WC de tripulación",
+          "máx. 12 personas",
+          "2 tripulantes"
+        ],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Camarotes",
+            "value": "5"
+          },
+          {
+            "key": "berths",
+            "label": "Literas",
+            "value": "12 (10 + 2 para la tripulación)"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Máx. personas",
+            "value": "12"
+          }
+        ]
+      },
+      "fr": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Cabines",
+            "value": "5"
+          },
+          {
+            "key": "crewCabins",
+            "label": "Cabines équipage",
+            "value": "2"
+          },
+          {
+            "key": "berths",
+            "label": "Couchettes",
+            "value": "12 (10 en cabine + 2 pour l’équipage)"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "5"
+          },
+          {
+            "key": "crewHeads",
+            "label": "WC équipage",
+            "value": "2"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Personnes max. à bord",
+            "value": "12 (recommandé : 10)"
+          },
+          {
+            "key": "crew",
+            "label": "Équipage",
+            "value": "2"
+          },
+          {
+            "key": "mainsail",
+            "label": "Grand-voile",
+            "value": "Entièrement lattée"
+          },
+          {
+            "key": "engine",
+            "label": "Moteur",
+            "value": "2 × 115 ch"
+          },
+          {
+            "key": "draught",
+            "label": "Tirant d’eau",
+            "value": "1,48 m"
+          }
+        ],
+        "chips": [
+          "5 cabines",
+          "2 cabines équipage",
+          "12 couchettes (10 + 2 pour l’équipage)",
+          "5 WC",
+          "2 WC équipage",
+          "12 personnes max.",
+          "2 membres d’équipage"
+        ],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Cabines",
+            "value": "5"
+          },
+          {
+            "key": "berths",
+            "label": "Couchettes",
+            "value": "12 (10 + 2 pour l’équipage)"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Pers. max.",
+            "value": "12"
+          }
+        ]
+      },
+      "hr": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Kabine",
+            "value": "5"
+          },
+          {
+            "key": "crewCabins",
+            "label": "Kabine za posadu",
+            "value": "2"
+          },
+          {
+            "key": "berths",
+            "label": "Ležajevi",
+            "value": "12 (10 u kabinama + 2 za posadu)"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "5"
+          },
+          {
+            "key": "crewHeads",
+            "label": "WC za posadu",
+            "value": "2"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Maks. osoba na brodu",
+            "value": "12 (preporučeno: 10)"
+          },
+          {
+            "key": "crew",
+            "label": "Posada",
+            "value": "2"
+          },
+          {
+            "key": "mainsail",
+            "label": "Glavno jedro",
+            "value": "Pune letve"
+          },
+          {
+            "key": "engine",
+            "label": "Motor",
+            "value": "2 × 115 KS"
+          },
+          {
+            "key": "draught",
+            "label": "Gaz",
+            "value": "1,48 m"
+          }
+        ],
+        "chips": [
+          "5 kabina",
+          "2 kabine za posadu",
+          "12 ležajeva (10 + 2 za posadu)",
+          "5 WC",
+          "2 WC za posadu",
+          "maks. 12 osoba",
+          "2 člana posade"
+        ],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Kabine",
+            "value": "5"
+          },
+          {
+            "key": "berths",
+            "label": "Ležajevi",
+            "value": "12 (10 + 2 za posadu)"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Maks. osoba",
+            "value": "12"
+          }
+        ]
+      },
+      "it": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Cabine",
+            "value": "5"
+          },
+          {
+            "key": "crewCabins",
+            "label": "Cabine equipaggio",
+            "value": "2"
+          },
+          {
+            "key": "berths",
+            "label": "Posti letto",
+            "value": "12 (10 in cabina + 2 per l’equipaggio)"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "5"
+          },
+          {
+            "key": "crewHeads",
+            "label": "WC equipaggio",
+            "value": "2"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Max. persone a bordo",
+            "value": "12 (consigliato: 10)"
+          },
+          {
+            "key": "crew",
+            "label": "Equipaggio",
+            "value": "2"
+          },
+          {
+            "key": "mainsail",
+            "label": "Randa",
+            "value": "Steccata"
+          },
+          {
+            "key": "engine",
+            "label": "Motore",
+            "value": "2 × 115 CV"
+          },
+          {
+            "key": "draught",
+            "label": "Pescaggio",
+            "value": "1,48 m"
+          }
+        ],
+        "chips": [
+          "5 cabine",
+          "2 cabine equipaggio",
+          "12 posti letto (10 + 2 per l’equipaggio)",
+          "5 WC",
+          "2 WC equipaggio",
+          "max. 12 persone",
+          "2 membri dell’equipaggio"
+        ],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Cabine",
+            "value": "5"
+          },
+          {
+            "key": "berths",
+            "label": "Posti letto",
+            "value": "12 (10 + 2 per l’equipaggio)"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Max. persone",
+            "value": "12"
+          }
+        ]
+      },
+      "nl": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Hutten",
+            "value": "5"
+          },
+          {
+            "key": "crewCabins",
+            "label": "Bemanningshutten",
+            "value": "2"
+          },
+          {
+            "key": "berths",
+            "label": "Slaapplaatsen",
+            "value": "12 (10 in hutten + 2 voor de bemanning)"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "5"
+          },
+          {
+            "key": "crewHeads",
+            "label": "WC bemanning",
+            "value": "2"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Max. personen aan boord",
+            "value": "12 (aanbevolen: 10)"
+          },
+          {
+            "key": "crew",
+            "label": "Bemanning",
+            "value": "2"
+          },
+          {
+            "key": "mainsail",
+            "label": "Grootzeil",
+            "value": "Doorgelat"
+          },
+          {
+            "key": "engine",
+            "label": "Motor",
+            "value": "2 × 115 pk"
+          },
+          {
+            "key": "draught",
+            "label": "Diepgang",
+            "value": "1,48 m"
+          }
+        ],
+        "chips": [
+          "5 hutten",
+          "2 bemanningshutten",
+          "12 slaapplaatsen (10 + 2 voor de bemanning)",
+          "5 WC",
+          "2 WC bemanning",
+          "max. 12 personen",
+          "2 bemanningsleden"
+        ],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Hutten",
+            "value": "5"
+          },
+          {
+            "key": "berths",
+            "label": "Slaapplaatsen",
+            "value": "12 (10 + 2 voor de bemanning)"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Max. personen",
+            "value": "12"
+          }
+        ]
+      },
+      "pl": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Kabiny",
+            "value": "5"
+          },
+          {
+            "key": "crewCabins",
+            "label": "Kabiny załogi",
+            "value": "2"
+          },
+          {
+            "key": "berths",
+            "label": "Koje",
+            "value": "12 (10 w kabinach + 2 dla załogi)"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "5"
+          },
+          {
+            "key": "crewHeads",
+            "label": "WC załogi",
+            "value": "2"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Maks. osób na pokładzie",
+            "value": "12 (zalecane: 10)"
+          },
+          {
+            "key": "crew",
+            "label": "Załoga",
+            "value": "2"
+          },
+          {
+            "key": "mainsail",
+            "label": "Grot",
+            "value": "Pełnolistwowy"
+          },
+          {
+            "key": "engine",
+            "label": "Silnik",
+            "value": "2 × 115 KM"
+          },
+          {
+            "key": "draught",
+            "label": "Zanurzenie",
+            "value": "1,48 m"
+          }
+        ],
+        "chips": [
+          "5 kabin",
+          "2 kabiny załogi",
+          "12 koi (10 + 2 dla załogi)",
+          "5 WC",
+          "2 WC załogi",
+          "maks. 12 osób",
+          "2 osoby załogi"
+        ],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Kabiny",
+            "value": "5"
+          },
+          {
+            "key": "berths",
+            "label": "Koje",
+            "value": "12 (10 + 2 dla załogi)"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Maks. osób",
+            "value": "12"
+          }
+        ]
+      },
+      "pt": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Cabines",
+            "value": "5"
+          },
+          {
+            "key": "crewCabins",
+            "label": "Cabines da tripulação",
+            "value": "2"
+          },
+          {
+            "key": "berths",
+            "label": "Beliches",
+            "value": "12 (10 nas cabines + 2 para a tripulação)"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "5"
+          },
+          {
+            "key": "crewHeads",
+            "label": "WC da tripulação",
+            "value": "2"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Máx. pessoas a bordo",
+            "value": "12 (recomendado: 10)"
+          },
+          {
+            "key": "crew",
+            "label": "Tripulação",
+            "value": "2"
+          },
+          {
+            "key": "mainsail",
+            "label": "Vela mestra",
+            "value": "Talas inteiras"
+          },
+          {
+            "key": "engine",
+            "label": "Motor",
+            "value": "2 × 115 cv"
+          },
+          {
+            "key": "draught",
+            "label": "Calado",
+            "value": "1,48 m"
+          }
+        ],
+        "chips": [
+          "5 cabines",
+          "2 cabines da tripulação",
+          "12 beliches (10 + 2 para a tripulação)",
+          "5 WC",
+          "2 WC da tripulação",
+          "máx. 12 pessoas",
+          "2 tripulantes"
+        ],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Cabines",
+            "value": "5"
+          },
+          {
+            "key": "berths",
+            "label": "Beliches",
+            "value": "12 (10 + 2 para a tripulação)"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Máx. pessoas",
+            "value": "12"
+          }
+        ]
+      }
+    }
+  },
+  "corali": {
+    "detail": {
+      "capacity": {
+        "cabins": {
+          "value": 6,
+          "note": null,
+          "split": null
+        },
+        "berths": {
+          "value": 12,
+          "note": null,
+          "split": null
+        },
+        "heads": {
+          "value": 4,
+          "note": null,
+          "split": null
+        },
+        "crewCabins": 2,
+        "crewHeads": 2,
+        "showers": null,
+        "crewShowers": null,
+        "maxPersons": 14,
+        "recommendedPersons": null,
+        "crewNumber": 2
+      },
+      "rig": {
+        "mainsail": {
+          "kind": "FULL_BATTEN",
+          "label": null
+        },
+        "headsail": {
+          "kind": "FURLING",
+          "label": null
+        },
+        "engine": {
+          "label": null,
+          "count": 2,
+          "powerEach": 80
+        },
+        "draught": 1.8
+      }
+    },
+    "search": {
+      "cabins": {
+        "value": 6,
+        "note": null,
+        "split": null
+      },
+      "berths": {
+        "value": 12,
+        "note": null,
+        "split": null
+      },
+      "heads": {
+        "value": 4,
+        "note": null,
+        "split": null
+      },
+      "crewCabins": 2,
+      "crewHeads": 2,
+      "showers": null,
+      "crewShowers": null,
+      "maxPersons": 14,
+      "recommendedPersons": null,
+      "crewNumber": 2
+    },
+    "render": {
+      "en": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Cabins",
+            "value": "6"
+          },
+          {
+            "key": "crewCabins",
+            "label": "Crew cabins",
+            "value": "2"
+          },
+          {
+            "key": "berths",
+            "label": "Berths",
+            "value": "12"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "4"
+          },
+          {
+            "key": "crewHeads",
+            "label": "Crew WC",
+            "value": "2"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Max. people on board",
+            "value": "14"
+          },
+          {
+            "key": "crew",
+            "label": "Crew",
+            "value": "2"
+          },
+          {
+            "key": "mainsail",
+            "label": "Mainsail",
+            "value": "Full batten"
+          },
+          {
+            "key": "headsail",
+            "label": "Headsail",
+            "value": "Furling"
+          },
+          {
+            "key": "engine",
+            "label": "Engine",
+            "value": "2 × 80 hp"
+          },
+          {
+            "key": "draught",
+            "label": "Draught",
+            "value": "1.8 m"
+          }
+        ],
+        "chips": ["6 cabins", "2 crew cabins", "12 berths", "4 WC", "2 crew WC", "max. 14 people", "2 crew members"],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Cabins",
+            "value": "6"
+          },
+          {
+            "key": "berths",
+            "label": "Berths",
+            "value": "12"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Max. people",
+            "value": "14"
+          }
+        ]
+      },
+      "de": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Kabinen",
+            "value": "6"
+          },
+          {
+            "key": "crewCabins",
+            "label": "Crew-Kabinen",
+            "value": "2"
+          },
+          {
+            "key": "berths",
+            "label": "Kojen",
+            "value": "12"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "4"
+          },
+          {
+            "key": "crewHeads",
+            "label": "Crew-WC",
+            "value": "2"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Max. Personen an Bord",
+            "value": "14"
+          },
+          {
+            "key": "crew",
+            "label": "Crew",
+            "value": "2"
+          },
+          {
+            "key": "mainsail",
+            "label": "Großsegel",
+            "value": "Durchgelattet"
+          },
+          {
+            "key": "headsail",
+            "label": "Vorsegel",
+            "value": "Rollreff"
+          },
+          {
+            "key": "engine",
+            "label": "Motor",
+            "value": "2 × 80 PS"
+          },
+          {
+            "key": "draught",
+            "label": "Tiefgang",
+            "value": "1,8 m"
+          }
+        ],
+        "chips": [
+          "6 Kabinen",
+          "2 Crew-Kabinen",
+          "12 Kojen",
+          "4 WC",
+          "2 Crew-WC",
+          "max. 14 Personen",
+          "2 Crew-Mitglieder"
+        ],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Kabinen",
+            "value": "6"
+          },
+          {
+            "key": "berths",
+            "label": "Kojen",
+            "value": "12"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Max. Personen",
+            "value": "14"
+          }
+        ]
+      },
+      "es": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Camarotes",
+            "value": "6"
+          },
+          {
+            "key": "crewCabins",
+            "label": "Camarotes de la tripulación",
+            "value": "2"
+          },
+          {
+            "key": "berths",
+            "label": "Literas",
+            "value": "12"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "4"
+          },
+          {
+            "key": "crewHeads",
+            "label": "WC de la tripulación",
+            "value": "2"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Máx. personas a bordo",
+            "value": "14"
+          },
+          {
+            "key": "crew",
+            "label": "Tripulación",
+            "value": "2"
+          },
+          {
+            "key": "mainsail",
+            "label": "Vela mayor",
+            "value": "Sables completos"
+          },
+          {
+            "key": "headsail",
+            "label": "Vela de proa",
+            "value": "Enrollable"
+          },
+          {
+            "key": "engine",
+            "label": "Motor",
+            "value": "2 × 80 CV"
+          },
+          {
+            "key": "draught",
+            "label": "Calado",
+            "value": "1,8 m"
+          }
+        ],
+        "chips": [
+          "6 camarotes",
+          "2 camarotes de tripulación",
+          "12 literas",
+          "4 WC",
+          "2 WC de tripulación",
+          "máx. 14 personas",
+          "2 tripulantes"
+        ],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Camarotes",
+            "value": "6"
+          },
+          {
+            "key": "berths",
+            "label": "Literas",
+            "value": "12"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Máx. personas",
+            "value": "14"
+          }
+        ]
+      },
+      "fr": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Cabines",
+            "value": "6"
+          },
+          {
+            "key": "crewCabins",
+            "label": "Cabines équipage",
+            "value": "2"
+          },
+          {
+            "key": "berths",
+            "label": "Couchettes",
+            "value": "12"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "4"
+          },
+          {
+            "key": "crewHeads",
+            "label": "WC équipage",
+            "value": "2"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Personnes max. à bord",
+            "value": "14"
+          },
+          {
+            "key": "crew",
+            "label": "Équipage",
+            "value": "2"
+          },
+          {
+            "key": "mainsail",
+            "label": "Grand-voile",
+            "value": "Entièrement lattée"
+          },
+          {
+            "key": "headsail",
+            "label": "Voile d’avant",
+            "value": "Enrouleur"
+          },
+          {
+            "key": "engine",
+            "label": "Moteur",
+            "value": "2 × 80 ch"
+          },
+          {
+            "key": "draught",
+            "label": "Tirant d’eau",
+            "value": "1,8 m"
+          }
+        ],
+        "chips": [
+          "6 cabines",
+          "2 cabines équipage",
+          "12 couchettes",
+          "4 WC",
+          "2 WC équipage",
+          "14 personnes max.",
+          "2 membres d’équipage"
+        ],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Cabines",
+            "value": "6"
+          },
+          {
+            "key": "berths",
+            "label": "Couchettes",
+            "value": "12"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Pers. max.",
+            "value": "14"
+          }
+        ]
+      },
+      "hr": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Kabine",
+            "value": "6"
+          },
+          {
+            "key": "crewCabins",
+            "label": "Kabine za posadu",
+            "value": "2"
+          },
+          {
+            "key": "berths",
+            "label": "Ležajevi",
+            "value": "12"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "4"
+          },
+          {
+            "key": "crewHeads",
+            "label": "WC za posadu",
+            "value": "2"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Maks. osoba na brodu",
+            "value": "14"
+          },
+          {
+            "key": "crew",
+            "label": "Posada",
+            "value": "2"
+          },
+          {
+            "key": "mainsail",
+            "label": "Glavno jedro",
+            "value": "Pune letve"
+          },
+          {
+            "key": "headsail",
+            "label": "Prednje jedro",
+            "value": "Rolo"
+          },
+          {
+            "key": "engine",
+            "label": "Motor",
+            "value": "2 × 80 KS"
+          },
+          {
+            "key": "draught",
+            "label": "Gaz",
+            "value": "1,8 m"
+          }
+        ],
+        "chips": [
+          "6 kabina",
+          "2 kabine za posadu",
+          "12 ležajeva",
+          "4 WC",
+          "2 WC za posadu",
+          "maks. 14 osoba",
+          "2 člana posade"
+        ],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Kabine",
+            "value": "6"
+          },
+          {
+            "key": "berths",
+            "label": "Ležajevi",
+            "value": "12"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Maks. osoba",
+            "value": "14"
+          }
+        ]
+      },
+      "it": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Cabine",
+            "value": "6"
+          },
+          {
+            "key": "crewCabins",
+            "label": "Cabine equipaggio",
+            "value": "2"
+          },
+          {
+            "key": "berths",
+            "label": "Posti letto",
+            "value": "12"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "4"
+          },
+          {
+            "key": "crewHeads",
+            "label": "WC equipaggio",
+            "value": "2"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Max. persone a bordo",
+            "value": "14"
+          },
+          {
+            "key": "crew",
+            "label": "Equipaggio",
+            "value": "2"
+          },
+          {
+            "key": "mainsail",
+            "label": "Randa",
+            "value": "Steccata"
+          },
+          {
+            "key": "headsail",
+            "label": "Vela di prua",
+            "value": "Avvolgibile"
+          },
+          {
+            "key": "engine",
+            "label": "Motore",
+            "value": "2 × 80 CV"
+          },
+          {
+            "key": "draught",
+            "label": "Pescaggio",
+            "value": "1,8 m"
+          }
+        ],
+        "chips": [
+          "6 cabine",
+          "2 cabine equipaggio",
+          "12 posti letto",
+          "4 WC",
+          "2 WC equipaggio",
+          "max. 14 persone",
+          "2 membri dell’equipaggio"
+        ],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Cabine",
+            "value": "6"
+          },
+          {
+            "key": "berths",
+            "label": "Posti letto",
+            "value": "12"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Max. persone",
+            "value": "14"
+          }
+        ]
+      },
+      "nl": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Hutten",
+            "value": "6"
+          },
+          {
+            "key": "crewCabins",
+            "label": "Bemanningshutten",
+            "value": "2"
+          },
+          {
+            "key": "berths",
+            "label": "Slaapplaatsen",
+            "value": "12"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "4"
+          },
+          {
+            "key": "crewHeads",
+            "label": "WC bemanning",
+            "value": "2"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Max. personen aan boord",
+            "value": "14"
+          },
+          {
+            "key": "crew",
+            "label": "Bemanning",
+            "value": "2"
+          },
+          {
+            "key": "mainsail",
+            "label": "Grootzeil",
+            "value": "Doorgelat"
+          },
+          {
+            "key": "headsail",
+            "label": "Voorzeil",
+            "value": "Rolreef"
+          },
+          {
+            "key": "engine",
+            "label": "Motor",
+            "value": "2 × 80 pk"
+          },
+          {
+            "key": "draught",
+            "label": "Diepgang",
+            "value": "1,8 m"
+          }
+        ],
+        "chips": [
+          "6 hutten",
+          "2 bemanningshutten",
+          "12 slaapplaatsen",
+          "4 WC",
+          "2 WC bemanning",
+          "max. 14 personen",
+          "2 bemanningsleden"
+        ],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Hutten",
+            "value": "6"
+          },
+          {
+            "key": "berths",
+            "label": "Slaapplaatsen",
+            "value": "12"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Max. personen",
+            "value": "14"
+          }
+        ]
+      },
+      "pl": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Kabiny",
+            "value": "6"
+          },
+          {
+            "key": "crewCabins",
+            "label": "Kabiny załogi",
+            "value": "2"
+          },
+          {
+            "key": "berths",
+            "label": "Koje",
+            "value": "12"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "4"
+          },
+          {
+            "key": "crewHeads",
+            "label": "WC załogi",
+            "value": "2"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Maks. osób na pokładzie",
+            "value": "14"
+          },
+          {
+            "key": "crew",
+            "label": "Załoga",
+            "value": "2"
+          },
+          {
+            "key": "mainsail",
+            "label": "Grot",
+            "value": "Pełnolistwowy"
+          },
+          {
+            "key": "headsail",
+            "label": "Żagiel przedni",
+            "value": "Rolowany"
+          },
+          {
+            "key": "engine",
+            "label": "Silnik",
+            "value": "2 × 80 KM"
+          },
+          {
+            "key": "draught",
+            "label": "Zanurzenie",
+            "value": "1,8 m"
+          }
+        ],
+        "chips": ["6 kabin", "2 kabiny załogi", "12 koi", "4 WC", "2 WC załogi", "maks. 14 osób", "2 osoby załogi"],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Kabiny",
+            "value": "6"
+          },
+          {
+            "key": "berths",
+            "label": "Koje",
+            "value": "12"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Maks. osób",
+            "value": "14"
+          }
+        ]
+      },
+      "pt": {
+        "rows": [
+          {
+            "key": "cabins",
+            "label": "Cabines",
+            "value": "6"
+          },
+          {
+            "key": "crewCabins",
+            "label": "Cabines da tripulação",
+            "value": "2"
+          },
+          {
+            "key": "berths",
+            "label": "Beliches",
+            "value": "12"
+          },
+          {
+            "key": "heads",
+            "label": "WC",
+            "value": "4"
+          },
+          {
+            "key": "crewHeads",
+            "label": "WC da tripulação",
+            "value": "2"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Máx. pessoas a bordo",
+            "value": "14"
+          },
+          {
+            "key": "crew",
+            "label": "Tripulação",
+            "value": "2"
+          },
+          {
+            "key": "mainsail",
+            "label": "Vela mestra",
+            "value": "Talas inteiras"
+          },
+          {
+            "key": "headsail",
+            "label": "Vela de proa",
+            "value": "Enrolável"
+          },
+          {
+            "key": "engine",
+            "label": "Motor",
+            "value": "2 × 80 cv"
+          },
+          {
+            "key": "draught",
+            "label": "Calado",
+            "value": "1,8 m"
+          }
+        ],
+        "chips": [
+          "6 cabines",
+          "2 cabines da tripulação",
+          "12 beliches",
+          "4 WC",
+          "2 WC da tripulação",
+          "máx. 14 pessoas",
+          "2 tripulantes"
+        ],
+        "card": [
+          {
+            "key": "cabins",
+            "label": "Cabines",
+            "value": "6"
+          },
+          {
+            "key": "berths",
+            "label": "Beliches",
+            "value": "12"
+          },
+          {
+            "key": "maxPeople",
+            "label": "Máx. pessoas",
+            "value": "14"
+          }
+        ]
+      }
+    }
+  }
+}

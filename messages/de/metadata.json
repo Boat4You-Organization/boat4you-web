@@ -61,7 +61,7 @@
     "descLeadFrom": "Yachtcharter {name} ab {marina}",
     "descCabins": "{count, plural, one {# Kabine} other {# Kabinen}}",
     "descBerths": "{count, plural, one {# Koje} other {# Kojen}}",
-    "descGuests": "{count, plural, one {bis zu # Person} other {bis zu # Personen}}",
+    "descMaxPeople": "{count, plural, one {max. # Person an Bord} other {max. # Personen an Bord}}",
     "descCta": "Verfügbarkeit prüfen und direkt auf boat4you.com buchen.",
     "descCtaInquiry": "Anfrage für Ihre Wunschtermine auf boat4you.com senden."
   },
@@ -71,7 +71,6 @@
     "summary": "{total, number} Boote · Seite {page} von {pages}",
     "otherBases": "Weitere Basen",
     "cabins": "{count, plural, one {# Kabine} other {# Kabinen}}",
-    "guests": "{count, plural, one {# Gast} other {# Gäste}}",
     "paginationLabel": "Seiten des Flottenverzeichnisses"
   }
 }

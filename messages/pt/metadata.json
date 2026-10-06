@@ -61,7 +61,7 @@
     "descLeadFrom": "Aluguer do barco {name} em {marina}",
     "descCabins": "{count, plural, =0 {# cabines} one {# cabine} other {# cabines}}",
     "descBerths": "{count, plural, =0 {# beliches} one {# beliche} other {# beliches}}",
-    "descGuests": "{count, plural, =0 {até # pessoas} one {até # pessoa} other {até # pessoas}}",
+    "descMaxPeople": "{count, plural, one {máx. # pessoa a bordo} other {máx. # pessoas a bordo}}",
     "descCta": "Verifique a disponibilidade e reserve diretamente em boat4you.com.",
     "descCtaInquiry": "Envie uma consulta para as suas datas em boat4you.com."
   },
@@ -71,7 +71,6 @@
     "summary": "{total, number} barcos · página {page} de {pages}",
     "otherBases": "Outras bases",
     "cabins": "{count, plural, one {# cabine} other {# cabines}}",
-    "guests": "{count, plural, one {# pessoa} other {# pessoas}}",
     "paginationLabel": "Páginas do diretório da frota"
   }
 }

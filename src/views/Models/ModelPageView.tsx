@@ -57,7 +57,10 @@ const ModelPageView = async ({
   breadcrumb,
   faq,
 }: ModelPageViewProps) => {
-  const t = await getTranslations({ locale, namespace: 'models' });
+  const [t, tCapacity] = await Promise.all([
+    getTranslations({ locale, namespace: 'models' }),
+    getTranslations({ locale, namespace: 'capacity' }),
+  ]);
   const price = (eur: number) => formatPriceWithCurrency({ clientPriceEur: Math.round(eur), locale });
   const name = model.displayName;
   const number = (n: number) => n.toLocaleString(locale);
@@ -73,7 +76,8 @@ const ModelPageView = async ({
     { label: t('model.specFleet'), value: number(stats.boats) },
     { label: t('model.specLength'), value: lengthText },
     { label: t('model.specCabins'), value: formatRange(stats.cabins) },
-    { label: t('model.specGuests'), value: formatRange(stats.guests) },
+    // The fleet's max. people on board (the partner's figure), not "guests".
+    { label: tCapacity('label.maxPeople'), value: formatRange(stats.guests) },
     { label: t('model.specBerths'), value: layout.berths ? String(layout.berths) : null },
     { label: t('model.specHeads'), value: layout.wc ? String(layout.wc) : null },
     { label: t('model.specBuildYears'), value: formatRange(stats.buildYear) },
@@ -195,7 +199,7 @@ const ModelPageView = async ({
             const meta = [
               boat.buildYear ? String(boat.buildYear) : null,
               boat.cabins ? t('cabins', { count: boat.cabins }) : null,
-              boat.maxPersons ? t('guests', { count: boat.maxPersons }) : null,
+              boat.maxPersons ? tCapacity('compact.maxPeople', { count: boat.maxPersons }) : null,
             ]
               .filter(Boolean)
               .join(' · ');

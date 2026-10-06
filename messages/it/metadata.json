@@ -61,7 +61,7 @@
     "descLeadFrom": "Noleggio {name} in partenza da {marina}",
     "descCabins": "{count, plural, one {# cabina} other {# cabine}}",
     "descBerths": "{count, plural, one {# posto letto} other {# posti letto}}",
-    "descGuests": "{count, plural, one {fino a # ospite} other {fino a # ospiti}}",
+    "descMaxPeople": "{count, plural, one {max. # persona a bordo} other {max. # persone a bordo}}",
     "descCta": "Verifica la disponibilità e prenota direttamente su boat4you.com.",
     "descCtaInquiry": "Invia richiesta per le tue date su boat4you.com."
   },
@@ -71,7 +71,6 @@
     "summary": "{total, number} barche · pagina {page} di {pages}",
     "otherBases": "Altre basi",
     "cabins": "{count, plural, one {# cabina} other {# cabine}}",
-    "guests": "{count, plural, one {# ospite} other {# ospiti}}",
     "paginationLabel": "Pagine della directory della flotta"
   }
 }

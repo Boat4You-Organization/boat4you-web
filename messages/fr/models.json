@@ -12,7 +12,6 @@
   "yachtModels": "Modèles de bateaux",
   "boats": "{count, plural, one {# bateau} other {# bateaux}}",
   "cabins": "{count, plural, one {# cabine} other {# cabines}}",
-  "guests": "{count, plural, one {# personne} other {# personnes}}",
   "cabinsRange": "{range} cabines",
   "priceBand": "{p25} – {p75} / semaine",
   "index": {
@@ -35,7 +34,6 @@
     "colBoats": "Bateaux",
     "colLength": "Longueur",
     "colCabins": "Cabines",
-    "colGuests": "Personnes",
     "colPrice": "Semaine de location habituelle",
     "whereHeading": "Où sont basés les modèles {brand}",
     "whereNote": "Bateaux des modèles ci-dessus, par pays.",
@@ -56,7 +54,6 @@
     "specFleet": "Bateaux à louer",
     "specLength": "Longueur",
     "specCabins": "Cabines",
-    "specGuests": "Personnes",
     "specBerths": "Couchettes",
     "specHeads": "Toilettes (WC)",
     "specBuildYears": "Années de construction",

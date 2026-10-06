@@ -61,7 +61,7 @@
     "descLeadFrom": "Czarter {name} z bazy {marina}",
     "descCabins": "{count, plural, one {# kabina} few {# kabiny} many {# kabin} other {# kabiny}}",
     "descBerths": "{count, plural, one {# koja} few {# koje} many {# koi} other {# koi}}",
-    "descGuests": "{count, plural, one {do # osoby} few {do # osób} many {do # osób} other {do # osoby}}",
+    "descMaxPeople": "{count, plural, one {maks. # osoba na pokładzie} few {maks. # osoby na pokładzie} many {maks. # osób na pokładzie} other {maks. # osoby na pokładzie}}",
     "descCta": "Sprawdź dostępność i zarezerwuj bezpośrednio na boat4you.com.",
     "descCtaInquiry": "Wyślij zapytanie o wybrane terminy na boat4you.com."
   },
@@ -71,7 +71,6 @@
     "summary": "{total, number} jednostek · strona {page} z {pages}",
     "otherBases": "Pozostałe porty",
     "cabins": "{count, plural, one {# kabina} few {# kabiny} many {# kabin} other {# kabiny}}",
-    "guests": "{count, plural, one {# osoba} few {# osoby} many {# osób} other {# osoby}}",
     "paginationLabel": "Strony katalogu floty"
   }
 }

@@ -16,6 +16,7 @@ import { cancelPendingPriceCalculation, useYachtPriceCalculation } from '@/utils
 import { isInquiryOnlyBoat } from '@/utils/static/inquiryOnlyBoat';
 import { clearDataFromLocalStorage } from '@/utils/static/localStorageUtils';
 import { clearDataFromSessionStorage } from '@/utils/static/sessionStorageUtils';
+import type { Capacity } from '@/utils/static/yachtCapacity';
 import { YachtFaqEntry } from '@/utils/static/yachtFaq';
 import {
   setCalculatedPrice,
@@ -42,9 +43,11 @@ import VideoTab from './VideoTab';
 interface BoatContentSectionProps {
   yachtFaq?: YachtFaqEntry[];
   yacht: YachtModel;
+  /** Capacity resolved on the server for the page locale (yachtCapacity.ts). */
+  capacity?: Capacity;
 }
 
-const BoatContentSection = ({ yacht, yachtFaq }: BoatContentSectionProps) => {
+const BoatContentSection = ({ yacht, yachtFaq, capacity }: BoatContentSectionProps) => {
   const { selectedOffer, boatInquiryModalOpen } = useYachtStore();
   const { calculatePrice } = useYachtPriceCalculation();
   const boatTransition = useContext(BoatTransitionContext);
@@ -126,7 +129,7 @@ const BoatContentSection = ({ yacht, yachtFaq }: BoatContentSectionProps) => {
   const renderTabContent = (tabName: string) => {
     switch (tabName) {
       case 'details':
-        return <DetailsTab yacht={yacht} />;
+        return <DetailsTab yacht={yacht} capacity={capacity} />;
       case 'ammenities':
         return <AmenitiesTab yacht={yacht} />;
       case 'availability':

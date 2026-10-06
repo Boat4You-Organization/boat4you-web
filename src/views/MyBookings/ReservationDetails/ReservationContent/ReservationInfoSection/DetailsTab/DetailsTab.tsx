@@ -4,24 +4,19 @@ import React from 'react';
 import { Box, Grid, Stack, Typography } from '@mui/material';
 import { useLocale, useTranslations } from 'next-intl';
 
-import {
-  Beam,
-  Cabin,
-  Dimensions,
-  Engine,
-  Fuel,
-  Mainsail,
-  People,
-  SingleBed,
-  Toilet,
-  WaterTank,
-} from '@/components/SvgIcons/BoatFeatures';
+import CapacityText from '@/components/CapacityText';
+import { ACCOMMODATION_ROW_KEYS, CAPACITY_ROW_ICONS } from '@/components/CapacityText/capacityRowIcons';
+import { Beam, Dimensions, Fuel, WaterTank } from '@/components/SvgIcons/BoatFeatures';
 import Calendar from '@/components/SvgIcons/Calendar';
 import Description from '@/components/SvgIcons/Description';
 import { DimensionInfo, ReservationDetails } from '@/models/reservation.model';
-import { MAIN_SAIL_TYPE_LABEL_MAP, MainSailType, VESSEL_TYPE_LABEL_MAP, VesselType } from '@/models/yacht.model';
+import { VESSEL_TYPE_LABEL_MAP } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
 import { useBoatEquipmentDescription } from '@/utils/hooks/useBoatEquipmentDescription';
+import useCapacityFmt from '@/utils/hooks/useCapacityFmt';
+import useCapacityNoteLookup from '@/utils/hooks/useCapacityNoteLookup';
+import { accommodationProse } from '@/utils/static/capacityProse';
+import { capacityFacts, capacityRows, fromYacht } from '@/utils/static/yachtCapacity';
 
 interface DetailsTabProps {
   reservationDetails: ReservationDetails;
@@ -31,7 +26,7 @@ interface FeatureRow {
   key: string;
   icon: React.ElementType;
   label: string;
-  value: string;
+  value: React.ReactNode;
   badge?: string;
 }
 
@@ -47,10 +42,6 @@ const formatMeasure = (info: DimensionInfo | null | undefined, fallback: number 
   return null;
 };
 
-/** A positive count, else null (partner data sends null, 0 and negatives). */
-const positiveOrNull = (value: number | null | undefined): number | null =>
-  typeof value === 'number' && Number.isFinite(value) && value > 0 ? value : null;
-
 const DetailsTab = ({ reservationDetails }: DetailsTabProps) => {
   const t = useTranslations();
   const locale = useLocale();
@@ -64,16 +55,26 @@ const DetailsTab = ({ reservationDetails }: DetailsTabProps) => {
   const vesselKey = reservationDetails.vesselType as keyof typeof VESSEL_TYPE_LABEL_MAP;
   const vesselTypeRaw = VESSEL_TYPE_LABEL_MAP[vesselKey] ? t(VESSEL_TYPE_LABEL_MAP[vesselKey]) : '';
   const vesselTypeLabel = locale === 'de' ? vesselTypeRaw : vesselTypeRaw.toLowerCase();
-  const guests = positiveOrNull(reservationDetails.maxPersons) ?? positiveOrNull(reservationDetails.berths);
-  const cabins = positiveOrNull(reservationDetails.cabins);
-  const wc = positiveOrNull(reservationDetails.wc);
+  // The booked boat's capacity as the partner sends it (yachtCapacity.ts):
+  // the same rows and sentences as the boat page, the crew count only for
+  // a crewed charter (the reservation's own charter type).
+  const capacityT = useCapacityFmt();
+  const noteLookup = useCapacityNoteLookup(locale);
+  const capacity = fromYacht(reservationDetails, { locale, noteLookup });
+  const capacityRowList = capacityRows(capacity, capacityT);
   const bold = (chunks: React.ReactNode) => <strong>{chunks}</strong>;
-  let accommodationKey: string | null = null;
+  const accommodation = accommodationProse(capacityFacts(capacity), () => 0);
+  const toFeatureRow = (row: (typeof capacityRowList)[number]): FeatureRow => ({
+    key: row.key,
+    icon: CAPACITY_ROW_ICONS[row.key],
+    label: row.label,
+    value: <CapacityText segments={row.segments} />,
+  });
+  const rowByKey = (key: string): FeatureRow | null => {
+    const row = capacityRowList.find(r => r.key === key);
 
-  if (guests && cabins && wc) accommodationKey = 'yacht.descAccomV0';
-  else if (guests && cabins) accommodationKey = 'yacht.descAccomNoWc';
-  else if (cabins) accommodationKey = 'yacht.descCabinsOnly';
-  else if (guests) accommodationKey = 'yacht.descGuestsOnly';
+    return row ? toFeatureRow(row) : null;
+  };
 
   const leftRowsRaw: (FeatureRow | null)[] = [
     reservationDetails.buildYear
@@ -85,46 +86,7 @@ const DetailsTab = ({ reservationDetails }: DetailsTabProps) => {
           badge: isNewYacht ? t('filters.newYacht') : undefined,
         }
       : null,
-    reservationDetails.cabins
-      ? {
-          key: 'cabins',
-          icon: Cabin,
-          label: t('filters.cabins'),
-          value: String(reservationDetails.cabins),
-        }
-      : null,
-    reservationDetails.berths
-      ? {
-          key: 'berths',
-          icon: SingleBed,
-          label: t('filters.berths'),
-          value: String(reservationDetails.berths),
-        }
-      : null,
-    reservationDetails.maxPersons
-      ? {
-          key: 'people',
-          icon: People,
-          label: t('filters.people'),
-          value: String(reservationDetails.maxPersons),
-        }
-      : null,
-    reservationDetails.wc
-      ? {
-          key: 'toilets',
-          icon: Toilet,
-          label: t('filters.toilets'),
-          value: String(reservationDetails.wc),
-        }
-      : null,
-    reservationDetails.mainSailType && reservationDetails.mainSailType !== MainSailType.UNKNOWN
-      ? {
-          key: 'mainSail',
-          icon: Mainsail,
-          label: t('yacht.mainSailType'),
-          value: t(MAIN_SAIL_TYPE_LABEL_MAP[reservationDetails.mainSailType]),
-        }
-      : null,
+    ...capacityRowList.filter(row => ACCOMMODATION_ROW_KEYS.includes(row.key)).map(toFeatureRow),
   ];
 
   const beamValue = formatMeasure(reservationDetails.beamInfo, reservationDetails.beam);
@@ -147,6 +109,7 @@ const DetailsTab = ({ reservationDetails }: DetailsTabProps) => {
           value: beamValue,
         }
       : null,
+    rowByKey('draught'),
     reservationDetails.fuelTank
       ? {
           key: 'fuelTank',
@@ -163,14 +126,9 @@ const DetailsTab = ({ reservationDetails }: DetailsTabProps) => {
           value: `${reservationDetails.waterTank} l`,
         }
       : null,
-    reservationDetails.enginePower
-      ? {
-          key: 'engine',
-          icon: Engine,
-          label: t('filters.engine'),
-          value: t('filters.engineHp', { value: String(reservationDetails.enginePower) }),
-        }
-      : null,
+    rowByKey('mainsail'),
+    rowByKey('headsail'),
+    rowByKey('engine'),
   ];
 
   const leftRows = leftRowsRaw.filter((r): r is FeatureRow => r !== null);
@@ -242,15 +200,16 @@ const DetailsTab = ({ reservationDetails }: DetailsTabProps) => {
             location: reservationDetails.locationFrom || 'none',
             b: bold,
           } as never
-        )}{' '}
-        {accommodationKey &&
-          t.rich(
-            accommodationKey as never,
-            { name: reservationDetails.yachtName, maxPersons: guests, cabins, wc, b: bold } as never
-          )}{' '}
-        {wc &&
-          accommodationKey !== 'yacht.descAccomV0' &&
-          t.rich('yacht.descWcOnly' as never, { name: reservationDetails.yachtName, wc, b: bold } as never)}{' '}
+        )}
+        {accommodation.map(part => (
+          <React.Fragment key={part.key}>
+            {' '}
+            {t.rich(
+              `yacht.${part.key}` as never,
+              { ...part.values, name: reservationDetails.yachtName, b: bold } as never
+            )}
+          </React.Fragment>
+        ))}{' '}
         {description}
       </Typography>
       {(leftRows.length > 0 || rightRows.length > 0) && (

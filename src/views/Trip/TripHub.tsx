@@ -5,6 +5,7 @@ import { useCallback, useEffect, useMemo, useState } from 'react';
 
 import LogoWithoutText from '@/components/SvgIcons/LogoWithoutText';
 import { areaForMarina, suggestedRoutesForArea } from '@/helper/itineraryMatch';
+import type { CapacityDto } from '@/utils/static/yachtCapacity';
 
 import TripSocial, { TripOwnerCredentials } from './TripSocial';
 
@@ -28,6 +29,10 @@ export interface TripDto {
     cabins: number | null;
     berths: number | null;
     wc: number | null;
+    /** The partner's capacity block and max. people / crew (capacity contract v1); absent on an older backend. */
+    capacity?: CapacityDto | null;
+    maxPersons?: number | null;
+    crewNumber?: number | null;
     lengthMeters: number | null;
     mainImageId: number | null;
     imageIds: number[];
@@ -60,6 +65,8 @@ interface TripHubProps {
   apiUrl: string;
   ownerPayment: TripOwnerPayment | null;
   ownerCredentials: TripOwnerCredentials | null;
+  /** The boat's capacity in English compact form ("4 cabins", "10 berths (8+2)"), built on the server. */
+  yachtCapacity?: string[];
 }
 
 /** Official maritime SAR numbers where well-established; 112 works EU-wide. */
@@ -142,7 +149,7 @@ const TABS: { id: TabId; label: string; icon: string }[] = [
   { id: 'more', label: 'More', icon: '☰' },
 ];
 
-const TripHub = ({ trip, token, apiUrl, ownerPayment, ownerCredentials }: TripHubProps) => {
+const TripHub = ({ trip, token, apiUrl, ownerPayment, ownerCredentials, yachtCapacity }: TripHubProps) => {
   const dateFrom = useMemo(() => new Date(trip.dateFrom), [trip.dateFrom]);
   const dateTo = useMemo(() => new Date(trip.dateTo), [trip.dateTo]);
 
@@ -630,8 +637,9 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment, ownerCredentials }: TripHu
                     <div style={{ ...S.sub, marginTop: 8 }}>
                       {[
                         trip.yacht.buildYear,
-                        trip.yacht.cabins != null ? `${trip.yacht.cabins} cabins` : null,
-                        trip.yacht.berths != null ? `${trip.yacht.berths} berths` : null,
+                        // "4 cabins · 10 berths (8+2) · 2 WC · max. 12 people": the
+                        // partner's figures, unknown ones left out (never "0 cabins").
+                        ...(yachtCapacity ?? []),
                         trip.yacht.lengthMeters != null ? `${trip.yacht.lengthMeters.toFixed(2)} m` : null,
                       ]
                         .filter(Boolean)

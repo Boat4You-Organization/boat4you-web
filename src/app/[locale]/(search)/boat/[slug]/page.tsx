@@ -18,6 +18,7 @@ import { Currency, UserModel } from '@/models/user.model';
 import { CHARTER_TYPE_LABEL_MAP, CharterType, YachtModel } from '@/models/yacht.model';
 import { boatHubs } from '@/utils/server/catalogueHubs';
 import { loadManufacturerLookup } from '@/utils/server/manufacturerLookup';
+import { resolveYachtCapacity } from '@/utils/server/yachtCapacity';
 import { BoatDescTranslate, buildBoatDescription } from '@/utils/static/boatMetaDescription';
 import { buildBoatTitle, titleBoatName, titlePlace } from '@/utils/static/boatTitle';
 import { buildMetadata, localizedUrl } from '@/utils/static/buildMetadata';
@@ -26,6 +27,7 @@ import { isInquiryOnlyBoat } from '@/utils/static/inquiryOnlyBoat';
 import { serializeJsonLd } from '@/utils/static/jsonLd';
 import { nameRepeatsModel, toTitleCase, yachtLabel } from '@/utils/static/toTitleCase';
 import { ManufacturerLookup, yachtBrandName } from '@/utils/static/yachtBrand';
+import { CapacityFacts, capacityFacts, fromYacht } from '@/utils/static/yachtCapacity';
 import { buildYachtFaq, buildYachtFaqSchema } from '@/utils/static/yachtFaq';
 import { cleanModelName } from '@/utils/static/yachtModelKey';
 import BoatContentSection from '@/views/Boat/BoatContentSection';
@@ -97,8 +99,8 @@ const canonicalBoatPath = (yacht: YachtModel): string => `/boat/${yacht.listingC
  *   - `image` — main yacht photo URL (already absolute from CDN)
  *   - `brand` — the builder (Lagoon, Bavaria, Beneteau …), yachtBrand.ts
  *   - `category` — vessel type (Catamaran, Sailing yacht …)
- *   - `additionalProperty` — yacht specs (year, cabins, berths, max persons,
- *     length) so Google's product knowledge graph can match facets
+ *   - `additionalProperty` — yacht specs (year, cabins, berths, WC, max
+ *     persons, length) so Google's product knowledge graph can match facets
  *   - `offers` — `AggregateOffer` with the min/max 7-night price of the
  *     upcoming weeks; populated only when a week carries a price >0
  *
@@ -116,11 +118,23 @@ const offerNights = (offer: { dateFrom?: string; dateTo?: string; numberOfDays?:
   return offer.numberOfDays ?? null;
 };
 
+/**
+ * Capacity for the boat's meta description and Product description: cabins
+ * and berths as the partner sends them; max. people on board only when the
+ * partner gives no berths (it used to print max. persons as "N berths").
+ */
+const metaCapacity = (facts: CapacityFacts) => ({
+  cabins: facts.cabins,
+  berths: facts.berths,
+  maxPeople: facts.berths === null ? facts.maxPersons : null,
+});
+
 function buildYachtProductSchema(
   yacht: YachtModel,
   locale: LocaleType,
   tDesc: BoatDescTranslate,
-  manufacturers: ManufacturerLookup | null
+  manufacturers: ManufacturerLookup | null,
+  facts: CapacityFacts
 ) {
   // No bookable future offer (27.9.2026): the page asks for an inquiry and
   // shows no price, so the markup carries none either — no price, no
@@ -175,8 +189,7 @@ function buildYachtProductSchema(
   const fallbackDescription = buildBoatDescription(tDesc, {
     name: `${productName}${yacht.buildYear ? ` (${yacht.buildYear})` : ''}`,
     marina: yacht.location?.name,
-    cabins: yacht.cabins || null,
-    berths: yacht.berths || null,
+    ...metaCapacity(facts),
   });
   // A partner boat's description is the partner's prose (deposit policies,
   // "Base fee must be transferred in advance!") — the Product gets the built
@@ -217,11 +230,15 @@ function buildYachtProductSchema(
 
   if (yacht.buildYear) propertyEntries.push({ name: 'Year built', value: yacht.buildYear });
 
-  if (yacht.cabins) propertyEntries.push({ name: 'Cabins', value: yacht.cabins });
+  // The partner's figures, numbers only (capacity contract 7.4): no notes,
+  // berths never stand in for people nor people for berths.
+  if (facts.cabins) propertyEntries.push({ name: 'Cabins', value: facts.cabins });
 
-  if (yacht.berths) propertyEntries.push({ name: 'Berths', value: yacht.berths });
+  if (facts.berths) propertyEntries.push({ name: 'Berths', value: facts.berths });
 
-  if (yacht.maxPersons) propertyEntries.push({ name: 'Max persons', value: yacht.maxPersons });
+  if (facts.heads) propertyEntries.push({ name: 'WC', value: facts.heads });
+
+  if (facts.maxPersons) propertyEntries.push({ name: 'Max persons', value: facts.maxPersons });
 
   if (yacht.length) propertyEntries.push({ name: 'Length', value: yacht.length, unitCode: 'MTR' });
 
@@ -360,8 +377,7 @@ export async function generateMetadata({
   // ≤ 160 (buildMetadata trims). The title uses the boat's own name without
   // the partner's equipment notes and the base's town, dropping the brand
   // suffix, then the year, when it would not fit (boatTitle.ts, audit B42).
-  const cabins = yacht.cabins ?? null;
-  const berths = yacht.berths ?? yacht.maxPersons ?? null;
+  const facts = capacityFacts(fromYacht(yacht, { locale }));
 
   // Title tail comes from the metadata.boat catalog so both the charter word
   // AND the word order localize per locale (the old hard-coded map shipped
@@ -388,8 +404,7 @@ export async function generateMetadata({
   const description = buildBoatDescription((key, values) => tBoat(key as never, values as never), {
     name: `${fullName}${yearSuffix}`,
     marina: locationFull,
-    cabins,
-    berths,
+    ...metaCapacity(facts),
     inquiryOnly: isInquiryOnlyBoat(yacht),
   });
 
@@ -437,15 +452,20 @@ const BoatPage = async ({
 
   redirectToCanonicalBoat(locale, slug, yacht, requestQuery);
 
-  const [tBoatMeta, manufacturers] = await Promise.all([
+  const [tBoatMeta, manufacturers, capacity] = await Promise.all([
     getTranslations({ locale, namespace: 'metadata.boat' }),
     loadManufacturerLookup(),
+    // The partner's capacity for this locale, note translations included —
+    // resolved here so the client gets the data, not the note table.
+    resolveYachtCapacity(yacht, locale),
   ]);
+  const facts = capacityFacts(capacity);
   const productSchema = buildYachtProductSchema(
     yacht,
     locale as LocaleType,
     (key, values) => tBoatMeta(key as never, values as never),
-    manufacturers
+    manufacturers,
+    facts
   );
 
   // Hubs above this boat (country, region/base, boat type) — linked only
@@ -480,7 +500,7 @@ const BoatPage = async ({
   // HTML (unique indexable content, variant-rotated per yacht id) and the
   // FAQPage JSON-LD below always mirrors the visible accordion.
   const tYacht = await getTranslations({ locale, namespace: 'yacht' });
-  const yachtFaq = buildYachtFaq(yacht, (key, values) => tYacht(key as never, values as never), locale);
+  const yachtFaq = buildYachtFaq(yacht, (key, values) => tYacht(key as never, values as never), locale, facts);
   const yachtFaqSchema = buildYachtFaqSchema(yachtFaq);
 
   const breadcrumbSchema = {
@@ -522,7 +542,7 @@ const BoatPage = async ({
       )}
       <BoatTransitionProvider>
         <BoatHeroSection yacht={yacht} />
-        <BoatContentSection yacht={yacht} yachtFaq={yachtFaq} />
+        <BoatContentSection yacht={yacht} yachtFaq={yachtFaq} capacity={capacity} />
         <BoatHubLinks hubs={hubs} boatName={boatName} locale={locale} />
         <ModelPageLink
           manufacturerName={yacht.manufacturerName}

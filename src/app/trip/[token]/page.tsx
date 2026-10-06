@@ -5,6 +5,8 @@ import { getLoggedInUser } from '@/actions/auth.actions';
 import { getReservationDetails, getUserReservations } from '@/actions/reservation.actions';
 import { claimTripOwner } from '@/actions/trip.actions';
 import { Currency } from '@/models/user.model';
+import { getCapacityFmtEn } from '@/utils/server/yachtCapacity';
+import { capacityChips, fromYacht } from '@/utils/static/yachtCapacity';
 import TripHub, { TripDto, TripOwnerPayment } from '@/views/Trip';
 
 /**
@@ -91,6 +93,11 @@ const TripPage = async ({ params }: { params: Promise<{ token: string }> }) => {
   // Owner enters the closed group through his web session — his devices all
   // converge on the one OWNER participant. Guests join client-side by name.
   const ownerCredentials = ownerPayment ? await claimTripOwner(token) : null;
+  // The boat's partner figures in English ("4 cabins · 10 berths (8+2) · 2 WC"),
+  // unknown ones left out; the hub is English only.
+  const yachtCapacity = capacityChips(fromYacht(trip.yacht, { locale: 'en' }), await getCapacityFmtEn()).map(
+    chip => chip.text
+  );
 
   return (
     <TripHub
@@ -99,6 +106,7 @@ const TripPage = async ({ params }: { params: Promise<{ token: string }> }) => {
       apiUrl={API ?? ''}
       ownerPayment={ownerPayment}
       ownerCredentials={ownerCredentials}
+      yachtCapacity={yachtCapacity}
     />
   );
 };

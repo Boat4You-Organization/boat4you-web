@@ -1,7 +1,9 @@
 import { CharterType, YachtModel } from '@/models/yacht.model';
+import { shownGuestBerths } from '@/utils/static/capacityProse';
 import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
 import { isInquiryOnlyBoat } from '@/utils/static/inquiryOnlyBoat';
 import { toTitleCase } from '@/utils/static/toTitleCase';
+import { CapacityFacts, capacityFacts, fromYacht } from '@/utils/static/yachtCapacity';
 
 /**
  * Deterministic per-yacht variant rotation — same idea as the smart
@@ -28,25 +30,32 @@ type TranslateFn = (key: string, values?: Record<string, string | number>) => st
  * feeds the visible accordion AND the FAQPage JSON-LD, so the markup never
  * drifts from what the page shows.
  */
-export const buildYachtFaq = (yacht: YachtModel, t: TranslateFn, locale: string): YachtFaqEntry[] => {
+export const buildYachtFaq = (
+  yacht: YachtModel,
+  t: TranslateFn,
+  locale: string,
+  facts: CapacityFacts = capacityFacts(fromYacht(yacht, { locale }))
+): YachtFaqEntry[] => {
   const name = yacht.name ? toTitleCase(yacht.name) : yacht.model;
   const entries: YachtFaqEntry[] = [];
   const v = (salt: number, count = 3) => yachtVariant(yacht.id, salt, count);
 
-  // Same guest figure as the description (DetailsTab): max persons, else
-  // berths — maxPersons is null on ~44 % of partner boats (audit B24).
-  const guests = [yacht.maxPersons, yacht.berths].find(n => typeof n === 'number' && n > 0) ?? null;
+  // Sleeping places are the partner's berths; max. people on board is a
+  // sentence of its own, never "sleeps up to {maxPersons}" (Dione II: 13
+  // berths, 14 people on board; capacity contract 7.4). "For guests" only
+  // where the partner's own split leaves berths to the crew.
+  const { cabins, berths, maxPersons } = facts;
+  const guestBerths = shownGuestBerths(facts);
 
-  if (guests && yacht.cabins && yacht.cabins > 0) {
-    // A0–A2 put every guest in a cabin, and A2 says nobody sleeps on the
-    // saloon sofa — true only when the guests fit two to a cabin. More guests
-    // than that (Codex re-audit 2.10.2026: A2 promised it on any boat) gets
-    // A3, which gives the totals and claims no layout the data does not show.
-    const fitsTwoPerCabin = guests <= yacht.cabins * 2;
+  if (berths || maxPersons) {
+    let sleeps = t('faqSleepsNoBerths', { name });
+
+    if (berths && cabins) sleeps = t(`faqSleepsA${v(6)}`, { name, berths, cabins, guestBerths });
+    else if (berths) sleeps = t('faqSleepsNoCabins', { name, berths, guestBerths });
 
     entries.push({
       question: t('faqSleepsQ', { name }),
-      answer: t(`faqSleepsA${fitsTwoPerCabin ? v(6) : 3}`, { name, maxPersons: guests, cabins: yacht.cabins }),
+      answer: [sleeps, maxPersons ? t('faqOnBoard', { name, maxPersons }) : null].filter(Boolean).join(' '),
     });
   }
 

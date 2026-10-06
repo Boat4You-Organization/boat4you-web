@@ -4,36 +4,34 @@ import React from 'react';
 import { Box, Grid, Stack, Typography } from '@mui/material';
 import { useLocale, useTranslations } from 'next-intl';
 
-import {
-  Beam,
-  Cabin,
-  Dimensions,
-  Engine,
-  Fuel,
-  Mainsail,
-  People,
-  SingleBed,
-  Toilet,
-  WaterTank,
-} from '@/components/SvgIcons/BoatFeatures';
+import CapacityText from '@/components/CapacityText';
+import { ACCOMMODATION_ROW_KEYS, CAPACITY_ROW_ICONS } from '@/components/CapacityText/capacityRowIcons';
+import { Beam, Dimensions, Fuel, WaterTank } from '@/components/SvgIcons/BoatFeatures';
 import Calendar from '@/components/SvgIcons/Calendar';
 import Description from '@/components/SvgIcons/Description';
 import { MeasurementInfo } from '@/models/yacht-feature.model';
-import { MAIN_SAIL_TYPE_LABEL_MAP, MainSailType, VESSEL_TYPE_LABEL_MAP, YachtModel } from '@/models/yacht.model';
+import { VESSEL_TYPE_LABEL_MAP, YachtModel } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
 import { useBoatEquipmentDescription } from '@/utils/hooks/useBoatEquipmentDescription';
+import useCapacityFmt from '@/utils/hooks/useCapacityFmt';
+import { accommodationProse } from '@/utils/static/capacityProse';
 import { isInquiryOnlyBoat } from '@/utils/static/inquiryOnlyBoat';
 import { toTitleCase } from '@/utils/static/toTitleCase';
+import { Capacity, capacityFacts, capacityRows, fromYacht } from '@/utils/static/yachtCapacity';
+import { yachtVariant } from '@/utils/static/yachtFaq';
 
 interface DetailsTabProps {
   yacht: YachtModel;
+  /** The boat's capacity resolved on the server for the page locale (note
+   *  translations included); without it the tab resolves the API fields itself. */
+  capacity?: Capacity;
 }
 
 interface FeatureRow {
   key: string;
   icon: React.ElementType;
   label: string;
-  value: string;
+  value: React.ReactNode;
   badge?: string;
 }
 
@@ -52,16 +50,19 @@ const formatMeasure = (
   return null;
 };
 
-/** A positive count, else null (partner data sends null, 0 and negatives). */
-const positiveOrNull = (value: number | null | undefined): number | null =>
-  typeof value === 'number' && Number.isFinite(value) && value > 0 ? value : null;
-
 // Title-case helper lives in src/utils/static/toTitleCase.ts so every yacht
 // name surface (search listing, hero, reservation, PDF) formats identically.
 
-const DetailsTab = ({ yacht }: DetailsTabProps) => {
+const DetailsTab = ({ yacht, capacity: resolvedCapacity }: DetailsTabProps) => {
   const t = useTranslations();
   const locale = useLocale();
+  const capacityT = useCapacityFmt();
+  // The partner's cabins / berths / WC / people / rig (capacity contract v1):
+  // its own figures and notes, crew cabins and WC as figures of their own,
+  // nothing estimated. On an older backend only the flat numbers.
+  const capacity = resolvedCapacity ?? fromYacht(yacht, { locale });
+  const facts = capacityFacts(capacity);
+  const capacityRowList = capacityRows(capacity, capacityT);
 
   const generateDescription = useBoatEquipmentDescription();
 
@@ -102,19 +103,17 @@ const DetailsTab = ({ yacht }: DetailsTabProps) => {
   const vesselTypeRaw = t(VESSEL_TYPE_LABEL_MAP[yacht.vesselType]);
   const vesselTypeLabel = locale === 'de' ? vesselTypeRaw : vesselTypeRaw.toLowerCase();
   const vesselTypeCap = vesselTypeLabel.charAt(0).toUpperCase() + vesselTypeLabel.slice(1);
-  // Guest capacity for the description: the partner's max persons, else the
-  // berths (sleeping places). Many partner boats ship maxPersons=null — the
-  // sentence used to read "can accommodate up to  people" (audit B24).
-  const guests = positiveOrNull(yacht.maxPersons) ?? positiveOrNull(yacht.berths);
-  const cabins = positiveOrNull(yacht.cabins);
-  const wc = positiveOrNull(yacht.wc);
+  // Accommodation paragraph (capacityProse.ts): berths from berths, "on
+  // board" from max. people, a shower only when the partner sends showers,
+  // and no promise that bedding is included. The old sentences gave max.
+  // persons as sleeping places and a shower per toilet (capacity contract C4).
+  const { cabins } = facts;
   const bold = (chunks: React.ReactNode) => <strong>{chunks}</strong>;
-  let accommodationKey: string | null = null;
-
-  if (guests && cabins && wc) accommodationKey = `yacht.descAccomV${descVariant(2)}`;
-  else if (guests && cabins) accommodationKey = 'yacht.descAccomNoWc';
-  else if (cabins) accommodationKey = 'yacht.descCabinsOnly';
-  else if (guests) accommodationKey = 'yacht.descGuestsOnly';
+  const accommodation = accommodationProse(facts, (salt, count) => yachtVariant(yacht.id, salt, count));
+  // Engine clause from the partner's rig ("2 × 115 hp", MMK's own "2x60HP"),
+  // never the engine-filter figure (it read "880 hp" for "Volvo MD 22 40 h.p.").
+  const engineRow = capacityRowList.find(row => row.key === 'engine');
+  const engineLang = engineRow?.segments.find(segment => segment.lang)?.lang;
 
   const currentYear = new Date().getFullYear();
   const isNewYacht = Boolean(yacht.buildYear && yacht.buildYear >= currentYear - 1);
@@ -125,109 +124,68 @@ const DetailsTab = ({ yacht }: DetailsTabProps) => {
   // External (partner-synced) yachts render the original 2-column feature
   // grid below the description block — no "Guests" or "Specifications"
   // sub-headers, just every populated spec interleaved across two columns.
-  // Custom yachts get a labelled 4+4 "Specifications" grid instead so the
-  // Cabins/Berths/Guests/Crew column reads as a clean accommodation
-  // summary; the right column carries the boat-itself specs and prefers
-  // customDetails.engineText over the numeric engine power. That figure is
-  // horsepower — the total of all engines, as both partner feeds deliver it
-  // (MMK "2 x 45 HP", NauSys power × engines), not kW (Codex re-audit 2.10.2026).
-  const leftRowsRaw: (FeatureRow | null)[] = yacht.custom
-    ? [
-        yacht.cabins ? { key: 'cabins', icon: Cabin, label: t('filters.cabins'), value: String(yacht.cabins) } : null,
-        yacht.berths
-          ? { key: 'berths', icon: SingleBed, label: t('filters.berths'), value: String(yacht.berths) }
-          : null,
-        yacht.maxPersons
-          ? { key: 'guests', icon: People, label: t('yacht.maxPassengers'), value: String(yacht.maxPersons) }
-          : null,
-        yacht.crewNumber && yacht.crewNumber > 0
-          ? { key: 'crew', icon: People, label: t('yacht.crew'), value: String(yacht.crewNumber) }
-          : null,
-      ]
-    : [
-        yacht.buildYear
-          ? {
-              key: 'year',
-              icon: Calendar,
-              label: t('filters.year'),
-              value: String(yacht.buildYear),
-              badge: isNewYacht ? t('filters.newYacht') : undefined,
-            }
-          : null,
-        yacht.cabins ? { key: 'cabins', icon: Cabin, label: t('filters.cabins'), value: String(yacht.cabins) } : null,
-        yacht.berths
-          ? { key: 'berths', icon: SingleBed, label: t('filters.berths'), value: String(yacht.berths) }
-          : null,
-        yacht.maxPersons
-          ? { key: 'people', icon: People, label: t('yacht.maxPassengers'), value: String(yacht.maxPersons) }
-          : null,
-        yacht.wc ? { key: 'toilets', icon: Toilet, label: t('filters.toilets'), value: String(yacht.wc) } : null,
-        yacht.mainSailType && yacht.mainSailType !== MainSailType.UNKNOWN
-          ? {
-              key: 'mainSail',
-              icon: Mainsail,
-              label: t('yacht.mainSailType'),
-              value: t(MAIN_SAIL_TYPE_LABEL_MAP[yacht.mainSailType]),
-            }
-          : null,
-      ];
+  // Custom yachts get a labelled "Specifications" grid instead so the
+  // accommodation column reads as a clean summary. Cabins … crew, sails,
+  // engine and draught come from capacityRows (yachtCapacity.ts): each row
+  // only when the partner sends it, notes verbatim or from the reviewed
+  // translation table, the custom engine text ahead of its power.
+  const toFeatureRow = (row: (typeof capacityRowList)[number]): FeatureRow => ({
+    key: row.key,
+    icon: CAPACITY_ROW_ICONS[row.key],
+    label: row.label,
+    value: <CapacityText segments={row.segments} />,
+  });
+  const accommodationRows = capacityRowList.filter(row => ACCOMMODATION_ROW_KEYS.includes(row.key)).map(toFeatureRow);
+  const rowByKey = (key: string): FeatureRow | null => {
+    const row = capacityRowList.find(r => r.key === key);
+
+    return row ? toFeatureRow(row) : null;
+  };
+  const yearRow: FeatureRow | null = yacht.buildYear
+    ? {
+        key: 'year',
+        icon: Calendar,
+        label: t('filters.year'),
+        value: String(yacht.buildYear),
+        badge: isNewYacht ? t('filters.newYacht') : undefined,
+      }
+    : null;
+  const lengthRow: FeatureRow | null = lengthValue
+    ? { key: 'length', icon: Dimensions, label: t('filters.length'), value: lengthValue }
+    : null;
+  const beamRow: FeatureRow | null = beamValue
+    ? { key: 'beam', icon: Beam, label: t('filters.beam'), value: beamValue }
+    : null;
+  const fuelRow: FeatureRow | null = yacht.fuelTank
+    ? { key: 'fuelTank', icon: Fuel, label: t('filters.fuelTank'), value: `${yacht.fuelTank} l` }
+    : null;
+  const waterRow: FeatureRow | null = yacht.waterTank
+    ? { key: 'waterTank', icon: WaterTank, label: t('filters.waterTank'), value: `${yacht.waterTank} l` }
+    : null;
+
+  const leftRowsRaw: (FeatureRow | null)[] = yacht.custom ? accommodationRows : [yearRow, ...accommodationRows];
 
   const rightRowsRaw: (FeatureRow | null)[] = yacht.custom
     ? [
-        yacht.buildYear
-          ? {
-              key: 'year',
-              icon: Calendar,
-              label: t('filters.year'),
-              value: String(yacht.buildYear),
-              badge: isNewYacht ? t('filters.newYacht') : undefined,
-            }
-          : null,
-        lengthValue ? { key: 'length', icon: Dimensions, label: t('filters.length'), value: lengthValue } : null,
-        beamValue ? { key: 'beam', icon: Beam, label: t('filters.beam'), value: beamValue } : null,
-        yacht.customDetails?.engineText
-          ? { key: 'engine', icon: Engine, label: t('filters.engine'), value: yacht.customDetails.engineText }
-          : yacht.enginePower
-            ? {
-                key: 'engine',
-                icon: Engine,
-                label: t('filters.engine'),
-                value: t('filters.engineHp', { value: String(yacht.enginePower) }),
-              }
-            : null,
-        yacht.fuelTank
-          ? { key: 'fuelTank', icon: Fuel, label: t('filters.fuelTank'), value: `${yacht.fuelTank} l` }
-          : null,
-        yacht.waterTank
-          ? { key: 'waterTank', icon: WaterTank, label: t('filters.waterTank'), value: `${yacht.waterTank} l` }
-          : null,
-        yacht.wc ? { key: 'toilets', icon: Toilet, label: t('filters.toilets'), value: String(yacht.wc) } : null,
-        yacht.mainSailType && yacht.mainSailType !== MainSailType.UNKNOWN
-          ? {
-              key: 'mainSail',
-              icon: Mainsail,
-              label: t('yacht.mainSailType'),
-              value: t(MAIN_SAIL_TYPE_LABEL_MAP[yacht.mainSailType]),
-            }
-          : null,
+        yearRow,
+        lengthRow,
+        beamRow,
+        rowByKey('draught'),
+        rowByKey('engine'),
+        fuelRow,
+        waterRow,
+        rowByKey('mainsail'),
+        rowByKey('headsail'),
       ]
     : [
-        lengthValue ? { key: 'length', icon: Dimensions, label: t('filters.length'), value: lengthValue } : null,
-        beamValue ? { key: 'beam', icon: Beam, label: t('filters.beam'), value: beamValue } : null,
-        yacht.fuelTank
-          ? { key: 'fuelTank', icon: Fuel, label: t('filters.fuelTank'), value: `${yacht.fuelTank} l` }
-          : null,
-        yacht.waterTank
-          ? { key: 'waterTank', icon: WaterTank, label: t('filters.waterTank'), value: `${yacht.waterTank} l` }
-          : null,
-        yacht.enginePower
-          ? {
-              key: 'engine',
-              icon: Engine,
-              label: t('filters.engine'),
-              value: t('filters.engineHp', { value: String(yacht.enginePower) }),
-            }
-          : null,
+        lengthRow,
+        beamRow,
+        rowByKey('draught'),
+        fuelRow,
+        waterRow,
+        rowByKey('mainsail'),
+        rowByKey('headsail'),
+        rowByKey('engine'),
       ];
 
   const leftRows = leftRowsRaw.filter((r): r is FeatureRow => r !== null);
@@ -335,17 +293,14 @@ const DetailsTab = ({ yacht }: DetailsTabProps) => {
                 )}
               </Typography>
             )}
-            {accommodationKey && (
+            {accommodation.length > 0 && (
               <Typography variant="body1" color={colors.black500}>
-                {t.rich(
-                  accommodationKey as never,
-                  { name: displayName, maxPersons: guests, cabins, wc, b: bold } as never
-                )}
-              </Typography>
-            )}
-            {wc && !accommodationKey?.startsWith('yacht.descAccomV') && (
-              <Typography variant="body1" color={colors.black500}>
-                {t.rich('yacht.descWcOnly' as never, { name: displayName, wc, b: bold } as never)}
+                {accommodation.map((part, index) => (
+                  <React.Fragment key={part.key}>
+                    {index > 0 && ' '}
+                    {t.rich(`yacht.${part.key}` as never, { ...part.values, name: displayName, b: bold } as never)}
+                  </React.Fragment>
+                ))}
               </Typography>
             )}
             {description && (
@@ -356,17 +311,18 @@ const DetailsTab = ({ yacht }: DetailsTabProps) => {
             {lengthValue && beamValue && (yacht.fuelTank || yacht.waterTank) && (
               <Typography variant="body1" color={colors.black500}>
                 {t.rich(
-                  (yacht.enginePower
-                    ? `yacht.descSpecsV${descVariant(3)}`
-                    : `yacht.descSpecsShortV${descVariant(3)}`) as never,
+                  (engineRow ? `yacht.descSpecsV${descVariant(3)}` : `yacht.descSpecsShortV${descVariant(3)}`) as never,
                   {
                     name: displayName,
                     length: lengthValue,
                     beam: beamValue,
-                    engine: String(yacht.enginePower ?? ''),
+                    engine: engineRow?.value ?? '',
                     fuel: String(yacht.fuelTank ?? 0),
                     water: String(yacht.waterTank ?? 0),
                     b: (chunks: React.ReactNode) => <strong>{chunks}</strong>,
+                    // The partner's own engine label stays English (lang="en").
+                    engineLabel: (chunks: React.ReactNode) =>
+                      engineLang ? <span lang={engineLang}>{chunks}</span> : chunks,
                   } as never
                 )}
               </Typography>

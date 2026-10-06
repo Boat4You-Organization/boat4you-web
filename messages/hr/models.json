@@ -12,7 +12,6 @@
   "yachtModels": "Modeli plovila",
   "boats": "{count, plural, one {# brod} few {# broda} other {# brodova}}",
   "cabins": "{count, plural, one {# kabina} few {# kabine} other {# kabina}}",
-  "guests": "{count, plural, one {# osoba} few {# osobe} other {# osoba}}",
   "cabinsRange": "kabine: {range}",
   "priceBand": "{p25} – {p75} tjedno",
   "index": {
@@ -35,7 +34,6 @@
     "colBoats": "Brodovi",
     "colLength": "Duljina",
     "colCabins": "Kabine",
-    "colGuests": "Osobe",
     "colPrice": "Uobičajeni tjedan najma",
     "whereHeading": "Gdje su baze modela {brand}",
     "whereNote": "Brodovi gore navedenih modela, po zemljama.",
@@ -56,7 +54,6 @@
     "specFleet": "Brodovi za najam",
     "specLength": "Duljina",
     "specCabins": "Kabine",
-    "specGuests": "Osobe",
     "specBerths": "Ležajevi",
     "specHeads": "Toaleti (WC)",
     "specBuildYears": "Godine gradnje",

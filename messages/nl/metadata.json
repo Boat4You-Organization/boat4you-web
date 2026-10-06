@@ -61,7 +61,7 @@
     "descLeadFrom": "Jachtcharter {name} vanuit {marina}",
     "descCabins": "{count, plural, one {# hut} other {# hutten}}",
     "descBerths": "{count, plural, one {# slaapplaats} other {# slaapplaatsen}}",
-    "descGuests": "{count, plural, one {max. # gast} other {max. # gasten}}",
+    "descMaxPeople": "{count, plural, one {max. # persoon aan boord} other {max. # personen aan boord}}",
     "descCta": "Bekijk de beschikbaarheid en boek direct op boat4you.com.",
     "descCtaInquiry": "Stuur een aanvraag voor je reisdata via boat4you.com."
   },
@@ -71,7 +71,6 @@
     "summary": "{total, number} boten · pagina {page} van {pages}",
     "otherBases": "Overige thuishavens",
     "cabins": "{count, plural, one {# hut} other {# hutten}}",
-    "guests": "{count, plural, one {# gast} other {# gasten}}",
     "paginationLabel": "Pagina's van het vlootoverzicht"
   }
 }

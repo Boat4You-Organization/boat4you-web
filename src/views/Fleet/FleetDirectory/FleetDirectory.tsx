@@ -21,7 +21,11 @@ interface FleetGroup {
  * pointless payload on a page whose only job is links.
  */
 const FleetDirectory = async ({ slice }: { slice: FleetPage }) => {
-  const [t, tModels] = await Promise.all([getTranslations('metadata.fleet'), getTranslations('models')]);
+  const [t, tModels, tCapacity] = await Promise.all([
+    getTranslations('metadata.fleet'),
+    getTranslations('models'),
+    getTranslations('capacity'),
+  ]);
 
   // Headings restart on every page — the home base is the single most
   // useful thing to scan a charter fleet by, and it keeps each page's
@@ -67,7 +71,8 @@ const FleetDirectory = async ({ slice }: { slice: FleetPage }) => {
               const specs = [
                 entry.buildYear ? String(entry.buildYear) : null,
                 entry.cabins ? t('cabins', { count: entry.cabins }) : null,
-                entry.maxPersons ? t('guests', { count: entry.maxPersons }) : null,
+                // The partner's max. people on board ("max. 12 people"), not "guests".
+                entry.maxPersons ? tCapacity('compact.maxPeople', { count: entry.maxPersons }) : null,
               ]
                 .filter(Boolean)
                 .join(' · ');
