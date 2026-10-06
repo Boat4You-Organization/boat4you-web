@@ -102,12 +102,13 @@ const PriceDetailsContent = ({ yacht, isCalculatedPrice, isSelectedOfferUnavaila
               {tCommon('paidNow')}
             </Typography>
             {selectedExtrasInPrice?.map(({ id, name, priceEur, priceInfo, labelCode, paymentType }) => {
-              const formattedPrice = isPositivePrice(priceInfo?.amount ?? priceEur, { cents: 'auto' })
+              // Whole, like the "Total due now" they add up to (review
+              // 6.10.2026); fees paid at the marina keep their cents.
+              const formattedPrice = isPositivePrice(priceInfo?.amount ?? priceEur)
                 ? formatPriceWithCurrency({
                     clientPriceEur: priceEur,
                     clientPriceInfo: priceInfo,
                     locale,
-                    cents: 'auto',
                   })
                 : tCommon(unpricedExtraLabelKey(paymentType));
 

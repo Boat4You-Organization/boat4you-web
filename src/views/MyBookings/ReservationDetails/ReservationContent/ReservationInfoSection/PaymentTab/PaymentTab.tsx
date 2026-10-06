@@ -68,14 +68,23 @@ const PaymentTab = ({
   // otherwise "Included" for an INCLUDED extra (e.g. Wi-Fi/Unlimited) and
   // "Price on request" for anything else. The backend marks every 0-priced
   // extra INCLUDED, so a row without paymentType counts as INCLUDED too.
-  const extraPriceLabel = ({
-    priceEur,
-    priceInfo,
-    paymentType,
-  }: Pick<SelectedExtra, 'priceEur' | 'priceInfo'> & { paymentType?: string | null }) =>
-    isPositivePrice(priceInfo?.amount ?? priceEur, { cents: 'auto' })
-      ? formatPriceWithCurrency({ clientPriceEur: priceEur, clientPriceInfo: priceInfo, locale, cents: 'auto' })
+  // Extras and fees keep their cents (1.33 € tourist tax), except the "Paid
+  // now" rows: those are part of the whole Total and stay whole like it
+  // (review 6.10.2026).
+  const extraPriceLabel = (
+    {
+      priceEur,
+      priceInfo,
+      paymentType,
+    }: Pick<SelectedExtra, 'priceEur' | 'priceInfo'> & { paymentType?: string | null },
+    { inTotal = false }: { inTotal?: boolean } = {}
+  ) => {
+    const cents = inTotal ? undefined : 'auto';
+
+    return isPositivePrice(priceInfo?.amount ?? priceEur, { cents })
+      ? formatPriceWithCurrency({ clientPriceEur: priceEur, clientPriceInfo: priceInfo, locale, cents })
       : t(unpricedExtraLabelKey(paymentType ?? ExtraPaymentType.INCLUDED));
+  };
 
   // V1_57 split: items the partner expects bank-transferred to them BEFORE
   // embarkation (APA, Skipper, Hostess, Cook, equipment rental) vs cash/card
@@ -300,7 +309,7 @@ const PaymentTab = ({
                     {safePartnerName(item.name)}
                   </Typography>
                   <Typography variant="body1" whiteSpace="nowrap" sx={{ flexShrink: 0 }}>
-                    {extraPriceLabel(item)}
+                    {extraPriceLabel(item, { inTotal: true })}
                   </Typography>
                 </Stack>
               ))}

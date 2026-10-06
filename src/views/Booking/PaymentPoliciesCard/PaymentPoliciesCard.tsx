@@ -60,13 +60,13 @@ const PaymentPoliciesCard = ({
             </Typography>
             {selectedExtrasInPrice.map(({ id, name, priceEur, priceInfo, labelCode, paymentType }) => {
               // Never "0 €": an unpriced extra reads "Included" or "Price on
-              // request", as on the boat page.
-              const formattedPrice = isPositivePrice(priceInfo?.amount ?? priceEur, { cents: 'auto' })
+              // request", as on the boat page. Whole, like the total they are
+              // part of (review 6.10.2026); fees paid at the marina keep cents.
+              const formattedPrice = isPositivePrice(priceInfo?.amount ?? priceEur)
                 ? formatPriceWithCurrency({
                     clientPriceEur: priceEur,
                     clientPriceInfo: priceInfo,
                     locale,
-                    cents: 'auto',
                   })
                 : t(unpricedExtraLabelKey(paymentType));
 
