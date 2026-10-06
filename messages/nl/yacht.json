@@ -283,6 +283,7 @@
   "faqSleepsA0": "{name} biedt slaapplaats aan maximaal {maxPersons, plural, one {# gast} other {# gasten}}, verdeeld over {cabins, plural, one {# hut} other {# hutten}} — zo krijgt een volle vriendengroep of een gezin allemaal een eigen kooi voor de nacht.",
   "faqSleepsA1": "Op {name} kunnen tot {maxPersons, plural, one {# persoon} other {# personen}} overnachten; {cabins, plural, one {de hut biedt} other {de # hutten verdelen}} het gezelschap comfortabel over een charter van meerdere dagen.",
   "faqSleepsA2": "Met {cabins, plural, one {# hut} other {# hutten}} aan boord slaapt {name} maximaal {maxPersons, plural, one {# gast} other {# gasten}} — genoeg voor de meeste bemanningen, zonder dat iemand op de bank in de salon belandt.",
+  "faqSleepsA3": "{name} heeft {cabins, plural, one {# hut} other {# hutten}} en biedt in totaal slaapplaats aan maximaal {maxPersons, plural, one {# persoon} other {# personen}} — wil iedereen in je groep in een hut slapen, vraag ons dan hoe de kooien aan boord zijn verdeeld.",
   "faqBaseQ": "Waar ligt {name} en waar begint de charter?",
   "faqBaseA0": "{name} ligt in {location}, {country}. Je charter begint en eindigt daar, tenzij vooraf een enkele reis wordt afgesproken.",
   "faqBaseA1": "De thuishaven van {name} is {location} in {country} — daar ga je op de dag van inchecken aan boord en daar breng je de boot ook weer terug naar dezelfde ligplaats.",

@@ -283,6 +283,7 @@
   "faqSleepsA0": "{name} offre posti letto per un massimo di {maxPersons, plural, one {# ospite} other {# ospiti}} in {cabins, plural, one {# cabina} other {# cabine}}: un equipaggio di amici o tutta la famiglia trova una cuccetta come si deve per la notte.",
   "faqSleepsA1": "Fino a {maxPersons, plural, one {# persona può} other {# persone possono}} pernottare a bordo di {name}: {cabins, plural, one {la cabina accoglie} other {le # cabine distribuiscono}} il gruppo con comodità anche in un charter di più giorni.",
   "faqSleepsA2": "Con {cabins, plural, one {# cabina} other {# cabine}} a bordo, {name} ospita per la notte fino a {maxPersons, plural, one {# ospite} other {# ospiti}}: abbastanza per quasi tutti gli equipaggi, senza che nessuno finisca sul divano del salone.",
+  "faqSleepsA3": "{name} ha {cabins, plural, one {# cabina} other {# cabine}} e in tutto offre posti letto per un massimo di {maxPersons, plural, one {# persona} other {# persone}}: se tutto il tuo gruppo vuole dormire in cabina, chiedici come sono distribuite le cuccette a bordo.",
   "faqBaseQ": "Dov’è la base di {name} e da dove parte il charter?",
   "faqBaseA0": "{name} ha il suo ormeggio a {location}, in {country}. Il tuo charter inizia e finisce lì, salvo che tu concordi in anticipo un itinerario one-way.",
   "faqBaseA1": "Il porto di armamento di {name} è {location}, in {country}: ti imbarchi lì il giorno del check-in e riconsegni la barca allo stesso ormeggio.",

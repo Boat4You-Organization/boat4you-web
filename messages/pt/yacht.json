@@ -283,6 +283,7 @@
   "faqSleepsA0": "O {name} acomoda até {maxPersons, plural, one {# hóspede} other {# hóspedes}} em {cabins, plural, one {# cabine} other {# cabines}}, então um grupo de amigos ou a família inteira tem uma cama de verdade para passar a noite.",
   "faqSleepsA1": "Até {maxPersons, plural, one {# pessoa pode} other {# pessoas podem}} pernoitar no {name} — {cabins, plural, one {a cabine acomoda} other {as # cabines dividem}} o grupo com conforto para um charter de vários dias.",
   "faqSleepsA2": "Com {cabins, plural, one {# cabine} other {# cabines}} a bordo, o {name} recebe até {maxPersons, plural, one {# hóspede} other {# hóspedes}} para dormir — suficiente para a maioria das tripulações, sem ninguém no sofá do salão.",
+  "faqSleepsA3": "O {name} tem {cabins, plural, one {# cabine} other {# cabines}} e, no total, {maxPersons, plural, one {# pessoa pode} other {até # pessoas podem}} pernoitar a bordo — se todos do seu grupo quiserem dormir em cabines, pergunte-nos como as camas estão distribuídas.",
   "faqBaseQ": "Onde fica o {name} e onde começa o aluguel?",
   "faqBaseA0": "O {name} está atracado em {location}, {country}. Seu charter começa e termina ali, a menos que uma rota apenas de ida seja combinada com antecedência.",
   "faqBaseA1": "O porto de origem do {name} é {location}, em {country} — você embarca ali no dia do check-in e devolve o barco no mesmo berço.",

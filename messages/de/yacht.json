@@ -283,6 +283,7 @@
   "faqSleepsA0": "{name} bietet bis zu {maxPersons, plural, one {# Gast} other {# Gästen}} in {cabins, plural, one {# Kabine} other {# Kabinen}} Platz zum Schlafen — so bekommt eine komplette Freundescrew oder eine Familie jeweils eine richtige Koje für die Nacht.",
   "faqSleepsA1": "Bis zu {maxPersons, plural, one {# Person kann} other {# Personen können}} auf {name} übernachten — {cabins, plural, one {die Kabine bietet} other {die # Kabinen verteilen}} die Gruppe bequem für einen mehrtägigen Törn.",
   "faqSleepsA2": "Mit {cabins, plural, one {# Kabine} other {# Kabinen}} an Bord nimmt {name} bis zu {maxPersons, plural, one {# Gast} other {# Gäste}} über Nacht auf — genug für die meisten Crews, ohne dass jemand auf dem Salonsofa schlafen muss.",
+  "faqSleepsA3": "{name} hat {cabins, plural, one {# Kabine} other {# Kabinen}} und bietet insgesamt bis zu {maxPersons, plural, one {# Person} other {# Personen}} einen Schlafplatz — soll jeder aus Ihrer Gruppe in einer Kabine schlafen, fragen Sie uns, wie die Kojen an Bord verteilt sind.",
   "faqBaseQ": "Wo liegt {name} und wo startet der Törn?",
   "faqBaseA0": "{name} liegt in {location}, {country}. Ihr Törn beginnt und endet dort, sofern nicht vorab eine One-Way-Route vereinbart wird.",
   "faqBaseA1": "Der Heimathafen von {name} ist {location} in {country} — dort gehen Sie am Check-in-Tag an Bord und bringen das Boot an denselben Liegeplatz zurück.",

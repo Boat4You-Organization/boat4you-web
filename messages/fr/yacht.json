@@ -283,6 +283,7 @@
   "faqSleepsA0": "{name} peut accueillir jusqu’à {maxPersons, plural, one {# personne} other {# personnes}} pour la nuit dans {cabins, plural, one {# cabine} other {# cabines}} : un groupe entre amis comme une famille y trouve une vraie couchette.",
   "faqSleepsA1": "Jusqu’à {maxPersons, plural, one {# personne peut} other {# personnes peuvent}} passer la nuit à bord de {name} — {cabins, plural, one {sa cabine accueille} other {les # cabines répartissent}} le groupe confortablement pour une location de plusieurs jours.",
   "faqSleepsA2": "Avec {cabins, plural, one {# cabine} other {# cabines}} à bord, {name} loge jusqu’à {maxPersons, plural, one {# invité} other {# invités}} pour la nuit — assez pour la plupart des équipages, sans que personne ne dorme sur le canapé du carré.",
+  "faqSleepsA3": "{name} compte {cabins, plural, one {# cabine} other {# cabines}} et peut accueillir jusqu’à {maxPersons, plural, one {# personne} other {# personnes}} au total pour la nuit — si chacun dans votre groupe souhaite dormir en cabine, demandez-nous comment les couchettes sont réparties à bord.",
   "faqBaseQ": "Où se trouve la base de {name} et où commence la location ?",
   "faqBaseA0": "Le port d’attache de {name} se trouve à {location}, sur la côte de {country}. Votre location commence et se termine là, sauf si un trajet en aller simple est convenu à l’avance.",
   "faqBaseA1": "{name} vous attend à {location}, dans la région de {country} — vous montez à bord le jour du check-in et vous ramenez le bateau au même quai.",

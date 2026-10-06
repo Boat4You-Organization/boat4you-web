@@ -283,6 +283,7 @@
   "faqSleepsA0": "{name} prima do {maxPersons, plural, one {# osobe} few {# osobe} other {# osoba}} u {cabins, plural, one {# kabini} few {# kabine} other {# kabina}}, pa cijela ekipa prijatelja ili obitelj dobiju pravi ležaj za spavanje.",
   "faqSleepsA1": "Na plovilu {name} može prenoćiti do {maxPersons, plural, one {# osobe} few {# osobe} other {# osoba}} — {cabins, plural, one {# kabina udobno smješta} few {# kabine udobno raspoređuju} other {# kabina udobno raspoređuje}} društvo na višednevnom charteru.",
   "faqSleepsA2": "Uz {cabins, plural, one {# kabinu} few {# kabine} other {# kabina}} na brodu, {name} nudi prenoćište za do {maxPersons, plural, one {# osobe} few {# osobe} other {# osoba}} — dovoljno za većinu posada, bez spavanja na salonskoj sofi.",
+  "faqSleepsA3": "Plovilo {name} ima {cabins, plural, one {# kabinu} few {# kabine} other {# kabina}}, a ukupno na njemu može prenoćiti do {maxPersons, plural, one {# osobe} few {# osobe} other {# osoba}} — ako svi u vašoj grupi žele spavati u kabinama, pitajte nas kako su ležajevi raspoređeni.",
   "faqBaseQ": "Gdje je baza plovila {name} i gdje počinje charter?",
   "faqBaseA0": "{name} je na vezu u bazi {location}, {country}. Charter počinje i završava na istom mjestu, osim ako je jednosmjerna ruta dogovorena unaprijed.",
   "faqBaseA1": "Matična luka plovila {name} je {location}, {country} — ondje se ukrcavate na dan preuzimanja i na isti vez vraćate brod.",

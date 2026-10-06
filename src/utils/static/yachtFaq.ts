@@ -38,9 +38,15 @@ export const buildYachtFaq = (yacht: YachtModel, t: TranslateFn, locale: string)
   const guests = [yacht.maxPersons, yacht.berths].find(n => typeof n === 'number' && n > 0) ?? null;
 
   if (guests && yacht.cabins && yacht.cabins > 0) {
+    // A0–A2 put every guest in a cabin, and A2 says nobody sleeps on the
+    // saloon sofa — true only when the guests fit two to a cabin. More guests
+    // than that (Codex re-audit 2.10.2026: A2 promised it on any boat) gets
+    // A3, which gives the totals and claims no layout the data does not show.
+    const fitsTwoPerCabin = guests <= yacht.cabins * 2;
+
     entries.push({
       question: t('faqSleepsQ', { name }),
-      answer: t(`faqSleepsA${v(6)}`, { name, maxPersons: guests, cabins: yacht.cabins }),
+      answer: t(`faqSleepsA${fitsTwoPerCabin ? v(6) : 3}`, { name, maxPersons: guests, cabins: yacht.cabins }),
     });
   }
 

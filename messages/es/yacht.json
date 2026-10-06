@@ -283,6 +283,7 @@
   "faqSleepsA0": "{name} ofrece plazas para dormir a hasta {maxPersons, plural, one {# huésped} other {# huéspedes}} repartidos en {cabins, plural, one {# camarote} other {# camarotes}}, así que un grupo de amigos o toda una familia tienen su litera para pasar la noche.",
   "faqSleepsA1": "Hasta {maxPersons, plural, one {# persona puede} other {# personas pueden}} pernoctar en {name}: {cabins, plural, one {su camarote acoge} other {los # camarotes reparten}} al grupo con comodidad en un chárter de varios días.",
   "faqSleepsA2": "Con {cabins, plural, one {# camarote} other {# camarotes}} a bordo, {name} aloja por la noche a un máximo de {maxPersons, plural, one {# huésped} other {# huéspedes}}, suficiente para casi cualquier tripulación sin que nadie acabe en el sofá del salón.",
+  "faqSleepsA3": "{name} tiene {cabins, plural, one {# camarote} other {# camarotes}} y, en total, {maxPersons, plural, one {puede dormir a bordo # persona} other {pueden dormir a bordo hasta # personas}}; si todo tu grupo quiere dormir en camarotes, pregúntanos cómo se reparten las literas.",
   "faqBaseQ": "¿Dónde tiene su base {name} y dónde empieza el chárter?",
   "faqBaseA0": "{name} tiene su amarre en {location}, {country}. Tu chárter empieza y termina allí, salvo que se acuerde con antelación una ruta de solo ida.",
   "faqBaseA1": "El puerto base de {name} es {location}, en {country}: embarcas allí el día del check-in y devuelves el barco al mismo amarre.",

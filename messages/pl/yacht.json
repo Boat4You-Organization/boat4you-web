@@ -283,6 +283,7 @@
   "faqSleepsA0": "Jednostka {name} zapewnia nocleg dla maksymalnie {maxPersons, plural, one {# osoby} other {# osób}} w {cabins, plural, one {# kabinie} other {# kabinach}}, więc zarówno ekipa znajomych, jak i rodzina mają na noc własne miejsce do spania.",
   "faqSleepsA1": "Na pokładzie jednostki {name} może nocować do {maxPersons, plural, one {# osoby} other {# osób}}, a miejsca w {cabins, plural, one {# kabinie} other {# kabinach}} wystarczy, by wygodnie rozdzielić grupę na kilkudniowy czarter.",
   "faqSleepsA2": "W {cabins, plural, one {# kabinie} other {# kabinach}} jednostki {name} {maxPersons, plural, one {przenocuje # osoba} few {przenocują nawet # osoby} other {przenocuje nawet # osób}} — dla większości załóg to komplet miejsc, bez spania na kanapie w salonie.",
+  "faqSleepsA3": "Jednostka {name} ma {cabins, plural, one {# kabinę} few {# kabiny} many {# kabin} other {# kabiny}} i łącznie zapewnia nocleg dla maksymalnie {maxPersons, plural, one {# osoby} other {# osób}} — jeśli wszyscy z Twojej grupy chcą spać w kabinach, zapytaj nas, jak rozmieszczone są koje na pokładzie.",
   "faqBaseQ": "Gdzie cumuje jednostka {name} i skąd startuje czarter?",
   "faqBaseA0": "Jednostka {name} cumuje w bazie {location}, {country}. Twój czarter zaczyna się i kończy w tym samym miejscu, chyba że wcześniej ustalimy rejs w jedną stronę.",
   "faqBaseA1": "Port macierzysty jednostki {name} to {location}, {country} — tam wchodzisz na pokład w dniu odbioru i tam oddajesz łódź na to samo miejsce postojowe.",

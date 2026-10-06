@@ -283,6 +283,7 @@
   "faqSleepsA0": "{name} sleeps up to {maxPersons, plural, one {# guest} other {# guests}} across {cabins, plural, one {# cabin} other {# cabins}}, so a full crew of friends or a family group all get a proper berth for the night.",
   "faqSleepsA1": "Up to {maxPersons, plural, one {# person} other {# people}} can stay overnight on {name} — {cabins, plural, one {the cabin gives the group a comfortable base} other {the # cabins split the group comfortably}} for a multi-day charter.",
   "faqSleepsA2": "With {cabins, plural, one {# cabin} other {# cabins}} on board, {name} accommodates as many as {maxPersons, plural, one {# guest} other {# guests}} overnight — enough for most crews without anyone on the saloon sofa.",
+  "faqSleepsA3": "{name} has {cabins, plural, one {# cabin} other {# cabins}} and sleeps up to {maxPersons, plural, one {# guest} other {# guests}} in total — if everyone in your group wants a bed in a cabin, ask us how the berths are arranged on board.",
   "faqBaseQ": "Where is {name} based and where does the charter start?",
   "faqBaseA0": "{name} is berthed in {location}, {country}. Your charter starts and ends there unless a one-way route is arranged in advance.",
   "faqBaseA1": "The home port of {name} is {location} in {country} — you board there on check-in day and return the boat to the same berth.",
