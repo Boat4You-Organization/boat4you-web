@@ -68,13 +68,13 @@ En onthoud: het aanvragen van een offerte of het stellen van vragen verplicht je
 
 ## Bieden jullie hutcharters aan of kan ik me bij een bestaande groep aansluiten?
 
-**Boat4You** is gespecialiseerd in privé-jachtcharters, wat betekent dat we de hele boot aan jou en je groep verhuren – of het nu een bareboat (je zeilt zelf) is of met een ingehuurde schipper/bemanning. We bieden momenteel geen "hutcharters" aan waarbij je slechts één hut op een gedeeld jacht met vreemden boekt. Al onze charters zijn voor het gehele vaartuig.
+**Boat4You** is gespecialiseerd in privé-jachtcharters, wat betekent dat de hele boot aan jou en je groep wordt verhuurd – of het nu een bareboat (je zeilt zelf) is of met een ingehuurde schipper/bemanning. We bieden momenteel geen "hutcharters" aan waarbij je slechts één hut op een gedeeld jacht met vreemden boekt. Alle charters via Boat4You zijn voor het gehele vaartuig.
 
 Als je een soloreiziger bent of een stel dat zich bij anderen wil aansluiten, betekent dit dat je je eigen groep moet vormen voor een privé-charter. We begrijpen dat er in sommige bestemmingen hutcharter-opties zijn (bijvoorbeeld, sommige bedrijven organiseren cruises per hut of vloten), maar de focus van **Boat4You** ligt op volledig privé-ervaringen.
 
 Het voordeel is dat je het hele jacht voor jezelf hebt en volledige vrijheid om je reisplan aan te passen. Het nadeel is dat je voldoende mensen (of budget) moet hebben om het hele jacht te huren. Veel van onze klanten stellen een kleine groep vrienden of familie samen om de kosten en de ervaring te delen.
 
-Dat gezegd hebbende, als je geïnteresseerd bent in een hutcharter, laat het ons weten – we kunnen adviseren of er partneroperators of cruises zijn die aan je wensen voldoen. Anders kun je overwegen een paar gelijkgestemde vrienden uit te nodigen om deel te nemen aan je reis! We organiseren ook af en toe vloten (meerdere boten die samen zeilen), wat niet hetzelfde is als vreemden die één boot delen, maar het is een leuke manier voor kleinere groepen om samen te zeilen en anderen te ontmoeten, terwijl ze toch hun eigen boot behouden.
+Dat gezegd hebbende, als je geïnteresseerd bent in een hutcharter, laat het ons weten – we kunnen adviseren of er partneroperators of cruises zijn die aan je wensen voldoen. Anders kun je overwegen een paar gelijkgestemde vrienden uit te nodigen om deel te nemen aan je reis! We kunnen ook flottieljes met partnervloten regelen (meerdere boten die samen zeilen), wat niet hetzelfde is als vreemden die één boot delen, maar het is een leuke manier voor kleinere groepen om samen te zeilen en anderen te ontmoeten, terwijl ze toch hun eigen boot behouden.
 
 Samenvattend: **Boat4You** biedt alleen volledige jachtcharters aan (bareboat, met schipper, of met bemanning), geen boekingen per hut. Dit zorgt voor een persoonlijke ervaring, afgestemd op de voorkeuren van je groep.
 
@@ -92,7 +92,7 @@ Zelfs als je enige zeilervaring hebt, maar je onzeker voelt over bepaalde aspect
 
 **Wat doet een schipper?** Een schipper regelt de navigatie, het zeilen en het manoeuvreren van het jacht. Ze zijn ook een lokale expert, dus ze kunnen je naar de beste plekjes leiden (ze kennen die verborgen baaien en beste ankerplaatsen die niet in de reisgidsen staan). Deze lokale kennis kan je reis enorm verbeteren. Bovendien, met een schipper aan boord, wordt je charter erg ontspannend – geen stress over routes, weer of het parkeren van de boot, want de schipper regelt het allemaal. Zo kun jij je samen met je vrienden/familie concentreren op zwemmen, zonnebaden en genieten van de reis.
 
-**Samengevat**: Als je gekwalificeerd en zelfverzekerd bent, ben je welkom om het jacht zelf te besturen – dat is de essentie van een bareboat charter. Zo niet, of als je er simpelweg de voorkeur aan geeft om achterover te leunen, kun je via **Boat4You** een professionele schipper inhuren. Wij bieden vriendelijke, ervaren schippers die Engels spreken (en vaak andere talen) en een vergunning hebben voor het gebied. Het is volledig je keuze, en we ondersteunen beide opties. Het belangrijkste is veiligheid en plezier; wij helpen je beslissen op basis van je ervaringsniveau en comfort.
+**Samengevat**: Als je gekwalificeerd en zelfverzekerd bent, ben je welkom om het jacht zelf te besturen – dat is de essentie van een bareboat charter. Zo niet, of als je er simpelweg de voorkeur aan geeft om achterover te leunen, kun je via **Boat4You** een professionele schipper inhuren. Onze partners bieden vriendelijke, ervaren schippers die Engels spreken (en vaak andere talen) en een vergunning hebben voor het gebied. Het is volledig je keuze, en we ondersteunen beide opties. Het belangrijkste is veiligheid en plezier; wij helpen je beslissen op basis van je ervaringsniveau en comfort.
 
 _Nog een opmerking: voor degenen die een volledig verzorgde ervaring wensen, overweeg een **crewed charter**. Dat betekent niet alleen een schipper, maar mogelijk ook een chef-kok en extra bemanning die voor alle aspecten van het jacht zorgen. Dit is gebruikelijk voor luxe jachten of gulet charters. Bij een crewed charter hoef je je absoluut geen zorgen te maken over het zeilen van de boot – het wordt allemaal afgehandeld door professionals, als een privé drijvend hotel._
 
@@ -190,7 +190,7 @@ Wij accepteren **bankoverschrijvingen** en **belangrijke credit-/debitcards** vo
 
 **Valuta**: **Boat4You** kan vaak betalingen in verschillende valuta (USD, EUR, etc.) accepteren, afhankelijk van de boeking. We zullen je meestal in een logische valuta offreren – bijvoorbeeld, charters in Europa doorgaans in Euro's, Caribische charters vaak in USD. Als je liever in een specifieke valuta of via een specifieke methode wilt betalen, vraag het ons gerust en we zullen ons best doen om je tegemoet te komen.
 
-Alle betalingen die je doet, worden gedocumenteerd met een ontvangstbewijs en de fondsen worden onder escrow gehouden of doorgegeven aan de charteroperator volgens onze overeenkomsten. Na ontvangst van de volledige betaling, ontvang je van ons een instapbewijs of charterticket om te tonen in de jachthaven, evenals eventuele verdere instructies die je nodig hebt voor het inchecken.
+Alle betalingen die je doet, worden gedocumenteerd met een ontvangstbewijs en de fondsen worden doorgegeven aan de charteroperator volgens onze overeenkomsten. Na ontvangst van de volledige betaling, ontvang je van ons een instapbewijs of charterticket om te tonen in de jachthaven, evenals eventuele verdere instructies die je nodig hebt voor het inchecken.
 
 _Kanttekening: We begrijpen dat plannen soms veranderen – als je een korte verlenging van een betalingstermijn nodig hebt of een betalingsregeling in termijnen, neem dan contact met ons op. We streven ernaar flexibel en begripvol te zijn met onze klanten, binnen redelijke grenzen._
 
@@ -198,11 +198,9 @@ _Kanttekening: We begrijpen dat plannen soms veranderen – als je een korte ver
 
 Absoluut. Wij nemen betalingsbeveiliging en je gemoedsrust zeer serieus. Wanneer je boekt bij **Boat4You**, zijn je betalingen op verschillende manieren beschermd:
 
-**Veilig Betalingsproces**: Of je nu met creditcard of bankoverschrijving betaalt, wij gebruiken veilige, versleutelde betaalpoorten en gerenommeerde bankpartners. Creditcardbetalingen verlopen via PCI-conforme processors, en wij slaan je kaartgegevens nooit direct op. Voor bankoverschrijvingen geven wij duidelijke instructies om ervoor te zorgen dat het geld naar de juiste escrow-rekening gaat.
+**Veilig Betalingsproces**: Of je nu met creditcard of bankoverschrijving betaalt, wij gebruiken veilige, versleutelde betaalpoorten en gerenommeerde bankpartners. Creditcardbetalingen verlopen via PCI-conforme processors, en wij slaan je kaartgegevens nooit direct op. Voor bankoverschrijvingen geven wij duidelijke instructies om ervoor te zorgen dat het geld naar de juiste rekening gaat.
 
-**Gevestigde Vertrouwensrekeningen**: In veel gevallen, vooral bij vroege boekingen, wordt je betaling op een klant-escrow-rekening gehouden of als aanbetaling voor je charter overgemaakt naar de rekening van de charteroperator. Het verdwijnt niet in het niets. Dit betekent dat de fondsen bestemd zijn voor je charterdienst. **Boat4You** werkt alleen samen met geteste, betrouwbare vlootoperators waarmee we langdurige relaties hebben.
-
-**Verzekering/Bescherming voor Fondsen**: **Boat4You** kan een verzekering tegen financieel falen of vergelijkbare regelingen hebben om je fondsen te beschermen. Sommige charterbureaus werken bijvoorbeeld samen met verzekeringsgroepen om alle klantbetalingen te verzekeren. Als we zo'n samenwerking hebben, zullen we je zeker informeren. Deze verzekering betekent dat in het onwaarschijnlijke geval van bijvoorbeeld een bedrijfsinsolventie, je geld gedekt is en je wordt vergoed.
+**Geoormerkte betalingen**: In veel gevallen, vooral bij vroege boekingen, wordt je betaling als aanbetaling voor je charter overgemaakt naar de rekening van de charteroperator. Het verdwijnt niet in het niets. Dit betekent dat de fondsen bestemd zijn voor je charterdienst. **Boat4You** werkt alleen samen met geteste, betrouwbare vlootoperators waarmee we langdurige relaties hebben.
 
 **Documentatie**: Elke betaling die je doet, wordt schriftelijk bevestigd. Je ontvangt een factuur of ontvangstbewijs. Bovendien onderteken je een chartercontract waarin wordt bepaald wat er met je geld gebeurt (zoals restitutievoorwaarden, etc.). Er zijn wettelijke waarborgen in dat contract voor jou als charteraar.
 
@@ -210,7 +208,7 @@ Absoluut. Wij nemen betalingsbeveiliging en je gemoedsrust zeer serieus. Wanneer
 
 Verder raden we je aan (hoewel het optioneel is) om een **reisverzekering of annuleringsverzekering** te overwegen die je charterbetalingen dekt. Dit is een extra beschermingslaag – bijvoorbeeld, als een onvoorziene gebeurtenis (zoals een medisch noodgeval) je dwingt te annuleren buiten het restitutievenster, kan je reisverzekering je vergoeden.
 
-Je betalingen aan **Boat4You** zijn veilig, beveiligd en zo volledig mogelijk verzekerd. We willen dat je je concentreert op het aftellen van de dagen naar je jachtvakantie, en niet op geldtransfers. Als je specifieke zorgen hebt over de veiligheid van betalingen, laat het ons dan weten – we kunnen nog meer gedetailleerde informatie of alternatieve oplossingen bieden om je gerust te stellen.
+Je betalingen aan **Boat4You** zijn veilig en beveiligd. We willen dat je je concentreert op het aftellen van de dagen naar je jachtvakantie, en niet op geldtransfers. Als je specifieke zorgen hebt over de veiligheid van betalingen, laat het ons dan weten – we kunnen nog meer gedetailleerde informatie of alternatieve oplossingen bieden om je gerust te stellen.
 
 ## Zijn diensten van een schipper en bemanning inbegrepen in de charterprijs?
 
@@ -564,7 +562,7 @@ Je bent absoluut welkom om contact op te nemen en jezelf voor te stellen op dat 
 
 **Ontmoeting op de Basis**: Op de startdag wacht de schipper je op bij het jacht of ontmoet je op kantoor van het charterbedrijf. Meestal zijn ze er iets eerder dan de afgesproken instaptijd. Zodra je arriveert, herken je hen (we kunnen soms een foto delen). Ze helpen je met de bagage en het installeren.
 
-**Tijdens de Reis**: De schipper is bij jou gedurende de hele charter (tenzij je de schipper slechts voor een paar dagen hebt geregeld). Ze blijven aan boord, beheren het zeilen, en zijn in feite je drijvende gids/kapitein. Al onze schippers spreken Engels (en vaak ook andere talen), dus de communicatie zou soepel moeten verlopen.
+**Tijdens de Reis**: De schipper is bij jou gedurende de hele charter (tenzij je de schipper slechts voor een paar dagen hebt geregeld). Ze blijven aan boord, beheren het zeilen, en zijn in feite je drijvende gids/kapitein. De schippers die onze partners leveren, spreken Engels (en vaak ook andere talen), dus de communicatie zou soepel moeten verlopen.
 
 **Communicatievoorkeuren**: Als je specifieke verwachtingen hebt – bijvoorbeeld: "We willen een heel ontspannen tempo, veel zwempauzes" of "We willen graag van jou leren zeilen", – is het fijn om dit vroegtijdig aan de schipper te laten weten. Zij kunnen hun stijl daarop aanpassen. Als iets niet naar je zin is, is beleefde communicatie essentieel; deze schippers zijn doorgaans zeer flexibel.
 
@@ -572,7 +570,7 @@ Je bent absoluut welkom om contact op te nemen en jezelf voor te stellen op dat 
 
 **Communicatie-apps**: Veel schippers gebruiken **WhatsApp**. Het is een handige manier om vooraf en zelfs tijdens de reis te communiceren. We raden dus aan om WhatsApp op je telefoon te hebben; we hebben gemerkt dat het universeel wordt gebruikt onder internationale bemanningen.
 
-**Taal en Lokale Kennis**: Onze schippers spreken Engels en vaak ook de lokale taal van het gebied. Ze hebben uitgebreide lokale kennis – we kiezen schippers die bekend zijn met de regio. Dus vraag gerust naar de beste geheime baai of een goed restaurant aan wal. Ze delen graag tips.
+**Taal en Lokale Kennis**: De schippers spreken Engels en vaak ook de lokale taal van het gebied. Ze hebben uitgebreide lokale kennis – de partners zetten schippers in die bekend zijn met de regio. Dus vraag gerust naar de beste geheime baai of een goed restaurant aan wal. Ze delen graag tips.
 
 Je wordt kort na de boekingsbevestiging voorgesteld aan je schipper en kunt contact met hen opnemen zodra je boeking compleet is – zeker tegen de tijd dat je volledig hebt betaald en je voorbereidt op de reis. Tegen het begin van de charter heb je ofwel gesproken of op zijn minst getext. En dan ontmoet je elkaar face-to-face bij het inschepen en begin je samen aan de reis.
 

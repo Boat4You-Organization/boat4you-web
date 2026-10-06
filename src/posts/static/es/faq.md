@@ -68,13 +68,13 @@ Y recuerde, solicitar un presupuesto o hacer preguntas no le compromete a nada. 
 
 ## ¿Ofrecen chárteres por camarote o puedo unirme a un grupo existente?
 
-**Boat4You** se especializa en chárteres de yates privados, lo que significa que alquilamos la embarcación entera para usted y su grupo – ya sea sin tripulación (bareboat, usted mismo lo navega) o con un patrón/tripulación contratada. Actualmente no ofrecemos "chárteres por camarote" donde usted reserva solo un camarote en un yate compartido con extraños. Todos nuestros chárteres son para la embarcación completa.
+**Boat4You** se especializa en chárteres de yates privados, lo que significa que la embarcación entera se alquila para usted y su grupo – ya sea sin tripulación (bareboat, usted mismo lo navega) o con un patrón/tripulación contratada. Actualmente no ofrecemos "chárteres por camarote" donde usted reserva solo un camarote en un yate compartido con extraños. Todos los chárteres en Boat4You son para la embarcación completa.
 
 Si usted es un viajero solo o una pareja que busca unirse a otros, esto significa que necesitaría formar su propio grupo para un chárter privado. Entendemos que en algunos destinos existen opciones de chárter por camarote (por ejemplo, algunas compañías realizan cruceros por camarote o flotillas), pero el enfoque de **Boat4You** es en experiencias totalmente privadas.
 
 La ventaja es que tiene todo el yate para usted y completa libertad para personalizar su itinerario. La desventaja es que necesitará tener suficientes personas (o presupuesto) para alquilar el yate completo. Muchos de nuestros clientes reúnen a un pequeño grupo de amigos o familiares para compartir el costo y la experiencia.
 
-Dicho esto, si está interesado en un chárter por camarote, háganoslo saber – podemos asesorarle si hay operadores asociados o cruceros que se ajusten a lo que está buscando. De lo contrario, ¡considere invitar a algunos amigos con ideas afines a unirse a su viaje! Ocasionalmente también organizamos flotillas (múltiples barcos navegando juntos), lo cual no es lo mismo que extraños compartiendo un barco, pero es una forma divertida para que grupos más pequeños naveguen en compañía y conozcan a otros, mientras mantienen su propio barco.
+Dicho esto, si está interesado en un chárter por camarote, háganoslo saber – podemos asesorarle si hay operadores asociados o cruceros que se ajusten a lo que está buscando. De lo contrario, ¡considere invitar a algunos amigos con ideas afines a unirse a su viaje! También podemos organizar flotillas con flotas asociadas (múltiples barcos navegando juntos), lo cual no es lo mismo que extraños compartiendo un barco, pero es una forma divertida para que grupos más pequeños naveguen en compañía y conozcan a otros, mientras mantienen su propio barco.
 
 En resumen, **Boat4You** solo ofrece chárteres de yates completos (sin tripulación, con patrón o tripulados), no reservas por camarote. Esto garantiza una experiencia personalizada y adaptada a las preferencias de su grupo.
 
@@ -92,7 +92,7 @@ Incluso si tiene algo de experiencia en navegación pero se siente inseguro acer
 
 **¿Qué hace un patrón?** Un patrón se encargará de la navegación, la vela y las maniobras del yate. También son expertos locales, por lo que pueden guiarle a los mejores lugares (conocerán esas calas escondidas y los mejores fondeaderos que no están en las guías). Este conocimiento local puede mejorar enormemente su viaje. Además, con un patrón a bordo, su chárter se vuelve muy relajante – sin estrés por las rutas, el clima o el estacionamiento del barco, porque el patrón se encarga de todo. Usted y sus amigos/familiares pueden concentrarse en nadar, tomar el sol y disfrutar del viaje.
 
-**En resumen**: Si está cualificado y tiene confianza, puede capitanear el yate usted mismo – esa es la esencia de un chárter bareboat. Si no, o si simplemente prefiere sentarse y relajarse, puede contratar un patrón profesional a través de **Boat4You**. Proporcionamos patrones amables y experimentados que hablan inglés (y a menudo otros idiomas) y tienen licencia para la zona. Es totalmente su elección, y apoyamos ambas opciones. La clave es la seguridad y el disfrute; le ayudaremos a decidir basándonos en su nivel de experiencia y comodidad.
+**En resumen**: Si está cualificado y tiene confianza, puede capitanear el yate usted mismo – esa es la esencia de un chárter bareboat. Si no, o si simplemente prefiere sentarse y relajarse, puede contratar un patrón profesional a través de **Boat4You**. Nuestros socios proporcionan patrones amables y experimentados que hablan inglés (y a menudo otros idiomas) y tienen licencia para la zona. Es totalmente su elección, y apoyamos ambas opciones. La clave es la seguridad y el disfrute; le ayudaremos a decidir basándonos en su nivel de experiencia y comodidad.
 
 _Una nota más: para aquellos que desean una experiencia totalmente mimada, consideren un **chárter con tripulación**. Eso significa no solo un patrón, sino posiblemente un chef y tripulación adicional que se encargan de todos los aspectos del yate. Esto es común para yates de lujo o chárteres de goletas. En un chárter con tripulación, definitivamente no tiene que preocuparse por navegar el barco – todo lo manejan profesionales, como tener un hotel flotante privado._
 
@@ -190,7 +190,7 @@ Aceptamos **transferencias bancarias** y **principales tarjetas de crédito/déb
 
 **Monedas**: **Boat4You** a menudo puede aceptar pagos en diferentes monedas (USD, EUR, etc.) dependiendo de la reserva. Por lo general, le cotizaremos en una moneda lógica – por ejemplo, los chárteres en Europa típicamente en Euros, los chárteres en el Caribe a menudo en USD. Si prefiere pagar en una moneda específica o mediante un método específico, solo pregunte y haremos todo lo posible para adaptarnos.
 
-Todos los pagos que realice están documentados con un recibo y los fondos se mantienen en fideicomiso o se transfieren al operador de chárter de acuerdo con nuestros acuerdos. Después de recibir el pago final, le proporcionaremos un bono de embarque o boleto de chárter para mostrar en el puerto deportivo, así como cualquier otra instrucción que necesite para el _check-in_.
+Todos los pagos que realice están documentados con un recibo y los fondos se transfieren al operador de chárter de acuerdo con nuestros acuerdos. Después de recibir el pago final, le proporcionaremos un bono de embarque o boleto de chárter para mostrar en el puerto deportivo, así como cualquier otra instrucción que necesite para el _check-in_.
 
 _Nota aparte: Entendemos que a veces los planes cambian – si necesita una breve extensión en una fecha límite de pago o un acuerdo de pago dividido, hable con nosotros. Priorizamos ser flexibles y comprensivos con nuestros clientes, dentro de lo razonable._
 
@@ -198,11 +198,9 @@ _Nota aparte: Entendemos que a veces los planes cambian – si necesita una brev
 
 Absolutamente. Nos tomamos muy en serio la seguridad de los pagos y su tranquilidad. Cuando reserva con **Boat4You**, sus pagos están protegidos de varias maneras:
 
-**Proceso de Pago Seguro**: Ya sea que pague con tarjeta de crédito o transferencia bancaria, utilizamos pasarelas de pago cifradas y seguras y socios bancarios de buena reputación. Los pagos con tarjeta de crédito pasan por procesadores que cumplen con la normativa PCI, y nunca almacenamos su información de tarjeta directamente. Para las transferencias bancarias, proporcionamos instrucciones claras para garantizar que el dinero se dirija a la cuenta de fideicomiso correcta.
+**Proceso de Pago Seguro**: Ya sea que pague con tarjeta de crédito o transferencia bancaria, utilizamos pasarelas de pago cifradas y seguras y socios bancarios de buena reputación. Los pagos con tarjeta de crédito pasan por procesadores que cumplen con la normativa PCI, y nunca almacenamos su información de tarjeta directamente. Para las transferencias bancarias, proporcionamos instrucciones claras para garantizar que el dinero se dirija a la cuenta correcta.
 
-**Cuentas Fiduciarias Establecidas**: En muchos casos, especialmente para reservas anticipadas, su pago se mantiene en una cuenta de fideicomiso del cliente o se envía a la cuenta del operador de chárter como depósito para su chárter. No desaparece en el vacío. Esto significa que los fondos están destinados al servicio de su chárter. **Boat4You** trabaja solo con operadores de flotas examinados y confiables con los que tenemos relaciones duraderas.
-
-**Seguro/Protección de Fondos**: **Boat4You** puede tener seguro contra fallos financieros o acuerdos similares para proteger sus fondos. Por ejemplo, algunas agencias de chárter se asocian con grupos de seguros para asegurar todos los pagos de los clientes. Si tenemos dicha asociación, sin duda se lo informaremos. Este seguro significa que, en el improbable caso de algo como una insolvencia de la compañía, su dinero está cubierto y se le reembolsaría.
+**Pagos con destino definido**: En muchos casos, especialmente para reservas anticipadas, su pago se envía a la cuenta del operador de chárter como depósito para su chárter. No desaparece en el vacío. Esto significa que los fondos están destinados al servicio de su chárter. **Boat4You** trabaja solo con operadores de flotas examinados y confiables con los que tenemos relaciones duraderas.
 
 **Documentación**: Cada pago que realiza se confirma por escrito. Tendrá una factura o recibo. Además, usted firma un contrato de chárter que estipula qué sucede con su dinero (como condiciones de reembolso, etc.). Hay salvaguardas legales en ese contrato para usted como fletador.
 
@@ -210,7 +208,7 @@ Absolutamente. Nos tomamos muy en serio la seguridad de los pagos y su tranquili
 
 Además, recomendamos (aunque es opcional) que considere contratar un **seguro de viaje o un seguro de cancelación de viaje** que cubra sus pagos de chárter. Esta es una capa adicional de protección – por ejemplo, si un evento imprevisto (como una emergencia médica) le obliga a cancelar fuera de la ventana de reembolso, su seguro de viaje podría reembolsarle.
 
-Sus pagos a **Boat4You** son seguros y están asegurados en la mayor medida posible. Queremos que se concentre en contar los días hasta sus vacaciones en yate, no en preocuparse por las transferencias de dinero. Si tiene alguna preocupación específica sobre la seguridad de los pagos, por favor háganoslo saber – podemos proporcionarle información aún más detallada o soluciones alternativas para que se sienta cómodo.
+Sus pagos a **Boat4You** son seguros y están protegidos. Queremos que se concentre en contar los días hasta sus vacaciones en yate, no en preocuparse por las transferencias de dinero. Si tiene alguna preocupación específica sobre la seguridad de los pagos, por favor háganoslo saber – podemos proporcionarle información aún más detallada o soluciones alternativas para que se sienta cómodo.
 
 ## ¿Están incluidos los servicios de patrón y tripulación en el precio del chárter?
 
@@ -470,7 +468,7 @@ Le invitamos absolutamente a comunicarse y presentarse en ese momento. En muchos
 
 **Reunión en la Base**: El día de inicio, el patrón estará esperando en el yate o se reunirá con usted en la oficina de la compañía de chárter. Por lo general, estarán allí un poco antes de la hora de embarque acordada. Una vez que llegue, los reconocerá (a veces podemos compartir una foto). Le ayudarán con el equipaje y a instalarse.
 
-**Durante el Viaje**: El patrón está con usted durante todo el chárter (a menos que haya contratado un patrón solo por unos días). Permanecerán a bordo, gestionarán la navegación y básicamente serán su guía turístico/capitán flotante. Todos nuestros patrones hablan inglés (y a menudo otros idiomas), por lo que la comunicación debería ser fluida.
+**Durante el Viaje**: El patrón está con usted durante todo el chárter (a menos que haya contratado un patrón solo por unos días). Permanecerán a bordo, gestionarán la navegación y básicamente serán su guía turístico/capitán flotante. Los patrones que proporcionan nuestros socios hablan inglés (y a menudo otros idiomas), por lo que la comunicación debería ser fluida.
 
 **Comunicación de Preferencias**: Si tiene expectativas específicas – por ejemplo, "Queremos un ritmo muy relajado, muchas paradas para nadar" o "Estamos interesados en aprender a navegar de usted", – es genial decírselo al patrón con anticipación. Pueden adaptar su estilo. Si algo no es de su agrado, la comunicación cortés es clave; estos patrones suelen ser muy adaptables.
 
@@ -478,7 +476,7 @@ Le invitamos absolutamente a comunicarse y presentarse en ese momento. En muchos
 
 **Aplicaciones de Comunicación**: Muchos patrones usan **WhatsApp**. Es una forma práctica de comunicarse antes e incluso durante el viaje. Por lo tanto, le recomendamos tener WhatsApp en su teléfono; hemos descubierto que es de uso universal entre las tripulaciones internacionales.
 
-**Idioma y Conocimiento Local**: Nuestros patrones hablan inglés y, a menudo, también el idioma local de la zona. Tienen un amplio conocimiento local – elegimos patrones familiarizados con la región. Así que siéntase libre de preguntarles sobre la mejor bahía secreta o un buen restaurante en tierra. Les encanta compartir consejos.
+**Idioma y Conocimiento Local**: Los patrones hablan inglés y, a menudo, también el idioma local de la zona. Tienen un amplio conocimiento local – los socios asignan patrones familiarizados con la región. Así que siéntase libre de preguntarles sobre la mejor bahía secreta o un buen restaurante en tierra. Les encanta compartir consejos.
 
 Se le presentará a su patrón poco después de la confirmación de la reserva y podrá contactarlo una vez que su reserva esté completa – ciertamente para cuando haya pagado en su totalidad y se esté preparando para el viaje. Al comienzo del chárter, habrá hablado o al menos enviado un mensaje de texto. Y luego se reunirán cara a cara en el embarque y comenzarán el viaje juntos.
 

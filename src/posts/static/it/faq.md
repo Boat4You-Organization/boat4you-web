@@ -68,13 +68,13 @@ E ricorda, richiedere un preventivo o fare domande non ti impegna a nulla. Siamo
 
 ## Offrite noleggi a cabina o posso unirmi a un gruppo esistente?
 
-**Boat4You** è specializzata in charter di yacht privati, il che significa che noleggiamo l'intera barca a te e al tuo gruppo – che si tratti di un _bareboat_ (lo navighi tu stesso) o con uno skipper/equipaggio assunto. Attualmente non offriamo "noleggi a cabina" dove prenoti solo una cabina su uno yacht condiviso con estranei. Tutti i nostri charter sono per l'intera imbarcazione.
+**Boat4You** è specializzata in charter di yacht privati, il che significa che l'intera barca viene noleggiata a te e al tuo gruppo – che si tratti di un _bareboat_ (lo navighi tu stesso) o con uno skipper/equipaggio assunto. Attualmente non offriamo "noleggi a cabina" dove prenoti solo una cabina su uno yacht condiviso con estranei. Tutti i charter su Boat4You sono per l'intera imbarcazione.
 
 Se sei un viaggiatore singolo o una coppia che desidera unirsi ad altri, ciò significa che dovrai formare il tuo gruppo per un charter privato. Comprendiamo che in alcune destinazioni esistono opzioni di noleggio a cabina (ad esempio, alcune aziende organizzano crociere o flottiglie cabina per cabina), ma l'obiettivo di **Boat4You** è sulle esperienze completamente private.
 
 Il vantaggio è che hai l'intero yacht per te e completa libertà di personalizzare il tuo itinerario. Lo svantaggio è che dovrai avere abbastanza persone (o budget) per noleggiare l'intero yacht. Molti dei nostri clienti mettono insieme un piccolo gruppo di amici o familiari per condividere i costi e l'esperienza.
 
-Detto questo, se sei interessato a un noleggio a cabina, faccelo sapere – possiamo consigliarti se ci sono operatori partner o crociere che corrispondono a ciò che stai cercando. Altrimenti, considera di invitare alcuni amici che la pensano allo stesso modo a unirsi al tuo viaggio! Occasionalmente organizziamo anche flottiglie (più barche che navigano insieme), il che non è la stessa cosa di estranei che condividono una barca, ma è un modo divertente per i gruppi più piccoli di navigare in compagnia e incontrare altri pur mantenendo la propria barca.
+Detto questo, se sei interessato a un noleggio a cabina, faccelo sapere – possiamo consigliarti se ci sono operatori partner o crociere che corrispondono a ciò che stai cercando. Altrimenti, considera di invitare alcuni amici che la pensano allo stesso modo a unirsi al tuo viaggio! Possiamo anche organizzare flottiglie con flotte partner (più barche che navigano insieme), il che non è la stessa cosa di estranei che condividono una barca, ma è un modo divertente per i gruppi più piccoli di navigare in compagnia e incontrare altri pur mantenendo la propria barca.
 
 In sintesi, **Boat4You** offre solo charter dell'intero yacht (_bareboat_, con skipper o con equipaggio), non prenotazioni per cabina. Ciò garantisce un'esperienza personalizzata e su misura per le preferenze del tuo gruppo.
 
@@ -92,7 +92,7 @@ Anche se hai una certa esperienza di navigazione ma non sei sicuro su alcuni asp
 
 **Cosa fa uno skipper?** Uno skipper si occuperà della navigazione, della vela e delle manovre dello yacht. Sono anche esperti locali, quindi possono guidarti nei posti migliori (conosceranno quelle baie nascoste e gli ancoraggi migliori che non sono nelle guide). Questa conoscenza locale può migliorare notevolmente il tuo viaggio. Inoltre, con uno skipper a bordo, il tuo charter diventa molto rilassante – nessuno stress per le rotte, il tempo o il parcheggio della barca, perché lo skipper si occupa di tutto. Tu e i tuoi amici/familiari potete concentrarvi sul nuoto, prendere il sole e godervi il viaggio.
 
-**In sintesi**: Se sei qualificato e fiducioso, sei il benvenuto a condurre lo yacht tu stesso – questa è l'essenza di un charter _bareboat_. In caso contrario, o se semplicemente preferisci rilassarti, puoi assumere uno skipper professionista tramite **Boat4You**. Forniamo skipper amichevoli ed esperti che parlano inglese (e spesso altre lingue) e sono autorizzati per la zona. È interamente una tua scelta e supportiamo entrambe le opzioni. La chiave è la sicurezza e il divertimento; ti aiuteremo a decidere in base al tuo livello di esperienza e comfort.
+**In sintesi**: Se sei qualificato e fiducioso, sei il benvenuto a condurre lo yacht tu stesso – questa è l'essenza di un charter _bareboat_. In caso contrario, o se semplicemente preferisci rilassarti, puoi assumere uno skipper professionista tramite **Boat4You**. I nostri partner forniscono skipper amichevoli ed esperti che parlano inglese (e spesso altre lingue) e sono autorizzati per la zona. È interamente una tua scelta e supportiamo entrambe le opzioni. La chiave è la sicurezza e il divertimento; ti aiuteremo a decidere in base al tuo livello di esperienza e comfort.
 
 *Un'altra nota: per coloro che desiderano un'esperienza completamente coccolata, considerate un **charter con equipaggio** (*crewed charter*). Ciò significa non solo uno skipper, ma forse anche uno chef e un equipaggio aggiuntivo che si occupano di tutti gli aspetti dello yacht. Questo è comune per yacht di lusso o noleggi di caicchi. In un charter con equipaggio, non devi assolutamente preoccuparti di condurre la barca – è tutto gestito da professionisti, come avere un hotel privato galleggiante.*
 
@@ -190,7 +190,7 @@ Accettiamo **bonifici bancari** e le **principali carte di credito/debito** per 
 
 **Valute**: **Boat4You** può spesso accettare pagamenti in diverse valute (USD, EUR, ecc.) a seconda della prenotazione. Di solito ti faremo un preventivo in una valuta logica – ad esempio, i charter in Europa tipicamente in Euro, i charter nei Caraibi spesso in USD. Se preferisci pagare in una valuta specifica o tramite un metodo specifico, chiedi pure e faremo del nostro meglio per accontentarti.
 
-Tutti i pagamenti che effettui sono documentati con una ricevuta e i fondi sono detenuti in un conto di garanzia o trasmessi all'operatore di charter secondo i nostri accordi. Dopo aver ricevuto il pagamento finale, ti forniremo un _voucher_ d'imbarco o un biglietto del charter da mostrare in marina, nonché ulteriori istruzioni necessarie per il check-in.
+Tutti i pagamenti che effettui sono documentati con una ricevuta e i fondi sono trasmessi all'operatore di charter secondo i nostri accordi. Dopo aver ricevuto il pagamento finale, ti forniremo un _voucher_ d'imbarco o un biglietto del charter da mostrare in marina, nonché ulteriori istruzioni necessarie per il check-in.
 
 _Nota a margine: Comprendiamo che a volte i piani cambiano – se hai bisogno di una breve proroga su una scadenza di pagamento o di un accordo di pagamento rateale, parlane con noi. Diamo la priorità all'essere flessibili e comprensivi con i nostri clienti, nei limiti del ragionevole._
 
@@ -198,11 +198,9 @@ _Nota a margine: Comprendiamo che a volte i piani cambiano – se hai bisogno di
 
 Assolutamente. Prendiamo molto sul serio la sicurezza dei pagamenti e la tua tranquillità. Quando prenoti con **Boat4You**, i tuoi pagamenti sono protetti in diversi modi:
 
-**Processo di Pagamento Sicuro**: Sia che tu paghi con carta di credito o bonifico bancario, utilizziamo _gateway_ di pagamento sicuri e crittografati e partner bancari affidabili. I pagamenti con carta di credito passano attraverso processori conformi allo standard PCI e non memorizziamo mai direttamente le informazioni della tua carta. Per i bonifici bancari, forniamo istruzioni chiare per garantire che il denaro vada al conto di garanzia corretto.
+**Processo di Pagamento Sicuro**: Sia che tu paghi con carta di credito o bonifico bancario, utilizziamo _gateway_ di pagamento sicuri e crittografati e partner bancari affidabili. I pagamenti con carta di credito passano attraverso processori conformi allo standard PCI e non memorizziamo mai direttamente le informazioni della tua carta. Per i bonifici bancari, forniamo istruzioni chiare per garantire che il denaro vada al conto corretto.
 
-**Conti Fiduciari Stabiliti**: In molti casi, soprattutto per le prenotazioni anticipate, il tuo pagamento viene trattenuto in un conto di garanzia del cliente o inviato al conto dell'operatore di charter come deposito per il tuo charter. Non scompare nel nulla. Ciò significa che i fondi sono destinati al tuo servizio di charter. **Boat4You** lavora solo con operatori di flotta verificati e affidabili con i quali abbiamo rapporti di lunga data.
-
-**Assicurazione/Protezione per i Fondi**: **Boat4You** può disporre di un'assicurazione contro il fallimento finanziario o accordi simili per proteggere i tuoi fondi. Ad esempio, alcune agenzie di charter collaborano con gruppi assicurativi per assicurare tutti i pagamenti dei clienti. Se abbiamo una tale partnership, te lo comunicheremo sicuramente. Questa assicurazione significa che nell'improbabile eventualità di un'insolvenza aziendale, ad esempio, il tuo denaro è coperto e saresti rimborsato.
+**Pagamenti vincolati**: In molti casi, soprattutto per le prenotazioni anticipate, il tuo pagamento viene inviato al conto dell'operatore di charter come deposito per il tuo charter. Non scompare nel nulla. Ciò significa che i fondi sono destinati al tuo servizio di charter. **Boat4You** lavora solo con operatori di flotta verificati e affidabili con i quali abbiamo rapporti di lunga data.
 
 **Documentazione**: Ogni pagamento che effettui è confermato per iscritto. Avrai una fattura o una ricevuta. Inoltre, firmi un contratto di charter che stabilisce cosa succede al tuo denaro (come le condizioni di rimborso, ecc.). Ci sono garanzie legali in quel contratto per te in quanto noleggiatore.
 
@@ -210,7 +208,7 @@ Assolutamente. Prendiamo molto sul serio la sicurezza dei pagamenti e la tua tra
 
 Inoltre, ti consigliamo (anche se è facoltativo) di prendere in considerazione un'**assicurazione di viaggio o un'assicurazione annullamento viaggio** che copra i pagamenti del tuo charter. Questo è un ulteriore livello di protezione – ad esempio, se un evento imprevisto (come un'emergenza medica) ti costringe ad annullare al di fuori della finestra di rimborso, la tua assicurazione di viaggio potrebbe rimborsarti.
 
-I tuoi pagamenti a **Boat4You** sono sicuri, protetti e assicurati nella massima misura possibile. Vogliamo che tu ti concentri sul conto alla rovescia per la tua vacanza in yacht, non sul preoccuparti dei trasferimenti di denaro. Se hai qualche preoccupazione specifica sulla sicurezza dei pagamenti, faccelo sapere – possiamo fornire informazioni ancora più dettagliate o soluzioni alternative per farti sentire a tuo agio.
+I tuoi pagamenti a **Boat4You** sono sicuri e protetti. Vogliamo che tu ti concentri sul conto alla rovescia per la tua vacanza in yacht, non sul preoccuparti dei trasferimenti di denaro. Se hai qualche preoccupazione specifica sulla sicurezza dei pagamenti, faccelo sapere – possiamo fornire informazioni ancora più dettagliate o soluzioni alternative per farti sentire a tuo agio.
 
 ## I servizi di skipper ed equipaggio sono inclusi nel prezzo del charter?
 
@@ -468,7 +466,7 @@ Sei assolutamente il benvenuto a contattarli e presentarti a quel punto. In molt
 
 **Incontro alla Base**: Il giorno di inizio, lo skipper aspetterà lo yacht o ti incontrerà all'ufficio della compagnia di charter. Di solito, saranno lì leggermente prima dell'orario di imbarco concordato. Una volta arrivato, li riconoscerai (a volte possiamo condividere una foto). Ti aiuteranno con i bagagli e a sistemarti.
 
-**Durante il Viaggio**: Lo skipper è con te durante tutto il charter (a meno che tu non abbia organizzato uno skipper solo per pochi giorni). Rimarranno a bordo, gestiranno la navigazione e saranno fondamentalmente la tua guida turistica/capitano galleggiante. Tutti i nostri skipper parlano inglese (e spesso altre lingue), quindi la comunicazione dovrebbe essere fluida.
+**Durante il Viaggio**: Lo skipper è con te durante tutto il charter (a meno che tu non abbia organizzato uno skipper solo per pochi giorni). Rimarranno a bordo, gestiranno la navigazione e saranno fondamentalmente la tua guida turistica/capitano galleggiante. Gli skipper forniti dai nostri partner parlano inglese (e spesso altre lingue), quindi la comunicazione dovrebbe essere fluida.
 
 **Comunicazione delle Preferenze**: Se hai aspettative specifiche – ad esempio, "Vogliamo un ritmo molto rilassato, molte soste per nuotare" o "Siamo desiderosi di imparare a navigare da te," – è bello dirlo allo skipper in anticipo. Possono adattare il loro stile. Se qualcosa non è di tuo gradimento, la comunicazione educata è fondamentale; questi skipper sono in genere molto adattabili.
 
@@ -476,7 +474,7 @@ Sei assolutamente il benvenuto a contattarli e presentarti a quel punto. In molt
 
 **App di Comunicazione**: Molti skipper usano **WhatsApp**. È un modo utile per comunicare prima e anche durante il viaggio. Quindi ti consigliamo di avere _WhatsApp_ sul telefono; abbiamo scoperto che è universalmente utilizzato tra gli equipaggi internazionali.
 
-**Lingua e Conoscenza Locale**: I nostri skipper parlano inglese e spesso anche la lingua locale della zona. Hanno una vasta conoscenza locale – scegliamo skipper che conoscono bene la regione. Quindi sentiti libero di chiedere loro informazioni sulla migliore baia segreta o un buon ristorante a terra. Amano condividere consigli.
+**Lingua e Conoscenza Locale**: Gli skipper parlano inglese e spesso anche la lingua locale della zona. Hanno una vasta conoscenza locale – i partner assegnano skipper che conoscono bene la regione. Quindi sentiti libero di chiedere loro informazioni sulla migliore baia segreta o un buon ristorante a terra. Amano condividere consigli.
 
 Sarai presentato al tuo skipper poco dopo la conferma della prenotazione e potrai contattarlo una volta completata la prenotazione – certamente entro il momento in cui hai pagato per intero e ti stai preparando per il viaggio. All'inizio del charter, avrai parlato o almeno scritto. E poi vi incontrerete faccia a faccia all'imbarco e inizierete il viaggio insieme.
 

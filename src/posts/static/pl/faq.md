@@ -68,13 +68,13 @@ I pamiętaj, że zapytanie o wycenę lub zadawanie pytań nie zobowiązuje Cię 
 
 ## Czy oferujecie czartery kabinowe lub czy mogę dołączyć do istniejącej grupy?
 
-**Boat4You** specjalizuje się w prywatnych czarterach jachtów, co oznacza, że wynajmujemy cały jacht Tobie i Twojej grupie – niezależnie od tego, czy jest to czarter bez załogi (płyniesz sam), czy ze skipperem/załogą. Obecnie nie oferujemy "czarterów kabinowych", w których rezerwujesz tylko jedną kabinę na współdzielonym jachcie z nieznajomymi. Wszystkie nasze czartery dotyczą całego statku.
+**Boat4You** specjalizuje się w prywatnych czarterach jachtów, co oznacza, że cały jacht jest wynajmowany Tobie i Twojej grupie – niezależnie od tego, czy jest to czarter bez załogi (płyniesz sam), czy ze skipperem/załogą. Obecnie nie oferujemy "czarterów kabinowych", w których rezerwujesz tylko jedną kabinę na współdzielonym jachcie z nieznajomymi. Wszystkie czartery w Boat4You dotyczą całego jachtu.
 
 Jeśli podróżujesz solo lub we dwoje i chcesz dołączyć do innych, oznacza to, że musiałbyś utworzyć własną grupę na potrzeby prywatnego czarteru. Rozumiemy, że w niektórych miejscach dostępne są opcje czarterów kabinowych (na przykład niektóre firmy organizują rejsy "od kabiny" lub flotylle), ale **Boat4You** koncentruje się na w pełni prywatnych doświadczeniach.
 
 Zaletą jest to, że masz cały jacht dla siebie i pełną swobodę w dostosowywaniu planu podróży. Wadą jest to, że potrzebna jest wystarczająca liczba osób (lub budżet), aby wynająć cały jacht. Wielu naszych klientów gromadzi małą grupę przyjaciół lub rodziny, aby podzielić się kosztami i doświadczeniem.
 
-Niemniej jednak, jeśli jesteś zainteresowany czarterem kabinowym, prosimy o informację – możemy doradzić, czy istnieją partnerscy operatorzy lub rejsy, które odpowiadają Twoim oczekiwaniom. W przeciwnym razie rozważ zaproszenie kilku podobnie myślących przyjaciół do wspólnego wyjazdu! Organizujemy również okazjonalnie flotylle (kilka jachtów płynących razem), co nie jest tym samym, co dzielenie jednego jachtu z nieznajomymi, ale jest to zabawny sposób dla mniejszych grup na pływanie w towarzystwie i poznawanie innych, zachowując jednocześnie własny jacht.
+Niemniej jednak, jeśli jesteś zainteresowany czarterem kabinowym, prosimy o informację – możemy doradzić, czy istnieją partnerscy operatorzy lub rejsy, które odpowiadają Twoim oczekiwaniom. W przeciwnym razie rozważ zaproszenie kilku podobnie myślących przyjaciół do wspólnego wyjazdu! Możemy też zorganizować flotyllę z flotami partnerów (kilka jachtów płynących razem), co nie jest tym samym, co dzielenie jednego jachtu z nieznajomymi, ale jest to zabawny sposób dla mniejszych grup na pływanie w towarzystwie i poznawanie innych, zachowując jednocześnie własny jacht.
 
 Podsumowując, **Boat4You** oferuje wyłącznie czartery całych jachtów (bez załogi, ze skipperem lub z załogą), a nie rezerwacje na kabinę. Zapewnia to spersonalizowane doświadczenie dostosowane do preferencji Twojej grupy.
 
@@ -92,7 +92,7 @@ Nawet jeśli masz pewne doświadczenie żeglarskie, ale czujesz się niepewnie w
 
 **Co robi skipper?** Skipper zajmuje się nawigacją, żeglugą i manewrowaniem jachtem. Jest również lokalnym ekspertem, dzięki czemu może wskazać najlepsze miejsca (będzie znał te ukryte zatoczki i najlepsze kotwicowiska, których nie ma w przewodnikach). Ta lokalna wiedza może znacznie wzbogacić Twój rejs. Ponadto, ze skipperem na pokładzie, Twój czarter staje się bardzo relaksujący – bez stresu związanego z trasą, pogodą czy parkowaniem łodzi, ponieważ skipper wszystkim się zajmuje. Ty i Twoi przyjaciele/rodzina możecie skupić się na pływaniu, opalaniu i cieszeniu się podróżą.
 
-**Podsumowując**: Jeśli posiadasz kwalifikacje i czujesz się pewnie, zapraszamy do samodzielnego prowadzenia jachtu – na tym polega istota czarteru bareboat. Jeśli nie, lub po prostu wolisz usiąść i odpocząć, możesz wynająć profesjonalnego skippera za pośrednictwem **Boat4You**. Zapewniamy przyjaznych, doświadczonych skipperów, którzy mówią po angielsku (i często w innych językach) oraz posiadają licencje na dany obszar. To całkowicie Twój wybór, a my wspieramy obie opcje. Kluczem jest bezpieczeństwo i przyjemność; pomożemy Ci podjąć decyzję w oparciu o Twój poziom doświadczenia i komfort.
+**Podsumowując**: Jeśli posiadasz kwalifikacje i czujesz się pewnie, zapraszamy do samodzielnego prowadzenia jachtu – na tym polega istota czarteru bareboat. Jeśli nie, lub po prostu wolisz usiąść i odpocząć, możesz wynająć profesjonalnego skippera za pośrednictwem **Boat4You**. Nasi partnerzy zapewniają przyjaznych, doświadczonych skipperów, którzy mówią po angielsku (i często w innych językach) oraz posiadają licencje na dany obszar. To całkowicie Twój wybór, a my wspieramy obie opcje. Kluczem jest bezpieczeństwo i przyjemność; pomożemy Ci podjąć decyzję w oparciu o Twój poziom doświadczenia i komfort.
 
 _Dodatkowa uwaga: dla tych, którzy pragną w pełni luksusowych doświadczeń, rozważ **czarter z załogą (crewed charter)**. Oznacza to nie tylko skippera, ale potencjalnie także kucharza i dodatkową załogę, która zajmie się wszystkimi aspektami obsługi jachtu. Jest to powszechne w przypadku luksusowych jachtów lub czarterów gulietów. W czarterze z załogą zdecydowanie nie musisz martwić się o żeglowanie – wszystkim zajmują się profesjonaliści, niczym w prywatnym, pływającym hotelu._
 
@@ -190,7 +190,7 @@ Akceptujemy **przelewy bankowe** oraz **główne karty kredytowe/debetowe** do p
 
 **Waluty**: **Boat4You** często może przyjmować płatności w różnych walutach (USD, EUR itp.) w zależności od rezerwacji. Zazwyczaj podamy cenę w logicznej walucie – na przykład czartery w Europie zazwyczaj w Euro, czartery na Karaibach często w USD. Jeśli wolałbyś zapłacić w konkretnej walucie lub za pomocą konkretnej metody, po prostu zapytaj, a my postaramy się sprostać Twoim oczekiwaniom.
 
-Wszystkie dokonane przez Ciebie płatności są dokumentowane potwierdzeniem zapłaty, a środki są przechowywane na rachunku powierniczym lub przekazywane operatorowi czarteru zgodnie z naszymi umowami. Po otrzymaniu ostatecznej płatności otrzymasz voucher pokładowy lub bilet czarterowy do okazania w marinie, a także wszelkie dalsze instrukcje dotyczące zameldowania.
+Wszystkie dokonane przez Ciebie płatności są dokumentowane potwierdzeniem zapłaty, a środki są przekazywane operatorowi czarteru zgodnie z naszymi umowami. Po otrzymaniu ostatecznej płatności otrzymasz voucher pokładowy lub bilet czarterowy do okazania w marinie, a także wszelkie dalsze instrukcje dotyczące zameldowania.
 
 _Uwaga: Rozumiemy, że czasami plany się zmieniają – jeśli potrzebujesz krótkiego przedłużenia terminu płatności lub rozłożenia płatności na raty, prosimy o kontakt. Priorytetem jest dla nas elastyczność i zrozumienie wobec naszych klientów, w rozsądnych granicach._
 
@@ -198,11 +198,9 @@ _Uwaga: Rozumiemy, że czasami plany się zmieniają – jeśli potrzebujesz kr�
 
 Absolutnie. Bezpieczeństwo płatności i Twój spokój są dla nas bardzo ważne. Rezerwując przez **Boat4You**, Twoje płatności są chronione na kilka sposobów:
 
-**Bezpieczny proces płatności**: Niezależnie od tego, czy płacisz kartą kredytową, czy przelewem bankowym, korzystamy z bezpiecznych, szyfrowanych bram płatniczych i renomowanych partnerów bankowych. Płatności kartą kredytową są przetwarzane przez procesory zgodne z PCI, a my nigdy nie przechowujemy bezpośrednio informacji o Twojej karcie. W przypadku przelewów bankowych podajemy jasne instrukcje, aby zapewnić, że pieniądze trafią na właściwy rachunek powierniczy.
+**Bezpieczny proces płatności**: Niezależnie od tego, czy płacisz kartą kredytową, czy przelewem bankowym, korzystamy z bezpiecznych, szyfrowanych bram płatniczych i renomowanych partnerów bankowych. Płatności kartą kredytową są przetwarzane przez procesory zgodne z PCI, a my nigdy nie przechowujemy bezpośrednio informacji o Twojej karcie. W przypadku przelewów bankowych podajemy jasne instrukcje, aby zapewnić, że pieniądze trafią na właściwy rachunek.
 
-**Ustanowione rachunki powiernicze**: W wielu przypadkach, zwłaszcza przy wczesnych rezerwacjach, Twoja płatność jest przechowywana na klienckim rachunku powierniczym lub przekazywana na rachunek operatora czarteru jako depozyt za Twój czarter. Nie znika ona w próżni. Oznacza to, że środki są przeznaczone na Twoją usługę czarterową. **Boat4You** współpracuje wyłącznie ze sprawdzonymi, niezawodnymi operatorami flot, z którymi mamy długoterminowe relacje.
-
-**Ubezpieczenie/Ochrona środków**: **Boat4You** może posiadać ubezpieczenie od niewypłacalności finansowej lub podobne zabezpieczenia chroniące Twoje środki. Na przykład niektóre agencje czarterowe współpracują z grupami ubezpieczeniowymi w celu ubezpieczenia wszystkich płatności klientów. Jeśli posiadamy takie partnerstwo, na pewno Cię o tym poinformujemy. Ubezpieczenie to oznacza, że w mało prawdopodobnym przypadku wystąpienia czegoś takiego jak niewypłacalność firmy, Twoje pieniądze są objęte ochroną i zostaną Ci zwrócone.
+**Płatności z określonym przeznaczeniem**: W wielu przypadkach, zwłaszcza przy wczesnych rezerwacjach, Twoja płatność jest przekazywana na rachunek operatora czarteru jako depozyt za Twój czarter. Nie znika ona w próżni. Oznacza to, że środki są przeznaczone na Twoją usługę czarterową. **Boat4You** współpracuje wyłącznie ze sprawdzonymi, niezawodnymi operatorami flot, z którymi mamy długoterminowe relacje.
 
 **Dokumentacja**: Każda dokonana przez Ciebie płatność jest potwierdzana pisemnie. Otrzymasz fakturę lub paragon. Dodatkowo podpisujesz umowę czarterową, która określa, co dzieje się z Twoimi pieniędzmi (np. warunki zwrotu itp.). Umowa ta zawiera zabezpieczenia prawne dla Ciebie jako czarterującego.
 
@@ -210,7 +208,7 @@ Absolutnie. Bezpieczeństwo płatności i Twój spokój są dla nas bardzo ważn
 
 Ponadto zalecamy (choć jest to opcjonalne), aby rozważyć wykupienie **ubezpieczenia podróżnego lub ubezpieczenia od anulowania podróży**, które obejmuje Twoje płatności za czarter. Jest to dodatkowa warstwa ochrony – na przykład, jeśli nieprzewidziane zdarzenie (takie jak nagły wypadek medyczny) zmusza Cię do anulowania rezerwacji poza okresem zwrotu, ubezpieczenie podróżne może Ci zwrócić koszty.
 
-Twoje płatności do **Boat4You** są bezpieczne, chronione i ubezpieczone w najwyższym możliwym stopniu. Chcemy, abyś skupił się na odliczaniu dni do wakacji na jachcie, a nie na martwieniu się o przelewy pieniężne. Jeśli masz jakiekolwiek konkretne obawy dotyczące bezpieczeństwa płatności, prosimy o kontakt – możemy dostarczyć jeszcze bardziej szczegółowe informacje lub alternatywne rozwiązania, aby zapewnić Ci komfort.
+Twoje płatności do **Boat4You** są bezpieczne i chronione. Chcemy, abyś skupił się na odliczaniu dni do wakacji na jachcie, a nie na martwieniu się o przelewy pieniężne. Jeśli masz jakiekolwiek konkretne obawy dotyczące bezpieczeństwa płatności, prosimy o kontakt – możemy dostarczyć jeszcze bardziej szczegółowe informacje lub alternatywne rozwiązania, aby zapewnić Ci komfort.
 
 ## Czy usługi skippera i załogi są wliczone w cenę czarteru?
 
@@ -564,7 +562,7 @@ Możesz śmiało skontaktować się i przedstawić się w tym momencie. W wielu 
 
 **Spotkanie w Bazie**: W dniu rozpoczęcia czarteru skipper będzie czekał na jachcie lub spotka się z Tobą w biurze firmy czarterowej. Zazwyczaj będzie tam nieco wcześniej niż ustalona godzina wejścia na pokład. Po przybyciu rozpoznasz skipera (czasami możemy udostępnić zdjęcie). Pomoże on z bagażami i zaaklimatyzowaniem się.
 
-**Podczas Rejsu**: Skipper jest z Tobą przez cały czas trwania czarteru (chyba że ustalono inaczej na kilka dni). Pozostanie na pokładzie, będzie zarządzał żeglugą i zasadniczo będzie Twoim pływającym przewodnikiem/kapitanem. Wszyscy nasi skipperzy mówią po angielsku (i często w innych językach), więc komunikacja powinna przebiegać sprawnie.
+**Podczas Rejsu**: Skipper jest z Tobą przez cały czas trwania czarteru (chyba że ustalono inaczej na kilka dni). Pozostanie na pokładzie, będzie zarządzał żeglugą i zasadniczo będzie Twoim pływającym przewodnikiem/kapitanem. Skipperzy zapewniani przez naszych partnerów mówią po angielsku (i często w innych językach), więc komunikacja powinna przebiegać sprawnie.
 
 **Preferencje Komunikacyjne**: Jeśli masz konkretne oczekiwania – np. „Chcemy bardzo spokojnego tempa, wielu przystanków na kąpiel” lub „Chcemy nauczyć się żeglować od ciebie” – warto wcześnie poinformować o tym skipera. On może dostosować swój styl. Jeśli coś Ci nie odpowiada, kluczowa jest uprzejma komunikacja; ci skipperzy są zazwyczaj bardzo elastyczni.
 
@@ -572,7 +570,7 @@ Możesz śmiało skontaktować się i przedstawić się w tym momencie. W wielu 
 
 **Aplikacje Komunikacyjne**: Wielu skipperów korzysta z **WhatsApp**. Jest to wygodny sposób komunikacji przed rejsem, a nawet w jego trakcie. Dlatego zalecamy posiadanie WhatsApp na telefonie; okazało się, że jest on powszechnie używany wśród międzynarodowych załóg.
 
-**Język i Wiedza Lokalna**: Nasi skipperzy mówią po angielsku, a często także w lokalnym języku danego regionu. Posiadają rozległą wiedzę lokalną – wybieramy skipperów zaznajomionych z regionem. Dlatego śmiało możesz wypytywać ich o najlepsze ukryte zatoczki lub dobre restauracje na lądzie. Uwielbiają dzielić się wskazówkami.
+**Język i Wiedza Lokalna**: Skipperzy mówią po angielsku, a często także w lokalnym języku danego regionu. Posiadają rozległą wiedzę lokalną – partnerzy wyznaczają skipperów zaznajomionych z regionem. Dlatego śmiało możesz wypytywać ich o najlepsze ukryte zatoczki lub dobre restauracje na lądzie. Uwielbiają dzielić się wskazówkami.
 
 Zostaniesz przedstawiony swojemu skipperowi krótko po potwierdzeniu rezerwacji i będziesz mógł się z nim skontaktować po jej sfinalizowaniu – z pewnością w momencie, gdy dokonasz pełnej płatności i będziesz przygotowywać się do podróży. Na początku czarteru albo już rozmawialiście, albo przynajmniej wymieniliście wiadomości tekstowe. Następnie spotkacie się osobiście podczas wejścia na pokład i rozpoczniecie wspólną podróż.
 
