@@ -71,6 +71,15 @@ licence) — and the
 UI strings in messages/<locale>/*.json
 (seo_corpus_rules.message_checks). Any finding fails --check.
 
+Added 6.10.2026 (w610, checks only, in this file): "perday-crew-price" — a
+per-day price on a skipper/crew/hostess/chef (vessel day rates, food budgets,
+tips, fuel and mooring pass; fees are on each boat's page); "operator-claim" —
+Boat4You as employer of crews or owner of fleets/bases ("Boat4You's skippers",
+"Boat4You deploys", "our fleet/base", "Boat4Yous Flotte", "Boat4You-ova flota");
+"ascii-hr-name" — Šibenik, Kaštela, Sukošan, Korčula, Primošten, Palmižana,
+Komiža, Biševo, Lošinj written without diacritics in visible text (hrefs,
+did= and file names are not text; Greek Kastela in Piraeus passes).
+
 Unfilled page templates (PLACEHOLDER / "Key Advantage Section 1") are only
 reported, and fail --check: they must be written or removed by hand.
 
@@ -1539,6 +1548,176 @@ def rule_functions():
     }
 
 
+# ---------------------------------------------------------------------------------------------------
+# Regression checks added 6.10.2026 (w610 b4y-corpus): R14 per-day crew prices, R13 operator claims,
+# R32 Croatian place names without diacritics. Report only (fail --check); the fixes were made by hand.
+
+# R14 — a per-day price put on a skipper / crew / hostess / chef. Vessel day rates ("bareboat",
+# "50-foot … €5,000 daily"), food and provisioning budgets, tips, fuel and mooring stay allowed.
+PERDAY_MARK = {
+    'en': r"per\s+day|a\s+day\b|/\s*day\b|daily|per-day|per\s+diem|day\s+rate",
+    'de': r"pro\s+Tag|am\s+Tag|/\s*Tag\b|täglich\w*|Tagessatz\w*|Tagesgage\w*|je\s+Tag",
+    'fr': r"par\s+jour|/\s*jour\b|la\s+journée|journali\w*",
+    'it': r"al\s+giorno|per\s+giorno|/\s*giorno\b|giornalier\w*|al\s+dì",
+    'es': r"por\s+día|al\s+día|/\s*día\b|diari\w*",
+    'pt': r"por\s+dia|ao\s+dia|/\s*dia\b|diári\w*",
+    'nl': r"per\s+dag|/\s*dag\b|dagtarief\w*|daags",
+    'pl': r"dziennie|za\s+dzień|na\s+dzień|/\s*dzień|za\s+dobę",
+    'hr': r"dnevno|po\s+danu|na\s+dan\b|/\s*dan\b|dnevnic\w*",
+}
+CREW_WORD = {
+    'en': r"skippers?|crew|hostess(?:es)?|chefs?|captains?|stewardess(?:es)?|deckhands?",
+    'de': r"Skipper\w*|Crew\b|Besatzung|Hostess\w*|Köch\w*|Koch\b|Kapitän\w*",
+    'fr': r"skippers?|équipages?|hôtesses?|chefs?|capitaines?",
+    'it': r"skipper|equipaggio|hostess|chef|cuoc[oh]i?|capitan[oi]",
+    'es': r"patr[oó]n(?:es)?|skipper|tripulación|azafatas?|chefs?|cocineros?|capit[aá]n(?:es)?",
+    'pt': r"skippers?|tripulação|hospedeiras?|chefs?|cozinheiros?|capitães|capitão|comandantes?",
+    'nl': r"schippers?|skippers?|bemanning|hostess(?:es)?|koks?\b|chefs?|kapiteins?",
+    'pl': r"skipper\w*|skiper\w*|załog\w*|hostess\w*|kuchar\w*|kapitan\w*",
+    'hr': r"skiper\w*|skipper\w*|posad\w*|hostes\w*|kuhar\w*|kapetan\w*",
+}
+DAY_AMOUNT = (r"(?:(?:€|\$|£)\s?\d[\d.,]*(?:\s?[–-]\s?(?:€|\$|£)?\s?\d[\d.,]*)?"
+              r"|\d[\d.,]*(?:\s?[–-]\s?\d[\d.,]*)?\s?(?:€|\$|£|EUR|USD|GBP|eur(?:o|os|a)?|Euro)\b)")
+DAY_GAP_VETO = {  # words between the crew word and the amount that make it a vessel / food / fuel price
+    'en': r"(?i)yacht|vessel|boat|charter|catamaran|monohull|gulet|motorsailer|person|guest|pax|people|groceri|meal|wine"
+          r"|food|tip|gratuit|fuel|diesel|moor|berth|marina|harbou?r|provision|budget",
+    'de': r"(?i)yacht|schiff|boot|charter|katamaran|gulet|person|gast|gäste|lebensmittel|mahlzeit|essen|trinkgeld"
+          r"|treibstoff|diesel|liegepl|marina|hafen|provian|verpfleg|budget",
+    'fr': r"(?i)yacht|navire|bateau|charter|location|catamaran|gulet|personne|invité|courses|repas|nourriture|pourboire"
+          r"|carbur|gasoil|mouill|amarr|marina|port|avitaill|approvision|budget",
+    'it': r"(?i)yacht|imbarcazion|barca|barche|charter|noleggi|catamaran|gulet|persona|ospit|spesa|pasti|cibo|mancia"
+          r"|carbur|gasolio|ormegg|marina|porto|approvvig|budget",
+    'es': r"(?i)yate|embarcaci|barco|chárter|charter|alquiler|catamar|gulet|persona|huésped|compra|comida|propina"
+          r"|combust|gasóleo|amarre|marina|puerto|aprovision|avituall|presupuesto",
+    'pt': r"(?i)iate|embarca|barco|charter|aluguer|catamar|gulet|pessoa|hóspede|compras|refei|comida|gorjeta|combust"
+          r"|gasóleo|amarra|marina|porto|aprovision|abastec|orçamento",
+    'nl': r"(?i)jacht|schip|vaartuig|boot|charter|huur|catamaran|gulet|persoon|gast|boodschap|maaltijd|eten|fooi"
+          r"|brandstof|diesel|ligplaats|aanleg|jachthaven|haven|provian|bevoorrad|budget",
+    'pl': r"(?i)jacht|jednost|łódź|łodzi|czarter|katamaran|gulet|osob|gość|gości|zakup|posił|jedzen|napiw|paliw"
+          r"|diesel|cumow|miejsc|marin|port|zaopatrz|prowiant|budżet",
+    'hr': r"(?i)jaht|plovil|brod|čarter|charter|najam|katamaran|gulet|osob|gost|namirnic|obro|hran|napojnic|goriv"
+          r"|dizel|vez|marin|luk|opskrb|budžet",
+}
+DAY_SENTENCE_VETO = (
+    r"(?i)provision|groceri|\beat\b|meals?\b|\bfood|tips?\b|gratuit|per crew member|per person|mooring|fuel"
+    r"|Proviant|Verpfleg|Lebensmittel|ernähren|Trinkgeld|pro Person|avitaill|approvision|ravitaill|courses|pourboire"
+    r"|par personne|approvvig|rifornim|mangiare|mancia|a persona|per membro|avituall|aprovision|comestibles|propina"
+    r"|por persona|abastec|mercearia|gorjeta|por pessoa|boodschap|proviand|eten\b|fooi|per persoon|zaopatrz|żywnoś"
+    r"|zjeść|alimentar|alimentari|napiw|na osobę|na członka|opskrb|namirnic|napojnic|po osobi"
+    # a vessel's own day rate: bareboat / without skipper / a length / all-inclusive yacht packages
+    r"|bareboat|senza skipper|sem skipper|sin patr[oó]n|sans skipper|ohne skipper|zonder (?:bemanning|schipper)"
+    r"|bez załogi|bez skipera|bez posade|\d\s?(?:-|–)?\s?(?:feet|foot|ft|Fuß|pieds|piedi|pies|pés|voet|stóp|stopa|stope"
+    r"|metr\w*|m)\b|all-inclusive|tudo incluído|tutto incluso|todo incluido|Huurprijs|Yachtgröße|superyacht"
+    r"|superjacht|superiate|superjaht")
+
+
+def perday_crew_prices(sentences, locale):
+    day, crew = PERDAY_MARK[locale], CREW_WORD[locale]
+    crew_first = re.compile(r"\b(?:%s)\b([^.;:!?()]{0,45}?)%s\s*([^.;:!?\d]{0,12}?)(?:%s)" % (crew, DAY_AMOUNT, day), re.I)
+    price_first = re.compile(r"%s\s*([^.;:!?\d]{0,12}?)(?:%s)([^.;:!?]{0,25}?)\b(?:%s)\b" % (DAY_AMOUNT, day, crew), re.I)
+    out = []
+    for s in sentences:
+        if re.search(DAY_SENTENCE_VETO, s):
+            continue
+        for rx in (crew_first, price_first):
+            m = rx.search(s)
+            if m and not any(re.search(DAY_GAP_VETO[locale], g or '') for g in m.groups()):
+                out.append(s)
+                break
+    return out
+
+
+# R13 — Boat4You as employer of skippers/crews, owner of fleets and bases ("Boat4You's skippers",
+# "Boat4You deploys/employs …", "our fleet/base"). The broker's own team, its skipper service or
+# network, partner fleets and "via Boat4You" stay allowed (OPERATOR_KEEP around the match).
+OPERATOR_DENY = {
+    'en': [r"\bBoat4You['’]s\s+(?:[\w-]+\s+){0,2}?(?:fleet|bases?|mechanics|technicians|engineers|skippers|captains|crews"
+           r"|crew members|instructors)\b(?!\s+(?:network|services?|options|recommendations|support))",
+           r"\bBoat4You\s+(?:professional\s+|experienced\s+|local\s+)?(?:skippers|captains|crews|crew members|mechanics|instructors)\b",
+           r"\b(?:[Yy]our|[Aa]|[Mm]any|[Mm]ost)\s+Boat4You\s+(?:captain|crew|skipper)",
+           r"\bBoat4You\s+(?:employs|recruits|owns|deploys)\b",
+           r"\b[Oo]ur\s+(?:own\s+)?(?:[\w-]+\s+)?(?:fleet|bases|mechanics|captains|skippers)\b",
+           r"\b[Oo]ur\s+(?:[\w-]+\s+)?base\b(?!\s+pric)"],
+    'de': [r"Boat4You(?:s|-)\s?(?:[a-zäöü][\w-]*\s+){0,2}(?:[\w-]*[Ff]lotte\w*|Basis|Crews?|Skipper|Kapitäne|Mechaniker)\b",
+           r"\b(?:Crews?|Skipper|Kapitäne|Mechaniker|Flotte|Basis)\s+von\s+Boat4You\b",
+           r"\bBoat4You\s+(?:beschäftigt|rekrutiert|besitzt)\b",
+           r"\bBoat4You\s+setzt\s+(?:\d+\s+)?(?:[\w-]+\s+){0,2}?(?:Katamarane|Segelyachten|Motoryachten|Motorboote|Yachten|Boote)\b",
+           r"\b[Uu]nser(?:e|er|en|em)?\s+(?:eigene\w*\s+)?(?:[\w-]+\s+)?(?:Flotte|Basis|Mechaniker|Kapitäne)\b"],
+    'fr': [r"\b(?:équipages?|skippers?|capitaines|mécaniciens|flotte|base)\s+(?:[\w'-]+\s+){0,2}?de\s+Boat4You\b",
+           r"\bBoat4You\s+(?:emploie|recrute|déploie|possède\s+(?:sa|ses|une|la)\s+(?:propre\s+)?flotte)\b",
+           r"\b[Nn]otre\s+(?:propre\s+)?(?:flotte|base)\b|\b[Nn]os\s+(?:propres\s+)?(?:bases|capitaines|mécaniciens)\b"],
+    'it': [r"\b(?:equipaggi?o?|skipper|capitani|meccanici|flotta|base)\s+(?:[\w'-]+\s+){0,2}?di\s+Boat4You\b",
+           r"\bBoat4You\s+(?:impiega\s+(?:capitani|skipper|equipaggi)|recluta|schiera|possiede\s+(?:la|una)\s+flotta)\b",
+           r"\b(?:[Ll]a|[Dd]alla|[Nn]ella|[Ss]ulla)\s+nostra\s+(?:flotta|base)\b|\b[Ii]\s+nostri\s+(?:capitani|meccanici)\b"],
+    'es': [r"\b(?:tripulaci(?:ón|ones)|patrones|capitanes|mecánicos|flota|base)\s+(?:[\w'-]+\s+){0,2}?de\s+Boat4You\b",
+           r"\bBoat4You\s+(?:emplea\s+(?:capitanes|patrones|tripulaci)|recluta|despliega|posee\s+(?:su|una)\s+(?:propia\s+)?flota)",
+           r"\b[Nn]uestra\s+(?:propia\s+)?(?:flota|base)\b|\b[Nn]uestros\s+(?:\w+\s+)?(?:capitanes|mecánicos)\b"
+           r"|\b[Nn]uestras\s+(?:\w+\s+)?tripulaciones\b"],
+    'pt': [r"\b(?:tripulaç(?:ão|ões)|skippers?|capitães|comandantes|mecânicos|frota|base)\s+(?:[\w'-]+\s+){0,2}?da\s+Boat4You\b",
+           r"\bBoat4You\s+(?:emprega|recruta|possui\s+(?:a|uma)\s+frota)\b",
+           r"\b[Nn]oss[ao]\s+(?:própri[ao]\s+)?(?:frota|base)\b|\b[Nn]ossos\s+(?:capitães|mecânicos)\b"
+           r"|\b[Nn]ossa\s+experiente\s+tripulação\b"],
+    'nl': [r"\bBoat4You(?:['’]s|-)\s?(?:[\w-]+e\s+){0,2}(?:vloot|basis|bemanning\w*|schippers|kapiteins|monteurs)\b",
+           r"\b(?:bemanning\w*|schippers|kapiteins|monteurs|vloot|basis)\s+van\s+Boat4You\b",
+           r"\bBoat4You\s+(?:werft|bezit|heeft\s+\w+\s+in\s+dienst)\b",
+           r"\bBoat4You\s+zet\s+(?:\d+\s+)?(?:[\w-]+\s+){0,2}?(?:catamarans|zeiljachten|motorjachten|motorboten|jachten|boten)\b",
+           r"\b[Oo]nze?\s+(?:eigen\s+)?(?:[\w-]+\s+)?(?:[\w-]*vloot|[\w-]*basis|monteurs|kapiteins)\b"],
+    'pl': [r"\b(?:załog\w*|skipper\w*|kapitan\w*|mechani[kc]\w*|flot\w*|baz[aęyie]\w*)\s+Boat4You\b(?!\s+(?:oferuje|organizuje))",
+           r"\bBoat4You\s+(?:zatrudnia|rekrutuje|dysponuje|posiada\s+flot)",
+           r"\b[Nn]asz(?:a|ej|ą|e|ych)?\s+(?:własn\w+\s+)?(?:flot\w*|baz[aęyie]\w*)\b"],
+    'hr': [r"\bBoat4You-?ov(?:a|u|e|i|ih|om|oj)\s+(?:\w+\s+){0,2}?(?:flot\w*|baz[aeiu]\b|posad\w*|skiper\w*|kapetan\w*|mehaničar\w*)",
+           r"\b(?:posad\w*|skiper\w*|kapetan\w*|mehaničar\w*|flot\w*|baz[aeiu])\s+(?:tvrtke\s+)?Boat4You\b",
+           r"\bBoat4You\s+(?:zapošljava|raspolaže|posjeduje\s+(?:flotu|rezervn))",
+           r"\b[Nn]a(?:š|ša|še|ši|šu|šoj|šom)\s+(?:vlastit\w+\s+)?(?:flot\w*|baz[aeiu]\b)"],
+}
+OPERATOR_KEEP = (
+    r"(?i)network|services?\b|options?\b|recommendations|réseau|rete\b|red de|rede de|netwerk|sieć|sieci|mrež|service de"
+    r"|servizio|servicio|serviço|opzion|opción|opcion|opções|opçã|opcj|opcij|Netzwerk|Service|Option|Empfehlung|recomenda"
+    r"|raccomand|preporuk|rekomendac|aanbeveling|recommandation|consigli|base (?:pric|de client)|prix de base|precio base"
+    r"|prezzi base|preço base|base de clientes|baza klientów|clients|customer base|client base|Basispreis|partner fleet"
+    r"|partnervloot|partner vloot|partenaire|asociad|parceir|Partner|expertise|connaissance|experiencia|através|tramite"
+    r"|\bvia\b|przez|pośrednictwem|putem|preko|usług|podršk|suporte")
+
+
+def operator_claims(sentences, locale):
+    rxs = [re.compile(p) for p in OPERATOR_DENY[locale]]
+    out = []
+    for s in sentences:
+        for rx in rxs:
+            m = rx.search(s)
+            if m and not re.search(OPERATOR_KEEP, s[max(0, m.start() - 60):m.end() + 40]):
+                out.append(s)
+                break
+    return out
+
+
+# R32 — Croatian place names without diacritics in visible text (hrefs, did= and attributes are not text).
+HR_ASCII_NAME = re.compile(
+    r"(?<![\w/=%+.-])(Sibenik(?:a|u|om)?|Kastel(?:a|ima)|Kastel(?= Gomilica)|Sukosan(?:a|u|om)?"
+    r"|Korcul(?:a|e|i|u|ę|om|ansk\w*)|Primosten(?:a|u|om)?|Palmizan(?:a|e|i|u|om)|Komizia|Komiz(?:a|e|i|u|y|om)"
+    r"|Bisev(?:o|a|u|om)|Losinj(?:a|u|em|om)?)(?!\w)")
+
+
+def ascii_croatian_names(body, name):
+    out = []
+    greek = 'mikrolimano' in name  # "Kastela" there is the Piraeus quarter, not Kaštela
+    for part in re.split(r'<[^>]*>', body):
+        text = html.unescape(part)
+        for m in HR_ASCII_NAME.finditer(text):
+            if not (greek and m.group(1).startswith('Kastel')):
+                out.append(text[max(0, m.start() - 40):m.end() + 40])
+    return out
+
+
+def w610_checks(src, locale, name):
+    body = split_body(src)[1]
+    sentences = [plain(p) for m in R.BLOCK.finditer(body) for p in R.split_sentences(m.group(3))]
+    found = [('perday-crew-price', s) for s in perday_crew_prices(sentences, locale)]
+    found += [('operator-claim', s) for s in operator_claims(sentences, locale)]
+    found += [('ascii-hr-name', x) for x in ascii_croatian_names(body, name)]
+    return found
+
+
 _WORKER = {}
 
 
@@ -1568,6 +1747,7 @@ def _process_file(job):
     en_src = text if locale == 'en' else _WORKER['en_text'].get(name)
     file_findings = [(check, f'{locale}/{name}', squash(excerpt))
                      for check, excerpt in R.checks(text, locale, name, en_src if locale != 'en' else None)]
+    file_findings += [(check, f'{locale}/{name}', squash(excerpt)) for check, excerpt in w610_checks(text, locale, name)]
     return file_log, file_findings, text != original, (text if locale == 'en' else None)
 
 
