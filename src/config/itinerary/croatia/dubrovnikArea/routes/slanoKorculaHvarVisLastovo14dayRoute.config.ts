@@ -259,7 +259,7 @@ const slanoKorculaHvarVisLastovo14dayRoute: ItineraryRoute = {
       gallery: [
         {
           src: '/images/itinerary/croatia/destinations/palmizana.webp',
-          alt: 'Palmizana',
+          alt: 'Palmižana',
         },
       ],
     },

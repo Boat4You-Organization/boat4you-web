@@ -19,11 +19,11 @@ const dubrovnikKorculaLastovoRoute: ItineraryRoute = {
     },
     {
       src: '/images/itinerary/croatia/banners/korcula-banner-large.webp',
-      alt: 'Korcula',
+      alt: 'Korčula',
     },
     {
       src: '/images/itinerary/croatia/banners/korcula-banner.webp',
-      alt: 'Korcula',
+      alt: 'Korčula',
     },
     {
       src: '/images/itinerary/croatia/banners/mljet-banner.webp',
@@ -149,7 +149,7 @@ const dubrovnikKorculaLastovoRoute: ItineraryRoute = {
       ],
       mooringTip:
         'ACI Marina Korčula on the eastern side is the all-weather option — lazy lines, water, power, full services. Town quay on the western side accepts stern-to with own anchor but is exposed to W Maestral; rolly after 14:00. Lumbarda Bay 3 nm southeast is the sheltered alternative.',
-      gallery: [{ src: '/images/itinerary/croatia/destinations/korcula.webp', alt: 'Korcula' }],
+      gallery: [{ src: '/images/itinerary/croatia/destinations/korcula.webp', alt: 'Korčula' }],
     },
     {
       id: 'korcula-polace-mljet',

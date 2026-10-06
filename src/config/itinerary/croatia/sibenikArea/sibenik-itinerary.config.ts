@@ -22,12 +22,12 @@ const sibenikItinerary: Itinerary = {
   sailingArea: 'Sibenik',
   image: {
     src: '/images/itinerary/croatia/split-dubrovnik-itinerary/sibenik-itinerary-card.webp',
-    alt: 'Sibenik',
+    alt: 'Šibenik',
   },
-  title: 'Sibenik area yacht charter itinerary',
+  title: 'Šibenik area yacht charter itinerary',
   backgroundImage: {
     src: '/images/itinerary/croatia/banners/kornati-national-park-banner-large.webp',
-    alt: 'Sibenik',
+    alt: 'Šibenik',
   },
   description: `The Šibenik charter base is the gateway to Croatia's two best protected national parks — Kornati and Krka — both reachable in a single day-sail. Marina Mandalina, Marina Frapa Rogoznica and Marina D-Marin Mandalina take embarkation; the bus from Split airport reaches Šibenik in roughly 90 minutes, with private transfers cutting it to under an hour. Charter density is lower here than in Split or Trogir, which translates to less competition for moorings at popular anchorages and faster check-in lines on Saturdays.
   Šibenik's signature week is the Kornati loop: cross to the archipelago through Žirje, anchor in Levrnaka or Lavsa, and weave between the 89 uninhabited islands of the national park. Routes south to Hvar, Vis and Korčula go via Primošten — the prettiest bell-tower silhouette on the Croatian coast — and Rogoznica, a fishing-port harbour with one of the cheapest provisioning supermarkets on the coast.

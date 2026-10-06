@@ -356,7 +356,7 @@ export const CUSTOM_STOPS: CustomStop[] = [
   },
   {
     key: 'bisevo – islet budihovac – vela luka',
-    label: 'Bisevo – Islet Budihovac – Vela Luka',
+    label: 'Biševo – Islet Budihovac – Vela Luka',
     lat: 42.9858,
     lng: 16.0231,
     country: 'croatia',
@@ -3067,7 +3067,7 @@ export const CUSTOM_STOPS: CustomStop[] = [
   },
   {
     key: 'sukosan',
-    label: 'Sukosan',
+    label: 'Sukošan',
     lat: 44.0468,
     lng: 15.301,
     country: 'croatia',

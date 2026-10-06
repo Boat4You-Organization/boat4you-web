@@ -27,7 +27,7 @@ const splitKornatiKrkaRoute: ItineraryRoute = {
     },
     {
       src: '/images/itinerary/croatia/banners/primosten-marina-banner.webp',
-      alt: 'Primosten marina',
+      alt: 'Primošten marina',
     },
   ],
   routeDays: [
@@ -77,7 +77,7 @@ const splitKornatiKrkaRoute: ItineraryRoute = {
       ],
       mooringTip:
         'ACI Marina Kremik (2 nm south of the town) is the all-weather overnight option — lazy lines, full services, regular shuttle into Primošten. Town quay accepts daytime stops only and is exposed to W. If staying on the town quay during settled weather, leave by 17:00 to clear the berth before evening fishing fleet returns.',
-      gallery: [{ src: '/images/itinerary/croatia/destinations/primosten.webp', alt: 'Primosten' }],
+      gallery: [{ src: '/images/itinerary/croatia/destinations/primosten.webp', alt: 'Primošten' }],
     },
     {
       id: 'primosten-piskera-np-kornati',

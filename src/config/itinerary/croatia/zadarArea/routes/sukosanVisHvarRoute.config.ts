@@ -18,13 +18,13 @@ const sukosanVisHvarRoute: ItineraryRoute = {
       src: '/images/itinerary/croatia/banners/golden-horn-brac-banner-large.webp',
       alt: 'Golden horn brac',
     },
-    { src: '/images/itinerary/croatia/banners/korcula-banner.webp', alt: 'Korcula' },
+    { src: '/images/itinerary/croatia/banners/korcula-banner.webp', alt: 'Korčula' },
     { src: '/images/itinerary/croatia/banners/stiniva-bay-banner.webp', alt: 'Stiniva bay' },
   ],
   routeDays: [
     {
       id: 'sukosan-zdrelac-bay',
-      routeFrom: 'Sukosan',
+      routeFrom: 'Sukošan',
       routeTo: 'Ždrelac Bay',
       day: 1,
       mapPin: {
@@ -32,7 +32,7 @@ const sukosanVisHvarRoute: ItineraryRoute = {
         mobile: { left: 34.1, top: 48 },
       },
       description:
-        'Start your Adriatic story at Sukosan, a little harbor town where fishing boats bob like drowsy sentinels. Sail north to the secluded bay known as Ždrelac Bay on Pašman Island, where pine woods hug blue waves. Then relax at a waterfront konoba with platters of grilled orada (sea bream) and tales of Dalmatian mariners after diving into the crystalline embrace. Watch the surface of the bay glitter like scattered sapphires as evening paints the sky apricot colors.',
+        'Start your Adriatic story at Sukošan, a little harbor town where fishing boats bob like drowsy sentinels. Sail north to the secluded bay known as Ždrelac Bay on Pašman Island, where pine woods hug blue waves. Then relax at a waterfront konoba with platters of grilled orada (sea bream) and tales of Dalmatian mariners after diving into the crystalline embrace. Watch the surface of the bay glitter like scattered sapphires as evening paints the sky apricot colors.',
       shortDescription:
         'Easy 4 nm shake-down leg out of Sukošan to Ždrelac. Marina Dalmacija (in Sukošan) is the largest charter base in Croatia by berth count — a quick clean exit from a crowded marina to the calm Ždrelac passage.',
       thingsToDo: [
@@ -64,7 +64,7 @@ const sukosanVisHvarRoute: ItineraryRoute = {
         'Dinner at Konoba Mediteran',
       ],
       mooringTip: 'Marina Kremik (1.5 nm south) is the standard berth — pre-book in summer.',
-      gallery: [{ src: '/images/itinerary/croatia/destinations/primosten.webp', alt: 'Primosten' }],
+      gallery: [{ src: '/images/itinerary/croatia/destinations/primosten.webp', alt: 'Primošten' }],
     },
     {
       id: 'primosten-komiza',
@@ -86,7 +86,7 @@ const sukosanVisHvarRoute: ItineraryRoute = {
         'Tour the Vis Fishing Museum',
       ],
       mooringTip: 'Komiža harbour is short-stay only; pre-book ACI Marina Vis (other side of the island).',
-      gallery: [{ src: '/images/itinerary/croatia/destinations/komiza.webp', alt: 'Komiza' }],
+      gallery: [{ src: '/images/itinerary/croatia/destinations/komiza.webp', alt: 'Komiža' }],
     },
     {
       id: 'komiza-hvar-town',
@@ -157,14 +157,14 @@ const sukosanVisHvarRoute: ItineraryRoute = {
     {
       id: 'sibenik-sukosan',
       routeFrom: 'Šibenik',
-      routeTo: 'Sukosan',
+      routeTo: 'Sukošan',
       day: 7,
       mapPin: {
         desktop: { left: 36.8, top: 36.7 },
         mobile: { left: 40, top: 44.7 },
       },
       description:
-        'Sail homeward down the coast, stopping to dive in secret nooks where sunshine dances into liquid gold. Go back to Sukosan when church bells ring, their echoes blending with the clink of rigging. Under the glittering lights of the marina, toast your journey with a sunset feast of black risotto; the whispers of the Adriatic promise not an end but a beginning.',
+        'Sail homeward down the coast, stopping to dive in secret nooks where sunshine dances into liquid gold. Go back to Sukošan when church bells ring, their echoes blending with the clink of rigging. Under the glittering lights of the marina, toast your journey with a sunset feast of black risotto; the whispers of the Adriatic promise not an end but a beginning.',
       shortDescription:
         'Final 30 nm leg back along the Pašman channel to Sukošan and Marina Dalmacija — the largest marina in Croatia, ready for the handover. Highlights: Final swim in a Pašman cove and Final-night seafood platter.',
       thingsToDo: [
@@ -181,7 +181,7 @@ const sukosanVisHvarRoute: ItineraryRoute = {
     desktop: {
       image: {
         src: '/images/itinerary/croatia/zadar-itinerary/map.webp',
-        alt: 'Sukosan Route Image',
+        alt: 'Sukošan Route Image',
       },
       width: 1350,
       height: 1111,
@@ -189,7 +189,7 @@ const sukosanVisHvarRoute: ItineraryRoute = {
     mobile: {
       image: {
         src: '/images/itinerary/croatia/zadar-itinerary/mobile-map.webp',
-        alt: 'Sukosan Route Image',
+        alt: 'Sukošan Route Image',
       },
       width: 868,
       height: 1228,

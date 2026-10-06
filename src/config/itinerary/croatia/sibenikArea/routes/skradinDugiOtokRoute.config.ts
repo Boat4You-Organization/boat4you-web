@@ -16,7 +16,7 @@ const skradinDugiOtokRoute: ItineraryRoute = {
     { src: '/images/itinerary/croatia/banners/kornati-banner-large.webp', alt: 'Kornati' },
     { src: '/images/itinerary/croatia/banners/national-park-kornati-banner-large.webp', alt: 'National park Kornati' },
     { src: '/images/itinerary/croatia/banners/skradin-marina-banner.webp', alt: 'Skradin marina' },
-    { src: '/images/itinerary/croatia/banners/primosten-marina-banner.webp', alt: 'Primosten marina' },
+    { src: '/images/itinerary/croatia/banners/primosten-marina-banner.webp', alt: 'Primošten marina' },
   ],
   routeDays: [
     {
