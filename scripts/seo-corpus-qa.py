@@ -67,7 +67,8 @@ Segelschein" and the International Sailing Federation (ISAF) as a licence
 body (only next to licence wording, so regatta history passes), in all 9
 locales with their translations (LICENCE_NAME_DENY / LICENCE_BODY_DENY, check
 "licence-name"; added 6.10.2026, the licence is the ICC or a national
-licence) — and the
+licence), the formal register on the informal NL and PL sites ("u/uw",
+"Państwo/Proszę …"; check "register", FORMAL_REGISTER, 6.10.2026) — and the
 UI strings in messages/<locale>/*.json
 (seo_corpus_rules.message_checks). Any finding fails --check.
 
@@ -742,6 +743,8 @@ def fix_kuna(body, ctx):
     body = re.sub(rf'\s*\((?:oko |cca\. )?(?:{KUNA_NUM})(?:\s*[-–]\s*(?:{KUNA_NUM}))?\s*kn\)', drop_kn, body)
 
     def convert(m):
+        if m.group('k') == 'kun' and loc not in ('hr', 'pl'):
+            return m.group(0)  # Dutch "voor dag 4 kun je …" is the verb, not the currency
         a = _eur(_kuna_value(m.group('a'), loc), loc)
         if m.group('b'):
             b = _eur(_kuna_value(m.group('b'), loc), loc)
