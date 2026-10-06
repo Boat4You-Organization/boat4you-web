@@ -126,7 +126,8 @@ const useFilterChips = (catalogueFilters?: CatalogueFilters | null) => {
         minDefault: catalogueFilters?.minEnginePower ?? 0,
         maxDefault: catalogueFilters?.maxEnginePower ?? 32000,
         translationKey: 'engine',
-        formatLabel: (min, max) => `${tFilters('engine')}: ${min}-${max}`,
+        // The label lost its "(kW)" (6.10.2026): the unit goes on the value, as on the slider ("50-200 hp").
+        formatLabel: (min, max) => `${tFilters('engine')}: ${tFilters('engineHp', { value: `${min}-${max}` })}`,
       },
     ],
     [tFilters, isEnglishLocale, catalogueFilters]
