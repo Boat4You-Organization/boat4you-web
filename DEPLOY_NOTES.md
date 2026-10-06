@@ -1,5 +1,40 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-10-06 — 🪪 Dozvole za voditelja u SEO korpusu, 9 jezika (EN + 8 prijevoda + review) — ⏳ NIJE DEPLOYANO
+
+Codexov re-audit (2.10.): korpus je tvrdio da za bareboat vrijede „International Yacht Certificate (IYC)", ISAF, iskustvo, logbook, preporuke ili tečaj umjesto dozvole, da motorni brodovi ne trebaju dozvolu („ispod 5 m / 15 KS", „ispod 7 m", „ispod 12 m za građane EU") i da Boat4You prima, traži ili provjerava dokumente. Samo tekst: `public/seo-content` (SSR na svakom `/search` landingu) i QA skripte; nema promjene koda, builda ni messages.
+
+**Commiti (redom):**
+
+- `31a6c7c8b` EN (591 datoteka) + nova provjera `licence-name` u `seo_corpus_rules.py`.
+- Prijevodi: `8859e3d2a` FR, `d3a42a6ba` IT, `dc4b3edee` ES, `75ee942c1` PT, `fd589ec1f` DE, `611eeb84a` NL, `0633be3ee` HR, `9669a41b6` PL.
+- Review (6.10.): `706861ea0` ostatak u svih 9 jezika (578 datoteka, ~680 rečenica), `bd94d0ea6` stroža provjera `licence-name`.
+
+**Što se mijenja na webu:**
+
+- **Hrvatska:** dozvola koja vrijedi za plovilo (hrvatska ili strana s popisa koje priznaje Ministarstvo mora; ICC ako je izdan za odgovarajuću kategoriju) + svjedodžba VHF (SRC) kod nekoga na brodu. Iskustvo, logbook, preporuke, odobrenje tvrtke i tečaj nisu zamjena; bez dozvole ide skiper. Bez granica u metrima, kW i čvorovima (Punat, Kvarner, Kornati, Split, Zadar, Frapa, Trogir i okolica, Medulin); izmišljena „Izaslanica za Brodicu (IB)" maknuta; HR koristi „uvjerenje o osposobljenosti za voditelja brodice".
+- **Motorni brodovi:** dozvola za motorna plovila ili skiper; bez dozvole samo najmanje brodice slabog motora (koje, potvrđuje iznajmljivač). Vozačka dozvola nije dozvola za brod.
+- **Ostale zemlje:** „dozvola priznata u <zemlji>, obično ICC ili nacionalna, potvrditi s operaterom, uz to obično VHF/SRC". Grčka više nema „Captain's License iznad 10 m / ispod 25 m".
+- **Boat4You** nikad ne prima, ne traži, ne provjerava i ne potvrđuje dokumente; dokumente pri preuzimanju plovila provjerava charter tvrtka (Atena, Grčka, Lefkas, istočni Mediteran, Kreta, Egina, talijanski Jadran, Cagliari).
+- Isti tekst u svih 9 jezika (review je našao popravke napravljene samo u nekim jezicima). Usput: IT formalno obraćanje na 31 stranici (Lei/voi umjesto „verificalo"), PL 3 stranice „Państwo", ES „a bareboat/a seco" → „sin patrón" u novim rečenicama, NL „motorjachtrijbewijs"/„gelicentieerde", DE „Internationaler Segelschein" → „ICC (Internationaler Befähigungsnachweis)", PL „lekkš" → „lekką".
+- **`licence-name`** sada hvata i IYCC, Izaslanica, „International Boating License" i „Internationaler Segelschein"; ISAF i prijevodi samo uz riječi o dozvoli (regatna povijest prolazi).
+
+**Za Marija (nedirano):** pravila Italije (40 KS / 6 nm) i Francuske (6 KS); meta „no-licence options" na Sukošanu i regiji Zadar; BVI i Bahami (životopis plovidbe); „Boat4You operators/fleet/instructors"; rečenica o pomorskom osiguranju na istočnom Mediteranu; „Boat4You vets crew" (vrijedi za posadu, ne za dozvole).
+
+**⚠️ Prije deploya:**
+
+- **Deploy sada šalje i `src/posts/`** (Uvjeti, Privatnost, FAQ; vidi unos ispod). Korpus se čita iz `public/seo-content` u runtimeu i pamti po procesu, pa novi tekst vrijedi tek nakon restarta koji radi `b4y_web_deploy.sh`.
+- Ide zajedno s unosom ispod („Re-audit 2.10."); oba čekaju isti deploy.
+
+**Provjereno:**
+
+- `python3 scripts/seo-corpus-qa.py --check`: 0 nalaza u svih 9 jezika (uz strožu provjeru), 0 datoteka koje bi fixeri mijenjali; `node scripts/check-corpus-holes.mjs` OK (12.789 datoteka); `yarn lint` 0 grešaka (pre-commit, 18 starih upozorenja).
+- Broj tagova i redaka po datoteci nepromijenjen, osim jednog `<strong>Boat4You</strong>` u rečenici na `crete-catamaran-charter` (9 datoteka, namjerno).
+- Pretraga uzoraka nakon popravka (iskustvo umjesto dozvole, „no licence", „Boat4You verifies", granice u m/kW/ft) po 9 jezika; ostaju samo stavke za Marija i provjera posade.
+- Nije buildano: mijenja se samo sadržaj u `public/`.
+
+**Rollback:** `git revert bd94d0ea6 706861ea0 9669a41b6 0633be3ee 611eeb84a fd589ec1f 75ee942c1 dc4b3edee d3a42a6ba 8859e3d2a 31a6c7c8b` + redeploy (`b4y_web_deploy.sh`). Brza rollback naredba deploya (`.next.prev` + `messages.prev` + `src/posts.prev`) ne vraća `public/seo-content`; on se vraća revertom i redeployem.
+
 ## 2026-10-06 — 🛥️ Re-audit 2.10. (stranica broda, cijene, kartice) + review; deploy skripta šalje točno HEAD i `src/posts/` — ⏳ NIJE DEPLOYANO
 
 Popravci nalaza Codexova re-audita (2.10.) i nezavisni adversarial review tih commita (6.10.). U istom deployu ide i `31a6c7c8b` (sadržaj, licence u EN korpusu) — nije dio ovog unosa.
