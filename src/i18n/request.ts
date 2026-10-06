@@ -18,6 +18,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
     about: (await import(`../../messages/${locale}/about.json`)).default,
     contact: (await import(`../../messages/${locale}/contact.json`)).default,
     yacht: (await import(`../../messages/${locale}/yacht.json`)).default,
+    capacity: (await import(`../../messages/${locale}/capacity.json`)).default,
     toastMessages: (await import(`../../messages/${locale}/toastMessages.json`)).default,
     metadata: (await import(`../../messages/${locale}/metadata.json`)).default,
     cookieConsent: (await import(`../../messages/${locale}/cookieConsent.json`)).default,

@@ -1,5 +1,6 @@
 import { LocationFromTo, SelectedExtras } from '@/models/yacht-offer.model';
 import { CharterType, VesselType, YachtImage } from '@/models/yacht.model';
+import type { CapacityDto } from '@/utils/static/yachtCapacity';
 
 import { PriceInfo } from './price-info.type';
 
@@ -34,6 +35,11 @@ export type ReservationData = {
   maxPersons?: number | null;
   berths?: number | null;
   cabins?: number | null;
+  wc?: number | null;
+  crewNumber?: number | null;
+  /** The boat's capacity block (capacity contract v1); absent in a cart saved
+   *  before it or from an older backend — fromYacht() falls back to the flat fields. */
+  capacity?: CapacityDto | null;
   yachtImages?: YachtImage[];
   /** Refundable security deposit held at pick-up (paid at marina, returned
    *  on damage-free handover). Always shown under "Paid at marina" in the

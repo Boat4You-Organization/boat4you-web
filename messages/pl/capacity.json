@@ -1,0 +1,54 @@
+{
+  "label": {
+    "cabins": "Kabiny",
+    "crewCabins": "Kabiny załogi",
+    "berths": "Koje",
+    "heads": "WC",
+    "crewHeads": "WC załogi",
+    "showers": "Prysznice",
+    "crewShowers": "Prysznice załogi",
+    "maxPeople": "Maks. osób na pokładzie",
+    "recommendedPeople": "Zalecana liczba osób",
+    "crew": "Załoga",
+    "crewCrewedCharter": "Załoga (czarter z załogą)",
+    "mainsail": "Grot",
+    "headsail": "Żagiel przedni",
+    "engine": "Silnik",
+    "draught": "Zanurzenie"
+  },
+  "card": {
+    "cabins": "Kabiny",
+    "berths": "Koje",
+    "maxPeople": "Maks. osób"
+  },
+  "part": {
+    "inCabins": "{count} w kabinach",
+    "saloon": "{count} w mesie",
+    "crew": "{count} dla załogi",
+    "skipper": "{count} dla skippera"
+  },
+  "value": {
+    "recommended": "zalecane: {count}",
+    "enginePower": "{power} KM",
+    "engineCountPower": "{count} × {power} KM",
+    "draught": "{value} m"
+  },
+  "compact": {
+    "cabins": "{count, plural, one {# kabina} few {# kabiny} many {# kabin} other {# kabiny}}",
+    "crewCabins": "{count, plural, one {# kabina załogi} few {# kabiny załogi} many {# kabin załogi} other {# kabiny załogi}}",
+    "berths": "{count, plural, one {# koja} few {# koje} many {# koi} other {# koi}}",
+    "heads": "{count} WC",
+    "crewHeads": "{count} WC załogi",
+    "maxPeople": "{count, plural, one {maks. # osoba} few {maks. # osoby} many {maks. # osób} other {maks. # osoby}}",
+    "crew": "{count, plural, one {# osoba załogi} few {# osoby załogi} many {# osób załogi} other {# osoby załogi}}"
+  },
+  "sail": {
+    "FULL_BATTEN": "Pełnolistwowy",
+    "SEMI_FULL_BATTEN": "Częściowo listwowany",
+    "HALF_BATTEN": "Półlistwowy",
+    "CLASSIC": "Klasyczny",
+    "FURLING": "Rolowany",
+    "SELF_TACKING_JIB": "Fok samohalsujący",
+    "JIB": "Fok"
+  }
+}

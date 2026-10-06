@@ -1,0 +1,150 @@
+{
+  "(5 double +1 for the hostess + 1 bow/skippers cabin)": {
+    "dims": ["cabins"],
+    "nl": "(5 tweepersoons +1 voor de hostess + 1 voor-/schippershut)"
+  },
+  "(12 pax + 1 Crew)": {
+    "dims": ["berths"],
+    "nl": "(12 gasten + 1 bemanningslid)"
+  },
+  "(5+1 for the crew)": {
+    "dims": ["heads"],
+    "nl": "(5+1 voor de bemanning)"
+  },
+  "(double cabins)": {
+    "dims": ["cabins"],
+    "nl": "(tweepersoonshutten)"
+  },
+  "(3 double cabins)": {
+    "dims": ["cabins"],
+    "nl": "(3 tweepersoonshutten)"
+  },
+  "(5+1 front cabin)": {
+    "dims": ["cabins"],
+    "nl": "(5+1 voorhut)"
+  },
+  "(4 Double + 1 with bunk Beds)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons + 1 met stapelbedden)"
+  },
+  "(3 double cabins + 1 bunk bed cabin)": {
+    "dims": ["cabins"],
+    "nl": "(3 tweepersoonshutten + 1 hut met stapelbed)"
+  },
+  "Reccomended Guests Number : 6": {
+    "dims": ["berths"],
+    "nl": "Aanbevolen aantal gasten: 6"
+  },
+  "(4+1 in one of the crew cabins)": {
+    "dims": ["heads"],
+    "nl": "(4+1 in een van de bemanningshutten)"
+  },
+  "(8+2 saloon)": {
+    "dims": ["berths"],
+    "nl": "(8+2 salon)"
+  },
+  "(8+1 forepeak)": {
+    "dims": ["berths"],
+    "nl": "(8+1 voorpiek)"
+  },
+  "(3 double + 1 bunk bed)": {
+    "dims": ["cabins"],
+    "nl": "(3 tweepersoons + 1 met stapelbed)"
+  },
+  "(6 double + 1 bow cabin)": {
+    "dims": ["cabins"],
+    "nl": "(6 tweepersoons + 1 voorhut)"
+  },
+  "(3 double + 2 box cabins)": {
+    "dims": ["cabins"],
+    "nl": "(3 tweepersoons + 2 kleine hutten)"
+  },
+  "(6+2 bow cabins)": {
+    "dims": ["cabins"],
+    "nl": "(6+2 voorhutten)"
+  },
+  "(3 double + 1 skipper cabin)": {
+    "dims": ["cabins"],
+    "nl": "(3 tweepersoons + 1 schippershut)"
+  },
+  "(4 double+2 bow cabins)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons+2 voorhutten)"
+  },
+  "(8guests + 2crew)": {
+    "dims": ["berths"],
+    "nl": "(8 gasten + 2 bemanningsleden)"
+  },
+  "(4 double + 1 bunk bed)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons + 1 met stapelbed)"
+  },
+  "(plus 1 for the crew)": {
+    "dims": ["cabins", "heads"],
+    "nl": "(plus 1 voor de bemanning)"
+  },
+  "(for guests)": {
+    "dims": ["berths"],
+    "nl": "(voor gasten)"
+  },
+  "+1 skipper": {
+    "dims": ["cabins"],
+    "nl": "+1 schipper"
+  },
+  "(4+1 skipper)": {
+    "dims": ["cabins"],
+    "nl": "(4+1 schipper)"
+  },
+  "+ skipper": {
+    "dims": ["heads"],
+    "nl": "+ schipper"
+  },
+  "5+1 skipper": {
+    "dims": ["cabins"],
+    "nl": "5+1 schipper"
+  },
+  "(4 double)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons)"
+  },
+  "4+1 skipper": {
+    "dims": ["cabins"],
+    "nl": "4+1 schipper"
+  },
+  "(5+1 skipper)": {
+    "dims": ["cabins"],
+    "nl": "(5+1 schipper)"
+  },
+  "(8+2 saloon+1 forepeak)": {
+    "dims": ["berths"],
+    "nl": "(8+2 salon+1 voorpiek)"
+  },
+  "(4 +1 skipper)": {
+    "dims": ["cabins"],
+    "nl": "(4 +1 schipper)"
+  },
+  "(8+2 saloon+2 forepeak)": {
+    "dims": ["berths"],
+    "nl": "(8+2 salon+2 voorpiek)"
+  },
+  "(+2 bow cabins)": {
+    "dims": ["cabins"],
+    "nl": "(+2 voorhutten)"
+  },
+  "+1 skipper wc": {
+    "dims": ["cabins"],
+    "nl": "+1 WC schipper"
+  },
+  "+convertible sofa in saloon + 1 skipper cabin": {
+    "dims": ["berths"],
+    "nl": "+slaapbank in de salon + 1 schippershut"
+  },
+  "central big showers": {
+    "dims": ["heads"],
+    "nl": "grote centrale douches"
+  },
+  "- 4 double ensuite cabins +2 at forepeak cabins - no toilet": {
+    "dims": ["berths"],
+    "nl": "- 4 tweepersoonshutten met eigen badkamer +2 in voorpiekhutten - geen toilet"
+  }
+}

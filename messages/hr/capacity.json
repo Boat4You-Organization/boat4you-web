@@ -1,0 +1,54 @@
+{
+  "label": {
+    "cabins": "Kabine",
+    "crewCabins": "Kabine za posadu",
+    "berths": "Ležajevi",
+    "heads": "WC",
+    "crewHeads": "WC za posadu",
+    "showers": "Tuševi",
+    "crewShowers": "Tuševi za posadu",
+    "maxPeople": "Maks. osoba na brodu",
+    "recommendedPeople": "Preporučeni broj osoba",
+    "crew": "Posada",
+    "crewCrewedCharter": "Posada (najam s posadom)",
+    "mainsail": "Glavno jedro",
+    "headsail": "Prednje jedro",
+    "engine": "Motor",
+    "draught": "Gaz"
+  },
+  "card": {
+    "cabins": "Kabine",
+    "berths": "Ležajevi",
+    "maxPeople": "Maks. osoba"
+  },
+  "part": {
+    "inCabins": "{count} u kabinama",
+    "saloon": "{count} u salonu",
+    "crew": "{count} za posadu",
+    "skipper": "{count} za skipera"
+  },
+  "value": {
+    "recommended": "preporučeno: {count}",
+    "enginePower": "{power} KS",
+    "engineCountPower": "{count} × {power} KS",
+    "draught": "{value} m"
+  },
+  "compact": {
+    "cabins": "{count, plural, one {# kabina} few {# kabine} other {# kabina}}",
+    "crewCabins": "{count, plural, one {# kabina za posadu} few {# kabine za posadu} other {# kabina za posadu}}",
+    "berths": "{count, plural, one {# ležaj} few {# ležaja} other {# ležajeva}}",
+    "heads": "{count} WC",
+    "crewHeads": "{count} WC za posadu",
+    "maxPeople": "{count, plural, one {maks. # osoba} few {maks. # osobe} other {maks. # osoba}}",
+    "crew": "{count, plural, one {# član posade} few {# člana posade} other {# članova posade}}"
+  },
+  "sail": {
+    "FULL_BATTEN": "Pune letve",
+    "SEMI_FULL_BATTEN": "Djelomične letve",
+    "HALF_BATTEN": "Polovične letve",
+    "CLASSIC": "Klasično",
+    "FURLING": "Rolo",
+    "SELF_TACKING_JIB": "Samookretni flok",
+    "JIB": "Flok"
+  }
+}

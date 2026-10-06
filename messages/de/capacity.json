@@ -1,0 +1,54 @@
+{
+  "label": {
+    "cabins": "Kabinen",
+    "crewCabins": "Crew-Kabinen",
+    "berths": "Kojen",
+    "heads": "WC",
+    "crewHeads": "Crew-WC",
+    "showers": "Duschen",
+    "crewShowers": "Crew-Duschen",
+    "maxPeople": "Max. Personen an Bord",
+    "recommendedPeople": "Empfohlene Personenzahl",
+    "crew": "Crew",
+    "crewCrewedCharter": "Crew (bei Charter mit Crew)",
+    "mainsail": "Großsegel",
+    "headsail": "Vorsegel",
+    "engine": "Motor",
+    "draught": "Tiefgang"
+  },
+  "card": {
+    "cabins": "Kabinen",
+    "berths": "Kojen",
+    "maxPeople": "Max. Personen"
+  },
+  "part": {
+    "inCabins": "{count} in Kabinen",
+    "saloon": "{count} im Salon",
+    "crew": "{count} Crew",
+    "skipper": "{count} Skipper"
+  },
+  "value": {
+    "recommended": "empfohlen: {count}",
+    "enginePower": "{power} PS",
+    "engineCountPower": "{count} × {power} PS",
+    "draught": "{value} m"
+  },
+  "compact": {
+    "cabins": "{count, plural, one {# Kabine} other {# Kabinen}}",
+    "crewCabins": "{count, plural, one {# Crew-Kabine} other {# Crew-Kabinen}}",
+    "berths": "{count, plural, one {# Koje} other {# Kojen}}",
+    "heads": "{count} WC",
+    "crewHeads": "{count} Crew-WC",
+    "maxPeople": "{count, plural, one {max. # Person} other {max. # Personen}}",
+    "crew": "{count, plural, one {# Crew-Mitglied} other {# Crew-Mitglieder}}"
+  },
+  "sail": {
+    "FULL_BATTEN": "Durchgelattet",
+    "SEMI_FULL_BATTEN": "Teilweise durchgelattet",
+    "HALF_BATTEN": "Halb durchgelattet",
+    "CLASSIC": "Klassisch",
+    "FURLING": "Rollreff",
+    "SELF_TACKING_JIB": "Selbstwendefock",
+    "JIB": "Fock"
+  }
+}

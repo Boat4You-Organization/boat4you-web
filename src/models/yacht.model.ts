@@ -1,4 +1,5 @@
 import { PriceInfo } from '@/types/price-info.type';
+import type { CapacityDto, RigDto } from '@/utils/static/yachtCapacity';
 
 import { AgencyModel } from './agency.model';
 import { BoatLocation } from './boat.model';
@@ -217,9 +218,18 @@ export interface YachtModelShortInfo extends Pick<
   id: number;
   slug: string;
   name: string;
-  /** Sleeping places; the guest figure when maxPersons is missing. Optional:
-   *  the search payload carries it only once the backend adds it. */
+  /** Berths (sleeping places) as the partner sends them. Optional: an older
+   *  backend's search payload does not carry it. Never shown as people. */
   berths?: number | null;
+  /** WC count; optional like berths. */
+  wc?: number | null;
+  /**
+   * The partner's cabins / berths / WC with their short notes and splits
+   * (capacity contract v1, search rows: notes only when language-neutral and
+   * at most 12 characters). Absent on an older backend — read it through
+   * fromYacht() (yachtCapacity.ts), which falls back to the flat fields.
+   */
+  capacity?: CapacityDto | null;
   location: Location;
   /**
    * Drop-off location for one-way charters. Null when pickup == drop-off
@@ -346,6 +356,14 @@ export interface YachtModel
   defaultCheckout: string;
   charterType: CharterType[];
   inquireOnly: boolean;
+  /**
+   * The partner's capacity and rig as sent (capacity contract v1): cabins /
+   * berths / WC with the partner's notes and splits, crew cabins and WC as
+   * their own figures, max. people, the sails and the engine. Absent on an
+   * older backend; read both only through fromYacht() (yachtCapacity.ts).
+   */
+  capacity?: CapacityDto | null;
+  rig?: RigDto | null;
   /**
    * Set only on a second listing of a boat another channel already lists
    * (backend yacht_listing_twin, V9_69; audit B05/B17): the slug of the copy

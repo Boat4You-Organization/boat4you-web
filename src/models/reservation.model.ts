@@ -1,4 +1,5 @@
 import { PriceInfo } from '@/types/price-info.type';
+import type { CapacityDto, RigDto } from '@/utils/static/yachtCapacity';
 
 import {
   RESERVATION_STATUS_COLOR_MAP,
@@ -110,6 +111,9 @@ export interface ReservationDetails extends ReservationShortInfo {
   crewNumber: number;
   vesselType: string;
   charterType: string;
+  /** The boat's capacity and rig (capacity contract v1); absent on an older backend — read through fromYacht(). */
+  capacity?: CapacityDto | null;
+  rig?: RigDto | null;
   amenities?: YachtAmenitiesModel[];
   cancellationRequest?: string;
   /** Admin's explanation when the cancellation request was rejected; rendered

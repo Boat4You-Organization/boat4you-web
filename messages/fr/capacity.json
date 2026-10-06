@@ -1,0 +1,54 @@
+{
+  "label": {
+    "cabins": "Cabines",
+    "crewCabins": "Cabines équipage",
+    "berths": "Couchettes",
+    "heads": "WC",
+    "crewHeads": "WC équipage",
+    "showers": "Douches",
+    "crewShowers": "Douches équipage",
+    "maxPeople": "Personnes max. à bord",
+    "recommendedPeople": "Nombre de personnes recommandé",
+    "crew": "Équipage",
+    "crewCrewedCharter": "Équipage (location avec équipage)",
+    "mainsail": "Grand-voile",
+    "headsail": "Voile d’avant",
+    "engine": "Moteur",
+    "draught": "Tirant d’eau"
+  },
+  "card": {
+    "cabins": "Cabines",
+    "berths": "Couchettes",
+    "maxPeople": "Pers. max."
+  },
+  "part": {
+    "inCabins": "{count} en cabine",
+    "saloon": "{count} dans le carré",
+    "crew": "{count} pour l’équipage",
+    "skipper": "{count} pour le skipper"
+  },
+  "value": {
+    "recommended": "recommandé : {count}",
+    "enginePower": "{power} ch",
+    "engineCountPower": "{count} × {power} ch",
+    "draught": "{value} m"
+  },
+  "compact": {
+    "cabins": "{count, plural, one {# cabine} other {# cabines}}",
+    "crewCabins": "{count, plural, one {# cabine équipage} other {# cabines équipage}}",
+    "berths": "{count, plural, one {# couchette} other {# couchettes}}",
+    "heads": "{count} WC",
+    "crewHeads": "{count} WC équipage",
+    "maxPeople": "{count, plural, one {# personne max.} other {# personnes max.}}",
+    "crew": "{count, plural, one {# membre d’équipage} other {# membres d’équipage}}"
+  },
+  "sail": {
+    "FULL_BATTEN": "Entièrement lattée",
+    "SEMI_FULL_BATTEN": "Semi-lattée",
+    "HALF_BATTEN": "Demi-lattée",
+    "CLASSIC": "Classique",
+    "FURLING": "Enrouleur",
+    "SELF_TACKING_JIB": "Foc autovireur",
+    "JIB": "Foc"
+  }
+}

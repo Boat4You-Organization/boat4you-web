@@ -1,0 +1,150 @@
+{
+  "(5 double +1 for the hostess + 1 bow/skippers cabin)": {
+    "dims": ["cabins"],
+    "pt": "(5 duplas +1 para a hostess + 1 cabine de proa/do skipper)"
+  },
+  "(12 pax + 1 Crew)": {
+    "dims": ["berths"],
+    "pt": "(12 passageiros + 1 tripulante)"
+  },
+  "(5+1 for the crew)": {
+    "dims": ["heads"],
+    "pt": "(5+1 para a tripulação)"
+  },
+  "(double cabins)": {
+    "dims": ["cabins"],
+    "pt": "(cabines duplas)"
+  },
+  "(3 double cabins)": {
+    "dims": ["cabins"],
+    "pt": "(3 cabines duplas)"
+  },
+  "(5+1 front cabin)": {
+    "dims": ["cabins"],
+    "pt": "(5+1 cabine de proa)"
+  },
+  "(4 Double + 1 with bunk Beds)": {
+    "dims": ["cabins"],
+    "pt": "(4 duplas + 1 com beliches)"
+  },
+  "(3 double cabins + 1 bunk bed cabin)": {
+    "dims": ["cabins"],
+    "pt": "(3 cabines duplas + 1 cabine com beliche)"
+  },
+  "Reccomended Guests Number : 6": {
+    "dims": ["berths"],
+    "pt": "Número recomendado de hóspedes: 6"
+  },
+  "(4+1 in one of the crew cabins)": {
+    "dims": ["heads"],
+    "pt": "(4+1 em uma das cabines da tripulação)"
+  },
+  "(8+2 saloon)": {
+    "dims": ["berths"],
+    "pt": "(8+2 salão)"
+  },
+  "(8+1 forepeak)": {
+    "dims": ["berths"],
+    "pt": "(8+1 pique de proa)"
+  },
+  "(3 double + 1 bunk bed)": {
+    "dims": ["cabins"],
+    "pt": "(3 duplas + 1 com beliche)"
+  },
+  "(6 double + 1 bow cabin)": {
+    "dims": ["cabins"],
+    "pt": "(6 duplas + 1 cabine de proa)"
+  },
+  "(3 double + 2 box cabins)": {
+    "dims": ["cabins"],
+    "pt": "(3 duplas + 2 cabines pequenas)"
+  },
+  "(6+2 bow cabins)": {
+    "dims": ["cabins"],
+    "pt": "(6+2 cabines de proa)"
+  },
+  "(3 double + 1 skipper cabin)": {
+    "dims": ["cabins"],
+    "pt": "(3 duplas + 1 cabine do skipper)"
+  },
+  "(4 double+2 bow cabins)": {
+    "dims": ["cabins"],
+    "pt": "(4 duplas+2 cabines de proa)"
+  },
+  "(8guests + 2crew)": {
+    "dims": ["berths"],
+    "pt": "(8 hóspedes + 2 tripulantes)"
+  },
+  "(4 double + 1 bunk bed)": {
+    "dims": ["cabins"],
+    "pt": "(4 duplas + 1 com beliche)"
+  },
+  "(plus 1 for the crew)": {
+    "dims": ["cabins", "heads"],
+    "pt": "(mais 1 para a tripulação)"
+  },
+  "(for guests)": {
+    "dims": ["berths"],
+    "pt": "(para os hóspedes)"
+  },
+  "+1 skipper": {
+    "dims": ["cabins"],
+    "pt": "+1 skipper"
+  },
+  "(4+1 skipper)": {
+    "dims": ["cabins"],
+    "pt": "(4+1 skipper)"
+  },
+  "+ skipper": {
+    "dims": ["heads"],
+    "pt": "+ skipper"
+  },
+  "5+1 skipper": {
+    "dims": ["cabins"],
+    "pt": "5+1 skipper"
+  },
+  "(4 double)": {
+    "dims": ["cabins"],
+    "pt": "(4 duplas)"
+  },
+  "4+1 skipper": {
+    "dims": ["cabins"],
+    "pt": "4+1 skipper"
+  },
+  "(5+1 skipper)": {
+    "dims": ["cabins"],
+    "pt": "(5+1 skipper)"
+  },
+  "(8+2 saloon+1 forepeak)": {
+    "dims": ["berths"],
+    "pt": "(8+2 salão+1 pique de proa)"
+  },
+  "(4 +1 skipper)": {
+    "dims": ["cabins"],
+    "pt": "(4 +1 skipper)"
+  },
+  "(8+2 saloon+2 forepeak)": {
+    "dims": ["berths"],
+    "pt": "(8+2 salão+2 pique de proa)"
+  },
+  "(+2 bow cabins)": {
+    "dims": ["cabins"],
+    "pt": "(+2 cabines de proa)"
+  },
+  "+1 skipper wc": {
+    "dims": ["cabins"],
+    "pt": "+1 WC do skipper"
+  },
+  "+convertible sofa in saloon + 1 skipper cabin": {
+    "dims": ["berths"],
+    "pt": "+sofá-cama no salão + 1 cabine do skipper"
+  },
+  "central big showers": {
+    "dims": ["heads"],
+    "pt": "chuveiros centrais grandes"
+  },
+  "- 4 double ensuite cabins +2 at forepeak cabins - no toilet": {
+    "dims": ["berths"],
+    "pt": "- 4 cabines duplas com banheiro privativo +2 em cabines de proa - sem WC"
+  }
+}

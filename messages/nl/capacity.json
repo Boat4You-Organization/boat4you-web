@@ -1,0 +1,54 @@
+{
+  "label": {
+    "cabins": "Hutten",
+    "crewCabins": "Bemanningshutten",
+    "berths": "Slaapplaatsen",
+    "heads": "WC",
+    "crewHeads": "WC bemanning",
+    "showers": "Douches",
+    "crewShowers": "Douches bemanning",
+    "maxPeople": "Max. personen aan boord",
+    "recommendedPeople": "Aanbevolen aantal personen",
+    "crew": "Bemanning",
+    "crewCrewedCharter": "Bemanning (charter met bemanning)",
+    "mainsail": "Grootzeil",
+    "headsail": "Voorzeil",
+    "engine": "Motor",
+    "draught": "Diepgang"
+  },
+  "card": {
+    "cabins": "Hutten",
+    "berths": "Slaapplaatsen",
+    "maxPeople": "Max. personen"
+  },
+  "part": {
+    "inCabins": "{count} in hutten",
+    "saloon": "{count} in de salon",
+    "crew": "{count} voor de bemanning",
+    "skipper": "{count} voor de schipper"
+  },
+  "value": {
+    "recommended": "aanbevolen: {count}",
+    "enginePower": "{power} pk",
+    "engineCountPower": "{count} × {power} pk",
+    "draught": "{value} m"
+  },
+  "compact": {
+    "cabins": "{count, plural, one {# hut} other {# hutten}}",
+    "crewCabins": "{count, plural, one {# bemanningshut} other {# bemanningshutten}}",
+    "berths": "{count, plural, one {# slaapplaats} other {# slaapplaatsen}}",
+    "heads": "{count} WC",
+    "crewHeads": "{count} WC bemanning",
+    "maxPeople": "{count, plural, one {max. # persoon} other {max. # personen}}",
+    "crew": "{count, plural, one {# bemanningslid} other {# bemanningsleden}}"
+  },
+  "sail": {
+    "FULL_BATTEN": "Doorgelat",
+    "SEMI_FULL_BATTEN": "Gedeeltelijk doorgelat",
+    "HALF_BATTEN": "Half doorgelat",
+    "CLASSIC": "Klassiek",
+    "FURLING": "Rolreef",
+    "SELF_TACKING_JIB": "Zelfwendende fok",
+    "JIB": "Fok"
+  }
+}

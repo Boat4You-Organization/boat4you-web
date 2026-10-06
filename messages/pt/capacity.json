@@ -1,0 +1,54 @@
+{
+  "label": {
+    "cabins": "Cabines",
+    "crewCabins": "Cabines da tripulação",
+    "berths": "Beliches",
+    "heads": "WC",
+    "crewHeads": "WC da tripulação",
+    "showers": "Chuveiros",
+    "crewShowers": "Chuveiros da tripulação",
+    "maxPeople": "Máx. pessoas a bordo",
+    "recommendedPeople": "Número de pessoas recomendado",
+    "crew": "Tripulação",
+    "crewCrewedCharter": "Tripulação (aluguel com tripulação)",
+    "mainsail": "Vela mestra",
+    "headsail": "Vela de proa",
+    "engine": "Motor",
+    "draught": "Calado"
+  },
+  "card": {
+    "cabins": "Cabines",
+    "berths": "Beliches",
+    "maxPeople": "Máx. pessoas"
+  },
+  "part": {
+    "inCabins": "{count} nas cabines",
+    "saloon": "{count} no salão",
+    "crew": "{count} para a tripulação",
+    "skipper": "{count} para o skipper"
+  },
+  "value": {
+    "recommended": "recomendado: {count}",
+    "enginePower": "{power} cv",
+    "engineCountPower": "{count} × {power} cv",
+    "draught": "{value} m"
+  },
+  "compact": {
+    "cabins": "{count, plural, one {# cabine} other {# cabines}}",
+    "crewCabins": "{count, plural, one {# cabine da tripulação} other {# cabines da tripulação}}",
+    "berths": "{count, plural, one {# beliche} other {# beliches}}",
+    "heads": "{count} WC",
+    "crewHeads": "{count} WC da tripulação",
+    "maxPeople": "{count, plural, one {máx. # pessoa} other {máx. # pessoas}}",
+    "crew": "{count, plural, one {# tripulante} other {# tripulantes}}"
+  },
+  "sail": {
+    "FULL_BATTEN": "Talas inteiras",
+    "SEMI_FULL_BATTEN": "Talas semi-inteiras",
+    "HALF_BATTEN": "Meias talas",
+    "CLASSIC": "Clássica",
+    "FURLING": "Enrolável",
+    "SELF_TACKING_JIB": "Buja autovirante",
+    "JIB": "Buja"
+  }
+}

@@ -13,6 +13,7 @@ declare module 'next-intl' {
       about: typeof import('../../messages/en/about.json').default;
       contact: typeof import('../../messages/en/contact.json').default;
       yacht: typeof import('../../messages/en/yacht.json').default;
+      capacity: typeof import('../../messages/en/capacity.json').default;
       toastMessages: typeof import('../../messages/en/toastMessages.json').default;
       metadata: typeof import('../../messages/en/metadata.json').default;
       cookieConsent: typeof import('../../messages/en/cookieConsent.json').default;

@@ -15,6 +15,7 @@ const withNextIntl = createNextIntlPlugin({
       './messages/en/about.json',
       './messages/en/contact.json',
       './messages/en/yacht.json',
+      './messages/en/capacity.json',
       './messages/en/toastMessages.json',
       './messages/en/metadata.json',
       './messages/en/cookieConsent.json',

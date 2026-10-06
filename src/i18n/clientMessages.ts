@@ -9,6 +9,7 @@ import type { Messages } from 'next-intl';
  */
 export const CLIENT_NAMESPACES = [
   'about',
+  'capacity',
   'common',
   'cookieConsent',
   'filters',

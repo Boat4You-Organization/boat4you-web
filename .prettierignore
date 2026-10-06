@@ -16,3 +16,6 @@ public/seo-content/**
 
 # translations (JSON, machine-edited)
 messages/**/*.json
+
+# Shared yacht capacity formatter: byte-identical across 8 repos (see .eslintignore)
+src/utils/static/yachtCapacity.ts

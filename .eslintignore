@@ -2,3 +2,7 @@
 **/out/*
 **/.next/*
 next-env.d.ts
+# Shared yacht capacity formatter (capacity contract v1): a byte-identical copy
+# across b4y, the 6 sisters and the admin (shasum-checked), tested by
+# scripts/yachtCapacity.test.mjs — never reformat or lint-fix it here.
+src/utils/static/yachtCapacity.ts
