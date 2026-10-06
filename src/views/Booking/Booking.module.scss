@@ -39,12 +39,14 @@
           width: 33%;
         }
 
+        // Full-bleed on the phone: out by the container's own padding
+        // (MuiContainer paddingInline 16px, theme components.ts), not 100vw —
+        // 100vw counts a scrollbar and pushed the checkout 8 px wider than the
+        // screen at 390 px (re-audit 2.10.2026).
         .divider {
-          width: 100vw;
           height: rem-calc(12);
           background-color: $black-100;
-          margin-left: calc(-50vw + 50%);
-          margin-right: calc(-50vw + 50%);
+          margin-inline: -16px;
 
           @include media(sm) {
             display: none;

@@ -19,12 +19,12 @@
     text-decoration: underline;
   }
 
+  // Full-bleed on the phone by the checkout container's padding (16px, see
+  // Booking.module.scss), not 100vw (horizontal scroll, re-audit 2.10.2026).
   .divider {
-    width: 100vw;
     height: rem-calc(12);
     background-color: $black-100;
-    margin-left: calc(-50vw + 50%);
-    margin-right: calc(-50vw + 50%);
+    margin-inline: -16px;
 
     @include media(sm) {
       display: none;
