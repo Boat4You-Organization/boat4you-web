@@ -8,6 +8,20 @@ import { useYachtStore } from '@/valtio/yacht/yacht.store';
 
 import useQueryParams from './useQueryParams';
 
+/**
+ * Only the latest price request writes the store. A slow answer for the
+ * previous week (or for dates that have since lost their offer) used to land
+ * after the current one: its `finally` cleared "calculating" and marked the
+ * OLD offer settled, so the page kept "Checking availability…" with Reserve
+ * disabled for good, or hid a real "not available" (review 6.10.2026).
+ */
+let latestPriceRequest = 0;
+
+/** Drops the answer of any price request still in flight (the dates have no offer any more). */
+export const cancelPendingPriceCalculation = () => {
+  latestPriceRequest += 1;
+};
+
 export const useYachtPriceCalculation = () => {
   const { selectedOffer } = useYachtStore();
   const { user } = useUserStore();
@@ -24,6 +38,11 @@ export const useYachtPriceCalculation = () => {
 
       const offerId = selectedOffer.id;
 
+      latestPriceRequest += 1;
+
+      const requestId = latestPriceRequest;
+      const isLatest = () => requestId === latestPriceRequest;
+
       setCalculatingPrice(true);
 
       const finalCurrency = currency || currentCurrency;
@@ -36,20 +55,26 @@ export const useYachtPriceCalculation = () => {
           currency: finalCurrency,
         });
 
+        if (!isLatest()) return null;
+
         setCalculatedPrice(result);
 
         return result;
       } catch (error) {
         // eslint-disable-next-line no-console
         console.error('Error calculating price:', error);
-        setCalculatedPrice(null);
+
+        if (isLatest()) setCalculatedPrice(null);
 
         return null;
       } finally {
-        setCalculatingPrice(false);
         // Known now for this boat + offer, priced or not: the page may say
-        // "not available" from here on, never while it is still asking.
-        setPriceSettled(yachtSlug, offerId);
+        // "not available" from here on, never while it is still asking. A
+        // superseded request leaves both to the one that replaced it.
+        if (isLatest()) {
+          setCalculatingPrice(false);
+          setPriceSettled(yachtSlug, offerId);
+        }
       }
     },
     [selectedOffer, currentCurrency]

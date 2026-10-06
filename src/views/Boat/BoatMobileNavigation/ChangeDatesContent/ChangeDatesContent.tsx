@@ -8,6 +8,7 @@ import dayjs, { Dayjs } from 'dayjs';
 import { useLocale, useTranslations } from 'next-intl';
 
 import { getSingleYachtAvailability } from '@/actions/yacht.actions';
+import CircularProgress from '@/components/CircularProgress';
 import DateRangePicker from '@/components/DateRangePicker';
 import FormDateInput from '@/components/Forms/FormDateInput';
 import Calendar from '@/components/SvgIcons/Calendar';
@@ -19,7 +20,7 @@ import useToggleState from '@/utils/hooks/useToggleState';
 import DateTime from '@/utils/static/DateTime';
 import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
 import { handleNextMonth, handlePrevMonth } from '@/valtio/yacht/yacht.actions';
-import { useYachtStore } from '@/valtio/yacht/yacht.store';
+import { priceSettledKey, useYachtStore } from '@/valtio/yacht/yacht.store';
 
 interface ChangeDatesContentProps {
   yacht: YachtModel;
@@ -28,7 +29,7 @@ interface ChangeDatesContentProps {
 }
 
 const ChangeDatesContent = ({ yacht, isCalculatedPrice, isSelectedOfferUnavailable }: ChangeDatesContentProps) => {
-  const { activeDate, selectedOffer, calculatedPrice } = useYachtStore();
+  const { activeDate, selectedOffer, calculatedPrice, isCalculatingPrice, priceSettledFor } = useYachtStore();
   const { setMultipleParams } = useQueryParams();
   const [isModalOpen, toggleModal] = useToggleState();
   const { setValue, watch } = useFormContext<BoatCalendarFormValues>();
@@ -148,26 +149,52 @@ const ChangeDatesContent = ({ yacht, isCalculatedPrice, isSelectedOfferUnavailab
   }, [yacht.slug, activeDate, availabilityAction]);
 
   const hasValidDateSelection = startDate && endDate && selectedOffer;
+  // Dates chosen, this boat + offer's price not in yet: "Checking
+  // availability…", as on the desktop form and the phone bar. This sheet is
+  // where the dates are changed, and between the new week's offer and its
+  // price it read the red "not available" for seconds (review 6.10.2026).
+  const isCheckingAvailability =
+    !!(startDate && endDate) &&
+    !(isCalculatedPrice && !isSelectedOfferUnavailable) &&
+    (priceSettledFor !== priceSettledKey(yacht.slug, selectedOffer?.id) || isCalculatingPrice);
 
   return (
     <>
       <Stack>
-        {hasValidDateSelection && isCalculatedPrice && !isSelectedOfferUnavailable ? (
-          <Stack direction="row" spacing={1} alignItems="end">
-            <Typography component="p" variant="h2" color={colors.green500}>
-              {t('upTo')} {formattedClientPriceTotal}
-            </Typography>
-            <Typography variant="body1" color={colors.black600}>
-              {tCommon('priceForXDays', { days: String(numberOfDays) })}
-            </Typography>
-          </Stack>
-        ) : (
-          <Stack p={2} borderRadius={2.5} sx={{ backgroundColor: colors.red50 }}>
-            <Typography variant="body1" color={colors.red500} textAlign="center">
-              {!hasValidDateSelection ? t('noDateSelected') : t('notAvailable')}
+        {isCheckingAvailability && (
+          <Stack
+            direction="row"
+            alignItems="center"
+            justifyContent="center"
+            gap={1.5}
+            p={2}
+            borderRadius={2.5}
+            role="status"
+            sx={{ backgroundColor: colors.black50 }}
+          >
+            <CircularProgress size={18} />
+            <Typography variant="body1" color={colors.black600} textAlign="center">
+              {t('checkingAvailability')}
             </Typography>
           </Stack>
         )}
+        {!isCheckingAvailability &&
+          (hasValidDateSelection && isCalculatedPrice && !isSelectedOfferUnavailable ? (
+            <Stack direction="row" spacing={1} alignItems="end">
+              <Typography component="p" variant="h2" color={colors.green500}>
+                {t('upTo')} {formattedClientPriceTotal}
+              </Typography>
+              <Typography variant="body1" color={colors.black600}>
+                {tCommon('priceForXDays', { days: String(numberOfDays) })}
+              </Typography>
+            </Stack>
+          ) : (
+            <Stack p={2} borderRadius={2.5} sx={{ backgroundColor: colors.red50 }}>
+              <Typography variant="body1" color={colors.red500} textAlign="center">
+                {!hasValidDateSelection ? t('noDateSelected') : t('notAvailable')}
+              </Typography>
+            </Stack>
+          ))}
         <Stack pt={3} spacing={2}>
           <FormDateInput
             name="startDate"

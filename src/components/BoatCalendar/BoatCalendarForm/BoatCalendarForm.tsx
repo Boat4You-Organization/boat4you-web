@@ -277,9 +277,11 @@ const BoatCalendarForm = ({ yacht, variant }: BoatCalendarFormProps) => {
               {t('crewedDescription')}
             </Typography>
           )}
+          {/* The label the answer will most likely bring: an option, a blocked
+              week or an inquiry-only boat ends on "Inquire now", not "Reserve". */}
           {isCheckingAvailability && (
             <Button size="large" fullWidth disabled aria-busy="true">
-              {t('reserve')}
+              {gate === 'reserve' ? t('reserve') : t('inquireNow')}
             </Button>
           )}
           {hasValidDateSelection && !isReservable && !isCheckingAvailability && (

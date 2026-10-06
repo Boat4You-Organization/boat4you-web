@@ -12,13 +12,14 @@ import { singleBoatTabs, singleCustomBoatTabs } from '@/config/tabs.config';
 import { YachtModel } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
 import useScrollSpy from '@/utils/hooks/useScrollSpy';
-import { useYachtPriceCalculation } from '@/utils/hooks/useYachtPriceCalculation';
+import { cancelPendingPriceCalculation, useYachtPriceCalculation } from '@/utils/hooks/useYachtPriceCalculation';
 import { isInquiryOnlyBoat } from '@/utils/static/inquiryOnlyBoat';
 import { clearDataFromLocalStorage } from '@/utils/static/localStorageUtils';
 import { clearDataFromSessionStorage } from '@/utils/static/sessionStorageUtils';
 import { YachtFaqEntry } from '@/utils/static/yachtFaq';
 import {
   setCalculatedPrice,
+  setCalculatingPrice,
   setOffersToDisplay,
   setPriceSettled,
   setselectedOffer,
@@ -93,6 +94,11 @@ const BoatContentSection = ({ yacht, yachtFaq }: BoatContentSectionProps) => {
       calculatePrice(yacht.slug, obligatoryExtrasKeys);
     } else {
       // No offer for these dates: nothing to ask, the answer is "not available".
+      // A price request still in flight for the previous dates must not
+      // overwrite that answer, and its cancelled `finally` no longer clears
+      // "calculating" — so it is cleared here (review 6.10.2026).
+      cancelPendingPriceCalculation();
+      setCalculatingPrice(false);
       setCalculatedPrice(null);
       setPriceSettled(yacht.slug, null);
     }
