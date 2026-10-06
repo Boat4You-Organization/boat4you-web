@@ -462,9 +462,9 @@ Jeśli wynająłeś profesjonalnego skippera (kapitana) na swój czarter, ważne
 
 **Dopuszczalna liczba osób**: Pamiętaj, że skipper liczy się do maksymalnej liczby osób dozwolonych na pokładzie. Jeśli jacht jest dopuszczony do użytku przez 8 osób, zazwyczaj jest to 8 osób łącznie ze skipperem. Więc jeśli masz 8 gości plus skippera, to jest 9 osób – co oznacza, że potrzebujesz łodzi certyfikowanej dla 10 osób, lub musisz zmniejszyć liczbę gości itp.
 
-**Przykładowe aranżacje**: Załóżmy, że czarterujesz dla 4-osobowej rodziny łódź z 3 kabinami ze skipperem. Zazwyczaj rodzice w jednej kabinie, dzieci w drugiej, skipper w trzeciej kabinie. Jeśli miałbyś 3 pary (6 osób) na łodzi z 3 kabinami i dodałbyś skippera, jedna para mogłaby zrezygnować ze swojej kabiny na rzecz skippera lub dwie osoby z Twojej grupy dzieliłyby salon, aby skipper mógł mieć kabinę. Właśnie w takich dyskusjach często doradzamy: może w takim przypadku lepiej wybrać łódź z 4 kabinami, dla większego komfortu.
+**Przykładowe aranżacje**: Załóżmy, że czarterujesz ze skipperem łódź z 3 kabinami dla swojej 4-osobowej rodziny. Zazwyczaj rodzice w jednej kabinie, dzieci w drugiej, skipper w trzeciej kabinie. Jeśli miałbyś 3 pary (6 osób) na łodzi z 3 kabinami i dodałbyś skippera, jedna para mogłaby zrezygnować ze swojej kabiny na rzecz skippera lub dwie osoby z Twojej grupy dzieliłyby salon, aby skipper mógł mieć kabinę. Właśnie w takich dyskusjach często doradzamy: może w takim przypadku lepiej wybrać łódź z 4 kabinami, dla większego komfortu.
 
-**Uprzejmość i komfort**: Zdecydowanie zalecamy, aby, jeśli to tylko możliwe, **zapewnić skipperowi jego własną kabinę**. Zapewni to nie tylko jego dobry odpoczynek, aby utrzymać Cię w bezpieczeństwie, ale także da Tobie i jemu przestrzeń osobistą. Ze skipperem w oddzielnej kabinie zachowujesz salon dla relaksu Twojej grupy w nocy.
+**Uprzejmość i komfort**: Zdecydowanie zalecamy, aby, jeśli to tylko możliwe, **zapewnić skipperowi jego własną kabinę**. Zapewni to nie tylko jego dobry odpoczynek, aby utrzymać Cię w bezpieczeństwie, ale także da Tobie i jemu przestrzeń osobistą. Ze skipperem w oddzielnej kabinie zachowujesz salon dla relaksu swojej grupy w nocy.
 
 **A co z hostessami lub kucharzami?** Jeśli zatrudniłeś również hostessę lub kucharza, obaj członkowie załogi potrzebują kojek. W przypadku katamaranu z 4 kabinami, załoga często dzieli kabinę, jeśli są to dwie małe kojki dla załogi. Zarządzamy tymi szczegółami indywidualnie.
 
@@ -562,11 +562,11 @@ Jeśli zarezerwowałeś skipera lub załogę za pośrednictwem **Boat4You** na s
 
 Możesz śmiało skontaktować się i przedstawić się w tym momencie. W wielu przypadkach to skipper skontaktuje się z Tobą jako pierwszy – może się przywitać, potwierdzić godziny przybycia i zapytać, czy masz wstępny plan podróży lub specjalne życzenia.
 
-**Spotkanie w Bazie**: W dniu rozpoczęcia czarteru skipper będzie czekał na jachcie lub spotka się z Tobą w biurze firmy czarterowej. Zazwyczaj będzie tam nieco wcześniej niż ustalona godzina wejścia na pokład. Po Twoim przybyciu rozpoznasz skipera (czasami możemy udostępnić zdjęcie). Pomoże on z bagażami i zaaklimatyzowaniem się.
+**Spotkanie w Bazie**: W dniu rozpoczęcia czarteru skipper będzie czekał na jachcie lub spotka się z Tobą w biurze firmy czarterowej. Zazwyczaj będzie tam nieco wcześniej niż ustalona godzina wejścia na pokład. Po przybyciu rozpoznasz skipera (czasami możemy udostępnić zdjęcie). Pomoże on z bagażami i zaaklimatyzowaniem się.
 
 **Podczas Rejsu**: Skipper jest z Tobą przez cały czas trwania czarteru (chyba że ustalono inaczej na kilka dni). Pozostanie na pokładzie, będzie zarządzał żeglugą i zasadniczo będzie Twoim pływającym przewodnikiem/kapitanem. Wszyscy nasi skipperzy mówią po angielsku (i często w innych językach), więc komunikacja powinna przebiegać sprawnie.
 
-**Preferencje Komunikacyjne**: Jeśli masz konkretne oczekiwania – np. „Chcemy bardzo spokojnego tempa, wielu przystanków na kąpiel” lub „Chcemy nauczyć się żeglować od Ciebie” – warto wcześnie poinformować o tym skipera. On może dostosować swój styl. Jeśli coś Ci nie odpowiada, kluczowa jest uprzejma komunikacja; ci skipperzy są zazwyczaj bardzo elastyczni.
+**Preferencje Komunikacyjne**: Jeśli masz konkretne oczekiwania – np. „Chcemy bardzo spokojnego tempa, wielu przystanków na kąpiel” lub „Chcemy nauczyć się żeglować od ciebie” – warto wcześnie poinformować o tym skipera. On może dostosować swój styl. Jeśli coś Ci nie odpowiada, kluczowa jest uprzejma komunikacja; ci skipperzy są zazwyczaj bardzo elastyczni.
 
 **W przypadku Jachtów z Pełną Załogą**: Jeśli masz całą załogę (skipper + kucharz/hostessa), proces jest często podobny. Czasami manager rezerwacji lub kapitan skontaktuje się z Tobą miesiąc wcześniej, przesyłając **arkusz preferencji dotyczących jedzenia i aktywności** (szczególnie w przypadku luksusowych czarterów). Możesz odbyć rozmowę telefoniczną lub wymianę e-maili z kucharzem na temat preferencji żywieniowych.
 

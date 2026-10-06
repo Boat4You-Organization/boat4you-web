@@ -2,7 +2,7 @@
 
 ## Welk type en formaat schip moet ik kiezen?
 
-Het kiezen van de juiste jacht hangt af van je groep en vakantiestijl. **Boat4You** biedt een reeks chartertypen – van bareboat en jachten met schipper tot luxe schepen met volledige bemanning – in diverse maten. Hier zijn enkele tips om je te helpen beslissen:
+Het kiezen van het juiste jacht hangt af van je groep en vakantiestijl. **Boat4You** biedt een reeks chartertypen – van bareboat en jachten met schipper tot luxe schepen met volledige bemanning – in diverse maten. Hier zijn enkele tips om je te helpen beslissen:
 
 **Zeiljachten (Monohulls)**: Ideaal voor liefhebbers van klassiek zeilen en kleinere groepen. Ze bieden een authentieke zeilervaring en zijn geweldig voor zowel gezinnen als avontuurlijke zeilers. Monohulls hellen onder wind, wat zorgt voor een opwindende rit voor degenen die van echt zeilen houden.
 
@@ -72,7 +72,7 @@ En onthoud: het aanvragen van een offerte of het stellen van vragen verplicht je
 
 Als je een soloreiziger bent of een stel dat zich bij anderen wil aansluiten, betekent dit dat je je eigen groep moet vormen voor een privé-charter. We begrijpen dat er in sommige bestemmingen hutcharter-opties zijn (bijvoorbeeld, sommige bedrijven organiseren cruises per hut of vloten), maar de focus van **Boat4You** ligt op volledig privé-ervaringen.
 
-Het voordeel is dat je de hele jacht voor jezelf hebt en volledige vrijheid om je reisplan aan te passen. Het nadeel is dat je voldoende mensen (of budget) moet hebben om het hele jacht te huren. Veel van onze klanten stellen een kleine groep vrienden of familie samen om de kosten en de ervaring te delen.
+Het voordeel is dat je het hele jacht voor jezelf hebt en volledige vrijheid om je reisplan aan te passen. Het nadeel is dat je voldoende mensen (of budget) moet hebben om het hele jacht te huren. Veel van onze klanten stellen een kleine groep vrienden of familie samen om de kosten en de ervaring te delen.
 
 Dat gezegd hebbende, als je geïnteresseerd bent in een hutcharter, laat het ons weten – we kunnen adviseren of er partneroperators of cruises zijn die aan je wensen voldoen. Anders kun je overwegen een paar gelijkgestemde vrienden uit te nodigen om deel te nemen aan je reis! We organiseren ook af en toe vloten (meerdere boten die samen zeilen), wat niet hetzelfde is als vreemden die één boot delen, maar het is een leuke manier voor kleinere groepen om samen te zeilen en anderen te ontmoeten, terwijl ze toch hun eigen boot behouden.
 
@@ -90,7 +90,7 @@ Echter, als je ervaring of kwalificaties mist, of simpelweg een meer ontspannen 
 
 Zelfs als je enige zeilervaring hebt, maar je onzeker voelt over bepaalde aspecten (misschien heb je nog nooit een jacht van 14 meter in een drukke jachthaven aangemeerd, of ben je onbekend met de lokale wateren), kun je toch een schipper inhuren voor gemoedsrust. Daar is niets beschamends aan – sterker nog, we raden vaak aan om een schipper in te huren voor ten minste de eerste dag of twee als je roestig bent of nieuw bent in het gebied. Je kunt altijd van hen leren en vervolgens later in de reis het roer overnemen, in feite een snelle opfriscursus aan het begin van je vakantie.
 
-**Wat doet een schipper?** Een schipper regelt de navigatie, het zeilen en het manoeuvreren van het jacht. Ze zijn ook een lokale expert, dus ze kunnen je naar de beste plekjes leiden (ze kennen die verborgen baaien en beste ankerplaatsen die niet in de reisgidsen staan). Deze lokale kennis kan je reis enorm verbeteren. Bovendien, met een schipper aan boord, wordt je charter erg ontspannend – geen stress over routes, weer of het parkeren van de boot, want de schipper regelt het allemaal. Jij en je vrienden/familie kunnen je concentreren op zwemmen, zonnebaden en genieten van de reis.
+**Wat doet een schipper?** Een schipper regelt de navigatie, het zeilen en het manoeuvreren van het jacht. Ze zijn ook een lokale expert, dus ze kunnen je naar de beste plekjes leiden (ze kennen die verborgen baaien en beste ankerplaatsen die niet in de reisgidsen staan). Deze lokale kennis kan je reis enorm verbeteren. Bovendien, met een schipper aan boord, wordt je charter erg ontspannend – geen stress over routes, weer of het parkeren van de boot, want de schipper regelt het allemaal. Zo kun jij je samen met je vrienden/familie concentreren op zwemmen, zonnebaden en genieten van de reis.
 
 **Samengevat**: Als je gekwalificeerd en zelfverzekerd bent, ben je welkom om het jacht zelf te besturen – dat is de essentie van een bareboat charter. Zo niet, of als je er simpelweg de voorkeur aan geeft om achterover te leunen, kun je via **Boat4You** een professionele schipper inhuren. Wij bieden vriendelijke, ervaren schippers die Engels spreken (en vaak andere talen) en een vergunning hebben voor het gebied. Het is volledig je keuze, en we ondersteunen beide opties. Het belangrijkste is veiligheid en plezier; wij helpen je beslissen op basis van je ervaringsniveau en comfort.
 
@@ -279,7 +279,7 @@ Wanneer je een volledig bemand jacht chartert onder **MYBA-voorwaarden** (Medite
 
 **Transparantie**: De bemanning is zeer gewend aan het beheren van APA; ze gebruiken het ethisch om je ervaring te verbeteren. Ze houden alles bij. Je hebt het recht om de rekeningen op elk moment tijdens de charter in te zien. Elke ongebruikte APA is van jou.
 
-Het klinkt misschien vreemd om te beginnen ("Ik heb al zoveel betaald voor het jacht, nu nog meer geld voor uitgaven?"), maar het zorgt eigenlijk voor eerlijkheid en flexibiliteit. Je betaalt alleen voor wat je verbruikt. Als je bescheiden smaken hebt, word je niet onnodig een vast hoog bedrag in rekening gebracht. Als je je uitleeft met kaviaar en tientallen havenbezoeken, dek je dat.
+Het klinkt misschien vreemd om te beginnen ("Ik heb al zoveel betaald voor het jacht, nu nog meer geld voor uitgaven?"), maar het zorgt eigenlijk voor eerlijkheid en flexibiliteit. Je betaalt alleen voor wat je verbruikt. Als je bescheiden smaken hebt, krijg je niet onnodig een vast hoog bedrag in rekening gebracht. Als je je uitleeft met kaviaar en tientallen havenbezoeken, dek je dat.
 
 **Opmerking**: APA is alleen voor charters met bemanning. Als je een bareboat- of schippercharter doet, voorzie je meestal zelf in je behoeften en betaal je ter plekke voor zaken als liggelden of brandstof (direct, niet via een APA).
 
@@ -430,7 +430,7 @@ Kinderen meenemen op een jacht kan een prachtig familieavontuur zijn! **Ja, het 
 
 **Wijs een Veilige Speelzone aan**: Meestal is de kuip de veiligste plek voor kleine kinderen – deze is afgesloten en heeft meestal schaduw van de bimini. Maak de regel dat kinderen niet op het voordek of de zijdekken mogen komen, tenzij onder begeleiding van een volwassene en met een reddingsvest aan. Vroege grenzen stellen helpt.
 
-**Nauwe Toezicht**: Op een boot beweegt de omgeving voortdurend en zijn er touwen, lieren, etc. Je zult dus beter moeten opletten dan op land. Eén volwassene moet altijd "op wacht" zijn bij de kinderen, vooral als ze jong zijn. Tijdens zeilmanoeuvres (overstag gaan, aanleggen) is het een goed idee om kinderen veilig in de kuip te laten zitten.
+**Nauw toezicht**: Op een boot beweegt de omgeving voortdurend en zijn er touwen, lieren, etc. Je zult dus beter moeten opletten dan op land. Eén volwassene moet altijd "op wacht" zijn bij de kinderen, vooral als ze jong zijn. Tijdens zeilmanoeuvres (overstag gaan, aanleggen) is het een goed idee om kinderen veilig in de kuip te laten zitten.
 
 **Veiligheid in de Hut**: Als je een baby of peuter hebt, kun je een reiswieg meenemen of vragen of het jacht over zeilbeschermers (doekbarrières) beschikt om een slaapplaats af te zetten. Vaak gebruiken ouders de voorhut voor kinderen (omdat deze afgesloten is) of laten ze hen in de salon slapen met enkele relingen op de bank.
 
@@ -562,7 +562,7 @@ Als je via **Boat4You** een schipper of bemanning hebt geboekt voor je charter, 
 
 Je bent absoluut welkom om contact op te nemen en jezelf voor te stellen op dat moment. In veel gevallen neemt de schipper eerst contact met jou op – ze kunnen hallo zeggen, de aankomsttijden bevestigen, en vragen of je al een globaal reisschema in gedachten hebt of speciale verzoeken hebt.
 
-**Ontmoeting op de Basis**: Op de startdag wacht de schipper je op bij de jacht of ontmoet je op kantoor van het charterbedrijf. Meestal zijn ze er iets eerder dan de afgesproken instaptijd. Zodra je arriveert, herken je hen (we kunnen soms een foto delen). Ze helpen je met de bagage en het installeren.
+**Ontmoeting op de Basis**: Op de startdag wacht de schipper je op bij het jacht of ontmoet je op kantoor van het charterbedrijf. Meestal zijn ze er iets eerder dan de afgesproken instaptijd. Zodra je arriveert, herken je hen (we kunnen soms een foto delen). Ze helpen je met de bagage en het installeren.
 
 **Tijdens de Reis**: De schipper is bij jou gedurende de hele charter (tenzij je de schipper slechts voor een paar dagen hebt geregeld). Ze blijven aan boord, beheren het zeilen, en zijn in feite je drijvende gids/kapitein. Al onze schippers spreken Engels (en vaak ook andere talen), dus de communicatie zou soepel moeten verlopen.
 
@@ -632,4 +632,4 @@ In Turkije is het bijvoorbeeld gebruikelijk; in Kroatië gebruiken ze de term so
 
 **Er is geen noodzaak om je zorgen te maken of iets ingewikkelds te doen** – het wordt grotendeels achter de schermen afgehandeld. Je betaalt gewoon de vergoeding (indien nog niet inbegrepen) en tekent waar nodig. We vermelden het hier zodat je niet in verwarring raakt wanneer je "transit log" op een factuur ziet of wanneer de basis je een documentenmap overhandigt.
 
-Zie het zo: Als een politieagent op het water je aanhoudt en zegt "Toon me je documenten", is de transit log wat je zou laten zien om te bewijzen dat de boot correct is gecharterd en je de bevoegde bemanning bent. Het is allemaal onderdeel van het stressvrij en volledig legaal maken van je vaarvakantie.
+Zie het zo: Als een politieagent op het water je aanhoudt en zegt "Toon me uw documenten", is de transit log wat je zou laten zien om te bewijzen dat de boot correct is gecharterd en je de bevoegde bemanning bent. Het is allemaal onderdeel van het stressvrij en volledig legaal maken van je vaarvakantie.
