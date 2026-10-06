@@ -27,7 +27,7 @@ const pomerKrk: ItineraryRoute = {
     },
     {
       src: '/images/itinerary/croatia/banners/losinj-banner.webp',
-      alt: 'Losinj',
+      alt: 'Lošinj',
     },
   ],
   routeDays: [

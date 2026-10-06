@@ -101,7 +101,7 @@ const dubrovnikKorculaHvarVisLastovo14dayRoute: ItineraryRoute = {
       ],
       mooringTip:
         'ACI Marina Korčula on the eastern side is the all-weather option — lazy lines, water, power, full services. Town quay on the western side accepts stern-to with own anchor but is exposed to W Maestral; rolly after 14:00. Lumbarda Bay 3 nm southeast is the sheltered alternative.',
-      gallery: [{ src: '/images/itinerary/croatia/destinations/korcula.webp', alt: 'Korcula' }],
+      gallery: [{ src: '/images/itinerary/croatia/destinations/korcula.webp', alt: 'Korčula' }],
     },
     {
       id: 'korcula-scedro',
@@ -173,7 +173,7 @@ const dubrovnikKorculaHvarVisLastovo14dayRoute: ItineraryRoute = {
       ],
       mooringTip:
         'Stern-to with own anchor on the inner basin of Komiža town quay — sand and weed, mostly good holding, harbour fee. Outer wall is exposed to SW swell and not safe overnight. If SW gradient is forecast above 15 kn, push 6 nm back to Vis Town in St. George Bay.',
-      gallery: [{ src: '/images/itinerary/croatia/destinations/komiza.webp', alt: 'Komiza' }],
+      gallery: [{ src: '/images/itinerary/croatia/destinations/komiza.webp', alt: 'Komiža' }],
     },
     {
       id: 'komiza-bisevo-stari-grad',

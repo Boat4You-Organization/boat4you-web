@@ -27,7 +27,7 @@ const kastelaVisKorculaHvarRoute: ItineraryRoute = {
     },
     {
       src: '/images/itinerary/croatia/banners/primosten-marina-banner.webp',
-      alt: 'Primosten marina',
+      alt: 'Primošten marina',
     },
   ],
   routeDays: [
@@ -77,7 +77,7 @@ const kastelaVisKorculaHvarRoute: ItineraryRoute = {
       ],
       mooringTip:
         'Stern-to with own anchor on the inner basin of Komiža town quay — sand and weed, mostly good holding, harbour fee. Outer wall is exposed to SW swell and not safe overnight. If SW gradient is forecast above 15 kn, push 6 nm north to Vis Town in St. George Bay, which is fully sheltered.',
-      gallery: [{ src: '/images/itinerary/croatia/destinations/komiza.webp', alt: 'Komiza' }],
+      gallery: [{ src: '/images/itinerary/croatia/destinations/komiza.webp', alt: 'Komiža' }],
     },
     {
       id: 'komiza-blue-cave-bisevo-vela-luka-korcula',
@@ -106,7 +106,7 @@ const kastelaVisKorculaHvarRoute: ItineraryRoute = {
     {
       id: 'vela-luka-hvar-palmizana',
       routeFrom: 'Vela Luka',
-      routeTo: 'Hvar (Palmizana)',
+      routeTo: 'Hvar (Palmižana)',
       day: 4,
       mapPin: {
         desktop: { left: 38.4, top: 51.8 },
@@ -125,7 +125,7 @@ const kastelaVisKorculaHvarRoute: ItineraryRoute = {
       ],
       mooringTip:
         'ACI Marina Palmižana stern-to with lazy lines, online booking essential for July–August. If full, anchor in Vinogradišće cove (south side, sand and weed, line ashore standard) — better protection from afternoon W Maestral. Avoid the main Palmižana bay overnight when SW gradient builds.',
-      gallery: [{ src: '/images/itinerary/croatia/destinations/palmizana.webp', alt: 'Palmizana' }],
+      gallery: [{ src: '/images/itinerary/croatia/destinations/palmizana.webp', alt: 'Palmižana' }],
     },
     {
       id: 'hvar-stari-grad',
@@ -197,7 +197,7 @@ const kastelaVisKorculaHvarRoute: ItineraryRoute = {
       ],
       mooringTip:
         'Return into Marina Kaštela per your charter contract — base manager directs the slot. Saturday handover window 08:00–09:00; arrive by 17:00 Friday if your contract specifies night-before return. Fuel pontoon is on the western entrance side of the marina.',
-      gallery: [{ src: '/images/itinerary/croatia/destinations/kastela.webp', alt: 'Kastela' }],
+      gallery: [{ src: '/images/itinerary/croatia/destinations/kastela.webp', alt: 'Kaštela' }],
     },
   ],
   map: {

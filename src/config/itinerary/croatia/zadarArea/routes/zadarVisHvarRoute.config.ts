@@ -74,7 +74,7 @@ const zadarVisHvarRoute: ItineraryRoute = {
       ],
       mooringTip:
         'Marina Kremik (1.5 nm south) is the standard berth — pre-book in summer. Anchor in nearby Garma cove on sand at 5-7 m.',
-      gallery: [{ src: '/images/itinerary/croatia/destinations/primosten.webp', alt: 'Primosten' }],
+      gallery: [{ src: '/images/itinerary/croatia/destinations/primosten.webp', alt: 'Primošten' }],
     },
     {
       id: 'primosten-komiza',
@@ -97,7 +97,7 @@ const zadarVisHvarRoute: ItineraryRoute = {
       ],
       mooringTip:
         'Komiža harbour quay is short-stay only; pre-book ACI Marina Vis (other side of the island) for a safer overnight.',
-      gallery: [{ src: '/images/itinerary/croatia/destinations/komiza.webp', alt: 'Komiza' }],
+      gallery: [{ src: '/images/itinerary/croatia/destinations/komiza.webp', alt: 'Komiža' }],
     },
     {
       id: 'komiza-hvar-town',

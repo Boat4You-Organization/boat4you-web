@@ -16,7 +16,7 @@ const punat14DaysRoute: ItineraryRoute = {
     { src: '/images/itinerary/croatia/banners/kornati-banner-large.webp', alt: 'Kornati' },
     { src: '/images/itinerary/croatia/banners/rovinj-banner-large.webp', alt: 'Rovinj' },
     { src: '/images/itinerary/croatia/banners/krk-banner.webp', alt: 'Krk' },
-    { src: '/images/itinerary/croatia/banners/losinj-banner.webp', alt: 'Losinj' },
+    { src: '/images/itinerary/croatia/banners/losinj-banner.webp', alt: 'Lošinj' },
   ],
   routeDays: [
     {

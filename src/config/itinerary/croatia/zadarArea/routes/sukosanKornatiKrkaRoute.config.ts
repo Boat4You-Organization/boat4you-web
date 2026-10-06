@@ -2,9 +2,9 @@ import { computeItineraryNumberOfDays } from '@/helper/itineraryDaysHelper';
 import { ItineraryRoute } from '@/types/itinerary.type';
 
 const sukosanKornatiKrkaRoute: ItineraryRoute = {
-  metaTitle: '7-Day Sukosan–Kornati & Krka Yacht Charter Route | Croatia Sailing',
+  metaTitle: '7-Day Sukošan–Kornati & Krka Yacht Charter Route | Croatia Sailing',
   metaDesc:
-    'Sail a 7-day yacht charter from Sukosan through Kornati Islands and Krka National Park. Explore Telaščica, hidden bays, waterfalls & Adriatic island serenity.',
+    'Sail a 7-day yacht charter from Sukošan through Kornati Islands and Krka National Park. Explore Telaščica, hidden bays, waterfalls & Adriatic island serenity.',
   id: 'sukosan-kornati-krka-route',
   startingPoint: 'Sukošan',
   otherPoints: ['Kornati', 'Krka'],
@@ -24,13 +24,13 @@ const sukosanKornatiKrkaRoute: ItineraryRoute = {
     },
     {
       src: '/images/itinerary/croatia/banners/primosten-marina-banner.webp',
-      alt: 'Primosten marina',
+      alt: 'Primošten marina',
     },
   ],
   routeDays: [
     {
       id: 'sukosan-ugljan-bozava-bay-dugi-otok',
-      routeFrom: 'Sukosan',
+      routeFrom: 'Sukošan',
       routeTo: 'Božava Bay (Dugi Otok)',
       day: 1,
       mapPin: {
@@ -38,7 +38,7 @@ const sukosanKornatiKrkaRoute: ItineraryRoute = {
         mobile: { left: 21.1, top: 30.5 },
       },
       description:
-        'Starting at Sukosan\'s slumbering port, fishing boats swing like old friends sharing secrets. Sail by Ugljan, the "Green Island," its sloping olive groves and fig tree covered ground. Arriving in Božava Bay, the hidden gem of Dugi Otok, find crescent of pebbles and emerald reflections created by trees cradling cliffs. After diving into water so pure it feels like swimming in liquid sky, savor lignje na gradele ( barbecued squid) at a seashore taverna, the air scented with Dalmatian sage and the promise of adventure.',
+        'Starting at Sukošan\'s slumbering port, fishing boats swing like old friends sharing secrets. Sail by Ugljan, the "Green Island," its sloping olive groves and fig tree covered ground. Arriving in Božava Bay, the hidden gem of Dugi Otok, find crescent of pebbles and emerald reflections created by trees cradling cliffs. After diving into water so pure it feels like swimming in liquid sky, savor lignje na gradele ( barbecued squid) at a seashore taverna, the air scented with Dalmatian sage and the promise of adventure.',
       shortDescription:
         "Long 25 nm out of Sukošan, threading past Ugljan and around Dugi Otok's northwest tip into Božava — the headline northern-shore village. Sakarun Bay (1 nm to the west) has the only Caribbean-style white-sand beach in the Zadar archipelago.",
       thingsToDo: [
@@ -166,14 +166,14 @@ const sukosanKornatiKrkaRoute: ItineraryRoute = {
     {
       id: 'vrgada-sukosan',
       routeFrom: 'Vrgada',
-      routeTo: 'Sukosan',
+      routeTo: 'Sukošan',
       day: 7,
       mapPin: {
         desktop: { left: 36.1, top: 36.7 },
         mobile: { left: 36.1, top: 36.7 },
       },
       description:
-        'Sail homeward, stopping to dive in Molat\'s "Moon Craters," underwater karst gardens alive. Go back to Sukosan where the lights of the marina sparkle like ground-based fireflies. Under an indigo sky, toast your journey with crni rižot (black risotto), the murmurs of the Adriatic echoing: You are always part of the story of this sea.',
+        'Sail homeward, stopping to dive in Molat\'s "Moon Craters," underwater karst gardens alive. Go back to Sukošan where the lights of the marina sparkle like ground-based fireflies. Under an indigo sky, toast your journey with crni rižot (black risotto), the murmurs of the Adriatic echoing: You are always part of the story of this sea.',
       shortDescription:
         'Final 16 nm leg up the Pašman channel back into Sukošan and Marina Dalmacija — the largest marina in Croatia by berth count and the most efficient handover base on the upper Adriatic.',
       thingsToDo: [
@@ -190,7 +190,7 @@ const sukosanKornatiKrkaRoute: ItineraryRoute = {
     desktop: {
       image: {
         src: '/images/itinerary/croatia/zadar-itinerary/map.webp',
-        alt: 'Sukosan Route Image',
+        alt: 'Sukošan Route Image',
       },
       width: 1350,
       height: 1111,
@@ -198,7 +198,7 @@ const sukosanKornatiKrkaRoute: ItineraryRoute = {
     mobile: {
       image: {
         src: '/images/itinerary/croatia/zadar-itinerary/mobile-map.webp',
-        alt: 'Sukosan Route Image',
+        alt: 'Sukošan Route Image',
       },
       width: 868,
       height: 1228,

@@ -19,7 +19,7 @@ const splitDubrovnikSplitRoute: ItineraryRoute = {
     },
     {
       src: '/images/itinerary/croatia/banners/korcula-banner-large.webp',
-      alt: 'Korcula',
+      alt: 'Korčula',
     },
     {
       src: '/images/itinerary/croatia/banners/dubrovnik-banner.webp',
@@ -77,7 +77,7 @@ const splitDubrovnikSplitRoute: ItineraryRoute = {
       ],
       mooringTip:
         'ACI Marina Palmižana stern-to with lazy lines, must be booked online for July–August. If full, anchor in Vinogradišće cove (south side, sand/weed, line ashore standard) — better protection from afternoon W. Avoid the main Palmižana bay overnight when SW gradient builds.',
-      gallery: [{ src: '/images/itinerary/croatia/destinations/palmizana.webp', alt: 'Palmizana' }],
+      gallery: [{ src: '/images/itinerary/croatia/destinations/palmizana.webp', alt: 'Palmižana' }],
     },
     {
       id: 'palmizana-hvar-town',
@@ -125,7 +125,7 @@ const splitDubrovnikSplitRoute: ItineraryRoute = {
       ],
       mooringTip:
         'Stern-to with own anchor on the inner basin of Komiža town quay — sand and weed, mostly good holding, harbour fee. Outer wall is exposed to SW swell and unsuitable overnight. If SW or W gradient is forecast above 15 kn, push north 6 nm to Vis Town in St. George Bay, which is fully sheltered.',
-      gallery: [{ src: '/images/itinerary/croatia/destinations/komiza.webp', alt: 'Komiza' }],
+      gallery: [{ src: '/images/itinerary/croatia/destinations/komiza.webp', alt: 'Komiža' }],
     },
     {
       id: 'komiza-blue-cave-bisevo-green-cave-ravnik-vela-luka-korcula',
@@ -269,7 +269,7 @@ const splitDubrovnikSplitRoute: ItineraryRoute = {
       ],
       mooringTip:
         'ACI Marina Korčula on the eastern side is the all-weather option — lazy lines, water, power, full services. Town quay on the western side accepts stern-to with own anchor but is exposed to W Maestral; rolly after 14:00 in summer. If the channel turns rough, the sheltered alternative is Lumbarda Bay 3 nm southeast.',
-      gallery: [{ src: '/images/itinerary/croatia/destinations/korcula.webp', alt: 'Korcula' }],
+      gallery: [{ src: '/images/itinerary/croatia/destinations/korcula.webp', alt: 'Korčula' }],
     },
     {
       id: 'korcula-jelsa-hvar',

@@ -24,7 +24,7 @@ const biogradKornatiHvarKorculaVisSkradin14DaysRoute: ItineraryRoute = {
     },
     {
       src: '/images/itinerary/croatia/banners/primosten-marina-banner.webp',
-      alt: 'Primosten marina',
+      alt: 'Primošten marina',
     },
   ],
   routeDays: [
@@ -114,7 +114,7 @@ const biogradKornatiHvarKorculaVisSkradin14DaysRoute: ItineraryRoute = {
         'Dinner at Konoba Mediteran',
       ],
       mooringTip: 'Marina Kremik (1.5 nm south) is the standard berth — pre-book in summer.',
-      gallery: [{ src: '/images/itinerary/croatia/destinations/primosten.webp', alt: 'Primosten' }],
+      gallery: [{ src: '/images/itinerary/croatia/destinations/primosten.webp', alt: 'Primošten' }],
     },
     {
       id: 'primosten-trogir',
@@ -181,7 +181,7 @@ const biogradKornatiHvarKorculaVisSkradin14DaysRoute: ItineraryRoute = {
       ],
       mooringTip:
         'ACI Marina Korčula is small — pre-book. Exposed in sirocco — re-anchor or shift to a leeward bay if forecast peaks above 25 kn. Alternative: nearest sheltered marina if conditions deteriorate overnight.',
-      gallery: [{ src: '/images/itinerary/croatia/destinations/korcula.webp', alt: 'Korcula' }],
+      gallery: [{ src: '/images/itinerary/croatia/destinations/korcula.webp', alt: 'Korčula' }],
     },
     {
       id: 'korcula-skrivena-luka-lastovo',
@@ -230,7 +230,7 @@ const biogradKornatiHvarKorculaVisSkradin14DaysRoute: ItineraryRoute = {
         'Tour the Vis Fishing Museum',
       ],
       mooringTip: 'Komiža harbour is short-stay only; pre-book ACI Marina Vis (other side of the island).',
-      gallery: [{ src: '/images/itinerary/croatia/destinations/komiza.webp', alt: 'Komiza' }],
+      gallery: [{ src: '/images/itinerary/croatia/destinations/komiza.webp', alt: 'Komiža' }],
     },
     {
       id: 'komiza-zlarin',

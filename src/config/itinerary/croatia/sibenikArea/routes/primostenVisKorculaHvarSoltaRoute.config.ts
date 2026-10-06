@@ -15,7 +15,7 @@ const primostenVisKorculaHvarSoltaRoute: ItineraryRoute = {
   gallery: [
     { src: '/images/itinerary/croatia/banners/hvar-banner-large.webp', alt: 'Hvar' },
     { src: '/images/itinerary/croatia/banners/golden-horn-brac-banner-large.webp', alt: 'Golden horn brac' },
-    { src: '/images/itinerary/croatia/banners/korcula-banner.webp', alt: 'Korcula' },
+    { src: '/images/itinerary/croatia/banners/korcula-banner.webp', alt: 'Korčula' },
     { src: '/images/itinerary/croatia/banners/stiniva-bay-banner.webp', alt: 'Stiniva bay' },
   ],
   routeDays: [
@@ -59,7 +59,7 @@ const primostenVisKorculaHvarSoltaRoute: ItineraryRoute = {
       ],
       mooringTip:
         'Stern-to with own anchor on the inner basin of Komiža town quay. Outer wall is exposed to SW swell. If SW gradient above 15 kn, push 6 nm north to Vis Town in St. George Bay.',
-      gallery: [{ src: '/images/itinerary/croatia/destinations/komiza.webp', alt: 'Komiza' }],
+      gallery: [{ src: '/images/itinerary/croatia/destinations/komiza.webp', alt: 'Komiža' }],
     },
     {
       id: 'komiza-blue-cave-bisevo-budihovac-vis-town',
@@ -164,14 +164,14 @@ const primostenVisKorculaHvarSoltaRoute: ItineraryRoute = {
       ],
       mooringTip:
         'Return into ACI Marina Kremik per your charter contract — base manager directs the slot. Saturday handover window 08:00–09:00; arrive by 17:00 Friday if your contract specifies night-before return.',
-      gallery: [{ src: '/images/itinerary/croatia/destinations/primosten.webp', alt: 'Primosten' }],
+      gallery: [{ src: '/images/itinerary/croatia/destinations/primosten.webp', alt: 'Primošten' }],
     },
   ],
   map: {
     desktop: {
       image: {
         src: '/images/itinerary/croatia/split-dubrovnik-itinerary/map.webp',
-        alt: 'Primošten – Vis – Korcula – Hvar – Šolta Route Image',
+        alt: 'Primošten – Vis – Korčula – Hvar – Šolta Route Image',
       },
       width: 2422,
       height: 1550,
@@ -179,7 +179,7 @@ const primostenVisKorculaHvarSoltaRoute: ItineraryRoute = {
     mobile: {
       image: {
         src: '/images/itinerary/croatia/split-dubrovnik-itinerary/mobile-map.webp',
-        alt: 'Primošten – Vis – Korcula – Hvar – Šolta Route Image',
+        alt: 'Primošten – Vis – Korčula – Hvar – Šolta Route Image',
       },
       width: 1144,
       height: 1354,

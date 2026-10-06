@@ -16,7 +16,7 @@ const primostenNpKornatiRoute: ItineraryRoute = {
     { src: '/images/itinerary/croatia/banners/kornati-banner-large.webp', alt: 'Kornati' },
     { src: '/images/itinerary/croatia/banners/national-park-kornati-banner-large.webp', alt: 'National park Kornati' },
     { src: '/images/itinerary/croatia/banners/skradin-marina-banner.webp', alt: 'Skradin marina' },
-    { src: '/images/itinerary/croatia/banners/primosten-marina-banner.webp', alt: 'Primosten marina' },
+    { src: '/images/itinerary/croatia/banners/primosten-marina-banner.webp', alt: 'Primošten marina' },
   ],
   routeDays: [
     {
@@ -164,7 +164,7 @@ const primostenNpKornatiRoute: ItineraryRoute = {
       ],
       mooringTip:
         'Return into ACI Marina Kremik per your charter contract — base manager directs the slot. Saturday handover window 08:00–09:00; arrive by 17:00 Friday if your contract specifies night-before return.',
-      gallery: [{ src: '/images/itinerary/croatia/destinations/primosten.webp', alt: 'Primosten' }],
+      gallery: [{ src: '/images/itinerary/croatia/destinations/primosten.webp', alt: 'Primošten' }],
     },
   ],
   map: {
