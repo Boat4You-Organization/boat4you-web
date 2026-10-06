@@ -82,7 +82,7 @@ Mario (6.10.): kapacitet i raspored broda 100 % kao u MMK-u (Booking Manager) i 
 
 **Rollback:** `git revert c0071d987 6cc0d6e4e 2183ac26f` + redeploy (`b4y_web_deploy.sh`). Brzo: rollback naredba koju ispiše deploy (`.next.prev` + `next.config.js.prev` + `messages.prev` + `src/posts.prev`).
 
-## 2026-10-06 — 🪪 Dozvole za voditelja u SEO korpusu, 9 jezika (EN + 8 prijevoda + review) — ⏳ NIJE DEPLOYANO
+## 2026-10-06 — 🪪 Dozvole za voditelja u SEO korpusu, 9 jezika (EN + 8 prijevoda + review) — ✅ DEPLOYANO 6.10.2026
 
 Codexov re-audit (2.10.): korpus je tvrdio da za bareboat vrijede „International Yacht Certificate (IYC)", ISAF, iskustvo, logbook, preporuke ili tečaj umjesto dozvole, da motorni brodovi ne trebaju dozvolu („ispod 5 m / 15 KS", „ispod 7 m", „ispod 12 m za građane EU") i da Boat4You prima, traži ili provjerava dokumente. Samo tekst: `public/seo-content` (SSR na svakom `/search` landingu) i QA skripte; nema promjene koda, builda ni messages.
 
@@ -117,7 +117,7 @@ Codexov re-audit (2.10.): korpus je tvrdio da za bareboat vrijede „Internation
 
 **Rollback:** `git revert bd94d0ea6 706861ea0 9669a41b6 0633be3ee 611eeb84a fd589ec1f 75ee942c1 dc4b3edee d3a42a6ba 8859e3d2a 31a6c7c8b` + redeploy (`b4y_web_deploy.sh`). Brza rollback naredba deploya (`.next.prev` + `messages.prev` + `src/posts.prev`) ne vraća `public/seo-content`; on se vraća revertom i redeployem.
 
-## 2026-10-06 — 🛥️ Re-audit 2.10. (stranica broda, cijene, kartice) + review; deploy skripta šalje točno HEAD i `src/posts/` — ⏳ NIJE DEPLOYANO
+## 2026-10-06 — 🛥️ Re-audit 2.10. (stranica broda, cijene, kartice) + review; deploy skripta šalje točno HEAD i `src/posts/` — ✅ DEPLOYANO 6.10.2026
 
 Popravci nalaza Codexova re-audita (2.10.) i nezavisni adversarial review tih commita (6.10.). U istom deployu ide i `31a6c7c8b` (sadržaj, licence u EN korpusu) — nije dio ovog unosa.
 
@@ -174,7 +174,7 @@ Popravci nalaza Codexova re-audita (2.10.) i nezavisni adversarial review tih co
 
 **Rollback:** `git revert 75ee78721 ee5de6705 768add073 a45d1dc40 247821a27 a28673f35 f5c66fb92 273c0a620 1c94e2404 cee3cf183 e8f84e2b2` + redeploy (`b4y_web_deploy.sh`). Brzo: rollback naredba koju ispiše deploy (`.next.prev` + `messages.prev` + `src/posts.prev`). Skripte: `cp *.bak-6-10-review` preko izvornih (samo guardovi) ili `*.bak-6-10` (i bez `src/posts/`).
 
-## 2026-10-02 — 🔎 Review sadržaja (2. prolaz): još ~150 krivih smjerova, naknade NP-a, „osiguranje pokriva vrijeme", UNESCO, rupe brenda; strože `check-corpus-holes` — ⏳ NIJE DEPLOYANO
+## 2026-10-02 — 🔎 Review sadržaja (2. prolaz): još ~150 krivih smjerova, naknade NP-a, „osiguranje pokriva vrijeme", UNESCO, rupe brenda; strože `check-corpus-holes` — ✅ DEPLOYANO (live najkasnije 6.10.2026)
 
 Nastavak unosa ispod. Samo tekst: `public/seo-content` (1.397 datoteka, 9 jezika), `messages/*/itineraryCroatia.json` (9 jezika), 4 configa (EN izvor) + `scripts/check-corpus-holes.mjs`. Smjerovi provjereni koordinatama (gazeter ~120 mjesta), naknade prema cjenicima NP Mljet 2026, NP Kornati 2026, Cabrera i La Maddalena.
 
@@ -187,7 +187,7 @@ Nastavak unosa ispod. Samo tekst: `public/seo-content` (1.397 datoteka, 9 jezika
 - Za Marija (nedirano): Polače „€40/noć s ulazom u park" (~60 rečenica), „Boat4You handles/arranges insurance" (~160 EN), cijene skippera/hostese, preostali smjerovi u dugim tekstovima (npr. „talijanska obala Istre", Lošinj → Italija „35–50 nm sjeverno").
 - Provjere: `seo-corpus-qa.py --check` 0 nalaza, `check-corpus-holes` OK (12.789 datoteka), JSON valjan, prettier.
 
-## 2026-10-02 — 🧭 Sadržaj: lažni UNESCO, nemogući smjerovi i vremena, „osiguranje pokriva vrijeme", neprovjerene naknade (Kornati, Skradin, most „49 m"), rupe brenda „'s" — ⏳ NIJE DEPLOYANO
+## 2026-10-02 — 🧭 Sadržaj: lažni UNESCO, nemogući smjerovi i vremena, „osiguranje pokriva vrijeme", neprovjerene naknade (Kornati, Skradin, most „49 m"), rupe brenda „'s" — ✅ DEPLOYANO (live najkasnije 6.10.2026)
 
 Samo tekst: `public/seo-content` (1.435 datoteka, 9 jezika), `messages/*/itineraryCroatia.json` (9 jezika), `src/config/itinerary/**` (EN izvor, 14 datoteka) + `scripts/check-corpus-holes.mjs` (nova provjera `brand-s`). Ide u istom deployu.
 
@@ -202,7 +202,7 @@ Izvori: whc.unesco.org (popis svjetske baštine i tentativne liste), Pravilnik o
 - Uočeno, nedirano (izvan opsega): „€20–50/dan" za NP (croatia-motorboat), Mandalina „12–18 nm po litri", Kreta (položaj Kalivianija), „equidistant" (luxury Croatia), Gouvia „we handle … comprehensive insurance", Zadar Borik „damage waiver insurance included", Grenada „10–15 % premium", Halki „UNESCO programme", Pioppi „UNESCO rodno mjesto mediteranske prehrane", Ibiza „UNESCO zabranjuje sidrenje".
 - Provjere: `seo-corpus-qa.py --check` 0 izmjena i 0 nalaza, `check-corpus-holes` OK (12.789), JSON valjan, prettier, eslint (pre-commit).
 
-## 2026-10-02 — 🧭 Sadržaj, review `8338ed40`: Skradin „okružen parkom", jahtom „do slapova", 8 čv na Krki, „nudimo osiguranje otkaza" u korpusu — ⏳ NIJE DEPLOYANO
+## 2026-10-02 — 🧭 Sadržaj, review `8338ed40`: Skradin „okružen parkom", jahtom „do slapova", 8 čv na Krki, „nudimo osiguranje otkaza" u korpusu — ✅ DEPLOYANO (live najkasnije 6.10.2026)
 
 Nezavisni review commita `8338ed40`. Samo tekst: `public/seo-content` (25 rečenica × 9 jezika, 207 datoteka), `messages/*/itineraryCroatia.json` (9 jezika), `src/config/itinerary/croatia/IstriaArea/routes/pomer14DaysRoute.config.ts`. Ide u istom deployu.
 
@@ -216,7 +216,7 @@ Izvori: npkrka.hr (Skradinski most je granica parka i jedini vodeni ulaz, kanjon
 - Uočeno, nedirano (izvan opsega): oko 25 stranica s tvrdnjom „osiguranje pokriva kašnjenja ili promjene zbog vremena" (npr. Salerno, d'Arechi, Marmaris, Pollença); vrijeme plovidbe Vodice – Skradin „< 30 min" i Vodice „Krka 12 nm sjeverno, 30 min" (uz 8 čv nemoguće); most kod Šibenika „49 m" visine (sea-help.eu: najmanje 27 m), neprovjereno; „jedrenje zabranjeno iznad ušća" (u Pravilniku smo našli zabranu jedrenja samo za kanal sv. Ante, za ušće Krke 8 čv); UNESCO Betina, Šibenik „UNESCO zidine" i „UNESCO grad"; oko 137 rečenica koje počinju s „'s".
 - Provjere: `seo-corpus-qa.py --check` 0 nalaza, `check-corpus-holes` OK (12.789), JSON valjan.
 
-## 2026-10-02 — 🧭 Sadržaj: Krka/Skradin (gaz, ušće, UNESCO, ulaznica), UNESCO Kornati/Telašćica/Biograd, „osiguranje otkaza pri checkoutu", Dénia — ⏳ NIJE DEPLOYANO
+## 2026-10-02 — 🧭 Sadržaj: Krka/Skradin (gaz, ušće, UNESCO, ulaznica), UNESCO Kornati/Telašćica/Biograd, „osiguranje otkaza pri checkoutu", Dénia — ✅ DEPLOYANO (live najkasnije 6.10.2026)
 
 Ostaci reviewa `5352b36b`. Samo tekst: `public/seo-content` (37 stranica × 9 jezika), `messages/*/home.json` i `messages/*/itineraryCroatia.json` (9 jezika), `src/config/itinerary/croatia/**` (EN izvor). Ide u istom deployu.
 
@@ -233,7 +233,7 @@ Izvori: npkrka.hr (cjenik 2026: 7 / 20 / 40 € po odrasloj osobi ovisno o sezon
 - Uočeno, nedirano (izvan opsega): vez u Skradinu „15–25 €/noć" i „Marina Skradin 120 bova"; Betina „UNESCO"; Zadar „UNESCO katedrala" (Sukošan); Kornati „istočno od Šibenika"; proturječja o sidrenju u Prokljanu.
 - Provjere: `seo-corpus-qa.py --check` 0 nalaza i 0 izmjena, `check-corpus-holes` OK (12.789), JSON valjan, eslint (pre-commit).
 
-## 2026-10-01 — 🧭 Sadržaj, review Krka + 72 h: dorade korpusa (9 jezika) — ⏳ NIJE DEPLOYANO
+## 2026-10-01 — 🧭 Sadržaj, review Krka + 72 h: dorade korpusa (9 jezika) — ✅ DEPLOYANO (live najkasnije 6.10.2026)
 
 Nezavisni review commita `8d9ddef4`. Samo `public/seo-content`, ide u istom deployu.
 
@@ -243,7 +243,7 @@ Nezavisni review commita `8d9ddef4`. Samo `public/seo-content`, ide u istom depl
 - **Marina Zaton HR** (pre-existing tipfeleri): „Pluleći" → „Ploveći", „Smještena ušće" → „Smještena na ušću".
 - Provjere: `seo-corpus-qa.py --check` 0 nalaza, `check-corpus-holes` OK (12.789).
 
-## 2026-10-01 — 🔁 Review nadogradnje na Next.js 16.3.8: `optimisticRouting` off, deploy tail (memorija, nohup, watchdog, deployment id, rollback) — ⏳ NIJE DEPLOYANO (commit `668e2c7c`)
+## 2026-10-01 — 🔁 Review nadogradnje na Next.js 16.3.8: `optimisticRouting` off, deploy tail (memorija, nohup, watchdog, deployment id, rollback) — ✅ DEPLOYANO (live najkasnije 6.10.2026) (commit `668e2c7c`)
 
 Review nadogradnje `138ede62` (1.10. navečer). Ide u istom deployu kao nadogradnja.
 
@@ -332,7 +332,7 @@ U Chromeu provjeriti soft navigaciju (klik na promo banner), server akcije kalen
 
 - **Nakon 48 h promatranja** obrisati `/home/cusma1/nextapp/node_modules.prev` (~1 GB, kao cusma1).
 
-## 2026-10-01 — 🧭 Sadržaj: Krka (kupanje zabranjeno od 2021.) + povrat novca = pravilo 72 h — ⏳ NIJE DEPLOYANO
+## 2026-10-01 — 🧭 Sadržaj: Krka (kupanje zabranjeno od 2021.) + povrat novca = pravilo 72 h — ✅ DEPLOYANO (live najkasnije 6.10.2026)
 
 Samo tekst, bez koda. Izvor za Krku: npkrka.hr (kupanje samo na Roškom slapu, Stinicama i Pisku 1.6.–30.9.; uzvodno od Skradinskog mosta voze samo brodovi parka; ulaznica uključuje brod Skradin → Skradinski buk; staza 3,4 km). Izvor za povrat: Uvjeti §7.1 (72 h od rezervacije, puni povrat; nakon toga uvjeti operatera prikazani prije plaćanja).
 
@@ -343,7 +343,7 @@ Samo tekst, bez koda. Izvor za Krku: npkrka.hr (kupanje samo na Roškom slapu, S
 - Provjere: `scripts/seo-corpus-qa.py --check` 0 nalaza, `check-corpus-holes` OK.
 - Deploy: standardni b4y (novi `.next` + `messages` + `public`).
 
-## 2026-10-01 — 🔒 Next.js 16.1.1 → 16.3.8 (sigurnosno izdanje 30.9.) + deploy sada mijenja i `node_modules` na cusma1 — ⏳ NIJE DEPLOYANO (commit `138ede62`)
+## 2026-10-01 — 🔒 Next.js 16.1.1 → 16.3.8 (sigurnosno izdanje 30.9.) + deploy sada mijenja i `node_modules` na cusma1 — ✅ DEPLOYANO (live najkasnije 6.10.2026) (commit `138ede62`)
 
 Codex audit F3 (`codexverify/next.md`). Na 16.1.1 je b4y imao objavljene DoS ranjivosti u Server Components i Server Actions (visoko), zaobilaženje proxyja, request smuggling u rewriteovima i trovanje ISR cachea kod `[locale]/[...rest]`. Zakrpa postoji samo u 16.3.8; zakrpanih 16.1.x ni 16.2.x nema. Samo lokalno, nije pushano.
 
@@ -403,7 +403,7 @@ Codex audit F3 (`codexverify/next.md`). Na 16.1.1 je b4y imao objavljene DoS ran
 
 **Deploy, provjera i rollback:** zamijenjeno unosom „Review nadogradnje na Next.js 16.3.8" iznad (tail s guardovima za memoriju i deployment id, `nohup`, watchdog i robusnim rollbackom).
 
-## 2026-10-01 — 🔍 Review vala 2: FR PDF brojevi, web-vitals samo u GA4, `<lastmod>` iz `updatedAt`, korpus bez lažnih usluga i rupa — ⏳ NIJE DEPLOYANO (commit `da26d56f`, nadograđuje `73c4afaf`)
+## 2026-10-01 — 🔍 Review vala 2: FR PDF brojevi, web-vitals samo u GA4, `<lastmod>` iz `updatedAt`, korpus bez lažnih usluga i rupa — ✅ DEPLOYANO (live najkasnije 6.10.2026) (commit `da26d56f`, nadograđuje `73c4afaf`)
 
 Adversarijalni review vala 2 (`73c4afaf` / `1e52b4c4`). Samo lokalno, nije pushano.
 
@@ -423,7 +423,7 @@ Adversarijalni review vala 2 (`73c4afaf` / `1e52b4c4`). Samo lokalno, nije pusha
 
 **Deploy:** standardni b4y (`reference_boat4you_web_manual_deploy`). Korpus je u `public/`, pa ide s buildom. `<lastmod>` se pojavi tek nakon backend jara i prvog yacht synca.
 
-## 2026-10-01 — ✍️ SEO korpus: vraćen „Boat4You" u rečenice (N5) · 🔗 `_gl` sa 6 sistera (N6) · 📈 INP/LCP/CLS u GA4 (E5) · 🧾 PDF brojevi po jeziku (B29) — ⏳ NIJE DEPLOYANO
+## 2026-10-01 — ✍️ SEO korpus: vraćen „Boat4You" u rečenice (N5) · 🔗 `_gl` sa 6 sistera (N6) · 📈 INP/LCP/CLS u GA4 (E5) · 🧾 PDF brojevi po jeziku (B29) — ✅ DEPLOYANO (live najkasnije 6.10.2026)
 
 Codex audit 1.10., val 2 (`codexverify/full_review.md`: N5, N6, N7, E5, B21, B29). Commit `73c4afaf`, samo lokalno,
 nije pushano.
@@ -493,7 +493,7 @@ domena, accept_incoming: true})` u istoj inline head skripti kao consent default
   daje ≥ 1;
 - `curl -s https://www.boat4you.com/ | grep -c "set','linker'"` daje ≥ 1.
 
-## 2026-10-01 — ⚡ Stranica broda 1 dohvat + rok 8 s · 🗺️ sitemap brodova po rasponu id-eva · ⚖️ Uvjeti: 72 h besplatno otkazivanje — ⏳ NIJE DEPLOYANO
+## 2026-10-01 — ⚡ Stranica broda 1 dohvat + rok 8 s · 🗺️ sitemap brodova po rasponu id-eva · ⚖️ Uvjeti: 72 h besplatno otkazivanje — ✅ DEPLOYANO (live najkasnije 6.10.2026)
 
 Codex audit 1.10. (F2, F7, F8), verificirano (`_seo-audit-2026-10-01/codex-review/`). Commitovi `723704c6` (F2),
 `9ffbc079` (F7), `62e0c1b9` (F8) + review popravci `da16e778` (RelatedBoats, F8 tekst), samo lokalno, nije pushano.
@@ -546,7 +546,7 @@ recept 18.9.), ali ide s istim deployem. Nakon deploya: `/sitemap.xml` lista `si
 dijelova 21–105 postaju 404 (nisu više u indexu, Google ih ispušta). Provjera uživo: `curl /sitemap.xml | grep -c
 sitemap-yachts` = 21, dio 0 i 20 = 200, `/terms-and-conditions` + `/hr/…` imaju „72".
 
-## 2026-10-01 — 🔗 Naslovnica: blok ključnih riječi i linkova na dnu (6 tabova, 140 linkova, 9 jezika) — ⏳ NIJE DEPLOYANO
+## 2026-10-01 — 🔗 Naslovnica: blok ključnih riječi i linkova na dnu (6 tabova, 140 linkova, 9 jezika) — ✅ DEPLOYANO (live najkasnije 6.10.2026)
 
 Mario 1.10.: „napravi to ali stavi na dnu main paiga od boat4you, neka bude kao što su napravili na Borrow a Boat… više nam je
 to da Google vidi ključnu riječ i link na to". Commitovi: `211705e3` + review popravci (`fix(home): link hub review fixes`),
@@ -670,7 +670,7 @@ i `?destinations=croatia&startDate=2026-10-10&endDate=2026-10-17` (ima 2 × „P
 **Deploy:** `infra/deploy-scripts/b4y_web_deploy.sh` (build cpus=1, config test, swap) — aplikacija se ugasila nakon swapa, pa je
 zagrijavanje (5b) pokrenuto ručno iz iste skripte; SEO regresija (6) nije pokrenuta (promjena je samo CSS kartice).
 
-## 2026-09-30 — 📱 Promo banners: countdown pill no longer breaks inside the time, phone balloons fade again — ⏳ NOT DEPLOYED (commit `fix(promo): countdown pill breaks only before the clock, restore bfade keyframes`)
+## 2026-09-30 — 📱 Promo banners: countdown pill no longer breaks inside the time, phone balloons fade again — ✅ DEPLOYED (live by 6.10.2026 at the latest) (commit `fix(promo): countdown pill breaks only before the clock, restore bfade keyframes`)
 
 Fixes two regressions QA found in the refined phone/tablet commit below (deploy both together).
 
@@ -679,7 +679,7 @@ Fixes two regressions QA found in the refined phone/tablet commit below (deploy 
 - **Correction to the entry below:** the `/search` listing banner is about 854px wide at a 1400px viewport, so it uses the tablet (600–899px) layout and does change on desktop screens (rotated sticker off the bottom edge, sun above the mast, no cloud or gull behind the sub). Every other desktop banner is unchanged apart from the subtitle shadow.
 - **Deploy:** `.next` only.
 
-## 2026-09-30 — 📱 Promo banners: refined phone/tablet layout, subtitle shadow, count-up clamp — ⏳ NOT DEPLOYED (commit `fix(promo): refined phone/tablet banner layout, subtitle shadow, count-up clamp`)
+## 2026-09-30 — 📱 Promo banners: refined phone/tablet layout, subtitle shadow, count-up clamp — ✅ DEPLOYED (live by 6.10.2026 at the latest) (commit `fix(promo): refined phone/tablet banner layout, subtitle shadow, count-up clamp`)
 
 The tablet (600–899px) and phone (<600px) blocks of `PromoBanner.module.scss` are re-synced from the refined prototype (`refine.html`, checked better than the live layout by independent QA) with `sync_narrow_css.py` (narrow region only). Desktop (≥900px) is unchanged apart from the subtitle shadow (but see the correction above: the `/search` banner is below 900px wide).
 
@@ -691,7 +691,7 @@ The tablet (600–899px) and phone (<600px) blocks of `PromoBanner.module.scss` 
 - **Checks:** geometry port vs prototype is 0 differences at phone 341/398, tile 535, tablet 620/690/736 and desktop (also 0 vs the live prototype on desktop). At phone 286 one hero title (September) is 2px shorter, from the title-fit rule. deco and probe_anim report 0 issues. measure reports 4 more "sub-CTA gap" flags on the `/search` strip at 398px, the same gaps as the live layout. Build and tsc pass.
 - **Deploy:** `.next` only, no public, messages or config changes. The six sister sites still need the same re-sync.
 
-## 2026-09-30 — 🎞️ Animated campaign banners (11 campaigns, all formats) — ⏳ NOT DEPLOYED (commit `feat(promo): animated campaign banners`)
+## 2026-09-30 — 🎞️ Animated campaign banners (11 campaigns, all formats) — ✅ DEPLOYED (live by 6.10.2026 at the latest) (commit `feat(promo): animated campaign banners`)
 
 The approved animated prototype (Mario 30.9.2026) replaces the static PromoBanner: a layered scene (sky effects per campaign, three seas, an animated character and boat, parallax on hover), a morphing "up to X%" sticker with the campaign clock ("Book by …", a ticking countdown in the last 14 days, "Starts …"), and a CTA. The count-up runs when the banner scrolls into view. With reduced motion the banner shows static posters.
 
@@ -768,9 +768,9 @@ sitemap index 127 files, 0 lastmod except blogs; sitemap-locations 576, categori
   list at start). Any future public/ removal or addition must be synced by hand.
   Rollback `.next.prev` (= release A1 `PNhZDQdC3LxKlsbbcJvKl`).
 
-## 2026-09-25 — 🌊 Wave 2: sitemap iz korpusa (prag 10), lastmod, cache landinga, linkovi brod/blog/itinerari → hubovi, jedan izvor brojki — ⏳ NIJE DEPLOYANO
+## 2026-09-25 — 🌊 Wave 2: sitemap iz korpusa (prag 10), lastmod, cache landinga, linkovi brod/blog/itinerari → hubovi, jedan izvor brojki — ✅ DEPLOYANO (live najkasnije 6.10.2026)
 
-Commiti `d9201e58` … `6cd95cdc` (8, na HEAD iznad `fc1ee504`). Nije pushano, nije deployano.
+Commiti `d9201e58` … `6cd95cdc` (8, na HEAD iznad `fc1ee504`). Pushano i deployano (live najkasnije 6.10.2026).
 
 **Što i zašto**
 
@@ -848,7 +848,7 @@ Novi namespaceovi (server-only): `catalogueLinks`, `siteFacts` — svih 9 jezika
 **Rollback:** `.next.prev` swap (kao inače). Kod: `git revert 53401c11 793228fa 2ce6fb2f 1119fd7c 1eb0d13b 6cd95cdc c6c24ea8 71ab7882 5cc0feab 6cb7e17e a629cad9
 c0b20c60 d9201e58`.
 
-## 2026-09-25 — 🛥️ Wave 2: /yachts model stranice, charter facts blok, /review forma, prag 10 brodova — ⏳ NIJE DEPLOYANO
+## 2026-09-25 — 🛥️ Wave 2: /yachts model stranice, charter facts blok, /review forma, prag 10 brodova — ✅ DEPLOYANO (live najkasnije 6.10.2026)
 
 Grana `feat/models-facts-reviews` (worktree `boat4you-web/b4y-web-wave2`, od `fc1ee504`), NIJE pushano ni deployano.
 Commiti: `ca063d26` prag · `8e7f7778` model stranice · `ed52be78` charter facts · `e9e9ded2` review forma ·
@@ -914,7 +914,7 @@ jedan red `/public/locations` → landing „marina frapa dubrovnik" nosi i Rogo
 /trip (/review popravljen u `081fdc66`); inquiry server action ide s IP-a web servera pa svi dijele backend
 rate-limit (5/min); ISR piše zapis i za 404 na `/yachts/<bilo što>` (kao /boat).
 
-## 2026-09-25 — 🧭 /search landing: filtriranje, SSR tekstovi, sitemap = index gate — ⏳ NIJE DEPLOYANO
+## 2026-09-25 — 🧭 /search landing: filtriranje, SSR tekstovi, sitemap = index gate — ✅ DEPLOYANO (live najkasnije 6.10.2026)
 
 **✅ LIVE 25.9.2026 ~12:27 UTC — BUILD_ID `PNhZDQdC3LxKlsbbcJvKl` (HEAD `1d7b9aa8`).** Verified on production: greece/italy/split/croatia×CATAMARAN/greece×CATAMARAN each render their own boat list (md5 differ; Greece first boat jeanneau-sun-odyssey-479-sirius-19668, heading "3,407 boats available"); curated H2 in raw HTML; "sought-after sailing destinations" template 0×; unknown destination (atlantis) → noindex; `/seo-content/*` → `x-robots-tag: noindex, nofollow`; `</script>` XSS probe → 0 hits; sitemap-locations 5,985 → 171 URLs, sitemap-categories 468. `public/seo-content/en` on cusma1 = 1,435 files. Rollback `.next.prev`.
 
