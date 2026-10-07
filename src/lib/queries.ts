@@ -28,6 +28,36 @@ query GetAllBlogs($pageSize: Int!,$categoryName: String, $after: String) {
   }
 }`;
 
+/**
+ * The newest WordPress stamps of the published posts — the latest
+ * modification and the latest publication (a scheduled post is published
+ * after its last edit). The later of the two is the newest `<lastmod>` in the
+ * blog sitemap (wpGmtLastmod over each post's dateGmt and modifiedGmt), i.e.
+ * that child's `<lastmod>` in the sitemap index.
+ */
+export const GET_BLOGS_LASTMOD = `
+query GetBlogsLastmod {
+  byModified: posts(where: {orderby: {field: MODIFIED, order: DESC}}, first: 1) {
+    nodes {
+      dateGmt
+      modifiedGmt
+    }
+  }
+  byDate: posts(where: {orderby: {field: DATE, order: DESC}}, first: 1) {
+    nodes {
+      dateGmt
+      modifiedGmt
+    }
+  }
+}`;
+
+type BlogStamps = { nodes: Array<{ dateGmt?: string | null; modifiedGmt?: string | null }> };
+
+export type GetBlogsLastmodResult = {
+  byModified: BlogStamps;
+  byDate: BlogStamps;
+};
+
 export type GetBlogAndRelatedBlogsResult = {
   post: Blog;
   posts: Nodes<BlogTeaser[]>;

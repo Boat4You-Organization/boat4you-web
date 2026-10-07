@@ -202,5 +202,10 @@
     "mahe": "in Mahé",
     "britishVirginIslands": "in the British Virgin Islands"
   },
-  "weeklyPriceNote": "Prices shown are each boat's cheapest available 7-night week. Choose your dates for exact prices."
+  "weeklyPriceNote": "Prices shown are each boat's cheapest available 7-night week. Choose your dates for exact prices.",
+  "pagedHeading": "{heading} – page {page}",
+  "pageIndex": {
+    "summary": "All result pages ({count})",
+    "label": "Result pages"
+  }
 }

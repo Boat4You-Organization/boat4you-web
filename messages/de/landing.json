@@ -292,5 +292,10 @@
     "zante": "auf Zakynthos",
     "saintRaphael": "in Saint-Raphaël"
   },
-  "weeklyPriceNote": "Angezeigt wird jeweils die günstigste verfügbare Woche (7 Nächte) jedes Boots. Wählen Sie Ihre Reisedaten für genaue Preise."
+  "weeklyPriceNote": "Angezeigt wird jeweils die günstigste verfügbare Woche (7 Nächte) jedes Boots. Wählen Sie Ihre Reisedaten für genaue Preise.",
+  "pagedHeading": "{heading} – Seite {page}",
+  "pageIndex": {
+    "summary": "Alle Ergebnisseiten ({count})",
+    "label": "Ergebnisseiten"
+  }
 }

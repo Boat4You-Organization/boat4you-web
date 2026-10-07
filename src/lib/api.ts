@@ -8,7 +8,9 @@ import fetchAPI from './fetchApi';
 import {
   GET_ALL_BLOGS,
   GET_BLOG,
+  GET_BLOGS_LASTMOD,
   GetBlogAndRelatedBlogsResult,
+  GetBlogsLastmodResult,
   GetBlogsResult,
   GetUnwrapedBlogAndRelatedBlogsResult,
 } from './queries';
@@ -178,6 +180,20 @@ export async function getBlogs(pageSize: number, categoryName?: string, after?: 
   const data = await fetchAPI<GetBlogsResult>(GET_ALL_BLOGS, { variables });
 
   return swapWpHost(CursorConnectionUtils.unwrapNodesAndEdges(data.posts));
+}
+
+/**
+ * Every GMT stamp behind the blog sitemap's newest `<lastmod>`: the latest
+ * modified and the latest published post's dateGmt / modifiedGmt (one
+ * GraphQL request, Data Cache for `revalidate` seconds). Pass them to
+ * wpGmtLastmod. Throws when WordPress fails or does not answer in time.
+ */
+export async function getBlogsLastmodStamps(revalidate: number, timeoutMs: number): Promise<string[]> {
+  const data = await fetchAPI<GetBlogsLastmodResult>(GET_BLOGS_LASTMOD, { revalidate, timeoutMs });
+
+  return [...(data.byModified?.nodes ?? []), ...(data.byDate?.nodes ?? [])].flatMap(post =>
+    [post.dateGmt, post.modifiedGmt].filter((stamp): stamp is string => typeof stamp === 'string')
+  );
 }
 
 // React cache(): generateMetadata (via getBlogWithSEO) and the page body share

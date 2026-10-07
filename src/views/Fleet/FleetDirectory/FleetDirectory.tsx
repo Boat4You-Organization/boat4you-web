@@ -1,6 +1,6 @@
-import { getTranslations } from 'next-intl/server';
+import { getLocale, getTranslations } from 'next-intl/server';
 
-import { Link } from '@/i18n/navigation';
+import { routing } from '@/i18n/routing';
 import { FleetEntry, FleetPage, fleetPagePath } from '@/utils/static/fleetIndex';
 import { nameRepeatsModel } from '@/utils/static/toTitleCase';
 import { yachtsIndexPath } from '@/utils/static/yachtModelKey';
@@ -15,17 +15,25 @@ interface FleetGroup {
 /**
  * Server-rendered A-Z directory of the whole promoted catalogue.
  *
- * Deliberately plain markup (no MUI, no client state): every boat has to be
- * a real `<a href="/boat/…">` in the HTML a crawler receives on a
- * parameter-free request, and 300 rows of hydrated components would be a
- * pointless payload on a page whose only job is links.
+ * Deliberately plain markup (no MUI, no client components, no client state):
+ * every boat has to be a real `<a href="/boat/…">` in the HTML a crawler
+ * receives on a parameter-free request, and this page is nothing but 300 of
+ * them. Plain anchors, not next-intl's `<Link>` (audit 7.10.2026): a Link is a
+ * client component, so each row also went into the page's RSC payload as a
+ * client reference with its own props (~175 KB of the ~750 KB page), and each
+ * row carried four long CSS-module class names in the HTML and again in the
+ * payload. The rows are styled from the list's one class instead. A click on a
+ * boat is a normal page load — the directory has nothing to keep in memory.
  */
 const FleetDirectory = async ({ slice }: { slice: FleetPage }) => {
-  const [t, tModels, tCapacity] = await Promise.all([
+  const [locale, t, tModels, tCapacity] = await Promise.all([
+    getLocale(),
     getTranslations('metadata.fleet'),
     getTranslations('models'),
     getTranslations('capacity'),
   ]);
+  // as-needed locale prefix: English at the root, the rest under /{locale}.
+  const prefix = locale === routing.defaultLocale ? '' : `/${locale}`;
 
   // Headings restart on every page — the home base is the single most
   // useful thing to scan a charter fleet by, and it keeps each page's
@@ -51,9 +59,9 @@ const FleetDirectory = async ({ slice }: { slice: FleetPage }) => {
       <h1 className={styles.title}>{t('heading')}</h1>
       <p className={styles.lede}>{t('lede')}</p>
       <p className={styles.modelsLink}>
-        <Link href={yachtsIndexPath()} prefetch={false}>
+        <a href={`${prefix}${yachtsIndexPath()}`} className={styles.modelsAnchor}>
           {tModels('index.h1')} →
-        </Link>
+        </a>
       </p>
       <p className={styles.summary}>
         {t('summary', {
@@ -77,19 +85,16 @@ const FleetDirectory = async ({ slice }: { slice: FleetPage }) => {
                 .filter(Boolean)
                 .join(' · ');
 
+              // Model first, the vessel name (when it adds to the model) in a
+              // second <span>, the specs in <small> — the list's stylesheet
+              // tells them apart by element, not by class.
               return (
-                <li key={entry.slug} className={styles.row}>
-                  {/* prefetch off: 300 boat rows would otherwise queue 300
-                      route prefetches as soon as they scroll into view. The
-                      href is resolved server-side either way, so crawlers
-                      and the locale prefix are unaffected. */}
-                  <Link href={`/boat/${entry.slug}`} prefetch={false} className={styles.link}>
-                    <span className={styles.model}>{entry.modelName}</span>
-                    {!nameRepeatsModel(entry.modelName, entry.name) && (
-                      <span className={styles.name}>{entry.name}</span>
-                    )}
-                    {specs && <span className={styles.specs}>{specs}</span>}
-                  </Link>
+                <li key={entry.slug}>
+                  <a href={`${prefix}/boat/${entry.slug}`}>
+                    <span>{entry.modelName}</span>
+                    {!nameRepeatsModel(entry.modelName, entry.name) && <span>{entry.name}</span>}
+                    {specs && <small>{specs}</small>}
+                  </a>
                 </li>
               );
             })}
@@ -105,15 +110,15 @@ const FleetDirectory = async ({ slice }: { slice: FleetPage }) => {
                 {number}
               </span>
             ) : (
-              <Link
+              <a
                 key={number}
-                href={fleetPagePath(number)}
+                href={`${prefix}${fleetPagePath(number)}`}
                 className={styles.pageLink}
                 {...(number === slice.pageNumber - 1 ? { rel: 'prev' } : {})}
                 {...(number === slice.pageNumber + 1 ? { rel: 'next' } : {})}
               >
                 {number}
-              </Link>
+              </a>
             )
           )}
         </nav>

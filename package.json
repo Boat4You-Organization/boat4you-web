@@ -25,6 +25,7 @@
     "test:successor": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test scripts/yachtSuccessor.test.mjs scripts/indexnow-successor-urls.test.mjs",
     "test:capacity": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test scripts/yachtCapacity.test.mjs scripts/yachtCapacity.render.test.mjs",
     "test:boat-seo": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test scripts/boatPageSeo.test.mjs",
+    "test:landing-pages": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test scripts/landingPagination.test.mjs scripts/pagination.render.test.mjs",
     "upgrade": "yarn upgrade"
   },
   "dependencies": {

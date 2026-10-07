@@ -292,5 +292,10 @@
     "zante": "na Zakynthos",
     "saintRaphael": "w Saint-Raphaël"
   },
-  "weeklyPriceNote": "Podana cena dotyczy najtańszego dostępnego tygodnia (7 nocy) każdej łodzi. Wybierz daty, aby zobaczyć dokładną cenę."
+  "weeklyPriceNote": "Podana cena dotyczy najtańszego dostępnego tygodnia (7 nocy) każdej łodzi. Wybierz daty, aby zobaczyć dokładną cenę.",
+  "pagedHeading": "{heading} – strona {page}",
+  "pageIndex": {
+    "summary": "Wszystkie strony wyników ({count})",
+    "label": "Strony wyników"
+  }
 }

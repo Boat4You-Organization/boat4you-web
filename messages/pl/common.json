@@ -658,6 +658,15 @@
   "openFilters": "Otwórz filtry",
   "editSearch": "Edytuj wyszukiwanie",
   "photoAlt": "{label} — zdjęcie {n}",
+  "pagination": {
+    "label": "Nawigacja po stronach",
+    "current": "Strona {page}",
+    "goTo": "Przejdź do strony {page}",
+    "previous": "Przejdź do poprzedniej strony",
+    "next": "Przejdź do następnej strony",
+    "first": "Przejdź do pierwszej strony",
+    "last": "Przejdź do ostatniej strony"
+  },
   "a11y": {
     "close": "Zamknij",
     "back": "Wstecz",

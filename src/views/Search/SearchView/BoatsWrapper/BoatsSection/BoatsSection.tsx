@@ -37,6 +37,7 @@ import useBreakpoint from '@/utils/hooks/useBreakpoint';
 import { useLocalStorage } from '@/utils/hooks/useLocalStorage';
 import useQueryParams, { getTabValueFromParams } from '@/utils/hooks/useQueryParams';
 import { formatListWithTranslation } from '@/utils/static/formatList';
+import { landingPageHref } from '@/utils/static/landingPagination';
 import {
   resetData,
   setSearchResults,
@@ -109,6 +110,14 @@ interface BoatsSectionProps {
   /** Which week an undated card is priced for (landing.weeklyPriceNote);
    *  null on a dated search. */
   priceNote?: string | null;
+  /** Set on a plain destination landing (searchLanding.ts landingPagerPath):
+   *  its canonical path with the locale prefix — the pager items become
+   *  `<a href>` links to its pages. null → the pager stays buttons. */
+  pagerBasePath?: string | null;
+  /** Display currency kept in those links (`?currency=`), or null. */
+  pagerCurrency?: string | null;
+  /** Server-rendered list of every page under the pager (LandingPageIndex). */
+  pageIndexSlot?: ReactNode;
 }
 
 const BoatsSection = ({
@@ -125,6 +134,9 @@ const BoatsSection = ({
   breadcrumbSlot = null,
   landingLinksSlot = null,
   priceNote = null,
+  pagerBasePath = null,
+  pagerCurrency = null,
+  pageIndexSlot = null,
 }: BoatsSectionProps) => {
   const { content, page } = data;
   const { totalElements = 0 } = page || {};
@@ -258,6 +270,12 @@ const BoatsSection = ({
       setParam('page', newPage);
     },
     [setParam]
+  );
+
+  const pageHref = useMemo(
+    () =>
+      pagerBasePath ? (pageNumber: number) => landingPageHref(pagerBasePath, pageNumber, pagerCurrency) : undefined,
+    [pagerBasePath, pagerCurrency]
   );
 
   useEffect(() => {
@@ -445,8 +463,10 @@ const BoatsSection = ({
             page={params.page}
             onChange={handlePageChange}
             count={data.page?.totalPages ?? Math.ceil(totalElements / YACHT_PAGE_SIZE)}
+            getItemHref={pageHref}
           />
         )}
+        {!isEmpty && pageIndexSlot}
         {charterFactsSlot}
         {landingLinksSlot}
         {/* SEO block — long-form content below the listings for organic
