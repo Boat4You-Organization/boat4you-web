@@ -1,5 +1,36 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-10-07 — 🧭 /fleet iz route cachea + lakši HTML, landinzi sa stranicama 2…N, `<lastmod>` bloga u indeksu sitemapa — ⏳ NIJE DEPLOYANO (grana `feat/w710-b4y-crawl`, na `feat/successor-redirect`)
+
+Audit 7.10. (Lagoon 42 Masterpiece, ZAKLJUCAK.md 3.6 / 4a): dugi rep brodova je 3 klika dubok preko sporog `/fleet/N`, a landinzi u server HTML-u linkaju samo 18 brodova. Mario 7.10.: Google mora vidjeti sve stranice, sve brodove, sve jezike.
+
+**Commiti:**
+
+- `e984e9e61` `/fleet` i `/fleet/N`: ruta je imala `revalidate`, ali bez `generateStaticParams` pa je bila dinamična. Svaki zahtjev se renderirao ispočetka, a svaka stranica čija 3 backend chunka nisu bila u Data Cacheu (svaka nakon deploya) odgovarala je za ~4 s (medijan 4,19 s). Sada `generateStaticParams() → []`: render na prvi zahtjev, 6 h iz route cachea, pa regeneracija u pozadini. Ništa se ne prerenderira u buildu (build ne smije hodati katalogom na prod API-ju). Redovi su obični `<a>` umjesto next-intl `Link` (klijentska komponenta), bez 4 CSS-module klase po redu. Isti linkovi, isti redoslijed, isti tekst.
+- `e86f996f8` `sitemap.xml`: `<lastmod>` samo za `sitemap-blogs.xml` = najnoviji datum u njoj (kasniji od zadnje izmijenjenog i zadnje objavljenog posta, WP GMT; danas `2026-10-05T06:00:00Z`). Jedan GraphQL upit po satnoj regeneraciji indeksa, rok 3 s; ako WP ne odgovori, indeks ide bez tog `<lastmod>`. Yacht shardovi bez `<lastmod>`: API ne zna sortirati ni agregirati po `updatedAt`, indeks bi morao pročitati sve shardove (~125 upita). Ostale sitemape nemaju datume. Nikad vrijeme zahtjeva.
+- `e08c75445` landinzi `/search?destinations=x[&boatTypes=Y]` (bez datuma, filtera i sortiranja): stavke pagera su pravi `<a href>` (`…&page=n`, stranica 1 = sam landing), klik i dalje lista na mjestu; iznad 7 stranica ispod pagera je zatvoreni popis „Sve stranice rezultata (N)" sa svim stranicama. Stranica n > 1: canonical na sebe, hreflang na stranicu n, indeks po istom gateu kao landing, naslov i H1 „… – stranica n" (9 jezika). Stranica iza zadnje → 404. Nije u sitemapama. Pretrage s datumima, filterima ili sortiranjem ostaju kao do sada (gumbi, noindex, canonical na stranicu 1). `robots.txt` blokira samo `/boat/*?`, `/search?…` je dozvoljen.
+
+**Mjerenja (lokalno `next dev` :3992 na prod API read-only, live curl ≤ 1 zahtjev/s):**
+
+- Live prije: `/fleet/17` i `/de/fleet/3` prvi zahtjev 5,4 s i 5,2 s, ponovljeni 0,20–0,23 s; 710–750 KB HTML (103–107 KB gzip).
+- `/fleet` 770.649 → 529.288 B, `/de/fleet/3` 812.721 → 560.662 B (−31 %; dev HTML, live očekivano ~710 → ~480 KB). Sekcija imenika 145 → 62 KB, RSC payload −143 KB. Backend: 3 upita na hladan render, 0 na topli (nepromijenjeno); na produkciji ponovljeni zahtjevi više ne renderiraju.
+- Landing Hrvatska katamarani: stranica 1 isti title, canonical, robots, H1 i 18 brodova; dodano 49 linkova na stranice 2–50. Stranica 2 (EN i DE): 18 drugih brodova, canonical `…&page=2`, `index, follow`, „– page 2" / „– Seite 2". `page=99` → 404. Bez dodatnih backend upita.
+- `yarn test:landing-pages` 24/24, ostali `yarn test:*` prolaze, `npx tsc --noEmit` 0, `yarn lint` 0 grešaka (17 starih upozorenja).
+
+**Deploy:** uz ili nakon `feat/successor-redirect` (ova grana je na njoj). Nakon swapa:
+
+1. `curl -s -o /dev/null -D - https://www.boat4you.com/fleet/17 | grep -i x-nextjs-cache` dvaput: drugi put `HIT`. Opcionalno zagrijati: 35 EN stranica `/fleet/1…35`, 1 zahtjev/s (~105 API upita); ostali jezici tada dijele Data Cache.
+2. `curl -s 'https://www.boat4you.com/search?destinations=croatia&boatTypes=CATAMARAN&page=2' | grep -o '<link rel="canonical"[^>]*>'` → `…&amp;page=2`; `&page=99` → 404.
+3. `curl -s https://www.boat4you.com/sitemap.xml | grep -A1 sitemap-blogs` → `<lastmod>` = najnoviji `<lastmod>` u `sitemap-blogs.xml`.
+
+**Otvoreno (Mario):**
+
+- Prva posjeta svake `/fleet/N` nakon deploya i dalje čeka backend (~4 s); poslije je iz cachea. Jeftino riješiti samo zagrijavanjem nakon deploya.
+- Redoslijed na `/fleet` je backendov „Recommended": promjena cijene pomiče brod između stranica (stranice se keširaju u različito vrijeme). `sortBy=id` bi to zaustavio i ubrzao hladan render (~2,3 s → ~1,0–1,6 s po upitu), ali mijenja koji je brod na kojoj stranici.
+- Stranice 2…N ponavljaju SEO tekst i blok činjenica stranice 1. Ostaviti, ili ih prikazivati samo na stranici 1?
+- `/fleet/<smeće>` i `/fleet/<broj > 100>` sada upisuju 404 u ISR cache (kao i ostale ISR rute); disk guard na cusma1 ga ograničava.
+- Lokalni `next dev` na prod API: prvi render layouta i landinga pokrene ~1.700 malih `size=1` upita (siteStats i landing gate, jednom pa keš). Stanje od prije, vrijedi znati prije lokalnih testova.
+
 ## 2026-10-07 — ↪️ Povučeni brod → 308 na nasljednika, IndexNow ključ, blog `<lastmod>` u UTC — ⏳ NIJE DEPLOYANO (grana `feat/successor-redirect`)
 
 Mario 7.10.: (1) povučeni brod čiji je isti fizički brod aktivan pod novim id-jem → trajni redirect umjesto 404 (Bing rangira `/boat/lagoon-bnteau-lagoon-42-4-2-cab-masterpiece-4066`, brod je živ kao `/boat/lagoon-42-masterpiece-11681`; prod ~2.768 takvih × 9 jezika); (2) IndexNow, da Bing/Yandex saznaju nove, promijenjene i preusmjerene URL-ove; (3) stvarni `<lastmod>`. Bing Webmaster: sitemap je već prijavljen (od 7.9., Mario 7.10.), tamo ništa.
