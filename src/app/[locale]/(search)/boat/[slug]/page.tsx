@@ -30,6 +30,7 @@ import { ManufacturerLookup, yachtBrandName } from '@/utils/static/yachtBrand';
 import { CapacityFacts, capacityFacts, fromYacht } from '@/utils/static/yachtCapacity';
 import { buildYachtFaq, buildYachtFaqSchema } from '@/utils/static/yachtFaq';
 import { cleanModelName } from '@/utils/static/yachtModelKey';
+import { successorBoatPath } from '@/utils/static/yachtSuccessor';
 import BoatContentSection from '@/views/Boat/BoatContentSection';
 import BoatHeroSection from '@/views/Boat/BoatHeroSection';
 import BoatHubLinks from '@/views/Boat/BoatHubLinks';
@@ -311,6 +312,18 @@ const redirectToCanonicalBoat = (
 };
 
 /**
+ * 308 to the active boat that replaced an inactive one, when the API names
+ * it (yachtSuccessor.ts, owner decision 7.10.2026): the old URL of a boat a
+ * partner listed again under a new id hands its visitors and its ranking to
+ * the new page instead of a 404. Same language, no query (the clean boat
+ * URL), straight to the successor (no chain). Without a successor nothing
+ * happens and the caller answers 404, as before.
+ */
+const redirectToSuccessorBoat = (locale: string, successorSlug: string | null): void => {
+  if (successorSlug) permanentRedirect(successorBoatPath(successorSlug, locale, routing.defaultLocale));
+};
+
+/**
  * The page's currency: the signed-in user's, else `?currency=`, else EUR.
  * generateMetadata asks for the boat with this currency and the page's
  * locale too — neither changes a field the metadata reads — so both calls
@@ -342,9 +355,16 @@ export async function generateMetadata({
     searchParamsData.dateTo = searchParamsData.endDate;
   }
 
-  const yacht = await getSingleYacth(slug, searchParamsData, boatCurrency(user, searchParamsData), locale);
+  const { yacht, successorSlug } = await getSingleYacth(
+    slug,
+    searchParamsData,
+    boatCurrency(user, searchParamsData),
+    locale
+  );
 
   if (!yacht) {
+    redirectToSuccessorBoat(locale, successorSlug);
+
     return {
       title: 'Yacht Not Found',
     };
@@ -444,9 +464,11 @@ const BoatPage = async ({
 
   const currency = boatCurrency(user, searchParamsData);
 
-  const yacht = await getSingleYacth(slug, searchParamsData, currency, locale);
+  const { yacht, successorSlug } = await getSingleYacth(slug, searchParamsData, currency, locale);
 
   if (!yacht) {
+    redirectToSuccessorBoat(locale, successorSlug);
+
     return notFound();
   }
 

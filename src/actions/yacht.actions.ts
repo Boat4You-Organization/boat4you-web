@@ -20,6 +20,7 @@ import { getBoatImageBaseUrl } from '@/utils/static/imageUtils';
 import { isOperatorName } from '@/utils/static/operatorNames';
 import { withoutPartnerIds } from '@/utils/static/partnerIds';
 import { createYachtQueryParams } from '@/utils/static/queryParams';
+import { successorSlugOf } from '@/utils/static/yachtSuccessor';
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
@@ -41,6 +42,16 @@ export interface YachtAvailabilityParams {
   yachtSlug: string;
   month?: number;
   year?: number;
+}
+
+/**
+ * What the detail API says about a boat page's slug: the boat, or none — and
+ * then, for an inactive boat the backend has an active copy of, that copy's
+ * slug (yachtSuccessor.ts).
+ */
+export interface YachtLookup {
+  yacht: YachtModel | null;
+  successorSlug: string | null;
 }
 
 export interface BrochureResult {
@@ -71,51 +82,51 @@ const YACHT_DETAIL_TIMEOUT_MS = 8_000;
  * identical GETs in the same second for every boat page). Primitive
  * arguments only: cache() compares them with Object.is.
  */
-const fetchYachtDetail = cache(
-  async (slug: string, queryParams: string, language: string): Promise<YachtModel | null> => {
-    // Encoded: a decoded `?` or `#` in the path segment would otherwise turn
-    // the request into the list endpoint.
-    const response = await fetchWithRetry(
-      `${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/yachts/${encodeURIComponent(slug)}${queryParams}`,
-      {
-        headers: {
-          'Accept-Language': language,
-        },
-        signal: AbortSignal.timeout(YACHT_DETAIL_TIMEOUT_MS),
-      }
-    );
-
-    if (response.status === 404 || response.status === 410 || response.status === 400) {
-      return null;
+const fetchYachtDetail = cache(async (slug: string, queryParams: string, language: string): Promise<YachtLookup> => {
+  // Encoded: a decoded `?` or `#` in the path segment would otherwise turn
+  // the request into the list endpoint.
+  const response = await fetchWithRetry(
+    `${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/yachts/${encodeURIComponent(slug)}${queryParams}`,
+    {
+      headers: {
+        'Accept-Language': language,
+      },
+      signal: AbortSignal.timeout(YACHT_DETAIL_TIMEOUT_MS),
     }
+  );
 
-    if (!response.ok) {
-      throw new Error(`Yacht API answered ${response.status} for "${slug}"`);
-    }
-
-    const yacht = (await response.json()) as YachtModel;
-
-    // Owner rule: a charter operator the partner delivers as the manufacturer
-    // ("Odisej Ltd") never reaches the page — not the photo alt text, the RSC
-    // payload, the PDF nor the Product brand (operatorNames.ts).
-    if (isOperatorName(yacht.manufacturerName)) yacht.manufacturerName = '';
-
-    // Nor does partner prose written as the operator ("Athenian Yachts shall not
-    // be liable…", "the Athenian’s Pier", "(to update manually)") — partnerText.ts.
-    // Partner identifiers (externalId, agency) stay out of the page too (partnerIds.ts).
-    return withSafePartnerText(withoutPartnerIds(yacht));
+  if (response.status === 404 || response.status === 410 || response.status === 400) {
+    // A 400 for an inactive boat may name the active boat that replaced it.
+    return { yacht: null, successorSlug: await successorSlugOf(response, slug) };
   }
-);
+
+  if (!response.ok) {
+    throw new Error(`Yacht API answered ${response.status} for "${slug}"`);
+  }
+
+  const yacht = (await response.json()) as YachtModel;
+
+  // Owner rule: a charter operator the partner delivers as the manufacturer
+  // ("Odisej Ltd") never reaches the page — not the photo alt text, the RSC
+  // payload, the PDF nor the Product brand (operatorNames.ts).
+  if (isOperatorName(yacht.manufacturerName)) yacht.manufacturerName = '';
+
+  // Nor does partner prose written as the operator ("Athenian Yachts shall not
+  // be liable…", "the Athenian’s Pier", "(to update manually)") — partnerText.ts.
+  // Partner identifiers (externalId, agency) stay out of the page too (partnerIds.ts).
+  return { yacht: withSafePartnerText(withoutPartnerIds(yacht)), successorSlug: null };
+});
 
 /**
- * The yacht behind `slug`, or null when the API says it does not exist.
+ * The yacht behind `slug`, or `yacht: null` when the API says it does not exist.
  *
- * ONLY a real "no such boat" (API 404 / 410, or 400 for a slug the API
- * cannot parse) returns null — the page turns that into notFound(), a 404
- * with noindex. Everything else — a 5xx, a timeout, a refused connection
- * during a backend deploy or an OOM restart on cusma2, an unreadable body —
- * THROWS, so the page answers 500 (retryable) instead of telling Google the
- * boat is gone. Before 26.9.2026 both paths returned null: 22 of 22 boat
+ * ONLY a real "no such boat" (API 404 / 410, or 400 for an inactive boat or a
+ * slug the API cannot parse) returns `yacht: null` — the page turns that into
+ * notFound(), a 404 with noindex, unless the API named the active boat that
+ * replaced an inactive one (`successorSlug`: a 308 there). Everything else —
+ * a 5xx, a timeout, a refused connection during a backend deploy or an OOM
+ * restart on cusma2, an unreadable body — THROWS, so the page answers 500
+ * (retryable) instead of telling Google the boat is gone. Before 26.9.2026 both paths returned null: 22 of 22 boat
  * requests during one backend deploy came back 404 + noindex with a
  * canonical to the locale home (audit B02).
  *
@@ -133,7 +144,7 @@ export async function getSingleYacth(
   searchParams: YachtSearchParams,
   currency: Currency = Currency.EUR,
   language: string = 'en'
-): Promise<YachtModel | null> {
+): Promise<YachtLookup> {
   // The detail endpoint expects dateFrom/dateTo, but URL search params are
   // startDate/endDate (shared with the listing). Rename so the backend can
   // actually find matching offers for the user's requested week.
