@@ -115,5 +115,63 @@ export const weeklyOfferSummary = <T extends WeeklyOfferInput>(
   };
 };
 
+/**
+ * The cheapest bookable future offer of any length with a price above 0
+ * (lower price, then the earlier start), or null. Its price is that
+ * period's total — shown as "Price for N days", never "/ week".
+ */
+export const cheapestBookableOffer = <T extends WeeklyOfferInput>(
+  offers: readonly T[] | null | undefined,
+  today: string
+): T | null =>
+  (offers ?? []).reduce<T | null>((best, offer) => {
+    const from = offer.dateFrom?.slice(0, 10) ?? '';
+    const price = offer.clientPriceEur;
+    const nights = offerNights(offer);
+
+    if (!isBookableOffer(offer) || !from || from < today || nights == null || nights <= 0) return best;
+
+    if (typeof price !== 'number' || !Number.isFinite(price) || Math.round(price) <= 0) return best;
+
+    if (!best) return offer;
+
+    const bestPrice = priceOf(best);
+
+    return price < bestPrice || (price === bestPrice && from < (best.dateFrom?.slice(0, 10) ?? '')) ? offer : best;
+  }, null);
+
+/**
+ * The offer behind the boat's price before any dates are chosen (the phone
+ * bar, 7.10.2026): the cheapest bookable 7-night week — "From … / week",
+ * the JSON-LD lowPrice. When no week is bookable but a period of another
+ * length is (Sun Odyssey 42 i Waterproof, Poros: every week reserved, 14, 21
+ * and 28 nights free), the cheapest of those, as "Price for N days" and its
+ * total. Null only when nothing bookable carries a price — "Price on request".
+ */
+export const fromPriceOffer = <T extends WeeklyOfferInput>(
+  offers: readonly T[] | null | undefined,
+  today: string,
+  summary: WeeklyOfferSummary<T> | null = weeklyOfferSummary(offers, today)
+): T | null => summary?.cheapestBookable ?? cheapestBookableOffer(offers, today);
+
+/**
+ * True when `selected` is the offer `quoted` names: the same days and the
+ * same price in whole euros. The phone bar opens the price details (which
+ * break down the selected offer) from its quoted price only then.
+ */
+export const isQuotedOffer = (
+  selected: WeeklyOfferInput | null | undefined,
+  quoted: Pick<WeeklyOfferInput, 'dateFrom' | 'dateTo' | 'clientPriceEur'> | null | undefined
+): boolean =>
+  !!selected &&
+  !!quoted &&
+  !!selected.dateFrom &&
+  selected.dateFrom.slice(0, 10) === quoted.dateFrom?.slice(0, 10) &&
+  !!selected.dateTo &&
+  selected.dateTo.slice(0, 10) === quoted.dateTo?.slice(0, 10) &&
+  typeof selected.clientPriceEur === 'number' &&
+  typeof quoted.clientPriceEur === 'number' &&
+  Math.round(selected.clientPriceEur) === Math.round(quoted.clientPriceEur);
+
 /** Today as an ISO day in UTC — the day the summary's "future" starts. */
 export const todayIso = (): string => new Date().toISOString().slice(0, 10);

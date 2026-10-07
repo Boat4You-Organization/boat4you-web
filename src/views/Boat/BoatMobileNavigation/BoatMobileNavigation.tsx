@@ -23,6 +23,7 @@ import DateTime from '@/utils/static/DateTime';
 import { formatPriceWithCurrency, isPositivePrice } from '@/utils/static/formatPriceCurrency';
 import { isInquiryOnlyBoat } from '@/utils/static/inquiryOnlyBoat';
 import { resolveGate } from '@/utils/static/offerStatusGate';
+import { isQuotedOffer } from '@/utils/static/weeklyOffers';
 import { toggleBoatInquiryModalOpen } from '@/valtio/yacht/yacht.actions';
 import { priceSettledKey, useYachtStore } from '@/valtio/yacht/yacht.store';
 
@@ -30,15 +31,25 @@ import styles from './BoatMobileNavigation.module.scss';
 import ChangeDatesContent from './ChangeDatesContent';
 import PriceDetailsContent from './PriceDetailsContent';
 
+/**
+ * The offer the bar quotes before any dates are chosen (weeklyOffers.ts,
+ * fromPriceOffer, decided on the server): the cheapest bookable week —
+ * "From … / week", the same amount as the Product JSON-LD lowPrice and the
+ * FAQ — or, when no week is bookable, the cheapest bookable period of
+ * another length ("Price for N days"). Days are ISO (YYYY-MM-DD).
+ */
+export interface BoatFromPrice {
+  clientPriceEur: number;
+  clientPriceInfo?: PriceInfo;
+  dateFrom: string;
+  dateTo: string;
+  nights: number;
+}
+
 interface BoatMobileNavigationProps {
   yacht: YachtModel;
-  /**
-   * The boat's cheapest bookable week (weeklyOffers.ts, decided on the
-   * server): the "From … / week" line before any dates are chosen — the
-   * same amount as the Product JSON-LD lowPrice and the FAQ. Null when no
-   * week is bookable.
-   */
-  weeklyFromPrice?: { clientPriceEur: number; clientPriceInfo?: PriceInfo } | null;
+  /** Null: nothing bookable carries a price — "Price on request". */
+  fromPrice?: BoatFromPrice | null;
 }
 
 const defaultValues: BoatCalendarFormValues = {
@@ -46,7 +57,7 @@ const defaultValues: BoatCalendarFormValues = {
   endDate: null,
 };
 
-const BoatMobileNavigation = ({ yacht, weeklyFromPrice = null }: BoatMobileNavigationProps) => {
+const BoatMobileNavigation = ({ yacht, fromPrice = null }: BoatMobileNavigationProps) => {
   const t = useTranslations('common');
   const tYacht = useTranslations('yacht');
   const { calculatedPrice, selectedOffer, isCalculatingPrice, priceSettledFor } = useYachtStore();
@@ -173,22 +184,28 @@ const BoatMobileNavigation = ({ yacht, weeklyFromPrice = null }: BoatMobileNavig
     locale,
   });
 
-  // Before dates are chosen: "From <cheapest bookable week> / week", the
-  // same in the server HTML and after hydration. It used to wait for the
-  // browser to price the boat's FIRST offer — the server HTML said "Price on
-  // request" (SEO audit 7.10.2026), and the amount was that first offer's,
-  // which is neither always the cheapest week nor always a 7-night offer.
-  // The price details behind a click still need that calculation.
-  const weeklyFromLabel =
-    weeklyFromPrice && isPositivePrice(weeklyFromPrice.clientPriceInfo?.amount ?? weeklyFromPrice.clientPriceEur)
-      ? tYacht('fromPerWeek', {
-          price: formatPriceWithCurrency({
-            clientPriceEur: weeklyFromPrice.clientPriceEur,
-            clientPriceInfo: weeklyFromPrice.clientPriceInfo,
-            locale,
-          }),
+  // Before dates are chosen: "From <cheapest bookable week> / week" — or,
+  // when no week is bookable, "Price for N days <total>" of the cheapest
+  // bookable period — the same in the server HTML and after hydration. It
+  // used to wait for the browser to price the boat's FIRST offer: the server
+  // HTML said "Price on request" (SEO audit 7.10.2026), and the amount was
+  // that first offer's, which is neither always the cheapest week nor always
+  // a 7-night offer.
+  const formattedFromPrice =
+    fromPrice && isPositivePrice(fromPrice.clientPriceInfo?.amount ?? fromPrice.clientPriceEur)
+      ? formatPriceWithCurrency({
+          clientPriceEur: fromPrice.clientPriceEur,
+          clientPriceInfo: fromPrice.clientPriceInfo,
+          locale,
         })
       : null;
+  const isWeeklyFromPrice = fromPrice?.nights === 7;
+  // The price details behind a tap break down the SELECTED offer (the
+  // boat's first offer by default, BoatContentSection) — only open them when
+  // that is the quoted offer: same dates, same price. Before, a tap on
+  // "From 2,375 € / week" opened a 21-night 11,875 € breakdown (review
+  // 7.10.2026, 6 of 13 audited boats).
+  const isQuotedOfferPriced = !!formattedFromPrice && isCalculatedPrice && isQuotedOffer(selectedOffer, fromPrice);
 
   if (inquiryOnly) {
     return (
@@ -233,15 +250,30 @@ const BoatMobileNavigation = ({ yacht, weeklyFromPrice = null }: BoatMobileNavig
                   period the visitor did not pick (the bar used to print
                   "today – today + 7" beside it, audit 29.9.2026, R24). */}
               {!hasDates && !isInquireFlow ? (
-                <Typography
-                  variant="h4"
-                  component="p"
-                  color={colors.green500}
-                  className={weeklyFromLabel && isCalculatedPrice ? styles.price : undefined}
-                  onClick={weeklyFromLabel && isCalculatedPrice ? handlePriceDetailOpen : undefined}
-                >
-                  {weeklyFromLabel ?? t('priceOnRequest')}
-                </Typography>
+                formattedFromPrice && !isWeeklyFromPrice && fromPrice ? (
+                  <Stack direction="row" justifyContent="space-between" alignItems="baseline" gap={2}>
+                    <Typography variant="body1">{t('priceForXDays', { days: String(fromPrice.nights) })}</Typography>
+                    <Typography
+                      variant="h4"
+                      component="p"
+                      color={colors.green500}
+                      className={isQuotedOfferPriced ? styles.price : undefined}
+                      onClick={isQuotedOfferPriced ? handlePriceDetailOpen : undefined}
+                    >
+                      {formattedFromPrice}
+                    </Typography>
+                  </Stack>
+                ) : (
+                  <Typography
+                    variant="h4"
+                    component="p"
+                    color={colors.green500}
+                    className={isQuotedOfferPriced ? styles.price : undefined}
+                    onClick={isQuotedOfferPriced ? handlePriceDetailOpen : undefined}
+                  >
+                    {formattedFromPrice ? tYacht('fromPerWeek', { price: formattedFromPrice }) : t('priceOnRequest')}
+                  </Typography>
+                )
               ) : isCheckingAvailability ? (
                 <Stack direction="row" alignItems="center" justifyContent="center" gap={1} role="status" sx={{ mb: 1 }}>
                   <CircularProgress size={16} />

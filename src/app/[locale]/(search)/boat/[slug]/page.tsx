@@ -27,7 +27,7 @@ import { isInquiryOnlyBoat } from '@/utils/static/inquiryOnlyBoat';
 import { serializeJsonLd } from '@/utils/static/jsonLd';
 import { freeCancellationReturnPolicy } from '@/utils/static/merchantReturnPolicy';
 import { nameRepeatsModel, toTitleCase, yachtLabel } from '@/utils/static/toTitleCase';
-import { WeeklyOfferSummary, todayIso, weeklyOfferSummary } from '@/utils/static/weeklyOffers';
+import { WeeklyOfferSummary, fromPriceOffer, offerNights, todayIso, weeklyOfferSummary } from '@/utils/static/weeklyOffers';
 import { ManufacturerLookup, yachtBrandName } from '@/utils/static/yachtBrand';
 import { CapacityFacts, capacityFacts, fromYacht } from '@/utils/static/yachtCapacity';
 import { buildYachtFaq, buildYachtFaqSchema } from '@/utils/static/yachtFaq';
@@ -153,8 +153,8 @@ function buildYachtProductSchema(
   // with a real price, one per week; the bookable ones (FREE, or an expired
   // option) when there are any, else the booked weeks as SoldOut. offerCount
   // is the number of those weeks — the bookable weeks the page offers. The
-  // sister sites count every priced week of the next 12 months, booked ones
-  // included (7.10.2026: 50 there = 31 bookable + 19 booked weeks here).
+  // sister sites count every priced week of the next 12 months, reserved ones
+  // included (7.10.2026: 50 there = 31 free + 19 reserved weeks here).
   const lowPrice = weekly?.lowPrice ?? null;
   const highPrice = weekly?.highPrice ?? null;
 
@@ -471,7 +471,8 @@ const BoatPage = async ({
   // The boat's weekly prices (weeklyOffers.ts): the Product's AggregateOffer,
   // the FAQ's price answer and the "From … / week" line all read this one
   // summary. An inquiry-only boat shows no price anywhere.
-  const weekly = isInquiryOnlyBoat(yacht) ? null : weeklyOfferSummary(yacht.offers, todayIso());
+  const today = todayIso();
+  const weekly = isInquiryOnlyBoat(yacht) ? null : weeklyOfferSummary(yacht.offers, today);
   const productSchema = buildYachtProductSchema(
     yacht,
     locale as LocaleType,
@@ -480,13 +481,24 @@ const BoatPage = async ({
     facts,
     weekly
   );
-  // "From … / week" in the server HTML (it said "Price on request" until the
-  // browser had priced the first offer): the cheapest bookable week, in the
-  // page's currency — the JSON-LD lowPrice in euros.
-  const fromWeek = weekly?.cheapestBookable;
-  const weeklyFromPrice = fromWeek
-    ? { clientPriceEur: fromWeek.clientPriceEur, clientPriceInfo: fromWeek.clientPriceInfo ?? undefined }
-    : null;
+  // The price in the server HTML before dates are chosen (it said "Price on
+  // request" until the browser had priced the first offer): "From … / week"
+  // for the cheapest bookable week, in the page's currency — the JSON-LD
+  // lowPrice in euros; when no week is bookable, the cheapest bookable period
+  // of another length as "Price for N days". "Price on request" only when
+  // nothing bookable carries a price (weeklyOffers.ts, fromPriceOffer).
+  const fromOffer = isInquiryOnlyBoat(yacht) ? null : fromPriceOffer(yacht.offers, today, weekly);
+  const fromNights = fromOffer ? offerNights(fromOffer) : null;
+  const fromPrice =
+    fromOffer && fromNights
+      ? {
+          clientPriceEur: fromOffer.clientPriceEur,
+          clientPriceInfo: fromOffer.clientPriceInfo ?? undefined,
+          dateFrom: fromOffer.dateFrom.slice(0, 10),
+          dateTo: fromOffer.dateTo.slice(0, 10),
+          nights: fromNights,
+        }
+      : null;
 
   // Hubs above this boat (country, region/base, boat type) — linked only
   // when their landing passes the index gate. The visible breadcrumb
@@ -597,7 +609,7 @@ const BoatPage = async ({
             areaLabel={await suggestedAreaLabel(locale, yacht.location?.name, yacht.location?.countryCode)}
           />
         </Container>
-        <BoatMobileNavigation yacht={clientYacht} weeklyFromPrice={weeklyFromPrice} />
+        <BoatMobileNavigation yacht={clientYacht} fromPrice={fromPrice} />
       </BoatTransitionProvider>
     </Layout>
   );
