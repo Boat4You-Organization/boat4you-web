@@ -82,7 +82,8 @@ the words next to the amount); "operator-claim" — Boat4You as employer of
 crews, owner of fleets/bases or the party that briefs and maintains the boats
 ("Boat4You's skippers", "la flotte ... de Boat4You", "employés par Boat4You",
 "mantidas pela Boat4You", "Unsere Schiffe", "Boat4You posiada 14", "Boat4You
-conducts pre-departure briefings"); "brand-hole" — a sentence the brand was
+conducts pre-departure briefings"; since 7.10.2026 also a Boat4You office at the
+destination, OFFICE_DENY: "Our Marbella office", "our marina office"); "brand-hole" — a sentence the brand was
 cut from ("Stocks 14 multihulls", "Learn how manages", "Das Team von kümmert
 sich"); "fee-repeat" — the "fees are shown on each boat's page" sentence more
 than once on a page; "ascii-hr-name" — Šibenik, Kaštela, Sukošan, Korčula,
@@ -1876,6 +1877,39 @@ OPERATOR_DENY_STRICT = {
            r"(?<!na )(?<!u )(?<!kod )Boat4You\b(?!\s+(?:" + _HR_VERB + r"))"],
 }
 
+# Review of 7.10.2026 (R13 follow-up): a Boat4You office at the destination ("Our Marbella office (open 24/7
+# during charters)", "our marina office", "Boat4You maintains an office at the marina"). Boat4You's one office
+# is in Split; the base at the marina belongs to the charter company. "Contact our office" (no place) passes.
+OFFICE_DENY = {
+    'en': [r"\b[Oo]ur\s+(?!Split\b)(?:[A-Z][\w'’-]+\s+){1,2}office\b",
+           r"\b[Oo]ur\s+(?:marina|waterfront|harbou?r|harbourside|port|dockside|quayside|base|local|on-site|onsite)\s+office\b",
+           r"\b[Oo]ur\s+offices?\s+(?:in|at|on)\s+(?!Split\b)(?:the\s+)?(?:marina|harbou?r|port|waterfront|[A-Z])",
+           r"\bBoat4You\s+(?:maintains|has|operates|runs|keeps|staffs)\s+(?:an?|its)\s+(?:own\s+)?(?:[\w-]+\s+){0,3}?(?:office|desk)\b"],
+    'de': [r"\b[Uu]nser(?:e|em|en|es)?\s+Büro\s+(?:in|auf|am|an)\s+(?!Split\b)",
+           r"\b[Uu]nser(?:e|em|en|es)?\s+[\w-]+-Büro\b",
+           r"\b(?:unterhält|betreibt|hat)\s+Boat4You\s+(?:ein|eigenes)\s+(?:\w+\s+)?Büro\b"
+           r"|\bBoat4You\s+(?:unterhält|betreibt|hat)\s+(?:ein|eigenes)\s+(?:eigenes\s+)?(?:\w+\s+)?Büro\b"],
+    'fr': [r"\b(?:[Nn]otre\s+bureau|[Nn]os\s+bureaux)\s+(?:de|du|à|d['’]|en bord|sur|au)\s*(?!Split\b)",
+           r"\bBoat4You\s+(?:dispose|possède|gère|exploite|tient)\s+(?:d['’]un|un)\s+bureau\b"],
+    'it': [r"\b[Nn]ostro\s+ufficio\s+(?:di|a|del|dello|della|sul|in|presso)\s+(?!Spalato\b|Split\b)",
+           r"\bBoat4You\s+(?:gestisce|dispone di|ha|mantiene)\s+(?:un|il proprio)\s+ufficio\b"],
+    'es': [r"\b[Nn]uestra\s+oficina\s+(?:de|en|del|frente)\s+(?!Split\b)",
+           r"\bBoat4You\s+(?:mantiene|tiene|dispone de|gestiona|opera)\s+(?:una|su propia)\s+oficina\b"],
+    'pt': [r"\b[Nn]oss[ao]s?\s+escritórios?\s+(?:de|em|da|do|à|na|no)\s+(?!Split\b)",
+           r"\bBoat4You\s+(?:mantém|tem|dispõe de|gere|opera)\s+(?:um|o seu próprio)\s+escritório\b"],
+    'nl': [r"\b[Oo]ns\s+kantoor\s+(?:in|op|aan|bij)\s+(?!Split\b)",
+           r"\b[Oo]ns\s+(?!hoofd)[\w-]+kantoor\b",
+           r"\bBoat4You\s+(?:heeft\s+|onderhoudt\s+)?een\s+(?:eigen\s+)?kantoor\s+(?:in|op|aan|bij)\b"],
+    'pl': [r"\b[Nn]asz\w*\s+biur\w*\s+(?:w|na|przy)\s+(?!Splicie\b|Split\b|sprawie\b|celu\b)",
+           r"\b[Nn]asz\w*\s+biur\w*\s+portow\w*",
+           r"\bBoat4You\s+(?:posiada|prowadzi|ma|utrzymuje)\s+(?:\w+\s+){0,2}biur\w*"],
+    'hr': [r"\b[Nn]a[šs]\w*\s+ured\w*\s+(?:u|na|uz|pri)\s+(?!Splitu\b)",
+           r"\b[Nn]a[šs]\w*\s+ured\w*\s+marin\w*",
+           r"\bBoat4You\s+(?:ima|upravlja|posjeduje|održava)\s+(?:\w+\s+){0,2}ured\w*"],
+}
+for _locale, _patterns in OFFICE_DENY.items():
+    OPERATOR_DENY_STRICT[_locale] = OPERATOR_DENY_STRICT[_locale] + _patterns
+
 
 # "Les motorsailers de Boat4You", "De motorsailers van Boat4You": boats of Boat4You
 DIRECT_VESSEL_OF = {
@@ -2071,6 +2105,18 @@ W610_SELF_TEST = {
         ('en', "Boat4You provides detailed navigation briefings covering Krka River conditions, depth profiles, and transitions to open water."),
         ('pl', "Załogi Boat4You znają najlepsze kotwicowiska do robienia zdjęć."),
         ('hr', "Posade Boat4Youa dobivaju upute o granicama rezervata i održivim praksama."),
+        # OFFICE_DENY (review of 7.10.2026)
+        ('en', "Our Marbella office (open 24/7 during charters) handles any questions or emergencies."),
+        ('en', "Kavala's central market district sits a 5-minute walk from our marina office."),
+        ('en', "Most importantly, Boat4You maintains an office at the marina with experienced staff."),
+        ('de', "Unser Büro in Marbella (24/7 während der Charter geöffnet) kümmert sich um alle Fragen oder Notfälle."),
+        ('fr', "Boat4You dispose d'un bureau dédié à la voile à Cannigione."),
+        ('it', "Il nostro ufficio di Cannigione mantiene un contatto 24/7 con tutti i charter attivi."),
+        ('es', "Nuestra oficina de Marbella (abierta 24/7 durante los alquileres) se encarga de cualquier pregunta."),
+        ('pt', "O nosso escritório de Marbella (aberto 24/7 durante os alugueres) trata de quaisquer questões."),
+        ('nl', "Ons kantoor in Marbella (24/7 geopend tijdens verhuurperiodes) behandelt alle vragen of noodgevallen."),
+        ('pl', "Skontaktuj się z naszym biurem w Salerno w celu zaplanowania spersonalizowanych wypraw."),
+        ('hr', "Naš ured u Cannigioneu održava 24/7 kontakt sa svim aktivnim najmovima."),
     ], [
         ('en', "Boat4You helps you choose the right boat and supports you 24/7 throughout your Abaco voyage; the operator's base team gives the pre-departure briefing."),
         ('fr', "La flotte de catamarans BVI de nos partenaires comprend des navires méticuleusement entretenus."),
@@ -2083,6 +2129,12 @@ W610_SELF_TEST = {
         ('fr', "Les goélettes partenaires de Boat4You emploient des chefs formés dans des académies culinaires italiennes."),
         ('it', "Per questo motivo, 14 delle barche disponibili ad Ajaccio sono multiscafi."),
         ('nl', "Boat4You heeft 24/7 ondersteuning voor alle gasten."),
+        ('en', "The operator's local base (reachable 24/7 during charters) handles any questions or emergencies."),
+        ('en', "Contact our office to explore available vessels and review detailed itineraries."),
+        ('en', "Free WiFi is available at the marina office."),
+        ('en', "Our Split office answers before and after your charter."),
+        ('nl', "De lokale basis van de verhuurder (24/7 bereikbaar tijdens de charter) behandelt alle vragen of noodgevallen."),
+        ('pl', "Skontaktuj się z naszym biurem w sprawie wielotygodniowych wypraw."),
     ]),
     'brand-hole': (brand_holes, [
         ('en', "Stocks 14 multihulls in Ajaccio for this reason."),
