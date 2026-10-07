@@ -19,13 +19,22 @@ export const YACHT_NOT_ACTIVE = 1502;
 /** A backend slug (SlugUtils): lower-case letters, digits and hyphens, ending in the boat id. */
 const SLUG = /^[a-z0-9-]*[a-z0-9]$/;
 
+/** The boat id a slug ends in (backend `SlugUtils.idFromSlug`), or null. */
+const idFromSlug = (slug: string): number | null => {
+  const last = slug.split('-').pop() ?? '';
+
+  return /^\d+$/.test(last) ? Number(last) : null;
+};
+
 /**
  * The slug of the active boat the API names for an inactive one, or null.
  *
  * Only a 400 whose body has code 1502 and a well-formed `successorSlug`
- * counts. A successor equal to the requested slug is null too: a redirect to
- * itself would loop. Any other answer (404, 410, another code, no or junk
- * `successorSlug`, an unreadable body) is null, and the page stays a 404.
+ * ending in a boat id counts; a `successorId`, when sent, must be that id.
+ * A successor that is the boat in the URL itself (the same id, under any
+ * slug) is null too: a redirect to itself would loop. Any other answer (404,
+ * 410, another code, no or junk `successorSlug`, an unreadable body) is null,
+ * and the page stays a 404.
  */
 export const successorSlugOf = async (response: Response, requestedSlug: string): Promise<string | null> => {
   if (response.status !== 400) return null;
@@ -34,13 +43,24 @@ export const successorSlugOf = async (response: Response, requestedSlug: string)
 
   if (!body || typeof body !== 'object') return null;
 
-  const { code, successorSlug } = body as { code?: unknown; successorSlug?: unknown };
+  const { code, successorSlug, successorId } = body as {
+    code?: unknown;
+    successorSlug?: unknown;
+    successorId?: unknown;
+  };
 
   if (code !== YACHT_NOT_ACTIVE || typeof successorSlug !== 'string') return null;
 
   const slug = successorSlug.trim();
+  const requested = requestedSlug.trim().toLowerCase();
 
-  if (!SLUG.test(slug) || slug === requestedSlug.trim().toLowerCase()) return null;
+  if (!SLUG.test(slug) || slug === requested) return null;
+
+  const id = idFromSlug(slug);
+
+  if (id === null || id === idFromSlug(requested)) return null;
+
+  if (successorId !== undefined && successorId !== null && successorId !== id) return null;
 
   return slug;
 };

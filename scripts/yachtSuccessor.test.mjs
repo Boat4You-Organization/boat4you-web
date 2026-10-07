@@ -93,6 +93,19 @@ describe('successorSlugOf: no redirect, the page stays a 404', () => {
     assert.equal(await outcome(inactive({ successorSlug: NEW }), ` ${NEW.toUpperCase()} `), 404);
   });
 
+  test('the successor is the boat in the URL under another slug (same id)', async () => {
+    const sameId = { successorSlug: 'lagoon-42-masterpiece-4066', successorId: 4066 };
+    assert.equal(await outcome(inactive(sameId), OLD), 404);
+    assert.equal(await outcome(inactive(sameId), '4066'), 404);
+    assert.equal(await outcome(inactive({ successorSlug: 'old-name-4066' }), OLD), 404);
+  });
+
+  test('a successorSlug that does not end in the successorId, or in no id at all', async () => {
+    assert.equal(await outcome(inactive({ successorSlug: NEW, successorId: 11682 }), OLD), 404);
+    assert.equal(await outcome(inactive({ successorSlug: NEW, successorId: '11681' }), OLD), 404);
+    assert.equal(await outcome(inactive({ successorSlug: 'lagoon-42-masterpiece', successorId: 11681 }), OLD), 404);
+  });
+
   test('anything that is not a plain boat slug never reaches the Location header', async () => {
     const unsafe = [
       '//evil.example/boat',
