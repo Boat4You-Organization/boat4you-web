@@ -6,12 +6,13 @@ import { Currency, UserModel } from '@/models/user.model';
 import { MeasurementInfo, MeasurementUnit } from '@/models/yacht-feature.model';
 import { MatchKind, VesselType, YachtModel, YachtModelShortInfo, isVesselType } from '@/models/yacht.model';
 import { fetchYachts } from '@/services/yacht.service';
+import { rotateCandidates } from '@/utils/static/relatedRotation';
 
 /**
  * "You might also like" — up to 3 boats from the SAME marina, sized like
  * the current one. Pool comes from the regular /public/yachts listing
- * filtered by the marina's did; the ±5 ft closest-length pick mirrors the
- * sister-site RelatedYachts rule (Mario 12.5.2026). Renders nothing when
+ * filtered by the marina's did; the ±5 ft window mirrors the sister-site
+ * RelatedYachts rule (Mario 12.5.2026). Renders nothing when
  * the marina id is unknown or the pool is empty — never an empty shell.
  *
  * Same vessel type first (Codex re-audit 2.10.2026: a Bavaria Cruiser 41
@@ -27,6 +28,14 @@ import { fetchYachts } from '@/services/yacht.service';
  * do pages whose period has started already (an old shared link) or whose
  * dated pool comes back empty — the section then still shows the marina's
  * boats instead of disappearing (review 6.10.2026).
+ *
+ * Which of the fitting boats: a rotation seeded by this boat's id
+ * (relatedRotation.ts, 7.10.2026), over the marina's whole pool of the type
+ * (one page of up to 100, the API's page cap). It used to be the closest
+ * lengths among the first 12 of the listing — every boat at a marina linked
+ * the same three boats and the rest of its fleet got no internal link. The
+ * ±5 ft window still decides who fits; the rotation only decides which of
+ * them this page shows.
  */
 
 const M_PER_FT = 0.3048;
@@ -45,6 +54,14 @@ const RELATED_DEADLINE_MS = 2_000;
 const MIN_FILL_MS = 400;
 
 const RELATED_COUNT = 3;
+
+/**
+ * The marina's boats of the type in one request — the API's page cap. All
+ * of them are candidates, not only the listing's first page (measured
+ * 7.10.2026 for a marina's 80 catamarans: 0.23 s and 100 KB for the page of
+ * 100 against 0.10 s and 15 KB for 12).
+ */
+const POOL_SIZE = 100;
 
 const ISO_DAY = /^\d{4}-\d{2}-\d{2}$/;
 
@@ -110,7 +127,7 @@ const RelatedBoats = async ({ yacht, user, locale, currency, startDate, endDate 
       {
         locations: [],
         did: [String(marinaDid)],
-        size: 12,
+        size: POOL_SIZE,
         ...(boatTypes ? { boatTypes } : {}),
         ...(poolPeriod ?? { priceBasis: 'week' as const }),
       },
@@ -123,40 +140,26 @@ const RelatedBoats = async ({ yacht, user, locale, currency, startDate, endDate 
 
   const currentLenFt = yachtLengthFt(yacht.lengthInfo, yacht.length);
 
-  // Other boats within ±5 ft (any length when either is unknown), closest
-  // first; on a dated page the ones offered for exactly that period before
-  // the closest-dates matches.
+  // Other boats within ±5 ft (any length when either is unknown), in this
+  // boat's rotation; on a dated page the ones offered for exactly that period
+  // before the closest-dates matches.
   const pick = (pool: YachtModelShortInfo[], exclude: Set<number>, dated: boolean): YachtModelShortInfo[] =>
-    pool
-      .filter(candidate => candidate.id !== yacht.id && !exclude.has(candidate.id))
-      .filter(candidate => {
-        if (currentLenFt == null) return true;
+    rotateCandidates(
+      pool
+        .filter(candidate => candidate.id !== yacht.id && !exclude.has(candidate.id))
+        .filter(candidate => {
+          if (currentLenFt == null) return true;
 
-        const candidateLenFt = yachtLengthFt(candidate.lengthInfo, candidate.length);
+          const candidateLenFt = yachtLengthFt(candidate.lengthInfo, candidate.length);
 
-        if (candidateLenFt == null) return true;
+          if (candidateLenFt == null) return true;
 
-        return Math.abs(candidateLenFt - currentLenFt) <= TOLERANCE_FT;
-      })
-      .sort((a, b) => {
-        if (dated) {
-          const exact = (boat: YachtModelShortInfo) => (boat.matchKind && boat.matchKind !== MatchKind.EXACT ? 1 : 0);
-          const byPeriod = exact(a) - exact(b);
-
-          if (byPeriod !== 0) return byPeriod;
-        }
-
-        if (currentLenFt == null) return 0;
-
-        const aFt = yachtLengthFt(a.lengthInfo, a.length);
-        const bFt = yachtLengthFt(b.lengthInfo, b.length);
-
-        if (aFt == null) return 1;
-
-        if (bFt == null) return -1;
-
-        return Math.abs(aFt - currentLenFt) - Math.abs(bFt - currentLenFt);
-      });
+          return Math.abs(candidateLenFt - currentLenFt) <= TOLERANCE_FT;
+        }),
+      yacht.id,
+      RELATED_COUNT,
+      candidate => (dated && candidate.matchKind && candidate.matchKind !== MatchKind.EXACT ? 1 : 0)
+    );
 
   // One request for the boat's own type; the marina's whole pool only when
   // that leaves fewer than three — all inside the one 2 s deadline, and no
@@ -167,7 +170,7 @@ const RelatedBoats = async ({ yacht, user, locale, currency, startDate, endDate 
 
     if (!sameTypePool) return { boats: [], failed: true };
 
-    const boats = pick(sameTypePool, new Set(), !!poolPeriod).slice(0, RELATED_COUNT);
+    const boats = pick(sameTypePool, new Set(), !!poolPeriod);
     const remainingMs = deadline - Date.now();
 
     if (boats.length >= RELATED_COUNT || remainingMs < MIN_FILL_MS) return { boats, failed: false };
