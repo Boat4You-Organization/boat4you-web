@@ -4,7 +4,7 @@ import { ItineraryRoute } from '@/types/itinerary.type';
 const sukosanKornatiHvarKorculaVisSkradin14DaysRoute: ItineraryRoute = {
   metaTitle: '14-Day Sukošan–Kornati–Vis–Skradin Yacht Route | Boat4You',
   metaDesc:
-    'Embark on a 14-day yacht charter from Sukosan via Kornati, Hvar, Korčula & Vis to Skradin. Discover hidden bays, UNESCO towns & Adriatic island charm.',
+    'Embark on a 14-day yacht charter from Sukošan via Kornati, Hvar, Korčula & Vis to Skradin. Discover hidden bays, UNESCO towns & Adriatic island charm.',
   id: 'sukosan-kornati-hvar-korcula-vis-skradin-14days-route',
   startingPoint: 'Sukošan',
   otherPoints: ['Kornati', 'Hvar', 'Korčula', 'Vis', 'Skradin'],
@@ -24,13 +24,13 @@ const sukosanKornatiHvarKorculaVisSkradin14DaysRoute: ItineraryRoute = {
     },
     {
       src: '/images/itinerary/croatia/banners/primosten-marina-banner.webp',
-      alt: 'Primosten marina',
+      alt: 'Primošten marina',
     },
   ],
   routeDays: [
     {
       id: 'sukosan-izut',
-      routeFrom: 'Sukosan',
+      routeFrom: 'Sukošan',
       routeTo: 'Island Žut',
       day: 1,
       mapPin: {
@@ -38,7 +38,7 @@ const sukosanKornatiHvarKorculaVisSkradin14DaysRoute: ItineraryRoute = {
         mobile: { left: 28.6, top: 41.8 },
       },
       description:
-        "Starting your journey in Sukosan's peaceful marina, where the Adriatic whispers adventurous promises, Sail to Žut, a rough Kornati gem where cliffs sink into pure silence. Anchor over starfish-dotted seabeds in a remote cove. Snorkel Eat in a lone taverna on brudet (fish stew), the smell of wild sage mixing with salt air as stars cut the inky sky.",
+        "Starting your journey in Sukošan's peaceful marina, where the Adriatic whispers adventurous promises, Sail to Žut, a rough Kornati gem where cliffs sink into pure silence. Anchor over starfish-dotted seabeds in a remote cove. Snorkel Eat in a lone taverna on brudet (fish stew), the smell of wild sage mixing with salt air as stars cut the inky sky.",
       shortDescription:
         "Long 25 nm out of Sukošan straight south to Žut — the largest of the Kornati's outer islands, with quiet anchorages all around. Three small konobe operate seasonally; year-round population is zero.",
       thingsToDo: [
@@ -114,7 +114,7 @@ const sukosanKornatiHvarKorculaVisSkradin14DaysRoute: ItineraryRoute = {
         'Dinner at Konoba Mediteran',
       ],
       mooringTip: 'Marina Kremik (1.5 nm south) is the standard berth — pre-book in summer.',
-      gallery: [{ src: '/images/itinerary/croatia/destinations/primosten.webp', alt: 'Primosten' }],
+      gallery: [{ src: '/images/itinerary/croatia/destinations/primosten.webp', alt: 'Primošten' }],
     },
     {
       id: 'primosten-trogir',
@@ -181,7 +181,7 @@ const sukosanKornatiHvarKorculaVisSkradin14DaysRoute: ItineraryRoute = {
       ],
       mooringTip:
         'ACI Marina Korčula is small — pre-book. Exposed in sirocco — re-anchor or shift to a leeward bay if forecast peaks above 25 kn. Alternative: nearest sheltered marina if conditions deteriorate overnight.',
-      gallery: [{ src: '/images/itinerary/croatia/destinations/korcula.webp', alt: 'Korcula' }],
+      gallery: [{ src: '/images/itinerary/croatia/destinations/korcula.webp', alt: 'Korčula' }],
     },
     {
       id: 'korcula-skrivena-luka-lastovo',
@@ -230,7 +230,7 @@ const sukosanKornatiHvarKorculaVisSkradin14DaysRoute: ItineraryRoute = {
         'Tour the Vis Fishing Museum',
       ],
       mooringTip: 'Komiža harbour is short-stay only; pre-book ACI Marina Vis (other side of the island).',
-      gallery: [{ src: '/images/itinerary/croatia/destinations/komiza.webp', alt: 'Komiza' }],
+      gallery: [{ src: '/images/itinerary/croatia/destinations/komiza.webp', alt: 'Komiža' }],
     },
     {
       id: 'komiza-zlarin',
@@ -323,14 +323,14 @@ const sukosanKornatiHvarKorculaVisSkradin14DaysRoute: ItineraryRoute = {
     {
       id: 'murter-sukosan',
       routeFrom: 'Murter',
-      routeTo: 'Sukosan',
+      routeTo: 'Sukošan',
       day: 14,
       mapPin: {
         desktop: { left: 36.1, top: 38.2 },
         mobile: { left: 36.5, top: 43.4 },
       },
       description:
-        'Sail homeward, stopping to dive in Molat\'s "Moon Craters," buried karst gardens bursting with life. Go back to Sukosan where the lights of the marina shine like ground-based stars. Under an indigo sky, toast your journey with crni rižot, black risotto, the whisper of the Adriatic will always be carried with you.',
+        'Sail homeward, stopping to dive in Molat\'s "Moon Craters," buried karst gardens bursting with life. Go back to Sukošan where the lights of the marina shine like ground-based stars. Under an indigo sky, toast your journey with crni rižot, black risotto, the whisper of the Adriatic will always be carried with you.',
       shortDescription:
         'Final 22 nm leg back along the Pašman channel to Sukošan and Marina Dalmacija — the largest marina in Croatia, ready for the handover. Marina Dalmacija (Sukošan) — pre-confirm berth assignment and fuel slot 24h ahead.',
       thingsToDo: [
@@ -347,7 +347,7 @@ const sukosanKornatiHvarKorculaVisSkradin14DaysRoute: ItineraryRoute = {
     desktop: {
       image: {
         src: '/images/itinerary/croatia/zadar-itinerary/map.webp',
-        alt: 'Sukosan-Kornati-Hvar-Korcula-Vis-Skradin Route Image',
+        alt: 'Sukošan-Kornati-Hvar-Korčula-Vis-Skradin Route Image',
       },
       width: 1350,
       height: 1111,
@@ -355,7 +355,7 @@ const sukosanKornatiHvarKorculaVisSkradin14DaysRoute: ItineraryRoute = {
     mobile: {
       image: {
         src: '/images/itinerary/croatia/zadar-itinerary/mobile-map.webp',
-        alt: 'Sukosan-Kornati-Hvar-Korcula-Vis-Skradin Route Image',
+        alt: 'Sukošan-Kornati-Hvar-Korčula-Vis-Skradin Route Image',
       },
       width: 868,
       height: 1228,

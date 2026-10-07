@@ -70,7 +70,7 @@ Na taj način radimo sav posao umjesto vas – provjeravamo dostupnost, nudimo o
 
 Prednost privatnog čartera je potpuna sloboda i privatnost – sami kreirate itinerar. Nedostatak je što cijelu jahtu trebate pokriti sami (ili s prijateljima/obitelji). Mnogi naši klijenti rado okupe manju grupu i podijele troškove.
 
-Ako ste zainteresirani za kabinski čarter, javite nam se – možemo vas savjetovati o partnerskim operaterima koji nude takve opcije. Povremeno organiziramo i flotile (više brodova koji plove zajedno), što je zabavan način povezivanja s drugim grupama, a ipak zadržavate vlastitu jahtu.
+Ako ste zainteresirani za kabinski čarter, javite nam se – možemo vas savjetovati o partnerskim operaterima koji nude takve opcije. Možemo organizirati i flotile s partnerskim flotama (više brodova koji plove zajedno), što je zabavan način povezivanja s drugim grupama, a ipak zadržavate vlastitu jahtu.
 
 # Dozvole & Uvjeti Jedrenja
 
@@ -138,11 +138,9 @@ Ako trebate odgodu ili podjelu plaćanja – javite nam se, pokušat ćemo prona
 
 Apsolutno. Sigurnost plaćanja i vaš mir su nam izuzetno važni. Kada rezervirate preko **Boat4You**, vaša uplata je zaštićena na nekoliko načina:
 
-**Siguran proces plaćanja**: Bilo da plaćate karticom ili bankovnim transferom, koristimo sigurne, enkriptirane platne sustave i renomirane bankovne partnere. Plaćanja karticom prolaze kroz PCI-kompatibilne procesore, a mi nikada ne pohranjujemo vaše podatke o kartici. Za bankovne transfere pružamo jasne upute kako bi novac stigao na odgovarajući escrow račun.
+**Siguran proces plaćanja**: Bilo da plaćate karticom ili bankovnim transferom, koristimo sigurne, enkriptirane platne sustave i renomirane bankovne partnere. Plaćanja karticom prolaze kroz PCI-kompatibilne procesore, a mi nikada ne pohranjujemo vaše podatke o kartici. Za bankovne transfere pružamo jasne upute kako bi novac stigao na odgovarajući račun.
 
-**Pouzdani trust računi**: U mnogim slučajevima, posebno kod ranih rezervacija, vaša uplata se drži na escrow računu klijenta ili se šalje na račun operatera čartera kao depozit za vaš čarter. Novac ne nestaje u praznini. To znači da su sredstva namijenjena vašem čarteru. **Boat4You** surađuje samo s provjerenim i pouzdanim operaterima flote s kojima imamo dugogodišnje odnose.
-
-**Osiguranje / zaštita sredstava**: **Boat4You** može imati osiguranje u slučaju financijskog neuspjeha ili slične aranžmane za zaštitu vaših sredstava. Na primjer, neke charter agencije surađuju s osiguravajućim grupama kako bi osigurale sve uplate klijenata. Ako imamo takvo partnerstvo, svakako ćemo vas obavijestiti. Ovo osiguranje znači da u malo vjerojatnom slučaju, poput insolventnosti tvrtke, vaš novac je zaštićen i bit će vam nadoknađen.
+**Namjenske uplate**: U mnogim slučajevima, posebno kod ranih rezervacija, vaša uplata se šalje na račun operatera čartera kao depozit za vaš čarter. Novac ne nestaje u praznini. To znači da su sredstva namijenjena vašem čarteru. **Boat4You** surađuje samo s provjerenim i pouzdanim operaterima flote s kojima imamo dugogodišnje odnose.
 
 **Dokumentacija**: Svaka uplata koju izvršite potvrđena je pisanim putem. Dobit ćete račun ili potvrdu. Osim toga, potpisujete čarterski ugovor koji propisuje što se događa s vašim novcem (uvjeti povrata itd.). U tom ugovoru postoje zakonske zaštite za vas kao čarterera.
 
@@ -150,7 +148,7 @@ Apsolutno. Sigurnost plaćanja i vaš mir su nam izuzetno važni. Kada rezervira
 
 Također, preporučujemo (iako nije obavezno) razmisliti o **putnom osiguranju ili osiguranju od otkaza putovanja** koje pokriva vaše uplate za čarter. To je dodatni sloj zaštite – npr. ako nepredviđeni događaj (kao medicinska hitna situacija) prisili otkazivanje izvan uvjeta za povrat, osiguranje može nadoknaditi vaš novac.
 
-Vaše uplate za **Boat4You** su sigurne, zaštićene i osigurane u maksimalnoj mogućoj mjeri. Želimo da se fokusirate na odbrojavanje dana do vašeg odmora na jahti, a ne na brigu o novcu. Ako imate specifične zabrinutosti, slobodno nas kontaktirajte – možemo pružiti detaljnije informacije ili alternativna rješenja za vašu sigurnost.
+Vaše uplate za **Boat4You** su sigurne i zaštićene. Želimo da se fokusirate na odbrojavanje dana do vašeg odmora na jahti, a ne na brigu o novcu. Ako imate specifične zabrinutosti, slobodno nas kontaktirajte – možemo pružiti detaljnije informacije ili alternativna rješenja za vašu sigurnost.
 
 ## Jesu li usluge skipera i posade uključene u cijenu čartera?
 
@@ -158,7 +156,7 @@ Kratki odgovor: **obično nisu**, osim ako ste posebno rezervirali čarter s kom
 
 **Bareboat čarter**: Nema posade (vi ste skiper). Nema dodatnih troškova za posadu.
 
-**Čarter sa skiperom**: Ako zatražite skipera, njegova naknada se dodaje na bareboat cijenu. Naknada se često naplaćuje po danu (npr. 150–200 €/dan, ovisno o lokaciji i kvalifikacijama, plus troškovi opskrbe). Kada vam damo ponudu za čarter sa skiperom, obično ćemo posebno navesti naknadu skipera. Također ste odgovorni za hranu skipera tijekom čartera i, u nekim slučajevima, za rezerviranu kabinu kao ljubaznost.
+**Čarter sa skiperom**: Ako zatražite skipera, njegova naknada se dodaje na bareboat cijenu. Naknada se obično naplaćuje po danu i ovisi o lokaciji i kvalifikacijama; iznos je naveden na stranici svakog broda. Kada vam damo ponudu za čarter sa skiperom, obično ćemo posebno navesti naknadu skipera. Također ste odgovorni za hranu skipera tijekom čartera i, u nekim slučajevima, za rezerviranu kabinu kao ljubaznost.
 
 **Čarter s posadom (jahte s punom posadom)**: Ovdje čarter dolazi s full-time posadom (kapetan, a možda i dodatna posada poput kuhara, hostese, palubara, ovisno o jahti). Za luksuzne posade i gulete, plaće posade su uglavnom uključene u čartersku naknadu. Ne plaćate posadu izravno (osim napojnica). Međutim, stavke poput **APA (Advance Provisioning Allowance)** pokrivaju opskrbu posade i ostale troškove.
 
@@ -233,7 +231,7 @@ Kada planirate budžet čartera, imajte na umu dodatne troškove koji nisu uklju
 
 **Opcionalna dodatna oprema**: Npr. tenderski motor, SUP, kajaci, Wi-Fi (30 €–50 €/tjedan), vodeni sportovi (100 €–200 €/tjedan).
 
-**Naknade skipera ili posade**: Plaća se posebno. Skiper ~150 €/dan (+hrana), hostesa ~130 €/dan itd.
+**Naknade skipera ili posade**: Plaća se posebno. Iznosi za skipera i posadu ovise o lokaciji i navedeni su na stranici svakog broda.
 
 **Damage Waiver osiguranje (opcionalno)**: Plaćate dodatno da smanjite depozit.
 
@@ -460,7 +458,7 @@ Dobro je kontaktirati skipera i predstaviti se. Često skiper prvi kontaktira �
 
 **Upoznavanje u bazi**: Na dan početka, skiper će vas dočekati na jahti ili u uredu. Pomoći će s prtljagom i smještajem.
 
-**Tijekom putovanja**: Skiper je s vama cijeli čarter (osim ako ste ga angažirali samo za dio puta). Vodit će jedrenje i biti vaš “ploveći vodič”. Komunikacija je jednostavna – svi naši skiperi govore engleski, često i lokalni jezik.
+**Tijekom putovanja**: Skiper je s vama cijeli čarter (osim ako ste ga angažirali samo za dio puta). Vodit će jedrenje i biti vaš “ploveći vodič”. Komunikacija je jednostavna – skiperi koje osiguravaju naši partneri govore engleski, često i lokalni jezik.
 
 **Iznošenje preferencija**: Ako imate posebne zahtjeve – npr. “željeli bismo opušteni tempo, puno kupanja” ili “želimo učiti jedrenje” – recite skiperu rano. Skiper će prilagoditi stil.
 

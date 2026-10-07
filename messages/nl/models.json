@@ -18,12 +18,12 @@
     "h1": "Boot huren per model",
     "lede": "De {models, number} modellen met de meeste huurboten bij Boat4You, samen {count, number} boten. Elke modelpagina toont alle boten, hun thuishavens en wat een huurweek doorgaans kost.",
     "brandsLede": "De merken met de meeste charterboten: {brands}.",
-    "chooseHeading": "Hoe u een jachtmodel kiest",
+    "chooseHeading": "Hoe je een jachtmodel kiest",
     "choose1": "Begin bij de bemanning. Een hut per stel plus één voor de schipper of de bagage is de comfortabele regel: een zeiljacht van 40 voet met drie hutten past bij vier tot zes personen, een catamaran van 45 voet met vier hutten neemt er acht mee zonder dat iemand in de salon slaapt. Het aantal slaapplaatsen in een advertentie telt de salonbanken mee – vergelijk dus hutten, geen slaapplaatsen.",
     "choose2": "Dan het type. Een eenrompsjacht zeilt beter aan de wind en kost minder per week; een catamaran biedt tweemaal zoveel dek, een vlak platform voor anker en weinig diepgang voor de baaien, tegen een hogere weekprijs en hoger havengeld. Motorjachten leggen meer mijlen per dag af en voegen brandstof toe aan het budget; gulets en boten met bemanning maken van de week een verzorgde vakantie.",
     "choose3": "Kijk naar het bouwjaar en de generatie van het model. Een modelnaam dekt boten die over tien jaar of langer zijn gebouwd, en de eigenaarsversies van een ontwerp hebben vaak grotere natte cellen, betere ventilatie en moderne elektronica. Een boot van drie jaar oud van een bewezen model is meestal de beste koop: nieuwer dan de meeste charterboten, goedkoper dan de nieuwste generatie.",
     "choose4": "Controleer ten slotte waar het model ligt. Elke modelpagina toont elke boot met thuishaven, bouwjaar en een typische weekprijs, zodat een Lagoon 42 in Split en een in Athene direct te vergelijken zijn. Liggen twee modellen dicht bij elkaar, dan helpen de routes en de prijsgidsen per land om te beslissen op vaargebied en maand.",
-    "choose5": "Wat de modelpagina's tonen. Elke modelpagina brengt de boten van dat model op één plek samen: hoeveel er te huur zijn, hun bases per land, de bouwjaren, de indelingen van hutten en slaapplaatsen en de typische weekprijs met zijn bandbreedte, alles berekend uit de actuele advertenties. Een korte FAQ beantwoordt de vragen die gasten het vaakst over het model stellen. Gebruik de merkpagina's hierboven om tussen de modellen van één werf te wisselen, en het vlootoverzicht wanneer u liever elke boot afzonderlijk bekijkt dan een model."
+    "choose5": "Wat de modelpagina's tonen. Elke modelpagina brengt de boten van dat model op één plek samen: hoeveel er te huur zijn, hun bases per land, de bouwjaren, de indelingen van hutten en slaapplaatsen en de typische weekprijs met zijn bandbreedte, alles berekend uit de actuele advertenties. Een korte FAQ beantwoordt de vragen die gasten het vaakst over het model stellen. Gebruik de merkpagina's hierboven om tussen de modellen van één werf te wisselen, en het vlootoverzicht wanneer je liever elke boot afzonderlijk bekijkt dan een model."
   },
   "brand": {
     "h1": "{brand} huren",
@@ -59,7 +59,7 @@
     "specBuildYears": "Bouwjaren",
     "lengthValue": "{m} m ({ft} ft)",
     "specNote": "Hutten, max. personen aan boord en lengte tonen het gebruikelijke bereik van de aangeboden {model} boten, zonder zeldzame uitschieters in partnergegevens. Slaapplaatsen en toiletten: de meest voorkomende indeling.",
-    "whereHeading": "Waar u een {model} kunt huren",
+    "whereHeading": "Waar je een {model} kunt huren",
     "whereCountry": "Land",
     "whereBoats": "Boten",
     "whereBases": "Belangrijkste havens",

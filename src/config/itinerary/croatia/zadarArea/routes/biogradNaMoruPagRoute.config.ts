@@ -21,7 +21,7 @@ const biogradNaMoruPagRoute: ItineraryRoute = {
     { src: '/images/itinerary/croatia/banners/pag-banner.webp', alt: 'Pag' },
     {
       src: '/images/itinerary/croatia/banners/primosten-marina-banner.webp',
-      alt: 'Primosten marina',
+      alt: 'Primošten marina',
     },
   ],
   routeDays: [

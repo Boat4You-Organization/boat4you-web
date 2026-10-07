@@ -68,13 +68,13 @@ Und denken Sie daran, dass die Anforderung eines Angebots oder das Stellen von F
 
 ## Bieten Sie Kabinen-Charter an oder kann ich mich einer bestehenden Gruppe anschließen?
 
-**Boat4You** ist auf **private Yacht-Charter** spezialisiert, was bedeutet, dass wir die gesamte Yacht an Sie und Ihre Gruppe verchartern – sei es als Bareboat (Sie segeln selbst) oder mit einem engagierten Skipper/Crew. Wir bieten derzeit **keine "Kabinen-Charter"** an, bei denen Sie nur eine Kabine auf einer geteilten Yacht mit Fremden buchen. Alle unsere Charter sind für das **gesamte Schiff**.
+**Boat4You** ist auf **private Yacht-Charter** spezialisiert, was bedeutet, dass die gesamte Yacht an Sie und Ihre Gruppe verchartert wird – sei es als Bareboat (Sie segeln selbst) oder mit einem engagierten Skipper/Crew. Wir bieten derzeit **keine "Kabinen-Charter"** an, bei denen Sie nur eine Kabine auf einer geteilten Yacht mit Fremden buchen. Alle Charter über Boat4You gelten für das **gesamte Schiff**.
 
 Wenn Sie ein Alleinreisender oder ein Paar sind, das sich anderen anschließen möchte, bedeutet dies, dass Sie Ihre eigene Gruppe für einen privaten Charter bilden müssten. Wir verstehen, dass es in einigen Destinationen Kabinen-Charter-Optionen gibt (zum Beispiel bieten einige Unternehmen Kreuzfahrten oder Flottillen mit Kabinenbuchung an), aber der Fokus von **Boat4You** liegt auf vollständig privaten Erlebnissen.
 
 Der Vorteil ist, dass Sie die gesamte Yacht für sich allein haben und völlige Freiheit bei der Gestaltung Ihrer Reiseroute. Der Nachteil ist, dass Sie genügend Personen (oder Budget) benötigen, um die gesamte Yacht zu mieten. Viele unserer Kunden stellen eine kleine Gruppe von Freunden oder Familienmitgliedern zusammen, um die Kosten und das Erlebnis zu teilen.
 
-Nichtsdestotrotz, wenn Sie an einem Kabinen-Charter interessiert sind, lassen Sie es uns wissen – wir können Sie beraten, ob es Partnerbetreiber oder Kreuzfahrten gibt, die Ihren Vorstellungen entsprechen. Andernfalls sollten Sie in Betracht ziehen, einige gleichgesinnte Freunde einzuladen, sich Ihrer Reise anzuschließen! Gelegentlich organisieren wir auch **Flottillen** (mehrere Boote, die zusammen segeln), was nicht dasselbe ist wie Fremde, die sich ein Boot teilen, aber es ist eine unterhaltsame Möglichkeit für kleinere Gruppen, in Gesellschaft zu segeln und andere kennenzulernen, während sie ihr eigenes Boot behalten.
+Nichtsdestotrotz, wenn Sie an einem Kabinen-Charter interessiert sind, lassen Sie es uns wissen – wir können Sie beraten, ob es Partnerbetreiber oder Kreuzfahrten gibt, die Ihren Vorstellungen entsprechen. Andernfalls sollten Sie in Betracht ziehen, einige gleichgesinnte Freunde einzuladen, sich Ihrer Reise anzuschließen! Wir können auch **Flottillen** mit Partnerflotten arrangieren (mehrere Boote, die zusammen segeln), was nicht dasselbe ist wie Fremde, die sich ein Boot teilen, aber es ist eine unterhaltsame Möglichkeit für kleinere Gruppen, in Gesellschaft zu segeln und andere kennenzulernen, während sie ihr eigenes Boot behalten.
 
 Zusammenfassend bietet **Boat4You** nur **Charter für die gesamte Yacht** an (Bareboat, Skipper oder Crew), keine Buchungen pro Kabine. Dies gewährleistet ein personalisiertes Erlebnis, das auf die Präferenzen Ihrer Gruppe zugeschnitten ist.
 
@@ -92,7 +92,7 @@ Auch wenn Sie Segelerfahrung haben, sich aber in bestimmten Aspekten unsicher f�
 
 **Was macht ein Skipper?** Ein Skipper kümmert sich um die Navigation, das Segeln und das Manövrieren der Yacht. Er ist auch ein lokaler Experte, der Sie zu den besten Plätzen führen kann (er kennt jene versteckten Buchten und besten Ankerplätze, die nicht in Reiseführern stehen). Dieses lokale Wissen kann Ihre Reise erheblich bereichern. Außerdem wird Ihr Charter mit einem Skipper an Bord sehr entspannend – kein Stress mit Routen, Wetter oder dem Parken des Bootes, da der Skipper sich darum kümmert. Sie und Ihre Freunde/Familie können sich auf Schwimmen, Sonnenbaden und das Genießen der Reise konzentrieren.
 
-**Zusammenfassend**: Wenn Sie qualifiziert und zuversichtlich sind, können Sie die Yacht gerne selbst steuern – das ist die Essenz eines Bareboat-Charters. Wenn nicht, oder wenn Sie einfach nur entspannt zurücklehnen möchten, können Sie über **Boat4You** einen professionellen Skipper engagieren. Wir stellen freundliche, erfahrene Skipper zur Verfügung, die Englisch (und oft andere Sprachen) sprechen und für das Gebiet lizenziert sind. Es liegt ganz bei Ihnen, und wir unterstützen beide Optionen. Der Schlüssel ist Sicherheit und Freude; wir helfen Ihnen bei der Entscheidung basierend auf Ihrem Erfahrungsniveau und Wohlbefinden.
+**Zusammenfassend**: Wenn Sie qualifiziert und zuversichtlich sind, können Sie die Yacht gerne selbst steuern – das ist die Essenz eines Bareboat-Charters. Wenn nicht, oder wenn Sie einfach nur entspannt zurücklehnen möchten, können Sie über **Boat4You** einen professionellen Skipper engagieren. Unsere Partner stellen freundliche, erfahrene Skipper zur Verfügung, die Englisch (und oft andere Sprachen) sprechen und für das Gebiet lizenziert sind. Es liegt ganz bei Ihnen, und wir unterstützen beide Optionen. Der Schlüssel ist Sicherheit und Freude; wir helfen Ihnen bei der Entscheidung basierend auf Ihrem Erfahrungsniveau und Wohlbefinden.
 
 _Noch ein Hinweis: Für diejenigen, die ein umfassendes Verwöhnerlebnis wünschen, sollten Sie einen **Crewed Charter** in Betracht ziehen. Das bedeutet nicht nur einen Skipper, sondern möglicherweise einen Koch und zusätzliche Besatzung, die sich um alle Aspekte der Yacht kümmern. Dies ist bei Luxusyachten oder Gulet-Chartern üblich. Bei einem Crewed Charter müssen Sie sich definitiv keine Sorgen um das Segeln des Bootes machen – es wird alles von Profis erledigt, wie in einem privaten schwimmenden Hotel._
 
@@ -190,7 +190,7 @@ Wir akzeptieren **Banküberweisungen** und **gängige Kredit-/Debitkarten** für
 
 **Währungen**: **Boat4You** kann Zahlungen oft in verschiedenen Währungen (USD, EUR usw.) akzeptieren, abhängig von der Buchung. Wir werden Ihnen den Preis normalerweise in einer logischen Währung nennen – zum Beispiel Charter in Europa typischerweise in Euro, Karibik-Charter oft in USD. Wenn Sie es vorziehen, in einer bestimmten Währung oder über eine bestimmte Methode zu bezahlen, fragen Sie einfach nach, und wir werden unser Bestes tun, um dies zu ermöglichen.
 
-Alle von Ihnen getätigten Zahlungen werden mit einer Quittung dokumentiert und die Gelder werden gemäß unseren Vereinbarungen treuhänderisch verwahrt oder an den Charterbetreiber weitergeleitet. Nach Eingang der Abschlusszahlung stellen wir Ihnen einen Boarding-Gutschein oder ein Charter-Ticket zur Vorlage in der Marina sowie alle weiteren Anweisungen zur Verfügung, die Sie für das Check-in benötigen.
+Alle von Ihnen getätigten Zahlungen werden mit einer Quittung dokumentiert und die Gelder werden gemäß unseren Vereinbarungen an den Charterbetreiber weitergeleitet. Nach Eingang der Abschlusszahlung stellen wir Ihnen einen Boarding-Gutschein oder ein Charter-Ticket zur Vorlage in der Marina sowie alle weiteren Anweisungen zur Verfügung, die Sie für das Check-in benötigen.
 
 _Randnotiz: Wir verstehen, dass sich Pläne manchmal ändern – wenn Sie eine kurze Verlängerung einer Zahlungsfrist oder eine geteilte Zahlungsvereinbarung benötigen, sprechen Sie mit uns. Wir legen Wert darauf, flexibel und verständnisvoll mit unseren Kunden umzugehen, im Rahmen des Zumutbaren._
 
@@ -198,11 +198,9 @@ _Randnotiz: Wir verstehen, dass sich Pläne manchmal ändern – wenn Sie eine k
 
 Absolut. Wir nehmen die Zahlungssicherheit und Ihre Ruhe sehr ernst. Wenn Sie bei **Boat4You** buchen, sind Ihre Zahlungen auf verschiedene Weise geschützt:
 
-**Sicherer Zahlungsprozess**: Egal, ob Sie mit Kreditkarte oder Banküberweisung bezahlen, wir verwenden sichere, verschlüsselte Zahlungsgateways und seriöse Bankpartner. Kreditkartenzahlungen erfolgen über PCI-konforme Zahlungsabwickler, und wir speichern Ihre Karteninformationen niemals direkt. Für Banküberweisungen stellen wir klare Anweisungen bereit, um sicherzustellen, dass das Geld auf das korrekte Treuhandkonto gelangt.
+**Sicherer Zahlungsprozess**: Egal, ob Sie mit Kreditkarte oder Banküberweisung bezahlen, wir verwenden sichere, verschlüsselte Zahlungsgateways und seriöse Bankpartner. Kreditkartenzahlungen erfolgen über PCI-konforme Zahlungsabwickler, und wir speichern Ihre Karteninformationen niemals direkt. Für Banküberweisungen stellen wir klare Anweisungen bereit, um sicherzustellen, dass das Geld auf das richtige Konto gelangt.
 
-**Etablierte Treuhandkonten**: In vielen Fällen, insbesondere bei Frühbuchungen, wird Ihre Zahlung auf einem Kunden-Treuhandkonto gehalten oder als Anzahlung für Ihren Charter an das Konto des Charterbetreibers gesendet. Sie verschwindet nicht im Nichts. Das bedeutet, dass die Gelder für Ihre Charterdienstleistung zweckgebunden sind. **Boat4You** arbeitet nur mit geprüften, zuverlässigen Flottenbetreibern zusammen, zu denen wir langjährige Beziehungen pflegen.
-
-**Versicherung/Schutz der Gelder**: **Boat4You** verfügt möglicherweise über eine Insolvenzversicherung oder ähnliche Vorkehrungen zum Schutz Ihrer Gelder. Einige Charteragenturen arbeiten beispielsweise mit Versicherungsgruppen zusammen, um alle Kundenzahlungen zu versichern. Wenn wir eine solche Partnerschaft haben, werden wir Sie selbstverständlich informieren. Diese Versicherung bedeutet, dass im unwahrscheinlichen Fall einer Unternehmensinsolvenz Ihr Geld gedeckt ist und Sie entschädigt würden.
+**Zweckgebundene Zahlungen**: In vielen Fällen, insbesondere bei Frühbuchungen, wird Ihre Zahlung als Anzahlung für Ihren Charter an das Konto des Charterbetreibers gesendet. Sie verschwindet nicht im Nichts. Das bedeutet, dass die Gelder für Ihre Charterdienstleistung zweckgebunden sind. **Boat4You** arbeitet nur mit geprüften, zuverlässigen Flottenbetreibern zusammen, zu denen wir langjährige Beziehungen pflegen.
 
 **Dokumentation**: Jede von Ihnen getätigte Zahlung wird schriftlich bestätigt. Sie erhalten eine Rechnung oder Quittung. Zusätzlich unterzeichnen Sie einen Chartervertrag, der festlegt, was mit Ihrem Geld geschieht (wie Rückerstattungsbedingungen usw.). Dieser Vertrag enthält rechtliche Schutzmaßnahmen für Sie als Charterer.
 
@@ -210,7 +208,7 @@ Absolut. Wir nehmen die Zahlungssicherheit und Ihre Ruhe sehr ernst. Wenn Sie be
 
 Darüber hinaus empfehlen wir (obwohl es optional ist), eine **Reiseversicherung oder eine Reiserücktrittsversicherung** in Betracht zu ziehen, die Ihre Charterzahlungen abdeckt. Dies ist eine zusätzliche Schutzschicht – wenn Sie beispielsweise ein unvorhergesehenes Ereignis (wie ein medizinischer Notfall) außerhalb des Rückerstattungsfensters zur Stornierung zwingt, könnte Ihre Reiseversicherung Ihnen die Kosten erstatten.
 
-Ihre Zahlungen an **Boat4You** sind sicher, geschützt und im größtmöglichen Umfang versichert. Wir möchten, dass Sie sich darauf konzentrieren, die Tage bis zu Ihrem Yachturlaub zu zählen, und sich nicht um Geldüberweisungen sorgen. Wenn Sie spezifische Bedenken hinsichtlich der Zahlungssicherheit haben, lassen Sie es uns bitte wissen – wir können Ihnen noch detailliertere Informationen oder alternative Lösungen anbieten, damit Sie sich wohl fühlen.
+Ihre Zahlungen an **Boat4You** sind sicher und geschützt. Wir möchten, dass Sie sich darauf konzentrieren, die Tage bis zu Ihrem Yachturlaub zu zählen, und sich nicht um Geldüberweisungen sorgen. Wenn Sie spezifische Bedenken hinsichtlich der Zahlungssicherheit haben, lassen Sie es uns bitte wissen – wir können Ihnen noch detailliertere Informationen oder alternative Lösungen anbieten, damit Sie sich wohl fühlen.
 
 ## Sind Skipper- und Crew-Dienstleistungen im Charterpreis enthalten?
 
@@ -218,7 +216,7 @@ Die kurze Antwort lautet: **normalerweise nicht**, es sei denn, Sie haben ausdr�
 
 **Bareboat-Charter**: Keine Crew inbegriffen (Sie sind der Skipper). Daher keine zusätzlichen Kosten für die Crew im Preis.
 
-**Skipper-Charter**: Wenn Sie einen Skipper anfordern, wird die Skipper-Gebühr zusätzlich zum Bareboat-Preis berechnet. Skipper-Gebühren werden oft pro Tag berechnet (z. B. 150 €–200 € pro Tag, abhängig von Standort und Qualifikationen, zuzüglich Verpflegung). Wenn wir Ihnen ein Angebot für einen Skipper-Charter machen, werden wir die Skipper-Gebühr normalerweise separat aufschlüsseln, damit sie klar ersichtlich ist. Sie sind auch für die Verpflegung des Skippers während des Charters und in einigen Fällen höflicherweise für eine ausgewiesene Kabine für ihn verantwortlich.
+**Skipper-Charter**: Wenn Sie einen Skipper anfordern, wird die Skipper-Gebühr zusätzlich zum Bareboat-Preis berechnet. Skipper-Gebühren werden meist pro Tag berechnet und hängen von Standort und Qualifikationen ab; der Tarif ist auf der Seite jedes Bootes angegeben. Wenn wir Ihnen ein Angebot für einen Skipper-Charter machen, werden wir die Skipper-Gebühr normalerweise separat aufschlüsseln, damit sie klar ersichtlich ist. Sie sind auch für die Verpflegung des Skippers während des Charters und in einigen Fällen höflicherweise für eine ausgewiesene Kabine für ihn verantwortlich.
 
 **Crewed Charter (voll ausgestattete Yachten mit Besatzung)**: Dies ist das Szenario, in dem der Charter mit einer Vollzeit-Crew (Kapitän und möglicherweise zusätzliche Crew wie ein Koch, eine Hostess, ein Deckhelfer, abhängig von der Yacht) geliefert wird. Bei luxuriösen Crewed Yachten und Gulets sind die Gehälter der Crew im Allgemeinen in der Chartergebühr enthalten. Sie bezahlen die Crew nicht direkt (außer Trinkgeldern am Ende). Allerdings decken Dinge wie **APA (Advance Provisioning Allowance)** die Verpflegung und andere Ausgaben der Crew ab.
 
@@ -301,7 +299,7 @@ Bei der Planung Ihres Charterbudgets ist es wichtig, die Ausgaben zu berücksich
 
 **Optionale Extras (Ausrüstung/Spielzeug)**: Viele Yachten bieten optionale Extras an. Zum Beispiel: Außenbordmotor für das Beiboot, Stand-Up-Paddleboards, Kajaks, Angelausrüstung, WLAN-Geräte usw. Dafür fallen zusätzliche Mietgebühren an. WLAN könnte beispielsweise **30 €–50 €/Woche** für einen Router auf einem Bareboat kosten. Wasserspielzeug kann zwischen **100 €–200 € pro Stück pro Woche** liegen.
 
-**Skipper- oder Crew-Gebühren**: Wenn Sie einen Skipper, eine Hostess, einen Koch usw. engagieren, werden diese separat bezahlt. Ein Skipper kostet grob **150 €/Tag** (plus Verpflegung), eine Hostess vielleicht **130 €/Tag** usw., obwohl die Preise je nach Standort variieren.
+**Skipper- oder Crew-Gebühren**: Wenn Sie einen Skipper, eine Hostess, einen Koch usw. engagieren, werden diese separat bezahlt. Die Tarife für Skipper und Crew variieren je nach Standort und sind auf der Seite jedes Bootes angegeben.
 
 **Schadensverzicht-Versicherung (Optional)**: In einigen Fällen entscheiden Sie sich möglicherweise für eine nicht erstattungsfähige Versicherung anstelle einer großen Sicherheitskaution. Zum Beispiel zahlen Sie **250 €**, um Ihre Sicherheitskaution von 3000 € auf 500 € zu reduzieren. Diese 250 € sind zusätzliche Kosten (und werden nicht zurückerstattet), begrenzen aber Ihre Haftung.
 
@@ -564,7 +562,7 @@ Es steht Ihnen selbstverständlich frei, sich zu diesem Zeitpunkt zu melden und 
 
 **Treffen an der Basis**: Am Starttag wartet der Skipper entweder an der Yacht oder trifft Sie im Büro des Charterunternehmens. Normalerweise sind sie etwas vor der vereinbarten Boarding-Zeit da. Sobald Sie ankommen, werden Sie sie erkennen (manchmal können wir ein Foto teilen). Sie werden Ihnen mit dem Gepäck und beim Einleben helfen.
 
-**Während der Reise**: Der Skipper ist während des gesamten Charters bei Ihnen (es sei denn, Sie haben einen Skipper nur für ein paar Tage arrangiert). Er bleibt an Bord, verwaltet das Segeln und ist im Grunde Ihr schwimmender Reiseführer/Kapitän. Alle unsere Skipper sprechen Englisch (und oft andere Sprachen), sodass die Kommunikation reibungslos verlaufen sollte.
+**Während der Reise**: Der Skipper ist während des gesamten Charters bei Ihnen (es sei denn, Sie haben einen Skipper nur für ein paar Tage arrangiert). Er bleibt an Bord, verwaltet das Segeln und ist im Grunde Ihr schwimmender Reiseführer/Kapitän. Die Skipper unserer Partner sprechen Englisch (und oft andere Sprachen), sodass die Kommunikation reibungslos verlaufen sollte.
 
 **Präferenz-Kommunikation**: Wenn Sie spezifische Erwartungen haben – z. B. „Wir wollen ein sehr entspanntes Tempo, viele Badestopps“ oder „Wir sind daran interessiert, Segeln von Ihnen zu lernen“ – ist es gut, dies dem Skipper frühzeitig mitzuteilen. Er kann seinen Stil anpassen. Wenn Ihnen etwas nicht gefällt, ist höfliche Kommunikation der Schlüssel; diese Skipper sind in der Regel sehr anpassungsfähig.
 
@@ -572,7 +570,7 @@ Es steht Ihnen selbstverständlich frei, sich zu diesem Zeitpunkt zu melden und 
 
 **Kommunikations-Apps**: Viele Skipper verwenden **WhatsApp**. Dies ist eine praktische Möglichkeit, vor und sogar während der Reise zu kommunizieren. Wir empfehlen Ihnen daher, WhatsApp auf Ihrem Telefon zu haben; wir haben festgestellt, dass es bei internationalen Crews universell verwendet wird.
 
-**Sprache und Ortskenntnisse**: Unsere Skipper sprechen Englisch und oft auch die lokale Sprache der Region. Sie verfügen über umfassende Ortskenntnisse – wir wählen Skipper, die mit der Region vertraut sind. Fühlen Sie sich also frei, sie nach der besten geheimen Bucht oder einem guten Restaurant an Land zu fragen. Sie teilen gerne Tipps.
+**Sprache und Ortskenntnisse**: Die Skipper sprechen Englisch und oft auch die lokale Sprache der Region. Sie verfügen über umfassende Ortskenntnisse – die Partner setzen Skipper ein, die mit der Region vertraut sind. Fühlen Sie sich also frei, sie nach der besten geheimen Bucht oder einem guten Restaurant an Land zu fragen. Sie teilen gerne Tipps.
 
 Sie werden Ihrem Skipper kurz nach der Buchungsbestätigung vorgestellt und können ihn kontaktieren, sobald Ihre Buchung abgeschlossen ist – auf jeden Fall, wenn Sie vollständig bezahlt haben und sich auf die Reise vorbereiten. Bis zum Beginn des Charters werden Sie entweder gesprochen oder zumindest getextet haben. Und dann werden Sie sich bei der Einschiffung von Angesicht zu Angesicht treffen und die Reise gemeinsam beginnen.
 

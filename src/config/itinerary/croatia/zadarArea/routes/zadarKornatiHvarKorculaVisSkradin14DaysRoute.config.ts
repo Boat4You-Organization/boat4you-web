@@ -24,7 +24,7 @@ const zadarKornatiHvarKorculaVisSkradin14DaysRoute: ItineraryRoute = {
     },
     {
       src: '/images/itinerary/croatia/banners/primosten-marina-banner.webp',
-      alt: 'Primosten marina',
+      alt: 'Primošten marina',
     },
   ],
   routeDays: [
@@ -116,7 +116,7 @@ const zadarKornatiHvarKorculaVisSkradin14DaysRoute: ItineraryRoute = {
         'Dinner at Konoba Mediteran',
       ],
       mooringTip: 'Marina Kremik (1.5 nm south) is the standard berth — pre-book in summer.',
-      gallery: [{ src: '/images/itinerary/croatia/destinations/primosten.webp', alt: 'Primosten' }],
+      gallery: [{ src: '/images/itinerary/croatia/destinations/primosten.webp', alt: 'Primošten' }],
     },
     {
       id: 'primosten-trogir',
@@ -184,7 +184,7 @@ const zadarKornatiHvarKorculaVisSkradin14DaysRoute: ItineraryRoute = {
       ],
       mooringTip:
         'ACI Marina Korčula is small — pre-book. Stari Grad on Hvar offers an alternative if Korčula is full.',
-      gallery: [{ src: '/images/itinerary/croatia/destinations/korcula.webp', alt: 'Korcula' }],
+      gallery: [{ src: '/images/itinerary/croatia/destinations/korcula.webp', alt: 'Korčula' }],
     },
     {
       id: 'korcula-skrivena-luka-lastovo',
@@ -234,7 +234,7 @@ const zadarKornatiHvarKorculaVisSkradin14DaysRoute: ItineraryRoute = {
       ],
       mooringTip:
         'Komiža harbour is short-stay only; pre-book ACI Marina Vis (other side of the island) for a safer overnight.',
-      gallery: [{ src: '/images/itinerary/croatia/destinations/komiza.webp', alt: 'Komiza' }],
+      gallery: [{ src: '/images/itinerary/croatia/destinations/komiza.webp', alt: 'Komiža' }],
     },
     {
       id: 'komiza-zlarin',
@@ -351,7 +351,7 @@ const zadarKornatiHvarKorculaVisSkradin14DaysRoute: ItineraryRoute = {
     desktop: {
       image: {
         src: '/images/itinerary/croatia/zadar-itinerary/map.webp',
-        alt: 'Zadar-Kornati-Hvar-Korcula-Vis-Skradin Route Image',
+        alt: 'Zadar-Kornati-Hvar-Korčula-Vis-Skradin Route Image',
       },
       width: 1350,
       height: 1111,
@@ -359,7 +359,7 @@ const zadarKornatiHvarKorculaVisSkradin14DaysRoute: ItineraryRoute = {
     mobile: {
       image: {
         src: '/images/itinerary/croatia/zadar-itinerary/mobile-map.webp',
-        alt: 'Zadar-Kornati-Hvar-Korcula-Vis-Skradin Route Image',
+        alt: 'Zadar-Kornati-Hvar-Korčula-Vis-Skradin Route Image',
       },
       width: 868,
       height: 1228,

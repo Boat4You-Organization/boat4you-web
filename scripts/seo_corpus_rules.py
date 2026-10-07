@@ -79,8 +79,13 @@ def squash(text):
     return re.sub(r'\s+', ' ', text).strip()
 
 
+# A real tag starts with a letter, "/" or "!": a literal "<" in the text ("(< 3 knopen)", "(<8)") is
+# not a tag, and reading it as one used to drop the rest of the paragraph from every check (7.10.2026).
+TAG = re.compile(r'<[A-Za-z/!][^>]*>')
+
+
 def plain(fragment):
-    return squash(html.unescape(re.sub(r'<[^>]+>', ' ', fragment)))
+    return squash(html.unescape(TAG.sub(' ', fragment)))
 
 
 def split_body(src):
@@ -3082,6 +3087,15 @@ def _sentences(text):
     return re.split(r'(?<=[.!?])\s+', text)
 
 
+# The NL and PL sites speak to the reader informally (je/jouw, Ty/Twój) since
+# 6.10.2026 (R49); a formal "u/uw" or "Państwo/Proszę" in the corpus is a
+# register slip. "km/u", "U-vormig" and "U.S." are not the pronoun.
+FORMAL_REGISTER = {
+    'nl': re.compile(r'(?<![\w/-])(?:[Uu]|[Uu]w|[Uu]we|[Uu]zelf)(?![\w-])(?!\.\w)'),
+    'pl': re.compile(r'\bPaństw(?:o|a|u|em)\b|\b[Pp]roszę\s+\w+ć\b'),
+}
+
+
 def independent_checks(body, locale, text):
     out = []
     for rx in CLAIM_DENY['all'] + CLAIM_DENY.get(locale, []):
@@ -3136,6 +3150,10 @@ def independent_checks(body, locale, text):
                     break
         if ACI_SPLIT_SUPERLATIVE.search(sentence):
             out.append(('aci-split', sentence[:200]))
+    register = FORMAL_REGISTER.get(locale)
+    if register:
+        for m in register.finditer(text):
+            out.append(('register', text[max(0, m.start() - 60): m.end() + 60]))
     lang = language_of(text)
     if lang and lang != locale and not (locale in ('es', 'pt') and lang in ('es', 'pt')):
         out.append(('wrong-language', f'text reads as {lang}'))

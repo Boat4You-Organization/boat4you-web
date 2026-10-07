@@ -18,7 +18,7 @@ const biogradVisHvarSoltaRoute: ItineraryRoute = {
       src: '/images/itinerary/croatia/banners/golden-horn-brac-banner-large.webp',
       alt: 'Golden horn brac',
     },
-    { src: '/images/itinerary/croatia/banners/korcula-banner.webp', alt: 'Korcula' },
+    { src: '/images/itinerary/croatia/banners/korcula-banner.webp', alt: 'Korčula' },
     { src: '/images/itinerary/croatia/banners/stiniva-bay-banner.webp', alt: 'Stiniva bay' },
   ],
   routeDays: [
@@ -66,7 +66,7 @@ const biogradVisHvarSoltaRoute: ItineraryRoute = {
       ],
       mooringTip:
         'Marina Kremik (1.5 nm south) is the standard berth — pre-book in summer. Anchor in nearby Garma cove on sand at 5-7 m.',
-      gallery: [{ src: '/images/itinerary/croatia/destinations/primosten.webp', alt: 'Primosten' }],
+      gallery: [{ src: '/images/itinerary/croatia/destinations/primosten.webp', alt: 'Primošten' }],
     },
     {
       id: 'primosten-komiza',
@@ -89,7 +89,7 @@ const biogradVisHvarSoltaRoute: ItineraryRoute = {
       ],
       mooringTip:
         'Komiža harbour is short-stay only; pre-book ACI Marina Vis (other side of the island) for a safer overnight.',
-      gallery: [{ src: '/images/itinerary/croatia/destinations/komiza.webp', alt: 'Komiza' }],
+      gallery: [{ src: '/images/itinerary/croatia/destinations/komiza.webp', alt: 'Komiža' }],
     },
     {
       id: 'komiza-hvar-town',

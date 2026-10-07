@@ -149,7 +149,7 @@ const dubrovnikHvarLastovoKorculaRoute: ItineraryRoute = {
       ],
       mooringTip:
         'ACI Marina Korčula on the eastern side is the all-weather option — lazy lines, water, power, full services. Town quay on the western side accepts stern-to with own anchor but is exposed to W Maestral; rolly after 14:00 in summer. If the channel turns rough, the sheltered alternative is Lumbarda Bay 3 nm southeast.',
-      gallery: [{ src: '/images/itinerary/croatia/destinations/korcula.webp', alt: 'Korcula' }],
+      gallery: [{ src: '/images/itinerary/croatia/destinations/korcula.webp', alt: 'Korčula' }],
     },
     {
       id: 'korcula-kobas-peljesac-peninsula',

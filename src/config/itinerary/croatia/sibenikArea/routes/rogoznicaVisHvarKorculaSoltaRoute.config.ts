@@ -15,7 +15,7 @@ const rogoznicaVisHvarKorculaSoltaRoute: ItineraryRoute = {
   gallery: [
     { src: '/images/itinerary/croatia/banners/hvar-banner-large.webp', alt: 'Hvar' },
     { src: '/images/itinerary/croatia/banners/golden-horn-brac-banner-large.webp', alt: 'Golden horn brac' },
-    { src: '/images/itinerary/croatia/banners/korcula-banner.webp', alt: 'Korcula' },
+    { src: '/images/itinerary/croatia/banners/korcula-banner.webp', alt: 'Korčula' },
     { src: '/images/itinerary/croatia/banners/stiniva-bay-banner.webp', alt: 'Stiniva bay' },
   ],
   routeDays: [
@@ -59,7 +59,7 @@ const rogoznicaVisHvarKorculaSoltaRoute: ItineraryRoute = {
       ],
       mooringTip:
         'Stern-to with own anchor on the inner basin of Komiža town quay. If SW gradient above 15 kn, push 6 nm north to Vis Town in St. George Bay.',
-      gallery: [{ src: '/images/itinerary/croatia/destinations/komiza.webp', alt: 'Komiza' }],
+      gallery: [{ src: '/images/itinerary/croatia/destinations/komiza.webp', alt: 'Komiža' }],
     },
     {
       id: 'komiza-bisevo-budihovac-vis',
@@ -171,7 +171,7 @@ const rogoznicaVisHvarKorculaSoltaRoute: ItineraryRoute = {
     desktop: {
       image: {
         src: '/images/itinerary/croatia/split-dubrovnik-itinerary/map.webp',
-        alt: 'Rogoznica – Vis – Hvar – Korcula – Solta Route Image',
+        alt: 'Rogoznica – Vis – Hvar – Korčula – Šolta Route Image',
       },
       width: 2422,
       height: 1550,
@@ -179,7 +179,7 @@ const rogoznicaVisHvarKorculaSoltaRoute: ItineraryRoute = {
     mobile: {
       image: {
         src: '/images/itinerary/croatia/split-dubrovnik-itinerary/mobile-map.webp',
-        alt: 'Rogoznica – Vis – Hvar – Korcula – Solta Route Image',
+        alt: 'Rogoznica – Vis – Hvar – Korčula – Šolta Route Image',
       },
       width: 1144,
       height: 1354,

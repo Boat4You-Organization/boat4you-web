@@ -21,13 +21,13 @@ const sukosanPagRoute: ItineraryRoute = {
     { src: '/images/itinerary/croatia/banners/pag-banner.webp', alt: 'Pag' },
     {
       src: '/images/itinerary/croatia/banners/primosten-marina-banner.webp',
-      alt: 'Primosten marina',
+      alt: 'Primošten marina',
     },
   ],
   routeDays: [
     {
       id: 'sukosan-zdrelac-bay',
-      routeFrom: 'Sukosan',
+      routeFrom: 'Sukošan',
       routeTo: 'Ždrelac Bay',
       day: 1,
       mapPin: {
@@ -35,7 +35,7 @@ const sukosanPagRoute: ItineraryRoute = {
         mobile: { left: 23.9, top: 41.8 },
       },
       description:
-        'Starting your journey in Sukosan, where the soft clinking of masts hints of adventures just ahead, Sail north to Ždrelac Bay, a secluded Eden on Pašman Island where pine forests flood into blue sea. Enter liquid clarity, then indulge in brudet (fish stew) at a stone-walled konoba, the aroma of wild rosemary mixing with the salted breeze. See the surface of the bay ripple like folded silk under the silver moon as evening sets.',
+        'Starting your journey in Sukošan, where the soft clinking of masts hints of adventures just ahead, Sail north to Ždrelac Bay, a secluded Eden on Pašman Island where pine forests flood into blue sea. Enter liquid clarity, then indulge in brudet (fish stew) at a stone-walled konoba, the aroma of wild rosemary mixing with the salted breeze. See the surface of the bay ripple like folded silk under the silver moon as evening sets.',
       shortDescription:
         'Easy 4 nm shake-down leg out of Sukošan north across the Pašman channel to Ždrelac. Marina Dalmacija (in Sukošan) is the largest charter base in Croatia by berth count — a quick clean exit from a crowded marina to the calm Ždrelac passage.',
       thingsToDo: [
@@ -162,14 +162,14 @@ const sukosanPagRoute: ItineraryRoute = {
     {
       id: 'iz-sukosan',
       routeFrom: 'Iž',
-      routeTo: 'Sukosan',
+      routeTo: 'Sukošan',
       day: 7,
       mapPin: {
         desktop: { left: 35.1, top: 36.4 },
         mobile: { left: 33.6, top: 39.9 },
       },
       description:
-        'Sail homeward, stopping at Ugljan for a last plunge into the azure embrace of Veli Školj. Go back to Sukosan where the lights of the marina shine like ground-based stars. Under an indigo sky, toast your voyage with crni rižot (black risotto), the murmurs of the Adriatic reminding you you will be returning.',
+        'Sail homeward, stopping at Ugljan for a last plunge into the azure embrace of Veli Školj. Go back to Sukošan where the lights of the marina shine like ground-based stars. Under an indigo sky, toast your voyage with crni rižot (black risotto), the murmurs of the Adriatic reminding you you will be returning.',
       shortDescription:
         'Final 12 nm leg back through the Pašman channel to Sukošan. Marina Dalmacija handles the largest volume of charter handovers in Croatia — request fuel slot 24h ahead.',
       thingsToDo: [
@@ -186,7 +186,7 @@ const sukosanPagRoute: ItineraryRoute = {
     desktop: {
       image: {
         src: '/images/itinerary/croatia/zadar-itinerary/map.webp',
-        alt: 'Sukosan Route Image',
+        alt: 'Sukošan Route Image',
       },
       width: 1350,
       height: 1111,
@@ -194,7 +194,7 @@ const sukosanPagRoute: ItineraryRoute = {
     mobile: {
       image: {
         src: '/images/itinerary/croatia/zadar-itinerary/mobile-map.webp',
-        alt: 'Sukosan Route Image',
+        alt: 'Sukošan Route Image',
       },
       width: 868,
       height: 1228,

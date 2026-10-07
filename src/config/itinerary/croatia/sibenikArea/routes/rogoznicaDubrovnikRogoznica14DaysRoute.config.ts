@@ -101,7 +101,7 @@ const rogoznicaDubrovnikRogoznica14DaysRoute: ItineraryRoute = {
       ],
       mooringTip:
         'Stern-to with own anchor on the inner basin of Komiža town quay. If SW gradient above 15 kn, push 6 nm north to Vis Town in St. George Bay.',
-      gallery: [{ src: '/images/itinerary/croatia/destinations/komiza.webp', alt: 'Komiza' }],
+      gallery: [{ src: '/images/itinerary/croatia/destinations/komiza.webp', alt: 'Komiža' }],
     },
     {
       id: 'komiza-vela-luka-korcula',
@@ -226,7 +226,7 @@ const rogoznicaDubrovnikRogoznica14DaysRoute: ItineraryRoute = {
       ],
       mooringTip:
         'ACI Marina Korčula on the eastern side is the all-weather option. Town quay is exposed to W Maestral.',
-      gallery: [{ src: '/images/itinerary/croatia/destinations/korcula.webp', alt: 'Korcula' }],
+      gallery: [{ src: '/images/itinerary/croatia/destinations/korcula.webp', alt: 'Korčula' }],
     },
     {
       id: 'korcula-jelsa',

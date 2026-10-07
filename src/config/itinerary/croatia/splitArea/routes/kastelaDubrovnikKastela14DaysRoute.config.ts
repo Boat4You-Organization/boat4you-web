@@ -19,7 +19,7 @@ const kastelaDubrovnikKastela14DaysRoute: ItineraryRoute = {
     },
     {
       src: '/images/itinerary/croatia/banners/korcula-banner-large.webp',
-      alt: 'Korcula',
+      alt: 'Korčula',
     },
     {
       src: '/images/itinerary/croatia/banners/dubrovnik-banner.webp',
@@ -104,7 +104,7 @@ const kastelaDubrovnikKastela14DaysRoute: ItineraryRoute = {
       gallery: [
         {
           src: '/images/itinerary/croatia/destinations/palmizana.webp',
-          alt: 'Palmizana',
+          alt: 'Palmižana',
         },
       ],
     },
@@ -133,7 +133,7 @@ const kastelaDubrovnikKastela14DaysRoute: ItineraryRoute = {
       gallery: [
         {
           src: '/images/itinerary/croatia/destinations/komiza.webp',
-          alt: 'Komiza',
+          alt: 'Komiža',
         },
       ],
     },
@@ -302,7 +302,7 @@ const kastelaDubrovnikKastela14DaysRoute: ItineraryRoute = {
       gallery: [
         {
           src: '/images/itinerary/croatia/destinations/korcula.webp',
-          alt: 'Korcula',
+          alt: 'Korčula',
         },
       ],
     },
@@ -403,7 +403,7 @@ const kastelaDubrovnikKastela14DaysRoute: ItineraryRoute = {
       gallery: [
         {
           src: '/images/itinerary/croatia/destinations/kastela.webp',
-          alt: 'Kastela',
+          alt: 'Kaštela',
         },
       ],
     },

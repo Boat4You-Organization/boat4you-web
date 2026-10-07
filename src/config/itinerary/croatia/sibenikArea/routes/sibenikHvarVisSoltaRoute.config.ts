@@ -15,7 +15,7 @@ const sibenikHvarVisSoltaRoute: ItineraryRoute = {
   gallery: [
     { src: '/images/itinerary/croatia/banners/hvar-banner-large.webp', alt: 'Hvar' },
     { src: '/images/itinerary/croatia/banners/golden-horn-brac-banner-large.webp', alt: 'Golden horn brac' },
-    { src: '/images/itinerary/croatia/banners/korcula-banner.webp', alt: 'Korcula' },
+    { src: '/images/itinerary/croatia/banners/korcula-banner.webp', alt: 'Korčula' },
     { src: '/images/itinerary/croatia/banners/stiniva-bay-banner.webp', alt: 'Stiniva bay' },
   ],
   routeDays: [
@@ -38,7 +38,7 @@ const sibenikHvarVisSoltaRoute: ItineraryRoute = {
       ],
       mooringTip:
         'ACI Marina Kremik (2 nm south of the town) is the all-weather overnight option — lazy lines, full services, regular shuttle into Primošten. Town quay accepts daytime stops only and is exposed to W.',
-      gallery: [{ src: '/images/itinerary/croatia/destinations/primosten.webp', alt: 'Primosten' }],
+      gallery: [{ src: '/images/itinerary/croatia/destinations/primosten.webp', alt: 'Primošten' }],
     },
     {
       id: 'primosten-krknjasi-bay-veli-drvenik',
@@ -80,7 +80,7 @@ const sibenikHvarVisSoltaRoute: ItineraryRoute = {
       ],
       mooringTip:
         'Stern-to with own anchor on the inner basin of Komiža town quay — sand and weed, mostly good holding, harbour fee. Outer wall is exposed to SW swell. If SW gradient above 15 kn, push 6 nm north to Vis Town in St. George Bay.',
-      gallery: [{ src: '/images/itinerary/croatia/destinations/komiza.webp', alt: 'Komiza' }],
+      gallery: [{ src: '/images/itinerary/croatia/destinations/komiza.webp', alt: 'Komiža' }],
     },
     {
       id: 'komiza-blue-cave-bisevo-palmizana-hvar',
@@ -171,7 +171,7 @@ const sibenikHvarVisSoltaRoute: ItineraryRoute = {
     desktop: {
       image: {
         src: '/images/itinerary/croatia/split-dubrovnik-itinerary/map.webp',
-        alt: 'Šibenik – Hvar – Vis – Solta Route Image',
+        alt: 'Šibenik – Hvar – Vis – Šolta Route Image',
       },
       width: 2422,
       height: 1550,
@@ -179,7 +179,7 @@ const sibenikHvarVisSoltaRoute: ItineraryRoute = {
     mobile: {
       image: {
         src: '/images/itinerary/croatia/split-dubrovnik-itinerary/mobile-map.webp',
-        alt: 'Šibenik – Hvar – Vis – Solta Route Image',
+        alt: 'Šibenik – Hvar – Vis – Šolta Route Image',
       },
       width: 1144,
       height: 1354,

@@ -23,7 +23,7 @@ const splitVisKorculaHvarRoute: ItineraryRoute = {
     },
     {
       src: '/images/itinerary/croatia/banners/korcula-banner.webp',
-      alt: 'Korcula',
+      alt: 'Korčula',
     },
     {
       src: '/images/itinerary/croatia/banners/stiniva-bay-banner.webp',
@@ -58,7 +58,7 @@ const splitVisKorculaHvarRoute: ItineraryRoute = {
     {
       id: 'maslinica-bay-komiza',
       routeFrom: 'Maslinica Bay',
-      routeTo: 'Komiza',
+      routeTo: 'Komiža',
       day: 2,
       mapPin: {
         desktop: { left: 27.2, top: 59 },
@@ -77,12 +77,12 @@ const splitVisKorculaHvarRoute: ItineraryRoute = {
       ],
       mooringTip:
         'Stern-to with own anchor on the inner basin of Komiža town quay — sand and weed, mostly good holding, harbour fee. Outer wall is exposed to SW swell and not safe overnight. If SW gradient is forecast above 15 kn, push 6 nm north to Vis Town in St. George Bay, which is fully sheltered.',
-      gallery: [{ src: '/images/itinerary/croatia/destinations/komiza.webp', alt: 'Komiza' }],
+      gallery: [{ src: '/images/itinerary/croatia/destinations/komiza.webp', alt: 'Komiža' }],
     },
     {
       id: 'komiza-bisevo-islet-budihovac-vela-luka',
-      routeFrom: 'Komiza',
-      routeTo: 'Bisevo – Islet Budihovac – Vela Luka',
+      routeFrom: 'Komiža',
+      routeTo: 'Biševo – Islet Budihovac – Vela Luka',
       day: 3,
       mapPin: {
         desktop: { left: 47.3, top: 63 },
@@ -106,7 +106,7 @@ const splitVisKorculaHvarRoute: ItineraryRoute = {
     {
       id: 'vela-luka-hvar-palmizana',
       routeFrom: 'Vela Luka',
-      routeTo: 'Hvar (Palmizana)',
+      routeTo: 'Hvar (Palmižana)',
       day: 4,
       mapPin: {
         desktop: { left: 38, top: 51.1 },
@@ -125,11 +125,11 @@ const splitVisKorculaHvarRoute: ItineraryRoute = {
       ],
       mooringTip:
         'ACI Marina Palmižana stern-to with lazy lines, online booking essential for July–August. If full, anchor in Vinogradišće cove (south side, sand and weed, line ashore standard) — better protection from afternoon W. Avoid the main Palmižana bay overnight when SW gradient builds.',
-      gallery: [{ src: '/images/itinerary/croatia/destinations/palmizana.webp', alt: 'Palmizana' }],
+      gallery: [{ src: '/images/itinerary/croatia/destinations/palmizana.webp', alt: 'Palmižana' }],
     },
     {
       id: 'hvar-palmizana-stari-grad',
-      routeFrom: 'Hvar (Palmizana)',
+      routeFrom: 'Hvar (Palmižana)',
       routeTo: 'Stari Grad',
       day: 5,
       mapPin: {

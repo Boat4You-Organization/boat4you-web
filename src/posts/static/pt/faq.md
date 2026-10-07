@@ -206,12 +206,10 @@ seja o mais adequado para você.
 
 ## Vocês oferecem _cabin charters_ ou posso me juntar a um grupo existente?
 
-A **Boat4You** é especializada em _charters_ de _yachts_ privados, o que
-significa que alugamos o barco inteiro para você e o seu grupo – seja
+A **Boat4You** é especializada em _charters_ de _yachts_ privados, o que significa que o barco inteiro é alugado para você e o seu grupo – seja
 _bareboat_ (você navega sozinho) ou com um _skipper_/tripulação
 contratada. Atualmente, não oferecemos "_cabin charters_", onde você
-reserva apenas uma cabine em um _yacht_ compartilhado com estranhos. Todos
-os nossos _charters_ são para a embarcação inteira.
+reserva apenas uma cabine em um _yacht_ compartilhado com estranhos. Todos os _charters_ na Boat4You são para a embarcação inteira.
 
 Se você é um viajante individual ou um casal que procura se juntar a
 outros, isso significa que você precisará formar o seu próprio grupo para
@@ -228,8 +226,7 @@ amigos ou familiares para dividir o custo e a experiência.
 Dito isto, se você estiver interessado em um _cabin charter_, avise-nos –
 podemos informar se há operadores parceiros ou cruzeiros que correspondam
 ao que você está procurando. Caso contrário, considere convidar alguns
-amigos com a mesma mentalidade para se juntarem à sua viagem! Ocasionalmente,
-também organizamos flotilhas (vários barcos navegando juntos), o que não
+amigos com a mesma mentalidade para se juntarem à sua viagem! Também podemos organizar flotilhas com frotas parceiras (vários barcos navegando juntos), o que não
 é o mesmo que estranhos compartilhando um barco, mas é uma maneira
 divertida para grupos menores navegarem em companhia e conhecerem outras
 pessoas, mantendo ainda o seu próprio barco.
@@ -290,8 +287,7 @@ tomar sol e aproveitar a viagem.
 **Em resumo**: Se você é qualificado e confiante, pode comandar o _yacht_
 sozinho – essa é a essência de um _bareboat charter_. Caso contrário, ou
 se você simplesmente prefere relaxar, pode contratar um _skipper_
-profissional através da **Boat4You**. Fornecemos _skippers_ amigáveis,
-experientes que falam inglês (e muitas vezes outros idiomas) e são
+profissional através da **Boat4You**. Os nossos parceiros fornecem _skippers_ amigáveis, experientes que falam inglês (e muitas vezes outros idiomas) e são
 licenciados para a área. É inteiramente sua escolha, e apoiamos ambas as
 opções. O essencial é segurança e prazer; vamos ajudá-lo a decidir com
 base no seu nível de experiência e conforto.
@@ -560,7 +556,7 @@ Aceitamos **transferências bancárias** e **principais cartões de crédito/dé
 
 **Moedas**: A **Boat4You** pode frequentemente aceitar pagamento em diferentes moedas (USD, EUR, etc.) dependendo da reserva. Normalmente, faturaremos em uma moeda lógica – por exemplo, charters na Europa tipicamente em Euros, charters no Caribe frequentemente em USD. Se você preferir pagar em uma moeda ou por um método específico, basta perguntar e faremos o nosso melhor para acomodar.
 
-Todos os pagamentos que você realiza são documentados com um recibo e os fundos são mantidos em caução ou repassados ao operador de charter de acordo com nossos acordos. Após o recebimento do pagamento final, forneceremos a você um voucher de embarque ou bilhete de charter para apresentar na marina, bem como quaisquer outras instruções necessárias para o check-in.
+Todos os pagamentos que você realiza são documentados com um recibo e os fundos são repassados ao operador de charter de acordo com nossos acordos. Após o recebimento do pagamento final, forneceremos a você um voucher de embarque ou bilhete de charter para apresentar na marina, bem como quaisquer outras instruções necessárias para o check-in.
 
 _Nota lateral: Entendemos que às vezes os planos mudam – se precisar de uma pequena extensão no prazo de pagamento ou de um arranjo de pagamento dividido, fale conosco. Priorizamos ser flexíveis e compreensivos com nossos clientes, dentro do razoável._
 
@@ -568,11 +564,9 @@ _Nota lateral: Entendemos que às vezes os planos mudam – se precisar de uma p
 
 Absolutamente. Levamos a segurança do pagamento e a sua tranquilidade muito a sério. Quando você reserva com a **Boat4You**, seus pagamentos são protegidos de várias maneiras:
 
-**Processo de Pagamento Seguro**: Seja por cartão de crédito ou transferência bancária, usamos gateways de pagamento seguros e encriptados e parceiros bancários respeitáveis. Os pagamentos com cartão de crédito passam por processadores compatíveis com PCI, e nunca armazenamos as suas informações de cartão diretamente. Para transferências bancárias, fornecemos instruções claras para garantir que o dinheiro vá para a conta de caução correta.
+**Processo de Pagamento Seguro**: Seja por cartão de crédito ou transferência bancária, usamos gateways de pagamento seguros e encriptados e parceiros bancários respeitáveis. Os pagamentos com cartão de crédito passam por processadores compatíveis com PCI, e nunca armazenamos as suas informações de cartão diretamente. Para transferências bancárias, fornecemos instruções claras para garantir que o dinheiro vá para a conta correta.
 
-**Contas Fiduciárias Estabelecidas**: Em muitos casos, especialmente para reservas antecipadas, seu pagamento é mantido em uma conta de caução do cliente ou enviado para a conta do operador de charter como um depósito para o seu charter. Os fundos são destinados ao seu serviço de charter. A **Boat4You** trabalha apenas com operadores de frotas verificados e confiáveis com os quais temos relacionamentos de longa data.
-
-**Seguro/Proteção para Fundos**: A **Boat4You** pode ter seguro contra insolvência financeira ou arranjos semelhantes para proteger seus fundos. Por exemplo, algumas agências de charter fazem parceria com grupos de seguros para segurar todos os pagamentos dos clientes. Se tivermos tal parceria, certamente o informaremos. Este seguro significa que no improvável evento de algo como uma insolvência da empresa, seu dinheiro está coberto e você seria reembolsado.
+**Pagamentos com destino definido**: Em muitos casos, especialmente para reservas antecipadas, seu pagamento é enviado para a conta do operador de charter como um depósito para o seu charter. Os fundos são destinados ao seu serviço de charter. A **Boat4You** trabalha apenas com operadores de frotas verificados e confiáveis com os quais temos relacionamentos de longa data.
 
 **Documentação**: Cada pagamento que você faz é confirmado por escrito. Você terá uma fatura ou recibo. Além disso, você assina um contrato de charter que estipula o que acontece com seu dinheiro (como condições de reembolso, etc.). Há salvaguardas legais nesse contrato para você como afretador.
 
@@ -580,7 +574,7 @@ Absolutamente. Levamos a segurança do pagamento e a sua tranquilidade muito a s
 
 Além disso, recomendamos (embora seja opcional) que você considere contratar um **seguro de viagem ou seguro de cancelamento de viagem** que cubra seus pagamentos de charter. Esta é uma camada extra de proteção – por exemplo, se um evento imprevisto (como uma emergência médica) o forçar a cancelar fora da janela de reembolso, seu seguro de viagem poderá reembolsá-lo.
 
-Seus pagamentos à **Boat4You** são seguros, protegidos e segurados na máxima extensão possível. Queremos que você se concentre em contar os dias para suas férias de iate, não em se preocupar com transferências de dinheiro. Se você tiver alguma preocupação específica sobre a segurança do pagamento, por favor, avise-nos – podemos fornecer informações ainda mais detalhadas ou soluções alternativas para deixá-lo confortável.
+Seus pagamentos à **Boat4You** são seguros e protegidos. Queremos que você se concentre em contar os dias para suas férias de iate, não em se preocupar com transferências de dinheiro. Se você tiver alguma preocupação específica sobre a segurança do pagamento, por favor, avise-nos – podemos fornecer informações ainda mais detalhadas ou soluções alternativas para deixá-lo confortável.
 
 ## Os serviços de skipper e tripulação estão incluídos no preço do charter?
 
@@ -588,7 +582,7 @@ A resposta curta é: **geralmente não**, a menos que você tenha especificament
 
 **Charter _bareboat_**: Nenhuma tripulação incluída (você é o skipper). Portanto, não há custo extra para a tripulação no preço.
 
-**Charter com skipper**: Se você solicitar um skipper, a taxa do skipper será adicionada ao preço _bareboat_. As taxas de skipper são frequentemente cobradas por dia (por exemplo, €150-€200 por dia, dependendo da localização e qualificações, mais aprovisionamento). Quando lhe dermos um orçamento para um charter com skipper, geralmente detalharemos a taxa do skipper separadamente para que fique clara. Você também é responsável pela alimentação do skipper durante o charter e, em alguns casos, uma cabine designada para eles, como cortesia.
+**Charter com skipper**: Se você solicitar um skipper, a taxa do skipper será adicionada ao preço _bareboat_. As taxas de skipper são normalmente cobradas por dia e dependem da localização e das qualificações; a tarifa consta da página de cada barco. Quando lhe dermos um orçamento para um charter com skipper, geralmente detalharemos a taxa do skipper separadamente para que fique clara. Você também é responsável pela alimentação do skipper durante o charter e, em alguns casos, uma cabine designada para eles, como cortesia.
 
 **Charter tripulado (iates totalmente tripulados)**: Este é o cenário onde o charter vem com uma tripulação em tempo integral (capitão e, talvez, tripulação adicional como um chef, hostess, marinheiro, dependendo do iate). Para iates de luxo tripulados e _gulets_, os salários da tripulação estão geralmente incluídos na taxa de charter. Você não paga a tripulação diretamente (exceto gorjetas no final). No entanto, itens como **APA (_Advance Provisioning Allowance_)** cobrirão o aprovisionamento e outras despesas da tripulação.
 
@@ -671,7 +665,7 @@ Ao planear o seu orçamento de charter, é importante considerar as despesas nã
 
 **Extras Opcionais (equipamento/brinquedos)**: Muitos iates oferecem _add-ons_ opcionais. Por exemplo: motor de popa para o _dinghy_, _stand-up paddleboards_, _caiaques_, equipamento de pesca, unidades _Wi-Fi_, etc. Estes vêm com taxas de aluguel extras. O _Wi-Fi_, por exemplo, pode ser **€30-€50/semana** para um _router_ em um _bareboat_. Brinquedos aquáticos podem variar de **€100-€200 cada por semana**.
 
-**Taxas de Skipper ou Tripulação**: Se você contratar um skipper, hostess, chef, etc., eles são pagos separadamente. Um skipper é aproximadamente **€150/dia** (mais comida), hostess talvez **€130/dia**, etc., embora as taxas variem por localização.
+**Taxas de Skipper ou Tripulação**: Se você contratar um skipper, hostess, chef, etc., eles são pagos separadamente. As tarifas de skipper e tripulação variam por localização e constam da página de cada barco.
 
 **Seguro de Isenção de Danos (Opcional)**: Em alguns casos, você pode optar por um seguro não reembolsável em vez de um grande depósito de segurança. Por exemplo, pague **€250** para reduzir seu depósito de segurança de €3000 para €500. Este €250 é um custo extra (e não é devolvido), mas limita sua responsabilidade.
 
@@ -934,7 +928,7 @@ Você é absolutamente bem-vindo para entrar em contacto e se apresentar nesse m
 
 **Encontro na Base**: No dia de início, o skipper estará à espera no iate ou o encontrará no escritório da empresa de charter. Geralmente, eles estarão lá um pouco antes do horário de embarque acordado. Assim que você chegar, você os reconhecerá (podemos compartilhar uma foto às vezes). Eles o ajudarão com a bagagem e a se instalar.
 
-**Durante a Viagem**: O skipper estará com você durante todo o charter (a menos que você tenha organizado um skipper apenas por alguns dias). Eles ficarão a bordo, gerenciarão a navegação e serão basicamente o seu guia turístico/capitão flutuante. Todos os nossos skippers falam inglês (e frequentemente outras línguas), então a comunicação deve ser tranquila.
+**Durante a Viagem**: O skipper estará com você durante todo o charter (a menos que você tenha organizado um skipper apenas por alguns dias). Eles ficarão a bordo, gerenciarão a navegação e serão basicamente o seu guia turístico/capitão flutuante. Os skippers fornecidos pelos nossos parceiros falam inglês (e frequentemente outras línguas), então a comunicação deve ser tranquila.
 
 **Comunicação de Preferências**: Se você tem expectativas específicas – por exemplo, "Queremos um ritmo muito relaxado, muitas paragens para nadar" ou "Estamos interessados em aprender a velejar com você" – é ótimo informar o skipper cedo. Eles podem adaptar o seu estilo. Se algo não estiver do seu agrado, a comunicação educada é fundamental; esses skippers são tipicamente muito adaptáveis.
 
@@ -942,7 +936,7 @@ Você é absolutamente bem-vindo para entrar em contacto e se apresentar nesse m
 
 **Aplicações de Comunicação**: Muitos skippers usam **WhatsApp**. É uma maneira útil de se comunicar antes e até durante a viagem. Portanto, recomendamos ter o WhatsApp no seu telefone; descobrimos que é universalmente usado entre tripulações internacionais.
 
-**Idioma e Conhecimento Local**: Nossos skippers falam inglês e frequentemente o idioma local da área também. Eles têm um extenso conhecimento local – escolhemos skippers familiarizados com a região. Portanto, sinta-se à vontade para pedir-lhes informações sobre a melhor baía secreta ou um bom restaurante em terra. Eles adoram compartilhar dicas.
+**Idioma e Conhecimento Local**: Os skippers falam inglês e frequentemente o idioma local da área também. Eles têm um extenso conhecimento local – os parceiros designam skippers familiarizados com a região. Portanto, sinta-se à vontade para pedir-lhes informações sobre a melhor baía secreta ou um bom restaurante em terra. Eles adoram compartilhar dicas.
 
 Você será apresentado ao seu skipper logo após a confirmação da reserva e pode entrar em contacto com ele assim que a sua reserva estiver concluída – certamente no momento em que você pagou integralmente e está a preparar-se para a viagem. No início do charter, você terá falado ou pelo menos enviado mensagens de texto. E então vocês se encontrarão pessoalmente no embarque e começarão a jornada juntos.
 

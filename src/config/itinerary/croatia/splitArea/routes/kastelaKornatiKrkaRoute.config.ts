@@ -19,7 +19,7 @@ const kastelaKornatiKrkaRoute: ItineraryRoute = {
     },
     {
       src: '/images/itinerary/croatia/banners/korcula-banner-large.webp',
-      alt: 'Korcula',
+      alt: 'Korčula',
     },
     {
       src: '/images/itinerary/croatia/banners/skradin-marina-banner.webp',
@@ -27,7 +27,7 @@ const kastelaKornatiKrkaRoute: ItineraryRoute = {
     },
     {
       src: '/images/itinerary/croatia/banners/primosten-marina-banner.webp',
-      alt: 'Primosten marina',
+      alt: 'Primošten marina',
     },
   ],
   routeDays: [
@@ -197,7 +197,7 @@ const kastelaKornatiKrkaRoute: ItineraryRoute = {
       ],
       mooringTip:
         'Return into Marina Kaštela per your charter contract — base manager directs the slot. Saturday handover window 08:00–09:00; arrive by 17:00 Friday if your contract specifies night-before return. Fuel pontoon is on the western entrance side of the marina.',
-      gallery: [{ src: '/images/itinerary/croatia/destinations/kastela.webp', alt: 'Marina Kastela' }],
+      gallery: [{ src: '/images/itinerary/croatia/destinations/kastela.webp', alt: 'Marina Kaštela' }],
     },
   ],
   map: {

@@ -37,6 +37,11 @@
  * before " ?") and, for EN, `aux-hole` ("What support does provide?", "Can
  * arrange provisioning?") plus `subject-hole` for a clause after ";" or "Yes,"
  * that starts with the verb ("…in peak season; coordinates advance positioning").
+ *
+ * 6.10.2026 (w610 review) added the EN shapes "Stocks 14 multihulls…", "Learn how manages…",
+ * "employed by possess…" and, per locale, a preposition followed by the verb whose subject was cut
+ * ("Das Team von kümmert sich", "L'équipe de gère", "Il team di gestisce", "A equipa da trata",
+ * "de expertise van zorgt"); the same shapes are seo-corpus-qa.py's "brand-hole" check.
  */
 import { execFileSync } from 'node:child_process';
 import { readFileSync, readdirSync } from 'node:fs';
@@ -94,6 +99,20 @@ const BY_LOCALE = {
     ['aux-hole', new RegExp(`(?:^|[.?!] )(?:Can|Will) ${EN_VERB}\\b[^.!?]*\\?`, 'u')],
     ['subject-hole', new RegExp(`;\\s*${EN_VERB3} `, 'u')],
     ['subject-hole', new RegExp(`(?:^|[.?!] )(?:Yes|No|Absolutely)[,.] ${EN_VERB3} `, 'u')],
+    // 6.10.2026 (w610 review): "Stocks 14 multihulls in Ajaccio", "Learn how manages these
+    // destinations", "crew members employed by possess", "motor yachts deployed by incorporate".
+    [
+      'subject-hole',
+      /(?:^|[.?!] )(?:Stocks|Maintains|Manages|Operates|Curates|Employs|Offers) (?:\d|its(?!\p{L})|the(?!\p{L})|an?(?!\p{L}))/u,
+    ],
+    [
+      'how-hole',
+      /\bhow (?:manages|maintains|curates|selects|operates|supports|handles|works with|vets|chooses|coordinates|arranges)(?!\p{L})/u,
+    ],
+    [
+      'by-hole',
+      /(?<![\p{L}\p{N}])(?:employed|deployed|operated|managed) by (?:possess|have|bring|incorporate|offer|feature|use)(?!\p{L})/u,
+    ],
   ],
   de: [
     ['heading-hole', /\bWarum Segler zu\s+zurückkehren\b/u],
@@ -102,6 +121,11 @@ const BY_LOCALE = {
       'subject-hole',
       /(?<![\p{L}\p{N}])(?:bei|mit|von|über) (?:weil|denn)(?!\p{L})|\bwarum (?:der|die|das) (?:Ihr|vertrauenswürdig)/u,
     ],
+    // 6.10.2026 (w610 review): "Das Team von kümmert sich", "das Engagement von für".
+    [
+      'subject-hole',
+      /(?<![\p{L}\p{N}])(?:von|bei|mit|durch) (?:kümmert|bietet|hilft|sorgt|unterstützt|arrangiert|organisiert|koordiniert|verwaltet|managt)(?!\p{L})|(?<![\p{L}\p{N}])(?:Engagement|Hingabe|Einsatz|Team|Partnerschaft|Concierge|Expertise) von (?:für|kümmert|sorgt|bietet)(?!\p{L})/u,
+    ],
   ],
   fr: [
     ['heading-hole', /\bReviennent [Cc]hez\s*$/u],
@@ -109,16 +133,28 @@ const BY_LOCALE = {
       'subject-hole',
       /(?<![\p{L}\p{N}])(?:chez|par|à|de) (?:car|parce|pour)(?!\p{L})|(?<!(?:[Nn]ous|[Vv]ous) )\bchoisissent (?:constamment )?pour\b/u,
     ],
+    [
+      'subject-hole',
+      /(?<![\p{L}\p{N}])(?:de|par|avec) (?:s['’]occupe|gère|propose|aide|organise|coordonne|fournit)(?!\p{L})/u,
+    ],
   ],
   nl: [
     ['heading-hole', /\b[Tt]erugkeren [Nn]aar\s*$/u],
     ['subject-hole', /\b(?:bij|met|van) omdat\b|\bwaarom (?:uw|de|het) vertrouwde\b/u],
+    [
+      'subject-hole',
+      /(?<![\p{L}\p{N}])(?:van|door|met) (?:regelt|handelt|biedt|helpt|zorgt|organiseert|coördineert|beheert)(?!\p{L})|^Onderhoudt /u,
+    ],
   ],
   it: [
     ['contact-hole', /\bContatta(?:te)? oggi(?: stesso)?(?=[,.]| per\b)/u],
     [
       'subject-hole',
       /(?<![\p{L}\p{N}])(?:a|con) (?:per|perché)(?!\p{L})|(?<![\p{L}\p{N}])di per (?!sé(?!\p{L}))|(?<!(?:[Cc]i|[Vv]i) )\bscelgono (?:costantemente )?per\b/u,
+    ],
+    [
+      'subject-hole',
+      /(?<![\p{L}\p{N}])(?:di|da|con) (?:si occupa|gestisce|offre|aiuta|organizza|coordina|fornisce)(?!\p{L})/u,
     ],
   ],
   es: [
@@ -127,10 +163,15 @@ const BY_LOCALE = {
       'subject-hole',
       /(?<![\p{L}\p{N}])(?:con|en) (?:porque|para)(?!\p{L})|\bde porque\b|(?<!(?:[Nn]os|[Ll]os|[Ss]e) )\beligen (?:consistentemente )?para\b/u,
     ],
+    [
+      'subject-hole',
+      /(?<![\p{L}\p{N}])(?:de|por|con) (?:se encarga|gestiona|ofrece|organiza|coordina|proporciona)(?!\p{L})/u,
+    ],
   ],
   pt: [
     ['heading-hole', /\b[Rr]egressam\s*$/u],
     ['subject-hole', /(?<![\p{L}\p{N}])(?:com|em|na|da|pela) porque(?!\p{L})/u],
+    ['subject-hole', /(?<![\p{L}\p{N}])(?:da|pela) (?:trata|gere|oferece|organiza|coordena|fornece)(?!\p{L})/u],
   ],
   pl: [
     ['heading-hole', /\bwybierają (?:do|dla)(?!\p{L})/u],
@@ -142,6 +183,7 @@ const BY_LOCALE = {
   hr: [
     ['heading-hole', /\bZašto se ističe(?!\p{L})/u],
     ['subject-hole', /(?<![\p{L}\p{N}])(?:kod|s|sa|od|uz) jer(?!\p{L})|(?<![\p{L}\p{N}])zašto je (?:vaš|Vaš|pouzdan)/u],
+    ['subject-hole', /^Inače, (?:organizira|nudi|osigurava)(?!\p{L})|(?:^|, )poznaje svako plovilo\b/u],
   ],
 };
 
