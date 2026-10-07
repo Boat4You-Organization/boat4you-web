@@ -29,6 +29,21 @@ import FleetDirectory from '@/views/Fleet/FleetDirectory';
  */
 export const revalidate = 21600;
 
+// The route cache needs generateStaticParams (audit 7.10.2026): without it
+// the route stayed dynamic and `revalidate` only reached the three backend
+// fetches, so every request re-rendered the whole directory, and every page
+// whose fetches were not in the Data Cache yet (each one after a deploy)
+// answered in 4 s (median 4.19 s over the 35 pages). Nothing is prerendered at
+// build time: a build must not walk the catalogue on the production API.
+// Each page renders on its first request, is then served from the route cache
+// for six hours and regenerates in the background; a failed regeneration keeps
+// the last good copy (getFleetPage throws instead of caching an empty page).
+export const dynamicParams = true;
+
+export function generateStaticParams() {
+  return [];
+}
+
 interface FleetDirectoryPageProps {
   params: Promise<{ locale: Locale; page?: string[] }>;
 }

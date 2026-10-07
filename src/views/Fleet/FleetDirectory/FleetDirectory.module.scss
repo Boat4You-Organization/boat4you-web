@@ -31,14 +31,14 @@
   margin: rem-calc(12) 0 0;
   font-size: rem-calc(14);
   font-weight: 600;
+}
 
-  a {
-    color: $blue-500;
-    text-decoration: none;
+.modelsAnchor {
+  color: $blue-500;
+  text-decoration: none;
 
-    &:hover {
-      text-decoration: underline;
-    }
+  &:hover {
+    text-decoration: underline;
   }
 }
 
@@ -63,6 +63,10 @@
   text-transform: uppercase;
 }
 
+// One class per list, none per row (audit 7.10.2026): the 300 rows of a page
+// are styled by element — the model is the first <span>, the vessel name the
+// <span> after it, the specs the <small> — so the HTML and the RSC payload do
+// not repeat four CSS-module class names 300 times each.
 .list {
   display: grid;
   grid-template-columns: 1fr;
@@ -70,41 +74,41 @@
   margin: 0;
   padding: 0;
   list-style: none;
-}
 
-.row {
-  border-bottom: 1px solid $black-100;
-}
-
-.link {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: rem-calc(8);
-  padding: rem-calc(8) 0;
-  color: $black-950;
-  text-decoration: none;
-  transition: color 0.15s ease;
-
-  &:hover {
-    color: $blue-500;
+  > li {
+    border-bottom: 1px solid $black-100;
   }
-}
 
-.model {
-  font-size: rem-calc(14);
-  font-weight: 600;
-}
+  a {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: rem-calc(8);
+    padding: rem-calc(8) 0;
+    color: $black-950;
+    text-decoration: none;
+    transition: color 0.15s ease;
 
-.name {
-  color: $black-600;
-  font-size: rem-calc(14);
-}
+    &:hover {
+      color: $blue-500;
+    }
 
-.specs {
-  margin-left: auto;
-  color: $black-500;
-  font-size: rem-calc(12);
+    > span + span {
+      color: $black-600;
+      font-size: rem-calc(14);
+    }
+
+    > span:first-child {
+      font-size: rem-calc(14);
+      font-weight: 600;
+    }
+
+    > small {
+      margin-left: auto;
+      color: $black-500;
+      font-size: rem-calc(12);
+    }
+  }
 }
 
 .pagination {
