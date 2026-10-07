@@ -216,7 +216,7 @@ La réponse courte est : **généralement non**, sauf si vous avez spécifiqueme
 
 **Location _bareboat_** : Aucun équipage inclus (vous êtes le skipper). Donc pas de frais supplémentaires pour l'équipage dans le prix.
 
-**Location avec skipper** : Si vous demandez un skipper, les frais de skipper seront ajoutés au prix _bareboat_. Les frais de skipper sont souvent facturés **par jour** (par exemple, 150 € à 200 € par jour, selon l'endroit et les qualifications, plus l'avitaillement). Lorsque nous vous donnons un devis pour une location avec skipper, nous détaillons généralement les frais de skipper séparément afin que ce soit clair. Vous êtes également responsable de la nourriture du skipper pendant la location et, dans certains cas, d'une cabine désignée pour lui, par courtoisie.
+**Location avec skipper** : Si vous demandez un skipper, les frais de skipper seront ajoutés au prix _bareboat_. Les frais de skipper sont généralement facturés **par jour** et dépendent de l'endroit et des qualifications ; le tarif figure sur la page de chaque bateau. Lorsque nous vous donnons un devis pour une location avec skipper, nous détaillons généralement les frais de skipper séparément afin que ce soit clair. Vous êtes également responsable de la nourriture du skipper pendant la location et, dans certains cas, d'une cabine désignée pour lui, par courtoisie.
 
 **Location avec équipage (_fully crewed yachts_)** : C'est le scénario où la location est accompagnée d'un équipage à temps plein (capitaine, et peut-être un équipage supplémentaire comme un chef, une hôtesse, un matelot selon le yacht). Pour les yachts de luxe avec équipage et les goélettes, les salaires de l'équipage sont **généralement inclus** dans les frais de location. Vous ne payez pas l'équipage directement (sauf pour les pourboires à la fin). Cependant, des éléments tels que l'**APA (Allocation pour Approvisionnement Anticipé)** couvriront l'avitaillement de l'équipage et d'autres dépenses.
 
@@ -299,7 +299,7 @@ Lorsque vous planifiez votre budget de location, il est important de prendre en 
 
 **Extras Optionnels (équipement/jouets)** : De nombreux yachts proposent des modules complémentaires optionnels. Par exemple : moteur hors-bord pour l'annexe, _stand-up paddleboards_, kayaks, équipement de pêche, unités Wi-Fi, etc. Ceux-ci sont soumis à des frais de location supplémentaires. Le Wi-Fi, par exemple, pourrait coûter **30 € à 50 €/semaine** pour un routeur sur un _bareboat_. Les jouets nautiques peuvent varier de **100 € à 200 € chacun par semaine**.
 
-**Frais de Skipper ou d'Équipage** : Si vous engagez un skipper, une hôtesse, un chef, etc., ceux-ci sont payés séparément. Un skipper coûte environ **150 €/jour** (plus la nourriture), une hôtesse peut-être **130 €/jour**, etc., bien que les tarifs varient selon l'endroit.
+**Frais de Skipper ou d'Équipage** : Si vous engagez un skipper, une hôtesse, un chef, etc., ceux-ci sont payés séparément. Les tarifs du skipper et de l'équipage varient selon l'endroit et figurent sur la page de chaque bateau.
 
 **Assurance Dispense de Dommages (Facultatif)** : Dans certains cas, vous pouvez opter pour une assurance non remboursable au lieu d'un gros dépôt de garantie. Par exemple, payer **250 €** pour réduire votre dépôt de garantie de 3 000 € à 500 €. Ces 250 € sont un coût supplémentaire (et ne sont pas remboursés) mais limitent votre responsabilité.
 

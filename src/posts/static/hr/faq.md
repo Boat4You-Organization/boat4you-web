@@ -156,7 +156,7 @@ Kratki odgovor: **obično nisu**, osim ako ste posebno rezervirali čarter s kom
 
 **Bareboat čarter**: Nema posade (vi ste skiper). Nema dodatnih troškova za posadu.
 
-**Čarter sa skiperom**: Ako zatražite skipera, njegova naknada se dodaje na bareboat cijenu. Naknada se često naplaćuje po danu (npr. 150–200 €/dan, ovisno o lokaciji i kvalifikacijama, plus troškovi opskrbe). Kada vam damo ponudu za čarter sa skiperom, obično ćemo posebno navesti naknadu skipera. Također ste odgovorni za hranu skipera tijekom čartera i, u nekim slučajevima, za rezerviranu kabinu kao ljubaznost.
+**Čarter sa skiperom**: Ako zatražite skipera, njegova naknada se dodaje na bareboat cijenu. Naknada se obično naplaćuje po danu i ovisi o lokaciji i kvalifikacijama; iznos je naveden na stranici svakog broda. Kada vam damo ponudu za čarter sa skiperom, obično ćemo posebno navesti naknadu skipera. Također ste odgovorni za hranu skipera tijekom čartera i, u nekim slučajevima, za rezerviranu kabinu kao ljubaznost.
 
 **Čarter s posadom (jahte s punom posadom)**: Ovdje čarter dolazi s full-time posadom (kapetan, a možda i dodatna posada poput kuhara, hostese, palubara, ovisno o jahti). Za luksuzne posade i gulete, plaće posade su uglavnom uključene u čartersku naknadu. Ne plaćate posadu izravno (osim napojnica). Međutim, stavke poput **APA (Advance Provisioning Allowance)** pokrivaju opskrbu posade i ostale troškove.
 
@@ -231,7 +231,7 @@ Kada planirate budžet čartera, imajte na umu dodatne troškove koji nisu uklju
 
 **Opcionalna dodatna oprema**: Npr. tenderski motor, SUP, kajaci, Wi-Fi (30 €–50 €/tjedan), vodeni sportovi (100 €–200 €/tjedan).
 
-**Naknade skipera ili posade**: Plaća se posebno. Skiper ~150 €/dan (+hrana), hostesa ~130 €/dan itd.
+**Naknade skipera ili posade**: Plaća se posebno. Iznosi za skipera i posadu ovise o lokaciji i navedeni su na stranici svakog broda.
 
 **Damage Waiver osiguranje (opcionalno)**: Plaćate dodatno da smanjite depozit.
 

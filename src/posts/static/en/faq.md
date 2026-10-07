@@ -216,7 +216,7 @@ The short answer is: **usually not**, unless you specifically booked an all-incl
 
 **Bareboat charter**: No crew included (you are the skipper). So no extra cost for crew in the price.
 
-**Skippered charter**: If you request a skipper, the skipper's fee will be added on top of the bareboat price. Skipper fees are often charged per day (e.g. €150-€200 per day, depending on location and qualifications, plus provisioning). When we give you a quote for a skippered charter, we'll usually itemize the skipper fee separately so it's clear. You are also responsible for the skipper's food during the charter and in some cases a designated cabin for them, as courtesy.
+**Skippered charter**: If you request a skipper, the skipper's fee will be added on top of the bareboat price. Skipper fees are usually charged per day and depend on location and qualifications; the rate is shown on each boat's page. When we give you a quote for a skippered charter, we'll usually itemize the skipper fee separately so it's clear. You are also responsible for the skipper's food during the charter and in some cases a designated cabin for them, as courtesy.
 
 **Crewed charter (fully crewed yachts)**: This is the scenario where the charter comes with a full-time crew (captain, and maybe additional crew like a chef, hostess, deckhand depending on the yacht). For luxury crewed yachts and gulets, the crew's wages are generally included in the charter fee. You don't pay the crew directly (except for tips at the end). However, things like **APA (Advance Provisioning Allowance)** will cover the crew's provisioning and other expenses.
 
@@ -299,7 +299,7 @@ When planning your charter budget, it's important to consider the expenses not i
 
 **Optional Extras (equipment/toys)**: Many yachts offer optional add-ons. For example: outboard engine for the dinghy, stand-up paddleboards, kayaks, fishing gear, Wi-Fi units, etc. These come at extra rental fees. Wi-Fi, for instance, might be **€30-€50/week** for a router on a bareboat. Water toys can range **€100-€200 each per week**.
 
-**Skipper or Crew Fees**: If you hire a skipper, hostess, chef, etc., those are paid separately. A skipper is roughly **€150/day** (plus food), hostess maybe **€130/day**, etc., though rates vary by location.
+**Skipper or Crew Fees**: If you hire a skipper, hostess, chef, etc., those are paid separately. Skipper and crew rates vary by location and are shown on each boat's page.
 
 **Damage Waiver Insurance (Optional)**: In some cases, you might opt for a non-refundable insurance in lieu of a big security deposit. For example, pay **€250** to reduce your security deposit from €3000 to €500. This €250 is an extra cost (and is not returned) but limits your liability.
 

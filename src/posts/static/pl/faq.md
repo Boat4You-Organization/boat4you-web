@@ -216,7 +216,7 @@ Krótka odpowiedź brzmi: **zazwyczaj nie**, chyba że specjalnie zarezerwowałe
 
 **Czarter bez załogi (bareboat)**: Brak załogi w cenie (Ty jesteś skipperem). Brak dodatkowych kosztów załogi w cenie.
 
-**Czarter ze skipperem**: Jeśli poprosisz o skippera, opłata za skippera zostanie doliczona do ceny czarteru bez załogi. Opłaty za skippera są często naliczane dziennie (np. 150-200 EUR dziennie, w zależności od lokalizacji i kwalifikacji, plus wyżywienie). Kiedy przedstawimy Ci wycenę czarteru ze skipperem, zazwyczaj wyszczególnimy opłatę za skippera osobno, aby była jasna. Jesteś również odpowiedzialny za wyżywienie skippera podczas czarteru, a w niektórych przypadkach za zapewnienie mu odpowiedniej kabiny, jako wyraz uprzejmości.
+**Czarter ze skipperem**: Jeśli poprosisz o skippera, opłata za skippera zostanie doliczona do ceny czarteru bez załogi. Opłaty za skippera są zwykle naliczane dziennie i zależą od lokalizacji oraz kwalifikacji; stawka jest podana na stronie każdej łodzi. Kiedy przedstawimy Ci wycenę czarteru ze skipperem, zazwyczaj wyszczególnimy opłatę za skippera osobno, aby była jasna. Jesteś również odpowiedzialny za wyżywienie skippera podczas czarteru, a w niektórych przypadkach za zapewnienie mu odpowiedniej kabiny, jako wyraz uprzejmości.
 
 **Czarter z załogą (jachty w pełni załogowe)**: Jest to scenariusz, w którym czarter obejmuje załogę na pełny etat (kapitan, a może dodatkowa załoga, taka jak kucharz, gospodyni, pokładowy, w zależności od jachtu). W przypadku luksusowych jachtów z załogą i gület, wynagrodzenia załogi są zazwyczaj wliczone w opłatę za czarter. Nie płacisz załodze bezpośrednio (poza napiwkami na koniec). Jednakże, takie rzeczy jak **APA (Advance Provisioning Allowance)** pokryją koszty wyżywienia i inne wydatki załogi.
 
@@ -299,7 +299,7 @@ Planując budżet czarteru, należy wziąć pod uwagę wydatki nieobjęte opłat
 
 **Opcjonalne Dodatki (sprzęt/zabawki)**: Wiele jachtów oferuje opcjonalne dodatki. Na przykład: silnik zaburtowy do pontonu, deski SUP, kajaki, sprzęt wędkarski, urządzenia Wi-Fi itp. Są one dostępne za dodatkową opłatą za wynajem. Wi-Fi, na przykład, może kosztować **30-50 euro tygodniowo** za router na jachcie czarterowanym bez załogi. Zabawki wodne mogą kosztować **100-200 euro za sztukę tygodniowo**.
 
-**Opłaty za Skippera lub Załogę**: Jeśli wynajmujesz skippera, hostessę, kucharza itp., są one płatne oddzielnie. Koszt skippera to około **150 euro dziennie** (plus wyżywienie), hostessy może **130 euro dziennie**, itp., chociaż stawki różnią się w zależności od lokalizacji.
+**Opłaty za Skippera lub Załogę**: Jeśli wynajmujesz skippera, hostessę, kucharza itp., są one płatne oddzielnie. Stawki skippera i załogi różnią się w zależności od lokalizacji i są podane na stronie każdej łodzi.
 
 **Ubezpieczenie od Uszkodzeń (Opcjonalne)**: W niektórych przypadkach możesz zdecydować się na niezwrotne ubezpieczenie zamiast wysokiej kaucji. Na przykład, zapłacenie **250 euro** zmniejsza Twoją kaucję z 3000 euro do 500 euro. Te 250 euro jest dodatkowym kosztem (i nie podlega zwrotowi), ale ogranicza Twoją odpowiedzialność.
 

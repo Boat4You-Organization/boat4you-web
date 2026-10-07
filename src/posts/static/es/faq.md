@@ -216,7 +216,7 @@ La respuesta corta es: **generalmente no**, a menos que haya reservado específi
 
 **Chárter sin tripulación (Bareboat)**: No incluye tripulación (usted es el patrón). Por lo tanto, no hay costo adicional por tripulación en el precio.
 
-**Chárter con patrón**: Si solicita un patrón, la tarifa del patrón se agregará además del precio del barco sin tripulación. Las tarifas de patrón a menudo se cobran por día (por ejemplo, 150-200 € por día, dependiendo de la ubicación y las cualificaciones, más el aprovisionamiento). Cuando le damos una cotización para un chárter con patrón, generalmente detallamos la tarifa del patrón por separado para que quede claro. Usted también es responsable de la comida del patrón durante el chárter y, en algunos casos, de un camarote designado para él, como cortesía.
+**Chárter con patrón**: Si solicita un patrón, la tarifa del patrón se agregará además del precio del barco sin tripulación. Las tarifas de patrón suelen cobrarse por día y dependen de la ubicación y las cualificaciones; la tarifa figura en la página de cada barco. Cuando le damos una cotización para un chárter con patrón, generalmente detallamos la tarifa del patrón por separado para que quede claro. Usted también es responsable de la comida del patrón durante el chárter y, en algunos casos, de un camarote designado para él, como cortesía.
 
 **Chárter con tripulación (Yates totalmente tripulados)**: Este es el escenario donde el chárter viene con una tripulación a tiempo completo (capitán, y quizás tripulación adicional como un chef, azafata, marinero de cubierta dependiendo del yate). Para yates de lujo con tripulación y goletas, los salarios de la tripulación generalmente están incluidos en la tarifa del chárter. Usted no paga a la tripulación directamente (excepto las propinas al final). Sin embargo, elementos como el **APA (Asignación de Provisión por Adelantado)** cubrirán el aprovisionamiento de la tripulación y otros gastos.
 
@@ -299,7 +299,7 @@ Al planificar su presupuesto de chárter, es importante considerar los gastos no
 
 **Extras Opcionales (equipo/juguetes)**: Muchos yates ofrecen complementos opcionales. Por ejemplo: motor fuera de borda para el bote auxiliar, tablas de _stand-up paddle_, kayaks, equipo de pesca, unidades de Wi-Fi, etc. Estos conllevan tarifas de alquiler adicionales. El Wi-Fi, por ejemplo, podría ser **30 €-50 €/semana** para un _router_ en un barco sin tripulación. Los juguetes acuáticos pueden oscilar entre **100 €-200 € cada uno por semana**.
 
-**Tarifas de Patrón o Tripulación**: Si contrata un patrón, azafata, chef, etc., se pagan por separado. Un patrón cuesta aproximadamente **150 €/día** (más comida), la azafata quizás **130 €/día**, etc., aunque las tarifas varían según la ubicación.
+**Tarifas de Patrón o Tripulación**: Si contrata un patrón, azafata, chef, etc., se pagan por separado. Las tarifas de patrón y tripulación varían según la ubicación y figuran en la página de cada barco.
 
 **Seguro de Exención de Daños (Opcional)**: En algunos casos, puede optar por un seguro no reembolsable en lugar de un gran depósito de seguridad. Por ejemplo, pague **250 €** para reducir su depósito de seguridad de 3.000 € a 500 €. Estos 250 € son un costo adicional (y no se devuelven) pero limitan su responsabilidad.
 

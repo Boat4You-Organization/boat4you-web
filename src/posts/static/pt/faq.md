@@ -582,7 +582,7 @@ A resposta curta é: **geralmente não**, a menos que você tenha especificament
 
 **Charter _bareboat_**: Nenhuma tripulação incluída (você é o skipper). Portanto, não há custo extra para a tripulação no preço.
 
-**Charter com skipper**: Se você solicitar um skipper, a taxa do skipper será adicionada ao preço _bareboat_. As taxas de skipper são frequentemente cobradas por dia (por exemplo, €150-€200 por dia, dependendo da localização e qualificações, mais aprovisionamento). Quando lhe dermos um orçamento para um charter com skipper, geralmente detalharemos a taxa do skipper separadamente para que fique clara. Você também é responsável pela alimentação do skipper durante o charter e, em alguns casos, uma cabine designada para eles, como cortesia.
+**Charter com skipper**: Se você solicitar um skipper, a taxa do skipper será adicionada ao preço _bareboat_. As taxas de skipper são normalmente cobradas por dia e dependem da localização e das qualificações; a tarifa consta da página de cada barco. Quando lhe dermos um orçamento para um charter com skipper, geralmente detalharemos a taxa do skipper separadamente para que fique clara. Você também é responsável pela alimentação do skipper durante o charter e, em alguns casos, uma cabine designada para eles, como cortesia.
 
 **Charter tripulado (iates totalmente tripulados)**: Este é o cenário onde o charter vem com uma tripulação em tempo integral (capitão e, talvez, tripulação adicional como um chef, hostess, marinheiro, dependendo do iate). Para iates de luxo tripulados e _gulets_, os salários da tripulação estão geralmente incluídos na taxa de charter. Você não paga a tripulação diretamente (exceto gorjetas no final). No entanto, itens como **APA (_Advance Provisioning Allowance_)** cobrirão o aprovisionamento e outras despesas da tripulação.
 
@@ -665,7 +665,7 @@ Ao planear o seu orçamento de charter, é importante considerar as despesas nã
 
 **Extras Opcionais (equipamento/brinquedos)**: Muitos iates oferecem _add-ons_ opcionais. Por exemplo: motor de popa para o _dinghy_, _stand-up paddleboards_, _caiaques_, equipamento de pesca, unidades _Wi-Fi_, etc. Estes vêm com taxas de aluguel extras. O _Wi-Fi_, por exemplo, pode ser **€30-€50/semana** para um _router_ em um _bareboat_. Brinquedos aquáticos podem variar de **€100-€200 cada por semana**.
 
-**Taxas de Skipper ou Tripulação**: Se você contratar um skipper, hostess, chef, etc., eles são pagos separadamente. Um skipper é aproximadamente **€150/dia** (mais comida), hostess talvez **€130/dia**, etc., embora as taxas variem por localização.
+**Taxas de Skipper ou Tripulação**: Se você contratar um skipper, hostess, chef, etc., eles são pagos separadamente. As tarifas de skipper e tripulação variam por localização e constam da página de cada barco.
 
 **Seguro de Isenção de Danos (Opcional)**: Em alguns casos, você pode optar por um seguro não reembolsável em vez de um grande depósito de segurança. Por exemplo, pague **€250** para reduzir seu depósito de segurança de €3000 para €500. Este €250 é um custo extra (e não é devolvido), mas limita sua responsabilidade.
 

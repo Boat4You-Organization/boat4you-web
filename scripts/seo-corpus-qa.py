@@ -78,7 +78,8 @@ found and every allowed one passes): "perday-crew-price" — a per-day price on
 a skipper/crew/hostess/chef/instructor in any locale ("Skippered charters add
 EUR 300-500 daily", "150 bis 200 Euro pro Tag plus Verpflegung"; vessel day
 rates, crewed packages, food budgets, tips, fuel and mooring pass, decided by
-the words next to the amount); "operator-claim" — Boat4You as employer of
+the words next to the amount; since 7.10.2026 also in the FAQ,
+src/posts/static/<locale>/faq.md, file "faq/<locale>"); "operator-claim" — Boat4You as employer of
 crews, owner of fleets/bases or the party that briefs and maintains the boats
 ("Boat4You's skippers", "la flotte ... de Boat4You", "employés par Boat4You",
 "mantidas pela Boat4You", "Unsere Schiffe", "Boat4You posiada 14", "Boat4You
@@ -2019,6 +2020,39 @@ def w610_checks(src, locale, name):
     return found
 
 
+# R14 on the FAQ too (review of 7.10.2026): src/posts/static/<locale>/faq.md had "A skipper is roughly
+# **€150/day** (plus food), hostess maybe **€130/day**" in all 9 locales; the corpus scan never saw it.
+FAQ_ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'src', 'posts', 'static')
+
+
+def faq_sentences(md):
+    """Sentences of a markdown FAQ (emphasis markers and link targets dropped), each also joined with the
+    sentence before it in the same paragraph: "Ako zatražite skipera, njegova naknada … Naknada se često
+    naplaćuje po danu (npr. 150–200 €/dan …)" names the skipper one sentence before the amount."""
+    out = []
+    for para in re.split(r'\n\s*\n', md):
+        text = re.sub(r'\[([^\]]*)\]\([^)]*\)', r'\1', para)
+        text = squash(re.sub(r'[*`]+|(?<!\w)_+|_+(?!\w)', '', text))
+        text = re.sub(r'\b([zdup])\.\s(B|h|a|ej|ex)\.', r'\1.\2.', text)   # "z. B." is not two sentences
+        sentences = [s for s in (plain(p) for p in R.split_sentences(text)) if s]
+        out.extend(sentences)
+        out.extend(f'{a} {b}' for a, b in zip(sentences, sentences[1:]))
+    return out
+
+
+def faq_findings():
+    found = []
+    for locale in LOCALES:
+        path = os.path.join(FAQ_ROOT, locale, 'faq.md')
+        if os.path.exists(path):
+            with open(path, encoding='utf-8') as fh:
+                hits = perday_crew_prices(faq_sentences(fh.read()), locale)
+            # a pair is reported only when neither of its sentences is reported on its own
+            found += [('perday-crew-price', f'faq/{locale}', s) for s in hits
+                      if not any(h != s and h in s for h in hits)]
+    return found
+
+
 # --self-test: every sentence the review of 6.10.2026 quoted (found on origin/main or on the branch
 # before the fix) must be reported, every allowed sentence must pass.
 W610_SELF_TEST = {
@@ -2170,6 +2204,15 @@ W610_SELF_TEST = {
 }
 W610_SELF_TEST_ASCII = (['Route Zadar-Kornati-Hvar-Korcula-Vis-Skradin', 'Sail from Sibenik to Primosten'],
                         ['<a href="/search?destinations=Korcula">Korčula</a>', 'Šibenik and Primošten'])
+# faq_sentences() + perday_crew_prices: the FAQ paragraphs the review quoted (markdown, "z. B.", "npr.").
+W610_SELF_TEST_FAQ = (
+    [('en', "**Skipper or Crew Fees**: If you hire a skipper, hostess, chef, etc., those are paid separately. A skipper is roughly **€150/day** (plus food), hostess maybe **€130/day**, etc., though rates vary by location."),
+     ('de', "**Skipper-Charter**: Wenn Sie einen Skipper anfordern, wird die Skipper-Gebühr zusätzlich zum Bareboat-Preis berechnet. Skipper-Gebühren werden oft pro Tag berechnet (z. B. 150 €–200 € pro Tag, abhängig von Standort und Qualifikationen, zuzüglich Verpflegung)."),
+     ('hr', "**Čarter sa skiperom**: Ako zatražite skipera, njegova naknada se dodaje na bareboat cijenu. Naknada se često naplaćuje po danu (npr. 150–200 €/dan, ovisno o lokaciji i kvalifikacijama, plus troškovi opskrbe)."),
+     ('pl', "Koszt skippera to około **150 euro dziennie** (plus wyżywienie), hostessy może **130 euro dziennie**, itp.")],
+    [('en', "**Skipper or Crew Fees**: If you hire a skipper, hostess, chef, etc., those are paid separately. Skipper and crew rates vary by location and are shown on each boat's page."),
+     ('en', "- Fuel: €150 (moderate engine use)\n- Moorings: if 3 nights in marinas at ~€50 each = €150"),
+     ('hr', "**Naknade skipera ili posade**: Plaća se posebno. Iznosi za skipera i posadu ovise o lokaciji i navedeni su na stranici svakog broda.")])
 # The register check reads plain(): a literal "<" before the slip ("(< 3 knopen)", "(<8)") used to hide the
 # rest of the paragraph (review of 7.10.2026). (locale, body) — positives must give a 'register' finding.
 W610_SELF_TEST_REGISTER = (
@@ -2197,13 +2240,17 @@ def run_w610_self_test():
     for text in W610_SELF_TEST_ASCII[1]:
         if ascii_croatian_names(f'<p>{text}</p>', 'x.html'):
             failed.append(f'FLAGGED ascii-hr-name: {text}')
+    for positive, cases in ((True, W610_SELF_TEST_FAQ[0]), (False, W610_SELF_TEST_FAQ[1])):
+        for locale, md in cases:
+            if bool(perday_crew_prices(faq_sentences(md), locale)) != positive:
+                failed.append(f'{"MISSED " if positive else "FLAGGED"} faq perday-crew-price {locale}: {md[:110]}')
     for positive, cases in ((True, W610_SELF_TEST_REGISTER[0]), (False, W610_SELF_TEST_REGISTER[1])):
         for locale, body in cases:
             hit = any(check == 'register' for check, _ in R.independent_checks(body, locale, R.plain(body)))
             if hit != positive:
                 failed.append(f'{"MISSED " if positive else "FLAGGED"} register {locale}: {R.plain(body)[:110]}')
     total = (sum(len(p) + len(n) for _, p, n in W610_SELF_TEST.values()) + sum(map(len, W610_SELF_TEST_ASCII))
-             + sum(map(len, W610_SELF_TEST_REGISTER)))
+             + sum(map(len, W610_SELF_TEST_REGISTER)) + sum(map(len, W610_SELF_TEST_FAQ)))
     for line in failed:
         print(line)
     print(f'w610 self-test: {total - len(failed)}/{total} cases pass')
@@ -2376,6 +2423,7 @@ def main():
 
     for check, excerpt in R.message_checks():
         findings.append((check, 'messages', squash(excerpt)))
+    findings.extend(faq_findings())
     by_check = collections.Counter(c for c, _, _ in findings)
     files_by_check = collections.defaultdict(set)
     for check, f, _ in findings:

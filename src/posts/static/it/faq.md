@@ -216,7 +216,7 @@ La risposta breve è: **di solito no**, a meno che tu non abbia specificamente p
 
 **Charter Bareboat**: Nessun equipaggio incluso (sei tu lo skipper). Quindi nessun costo aggiuntivo per l'equipaggio nel prezzo.
 
-**Charter con Skipper**: Se richiedi uno skipper, la tariffa dello skipper verrà aggiunta al prezzo _bareboat_. Le tariffe dello skipper sono spesso addebitate al giorno (ad esempio €150-€200 al giorno, a seconda della località e delle qualifiche, più l'approvvigionamento). Quando ti facciamo un preventivo per un charter con skipper, di solito specifichiamo separatamente la tariffa dello skipper in modo che sia chiara. Sei anche responsabile del cibo dello skipper durante il charter e in alcuni casi di una cabina designata per loro, per cortesia.
+**Charter con Skipper**: Se richiedi uno skipper, la tariffa dello skipper verrà aggiunta al prezzo _bareboat_. Le tariffe dello skipper sono di solito addebitate al giorno e dipendono dalla località e dalle qualifiche; la tariffa è indicata nella pagina di ogni barca. Quando ti facciamo un preventivo per un charter con skipper, di solito specifichiamo separatamente la tariffa dello skipper in modo che sia chiara. Sei anche responsabile del cibo dello skipper durante il charter e in alcuni casi di una cabina designata per loro, per cortesia.
 
 **Charter con Equipaggio (Yacht completamente equipaggiati)**: Questo è lo scenario in cui il charter viene fornito con un equipaggio a tempo pieno (capitano, e magari equipaggio aggiuntivo come chef, hostess, marinaio a seconda dello yacht). Per gli yacht di lusso con equipaggio e i caicchi, i salari dell'equipaggio sono generalmente inclusi nella tariffa del charter. Non paghi l'equipaggio direttamente (tranne le mance alla fine). Tuttavia, elementi come l'**APA (Anticipo per l'Approvvigionamento)** copriranno l'approvvigionamento dell'equipaggio e altre spese.
 
@@ -299,7 +299,7 @@ Quando pianifichi il tuo budget per il charter, è importante considerare le spe
 
 **Extra Opzionali (attrezzatura/giocattoli)**: Molti yacht offrono componenti aggiuntivi opzionali. Ad esempio: motore fuoribordo per il tender, _stand-up paddleboard_, kayak, attrezzatura da pesca, unità Wi-Fi, ecc. Questi hanno tariffe di noleggio extra. Il Wi-Fi, ad esempio, potrebbe essere **€30-€50/settimana** per un _router_ su un _bareboat_. I giochi d'acqua possono variare da **€100-€200 ciascuno a settimana**.
 
-**Tariffe Skipper o Equipaggio**: Se assumi uno skipper, hostess, chef, ecc., questi vengono pagati separatamente. Uno skipper costa circa **€150/giorno** (più il cibo), una hostess forse **€130/giorno**, ecc., anche se le tariffe variano in base alla località.
+**Tariffe Skipper o Equipaggio**: Se assumi uno skipper, hostess, chef, ecc., questi vengono pagati separatamente. Le tariffe di skipper ed equipaggio variano in base alla località e sono indicate nella pagina di ogni barca.
 
 **Assicurazione Franchigia per Danni (Opzionale)**: In alcuni casi, potresti optare per un'assicurazione non rimborsabile in sostituzione di un grande deposito cauzionale. Ad esempio, paga **€250** per ridurre il tuo deposito cauzionale da €3.000 a €500. Questi €250 sono un costo extra (e non vengono restituiti) ma limitano la tua responsabilità.
 

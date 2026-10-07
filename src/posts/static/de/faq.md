@@ -216,7 +216,7 @@ Die kurze Antwort lautet: **normalerweise nicht**, es sei denn, Sie haben ausdr�
 
 **Bareboat-Charter**: Keine Crew inbegriffen (Sie sind der Skipper). Daher keine zusätzlichen Kosten für die Crew im Preis.
 
-**Skipper-Charter**: Wenn Sie einen Skipper anfordern, wird die Skipper-Gebühr zusätzlich zum Bareboat-Preis berechnet. Skipper-Gebühren werden oft pro Tag berechnet (z. B. 150 €–200 € pro Tag, abhängig von Standort und Qualifikationen, zuzüglich Verpflegung). Wenn wir Ihnen ein Angebot für einen Skipper-Charter machen, werden wir die Skipper-Gebühr normalerweise separat aufschlüsseln, damit sie klar ersichtlich ist. Sie sind auch für die Verpflegung des Skippers während des Charters und in einigen Fällen höflicherweise für eine ausgewiesene Kabine für ihn verantwortlich.
+**Skipper-Charter**: Wenn Sie einen Skipper anfordern, wird die Skipper-Gebühr zusätzlich zum Bareboat-Preis berechnet. Skipper-Gebühren werden meist pro Tag berechnet und hängen von Standort und Qualifikationen ab; der Tarif ist auf der Seite jedes Bootes angegeben. Wenn wir Ihnen ein Angebot für einen Skipper-Charter machen, werden wir die Skipper-Gebühr normalerweise separat aufschlüsseln, damit sie klar ersichtlich ist. Sie sind auch für die Verpflegung des Skippers während des Charters und in einigen Fällen höflicherweise für eine ausgewiesene Kabine für ihn verantwortlich.
 
 **Crewed Charter (voll ausgestattete Yachten mit Besatzung)**: Dies ist das Szenario, in dem der Charter mit einer Vollzeit-Crew (Kapitän und möglicherweise zusätzliche Crew wie ein Koch, eine Hostess, ein Deckhelfer, abhängig von der Yacht) geliefert wird. Bei luxuriösen Crewed Yachten und Gulets sind die Gehälter der Crew im Allgemeinen in der Chartergebühr enthalten. Sie bezahlen die Crew nicht direkt (außer Trinkgeldern am Ende). Allerdings decken Dinge wie **APA (Advance Provisioning Allowance)** die Verpflegung und andere Ausgaben der Crew ab.
 
@@ -299,7 +299,7 @@ Bei der Planung Ihres Charterbudgets ist es wichtig, die Ausgaben zu berücksich
 
 **Optionale Extras (Ausrüstung/Spielzeug)**: Viele Yachten bieten optionale Extras an. Zum Beispiel: Außenbordmotor für das Beiboot, Stand-Up-Paddleboards, Kajaks, Angelausrüstung, WLAN-Geräte usw. Dafür fallen zusätzliche Mietgebühren an. WLAN könnte beispielsweise **30 €–50 €/Woche** für einen Router auf einem Bareboat kosten. Wasserspielzeug kann zwischen **100 €–200 € pro Stück pro Woche** liegen.
 
-**Skipper- oder Crew-Gebühren**: Wenn Sie einen Skipper, eine Hostess, einen Koch usw. engagieren, werden diese separat bezahlt. Ein Skipper kostet grob **150 €/Tag** (plus Verpflegung), eine Hostess vielleicht **130 €/Tag** usw., obwohl die Preise je nach Standort variieren.
+**Skipper- oder Crew-Gebühren**: Wenn Sie einen Skipper, eine Hostess, einen Koch usw. engagieren, werden diese separat bezahlt. Die Tarife für Skipper und Crew variieren je nach Standort und sind auf der Seite jedes Bootes angegeben.
 
 **Schadensverzicht-Versicherung (Optional)**: In einigen Fällen entscheiden Sie sich möglicherweise für eine nicht erstattungsfähige Versicherung anstelle einer großen Sicherheitskaution. Zum Beispiel zahlen Sie **250 €**, um Ihre Sicherheitskaution von 3000 € auf 500 € zu reduzieren. Diese 250 € sind zusätzliche Kosten (und werden nicht zurückerstattet), begrenzen aber Ihre Haftung.
 

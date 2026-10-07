@@ -216,7 +216,7 @@ Het korte antwoord is: **meestal niet**, tenzij je specifiek een all-inclusive c
 
 **Bareboat charter**: Geen bemanning inbegrepen (je bent de schipper). Dus geen extra kosten voor bemanning in de prijs.
 
-**Schipper charter**: Als je een schipper aanvraagt, worden de kosten van de schipper bovenop de bareboat-prijs berekend. Schipperkosten worden vaak per dag berekend (bijv. €150-€200 per dag, afhankelijk van locatie en kwalificaties, plus proviand). Wanneer we je een offerte geven voor een schippercharter, zullen we de schipperkosten meestal apart specificeren, zodat het duidelijk is. Je bent ook verantwoordelijk voor het eten van de schipper tijdens de charter en in sommige gevallen voor een aangewezen hut voor hen, als blijk van hoffelijkheid.
+**Schipper charter**: Als je een schipper aanvraagt, worden de kosten van de schipper bovenop de bareboat-prijs berekend. Schipperkosten worden meestal per dag berekend en hangen af van locatie en kwalificaties; het tarief staat op de pagina van elke boot. Wanneer we je een offerte geven voor een schippercharter, zullen we de schipperkosten meestal apart specificeren, zodat het duidelijk is. Je bent ook verantwoordelijk voor het eten van de schipper tijdens de charter en in sommige gevallen voor een aangewezen hut voor hen, als blijk van hoffelijkheid.
 
 **Charter met bemanning (volledig bemande jachten)**: Dit is het scenario waarbij de charter wordt geleverd met een fulltime bemanning (kapitein, en mogelijk extra bemanning zoals een chef-kok, hostess, dekman, afhankelijk van het jacht). Voor luxe bemande jachten en gulets zijn de salarissen van de bemanning over het algemeen inbegrepen in de charterprijs. Je betaalt de bemanning niet direct (behalve fooi aan het einde). Echter, zaken als **APA (Advance Provisioning Allowance)** dekken de proviand en andere uitgaven van de bemanning.
 
@@ -299,7 +299,7 @@ Bij het plannen van je charterbudget is het belangrijk om rekening te houden met
 
 **Optionele Extra's (uitrusting/speelgoed)**: Veel jachten bieden optionele extra's. Bijvoorbeeld: buitenboordmotor voor de bijboot, stand-up paddleboards, kajaks, visuitrusting, Wi-Fi-apparaten, enz. Deze zijn tegen extra huurprijzen. Wi-Fi, bijvoorbeeld, kan **€30-€50 per week** kosten voor een router op een bareboat. Waterspeelgoed kan **€100-€200 per stuk per week** kosten.
 
-**Schipper- of Bemanningstarieven**: Als je een schipper, hostess, chef-kok, enz. inhuurt, worden deze apart betaald. Een schipper kost ongeveer **€150 per dag** (plus eten), een hostess misschien **€130 per dag**, enzovoort, hoewel de tarieven per locatie variëren.
+**Schipper- of Bemanningstarieven**: Als je een schipper, hostess, chef-kok, enz. inhuurt, worden deze apart betaald. De tarieven voor schipper en bemanning verschillen per locatie en staan op de pagina van elke boot.
 
 **Schadeverzekering (Optioneel)**: In sommige gevallen kun je kiezen voor een niet-restitueerbare verzekering in plaats van een grote borg. Betaal bijvoorbeeld **€250** om je borg van €3000 te verlagen naar €500. Deze €250 is een extra kostenpost (en wordt niet terugbetaald), maar beperkt je aansprakelijkheid.
 
