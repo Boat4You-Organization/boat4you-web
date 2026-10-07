@@ -25,7 +25,9 @@ import { buildMetadata, localizedUrl } from '@/utils/static/buildMetadata';
 import { getBoatImageUrl } from '@/utils/static/imageUtils';
 import { isInquiryOnlyBoat } from '@/utils/static/inquiryOnlyBoat';
 import { serializeJsonLd } from '@/utils/static/jsonLd';
+import { freeCancellationReturnPolicy } from '@/utils/static/merchantReturnPolicy';
 import { nameRepeatsModel, toTitleCase, yachtLabel } from '@/utils/static/toTitleCase';
+import { WeeklyOfferSummary, todayIso, weeklyOfferSummary } from '@/utils/static/weeklyOffers';
 import { ManufacturerLookup, yachtBrandName } from '@/utils/static/yachtBrand';
 import { CapacityFacts, capacityFacts, fromYacht } from '@/utils/static/yachtCapacity';
 import { buildYachtFaq, buildYachtFaqSchema } from '@/utils/static/yachtFaq';
@@ -103,22 +105,14 @@ const canonicalBoatPath = (yacht: YachtModel): string => `/boat/${yacht.listingC
  *   - `additionalProperty` — yacht specs (year, cabins, berths, WC, max
  *     persons, length) so Google's product knowledge graph can match facets
  *   - `offers` — `AggregateOffer` with the min/max 7-night price of the
- *     upcoming weeks; populated only when a week carries a price >0
+ *     upcoming weeks (weeklyOffers.ts — the same weeks and the same "from"
+ *     price as the page's "From … / week" line and its FAQ); populated only
+ *     when a week carries a price >0
  *
  * `aggregateRating` is intentionally OMITTED — Google flags fake/empty review
  * markup as spam and removes the rich result entirely. Re-add only when a
  * real review platform (Trustpilot / Google Reviews / internal) is wired up.
  */
-/** Nights of one offer (dateFrom → dateTo), or null when unreadable. */
-const offerNights = (offer: { dateFrom?: string; dateTo?: string; numberOfDays?: number | null }): number | null => {
-  const from = Date.parse(offer.dateFrom?.slice(0, 10) ?? '');
-  const to = Date.parse(offer.dateTo?.slice(0, 10) ?? '');
-
-  if (Number.isFinite(from) && Number.isFinite(to)) return Math.round((to - from) / 86_400_000);
-
-  return offer.numberOfDays ?? null;
-};
-
 /**
  * Capacity for the boat's meta description and Product description: cabins
  * and berths as the partner sends them; max. people on board only when the
@@ -135,7 +129,8 @@ function buildYachtProductSchema(
   locale: LocaleType,
   tDesc: BoatDescTranslate,
   manufacturers: ManufacturerLookup | null,
-  facts: CapacityFacts
+  facts: CapacityFacts,
+  weekly: WeeklyOfferSummary<YachtModel['offers'][number]> | null
 ) {
   // No bookable future offer (27.9.2026): the page asks for an inquiry and
   // shows no price, so the markup carries none either — no price, no
@@ -154,23 +149,14 @@ function buildYachtProductSchema(
 
   // Weekly figures only (audit B26): the range used to span every offer
   // length — 3,116 € to 45,317 € over 233 mixed 7/14/21/28-night offers —
-  // while the page and the landings price by the week. Future Saturday-style
-  // 7-night offers with a real price; the bookable ones (FREE, or an expired
-  // option) when there are any, else the booked weeks as SoldOut.
-  const today = new Date().toISOString().slice(0, 10);
-  const weekly = (yacht.offers || []).filter(
-    o =>
-      typeof o.clientPriceEur === 'number' &&
-      o.clientPriceEur > 0 &&
-      offerNights(o) === 7 &&
-      (o.dateFrom ?? '').slice(0, 10) >= today
-  );
-  const bookable = weekly.filter(o => (o.status as string) === 'FREE' || (o.status as string) === 'OPTION_EXPIRED');
-  const priced = bookable.length ? bookable : weekly;
-  const offerPrices = priced.map(o => Math.round(o.clientPriceEur));
-
-  const lowPrice = offerPrices.length ? Math.min(...offerPrices) : null;
-  const highPrice = offerPrices.length ? Math.max(...offerPrices) : null;
+  // while the page and the landings price by the week. Future 7-night offers
+  // with a real price, one per week; the bookable ones (FREE, or an expired
+  // option) when there are any, else the booked weeks as SoldOut. offerCount
+  // is the number of those weeks — the bookable weeks the page offers. The
+  // sister sites count every priced week of the next 12 months, booked ones
+  // included (7.10.2026: 50 there = 31 bookable + 19 booked weeks here).
+  const lowPrice = weekly?.lowPrice ?? null;
+  const highPrice = weekly?.highPrice ?? null;
 
   // No bookable offer with a real price → we can't form a VALID Product. Google
   // requires `offers`, `review`, or `aggregateRating` on a Product, and for an
@@ -203,9 +189,10 @@ function buildYachtProductSchema(
 
   // A yacht charter isn't a shipped/returnable physical good, but Google's
   // Merchant-listing enhancement still asks for these on the offer. Declare
-  // them accurately: no shipping cost (nothing ships) + no returns (bookings
-  // follow a cancellation policy, not product returns). Clears the two
-  // non-critical Search Console warnings.
+  // them accurately: no shipping cost (nothing ships), and the return policy
+  // is the page's promise — free cancellation within 72 hours of booking
+  // (merchantReturnPolicy.ts; it said "returns not permitted" until
+  // 7.10.2026). Clears the two non-critical Search Console warnings.
   const offerShippingDetails = {
     '@type': 'OfferShippingDetails',
     shippingRate: { '@type': 'MonetaryAmount', value: 0, currency: 'EUR' },
@@ -219,11 +206,7 @@ function buildYachtProductSchema(
     },
     ...(country ? { shippingDestination: { '@type': 'DefinedRegion', addressCountry: country } } : {}),
   };
-  const merchantReturnPolicy = {
-    '@type': 'MerchantReturnPolicy',
-    returnPolicyCategory: 'https://schema.org/MerchantReturnNotPermitted',
-    ...(country ? { applicableCountry: country } : {}),
-  };
+  const merchantReturnPolicy = freeCancellationReturnPolicy(country);
 
   // Build a non-empty `additionalProperty` array — Google validates each
   // entry has a numeric/string value, so we filter undefined fields out.
@@ -261,15 +244,15 @@ function buildYachtProductSchema(
           })),
         }
       : {}),
-    ...(lowPrice && highPrice
+    ...(weekly && lowPrice && highPrice
       ? {
           offers: {
             '@type': 'AggregateOffer',
             priceCurrency: 'EUR',
             lowPrice,
             highPrice,
-            offerCount: offerPrices.length,
-            availability: bookable.length ? 'https://schema.org/InStock' : 'https://schema.org/SoldOut',
+            offerCount: weekly.offerCount,
+            availability: weekly.bookable ? 'https://schema.org/InStock' : 'https://schema.org/SoldOut',
             url,
             shippingDetails: offerShippingDetails,
             hasMerchantReturnPolicy: merchantReturnPolicy,
@@ -403,10 +386,10 @@ export async function generateMetadata({
   // AND the word order localize per locale (the old hard-coded map shipped
   // English "Charter" + English word order to de/it/nl — the strongest SERP /
   // Google Ads headline signal read English on every non-EN page):
-  //   EN: "Lagoon 39 'Gin Tonic' (2017) — Sukosan Charter"
-  //   DE: "Lagoon 39 'Gin Tonic' (2017) — Yachtcharter Sukosan"
-  //   HR: "Lagoon 39 'Gin Tonic' (2017) — Najam Sukosan"
-  //   FR: "Lagoon 39 'Gin Tonic' (2017) — Location Sukosan"
+  //   EN: "Lagoon 39 Gin Tonic (2017) — Sukosan Charter"
+  //   DE: "Lagoon 39 Gin Tonic (2017) — Yachtcharter Sukosan"
+  //   HR: "Lagoon 39 Gin Tonic (2017) — Najam Sukosan"
+  //   FR: "Lagoon 39 Gin Tonic (2017) — Location Sukosan"
   //   IT/NL/ES/PT/PL: "Noleggio / Jachtcharter / Alquiler / Aluguer / Czarter Sukosan"
   const town = titlePlace(locationFull);
   const titleTail = town ? tBoat('titleTail', { city: town }) : tBoat('titleTailNoCity');
@@ -485,13 +468,25 @@ const BoatPage = async ({
   // What the client components get: the same yacht without the partner notes
   // this page does not show (second line behind the backend sanitizer).
   const clientYacht = withResolvedNotes(yacht, capacity);
+  // The boat's weekly prices (weeklyOffers.ts): the Product's AggregateOffer,
+  // the FAQ's price answer and the "From … / week" line all read this one
+  // summary. An inquiry-only boat shows no price anywhere.
+  const weekly = isInquiryOnlyBoat(yacht) ? null : weeklyOfferSummary(yacht.offers, todayIso());
   const productSchema = buildYachtProductSchema(
     yacht,
     locale as LocaleType,
     (key, values) => tBoatMeta(key as never, values as never),
     manufacturers,
-    facts
+    facts,
+    weekly
   );
+  // "From … / week" in the server HTML (it said "Price on request" until the
+  // browser had priced the first offer): the cheapest bookable week, in the
+  // page's currency — the JSON-LD lowPrice in euros.
+  const fromWeek = weekly?.cheapestBookable;
+  const weeklyFromPrice = fromWeek
+    ? { clientPriceEur: fromWeek.clientPriceEur, clientPriceInfo: fromWeek.clientPriceInfo ?? undefined }
+    : null;
 
   // Hubs above this boat (country, region/base, boat type) — linked only
   // when their landing passes the index gate. The visible breadcrumb
@@ -525,7 +520,13 @@ const BoatPage = async ({
   // HTML (unique indexable content, variant-rotated per yacht id) and the
   // FAQPage JSON-LD below always mirrors the visible accordion.
   const tYacht = await getTranslations({ locale, namespace: 'yacht' });
-  const yachtFaq = buildYachtFaq(yacht, (key, values) => tYacht(key as never, values as never), locale, facts);
+  const yachtFaq = buildYachtFaq(
+    yacht,
+    (key, values) => tYacht(key as never, values as never),
+    locale,
+    facts,
+    weekly?.cheapestBookable?.clientPriceEur ?? null
+  );
   const yachtFaqSchema = buildYachtFaqSchema(yachtFaq);
 
   const breadcrumbSchema = {
@@ -596,7 +597,7 @@ const BoatPage = async ({
             areaLabel={await suggestedAreaLabel(locale, yacht.location?.name, yacht.location?.countryCode)}
           />
         </Container>
-        <BoatMobileNavigation yacht={clientYacht} />
+        <BoatMobileNavigation yacht={clientYacht} weeklyFromPrice={weeklyFromPrice} />
       </BoatTransitionProvider>
     </Layout>
   );

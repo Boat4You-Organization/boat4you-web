@@ -15,6 +15,7 @@ import { BoatCalendarFormValues } from '@/config/form-models.config';
 import { BOAT_CALENDAR_FORM } from '@/config/form-names.config';
 import { YachtModel } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
+import { PriceInfo } from '@/types/price-info.type';
 import useQueryParams from '@/utils/hooks/useQueryParams';
 import { useReservation } from '@/utils/hooks/useReservation';
 import useToggleState from '@/utils/hooks/useToggleState';
@@ -31,6 +32,13 @@ import PriceDetailsContent from './PriceDetailsContent';
 
 interface BoatMobileNavigationProps {
   yacht: YachtModel;
+  /**
+   * The boat's cheapest bookable week (weeklyOffers.ts, decided on the
+   * server): the "From … / week" line before any dates are chosen — the
+   * same amount as the Product JSON-LD lowPrice and the FAQ. Null when no
+   * week is bookable.
+   */
+  weeklyFromPrice?: { clientPriceEur: number; clientPriceInfo?: PriceInfo } | null;
 }
 
 const defaultValues: BoatCalendarFormValues = {
@@ -38,7 +46,7 @@ const defaultValues: BoatCalendarFormValues = {
   endDate: null,
 };
 
-const BoatMobileNavigation = ({ yacht }: BoatMobileNavigationProps) => {
+const BoatMobileNavigation = ({ yacht, weeklyFromPrice = null }: BoatMobileNavigationProps) => {
   const t = useTranslations('common');
   const tYacht = useTranslations('yacht');
   const { calculatedPrice, selectedOffer, isCalculatingPrice, priceSettledFor } = useYachtStore();
@@ -165,6 +173,23 @@ const BoatMobileNavigation = ({ yacht }: BoatMobileNavigationProps) => {
     locale,
   });
 
+  // Before dates are chosen: "From <cheapest bookable week> / week", the
+  // same in the server HTML and after hydration. It used to wait for the
+  // browser to price the boat's FIRST offer — the server HTML said "Price on
+  // request" (SEO audit 7.10.2026), and the amount was that first offer's,
+  // which is neither always the cheapest week nor always a 7-night offer.
+  // The price details behind a click still need that calculation.
+  const weeklyFromLabel =
+    weeklyFromPrice && isPositivePrice(weeklyFromPrice.clientPriceInfo?.amount ?? weeklyFromPrice.clientPriceEur)
+      ? tYacht('fromPerWeek', {
+          price: formatPriceWithCurrency({
+            clientPriceEur: weeklyFromPrice.clientPriceEur,
+            clientPriceInfo: weeklyFromPrice.clientPriceInfo,
+            locale,
+          }),
+        })
+      : null;
+
   if (inquiryOnly) {
     return (
       <Box className={revealed ? `${styles.container} ${styles.revealed}` : styles.container}>
@@ -204,8 +229,7 @@ const BoatMobileNavigation = ({ yacht }: BoatMobileNavigationProps) => {
         return (
           <>
             <Box className={revealed ? `${styles.container} ${styles.revealed}` : styles.container}>
-              {/* No dates chosen yet: the calculated total belongs to the
-                  first bookable week, so it is a "from" price — never a
+              {/* No dates chosen yet: a "from" price for a week — never a
                   period the visitor did not pick (the bar used to print
                   "today – today + 7" beside it, audit 29.9.2026, R24). */}
               {!hasDates && !isInquireFlow ? (
@@ -213,10 +237,10 @@ const BoatMobileNavigation = ({ yacht }: BoatMobileNavigationProps) => {
                   variant="h4"
                   component="p"
                   color={colors.green500}
-                  className={isCalculatedPrice ? styles.price : undefined}
-                  onClick={isCalculatedPrice ? handlePriceDetailOpen : undefined}
+                  className={weeklyFromLabel && isCalculatedPrice ? styles.price : undefined}
+                  onClick={weeklyFromLabel && isCalculatedPrice ? handlePriceDetailOpen : undefined}
                 >
-                  {isCalculatedPrice ? tYacht('fromPerWeek', { price: formattedFullPrice }) : t('priceOnRequest')}
+                  {weeklyFromLabel ?? t('priceOnRequest')}
                 </Typography>
               ) : isCheckingAvailability ? (
                 <Stack direction="row" alignItems="center" justifyContent="center" gap={1} role="status" sx={{ mb: 1 }}>

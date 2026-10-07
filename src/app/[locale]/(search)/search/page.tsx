@@ -34,6 +34,7 @@ import { getBoatImageUrl } from '@/utils/static/imageUtils';
 import { isInquiryOnlyBoat } from '@/utils/static/inquiryOnlyBoat';
 import { serializeJsonLd } from '@/utils/static/jsonLd';
 import { hasListingPrice, listingPriceDays } from '@/utils/static/listingPrice';
+import { freeCancellationReturnPolicy } from '@/utils/static/merchantReturnPolicy';
 import { buildSearchLandingPath, isLandingExpressible } from '@/utils/static/searchLandingPath';
 import { yachtLabel } from '@/utils/static/toTitleCase';
 import { ManufacturerLookup, yachtBrandName } from '@/utils/static/yachtBrand';
@@ -333,7 +334,8 @@ function buildSearchProductsLd(
           : 'https://schema.org/PreOrder',
       // A charter isn't a shipped/returnable good, but Google's merchant
       // listing asks for both fields — declare them accurately (nothing
-      // ships, no product returns), same as the boat-detail schema.
+      // ships; free cancellation within 72 hours of booking, the site's
+      // promise — merchantReturnPolicy.ts), same as the boat-detail schema.
       shippingDetails: {
         '@type': 'OfferShippingDetails',
         shippingRate: { '@type': 'MonetaryAmount', value: 0, currency: 'EUR' },
@@ -347,11 +349,7 @@ function buildSearchProductsLd(
         },
         ...(country ? { shippingDestination: { '@type': 'DefinedRegion', addressCountry: country } } : {}),
       },
-      hasMerchantReturnPolicy: {
-        '@type': 'MerchantReturnPolicy',
-        returnPolicyCategory: 'https://schema.org/MerchantReturnNotPermitted',
-        ...(country ? { applicableCountry: country } : {}),
-      },
+      hasMerchantReturnPolicy: freeCancellationReturnPolicy(country),
     };
 
     return {

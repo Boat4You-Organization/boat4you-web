@@ -7,9 +7,12 @@ import { nameRepeatsModel } from '@/utils/static/toTitleCase';
  * carried the partner's equipment list — "Libertà - Luxury Catamaran, A/c,
  * Generator, Water Maker, Solar Panel"). The H1 keeps the full partner name.
  *
- *   "{model} '{name}' ({year}) — {tail}" + " | Boat4You" when it fits;
+ *   "{model} {name} ({year}) — {tail}" + " | Boat4You" when it fits;
  *   else without the brand suffix; else without the year; else the name cut
  *   at a word boundary.
+ *
+ * The name follows the model without quotes (7.10.2026): "Lagoon 42
+ * Masterpiece", the words people search for, not "Lagoon 42 'Masterpiece'".
  */
 
 // A dash-separated tail that is an equipment / refit note, not part of the name.
@@ -80,22 +83,22 @@ export const buildBoatTitle = ({
     !!cleanName &&
     !cleanModel.toLowerCase().includes(cleanName.toLowerCase()) &&
     !nameRepeatsModel(cleanModel, cleanName);
-  const quoted = hasName ? ` '${cleanName}'` : '';
+  const namePart = hasName ? ` ${cleanName}` : '';
   const yearPart = year ? ` (${year})` : '';
   const withTail = (head: string) => (tail ? `${head} — ${tail}` : head);
-  const full = withTail(`${cleanModel}${quoted}${yearPart}`);
+  const full = withTail(`${cleanModel}${namePart}${yearPart}`);
 
   if (fitsWithBrandSuffix(full)) return { title: full, absolute: false };
 
   if (full.length <= TITLE_MAX) return { title: full, absolute: true };
 
-  const noYear = withTail(`${cleanModel}${quoted}`);
+  const noYear = withTail(`${cleanModel}${namePart}`);
 
   if (noYear.length <= TITLE_MAX) return { title: noYear, absolute: true };
 
-  const room = TITLE_MAX - withTail(`${cleanModel} ''`).length;
+  const room = TITLE_MAX - withTail(`${cleanModel} `).length;
 
-  if (hasName && room >= 8) return { title: withTail(`${cleanModel} '${cutAtWord(cleanName, room)}'`), absolute: true };
+  if (hasName && room >= 8) return { title: withTail(`${cleanModel} ${cutAtWord(cleanName, room)}`), absolute: true };
 
   return { title: cutAtWord(noYear, TITLE_MAX), absolute: true };
 };

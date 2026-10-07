@@ -3,6 +3,7 @@ import { shownGuestBerths } from '@/utils/static/capacityProse';
 import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
 import { isInquiryOnlyBoat } from '@/utils/static/inquiryOnlyBoat';
 import { toTitleCase } from '@/utils/static/toTitleCase';
+import { todayIso, weeklyOfferSummary } from '@/utils/static/weeklyOffers';
 import { CapacityFacts, capacityFacts, fromYacht } from '@/utils/static/yachtCapacity';
 
 /**
@@ -29,12 +30,18 @@ type TranslateFn = (key: string, values?: Record<string, string | number>) => st
  * data is missing are skipped rather than rendered empty. The same list
  * feeds the visible accordion AND the FAQPage JSON-LD, so the markup never
  * drifts from what the page shows.
+ *
+ * `weekFromPriceEur` is the boat's "from" price for a week — the page passes
+ * the one its Product JSON-LD and its "From … / week" line use
+ * (weeklyOffers.ts), so the three always name the same amount.
  */
 export const buildYachtFaq = (
   yacht: YachtModel,
   t: TranslateFn,
   locale: string,
-  facts: CapacityFacts = capacityFacts(fromYacht(yacht, { locale }))
+  facts: CapacityFacts = capacityFacts(fromYacht(yacht, { locale })),
+  weekFromPriceEur: number | null = weeklyOfferSummary(yacht.offers, todayIso())?.cheapestBookable?.clientPriceEur ??
+    null
 ): YachtFaqEntry[] => {
   const name = yacht.name ? toTitleCase(yacht.name) : yacht.model;
   const entries: YachtFaqEntry[] = [];
@@ -91,13 +98,9 @@ export const buildYachtFaq = (
   // No bookable future offer: no price to quote, and booking is by inquiry.
   const inquiryOnly = isInquiryOnlyBoat(yacht);
 
-  // "From €X per week" — cheapest FREE weekly offer in the loaded window.
-  const weekly = inquiryOnly
-    ? []
-    : (yacht.offers || []).filter(o => o.status === 'FREE' && (o.numberOfDays ?? 0) === 7 && o.clientPriceEur > 0);
-
-  if (weekly.length > 0) {
-    const minPrice = Math.round(Math.min(...weekly.map(o => o.clientPriceEur)));
+  // "From €X per week" — the cheapest bookable 7-night week ahead.
+  if (!inquiryOnly && weekFromPriceEur != null && Math.round(weekFromPriceEur) > 0) {
+    const minPrice = Math.round(weekFromPriceEur);
 
     entries.push({
       question: t('faqPriceQ', { name }),
