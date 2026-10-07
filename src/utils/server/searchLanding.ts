@@ -5,7 +5,7 @@ import { Currency } from '@/models/user.model';
 import { isVesselType } from '@/models/yacht.model';
 import { ResolvedDestination, resolveDestinationDids } from '@/utils/server/destinationDid';
 import { isUndatedSearch } from '@/utils/static/listingPrice';
-import { destinationSlug, isLandingExpressible } from '@/utils/static/searchLandingPath';
+import { buildSearchLandingPath, destinationSlug, isLandingExpressible } from '@/utils/static/searchLandingPath';
 
 /**
  * Next leaves a comma-separated query value as one string (`?destinations=A%2CB`
@@ -221,6 +221,49 @@ export const listsWholeLanding = (params: AllSearchParams): boolean =>
   Object.entries(params as unknown as Record<string, unknown>)
     .filter(([, v]) => hasValue(v))
     .every(([key]) => WHOLE_LISTING_PARAMS.has(key) || isTrackingParam(key));
+
+/**
+ * The canonical path (locale-less) of the landing a request lists, when the
+ * request IS that landing in its plain form — or null.
+ *
+ * Plain form: one catalogue place given by name (no did of its own) that can
+ * carry a landing URL, at most one known boat type, the whole set (no dates,
+ * no filters: listsWholeLanding) in the default order (no sortBy,
+ * sortDirection or size). Only such a request pages with real links
+ * (landingPagination.ts), and only its page n > 1 is its own canonical page
+ * (`…&page=n`, audit 7.10.2026). Its pages 2…n are therefore crawlable; a
+ * dated, filtered or sorted variant keeps the button pager, so no query string
+ * opens a new crawl path. Pass the ORIGINAL request params.
+ */
+export const landingPagerPath = (params: AllSearchParams, landing: SearchLanding): string | null => {
+  if (landing.hasOwnDid || landing.destinations.length !== 1) return null;
+
+  const place = landing.resolved[0];
+
+  if (!place || !isLandingExpressible(place.name)) return null;
+
+  const boatTypes = splitSearchParam(params.boatTypes);
+
+  if (boatTypes.length > 1 || !boatTypes.every(isVesselType)) return null;
+
+  if (
+    !listsWholeLanding(params) ||
+    hasValue(params.sortBy) ||
+    hasValue(params.sortDirection) ||
+    hasValue(params.size)
+  ) {
+    return null;
+  }
+
+  return buildSearchLandingPath(place.name, boatTypes[0] ?? null);
+};
+
+/** The display currency a landing URL carries (`?currency=USD`), when it is a known one; else null. */
+export const landingCurrencyParam = (params: AllSearchParams): string | null => {
+  const [currency] = splitSearchParam(params.currency);
+
+  return currency && CURRENCIES.has(currency) ? currency : null;
+};
 
 /**
  * Pass the ORIGINAL request params (before withLandingDid adds the resolved

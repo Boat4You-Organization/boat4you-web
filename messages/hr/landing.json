@@ -292,5 +292,10 @@
     "zante": "na Zakintosu",
     "saintRaphael": "u Saint-Raphaëlu"
   },
-  "weeklyPriceNote": "Prikazana je najpovoljnija slobodna tjedna ponuda (7 noćenja) za svako plovilo. Odaberite datume za točne cijene."
+  "weeklyPriceNote": "Prikazana je najpovoljnija slobodna tjedna ponuda (7 noćenja) za svako plovilo. Odaberite datume za točne cijene.",
+  "pagedHeading": "{heading} – stranica {page}",
+  "pageIndex": {
+    "summary": "Sve stranice rezultata ({count})",
+    "label": "Stranice rezultata"
+  }
 }

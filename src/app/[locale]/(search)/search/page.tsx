@@ -20,7 +20,10 @@ import {
   SearchLanding,
   diversifiesBases,
   hasUnknownDestination,
+  landingCurrencyParam,
   landingFetchRevalidate,
+  landingPageNumber,
+  landingPagerPath,
   landingRedirectPath,
   listsWholeLanding,
   resolveSearchLanding,
@@ -33,6 +36,7 @@ import { buildMetadata, localizedUrl } from '@/utils/static/buildMetadata';
 import { getBoatImageUrl } from '@/utils/static/imageUtils';
 import { isInquiryOnlyBoat } from '@/utils/static/inquiryOnlyBoat';
 import { serializeJsonLd } from '@/utils/static/jsonLd';
+import { landingPageHref } from '@/utils/static/landingPagination';
 import { hasListingPrice, listingPriceDays } from '@/utils/static/listingPrice';
 import { buildSearchLandingPath, isLandingExpressible } from '@/utils/static/searchLandingPath';
 import { yachtLabel } from '@/utils/static/toTitleCase';
@@ -56,6 +60,20 @@ const redirectToCanonicalLanding = (locale: string, params: AllSearchParams, lan
   const target = landingRedirectPath(params, landing);
 
   if (target) permanentRedirect(`${locale === routing.defaultLocale ? '' : `/${locale}`}${target}`);
+};
+
+/**
+ * "… – page n" on page n > 1 of a listing (title and H1, audit 7.10.2026), so
+ * the pages of a landing do not share one title and heading. `page` is the
+ * request's canonical page number (landingPageNumber); page 1 and a
+ * non-canonical `page` value keep the heading as it is.
+ */
+const pagedHeading = async (locale: string, heading: string, page: number | null): Promise<string> => {
+  if (!page || page < 2) return heading;
+
+  const t = await getTranslations({ locale, namespace: 'landing' });
+
+  return t('pagedHeading', { heading, page: String(page) });
 };
 
 /**
@@ -87,8 +105,10 @@ export async function generateMetadata({ params: paramsPromise, searchParams }: 
   if (hasUnknownDestination(landing)) notFound();
 
   // Title / description / H1 in the locale (landingCopy.ts, shared with the
-  // page's H1 so the two never diverge).
-  const { title, description } = await getLandingCopy(locale, params);
+  // page's H1 so the two never diverge); "… – page n" beyond page 1.
+  const copy = await getLandingCopy(locale, params);
+  const { description } = copy;
+  const title = await pagedHeading(locale, copy.title, landingPageNumber(params.page));
 
   const boatTypes = splitSearchParam(params.boatTypes);
   // An unknown `boatTypes` value used to crash the metadata (undefined map
@@ -112,12 +132,23 @@ export async function generateMetadata({ params: paramsPromise, searchParams }: 
   const singleResolved = uniqueRawDestinations.length === 1 && !landing.hasOwnDid ? landing.resolved[0] : null;
   const canonicalDestinations =
     singleResolved && isLandingExpressible(singleResolved.name) ? [singleResolved.name] : uniqueRawDestinations;
-  const path = buildSearchLandingPath(canonicalDestinations, singleBoatType);
+  const landingPath = buildSearchLandingPath(canonicalDestinations, singleBoatType);
+
+  // Page n > 1 of a plain destination landing (landingPagerPath — one place,
+  // at most one boat type, no dates, filters or sort) is its own page since
+  // audit 7.10.2026: the pager links it with <a href>, its canonical is itself
+  // (`…&page=n`, hreflang to page n in the other locales) and it is indexable
+  // under the landing's own gate below. It lists other boats than page 1, so
+  // a canonical to page 1 told Google to drop the only page linking them.
+  // Never in a sitemap; a page past the last answers 404 (SearchPage).
+  const landingPage = landingPagerPath(params, landing) ? landingPageNumber(params.page) : null;
+  const ownPage = landingPage != null && landingPage > 1;
+  const path = ownPage ? landingPageHref(landingPath, landingPage) : landingPath;
 
   // Index gating — keep crawl budget on the headline (destination ×
   // boat-type) URLs, drop the long tail.
-  //   * pagination beyond page 1: noindex (canonical already points
-  //     to page 1; indexing each page adds noise without unique value)
+  //   * pagination beyond page 1 of anything but a plain landing (above):
+  //     noindex, canonical to page 1
   //   * date-anchored URLs: noindex (calendar variants explode into
   //     millions of permutations, all collapsing to the same intent)
   // The canonical itself stays index-eligible because dates / page get
@@ -195,7 +226,7 @@ export async function generateMetadata({ params: paramsPromise, searchParams }: 
   if (typeOnly) alternateLocales = [];
 
   const noindex =
-    pageNum > 1 ||
+    (pageNum > 1 && !ownPage) ||
     hasDates ||
     uniqueRawDestinations.length > 1 ||
     boatTypes.length > 1 ||
@@ -383,6 +414,10 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
   if (hasUnknownDestination(landing)) notFound();
 
   const effectiveParams = withLandingDid(params, landing);
+  // A plain destination landing links its pages (audit 7.10.2026); the path
+  // is its canonical one, without locale.
+  const pagerPath = landingPagerPath(params, landing);
+  const shownPage = landingPageNumber(params.page);
   // Undated landings read the yacht list through a 10-minute Data Cache
   // window (see landingFetchRevalidate); anything dated/filtered stays live.
   const fetchRevalidate = landingFetchRevalidate(params, landing);
@@ -420,9 +455,10 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
     locale as LocaleType,
     landingPlace ? await landingCrumbs(landingPlace.name, landingPlace.boatType, locale).catch(() => []) : []
   );
-  // H1 from the same source as the <title> (landingCopy.ts); null keeps the
-  // page's own heading (no destination).
-  const { h1 } = await getLandingCopy(locale, params);
+  // H1 from the same source as the <title> (landingCopy.ts), "… – page n"
+  // beyond page 1; null keeps the page's own heading (no destination).
+  const { h1: landingH1 } = await getLandingCopy(locale, params);
+  const h1 = landingH1 ? await pagedHeading(locale, landingH1, shownPage) : null;
 
   // Fetch the top-N yachts here so we can emit Product schema in the
   // initial HTML. This is a separate fetch from the one that powers the
@@ -447,6 +483,10 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
 
     return null;
   });
+
+  // A page past the last one of a plain landing is no page (404): its pager
+  // never links it, and an empty 200 would be an indexable "no boats" page.
+  if (pagerPath && shownPage != null && shownPage > 1 && yachtsResp && !yachtsResp.content?.length) notFound();
 
   try {
     const [tBoatMeta, manufacturers] = await Promise.all([
@@ -493,6 +533,8 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
           charterFacts={charterFacts}
           landingPlace={landingPlace}
           totalCount={totalCount}
+          pagerPath={pagerPath}
+          pagerCurrency={pagerPath ? landingCurrencyParam(params) : null}
         />
       </Layout>
     </ResolvedDestinationProvider>

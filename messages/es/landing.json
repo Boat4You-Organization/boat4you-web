@@ -292,5 +292,10 @@
     "zante": "en Zante",
     "saintRaphael": "en Saint-Raphaël"
   },
-  "weeklyPriceNote": "El precio indicado es el de la semana disponible (7 noches) más económica de cada barco. Elige tus fechas para ver el precio exacto."
+  "weeklyPriceNote": "El precio indicado es el de la semana disponible (7 noches) más económica de cada barco. Elige tus fechas para ver el precio exacto.",
+  "pagedHeading": "{heading} – página {page}",
+  "pageIndex": {
+    "summary": "Todas las páginas de resultados ({count})",
+    "label": "Páginas de resultados"
+  }
 }

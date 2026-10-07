@@ -32,6 +32,10 @@ interface SearchViewProps {
   landingPlace?: LandingPlace | null;
   /** Listing total from the page's own yacht fetch, for the sidebar count in the SSR HTML. */
   totalCount?: number | null;
+  /** Plain destination landing: its canonical path, whose pages are linked (searchLanding.ts landingPagerPath). */
+  pagerPath?: string | null;
+  /** Display currency kept in those page links. */
+  pagerCurrency?: string | null;
 }
 
 const SearchView = async ({
@@ -42,6 +46,8 @@ const SearchView = async ({
   charterFacts = null,
   landingPlace = null,
   totalCount = null,
+  pagerPath = null,
+  pagerCurrency = null,
 }: SearchViewProps) => {
   const locale = await getLocale();
   const currency = (searchParams.currency as Currency) || Currency.EUR;
@@ -88,6 +94,8 @@ const SearchView = async ({
               diversifyBases={diversifyBases}
               charterFacts={charterFacts}
               landingPlace={landingPlace}
+              pagerPath={pagerPath}
+              pagerCurrency={pagerCurrency}
             />
           </Suspense>
         </SearchResultsTransitionWrapper>
