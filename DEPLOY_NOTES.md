@@ -1,5 +1,15 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-10-07 — ✍️ SEO korpus i registar: bez cijena skipera po danu, Boat4You kao broker (ne vlasnik flote), dijakritici, NL „je" / PL „Ty", FAQ bez escrowa
+
+Mario 6.10. („polako sredi ovo što čeka") i 7.10. (FAQ bez escrowa = DA; ostale broker formulacije ostaju). Merge `fix/w610-b4y-combined` (grane `fix/w610-b4y-corpus` + `fix/w610-b4y-register`, re-audit 29.9. R13/R14/R32/R33/R49), merge commit `e09dac060`.
+
+- `public/seo-content/**` ×9: cijene skipera/posade/hostese po danu → bez brojke („naknada je na stranici broda") 6.904 → 0; Boat4You kao vlasnik/operater/poslodavac flote → „naši partneri" 2.323 → 0; „naš ured u Marbelli/Salernu/…" → ured operatera (106 rečenica); dijakritici (Šibenik, Kaštela, Primošten, Sukošan, Korčula, Palmižana, Komiža, Biševo, Lošinj) 825 → 0 + itinerary stop nazivi (id/slug netaknuti); „Search BVI yacht charters"; IT „Barca4You"/NL „Boot4You" → Boat4You.
+- NL svugdje neformalno „je/jouw" (formalno 28.596 → 0), PL svugdje „Ty/Twój" (formalno 1.228 → 0) — messages, `src/posts/static/{nl,pl}`, korpus.
+- `src/posts/static/*/faq.md` ×9: bez „escrow" i „osiguranja sredstava za stečaj" (Mario 7.10. DA), bez cijena skipera/hostese po danu.
+- QA: `scripts/seo-corpus-qa.py` nove provjere `perday-crew-price`, `operator-claim`, `brand-hole`, `fee-repeat`, `ascii-hr-name`, `register` + `--self-test` (148/148); `check-corpus-holes.mjs` brand-hole pravila. Provjereno na mergeu: QA 0 nalaza, corpus-holes OK, Stage A isti 22 stara reda kao main prije mergea (A-CORPUS-DID ×19 Cannigione, A-CLAIMS ×3), lint 0.
+- Ne dirano (Mario): About „Escrowed payments", PL „Personel Boat4You w recepcji", stranica Filipi.
+
 ## 2026-10-06 — 🛏️ Kapacitet broda točno kao kod partnera: kabine, ležajevi, WC, osobe, bilješke, jedra i motor na svim površinama (+ review popravci) — ✅ DEPLOYANO 7.10.2026 (live 0e12f799f; backend gate prošao)
 
 Mario (6.10.): kapacitet i raspored broda 100 % kao u MMK-u (Booking Manager) i NauSysu na svakoj površini, da klijent nikad ne mora pitati koliko kabina i ležajeva brod ima. Capacity contract v1 (6.10.2026) s adversarial kritikom (B-1…B-7) i Mariovim odlukama 1–4.
