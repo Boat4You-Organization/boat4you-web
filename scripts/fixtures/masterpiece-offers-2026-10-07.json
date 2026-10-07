@@ -1,0 +1,384 @@
+{
+  "_about": "Lagoon 42 Masterpiece (boat 11681): the undated detail payload's offers on 7.10.2026, only the fields the weekly summary reads (dates, nights, status, the period total in EUR).",
+  "today": "2026-10-07",
+  "offers": [
+    {
+      "dateFrom": "2026-10-10",
+      "dateTo": "2026-10-17",
+      "numberOfDays": 7,
+      "status": "FREE",
+      "clientPriceEur": 1921.85
+    },
+    {
+      "dateFrom": "2026-10-10",
+      "dateTo": "2026-10-24",
+      "numberOfDays": 14,
+      "status": "FREE",
+      "clientPriceEur": 4316.8
+    },
+    {
+      "dateFrom": "2026-10-10",
+      "dateTo": "2026-10-31",
+      "numberOfDays": 21,
+      "status": "FREE",
+      "clientPriceEur": 6475.2
+    },
+    {
+      "dateFrom": "2026-10-17",
+      "dateTo": "2026-10-24",
+      "numberOfDays": 7,
+      "status": "FREE",
+      "clientPriceEur": 1921.85
+    },
+    {
+      "dateFrom": "2026-10-17",
+      "dateTo": "2026-11-07",
+      "numberOfDays": 21,
+      "status": "FREE",
+      "clientPriceEur": 6475.2
+    },
+    {
+      "dateFrom": "2026-10-17",
+      "dateTo": "2026-10-31",
+      "numberOfDays": 14,
+      "status": "FREE",
+      "clientPriceEur": 4316.8
+    },
+    {
+      "dateFrom": "2026-10-24",
+      "dateTo": "2026-10-31",
+      "numberOfDays": 7,
+      "status": "FREE",
+      "clientPriceEur": 1921.85
+    },
+    {
+      "dateFrom": "2026-10-31",
+      "dateTo": "2026-11-07",
+      "numberOfDays": 7,
+      "status": "FREE",
+      "clientPriceEur": 1921.85
+    },
+    {
+      "dateFrom": "2026-11-07",
+      "dateTo": "2026-11-14",
+      "numberOfDays": 7,
+      "status": "RESERVATION",
+      "clientPriceEur": 2158.4
+    },
+    {
+      "dateFrom": "2026-11-14",
+      "dateTo": "2026-11-21",
+      "numberOfDays": 7,
+      "status": "RESERVATION",
+      "clientPriceEur": 2158.4
+    },
+    {
+      "dateFrom": "2026-11-21",
+      "dateTo": "2026-11-28",
+      "numberOfDays": 7,
+      "status": "RESERVATION",
+      "clientPriceEur": 2158.4
+    },
+    {
+      "dateFrom": "2026-11-28",
+      "dateTo": "2026-12-05",
+      "numberOfDays": 7,
+      "status": "RESERVATION",
+      "clientPriceEur": 2158.4
+    },
+    {
+      "dateFrom": "2026-12-05",
+      "dateTo": "2026-12-12",
+      "numberOfDays": 7,
+      "status": "RESERVATION",
+      "clientPriceEur": 2158.4
+    },
+    {
+      "dateFrom": "2026-12-12",
+      "dateTo": "2026-12-19",
+      "numberOfDays": 7,
+      "status": "RESERVATION",
+      "clientPriceEur": 2158.4
+    },
+    {
+      "dateFrom": "2026-12-19",
+      "dateTo": "2026-12-26",
+      "numberOfDays": 7,
+      "status": "RESERVATION",
+      "clientPriceEur": 2158.4
+    },
+    {
+      "dateFrom": "2027-01-02",
+      "dateTo": "2027-01-09",
+      "numberOfDays": 7,
+      "status": "RESERVATION",
+      "clientPriceEur": 1921.85
+    },
+    {
+      "dateFrom": "2027-01-09",
+      "dateTo": "2027-01-16",
+      "numberOfDays": 7,
+      "status": "RESERVATION",
+      "clientPriceEur": 1921.85
+    },
+    {
+      "dateFrom": "2027-01-16",
+      "dateTo": "2027-01-23",
+      "numberOfDays": 7,
+      "status": "RESERVATION",
+      "clientPriceEur": 1921.85
+    },
+    {
+      "dateFrom": "2027-01-23",
+      "dateTo": "2027-01-30",
+      "numberOfDays": 7,
+      "status": "RESERVATION",
+      "clientPriceEur": 1921.85
+    },
+    {
+      "dateFrom": "2027-01-30",
+      "dateTo": "2027-02-06",
+      "numberOfDays": 7,
+      "status": "RESERVATION",
+      "clientPriceEur": 1921.85
+    },
+    {
+      "dateFrom": "2027-02-06",
+      "dateTo": "2027-02-13",
+      "numberOfDays": 7,
+      "status": "RESERVATION",
+      "clientPriceEur": 1921.85
+    },
+    {
+      "dateFrom": "2027-02-13",
+      "dateTo": "2027-02-20",
+      "numberOfDays": 7,
+      "status": "RESERVATION",
+      "clientPriceEur": 1921.85
+    },
+    {
+      "dateFrom": "2027-02-20",
+      "dateTo": "2027-02-27",
+      "numberOfDays": 7,
+      "status": "RESERVATION",
+      "clientPriceEur": 1921.85
+    },
+    {
+      "dateFrom": "2027-02-27",
+      "dateTo": "2027-03-06",
+      "numberOfDays": 7,
+      "status": "RESERVATION",
+      "clientPriceEur": 1921.85
+    },
+    {
+      "dateFrom": "2027-03-06",
+      "dateTo": "2027-03-13",
+      "numberOfDays": 7,
+      "status": "RESERVATION",
+      "clientPriceEur": 1921.85
+    },
+    {
+      "dateFrom": "2027-03-13",
+      "dateTo": "2027-03-20",
+      "numberOfDays": 7,
+      "status": "RESERVATION",
+      "clientPriceEur": 1921.85
+    },
+    {
+      "dateFrom": "2027-03-20",
+      "dateTo": "2027-03-27",
+      "numberOfDays": 7,
+      "status": "RESERVATION",
+      "clientPriceEur": 1921.85
+    },
+    {
+      "dateFrom": "2027-03-27",
+      "dateTo": "2027-04-03",
+      "numberOfDays": 7,
+      "status": "FREE",
+      "clientPriceEur": 1921.85
+    },
+    {
+      "dateFrom": "2027-04-03",
+      "dateTo": "2027-04-10",
+      "numberOfDays": 7,
+      "status": "FREE",
+      "clientPriceEur": 1921.85
+    },
+    {
+      "dateFrom": "2027-04-10",
+      "dateTo": "2027-04-17",
+      "numberOfDays": 7,
+      "status": "FREE",
+      "clientPriceEur": 1921.85
+    },
+    {
+      "dateFrom": "2027-04-17",
+      "dateTo": "2027-04-24",
+      "numberOfDays": 7,
+      "status": "FREE",
+      "clientPriceEur": 1921.85
+    },
+    {
+      "dateFrom": "2027-04-24",
+      "dateTo": "2027-05-01",
+      "numberOfDays": 7,
+      "status": "FREE",
+      "clientPriceEur": 2167.9
+    },
+    {
+      "dateFrom": "2027-05-01",
+      "dateTo": "2027-05-08",
+      "numberOfDays": 7,
+      "status": "FREE",
+      "clientPriceEur": 2167.9
+    },
+    {
+      "dateFrom": "2027-05-08",
+      "dateTo": "2027-05-15",
+      "numberOfDays": 7,
+      "status": "FREE",
+      "clientPriceEur": 2261.0
+    },
+    {
+      "dateFrom": "2027-05-15",
+      "dateTo": "2027-05-22",
+      "numberOfDays": 7,
+      "status": "FREE",
+      "clientPriceEur": 3225.25
+    },
+    {
+      "dateFrom": "2027-05-22",
+      "dateTo": "2027-05-29",
+      "numberOfDays": 7,
+      "status": "FREE",
+      "clientPriceEur": 3610.95
+    },
+    {
+      "dateFrom": "2027-05-29",
+      "dateTo": "2027-06-05",
+      "numberOfDays": 7,
+      "status": "FREE",
+      "clientPriceEur": 4488.75
+    },
+    {
+      "dateFrom": "2027-06-05",
+      "dateTo": "2027-06-12",
+      "numberOfDays": 7,
+      "status": "FREE",
+      "clientPriceEur": 4916.25
+    },
+    {
+      "dateFrom": "2027-06-12",
+      "dateTo": "2027-06-19",
+      "numberOfDays": 7,
+      "status": "FREE",
+      "clientPriceEur": 5664.85
+    },
+    {
+      "dateFrom": "2027-06-19",
+      "dateTo": "2027-06-26",
+      "numberOfDays": 7,
+      "status": "FREE",
+      "clientPriceEur": 5700.0
+    },
+    {
+      "dateFrom": "2027-06-26",
+      "dateTo": "2027-07-03",
+      "numberOfDays": 7,
+      "status": "FREE",
+      "clientPriceEur": 5913.75
+    },
+    {
+      "dateFrom": "2027-07-03",
+      "dateTo": "2027-07-10",
+      "numberOfDays": 7,
+      "status": "FREE",
+      "clientPriceEur": 6127.5
+    },
+    {
+      "dateFrom": "2027-07-10",
+      "dateTo": "2027-07-17",
+      "numberOfDays": 7,
+      "status": "FREE",
+      "clientPriceEur": 6334.6
+    },
+    {
+      "dateFrom": "2027-07-17",
+      "dateTo": "2027-07-24",
+      "numberOfDays": 7,
+      "status": "FREE",
+      "clientPriceEur": 6982.5
+    },
+    {
+      "dateFrom": "2027-07-24",
+      "dateTo": "2027-07-31",
+      "numberOfDays": 7,
+      "status": "FREE",
+      "clientPriceEur": 6982.5
+    },
+    {
+      "dateFrom": "2027-07-31",
+      "dateTo": "2027-08-07",
+      "numberOfDays": 7,
+      "status": "FREE",
+      "clientPriceEur": 7448.0
+    },
+    {
+      "dateFrom": "2027-08-07",
+      "dateTo": "2027-08-14",
+      "numberOfDays": 7,
+      "status": "FREE",
+      "clientPriceEur": 7448.0
+    },
+    {
+      "dateFrom": "2027-08-14",
+      "dateTo": "2027-08-21",
+      "numberOfDays": 7,
+      "status": "FREE",
+      "clientPriceEur": 7220.0
+    },
+    {
+      "dateFrom": "2027-08-21",
+      "dateTo": "2027-08-28",
+      "numberOfDays": 7,
+      "status": "FREE",
+      "clientPriceEur": 6764.0
+    },
+    {
+      "dateFrom": "2027-08-28",
+      "dateTo": "2027-09-04",
+      "numberOfDays": 7,
+      "status": "FREE",
+      "clientPriceEur": 5244.0
+    },
+    {
+      "dateFrom": "2027-09-04",
+      "dateTo": "2027-09-11",
+      "numberOfDays": 7,
+      "status": "FREE",
+      "clientPriceEur": 5130.0
+    },
+    {
+      "dateFrom": "2027-09-11",
+      "dateTo": "2027-09-18",
+      "numberOfDays": 7,
+      "status": "FREE",
+      "clientPriceEur": 4560.0
+    },
+    {
+      "dateFrom": "2027-09-18",
+      "dateTo": "2027-09-25",
+      "numberOfDays": 7,
+      "status": "FREE",
+      "clientPriceEur": 3344.0
+    },
+    {
+      "dateFrom": "2027-09-25",
+      "dateTo": "2027-10-02",
+      "numberOfDays": 7,
+      "status": "FREE",
+      "clientPriceEur": 2470.0
+    }
+  ]
+}

@@ -24,6 +24,7 @@
     "test:price": "node --experimental-transform-types --disable-warning=ExperimentalWarning --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test scripts/price-cents.test.mjs",
     "test:successor": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test scripts/yachtSuccessor.test.mjs scripts/indexnow-successor-urls.test.mjs",
     "test:capacity": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test scripts/yachtCapacity.test.mjs scripts/yachtCapacity.render.test.mjs",
+    "test:boat-seo": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test scripts/boatPageSeo.test.mjs",
     "upgrade": "yarn upgrade"
   },
   "dependencies": {
