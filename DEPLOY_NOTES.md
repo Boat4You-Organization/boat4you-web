@@ -1,6 +1,6 @@
 # Boat4You (main) — Production Deploy Notes
 
-## 2026-10-06 — 🛏️ Kapacitet broda točno kao kod partnera: kabine, ležajevi, WC, osobe, bilješke, jedra i motor na svim površinama (+ review popravci) — ⏳ NIJE DEPLOYANO; ⛔ tek NAKON backend capacity releasea i gate SQL-a
+## 2026-10-06 — 🛏️ Kapacitet broda točno kao kod partnera: kabine, ležajevi, WC, osobe, bilješke, jedra i motor na svim površinama (+ review popravci) — ✅ DEPLOYANO 7.10.2026 (live 0e12f799f; backend gate prošao)
 
 Mario (6.10.): kapacitet i raspored broda 100 % kao u MMK-u (Booking Manager) i NauSysu na svakoj površini, da klijent nikad ne mora pitati koliko kabina i ležajeva brod ima. Capacity contract v1 (6.10.2026) s adversarial kritikom (B-1…B-7) i Mariovim odlukama 1–4.
 
