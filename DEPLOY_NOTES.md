@@ -1,6 +1,8 @@
 # Boat4You (main) — Production Deploy Notes
 
-## 2026-10-07 — 🛥️ Stranica broda: cijena u server HTML-u, JSON-LD otkaz 72 h, offerCount, naslov bez navodnika, rotacija sličnih brodova — ⏳ NIJE DEPLOYANO (grana `feat/w710-b4y-boat-seo`, na `feat/successor-redirect`)
+## 2026-10-07 — 🛥️ Stranica broda: cijena u server HTML-u, JSON-LD otkaz 72 h, offerCount, naslov bez navodnika, rotacija sličnih brodova — ✅ DEPLOYANO 7.10.2026 ~14:15 UTC (`release/w710-b4y` → main `980be3d0f`, deployment id `980be3d0fd15-muy6mx4k`)
+
+- **Live 7.10. ~14:15 UTC** (svih 6 sistera 13:47–14:05 UTC, `release/w710` → main). 308 na nasljednika proradi sam kad backend vrati `successorSlug` (ADMIN, čeka Mariov OK). SEO regresija nakon deploya: 1 nova FAIL `C2` (naslovnica: zbroj kartica po tipu 11.348 > ukupno 11.345). Naslovnica nije dirana u ovom izdanju → razlika u podacima između dva API brojača, ne regresija koda; prati se.
 
 SEO audit „Lagoon 42 Masterpiece" 7.10. (`_seo-audit-2026-10-07/masterpiece/ZAKLJUCAK.md`, 3.7 / 4a). Grana je napravljena na `feat/successor-redirect` (ista stranica broda) i ide u isti deploy.
 
@@ -22,7 +24,7 @@ SEO audit „Lagoon 42 Masterpiece" 7.10. (`_seo-audit-2026-10-07/masterpiece/ZA
 
 **Otvoreno:** b4y Uvjeti, klauzula 72 h (grana `fix/terms-72h`) čeka Marija. Sisteri broje i zauzete tjedne i sve označavaju `InStock` (zato 50). Masterpiece 43 → 31 slobodnih tjedana: 12 tjedana (polasci 2.1.–20.3.2027) prešlo je iz slobodnih u rezervirane između 08:00 i podneva, kako ih pokazuje dostupnost partnera; nije provjereno da su to bookinzi. Odluka Mario: da li stranica broda po defaultu bira najjeftiniji slobodni tjedan umjesto prve ponude (mijenja i zadani tjedan na desktopu).
 
-## 2026-10-07 — 🧭 /fleet iz route cachea + lakši HTML, landinzi sa stranicama 2…N, `<lastmod>` bloga u indeksu sitemapa — ⏳ NIJE DEPLOYANO (grana `feat/w710-b4y-crawl`, na `feat/successor-redirect`)
+## 2026-10-07 — 🧭 /fleet iz route cachea + lakši HTML, landinzi sa stranicama 2…N, `<lastmod>` bloga u indeksu sitemapa — ✅ DEPLOYANO 7.10.2026 ~14:15 UTC (`release/w710-b4y` → main `980be3d0f`, deployment id `980be3d0fd15-muy6mx4k`)
 
 Audit 7.10. (Lagoon 42 Masterpiece, ZAKLJUCAK.md 3.6 / 4a): dugi rep brodova je 3 klika dubok preko sporog `/fleet/N`, a landinzi u server HTML-u linkaju samo 18 brodova. Mario 7.10.: Google mora vidjeti sve stranice, sve brodove, sve jezike.
 
@@ -54,7 +56,7 @@ Audit 7.10. (Lagoon 42 Masterpiece, ZAKLJUCAK.md 3.6 / 4a): dugi rep brodova je 
 - `/fleet/<smeće>` i `/fleet/<broj > 100>` sada upisuju 404 u ISR cache (kao i ostale ISR rute); disk guard na cusma1 ga ograničava.
 - Lokalni `next dev` na prod API: prvi render layouta i landinga pokrene ~1.700 malih `size=1` upita (siteStats i landing gate, jednom pa keš). Stanje od prije, vrijedi znati prije lokalnih testova.
 
-## 2026-10-07 — ↪️ Povučeni brod → 308 na nasljednika, IndexNow ključ, blog `<lastmod>` u UTC — ⏳ NIJE DEPLOYANO (grana `feat/successor-redirect`)
+## 2026-10-07 — ↪️ Povučeni brod → 308 na nasljednika, IndexNow ključ, blog `<lastmod>` u UTC — ✅ DEPLOYANO 7.10.2026 ~14:15 UTC (`release/w710-b4y` → main `980be3d0f`, deployment id `980be3d0fd15-muy6mx4k`)
 
 Mario 7.10.: (1) povučeni brod čiji je isti fizički brod aktivan pod novim id-jem → trajni redirect umjesto 404 (Bing rangira `/boat/lagoon-bnteau-lagoon-42-4-2-cab-masterpiece-4066`, brod je živ kao `/boat/lagoon-42-masterpiece-11681`; prod ~2.768 takvih × 9 jezika); (2) IndexNow, da Bing/Yandex saznaju nove, promijenjene i preusmjerene URL-ove; (3) stvarni `<lastmod>`. Bing Webmaster: sitemap je već prijavljen (od 7.9., Mario 7.10.), tamo ništa.
 
