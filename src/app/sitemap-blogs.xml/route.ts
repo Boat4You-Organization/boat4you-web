@@ -1,6 +1,7 @@
 /* eslint-disable no-await-in-loop */
 import { getBlogs } from '@/lib/api';
 import { BlogTeaser } from '@/types/blog.type';
+import { lastmodElement, wpGmtLastmod } from '@/utils/static/sitemapLastmod';
 
 export const dynamic = 'force-dynamic';
 
@@ -44,11 +45,16 @@ export async function GET() {
   // English URLs only. Post bodies are English-only, so the eight locale
   // copies canonicalise to the English original (see blog/[slug]/page.tsx) —
   // a sitemap must list canonical URLs, not their duplicates.
+  //
+  // <lastmod>: the later of WordPress's GMT publish and modify stamps (a
+  // scheduled post was last modified before it went out), in UTC; left out
+  // when WordPress sends neither (sitemapLastmod.ts). Never `date`, which is
+  // WordPress local time, and never a throw: one bad stamp must not turn the
+  // whole sitemap into a 500.
   const urls = blogs
     .map(
       (blog: BlogTeaser) => `  <url>
-    <loc>${baseUrl}/blog/${blog.slug}</loc>
-    <lastmod>${new Date(blog.date).toISOString()}</lastmod>
+    <loc>${baseUrl}/blog/${blog.slug}</loc>${lastmodElement(wpGmtLastmod(blog.dateGmt, blog.modifiedGmt))}
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>`

@@ -30,6 +30,9 @@ export type BlogTeaser = {
   title: string;
   slug: string;
   date: string;
+  /** WordPress GMT stamps, e.g. "2026-10-05T06:00:00" (UTC without a zone); `date` is site-local time. */
+  dateGmt?: string | null;
+  modifiedGmt?: string | null;
   featuredImage: FeaturedImage;
   excerpt: string;
   seo?: RankMathSEOData | null;

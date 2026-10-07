@@ -11,6 +11,8 @@ query GetAllBlogs($pageSize: Int!,$categoryName: String, $after: String) {
       title
       slug
       date
+      dateGmt
+      modifiedGmt
       featuredImage {
         node {
           sourceUrl
