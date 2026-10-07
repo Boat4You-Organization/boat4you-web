@@ -29,13 +29,19 @@ import { rotateCandidates } from '@/utils/static/relatedRotation';
  * dated pool comes back empty — the section then still shows the marina's
  * boats instead of disappearing (review 6.10.2026).
  *
- * Which of the fitting boats: a rotation seeded by this boat's id
- * (relatedRotation.ts, 7.10.2026), over the marina's whole pool of the type
- * (one page of up to 100, the API's page cap). It used to be the closest
- * lengths among the first 12 of the listing — every boat at a marina linked
- * the same three boats and the rest of its fleet got no internal link. The
- * ±5 ft window still decides who fits; the rotation only decides which of
- * them this page shows.
+ * Which of the fitting boats: the ones after this boat on a fixed ring
+ * (relatedRotation.ts, 7.10.2026), over every boat of the type at the marina
+ * within ±5 ft. It used to be the closest lengths among the first 12 of the
+ * listing — every boat at a marina linked the same three boats and the rest
+ * of its fleet got no internal link. The API is asked for the ±5 ft window
+ * only, and every page of it is read (usually 1–2 of 100): one page of the
+ * whole marina, in the listing's order, left 973 boats of six big groups out
+ * of every page's choice (review 7.10.2026; Sukošan 248, Alimos 428 + 268,
+ * Lefkas 269, Kornati 219, ACI Split 141 boats of one type).
+ * The undated pool is a cached read (10 min, one entry for all nine
+ * locales, like the landings), so the extra pages do not reach the backend
+ * on every view. The ±5 ft rule still decides who fits; the ring only
+ * decides which of them this page shows.
  */
 
 const M_PER_FT = 0.3048;
@@ -56,12 +62,20 @@ const MIN_FILL_MS = 400;
 const RELATED_COUNT = 3;
 
 /**
- * The marina's boats of the type in one request — the API's page cap. All
- * of them are candidates, not only the listing's first page (measured
- * 7.10.2026 for a marina's 80 catamarans: 0.23 s and 100 KB for the page of
- * 100 against 0.10 s and 15 KB for 12).
+ * One page of the pool — the API's page cap (measured 7.10.2026: 0.23 s and
+ * 100 KB for a page of 100). Every page of the ±5 ft window is read.
  */
-const POOL_SIZE = 100;
+const POOL_PAGE_SIZE = 100;
+
+/**
+ * At most this many pages of one window (500 boats). A ±5 ft window of one
+ * type at one marina is 1–3 pages (7.10.2026: Sukošan sailing yachts 37–48 ft
+ * 164 boats, Alimos 40–51 ft 280); the cap bounds a window without a length.
+ */
+const MAX_POOL_PAGES = 5;
+
+/** The undated pool's Data Cache window (s): the landings' order of magnitude. */
+const POOL_REVALIDATE_SECONDS = 600;
 
 const ISO_DAY = /^\d{4}-\d{2}-\d{2}$/;
 
@@ -83,14 +97,41 @@ const pagePeriod = (startDate: unknown, endDate: unknown): Period | null =>
     ? { startDate, endDate }
     : null;
 
+/**
+ * A boat's length in feet for the ±5 ft rule — from the metres first:
+ * `length` is metres in every locale, `lengthInfo` feet for `en` and metres
+ * otherwise, and the two can disagree (7.10.2026: Oceanis 461 Seagul 46.0 ft
+ * in `en`, 14.0 m = 45.93 ft in `de` — two API windows, two cache entries,
+ * possibly other boats). From the metres, the rule, the API window and its
+ * cache entry are the same in all nine locales.
+ */
 const yachtLengthFt = (info: MeasurementInfo | null | undefined, metric: number | null | undefined): number | null => {
+  if (typeof metric === 'number' && Number.isFinite(metric) && metric > 0) return metric / M_PER_FT;
+
   if (info && info.unit === MeasurementUnit.FEET && Number.isFinite(info.amount)) return info.amount;
 
   if (info && info.unit === MeasurementUnit.METRE && Number.isFinite(info.amount)) return info.amount / M_PER_FT;
 
-  if (typeof metric === 'number' && Number.isFinite(metric)) return metric / M_PER_FT;
-
   return null;
+};
+
+/**
+ * The ±5 ft window as the API's `minLength` / `maxLength`. The API reads
+ * them in the request language's unit — feet for `en`, metres for every
+ * other locale (checked 7.10.2026: `hr` read 40–50 as metres) — so whole
+ * units, rounded outwards; the exact ±5 ft rule is applied to the rows
+ * afterwards (a boat without a length no longer fills a slot of a boat with
+ * one). Null (no length filter) when the boat's own length is unknown.
+ */
+const apiLengthWindow = (lengthFt: number | null, inFeet: boolean): { minLength: number; maxLength: number } | null => {
+  if (lengthFt == null) return null;
+
+  const unit = inFeet ? 1 : M_PER_FT;
+
+  return {
+    minLength: Math.max(0, Math.floor((lengthFt - TOLERANCE_FT) * unit)),
+    maxLength: Math.ceil((lengthFt + TOLERANCE_FT) * unit),
+  };
 };
 
 interface RelatedBoatsProps {
@@ -113,36 +154,62 @@ const RelatedBoats = async ({ yacht, user, locale, currency, startDate, endDate 
   const period = pagePeriod(startDate, endDate);
   const vesselType = isVesselType(yacht.vesselType) ? yacht.vesselType : null;
   const deadline = Date.now() + RELATED_DEADLINE_MS;
+  const currentLenFt = yachtLengthFt(yacht.lengthInfo, yacht.length);
 
   // Dated page: the dated search's request (startDate/endDate, no
-  // priceBasis). Undated: weekly prices, like the landings (audit B16) — 44
-  // of 145 similar-boat cards read "Price for 3 days 23 €" before.
-  // null = the request failed (503 shed, timeout).
-  const fetchPool = (
+  // priceBasis), live (no-store) and one page — it mirrors partner state on
+  // every view. Undated: weekly prices, like the landings (audit B16) — 44
+  // of 145 similar-boat cards read "Price for 3 days 23 €" before — read
+  // through the Data Cache, which asks the API in `en` (feet) for every
+  // locale and turns the lengths back into metres (fetchYachts), and every
+  // page of the window. null = the first request failed (503 shed, timeout);
+  // a later page that fails only leaves its boats out.
+  const fetchPool = async (
     poolPeriod: Period | null,
     boatTypes: VesselType[] | undefined,
     timeoutMs: number
-  ): Promise<YachtModelShortInfo[] | null> =>
-    fetchYachts(
-      {
-        locations: [],
-        did: [String(marinaDid)],
-        size: POOL_SIZE,
-        ...(boatTypes ? { boatTypes } : {}),
-        ...(poolPeriod ?? { priceBasis: 'week' as const }),
-      },
-      currency,
-      locale,
-      { singleAttemptMs: timeoutMs }
-    )
-      .then(response => response.content ?? [])
-      .catch(() => null);
+  ): Promise<YachtModelShortInfo[] | null> => {
+    const cached = !poolPeriod;
+    const lengthWindow = apiLengthWindow(currentLenFt, cached || locale === 'en');
+    const readPage = (page: number, singleAttemptMs: number) =>
+      fetchYachts(
+        {
+          locations: [],
+          did: [String(marinaDid)],
+          size: POOL_PAGE_SIZE,
+          page,
+          ...(boatTypes ? { boatTypes } : {}),
+          ...(lengthWindow ?? {}),
+          ...(poolPeriod ?? { priceBasis: 'week' as const }),
+        },
+        currency,
+        locale,
+        { singleAttemptMs, ...(cached ? { revalidate: POOL_REVALIDATE_SECONDS } : {}) }
+      );
 
-  const currentLenFt = yachtLengthFt(yacht.lengthInfo, yacht.length);
+    // `page` is 1-based here (createYachtQueryParams sends page - 1).
+    const first = await readPage(1, timeoutMs).catch(() => null);
 
-  // Other boats within ±5 ft (any length when either is unknown), in this
-  // boat's rotation; on a dated page the ones offered for exactly that period
-  // before the closest-dates matches.
+    if (!first) return null;
+
+    const pages = cached ? Math.min(first.page?.totalPages ?? 1, MAX_POOL_PAGES) : 1;
+    const remainingMs = deadline - Date.now();
+
+    if (pages <= 1 || remainingMs <= 0) return first.content ?? [];
+
+    const rest = await Promise.allSettled(
+      Array.from({ length: pages - 1 }, (_, i) => readPage(i + 2, remainingMs))
+    );
+
+    return [
+      ...(first.content ?? []),
+      ...rest.flatMap(result => (result.status === 'fulfilled' ? (result.value.content ?? []) : [])),
+    ];
+  };
+
+  // Other boats within ±5 ft (any length when either is unknown), the ones
+  // after this boat on the ring; on a dated page the ones offered for exactly
+  // that period before the closest-dates matches.
   const pick = (pool: YachtModelShortInfo[], exclude: Set<number>, dated: boolean): YachtModelShortInfo[] =>
     rotateCandidates(
       pool

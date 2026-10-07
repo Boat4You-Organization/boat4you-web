@@ -4,14 +4,21 @@
  * every boat at a marina linked the same three top boats and the rest of the
  * marina's fleet got no internal link at all (SEO audit 7.10.2026, 4a).
  *
- * Now every candidate that passes the page's relevance rules (same marina,
- * same type first, ±5 ft — RelatedBoats) gets a score seeded by the CURRENT
- * boat's id, and the page links the highest scores (rendezvous hashing). The
- * choice is deterministic — the same page links the same boats on every
- * request and build, no Math.random — independent of the order the API
- * returns the pool in, and spread evenly: across the fleet each candidate is
- * linked from about `count / pool size` of its neighbours' pages. A boat that
- * leaves or joins the pool only changes the pages that pick it.
+ * Now the candidates that pass the page's relevance rules (same marina, same
+ * type first, ±5 ft — RelatedBoats) sit on a ring together with the current
+ * boat, ordered by a fixed per-boat hash (`ringKey`), and the page links the
+ * boats that follow it on the ring, wrapping around. In a group whose boats
+ * all see the same candidates, every boat is linked by exactly the `count`
+ * boats before it — no boat is left out. (A first version ranked the
+ * candidates by a hash seeded with the current boat — rendezvous hashing —
+ * which left about e^-3 ≈ 5 % of every group unlinked: review 7.10.2026,
+ * 4 of the 80 Sukošan catamarans.) Where the ±5 ft windows differ per boat,
+ * a boat can still miss out, but rarely (1 of those 80).
+ *
+ * The choice is deterministic — the same page links the same boats on every
+ * request and build, no Math.random — and independent of the order the API
+ * returns the pool in. A boat that leaves or joins the pool only changes the
+ * pages just before it on the ring.
  */
 
 /* eslint-disable no-bitwise -- a 32-bit integer hash: bit operations are the point */
@@ -29,16 +36,23 @@ const mix32 = (value: number): number => {
   return h >>> 0;
 };
 
-/** The score of `candidateId` on the page of boat `seedId` (unsigned 32-bit). */
-export const rotationScore = (seedId: number, candidateId: number): number =>
-  mix32(mix32(seedId) ^ Math.imul(candidateId | 0, 0x9e3779b1));
+/** A 32-bit hash of `id` under `seed` (unsigned). */
+export const rotationScore = (seed: number, id: number): number =>
+  mix32(mix32(seed) ^ Math.imul(id | 0, 0x9e3779b1));
 
 /* eslint-enable no-bitwise */
 
+/** Fixed salt of the ring: changing it reshuffles every page's similar boats at once. */
+const RING_SALT = 7_102_026;
+
+/** A boat's place on the ring — the same on every page. */
+export const ringKey = (id: number): number => rotationScore(RING_SALT, id);
+
 /**
  * The `count` candidates the page of boat `seedId` links: lower `tier` first
- * (e.g. a dated page's exact-period matches), then the highest rotation
- * score, then the lower id. Never the boat itself, never a boat twice.
+ * (e.g. a dated page's exact-period matches), then the boats that follow
+ * `seedId` on the ring (ringKey, then id), wrapping around. Never the boat
+ * itself, never a boat twice.
  */
 export const rotateCandidates = <T extends { id: number }>(
   candidates: readonly T[],
@@ -54,10 +68,21 @@ export const rotateCandidates = <T extends { id: number }>(
 
     return true;
   });
+  const seedKey = ringKey(seedId);
 
   return unique
-    .map(candidate => ({ candidate, tier: tier(candidate), score: rotationScore(seedId, candidate.id) }))
-    .sort((a, b) => a.tier - b.tier || b.score - a.score || a.candidate.id - b.candidate.id)
+    .map(candidate => {
+      const key = ringKey(candidate.id);
+
+      return {
+        candidate,
+        tier: tier(candidate),
+        // 0 = after the current boat on the ring, 1 = wrapped around past the end.
+        lap: key > seedKey || (key === seedKey && candidate.id > seedId) ? 0 : 1,
+        key,
+      };
+    })
+    .sort((a, b) => a.tier - b.tier || a.lap - b.lap || a.key - b.key || a.candidate.id - b.candidate.id)
     .slice(0, Math.max(0, count))
     .map(({ candidate }) => candidate);
 };
