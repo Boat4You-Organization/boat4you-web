@@ -129,7 +129,12 @@ const BoatsWrapper = async ({
   // hydration, leaving crawlers a generic template).
   // Looked up by the catalogue name, so alias / member spellings (split →
   // "Split Region") show the text of the canonical landing they fold onto.
-  const curatedSeoHtml = firstDestination ? await getCuratedSeoHtml(locale, destLabel, boatType) : null;
+  // Pages 2…N of a plain landing list other boats under the same heading: the
+  // long-form text and the charter facts stay on page 1 only (no duplicate
+  // copy across the series, audit 7.10.2026).
+  const firstLandingPage = !pagerPath || (landingPageNumber(searchParams.page) ?? 1) <= 1;
+  const curatedSeoHtml =
+    firstDestination && firstLandingPage ? await getCuratedSeoHtml(locale, destLabel, boatType) : null;
 
   // Which week the undated cards are priced for (audit B19): each boat's
   // cheapest bookable 7-night week (priceBasis=week, yachtFetchParams) — said
@@ -172,7 +177,7 @@ const BoatsWrapper = async ({
       curatedSeoHtml={curatedSeoHtml}
       priceNote={priceNote}
       charterFactsSlot={
-        charterFacts ? (
+        charterFacts && firstLandingPage ? (
           <CharterFactsBlock
             target={charterFacts}
             locale={locale}
