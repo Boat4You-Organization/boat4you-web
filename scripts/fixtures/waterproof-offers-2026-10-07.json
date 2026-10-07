@@ -1,0 +1,62 @@
+{
+  "_about": "Sun Odyssey 42 i Waterproof, Poros (boat 7626): the undated detail payload's offers on 7.10.2026 (SEO audit HTML of 08:00 UTC), only the fields the weekly summary reads. Every 7-night week is reserved; 14-, 21- and 28-night periods are free.",
+  "today": "2026-10-07",
+  "offers": [
+    {
+      "dateFrom": "2026-11-21",
+      "dateTo": "2026-11-28",
+      "numberOfDays": 7,
+      "status": "RESERVATION",
+      "clientPriceEur": 2150.0
+    },
+    {
+      "dateFrom": "2026-11-28",
+      "dateTo": "2026-12-05",
+      "numberOfDays": 7,
+      "status": "RESERVATION",
+      "clientPriceEur": 2150.0
+    },
+    {
+      "dateFrom": "2026-12-05",
+      "dateTo": "2026-12-12",
+      "numberOfDays": 7,
+      "status": "RESERVATION",
+      "clientPriceEur": 2150.0
+    },
+    {
+      "dateFrom": "2026-12-12",
+      "dateTo": "2026-12-19",
+      "numberOfDays": 7,
+      "status": "RESERVATION",
+      "clientPriceEur": 2150.0
+    },
+    {
+      "dateFrom": "2026-12-19",
+      "dateTo": "2026-12-26",
+      "numberOfDays": 7,
+      "status": "RESERVATION",
+      "clientPriceEur": 2150.0
+    },
+    {
+      "dateFrom": "2027-05-03",
+      "dateTo": "2027-05-31",
+      "numberOfDays": 28,
+      "status": "FREE",
+      "clientPriceEur": 7775.75
+    },
+    {
+      "dateFrom": "2027-07-26",
+      "dateTo": "2027-08-16",
+      "numberOfDays": 21,
+      "status": "FREE",
+      "clientPriceEur": 5865.3
+    },
+    {
+      "dateFrom": "2027-08-16",
+      "dateTo": "2027-08-30",
+      "numberOfDays": 14,
+      "status": "FREE",
+      "clientPriceEur": 3472.25
+    }
+  ]
+}

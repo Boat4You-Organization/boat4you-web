@@ -7,11 +7,17 @@
  *   - merchantReturnPolicy.ts — free cancellation within 72 h of booking,
  *     not "returns not permitted";
  *   - boatTitle.ts — the boat's name without quotes;
- *   - relatedRotation.ts — similar boats rotate per boat, so every boat of a
- *     marina's pool is linked from some boat pages.
+ *   - relatedRotation.ts — similar boats follow each boat on a fixed ring, so
+ *     every boat of a marina's group is linked from the boat pages before it;
+ *   - fromPriceOffer — the phone bar's price before dates are chosen: the
+ *     cheapest bookable week, else the cheapest bookable period of another
+ *     length ("Price for N days"), else "Price on request".
  *
  * scripts/fixtures/masterpiece-offers-2026-10-07.json is the boat's undated
- * detail payload of that day (dates, nights, status and price only).
+ * detail payload of that day (dates, nights, status and price only);
+ * waterproof-offers-2026-10-07.json the same for a boat whose weeks are all
+ * reserved; sukosan-catamarans-2026-10-07.json the 80 catamarans of one
+ * marina (id and length in metres only).
  *
  *   yarn test:boat-seo
  */
@@ -26,15 +32,19 @@ import './tsLoader.mjs';
 const ROOT = fileURLToPath(new URL('../', import.meta.url));
 const readJson = path => JSON.parse(readFileSync(`${ROOT}${path}`, 'utf8'));
 
-const { weeklyOfferSummary, offerNights } = await import('@/utils/static/weeklyOffers');
+const { weeklyOfferSummary, offerNights, cheapestBookableOffer, fromPriceOffer, isQuotedOffer } = await import(
+  '@/utils/static/weeklyOffers'
+);
 const { freeCancellationReturnPolicy } = await import('@/utils/static/merchantReturnPolicy');
 const { buildBoatTitle } = await import('@/utils/static/boatTitle');
-const { rotateCandidates, rotationScore } = await import('@/utils/static/relatedRotation');
+const { rotateCandidates, ringKey } = await import('@/utils/static/relatedRotation');
 const { formatPriceWithCurrency } = await import('@/utils/static/formatPriceCurrency');
 const { buildYachtFaq } = await import('@/utils/static/yachtFaq');
 
 const LOCALES = ['en', 'de', 'fr', 'it', 'es', 'pt', 'nl', 'pl', 'hr'];
 const masterpiece = readJson('scripts/fixtures/masterpiece-offers-2026-10-07.json');
+const waterproof = readJson('scripts/fixtures/waterproof-offers-2026-10-07.json');
+const sukosanCatamarans = readJson('scripts/fixtures/sukosan-catamarans-2026-10-07.json').boats;
 
 const week = (dateFrom, nights, status, clientPriceEur) => {
   const to = new Date(Date.parse(dateFrom) + nights * 86_400_000).toISOString().slice(0, 10);
@@ -53,7 +63,7 @@ describe('weeklyOfferSummary: Lagoon 42 Masterpiece, 7.10.2026', () => {
     assert.equal(summary.cheapestBookable.clientPriceEur, 1921.85);
   });
 
-  test('the 19 booked weeks and the 14/21-night offers are not counted (the sisters count 31 + 19 = 50)', () => {
+  test('the 19 reserved weeks and the 14/21-night offers are not counted (the sisters count 31 + 19 = 50)', () => {
     const sevenNights = masterpiece.offers.filter(o => offerNights(o) === 7);
 
     assert.equal(sevenNights.length, 50);
@@ -170,6 +180,93 @@ describe('"From … / week" in all 9 locales = the JSON-LD lowPrice', () => {
   });
 });
 
+describe('fromPriceOffer: the price before dates are chosen', () => {
+  const today = '2026-10-07';
+
+  test('Masterpiece: the cheapest bookable week, the same as the JSON-LD lowPrice', () => {
+    const offer = fromPriceOffer(masterpiece.offers, masterpiece.today);
+
+    assert.equal(offerNights(offer), 7);
+    assert.equal(offer.clientPriceEur, 1921.85);
+    assert.equal(offer.status, 'FREE');
+  });
+
+  test('Waterproof, Poros: every week reserved — the cheapest free period of another length, not "Price on request"', () => {
+    const summary = weeklyOfferSummary(waterproof.offers, waterproof.today);
+    const offer = fromPriceOffer(waterproof.offers, waterproof.today, summary);
+
+    // The JSON-LD keeps describing the weeks (all reserved: SoldOut, 2,150 €).
+    assert.equal(summary.bookable, false);
+    assert.equal(summary.cheapestBookable, null);
+    assert.deepEqual([offerNights(offer), offer.clientPriceEur, offer.status], [14, 3472.25, 'FREE']);
+    assert.deepEqual([offer.dateFrom, offer.dateTo], ['2027-08-16', '2027-08-30']);
+  });
+
+  test('a cheaper 14-night period never replaces a bookable week', () => {
+    const offers = [week('2026-10-10', 14, 'FREE', 900), week('2026-10-17', 7, 'FREE', 2000)];
+
+    assert.equal(fromPriceOffer(offers, today).clientPriceEur, 2000);
+    assert.equal(cheapestBookableOffer(offers, today).clientPriceEur, 900);
+  });
+
+  test('only bookable, future, priced periods; the earlier one on a tie', () => {
+    const offers = [
+      week('2026-09-26', 14, 'FREE', 500),
+      week('2026-10-10', 14, 'RESERVATION', 600),
+      week('2026-10-10', 14, 'OPTION', 650),
+      week('2026-10-17', 14, 'FREE', 0),
+      week('2026-10-24', 14, 'FREE', null),
+      week('2026-11-07', 21, 'FREE', 3000),
+      week('2026-10-31', 21, 'OPTION_EXPIRED', 3000),
+    ];
+
+    assert.equal(fromPriceOffer(offers, today).dateFrom, '2026-10-31');
+  });
+
+  test('nothing bookable with a price: null — "Price on request"', () => {
+    assert.equal(fromPriceOffer([week('2026-10-10', 7, 'RESERVATION', 1500)], today), null);
+    assert.equal(fromPriceOffer([week('2026-10-10', 14, 'FREE', 0)], today), null);
+    assert.equal(fromPriceOffer([], today), null);
+    assert.equal(fromPriceOffer(undefined, today), null);
+  });
+
+  test('"Price for N days" names the period in all 9 locales, never a week', () => {
+    LOCALES.forEach(locale => {
+      const t = createTranslator({ locale, messages: { common: readJson(`messages/${locale}/common.json`) } });
+      const label = t('common.priceForXDays', { days: '14' });
+
+      assert.match(label, /14/, locale);
+      assert.doesNotMatch(label, /week|woche|semaine|settimana|semana|tydzień|tjedan/i, locale);
+    });
+  });
+});
+
+describe('isQuotedOffer: the price details open only for the quoted offer', () => {
+  test('Masterpiece: the first offer is the cheapest week — the tap opens its breakdown', () => {
+    assert.equal(isQuotedOffer(masterpiece.offers[0], fromPriceOffer(masterpiece.offers, masterpiece.today)), true);
+  });
+
+  test('Saona 47 Ancora Reha: "From 2,375 € / week" no longer opens the first offer, 21 nights 11,875 €', () => {
+    const offers = [week('2026-10-10', 21, 'FREE', 11875), week('2026-10-17', 7, 'FREE', 2375)];
+
+    assert.equal(isQuotedOffer(offers[0], fromPriceOffer(offers, '2026-10-07')), false);
+    assert.equal(isQuotedOffer(offers[1], fromPriceOffer(offers, '2026-10-07')), true);
+  });
+
+  test('Waterproof: the first offer is a reserved week, the quote a free 14-night period', () => {
+    assert.equal(isQuotedOffer(waterproof.offers[0], fromPriceOffer(waterproof.offers, waterproof.today)), false);
+  });
+
+  test('the same week at another price (a route variant) is not the quoted offer; nothing selected is not either', () => {
+    const quoted = week('2026-10-17', 7, 'FREE', 2375);
+
+    assert.equal(isQuotedOffer({ ...quoted, dateFrom: '2026-10-17T00:00:00' }, quoted), true);
+    assert.equal(isQuotedOffer({ ...quoted, clientPriceEur: 2600 }, quoted), false);
+    assert.equal(isQuotedOffer(null, quoted), false);
+    assert.equal(isQuotedOffer(quoted, null), false);
+  });
+});
+
 describe('freeCancellationReturnPolicy', () => {
   test('a finite 3-day window, free — not "returns not permitted"', () => {
     assert.deepEqual(freeCancellationReturnPolicy('HR'), {
@@ -232,51 +329,77 @@ describe('buildBoatTitle: the name without quotes', () => {
   });
 });
 
-describe('rotateCandidates: similar boats rotate per boat', () => {
-  const pool = Array.from({ length: 40 }, (_, i) => ({ id: 20_000 + i * 7 }));
-  const pageIds = Array.from({ length: 1000 }, (_, i) => 1 + i * 13);
+describe('rotateCandidates: similar boats follow each boat on a ring', () => {
+  // Synthetic ids, spread like real boat ids.
+  const group = n => Array.from({ length: n }, (_, i) => ({ id: 1_000 + i * 37 + (i % 5) * 11 }));
 
-  test('over 1,000 boat pages every one of 40 candidates is linked, evenly', () => {
-    const linked = new Map(pool.map(c => [c.id, 0]));
+  // Every boat's page links 3 of the others that pass `fits` (the ±5 ft rule).
+  const linksPerBoat = (boats, fits = () => true) => {
+    const linked = new Map(boats.map(b => [b.id, 0]));
 
-    pageIds.forEach(id => {
-      const picked = rotateCandidates(pool, id, 3);
+    boats.forEach(page => {
+      const candidates = boats.filter(b => b.id !== page.id && fits(page, b));
+      const picked = rotateCandidates(candidates, page.id, 3);
 
-      assert.equal(picked.length, 3);
-      assert.equal(new Set(picked.map(c => c.id)).size, 3);
+      assert.equal(picked.length, Math.min(3, candidates.length));
+      assert.equal(new Set(picked.map(c => c.id)).size, picked.length);
       picked.forEach(c => linked.set(c.id, linked.get(c.id) + 1));
     });
 
-    const counts = [...linked.values()];
+    return linked;
+  };
 
-    // 3,000 links over 40 boats = 75 each on average.
-    assert.ok(
-      counts.every(n => n > 0),
-      'every candidate is linked'
-    );
-    assert.ok(
-      Math.min(...counts) >= 40 && Math.max(...counts) <= 115,
-      `spread ${Math.min(...counts)}–${Math.max(...counts)}`
-    );
+  test('boats of one length: every boat of the group is linked from exactly 3 pages of the group', () => {
+    [4, 5, 12, 40, 80, 100, 248].forEach(n => {
+      const counts = [...linksPerBoat(group(n)).values()];
+
+      assert.ok(
+        counts.every(c => c === 3),
+        `${n} boats: ${Math.min(...counts)}–${Math.max(...counts)} links`
+      );
+    });
   });
 
-  test('the old rule linked 3 of 40 from every page; the rotation does not', () => {
-    const firstPicks = new Set(pageIds.map(id => rotateCandidates(pool, id, 3)[0].id));
+  test('Sukošan, 80 catamarans, ±5 ft: at most 1 boat without a link, at most 5 links per boat', () => {
+    const fits = (a, b) => Math.abs(a.lengthM - b.lengthM) / 0.3048 <= 5;
+    const counts = [...linksPerBoat(sukosanCatamarans, fits).values()];
 
-    assert.ok(firstPicks.size >= 35, `${firstPicks.size} different first cards`);
+    assert.equal(sukosanCatamarans.length, 80);
+    assert.ok(counts.filter(c => c === 0).length <= 1, `${counts.filter(c => c === 0).length} without a link`);
+    assert.ok(Math.max(...counts) <= 5, `up to ${Math.max(...counts)} links`);
+  });
+
+  test('a small group: each page links the others', () => {
+    const boats = group(3);
+
+    boats.forEach(page => {
+      assert.deepEqual(
+        new Set(rotateCandidates(boats, page.id, 3).map(c => c.id)),
+        new Set(boats.filter(b => b.id !== page.id).map(b => b.id))
+      );
+    });
   });
 
   test('deterministic and independent of the pool order', () => {
+    const pool = group(40);
     const shuffled = [...pool].reverse();
 
-    pageIds.slice(0, 50).forEach(id => {
+    pool.forEach(({ id }) => {
       assert.deepEqual(rotateCandidates(pool, id, 3), rotateCandidates(shuffled, id, 3));
       assert.deepEqual(rotateCandidates(pool, id, 3), rotateCandidates(pool, id, 3));
     });
-    assert.equal(rotationScore(11681, 11680), rotationScore(11681, 11680));
+    assert.equal(ringKey(11681), ringKey(11681));
+  });
+
+  test('the pages do not all link the same boats', () => {
+    const pool = group(40);
+    const firstPicks = new Set(pool.map(({ id }) => rotateCandidates(pool, id, 3)[0].id));
+
+    assert.equal(firstPicks.size, 40);
   });
 
   test('never the boat itself, never a duplicate, lower tier first', () => {
+    const pool = group(40);
     const self = pool[5].id;
     const withDup = [...pool, pool[0], pool[0]];
 

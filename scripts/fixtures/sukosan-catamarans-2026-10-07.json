@@ -1,0 +1,325 @@
+{
+  "_about": "The 80 catamarans of the Suko\u0161an marina (did l-2026) in the undated weekly listing on 7.10.2026: boat id and length in metres only (the similar-boats rule reads the metres in every locale). The similar-boats block of each of them links 3 of the others within \u00b15 ft.",
+  "boats": [
+    {
+      "id": 516,
+      "lengthM": 11.97
+    },
+    {
+      "id": 521,
+      "lengthM": 12.8
+    },
+    {
+      "id": 1120,
+      "lengthM": 12.85
+    },
+    {
+      "id": 1127,
+      "lengthM": 13.5
+    },
+    {
+      "id": 1135,
+      "lengthM": 14.28
+    },
+    {
+      "id": 1137,
+      "lengthM": 14.28
+    },
+    {
+      "id": 1150,
+      "lengthM": 15.9
+    },
+    {
+      "id": 1157,
+      "lengthM": 12.08
+    },
+    {
+      "id": 1166,
+      "lengthM": 12.31
+    },
+    {
+      "id": 1176,
+      "lengthM": 12.31
+    },
+    {
+      "id": 5776,
+      "lengthM": 11.97
+    },
+    {
+      "id": 8245,
+      "lengthM": 13.99
+    },
+    {
+      "id": 11264,
+      "lengthM": 13.45
+    },
+    {
+      "id": 11269,
+      "lengthM": 13.94
+    },
+    {
+      "id": 11270,
+      "lengthM": 15.04
+    },
+    {
+      "id": 11277,
+      "lengthM": 12.58
+    },
+    {
+      "id": 11279,
+      "lengthM": 12.58
+    },
+    {
+      "id": 11280,
+      "lengthM": 15.54
+    },
+    {
+      "id": 11283,
+      "lengthM": 11.93
+    },
+    {
+      "id": 11284,
+      "lengthM": 13.45
+    },
+    {
+      "id": 11657,
+      "lengthM": 11.38
+    },
+    {
+      "id": 11658,
+      "lengthM": 11.74
+    },
+    {
+      "id": 11659,
+      "lengthM": 13.99
+    },
+    {
+      "id": 11660,
+      "lengthM": 12.94
+    },
+    {
+      "id": 11661,
+      "lengthM": 12.94
+    },
+    {
+      "id": 11662,
+      "lengthM": 13.99
+    },
+    {
+      "id": 11663,
+      "lengthM": 11.74
+    },
+    {
+      "id": 11664,
+      "lengthM": 12.94
+    },
+    {
+      "id": 11665,
+      "lengthM": 13.96
+    },
+    {
+      "id": 11668,
+      "lengthM": 14.75
+    },
+    {
+      "id": 11669,
+      "lengthM": 12.94
+    },
+    {
+      "id": 11670,
+      "lengthM": 14.75
+    },
+    {
+      "id": 11671,
+      "lengthM": 13.85
+    },
+    {
+      "id": 11672,
+      "lengthM": 13.96
+    },
+    {
+      "id": 11676,
+      "lengthM": 14.75
+    },
+    {
+      "id": 11677,
+      "lengthM": 13.99
+    },
+    {
+      "id": 11678,
+      "lengthM": 13.96
+    },
+    {
+      "id": 11679,
+      "lengthM": 14.75
+    },
+    {
+      "id": 11680,
+      "lengthM": 12.94
+    },
+    {
+      "id": 11681,
+      "lengthM": 12.94
+    },
+    {
+      "id": 11682,
+      "lengthM": 15.35
+    },
+    {
+      "id": 11683,
+      "lengthM": 12.94
+    },
+    {
+      "id": 11685,
+      "lengthM": 13.99
+    },
+    {
+      "id": 11692,
+      "lengthM": 12.94
+    },
+    {
+      "id": 11693,
+      "lengthM": 15.35
+    },
+    {
+      "id": 11695,
+      "lengthM": 13.99
+    },
+    {
+      "id": 11696,
+      "lengthM": 13.96
+    },
+    {
+      "id": 11697,
+      "lengthM": 13.99
+    },
+    {
+      "id": 11698,
+      "lengthM": 15.35
+    },
+    {
+      "id": 11699,
+      "lengthM": 12.94
+    },
+    {
+      "id": 11700,
+      "lengthM": 13.96
+    },
+    {
+      "id": 11701,
+      "lengthM": 14.75
+    },
+    {
+      "id": 11702,
+      "lengthM": 11.74
+    },
+    {
+      "id": 11703,
+      "lengthM": 15.35
+    },
+    {
+      "id": 11704,
+      "lengthM": 13.99
+    },
+    {
+      "id": 11705,
+      "lengthM": 11.74
+    },
+    {
+      "id": 11709,
+      "lengthM": 12.94
+    },
+    {
+      "id": 11711,
+      "lengthM": 13.99
+    },
+    {
+      "id": 11713,
+      "lengthM": 11.74
+    },
+    {
+      "id": 11714,
+      "lengthM": 13.85
+    },
+    {
+      "id": 11715,
+      "lengthM": 13.96
+    },
+    {
+      "id": 11716,
+      "lengthM": 14.75
+    },
+    {
+      "id": 11717,
+      "lengthM": 12.94
+    },
+    {
+      "id": 11718,
+      "lengthM": 12.94
+    },
+    {
+      "id": 11719,
+      "lengthM": 13.96
+    },
+    {
+      "id": 11720,
+      "lengthM": 15.35
+    },
+    {
+      "id": 11721,
+      "lengthM": 11.74
+    },
+    {
+      "id": 11722,
+      "lengthM": 13.99
+    },
+    {
+      "id": 11724,
+      "lengthM": 11.97
+    },
+    {
+      "id": 11725,
+      "lengthM": 12.94
+    },
+    {
+      "id": 11726,
+      "lengthM": 11.74
+    },
+    {
+      "id": 11727,
+      "lengthM": 12.94
+    },
+    {
+      "id": 11728,
+      "lengthM": 12.94
+    },
+    {
+      "id": 13042,
+      "lengthM": 13.96
+    },
+    {
+      "id": 13054,
+      "lengthM": 12.94
+    },
+    {
+      "id": 13714,
+      "lengthM": 13.26
+    },
+    {
+      "id": 13721,
+      "lengthM": 13.85
+    },
+    {
+      "id": 14096,
+      "lengthM": 13.99
+    },
+    {
+      "id": 15208,
+      "lengthM": 15.4
+    },
+    {
+      "id": 20194,
+      "lengthM": 13.71
+    }
+  ]
+}
