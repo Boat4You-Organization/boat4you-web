@@ -646,6 +646,15 @@
   "openFilters": "Filters openen",
   "editSearch": "Zoekopdracht wijzigen",
   "photoAlt": "{label} — foto {n}",
+  "pagination": {
+    "label": "Paginanavigatie",
+    "current": "Pagina {page}",
+    "goTo": "Ga naar pagina {page}",
+    "previous": "Ga naar de vorige pagina",
+    "next": "Ga naar de volgende pagina",
+    "first": "Ga naar de eerste pagina",
+    "last": "Ga naar de laatste pagina"
+  },
   "a11y": {
     "close": "Sluiten",
     "back": "Terug",

@@ -658,6 +658,15 @@
   "openFilters": "Otvori filtre",
   "editSearch": "Uredi pretragu",
   "photoAlt": "{label} — fotografija {n}",
+  "pagination": {
+    "label": "Navigacija po stranicama",
+    "current": "Stranica {page}",
+    "goTo": "Idi na stranicu {page}",
+    "previous": "Idi na prethodnu stranicu",
+    "next": "Idi na sljedeću stranicu",
+    "first": "Idi na prvu stranicu",
+    "last": "Idi na zadnju stranicu"
+  },
   "a11y": {
     "close": "Zatvori",
     "back": "Natrag",

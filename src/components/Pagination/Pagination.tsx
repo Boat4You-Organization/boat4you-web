@@ -2,7 +2,8 @@ import React from 'react';
 
 import { ChevronLeft, ChevronRight } from '@mui/icons-material';
 import { PaginationItem, Stack } from '@mui/material';
-import MuiPagination from '@mui/material/Pagination';
+import MuiPagination, { PaginationProps as MuiPaginationProps } from '@mui/material/Pagination';
+import { useTranslations } from 'next-intl';
 
 interface PaginationProps {
   page: number;
@@ -22,6 +23,27 @@ const isPlainLeftClick = (event: React.MouseEvent) =>
   event.button === 0 && !event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey;
 
 const Pagination = ({ page, onChange, count, getItemHref }: PaginationProps) => {
+  const t = useTranslations('common');
+
+  // MUI's built-in labels are English ("Go to next page") on every locale;
+  // screen readers read them, and on a landing they name the page links.
+  const getItemAriaLabel: MuiPaginationProps['getItemAriaLabel'] = (type, itemPage, selected) => {
+    switch (type) {
+      case 'page':
+        return t(selected ? 'pagination.current' : 'pagination.goTo', { page: String(itemPage) });
+      case 'previous':
+        return t('pagination.previous');
+      case 'next':
+        return t('pagination.next');
+      case 'first':
+        return t('pagination.first');
+      case 'last':
+        return t('pagination.last');
+      default:
+        return ''; // the ellipses render no label
+    }
+  };
+
   const handlePageChange = (event: React.ChangeEvent<unknown>, selectedPage: number) => {
     onChange(selectedPage);
   };
@@ -29,6 +51,8 @@ const Pagination = ({ page, onChange, count, getItemHref }: PaginationProps) => 
   return (
     <Stack direction="row" justifyContent={{ xs: 'center', md: 'flex-end' }} mt={2}>
       <MuiPagination
+        aria-label={t('pagination.label')}
+        getItemAriaLabel={getItemAriaLabel}
         shape="rounded"
         count={count}
         onChange={handlePageChange}

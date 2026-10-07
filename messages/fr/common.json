@@ -646,6 +646,15 @@
   "openFilters": "Ouvrir les filtres",
   "editSearch": "Modifier la recherche",
   "photoAlt": "{label} — photo {n}",
+  "pagination": {
+    "label": "Pagination",
+    "current": "Page {page}",
+    "goTo": "Aller à la page {page}",
+    "previous": "Aller à la page précédente",
+    "next": "Aller à la page suivante",
+    "first": "Aller à la première page",
+    "last": "Aller à la dernière page"
+  },
   "a11y": {
     "close": "Fermer",
     "back": "Retour",

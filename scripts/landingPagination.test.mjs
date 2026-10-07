@@ -7,7 +7,9 @@
  *     — which requests are a plain landing whose pages are linked;
  *   - src/lib/api.ts getBlogsLastmodStamps + wpGmtLastmod — the blog child's
  *     <lastmod> in sitemap.xml;
- *   - messages/<locale>/landing.json — the new strings in all nine locales.
+ *   - messages/<locale>/landing.json — the new strings in all nine locales;
+ *   - messages/<locale>/common.json pagination — the pager's accessible names
+ *     (src/components/Pagination/Pagination.tsx), MUI's are English only.
  *
  *   yarn test:landing-pages
  */
@@ -285,6 +287,37 @@ describe('messages: page strings in all nine locales', () => {
   test('each locale has its own word for "page" (no English left in a translation)', () => {
     LOCALES.filter(locale => !['en', 'fr'].includes(locale)).forEach(locale => {
       assert.doesNotMatch(landing[locale].pagedHeading, / page \{page\}$/u, locale);
+    });
+  });
+});
+
+describe('messages: pager labels in all nine locales (Pagination.tsx getItemAriaLabel)', () => {
+  const KEYS = ['label', 'current', 'goTo', 'previous', 'next', 'first', 'last'];
+  const common = Object.fromEntries(
+    LOCALES.map(locale => [locale, JSON.parse(readFileSync(`${ROOT}messages/${locale}/common.json`, 'utf8'))])
+  );
+
+  test('every locale has every label, with {page} on the page items only', () => {
+    LOCALES.forEach(locale => {
+      const labels = common[locale].pagination;
+
+      assert.deepEqual(Object.keys(labels ?? {}).sort(), [...KEYS].sort(), locale);
+      KEYS.forEach(key => {
+        assert.ok(labels[key].trim().length > 3, `${locale} ${key}`);
+        assert.equal(labels[key].includes('{page}'), key === 'current' || key === 'goTo', `${locale} ${key}`);
+      });
+    });
+  });
+
+  test('no MUI English default left in a translation ("Go to next page", "page 2")', () => {
+    LOCALES.filter(locale => locale !== 'en').forEach(locale => {
+      // "current" may match EN where the word is the same (FR "Page {page}").
+      ['goTo', 'previous', 'next', 'first', 'last'].forEach(key => {
+        assert.notEqual(common[locale].pagination[key], common.en.pagination[key], `${locale} ${key}`);
+      });
+      Object.values(common[locale].pagination).forEach(value => {
+        assert.doesNotMatch(value, /\bGo to\b|^page \{page\}$/u, locale);
+      });
     });
   });
 });
