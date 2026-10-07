@@ -1,5 +1,21 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-10-07 — 🛥️ Stranica broda: cijena u server HTML-u, JSON-LD otkaz 72 h, offerCount, naslov bez navodnika, rotacija sličnih brodova — ⏳ NIJE DEPLOYANO (grana `feat/w710-b4y-boat-seo`, na `feat/successor-redirect`)
+
+SEO audit „Lagoon 42 Masterpiece" 7.10. (`_seo-audit-2026-10-07/masterpiece/ZAKLJUCAK.md`, 3.7 / 4a). Grana je napravljena na `feat/successor-redirect` (ista stranica broda) i ide u isti deploy.
+
+**Commiti:**
+
+- `8b1cc0baf` `src/utils/static/weeklyOffers.ts`: jedan tjedni sažetak (budući termini od točno 7 noćenja s cijenom, jedan po tjednu, slobodni prvo) za Product `AggregateOffer`, FAQ odgovor o cijeni i traku na mobitelu. Server HTML je pisao „Price on request", a JSON-LD 1.922 €; sada je „From 1,922 € / week" (×9 jezika, `yacht.fromPerWeek`) već u prvom renderu i isti nakon hidracije. `offerCount` = slobodni tjedni (Masterpiece 31). `hasMerchantReturnPolicy` na brodu i na `/search`: `MerchantReturnFiniteReturnWindow`, 3 dana, `FreeReturn` (umjesto `MerchantReturnNotPermitted`). `<title>` / `og:title` / `twitter:title` bez navodnika oko imena.
+- `6538a34e3` „Slični brodovi": pool = svi brodovi tipa u marini (`size=100`, limit API-ja; bilo 12), izbor 3 rotira po id-u broda (`src/utils/static/relatedRotation.ts`). Ista pravila relevantnosti (marina, tip, ±5 ft), isti broj kartica i dizajn.
+- `fdcb11a83` `yarn test:boat-seo` (26 testova).
+
+**Provjere (lokalno, 7.10.):** `yarn test:boat-seo` 26/26, ostali `yarn test:*` prolaze; `npx tsc --noEmit` 0; `yarn lint` 0 grešaka. `next dev` :3991 na prod API (read-only, 6 stranica): `/boat/lagoon-42-masterpiece-11681` en/pt/hr → naslov „Lagoon 42 Masterpiece (2018) — Sukošan Charter / Aluguer Sukošan / Najam Sukošan", „From 1,922 € / week" / „Desde 1.922 € / semana" / „Od 1.922 € / tjedan", JSON-LD 1922–7448, `offerCount` 31, povrat 3 dana besplatno, hreflang 9 + x-default (apsolutni, = canonical). Slični brodovi Masterpiece / Zeus / Fat Cat: tri različita skupa (Masterpiece je prije uvijek linkao Zeus, Fat Cat, Royal Salute). `/search?destinations=croatia`: 10/10 Product s novim pravilom povrata.
+
+**Nakon deploya:** `curl -s https://www.boat4you.com/boat/lagoon-42-masterpiece-11681 | grep -o 'From [^<]*/ week'` → `From 1,922 € / week` (iznos se mijenja s ponudom); `grep -o 'MerchantReturnFiniteReturnWindow'` → pogodak; `<title>` bez `&#x27;`.
+
+**Otvoreno:** b4y Uvjeti, klauzula 72 h (grana `fix/terms-72h`) čeka Marija. Sisteri broje i zauzete tjedne i sve označavaju `InStock` (zato 50).
+
 ## 2026-10-07 — ↪️ Povučeni brod → 308 na nasljednika, IndexNow ključ, blog `<lastmod>` u UTC — ⏳ NIJE DEPLOYANO (grana `feat/successor-redirect`)
 
 Mario 7.10.: (1) povučeni brod čiji je isti fizički brod aktivan pod novim id-jem → trajni redirect umjesto 404 (Bing rangira `/boat/lagoon-bnteau-lagoon-42-4-2-cab-masterpiece-4066`, brod je živ kao `/boat/lagoon-42-masterpiece-11681`; prod ~2.768 takvih × 9 jezika); (2) IndexNow, da Bing/Yandex saznaju nove, promijenjene i preusmjerene URL-ove; (3) stvarni `<lastmod>`. Bing Webmaster: sitemap je već prijavljen (od 7.9., Mario 7.10.), tamo ništa.
