@@ -1,5 +1,58 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-10-07 — ↪️ Povučeni brod → 308 na nasljednika, IndexNow ključ, blog `<lastmod>` u UTC — ⏳ NIJE DEPLOYANO (grana `feat/successor-redirect`)
+
+Mario 7.10.: (1) povučeni brod čiji je isti fizički brod aktivan pod novim id-jem → trajni redirect umjesto 404 (Bing rangira `/boat/lagoon-bnteau-lagoon-42-4-2-cab-masterpiece-4066`, brod je živ kao `/boat/lagoon-42-masterpiece-11681`; prod ~2.768 takvih × 9 jezika); (2) IndexNow, da Bing/Yandex saznaju nove, promijenjene i preusmjerene URL-ove; (3) stvarni `<lastmod>`. Bing Webmaster: sitemap je već prijavljen (od 7.9., Mario 7.10.), tamo ništa.
+
+**Commiti:**
+
+- `a18acbead` stranica broda: detalj API vrati 400 `{"code":1502}` sa `successorSlug` (backend `566775a`, V9_73) → `generateMetadata` i stranica `permanentRedirect` (308) na `/boat/<successorSlug>` (EN) ili `/<locale>/boat/<successorSlug>`, bez query-ja, jedan skok. Bez `successorSlug`, s neispravnim slugom ili slugom jednakim traženom → 404 kao do sada. Ime agencije se nigdje ne čita ni ne šalje. `src/utils/static/yachtSuccessor.ts`, `yarn test:successor`.
+- `30c50b1d5` IndexNow ključ `public/fe827c0a6a86ef27fcb3006ca0fb6840.txt` (32 bajta, bez novog reda).
+- `310488cc0` blog sitemap: `<lastmod>` = kasniji od WP `dateGmt` / `modifiedGmt`, u UTC. Bilo je lokalno WP vrijeme označeno kao UTC (+2 h ljeti), a neispravan datum rušio je cijelu sitemapu (500). Lokalno na živim WP podacima: istih 58 URL-ova, 51 pomaknut −2 h, 7 na kasniji `modifiedGmt`, 0 bez `<lastmod>`.
+- `aced20f97` `scripts/indexnow-successors.sql` + `scripts/indexnow-successor-urls.mjs`: jednokratni popis starih URL-ova povučenih brodova koji odgovaraju 308 na nasljednika (korak 5). Povučeni brodovi nisu ni u jednoj sitemapi, pa ih sitemap IndexNow run nikad ne bi poslao.
+
+**Redoslijed i akcije:**
+
+1. Redoslijed web ↔ backend: svejedno. Dok backend (V9_73) ne šalje `successorSlug`, stari URL ostaje 404 kao danas.
+2. b4y deploy nosi `public/` iz git HEAD-a → ključ je live tek kad je grana mergana u main i deployana.
+3. Nakon deploya: `curl -sS -D - -o /tmp/k.txt https://www.boat4you.com/fe827c0a6a86ef27fcb3006ca0fb6840.txt; wc -c /tmp/k.txt` → `200`, `content-type: text/plain`, bez `location`, točno **32** bajta.
+4. Nakon backenda V9_73 (cusma2 + cusma3, `yacht_successor` napunjena):
+   - `curl -sS -o /dev/null -w '%{http_code} %{redirect_url}\n' 'https://www.boat4you.com/boat/lagoon-bnteau-lagoon-42-4-2-cab-masterpiece-4066?startDate=2027-06-05'` → `308 https://www.boat4you.com/boat/lagoon-42-masterpiece-11681` (bez `?`).
+   - Isto s `/hr/boat/…-4066` → `308 https://www.boat4you.com/hr/boat/lagoon-42-masterpiece-11681`.
+   - `curl -sSL -o /dev/null -w '%{num_redirects} %{http_code}\n'` na stari URL → `1 200`.
+   - Brod bez nasljednika ostaje 404: id iz `SELECT y.id FROM yacht y WHERE NOT y.sys_active AND NOT EXISTS (SELECT 1 FROM yacht_successor s WHERE s.old_id = y.id) ORDER BY y.id DESC LIMIT 1;` → `https://www.boat4you.com/boat/<id>` = 404 (i `/boat/no-such-boat-99999999` = 404).
+5. Tek kad 3. i 4. prođu, IndexNow (`~/Downloads/boat4you-delivery/infra/deploy-scripts/indexnow_submit.py`, druga sesija):
+   - a) prvi sitemap run s `--initial` (čeka ključ iz koraka 3).
+   - b) jednokratno za povučene brodove, iz checkouta b4y repoa (treba `node_modules`); mapa izvan gita:
+     ```
+     D=~/Downloads/boat4you-delivery/_indexnow-successors-$(date +%F); mkdir -p $D
+     scp scripts/indexnow-successors.sql cusma4:/tmp/
+     ssh -t cusma4 'sudo -u postgres psql -d boat4you_db -X -q -At -v ON_ERROR_STOP=1 -f /tmp/indexnow-successors.sql -o /tmp/successors.jsonl'
+     scp cusma4:/tmp/successors.jsonl $D/
+     wc -l $D/successors.jsonl                      # ≈ 2.768 (backend 7.10.)
+     node scripts/indexnow-successor-urls.mjs --in $D/successors.jsonl --dry-run
+     nohup node scripts/indexnow-successor-urls.mjs --in $D/successors.jsonl --out $D/urls.txt > $D/run.log 2>&1 &
+     # ~7 h (≈ 24.900 URL-ova, 1 zahtjev/s); prekid → isti poziv nastavlja (log $D/urls.txt.checks.tsv)
+     python3 ~/Downloads/boat4you-delivery/infra/deploy-scripts/indexnow_submit.py --site boat4you --urls-file $D/urls.txt --dry-run
+     python3 ~/Downloads/boat4you-delivery/infra/deploy-scripts/indexnow_submit.py --site boat4you --urls-file $D/urls.txt
+     ```
+     U `urls.txt` idu samo URL-ovi koji odgovore 308 s `Location` = nasljednik u istom jeziku, bez query-ja. Exit 1 = dio ispušten (razlog po URL-u u `.checks.tsv`); exit 2 nakon 50 provjera bez ijednog 308 = backend ili ova stranica nisu live. `indexnow_submit.py` prvo provjerava ključ i šalje po najviše 10.000.
+
+**Provjere (lokalno, 7.10.):**
+
+- `yarn test:successor` 41/41: 1502 + `successorSlug` → 308 cilj; bez / prazan / neispravan / isti slug, 404/410/401/403/422, drugi kod ili smeće → 404; 12 opasnih slugova (`//evil`, `../`, `?`, `#`, CRLF, `%2F`, velika slova, ne-ASCII) → 404; svaki jezik bez query-ja; port `SlugUtils` (13 živih brodova + Kotlin rubni slučajevi), proširenje na 9 jezika, 308 provjera, resume, odustajanje nakon 50, `--dry-run`.
+- Port `SlugUtils.toSlugWithId` uspoređen s kompajliranom Kotlin klasom (build `c456008`) na 120.000 generiranih imena: 0 razlika.
+- `indexnow-successors.sql` izvršen na lokalnoj bazi u transakciji s `ROLLBACK` (privremena `yacht_successor`): ispravan JSON po retku, skripta ga čita. Isti JOIN (proizvođač preko modela) + port na lokalnoj kopiji prod baze (`b4y-rehearsal`) daje točno živi slug za 676 od 739 EN URL-ova shardova 0–1; ostalih 63 su promjene podataka od kopije (59 preimenovan proizvođač, npr. `catana-group-` → `bali-catamarans-`, 4 preimenovan brod), ne greška porta.
+- `yarn test:sitemap` 10/10. `npx tsc --noEmit` 0 (treba `messages/**/*.d.json.ts` iz `next dev`). `yarn lint` 0 grešaka (17 starih upozorenja, npr. `charterTypeLabel` u `boat/[slug]/page.tsx`).
+- `next dev` :3961 sa stubom API-ja :3962 (1502 + nasljednik za test slugove, ostalo read-only na prod ≤ 1 zahtjev/s): stari slug 4066 u svih 9 jezika, sa i bez `?startDate…&currency=USD` → 308 na nasljednika bez query-ja, jedan skok pa 200; bingbot i Googlebot UA isto; bez nasljednika, self-loop, smeće → 404 + `noindex`; aktivni nasljednik 200 u 9 jezika; ključ 200 `text/plain` 32 bajta (middleware ga ne dira, `robots.txt` ga ne blokira).
+- Produkcija danas: 9 URL-ova 4066 → 404 (backend nije deployan), skripta ih ispušta, popis prazan; postojeći 308 `/boat/11681` → slug (isti mehanizam kao novi redirect) ima relativan `Location` i `cache-control: public, max-age=0, s-maxage=60, stale-while-revalidate=600`; stvarni `fetch` skripte na `/hr/boat/11681` ga potvrđuje kao 308 na `/hr/boat/lagoon-42-masterpiece-11681`.
+- Yacht sitemap shard 1: lokalno bajt-identičan živom (5.292 URL-a, 4.014 s `<lastmod>` iz `updatedAt`), bez promjene koda.
+
+**Otvoreno:**
+
+- Backend: 3.987 od 4.014 `<lastmod>` u shardu 1 je u 23:27–23:29 UTC 6.10. Ako noćni job svaku noć dira `updatedAt`, `<lastmod>` gubi vrijednost.
+- Popis iz koraka 5b gradi današnji slug starog broda. URL-ove koje je Bing upamtio pod drugim imenom (preimenovan proizvođač, model ili brod; na kopiji baze to je ~8 % aktivnih brodova) backend također preusmjerava, jer je dovoljan slug koji završava id-jem, ali ih popis ne sadrži i Bing ih vidi tek kad ih sam ponovno posjeti. Ako zatrebaju: bingbot 404 na `/boat/…-<id>` iz nginx logova cusma1 kao dodatni ulaz.
+
 ## 2026-10-07 — ✍️ SEO korpus i registar: bez cijena skipera po danu, Boat4You kao broker (ne vlasnik flote), dijakritici, NL „je" / PL „Ty", FAQ bez escrowa
 
 Mario 6.10. („polako sredi ovo što čeka") i 7.10. (FAQ bez escrowa = DA; ostale broker formulacije ostaju). Merge `fix/w610-b4y-combined` (grane `fix/w610-b4y-corpus` + `fix/w610-b4y-register`, re-audit 29.9. R13/R14/R32/R33/R49), merge commit `e09dac060`.

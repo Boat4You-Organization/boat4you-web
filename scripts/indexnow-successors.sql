@@ -2,8 +2,10 @@
 -- scripts/indexnow-successor-urls.mjs (owner decision 7.10.2026). Read-only; names only, never the agency.
 -- Manufacturer via the model, as the list API, the sitemaps and the boat page build the slug (SlugUtils).
 --
---   ssh cusma4 'sudo -u postgres psql -d boat4you_db -X -q -At -v ON_ERROR_STOP=1' \
---     < scripts/indexnow-successors.sql > successors.jsonl
+--   scp scripts/indexnow-successors.sql cusma4:/tmp/
+--   ssh -t cusma4 'sudo -u postgres psql -d boat4you_db -X -q -At -v ON_ERROR_STOP=1 \
+--     -f /tmp/indexnow-successors.sql -o /tmp/successors.jsonl'
+--   scp cusma4:/tmp/successors.jsonl .
 SET default_transaction_read_only = on;
 
 SELECT json_build_object(
