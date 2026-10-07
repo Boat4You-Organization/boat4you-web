@@ -142,8 +142,8 @@ def squash(text):
 
 
 def plain(fragment):
-    """Visible text of an HTML fragment, whitespace-collapsed."""
-    return squash(html.unescape(re.sub(r'<[^>]+>', ' ', fragment)))
+    """Visible text of an HTML fragment, whitespace-collapsed (a literal "<" in the text is not a tag)."""
+    return squash(html.unescape(R.TAG.sub(' ', fragment)))
 
 
 def split_body(src):
@@ -2118,6 +2118,14 @@ W610_SELF_TEST = {
 }
 W610_SELF_TEST_ASCII = (['Route Zadar-Kornati-Hvar-Korcula-Vis-Skradin', 'Sail from Sibenik to Primosten'],
                         ['<a href="/search?destinations=Korcula">Korčula</a>', 'Šibenik and Primošten'])
+# The register check reads plain(): a literal "<" before the slip ("(< 3 knopen)", "(<8)") used to hide the
+# rest of the paragraph (review of 7.10.2026). (locale, body) — positives must give a 'register' finding.
+W610_SELF_TEST_REGISTER = (
+    [('nl', '<p>Nader langzaam (< 3 knopen) en laat de bemanning u naar de boeiring leiden (niet ankeren).</p>'),
+     ('nl', '<p>Bareboat charters met zeer jonge kinderen (<8) zijn minder ideaal, tenzij u over aanzienlijke zeilervaring beschikt.</p>'),
+     ('nl', '<p>Diepte &lt; 3 meter: <strong>let op</strong>, uw anker houdt slecht.</p>')],
+    [('nl', '<p>Nader langzaam (< 3 knopen) en laat de bemanning je naar de boeiring leiden (niet ankeren).</p>'),
+     ('nl', '<p>Bareboat charters met zeer jonge kinderen (<8) zijn minder ideaal, tenzij je over zeilervaring beschikt.</p>')])
 
 
 def run_w610_self_test():
@@ -2137,7 +2145,13 @@ def run_w610_self_test():
     for text in W610_SELF_TEST_ASCII[1]:
         if ascii_croatian_names(f'<p>{text}</p>', 'x.html'):
             failed.append(f'FLAGGED ascii-hr-name: {text}')
-    total = sum(len(p) + len(n) for _, p, n in W610_SELF_TEST.values()) + sum(map(len, W610_SELF_TEST_ASCII))
+    for positive, cases in ((True, W610_SELF_TEST_REGISTER[0]), (False, W610_SELF_TEST_REGISTER[1])):
+        for locale, body in cases:
+            hit = any(check == 'register' for check, _ in R.independent_checks(body, locale, R.plain(body)))
+            if hit != positive:
+                failed.append(f'{"MISSED " if positive else "FLAGGED"} register {locale}: {R.plain(body)[:110]}')
+    total = (sum(len(p) + len(n) for _, p, n in W610_SELF_TEST.values()) + sum(map(len, W610_SELF_TEST_ASCII))
+             + sum(map(len, W610_SELF_TEST_REGISTER)))
     for line in failed:
         print(line)
     print(f'w610 self-test: {total - len(failed)}/{total} cases pass')

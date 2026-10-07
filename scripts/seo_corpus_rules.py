@@ -79,8 +79,13 @@ def squash(text):
     return re.sub(r'\s+', ' ', text).strip()
 
 
+# A real tag starts with a letter, "/" or "!": a literal "<" in the text ("(< 3 knopen)", "(<8)") is
+# not a tag, and reading it as one used to drop the rest of the paragraph from every check (7.10.2026).
+TAG = re.compile(r'<[A-Za-z/!][^>]*>')
+
+
 def plain(fragment):
-    return squash(html.unescape(re.sub(r'<[^>]+>', ' ', fragment)))
+    return squash(html.unescape(TAG.sub(' ', fragment)))
 
 
 def split_body(src):
