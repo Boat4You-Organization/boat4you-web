@@ -171,7 +171,7 @@ const sibenikHvarVisSoltaRoute: ItineraryRoute = {
     desktop: {
       image: {
         src: '/images/itinerary/croatia/split-dubrovnik-itinerary/map.webp',
-        alt: 'Šibenik – Hvar – Vis – Solta Route Image',
+        alt: 'Šibenik – Hvar – Vis – Šolta Route Image',
       },
       width: 2422,
       height: 1550,
@@ -179,7 +179,7 @@ const sibenikHvarVisSoltaRoute: ItineraryRoute = {
     mobile: {
       image: {
         src: '/images/itinerary/croatia/split-dubrovnik-itinerary/mobile-map.webp',
-        alt: 'Šibenik – Hvar – Vis – Solta Route Image',
+        alt: 'Šibenik – Hvar – Vis – Šolta Route Image',
       },
       width: 1144,
       height: 1354,

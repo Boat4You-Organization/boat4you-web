@@ -351,7 +351,7 @@ const zadarKornatiHvarKorculaVisSkradin14DaysRoute: ItineraryRoute = {
     desktop: {
       image: {
         src: '/images/itinerary/croatia/zadar-itinerary/map.webp',
-        alt: 'Zadar-Kornati-Hvar-Korcula-Vis-Skradin Route Image',
+        alt: 'Zadar-Kornati-Hvar-Korčula-Vis-Skradin Route Image',
       },
       width: 1350,
       height: 1111,
@@ -359,7 +359,7 @@ const zadarKornatiHvarKorculaVisSkradin14DaysRoute: ItineraryRoute = {
     mobile: {
       image: {
         src: '/images/itinerary/croatia/zadar-itinerary/mobile-map.webp',
-        alt: 'Zadar-Kornati-Hvar-Korcula-Vis-Skradin Route Image',
+        alt: 'Zadar-Kornati-Hvar-Korčula-Vis-Skradin Route Image',
       },
       width: 868,
       height: 1228,

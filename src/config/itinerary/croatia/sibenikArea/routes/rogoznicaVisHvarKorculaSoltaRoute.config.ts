@@ -171,7 +171,7 @@ const rogoznicaVisHvarKorculaSoltaRoute: ItineraryRoute = {
     desktop: {
       image: {
         src: '/images/itinerary/croatia/split-dubrovnik-itinerary/map.webp',
-        alt: 'Rogoznica – Vis – Hvar – Korčula – Solta Route Image',
+        alt: 'Rogoznica – Vis – Hvar – Korčula – Šolta Route Image',
       },
       width: 2422,
       height: 1550,
@@ -179,7 +179,7 @@ const rogoznicaVisHvarKorculaSoltaRoute: ItineraryRoute = {
     mobile: {
       image: {
         src: '/images/itinerary/croatia/split-dubrovnik-itinerary/mobile-map.webp',
-        alt: 'Rogoznica – Vis – Hvar – Korčula – Solta Route Image',
+        alt: 'Rogoznica – Vis – Hvar – Korčula – Šolta Route Image',
       },
       width: 1144,
       height: 1354,

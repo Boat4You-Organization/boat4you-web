@@ -72,6 +72,24 @@ licence), the formal register on the informal NL and PL sites ("u/uw",
 UI strings in messages/<locale>/*.json
 (seo_corpus_rules.message_checks). Any finding fails --check.
 
+Added 6.10.2026 (w610, checks only, in this file; review of 6.10.2026 widened
+them and added `--self-test`, which proves every sentence the review quoted is
+found and every allowed one passes): "perday-crew-price" — a per-day price on
+a skipper/crew/hostess/chef/instructor in any locale ("Skippered charters add
+EUR 300-500 daily", "150 bis 200 Euro pro Tag plus Verpflegung"; vessel day
+rates, crewed packages, food budgets, tips, fuel and mooring pass, decided by
+the words next to the amount); "operator-claim" — Boat4You as employer of
+crews, owner of fleets/bases or the party that briefs and maintains the boats
+("Boat4You's skippers", "la flotte ... de Boat4You", "employés par Boat4You",
+"mantidas pela Boat4You", "Unsere Schiffe", "Boat4You posiada 14", "Boat4You
+conducts pre-departure briefings"); "brand-hole" — a sentence the brand was
+cut from ("Stocks 14 multihulls", "Learn how manages", "Das Team von kümmert
+sich"); "fee-repeat" — the "fees are shown on each boat's page" sentence more
+than once on a page; "ascii-hr-name" — Šibenik, Kaštela, Sukošan, Korčula,
+Primošten, Palmižana, Komiža, Biševo, Lošinj written without diacritics in
+visible text (hrefs, did= and file names are not text; Greek Kastela in
+Piraeus passes).
+
 Unfilled page templates (PLACEHOLDER / "Key Advantage Section 1") are only
 reported, and fail --check: they must be written or removed by hand.
 
@@ -82,6 +100,7 @@ Usage:
   python3 scripts/seo-corpus-qa.py --only faq,facts
   python3 scripts/seo-corpus-qa.py --report findings.tsv   # every check finding
   python3 scripts/seo-corpus-qa.py --refresh-locations     # re-snapshot /public/locations first
+  python3 scripts/seo-corpus-qa.py --self-test   # the w610 checks against the review's sentences (no corpus scan)
 """
 
 import argparse
@@ -1542,6 +1561,589 @@ def rule_functions():
     }
 
 
+# ---------------------------------------------------------------------------------------------------
+# Regression checks added 6.10.2026 (w610 b4y-corpus): R14 per-day crew prices, R13 operator claims,
+# R32 Croatian place names without diacritics, EN brand holes and a repeated fee sentence.
+# Report only (fail --check); the fixes were made by hand. `--self-test` runs W610_SELF_TEST (every
+# sentence the review of 6.10.2026 quoted must be found, every allowed sentence must pass).
+
+# R14 — a per-day price put on a skipper / crew / hostess / chef / instructor. Allowed: a vessel's
+# own day rate, crewed packages ("with crew", "including crew"), food and provisioning budgets,
+# tips, fuel and mooring — decided by the words next to the amount and between the crew word and
+# the amount, never by a word elsewhere in the sentence ("150–220 euro per day plus meals" is found).
+PERDAY_MARK = {
+    'en': r"per\s+day|a\s+day\b|/\s*day\b|daily|per-day|per\s+diem|day\s+rates?|(?:one|first|1)[-\s]day|day\s+charters?",
+    'de': r"pro\s+Tag|am\s+Tag|/\s*Tag\b|täglich\w*|Tages(?:satz|sätze|miete|gage|honorar|preis|gebühr|charter)\w*"
+          r"|je\s+Tag|(?:einen|ersten|ein)\s+Tag\b|eintägig\w*",
+    'fr': r"par\s+jour|/\s*jour\b|journali\w*|quotidien\w*|(?:une|la\s+première|première)\s+journée|à\s+la\s+journée"
+          r"|(?:premier|un)\s+jour\b",
+    'it': r"al\s+giorno|per\s+giorno|/\s*giorno\b|giornalier\w*|al\s+dì|(?:un|primo)\s+giorno\b",
+    'es': r"por\s+día|al\s+día|/\s*día\b|diari\w*|(?:un|primer)\s+día\b|de\s+día\b",
+    'pt': r"por\s+dia|ao\s+dia|/\s*dia\b|diári\w*|(?:um|primeiro)\s+dia\b",
+    'nl': r"per\s+dag|/\s*dag\b|dagtarie\w*|daghuur|dagprijs\w*|daags|dagelijks\w*|(?:één|eerste)\s+dag\b|dagcharter\w*",
+    'pl': r"dzienn\w*|za\s+dzień|na\s+dzień|/\s*dzień|za\s+dobę|(?:jeden|pierwszy)\s+dzień",
+    'hr': r"dnevn\w*|po\s+danu|na\s+dan\b|/\s*dan\b|(?:jedan|prvi)\s+dan\b|jednodnevn\w*",
+}
+# crew words as stems ("Skippered", "Crews", "bemanningen", "skiperi"); DE/NL also inside compounds
+# ("Anglercrews"). A hyphen compound ("Crew-Anforderungen") is not a person, a fee compound is.
+CREW_WORD = {
+    'en': r"(?<![\w-])(?:skipper\w*|crew\w*|hostess\w*|chef\w*|captain\w*|stewardess\w*|deckhand\w*|cook\w*"
+          r"|instructor\w*|navigator\w*)",
+    'de': r"(?<![\w-])\w*(?:skipper|crew|besatzung|hostess|köch|koch\b|kapitän|ausbilder)\w*",
+    'fr': r"(?<![\w-])(?:skipper\w*|équipag\w*|hôtess\w*|chef\w*|capitain\w*|cuisinier\w*|moniteur\w*)",
+    'it': r"(?<![\w-])(?:skipper\w*|equipagg\w*|hostess\w*|chef\w*|cuoc\w*|capitan\w*|istrut\w*)",
+    'es': r"(?<![\w-])(?:patr[oó]n\w*|skipper\w*|tripula\w*|azafat\w*|chef\w*|cociner\w*|capit[aá]n\w*|instruct\w*)",
+    'pt': r"(?<![\w-])(?:skipper\w*|tripula\w*|hospedeir\w*|chef\w*|cozinheir\w*|capitão|capitães|comandante\w*"
+          r"|instrut\w*)",
+    'nl': r"(?<![\w-])\w*(?:schipper|skipper|bemanning|hostess|kok\b|koks\b|chef|kapitein|instructeur)\w*",
+    'pl': r"(?<![\w-])(?:skipper\w*|skiper\w*|załog\w*|hostess\w*|kuchar\w*|kapitan\w*|instruktor\w*|sternik\w*)",
+    'hr': r"(?<![\w-])(?:skiper\w*|skipper\w*|posad\w*|hostes\w*|kuhar\w*|kapetan\w*|instrukt\w*)",
+}
+# a hyphen compound that is not a person ("Crew-Anforderungen", "Skipper-Trinkgeld")
+CREW_NONPERSON = (r"-(?:Anforderung|Option|Qualifikation|Erfahrung|Konfiguration|Größe|Zusammensetzung|Trinkgeld"
+                  r"|Unterkunft|Kabine|Quartier|Bereich|Wechsel|Anzahl|Lizenz|Schein|Kurs|Pr[üu]fung|vereisten|samenstelling"
+                  r"|grootte|ervaring|opties|fooi|verblijf|hut|Expertise|Wissen|Kenntnis|Segelyacht|Yacht|Motoryacht"
+                  r"|Charter|Katamaran|Boot|Paket|Service|Dienst|Arrangement)")
+_CUR = r"(?:€|\$|£|(?:EUR|USD|GBP|[Ee]uros?|[Ee]ura|Euro)\b)"
+_NUM = r"\d(?:[\d.,]|\s(?=\d{3}\b))*"
+_RANGE = r"(?:\s?[–—-]\s?|\s+(?:to|and|bis|und|à|et|a|y|e|tot|en|do|i|till)\s+)"
+DAY_AMOUNT = (rf"(?:{_CUR}\s?{_NUM}(?:{_RANGE}(?:{_CUR}\s?)?{_NUM}(?:\s?{_CUR})?)?"
+              rf"|{_NUM}(?:\s?{_CUR})?{_RANGE}{_NUM}\s?{_CUR}|{_NUM}\s?{_CUR})")
+# between the crew word and the amount: the amount is a vessel's or a package's price ...
+CREW_GAP_VESSEL = (r"(?i)\b(?:yachts?|vessels?|boats?|catamarans?|monohulls?|gulets?|motorsailers?|RIBs?|charters?"
+                   r"|Yachten|Schiffe?|Boote?|Katamarane?|Bootsmiete|navires?|bateaux?|vedettes?|voiliers?|imbarcazion\w*"
+                   r"|barche|barca|catamarani|yates?|embarcaci\w*|barcos?|veleros?|lanchas?|iates?|embarcaç\w*|veleiros?"
+                   r"|jachten|schepen|boten|vaartuigen|jacht\w*|jednost\w*|łodzi|łódź|katamaran\w*|plovil\w*|brod\w*"
+                   r"|jahte?|jedrilic\w*|najam\w*|alquiler\w*|location|noleggi\w*|aluguer\w*|czarter\w*|huur)\b")
+# ... unless the crew is what is added ("Skippered charters add €300-500 daily")
+CREW_GAP_ADD = (r"(?i)\b(?:add|adds|extra|additional|zusätzlich\w*|hinzu|ajout\w*|en\s+sus|supplément\w*|aggiung\w*"
+                r"|in\s+più|añad\w*|suman|adicional\w*|acrescent\w*|adicion\w*|toeslag|dodaj\w*|dodatkow\w*|dodatn\w*)\b")
+# food, provisioning, tips, fuel, mooring, a per-guest budget: words next to the amount or between
+NEAR_VETO = (r"(?i)provision|groceri|\beat\b|\bmeals?\b|\bfood|\btips?\b|gratuit|fuel|diesel|moor|berth|marina fee"
+             r"|parking|victual|\bguests?\b|\bprovide\b|\bpersons?\b|\bpeople\b|\bpax\b|per\s+head"
+             r"|Proviant|Verpfleg|Lebensmittel|Trinkgeld|Treibstoff|Kraftstoff|Liegepl|Person|Gäste"
+             r"|avitaill|approvision|ravitaill|courses|pourboire|carburant|amarr|mouillage|personne|invité"
+             r"|approvvig|rifornim|mangiare|mancia|mance|carburante|gasolio|ormegg|persona|ospit"
+             r"|avituall|aprovision|comestibles|comida|propina|combustible|amarre|huésped"
+             r"|abastec|mercearia|refei|gorjeta|combustível|amarra|pessoa|hóspede"
+             r"|boodschap|proviand|\beten\b|maaltijd|fooi|brandstof|ligplaats|persoon|gasten"
+             r"|zaopatrz|żywnoś|jedzen|z?jeść|posiłk|napiw|paliw|cumow|\bosob\w*|gości|goście|convidad|invitad|fornec"
+             r"|opskrb|namirnic|hran[aeiu]|obro[kc]|napojnic|goriv|\bvez\w*|gost\w*")
+# a vessel's own day rate right next to the amount ("€250–500 per day bareboat", "Bareboat: €200")
+BAREBOAT = r"(?i)bareboat|without\s+(?:a\s+)?skipper|ohne\s+Skipper|sans\s+(?:skipper|équipage)|senza\s+skipper|sin\s+(?:patr|tripula)|sem\s+(?:skipper|tripula)|zonder\s+(?:schipper|bemanning)|bez\s+(?:załogi|skippera|skipera|posade)"
+# "with crew", "including crew", "crew included": a crewed vessel's price; "without a skipper": a bareboat price
+CREW_WITH = (r"(?i)\b(?:with|incl\w*|including|mit|inkl\w*|einschließlich|avec|compris|con|incluso|inclus\w*"
+             r"|incluid\w*|com|incluindo|met|inclusief|z|ze|w\s+tym|wraz\s+z|s|sa|uključujući|uz)\s+(?:[\w']+\s+){0,3}$")
+CREW_WITHOUT = (r"(?i)\b(?:without|ohne|sans|senza|sin|sem|zonder|bez)\s+(?:[\w']+\s+){0,2}$")
+CREW_INCLUDED = r"(?i)^\s*(?:included|inbegriffen|inklusive|inclus\w*|compris|incluso|incluid\w*|inclu[ií]d\w*|inbegrepen|wliczon\w*|uključen\w*)\b"
+# a crew word after the amount must be what the amount is for: "€150 per day for a skipper"
+CREW_AFTER = r"(?i)^[\s,)]*(?:for|für|pour|per|para|por|voor|za|dla|na)\s+(?:[\w']+\s+){0,3}$"
+TAIL_CUT = r"[,;()]"
+PLUS_LEAD = r"(?i)^[\s,]*(?:plus|\+|zzgl\.?|zuzüglich|più|más|mais|além\s+de|oraz|uz|en\s+plus)\s"
+
+
+# a crew word that is the guests themselves ("a crew of four", "vierköpfige Crew", "czteroosobowa załoga")
+CREW_GROUP = (r"(?i)(?:\b(?:two|three|four|five|six|eight|\d+)[- ]person\b|köpfig\w*|osobow\w*|članu?\w*\s*$|koppig\w*|persoons\w*"
+              r"|^\s*(?:of|de|di|van|von|od|da)\s+(?:two|three|four|five|six|eight|deux|trois|quatre|cinq|six|due|tre|quattro"
+              r"|cinque|sei|dos|tres|cuatro|cinco|seis|duas|quatro|twee|drie|vier|vijf|zes|dwóch|trzech|czterech|dvoje|troje"
+              r"|četvero|\d+)\b)")
+# an amount that belongs to another period or unit ("€2,500–€7,000/week", "€40 per night")
+_UNIT_LEAD = r"(?i)^\s*\+?\s*(?:/\s*|per\s+|pro\s+|par\s+|a\s+|al\s+|alla\s+|por\s+|za\s+|po\s+|la\s+)?"
+OTHER_UNIT = (_UNIT_LEAD + r"(?:night|Nacht|nuit|nott|noche|noite|nacht|noc|noć|hour|Stunde|heure|ora\b|hora|uur|godzin"
+              r"|sat\b|person|Person|personne|persona|pessoa|persoon|osob|metre|meter|Meter|mètre|metro|metr|foot|pied|piede"
+              r"|pie\b|pé\b|voet|stop)")
+WEEK_UNIT = _UNIT_LEAD + r"(?:week|Woche|wöchentlich|semaine|hebdo|settiman|semana|semanal|tydzień|tygodniow|tjed)"
+
+
+CREW_DEPEND = (r"(?i)depend\w*\s+on|je\s+nach|abhängig|selon|en\s+fonction|a\s+seconda|in\s+base\s+a|según|dependiendo"
+               r"|dependendo|consoante|afhankelijk|w\s+zależności|zależnie|ovisno|zahtjev\w*|équipage\s+libre|solo\s+patr|patrones\s+de")
+CREW_COMPOUND_NONPERSON = r"(?i)(?:eisen|grootte|samenstelling|ervaring|größe|anforderung\w*|zusammensetzung|erfahrung|qualifikation\w*)$"
+MODAL = (r"(?i)\b(?:can|could|may|kann|können|peut|peuvent|può|possono|puede|pueden|pode|podem|kan|kunnen|może|mogą"
+         r"|može|mogu)\b")
+
+
+def _crew_spans(clause, locale):
+    for m in re.finditer(CREW_WORD[locale], clause, re.I):
+        rest = clause[m.end():]
+        if re.match(CREW_NONPERSON, rest, re.I) or re.match(CREW_INCLUDED, rest):
+            continue
+        before = clause[max(0, m.start() - 60):m.start()]
+        bare = re.search(BAREBOAT, before)
+        if re.search(CREW_WITHOUT, before[-30:]) or (bare and not re.search(MODAL, before[bare.end():])):
+            continue
+        if re.search(CREW_GROUP, before[-25:]) or re.match(CREW_GROUP, rest[:30]) or re.search(CREW_GROUP, m.group(0)):
+            continue
+        # the crew word describes a vessel ("goleta tripulada", "Posadom opremljena jahta", "(vaartuig + bemanning")
+        if re.search(CREW_GAP_VESSEL[4:] + r"[\s+(]{1,4}$", before[-20:], re.I) or (re.match(r"\s+\w+\s+" + CREW_GAP_VESSEL[4:], rest[:30], re.I)
+                                                                          and not re.search(CREW_GAP_ADD, rest[:40])):
+            continue
+        # "depending on … crew", "Napiwki dla załogi", a compound that is not a person ("bemanningseisen")
+        if re.search(CREW_DEPEND, before[-30:]) or re.search(NEAR_VETO, before[-25:]) or re.search(CREW_COMPOUND_NONPERSON, m.group(0)):
+            continue
+        yield m.start(), m.end(), bool(re.search(CREW_WITH, before[-30:]))
+
+
+def _crew_price_clause(clause, locale):
+    marks = [(m.start(), m.end()) for m in re.finditer(r"(?i)(?:(?<!\w)|(?=/))(?:%s)" % PERDAY_MARK[locale], clause)]
+    if not marks:
+        return False
+    crews = list(_crew_spans(clause, locale))
+    if not crews:
+        return False
+    for am in re.finditer(DAY_AMOUNT, clause):
+        a0, a1 = am.span()
+        after_amount = clause[a1:a1 + 14]
+        if re.search(r"\d", clause[max(0, a0 - 1):a0]) or re.match(OTHER_UNIT, after_amount) or re.match(WEEK_UNIT, after_amount):
+            continue
+        if re.search(NEAR_VETO, clause[max(0, a0 - 30):a0]) or re.search(BAREBOAT, clause[max(0, a0 - 15):a1 + 15]):
+            continue
+        for d0, d1 in marks:
+            after = a1 <= d0 <= a1 + 25      # "€120–€180 per day", "80 € do 150 € dnevnom trošku"
+            if after:
+                if re.search(NEAR_VETO, clause[a1:d0]):
+                    continue
+                tail = re.split(TAIL_CUT, clause[d1:d1 + 30])[0]
+                if not re.match(PLUS_LEAD, tail) and (re.search(NEAR_VETO, tail) or re.search(BAREBOAT, tail)):
+                    continue
+            elif d1 > a0:
+                continue
+            for c0, c1, with_ in crews:
+                # "for the first day—an investment (€100–€150)", "one-day skippered introduction (… 250-350 euro)",
+                # "Die täglichen Raten für Skipper liegen … 250 €"
+                if not after and not (c1 <= d0 or 0 <= c0 - d1 <= 15):
+                    continue
+                if c1 <= a0 and a0 - c1 <= 110:
+                    gap = clause[c1:a0]
+                    add = re.search(CREW_GAP_ADD, gap)
+                    if (re.search(NEAR_VETO, gap) or re.search(DAY_AMOUNT, gap)
+                            or (with_ and not re.search(CREW_GAP_ADD, gap[:25]))):
+                        continue
+                    head = re.match(r"[\s-]*(?:[\w-]+\s+){0,2}?" + CREW_GAP_VESSEL[4:], gap, re.I)
+                    if (head or re.search(CREW_GAP_VESSEL, gap[-40:])) and not add:
+                        continue
+                    return True
+                if (after and c0 >= d1 and not with_ and re.match(CREW_AFTER, clause[d1:c0])
+                        and not re.search(NEAR_VETO, clause[c1:c1 + 30])):
+                    return True
+    return False
+
+
+def perday_crew_prices(sentences, locale):
+    return [s for s in sentences if any(_crew_price_clause(c, locale) for c in re.split(r';\s', s))]
+
+
+
+
+# R13 — Boat4You as employer of skippers/crews, owner of fleets and bases ("Boat4You's skippers",
+# "Boat4You deploys/employs …", "our fleet/base"). The broker's own team, its skipper service or
+# network, partner fleets and "via Boat4You" stay allowed (OPERATOR_KEEP around the match).
+OPERATOR_DENY = {
+    'en': [r"\bBoat4You['’]s\s+(?:[\w-]+\s+){0,2}?(?:fleet|bases?|mechanics|technicians|engineers|skippers|captains|crews"
+           r"|crew members|instructors)\b(?!\s+(?:network|services?|options|recommendations|support))",
+           r"\bBoat4You\s+(?:professional\s+|experienced\s+|local\s+)?(?:skippers|captains|crews|crew members|mechanics|instructors)\b",
+           r"\b(?:[Yy]our|[Aa]|[Mm]any|[Mm]ost)\s+Boat4You\s+(?:captain|crew|skipper)",
+           r"\bBoat4You\s+(?:employs|recruits|owns|deploys)\b",
+           r"\b[Oo]ur\s+(?:own\s+)?(?:[\w-]+\s+)?(?:fleet|bases|mechanics|captains|skippers)\b",
+           r"\b[Oo]ur\s+(?:[\w-]+\s+)?base\b(?!\s+pric)"],
+    'de': [r"Boat4You(?:s|-)\s?(?:[a-zäöü][\w-]*\s+){0,2}(?:[\w-]*[Ff]lotte\w*|Basis|Crews?|Skipper|Kapitäne|Mechaniker)\b",
+           r"\b(?:Crews?|Skipper|Kapitäne|Mechaniker|Flotte|Basis)\s+von\s+Boat4You\b",
+           r"\bBoat4You\s+(?:beschäftigt|rekrutiert|besitzt)\b",
+           r"\bBoat4You\s+setzt\s+(?:\d+\s+)?(?:[\w-]+\s+){0,2}?(?:Katamarane|Segelyachten|Motoryachten|Motorboote|Yachten|Boote)\b",
+           r"\b[Uu]nser(?:e|er|en|em)?\s+(?:eigene\w*\s+)?(?:[\w-]+\s+)?(?:Flotte|Basis|Mechaniker|Kapitäne)\b"],
+    'fr': [r"\b(?:équipages?|skippers?|capitaines|mécaniciens|flotte|base)\s+(?:[\w'-]+\s+){0,2}?de\s+Boat4You\b",
+           r"\bBoat4You\s+(?:emploie|recrute|déploie|possède\s+(?:sa|ses|une|la)\s+(?:propre\s+)?flotte)\b",
+           r"\b[Nn]otre\s+(?:propre\s+)?(?:flotte|base)\b|\b[Nn]os\s+(?:propres\s+)?(?:bases|capitaines|mécaniciens)\b"],
+    'it': [r"\b(?:equipaggi?o?|skipper|capitani|meccanici|flotta|base)\s+(?:[\w'-]+\s+){0,2}?di\s+Boat4You\b",
+           r"\bBoat4You\s+(?:impiega\s+(?:capitani|skipper|equipaggi)|recluta|schiera|possiede\s+(?:la|una)\s+flotta)\b",
+           r"\b(?:[Ll]a|[Dd]alla|[Nn]ella|[Ss]ulla)\s+nostra\s+(?:flotta|base)\b|\b[Ii]\s+nostri\s+(?:capitani|meccanici)\b"],
+    'es': [r"\b(?:tripulaci(?:ón|ones)|patrones|capitanes|mecánicos|flota|base)\s+(?:[\w'-]+\s+){0,2}?de\s+Boat4You\b",
+           r"\bBoat4You\s+(?:emplea\s+(?:capitanes|patrones|tripulaci)|recluta|despliega|posee\s+(?:su|una)\s+(?:propia\s+)?flota)",
+           r"\b[Nn]uestra\s+(?:propia\s+)?(?:flota|base)\b|\b[Nn]uestros\s+(?:\w+\s+)?(?:capitanes|mecánicos)\b"
+           r"|\b[Nn]uestras\s+(?:\w+\s+)?tripulaciones\b"],
+    'pt': [r"\b(?:tripulaç(?:ão|ões)|skippers?|capitães|comandantes|mecânicos|frota|base)\s+(?:[\w'-]+\s+){0,2}?da\s+Boat4You\b",
+           r"\bBoat4You\s+(?:emprega|recruta|possui\s+(?:a|uma)\s+frota)\b",
+           r"\b[Nn]oss[ao]\s+(?:própri[ao]\s+)?(?:frota|base)\b|\b[Nn]ossos\s+(?:capitães|mecânicos)\b"
+           r"|\b[Nn]ossa\s+experiente\s+tripulação\b"],
+    'nl': [r"\bBoat4You(?:['’]s|-)\s?(?:[\w-]+e\s+){0,2}(?:vloot|basis|bemanning\w*|schippers|kapiteins|monteurs)\b",
+           r"\b(?:bemanning\w*|schippers|kapiteins|monteurs|vloot|basis|crews)\s+van\s+Boat4You\b",
+           r"\bBoat4You\s+(?:werft|bezit|heeft\s+\w+\s+in\s+dienst)\b",
+           r"\bBoat4You\s+zet\s+(?:\d+\s+)?(?:[\w-]+\s+){0,2}?(?:catamarans|zeiljachten|motorjachten|motorboten|jachten|boten)\b",
+           r"\b[Oo]nze?\s+(?:eigen\s+)?(?:[\w-]+\s+)?(?:[\w-]*vloot|[\w-]*basis|monteurs|kapiteins)\b"],
+    'pl': [r"\b(?:[Zz]ałog\w*|[Ss]kipper\w*|[Kk]apitan\w*|mechani[kc]\w*|flot\w*|baz[aęyie]\w*)\s+Boat4You\b(?!\s+(?:oferuje|organizuje))",
+           r"\bBoat4You\s+(?:zatrudnia|rekrutuje|dysponuje|posiada\s+flot)",
+           r"\b[Nn]asz(?:a|ej|ą|e|ych)?\s+(?:własn\w+\s+)?(?:flot\w*|baz[aęyie]\w*)\b"],
+    'hr': [r"\bBoat4You-?ov(?:a|u|e|i|ih|om|oj)\s+(?:\w+\s+){0,2}?(?:flot\w*|baz[aeiu]\b|posad\w*|skiper\w*|kapetan\w*|mehaničar\w*)",
+           r"\b(?:[Pp]osad\w*|skiper\w*|kapetan\w*|mehaničar\w*|flot\w*|baz[aeiu])\s+(?:tvrtke\s+)?Boat4You(?:a|e|u)?\b",
+           r"\bBoat4You\s+(?:zapošljava|raspolaže|posjeduje\s+(?:flotu|rezervn))",
+           r"\b[Nn]a(?:š|ša|še|ši|šu|šoj|šom)\s+(?:vlastit\w+\s+)?(?:flot\w*|baz[aeiu]\b)"],
+}
+OPERATOR_KEEP = (
+    r"(?i)network|services?\b|options?\b|recommendations|réseau|rete\b|red de|rede de|netwerk|sieć|sieci|mrež|service de"
+    r"|servizio|servicio|serviço|opzion|opción|opcion|opções|opçã|opcj|opcij|Netzwerk|Service|Option|Empfehlung|recomenda"
+    r"|raccomand|preporuk|rekomendac|aanbeveling|recommandation|consigli|base (?:pric|de client)|prix de base|precio base"
+    r"|prezzi base|preço base|base de clientes|baza klientów|clients|customer base|client base|Basispreis|partner fleet"
+    r"|partnervloot|partner vloot|partenaire|asociad|parceir|Partner|expertise|connaissance|experiencia|através|tramite"
+    r"|\bvia\b|przez|pośrednictwem|putem|preko|usług|podršk|suporte")
+
+
+
+
+# Review of 6.10.2026: the forms the first patterns missed. These are checked without OPERATOR_KEEP
+# (a "Partner" or "przez" elsewhere in the sentence does not excuse them); only the words inside the
+# match itself can ("… sur la page de recherche de Boat4You").
+_W8 = r"(?:[\w'’-]+\s+){0,8}?"
+FLEET_NOUN = {
+    'fr': r"flottes?", 'it': r"flott[ae]", 'es': r"flotas?", 'pt': r"frotas?", 'nl': r"vloot|vloten", 'de': r"Flotten?",
+}
+# "Les 6 catamarans de Saint-Mandrier de Boat4You", "flota de 3 motorsailers de Boat4You"
+COUNT_VESSEL = {
+    'fr': r"\d+\s+(?:[\w'’-]+\s+){0,2}?(?:catamarans|motorsailers|voiliers|yachts|vedettes|bateaux|navires|multicoques|monocoques|goélettes|unités)",
+    'it': r"\d+\s+(?:[\w'’-]+\s+){0,2}?(?:catamarani|motorsailer|velieri|yacht|motoscafi|barche|imbarcazioni|multiscafi|monoscafi|caicchi|unità)",
+    'es': r"\d+\s+(?:[\w'’-]+\s+){0,2}?(?:catamaranes|motoveleros|motorsailers|veleros|yates|lanchas|barcos|embarcaciones|multicascos|monocascos|goletas|unidades)",
+    'pt': r"\d+\s+(?:[\w'’-]+\s+){0,2}?(?:catamarãs|motorsailers|veleiros|iates|lanchas|barcos|embarcações|multicascos|monocascos|goletas|unidades)",
+    'nl': r"\d+\s+(?:[\w'’-]+\s+){0,2}?(?:catamarans|motorsailers|zeiljachten|jachten|motorboten|boten|schepen|vaartuigen|meerrompers)",
+    'de': r"\d+\s+(?:[\w'’-]+\s+){0,2}?(?:Katamarane|Motorsegler|Segelyachten|Yachten|Motorboote|Boote|Schiffe|Mehrrumpfboote)",
+}
+FLEET_OF = {'fr': r"de", 'it': r"di|della", 'es': r"de", 'pt': r"da|de", 'nl': r"van", 'de': r"von"}
+# words that make "… de Boat4You" the platform, its search page, its team, prices or its partners
+FLEET_OF_KEEP = (r"(?i)plateforme|site|recherche|page|catalogue|\bsélection\b|offre|réseau|partenaire|équipe|service|client"
+                 r"|piattaforma|sito|ricerca|pagina|catalogo|\bselezione\b|offerta|rete|partner|team|plataforma|sitio"
+                 r"|búsqueda|página|catálogo|\bselección\b|oferta|\bred\b|socios|equipo|pesquisa|\bseleção\b|\brede\b|parceiros|equipa"
+                 r"|platform|website|zoek|selectie|aanbod|netwerk|Plattform|Suche|Seite|Auswahl|Angebot|Kunden"
+                 r"|tarif|prezz|precio|preço|prijs|Preis|inventa|gamma|gamme|gama|disponib|beschikbaar|Verfügbar"
+                 r"|réserv|prenot|reserv|boek|Buchung|liste|elenco|lista|lijst|Liste|través|através|tramite|intermédiaire"
+                 r"|mediante|disponibles? (?:sur|en)|disponibili su|disponíve(?:l|is) na|beschikbaar op|verfügbar auf"
+                 r"|asociad|associé|associat|parceir|base de (?:datos|dados)|database|banca dati|databank|Datenbank|buscable"
+                 r"|consultabile|pesquisável|durchsuchbar|doorzoekbaar|searchable|recherchable")
+_PL_NOT_AFTER = r"(?<!przez )(?<!z )(?<!ze )(?<!na )(?<!w )(?<!od )(?<!do )(?<!dla )"
+_PL_VERB = (r"oferuje|organizuje|pomaga|zapewnia|współpracuje|ułatwia|poleca|rekomenduje|łączy|umożliwia|może|dopasowuje"
+            r"|wybiera|koordynuje|sprawdza|weryfikuje|przygotowuje|udostępnia|prezentuje|pozwala")
+_HR_VERB = (r"nudi|organizira|pomaže|osigurava|surađuje|preporučuje|povezuje|omogućuje|može|odabire|koordinira|provjerava"
+            r"|priprema|pruža|predstavlja")
+STRICT_KEEP = r"(?i)partner|parceir|socios\b|partenaire"
+_EN_DO = (r"conducts|provides|supplies|offers|gives|delivers|insists on|includes|handles|manages|managing|handling"
+          r"|conducting|providing|offering|delivering|deliver|provide|offer|conduct|handle|manage")
+OPERATOR_DENY_STRICT = {
+    'en': [r"\bemployed by (?:Boat4You|possess|have)\b",
+           r"\bBoat4You\s+manages the full\b[^.]{0,40}\bexperience\b",
+           r"\bBoat4You\s+(?:operates|maintains|runs) (?:its|a|the|their) (?:\w+ ){0,2}?(?:fleet|boats|vessels|yachts|bases?)\b",
+           r"\bBoat4You\s+(?:stocks|has|owns) \d+\s+(?:\w+\s+)?(?:boats|yachts|catamarans|vessels|multihulls|motorsailers|gulets)\b",
+           r"(?:^|[.!?]\s)(?:Stocks|Maintains|Manages|Operates|Owns)\s+(?:\d|its\b|the\b)",
+           r"\bBoat4You(?:['’]s)?\s+(?:[\w-]+\s+){0,4}?(?:" + _EN_DO + r")\b[^.;]*\b(?:pre-departure|pre-charter|navigation) briefings?\b",
+           r"\bBoat4You['’]s (?:pre-departure|pre-charter) briefings?\b",
+           r"\b[Oo]ur (?:own )?(?:vessels|boats|yachts|catamarans|motorsailers|gulets|motorboats|sailboats)\b",
+           r"\b(?:maintained|serviced|crewed|staffed) by Boat4You\b",
+           r"\bBoat4You['’]s\s+(?:\w+\s+){0,2}?(?:vessels|boats|yachts|catamarans|motorsailers)\b(?!\s+(?:page|search|listings?))"],
+    'de': [r"\b(?:von|bei) Boat4You (?:\w+ ){0,2}(?:angestellt|beschäftigt|gewartet|betrieben)\b",
+           r"\bBoat4You\s?-(?:Katamaran|Yacht|Segelyacht|Motoryacht|Flotte|Boot|Schiff|Motorsegler|Crew)\w*",
+           r"\b[Uu]nsere (?:eigenen )?(?:Schiffe|Boote|Yachten|Katamarane|Segelyachten|Motoryachten|Motorsegler)\b",
+           r"\bBoat4You\b[^.]{0,40}\bverfügt\b[^.]{0,30}\büber \d+ (?:\w+ )?(?:Katamaran|Yacht|Boot|Schiff|Motorsegler|Mehrrumpf)",
+           r"\bverfügt Boat4You\b[^.]{0,40}über \d+",
+           r"\bBoat4You verwaltet das gesamte\b[^.]{0,30}(?:Erlebnis|Charter)"],
+    'fr': [r"\bemployés par Boat4You\b", r"\b(?:entretenu|maintenu)e?s? (?:\w+ ){0,2}(?:par|de) Boat4You\b",
+           r"\b[Nn]os (?:propres )?(?:navires|bateaux|catamarans|voiliers|yachts|motorsailers|vedettes|goélettes)\b",
+           r"\bBoat4You (?:possède (?:sa |ses |une |la )?(?:propre )?flotte|possède \d|dispose de \d|a \d+ (?:bateaux|catamarans|yachts|voiliers|vedettes)"
+           r"|exploite (?:sa|ses|une|des|la|les) (?:\w+ )?(?:flotte|bateaux|bases?|navires))",
+           r"\bBoat4You gère (?:l['’]ensemble de l['’]|toute l['’])expérience"],
+    'it': [r"\bimpiegati da Boat4You\b", r"\bmantenut[aeio] (?:\w+ ){0,2}da Boat4You\b",
+           r"\bflott[ae]\b[^.]{0,60}\bgestit[aeio] da Boat4You\b",
+           r"\b(?:[Ii] )?nostri (?:catamarani|yacht|velieri|motorsailer|motoscafi)\b|\b(?:[Ll]e )?nostre (?:imbarcazioni|barche|unità)\b",
+           r"\bBoat4You (?:dispone di \d|possiede (?:la |una )?(?:propria )?flotta|possiede \d|gestisce l['’]intera esperienza)"],
+    'es': [r"\bempleados por Boat4You\b", r"\bmantenid[ao]s? (?:\w+ ){0,2}por Boat4You\b",
+           r"\bflotas?\b[^.]{0,60}\bgestionad[ao]s? por Boat4You\b",
+           r"\b[Nn]uestros (?:barcos|catamaranes|yates|veleros|motoveleros|motorsailers)\b"
+           r"|\b[Nn]uestras (?:embarcaciones|lanchas|goletas|unidades)\b",
+           r"\bBoat4You (?:tiene \d|posee (?:su |una |la )?(?:propia )?flota|posee \d|dispone de \d|gestiona toda la experiencia)",
+           r"\b(?:goletas|barcos|yates|catamaranes|embarcaciones|veleros) asociad[ao]s de Boat4You\b"],
+    'pt': [r"\bempregados pela Boat4You\b", r"\bmantid[ao]s? (?:\w+ ){0,2}pela Boat4You\b",
+           r"\bfrotas?\b[^.]{0,60}\bgerid[ao]s? pela Boat4You\b",
+           r"\b(?:[Oo]s )?nossos (?:barcos|catamarãs|iates|veleiros|motorsailers)\b|\b(?:[Aa]s )?nossas (?:embarcações|lanchas|goletas|unidades)\b",
+           r"\bBoat4You (?:tem \d|possui \d|dispõe de \d|gere toda a experiência)"],
+    'nl': [r"\b(?:door|bij) Boat4You (?:\w+ ){0,2}(?:ingezet|in dienst|onderhouden)\b|\bingezet door Boat4You\b",
+           r"\bBoat4You\s?-(?:vloot|catamaran|jacht|zeiljacht|motorjacht|motorsailer|bemanning)\w*",
+           r"\b[Oo]nze (?:eigen )?(?:schepen|boten|catamarans|jachten|zeiljachten|motorjachten|motorsailers|vaartuigen)\b",
+           r"\bBoat4You heeft\b[^.]{0,30}?\b\d+ (?:\w+ )?(?:multihulls|catamarans|jachten|boten|schepen|motorsailers|zeiljachten"
+           r"|motorjachten|vaartuigen|meerrompers)"
+           r"|\bheeft Boat4You \d+\b|\bBoat4You beheert de (?:volledige|gehele|hele) charterervaring"],
+    'pl': [r"\bzatrudni\w* przez Boat4You\b", r"\butrzymywan\w* (?:\w+ ){0,2}przez Boat4You\b",
+           r"\b[Nn]asze (?:jachty|łodzie|katamarany|jednostki|motorsailery|motorówki)\b|\b[Nn]aszych (?:jachtów|łodzi|katamaranów|jednostek)\b",
+           r"\bBoat4You (?:posiada \d|ma \d+ (?:\w+ )?(?:jacht|katamaran|łodzi|jednost|motor)|zarządza całym doświadczeniem)",
+           r"\bflot\w*\s+(?:[\w-]+\s+){0,3}?" + _PL_NOT_AFTER + r"Boat4You\b(?!\s+(?:" + _PL_VERB + r"))"],
+    'hr': [r"\bzaposlen\w* (?:u|kod|od strane) Boat4You\b", r"\bodržavan\w* (?:\w+ ){0,2}od strane Boat4You\b",
+           r"\b[Nn]aš(?:a|e|i|ih) (?:plovila|brodovi|brodove|jahte|katamarani|katamarane|jedrilice|motorne jedrilice)\b",
+           r"\bBoat4You (?:posjeduje \d|ima \d+ (?:\w+ )?(?:jaht|katamaran|brod|plovil)|raspolaže s \d|upravlja (?:cjelokupnim|cijelim) (?:doživljajem|iskustvom))",
+           r"\bflot\w*\s+(?:[\w-]+\s+){0,3}?(?<!preko )(?<!putem )(?<!s )(?<!sa )"
+           r"(?<!na )(?<!u )(?<!kod )Boat4You\b(?!\s+(?:" + _HR_VERB + r"))"],
+}
+
+
+# "Les motorsailers de Boat4You", "De motorsailers van Boat4You": boats of Boat4You
+DIRECT_VESSEL_OF = {
+    'fr': r"\b(?:[Ll]es|[Dd]es|[Ss]es) (?:catamarans|motorsailers|voiliers|yachts|vedettes|bateaux|navires|goélettes|gulets) de Boat4You\b",
+    'it': r"\b(?:[Ii]|[Gg]li|[Ll]e|[Dd]ei|[Dd]egli|[Dd]elle) (?:catamarani|motorsailer|velieri|yacht|motoscafi|barche|imbarcazioni|caicchi|gulet) di Boat4You\b",
+    'es': r"\b(?:[Ll]os|[Ll]as) (?:catamaranes|motosailers|motorsailers|veleros|yates|lanchas(?: motoras)?|barcos|embarcaciones|goletas) de Boat4You\b",
+    'pt': r"\b(?:[Oo]s|[Aa]s) (?:catamarãs|motorsailers|veleiros|iates|lanchas|barcos|embarcações|goletas|gulets) da Boat4You\b",
+    'nl': r"\b[Dd]e (?:catamarans|motorsailers|zeiljachten|motorjachten|jachten|boten|motorboten|schepen|vaartuigen|gulets) van Boat4You\b",
+    'de': r"\b(?:[Dd]ie|[Dd]er) (?:Katamarane|Motorsegler|Segelyachten|Yachten|Motorboote|Boote|Schiffe|Gulets) von Boat4You\b",
+}
+
+
+def operator_claims(sentences, locale):
+    rxs = [re.compile(p) for p in OPERATOR_DENY[locale]]
+    strict = [re.compile(p) for p in OPERATOR_DENY_STRICT[locale]]
+    fleet_of = (re.compile(r"\b(?:%s|%s)\s+%s(?:%s)\s+Boat4You\b"
+                           % (FLEET_NOUN[locale], COUNT_VESSEL[locale], _W8, FLEET_OF[locale]))
+                if locale in FLEET_NOUN else None)
+    out = []
+    for s in sentences:
+        hit = False
+        for rx in rxs:
+            m = rx.search(s)
+            if m and not re.search(OPERATOR_KEEP, s[max(0, m.start() - 60):m.end() + 40]):
+                hit = True
+                break
+        hit = hit or any(not re.search(STRICT_KEEP, m.group(0)) for rx in strict for m in rx.finditer(s))
+        if not hit and fleet_of:
+            hit = any(not re.search(FLEET_OF_KEEP, m.group(0)) for m in fleet_of.finditer(s))
+        if not hit and locale in DIRECT_VESSEL_OF:
+            hit = bool(re.search(DIRECT_VESSEL_OF[locale], s))
+        if hit:
+            out.append(s)
+    return out
+
+
+# EN and translations: "Boat4You" cut from the sentence ("Stocks 14 multihulls", "Learn how manages",
+# "employed by possess", "Das Team von kümmert sich", "Il team di gestisce", "A equipa da trata").
+BRAND_HOLE = {
+    'en': [r"(?:^|[.!?]\s)(?:Stocks|Maintains|Manages|Operates|Curates|Employs|Offers)\s+(?:\d|its\b|the\b|a\b|an\b)",
+           r"\bhow (?:manages|maintains|curates|selects|operates|supports|handles|works with|vets|chooses|coordinates|arranges)\b",
+           r"\b(?:employed|deployed|operated|managed) by (?:possess|have|bring|incorporate|offer|feature|use)\b"],
+    'de': [r"\b(?:von|bei|mit|durch) (?:kümmert|bietet|hilft|sorgt|unterstützt|arrangiert|organisiert|koordiniert|verwaltet|managt)\b",
+           r"\b(?:Engagement|Hingabe|Einsatz|Team|Partnerschaft|Concierge|Expertise) von (?:für|kümmert|sorgt|bietet)\b",
+           r"\bkennt jeden einzelnen\b", r"\bwie regionale Charteroperationen\b"],
+    'fr': [r"\b(?:de|par|avec) (?:s['’]occupe|gère|propose|aide|organise|coordonne|fournit)\b"],
+    'it': [r"\b(?:di|da|con) (?:si occupa|gestisce|offre|aiuta|organizza|coordina|fornisce)\b"],
+    'es': [r"\b(?:de|por|con) (?:se encarga|gestiona|ofrece|organiza|coordina|proporciona)\b"],
+    'pt': [r"\b(?:da|pela) (?:trata|gere|oferece|organiza|coordena|fornece)\b"],
+    'nl': [r"\b(?:van|door|met) (?:regelt|handelt|biedt|helpt|zorgt|organiseert|coördineert|beheert)\b",
+           r"^Onderhoudt "],
+    'pl': [r"^Zarządza całym\b"],
+    'hr': [r"^Inače, (?:organizira|nudi|osigurava)\b", r"(?:^|, )poznaje svako plovilo\b"],
+}
+
+
+def brand_holes(sentences, locale):
+    return [s for s in sentences if any(re.search(p, s) for p in BRAND_HOLE[locale])]
+
+
+# R32 — Croatian place names without diacritics in visible text (hrefs, did= and attributes are not text).
+# A hyphen-joined name in text ("Hvar-Korcula") counts too.
+HR_ASCII_NAME = re.compile(
+    r"(?<![\w/=%+.])(Sibenik(?:a|u|om)?|Kastel(?:a|ima)|Kastel(?= Gomilica)|Sukosan(?:a|u|om)?"
+    r"|Korcul(?:a|e|i|u|ę|om|ansk\w*)|Primosten(?:a|u|om)?|Palmizan(?:a|e|i|u|om)|Komizia|Komiz(?:a|e|i|u|y|om)"
+    r"|Bisev(?:o|a|u|om)|Losinj(?:a|u|em|om)?)(?!\w)")
+
+
+def ascii_croatian_names(body, name):
+    out = []
+    greek = 'mikrolimano' in name  # "Kastela" there is the Piraeus quarter, not Kaštela
+    for part in re.split(r'<[^>]*>', body):
+        text = html.unescape(part)
+        for m in HR_ASCII_NAME.finditer(text):
+            if not (greek and m.group(1).startswith('Kastel')):
+                out.append(text[max(0, m.start() - 40):m.end() + 40])
+    return out
+
+
+# R14 follow-up — the "fees are shown on each boat's page" sentence is stated once per page.
+FEE_SENTENCE = {
+    'en': r"shown on (?:each|the) boat['’]s page|shown on the page of each boat",
+    'de': r"auf der Seite (?:jedes|des) Bootes angegeben",
+    'fr': r"figur\w* sur la page (?:de chaque|du) bateau",
+    'it': r"indicat\w* nella pagina (?:di ogni|della) barca",
+    'es': r"figur\w* en la página (?:de cada|del) barco",
+    'pt': r"consta\w* da página (?:de cada|do) barco",
+    'nl': r"sta(?:at|an) op de pagina van (?:elke|de) boot",
+    'pl': r"podan\w* na stronie (?:każdej )?łodzi",
+    'hr': r"naveden\w* (?:je |su )?na stranici (?:svakog )?broda",
+}
+
+
+def fee_repeats(sentences, locale):
+    hits = [s for s in sentences if re.search(FEE_SENTENCE[locale], s)]
+    return hits[1:]
+
+
+def w610_checks(src, locale, name):
+    body = split_body(src)[1]
+    sentences = [plain(p) for m in R.BLOCK.finditer(body) for p in R.split_sentences(m.group(3))]
+    found = [('perday-crew-price', s) for s in perday_crew_prices(sentences, locale)]
+    found += [('operator-claim', s) for s in operator_claims(sentences, locale)]
+    found += [('brand-hole', s) for s in brand_holes(sentences, locale)]
+    found += [('fee-repeat', s) for s in fee_repeats(sentences, locale)]
+    found += [('ascii-hr-name', x) for x in ascii_croatian_names(body, name)]
+    return found
+
+
+# --self-test: every sentence the review of 6.10.2026 quoted (found on origin/main or on the branch
+# before the fix) must be reported, every allowed sentence must pass.
+W610_SELF_TEST = {
+    'perday-crew-price': (perday_crew_prices, [
+        ('en', "Skippered charters add €300-500 daily."),
+        ('en', "If you don't hold one, hiring a professional skipper is straightforward — pricing runs roughly 150–220 euro per day plus meals."),
+        ('pl', "Skipper kosztuje zwykle 180–250 € dziennie."),
+        ('pl', "Czartery ze skipperem dodają 300-500 EUR dziennie za profesjonalną załogę."),
+        ('de', "Ein Skipper kostet in der Regel 150 bis 200 Euro pro Tag plus Verpflegung."),
+        ('de', "Crews kosten zusätzlich 400–700 € pro Tag."),
+        ('nl', "Gecharterde bemanningen kosten € 400–€ 700 extra per dag."),
+        ('hr', "Skiperi dodaju 80 € do 150 € dnevnom trošku ako je za Vaše plovilo potrebna dozvola, a nitko u Vašoj skupini je nema."),
+        ('en', "Skipper hire (if you lack a boat license or prefer professional guidance) runs €120–€180 per day."),
+        ('hr', "Naknada za profesionalnog skipera dodatni je dnevni trošak, obično u rasponu od 170 do 250 eura, plus troškovi prehrane."),
+        ('de', "Die täglichen Raten für Skipper liegen je nach Qualifikation und Saison zwischen 150 und 250 €."),
+        ('de', "Professionelle Anglercrews können arrangiert werden (zusätzlich 200-400 €/Tag); die Adria bietet ganzjährig Zahnbrassen."),
+        ('pl', "Boat4You może zorganizować przygotowanie do licencji lub wynająć licencjonowanego skippera (150-250 EUR/dzień)."),
+        ('fr', "Le capitaine lit les régimes de vent – des services qui valent la prime de 400-600 € par jour dans des scénarios de grande valeur."),
+        ('pt', "O capitão lê os padrões de vento — serviços que valem o prémio diário de €400-600 em cenários de alto valor."),
+        ('fr', "Les coûts de coordination d'équipage (embauche d'équipage local) s'élèvent à 100–200 € par membre d'équipage par jour."),
+        ('en', "Captained day charters add approximately EUR 150-250 depending on vessel size and itinerary complexity."),
+        ('en', "Many charter companies recommend hiring a skipper for the first day—an investment (€100–€150) yielding invaluable confidence and local knowledge."),
+        ('en', "Upgrades commonly chosen include provisioning (marina staff stock your galley before arrival, typically 25-40 euro per person daily) and a one-day skippered introduction (helpful for first-time bareboat charterers, usually 250-350 euro)."),
+        ('de', "Professionelle Kapitäne (150–250 € Tagesmiete) übernehmen die alleinige Verantwortung für die Pelagische Navigation."),
+        ('it', "Servizi professionali di equipaggio opzionali (150-250 € al giorno) trasformano i charter di catamarani in esperienze di lusso."),
+        ('en', "First-time bareboat sailors can arrange on-site skipper training (typically one day, 300–500 EUR) to familiarize with the specific yacht."),
+        ('en', "Boat4You can arrange certified sailing instructors for one-day introductions (typically 250-350 euro) if you're keen to attempt bareboat."),
+        ('fr', "Les coûts supplémentaires comprennent les services optionnels d'équipage (150-250 € par jour), les frais d'amarrage/de marina (40-100 € par nuit)."),
+        ('nl', "Standaard vaartuigen zijn geschikt voor bemanningen; professionele schippers (€150–250 daghuur) beheren momenten met hoge verantwoordelijkheid."),
+        ('de', "Erstcharterer mieten oft einen professionellen Hauptskipper – 150–200 € pro Tag – als Lerninvestition."),
+    ], [
+        ('en', "Mid-range vessels (50–65 feet) run €250–500 per day bareboat, €600–1200 with crew."),
+        ('de', "Superyachten (65+ Fuß) beginnen bei 800 €+ pro Tag Bareboat, mit Crew-Optionen, die je nach spezifischem Schiff und Crew-Anforderungen 2000–5000 €+ pro Tag kosten."),
+        ('en', "Budget €15–20 per crew daily for full meals."),
+        ('en', "Many guests provide €10–15 per day per crew member."),
+        ('en', "Provisioning budgets scale from €30–€50 per person daily (casual self-catering) to €150+ per person (fine dining with private chef)."),
+        ('en', "Catamaran charters from Tourlos Marina range €400–900 per day for 40–55 foot vessels depending on season, cabin count, and crew composition."),
+        ('en', "Pricing ranges 1,500-4,000 EUR daily depending on vessel size, season, and crew requirements."),
+        ('en', "Motor yacht charters typically cost 250–500 EUR per day for a 10–12 guest vessel, including crew, fuel, and provisioning."),
+        ('en', "Provisioning is reasonable — a crew of four can eat well on 20–30 euros per day using market vendors and konobas."),
+        ('en', "Daily rates for a catamaran typically range from 800 to 2,500 euros per day, excluding extras like fuel, provisions, and skipper fees."),
+        ('en', "Crewed motor yacht charters: 50-foot all-inclusive vessels start €5,000–€8,000 daily; larger superyachts exceed €15,000 daily (captain, chef, crew, meals, beverages included)."),
+        ('en', "All-In Day Cost: Skippered motorboat charter (€800–€1,200/day) + fuel (€200–€400/day) = €1,000–€1,600 daily."),
+        ('en', "Crew gratuities (€10-15 per person daily, approximately €70-105 weekly) remain customary though sometimes included within quoted rates."),
+        ('en', "Sport-fishing charters command premium rates (€800–€1,500 daily) due to specialized equipment and skipper expertise."),
+        ('en', "Crewed cons: Higher daily cost (€2,500–€7,000/week vs. €1,200–€2,500 bareboat)."),
+        ('de', "Mittelklasse-Schiffe (50–65 Fuß) kosten 250–500 € pro Tag Bareboat, 600–1200 € mit Crew."),
+        ('de', "Planen Sie 100-150 Euro pro Tag für eine vierköpfige Crew für Lebensmittel ein."),
+        ('hr', "Za jednodnevni najam, motorne jahte bez skipera mogu se kretati od 4.000 do 15.000 €+, dok luksuzna jahta sa skiperom ili punom posadom lako može premašiti 20.000 € tjedno."),
+        ('en', "Skipper fees are shown on each boat's page."),
+        ('en', "For captained day charters, the skipper fee is shown on each boat's page."),
+    ]),
+    'operator-claim': (operator_claims, [
+        ('en', "Boat4You manages the full charter experience: vessel selection, pre-departure briefings, weather routing advice, and 24/7 support throughout your Abaco voyage."),
+        ('de', "Boat4You verwaltet das gesamte Chartererlebnis: Auswahl des Schiffes, Einweisungen vor dem Start."),
+        ('fr', "La flotte de catamarans BVI de Boat4You comprend des navires méticuleusement entretenus des principaux fabricants."),
+        ('fr', "Les navires méticuleusement entretenus de Boat4You, le soutien d'équipage expert et une connaissance régionale approfondie."),
+        ('pt', "As embarcações cuidadosamente mantidas pela Boat4You, o apoio de tripulação especializada e o profundo conhecimento regional."),
+        ('de', "Unsere Schiffe verwenden moderne Motoren mit geringeren Emissionen."),
+        ('de', "Die Boat4You -Katamaranen ab Marina Kos werden sorgfältig gewartet, mit den neuesten Navigationssystemen."),
+        ('fr', "La flotte soigneusement sélectionnée de 3 motorsailers de Boat4You combine l'expérience authentique de la voile."),
+        ('fr', "Contrairement aux flottes massives de location sans skipper, nos motorsailers reçoivent des soins individuels."),
+        ('nl', "In tegenstelling tot enorme bareboat vloten krijgen onze motorsailers individuele zorg."),
+        ('nl', "De motorsailers van Boat4You balanceren klassieke houten interieurcharme met hedendaags comfort."),
+        ('nl', "De vloot van 5 motorsailers van Boat4You ligt aangemeerd in de haven van Split."),
+        ('nl', "Boat4You-vlootcatamarans zijn uitgerust met moderne navigatie."),
+        ('nl', "Moderne luxe motorjachten ingezet door Boat4You maken gebruik van technologie."),
+        ('it', "Boat4You dispone di 3 motoscafi a Marina Medulin, ciascuno posizionato per una partenza immediata."),
+        ('pl', "Dlatego Boat4You posiada 14 wielokadłubowców w Ajaccio."),
+        ('de', "Aus diesem Grund verfügt Boat4You in Ajaccio über 14 Mehrrumpfboote."),
+        ('es', "Boat4You tiene 14 multicascos en Ajaccio por esta razón."),
+        ('pt', "A Boat4You tem 14 multicascos em Ajaccio por esta razão."),
+        ('nl', "Boat4You heeft om deze reden 14 multihulls in Ajaccio op voorraad."),
+        ('fr', "Les capitaines et membres d'équipage professionnels employés par Boat4You possèdent une passion authentique."),
+        ('de', "Professionelle Kapitäne und Besatzungsmitglieder, die von Boat4You angestellt werden, haben eine echte Leidenschaft."),
+        ('it', "Gli skipper e i membri dell'equipaggio professionisti impiegati da Boat4You possiedono una genuina passione."),
+        ('es', "Los capitanes y tripulantes profesionales empleados por Boat4You poseen una pasión genuina."),
+        ('pt', "Os capitães e membros da tripulação profissionais empregados pela Boat4You possuem uma paixão genuína."),
+        ('nl', "Professionele kapiteins en bemanningsleden die door Boat4You worden ingezet, hebben een oprechte passie."),
+        ('pl', "Profesjonalni kapitanowie i członkowie załogi zatrudnieni przez Boat4You posiadają prawdziwą pasję."),
+        ('es', "Las goletas asociadas de Boat4You emplean chefs formados en academias culinarias italianas."),
+        ('en', "Professional captains and crew members employed by possess genuine passion for Mediterranean sailing."),
+        ('en', "Boat4You conducts pre-departure briefings covering engine start/stop, navigation systems, and safety protocols."),
+        ('en', "Boat4You provides detailed navigation briefings covering Krka River conditions, depth profiles, and transitions to open water."),
+        ('pl', "Załogi Boat4You znają najlepsze kotwicowiska do robienia zdjęć."),
+        ('hr', "Posade Boat4Youa dobivaju upute o granicama rezervata i održivim praksama."),
+    ], [
+        ('en', "Boat4You helps you choose the right boat and supports you 24/7 throughout your Abaco voyage; the operator's base team gives the pre-departure briefing."),
+        ('fr', "La flotte de catamarans BVI de nos partenaires comprend des navires méticuleusement entretenus."),
+        ('es', "Ya sea que esté alquilando un yate de vela a través de Boat4You o planeando un circuito más largo."),
+        ('es', "Consulte nuestra oferta completa en la base de datos de flotas buscable de Boat4You."),
+        ('pt', "A frota parceira da Boat4You enfatiza embarcações mais novas."),
+        ('en', "Boat4You maintains relationships with charter companies operating each manufacturer's models."),
+        ('en', "Boat4You coordinates pre-departure briefings covering local sailing conditions."),
+        ('en', "Boat4You's team handles marina coordination and 24/7 support; the base team gives the pre-departure briefing."),
+        ('fr', "Les goélettes partenaires de Boat4You emploient des chefs formés dans des académies culinaires italiennes."),
+        ('it', "Per questo motivo, 14 delle barche disponibili ad Ajaccio sono multiscafi."),
+        ('nl', "Boat4You heeft 24/7 ondersteuning voor alle gasten."),
+    ]),
+    'brand-hole': (brand_holes, [
+        ('en', "Stocks 14 multihulls in Ajaccio for this reason."),
+        ('en', "Learn how manages these destinations responsibly at Boat4You"),
+        ('en', "Discover how maintains and supports its fleet on our about page ."),
+        ('en', "Visit about us to learn how manages regional charter operations with excellence."),
+        ('en', "Learn how manages charter operations at Boat4You ."),
+        ('en', "Professional captains and crew members employed by possess genuine passion for Mediterranean sailing."),
+        ('en', "Modern luxury motor yachts deployed by incorporate technology specifically optimized for Eastern Mediterranean cruising."),
+        ('de', "Mit nur 3 Motoryachten kennt jeden einzelnen Schiff genau."),
+        ('de', "Erfahren Sie mehr über das Engagement von für Segel-Exzellenz."),
+        ('de', "Das Team von kümmert sich um Pre-Departure-Briefings, Routenplanung und Notfallunterstützung."),
+        ('fr', "L'équipe de gère les briefings avant le départ, la planification des itinéraires et le support d'urgence."),
+        ('it', "Il team di gestisce il resto: briefing pre-partenza, coordinamento della marina e supporto 24 ore su 24."),
+        ('pt', "A equipa da trata dos briefings pré-partida, planeamento de rotas e suporte de emergência."),
+        ('nl', "Het team van handelt briefings voor vertrek, routeplanning en noodondersteuning af."),
+        ('nl', "Onderhoudt uitgebreide ondersteuningsnetwerken op Corsica en Sardinië."),
+        ('hr', "Samo 3 motorne jedrilice, poznaje svako plovilo izbliza."),
+        ('hr', "Inače, organizira profesionalne skipera."),
+    ], [
+        ('en', "Offers vary by season and boat size."),
+        ('de', "Die Lage von Marbella am Mittelmeer sorgt das ganze Jahr über für ausgezeichnetes Wetter."),
+        ('de', "Die Südküste Teneriffas umfasst mehrere Tauchplätze, die von für Anfänger geeigneten flachen Riffen bis zu Steilwänden reichen."),
+        ('hr', "Naš stručni tim poznaje svako plovilo, svakog kapetana i svako tajno sidrište."),
+        ('en', "Learn how Boat4You selects these destinations responsibly."),
+    ]),
+    'fee-repeat': (fee_repeats, [
+        ('en', ["Skipper fees are shown on each boat's page.", "Bareboat is cheaper.", "Skipper and crew fees are shown on each boat's page."]),
+        ('de', ["Die Skippergebühr ist auf der Seite jedes Bootes angegeben.", "Die Gebühren für Skipper und Crew sind auf der Seite jedes Bootes angegeben."]),
+    ], [
+        ('en', ["Skipper fees are shown on each boat's page.", "Crewed options are also available."]),
+    ]),
+}
+W610_SELF_TEST_ASCII = (['Route Zadar-Kornati-Hvar-Korcula-Vis-Skradin', 'Sail from Sibenik to Primosten'],
+                        ['<a href="/search?destinations=Korcula">Korčula</a>', 'Šibenik and Primošten'])
+
+
+def run_w610_self_test():
+    failed = []
+    for check, (func, positives, negatives) in W610_SELF_TEST.items():
+        for locale, case in positives:
+            sentences = case if isinstance(case, list) else [case]
+            if not func(sentences, locale):
+                failed.append(f'MISSED  {check} {locale}: {sentences[-1][:110]}')
+        for locale, case in negatives:
+            sentences = case if isinstance(case, list) else [case]
+            if func(sentences, locale):
+                failed.append(f'FLAGGED {check} {locale}: {sentences[-1][:110]}')
+    for text in W610_SELF_TEST_ASCII[0]:
+        if not ascii_croatian_names(f'<p>{text}</p>', 'x.html'):
+            failed.append(f'MISSED  ascii-hr-name: {text}')
+    for text in W610_SELF_TEST_ASCII[1]:
+        if ascii_croatian_names(f'<p>{text}</p>', 'x.html'):
+            failed.append(f'FLAGGED ascii-hr-name: {text}')
+    total = sum(len(p) + len(n) for _, p, n in W610_SELF_TEST.values()) + sum(map(len, W610_SELF_TEST_ASCII))
+    for line in failed:
+        print(line)
+    print(f'w610 self-test: {total - len(failed)}/{total} cases pass')
+    return not failed
+
+
 _WORKER = {}
 
 
@@ -1571,6 +2173,7 @@ def _process_file(job):
     en_src = text if locale == 'en' else _WORKER['en_text'].get(name)
     file_findings = [(check, f'{locale}/{name}', squash(excerpt))
                      for check, excerpt in R.checks(text, locale, name, en_src if locale != 'en' else None)]
+    file_findings += [(check, f'{locale}/{name}', squash(excerpt)) for check, excerpt in w610_checks(text, locale, name)]
     return file_log, file_findings, text != original, (text if locale == 'en' else None)
 
 
@@ -1583,9 +2186,13 @@ def main():
     ap.add_argument('--report', help='write every check finding as TSV (check, file, excerpt)')
     ap.add_argument('--jobs', type=int, default=min(4, os.cpu_count() or 1),
                     help='parallel worker processes (default 4)')
+    ap.add_argument('--self-test', action='store_true',
+                    help='run the w610 checks against the sentences of the review of 6.10.2026 and exit')
     ap.add_argument('--refresh-locations', action='store_true',
                     help='re-snapshot /public/locations into scripts/seo-corpus-locations.json first')
     args = ap.parse_args()
+    if args.self_test:
+        sys.exit(0 if run_w610_self_test() else 1)
 
     if args.refresh_locations:
         api = os.environ.get('NEXT_PUBLIC_BOAT_WS_API_URL', 'https://api.boat4you.com')
