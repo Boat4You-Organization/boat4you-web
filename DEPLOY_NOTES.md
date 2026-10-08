@@ -1,5 +1,25 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-10-08 — ⛵ Gulet je uvijek s posadom — ⏳ NIJE DEPLOYANO (grana `fix/gulet-always-crewed`)
+
+Mario 8.10.: „GULET JE UVIJEK SA POSADOM". Gulet se na webu nikad ne nudi bareboat ni samo sa skiperom; ostali tipovi plovila prate partnerove podatke. Cijene, kapacitet, oprema, tekstovi brokera i kurirani SEO tekstovi nisu dirani. Samo web, bez env promjena. Novi `src/utils/static/guletCrewed.ts` (`isGulet`, `isGuletOnly`, `offersBareboat`).
+
+- Stranica broda: FAQ „Trebam li dozvolu…" (i FAQPage JSON-LD) za gulet uvijek daje odgovor s posadom. Sylvia R (18886) je jedini od 219 guleta koji partner označava i BAREBOAT, pa je pisalo „za bareboat treba licenca…".
+- „Dobro je znati" (stranica broda i My bookings): na guletu nema retka „Potrebna licenca za plovidbu".
+- PDF broda: gulet je „Crewed · Gulet" / „crewed charter" (143 od 219 guleta nemaju broj posade i pisalo je „Bareboat · Gulet").
+- Pretraga: kad su odabrani samo guleti, nema filtra „Vrsta najma" (Bareboat / Mit Skipper). Prelazak na samo gulete briše već odabranu vrstu najma.
+- Charter facts na gulet landingu: napomena bez „skiper … plaća se posebno" (`charterFacts.noteGulet`, 9 jezika).
+- `yarn test:gulet` (35 testova).
+
+**Provjere (lokalno 8.10.):** `yarn test:*` svi prolaze, `npx tsc --noEmit` 0, `yarn lint` 0 grešaka. `next dev` :3991 na prod API (8 stranica, prije = live): Sylvia R en/de FAQ i JSON-LD „No licence is needed — Sylvia R comes with professional crew…" (prije „To take Sylvia R out bareboat…"), bez retka licence (i Elena hr). `/search?destinations=croatia&boatTypes=GULET` (en, de, Turska) bez „Rental type / Mietart", napomena bez skipera. Masterpiece i landing katamarana nepromijenjeni. U pregledniku: `…&charterType=CREWED` + klik na Gulet → URL bez `charterType`, filtar nestaje; dodan katamaran → filtar se vraća.
+
+**Nakon deploya:**
+
+1. `curl -s https://www.boat4you.com/boat/gulet-sylvia-r-18886 | grep -c 'out bareboat'` → 0.
+2. `curl -s 'https://www.boat4you.com/de/search?destinations=croatia&boatTypes=GULET' | grep -o 'Charterwoche; [^.]*'` → „Charterwoche; Extras und Kaution kommen hinzu".
+
+**Otvoreno (Mario):** kurirani gulet landing tekstovi (`public/seo-content/*/*gulet*.html`) i dalje imaju npr. „Can I add a skipper after booking bareboat?" (Fethiye, Göcek, Marmaris, Aegean) i „Bareboat and skippered options" (Marina Kaštela). Backend: Sylvia R ostaje BAREBOAT u podacima i pojavljuje se pod filtrom „Bareboat" na mješovitoj pretrazi. Postojeće, ne dirano: redak „Potrebna licenca za plovidbu" stoji i na drugim brodovima s posadom, PDF piše „Bareboat" za brod s posadom bez broja posade.
+
 ## 2026-10-08 — 🧹 Sitnice s live provjere 8.10. (2. krug): „ležajevi" u hr opisu, „Marina, Mjesto", alt tekstovi, 404 / greška, My bookings, kalendar — ✅ DEPLOYANO 8.10.2026 ~14:25 UTC (worktree `B4Y_REPO`, `fdcdc2e3d`, deployment id `fdcdc2e3d614-muzmewtk`)
 
 Izvor: `_seo-audit-2026-10-08/live-verify/` (X10, F2, F4, F6) i otvorene stavke 7.10. Sve je starije od izdanja 8.10. Tekstovi brokera, `/faq`, kapacitet i Product JSON-LD nisu dirani. Samo web, bez env promjena.
