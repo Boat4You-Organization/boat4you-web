@@ -123,7 +123,7 @@ const ReservationInfoSection = ({ reservationDetails, userCurrency }: Reservatio
         );
 
       case 4:
-        return <GoodToKnowTab />;
+        return <GoodToKnowTab vesselType={reservationDetails.vesselType} />;
 
       case 5:
         return <CancellationTab dateFrom={dateFrom} bookedAt={createdAt} />;

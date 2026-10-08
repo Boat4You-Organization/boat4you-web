@@ -2,9 +2,15 @@ import { Grid, Stack, Typography } from '@mui/material';
 import { useTranslations } from 'next-intl';
 
 import Bulp from '@/components/SvgIcons/Bulp';
+import { isGulet } from '@/utils/static/guletCrewed';
 import GoodToKnowItem from '@/views/Boat/BoatContentSection/GoodToKnowItem';
 
-const GoodToKnowTab = () => {
+interface GoodToKnowTabProps {
+  /** The booked boat's type: a gulet sails with its crew, no licence asked (guletCrewed.ts). */
+  vesselType?: string | null;
+}
+
+const GoodToKnowTab = ({ vesselType }: GoodToKnowTabProps) => {
   const t = useTranslations('common');
   const tYacht = useTranslations('yacht');
 
@@ -24,7 +30,9 @@ const GoodToKnowTab = () => {
       </Typography>
       <Grid container spacing={4}>
         <GoodToKnowItem title={t('paymentMethod')} value={tYacht('localCurrency')} />
-        <GoodToKnowItem title={t('sailingLicenceRequired')} value={tYacht('standardSailingLicence')} />
+        {!isGulet(vesselType) && (
+          <GoodToKnowItem title={t('sailingLicenceRequired')} value={tYacht('standardSailingLicence')} />
+        )}
         <GoodToKnowItem title={t('cancellationPolicy')} value={tYacht('cancellationPolicyDescription')} />
       </Grid>
     </Stack>
