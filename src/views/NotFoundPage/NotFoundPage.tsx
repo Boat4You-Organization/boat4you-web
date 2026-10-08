@@ -18,7 +18,8 @@ const NotFoundPage = () => {
         <Typography variant="body1" color={colors.black350} textAlign="center">
           {t('notFoundDescription')}
         </Typography>
-        <Link href="/" aria-label="Go Back Home" className={styles.link}>
+        {/* Named in the page's language: "Go Back Home" on every locale before (live check 8.10.2026, F2). */}
+        <Link href="/" aria-label={t('goBackHome')} className={styles.link}>
           <Button variant="contained" size="large" className={styles.button}>
             {t('goBackHome')}
           </Button>

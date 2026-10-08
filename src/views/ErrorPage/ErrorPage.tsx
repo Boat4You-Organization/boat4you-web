@@ -1,7 +1,7 @@
 import { Button, Container, Stack, Typography } from '@mui/material';
 import { useTranslations } from 'next-intl';
-import Link from 'next/link';
 
+import { Link } from '@/i18n/navigation';
 import colors from '@/styles/themes/colors';
 
 import styles from './ErrorPage.module.scss';
@@ -18,7 +18,9 @@ const ErrorPage = () => {
         <Typography variant="body1" color={colors.black350} textAlign="center">
           {t('errorDescription')}
         </Typography>
-        <Link href="/" aria-label="Go Back Home" className={styles.link}>
+        {/* The locale's home ("/de" on /de) named in its language: next/link's "/" */}
+        {/* and "Go Back Home" on every locale before (live check 8.10.2026, F2). */}
+        <Link href="/" aria-label={t('goBackHome')} className={styles.link}>
           <Button variant="contained" size="large" className={styles.button} sx={{ margin: 'auto' }}>
             {t('goBackHome')}
           </Button>
