@@ -16,6 +16,8 @@ import { useBoatEquipmentDescription } from '@/utils/hooks/useBoatEquipmentDescr
 import useCapacityFmt from '@/utils/hooks/useCapacityFmt';
 import useCapacityNotes from '@/utils/hooks/useCapacityNotes';
 import { accommodationProse } from '@/utils/static/capacityProse';
+import { displayBaseName } from '@/utils/static/croatianPlaceNames';
+import { toTitleCase } from '@/utils/static/toTitleCase';
 import { capacityFacts, capacityRows, fromYacht } from '@/utils/static/yachtCapacity';
 
 interface DetailsTabProps {
@@ -193,11 +195,11 @@ const DetailsTab = ({ reservationDetails }: DetailsTabProps) => {
         {t.rich(
           'yacht.descIntroShort' as never,
           {
-            name: reservationDetails.yachtName,
+            name: toTitleCase(reservationDetails.yachtName),
             vesselType: vesselTypeLabel,
             model: reservationDetails.modelName || 'none',
             year: reservationDetails.buildYear ? String(reservationDetails.buildYear) : 'none',
-            location: reservationDetails.locationFrom || 'none',
+            location: displayBaseName(reservationDetails.locationFrom) || 'none',
             b: bold,
           } as never
         )}
@@ -206,7 +208,7 @@ const DetailsTab = ({ reservationDetails }: DetailsTabProps) => {
             {' '}
             {t.rich(
               `yacht.${part.key}` as never,
-              { ...part.values, name: reservationDetails.yachtName, b: bold } as never
+              { ...part.values, name: toTitleCase(reservationDetails.yachtName), b: bold } as never
             )}
           </React.Fragment>
         ))}{' '}

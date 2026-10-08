@@ -5,6 +5,7 @@ import React from 'react';
 import { Box } from '@mui/material';
 
 import ModalRoot from '@/components/ModalRoot';
+import { displayBaseName } from '@/utils/static/croatianPlaceNames';
 
 interface BoatLocationModalProps {
   open: boolean;
@@ -18,13 +19,16 @@ const BoatLocationModal = ({ open, onClose, locationName }: BoatLocationModalPro
   // Boatscribe leak into Google Maps). Free, no API key required.
   // `t=k` opens the map in satellite view by default.
   const embedSrc = `https://maps.google.com/maps?q=${encodeURIComponent(locationName)}&t=k&output=embed`;
+  // The heading reads like the link that opened it ("D-Marin Dalmacija Marina,
+  // Sukošan"); the map still looks up the catalogue name.
+  const shownName = displayBaseName(locationName);
 
   return (
     <ModalRoot
       open={open}
       onOpen={onClose}
       onClose={onClose}
-      title={locationName}
+      title={shownName}
       hideCancelButton
       hideConfirmButton
       hideDivider
@@ -51,7 +55,7 @@ const BoatLocationModal = ({ open, onClose, locationName }: BoatLocationModalPro
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
           allowFullScreen
-          title={`Google Maps — ${locationName}`}
+          title={`Google Maps — ${shownName}`}
         />
       )}
     </ModalRoot>

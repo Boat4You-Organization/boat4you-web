@@ -11,6 +11,7 @@ import Information from '@/components/SvgIcons/Information';
 import YachtCard from '@/components/YachtCard';
 import { ReservationData } from '@/types/reservation.type';
 import DateTime from '@/utils/static/DateTime';
+import { displayBaseName } from '@/utils/static/croatianPlaceNames';
 import { generateGoogleMapsLink } from '@/utils/static/googleMapsUtils';
 import { getDataFromSessionStorage } from '@/utils/static/sessionStorageUtils';
 import CancellationCard from '@/views/Booking/CancellationCard';
@@ -82,7 +83,7 @@ const OverviewCard = ({ reservationData, isLastStep }: OverviewCardProps) => {
               {t('pickUpLocation')}
             </Typography>
             <Link href={googleMapsLink} target="_blank" className={styles.link}>
-              <Typography variant="body1">{pickUpLocationName}</Typography>
+              <Typography variant="body1">{displayBaseName(pickUpLocationName)}</Typography>
               <ExternalLink variant="secondary" />
             </Link>
           </Stack>
