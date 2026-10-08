@@ -14,6 +14,10 @@
 //    or "FILIPPOS I  Boat location…" (342 of 12,100 boats, 24.9.2026), which
 //    the boat page's quoted title rendered as "' Sunny'" / "'Barney '".
 //    Leading/trailing space is trimmed and inner runs collapse to one space.
+//  - Words joined by "&", "/" or "-" without spaces are each capitalised:
+//    "LADIES&GENTLEMEN" → "Ladies&Gentlemen" (it read "Ladies&gentlemen" on
+//    the cards, live check 8.10.2026), "SUN/SEA" → "Sun/Sea", "SEA-BREEZE" →
+//    "Sea-Breeze", "ALPHA-II" → "Alpha-II".
 // A real Roman numeral ("II", "IV", "XIX"), not merely a word spelt with the
 // letters M/D/C/L/X/V/I — "LILI" or "MIMI" must become "Lili" / "Mimi".
 const ROMAN_NUMERAL_RE = /^M{0,3}(?:CM|CD|D?C{0,3})(?:XC|XL|L?X{0,3})(?:IX|IV|V?I{0,3})$/;
@@ -27,6 +31,29 @@ const ELISION_RE = /^([A-Za-zÀ-ž])(['’])([A-Za-zÀ-ž].*)$/;
 // still reads "My Way".
 const SLASH_ABBREVIATION_RE = /^[A-Za-z]\/[A-Za-z]\.?$/;
 const VESSEL_PREFIXES = new Set(['MS', 'MY', 'SY', 'MSY', 'MV', 'SV']);
+// Joiners inside a word; the parts on either side are cased on their own.
+const WORD_JOINER_RE = /([&/-])/;
+
+// One word (or one part of a joined word): Roman numerals stay upper, a
+// single-letter elision keeps the next letter capitalised, the rest folds to
+// initial-cap + lower.
+const caseWord = (word: string): string => {
+  if (word.length === 0) return word;
+
+  const elision = ELISION_RE.exec(word);
+
+  if (elision) {
+    const [, initial, apostrophe, rest] = elision;
+
+    return `${initial.toUpperCase()}${apostrophe}${rest.charAt(0).toUpperCase()}${rest.slice(1).toLowerCase()}`;
+  }
+
+  const upper = word.toUpperCase();
+
+  if (ROMAN_NUMERAL_RE.test(upper) && upper.length >= 2) return upper;
+
+  return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+};
 
 export const toTitleCase = (value: string | null | undefined): string => {
   if (value == null) return '';
@@ -45,19 +72,10 @@ export const toTitleCase = (value: string | null | undefined): string => {
 
       if (index === 0 && parts.length > 1 && !allCaps && VESSEL_PREFIXES.has(part)) return part;
 
-      const elision = ELISION_RE.exec(part);
-
-      if (elision) {
-        const [, initial, apostrophe, rest] = elision;
-
-        return `${initial.toUpperCase()}${apostrophe}${rest.charAt(0).toUpperCase()}${rest.slice(1).toLowerCase()}`;
-      }
-
-      const upper = part.toUpperCase();
-
-      if (ROMAN_NUMERAL_RE.test(upper) && upper.length >= 2) return upper;
-
-      return part.charAt(0).toUpperCase() + part.slice(1).toLowerCase();
+      return part
+        .split(WORD_JOINER_RE)
+        .map(piece => (WORD_JOINER_RE.test(piece) ? piece : caseWord(piece)))
+        .join('');
     })
     .join('');
 };
