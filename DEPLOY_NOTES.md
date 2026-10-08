@@ -1,6 +1,6 @@
 # Boat4You (main) — Production Deploy Notes
 
-## 2026-10-08 — 🧹 Sitnice s live provjere 8.10. (4. krug): gulet po modelu, „gulet" u hr landingu, imena na /fleet — ⏳ NIJE DEPLOYANO (grana `fix/w810d-polish4`)
+## 2026-10-08 — 🧹 Sitnice s live provjere 8.10. (4. krug): gulet po modelu, „gulet" u hr landingu, imena na /fleet — ✅ DEPLOYANO 8.10.2026 ~20:05–20:30 UTC (main `e807c43e3`)
 
 Izvor: `_seo-audit-2026-10-08/live-verify-round3/` (G1, G6, B1). Tekstovi brokera, kapacitet, oprema i Product JSON-LD nisu dirani. Samo web, bez env promjena.
 
