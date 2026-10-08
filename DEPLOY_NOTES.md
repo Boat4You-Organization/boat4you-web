@@ -1,5 +1,19 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-10-08 — 🧹 Sitnice s live provjere 8.10. (4. krug): gulet po modelu, „gulet" u hr landingu, imena na /fleet — ⏳ NIJE DEPLOYANO (grana `fix/w810d-polish4`)
+
+Izvor: `_seo-audit-2026-10-08/live-verify-round3/` (G1, G6, B1). Tekstovi brokera, kapacitet, oprema i Product JSON-LD nisu dirani. Samo web, bez env promjena.
+
+**Commiti:**
+
+- `138db34a7` G1 (bitno): gulet je i brod kojem partnerov model sadrži riječ „gulet" (cijela riječ, nikad ime broda; „Guletta 20" nije gulet), ne samo tip GULET. Gallant 11771 (model „Gulet") i Ok Ay 47 („OK AY Gulet") partner vodi kao MOTOR_YACHT: više nemaju „Potrebna licenca za plovidbu" u „Dobro je znati" (stranica broda, kartica dostupnosti, moje rezervacije) ni opću FAQ grupu o dozvolama; FAQ odgovor o dozvoli je „s posadom", PDF piše „Crewed". Filtri pretrage i charter facts gledaju samo tip (`isGuletType`), jer model tamo nije poznat.
+- `156a204df` G6: `public/seo-content/hr/croatia-gulet-charter.html` piše „gulet / guleti / guleta / guletom / gulete" umjesto „GULET", „GULET-i", „GULET-a", „GULET-om" (31 mjesto u tekstu). Linkovi (`boatTypes=GULET`) i atributi nisu dirani, pa meta description u `<head>` (ne prikazuje se) i dalje ima „GULET".
+- `dfa3374ce` B1: `/fleet` ime broda prikazuje kao kartice (`toTitleCase`): „Ladies&Gentlemen", „Tom & Jerry", „Murdock" bez razmaka. Samo prikaz; brod bez imena više nema prazan `<span>`.
+
+**Provjere (lokalno 8.10.):** `yarn test:gulet` 69 (+15), `yarn test:polish` 78 (+11); novi testovi padaju na prethodnom kodu. Ostali `yarn test:*` prolaze, `npx tsc --noEmit` 0, `yarn lint` 0 grešaka (17 starih upozorenja), `seo-corpus-qa.py --check` 0 nalaza. `next dev` :3995 na prod API: Gallant i Ok Ay en/de bez retka o dozvoli, FAQ „Für Gallant brauchen Sie keinerlei seemännische Qualifikation"; kontrola Masterpiece zadržava redak; `/fleet` i `/hr/fleet` 0 od 299 imena velikim slovima, 0 s razmakom; hr gulet landing bez „GULET" u vidljivom tekstu.
+
+**Nakon deploya:** `curl -s https://www.boat4you.com/boat/gulet-gallant-11771 | grep -c 'Sailing licence required'` → 0 (isto `/de/…` „Segelschein erforderlich" i `/boat/custom-made-ok-ay-gulet-ok-ay-47`); `/fleet` bez „LADIES&amp;GENTLEMEN"; `/hr/search?destinations=croatia&boatTypes=GULET` bez „GULET-i".
+
 ## 2026-10-08 — 🧰 Oprema, dorada nakon pregleda: jedan chip filtera po kodu, b4y web odmah iza backenda — ✅ DEPLOYANO 8.10.2026 (backend 17:35 UTC, web 17:43–18:01 UTC) (main `781c041fb`)
 
 Adversarialni pregled web dijela popravka opreme (8.10.). Ide zajedno s unosom ispod (`1ba07e93f`) i, kao on, **tek nakon backenda** (V9_74 / V9_75 / R\_\_1_05 v2, `973a2cb`). Samo web, bez env promjena.
