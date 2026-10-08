@@ -13,14 +13,14 @@ import { toTitleCase, yachtLabel } from '@/utils/static/toTitleCase';
 import styles from './Models.module.scss';
 import ModelsBreadcrumb, { Crumb } from './ModelsBreadcrumb';
 import ModelsFaq, { ModelsFaqEntry } from './ModelsFaq';
-import { M_PER_FT, formatRange } from './modelsText';
+import { M_PER_FT, WhereBase, formatRange } from './modelsText';
 
 export interface WhereRow {
   countryCode: string;
   label: string;
   href: string | null;
   count: number;
-  bases: Array<{ name: string; count: number; href: string | null }>;
+  bases: WhereBase[];
 }
 
 interface ModelPageViewProps {

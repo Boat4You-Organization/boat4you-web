@@ -27,7 +27,7 @@ import { isModelSlug, manufacturerPath, yachtsIndexPath } from '@/utils/static/y
 import ModelPageView, { WhereRow } from '@/views/Models/ModelPageView';
 import { Crumb } from '@/views/Models/ModelsBreadcrumb';
 import { ModelsFaqEntry, modelsFaqSchema } from '@/views/Models/ModelsFaq';
-import { COUNTRY_LABEL_KEY, formatRange } from '@/views/Models/modelsText';
+import { COUNTRY_LABEL_KEY, formatRange, topBaseLabels, whereBases } from '@/views/Models/modelsText';
 
 /**
  * Model page, e.g. /yachts/lagoon/lagoon-42. Only the models modelCatalog.ts
@@ -143,14 +143,12 @@ const ModelPage = async ({ params }: ModelPageProps) => {
           (stats.vesselType && (await countryLandingPath(country.countryCode, locale, stats.vesselType))) ||
           (await countryLandingPath(country.countryCode, locale)),
         count: country.count,
-        bases: await Promise.all(
-          country.bases.slice(0, BASES_PER_COUNTRY).map(async base => ({
-            name: base.name,
-            count: base.count,
-            href:
-              (stats.vesselType && (await gatedLandingPath(base.did, base.name, locale, stats.vesselType))) ||
-              (await gatedLandingPath(base.did, base.name, locale)),
-          }))
+        bases: await whereBases(
+          country.bases,
+          BASES_PER_COUNTRY,
+          async base =>
+            (stats.vesselType && (await gatedLandingPath(base.did, base.name, locale, stats.vesselType))) ||
+            gatedLandingPath(base.did, base.name, locale)
         ),
       })
     ),
@@ -179,11 +177,7 @@ const ModelPage = async ({ params }: ModelPageProps) => {
   }
 
   if (where.length) {
-    const topBases = where
-      .flatMap(row => row.bases)
-      .sort((a, b) => b.count - a.count)
-      .slice(0, 3)
-      .map(base => `${base.name} (${num(base.count)})`);
+    const topBases = topBaseLabels(where, num);
 
     faq.push({
       question: t('model.faqWhereQ', { model: name }),
