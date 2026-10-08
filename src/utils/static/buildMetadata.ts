@@ -61,16 +61,21 @@ export const localizedUrl = (locale: LocaleType, path: string): string => {
   return `${meta.url}${prefix}${normalized}`;
 };
 
+/**
+ * hreflang alternates: each locale's URL is that locale's canonical
+ * (localizedUrl), so the home lists `https://…/de`, not `https://…/de/` —
+ * a URL that answers 308 to `/de` (live check 7.10.2026: the home page's 8
+ * non-EN alternates carried the slash).
+ */
 export const buildAlternateLanguages = (path: string, locales: readonly string[] = routing.locales) =>
   Object.fromEntries([
     ...routing.locales
       .filter(locale => locales.includes(locale))
-      .map(locale => [
-        locale,
-        locale === routing.defaultLocale ? `${meta.url}${path}` : `${meta.url}/${locale}${path}`,
-      ]),
+      .map(locale => [locale, localizedUrl(locale as LocaleType, path)]),
     // x-default is the default-locale URL — only while that one is listed.
-    ...(locales.includes(routing.defaultLocale) ? [['x-default', `${meta.url}${path}`]] : []),
+    ...(locales.includes(routing.defaultLocale)
+      ? [['x-default', localizedUrl(routing.defaultLocale as LocaleType, path)]]
+      : []),
   ]);
 
 export const buildMetadata = ({
