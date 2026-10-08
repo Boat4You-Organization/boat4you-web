@@ -23,6 +23,7 @@ import { useReservation } from '@/utils/hooks/useReservation';
 import useToggleState from '@/utils/hooks/useToggleState';
 import { useYachtAvailability } from '@/utils/hooks/useYachtAvailability';
 import DateTime from '@/utils/static/DateTime';
+import { displayBaseName } from '@/utils/static/croatianPlaceNames';
 import { formatPriceWithCurrency, isPositivePrice, unpricedExtraLabelKey } from '@/utils/static/formatPriceCurrency';
 import { resolveGate } from '@/utils/static/offerStatusGate';
 import { toTitleCase, yachtLabel } from '@/utils/static/toTitleCase';
@@ -307,7 +308,7 @@ const BoatCalendarForm = ({ yacht, variant }: BoatCalendarFormProps) => {
                     <Stack direction="row" alignItems="center" gap={0.75} mt={0.5}>
                       <FlagIcon countryCode={yacht.location.countryCode} />
                       <Typography variant="body2" color={colors.white}>
-                        {yacht.location.name}
+                        {displayBaseName(yacht.location.name)}
                       </Typography>
                     </Stack>
                   )}

@@ -44,3 +44,19 @@ const withCaseOf = (original: string, form: string): string => {
  */
 export const displayPlaceName = (name: string): string =>
   name.replace(TOKEN_PATTERN, token => withCaseOf(token, DIACRITIC_FORMS[token.toLowerCase()]));
+
+/**
+ * A boat's base for display. Partners deliver it as "Marina | Town" ("D-Marin
+ * Dalmacija Marina | Sukošan"), which the FAQ, the boat page and the cards
+ * printed as is; it reads "D-Marin Dalmacija Marina, Sukošan", the form the
+ * boat meta description already uses (live check 8.10.2026, F6), with the
+ * diacritics restored. Map look-ups and links keep the catalogue name.
+ */
+export const displayBaseName = (name: string | null | undefined): string =>
+  displayPlaceName(
+    (name ?? '')
+      .split('|')
+      .map(part => part.trim())
+      .filter(Boolean)
+      .join(', ')
+  );

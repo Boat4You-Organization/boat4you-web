@@ -8,6 +8,7 @@ import { useLocale, useTranslations } from 'next-intl';
 import colors from '@/styles/themes/colors';
 import { ReservationData } from '@/types/reservation.type';
 import DateTime from '@/utils/static/DateTime';
+import { displayBaseName } from '@/utils/static/croatianPlaceNames';
 
 import styles from './BookingSummaryCard.module.scss';
 
@@ -79,7 +80,7 @@ const BookingSummaryCard = ({ reservationData }: BookingSummaryCardProps) => {
               {t('pickUpAddress')}
             </Typography>
             <Typography variant="body1" fontWeight={700}>
-              {locationFrom.name}
+              {displayBaseName(locationFrom.name)}
             </Typography>
           </Stack>
         )}

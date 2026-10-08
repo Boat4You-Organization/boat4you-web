@@ -2,7 +2,7 @@ import { YachtSearchParams } from '@/config/form-models.config';
 import { PROMOTED_COUNTRY_CODES } from '@/config/promoted-countries.config';
 import { YachtModelShortInfo } from '@/models/yacht.model';
 import { fetchFleetChunk } from '@/services/yacht.service';
-import { displayPlaceName } from '@/utils/static/croatianPlaceNames';
+import { displayBaseName } from '@/utils/static/croatianPlaceNames';
 
 /**
  * Same 12-country scope the yacht sitemap uses — the directory must mirror
@@ -48,8 +48,8 @@ const toEntry = (yacht: YachtModelShortInfo): FleetEntry => ({
   slug: yacht.slug,
   name: yacht.name ?? '',
   modelName: yacht.modelName ?? '',
-  // Shown as the group heading of the directory — with its diacritics (R32).
-  base: displayPlaceName(yacht.location?.name ?? ''),
+  // Shown as the group heading of the directory: "Marina, Town" with its diacritics (R32, F6).
+  base: displayBaseName(yacht.location?.name),
   cabins: yacht.cabins,
   maxPersons: yacht.maxPersons,
   buildYear: yacht.buildYear,

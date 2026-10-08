@@ -5,6 +5,7 @@ import { Locale, i18n } from '@/i18nPdf';
 import { ReservationDetails, ReservationStatus } from '@/models/reservation.model';
 import { UserModel } from '@/models/user.model';
 import DateTime from '@/utils/static/DateTime';
+import { displayBaseName } from '@/utils/static/croatianPlaceNames';
 import { formatPrice } from '@/utils/static/formatNumber';
 import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
 import { toTitleCase, yachtLabel } from '@/utils/static/toTitleCase';
@@ -143,7 +144,7 @@ const ConfirmationPDF = ({ reservationDetails, user, locale }: ConfirmationPDFPr
           boatNameLabel: t.boatNameLabel,
           boatName: yachtLabel(modelName, toTitleCase(yachtName)),
           pickUpLabel: t.pickUp,
-          pickUp: locationFrom,
+          pickUp: displayBaseName(locationFrom),
           dateFromLabel: t.dateFromLabel,
           dateFrom,
           dateToLabel: t.dateToLabel,

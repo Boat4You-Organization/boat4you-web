@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
 import { YachtModelShortInfo } from '@/models/yacht.model';
 import { CatalogModel } from '@/utils/server/modelCatalog';
+import { displayBaseName } from '@/utils/static/croatianPlaceNames';
 import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
 import { getBoatImageBaseUrl } from '@/utils/static/imageUtils';
 import { ModelFleetStats, weeklyPriceEur } from '@/utils/static/modelFleetStats';
@@ -221,7 +222,9 @@ const ModelPageView = async ({
                   </div>
                   <div className={styles.cardBody}>
                     <h3 className={styles.cardTitle}>{title}</h3>
-                    {boat.location?.name && <span className={styles.cardMeta}>{boat.location.name}</span>}
+                    {boat.location?.name && (
+                      <span className={styles.cardMeta}>{displayBaseName(boat.location.name)}</span>
+                    )}
                     {meta && <span className={styles.cardMeta}>{meta}</span>}
                     {weekly != null && (
                       <span className={styles.cardPrice}>{t('model.fromPerWeek', { price: price(weekly) })}</span>

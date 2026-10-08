@@ -15,6 +15,7 @@ import colors from '@/styles/themes/colors';
 import { useBoatEquipmentDescription } from '@/utils/hooks/useBoatEquipmentDescription';
 import useCapacityFmt from '@/utils/hooks/useCapacityFmt';
 import { accommodationProse } from '@/utils/static/capacityProse';
+import { displayBaseName } from '@/utils/static/croatianPlaceNames';
 import { isBookedByInquiry } from '@/utils/static/inquiryOnlyBoat';
 import { toTitleCase } from '@/utils/static/toTitleCase';
 import { Capacity, capacityFacts, capacityRows, fromYacht } from '@/utils/static/yachtCapacity';
@@ -92,11 +93,9 @@ const DetailsTab = ({ yacht, capacity: resolvedCapacity }: DetailsTabProps) => {
       return null;
     }
   })();
-  const locationLabel = yacht.location?.name
-    ? countryName
-      ? `${yacht.location.name}, ${countryName}`
-      : yacht.location.name
-    : null;
+  // "D-Marin Dalmacija Marina, Sukošan", not the partner's "… | Sukošan" (F6).
+  const baseName = displayBaseName(yacht.location?.name);
+  const locationLabel = baseName ? (countryName ? `${baseName}, ${countryName}` : baseName) : null;
   // German capitalises nouns ("Katamaran mit 4 Kabinen"); every other
   // locale reads the type mid-sentence in lower case. Templates that open
   // with the type use the capitalised form.
@@ -332,7 +331,7 @@ const DetailsTab = ({ yacht, capacity: resolvedCapacity }: DetailsTabProps) => {
                 {t.rich(
                   (countryName ? `yacht.descRegionV${descVariant(4)}` : 'yacht.descSailingRegionNoCountry') as never,
                   {
-                    location: yacht.location.name,
+                    location: baseName,
                     country: countryName ?? '',
                     b: (chunks: React.ReactNode) => <strong>{chunks}</strong>,
                   } as never

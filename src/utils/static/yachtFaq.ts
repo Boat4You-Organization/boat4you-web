@@ -1,5 +1,6 @@
 import { CharterType, YachtModel } from '@/models/yacht.model';
 import { shownGuestBerths } from '@/utils/static/capacityProse';
+import { displayBaseName } from '@/utils/static/croatianPlaceNames';
 import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
 import { isBookedByInquiry, isInquiryOnlyBoat } from '@/utils/static/inquiryOnlyBoat';
 import { toTitleCase } from '@/utils/static/toTitleCase';
@@ -79,11 +80,13 @@ export const buildYachtFaq = (
       }
     })();
 
+    // "D-Marin Dalmacija Marina, Sukošan" as the meta description reads it,
+    // not the partner's "D-Marin Dalmacija Marina | Sukošan" (live check 8.10.2026, F6).
+    const location = displayBaseName(yacht.location.name);
+
     entries.push({
       question: t('faqBaseQ', { name }),
-      answer: country
-        ? t(`faqBaseA${v(7)}`, { name, location: yacht.location.name, country })
-        : t('faqBaseANoCountry', { name, location: yacht.location.name }),
+      answer: country ? t(`faqBaseA${v(7)}`, { name, location, country }) : t('faqBaseANoCountry', { name, location }),
     });
   }
 

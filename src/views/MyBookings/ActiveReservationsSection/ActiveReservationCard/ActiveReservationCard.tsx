@@ -18,6 +18,7 @@ import {
 import colors from '@/styles/themes/colors';
 import DateTime from '@/utils/static/DateTime';
 import { getCancellationDisplayState } from '@/utils/static/cancellationUtils';
+import { displayBaseName } from '@/utils/static/croatianPlaceNames';
 import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
 import { generateGoogleMapsLink } from '@/utils/static/googleMapsUtils';
 import { getBoatImageUrl } from '@/utils/static/imageUtils';
@@ -187,7 +188,7 @@ const ActiveReservationCard = ({ reservation }: ActiveReservationCardProps) => {
             </Typography>
             <Stack mt={0.5}>
               <Link href={generateGoogleMapsLink(locationFrom)} target="_blank" className={styles.link}>
-                <Typography variant="body1">{locationFrom}</Typography>
+                <Typography variant="body1">{displayBaseName(locationFrom)}</Typography>
                 <ExternalLink />
               </Link>
             </Stack>

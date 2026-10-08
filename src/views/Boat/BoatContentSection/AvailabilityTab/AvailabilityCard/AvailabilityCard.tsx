@@ -9,6 +9,7 @@ import { YachtOfferModel } from '@/models/yacht-offer.model';
 import { YachtModel } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
 import { presentAmenities } from '@/utils/static/amenities';
+import { displayBaseName } from '@/utils/static/croatianPlaceNames';
 import { formatPriceWithCurrency, isPositivePrice } from '@/utils/static/formatPriceCurrency';
 import { toTitleCase, yachtLabel } from '@/utils/static/toTitleCase';
 import { toggleBoatInquiryModalOpen } from '@/valtio/yacht/yacht.actions';
@@ -78,9 +79,9 @@ const AvailabilityCard = ({ yacht, offer }: AvailabilityCardProps) => {
               (Mario 20.7.2026, Salina 48 Shamane: 7x7 base matrix). */}
           {offer.locationFrom?.name && (
             <Typography component="span" display="block" variant="body2" color={colors.black600} fontWeight={500}>
-              {offer.locationFrom.name}
+              {displayBaseName(offer.locationFrom.name)}
               {offer.locationTo?.name && offer.locationTo.name !== offer.locationFrom.name
-                ? ` → ${offer.locationTo.name}`
+                ? ` → ${displayBaseName(offer.locationTo.name)}`
                 : ''}
             </Typography>
           )}

@@ -14,6 +14,7 @@ import colors from '@/styles/themes/colors';
 import useQueryParams from '@/utils/hooks/useQueryParams';
 import useToggleState from '@/utils/hooks/useToggleState';
 import DateTime from '@/utils/static/DateTime';
+import { displayBaseName } from '@/utils/static/croatianPlaceNames';
 import { isInquiryOnlyBoat } from '@/utils/static/inquiryOnlyBoat';
 import { isHardBlocked } from '@/utils/static/offerStatusGate';
 import { useYachtStore } from '@/valtio/yacht/yacht.store';
@@ -139,7 +140,7 @@ const AvailabilityTab = ({ yacht }: AvailabilityTabProps) => {
           <GoodToKnowItem title={tCommon('cancellationPolicy')} value={t('cancellationPolicyDescription')} />
           <GoodToKnowItem
             title={tCommon('pickUpLocation')}
-            value={yacht.location?.name ?? ''}
+            value={displayBaseName(yacht.location?.name)}
             onClick={yacht.location?.name ? toggleMap : undefined}
           />
           {yacht.location?.name && (

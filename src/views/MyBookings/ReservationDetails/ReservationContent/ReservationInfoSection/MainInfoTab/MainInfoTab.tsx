@@ -7,6 +7,7 @@ import ExternalLink from '@/components/SvgIcons/ExternalLink';
 import Information from '@/components/SvgIcons/Information';
 import colors from '@/styles/themes/colors';
 import DateTime from '@/utils/static/DateTime';
+import { displayBaseName } from '@/utils/static/croatianPlaceNames';
 import { generateGoogleMapsLink } from '@/utils/static/googleMapsUtils';
 
 import styles from './MainInfoTab.module.scss';
@@ -133,7 +134,7 @@ const MainInfoTab = ({
               </Typography>
               <Link href={generateGoogleMapsLink(locationFrom)} target="_blank" className={styles.link}>
                 <Typography variant="body1" fontWeight={700}>
-                  {locationFrom}
+                  {displayBaseName(locationFrom)}
                 </Typography>
                 <ExternalLink />
               </Link>
