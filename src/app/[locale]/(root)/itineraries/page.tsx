@@ -82,7 +82,7 @@ const ItinerariesPage = async ({ params }: ItinerariesPageParams) => {
     }))
   );
 
-  const breadcrumbLd = buildBreadcrumbJsonLd([
+  const breadcrumbLd = buildBreadcrumbJsonLd(locale as LocaleType, [
     { name: t('breadcrumb.home'), url: '/' },
     { name: t('breadcrumb.itinerary'), url: '/itineraries' },
   ]);

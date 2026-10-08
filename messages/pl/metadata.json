@@ -72,5 +72,36 @@
     "otherBases": "Pozostałe porty",
     "cabins": "{count, plural, one {# kabina} few {# kabiny} many {# kabin} other {# kabiny}}",
     "paginationLabel": "Strony katalogu floty"
+  },
+  "itineraryBreadcrumb": {
+    "area": "Akwen {areaOf}",
+    "areaOf": {
+      "split": "Splitu",
+      "dubrovnik": "Dubrovnika",
+      "sibenik": "Szybenika",
+      "istria": "Istrii",
+      "zadar": "Zadaru",
+      "cyclades": "Cyklad",
+      "ionian": "Wysp Jońskich",
+      "sporades": "Sporad",
+      "dodecanese": "Dodekanezu",
+      "bodrum": "Bodrum",
+      "gocek": "Gocek",
+      "catalonia": "Katalonii",
+      "ibiza": "Ibizy",
+      "mallorca": "Majorki",
+      "cote-azur": "Côte d'Azur",
+      "corsica": "Korsyki",
+      "atlantic-france": "Bretanii i Atlantyku",
+      "montenegro": "Czarnogóry",
+      "seychelles": "Seszeli",
+      "amalfi": "Amalfi",
+      "sardinia": "Sardynii",
+      "sicily": "Sycylii",
+      "bahamas": "Bahamów",
+      "bvi": "Brytyjskich Wysp Dziewiczych",
+      "grenada": "Grenady",
+      "martinique": "Martyniki"
+    }
   }
 }

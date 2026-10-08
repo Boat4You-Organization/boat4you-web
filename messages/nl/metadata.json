@@ -72,5 +72,8 @@
     "otherBases": "Overige thuishavens",
     "cabins": "{count, plural, one {# hut} other {# hutten}}",
     "paginationLabel": "Pagina's van het vlootoverzicht"
+  },
+  "itineraryBreadcrumb": {
+    "area": "Vaargebied {area}"
   }
 }

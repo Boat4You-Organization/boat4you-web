@@ -72,5 +72,8 @@
     "otherBases": "Weitere Basen",
     "cabins": "{count, plural, one {# Kabine} other {# Kabinen}}",
     "paginationLabel": "Seiten des Flottenverzeichnisses"
+  },
+  "itineraryBreadcrumb": {
+    "area": "Segelrevier {area}"
   }
 }

@@ -11,7 +11,11 @@ import { LocaleType } from '@/config/locales.config';
 import { itineraryNamespace, resolveAreaText } from '@/helper/itineraryI18n';
 import { itinerarySearchPath } from '@/utils/server/itineraryBoats';
 import { itineraryAreaName, itineraryCountryName } from '@/utils/server/itineraryPlaceNames';
-import { buildBreadcrumbJsonLd, buildTouristTripJsonLd } from '@/utils/static/buildItineraryJsonLd';
+import {
+  buildBreadcrumbJsonLd,
+  buildTouristTripJsonLd,
+  itineraryAreaCrumbName,
+} from '@/utils/static/buildItineraryJsonLd';
 import { buildMetadata } from '@/utils/static/buildMetadata';
 import { serializeJsonLd } from '@/utils/static/serializeJsonLd';
 import ItineraryArea from '@/views/Itineraries/ItineraryArea';
@@ -96,10 +100,12 @@ const ItineraryAreaPage = async ({ params }: ItineraryAreaPageParams) => {
     itineraryCountryName(locale, country ?? 'Europe'),
   ]);
 
-  const breadcrumbLd = buildBreadcrumbJsonLd([
+  // Server-only namespace: the area phrases stay out of the client payload.
+  const tCrumb = await getTranslations({ locale, namespace: 'metadata.itineraryBreadcrumb' });
+  const breadcrumbLd = buildBreadcrumbJsonLd(locale as LocaleType, [
     { name: t('breadcrumb.home'), url: '/' },
     { name: t('breadcrumb.itinerary'), url: '/itineraries' },
-    { name: `${areaLabel} ${t('breadcrumb.areaSuffix')}`, url: `/itineraries/${itinerary.id}` },
+    { name: itineraryAreaCrumbName(tCrumb, itinerary.id, areaLabel), url: `/itineraries/${itinerary.id}` },
   ]);
 
   // Aggregate all routes within this sailing area into TouristTrip
