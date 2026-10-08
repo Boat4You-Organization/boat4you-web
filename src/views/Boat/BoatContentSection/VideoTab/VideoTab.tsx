@@ -6,6 +6,7 @@ import { useTranslations } from 'next-intl';
 import Video from '@/components/SvgIcons/Video';
 import { YachtModel } from '@/models/yacht.model';
 import getYouTubeEmbedUrl from '@/utils/static/getYoutubeEmbedUrlUtils';
+import { yachtPhotoName } from '@/utils/static/yachtPhotoName';
 
 import styles from './VideoTab.module.scss';
 
@@ -20,9 +21,14 @@ interface VideoTabProps {
 // so the tab is hidden via tabs.config.
 const VideoTab = ({ yacht }: VideoTabProps) => {
   const t = useTranslations('yacht');
+  const tCommon = useTranslations('common');
   const videoUrl = yacht.customDetails?.videoUrl;
 
   if (!videoUrl) return null;
+
+  // Named like the gallery's photos ("Lagoon 42 Masterpiece — Vidéo"), not the
+  // raw partner name plus an English word ("IDILA  video").
+  const videoTitle = [yachtPhotoName(yacht), tCommon('video')].filter(Boolean).join(' — ');
 
   return (
     <Stack direction="column" spacing={3}>
@@ -42,7 +48,7 @@ const VideoTab = ({ yacht }: VideoTabProps) => {
         <CardMedia
           component="iframe"
           src={getYouTubeEmbedUrl(videoUrl)}
-          title={`${yacht.name} video`}
+          title={videoTitle}
           allowFullScreen
           className={styles.media}
           sandbox="allow-scripts allow-same-origin allow-presentation"
