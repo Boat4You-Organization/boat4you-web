@@ -10,9 +10,13 @@
  *   - "Good to know" (boat page, my bookings): no "Sailing licence required";
  *   - the boat PDF: "Crewed · Gulet", never "Bareboat · Gulet" (143 of the
  *     219 gulets carry no crew count);
+ *   - the boat page FAQ and My bookings: no general licence FAQ group
+ *     ("can I skipper the yacht myself?") for a gulet;
  *   - the search: no rental type (Bareboat / With skipper) when only gulets
- *     are searched; the charter facts of a gulet landing do not say the
- *     skipper is paid separately.
+ *     are searched — not as a filter, a chip, nor in the listing,
+ *     distribution or relax requests of an old link; the charter facts of a
+ *     gulet landing show no skipper tile and do not say the skipper is paid
+ *     separately.
  *
  *   yarn test:gulet
  */
@@ -32,6 +36,10 @@ import './tsLoader.mjs';
 // without an `exports` map; it is not rendered here (no `link` prop).
 registerHooks({
   resolve: (specifier, context, nextResolve) => {
+    // `server-only` throws outside a React server bundle; the server modules
+    // are imported for their pure helpers here.
+    if (specifier === 'server-only') return { url: 'data:text/javascript,export {};', shortCircuit: true };
+
     try {
       return nextResolve(specifier, context);
     } catch (error) {
@@ -47,7 +55,14 @@ registerHooks({
 const ROOT = fileURLToPath(new URL('../', import.meta.url));
 const readJson = path => JSON.parse(readFileSync(`${ROOT}${path}`, 'utf8'));
 
-const { isGulet, isGuletOnly, offersBareboat } = await import('@/utils/static/guletCrewed');
+const { boatTypesUpdate, isGulet, isGuletOnly, licenceFaqCategory, offersBareboat, withoutGuletRentalType } =
+  await import('@/utils/static/guletCrewed');
+const { getFAQByCategory } = await import('@/lib/page');
+const { reservationTabs, reservationTabsFor } = await import('@/config/tabs.config');
+const { yachtFetchParams } = await import('@/utils/server/searchLanding');
+const { factsFormat, factsTiles } = await import('@/views/Search/CharterFacts/factsContent');
+const { default: AppliedFilterChips } =
+  await import('@/views/Search/SearchView/FiltersSectionV2/atoms/AppliedFilterChips');
 const { buildYachtFaq, buildYachtFaqSchema } = await import('@/utils/static/yachtFaq');
 const { createFmt } = await import('@/utils/static/yachtCapacity');
 const { default: YachtPDF } = await import('@/components/YachtPDF/YachtPDF');
@@ -313,5 +328,186 @@ describe('search: gulet landings', () => {
       assert.ok(facts.note.length - facts.noteGulet.length <= 12, locale);
       assert.equal(facts.noteGulet.slice(0, 60), facts.note.slice(0, 60), locale);
     });
+  });
+});
+
+describe('the general licence FAQ: never under a gulet', () => {
+  // The seven locales whose faq.md names the group the boat page asks for.
+  const GROUP_LOCALES = ['en', 'de', 'fr', 'it', 'es', 'pt', 'hr'];
+  const SKIPPER_YOURSELF = {
+    en: 'can I skipper the yacht myself?',
+    de: 'kann ich die Yacht selbst steuern?',
+    hr: 'mogu sam upravljati jahtom?',
+  };
+
+  test('a gulet gets no licence group, in every locale; other boats keep theirs', () => {
+    LOCALES.forEach(locale => {
+      assert.equal(licenceFaqCategory(locale, 'GULET'), null, locale);
+      ['CATAMARAN', 'SAILING_YACHT', 'MOTOR_YACHT', null, undefined].forEach(type =>
+        assert.ok(licenceFaqCategory(locale, type), `${locale} ${type}`)
+      );
+    });
+  });
+
+  test('a catamaran still loads the licence group (the questions the gulet must not get)', async () => {
+    for (const locale of GROUP_LOCALES) {
+      const questions = await getFAQByCategory(locale, 'static', 'faq', licenceFaqCategory(locale, 'CATAMARAN'));
+
+      assert.ok(questions?.length >= 5, locale);
+
+      if (SKIPPER_YOURSELF[locale]) {
+        assert.ok(
+          questions.some(q => q.title.includes(SKIPPER_YOURSELF[locale])),
+          `${locale}: ${questions.map(q => q.title).join(' | ')}`
+        );
+      }
+    }
+  });
+
+  test('the boat page FAQ tab neither requests nor renders the group without a category', () => {
+    const src = readFileSync(`${ROOT}src/views/Boat/BoatContentSection/FAQTab/FAQTab.tsx`, 'utf8');
+
+    assert.match(src, /const category = licenceFaqCategory\(locale, yacht\.vesselType\);/);
+    assert.match(src, /useEffect\(\(\) => \{\s*if \(!category\) return;\s*startTransition\(\(\) => \{\s*getFAQAction/);
+    assert.match(src, /\{category && faqAction && <AccordionMenu accordionList=\{faqAction\} \/>\}/);
+  });
+
+  test('My bookings: a gulet booking has no FAQ tab, the others keep all seven', () => {
+    assert.deepEqual(
+      reservationTabsFor('GULET'),
+      reservationTabs.filter(tab => tab !== 'reservationTabs.faq')
+    );
+    assert.deepEqual(reservationTabsFor('GULET').at(-1), 'reservationTabs.cancellation');
+    ['CATAMARAN', 'MOTOR_YACHT', null, undefined].forEach(type =>
+      assert.deepEqual(reservationTabsFor(type), reservationTabs, String(type))
+    );
+  });
+});
+
+/** The chips of AppliedFilterChips: label and the update its removal sends. */
+const filterChips = (params, locale = 'en') => {
+  let tree = null;
+  const updates = [];
+  const Probe = () => {
+    tree = AppliedFilterChips({ params, setMultipleParams: update => updates.push(update), t: key => tAll(key) });
+
+    return null;
+  };
+  const messages = messagesFor(locale, ['common', 'filters']);
+  const tAll = createTranslator({ locale, messages });
+
+  renderToStaticMarkup(
+    createElement(NextIntlClientProvider, { locale, messages, timeZone: 'Europe/Zagreb' }, createElement(Probe))
+  );
+
+  return (tree ? [tree.props.children].flat() : []).map(chip => ({
+    label: chip.props.children[0].props.children,
+    remove: () => {
+      chip.props.onClick();
+
+      return updates.at(-1);
+    },
+  }));
+};
+
+describe('search: the rental type on a gulet-only search', () => {
+  test('setting the boat types clears the rental type to or from gulets only', () => {
+    assert.deepEqual(boatTypesUpdate(['GULET', 'CATAMARAN'], ['GULET']), { boatTypes: ['GULET'], charterType: [] });
+    assert.deepEqual(boatTypesUpdate([], ['GULET']), { boatTypes: ['GULET'], charterType: [] });
+    assert.deepEqual(boatTypesUpdate(['GULET'], ['GULET', 'CATAMARAN']), {
+      boatTypes: ['GULET', 'CATAMARAN'],
+      charterType: [],
+    });
+    assert.deepEqual(boatTypesUpdate(['CATAMARAN'], ['CATAMARAN', 'MOTOR_YACHT']), {
+      boatTypes: ['CATAMARAN', 'MOTOR_YACHT'],
+    });
+    assert.deepEqual(boatTypesUpdate(['CATAMARAN', 'GULET'], ['CATAMARAN']), { boatTypes: ['CATAMARAN'] });
+  });
+
+  LOCALES.forEach(locale => {
+    test(`${locale}: removing "Catamarans" from gulets + catamarans clears the rental type; no rental chip on gulets only`, () => {
+      const filters = readJson(`messages/${locale}/filters.json`);
+      const common = readJson(`messages/${locale}/common.json`);
+      const rental = [filters.bareboat, filters.skippered];
+      const mixed = filterChips({ boatTypes: ['GULET', 'CATAMARAN'], charterType: ['CREWED'] }, locale);
+
+      assert.deepEqual(
+        mixed.map(c => c.label),
+        [common.guletPlural, common.catamaranPlural, filters.skippered]
+      );
+      assert.deepEqual(mixed[1].remove(), { boatTypes: ['GULET'], charterType: [], page: 1 });
+      // Removing "Gulets" leaves catamarans, whose rental type stays a choice.
+      assert.deepEqual(mixed[0].remove(), { boatTypes: ['CATAMARAN'], page: 1 });
+
+      ['BAREBOAT', 'CREWED'].forEach(charterType => {
+        const labels = filterChips({ boatTypes: ['GULET'], charterType: [charterType] }, locale).map(c => c.label);
+
+        assert.deepEqual(labels, [common.guletPlural], `${charterType}: ${labels}`);
+        assert.ok(!labels.some(label => rental.includes(label)));
+      });
+
+      assert.deepEqual(
+        filterChips({ boatTypes: ['CATAMARAN'], charterType: ['BAREBOAT'] }, locale).map(c => c.label),
+        [common.catamaranPlural, filters.bareboat]
+      );
+    });
+  });
+
+  test('the listing request of an old or shared gulet-only link drops the rental type', () => {
+    const gulet = yachtFetchParams({ boatTypes: 'GULET', charterType: 'BAREBOAT', destinations: 'turkey' }, false);
+
+    assert.equal(gulet.charterType, undefined);
+    assert.equal(gulet.boatTypes, 'GULET');
+    assert.equal(yachtFetchParams({ boatTypes: ['GULET'], charterType: ['CREWED'] }, false).charterType, undefined);
+    assert.equal(
+      yachtFetchParams({ boatTypes: 'GULET,CATAMARAN', charterType: 'CREWED' }, false).charterType,
+      'CREWED'
+    );
+    assert.equal(yachtFetchParams({ boatTypes: 'CATAMARAN', charterType: 'BAREBOAT' }, false).charterType, 'BAREBOAT');
+    assert.equal(yachtFetchParams({ charterType: 'BAREBOAT' }, false).charterType, 'BAREBOAT');
+  });
+
+  test('the distribution and relax requests drop it too', () => {
+    assert.equal(
+      withoutGuletRentalType('destinations=turkey&boatTypes=GULET&charterType=BAREBOAT%2CCREWED&page=2'),
+      'destinations=turkey&boatTypes=GULET&page=2'
+    );
+    [
+      'destinations=turkey&boatTypes=GULET%2CCATAMARAN&charterType=CREWED',
+      'destinations=croatia&charterType=BAREBOAT',
+      'boatTypes=CATAMARAN&charterType=BAREBOAT',
+      'destinations=turkey&boatTypes=GULET',
+      '',
+    ].forEach(qs => assert.equal(withoutGuletRentalType(qs), qs, qs));
+  });
+});
+
+describe('search: no skipper tile on a gulet landing', () => {
+  const labels = {
+    activeBoats: 'Boats',
+    skipper: 'Skipper per week',
+    obligatoryExtras: 'Obligatory extras',
+    deposit: 'Deposit',
+    checkIn: 'Check-in',
+    medianBuildYear: 'Median build year',
+    medianWithRange: ({ median }) => median,
+    depositValue: ({ median }) => median,
+  };
+  const facts = vesselType => ({
+    did: 'c-54',
+    vesselType,
+    computedAt: '2026-10-08T02:00:00Z',
+    activeBoats: 40,
+    skipperWeekly: { median: 1400, p25: 1200, p75: 1600 },
+  });
+  const tileLabels = vesselType => factsTiles(facts(vesselType), labels, factsFormat('en')).map(tile => tile.label);
+
+  test('a gulet row never shows "Skipper per week", even when the nightly job sends a figure', () => {
+    assert.ok(!tileLabels('GULET').includes('Skipper per week'), tileLabels('GULET').join(' | '));
+  });
+
+  test('a catamaran row and an all-types row keep it', () => {
+    assert.ok(tileLabels('CATAMARAN').includes('Skipper per week'));
+    assert.ok(tileLabels(null).includes('Skipper per week'));
   });
 });
