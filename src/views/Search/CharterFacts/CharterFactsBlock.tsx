@@ -8,6 +8,7 @@ import { fetchCharterFacts } from '@/utils/server/charterFacts';
 import { gatedLandingPath } from '@/utils/server/landingLinks';
 import { placeText } from '@/utils/server/placeText';
 import { displayPlaceName } from '@/utils/static/croatianPlaceNames';
+import { isGulet } from '@/utils/static/guletCrewed';
 
 import styles from './CharterFactsBlock.module.scss';
 import { factsBaseGroups, factsFormat, factsModelRows, factsTiles, joinSentences } from './factsContent';
@@ -223,7 +224,9 @@ const CharterFactsBlock = async ({ target, locale, currency, rate, listingTotal 
       )}
 
       <p className={styles.note}>
-        {t('note')} {fmt.converted ? t('noteConverted', { currency: fmt.currency }) : t('noteEur')}
+        {/* A gulet is chartered with its crew: no "skipper separate" on its landings (guletCrewed.ts). */}
+        {t(isGulet(target.vesselType) ? 'noteGulet' : 'note')}{' '}
+        {fmt.converted ? t('noteConverted', { currency: fmt.currency }) : t('noteEur')}
       </p>
     </section>
   );

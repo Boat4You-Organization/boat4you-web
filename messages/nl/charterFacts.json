@@ -19,6 +19,7 @@
   "topBases": "Belangrijkste havens",
   "boats": "{count, plural, one {# boot} other {# boten}}",
   "note": "Elke nacht berekend uit de charteraanbiedingen van 7 nachten in de komende 12 maanden voor de boten die hier liggen. Prijzen gelden voor de boot per huurweek; schipper, extra’s en borg komen erbij. Cijfers op basis van minder dan 5 boten of aanbiedingen worden niet getoond.",
+  "noteGulet": "Elke nacht berekend uit de charteraanbiedingen van 7 nachten in de komende 12 maanden voor de boten die hier liggen. Prijzen gelden voor de boot per huurweek; extra’s en borg komen erbij. Cijfers op basis van minder dan 5 boten of aanbiedingen worden niet getoond.",
   "noteEur": "Bedragen in euro (EUR).",
   "noteConverted": "Bedragen omgerekend van euro naar {currency} tegen de koers van vandaag."
 }

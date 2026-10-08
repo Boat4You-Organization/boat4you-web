@@ -19,6 +19,7 @@
   "topBases": "Bases principales",
   "boats": "{count, plural, one {# bateau} other {# bateaux}}",
   "note": "Calculé chaque nuit à partir des offres de location de 7 nuits des 12 prochains mois pour les bateaux basés ici. Les prix s’entendent pour le bateau, par semaine de location ; skipper, suppléments et caution sont en sus. Les valeurs issues de moins de 5 bateaux ou offres ne sont pas affichées.",
+  "noteGulet": "Calculé chaque nuit à partir des offres de location de 7 nuits des 12 prochains mois pour les bateaux basés ici. Les prix s’entendent pour le bateau, par semaine de location ; suppléments et caution sont en sus. Les valeurs issues de moins de 5 bateaux ou offres ne sont pas affichées.",
   "noteEur": "Montants en euros (EUR).",
   "noteConverted": "Montants convertis d’euros en {currency} au cours du jour."
 }

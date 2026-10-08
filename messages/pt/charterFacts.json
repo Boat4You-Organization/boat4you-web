@@ -19,6 +19,7 @@
   "topBases": "Principais bases",
   "boats": "{count, plural, one {# barco} other {# barcos}}",
   "note": "Calculado todas as noites a partir das ofertas de aluguer de 7 noites dos próximos 12 meses para os barcos baseados aqui. Os preços são por barco e por semana de aluguer; skipper, extras e caução pagam-se à parte. Os valores baseados em menos de 5 barcos ou ofertas não são apresentados.",
+  "noteGulet": "Calculado todas as noites a partir das ofertas de aluguer de 7 noites dos próximos 12 meses para os barcos baseados aqui. Os preços são por barco e por semana de aluguer; extras e caução pagam-se à parte. Os valores baseados em menos de 5 barcos ou ofertas não são apresentados.",
   "noteEur": "Valores em euros (EUR).",
   "noteConverted": "Valores convertidos de euros para {currency} à taxa de hoje."
 }
