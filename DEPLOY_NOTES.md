@@ -1,5 +1,41 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-10-08 — 🧹 Sitnice s live provjere 7.10.: opis broda bez navodnika, agencije „samo upit", hreflang naslovnice, oznake za čitače ekrana, jedna robots oznaka na 404 — ⏳ NIJE DEPLOYANO (grana `fix/w810-b4y-polish`)
+
+Izvor: `_seo-audit-2026-10-07/live-verify/` (b4y-boat F2, regression F2 / F3 / F6, B4Y-CRAWL-01). Sve je starije od izdanja 7.10. Tekstovi sistera, FAQ-ovi, „our crew / fleet" i cijene nisu dirani.
+
+**Commiti:**
+
+- `4b7cbdfed` Meta / og / twitter opis broda: ime bez navodnika, kao u naslovu. „Charter the Lagoon 42 Masterpiece (2018) from …" umjesto „Lagoon 42 'Masterpiece' (2018)". Novi `boatSeoName` (`boatTitle.ts`) koristi pravila naslova: model bez „- 4 + 2 cab.", ime bez opreme partnera, bez imena kad ponavlja model. Nigdje drugdje (JSON-LD, poruke) ime nije u navodnicima.
+- `401efc508` Brod agencije koja radi samo na upit (`inquireOnly`, npr. Yvonne 3664) ide istim putem kao brod bez slobodnog termina: nema Product JSON-LD, nema FAQ-a o cijeni ni „From … / week", FAQ o bookingu, meta opis i poziv u opisu traže upit. Traka je i prije pisala „Price on inquiry / Inquire now". Kalendar ostaje (takav brod i dalje pokazuje termine), pa ima novi FAQ odgovor u 9 jezika (`yacht.faqBookAgencyInquiryA`: „odaberite datume u kalendaru i pošaljite upit") umjesto „nema objavljenih termina ni cijena".
+- `c30c6e0a8` Hreflang naslovnice bez kose crte na kraju: `/de`, a ne `/de/` (koji daje 308). Ostale stranice imaju iste URL-ove kao prije.
+- `f24aaec1d` Oznake za čitače ekrana na jeziku stranice (9 jezika): header („Favoriten", „Sprache und Währung"), prikaz liste / mreže i „Sortieren nach" na landingu, strelica filtera „Liste öffnen" (bio engleski „Open", vidi se i kao oblačić), „Keine Treffer" umjesto „No options" / „No matches" (vidljiv tekst), klizači („Baujahr: Minimum"), kartice kontinenata na naslovnici.
+- `94419f4c2` 404: jedna robots oznaka (`noindex` od Next.js-a). Stranica više ne dodaje svoju „noindex, follow".
+- `91196158f` `yarn test:polish` (17 testova).
+
+**Provjere (lokalno 8.10.):** `yarn test:polish` 17/17, ostali `yarn test:*` prolaze (boat-seo 38, landing-pages 36), `npx tsc --noEmit` 0, `yarn lint` 0 grešaka (17 starih upozorenja). `next dev` :3995 na prod API (read-only, 11 stranica):
+
+- Masterpiece en / de: opis „Yachtcharter Lagoon 42 Masterpiece (2018) ab D-Marin Dalmacija Marina, Sukošan. …", bez navodnika i u og / twitter.
+- `/de`: hreflang 9 + x-default, svi bez kose crte, isti kao canonical.
+- Yvonne en / de: nema Product JSON-LD, FAQ bez cijene, „Yvonne is booked by inquiry, not online: …", meta opis završava „Send an inquiry for your dates on boat4you.com.", traka „Price on inquiry / Inquire now".
+- `/fr` landing: nijedna engleska oznaka („Ouvrir la liste" ×3 kao aria-label i title, „Trier par", „Affichage en grille").
+- 404 (nepostojeći URL en i de, landing stranica 99, deaktivirani brod 4066): jedna `<meta name="robots" content="noindex">`. Stranice s 200 imaju i dalje jednu `index, follow, …`.
+
+**Nakon deploya:**
+
+1. `curl -s https://www.boat4you.com/boat/lagoon-42-masterpiece-11681 | grep -o '<meta name="description"[^>]*>'` → bez `&#x27;`.
+2. `curl -s https://www.boat4you.com/de | grep -o 'hrefLang="fr" href="[^"]*"'` → `https://www.boat4you.com/fr`.
+3. `curl -s https://www.boat4you.com/boat/bavaria-yachtbau-bavaria-cruiser-41-yvonne-3664 | grep -c '"@type":"Product"'` → 0 (dok je agencija na upit).
+4. `curl -s https://www.boat4you.com/w810-x | grep -c '<meta name="robots"'` → 1.
+
+**Otvoreno (Mario):**
+
+- Admin brodovi (`custom`) u traci isto idu na upit, ali njihov JSON-LD i FAQ nisu dirani (nije bilo u zadatku).
+- Alt tekstovi slika su engleski na svim jezicima: „… boat image" (kartice, lista želja, `og:image:alt`), „FR flag", „Card image" (itinerari).
+- FAQ „Gdje je brod" piše „Alimos Marina | Athens" (sirova crta iz partnerovog formata; meta opis je već pretvara u zarez).
+- Brod agencije na upit, desktop: nakon odabira datuma forma piše „Total due now" i cijenu uz gumb „Inquire now".
+- Ostale engleske oznake izvan headera i pretrage: 404 / greška „Go Back Home", rezervacija „Reservation information" / „Copy booking reference", Moje rezervacije „Dismiss", MUI kalendar („Previous month"). EN tekst `generalSearchBar.searchBoats` ima razmak na početku („ Search boats").
+
 ## 2026-10-07 — 🛥️ Stranica broda: cijena u server HTML-u, JSON-LD otkaz 72 h, offerCount, naslov bez navodnika, rotacija sličnih brodova — ✅ DEPLOYANO 7.10.2026 ~14:15 UTC (`release/w710-b4y` → main `980be3d0f`, deployment id `980be3d0fd15-muy6mx4k`)
 
 - **Live 7.10. ~14:15 UTC** (svih 6 sistera 13:47–14:05 UTC, `release/w710` → main). 308 na nasljednika proradi sam kad backend vrati `successorSlug` (ADMIN, čeka Mariov OK). SEO regresija nakon deploya: 1 nova FAIL `C2` (naslovnica: zbroj kartica po tipu 11.348 > ukupno 11.345). Naslovnica nije dirana u ovom izdanju → razlika u podacima između dva API brojača, ne regresija koda; prati se.
