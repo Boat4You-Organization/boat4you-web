@@ -16,7 +16,11 @@
  *     are searched — not as a filter, a chip, nor in the listing,
  *     distribution or relax requests of an old link; the charter facts of a
  *     gulet landing show no skipper tile and do not say the skipper is paid
- *     separately.
+ *     separately;
+ *   - the curated gulet landing texts (public/seo-content/<locale>/*gulet*.html,
+ *     9 languages): no "add a skipper after booking bareboat", bareboat
+ *     licence answer, "mixed bareboat-and-skippered packages", semi-bareboat
+ *     gulets or "most gulets include crew" (seo-corpus-qa.py --gulet-crewed).
  *
  *   yarn test:gulet
  */
@@ -25,6 +29,7 @@ import { renderToStaticMarkup } from 'react-dom/server';
 
 import { NextIntlClientProvider, createTranslator } from 'next-intl';
 import assert from 'node:assert/strict';
+import { spawnSync } from 'node:child_process';
 import { readFileSync } from 'node:fs';
 import { registerHooks } from 'node:module';
 import { describe, test } from 'node:test';
@@ -509,5 +514,15 @@ describe('search: no skipper tile on a gulet landing', () => {
   test('a catamaran row and an all-types row keep it', () => {
     assert.ok(tileLabels('CATAMARAN').includes('Skipper per week'));
     assert.ok(tileLabels(null).includes('Skipper per week'));
+  });
+});
+
+describe('curated gulet landing texts: a gulet is never offered bareboat or skipper-only', () => {
+  test('no gulet-crewed finding on any gulet landing, in all nine languages', () => {
+    const run = spawnSync('python3', ['scripts/seo-corpus-qa.py', '--gulet-crewed'], { cwd: ROOT, encoding: 'utf8' });
+
+    assert.equal(run.error, undefined, String(run.error));
+    assert.equal(run.status, 0, run.stdout + run.stderr);
+    assert.match(run.stdout, /gulet-crewed: 0 finding\(s\) in [1-9]\d* gulet landings/);
   });
 });
