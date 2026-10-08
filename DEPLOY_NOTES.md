@@ -1,10 +1,26 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-10-08 — 🧰 Oprema, dorada nakon pregleda: jedan chip filtera po kodu, b4y web odmah iza backenda — ⏳ NIJE DEPLOYANO (main `781c041fb`)
+
+Adversarialni pregled web dijela popravka opreme (8.10.). Ide zajedno s unosom ispod (`1ba07e93f`) i, kao on, **tek nakon backenda** (V9_74 / V9_75 / R\_\_1_05 v2, `973a2cb`). Samo web, bez env promjena.
+
+- **Chip filtera:** `/de/search?amenities=14,90&amenityLabels=fridge,refrigerator` pokazivao je dva chipa „Kühlschrank" (autocomplete jedan). Sada je jedan chip po preživjelom kodu, a njegovo uklanjanje briše oba unosa iz URL-a. Takav URL se može samo ručno upisati, jer 90 nikad nije bio opcija filtera.
+- **Redoslijed deploya (nalaz 1, srednje): svaki redoslijed ima vidljiv prozor greške.**
+  - _Backend prvi:_ live (stari) `renderAmenityLabel` uspoređuje prijevod s golim kodom, a next-intl 4.8.3 za nepoznati ključ vraća „yacht.amenitiesList.depth-sounder". V9_75 veže `depth-sounder` već u migraciji (NauSys 100618 „Echosounder/Depthsounder", 1370553 „Depthsounder", 10163990, MMK „Depth Gauge" …; 2.251 aktivna jahta po `resolver_targets_8_10.csv`). Stranice brodova su dinamične (`s-maxage=60`), pa sirovi ključ izlazi na svakom renderu tih brodova u 9 jezika, uz MISSING_MESSAGE u logu, od restarta cusma2 do swapa web-a. Ugovor §10.8 („pada na partnerovo ime") za b4y ne vrijedi; vrijedi samo za sestre.
+  - _Web prvi:_ novi build sakriva ono što danas pokazuju aliasi (`PARTNER_NAME_ALIASES`). Na `/de/boat/lagoon-43-aurora-blue-13960` do backenda nestaju „Cockpit-Polster", „Außenlautsprecher", „Chart plotter" i rečenica „Es verfügt außerdem über Außenlautsprecher.".
+  - **Postupak:** backend pa b4y web jedan za drugim, u nekoliko minuta. b4y build i tar pripremiti **prije** backend prozora (build gađa prod API, jedan build na stroju), swap odmah nakon health probe cusma2 (FIX_CONTRACT §10 korak 4). Sestre isti dan, također nakon backenda; razmak backend → sestre ne pravi grešku (njihov stari kod za `depth-sounder` pada na partnerovo ime).
+  - **Opcija za Marija (nije primijenjeno):** zadržati `withCatalogueMatch` još jedno izdanje. Aliasi daju samo naš kod i prijevod, nikad partnerov tekst, a svih 38 varijanti alias imena backend resolver veže na isti kod, pa bi web tada smio ići prvi bez rizika. Ugovor (odluka b) ga zasad izbacuje.
+- **Ispravak unosa ispod:** „pa ni njihova imena ne ulaze u RSC payload" vrijedi samo za stranicu broda. My-bookings (`getReservationDetails`, `src/actions/reservation.actions.ts`) još vraća sirovi odgovor backenda pregledniku, a nepovezana imena se filtriraju tek pri renderu. To pokriva backend `973a2cb` (`ReservationMappers`: kupcu samo povezani retci), koji ide prije web-a, pa web promjena nije potrebna.
+
+**Provjere (lokalno 8.10.):** `yarn test:equipment` 12/12 (+1; novi test pada na prethodnom kodu), `npx tsc --noEmit` 0, `yarn lint` 0 grešaka (17 starih upozorenja).
+
+**Nakon deploya:** `/de/search?amenities=14,90&amenityLabels=fridge,refrigerator` → jedan chip „Kühlschrank"; klik na njega uklanja oba parametra.
+
 ## 2026-10-08 — 🧰 Oprema: javno samo povezano s katalogom, novi „Dubinomjer“, „Kolut za spašavanje“ bez svjetla, spojeni kodovi kanonski — ⏳ NIJE DEPLOYANO (main `1ba07e93f`)
 
 Web dio popravka veza partnerove opreme (`infra/equipment-mapping-audit-8-10/FIX_CONTRACT.md` §12, Mariove odluke b–d od 8.10.). Samo web, bez env promjena. **Deploy tek nakon backenda** (V9_74 / V9_75 / R\_\_1_05 v2 + prvi MMK i NauSys sync): prije backenda bi web sakrio stavke koje backend danas ne povezuje (WiFi, „Stove", „Chart plotter"…), jer je uklonjen `PARTNER_NAME_ALIASES`.
 
-- `presentAmenities` vraća samo retke s kodom iz našeg kataloga. Nepovezana partnerova stavka ostaje u bazi i adminu, a na javnim stranicama je nema nigdje: stranica broda, moje rezervacije, kartica dostupnosti („Cijena uključuje"), PDF, generirani opis. Nema više kante „Deck" za nepovezano. `withSafePartnerText` ih izbacuje već na serveru, pa ni njihova imena ne ulaze u RSC payload.
+- `presentAmenities` vraća samo retke s kodom iz našeg kataloga. Nepovezana partnerova stavka ostaje u bazi i adminu, a na javnim stranicama je nema nigdje: stranica broda, moje rezervacije, kartica dostupnosti („Cijena uključuje"), PDF, generirani opis. Nema više kante „Deck" za nepovezano. `withSafePartnerText` ih na stranici broda izbacuje već na serveru, pa ni njihova imena ne ulaze u RSC payload (my-bookings: vidi ispravak u unosu iznad).
 - Uklonjeni `PARTNER_NAME_ALIASES`, `withCatalogueMatch` i `ALIAS_EQUIPMENT_ID` (backend sada ta imena stvarno povezuje).
 - Spojeni kodovi ostaju razrješivi i čitaju se kao preživjeli: `bow-thruster-deck` → `bow-thruster` (kategorija Navigacija), `refrigerator` → `fridge`, `sundeck-cushions` → `sun-pads`. Jedan redak po kodu na stranici broda i u rezervaciji, ikone na kartici pretrage, chip filtera i odabir u filteru iz starog URL-a. Prijevodi starih kodova ostaju u svih 9 jezika.
 - Kod bez prijevoda u ovom buildu prikazuje partnerovo ime, a ne „yacht.amenitiesList.<kod>" (stara provjera je uspoređivala s golim kodom i nikad nije radila; next-intl vraća `namespace.ključ`).
