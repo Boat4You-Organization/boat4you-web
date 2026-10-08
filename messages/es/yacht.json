@@ -163,7 +163,7 @@
     "flashlight": "Linterna",
     "fog-horn": "Bocina de niebla",
     "life-belts": "Cinturones salvavidas (arnés de seguridad)",
-    "life-buoy": "Aro salvavidas + Luz intermitente",
+    "life-buoy": "Aro salvavidas",
     "life-jackets": "Chalecos salvavidas",
     "liferaft": "Balsa salvavidas",
     "vhf-radio": "Radio VHF",
@@ -171,7 +171,8 @@
     "lazy-jacks": "Lazy jacks",
     "battery-charger": "Cargador de baterías",
     "shore-connection-220v": "Conexión a tierra 220 V",
-    "usb-sockets": "Tomas USB"
+    "usb-sockets": "Tomas USB",
+    "depth-sounder": "Sonda de profundidad"
   },
   "servicesList": {
     "skipper": "Servicio de patrón",

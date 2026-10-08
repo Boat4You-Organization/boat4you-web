@@ -163,7 +163,7 @@
     "flashlight": "Lampe de poche",
     "fog-horn": "Corne de brume",
     "life-belts": "Harnais de sécurité",
-    "life-buoy": "Bouée de sauvetage + Feu à éclats",
+    "life-buoy": "Bouée de sauvetage",
     "life-jackets": "Gilets de sauvetage",
     "liferaft": "Radeau de survie",
     "vhf-radio": "Radio VHF",
@@ -171,7 +171,8 @@
     "lazy-jacks": "Lazy jacks",
     "battery-charger": "Chargeur de batterie",
     "shore-connection-220v": "Prise de quai 220 V",
-    "usb-sockets": "Prises USB"
+    "usb-sockets": "Prises USB",
+    "depth-sounder": "Sondeur"
   },
   "servicesList": {
     "skipper": "Service de skipper",

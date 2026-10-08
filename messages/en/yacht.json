@@ -163,7 +163,7 @@
     "flashlight": "Flashlight",
     "fog-horn": "Fog horn",
     "life-belts": "Life belts (Safety harness)",
-    "life-buoy": "Life buoy + Flashing light",
+    "life-buoy": "Life buoy",
     "life-jackets": "Life jackets",
     "liferaft": "Liferaft",
     "vhf-radio": "VHF radio",
@@ -171,7 +171,8 @@
     "lazy-jacks": "Lazy jacks",
     "battery-charger": "Battery charger",
     "shore-connection-220v": "Shore connection 220 V",
-    "usb-sockets": "USB sockets"
+    "usb-sockets": "USB sockets",
+    "depth-sounder": "Depth sounder"
   },
   "servicesList": {
     "skipper": "Skipper service",

@@ -335,6 +335,7 @@ const FiltersSectionV2 = ({ catalogueData, catalogueFilters, isMobile, serverTot
   });
   const renderAmenityInput = useAmenityAutocompleteMultiple({
     selectedIds: params.amenities || [],
+    selectedLabels: params.amenityLabels,
     onChange: handleAmenitiesChange,
     amenities: catalogueData.amenities,
     enabledIds: enabledAmenityIds,

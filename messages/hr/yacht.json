@@ -163,7 +163,7 @@
     "flashlight": "Baterijska svjetiljka",
     "fog-horn": "Sirena za maglu",
     "life-belts": "Sigurnosni pojasevi",
-    "life-buoy": "Kolut za spašavanje + svjetlo",
+    "life-buoy": "Kolut za spašavanje",
     "life-jackets": "Prsluci za spašavanje",
     "liferaft": "Splav za spašavanje",
     "vhf-radio": "VHF radio",
@@ -171,7 +171,8 @@
     "lazy-jacks": "Lazy jacks",
     "battery-charger": "Punjač baterija",
     "shore-connection-220v": "Priključak 220 V",
-    "usb-sockets": "USB utičnice"
+    "usb-sockets": "USB utičnice",
+    "depth-sounder": "Dubinomjer"
   },
   "servicesList": {
     "skipper": "Skiperske usluge",

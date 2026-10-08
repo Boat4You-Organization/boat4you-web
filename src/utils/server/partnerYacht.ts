@@ -47,13 +47,17 @@ export const withSafePartnerText = (yacht: YachtModel): YachtModel => {
           extras: Array.isArray(offer.extras) ? offer.extras.map(safeService) : offer.extras,
         }))
       : yacht.offers,
-    // Rows the boat does not have are shown nowhere (presentAmenities).
+    // Rows the boat does not have, and partner items not linked to our
+    // catalogue (Mario 8.10.2026), are shown nowhere (presentAmenities) — so
+    // their names never reach the RSC payload either.
     amenities: Array.isArray(yacht.amenities)
-      ? yacht.amenities.filter(isAmenityPresent).map(amenity => ({
-          ...amenity,
-          name: typeof amenity.name === 'string' ? safeName(amenity.name) : amenity.name,
-          comment: safeText(amenityComment(amenity)),
-        }))
+      ? yacht.amenities
+          .filter(amenity => isAmenityPresent(amenity) && Boolean(amenity.equipment?.labelCode))
+          .map(amenity => ({
+            ...amenity,
+            name: typeof amenity.name === 'string' ? safeName(amenity.name) : amenity.name,
+            comment: safeText(amenityComment(amenity)),
+          }))
       : yacht.amenities,
   };
 };

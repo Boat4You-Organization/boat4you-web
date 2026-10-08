@@ -9,12 +9,12 @@ import Check from '@/components/SvgIcons/Check';
 import {
   YACHT_EQUIPMENT_CATEGORY_TYPE_ARRAY,
   YACHT_EQUIPMENT_CATEGORY_TYPE_LABEL_MAP,
-  YachtAmenitiesKey,
   YachtAmenitiesModel,
   YachtEquipmentCategoryType,
 } from '@/models/yacht-amenities.model';
 import { YachtModel } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
+import useAmenityLabel from '@/utils/hooks/useAmenityLabel';
 import { presentAmenities } from '@/utils/static/amenities';
 
 interface AmenitiesTabProps {
@@ -32,25 +32,8 @@ const splitTextLines = (text: string | null | undefined): string[] =>
 
 const AmenitiesTab = ({ yacht }: AmenitiesTabProps) => {
   const t = useTranslations('yacht');
-  const amenitiesT = useTranslations('yacht.amenitiesList');
-
-  // Render an amenity row's label. Matched rows use the predefined
-  // Equipment.labelCode → translation. Unmatched rows (partner-synced
-  // equipment with no matching Equipment record) fall back to the raw
-  // `name` field the partner sent — better to surface "Coffee machine"
-  // verbatim than to swallow it because our predefined catalog hasn't
-  // mapped it yet.
-  const renderAmenityLabel = (amenity: YachtAmenitiesModel): string => {
-    if (amenity.equipment?.labelCode) {
-      const translated = amenitiesT(amenity.equipment.labelCode as YachtAmenitiesKey);
-
-      // next-intl returns the key itself when the translation is missing —
-      // fall through to the partner name in that case.
-      if (translated && translated !== amenity.equipment.labelCode) return translated;
-    }
-
-    return amenity.name || amenity.equipment?.labelCode || '';
-  };
+  // Linked rows only (presentAmenities): the catalogue code's translation.
+  const renderAmenityLabel = useAmenityLabel();
 
   // Bucket every amenity into one of the 9 modern categories. Rows whose
   // Equipment.category is a legacy bucket (SALOON_AND_CABINS,
@@ -66,9 +49,8 @@ const AmenitiesTab = ({ yacht }: AmenitiesTabProps) => {
 
     if (cat && cat in YACHT_EQUIPMENT_CATEGORY_TYPE_LABEL_MAP) return cat as YachtEquipmentCategoryType;
 
-    // Unmatched partner row (Equipment.category null) → Deck is the most
-    // forgiving catch-all in the reference design (the bulk of unmatched
-    // partner rows are anchor / fender / mooring deck gear anyway).
+    // A catalogue item in a category this build does not know yet. Unlinked
+    // partner rows never get here — presentAmenities drops them (8.10.2026).
     return YachtEquipmentCategoryType.DECK;
   };
 
@@ -198,9 +180,9 @@ const AmenitiesTab = ({ yacht }: AmenitiesTabProps) => {
     );
   }
 
-  // Rows whose partner value means "absent" are dropped and boolean / null
-  // literals never reach the page (utils/static/amenities.ts, audit B25);
-  // a row without any label is skipped too.
+  // Only rows linked to our catalogue, none whose partner value means
+  // "absent", boolean / null literals never reach the page
+  // (utils/static/amenities.ts, audit B25); a row without any label is skipped too.
   const amenities = presentAmenities(yacht.amenities).filter(amenity => renderAmenityLabel(amenity).trim() !== '');
 
   if (amenities.length === 0) return null;

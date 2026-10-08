@@ -163,7 +163,7 @@
     "flashlight": "Zaklamp",
     "fog-horn": "Misthoorn",
     "life-belts": "Reddingsgordels (veiligheidsharnas)",
-    "life-buoy": "Reddingsboei + knipperlicht",
+    "life-buoy": "Reddingsboei",
     "life-jackets": "Reddingsvesten",
     "liferaft": "Reddingsvlot",
     "vhf-radio": "VHF radio",
@@ -171,7 +171,8 @@
     "lazy-jacks": "Lazy jacks",
     "battery-charger": "Acculader",
     "shore-connection-220v": "Walaansluiting 220 V",
-    "usb-sockets": "USB-aansluitingen"
+    "usb-sockets": "USB-aansluitingen",
+    "depth-sounder": "Dieptemeter"
   },
   "servicesList": {
     "skipper": "Schipper-service",

@@ -104,9 +104,10 @@ const useYachtPdfDownload = ({ yacht, selectedOffer }: UseYachtPdfDownloadProps)
 
       const now = new Date();
       const generatedDate = `${now.getDate()} ${MONTHS[now.getMonth()]} ${now.getFullYear()}`;
-      // The document is English on every locale: the EN capacity wording,
-      // loaded only when a PDF is made.
+      // The document is English on every locale: the EN capacity wording and
+      // equipment labels, loaded only when a PDF is made.
       const capacityFmt = createFmt((await import('../../../messages/en/capacity.json')).default, 'en');
+      const { amenitiesList } = (await import('../../../messages/en/yacht.json')).default;
 
       const blob = await pdf(
         <YachtPDF
@@ -120,6 +121,7 @@ const useYachtPdfDownload = ({ yacht, selectedOffer }: UseYachtPdfDownloadProps)
           generatedDate={generatedDate}
           locale={locale}
           capacityFmt={capacityFmt}
+          amenityLabels={amenitiesList}
         />
       ).toBlob();
 

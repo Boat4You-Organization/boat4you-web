@@ -163,7 +163,7 @@
     "flashlight": "Taschenlampe",
     "fog-horn": "Nebelhorn",
     "life-belts": "Sicherheitsgurte",
-    "life-buoy": "Rettungsring + Blinklicht",
+    "life-buoy": "Rettungsring",
     "life-jackets": "Rettungswesten",
     "liferaft": "Rettungsinsel",
     "vhf-radio": "UKW-Funkgerät",
@@ -171,7 +171,8 @@
     "lazy-jacks": "Lazy Jacks",
     "battery-charger": "Batterieladegerät",
     "shore-connection-220v": "Landstromanschluss 220 V",
-    "usb-sockets": "USB-Anschlüsse"
+    "usb-sockets": "USB-Anschlüsse",
+    "depth-sounder": "Echolot"
   },
   "servicesList": {
     "skipper": "Skipper-Service",

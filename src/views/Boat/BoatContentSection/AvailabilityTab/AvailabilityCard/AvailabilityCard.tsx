@@ -8,6 +8,7 @@ import { PolicyItem, availabilityCardConfig } from '@/config/availabilityCard.co
 import { YachtOfferModel } from '@/models/yacht-offer.model';
 import { YachtModel } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
+import useAmenityLabel from '@/utils/hooks/useAmenityLabel';
 import { presentAmenities } from '@/utils/static/amenities';
 import { displayBaseName } from '@/utils/static/croatianPlaceNames';
 import { formatPriceWithCurrency, isPositivePrice } from '@/utils/static/formatPriceCurrency';
@@ -24,6 +25,7 @@ const AvailabilityCard = ({ yacht, offer }: AvailabilityCardProps) => {
   const { clientPricePerDayEur, clientPriceEur, clientPriceInfo, listPriceEur, listPriceInfo, numberOfDays } = offer;
   const tCommon = useTranslations('common');
   const t = useTranslations('yacht');
+  const amenityLabel = useAmenityLabel();
   const locale = useLocale();
 
   // Compute days: use `numberOfDays` from backend when available, else derive
@@ -166,7 +168,7 @@ const AvailabilityCard = ({ yacht, offer }: AvailabilityCardProps) => {
                 .map(amenity => (
                   <ListItem key={amenity.id}>
                     <Check size={24} fill={colors.black300} />
-                    {amenity.name}
+                    {amenityLabel(amenity)}
                   </ListItem>
                 ))}
             </List>

@@ -163,7 +163,7 @@
     "flashlight": "Latarka",
     "fog-horn": "Trąbka mgłowa",
     "life-belts": "Pasy bezpieczeństwa (uprząż asekuracyjna)",
-    "life-buoy": "Koło ratunkowe + światło błyskowe",
+    "life-buoy": "Koło ratunkowe",
     "life-jackets": "Kamizelki ratunkowe",
     "liferaft": "Tratwa ratunkowa",
     "vhf-radio": "Radio VHF",
@@ -171,7 +171,8 @@
     "lazy-jacks": "Lazy jacks",
     "battery-charger": "Ładowarka akumulatorów",
     "shore-connection-220v": "Przyłącze lądowe 220 V",
-    "usb-sockets": "Gniazda USB"
+    "usb-sockets": "Gniazda USB",
+    "depth-sounder": "Echosonda"
   },
   "servicesList": {
     "skipper": "Usługa skippera",

@@ -34,69 +34,54 @@ export const isAmenityPresent = (amenity: Pick<YachtAmenitiesModel, 'comment' | 
 };
 
 /**
- * Partner rows the sync could not match to a catalogue Equipment reach the
- * page with only their English partner name ("Wi-Fi & Internet", "Stove"),
- * so every locale showed them in English (audit B29). The frequent ones that
- * mean exactly a catalogue item are mapped to its label code — translated
- * and filed under the right category like a matched row. Anything not listed
- * keeps its partner name. Keys: lower case, single spaces.
+ * Equipment codes merged into one catalogue item (backend V9_75, 8.10.2026):
+ * the old code → the surviving one. The old code stays resolvable — an ISR page
+ * or a cached search row may still carry it — and reads as the surviving code
+ * everywhere: boat page, card, PDF, filter. Its category is the surviving one's
+ * (bow-thruster-deck was DECK, bow-thruster is NAVIGATION).
  */
-const PARTNER_NAME_ALIASES: Record<string, { labelCode: string; category: YachtEquipmentCategoryType }> = {
-  'wi-fi & internet': { labelCode: 'wifi', category: YachtEquipmentCategoryType.COMFORT },
-  'wi-fi': { labelCode: 'wifi', category: YachtEquipmentCategoryType.COMFORT },
-  wifi: { labelCode: 'wifi', category: YachtEquipmentCategoryType.COMFORT },
-  'cockpit cushions': { labelCode: 'cockpit-cushions', category: YachtEquipmentCategoryType.DECK },
-  'radio-cd player': { labelCode: 'audio-system', category: YachtEquipmentCategoryType.ENTERTAINMENT },
-  'radio cd player': { labelCode: 'audio-system', category: YachtEquipmentCategoryType.ENTERTAINMENT },
-  'fusion radio': { labelCode: 'audio-system', category: YachtEquipmentCategoryType.ENTERTAINMENT },
-  'cockpit speakers': { labelCode: 'outside-speakers', category: YachtEquipmentCategoryType.ENTERTAINMENT },
-  'outdoor speakers': { labelCode: 'outside-speakers', category: YachtEquipmentCategoryType.ENTERTAINMENT },
-  'wind instrument/anemometer': { labelCode: 'logge-speed-wind', category: YachtEquipmentCategoryType.NAVIGATION },
-  'speedometer (speed log)': { labelCode: 'logge-speed-wind', category: YachtEquipmentCategoryType.NAVIGATION },
-  stove: { labelCode: 'cooker', category: YachtEquipmentCategoryType.GALLEY },
-  'distress flare box': { labelCode: 'distress-signals', category: YachtEquipmentCategoryType.SAFETY },
-  'swimming platform': { labelCode: 'bathing-platform', category: YachtEquipmentCategoryType.DECK },
-  'snorkeling equipment': { labelCode: 'snorkel-sets', category: YachtEquipmentCategoryType.ENTERTAINMENT },
-  'black water tank': { labelCode: 'waste-tank', category: YachtEquipmentCategoryType.INTERIOR },
-  'anchor with chain': { labelCode: 'main-anchor', category: YachtEquipmentCategoryType.DECK },
-  'chart plotter in cockpit': { labelCode: 'outside-GPS-plotter', category: YachtEquipmentCategoryType.NAVIGATION },
-  'gps chart plotter - cockpit': { labelCode: 'outside-GPS-plotter', category: YachtEquipmentCategoryType.NAVIGATION },
+const MERGED_EQUIPMENT: Readonly<Record<string, { labelCode: string; category: YachtEquipmentCategoryType }>> = {
+  'bow-thruster-deck': { labelCode: 'bow-thruster', category: YachtEquipmentCategoryType.NAVIGATION },
+  refrigerator: { labelCode: 'fridge', category: YachtEquipmentCategoryType.GALLEY },
+  'sundeck-cushions': { labelCode: 'sun-pads', category: YachtEquipmentCategoryType.COMFORT },
 };
 
-/** Marks an equipment record synthesised from PARTNER_NAME_ALIASES. */
-const ALIAS_EQUIPMENT_ID = -1;
-
-const withCatalogueMatch = <T extends YachtAmenitiesModel>(amenity: T): T => {
-  if (amenity.equipment || !amenity.name) return amenity;
-
-  const alias = PARTNER_NAME_ALIASES[amenity.name.trim().toLowerCase().replace(/\s+/g, ' ')];
-
-  return alias ? { ...amenity, equipment: { id: ALIAS_EQUIPMENT_ID, filterOrder: 0, ...alias } } : amenity;
-};
+/** The surviving catalogue code for an equipment label code (itself unless merged). */
+export const canonicalEquipmentCode = (labelCode: string): string =>
+  MERGED_EQUIPMENT[labelCode]?.labelCode ?? labelCode;
 
 /**
- * The equipment the boat has, each with a display-safe comment. A partner
- * row mapped through the aliases is dropped when the boat already lists that
- * catalogue item (no "WiFi" twice).
+ * The equipment the boat has, each with a display-safe comment. Only rows
+ * linked to our catalogue are public (Mario 8.10.2026): a partner item the sync
+ * could not link stays in the database and the admin, never on a public page —
+ * no partner free text, no catch-all "Deck" bucket. Merged codes read as the
+ * surviving code, and a code is listed once (the backend's public list is
+ * distinct per equipment too).
  */
 export const presentAmenities = <T extends YachtAmenitiesModel>(amenities: T[] | null | undefined): T[] => {
-  const rows = (amenities ?? [])
-    .filter(isAmenityPresent)
-    .map(amenity => withCatalogueMatch({ ...amenity, comment: amenityComment(amenity) }));
-  const matched = new Set(
-    rows.filter(r => r.equipment && r.equipment.id !== ALIAS_EQUIPMENT_ID).map(r => r.equipment!.labelCode)
-  );
-  const aliased = new Set<string>();
+  const seen = new Set<string>();
 
-  return rows.filter(row => {
-    if (row.equipment?.id !== ALIAS_EQUIPMENT_ID) return true;
+  return (amenities ?? []).flatMap(amenity => {
+    const { equipment } = amenity;
 
-    const code = row.equipment.labelCode;
+    if (!equipment?.labelCode || !isAmenityPresent(amenity)) return [];
 
-    if (matched.has(code) || aliased.has(code)) return false;
+    const merged = MERGED_EQUIPMENT[equipment.labelCode];
+    const labelCode = merged?.labelCode ?? equipment.labelCode;
 
-    aliased.add(code);
+    if (seen.has(labelCode)) return [];
 
-    return true;
+    seen.add(labelCode);
+
+    return [{ ...amenity, equipment: { ...equipment, ...merged }, comment: amenityComment(amenity) }];
   });
 };
+
+/** The boat's equipment labels in one language (`labels` = that locale's yacht.amenitiesList) — the PDF. */
+export const presentAmenityLabels = (
+  amenities: YachtAmenitiesModel[] | null | undefined,
+  labels: Readonly<Record<string, string>>
+): string[] =>
+  presentAmenities(amenities)
+    .map(amenity => labels[amenity.equipment!.labelCode] ?? amenity.name?.trim() ?? '')
+    .filter(Boolean);

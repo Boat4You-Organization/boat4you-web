@@ -2,7 +2,7 @@ import { Document, Image, Link, Page, Text, View } from '@react-pdf/renderer';
 
 import { YachtOfferModel } from '@/models/yacht-offer.model';
 import { YachtModel } from '@/models/yacht.model';
-import { presentAmenities } from '@/utils/static/amenities';
+import { presentAmenityLabels } from '@/utils/static/amenities';
 import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
 import { toTitleCase } from '@/utils/static/toTitleCase';
 import { Fmt, capacityRows, fromYacht } from '@/utils/static/yachtCapacity';
@@ -44,6 +44,8 @@ interface YachtPDFProps {
   locale: string;
   /** The EN `capacity` messages as a formatter: the document is English. */
   capacityFmt: Fmt;
+  /** The EN equipment labels (yacht.amenitiesList), keyed by catalogue code. */
+  amenityLabels: Readonly<Record<string, string>>;
 }
 
 const MONTHS = [
@@ -109,6 +111,7 @@ const YachtPDF = ({
   generatedDate,
   locale,
   capacityFmt,
+  amenityLabels,
 }: YachtPDFProps) => {
   const num = (value: number, fractionDigits?: number): string => formatPdfNumber(value, locale, fractionDigits);
   const name = toTitleCase(yacht.name).toUpperCase();
@@ -187,10 +190,8 @@ const YachtPDF = ({
     specRows.push(['Check-in / Check-out', `${yacht.defaultCheckin} / ${yacht.defaultCheckout}`]);
   }
 
-  const amenities = presentAmenities(yacht.amenities)
-    .map(a => a.name)
-    .filter(Boolean)
-    .slice(0, 9);
+  // Our label for each linked catalogue item, not the partner's free text.
+  const amenities = presentAmenityLabels(yacht.amenities, amenityLabels).slice(0, 9);
 
   const renderPriceCard = () => {
     if (offer) {

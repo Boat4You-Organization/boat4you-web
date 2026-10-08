@@ -9,11 +9,11 @@ import { ReservationDetails } from '@/models/reservation.model';
 import {
   YACHT_EQUIPMENT_CATEGORY_TYPE_ARRAY,
   YACHT_EQUIPMENT_CATEGORY_TYPE_LABEL_MAP,
-  YachtAmenitiesKey,
   YachtAmenitiesModel,
   YachtEquipmentCategoryType,
 } from '@/models/yacht-amenities.model';
 import colors from '@/styles/themes/colors';
+import useAmenityLabel from '@/utils/hooks/useAmenityLabel';
 import { presentAmenities } from '@/utils/static/amenities';
 
 interface AmenitiesTabProps {
@@ -22,17 +22,8 @@ interface AmenitiesTabProps {
 
 const AmenitiesTab = ({ reservationDetails }: AmenitiesTabProps) => {
   const t = useTranslations('yacht');
-  const amenitiesT = useTranslations('yacht.amenitiesList');
-
-  const renderAmenityLabel = (amenity: YachtAmenitiesModel): string => {
-    if (amenity.equipment?.labelCode) {
-      const translated = amenitiesT(amenity.equipment.labelCode as YachtAmenitiesKey);
-
-      if (translated && translated !== amenity.equipment.labelCode) return translated;
-    }
-
-    return amenity.name || amenity.equipment?.labelCode || '';
-  };
+  // Linked rows only (presentAmenities): the catalogue code's translation.
+  const renderAmenityLabel = useAmenityLabel();
 
   const bucketCategory = (amenity: YachtAmenitiesModel): YachtEquipmentCategoryType => {
     const cat = amenity.equipment?.category;
@@ -43,6 +34,7 @@ const AmenitiesTab = ({ reservationDetails }: AmenitiesTabProps) => {
 
     if (cat && cat in YACHT_EQUIPMENT_CATEGORY_TYPE_LABEL_MAP) return cat as YachtEquipmentCategoryType;
 
+    // A catalogue item in a category this build does not know yet (unlinked rows never get here).
     return YachtEquipmentCategoryType.DECK;
   };
 

@@ -39,6 +39,7 @@ import { MatchKind, OfferStatus, YachtModelShortInfo } from '@/models/yacht.mode
 import colors from '@/styles/themes/colors';
 import useBreakpoint from '@/utils/hooks/useBreakpoint';
 import useCapacityFmt from '@/utils/hooks/useCapacityFmt';
+import { canonicalEquipmentCode } from '@/utils/static/amenities';
 import { displayBaseName } from '@/utils/static/croatianPlaceNames';
 import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
 import { getBoatImageUrl } from '@/utils/static/imageUtils';
@@ -224,7 +225,8 @@ const BoatListingItemCardView = ({
     heating: { Icon: LocalFireDepartment, i18nKey: 'common.heating' },
   };
 
-  const realAmenities = (amenityKeys ?? [])
+  // A merged code a cached row may still carry ("refrigerator") is its surviving code ("fridge"), once.
+  const realAmenities = Array.from(new Set((amenityKeys ?? []).map(canonicalEquipmentCode)))
     .map(key => AMENITY_ICON_MAP[key])
     .filter((v): v is { Icon: typeof AcUnit; i18nKey: string } => Boolean(v))
     .slice(0, 3)

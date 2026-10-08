@@ -163,7 +163,7 @@
     "flashlight": "Torcia",
     "fog-horn": "Corno da nebbia",
     "life-belts": "Cinture di sicurezza (imbracatura)",
-    "life-buoy": "Salvagente anulare + luce lampeggiante",
+    "life-buoy": "Salvagente anulare",
     "life-jackets": "Giubbotti di salvataggio",
     "liferaft": "Zattera di salvataggio",
     "vhf-radio": "Radio VHF",
@@ -171,7 +171,8 @@
     "lazy-jacks": "Lazy jacks",
     "battery-charger": "Caricabatterie",
     "shore-connection-220v": "Presa di banchina 220 V",
-    "usb-sockets": "Prese USB"
+    "usb-sockets": "Prese USB",
+    "depth-sounder": "Ecoscandaglio"
   },
   "servicesList": {
     "skipper": "Servizio Skipper",

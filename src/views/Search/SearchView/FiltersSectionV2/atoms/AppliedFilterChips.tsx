@@ -6,9 +6,11 @@ import { useLocale, useTranslations } from 'next-intl';
 
 import { currencySymbols } from '@/config/currencies.config';
 import { Currency } from '@/models/user.model';
+import { YachtAmenitiesKey } from '@/models/yacht-amenities.model';
 import { CharterType, MainSailType, VESSEL_TYPE_LABEL_MAP_PLURAL, isVesselType } from '@/models/yacht.model';
 import { searchV2 } from '@/styles/themes/searchV2';
 import { SearchParams } from '@/utils/hooks/useQueryParams';
+import { canonicalEquipmentCode } from '@/utils/static/amenities';
 
 interface AppliedFilterChipsProps {
   params: SearchParams;
@@ -29,6 +31,7 @@ const AppliedFilterChips = ({ params, setMultipleParams, t }: AppliedFilterChips
   // Chip texts in the page language and number format (they were English
   // literals with en-US digits on every locale, audit B29).
   const tf = useTranslations('filters');
+  const tAmenity = useTranslations('yacht.amenitiesList');
   const number = new Intl.NumberFormat(useLocale());
   const symbol = currencySymbols[(params.currency as Currency) || Currency.EUR] ?? params.currency;
   const chips: Chip[] = [];
@@ -90,10 +93,14 @@ const AppliedFilterChips = ({ params, setMultipleParams, t }: AppliedFilterChips
     });
   });
 
-  // Amenities
+  // Amenities: the URL carries the catalogue code — the chip shows its
+  // translation ("Klimaanlage", not "air-conditioning"); a merged code reads
+  // as its surviving one ("refrigerator" → "Fridge").
   (params.amenityLabels || []).forEach((label, i) => {
+    const code = canonicalEquipmentCode(label) as YachtAmenitiesKey;
+
     chips.push({
-      label,
+      label: tAmenity.has(code) ? tAmenity(code) : label,
       remove: {
         amenityLabels: (params.amenityLabels || []).filter((_, j) => j !== i),
         amenities: (params.amenities || []).filter((_, j) => j !== i),
