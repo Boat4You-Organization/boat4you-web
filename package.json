@@ -26,7 +26,7 @@
     "test:capacity": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test scripts/yachtCapacity.test.mjs scripts/yachtCapacity.render.test.mjs",
     "test:boat-seo": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test scripts/boatPageSeo.test.mjs",
     "test:landing-pages": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test scripts/landingPagination.test.mjs scripts/pagination.render.test.mjs",
-    "test:polish": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test scripts/seoA11yPolish.test.mjs",
+    "test:polish": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test scripts/seoA11yPolish.test.mjs scripts/seoA11yPolish2.test.mjs",
     "upgrade": "yarn upgrade"
   },
   "dependencies": {
