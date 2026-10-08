@@ -64,6 +64,31 @@ export interface BoatTitle {
   absolute: boolean;
 }
 
+const squash = (value: string): string => value.replace(/\s+/g, ' ').trim();
+
+// "Bavaria Cruiser 40 'Bavaria Cruiser 40'", "MS Custom Aurum Sky 'M/S Aurum Sky'" — a name
+// that repeats the model says nothing.
+const addsToModel = (cleanModel: string, cleanName: string): boolean =>
+  !!cleanName &&
+  !cleanModel.toLowerCase().includes(cleanName.toLowerCase()) &&
+  !nameRepeatsModel(cleanModel, cleanName);
+
+/**
+ * The boat as the title names it, for the other SEO strings of the page (the
+ * meta / og / twitter description): "{model} {name} ({year})", no quotes,
+ * the name left out when it only repeats the model. "Charter the Lagoon 42
+ * Masterpiece (2018) from …" — the description used to read "Lagoon 42
+ * 'Masterpiece' (2018)" after the title had dropped the quotes (live check
+ * 7.10.2026).
+ */
+export const boatSeoName = ({ model, name, year }: { model: string; name: string; year?: number | null }): string => {
+  const cleanModel = squash(model);
+  const cleanName = squash(name);
+  const label = addsToModel(cleanModel, cleanName) ? [cleanModel, cleanName].filter(Boolean).join(' ') : cleanModel;
+
+  return `${label}${year ? ` (${year})` : ''}`;
+};
+
 export const buildBoatTitle = ({
   model,
   name,
@@ -75,14 +100,9 @@ export const buildBoatTitle = ({
   year?: number | null;
   tail: string;
 }): BoatTitle => {
-  const cleanModel = model.replace(/\s+/g, ' ').trim();
-  const cleanName = name.replace(/\s+/g, ' ').trim();
-  // "Bavaria Cruiser 40 'Bavaria Cruiser 40'", "MS Custom Aurum Sky 'M/S Aurum Sky'" — a name
-  // that repeats the model says nothing.
-  const hasName =
-    !!cleanName &&
-    !cleanModel.toLowerCase().includes(cleanName.toLowerCase()) &&
-    !nameRepeatsModel(cleanModel, cleanName);
+  const cleanModel = squash(model);
+  const cleanName = squash(name);
+  const hasName = addsToModel(cleanModel, cleanName);
   const namePart = hasName ? ` ${cleanName}` : '';
   const yearPart = year ? ` (${year})` : '';
   const withTail = (head: string) => (tail ? `${head} — ${tail}` : head);

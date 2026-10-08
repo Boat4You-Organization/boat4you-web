@@ -20,13 +20,13 @@ import { boatHubs } from '@/utils/server/catalogueHubs';
 import { loadManufacturerLookup } from '@/utils/server/manufacturerLookup';
 import { resolveYachtCapacity, withResolvedNotes } from '@/utils/server/yachtCapacity';
 import { BoatDescTranslate, buildBoatDescription } from '@/utils/static/boatMetaDescription';
-import { buildBoatTitle, titleBoatName, titlePlace } from '@/utils/static/boatTitle';
+import { boatSeoName, buildBoatTitle, titleBoatName, titlePlace } from '@/utils/static/boatTitle';
 import { buildMetadata, localizedUrl } from '@/utils/static/buildMetadata';
 import { getBoatImageUrl } from '@/utils/static/imageUtils';
 import { isInquiryOnlyBoat } from '@/utils/static/inquiryOnlyBoat';
 import { serializeJsonLd } from '@/utils/static/jsonLd';
 import { freeCancellationReturnPolicy } from '@/utils/static/merchantReturnPolicy';
-import { nameRepeatsModel, toTitleCase, yachtLabel } from '@/utils/static/toTitleCase';
+import { toTitleCase, yachtLabel } from '@/utils/static/toTitleCase';
 import { WeeklyOfferSummary, fromPriceOffer, offerNights, todayIso, weeklyOfferSummary } from '@/utils/static/weeklyOffers';
 import { ManufacturerLookup, yachtBrandName } from '@/utils/static/yachtBrand';
 import { CapacityFacts, capacityFacts, fromYacht } from '@/utils/static/yachtCapacity';
@@ -370,10 +370,12 @@ export async function generateMetadata({
   // title-case it for SEO display so SERP previews don't shout. Same util the
   // detail page H1 uses (memory: project_yacht_name_title_case).
   const displayName = toTitleCase(yacht.name) || yacht.name?.trim() || '';
-  // A name that only repeats the model ("MY Custom Anthea" / "Anthea") is left out.
-  const quotedName = displayName && !nameRepeatsModel(yacht.model, displayName) ? `'${displayName}'` : null;
-  const fullName = [yacht.model, quotedName].filter(Boolean).join(' ').trim();
-  const yearSuffix = yacht.buildYear ? ` (${yacht.buildYear})` : '';
+  // The model without the partner's cabin suffix and the boat's own name
+  // without its equipment notes — the title and the description name the
+  // boat the same way, without quotes (boatTitle.ts); a name that only
+  // repeats the model ("MY Custom Anthea" / "Anthea") is left out.
+  const seoModel = cleanModelName(yacht.model) || yacht.model || '';
+  const seoName = titleBoatName(displayName);
   const locationFull = yacht.location?.name ?? '';
 
   // SERP windows: title ≤ 70 characters with " | Boat4You", description
@@ -394,8 +396,8 @@ export async function generateMetadata({
   const town = titlePlace(locationFull);
   const titleTail = town ? tBoat('titleTail', { city: town }) : tBoat('titleTailNoCity');
   const boatTitle = buildBoatTitle({
-    model: cleanModelName(yacht.model) || yacht.model || '',
-    name: titleBoatName(displayName),
+    model: seoModel,
+    name: seoName,
     year: yacht.buildYear,
     tail: titleTail,
   });
@@ -405,7 +407,7 @@ export async function generateMetadata({
   // snippet). Keep under ~155 chars even with specs added. An inquiry-only
   // boat closes with the inquiry call, not "book directly".
   const description = buildBoatDescription((key, values) => tBoat(key as never, values as never), {
-    name: `${fullName}${yearSuffix}`,
+    name: boatSeoName({ model: seoModel, name: seoName, year: yacht.buildYear }),
     marina: locationFull,
     ...metaCapacity(facts),
     inquiryOnly: isInquiryOnlyBoat(yacht),

@@ -23,7 +23,7 @@ export type BoatDescKey =
 export type BoatDescTranslate = (key: BoatDescKey, values?: Record<string, string | number>) => string;
 
 interface BoatDescInput {
-  /** Model + quoted boat name + build year, e.g. "Oceanis 52 'Sunny' (2027)". */
+  /** Model + boat name + build year, no quotes (boatSeoName), e.g. "Oceanis 52 Sunny (2027)". */
   name: string;
   /** Home base as the partner spells it; omitted from the sentence when empty. */
   marina?: string | null;
