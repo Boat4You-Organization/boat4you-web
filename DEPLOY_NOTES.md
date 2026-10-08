@@ -1,6 +1,6 @@
 # Boat4You (main) — Production Deploy Notes
 
-## 2026-10-08 — 🧹 Sitnice s live provjere 8.10. (2. krug): „ležajevi" u hr opisu, „Marina, Mjesto", alt tekstovi, 404 / greška, My bookings, kalendar — ⏳ NIJE DEPLOYANO (grana `fix/w810b-polish2`)
+## 2026-10-08 — 🧹 Sitnice s live provjere 8.10. (2. krug): „ležajevi" u hr opisu, „Marina, Mjesto", alt tekstovi, 404 / greška, My bookings, kalendar — ✅ DEPLOYANO 8.10.2026 ~14:25 UTC (worktree `B4Y_REPO`, `fdcdc2e3d`, deployment id `fdcdc2e3d614-muzmewtk`)
 
 Izvor: `_seo-audit-2026-10-08/live-verify/` (X10, F2, F4, F6) i otvorene stavke 7.10. Sve je starije od izdanja 8.10. Tekstovi brokera, `/faq`, kapacitet i Product JSON-LD nisu dirani. Samo web, bez env promjena.
 
