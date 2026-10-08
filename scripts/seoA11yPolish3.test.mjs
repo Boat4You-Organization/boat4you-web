@@ -87,6 +87,29 @@ describe('F2: title case after "&", "/" and "-"', () => {
     assert.equal(toTitleCase("L'AVVENTURA-III"), "L'Avventura-III");
   });
 
+  test('inside a joined word only an I/V/X numeral stays upper: "DEUX-MI" reads "Deux-Mi"', () => {
+    assert.equal(toTitleCase('DEUX-MI'), 'Deux-Mi');
+    assert.equal(toTitleCase('MIX-UP'), 'Mix-Up');
+    assert.equal(toTitleCase('LI-LO'), 'Li-Lo');
+    assert.equal(toTitleCase('TI-BO III'), 'Ti-Bo III');
+    assert.equal(yachtLabel('Sun Odyssey 455', toTitleCase('DEUX-MI')), 'Sun Odyssey 455 | Deux-Mi');
+  });
+
+  test('punctuation in front of a word keeps the word capitalised: "(A/C" stays "(A/C"', () => {
+    assert.equal(toTitleCase('Daddy (A/C, Generator, Watermaker)'), 'Daddy (A/C, Generator, Watermaker)');
+    assert.equal(toTitleCase('Mila (A/C & Gen)'), 'Mila (A/C & Gen)');
+    assert.equal(toTitleCase('MARGEO XVI (A/C - GENERATOR)'), 'Margeo XVI (A/C - Generator)');
+    assert.equal(toTitleCase('Alboran Caipiroska (Las Galletas)'), 'Alboran Caipiroska (Las Galletas)');
+    assert.equal(toTitleCase('"LADY BUTTERFLY"'), '"Lady Butterfly"');
+    assert.equal(toTitleCase("Jays 'n Seas"), "Jays 'n Seas");
+    assert.equal(toTitleCase("ROCK 'N' ROLL"), "Rock 'n' Roll");
+  });
+
+  test('a unit after a number keeps reading lower: "160L/h" reads "160l/h", "3/AMIGOS" reads "3/Amigos"', () => {
+    assert.equal(toTitleCase('Watermaker 160L/h'), 'Watermaker 160l/h');
+    assert.equal(toTitleCase('3/AMIGOS'), '3/Amigos');
+  });
+
   test('the existing rules are unchanged', () => {
     const cases = {
       'FIND US': 'Find Us',
