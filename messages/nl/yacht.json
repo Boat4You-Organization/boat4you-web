@@ -317,6 +317,7 @@
   "faqBookA2": "Selecteer een beschikbare periode voor {name}, verstuur de online boeking en je ontvangt een bevestiging met alle charterdocumenten — de betaling wordt in termijnen verdeeld en de prijs die je ziet, is definitief.",
   "faqBookInquiryQ": "Hoe kan ik {name} huren?",
   "faqBookInquiryA": "Voor {name} zijn op dit moment geen data of prijzen online gepubliceerd, dus boeken gaat op aanvraag: stuur ons je gewenste data via het formulier op deze pagina en ons team controleert de beschikbaarheid en de prijs voor je en antwoordt per e-mail.",
+  "faqBookAgencyInquiryA": "{name} boek je op aanvraag en niet online: kies je gewenste data in de kalender en stuur ons een aanvraag via het formulier op deze pagina. Ons team controleert de beschikbaarheid en de prijs voor je en antwoordt per e-mail.",
   "descIntroShort": "<b>{name}</b>: {vesselType}{model, select, none {} other { <b>{model}</b>}}{year, select, none {} other {, bouwjaar <b>{year}</b>}}{location, select, none {} other {, thuishaven <b>{location}</b>}}.",
   "calendar": {
     "seasonAtGlance": "Het seizoen in één oogopslag · tik op een week",

@@ -33,9 +33,10 @@ interface BoatDescInput {
   /** The partner's max. people on board ("max. 12 people on board"), never a berth count. */
   maxPeople?: number | null;
   /**
-   * Boat without a bookable future offer (isInquiryOnlyBoat): its page asks
-   * for an inquiry and cannot be booked, so the sentence closes with the
-   * inquiry call (`descCtaInquiry`) instead of "book directly".
+   * Boat booked by inquiry (isBookedByInquiry: no bookable future offer, or
+   * an agency that takes inquiries only): its page asks for an inquiry and
+   * cannot be booked online, so the sentence closes with the inquiry call
+   * (`descCtaInquiry`) instead of "book directly".
    */
   inquiryOnly?: boolean;
 }

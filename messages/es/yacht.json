@@ -317,6 +317,7 @@
   "faqBookA2": "Selecciona un periodo disponible para {name}, envía la reserva en línea y recibirás la confirmación con toda la documentación del chárter; el pago se reparte en plazos y el precio que ves es el definitivo.",
   "faqBookInquiryQ": "¿Cómo puedo alquilar {name}?",
   "faqBookInquiryA": "Por ahora {name} no tiene fechas ni precios publicados en línea, así que se reserva mediante consulta: envíanos las fechas que prefieras con el formulario de esta página y nuestro equipo comprobará la disponibilidad y el precio por ti y te responderá por correo electrónico.",
+  "faqBookAgencyInquiryA": "{name} se reserva mediante consulta y no en línea: elige en el calendario las fechas que prefieras y envíanos una consulta con el formulario de esta página. Nuestro equipo comprobará la disponibilidad y el precio por ti y te responderá por correo electrónico.",
   "descIntroShort": "<b>{name}</b>: {vesselType}{model, select, none {} other { <b>{model}</b>}}{year, select, none {} other {, construido en <b>{year}</b>}}{location, select, none {} other {, con base en <b>{location}</b>}}.",
   "calendar": {
     "seasonAtGlance": "La temporada de un vistazo · toca una semana",

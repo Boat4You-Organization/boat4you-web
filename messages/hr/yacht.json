@@ -317,6 +317,7 @@
   "faqBookA2": "Odaberite slobodan termin za {name}, pošaljite online rezervaciju i primit ćete potvrdu sa svim charter dokumentima — plaćanje je podijeljeno na rate, a cijena koju vidite je konačna.",
   "faqBookInquiryQ": "Kako unajmiti plovilo {name}?",
   "faqBookInquiryA": "Za plovilo {name} trenutačno nema online objavljenih termina ni cijena pa se rezervira putem upita: pošaljite nam željene datume putem obrasca na ovoj stranici, a naš tim provjerit će dostupnost i cijenu za vas i odgovoriti vam e-mailom.",
+  "faqBookAgencyInquiryA": "Plovilo {name} rezervira se upitom, a ne online: odaberite željene datume u kalendaru i pošaljite nam upit putem obrasca na ovoj stranici. Naš tim provjerit će dostupnost i cijenu za vas i odgovoriti vam e-mailom.",
   "descIntroShort": "<b>{name}</b>: {vesselType}{model, select, none {} other { <b>{model}</b>}}{year, select, none {} other {, godina gradnje <b>{year}</b>}}{location, select, none {} other {, matična baza <b>{location}</b>}}.",
   "calendar": {
     "seasonAtGlance": "Sezona na jedan pogled · dodirnite tjedan",

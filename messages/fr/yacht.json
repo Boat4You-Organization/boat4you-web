@@ -317,6 +317,7 @@
   "faqBookA2": "Sélectionnez une période disponible pour {name}, envoyez la réservation en ligne et vous recevez la confirmation avec tous les documents de location — le paiement se fait en plusieurs versements et le prix affiché est définitif.",
   "faqBookInquiryQ": "Comment louer {name} ?",
   "faqBookInquiryA": "Aucune date ni aucun prix ne sont publiés en ligne pour {name} pour le moment, la location se fait donc sur demande : envoyez-nous vos dates souhaitées via le formulaire de cette page, et notre équipe vérifiera pour vous la disponibilité et le prix avant de vous répondre par e-mail.",
+  "faqBookAgencyInquiryA": "{name} se réserve sur demande et non en ligne : choisissez vos dates souhaitées dans le calendrier et envoyez-nous une demande via le formulaire de cette page. Notre équipe vérifiera pour vous la disponibilité et le prix avant de vous répondre par e-mail.",
   "descIntroShort": "<b>{name}</b> : {vesselType}{model, select, none {} other { <b>{model}</b>}}{year, select, none {} other {, construit en <b>{year}</b>}}{location, select, none {} other {, basé à <b>{location}</b>}}.",
   "calendar": {
     "seasonAtGlance": "La saison en un coup d’œil · touchez une semaine",

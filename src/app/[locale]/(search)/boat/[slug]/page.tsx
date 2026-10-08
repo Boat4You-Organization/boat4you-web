@@ -23,11 +23,17 @@ import { BoatDescTranslate, buildBoatDescription } from '@/utils/static/boatMeta
 import { boatSeoName, buildBoatTitle, titleBoatName, titlePlace } from '@/utils/static/boatTitle';
 import { buildMetadata, localizedUrl } from '@/utils/static/buildMetadata';
 import { getBoatImageUrl } from '@/utils/static/imageUtils';
-import { isInquiryOnlyBoat } from '@/utils/static/inquiryOnlyBoat';
+import { isBookedByInquiry } from '@/utils/static/inquiryOnlyBoat';
 import { serializeJsonLd } from '@/utils/static/jsonLd';
 import { freeCancellationReturnPolicy } from '@/utils/static/merchantReturnPolicy';
 import { toTitleCase, yachtLabel } from '@/utils/static/toTitleCase';
-import { WeeklyOfferSummary, fromPriceOffer, offerNights, todayIso, weeklyOfferSummary } from '@/utils/static/weeklyOffers';
+import {
+  WeeklyOfferSummary,
+  fromPriceOffer,
+  offerNights,
+  todayIso,
+  weeklyOfferSummary,
+} from '@/utils/static/weeklyOffers';
 import { ManufacturerLookup, yachtBrandName } from '@/utils/static/yachtBrand';
 import { CapacityFacts, capacityFacts, fromYacht } from '@/utils/static/yachtCapacity';
 import { buildYachtFaq, buildYachtFaqSchema } from '@/utils/static/yachtFaq';
@@ -132,11 +138,13 @@ function buildYachtProductSchema(
   facts: CapacityFacts,
   weekly: WeeklyOfferSummary<YachtModel['offers'][number]> | null
 ) {
-  // No bookable future offer (27.9.2026): the page asks for an inquiry and
-  // shows no price, so the markup carries none either — no price, no
-  // availability. A Product without offers, review or aggregateRating is
-  // an invalid item in Search Console (see below), so no Product at all.
-  if (isInquiryOnlyBoat(yacht)) return null;
+  // Booked by inquiry — no bookable future offer (27.9.2026), or an agency
+  // that takes inquiries only (isBookedByInquiry): the page asks for an
+  // inquiry and shows no price, so the markup carries none either — no
+  // price, no availability. A Product without offers, review or
+  // aggregateRating is an invalid item in Search Console (see below), so no
+  // Product at all.
+  if (isBookedByInquiry(yacht)) return null;
 
   const url = localizedUrl(locale, canonicalBoatPath(yacht));
   const mainImage = yachtShareImageUrl(yacht) || `${meta.url}/meta/og-image.png`;
@@ -404,13 +412,13 @@ export async function generateMetadata({
 
   // Description — native in every locale from `metadata.boat.desc*` (only EN
   // and HR were native before; the other seven showed English in the SERP
-  // snippet). Keep under ~155 chars even with specs added. An inquiry-only
-  // boat closes with the inquiry call, not "book directly".
+  // snippet). Keep under ~155 chars even with specs added. A boat booked by
+  // inquiry closes with the inquiry call, not "book directly".
   const description = buildBoatDescription((key, values) => tBoat(key as never, values as never), {
     name: boatSeoName({ model: seoModel, name: seoName, year: yacht.buildYear }),
     marina: locationFull,
     ...metaCapacity(facts),
-    inquiryOnly: isInquiryOnlyBoat(yacht),
+    inquiryOnly: isBookedByInquiry(yacht),
   });
 
   return buildMetadata({
@@ -472,9 +480,9 @@ const BoatPage = async ({
   const clientYacht = withResolvedNotes(yacht, capacity);
   // The boat's weekly prices (weeklyOffers.ts): the Product's AggregateOffer,
   // the FAQ's price answer and the "From … / week" line all read this one
-  // summary. An inquiry-only boat shows no price anywhere.
+  // summary. A boat booked by inquiry shows no price anywhere.
   const today = todayIso();
-  const weekly = isInquiryOnlyBoat(yacht) ? null : weeklyOfferSummary(yacht.offers, today);
+  const weekly = isBookedByInquiry(yacht) ? null : weeklyOfferSummary(yacht.offers, today);
   const productSchema = buildYachtProductSchema(
     yacht,
     locale as LocaleType,
@@ -489,7 +497,7 @@ const BoatPage = async ({
   // lowPrice in euros; when no week is bookable, the cheapest bookable period
   // of another length as "Price for N days". "Price on request" only when
   // nothing bookable carries a price (weeklyOffers.ts, fromPriceOffer).
-  const fromOffer = isInquiryOnlyBoat(yacht) ? null : fromPriceOffer(yacht.offers, today, weekly);
+  const fromOffer = isBookedByInquiry(yacht) ? null : fromPriceOffer(yacht.offers, today, weekly);
   const fromNights = fromOffer ? offerNights(fromOffer) : null;
   const fromPrice =
     fromOffer && fromNights

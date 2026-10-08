@@ -317,6 +317,7 @@
   "faqBookA2": "Zaznacz dostępny termin dla jednostki {name}, wyślij rezerwację online, a otrzymasz potwierdzenie wraz z kompletem dokumentów czarterowych — płatność jest rozłożona na raty, a cena, którą widzisz, jest ostateczna.",
   "faqBookInquiryQ": "Jak wyczarterować jednostkę {name}?",
   "faqBookInquiryA": "Dla jednostki {name} nie ma obecnie opublikowanych online terminów ani cen, dlatego rezerwacja odbywa się na zapytanie: wyślij nam preferowane terminy przez formularz na tej stronie, a nasz zespół sprawdzi dla Ciebie dostępność i cenę i odpowie e-mailem.",
+  "faqBookAgencyInquiryA": "Jednostkę {name} rezerwuje się na zapytanie, a nie online: wybierz preferowane terminy w kalendarzu i wyślij nam zapytanie przez formularz na tej stronie. Nasz zespół sprawdzi dla Ciebie dostępność i cenę i odpowie e-mailem.",
   "descIntroShort": "<b>{name}</b>: {vesselType}{model, select, none {} other { <b>{model}</b>}}{year, select, none {} other {, rocznik <b>{year}</b>}}{location, select, none {} other {, baza: <b>{location}</b>}}.",
   "calendar": {
     "seasonAtGlance": "Sezon w skrócie · dotknij tygodnia",

@@ -317,6 +317,7 @@
   "faqBookA2": "Wählen Sie einen freien Zeitraum für {name}, senden Sie die Online-Buchung ab und Sie erhalten die Bestätigung mit allen Charterunterlagen — die Zahlung erfolgt in Raten und der angezeigte Preis ist endgültig.",
   "faqBookInquiryQ": "Wie kann ich {name} chartern?",
   "faqBookInquiryA": "Für {name} sind derzeit keine Termine und Preise online veröffentlicht, daher wird auf Anfrage gebucht: Senden Sie uns Ihre Wunschtermine über das Formular auf dieser Seite, und unser Team prüft Verfügbarkeit und Preis für Sie und antwortet per E-Mail.",
+  "faqBookAgencyInquiryA": "{name} wird nicht online, sondern auf Anfrage gebucht: Wählen Sie Ihre Wunschtermine im Kalender und senden Sie uns eine Anfrage über das Formular auf dieser Seite. Unser Team prüft Verfügbarkeit und Preis für Sie und antwortet per E-Mail.",
   "descIntroShort": "<b>{name}</b>: {vesselType}{model, select, none {} other { <b>{model}</b>}}{year, select, none {} other {, Baujahr <b>{year}</b>}}{location, select, none {} other {, Heimathafen <b>{location}</b>}}.",
   "calendar": {
     "seasonAtGlance": "Saison im Überblick · Woche antippen",

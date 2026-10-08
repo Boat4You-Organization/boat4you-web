@@ -317,6 +317,7 @@
   "faqBookA2": "Select an available period for {name}, submit the online booking and you’ll receive confirmation with all charter documents — payment is split into instalments and the price you see is final.",
   "faqBookInquiryQ": "How can I charter {name}?",
   "faqBookInquiryA": "{name} has no dates or prices published online at the moment, so it is booked by inquiry: send us your preferred dates using the form on this page and our team will check availability and the price for you and reply by e-mail.",
+  "faqBookAgencyInquiryA": "{name} is booked by inquiry, not online: choose your preferred dates in the calendar and send us an inquiry using the form on this page. Our team will check availability and the price for you and reply by e-mail.",
   "descIntroShort": "<b>{name}</b> is a {vesselType}{model, select, none {} other { (<b>{model}</b>)}}{year, select, none {} other {, built in <b>{year}</b>}}{location, select, none {} other {, based in <b>{location}</b>}}.",
   "calendar": {
     "seasonAtGlance": "Season at a glance · tap a week to jump",

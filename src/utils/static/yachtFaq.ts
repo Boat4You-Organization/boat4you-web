@@ -1,7 +1,7 @@
 import { CharterType, YachtModel } from '@/models/yacht.model';
 import { shownGuestBerths } from '@/utils/static/capacityProse';
 import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
-import { isInquiryOnlyBoat } from '@/utils/static/inquiryOnlyBoat';
+import { isBookedByInquiry, isInquiryOnlyBoat } from '@/utils/static/inquiryOnlyBoat';
 import { toTitleCase } from '@/utils/static/toTitleCase';
 import { todayIso, weeklyOfferSummary } from '@/utils/static/weeklyOffers';
 import { CapacityFacts, capacityFacts, fromYacht } from '@/utils/static/yachtCapacity';
@@ -95,8 +95,9 @@ export const buildYachtFaq = (
     answer: bareboat ? t(`faqLicenceBareboatA${v(8)}`, { name }) : t(`faqLicenceCrewedA${v(8, 2)}`, { name }),
   });
 
-  // No bookable future offer: no price to quote, and booking is by inquiry.
-  const inquiryOnly = isInquiryOnlyBoat(yacht);
+  // Booked by inquiry (no bookable future offer, or an agency that takes
+  // inquiries only): no price to quote, and no online checkout to promise.
+  const inquiryOnly = isBookedByInquiry(yacht);
 
   // "From €X per week" — the cheapest bookable 7-night week ahead.
   if (!inquiryOnly && weekFromPriceEur != null && Math.round(weekFromPriceEur) > 0) {
@@ -118,9 +119,14 @@ export const buildYachtFaq = (
     });
   }
 
+  // The inquiry answer of a boat without a bookable offer says no dates are
+  // published; an inquiry-only agency's boat shows its free dates in the
+  // calendar, so its answer asks for dates from there.
+  const inquiryAnswer = isInquiryOnlyBoat(yacht) ? 'faqBookInquiryA' : 'faqBookAgencyInquiryA';
+
   entries.push(
     inquiryOnly
-      ? { question: t('faqBookInquiryQ', { name }), answer: t('faqBookInquiryA', { name }) }
+      ? { question: t('faqBookInquiryQ', { name }), answer: t(inquiryAnswer, { name }) }
       : { question: t('faqBookQ', { name }), answer: t(`faqBookA${v(11)}`, { name }) }
   );
 

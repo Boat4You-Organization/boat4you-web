@@ -15,7 +15,7 @@ import colors from '@/styles/themes/colors';
 import { useBoatEquipmentDescription } from '@/utils/hooks/useBoatEquipmentDescription';
 import useCapacityFmt from '@/utils/hooks/useCapacityFmt';
 import { accommodationProse } from '@/utils/static/capacityProse';
-import { isInquiryOnlyBoat } from '@/utils/static/inquiryOnlyBoat';
+import { isBookedByInquiry } from '@/utils/static/inquiryOnlyBoat';
 import { toTitleCase } from '@/utils/static/toTitleCase';
 import { Capacity, capacityFacts, capacityRows, fromYacht } from '@/utils/static/yachtCapacity';
 import { yachtVariant } from '@/utils/static/yachtFaq';
@@ -342,8 +342,9 @@ const DetailsTab = ({ yacht, capacity: resolvedCapacity }: DetailsTabProps) => {
             <Typography variant="body1" color={colors.black500}>
               {t.rich(
                 // Booking copy ("book online", "real-time prices") would be
-                // wrong for a boat without bookable offers — ask for dates.
-                (isInquiryOnlyBoat(yacht) ? 'yacht.descCtaInquiry' : `yacht.descCtaV${descVariant(5)}`) as never,
+                // wrong for a boat booked by inquiry (no bookable offer, or an
+                // inquiry-only agency) — ask for dates.
+                (isBookedByInquiry(yacht) ? 'yacht.descCtaInquiry' : `yacht.descCtaV${descVariant(5)}`) as never,
                 {
                   name: displayName,
                   b: (chunks: React.ReactNode) => <strong>{chunks}</strong>,
