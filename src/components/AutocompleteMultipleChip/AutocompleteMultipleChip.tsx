@@ -15,6 +15,7 @@ import {
   Typography,
 } from '@mui/material';
 import cx from 'clsx';
+import { useTranslations } from 'next-intl';
 
 import SearchOptionItem from '@/components/SearchOptionItem';
 import { SearchOptionTag } from '@/components/SearchOptionItem/SearchOptionItem';
@@ -71,6 +72,7 @@ const AutocompleteMultipleChip = ({
   valueField = 'id',
   alwaysOpen = false,
 }: AutocompleteMultipleChipProps) => {
+  const t = useTranslations('common');
   const [isFocused, setIsFocused] = useState(false);
   const [internalValue, setInternalValue] = useState<AutocompleteOption[]>([]);
 
@@ -355,7 +357,7 @@ const AutocompleteMultipleChip = ({
         isOptionEqualToValue={handleIsOptionEqualToValue}
         getOptionDisabled={getOptionDisabled}
         getOptionLabel={option => option.label}
-        noOptionsText="No matches"
+        noOptionsText={t('noMatches')}
         disabled={disabled}
         filterOptions={opts => opts}
         sx={{

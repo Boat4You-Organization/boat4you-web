@@ -357,13 +357,13 @@ const BoatsSection = ({
               value={viewType}
               exclusive
               onChange={handleViewType}
-              aria-label="view type"
+              aria-label={tCommon('a11y.viewType')}
               sx={{ display: { xs: 'none', lg: 'flex' } }}
             >
-              <ToggleButton value="list" aria-label="list">
+              <ToggleButton value="list" aria-label={tCommon('a11y.listView')}>
                 <List size={24} />
               </ToggleButton>
-              <ToggleButton value="grid" aria-label="grid">
+              <ToggleButton value="grid" aria-label={tCommon('a11y.gridView')}>
                 <Grid size={24} />
               </ToggleButton>
             </ToggleButtonGroup>
@@ -374,7 +374,7 @@ const BoatsSection = ({
                 value={visibleTabValue}
                 onChange={handleTabChange}
                 variant="scrollable"
-                aria-label="all destinations tabs"
+                aria-label={tFilters('sortBy')}
               >
                 {visibleTabs.map(item => {
                   const isDisabled =

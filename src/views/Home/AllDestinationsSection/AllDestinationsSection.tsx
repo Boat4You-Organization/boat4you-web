@@ -105,7 +105,12 @@ const AllDestinationsSection = ({ countries }: AllDestinationsSectionProps) => {
       </Typography>
       <Box sx={{ width: '100%', mt: 3 }}>
         <Box sx={{ borderBottom: 1, borderColor: colors.black200 }}>
-          <Tabs value={tabValue} onChange={handleChange} variant="scrollable" aria-label="all destinations tabs">
+          <Tabs
+            value={tabValue}
+            onChange={handleChange}
+            variant="scrollable"
+            aria-label={t('allDestinationsSection.continentsLabel')}
+          >
             {continentsTabs.map(continent => (
               <Tab
                 key={continent}

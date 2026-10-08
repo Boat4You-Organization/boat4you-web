@@ -344,6 +344,7 @@
   "allInclusiveDescription": "Załoga, posiłki, napoje i atrakcje — wszystko wliczone, po prostu się ciesz.",
   "boatsSelected": "Wybranych łodzi",
   "emptyWishlist": "Twoja lista życzeń jest pusta",
+  "noMatches": "Brak wyników",
   "savePreferences": "Zapisz preferencje",
   "favorites": "Ulubione",
   "logOut": "Wyloguj się",
@@ -672,6 +673,11 @@
     "back": "Wstecz",
     "openNavigation": "Otwórz menu nawigacji",
     "openList": "Otwórz listę",
-    "closeList": "Zamknij listę"
+    "closeList": "Zamknij listę",
+    "viewType": "Widok wyników",
+    "listView": "Widok listy",
+    "gridView": "Widok siatki",
+    "rangeMin": "{label}: minimum",
+    "rangeMax": "{label}: maksimum"
   }
 }

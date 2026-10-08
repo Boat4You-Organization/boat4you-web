@@ -122,7 +122,7 @@ const LanguageCurrency = ({ language, currency, id }: LanguageCurrencyProps) => 
   return (
     <>
       <IconButton
-        aria-label="language"
+        aria-label={t('languageModal.title')}
         classes={{ root: styles.iconButtonRoot }}
         className={styles.iconButton}
         onClick={toggleIsOpen}

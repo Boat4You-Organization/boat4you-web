@@ -304,6 +304,7 @@
   "allInclusiveDescription": "Equipaggio, pasti, bevande e attività tutto incluso - goditi semplicemente.",
   "boatsSelected": "Barche selezionate",
   "emptyWishlist": "La tua lista desideri è vuota",
+  "noMatches": "Nessun risultato",
   "savePreferences": "Salva preferenze",
   "favorites": "Preferiti",
   "logOut": "Esci",
@@ -660,6 +661,11 @@
     "back": "Indietro",
     "openNavigation": "Apri il menu di navigazione",
     "openList": "Apri l’elenco",
-    "closeList": "Chiudi l’elenco"
+    "closeList": "Chiudi l’elenco",
+    "viewType": "Visualizzazione dei risultati",
+    "listView": "Vista elenco",
+    "gridView": "Vista griglia",
+    "rangeMin": "{label}: minimo",
+    "rangeMax": "{label}: massimo"
   }
 }

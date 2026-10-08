@@ -304,6 +304,7 @@
   "allInclusiveDescription": "Tripulación, comidas, bebidas y actividades todo incluido - solo disfruta.",
   "boatsSelected": "Barcos seleccionados",
   "emptyWishlist": "Tu lista de deseos está vacía",
+  "noMatches": "Sin resultados",
   "savePreferences": "Guardar preferencias",
   "favorites": "Favoritos",
   "logOut": "Cerrar sesión",
@@ -660,6 +661,11 @@
     "back": "Atrás",
     "openNavigation": "Abrir el menú de navegación",
     "openList": "Abrir la lista",
-    "closeList": "Cerrar la lista"
+    "closeList": "Cerrar la lista",
+    "viewType": "Vista de resultados",
+    "listView": "Vista de lista",
+    "gridView": "Vista de cuadrícula",
+    "rangeMin": "{label}: mínimo",
+    "rangeMax": "{label}: máximo"
   }
 }

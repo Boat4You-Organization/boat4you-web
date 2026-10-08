@@ -308,6 +308,7 @@
   "allInclusiveDescription": "Posada, obroci, piće i aktivnosti uključeni – samo uživajte.",
   "boatsSelected": "Odabrani brodovi",
   "emptyWishlist": "Vaša lista želja je prazna",
+  "noMatches": "Nema rezultata",
   "savePreferences": "Spremi postavke",
   "favorites": "Favoriti",
   "logOut": "Odjavi se",
@@ -672,6 +673,11 @@
     "back": "Natrag",
     "openNavigation": "Otvori navigacijski izbornik",
     "openList": "Otvori popis",
-    "closeList": "Zatvori popis"
+    "closeList": "Zatvori popis",
+    "viewType": "Prikaz rezultata",
+    "listView": "Prikaz popisa",
+    "gridView": "Prikaz mreže",
+    "rangeMin": "{label}: najmanje",
+    "rangeMax": "{label}: najviše"
   }
 }

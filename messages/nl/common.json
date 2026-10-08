@@ -344,6 +344,7 @@
   "allInclusiveDescription": "Bemanning, maaltijden, drankjes en activiteiten allemaal inbegrepen — je hoeft alleen te genieten.",
   "boatsSelected": "Geselecteerde boten",
   "emptyWishlist": "Je verlanglijst is leeg",
+  "noMatches": "Geen resultaten",
   "savePreferences": "Voorkeuren opslaan",
   "favorites": "Favorieten",
   "logOut": "Uitloggen",
@@ -660,6 +661,11 @@
     "back": "Terug",
     "openNavigation": "Navigatiemenu openen",
     "openList": "Lijst openen",
-    "closeList": "Lijst sluiten"
+    "closeList": "Lijst sluiten",
+    "viewType": "Weergave van de resultaten",
+    "listView": "Lijstweergave",
+    "gridView": "Rasterweergave",
+    "rangeMin": "{label}: minimum",
+    "rangeMax": "{label}: maximum"
   }
 }

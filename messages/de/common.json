@@ -304,6 +304,7 @@
   "allInclusiveDescription": "Crew, Mahlzeiten, Getränke und Aktivitäten alles inklusive - einfach genießen.",
   "boatsSelected": "Boote ausgewählt",
   "emptyWishlist": "Ihre Wunschliste ist leer",
+  "noMatches": "Keine Treffer",
   "savePreferences": "Einstellungen speichern",
   "favorites": "Favoriten",
   "logOut": "Abmelden",
@@ -660,6 +661,11 @@
     "back": "Zurück",
     "openNavigation": "Navigationsmenü öffnen",
     "openList": "Liste öffnen",
-    "closeList": "Liste schließen"
+    "closeList": "Liste schließen",
+    "viewType": "Ergebnisansicht",
+    "listView": "Listenansicht",
+    "gridView": "Rasteransicht",
+    "rangeMin": "{label}: Minimum",
+    "rangeMax": "{label}: Maximum"
   }
 }

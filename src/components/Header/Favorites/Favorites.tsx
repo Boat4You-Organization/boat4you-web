@@ -33,7 +33,7 @@ const Favorites = () => {
   return (
     <>
       <IconButton
-        aria-label="favorites"
+        aria-label={t('favorites')}
         classes={{ root: styles.iconButtonRoot }}
         className={styles.iconButton}
         onClick={handleClick}

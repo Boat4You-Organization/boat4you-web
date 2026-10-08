@@ -120,6 +120,7 @@
     "allOf": "Explore our ",
     "ourDestinations": "favorite places to sail",
     "specialDeals": "Get special deals and save money on every booking reservation.",
+    "continentsLabel": "Destinations by continent",
     "continents": {
       "europe": "Europe",
       "americas": "Americas",

@@ -15,6 +15,7 @@ import {
   Typography,
   createFilterOptions,
 } from '@mui/material';
+import { useTranslations } from 'next-intl';
 
 import Checkbox from '@/components/Checkbox';
 
@@ -67,6 +68,7 @@ const AutocompleteMultiple = ({
   disabled,
   getOptionDisabled,
 }: AutocompleteMultipleProps) => {
+  const t = useTranslations('common');
   const stableId = useMemo(
     () => id ?? `autocomplete-${slugify(label || placeholder || 'field') || 'field'}`,
     [id, label, placeholder]
@@ -114,6 +116,11 @@ const AutocompleteMultiple = ({
           stringify: (opt: SelectOption) => opt.label,
         })}
         popupIcon={<ExpandMoreRounded />}
+        // MUI's own labels are English ("Open" as the arrow's aria-label and
+        // hover title, "No options") — the page's language instead.
+        openText={t('a11y.openList')}
+        closeText={t('a11y.closeList')}
+        noOptionsText={t('noMatches')}
         getOptionLabel={option => option.label}
         getOptionDisabled={getOptionDisabled}
         // ID is the only stable unique key — labels can collide (e.g. two

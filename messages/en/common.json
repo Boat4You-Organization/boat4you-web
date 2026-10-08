@@ -356,6 +356,7 @@
   "allInclusiveDescription": "Crew, meals, drinks, and activities all included - just enjoy.",
   "boatsSelected": "Boats selected",
   "emptyWishlist": "Your wishlist is empty",
+  "noMatches": "No matches",
   "savePreferences": "Save preferences",
   "favorites": "Favorites",
   "logOut": "Log out",
@@ -660,6 +661,11 @@
     "back": "Back",
     "openNavigation": "Open navigation menu",
     "openList": "Open list",
-    "closeList": "Close list"
+    "closeList": "Close list",
+    "viewType": "Results view",
+    "listView": "List view",
+    "gridView": "Grid view",
+    "rangeMin": "{label} minimum",
+    "rangeMax": "{label} maximum"
   }
 }
