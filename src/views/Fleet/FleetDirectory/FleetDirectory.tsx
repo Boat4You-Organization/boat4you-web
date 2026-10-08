@@ -2,7 +2,7 @@ import { getLocale, getTranslations } from 'next-intl/server';
 
 import { routing } from '@/i18n/routing';
 import { FleetEntry, FleetPage, fleetPagePath } from '@/utils/static/fleetIndex';
-import { nameRepeatsModel } from '@/utils/static/toTitleCase';
+import { nameRepeatsModel, toTitleCase } from '@/utils/static/toTitleCase';
 import { yachtsIndexPath } from '@/utils/static/yachtModelKey';
 
 import styles from './FleetDirectory.module.scss';
@@ -85,6 +85,11 @@ const FleetDirectory = async ({ slice }: { slice: FleetPage }) => {
                 .filter(Boolean)
                 .join(' · ');
 
+              // The partner's name title-cased and trimmed like on the cards
+              // ("LADIES&GENTLEMEN" reads "Ladies&Gentlemen", "MURDOCK "
+              // "Murdock"; display only, live check 8.10.2026 B1).
+              const name = toTitleCase(entry.name);
+
               // Model first, the vessel name (when it adds to the model) in a
               // second <span>, the specs in <small> — the list's stylesheet
               // tells them apart by element, not by class.
@@ -92,7 +97,7 @@ const FleetDirectory = async ({ slice }: { slice: FleetPage }) => {
                 <li key={entry.slug}>
                   <a href={`${prefix}/boat/${entry.slug}`}>
                     <span>{entry.modelName}</span>
-                    {!nameRepeatsModel(entry.modelName, entry.name) && <span>{entry.name}</span>}
+                    {name && !nameRepeatsModel(entry.modelName, name) && <span>{name}</span>}
                     {specs && <small>{specs}</small>}
                   </a>
                 </li>
