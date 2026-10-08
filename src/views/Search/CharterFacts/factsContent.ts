@@ -6,6 +6,7 @@ import { CharterFacts } from '@/utils/server/charterFacts';
 import { loadDestinationIndex, locationForDid, resolveDestinationName } from '@/utils/server/destinationDid';
 import { findModelForYacht } from '@/utils/server/modelCatalog';
 import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
+import { isGulet } from '@/utils/static/guletCrewed';
 import { canonicalManufacturer, modelDisplayName } from '@/utils/static/yachtModelKey';
 
 import { MIN_ROW_BOATS, isTypeNameModel } from './factsMath';
@@ -101,8 +102,9 @@ export interface FactsTileLabels {
 }
 
 /**
- * The figure tiles of a facts row: boats, skipper, obligatory extras, deposit,
- * check-in days and median build year — each only when the row carries it.
+ * The figure tiles of a facts row: boats, skipper (never for gulets),
+ * obligatory extras, deposit, check-in days and median build year — each only
+ * when the row carries it.
  * `listingTotal` (the landing's count H2) replaces the nightly boat count when
  * known, so a page states one number (audit B12).
  */
@@ -120,7 +122,8 @@ export const factsTiles = (
       label: labels.activeBoats,
       value: fmt.number(listingTotal && listingTotal > 0 ? listingTotal : facts.activeBoats),
     },
-    ...(facts.skipperWeekly && facts.skipperWeekly.median > 0
+    // No skipper on a gulet row: a gulet is chartered with its crew (guletCrewed.ts).
+    ...(!isGulet(facts.vesselType) && facts.skipperWeekly && facts.skipperWeekly.median > 0
       ? [
           {
             label: labels.skipper,

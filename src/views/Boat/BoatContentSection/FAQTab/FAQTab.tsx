@@ -9,6 +9,7 @@ import AccordionMenu from '@/components/AccordionMenu';
 import FAQ from '@/components/SvgIcons/FAQ';
 import { YachtModel } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
+import { licenceFaqCategory } from '@/utils/static/guletCrewed';
 import { toTitleCase } from '@/utils/static/toTitleCase';
 import { YachtFaqEntry } from '@/utils/static/yachtFaq';
 import BrochureDownloadBox from '@/views/Boat/BoatContentSection/BrochureDownloadBox';
@@ -24,17 +25,8 @@ const FAQTab = ({ yacht, yachtFaq }: FAQTabProps) => {
   const t = useTranslations('yacht');
   const locale = useLocale();
 
-  const categoryMap: Record<string, string> = {
-    de: 'Lizenzen & Segelanforderungen',
-    en: 'Licenses & Sailing Requirements',
-    es: 'Licencias y Requisitos de Navegación',
-    fr: 'Licences et Exigences de Navigation',
-    hr: 'Dozvole & Uvjeti Jedrenja',
-    it: 'Licenze e Requisiti di Navigazione',
-    pt: 'Licenças e Requisitos de Navegação à Vela',
-  };
-
-  const category = categoryMap[locale] || 'Licenses & Sailing Requirements';
+  // The general licence FAQ — none on a gulet, chartered only with its crew (guletCrewed.ts).
+  const category = licenceFaqCategory(locale, yacht.vesselType);
 
   useEffect(() => {
     if (yacht.custom) {
@@ -45,6 +37,8 @@ const FAQTab = ({ yacht, yachtFaq }: FAQTabProps) => {
   }, [yacht.custom, yacht.slug]);
 
   useEffect(() => {
+    if (!category) return;
+
     startTransition(() => {
       getFAQAction({ locale, category });
     });
@@ -99,11 +93,11 @@ const FAQTab = ({ yacht, yachtFaq }: FAQTabProps) => {
           {t('FAQTitle')}
         </Typography>
         {/* Per-yacht Q&A first (server-built, variant-rotated, mirrors the
-            FAQPage JSON-LD) — the generic licence FAQ from WP follows. */}
+            FAQPage JSON-LD) — the generic licence FAQ follows, except on a gulet. */}
         {yachtFaq && yachtFaq.length > 0 && (
           <AccordionMenu accordionList={yachtFaq.map(f => ({ title: f.question, content: f.answer }))} />
         )}
-        {faqAction && <AccordionMenu accordionList={faqAction} />}
+        {category && faqAction && <AccordionMenu accordionList={faqAction} />}
       </Stack>
     </Stack>
   );

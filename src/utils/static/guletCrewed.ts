@@ -30,3 +30,49 @@ export const offersBareboat = (yacht: {
 
   return types.includes(CharterType.BAREBOAT);
 };
+
+/**
+ * The search update that sets the boat types. The rental type (Bareboat /
+ * With skipper) is cleared when the search becomes or was gulets only: it is
+ * no choice there, and one left over from a link would come back hidden.
+ */
+export const boatTypesUpdate = (
+  current: readonly string[] | null | undefined,
+  next: string[]
+): { boatTypes: string[]; charterType?: string[] } =>
+  isGuletOnly(next) || isGuletOnly(current) ? { boatTypes: next, charterType: [] } : { boatTypes: next };
+
+/**
+ * A /search querystring without the rental type when only gulets are
+ * searched: an old or shared link (`boatTypes=GULET&charterType=…`) filters
+ * nothing the page lets you choose (the filter and its chip are hidden).
+ */
+export const withoutGuletRentalType = (qs: string): string => {
+  const params = new URLSearchParams(qs);
+
+  if (!params.has('charterType') || !isGuletOnly(params.get('boatTypes')?.split(',').filter(Boolean))) return qs;
+
+  params.delete('charterType');
+
+  return params.toString();
+};
+
+// The general licence FAQ group (src/posts/static/<locale>/faq.md) a boat
+// page lists under its own questions.
+const LICENCE_FAQ_CATEGORY: Record<string, string> = {
+  de: 'Lizenzen & Segelanforderungen',
+  en: 'Licenses & Sailing Requirements',
+  es: 'Licencias y Requisitos de Navegación',
+  fr: 'Licences et Exigences de Navigation',
+  hr: 'Dozvole & Uvjeti Jedrenja',
+  it: 'Licenze e Requisiti di Navigazione',
+  pt: 'Licenças e Requisitos de Navegação à Vela',
+};
+
+/**
+ * The licence FAQ group under a boat's own questions — none for a gulet: it
+ * asks "can I skipper the yacht myself?" and which licence a bareboat
+ * charter needs, under the gulet's own "no licence is needed" answer.
+ */
+export const licenceFaqCategory = (locale: string, vesselType?: string | null): string | null =>
+  isGulet(vesselType) ? null : (LICENCE_FAQ_CATEGORY[locale] ?? LICENCE_FAQ_CATEGORY.en);

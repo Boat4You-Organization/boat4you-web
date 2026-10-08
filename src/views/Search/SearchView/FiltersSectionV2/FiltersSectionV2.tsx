@@ -16,7 +16,7 @@ import useManufacturerAutocompleteMultiple from '@/utils/hooks/useManufacturersA
 import useModelAutocompleteMultiple from '@/utils/hooks/useModelAutocompleteMultiple';
 import useQueryParams from '@/utils/hooks/useQueryParams';
 import DateTime from '@/utils/static/DateTime';
-import { isGuletOnly } from '@/utils/static/guletCrewed';
+import { boatTypesUpdate, isGuletOnly } from '@/utils/static/guletCrewed';
 import { metersToFeet } from '@/utils/static/metersToFeet';
 import { useUserStore } from '@/valtio/user/user.store';
 import { useYachtStore } from '@/valtio/yacht/yacht.store';
@@ -229,8 +229,8 @@ const FiltersSectionV2 = ({ catalogueData, catalogueFilters, isMobile, serverTot
     // eslint-disable-next-line @typescript-eslint/no-shadow
     const next = selectedTypes.includes(type) ? selectedTypes.filter(t => t !== type) : [...selectedTypes, type];
 
-    // Gulets only: the rental type is no choice (below), so none stays applied.
-    setMultipleParams({ boatTypes: next, ...(isGuletOnly(next) && { charterType: [] }), page: 1 });
+    // To or from gulets only: the rental type is no choice there (below), so none stays applied.
+    setMultipleParams({ ...boatTypesUpdate(selectedTypes, next), page: 1 });
   };
 
   // Rental type (charter type as Bareboat / Skippered checkbox pair) ─

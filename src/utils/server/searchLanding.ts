@@ -4,6 +4,7 @@ import { AllSearchParams } from '@/config/form-models.config';
 import { Currency } from '@/models/user.model';
 import { isVesselType } from '@/models/yacht.model';
 import { ResolvedDestination, resolveDestinationDids } from '@/utils/server/destinationDid';
+import { isGuletOnly } from '@/utils/static/guletCrewed';
 import { isUndatedSearch } from '@/utils/static/listingPrice';
 import { buildSearchLandingPath, destinationSlug, isLandingExpressible } from '@/utils/static/searchLandingPath';
 
@@ -323,10 +324,14 @@ export const yachtFetchParams = (params: AllSearchParams, cached: boolean, size?
     } as unknown as AllSearchParams;
   }
 
+  // A gulet-only search has no rental type (guletCrewed.ts): one left in an
+  // old or shared link (`boatTypes=GULET&charterType=…`) filters nothing.
+  const guletOnly = isGuletOnly(splitSearchParam(params.boatTypes));
+
   return {
     ...Object.fromEntries(
       Object.entries(params as unknown as Record<string, unknown>).filter(
-        ([key]) => !isTrackingParam(key) && key !== 'priceBasis'
+        ([key]) => !isTrackingParam(key) && key !== 'priceBasis' && !(guletOnly && key === 'charterType')
       )
     ),
     ...priceBasis,
