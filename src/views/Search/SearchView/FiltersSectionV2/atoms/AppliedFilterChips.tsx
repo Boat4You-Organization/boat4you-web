@@ -95,15 +95,19 @@ const AppliedFilterChips = ({ params, setMultipleParams, t }: AppliedFilterChips
 
   // Amenities: the URL carries the catalogue code — the chip shows its
   // translation ("Klimaanlage", not "air-conditioning"); a merged code reads
-  // as its surviving one ("refrigerator" → "Fridge").
-  (params.amenityLabels || []).forEach((label, i) => {
-    const code = canonicalEquipmentCode(label) as YachtAmenitiesKey;
+  // as its surviving one ("refrigerator" → "Fridge"). One chip per surviving
+  // code: "fridge,refrigerator" is one "Kühlschrank", and removing it drops both.
+  const amenityLabels = params.amenityLabels || [];
+  const amenityCodes = amenityLabels.map(label => canonicalEquipmentCode(label) as YachtAmenitiesKey);
+
+  amenityCodes.forEach((code, i) => {
+    if (amenityCodes.indexOf(code) !== i) return;
 
     chips.push({
-      label: tAmenity.has(code) ? tAmenity(code) : label,
+      label: tAmenity.has(code) ? tAmenity(code) : amenityLabels[i],
       remove: {
-        amenityLabels: (params.amenityLabels || []).filter((_, j) => j !== i),
-        amenities: (params.amenities || []).filter((_, j) => j !== i),
+        amenityLabels: amenityLabels.filter((_, j) => amenityCodes[j] !== code),
+        amenities: (params.amenities || []).filter((_, j) => amenityCodes[j] !== code),
       },
     });
   });

@@ -6,7 +6,8 @@
  *     my-bookings, availability card, PDF, nor the RSC payload;
  *   - merged codes (bow-thruster-deck → bow-thruster, refrigerator → fridge,
  *     sundeck-cushions → sun-pads) stay resolvable and read as the surviving
- *     code: page, search card, PDF, filter chip and selection;
+ *     code: page, search card, PDF, filter chip (one per surviving code) and
+ *     selection;
  *   - the new code depth-sounder and the plain life-buoy label in all 9 locales.
  *
  *   yarn test:equipment
@@ -216,5 +217,20 @@ describe('search filter chips: the catalogue code reads translated, a merged cod
 
     assert.ok(html.includes('Klimaanlage') && html.includes('Kühlschrank'), html);
     assert.ok(!html.includes('air-conditioning') && !html.includes('refrigerator'), html);
+  });
+
+  test('a merged code beside its surviving one is one chip ("fridge,refrigerator" → one "Kühlschrank")', () => {
+    const html = text(
+      provide(
+        'de',
+        createElement(AppliedFilterChips, {
+          params: { amenities: [14, 90, 1], amenityLabels: ['fridge', 'refrigerator', 'air-conditioning'] },
+          setMultipleParams: () => {},
+        })
+      )
+    );
+
+    assert.equal(count(html, 'Kühlschrank'), 1, html);
+    assert.equal(count(html, 'Klimaanlage'), 1, html);
   });
 });
