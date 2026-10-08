@@ -111,6 +111,7 @@ const ItinerariesPage = async ({ params }: ItinerariesPageParams) => {
           italic={t('builder.italic')}
           lede={t('builder.hubCtaLede')}
           action={t('builder.hubCta')}
+          imageAlts={{ lagoon: t('builder.promoAltLagoon'), hvar: t('builder.promoAltHvar') }}
         />
         <ItinerariesHub countrySearchHrefs={countrySearchHrefs} placeNames={placeNames} />
         <ItineraryEndCta

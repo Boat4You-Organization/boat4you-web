@@ -678,6 +678,8 @@
     "listView": "Prikaz popisa",
     "gridView": "Prikaz mreže",
     "rangeMin": "{label}: najmanje",
-    "rangeMax": "{label}: najviše"
+    "rangeMax": "{label}: najviše",
+    "boatPhoto": "{label} — fotografija",
+    "flagOf": "Zastava: {country}"
   }
 }

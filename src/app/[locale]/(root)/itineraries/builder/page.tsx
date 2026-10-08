@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: BuilderPageParams): Promise<M
     titleAbsolute: t('builder.metaTitle'),
     description: t('builder.metaDesc'),
     path: '/itineraries/builder',
-    image: { src: '/images/itinerary/banner.webp', alt: 'Itinerary builder' },
+    image: { src: '/images/itinerary/banner.webp' },
   });
 }
 
@@ -48,7 +48,7 @@ const BuilderPage = async ({ params }: BuilderPageParams) => {
           title={t('builder.title')}
           italic={t('builder.italic')}
           lede={t('builder.lede')}
-          image={{ src: '/images/itinerary/banner.webp', alt: 'Itinerary builder' }}
+          image={{ src: '/images/itinerary/banner.webp', alt: t('builder.kicker') }}
         />
         <BuilderIntro />
         <CustomBuilder />

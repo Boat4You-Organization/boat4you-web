@@ -40,7 +40,7 @@ const OurPromiseSection = () => {
         <Box className={styles.imageWrapper}>
           <Image
             src="/images/about/our-team-test.webp"
-            alt="Who we are"
+            alt={t('title')}
             fill
             sizes="(max-width: 899px) 100vw, 1064px"
             className={styles.image}

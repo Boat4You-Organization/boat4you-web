@@ -1,5 +1,6 @@
 import { OpenInNew } from '@mui/icons-material';
 import { Card, CardActions, CardContent, CardMedia, Stack, Typography } from '@mui/material';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -10,6 +11,7 @@ import { YachtModelLocalStorage } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
 import useQueryParams from '@/utils/hooks/useQueryParams';
 import useToggleState from '@/utils/hooks/useToggleState';
+import { displayBaseName } from '@/utils/static/croatianPlaceNames';
 import { getBoatImageUrl } from '@/utils/static/imageUtils';
 import { toTitleCase, yachtLabel } from '@/utils/static/toTitleCase';
 
@@ -22,6 +24,7 @@ interface WishlistItemProps {
 const WishlistItem = ({ yacht }: WishlistItemProps) => {
   const { queryParams } = useQueryParams();
   const [isMapOpen, toggleMap] = useToggleState();
+  const t = useTranslations('common');
 
   return (
     <>
@@ -33,7 +36,7 @@ const WishlistItem = ({ yacht }: WishlistItemProps) => {
           <CardMedia className={styles.cardMedia}>
             <Image
               src={getBoatImageUrl(yacht.mainImageId, 256)}
-              alt={`${yacht.model} ${yacht.name || ''} boat image`}
+              alt={t('a11y.boatPhoto', { label: yachtLabel(yacht.model, toTitleCase(yacht.name), ' ') })}
               fill
               sizes="auto"
               className={styles.image}
@@ -72,7 +75,7 @@ const WishlistItem = ({ yacht }: WishlistItemProps) => {
                       '&:hover': { textDecoration: 'underline' },
                     }}
                   >
-                    {yacht.location.name}
+                    {displayBaseName(yacht.location.name)}
                     <OpenInNew sx={{ fontSize: 14 }} />
                   </Typography>
                 </Stack>

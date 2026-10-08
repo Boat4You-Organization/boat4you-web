@@ -19,7 +19,7 @@ const WhoWeAreSection = () => {
             <Box className={styles.imageWrapper}>
               <Image
                 src="/images/about/our-team.webp"
-                alt="Who we are"
+                alt={t('title')}
                 fill
                 sizes="(max-width: 1199px) 100vw, 620px"
                 className={styles.image}

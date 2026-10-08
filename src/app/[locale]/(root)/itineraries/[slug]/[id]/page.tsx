@@ -68,10 +68,8 @@ export async function generateMetadata({ params }: ItineraryRoutePageParams): Pr
     titleAbsolute: metaTitle,
     description: metaDesc,
     path: `/itineraries/${slug}/${id}`,
-    image: {
-      src: itineraryRoute.cardImage.src,
-      alt: itineraryRoute.cardImage.alt,
-    },
+    // No config alt ("Card image", F4): og:image:alt falls back to the localized title.
+    image: { src: itineraryRoute.cardImage.src },
   });
 }
 
@@ -182,7 +180,8 @@ const ItineraryRoutePage = async ({ params }: ItineraryRoutePageParams) => {
           lede={routeMetaDesc || routePath}
           image={{
             src: itineraryRoute.cardImage.src,
-            alt: itineraryRoute.cardImage.alt,
+            // The route itself, not the config's "Card image" (F4).
+            alt: routePath,
           }}
         />
         <RouteDetailContent

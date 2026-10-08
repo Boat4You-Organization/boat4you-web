@@ -4,13 +4,13 @@ import Image from 'next/image';
 
 import LogoWithoutText from '@/components/SvgIcons/LogoWithoutText';
 import colors from '@/styles/themes/colors';
-import ImageType from '@/types/image.type';
 
 import styles from './HeroSection.module.scss';
 
 interface HeroSectionProps {
   namespace: 'about' | 'howWeWork' | 'contact';
-  image: ImageType;
+  /** The sea backdrop behind the H1: decorative, so no alt text (it read "How we work" in English on every locale). */
+  imageSrc: string;
 }
 
 const TitleBoldText = (chunks: React.ReactNode): React.ReactNode => (
@@ -27,12 +27,12 @@ const DescriptionBoldText = (chunks: React.ReactNode): React.ReactNode => (
   </Typography>
 );
 
-const HeroSection = ({ namespace, image }: HeroSectionProps) => {
+const HeroSection = ({ namespace, imageSrc }: HeroSectionProps) => {
   const t = useTranslations(`${namespace}.hero`);
 
   return (
     <Container component="section" className={styles.container}>
-      <Image src={image.src} alt={image.alt} fill priority sizes="100vw" style={{ objectFit: 'cover' }} />
+      <Image src={imageSrc} alt="" fill priority sizes="100vw" style={{ objectFit: 'cover' }} />
       <Container maxWidth="xl" disableGutters className={styles.content}>
         <Typography variant="hero" component="h1" textAlign="center" color={colors.blue950}>
           {t.rich('title', {

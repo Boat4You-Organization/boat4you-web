@@ -33,7 +33,7 @@ const AboutUsPage = async () => {
 
   return (
     <Layout>
-      <HeroSection namespace="about" image={{ src: '/images/howWeWork/hero.webp', alt: 'How we work' }} />
+      <HeroSection namespace="about" imageSrc="/images/howWeWork/hero.webp" />
       <StatsSection catalogue={siteStats?.display} />
       <WhoWeAreSection />
       <WhyChooseUsSection />

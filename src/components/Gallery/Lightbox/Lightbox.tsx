@@ -31,14 +31,28 @@ interface LightboxProps {
   images?: YachtImage[];
   selectedImage: number;
   showShareAndFavorite?: boolean;
+  /** The boat as the photos' alt text names it ("Lagoon 42 Masterpiece", yachtPhotoName.ts). */
+  photoName: string;
 }
 
-const Lightbox = ({ yacht, images, open, onClose, selectedImage, showShareAndFavorite = true }: LightboxProps) => {
+const Lightbox = ({
+  yacht,
+  images,
+  open,
+  onClose,
+  selectedImage,
+  showShareAndFavorite = true,
+  photoName,
+}: LightboxProps) => {
   const [isShareModalOpen, toggleShareModal] = useToggleState();
   const [isBeginning, setIsBeginning] = useState(false);
   const [isEnd, setIsEnd] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(selectedImage);
   const t = useTranslations('common');
+  // The same alt text as the gallery tiles: "Lagoon 42 Masterpiece — photo 3",
+  // not "Gallery image 236378" / "Thumbnail 236378" (live check 8.10.2026, F4).
+  const photoAlt = (index: number): string =>
+    t('photoAlt' as never, { label: photoName, n: String(index + 1) } as never);
 
   const yachtImages = useMemo(
     () =>
@@ -182,12 +196,12 @@ const Lightbox = ({ yacht, images, open, onClose, selectedImage, showShareAndFav
             mousewheel={{ forceToAxis: true, releaseOnEdges: true }}
             onSwiper={handleSwiper}
           >
-            {yachtImages.map(image => (
+            {yachtImages.map((image, index) => (
               <SwiperSlide key={image.id}>
                 <Box className={styles.imageWrapper}>
                   <Image
                     src={getBoatImageUrl(image.id, 1920)}
-                    alt={`Gallery image ${image.id}`}
+                    alt={photoAlt(index)}
                     fill
                     sizes="100vw"
                     className={styles.image}
@@ -226,7 +240,7 @@ const Lightbox = ({ yacht, images, open, onClose, selectedImage, showShareAndFav
                       <Box className={styles.box}>
                         <Image
                           src={getBoatImageUrl(image.id, 256)}
-                          alt={`Thumbnail ${image.id}`}
+                          alt={photoAlt(index)}
                           fill
                           sizes="120px"
                           className={styles.thumbnailImage}

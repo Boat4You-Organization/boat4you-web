@@ -666,6 +666,8 @@
     "listView": "Vista elenco",
     "gridView": "Vista griglia",
     "rangeMin": "{label}: minimo",
-    "rangeMax": "{label}: massimo"
+    "rangeMax": "{label}: massimo",
+    "boatPhoto": "{label} — foto",
+    "flagOf": "Bandiera: {country}"
   }
 }

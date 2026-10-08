@@ -13,6 +13,8 @@ interface ItineraryBuilderPromoProps {
   italic: string;
   lede: string;
   action: string;
+  /** The two photos' alt texts in the page's language ("Krknjaši Blue Lagoon anchorage, Croatia"). */
+  imageAlts: { lagoon: string; hvar: string };
 }
 
 /** Decorative course line with numbered pins — echoes the builder's live
@@ -70,7 +72,15 @@ const CourseArt = () => (
  * photos; all copy reuses the existing `builder.*` messages, so no new
  * translation keys.
  */
-const ItineraryBuilderPromo = ({ kicker, eyebrow, title, italic, lede, action }: ItineraryBuilderPromoProps) => (
+const ItineraryBuilderPromo = ({
+  kicker,
+  eyebrow,
+  title,
+  italic,
+  lede,
+  action,
+  imageAlts,
+}: ItineraryBuilderPromoProps) => (
   <Container maxWidth="xl" sx={{ px: { xs: 2, md: 3 }, mt: { xs: 3, md: 4 } }}>
     <Box
       sx={{
@@ -172,7 +182,7 @@ const ItineraryBuilderPromo = ({ kicker, eyebrow, title, italic, lede, action }:
           >
             <Image
               src="/images/itinerary/croatia/destinations/krknjasi.webp"
-              alt="Krknjasi Blue Lagoon anchorage, Croatia"
+              alt={imageAlts.lagoon}
               fill
               sizes="240px"
               style={{ objectFit: 'cover' }}
@@ -194,7 +204,7 @@ const ItineraryBuilderPromo = ({ kicker, eyebrow, title, italic, lede, action }:
           >
             <Image
               src="/images/itinerary/croatia/destinations/hvar.webp"
-              alt="Hvar town waterfront, Croatia"
+              alt={imageAlts.hvar}
               fill
               sizes="240px"
               style={{ objectFit: 'cover' }}

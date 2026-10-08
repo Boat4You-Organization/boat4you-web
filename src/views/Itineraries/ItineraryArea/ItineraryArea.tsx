@@ -244,7 +244,8 @@ const ItineraryArea: FC<ItineraryAreaProps> = ({ slug, areaLabel, countryLabel }
                     src={route.cardImage.src}
                     srcSet={staticSrcSet(route.cardImage.src)}
                     sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
-                    alt={route.cardImage.alt}
+                    // The route as the card reads it, not the config's "Card image" (F4).
+                    alt={pathLabel}
                     className="route-card-img"
                     style={{
                       width: '100%',

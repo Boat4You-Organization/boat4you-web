@@ -152,7 +152,8 @@ const SuggestedItineraries: FC<SuggestedItinerariesProps> = ({
                   src={route.cardImage.src}
                   srcSet={staticSrcSet(route.cardImage.src)}
                   sizes="(max-width: 599px) 70vw, (max-width: 1199px) 50vw, 25vw"
-                  alt={route.cardImage.alt}
+                  // The route as the card reads it, not the config's "Card image" (F4).
+                  alt={pathLabel}
                   className="suggested-route-img"
                   loading="lazy"
                   style={{

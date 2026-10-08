@@ -10,6 +10,7 @@ import FavoriteEmpty from '@/components/SvgIcons/FavoriteEmpty';
 import FavoriteFilled from '@/components/SvgIcons/FavoriteFilled';
 import { YachtModelLocalStorage } from '@/models/yacht.model';
 import { useLocalStorage } from '@/utils/hooks/useLocalStorage';
+import { toTitleCase } from '@/utils/static/toTitleCase';
 
 import styles from './FavoriteButton.module.scss';
 
@@ -59,9 +60,10 @@ const FavoriteButton = ({ yacht, color, buttonText, className }: FavoriteButtonP
     });
   };
 
-  const ariaLabel = isFavorite
-    ? t('removeFromFavorites', { yachtName: yacht.name })
-    : t('addToFavorites', { yachtName: yacht.name });
+  // The name as the card shows it: partner names arrive as "IDILA " (trailing
+  // space), which read "Ajouter IDILA  aux favoris" (live check 8.10.2026, F4).
+  const yachtName = toTitleCase(yacht.name) || yacht.model?.trim() || '';
+  const ariaLabel = isFavorite ? t('removeFromFavorites', { yachtName }) : t('addToFavorites', { yachtName });
 
   const favoriteIcon = isFavorite ? <FavoriteFilled size={20} /> : <FavoriteEmpty size={20} fill={color} />;
 

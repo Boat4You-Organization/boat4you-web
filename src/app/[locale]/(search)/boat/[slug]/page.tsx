@@ -432,10 +432,8 @@ export async function generateMetadata({
     ...(boatTitle.absolute ? { titleAbsolute: boatTitle.title } : {}),
     description,
     path: canonicalBoatPath(yacht),
-    image: {
-      src: yachtShareImageUrl(yacht) ?? undefined,
-      alt: `${yachtLabel(yacht.modelName, yacht.name, ' ')} boat image`,
-    },
+    // og:image:alt = the localized title, not "Lagoon 42 MASTERPIECE boat image" in English (F4).
+    image: { src: yachtShareImageUrl(yacht) ?? undefined },
   });
 }
 

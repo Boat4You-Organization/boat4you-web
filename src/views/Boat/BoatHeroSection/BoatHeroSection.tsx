@@ -14,7 +14,7 @@ import {
   Stack,
   Typography,
 } from '@mui/material';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import Image from 'next/image';
 
 import BoatLocationModal from '@/components/BoatLocationModal';
@@ -25,6 +25,8 @@ import { YachtModel } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
 import useToggleState from '@/utils/hooks/useToggleState';
 import useYachtPdfDownload from '@/utils/hooks/useYachtPdfDownload';
+import { countryDisplayName } from '@/utils/static/countryDisplayName';
+import { displayBaseName } from '@/utils/static/croatianPlaceNames';
 import { toTitleCase, yachtLabel } from '@/utils/static/toTitleCase';
 import { useYachtStore } from '@/valtio/yacht/yacht.store';
 
@@ -38,6 +40,7 @@ interface BoatHeroSectionProps {
 const BoatHeroSection = ({ yacht }: BoatHeroSectionProps) => {
   const [isOpen, toggeIsOpen] = useToggleState();
   const t = useTranslations('common');
+  const locale = useLocale();
   const { selectedOffer } = useYachtStore();
   const { downloadYachtPDF, isDownloading } = useYachtPdfDownload({ yacht, selectedOffer: selectedOffer ?? null });
 
@@ -82,7 +85,7 @@ const BoatHeroSection = ({ yacht }: BoatHeroSectionProps) => {
                       fill
                       sizes="auto"
                       src={`https://flagcdn.com/w80/${heroLocation.countryCode.toLowerCase()}.png`}
-                      alt={`${heroLocation.countryCode} flag`}
+                      alt={t('a11y.flagOf', { country: countryDisplayName(heroLocation.countryCode, locale) })}
                       className={styles.image}
                     />
                   </Box>
@@ -105,7 +108,7 @@ const BoatHeroSection = ({ yacht }: BoatHeroSectionProps) => {
                     cursor: 'pointer',
                   }}
                 >
-                  {heroLocation.name}
+                  {displayBaseName(heroLocation.name)}
                   <OpenInNew sx={{ fontSize: 14 }} />
                 </MuiLink>
                 {isOneWay && dropOff?.name && (
@@ -131,7 +134,7 @@ const BoatHeroSection = ({ yacht }: BoatHeroSectionProps) => {
                         cursor: 'pointer',
                       }}
                     >
-                      {dropOff.name}
+                      {displayBaseName(dropOff.name)}
                       <OpenInNew sx={{ fontSize: 14 }} />
                     </MuiLink>
                   </>

@@ -14,6 +14,7 @@ import { ReservationData } from '@/types/reservation.type';
 import useCapacityFmt from '@/utils/hooks/useCapacityFmt';
 import useToggleState from '@/utils/hooks/useToggleState';
 import DateTime from '@/utils/static/DateTime';
+import { displayBaseName } from '@/utils/static/croatianPlaceNames';
 import { getBoatImageUrl } from '@/utils/static/imageUtils';
 import { toTitleCase, yachtLabel } from '@/utils/static/toTitleCase';
 import { CardKey, ChipKey, capacityChips, cardChips, fromYacht } from '@/utils/static/yachtCapacity';
@@ -106,7 +107,7 @@ const BookingHero = ({ reservationData }: BookingHeroProps) => {
                 <Box className={styles.mainImageWrapper}>
                   <Image
                     src={getBoatImageUrl(mainImage.id, 800)}
-                    alt={`${model} ${name || ''}`}
+                    alt={yachtLabel(model, toTitleCase(name), ' ')}
                     fill
                     sizes="(max-width: 900px) 100vw, 450px"
                     className={styles.mainImage}
@@ -120,7 +121,7 @@ const BookingHero = ({ reservationData }: BookingHeroProps) => {
                     <Box key={img.id} className={styles.thumbWrapper}>
                       <Image
                         src={getBoatImageUrl(img.id, 256)}
-                        alt={`${model} ${name || ''}`}
+                        alt={yachtLabel(model, toTitleCase(name), ' ')}
                         fill
                         sizes="120px"
                         className={styles.thumbImage}
@@ -185,7 +186,7 @@ const BookingHero = ({ reservationData }: BookingHeroProps) => {
                       '&:hover': { color: colors.blue500 },
                     }}
                   >
-                    {locationFrom.name}
+                    {displayBaseName(locationFrom.name)}
                   </Typography>
                 </Stack>
               )}

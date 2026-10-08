@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: L
 
 const ContactUsPage = () => (
   <Layout>
-    <HeroSection namespace="contact" image={{ src: '/images/howWeWork/hero.webp', alt: 'Contact us' }} />
+    <HeroSection namespace="contact" imageSrc="/images/howWeWork/hero.webp" />
     <ContactSection />
     <InternationalSupportSection />
     <ContactExpectSection />

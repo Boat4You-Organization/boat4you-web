@@ -112,7 +112,8 @@ const CookieConsent = ({ showConsent }: CookieConsentProps) => {
       <Box className={cx(styles.container, { [styles.visible]: showConsent })}>
         <Image
           src="/images/cookies.webp"
-          alt="cookies"
+          // Decorative, beside the banner's own title (it read "cookies" on every locale).
+          alt=""
           width={193}
           height={130}
           className={styles.image}

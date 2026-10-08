@@ -10,6 +10,7 @@ import BoatLocationModal from '@/components/BoatLocationModal';
 import FlagIcon from '@/components/FlagIcon';
 import ExternalLink from '@/components/SvgIcons/ExternalLink';
 import DateTime from '@/utils/static/DateTime';
+import { displayBaseName } from '@/utils/static/croatianPlaceNames';
 import { getBoatImageUrl } from '@/utils/static/imageUtils';
 import { toTitleCase, yachtLabel } from '@/utils/static/toTitleCase';
 
@@ -46,7 +47,7 @@ const ReservationOverviewCard = ({
         <CardMedia className={styles.cardMedia}>
           <Image
             src={getBoatImageUrl(mainImage, 256)}
-            alt={`${model} ${name} boat image`}
+            alt={t('a11y.boatPhoto', { label: yachtLabel(model, toTitleCase(name), ' ') })}
             fill
             sizes="104px"
             className={styles.image}
@@ -60,7 +61,7 @@ const ReservationOverviewCard = ({
             {locationFrom && (
               <Stack direction="row" alignItems="center" gap={1} mt={1}>
                 {locationFromCountryCode && <FlagIcon countryCode={locationFromCountryCode} />}
-                <Typography variant="body1">{locationFrom}</Typography>
+                <Typography variant="body1">{displayBaseName(locationFrom)}</Typography>
               </Stack>
             )}
           </Stack>
@@ -95,7 +96,7 @@ const ReservationOverviewCard = ({
                   gap: 0.5,
                 }}
               >
-                {locationFrom}
+                {displayBaseName(locationFrom)}
                 <ExternalLink />
               </Box>
             </Typography>

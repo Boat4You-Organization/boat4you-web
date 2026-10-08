@@ -1,7 +1,7 @@
 'use client';
 
 import { Box, Button, Divider, Grid, Stack, Typography } from '@mui/material';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -14,6 +14,8 @@ import { DEFAULT_IMAGE } from '@/config/constants.config';
 import { YachtModel } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
 import copyToClipboard from '@/utils/static/copyToClipboard';
+import { countryDisplayName } from '@/utils/static/countryDisplayName';
+import { displayBaseName } from '@/utils/static/croatianPlaceNames';
 import { getBoatImageUrl } from '@/utils/static/imageUtils';
 import { toTitleCase, yachtLabel } from '@/utils/static/toTitleCase';
 
@@ -29,6 +31,7 @@ interface BoatShareModalProps {
 const BoatShareModal = ({ open, onOpen, onClose, yacht }: BoatShareModalProps) => {
   const t = useTranslations('common');
   const tToast = useTranslations('toastMessages');
+  const locale = useLocale();
   const pathname = usePathname();
 
   const mainImage = yacht.yachtImages.find(image => image.mainImage);
@@ -48,7 +51,7 @@ const BoatShareModal = ({ open, onOpen, onClose, yacht }: BoatShareModalProps) =
           <Box className={styles.imageWrapper}>
             <Image
               src={mainImage ? getBoatImageUrl(mainImage.id, 200) : DEFAULT_IMAGE}
-              alt="Boat image"
+              alt={t('a11y.boatPhoto', { label: yachtLabel(yacht.model, toTitleCase(yacht.name), ' ') })}
               fill
               sizes="auto"
               className={styles.image}
@@ -67,12 +70,12 @@ const BoatShareModal = ({ open, onOpen, onClose, yacht }: BoatShareModalProps) =
                   fill
                   sizes="auto"
                   src={`https://flagcdn.com/w80/${yacht.location.countryCode.toLowerCase()}.png`}
-                  alt={`${yacht.location.countryCode} flag`}
+                  alt={t('a11y.flagOf', { country: countryDisplayName(yacht.location.countryCode, locale) })}
                   className={styles.country}
                 />
               </Box>
               <Typography variant="body1" color={colors.black950}>
-                {yacht.location.name}
+                {displayBaseName(yacht.location.name)}
               </Typography>
             </Stack>
           )}

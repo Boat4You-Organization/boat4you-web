@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: L
 
 const HowWeWorkPage = () => (
   <Layout>
-    <HeroSection namespace="howWeWork" image={{ src: '/images/howWeWork/hero.webp', alt: 'How we work' }} />
+    <HeroSection namespace="howWeWork" imageSrc="/images/howWeWork/hero.webp" />
     <HowWeWorkSection />
     <WhyChooseUsSection translation="howWeWork" data={whyChooseUs} />
     <ContactUsSection />

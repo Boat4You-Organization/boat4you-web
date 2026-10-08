@@ -67,7 +67,7 @@ const CookieModalContent = ({
               {t('mainTitle')}
             </Typography>
             <Box className={styles.imageWrapper}>
-              <Image src="/images/cookies.webp" alt="cookies" fill sizes="auto" className={styles.image} />
+              <Image src="/images/cookies.webp" alt="" fill sizes="auto" className={styles.image} />
             </Box>
           </Stack>
           <IconButton size="large" onClick={onClose} sx={{ color: colors.black400 }}>

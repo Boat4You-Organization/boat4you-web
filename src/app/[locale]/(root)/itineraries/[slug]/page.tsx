@@ -67,10 +67,9 @@ export async function generateMetadata({ params }: ItineraryAreaPageParams): Pro
     titleAbsolute: metaTitle,
     description: metaDesc,
     path: `/itineraries/${itinerary.id}`,
-    image: {
-      src: itinerary.backgroundImage.src,
-      alt: itinerary.backgroundImage.alt,
-    },
+    // The config alt is English ("Cyclades area banner image", F4): og:image:alt
+    // falls back to the localized title.
+    image: { src: itinerary.backgroundImage.src },
   });
 }
 
@@ -130,7 +129,7 @@ const ItineraryAreaPage = async ({ params }: ItineraryAreaPageParams) => {
           eyebrow={t('areaHero.eyebrow', { country: countryLabel })}
           title={t('areaHero.title', { area: areaLabel })}
           italic={t('areaHero.italic')}
-          image={{ src: itinerary.backgroundImage.src, alt: itinerary.backgroundImage.alt }}
+          image={{ src: itinerary.backgroundImage.src, alt: areaLabel }}
         />
         <ItineraryArea slug={slug} areaLabel={areaLabel} countryLabel={countryLabel} />
         {primaryStart && (

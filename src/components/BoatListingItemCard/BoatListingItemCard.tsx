@@ -39,7 +39,7 @@ import { MatchKind, OfferStatus, YachtModelShortInfo } from '@/models/yacht.mode
 import colors from '@/styles/themes/colors';
 import useBreakpoint from '@/utils/hooks/useBreakpoint';
 import useCapacityFmt from '@/utils/hooks/useCapacityFmt';
-import { displayPlaceName } from '@/utils/static/croatianPlaceNames';
+import { displayBaseName } from '@/utils/static/croatianPlaceNames';
 import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
 import { getBoatImageUrl } from '@/utils/static/imageUtils';
 import { hasListingPrice, listingPriceDays } from '@/utils/static/listingPrice';
@@ -295,7 +295,7 @@ const BoatListingItemCardView = ({
           <CardMedia className={cx(styles.imageWrapper, { [styles.gridView]: isGridView })}>
             <Image
               src={getBoatImageUrl(mainImageId, 800)}
-              alt={`${yachtLabel(modelName, name, ' ')} boat image`}
+              alt={t('common.a11y.boatPhoto', { label: yachtLabel(displayModelName, toTitleCase(name), ' ') })}
               fill
               className={styles.image}
               // Mobile thumb is hard-capped at 140px by the scss module (40%,
@@ -469,8 +469,8 @@ const BoatListingItemCardView = ({
                       }}
                       aria-label={t('common.openInMap')}
                     >
-                      {/* Shown with its diacritics (R32); openMapFor keeps the catalogue name. */}
-                      {displayPlaceName(location.name)}
+                      {/* "Marina, Town" with its diacritics (R32, F6); openMapFor keeps the catalogue name. */}
+                      {displayBaseName(location.name)}
                       <OpenInNew sx={{ fontSize: { xs: 14, md: 12 } }} />
                     </Box>
                     {locationTo?.name && (
@@ -508,14 +508,14 @@ const BoatListingItemCardView = ({
                           }}
                           aria-label={t('common.openInMap')}
                         >
-                          {displayPlaceName(locationTo.name)}
+                          {displayBaseName(locationTo.name)}
                           <OpenInNew sx={{ fontSize: { xs: 14, md: 12 } }} />
                         </Box>
                       </>
                     )}
                   </Typography>
                 ) : (
-                  <Typography variant="body1">{location.name}</Typography>
+                  <Typography variant="body1">{displayBaseName(location.name)}</Typography>
                 )}
               </Stack>
             )}

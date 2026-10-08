@@ -12,7 +12,7 @@ import Photos from '@/components/SvgIcons/Photos';
 import { YachtImage, YachtModel } from '@/models/yacht.model';
 import useToggleState from '@/utils/hooks/useToggleState';
 import { getBoatImageUrl } from '@/utils/static/imageUtils';
-import { yachtLabel } from '@/utils/static/toTitleCase';
+import { yachtPhotoName } from '@/utils/static/yachtPhotoName';
 
 import styles from './Gallery.module.scss';
 
@@ -25,29 +25,21 @@ interface GalleryProps {
   images?: YachtImage[];
   showShareAndFavorite?: boolean;
   maxDisplayedImages?: number;
+  /** The boat as the photos' alt text names it when only `images` are passed (My bookings). */
+  photoName?: string;
 }
 
-const Gallery = ({ yacht, images, showShareAndFavorite = false, maxDisplayedImages = 5 }: GalleryProps) => {
+const Gallery = ({ yacht, images, showShareAndFavorite = false, maxDisplayedImages = 5, photoName }: GalleryProps) => {
   const [isOpen, toggeIsOpen] = useToggleState();
   const [imageIndex, setImageIndex] = useState<number>(0);
   // Mounted from the first open on (and kept, so it can animate closed).
   const [lightboxMounted, setLightboxMounted] = useState(false);
   const t = useTranslations('common');
 
-  // "Fountaine Pajot Elba 45 KARINA — photo 3" instead of the old
-  // "Image slide 236378" (internal id says nothing to Google Images / AI).
-  // Partners often bake the brand into the model ("Lagoon 46") — skip the
-  // manufacturer when the model already starts with it, else "Lagoon Lagoon 46".
-  // A charter operator delivered as the manufacturer is blanked where the
-  // payload is fetched (getSingleYacth, operatorNames.ts).
-  const manufacturerPrefix =
-    yacht?.manufacturerName && !yacht.modelName?.toLowerCase().startsWith(yacht.manufacturerName.toLowerCase())
-      ? yacht.manufacturerName
-      : undefined;
-  // The name only when it adds to the model ("MY Custom Anthea", not "… Anthea Anthea").
-  const photoLabel = [manufacturerPrefix, yachtLabel(yacht?.modelName, yacht?.name, ' ')].filter(Boolean).join(' ');
+  // "Fountaine Pajot Elba 45 Karina — photo 3" (yachtPhotoName.ts).
+  const photoLabel = yachtPhotoName(yacht) || photoName || 'Yacht';
   const yachtPhotoLabel = (index: number): string =>
-    t('photoAlt' as never, { label: photoLabel || 'Yacht', n: String(index + 1) } as never);
+    t('photoAlt' as never, { label: photoLabel, n: String(index + 1) } as never);
 
   const yachtImages = [...(images || yacht?.yachtImages || [])].sort((a, b) => {
     if (a.mainImage !== b.mainImage) return a.mainImage ? -1 : 1;
@@ -88,6 +80,7 @@ const Gallery = ({ yacht, images, showShareAndFavorite = false, maxDisplayedImag
           {...(yacht ? { yacht } : { images })}
           selectedImage={imageIndex}
           showShareAndFavorite={showShareAndFavorite}
+          photoName={photoLabel}
         />
       )}
       <Box position="relative" width="100%">

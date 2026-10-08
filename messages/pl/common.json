@@ -678,6 +678,8 @@
     "listView": "Widok listy",
     "gridView": "Widok siatki",
     "rangeMin": "{label}: minimum",
-    "rangeMax": "{label}: maksimum"
+    "rangeMax": "{label}: maksimum",
+    "boatPhoto": "{label} — zdjęcie",
+    "flagOf": "Flaga: {country}"
   }
 }

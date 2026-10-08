@@ -84,7 +84,8 @@ const HubAreaCard: FC<{
           src={area.image.src}
           srcSet={staticSrcSet(area.image.src)}
           sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
-          alt={area.image.alt}
+          // The area in the page's language (config alts are English, F4).
+          alt={areaLabel}
           className="hub-card-img"
           style={{
             width: '100%',

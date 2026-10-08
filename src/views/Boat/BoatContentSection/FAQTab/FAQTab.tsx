@@ -9,6 +9,7 @@ import AccordionMenu from '@/components/AccordionMenu';
 import FAQ from '@/components/SvgIcons/FAQ';
 import { YachtModel } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
+import { toTitleCase } from '@/utils/static/toTitleCase';
 import { YachtFaqEntry } from '@/utils/static/yachtFaq';
 import BrochureDownloadBox from '@/views/Boat/BoatContentSection/BrochureDownloadBox';
 
@@ -70,7 +71,7 @@ const FAQTab = ({ yacht, yachtFaq }: FAQTabProps) => {
           provides its own framing, so we only show the rule when the box
           isn't there. */}
       {yacht.custom && yacht.customDetails.hasBrochure ? (
-        <BrochureDownloadBox yachtName={yacht.name} onDownload={downloadBrochure} />
+        <BrochureDownloadBox yachtName={toTitleCase(yacht.name)} onDownload={downloadBrochure} />
       ) : (
         <Divider
           sx={{
