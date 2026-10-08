@@ -95,6 +95,32 @@ describe('boat page description: the boat named like the title, no quotes', () =
     assert.equal(boatSeoName(cases[3]), 'Oceanis 46.1');
   });
 
+  test('a name hidden inside a model word stays: Aria (Bavaria), Essi (Impression)', () => {
+    const cases = [
+      [{ model: 'Bavaria Cruiser 34', name: 'Aria', year: 2018 }, 'Bavaria Cruiser 34 Aria (2018)'],
+      [{ model: 'Elan Impression 35', name: 'Essi', year: 2017 }, 'Elan Impression 35 Essi (2017)'],
+    ];
+
+    cases.forEach(([c, named]) => {
+      assert.equal(boatSeoName(c), named);
+      assert.equal(buildBoatTitle({ ...c, tail: 'Charter' }).title, `${named} — Charter`);
+    });
+  });
+
+  test('a name that repeats whole words of the model is still left out', () => {
+    const cases = [
+      [{ model: 'Bavaria Cruiser 40', name: 'Bavaria Cruiser 40' }, 'Bavaria Cruiser 40'],
+      [{ model: 'Lagoon 42', name: '42' }, 'Lagoon 42'],
+      [{ model: 'MS Custom Aurum Sky', name: 'M/S Aurum Sky' }, 'MS Custom Aurum Sky'],
+      [{ model: 'MY Custom Anthea', name: 'Anthea' }, 'MY Custom Anthea'],
+    ];
+
+    cases.forEach(([c, named]) => {
+      assert.equal(boatSeoName(c), named);
+      assert.equal(buildBoatTitle({ ...c, tail: 'Charter' }).title, `${named} — Charter`);
+    });
+  });
+
   test('a boat booked by inquiry closes with the inquiry call', () => {
     assert.match(masterpieceDesc('en', true), /Send an inquiry for your dates on boat4you\.com\.$/);
   });

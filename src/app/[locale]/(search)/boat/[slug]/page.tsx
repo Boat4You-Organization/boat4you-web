@@ -103,8 +103,12 @@ const canonicalBoatPath = (yacht: YachtModel): string => `/boat/${yacht.listingC
  * highest CTR uplift on bookable listings.
  *
  * Fields populated:
- *   - `name` / `description` — same shape as the visible H1 / meta description
- *     so SERP and on-page content stay aligned
+ *   - `name` / `description` — the model and the name as the partner sends
+ *     them ("Lagoon 42 MASTERPIECE"); the description is the meta
+ *     description's sentence, but it does not name the boat like the title
+ *     and the meta description do (boatSeoName: title case, model without
+ *     the cabin suffix, name without equipment notes). Open: `name` feeds
+ *     the merchant listings (DEPLOY_NOTES 2026-10-08)
  *   - `image` — main yacht photo URL (already absolute from CDN)
  *   - `brand` — the builder (Lagoon, Bavaria, Beneteau …), yachtBrand.ts
  *   - `category` — vessel type (Catamaran, Sailing yacht …)
@@ -188,8 +192,9 @@ function buildYachtProductSchema(
   });
   // A partner boat's description is the partner's prose (deposit policies,
   // "Base fee must be transferred in advance!") — the Product gets the built
-  // sentence, the same one as the meta description. Admin-managed boats keep
-  // their own copy (partnerText.ts).
+  // sentence of the meta description, with the boat named as above (the
+  // partner's raw model and name), not as the meta description names it.
+  // Admin-managed boats keep their own copy (partnerText.ts).
   const description = ((yacht.custom && yacht.description) || fallbackDescription).slice(0, 5000);
 
   // Charter country (used for the offer's return/shipping region declarations).

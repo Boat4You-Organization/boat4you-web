@@ -66,12 +66,19 @@ export interface BoatTitle {
 
 const squash = (value: string): string => value.replace(/\s+/g, ' ').trim();
 
+// " bavaria cruiser 34 " — lower case, punctuation as spaces, padded, for a
+// whole-word match.
+const wordsOf = (value: string): string =>
+  ` ${value
+    .toLowerCase()
+    .replace(/[^\p{L}\p{N}]+/gu, ' ')
+    .trim()} `;
+
 // "Bavaria Cruiser 40 'Bavaria Cruiser 40'", "MS Custom Aurum Sky 'M/S Aurum Sky'" — a name
-// that repeats the model says nothing.
+// that repeats the model says nothing. Whole words only: "Aria" inside "Bavaria" or "Essi"
+// inside "Impression" is the boat's own name and stays (live check 8.10.2026).
 const addsToModel = (cleanModel: string, cleanName: string): boolean =>
-  !!cleanName &&
-  !cleanModel.toLowerCase().includes(cleanName.toLowerCase()) &&
-  !nameRepeatsModel(cleanModel, cleanName);
+  !!cleanName && !wordsOf(cleanModel).includes(wordsOf(cleanName)) && !nameRepeatsModel(cleanModel, cleanName);
 
 /**
  * The boat as the title names it, for the other SEO strings of the page (the
