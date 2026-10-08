@@ -1,6 +1,6 @@
 # Boat4You (main) — Production Deploy Notes
 
-## 2026-10-08 — 🧹 Sitnice s live provjere 7.10.: opis broda bez navodnika, agencije „samo upit", hreflang naslovnice, oznake za čitače ekrana, jedna robots oznaka na 404 — ⏳ NIJE DEPLOYANO (grana `fix/w810-b4y-polish`)
+## 2026-10-08 — 🧹 Sitnice s live provjere 7.10.: opis broda bez navodnika, agencije „samo upit", hreflang naslovnice, oznake za čitače ekrana, jedna robots oznaka na 404 — ✅ DEPLOYANO 8.10.2026 (main `3dcba6856`)
 
 Izvor: `_seo-audit-2026-10-07/live-verify/` (b4y-boat F2, regression F2 / F3 / F6, B4Y-CRAWL-01). Sve je starije od izdanja 7.10. Tekstovi sistera, stranica `/faq` i FAQ-ovi sistera, „our crew / fleet" i cijene nisu dirani. Na stranici broda mijenja se samo FAQ brodova agencija koje rade samo na upit (novi odgovor o bookingu, bez pitanja o cijeni; `401efc508`).
 
