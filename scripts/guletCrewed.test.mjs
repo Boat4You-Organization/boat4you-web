@@ -20,7 +20,9 @@
  *   - the curated gulet landing texts (public/seo-content/<locale>/*gulet*.html,
  *     9 languages): no "add a skipper after booking bareboat", bareboat
  *     licence answer, "mixed bareboat-and-skippered packages", semi-bareboat
- *     gulets or "most gulets include crew" (seo-corpus-qa.py --gulet-crewed).
+ *     gulets, "most gulets include crew" or "crew arrangement if you prefer",
+ *     and no bareboat / without skipper in the <title> or meta description
+ *     (seo-corpus-qa.py --gulet-crewed).
  *
  *   yarn test:gulet
  */

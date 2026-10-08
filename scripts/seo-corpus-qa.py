@@ -95,9 +95,12 @@ Piraeus passes). Added 8.10.2026 ("GULET JE UVIJEK SA POSADOM"): "gulet-crewed"
 gulet bareboat or skipper-only ("Can I add a skipper after booking bareboat?",
 "For bareboat charter, a valid skipper licence…", "mixed bareboat-and-skippered
 packages", "Semi-bareboat gulets", "Most gulets … include professional crew",
-"skipper (if hired)"), per-locale lists (GULET_CREWED_DENY); comparisons
-("you cannot bareboat a gulet", "Unlike bareboat charters…") and the other
-landings, mixed destination pages included, pass.
+"skipper (if hired)", "…and crew arrangement if you prefer cold-season
+sailing"), per-locale lists (GULET_CREWED_DENY); the <title> and meta
+description of a gulet landing may not say bareboat / without skipper at all
+(GULET_HEAD_DENY; the landing does not render the head, the file still
+carries it); comparisons ("you cannot bareboat a gulet", "Unlike bareboat
+charters…") and the other landings, mixed destination pages included, pass.
 
 Unfilled page templates (PLACEHOLDER / "Key Advantage Section 1") are only
 reported, and fail --check: they must be written or removed by hand.
@@ -2021,9 +2024,11 @@ def fee_repeats(sentences, locale):
 # (file name with "gulet") no sentence may offer or imply the gulet bareboat or skipper-only: "Can I add a skipper
 # after booking bareboat?", "For bareboat charter, a valid skipper licence…", "mixed bareboat-and-skippered packages",
 # "Semi-bareboat gulets", "Most gulets … include professional crew", "skipper (if hired)", "Skipper fees are shown…",
-# "On most European bareboat charters, fuel…", and their translations. Comparisons stay ("you cannot bareboat a
-# gulet", "Unlike bareboat charters…", "compare crewed and bareboat options" for the other boats, price lists that
-# "typically include crew, fuel, …"); other landings (catamarans, destinations, mixed pages) are not checked.
+# "On most European bareboat charters, fuel…", "recommends experienced sailors … and crew arrangement if you prefer"
+# (Porto Santa Maria Maggiore, review of 8.10.2026), and their translations. Comparisons stay ("you cannot bareboat a
+# gulet", "Unlike bareboat charters…", "compare crewed and bareboat options" for the other boats); price lists that
+# "typically include crew, fuel, …" are not flagged (the corpus says "always include the crew and typically also
+# fuel…" since 8.10.2026); other landings (catamarans, destinations, mixed pages) are not checked.
 GULET_CREWED_DENY = {
     'en': [r"\bafter (?:booking|you book)\b[^.?!]{0,20}\bbare-?boat",
            r"(?i:\bfor bare-?boat (?:gulet )?charters?, (?:a|the)\b)",
@@ -2033,7 +2038,7 @@ GULET_CREWED_DENY = {
            r"(?i:\bon most european bare-?boat charters\b)",
            r"(?i:\bskipper (?:and crew )?fees? (?:is |are )?shown\b)",
            r"(?i:\bskipper service\b|\bskipper \(if hired\)|\bskipper/hostess if aboard\b)",
-           r"\bA skipper makes the trip\b",
+           r"\bA skipper makes the trip\b", r"(?i:\bcrew arrangements? if you prefer\b)",
            r"(?i:\b(?:typically|usually|generally) (?:includes? (?:a )?crew(?=\s?[.;]|$)|crewed\b))",
            r"\b(?:Most|Many)\b[^.;]{0,40}(?:charters?|gulets?)\b[^.;]{0,20}\b(?:include|includes|come with) "
            r"(?:an? )?(?:professional |experienced )?(?:crew|skippers?|captains?)\b"],
@@ -2043,6 +2048,7 @@ GULET_CREWED_DENY = {
            r"\bBareboat-Optionen dominieren\b", r"\bBei den meisten europäischen Bareboat-Charter",
            r"\b(?:Skippergebühr|Gebühren für Skipper|Skipper-Service)\b",
            r"\bSkipper \(falls engagiert\)|\bSkipper/Hostess, falls an Bord\b", r"\bEin Skipper macht die Reise\b",
+           r"\bCrew-Organisation helfen, wenn Sie\b",
            r"\btypischerweise (?:eine )?Crew(?=\s?[.;]|$)|\btypischerweise mit Besatzung \(",
            r"\b(?:Die meisten|Viele)\b[^.;]{0,40}(?:Charter|Gulets?)\b[^.;]{0,20}\b(?:beinhalten|verfügen über|umfassen) "
            r"(?:eine |die )?(?:professionelle |erfahrene )?(?:Crew|Skipper|Besatzung)\b"],
@@ -2054,6 +2060,7 @@ GULET_CREWED_DENY = {
            r"\bSur la plupart des (?:locations|charters)\b[^.]{0,40}(?:sans skipper|équipement libre|bareboat)",
            r"(?i:\btarifs? du skipper\b)", r"\bservice du skipper\b",
            r"\bskipper \(si loué\)|\bskipper/hôtesse si à bord\b", r"\bUn skipper rend le voyage\b",
+           r"\bconstitution d['’]équipage si vous préférez\b",
            r"\b(?:comprend|incluent) généralement un équipage(?=\s?[.;]|$)|\bgénéralement équipés d'un équipage \(",
            r"\b(?:La plupart des|De nombreux)\b[^.;]{0,40}(?:charters?|locations?|gulets?|goélettes?)\b[^.;]{0,20}"
            r"\b(?:incluent|comprennent) (?:un |l'|l’)?(?:équipage|des skippers)\b"],
@@ -2064,6 +2071,7 @@ GULET_CREWED_DENY = {
            r"\bSulla maggior parte dei charter\b[^.]{0,30}(?:bareboat|senza skipper)",
            r"(?i:\b(?:il costo dello skipper|i costi di skipper)\b)", r"\bservizio skipper\b",
            r"\bskipper \(se noleggiato\)|\bskipper/hostess se a bordo\b", r"\bUno skipper rende il viaggio\b",
+           r"\borganizzazione dell['’]equipaggio se preferisce\b",
            r"\b(?:include|includono) tipicamente un equipaggio(?=\s?[.;]|$)|\bsono tipicamente con equipaggio \(",
            r"\b(?:La maggior parte de(?:i|l|gli|lle)|Molti)\b[^.;]{0,40}(?:charter|gulet|caicchi)\b[^.;]{0,20}"
            r"\b(?:include|includono) (?:l'|l’)?(?:equipaggio|skipper)\b"],
@@ -2075,6 +2083,7 @@ GULET_CREWED_DENY = {
            r"\bEn la mayoría de los (?:alquileres|chárteres)\b[^.]{0,30}(?:bareboat|a pelo|sin tripulación)",
            r"(?i:\btarifas? del patrón\b)", r"\bservicio de patrón\b",
            r"\bcapitán \(si se contrata\)|\bcapitán/azafata si están a bordo\b", r"\bUn patrón hace que el viaje\b",
+           r"\borganización de la tripulación si prefiere\b",
            r"\b(?:típicamente incluye|suelen incluir|suelen tener) tripulación(?=\s?[.;]| \(|$)",
            r"\b(?:La mayoría de|Muchos)\b[^.;]{0,40}(?:chárteres|alquileres|goletas)\b[^.;]{0,20}\bincluyen "
            r"(?:tripulación|capitanes)\b"],
@@ -2085,6 +2094,7 @@ GULET_CREWED_DENY = {
            r"\bNa maioria dos (?:alugueres|charters)\b[^.]{0,30}sem skipper",
            r"(?i:\bpreços? do skipper\b)", r"\bserviço de skipper\b",
            r"\bskipper \(se contratado\)|\bskipper/hostess, se a bordo\b", r"\bUm skipper torna a viagem\b",
+           r"\barranjos de tripulação, se preferir\b",
            r"\b(?:inclui|incluem) tipicamente tripulação(?=\s?[.;]|$)|\bsão tipicamente tripulados \(",
            r"\b(?:A maioria d[oa]s|Muitos)\b[^.;]{0,40}(?:alugueres|gulets?|goletas?)\b[^.;]{0,20}\binclu(?:i|em) "
            r"(?:tripulação|capitães)\b"],
@@ -2094,6 +2104,7 @@ GULET_CREWED_DENY = {
            r"(?i:\btarie(?:f|ven) van (?:de )?schipper\b)", r"\bkan een professionele schipper worden geboekt\b",
            r"\bschipper ?service\b|\bschippersservice\b",
            r"\bschipper \(indien gehuurd\)|\bschipper/gastvrouw indien aan boord\b", r"\bEen schipper maakt de reis\b",
+           r"\bhet regelen van bemanning als je\b",
            r"\bguletschipper",
            r"\b(?:omvat|zijn) doorgaans (?:een )?bemanning(?=\s?[.;]|$)|\bdoorgaans bemand(?=\s?[.;]| \(|$)",
            r"\b(?:De meeste|Veel)\b[^.;]{0,40}(?:charters?|gulets?)\b[^.;]{0,20}\b(?:zijn inclusief|omvatten) "
@@ -2104,6 +2115,7 @@ GULET_CREWED_DENY = {
            r"\bW większości europejskich czarterów (?:typu )?bareboat\b",
            r"(?i:\bstawk[ai] skippera\b)", r"\busług[ai] (?:skippera|kapitana)\b",
            r"\bskippera \(jeśli wynajęty\)|\bskładka dla skippera/gospodyni\b", r"\bSkipper sprawia, że podróż\b",
+           r"\borganizacji załogi, jeśli preferujesz\b",
            r"\bzazwyczaj obejmuj[eą] załogę(?=\s?[.;]|$)|\bzazwyczaj posiadają załogę \(",
            r"\b(?:Większość|Wiele)\b[^.;]{0,40}(?:czarter\w*|gul\w*)\b[^.;]{0,20}\bobejmuje "
            r"(?:profesjonaln\w+ |doświadczon\w+ )?(?:załogę|skipper\w*)"],
@@ -2113,6 +2125,7 @@ GULET_CREWED_DENY = {
            r"\bnajam bez posade dominira\b", r"\bNa većini europskih najmova bez posade\b",
            r"(?i:\bcijen[ae] skipera\b)", r"\busluga (?:skipera|kapetana)\b",
            r"\bskiper \(ako je unajmljen\)|\bfond za skipera/hostesu\b", r"\bSkiper čini putovanje\b",
+           r"\baranžmanom posade ako preferirate\b",
            r"\bobično uključuj[eu] posadu(?=\s?[.;]|$)|\bsu obično s posadom \(",
            r"\b(?:Većina|Mnogi)\b[^.;]{0,40}(?:najmov\w*|gulet\w*|gumenjak\w*)\b[^.;]{0,20}\buključuj[eu] "
            r"(?:profesionaln\w+ |iskusn\w+ )?(?:posadu|skiper\w*)"],
@@ -2121,6 +2134,31 @@ GULET_CREWED_DENY = {
 
 def gulet_crewed(sentences, locale):
     return [s for s in sentences if any(re.search(p, s) for p in GULET_CREWED_DENY[locale])]
+
+
+# The <title> and meta description of a gulet landing (review of 8.10.2026: "Bareboat and skippered options via
+# Boat4You" in 71 gulet descriptions, "Gulet Charter Sumpetar. Bare." cut short). The landing never renders the head
+# (sanitizeCuratedHtml strips it) and the raw /seo-content/ file is noindex, but the file carries it: a head has no
+# comparisons, so any bareboat / without-skipper wording is a finding.
+GULET_HEAD_DENY = {
+    'en': r"(?i)\bbare(?:-?boat|b?\.)|\bwithout (?:a )?skipper\b|\bskippered\b",
+    'de': r"(?i)\bbareboat|\bohne Skipper\b|\bSkippertörn",
+    'fr': r"(?i)\bbareboat|\bsans (?:skipper|équipage)\b|\bvoile nue\b",
+    'it': r"(?i)\bbareboat|\bsenza (?:skipper|equipaggio)\b|\bbarche a vela e con skipper\b",
+    'es': r"(?i)\bbareboat|\bsin (?:patrón|tripulación)\b|\bcasco desnudo\b",
+    'pt': r"(?i)\bbareboat|\bsem (?:skipper|tripulação)\b",
+    'nl': r"(?i)\bbareboat|\bzonder (?:schipper|bemanning)\b",
+    'pl': r"(?i)\bbareboat|\bbez załogi\b",
+    'hr': r"(?i)\bbareboat|\bbez (?:posade|skipera)\b",
+}
+_GULET_HEAD_TEXT = re.compile(r'<title[^>]*>([\s\S]*?)</title>|<meta name="description" content="([^"]*)"')
+
+
+def gulet_head(src, locale):
+    """Title / meta description texts of a gulet landing that offer the gulet bareboat or without skipper."""
+    texts = [squash(html.unescape(m.group(1) if m.group(1) is not None else m.group(2)))
+             for m in _GULET_HEAD_TEXT.finditer(src)]
+    return [t for t in texts if re.search(GULET_HEAD_DENY[locale], t)]
 
 
 def w610_checks(src, locale, name):
@@ -2133,6 +2171,7 @@ def w610_checks(src, locale, name):
     found += [('ascii-hr-name', x) for x in ascii_croatian_names(body, name)]
     if 'gulet' in name:
         found += [('gulet-crewed', s) for s in gulet_crewed(sentences, locale)]
+        found += [('gulet-crewed', f'head: {t}') for t in gulet_head(src, locale)]
     return found
 
 
@@ -2344,6 +2383,16 @@ W610_SELF_TEST = {
         ('hr', "Je li potrebna licenca za najam guleta bez skipera u Hrvatskoj?"),
         ('hr', "Najmovi guleta bez posade (bez kapetana i posade) dostupni su iskusnim jedriličarima."),
         ('hr', "Da – podijeljeni tjedni, najam flote od više plovila za veće grupe i mješani paketi najma bez posade i s posadom su mogući."),
+        # Porto Santa Maria Maggiore, winter (review of 8.10.2026): the guest sails, crew only "if you prefer"
+        ('en', "Boat4You recommends experienced sailors for off-season charters and can assist with seasonal itinerary planning and crew arrangement if you prefer cold-season sailing adventures."),
+        ('de', "Boat4You empfiehlt erfahrenen Seglern Charter außerhalb der Saison und kann bei der Planung von Saisonrouten und der Crew-Organisation helfen, wenn Sie Abenteuer im kalten Wetter bevorzugen."),
+        ('fr', "Boat4You recommande des navigateurs expérimentés pour les croisières hors saison et peut aider à la planification d'itinéraires saisonniers et à la constitution d'équipage si vous préférez les aventures de navigation en saison froide."),
+        ('it', "Boat4You raccomanda velisti esperti per i charter fuori stagione e può assistere nella pianificazione dell'itinerario stagionale e nell'organizzazione dell'equipaggio se preferisce avventure veliche nella stagione fredda."),
+        ('es', "Boat4You recomienda marineros experimentados para alquileres fuera de temporada y puede ayudar con la planificación de itinerarios estacionales y la organización de la tripulación si prefiere aventuras de navegación en temporada fría."),
+        ('pt', "A Boat4You recomenda marinheiros experientes para alugueres fora de época e pode ajudar no planeamento de itinerários sazonais e arranjos de tripulação, se preferir aventuras de vela na estação fria."),
+        ('nl', "Boat4You raadt ervaren zeilers aan voor charters buiten het seizoen en kan helpen bij het plannen van routes buiten het seizoen en het regelen van bemanning als je de voorkeur geeft aan avonturen op zee in de koude maanden."),
+        ('pl', "Boat4You zaleca doświadczonych żeglarzy do czarterów poza sezonem i może pomóc w planowaniu tras sezonowych i organizacji załogi, jeśli preferujesz przygody żeglarskie w zimnym sezonie."),
+        ('hr', "Boat4You preporučuje iskusne jedriličare za najmove izvan sezone i može pomoći s planiranjem itinerara za sezonu i aranžmanom posade ako preferirate avanture jedrenja u hladnoj sezoni."),
     ], [
         ('en', "This crew structure is non-negotiable: you cannot bareboat a gulet, nor would you want to."),
         ('en', "Unlike bareboat or skipper-only charters, a gulet comes as a complete package: professional captain, cook, crew, and often meals."),
@@ -2365,8 +2414,40 @@ W610_SELF_TEST = {
         ('pl', "To nie jest czarter bez załogi; to gościnność na morzu."),
         ('hr', "Ova struktura posade je neupitna: ne možete unajmiti GULET bez posade, niti biste to željeli."),
         ('hr', "Je li za najam guleta u Hrvatskoj potrebna dozvola?"),
+        ('en', "Boat4You recommends off-season charters for guests comfortable with livelier seas and can assist with seasonal itinerary planning if you prefer cold-season sailing adventures; the gulet always sails with its professional crew."),
+        ('de', "Boat4You empfiehlt Charter außerhalb der Saison für Gäste, die etwas bewegtere See nicht scheuen, und kann bei der Planung von Saisonrouten helfen, wenn Sie Abenteuer im kalten Wetter bevorzugen; die Gulet fährt dabei immer mit ihrer professionellen Crew."),
+        ('fr', "Boat4You recommande les croisières hors saison aux voyageurs qui ne craignent pas une mer plus animée et peut aider à la planification d'itinéraires saisonniers si vous préférez les aventures de navigation en saison froide ; le gulet navigue toujours avec son équipage professionnel."),
+        ('it', "Boat4You raccomanda i charter fuori stagione agli ospiti che non temono un mare più vivace e può assistere nella pianificazione dell'itinerario stagionale se preferisce avventure veliche nella stagione fredda; il gulet naviga sempre con il suo equipaggio professionale."),
+        ('es', "Boat4You recomienda los alquileres fuera de temporada a quienes no temen un mar más movido y puede ayudar con la planificación de itinerarios estacionales si prefiere aventuras de navegación en temporada fría; la goleta navega siempre con su tripulación profesional."),
+        ('pt', "A Boat4You recomenda os alugueres fora de época a quem não se importa com um mar mais mexido e pode ajudar no planeamento de itinerários sazonais, se preferir aventuras de vela na estação fria; o gulet navega sempre com a sua tripulação profissional."),
+        ('nl', "Boat4You raadt charters buiten het seizoen aan voor gasten die een wat woeligere zee niet erg vinden en kan helpen bij het plannen van routes buiten het seizoen als je de voorkeur geeft aan avonturen op zee in de koude maanden; de gulet vaart altijd met een eigen professionele bemanning."),
+        ('pl', "Boat4You poleca czartery poza sezonem gościom, którym nie przeszkadza bardziej wzburzone morze, i może pomóc w planowaniu tras sezonowych, jeśli preferujesz przygody żeglarskie w zimnym sezonie; gulet zawsze pływa ze swoją profesjonalną załogą."),
+        ('hr', "Boat4You najmove izvan sezone preporučuje gostima kojima ne smeta valovitije more i može pomoći s planiranjem itinerara za sezonu ako preferirate avanture jedrenja u hladnoj sezoni; gulet uvijek plovi sa svojom profesionalnom posadom."),
     ]),
 }
+# gulet-crewed in the head: (locale, meta description) — positives before 8.10.2026, negatives after.
+W610_SELF_TEST_GULET_HEAD = (
+    [('en', "Gulet charter from Marina Kastela, Croatia. Bareboat and skippered options via Boat4You. Browse pricing and dates."),
+     ('en', "Slow Dalmatian cruising to Brač, Hvar, and Vis. Gulet Charter Sumpetar. Bare."),
+     ('de', "Gulet Charter in Griechenland. Bareboat- und Skippertörns – durchsuchen Sie die Boat4You-Flotte."),
+     ('de', "Entdecken Sie traditionelle Holz-Yachten mit oder ohne Skipper."),
+     ('fr', "Location de gulet en Grèce. Location de yachts avec ou sans skipper – parcourez la flotte Boat4You."),
+     ('it', "Noleggio Gulet Turchia: Avventure in Crociera Blu. Noleggio barche a vela e con skipper — scopri la flotta Boat4You."),
+     ('es', "Alquiler de goletas en el Puerto de Split. Alquiler de yates a casco desnudo y con patrón."),
+     ('pt', "Aluguer de iates sem skipper e com skipper — explore a frota Boat4You."),
+     ('nl', "Gulet charter in Griekenland. Bareboat en met schipper jachtverhuur — bekijk de Boat4You vloot."),
+     ('pl', "Czarter Guletów Sumpetar. Bez załogi."),
+     ('hr', "Unajmite gulet iz luke Fethiye. Najam jahti bez posade i s kapetanom.")],
+    [('en', "Gulet charter from Marina Kastela, Croatia. Crewed gulets via Boat4You. Browse pricing and dates."),
+     ('en', "Charter a gulet (traditional wooden yacht) in Athens with 4 luxury crewed vessels."),
+     ('de', "Gulet Charter in Griechenland. Immer mit professioneller Crew – durchsuchen Sie die Boat4You-Flotte."),
+     ('fr', "Vacances tout compris en goélette avec équipage."),
+     ('it', "Noleggio Gulet Turchia: Avventure in Crociera Blu. Sempre con equipaggio professionale — scopri la flotta Boat4You."),
+     ('es', "Alquiler de goletas en el Puerto de Split. Siempre con tripulación profesional."),
+     ('pt', "Sempre com tripulação profissional — explore a frota Boat4You."),
+     ('nl', "Gulet charter in Griekenland. Altijd met professionele bemanning — bekijk de Boat4You vloot."),
+     ('pl', "Czarter Guletów Sumpetar."),
+     ('hr', "Unajmite gulet iz luke Fethiye. Uvijek s profesionalnom posadom.")])
 # gulet-crewed runs on gulet landings only: the same sentence on a catamaran or destination page passes.
 W610_SELF_TEST_GULET_SCOPE = ('<body><p>Can I add a skipper after booking bareboat?</p></body>',
                               'gulet-charter-kastela.html', 'catamaran-charter-kastela.html')
@@ -2422,8 +2503,15 @@ def run_w610_self_test():
         failed.append(f'MISSED  gulet-crewed on {gulet_page}')
     if any(check == 'gulet-crewed' for check, _ in w610_checks(src, 'en', other_page)):
         failed.append(f'FLAGGED gulet-crewed on {other_page}')
+    for positive, cases in ((True, W610_SELF_TEST_GULET_HEAD[0]), (False, W610_SELF_TEST_GULET_HEAD[1])):
+        for locale, desc in cases:
+            page = f'<head><title>Gulet Charter | Boat4You</title><meta name="description" content="{desc}"></head><body></body>'
+            hit = any(check == 'gulet-crewed' for check, _ in w610_checks(page, locale, 'gulet-charter-x.html'))
+            if hit != positive:
+                failed.append(f'{"MISSED " if positive else "FLAGGED"} gulet-crewed head {locale}: {desc[:110]}')
     total = (sum(len(p) + len(n) for _, p, n in W610_SELF_TEST.values()) + sum(map(len, W610_SELF_TEST_ASCII))
-             + sum(map(len, W610_SELF_TEST_REGISTER)) + sum(map(len, W610_SELF_TEST_FAQ)) + 2)
+             + sum(map(len, W610_SELF_TEST_REGISTER)) + sum(map(len, W610_SELF_TEST_FAQ))
+             + sum(map(len, W610_SELF_TEST_GULET_HEAD)) + 2)
     for line in failed:
         print(line)
     print(f'w610 self-test: {total - len(failed)}/{total} cases pass')
@@ -2439,9 +2527,11 @@ def run_gulet_crewed(root):
                 continue
             scanned += 1
             with open(os.path.join(root, locale, name), encoding='utf-8') as fh:
-                body = split_body(fh.read())[1]
+                src = fh.read()
+            body = split_body(src)[1]
             sentences = [plain(p) for m in R.BLOCK.finditer(body) for p in R.split_sentences(m.group(3))]
             findings += [f'{locale}/{name}: {squash(s)[:150]}' for s in gulet_crewed(sentences, locale)]
+            findings += [f'{locale}/{name}: head: {t[:150]}' for t in gulet_head(src, locale)]
     for line in findings:
         print(f'  gulet-crewed  {line}')
     print(f'gulet-crewed: {len(findings)} finding(s) in {scanned} gulet landings')
