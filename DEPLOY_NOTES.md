@@ -1,5 +1,33 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-10-08 — 🧹 Sitnice s live provjere 8.10. (2. krug): „ležajevi" u hr opisu, „Marina, Mjesto", alt tekstovi, 404 / greška, My bookings, kalendar — ⏳ NIJE DEPLOYANO (grana `fix/w810b-polish2`)
+
+Izvor: `_seo-audit-2026-10-08/live-verify/` (X10, F2, F4, F6) i otvorene stavke 7.10. Sve je starije od izdanja 8.10. Tekstovi brokera, `/faq`, kapacitet i Product JSON-LD nisu dirani. Samo web, bez env promjena.
+
+**Commiti:**
+
+- `3b9f942fd` X10: hr meta opis broda broji ležajeve: „6 kabina, 12 ležajeva" (bilo „13 osoba"). Ostalih 8 jezika već je bilo ispravno.
+- `8c0eb0102` F2: 404 i stranica greške: aria-label linka na jeziku stranice (bio „Go Back Home"), greška vodi na `/de` umjesto na `/`. Korijenska granica greške uzima samo pravi jezik iz putanje.
+- `81c2aeb3c` F6: baza broda piše se „D-Marin Dalmacija Marina, Sukošan" (bilo „… | Sukošan") u FAQ-u i FAQPage JSON-LD-u, opisu, „pick-up", karticama termina, kalendaru, karticama modela, `/fleet`, bookingu, My bookings i PDF potvrdi. Novi `displayBaseName`. Karte i Google Maps linkovi dobivaju izvorni naziv.
+- `f226b4854` F4: alt tekstovi na jeziku stranice (9 jezika): fotografije brodova „Lagoon 42 Masterpiece — photo / Foto", zastave „Drapeau : Croatie", lightbox „— photo 3", itinerari pokazuju rutu ili područje (bio „Card image"). Ukrasne slike (hero pozadina, kolačići) imaju prazan alt. Favoriti: „Ajouter Idila aux favoris" s jednim razmakom (ime je imalo razmak na kraju).
+- `182009ec1` My bookings („Reservation information", „Copy booking reference", „Dismiss" i cijeli banner zamjene broda), strelice MUI kalendara („Vorheriger Monat") i „ Search boats" bez razmaka na početku.
+- `1bbff784c` `yarn test:polish` +18 testova (37).
+
+**Provjere (lokalno 8.10.):** `yarn test:*` svi prolaze (polish 37/37), `npx tsc --noEmit` 0, `yarn lint` 0 grešaka (17 starih upozorenja). `next dev` :3995 na prod API (8 stranica):
+
+- `/hr/boat/lagoon-42-masterpiece-11681`: opis „… iz marine D-Marin Dalmacija Marina, Sukošan. 6 kabina, 12 ležajeva.", FAQ „Matična luka plovila Masterpiece je D-Marin Dalmacija Marina, Sukošan, Hrvatska — …" (i u JSON-LD-u), 0 „Marina | Sukošan" u tekstu.
+- `/fr/search?destinations=croatia`: 18× „Drapeau : Croatie", „Oceanis 35.1 Idila — photo", „Ajouter Idila aux favoris", „Marina Kaštela, Kaštel Gomilica", nijedan engleski alt.
+- `/de` 404 i stranica greške (privremena ruta koja baca grešku, u pregledniku): „Zurück zur Startseite", link `/de`.
+- `/fr` ruta Sukošan: alt „Sukošan – Kornati – Krka", `og:image:alt` = naslov.
+
+**Nakon deploya:**
+
+1. `curl -s https://www.boat4you.com/hr/boat/lagoon-42-masterpiece-11681 | grep -o '<meta name="description"[^>]*>'` → „12 ležajeva".
+2. `curl -s https://www.boat4you.com/boat/lagoon-42-masterpiece-11681 | grep -o 'home port of Masterpiece is [^—]*'` → „D-Marin Dalmacija Marina, Sukošan in Croatia".
+3. `curl -s 'https://www.boat4you.com/fr/search?destinations=croatia' | grep -o 'alt="[^"]*"' | sort | uniq -c | sort -rn | head` → „Drapeau : Croatie", nijedan „HR flag" ni „boat image".
+
+**Otvoreno (Mario):** prijevode (alt, banner zamjene broda) nisu pregledali izvorni govornici. Engleski ostaju: Trip hub (`/trip`, namjerno samo EN), tekst dijeljenja („Check out this yacht"), oznaka „Multi Location" u pregledu bookinga. Logo linkovi u lightboxu i jednostavnom headeru vode na `/` (jezik vraća kolačić). Na karticama „Model | Ime" ostaje kao dizajn.
+
 ## 2026-10-08 — 🛥️ Bilješke kapaciteta v2: prevedene sve bilješke s prod-a, tablice samo na serveru — ⏳ NIJE DEPLOYANO (main `ba3330411` + provjera `2253fd844`)
 
 Mario 6.10.: partnerove bilješke („for clients + 1 crew") na ne-engleskim stranicama idu kroz pregledanu tablicu cijelih rečenica. Tablica v1 imala je 37 bilježaka iz uzorka, prod ih ima 1.435 više, pa je njemačka stranica pisala „Kabinen 5 (for clients + 1 crew)". Ugovor `infra/capacity-contract-6-10/capacityNotes.json` je sada v2 (v1 ostaje kao `capacityNotes.v1.json`): 1.660 bilježaka, od toga 1.446 s riječima u `src/utils/static/capacityNotes/<locale>.json` (~160 KB po jeziku, bilo ~3,6 KB; generator `work/gen_slices.py`). 22 bilješke koje sanitizer ionako skriva („owner's cabin", „daily charters", „internal") nisu u tablici. Neviđena bilješka i dalje ostaje engleska s `lang="en"`. Nijedna bilješka ne imenuje tvrtku, osobu, web, telefon ni e-mail (0 označenih). Samo web, bez env promjena.
