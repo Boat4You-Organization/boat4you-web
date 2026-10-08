@@ -60,7 +60,7 @@
     "descLead": "Najam {name}",
     "descLeadFrom": "Najam {name} iz marine {marina}",
     "descCabins": "{count, plural, one {# kabina} few {# kabine} other {# kabina}}",
-    "descBerths": "{count, plural, one {# osoba} few {# osobe} other {# osoba}}",
+    "descBerths": "{count, plural, one {# ležaj} few {# ležaja} other {# ležajeva}}",
     "descMaxPeople": "{count, plural, one {maks. # osoba na brodu} few {maks. # osobe na brodu} other {maks. # osoba na brodu}}",
     "descCta": "Provjerite raspoloživost i rezervirajte direktno na boat4you.com.",
     "descCtaInquiry": "Pošaljite upit za svoje termine na boat4you.com."
