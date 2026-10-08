@@ -690,6 +690,6 @@
     "autoUpdated": "Vaša nova jahta je <strong>{name}</strong>. Datumi, mjesto i cijena ostaju isti. Detalji rezervacije na ovoj stranici već se odnose na zamjensku jahtu.",
     "manualReview": "Agencija je promijenila jahtu u vašoj rezervaciji. Provjeravamo nove podatke i uskoro ćemo vam se javiti — trenutačno ne trebate ništa poduzimati.",
     "detected": "U vašoj rezervaciji otkrivena je promjena. Naš tim je provjerava i javit će vam se ako nešto bude zahtijevalo vašu pažnju.",
-    "detectedOn": "Otkriveno {date}"
+    "detectedOn": "Datum otkrivanja: {date}"
   }
 }

@@ -678,6 +678,6 @@
     "autoUpdated": "Il tuo nuovo yacht è <strong>{name}</strong>. Date, luogo e prezzo restano invariati. I dettagli della prenotazione in questa pagina si riferiscono già allo yacht sostitutivo.",
     "manualReview": "L'agenzia ha cambiato lo yacht della tua prenotazione. Stiamo verificando i nuovi dettagli e ti contatteremo a breve — per ora non devi fare nulla.",
     "detected": "È stata rilevata una modifica alla tua prenotazione. Il nostro team la sta verificando e ti contatterà se qualcosa richiede la tua attenzione.",
-    "detectedOn": "Rilevato il {date}"
+    "detectedOn": "Data di rilevamento: {date}"
   }
 }
