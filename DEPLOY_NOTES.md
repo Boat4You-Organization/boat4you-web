@@ -46,7 +46,7 @@ Web dio popravka veza partnerove opreme (`infra/equipment-mapping-audit-8-10/FIX
 
 **Otvoreno (Mario):** ništa novo. Napomena za redoslijed: dok je live stari web, a backend već poveže prve retke na `depth-sounder`, stari `renderAmenityLabel` će pisati „yacht.amenitiesList.depth-sounder" (ne pada na partnerovo ime kako piše u ugovoru §10.8). Prozor između backend i web deploya držati kratkim.
 
-## 2026-10-08 — 🧹 Sitnice s live provjere 8.10. (3. krug): alt na stranici modela, „Ladies&Gentlemen", breadcrumb na jeziku stranice — ⏳ NIJE DEPLOYANO (grana `fix/w810c-polish3`)
+## 2026-10-08 — 🧹 Sitnice s live provjere 8.10. (3. krug): alt na stranici modela, „Ladies&Gentlemen", breadcrumb na jeziku stranice — ✅ DEPLOYANO 8.10.2026 ~18:15–18:45 UTC (main `06abd18e3`)
 
 Izvor: `_seo-audit-2026-10-08/live-verify-round2/` (b4y F1, F2, X-03). Tekstovi brokera, kapacitet, oprema i Product JSON-LD nisu dirani. Samo web, bez env promjena.
 
@@ -75,7 +75,7 @@ Izvor: `_seo-audit-2026-10-08/live-verify-round2/` (b4y F1, F2, X-03). Tekstovi 
 
 **Otvoreno (Mario):** fraze područja (hr/pl padeži, fr/it/es/pt članovi) nisu pregledali izvorni govornici. Ostaje engleski (nije bilo u ovom krugu): zadnja stavka breadcrumba rute (imena stanica iz configa), `url` u TouristTripu (stranica područja i rute; na stranici područja i ime i opis, npr. „7-day Dodecanese yacht charter route — Kos" na `/it`) i CollectionPage huba (engleski URL, `inLanguage` „en-US"). Kartica na hubu (`hub.sailingAreaCardTitle`) i dalje piše „Zona di navigazione Dodecaneso".
 
-## 2026-10-08 — ⛵ Gulet je uvijek s posadom — ⏳ NIJE DEPLOYANO (grana `fix/gulet-always-crewed`)
+## 2026-10-08 — ⛵ Gulet je uvijek s posadom — ✅ DEPLOYANO 8.10.2026 ~18:15–18:45 UTC (main `06abd18e3`)
 
 Mario 8.10.: „GULET JE UVIJEK SA POSADOM". Gulet se na webu nikad ne nudi bareboat ni samo sa skiperom; ostali tipovi plovila prate partnerove podatke. Cijene, kapacitet, oprema i tekstovi brokera nisu dirani; u kuriranim SEO tekstovima gulet landinga promijenjene su samo rečenice koje gulet nude bez posade (vidi niže). Samo web, bez env promjena. Novi `src/utils/static/guletCrewed.ts` (`isGulet`, `isGuletOnly`, `offersBareboat`, `boatTypesUpdate`, `withoutGuletRentalType`, `licenceFaqCategory`).
 
