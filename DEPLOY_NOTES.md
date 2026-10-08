@@ -1,5 +1,21 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-10-08 — 🛥️ Bilješke kapaciteta v2: prevedene sve bilješke s prod-a, tablice samo na serveru — ⏳ NIJE DEPLOYANO (main `ba3330411`)
+
+Mario 6.10.: partnerove bilješke („for clients + 1 crew") na ne-engleskim stranicama idu kroz pregledanu tablicu cijelih rečenica. Tablica v1 imala je 37 bilježaka iz uzorka, prod ih ima 1.435 više, pa je njemačka stranica pisala „Kabinen 5 (for clients + 1 crew)". Ugovor `infra/capacity-contract-6-10/capacityNotes.json` je sada v2 (v1 ostaje kao `capacityNotes.v1.json`): 1.660 bilježaka, od toga 1.446 s riječima u `src/utils/static/capacityNotes/<locale>.json` (~160 KB po jeziku, bilo ~3,6 KB; generator `work/gen_slices.py`). 22 bilješke koje sanitizer ionako skriva („owner's cabin", „daily charters", „internal") nisu u tablici. Neviđena bilješka i dalje ostaje engleska s `lang="en"`. Nijedna bilješka ne imenuje tvrtku, osobu, web, telefon ni e-mail (0 označenih). Samo web, bez env promjena.
+
+- My-bookings više ne učitava tablicu u pregledniku (v1 je to radio kroz 8 klijentskih chunkova). Riječi-bilješke rezervacije idu server akciji `getCapacityNotesAction`, koja vraća prijevod, engleski ili skriveno (sanitizer + popis operatera, kao na stranici broda). Dok akcija ne odgovori, takva bilješka se ne prikazuje; brojevi i neutralne bilješke („(8+2)") se prikazuju. `capacityNoteTable.ts` je `server-only`.
+- pt = europski portugalski: PNOE „casa de banho privativa" (bio pt-BR „banheiro privativo").
+
+**Provjere (lokalno 8.10.):** `yarn test:capacity` 39/39, `npx tsc --noEmit` 0, `yarn lint` 0 grešaka (17 starih upozorenja). `next build` na prod API: nijedan klijentski chunk ne sadrži tablicu (grep prevedenih rečenica u `.next/static` = 0). Klijentski chunkovi su se smanjili sa 7.955.310 B na 7.930.916 B (126 → 118 datoteka). `next start` :3180, `/de/boat/aquila-yachts-aquila-50-aquila-50-19701`: „Kabinen 5 (für Gäste + 1 Crew)", „Kojen 10 + 2 Crew", „WC 5 (für Gäste + 1 Crew)", bez `lang="en"`. `/fr`: „Cabines 5 (pour les clients + 1 équipage)".
+
+**Nakon deploya:**
+
+1. `curl -s https://www.boat4you.com/de/boat/aquila-yachts-aquila-50-aquila-50-19701 | grep -c 'für Gäste + 1 Crew'` → 1 ili više.
+2. My-bookings (de), rezervacija broda s bilješkom: red „Kabinen" na njemačkom, u Networku jedan POST server akcije, bez `capacityNotes` chunka.
+
+**Otvoreno (Mario):** prijevodi nisu pregledali izvorni govornici (posebno hr / pl / nl). Dvije bilješke sadrže ime broda („Dea Del Mare", „Calm Down") i prikazuju se. Partnerove bilješke „Price is for up to 12 pax. For 13 - 18 pax (in shared cabins) surcharge applies." (ležajevi) i „Yanmar 20hp" (WC) sadržajno ne pripadaju tim poljima; prikazuju se prevedene.
+
 ## 2026-10-08 — 🧹 Sitnice s live provjere 7.10.: opis broda bez navodnika, agencije „samo upit", hreflang naslovnice, oznake za čitače ekrana, jedna robots oznaka na 404 — ✅ DEPLOYANO 8.10.2026 (main `3dcba6856`)
 
 Izvor: `_seo-audit-2026-10-07/live-verify/` (b4y-boat F2, regression F2 / F3 / F6, B4Y-CRAWL-01). Sve je starije od izdanja 7.10. Tekstovi sistera, stranica `/faq` i FAQ-ovi sistera, „our crew / fleet" i cijene nisu dirani. Na stranici broda mijenja se samo FAQ brodova agencija koje rade samo na upit (novi odgovor o bookingu, bez pitanja o cijeni; `401efc508`).
