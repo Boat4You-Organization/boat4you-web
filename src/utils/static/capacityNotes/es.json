@@ -4589,7 +4589,7 @@
   },
   "(Inc. 1 Crew Bow Quarter)": {
     "dims": ["cabins"],
-    "es": "(Incl. 1 alojamiento de tripulación en proa)"
+    "es": "(incl. 1 camarote de tripulación en proa)"
   },
   "(6 + 2 crew front peak)": {
     "dims": ["cabins"],
@@ -4969,7 +4969,7 @@
   },
   "(4D+1S+1S)": {
     "dims": ["cabins"],
-    "es": "(4D+1S+1S)"
+    "es": "(4 dobles+1 individual+1 individual)"
   },
   "1 Master, 1 VIP, 1 Twin, 1 Double Cabins": {
     "dims": ["cabins"],

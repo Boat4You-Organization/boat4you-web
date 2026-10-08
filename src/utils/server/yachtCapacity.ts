@@ -61,9 +61,14 @@ const isNoteQuery = (q: unknown): q is CapacityNoteQuery =>
  * Partner notes for a client surface that fetches its own data (my-bookings,
  * through actions/capacity.actions.ts): each note as this locale shows it —
  * the reviewed translation or the English original (lang "en") — or null when
- * the sanitizer or the operator list hides it. Same rules as
- * resolveYachtCapacity; the note tables (~160 KB a locale) and the operator
- * list stay on the server, the client gets only its own few notes.
+ * the sanitizer hides it. The note tables (~160 KB a locale) stay on the
+ * server, the client gets only its own few notes.
+ *
+ * No operator-name check here, unlike resolveYachtCapacity: a server action
+ * answers any text anyone sends, so matching it against the operator list
+ * would tell a caller whether a name is one of our partners. The notes come
+ * from the API, whose sanitizer already hides any note naming an operator or
+ * agency (operators.txt + every agency name).
  */
 export const resolveCapacityNotes = async (locale: string, queries: unknown): Promise<(ResolvedNote | null)[]> => {
   const list = Array.isArray(queries) ? queries.slice(0, NOTE_DIMS.length) : [];
@@ -72,10 +77,7 @@ export const resolveCapacityNotes = async (locale: string, queries: unknown): Pr
   return list.map(q => {
     if (!isNoteQuery(q)) return null;
 
-    const capacity = fromYacht(
-      { capacity: { [q.dim]: { value: 1, note: q.note } } },
-      { locale, noteLookup, findOperatorName: text => isOperatorName(text) }
-    );
+    const capacity = fromYacht({ capacity: { [q.dim]: { value: 1, note: q.note } } }, { locale, noteLookup });
 
     return capacity[q.dim]?.note ?? null;
   });

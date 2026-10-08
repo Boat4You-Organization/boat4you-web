@@ -1513,7 +1513,7 @@
   },
   "(2D)": {
     "dims": ["cabins"],
-    "hr": "(2D)"
+    "hr": "(2 dvokrevetne)"
   },
   "4 double, 1 with two bunks + 1 skipper cabin": {
     "dims": ["cabins"],
@@ -4589,7 +4589,7 @@
   },
   "(Inc. 1 Crew Bow Quarter)": {
     "dims": ["cabins"],
-    "hr": "(Uključujući 1 prostor za posadu na pramcu)"
+    "hr": "(uklj. 1 kabinu za posadu na pramcu)"
   },
   "(6 + 2 crew front peak)": {
     "dims": ["cabins"],
@@ -4969,7 +4969,7 @@
   },
   "(4D+1S+1S)": {
     "dims": ["cabins"],
-    "hr": "(4D+1S+1S)"
+    "hr": "(4 dvokrevetne+1 jednokrevetna+1 jednokrevetna)"
   },
   "1 Master, 1 VIP, 1 Twin, 1 Double Cabins": {
     "dims": ["cabins"],

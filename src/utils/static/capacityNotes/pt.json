@@ -1513,7 +1513,7 @@
   },
   "(2D)": {
     "dims": ["cabins"],
-    "pt": "(2D)"
+    "pt": "(2 duplas)"
   },
   "4 double, 1 with two bunks + 1 skipper cabin": {
     "dims": ["cabins"],
@@ -4589,7 +4589,7 @@
   },
   "(Inc. 1 Crew Bow Quarter)": {
     "dims": ["cabins"],
-    "pt": "(Incl. 1 alojamento da tripulação na proa)"
+    "pt": "(incl. 1 alojamento da tripulação na proa)"
   },
   "(6 + 2 crew front peak)": {
     "dims": ["cabins"],
@@ -4721,7 +4721,7 @@
   },
   "(4 double + 2 semi double + 1 single cabin in one bow)": {
     "dims": ["cabins"],
-    "pt": "(4 duplas + 2 com cama de casal pequena + 1 cabine individual numa das proas)"
+    "pt": "(4 duplas + 2 com cama de casal estreita + 1 cabine individual numa das proas)"
   },
   "4 guest cabin + forepeak skipper cab": {
     "dims": ["cabins"],
@@ -4969,7 +4969,7 @@
   },
   "(4D+1S+1S)": {
     "dims": ["cabins"],
-    "pt": "(4D+1S+1S)"
+    "pt": "(4 duplas+1 individual+1 individual)"
   },
   "1 Master, 1 VIP, 1 Twin, 1 Double Cabins": {
     "dims": ["cabins"],

@@ -166,16 +166,13 @@ describe('note tables (src/utils/static/capacityNotes/<locale>.json)', () => {
     });
   });
 
-  test('translations keep every number, sign and bracket of the note, and its leading sign', () => {
-    const signs = text =>
-      text
-        .replace(/[^0-9+/()[\]{}]/g, '')
-        .split('')
-        .sort()
-        .join('');
+  test('translations keep every number, sign and bracket of the note in order, and its leading sign', () => {
+    const numbers = text => text.match(/\d+/g) ?? [];
+    const signs = text => text.replace(/[^+/()[\]{}]/g, '');
 
     CAPACITY_NOTE_LOCALES.forEach(l => {
       Object.entries(readJson(`src/utils/static/capacityNotes/${l}.json`)).forEach(([note, entry]) => {
+        assert.deepEqual(numbers(entry[l]), numbers(note), `${l}: ${note} -> ${entry[l]}`);
         assert.equal(signs(entry[l]), signs(note), `${l}: ${note} -> ${entry[l]}`);
 
         if (/^[-+(/[]/.test(note)) assert.equal(entry[l][0], note[0], `${l}: ${note} -> ${entry[l]}`);
@@ -215,6 +212,19 @@ describe('note tables (src/utils/static/capacityNotes/<locale>.json)', () => {
         l
       );
     });
+  });
+
+  test('a translation is used only for the dimensions it was reviewed for', () => {
+    // "(12 pax + 1 Crew)" is reviewed for berths only: on cabins it stays English (lang="en").
+    const note = '(12 pax + 1 Crew)';
+    const c = F.fromYacht(
+      { capacity: { berths: { value: 13, note }, cabins: { value: 6, note } } },
+      { locale: 'de', noteLookup: lookups.de }
+    );
+
+    assert.deepEqual(readJson('src/utils/static/capacityNotes/de.json')[note].dims, ['berths']);
+    assert.deepEqual(c.berths.note, { en: note, text: '(12 Gäste + 1 Crew)', lang: null, short: false });
+    assert.deepEqual(c.cabins.note, { en: note, text: note, lang: 'en', short: false });
   });
 
   test('English pages need no table; an unseen note stays English with lang="en"', async () => {
@@ -511,13 +521,27 @@ describe('source guards', () => {
       await ask('de', [
         { dim: 'cabins', note: 'for clients + 1 crew' },
         { dim: 'berths', note: '(two convertible saloon berths)' },
-        { dim: 'heads', note: '(4 + 1 Sunsail)' },
+        { dim: 'heads', note: '(5+1 for the crew)' },
       ]),
       [
         { en: 'for clients + 1 crew', text: 'für Gäste + 1 Crew', lang: null, short: false },
         { en: '(two convertible saloon berths)', text: '(two convertible saloon berths)', lang: 'en', short: false },
-        null,
+        { en: '(5+1 for the crew)', text: '(5+1 für die Crew)', lang: null, short: false },
       ]
+    );
+    // A translation only for its reviewed dimensions ("(5+1 for the crew)" = heads).
+    assert.equal((await ask('de', [{ dim: 'cabins', note: '(5+1 for the crew)' }]))[0].lang, 'en');
+    // A public action takes any text: its answer must not say whether a name is on the operator list.
+    assert.ok(isOperatorName('(4 + 1 Sunsail)') && !isOperatorName('(4 + 1 Sunshade)'));
+    assert.deepEqual(
+      (
+        await ask('de', [
+          { dim: 'heads', note: '(4 + 1 Sunsail)' },
+          { dim: 'berths', note: '(4 + 1 Sunshade)' },
+        ])
+      ).map(n => n && n.lang),
+      ['en', 'en'],
+      'no operator-list oracle'
     );
     assert.deepEqual(await ask('en', [{ dim: 'cabins', note: '  for clients\u00a0+ 1 crew ' }]), [
       { en: 'for clients + 1 crew', text: 'for clients + 1 crew', lang: null, short: false },

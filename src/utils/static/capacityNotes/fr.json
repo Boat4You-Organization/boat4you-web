@@ -4501,7 +4501,7 @@
   },
   "(4 double + 1 double bunk + 1 single bow cabin)": {
     "dims": ["cabins"],
-    "fr": "(4 doubles + 1 lits superposés doubles + 1 cabine avant simple)"
+    "fr": "(4 doubles + 1 avec lits superposés doubles + 1 cabine avant simple)"
   },
   "(4 cabins for guests + dinette + 2 berths in the bow)": {
     "dims": ["cabins"],
@@ -4589,7 +4589,7 @@
   },
   "(Inc. 1 Crew Bow Quarter)": {
     "dims": ["cabins"],
-    "fr": "(Dont 1 quartier équipage à l’avant)"
+    "fr": "(dont 1 cabine équipage à l’avant)"
   },
   "(6 + 2 crew front peak)": {
     "dims": ["cabins"],
@@ -4969,7 +4969,7 @@
   },
   "(4D+1S+1S)": {
     "dims": ["cabins"],
-    "fr": "(4D+1S+1S)"
+    "fr": "(4 doubles+1 simple+1 simple)"
   },
   "1 Master, 1 VIP, 1 Twin, 1 Double Cabins": {
     "dims": ["cabins"],

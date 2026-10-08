@@ -1513,7 +1513,7 @@
   },
   "(2D)": {
     "dims": ["cabins"],
-    "pl": "(2D)"
+    "pl": "(2 dwuosobowe)"
   },
   "4 double, 1 with two bunks + 1 skipper cabin": {
     "dims": ["cabins"],
@@ -4589,7 +4589,7 @@
   },
   "(Inc. 1 Crew Bow Quarter)": {
     "dims": ["cabins"],
-    "pl": "(W tym 1 część dla załogi na dziobie)"
+    "pl": "(w tym 1 kabina załogi na dziobie)"
   },
   "(6 + 2 crew front peak)": {
     "dims": ["cabins"],
@@ -4969,7 +4969,7 @@
   },
   "(4D+1S+1S)": {
     "dims": ["cabins"],
-    "pl": "(4D+1S+1S)"
+    "pl": "(4 dwuosobowe+1 jednoosobowa+1 jednoosobowa)"
   },
   "1 Master, 1 VIP, 1 Twin, 1 Double Cabins": {
     "dims": ["cabins"],

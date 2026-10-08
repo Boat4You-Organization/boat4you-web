@@ -29,9 +29,9 @@ const wordNotes = (yacht: YachtLike): Query[] => {
 
 /**
  * Partner notes for a client surface that fetches its own data (my-bookings).
- * The note tables and the operator list stay on the server: the boat's few
- * word notes go to a server action, which answers with each note as the page
- * shows it (reviewed translation, English with lang="en", or hidden). Until
+ * The note tables stay on the server: the boat's few word notes go to a
+ * server action, which answers with each note as the page shows it (reviewed
+ * translation, English with lang="en", or hidden by the sanitizer). Until
  * it answers — or if it fails — a word note does not print (the number and
  * the language-neutral notes do), so it never shows unvetted.
  */
