@@ -58,9 +58,10 @@ const ModelPageView = async ({
   breadcrumb,
   faq,
 }: ModelPageViewProps) => {
-  const [t, tCapacity] = await Promise.all([
+  const [t, tCapacity, tCommon] = await Promise.all([
     getTranslations({ locale, namespace: 'models' }),
     getTranslations({ locale, namespace: 'capacity' }),
+    getTranslations({ locale, namespace: 'common' }),
   ]);
   const price = (eur: number) => formatPriceWithCurrency({ clientPriceEur: Math.round(eur), locale });
   const name = model.displayName;
@@ -204,7 +205,12 @@ const ModelPageView = async ({
             ]
               .filter(Boolean)
               .join(' · ');
-            const title = yachtLabel(toTitleCase(boat.modelName), toTitleCase(boat.name));
+            const modelName = toTitleCase(boat.modelName);
+            const boatName = toTitleCase(boat.name);
+            const title = yachtLabel(modelName, boatName);
+            // Same localized alt as the search, wishlist and route cards
+            // ("Lagoon 42 Zeus — photo"), not the pipe title "Lagoon 42 | Zeus".
+            const photoAlt = tCommon('a11y.boatPhoto', { label: yachtLabel(modelName, boatName, ' ') });
 
             return (
               <li key={boat.id} className={styles.card}>
@@ -213,7 +219,7 @@ const ModelPageView = async ({
                     {boat.mainImageId ? (
                       <Image
                         src={getBoatImageBaseUrl(boat.mainImageId)}
-                        alt={title}
+                        alt={photoAlt}
                         fill
                         loading="lazy"
                         sizes="(min-width: 1024px) 380px, (min-width: 600px) 50vw, 100vw"
