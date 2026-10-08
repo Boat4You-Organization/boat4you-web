@@ -14,7 +14,7 @@ import { VESSEL_TYPE_LABEL_MAP } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
 import { useBoatEquipmentDescription } from '@/utils/hooks/useBoatEquipmentDescription';
 import useCapacityFmt from '@/utils/hooks/useCapacityFmt';
-import useCapacityNoteLookup from '@/utils/hooks/useCapacityNoteLookup';
+import useCapacityNotes from '@/utils/hooks/useCapacityNotes';
 import { accommodationProse } from '@/utils/static/capacityProse';
 import { capacityFacts, capacityRows, fromYacht } from '@/utils/static/yachtCapacity';
 
@@ -59,8 +59,8 @@ const DetailsTab = ({ reservationDetails }: DetailsTabProps) => {
   // the same rows and sentences as the boat page, the crew count only for
   // a crewed charter (the reservation's own charter type).
   const capacityT = useCapacityFmt();
-  const noteLookup = useCapacityNoteLookup(locale);
-  const capacity = fromYacht(reservationDetails, { locale, noteLookup });
+  const noteOptions = useCapacityNotes(locale, reservationDetails);
+  const capacity = fromYacht(reservationDetails, { locale, ...noteOptions });
   const capacityRowList = capacityRows(capacity, capacityT);
   const bold = (chunks: React.ReactNode) => <strong>{chunks}</strong>;
   const accommodation = accommodationProse(capacityFacts(capacity), () => 0);

@@ -88,15 +88,15 @@
     "nl": "(voor gasten)"
   },
   "+1 skipper": {
-    "dims": ["cabins"],
+    "dims": ["cabins", "berths", "heads"],
     "nl": "+1 schipper"
   },
   "(4+1 skipper)": {
-    "dims": ["cabins"],
+    "dims": ["cabins", "heads"],
     "nl": "(4+1 schipper)"
   },
   "+ skipper": {
-    "dims": ["heads"],
+    "dims": ["cabins", "berths", "heads"],
     "nl": "+ schipper"
   },
   "5+1 skipper": {
@@ -120,7 +120,7 @@
     "nl": "(8+2 salon+1 voorpiek)"
   },
   "(4 +1 skipper)": {
-    "dims": ["cabins"],
+    "dims": ["cabins", "heads"],
     "nl": "(4 +1 schipper)"
   },
   "(8+2 saloon+2 forepeak)": {
@@ -146,5 +146,5641 @@
   "- 4 double ensuite cabins +2 at forepeak cabins - no toilet": {
     "dims": ["berths"],
     "nl": "- 4 tweepersoonshutten met eigen badkamer +2 in voorpiekhutten - geen toilet"
+  },
+  "+2 crew": {
+    "dims": ["cabins", "berths", "heads"],
+    "nl": "+2 voor de bemanning"
+  },
+  "+1 crew": {
+    "dims": ["cabins", "berths", "heads"],
+    "nl": "+1 voor de bemanning"
+  },
+  "+ 1 bow": {
+    "dims": ["cabins", "berths", "heads"],
+    "nl": "+ 1 voorin"
+  },
+  "+ 1 crew": {
+    "dims": ["cabins", "berths", "heads"],
+    "nl": "+ 1 voor de bemanning"
+  },
+  "+ 2 crew": {
+    "dims": ["cabins", "berths", "heads"],
+    "nl": "+ 2 voor de bemanning"
+  },
+  "+ 2 bow": {
+    "dims": ["cabins", "berths", "heads"],
+    "nl": "+ 2 voorin"
+  },
+  "+ 1 wc bow": {
+    "dims": ["heads"],
+    "nl": "+ 1 WC voorin"
+  },
+  "(8 + 2 saloon + 2 bow)": {
+    "dims": ["berths"],
+    "nl": "(8 + 2 salon + 2 voorin)"
+  },
+  "+2 crew cabins": {
+    "dims": ["cabins"],
+    "nl": "+2 bemanningshutten"
+  },
+  "+1 bow": {
+    "dims": ["cabins", "berths", "heads"],
+    "nl": "+1 voorin"
+  },
+  "double": {
+    "dims": ["cabins"],
+    "nl": "tweepersoons"
+  },
+  "(4+1 crew)": {
+    "dims": ["cabins", "heads"],
+    "nl": "(4+1 voor de bemanning)"
+  },
+  "(4 Double + Saloon + 1 Skipper + 1 Skipper)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons + salon + 1 schipper + 1 schipper)"
+  },
+  "(3D)": {
+    "dims": ["cabins"],
+    "nl": "(3 tweepersoons)"
+  },
+  "(8 + 2 saloon)": {
+    "dims": ["berths"],
+    "nl": "(8 + 2 salon)"
+  },
+  "double cabins": {
+    "dims": ["cabins"],
+    "nl": "tweepersoonshutten"
+  },
+  "(max 8 pax to sleep)": {
+    "dims": ["berths"],
+    "nl": "(max. 8 gasten om te overnachten)"
+  },
+  "(4 Double+ 2 berths in the bow for Skipper and sailor)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons+ 2 kooien voorin voor schipper en matroos)"
+  },
+  "(6 + 2 saloon)": {
+    "dims": ["berths"],
+    "nl": "(6 + 2 salon)"
+  },
+  "(+ 2 crew)": {
+    "dims": ["cabins", "berths", "heads"],
+    "nl": "(+ 2 voor de bemanning)"
+  },
+  "(4+2 Crew)": {
+    "dims": ["cabins"],
+    "nl": "(4+2 voor de bemanning)"
+  },
+  "+ 4 crew": {
+    "dims": ["berths"],
+    "nl": "+ 4 voor de bemanning"
+  },
+  "(8+2 Crew)": {
+    "dims": ["berths"],
+    "nl": "(8+2 voor de bemanning)"
+  },
+  "+1 (skipper cabin)": {
+    "dims": ["cabins"],
+    "nl": "+1 (schippershut)"
+  },
+  "+1 (skipper wc/shower)": {
+    "dims": ["heads"],
+    "nl": "+1 (WC/douche schipper)"
+  },
+  "- License for: 8 / In cabins: 6": {
+    "dims": ["berths"],
+    "nl": "- Vergunning voor: 8 / In hutten: 6"
+  },
+  "(10 + 2 saloon)": {
+    "dims": ["berths"],
+    "nl": "(10 + 2 salon)"
+  },
+  "(4 Double + Saloon + 2 Crew)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons + salon + 2 voor de bemanning)"
+  },
+  "(4 + crew)": {
+    "dims": ["cabins", "heads"],
+    "nl": "(4 + bemanning)"
+  },
+  "(incl. saloon bed)": {
+    "dims": ["berths"],
+    "nl": "(incl. bed in de salon)"
+  },
+  "+ 1 Crew Toilet": {
+    "dims": ["heads"],
+    "nl": "+ 1 bemanningstoilet"
+  },
+  "+ 3 crew": {
+    "dims": ["cabins", "berths"],
+    "nl": "+ 3 voor de bemanning"
+  },
+  "Electric": {
+    "dims": ["cabins", "heads"],
+    "nl": "Elektrisch"
+  },
+  "(including any crew)": {
+    "dims": ["berths"],
+    "nl": "(inclusief eventuele bemanning)"
+  },
+  "+1 Skipper": {
+    "dims": ["cabins", "heads"],
+    "nl": "+1 schipper"
+  },
+  "(4 double for the guest + crew)": {
+    "dims": ["cabins", "berths"],
+    "nl": "(4 tweepersoons voor de gasten + bemanning)"
+  },
+  "(3 double-bed cabins)": {
+    "dims": ["cabins"],
+    "nl": "(3 hutten met tweepersoonsbed)"
+  },
+  "(8+2 crew)": {
+    "dims": ["cabins", "berths", "heads"],
+    "nl": "(8+2 voor de bemanning)"
+  },
+  "(4 + 1 crew front peak)": {
+    "dims": ["cabins", "heads"],
+    "nl": "(4 + 1 voorpiek voor de bemanning)"
+  },
+  "(6+1 crew)": {
+    "dims": ["cabins", "berths", "heads"],
+    "nl": "(6+1 voor de bemanning)"
+  },
+  "(4D+1BB)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons+1 met stapelbed)"
+  },
+  "4+2 crew": {
+    "dims": ["cabins"],
+    "nl": "4+2 voor de bemanning"
+  },
+  "+ salon": {
+    "dims": ["cabins"],
+    "nl": "+ salon"
+  },
+  "+ 2 for Crew": {
+    "dims": ["cabins", "heads"],
+    "nl": "+ 2 voor de bemanning"
+  },
+  "Electric Toilets": {
+    "dims": ["heads"],
+    "nl": "Elektrische toiletten"
+  },
+  "(6 +2 salon)": {
+    "dims": ["berths"],
+    "nl": "(6 +2 salon)"
+  },
+  "8+2 salon +2 crew": {
+    "dims": ["berths"],
+    "nl": "8+2 salon +2 voor de bemanning"
+  },
+  "convertible salon table into double berth": {
+    "dims": ["berths"],
+    "nl": "salontafel ombouwbaar tot tweepersoonsbed"
+  },
+  "- License for: 10 / In cabins: 8": {
+    "dims": ["berths"],
+    "nl": "- Vergunning voor: 10 / In hutten: 8"
+  },
+  "(4 Dbl cabs + 1 bunk berths cab + 1 forepeak cab)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoonshutten + 1 hut met stapelbedden + 1 voorpiekhut)"
+  },
+  "(4 +1 crew)": {
+    "dims": ["cabins", "heads"],
+    "nl": "(4 +1 voor de bemanning)"
+  },
+  "(4+1 Crew)": {
+    "dims": ["cabins", "heads"],
+    "nl": "(4+1 voor de bemanning)"
+  },
+  "(3 +1 WC in forepeak cabin )": {
+    "dims": ["heads"],
+    "nl": "(3 +1 WC in de voorpiekhut)"
+  },
+  "(8 +2 salon)": {
+    "dims": ["berths"],
+    "nl": "(8 +2 salon)"
+  },
+  "+3crew": {
+    "dims": ["berths"],
+    "nl": "+3 voor de bemanning"
+  },
+  "(8+2+skipp)": {
+    "dims": ["berths"],
+    "nl": "(8+2+schipper)"
+  },
+  "+ Skipper": {
+    "dims": ["cabins", "berths"],
+    "nl": "+ schipper"
+  },
+  "+ 2 bow cabin": {
+    "dims": ["cabins"],
+    "nl": "+ 2 voorhutten"
+  },
+  "(4 Dbl cabs + 1 berth in each bow comp)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoonshutten + 1 kooi in elk voorcompartiment)"
+  },
+  "(4 Dbl cabins + 1 bunk berth cabin)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoonshutten + 1 hut met stapelbed)"
+  },
+  "+1 Skipper cabin": {
+    "dims": ["cabins"],
+    "nl": "+1 schippershut"
+  },
+  "(4 guest double + 2 crew single)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons voor gasten + 2 eenpersoons voor de bemanning)"
+  },
+  "(4 double-bed cabins)": {
+    "dims": ["cabins"],
+    "nl": "(4 hutten met tweepersoonsbed)"
+  },
+  "(4+1 skipper cabin)": {
+    "dims": ["cabins"],
+    "nl": "(4+1 schippershut)"
+  },
+  "(4 + 1 skipper)": {
+    "dims": ["cabins", "heads"],
+    "nl": "(4 + 1 schipper)"
+  },
+  "(5 + 1 crew)": {
+    "dims": ["cabins", "heads"],
+    "nl": "(5 + 1 voor de bemanning)"
+  },
+  "(4+1 Skipper)": {
+    "dims": ["heads"],
+    "nl": "(4+1 schipper)"
+  },
+  "(10+2 dinette) Cat.A10 people,B11,C12": {
+    "dims": ["berths"],
+    "nl": "(10+2 dinette) Cat. A 10 personen, B11, C12"
+  },
+  "(6 + convertible saloon table)": {
+    "dims": ["berths"],
+    "nl": "(6 + ombouwbare salontafel)"
+  },
+  "(8+ 2 saloon + 2 crew peaks)": {
+    "dims": ["berths"],
+    "nl": "(8+ 2 salon + 2 voorpieken voor de bemanning)"
+  },
+  "for guests": {
+    "dims": ["berths"],
+    "nl": "voor gasten"
+  },
+  "(6 people in the cabins +2 in the saloon area)": {
+    "dims": ["berths"],
+    "nl": "(6 personen in de hutten +2 in de salon)"
+  },
+  "(8+2 dinette)": {
+    "dims": ["berths"],
+    "nl": "(8+2 dinette)"
+  },
+  "+ crew": {
+    "dims": ["cabins", "berths", "heads"],
+    "nl": "+ bemanning"
+  },
+  "(+crew)": {
+    "dims": ["cabins", "berths", "heads"],
+    "nl": "(+bemanning)"
+  },
+  "(6+2 crew)": {
+    "dims": ["cabins", "berths", "heads"],
+    "nl": "(6+2 voor de bemanning)"
+  },
+  "+1 for skipper": {
+    "dims": ["cabins", "berths", "heads"],
+    "nl": "+1 voor de schipper"
+  },
+  "+ Skipper Cabin": {
+    "dims": ["cabins"],
+    "nl": "+ schippershut"
+  },
+  "(4 double-bed cabins +1 bow cabin)": {
+    "dims": ["cabins"],
+    "nl": "(4 hutten met tweepersoonsbed +1 voorhut)"
+  },
+  "(3+1 crew)": {
+    "dims": ["cabins"],
+    "nl": "(3+1 voor de bemanning)"
+  },
+  "(4D)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons)"
+  },
+  "(4 double+2crew in front peak)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons+2 voor de bemanning in de voorpiek)"
+  },
+  "4+2crew": {
+    "dims": ["cabins"],
+    "nl": "4+2 voor de bemanning"
+  },
+  "+1 crew + saloon": {
+    "dims": ["cabins"],
+    "nl": "+1 voor de bemanning + salon"
+  },
+  "(3+1 bunk cab)": {
+    "dims": ["cabins"],
+    "nl": "(3+1 hut met stapelbed)"
+  },
+  "(4+2 crew)": {
+    "dims": ["cabins"],
+    "nl": "(4+2 voor de bemanning)"
+  },
+  "+1 bow skipper": {
+    "dims": ["cabins", "heads"],
+    "nl": "+1 schipper voorin"
+  },
+  "(2 electric)": {
+    "dims": ["heads"],
+    "nl": "(2 elektrisch)"
+  },
+  "electric": {
+    "dims": ["heads"],
+    "nl": "elektrisch"
+  },
+  "(electric)": {
+    "dims": ["heads"],
+    "nl": "(elektrisch)"
+  },
+  "(4+1 crew cabin WC)": {
+    "dims": ["heads"],
+    "nl": "(4+1 WC in de bemanningshut)"
+  },
+  "(+1 skipper WC)": {
+    "dims": ["heads"],
+    "nl": "(+1 WC schipper)"
+  },
+  "(2 Guests+ 1 crew in front peak)": {
+    "dims": ["heads"],
+    "nl": "(2 voor gasten+ 1 voor de bemanning in de voorpiek)"
+  },
+  "+1 crew + 1 in saloon": {
+    "dims": ["berths"],
+    "nl": "+1 voor de bemanning + 1 in de salon"
+  },
+  "(8 people in the cabins + 2 in the saloon area + 2 in the bow cabins)": {
+    "dims": ["berths"],
+    "nl": "(8 personen in de hutten + 2 in de salon + 2 in de voorhutten)"
+  },
+  "(10+1 dinette+1 skipper)": {
+    "dims": ["berths"],
+    "nl": "(10+1 dinette+1 schipper)"
+  },
+  "- License for: 6 / In cabins: 4": {
+    "dims": ["berths"],
+    "nl": "- Vergunning voor: 6 / In hutten: 4"
+  },
+  "+ 2 crew + 2 in saloon": {
+    "dims": ["berths"],
+    "nl": "+ 2 voor de bemanning + 2 in de salon"
+  },
+  "(8 + convertible saloon table)": {
+    "dims": ["berths"],
+    "nl": "(8 + ombouwbare salontafel)"
+  },
+  "salon table convertible to double berth": {
+    "dims": ["berths"],
+    "nl": "salontafel ombouwbaar tot tweepersoonsbed"
+  },
+  "(8 people in the cabins +1 in the saloon+ 1 in the bow cabin)": {
+    "dims": ["berths"],
+    "nl": "(8 personen in de hutten +1 in de salon+ 1 in de voorhut)"
+  },
+  "8+2+2crew": {
+    "dims": ["berths"],
+    "nl": "8+2+2 voor de bemanning"
+  },
+  "(10+2 dinette +1 skipper)": {
+    "dims": ["berths"],
+    "nl": "(10+2 dinette +1 schipper)"
+  },
+  "plus Crew": {
+    "dims": ["cabins", "berths", "heads"],
+    "nl": "plus bemanning"
+  },
+  "+1 skipper cabin": {
+    "dims": ["cabins", "berths"],
+    "nl": "+1 schippershut"
+  },
+  "+ 2 (crew)": {
+    "dims": ["cabins", "berths", "heads"],
+    "nl": "+ 2 (bemanning)"
+  },
+  "(4 Dbl + 1 berth in each bow comp )": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons + 1 kooi in elk voorcompartiment)"
+  },
+  "(4+2 Skipper)": {
+    "dims": ["cabins"],
+    "nl": "(4+2 schipper)"
+  },
+  "(1OWN+2D+1BB)": {
+    "dims": ["cabins"],
+    "nl": "(1 eignerhut+2 tweepersoons+1 met stapelbed)"
+  },
+  "(4 double-bed cabins +2 bow cabins)": {
+    "dims": ["cabins"],
+    "nl": "(4 hutten met tweepersoonsbed +2 voorhutten)"
+  },
+  "(+ crew)": {
+    "dims": ["cabins", "heads"],
+    "nl": "(+ bemanning)"
+  },
+  "(+1 WC in one of the bow comp)": {
+    "dims": ["heads"],
+    "nl": "(+1 WC in een van de voorcompartimenten)"
+  },
+  "(4 electric)": {
+    "dims": ["heads"],
+    "nl": "(4 elektrisch)"
+  },
+  "(8 + 3 Crew)": {
+    "dims": ["berths"],
+    "nl": "(8 + 3 voor de bemanning)"
+  },
+  "(12+2 dinette +1 skipper) Cat A/B: 13, C16": {
+    "dims": ["berths"],
+    "nl": "(12+2 dinette +1 schipper) Cat. A/B: 13, C16"
+  },
+  "8+2+2 Crew": {
+    "dims": ["berths"],
+    "nl": "8+2+2 voor de bemanning"
+  },
+  "(8 in cabin + 2 in saloon + 2 in front peak)": {
+    "dims": ["berths"],
+    "nl": "(8 in de hutten + 2 in de salon + 2 in de voorpiek)"
+  },
+  "(6 + 2 in saloon)": {
+    "dims": ["berths"],
+    "nl": "(6 + 2 in de salon)"
+  },
+  "(12 in cabin + 2 in saloon + 1 in front peak)": {
+    "dims": ["berths"],
+    "nl": "(12 in de hutten + 2 in de salon + 1 in de voorpiek)"
+  },
+  "+ 2 posti dinette": {
+    "dims": ["berths"],
+    "nl": "+ 2 slaapplaatsen in de dinette"
+  },
+  "(8 +2 in dinette) Cat A: 8 pax, B10": {
+    "dims": ["berths"],
+    "nl": "(8 +2 in de dinette) Cat. A: 8 gasten, B10"
+  },
+  "salon convertible to double berth": {
+    "dims": ["berths"],
+    "nl": "salon ombouwbaar tot tweepersoonsbed"
+  },
+  "(8 people in the cabins + 1 in the saloon area)": {
+    "dims": ["berths"],
+    "nl": "(8 personen in de hutten + 1 in de salon)"
+  },
+  "(salon convertible to double berth)": {
+    "dims": ["berths"],
+    "nl": "(salon ombouwbaar tot tweepersoonsbed)"
+  },
+  "(8 + 2 dinette + 2 crew)": {
+    "dims": ["berths"],
+    "nl": "(8 + 2 dinette + 2 voor de bemanning)"
+  },
+  "(8 people in the cabins +2 in the saloon area)": {
+    "dims": ["berths"],
+    "nl": "(8 personen in de hutten +2 in de salon)"
+  },
+  "(8 +2 fore peak +2 salon)": {
+    "dims": ["berths"],
+    "nl": "(8 +2 voorpiek +2 salon)"
+  },
+  "(6 + 1 Skipper)": {
+    "dims": ["berths"],
+    "nl": "(6 + 1 schipper)"
+  },
+  "(12+skipper)": {
+    "dims": ["berths"],
+    "nl": "(12+schipper)"
+  },
+  "+ 2 pointes": {
+    "dims": ["cabins", "berths"],
+    "nl": "+ 2 voorpieken"
+  },
+  "plus Skippercabin in the hull": {
+    "dims": ["cabins", "berths"],
+    "nl": "plus schippershut in de romp"
+  },
+  "+1 (crew)": {
+    "dims": ["cabins", "berths", "heads"],
+    "nl": "+1 (bemanning)"
+  },
+  "4+2 Crew": {
+    "dims": ["cabins"],
+    "nl": "4+2 voor de bemanning"
+  },
+  "(4 client use + 2 bow)": {
+    "dims": ["cabins"],
+    "nl": "(4 voor gasten + 2 voorin)"
+  },
+  "+ CONVERTIBLE SALOON": {
+    "dims": ["cabins"],
+    "nl": "+ ombouwbare salon"
+  },
+  "double cabins + convertible saloon": {
+    "dims": ["cabins"],
+    "nl": "tweepersoonshutten + ombouwbare salon"
+  },
+  "double cabins + double saloon": {
+    "dims": ["cabins"],
+    "nl": "tweepersoonshutten + tweepersoons salon"
+  },
+  "(4+Salon+2 SK)": {
+    "dims": ["cabins"],
+    "nl": "(4+salon+2 SK)"
+  },
+  "(4D+1 skippers' cabin)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons+1 schippershut)"
+  },
+  "(3 + 1 Skipper)": {
+    "dims": ["cabins"],
+    "nl": "(3 + 1 schipper)"
+  },
+  "(4 double +2 fore peak)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons +2 voorpiek)"
+  },
+  "(5+1 Crew)": {
+    "dims": ["cabins"],
+    "nl": "(5+1 voor de bemanning)"
+  },
+  "/ 3 (conv.)": {
+    "dims": ["cabins"],
+    "nl": "/ 3 (ombouwbaar)"
+  },
+  "4 double cabin, (1 triple bunk cabin + 2 double bow cabins crew use)": {
+    "dims": ["cabins"],
+    "nl": "4 tweepersoonshutten, (1 hut met driedubbel stapelbed + 2 tweepersoons voorhutten voor de bemanning)"
+  },
+  "(4D+2SD+skipper cabin)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons+2SD+schippershut)"
+  },
+  "+2 peaks": {
+    "dims": ["cabins"],
+    "nl": "+2 voorpieken"
+  },
+  "(1 master + 2 VIP + 2 double bed + 2 double bow cabins for crew use)": {
+    "dims": ["cabins"],
+    "nl": "(1 master + 2 VIP + 2 met tweepersoonsbed + 2 tweepersoons voorhutten voor de bemanning)"
+  },
+  "(4 + 2 crew front peak)": {
+    "dims": ["cabins"],
+    "nl": "(4 + 2 voorpiek voor de bemanning)"
+  },
+  "+ 2 skipper's cabins": {
+    "dims": ["cabins"],
+    "nl": "+ 2 schippershutten"
+  },
+  "+ crew cabin": {
+    "dims": ["cabins"],
+    "nl": "+ bemanningshut"
+  },
+  "(4 double cabins & 1 twin convertible to double all with en-suite facilities for up to 10 guests)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoonshutten & 1 hut met twee eenpersoonsbedden, ombouwbaar tot tweepersoons, alle met eigen badkamer, voor maximaal 10 gasten)"
+  },
+  "+ 2 bow cab": {
+    "dims": ["cabins"],
+    "nl": "+ 2 voorhutten"
+  },
+  "(6 Double + Saloon + 1 Skipper)": {
+    "dims": ["cabins"],
+    "nl": "(6 tweepersoons + salon + 1 schipper)"
+  },
+  "4 double cabins": {
+    "dims": ["cabins"],
+    "nl": "4 tweepersoonshutten"
+  },
+  "(4 + 2 SINGLE BEDS PORT/STB SIDE)": {
+    "dims": ["cabins"],
+    "nl": "(4 + 2 eenpersoonsbedden bakboord/stuurboord)"
+  },
+  "(6+1 Crew)": {
+    "dims": ["cabins", "heads"],
+    "nl": "(6+1 voor de bemanning)"
+  },
+  "+ 1 forepeak cabin": {
+    "dims": ["cabins", "heads"],
+    "nl": "+ 1 voorpiekhut"
+  },
+  "4 +1 crew": {
+    "dims": ["cabins", "heads"],
+    "nl": "4 +1 voor de bemanning"
+  },
+  "1 electric + 3 normal": {
+    "dims": ["heads"],
+    "nl": "1 elektrisch + 3 gewone"
+  },
+  "+ Skipper WC": {
+    "dims": ["heads"],
+    "nl": "+ WC schipper"
+  },
+  "3 electric toilets": {
+    "dims": ["heads"],
+    "nl": "3 elektrische toiletten"
+  },
+  "(+ 1 crew)": {
+    "dims": ["heads"],
+    "nl": "(+ 1 voor de bemanning)"
+  },
+  "(+ 1 wc in the starboard bow comp)": {
+    "dims": ["heads"],
+    "nl": "(+ 1 WC in het voorcompartiment aan stuurboord)"
+  },
+  "+ 2 in bow cabins for crew": {
+    "dims": ["heads"],
+    "nl": "+ 2 in de voorhutten voor de bemanning"
+  },
+  "(4+1crew)": {
+    "dims": ["heads"],
+    "nl": "(4+1 voor de bemanning)"
+  },
+  "+1 (only WC in skipper cabin)": {
+    "dims": ["heads"],
+    "nl": "+1 (alleen WC in de schippershut)"
+  },
+  "- New Batrooms with shower and toilet": {
+    "dims": ["heads"],
+    "nl": "- Nieuwe badkamers met douche en toilet"
+  },
+  "+separate shower": {
+    "dims": ["heads"],
+    "nl": "+aparte douche"
+  },
+  "(10+2 in dinette +1 skipper) Cat. A 12 people, B 14": {
+    "dims": ["berths"],
+    "nl": "(10+2 in de dinette +1 schipper) Cat. A 12 personen, B 14"
+  },
+  "(8 + 2 + convertible saloon table)": {
+    "dims": ["berths"],
+    "nl": "(8 + 2 + ombouwbare salontafel)"
+  },
+  "+2 dinette": {
+    "dims": ["berths"],
+    "nl": "+2 dinette"
+  },
+  "(8 in cabin + 3 in saloon + 1 in front peak)": {
+    "dims": ["berths"],
+    "nl": "(8 in de hutten + 3 in de salon + 1 in de voorpiek)"
+  },
+  "(6 people in the cabins + 2 in the saloon area)": {
+    "dims": ["berths"],
+    "nl": "(6 personen in de hutten + 2 in de salon)"
+  },
+  "( 8 +2 dinette +1 bow)": {
+    "dims": ["berths"],
+    "nl": "(8 +2 dinette +1 voorin)"
+  },
+  "[ 8 + 2 (skipper and hostess)]": {
+    "dims": ["berths"],
+    "nl": "[8 + 2 (schipper en hostess)]"
+  },
+  "- License for: 6 / In cabins: 6": {
+    "dims": ["berths"],
+    "nl": "- Vergunning voor: 6 / In hutten: 6"
+  },
+  "(12+2 crew)": {
+    "dims": ["berths"],
+    "nl": "(12+2 voor de bemanning)"
+  },
+  "(8+2 dinette +1 skipper) Cat. A: 10 pax, B: 12 pax": {
+    "dims": ["berths"],
+    "nl": "(8+2 dinette +1 schipper) Cat. A: 10 gasten, B: 12 gasten"
+  },
+  "(11 + skipper)": {
+    "dims": ["berths"],
+    "nl": "(11 + schipper)"
+  },
+  "+ 2 Crew (3 optional) berths": {
+    "dims": ["berths"],
+    "nl": "+ 2 bemanningsslaapplaatsen (3 optioneel)"
+  },
+  "(8 + 2 saloon + 1 bow)": {
+    "dims": ["berths"],
+    "nl": "(8 + 2 salon + 1 voorin)"
+  },
+  "(10 passengers + 1 skipper)": {
+    "dims": ["berths"],
+    "nl": "(10 passagiers + 1 schipper)"
+  },
+  "- 4 triple, double plus full size bunkbed and 2 double - plus 4 for crew": {
+    "dims": ["berths"],
+    "nl": "- 4 driepersoons, tweepersoonsbed plus volwaardig stapelbed en 2 tweepersoons - plus 4 voor de bemanning"
+  },
+  "(10 +1 dinette +1 skipper) Cat A/B: 11, C14": {
+    "dims": ["berths"],
+    "nl": "(10 +1 dinette +1 schipper) Cat. A/B: 11, C14"
+  },
+  "+ 2 Crew (3 optional)": {
+    "dims": ["berths"],
+    "nl": "+ 2 voor de bemanning (3 optioneel)"
+  },
+  "(10 +2 salon)": {
+    "dims": ["berths"],
+    "nl": "(10 +2 salon)"
+  },
+  "(10+2 in dinette)": {
+    "dims": ["berths"],
+    "nl": "(10+2 in de dinette)"
+  },
+  "(4 +2 salon)": {
+    "dims": ["berths"],
+    "nl": "(4 +2 salon)"
+  },
+  "(6+2+2) adaptible table in saloon": {
+    "dims": ["berths"],
+    "nl": "(6+2+2) ombouwbare tafel in de salon"
+  },
+  "salon table convertible": {
+    "dims": ["berths"],
+    "nl": "salontafel ombouwbaar"
+  },
+  "- License for: 12 / In cabins: 10": {
+    "dims": ["berths"],
+    "nl": "- Vergunning voor: 12 / In hutten: 10"
+  },
+  "(8 people in the cabins + 2 in the bunk beds + 1 in the saloon area + 1 in the bow cabin)": {
+    "dims": ["berths"],
+    "nl": "(8 personen in de hutten + 2 in de stapelbedden + 1 in de salon + 1 in de voorhut)"
+  },
+  "+crew": {
+    "dims": ["cabins", "berths", "heads"],
+    "nl": "+bemanning"
+  },
+  "(+1 skipper)": {
+    "dims": ["cabins", "berths", "heads"],
+    "nl": "(+1 schipper)"
+  },
+  "+ 1 (crew)": {
+    "dims": ["cabins", "berths", "heads"],
+    "nl": "+ 1 (bemanning)"
+  },
+  "incl crew cabin": {
+    "dims": ["cabins", "berths", "heads"],
+    "nl": "incl. bemanningshut"
+  },
+  "(4+1+1+salon)": {
+    "dims": ["cabins"],
+    "nl": "(4+1+1+salon)"
+  },
+  "3+1 bunk bed": {
+    "dims": ["cabins"],
+    "nl": "3+1 met stapelbed"
+  },
+  "(4 double +1 crew cabin)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons +1 bemanningshut)"
+  },
+  "6 pax sleep in the cabins+2 berths+2 in the sofas": {
+    "dims": ["cabins"],
+    "nl": "6 gasten slapen in de hutten+2 kooien+2 op de banken"
+  },
+  "(4+2 skipper)": {
+    "dims": ["cabins"],
+    "nl": "(4+2 schipper)"
+  },
+  "(4D+2 small bow cabins)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons+2 kleine voorhutten)"
+  },
+  "(5+2 crew cabins)": {
+    "dims": ["cabins"],
+    "nl": "(5+2 bemanningshutten)"
+  },
+  "+Skipper": {
+    "dims": ["cabins"],
+    "nl": "+schipper"
+  },
+  "(4 Dbl cabs + 1 berth in the port side bow comp.)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoonshutten + 1 kooi in het voorcompartiment aan bakboord)"
+  },
+  "4 doubles + 2 simples + carré transformable": {
+    "dims": ["cabins"],
+    "nl": "4 tweepersoons + 2 eenpersoons + ombouwbare salon"
+  },
+  "(4 double-bed cabins + 2 bow cabins)": {
+    "dims": ["cabins"],
+    "nl": "(4 hutten met tweepersoonsbed + 2 voorhutten)"
+  },
+  "(4 Dbl cabs + 1 berth in the starboard bow comp)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoonshutten + 1 kooi in het voorcompartiment aan stuurboord)"
+  },
+  "+ 2 crew + saloon": {
+    "dims": ["cabins"],
+    "nl": "+ 2 voor de bemanning + salon"
+  },
+  "(4D+1BB+skippers' cabin)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons+1 met stapelbed+schippershut)"
+  },
+  "- New matresses, USB and 220V - Airco - saftety deposit box": {
+    "dims": ["cabins"],
+    "nl": "- Nieuwe matrassen, USB en 220V - Airco - Kluisje"
+  },
+  "(4 double + 1 twin + 1 skipper)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons + 1 met twee eenpersoonsbedden + 1 schipper)"
+  },
+  "4+1(double bunk cabin at bow)": {
+    "dims": ["cabins"],
+    "nl": "4+1(hut met dubbel stapelbed voorin)"
+  },
+  "(6 Double + 1 Skipper + salon)": {
+    "dims": ["cabins"],
+    "nl": "(6 tweepersoons + 1 schipper + salon)"
+  },
+  "client use + 2 bow": {
+    "dims": ["cabins"],
+    "nl": "voor gasten + 2 voorin"
+  },
+  "(4 client use + 1 crew use + 1 bow)": {
+    "dims": ["cabins"],
+    "nl": "(4 voor gasten + 1 voor de bemanning + 1 voorin)"
+  },
+  "4 double + 2 single": {
+    "dims": ["cabins"],
+    "nl": "4 tweepersoons + 2 eenpersoons"
+  },
+  "(4 double + 1 double crew cabin)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons + 1 tweepersoons bemanningshut)"
+  },
+  "(6 + 2 crew cabins)": {
+    "dims": ["cabins"],
+    "nl": "(6 + 2 bemanningshutten)"
+  },
+  "(3 double +1 bunk beds)": {
+    "dims": ["cabins"],
+    "nl": "(3 tweepersoons +1 met stapelbedden)"
+  },
+  "(4 double-bed cabins +1 with bunk beds +1 bow cabin)": {
+    "dims": ["cabins"],
+    "nl": "(4 hutten met tweepersoonsbed +1 met stapelbedden +1 voorhut)"
+  },
+  "4 double cabins + 1 individual front peak cabin + convertible saloon": {
+    "dims": ["cabins"],
+    "nl": "4 tweepersoonshutten + 1 eenpersoons voorpiekhut + ombouwbare salon"
+  },
+  "+ 1 skipper's cabin": {
+    "dims": ["cabins"],
+    "nl": "+ 1 schippershut"
+  },
+  "double cabins + forepeak": {
+    "dims": ["cabins"],
+    "nl": "tweepersoonshutten + voorpiek"
+  },
+  "(4 Double Cabins, 2 Twin (Convertible) Cabins) + crew": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoonshutten, 2 hutten met twee eenpersoonsbedden (ombouwbaar)) + bemanning"
+  },
+  "(1 King - 2 Double - 1 twin + 3 crew)": {
+    "dims": ["cabins"],
+    "nl": "(1 kingsize - 2 tweepersoons - 1 met twee eenpersoonsbedden + 3 voor de bemanning)"
+  },
+  "(3 Dbl cabins - 1 bunk berth cabin)": {
+    "dims": ["cabins"],
+    "nl": "(3 tweepersoonshutten - 1 hut met stapelbed)"
+  },
+  "(3 + Pullman)": {
+    "dims": ["cabins"],
+    "nl": "(3 + pullmanhut)"
+  },
+  "(4 double +2 bow single)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons +2 eenpersoons voorin)"
+  },
+  "+ CONVERTIBLE SALOON + 2 CREW FOREPEAK CABIN": {
+    "dims": ["cabins"],
+    "nl": "+ ombouwbare salon + 2 voorpiekhutten voor de bemanning"
+  },
+  "(6+1 skipper)": {
+    "dims": ["cabins", "heads"],
+    "nl": "(6+1 schipper)"
+  },
+  "+1 toilet in the forepeak cabin": {
+    "dims": ["heads"],
+    "nl": "+1 toilet in de voorpiekhut"
+  },
+  "(4+skipper toilet)": {
+    "dims": ["heads"],
+    "nl": "(4+WC schipper)"
+  },
+  "(1 electric + 1 manual)": {
+    "dims": ["heads"],
+    "nl": "(1 elektrisch + 1 handmatig)"
+  },
+  "(1 electric)": {
+    "dims": ["heads"],
+    "nl": "(1 elektrisch)"
+  },
+  "(2 + 1 Skipper)": {
+    "dims": ["heads"],
+    "nl": "(2 + 1 schipper)"
+  },
+  "+ crew head": {
+    "dims": ["heads"],
+    "nl": "+ WC voor de bemanning"
+  },
+  "[ 4 + 1 (for skipper and hostess)]": {
+    "dims": ["heads"],
+    "nl": "[ 4 + 1 (voor schipper en hostess)]"
+  },
+  "4+1 crew": {
+    "dims": ["heads"],
+    "nl": "4+1 voor de bemanning"
+  },
+  "+ 1 head for skipper": {
+    "dims": ["heads"],
+    "nl": "+ 1 WC voor de schipper"
+  },
+  "(4 + 1skipper)": {
+    "dims": ["heads"],
+    "nl": "(4 + 1 schipper)"
+  },
+  "(4+1 crew toilet)": {
+    "dims": ["heads"],
+    "nl": "(4+1 bemanningstoilet)"
+  },
+  "4 wc/showers + 1 wc/shower (in starboard bow compartment)": {
+    "dims": ["heads"],
+    "nl": "4 WC's/douches + 1 WC/douche (in het voorcompartiment aan stuurboord)"
+  },
+  "(+ 1 WC in the portside bow comp)": {
+    "dims": ["heads"],
+    "nl": "(+ 1 WC in het voorcompartiment aan bakboord)"
+  },
+  "(4+1 bow skipper bath)": {
+    "dims": ["heads"],
+    "nl": "(4+1 schippersbadkamer voorin)"
+  },
+  "4+1 crew wc": {
+    "dims": ["heads"],
+    "nl": "4+1 WC voor de bemanning"
+  },
+  "4 electric toilets": {
+    "dims": ["heads"],
+    "nl": "4 elektrische toiletten"
+  },
+  "4 +1 WC skipper": {
+    "dims": ["heads"],
+    "nl": "4 +1 WC schipper"
+  },
+  "(10 + 2 saloon + 1 skipper)": {
+    "dims": ["berths"],
+    "nl": "(10 + 2 salon + 1 schipper)"
+  },
+  "(8+2) dinette convertible into 2 beds": {
+    "dims": ["berths"],
+    "nl": "(8+2) salon om te bouwen tot 2 slaapplaatsen"
+  },
+  "(6+2) Licensed for 8": {
+    "dims": ["berths"],
+    "nl": "(6+2) vergunning voor 8"
+  },
+  "(8 for clients + 1 crew + 1 bow crew)": {
+    "dims": ["berths"],
+    "nl": "(8 voor gasten + 1 voor de bemanning + 1 voor de bemanning voorin)"
+  },
+  "12+2 crew": {
+    "dims": ["berths"],
+    "nl": "12+2 voor de bemanning"
+  },
+  "(11 + convertible saloon table)": {
+    "dims": ["berths"],
+    "nl": "(11 + ombouwbare salontafel)"
+  },
+  "(12 passengers + 1 crew)": {
+    "dims": ["berths"],
+    "nl": "(12 passagiers + 1 bemanningslid)"
+  },
+  "(10+2 dinette+1 skipper) Cat A: 11": {
+    "dims": ["berths"],
+    "nl": "(10+2 salon+1 schipper) Cat. A: 11"
+  },
+  "- (8+2 in dinette)": {
+    "dims": ["berths"],
+    "nl": "- (8+2 in de salon)"
+  },
+  "(8 people in the cabins + 1 in the saloon area + 1 in the front cabin)": {
+    "dims": ["berths"],
+    "nl": "(8 personen in de hutten + 1 in de salon + 1 in de voorhut)"
+  },
+  "(6 + 1 skipper)": {
+    "dims": ["berths"],
+    "nl": "(6 + 1 schipper)"
+  },
+  "+2 in saloon": {
+    "dims": ["berths"],
+    "nl": "+2 in de salon"
+  },
+  "8 + 1 extra bed in each front cab": {
+    "dims": ["berths"],
+    "nl": "8 + 1 extra bed in elke voorhut"
+  },
+  "(10+2 dinette+1 skipper) Cat A/B: 11, C14": {
+    "dims": ["berths"],
+    "nl": "(10+2 salon+1 schipper) Cat. A/B: 11, C14"
+  },
+  "8 in the cabins": {
+    "dims": ["berths"],
+    "nl": "8 in de hutten"
+  },
+  "12+2 (skipper + hostess)": {
+    "dims": ["berths"],
+    "nl": "12+2 (schipper + hostess)"
+  },
+  "(12 +2 crew)": {
+    "dims": ["berths"],
+    "nl": "(12 +2 voor de bemanning)"
+  },
+  "(8+2 in dinette) Cat.A 10 people": {
+    "dims": ["berths"],
+    "nl": "(8+2 in de salon) Cat. A 10 personen"
+  },
+  "Registry 12": {
+    "dims": ["berths"],
+    "nl": "Geregistreerd voor 12"
+  },
+  "(8+2 dinette +1 skipper)": {
+    "dims": ["berths"],
+    "nl": "(8+2 salon +1 schipper)"
+  },
+  "(8+1 dinette+1 skipper) Cat. A e B: 12 pax": {
+    "dims": ["berths"],
+    "nl": "(8+1 salon+1 schipper) Cat. A en B: 12 gasten"
+  },
+  "(8 guests + 2 crew)": {
+    "dims": ["berths"],
+    "nl": "(8 gasten + 2 bemanningsleden)"
+  },
+  "(6 people in the cabins +1 in the saloon area)": {
+    "dims": ["berths"],
+    "nl": "(6 personen in de hutten +1 in de salon)"
+  },
+  "(8+1 Crew)": {
+    "dims": ["berths"],
+    "nl": "(8+1 voor de bemanning)"
+  },
+  "(Inc. 2 Removable bank berths in fwd cabins)": {
+    "dims": ["berths"],
+    "nl": "(incl. 2 uitneembare kooien in de voorhutten)"
+  },
+  "10 guest + skipper (in case of hostess maximum 8 guests)": {
+    "dims": ["berths"],
+    "nl": "10 gasten + schipper (met hostess maximaal 8 gasten)"
+  },
+  "(10 + 2 bow)": {
+    "dims": ["berths"],
+    "nl": "(10 + 2 voorin)"
+  },
+  "(Daily Cruise max. people 20)": {
+    "dims": ["berths"],
+    "nl": "(Dagtocht max. 20 personen)"
+  },
+  "(8 + 2) (max 10 peopl)": {
+    "dims": ["berths"],
+    "nl": "(8 + 2) (max. 10 personen)"
+  },
+  "(8 + 2 dinette)": {
+    "dims": ["berths"],
+    "nl": "(8 + 2 salon)"
+  },
+  "Pers.": {
+    "dims": ["berths"],
+    "nl": "pers."
+  },
+  "Carré transformable": {
+    "dims": ["berths"],
+    "nl": "Ombouwbare salon"
+  },
+  "8+1 skipper": {
+    "dims": ["berths"],
+    "nl": "8+1 schipper"
+  },
+  "(10+2 crew)": {
+    "dims": ["berths"],
+    "nl": "(10+2 voor de bemanning)"
+  },
+  "salon table convertible into double berth": {
+    "dims": ["berths"],
+    "nl": "salontafel om te bouwen tot tweepersoonsslaapplaats"
+  },
+  "+ 2 Crew": {
+    "dims": ["berths"],
+    "nl": "+ 2 voor de bemanning"
+  },
+  "(8 + 2 crew)": {
+    "dims": ["berths"],
+    "nl": "(8 + 2 voor de bemanning)"
+  },
+  "(8+3 crew)": {
+    "dims": ["berths"],
+    "nl": "(8+3 voor de bemanning)"
+  },
+  "(6 + crew)": {
+    "dims": ["berths"],
+    "nl": "(6 + bemanning)"
+  },
+  "(+2 daily)": {
+    "dims": ["berths"],
+    "nl": "(+2 bij dagtochten)"
+  },
+  "- Up to 12 guests + 3 crew": {
+    "dims": ["berths"],
+    "nl": "- Tot 12 gasten + 3 bemanningsleden"
+  },
+  "8 guests + 2 crew": {
+    "dims": ["berths"],
+    "nl": "8 gasten + 2 bemanningsleden"
+  },
+  "+ Convertible saloon": {
+    "dims": ["berths"],
+    "nl": "+ ombouwbare salon"
+  },
+  "guests + crew": {
+    "dims": ["berths"],
+    "nl": "gasten + bemanning"
+  },
+  "(10 + convertible saloon table)": {
+    "dims": ["berths"],
+    "nl": "(10 + ombouwbare salontafel)"
+  },
+  "recommended 8": {
+    "dims": ["berths"],
+    "nl": "aanbevolen 8"
+  },
+  "(4 double + 2 single + 1 saloon double bed)": {
+    "dims": ["berths"],
+    "nl": "(4 tweepersoons + 2 eenpersoons + 1 tweepersoonsbed in de salon)"
+  },
+  "+ 2 sofa bed in the saloon": {
+    "dims": ["berths"],
+    "nl": "+ 2 op slaapbank in de salon"
+  },
+  "(10+1+skipp)": {
+    "dims": ["berths"],
+    "nl": "(10+1+schipper)"
+  },
+  "4 double cabins + 1 bunk beds cabin + 1 bunk beds skipper cabin + 2 saloon berths": {
+    "dims": ["berths"],
+    "nl": "4 tweepersoonshutten + 1 hut met stapelbedden + 1 schippershut met stapelbedden + 2 slaapplaatsen in de salon"
+  },
+  "(8+2 salon table is convertrted into bed+2 bed in the starboard side bow)": {
+    "dims": ["berths"],
+    "nl": "(8+2 salontafel wordt omgebouwd tot bed+2 bedden voorin aan stuurboord)"
+  },
+  "(+3 crew)": {
+    "dims": ["berths"],
+    "nl": "(+3 voor de bemanning)"
+  },
+  "/ Multi Day trips / Max.: 11 guests + skipper - Recom.: 8 guests + skipper": {
+    "dims": ["berths"],
+    "nl": "/ Meerdaagse tochten / Max.: 11 gasten + schipper - Aanbev.: 8 gasten + schipper"
+  },
+  "(8 + 2 Crew)": {
+    "dims": ["berths"],
+    "nl": "(8 + 2 voor de bemanning)"
+  },
+  "(8 + 1 single bed in each front cabs)": {
+    "dims": ["berths"],
+    "nl": "(8 + 1 eenpersoonsbed in elke voorhut)"
+  },
+  "(8+2+1 Skipper)": {
+    "dims": ["berths"],
+    "nl": "(8+2+1 schipper)"
+  },
+  "+ dinette": {
+    "dims": ["cabins", "berths"],
+    "nl": "+ salon"
+  },
+  "including crew cabins": {
+    "dims": ["cabins", "berths"],
+    "nl": "inclusief bemanningshutten"
+  },
+  "6 cabins: 2 Master, 2 Double, 2 Twin all en suite.": {
+    "dims": ["cabins", "berths"],
+    "nl": "6 hutten: 2 master, 2 tweepersoons, 2 met twee eenpersoonsbedden, alle met eigen badkamer."
+  },
+  "plus crew cabin": {
+    "dims": ["cabins", "berths"],
+    "nl": "plus bemanningshut"
+  },
+  "+2 (crew)": {
+    "dims": ["cabins", "berths"],
+    "nl": "+2 (bemanning)"
+  },
+  "5 Double Cabins + 2 Tripulacion": {
+    "dims": ["cabins", "berths"],
+    "nl": "5 tweepersoonshutten + 2 voor de bemanning"
+  },
+  "+ 2 pointes aménagés": {
+    "dims": ["cabins", "berths"],
+    "nl": "+ 2 ingerichte voorpieken"
+  },
+  "(3 Double + 1 Middle port + 1 Skipper)": {
+    "dims": ["cabins"],
+    "nl": "(3 tweepersoons + 1 midden bakboord + 1 schipper)"
+  },
+  "(4 double+1 bunkbed+1 single)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons+1 met stapelbed+1 eenpersoons)"
+  },
+  "(4 Double cabins, 1 Bunk berth cabin)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoonshutten, 1 hut met stapelbed)"
+  },
+  "- 6 guest cabins +2 crew": {
+    "dims": ["cabins"],
+    "nl": "- 6 gastenhutten +2 voor de bemanning"
+  },
+  "+ 1 skipper cabin": {
+    "dims": ["cabins"],
+    "nl": "+ 1 schippershut"
+  },
+  "4 double cabin + convertible salon table": {
+    "dims": ["cabins"],
+    "nl": "4 tweepersoonshutten + ombouwbare salontafel"
+  },
+  "(6 double, 2 twin)": {
+    "dims": ["cabins"],
+    "nl": "(6 tweepersoons, 2 met twee eenpersoonsbedden)"
+  },
+  "(+2 single bow Cabin)": {
+    "dims": ["cabins"],
+    "nl": "(+2 eenpersoons voorhutten)"
+  },
+  "(3 double cabins + 1 double bunk cabin)": {
+    "dims": ["cabins"],
+    "nl": "(3 tweepersoonshutten + 1 tweepersoonshut met stapelbed)"
+  },
+  "+1 crew + 1 skipper": {
+    "dims": ["cabins"],
+    "nl": "+1 voor de bemanning + 1 schipper"
+  },
+  "(5 + 1 skipper)": {
+    "dims": ["cabins"],
+    "nl": "(5 + 1 schipper)"
+  },
+  "(five guest cabins + 2 crew cabins)": {
+    "dims": ["cabins"],
+    "nl": "(vijf gastenhutten + 2 bemanningshutten)"
+  },
+  "(+2 crew)": {
+    "dims": ["cabins"],
+    "nl": "(+2 voor de bemanning)"
+  },
+  "/ 4 (conv.)": {
+    "dims": ["cabins"],
+    "nl": "/ 4 (ombouwbaar)"
+  },
+  "3 double cabins": {
+    "dims": ["cabins"],
+    "nl": "3 tweepersoonshutten"
+  },
+  "(4 double & 1 crew cabin)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons & 1 bemanningshut)"
+  },
+  "(3 Double Cabins, 1 Twin Cabins) + crew": {
+    "dims": ["cabins"],
+    "nl": "(3 tweepersoonshutten, 1 hut met twee eenpersoonsbedden) + bemanning"
+  },
+  "+ 1 crew + 1 bow crew": {
+    "dims": ["cabins"],
+    "nl": "+ 1 voor de bemanning + 1 voor de bemanning voorin"
+  },
+  "(5 Cabins for guests plus separate crew area for two)": {
+    "dims": ["cabins"],
+    "nl": "(5 hutten voor gasten plus aparte bemanningsruimte voor twee)"
+  },
+  "+salon": {
+    "dims": ["cabins"],
+    "nl": "+salon"
+  },
+  "+ 2 crew cabins": {
+    "dims": ["cabins"],
+    "nl": "+ 2 bemanningshutten"
+  },
+  "4 DOUBLE CABINS + 2 CREW": {
+    "dims": ["cabins"],
+    "nl": "4 tweepersoonshutten + 2 voor de bemanning"
+  },
+  "(5 double +1 bow single)": {
+    "dims": ["cabins"],
+    "nl": "(5 tweepersoons +1 eenpersoons voorhut)"
+  },
+  "(4 + 2 front peak, access from the front cabin, ideal with small child)": {
+    "dims": ["cabins"],
+    "nl": "(4 + 2 voorpiek, toegang via de voorhut, ideaal met klein kind)"
+  },
+  "(3 double)": {
+    "dims": ["cabins"],
+    "nl": "(3 tweepersoons)"
+  },
+  "(5+1 SKIPPER)": {
+    "dims": ["cabins"],
+    "nl": "(5+1 schipper)"
+  },
+  "+skipper cabin": {
+    "dims": ["cabins"],
+    "nl": "+schippershut"
+  },
+  "(5+1 skipper cabin)": {
+    "dims": ["cabins"],
+    "nl": "(5+1 schippershut)"
+  },
+  "(4+1 Skipper) (3+1 skipper+1 Hostess)": {
+    "dims": ["cabins"],
+    "nl": "(4+1 schipper) (3+1 schipper+1 hostess)"
+  },
+  "(+2 skipper)": {
+    "dims": ["cabins"],
+    "nl": "(+2 schipper)"
+  },
+  "(2D)": {
+    "dims": ["cabins"],
+    "nl": "(2D)"
+  },
+  "4 double, 1 with two bunks + 1 skipper cabin": {
+    "dims": ["cabins"],
+    "nl": "4 tweepersoons, 1 met twee kooien boven elkaar + 1 schippershut"
+  },
+  "(3+salon)": {
+    "dims": ["cabins"],
+    "nl": "(3+salon)"
+  },
+  "(4 Double + Salon + 2 Crew)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons + salon + 2 voor de bemanning)"
+  },
+  "(4 Double and 2 single beds)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons- en 2 eenpersoonsbedden)"
+  },
+  "(5+1 crew)": {
+    "dims": ["cabins"],
+    "nl": "(5+1 voor de bemanning)"
+  },
+  "double + 2 single for crew": {
+    "dims": ["cabins"],
+    "nl": "tweepersoons + 2 eenpersoons voor de bemanning"
+  },
+  "(Big master cabin)": {
+    "dims": ["cabins"],
+    "nl": "(grote masterhut)"
+  },
+  "(4 double cabins+2 crew cabins)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoonshutten+2 bemanningshutten)"
+  },
+  "4 double cabins - 1 cabin with double bunks": {
+    "dims": ["cabins"],
+    "nl": "4 tweepersoonshutten - 1 hut met stapelbed"
+  },
+  "(4+1+1+ salon)": {
+    "dims": ["cabins"],
+    "nl": "(4+1+1+ salon)"
+  },
+  "(5+2 Skipper)": {
+    "dims": ["cabins"],
+    "nl": "(5+2 schipper)"
+  },
+  "(4 double + 2 single)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons + 2 eenpersoons)"
+  },
+  "(5 + 1 crew + 1 single front peak)": {
+    "dims": ["cabins"],
+    "nl": "(5 + 1 voor de bemanning + 1 eenpersoons voorpiek)"
+  },
+  "(+2 bow compartments)": {
+    "dims": ["cabins"],
+    "nl": "(+2 voorcompartimenten)"
+  },
+  "(3 double + 1 peak cabin with 2 single beds)": {
+    "dims": ["cabins"],
+    "nl": "(3 tweepersoons + 1 voorpiekhut met 2 eenpersoonsbedden)"
+  },
+  "(3+ Salon)": {
+    "dims": ["cabins"],
+    "nl": "(3+ salon)"
+  },
+  "(+ 2 skipper)": {
+    "dims": ["cabins"],
+    "nl": "(+ 2 schipper)"
+  },
+  "(4 double cabins +2 crew cabins)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoonshutten +2 bemanningshutten)"
+  },
+  "(4 double + 1 crew cabin)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons + 1 bemanningshut)"
+  },
+  "(1 berth in each bow compartment)": {
+    "dims": ["cabins"],
+    "nl": "(1 slaapplaats in elk voorcompartiment)"
+  },
+  "+2 HeadCabins": {
+    "dims": ["cabins"],
+    "nl": "+2 HeadCabins"
+  },
+  "(5 cab + 1 crew)": {
+    "dims": ["cabins"],
+    "nl": "(5 hutten + 1 voor de bemanning)"
+  },
+  "(5 double cabins+1 crew cabin)": {
+    "dims": ["cabins"],
+    "nl": "(5 tweepersoonshutten+1 bemanningshut)"
+  },
+  "3 double cabins + cabin with extra bed 2+1.": {
+    "dims": ["cabins"],
+    "nl": "3 tweepersoonshutten + hut met extra bed 2+1."
+  },
+  "[ 4 double + 2 single (for skipper and hostess)]": {
+    "dims": ["cabins"],
+    "nl": "[ 4 tweepersoons + 2 eenpersoons (voor schipper en hostess)]"
+  },
+  "4 double cabins + 2 single bow cabins": {
+    "dims": ["cabins"],
+    "nl": "4 tweepersoonshutten + 2 eenpersoons voorhutten"
+  },
+  "(4 double-bed cabins +2 bow cabin)": {
+    "dims": ["cabins"],
+    "nl": "(4 hutten met tweepersoonsbed +2 voorhutten)"
+  },
+  "(4 double + 2 single) + convertible table in saloon": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons + 2 eenpersoons) + ombouwbare tafel in de salon"
+  },
+  "4 double cabins+2 (crew cabins)": {
+    "dims": ["cabins"],
+    "nl": "4 tweepersoonshutten+2 (bemanningshutten)"
+  },
+  "+ skipper cabin": {
+    "dims": ["cabins"],
+    "nl": "+ schippershut"
+  },
+  "(the bow cabins accommodate 3 persons/each)": {
+    "dims": ["cabins"],
+    "nl": "(de voorhutten bieden plaats aan 3 personen/hut)"
+  },
+  "(4+2 bow cabins)": {
+    "dims": ["cabins"],
+    "nl": "(4+2 voorhutten)"
+  },
+  "(4 Dbl + 1 berth in the port side bow comp)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons + 1 slaapplaats in het voorcompartiment aan bakboord)"
+  },
+  "1 Master Cabin + 2 Double Cabins": {
+    "dims": ["cabins"],
+    "nl": "1 masterhut + 2 tweepersoonshutten"
+  },
+  "(4 double cabins + 2 crew cabins)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoonshutten + 2 bemanningshutten)"
+  },
+  "(3 per guests + 1 per crew)": {
+    "dims": ["cabins"],
+    "nl": "(3 voor gasten + 1 voor de bemanning)"
+  },
+  "(4+2 ) 2 in the starboard side bow)": {
+    "dims": ["cabins"],
+    "nl": "(4+2 ) 2 voorin aan stuurboord)"
+  },
+  "Double cabins": {
+    "dims": ["cabins"],
+    "nl": "Tweepersoonshutten"
+  },
+  "3 double, 1 bunk beds": {
+    "dims": ["cabins"],
+    "nl": "3 tweepersoons, 1 met stapelbedden"
+  },
+  "1 forepeack skipper cabin": {
+    "dims": ["cabins"],
+    "nl": "1 schippershut in de voorpiek"
+  },
+  "(4 double cabins with saloon with 2 extra beds plus 1 bow skipper cabin)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoonshutten met salon met 2 extra bedden plus 1 schippershut voorin)"
+  },
+  "3 double cabins + 1 bunk bed cabin": {
+    "dims": ["cabins"],
+    "nl": "3 tweepersoonshutten + 1 hut met stapelbed"
+  },
+  "(4 Double cabins+1 twin cabin ) + 1 forepeak cabin": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoonshutten+1 hut met twee eenpersoonsbedden) + 1 voorpiekhut"
+  },
+  "(4 +1Crew)": {
+    "dims": ["cabins"],
+    "nl": "(4 +1 voor de bemanning)"
+  },
+  "6 double cabins + 2 single bow cabins": {
+    "dims": ["cabins"],
+    "nl": "6 tweepersoonshutten + 2 eenpersoons voorhutten"
+  },
+  "+ une pointe aménagée": {
+    "dims": ["cabins"],
+    "nl": "+ een ingerichte voorpiek"
+  },
+  "(4 dbl + 1 bunk berth cabin)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons + 1 hut met stapelbed)"
+  },
+  "GUESTS: 5 double cabins (1 twin beds, 1 bunk) CREW: cabin + WC in forepeak, 1 double aft stern cabin + WC": {
+    "dims": ["cabins"],
+    "nl": "GASTEN: 5 tweepersoonshutten (1 met twee eenpersoonsbedden, 1 met stapelbed) BEMANNING: hut + WC in de voorpiek, 1 tweepersoons achterhut + WC"
+  },
+  "(or 3: 2 forward cabins are convertible to 1)": {
+    "dims": ["cabins"],
+    "nl": "(of 3: 2 voorhutten zijn om te bouwen tot 1)"
+  },
+  "(4 double cabins +1 single cabin skipper)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoonshutten +1 eenpersoons schippershut)"
+  },
+  "4+1 (forepeak)": {
+    "dims": ["cabins"],
+    "nl": "4+1 (voorpiek)"
+  },
+  "6+2 crew": {
+    "dims": ["cabins"],
+    "nl": "6+2 voor de bemanning"
+  },
+  "(4 double+ 2 single)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons+ 2 eenpersoons)"
+  },
+  "(4 double guest cabins +1 crew cabin)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons gastenhutten +1 bemanningshut)"
+  },
+  "4 double cabins, 1 cabin buck beds & 1 skipper cabin in the bow of the yacht": {
+    "dims": ["cabins"],
+    "nl": "4 tweepersoonshutten, 1 hut met stapelbedden & 1 schippershut in de boeg van het jacht"
+  },
+  "(4+2 skipper cabin)": {
+    "dims": ["cabins"],
+    "nl": "(4+2 schippershutten)"
+  },
+  "(+1 crew)": {
+    "dims": ["cabins", "heads"],
+    "nl": "(+1 voor de bemanning)"
+  },
+  "4+crew": {
+    "dims": ["cabins", "heads"],
+    "nl": "4+bemanning"
+  },
+  "( 4 + 1 Skipper)": {
+    "dims": ["cabins", "heads"],
+    "nl": "( 4 + 1 schipper)"
+  },
+  "(3 + 1 crew)": {
+    "dims": ["cabins", "heads"],
+    "nl": "(3 + 1 voor de bemanning)"
+  },
+  "+ 1 skipper": {
+    "dims": ["cabins", "heads"],
+    "nl": "+ 1 schipper"
+  },
+  "5+1 for skipper": {
+    "dims": ["cabins", "heads"],
+    "nl": "5+1 voor de schipper"
+  },
+  "(+1 Skipper)": {
+    "dims": ["cabins", "heads"],
+    "nl": "(+1 schipper)"
+  },
+  "3 + 1 crew": {
+    "dims": ["cabins", "heads"],
+    "nl": "3 + 1 voor de bemanning"
+  },
+  "+1 crew+1 skipper": {
+    "dims": ["cabins", "heads"],
+    "nl": "+1 voor de bemanning+1 schipper"
+  },
+  "(5 for clients + 1 crew + 1 bow)": {
+    "dims": ["cabins", "heads"],
+    "nl": "(5 voor gasten + 1 voor de bemanning + 1 voorin)"
+  },
+  "4 + CREW": {
+    "dims": ["cabins", "heads"],
+    "nl": "4 + bemanning"
+  },
+  "(5 guest + 1 crew)": {
+    "dims": ["cabins", "heads"],
+    "nl": "(5 voor gasten + 1 voor de bemanning)"
+  },
+  "(6 +3 crew)": {
+    "dims": ["cabins", "heads"],
+    "nl": "(6 +3 voor de bemanning)"
+  },
+  "(4 for clients + 1 crew + 2 bow)": {
+    "dims": ["cabins", "heads"],
+    "nl": "(4 voor gasten + 1 voor de bemanning + 2 voorin)"
+  },
+  "+ 1 Skipper": {
+    "dims": ["cabins", "heads"],
+    "nl": "+ 1 schipper"
+  },
+  "+ 1 skipper e hostess": {
+    "dims": ["cabins", "heads"],
+    "nl": "+ 1 schipper en hostess"
+  },
+  "(4 + 4 crew)": {
+    "dims": ["cabins", "heads"],
+    "nl": "(4 + 4 voor de bemanning)"
+  },
+  "+1 bow crew": {
+    "dims": ["cabins", "heads"],
+    "nl": "+1 voor de bemanning voorin"
+  },
+  "+ 1 Crew": {
+    "dims": ["cabins", "heads"],
+    "nl": "+ 1 voor de bemanning"
+  },
+  "(5 + 3 for crew)": {
+    "dims": ["cabins", "heads"],
+    "nl": "(5 + 3 voor de bemanning)"
+  },
+  "(3 +1 skipper)": {
+    "dims": ["cabins", "heads"],
+    "nl": "(3 +1 schipper)"
+  },
+  "2 Guest + 1 Crew": {
+    "dims": ["cabins", "heads"],
+    "nl": "2 voor gasten + 1 voor de bemanning"
+  },
+  "(5 + 2 for crew)": {
+    "dims": ["cabins", "heads"],
+    "nl": "(5 + 2 voor de bemanning)"
+  },
+  "for clients + 1 crew": {
+    "dims": ["cabins", "heads"],
+    "nl": "voor gasten + 1 voor de bemanning"
+  },
+  "(4+1 SKIPPER)": {
+    "dims": ["cabins", "heads"],
+    "nl": "(4+1 schipper)"
+  },
+  "(4 + Crew)": {
+    "dims": ["cabins", "heads"],
+    "nl": "(4 + bemanning)"
+  },
+  "+ 1 bow crew": {
+    "dims": ["cabins", "heads"],
+    "nl": "+ 1 voor de bemanning voorin"
+  },
+  "(6 + 1 crew toilet)": {
+    "dims": ["heads"],
+    "nl": "(6 + 1 bemanningstoilet)"
+  },
+  "(4 en suite + 1 WC/shower in the forepeak cabin)": {
+    "dims": ["heads"],
+    "nl": "(4 eigen badkamers + 1 WC/douche in de voorpiekhut)"
+  },
+  "(3 + 1 peak wc)": {
+    "dims": ["heads"],
+    "nl": "(3 + 1 WC in de voorpiek)"
+  },
+  "(1 shower)": {
+    "dims": ["heads"],
+    "nl": "(1 douche)"
+  },
+  "(4 ensuite bathrooms and 1 outside under the starboard cabin)": {
+    "dims": ["heads"],
+    "nl": "(4 eigen badkamers en 1 daarbuiten, onder de stuurboordhut)"
+  },
+  "+ wc skipper": {
+    "dims": ["heads"],
+    "nl": "+ WC schipper"
+  },
+  "4 + 1 (for crew with wc and shower)": {
+    "dims": ["heads"],
+    "nl": "4 + 1 (voor de bemanning met WC en douche)"
+  },
+  "(4+1 for crew)": {
+    "dims": ["heads"],
+    "nl": "(4+1 voor de bemanning)"
+  },
+  "(4+ 1 WC )": {
+    "dims": ["heads"],
+    "nl": "(4+ 1 WC)"
+  },
+  "(+1 in the starboard side bow comp)": {
+    "dims": ["heads"],
+    "nl": "(+1 in het voorcompartiment aan stuurboord)"
+  },
+  "WC Electric": {
+    "dims": ["heads"],
+    "nl": "Elektrisch toilet"
+  },
+  "2 WC - 2 Showers": {
+    "dims": ["heads"],
+    "nl": "2 WC's - 2 douches"
+  },
+  "(4+1 skipper WC)": {
+    "dims": ["heads"],
+    "nl": "(4+1 WC schipper)"
+  },
+  "(5 + crew)": {
+    "dims": ["heads"],
+    "nl": "(5 + bemanning)"
+  },
+  "3 wc + 1 extra shower room": {
+    "dims": ["heads"],
+    "nl": "3 WC's + 1 extra doucheruimte"
+  },
+  "(+1 only WC)": {
+    "dims": ["heads"],
+    "nl": "(+1 alleen WC)"
+  },
+  "(4+1 crew wc)": {
+    "dims": ["heads"],
+    "nl": "(4+1 WC voor de bemanning)"
+  },
+  "+ 1 CREW FOREPEAK TOILET": {
+    "dims": ["heads"],
+    "nl": "+ 1 bemanningstoilet in de voorpiek"
+  },
+  "Electric toilets": {
+    "dims": ["heads"],
+    "nl": "Elektrische toiletten"
+  },
+  "bathroom+transom shower": {
+    "dims": ["heads"],
+    "nl": "badkamer+hekdouche"
+  },
+  "(3 wc+1 crew)": {
+    "dims": ["heads"],
+    "nl": "(3 WC's+1 voor de bemanning)"
+  },
+  "3 bathrooms plus toilet in skipper cabin": {
+    "dims": ["heads"],
+    "nl": "3 badkamers plus toilet in de schippershut"
+  },
+  "4 guests + 1 skipper": {
+    "dims": ["heads"],
+    "nl": "4 voor gasten + 1 voor de schipper"
+  },
+  "(1 head in the starb bow compartment)": {
+    "dims": ["heads"],
+    "nl": "(1 WC in het voorcompartiment aan stuurboord)"
+  },
+  "2 electric toilets": {
+    "dims": ["heads"],
+    "nl": "2 elektrische toiletten"
+  },
+  "(3+1 SKIPPER)": {
+    "dims": ["heads"],
+    "nl": "(3+1 schipper)"
+  },
+  "+skipper toilet": {
+    "dims": ["heads"],
+    "nl": "+toilet schipper"
+  },
+  "+ 1 (for the skipper)": {
+    "dims": ["heads"],
+    "nl": "+ 1 (voor de schipper)"
+  },
+  "+ 1 toilet-shower in the forepeak cabin": {
+    "dims": ["heads"],
+    "nl": "+ 1 toilet met douche in de voorpiekhut"
+  },
+  "+1 crew (toilet)": {
+    "dims": ["heads"],
+    "nl": "+1 voor de bemanning (toilet)"
+  },
+  "(3wc+ 1 extra shower room": {
+    "dims": ["heads"],
+    "nl": "(3 WC's+ 1 extra doucheruimte"
+  },
+  "(3 + crew)": {
+    "dims": ["heads"],
+    "nl": "(3 + bemanning)"
+  },
+  "(4 electric + 1 manual)": {
+    "dims": ["heads"],
+    "nl": "(4 elektrische + 1 handmatig)"
+  },
+  "+ seperate shower": {
+    "dims": ["heads"],
+    "nl": "+ aparte douche"
+  },
+  "(+2 in bow cabins)": {
+    "dims": ["heads"],
+    "nl": "(+2 in de voorhutten)"
+  },
+  "(Version with Vip front toilets.)": {
+    "dims": ["heads"],
+    "nl": "(Versie met VIP-toiletten voorin.)"
+  },
+  "con doccia": {
+    "dims": ["heads"],
+    "nl": "met douche"
+  },
+  "+ 2 for Crew Heads/WCs": {
+    "dims": ["heads"],
+    "nl": "+ 2 toiletten/WC's voor de bemanning"
+  },
+  "WC (4+1), Shower (3+1)": {
+    "dims": ["heads"],
+    "nl": "WC (4+1), douche (3+1)"
+  },
+  "+2 Showers": {
+    "dims": ["heads"],
+    "nl": "+2 douches"
+  },
+  "(4+1) Elettric Wc": {
+    "dims": ["heads"],
+    "nl": "(4+1) elektrisch toilet"
+  },
+  "(3+1 crew wc)": {
+    "dims": ["heads"],
+    "nl": "(3+1 WC voor de bemanning)"
+  },
+  "(4 + 1 for the crew)": {
+    "dims": ["heads"],
+    "nl": "(4 + 1 voor de bemanning)"
+  },
+  "4/2 showers +1 WC/shower skipper": {
+    "dims": ["heads"],
+    "nl": "4/2 douches +1 WC/douche schipper"
+  },
+  "(4 in cabins plus 1 in skippers cabin)": {
+    "dims": ["heads"],
+    "nl": "(4 in de hutten plus 1 in de schippershut)"
+  },
+  "5 (4 insuite bathrooms and 1 outside under the stbd cabin)": {
+    "dims": ["heads"],
+    "nl": "5 (4 eigen badkamers en 1 daarbuiten, onder de stuurboordhut)"
+  },
+  "- 6 guest + 2 crew": {
+    "dims": ["heads"],
+    "nl": "- 6 voor gasten + 2 voor de bemanning"
+  },
+  "[6+2 (adaptable table in saloon)]": {
+    "dims": ["berths"],
+    "nl": "[6+2 (ombouwbare tafel in de salon)]"
+  },
+  "guests + 3 crew": {
+    "dims": ["berths"],
+    "nl": "gasten + 3 bemanningsleden"
+  },
+  "(6 + 1 in saloon)": {
+    "dims": ["berths"],
+    "nl": "(6 + 1 in de salon)"
+  },
+  "(5 crew)": {
+    "dims": ["berths"],
+    "nl": "(5 bemanningsleden)"
+  },
+  "(12 clients + 2 crew)": {
+    "dims": ["berths"],
+    "nl": "(12 gasten + 2 bemanningsleden)"
+  },
+  "+6 crew": {
+    "dims": ["berths"],
+    "nl": "+6 bemanningsleden"
+  },
+  "(8 + 1 + convertible saloon table)": {
+    "dims": ["berths"],
+    "nl": "(8 + 1 + ombouwbare salontafel)"
+  },
+  "+ 2 dans pointes avant": {
+    "dims": ["berths"],
+    "nl": "+ 2 in de voorpieken"
+  },
+  "(3 cabins + double convertible table/bed in the salon)": {
+    "dims": ["berths"],
+    "nl": "(3 hutten + ombouwbare tafel/tweepersoonsbed in de salon)"
+  },
+  "(+skipper)": {
+    "dims": ["berths"],
+    "nl": "(+schipper)"
+  },
+  "(8+2) 4 double berths, 1 convertable double berth in Salon, Single bed in port bow compartment": {
+    "dims": ["berths"],
+    "nl": "(8+2) 4 tweepersoonskooien, 1 ombouwbare tweepersoonskooi in de salon, eenpersoonsbed in het voorcompartiment aan bakboord"
+  },
+  "+ 2 in saloon": {
+    "dims": ["berths"],
+    "nl": "+ 2 in de salon"
+  },
+  "(10 guests + 1 skipper)": {
+    "dims": ["berths"],
+    "nl": "(10 gasten + 1 schipper)"
+  },
+  "+2saloon": {
+    "dims": ["berths"],
+    "nl": "+2 salon"
+  },
+  "(8+2 dinette +1 skipper) Cat A: 12": {
+    "dims": ["berths"],
+    "nl": "(8+2 dinette +1 schipper) Cat. A: 12"
+  },
+  "- 6 in-room": {
+    "dims": ["berths"],
+    "nl": "- 6 in hutten"
+  },
+  "(10 people in the cabins +1 in the saloon area +1 in the bow cabin)": {
+    "dims": ["berths"],
+    "nl": "(10 personen in de hutten +1 in de salon +1 in de voorhut)"
+  },
+  "(8 people in the cabins +2 in the saloon area +1 in the bow cabin)": {
+    "dims": ["berths"],
+    "nl": "(8 personen in de hutten +2 in de salon +1 in de voorhut)"
+  },
+  "+2 convitable salon + skipper cabin": {
+    "dims": ["berths"],
+    "nl": "+2 ombouwbare salon + schippershut"
+  },
+  "(6+CREW)": {
+    "dims": ["berths"],
+    "nl": "(6+bemanning)"
+  },
+  "(10+3 crew)": {
+    "dims": ["berths"],
+    "nl": "(10+3 bemanningsleden)"
+  },
+  "(6 in the cabin + 2 in the saloon)": {
+    "dims": ["berths"],
+    "nl": "(6 in de hutten + 2 in de salon)"
+  },
+  "(8+2salon+2crew)": {
+    "dims": ["berths"],
+    "nl": "(8+2 salon+2 bemanningsleden)"
+  },
+  "+2 Crew (3 Optional)(Daily cruises max 25)": {
+    "dims": ["berths"],
+    "nl": "+2 bemanningsleden (3 optioneel)(dagtochten max. 25)"
+  },
+  "(8 + 3 crew berth)": {
+    "dims": ["berths"],
+    "nl": "(8 + 3 bemanningskooien)"
+  },
+  "(16 + 4 crew)": {
+    "dims": ["berths"],
+    "nl": "(16 + 4 bemanningsleden)"
+  },
+  "4 + 1 (crew)": {
+    "dims": ["berths"],
+    "nl": "4 + 1 (bemanning)"
+  },
+  "(8 + 2 saloon + 1 skippers cabin)": {
+    "dims": ["berths"],
+    "nl": "(8 + 2 salon + 1 schippershut)"
+  },
+  "(6 + 2 saloon + 1 crew)": {
+    "dims": ["berths"],
+    "nl": "(6 + 2 salon + 1 bemanningslid)"
+  },
+  "(6 + 2 + Skipper)": {
+    "dims": ["berths"],
+    "nl": "(6 + 2 + schipper)"
+  },
+  "(two double beds, five single beds)": {
+    "dims": ["berths"],
+    "nl": "(twee tweepersoonsbedden, vijf eenpersoonsbedden)"
+  },
+  "+1(skipper)": {
+    "dims": ["berths"],
+    "nl": "+1 (schipper)"
+  },
+  "4 double + port skipper cabin + stbd skipper cabin": {
+    "dims": ["berths"],
+    "nl": "4 tweepersoons + schippershut aan bakboord + schippershut aan stuurboord"
+  },
+  "Maestro Version: 3 double cabins + skipper cabin": {
+    "dims": ["berths"],
+    "nl": "Maestro-versie: 3 tweepersoonshutten + schippershut"
+  },
+  "(6 in cabins + 2 dinette + 2 crew)": {
+    "dims": ["berths"],
+    "nl": "(6 in hutten + 2 dinette + 2 bemanningsleden)"
+  },
+  "(8 + 2 CREW)": {
+    "dims": ["berths"],
+    "nl": "(8 + 2 bemanningsleden)"
+  },
+  "8+1 +2 (trasformable dinette)": {
+    "dims": ["berths"],
+    "nl": "8+1 +2 (ombouwbare dinette)"
+  },
+  "(6 + captain)": {
+    "dims": ["berths"],
+    "nl": "(6 + kapitein)"
+  },
+  "(10 + 2 pullman + 4 crew)": {
+    "dims": ["berths"],
+    "nl": "(10 + 2 pullmankooien + 4 bemanningsleden)"
+  },
+  "8+2 Saloon": {
+    "dims": ["berths"],
+    "nl": "8+2 salon"
+  },
+  "(12+1 skipper +1 salon)": {
+    "dims": ["berths"],
+    "nl": "(12+1 schipper +1 salon)"
+  },
+  "4 Guest+2Crew": {
+    "dims": ["berths"],
+    "nl": "4 gasten+2 bemanningsleden"
+  },
+  "(8 + 3 crew)": {
+    "dims": ["berths"],
+    "nl": "(8 + 3 bemanningsleden)"
+  },
+  "( 8+2 convertible saloon )": {
+    "dims": ["berths"],
+    "nl": "(8+2 ombouwbare salon)"
+  },
+  "8 guests + skipper": {
+    "dims": ["berths"],
+    "nl": "8 gasten + schipper"
+  },
+  "+ 4 (crew)": {
+    "dims": ["berths"],
+    "nl": "+ 4 (bemanning)"
+  },
+  "(max 8 people)": {
+    "dims": ["berths"],
+    "nl": "(max. 8 personen)"
+  },
+  "6+2Salon": {
+    "dims": ["berths"],
+    "nl": "6+2 salon"
+  },
+  "(+9 crew = captain, 3 deckhands, chef & sous chef, 3 stewardesses))": {
+    "dims": ["berths"],
+    "nl": "(+9 bemanningsleden = kapitein, 3 dekknechten, chef-kok en sous-chef, 3 stewardessen))"
+  },
+  "(10 guests + 1 crew)": {
+    "dims": ["berths"],
+    "nl": "(10 gasten + 1 bemanningslid)"
+  },
+  "8 in 4 dbl cabs + 2 in salon table": {
+    "dims": ["berths"],
+    "nl": "8 in 4 tweepersoonshutten + 2 op de salontafel"
+  },
+  "+2 crew+2 in saloon": {
+    "dims": ["berths"],
+    "nl": "+2 bemanningsleden+2 in de salon"
+  },
+  "( 8 +2 in dinette +2 crew)": {
+    "dims": ["berths"],
+    "nl": "(8 +2 in de dinette +2 bemanningsleden)"
+  },
+  "(3 crew)": {
+    "dims": ["berths"],
+    "nl": "(3 bemanningsleden)"
+  },
+  "(7 + 3 crew)": {
+    "dims": ["berths"],
+    "nl": "(7 + 3 bemanningsleden)"
+  },
+  "(8 Guests + skipper & hostess (optional) in front peaks)": {
+    "dims": ["berths"],
+    "nl": "(8 gasten + schipper en hostess (optioneel) in de voorpieken)"
+  },
+  "(8+2+1 skipper)": {
+    "dims": ["berths"],
+    "nl": "(8+2+1 schipper)"
+  },
+  "(8+2+Skipper's cabin)": {
+    "dims": ["berths"],
+    "nl": "(8+2+schippershut)"
+  },
+  "6 +1 child": {
+    "dims": ["berths"],
+    "nl": "6 +1 kind"
+  },
+  "(Inc. 2 Crew Berths in Bow Quarters)": {
+    "dims": ["berths"],
+    "nl": "(incl. 2 bemanningskooien in het voorschip)"
+  },
+  "+ 2 saloon": {
+    "dims": ["berths"],
+    "nl": "+ 2 salon"
+  },
+  "(12+2 optional professional Greek crew)": {
+    "dims": ["berths"],
+    "nl": "(12+2 optionele professionele Griekse bemanning)"
+  },
+  "(10+2+Skipper's cabin)": {
+    "dims": ["berths"],
+    "nl": "(10+2+schippershut)"
+  },
+  "(8 guests+3 crew)": {
+    "dims": ["berths"],
+    "nl": "(8 gasten+3 bemanningsleden)"
+  },
+  "- License for: 12 / In cabins: 11": {
+    "dims": ["berths"],
+    "nl": "- Vergunning voor: 12 / In hutten: 11"
+  },
+  "(convertible saloon)": {
+    "dims": ["berths"],
+    "nl": "(ombouwbare salon)"
+  },
+  "licenced 12": {
+    "dims": ["berths"],
+    "nl": "vergunning voor 12"
+  },
+  "(max 6 clients + 1 crew)": {
+    "dims": ["berths"],
+    "nl": "(max. 6 gasten + 1 bemanningslid)"
+  },
+  "(6 + 2 for crew)": {
+    "dims": ["berths"],
+    "nl": "(6 + 2 voor de bemanning)"
+  },
+  "+ 2crew": {
+    "dims": ["berths"],
+    "nl": "+ 2 bemanningsleden"
+  },
+  "+one skipper cabin": {
+    "dims": ["berths"],
+    "nl": "+één schippershut"
+  },
+  "Price is for up to 12 pax. For 13 - 18 pax (in shared cabins) surcharge applies.": {
+    "dims": ["berths"],
+    "nl": "De prijs geldt voor maximaal 12 gasten. Voor 13 - 18 gasten (in gedeelde hutten) geldt een toeslag."
+  },
+  "Daily up to 12 guests": {
+    "dims": ["berths"],
+    "nl": "Dagtochten tot 12 gasten"
+  },
+  "6 in the cabins & 2 in saloon area (table convertes to bed)": {
+    "dims": ["berths"],
+    "nl": "6 in de hutten en 2 in de salon (tafel is om te bouwen tot bed)"
+  },
+  "(10 + 3 crew)": {
+    "dims": ["berths"],
+    "nl": "(10 + 3 bemanningsleden)"
+  },
+  "(8 + 2 in saloon + 1 skipper)": {
+    "dims": ["berths"],
+    "nl": "(8 + 2 in de salon + 1 schipper)"
+  },
+  "The official capacity is 8. However there is a double sofa bed too.": {
+    "dims": ["berths"],
+    "nl": "De officiële capaciteit is 8. Er is echter ook een tweepersoonsslaapbank."
+  },
+  "(2 crew + max 10 guests)": {
+    "dims": ["berths"],
+    "nl": "(2 bemanningsleden + max. 10 gasten)"
+  },
+  "(8 + 4 crew)": {
+    "dims": ["berths"],
+    "nl": "(8 + 4 bemanningsleden)"
+  },
+  "salon table canvertible to double berth": {
+    "dims": ["berths"],
+    "nl": "salontafel ombouwbaar tot tweepersoonskooi"
+  },
+  "+2 ( tavolo abbattibile - foldable table)": {
+    "dims": ["berths"],
+    "nl": "+2 (inklapbare tafel)"
+  },
+  "+ 1 pullman + 1 extra berth (for child) + 2 crew": {
+    "dims": ["berths"],
+    "nl": "+ 1 pullmankooi + 1 extra kooi (voor een kind) + 2 bemanningsleden"
+  },
+  "+1 in dinette": {
+    "dims": ["berths"],
+    "nl": "+1 in de dinette"
+  },
+  "- (2 crew + max 10 guests)": {
+    "dims": ["berths"],
+    "nl": "- (2 bemanningsleden + max. 10 gasten)"
+  },
+  "(max 8 + crew)": {
+    "dims": ["berths"],
+    "nl": "(max. 8 + bemanning)"
+  },
+  "(6+2+skipper)": {
+    "dims": ["berths"],
+    "nl": "(6+2+schipper)"
+  },
+  "(8 + 2 dinette + 1 crew)": {
+    "dims": ["berths"],
+    "nl": "(8 + 2 dinette + 1 bemanningslid)"
+  },
+  "(6+1+1) dinette convertible into 2 single beds": {
+    "dims": ["berths"],
+    "nl": "(6+1+1) dinette ombouwbaar tot 2 eenpersoonsbedden"
+  },
+  "(6+2) (max 9 people)": {
+    "dims": ["berths"],
+    "nl": "(6+2) (max. 9 personen)"
+  },
+  "8 + 1skipper": {
+    "dims": ["berths"],
+    "nl": "8 + 1 schipper"
+  },
+  "8 in the cabins + 2 Salon berth (License for 10)": {
+    "dims": ["berths"],
+    "nl": "8 in de hutten + 2 slaapplaatsen in de salon (vergunning voor 10)"
+  },
+  "(8 + 2 in cockpit + 1 skipper)": {
+    "dims": ["berths"],
+    "nl": "(8 + 2 in de kuip + 1 schipper)"
+  },
+  "(8+2 bow)": {
+    "dims": ["berths"],
+    "nl": "(8+2 in het voorschip)"
+  },
+  "(4 double, 1 with 2 bunk beds, convertible saloon table, 1 bow)": {
+    "dims": ["berths"],
+    "nl": "(4 tweepersoons, 1 met 2 stapelbedden, ombouwbare salontafel, 1 in het voorschip)"
+  },
+  "(8+2+1) dinette convertible into 2 beds": {
+    "dims": ["berths"],
+    "nl": "(8+2+1) dinette ombouwbaar tot 2 bedden"
+  },
+  "(8+1 crew)": {
+    "dims": ["berths"],
+    "nl": "(8+1 bemanningslid)"
+  },
+  "6 guests + skipper + (optional) hostess in the front peaks.": {
+    "dims": ["berths"],
+    "nl": "6 gasten + schipper + (optioneel) hostess in de voorpieken."
+  },
+  "12 guests + 2 crew": {
+    "dims": ["berths"],
+    "nl": "12 gasten + 2 bemanningsleden"
+  },
+  "(10+1 fore peak +1 salon)": {
+    "dims": ["berths"],
+    "nl": "(10+1 voorpiek +1 salon)"
+  },
+  "(2+Salon)": {
+    "dims": ["berths"],
+    "nl": "(2+salon)"
+  },
+  "(10+2 dinette +1 skipper ) Cat.A13 people,B14,C16": {
+    "dims": ["berths"],
+    "nl": "(10+2 dinette +1 schipper) Cat. A 13 personen, B 14, C 16"
+  },
+  "(4 + 2 in saloon)": {
+    "dims": ["berths"],
+    "nl": "(4 + 2 in de salon)"
+  },
+  "+ 1 crew + 1 in saloon": {
+    "dims": ["berths"],
+    "nl": "+ 1 bemanningslid + 1 in de salon"
+  },
+  "36 Passengers + 8 Crew": {
+    "dims": ["berths"],
+    "nl": "36 passagiers + 8 bemanningsleden"
+  },
+  "(within Turkish Waters max. 11)": {
+    "dims": ["berths"],
+    "nl": "(in Turkse wateren max. 11)"
+  },
+  "(8+crew)": {
+    "dims": ["berths"],
+    "nl": "(8+bemanning)"
+  },
+  "4+ 2 crew": {
+    "dims": ["berths"],
+    "nl": "4+ 2 bemanningsleden"
+  },
+  "(6 clients +crew)": {
+    "dims": ["berths"],
+    "nl": "(6 gasten +bemanning)"
+  },
+  "(8+CREW)": {
+    "dims": ["berths"],
+    "nl": "(8+bemanning)"
+  },
+  "(12 people for day trip)": {
+    "dims": ["berths"],
+    "nl": "(12 personen bij dagtochten)"
+  },
+  "available for clients": {
+    "dims": ["berths"],
+    "nl": "beschikbaar voor gasten"
+  },
+  "(10 + 1 skipper)": {
+    "dims": ["berths"],
+    "nl": "(10 + 1 schipper)"
+  },
+  "8+2 (adaptable table in saloon) +1": {
+    "dims": ["berths"],
+    "nl": "8+2 (ombouwbare tafel in de salon) +1"
+  },
+  "(8+2 dinette+2 crew)": {
+    "dims": ["berths"],
+    "nl": "(8+2 dinette+2 bemanningsleden)"
+  },
+  "+ 2 letti contrapposti": {
+    "dims": ["berths"],
+    "nl": "+ 2 tegenover elkaar liggende bedden"
+  },
+  "+2 / (6 Guests)": {
+    "dims": ["berths"],
+    "nl": "+2 / (6 gasten)"
+  },
+  "+3 crew": {
+    "dims": ["berths"],
+    "nl": "+3 bemanningsleden"
+  },
+  "10 + 1 crew + 1 crew": {
+    "dims": ["berths"],
+    "nl": "10 + 1 bemanningslid + 1 bemanningslid"
+  },
+  "+1 skipper cabin, +2 salon table convertible": {
+    "dims": ["berths"],
+    "nl": "+1 schippershut, +2 ombouwbare salontafel"
+  },
+  "(6 in cabins + 1 in salon)": {
+    "dims": ["berths"],
+    "nl": "(6 in hutten + 1 in de salon)"
+  },
+  "(10+1 dinette +1 skipper)": {
+    "dims": ["berths"],
+    "nl": "(10+1 dinette +1 schipper)"
+  },
+  "(4 people in the cabins + 1 in the saloon area)": {
+    "dims": ["berths"],
+    "nl": "(4 personen in de hutten + 1 in de salon)"
+  },
+  "Maestro Version: 3 double cabins": {
+    "dims": ["berths"],
+    "nl": "Maestro-versie: 3 tweepersoonshutten"
+  },
+  "8 +1 child": {
+    "dims": ["berths"],
+    "nl": "8 +1 kind"
+  },
+  "(8+skipp.)": {
+    "dims": ["berths"],
+    "nl": "(8+schipper)"
+  },
+  "+ 2 skipper's": {
+    "dims": ["berths"],
+    "nl": "+ 2 voor de schipper"
+  },
+  "4 double +2+2": {
+    "dims": ["berths"],
+    "nl": "4 tweepersoons +2+2"
+  },
+  "maxium licensed for 10": {
+    "dims": ["berths"],
+    "nl": "vergunning voor max. 10"
+  },
+  "(6+1crew)": {
+    "dims": ["berths"],
+    "nl": "(6+1 bemanningslid)"
+  },
+  "(10+4 crew)": {
+    "dims": ["berths"],
+    "nl": "(10+4 bemanningsleden)"
+  },
+  "(12+6 crew)": {
+    "dims": ["berths"],
+    "nl": "(12+6 bemanningsleden)"
+  },
+  "including crew(8 in cabins + 2 skipper cabins)": {
+    "dims": ["berths"],
+    "nl": "inclusief bemanning (8 in hutten + 2 schippershutten)"
+  },
+  "(8 guests + skipper + (optional) hostess in the front peaks)": {
+    "dims": ["berths"],
+    "nl": "(8 gasten + schipper + (optioneel) hostess in de voorpieken)"
+  },
+  "(8+2 Salon)": {
+    "dims": ["berths"],
+    "nl": "(8+2 salon)"
+  },
+  "8+2, salón convertible": {
+    "dims": ["berths"],
+    "nl": "8+2, ombouwbare salon"
+  },
+  "(10 berths for guests - 8 in cabins and 2 in the saloon)": {
+    "dims": ["berths"],
+    "nl": "(10 slaapplaatsen voor gasten - 8 in hutten en 2 in de salon)"
+  },
+  "(12 in cabin + 2 in saloon + 2 in front peak)": {
+    "dims": ["berths"],
+    "nl": "(12 in hutten + 2 in de salon + 2 in de voorpiek)"
+  },
+  "+ 2 skipper e hostess": {
+    "dims": ["berths"],
+    "nl": "+ 2 schipper en hostess"
+  },
+  "+ 2 bow crew": {
+    "dims": ["berths"],
+    "nl": "+ 2 bemanningsleden in het voorschip"
+  },
+  "(6+2) (max 8 people)": {
+    "dims": ["berths"],
+    "nl": "(6+2) (max. 8 personen)"
+  },
+  "(10 +1 skipper) Cat A: 13 pax": {
+    "dims": ["berths"],
+    "nl": "(10 +1 schipper) Cat. A: 13 personen"
+  },
+  "(2 two in dinette)": {
+    "dims": ["berths"],
+    "nl": "(2 in de dinette)"
+  },
+  "(8 guests + 2 crew or 12 bareboat)": {
+    "dims": ["berths"],
+    "nl": "(8 gasten + 2 bemanningsleden of 12 zonder schipper)"
+  },
+  "(10+1 Crew)": {
+    "dims": ["berths"],
+    "nl": "(10+1 bemanningslid)"
+  },
+  "(8 guests in the cabins +2 crew members in the bunk-bed cabin)": {
+    "dims": ["berths"],
+    "nl": "(8 gasten in de hutten +2 bemanningsleden in de hut met stapelbed)"
+  },
+  "(10 + 2 crew)": {
+    "dims": ["berths"],
+    "nl": "(10 + 2 bemanningsleden)"
+  },
+  "+ 1 +1 crew + 2 in saloon": {
+    "dims": ["berths"],
+    "nl": "+ 1 +1 bemanningslid + 2 in de salon"
+  },
+  "+ 2 dinette": {
+    "dims": ["berths"],
+    "nl": "+ 2 dinette"
+  },
+  "- 1Grand Master Cabin and 4 triple, double plus full size bunkbed- plus 4 for crew": {
+    "dims": ["berths"],
+    "nl": "- 1 grote masterhut en 4 driepersoonshutten, tweepersoonsbed plus volwaardig stapelbed - plus 4 voor de bemanning"
+  },
+  "(6 +2 in dinette)": {
+    "dims": ["berths"],
+    "nl": "(6 +2 in de dinette)"
+  },
+  "( 1 berth per bow, convertible saloon table,1 foldable pullman bed aft port cab )": {
+    "dims": ["berths"],
+    "nl": "(1 kooi per boeg, ombouwbare salontafel, 1 opklapbare pullmankooi in de achterhut aan bakboord)"
+  },
+  "(10+skipp)": {
+    "dims": ["berths"],
+    "nl": "(10+schipper)"
+  },
+  "(8 +1 skipper +1 dinette)": {
+    "dims": ["berths"],
+    "nl": "(8 +1 schipper +1 dinette)"
+  },
+  "(8+2 children!)": {
+    "dims": ["berths"],
+    "nl": "(8+2 kinderen!)"
+  },
+  "(8 + crew)": {
+    "dims": ["berths"],
+    "nl": "(8 + bemanning)"
+  },
+  "(8 +1 fore peak +2 salon)": {
+    "dims": ["berths"],
+    "nl": "(8 +1 voorpiek +2 salon)"
+  },
+  "6 + skipper": {
+    "dims": ["berths"],
+    "nl": "6 + schipper"
+  },
+  "8 (cabin) + 3 (in the saloon) +1 (skipper cabin with the entry from bow)": {
+    "dims": ["berths"],
+    "nl": "8 (hutten) + 3 (in de salon) +1 (schippershut met toegang vanaf de boeg)"
+  },
+  "(4 guests + 1 or 2 crew)": {
+    "dims": ["berths"],
+    "nl": "(4 gasten + 1 of 2 bemanningsleden)"
+  },
+  "Licensed for 12": {
+    "dims": ["berths"],
+    "nl": "Vergunning voor 12"
+  },
+  "(12+2 dinette +1 skipper) Cat A/B: 13, C/D16": {
+    "dims": ["berths"],
+    "nl": "(12+2 dinette +1 schipper) Cat. A/B: 13, C/D: 16"
+  },
+  "(10+2 dinette+1 skipper) Cat A:12 –B:14": {
+    "dims": ["berths"],
+    "nl": "(10+2 dinette+1 schipper) Cat. A: 12 – B: 14"
+  },
+  "+2 (adaptable table in saloon)": {
+    "dims": ["berths"],
+    "nl": "+2 (ombouwbare tafel in de salon)"
+  },
+  "(11+2) Licensed for 10": {
+    "dims": ["berths"],
+    "nl": "(11+2) Vergunning voor 10"
+  },
+  "(8 people in the cabins + 1 in the bow cabin)": {
+    "dims": ["berths"],
+    "nl": "(8 personen in de hutten + 1 in de voorhut)"
+  },
+  "(6 + 1 crew)": {
+    "dims": ["berths"],
+    "nl": "(6 + 1 bemanningslid)"
+  },
+  "+2 (adaptible table in saloon) + 1": {
+    "dims": ["berths"],
+    "nl": "+2 (ombouwbare tafel in de salon) + 1"
+  },
+  "max licensed for 10 pax": {
+    "dims": ["berths"],
+    "nl": "vergunning voor max. 10 gasten"
+  },
+  "6 double cabins + 2 crew cabins": {
+    "dims": ["berths"],
+    "nl": "6 tweepersoonshutten + 2 bemanningshutten"
+  },
+  "8 +2 saloon +2 bow": {
+    "dims": ["berths"],
+    "nl": "8 +2 salon +2 voorin"
+  },
+  "3 double cabines for the 6 guests": {
+    "dims": ["berths"],
+    "nl": "3 tweepersoonshutten voor de 6 gasten"
+  },
+  "(10 + Skipper)": {
+    "dims": ["berths"],
+    "nl": "(10 + schipper)"
+  },
+  "10 guess": {
+    "dims": ["berths"],
+    "nl": "10 gasten"
+  },
+  "(10 people in the cabins + 2 in the saloon area)": {
+    "dims": ["berths"],
+    "nl": "(10 personen in de hutten + 2 in de salon)"
+  },
+  "(6+1+1 Saloon)": {
+    "dims": ["berths"],
+    "nl": "(6+1+1 salon)"
+  },
+  "(8+2) convertible salon table": {
+    "dims": ["berths"],
+    "nl": "(8+2) ombouwbare salontafel"
+  },
+  "(10+2 dinette +1 skipper) Cat A/B: 13": {
+    "dims": ["berths"],
+    "nl": "(10+2 dinette +1 schipper) Cat. A/B: 13"
+  },
+  "(6+1 dinette)": {
+    "dims": ["berths"],
+    "nl": "(6+1 dinette)"
+  },
+  "(6+2 in salon)": {
+    "dims": ["berths"],
+    "nl": "(6+2 in de salon)"
+  },
+  "Saloon convertible into double berth": {
+    "dims": ["berths"],
+    "nl": "Salon ombouwbaar tot tweepersoonskooi"
+  },
+  "SALON CONVERTIBLE": {
+    "dims": ["berths"],
+    "nl": "Ombouwbare salon"
+  },
+  "Più dinette e/o skipper": {
+    "dims": ["berths"],
+    "nl": "Plus dinette en/of schipper"
+  },
+  "incl 2 crew berths in forepeak": {
+    "dims": ["berths"],
+    "nl": "incl. 2 bemanningskooien in de voorpiek"
+  },
+  "(max 6 people)": {
+    "dims": ["berths"],
+    "nl": "(max. 6 personen)"
+  },
+  "+ 2 pointes + carré convertible": {
+    "dims": ["berths"],
+    "nl": "+ 2 voorpieken + ombouwbare salon"
+  },
+  "( 2 clients + 1 skipper)": {
+    "dims": ["berths"],
+    "nl": "(2 gasten + 1 schipper)"
+  },
+  "8 in cabins 1 in saloon": {
+    "dims": ["berths"],
+    "nl": "8 in hutten, 1 in de salon"
+  },
+  "+ 2 places en pointes": {
+    "dims": ["berths"],
+    "nl": "+ 2 slaapplaatsen in de voorpieken"
+  },
+  "(6+2) (max 12 people)": {
+    "dims": ["berths"],
+    "nl": "(6+2) (max. 12 personen)"
+  },
+  "10 (guest) + 2 (double bink bed in one bow - crew)": {
+    "dims": ["berths"],
+    "nl": "10 (gasten) + 2 (dubbel stapelbed in één boeg - bemanning)"
+  },
+  "Cat A: 6, B8": {
+    "dims": ["berths"],
+    "nl": "Cat. A: 6, B: 8"
+  },
+  "12 guest +2 crew": {
+    "dims": ["berths"],
+    "nl": "12 gasten +2 bemanningsleden"
+  },
+  "(3x2 in cabins, 3 in saloon for children)": {
+    "dims": ["berths"],
+    "nl": "(3x2 in hutten, 3 in de salon voor kinderen)"
+  },
+  "8 guests + skipper + (optional) hostess in the front peaks.": {
+    "dims": ["berths"],
+    "nl": "8 gasten + schipper + (optioneel) hostess in de voorpieken."
+  },
+  "(12+1 Crew)": {
+    "dims": ["berths"],
+    "nl": "(12+1 bemanningslid)"
+  },
+  "10+2+1 crew": {
+    "dims": ["berths"],
+    "nl": "10+2+1 bemanningslid"
+  },
+  "10 guests plus 2 crew": {
+    "dims": ["berths"],
+    "nl": "10 gasten plus 2 bemanningsleden"
+  },
+  "(36+8 crew)": {
+    "dims": ["berths"],
+    "nl": "(36+8 bemanningsleden)"
+  },
+  "+2 on request": {
+    "dims": ["berths"],
+    "nl": "+2 op aanvraag"
+  },
+  "- 8 in-room + 2 saloon + 2 crew": {
+    "dims": ["berths"],
+    "nl": "- 8 in hutten + 2 salon + 2 bemanningsleden"
+  },
+  "guests": {
+    "dims": ["berths"],
+    "nl": "gasten"
+  },
+  "+ 3 Crew Members": {
+    "dims": ["berths"],
+    "nl": "+ 3 bemanningsleden"
+  },
+  "(12 passengers + 2 crew)": {
+    "dims": ["berths"],
+    "nl": "(12 passagiers + 2 bemanningsleden)"
+  },
+  "8+ Saloon+2 in forepeak": {
+    "dims": ["berths"],
+    "nl": "8+ salon+2 in de voorpiek"
+  },
+  "(8 people in the cabins+ 1 in the saloon+ 1 in the bow cabin)": {
+    "dims": ["berths"],
+    "nl": "(8 personen in de hutten+ 1 in de salon+ 1 in de voorhut)"
+  },
+  "(6+2) + skipper": {
+    "dims": ["berths"],
+    "nl": "(6+2) + schipper"
+  },
+  "6 + 2 crew": {
+    "dims": ["berths"],
+    "nl": "6 + 2 bemanningsleden"
+  },
+  "(6+crew)": {
+    "dims": ["berths"],
+    "nl": "(6+bemanning)"
+  },
+  "(10 +1 skipper +1 salon)": {
+    "dims": ["berths"],
+    "nl": "(10 +1 schipper +1 salon)"
+  },
+  "(2 extra single cabins with Wc/Showers in front on request)": {
+    "dims": ["berths"],
+    "nl": "(2 extra eenpersoonshutten met wc/douches voorin op aanvraag)"
+  },
+  "(Inc. 1 Crew Berth in Bow Quarter)": {
+    "dims": ["berths"],
+    "nl": "(incl. 1 bemanningskooi in het voorschip)"
+  },
+  "6+2 (bunk bed)+2 (adaptable table in saloon)": {
+    "dims": ["berths"],
+    "nl": "6+2 (stapelbed)+2 (ombouwbare tafel in de salon)"
+  },
+  "(10 +1 dinette +1 skipper) Cat A: 12": {
+    "dims": ["berths"],
+    "nl": "(10 +1 dinette +1 schipper) Cat. A: 12"
+  },
+  "(salon table convertible to double bed)": {
+    "dims": ["berths"],
+    "nl": "(salontafel ombouwbaar tot tweepersoonsbed)"
+  },
+  "+4 crew": {
+    "dims": ["berths"],
+    "nl": "+4 bemanningsleden"
+  },
+  "-License for : 8 / In cabins: 6": {
+    "dims": ["berths"],
+    "nl": "-Vergunning voor: 8 / In hutten: 6"
+  },
+  "(6+2 dinette)": {
+    "dims": ["berths"],
+    "nl": "(6+2 dinette)"
+  },
+  "(6 +2 dinette +2 crew)": {
+    "dims": ["berths"],
+    "nl": "(6 +2 dinette +2 bemanningsleden)"
+  },
+  "12+2 crew members": {
+    "dims": ["berths"],
+    "nl": "12+2 bemanningsleden"
+  },
+  "(8+2saloon+2crew)": {
+    "dims": ["berths"],
+    "nl": "(8+2 salon+2 bemanningsleden)"
+  },
+  "6 in de hutten en 2 in de salon": {
+    "dims": ["berths"],
+    "nl": "6 in de hutten en 2 in de salon"
+  },
+  "8+crew": {
+    "dims": ["berths"],
+    "nl": "8+bemanning"
+  },
+  "12+2 +1 skipper cabin tot 15": {
+    "dims": ["berths"],
+    "nl": "12+2 +1 schippershut, totaal 15"
+  },
+  "( 10 Pers. )": {
+    "dims": ["berths"],
+    "nl": "(10 pers.)"
+  },
+  "(3 double beds + 1 pullman + 2 forepeaks)": {
+    "dims": ["berths"],
+    "nl": "(3 tweepersoonsbedden + 1 pullmankooi + 2 voorpieken)"
+  },
+  "12+1 (skipper)": {
+    "dims": ["berths"],
+    "nl": "12+1 (schipper)"
+  },
+  "(Daily Cruises max. people 25)": {
+    "dims": ["berths"],
+    "nl": "(Dagtochten max. 25 personen)"
+  },
+  "(+ 3 crew)": {
+    "dims": ["berths"],
+    "nl": "(+ 3 bemanningsleden)"
+  },
+  "(8+1) 4 double en-suite cabins, one of which has a single cabin attached": {
+    "dims": ["berths"],
+    "nl": "(8+1) 4 tweepersoonshutten met eigen badkamer, waarvan één met een aangrenzende eenpersoonshut"
+  },
+  "licensed for:, 10 in cabins": {
+    "dims": ["berths"],
+    "nl": "vergunning voor:, 10 in hutten"
+  },
+  "(10+2) * For Day Trips 14 pax*": {
+    "dims": ["berths"],
+    "nl": "(10+2) * Voor dagtochten 14 gasten*"
+  },
+  "(10+1+1 skipp)": {
+    "dims": ["berths"],
+    "nl": "(10+1+1 schipper)"
+  },
+  "(8 people in the cabins + 2 in the saloon area )": {
+    "dims": ["berths"],
+    "nl": "(8 personen in de hutten + 2 in de salon)"
+  },
+  "(6 guests + 2 convertible saloon)": {
+    "dims": ["berths"],
+    "nl": "(6 gasten + 2 ombouwbare salon)"
+  },
+  "4 people for multiple days and 20 people for daily cruises": {
+    "dims": ["berths"],
+    "nl": "4 personen voor meerdaagse tochten en 20 personen voor dagtochten"
+  },
+  "guest + crew": {
+    "dims": ["berths"],
+    "nl": "gasten + bemanning"
+  },
+  "(8 guests in 4 cabins + crew)": {
+    "dims": ["berths"],
+    "nl": "(8 gasten in 4 hutten + bemanning)"
+  },
+  "(6+2+skipp)": {
+    "dims": ["berths"],
+    "nl": "(6+2+schipper)"
+  },
+  "(8+2 salon+2 bow cabins)": {
+    "dims": ["berths"],
+    "nl": "(8+2 salon+2 voorhutten)"
+  },
+  "berths": {
+    "dims": ["berths"],
+    "nl": "slaapplaatsen"
+  },
+  "(8 people in the cabins + 1 in the saloon area + 1 in the bow cabin)": {
+    "dims": ["berths"],
+    "nl": "(8 personen in de hutten + 1 in het salongedeelte + 1 in de voorhut)"
+  },
+  "8+2 convertible salon table": {
+    "dims": ["berths"],
+    "nl": "8+2 ombouwbare salontafel"
+  },
+  "(salon table convertible to double berth/1 extra small berth in each front cabin)": {
+    "dims": ["berths"],
+    "nl": "(salontafel ombouwbaar tot tweepersoonskooi/1 extra kleine kooi in elke voorhut)"
+  },
+  "(8 +1 skipper) Cat. A: 12 pax": {
+    "dims": ["berths"],
+    "nl": "(8 +1 schipper) Cat. A: 12 personen"
+  },
+  "(8+2 in salon)": {
+    "dims": ["berths"],
+    "nl": "(8+2 in de salon)"
+  },
+  "(6+1) (max 12 people)": {
+    "dims": ["berths"],
+    "nl": "(6+1) (max. 12 personen)"
+  },
+  "(8 in cabin + 2 in saloon + 1 in front peak)": {
+    "dims": ["berths"],
+    "nl": "(8 in hutten + 2 in de salon + 1 in de voorpiek)"
+  },
+  "(8+2+2 convertible table in salon)": {
+    "dims": ["berths"],
+    "nl": "(8+2+2 ombouwbare tafel in de salon)"
+  },
+  "(+ 1 skipper's)": {
+    "dims": ["berths"],
+    "nl": "(+ 1 voor de schipper)"
+  },
+  "6 in cabins +1 saloon": {
+    "dims": ["berths"],
+    "nl": "6 in hutten +1 salon"
+  },
+  "(+2 single bed)": {
+    "dims": ["berths"],
+    "nl": "(+2 eenpersoonsbedden)"
+  },
+  "(8 guests in the cabins + Skipper in the bow cabin)": {
+    "dims": ["berths"],
+    "nl": "(8 gasten in de hutten + schipper in de voorhut)"
+  },
+  "8 in cabins +1+1 saloon": {
+    "dims": ["berths"],
+    "nl": "8 in hutten +1+1 salon"
+  },
+  "(12 + 6 crew)": {
+    "dims": ["berths"],
+    "nl": "(12 + 6 bemanningsleden)"
+  },
+  "8 clients + + 2 CREW CAB 1 BATH": {
+    "dims": ["berths"],
+    "nl": "8 gasten + + 2 bemanningshutten 1 badkamer"
+  },
+  "(6+2) + 2 crew cabins": {
+    "dims": ["berths"],
+    "nl": "(6+2) + 2 bemanningshutten"
+  },
+  "(8 guests + crew)": {
+    "dims": ["berths"],
+    "nl": "(8 gasten + bemanning)"
+  },
+  "+ convertible saloon": {
+    "dims": ["berths"],
+    "nl": "+ ombouwbare salon"
+  },
+  "(10+2) - 10 guests": {
+    "dims": ["berths"],
+    "nl": "(10+2) - 10 gasten"
+  },
+  "(forward cabins with additional single beds for kids)": {
+    "dims": ["berths"],
+    "nl": "(voorhutten met extra eenpersoonsbedden voor kinderen)"
+  },
+  "(8+2)+1skipper": {
+    "dims": ["berths"],
+    "nl": "(8+2)+1 schipper"
+  },
+  "+1 crew + 2 in saloon": {
+    "dims": ["berths"],
+    "nl": "+1 bemanningslid + 2 in de salon"
+  },
+  "(8 cabin + 2 in the saloon)": {
+    "dims": ["berths"],
+    "nl": "(8 in hutten + 2 in de salon)"
+  },
+  "8+2crew": {
+    "dims": ["berths"],
+    "nl": "8+2 bemanningsleden"
+  },
+  "(6 + Skipper)": {
+    "dims": ["berths"],
+    "nl": "(6 + schipper)"
+  },
+  "(6+skipp)": {
+    "dims": ["berths"],
+    "nl": "(6+schipper)"
+  },
+  "8 +2 crew": {
+    "dims": ["berths"],
+    "nl": "8 +2 bemanningsleden"
+  },
+  "(6/8 + 2 crew)": {
+    "dims": ["berths"],
+    "nl": "(6/8 + 2 bemanningsleden)"
+  },
+  "(10+2 for crew)": {
+    "dims": ["berths"],
+    "nl": "(10+2 voor de bemanning)"
+  },
+  "(6 + 2 dinette)": {
+    "dims": ["berths"],
+    "nl": "(6 + 2 salon)"
+  },
+  "(8 Guests + crew)": {
+    "dims": ["berths"],
+    "nl": "(8 gasten + bemanning)"
+  },
+  "(8 people in the cabins + 2 in the bunk beds + Hostess/Skipper in the other bunk bed)": {
+    "dims": ["berths"],
+    "nl": "(8 personen in de hutten + 2 in de stapelbedden + hostess/schipper in het andere stapelbed)"
+  },
+  "(8 people in the cabins + 2 in the saloon area)": {
+    "dims": ["berths"],
+    "nl": "(8 personen in de hutten + 2 in het salongedeelte)"
+  },
+  "+ deux pointes + 2 dans le carré convertible": {
+    "dims": ["berths"],
+    "nl": "+ twee voorpieken + 2 in de ombouwbare salon"
+  },
+  "(8 people in the cabins +1 in the saloon area)": {
+    "dims": ["berths"],
+    "nl": "(8 personen in de hutten +1 in het salongedeelte)"
+  },
+  "12 + 1 skipper cabin": {
+    "dims": ["berths"],
+    "nl": "12 + 1 schippershut"
+  },
+  "(1 king size bed + 2 twin size beds)": {
+    "dims": ["berths"],
+    "nl": "(1 kingsize bed + 2 eenpersoonsbedden)"
+  },
+  "(12+1 skipper) Cat A:12, B:14": {
+    "dims": ["berths"],
+    "nl": "(12+1 schipper) Cat. A:12, B:14"
+  },
+  "(8+skipp)": {
+    "dims": ["berths"],
+    "nl": "(8+schipper)"
+  },
+  "(4 Dbl cabs + 2 semi Dbl cabs + 1 single bed bow comp)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoonshutten + 2 hutten met twijfelaar + 1 eenpersoonsbed in het voorcompartiment)"
+  },
+  "+2 Skipper Cabins": {
+    "dims": ["cabins"],
+    "nl": "+2 schippershutten"
+  },
+  "/ 4 double cabins (8 guests) + 1 sofa bed (2 guests) + 1 cabin for the skipper": {
+    "dims": ["cabins"],
+    "nl": "/ 4 tweepersoonshutten (8 gasten) + 1 slaapbank (2 gasten) + 1 hut voor de schipper"
+  },
+  "3 double + forepeak skipper": {
+    "dims": ["cabins"],
+    "nl": "3 tweepersoons + schipper in de voorpiek"
+  },
+  "double cabins, all with en-suite facilities & 1 French double that shares bathroom": {
+    "dims": ["cabins"],
+    "nl": "tweepersoonshutten, alle met eigen badkamer & 1 hut met frans bed die de badkamer deelt"
+  },
+  "(2 double for guests 1 for crew)": {
+    "dims": ["cabins"],
+    "nl": "(2 tweepersoons voor gasten 1 voor de bemanning)"
+  },
+  "(2 Master king size beds+ 3 - Triple 1 bed fot 2 pax + single bed)": {
+    "dims": ["cabins"],
+    "nl": "(2 masterhutten met kingsize bed+ 3 - driepersoons 1 bed voor 2 gasten + eenpersoonsbed)"
+  },
+  "Aft port cabin, double berth, plus pullman berth": {
+    "dims": ["cabins"],
+    "nl": "Achterhut bakboord, tweepersoonskooi, plus pullmankooi"
+  },
+  "(1 master, 2 standard,1 middle cabin) +1 (skipper cabin)": {
+    "dims": ["cabins"],
+    "nl": "(1 master, 2 standaard,1 middenhut) +1 (schippershut)"
+  },
+  "5 cabins: 1 Front Master, 1 Aft Master, 1 Triple, 2 Double Cabins; all en-suite.": {
+    "dims": ["cabins"],
+    "nl": "5 hutten: 1 masterhut voor, 1 masterhut achter, 1 driepersoonshut, 2 tweepersoonshutten; alle met eigen badkamer."
+  },
+  "5 Cabins ; 1 Master, 2 VIP, 2 Double all en-suite.": {
+    "dims": ["cabins"],
+    "nl": "5 hutten ; 1 master, 2 VIP, 2 tweepersoons, alle met eigen badkamer."
+  },
+  "4 double cabins + 2 crew single cabins)": {
+    "dims": ["cabins"],
+    "nl": "4 tweepersoonshutten + 2 eenpersoons bemanningshutten)"
+  },
+  "4+ 1 crew cabin": {
+    "dims": ["cabins"],
+    "nl": "4+ 1 bemanningshut"
+  },
+  "Più 1 per skipper a prora": {
+    "dims": ["cabins"],
+    "nl": "Plus 1 voor de schipper voorin"
+  },
+  "(3 double + 2 single for crew in bow)": {
+    "dims": ["cabins"],
+    "nl": "(3 tweepersoons + 2 eenpersoons voor de bemanning voorin)"
+  },
+  "(4 double-bed cabins + 1 with bunk beds)": {
+    "dims": ["cabins"],
+    "nl": "(4 hutten met tweepersoonsbed + 1 met stapelbedden)"
+  },
+  "(double)": {
+    "dims": ["cabins"],
+    "nl": "(tweepersoons)"
+  },
+  "2 Master Bow & 2 Master Stern Cabins and 2 Cabins with Bunk Beds": {
+    "dims": ["cabins"],
+    "nl": "2 masterhutten voor & 2 masterhutten achter en 2 hutten met stapelbedden"
+  },
+  "(4 +bed in Salon)": {
+    "dims": ["cabins"],
+    "nl": "(4 +bed in de salon)"
+  },
+  "4 Cabins; 1 Master, 1 Double, 1 VIP, 1 Single all en-suite.": {
+    "dims": ["cabins"],
+    "nl": "4 hutten; 1 master, 1 tweepersoons, 1 VIP, 1 eenpersoons, alle met eigen badkamer."
+  },
+  "(4+2 cabins)": {
+    "dims": ["cabins"],
+    "nl": "(4+2 hutten)"
+  },
+  "(4 Double + Saloon + 1 Skipper)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons + salon + 1 schipper)"
+  },
+  "4+plus skipper scabin in the bow": {
+    "dims": ["cabins"],
+    "nl": "4+ schippershut voorin"
+  },
+  "(3 double and 1 bunk beds)": {
+    "dims": ["cabins"],
+    "nl": "(3 tweepersoons en 1 met stapelbedden)"
+  },
+  "Double bunk bed in the saloon": {
+    "dims": ["cabins"],
+    "nl": "Tweepersoonskooi in de salon"
+  },
+  "4 Cabins; 2 Master, 2 Double ( Convertable ) all en suite.": {
+    "dims": ["cabins"],
+    "nl": "4 hutten; 2 master, 2 tweepersoons ( ombouwbaar ), alle met eigen badkamer."
+  },
+  "(+saloon)": {
+    "dims": ["cabins"],
+    "nl": "(+salon)"
+  },
+  "(4double cabins)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoonshutten)"
+  },
+  "+2 Skipper": {
+    "dims": ["cabins"],
+    "nl": "+2 schipper"
+  },
+  "(4 double + 1 single ext)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons + 1 eenpersoons ext)"
+  },
+  "(3 double, 2 bunk bed cabin)": {
+    "dims": ["cabins"],
+    "nl": "(3 tweepersoons, 2 hutten met stapelbed)"
+  },
+  "(4+2 bow)": {
+    "dims": ["cabins"],
+    "nl": "(4+2 voorin)"
+  },
+  "(1 cabin with Bunk Bed)": {
+    "dims": ["cabins"],
+    "nl": "(1 hut met stapelbed)"
+  },
+  "+1 crew cab": {
+    "dims": ["cabins"],
+    "nl": "+1 bemanningshut"
+  },
+  "convertible saloon double berth + port bow compartment": {
+    "dims": ["cabins"],
+    "nl": "salon ombouwbaar tot tweepersoonskooi + voorcompartiment bakboord"
+  },
+  "(4+2+2 saloon)": {
+    "dims": ["cabins"],
+    "nl": "(4+2+2 salon)"
+  },
+  "(3 Dbl cabins, 1 x Bunk bed cabin)": {
+    "dims": ["cabins"],
+    "nl": "(3 tweepersoonshutten, 1 x hut met stapelbed)"
+  },
+  "(4 double cabins + 2 single bow cabins)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoonshutten + 2 eenpersoons voorhutten)"
+  },
+  "+1 Cabin for Crew": {
+    "dims": ["cabins"],
+    "nl": "+1 hut voor de bemanning"
+  },
+  "4 doubles + 2 singles": {
+    "dims": ["cabins"],
+    "nl": "4 tweepersoons + 2 eenpersoons"
+  },
+  "(4 double +2 single in bow for children)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons +2 eenpersoons voorin voor kinderen)"
+  },
+  "(one for crew)": {
+    "dims": ["cabins"],
+    "nl": "(een voor de bemanning)"
+  },
+  "4 Double en-suite cabins": {
+    "dims": ["cabins"],
+    "nl": "4 tweepersoonshutten met eigen badkamer"
+  },
+  "(4 doubles + 1 twin + 1 front peak": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons + 1 met twee eenpersoonsbedden + 1 voorpiek"
+  },
+  "3 Doubles + 1 Simple": {
+    "dims": ["cabins"],
+    "nl": "3 tweepersoons + 1 eenpersoons"
+  },
+  "(2 master and 2 double)": {
+    "dims": ["cabins"],
+    "nl": "(2 master en 2 tweepersoons)"
+  },
+  "(1 Master double, 1 VIP double, 2 twin)": {
+    "dims": ["cabins"],
+    "nl": "(1 master tweepersoons, 1 VIP tweepersoons, 2 met twee eenpersoonsbedden)"
+  },
+  "5 + 1 crew + 1crew": {
+    "dims": ["cabins"],
+    "nl": "5 + 1 voor de bemanning + 1 voor de bemanning"
+  },
+  "(1 cabin with Bunk bed)": {
+    "dims": ["cabins"],
+    "nl": "(1 hut met stapelbed)"
+  },
+  "(6 double +1 skipper)": {
+    "dims": ["cabins"],
+    "nl": "(6 tweepersoons +1 schipper)"
+  },
+  "Two master, one double and two twins which can also be converted to doubles - all en-suite).": {
+    "dims": ["cabins"],
+    "nl": "Twee master, één tweepersoons en twee met twee eenpersoonsbedden die ook tot tweepersoons omgebouwd kunnen worden - alle met eigen badkamer)."
+  },
+  "(4 double cabins + convertible saloon table + 2 crew cabins)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoonshutten + ombouwbare salontafel + 2 bemanningshutten)"
+  },
+  "(4+1SK+Salon)": {
+    "dims": ["cabins"],
+    "nl": "(4+1 schipper+salon)"
+  },
+  "+1 (4 double cabins + 1 with bunk beds + 1 skipper cabin)": {
+    "dims": ["cabins"],
+    "nl": "+1 (4 tweepersoonshutten + 1 met stapelbedden + 1 schippershut)"
+  },
+  "(3D+skippers' cabin)": {
+    "dims": ["cabins"],
+    "nl": "(3 tweepersoons+schippershut)"
+  },
+  "4 Double + 2 Single": {
+    "dims": ["cabins"],
+    "nl": "4 tweepersoons + 2 eenpersoons"
+  },
+  "matrimoniali + dinette a tavolo centrale con due singoli laterali": {
+    "dims": ["cabins"],
+    "nl": "tweepersoons + salon met middentafel en twee eenpersoonskooien aan de zijkant"
+  },
+  "(5 + 1 crew + 1 front peak)": {
+    "dims": ["cabins"],
+    "nl": "(5 + 1 voor de bemanning + 1 voorpiek)"
+  },
+  "(4 double + 2 single in the forepeak cabin)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons + 2 eenpersoons in de voorpiekhut)"
+  },
+  "available for clients +1 bow skipper": {
+    "dims": ["cabins"],
+    "nl": "beschikbaar voor gasten +1 schipper voorin"
+  },
+  "+2 bow": {
+    "dims": ["cabins"],
+    "nl": "+2 voorin"
+  },
+  "5 cabins: 1 Master, 2 Double, 1 Twin all en suite.": {
+    "dims": ["cabins"],
+    "nl": "5 hutten: 1 master, 2 tweepersoons, 1 met twee eenpersoonsbedden, alle met eigen badkamer."
+  },
+  "(3dbl+1 skipper cabin)": {
+    "dims": ["cabins"],
+    "nl": "(3 tweepersoons+1 schippershut)"
+  },
+  "extra bed in the saloon": {
+    "dims": ["cabins"],
+    "nl": "extra bed in de salon"
+  },
+  "(4 double + 1 twin)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons + 1 met twee eenpersoonsbedden)"
+  },
+  "(4 double + 2 bow cabins)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons + 2 voorhutten)"
+  },
+  "(3x double bed, 1 room with 2 single berth)": {
+    "dims": ["cabins"],
+    "nl": "(3x tweepersoonsbed, 1 hut met 2 eenpersoonskooien)"
+  },
+  "(Double)": {
+    "dims": ["cabins"],
+    "nl": "(tweepersoons)"
+  },
+  "4 double cagins and 2 bow cabins": {
+    "dims": ["cabins"],
+    "nl": "4 tweepersoonshutten en 2 voorhutten"
+  },
+  "(4D+2 skippers' cabin)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons+2 schippershutten)"
+  },
+  "(2 master, 1 double, 1 twin)": {
+    "dims": ["cabins"],
+    "nl": "(2 master, 1 tweepersoons, 1 met twee eenpersoonsbedden)"
+  },
+  "(3 Double + 2 Crew)": {
+    "dims": ["cabins"],
+    "nl": "(3 tweepersoons + 2 voor de bemanning)"
+  },
+  "4 DOUBLE, 1 PULLMAN CABIN FOR 2, 1 CREW CABIN FOR 2": {
+    "dims": ["cabins"],
+    "nl": "4 tweepersoons, 1 pullmanhut voor 2, 1 bemanningshut voor 2"
+  },
+  "(3 + Skipper)": {
+    "dims": ["cabins"],
+    "nl": "(3 + schipper)"
+  },
+  "(3+2 crew)": {
+    "dims": ["cabins"],
+    "nl": "(3+2 voor de bemanning)"
+  },
+  "(3D+1 skippers' cabin)": {
+    "dims": ["cabins"],
+    "nl": "(3 tweepersoons+1 schippershut)"
+  },
+  "(2 master + 2 double + 3 triple)": {
+    "dims": ["cabins"],
+    "nl": "(2 master + 2 tweepersoons + 3 driepersoons)"
+  },
+  "3 cabines doubles + 1 pointe": {
+    "dims": ["cabins"],
+    "nl": "3 tweepersoonshutten + 1 voorpiek"
+  },
+  "(4 Double Cabins) + crew": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoonshutten) + bemanning"
+  },
+  "(4 double-bed cabins +1 cabin with bunk beds +2 front cabin )": {
+    "dims": ["cabins"],
+    "nl": "(4 hutten met tweepersoonsbed +1 hut met stapelbedden +2 voorhutten )"
+  },
+  "+ 3 crew cabins": {
+    "dims": ["cabins"],
+    "nl": "+ 3 bemanningshutten"
+  },
+  "(4+2 skipper + convertible saloon table)": {
+    "dims": ["cabins"],
+    "nl": "(4+2 schipper + ombouwbare salontafel)"
+  },
+  "+ 2 forepeak": {
+    "dims": ["cabins"],
+    "nl": "+ 2 voorpiek"
+  },
+  "(5D+skipper's cabin)": {
+    "dims": ["cabins"],
+    "nl": "(5 tweepersoons+schippershut)"
+  },
+  "- New matresses, double pillows, USB and 220V - Airco - saftery deposit box": {
+    "dims": ["cabins"],
+    "nl": "- Nieuwe matrassen, dubbele kussens, USB en 220V - Airco - Kluisje"
+  },
+  "plus 2 skipper cabins": {
+    "dims": ["cabins"],
+    "nl": "plus 2 schippershutten"
+  },
+  "(Convertible front cabin, 4 or 3 (master) cabin version)": {
+    "dims": ["cabins"],
+    "nl": "(Ombouwbare voorhut, versie met 4 of 3 hutten (master))"
+  },
+  "(4 double +1 fore peak)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons +1 voorpiek)"
+  },
+  "+ 1 BUNKBED + 1 BUNKBED + 1 CREW FOREPEAK CABIN": {
+    "dims": ["cabins"],
+    "nl": "+ 1 stapelbed + 1 stapelbed + 1 voorpiekhut voor de bemanning"
+  },
+  "(6 guest cabins + 2 crew cabins)": {
+    "dims": ["cabins"],
+    "nl": "(6 gastenhutten + 2 bemanningshutten)"
+  },
+  "( 4 double cabins plus 1 berth in each bow )": {
+    "dims": ["cabins"],
+    "nl": "( 4 tweepersoonshutten plus 1 kooi in elke boeg )"
+  },
+  "(4 double, 1 bunk & 1 crew cabin)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons, 1 met stapelbed & 1 bemanningshut)"
+  },
+  "+2crew": {
+    "dims": ["cabins"],
+    "nl": "+2 voor de bemanning"
+  },
+  "(6+1SK)": {
+    "dims": ["cabins"],
+    "nl": "(6+1 schipper)"
+  },
+  "(4 double cabins + 1 forepeak cabin and wc /shower)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoonshutten + 1 voorpiekhut en WC /douche)"
+  },
+  "(5+1 sk)": {
+    "dims": ["cabins"],
+    "nl": "(5+1 schipper)"
+  },
+  "(3 double bed, 1 twin bed)": {
+    "dims": ["cabins"],
+    "nl": "(3 met tweepersoonsbed, 1 met twee eenpersoonsbedden)"
+  },
+  "(1 Master, 1 small size Master, 2 Double, 2 Triple)": {
+    "dims": ["cabins"],
+    "nl": "(1 master, 1 kleine master, 2 tweepersoons, 2 driepersoons)"
+  },
+  "(7 Double Cabins, 5 Twin Cabins, 6 Convertible Cabins) + crew": {
+    "dims": ["cabins"],
+    "nl": "(7 tweepersoonshutten, 5 hutten met twee eenpersoonsbedden, 6 ombouwbare hutten) + bemanning"
+  },
+  "4 doubles + 2 forward berths": {
+    "dims": ["cabins"],
+    "nl": "4 tweepersoons + 2 kooien voorin"
+  },
+  "six double cabins plus 2 single crew cabins": {
+    "dims": ["cabins"],
+    "nl": "zes tweepersoonshutten plus 2 eenpersoons bemanningshutten"
+  },
+  "(4 guest + 1 skipper)": {
+    "dims": ["cabins"],
+    "nl": "(4 voor gasten + 1 schipper)"
+  },
+  "Bareboat: 3 Cabins (until 8 pax) / Skippered: 2 Cabins (until 4 pax)": {
+    "dims": ["cabins"],
+    "nl": "Bareboat: 3 hutten (tot 8 gasten) / Met schipper: 2 hutten (tot 4 gasten)"
+  },
+  "(4 double cabins + 1 crew cabin)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoonshutten + 1 bemanningshut)"
+  },
+  "1 cabin is reserved for the crew": {
+    "dims": ["cabins"],
+    "nl": "1 hut is gereserveerd voor de bemanning"
+  },
+  "(3 double + 1 twin)": {
+    "dims": ["cabins"],
+    "nl": "(3 tweepersoons + 1 met twee eenpersoonsbedden)"
+  },
+  "(3 guest cabins + saloon + 3 crew cabins)": {
+    "dims": ["cabins"],
+    "nl": "(3 gastenhutten + salon + 3 bemanningshutten)"
+  },
+  "Dea Del Mare has 5 Cabins; 2 Master, 2 Double, 1 Twin all en suite.": {
+    "dims": ["cabins"],
+    "nl": "Dea Del Mare heeft 5 hutten; 2 master, 2 tweepersoons, 1 met twee eenpersoonsbedden, alle met eigen badkamer."
+  },
+  "3+1 (for the skipper)": {
+    "dims": ["cabins"],
+    "nl": "3+1 (voor de schipper)"
+  },
+  "(2 double & 2 triple)": {
+    "dims": ["cabins"],
+    "nl": "(2 tweepersoons & 2 driepersoons)"
+  },
+  "(1 master cabin & 3 double cabins all with en-suite facilities for the guests)": {
+    "dims": ["cabins"],
+    "nl": "(1 masterhut & 3 tweepersoonshutten, alle met eigen badkamer, voor de gasten)"
+  },
+  "doubles cabins + convertible saloon + one forepeak": {
+    "dims": ["cabins"],
+    "nl": "tweepersoonshutten + ombouwbare salon + één voorpiek"
+  },
+  "4 + 1 skipper cabin": {
+    "dims": ["cabins"],
+    "nl": "4 + 1 schippershut"
+  },
+  "+ 1(skipper)": {
+    "dims": ["cabins"],
+    "nl": "+ 1(schipper)"
+  },
+  "(3 Double +Saloon +1 Crew)": {
+    "dims": ["cabins"],
+    "nl": "(3 tweepersoons +salon +1 voor de bemanning)"
+  },
+  "(1 deluxe, 1 master, 2 vip twin, 2 vip double)": {
+    "dims": ["cabins"],
+    "nl": "(1 deluxe, 1 master, 2 VIP met twee eenpersoonsbedden, 2 VIP tweepersoons)"
+  },
+  "double cabins + one bunk beds": {
+    "dims": ["cabins"],
+    "nl": "tweepersoonshutten + één met stapelbedden"
+  },
+  "+1 peak": {
+    "dims": ["cabins"],
+    "nl": "+1 voorpiek"
+  },
+  "4 (double) + 1 skipper cabin (reserved for skipper)": {
+    "dims": ["cabins"],
+    "nl": "4 (tweepersoons) + 1 schippershut (gereserveerd voor de schipper)"
+  },
+  "+ 2 Skipper": {
+    "dims": ["cabins"],
+    "nl": "+ 2 schipper"
+  },
+  "(3 dbl + saloon)": {
+    "dims": ["cabins"],
+    "nl": "(3 tweepersoons + salon)"
+  },
+  "(4 double+2 singles)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons+2 eenpersoons)"
+  },
+  "or 3 (2 forward cabins are convertible to 1)": {
+    "dims": ["cabins"],
+    "nl": "of 3 (2 voorhutten kunnen tot 1 worden samengevoegd)"
+  },
+  "+ 2 bow cabins": {
+    "dims": ["cabins"],
+    "nl": "+ 2 voorhutten"
+  },
+  "4 seperate double bed cabins": {
+    "dims": ["cabins"],
+    "nl": "4 aparte hutten met tweepersoonsbed"
+  },
+  "4+2 ( crew) +1": {
+    "dims": ["cabins"],
+    "nl": "4+2 ( bemanning) +1"
+  },
+  "(2 + Salon)": {
+    "dims": ["cabins"],
+    "nl": "(2 + salon)"
+  },
+  "(dbl cabins, plus 2 bow cabins) saloon convertible": {
+    "dims": ["cabins"],
+    "nl": "(tweepersoonshutten, plus 2 voorhutten) salon ombouwbaar"
+  },
+  "2 crew cabin + 1 crew head": {
+    "dims": ["cabins"],
+    "nl": "2 bemanningshutten + 1 WC voor de bemanning"
+  },
+  "(5dbl + 1 bunk beds cabin + 1 forepeak cabin)": {
+    "dims": ["cabins"],
+    "nl": "(5 tweepersoons + 1 hut met stapelbedden + 1 voorpiekhut)"
+  },
+  "(3 double cabins for quests)": {
+    "dims": ["cabins"],
+    "nl": "(3 tweepersoonshutten voor gasten)"
+  },
+  "(3 double + 1 bunk cabin)": {
+    "dims": ["cabins"],
+    "nl": "(3 tweepersoons + 1 hut met stapelbed)"
+  },
+  "(5+1 skypper)": {
+    "dims": ["cabins"],
+    "nl": "(5+1 schipper)"
+  },
+  "2 cabins + 1 Saloon Bed": {
+    "dims": ["cabins"],
+    "nl": "2 hutten + 1 bed in de salon"
+  },
+  "(3 cabins for passengers +1 for captain)": {
+    "dims": ["cabins"],
+    "nl": "(3 hutten voor passagiers +1 voor de kapitein)"
+  },
+  "+4 crew cabins": {
+    "dims": ["cabins"],
+    "nl": "+4 bemanningshutten"
+  },
+  "4 double cabins + 1 bunk bed cabin +1 skipper cabin": {
+    "dims": ["cabins"],
+    "nl": "4 tweepersoonshutten + 1 hut met stapelbed +1 schippershut"
+  },
+  "(5+skipper cabin)": {
+    "dims": ["cabins"],
+    "nl": "(5+schippershut)"
+  },
+  "(4 double +1 bunk beds)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons +1 met stapelbedden)"
+  },
+  "+ 1 crew + 2 single": {
+    "dims": ["cabins"],
+    "nl": "+ 1 voor de bemanning + 2 eenpersoons"
+  },
+  "GUESTS: 1 master, 3 double cabins, 4 WCs; CREW: 1 twin cabin, 1 front peak, 2 WCs": {
+    "dims": ["cabins"],
+    "nl": "Gasten: 1 master, 3 tweepersoonshutten, 4 WC’s; Bemanning: 1 hut met twee eenpersoonsbedden, 1 voorpiek, 2 WC’s"
+  },
+  "(4 double + 2 semi double) + 1 berth in the bow comp": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons + 2 met twijfelaar) + 1 kooi in het voorcompartiment"
+  },
+  "3x double (plus one for the crew) +2 single": {
+    "dims": ["cabins"],
+    "nl": "3x tweepersoons (plus één voor de bemanning) +2 eenpersoons"
+  },
+  "+ 1 with WC": {
+    "dims": ["cabins"],
+    "nl": "+ 1 met WC"
+  },
+  "plus saloon area": {
+    "dims": ["cabins"],
+    "nl": "plus salongedeelte"
+  },
+  "(4 plus 2)": {
+    "dims": ["cabins"],
+    "nl": "(4 plus 2)"
+  },
+  "+ 2 crew + convertible table in saloon": {
+    "dims": ["cabins"],
+    "nl": "+ 2 voor de bemanning + ombouwbare tafel in de salon"
+  },
+  "(4 Dbl cabs + 1 berth in the bow comp)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoonshutten + 1 kooi in het voorcompartiment)"
+  },
+  "(4 double + 2 skipper)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons + 2 schipper)"
+  },
+  "It can be turned into 3 cabins": {
+    "dims": ["cabins"],
+    "nl": "Kan worden omgebouwd tot 3 hutten"
+  },
+  "(4+2 skippers cabins)": {
+    "dims": ["cabins"],
+    "nl": "(4+2 schippershutten)"
+  },
+  "(1 berth in each bow comp.)": {
+    "dims": ["cabins"],
+    "nl": "(1 kooi in elk voorcompartiment)"
+  },
+  "+( 1 +1 crew ) + convertible table in saloon": {
+    "dims": ["cabins"],
+    "nl": "+( 1 +1 voor de bemanning ) + ombouwbare tafel in de salon"
+  },
+  "( 4 double , 2 master and 2 triple)": {
+    "dims": ["cabins"],
+    "nl": "( 4 tweepersoons , 2 master en 2 driepersoons)"
+  },
+  "(4 double cabins + 2 peaks for skipper and/or hostess)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoonshutten + 2 voorpieken voor schipper en/of hostess)"
+  },
+  "(4 double + 1 crew bunk cabin)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons + 1 bemanningshut met stapelbed)"
+  },
+  "(4 guest cabin + skipper cabin)": {
+    "dims": ["cabins"],
+    "nl": "(4 gastenhutten + schippershut)"
+  },
+  "(4 Double + 2 Crew))": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons + 2 voor de bemanning))"
+  },
+  "(3 double cabins + 1 twin cabin convertible to a double bed)": {
+    "dims": ["cabins"],
+    "nl": "(3 tweepersoonshutten + 1 hut met twee eenpersoonsbedden, ombouwbaar tot tweepersoonsbed)"
+  },
+  "(1 single+ 2 double + 1 Twin)": {
+    "dims": ["cabins"],
+    "nl": "(1 eenpersoons+ 2 tweepersoons + 1 met twee eenpersoonsbedden)"
+  },
+  "Motor Yacht Calm Down has 6 Cabins; 3 Master, 2 Double, 1 Twin all en-suite.": {
+    "dims": ["cabins"],
+    "nl": "Motorjacht Calm Down heeft 6 hutten; 3 master, 2 tweepersoons, 1 met twee eenpersoonsbedden, alle met eigen badkamer."
+  },
+  "(5+1 Skipper)": {
+    "dims": ["cabins"],
+    "nl": "(5+1 schipper)"
+  },
+  "(4 double cabins + 1 with bunk beds + 1 skipper cabin)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoonshutten + 1 met stapelbedden + 1 schippershut)"
+  },
+  "(Inc. 2 Bow Crew Quarters)": {
+    "dims": ["cabins"],
+    "nl": "(incl. 2 bemanningsverblijven voorin)"
+  },
+  "1 skipper cabin accessible from outside, 3 showers + 1 shower in skipper cabin": {
+    "dims": ["cabins"],
+    "nl": "1 schippershut toegankelijk van buitenaf, 3 douches + 1 douche in de schippershut"
+  },
+  "+1 crew + 1 bow": {
+    "dims": ["cabins"],
+    "nl": "+1 voor de bemanning + 1 voorin"
+  },
+  "(3 double-bed cabins +1 bunk bed cabin)": {
+    "dims": ["cabins"],
+    "nl": "(3 hutten met tweepersoonsbed +1 hut met stapelbed)"
+  },
+  "+ 1 crew cabins": {
+    "dims": ["cabins"],
+    "nl": "+ 1 bemanningshut"
+  },
+  "(5 Double cabins)": {
+    "dims": ["cabins"],
+    "nl": "(5 tweepersoonshutten)"
+  },
+  "+ salon + two skipper cabins": {
+    "dims": ["cabins"],
+    "nl": "+ salon + twee schippershutten"
+  },
+  "(2 double aft cabins + 2 single forepeak cabins for the crew)": {
+    "dims": ["cabins"],
+    "nl": "(2 tweepersoons achterhutten + 2 eenpersoons voorpiekhutten voor de bemanning)"
+  },
+  "(4 Double + 1 BunkBed + Saloon)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons + 1 met stapelbed + salon)"
+  },
+  "+1 crew cabin": {
+    "dims": ["cabins"],
+    "nl": "+1 bemanningshut"
+  },
+  "(6+2SK)": {
+    "dims": ["cabins"],
+    "nl": "(6+2 schipper)"
+  },
+  "(5 + 1 cabin)": {
+    "dims": ["cabins"],
+    "nl": "(5 + 1 hut)"
+  },
+  "(5 double cabins + 2 crew cabins)": {
+    "dims": ["cabins"],
+    "nl": "(5 tweepersoonshutten + 2 bemanningshutten)"
+  },
+  "2 Master, 8 Double, 4 Triple, 2 Twin (seperate crew cabins)": {
+    "dims": ["cabins"],
+    "nl": "2 master, 8 tweepersoons, 4 driepersoons, 2 met twee eenpersoonsbedden (aparte bemanningshutten)"
+  },
+  "+ 2 FOREPEAK CREW CABIN": {
+    "dims": ["cabins"],
+    "nl": "+ 2 voorpiekhutten voor de bemanning"
+  },
+  "(5 guest cabins + 1 crew cabin)": {
+    "dims": ["cabins"],
+    "nl": "(5 gastenhutten + 1 bemanningshut)"
+  },
+  "(3 double bed + 1 bed bunk)": {
+    "dims": ["cabins"],
+    "nl": "(3 met tweepersoonsbed + 1 met stapelbed)"
+  },
+  "guests + 2 crew (1 double & 1 single)": {
+    "dims": ["cabins"],
+    "nl": "gasten + 2 voor de bemanning (1 tweepersoons & 1 eenpersoons)"
+  },
+  "(3 +1 bunk)": {
+    "dims": ["cabins"],
+    "nl": "(3 +1 met stapelbed)"
+  },
+  "double cabins + 1 forepeak": {
+    "dims": ["cabins"],
+    "nl": "tweepersoonshutten + 1 voorpiek"
+  },
+  "+ CONVERTIBLE SALOON + 1 CREW FOREPEAK CABINS": {
+    "dims": ["cabins"],
+    "nl": "+ ombouwbare salon + 1 voorpiekhut voor de bemanning"
+  },
+  "11 double + 4 twin + 2 triple": {
+    "dims": ["cabins"],
+    "nl": "11 tweepersoons + 4 met twee eenpersoonsbedden + 2 driepersoons"
+  },
+  "(4 dbl + 2 single)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons + 2 eenpersoons)"
+  },
+  "+1 (Skipper cabin)": {
+    "dims": ["cabins"],
+    "nl": "+1 (schippershut)"
+  },
+  "(2 guest + 1 crew)": {
+    "dims": ["cabins"],
+    "nl": "(2 voor gasten + 1 voor de bemanning)"
+  },
+  "(2 front bunk bed cabins)": {
+    "dims": ["cabins"],
+    "nl": "(2 voorhutten met stapelbed)"
+  },
+  "under consulting 1 cabin with bunk beds": {
+    "dims": ["cabins"],
+    "nl": "in overleg 1 hut met stapelbedden"
+  },
+  "PLUS SKIPPER": {
+    "dims": ["cabins"],
+    "nl": "plus schipper"
+  },
+  "(4 double + 1 single cabin)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons + 1 eenpersoonshut)"
+  },
+  "4+1 Skipper": {
+    "dims": ["cabins"],
+    "nl": "4+1 schipper"
+  },
+  "(+ 1 berth in each bow compartment)": {
+    "dims": ["cabins"],
+    "nl": "(+ 1 kooi in elk voorcompartiment)"
+  },
+  "(2 Master, 2 Double, 2 Triple)": {
+    "dims": ["cabins"],
+    "nl": "(2 masterhutten, 2 tweepersoons, 2 driepersoons)"
+  },
+  "5+1 CABINS": {
+    "dims": ["cabins"],
+    "nl": "5+1 hutten"
+  },
+  "(+ skipper)": {
+    "dims": ["cabins"],
+    "nl": "(+ schipper)"
+  },
+  "(4 double +2 single x crew)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons +2 eenpersoons voor de bemanning)"
+  },
+  "(3 double cabins + 1 triple cabin + convertible saloon table + 2 bow )": {
+    "dims": ["cabins"],
+    "nl": "(3 tweepersoonshutten + 1 driepersoonshut + ombouwbare salontafel + 2 voorin)"
+  },
+  "(1 master cabin & 3 VIP cabins)": {
+    "dims": ["cabins"],
+    "nl": "(1 masterhut & 3 VIP-hutten)"
+  },
+  "4 double + 2 single crew cabins": {
+    "dims": ["cabins"],
+    "nl": "4 tweepersoons + 2 eenpersoons bemanningshutten"
+  },
+  "(6+1 Skipper) (5+1 Skipper+1 Hostess)": {
+    "dims": ["cabins"],
+    "nl": "(6+1 schipper) (5+1 schipper+1 hostess)"
+  },
+  "(+ 1 berth in each bow)": {
+    "dims": ["cabins"],
+    "nl": "(+ 1 kooi in elke boeg)"
+  },
+  "- 3 double guest + 1 cabin for staff": {
+    "dims": ["cabins"],
+    "nl": "- 3 tweepersoons voor gasten + 1 hut voor het personeel"
+  },
+  "(3 + 1 convertible saloon)": {
+    "dims": ["cabins"],
+    "nl": "(3 + 1 ombouwbare salon)"
+  },
+  "4 cabins + skipper cabin in starboard forepeak": {
+    "dims": ["cabins"],
+    "nl": "4 hutten + schippershut in de voorpiek aan stuurboord"
+  },
+  "(6D + 2CREW)": {
+    "dims": ["cabins"],
+    "nl": "(6 tweepersoons + 2 voor de bemanning)"
+  },
+  "(4 double -1 bunk bed - 2 single beds)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons -1 met stapelbed - 2 eenpersoonsbedden)"
+  },
+  "+2 pointes (dont une avec salle de bain)": {
+    "dims": ["cabins"],
+    "nl": "+2 voorpieken (waarvan één met badkamer)"
+  },
+  "Convertible saloon into a double bed": {
+    "dims": ["cabins"],
+    "nl": "Salon ombouwbaar tot tweepersoonsbed"
+  },
+  "(4 doubles + 1 crew)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons + 1 voor de bemanning)"
+  },
+  "(Removable paravane separating bow cabins)": {
+    "dims": ["cabins"],
+    "nl": "(Uitneembare scheidingswand tussen de voorhutten)"
+  },
+  "(5 +1 single skipper's cabin)": {
+    "dims": ["cabins"],
+    "nl": "(5 +1 eenpersoons schippershut)"
+  },
+  "1 cabine double": {
+    "dims": ["cabins"],
+    "nl": "1 tweepersoonshut"
+  },
+  "1 out of 5 cabins is suitable for children (bunk bed)": {
+    "dims": ["cabins"],
+    "nl": "1 van de 5 hutten is geschikt voor kinderen (stapelbed)"
+  },
+  "(3+ Skipper)": {
+    "dims": ["cabins"],
+    "nl": "(3+ schipper)"
+  },
+  "Convertible from 2 very large cabins to 4 double cabins": {
+    "dims": ["cabins"],
+    "nl": "Ombouwbaar van 2 zeer grote hutten naar 4 tweepersoonshutten"
+  },
+  "3 double cabins for the guests + crew cabins": {
+    "dims": ["cabins"],
+    "nl": "3 tweepersoonshutten voor de gasten + bemanningshutten"
+  },
+  "(5 + skipper's cabin)": {
+    "dims": ["cabins"],
+    "nl": "(5 + schippershut)"
+  },
+  "4 Master Double Cabins, 1 Cabin with Bunk Beds and 1 Skipper Cabin": {
+    "dims": ["cabins"],
+    "nl": "4 master-tweepersoonshutten, 1 hut met stapelbedden en 1 schippershut"
+  },
+  "+ skipper's cabin": {
+    "dims": ["cabins"],
+    "nl": "+ schippershut"
+  },
+  "5 Double, 3 Twin": {
+    "dims": ["cabins"],
+    "nl": "5 tweepersoons, 3 met twee eenpersoonsbedden"
+  },
+  "(6 double + 2 single)": {
+    "dims": ["cabins"],
+    "nl": "(6 tweepersoons + 2 eenpersoons)"
+  },
+  "(4 double en suite cabins + 1 single in portside forepeak)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoonshutten met eigen badkamer + 1 eenpersoons in de voorpiek aan bakboord)"
+  },
+  "+ 2cabins": {
+    "dims": ["cabins"],
+    "nl": "+ 2 hutten"
+  },
+  "(4 + 2 SKIPPER CABINS)": {
+    "dims": ["cabins"],
+    "nl": "(4 + 2 schippershutten)"
+  },
+  "4 double cabins and 1 cabin with bunk bed, 1 Skipper Cabin": {
+    "dims": ["cabins"],
+    "nl": "4 tweepersoonshutten en 1 hut met stapelbed, 1 schippershut"
+  },
+  "(5 guest double +1 crew bunk)": {
+    "dims": ["cabins"],
+    "nl": "(5 tweepersoons voor gasten +1 bemanningskooi)"
+  },
+  "(4 Double Cabins)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoonshutten)"
+  },
+  "(4 double + skipper)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons + schipper)"
+  },
+  "(3 doubles + 2 simples)": {
+    "dims": ["cabins"],
+    "nl": "(3 tweepersoons + 2 eenpersoons)"
+  },
+  "+crew cabin": {
+    "dims": ["cabins"],
+    "nl": "+bemanningshut"
+  },
+  "4 double cabins + cabin in bow": {
+    "dims": ["cabins"],
+    "nl": "4 tweepersoonshutten + hut in de boeg"
+  },
+  "+ convertible table in salon": {
+    "dims": ["cabins"],
+    "nl": "+ ombouwbare tafel in de salon"
+  },
+  "(2 king+1 dbl for guests+2 for crew)": {
+    "dims": ["cabins"],
+    "nl": "(2 met kingsize bed+1 tweepersoons voor gasten+2 voor de bemanning)"
+  },
+  "+2 single for crew": {
+    "dims": ["cabins"],
+    "nl": "+2 eenpersoons voor de bemanning"
+  },
+  "4 double cabins + 1 skipper cabin": {
+    "dims": ["cabins"],
+    "nl": "4 tweepersoonshutten + 1 schippershut"
+  },
+  "(5 cabins + 2 forepeak cabins)": {
+    "dims": ["cabins"],
+    "nl": "(5 hutten + 2 voorpiekhutten)"
+  },
+  "(4 double + 2 single for the crew)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons + 2 eenpersoons voor de bemanning)"
+  },
+  "(4 Guest + 2 Crew)": {
+    "dims": ["cabins"],
+    "nl": "(4 voor gasten + 2 voor de bemanning)"
+  },
+  "(master + 4 guests)": {
+    "dims": ["cabins"],
+    "nl": "(master + 4 voor gasten)"
+  },
+  "(4 double +2 single)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons +2 eenpersoons)"
+  },
+  "(4D+CREW)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons+bemanning)"
+  },
+  "(5 double + 1 with 2 single beds + 2 skipper's with toilets and showers)": {
+    "dims": ["cabins"],
+    "nl": "(5 tweepersoons + 1 met 2 eenpersoonsbedden + 2 schippershutten met toiletten en douches)"
+  },
+  "6 double cabins plus 2 crew": {
+    "dims": ["cabins"],
+    "nl": "6 tweepersoonshutten plus 2 voor de bemanning"
+  },
+  "(5+2 skipper)": {
+    "dims": ["cabins"],
+    "nl": "(5+2 schipper)"
+  },
+  "(2 cabins + salon)": {
+    "dims": ["cabins"],
+    "nl": "(2 hutten + salon)"
+  },
+  "(4+2 crew cabins)": {
+    "dims": ["cabins"],
+    "nl": "(4+2 bemanningshutten)"
+  },
+  "3+1 skipper cabin": {
+    "dims": ["cabins"],
+    "nl": "3+1 schippershut"
+  },
+  "(3 Guest cabins + 1 Skipper cabin)": {
+    "dims": ["cabins"],
+    "nl": "(3 gastenhutten + 1 schippershut)"
+  },
+  "(3 guest +1 crew)": {
+    "dims": ["cabins"],
+    "nl": "(3 voor gasten +1 voor de bemanning)"
+  },
+  "(4+1 bow skipper cabin)": {
+    "dims": ["cabins"],
+    "nl": "(4+1 schippershut voorin)"
+  },
+  "(3 + Skipper's cabin + Saloon)": {
+    "dims": ["cabins"],
+    "nl": "(3 + schippershut + salon)"
+  },
+  "(4 double +1 single) + 2 skipper's cabins": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons +1 eenpersoons) + 2 schippershutten"
+  },
+  "(4 Double/1 Bunk Bed Cabin/1 Skipper's Cabin)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons/1 hut met stapelbed/1 schippershut)"
+  },
+  "(6 double + 2 crew)": {
+    "dims": ["cabins"],
+    "nl": "(6 tweepersoons + 2 voor de bemanning)"
+  },
+  "(4D+1 small cabin,not intended for the crew)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons+1 kleine hut, niet bedoeld voor de bemanning)"
+  },
+  "(5 double for guests + 1 separate crew quarters) Cabins": {
+    "dims": ["cabins"],
+    "nl": "(5 tweepersoons voor gasten + 1 apart bemanningsverblijf) Hutten"
+  },
+  "+ Skipper Cabins": {
+    "dims": ["cabins"],
+    "nl": "+ schippershutten"
+  },
+  "(5 double + 1 skipper)": {
+    "dims": ["cabins"],
+    "nl": "(5 tweepersoons + 1 schipper)"
+  },
+  "4 cabins (double) + 1 skipper cabin (single)": {
+    "dims": ["cabins"],
+    "nl": "4 hutten (tweepersoons) + 1 schippershut (eenpersoons)"
+  },
+  "4 Dbl Cabins+2 Singles in bow": {
+    "dims": ["cabins"],
+    "nl": "4 tweepersoonshutten+2 eenpersoons voorin"
+  },
+  "4 double +1 (the extra bunk with WC is for the crew)": {
+    "dims": ["cabins"],
+    "nl": "4 tweepersoons +1 (de extra kooi met WC is voor de bemanning)"
+  },
+  "(1 VIP Cabin, 1 Double Cabin, 1 Bunk Bed)": {
+    "dims": ["cabins"],
+    "nl": "(1 VIP-hut, 1 tweepersoonshut, 1 met stapelbed)"
+  },
+  "(1 for clients + 1 for the skipper)": {
+    "dims": ["cabins"],
+    "nl": "(1 voor gasten + 1 voor de schipper)"
+  },
+  "double cabines + 1 forepeak": {
+    "dims": ["cabins"],
+    "nl": "tweepersoonshutten + 1 voorpiek"
+  },
+  "cabine + carré convertible": {
+    "dims": ["cabins"],
+    "nl": "hut + ombouwbare salon"
+  },
+  "5 double cabins (1 can be 2 single beds) + 1 skipper cabin": {
+    "dims": ["cabins"],
+    "nl": "5 tweepersoonshutten (1 kan ook 2 eenpersoonsbedden hebben) + 1 schippershut"
+  },
+  "(4 Dbl cabs + 1 berth in each bow comp.)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoonshutten + 1 kooi in elk voorcompartiment)"
+  },
+  "(3 double-bed cabins + 1 with bunk bed)": {
+    "dims": ["cabins"],
+    "nl": "(3 hutten met tweepersoonsbed + 1 met stapelbed)"
+  },
+  "4 guest cabins + 2 crew cabins": {
+    "dims": ["cabins"],
+    "nl": "4 gastenhutten + 2 bemanningshutten"
+  },
+  "(5 double + 1 single for skipper)": {
+    "dims": ["cabins"],
+    "nl": "(5 tweepersoons + 1 eenpersoons voor de schipper)"
+  },
+  "1 Master Cabin + 3 Spacious Double Cabins": {
+    "dims": ["cabins"],
+    "nl": "1 masterhut + 3 ruime tweepersoonshutten"
+  },
+  "(4 plus 2 crew cabins)": {
+    "dims": ["cabins"],
+    "nl": "(4 plus 2 bemanningshutten)"
+  },
+  "+2 saloon": {
+    "dims": ["cabins"],
+    "nl": "+2 salon"
+  },
+  "(5+ Skipper's cabin)": {
+    "dims": ["cabins"],
+    "nl": "(5+ schippershut)"
+  },
+  "(3 doubles)": {
+    "dims": ["cabins"],
+    "nl": "(3 tweepersoons)"
+  },
+  "(3+1 convertible saloon)": {
+    "dims": ["cabins"],
+    "nl": "(3+1 ombouwbare salon)"
+  },
+  "+ 2 CREW FOREPEAK CABIN": {
+    "dims": ["cabins"],
+    "nl": "+ 2 voorpiekhutten voor de bemanning"
+  },
+  "4 double cabins plus two forward peak cabins": {
+    "dims": ["cabins"],
+    "nl": "4 tweepersoonshutten plus twee voorpiekhutten"
+  },
+  "8 Double": {
+    "dims": ["cabins"],
+    "nl": "8 tweepersoons"
+  },
+  "for guests + crew and skipper cabins": {
+    "dims": ["cabins"],
+    "nl": "voor gasten + bemannings- en schippershutten"
+  },
+  "[ 4 double +1 forepeak ]": {
+    "dims": ["cabins"],
+    "nl": "[ 4 tweepersoons +1 voorpiek ]"
+  },
+  "(2 double cabins and 1 bed bank cabin)": {
+    "dims": ["cabins"],
+    "nl": "(2 tweepersoonshutten en 1 hut met stapelbed)"
+  },
+  "(5 Double + Saloon + 1 Crew)": {
+    "dims": ["cabins"],
+    "nl": "(5 tweepersoons + salon + 1 voor de bemanning)"
+  },
+  "(5 double + 1 bunk bed + 2 single)": {
+    "dims": ["cabins"],
+    "nl": "(5 tweepersoons + 1 met stapelbed + 2 eenpersoons)"
+  },
+  "1 Master, 1 VIP, 2 convertible cabins can be used as Double or Twin cabins.": {
+    "dims": ["cabins"],
+    "nl": "1 master, 1 VIP, 2 ombouwbare hutten te gebruiken als tweepersoonshut of als hut met twee eenpersoonsbedden."
+  },
+  "(4+2crew)": {
+    "dims": ["cabins"],
+    "nl": "(4+2 voor de bemanning)"
+  },
+  "double cabins+forepeak": {
+    "dims": ["cabins"],
+    "nl": "tweepersoonshutten+voorpiek"
+  },
+  "(4 Double + Saloon)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons + salon)"
+  },
+  "+ deux pointes + carré convertible": {
+    "dims": ["cabins"],
+    "nl": "+ twee voorpieken + ombouwbare salon"
+  },
+  "(4 double for guests + 1 separate crew quarters)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons voor gasten + 1 apart bemanningsverblijf)"
+  },
+  "4 + 2 skipper cabin": {
+    "dims": ["cabins"],
+    "nl": "4 + 2 schippershutten"
+  },
+  "(4 double + 1 with bunk beds + 1 skippers )": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons + 1 met stapelbedden + 1 voor de schipper)"
+  },
+  "(3 double +1 bunk cabin)": {
+    "dims": ["cabins"],
+    "nl": "(3 tweepersoons +1 hut met stapelbed)"
+  },
+  "2 double + 2 twin": {
+    "dims": ["cabins"],
+    "nl": "2 tweepersoons + 2 met twee eenpersoonsbedden"
+  },
+  "4 dowble + 1 bunker + 1 crew (5 wc +1)": {
+    "dims": ["cabins"],
+    "nl": "4 tweepersoons + 1 met stapelbed + 1 voor de bemanning (5 WC +1)"
+  },
+  "double cabins + one forepeak": {
+    "dims": ["cabins"],
+    "nl": "tweepersoonshutten + één voorpiek"
+  },
+  "3 +1 crew": {
+    "dims": ["cabins"],
+    "nl": "3 +1 voor de bemanning"
+  },
+  "5+1 \"skippers\"": {
+    "dims": ["cabins"],
+    "nl": "5+1 \"schipper\""
+  },
+  "(4 double cabins with ensuite bath for guests + 2 crew cabin with bath)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoonshutten met eigen badkamer voor gasten + 2 bemanningshutten met badkamer)"
+  },
+  "+ 1 crew Cabin": {
+    "dims": ["cabins"],
+    "nl": "+ 1 bemanningshut"
+  },
+  "(3 double, 1 bunkbed)": {
+    "dims": ["cabins"],
+    "nl": "(3 tweepersoons, 1 met stapelbed)"
+  },
+  "incl 2 crew cabins in forepeak": {
+    "dims": ["cabins"],
+    "nl": "incl. 2 bemanningshutten in de voorpiek"
+  },
+  "(4 double cabins +1 crew bunk bed in the forepeak cabin)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoonshutten +1 stapelbed voor de bemanning in de voorpiekhut)"
+  },
+  "(1 Master + 2 Double cabins)": {
+    "dims": ["cabins"],
+    "nl": "(1 masterhut + 2 tweepersoonshutten)"
+  },
+  "( 4 Double cabins+2 twin cabin )": {
+    "dims": ["cabins"],
+    "nl": "( 4 tweepersoonshutten+2 hutten met twee eenpersoonsbedden )"
+  },
+  "(4 +2 crew cabins)": {
+    "dims": ["cabins"],
+    "nl": "(4 +2 bemanningshutten)"
+  },
+  "(3-cabin conversion available)": {
+    "dims": ["cabins"],
+    "nl": "(ombouw naar 3 hutten mogelijk)"
+  },
+  "5 double cabin+1 skipper cabin with WC/shower": {
+    "dims": ["cabins"],
+    "nl": "5 tweepersoonshutten+1 schippershut met WC/douche"
+  },
+  "(2 double)": {
+    "dims": ["cabins"],
+    "nl": "(2 tweepersoons)"
+  },
+  "(11 Double Cabins, 2 Twin Cabins) + crew": {
+    "dims": ["cabins"],
+    "nl": "(11 tweepersoonshutten, 2 hutten met twee eenpersoonsbedden) + bemanning"
+  },
+  "+ 1 Skipper's cabin": {
+    "dims": ["cabins"],
+    "nl": "+ 1 schippershut"
+  },
+  "4 Double cabins + 1 Skipper Cabin": {
+    "dims": ["cabins"],
+    "nl": "4 tweepersoonshutten + 1 schippershut"
+  },
+  "double cabins + 1 bunk bed cabin": {
+    "dims": ["cabins"],
+    "nl": "tweepersoonshutten + 1 hut met stapelbed"
+  },
+  "(4 double-bed cabins +2 cabins with bunk beds)": {
+    "dims": ["cabins"],
+    "nl": "(4 hutten met tweepersoonsbed +2 hutten met stapelbedden)"
+  },
+  "(2 Master, 1 Double/or Twin)": {
+    "dims": ["cabins"],
+    "nl": "(2 masterhutten, 1 tweepersoons/of met twee eenpersoonsbedden)"
+  },
+  "(+1 crew cabin)": {
+    "dims": ["cabins"],
+    "nl": "(+1 bemanningshut)"
+  },
+  "+ 2 pointes aménagées": {
+    "dims": ["cabins"],
+    "nl": "+ 2 ingerichte voorpieken"
+  },
+  "(4 double + 1 bunk + 1 crew cabin)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons + 1 met stapelbed + 1 bemanningshut)"
+  },
+  "(3 double + crew cabin)": {
+    "dims": ["cabins"],
+    "nl": "(3 tweepersoons + bemanningshut)"
+  },
+  "(4 double + 1 with bunk beds + 1 skippers + 1 hostess)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons + 1 met stapelbedden + 1 voor de schipper + 1 voor de hostess)"
+  },
+  "(3D+CREW)": {
+    "dims": ["cabins"],
+    "nl": "(3 tweepersoons+bemanning)"
+  },
+  "(4 double + 1 bunk beds)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons + 1 met stapelbedden)"
+  },
+  "(5 + 2 crew)": {
+    "dims": ["cabins"],
+    "nl": "(5 + 2 voor de bemanning)"
+  },
+  "(6 double + 2 single for the crew)": {
+    "dims": ["cabins"],
+    "nl": "(6 tweepersoons + 2 eenpersoons voor de bemanning)"
+  },
+  "2 master + 4 double cabins + extra crew cabin": {
+    "dims": ["cabins"],
+    "nl": "2 masterhutten + 4 tweepersoonshutten + extra bemanningshut"
+  },
+  "5 cabins; 2 Master, 3 Double ( 1 pull bed ) all en-suite.": {
+    "dims": ["cabins"],
+    "nl": "5 hutten; 2 masterhutten, 3 tweepersoons ( 1 uitschuifbed ) alle met eigen badkamer."
+  },
+  "(Removable paravane seperating bow cabins)": {
+    "dims": ["cabins"],
+    "nl": "(Uitneembare scheidingswand tussen de voorhutten)"
+  },
+  "(3+1 bunk bed cabin)": {
+    "dims": ["cabins"],
+    "nl": "(3+1 hut met stapelbed)"
+  },
+  "(3 double cabin + crew cabin)": {
+    "dims": ["cabins"],
+    "nl": "(3 tweepersoonshutten + bemanningshut)"
+  },
+  "(1 VIP, 2 aft, 1 mid)": {
+    "dims": ["cabins"],
+    "nl": "(1 VIP, 2 achter, 1 midscheeps)"
+  },
+  "(3 dbl cabins for the guests, 1 cabin for the crew)": {
+    "dims": ["cabins"],
+    "nl": "(3 tweepersoonshutten voor de gasten, 1 hut voor de bemanning)"
+  },
+  "(5 double + 1 single crew)": {
+    "dims": ["cabins"],
+    "nl": "(5 tweepersoons + 1 eenpersoons voor de bemanning)"
+  },
+  "(3 Double Cabins) + crew": {
+    "dims": ["cabins"],
+    "nl": "(3 tweepersoonshutten) + bemanning"
+  },
+  "Seperate Crew Cabins": {
+    "dims": ["cabins"],
+    "nl": "Aparte bemanningshutten"
+  },
+  "(1 master suite, 4 double cabins, ensuite WCs; CREW: 2 front peaks + WC)": {
+    "dims": ["cabins"],
+    "nl": "(1 mastersuite, 4 tweepersoonshutten, eigen WC’s; bemanning: 2 voorpieken + WC)"
+  },
+  "(4 double + 1 double bunk + 1 single bow cabin)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons + 1 dubbel stapelbed + 1 eenpersoons voorhut)"
+  },
+  "(4 cabins for guests + dinette + 2 berths in the bow)": {
+    "dims": ["cabins"],
+    "nl": "(4 hutten voor gasten + dinette + 2 kooien voorin)"
+  },
+  "2 large triple cabins (double + single), 2 double cabins, 4 twin cabins": {
+    "dims": ["cabins"],
+    "nl": "2 grote driepersoonshutten (tweepersoons + eenpersoons), 2 tweepersoonshutten, 4 hutten met twee eenpersoonsbedden"
+  },
+  "(4+1 pullman crew cabin+ 1 double crew cabin)": {
+    "dims": ["cabins"],
+    "nl": "(4+1 pullman-bemanningshut+ 1 tweepersoons bemanningshut)"
+  },
+  "(1 master king double, 2 queen double, 1 twin)": {
+    "dims": ["cabins"],
+    "nl": "(1 master met kingsize tweepersoonsbed, 2 met queensize tweepersoonsbed, 1 met twee eenpersoonsbedden)"
+  },
+  "cabins": {
+    "dims": ["cabins"],
+    "nl": "hutten"
+  },
+  "(4D + 1S + 1 skipper)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons + 1 eenpersoons + 1 schipper)"
+  },
+  "(4+Skipper's cabin)": {
+    "dims": ["cabins"],
+    "nl": "(4+schippershut)"
+  },
+  "(2 double-bed cabins)": {
+    "dims": ["cabins"],
+    "nl": "(2 hutten met tweepersoonsbed)"
+  },
+  "(Two double aft cabins and two single forepeak cabins for the crew)": {
+    "dims": ["cabins"],
+    "nl": "(Twee tweepersoons achterhutten en twee eenpersoons voorpiekhutten voor de bemanning)"
+  },
+  "(1 master cabin + 2 double cabins) + 1 forepeak cabin": {
+    "dims": ["cabins"],
+    "nl": "(1 masterhut + 2 tweepersoonshutten) + 1 voorpiekhut"
+  },
+  "2 Master, 3 Double": {
+    "dims": ["cabins"],
+    "nl": "2 masterhutten, 3 tweepersoons"
+  },
+  "(1master + 4 double)": {
+    "dims": ["cabins"],
+    "nl": "(1 masterhut + 4 tweepersoons)"
+  },
+  "(1 master cabin +2 double-bed cabins +1 cabin with bunk beds + 1 bow cabin)": {
+    "dims": ["cabins"],
+    "nl": "(1 masterhut +2 hutten met tweepersoonsbed +1 hut met stapelbedden + 1 voorhut)"
+  },
+  "+1 (1 master + 2 x double + 1 x Saloon)": {
+    "dims": ["cabins"],
+    "nl": "+1 (1 masterhut + 2 x tweepersoons + 1 x salon)"
+  },
+  "[ 4 double +2 single (for skipper and hostess)]": {
+    "dims": ["cabins"],
+    "nl": "[ 4 tweepersoons +2 eenpersoons (voor schipper en hostess)]"
+  },
+  "(1 master + 2 standard + crew)": {
+    "dims": ["cabins"],
+    "nl": "(1 masterhut + 2 standaard + bemanning)"
+  },
+  "(4 double cabins+ convertible table in saloon+ 2 bow cabin with fun,usb port)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoonshutten+ ombouwbare tafel in de salon+ 2 voorhutten met ventilator, USB-poort)"
+  },
+  "(4 double + 1 single skipper)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons + 1 eenpersoons schippershut)"
+  },
+  "3 double cabins + 2 convirtable salon + skipper cabin": {
+    "dims": ["cabins"],
+    "nl": "3 tweepersoonshutten + 2 in de ombouwbare salon + schippershut"
+  },
+  "(4 double +1 bunk bed)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons +1 met stapelbed)"
+  },
+  "(3 double for the guest + crew)": {
+    "dims": ["cabins"],
+    "nl": "(3 tweepersoons voor de gasten + bemanning)"
+  },
+  "(Inc. 1 Crew Bow Quarter)": {
+    "dims": ["cabins"],
+    "nl": "(Incl. 1 bemanningsverblijf voorin)"
+  },
+  "(6 + 2 crew front peak)": {
+    "dims": ["cabins"],
+    "nl": "(6 + 2 voor de bemanning in de voorpiek)"
+  },
+  "+ 1 bunk cab + 2 bow": {
+    "dims": ["cabins"],
+    "nl": "+ 1 hut met stapelbed + 2 voorin"
+  },
+  "(5D+1+1skipp)": {
+    "dims": ["cabins"],
+    "nl": "(5 tweepersoons+1+1 schipper)"
+  },
+  "(4 double-bed cabins +1 cabin with bunk bed +1 bow cabin)": {
+    "dims": ["cabins"],
+    "nl": "(4 hutten met tweepersoonsbed +1 hut met stapelbed +1 voorhut)"
+  },
+  "3+2 crew": {
+    "dims": ["cabins"],
+    "nl": "3+2 voor de bemanning"
+  },
+  "(4 Dbl cabs + 1 berth in each bow compartment)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoonshutten + 1 kooi in elk voorcompartiment)"
+  },
+  "(2 Master cabins& 4 triple cabins)": {
+    "dims": ["cabins"],
+    "nl": "(2 masterhutten & 4 driepersoonshutten)"
+  },
+  "(5+2 bow crew cabin)": {
+    "dims": ["cabins"],
+    "nl": "(5+2 bemanningshutten voorin)"
+  },
+  "+ 1 crew + convertible salon": {
+    "dims": ["cabins"],
+    "nl": "+ 1 voor de bemanning + ombouwbare salon"
+  },
+  "(4 + 2 crew)": {
+    "dims": ["cabins"],
+    "nl": "(4 + 2 voor de bemanning)"
+  },
+  "4+2 Cabins (Salon convertible)": {
+    "dims": ["cabins"],
+    "nl": "4+2 hutten (salon ombouwbaar)"
+  },
+  "(4 Double/1 Skippers' Cabin/Saloon Berth)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons/1 schippershut/slaapplaats in de salon)"
+  },
+  "(4 double, 2 single)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons, 2 eenpersoons)"
+  },
+  "di cui 3 matrimoniali + 2 castello + dinette solo su panca": {
+    "dims": ["cabins"],
+    "nl": "waarvan 3 met tweepersoonsbed + 2 met stapelbed + dinette alleen op de bank"
+  },
+  "(4dbl+2sgl berth length 1,85m)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons+2 eenpersoons, kooilengte 1,85 m)"
+  },
+  "5 Cabins; 2 Master, 3 Double all en-suite": {
+    "dims": ["cabins"],
+    "nl": "5 hutten; 2 masterhutten, 3 tweepersoons, alle met eigen badkamer"
+  },
+  "(3+1 CREW CABIN)": {
+    "dims": ["cabins"],
+    "nl": "(3+1 bemanningshut)"
+  },
+  "1 Master, 2 Double, 1 Twin cabins": {
+    "dims": ["cabins"],
+    "nl": "1 masterhut, 2 tweepersoonshutten, 1 hut met twee eenpersoonsbedden"
+  },
+  "(4 Dbl cabins, 1 bunk beds cabin +1 forepeak cabin)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoonshutten, 1 hut met stapelbedden +1 voorpiekhut)"
+  },
+  "4 cabins: 1 Master, 1 VIP, 1 Double, 1 Twin": {
+    "dims": ["cabins"],
+    "nl": "4 hutten: 1 master, 1 VIP, 1 tweepersoons, 1 met twee eenpersoonsbedden"
+  },
+  "(+ crew cabin)": {
+    "dims": ["cabins"],
+    "nl": "(+ bemanningshut)"
+  },
+  "(4 Double + 1 bunk bed +2 Crew)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons + 1 met stapelbed +2 voor de bemanning)"
+  },
+  "(4 Double + 1 Twin + 1 Skipper)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons + 1 met twee eenpersoonsbedden + 1 schipper)"
+  },
+  "+ 2 pointes avant": {
+    "dims": ["cabins"],
+    "nl": "+ 2 voorpieken"
+  },
+  "3 Double & 1 Bunk Cabin": {
+    "dims": ["cabins"],
+    "nl": "3 tweepersoons & 1 hut met stapelbed"
+  },
+  "(4 double + 1 crew cabin + convertible saloon table)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons + 1 bemanningshut + ombouwbare salontafel)"
+  },
+  "+ 1 bunk cab for crew + 1 bow crew cab": {
+    "dims": ["cabins"],
+    "nl": "+ 1 hut met stapelbed voor de bemanning + 1 bemanningshut voorin"
+  },
+  "GUESTS: 4 double + 1 bunk beds. CREW: 1 front peak + WC to share with guests": {
+    "dims": ["cabins"],
+    "nl": "Gasten: 4 tweepersoons + 1 met stapelbedden. Bemanning: 1 voorpiek + WC gedeeld met de gasten"
+  },
+  "(1 master cabins +3 double guest + 1 bunkbed + crew)": {
+    "dims": ["cabins"],
+    "nl": "(1 masterhut +3 tweepersoons voor gasten + 1 met stapelbed + bemanning)"
+  },
+  "1 cabina aggiuntiva ricavata sotto gavone a poppa": {
+    "dims": ["cabins"],
+    "nl": "1 extra hut, ingericht onder de achterste bergruimte"
+  },
+  "4 doubles + 1 lits superposés (crew)": {
+    "dims": ["cabins"],
+    "nl": "4 tweepersoons + 1 met stapelbedden (bemanning)"
+  },
+  "(4 + 1 + Convertible Saloon table)": {
+    "dims": ["cabins"],
+    "nl": "(4 + 1 + ombouwbare salontafel)"
+  },
+  "(4 double + 2 semi double + 1 single cabin in one bow)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons + 2 met twijfelaar + 1 eenpersoonshut in een van de boegen)"
+  },
+  "4 guest cabin + forepeak skipper cab": {
+    "dims": ["cabins"],
+    "nl": "4 gastenhutten + schippershut in de voorpiek"
+  },
+  "(1 master cabin + 2 double guest + crew)": {
+    "dims": ["cabins"],
+    "nl": "(1 masterhut + 2 tweepersoons voor gasten + bemanning)"
+  },
+  "(5+2 crew)": {
+    "dims": ["cabins"],
+    "nl": "(5+2 voor de bemanning)"
+  },
+  "(4 double + 2 single cabins)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons + 2 eenpersoonshutten)"
+  },
+  "+ 2 crew cabins in peeks": {
+    "dims": ["cabins"],
+    "nl": "+ 2 bemanningshutten in de voorpieken"
+  },
+  "(5 double cabins + sofa)": {
+    "dims": ["cabins"],
+    "nl": "(5 tweepersoonshutten + bank)"
+  },
+  "4 cabins : 2 Master , 1 Double, 1 Twin cabins, all en-suite.": {
+    "dims": ["cabins"],
+    "nl": "4 hutten: 2 masterhutten, 1 tweepersoons, 1 met twee eenpersoonsbedden, alle met eigen badkamer."
+  },
+  "Guests: 1 Queen, 1 twin, 2 double; Crew: 1 forepeak, 1 triple + 2 WCs": {
+    "dims": ["cabins"],
+    "nl": "Gasten: 1 met queensize bed, 1 met twee eenpersoonsbedden, 2 tweepersoons; bemanning: 1 voorpiek, 1 driepersoons + 2 WC’s"
+  },
+  "(5 +1 skipper)": {
+    "dims": ["cabins"],
+    "nl": "(5 +1 schipper)"
+  },
+  "4 cabines doubles + 2 pointes": {
+    "dims": ["cabins"],
+    "nl": "4 tweepersoonshutten + 2 voorpieken"
+  },
+  "(6 + 1 crew front peak)": {
+    "dims": ["cabins"],
+    "nl": "(6 + 1 voor de bemanning in de voorpiek)"
+  },
+  "(4 double bed + 1 bow cabin)": {
+    "dims": ["cabins"],
+    "nl": "(4 met tweepersoonsbed + 1 voorhut)"
+  },
+  "(3 doubles cabins + 1 bunk beds+one forepeak)": {
+    "dims": ["cabins"],
+    "nl": "(3 tweepersoonshutten + 1 met stapelbedden+één voorpiek)"
+  },
+  "(5 double +1 skipper)": {
+    "dims": ["cabins"],
+    "nl": "(5 tweepersoons +1 schipper)"
+  },
+  "4 guest cabins plus 2 crew cabins": {
+    "dims": ["cabins"],
+    "nl": "4 gastenhutten plus 2 bemanningshutten"
+  },
+  "(4+1 Skipper) (3+1 skipper + 1 Hostess)": {
+    "dims": ["cabins"],
+    "nl": "(4+1 schipper) (3+1 schipper + 1 hostess)"
+  },
+  "4 double cabins + 1 crew or 3 doubles cabins + 2 crew": {
+    "dims": ["cabins"],
+    "nl": "4 tweepersoonshutten + 1 voor de bemanning of 3 tweepersoonshutten + 2 voor de bemanning"
+  },
+  "+ 2 Crew Cabins": {
+    "dims": ["cabins"],
+    "nl": "+ 2 bemanningshutten"
+  },
+  "(4 double+1 bunkbed+skipper)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons+1 met stapelbed+schipper)"
+  },
+  "(2 Double Cabins, 2 Twin (Convertible) Cabins) + crew": {
+    "dims": ["cabins"],
+    "nl": "(2 tweepersoonshutten, 2 hutten met twee eenpersoonsbedden (ombouwbaar)) + bemanning"
+  },
+  "4 double + skipper's cabin": {
+    "dims": ["cabins"],
+    "nl": "4 tweepersoons + schippershut"
+  },
+  "(4 dbl + 2 crew + saloon)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons + 2 voor de bemanning + salon)"
+  },
+  "(3 double cabins, 1 bunk bed cabin)": {
+    "dims": ["cabins"],
+    "nl": "(3 tweepersoonshutten, 1 hut met stapelbed)"
+  },
+  "1 Master, 4 Double, 1 Twin": {
+    "dims": ["cabins"],
+    "nl": "1 masterhut, 4 tweepersoons, 1 met twee eenpersoonsbedden"
+  },
+  "+ 1 crew cabin": {
+    "dims": ["cabins"],
+    "nl": "+ 1 bemanningshut"
+  },
+  "4 double cabin + convertible salon table + 2 single bow cabins": {
+    "dims": ["cabins"],
+    "nl": "4 tweepersoonshutten + ombouwbare salontafel + 2 eenpersoons voorhutten"
+  },
+  "\"1 skippers\"": {
+    "dims": ["cabins"],
+    "nl": "\"1 schipper\""
+  },
+  "(4 double cab. + 1 cab. with bunk beds + convertible saloon table)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoonshutten + 1 hut met stapelbedden + ombouwbare salontafel)"
+  },
+  "3 double cabin + convertible salon table": {
+    "dims": ["cabins"],
+    "nl": "3 tweepersoonshutten + ombouwbare salontafel"
+  },
+  "(3D+1BB)": {
+    "dims": ["cabins"],
+    "nl": "(3 tweepersoons+1 met stapelbed)"
+  },
+  "6 pax sleep in the cabins + 2 sea berths + 4 in the sofas": {
+    "dims": ["cabins"],
+    "nl": "6 gasten slapen in de hutten + 2 zeekooien + 4 op de banken"
+  },
+  "+3 (crew cabin)": {
+    "dims": ["cabins"],
+    "nl": "+3 (bemanningshut)"
+  },
+  "1 x master + 5 DBl": {
+    "dims": ["cabins"],
+    "nl": "1 x masterhut + 5 tweepersoons"
+  },
+  "(+ 1 skipper cabin)": {
+    "dims": ["cabins"],
+    "nl": "(+ 1 schippershut)"
+  },
+  "(4+1skipper cabin)": {
+    "dims": ["cabins"],
+    "nl": "(4+1 schippershut)"
+  },
+  "3 for customer": {
+    "dims": ["cabins"],
+    "nl": "3 voor gasten"
+  },
+  "(3 double + 1 bunk bad)": {
+    "dims": ["cabins"],
+    "nl": "(3 tweepersoons + 1 met stapelbed)"
+  },
+  "(5 double cabins +1 crew cabin)": {
+    "dims": ["cabins"],
+    "nl": "(5 tweepersoonshutten +1 bemanningshut)"
+  },
+  "3 double": {
+    "dims": ["cabins"],
+    "nl": "3 tweepersoons"
+  },
+  "(4+1for crew)": {
+    "dims": ["cabins"],
+    "nl": "(4+1 voor de bemanning)"
+  },
+  "(4 + 1) convertible to 4 (3 + 1)": {
+    "dims": ["cabins"],
+    "nl": "(4 + 1) om te bouwen tot 4 (3 + 1)"
+  },
+  "double cabs": {
+    "dims": ["cabins"],
+    "nl": "tweepersoonshutten"
+  },
+  "(3 Double + Saloon)": {
+    "dims": ["cabins"],
+    "nl": "(3 tweepersoons + salon)"
+  },
+  "+ 2 front peaks for Skipper and/or Hostess": {
+    "dims": ["cabins"],
+    "nl": "+ 2 voorpieken voor schipper en/of hostess"
+  },
+  "(3 double bed)": {
+    "dims": ["cabins"],
+    "nl": "(3 met tweepersoonsbed)"
+  },
+  "/ 4 double cab. (8 guests) + 1 sofa bed (2 guests) + 2 bunk beds (crew)": {
+    "dims": ["cabins"],
+    "nl": "/ 4 tweepersoonshutten (8 gasten) + 1 slaapbank (2 gasten) + 2 stapelbedden (bemanning)"
+  },
+  "GUESTS: 4 doubles, 1 twin; CREW: 1 frontpeak + WC, 1 twin cabin + WC": {
+    "dims": ["cabins"],
+    "nl": "GASTEN: 4 tweepersoons, 1 met twee eenpersoonsbedden; BEMANNING: 1 voorpiek + WC, 1 hut met twee eenpersoonsbedden + WC"
+  },
+  "(1 Double Cabins, 2 Twin Cabins) + crew": {
+    "dims": ["cabins"],
+    "nl": "(1 tweepersoonshut, 2 hutten met twee eenpersoonsbedden) + bemanning"
+  },
+  "1 Master, 1 Double, 1 Twin": {
+    "dims": ["cabins"],
+    "nl": "1 masterhut, 1 tweepersoons, 1 met twee eenpersoonsbedden"
+  },
+  "double + 2 single": {
+    "dims": ["cabins"],
+    "nl": "tweepersoons + 2 eenpersoons"
+  },
+  "(2xDouble 2xTwin)": {
+    "dims": ["cabins"],
+    "nl": "(2x tweepersoons 2x met twee eenpersoonsbedden)"
+  },
+  "4 + 1 extra bow cabin": {
+    "dims": ["cabins"],
+    "nl": "4 + 1 extra voorhut"
+  },
+  "2 Cabins; 1 Master, 1 Twin all en-suite.": {
+    "dims": ["cabins"],
+    "nl": "2 hutten; 1 masterhut, 1 met twee eenpersoonsbedden, alle met eigen badkamer."
+  },
+  "+1 Skipper Cabin": {
+    "dims": ["cabins"],
+    "nl": "+1 schippershut"
+  },
+  "(3 + 1 skipper)": {
+    "dims": ["cabins"],
+    "nl": "(3 + 1 schipper)"
+  },
+  "(4 dbl + 1 bunk + 1 bow)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons + 1 met stapelbed + 1 voorhut)"
+  },
+  "(4+1 skipper cabin) | Convertible in 3 cabins too |": {
+    "dims": ["cabins"],
+    "nl": "(4+1 schippershut) | Ook om te bouwen tot 3 hutten |"
+  },
+  "(4 double + 1 bunk cabin+1 skipper berths)": {
+    "dims": ["cabins"],
+    "nl": "(4 tweepersoons + 1 hut met stapelbed+1 schipperskooi)"
+  },
+  "(6 cabins for the guests plus 1 berth in each bow comp for the crew)": {
+    "dims": ["cabins"],
+    "nl": "(6 hutten voor de gasten plus 1 kooi in elk voorcompartiment voor de bemanning)"
+  },
+  "(1 master, 1 VIP, 2 Twin)": {
+    "dims": ["cabins"],
+    "nl": "(1 masterhut, 1 VIP-hut, 2 met twee eenpersoonsbedden)"
+  },
+  "4 cabins + 2 bunk beds + 1 skipper cabin + 2 (adaptable table ) 12+2+1 tot 15": {
+    "dims": ["cabins"],
+    "nl": "4 hutten + 2 stapelbedden + 1 schippershut + 2 (ombouwbare tafel) 12+2+1 totaal 15"
+  },
+  "(4D+1S+1S)": {
+    "dims": ["cabins"],
+    "nl": "(4D+1S+1S)"
+  },
+  "1 Master, 1 VIP, 1 Twin, 1 Double Cabins": {
+    "dims": ["cabins"],
+    "nl": "1 masterhut, 1 VIP-hut, 1 hut met twee eenpersoonsbedden, 1 tweepersoonshut"
+  },
+  "(+ 1 skipper)": {
+    "dims": ["cabins"],
+    "nl": "(+ 1 schipper)"
+  },
+  "(6+2 skipper)": {
+    "dims": ["cabins"],
+    "nl": "(6+2 schipper)"
+  },
+  "2 master + 4 double": {
+    "dims": ["cabins"],
+    "nl": "2 masterhutten + 4 tweepersoons"
+  },
+  "5 Cabins; 1 Master, 2 VIP, 1 Double all en-suite": {
+    "dims": ["cabins"],
+    "nl": "5 hutten; 1 masterhut, 2 VIP-hutten, 1 tweepersoonshut, alle met eigen badkamer"
+  },
+  "DOUBLE CABINS ,NEW LAYOUT": {
+    "dims": ["cabins"],
+    "nl": "TWEEPERSOONSHUTTEN, NIEUWE INDELING"
+  },
+  "(5+1 fore peak)": {
+    "dims": ["cabins"],
+    "nl": "(5+1 voorpiek)"
+  },
+  "(5+1 skippers)": {
+    "dims": ["cabins"],
+    "nl": "(5+1 schipper)"
+  },
+  "(3 + 1 crew WC)": {
+    "dims": ["heads"],
+    "nl": "(3 + 1 bemanningstoilet)"
+  },
+  "3 electric for guests, 1 for crew": {
+    "dims": ["heads"],
+    "nl": "3 elektrische voor gasten, 1 voor de bemanning"
+  },
+  "+ 1 FOREPEAK CREW TOILET": {
+    "dims": ["heads"],
+    "nl": "+ 1 BEMANNINGSTOILET IN DE VOORPIEK"
+  },
+  "1 Electric": {
+    "dims": ["heads"],
+    "nl": "1 elektrisch"
+  },
+  "en-suite": {
+    "dims": ["heads"],
+    "nl": "in de hutten"
+  },
+  "3+1 \"skippers\"": {
+    "dims": ["heads"],
+    "nl": "3+1 \"schipper\""
+  },
+  "(electric+manual)": {
+    "dims": ["heads"],
+    "nl": "(elektrisch+handmatig)"
+  },
+  "(4 +1 bow)": {
+    "dims": ["heads"],
+    "nl": "(4 +1 voorin)"
+  },
+  "(2 for guests 1 for crew)": {
+    "dims": ["heads"],
+    "nl": "(2 voor gasten, 1 voor de bemanning)"
+  },
+  "4+1 bow": {
+    "dims": ["heads"],
+    "nl": "4+1 voorin"
+  },
+  "+1 skipper toilet": {
+    "dims": ["heads"],
+    "nl": "+1 toilet voor de schipper"
+  },
+  "(4 for guests + 2 for crew)": {
+    "dims": ["heads"],
+    "nl": "(4 voor gasten + 2 voor de bemanning)"
+  },
+  "Both Electric": {
+    "dims": ["heads"],
+    "nl": "Beide elektrisch"
+  },
+  "electric WC": {
+    "dims": ["heads"],
+    "nl": "elektrisch toilet"
+  },
+  "(3+1) electric": {
+    "dims": ["heads"],
+    "nl": "(3+1) elektrisch"
+  },
+  "4 guest WC/shower + 1 crew WC/Shower": {
+    "dims": ["heads"],
+    "nl": "4 toiletten/douches voor gasten + 1 toilet/douche voor de bemanning"
+  },
+  "+ 1 for Crew Heads/WCs": {
+    "dims": ["heads"],
+    "nl": "+ 1 toilet/WC voor de bemanning"
+  },
+  "+1 in crew cab": {
+    "dims": ["heads"],
+    "nl": "+1 in de bemanningshut"
+  },
+  "/ 2 central big showers": {
+    "dims": ["heads"],
+    "nl": "/ 2 grote centrale douches"
+  },
+  "1 Bath": {
+    "dims": ["heads"],
+    "nl": "1 badkamer"
+  },
+  "3 Electric": {
+    "dims": ["heads"],
+    "nl": "3 elektrische"
+  },
+  "electric toilets, extra cockpit shower": {
+    "dims": ["heads"],
+    "nl": "elektrische toiletten, extra kuipdouche"
+  },
+  "4 for guests and 1 seperate for skipper": {
+    "dims": ["heads"],
+    "nl": "4 voor gasten en 1 apart voor de schipper"
+  },
+  "(4 electric +1 manual)": {
+    "dims": ["heads"],
+    "nl": "(4 elektrische +1 handmatig)"
+  },
+  "WC Electric 4+1skipper": {
+    "dims": ["heads"],
+    "nl": "Elektrisch toilet 4+1 schipper"
+  },
+  "(4 + 1 crew)": {
+    "dims": ["heads"],
+    "nl": "(4 + 1 voor de bemanning)"
+  },
+  "(3+1 skipper WC)": {
+    "dims": ["heads"],
+    "nl": "(3+1 WC schipper)"
+  },
+  "(4+1WC - 2 Shower)": {
+    "dims": ["heads"],
+    "nl": "(4+1 toilet - 2 douches)"
+  },
+  "3 WC, 2 Showers": {
+    "dims": ["heads"],
+    "nl": "3 toiletten, 2 douches"
+  },
+  "+ 1 (5 electric WC + 1 fore peak WC)": {
+    "dims": ["heads"],
+    "nl": "+ 1 (5 elektrische toiletten + 1 toilet in de voorpiek)"
+  },
+  "+ crew wc": {
+    "dims": ["heads"],
+    "nl": "+ bemanningstoilet"
+  },
+  "(3 + 1 front peak)": {
+    "dims": ["heads"],
+    "nl": "(3 + 1 voorpiek)"
+  },
+  "+1 (2 X Electric toilets)": {
+    "dims": ["heads"],
+    "nl": "+1 (2 X elektrische toiletten)"
+  },
+  "(6+1 bow skipper bath)": {
+    "dims": ["heads"],
+    "nl": "(6+1 schippersbadkamer voorin)"
+  },
+  "(4+1 crew WC)": {
+    "dims": ["heads"],
+    "nl": "(4+1 bemanningstoilet)"
+  },
+  "(+ 1 skipper toilet)": {
+    "dims": ["heads"],
+    "nl": "(+ 1 toilet voor de schipper)"
+  },
+  "( 4 inside plus 1 head in port bow )": {
+    "dims": ["heads"],
+    "nl": "(4 binnen plus 1 toilet in de bakboordboeg)"
+  },
+  "plus 1 skipper": {
+    "dims": ["heads"],
+    "nl": "plus 1 schipper"
+  },
+  "10 WC , 10 Shower": {
+    "dims": ["heads"],
+    "nl": "10 toiletten, 10 douches"
+  },
+  "+ 1 (6 electric WC + 1 skipper WC)": {
+    "dims": ["heads"],
+    "nl": "+ 1 (6 elektrische toiletten + 1 toilet voor de schipper)"
+  },
+  "6 Electric WC With Shower": {
+    "dims": ["heads"],
+    "nl": "6 elektrische toiletten met douche"
+  },
+  "electric toilets": {
+    "dims": ["heads"],
+    "nl": "elektrische toiletten"
+  },
+  "POPA": {
+    "dims": ["heads"],
+    "nl": "ACHTERSCHIP"
+  },
+  "+1 deck shower": {
+    "dims": ["heads"],
+    "nl": "+1 dekdouche"
+  },
+  "+ WC in the forepeak cabin": {
+    "dims": ["heads"],
+    "nl": "+ toilet in de voorpiekhut"
+  },
+  "(4 + 1 crew toilet)": {
+    "dims": ["heads"],
+    "nl": "(4 + 1 bemanningstoilet)"
+  },
+  "(4 electric + 1 manual))": {
+    "dims": ["heads"],
+    "nl": "(4 elektrische + 1 handmatig))"
+  },
+  "for guests + crew and skipper toilets": {
+    "dims": ["heads"],
+    "nl": "voor gasten + toiletten voor bemanning en schipper"
+  },
+  "2+1 crew": {
+    "dims": ["heads"],
+    "nl": "2+1 voor de bemanning"
+  },
+  "Private bathrooms with shower and home type toilet": {
+    "dims": ["heads"],
+    "nl": "Eigen badkamers met douche en huishoudtoilet"
+  },
+  "shower with glas doors": {
+    "dims": ["heads"],
+    "nl": "douche met glazen deuren"
+  },
+  "+2 bow toilets": {
+    "dims": ["heads"],
+    "nl": "+2 toiletten in de boeg"
+  },
+  "(4 + 1 in the bow)": {
+    "dims": ["heads"],
+    "nl": "(4 + 1 in de boeg)"
+  },
+  "4 bathrooms": {
+    "dims": ["heads"],
+    "nl": "4 badkamers"
+  },
+  "+ 1 crew shower": {
+    "dims": ["heads"],
+    "nl": "+ 1 bemanningsdouche"
+  },
+  "(+toilet in skipper's cabin, no shower)": {
+    "dims": ["heads"],
+    "nl": "(+toilet in de schippershut, geen douche)"
+  },
+  "plus Deckshower": {
+    "dims": ["heads"],
+    "nl": "plus dekdouche"
+  },
+  "(3 el. WC + 2 for crew)": {
+    "dims": ["heads"],
+    "nl": "(3 elektrische toiletten + 2 voor de bemanning)"
+  },
+  "( 1 electric + 1 manual toilet)": {
+    "dims": ["heads"],
+    "nl": "(1 elektrisch + 1 handmatig toilet)"
+  },
+  "(1 x electric)": {
+    "dims": ["heads"],
+    "nl": "(1 x elektrisch)"
+  },
+  "(4 + 1 in the berths in the bow for skipper/hostess)": {
+    "dims": ["heads"],
+    "nl": "(4 + 1 bij de kooien in de boeg voor schipper/hostess)"
+  },
+  "(4 + 1 in front peak)": {
+    "dims": ["heads"],
+    "nl": "(4 + 1 in de voorpiek)"
+  },
+  "3 Showers including the one on the swimming platform": {
+    "dims": ["heads"],
+    "nl": "3 douches, inclusief die op het zwemplatform"
+  },
+  "(4 WC + 1 head in the bow)": {
+    "dims": ["heads"],
+    "nl": "(4 toiletten + 1 toilet in de boeg)"
+  },
+  "+1 utility space (washing machine, ice maker)": {
+    "dims": ["heads"],
+    "nl": "+1 technische ruimte (wasmachine, ijsmaker)"
+  },
+  "plus 1 Deckshower": {
+    "dims": ["heads"],
+    "nl": "plus 1 dekdouche"
+  },
+  "+ 1 for the skipper": {
+    "dims": ["heads"],
+    "nl": "+ 1 voor de schipper"
+  },
+  "(5 electric WC)": {
+    "dims": ["heads"],
+    "nl": "(5 elektrische toiletten)"
+  },
+  "(4+1 bow cabin WC/ Shower)": {
+    "dims": ["heads"],
+    "nl": "(4+1 toilet/douche in de voorhut)"
+  },
+  "(2 WC/ Showers 2)": {
+    "dims": ["heads"],
+    "nl": "(2 toiletten/douches 2)"
+  },
+  "(3+separate shower)": {
+    "dims": ["heads"],
+    "nl": "(3+aparte douche)"
+  },
+  "+1 (skipper shower / wc)": {
+    "dims": ["heads"],
+    "nl": "+1 (douche / toilet schipper)"
+  },
+  "(3 + 1 in skipper cabin)": {
+    "dims": ["heads"],
+    "nl": "(3 + 1 in de schippershut)"
+  },
+  "(+ 1 in the bow comp)": {
+    "dims": ["heads"],
+    "nl": "(+ 1 in het voorcompartiment)"
+  },
+  "2+1 (for the skipper)": {
+    "dims": ["heads"],
+    "nl": "2+1 (voor de schipper)"
+  },
+  "heads": {
+    "dims": ["heads"],
+    "nl": "toiletten"
+  },
+  "Elettric WC": {
+    "dims": ["heads"],
+    "nl": "Elektrisch toilet"
+  },
+  "+ 3 crew WC": {
+    "dims": ["heads"],
+    "nl": "+ 3 bemanningstoiletten"
+  },
+  "- 3 guest + 1 crew": {
+    "dims": ["heads"],
+    "nl": "- 3 voor gasten + 1 voor de bemanning"
+  },
+  "with independent shower": {
+    "dims": ["heads"],
+    "nl": "met aparte douche"
+  },
+  "+ 1 (skipper)": {
+    "dims": ["heads"],
+    "nl": "+ 1 (schipper)"
+  },
+  "(5+crew)": {
+    "dims": ["heads"],
+    "nl": "(5+bemanning)"
+  },
+  "(4 guest WC/Showers +1 crew)": {
+    "dims": ["heads"],
+    "nl": "(4 toiletten/douches voor gasten +1 voor de bemanning)"
+  },
+  "(3 electric)": {
+    "dims": ["heads"],
+    "nl": "(3 elektrische)"
+  },
+  "3 showers": {
+    "dims": ["heads"],
+    "nl": "3 douches"
+  },
+  "(Inc. 1 Crew Head)": {
+    "dims": ["heads"],
+    "nl": "(incl. 1 bemanningstoilet)"
+  },
+  "(4 WC + 1) - 2 showers": {
+    "dims": ["heads"],
+    "nl": "(4 toiletten + 1) - 2 douches"
+  },
+  "electric toilets with showers": {
+    "dims": ["heads"],
+    "nl": "elektrische toiletten met douches"
+  },
+  "4 guest wc/showers plus 2 crew wc/showers": {
+    "dims": ["heads"],
+    "nl": "4 toiletten/douches voor gasten plus 2 toiletten/douches voor de bemanning"
+  },
+  "(3 + 1 crew inside catamaran)": {
+    "dims": ["heads"],
+    "nl": "(3 + 1 voor de bemanning binnen in de catamaran)"
+  },
+  "additional shower cabin": {
+    "dims": ["heads"],
+    "nl": "extra douchecabine"
+  },
+  "1 shower": {
+    "dims": ["heads"],
+    "nl": "1 douche"
+  },
+  "wc + shower": {
+    "dims": ["heads"],
+    "nl": "toilet + douche"
+  },
+  "+ 2 Crew Bathroom": {
+    "dims": ["heads"],
+    "nl": "+ 2 bemanningsbadkamers"
+  },
+  "4xelectric": {
+    "dims": ["heads"],
+    "nl": "4x elektrisch"
+  },
+  "(4 + 1crew)": {
+    "dims": ["heads"],
+    "nl": "(4 + 1 voor de bemanning)"
+  },
+  "(4 + extra shower)": {
+    "dims": ["heads"],
+    "nl": "(4 + extra douche)"
+  },
+  "(4+ 1SK)": {
+    "dims": ["heads"],
+    "nl": "(4+ 1 schipper)"
+  },
+  "Electric WC": {
+    "dims": ["heads"],
+    "nl": "Elektrisch toilet"
+  },
+  "(3+1 crew WC)": {
+    "dims": ["heads"],
+    "nl": "(3+1 bemanningstoilet)"
+  },
+  "(1 WC in the stab bow comp)": {
+    "dims": ["heads"],
+    "nl": "(1 toilet in het voorcompartiment aan stuurboord)"
+  },
+  "(3+Skipper's Head)": {
+    "dims": ["heads"],
+    "nl": "(3+toilet schipper)"
+  },
+  "(4+skipper)": {
+    "dims": ["heads"],
+    "nl": "(4+schipper)"
+  },
+  "(6 + 2 crew toilet)": {
+    "dims": ["heads"],
+    "nl": "(6 + 2 bemanningstoiletten)"
+  },
+  "manual wc": {
+    "dims": ["heads"],
+    "nl": "handmatig toilet"
+  },
+  "(3+1 skipper wc)": {
+    "dims": ["heads"],
+    "nl": "(3+1 WC schipper)"
+  },
+  "(3+1 Skipper)": {
+    "dims": ["heads"],
+    "nl": "(3+1 schipper)"
+  },
+  "4 electric toilets with showers + 1 toilet for the skipper": {
+    "dims": ["heads"],
+    "nl": "4 elektrische toiletten met douches + 1 toilet voor de schipper"
+  },
+  "(2 + 1 skipper)": {
+    "dims": ["heads"],
+    "nl": "(2 + 1 schipper)"
+  },
+  "4 guest WC/Showers plus 2 crew": {
+    "dims": ["heads"],
+    "nl": "4 toiletten/douches voor gasten plus 2 voor de bemanning"
+  },
+  "(2 electrical, 2 manual)": {
+    "dims": ["heads"],
+    "nl": "(2 elektrische, 2 handmatige)"
+  },
+  "2 forward peak cabins fitted with WC / shower": {
+    "dims": ["heads"],
+    "nl": "2 voorpiekhutten met toilet / douche"
+  },
+  "(4 ensuite + 1 skipper)": {
+    "dims": ["heads"],
+    "nl": "(4 in de hutten + 1 schipper)"
+  },
+  "guests + 2 crew": {
+    "dims": ["heads"],
+    "nl": "gasten + 2 voor de bemanning"
+  },
+  "with central shower": {
+    "dims": ["heads"],
+    "nl": "met centrale douche"
+  },
+  "WC + shower": {
+    "dims": ["heads"],
+    "nl": "toilet + douche"
+  },
+  "2 electric + 1 manual": {
+    "dims": ["heads"],
+    "nl": "2 elektrische + 1 handmatig"
+  },
+  "(2 + 1 electric)": {
+    "dims": ["heads"],
+    "nl": "(2 + 1 elektrisch)"
+  },
+  "electric WC: 1": {
+    "dims": ["heads"],
+    "nl": "elektrisch toilet: 1"
+  },
+  "(6/4) Electric Toilets": {
+    "dims": ["heads"],
+    "nl": "(6/4) elektrische toiletten"
+  },
+  "+ 1 (only WC in skipper cabin)": {
+    "dims": ["heads"],
+    "nl": "+ 1 (alleen toilet in de schippershut)"
+  },
+  "+ 2 FOREPEAK CREW TOILET": {
+    "dims": ["heads"],
+    "nl": "+ 2 BEMANNINGSTOILETTEN IN DE VOORPIEK"
+  },
+  "(4+1sk WC)": {
+    "dims": ["heads"],
+    "nl": "(4+1 WC schipper)"
+  },
+  "2 Heads/1 Shower": {
+    "dims": ["heads"],
+    "nl": "2 toiletten/1 douche"
+  },
+  "+1 for Crew Members": {
+    "dims": ["heads"],
+    "nl": "+1 voor de bemanningsleden"
+  },
+  "Electrical Jabsco toilets with wide bathrooms": {
+    "dims": ["heads"],
+    "nl": "Elektrische Jabsco-toiletten met ruime badkamers"
+  },
+  "(2+extra shower)": {
+    "dims": ["heads"],
+    "nl": "(2+extra douche)"
+  },
+  "+ bow head": {
+    "dims": ["heads"],
+    "nl": "+ toilet in de boeg"
+  },
+  "PLUS SKIPPERS": {
+    "dims": ["heads"],
+    "nl": "PLUS SCHIPPER"
+  },
+  "(4+1 SK )": {
+    "dims": ["heads"],
+    "nl": "(4+1 schipper)"
+  },
+  "(3 shower + skipper/no shower)": {
+    "dims": ["heads"],
+    "nl": "(3 met douche + schipper/zonder douche)"
+  },
+  "4+1WC With Showe": {
+    "dims": ["heads"],
+    "nl": "4+1 toilet met douche"
+  },
+  "3wc / 1 shower interior /1 shower on Cockpit": {
+    "dims": ["heads"],
+    "nl": "3 toiletten / 1 douche binnen /1 douche in de kuip"
+  },
+  "(4+1) with access from each cabins": {
+    "dims": ["heads"],
+    "nl": "(4+1) met toegang vanuit elke hut"
+  },
+  "electric +1 bow": {
+    "dims": ["heads"],
+    "nl": "elektrisch +1 in de boeg"
+  },
+  "(4+1 WC) 4 Showers": {
+    "dims": ["heads"],
+    "nl": "(4+1 toilet) 4 douches"
+  },
+  "Manuel Toilets": {
+    "dims": ["heads"],
+    "nl": "Handmatige toiletten"
+  },
+  "4+1 WC skipper": {
+    "dims": ["heads"],
+    "nl": "4+1 WC schipper"
+  },
+  "(4 + 1 ext)": {
+    "dims": ["heads"],
+    "nl": "(4 + 1 ext)"
+  },
+  "(4 en-suite + 1 skipper)": {
+    "dims": ["heads"],
+    "nl": "(4 in de hutten + 1 schipper)"
+  },
+  "4 electric +1 crew": {
+    "dims": ["heads"],
+    "nl": "4 elektrische +1 voor de bemanning"
+  },
+  "4 toilettes + 1 skipper toilette": {
+    "dims": ["heads"],
+    "nl": "4 toiletten + 1 toilet voor de schipper"
+  },
+  "(4 guest WC/Showers +1 crew WC)": {
+    "dims": ["heads"],
+    "nl": "(4 toiletten/douches voor gasten +1 bemanningstoilet)"
+  },
+  "3 WC et 2 douches": {
+    "dims": ["heads"],
+    "nl": "3 toiletten en 2 douches"
+  },
+  "(4+1 Skipper WC)": {
+    "dims": ["heads"],
+    "nl": "(4+1 WC schipper)"
+  },
+  "+ 1 wc in front for skipper": {
+    "dims": ["heads"],
+    "nl": "+ 1 toilet voorin voor de schipper"
+  },
+  "Yanmar 20hp": {
+    "dims": ["heads"],
+    "nl": "Yanmar 20 pk"
+  },
+  "+ 1 in bow skipper cabin": {
+    "dims": ["heads"],
+    "nl": "+ 1 in de schippershut in de boeg"
+  },
+  "Elettric Wc": {
+    "dims": ["heads"],
+    "nl": "Elektrisch toilet"
+  },
+  "(3+crew)": {
+    "dims": ["heads"],
+    "nl": "(3+bemanning)"
+  },
+  "(4+1) 2 shower box": {
+    "dims": ["heads"],
+    "nl": "(4+1) 2 douchecabines"
+  },
+  "(3+1 Shower)": {
+    "dims": ["heads"],
+    "nl": "(3+1 douche)"
+  },
+  "electric toilet": {
+    "dims": ["heads"],
+    "nl": "elektrisch toilet"
+  },
+  "+ 1 in skipper cabin": {
+    "dims": ["heads"],
+    "nl": "+ 1 in de schippershut"
+  },
+  "3wc - 4 showers": {
+    "dims": ["heads"],
+    "nl": "3 toiletten - 4 douches"
+  },
+  "(1 electric, 1 manual)": {
+    "dims": ["heads"],
+    "nl": "(1 elektrisch, 1 handmatig)"
+  },
+  "1 electric": {
+    "dims": ["heads"],
+    "nl": "1 elektrisch"
+  },
+  "(4 + 1 in starboard forepeak)": {
+    "dims": ["heads"],
+    "nl": "(4 + 1 in de voorpiek aan stuurboord)"
+  },
+  "(3 +1 in the forepeak cabin)": {
+    "dims": ["heads"],
+    "nl": "(3 +1 in de voorpiekhut)"
+  },
+  "(5+1 crew cabin WC)": {
+    "dims": ["heads"],
+    "nl": "(5+1 toilet in de bemanningshut)"
+  },
+  "1 bathroom with shower, 1 bathroom with elect. WC without shower, 1 seperate shower": {
+    "dims": ["heads"],
+    "nl": "1 badkamer met douche, 1 badkamer met elektr. toilet zonder douche, 1 aparte douche"
+  },
+  "3+1 skipper": {
+    "dims": ["heads"],
+    "nl": "3+1 schipper"
+  },
+  "Manual WC": {
+    "dims": ["heads"],
+    "nl": "Handmatig toilet"
+  },
+  "(1 electric toilet)": {
+    "dims": ["heads"],
+    "nl": "(1 elektrisch toilet)"
+  },
+  "(2x shower) + 1 bow": {
+    "dims": ["heads"],
+    "nl": "(2x douche) + 1 in de boeg"
+  },
+  "4 electric": {
+    "dims": ["heads"],
+    "nl": "4 elektrische"
+  },
+  "+1 crew bathroom": {
+    "dims": ["heads"],
+    "nl": "+1 bemanningsbadkamer"
+  },
+  "Electric Quiet Flush": {
+    "dims": ["heads"],
+    "nl": "Elektrisch toilet Quiet Flush"
+  },
+  "(3 + 1 electrical toilette)": {
+    "dims": ["heads"],
+    "nl": "(3 + 1 elektrisch toilet)"
+  },
+  "+ 1 Deckshower and 1 Skipperbath in the hull": {
+    "dims": ["heads"],
+    "nl": "+ 1 dekdouche en 1 schippersbadkamer in de romp"
+  },
+  "1+1 shower": {
+    "dims": ["heads"],
+    "nl": "1+1 douche"
+  },
+  "(5 electric)": {
+    "dims": ["heads"],
+    "nl": "(5 elektrische)"
+  },
+  "4 + 1(in bow cabin)": {
+    "dims": ["heads"],
+    "nl": "4 + 1 (in de voorhut)"
+  },
+  "with shower": {
+    "dims": ["heads"],
+    "nl": "met douche"
+  },
+  "\" 1 skippers\"": {
+    "dims": ["heads"],
+    "nl": "\"1 schipper\""
+  },
+  "(3 + 1 Crew)": {
+    "dims": ["heads"],
+    "nl": "(3 + 1 voor de bemanning)"
+  },
+  "2 for customer": {
+    "dims": ["heads"],
+    "nl": "2 voor gasten"
+  },
+  "(in 3 separate rooms)": {
+    "dims": ["heads"],
+    "nl": "(in 3 aparte ruimtes)"
+  },
+  "2 wc": {
+    "dims": ["heads"],
+    "nl": "2 toiletten"
+  },
+  "3 electric toilets with showers": {
+    "dims": ["heads"],
+    "nl": "3 elektrische toiletten met douches"
+  },
+  "6 WC/Shower + 1 crew": {
+    "dims": ["heads"],
+    "nl": "6 toiletten/douches + 1 voor de bemanning"
+  },
+  "4+1 toilet": {
+    "dims": ["heads"],
+    "nl": "4+1 toilet"
+  },
+  "(4 WC)": {
+    "dims": ["heads"],
+    "nl": "(4 toiletten)"
+  },
+  "manuel": {
+    "dims": ["heads"],
+    "nl": "handmatig"
+  },
+  "( 1 electric toilet )": {
+    "dims": ["heads"],
+    "nl": "(1 elektrisch toilet)"
+  },
+  "3 wc + 1 shower": {
+    "dims": ["heads"],
+    "nl": "3 toiletten + 1 douche"
+  },
+  "(Electric Toilet)": {
+    "dims": ["heads"],
+    "nl": "(Elektrisch toilet)"
+  },
+  "+1 toilet in skipper's cabin": {
+    "dims": ["heads"],
+    "nl": "+1 toilet in de schippershut"
+  },
+  "Electric toilet": {
+    "dims": ["heads"],
+    "nl": "Elektrisch toilet"
+  },
+  "(5 +1 sk WC only)": {
+    "dims": ["heads"],
+    "nl": "(5 +1 schipper, alleen toilet)"
+  },
+  "- 4 guest + 1 crew": {
+    "dims": ["heads"],
+    "nl": "- 4 voor gasten + 1 voor de bemanning"
+  },
+  "(4 + 1 on the bow cabin)": {
+    "dims": ["heads"],
+    "nl": "(4 + 1 in de voorhut)"
+  },
+  "+ 2 crew wc": {
+    "dims": ["heads"],
+    "nl": "+ 2 bemanningstoiletten"
+  },
+  "+ 1 crew (no shower)": {
+    "dims": ["heads"],
+    "nl": "+ 1 voor de bemanning (zonder douche)"
+  },
+  "5 + 1 crew": {
+    "dims": ["heads"],
+    "nl": "5 + 1 voor de bemanning"
   }
 }

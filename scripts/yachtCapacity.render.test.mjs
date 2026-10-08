@@ -14,10 +14,19 @@ import { renderToStaticMarkup } from 'react-dom/server';
 import { NextIntlClientProvider } from 'next-intl';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
+import { registerHooks } from 'node:module';
 import { describe, test } from 'node:test';
 import { fileURLToPath } from 'node:url';
 
 import './tsLoader.mjs';
+
+// The note tables are server-only (capacityNoteTable.ts); `server-only` throws outside a React server bundle.
+registerHooks({
+  resolve: (specifier, context, nextResolve) =>
+    specifier === 'server-only'
+      ? { url: 'data:text/javascript,export {};', shortCircuit: true }
+      : nextResolve(specifier, context),
+});
 
 const ROOT = fileURLToPath(new URL('../', import.meta.url));
 const readJson = path => JSON.parse(readFileSync(`${ROOT}${path}`, 'utf8'));
@@ -171,6 +180,55 @@ describe('boat page DetailsTab with the new capacity / rig blocks', () => {
       'Motor 2 × 115 PS',
     ].forEach(row => assert.ok(page.includes(row), `row: ${row}\n${page}`));
     assert.ok(!page.includes('Kabinen 7'));
+  });
+});
+
+describe('boat page DetailsTab with the v2 note tables (every word note on prod, 8.10.2026)', () => {
+  // Aquila 50 (MMK, live 19701) as the API sends it, plus one note no table has seen.
+  const aquila = {
+    ...baseYacht,
+    id: 19701,
+    name: 'Aquila 50',
+    model: 'Aquila 50',
+    vesselType: 'POWER_CATAMARAN',
+    charterType: ['CREWED'],
+    cabins: 5,
+    berths: 10,
+    wc: 5,
+    capacity: {
+      cabins: { value: 5, note: 'for clients + 1 crew', split: null },
+      berths: { value: 10, note: '+ 2 crew', split: null },
+      heads: { value: 5, note: 'for clients + 1 crew', split: null },
+    },
+    rig: { mainsail: null, headsail: null, engine: null, draught: 1.45 },
+  };
+
+  test('Aquila 50 (de): the reviewed translations, nothing marked English', async () => {
+    const html = await render(aquila, 'de');
+    const page = text(html);
+
+    ['Kabinen 5 (für Gäste + 1 Crew)', 'Kojen 10 + 2 Crew', 'WC 5 (für Gäste + 1 Crew)'].forEach(row =>
+      assert.ok(page.includes(row), `row: ${row}\n${page}`)
+    );
+    assert.ok(!page.includes('for clients'), page);
+    assert.ok(!html.includes('lang="en"'), 'no English note left on the German page');
+  });
+
+  test('an unseen note stays English with lang="en"; a note the sanitizer hides leaves the number only', async () => {
+    const yacht = {
+      ...aquila,
+      capacity: {
+        ...aquila.capacity,
+        berths: { value: 10, note: '(two convertible saloon berths)', split: null },
+        heads: { value: 5, note: '(4 internal + 1 WC in bow cabin)', split: null },
+      },
+    };
+    const html = await render(yacht, 'de');
+    const page = text(html);
+
+    assert.ok(html.includes('<span lang="en">(two convertible saloon berths)</span>'), html);
+    assert.ok(page.includes('Kabinen 5 (für Gäste + 1 Crew)'), page);
+    assert.ok(/WC 5(?! \()/.test(page) && !page.includes('internal'), page);
   });
 });
 

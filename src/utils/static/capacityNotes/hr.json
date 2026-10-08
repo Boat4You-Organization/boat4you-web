@@ -88,15 +88,15 @@
     "hr": "(za goste)"
   },
   "+1 skipper": {
-    "dims": ["cabins"],
+    "dims": ["cabins", "berths", "heads"],
     "hr": "+1 skiper"
   },
   "(4+1 skipper)": {
-    "dims": ["cabins"],
+    "dims": ["cabins", "heads"],
     "hr": "(4+1 skiper)"
   },
   "+ skipper": {
-    "dims": ["heads"],
+    "dims": ["cabins", "berths", "heads"],
     "hr": "+ skiper"
   },
   "5+1 skipper": {
@@ -120,7 +120,7 @@
     "hr": "(8+2 salon+1 pramčani pik)"
   },
   "(4 +1 skipper)": {
-    "dims": ["cabins"],
+    "dims": ["cabins", "heads"],
     "hr": "(4 +1 skiper)"
   },
   "(8+2 saloon+2 forepeak)": {
@@ -146,5 +146,5641 @@
   "- 4 double ensuite cabins +2 at forepeak cabins - no toilet": {
     "dims": ["berths"],
     "hr": "- 4 dvokrevetne kabine s vlastitom kupaonicom +2 u pramčanim kabinama - bez WC-a"
+  },
+  "+2 crew": {
+    "dims": ["cabins", "berths", "heads"],
+    "hr": "+2 za posadu"
+  },
+  "+1 crew": {
+    "dims": ["cabins", "berths", "heads"],
+    "hr": "+1 za posadu"
+  },
+  "+ 1 bow": {
+    "dims": ["cabins", "berths", "heads"],
+    "hr": "+ 1 na pramcu"
+  },
+  "+ 1 crew": {
+    "dims": ["cabins", "berths", "heads"],
+    "hr": "+ 1 za posadu"
+  },
+  "+ 2 crew": {
+    "dims": ["cabins", "berths", "heads"],
+    "hr": "+ 2 za posadu"
+  },
+  "+ 2 bow": {
+    "dims": ["cabins", "berths", "heads"],
+    "hr": "+ 2 na pramcu"
+  },
+  "+ 1 wc bow": {
+    "dims": ["heads"],
+    "hr": "+ 1 WC na pramcu"
+  },
+  "(8 + 2 saloon + 2 bow)": {
+    "dims": ["berths"],
+    "hr": "(8 + 2 salon + 2 na pramcu)"
+  },
+  "+2 crew cabins": {
+    "dims": ["cabins"],
+    "hr": "+2 kabine za posadu"
+  },
+  "+1 bow": {
+    "dims": ["cabins", "berths", "heads"],
+    "hr": "+1 na pramcu"
+  },
+  "double": {
+    "dims": ["cabins"],
+    "hr": "dvokrevetne"
+  },
+  "(4+1 crew)": {
+    "dims": ["cabins", "heads"],
+    "hr": "(4+1 za posadu)"
+  },
+  "(4 Double + Saloon + 1 Skipper + 1 Skipper)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne + salon + 1 skiper + 1 skiper)"
+  },
+  "(3D)": {
+    "dims": ["cabins"],
+    "hr": "(3 dvokrevetne)"
+  },
+  "(8 + 2 saloon)": {
+    "dims": ["berths"],
+    "hr": "(8 + 2 salon)"
+  },
+  "double cabins": {
+    "dims": ["cabins"],
+    "hr": "dvokrevetne kabine"
+  },
+  "(max 8 pax to sleep)": {
+    "dims": ["berths"],
+    "hr": "(maks. 8 gostiju za spavanje)"
+  },
+  "(4 Double+ 2 berths in the bow for Skipper and sailor)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne+ 2 ležaja na pramcu za skipera i mornara)"
+  },
+  "(6 + 2 saloon)": {
+    "dims": ["berths"],
+    "hr": "(6 + 2 salon)"
+  },
+  "(+ 2 crew)": {
+    "dims": ["cabins", "berths", "heads"],
+    "hr": "(+ 2 za posadu)"
+  },
+  "(4+2 Crew)": {
+    "dims": ["cabins"],
+    "hr": "(4+2 za posadu)"
+  },
+  "+ 4 crew": {
+    "dims": ["berths"],
+    "hr": "+ 4 za posadu"
+  },
+  "(8+2 Crew)": {
+    "dims": ["berths"],
+    "hr": "(8+2 za posadu)"
+  },
+  "+1 (skipper cabin)": {
+    "dims": ["cabins"],
+    "hr": "+1 (skiperska kabina)"
+  },
+  "+1 (skipper wc/shower)": {
+    "dims": ["heads"],
+    "hr": "+1 (skiperski WC/tuš)"
+  },
+  "- License for: 8 / In cabins: 6": {
+    "dims": ["berths"],
+    "hr": "- Dozvola za: 8 / U kabinama: 6"
+  },
+  "(10 + 2 saloon)": {
+    "dims": ["berths"],
+    "hr": "(10 + 2 salon)"
+  },
+  "(4 Double + Saloon + 2 Crew)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne + salon + 2 za posadu)"
+  },
+  "(4 + crew)": {
+    "dims": ["cabins", "heads"],
+    "hr": "(4 + posada)"
+  },
+  "(incl. saloon bed)": {
+    "dims": ["berths"],
+    "hr": "(uklj. ležaj u salonu)"
+  },
+  "+ 1 Crew Toilet": {
+    "dims": ["heads"],
+    "hr": "+ 1 WC za posadu"
+  },
+  "+ 3 crew": {
+    "dims": ["cabins", "berths"],
+    "hr": "+ 3 za posadu"
+  },
+  "Electric": {
+    "dims": ["cabins", "heads"],
+    "hr": "Električni"
+  },
+  "(including any crew)": {
+    "dims": ["berths"],
+    "hr": "(uključujući eventualnu posadu)"
+  },
+  "+1 Skipper": {
+    "dims": ["cabins", "heads"],
+    "hr": "+1 skiper"
+  },
+  "(4 double for the guest + crew)": {
+    "dims": ["cabins", "berths"],
+    "hr": "(4 dvokrevetne za goste + posada)"
+  },
+  "(3 double-bed cabins)": {
+    "dims": ["cabins"],
+    "hr": "(3 kabine s bračnim krevetom)"
+  },
+  "(8+2 crew)": {
+    "dims": ["cabins", "berths", "heads"],
+    "hr": "(8+2 za posadu)"
+  },
+  "(4 + 1 crew front peak)": {
+    "dims": ["cabins", "heads"],
+    "hr": "(4 + 1 pramčani pik za posadu)"
+  },
+  "(6+1 crew)": {
+    "dims": ["cabins", "berths", "heads"],
+    "hr": "(6+1 za posadu)"
+  },
+  "(4D+1BB)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne+1 s krevetom na kat)"
+  },
+  "4+2 crew": {
+    "dims": ["cabins"],
+    "hr": "4+2 za posadu"
+  },
+  "+ salon": {
+    "dims": ["cabins"],
+    "hr": "+ salon"
+  },
+  "+ 2 for Crew": {
+    "dims": ["cabins", "heads"],
+    "hr": "+ 2 za posadu"
+  },
+  "Electric Toilets": {
+    "dims": ["heads"],
+    "hr": "Električni WC-i"
+  },
+  "(6 +2 salon)": {
+    "dims": ["berths"],
+    "hr": "(6 +2 salon)"
+  },
+  "8+2 salon +2 crew": {
+    "dims": ["berths"],
+    "hr": "8+2 salon +2 za posadu"
+  },
+  "convertible salon table into double berth": {
+    "dims": ["berths"],
+    "hr": "stol u salonu koji se pretvara u bračni ležaj"
+  },
+  "- License for: 10 / In cabins: 8": {
+    "dims": ["berths"],
+    "hr": "- Dozvola za: 10 / U kabinama: 8"
+  },
+  "(4 Dbl cabs + 1 bunk berths cab + 1 forepeak cab)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne kabine + 1 kabina s krevetima na kat + 1 pramčana kabina)"
+  },
+  "(4 +1 crew)": {
+    "dims": ["cabins", "heads"],
+    "hr": "(4 +1 za posadu)"
+  },
+  "(4+1 Crew)": {
+    "dims": ["cabins", "heads"],
+    "hr": "(4+1 za posadu)"
+  },
+  "(3 +1 WC in forepeak cabin )": {
+    "dims": ["heads"],
+    "hr": "(3 +1 WC u pramčanoj kabini)"
+  },
+  "(8 +2 salon)": {
+    "dims": ["berths"],
+    "hr": "(8 +2 salon)"
+  },
+  "+3crew": {
+    "dims": ["berths"],
+    "hr": "+3 za posadu"
+  },
+  "(8+2+skipp)": {
+    "dims": ["berths"],
+    "hr": "(8+2+skiper)"
+  },
+  "+ Skipper": {
+    "dims": ["cabins", "berths"],
+    "hr": "+ skiper"
+  },
+  "+ 2 bow cabin": {
+    "dims": ["cabins"],
+    "hr": "+ 2 pramčane kabine"
+  },
+  "(4 Dbl cabs + 1 berth in each bow comp)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne kabine + 1 ležaj u svakom pramčanom odjeljku)"
+  },
+  "(4 Dbl cabins + 1 bunk berth cabin)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne kabine + 1 kabina s krevetom na kat)"
+  },
+  "+1 Skipper cabin": {
+    "dims": ["cabins"],
+    "hr": "+1 skiperska kabina"
+  },
+  "(4 guest double + 2 crew single)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne za goste + 2 jednokrevetne za posadu)"
+  },
+  "(4 double-bed cabins)": {
+    "dims": ["cabins"],
+    "hr": "(4 kabine s bračnim krevetom)"
+  },
+  "(4+1 skipper cabin)": {
+    "dims": ["cabins"],
+    "hr": "(4+1 skiperska kabina)"
+  },
+  "(4 + 1 skipper)": {
+    "dims": ["cabins", "heads"],
+    "hr": "(4 + 1 skiper)"
+  },
+  "(5 + 1 crew)": {
+    "dims": ["cabins", "heads"],
+    "hr": "(5 + 1 za posadu)"
+  },
+  "(4+1 Skipper)": {
+    "dims": ["heads"],
+    "hr": "(4+1 skiper)"
+  },
+  "(10+2 dinette) Cat.A10 people,B11,C12": {
+    "dims": ["berths"],
+    "hr": "(10+2 salon) Kat. A 10 osoba, B11, C12"
+  },
+  "(6 + convertible saloon table)": {
+    "dims": ["berths"],
+    "hr": "(6 + stol u salonu koji se pretvara u ležaj)"
+  },
+  "(8+ 2 saloon + 2 crew peaks)": {
+    "dims": ["berths"],
+    "hr": "(8+ 2 salon + 2 pramčana pika za posadu)"
+  },
+  "for guests": {
+    "dims": ["berths"],
+    "hr": "za goste"
+  },
+  "(6 people in the cabins +2 in the saloon area)": {
+    "dims": ["berths"],
+    "hr": "(6 osoba u kabinama +2 u salonu)"
+  },
+  "(8+2 dinette)": {
+    "dims": ["berths"],
+    "hr": "(8+2 salon)"
+  },
+  "+ crew": {
+    "dims": ["cabins", "berths", "heads"],
+    "hr": "+ posada"
+  },
+  "(+crew)": {
+    "dims": ["cabins", "berths", "heads"],
+    "hr": "(+posada)"
+  },
+  "(6+2 crew)": {
+    "dims": ["cabins", "berths", "heads"],
+    "hr": "(6+2 za posadu)"
+  },
+  "+1 for skipper": {
+    "dims": ["cabins", "berths", "heads"],
+    "hr": "+1 za skipera"
+  },
+  "+ Skipper Cabin": {
+    "dims": ["cabins"],
+    "hr": "+ skiperska kabina"
+  },
+  "(4 double-bed cabins +1 bow cabin)": {
+    "dims": ["cabins"],
+    "hr": "(4 kabine s bračnim krevetom +1 pramčana kabina)"
+  },
+  "(3+1 crew)": {
+    "dims": ["cabins"],
+    "hr": "(3+1 za posadu)"
+  },
+  "(4D)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne)"
+  },
+  "(4 double+2crew in front peak)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne+2 za posadu u pramčanom piku)"
+  },
+  "4+2crew": {
+    "dims": ["cabins"],
+    "hr": "4+2 za posadu"
+  },
+  "+1 crew + saloon": {
+    "dims": ["cabins"],
+    "hr": "+1 za posadu + salon"
+  },
+  "(3+1 bunk cab)": {
+    "dims": ["cabins"],
+    "hr": "(3+1 kabina s krevetom na kat)"
+  },
+  "(4+2 crew)": {
+    "dims": ["cabins"],
+    "hr": "(4+2 za posadu)"
+  },
+  "+1 bow skipper": {
+    "dims": ["cabins", "heads"],
+    "hr": "+1 skiper na pramcu"
+  },
+  "(2 electric)": {
+    "dims": ["heads"],
+    "hr": "(2 električna)"
+  },
+  "electric": {
+    "dims": ["heads"],
+    "hr": "električni"
+  },
+  "(electric)": {
+    "dims": ["heads"],
+    "hr": "(električni)"
+  },
+  "(4+1 crew cabin WC)": {
+    "dims": ["heads"],
+    "hr": "(4+1 WC u kabini za posadu)"
+  },
+  "(+1 skipper WC)": {
+    "dims": ["heads"],
+    "hr": "(+1 skiperski WC)"
+  },
+  "(2 Guests+ 1 crew in front peak)": {
+    "dims": ["heads"],
+    "hr": "(2 za goste+ 1 za posadu u pramčanom piku)"
+  },
+  "+1 crew + 1 in saloon": {
+    "dims": ["berths"],
+    "hr": "+1 za posadu + 1 u salonu"
+  },
+  "(8 people in the cabins + 2 in the saloon area + 2 in the bow cabins)": {
+    "dims": ["berths"],
+    "hr": "(8 osoba u kabinama + 2 u salonu + 2 u pramčanim kabinama)"
+  },
+  "(10+1 dinette+1 skipper)": {
+    "dims": ["berths"],
+    "hr": "(10+1 salon+1 skiper)"
+  },
+  "- License for: 6 / In cabins: 4": {
+    "dims": ["berths"],
+    "hr": "- Dozvola za: 6 / U kabinama: 4"
+  },
+  "+ 2 crew + 2 in saloon": {
+    "dims": ["berths"],
+    "hr": "+ 2 za posadu + 2 u salonu"
+  },
+  "(8 + convertible saloon table)": {
+    "dims": ["berths"],
+    "hr": "(8 + stol u salonu koji se pretvara u ležaj)"
+  },
+  "salon table convertible to double berth": {
+    "dims": ["berths"],
+    "hr": "stol u salonu koji se pretvara u bračni ležaj"
+  },
+  "(8 people in the cabins +1 in the saloon+ 1 in the bow cabin)": {
+    "dims": ["berths"],
+    "hr": "(8 osoba u kabinama +1 u salonu+ 1 u pramčanoj kabini)"
+  },
+  "8+2+2crew": {
+    "dims": ["berths"],
+    "hr": "8+2+2 za posadu"
+  },
+  "(10+2 dinette +1 skipper)": {
+    "dims": ["berths"],
+    "hr": "(10+2 salon +1 skiper)"
+  },
+  "plus Crew": {
+    "dims": ["cabins", "berths", "heads"],
+    "hr": "plus posada"
+  },
+  "+1 skipper cabin": {
+    "dims": ["cabins", "berths"],
+    "hr": "+1 skiperska kabina"
+  },
+  "+ 2 (crew)": {
+    "dims": ["cabins", "berths", "heads"],
+    "hr": "+ 2 (posada)"
+  },
+  "(4 Dbl + 1 berth in each bow comp )": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne + 1 ležaj u svakom pramčanom odjeljku)"
+  },
+  "(4+2 Skipper)": {
+    "dims": ["cabins"],
+    "hr": "(4+2 skiper)"
+  },
+  "(1OWN+2D+1BB)": {
+    "dims": ["cabins"],
+    "hr": "(1 vlasnička+2 dvokrevetne+1 s krevetom na kat)"
+  },
+  "(4 double-bed cabins +2 bow cabins)": {
+    "dims": ["cabins"],
+    "hr": "(4 kabine s bračnim krevetom +2 pramčane kabine)"
+  },
+  "(+ crew)": {
+    "dims": ["cabins", "heads"],
+    "hr": "(+ posada)"
+  },
+  "(+1 WC in one of the bow comp)": {
+    "dims": ["heads"],
+    "hr": "(+1 WC u jednom od pramčanih odjeljaka)"
+  },
+  "(4 electric)": {
+    "dims": ["heads"],
+    "hr": "(4 električna)"
+  },
+  "(8 + 3 Crew)": {
+    "dims": ["berths"],
+    "hr": "(8 + 3 za posadu)"
+  },
+  "(12+2 dinette +1 skipper) Cat A/B: 13, C16": {
+    "dims": ["berths"],
+    "hr": "(12+2 salon +1 skiper) Kat. A/B: 13, C16"
+  },
+  "8+2+2 Crew": {
+    "dims": ["berths"],
+    "hr": "8+2+2 za posadu"
+  },
+  "(8 in cabin + 2 in saloon + 2 in front peak)": {
+    "dims": ["berths"],
+    "hr": "(8 u kabinama + 2 u salonu + 2 u pramčanom piku)"
+  },
+  "(6 + 2 in saloon)": {
+    "dims": ["berths"],
+    "hr": "(6 + 2 u salonu)"
+  },
+  "(12 in cabin + 2 in saloon + 1 in front peak)": {
+    "dims": ["berths"],
+    "hr": "(12 u kabinama + 2 u salonu + 1 u pramčanom piku)"
+  },
+  "+ 2 posti dinette": {
+    "dims": ["berths"],
+    "hr": "+ 2 ležaja u salonu"
+  },
+  "(8 +2 in dinette) Cat A: 8 pax, B10": {
+    "dims": ["berths"],
+    "hr": "(8 +2 u salonu) Kat. A: 8 gostiju, B10"
+  },
+  "salon convertible to double berth": {
+    "dims": ["berths"],
+    "hr": "salon koji se pretvara u bračni ležaj"
+  },
+  "(8 people in the cabins + 1 in the saloon area)": {
+    "dims": ["berths"],
+    "hr": "(8 osoba u kabinama + 1 u salonu)"
+  },
+  "(salon convertible to double berth)": {
+    "dims": ["berths"],
+    "hr": "(salon koji se pretvara u bračni ležaj)"
+  },
+  "(8 + 2 dinette + 2 crew)": {
+    "dims": ["berths"],
+    "hr": "(8 + 2 salon + 2 za posadu)"
+  },
+  "(8 people in the cabins +2 in the saloon area)": {
+    "dims": ["berths"],
+    "hr": "(8 osoba u kabinama +2 u salonu)"
+  },
+  "(8 +2 fore peak +2 salon)": {
+    "dims": ["berths"],
+    "hr": "(8 +2 pramčani pik +2 salon)"
+  },
+  "(6 + 1 Skipper)": {
+    "dims": ["berths"],
+    "hr": "(6 + 1 skiper)"
+  },
+  "(12+skipper)": {
+    "dims": ["berths"],
+    "hr": "(12+skiper)"
+  },
+  "+ 2 pointes": {
+    "dims": ["cabins", "berths"],
+    "hr": "+ 2 pramčana pika"
+  },
+  "plus Skippercabin in the hull": {
+    "dims": ["cabins", "berths"],
+    "hr": "plus skiperska kabina u trupu"
+  },
+  "+1 (crew)": {
+    "dims": ["cabins", "berths", "heads"],
+    "hr": "+1 (posada)"
+  },
+  "4+2 Crew": {
+    "dims": ["cabins"],
+    "hr": "4+2 za posadu"
+  },
+  "(4 client use + 2 bow)": {
+    "dims": ["cabins"],
+    "hr": "(4 za goste + 2 na pramcu)"
+  },
+  "+ CONVERTIBLE SALOON": {
+    "dims": ["cabins"],
+    "hr": "+ salon koji se pretvara u ležaj"
+  },
+  "double cabins + convertible saloon": {
+    "dims": ["cabins"],
+    "hr": "dvokrevetne kabine + salon koji se pretvara u ležaj"
+  },
+  "double cabins + double saloon": {
+    "dims": ["cabins"],
+    "hr": "dvokrevetne kabine + salon za dvije osobe"
+  },
+  "(4+Salon+2 SK)": {
+    "dims": ["cabins"],
+    "hr": "(4+salon+2 SK)"
+  },
+  "(4D+1 skippers' cabin)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne+1 skiperska kabina)"
+  },
+  "(3 + 1 Skipper)": {
+    "dims": ["cabins"],
+    "hr": "(3 + 1 skiper)"
+  },
+  "(4 double +2 fore peak)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne +2 pramčani pik)"
+  },
+  "(5+1 Crew)": {
+    "dims": ["cabins"],
+    "hr": "(5+1 za posadu)"
+  },
+  "/ 3 (conv.)": {
+    "dims": ["cabins"],
+    "hr": "/ 3 (prenamjenjivo)"
+  },
+  "4 double cabin, (1 triple bunk cabin + 2 double bow cabins crew use)": {
+    "dims": ["cabins"],
+    "hr": "4 dvokrevetne kabine, (1 kabina s trostrukim krevetom na kat + 2 dvokrevetne pramčane kabine za posadu)"
+  },
+  "(4D+2SD+skipper cabin)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne+2SD+skiperska kabina)"
+  },
+  "+2 peaks": {
+    "dims": ["cabins"],
+    "hr": "+2 pramčana pika"
+  },
+  "(1 master + 2 VIP + 2 double bed + 2 double bow cabins for crew use)": {
+    "dims": ["cabins"],
+    "hr": "(1 master + 2 VIP + 2 s bračnim krevetom + 2 dvokrevetne pramčane kabine za posadu)"
+  },
+  "(4 + 2 crew front peak)": {
+    "dims": ["cabins"],
+    "hr": "(4 + 2 pramčani pik za posadu)"
+  },
+  "+ 2 skipper's cabins": {
+    "dims": ["cabins"],
+    "hr": "+ 2 skiperske kabine"
+  },
+  "+ crew cabin": {
+    "dims": ["cabins"],
+    "hr": "+ kabina za posadu"
+  },
+  "(4 double cabins & 1 twin convertible to double all with en-suite facilities for up to 10 guests)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne kabine & 1 kabina s odvojenim krevetima koja se može pretvoriti u kabinu s bračnim krevetom, sve s vlastitom kupaonicom, za do 10 gostiju)"
+  },
+  "+ 2 bow cab": {
+    "dims": ["cabins"],
+    "hr": "+ 2 pramčane kabine"
+  },
+  "(6 Double + Saloon + 1 Skipper)": {
+    "dims": ["cabins"],
+    "hr": "(6 dvokrevetnih + salon + 1 skiper)"
+  },
+  "4 double cabins": {
+    "dims": ["cabins"],
+    "hr": "4 dvokrevetne kabine"
+  },
+  "(4 + 2 SINGLE BEDS PORT/STB SIDE)": {
+    "dims": ["cabins"],
+    "hr": "(4 + 2 jednostruka kreveta lijevi/desni bok)"
+  },
+  "(6+1 Crew)": {
+    "dims": ["cabins", "heads"],
+    "hr": "(6+1 za posadu)"
+  },
+  "+ 1 forepeak cabin": {
+    "dims": ["cabins", "heads"],
+    "hr": "+ 1 pramčana kabina"
+  },
+  "4 +1 crew": {
+    "dims": ["cabins", "heads"],
+    "hr": "4 +1 za posadu"
+  },
+  "1 electric + 3 normal": {
+    "dims": ["heads"],
+    "hr": "1 električni + 3 obična"
+  },
+  "+ Skipper WC": {
+    "dims": ["heads"],
+    "hr": "+ skiperski WC"
+  },
+  "3 electric toilets": {
+    "dims": ["heads"],
+    "hr": "3 električna WC-a"
+  },
+  "(+ 1 crew)": {
+    "dims": ["heads"],
+    "hr": "(+ 1 za posadu)"
+  },
+  "(+ 1 wc in the starboard bow comp)": {
+    "dims": ["heads"],
+    "hr": "(+ 1 WC u desnom pramčanom odjeljku)"
+  },
+  "+ 2 in bow cabins for crew": {
+    "dims": ["heads"],
+    "hr": "+ 2 u pramčanim kabinama za posadu"
+  },
+  "(4+1crew)": {
+    "dims": ["heads"],
+    "hr": "(4+1 za posadu)"
+  },
+  "+1 (only WC in skipper cabin)": {
+    "dims": ["heads"],
+    "hr": "+1 (samo WC u skiperskoj kabini)"
+  },
+  "- New Batrooms with shower and toilet": {
+    "dims": ["heads"],
+    "hr": "- Nove kupaonice s tušem i WC-om"
+  },
+  "+separate shower": {
+    "dims": ["heads"],
+    "hr": "+odvojeni tuš"
+  },
+  "(10+2 in dinette +1 skipper) Cat. A 12 people, B 14": {
+    "dims": ["berths"],
+    "hr": "(10+2 u salonu +1 skiper) Kat. A 12 osoba, B 14"
+  },
+  "(8 + 2 + convertible saloon table)": {
+    "dims": ["berths"],
+    "hr": "(8 + 2 + stol u salonu koji se pretvara u ležaj)"
+  },
+  "+2 dinette": {
+    "dims": ["berths"],
+    "hr": "+2 salon"
+  },
+  "(8 in cabin + 3 in saloon + 1 in front peak)": {
+    "dims": ["berths"],
+    "hr": "(8 u kabinama + 3 u salonu + 1 u pramčanom piku)"
+  },
+  "(6 people in the cabins + 2 in the saloon area)": {
+    "dims": ["berths"],
+    "hr": "(6 osoba u kabinama + 2 u salonu)"
+  },
+  "( 8 +2 dinette +1 bow)": {
+    "dims": ["berths"],
+    "hr": "(8 +2 salon +1 na pramcu)"
+  },
+  "[ 8 + 2 (skipper and hostess)]": {
+    "dims": ["berths"],
+    "hr": "[8 + 2 (skiper i hostesa)]"
+  },
+  "- License for: 6 / In cabins: 6": {
+    "dims": ["berths"],
+    "hr": "- Dozvola za: 6 / U kabinama: 6"
+  },
+  "(12+2 crew)": {
+    "dims": ["berths"],
+    "hr": "(12+2 za posadu)"
+  },
+  "(8+2 dinette +1 skipper) Cat. A: 10 pax, B: 12 pax": {
+    "dims": ["berths"],
+    "hr": "(8+2 salon +1 skiper) Kat. A: 10 gostiju, B: 12 gostiju"
+  },
+  "(11 + skipper)": {
+    "dims": ["berths"],
+    "hr": "(11 + skiper)"
+  },
+  "+ 2 Crew (3 optional) berths": {
+    "dims": ["berths"],
+    "hr": "+ 2 ležaja za posadu (3 opcionalno)"
+  },
+  "(8 + 2 saloon + 1 bow)": {
+    "dims": ["berths"],
+    "hr": "(8 + 2 salon + 1 na pramcu)"
+  },
+  "(10 passengers + 1 skipper)": {
+    "dims": ["berths"],
+    "hr": "(10 putnika + 1 skiper)"
+  },
+  "- 4 triple, double plus full size bunkbed and 2 double - plus 4 for crew": {
+    "dims": ["berths"],
+    "hr": "- 4 trokrevetne, bračni krevet plus krevet na kat pune veličine i 2 dvokrevetne - plus 4 za posadu"
+  },
+  "(10 +1 dinette +1 skipper) Cat A/B: 11, C14": {
+    "dims": ["berths"],
+    "hr": "(10 +1 salon +1 skiper) Kat. A/B: 11, C14"
+  },
+  "+ 2 Crew (3 optional)": {
+    "dims": ["berths"],
+    "hr": "+ 2 za posadu (3 opcionalno)"
+  },
+  "(10 +2 salon)": {
+    "dims": ["berths"],
+    "hr": "(10 +2 salon)"
+  },
+  "(10+2 in dinette)": {
+    "dims": ["berths"],
+    "hr": "(10+2 u salonu)"
+  },
+  "(4 +2 salon)": {
+    "dims": ["berths"],
+    "hr": "(4 +2 salon)"
+  },
+  "(6+2+2) adaptible table in saloon": {
+    "dims": ["berths"],
+    "hr": "(6+2+2) stol u salonu koji se pretvara u ležaj"
+  },
+  "salon table convertible": {
+    "dims": ["berths"],
+    "hr": "stol u salonu koji se pretvara u ležaj"
+  },
+  "- License for: 12 / In cabins: 10": {
+    "dims": ["berths"],
+    "hr": "- Dozvola za: 12 / U kabinama: 10"
+  },
+  "(8 people in the cabins + 2 in the bunk beds + 1 in the saloon area + 1 in the bow cabin)": {
+    "dims": ["berths"],
+    "hr": "(8 osoba u kabinama + 2 na krevetima na kat + 1 u salonu + 1 u pramčanoj kabini)"
+  },
+  "+crew": {
+    "dims": ["cabins", "berths", "heads"],
+    "hr": "+posada"
+  },
+  "(+1 skipper)": {
+    "dims": ["cabins", "berths", "heads"],
+    "hr": "(+1 skiper)"
+  },
+  "+ 1 (crew)": {
+    "dims": ["cabins", "berths", "heads"],
+    "hr": "+ 1 (posada)"
+  },
+  "incl crew cabin": {
+    "dims": ["cabins", "berths", "heads"],
+    "hr": "uklj. kabinu za posadu"
+  },
+  "(4+1+1+salon)": {
+    "dims": ["cabins"],
+    "hr": "(4+1+1+salon)"
+  },
+  "3+1 bunk bed": {
+    "dims": ["cabins"],
+    "hr": "3+1 s krevetom na kat"
+  },
+  "(4 double +1 crew cabin)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne +1 kabina za posadu)"
+  },
+  "6 pax sleep in the cabins+2 berths+2 in the sofas": {
+    "dims": ["cabins"],
+    "hr": "6 gostiju spava u kabinama+2 ležaja+2 na sofama"
+  },
+  "(4+2 skipper)": {
+    "dims": ["cabins"],
+    "hr": "(4+2 skiper)"
+  },
+  "(4D+2 small bow cabins)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne+2 male pramčane kabine)"
+  },
+  "(5+2 crew cabins)": {
+    "dims": ["cabins"],
+    "hr": "(5+2 kabine za posadu)"
+  },
+  "+Skipper": {
+    "dims": ["cabins"],
+    "hr": "+skiper"
+  },
+  "(4 Dbl cabs + 1 berth in the port side bow comp.)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne kabine + 1 ležaj u lijevom pramčanom odjeljku)"
+  },
+  "4 doubles + 2 simples + carré transformable": {
+    "dims": ["cabins"],
+    "hr": "4 dvokrevetne + 2 jednokrevetne + salon koji se pretvara u ležaj"
+  },
+  "(4 double-bed cabins + 2 bow cabins)": {
+    "dims": ["cabins"],
+    "hr": "(4 kabine s bračnim krevetom + 2 pramčane kabine)"
+  },
+  "(4 Dbl cabs + 1 berth in the starboard bow comp)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne kabine + 1 ležaj u desnom pramčanom odjeljku)"
+  },
+  "+ 2 crew + saloon": {
+    "dims": ["cabins"],
+    "hr": "+ 2 za posadu + salon"
+  },
+  "(4D+1BB+skippers' cabin)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne+1 s krevetom na kat+skiperska kabina)"
+  },
+  "- New matresses, USB and 220V - Airco - saftety deposit box": {
+    "dims": ["cabins"],
+    "hr": "- Novi madraci, USB i 220V - Klima-uređaj - Sef"
+  },
+  "(4 double + 1 twin + 1 skipper)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne + 1 s odvojenim krevetima + 1 skiper)"
+  },
+  "4+1(double bunk cabin at bow)": {
+    "dims": ["cabins"],
+    "hr": "4+1(kabina s dvostrukim krevetom na kat na pramcu)"
+  },
+  "(6 Double + 1 Skipper + salon)": {
+    "dims": ["cabins"],
+    "hr": "(6 dvokrevetnih + 1 skiper + salon)"
+  },
+  "client use + 2 bow": {
+    "dims": ["cabins"],
+    "hr": "za goste + 2 na pramcu"
+  },
+  "(4 client use + 1 crew use + 1 bow)": {
+    "dims": ["cabins"],
+    "hr": "(4 za goste + 1 za posadu + 1 na pramcu)"
+  },
+  "4 double + 2 single": {
+    "dims": ["cabins"],
+    "hr": "4 dvokrevetne + 2 jednokrevetne"
+  },
+  "(4 double + 1 double crew cabin)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne + 1 dvokrevetna kabina za posadu)"
+  },
+  "(6 + 2 crew cabins)": {
+    "dims": ["cabins"],
+    "hr": "(6 + 2 kabine za posadu)"
+  },
+  "(3 double +1 bunk beds)": {
+    "dims": ["cabins"],
+    "hr": "(3 dvokrevetne +1 s krevetima na kat)"
+  },
+  "(4 double-bed cabins +1 with bunk beds +1 bow cabin)": {
+    "dims": ["cabins"],
+    "hr": "(4 kabine s bračnim krevetom +1 s krevetima na kat +1 pramčana kabina)"
+  },
+  "4 double cabins + 1 individual front peak cabin + convertible saloon": {
+    "dims": ["cabins"],
+    "hr": "4 dvokrevetne kabine + 1 jednokrevetna pramčana kabina + salon koji se pretvara u ležaj"
+  },
+  "+ 1 skipper's cabin": {
+    "dims": ["cabins"],
+    "hr": "+ 1 skiperska kabina"
+  },
+  "double cabins + forepeak": {
+    "dims": ["cabins"],
+    "hr": "dvokrevetne kabine + pramčani pik"
+  },
+  "(4 Double Cabins, 2 Twin (Convertible) Cabins) + crew": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne kabine, 2 kabine s odvojenim krevetima (pretvorive)) + posada"
+  },
+  "(1 King - 2 Double - 1 twin + 3 crew)": {
+    "dims": ["cabins"],
+    "hr": "(1 king size - 2 dvokrevetne - 1 s odvojenim krevetima + 3 za posadu)"
+  },
+  "(3 Dbl cabins - 1 bunk berth cabin)": {
+    "dims": ["cabins"],
+    "hr": "(3 dvokrevetne kabine - 1 kabina s krevetom na kat)"
+  },
+  "(3 + Pullman)": {
+    "dims": ["cabins"],
+    "hr": "(3 + pullman kabina)"
+  },
+  "(4 double +2 bow single)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne +2 jednokrevetne na pramcu)"
+  },
+  "+ CONVERTIBLE SALOON + 2 CREW FOREPEAK CABIN": {
+    "dims": ["cabins"],
+    "hr": "+ salon koji se pretvara u ležaj + 2 pramčane kabine za posadu"
+  },
+  "(6+1 skipper)": {
+    "dims": ["cabins", "heads"],
+    "hr": "(6+1 skiper)"
+  },
+  "+1 toilet in the forepeak cabin": {
+    "dims": ["heads"],
+    "hr": "+1 WC u pramčanoj kabini"
+  },
+  "(4+skipper toilet)": {
+    "dims": ["heads"],
+    "hr": "(4+skiperski WC)"
+  },
+  "(1 electric + 1 manual)": {
+    "dims": ["heads"],
+    "hr": "(1 električni + 1 ručni)"
+  },
+  "(1 electric)": {
+    "dims": ["heads"],
+    "hr": "(1 električni)"
+  },
+  "(2 + 1 Skipper)": {
+    "dims": ["heads"],
+    "hr": "(2 + 1 skiper)"
+  },
+  "+ crew head": {
+    "dims": ["heads"],
+    "hr": "+ WC za posadu"
+  },
+  "[ 4 + 1 (for skipper and hostess)]": {
+    "dims": ["heads"],
+    "hr": "[ 4 + 1 (za skipera i hostesu)]"
+  },
+  "4+1 crew": {
+    "dims": ["heads"],
+    "hr": "4+1 za posadu"
+  },
+  "+ 1 head for skipper": {
+    "dims": ["heads"],
+    "hr": "+ 1 WC za skipera"
+  },
+  "(4 + 1skipper)": {
+    "dims": ["heads"],
+    "hr": "(4 + 1 skiper)"
+  },
+  "(4+1 crew toilet)": {
+    "dims": ["heads"],
+    "hr": "(4+1 WC za posadu)"
+  },
+  "4 wc/showers + 1 wc/shower (in starboard bow compartment)": {
+    "dims": ["heads"],
+    "hr": "4 WC-a/tuša + 1 WC/tuš (u desnom pramčanom odjeljku)"
+  },
+  "(+ 1 WC in the portside bow comp)": {
+    "dims": ["heads"],
+    "hr": "(+ 1 WC u lijevom pramčanom odjeljku)"
+  },
+  "(4+1 bow skipper bath)": {
+    "dims": ["heads"],
+    "hr": "(4+1 skiperska kupaonica na pramcu)"
+  },
+  "4+1 crew wc": {
+    "dims": ["heads"],
+    "hr": "4+1 WC za posadu"
+  },
+  "4 electric toilets": {
+    "dims": ["heads"],
+    "hr": "4 električna WC-a"
+  },
+  "4 +1 WC skipper": {
+    "dims": ["heads"],
+    "hr": "4 +1 skiperski WC"
+  },
+  "(10 + 2 saloon + 1 skipper)": {
+    "dims": ["berths"],
+    "hr": "(10 + 2 salon + 1 skiper)"
+  },
+  "(8+2) dinette convertible into 2 beds": {
+    "dims": ["berths"],
+    "hr": "(8+2) salon se pretvara u 2 ležaja"
+  },
+  "(6+2) Licensed for 8": {
+    "dims": ["berths"],
+    "hr": "(6+2) dozvola za 8"
+  },
+  "(8 for clients + 1 crew + 1 bow crew)": {
+    "dims": ["berths"],
+    "hr": "(8 za goste + 1 za posadu + 1 za posadu na pramcu)"
+  },
+  "12+2 crew": {
+    "dims": ["berths"],
+    "hr": "12+2 za posadu"
+  },
+  "(11 + convertible saloon table)": {
+    "dims": ["berths"],
+    "hr": "(11 + stol u salonu koji se pretvara u ležaj)"
+  },
+  "(12 passengers + 1 crew)": {
+    "dims": ["berths"],
+    "hr": "(12 putnika + 1 član posade)"
+  },
+  "(10+2 dinette+1 skipper) Cat A: 11": {
+    "dims": ["berths"],
+    "hr": "(10+2 salon+1 skiper) Kat. A: 11"
+  },
+  "- (8+2 in dinette)": {
+    "dims": ["berths"],
+    "hr": "- (8+2 u salonu)"
+  },
+  "(8 people in the cabins + 1 in the saloon area + 1 in the front cabin)": {
+    "dims": ["berths"],
+    "hr": "(8 osoba u kabinama + 1 u salonu + 1 u pramčanoj kabini)"
+  },
+  "(6 + 1 skipper)": {
+    "dims": ["berths"],
+    "hr": "(6 + 1 skiper)"
+  },
+  "+2 in saloon": {
+    "dims": ["berths"],
+    "hr": "+2 u salonu"
+  },
+  "8 + 1 extra bed in each front cab": {
+    "dims": ["berths"],
+    "hr": "8 + 1 pomoćni ležaj u svakoj pramčanoj kabini"
+  },
+  "(10+2 dinette+1 skipper) Cat A/B: 11, C14": {
+    "dims": ["berths"],
+    "hr": "(10+2 salon+1 skiper) Kat. A/B: 11, C14"
+  },
+  "8 in the cabins": {
+    "dims": ["berths"],
+    "hr": "8 u kabinama"
+  },
+  "12+2 (skipper + hostess)": {
+    "dims": ["berths"],
+    "hr": "12+2 (skiper + hostesa)"
+  },
+  "(12 +2 crew)": {
+    "dims": ["berths"],
+    "hr": "(12 +2 za posadu)"
+  },
+  "(8+2 in dinette) Cat.A 10 people": {
+    "dims": ["berths"],
+    "hr": "(8+2 u salonu) Kat. A 10 osoba"
+  },
+  "Registry 12": {
+    "dims": ["berths"],
+    "hr": "Registriran za 12"
+  },
+  "(8+2 dinette +1 skipper)": {
+    "dims": ["berths"],
+    "hr": "(8+2 salon +1 skiper)"
+  },
+  "(8+1 dinette+1 skipper) Cat. A e B: 12 pax": {
+    "dims": ["berths"],
+    "hr": "(8+1 salon+1 skiper) Kat. A i B: 12 gostiju"
+  },
+  "(8 guests + 2 crew)": {
+    "dims": ["berths"],
+    "hr": "(8 gostiju + 2 člana posade)"
+  },
+  "(6 people in the cabins +1 in the saloon area)": {
+    "dims": ["berths"],
+    "hr": "(6 osoba u kabinama +1 u salonu)"
+  },
+  "(8+1 Crew)": {
+    "dims": ["berths"],
+    "hr": "(8+1 za posadu)"
+  },
+  "(Inc. 2 Removable bank berths in fwd cabins)": {
+    "dims": ["berths"],
+    "hr": "(uklj. 2 uklonjiva ležaja u pramčanim kabinama)"
+  },
+  "10 guest + skipper (in case of hostess maximum 8 guests)": {
+    "dims": ["berths"],
+    "hr": "10 gostiju + skiper (uz hostesu najviše 8 gostiju)"
+  },
+  "(10 + 2 bow)": {
+    "dims": ["berths"],
+    "hr": "(10 + 2 na pramcu)"
+  },
+  "(Daily Cruise max. people 20)": {
+    "dims": ["berths"],
+    "hr": "(Dnevni izlet najviše 20 osoba)"
+  },
+  "(8 + 2) (max 10 peopl)": {
+    "dims": ["berths"],
+    "hr": "(8 + 2) (najviše 10 osoba)"
+  },
+  "(8 + 2 dinette)": {
+    "dims": ["berths"],
+    "hr": "(8 + 2 salon)"
+  },
+  "Pers.": {
+    "dims": ["berths"],
+    "hr": "os."
+  },
+  "Carré transformable": {
+    "dims": ["berths"],
+    "hr": "Salon koji se pretvara u ležaj"
+  },
+  "8+1 skipper": {
+    "dims": ["berths"],
+    "hr": "8+1 skiper"
+  },
+  "(10+2 crew)": {
+    "dims": ["berths"],
+    "hr": "(10+2 za posadu)"
+  },
+  "salon table convertible into double berth": {
+    "dims": ["berths"],
+    "hr": "stol u salonu pretvara se u bračni ležaj"
+  },
+  "+ 2 Crew": {
+    "dims": ["berths"],
+    "hr": "+ 2 za posadu"
+  },
+  "(8 + 2 crew)": {
+    "dims": ["berths"],
+    "hr": "(8 + 2 za posadu)"
+  },
+  "(8+3 crew)": {
+    "dims": ["berths"],
+    "hr": "(8+3 za posadu)"
+  },
+  "(6 + crew)": {
+    "dims": ["berths"],
+    "hr": "(6 + posada)"
+  },
+  "(+2 daily)": {
+    "dims": ["berths"],
+    "hr": "(+2 na dnevnim izletima)"
+  },
+  "- Up to 12 guests + 3 crew": {
+    "dims": ["berths"],
+    "hr": "- Do 12 gostiju + 3 člana posade"
+  },
+  "8 guests + 2 crew": {
+    "dims": ["berths"],
+    "hr": "8 gostiju + 2 člana posade"
+  },
+  "+ Convertible saloon": {
+    "dims": ["berths"],
+    "hr": "+ salon koji se pretvara u ležaj"
+  },
+  "guests + crew": {
+    "dims": ["berths"],
+    "hr": "gosti + posada"
+  },
+  "(10 + convertible saloon table)": {
+    "dims": ["berths"],
+    "hr": "(10 + stol u salonu koji se pretvara u ležaj)"
+  },
+  "recommended 8": {
+    "dims": ["berths"],
+    "hr": "preporučeno 8"
+  },
+  "(4 double + 2 single + 1 saloon double bed)": {
+    "dims": ["berths"],
+    "hr": "(4 dvokrevetne + 2 jednokrevetne + 1 bračni krevet u salonu)"
+  },
+  "+ 2 sofa bed in the saloon": {
+    "dims": ["berths"],
+    "hr": "+ 2 na sofi na razvlačenje u salonu"
+  },
+  "(10+1+skipp)": {
+    "dims": ["berths"],
+    "hr": "(10+1+skiper)"
+  },
+  "4 double cabins + 1 bunk beds cabin + 1 bunk beds skipper cabin + 2 saloon berths": {
+    "dims": ["berths"],
+    "hr": "4 dvokrevetne kabine + 1 kabina s krevetima na kat + 1 skiperska kabina s krevetima na kat + 2 ležaja u salonu"
+  },
+  "(8+2 salon table is convertrted into bed+2 bed in the starboard side bow)": {
+    "dims": ["berths"],
+    "hr": "(8+2 stol u salonu pretvara se u krevet+2 kreveta na desnoj strani pramca)"
+  },
+  "(+3 crew)": {
+    "dims": ["berths"],
+    "hr": "(+3 za posadu)"
+  },
+  "/ Multi Day trips / Max.: 11 guests + skipper - Recom.: 8 guests + skipper": {
+    "dims": ["berths"],
+    "hr": "/ Višednevna krstarenja / Maks.: 11 gostiju + skiper - Preporučeno: 8 gostiju + skiper"
+  },
+  "(8 + 2 Crew)": {
+    "dims": ["berths"],
+    "hr": "(8 + 2 za posadu)"
+  },
+  "(8 + 1 single bed in each front cabs)": {
+    "dims": ["berths"],
+    "hr": "(8 + 1 jednostruki krevet u svakoj pramčanoj kabini)"
+  },
+  "(8+2+1 Skipper)": {
+    "dims": ["berths"],
+    "hr": "(8+2+1 skiper)"
+  },
+  "+ dinette": {
+    "dims": ["cabins", "berths"],
+    "hr": "+ salon"
+  },
+  "including crew cabins": {
+    "dims": ["cabins", "berths"],
+    "hr": "uključujući kabine za posadu"
+  },
+  "6 cabins: 2 Master, 2 Double, 2 Twin all en suite.": {
+    "dims": ["cabins", "berths"],
+    "hr": "6 kabina: 2 master, 2 dvokrevetne, 2 s odvojenim krevetima, sve s vlastitom kupaonicom."
+  },
+  "plus crew cabin": {
+    "dims": ["cabins", "berths"],
+    "hr": "plus kabina za posadu"
+  },
+  "+2 (crew)": {
+    "dims": ["cabins", "berths"],
+    "hr": "+2 (posada)"
+  },
+  "5 Double Cabins + 2 Tripulacion": {
+    "dims": ["cabins", "berths"],
+    "hr": "5 dvokrevetnih kabina + 2 za posadu"
+  },
+  "+ 2 pointes aménagés": {
+    "dims": ["cabins", "berths"],
+    "hr": "+ 2 uređena pramčana pika"
+  },
+  "(3 Double + 1 Middle port + 1 Skipper)": {
+    "dims": ["cabins"],
+    "hr": "(3 dvokrevetne + 1 srednja lijevo + 1 skiper)"
+  },
+  "(4 double+1 bunkbed+1 single)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne+1 s krevetom na kat+1 jednokrevetna)"
+  },
+  "(4 Double cabins, 1 Bunk berth cabin)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne kabine, 1 kabina s krevetom na kat)"
+  },
+  "- 6 guest cabins +2 crew": {
+    "dims": ["cabins"],
+    "hr": "- 6 kabina za goste +2 za posadu"
+  },
+  "+ 1 skipper cabin": {
+    "dims": ["cabins"],
+    "hr": "+ 1 skiperska kabina"
+  },
+  "4 double cabin + convertible salon table": {
+    "dims": ["cabins"],
+    "hr": "4 dvokrevetne kabine + stol u salonu koji se pretvara u ležaj"
+  },
+  "(6 double, 2 twin)": {
+    "dims": ["cabins"],
+    "hr": "(6 dvokrevetnih, 2 s odvojenim krevetima)"
+  },
+  "(+2 single bow Cabin)": {
+    "dims": ["cabins"],
+    "hr": "(+2 jednokrevetne pramčane kabine)"
+  },
+  "(3 double cabins + 1 double bunk cabin)": {
+    "dims": ["cabins"],
+    "hr": "(3 dvokrevetne kabine + 1 dvokrevetna kabina s krevetom na kat)"
+  },
+  "+1 crew + 1 skipper": {
+    "dims": ["cabins"],
+    "hr": "+1 za posadu + 1 skiper"
+  },
+  "(5 + 1 skipper)": {
+    "dims": ["cabins"],
+    "hr": "(5 + 1 skiper)"
+  },
+  "(five guest cabins + 2 crew cabins)": {
+    "dims": ["cabins"],
+    "hr": "(pet kabina za goste + 2 kabine za posadu)"
+  },
+  "(+2 crew)": {
+    "dims": ["cabins"],
+    "hr": "(+2 za posadu)"
+  },
+  "/ 4 (conv.)": {
+    "dims": ["cabins"],
+    "hr": "/ 4 (uz prenamjenu)"
+  },
+  "3 double cabins": {
+    "dims": ["cabins"],
+    "hr": "3 dvokrevetne kabine"
+  },
+  "(4 double & 1 crew cabin)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne & 1 kabina za posadu)"
+  },
+  "(3 Double Cabins, 1 Twin Cabins) + crew": {
+    "dims": ["cabins"],
+    "hr": "(3 dvokrevetne kabine, 1 kabina s odvojenim krevetima) + posada"
+  },
+  "+ 1 crew + 1 bow crew": {
+    "dims": ["cabins"],
+    "hr": "+ 1 za posadu + 1 za posadu na pramcu"
+  },
+  "(5 Cabins for guests plus separate crew area for two)": {
+    "dims": ["cabins"],
+    "hr": "(5 kabina za goste plus odvojeni prostor za posadu za dvije osobe)"
+  },
+  "+salon": {
+    "dims": ["cabins"],
+    "hr": "+salon"
+  },
+  "+ 2 crew cabins": {
+    "dims": ["cabins"],
+    "hr": "+ 2 kabine za posadu"
+  },
+  "4 DOUBLE CABINS + 2 CREW": {
+    "dims": ["cabins"],
+    "hr": "4 dvokrevetne kabine + 2 za posadu"
+  },
+  "(5 double +1 bow single)": {
+    "dims": ["cabins"],
+    "hr": "(5 dvokrevetnih +1 jednokrevetna pramčana)"
+  },
+  "(4 + 2 front peak, access from the front cabin, ideal with small child)": {
+    "dims": ["cabins"],
+    "hr": "(4 + 2 pramčani pik, ulaz iz pramčane kabine, idealno s malim djetetom)"
+  },
+  "(3 double)": {
+    "dims": ["cabins"],
+    "hr": "(3 dvokrevetne)"
+  },
+  "(5+1 SKIPPER)": {
+    "dims": ["cabins"],
+    "hr": "(5+1 skiper)"
+  },
+  "+skipper cabin": {
+    "dims": ["cabins"],
+    "hr": "+skiperska kabina"
+  },
+  "(5+1 skipper cabin)": {
+    "dims": ["cabins"],
+    "hr": "(5+1 skiperska kabina)"
+  },
+  "(4+1 Skipper) (3+1 skipper+1 Hostess)": {
+    "dims": ["cabins"],
+    "hr": "(4+1 skiper) (3+1 skiper+1 hostesa)"
+  },
+  "(+2 skipper)": {
+    "dims": ["cabins"],
+    "hr": "(+2 skiper)"
+  },
+  "(2D)": {
+    "dims": ["cabins"],
+    "hr": "(2D)"
+  },
+  "4 double, 1 with two bunks + 1 skipper cabin": {
+    "dims": ["cabins"],
+    "hr": "4 dvokrevetne, 1 s dva ležaja na kat + 1 skiperska kabina"
+  },
+  "(3+salon)": {
+    "dims": ["cabins"],
+    "hr": "(3+salon)"
+  },
+  "(4 Double + Salon + 2 Crew)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne + salon + 2 za posadu)"
+  },
+  "(4 Double and 2 single beds)": {
+    "dims": ["cabins"],
+    "hr": "(4 bračna i 2 jednostruka kreveta)"
+  },
+  "(5+1 crew)": {
+    "dims": ["cabins"],
+    "hr": "(5+1 za posadu)"
+  },
+  "double + 2 single for crew": {
+    "dims": ["cabins"],
+    "hr": "dvokrevetna + 2 jednokrevetne za posadu"
+  },
+  "(Big master cabin)": {
+    "dims": ["cabins"],
+    "hr": "(velika master kabina)"
+  },
+  "(4 double cabins+2 crew cabins)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne kabine+2 kabine za posadu)"
+  },
+  "4 double cabins - 1 cabin with double bunks": {
+    "dims": ["cabins"],
+    "hr": "4 dvokrevetne kabine - 1 kabina s krevetom na kat"
+  },
+  "(4+1+1+ salon)": {
+    "dims": ["cabins"],
+    "hr": "(4+1+1+ salon)"
+  },
+  "(5+2 Skipper)": {
+    "dims": ["cabins"],
+    "hr": "(5+2 skiper)"
+  },
+  "(4 double + 2 single)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne + 2 jednokrevetne)"
+  },
+  "(5 + 1 crew + 1 single front peak)": {
+    "dims": ["cabins"],
+    "hr": "(5 + 1 za posadu + 1 jednokrevetni pramčani pik)"
+  },
+  "(+2 bow compartments)": {
+    "dims": ["cabins"],
+    "hr": "(+2 pramčana odjeljka)"
+  },
+  "(3 double + 1 peak cabin with 2 single beds)": {
+    "dims": ["cabins"],
+    "hr": "(3 dvokrevetne + 1 kabina u pramčanom piku s 2 jednostruka kreveta)"
+  },
+  "(3+ Salon)": {
+    "dims": ["cabins"],
+    "hr": "(3+ salon)"
+  },
+  "(+ 2 skipper)": {
+    "dims": ["cabins"],
+    "hr": "(+ 2 skiper)"
+  },
+  "(4 double cabins +2 crew cabins)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne kabine +2 kabine za posadu)"
+  },
+  "(4 double + 1 crew cabin)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne + 1 kabina za posadu)"
+  },
+  "(1 berth in each bow compartment)": {
+    "dims": ["cabins"],
+    "hr": "(1 ležaj u svakom pramčanom odjeljku)"
+  },
+  "+2 HeadCabins": {
+    "dims": ["cabins"],
+    "hr": "+2 HeadCabins"
+  },
+  "(5 cab + 1 crew)": {
+    "dims": ["cabins"],
+    "hr": "(5 kabina + 1 za posadu)"
+  },
+  "(5 double cabins+1 crew cabin)": {
+    "dims": ["cabins"],
+    "hr": "(5 dvokrevetnih kabina+1 kabina za posadu)"
+  },
+  "3 double cabins + cabin with extra bed 2+1.": {
+    "dims": ["cabins"],
+    "hr": "3 dvokrevetne kabine + kabina s pomoćnim ležajem 2+1."
+  },
+  "[ 4 double + 2 single (for skipper and hostess)]": {
+    "dims": ["cabins"],
+    "hr": "[ 4 dvokrevetne + 2 jednokrevetne (za skipera i hostesu)]"
+  },
+  "4 double cabins + 2 single bow cabins": {
+    "dims": ["cabins"],
+    "hr": "4 dvokrevetne kabine + 2 jednokrevetne pramčane kabine"
+  },
+  "(4 double-bed cabins +2 bow cabin)": {
+    "dims": ["cabins"],
+    "hr": "(4 kabine s bračnim krevetom +2 pramčane kabine)"
+  },
+  "(4 double + 2 single) + convertible table in saloon": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne + 2 jednokrevetne) + stol u salonu koji se pretvara u ležaj"
+  },
+  "4 double cabins+2 (crew cabins)": {
+    "dims": ["cabins"],
+    "hr": "4 dvokrevetne kabine+2 (kabine za posadu)"
+  },
+  "+ skipper cabin": {
+    "dims": ["cabins"],
+    "hr": "+ skiperska kabina"
+  },
+  "(the bow cabins accommodate 3 persons/each)": {
+    "dims": ["cabins"],
+    "hr": "(pramčane kabine primaju 3 osobe/svaka)"
+  },
+  "(4+2 bow cabins)": {
+    "dims": ["cabins"],
+    "hr": "(4+2 pramčane kabine)"
+  },
+  "(4 Dbl + 1 berth in the port side bow comp)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne + 1 ležaj u lijevom pramčanom odjeljku)"
+  },
+  "1 Master Cabin + 2 Double Cabins": {
+    "dims": ["cabins"],
+    "hr": "1 master kabina + 2 dvokrevetne kabine"
+  },
+  "(4 double cabins + 2 crew cabins)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne kabine + 2 kabine za posadu)"
+  },
+  "(3 per guests + 1 per crew)": {
+    "dims": ["cabins"],
+    "hr": "(3 za goste + 1 za posadu)"
+  },
+  "(4+2 ) 2 in the starboard side bow)": {
+    "dims": ["cabins"],
+    "hr": "(4+2 ) 2 na desnoj strani pramca)"
+  },
+  "Double cabins": {
+    "dims": ["cabins"],
+    "hr": "Dvokrevetne kabine"
+  },
+  "3 double, 1 bunk beds": {
+    "dims": ["cabins"],
+    "hr": "3 dvokrevetne, 1 s krevetima na kat"
+  },
+  "1 forepeack skipper cabin": {
+    "dims": ["cabins"],
+    "hr": "1 skiperska kabina u pramčanom piku"
+  },
+  "(4 double cabins with saloon with 2 extra beds plus 1 bow skipper cabin)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne kabine sa salonom s 2 pomoćna ležaja plus 1 skiperska kabina na pramcu)"
+  },
+  "3 double cabins + 1 bunk bed cabin": {
+    "dims": ["cabins"],
+    "hr": "3 dvokrevetne kabine + 1 kabina s krevetom na kat"
+  },
+  "(4 Double cabins+1 twin cabin ) + 1 forepeak cabin": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne kabine+1 kabina s odvojenim krevetima) + 1 kabina u pramčanom piku"
+  },
+  "(4 +1Crew)": {
+    "dims": ["cabins"],
+    "hr": "(4 +1 za posadu)"
+  },
+  "6 double cabins + 2 single bow cabins": {
+    "dims": ["cabins"],
+    "hr": "6 dvokrevetnih kabina + 2 jednokrevetne pramčane kabine"
+  },
+  "+ une pointe aménagée": {
+    "dims": ["cabins"],
+    "hr": "+ jedan uređeni pramčani pik"
+  },
+  "(4 dbl + 1 bunk berth cabin)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne + 1 kabina s krevetom na kat)"
+  },
+  "GUESTS: 5 double cabins (1 twin beds, 1 bunk) CREW: cabin + WC in forepeak, 1 double aft stern cabin + WC": {
+    "dims": ["cabins"],
+    "hr": "GOSTI: 5 dvokrevetnih kabina (1 s odvojenim krevetima, 1 s krevetom na kat) POSADA: kabina + WC u pramčanom piku, 1 dvokrevetna kabina na krmi + WC"
+  },
+  "(or 3: 2 forward cabins are convertible to 1)": {
+    "dims": ["cabins"],
+    "hr": "(ili 3: 2 pramčane kabine mogu se spojiti u 1)"
+  },
+  "(4 double cabins +1 single cabin skipper)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne kabine +1 jednokrevetna skiperska kabina)"
+  },
+  "4+1 (forepeak)": {
+    "dims": ["cabins"],
+    "hr": "4+1 (pramčani pik)"
+  },
+  "6+2 crew": {
+    "dims": ["cabins"],
+    "hr": "6+2 za posadu"
+  },
+  "(4 double+ 2 single)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne+ 2 jednokrevetne)"
+  },
+  "(4 double guest cabins +1 crew cabin)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne kabine za goste +1 kabina za posadu)"
+  },
+  "4 double cabins, 1 cabin buck beds & 1 skipper cabin in the bow of the yacht": {
+    "dims": ["cabins"],
+    "hr": "4 dvokrevetne kabine, 1 kabina s krevetima na kat & 1 skiperska kabina na pramcu jahte"
+  },
+  "(4+2 skipper cabin)": {
+    "dims": ["cabins"],
+    "hr": "(4+2 skiperske kabine)"
+  },
+  "(+1 crew)": {
+    "dims": ["cabins", "heads"],
+    "hr": "(+1 za posadu)"
+  },
+  "4+crew": {
+    "dims": ["cabins", "heads"],
+    "hr": "4+posada"
+  },
+  "( 4 + 1 Skipper)": {
+    "dims": ["cabins", "heads"],
+    "hr": "( 4 + 1 skiper)"
+  },
+  "(3 + 1 crew)": {
+    "dims": ["cabins", "heads"],
+    "hr": "(3 + 1 za posadu)"
+  },
+  "+ 1 skipper": {
+    "dims": ["cabins", "heads"],
+    "hr": "+ 1 skiper"
+  },
+  "5+1 for skipper": {
+    "dims": ["cabins", "heads"],
+    "hr": "5+1 za skipera"
+  },
+  "(+1 Skipper)": {
+    "dims": ["cabins", "heads"],
+    "hr": "(+1 skiper)"
+  },
+  "3 + 1 crew": {
+    "dims": ["cabins", "heads"],
+    "hr": "3 + 1 za posadu"
+  },
+  "+1 crew+1 skipper": {
+    "dims": ["cabins", "heads"],
+    "hr": "+1 za posadu+1 skiper"
+  },
+  "(5 for clients + 1 crew + 1 bow)": {
+    "dims": ["cabins", "heads"],
+    "hr": "(5 za goste + 1 za posadu + 1 na pramcu)"
+  },
+  "4 + CREW": {
+    "dims": ["cabins", "heads"],
+    "hr": "4 + posada"
+  },
+  "(5 guest + 1 crew)": {
+    "dims": ["cabins", "heads"],
+    "hr": "(5 za goste + 1 za posadu)"
+  },
+  "(6 +3 crew)": {
+    "dims": ["cabins", "heads"],
+    "hr": "(6 +3 za posadu)"
+  },
+  "(4 for clients + 1 crew + 2 bow)": {
+    "dims": ["cabins", "heads"],
+    "hr": "(4 za goste + 1 za posadu + 2 na pramcu)"
+  },
+  "+ 1 Skipper": {
+    "dims": ["cabins", "heads"],
+    "hr": "+ 1 skiper"
+  },
+  "+ 1 skipper e hostess": {
+    "dims": ["cabins", "heads"],
+    "hr": "+ 1 skiper i hostesa"
+  },
+  "(4 + 4 crew)": {
+    "dims": ["cabins", "heads"],
+    "hr": "(4 + 4 za posadu)"
+  },
+  "+1 bow crew": {
+    "dims": ["cabins", "heads"],
+    "hr": "+1 za posadu na pramcu"
+  },
+  "+ 1 Crew": {
+    "dims": ["cabins", "heads"],
+    "hr": "+ 1 za posadu"
+  },
+  "(5 + 3 for crew)": {
+    "dims": ["cabins", "heads"],
+    "hr": "(5 + 3 za posadu)"
+  },
+  "(3 +1 skipper)": {
+    "dims": ["cabins", "heads"],
+    "hr": "(3 +1 skiper)"
+  },
+  "2 Guest + 1 Crew": {
+    "dims": ["cabins", "heads"],
+    "hr": "2 za goste + 1 za posadu"
+  },
+  "(5 + 2 for crew)": {
+    "dims": ["cabins", "heads"],
+    "hr": "(5 + 2 za posadu)"
+  },
+  "for clients + 1 crew": {
+    "dims": ["cabins", "heads"],
+    "hr": "za goste + 1 za posadu"
+  },
+  "(4+1 SKIPPER)": {
+    "dims": ["cabins", "heads"],
+    "hr": "(4+1 skiper)"
+  },
+  "(4 + Crew)": {
+    "dims": ["cabins", "heads"],
+    "hr": "(4 + posada)"
+  },
+  "+ 1 bow crew": {
+    "dims": ["cabins", "heads"],
+    "hr": "+ 1 za posadu na pramcu"
+  },
+  "(6 + 1 crew toilet)": {
+    "dims": ["heads"],
+    "hr": "(6 + 1 WC za posadu)"
+  },
+  "(4 en suite + 1 WC/shower in the forepeak cabin)": {
+    "dims": ["heads"],
+    "hr": "(4 kupaonice u kabinama + 1 WC/tuš u pramčanoj kabini)"
+  },
+  "(3 + 1 peak wc)": {
+    "dims": ["heads"],
+    "hr": "(3 + 1 WC u pramčanom piku)"
+  },
+  "(1 shower)": {
+    "dims": ["heads"],
+    "hr": "(1 tuš)"
+  },
+  "(4 ensuite bathrooms and 1 outside under the starboard cabin)": {
+    "dims": ["heads"],
+    "hr": "(4 kupaonice u kabinama i 1 izvan kabina, ispod desne kabine)"
+  },
+  "+ wc skipper": {
+    "dims": ["heads"],
+    "hr": "+ skiperski WC"
+  },
+  "4 + 1 (for crew with wc and shower)": {
+    "dims": ["heads"],
+    "hr": "4 + 1 (za posadu s WC-om i tušem)"
+  },
+  "(4+1 for crew)": {
+    "dims": ["heads"],
+    "hr": "(4+1 za posadu)"
+  },
+  "(4+ 1 WC )": {
+    "dims": ["heads"],
+    "hr": "(4+ 1 WC)"
+  },
+  "(+1 in the starboard side bow comp)": {
+    "dims": ["heads"],
+    "hr": "(+1 u desnom pramčanom odjeljku)"
+  },
+  "WC Electric": {
+    "dims": ["heads"],
+    "hr": "Električni WC"
+  },
+  "2 WC - 2 Showers": {
+    "dims": ["heads"],
+    "hr": "2 WC-a - 2 tuša"
+  },
+  "(4+1 skipper WC)": {
+    "dims": ["heads"],
+    "hr": "(4+1 skiperski WC)"
+  },
+  "(5 + crew)": {
+    "dims": ["heads"],
+    "hr": "(5 + posada)"
+  },
+  "3 wc + 1 extra shower room": {
+    "dims": ["heads"],
+    "hr": "3 WC-a + 1 dodatna prostorija s tušem"
+  },
+  "(+1 only WC)": {
+    "dims": ["heads"],
+    "hr": "(+1 samo WC)"
+  },
+  "(4+1 crew wc)": {
+    "dims": ["heads"],
+    "hr": "(4+1 WC za posadu)"
+  },
+  "+ 1 CREW FOREPEAK TOILET": {
+    "dims": ["heads"],
+    "hr": "+ 1 WC za posadu u pramčanom piku"
+  },
+  "Electric toilets": {
+    "dims": ["heads"],
+    "hr": "Električni WC-i"
+  },
+  "bathroom+transom shower": {
+    "dims": ["heads"],
+    "hr": "kupaonica+tuš na krmi"
+  },
+  "(3 wc+1 crew)": {
+    "dims": ["heads"],
+    "hr": "(3 WC-a+1 za posadu)"
+  },
+  "3 bathrooms plus toilet in skipper cabin": {
+    "dims": ["heads"],
+    "hr": "3 kupaonice plus WC u skiperskoj kabini"
+  },
+  "4 guests + 1 skipper": {
+    "dims": ["heads"],
+    "hr": "4 za goste + 1 za skipera"
+  },
+  "(1 head in the starb bow compartment)": {
+    "dims": ["heads"],
+    "hr": "(1 WC u desnom pramčanom odjeljku)"
+  },
+  "2 electric toilets": {
+    "dims": ["heads"],
+    "hr": "2 električna WC-a"
+  },
+  "(3+1 SKIPPER)": {
+    "dims": ["heads"],
+    "hr": "(3+1 skiper)"
+  },
+  "+skipper toilet": {
+    "dims": ["heads"],
+    "hr": "+skiperski WC"
+  },
+  "+ 1 (for the skipper)": {
+    "dims": ["heads"],
+    "hr": "+ 1 (za skipera)"
+  },
+  "+ 1 toilet-shower in the forepeak cabin": {
+    "dims": ["heads"],
+    "hr": "+ 1 WC s tušem u pramčanoj kabini"
+  },
+  "+1 crew (toilet)": {
+    "dims": ["heads"],
+    "hr": "+1 za posadu (WC)"
+  },
+  "(3wc+ 1 extra shower room": {
+    "dims": ["heads"],
+    "hr": "(3 WC-a+ 1 dodatna prostorija s tušem"
+  },
+  "(3 + crew)": {
+    "dims": ["heads"],
+    "hr": "(3 + posada)"
+  },
+  "(4 electric + 1 manual)": {
+    "dims": ["heads"],
+    "hr": "(4 električna + 1 ručni)"
+  },
+  "+ seperate shower": {
+    "dims": ["heads"],
+    "hr": "+ odvojeni tuš"
+  },
+  "(+2 in bow cabins)": {
+    "dims": ["heads"],
+    "hr": "(+2 u pramčanim kabinama)"
+  },
+  "(Version with Vip front toilets.)": {
+    "dims": ["heads"],
+    "hr": "(Verzija s VIP WC-ima na pramcu.)"
+  },
+  "con doccia": {
+    "dims": ["heads"],
+    "hr": "s tušem"
+  },
+  "+ 2 for Crew Heads/WCs": {
+    "dims": ["heads"],
+    "hr": "+ 2 toaleta/WC-a za posadu"
+  },
+  "WC (4+1), Shower (3+1)": {
+    "dims": ["heads"],
+    "hr": "WC (4+1), tuš (3+1)"
+  },
+  "+2 Showers": {
+    "dims": ["heads"],
+    "hr": "+2 tuša"
+  },
+  "(4+1) Elettric Wc": {
+    "dims": ["heads"],
+    "hr": "(4+1) električni WC"
+  },
+  "(3+1 crew wc)": {
+    "dims": ["heads"],
+    "hr": "(3+1 WC za posadu)"
+  },
+  "(4 + 1 for the crew)": {
+    "dims": ["heads"],
+    "hr": "(4 + 1 za posadu)"
+  },
+  "4/2 showers +1 WC/shower skipper": {
+    "dims": ["heads"],
+    "hr": "4/2 tuša +1 WC/tuš za skipera"
+  },
+  "(4 in cabins plus 1 in skippers cabin)": {
+    "dims": ["heads"],
+    "hr": "(4 u kabinama plus 1 u skiperskoj kabini)"
+  },
+  "5 (4 insuite bathrooms and 1 outside under the stbd cabin)": {
+    "dims": ["heads"],
+    "hr": "5 (4 kupaonice u kabinama i 1 izvan kabina, ispod desne kabine)"
+  },
+  "- 6 guest + 2 crew": {
+    "dims": ["heads"],
+    "hr": "- 6 za goste + 2 za posadu"
+  },
+  "[6+2 (adaptable table in saloon)]": {
+    "dims": ["berths"],
+    "hr": "[6+2 (stol u salonu koji se pretvara u ležaj)]"
+  },
+  "guests + 3 crew": {
+    "dims": ["berths"],
+    "hr": "gosti + 3 člana posade"
+  },
+  "(6 + 1 in saloon)": {
+    "dims": ["berths"],
+    "hr": "(6 + 1 u salonu)"
+  },
+  "(5 crew)": {
+    "dims": ["berths"],
+    "hr": "(5 članova posade)"
+  },
+  "(12 clients + 2 crew)": {
+    "dims": ["berths"],
+    "hr": "(12 gostiju + 2 člana posade)"
+  },
+  "+6 crew": {
+    "dims": ["berths"],
+    "hr": "+6 članova posade"
+  },
+  "(8 + 1 + convertible saloon table)": {
+    "dims": ["berths"],
+    "hr": "(8 + 1 + stol u salonu koji se pretvara u ležaj)"
+  },
+  "+ 2 dans pointes avant": {
+    "dims": ["berths"],
+    "hr": "+ 2 u pramčanim pikovima"
+  },
+  "(3 cabins + double convertible table/bed in the salon)": {
+    "dims": ["berths"],
+    "hr": "(3 kabine + preklopivi stol/bračni krevet u salonu)"
+  },
+  "(+skipper)": {
+    "dims": ["berths"],
+    "hr": "(+skiper)"
+  },
+  "(8+2) 4 double berths, 1 convertable double berth in Salon, Single bed in port bow compartment": {
+    "dims": ["berths"],
+    "hr": "(8+2) 4 bračna ležaja, 1 preklopivi bračni ležaj u salonu, jednostruki krevet u lijevom pramčanom odjeljku"
+  },
+  "+ 2 in saloon": {
+    "dims": ["berths"],
+    "hr": "+ 2 u salonu"
+  },
+  "(10 guests + 1 skipper)": {
+    "dims": ["berths"],
+    "hr": "(10 gostiju + 1 skiper)"
+  },
+  "+2saloon": {
+    "dims": ["berths"],
+    "hr": "+2 salon"
+  },
+  "(8+2 dinette +1 skipper) Cat A: 12": {
+    "dims": ["berths"],
+    "hr": "(8+2 salon +1 skiper) Kat. A: 12"
+  },
+  "- 6 in-room": {
+    "dims": ["berths"],
+    "hr": "- 6 u kabinama"
+  },
+  "(10 people in the cabins +1 in the saloon area +1 in the bow cabin)": {
+    "dims": ["berths"],
+    "hr": "(10 osoba u kabinama +1 u salonu +1 u pramčanoj kabini)"
+  },
+  "(8 people in the cabins +2 in the saloon area +1 in the bow cabin)": {
+    "dims": ["berths"],
+    "hr": "(8 osoba u kabinama +2 u salonu +1 u pramčanoj kabini)"
+  },
+  "+2 convitable salon + skipper cabin": {
+    "dims": ["berths"],
+    "hr": "+2 salon koji se pretvara u ležaj + skiperska kabina"
+  },
+  "(6+CREW)": {
+    "dims": ["berths"],
+    "hr": "(6+posada)"
+  },
+  "(10+3 crew)": {
+    "dims": ["berths"],
+    "hr": "(10+3 člana posade)"
+  },
+  "(6 in the cabin + 2 in the saloon)": {
+    "dims": ["berths"],
+    "hr": "(6 u kabinama + 2 u salonu)"
+  },
+  "(8+2salon+2crew)": {
+    "dims": ["berths"],
+    "hr": "(8+2 salon+2 člana posade)"
+  },
+  "+2 Crew (3 Optional)(Daily cruises max 25)": {
+    "dims": ["berths"],
+    "hr": "+2 člana posade (3 opcionalno)(dnevni izleti maks. 25)"
+  },
+  "(8 + 3 crew berth)": {
+    "dims": ["berths"],
+    "hr": "(8 + 3 ležaja za posadu)"
+  },
+  "(16 + 4 crew)": {
+    "dims": ["berths"],
+    "hr": "(16 + 4 člana posade)"
+  },
+  "4 + 1 (crew)": {
+    "dims": ["berths"],
+    "hr": "4 + 1 (posada)"
+  },
+  "(8 + 2 saloon + 1 skippers cabin)": {
+    "dims": ["berths"],
+    "hr": "(8 + 2 salon + 1 skiperska kabina)"
+  },
+  "(6 + 2 saloon + 1 crew)": {
+    "dims": ["berths"],
+    "hr": "(6 + 2 salon + 1 član posade)"
+  },
+  "(6 + 2 + Skipper)": {
+    "dims": ["berths"],
+    "hr": "(6 + 2 + skiper)"
+  },
+  "(two double beds, five single beds)": {
+    "dims": ["berths"],
+    "hr": "(dva bračna kreveta, pet jednostrukih kreveta)"
+  },
+  "+1(skipper)": {
+    "dims": ["berths"],
+    "hr": "+1 (skiper)"
+  },
+  "4 double + port skipper cabin + stbd skipper cabin": {
+    "dims": ["berths"],
+    "hr": "4 dvokrevetne + skiperska kabina na lijevoj strani + skiperska kabina na desnoj strani"
+  },
+  "Maestro Version: 3 double cabins + skipper cabin": {
+    "dims": ["berths"],
+    "hr": "Maestro verzija: 3 dvokrevetne kabine + skiperska kabina"
+  },
+  "(6 in cabins + 2 dinette + 2 crew)": {
+    "dims": ["berths"],
+    "hr": "(6 u kabinama + 2 salon + 2 člana posade)"
+  },
+  "(8 + 2 CREW)": {
+    "dims": ["berths"],
+    "hr": "(8 + 2 člana posade)"
+  },
+  "8+1 +2 (trasformable dinette)": {
+    "dims": ["berths"],
+    "hr": "8+1 +2 (salon koji se pretvara u ležaj)"
+  },
+  "(6 + captain)": {
+    "dims": ["berths"],
+    "hr": "(6 + kapetan)"
+  },
+  "(10 + 2 pullman + 4 crew)": {
+    "dims": ["berths"],
+    "hr": "(10 + 2 pullman ležaja + 4 člana posade)"
+  },
+  "8+2 Saloon": {
+    "dims": ["berths"],
+    "hr": "8+2 salon"
+  },
+  "(12+1 skipper +1 salon)": {
+    "dims": ["berths"],
+    "hr": "(12+1 skiper +1 salon)"
+  },
+  "4 Guest+2Crew": {
+    "dims": ["berths"],
+    "hr": "4 gosta+2 člana posade"
+  },
+  "(8 + 3 crew)": {
+    "dims": ["berths"],
+    "hr": "(8 + 3 člana posade)"
+  },
+  "( 8+2 convertible saloon )": {
+    "dims": ["berths"],
+    "hr": "(8+2 salon koji se pretvara u ležaj)"
+  },
+  "8 guests + skipper": {
+    "dims": ["berths"],
+    "hr": "8 gostiju + skiper"
+  },
+  "+ 4 (crew)": {
+    "dims": ["berths"],
+    "hr": "+ 4 (posada)"
+  },
+  "(max 8 people)": {
+    "dims": ["berths"],
+    "hr": "(maks. 8 osoba)"
+  },
+  "6+2Salon": {
+    "dims": ["berths"],
+    "hr": "6+2 salon"
+  },
+  "(+9 crew = captain, 3 deckhands, chef & sous chef, 3 stewardesses))": {
+    "dims": ["berths"],
+    "hr": "(+9 članova posade = kapetan, 3 mornara, kuhar i pomoćni kuhar, 3 stjuardese))"
+  },
+  "(10 guests + 1 crew)": {
+    "dims": ["berths"],
+    "hr": "(10 gostiju + 1 član posade)"
+  },
+  "8 in 4 dbl cabs + 2 in salon table": {
+    "dims": ["berths"],
+    "hr": "8 u 4 dvokrevetne kabine + 2 na stolu u salonu"
+  },
+  "+2 crew+2 in saloon": {
+    "dims": ["berths"],
+    "hr": "+2 člana posade+2 u salonu"
+  },
+  "( 8 +2 in dinette +2 crew)": {
+    "dims": ["berths"],
+    "hr": "(8 +2 u salonu +2 člana posade)"
+  },
+  "(3 crew)": {
+    "dims": ["berths"],
+    "hr": "(3 člana posade)"
+  },
+  "(7 + 3 crew)": {
+    "dims": ["berths"],
+    "hr": "(7 + 3 člana posade)"
+  },
+  "(8 Guests + skipper & hostess (optional) in front peaks)": {
+    "dims": ["berths"],
+    "hr": "(8 gostiju + skiper i hostesa (opcionalno) u pramčanim pikovima)"
+  },
+  "(8+2+1 skipper)": {
+    "dims": ["berths"],
+    "hr": "(8+2+1 skiper)"
+  },
+  "(8+2+Skipper's cabin)": {
+    "dims": ["berths"],
+    "hr": "(8+2+skiperska kabina)"
+  },
+  "6 +1 child": {
+    "dims": ["berths"],
+    "hr": "6 +1 dijete"
+  },
+  "(Inc. 2 Crew Berths in Bow Quarters)": {
+    "dims": ["berths"],
+    "hr": "(uklj. 2 ležaja za posadu na pramcu)"
+  },
+  "+ 2 saloon": {
+    "dims": ["berths"],
+    "hr": "+ 2 salon"
+  },
+  "(12+2 optional professional Greek crew)": {
+    "dims": ["berths"],
+    "hr": "(12+2 opcionalna profesionalna grčka posada)"
+  },
+  "(10+2+Skipper's cabin)": {
+    "dims": ["berths"],
+    "hr": "(10+2+skiperska kabina)"
+  },
+  "(8 guests+3 crew)": {
+    "dims": ["berths"],
+    "hr": "(8 gostiju+3 člana posade)"
+  },
+  "- License for: 12 / In cabins: 11": {
+    "dims": ["berths"],
+    "hr": "- Dozvola za: 12 / U kabinama: 11"
+  },
+  "(convertible saloon)": {
+    "dims": ["berths"],
+    "hr": "(salon koji se pretvara u ležaj)"
+  },
+  "licenced 12": {
+    "dims": ["berths"],
+    "hr": "dozvola za 12"
+  },
+  "(max 6 clients + 1 crew)": {
+    "dims": ["berths"],
+    "hr": "(maks. 6 gostiju + 1 član posade)"
+  },
+  "(6 + 2 for crew)": {
+    "dims": ["berths"],
+    "hr": "(6 + 2 za posadu)"
+  },
+  "+ 2crew": {
+    "dims": ["berths"],
+    "hr": "+ 2 člana posade"
+  },
+  "+one skipper cabin": {
+    "dims": ["berths"],
+    "hr": "+jedna skiperska kabina"
+  },
+  "Price is for up to 12 pax. For 13 - 18 pax (in shared cabins) surcharge applies.": {
+    "dims": ["berths"],
+    "hr": "Cijena vrijedi za najviše 12 gostiju. Za 13 - 18 gostiju (u zajedničkim kabinama) naplaćuje se doplata."
+  },
+  "Daily up to 12 guests": {
+    "dims": ["berths"],
+    "hr": "Dnevni izleti do 12 gostiju"
+  },
+  "6 in the cabins & 2 in saloon area (table convertes to bed)": {
+    "dims": ["berths"],
+    "hr": "6 u kabinama i 2 u salonu (stol se pretvara u krevet)"
+  },
+  "(10 + 3 crew)": {
+    "dims": ["berths"],
+    "hr": "(10 + 3 člana posade)"
+  },
+  "(8 + 2 in saloon + 1 skipper)": {
+    "dims": ["berths"],
+    "hr": "(8 + 2 u salonu + 1 skiper)"
+  },
+  "The official capacity is 8. However there is a double sofa bed too.": {
+    "dims": ["berths"],
+    "hr": "Službeni kapacitet je 8. Međutim, postoji i sofa na razvlačenje za dvije osobe."
+  },
+  "(2 crew + max 10 guests)": {
+    "dims": ["berths"],
+    "hr": "(2 člana posade + maks. 10 gostiju)"
+  },
+  "(8 + 4 crew)": {
+    "dims": ["berths"],
+    "hr": "(8 + 4 člana posade)"
+  },
+  "salon table canvertible to double berth": {
+    "dims": ["berths"],
+    "hr": "stol u salonu pretvara se u bračni ležaj"
+  },
+  "+2 ( tavolo abbattibile - foldable table)": {
+    "dims": ["berths"],
+    "hr": "+2 (preklopivi stol)"
+  },
+  "+ 1 pullman + 1 extra berth (for child) + 2 crew": {
+    "dims": ["berths"],
+    "hr": "+ 1 pullman ležaj + 1 dodatni ležaj (za dijete) + 2 člana posade"
+  },
+  "+1 in dinette": {
+    "dims": ["berths"],
+    "hr": "+1 u salonu"
+  },
+  "- (2 crew + max 10 guests)": {
+    "dims": ["berths"],
+    "hr": "- (2 člana posade + maks. 10 gostiju)"
+  },
+  "(max 8 + crew)": {
+    "dims": ["berths"],
+    "hr": "(maks. 8 + posada)"
+  },
+  "(6+2+skipper)": {
+    "dims": ["berths"],
+    "hr": "(6+2+skiper)"
+  },
+  "(8 + 2 dinette + 1 crew)": {
+    "dims": ["berths"],
+    "hr": "(8 + 2 salon + 1 član posade)"
+  },
+  "(6+1+1) dinette convertible into 2 single beds": {
+    "dims": ["berths"],
+    "hr": "(6+1+1) salon se pretvara u 2 jednostruka kreveta"
+  },
+  "(6+2) (max 9 people)": {
+    "dims": ["berths"],
+    "hr": "(6+2) (maks. 9 osoba)"
+  },
+  "8 + 1skipper": {
+    "dims": ["berths"],
+    "hr": "8 + 1 skiper"
+  },
+  "8 in the cabins + 2 Salon berth (License for 10)": {
+    "dims": ["berths"],
+    "hr": "8 u kabinama + 2 ležaja u salonu (dozvola za 10)"
+  },
+  "(8 + 2 in cockpit + 1 skipper)": {
+    "dims": ["berths"],
+    "hr": "(8 + 2 u kokpitu + 1 skiper)"
+  },
+  "(8+2 bow)": {
+    "dims": ["berths"],
+    "hr": "(8+2 na pramcu)"
+  },
+  "(4 double, 1 with 2 bunk beds, convertible saloon table, 1 bow)": {
+    "dims": ["berths"],
+    "hr": "(4 dvokrevetne, 1 s 2 kreveta na kat, stol u salonu koji se pretvara u ležaj, 1 na pramcu)"
+  },
+  "(8+2+1) dinette convertible into 2 beds": {
+    "dims": ["berths"],
+    "hr": "(8+2+1) salon se pretvara u 2 kreveta"
+  },
+  "(8+1 crew)": {
+    "dims": ["berths"],
+    "hr": "(8+1 član posade)"
+  },
+  "6 guests + skipper + (optional) hostess in the front peaks.": {
+    "dims": ["berths"],
+    "hr": "6 gostiju + skiper + (opcionalno) hostesa u pramčanim pikovima."
+  },
+  "12 guests + 2 crew": {
+    "dims": ["berths"],
+    "hr": "12 gostiju + 2 člana posade"
+  },
+  "(10+1 fore peak +1 salon)": {
+    "dims": ["berths"],
+    "hr": "(10+1 pramčani pik +1 salon)"
+  },
+  "(2+Salon)": {
+    "dims": ["berths"],
+    "hr": "(2+salon)"
+  },
+  "(10+2 dinette +1 skipper ) Cat.A13 people,B14,C16": {
+    "dims": ["berths"],
+    "hr": "(10+2 salon +1 skiper) Kat. A 13 osoba, B 14, C 16"
+  },
+  "(4 + 2 in saloon)": {
+    "dims": ["berths"],
+    "hr": "(4 + 2 u salonu)"
+  },
+  "+ 1 crew + 1 in saloon": {
+    "dims": ["berths"],
+    "hr": "+ 1 član posade + 1 u salonu"
+  },
+  "36 Passengers + 8 Crew": {
+    "dims": ["berths"],
+    "hr": "36 putnika + 8 članova posade"
+  },
+  "(within Turkish Waters max. 11)": {
+    "dims": ["berths"],
+    "hr": "(u turskim vodama maks. 11)"
+  },
+  "(8+crew)": {
+    "dims": ["berths"],
+    "hr": "(8+posada)"
+  },
+  "4+ 2 crew": {
+    "dims": ["berths"],
+    "hr": "4+ 2 člana posade"
+  },
+  "(6 clients +crew)": {
+    "dims": ["berths"],
+    "hr": "(6 gostiju +posada)"
+  },
+  "(8+CREW)": {
+    "dims": ["berths"],
+    "hr": "(8+posada)"
+  },
+  "(12 people for day trip)": {
+    "dims": ["berths"],
+    "hr": "(12 osoba za dnevni izlet)"
+  },
+  "available for clients": {
+    "dims": ["berths"],
+    "hr": "na raspolaganju gostima"
+  },
+  "(10 + 1 skipper)": {
+    "dims": ["berths"],
+    "hr": "(10 + 1 skiper)"
+  },
+  "8+2 (adaptable table in saloon) +1": {
+    "dims": ["berths"],
+    "hr": "8+2 (stol u salonu koji se pretvara u ležaj) +1"
+  },
+  "(8+2 dinette+2 crew)": {
+    "dims": ["berths"],
+    "hr": "(8+2 salon+2 člana posade)"
+  },
+  "+ 2 letti contrapposti": {
+    "dims": ["berths"],
+    "hr": "+ 2 nasuprotna kreveta"
+  },
+  "+2 / (6 Guests)": {
+    "dims": ["berths"],
+    "hr": "+2 / (6 gostiju)"
+  },
+  "+3 crew": {
+    "dims": ["berths"],
+    "hr": "+3 člana posade"
+  },
+  "10 + 1 crew + 1 crew": {
+    "dims": ["berths"],
+    "hr": "10 + 1 član posade + 1 član posade"
+  },
+  "+1 skipper cabin, +2 salon table convertible": {
+    "dims": ["berths"],
+    "hr": "+1 skiperska kabina, +2 stol u salonu koji se pretvara u ležaj"
+  },
+  "(6 in cabins + 1 in salon)": {
+    "dims": ["berths"],
+    "hr": "(6 u kabinama + 1 u salonu)"
+  },
+  "(10+1 dinette +1 skipper)": {
+    "dims": ["berths"],
+    "hr": "(10+1 salon +1 skiper)"
+  },
+  "(4 people in the cabins + 1 in the saloon area)": {
+    "dims": ["berths"],
+    "hr": "(4 osobe u kabinama + 1 u salonu)"
+  },
+  "Maestro Version: 3 double cabins": {
+    "dims": ["berths"],
+    "hr": "Maestro verzija: 3 dvokrevetne kabine"
+  },
+  "8 +1 child": {
+    "dims": ["berths"],
+    "hr": "8 +1 dijete"
+  },
+  "(8+skipp.)": {
+    "dims": ["berths"],
+    "hr": "(8+skiper)"
+  },
+  "+ 2 skipper's": {
+    "dims": ["berths"],
+    "hr": "+ 2 za skipera"
+  },
+  "4 double +2+2": {
+    "dims": ["berths"],
+    "hr": "4 dvokrevetne +2+2"
+  },
+  "maxium licensed for 10": {
+    "dims": ["berths"],
+    "hr": "dozvola za najviše 10"
+  },
+  "(6+1crew)": {
+    "dims": ["berths"],
+    "hr": "(6+1 član posade)"
+  },
+  "(10+4 crew)": {
+    "dims": ["berths"],
+    "hr": "(10+4 člana posade)"
+  },
+  "(12+6 crew)": {
+    "dims": ["berths"],
+    "hr": "(12+6 članova posade)"
+  },
+  "including crew(8 in cabins + 2 skipper cabins)": {
+    "dims": ["berths"],
+    "hr": "uključujući posadu (8 u kabinama + 2 skiperske kabine)"
+  },
+  "(8 guests + skipper + (optional) hostess in the front peaks)": {
+    "dims": ["berths"],
+    "hr": "(8 gostiju + skiper + (opcionalno) hostesa u pramčanim pikovima)"
+  },
+  "(8+2 Salon)": {
+    "dims": ["berths"],
+    "hr": "(8+2 salon)"
+  },
+  "8+2, salón convertible": {
+    "dims": ["berths"],
+    "hr": "8+2, salon koji se pretvara u ležaj"
+  },
+  "(10 berths for guests - 8 in cabins and 2 in the saloon)": {
+    "dims": ["berths"],
+    "hr": "(10 ležajeva za goste - 8 u kabinama i 2 u salonu)"
+  },
+  "(12 in cabin + 2 in saloon + 2 in front peak)": {
+    "dims": ["berths"],
+    "hr": "(12 u kabinama + 2 u salonu + 2 u pramčanom piku)"
+  },
+  "+ 2 skipper e hostess": {
+    "dims": ["berths"],
+    "hr": "+ 2 skiper i hostesa"
+  },
+  "+ 2 bow crew": {
+    "dims": ["berths"],
+    "hr": "+ 2 člana posade na pramcu"
+  },
+  "(6+2) (max 8 people)": {
+    "dims": ["berths"],
+    "hr": "(6+2) (maks. 8 osoba)"
+  },
+  "(10 +1 skipper) Cat A: 13 pax": {
+    "dims": ["berths"],
+    "hr": "(10 +1 skiper) Kat. A: 13 osoba"
+  },
+  "(2 two in dinette)": {
+    "dims": ["berths"],
+    "hr": "(2 u salonu)"
+  },
+  "(8 guests + 2 crew or 12 bareboat)": {
+    "dims": ["berths"],
+    "hr": "(8 gostiju + 2 člana posade ili 12 bez skipera)"
+  },
+  "(10+1 Crew)": {
+    "dims": ["berths"],
+    "hr": "(10+1 član posade)"
+  },
+  "(8 guests in the cabins +2 crew members in the bunk-bed cabin)": {
+    "dims": ["berths"],
+    "hr": "(8 gostiju u kabinama +2 člana posade u kabini s krevetom na kat)"
+  },
+  "(10 + 2 crew)": {
+    "dims": ["berths"],
+    "hr": "(10 + 2 člana posade)"
+  },
+  "+ 1 +1 crew + 2 in saloon": {
+    "dims": ["berths"],
+    "hr": "+ 1 +1 član posade + 2 u salonu"
+  },
+  "+ 2 dinette": {
+    "dims": ["berths"],
+    "hr": "+ 2 salon"
+  },
+  "- 1Grand Master Cabin and 4 triple, double plus full size bunkbed- plus 4 for crew": {
+    "dims": ["berths"],
+    "hr": "- 1 velika master kabina i 4 trokrevetne, bračni krevet plus krevet na kat pune veličine - plus 4 za posadu"
+  },
+  "(6 +2 in dinette)": {
+    "dims": ["berths"],
+    "hr": "(6 +2 u salonu)"
+  },
+  "( 1 berth per bow, convertible saloon table,1 foldable pullman bed aft port cab )": {
+    "dims": ["berths"],
+    "hr": "(1 ležaj u svakom pramcu, stol u salonu koji se pretvara u ležaj, 1 preklopivi pullman ležaj u lijevoj krmenoj kabini)"
+  },
+  "(10+skipp)": {
+    "dims": ["berths"],
+    "hr": "(10+skiper)"
+  },
+  "(8 +1 skipper +1 dinette)": {
+    "dims": ["berths"],
+    "hr": "(8 +1 skiper +1 salon)"
+  },
+  "(8+2 children!)": {
+    "dims": ["berths"],
+    "hr": "(8+2 djece!)"
+  },
+  "(8 + crew)": {
+    "dims": ["berths"],
+    "hr": "(8 + posada)"
+  },
+  "(8 +1 fore peak +2 salon)": {
+    "dims": ["berths"],
+    "hr": "(8 +1 pramčani pik +2 salon)"
+  },
+  "6 + skipper": {
+    "dims": ["berths"],
+    "hr": "6 + skiper"
+  },
+  "8 (cabin) + 3 (in the saloon) +1 (skipper cabin with the entry from bow)": {
+    "dims": ["berths"],
+    "hr": "8 (kabine) + 3 (u salonu) +1 (skiperska kabina s ulazom s pramca)"
+  },
+  "(4 guests + 1 or 2 crew)": {
+    "dims": ["berths"],
+    "hr": "(4 gosta + 1 ili 2 člana posade)"
+  },
+  "Licensed for 12": {
+    "dims": ["berths"],
+    "hr": "Dozvola za 12"
+  },
+  "(12+2 dinette +1 skipper) Cat A/B: 13, C/D16": {
+    "dims": ["berths"],
+    "hr": "(12+2 salon +1 skiper) Kat. A/B: 13, C/D: 16"
+  },
+  "(10+2 dinette+1 skipper) Cat A:12 –B:14": {
+    "dims": ["berths"],
+    "hr": "(10+2 salon+1 skiper) Kat. A: 12 – B: 14"
+  },
+  "+2 (adaptable table in saloon)": {
+    "dims": ["berths"],
+    "hr": "+2 (stol u salonu koji se pretvara u ležaj)"
+  },
+  "(11+2) Licensed for 10": {
+    "dims": ["berths"],
+    "hr": "(11+2) Dozvola za 10"
+  },
+  "(8 people in the cabins + 1 in the bow cabin)": {
+    "dims": ["berths"],
+    "hr": "(8 osoba u kabinama + 1 u pramčanoj kabini)"
+  },
+  "(6 + 1 crew)": {
+    "dims": ["berths"],
+    "hr": "(6 + 1 član posade)"
+  },
+  "+2 (adaptible table in saloon) + 1": {
+    "dims": ["berths"],
+    "hr": "+2 (stol u salonu koji se pretvara u ležaj) + 1"
+  },
+  "max licensed for 10 pax": {
+    "dims": ["berths"],
+    "hr": "dozvola za najviše 10 gostiju"
+  },
+  "6 double cabins + 2 crew cabins": {
+    "dims": ["berths"],
+    "hr": "6 dvokrevetnih kabina + 2 kabine za posadu"
+  },
+  "8 +2 saloon +2 bow": {
+    "dims": ["berths"],
+    "hr": "8 +2 salon +2 na pramcu"
+  },
+  "3 double cabines for the 6 guests": {
+    "dims": ["berths"],
+    "hr": "3 dvokrevetne kabine za 6 gostiju"
+  },
+  "(10 + Skipper)": {
+    "dims": ["berths"],
+    "hr": "(10 + skiper)"
+  },
+  "10 guess": {
+    "dims": ["berths"],
+    "hr": "10 gostiju"
+  },
+  "(10 people in the cabins + 2 in the saloon area)": {
+    "dims": ["berths"],
+    "hr": "(10 osoba u kabinama + 2 u salonu)"
+  },
+  "(6+1+1 Saloon)": {
+    "dims": ["berths"],
+    "hr": "(6+1+1 salon)"
+  },
+  "(8+2) convertible salon table": {
+    "dims": ["berths"],
+    "hr": "(8+2) stol u salonu koji se pretvara u ležaj"
+  },
+  "(10+2 dinette +1 skipper) Cat A/B: 13": {
+    "dims": ["berths"],
+    "hr": "(10+2 salon +1 skiper) Kat. A/B: 13"
+  },
+  "(6+1 dinette)": {
+    "dims": ["berths"],
+    "hr": "(6+1 salon)"
+  },
+  "(6+2 in salon)": {
+    "dims": ["berths"],
+    "hr": "(6+2 u salonu)"
+  },
+  "Saloon convertible into double berth": {
+    "dims": ["berths"],
+    "hr": "Salon se pretvara u bračni ležaj"
+  },
+  "SALON CONVERTIBLE": {
+    "dims": ["berths"],
+    "hr": "Salon koji se pretvara u ležaj"
+  },
+  "Più dinette e/o skipper": {
+    "dims": ["berths"],
+    "hr": "Plus salon i/ili skiper"
+  },
+  "incl 2 crew berths in forepeak": {
+    "dims": ["berths"],
+    "hr": "uklj. 2 ležaja za posadu u pramčanom piku"
+  },
+  "(max 6 people)": {
+    "dims": ["berths"],
+    "hr": "(maks. 6 osoba)"
+  },
+  "+ 2 pointes + carré convertible": {
+    "dims": ["berths"],
+    "hr": "+ 2 pramčana pika + salon koji se pretvara u ležaj"
+  },
+  "( 2 clients + 1 skipper)": {
+    "dims": ["berths"],
+    "hr": "(2 gosta + 1 skiper)"
+  },
+  "8 in cabins 1 in saloon": {
+    "dims": ["berths"],
+    "hr": "8 u kabinama, 1 u salonu"
+  },
+  "+ 2 places en pointes": {
+    "dims": ["berths"],
+    "hr": "+ 2 ležaja u pramčanim pikovima"
+  },
+  "(6+2) (max 12 people)": {
+    "dims": ["berths"],
+    "hr": "(6+2) (maks. 12 osoba)"
+  },
+  "10 (guest) + 2 (double bink bed in one bow - crew)": {
+    "dims": ["berths"],
+    "hr": "10 (gosti) + 2 (dvostruki krevet na kat u jednom pramcu - posada)"
+  },
+  "Cat A: 6, B8": {
+    "dims": ["berths"],
+    "hr": "Kat. A: 6, B: 8"
+  },
+  "12 guest +2 crew": {
+    "dims": ["berths"],
+    "hr": "12 gostiju +2 člana posade"
+  },
+  "(3x2 in cabins, 3 in saloon for children)": {
+    "dims": ["berths"],
+    "hr": "(3x2 u kabinama, 3 u salonu za djecu)"
+  },
+  "8 guests + skipper + (optional) hostess in the front peaks.": {
+    "dims": ["berths"],
+    "hr": "8 gostiju + skiper + (opcionalno) hostesa u pramčanim pikovima."
+  },
+  "(12+1 Crew)": {
+    "dims": ["berths"],
+    "hr": "(12+1 član posade)"
+  },
+  "10+2+1 crew": {
+    "dims": ["berths"],
+    "hr": "10+2+1 član posade"
+  },
+  "10 guests plus 2 crew": {
+    "dims": ["berths"],
+    "hr": "10 gostiju plus 2 člana posade"
+  },
+  "(36+8 crew)": {
+    "dims": ["berths"],
+    "hr": "(36+8 članova posade)"
+  },
+  "+2 on request": {
+    "dims": ["berths"],
+    "hr": "+2 na upit"
+  },
+  "- 8 in-room + 2 saloon + 2 crew": {
+    "dims": ["berths"],
+    "hr": "- 8 u kabinama + 2 salon + 2 člana posade"
+  },
+  "guests": {
+    "dims": ["berths"],
+    "hr": "gosti"
+  },
+  "+ 3 Crew Members": {
+    "dims": ["berths"],
+    "hr": "+ 3 člana posade"
+  },
+  "(12 passengers + 2 crew)": {
+    "dims": ["berths"],
+    "hr": "(12 putnika + 2 člana posade)"
+  },
+  "8+ Saloon+2 in forepeak": {
+    "dims": ["berths"],
+    "hr": "8+ salon+2 u pramčanom piku"
+  },
+  "(8 people in the cabins+ 1 in the saloon+ 1 in the bow cabin)": {
+    "dims": ["berths"],
+    "hr": "(8 osoba u kabinama+ 1 u salonu+ 1 u pramčanoj kabini)"
+  },
+  "(6+2) + skipper": {
+    "dims": ["berths"],
+    "hr": "(6+2) + skiper"
+  },
+  "6 + 2 crew": {
+    "dims": ["berths"],
+    "hr": "6 + 2 člana posade"
+  },
+  "(6+crew)": {
+    "dims": ["berths"],
+    "hr": "(6+posada)"
+  },
+  "(10 +1 skipper +1 salon)": {
+    "dims": ["berths"],
+    "hr": "(10 +1 skiper +1 salon)"
+  },
+  "(2 extra single cabins with Wc/Showers in front on request)": {
+    "dims": ["berths"],
+    "hr": "(2 dodatne jednokrevetne kabine s WC-om/tuševima na pramcu na upit)"
+  },
+  "(Inc. 1 Crew Berth in Bow Quarter)": {
+    "dims": ["berths"],
+    "hr": "(uklj. 1 ležaj za posadu na pramcu)"
+  },
+  "6+2 (bunk bed)+2 (adaptable table in saloon)": {
+    "dims": ["berths"],
+    "hr": "6+2 (krevet na kat)+2 (stol u salonu koji se pretvara u ležaj)"
+  },
+  "(10 +1 dinette +1 skipper) Cat A: 12": {
+    "dims": ["berths"],
+    "hr": "(10 +1 salon +1 skiper) Kat. A: 12"
+  },
+  "(salon table convertible to double bed)": {
+    "dims": ["berths"],
+    "hr": "(stol u salonu pretvara se u bračni krevet)"
+  },
+  "+4 crew": {
+    "dims": ["berths"],
+    "hr": "+4 člana posade"
+  },
+  "-License for : 8 / In cabins: 6": {
+    "dims": ["berths"],
+    "hr": "-Dozvola za: 8 / U kabinama: 6"
+  },
+  "(6+2 dinette)": {
+    "dims": ["berths"],
+    "hr": "(6+2 salon)"
+  },
+  "(6 +2 dinette +2 crew)": {
+    "dims": ["berths"],
+    "hr": "(6 +2 salon +2 člana posade)"
+  },
+  "12+2 crew members": {
+    "dims": ["berths"],
+    "hr": "12+2 člana posade"
+  },
+  "(8+2saloon+2crew)": {
+    "dims": ["berths"],
+    "hr": "(8+2 salon+2 člana posade)"
+  },
+  "6 in de hutten en 2 in de salon": {
+    "dims": ["berths"],
+    "hr": "6 u kabinama i 2 u salonu"
+  },
+  "8+crew": {
+    "dims": ["berths"],
+    "hr": "8+posada"
+  },
+  "12+2 +1 skipper cabin tot 15": {
+    "dims": ["berths"],
+    "hr": "12+2 +1 skiperska kabina, ukupno 15"
+  },
+  "( 10 Pers. )": {
+    "dims": ["berths"],
+    "hr": "(10 os.)"
+  },
+  "(3 double beds + 1 pullman + 2 forepeaks)": {
+    "dims": ["berths"],
+    "hr": "(3 bračna kreveta + 1 pullman ležaj + 2 pramčana pika)"
+  },
+  "12+1 (skipper)": {
+    "dims": ["berths"],
+    "hr": "12+1 (skiper)"
+  },
+  "(Daily Cruises max. people 25)": {
+    "dims": ["berths"],
+    "hr": "(Dnevni izleti maks. 25 osoba)"
+  },
+  "(+ 3 crew)": {
+    "dims": ["berths"],
+    "hr": "(+ 3 člana posade)"
+  },
+  "(8+1) 4 double en-suite cabins, one of which has a single cabin attached": {
+    "dims": ["berths"],
+    "hr": "(8+1) 4 dvokrevetne kabine s vlastitom kupaonicom, od kojih jedna ima pridruženu jednokrevetnu kabinu"
+  },
+  "licensed for:, 10 in cabins": {
+    "dims": ["berths"],
+    "hr": "dozvola za:, 10 u kabinama"
+  },
+  "(10+2) * For Day Trips 14 pax*": {
+    "dims": ["berths"],
+    "hr": "(10+2) * Za dnevne izlete 14 gostiju*"
+  },
+  "(10+1+1 skipp)": {
+    "dims": ["berths"],
+    "hr": "(10+1+1 skiper)"
+  },
+  "(8 people in the cabins + 2 in the saloon area )": {
+    "dims": ["berths"],
+    "hr": "(8 osoba u kabinama + 2 u salonu)"
+  },
+  "(6 guests + 2 convertible saloon)": {
+    "dims": ["berths"],
+    "hr": "(6 gostiju + 2 salon koji se pretvara u ležaj)"
+  },
+  "4 people for multiple days and 20 people for daily cruises": {
+    "dims": ["berths"],
+    "hr": "4 osobe za višednevni najam i 20 osoba za dnevne izlete"
+  },
+  "guest + crew": {
+    "dims": ["berths"],
+    "hr": "gosti + posada"
+  },
+  "(8 guests in 4 cabins + crew)": {
+    "dims": ["berths"],
+    "hr": "(8 gostiju u 4 kabine + posada)"
+  },
+  "(6+2+skipp)": {
+    "dims": ["berths"],
+    "hr": "(6+2+skiper)"
+  },
+  "(8+2 salon+2 bow cabins)": {
+    "dims": ["berths"],
+    "hr": "(8+2 salon+2 pramčane kabine)"
+  },
+  "berths": {
+    "dims": ["berths"],
+    "hr": "ležajeva"
+  },
+  "(8 people in the cabins + 1 in the saloon area + 1 in the bow cabin)": {
+    "dims": ["berths"],
+    "hr": "(8 osoba u kabinama + 1 u prostoru salona + 1 u pramčanoj kabini)"
+  },
+  "8+2 convertible salon table": {
+    "dims": ["berths"],
+    "hr": "8+2 stol u salonu koji se pretvara u ležaj"
+  },
+  "(salon table convertible to double berth/1 extra small berth in each front cabin)": {
+    "dims": ["berths"],
+    "hr": "(stol u salonu pretvara se u bračni ležaj/1 dodatni mali ležaj u svakoj pramčanoj kabini)"
+  },
+  "(8 +1 skipper) Cat. A: 12 pax": {
+    "dims": ["berths"],
+    "hr": "(8 +1 skiper) Kat. A: 12 osoba"
+  },
+  "(8+2 in salon)": {
+    "dims": ["berths"],
+    "hr": "(8+2 u salonu)"
+  },
+  "(6+1) (max 12 people)": {
+    "dims": ["berths"],
+    "hr": "(6+1) (maks. 12 osoba)"
+  },
+  "(8 in cabin + 2 in saloon + 1 in front peak)": {
+    "dims": ["berths"],
+    "hr": "(8 u kabinama + 2 u salonu + 1 u pramčanom piku)"
+  },
+  "(8+2+2 convertible table in salon)": {
+    "dims": ["berths"],
+    "hr": "(8+2+2 stol u salonu koji se pretvara u ležaj)"
+  },
+  "(+ 1 skipper's)": {
+    "dims": ["berths"],
+    "hr": "(+ 1 za skipera)"
+  },
+  "6 in cabins +1 saloon": {
+    "dims": ["berths"],
+    "hr": "6 u kabinama +1 salon"
+  },
+  "(+2 single bed)": {
+    "dims": ["berths"],
+    "hr": "(+2 jednostruka kreveta)"
+  },
+  "(8 guests in the cabins + Skipper in the bow cabin)": {
+    "dims": ["berths"],
+    "hr": "(8 gostiju u kabinama + skiper u pramčanoj kabini)"
+  },
+  "8 in cabins +1+1 saloon": {
+    "dims": ["berths"],
+    "hr": "8 u kabinama +1+1 salon"
+  },
+  "(12 + 6 crew)": {
+    "dims": ["berths"],
+    "hr": "(12 + 6 članova posade)"
+  },
+  "8 clients + + 2 CREW CAB 1 BATH": {
+    "dims": ["berths"],
+    "hr": "8 gostiju + + 2 kabine za posadu 1 kupaonica"
+  },
+  "(6+2) + 2 crew cabins": {
+    "dims": ["berths"],
+    "hr": "(6+2) + 2 kabine za posadu"
+  },
+  "(8 guests + crew)": {
+    "dims": ["berths"],
+    "hr": "(8 gostiju + posada)"
+  },
+  "+ convertible saloon": {
+    "dims": ["berths"],
+    "hr": "+ salon koji se pretvara u ležaj"
+  },
+  "(10+2) - 10 guests": {
+    "dims": ["berths"],
+    "hr": "(10+2) - 10 gostiju"
+  },
+  "(forward cabins with additional single beds for kids)": {
+    "dims": ["berths"],
+    "hr": "(pramčane kabine s dodatnim jednostrukim krevetima za djecu)"
+  },
+  "(8+2)+1skipper": {
+    "dims": ["berths"],
+    "hr": "(8+2)+1 skiper"
+  },
+  "+1 crew + 2 in saloon": {
+    "dims": ["berths"],
+    "hr": "+1 član posade + 2 u salonu"
+  },
+  "(8 cabin + 2 in the saloon)": {
+    "dims": ["berths"],
+    "hr": "(8 u kabinama + 2 u salonu)"
+  },
+  "8+2crew": {
+    "dims": ["berths"],
+    "hr": "8+2 člana posade"
+  },
+  "(6 + Skipper)": {
+    "dims": ["berths"],
+    "hr": "(6 + skiper)"
+  },
+  "(6+skipp)": {
+    "dims": ["berths"],
+    "hr": "(6+skiper)"
+  },
+  "8 +2 crew": {
+    "dims": ["berths"],
+    "hr": "8 +2 člana posade"
+  },
+  "(6/8 + 2 crew)": {
+    "dims": ["berths"],
+    "hr": "(6/8 + 2 člana posade)"
+  },
+  "(10+2 for crew)": {
+    "dims": ["berths"],
+    "hr": "(10+2 za posadu)"
+  },
+  "(6 + 2 dinette)": {
+    "dims": ["berths"],
+    "hr": "(6 + 2 salon)"
+  },
+  "(8 Guests + crew)": {
+    "dims": ["berths"],
+    "hr": "(8 gostiju + posada)"
+  },
+  "(8 people in the cabins + 2 in the bunk beds + Hostess/Skipper in the other bunk bed)": {
+    "dims": ["berths"],
+    "hr": "(8 osoba u kabinama + 2 u krevetima na kat + hostesa/skiper u drugom krevetu na kat)"
+  },
+  "(8 people in the cabins + 2 in the saloon area)": {
+    "dims": ["berths"],
+    "hr": "(8 osoba u kabinama + 2 u prostoru salona)"
+  },
+  "+ deux pointes + 2 dans le carré convertible": {
+    "dims": ["berths"],
+    "hr": "+ dva pramčana pika + 2 u salonu koji se pretvara u ležaj"
+  },
+  "(8 people in the cabins +1 in the saloon area)": {
+    "dims": ["berths"],
+    "hr": "(8 osoba u kabinama +1 u prostoru salona)"
+  },
+  "12 + 1 skipper cabin": {
+    "dims": ["berths"],
+    "hr": "12 + 1 skiperska kabina"
+  },
+  "(1 king size bed + 2 twin size beds)": {
+    "dims": ["berths"],
+    "hr": "(1 king size krevet + 2 jednostruka kreveta)"
+  },
+  "(12+1 skipper) Cat A:12, B:14": {
+    "dims": ["berths"],
+    "hr": "(12+1 skiper) Kat. A:12, B:14"
+  },
+  "(8+skipp)": {
+    "dims": ["berths"],
+    "hr": "(8+skiper)"
+  },
+  "(4 Dbl cabs + 2 semi Dbl cabs + 1 single bed bow comp)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne kabine + 2 kabine s polubračnim krevetom + 1 jednostruki krevet u pramčanom odjeljku)"
+  },
+  "+2 Skipper Cabins": {
+    "dims": ["cabins"],
+    "hr": "+2 skiperske kabine"
+  },
+  "/ 4 double cabins (8 guests) + 1 sofa bed (2 guests) + 1 cabin for the skipper": {
+    "dims": ["cabins"],
+    "hr": "/ 4 dvokrevetne kabine (8 gostiju) + 1 sofa na razvlačenje (2 gosta) + 1 kabina za skipera"
+  },
+  "3 double + forepeak skipper": {
+    "dims": ["cabins"],
+    "hr": "3 dvokrevetne + skiper u pramčanom piku"
+  },
+  "double cabins, all with en-suite facilities & 1 French double that shares bathroom": {
+    "dims": ["cabins"],
+    "hr": "dvokrevetne kabine, sve s vlastitom kupaonicom & 1 kabina s francuskim ležajem koja dijeli kupaonicu"
+  },
+  "(2 double for guests 1 for crew)": {
+    "dims": ["cabins"],
+    "hr": "(2 dvokrevetne za goste 1 za posadu)"
+  },
+  "(2 Master king size beds+ 3 - Triple 1 bed fot 2 pax + single bed)": {
+    "dims": ["cabins"],
+    "hr": "(2 master kabine s king size krevetom+ 3 - trokrevetne 1 krevet za 2 gosta + jednostruki krevet)"
+  },
+  "Aft port cabin, double berth, plus pullman berth": {
+    "dims": ["cabins"],
+    "hr": "Krmena kabina na lijevoj strani, bračni ležaj, plus pullman ležaj"
+  },
+  "(1 master, 2 standard,1 middle cabin) +1 (skipper cabin)": {
+    "dims": ["cabins"],
+    "hr": "(1 master, 2 standardne,1 srednja kabina) +1 (skiperska kabina)"
+  },
+  "5 cabins: 1 Front Master, 1 Aft Master, 1 Triple, 2 Double Cabins; all en-suite.": {
+    "dims": ["cabins"],
+    "hr": "5 kabina: 1 pramčana master, 1 krmena master, 1 trokrevetna, 2 dvokrevetne kabine; sve s vlastitom kupaonicom."
+  },
+  "5 Cabins ; 1 Master, 2 VIP, 2 Double all en-suite.": {
+    "dims": ["cabins"],
+    "hr": "5 kabina ; 1 master, 2 VIP, 2 dvokrevetne, sve s vlastitom kupaonicom."
+  },
+  "4 double cabins + 2 crew single cabins)": {
+    "dims": ["cabins"],
+    "hr": "4 dvokrevetne kabine + 2 jednokrevetne kabine za posadu)"
+  },
+  "4+ 1 crew cabin": {
+    "dims": ["cabins"],
+    "hr": "4+ 1 kabina za posadu"
+  },
+  "Più 1 per skipper a prora": {
+    "dims": ["cabins"],
+    "hr": "Plus 1 za skipera na pramcu"
+  },
+  "(3 double + 2 single for crew in bow)": {
+    "dims": ["cabins"],
+    "hr": "(3 dvokrevetne + 2 jednokrevetne za posadu na pramcu)"
+  },
+  "(4 double-bed cabins + 1 with bunk beds)": {
+    "dims": ["cabins"],
+    "hr": "(4 kabine s bračnim krevetom + 1 s krevetima na kat)"
+  },
+  "(double)": {
+    "dims": ["cabins"],
+    "hr": "(dvokrevetne)"
+  },
+  "2 Master Bow & 2 Master Stern Cabins and 2 Cabins with Bunk Beds": {
+    "dims": ["cabins"],
+    "hr": "2 pramčane master & 2 krmene master kabine i 2 kabine s krevetima na kat"
+  },
+  "(4 +bed in Salon)": {
+    "dims": ["cabins"],
+    "hr": "(4 +ležaj u salonu)"
+  },
+  "4 Cabins; 1 Master, 1 Double, 1 VIP, 1 Single all en-suite.": {
+    "dims": ["cabins"],
+    "hr": "4 kabine; 1 master, 1 dvokrevetna, 1 VIP, 1 jednokrevetna, sve s vlastitom kupaonicom."
+  },
+  "(4+2 cabins)": {
+    "dims": ["cabins"],
+    "hr": "(4+2 kabine)"
+  },
+  "(4 Double + Saloon + 1 Skipper)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne + salon + 1 skiper)"
+  },
+  "4+plus skipper scabin in the bow": {
+    "dims": ["cabins"],
+    "hr": "4+ skiperska kabina na pramcu"
+  },
+  "(3 double and 1 bunk beds)": {
+    "dims": ["cabins"],
+    "hr": "(3 dvokrevetne i 1 s krevetima na kat)"
+  },
+  "Double bunk bed in the saloon": {
+    "dims": ["cabins"],
+    "hr": "Bračni ležaj u salonu"
+  },
+  "4 Cabins; 2 Master, 2 Double ( Convertable ) all en suite.": {
+    "dims": ["cabins"],
+    "hr": "4 kabine; 2 master, 2 dvokrevetne ( mogu se preurediti ), sve s vlastitom kupaonicom."
+  },
+  "(+saloon)": {
+    "dims": ["cabins"],
+    "hr": "(+salon)"
+  },
+  "(4double cabins)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne kabine)"
+  },
+  "+2 Skipper": {
+    "dims": ["cabins"],
+    "hr": "+2 skiper"
+  },
+  "(4 double + 1 single ext)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne + 1 jednokrevetna ext)"
+  },
+  "(3 double, 2 bunk bed cabin)": {
+    "dims": ["cabins"],
+    "hr": "(3 dvokrevetne, 2 kabine s krevetom na kat)"
+  },
+  "(4+2 bow)": {
+    "dims": ["cabins"],
+    "hr": "(4+2 pramčane)"
+  },
+  "(1 cabin with Bunk Bed)": {
+    "dims": ["cabins"],
+    "hr": "(1 kabina s krevetom na kat)"
+  },
+  "+1 crew cab": {
+    "dims": ["cabins"],
+    "hr": "+1 kabina za posadu"
+  },
+  "convertible saloon double berth + port bow compartment": {
+    "dims": ["cabins"],
+    "hr": "salon koji se pretvara u bračni ležaj + pramčani odjeljak na lijevoj strani"
+  },
+  "(4+2+2 saloon)": {
+    "dims": ["cabins"],
+    "hr": "(4+2+2 salon)"
+  },
+  "(3 Dbl cabins, 1 x Bunk bed cabin)": {
+    "dims": ["cabins"],
+    "hr": "(3 dvokrevetne kabine, 1 x kabina s krevetom na kat)"
+  },
+  "(4 double cabins + 2 single bow cabins)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne kabine + 2 jednokrevetne pramčane kabine)"
+  },
+  "+1 Cabin for Crew": {
+    "dims": ["cabins"],
+    "hr": "+1 kabina za posadu"
+  },
+  "4 doubles + 2 singles": {
+    "dims": ["cabins"],
+    "hr": "4 dvokrevetne + 2 jednokrevetne"
+  },
+  "(4 double +2 single in bow for children)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne +2 jednokrevetne na pramcu za djecu)"
+  },
+  "(one for crew)": {
+    "dims": ["cabins"],
+    "hr": "(jedna za posadu)"
+  },
+  "4 Double en-suite cabins": {
+    "dims": ["cabins"],
+    "hr": "4 dvokrevetne kabine s vlastitom kupaonicom"
+  },
+  "(4 doubles + 1 twin + 1 front peak": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne + 1 s odvojenim krevetima + 1 pramčani pik"
+  },
+  "3 Doubles + 1 Simple": {
+    "dims": ["cabins"],
+    "hr": "3 dvokrevetne + 1 jednokrevetna"
+  },
+  "(2 master and 2 double)": {
+    "dims": ["cabins"],
+    "hr": "(2 master i 2 dvokrevetne)"
+  },
+  "(1 Master double, 1 VIP double, 2 twin)": {
+    "dims": ["cabins"],
+    "hr": "(1 master dvokrevetna, 1 VIP dvokrevetna, 2 s odvojenim krevetima)"
+  },
+  "5 + 1 crew + 1crew": {
+    "dims": ["cabins"],
+    "hr": "5 + 1 za posadu + 1 za posadu"
+  },
+  "(1 cabin with Bunk bed)": {
+    "dims": ["cabins"],
+    "hr": "(1 kabina s krevetom na kat)"
+  },
+  "(6 double +1 skipper)": {
+    "dims": ["cabins"],
+    "hr": "(6 dvokrevetnih +1 skiper)"
+  },
+  "Two master, one double and two twins which can also be converted to doubles - all en-suite).": {
+    "dims": ["cabins"],
+    "hr": "Dvije master, jedna dvokrevetna i dvije s odvojenim krevetima koje se mogu pretvoriti i u kabine s bračnim krevetom - sve s vlastitom kupaonicom)."
+  },
+  "(4 double cabins + convertible saloon table + 2 crew cabins)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne kabine + stol u salonu koji se pretvara u ležaj + 2 kabine za posadu)"
+  },
+  "(4+1SK+Salon)": {
+    "dims": ["cabins"],
+    "hr": "(4+1 skiper+salon)"
+  },
+  "+1 (4 double cabins + 1 with bunk beds + 1 skipper cabin)": {
+    "dims": ["cabins"],
+    "hr": "+1 (4 dvokrevetne kabine + 1 s krevetima na kat + 1 skiperska kabina)"
+  },
+  "(3D+skippers' cabin)": {
+    "dims": ["cabins"],
+    "hr": "(3 dvokrevetne+skiperska kabina)"
+  },
+  "4 Double + 2 Single": {
+    "dims": ["cabins"],
+    "hr": "4 dvokrevetne + 2 jednokrevetne"
+  },
+  "matrimoniali + dinette a tavolo centrale con due singoli laterali": {
+    "dims": ["cabins"],
+    "hr": "dvokrevetne + salon sa središnjim stolom i dva bočna jednostruka ležaja"
+  },
+  "(5 + 1 crew + 1 front peak)": {
+    "dims": ["cabins"],
+    "hr": "(5 + 1 za posadu + 1 pramčani pik)"
+  },
+  "(4 double + 2 single in the forepeak cabin)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne + 2 jednostruka ležaja u pramčanoj kabini)"
+  },
+  "available for clients +1 bow skipper": {
+    "dims": ["cabins"],
+    "hr": "dostupne gostima +1 skiper na pramcu"
+  },
+  "+2 bow": {
+    "dims": ["cabins"],
+    "hr": "+2 pramčane"
+  },
+  "5 cabins: 1 Master, 2 Double, 1 Twin all en suite.": {
+    "dims": ["cabins"],
+    "hr": "5 kabina: 1 master, 2 dvokrevetne, 1 s odvojenim krevetima, sve s vlastitom kupaonicom."
+  },
+  "(3dbl+1 skipper cabin)": {
+    "dims": ["cabins"],
+    "hr": "(3 dvokrevetne+1 skiperska kabina)"
+  },
+  "extra bed in the saloon": {
+    "dims": ["cabins"],
+    "hr": "dodatni ležaj u salonu"
+  },
+  "(4 double + 1 twin)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne + 1 s odvojenim krevetima)"
+  },
+  "(4 double + 2 bow cabins)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne + 2 pramčane kabine)"
+  },
+  "(3x double bed, 1 room with 2 single berth)": {
+    "dims": ["cabins"],
+    "hr": "(3x bračni krevet, 1 kabina s 2 jednostruka ležaja)"
+  },
+  "(Double)": {
+    "dims": ["cabins"],
+    "hr": "(dvokrevetne)"
+  },
+  "4 double cagins and 2 bow cabins": {
+    "dims": ["cabins"],
+    "hr": "4 dvokrevetne kabine i 2 pramčane kabine"
+  },
+  "(4D+2 skippers' cabin)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne+2 skiperske kabine)"
+  },
+  "(2 master, 1 double, 1 twin)": {
+    "dims": ["cabins"],
+    "hr": "(2 master, 1 dvokrevetna, 1 s odvojenim krevetima)"
+  },
+  "(3 Double + 2 Crew)": {
+    "dims": ["cabins"],
+    "hr": "(3 dvokrevetne + 2 za posadu)"
+  },
+  "4 DOUBLE, 1 PULLMAN CABIN FOR 2, 1 CREW CABIN FOR 2": {
+    "dims": ["cabins"],
+    "hr": "4 dvokrevetne, 1 pullman kabina za 2, 1 kabina za posadu za 2"
+  },
+  "(3 + Skipper)": {
+    "dims": ["cabins"],
+    "hr": "(3 + skiper)"
+  },
+  "(3+2 crew)": {
+    "dims": ["cabins"],
+    "hr": "(3+2 za posadu)"
+  },
+  "(3D+1 skippers' cabin)": {
+    "dims": ["cabins"],
+    "hr": "(3 dvokrevetne+1 skiperska kabina)"
+  },
+  "(2 master + 2 double + 3 triple)": {
+    "dims": ["cabins"],
+    "hr": "(2 master + 2 dvokrevetne + 3 trokrevetne)"
+  },
+  "3 cabines doubles + 1 pointe": {
+    "dims": ["cabins"],
+    "hr": "3 dvokrevetne kabine + 1 pramčani pik"
+  },
+  "(4 Double Cabins) + crew": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne kabine) + posada"
+  },
+  "(4 double-bed cabins +1 cabin with bunk beds +2 front cabin )": {
+    "dims": ["cabins"],
+    "hr": "(4 kabine s bračnim krevetom +1 kabina s krevetima na kat +2 pramčane kabine )"
+  },
+  "+ 3 crew cabins": {
+    "dims": ["cabins"],
+    "hr": "+ 3 kabine za posadu"
+  },
+  "(4+2 skipper + convertible saloon table)": {
+    "dims": ["cabins"],
+    "hr": "(4+2 skiper + stol u salonu koji se pretvara u ležaj)"
+  },
+  "+ 2 forepeak": {
+    "dims": ["cabins"],
+    "hr": "+ 2 pramčani pik"
+  },
+  "(5D+skipper's cabin)": {
+    "dims": ["cabins"],
+    "hr": "(5 dvokrevetnih+skiperska kabina)"
+  },
+  "- New matresses, double pillows, USB and 220V - Airco - saftery deposit box": {
+    "dims": ["cabins"],
+    "hr": "- Novi madraci, dvostruki jastuci, USB i 220V - Klima uređaj - Sef"
+  },
+  "plus 2 skipper cabins": {
+    "dims": ["cabins"],
+    "hr": "plus 2 skiperske kabine"
+  },
+  "(Convertible front cabin, 4 or 3 (master) cabin version)": {
+    "dims": ["cabins"],
+    "hr": "(Pramčana kabina koja se može preurediti, verzija s 4 ili 3 (master) kabine)"
+  },
+  "(4 double +1 fore peak)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne +1 pramčani pik)"
+  },
+  "+ 1 BUNKBED + 1 BUNKBED + 1 CREW FOREPEAK CABIN": {
+    "dims": ["cabins"],
+    "hr": "+ 1 krevet na kat + 1 krevet na kat + 1 pramčana kabina za posadu"
+  },
+  "(6 guest cabins + 2 crew cabins)": {
+    "dims": ["cabins"],
+    "hr": "(6 kabina za goste + 2 kabine za posadu)"
+  },
+  "( 4 double cabins plus 1 berth in each bow )": {
+    "dims": ["cabins"],
+    "hr": "( 4 dvokrevetne kabine plus 1 ležaj u svakom pramcu )"
+  },
+  "(4 double, 1 bunk & 1 crew cabin)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne, 1 s krevetom na kat & 1 kabina za posadu)"
+  },
+  "+2crew": {
+    "dims": ["cabins"],
+    "hr": "+2 za posadu"
+  },
+  "(6+1SK)": {
+    "dims": ["cabins"],
+    "hr": "(6+1 skiper)"
+  },
+  "(4 double cabins + 1 forepeak cabin and wc /shower)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne kabine + 1 pramčana kabina i WC /tuš)"
+  },
+  "(5+1 sk)": {
+    "dims": ["cabins"],
+    "hr": "(5+1 skiper)"
+  },
+  "(3 double bed, 1 twin bed)": {
+    "dims": ["cabins"],
+    "hr": "(3 s bračnim krevetom, 1 s odvojenim krevetima)"
+  },
+  "(1 Master, 1 small size Master, 2 Double, 2 Triple)": {
+    "dims": ["cabins"],
+    "hr": "(1 master, 1 manja master, 2 dvokrevetne, 2 trokrevetne)"
+  },
+  "(7 Double Cabins, 5 Twin Cabins, 6 Convertible Cabins) + crew": {
+    "dims": ["cabins"],
+    "hr": "(7 dvokrevetnih kabina, 5 kabina s odvojenim krevetima, 6 kabina koje se mogu preurediti) + posada"
+  },
+  "4 doubles + 2 forward berths": {
+    "dims": ["cabins"],
+    "hr": "4 dvokrevetne + 2 pramčana ležaja"
+  },
+  "six double cabins plus 2 single crew cabins": {
+    "dims": ["cabins"],
+    "hr": "šest dvokrevetnih kabina plus 2 jednokrevetne kabine za posadu"
+  },
+  "(4 guest + 1 skipper)": {
+    "dims": ["cabins"],
+    "hr": "(4 za goste + 1 skiper)"
+  },
+  "Bareboat: 3 Cabins (until 8 pax) / Skippered: 2 Cabins (until 4 pax)": {
+    "dims": ["cabins"],
+    "hr": "Bez skipera: 3 kabine (do 8 gostiju) / Sa skiperom: 2 kabine (do 4 gosta)"
+  },
+  "(4 double cabins + 1 crew cabin)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne kabine + 1 kabina za posadu)"
+  },
+  "1 cabin is reserved for the crew": {
+    "dims": ["cabins"],
+    "hr": "1 kabina rezervirana je za posadu"
+  },
+  "(3 double + 1 twin)": {
+    "dims": ["cabins"],
+    "hr": "(3 dvokrevetne + 1 s odvojenim krevetima)"
+  },
+  "(3 guest cabins + saloon + 3 crew cabins)": {
+    "dims": ["cabins"],
+    "hr": "(3 kabine za goste + salon + 3 kabine za posadu)"
+  },
+  "Dea Del Mare has 5 Cabins; 2 Master, 2 Double, 1 Twin all en suite.": {
+    "dims": ["cabins"],
+    "hr": "Dea Del Mare ima 5 kabina; 2 master, 2 dvokrevetne, 1 s odvojenim krevetima, sve s vlastitom kupaonicom."
+  },
+  "3+1 (for the skipper)": {
+    "dims": ["cabins"],
+    "hr": "3+1 (za skipera)"
+  },
+  "(2 double & 2 triple)": {
+    "dims": ["cabins"],
+    "hr": "(2 dvokrevetne & 2 trokrevetne)"
+  },
+  "(1 master cabin & 3 double cabins all with en-suite facilities for the guests)": {
+    "dims": ["cabins"],
+    "hr": "(1 master kabina & 3 dvokrevetne kabine, sve s vlastitom kupaonicom, za goste)"
+  },
+  "doubles cabins + convertible saloon + one forepeak": {
+    "dims": ["cabins"],
+    "hr": "dvokrevetne kabine + salon koji se pretvara u ležaj + jedan pramčani pik"
+  },
+  "4 + 1 skipper cabin": {
+    "dims": ["cabins"],
+    "hr": "4 + 1 skiperska kabina"
+  },
+  "+ 1(skipper)": {
+    "dims": ["cabins"],
+    "hr": "+ 1(skiper)"
+  },
+  "(3 Double +Saloon +1 Crew)": {
+    "dims": ["cabins"],
+    "hr": "(3 dvokrevetne +salon +1 za posadu)"
+  },
+  "(1 deluxe, 1 master, 2 vip twin, 2 vip double)": {
+    "dims": ["cabins"],
+    "hr": "(1 deluxe, 1 master, 2 VIP s odvojenim krevetima, 2 VIP dvokrevetne)"
+  },
+  "double cabins + one bunk beds": {
+    "dims": ["cabins"],
+    "hr": "dvokrevetne kabine + jedna s krevetima na kat"
+  },
+  "+1 peak": {
+    "dims": ["cabins"],
+    "hr": "+1 pramčani pik"
+  },
+  "4 (double) + 1 skipper cabin (reserved for skipper)": {
+    "dims": ["cabins"],
+    "hr": "4 (dvokrevetne) + 1 skiperska kabina (rezervirana za skipera)"
+  },
+  "+ 2 Skipper": {
+    "dims": ["cabins"],
+    "hr": "+ 2 skiper"
+  },
+  "(3 dbl + saloon)": {
+    "dims": ["cabins"],
+    "hr": "(3 dvokrevetne + salon)"
+  },
+  "(4 double+2 singles)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne+2 jednokrevetne)"
+  },
+  "or 3 (2 forward cabins are convertible to 1)": {
+    "dims": ["cabins"],
+    "hr": "ili 3 (2 pramčane kabine mogu se spojiti u 1)"
+  },
+  "+ 2 bow cabins": {
+    "dims": ["cabins"],
+    "hr": "+ 2 pramčane kabine"
+  },
+  "4 seperate double bed cabins": {
+    "dims": ["cabins"],
+    "hr": "4 odvojene kabine s bračnim krevetom"
+  },
+  "4+2 ( crew) +1": {
+    "dims": ["cabins"],
+    "hr": "4+2 ( posada) +1"
+  },
+  "(2 + Salon)": {
+    "dims": ["cabins"],
+    "hr": "(2 + salon)"
+  },
+  "(dbl cabins, plus 2 bow cabins) saloon convertible": {
+    "dims": ["cabins"],
+    "hr": "(dvokrevetne kabine, plus 2 pramčane kabine) salon se pretvara u ležaj"
+  },
+  "2 crew cabin + 1 crew head": {
+    "dims": ["cabins"],
+    "hr": "2 kabine za posadu + 1 WC za posadu"
+  },
+  "(5dbl + 1 bunk beds cabin + 1 forepeak cabin)": {
+    "dims": ["cabins"],
+    "hr": "(5 dvokrevetnih + 1 kabina s krevetima na kat + 1 pramčana kabina)"
+  },
+  "(3 double cabins for quests)": {
+    "dims": ["cabins"],
+    "hr": "(3 dvokrevetne kabine za goste)"
+  },
+  "(3 double + 1 bunk cabin)": {
+    "dims": ["cabins"],
+    "hr": "(3 dvokrevetne + 1 kabina s krevetom na kat)"
+  },
+  "(5+1 skypper)": {
+    "dims": ["cabins"],
+    "hr": "(5+1 skiper)"
+  },
+  "2 cabins + 1 Saloon Bed": {
+    "dims": ["cabins"],
+    "hr": "2 kabine + 1 ležaj u salonu"
+  },
+  "(3 cabins for passengers +1 for captain)": {
+    "dims": ["cabins"],
+    "hr": "(3 kabine za putnike +1 za kapetana)"
+  },
+  "+4 crew cabins": {
+    "dims": ["cabins"],
+    "hr": "+4 kabine za posadu"
+  },
+  "4 double cabins + 1 bunk bed cabin +1 skipper cabin": {
+    "dims": ["cabins"],
+    "hr": "4 dvokrevetne kabine + 1 kabina s krevetom na kat +1 skiperska kabina"
+  },
+  "(5+skipper cabin)": {
+    "dims": ["cabins"],
+    "hr": "(5+skiperska kabina)"
+  },
+  "(4 double +1 bunk beds)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne +1 s krevetima na kat)"
+  },
+  "+ 1 crew + 2 single": {
+    "dims": ["cabins"],
+    "hr": "+ 1 za posadu + 2 jednokrevetne"
+  },
+  "GUESTS: 1 master, 3 double cabins, 4 WCs; CREW: 1 twin cabin, 1 front peak, 2 WCs": {
+    "dims": ["cabins"],
+    "hr": "Gosti: 1 master, 3 dvokrevetne kabine, 4 WC-a; Posada: 1 kabina s odvojenim krevetima, 1 pramčani pik, 2 WC-a"
+  },
+  "(4 double + 2 semi double) + 1 berth in the bow comp": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne + 2 s polubračnim krevetom) + 1 ležaj u pramčanom odjeljku"
+  },
+  "3x double (plus one for the crew) +2 single": {
+    "dims": ["cabins"],
+    "hr": "3x dvokrevetna (plus jedna za posadu) +2 jednokrevetne"
+  },
+  "+ 1 with WC": {
+    "dims": ["cabins"],
+    "hr": "+ 1 s WC-om"
+  },
+  "plus saloon area": {
+    "dims": ["cabins"],
+    "hr": "plus prostor salona"
+  },
+  "(4 plus 2)": {
+    "dims": ["cabins"],
+    "hr": "(4 plus 2)"
+  },
+  "+ 2 crew + convertible table in saloon": {
+    "dims": ["cabins"],
+    "hr": "+ 2 za posadu + stol u salonu koji se pretvara u ležaj"
+  },
+  "(4 Dbl cabs + 1 berth in the bow comp)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne kabine + 1 ležaj u pramčanom odjeljku)"
+  },
+  "(4 double + 2 skipper)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne + 2 skiper)"
+  },
+  "It can be turned into 3 cabins": {
+    "dims": ["cabins"],
+    "hr": "Može se preurediti u 3 kabine"
+  },
+  "(4+2 skippers cabins)": {
+    "dims": ["cabins"],
+    "hr": "(4+2 skiperske kabine)"
+  },
+  "(1 berth in each bow comp.)": {
+    "dims": ["cabins"],
+    "hr": "(1 ležaj u svakom pramčanom odjeljku)"
+  },
+  "+( 1 +1 crew ) + convertible table in saloon": {
+    "dims": ["cabins"],
+    "hr": "+( 1 +1 za posadu ) + stol u salonu koji se pretvara u ležaj"
+  },
+  "( 4 double , 2 master and 2 triple)": {
+    "dims": ["cabins"],
+    "hr": "( 4 dvokrevetne , 2 master i 2 trokrevetne)"
+  },
+  "(4 double cabins + 2 peaks for skipper and/or hostess)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne kabine + 2 pramčana pika za skipera i/ili hostesu)"
+  },
+  "(4 double + 1 crew bunk cabin)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne + 1 kabina za posadu s krevetom na kat)"
+  },
+  "(4 guest cabin + skipper cabin)": {
+    "dims": ["cabins"],
+    "hr": "(4 kabine za goste + skiperska kabina)"
+  },
+  "(4 Double + 2 Crew))": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne + 2 za posadu))"
+  },
+  "(3 double cabins + 1 twin cabin convertible to a double bed)": {
+    "dims": ["cabins"],
+    "hr": "(3 dvokrevetne kabine + 1 kabina s odvojenim krevetima koji se mogu spojiti u bračni krevet)"
+  },
+  "(1 single+ 2 double + 1 Twin)": {
+    "dims": ["cabins"],
+    "hr": "(1 jednokrevetna+ 2 dvokrevetne + 1 s odvojenim krevetima)"
+  },
+  "Motor Yacht Calm Down has 6 Cabins; 3 Master, 2 Double, 1 Twin all en-suite.": {
+    "dims": ["cabins"],
+    "hr": "Motorna jahta Calm Down ima 6 kabina; 3 master, 2 dvokrevetne, 1 s odvojenim krevetima, sve s vlastitom kupaonicom."
+  },
+  "(5+1 Skipper)": {
+    "dims": ["cabins"],
+    "hr": "(5+1 skiper)"
+  },
+  "(4 double cabins + 1 with bunk beds + 1 skipper cabin)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne kabine + 1 s krevetima na kat + 1 skiperska kabina)"
+  },
+  "(Inc. 2 Bow Crew Quarters)": {
+    "dims": ["cabins"],
+    "hr": "(uklj. 2 kabine za posadu na pramcu)"
+  },
+  "1 skipper cabin accessible from outside, 3 showers + 1 shower in skipper cabin": {
+    "dims": ["cabins"],
+    "hr": "1 skiperska kabina s pristupom izvana, 3 tuša + 1 tuš u skiperskoj kabini"
+  },
+  "+1 crew + 1 bow": {
+    "dims": ["cabins"],
+    "hr": "+1 za posadu + 1 pramčana"
+  },
+  "(3 double-bed cabins +1 bunk bed cabin)": {
+    "dims": ["cabins"],
+    "hr": "(3 kabine s bračnim krevetom +1 kabina s krevetom na kat)"
+  },
+  "+ 1 crew cabins": {
+    "dims": ["cabins"],
+    "hr": "+ 1 kabina za posadu"
+  },
+  "(5 Double cabins)": {
+    "dims": ["cabins"],
+    "hr": "(5 dvokrevetnih kabina)"
+  },
+  "+ salon + two skipper cabins": {
+    "dims": ["cabins"],
+    "hr": "+ salon + dvije skiperske kabine"
+  },
+  "(2 double aft cabins + 2 single forepeak cabins for the crew)": {
+    "dims": ["cabins"],
+    "hr": "(2 dvokrevetne krmene kabine + 2 jednokrevetne pramčane kabine za posadu)"
+  },
+  "(4 Double + 1 BunkBed + Saloon)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne + 1 s krevetom na kat + salon)"
+  },
+  "+1 crew cabin": {
+    "dims": ["cabins"],
+    "hr": "+1 kabina za posadu"
+  },
+  "(6+2SK)": {
+    "dims": ["cabins"],
+    "hr": "(6+2 skiper)"
+  },
+  "(5 + 1 cabin)": {
+    "dims": ["cabins"],
+    "hr": "(5 + 1 kabina)"
+  },
+  "(5 double cabins + 2 crew cabins)": {
+    "dims": ["cabins"],
+    "hr": "(5 dvokrevetnih kabina + 2 kabine za posadu)"
+  },
+  "2 Master, 8 Double, 4 Triple, 2 Twin (seperate crew cabins)": {
+    "dims": ["cabins"],
+    "hr": "2 master, 8 dvokrevetnih, 4 trokrevetne, 2 s odvojenim krevetima (odvojene kabine za posadu)"
+  },
+  "+ 2 FOREPEAK CREW CABIN": {
+    "dims": ["cabins"],
+    "hr": "+ 2 pramčane kabine za posadu"
+  },
+  "(5 guest cabins + 1 crew cabin)": {
+    "dims": ["cabins"],
+    "hr": "(5 kabina za goste + 1 kabina za posadu)"
+  },
+  "(3 double bed + 1 bed bunk)": {
+    "dims": ["cabins"],
+    "hr": "(3 s bračnim krevetom + 1 s krevetom na kat)"
+  },
+  "guests + 2 crew (1 double & 1 single)": {
+    "dims": ["cabins"],
+    "hr": "gosti + 2 za posadu (1 dvokrevetna & 1 jednokrevetna)"
+  },
+  "(3 +1 bunk)": {
+    "dims": ["cabins"],
+    "hr": "(3 +1 s krevetom na kat)"
+  },
+  "double cabins + 1 forepeak": {
+    "dims": ["cabins"],
+    "hr": "dvokrevetne kabine + 1 pramčani pik"
+  },
+  "+ CONVERTIBLE SALOON + 1 CREW FOREPEAK CABINS": {
+    "dims": ["cabins"],
+    "hr": "+ salon koji se pretvara u ležaj + 1 pramčana kabina za posadu"
+  },
+  "11 double + 4 twin + 2 triple": {
+    "dims": ["cabins"],
+    "hr": "11 dvokrevetnih + 4 s odvojenim krevetima + 2 trokrevetne"
+  },
+  "(4 dbl + 2 single)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne + 2 jednokrevetne)"
+  },
+  "+1 (Skipper cabin)": {
+    "dims": ["cabins"],
+    "hr": "+1 (skiperska kabina)"
+  },
+  "(2 guest + 1 crew)": {
+    "dims": ["cabins"],
+    "hr": "(2 za goste + 1 za posadu)"
+  },
+  "(2 front bunk bed cabins)": {
+    "dims": ["cabins"],
+    "hr": "(2 pramčane kabine s krevetom na kat)"
+  },
+  "under consulting 1 cabin with bunk beds": {
+    "dims": ["cabins"],
+    "hr": "uz prethodni dogovor 1 kabina s krevetima na kat"
+  },
+  "PLUS SKIPPER": {
+    "dims": ["cabins"],
+    "hr": "plus skiper"
+  },
+  "(4 double + 1 single cabin)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne + 1 jednokrevetna kabina)"
+  },
+  "4+1 Skipper": {
+    "dims": ["cabins"],
+    "hr": "4+1 skiper"
+  },
+  "(+ 1 berth in each bow compartment)": {
+    "dims": ["cabins"],
+    "hr": "(+ 1 ležaj u svakom pramčanom odjeljku)"
+  },
+  "(2 Master, 2 Double, 2 Triple)": {
+    "dims": ["cabins"],
+    "hr": "(2 master, 2 dvokrevetne, 2 trokrevetne)"
+  },
+  "5+1 CABINS": {
+    "dims": ["cabins"],
+    "hr": "5+1 kabina"
+  },
+  "(+ skipper)": {
+    "dims": ["cabins"],
+    "hr": "(+ skiper)"
+  },
+  "(4 double +2 single x crew)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne +2 jednokrevetne za posadu)"
+  },
+  "(3 double cabins + 1 triple cabin + convertible saloon table + 2 bow )": {
+    "dims": ["cabins"],
+    "hr": "(3 dvokrevetne kabine + 1 trokrevetna kabina + stol u salonu koji se pretvara u ležaj + 2 na pramcu)"
+  },
+  "(1 master cabin & 3 VIP cabins)": {
+    "dims": ["cabins"],
+    "hr": "(1 master kabina & 3 VIP kabine)"
+  },
+  "4 double + 2 single crew cabins": {
+    "dims": ["cabins"],
+    "hr": "4 dvokrevetne + 2 jednokrevetne kabine za posadu"
+  },
+  "(6+1 Skipper) (5+1 Skipper+1 Hostess)": {
+    "dims": ["cabins"],
+    "hr": "(6+1 skiper) (5+1 skiper+1 hostesa)"
+  },
+  "(+ 1 berth in each bow)": {
+    "dims": ["cabins"],
+    "hr": "(+ 1 ležaj u svakom pramcu)"
+  },
+  "- 3 double guest + 1 cabin for staff": {
+    "dims": ["cabins"],
+    "hr": "- 3 dvokrevetne za goste + 1 kabina za osoblje"
+  },
+  "(3 + 1 convertible saloon)": {
+    "dims": ["cabins"],
+    "hr": "(3 + 1 salon koji se pretvara u ležaj)"
+  },
+  "4 cabins + skipper cabin in starboard forepeak": {
+    "dims": ["cabins"],
+    "hr": "4 kabine + skiperska kabina u desnom pramčanom piku"
+  },
+  "(6D + 2CREW)": {
+    "dims": ["cabins"],
+    "hr": "(6 dvokrevetnih + 2 za posadu)"
+  },
+  "(4 double -1 bunk bed - 2 single beds)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne -1 s krevetom na kat - 2 jednostruka kreveta)"
+  },
+  "+2 pointes (dont une avec salle de bain)": {
+    "dims": ["cabins"],
+    "hr": "+2 pramčana pika (od kojih jedan s kupaonicom)"
+  },
+  "Convertible saloon into a double bed": {
+    "dims": ["cabins"],
+    "hr": "Salon se pretvara u bračni krevet"
+  },
+  "(4 doubles + 1 crew)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne + 1 za posadu)"
+  },
+  "(Removable paravane separating bow cabins)": {
+    "dims": ["cabins"],
+    "hr": "(Pomična pregrada između pramčanih kabina)"
+  },
+  "(5 +1 single skipper's cabin)": {
+    "dims": ["cabins"],
+    "hr": "(5 +1 jednokrevetna skiperska kabina)"
+  },
+  "1 cabine double": {
+    "dims": ["cabins"],
+    "hr": "1 dvokrevetna kabina"
+  },
+  "1 out of 5 cabins is suitable for children (bunk bed)": {
+    "dims": ["cabins"],
+    "hr": "1 od 5 kabina prikladna je za djecu (krevet na kat)"
+  },
+  "(3+ Skipper)": {
+    "dims": ["cabins"],
+    "hr": "(3+ skiper)"
+  },
+  "Convertible from 2 very large cabins to 4 double cabins": {
+    "dims": ["cabins"],
+    "hr": "Mogućnost pretvorbe iz 2 vrlo velike kabine u 4 dvokrevetne kabine"
+  },
+  "3 double cabins for the guests + crew cabins": {
+    "dims": ["cabins"],
+    "hr": "3 dvokrevetne kabine za goste + kabine za posadu"
+  },
+  "(5 + skipper's cabin)": {
+    "dims": ["cabins"],
+    "hr": "(5 + skiperska kabina)"
+  },
+  "4 Master Double Cabins, 1 Cabin with Bunk Beds and 1 Skipper Cabin": {
+    "dims": ["cabins"],
+    "hr": "4 master dvokrevetne kabine, 1 kabina s krevetima na kat i 1 skiperska kabina"
+  },
+  "+ skipper's cabin": {
+    "dims": ["cabins"],
+    "hr": "+ skiperska kabina"
+  },
+  "5 Double, 3 Twin": {
+    "dims": ["cabins"],
+    "hr": "5 dvokrevetnih, 3 s odvojenim krevetima"
+  },
+  "(6 double + 2 single)": {
+    "dims": ["cabins"],
+    "hr": "(6 dvokrevetnih + 2 jednokrevetne)"
+  },
+  "(4 double en suite cabins + 1 single in portside forepeak)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne kabine s vlastitom kupaonicom + 1 jednokrevetna u lijevom pramčanom piku)"
+  },
+  "+ 2cabins": {
+    "dims": ["cabins"],
+    "hr": "+ 2 kabine"
+  },
+  "(4 + 2 SKIPPER CABINS)": {
+    "dims": ["cabins"],
+    "hr": "(4 + 2 skiperske kabine)"
+  },
+  "4 double cabins and 1 cabin with bunk bed, 1 Skipper Cabin": {
+    "dims": ["cabins"],
+    "hr": "4 dvokrevetne kabine i 1 kabina s krevetom na kat, 1 skiperska kabina"
+  },
+  "(5 guest double +1 crew bunk)": {
+    "dims": ["cabins"],
+    "hr": "(5 dvokrevetnih za goste +1 ležaj za posadu)"
+  },
+  "(4 Double Cabins)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne kabine)"
+  },
+  "(4 double + skipper)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne + skiper)"
+  },
+  "(3 doubles + 2 simples)": {
+    "dims": ["cabins"],
+    "hr": "(3 dvokrevetne + 2 jednokrevetne)"
+  },
+  "+crew cabin": {
+    "dims": ["cabins"],
+    "hr": "+kabina za posadu"
+  },
+  "4 double cabins + cabin in bow": {
+    "dims": ["cabins"],
+    "hr": "4 dvokrevetne kabine + kabina na pramcu"
+  },
+  "+ convertible table in salon": {
+    "dims": ["cabins"],
+    "hr": "+ stol u salonu koji se pretvara u ležaj"
+  },
+  "(2 king+1 dbl for guests+2 for crew)": {
+    "dims": ["cabins"],
+    "hr": "(2 s king size krevetom+1 dvokrevetna za goste+2 za posadu)"
+  },
+  "+2 single for crew": {
+    "dims": ["cabins"],
+    "hr": "+2 jednokrevetne za posadu"
+  },
+  "4 double cabins + 1 skipper cabin": {
+    "dims": ["cabins"],
+    "hr": "4 dvokrevetne kabine + 1 skiperska kabina"
+  },
+  "(5 cabins + 2 forepeak cabins)": {
+    "dims": ["cabins"],
+    "hr": "(5 kabina + 2 pramčane kabine)"
+  },
+  "(4 double + 2 single for the crew)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne + 2 jednokrevetne za posadu)"
+  },
+  "(4 Guest + 2 Crew)": {
+    "dims": ["cabins"],
+    "hr": "(4 za goste + 2 za posadu)"
+  },
+  "(master + 4 guests)": {
+    "dims": ["cabins"],
+    "hr": "(master + 4 za goste)"
+  },
+  "(4 double +2 single)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne +2 jednokrevetne)"
+  },
+  "(4D+CREW)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne+posada)"
+  },
+  "(5 double + 1 with 2 single beds + 2 skipper's with toilets and showers)": {
+    "dims": ["cabins"],
+    "hr": "(5 dvokrevetnih + 1 s 2 jednostruka kreveta + 2 skiperske s WC-ima i tuševima)"
+  },
+  "6 double cabins plus 2 crew": {
+    "dims": ["cabins"],
+    "hr": "6 dvokrevetnih kabina plus 2 za posadu"
+  },
+  "(5+2 skipper)": {
+    "dims": ["cabins"],
+    "hr": "(5+2 skiper)"
+  },
+  "(2 cabins + salon)": {
+    "dims": ["cabins"],
+    "hr": "(2 kabine + salon)"
+  },
+  "(4+2 crew cabins)": {
+    "dims": ["cabins"],
+    "hr": "(4+2 kabine za posadu)"
+  },
+  "3+1 skipper cabin": {
+    "dims": ["cabins"],
+    "hr": "3+1 skiperska kabina"
+  },
+  "(3 Guest cabins + 1 Skipper cabin)": {
+    "dims": ["cabins"],
+    "hr": "(3 kabine za goste + 1 skiperska kabina)"
+  },
+  "(3 guest +1 crew)": {
+    "dims": ["cabins"],
+    "hr": "(3 za goste +1 za posadu)"
+  },
+  "(4+1 bow skipper cabin)": {
+    "dims": ["cabins"],
+    "hr": "(4+1 pramčana skiperska kabina)"
+  },
+  "(3 + Skipper's cabin + Saloon)": {
+    "dims": ["cabins"],
+    "hr": "(3 + skiperska kabina + salon)"
+  },
+  "(4 double +1 single) + 2 skipper's cabins": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne +1 jednokrevetna) + 2 skiperske kabine"
+  },
+  "(4 Double/1 Bunk Bed Cabin/1 Skipper's Cabin)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne/1 kabina s krevetom na kat/1 skiperska kabina)"
+  },
+  "(6 double + 2 crew)": {
+    "dims": ["cabins"],
+    "hr": "(6 dvokrevetnih + 2 za posadu)"
+  },
+  "(4D+1 small cabin,not intended for the crew)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne+1 mala kabina, nije namijenjena posadi)"
+  },
+  "(5 double for guests + 1 separate crew quarters) Cabins": {
+    "dims": ["cabins"],
+    "hr": "(5 dvokrevetnih za goste + 1 odvojeni prostor za posadu) Kabine"
+  },
+  "+ Skipper Cabins": {
+    "dims": ["cabins"],
+    "hr": "+ skiperske kabine"
+  },
+  "(5 double + 1 skipper)": {
+    "dims": ["cabins"],
+    "hr": "(5 dvokrevetnih + 1 skiper)"
+  },
+  "4 cabins (double) + 1 skipper cabin (single)": {
+    "dims": ["cabins"],
+    "hr": "4 kabine (dvokrevetne) + 1 skiperska kabina (jednokrevetna)"
+  },
+  "4 Dbl Cabins+2 Singles in bow": {
+    "dims": ["cabins"],
+    "hr": "4 dvokrevetne kabine+2 jednokrevetne na pramcu"
+  },
+  "4 double +1 (the extra bunk with WC is for the crew)": {
+    "dims": ["cabins"],
+    "hr": "4 dvokrevetne +1 (dodatni ležaj s WC-om namijenjen je posadi)"
+  },
+  "(1 VIP Cabin, 1 Double Cabin, 1 Bunk Bed)": {
+    "dims": ["cabins"],
+    "hr": "(1 VIP kabina, 1 dvokrevetna kabina, 1 s krevetom na kat)"
+  },
+  "(1 for clients + 1 for the skipper)": {
+    "dims": ["cabins"],
+    "hr": "(1 za goste + 1 za skipera)"
+  },
+  "double cabines + 1 forepeak": {
+    "dims": ["cabins"],
+    "hr": "dvokrevetne kabine + 1 pramčani pik"
+  },
+  "cabine + carré convertible": {
+    "dims": ["cabins"],
+    "hr": "kabina + salon koji se pretvara u ležaj"
+  },
+  "5 double cabins (1 can be 2 single beds) + 1 skipper cabin": {
+    "dims": ["cabins"],
+    "hr": "5 dvokrevetnih kabina (1 može imati 2 jednostruka kreveta) + 1 skiperska kabina"
+  },
+  "(4 Dbl cabs + 1 berth in each bow comp.)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne kabine + 1 ležaj u svakom pramčanom odjeljku)"
+  },
+  "(3 double-bed cabins + 1 with bunk bed)": {
+    "dims": ["cabins"],
+    "hr": "(3 kabine s bračnim krevetom + 1 s krevetom na kat)"
+  },
+  "4 guest cabins + 2 crew cabins": {
+    "dims": ["cabins"],
+    "hr": "4 kabine za goste + 2 kabine za posadu"
+  },
+  "(5 double + 1 single for skipper)": {
+    "dims": ["cabins"],
+    "hr": "(5 dvokrevetnih + 1 jednokrevetna za skipera)"
+  },
+  "1 Master Cabin + 3 Spacious Double Cabins": {
+    "dims": ["cabins"],
+    "hr": "1 master kabina + 3 prostrane dvokrevetne kabine"
+  },
+  "(4 plus 2 crew cabins)": {
+    "dims": ["cabins"],
+    "hr": "(4 plus 2 kabine za posadu)"
+  },
+  "+2 saloon": {
+    "dims": ["cabins"],
+    "hr": "+2 salon"
+  },
+  "(5+ Skipper's cabin)": {
+    "dims": ["cabins"],
+    "hr": "(5+ skiperska kabina)"
+  },
+  "(3 doubles)": {
+    "dims": ["cabins"],
+    "hr": "(3 dvokrevetne)"
+  },
+  "(3+1 convertible saloon)": {
+    "dims": ["cabins"],
+    "hr": "(3+1 salon koji se pretvara u ležaj)"
+  },
+  "+ 2 CREW FOREPEAK CABIN": {
+    "dims": ["cabins"],
+    "hr": "+ 2 pramčane kabine za posadu"
+  },
+  "4 double cabins plus two forward peak cabins": {
+    "dims": ["cabins"],
+    "hr": "4 dvokrevetne kabine plus dvije pramčane kabine"
+  },
+  "8 Double": {
+    "dims": ["cabins"],
+    "hr": "8 dvokrevetnih"
+  },
+  "for guests + crew and skipper cabins": {
+    "dims": ["cabins"],
+    "hr": "za goste + kabine za posadu i skipera"
+  },
+  "[ 4 double +1 forepeak ]": {
+    "dims": ["cabins"],
+    "hr": "[ 4 dvokrevetne +1 pramčani pik ]"
+  },
+  "(2 double cabins and 1 bed bank cabin)": {
+    "dims": ["cabins"],
+    "hr": "(2 dvokrevetne kabine i 1 kabina s krevetom na kat)"
+  },
+  "(5 Double + Saloon + 1 Crew)": {
+    "dims": ["cabins"],
+    "hr": "(5 dvokrevetnih + salon + 1 za posadu)"
+  },
+  "(5 double + 1 bunk bed + 2 single)": {
+    "dims": ["cabins"],
+    "hr": "(5 dvokrevetnih + 1 s krevetom na kat + 2 jednokrevetne)"
+  },
+  "1 Master, 1 VIP, 2 convertible cabins can be used as Double or Twin cabins.": {
+    "dims": ["cabins"],
+    "hr": "1 master, 1 VIP, 2 prilagodljive kabine mogu se koristiti kao dvokrevetne ili s odvojenim krevetima."
+  },
+  "(4+2crew)": {
+    "dims": ["cabins"],
+    "hr": "(4+2 za posadu)"
+  },
+  "double cabins+forepeak": {
+    "dims": ["cabins"],
+    "hr": "dvokrevetne kabine+pramčani pik"
+  },
+  "(4 Double + Saloon)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne + salon)"
+  },
+  "+ deux pointes + carré convertible": {
+    "dims": ["cabins"],
+    "hr": "+ dva pramčana pika + salon koji se pretvara u ležaj"
+  },
+  "(4 double for guests + 1 separate crew quarters)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne za goste + 1 odvojeni prostor za posadu)"
+  },
+  "4 + 2 skipper cabin": {
+    "dims": ["cabins"],
+    "hr": "4 + 2 skiperske kabine"
+  },
+  "(4 double + 1 with bunk beds + 1 skippers )": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne + 1 s krevetima na kat + 1 za skipera)"
+  },
+  "(3 double +1 bunk cabin)": {
+    "dims": ["cabins"],
+    "hr": "(3 dvokrevetne +1 kabina s krevetom na kat)"
+  },
+  "2 double + 2 twin": {
+    "dims": ["cabins"],
+    "hr": "2 dvokrevetne + 2 s odvojenim krevetima"
+  },
+  "4 dowble + 1 bunker + 1 crew (5 wc +1)": {
+    "dims": ["cabins"],
+    "hr": "4 dvokrevetne + 1 s krevetom na kat + 1 za posadu (5 WC +1)"
+  },
+  "double cabins + one forepeak": {
+    "dims": ["cabins"],
+    "hr": "dvokrevetne kabine + jedan pramčani pik"
+  },
+  "3 +1 crew": {
+    "dims": ["cabins"],
+    "hr": "3 +1 za posadu"
+  },
+  "5+1 \"skippers\"": {
+    "dims": ["cabins"],
+    "hr": "5+1 \"skiperska\""
+  },
+  "(4 double cabins with ensuite bath for guests + 2 crew cabin with bath)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne kabine s vlastitom kupaonicom za goste + 2 kabine za posadu s kupaonicom)"
+  },
+  "+ 1 crew Cabin": {
+    "dims": ["cabins"],
+    "hr": "+ 1 kabina za posadu"
+  },
+  "(3 double, 1 bunkbed)": {
+    "dims": ["cabins"],
+    "hr": "(3 dvokrevetne, 1 s krevetom na kat)"
+  },
+  "incl 2 crew cabins in forepeak": {
+    "dims": ["cabins"],
+    "hr": "uključujući 2 kabine za posadu u pramčanom piku"
+  },
+  "(4 double cabins +1 crew bunk bed in the forepeak cabin)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne kabine +1 krevet na kat za posadu u pramčanoj kabini)"
+  },
+  "(1 Master + 2 Double cabins)": {
+    "dims": ["cabins"],
+    "hr": "(1 master + 2 dvokrevetne kabine)"
+  },
+  "( 4 Double cabins+2 twin cabin )": {
+    "dims": ["cabins"],
+    "hr": "( 4 dvokrevetne kabine+2 kabine s odvojenim krevetima )"
+  },
+  "(4 +2 crew cabins)": {
+    "dims": ["cabins"],
+    "hr": "(4 +2 kabine za posadu)"
+  },
+  "(3-cabin conversion available)": {
+    "dims": ["cabins"],
+    "hr": "(moguća preinaka u 3 kabine)"
+  },
+  "5 double cabin+1 skipper cabin with WC/shower": {
+    "dims": ["cabins"],
+    "hr": "5 dvokrevetnih kabina+1 skiperska kabina s WC-om/tušem"
+  },
+  "(2 double)": {
+    "dims": ["cabins"],
+    "hr": "(2 dvokrevetne)"
+  },
+  "(11 Double Cabins, 2 Twin Cabins) + crew": {
+    "dims": ["cabins"],
+    "hr": "(11 dvokrevetnih kabina, 2 kabine s odvojenim krevetima) + posada"
+  },
+  "+ 1 Skipper's cabin": {
+    "dims": ["cabins"],
+    "hr": "+ 1 skiperska kabina"
+  },
+  "4 Double cabins + 1 Skipper Cabin": {
+    "dims": ["cabins"],
+    "hr": "4 dvokrevetne kabine + 1 skiperska kabina"
+  },
+  "double cabins + 1 bunk bed cabin": {
+    "dims": ["cabins"],
+    "hr": "dvokrevetne kabine + 1 kabina s krevetom na kat"
+  },
+  "(4 double-bed cabins +2 cabins with bunk beds)": {
+    "dims": ["cabins"],
+    "hr": "(4 kabine s bračnim krevetom +2 kabine s krevetima na kat)"
+  },
+  "(2 Master, 1 Double/or Twin)": {
+    "dims": ["cabins"],
+    "hr": "(2 master, 1 dvokrevetna/ili s odvojenim krevetima)"
+  },
+  "(+1 crew cabin)": {
+    "dims": ["cabins"],
+    "hr": "(+1 kabina za posadu)"
+  },
+  "+ 2 pointes aménagées": {
+    "dims": ["cabins"],
+    "hr": "+ 2 uređena pramčana pika"
+  },
+  "(4 double + 1 bunk + 1 crew cabin)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne + 1 s krevetom na kat + 1 kabina za posadu)"
+  },
+  "(3 double + crew cabin)": {
+    "dims": ["cabins"],
+    "hr": "(3 dvokrevetne + kabina za posadu)"
+  },
+  "(4 double + 1 with bunk beds + 1 skippers + 1 hostess)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne + 1 s krevetima na kat + 1 za skipera + 1 za hostesu)"
+  },
+  "(3D+CREW)": {
+    "dims": ["cabins"],
+    "hr": "(3 dvokrevetne+posada)"
+  },
+  "(4 double + 1 bunk beds)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne + 1 s krevetima na kat)"
+  },
+  "(5 + 2 crew)": {
+    "dims": ["cabins"],
+    "hr": "(5 + 2 za posadu)"
+  },
+  "(6 double + 2 single for the crew)": {
+    "dims": ["cabins"],
+    "hr": "(6 dvokrevetnih + 2 jednokrevetne za posadu)"
+  },
+  "2 master + 4 double cabins + extra crew cabin": {
+    "dims": ["cabins"],
+    "hr": "2 master + 4 dvokrevetne kabine + dodatna kabina za posadu"
+  },
+  "5 cabins; 2 Master, 3 Double ( 1 pull bed ) all en-suite.": {
+    "dims": ["cabins"],
+    "hr": "5 kabina; 2 master, 3 dvokrevetne ( 1 krevet na izvlačenje ) sve s vlastitom kupaonicom."
+  },
+  "(Removable paravane seperating bow cabins)": {
+    "dims": ["cabins"],
+    "hr": "(Pomična pregrada između pramčanih kabina)"
+  },
+  "(3+1 bunk bed cabin)": {
+    "dims": ["cabins"],
+    "hr": "(3+1 kabina s krevetom na kat)"
+  },
+  "(3 double cabin + crew cabin)": {
+    "dims": ["cabins"],
+    "hr": "(3 dvokrevetne kabine + kabina za posadu)"
+  },
+  "(1 VIP, 2 aft, 1 mid)": {
+    "dims": ["cabins"],
+    "hr": "(1 VIP, 2 krmene, 1 središnja)"
+  },
+  "(3 dbl cabins for the guests, 1 cabin for the crew)": {
+    "dims": ["cabins"],
+    "hr": "(3 dvokrevetne kabine za goste, 1 kabina za posadu)"
+  },
+  "(5 double + 1 single crew)": {
+    "dims": ["cabins"],
+    "hr": "(5 dvokrevetnih + 1 jednokrevetna za posadu)"
+  },
+  "(3 Double Cabins) + crew": {
+    "dims": ["cabins"],
+    "hr": "(3 dvokrevetne kabine) + posada"
+  },
+  "Seperate Crew Cabins": {
+    "dims": ["cabins"],
+    "hr": "Odvojene kabine za posadu"
+  },
+  "(1 master suite, 4 double cabins, ensuite WCs; CREW: 2 front peaks + WC)": {
+    "dims": ["cabins"],
+    "hr": "(1 master suite, 4 dvokrevetne kabine, vlastiti WC-i; posada: 2 pramčana pika + WC)"
+  },
+  "(4 double + 1 double bunk + 1 single bow cabin)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne + 1 dvostruki krevet na kat + 1 jednokrevetna pramčana kabina)"
+  },
+  "(4 cabins for guests + dinette + 2 berths in the bow)": {
+    "dims": ["cabins"],
+    "hr": "(4 kabine za goste + salon + 2 ležaja na pramcu)"
+  },
+  "2 large triple cabins (double + single), 2 double cabins, 4 twin cabins": {
+    "dims": ["cabins"],
+    "hr": "2 velike trokrevetne kabine (bračni + jednostruki krevet), 2 dvokrevetne kabine, 4 kabine s odvojenim krevetima"
+  },
+  "(4+1 pullman crew cabin+ 1 double crew cabin)": {
+    "dims": ["cabins"],
+    "hr": "(4+1 pullman kabina za posadu+ 1 dvokrevetna kabina za posadu)"
+  },
+  "(1 master king double, 2 queen double, 1 twin)": {
+    "dims": ["cabins"],
+    "hr": "(1 master s king size bračnim krevetom, 2 s queen size bračnim krevetom, 1 s odvojenim krevetima)"
+  },
+  "cabins": {
+    "dims": ["cabins"],
+    "hr": "kabine"
+  },
+  "(4D + 1S + 1 skipper)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne + 1 jednokrevetna + 1 skiper)"
+  },
+  "(4+Skipper's cabin)": {
+    "dims": ["cabins"],
+    "hr": "(4+skiperska kabina)"
+  },
+  "(2 double-bed cabins)": {
+    "dims": ["cabins"],
+    "hr": "(2 kabine s bračnim krevetom)"
+  },
+  "(Two double aft cabins and two single forepeak cabins for the crew)": {
+    "dims": ["cabins"],
+    "hr": "(Dvije dvokrevetne krmene kabine i dvije jednokrevetne pramčane kabine za posadu)"
+  },
+  "(1 master cabin + 2 double cabins) + 1 forepeak cabin": {
+    "dims": ["cabins"],
+    "hr": "(1 master kabina + 2 dvokrevetne kabine) + 1 pramčana kabina"
+  },
+  "2 Master, 3 Double": {
+    "dims": ["cabins"],
+    "hr": "2 master, 3 dvokrevetne"
+  },
+  "(1master + 4 double)": {
+    "dims": ["cabins"],
+    "hr": "(1 master + 4 dvokrevetne)"
+  },
+  "(1 master cabin +2 double-bed cabins +1 cabin with bunk beds + 1 bow cabin)": {
+    "dims": ["cabins"],
+    "hr": "(1 master kabina +2 kabine s bračnim krevetom +1 kabina s krevetima na kat + 1 pramčana kabina)"
+  },
+  "+1 (1 master + 2 x double + 1 x Saloon)": {
+    "dims": ["cabins"],
+    "hr": "+1 (1 master + 2 x dvokrevetna + 1 x salon)"
+  },
+  "[ 4 double +2 single (for skipper and hostess)]": {
+    "dims": ["cabins"],
+    "hr": "[ 4 dvokrevetne +2 jednokrevetne (za skipera i hostesu)]"
+  },
+  "(1 master + 2 standard + crew)": {
+    "dims": ["cabins"],
+    "hr": "(1 master + 2 standardne + posada)"
+  },
+  "(4 double cabins+ convertible table in saloon+ 2 bow cabin with fun,usb port)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne kabine+ stol u salonu koji se pretvara u ležaj+ 2 pramčane kabine s ventilatorom, USB priključkom)"
+  },
+  "(4 double + 1 single skipper)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne + 1 jednokrevetna skiperska)"
+  },
+  "3 double cabins + 2 convirtable salon + skipper cabin": {
+    "dims": ["cabins"],
+    "hr": "3 dvokrevetne kabine + 2 u salonu koji se pretvara u ležaj + skiperska kabina"
+  },
+  "(4 double +1 bunk bed)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne +1 s krevetom na kat)"
+  },
+  "(3 double for the guest + crew)": {
+    "dims": ["cabins"],
+    "hr": "(3 dvokrevetne za goste + posada)"
+  },
+  "(Inc. 1 Crew Bow Quarter)": {
+    "dims": ["cabins"],
+    "hr": "(Uključujući 1 prostor za posadu na pramcu)"
+  },
+  "(6 + 2 crew front peak)": {
+    "dims": ["cabins"],
+    "hr": "(6 + 2 za posadu u pramčanom piku)"
+  },
+  "+ 1 bunk cab + 2 bow": {
+    "dims": ["cabins"],
+    "hr": "+ 1 kabina s krevetom na kat + 2 na pramcu"
+  },
+  "(5D+1+1skipp)": {
+    "dims": ["cabins"],
+    "hr": "(5 dvokrevetnih+1+1 skiper)"
+  },
+  "(4 double-bed cabins +1 cabin with bunk bed +1 bow cabin)": {
+    "dims": ["cabins"],
+    "hr": "(4 kabine s bračnim krevetom +1 kabina s krevetom na kat +1 pramčana kabina)"
+  },
+  "3+2 crew": {
+    "dims": ["cabins"],
+    "hr": "3+2 za posadu"
+  },
+  "(4 Dbl cabs + 1 berth in each bow compartment)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne kabine + 1 ležaj u svakom pramčanom odjeljku)"
+  },
+  "(2 Master cabins& 4 triple cabins)": {
+    "dims": ["cabins"],
+    "hr": "(2 master kabine & 4 trokrevetne kabine)"
+  },
+  "(5+2 bow crew cabin)": {
+    "dims": ["cabins"],
+    "hr": "(5+2 pramčane kabine za posadu)"
+  },
+  "+ 1 crew + convertible salon": {
+    "dims": ["cabins"],
+    "hr": "+ 1 za posadu + salon koji se pretvara u ležaj"
+  },
+  "(4 + 2 crew)": {
+    "dims": ["cabins"],
+    "hr": "(4 + 2 za posadu)"
+  },
+  "4+2 Cabins (Salon convertible)": {
+    "dims": ["cabins"],
+    "hr": "4+2 kabine (salon se pretvara u ležaj)"
+  },
+  "(4 Double/1 Skippers' Cabin/Saloon Berth)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne/1 skiperska kabina/ležaj u salonu)"
+  },
+  "(4 double, 2 single)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne, 2 jednokrevetne)"
+  },
+  "di cui 3 matrimoniali + 2 castello + dinette solo su panca": {
+    "dims": ["cabins"],
+    "hr": "od toga 3 s bračnim krevetom + 2 s krevetom na kat + salon samo na klupi"
+  },
+  "(4dbl+2sgl berth length 1,85m)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne+2 jednokrevetne, duljina ležaja 1,85 m)"
+  },
+  "5 Cabins; 2 Master, 3 Double all en-suite": {
+    "dims": ["cabins"],
+    "hr": "5 kabina; 2 master, 3 dvokrevetne, sve s vlastitom kupaonicom"
+  },
+  "(3+1 CREW CABIN)": {
+    "dims": ["cabins"],
+    "hr": "(3+1 kabina za posadu)"
+  },
+  "1 Master, 2 Double, 1 Twin cabins": {
+    "dims": ["cabins"],
+    "hr": "1 master, 2 dvokrevetne, 1 kabina s odvojenim krevetima"
+  },
+  "(4 Dbl cabins, 1 bunk beds cabin +1 forepeak cabin)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne kabine, 1 kabina s krevetima na kat +1 pramčana kabina)"
+  },
+  "4 cabins: 1 Master, 1 VIP, 1 Double, 1 Twin": {
+    "dims": ["cabins"],
+    "hr": "4 kabine: 1 master, 1 VIP, 1 dvokrevetna, 1 s odvojenim krevetima"
+  },
+  "(+ crew cabin)": {
+    "dims": ["cabins"],
+    "hr": "(+ kabina za posadu)"
+  },
+  "(4 Double + 1 bunk bed +2 Crew)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne + 1 s krevetom na kat +2 za posadu)"
+  },
+  "(4 Double + 1 Twin + 1 Skipper)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne + 1 s odvojenim krevetima + 1 skiper)"
+  },
+  "+ 2 pointes avant": {
+    "dims": ["cabins"],
+    "hr": "+ 2 pramčana pika"
+  },
+  "3 Double & 1 Bunk Cabin": {
+    "dims": ["cabins"],
+    "hr": "3 dvokrevetne & 1 kabina s krevetom na kat"
+  },
+  "(4 double + 1 crew cabin + convertible saloon table)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne + 1 kabina za posadu + stol u salonu koji se pretvara u ležaj)"
+  },
+  "+ 1 bunk cab for crew + 1 bow crew cab": {
+    "dims": ["cabins"],
+    "hr": "+ 1 kabina s krevetom na kat za posadu + 1 pramčana kabina za posadu"
+  },
+  "GUESTS: 4 double + 1 bunk beds. CREW: 1 front peak + WC to share with guests": {
+    "dims": ["cabins"],
+    "hr": "Gosti: 4 dvokrevetne + 1 s krevetima na kat. Posada: 1 pramčani pik + WC koji dijeli s gostima"
+  },
+  "(1 master cabins +3 double guest + 1 bunkbed + crew)": {
+    "dims": ["cabins"],
+    "hr": "(1 master kabina +3 dvokrevetne za goste + 1 s krevetom na kat + posada)"
+  },
+  "1 cabina aggiuntiva ricavata sotto gavone a poppa": {
+    "dims": ["cabins"],
+    "hr": "1 dodatna kabina uređena ispod krmenog spremišta"
+  },
+  "4 doubles + 1 lits superposés (crew)": {
+    "dims": ["cabins"],
+    "hr": "4 dvokrevetne + 1 s krevetima na kat (posada)"
+  },
+  "(4 + 1 + Convertible Saloon table)": {
+    "dims": ["cabins"],
+    "hr": "(4 + 1 + stol u salonu koji se pretvara u ležaj)"
+  },
+  "(4 double + 2 semi double + 1 single cabin in one bow)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne + 2 s polubračnim krevetom + 1 jednokrevetna kabina u jednom pramcu)"
+  },
+  "4 guest cabin + forepeak skipper cab": {
+    "dims": ["cabins"],
+    "hr": "4 kabine za goste + skiperska kabina u pramčanom piku"
+  },
+  "(1 master cabin + 2 double guest + crew)": {
+    "dims": ["cabins"],
+    "hr": "(1 master kabina + 2 dvokrevetne za goste + posada)"
+  },
+  "(5+2 crew)": {
+    "dims": ["cabins"],
+    "hr": "(5+2 za posadu)"
+  },
+  "(4 double + 2 single cabins)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne + 2 jednokrevetne kabine)"
+  },
+  "+ 2 crew cabins in peeks": {
+    "dims": ["cabins"],
+    "hr": "+ 2 kabine za posadu u pramčanim pikovima"
+  },
+  "(5 double cabins + sofa)": {
+    "dims": ["cabins"],
+    "hr": "(5 dvokrevetnih kabina + sofa)"
+  },
+  "4 cabins : 2 Master , 1 Double, 1 Twin cabins, all en-suite.": {
+    "dims": ["cabins"],
+    "hr": "4 kabine: 2 master, 1 dvokrevetna, 1 s odvojenim krevetima, sve s vlastitom kupaonicom."
+  },
+  "Guests: 1 Queen, 1 twin, 2 double; Crew: 1 forepeak, 1 triple + 2 WCs": {
+    "dims": ["cabins"],
+    "hr": "Gosti: 1 s queen size krevetom, 1 s odvojenim krevetima, 2 dvokrevetne; posada: 1 pramčani pik, 1 trokrevetna + 2 WC-a"
+  },
+  "(5 +1 skipper)": {
+    "dims": ["cabins"],
+    "hr": "(5 +1 skiper)"
+  },
+  "4 cabines doubles + 2 pointes": {
+    "dims": ["cabins"],
+    "hr": "4 dvokrevetne kabine + 2 pramčana pika"
+  },
+  "(6 + 1 crew front peak)": {
+    "dims": ["cabins"],
+    "hr": "(6 + 1 za posadu u pramčanom piku)"
+  },
+  "(4 double bed + 1 bow cabin)": {
+    "dims": ["cabins"],
+    "hr": "(4 s bračnim krevetom + 1 pramčana kabina)"
+  },
+  "(3 doubles cabins + 1 bunk beds+one forepeak)": {
+    "dims": ["cabins"],
+    "hr": "(3 dvokrevetne kabine + 1 s krevetima na kat+jedan pramčani pik)"
+  },
+  "(5 double +1 skipper)": {
+    "dims": ["cabins"],
+    "hr": "(5 dvokrevetnih +1 skiper)"
+  },
+  "4 guest cabins plus 2 crew cabins": {
+    "dims": ["cabins"],
+    "hr": "4 kabine za goste plus 2 kabine za posadu"
+  },
+  "(4+1 Skipper) (3+1 skipper + 1 Hostess)": {
+    "dims": ["cabins"],
+    "hr": "(4+1 skiper) (3+1 skiper + 1 hostesa)"
+  },
+  "4 double cabins + 1 crew or 3 doubles cabins + 2 crew": {
+    "dims": ["cabins"],
+    "hr": "4 dvokrevetne kabine + 1 za posadu ili 3 dvokrevetne kabine + 2 za posadu"
+  },
+  "+ 2 Crew Cabins": {
+    "dims": ["cabins"],
+    "hr": "+ 2 kabine za posadu"
+  },
+  "(4 double+1 bunkbed+skipper)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne+1 s krevetom na kat+skiper)"
+  },
+  "(2 Double Cabins, 2 Twin (Convertible) Cabins) + crew": {
+    "dims": ["cabins"],
+    "hr": "(2 dvokrevetne kabine, 2 kabine s odvojenim krevetima (pretvorive)) + posada"
+  },
+  "4 double + skipper's cabin": {
+    "dims": ["cabins"],
+    "hr": "4 dvokrevetne + skiperska kabina"
+  },
+  "(4 dbl + 2 crew + saloon)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne + 2 za posadu + salon)"
+  },
+  "(3 double cabins, 1 bunk bed cabin)": {
+    "dims": ["cabins"],
+    "hr": "(3 dvokrevetne kabine, 1 kabina s krevetom na kat)"
+  },
+  "1 Master, 4 Double, 1 Twin": {
+    "dims": ["cabins"],
+    "hr": "1 master, 4 dvokrevetne, 1 s odvojenim krevetima"
+  },
+  "+ 1 crew cabin": {
+    "dims": ["cabins"],
+    "hr": "+ 1 kabina za posadu"
+  },
+  "4 double cabin + convertible salon table + 2 single bow cabins": {
+    "dims": ["cabins"],
+    "hr": "4 dvokrevetne kabine + stol u salonu koji se pretvara u ležaj + 2 jednokrevetne pramčane kabine"
+  },
+  "\"1 skippers\"": {
+    "dims": ["cabins"],
+    "hr": "\"1 skiperska\""
+  },
+  "(4 double cab. + 1 cab. with bunk beds + convertible saloon table)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne kabine + 1 kabina s krevetima na kat + stol u salonu koji se pretvara u ležaj)"
+  },
+  "3 double cabin + convertible salon table": {
+    "dims": ["cabins"],
+    "hr": "3 dvokrevetne kabine + stol u salonu koji se pretvara u ležaj"
+  },
+  "(3D+1BB)": {
+    "dims": ["cabins"],
+    "hr": "(3 dvokrevetne+1 s krevetom na kat)"
+  },
+  "6 pax sleep in the cabins + 2 sea berths + 4 in the sofas": {
+    "dims": ["cabins"],
+    "hr": "6 gostiju spava u kabinama + 2 ležaja za plovidbu + 4 na sofama"
+  },
+  "+3 (crew cabin)": {
+    "dims": ["cabins"],
+    "hr": "+3 (kabina za posadu)"
+  },
+  "1 x master + 5 DBl": {
+    "dims": ["cabins"],
+    "hr": "1 x master + 5 dvokrevetnih"
+  },
+  "(+ 1 skipper cabin)": {
+    "dims": ["cabins"],
+    "hr": "(+ 1 skiperska kabina)"
+  },
+  "(4+1skipper cabin)": {
+    "dims": ["cabins"],
+    "hr": "(4+1 skiperska kabina)"
+  },
+  "3 for customer": {
+    "dims": ["cabins"],
+    "hr": "3 za goste"
+  },
+  "(3 double + 1 bunk bad)": {
+    "dims": ["cabins"],
+    "hr": "(3 dvokrevetne + 1 s krevetom na kat)"
+  },
+  "(5 double cabins +1 crew cabin)": {
+    "dims": ["cabins"],
+    "hr": "(5 dvokrevetnih kabina +1 kabina za posadu)"
+  },
+  "3 double": {
+    "dims": ["cabins"],
+    "hr": "3 dvokrevetne"
+  },
+  "(4+1for crew)": {
+    "dims": ["cabins"],
+    "hr": "(4+1 za posadu)"
+  },
+  "(4 + 1) convertible to 4 (3 + 1)": {
+    "dims": ["cabins"],
+    "hr": "(4 + 1) s mogućnošću preuređenja u 4 (3 + 1)"
+  },
+  "double cabs": {
+    "dims": ["cabins"],
+    "hr": "dvokrevetne kabine"
+  },
+  "(3 Double + Saloon)": {
+    "dims": ["cabins"],
+    "hr": "(3 dvokrevetne + salon)"
+  },
+  "+ 2 front peaks for Skipper and/or Hostess": {
+    "dims": ["cabins"],
+    "hr": "+ 2 pramčana pika za skipera i/ili hostesu"
+  },
+  "(3 double bed)": {
+    "dims": ["cabins"],
+    "hr": "(3 s bračnim krevetom)"
+  },
+  "/ 4 double cab. (8 guests) + 1 sofa bed (2 guests) + 2 bunk beds (crew)": {
+    "dims": ["cabins"],
+    "hr": "/ 4 dvokrevetne kabine (8 gostiju) + 1 sofa na razvlačenje (2 gosta) + 2 kreveta na kat (posada)"
+  },
+  "GUESTS: 4 doubles, 1 twin; CREW: 1 frontpeak + WC, 1 twin cabin + WC": {
+    "dims": ["cabins"],
+    "hr": "GOSTI: 4 dvokrevetne, 1 s odvojenim krevetima; POSADA: 1 pramčani pik + WC, 1 kabina s odvojenim krevetima + WC"
+  },
+  "(1 Double Cabins, 2 Twin Cabins) + crew": {
+    "dims": ["cabins"],
+    "hr": "(1 dvokrevetna kabina, 2 kabine s odvojenim krevetima) + posada"
+  },
+  "1 Master, 1 Double, 1 Twin": {
+    "dims": ["cabins"],
+    "hr": "1 master kabina, 1 dvokrevetna, 1 s odvojenim krevetima"
+  },
+  "double + 2 single": {
+    "dims": ["cabins"],
+    "hr": "dvokrevetna + 2 jednokrevetne"
+  },
+  "(2xDouble 2xTwin)": {
+    "dims": ["cabins"],
+    "hr": "(2x dvokrevetna 2x s odvojenim krevetima)"
+  },
+  "4 + 1 extra bow cabin": {
+    "dims": ["cabins"],
+    "hr": "4 + 1 dodatna pramčana kabina"
+  },
+  "2 Cabins; 1 Master, 1 Twin all en-suite.": {
+    "dims": ["cabins"],
+    "hr": "2 kabine; 1 master, 1 s odvojenim krevetima, sve s vlastitom kupaonicom."
+  },
+  "+1 Skipper Cabin": {
+    "dims": ["cabins"],
+    "hr": "+1 skiperska kabina"
+  },
+  "(3 + 1 skipper)": {
+    "dims": ["cabins"],
+    "hr": "(3 + 1 skiper)"
+  },
+  "(4 dbl + 1 bunk + 1 bow)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne + 1 s krevetom na kat + 1 pramčana)"
+  },
+  "(4+1 skipper cabin) | Convertible in 3 cabins too |": {
+    "dims": ["cabins"],
+    "hr": "(4+1 skiperska kabina) | Može se preurediti i u 3 kabine |"
+  },
+  "(4 double + 1 bunk cabin+1 skipper berths)": {
+    "dims": ["cabins"],
+    "hr": "(4 dvokrevetne + 1 kabina s krevetom na kat+1 ležaj za skipera)"
+  },
+  "(6 cabins for the guests plus 1 berth in each bow comp for the crew)": {
+    "dims": ["cabins"],
+    "hr": "(6 kabina za goste plus 1 ležaj u svakom pramčanom odjeljku za posadu)"
+  },
+  "(1 master, 1 VIP, 2 Twin)": {
+    "dims": ["cabins"],
+    "hr": "(1 master, 1 VIP, 2 s odvojenim krevetima)"
+  },
+  "4 cabins + 2 bunk beds + 1 skipper cabin + 2 (adaptable table ) 12+2+1 tot 15": {
+    "dims": ["cabins"],
+    "hr": "4 kabine + 2 kreveta na kat + 1 skiperska kabina + 2 (preklopni stol) 12+2+1 ukupno 15"
+  },
+  "(4D+1S+1S)": {
+    "dims": ["cabins"],
+    "hr": "(4D+1S+1S)"
+  },
+  "1 Master, 1 VIP, 1 Twin, 1 Double Cabins": {
+    "dims": ["cabins"],
+    "hr": "1 master, 1 VIP, 1 s odvojenim krevetima, 1 dvokrevetna kabina"
+  },
+  "(+ 1 skipper)": {
+    "dims": ["cabins"],
+    "hr": "(+ 1 skiper)"
+  },
+  "(6+2 skipper)": {
+    "dims": ["cabins"],
+    "hr": "(6+2 skiper)"
+  },
+  "2 master + 4 double": {
+    "dims": ["cabins"],
+    "hr": "2 master + 4 dvokrevetne"
+  },
+  "5 Cabins; 1 Master, 2 VIP, 1 Double all en-suite": {
+    "dims": ["cabins"],
+    "hr": "5 kabina; 1 master, 2 VIP, 1 dvokrevetna, sve s vlastitom kupaonicom"
+  },
+  "DOUBLE CABINS ,NEW LAYOUT": {
+    "dims": ["cabins"],
+    "hr": "DVOKREVETNE KABINE, NOVI RASPORED"
+  },
+  "(5+1 fore peak)": {
+    "dims": ["cabins"],
+    "hr": "(5+1 pramčani pik)"
+  },
+  "(5+1 skippers)": {
+    "dims": ["cabins"],
+    "hr": "(5+1 skiper)"
+  },
+  "(3 + 1 crew WC)": {
+    "dims": ["heads"],
+    "hr": "(3 + 1 WC za posadu)"
+  },
+  "3 electric for guests, 1 for crew": {
+    "dims": ["heads"],
+    "hr": "3 električna za goste, 1 za posadu"
+  },
+  "+ 1 FOREPEAK CREW TOILET": {
+    "dims": ["heads"],
+    "hr": "+ 1 WC ZA POSADU U PRAMČANOM PIKU"
+  },
+  "1 Electric": {
+    "dims": ["heads"],
+    "hr": "1 električni"
+  },
+  "en-suite": {
+    "dims": ["heads"],
+    "hr": "u sklopu kabina"
+  },
+  "3+1 \"skippers\"": {
+    "dims": ["heads"],
+    "hr": "3+1 \"skiper\""
+  },
+  "(electric+manual)": {
+    "dims": ["heads"],
+    "hr": "(električni+ručni)"
+  },
+  "(4 +1 bow)": {
+    "dims": ["heads"],
+    "hr": "(4 +1 na pramcu)"
+  },
+  "(2 for guests 1 for crew)": {
+    "dims": ["heads"],
+    "hr": "(2 za goste, 1 za posadu)"
+  },
+  "4+1 bow": {
+    "dims": ["heads"],
+    "hr": "4+1 na pramcu"
+  },
+  "+1 skipper toilet": {
+    "dims": ["heads"],
+    "hr": "+1 skiperski WC"
+  },
+  "(4 for guests + 2 for crew)": {
+    "dims": ["heads"],
+    "hr": "(4 za goste + 2 za posadu)"
+  },
+  "Both Electric": {
+    "dims": ["heads"],
+    "hr": "Oba električna"
+  },
+  "electric WC": {
+    "dims": ["heads"],
+    "hr": "električni WC"
+  },
+  "(3+1) electric": {
+    "dims": ["heads"],
+    "hr": "(3+1) električni"
+  },
+  "4 guest WC/shower + 1 crew WC/Shower": {
+    "dims": ["heads"],
+    "hr": "4 WC-a/tuša za goste + 1 WC/tuš za posadu"
+  },
+  "+ 1 for Crew Heads/WCs": {
+    "dims": ["heads"],
+    "hr": "+ 1 toaleta/WC za posadu"
+  },
+  "+1 in crew cab": {
+    "dims": ["heads"],
+    "hr": "+1 u kabini za posadu"
+  },
+  "/ 2 central big showers": {
+    "dims": ["heads"],
+    "hr": "/ 2 velika središnja tuša"
+  },
+  "1 Bath": {
+    "dims": ["heads"],
+    "hr": "1 kupaonica"
+  },
+  "3 Electric": {
+    "dims": ["heads"],
+    "hr": "3 električna"
+  },
+  "electric toilets, extra cockpit shower": {
+    "dims": ["heads"],
+    "hr": "električni WC-i, dodatni tuš u kokpitu"
+  },
+  "4 for guests and 1 seperate for skipper": {
+    "dims": ["heads"],
+    "hr": "4 za goste i 1 zaseban za skipera"
+  },
+  "(4 electric +1 manual)": {
+    "dims": ["heads"],
+    "hr": "(4 električna +1 ručni)"
+  },
+  "WC Electric 4+1skipper": {
+    "dims": ["heads"],
+    "hr": "Električni WC 4+1 skiper"
+  },
+  "(4 + 1 crew)": {
+    "dims": ["heads"],
+    "hr": "(4 + 1 za posadu)"
+  },
+  "(3+1 skipper WC)": {
+    "dims": ["heads"],
+    "hr": "(3+1 skiperski WC)"
+  },
+  "(4+1WC - 2 Shower)": {
+    "dims": ["heads"],
+    "hr": "(4+1 WC - 2 tuša)"
+  },
+  "3 WC, 2 Showers": {
+    "dims": ["heads"],
+    "hr": "3 WC-a, 2 tuša"
+  },
+  "+ 1 (5 electric WC + 1 fore peak WC)": {
+    "dims": ["heads"],
+    "hr": "+ 1 (5 električnih WC-a + 1 WC u pramčanom piku)"
+  },
+  "+ crew wc": {
+    "dims": ["heads"],
+    "hr": "+ WC za posadu"
+  },
+  "(3 + 1 front peak)": {
+    "dims": ["heads"],
+    "hr": "(3 + 1 pramčani pik)"
+  },
+  "+1 (2 X Electric toilets)": {
+    "dims": ["heads"],
+    "hr": "+1 (2 X električna WC-a)"
+  },
+  "(6+1 bow skipper bath)": {
+    "dims": ["heads"],
+    "hr": "(6+1 skiperska kupaonica na pramcu)"
+  },
+  "(4+1 crew WC)": {
+    "dims": ["heads"],
+    "hr": "(4+1 WC za posadu)"
+  },
+  "(+ 1 skipper toilet)": {
+    "dims": ["heads"],
+    "hr": "(+ 1 skiperski WC)"
+  },
+  "( 4 inside plus 1 head in port bow )": {
+    "dims": ["heads"],
+    "hr": "(4 unutra plus 1 WC na lijevom pramcu)"
+  },
+  "plus 1 skipper": {
+    "dims": ["heads"],
+    "hr": "plus 1 skiper"
+  },
+  "10 WC , 10 Shower": {
+    "dims": ["heads"],
+    "hr": "10 WC-a, 10 tuševa"
+  },
+  "+ 1 (6 electric WC + 1 skipper WC)": {
+    "dims": ["heads"],
+    "hr": "+ 1 (6 električnih WC-a + 1 skiperski WC)"
+  },
+  "6 Electric WC With Shower": {
+    "dims": ["heads"],
+    "hr": "6 električnih WC-a s tušem"
+  },
+  "electric toilets": {
+    "dims": ["heads"],
+    "hr": "električni WC-i"
+  },
+  "POPA": {
+    "dims": ["heads"],
+    "hr": "KRMA"
+  },
+  "+1 deck shower": {
+    "dims": ["heads"],
+    "hr": "+1 tuš na palubi"
+  },
+  "+ WC in the forepeak cabin": {
+    "dims": ["heads"],
+    "hr": "+ WC u pramčanoj kabini"
+  },
+  "(4 + 1 crew toilet)": {
+    "dims": ["heads"],
+    "hr": "(4 + 1 WC za posadu)"
+  },
+  "(4 electric + 1 manual))": {
+    "dims": ["heads"],
+    "hr": "(4 električna + 1 ručni))"
+  },
+  "for guests + crew and skipper toilets": {
+    "dims": ["heads"],
+    "hr": "za goste + WC za posadu i skipera"
+  },
+  "2+1 crew": {
+    "dims": ["heads"],
+    "hr": "2+1 za posadu"
+  },
+  "Private bathrooms with shower and home type toilet": {
+    "dims": ["heads"],
+    "hr": "Privatne kupaonice s tušem i WC-om kućnog tipa"
+  },
+  "shower with glas doors": {
+    "dims": ["heads"],
+    "hr": "tuš sa staklenim vratima"
+  },
+  "+2 bow toilets": {
+    "dims": ["heads"],
+    "hr": "+2 WC-a na pramcu"
+  },
+  "(4 + 1 in the bow)": {
+    "dims": ["heads"],
+    "hr": "(4 + 1 na pramcu)"
+  },
+  "4 bathrooms": {
+    "dims": ["heads"],
+    "hr": "4 kupaonice"
+  },
+  "+ 1 crew shower": {
+    "dims": ["heads"],
+    "hr": "+ 1 tuš za posadu"
+  },
+  "(+toilet in skipper's cabin, no shower)": {
+    "dims": ["heads"],
+    "hr": "(+WC u skiperskoj kabini, bez tuša)"
+  },
+  "plus Deckshower": {
+    "dims": ["heads"],
+    "hr": "plus tuš na palubi"
+  },
+  "(3 el. WC + 2 for crew)": {
+    "dims": ["heads"],
+    "hr": "(3 električna WC-a + 2 za posadu)"
+  },
+  "( 1 electric + 1 manual toilet)": {
+    "dims": ["heads"],
+    "hr": "(1 električni + 1 ručni WC)"
+  },
+  "(1 x electric)": {
+    "dims": ["heads"],
+    "hr": "(1 x električni)"
+  },
+  "(4 + 1 in the berths in the bow for skipper/hostess)": {
+    "dims": ["heads"],
+    "hr": "(4 + 1 kod ležajeva na pramcu za skipera/hostesu)"
+  },
+  "(4 + 1 in front peak)": {
+    "dims": ["heads"],
+    "hr": "(4 + 1 u pramčanom piku)"
+  },
+  "3 Showers including the one on the swimming platform": {
+    "dims": ["heads"],
+    "hr": "3 tuša, uključujući onaj na platformi za kupanje"
+  },
+  "(4 WC + 1 head in the bow)": {
+    "dims": ["heads"],
+    "hr": "(4 WC-a + 1 WC na pramcu)"
+  },
+  "+1 utility space (washing machine, ice maker)": {
+    "dims": ["heads"],
+    "hr": "+1 pomoćna prostorija (perilica rublja, ledomat)"
+  },
+  "plus 1 Deckshower": {
+    "dims": ["heads"],
+    "hr": "plus 1 tuš na palubi"
+  },
+  "+ 1 for the skipper": {
+    "dims": ["heads"],
+    "hr": "+ 1 za skipera"
+  },
+  "(5 electric WC)": {
+    "dims": ["heads"],
+    "hr": "(5 električnih WC-a)"
+  },
+  "(4+1 bow cabin WC/ Shower)": {
+    "dims": ["heads"],
+    "hr": "(4+1 WC/tuš u pramčanoj kabini)"
+  },
+  "(2 WC/ Showers 2)": {
+    "dims": ["heads"],
+    "hr": "(2 WC-a/tuša 2)"
+  },
+  "(3+separate shower)": {
+    "dims": ["heads"],
+    "hr": "(3+zasebni tuš)"
+  },
+  "+1 (skipper shower / wc)": {
+    "dims": ["heads"],
+    "hr": "+1 (skiperski tuš / WC)"
+  },
+  "(3 + 1 in skipper cabin)": {
+    "dims": ["heads"],
+    "hr": "(3 + 1 u skiperskoj kabini)"
+  },
+  "(+ 1 in the bow comp)": {
+    "dims": ["heads"],
+    "hr": "(+ 1 u pramčanom odjeljku)"
+  },
+  "2+1 (for the skipper)": {
+    "dims": ["heads"],
+    "hr": "2+1 (za skipera)"
+  },
+  "heads": {
+    "dims": ["heads"],
+    "hr": "WC-i"
+  },
+  "Elettric WC": {
+    "dims": ["heads"],
+    "hr": "Električni WC"
+  },
+  "+ 3 crew WC": {
+    "dims": ["heads"],
+    "hr": "+ 3 WC-a za posadu"
+  },
+  "- 3 guest + 1 crew": {
+    "dims": ["heads"],
+    "hr": "- 3 za goste + 1 za posadu"
+  },
+  "with independent shower": {
+    "dims": ["heads"],
+    "hr": "sa zasebnim tušem"
+  },
+  "+ 1 (skipper)": {
+    "dims": ["heads"],
+    "hr": "+ 1 (skiper)"
+  },
+  "(5+crew)": {
+    "dims": ["heads"],
+    "hr": "(5+posada)"
+  },
+  "(4 guest WC/Showers +1 crew)": {
+    "dims": ["heads"],
+    "hr": "(4 WC/tuša za goste +1 za posadu)"
+  },
+  "(3 electric)": {
+    "dims": ["heads"],
+    "hr": "(3 električna)"
+  },
+  "3 showers": {
+    "dims": ["heads"],
+    "hr": "3 tuša"
+  },
+  "(Inc. 1 Crew Head)": {
+    "dims": ["heads"],
+    "hr": "(uklj. 1 WC za posadu)"
+  },
+  "(4 WC + 1) - 2 showers": {
+    "dims": ["heads"],
+    "hr": "(4 WC-a + 1) - 2 tuša"
+  },
+  "electric toilets with showers": {
+    "dims": ["heads"],
+    "hr": "električni WC-i s tuševima"
+  },
+  "4 guest wc/showers plus 2 crew wc/showers": {
+    "dims": ["heads"],
+    "hr": "4 WC/tuša za goste plus 2 WC/tuša za posadu"
+  },
+  "(3 + 1 crew inside catamaran)": {
+    "dims": ["heads"],
+    "hr": "(3 + 1 za posadu unutar katamarana)"
+  },
+  "additional shower cabin": {
+    "dims": ["heads"],
+    "hr": "dodatna tuš kabina"
+  },
+  "1 shower": {
+    "dims": ["heads"],
+    "hr": "1 tuš"
+  },
+  "wc + shower": {
+    "dims": ["heads"],
+    "hr": "WC + tuš"
+  },
+  "+ 2 Crew Bathroom": {
+    "dims": ["heads"],
+    "hr": "+ 2 kupaonice za posadu"
+  },
+  "4xelectric": {
+    "dims": ["heads"],
+    "hr": "4x električni"
+  },
+  "(4 + 1crew)": {
+    "dims": ["heads"],
+    "hr": "(4 + 1 za posadu)"
+  },
+  "(4 + extra shower)": {
+    "dims": ["heads"],
+    "hr": "(4 + dodatni tuš)"
+  },
+  "(4+ 1SK)": {
+    "dims": ["heads"],
+    "hr": "(4+ 1 skiper)"
+  },
+  "Electric WC": {
+    "dims": ["heads"],
+    "hr": "Električni WC"
+  },
+  "(3+1 crew WC)": {
+    "dims": ["heads"],
+    "hr": "(3+1 WC za posadu)"
+  },
+  "(1 WC in the stab bow comp)": {
+    "dims": ["heads"],
+    "hr": "(1 WC u desnom pramčanom odjeljku)"
+  },
+  "(3+Skipper's Head)": {
+    "dims": ["heads"],
+    "hr": "(3+skiperski WC)"
+  },
+  "(4+skipper)": {
+    "dims": ["heads"],
+    "hr": "(4+skiper)"
+  },
+  "(6 + 2 crew toilet)": {
+    "dims": ["heads"],
+    "hr": "(6 + 2 WC-a za posadu)"
+  },
+  "manual wc": {
+    "dims": ["heads"],
+    "hr": "ručni WC"
+  },
+  "(3+1 skipper wc)": {
+    "dims": ["heads"],
+    "hr": "(3+1 skiperski WC)"
+  },
+  "(3+1 Skipper)": {
+    "dims": ["heads"],
+    "hr": "(3+1 skiper)"
+  },
+  "4 electric toilets with showers + 1 toilet for the skipper": {
+    "dims": ["heads"],
+    "hr": "4 električna WC-a s tuševima + 1 WC za skipera"
+  },
+  "(2 + 1 skipper)": {
+    "dims": ["heads"],
+    "hr": "(2 + 1 skiper)"
+  },
+  "4 guest WC/Showers plus 2 crew": {
+    "dims": ["heads"],
+    "hr": "4 WC/tuša za goste plus 2 za posadu"
+  },
+  "(2 electrical, 2 manual)": {
+    "dims": ["heads"],
+    "hr": "(2 električna, 2 ručna)"
+  },
+  "2 forward peak cabins fitted with WC / shower": {
+    "dims": ["heads"],
+    "hr": "2 pramčane kabine opremljene WC-om / tušem"
+  },
+  "(4 ensuite + 1 skipper)": {
+    "dims": ["heads"],
+    "hr": "(4 u sklopu kabina + 1 skiper)"
+  },
+  "guests + 2 crew": {
+    "dims": ["heads"],
+    "hr": "gosti + 2 za posadu"
+  },
+  "with central shower": {
+    "dims": ["heads"],
+    "hr": "sa središnjim tušem"
+  },
+  "WC + shower": {
+    "dims": ["heads"],
+    "hr": "WC + tuš"
+  },
+  "2 electric + 1 manual": {
+    "dims": ["heads"],
+    "hr": "2 električna + 1 ručni"
+  },
+  "(2 + 1 electric)": {
+    "dims": ["heads"],
+    "hr": "(2 + 1 električni)"
+  },
+  "electric WC: 1": {
+    "dims": ["heads"],
+    "hr": "električni WC: 1"
+  },
+  "(6/4) Electric Toilets": {
+    "dims": ["heads"],
+    "hr": "(6/4) električni WC-i"
+  },
+  "+ 1 (only WC in skipper cabin)": {
+    "dims": ["heads"],
+    "hr": "+ 1 (samo WC u skiperskoj kabini)"
+  },
+  "+ 2 FOREPEAK CREW TOILET": {
+    "dims": ["heads"],
+    "hr": "+ 2 WC-A ZA POSADU U PRAMČANOM PIKU"
+  },
+  "(4+1sk WC)": {
+    "dims": ["heads"],
+    "hr": "(4+1 skiperski WC)"
+  },
+  "2 Heads/1 Shower": {
+    "dims": ["heads"],
+    "hr": "2 WC-a/1 tuš"
+  },
+  "+1 for Crew Members": {
+    "dims": ["heads"],
+    "hr": "+1 za članove posade"
+  },
+  "Electrical Jabsco toilets with wide bathrooms": {
+    "dims": ["heads"],
+    "hr": "Električni Jabsco WC-i s prostranim kupaonicama"
+  },
+  "(2+extra shower)": {
+    "dims": ["heads"],
+    "hr": "(2+dodatni tuš)"
+  },
+  "+ bow head": {
+    "dims": ["heads"],
+    "hr": "+ WC na pramcu"
+  },
+  "PLUS SKIPPERS": {
+    "dims": ["heads"],
+    "hr": "PLUS SKIPERSKI"
+  },
+  "(4+1 SK )": {
+    "dims": ["heads"],
+    "hr": "(4+1 skiper)"
+  },
+  "(3 shower + skipper/no shower)": {
+    "dims": ["heads"],
+    "hr": "(3 s tušem + skiper/bez tuša)"
+  },
+  "4+1WC With Showe": {
+    "dims": ["heads"],
+    "hr": "4+1 WC s tušem"
+  },
+  "3wc / 1 shower interior /1 shower on Cockpit": {
+    "dims": ["heads"],
+    "hr": "3 WC-a / 1 tuš unutra /1 tuš u kokpitu"
+  },
+  "(4+1) with access from each cabins": {
+    "dims": ["heads"],
+    "hr": "(4+1) s pristupom iz svake kabine"
+  },
+  "electric +1 bow": {
+    "dims": ["heads"],
+    "hr": "električni +1 na pramcu"
+  },
+  "(4+1 WC) 4 Showers": {
+    "dims": ["heads"],
+    "hr": "(4+1 WC) 4 tuša"
+  },
+  "Manuel Toilets": {
+    "dims": ["heads"],
+    "hr": "Ručni WC-i"
+  },
+  "4+1 WC skipper": {
+    "dims": ["heads"],
+    "hr": "4+1 skiperski WC"
+  },
+  "(4 + 1 ext)": {
+    "dims": ["heads"],
+    "hr": "(4 + 1 ext)"
+  },
+  "(4 en-suite + 1 skipper)": {
+    "dims": ["heads"],
+    "hr": "(4 u sklopu kabina + 1 skiper)"
+  },
+  "4 electric +1 crew": {
+    "dims": ["heads"],
+    "hr": "4 električna +1 za posadu"
+  },
+  "4 toilettes + 1 skipper toilette": {
+    "dims": ["heads"],
+    "hr": "4 WC-a + 1 skiperski WC"
+  },
+  "(4 guest WC/Showers +1 crew WC)": {
+    "dims": ["heads"],
+    "hr": "(4 WC/tuša za goste +1 WC za posadu)"
+  },
+  "3 WC et 2 douches": {
+    "dims": ["heads"],
+    "hr": "3 WC-a i 2 tuša"
+  },
+  "(4+1 Skipper WC)": {
+    "dims": ["heads"],
+    "hr": "(4+1 skiperski WC)"
+  },
+  "+ 1 wc in front for skipper": {
+    "dims": ["heads"],
+    "hr": "+ 1 WC na pramcu za skipera"
+  },
+  "Yanmar 20hp": {
+    "dims": ["heads"],
+    "hr": "Yanmar 20 KS"
+  },
+  "+ 1 in bow skipper cabin": {
+    "dims": ["heads"],
+    "hr": "+ 1 u pramčanoj skiperskoj kabini"
+  },
+  "Elettric Wc": {
+    "dims": ["heads"],
+    "hr": "Električni WC"
+  },
+  "(3+crew)": {
+    "dims": ["heads"],
+    "hr": "(3+posada)"
+  },
+  "(4+1) 2 shower box": {
+    "dims": ["heads"],
+    "hr": "(4+1) 2 tuš kabine"
+  },
+  "(3+1 Shower)": {
+    "dims": ["heads"],
+    "hr": "(3+1 tuš)"
+  },
+  "electric toilet": {
+    "dims": ["heads"],
+    "hr": "električni WC"
+  },
+  "+ 1 in skipper cabin": {
+    "dims": ["heads"],
+    "hr": "+ 1 u skiperskoj kabini"
+  },
+  "3wc - 4 showers": {
+    "dims": ["heads"],
+    "hr": "3 WC-a - 4 tuša"
+  },
+  "(1 electric, 1 manual)": {
+    "dims": ["heads"],
+    "hr": "(1 električni, 1 ručni)"
+  },
+  "1 electric": {
+    "dims": ["heads"],
+    "hr": "1 električni"
+  },
+  "(4 + 1 in starboard forepeak)": {
+    "dims": ["heads"],
+    "hr": "(4 + 1 u desnom pramčanom piku)"
+  },
+  "(3 +1 in the forepeak cabin)": {
+    "dims": ["heads"],
+    "hr": "(3 +1 u pramčanoj kabini)"
+  },
+  "(5+1 crew cabin WC)": {
+    "dims": ["heads"],
+    "hr": "(5+1 WC u kabini za posadu)"
+  },
+  "1 bathroom with shower, 1 bathroom with elect. WC without shower, 1 seperate shower": {
+    "dims": ["heads"],
+    "hr": "1 kupaonica s tušem, 1 kupaonica s el. WC-om bez tuša, 1 zaseban tuš"
+  },
+  "3+1 skipper": {
+    "dims": ["heads"],
+    "hr": "3+1 skiper"
+  },
+  "Manual WC": {
+    "dims": ["heads"],
+    "hr": "Ručni WC"
+  },
+  "(1 electric toilet)": {
+    "dims": ["heads"],
+    "hr": "(1 električni WC)"
+  },
+  "(2x shower) + 1 bow": {
+    "dims": ["heads"],
+    "hr": "(2x tuš) + 1 na pramcu"
+  },
+  "4 electric": {
+    "dims": ["heads"],
+    "hr": "4 električna"
+  },
+  "+1 crew bathroom": {
+    "dims": ["heads"],
+    "hr": "+1 kupaonica za posadu"
+  },
+  "Electric Quiet Flush": {
+    "dims": ["heads"],
+    "hr": "Električni WC Quiet Flush"
+  },
+  "(3 + 1 electrical toilette)": {
+    "dims": ["heads"],
+    "hr": "(3 + 1 električni WC)"
+  },
+  "+ 1 Deckshower and 1 Skipperbath in the hull": {
+    "dims": ["heads"],
+    "hr": "+ 1 tuš na palubi i 1 skiperska kupaonica u trupu"
+  },
+  "1+1 shower": {
+    "dims": ["heads"],
+    "hr": "1+1 tuš"
+  },
+  "(5 electric)": {
+    "dims": ["heads"],
+    "hr": "(5 električnih)"
+  },
+  "4 + 1(in bow cabin)": {
+    "dims": ["heads"],
+    "hr": "4 + 1 (u pramčanoj kabini)"
+  },
+  "with shower": {
+    "dims": ["heads"],
+    "hr": "s tušem"
+  },
+  "\" 1 skippers\"": {
+    "dims": ["heads"],
+    "hr": "\"1 skiper\""
+  },
+  "(3 + 1 Crew)": {
+    "dims": ["heads"],
+    "hr": "(3 + 1 za posadu)"
+  },
+  "2 for customer": {
+    "dims": ["heads"],
+    "hr": "2 za goste"
+  },
+  "(in 3 separate rooms)": {
+    "dims": ["heads"],
+    "hr": "(u 3 odvojene prostorije)"
+  },
+  "2 wc": {
+    "dims": ["heads"],
+    "hr": "2 WC-a"
+  },
+  "3 electric toilets with showers": {
+    "dims": ["heads"],
+    "hr": "3 električna WC-a s tuševima"
+  },
+  "6 WC/Shower + 1 crew": {
+    "dims": ["heads"],
+    "hr": "6 WC-a/tuševa + 1 za posadu"
+  },
+  "4+1 toilet": {
+    "dims": ["heads"],
+    "hr": "4+1 WC"
+  },
+  "(4 WC)": {
+    "dims": ["heads"],
+    "hr": "(4 WC-a)"
+  },
+  "manuel": {
+    "dims": ["heads"],
+    "hr": "ručni"
+  },
+  "( 1 electric toilet )": {
+    "dims": ["heads"],
+    "hr": "(1 električni WC)"
+  },
+  "3 wc + 1 shower": {
+    "dims": ["heads"],
+    "hr": "3 WC-a + 1 tuš"
+  },
+  "(Electric Toilet)": {
+    "dims": ["heads"],
+    "hr": "(Električni WC)"
+  },
+  "+1 toilet in skipper's cabin": {
+    "dims": ["heads"],
+    "hr": "+1 WC u skiperskoj kabini"
+  },
+  "Electric toilet": {
+    "dims": ["heads"],
+    "hr": "Električni WC"
+  },
+  "(5 +1 sk WC only)": {
+    "dims": ["heads"],
+    "hr": "(5 +1 skiperski, samo WC)"
+  },
+  "- 4 guest + 1 crew": {
+    "dims": ["heads"],
+    "hr": "- 4 za goste + 1 za posadu"
+  },
+  "(4 + 1 on the bow cabin)": {
+    "dims": ["heads"],
+    "hr": "(4 + 1 u pramčanoj kabini)"
+  },
+  "+ 2 crew wc": {
+    "dims": ["heads"],
+    "hr": "+ 2 WC-a za posadu"
+  },
+  "+ 1 crew (no shower)": {
+    "dims": ["heads"],
+    "hr": "+ 1 za posadu (bez tuša)"
+  },
+  "5 + 1 crew": {
+    "dims": ["heads"],
+    "hr": "5 + 1 za posadu"
   }
 }

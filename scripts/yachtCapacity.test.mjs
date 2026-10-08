@@ -110,32 +110,110 @@ describe('messages/<locale>/capacity.json', () => {
 
 describe('note tables (src/utils/static/capacityNotes/<locale>.json)', () => {
   const dir = `${ROOT}src/utils/static/capacityNotes/`;
+  // Capacity contract v2 (8.10.2026): every word note on prod, less the 22 the sanitizer hides everywhere.
+  const V2_NOTES = 1446;
+  // A translation may run longer than the English it replaces (CAPACITY_NOTE_MAX = 120 is about partner prose):
+  // the sanitizer's word / contact rules run over word-aligned pieces of at most that length.
+  const pieces = text => {
+    const out = [];
 
-  test('one slice per non-English locale, each carrying only its own locale', () => {
+    text.split(' ').forEach(word => {
+      const joined = out.length ? `${out[out.length - 1]} ${word}` : word;
+
+      if (out.length && joined.length <= F.CAPACITY_NOTE_MAX) out[out.length - 1] = joined;
+      else out.push(word);
+    });
+
+    return out;
+  };
+
+  test('one slice per non-English locale, the same v2 notes in each, each carrying only its own locale', () => {
     assert.deepEqual(readdirSync(dir).sort(), CAPACITY_NOTE_LOCALES.map(l => `${l}.json`).sort());
+
+    const notes = Object.keys(readJson('src/utils/static/capacityNotes/de.json'));
+
+    assert.equal(notes.length, V2_NOTES);
     CAPACITY_NOTE_LOCALES.forEach(l => {
       const slice = readJson(`src/utils/static/capacityNotes/${l}.json`);
 
-      assert.equal(Object.keys(slice).length, 37, l);
+      assert.deepEqual(Object.keys(slice), notes, l);
       Object.entries(slice).forEach(([note, entry]) => {
         assert.deepEqual(Object.keys(entry).sort(), ['dims', l].sort(), `${l}: ${note}`);
+        assert.ok(entry.dims.length && entry.dims.every(d => ['cabins', 'berths', 'heads'].includes(d)), note);
         assert.ok(!F.isLanguageNeutral(note), `${l}: neutral note in the table: ${note}`);
         assert.equal(F.normalizeNote(note), note, `${l}: key not normalized: ${note}`);
+        assert.ok(typeof entry[l] === 'string' && entry[l] === entry[l].trim() && entry[l], `${l}: empty: ${note}`);
       });
     });
   });
 
-  test("every note and translation passes the sanitizer with b4y's operator list, unchanged", () => {
+  test("every note passes the sanitizer with b4y's operator list, unchanged; so does every translation", () => {
     CAPACITY_NOTE_LOCALES.forEach(l => {
       Object.entries(readJson(`src/utils/static/capacityNotes/${l}.json`)).forEach(([note, entry]) => {
-        [note, entry[l]].forEach(text =>
+        assert.equal(
+          F.safeCapacityNote(note, t => isOperatorName(t)),
+          note,
+          `${l}: hidden note in the table: ${note}`
+        );
+        pieces(entry[l]).forEach(piece =>
           assert.equal(
-            F.safeCapacityNote(text, t => isOperatorName(t)),
-            text,
-            `${l}: hidden: ${text}`
+            F.safeCapacityNote(piece, t => isOperatorName(t)),
+            piece,
+            `${l}: ${entry[l]}`
           )
         );
       });
+    });
+  });
+
+  test('translations keep every number, sign and bracket of the note, and its leading sign', () => {
+    const signs = text =>
+      text
+        .replace(/[^0-9+/()[\]{}]/g, '')
+        .split('')
+        .sort()
+        .join('');
+
+    CAPACITY_NOTE_LOCALES.forEach(l => {
+      Object.entries(readJson(`src/utils/static/capacityNotes/${l}.json`)).forEach(([note, entry]) => {
+        assert.equal(signs(entry[l]), signs(note), `${l}: ${note} -> ${entry[l]}`);
+
+        if (/^[-+(/[]/.test(note)) assert.equal(entry[l][0], note[0], `${l}: ${note} -> ${entry[l]}`);
+      });
+    });
+  });
+
+  test('Aquila 50 (MMK, 19701) on a German page: the reviewed v2 notes, not English', () => {
+    const aquila = {
+      charterType: ['CREWED'],
+      capacity: {
+        cabins: { value: 5, note: 'for clients + 1 crew', split: null },
+        berths: { value: 10, note: '+ 2 crew', split: null },
+        heads: { value: 5, note: 'for clients + 1 crew', split: null },
+      },
+    };
+    const rows = l => F.capacityRows(view(aquila, l), fmts[l]).map(r => `${r.label} ${r.value}`);
+
+    assert.deepEqual(rows('de'), ['Kabinen 5 (für Gäste + 1 Crew)', 'Kojen 10 + 2 Crew', 'WC 5 (für Gäste + 1 Crew)']);
+    assert.deepEqual(rows('en'), [
+      'Cabins 5 (for clients + 1 crew)',
+      'Berths 10 + 2 crew',
+      'WC 5 (for clients + 1 crew)',
+    ]);
+    assert.ok(F.capacityRows(view(aquila, 'de'), fmts.de).every(r => r.segments.every(s => !s.lang)));
+    CAPACITY_NOTE_LOCALES.forEach(l => assert.equal(view(aquila, l).cabins.note.lang, null, l));
+  });
+
+  test('a note the sanitizer hides (v2 "hidden": "sanitizer", e.g. "owner\'s") shows the number only', () => {
+    LOCALES.forEach(l => {
+      const c = view({ capacity: { cabins: { value: 5, note: "(4 double cabins + 1 owner's cabin + 2 crew)" } } }, l);
+
+      assert.deepEqual(c.cabins, { value: 5, note: null, split: null }, l);
+      assert.deepEqual(
+        F.capacityRows(c, fmts[l]).map(r => r.value),
+        ['5'],
+        l
+      );
     });
   });
 
@@ -407,6 +485,52 @@ describe('boat description, FAQ and meta (capacity contract 7.4)', () => {
 
 describe('source guards', () => {
   const read = path => readFileSync(`${ROOT}src/${path}`, 'utf8');
+  const sources = dir =>
+    readdirSync(`${ROOT}src/${dir}`, { withFileTypes: true }).flatMap(e => {
+      if (e.isDirectory()) return sources(`${dir}/${e.name}`);
+
+      return /\.tsx?$/.test(e.name) ? [`${dir}/${e.name}`] : [];
+    });
+
+  test('the note tables stay on the server: only server modules import capacityNoteTable (server-only)', () => {
+    assert.match(read('utils/static/capacityNoteTable.ts'), /^import 'server-only';/);
+    assert.deepEqual(
+      sources('.')
+        .filter(file => /capacityNoteTable|capacityNotes\//.test(read(file)))
+        .map(file => file.replace(/^\.\//, ''))
+        .sort(),
+      ['utils/server/yachtCapacity.ts', 'utils/static/capacityNoteTable.ts']
+    );
+  });
+
+  test('my-bookings asks the server for its few notes: translated, English, or hidden (resolveCapacityNotes)', async () => {
+    const { resolveCapacityNotes } = await import('@/utils/server/yachtCapacity');
+    const ask = (locale, queries) => resolveCapacityNotes(locale, queries);
+
+    assert.deepEqual(
+      await ask('de', [
+        { dim: 'cabins', note: 'for clients + 1 crew' },
+        { dim: 'berths', note: '(two convertible saloon berths)' },
+        { dim: 'heads', note: '(4 + 1 Sunsail)' },
+      ]),
+      [
+        { en: 'for clients + 1 crew', text: 'für Gäste + 1 Crew', lang: null, short: false },
+        { en: '(two convertible saloon berths)', text: '(two convertible saloon berths)', lang: 'en', short: false },
+        null,
+      ]
+    );
+    assert.deepEqual(await ask('en', [{ dim: 'cabins', note: '  for clients\u00a0+ 1 crew ' }]), [
+      { en: 'for clients + 1 crew', text: 'for clients + 1 crew', lang: null, short: false },
+    ]);
+    assert.deepEqual(await ask('de', [{ dim: 'cabins', note: "(owner's version)" }]), [null], 'sanitizer');
+    assert.deepEqual(await ask('de', [{ dim: 'cabins', note: 'call +385 91 123 4567' }]), [null], 'contact data');
+    assert.deepEqual(await ask('de', [{ dim: 'deck', note: 'x' }, 'x', null, { dim: 'heads', note: 5 }]), [
+      null,
+      null,
+      null,
+    ]);
+    assert.deepEqual(await ask('de', 'not a list'), []);
+  });
 
   test('no cabins × 2 + 2 estimate on the card; capacity / rig never go through the partner-text filter', () => {
     assert.ok(!/cabins\s*\*\s*2/.test(read('components/BoatListingItemCard/BoatListingItemCard.tsx')));

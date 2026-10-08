@@ -8,8 +8,10 @@ import { isOperatorName } from '@/utils/static/operatorNames';
 import {
   Capacity,
   CapacityDimDto,
+  Dim,
   Fmt,
   ResolvedDim,
+  ResolvedNote,
   SailDto,
   YachtLike,
   createFmt,
@@ -41,6 +43,43 @@ export const resolveYachtCapacity = async (yacht: YachtLike, locale: string): Pr
     noteLookup: await loadCapacityNoteLookup(locale),
     findOperatorName: text => isOperatorName(text),
   });
+
+export interface CapacityNoteQuery {
+  dim: Dim;
+  note: string;
+}
+
+const NOTE_DIMS: readonly Dim[] = ['cabins', 'berths', 'heads'];
+
+const isNoteQuery = (q: unknown): q is CapacityNoteQuery =>
+  !!q &&
+  typeof q === 'object' &&
+  NOTE_DIMS.includes((q as CapacityNoteQuery).dim) &&
+  typeof (q as CapacityNoteQuery).note === 'string';
+
+/**
+ * Partner notes for a client surface that fetches its own data (my-bookings,
+ * through actions/capacity.actions.ts): each note as this locale shows it —
+ * the reviewed translation or the English original (lang "en") — or null when
+ * the sanitizer or the operator list hides it. Same rules as
+ * resolveYachtCapacity; the note tables (~160 KB a locale) and the operator
+ * list stay on the server, the client gets only its own few notes.
+ */
+export const resolveCapacityNotes = async (locale: string, queries: unknown): Promise<(ResolvedNote | null)[]> => {
+  const list = Array.isArray(queries) ? queries.slice(0, NOTE_DIMS.length) : [];
+  const noteLookup = list.some(isNoteQuery) ? await loadCapacityNoteLookup(locale) : undefined;
+
+  return list.map(q => {
+    if (!isNoteQuery(q)) return null;
+
+    const capacity = fromYacht(
+      { capacity: { [q.dim]: { value: 1, note: q.note } } },
+      { locale, noteLookup, findOperatorName: text => isOperatorName(text) }
+    );
+
+    return capacity[q.dim]?.note ?? null;
+  });
+};
 
 const withDimNote = (raw: CapacityDimDto | null | undefined, resolved: ResolvedDim | null) =>
   raw && typeof raw === 'object' && !resolved?.note ? { ...raw, note: null } : raw;

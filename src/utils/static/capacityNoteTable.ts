@@ -1,15 +1,19 @@
+import 'server-only';
+
 import { NoteLookup, NoteTableEntry, noteTableLookup } from '@/utils/static/yachtCapacity';
 
 /**
  * Reviewed translations of the MMK capacity notes ("(12 pax + 1 Crew)",
- * "(5+1 for the crew)"; capacity contract v1, Mario 6.10.2026: translate
- * through a reviewed whole-string table, an unseen note stays English with
- * lang="en"). One slice per locale in ./capacityNotes/<locale>.json,
- * generated from the contract's capacityNotes.json: only the 37 notes that
- * carry words (the language-neutral "8+2", "(4+2)" print as they are), ~4 KB.
+ * "for clients + 1 crew"; Mario 6.10.2026: translate through a reviewed
+ * whole-string table, an unseen note stays English with lang="en"). One slice
+ * per locale in ./capacityNotes/<locale>.json, generated from the capacity
+ * contract's capacityNotes.json v2 (8.10.2026, every word note on prod) by its
+ * work/gen_slices.py: only the notes that carry words (the language-neutral
+ * "8+2", "(4+2)" print as they are), ~160 KB a locale.
  *
- * Loaded by locale with a dynamic import, so a page or a client surface
- * fetches only its own locale's slice. English pages need none.
+ * Server only: the boat page resolves its notes in resolveYachtCapacity,
+ * my-bookings asks getCapacityNotesAction for its few notes; a client chunk
+ * never carries a slice. English pages need none.
  */
 export const CAPACITY_NOTE_LOCALES: readonly string[] = ['de', 'es', 'fr', 'hr', 'it', 'nl', 'pl', 'pt'];
 
