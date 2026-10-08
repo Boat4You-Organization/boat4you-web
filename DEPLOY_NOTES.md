@@ -1,6 +1,6 @@
 # Boat4You (main) — Production Deploy Notes
 
-## 2026-10-08 — 🧰 Oprema, dorada nakon pregleda: jedan chip filtera po kodu, b4y web odmah iza backenda — ⏳ NIJE DEPLOYANO (main `781c041fb`)
+## 2026-10-08 — 🧰 Oprema, dorada nakon pregleda: jedan chip filtera po kodu, b4y web odmah iza backenda — ✅ DEPLOYANO 8.10.2026 (backend 17:35 UTC, web 17:43–18:01 UTC) (main `781c041fb`)
 
 Adversarialni pregled web dijela popravka opreme (8.10.). Ide zajedno s unosom ispod (`1ba07e93f`) i, kao on, **tek nakon backenda** (V9_74 / V9_75 / R\_\_1_05 v2, `973a2cb`). Samo web, bez env promjena.
 
@@ -16,7 +16,7 @@ Adversarialni pregled web dijela popravka opreme (8.10.). Ide zajedno s unosom i
 
 **Nakon deploya:** `/de/search?amenities=14,90&amenityLabels=fridge,refrigerator` → jedan chip „Kühlschrank"; klik na njega uklanja oba parametra.
 
-## 2026-10-08 — 🧰 Oprema: javno samo povezano s katalogom, novi „Dubinomjer“, „Kolut za spašavanje“ bez svjetla, spojeni kodovi kanonski — ⏳ NIJE DEPLOYANO (main `1ba07e93f`)
+## 2026-10-08 — 🧰 Oprema: javno samo povezano s katalogom, novi „Dubinomjer“, „Kolut za spašavanje“ bez svjetla, spojeni kodovi kanonski — ✅ DEPLOYANO 8.10.2026 (backend 17:35 UTC, web 17:43–18:01 UTC) (main `1ba07e93f`)
 
 Web dio popravka veza partnerove opreme (`infra/equipment-mapping-audit-8-10/FIX_CONTRACT.md` §12, Mariove odluke b–d od 8.10.). Samo web, bez env promjena. **Deploy tek nakon backenda** (V9_74 / V9_75 / R\_\_1_05 v2 + prvi MMK i NauSys sync): prije backenda bi web sakrio stavke koje backend danas ne povezuje (WiFi, „Stove", „Chart plotter"…), jer je uklonjen `PARTNER_NAME_ALIASES`.
 
