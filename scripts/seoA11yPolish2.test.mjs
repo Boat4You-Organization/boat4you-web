@@ -18,6 +18,12 @@
  *     banner), the MUI calendar's "Previous month" / "Next month", and the
  *     leading space in " Search boats".
  *
+ * Review of round 2: the model page's "Where" table and FAQ, My bookings'
+ * Details tab, the map modal's heading, the booking overview's pick-up line
+ * and the video's accessible name read the base and the boat like the rest
+ * of the page; the swap banner's date label takes any weekday ("Data
+ * wykrycia: niedziela, …", not "Wykryto niedziela").
+ *
  *   yarn test:polish
  */
 import { createElement } from 'react';
@@ -83,6 +89,12 @@ const { default: YachtCard } = await import('@/components/YachtCard/YachtCard');
 const { default: NotFoundPage } = await import('@/views/NotFoundPage/NotFoundPage');
 const { default: ErrorPage } = await import('@/views/ErrorPage/ErrorPage');
 const { default: CustomDateCalendar } = await import('@/components/CustomDateCalendar/CustomDateCalendar');
+const { default: VideoTab } = await import('@/views/Boat/BoatContentSection/VideoTab/VideoTab');
+const { default: DateTime } = await import('@/utils/static/DateTime');
+const { computeModelFleetStats } = await import('@/utils/static/modelFleetStats');
+const { toTitleCase } = await import('@/utils/static/toTitleCase');
+const { topBaseLabels, whereBases } = await import('@/views/Models/modelsText');
+const { modelsFaqSchema } = await import('@/views/Models/ModelsFaq');
 
 const masterpiece = readJson('scripts/fixtures/masterpiece-offers-2026-10-07.json');
 
@@ -207,6 +219,9 @@ describe('F6: a base reads "Marina, Town", as in the meta description', () => {
       'src/views/MyBookings/ReservationDetails/ReservationContent/ReservationHeroSection/ReservationHeroSection.tsx',
       'src/views/MyBookings/ReservationDetails/ReservationContent/ReservationInfoSection/MainInfoTab/MainInfoTab.tsx',
       'src/views/MyBookings/ActiveReservationsSection/ActiveReservationCard/ActiveReservationCard.tsx',
+      'src/views/MyBookings/ReservationDetails/ReservationContent/ReservationInfoSection/DetailsTab/DetailsTab.tsx',
+      'src/views/Booking/OverviewCard/OverviewCard.tsx',
+      'src/components/BoatLocationModal/BoatLocationModal.tsx',
       'src/components/ConfirmationPDF/ConfirmationPDF.tsx',
       'src/utils/static/fleetIndex.ts',
       'src/utils/static/yachtFaq.ts',
@@ -217,7 +232,7 @@ describe('F6: a base reads "Marina, Town", as in the meta description', () => {
       // A base name rendered straight into the markup.
       assert.doesNotMatch(
         src,
-        /^\s*\{(?:yacht\.location\.name|heroLocation\.name|dropOff\.name|locationFrom(?:\.name)?|offer\.locationFrom\.name|boat\.location\.name)\}\s*$/mu,
+        /^\s*\{(?:yacht\.location\.name|heroLocation\.name|dropOff\.name|locationFrom(?:\.name)?|offer\.locationFrom\.name|boat\.location\.name|pickUpLocationName)\}\s*$|<Typography[^>]*>\{pickUpLocationName\}/mu,
         path
       );
     });
@@ -238,6 +253,164 @@ describe('F6: a base reads "Marina, Town", as in the meta description', () => {
     assert.ok(html.includes('D-Marin Dalmacija Marina, Sukošan'), html);
     assert.doesNotMatch(html, /Sukošan.{0,3}\|| \| Sukošan/u);
     assert.deepEqual(attr(html, 'alt'), ['Lagoon 42 Masterpiece — Foto', 'Flagge: Kroatien']);
+  });
+});
+
+describe('F6 (review): model pages, My bookings, the map modal and the booking overview', () => {
+  const RAW = ['Alimos Marina | Athens', 'D-Marin Dalmacija Marina | Sukošan', 'Marina Kastela | Kastel Gomilica'];
+  const boat = (id, locationId, name, countryCode) => ({ id, location: { id: locationId, name, countryCode } });
+  const fleet = [
+    boat(1, 101, RAW[0], 'GR'),
+    boat(2, 101, RAW[0], 'GR'),
+    boat(3, 102, RAW[1], 'HR'),
+    boat(4, 103, RAW[2], 'HR'),
+  ];
+
+  test('Lagoon 42: the "Where" table, the FAQ and its FAQPage JSON-LD read "Alimos Marina, Athens", all 9 locales', async () => {
+    const stats = computeModelFleetStats(fleet, fleet.length, () => true);
+    const looked = [];
+    const where = await Promise.all(
+      stats.countries.map(async country => ({
+        countryCode: country.countryCode,
+        count: country.count,
+        bases: await whereBases(country.bases, 3, async base => {
+          looked.push(base.name);
+
+          return `/landing/${base.did}`;
+        }),
+      }))
+    );
+
+    // The landing links still resolve the catalogue name.
+    assert.deepEqual(looked.sort(), [...RAW].sort());
+    assert.deepEqual(
+      where.flatMap(row => row.bases),
+      [
+        { name: 'Alimos Marina, Athens', count: 2, href: '/landing/l-101' },
+        { name: 'D-Marin Dalmacija Marina, Sukošan', count: 1, href: '/landing/l-102' },
+        { name: 'Marina Kaštela, Kaštel Gomilica', count: 1, href: '/landing/l-103' },
+      ]
+    );
+
+    LOCALES.forEach(locale => {
+      const t = createTranslator({ locale, messages: catalogue(locale, 'models') });
+      const list = items => new Intl.ListFormat(locale, { type: 'conjunction' }).format(items);
+      const num = n => n.toLocaleString(locale);
+      const answer = [
+        t('models.model.faqWhereA', { model: 'Lagoon 42', countries: list(where.map(row => row.countryCode)) }),
+        t('models.model.faqWhereBases', { bases: list(topBaseLabels(where, num)) }),
+      ].join(' ');
+      const ld = JSON.stringify(
+        modelsFaqSchema([
+          { question: t('models.model.faqWhereQ', { model: 'Lagoon 42' }), answer },
+          { question: 'q', answer: 'a' },
+        ])
+      );
+
+      assert.ok(answer.includes('Alimos Marina, Athens (2)'), `${locale}: ${answer}`);
+      assert.ok(ld.includes('Alimos Marina, Athens (2)'), locale);
+      assert.doesNotMatch(`${answer} ${ld}`, /\|/u, locale);
+    });
+
+    assert.deepEqual(topBaseLabels(where, String, 1), ['Alimos Marina, Athens (2)']);
+  });
+
+  test('the model page builds its bases with whereBases and its FAQ with topBaseLabels', () => {
+    const page = readSrc('src/app/[locale]/(root)/yachts/[manufacturer]/[model]/page.tsx');
+
+    assert.match(page, /bases: await whereBases\(/u);
+    assert.match(page, /topBaseLabels\(where, num\)/u);
+    assert.doesNotMatch(page, /name: base\.name|`\$\{base\.name\} \(/u);
+  });
+
+  test('My bookings → Details: "Idila … based in D-Marin Dalmacija Marina, Sukošan"', () => {
+    const src = readSrc(
+      'src/views/MyBookings/ReservationDetails/ReservationContent/ReservationInfoSection/DetailsTab/DetailsTab.tsx'
+    );
+
+    assert.match(src, /location: displayBaseName\(reservationDetails\.locationFrom\) \|\| 'none'/u);
+    assert.equal(src.match(/name: toTitleCase\(reservationDetails\.yachtName\)/gu)?.length, 2);
+    assert.doesNotMatch(src, /name: reservationDetails\.yachtName|location: reservationDetails\.locationFrom/u);
+
+    const expected = {
+      en: 'based in <b>D-Marin Dalmacija Marina, Sukošan</b>',
+      hr: '<b>D-Marin Dalmacija Marina, Sukošan</b>',
+    };
+
+    LOCALES.forEach(locale => {
+      const t = createTranslator({ locale, messages: catalogue(locale, 'yacht') });
+      const html = renderToStaticMarkup(
+        createElement(
+          'p',
+          null,
+          t.rich('yacht.descIntroShort', {
+            name: toTitleCase('IDILA '),
+            vesselType: 'x',
+            model: 'Oceanis 35.1',
+            year: '2015',
+            location: displayBaseName('D-Marin Dalmacija Marina | Sukošan') || 'none',
+            b: chunks => createElement('b', null, chunks),
+          })
+        )
+      );
+
+      assert.ok(html.includes('<b>Idila</b>'), `${locale}: ${html}`);
+      assert.ok(html.includes(expected[locale] ?? '<b>D-Marin Dalmacija Marina, Sukošan</b>'), `${locale}: ${html}`);
+      assert.doesNotMatch(html, /IDILA|\|/u, locale);
+    });
+  });
+
+  test('the map modal is headed like the link that opened it; the map still looks up the catalogue name', () => {
+    const src = readSrc('src/components/BoatLocationModal/BoatLocationModal.tsx');
+
+    assert.match(src, /const shownName = displayBaseName\(locationName\)/u);
+    assert.match(src, /title=\{shownName\}/u);
+    assert.match(src, /title=\{`Google Maps — \$\{shownName\}`\}/u);
+    assert.match(src, /encodeURIComponent\(locationName\)/u);
+    assert.doesNotMatch(src, /title=\{locationName\}|— \$\{locationName\}/u);
+  });
+
+  test('the booking overview: "D-Marin Dalmacija Marina, Sukošan" under Pick-up location, raw name in the maps link', () => {
+    const src = readSrc('src/views/Booking/OverviewCard/OverviewCard.tsx');
+
+    assert.match(src, /\{displayBaseName\(pickUpLocationName\)\}/u);
+    assert.match(src, /generateGoogleMapsLink\(pickUpLocationName\)/u);
+  });
+});
+
+describe('the boat video’s accessible name', () => {
+  const messages = locale => catalogue(locale, 'common', 'yacht');
+  const videoTitle = (locale, yacht) =>
+    attr(
+      renderToStaticMarkup(
+        createElement(
+          NextIntlClientProvider,
+          { locale, messages: messages(locale), timeZone: 'UTC' },
+          createElement(VideoTab, { yacht })
+        )
+      ),
+      'title'
+    );
+  const idila = {
+    name: 'IDILA ',
+    manufacturerName: 'Beneteau',
+    modelName: 'Oceanis 35.1',
+    customDetails: { videoUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ' },
+  };
+
+  test('"Beneteau Oceanis 35.1 Idila — Vidéo" on /fr, the gallery’s label in every locale', () => {
+    LOCALES.forEach(locale => {
+      const title = videoTitle(locale, idila);
+      const word = lookup(locale, 'common', 'video');
+
+      assert.deepEqual(title, [`Beneteau Oceanis 35.1 Idila — ${word}`], locale);
+    });
+    assert.deepEqual(videoTitle('fr', idila), ['Beneteau Oceanis 35.1 Idila — Vidéo']);
+    assert.deepEqual(videoTitle('pl', idila), ['Beneteau Oceanis 35.1 Idila — Wideo']);
+  });
+
+  test('no video, no iframe', () => {
+    assert.deepEqual(videoTitle('de', { ...idila, customDetails: {} }), []);
   });
 });
 
@@ -436,6 +609,31 @@ describe('English labels outside the header and search', () => {
 
       assert.ok(html.includes('<strong>Masterpiece</strong>'), `${locale}: ${html}`);
       assert.ok(t('common.yachtSwap.detectedOn', { date: '8. 10. 2026.' }).includes('8. 10. 2026.'), locale);
+    });
+  });
+
+  test('the swap banner’s date label takes any weekday: "Data wykrycia: niedziela, …"', () => {
+    const sunday = dayjs('2026-10-11T10:00:00Z');
+    const expected = {
+      en: 'Detected on Sunday, 11 October 2026',
+      de: 'Festgestellt am Sonntag, 11. Oktober 2026',
+      fr: 'Détecté le dimanche 11 octobre 2026',
+      it: 'Data di rilevamento: domenica 11 ottobre 2026',
+      es: 'Detectado el domingo, 11 de octubre de 2026',
+      pt: 'Data de deteção: domingo, 11 de outubro de 2026',
+      nl: 'Vastgesteld op zondag 11 oktober 2026',
+      pl: 'Data wykrycia: niedziela, 11 października 2026',
+      hr: 'Datum otkrivanja: nedjelja, 11. listopada 2026.',
+    };
+
+    LOCALES.forEach(locale => {
+      const t = createTranslator({ locale, messages: catalogue(locale, 'common') });
+
+      assert.equal(
+        t('common.yachtSwap.detectedOn', { date: DateTime.formatLong(sunday, locale) }),
+        expected[locale],
+        locale
+      );
     });
   });
 
