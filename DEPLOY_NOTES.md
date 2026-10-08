@@ -28,6 +28,20 @@ Izvor: `_seo-audit-2026-10-08/live-verify/` (X10, F2, F4, F6) i otvorene stavke 
 
 **Otvoreno (Mario):** prijevode (alt, banner zamjene broda) nisu pregledali izvorni govornici. Engleski ostaju: Trip hub (`/trip`, namjerno samo EN), tekst dijeljenja („Check out this yacht"), oznaka „Multi Location" u pregledu bookinga. Logo linkovi u lightboxu i jednostavnom headeru vode na `/` (jezik vraća kolačić). Na karticama „Model | Ime" ostaje kao dizajn.
 
+**Dopuna nakon reviewa (8.10., ista grana):**
+
+- `e6db5efc2` F6 na stranicama modela (`/yachts/{brand}/{model}`): tablica „Gdje", FAQ rečenica „The biggest bases are …" i FAQPage JSON-LD pišu „Alimos Marina, Athens" (bilo „Alimos Marina | Athens"), svih 9 jezika. Link na landing i dalje traži izvorni naziv.
+- `0a6cbfc36` F6: My bookings → Details („… matična baza D-Marin Dalmacija Marina, Sukošan", ime broda „Idila" umjesto „IDILA "), naslov modala s kartom (karta i dalje traži izvorni naziv), zadnji korak bookinga pod „Pick-up location" (Google Maps link nepromijenjen).
+- `b4cc4f903` Video broda: pristupačno ime „Beneteau Oceanis 35.1 Idila — Vidéo" kao u galeriji (bilo „IDILA video" na svim jezicima).
+- `92c741415` Banner zamjene broda, datum: pl „Data wykrycia: …", hr „Datum otkrivanja: …", it „Data di rilevamento: …", pt „Data de deteção: …" (bilo „Wykryto czwartek, …", „Rilevato il domenica"). de, fr, es, nl, en već su bili ispravni.
+- `c9248c909` `yarn test:polish` +8 testova (45).
+
+Provjere: `yarn test:*` svi prolaze (polish 45/45), `npx tsc --noEmit` 0, `yarn lint` 0 grešaka (17 starih upozorenja). `next dev` stranice modela nije uspio: oba pokušaja (3 zahtjeva) visila su 6,7 i 18,3 min pod opterećenjem stroja (load ~60), pa HTML nije spremljen. Provjereno na podacima: baze s live stranice kroz `whereBases` + `topBaseLabels` daju „The biggest bases are Alimos Marina, Athens (25), D-Marin Marina Lefkas, Lefkada (18), and Le Marin, Martinique (18)." (live 8.10.: „Alimos Marina | Athens (25), …").
+
+Nakon deploya: `curl -s https://www.boat4you.com/yachts/lagoon/lagoon-42 | grep -o 'biggest bases are [^.]*'` → „Alimos Marina, Athens (…)", bez „|".
+
+Otvoreno: oznaka „Multi Location" i tooltip „Crewed Boats require a custom inquiry …" u pregledu bookinga i dalje su engleski. Prikazuju se za svaki brod bez podatka iza njih, pa bi prijevod proširio netočnu tvrdnju na 9 jezika. Treba odluka: maknuti ili prikazati samo kad vrijedi.
+
 ## 2026-10-08 — 🛥️ Bilješke kapaciteta v2: prevedene sve bilješke s prod-a, tablice samo na serveru — ⏳ NIJE DEPLOYANO (main `ba3330411` + provjera `2253fd844`)
 
 Mario 6.10.: partnerove bilješke („for clients + 1 crew") na ne-engleskim stranicama idu kroz pregledanu tablicu cijelih rečenica. Tablica v1 imala je 37 bilježaka iz uzorka, prod ih ima 1.435 više, pa je njemačka stranica pisala „Kabinen 5 (for clients + 1 crew)". Ugovor `infra/capacity-contract-6-10/capacityNotes.json` je sada v2 (v1 ostaje kao `capacityNotes.v1.json`): 1.660 bilježaka, od toga 1.446 s riječima u `src/utils/static/capacityNotes/<locale>.json` (~160 KB po jeziku, bilo ~3,6 KB; generator `work/gen_slices.py`). 22 bilješke koje sanitizer ionako skriva („owner's cabin", „daily charters", „internal") nisu u tablici. Neviđena bilješka i dalje ostaje engleska s `lang="en"`. Nijedna bilješka ne imenuje tvrtku, osobu, web, telefon ni e-mail (0 označenih). Samo web, bez env promjena.
