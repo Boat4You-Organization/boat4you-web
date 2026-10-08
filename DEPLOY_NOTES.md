@@ -1,5 +1,35 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-10-08 — 🧰 Oprema: javno samo povezano s katalogom, novi „Dubinomjer“, „Kolut za spašavanje“ bez svjetla, spojeni kodovi kanonski — ⏳ NIJE DEPLOYANO (main `1ba07e93f`)
+
+Web dio popravka veza partnerove opreme (`infra/equipment-mapping-audit-8-10/FIX_CONTRACT.md` §12, Mariove odluke b–d od 8.10.). Samo web, bez env promjena. **Deploy tek nakon backenda** (V9_74 / V9_75 / R\_\_1_05 v2 + prvi MMK i NauSys sync): prije backenda bi web sakrio stavke koje backend danas ne povezuje (WiFi, „Stove", „Chart plotter"…), jer je uklonjen `PARTNER_NAME_ALIASES`.
+
+- `presentAmenities` vraća samo retke s kodom iz našeg kataloga. Nepovezana partnerova stavka ostaje u bazi i adminu, a na javnim stranicama je nema nigdje: stranica broda, moje rezervacije, kartica dostupnosti („Cijena uključuje"), PDF, generirani opis. Nema više kante „Deck" za nepovezano. `withSafePartnerText` ih izbacuje već na serveru, pa ni njihova imena ne ulaze u RSC payload.
+- Uklonjeni `PARTNER_NAME_ALIASES`, `withCatalogueMatch` i `ALIAS_EQUIPMENT_ID` (backend sada ta imena stvarno povezuje).
+- Spojeni kodovi ostaju razrješivi i čitaju se kao preživjeli: `bow-thruster-deck` → `bow-thruster` (kategorija Navigacija), `refrigerator` → `fridge`, `sundeck-cushions` → `sun-pads`. Jedan redak po kodu na stranici broda i u rezervaciji, ikone na kartici pretrage, chip filtera i odabir u filteru iz starog URL-a. Prijevodi starih kodova ostaju u svih 9 jezika.
+- Kod bez prijevoda u ovom buildu prikazuje partnerovo ime, a ne „yacht.amenitiesList.<kod>" (stara provjera je uspoređivala s golim kodom i nikad nije radila; next-intl vraća `namespace.ključ`).
+- „Cijena uključuje" na kartici dostupnosti i PDF prikazuju naš naziv koda (PDF: engleski `amenitiesList`, učitava se tek kod izrade PDF-a), a ne partnerov slobodni tekst.
+- Chip primijenjenog filtera prikazuje prijevod („Klimaanlage"), a ne sirovi kod („air-conditioning", vidljivo danas na `/de/search?amenities=1&amenityLabels=air-conditioning`).
+- Poruke ×9: novi `depth-sounder` (Depth sounder / Echolot / Sonda de profundidad / Sondeur / Dubinomjer / Ecoscandaglio / Dieptemeter / Echosonda / Sonda de profundidade); `life-buoy` bez „+ svjetlo" (Life buoy / Rettungsring / Aro salvavidas / Bouée de sauvetage / Kolut za spašavanje / Salvagente anulare / Reddingsboei / Koło ratunkowe / Boia salva-vidas). `cockpit-cushions` je već bio preveden.
+- Novih opcija filtera nema (lista dolazi iz `/public/catalogue/amenities`).
+
+**Provjere (lokalno 8.10.):** `yarn test:equipment` 11/11 (8 ih pada na prethodnom kodu), `yarn test:capacity` 40/40, `test:boat-seo` 38/38, `test:pdf` 5/5, `npx tsc --noEmit` 0, `yarn lint` 0 grešaka (17 starih upozorenja).
+`next build` na prod API (lock, `cpus: 1`, privremeni `.env.production.local`, uklonjen) izlaz 0; `next start` :3187 (bez `-H`):
+
+- `/de/boat/lagoon-42-masterpiece-11681` (200): Ausstattung = Deck: Cockpittisch · Pantry: Kühlschrank (bivši `refrigerator`, sada kategorija Pantry) · Navigation: Autopilot · Segel: Lazy Bag · Bordelektrik: Generator, Klimaanlage. Nepovezani „Wi-Fi & Internet", „Chart plotter", „Chart plotter in cockpit" nisu ni u HTML-u ni u RSC payloadu („Wi-Fi" se pojavljuje samo u extras). „Cockpittisch" je partnerov „Depth Gauge" krivo povezan na `cockpit-table`: to popravlja backend (V9_75), ne web.
+- `/de/boat/bavaria-yachtbau-bavaria-cruiser-34-aria-2316` (200): „7 x Rettungsring" bez „Blinklicht" (partnerovi „Life jackets" krivo povezani na `life-buoy`, popravlja V9_75); nema „Stove", „Black Water Tank", „Wind instrument/Anemometer", „Fusion radio", „Cockpit cushions". `/boat/…` (en) isto: „Life buoy", „Fridge".
+- `/de/search?amenities=1,90&amenityLabels=air-conditioning,refrigerator` (200): chipovi „Klimaanlage" i „Kühlschrank", sirovih kodova nema.
+- Nijedna stranica ne sadrži „yacht.amenitiesList".
+
+**Nakon deploya (i nakon backenda + D+1 syncova):**
+
+1. `curl -s https://www.boat4you.com/de/boat/lagoon-42-masterpiece-11681 | grep -c 'Wi-Fi &amp; Internet'` → 0; isti brod pokazuje „WLAN" tek kad ga backend poveže.
+2. `curl -s https://www.boat4you.com/de/boat/lagoon-42-masterpiece-11681 | grep -o 'Kühlschrank' | head -1` → „Kühlschrank" (bivši `refrigerator`).
+3. `/de/search?amenities=14&amenityLabels=refrigerator`: chip „Kühlschrank" (stari kod se čita kao preživjeli).
+4. ISR stranice brodova revalidirati na D+1 ili pustiti da isteknu.
+
+**Otvoreno (Mario):** ništa novo. Napomena za redoslijed: dok je live stari web, a backend već poveže prve retke na `depth-sounder`, stari `renderAmenityLabel` će pisati „yacht.amenitiesList.depth-sounder" (ne pada na partnerovo ime kako piše u ugovoru §10.8). Prozor između backend i web deploya držati kratkim.
+
 ## 2026-10-08 — 🧹 Sitnice s live provjere 8.10. (2. krug): „ležajevi" u hr opisu, „Marina, Mjesto", alt tekstovi, 404 / greška, My bookings, kalendar — ✅ DEPLOYANO 8.10.2026 ~14:25 UTC (worktree `B4Y_REPO`, `fdcdc2e3d`, deployment id `fdcdc2e3d614-muzmewtk`)
 
 Izvor: `_seo-audit-2026-10-08/live-verify/` (X10, F2, F4, F6) i otvorene stavke 7.10. Sve je starije od izdanja 8.10. Tekstovi brokera, `/faq`, kapacitet i Product JSON-LD nisu dirani. Samo web, bez env promjena.
