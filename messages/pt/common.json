@@ -668,6 +668,16 @@
     "rangeMin": "{label}: mínimo",
     "rangeMax": "{label}: máximo",
     "boatPhoto": "{label} — foto",
-    "flagOf": "Bandeira: {country}"
+    "flagOf": "Bandeira: {country}",
+    "copyBookingReference": "Copiar a referência da reserva",
+    "previousMonth": "Mês anterior",
+    "nextMonth": "Mês seguinte"
+  },
+  "yachtSwap": {
+    "title": "A agência de charter substituiu o seu iate",
+    "autoUpdated": "O seu novo iate é <strong>{name}</strong>. As datas, o local e o preço mantêm-se. Os detalhes da reserva nesta página já correspondem ao iate de substituição.",
+    "manualReview": "A agência alterou o iate da sua reserva. Estamos a verificar os novos dados e entraremos em contacto consigo em breve — de momento, não precisa de fazer nada.",
+    "detected": "Foi detetada uma alteração na sua reserva. A nossa equipa está a analisá-la e entrará em contacto consigo se algo precisar da sua atenção.",
+    "detectedOn": "Detetado em {date}"
   }
 }

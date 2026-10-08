@@ -23,9 +23,13 @@ import {
 import colors from '@/styles/themes/colors';
 import DateTime from '@/utils/static/DateTime';
 import { getCancellationDisplayState } from '@/utils/static/cancellationUtils';
+import { countryDisplayName } from '@/utils/static/countryDisplayName';
+import { displayBaseName } from '@/utils/static/croatianPlaceNames';
 import { toTitleCase, yachtLabel } from '@/utils/static/toTitleCase';
 
 import styles from './ReservationHeroSection.module.scss';
+
+const StrongText = (chunks: React.ReactNode): React.ReactNode => <strong>{chunks}</strong>;
 
 interface ReservationHeroSectionProps {
   reservationDetails: ReservationDetails;
@@ -155,12 +159,12 @@ const ReservationHeroSection = ({ reservationDetails }: ReservationHeroSectionPr
               fill
               sizes="auto"
               src={`https://flagcdn.com/w80/${locationFromCountryCode.toLowerCase()}.png`}
-              alt={`${locationFromCountryCode} flag`}
+              alt={t('a11y.flagOf', { country: countryDisplayName(locationFromCountryCode, locale) })}
               className={styles.image}
             />
           </Box>
           <Typography variant="body1" color={colors.black950}>
-            {locationFrom}
+            {displayBaseName(locationFrom)}
           </Typography>
         </Stack>
       </Stack>
@@ -244,39 +248,40 @@ const ReservationHeroSection = ({ reservationDetails }: ReservationHeroSectionPr
           icon={<CompareArrowsIcon />}
           sx={{ mt: 2, alignItems: 'flex-start' }}
           action={
-            <IconButton aria-label="Dismiss" size="small" onClick={handleDismissSwap} sx={{ color: 'inherit' }}>
+            <IconButton aria-label={t('a11y.close')} size="small" onClick={handleDismissSwap} sx={{ color: 'inherit' }}>
               <CloseIcon fontSize="small" />
             </IconButton>
           }
         >
           <Stack gap={0.5}>
             <Typography variant="body1" fontWeight={700}>
-              The charter agency has replaced your yacht
+              {t('yachtSwap.title')}
             </Typography>
             {swapInfo.action === 'AUTO_UPDATED' && swapInfo.newYachtName ? (
               <Typography variant="body2">
-                Your new yacht is <strong>{swapInfo.newYachtName}</strong>. Dates, location and price remain the same.
-                The booking details on this page reflect the replacement yacht.
+                {t.rich('yachtSwap.autoUpdated', {
+                  name: toTitleCase(swapInfo.newYachtName),
+                  strong: StrongText,
+                })}
               </Typography>
             ) : swapInfo.action === 'MANUAL_REVIEW' ? (
-              <Typography variant="body2">
-                The agency has changed the yacht on your reservation. We&apos;re verifying the new details and will
-                contact you shortly — no action required from you right now.
-              </Typography>
+              <Typography variant="body2">{t('yachtSwap.manualReview')}</Typography>
             ) : (
-              <Typography variant="body2">
-                A change was detected on your reservation. Our team is reviewing and will contact you if anything
-                requires your attention.
-              </Typography>
+              <Typography variant="body2">{t('yachtSwap.detected')}</Typography>
             )}
             <Typography variant="body2" color={colors.black600} sx={{ mt: 0.5, fontSize: '0.8125rem' }}>
-              Detected on {DateTime.formatLong(dayjs(swapInfo.detectedAt), locale)}
+              {t('yachtSwap.detectedOn', { date: DateTime.formatLong(dayjs(swapInfo.detectedAt), locale) })}
             </Typography>
           </Stack>
         </Alert>
       )}
 
-      <Gallery images={yachtImages} showShareAndFavorite={false} maxDisplayedImages={3} />
+      <Gallery
+        images={yachtImages}
+        showShareAndFavorite={false}
+        maxDisplayedImages={3}
+        photoName={yachtLabel(modelName, toTitleCase(yachtName), ' ')}
+      />
     </Container>
   );
 };

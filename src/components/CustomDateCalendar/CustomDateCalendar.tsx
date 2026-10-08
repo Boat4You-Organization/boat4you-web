@@ -1,3 +1,5 @@
+import { useMemo } from 'react';
+
 import { LocalizationProvider, DateCalendar as MuiDateCalendar, PickersDayProps } from '@mui/x-date-pickers';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { Dayjs } from 'dayjs';
@@ -10,7 +12,7 @@ import 'dayjs/locale/it';
 import 'dayjs/locale/nl';
 import 'dayjs/locale/pl';
 import 'dayjs/locale/pt';
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 import CustomDay from '@/components/CustomDateCalendar/CustomDay';
 import colors from '@/styles/themes/colors';
@@ -160,11 +162,16 @@ const CustomDateCalendar = ({
   getDateDisableReason = () => 'none',
 }: CustomDateCalendarProps) => {
   const locale = useLocale();
+  const t = useTranslations('common');
+  // The month arrows' accessible names from the catalogue: MUI's own text is
+  // English ("Previous month") on every locale (live check 8.10.2026). One
+  // object per locale, so hovering a day does not hand the pickers a new context.
+  const localeText = useMemo(() => ({ previousMonth: t('a11y.previousMonth'), nextMonth: t('a11y.nextMonth') }), [t]);
 
   const adapterLocale = getAdapterLocale(locale);
 
   return (
-    <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale={adapterLocale}>
+    <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale={adapterLocale} localeText={localeText}>
       <MuiDateCalendar
         key={currentMonth.format('YYYY-MM')}
         value={null}

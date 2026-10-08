@@ -668,6 +668,16 @@
     "rangeMin": "{label} : minimum",
     "rangeMax": "{label} : maximum",
     "boatPhoto": "{label} — photo",
-    "flagOf": "Drapeau : {country}"
+    "flagOf": "Drapeau : {country}",
+    "copyBookingReference": "Copier la référence de réservation",
+    "previousMonth": "Mois précédent",
+    "nextMonth": "Mois suivant"
+  },
+  "yachtSwap": {
+    "title": "L'agence de location a remplacé votre yacht",
+    "autoUpdated": "Votre nouveau yacht est <strong>{name}</strong>. Les dates, le lieu et le prix restent inchangés. Les détails de réservation sur cette page correspondent déjà au yacht de remplacement.",
+    "manualReview": "L'agence a changé le yacht de votre réservation. Nous vérifions les nouvelles informations et vous contacterons très bientôt — aucune action n'est requise de votre part pour le moment.",
+    "detected": "Une modification a été détectée sur votre réservation. Notre équipe l'examine et vous contactera si quelque chose nécessite votre attention.",
+    "detectedOn": "Détecté le {date}"
   }
 }

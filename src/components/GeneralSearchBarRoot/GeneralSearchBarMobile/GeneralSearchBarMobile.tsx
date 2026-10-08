@@ -299,7 +299,7 @@ const GeneralSearchBarMobile = () => {
           >
             <BoatTypeContent onDeleteSingle={handleDeleteSingleBoatType} />
             <Button fullWidth size="large" onClick={handleBoatTypeConfirm} sx={{ mt: 1 }}>
-              {t('generalSearchBar.searchBoats').trim()}
+              {t('generalSearchBar.searchBoats')}
             </Button>
           </Popover>
         </>
@@ -320,7 +320,7 @@ const GeneralSearchBarMobile = () => {
           // searches on its own button.
           hideConfirmButton={activeField !== 'boatType'}
           onConfirm={handleBoatTypeConfirm}
-          confirmBtnText={t('generalSearchBar.searchBoats').trim()}
+          confirmBtnText={t('generalSearchBar.searchBoats')}
           // Destination uses full screen (long recent + popular + search
           // results lists). Boat-type sits in a bottom sheet — compact content
           // that shouldn't dominate the viewport.

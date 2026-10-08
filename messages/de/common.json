@@ -668,6 +668,16 @@
     "rangeMin": "{label}: Minimum",
     "rangeMax": "{label}: Maximum",
     "boatPhoto": "{label} — Foto",
-    "flagOf": "Flagge: {country}"
+    "flagOf": "Flagge: {country}",
+    "copyBookingReference": "Buchungsreferenz kopieren",
+    "previousMonth": "Vorheriger Monat",
+    "nextMonth": "Nächster Monat"
+  },
+  "yachtSwap": {
+    "title": "Die Charteragentur hat Ihre Yacht ersetzt",
+    "autoUpdated": "Ihre neue Yacht ist <strong>{name}</strong>. Termine, Ort und Preis bleiben gleich. Die Buchungsdetails auf dieser Seite gelten bereits für die Ersatzyacht.",
+    "manualReview": "Die Agentur hat die Yacht Ihrer Reservierung geändert. Wir prüfen die neuen Angaben und melden uns in Kürze bei Ihnen — Sie müssen im Moment nichts tun.",
+    "detected": "Bei Ihrer Reservierung wurde eine Änderung festgestellt. Unser Team prüft sie und meldet sich bei Ihnen, falls etwas Ihre Aufmerksamkeit erfordert.",
+    "detectedOn": "Festgestellt am {date}"
   }
 }

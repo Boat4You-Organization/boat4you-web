@@ -668,6 +668,16 @@
     "rangeMin": "{label}: minimum",
     "rangeMax": "{label}: maximum",
     "boatPhoto": "{label} — foto",
-    "flagOf": "Vlag: {country}"
+    "flagOf": "Vlag: {country}",
+    "copyBookingReference": "Boekingsreferentie kopiëren",
+    "previousMonth": "Vorige maand",
+    "nextMonth": "Volgende maand"
+  },
+  "yachtSwap": {
+    "title": "Het verhuurbedrijf heeft je jacht vervangen",
+    "autoUpdated": "Je nieuwe jacht is <strong>{name}</strong>. Data, locatie en prijs blijven hetzelfde. De boekingsgegevens op deze pagina gelden al voor het vervangende jacht.",
+    "manualReview": "Het verhuurbedrijf heeft het jacht van je reservering gewijzigd. We controleren de nieuwe gegevens en nemen binnenkort contact met je op — je hoeft nu niets te doen.",
+    "detected": "Er is een wijziging in je reservering vastgesteld. Ons team bekijkt deze en neemt contact met je op als er iets je aandacht vraagt.",
+    "detectedOn": "Vastgesteld op {date}"
   }
 }

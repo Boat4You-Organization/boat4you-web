@@ -258,7 +258,7 @@ const ReservationCTA = ({ reservationDetails }: ReservationCTAProps) => {
   );
 
   return (
-    <Box className={styles.container} component="aside" aria-label="Reservation information">
+    <Box className={styles.container} component="aside" aria-label={t('yourBookingDetails')}>
       {/* Cancellation banner has 3 mutually-exclusive states resolved by
           `getCancellationDisplayState`:
             'pending'  — request received, no decision yet (amber)
@@ -367,7 +367,7 @@ const ReservationCTA = ({ reservationDetails }: ReservationCTAProps) => {
               #{reservationNumber ?? reservationId}
             </Typography>
             <IconButton
-              aria-label="Copy booking reference"
+              aria-label={t('a11y.copyBookingReference')}
               onClick={reservationNumber ? handleCopyReservationNumber : handleCopyReservationId}
               className={styles.copyButton}
             >

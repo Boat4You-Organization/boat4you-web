@@ -668,6 +668,16 @@
     "rangeMin": "{label}: mínimo",
     "rangeMax": "{label}: máximo",
     "boatPhoto": "{label} — foto",
-    "flagOf": "Bandera: {country}"
+    "flagOf": "Bandera: {country}",
+    "copyBookingReference": "Copiar la referencia de reserva",
+    "previousMonth": "Mes anterior",
+    "nextMonth": "Mes siguiente"
+  },
+  "yachtSwap": {
+    "title": "La agencia de chárter ha sustituido tu yate",
+    "autoUpdated": "Tu nuevo yate es <strong>{name}</strong>. Las fechas, el lugar y el precio no cambian. Los detalles de la reserva en esta página ya corresponden al yate de sustitución.",
+    "manualReview": "La agencia ha cambiado el yate de tu reserva. Estamos verificando los nuevos datos y te contactaremos en breve; por ahora no tienes que hacer nada.",
+    "detected": "Se ha detectado un cambio en tu reserva. Nuestro equipo lo está revisando y te contactará si algo requiere tu atención.",
+    "detectedOn": "Detectado el {date}"
   }
 }
