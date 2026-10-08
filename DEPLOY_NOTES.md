@@ -2,7 +2,7 @@
 
 ## 2026-10-08 — 🧹 Sitnice s live provjere 7.10.: opis broda bez navodnika, agencije „samo upit", hreflang naslovnice, oznake za čitače ekrana, jedna robots oznaka na 404 — ⏳ NIJE DEPLOYANO (grana `fix/w810-b4y-polish`)
 
-Izvor: `_seo-audit-2026-10-07/live-verify/` (b4y-boat F2, regression F2 / F3 / F6, B4Y-CRAWL-01). Sve je starije od izdanja 7.10. Tekstovi sistera, FAQ-ovi, „our crew / fleet" i cijene nisu dirani.
+Izvor: `_seo-audit-2026-10-07/live-verify/` (b4y-boat F2, regression F2 / F3 / F6, B4Y-CRAWL-01). Sve je starije od izdanja 7.10. Tekstovi sistera, stranica `/faq` i FAQ-ovi sistera, „our crew / fleet" i cijene nisu dirani. Na stranici broda mijenja se samo FAQ brodova agencija koje rade samo na upit (novi odgovor o bookingu, bez pitanja o cijeni; `401efc508`).
 
 **Commiti:**
 
@@ -12,24 +12,28 @@ Izvor: `_seo-audit-2026-10-07/live-verify/` (b4y-boat F2, regression F2 / F3 / F
 - `f24aaec1d` Oznake za čitače ekrana na jeziku stranice (9 jezika): header („Favoriten", „Sprache und Währung"), prikaz liste / mreže i „Sortieren nach" na landingu, strelica filtera „Liste öffnen" (bio engleski „Open", vidi se i kao oblačić), „Keine Treffer" umjesto „No options" / „No matches" (vidljiv tekst), klizači („Baujahr: Minimum"), kartice kontinenata na naslovnici.
 - `94419f4c2` 404: jedna robots oznaka (`noindex` od Next.js-a). Stranica više ne dodaje svoju „noindex, follow".
 - `91196158f` `yarn test:polish` (17 testova).
+- `c2e6c7ea4` Ime broda koje se krije unutar riječi modela ostaje u naslovu i opisu: „Bavaria Cruiser 34 Aria (2018)" („aria" je u „Bavaria"), „Elan Impression 35 Essi (2017)" („essi" je u „Impression"). Prije se uspoređivao podniz, pa je naslov već na live-u bio bez imena, a `4b7cbdfed` je to prenio i u opis. Sada se uspoređuju cijele riječi; ime koje ponavlja model („Bavaria Cruiser 40", „42", „M/S Aurum Sky", „Anthea") i dalje izostaje. `yarn test:polish` +2 testa (19).
 
-**Provjere (lokalno 8.10.):** `yarn test:polish` 17/17, ostali `yarn test:*` prolaze (boat-seo 38, landing-pages 36), `npx tsc --noEmit` 0, `yarn lint` 0 grešaka (17 starih upozorenja). `next dev` :3995 na prod API (read-only, 11 stranica):
+**Provjere (lokalno 8.10.):** `yarn test:polish` 19/19, ostali `yarn test:*` prolaze (boat-seo 38, landing-pages 36), `npx tsc --noEmit` 0, `yarn lint` 0 grešaka (17 starih upozorenja). `next dev` :3995 na prod API (read-only, 11 stranica):
 
 - Masterpiece en / de: opis „Yachtcharter Lagoon 42 Masterpiece (2018) ab D-Marin Dalmacija Marina, Sukošan. …", bez navodnika i u og / twitter.
 - `/de`: hreflang 9 + x-default, svi bez kose crte, isti kao canonical.
 - Yvonne en / de: nema Product JSON-LD, FAQ bez cijene, „Yvonne is booked by inquiry, not online: …", meta opis završava „Send an inquiry for your dates on boat4you.com.", traka „Price on inquiry / Inquire now".
 - `/fr` landing: nijedna engleska oznaka („Ouvrir la liste" ×3 kao aria-label i title, „Trier par", „Affichage en grille").
 - 404 (nepostojeći URL en i de, landing stranica 99, deaktivirani brod 4066): jedna `<meta name="robots" content="noindex">`. Stranice s 200 imaju i dalje jednu `index, follow, …`.
+- Nakon `c2e6c7ea4` (drugi `next dev`, 4 stranice): Aria en naslov „Bavaria Cruiser 34 Aria (2018) — Biograd Charter | Boat4You", opis „Charter the Bavaria Cruiser 34 Aria (2018) from Marina Kornati, Biograd. …" (live 8.10. naslov bez „Aria"); Essi de „Elan Impression 35 Essi (2017) — Yachtcharter Punat", opis „Yachtcharter Elan Impression 35 Essi (2017) ab Marina Punat, Punat. …"; Masterpiece de nepromijenjen; 404 `grep -o … | wc -l` = 1.
 
 **Nakon deploya:**
 
 1. `curl -s https://www.boat4you.com/boat/lagoon-42-masterpiece-11681 | grep -o '<meta name="description"[^>]*>'` → bez `&#x27;`.
 2. `curl -s https://www.boat4you.com/de | grep -o 'hrefLang="fr" href="[^"]*"'` → `https://www.boat4you.com/fr`.
 3. `curl -s https://www.boat4you.com/boat/bavaria-yachtbau-bavaria-cruiser-41-yvonne-3664 | grep -c '"@type":"Product"'` → 0 (dok je agencija na upit).
-4. `curl -s https://www.boat4you.com/w810-x | grep -c '<meta name="robots"'` → 1.
+4. `curl -s https://www.boat4you.com/w810-x | grep -o '<meta name="robots"[^>]*>' | wc -l` → 1, samo `content="noindex"` (HTML je jedan redak, pa `grep -c` uvijek daje 1).
+5. `curl -s https://www.boat4you.com/boat/bavaria-yachtbau-bavaria-cruiser-34-aria-2316 | grep -o '<title>[^<]*'` → „Bavaria Cruiser 34 Aria (2018) — …".
 
 **Otvoreno (Mario):**
 
+- Product JSON-LD stranice broda i dalje imenuje brod sirovim partnerovim nazivom („Lagoon 42 MASTERPIECE"), a meta opis „Lagoon 42 Masterpiece". Ako želiš, opis u JSON-LD-u može ići preko `boatSeoName` kao meta opis; promjena `name` utječe na merchant listinge, pa je to tvoja odluka. Nije dirano.
 - Admin brodovi (`custom`) u traci isto idu na upit, ali njihov JSON-LD i FAQ nisu dirani (nije bilo u zadatku).
 - Alt tekstovi slika su engleski na svim jezicima: „… boat image" (kartice, lista želja, `og:image:alt`), „FR flag", „Card image" (itinerari).
 - FAQ „Gdje je brod" piše „Alimos Marina | Athens" (sirova crta iz partnerovog formata; meta opis je već pretvara u zarez).
