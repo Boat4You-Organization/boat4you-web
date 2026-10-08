@@ -19,6 +19,7 @@
   "topBases": "Główne bazy",
   "boats": "{count, plural, one {# jacht} few {# jachty} many {# jachtów} other {# jachtu}}",
   "note": "Liczone co noc na podstawie 7-dniowych ofert czarterowych na najbliższe 12 miesięcy dla jachtów stacjonujących w tym miejscu. Ceny dotyczą jachtu za tydzień czarteru; skipper, dodatki i kaucja są płatne osobno. Wartości oparte na mniej niż 5 jachtach lub ofertach nie są pokazywane.",
+  "noteGulet": "Liczone co noc na podstawie 7-dniowych ofert czarterowych na najbliższe 12 miesięcy dla jachtów stacjonujących w tym miejscu. Ceny dotyczą jachtu za tydzień czarteru; dodatki i kaucja są płatne osobno. Wartości oparte na mniej niż 5 jachtach lub ofertach nie są pokazywane.",
   "noteEur": "Kwoty w euro (EUR).",
   "noteConverted": "Kwoty przeliczone z euro na {currency} po dzisiejszym kursie."
 }

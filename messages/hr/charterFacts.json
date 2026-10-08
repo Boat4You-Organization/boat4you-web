@@ -19,6 +19,7 @@
   "topBases": "Glavne baze",
   "boats": "{count, plural, one {# brod} few {# broda} other {# brodova}}",
   "note": "Izračunava se svake noći iz ponuda za najam od 7 noćenja u sljedećih 12 mjeseci za brodove koji su ovdje u bazi. Cijene se odnose na brod po tjednu najma; skiper, dodaci i polog plaćaju se posebno. Vrijednosti izračunate iz manje od 5 brodova ili ponuda ne prikazuju se.",
+  "noteGulet": "Izračunava se svake noći iz ponuda za najam od 7 noćenja u sljedećih 12 mjeseci za brodove koji su ovdje u bazi. Cijene se odnose na brod po tjednu najma; dodaci i polog plaćaju se posebno. Vrijednosti izračunate iz manje od 5 brodova ili ponuda ne prikazuju se.",
   "noteEur": "Iznosi u eurima (EUR).",
   "noteConverted": "Iznosi preračunati iz eura u {currency} po današnjem tečaju."
 }

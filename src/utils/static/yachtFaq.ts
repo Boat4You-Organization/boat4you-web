@@ -1,7 +1,8 @@
-import { CharterType, YachtModel } from '@/models/yacht.model';
+import { YachtModel } from '@/models/yacht.model';
 import { shownGuestBerths } from '@/utils/static/capacityProse';
 import { displayBaseName } from '@/utils/static/croatianPlaceNames';
 import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
+import { offersBareboat } from '@/utils/static/guletCrewed';
 import { isBookedByInquiry, isInquiryOnlyBoat } from '@/utils/static/inquiryOnlyBoat';
 import { toTitleCase } from '@/utils/static/toTitleCase';
 import { todayIso, weeklyOfferSummary } from '@/utils/static/weeklyOffers';
@@ -90,8 +91,9 @@ export const buildYachtFaq = (
     });
   }
 
-  const charterTypes = Array.isArray(yacht.charterType) ? yacht.charterType : [yacht.charterType].filter(Boolean);
-  const bareboat = charterTypes.includes(CharterType.BAREBOAT);
+  // A gulet always sails with its crew: the crewed answer, also when the
+  // partner tags it bareboat as well (guletCrewed.ts).
+  const bareboat = offersBareboat(yacht);
 
   entries.push({
     question: t('faqLicenceQ', { name }),

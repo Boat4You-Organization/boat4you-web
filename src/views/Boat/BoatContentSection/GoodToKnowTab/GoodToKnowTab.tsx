@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl';
 
 import Bulp from '@/components/SvgIcons/Bulp';
 import { YachtModel } from '@/models/yacht.model';
+import { isGulet } from '@/utils/static/guletCrewed';
 import GoodToKnowItem from '@/views/Boat/BoatContentSection/GoodToKnowItem';
 
 interface GoodToKnowTabProps {
@@ -34,7 +35,10 @@ const GoodToKnowTab = ({ yacht }: GoodToKnowTabProps) => {
         <GoodToKnowItem title={tCommon('pickUpTime')} value={yacht.defaultCheckin || '-'} />
         <GoodToKnowItem title={tCommon('dropOffTime')} value={yacht.defaultCheckout || '-'} />
         <GoodToKnowItem title={tCommon('paymentMethod')} value={t('localCurrency')} />
-        <GoodToKnowItem title={tCommon('sailingLicenceRequired')} value={t('standardSailingLicence')} />
+        {/* A gulet sails with its crew: no licence asked of the guests (guletCrewed.ts). */}
+        {!isGulet(yacht.vesselType) && (
+          <GoodToKnowItem title={tCommon('sailingLicenceRequired')} value={t('standardSailingLicence')} />
+        )}
         <GoodToKnowItem title={tCommon('cancellationPolicy')} value={t('cancellationPolicyDescription')} />
       </Grid>
     </Stack>

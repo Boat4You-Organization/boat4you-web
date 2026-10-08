@@ -15,6 +15,7 @@ import useQueryParams from '@/utils/hooks/useQueryParams';
 import useToggleState from '@/utils/hooks/useToggleState';
 import DateTime from '@/utils/static/DateTime';
 import { displayBaseName } from '@/utils/static/croatianPlaceNames';
+import { isGulet } from '@/utils/static/guletCrewed';
 import { isInquiryOnlyBoat } from '@/utils/static/inquiryOnlyBoat';
 import { isHardBlocked } from '@/utils/static/offerStatusGate';
 import { useYachtStore } from '@/valtio/yacht/yacht.store';
@@ -136,7 +137,10 @@ const AvailabilityTab = ({ yacht }: AvailabilityTabProps) => {
             value={yacht.defaultCheckout || selectedOffer?.checkout || '-'}
           />
           <GoodToKnowItem title={tCommon('paymentMethod')} value={t('localCurrency')} />
-          <GoodToKnowItem title={tCommon('sailingLicenceRequired')} value={t('standardSailingLicence')} />
+          {/* A gulet sails with its crew: no licence asked of the guests (guletCrewed.ts). */}
+          {!isGulet(yacht.vesselType) && (
+            <GoodToKnowItem title={tCommon('sailingLicenceRequired')} value={t('standardSailingLicence')} />
+          )}
           <GoodToKnowItem title={tCommon('cancellationPolicy')} value={t('cancellationPolicyDescription')} />
           <GoodToKnowItem
             title={tCommon('pickUpLocation')}

@@ -19,6 +19,7 @@
   "topBases": "Main bases",
   "boats": "{count, plural, one {# boat} other {# boats}}",
   "note": "Computed every night from the 7-night charter offers of the next 12 months for the boats based here. Prices are for the boat per charter week; skipper, extras and deposit are separate, and figures based on fewer than 5 boats or offers are left out.",
+  "noteGulet": "Computed every night from the 7-night charter offers of the next 12 months for the boats based here. Prices are for the boat per charter week; extras and deposit are separate, and figures based on fewer than 5 boats or offers are left out.",
   "noteEur": "Amounts in euros (EUR).",
   "noteConverted": "Amounts converted from euros to {currency} at today’s rate."
 }

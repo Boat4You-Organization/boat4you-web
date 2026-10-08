@@ -4,7 +4,7 @@ import { Box, Container, Divider, Grid, Stack, Tab, Tabs } from '@mui/material';
 import { useTranslations } from 'next-intl';
 
 import { OFFSET } from '@/config/constants.config';
-import { reservationTabs } from '@/config/tabs.config';
+import { reservationTabs, reservationTabsFor } from '@/config/tabs.config';
 import { ReservationDetails } from '@/models/reservation.model';
 import { Currency } from '@/models/user.model';
 import colors from '@/styles/themes/colors';
@@ -27,7 +27,9 @@ interface ReservationInfoSectionProps {
 
 const ReservationInfoSection = ({ reservationDetails, userCurrency }: ReservationInfoSectionProps) => {
   const sectionRefs = useRef<(HTMLElement | null)[]>([]);
-  const sectionIds = useMemo(() => reservationTabs.map((_, index) => `section-${index}`), []);
+  // No FAQ tab on a gulet booking (the general licence FAQ, tabs.config.ts).
+  const tabs = useMemo(() => reservationTabsFor(reservationDetails.vesselType), [reservationDetails.vesselType]);
+  const sectionIds = useMemo(() => tabs.map((_, index) => `section-${index}`), [tabs]);
   const {
     dateFrom,
     dateTo,
@@ -123,7 +125,7 @@ const ReservationInfoSection = ({ reservationDetails, userCurrency }: Reservatio
         );
 
       case 4:
-        return <GoodToKnowTab />;
+        return <GoodToKnowTab vesselType={reservationDetails.vesselType} />;
 
       case 5:
         return <CancellationTab dateFrom={dateFrom} bookedAt={createdAt} />;
@@ -153,13 +155,13 @@ const ReservationInfoSection = ({ reservationDetails, userCurrency }: Reservatio
               variant="scrollable"
               aria-label={t('allSingleBoatTabs')}
             >
-              {reservationTabs.map(tabContent => (
+              {tabs.map(tabContent => (
                 <Tab key={tabContent} label={t(tabContent)} sx={{ color: colors.black400, width: 'auto' }} />
               ))}
             </Tabs>
           </Box>
           <Box pt={6} pb={8} className={styles.contentWrapper}>
-            {reservationTabs.map((label, index) => (
+            {tabs.map((label, index) => (
               <React.Fragment key={label}>
                 <Stack
                   id={`section-${index}`}
@@ -170,6 +172,7 @@ const ReservationInfoSection = ({ reservationDetails, userCurrency }: Reservatio
                 >
                   {renderContent(index)}
                 </Stack>
+                {/* No rule after Cancellation (a gulet booking ends there) nor after FAQ. */}
                 {index < reservationTabs.length - 2 && <Divider className={styles.divier} />}
               </React.Fragment>
             ))}

@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 
 import { CharterType, MainSailType, VesselType } from '@/models/yacht.model';
+import { withoutGuletRentalType } from '@/utils/static/guletCrewed';
 import { useResolvedDestination, withResolvedDid } from '@/views/Search/SearchView/ResolvedDestinationContext';
 
 /**
@@ -65,7 +66,8 @@ export const useFilterDistribution = (): FilterDistribution | null => {
   // Landing URLs (`?destinations=greece`) carry no did; the server resolved
   // one for the list, so query the same candidate set here.
   const { did } = useResolvedDestination();
-  const qs = withResolvedDid(searchParams.toString(), did);
+  // A gulet-only search ignores a rental type left in the URL (guletCrewed.ts).
+  const qs = withResolvedDid(withoutGuletRentalType(searchParams.toString()), did);
   const [distribution, setDistribution] = useState<FilterDistribution | null>(null);
 
   useEffect(() => {

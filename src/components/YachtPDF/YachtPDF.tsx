@@ -4,6 +4,7 @@ import { YachtOfferModel } from '@/models/yacht-offer.model';
 import { YachtModel } from '@/models/yacht.model';
 import { presentAmenityLabels } from '@/utils/static/amenities';
 import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
+import { isGulet } from '@/utils/static/guletCrewed';
 import { toTitleCase } from '@/utils/static/toTitleCase';
 import { Fmt, capacityRows, fromYacht } from '@/utils/static/yachtCapacity';
 
@@ -124,8 +125,10 @@ const YachtPDF = ({
     ...row,
     value: pdfSafeText(row.value),
   }));
-  // Crewed only when the boat comes with crew and has no bareboat option.
-  const isCrewed = Boolean(capacity.crew && !capacity.crew.alsoBareboat);
+  // Crewed only when the boat comes with crew and has no bareboat option —
+  // and always for a gulet, crew count given or not (guletCrewed.ts; 143 of
+  // 219 gulets carried none on 8.10.2026 and read "Bareboat · Gulet").
+  const isCrewed = isGulet(yacht.vesselType) || Boolean(capacity.crew && !capacity.crew.alsoBareboat);
   const vessel = VESSEL_LABEL[yacht.vesselType] || 'Yacht';
   const countryCode = yacht.location?.countryCode || '';
   const country = COUNTRY_NAMES[countryCode] || countryCode;

@@ -19,6 +19,7 @@
   "topBases": "Wichtigste Stützpunkte",
   "boats": "{count, plural, one {# Boot} other {# Boote}}",
   "note": "Jede Nacht neu berechnet aus den 7-Nächte-Charterangeboten der nächsten 12 Monate für die hier stationierten Boote. Die Preise gelten für das Boot pro Charterwoche; Skipper, Extras und Kaution kommen hinzu. Werte aus weniger als 5 Booten oder Angeboten werden nicht angezeigt.",
+  "noteGulet": "Jede Nacht neu berechnet aus den 7-Nächte-Charterangeboten der nächsten 12 Monate für die hier stationierten Boote. Die Preise gelten für das Boot pro Charterwoche; Extras und Kaution kommen hinzu. Werte aus weniger als 5 Booten oder Angeboten werden nicht angezeigt.",
   "noteEur": "Beträge in Euro (EUR).",
   "noteConverted": "Beträge zum heutigen Kurs von Euro in {currency} umgerechnet."
 }

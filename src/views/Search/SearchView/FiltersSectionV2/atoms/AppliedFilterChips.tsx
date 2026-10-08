@@ -11,6 +11,7 @@ import { CharterType, MainSailType, VESSEL_TYPE_LABEL_MAP_PLURAL, isVesselType }
 import { searchV2 } from '@/styles/themes/searchV2';
 import { SearchParams } from '@/utils/hooks/useQueryParams';
 import { canonicalEquipmentCode } from '@/utils/static/amenities';
+import { boatTypesUpdate, isGuletOnly } from '@/utils/static/guletCrewed';
 
 interface AppliedFilterChipsProps {
   params: SearchParams;
@@ -36,18 +37,23 @@ const AppliedFilterChips = ({ params, setMultipleParams, t }: AppliedFilterChips
   const symbol = currencySymbols[(params.currency as Currency) || Currency.EUR] ?? params.currency;
   const chips: Chip[] = [];
 
-  // Vessel types
+  // Vessel types. To or from gulets only, the rental type goes too: a gulet
+  // is chartered only with its crew (guletCrewed.ts).
   (params.boatTypes || []).forEach(bt => {
     const labelKey = isVesselType(bt) ? VESSEL_TYPE_LABEL_MAP_PLURAL[bt] : null;
 
     chips.push({
       label: labelKey && t ? t(labelKey) : bt,
-      remove: { boatTypes: (params.boatTypes || []).filter(x => x !== bt) },
+      remove: boatTypesUpdate(
+        params.boatTypes,
+        (params.boatTypes || []).filter(x => x !== bt)
+      ),
     });
   });
 
-  // Charter types
-  (params.charterType || []).forEach(ct => {
+  // Charter types — none on a gulet-only search (an old or shared link), the
+  // listing ignores them there (yachtFetchParams).
+  (isGuletOnly(params.boatTypes) ? [] : params.charterType || []).forEach(ct => {
     chips.push({
       label: ct === CharterType.BAREBOAT ? tf('bareboat') : ct === CharterType.CREWED ? tf('skippered') : ct,
       remove: { charterType: (params.charterType || []).filter(x => x !== ct) },

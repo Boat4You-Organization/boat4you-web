@@ -75,6 +75,59 @@ Izvor: `_seo-audit-2026-10-08/live-verify-round2/` (b4y F1, F2, X-03). Tekstovi 
 
 **Otvoreno (Mario):** fraze područja (hr/pl padeži, fr/it/es/pt članovi) nisu pregledali izvorni govornici. Ostaje engleski (nije bilo u ovom krugu): zadnja stavka breadcrumba rute (imena stanica iz configa), `url` u TouristTripu (stranica područja i rute; na stranici područja i ime i opis, npr. „7-day Dodecanese yacht charter route — Kos" na `/it`) i CollectionPage huba (engleski URL, `inLanguage` „en-US"). Kartica na hubu (`hub.sailingAreaCardTitle`) i dalje piše „Zona di navigazione Dodecaneso".
 
+## 2026-10-08 — ⛵ Gulet je uvijek s posadom — ⏳ NIJE DEPLOYANO (grana `fix/gulet-always-crewed`)
+
+Mario 8.10.: „GULET JE UVIJEK SA POSADOM". Gulet se na webu nikad ne nudi bareboat ni samo sa skiperom; ostali tipovi plovila prate partnerove podatke. Cijene, kapacitet, oprema i tekstovi brokera nisu dirani; u kuriranim SEO tekstovima gulet landinga promijenjene su samo rečenice koje gulet nude bez posade (vidi niže). Samo web, bez env promjena. Novi `src/utils/static/guletCrewed.ts` (`isGulet`, `isGuletOnly`, `offersBareboat`, `boatTypesUpdate`, `withoutGuletRentalType`, `licenceFaqCategory`).
+
+- Stranica broda: FAQ „Trebam li dozvolu…" (i FAQPage JSON-LD) za gulet uvijek daje odgovor s posadom. Sylvia R (18886) je jedini od 219 guleta koji partner označava i BAREBOAT, pa je pisalo „za bareboat treba licenca…".
+- Stranica broda: ispod vlastitih pitanja gulet više ne dobiva opću grupu „Licenses & Sailing Requirements" iz `src/posts/static/<jezik>/faq.md` („…can I skipper the yacht myself?", licenca za bareboat). Grupa je bila samo vidljiva, nije u JSON-LD. Ostali brodovi je i dalje imaju.
+- My bookings: rezervacija guleta nema tab FAQ (jedina grupa u njemu je ta ista). „Dobro je znati" (stranica broda i My bookings): na guletu nema retka „Potrebna licenca za plovidbu".
+- PDF broda: gulet je „Crewed · Gulet" / „crewed charter" (143 od 219 guleta nemaju broj posade i pisalo je „Bareboat · Gulet").
+- Pretraga: kad su odabrani samo guleti, nema filtra „Vrsta najma" (Bareboat / Mit Skipper) ni njegovog čipa. Prelazak na samo gulete ili s njih (checkbox ili čip tipa) briše vrstu najma. Stari ili podijeljeni link `boatTypes=GULET&charterType=…` ignorira vrstu najma u listi, distribuciji i relax upitu.
+- Charter facts na gulet landingu: napomena bez „skiper … plaća se posebno" (`charterFacts.noteGulet`, 9 jezika). Pločica „Skipper per week" nikad na gulet retku (danas API za gulete ionako vraća null).
+- Kurirani gulet landing tekstovi (`public/seo-content/<jezik>/*gulet*.html`): 32 od 45 stranica, svih 9 jezika (279 datoteka u dva commita), samo rečenice, FAQ stavke i meta description koji gulet nude bareboat ili samo sa skiperom, ili posadu stavljaju pod „obično"; ostali tekst, linkovi i naslovi bajt-za-bajt isti. Detalji niže.
+- `yarn test:gulet` (54 testa; novi: nijedan gulet landing ni u jednom jeziku nema nalaz `gulet-crewed`).
+
+**Provjere (lokalno 8.10.):** `yarn test:*` svi prolaze, `npx tsc --noEmit` 0, `yarn lint` 0 grešaka. `next dev` :3991 na prod API, prije = live:
+
+- Sylvia R en/de: FAQ i JSON-LD „No licence is needed — Sylvia R comes with professional crew…" (prije „To take Sylvia R out bareboat…"), bez retka licence (i Elena hr).
+- Sylvia R en: FAQ ima 6 vlastitih pitanja (live 11, s „Do I have to hire a professional skipper, or can I skipper the yacht myself?" i „…licenses do I need for a bareboat charter?"). Elena de: 6 pitanja. Masterpiece (katamaran): 6 + 5 iz opće grupe, kao prije.
+- `/search?destinations=croatia&boatTypes=GULET` (en, de, Turska) bez „Rental type / Mietart", napomena bez skipera. Landing katamarana nepromijenjen.
+- U pregledniku: `…&charterType=CREWED` + klik na Gulet → URL bez `charterType`, filtar nestaje; dodan katamaran → filtar se vraća. `/de/search?destinations=turkey&boatTypes=GULET,CATAMARAN&charterType=CREWED` (čipovi Gulets / Katamarane / Mit Skipper) + klik na čip „Katamarane" → `boatTypes=GULET`, samo čip Gulets, 131 gulet.
+- Stari link `/de/search?destinations=turkey&boatTypes=GULET&charterType=BAREBOAT`: live čipovi Gulets + Bareboat, „Mietart", 1 gulet; lokalno samo čip Gulets, bez „Mietart", 131 gulet.
+
+**Nakon deploya:**
+
+1. `curl -s https://www.boat4you.com/boat/gulet-sylvia-r-18886 | grep -c 'out bareboat'` → 0.
+2. `curl -s 'https://www.boat4you.com/de/search?destinations=croatia&boatTypes=GULET' | grep -o 'Charterwoche; [^.]*'` → „Charterwoche; Extras und Kaution kommen hinzu".
+3. `curl -s 'https://www.boat4you.com/de/search?destinations=turkey&boatTypes=GULET&charterType=BAREBOAT' | grep -o '[0-9.]* Gulets verfügbar'` → isti broj kao bez `charterType` (ne 1).
+4. U pregledniku `/boat/gulet-sylvia-r-18886`: FAQ ima 6 pitanja, bez „can I skipper the yacht myself?" (grupa se učitava u pregledniku, curl je ne vidi).
+5. `curl -s 'https://www.boat4you.com/search?destinations=croatia&boatTypes=GULET' | grep -c 'For bareboat charter, a valid skipper licence'` → 0 (live 8.10.: 2). `public/seo-content` (279 datoteka) mora otići s deployem.
+
+**Kurirani gulet landing tekstovi (8.10., `35976bbd8`)** — 25 stranica × 9 jezika = 225 datoteka (en, de, fr, it, es, pt, nl, pl, hr po 25), ~470 rečenica. Promijenjeno samo ono što gulet nudi bez posade. Usporedbe („you cannot bareboat a gulet", „Unlike bareboat charters…") i „compare crewed and bareboat options" (ostali brodovi u Hrvatskoj) ostaju. Svaki jezik preveden zasebno, NL „je", PL „Ty", bez novih cijena i iznosa za posadu:
+
+- FAQ „Can I add a skipper (or hostess) after booking (the) bareboat?" (8 stranica) → „Do I need to add a skipper after booking?" / „Do I book a skipper or hostess separately?": gulet se uvijek unajmljuje s posadom i kapetanom, hostesa ovisi o brodu, cijene i što je uključeno na stranici broda.
+- FAQ „Do I need a sailing licence?" (`croatia`, `greece`, `marmaris-fethiye-gocek`) i „Is a licence required for bareboat charter in Croatia?" (`gulet-charter-marina-kastela`) → „Ne, gulet je uvijek s posadom, licenca ni VHF ne trebaju".
+- „mixed bareboat-and-skippered packages" (10 stranica) → podijeljeni tjedni i flota od više brodova mogući, svaki gulet plovi s vlastitom posadom.
+- Gorivo „On most European bareboat charters… return the tank full" (`athens`, `ionian`) → ovisi o guletu (u cijeni ili po potrošnji), toči posada.
+- Uklonjeno: „Bareboat gulet charters (captain and crew absent)…" (`gulet-charter-stobrec-split`), „Semi-bareboat" rečenice i odlomak s cijenom (`sibenik-region`), „bare-boat options dominate this period" (`italy`), „skipper service / skipper (if hired) / kitty for skipper/hostess if aboard" iz popisa troškova.
+- „Most/Many … include crew" i „typically include(s) crew / typically crewed" kad govore ima li gulet posadu (`kastela`, `marina-kastela`, `stobrec` ×3, `split`, `greece`, `aci-marina-split`) → „uvijek"; „A skipper makes the trip effortless" → „The professional crew…"; „crewed bareboat" (`croatia`) → „boat and crew only".
+- NL `gulet-charter-fethiye-port` „beginnende guletschippers" → „wie voor het eerst met een gulet vaart". Usput u istim rečenicama: IT „feste più grandi", HR „veće zabave", PL „flot wieloosobowych" (krivi prijevodi), HR `gulet-charter-kastela` „gumenjaka" → „guleta".
+- Novi QA: `scripts/seo-corpus-qa.py` provjera `gulet-crewed` (popis po jeziku `GULET_CREWED_DENY`, samo datoteke s „gulet" u imenu, mješovite stranice prolaze), `--self-test` 195/195 (45 novih slučajeva + scope), `--gulet-crewed` brzi način (~1,5 s; prije popravka 502 nalaza, sada 0) i test u `yarn test:gulet`.
+
+**Popravci nakon pregleda (8.10., `89134b8df`)** — 18 stranica, 149 datoteka:
+
+- `gulet-charter-porto-santa-maria-maggiore` ×9: „zimski najam moguć za iskusne posade… preporučujemo iskusne jedriličare… i aranžman posade ako želite" (gost plovi, posada po želji) → „moguć, ali…"; „preporučujemo gostima kojima ne smeta valovitije more… gulet uvijek plovi sa svojom profesionalnom posadom". Nova pravila po jeziku u `GULET_CREWED_DENY` (npr. EN „crew arrangement if you prefer").
+- `gulet-charter-stobrec-split` ×9: „Every charter comes with crew (skipper and chef)" je tvrdilo da svaki gulet ima kuhara (ista stranica kaže „often include a chef") → „(typically a skipper and chef)"; posada ostaje „uvijek".
+- `marmaris-fethiye-gocek` ×9: „All-inclusive packages (crew, fuel, provisioning) start around 400 EUR/day" (paket ispod 400 bez posade?) → „Every rate includes the boat and its crew; all-inclusive packages with fuel and provisioning start around 400 EUR/day". Iznosi isti.
+- Popisi „što je uključeno" gdje je posada pod „obično/većina" → posada „uvijek", ostalo i dalje „obično": `athens`, `bodrum` (all-inclusive), `cyclades`, `zakynthos` ×2, `gulet-charter-zante`, `italy`, `split`, `turkiye` („Most charter packages include the gulet, captain, crew…" → „Every charter package includes the gulet with its captain and crew; most also…"). Sastav posade (kapetan, kuhar…) ostaje „obično". Usput u istim rečenicama: NL „dekheer" → „matroos", DE „Deckoffizier" → „Decksmann".
+- `<head>` meta description, 71 gulet datoteka: „Bareboat and skippered yacht charter / options", „Bareboat- und Skippertörns", „sans skipper et avec skipper", „bez załogi i ze skipperem", „bez posade i s kapetanom"… → „Always with a professional crew" / „Crewed gulets via Boat4You" i prijevodi; odrezani repovi „… Bare." / „… Bareb." / „Sans skipper." / „Bez załogi." maknuti; IT `turkiye` „Noleggio barche a vela e con skipper" i FR `marmaris` „goélette avec skipper" → s posadom. Landing head ne prikazuje, ali datoteka ga nosi.
+- QA: `gulet-crewed` sad čita i `<title>` + meta description gulet datoteka (`GULET_HEAD_DENY`, bez iznimki jer head nema usporedbi). Na korpusu prije ovog commita 83 nalaza (9 tekst + 74 head), sada 0. `--self-test` 234/234 (+18 Porto S. M. Maggiore, +21 head).
+
+**Provjere tekstova (lokalno 8.10.):** `seo-corpus-qa.py --check` 0 izmjena i 0 nalaza (12.789 datoteka), `--self-test` 234/234, `--gulet-crewed` 0 nalaza u 405 gulet datoteka, `yarn check:corpus-holes` OK, `yarn test:gulet` 54/54, `yarn lint` kroz hook.
+
+**Ostalo otvoreno:** backend — Sylvia R ostaje BAREBOAT u podacima i pojavljuje se pod filtrom „Bareboat" na mješovitoj pretrazi. Postojeće, ne dirano: redak „Potrebna licenca za plovidbu" stoji i na drugim brodovima s posadom, PDF piše „Bareboat" za brod s posadom bez broja posade. Kurirani tekstovi, ne dirano: stavke cijene „crew salaries / crew services / crew gratuities" pod „typically" (`croatia` „These figures usually include the vessel, crew salaries, fuel…", `marmaris`, `gocek`, `gulet-charter-gocek-mucev-marina`, `gulet-charter-fethiye-ece-saray-marina-resort`, `gulet-charter-marmaris-yat-limani`, `gulet-charter-netsel-marmaris-marina`) — govore o stavkama računa, ne o tome ima li posade; QA ih ne hvata; HR gulet tekstovi na više mjesta prevode gulet kao „gumenjak" (npr. `split-region`, `bodrum-milta-marina`, `alimos-marina`), za zaseban popravak.
+
 ## 2026-10-08 — 🧹 Sitnice s live provjere 8.10. (2. krug): „ležajevi" u hr opisu, „Marina, Mjesto", alt tekstovi, 404 / greška, My bookings, kalendar — ✅ DEPLOYANO 8.10.2026 ~14:25 UTC (worktree `B4Y_REPO`, `fdcdc2e3d`, deployment id `fdcdc2e3d614-muzmewtk`)
 
 Izvor: `_seo-audit-2026-10-08/live-verify/` (X10, F2, F4, F6) i otvorene stavke 7.10. Sve je starije od izdanja 8.10. Tekstovi brokera, `/faq`, kapacitet i Product JSON-LD nisu dirani. Samo web, bez env promjena.

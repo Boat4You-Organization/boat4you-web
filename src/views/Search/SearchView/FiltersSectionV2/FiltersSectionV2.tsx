@@ -16,6 +16,7 @@ import useManufacturerAutocompleteMultiple from '@/utils/hooks/useManufacturersA
 import useModelAutocompleteMultiple from '@/utils/hooks/useModelAutocompleteMultiple';
 import useQueryParams from '@/utils/hooks/useQueryParams';
 import DateTime from '@/utils/static/DateTime';
+import { boatTypesUpdate, isGuletOnly } from '@/utils/static/guletCrewed';
 import { metersToFeet } from '@/utils/static/metersToFeet';
 import { useUserStore } from '@/valtio/user/user.store';
 import { useYachtStore } from '@/valtio/yacht/yacht.store';
@@ -228,10 +229,14 @@ const FiltersSectionV2 = ({ catalogueData, catalogueFilters, isMobile, serverTot
     // eslint-disable-next-line @typescript-eslint/no-shadow
     const next = selectedTypes.includes(type) ? selectedTypes.filter(t => t !== type) : [...selectedTypes, type];
 
-    setMultipleParams({ boatTypes: next, page: 1 });
+    // To or from gulets only: the rental type is no choice there (below), so none stays applied.
+    setMultipleParams({ ...boatTypesUpdate(selectedTypes, next), page: 1 });
   };
 
   // Rental type (charter type as Bareboat / Skippered checkbox pair) ─
+  // Not offered when only gulets are searched: a gulet is always chartered
+  // with its crew, never bareboat or with a skipper only (guletCrewed.ts).
+  const showRentalType = !isGuletOnly(selectedTypes);
   const selectedCharterTypes = new Set(params.charterType || []);
   const handleCharterToggle = (id: CharterType) => {
     const next = new Set(selectedCharterTypes);
@@ -558,20 +563,22 @@ const FiltersSectionV2 = ({ catalogueData, catalogueFilters, isMobile, serverTot
         </FilterGroup>
 
         {/* Rental type ────────────────────────────────────────── */}
-        <FilterGroup title={t('rentalType')} count={selectedCharterTypes.size || undefined}>
-          <CheckV2
-            label={t('bareboat')}
-            count={distribution?.byCharterType?.[CharterType.BAREBOAT] ?? null}
-            checked={selectedCharterTypes.has(CharterType.BAREBOAT)}
-            onToggle={() => handleCharterToggle(CharterType.BAREBOAT)}
-          />
-          <CheckV2
-            label={t('skippered')}
-            count={distribution?.byCharterType?.[CharterType.CREWED] ?? null}
-            checked={selectedCharterTypes.has(CharterType.CREWED)}
-            onToggle={() => handleCharterToggle(CharterType.CREWED)}
-          />
-        </FilterGroup>
+        {showRentalType && (
+          <FilterGroup title={t('rentalType')} count={selectedCharterTypes.size || undefined}>
+            <CheckV2
+              label={t('bareboat')}
+              count={distribution?.byCharterType?.[CharterType.BAREBOAT] ?? null}
+              checked={selectedCharterTypes.has(CharterType.BAREBOAT)}
+              onToggle={() => handleCharterToggle(CharterType.BAREBOAT)}
+            />
+            <CheckV2
+              label={t('skippered')}
+              count={distribution?.byCharterType?.[CharterType.CREWED] ?? null}
+              checked={selectedCharterTypes.has(CharterType.CREWED)}
+              onToggle={() => handleCharterToggle(CharterType.CREWED)}
+            />
+          </FilterGroup>
+        )}
 
         {/* Manufacturer & model ───────────────────────────────── */}
         <FilterGroup

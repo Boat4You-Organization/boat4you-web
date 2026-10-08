@@ -1,3 +1,5 @@
+import { isGulet } from '@/utils/static/guletCrewed';
+
 export const continentsTabs = ['europe', 'americas'] as const;
 
 // Order matters — this is the order rendered in the tab bar, left-to-right.
@@ -24,3 +26,12 @@ export const reservationTabs = [
   'reservationTabs.cancellation',
   'reservationTabs.faq',
 ] as const;
+
+/**
+ * The My bookings tabs of one booking. A gulet's has no FAQ: its one group is
+ * the general licence FAQ ("can I skipper the yacht myself?", bareboat
+ * licences), and a gulet is chartered only with its crew (guletCrewed.ts).
+ * FAQ is the last tab, so the others keep their renderContent() index.
+ */
+export const reservationTabsFor = (vesselType?: string | null): ReadonlyArray<(typeof reservationTabs)[number]> =>
+  isGulet(vesselType) ? reservationTabs.filter(tab => tab !== 'reservationTabs.faq') : reservationTabs;
