@@ -72,5 +72,8 @@
     "otherBases": "Other bases",
     "cabins": "{count, plural, one {# cabin} other {# cabins}}",
     "paginationLabel": "Fleet directory pages"
+  },
+  "itineraryBreadcrumb": {
+    "area": "{area} area"
   }
 }

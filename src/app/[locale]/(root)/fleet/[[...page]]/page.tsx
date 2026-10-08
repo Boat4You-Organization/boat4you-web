@@ -97,7 +97,7 @@ const FleetDirectoryPage = async ({ params }: FleetDirectoryPageProps) => {
 
   const [tCommon, tFleet] = await Promise.all([getTranslations('common'), getTranslations('metadata.fleet')]);
 
-  const breadcrumbLd = buildBreadcrumbJsonLd([
+  const breadcrumbLd = buildBreadcrumbJsonLd(locale as LocaleType, [
     { name: tCommon('home'), url: '/' },
     { name: tFleet('heading'), url: '/fleet' },
   ]);

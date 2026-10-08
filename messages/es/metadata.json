@@ -72,5 +72,36 @@
     "otherBases": "Otras bases",
     "cabins": "{count, plural, one {# camarote} other {# camarotes}}",
     "paginationLabel": "Páginas del directorio de la flota"
+  },
+  "itineraryBreadcrumb": {
+    "area": "Zona {areaOf}",
+    "areaOf": {
+      "split": "de Split",
+      "dubrovnik": "de Dubrovnik",
+      "sibenik": "de Šibenik",
+      "istria": "de Istria",
+      "zadar": "de Zadar",
+      "cyclades": "de las Cícladas",
+      "ionian": "del Jónico",
+      "sporades": "de las Espóradas",
+      "dodecanese": "del Dodecaneso",
+      "bodrum": "de Bodrum",
+      "gocek": "de Gocek",
+      "catalonia": "de Cataluña",
+      "ibiza": "de Ibiza",
+      "mallorca": "de Mallorca",
+      "cote-azur": "de la Côte d'Azur",
+      "corsica": "de Córcega",
+      "atlantic-france": "de Bretaña y del Atlántico",
+      "montenegro": "de Montenegro",
+      "seychelles": "de las Seychelles",
+      "amalfi": "de Amalfi",
+      "sardinia": "de Cerdeña",
+      "sicily": "de Sicilia",
+      "bahamas": "de las Bahamas",
+      "bvi": "de las Islas Vírgenes Británicas",
+      "grenada": "de Granada",
+      "martinique": "de Martinica"
+    }
   }
 }

@@ -1,4 +1,6 @@
+import { LocaleType } from '@/config/locales.config';
 import { meta } from '@/config/meta';
+import { localizedUrl } from '@/utils/static/buildMetadata';
 import { displayPlaceName } from '@/utils/static/croatianPlaceNames';
 
 const SITE_URL = meta.url;
@@ -46,16 +48,53 @@ export interface BreadcrumbListLd {
   }>;
 }
 
-export const buildBreadcrumbJsonLd = (items: BreadcrumbItem[]): BreadcrumbListLd => ({
+/**
+ * BreadcrumbList with every relative path in the page's locale ("/pl/fleet";
+ * English unprefixed). The items pointed at the English URL on every
+ * localized /fleet and /itineraries page, next to translated names (live
+ * check 8.10.2026, X-03). An absolute URL is kept as given.
+ */
+export const buildBreadcrumbJsonLd = (locale: LocaleType, items: BreadcrumbItem[]): BreadcrumbListLd => ({
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: items.map((item, idx) => ({
     '@type': 'ListItem',
     position: idx + 1,
     name: item.name,
-    item: item.url.startsWith('http') ? item.url : `${SITE_URL}${item.url}`,
+    item: item.url.startsWith('http') ? item.url : localizedUrl(locale, item.url),
   })),
 });
+
+/**
+ * `metadata.itineraryBreadcrumb` translator. Parameters are typed `never[]`
+ * so a strictly-typed next-intl translator is assignable: the "of" key is
+ * built at runtime (`areaOf.<id>`) and guarded by `has`.
+ */
+export type ItineraryCrumbTranslate = ((...args: never[]) => string) & {
+  raw: (...args: never[]) => unknown;
+  has: (...args: never[]) => boolean;
+};
+
+type LooseCrumbTranslate = ((key: string, values?: Record<string, string>) => string) & {
+  raw: (key: string) => unknown;
+  has: (key: string) => boolean;
+};
+
+/**
+ * The area crumb of an itinerary area or route page as the locale says it:
+ * "Dodecanese area", "Segelrevier Dodekanes", "Zona del Dodecaneso", "Zona de
+ * Šibenik", "Akwen Dodekanezu", "Područje Dodekaneza" — not the old
+ * "{area} {suffix}" ("Dodecaneso zona", "Šibenik zona", live check
+ * 8.10.2026). `areaOf.<id>` holds the name with its article or case where
+ * the language needs one; without it the plain area name stands in.
+ */
+export const itineraryAreaCrumbName = (t: ItineraryCrumbTranslate, areaId: string, areaName: string): string => {
+  const tt = t as unknown as LooseCrumbTranslate;
+  const ofKey = `areaOf.${areaId}`;
+  const areaOf = tt.has(ofKey) ? String(tt.raw(ofKey)) : areaName;
+
+  return tt('area', { area: areaName, areaOf });
+};
 
 export interface TouristTripLd {
   '@context': 'https://schema.org';

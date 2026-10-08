@@ -46,6 +46,35 @@ Web dio popravka veza partnerove opreme (`infra/equipment-mapping-audit-8-10/FIX
 
 **Otvoreno (Mario):** ništa novo. Napomena za redoslijed: dok je live stari web, a backend već poveže prve retke na `depth-sounder`, stari `renderAmenityLabel` će pisati „yacht.amenitiesList.depth-sounder" (ne pada na partnerovo ime kako piše u ugovoru §10.8). Prozor između backend i web deploya držati kratkim.
 
+## 2026-10-08 — 🧹 Sitnice s live provjere 8.10. (3. krug): alt na stranici modela, „Ladies&Gentlemen", breadcrumb na jeziku stranice — ⏳ NIJE DEPLOYANO (grana `fix/w810c-polish3`)
+
+Izvor: `_seo-audit-2026-10-08/live-verify-round2/` (b4y F1, F2, X-03). Tekstovi brokera, kapacitet, oprema i Product JSON-LD nisu dirani. Samo web, bez env promjena.
+
+**Commiti:**
+
+- `bf1e0af9e` F1: fotografije na karticama stranice modela (`/yachts/{brand}/{model}`) imaju alt „Lagoon 42 Zeus — photo / Foto / zdjęcie" kao ostale kartice (bilo „Lagoon 42 | Zeus"). Naslov kartice ostaje „Model | Ime".
+- `5db267355` F2: ime broda dobiva veliko slovo i iza „&", „/" i „-": „Ladies&Gentlemen" (bilo „Ladies&gentlemen"), „Hallberg-Rassy", „Alpha-II". Samo prikaz, baza i Product JSON-LD nepromijenjeni.
+- `5b2e43034` X-03: BreadcrumbList na `/fleet` i `/itineraries` (hub, područje, ruta) vodi na URL jezika stranice (`/pl/fleet`, `/it/itineraries/dodecanese`; engleski bez prefiksa). Područje se čita prirodno u 9 jezika: „Zona del Dodecaneso", „Zona de Šibenik", „Zone du Dodécanèse", „Akwen Dodekanezu", „Područje Splita", „Segelrevier Dodekanes" (bilo „Dodecaneso zona", „Šibenik zona"). Engleski ostaje „Dodecanese area". Fraze su u `metadata.itineraryBreadcrumb` (samo server, ne idu u klijentski payload); ključ `itinerary.breadcrumb.areaSuffix` je maknut.
+- `2d11de6fa` `yarn test:polish` +19 testova (64).
+- `31701b828` popravak F2 nakon pregleda: dio spojene riječi ostaje velikim slovima samo kao rimski broj od I, V, X — brod 9300 „Deux-Mi" (bilo bi „Deux-MI"), „Mix-Up"; „Alpha-II" ostaje. Riječ iza zagrade ili navodnika dobiva veliko slovo: „Daddy (A/C, Generator, Watermaker)" (live „(a/c", grana bi dala „(a/C"; 27 brodova), „(Las Galletas)", „\"Lady Butterfly\"". „Jays 'n Seas" ostaje, „160L/h" ostaje „160l/h" kao na mainu. +3 testa (67).
+
+**Provjere (lokalno 8.10.):** `yarn test:*` svi prolaze (polish 64/64, nakon `31701b828` 67/67), `npx tsc --noEmit` 0, `yarn lint` 0 grešaka (17 starih upozorenja). `next dev` :3995 na prod API (8 stranica, sve 200):
+
+- `/fr/yachts/lagoon/lagoon-42`: alt „Lagoon 42 Zeus — photo", 0 alt-ova s „|"; naslovi kartica „Lagoon 42 | Zeus".
+- `/it/itineraries/dodecanese`: Home `/it` › Itinerari `/it/itineraries` › Zona del Dodecaneso `/it/itineraries/dodecanese`. `/es/…/sibenik-hvar-vis-solta-route`: „Zona de Šibenik", sve `/es/`. `/hr/itineraries/split`: „Područje Splita", `/hr/`. `/pl/fleet`: Strona główna `/pl` › Katalog floty `/pl/fleet`.
+- `/itineraries` i `/itineraries/dodecanese` (en): kao prije, bez prefiksa, „Dodecanese area".
+- `/fr/search?destinations=croatia`: alt „Lagoon 450 Fly Ladies&Gentlemen — photo", „Ajouter Ladies&Gentlemen aux favoris".
+- Nakon `31701b828` (`next dev`, 2 stranice, 200): `/boat/jeanneau-sun-odyssey-455-deux-mi-9300` H1 „Sun Odyssey 455 | Deux-Mi", title „Sun Odyssey 455 Deux-Mi (2026) — …"; `/boat/bali-catamarans-bali-43-daddy-ac-generator-watermaker-11806` H1 „Bali 4.3 | Daddy (A/C, Generator, Watermaker)", alt i favoriti isto. Svih 14.120 aktivnih imena (rehearsal baza) usporedio prije/poslije: 288 promjena, sve na bolje.
+
+**Nakon deploya:**
+
+1. `curl -s https://www.boat4you.com/fr/yachts/lagoon/lagoon-42 | grep -c 'alt="Lagoon 42 | '` → 0.
+2. `curl -s https://www.boat4you.com/it/itineraries/dodecanese | grep -o '"name":"Zona del Dodecaneso","item":"[^"]*"'` → `…/it/itineraries/dodecanese`.
+3. `curl -s https://www.boat4you.com/pl/fleet | grep -o '"item":"https://www.boat4you.com/pl/fleet"'` → 1 pogodak.
+4. `curl -sL https://www.boat4you.com/boat/x-9300 | grep -o '<h1[^>]*>[^<]*'` → „Sun Odyssey 455 | Deux-Mi"; `curl -sL https://www.boat4you.com/boat/x-11806 | grep -c '(a/c'` → 0.
+
+**Otvoreno (Mario):** fraze područja (hr/pl padeži, fr/it/es/pt članovi) nisu pregledali izvorni govornici. Ostaje engleski (nije bilo u ovom krugu): zadnja stavka breadcrumba rute (imena stanica iz configa), `url` u TouristTripu (stranica područja i rute; na stranici područja i ime i opis, npr. „7-day Dodecanese yacht charter route — Kos" na `/it`) i CollectionPage huba (engleski URL, `inLanguage` „en-US"). Kartica na hubu (`hub.sailingAreaCardTitle`) i dalje piše „Zona di navigazione Dodecaneso".
+
 ## 2026-10-08 — 🧹 Sitnice s live provjere 8.10. (2. krug): „ležajevi" u hr opisu, „Marina, Mjesto", alt tekstovi, 404 / greška, My bookings, kalendar — ✅ DEPLOYANO 8.10.2026 ~14:25 UTC (worktree `B4Y_REPO`, `fdcdc2e3d`, deployment id `fdcdc2e3d614-muzmewtk`)
 
 Izvor: `_seo-audit-2026-10-08/live-verify/` (X10, F2, F4, F6) i otvorene stavke 7.10. Sve je starije od izdanja 8.10. Tekstovi brokera, `/faq`, kapacitet i Product JSON-LD nisu dirani. Samo web, bez env promjena.

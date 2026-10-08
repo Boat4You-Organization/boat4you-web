@@ -72,5 +72,36 @@
     "otherBases": "Ostale baze",
     "cabins": "{count, plural, one {# kabina} few {# kabine} other {# kabina}}",
     "paginationLabel": "Stranice kataloga flote"
+  },
+  "itineraryBreadcrumb": {
+    "area": "Područje {areaOf}",
+    "areaOf": {
+      "split": "Splita",
+      "dubrovnik": "Dubrovnika",
+      "sibenik": "Šibenika",
+      "istria": "Istre",
+      "zadar": "Zadra",
+      "cyclades": "Kiklada",
+      "ionian": "Jonskih otoka",
+      "sporades": "Sporada",
+      "dodecanese": "Dodekaneza",
+      "bodrum": "Bodruma",
+      "gocek": "Goceka",
+      "catalonia": "Katalonije",
+      "ibiza": "Ibize",
+      "mallorca": "Mallorce",
+      "cote-azur": "Côte d'Azura",
+      "corsica": "Korzike",
+      "atlantic-france": "Bretanje i Atlantika",
+      "montenegro": "Crne Gore",
+      "seychelles": "Sejšela",
+      "amalfi": "Amalfija",
+      "sardinia": "Sardinije",
+      "sicily": "Sicilije",
+      "bahamas": "Bahama",
+      "bvi": "Britanskih Djevičanskih Otoka",
+      "grenada": "Grenade",
+      "martinique": "Martinika"
+    }
   }
 }
