@@ -8,12 +8,13 @@ import NotFoundPage from '@/views/NotFoundPage';
 // /pt with a full hreflang cluster (audit 26.9.2026, B02/R3). An empty
 // `alternates` replaces the layout's object wholesale — no canonical, no
 // hreflang; openGraph.url goes for the same reason.
+// Robots: null drops the layout's `index` and adds none of its own — Next
+// itself writes `<meta name="robots" content="noindex">` on every 404, and
+// the page's own "noindex, follow" was a second robots tag (live check
+// 7.10.2026). Leaving the key out would inherit the layout's `index`.
 export const metadata: Metadata = {
   title: '404',
-  robots: {
-    index: false,
-    follow: true,
-  },
+  robots: null,
   alternates: {},
   openGraph: {},
 };
