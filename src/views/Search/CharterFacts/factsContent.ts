@@ -6,7 +6,7 @@ import { CharterFacts } from '@/utils/server/charterFacts';
 import { loadDestinationIndex, locationForDid, resolveDestinationName } from '@/utils/server/destinationDid';
 import { findModelForYacht } from '@/utils/server/modelCatalog';
 import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
-import { isGulet } from '@/utils/static/guletCrewed';
+import { isGuletType } from '@/utils/static/guletCrewed';
 import { canonicalManufacturer, modelDisplayName } from '@/utils/static/yachtModelKey';
 
 import { MIN_ROW_BOATS, isTypeNameModel } from './factsMath';
@@ -123,7 +123,7 @@ export const factsTiles = (
       value: fmt.number(listingTotal && listingTotal > 0 ? listingTotal : facts.activeBoats),
     },
     // No skipper on a gulet row: a gulet is chartered with its crew (guletCrewed.ts).
-    ...(!isGulet(facts.vesselType) && facts.skipperWeekly && facts.skipperWeekly.median > 0
+    ...(!isGuletType(facts.vesselType) && facts.skipperWeekly && facts.skipperWeekly.median > 0
       ? [
           {
             label: labels.skipper,

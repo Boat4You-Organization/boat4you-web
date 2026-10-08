@@ -128,7 +128,7 @@ const YachtPDF = ({
   // Crewed only when the boat comes with crew and has no bareboat option —
   // and always for a gulet, crew count given or not (guletCrewed.ts; 143 of
   // 219 gulets carried none on 8.10.2026 and read "Bareboat · Gulet").
-  const isCrewed = isGulet(yacht.vesselType) || Boolean(capacity.crew && !capacity.crew.alsoBareboat);
+  const isCrewed = isGulet(yacht) || Boolean(capacity.crew && !capacity.crew.alsoBareboat);
   const vessel = VESSEL_LABEL[yacht.vesselType] || 'Yacht';
   const countryCode = yacht.location?.countryCode || '';
   const country = COUNTRY_NAMES[countryCode] || countryCode;

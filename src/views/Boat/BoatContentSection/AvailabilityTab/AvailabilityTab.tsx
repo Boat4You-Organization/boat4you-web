@@ -138,7 +138,7 @@ const AvailabilityTab = ({ yacht }: AvailabilityTabProps) => {
           />
           <GoodToKnowItem title={tCommon('paymentMethod')} value={t('localCurrency')} />
           {/* A gulet sails with its crew: no licence asked of the guests (guletCrewed.ts). */}
-          {!isGulet(yacht.vesselType) && (
+          {!isGulet(yacht) && (
             <GoodToKnowItem title={tCommon('sailingLicenceRequired')} value={t('standardSailingLicence')} />
           )}
           <GoodToKnowItem title={tCommon('cancellationPolicy')} value={t('cancellationPolicyDescription')} />

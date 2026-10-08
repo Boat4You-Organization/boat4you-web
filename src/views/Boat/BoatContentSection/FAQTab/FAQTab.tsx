@@ -26,7 +26,7 @@ const FAQTab = ({ yacht, yachtFaq }: FAQTabProps) => {
   const locale = useLocale();
 
   // The general licence FAQ — none on a gulet, chartered only with its crew (guletCrewed.ts).
-  const category = licenceFaqCategory(locale, yacht.vesselType);
+  const category = licenceFaqCategory(locale, yacht);
 
   useEffect(() => {
     if (yacht.custom) {

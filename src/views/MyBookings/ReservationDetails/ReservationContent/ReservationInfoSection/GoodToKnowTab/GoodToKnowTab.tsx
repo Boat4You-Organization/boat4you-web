@@ -6,11 +6,12 @@ import { isGulet } from '@/utils/static/guletCrewed';
 import GoodToKnowItem from '@/views/Boat/BoatContentSection/GoodToKnowItem';
 
 interface GoodToKnowTabProps {
-  /** The booked boat's type: a gulet sails with its crew, no licence asked (guletCrewed.ts). */
+  /** The booked boat's type and model: a gulet sails with its crew, no licence asked (guletCrewed.ts). */
   vesselType?: string | null;
+  modelName?: string | null;
 }
 
-const GoodToKnowTab = ({ vesselType }: GoodToKnowTabProps) => {
+const GoodToKnowTab = ({ vesselType, modelName }: GoodToKnowTabProps) => {
   const t = useTranslations('common');
   const tYacht = useTranslations('yacht');
 
@@ -30,7 +31,7 @@ const GoodToKnowTab = ({ vesselType }: GoodToKnowTabProps) => {
       </Typography>
       <Grid container spacing={4}>
         <GoodToKnowItem title={t('paymentMethod')} value={tYacht('localCurrency')} />
-        {!isGulet(vesselType) && (
+        {!isGulet({ vesselType, modelName }) && (
           <GoodToKnowItem title={t('sailingLicenceRequired')} value={tYacht('standardSailingLicence')} />
         )}
         <GoodToKnowItem title={t('cancellationPolicy')} value={tYacht('cancellationPolicyDescription')} />

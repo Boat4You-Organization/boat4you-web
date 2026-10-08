@@ -28,7 +28,8 @@ interface ReservationInfoSectionProps {
 const ReservationInfoSection = ({ reservationDetails, userCurrency }: ReservationInfoSectionProps) => {
   const sectionRefs = useRef<(HTMLElement | null)[]>([]);
   // No FAQ tab on a gulet booking (the general licence FAQ, tabs.config.ts).
-  const tabs = useMemo(() => reservationTabsFor(reservationDetails.vesselType), [reservationDetails.vesselType]);
+  const { vesselType, modelName } = reservationDetails;
+  const tabs = useMemo(() => reservationTabsFor({ vesselType, modelName }), [vesselType, modelName]);
   const sectionIds = useMemo(() => tabs.map((_, index) => `section-${index}`), [tabs]);
   const {
     dateFrom,
@@ -125,7 +126,7 @@ const ReservationInfoSection = ({ reservationDetails, userCurrency }: Reservatio
         );
 
       case 4:
-        return <GoodToKnowTab vesselType={reservationDetails.vesselType} />;
+        return <GoodToKnowTab vesselType={vesselType} modelName={modelName} />;
 
       case 5:
         return <CancellationTab dateFrom={dateFrom} bookedAt={createdAt} />;

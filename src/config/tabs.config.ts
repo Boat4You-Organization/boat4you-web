@@ -1,4 +1,4 @@
-import { isGulet } from '@/utils/static/guletCrewed';
+import { GuletBoat, isGulet } from '@/utils/static/guletCrewed';
 
 export const continentsTabs = ['europe', 'americas'] as const;
 
@@ -33,5 +33,5 @@ export const reservationTabs = [
  * licences), and a gulet is chartered only with its crew (guletCrewed.ts).
  * FAQ is the last tab, so the others keep their renderContent() index.
  */
-export const reservationTabsFor = (vesselType?: string | null): ReadonlyArray<(typeof reservationTabs)[number]> =>
-  isGulet(vesselType) ? reservationTabs.filter(tab => tab !== 'reservationTabs.faq') : reservationTabs;
+export const reservationTabsFor = (boat?: GuletBoat | null): ReadonlyArray<(typeof reservationTabs)[number]> =>
+  isGulet(boat) ? reservationTabs.filter(tab => tab !== 'reservationTabs.faq') : reservationTabs;

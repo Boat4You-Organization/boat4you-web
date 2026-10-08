@@ -2,7 +2,9 @@
  * A gulet is always chartered with its crew (owner, 8.10.2026: "GULET JE
  * UVIJEK SA POSADOM"; guletCrewed.ts): the site never offers or suggests a
  * gulet bareboat or with a skipper only. Other boat types keep the partner's
- * charter types.
+ * charter types. A gulet is vessel type GULET, or a boat whose partner model
+ * is a gulet ("Gulet", "OK AY Gulet": Gallant 11771 and Ok Ay 47 are typed
+ * MOTOR_YACHT), never by the boat's own name; "Guletta 20" is no gulet.
  *
  *   - the boat page FAQ (visible + FAQPage JSON-LD): the crewed licence
  *     answer, also for a gulet the partner tags BAREBOAT as well (Sylvia R,
@@ -62,8 +64,15 @@ registerHooks({
 const ROOT = fileURLToPath(new URL('../', import.meta.url));
 const readJson = path => JSON.parse(readFileSync(`${ROOT}${path}`, 'utf8'));
 
-const { boatTypesUpdate, isGulet, isGuletOnly, licenceFaqCategory, offersBareboat, withoutGuletRentalType } =
-  await import('@/utils/static/guletCrewed');
+const {
+  boatTypesUpdate,
+  isGulet,
+  isGuletOnly,
+  isGuletType,
+  licenceFaqCategory,
+  offersBareboat,
+  withoutGuletRentalType,
+} = await import('@/utils/static/guletCrewed');
 const { getFAQByCategory } = await import('@/lib/page');
 const { reservationTabs, reservationTabsFor } = await import('@/config/tabs.config');
 const { yachtFetchParams } = await import('@/utils/server/searchLanding');
@@ -140,6 +149,49 @@ const bothWaysSailingYacht = {
   vesselType: 'SAILING_YACHT',
   charterType: ['CREWED', 'BAREBOAT'],
 };
+// Gulets the partner types as a motor yacht (live 8.10.2026: "Sailing licence
+// required" in Good to know, the general licence FAQ group under the FAQ).
+const gallant = {
+  ...sylviaR,
+  id: 11771,
+  slug: 'gulet-gallant-11771',
+  name: 'Gallant',
+  model: 'Gulet',
+  modelName: 'Gulet',
+  vesselType: 'MOTOR_YACHT',
+  charterType: ['CREWED'],
+  crewNumber: 5,
+  location: { name: 'Port of Split / East Harbour | Split', countryCode: 'HR' },
+};
+const okAy = {
+  ...gallant,
+  id: 47,
+  slug: 'custom-made-ok-ay-gulet-ok-ay-47',
+  name: 'Ok Ay',
+  model: 'OK AY Gulet',
+  modelName: 'OK AY Gulet',
+  charterType: ['CREWED', 'ALL_INCLUSIVE'],
+  crewNumber: 3,
+  location: { name: 'Fethiye, Ece Saray Marina Resort', countryCode: 'TR' },
+};
+// A model gulet typed SAILING_YACHT, tagged BAREBOAT as well, no crew count.
+const sailingTypedGulet = {
+  ...gallant,
+  id: 9005,
+  name: 'Bluefest',
+  vesselType: 'SAILING_YACHT',
+  charterType: ['CREWED', 'BAREBOAT'],
+  crewNumber: null,
+};
+// No gulets: a longer word in the model, and a boat only *named* "Gulet …".
+const guletta = { ...bothWaysSailingYacht, id: 9003, model: 'Guletta 20', modelName: 'Guletta 20' };
+const namedGulet = {
+  ...bothWaysSailingYacht,
+  id: 9004,
+  name: 'Gulet Dream',
+  model: 'Oceanis 46',
+  modelName: 'Oceanis 46',
+};
 
 const yachtT = locale => {
   const t = createTranslator({
@@ -159,11 +211,45 @@ const licenceEntry = (yacht, locale) => {
 };
 
 describe('guletCrewed.ts', () => {
-  test('a gulet is a gulet; nothing else is', () => {
-    assert.equal(isGulet('GULET'), true);
-    ['CATAMARAN', 'MOTOR_YACHT', 'SAILING_YACHT', '', null, undefined].forEach(type =>
-      assert.equal(isGulet(type), false, String(type))
-    );
+  test('the vessel type GULET is a gulet type; nothing else is', () => {
+    assert.equal(isGuletType('GULET'), true);
+    assert.equal(isGulet({ vesselType: 'GULET' }), true);
+    ['CATAMARAN', 'MOTOR_YACHT', 'SAILING_YACHT', '', null, undefined].forEach(type => {
+      assert.equal(isGuletType(type), false, String(type));
+      assert.equal(isGulet({ vesselType: type }), false, String(type));
+    });
+    assert.equal(isGulet(null), false);
+    assert.equal(isGulet(undefined), false);
+  });
+
+  test('a gulet typed as a motor or sailing yacht: the word "gulet" in its model', () => {
+    [
+      gallant,
+      okAy,
+      sailingTypedGulet,
+      // A search row and a booking carry the model as modelName; the boat page as model too.
+      { vesselType: 'MOTOR_YACHT', modelName: 'Gulet' },
+      { vesselType: 'MOTOR_YACHT', modelName: 'OK AY Gulet' },
+      { vesselType: 'SAILING_YACHT', model: 'gulet' },
+      { vesselType: null, modelName: 'Custom Gulet 24m' },
+    ].forEach(boat => assert.equal(isGulet(boat), true, JSON.stringify(boat)));
+  });
+
+  test('never the boat\'s own name, never a longer word: "Guletta 20", "Gulet Dream" stay what they are', () => {
+    [
+      guletta,
+      namedGulet,
+      { vesselType: 'MOTOR_YACHT', name: 'Gulet Babac', model: 'Babac', modelName: 'Babac' },
+      { vesselType: 'MOTOR_YACHT', modelName: 'Motor sailer' },
+      { vesselType: 'SAILING_YACHT', modelName: 'Guletta 20' },
+      { vesselType: 'CATAMARAN', modelName: 'Lagoon 42' },
+      { vesselType: 'MOTOR_YACHT', model: null, modelName: null },
+    ].forEach(boat => assert.equal(isGulet(boat), false, JSON.stringify(boat)));
+  });
+
+  test('a boat-type filter knows no model: gulets only is GULET only', () => {
+    assert.equal(isGuletOnly(['GULET', 'MOTOR_YACHT']), false);
+    assert.equal(isGuletOnly(['MOTOR_YACHT']), false);
   });
 
   test('gulets only: one or more GULET and nothing else', () => {
@@ -177,6 +263,11 @@ describe('guletCrewed.ts', () => {
 
   test('a gulet is never offered bareboat, whatever the partner tags', () => {
     assert.equal(offersBareboat(sylviaR), false);
+    assert.equal(offersBareboat(sailingTypedGulet), false);
+    assert.equal(
+      offersBareboat({ vesselType: 'MOTOR_YACHT', modelName: 'OK AY Gulet', charterType: 'BAREBOAT' }),
+      false
+    );
     assert.equal(offersBareboat({ vesselType: 'GULET', charterType: ['BAREBOAT'] }), false);
     assert.equal(offersBareboat({ vesselType: 'GULET', charterType: 'BAREBOAT' }), false);
   });
@@ -187,6 +278,8 @@ describe('guletCrewed.ts', () => {
     assert.equal(offersBareboat({ vesselType: 'CATAMARAN', charterType: 'BAREBOAT' }), true);
     assert.equal(offersBareboat(crewedMotorYacht), false);
     assert.equal(offersBareboat({ vesselType: 'CATAMARAN', charterType: null }), false);
+    assert.equal(offersBareboat(guletta), true);
+    assert.equal(offersBareboat(namedGulet), true);
   });
 });
 
@@ -204,6 +297,23 @@ describe('boat page FAQ licence answer (visible + FAQPage JSON-LD)', () => {
       const schemaAnswer = schema.mainEntity.find(q => q.name === entry.question).acceptedAnswer.text;
 
       assert.equal(schemaAnswer, entry.answer);
+    });
+
+    test(`${locale}: gulets typed as a motor or sailing yacht get the crewed answer`, () => {
+      [gallant, okAy, sailingTypedGulet].forEach(yacht => {
+        const { entry, t } = licenceEntry(yacht, locale);
+        const crewed = [0, 1].map(i => t(`faqLicenceCrewedA${i}`, { name: yacht.name }));
+
+        assert.ok(crewed.includes(entry.answer), `${yacht.name}: ${entry.answer}`);
+        assert.doesNotMatch(entry.answer, SELF_SAIL, yacht.name);
+      });
+
+      const { entry, t } = licenceEntry(guletta, locale);
+
+      assert.ok(
+        [0, 1, 2].map(i => t(`faqLicenceBareboatA${i}`, { name: guletta.name })).includes(entry.answer),
+        `Guletta 20: ${entry.answer}`
+      );
     });
 
     test(`${locale}: a bareboat catamaran keeps the bareboat answer`, () => {
@@ -258,6 +368,26 @@ describe('"Good to know": no sailing licence asked for a gulet', () => {
       assert.ok(renderText(createElement(BoatGoodToKnowTab, { yacht: crewedMotorYacht }), locale).includes(licence));
 
       assert.ok(!renderText(createElement(BookingGoodToKnowTab, { vesselType: 'GULET' }), locale).includes(licence));
+      [gallant, okAy, sailingTypedGulet].forEach(yacht => {
+        const page = renderText(createElement(BoatGoodToKnowTab, { yacht }), locale);
+        const booking = renderText(
+          createElement(BookingGoodToKnowTab, { vesselType: yacht.vesselType, modelName: yacht.modelName }),
+          locale
+        );
+
+        assert.ok(!page.includes(licence), `${yacht.name}: ${page}`);
+        assert.ok(!booking.includes(licence), `${yacht.name}: ${booking}`);
+      });
+      [guletta, namedGulet].forEach(yacht => {
+        assert.ok(renderText(createElement(BoatGoodToKnowTab, { yacht }), locale).includes(licence), yacht.model);
+        assert.ok(
+          renderText(
+            createElement(BookingGoodToKnowTab, { vesselType: yacht.vesselType, modelName: yacht.modelName }),
+            locale
+          ).includes(licence),
+          yacht.model
+        );
+      });
       assert.ok(renderText(createElement(BookingGoodToKnowTab, { vesselType: 'CATAMARAN' }), locale).includes(licence));
       assert.ok(renderText(createElement(BookingGoodToKnowTab, {}), locale).includes(licence));
     });
@@ -313,6 +443,26 @@ describe('boat PDF: a gulet is a crewed charter', () => {
     });
   });
 
+  test('a gulet typed as a sailing yacht, no crew count, also tagged BAREBOAT: "Crewed", never bareboat', () => {
+    const strings = pdfText(sailingTypedGulet);
+
+    assert.ok(
+      strings.some(s => /^Crewed {2}· /i.test(s)),
+      strings.join(' | ')
+    );
+    assert.ok(strings.some(s => s.includes('per week · crewed charter')));
+    assert.ok(!strings.some(s => /bareboat/i.test(s)), strings.join(' | '));
+  });
+
+  test('"Guletta 20" offered both ways without a crew count stays "Bareboat"', () => {
+    const strings = pdfText({ ...guletta, crewNumber: null });
+
+    assert.ok(
+      strings.some(s => /^Bareboat {2}· /i.test(s)),
+      strings.join(' | ')
+    );
+  });
+
   test('a bareboat catamaran stays "Bareboat · Catamaran"', () => {
     const strings = pdfText(masterpiece);
 
@@ -349,9 +499,14 @@ describe('the general licence FAQ: never under a gulet', () => {
 
   test('a gulet gets no licence group, in every locale; other boats keep theirs', () => {
     LOCALES.forEach(locale => {
-      assert.equal(licenceFaqCategory(locale, 'GULET'), null, locale);
+      [{ vesselType: 'GULET' }, gallant, okAy, sailingTypedGulet].forEach(boat =>
+        assert.equal(licenceFaqCategory(locale, boat), null, `${locale} ${boat.vesselType} ${boat.modelName}`)
+      );
       ['CATAMARAN', 'SAILING_YACHT', 'MOTOR_YACHT', null, undefined].forEach(type =>
-        assert.ok(licenceFaqCategory(locale, type), `${locale} ${type}`)
+        assert.ok(licenceFaqCategory(locale, { vesselType: type }), `${locale} ${type}`)
+      );
+      [guletta, namedGulet, null, undefined].forEach(boat =>
+        assert.ok(licenceFaqCategory(locale, boat), `${locale} ${boat?.modelName}`)
       );
     });
   });
@@ -374,20 +529,43 @@ describe('the general licence FAQ: never under a gulet', () => {
   test('the boat page FAQ tab neither requests nor renders the group without a category', () => {
     const src = readFileSync(`${ROOT}src/views/Boat/BoatContentSection/FAQTab/FAQTab.tsx`, 'utf8');
 
-    assert.match(src, /const category = licenceFaqCategory\(locale, yacht\.vesselType\);/);
+    assert.match(src, /const category = licenceFaqCategory\(locale, yacht\);/);
     assert.match(src, /useEffect\(\(\) => \{\s*if \(!category\) return;\s*startTransition\(\(\) => \{\s*getFAQAction/);
     assert.match(src, /\{category && faqAction && <AccordionMenu accordionList=\{faqAction\} \/>\}/);
   });
 
   test('My bookings: a gulet booking has no FAQ tab, the others keep all seven', () => {
-    assert.deepEqual(
-      reservationTabsFor('GULET'),
-      reservationTabs.filter(tab => tab !== 'reservationTabs.faq')
-    );
-    assert.deepEqual(reservationTabsFor('GULET').at(-1), 'reservationTabs.cancellation');
+    const withoutFaq = reservationTabs.filter(tab => tab !== 'reservationTabs.faq');
+
+    // A booking carries the vessel type and the model as modelName.
+    [
+      { vesselType: 'GULET', modelName: 'Gulet' },
+      { vesselType: 'MOTOR_YACHT', modelName: 'Gulet' },
+      { vesselType: 'MOTOR_YACHT', modelName: 'OK AY Gulet' },
+    ].forEach(booking => assert.deepEqual(reservationTabsFor(booking), withoutFaq, booking.modelName));
+    assert.deepEqual(reservationTabsFor({ vesselType: 'GULET' }).at(-1), 'reservationTabs.cancellation');
     ['CATAMARAN', 'MOTOR_YACHT', null, undefined].forEach(type =>
-      assert.deepEqual(reservationTabsFor(type), reservationTabs, String(type))
+      assert.deepEqual(reservationTabsFor({ vesselType: type, modelName: 'Lagoon 42' }), reservationTabs, String(type))
     );
+    assert.deepEqual(reservationTabsFor({ vesselType: 'SAILING_YACHT', modelName: 'Guletta 20' }), reservationTabs);
+    assert.deepEqual(reservationTabsFor(null), reservationTabs);
+  });
+
+  test('every boat-level caller passes the boat, not only its vessel type', () => {
+    const calls = {
+      'src/views/Boat/BoatContentSection/GoodToKnowTab/GoodToKnowTab.tsx': /\{!isGulet\(yacht\) && \(/,
+      'src/views/Boat/BoatContentSection/AvailabilityTab/AvailabilityTab.tsx': /\{!isGulet\(yacht\) && \(/,
+      'src/components/YachtPDF/YachtPDF.tsx': /const isCrewed = isGulet\(yacht\) \|\|/,
+      'src/views/MyBookings/ReservationDetails/ReservationContent/ReservationInfoSection/ReservationInfoSection.tsx':
+        /reservationTabsFor\(\{ vesselType, modelName \}\)[\s\S]*<GoodToKnowTab vesselType=\{vesselType\} modelName=\{modelName\} \/>/,
+    };
+
+    Object.entries(calls).forEach(([path, pattern]) => {
+      const src = readFileSync(`${ROOT}${path}`, 'utf8');
+
+      assert.match(src, pattern, path);
+      assert.doesNotMatch(src, /isGulet\([a-zA-Z.]*vesselType\)/, path);
+    });
   });
 });
 
