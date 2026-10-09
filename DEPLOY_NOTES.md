@@ -1,6 +1,6 @@
 # Boat4You (main) — Production Deploy Notes
 
-## 2026-10-09 — 🔤 Imena brodova iza apostrofa i točke (5. krug) — ⏳ NIJE DEPLOYANO (grana `fix/w910-polish5`, `2710ff0ff`, `545465767`)
+## 2026-10-09 — 🔤 Imena brodova iza apostrofa i točke (5. krug) — ✅ DEPLOYANO 9.10.2026 ~09:35–10:10 UTC (main `0c157b85e`)
 
 Izvor: `_seo-audit-2026-10-08/live-verify-round4/` (F1, regresija 4. kruga na `/fleet`, starija na naslovu i H1 stranice broda). Samo prikaz imena (`src/utils/static/toTitleCase.ts`); slugovi, linkovi, kapacitet, oprema i tekstovi brokera nisu dirani. Samo web, bez env promjena.
 
