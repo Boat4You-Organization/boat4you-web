@@ -1,6 +1,6 @@
 # Boat4You (main) — Production Deploy Notes
 
-## 2026-10-09 — 📐 Tlocrt plovila u svom bloku iznad „Sadržaja", izbačen iz fotografija — ⏳ NIJE DEPLOYANO — čeka backend polje layout (grana `feat/boat-layout-block`, `e46f6baa5`)
+## 2026-10-09 — 📐 Tlocrt plovila u svom bloku iznad „Sadržaja", izbačen iz fotografija — ✅ DEPLOYANO 9.10.2026 15:23 UTC (`5214e4803`), aktivno od backenda 17:52 UTC (polje `layout`); provjereno uživo 12663 + 847/3186/6009/14281
 
 Izvor: Mario 9.10.2026 („moram pretraživat slike da nađem layout plovila … stavi poviše amenities da stoji samostalno samo layout tu i izbaci ga iz slika"). Samo web, bez env promjena. Kapacitet, oprema i njihove poruke nisu dirani.
 
