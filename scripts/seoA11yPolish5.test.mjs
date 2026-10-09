@@ -12,7 +12,12 @@
  *       - a dot no longer lowers the next word: "E.S.", "M.P. Prestige",
  *         "Kos 46.Cat", not "E.s.", "M.p. Prestige", "Kos 46.cat";
  *       - "ex" before a former name keeps it readable: "Concord's 6 ex.OMR
- *         Group", not "Concord's 6 Ex.omr Group".
+ *         Group", not "Concord's 6 Ex.omr Group";
+ *       - after "d'", "l'" or "o'" the next word starts with a capital
+ *         however the partner typed it, so the same name reads the same:
+ *         "L'Epaulard III", "Les Copains D'Abord" (review of this round);
+ *       - a backtick typed for an apostrophe counts as one: "Fish N`Chips",
+ *         not "Fish N`chips".
  *
  *   The whole live /fleet name list — 8,362 distinct names of the 10,482
  *   promoted boats, as the backend sent them on 9.10.2026 — is
@@ -111,9 +116,44 @@ describe('F1: title case after an apostrophe', () => {
       "D'Arros": "D'Arros",
       "Jeux D'Hiver": "Jeux D'Hiver",
       "Rev'Anou": "Rev'Anou",
-      "L'una Grossa - Comfort line": "L'una Grossa - Comfort Line",
       "T'moana": "T'moana",
+      "M'arricrio": "M'arricrio",
+      "A'more": "A'more",
       'Iz’lo': 'Iz’lo',
+    });
+  });
+
+  test('after "d\'", "l\'" or "o\'" the next word starts with a capital however the partner typed it', () => {
+    expectShown({
+      "L'epaulard III": "L'Epaulard III",
+      "L'after": "L'After",
+      "L'una Grossa - Comfort line": "L'Una Grossa - Comfort Line",
+      "Les Copains D'abord": "Les Copains D'Abord",
+      "D'artagnan": "D'Artagnan",
+      "O'neill": "O'Neill",
+    });
+  });
+
+  test('the same name reads the same however the partner typed it ("Les Copains D\'Abord")', () => {
+    [
+      ["Les Copains D'abord", "LES COPAINS D'ABORD", "Les Copains D'Abord"],
+      ["L'epaulard III", "L'EPAULARD III"],
+      ["D'artagnan", "D'ARTAGNAN", "D'Artagnan"],
+      ["O'neill", "O'NEILL", "O'Neill"],
+    ].forEach(spellings => {
+      const shown = spellings.map(toTitleCase);
+
+      assert.deepEqual(new Set(shown).size, 1, shown.join(' / '));
+    });
+  });
+
+  test('a backtick or an acute accent typed for an apostrophe counts as one: "Fish N`Chips"', () => {
+    expectShown({
+      'Fish N`Chips': 'Fish N`Chips',
+      'FISH N`CHIPS': 'Fish N`Chips',
+      'Fish N´Chips': 'Fish N´Chips',
+      'I`M ALONE': 'I`m Alone',
+      'L`AVVENTURA': 'L`Avventura',
     });
   });
 
@@ -245,8 +285,16 @@ describe('F1: the whole live /fleet name list (9.10.2026)', () => {
   });
 
   test('no single capital letter after an apostrophe ("I\'M", "C\'S", "T\'S")', () => {
-    const offenders = FLEET_NAMES.map(toTitleCase).filter(shown => /\p{L}['’]\p{Lu}(?!\p{L})/u.test(shown));
+    const offenders = FLEET_NAMES.map(toTitleCase).filter(shown => /\p{L}['’`´]\p{Lu}(?!\p{L})/u.test(shown));
 
+    assert.deepEqual(offenders, []);
+  });
+
+  test('after "d\'", "l\'" or "o\'" a word of two or more letters starts with a capital ("L\'Epaulard")', () => {
+    const elisions = FLEET_NAMES.map(toTitleCase).filter(shown => /(?<!\p{L})[dlo]['’`´]\p{L}{2}/iu.test(shown));
+    const offenders = elisions.filter(shown => /(?<!\p{L})[DLOdlo]['’`´]\p{Ll}\p{L}/u.test(shown));
+
+    assert.ok(elisions.length >= 15, elisions.join(', '));
     assert.deepEqual(offenders, []);
   });
 
@@ -278,6 +326,8 @@ const ENTRIES = [
   { slug: 'plume-dange-1', name: "Plume d'Ange", modelName: 'Lagoon 40' },
   { slug: 'concords-6-exomr-group-2', name: "Concord's 6 ex.OMR Group", modelName: 'Bali 4.6' },
   { slug: 'e-s-3', name: 'E.S.', modelName: 'Sun Odyssey 440' },
+  { slug: 'lepaulard-iii-1', name: "L'epaulard III", modelName: 'Lagoon 450' },
+  { slug: 'fish-nchips-1', name: 'Fish N`Chips', modelName: 'Bali 4.1' },
 ].map(entry => ({ ...entry, base: 'Marina Kaštela, Kaštela', cabins: 4, maxPersons: 10, buildYear: 2020 }));
 
 const renderFleet = async locale => {
@@ -312,6 +362,8 @@ describe('F1: /fleet and the boat page title', () => {
         ['Lagoon 40', "Plume d'Ange"],
         ['Bali 4.6', "Concord's 6 ex.OMR Group"],
         ['Sun Odyssey 440', 'E.S.'],
+        ['Lagoon 450', "L'Epaulard III"],
+        ['Bali 4.1', 'Fish N`Chips'],
       ]);
       assert.ok(
         html.includes(`href="${locale === 'en' ? '' : `/${locale}`}/boat/hanse-yachts-hanse-460-im-alone-887"`)

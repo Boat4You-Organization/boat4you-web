@@ -28,18 +28,24 @@ const ROMAN_NUMERAL_RE = /^M{0,3}(?:CM|CD|D?C{0,3})(?:XC|XL|L?X{0,3})(?:IX|IV|V?
 //  - a contraction or plural stays lower after the apostrophe: "I'm", "C's",
 //    "Nauti T's", "Let's", "I'll", "Seas’d", "Susano'o" (and "FOUR C'S"
 //    reads "Four C's");
-//  - a name the partner typed in mixed case keeps the partner's case of the
-//    letter after the apostrophe: "C'est la vie" → "C'est La Vie", "P’tit Loup",
-//    "Rev'Anou", "L'Albatros";
-//  - in a name typed all in capitals (or all lower case) a one-letter
-//    elision starts a new word, "L'AVVENTURA" → "L'Avventura", "O'NEILL" →
-//    "O'Neill", and anything longer goes on, "OCEAN'S" → "Ocean's";
+//  - after "d'", "l'" or "o'" the next word starts with a capital whatever
+//    case the partner typed: "L'AVVENTURA" and "L'avventura" → "L'Avventura",
+//    "O'neill" → "O'Neill", "Les Copains D'abord" → "Les Copains D'Abord";
+//  - after any other prefix a name the partner typed in mixed case keeps the
+//    partner's case of the letter after the apostrophe: "C'est la vie" →
+//    "C'est La Vie", "P’tit Loup", "T'moana", "Rev'Anou";
+//  - in a name typed all in capitals (or all lower case) any one-letter
+//    elision starts a new word and anything longer goes on, "OCEAN'S" →
+//    "Ocean's";
 //  - the particle "d'" or "l'" the partner typed lower case inside a name
 //    stays lower: "Plume d'Ange", "Valle d'Aosta", "Ti Tengo d'Okkio".
-const APOSTROPHES_RE = /(['’]+)/;
+// A backtick or an acute accent typed for an apostrophe counts as one:
+// "Fish N`Chips" (it read "Fish N`chips").
+const APOSTROPHES_RE = /(['’`´]+)/;
 const CONTRACTION_TAIL_RE = /^(?:\p{L}|ll|re|ve)$/iu;
 const SINGLE_LETTER_RE = /^\p{L}$/u;
 const PARTICLE_RE = /^[dl]$/;
+const ARTICLE_ELISION_RE = /^[dlo]$/iu;
 // Vessel-type abbreviations stay in capitals: "M/S", "S/Y", "M/Y" anywhere
 // (the card read "M/s Aurum Sky"), and a leading "MS", "MY", "SY", "MSY",
 // "MV", "SV" that the partner typed in capitals in an otherwise mixed-case
@@ -108,7 +114,11 @@ const caseApostropheWord = (word: string, wordCase: WordCase): string => {
 
       const initial = segment.charAt(0);
 
-      if (wordCase.typedCase) return initial + rest;
+      // The article or particle "d'", "l'" or "o'" always starts a new word,
+      // whatever case the partner typed: "L'epaulard III" and "Les Copains
+      // D'abord" read "L'Epaulard III" and "Les Copains D'Abord", like the
+      // same names typed in capitals.
+      if (wordCase.typedCase && !ARTICLE_ELISION_RE.test(segments[at - 2])) return initial + rest;
 
       return (SINGLE_LETTER_RE.test(segments[at - 2]) ? initial.toUpperCase() : initial.toLowerCase()) + rest;
     })
