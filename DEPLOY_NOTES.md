@@ -1,5 +1,21 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-10-09 — 🔤 Imena brodova iza apostrofa i točke (5. krug) — ⏳ NIJE DEPLOYANO (grana `fix/w910-polish5`, `2710ff0ff`)
+
+Izvor: `_seo-audit-2026-10-08/live-verify-round4/` (F1, regresija 4. kruga na `/fleet`, starija na naslovu i H1 stranice broda). Samo prikaz imena (`src/utils/static/toTitleCase.ts`); slugovi, linkovi, kapacitet, oprema i tekstovi brokera nisu dirani. Samo web, bez env promjena.
+
+- Iza apostrofa kontrakcija i množina ostaju malim slovom: „I'm Alone", „C's The Day", „Nauti T's" (bilo „I'M Alone", „C'S The Day", „Nauti T'S"); „Four C'S" sada „Four C's". Ime upisano miješanim slovima zadržava partnerovo slovo iza apostrofa („C'est La Vie", „P’tit Loup", „Rev'Anou"); ime upisano samo velikim slovima i dalje „L'Avventura", „O'Neill". Mala čestica „d'"/„l'" unutar imena ostaje mala: „Plume d'Ange", „Valle d'Aosta", „Ti Tengo d'Okkio".
+- Točka spaja kao „&", „/" i „-": „E.S.", „M.P. Prestige", „Gen.+A.C.", „Kos 46.Cat", „Mr.Si" (bilo „E.s.", „M.p.", „Gen.+a.c.", „Kos 46.cat", „Mr.si").
+- „ex" ispred bivšeg imena malim slovom, kratki bivši naziv velikim slovima ostaje: „Concord's 6 ex.OMR Group" (bilo „Ex.omr"), „Rosalu ex Shakti", „Esko (ex Manca)".
+- Cijeli živi popis `/fleet` (8.362 različita imena, 10.482 broda, backend 9.10.) je fixture `scripts/fixtures/fleet-names-2026-10-09.json`: prikaz se mijenja za 63 imena i 2 modela („My4.S"), mijenjaju se samo velika/mala slova i razmaci.
+- `package.json`: uklonjen stari duplikat ključa `test:polish` (vrijedio je drugi).
+
+**Provjere (lokalno 9.10.):** `yarn test:polish` 102 (+24, `seoA11yPolish5.test.mjs`; 20 novih pada na prethodnom kodu), ostali `yarn test:*` prolaze, `npx tsc --noEmit` 0, `yarn lint` 0 grešaka (17 starih upozorenja). `next dev` :3995 na prod API (12 stranica): `/fleet/16`, `/fleet/18`, `/hr/fleet/18`, `/fleet/22`, `/fleet/31`, `/fleet/33`, `/fleet/34`, `/fleet/35` pokazuju „C's The Day", „Plume d'Ange", „I'm Alone", „C'est La Vie", „Nauti T's", „M.P. Prestige", „Mr.Si", „Four C's", „Concord's 6 ex.OMR Group"; naslov i H1: „Hanse 460 I'm Alone (2024) — Pirovac Charter | Boat4You", „Sunsail 41 C's The Day (2020)", „Oceanis 35.1 Plume d'Ange (2019)", hr „Leopard 46 Nauti T's (2026) — Najam Road Town".
+
+**Nakon deploya:** `curl -s https://www.boat4you.com/boat/hanse-yachts-hanse-460-im-alone-887 | grep -o '<title>[^<]*'` → „Hanse 460 I&#x27;m Alone (2024) …"; `/fleet` stranice bez „I&#x27;M Alone", „C&#x27;S The Day", „Ex.omr" (broj stranice se pomiče s katalogom).
+
+**Otvoreno:** sestre (EY, CY, IT, CB, CC, GR) imaju isti `ELISION_RE` u svom `toTitleCase.ts` (origin/main 8.10.), nisu dirane u ovoj grani.
+
 ## 2026-10-08 — 🧹 Sitnice s live provjere 8.10. (4. krug): gulet po modelu, „gulet" u hr landingu, imena na /fleet — ✅ DEPLOYANO 8.10.2026 ~20:05–20:30 UTC (main `e807c43e3`)
 
 Izvor: `_seo-audit-2026-10-08/live-verify-round3/` (G1, G6, B1). Tekstovi brokera, kapacitet, oprema i Product JSON-LD nisu dirani. Samo web, bez env promjena.
