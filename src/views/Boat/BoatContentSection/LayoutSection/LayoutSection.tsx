@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 
 import { ZoomInOutlined } from '@mui/icons-material';
 import { Box, ButtonBase, Stack, Typography } from '@mui/material';
@@ -13,6 +13,7 @@ import FloorPlan from '@/components/SvgIcons/FloorPlan';
 import { YachtImage } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
 import { getBoatImageUrl } from '@/utils/static/imageUtils';
+import { withoutMainImage } from '@/utils/static/yachtLayout';
 
 import styles from './LayoutSection.module.scss';
 
@@ -38,6 +39,8 @@ const LayoutSection = ({ images, photoName }: LayoutSectionProps) => {
   // Mounted from the first open on (and kept, so it can animate closed).
   const [lightboxMounted, setLightboxMounted] = useState(false);
   const [selected, setSelected] = useState(0);
+  // The lightbox in the block's order (it would put a main layout first).
+  const lightboxImages = useMemo(() => withoutMainImage(images), [images]);
 
   if (images.length === 0) return null;
 
@@ -94,7 +97,7 @@ const LayoutSection = ({ images, photoName }: LayoutSectionProps) => {
         <Lightbox
           open={isOpen}
           onClose={() => setIsOpen(false)}
-          images={images}
+          images={lightboxImages}
           selectedImage={selected}
           showShareAndFavorite={false}
           photoName={photoName}

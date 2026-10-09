@@ -64,6 +64,18 @@ export const splitLayoutImages = <T extends Pick<YachtImage, 'layout' | 'kind' |
 };
 
 /**
+ * The layouts as the block hands them to the lightbox: none marked main. The
+ * lightbox puts the main image first, then sorts by position; a layout that is
+ * also the boat's main image would jump ahead of the block's order, and a
+ * click on one drawing would open another. A list without a main layout comes
+ * back as it is.
+ */
+export const withoutMainImage = <T extends Pick<YachtImage, 'mainImage'>>(images: T[]): T[] =>
+  images.some(image => image.mainImage)
+    ? images.map(image => (image.mainImage ? { ...image, mainImage: false } : image))
+    : images;
+
+/**
  * The yacht the boat page's client components get (gallery, hero, lightbox,
  * share, favourite, inquiry, booking, PDF): its photos only, and the layouts
  * beside it. Without a layout the yacht is returned as it came.

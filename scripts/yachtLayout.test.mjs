@@ -53,7 +53,8 @@ const readJson = path => JSON.parse(readFileSync(`${ROOT}${path}`, 'utf8'));
 const readSrc = path => readFileSync(`${ROOT}${path}`, 'utf8');
 const LOCALES = ['en', 'de', 'fr', 'it', 'es', 'pt', 'nl', 'pl', 'hr'];
 
-const { isLayoutImage, splitLayoutImages, withLayoutImagesApart } = await import('@/utils/static/yachtLayout');
+const { isLayoutImage, splitLayoutImages, withLayoutImagesApart, withoutMainImage } =
+  await import('@/utils/static/yachtLayout');
 const { default: LayoutSection } = await import('@/views/Boat/BoatContentSection/LayoutSection');
 const { default: Gallery } = await import('@/components/Gallery');
 const { default: YachtPDF } = await import('@/components/YachtPDF/YachtPDF');
@@ -267,6 +268,51 @@ describe('the layout block (LayoutSection)', () => {
     assert.deepEqual(srcIds(html), [218650, 218663]);
     assert.ok(html.includes('alt="Lagoon 55 The Moon — Layout 1"'));
     assert.ok(html.includes('alt="Lagoon 55 The Moon — Layout 2"'));
+  });
+
+  test('the lightbox opens the drawing clicked: its order is the block order, even with a main layout', () => {
+    // The lightbox's own order (Lightbox.tsx): the main image first, then by position.
+    const lightboxOrder = images =>
+      [...images]
+        .sort((a, b) => (a.mainImage !== b.mainImage ? (a.mainImage ? -1 : 1) : a.position - b.position))
+        .map(i => i.id);
+    const blockOrder = images =>
+      srcIds(render(createElement(LayoutSection, { images, photoName: 'Lagoon 55 The Moon' })));
+
+    // Every position 0 like boat 12663; the second layout is the main image.
+    const mixed = splitLayoutImages([
+      { id: 1, position: 0, mainImage: false },
+      { id: 2, position: 0, mainImage: false, layout: true },
+      { id: 3, position: 0, mainImage: true, layout: true },
+      { id: 4, position: 0, mainImage: false },
+    ]).layouts;
+    // Only layouts, the later one by position is the main image.
+    const only = splitLayoutImages([
+      { id: 5, position: 0, mainImage: false, layout: true },
+      { id: 6, position: 1, mainImage: true, layout: true },
+    ]).layouts;
+
+    [
+      [mixed, [2, 3]],
+      [only, [5, 6]],
+    ].forEach(([layouts, ids]) => {
+      assert.deepEqual(blockOrder(layouts), ids);
+      // Handed over as they are, the lightbox would open the other drawing.
+      assert.notDeepEqual(lightboxOrder(layouts), ids);
+      assert.deepEqual(lightboxOrder(withoutMainImage(layouts)), ids);
+    });
+
+    // The API objects stay as they were; a list without a main layout is passed through.
+    assert.equal(only[1].mainImage, true);
+
+    const plain = mixed.slice(0, 1);
+
+    assert.equal(withoutMainImage(plain), plain);
+
+    const section = readSrc('src/views/Boat/BoatContentSection/LayoutSection/LayoutSection.tsx');
+
+    assert.match(section, /const lightboxImages = useMemo\(\(\) => withoutMainImage\(images\), \[images\]\);/u);
+    assert.match(section, /<Lightbox[\s\S]*?images=\{lightboxImages\}/u);
   });
 
   test('without the flag: nothing at all (no empty heading)', () => {
