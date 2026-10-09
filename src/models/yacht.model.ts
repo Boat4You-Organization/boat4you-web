@@ -185,6 +185,14 @@ export interface YachtImage {
   url: string;
   position: number;
   mainImage: boolean;
+  /**
+   * The partner's layout drawing (deck plan), not a photo — set by the
+   * backend. Read only through isLayoutImage (yachtLayout.ts), which also
+   * accepts `kind` / `type` "LAYOUT" in case the field ships under that name.
+   */
+  layout?: boolean | null;
+  kind?: string | null;
+  type?: string | null;
 }
 
 export interface YachtCustomDetails {

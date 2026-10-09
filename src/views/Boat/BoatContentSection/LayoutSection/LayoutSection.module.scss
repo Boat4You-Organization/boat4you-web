@@ -1,0 +1,55 @@
+@use '@/styles/settings/variables' as *;
+@use '@/styles/utils/rem-calc' as *;
+@use '@/styles/mixins/breakpoints' as *;
+
+// One drawing full width; two or three side by side from tablet up. The box
+// has fixed proportions (no layout shift while the image loads) and shows the
+// drawing whole on a light background (contain, never cropped).
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: rem-calc(16);
+
+  &.multiple {
+    @include media('sm') {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  .tile {
+    position: relative;
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    max-height: rem-calc(640);
+    overflow: hidden;
+    border: rem-calc(1) solid $black-200;
+    border-radius: rem-calc(12);
+    background-color: $white;
+    cursor: zoom-in;
+
+    &:focus-visible {
+      outline: rem-calc(2) solid $blue-500;
+      outline-offset: rem-calc(2);
+    }
+
+    .image {
+      object-fit: contain;
+      padding: rem-calc(8);
+    }
+
+    .zoom {
+      position: absolute;
+      right: rem-calc(12);
+      bottom: rem-calc(12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: rem-calc(40);
+      height: rem-calc(40);
+      border-radius: 50%;
+      background-color: $white;
+      box-shadow: 0 rem-calc(1) rem-calc(4) rgb(0 0 0 / 18%);
+    }
+  }
+}

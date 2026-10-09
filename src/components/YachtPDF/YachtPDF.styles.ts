@@ -126,6 +126,10 @@ export const styles = StyleSheet.create({
   columns: { flexDirection: 'row', gap: 23 },
   column: { flex: 1 },
   sectionTitle: { fontSize: 10, letterSpacing: 2, color: NAVY, fontFamily: 'Helvetica-Bold', marginBottom: 11 },
+
+  /* page 3 — layout drawings, whole (contain), never cropped */
+  layoutBody: { paddingHorizontal: 37, gap: 12 },
+  layoutImage: { width: '100%', objectFit: 'contain' },
   specRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',

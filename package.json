@@ -29,6 +29,7 @@
     "test:equipment": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test scripts/equipment.test.mjs",
     "test:polish": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test scripts/seoA11yPolish.test.mjs scripts/seoA11yPolish2.test.mjs scripts/seoA11yPolish3.test.mjs scripts/seoA11yPolish4.test.mjs scripts/seoA11yPolish5.test.mjs",
     "test:gulet": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test scripts/guletCrewed.test.mjs",
+    "test:layout": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test scripts/yachtLayout.test.mjs",
     "upgrade": "yarn upgrade"
   },
   "dependencies": {

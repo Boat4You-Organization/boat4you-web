@@ -33,6 +33,9 @@ interface YachtPDFProps {
   heroSrc: string;
   /** Up to 4 gallery photos, same JPEG data-URL treatment. */
   gallerySrcs: string[];
+  /** The layout drawings (yachtLayout.ts), same treatment: a third page of
+   *  their own, never in the photo grid. Empty or absent: two pages as before. */
+  layoutSrcs?: string[];
   /** QR png data-URL pointing at the clean (dateless) boat page URL. */
   qrDataUrl: string;
   /** window.location.origin — react-pdf needs absolute asset URLs. */
@@ -93,6 +96,10 @@ const COUNTRY_NAMES: Record<string, string> = {
   VG: 'British Virgin Islands',
 };
 
+/** Height (pt) the layout page gives its drawings, between the title and the footer line. */
+const LAYOUT_AREA_HEIGHT = 640;
+const LAYOUT_GAP = 12;
+
 const VESSEL_LABEL: Record<string, string> = {
   CATAMARAN: 'Catamaran',
   POWER_CATAMARAN: 'Power Catamaran',
@@ -107,6 +114,7 @@ const YachtPDF = ({
   pageUrl,
   heroSrc,
   gallerySrcs,
+  layoutSrcs = [],
   qrDataUrl,
   baseUrl,
   generatedDate,
@@ -195,6 +203,9 @@ const YachtPDF = ({
 
   // Our label for each linked catalogue item, not the partner's free text.
   const amenities = presentAmenityLabels(yacht.amenities, amenityLabels).slice(0, 9);
+  const pageCount = layoutSrcs.length > 0 ? 3 : 2;
+  // The drawings share the page's height under the title, each whole (contain).
+  const layoutHeight = (LAYOUT_AREA_HEIGHT - (layoutSrcs.length - 1) * LAYOUT_GAP) / Math.max(layoutSrcs.length, 1);
 
   const renderPriceCard = () => {
     if (offer) {
@@ -299,7 +310,7 @@ const YachtPDF = ({
 
         <View style={styles.footerLine}>
           <Text>Boat4You — Yacht charter & boat rental</Text>
-          <Text>Page 1 / 2</Text>
+          <Text>Page 1 / {pageCount}</Text>
         </View>
       </Page>
 
@@ -369,6 +380,26 @@ const YachtPDF = ({
           </View>
         </View>
       </Page>
+
+      {/* PAGE 3 — the layout drawings on their own (only when the boat has one) */}
+      {layoutSrcs.length > 0 && (
+        <Page size="A4" style={styles.page}>
+          <View style={styles.topBar}>
+            <Image src={`${baseUrl}/images/pdf-logo.png`} style={styles.logo} />
+            <Text style={styles.topSite}>WWW.BOAT4YOU.COM</Text>
+          </View>
+          <View style={styles.layoutBody}>
+            <Text style={styles.sectionTitle}>LAYOUT</Text>
+            {layoutSrcs.map(src => (
+              <Image key={src.slice(-24)} src={src} style={[styles.layoutImage, { height: layoutHeight }]} />
+            ))}
+          </View>
+          <View style={styles.footerLine}>
+            <Text>Boat4You — Yacht charter & boat rental</Text>
+            <Text>Page 3 / 3</Text>
+          </View>
+        </Page>
+      )}
     </Document>
   );
 };

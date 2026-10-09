@@ -6,7 +6,7 @@ import QRCode from 'qrcode';
 
 import YachtPDF from '@/components/YachtPDF/YachtPDF';
 import { YachtOfferModel } from '@/models/yacht-offer.model';
-import { YachtModel } from '@/models/yacht.model';
+import { YachtImage, YachtModel } from '@/models/yacht.model';
 import { toTitleCase } from '@/utils/static/toTitleCase';
 import { createFmt } from '@/utils/static/yachtCapacity';
 
@@ -14,6 +14,8 @@ interface UseYachtPdfDownloadProps {
   yacht: YachtModel;
   /** Currently selected offer (dated view); null renders the season card. */
   selectedOffer: YachtOfferModel | null;
+  /** The layout drawings, apart from `yacht.yachtImages` (yachtLayout.ts): a page of their own. */
+  layoutImages?: YachtImage[];
 }
 
 interface UseYachtPdfDownloadPayload {
@@ -67,6 +69,9 @@ const MONTHS = [
   'December',
 ];
 
+/** Layout drawings on the PDF's layout page (a boat has one, at most three). */
+const MAX_PDF_LAYOUTS = 3;
+
 /**
  * Browser-side yacht presentation PDF (mirrors useInvoiceDownload): the
  * document is rendered with @react-pdf in the client and downloaded as a
@@ -74,7 +79,11 @@ const MONTHS = [
  * targets the clean boat URL; the in-document links carry the selected
  * dates so a desktop reader lands on the exact priced week.
  */
-const useYachtPdfDownload = ({ yacht, selectedOffer }: UseYachtPdfDownloadProps): UseYachtPdfDownloadPayload => {
+const useYachtPdfDownload = ({
+  yacht,
+  selectedOffer,
+  layoutImages,
+}: UseYachtPdfDownloadProps): UseYachtPdfDownloadPayload => {
   const [isDownloading, setIsDownloading] = React.useState(false);
   const locale = useLocale();
 
@@ -101,6 +110,13 @@ const useYachtPdfDownload = ({ yacht, selectedOffer }: UseYachtPdfDownloadProps)
         toJpegDataUrl(`/pdf-image/${mainImageId}?width=1200`),
         ...galleryIds.map(id => toJpegDataUrl(`/pdf-image/${id}?width=800`)),
       ]);
+      // The layout page is an extra: a drawing that fails to load is left
+      // out instead of failing the whole brochure.
+      const layoutSrcs = (
+        await Promise.allSettled(
+          (layoutImages ?? []).slice(0, MAX_PDF_LAYOUTS).map(({ id }) => toJpegDataUrl(`/pdf-image/${id}?width=1200`))
+        )
+      ).flatMap(result => (result.status === 'fulfilled' ? [result.value] : []));
 
       const now = new Date();
       const generatedDate = `${now.getDate()} ${MONTHS[now.getMonth()]} ${now.getFullYear()}`;
@@ -116,6 +132,7 @@ const useYachtPdfDownload = ({ yacht, selectedOffer }: UseYachtPdfDownloadProps)
           pageUrl={pageUrl}
           heroSrc={heroSrc}
           gallerySrcs={gallerySrcs}
+          layoutSrcs={layoutSrcs}
           qrDataUrl={qrDataUrl}
           baseUrl={baseUrl}
           generatedDate={generatedDate}

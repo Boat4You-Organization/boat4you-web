@@ -37,6 +37,7 @@ import {
 import { ManufacturerLookup, yachtBrandName } from '@/utils/static/yachtBrand';
 import { CapacityFacts, capacityFacts, fromYacht } from '@/utils/static/yachtCapacity';
 import { buildYachtFaq, buildYachtFaqSchema } from '@/utils/static/yachtFaq';
+import { splitLayoutImages, withLayoutImagesApart } from '@/utils/static/yachtLayout';
 import { cleanModelName } from '@/utils/static/yachtModelKey';
 import { successorBoatPath } from '@/utils/static/yachtSuccessor';
 import BoatContentSection from '@/views/Boat/BoatContentSection';
@@ -59,10 +60,11 @@ import RelatedBoats from '@/views/Boat/RelatedBoats';
  * shared link showed our logo instead of the boat, and Google's Product
  * rich result did the same (found 2.8.2026). Build the URL from the id
  * instead. 1200px matches the OG recommendation and is a width Bunny
- * already caches for the listing cards.
+ * already caches for the listing cards. A photo, not the layout drawing:
+ * the same main image as the page's hero (yachtLayout.ts).
  */
 const yachtShareImageUrl = (yacht: YachtModel): string | null => {
-  const images = yacht.yachtImages || [];
+  const images = splitLayoutImages(yacht.yachtImages).photos;
   const imageId = images.find(i => i.mainImage)?.id ?? images[0]?.id;
 
   if (!imageId) return null;
@@ -479,8 +481,10 @@ const BoatPage = async ({
   ]);
   const facts = capacityFacts(capacity);
   // What the client components get: the same yacht without the partner notes
-  // this page does not show (second line behind the backend sanitizer).
-  const clientYacht = withResolvedNotes(yacht, capacity);
+  // this page does not show (second line behind the backend sanitizer), and
+  // its photos without the layout drawings — those get a block of their own
+  // above Amenities and a page of their own in the PDF (yachtLayout.ts).
+  const { yacht: clientYacht, layoutImages } = withLayoutImagesApart(withResolvedNotes(yacht, capacity));
   // The boat's weekly prices (weeklyOffers.ts): the Product's AggregateOffer,
   // the FAQ's price answer and the "From … / week" line all read this one
   // summary. A boat booked by inquiry shows no price anywhere.
@@ -592,8 +596,8 @@ const BoatPage = async ({
         />
       )}
       <BoatTransitionProvider>
-        <BoatHeroSection yacht={clientYacht} />
-        <BoatContentSection yacht={clientYacht} yachtFaq={yachtFaq} capacity={capacity} />
+        <BoatHeroSection yacht={clientYacht} layoutImages={layoutImages} />
+        <BoatContentSection yacht={clientYacht} yachtFaq={yachtFaq} capacity={capacity} layoutImages={layoutImages} />
         <BoatHubLinks hubs={hubs} boatName={boatName} locale={locale} />
         <ModelPageLink
           manufacturerName={yacht.manufacturerName}

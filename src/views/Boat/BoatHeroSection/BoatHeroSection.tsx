@@ -21,7 +21,7 @@ import BoatLocationModal from '@/components/BoatLocationModal';
 import FavoriteButton from '@/components/FavoriteButton';
 import Gallery from '@/components/Gallery';
 import Share from '@/components/SvgIcons/Share';
-import { YachtModel } from '@/models/yacht.model';
+import { YachtImage, YachtModel } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
 import useToggleState from '@/utils/hooks/useToggleState';
 import useYachtPdfDownload from '@/utils/hooks/useYachtPdfDownload';
@@ -35,14 +35,20 @@ import BoatShareModal from './BoatShareModal';
 
 interface BoatHeroSectionProps {
   yacht: YachtModel;
+  /** The layout drawings, kept out of `yacht.yachtImages` (yachtLayout.ts) — for the PDF's layout page. */
+  layoutImages?: YachtImage[];
 }
 
-const BoatHeroSection = ({ yacht }: BoatHeroSectionProps) => {
+const BoatHeroSection = ({ yacht, layoutImages }: BoatHeroSectionProps) => {
   const [isOpen, toggeIsOpen] = useToggleState();
   const t = useTranslations('common');
   const locale = useLocale();
   const { selectedOffer } = useYachtStore();
-  const { downloadYachtPDF, isDownloading } = useYachtPdfDownload({ yacht, selectedOffer: selectedOffer ?? null });
+  const { downloadYachtPDF, isDownloading } = useYachtPdfDownload({
+    yacht,
+    selectedOffer: selectedOffer ?? null,
+    layoutImages,
+  });
 
   // One-way charters: the selected date's offer drops off at a different marina.
   // Show "pickup » drop-off" (each opens its own map) so it's clear the chosen

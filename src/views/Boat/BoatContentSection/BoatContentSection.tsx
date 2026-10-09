@@ -9,7 +9,7 @@ import BoatCalendar from '@/components/BoatCalendar';
 import CircularProgress from '@/components/CircularProgress';
 import { OFFSET } from '@/config/constants.config';
 import { singleBoatTabs, singleCustomBoatTabs } from '@/config/tabs.config';
-import { YachtModel } from '@/models/yacht.model';
+import { YachtImage, YachtModel } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
 import useScrollSpy from '@/utils/hooks/useScrollSpy';
 import { cancelPendingPriceCalculation, useYachtPriceCalculation } from '@/utils/hooks/useYachtPriceCalculation';
@@ -18,6 +18,7 @@ import { clearDataFromLocalStorage } from '@/utils/static/localStorageUtils';
 import { clearDataFromSessionStorage } from '@/utils/static/sessionStorageUtils';
 import type { Capacity } from '@/utils/static/yachtCapacity';
 import { YachtFaqEntry } from '@/utils/static/yachtFaq';
+import { yachtPhotoName } from '@/utils/static/yachtPhotoName';
 import {
   setCalculatedPrice,
   setCalculatingPrice,
@@ -37,6 +38,7 @@ import DetailsTab from './DetailsTab';
 import ExtrasTab from './ExtrasTab';
 import FAQTab from './FAQTab';
 import GoodToKnowTab from './GoodToKnowTab';
+import LayoutSection from './LayoutSection';
 import PriceDetailsTab from './PriceDetailsTab';
 import VideoTab from './VideoTab';
 
@@ -45,9 +47,11 @@ interface BoatContentSectionProps {
   yacht: YachtModel;
   /** Capacity resolved on the server for the page locale (yachtCapacity.ts). */
   capacity?: Capacity;
+  /** The boat's layout drawings, not in `yacht.yachtImages` (yachtLayout.ts): a block of their own above Amenities. */
+  layoutImages?: YachtImage[];
 }
 
-const BoatContentSection = ({ yacht, yachtFaq, capacity }: BoatContentSectionProps) => {
+const BoatContentSection = ({ yacht, yachtFaq, capacity, layoutImages = [] }: BoatContentSectionProps) => {
   const { selectedOffer, boatInquiryModalOpen } = useYachtStore();
   const { calculatePrice } = useYachtPriceCalculation();
   const boatTransition = useContext(BoatTransitionContext);
@@ -206,6 +210,13 @@ const BoatContentSection = ({ yacht, yachtFaq, capacity }: BoatContentSectionPro
             <Box pt={6} pb={8} className={styles.contentWrapper}>
               {currentTabs.map((tabName, index) => (
                 <React.Fragment key={tabName}>
+                  {/* The layout on its own, right above Amenities (not a tab). */}
+                  {tabName === 'ammenities' && layoutImages.length > 0 && (
+                    <>
+                      <LayoutSection images={layoutImages} photoName={yachtPhotoName(yacht) || yacht.model} />
+                      <Divider className={styles.divier} />
+                    </>
+                  )}
                   <Stack
                     id={`section-${index}`}
                     ref={setSectionRef(index)}

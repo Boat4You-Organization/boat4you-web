@@ -33,6 +33,8 @@ interface LightboxProps {
   showShareAndFavorite?: boolean;
   /** The boat as the photos' alt text names it ("Lagoon 42 Masterpiece", yachtPhotoName.ts). */
   photoName: string;
+  /** Alt text of image `index` when the images are not photos (the boat's layout, LayoutSection). */
+  imageAlt?: (index: number) => string;
 }
 
 const Lightbox = ({
@@ -43,6 +45,7 @@ const Lightbox = ({
   selectedImage,
   showShareAndFavorite = true,
   photoName,
+  imageAlt,
 }: LightboxProps) => {
   const [isShareModalOpen, toggleShareModal] = useToggleState();
   const [isBeginning, setIsBeginning] = useState(false);
@@ -52,7 +55,7 @@ const Lightbox = ({
   // The same alt text as the gallery tiles: "Lagoon 42 Masterpiece — photo 3",
   // not "Gallery image 236378" / "Thumbnail 236378" (live check 8.10.2026, F4).
   const photoAlt = (index: number): string =>
-    t('photoAlt' as never, { label: photoName, n: String(index + 1) } as never);
+    imageAlt ? imageAlt(index) : t('photoAlt' as never, { label: photoName, n: String(index + 1) } as never);
 
   const yachtImages = useMemo(
     () =>
