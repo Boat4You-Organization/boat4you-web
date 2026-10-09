@@ -1,5 +1,22 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-10-09 — 📐 Tlocrt plovila u svom bloku iznad „Sadržaja", izbačen iz fotografija — ⏳ NIJE DEPLOYANO — čeka backend polje layout (grana `feat/boat-layout-block`, `e46f6baa5`)
+
+Izvor: Mario 9.10.2026 („moram pretraživat slike da nađem layout plovila … stavi poviše amenities da stoji samostalno samo layout tu i izbaci ga iz slika"). Samo web, bez env promjena. Kapacitet, oprema i njihove poruke nisu dirani.
+
+- Kad backend označi sliku kao tlocrt (očekuje se `yachtImages[].layout: true`; `isLayoutImage` prihvaća i `kind`/`type` = „LAYOUT", pa je drugo ime polja promjena u jednom retku, `src/utils/static/yachtLayout.ts`), stranica broda pokazuje tlocrt u zasebnom bloku **točno iznad „Sadržaja" (Amenities)**, desktop i mobitel: naslov po jeziku (Layout, Grundriss, Plan du bateau, Pianta della barca, Plano del barco, Planta do barco, Indeling, Układ jachtu, Tlocrt plovila), cijela slika (contain, svijetla pozadina, kutija 4:3 → bez pomicanja layouta), isti CDN URL i `next/image` kao galerija; klik/tap otvara ga preko cijelog zaslona u lightboxu galerije; alt „<brod> — <naslov>". Više tlocrta (npr. varijanta s kat-krevetima) stoji jedan do drugog i numerirano je.
+- Tlocrt više nije u galeriji, heroju, lightboxu, broju fotografija, kartici dijeljenja, favoritu, kartici upita/bookinga ni u og:image / Product slici. Ako je glavna slika tlocrt, glavna postaje prva fotografija; brod koji ima samo tlocrte zadržava ih u heroju (inače bi bio prazan), a blok ih također prikazuje.
+- PDF brošura: tlocrt na vlastitoj (3.) stranici, nikad u mreži fotografija; bez tlocrta PDF ostaje 2 stranice. Tlocrt koji se ne učita ne ruši PDF.
+- Bez oznake ni na jednoj slici (današnji API) stranica je ista kao danas: `withLayoutImagesApart` vraća isti objekt broda.
+
+**Provjere (lokalno 9.10.):** `yarn test:layout` 19 (novo, `scripts/yachtLayout.test.mjs`), ostali `yarn test:*` prolaze, `npx tsc --noEmit` 0, `yarn lint` 0 grešaka (17 starih upozorenja). `next dev` :3994, 2 stranice: (1) kroz lokalni read-only stub ispred prod API-ja (≤ 1 req/s, ubacuje `layout: true` na sliku 218650 broda 12663): blok „Layout" s `…/public/image/218650?width=1200` odmah ispred H2 „Amenities", `yachtImages` u RSC 33 (bez 218650) umjesto 34, og:image 218647; (2) izravno na prod API: nema bloka, 34 slike, og:image 218647 — kao danas.
+
+**Prije deploya:** backend mora slati oznaku. Ako polje dobije drugo ime, promijeniti samo `isLayoutImage`. Deploy uobičajeni ručni b4y (tar `.next` + `next.config.js` / `messages` / `public`).
+
+**Nakon deploya (kad backend šalje oznaku):** `curl -s https://www.boat4you.com/boat/lagoon-55-the-moon-first-class-12663 | grep -c 'boat-layout-title'` → ≥ 1; `/hr/…` naslov „Tlocrt plovila".
+
+**Nije pokriveno (zasebno):** kartice pretrage / sličnih brodova (`mainImageId` iz listing API-ja; problem samo ako je glavna slika tlocrt), galerija u „Mojim rezervacijama" i stranice plaćanja (slike dolaze iz API-ja rezervacije, ne sa stranice broda), sestrinski sajtovi. Novi booking sa stranice broda već nosi samo fotografije.
+
 ## 2026-10-09 — 🔤 Imena brodova iza apostrofa i točke (5. krug) — ✅ DEPLOYANO 9.10.2026 ~09:35–10:10 UTC (main `0c157b85e`)
 
 Izvor: `_seo-audit-2026-10-08/live-verify-round4/` (F1, regresija 4. kruga na `/fleet`, starija na naslovu i H1 stranice broda). Samo prikaz imena (`src/utils/static/toTitleCase.ts`); slugovi, linkovi, kapacitet, oprema i tekstovi brokera nisu dirani. Samo web, bez env promjena.
