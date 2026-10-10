@@ -293,3 +293,42 @@
     cursor: default;
   }
 }
+
+// Recording notice under the header (owner 10.10.2026): always visible, quiet.
+.notice {
+  margin: 0;
+  padding: rem-calc(6 14);
+  font-size: 11.5px;
+  line-height: 1.4;
+  color: #6b7280;
+  background: #f7f8fc;
+  border-bottom: 1px solid #e4e8f8;
+}
+
+// The session was locked by the security guard: replaces the input row.
+.lockedNotice {
+  margin: 0;
+  padding: rem-calc(12 14);
+  font-size: 13px;
+  line-height: 1.5;
+  color: #3c4257;
+  background: #fff7e6;
+  border-top: 1px solid #f3dfb0;
+}
+
+// 429 hint above the input row.
+.rowNotice {
+  margin: 0;
+  padding: rem-calc(6 14 0);
+  font-size: 12px;
+  line-height: 1.4;
+  color: #b45309;
+}
+
+// Name rejected by the server (400 invalid_name).
+.nameError {
+  margin: rem-calc(6 0 0);
+  font-size: 12.5px;
+  line-height: 1.4;
+  color: #b42318;
+}

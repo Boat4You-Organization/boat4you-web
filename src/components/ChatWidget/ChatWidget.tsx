@@ -58,6 +58,10 @@ const ChatWidget = () => {
   const [input, setInput] = useState('');
   const [sending, setSending] = useState(false);
   const [needsName, setNeedsName] = useState(false);
+  // Server-side name validation (11.10.2026): 400 invalid_name → inline hint.
+  const [nameError, setNameError] = useState(false);
+  // 429 from the message cap / nginx rate limit: the text is handed back.
+  const [rateLimited, setRateLimited] = useState(false);
   const [nameInput, setNameInput] = useState('');
   const listRef = useRef<HTMLDivElement>(null);
   const lastIdRef = useRef(0);
@@ -120,7 +124,11 @@ const ChatWidget = () => {
         return;
       }
 
-      if (!res.ok) return;
+      if (!res.ok) {
+        if (res.status === 400) setNameError(true);
+
+        return;
+      }
 
       const data = await res.json();
 
@@ -187,7 +195,11 @@ const ChatWidget = () => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name }),
       })
-        .then(() => setNeedsName(false))
+        .then(res => {
+          if (res.ok) setNeedsName(false);
+          else if (res.status === 400) setNameError(true);
+          else setNeedsName(false);
+        })
         .catch(() => setNeedsName(false));
 
       return;
@@ -272,6 +284,19 @@ const ChatWidget = () => {
         setStatus(data.status);
         setMessages(prev => prev.filter(m => m.id > 0));
         appendMessages(data.messages);
+      } else {
+        // Refused: drop the optimistic bubble so the transcript matches the
+        // server. 423 = the security guard locked the session and handed it to
+        // a live agent (11.10.2026) — the input goes away; 429 = message cap or
+        // nginx rate limit — hand the text back so nothing typed is lost.
+        setMessages(prev => prev.filter(m => m.id > 0));
+
+        if (res.status === 423) {
+          setStatus('LOCKED');
+        } else if (res.status === 429) {
+          setInput(content);
+          setRateLimited(true);
+        }
       }
     } catch {
       /* the polling loop will reconcile */
@@ -281,6 +306,10 @@ const ChatWidget = () => {
   };
 
   if (disabled) return null;
+
+  // LOCKED: the backend guard stopped the AI (prompt-injection / markup probe)
+  // and a live agent takes over — no more visitor input in this session.
+  const locked = status === 'LOCKED';
 
   const cardsOf = (m: ChatMessage): YachtCard[] => {
     if (!m.payload) return [];
@@ -315,6 +344,8 @@ const ChatWidget = () => {
               ×
             </button>
           </div>
+          {/* Owner 10.10.2026: every visitor sees that conversations are recorded. */}
+          <p className={styles.notice}>{t('recordingNotice')}</p>
           {needsName ? (
             <div className={styles.welcome}>
               <p className={styles.welcomeTitle}>{t('welcomeTitle')}</p>
@@ -328,11 +359,19 @@ const ChatWidget = () => {
               <input
                 className={styles.welcomeInput}
                 value={nameInput}
-                onChange={e => setNameInput(e.target.value)}
+                onChange={e => {
+                  setNameInput(e.target.value);
+                  setNameError(false);
+                }}
                 onKeyDown={e => e.key === 'Enter' && submitName()}
                 placeholder={t('namePlaceholder')}
-                maxLength={120}
+                maxLength={40}
               />
+              {nameError && (
+                <p className={styles.nameError} role="alert">
+                  {t('nameInvalid')}
+                </p>
+              )}
               <button type="button" className={styles.welcomeStart} onClick={submitName} disabled={!nameInput.trim()}>
                 {t('nameStart')}
               </button>
@@ -386,18 +425,34 @@ const ChatWidget = () => {
                 ))}
                 {sending && <div className={styles.typing}>{t('typing')}</div>}
               </div>
-              <div className={styles.inputRow}>
-                <input
-                  value={input}
-                  onChange={e => setInput(e.target.value)}
-                  onKeyDown={e => e.key === 'Enter' && send()}
-                  placeholder={t('placeholder')}
-                  maxLength={1000}
-                />
-                <button type="button" onClick={send} disabled={sending || !input.trim()}>
-                  {t('send')}
-                </button>
-              </div>
+              {locked ? (
+                <p className={styles.lockedNotice} role="status">
+                  {t('lockedNotice')}
+                </p>
+              ) : (
+                <>
+                  {rateLimited && (
+                    <p className={styles.rowNotice} role="status">
+                      {t('rateLimited')}
+                    </p>
+                  )}
+                  <div className={styles.inputRow}>
+                    <input
+                      value={input}
+                      onChange={e => {
+                        setInput(e.target.value);
+                        setRateLimited(false);
+                      }}
+                      onKeyDown={e => e.key === 'Enter' && send()}
+                      placeholder={t('placeholder')}
+                      maxLength={1000}
+                    />
+                    <button type="button" onClick={send} disabled={sending || !input.trim()}>
+                      {t('send')}
+                    </button>
+                  </div>
+                </>
+              )}
             </>
           )}
         </div>

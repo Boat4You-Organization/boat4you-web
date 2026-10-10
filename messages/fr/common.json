@@ -628,7 +628,11 @@
     "nameStart": "Démarrer le chat",
     "welcomeTitle": "Bienvenue sur le chat boat4you !",
     "welcomeText": "Notre équipe répond directement à vos messages, avec IRIS, notre assistante IA pour les questions de flotte, d'itinéraires et de prix. Les conversations peuvent être relues pour améliorer le service — n'indiquez que les informations nécessaires à votre demande.",
-    "privacyLink": "Politique de confidentialité"
+    "privacyLink": "Politique de confidentialité",
+    "recordingNotice": "Toutes les conversations sont enregistrées à des fins d'analyse et d'amélioration du service.",
+    "lockedNotice": "Cette conversation est transmise à un conseiller, qui vous répondra sous peu.",
+    "nameInvalid": "Veuillez saisir votre prénom (lettres uniquement, 2 à 40 caractères).",
+    "rateLimited": "Trop de messages à la fois. Patientez un instant puis réessayez."
   },
   "voucherHaveOne": "Vous avez un bon ?",
   "voucherCodePlaceholder": "Saisissez le code du bon",

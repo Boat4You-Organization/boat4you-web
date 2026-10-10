@@ -628,7 +628,11 @@
     "nameStart": "Chat starten",
     "welcomeTitle": "Welkom bij de boat4you chat!",
     "welcomeText": "Ons team beantwoordt je berichten rechtstreeks, samen met IRIS, onze AI-assistent voor vragen over vloot, routes en prijzen. Gesprekken kunnen worden teruggelezen om de service te verbeteren — deel alleen de gegevens die nodig zijn voor je vraag.",
-    "privacyLink": "Privacybeleid"
+    "privacyLink": "Privacybeleid",
+    "recordingNotice": "Alle gesprekken worden opgeslagen voor analyse en verbetering van onze service.",
+    "lockedNotice": "Dit gesprek wordt overgedragen aan een medewerker, die spoedig contact met u opneemt.",
+    "nameInvalid": "Vul uw voornaam in (alleen letters, 2–40 tekens).",
+    "rateLimited": "Te veel berichten tegelijk. Wacht even en probeer het opnieuw."
   },
   "voucherHaveOne": "Heb je een voucher?",
   "voucherCodePlaceholder": "Voer vouchercode in",

@@ -628,7 +628,11 @@
     "nameStart": "Rozpocznij czat",
     "welcomeTitle": "Witamy na czacie boat4you!",
     "welcomeText": "Na wiadomości odpowiada bezpośrednio nasz zespół wraz z IRIS — naszą asystentką AI od pytań o flotę, trasy i ceny. Rozmowy mogą być przeglądane w celu poprawy jakości obsługi — podawaj tylko dane potrzebne do zapytania.",
-    "privacyLink": "Polityka prywatności"
+    "privacyLink": "Polityka prywatności",
+    "recordingNotice": "Wszystkie rozmowy są zapisywane w celu analizy i doskonalenia usług.",
+    "lockedNotice": "Ta rozmowa zostaje przekazana konsultantowi, który wkrótce się z Tobą skontaktuje.",
+    "nameInvalid": "Podaj swoje imię (tylko litery, 2–40 znaków).",
+    "rateLimited": "Zbyt wiele wiadomości naraz. Odczekaj chwilę i spróbuj ponownie."
   },
   "voucherHaveOne": "Masz bon?",
   "voucherCodePlaceholder": "Wpisz kod bonu",

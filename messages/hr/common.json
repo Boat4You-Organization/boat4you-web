@@ -628,7 +628,11 @@
     "nameStart": "Započni chat",
     "welcomeTitle": "Dobro došli u boat4you chat!",
     "welcomeText": "Na vaše poruke odgovara naš tim, uz IRIS — našeg AI asistenta za pitanja o flotama, rutama i cijenama. Razgovore naš tim može pregledati radi poboljšanja usluge — navedite samo podatke potrebne za vaš upit.",
-    "privacyLink": "Pravila privatnosti"
+    "privacyLink": "Pravila privatnosti",
+    "recordingNotice": "Svi razgovori se pohranjuju radi analize i poboljšanja usluge.",
+    "lockedNotice": "Ovaj razgovor preuzima naš agent uživo i javit će vam se u najkraćem roku.",
+    "nameInvalid": "Unesite svoje ime (samo slova, 2–40 znakova).",
+    "rateLimited": "Previše poruka odjednom. Pričekajte trenutak i pokušajte ponovno."
   },
   "voucherHaveOne": "Imate vaučer?",
   "voucherCodePlaceholder": "Unesite kod vaučera",

@@ -628,7 +628,11 @@
     "nameStart": "Start chat",
     "welcomeTitle": "Welcome to boat4you chat!",
     "welcomeText": "Our team answers your messages directly, together with IRIS, our AI assistant for fleet, route and price questions. Conversations may be reviewed by our team to improve the experience — share only the details needed for your enquiry.",
-    "privacyLink": "Privacy Policy"
+    "privacyLink": "Privacy Policy",
+    "recordingNotice": "All conversations are recorded for analysis and service improvement.",
+    "lockedNotice": "This conversation is being handed over to a live agent, who will get back to you shortly.",
+    "nameInvalid": "Please enter your first name (letters only, 2–40 characters).",
+    "rateLimited": "Too many messages at once — please wait a moment and try again."
   },
   "voucherHaveOne": "Have a voucher?",
   "voucherCodePlaceholder": "Enter voucher code",
