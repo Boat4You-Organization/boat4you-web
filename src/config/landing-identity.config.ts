@@ -65,13 +65,21 @@ export const LANDING_IDENTITIES: LandingIdentity[] = [
     aliases: ['Marina Lav', 'Marina Lav | Podstrana', 'Marina Lav, Podstrana'],
   },
   {
-    // l-150 (NauSYS "Lavrion, main port") and l-1069 (MMK "Lavrion Main Port |
-    // Lavrion"), 209 m apart; one name since V9_78.
+    // l-150 (NauSYS "Lavrion, main port"), l-1069 (MMK "Lavrion Main Port |
+    // Lavrion") and l-2022 (MMK "Lavrion Marina | Lavrion"): one port, one
+    // name since V9_78 / V9_79 (owner 13.10.2026).
     name: 'Lavrion Main Port',
-    dids: ['l-150', 'l-1069'],
+    dids: ['l-150', 'l-1069', 'l-2022'],
     kind: LocationType.MARINA,
     countryCode: 'GR',
-    aliases: ['Lavrion, main port', 'Lavrion Main Port | Lavrion', 'Lavrion Main Port, Lavrion'],
+    aliases: [
+      'Lavrion, main port',
+      'Lavrion Main Port | Lavrion',
+      'Lavrion Main Port, Lavrion',
+      'Lavrion Marina',
+      'Lavrion Marina | Lavrion',
+      'Lavrion Marina, Lavrion',
+    ],
   },
   {
     // l-134 (NauSYS "Preveza, Main Port") and l-835 (MMK "Preveza Main Port |
@@ -117,6 +125,74 @@ export const LANDING_IDENTITIES: LandingIdentity[] = [
     kind: LocationType.MARINA,
     countryCode: 'TR',
     aliases: ['Göcek/Skopea Marina', 'Skopea Marina | Göcek', 'Skopea Marina, Göcek'],
+  },
+  {
+    // l-27 (NauSYS "Marina Zadar (ex. Tankerkomerc)") and l-1941 (MMK "Marina
+    // Zadar | Zadar"), 21 m apart; one name since V9_79. Owner 13.10.2026: the
+    // landing moves to "marina zadar", the old spelling 308s.
+    name: 'Marina Zadar',
+    dids: ['l-27', 'l-1941'],
+    kind: LocationType.MARINA,
+    countryCode: 'HR',
+    aliases: ['Marina Zadar (ex. Tankerkomerc)', 'Marina Zadar | Zadar', 'Marina Zadar, Zadar'],
+  },
+  {
+    // l-135 (NauSYS "Palairos") and l-828 (MMK "Marina Paleros | Palairos"),
+    // 25 m apart; one name since V9_79. Owner 13.10.2026: "palairos" 308s.
+    name: 'Marina Paleros',
+    dids: ['l-135', 'l-828'],
+    kind: LocationType.MARINA,
+    countryCode: 'GR',
+    aliases: ['Palairos', 'Marina Paleros | Palairos', 'Marina Paleros, Palairos'],
+  },
+  {
+    // l-411 (NauSYS) and l-1550 (MMK, named after a charter agency until
+    // V9_79 - an agency name is never public), 27 m apart. Owner 13.10.2026:
+    // the old URL 308s. Server-only alias; never rendered.
+    name: 'Marina di Golfo Aranci',
+    dids: ['l-411', 'l-1550'],
+    kind: LocationType.MARINA,
+    countryCode: 'IT',
+    aliases: [
+      'Mare Fun Charter & Marina',
+      'Marina di Golfo Aranci | Golfo Aranci',
+      'Marina di Golfo Aranci, Golfo Aranci',
+    ],
+  },
+  {
+    // l-710 (MMK "Olympic Marina | Lavrion") and l-139 (NauSYS "Lavrion -
+    // Olympic Marine", coordinates were the town port): one marina (owner
+    // 13.10.2026: "sigurno da, spoji"). The catalogue name is the marina's own
+    // "Olympic Marine" since V9_79; the landing keeps its indexed URL.
+    name: 'Olympic Marina',
+    dids: ['l-139', 'l-710'],
+    kind: LocationType.MARINA,
+    countryCode: 'GR',
+    aliases: [
+      'Olympic Marine',
+      'Lavrion - Olympic Marine',
+      'Olympic Marine | Lavrion',
+      'Olympic Marine, Lavrion',
+      'Olympic Marina | Lavrion',
+      'Olympic Marina, Lavrion',
+    ],
+  },
+  {
+    // l-222 (NauSYS "Olbia") is Marina di Olbia = l-609 (MMK), owner
+    // 13.10.2026 "JE, SPOJI"; l-225 (NauSYS "Marina di Olbia Yachting
+    // Services", no active boats) is already one row with l-609 in the list.
+    // Catalogue name "Marina di Olbia" since V9_79; the landing keeps its
+    // indexed URL. Molo Brin (l-1208) stays apart.
+    name: 'Olbia',
+    dids: ['l-222', 'l-609', 'l-225'],
+    kind: LocationType.MARINA,
+    countryCode: 'IT',
+    aliases: [
+      'Marina di Olbia',
+      'Marina di Olbia Yachting Services',
+      'Marina di Olbia | Olbia',
+      'Marina di Olbia, Olbia',
+    ],
   },
   {
     // r-3: NauSYS "Zadar", MMK "Zadar region". 25.9 sitemap and today's name.

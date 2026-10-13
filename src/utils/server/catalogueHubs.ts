@@ -153,7 +153,11 @@ export const regionHubAbove = async (
 ): Promise<Hub | null> => {
   if (place.kind !== LocationType.MARINA || !place.countryCode) return null;
 
-  const names = await regionsForMarina(place.countryCode, place.dids[0]);
+  // The regions of every row of the place, not just the first: the partners
+  // file one marina under different regions (13.10.2026, see landingNav.ts
+  // liesInside).
+  const { countryCode } = place;
+  const names = [...new Set((await Promise.all(place.dids.map(did => regionsForMarina(countryCode, did)))).flat())];
   const hubs = (await Promise.all(names.map(name => hubForName(index, name, null, locale)))).filter(
     (h): h is Hub => !!h?.href && h.kind !== LocationType.COUNTRY && h.name !== place.name
   );

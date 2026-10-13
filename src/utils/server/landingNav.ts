@@ -215,8 +215,12 @@ const liesInside = async (
     return (await fleetCountForDid(entry.dids.join(','), null, parent.countryCode)) > 0;
   }
 
+  // A place listing both partners' rows lies inside each region either row
+  // is filed under: the partners file one marina under different regions
+  // (Olbia: NauSYS "Sardinia", MMK "Sardinia / Corsica"), so requiring all
+  // rows dropped every merged place from its regions' blocks (13.10.2026).
   if (parent.kind === LocationType.REGION) {
-    return entry.kind === LocationType.MARINA && entry.dids.every(d => regionMarinas.has(d));
+    return entry.kind === LocationType.MARINA && entry.dids.some(d => regionMarinas.has(d));
   }
 
   return false;
@@ -256,14 +260,16 @@ const popularFor = async (
   const top = entries.sort((a, b) => b.fleet - a.fleet || a.name.localeCompare(b.name)).slice(0, POPULAR_LIMIT);
 
   const links = await Promise.all(
-    top.map(async (entry): Promise<PopularDestination> => ({
-      name: await placeLabel(locale, entry.name),
-      href: buildSearchLandingPath(entry.name, entry.boatType),
-      templateIdx: stableTemplateIdx(entry.name),
-      // A type landing is linked by its own H1 ("Catamaran charter in the
-      // Split Region" — landingCopy.ts), not by a yacht-charter phrase.
-      ...(entry.boatType ? { label: await landingHeading(locale, entry.name, entry.boatType) } : {}),
-    }))
+    top.map(
+      async (entry): Promise<PopularDestination> => ({
+        name: await placeLabel(locale, entry.name),
+        href: buildSearchLandingPath(entry.name, entry.boatType),
+        templateIdx: stableTemplateIdx(entry.name),
+        // A type landing is linked by its own H1 ("Catamaran charter in the
+        // Split Region" — landingCopy.ts), not by a yacht-charter phrase.
+        ...(entry.boatType ? { label: await landingHeading(locale, entry.name, entry.boatType) } : {}),
+      })
+    )
   );
 
   return { where: (await placeText(locale, area.name)).where, links };

@@ -151,6 +151,7 @@ const DESTINATION_ALIAS_SOURCE: Record<string, string | string[]> = {
   'platania marina': 'volos-platania',
   'lavrion main port': 'lavrion',
   'preveza main port': 'preveza',
+  'marina di golfo aranci': 'golfo-aranci',
 };
 
 const DESTINATION_ALIAS = new Map<string, string[]>(
