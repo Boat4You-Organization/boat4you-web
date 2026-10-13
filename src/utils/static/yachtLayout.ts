@@ -78,14 +78,20 @@ export const withoutMainImage = <T extends Pick<YachtImage, 'mainImage'>>(images
 /**
  * The yacht the boat page's client components get (gallery, hero, lightbox,
  * share, favourite, inquiry, booking, PDF): its photos only, and the layouts
- * beside it. Without a layout the yacht is returned as it came.
+ * beside it. Without a layout, or with nothing but layouts, the yacht is
+ * returned as it came and no layout block is shown.
  */
 export const withLayoutImagesApart = <Y extends { yachtImages: YachtImage[] }>(
   yacht: Y
 ): { yacht: Y; layoutImages: YachtImage[] } => {
   const { photos, layouts } = splitLayoutImages(yacht.yachtImages);
 
-  if (layouts.length === 0 || photos === yacht.yachtImages) return { yacht, layoutImages: layouts };
+  if (layouts.length === 0) return { yacht, layoutImages: layouts };
+
+  // Only layouts, no photo: the gallery already shows the drawing (the split
+  // keeps it there rather than showing nothing), so the block above Amenities
+  // would repeat the one image the boat has (owner 13.10.2026) — no block.
+  if (photos === yacht.yachtImages) return { yacht, layoutImages: [] };
 
   return { yacht: { ...yacht, yachtImages: photos }, layoutImages: layouts };
 };
