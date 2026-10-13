@@ -415,11 +415,7 @@ const BoatListingItemCardView = ({
           {/* Single content column — info on top, price + CTA pushed to bottom-right */}
           <CardContent className={cx(styles.content, { [styles.alignedContent]: alignRows })}>
             <Stack direction="row" alignItems="center" justifyContent="space-between">
-              <Typography
-                variant="h3"
-                fontWeight={700}
-                sx={isGridView ? { lineHeight: 1.3, minHeight: '2.6em' } : undefined}
-              >
+              <Typography variant="h3" fontWeight={700} sx={isGridView ? { lineHeight: 1.3 } : undefined}>
                 {yachtLabel(displayModelName, toTitleCase(name))}
               </Typography>
               {isAdmin && !isGridView && !isMobile && <Checkbox checked={isSelected} onClick={handleCheckboxClick} />}
@@ -438,7 +434,6 @@ const BoatListingItemCardView = ({
                 // (first child Box) to match the marina-name line-height and never
                 // shrink, so the flag stays aligned with the text.
                 sx={{
-                  ...(isGridView ? { minHeight: '3em' } : {}),
                   '& > div:first-of-type': {
                     width: { xs: 16, md: 28 },
                     height: { xs: 16, md: 28 },
@@ -583,35 +578,39 @@ const BoatListingItemCardView = ({
               ))}
             </Stack>
 
+            {/* Grid view (owner 13.10.2026, after the competitor's compact cards): no
+                highlights row, no availability badge, no button — the card is the link. */}
             {/* Highlights — up to 3 real amenities from the backend (empty when
-              the yacht has no equipment rows). */}
-            <Stack
-              direction="row"
-              alignItems="center"
-              gap={{ xs: 1, md: 1.5 }}
-              flexWrap={{ xs: 'nowrap', md: 'wrap' }}
-              mt={0.5}
-              mb={{ xs: 0.5, md: 0 }}
-              sx={{ overflow: 'hidden' }}
-            >
-              {realAmenities.map(({ label, Icon: AmenityIcon }) => (
-                <Stack
-                  key={label}
-                  direction={{ xs: 'row', md: 'column' }}
-                  alignItems="center"
-                  gap={{ xs: 0.5, md: 0.25 }}
-                  sx={{ minWidth: { xs: 'auto', md: 56 }, whiteSpace: 'nowrap' }}
-                >
-                  <AmenityIcon sx={{ fontSize: { xs: 14, md: 20 }, color: colors.black600 }} />
-                  <Typography
-                    color={colors.black600}
-                    sx={{ textAlign: 'center', lineHeight: 1.2, fontSize: { xs: 10, md: 11 } }}
+                the yacht has no equipment rows). */}
+            {!isGridView && (
+              <Stack
+                direction="row"
+                alignItems="center"
+                gap={{ xs: 1, md: 1.5 }}
+                flexWrap={{ xs: 'nowrap', md: 'wrap' }}
+                mt={0.5}
+                mb={{ xs: 0.5, md: 0 }}
+                sx={{ overflow: 'hidden' }}
+              >
+                {realAmenities.map(({ label, Icon: AmenityIcon }) => (
+                  <Stack
+                    key={label}
+                    direction={{ xs: 'row', md: 'column' }}
+                    alignItems="center"
+                    gap={{ xs: 0.5, md: 0.25 }}
+                    sx={{ minWidth: { xs: 'auto', md: 56 }, whiteSpace: 'nowrap' }}
                   >
-                    {label}
-                  </Typography>
-                </Stack>
-              ))}
-            </Stack>
+                    <AmenityIcon sx={{ fontSize: { xs: 14, md: 20 }, color: colors.black600 }} />
+                    <Typography
+                      color={colors.black600}
+                      sx={{ textAlign: 'center', lineHeight: 1.2, fontSize: { xs: 10, md: 11 } }}
+                    >
+                      {label}
+                    </Typography>
+                  </Stack>
+                ))}
+              </Stack>
+            )}
 
             {/* Price + Boat details — pushed to bottom-right corner */}
             <Box className={cx(styles.priceBlock, { [styles.gridView]: isGridView, [styles.mobileStacked]: isMobile })}>
@@ -703,83 +702,87 @@ const BoatListingItemCardView = ({
                   )}
                 </Stack>
               </Stack>
-              {/* Availability badge + Boat details button in one row. The row
+              {(!isGridView || (!custom && !isAvailable)) && (
+                <Stack
+                  direction="row"
+                  alignItems="center"
+                  gap={1}
+                  sx={{
+                    flexWrap: 'wrap',
+                    rowGap: 0.5,
+                    justifyContent: 'flex-end',
+                    maxWidth: '100%',
+                  }}
+                >
+                  {/* Availability badge + Boat details button in one row. The row
                 may wrap: both pieces are nowrap, so on narrow phones (≤ 375px,
                 or a larger system font) the unwrapped row was wider than the
                 content column and, right-aligned, slid left UNDER the photo
                 (Mario 30.9.2026, "Pod opcijom" / "Dostupno"). Wrapped, the
                 badge sits on its own line above the button, same alignment. */}
-              <Stack
-                direction="row"
-                alignItems="center"
-                gap={1}
-                sx={{
-                  flexWrap: 'wrap',
-                  rowGap: 0.5,
-                  justifyContent: isGridView ? 'flex-start' : 'flex-end',
-                  maxWidth: '100%',
-                }}
-              >
-                {custom ? (
-                  // Custom (admin-managed) yacht — no offer rows, only a
-                  // lowPrice placeholder. Inquiry-only flow, so swap the
-                  // green Available badge for a blue "On request" cue.
-                  <Box
-                    sx={{
-                      px: 1.25,
-                      py: 0.5,
-                      borderRadius: 1,
-                      backgroundColor: colors.blue50,
-                      color: colors.blue500,
-                      fontWeight: 700,
-                      fontSize: 12,
-                      whiteSpace: 'nowrap',
-                      border: `1px solid ${colors.blue500}`,
-                    }}
-                  >
-                    {t('common.onRequest')}
-                  </Box>
-                ) : isAvailable ? (
-                  <Box
-                    sx={{
-                      px: 1.25,
-                      py: 0.5,
-                      borderRadius: 1,
-                      backgroundColor: colors.green50,
-                      color: colors.green500,
-                      fontWeight: 700,
-                      fontSize: 12,
-                      whiteSpace: 'nowrap',
-                      border: `1px solid ${colors.green500}`,
-                    }}
-                  >
-                    {t('common.available')}
-                  </Box>
-                ) : (
-                  <Stack
-                    direction="row"
-                    alignItems="center"
-                    gap={0.5}
-                    sx={{
-                      px: 1,
-                      py: 0.5,
-                      borderRadius: 1,
-                      backgroundColor: colors.red50,
-                      color: colors.red500,
-                      border: `1px solid ${colors.red200}`,
-                      fontWeight: 600,
-                      fontSize: 12,
-                      whiteSpace: 'nowrap',
-                    }}
-                  >
-                    <AccessTime sx={{ fontSize: 13 }} />
-                    {t('common.preReserved')}
-                  </Stack>
-                )}
-                <Button size="medium" className={styles.button}>
-                  {t('common.boatDetails')}
-                </Button>
-              </Stack>
+                  {custom ? (
+                    // Custom (admin-managed) yacht — no offer rows, only a
+                    // lowPrice placeholder. Inquiry-only flow, so swap the
+                    // green Available badge for a blue "On request" cue.
+                    <Box
+                      sx={{
+                        px: 1.25,
+                        py: 0.5,
+                        borderRadius: 1,
+                        backgroundColor: colors.blue50,
+                        color: colors.blue500,
+                        fontWeight: 700,
+                        fontSize: 12,
+                        whiteSpace: 'nowrap',
+                        border: `1px solid ${colors.blue500}`,
+                      }}
+                    >
+                      {t('common.onRequest')}
+                    </Box>
+                  ) : isAvailable ? (
+                    <Box
+                      sx={{
+                        px: 1.25,
+                        py: 0.5,
+                        borderRadius: 1,
+                        backgroundColor: colors.green50,
+                        color: colors.green500,
+                        fontWeight: 700,
+                        fontSize: 12,
+                        whiteSpace: 'nowrap',
+                        border: `1px solid ${colors.green500}`,
+                      }}
+                    >
+                      {t('common.available')}
+                    </Box>
+                  ) : (
+                    <Stack
+                      direction="row"
+                      alignItems="center"
+                      gap={0.5}
+                      sx={{
+                        px: 1,
+                        py: 0.5,
+                        borderRadius: 1,
+                        backgroundColor: colors.red50,
+                        color: colors.red500,
+                        border: `1px solid ${colors.red200}`,
+                        fontWeight: 600,
+                        fontSize: 12,
+                        whiteSpace: 'nowrap',
+                      }}
+                    >
+                      <AccessTime sx={{ fontSize: 13 }} />
+                      {t('common.preReserved')}
+                    </Stack>
+                  )}
+                  {!isGridView && (
+                    <Button size="medium" className={styles.button}>
+                      {t('common.boatDetails')}
+                    </Button>
+                  )}
+                </Stack>
+              )}
               {isAdmin && (isGridView || isMobile) && <Checkbox checked={isSelected} onClick={handleCheckboxClick} />}
             </Box>
           </CardContent>

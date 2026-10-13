@@ -140,10 +140,12 @@
         align-items: flex-end;
         gap: rem-calc(8);
 
+        // Grid view is the compact card (owner 13.10.2026): price right-aligned,
+        // no button, tighter.
         &.gridView {
-          margin-top: rem-calc(16);
-          align-items: stretch;
-          gap: rem-calc(12);
+          margin-top: rem-calc(8);
+          align-items: flex-end;
+          gap: rem-calc(6);
         }
 
         // Mobile row card: price is bottom-right of the content column,
@@ -171,15 +173,15 @@
   }
 }
 
-// Grid view inside a CSS grid parent (BoatsSection .alignedGrid): the card is
-// a subgrid of six rows — photo, name, marina, specs, highlights, price — so
+// Grid view inside a CSS grid parent (BoatCardGrid / BoatsSection .alignedGrid):
+// the card is a subgrid of five rows — photo, name, marina, specs, price — so
 // every row lines up across the cards of a row whatever wraps (owner
 // 13.10.2026). Phones keep the flex card above (one column, nothing to align).
 .alignedItem {
   @include media('md') {
     display: grid;
     grid-template-rows: subgrid;
-    grid-row: span 6;
+    grid-row: span 5;
   }
 }
 

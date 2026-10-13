@@ -314,7 +314,7 @@ const BoatsSection = ({
   }, []);
 
   // Grid view: a CSS grid whose cards are row subgrids, so photo, name,
-  // marina, specs, highlights and price sit at the same height across a row
+  // marina, specs and price sit at the same height across a row
   // of cards (owner 13.10.2026); list view keeps the MUI grid.
   const cards = isGridView ? (
     <Box className={styles.alignedGrid}>

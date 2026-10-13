@@ -2,7 +2,7 @@
 @use '@/styles/mixins/breakpoints' as *;
 
 // One column on a phone, two on a tablet, three from md up; the cards span
-// six subgrid rows from md up (BoatListingItemCard .alignedItem).
+// five subgrid rows from md up (BoatListingItemCard .alignedItem).
 .grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
