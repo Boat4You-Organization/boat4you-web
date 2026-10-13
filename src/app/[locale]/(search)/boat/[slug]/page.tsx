@@ -18,7 +18,6 @@ import { Currency, UserModel } from '@/models/user.model';
 import { CHARTER_TYPE_LABEL_MAP, CharterType, YachtModel } from '@/models/yacht.model';
 import { boatHubs } from '@/utils/server/catalogueHubs';
 import { loadManufacturerLookup } from '@/utils/server/manufacturerLookup';
-import { loadSameModelPhotos } from '@/utils/server/sameModelPhotos';
 import { resolveYachtCapacity, withResolvedNotes } from '@/utils/server/yachtCapacity';
 import { BoatDescTranslate, buildBoatDescription } from '@/utils/static/boatMetaDescription';
 import { boatSeoName, buildBoatTitle, titleBoatName, titlePlace } from '@/utils/static/boatTitle';
@@ -38,7 +37,7 @@ import {
 import { ManufacturerLookup, yachtBrandName } from '@/utils/static/yachtBrand';
 import { CapacityFacts, capacityFacts, fromYacht } from '@/utils/static/yachtCapacity';
 import { buildYachtFaq, buildYachtFaqSchema } from '@/utils/static/yachtFaq';
-import { isLayoutImage, splitLayoutImages, withLayoutImagesApart } from '@/utils/static/yachtLayout';
+import { splitLayoutImages, withLayoutImagesApart } from '@/utils/static/yachtLayout';
 import { cleanModelName } from '@/utils/static/yachtModelKey';
 import { successorBoatPath } from '@/utils/static/yachtSuccessor';
 import BoatContentSection from '@/views/Boat/BoatContentSection';
@@ -48,7 +47,6 @@ import BoatMobileNavigation from '@/views/Boat/BoatMobileNavigation';
 import { BoatTransitionProvider } from '@/views/Boat/BoatTransitionProvider';
 import ModelPageLink from '@/views/Boat/ModelPageLink';
 import RelatedBoats from '@/views/Boat/RelatedBoats';
-import SameModelPhotos from '@/views/Boat/SameModelPhotos';
 
 /**
  * Absolute CDN URL of the yacht photo used for sharing + rich results, or
@@ -487,12 +485,6 @@ const BoatPage = async ({
   // its photos without the layout drawings — those get a block of their own
   // above Amenities and a page of their own in the PDF (yachtLayout.ts).
   const { yacht: clientYacht, layoutImages } = withLayoutImagesApart(withResolvedNotes(yacht, capacity));
-  // A boat without a single real photo (only a layout drawing, or nothing):
-  // another boat of the same model stands in under the hero, clearly labelled
-  // as another vessel (owner 13.10.2026, sameModelPhotos.ts).
-  const sameModel = (yacht.yachtImages ?? []).some(image => !isLayoutImage(image))
-    ? null
-    : await loadSameModelPhotos(yacht).catch(() => null);
   // The boat's weekly prices (weeklyOffers.ts): the Product's AggregateOffer,
   // the FAQ's price answer and the "From … / week" line all read this one
   // summary. A boat booked by inquiry shows no price anywhere.
@@ -605,7 +597,6 @@ const BoatPage = async ({
       )}
       <BoatTransitionProvider>
         <BoatHeroSection yacht={clientYacht} layoutImages={layoutImages} />
-        {sameModel && <SameModelPhotos data={sameModel} modelName={yacht.modelName || yacht.model} locale={locale} />}
         <BoatContentSection yacht={clientYacht} yachtFaq={yachtFaq} capacity={capacity} layoutImages={layoutImages} />
         <BoatHubLinks hubs={hubs} boatName={boatName} locale={locale} />
         <ModelPageLink
