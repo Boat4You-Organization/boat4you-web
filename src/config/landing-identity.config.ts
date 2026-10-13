@@ -54,6 +54,71 @@ export const LANDING_IDENTITIES: LandingIdentity[] = [
     aliases: ['Marina Kaštela', 'Marina Kaštela | Kaštel Gomilica', 'Marina Kaštela, Kaštel Gomilica'],
   },
   {
+    // l-72 (NauSYS "Marina Lav - Podstrana") and l-1423 (MMK "Marina Lav |
+    // Podstrana") are one marina, 70 m apart (owner 13.10.2026: "spoji sve
+    // duple marine"). The landings are indexed under the NauSYS name; the
+    // backend rename of l-72 to "Marina Lav" (V9_78) must not move that URL.
+    name: 'Marina Lav - Podstrana',
+    dids: ['l-72', 'l-1423'],
+    kind: LocationType.MARINA,
+    countryCode: 'HR',
+    aliases: ['Marina Lav', 'Marina Lav | Podstrana', 'Marina Lav, Podstrana'],
+  },
+  {
+    // l-150 (NauSYS "Lavrion, main port") and l-1069 (MMK "Lavrion Main Port |
+    // Lavrion"), 209 m apart; one name since V9_78.
+    name: 'Lavrion Main Port',
+    dids: ['l-150', 'l-1069'],
+    kind: LocationType.MARINA,
+    countryCode: 'GR',
+    aliases: ['Lavrion, main port', 'Lavrion Main Port | Lavrion', 'Lavrion Main Port, Lavrion'],
+  },
+  {
+    // l-134 (NauSYS "Preveza, Main Port") and l-835 (MMK "Preveza Main Port |
+    // Preveza"), 400 m apart; one name since V9_78.
+    name: 'Preveza Main Port',
+    dids: ['l-134', 'l-835'],
+    kind: LocationType.MARINA,
+    countryCode: 'GR',
+    aliases: ['Preveza, Main Port', 'Preveza Main Port | Preveza', 'Preveza Main Port, Preveza'],
+  },
+  {
+    // l-160 (NauSYS "Skiathos") and l-2017 (MMK "Skiathos | Skiathos"), 363 m
+    // apart; one place since V9_78.
+    name: 'Skiathos',
+    dids: ['l-160', 'l-2017'],
+    kind: LocationType.MARINA,
+    countryCode: 'GR',
+    aliases: ['Skiathos | Skiathos', 'Skiathos, Skiathos'],
+  },
+  {
+    // l-204 (NauSYS "Marmaris Adakoy Marina") and l-904 (MMK "Adaköy Marina |
+    // Marmaris"), 523 m apart; one name since V9_78.
+    name: 'Adaköy Marina',
+    dids: ['l-204', 'l-904'],
+    kind: LocationType.MARINA,
+    countryCode: 'TR',
+    aliases: ['Marmaris Adakoy Marina', 'Adaköy Marina | Marmaris', 'Adaköy Marina, Marmaris'],
+  },
+  {
+    // l-13 (NauSYS "Marina Admiral Opatija") and l-1950 (MMK "Marina Admiral |
+    // Opatija"); one name since V9_78, the old spelling 308s instead of 404.
+    name: 'Marina Admiral',
+    dids: ['l-13', 'l-1950'],
+    kind: LocationType.MARINA,
+    countryCode: 'HR',
+    aliases: ['Marina Admiral Opatija', 'Marina Admiral | Opatija', 'Marina Admiral, Opatija'],
+  },
+  {
+    // l-502 (NauSYS "Göcek/Skopea Marina") and l-780 (MMK "Skopea Marina |
+    // Göcek"); one name since V9_78, the old spelling 308s instead of 404.
+    name: 'Skopea Marina',
+    dids: ['l-502', 'l-780'],
+    kind: LocationType.MARINA,
+    countryCode: 'TR',
+    aliases: ['Göcek/Skopea Marina', 'Skopea Marina | Göcek', 'Skopea Marina, Göcek'],
+  },
+  {
     // r-3: NauSYS "Zadar", MMK "Zadar region". 25.9 sitemap and today's name.
     name: 'Zadar',
     dids: ['r-3'],
