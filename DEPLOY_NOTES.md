@@ -1,5 +1,12 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-10-13 — 📖 Chat widget: linkovi na blog vodiče ispod odgovora (`994d5574d`, grana `feat/chat-blog-links`) — ⏳ NIJE DEPLOYANO (čeka Mariov „da")
+
+Izvor: Mario 13.10.: „neka chatbot šalje klijente i na blogove … imate blog koji smo napravili baš o tome". Backend (boat4you-backend `feat/chat-security-guard`, alat `show_blog_posts`) dodaje u payload poruke `blogs: [{title, url:"/blog/<slug>"}]` uz kartice brodova; widget ih prikazuje kao kartice-linkove (📖 + naslov, nova kartica preglednika). Prikazuje se samo `/blog/<slug>` s tekstualnim naslovom (React tekst, `next/link`).
+
+- **Deploy PRIJE backenda** (stari backend ne šalje `blogs` → widget ne prikazuje ništa novo). Ako backend ide prvi, bot kaže „link je ispod", a link se ne vidi.
+- Provjereno: eslint 0, stylelint 0, prettier čist na `ChatWidget.tsx` / `.module.scss`; tsc u worktreeu ima 1.683 postojeće greške tipova prijevoda (`never`, simlinkani node_modules) — nijedna na izmijenjenim linijama. Lokalni `next build` namjerno NIJE pokrenut (puni prod API); **vizualno nije provjereno** — nakon deploya: pitati IRIS „7 days from Split route?" → ispod odgovora kartica „7-Day Itinerary from Split" koja otvara /blog/7-day-itinerary-from-split-croatia.
+
 ## 2026-10-13 — 🛡️ Chat widget: napomena o pohrani + zaključano stanje; 📷 fotografije istog modela za brod bez vlastitih — ✅ DEPLOYANO 13.10.2026 05:31 UTC (`c4652c7a7`) i 06:05 UTC (`9c9d046ce`, deployment id `9c9d046ce635-mv691dq0`), tag `live/2026-10-13`
 
 Izvor: Mario 10.10. (sondiranje IRIS-a 4.10. s IP 31.22.91.227: „mora prestati komunikaciju ili reći da razgovor preuzima live agent … mora biti napisano da se svi razgovori memoriraju") i 13.10. („GRESKA SAMO LAYOUT TU, DI SU SLIKE BRODA" — Lagoon 43 FIND US II, partner objavljuje samo tlocrt; „1,2,3 odradi odmah").
