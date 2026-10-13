@@ -1,5 +1,9 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-10-13 — 📄 „Good to know" u kartici Availability (partnerski brodovi) u istom panelu — ✅ DEPLOYANO 13.10.2026 09:4x UTC (`390f3460a`), tag `live/2026-10-13g`
+
+Mario 13.10. („I ovo stavi s istom pozadinom"): stavke pick-up/drop-off, plaćanje, licenca, otkazivanje, lokacija u `ReadMorePanel` bez sklapanja.
+
 ## 2026-10-13 — 📄 Opis broda u svijetlom panelu s „Read more / Read less"; isti panel na „Good to know" — ✅ DEPLOYANO 13.10.2026 09:2x UTC (`ce51ba656`, deployment id `ce51ba656e4f-mv6h3f4s`), tag `live/2026-10-13f`
 
 Izvor: Mario 13.10. („Vidi kako su napravili dio di je tekst … pozadinu napravi i kod nas tako i napravi da se vidi samo dio našeg teksta i da ima read more i read less, istu pozadinu napravi i na good to know"), uzor croatia-yachting-charter.com (siva pozadina #f2f2f2 iza opisa).
