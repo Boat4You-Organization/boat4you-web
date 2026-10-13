@@ -34,6 +34,13 @@
   input {
     font-size: rem-calc(16);
   }
+
+  // Field hints/errors (MUI caption, 12px) and the error alert (body2, 14px)
+  // at the page's 16px minimum.
+  :global(.MuiFormHelperText-root),
+  :global(.MuiAlert-message) {
+    font-size: rem-calc(16);
+  }
 }
 
 .preview {
@@ -49,7 +56,7 @@
 .legal p {
   margin: 0;
   color: $black-600;
-  font-size: rem-calc(14);
+  font-size: rem-calc(16);
   line-height: 1.6;
 }
 

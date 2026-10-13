@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useTransition } from 'react';
+import { useEffect, useState, useTransition } from 'react';
 import { UseFormReturn, useWatch } from 'react-hook-form';
 
 import { Alert, Button } from '@mui/material';
@@ -47,7 +47,11 @@ const AmountPreview = () => {
   const amount = useWatch<PayFormValues, 'amount'>({ name: 'amount' });
   const minor = parseAmountToMinor(amount ?? '');
 
-  return <p className={styles.preview}>{minor ? t('form.youWillPay', { amount: formatEur(minor, locale) }) : null}</p>;
+  return (
+    <p id="pay-amount-preview" className={styles.preview} aria-live="polite">
+      {minor ? t('form.youWillPay', { amount: formatEur(minor, locale) }) : null}
+    </p>
+  );
 };
 
 /**
@@ -66,6 +70,18 @@ const PayForm = ({ linkKey, minAmountMinor, maxAmountMinor, initialReference, in
   const [isRedirecting, setIsRedirecting] = useState(false);
   const [isPending, startTransition] = useTransition();
   const busy = isPending || isRedirecting;
+
+  // Back from Revolut's checkout restores this page from the back/forward
+  // cache with the button still on "Processing…": unlock it.
+  useEffect(() => {
+    const onShow = (event: PageTransitionEvent) => {
+      if (event.persisted) setIsRedirecting(false);
+    };
+
+    window.addEventListener('pageshow', onShow);
+
+    return () => window.removeEventListener('pageshow', onShow);
+  }, []);
 
   const fieldErrors: Record<PayFormField, string> = {
     email: tCommon('validation.invalidEmail'),
@@ -162,7 +178,15 @@ const PayForm = ({ linkKey, minAmountMinor, maxAmountMinor, initialReference, in
           formLabel={t('form.labels.amount')}
           helperText={t('form.hints.amount')}
           validate={validateAmount}
-          slotProps={{ htmlInput: { autoComplete: 'off', inputMode: 'decimal', maxLength: 10 } }}
+          slotProps={{
+            htmlInput: {
+              autoComplete: 'off',
+              inputMode: 'decimal',
+              maxLength: 10,
+              // MUI's own helper-text id plus the live "You will pay" line.
+              'aria-describedby': 'amount-helper-text pay-amount-preview',
+            },
+          }}
         />
         <AmountPreview />
         {failure && (
