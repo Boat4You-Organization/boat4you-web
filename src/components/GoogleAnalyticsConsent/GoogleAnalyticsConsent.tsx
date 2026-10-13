@@ -19,12 +19,13 @@ const getGtag = (): GtagFn | undefined =>
 
 /**
  * Pages whose URL is a secret (the e-mailed review magic link, which also
- * carries ?rating=). gtag.js is not loaded there at all: GA's page_view sends
+ * carries ?rating=; the card payment link printed in contracts, /pay/<key>).
+ * gtag.js is not loaded there at all: GA's page_view sends
  * page_location = location.href, and even consent-denied cookieless pings
- * carry it. Entry is always a full page load from the e-mail, so skipping
- * the loader keeps the token out of every analytics hit.
+ * carry it. Entry is always a full page load from the e-mail or the
+ * contract, so skipping the loader keeps the token out of every analytics hit.
  */
-const NO_ANALYTICS_PATH = /^(?:\/[a-z]{2})?\/review(?:\/|$)/;
+const NO_ANALYTICS_PATH = /^(?:\/[a-z]{2})?\/(?:review|pay)(?:\/|$)/;
 
 /** The part of a web-vitals metric used here (next/web-vitals hands the
  *  library's Metric). */

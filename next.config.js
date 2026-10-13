@@ -39,6 +39,7 @@ const withNextIntl = createNextIntlPlugin({
       './messages/en/charterFacts.json',
       './messages/en/priceGuide.json',
       './messages/en/review.json',
+      './messages/en/pay.json',
       './messages/en/homeHub.json',
     ],
   },
@@ -378,6 +379,18 @@ const nextConfig = {
           { key: 'Cache-Control', value: 'private, no-store' },
           { key: 'Referrer-Policy', value: 'no-referrer' },
           { key: 'X-Robots-Tag', value: 'noindex, nofollow' },
+        ],
+      },
+      // Secret card payment link printed in contracts (/[locale/]pay/<key>,
+      // its success and failed pages): the key in the URL is what keeps the
+      // page private. Same treatment as the review link, plus noarchive. Not
+      // in robots.txt on purpose — a Disallow would hide this noindex.
+      {
+        source: '/:locale(de|es|fr|it|pt|hr|pl|nl)?/pay/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'private, no-store' },
+          { key: 'Referrer-Policy', value: 'no-referrer' },
+          { key: 'X-Robots-Tag', value: 'noindex, nofollow, noarchive' },
         ],
       },
     ];

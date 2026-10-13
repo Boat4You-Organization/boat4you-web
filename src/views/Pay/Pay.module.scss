@@ -1,0 +1,139 @@
+@use '@/styles/settings/variables' as *;
+@use '@/styles/utils/rem-calc' as *;
+
+// Mobile-first, one column like the review page. The simple header is fixed
+// (~73px), so the page clears it with top padding.
+.page {
+  max-width: rem-calc(560);
+  margin: 0 auto;
+  padding: rem-calc(96) rem-calc(16) rem-calc(64);
+}
+
+.title {
+  margin: 0;
+  color: $blue-950;
+  font-size: rem-calc(26);
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.text {
+  margin: rem-calc(10) 0 0;
+  color: $black-800;
+  font-size: rem-calc(16);
+  line-height: 1.6;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: rem-calc(20);
+  margin-top: rem-calc(24);
+
+  // Inputs stay at 16px on every device (no zoom on focus on phones).
+  input {
+    font-size: rem-calc(16);
+  }
+}
+
+.preview {
+  min-height: 1.6em;
+  margin: rem-calc(-8) 0 0;
+  color: $blue-950;
+  font-size: rem-calc(18);
+  font-weight: 700;
+}
+
+.terms,
+.trust,
+.legal p {
+  margin: 0;
+  color: $black-600;
+  font-size: rem-calc(14);
+  line-height: 1.6;
+}
+
+.terms a {
+  color: $blue-700;
+  text-decoration: underline;
+}
+
+.trust {
+  text-align: center;
+}
+
+.legal {
+  display: flex;
+  flex-direction: column;
+  gap: rem-calc(6);
+  margin-top: rem-calc(32);
+  padding-top: rem-calc(16);
+  border-top: 1px solid $black-100;
+}
+
+.message {
+  padding: rem-calc(20) 0;
+}
+
+.spinner {
+  margin-top: rem-calc(20);
+}
+
+.facts {
+  display: flex;
+  flex-direction: column;
+  gap: rem-calc(6);
+  margin: rem-calc(20) 0 0;
+  padding: rem-calc(14);
+  border: 1px solid $blue-100;
+  border-radius: rem-calc(12);
+  background-color: $blue-50;
+  font-size: rem-calc(16);
+
+  div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 rem-calc(6);
+  }
+
+  dt {
+    color: $black-600;
+  }
+
+  dt::after {
+    content: ':';
+  }
+
+  dd {
+    margin: 0;
+    color: $black-900;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+  }
+}
+
+.button {
+  display: inline-block;
+  margin-top: rem-calc(20);
+  padding: rem-calc(12) rem-calc(24);
+  border-radius: rem-calc(10);
+  background-color: $blue-500;
+  color: $white;
+  font-size: rem-calc(16);
+  font-weight: 700;
+  text-decoration: none;
+
+  &:hover {
+    background-color: $blue-700;
+  }
+}
+
+@media (width >= 600px) {
+  .page {
+    padding: rem-calc(120) rem-calc(24) rem-calc(80);
+  }
+
+  .title {
+    font-size: rem-calc(30);
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "meta": {
+    "title": "Card payment"
+  },
+  "form": {
+    "title": "Card payment",
+    "instruction": "Please enter the amount stated on the second page of your contract (Credit card section) and your booking confirmation number",
+    "labels": {
+      "email": "E-mail",
+      "reference": "Booking confirmation number",
+      "amount": "Amount (EUR)"
+    },
+    "hints": {
+      "email": "We will send the payment confirmation to this address.",
+      "reference": "As stated in your contract, for example 100116/2027.",
+      "amount": "In euros, as stated in your contract, for example 1109.00."
+    },
+    "youWillPay": "You will pay {amount}",
+    "pay": "Pay",
+    "securedBy": "Cards · Apple Pay · Google Pay · Revolut Pay · secure payment by Revolut"
+  },
+  "errors": {
+    "validation": "Please check the details you entered and try again.",
+    "notFound": "This payment link is not valid. Please use the link in your contract.",
+    "rateLimited": "Too many attempts. Please wait a few minutes and try again.",
+    "unavailable": "Card payment is temporarily unavailable. Please try again later.",
+    "provider": "The secure payment page could not be opened. Please try again in a few minutes.",
+    "error": "Something went wrong. Please try again.",
+    "reference": "Please enter the booking confirmation number from your contract (3 to 64 characters: letters, digits, spaces and / - _ .).",
+    "amountInvalid": "Please enter a valid amount with no more than two decimals, for example 1109.00.",
+    "amountAmbiguous": "Please enter the amount without a thousands separator, for example 50000 or 50.00.",
+    "amountTooLow": "The minimum amount is {min}.",
+    "amountTooHigh": "The maximum amount is {max}."
+  },
+  "success": {
+    "confirming": {
+      "title": "We are confirming your payment",
+      "text": "This usually takes a few seconds. Please keep this page open."
+    },
+    "confirmed": {
+      "title": "Thank you, your payment has been received",
+      "text": "We have sent a payment confirmation to your e-mail address."
+    },
+    "review": {
+      "title": "Your payment is being checked",
+      "text": "Our team needs to check your payment briefly. We will confirm it by e-mail."
+    },
+    "weWillEmail": {
+      "title": "Your payment is being processed",
+      "text": "The confirmation is taking a little longer than usual. We will e-mail you as soon as your payment is confirmed, so you can close this page."
+    },
+    "amount": "Amount paid"
+  },
+  "failed": {
+    "title": "The payment was not completed",
+    "text": "Please try again, or use a different card. If you need help, write to us at info@boat4you.com.",
+    "tryAgain": "Try again"
+  },
+  "unavailable": {
+    "title": "Card payment is not available right now",
+    "text": "Please try again later. If you have already paid, you will receive a confirmation by e-mail. If you need help, write to us at info@boat4you.com."
+  },
+  "legal": {
+    "byPaying": "By paying you accept the",
+    "terms": "Terms and Conditions",
+    "privacy": "Privacy Policy",
+    "received": "Payments are received by Cusmanich d.o.o. in the name and for the account of the Operator."
+  }
+}

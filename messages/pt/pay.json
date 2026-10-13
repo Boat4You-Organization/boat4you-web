@@ -1,0 +1,69 @@
+{
+  "meta": {
+    "title": "Pagamento com cartão"
+  },
+  "form": {
+    "title": "Pagamento com cartão",
+    "instruction": "Introduza o montante indicado na segunda página do seu contrato (secção Cartão de crédito) e o seu número de confirmação da reserva",
+    "labels": {
+      "email": "E-mail",
+      "reference": "Número de confirmação da reserva",
+      "amount": "Montante (EUR)"
+    },
+    "hints": {
+      "email": "Enviaremos a confirmação do pagamento para este endereço.",
+      "reference": "Tal como indicado no seu contrato, por exemplo 100116/2027.",
+      "amount": "Em euros, tal como indicado no seu contrato, por exemplo 1109,00."
+    },
+    "youWillPay": "Vai pagar {amount}",
+    "pay": "Pagar",
+    "securedBy": "Cartões · Apple Pay · Google Pay · Revolut Pay · pagamento seguro através da Revolut"
+  },
+  "errors": {
+    "validation": "Verifique os dados introduzidos e tente novamente.",
+    "notFound": "Este link de pagamento não é válido. Utilize o link que consta do seu contrato.",
+    "rateLimited": "Demasiadas tentativas. Aguarde alguns minutos e tente novamente.",
+    "unavailable": "O pagamento com cartão está temporariamente indisponível. Tente novamente mais tarde.",
+    "provider": "Não foi possível abrir a página de pagamento seguro. Tente novamente dentro de alguns minutos.",
+    "error": "Ocorreu um erro. Tente novamente.",
+    "reference": "Introduza o número de confirmação da reserva que consta do seu contrato (3 a 64 caracteres: letras, algarismos, espaços e / - _ .).",
+    "amountInvalid": "Introduza um montante válido com, no máximo, duas casas decimais, por exemplo 1109,00.",
+    "amountAmbiguous": "Introduza o montante sem separador de milhares, por exemplo 50000 ou 50,00.",
+    "amountTooLow": "O montante mínimo é {min}.",
+    "amountTooHigh": "O montante máximo é {max}."
+  },
+  "success": {
+    "confirming": {
+      "title": "Estamos a confirmar o seu pagamento",
+      "text": "Normalmente demora alguns segundos. Mantenha esta página aberta."
+    },
+    "confirmed": {
+      "title": "Obrigado, recebemos o seu pagamento",
+      "text": "Enviámos uma confirmação do pagamento para o seu endereço de e-mail."
+    },
+    "review": {
+      "title": "O seu pagamento está a ser verificado",
+      "text": "A nossa equipa precisa de verificar brevemente o seu pagamento. Iremos confirmá-lo por e-mail."
+    },
+    "weWillEmail": {
+      "title": "O seu pagamento está a ser processado",
+      "text": "A confirmação está a demorar um pouco mais do que o habitual. Enviar-lhe-emos um e-mail assim que o pagamento for confirmado, pelo que pode fechar esta página."
+    },
+    "amount": "Montante pago"
+  },
+  "failed": {
+    "title": "O pagamento não foi concluído",
+    "text": "Tente novamente ou utilize outro cartão. Se precisar de ajuda, escreva-nos para info@boat4you.com.",
+    "tryAgain": "Tentar novamente"
+  },
+  "unavailable": {
+    "title": "O pagamento com cartão não está disponível neste momento",
+    "text": "Tente novamente mais tarde. Se já tiver pago, receberá uma confirmação por e-mail. Se precisar de ajuda, escreva-nos para info@boat4you.com."
+  },
+  "legal": {
+    "byPaying": "Ao pagar, aceita os",
+    "terms": "Termos e Condições",
+    "privacy": "Política de Privacidade",
+    "received": "Os pagamentos são recebidos pela Cusmanich d.o.o. em nome e por conta do Operador."
+  }
+}

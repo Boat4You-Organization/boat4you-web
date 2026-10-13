@@ -1,7 +1,6 @@
 'use server';
 
-import { headers } from 'next/headers';
-
+import { clientIp } from '@/utils/server/clientIp';
 import { isReviewToken } from '@/utils/static/reviewToken';
 
 /**
@@ -37,16 +36,6 @@ const parseFieldKeys = (message: unknown): string[] => {
   const inner = message.slice(message.indexOf('{') + 1, message.lastIndexOf('}'));
 
   return Array.from(inner.matchAll(/(?:^|,\s*)([A-Za-z][\w.]*)=/g), m => m[1]);
-};
-
-const clientIp = async (): Promise<string | null> => {
-  const h = await headers();
-  const realIp = h.get('x-real-ip')?.trim();
-
-  if (realIp) return realIp;
-
-  // Last element = the address our own nginx appended.
-  return h.get('x-forwarded-for')?.split(',').pop()?.trim() || null;
 };
 
 export async function submitReview(token: string, payload: ReviewSubmitPayload): Promise<ReviewSubmitResult> {
