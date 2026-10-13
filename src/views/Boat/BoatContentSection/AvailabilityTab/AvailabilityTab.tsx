@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl';
 import BoatLocationModal from '@/components/BoatLocationModal';
 import Form from '@/components/Forms/Form';
 import InquiryOnlyPanel from '@/components/InquiryOnlyPanel';
+import ReadMorePanel from '@/components/ReadMorePanel';
 import Availablity from '@/components/SvgIcons/Availablity';
 import Bulp from '@/components/SvgIcons/Bulp';
 import { BoatCalendarFormValues } from '@/config/form-models.config';
@@ -130,33 +131,39 @@ const AvailabilityTab = ({ yacht }: AvailabilityTabProps) => {
           {t('goodToKnow')}
         </Typography>
 
-        <Grid container spacing={4}>
-          <GoodToKnowItem title={tCommon('pickUpTime')} value={yacht.defaultCheckin || selectedOffer?.checkin || '-'} />
-          <GoodToKnowItem
-            title={tCommon('dropOffTime')}
-            value={yacht.defaultCheckout || selectedOffer?.checkout || '-'}
-          />
-          <GoodToKnowItem title={tCommon('paymentMethod')} value={t('localCurrency')} />
-          {/* A gulet sails with its crew: no licence asked of the guests (guletCrewed.ts). */}
-          {!isGulet(yacht) && (
-            <GoodToKnowItem title={tCommon('sailingLicenceRequired')} value={t('standardSailingLicence')} />
-          )}
-          <GoodToKnowItem title={tCommon('cancellationPolicy')} value={t('cancellationPolicyDescription')} />
-          <GoodToKnowItem
-            title={tCommon('pickUpLocation')}
-            value={displayBaseName(yacht.location?.name)}
-            onClick={yacht.location?.name ? toggleMap : undefined}
-          />
-          {yacht.location?.name && (
-            <BoatLocationModal
-              open={isMapOpen}
-              onClose={toggleMap}
-              locationName={yacht.location.name}
-              lat={yacht.location.lat}
-              lon={yacht.location.lon}
+        {/* The same light panel as the description (owner 13.10.2026). */}
+        <ReadMorePanel collapsible={false}>
+          <Grid container spacing={4}>
+            <GoodToKnowItem
+              title={tCommon('pickUpTime')}
+              value={yacht.defaultCheckin || selectedOffer?.checkin || '-'}
             />
-          )}
-        </Grid>
+            <GoodToKnowItem
+              title={tCommon('dropOffTime')}
+              value={yacht.defaultCheckout || selectedOffer?.checkout || '-'}
+            />
+            <GoodToKnowItem title={tCommon('paymentMethod')} value={t('localCurrency')} />
+            {/* A gulet sails with its crew: no licence asked of the guests (guletCrewed.ts). */}
+            {!isGulet(yacht) && (
+              <GoodToKnowItem title={tCommon('sailingLicenceRequired')} value={t('standardSailingLicence')} />
+            )}
+            <GoodToKnowItem title={tCommon('cancellationPolicy')} value={t('cancellationPolicyDescription')} />
+            <GoodToKnowItem
+              title={tCommon('pickUpLocation')}
+              value={displayBaseName(yacht.location?.name)}
+              onClick={yacht.location?.name ? toggleMap : undefined}
+            />
+            {yacht.location?.name && (
+              <BoatLocationModal
+                open={isMapOpen}
+                onClose={toggleMap}
+                locationName={yacht.location.name}
+                lat={yacht.location.lat}
+                lon={yacht.location.lon}
+              />
+            )}
+          </Grid>
+        </ReadMorePanel>
       </Stack>
     </Stack>
   );
