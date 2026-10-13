@@ -1,5 +1,11 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-10-13 — 📍 7 pinova landinga za marine s dva zapisa (preduvjet backend V9_78 „spoji duple marine") — ✅ DEPLOYANO 13.10.2026 09:53 UTC (`a9590e20f`, deployment id `a9590e20f7be-mv6i45yn`), tag `live/2026-10-13h`
+
+Commit ADMIN sesije (`landing-identity.config.ts`): Marina Lav - Podstrana (l-72 + l-1423), Lavrion Main Port, Preveza Main Port, Skiathos, Adaköy Marina, Marina Admiral, Skopea Marina — ime = ASCII URL, dids unija oba zapisa, stari oblici imena kao 308 aliasi. URL-ovi landinga ostaju isti i nakon što backend spoji zapise.
+
+**Provjere (13.10.):** testovi 36/36, eslint 0; uživo `marmaris%20adakoy%20marina` → 308 `adak%C3%B6y%20marina`; `marina lav - podstrana` MOTOR_YACHT 200 + isti canonical EN/DE (ADMIN); SEO regresija 0 novih FAIL (40 poznatih, 20 WARN, 3 XPASS). Backend V9_78 ADMIN deploya tek nakon ovog deploya.
+
 ## 2026-10-13 — 📄 „Good to know" u kartici Availability (partnerski brodovi) u istom panelu — ✅ DEPLOYANO 13.10.2026 09:4x UTC (`390f3460a`), tag `live/2026-10-13g`
 
 Mario 13.10. („I ovo stavi s istom pozadinom"): stavke pick-up/drop-off, plaćanje, licenca, otkazivanje, lokacija u `ReadMorePanel` bez sklapanja.
