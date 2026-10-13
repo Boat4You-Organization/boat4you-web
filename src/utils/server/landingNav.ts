@@ -15,7 +15,7 @@ import {
   localePrefix,
   placeLabel,
   regionHubAbove,
-  regionsForMarina,
+  regionsForPlace,
 } from '@/utils/server/catalogueHubs';
 import {
   DestinationIndex,
@@ -343,10 +343,8 @@ const itinerariesFor = async (
   locale: string
 ): Promise<LandingLink[]> => {
   const areas = itineraries.flatMap(group => group.itinerary.map(area => ({ area, country: group.country })));
-  const regionNames =
-    place.kind === LocationType.MARINA && place.countryCode
-      ? await regionsForMarina(place.countryCode, place.dids[0])
-      : [];
+  // The regions of every row (regionsForPlace), as the breadcrumb reads them.
+  const regionNames = await regionsForPlace(place);
   const regionLandings = new Set(
     (await Promise.all(regionNames.map(name => resolveDestinationName(index, name)))).map(r => r?.name)
   );

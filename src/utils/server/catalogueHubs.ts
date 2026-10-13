@@ -145,6 +145,21 @@ export const countryPlaceFor = async (
   return row ? resolveDestinationName(index, row.name) : null;
 };
 
+/**
+ * Regions of a marina place: those of every row, not just the first. The
+ * partners file one marina under different regions (13.10.2026, see
+ * landingNav.ts liesInside), and a pin lists its rows sorted, so dids[0] is
+ * often the other partner's row (Olympic Marina: NauSYS l-139 only in
+ * "Athens area", MMK l-710 in Cyclades too).
+ */
+export const regionsForPlace = async (place: ResolvedDestination): Promise<string[]> => {
+  const { countryCode } = place;
+
+  if (place.kind !== LocationType.MARINA || !countryCode) return [];
+
+  return [...new Set((await Promise.all(place.dids.map(did => regionsForMarina(countryCode, did)))).flat())];
+};
+
 /** Indexable region hub above a marina (the most specific one: smallest fleet), or null. */
 export const regionHubAbove = async (
   index: DestinationIndex,
@@ -153,11 +168,7 @@ export const regionHubAbove = async (
 ): Promise<Hub | null> => {
   if (place.kind !== LocationType.MARINA || !place.countryCode) return null;
 
-  // The regions of every row of the place, not just the first: the partners
-  // file one marina under different regions (13.10.2026, see landingNav.ts
-  // liesInside).
-  const { countryCode } = place;
-  const names = [...new Set((await Promise.all(place.dids.map(did => regionsForMarina(countryCode, did)))).flat())];
+  const names = await regionsForPlace(place);
   const hubs = (await Promise.all(names.map(name => hubForName(index, name, null, locale)))).filter(
     (h): h is Hub => !!h?.href && h.kind !== LocationType.COUNTRY && h.name !== place.name
   );

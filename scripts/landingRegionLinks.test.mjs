@@ -6,15 +6,16 @@
  *     marina under different regions (Olbia: NauSYS l-222 in "Sardinia" r-51,
  *     MMK l-609 in "Sardinia / Corsica" r-179), and requiring all rows
  *     dropped every merged place from the "popular destinations" block;
- *   - src/utils/server/catalogueHubs.ts regionHubAbove — the breadcrumb
- *     region comes from the regions of every row, not only dids[0];
+ *   - src/utils/server/catalogueHubs.ts regionsForPlace — the breadcrumb
+ *     region (regionHubAbove) and the itinerary links (landingNav.ts
+ *     itinerariesFor) come from the regions of every row, not only dids[0];
  *   - src/config/landing-identity.config.ts + curatedSeoSlug.ts — the
  *     Golfo Aranci / Olbia pins and the text alias, so the merged landings
  *     resolve, read their text and stay indexable.
  *
- * The catalogue API is a stub (no network): the Sardinian rows as
- * /public/locations lists them after V9_79, with the region lists from prod
- * 13.10.2026. The corpus is the repo's own public/seo-content.
+ * The catalogue API is a stub (no network): the Sardinian and Olympic Marine
+ * rows as /public/locations lists them after V9_79, with the region lists
+ * from prod 13.10.2026. The corpus is the repo's own public/seo-content.
  *
  *   yarn test:landing-pages
  */
@@ -59,16 +60,27 @@ const LOCATIONS = [
   { id: 'l-225,l-609', name: 'Marina di Olbia Yachting Services', locationType: 'MARINA', countryCode: 'IT' },
   { id: 'l-411', name: 'Marina di Golfo Aranci', locationType: 'MARINA', countryCode: 'IT' },
   { id: 'l-1550', name: 'Marina di Golfo Aranci', locationType: 'MARINA', countryCode: 'IT' },
+  { id: 'c-86', name: 'Greece', locationType: 'COUNTRY', countryCode: 'GR' },
+  { id: 'r-21', name: 'Cyclades', locationType: 'REGION', countryCode: 'GR' },
+  { id: 'r-165', name: 'Athens / Saronic Gulf', locationType: 'REGION', countryCode: 'GR' },
+  { id: 'r-24', name: 'Athens area/Saronic/Peloponese', locationType: 'REGION', countryCode: 'GR' },
+  { id: 'l-139', name: 'Olympic Marine', locationType: 'MARINA', countryCode: 'GR' },
+  { id: 'l-710', name: 'Olympic Marine', locationType: 'MARINA', countryCode: 'GR' },
+  // The Corsica itinerary's own region (else "Corsica" falls back to "Sardinia / Corsica").
+  { id: 'r-31', name: 'Corsica', locationType: 'REGION', countryCode: 'FR' },
 ];
 
 /** /public/locations-count?regionId= — single rows, as prod lists them. */
 const REGION_MARINAS = {
   51: ['l-220', 'l-222', 'l-225', 'l-411'],
   179: ['l-609', 'l-1550'],
+  21: ['l-710'],
+  165: ['l-710'],
+  24: ['l-139'],
 };
 
 /** Listing totals (/public/yachts size=1); every boat is in a promoted country. */
-const FLEET = { 'c-110': 2000, 'r-51': 120, 'r-179': 300 };
+const FLEET = { 'c-110': 2000, 'r-51': 120, 'r-179': 300, 'c-86': 3000, 'r-21': 500, 'r-165,r-24': 700 };
 
 const json = body =>
   new Response(JSON.stringify(body), { status: 200, headers: { 'Content-Type': 'application/json' } });
@@ -84,7 +96,13 @@ globalThis.fetch = async input => {
     case '/public/locations':
       return json({ content: LOCATIONS });
     case '/public/countries-count':
-      return json([{ id: 'c-110', name: 'Italy', yachtCount: FLEET['c-110'] }]);
+      return json(
+        LOCATIONS.filter(l => l.locationType === 'COUNTRY').map(l => ({
+          id: l.id,
+          name: l.name,
+          yachtCount: FLEET[l.id],
+        }))
+      );
     case '/public/locations-count':
       return q.has('regionId')
         ? json((REGION_MARINAS[q.get('regionId')] ?? []).map(id => ({ id, yachtCount: 40 })))
@@ -93,9 +111,10 @@ globalThis.fetch = async input => {
           );
     case '/public/regions':
       return json(
-        q.get('countryCode') === 'IT'
-          ? LOCATIONS.filter(l => l.locationType === 'REGION').map(l => ({ id: l.id, name: l.name }))
-          : []
+        LOCATIONS.filter(l => l.locationType === 'REGION' && l.countryCode === q.get('countryCode')).map(l => ({
+          id: l.id,
+          name: l.name,
+        }))
       );
     case '/public/yachts':
       return json({ totalElements: FLEET[q.get('did')] ?? 40 });
@@ -208,6 +227,37 @@ describe('regionHubAbove: the breadcrumb region comes from every row of the plac
         buildSearchLandingPath('Italy'),
         buildSearchLandingPath('Sardinia'),
         buildSearchLandingPath('Marina di Golfo Aranci'),
+      ]
+    );
+  });
+});
+
+describe('itinerariesFor: the itinerary areas of every row of the place', () => {
+  const itineraryHrefs = nav => nav.itineraries.map(l => l.href);
+
+  test('Olympic Marina keeps the Cyclades itinerary (only MMK l-710 is in Cyclades; NauSYS l-139 sorts first)', async () => {
+    // Live 13.10.2026 the landing lists l-710 alone and links /itineraries/cyclades.
+    const nav = await landingNav('Olympic Marina', 'SAILING_YACHT', 'en', Promise.resolve([]));
+
+    assert.ok(itineraryHrefs(nav).includes('/itineraries/cyclades'), itineraryHrefs(nav).join('\n'));
+  });
+
+  test('Marina di Golfo Aranci links the Sardinia itinerary (only NauSYS l-411 is in Sardinia)', async () => {
+    const nav = await landingNav('Marina di Golfo Aranci', 'CATAMARAN', 'en', Promise.resolve([]));
+
+    assert.ok(itineraryHrefs(nav).includes('/itineraries/sardinia'), itineraryHrefs(nav).join('\n'));
+  });
+
+  test('Olympic Marina still crumbs Cyclades, as live today', async () => {
+    const crumbs = await landingCrumbs('Olympic Marina', null, 'en');
+
+    assert.deepEqual(
+      crumbs.map(c => c.path),
+      [
+        '/',
+        buildSearchLandingPath('Greece'),
+        buildSearchLandingPath('Cyclades'),
+        buildSearchLandingPath('Olympic Marina'),
       ]
     );
   });
