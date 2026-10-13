@@ -1,5 +1,12 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-10-13 — 📌 Landing „Marina Kastela" pinan na oba zapisa marine (l-63 + l-1935) — ✅ DEPLOYANO 13.10.2026 07:1x UTC (`2e57befdc`, deployment id `2e57befdca46-mv6ca4q9`), tag `live/2026-10-13c`
+
+Izvor: ADMIN backend fix lokacija (V9_77: preimenovanje location 63 „Marina Kastela" → „Marina Kaštela"/„Kaštel Gomilica" + `location_same_place`) bi bez pina premjestio 27 indeksiranih landinga s `destinations=marina%20kastela` na URL s kvačicama; Mario 13.10.: „to je isto".
+
+- `landing-identity.config.ts`: `{ name: 'Marina Kastela', dids: ['l-63','l-1935'], kind: MARINA, HR, aliases: ['Marina Kaštela', 'Marina Kaštela | Kaštel Gomilica', 'Marina Kaštela, Kaštel Gomilica'] }` — URL ostaje ASCII, oba zapisa listaju zajedno, ostale varijante 301/308 na njega.
+- Uživo: `marina%20kastela` 200 + canonical isti, **276 brodova** (prije samo l-63); `ka%C5%A1tela` → 308; varijanta s „| Kaštel Gomilica" → 308 (prije 404); CATAMARAN landing index, 95 brodova. `yarn test:landing-pages` 36/36, SEO regresija 0 novih FAIL.
+
 ## 2026-10-13 — 🧹 Bez „fotografija istog modela"; 📂 Amenities i opcionalne usluge sklopljeni; 🗺️ karta marine po koordinatama/čistom imenu; 📐 kartice u grid prikazu poravnate — ✅ DEPLOYANO 13.10.2026 (`4661dcbec` 06:0x, `9b6a5736e` 06:1x, `ffa9525f2` 06:2x, `6e0841ecd` 06:4x UTC; zadnji live build `2ed2014e9` druge sesije sadrži sve), tag `live/2026-10-13b`
 
 Izvor: Mario 13.10. („OVO MI SE NE SVIDJA … makni same model slike"; „Amenities neka bude sakriven … isto i za optional services … kod svih plovila"; „ne sakrit sve extrase, samo optional services"; „Marina Kaštela … kada se otvori mapa ne vodi na marinu"; „napravi da mora biti sve u istoj ravnini, visini"; „marina kastela vs marina kastela, kastel gomilica, to je isto").
