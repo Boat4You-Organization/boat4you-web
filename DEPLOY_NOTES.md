@@ -1,5 +1,15 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-10-13 — 🏷️ Kartice: samo ime marine („Marina Kaštela"); 📐 „You might also like", itinerary i deals kartice u poravnatoj mreži — ✅ DEPLOYANO 13.10.2026 08:0x UTC (`cbc629263`, deployment id `cbc6292633b6-mv6df3a0`), tag `live/2026-10-13d`
+
+Izvor: Mario 13.10. („Marina Kaštela, Kaštel Gomilica i Marina Kastela su iste marine, trebaju biti oboje pod Marina Kastela i tako se prikazat. Isto tako You might also like plovila trebaju biti iste veličine, istih dimenzija, isto izgledat").
+
+- `displayMarinaName`: kartica (pretraga, slični brodovi, itinerary, deals) prikazuje samo ime marine (dio prije partnerove „| Grad" cijevi) s kvačicama; provjereno u katalogu 13.10. da nijedna aktivna marina ne dijeli ime s marinom u drugom gradu. Stranica broda (hero, detalji) zadržava „Marina, Grad".
+- `BoatCardGrid` (1 / 2 / 3 stupca) + kartice `alignRows` (subgrid 6 redova): RelatedBoats („You might also like"), ItineraryBoats i deals stranica poravnavaju sliku, naziv, marinu, podatke, opremu i cijenu kroz red kartica, kao grid pretrage od ranije danas. Mobitel: jedan stupac, bez promjene.
+- Backend (ADMIN, 07:21 UTC, V9_77): zapis 63 preimenovan u „Marina Kaštela"/„Kaštel Gomilica" + `location_same_place`; LocationDto lat/lon → karta po koordinatama.
+
+**Provjere (13.10.):** BELO stranica, 1440 px: 3 kartice „You might also like" u CSS gridu, subgrid, isti vrhovi redova; oznaka marine „Marina Kaštela"; SEO regresija 0 novih FAIL; eslint/stylelint 0, lint hook prošao.
+
 ## 2026-10-13 — 📌 Landing „Marina Kastela" pinan na oba zapisa marine (l-63 + l-1935) — ✅ DEPLOYANO 13.10.2026 07:1x UTC (`2e57befdc`, deployment id `2e57befdca46-mv6ca4q9`), tag `live/2026-10-13c`
 
 Izvor: ADMIN backend fix lokacija (V9_77: preimenovanje location 63 „Marina Kastela" → „Marina Kaštela"/„Kaštel Gomilica" + `location_same_place`) bi bez pina premjestio 27 indeksiranih landinga s `destinations=marina%20kastela` na URL s kvačicama; Mario 13.10.: „to je isto".
