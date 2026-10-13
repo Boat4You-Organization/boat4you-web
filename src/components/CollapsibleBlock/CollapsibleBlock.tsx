@@ -3,7 +3,7 @@
 import { ReactNode, useId } from 'react';
 
 import { ExpandMore } from '@mui/icons-material';
-import { Box, ButtonBase, Collapse, Typography } from '@mui/material';
+import { Box, ButtonBase, Collapse, Typography, TypographyProps } from '@mui/material';
 import cx from 'clsx';
 
 import styles from './CollapsibleBlock.module.scss';
@@ -14,6 +14,18 @@ interface CollapsibleBlockProps {
   open: boolean;
   onToggle: () => void;
   children: ReactNode;
+  /** Heading element and look; a section heading (h2 in the h3 style) by default. */
+  heading?: {
+    component?: 'h2' | 'h3';
+    variant?: TypographyProps['variant'];
+    fontWeight?: TypographyProps['fontWeight'];
+    color?: TypographyProps['color'];
+    sx?: TypographyProps['sx'];
+  };
+  /** Small-label variant: smaller chevron, no vertical padding. */
+  dense?: boolean;
+  /** Space between the heading and the body (theme units). */
+  bodyPt?: number;
 }
 
 /**
@@ -23,14 +35,28 @@ interface CollapsibleBlockProps {
  * unmounted), so search engines and the find-in-page still read it, and the
  * tabs bar can open it when its tab is chosen (BoatContentSection).
  */
-const CollapsibleBlock = ({ title, open, onToggle, children }: CollapsibleBlockProps) => {
+const CollapsibleBlock = ({
+  title,
+  open,
+  onToggle,
+  children,
+  heading,
+  dense = false,
+  bodyPt = 3,
+}: CollapsibleBlockProps) => {
   const bodyId = useId();
 
   return (
     <Box component="section">
-      <Typography component="h2" variant="h3" fontWeight={700}>
+      <Typography
+        component={heading?.component ?? 'h2'}
+        variant={heading?.variant ?? 'h3'}
+        fontWeight={heading?.fontWeight ?? 700}
+        color={heading?.color}
+        sx={heading?.sx}
+      >
         <ButtonBase
-          className={styles.header}
+          className={cx(styles.header, { [styles.dense]: dense })}
           onClick={onToggle}
           aria-expanded={open}
           aria-controls={bodyId}
@@ -43,7 +69,7 @@ const CollapsibleBlock = ({ title, open, onToggle, children }: CollapsibleBlockP
         </ButtonBase>
       </Typography>
       <Collapse in={open} timeout="auto">
-        <Box id={bodyId} pt={3}>
+        <Box id={bodyId} pt={bodyPt}>
           {children}
         </Box>
       </Collapse>

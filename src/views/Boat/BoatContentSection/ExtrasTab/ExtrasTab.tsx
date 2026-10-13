@@ -17,7 +17,7 @@ import { useYachtStore } from '@/valtio/yacht/yacht.store';
 
 interface ExtrasTabProps {
   yacht: YachtModel;
-  /** Folded by default; the tabs bar opens it (BoatContentSection). */
+  /** Optional services folded by default; the tabs bar opens them (BoatContentSection). */
   open: boolean;
   onToggle: () => void;
 }
@@ -77,17 +77,20 @@ const ExtrasTab = ({ yacht, open, onToggle }: ExtrasTabProps) => {
     yacht.securityDeposit > 0 ? formatPriceWithCurrency({ clientPriceEur: yacht.securityDeposit, locale }) : null;
 
   return (
-    <CollapsibleBlock
-      title={
-        <>
-          <Extras variant="secondary" size={32} />
-          {t('extrasTitle')}
-        </>
-      }
-      open={open}
-      onToggle={onToggle}
-    >
-      <Stack spacing={0}>
+    <Stack component="section" direction="column">
+      <Typography
+        component="h2"
+        variant="h3"
+        fontWeight={700}
+        display="flex"
+        flexDirection="row"
+        alignItems="center"
+        gap={1}
+      >
+        <Extras variant="secondary" size={32} />
+        {t('extrasTitle')}
+      </Typography>
+      <Stack spacing={0} pt={3}>
         {(obligatoryServices.length > 0 || securityDepositPrice) && (
           <Typography
             variant="body2"
@@ -180,31 +183,42 @@ const ExtrasTab = ({ yacht, open, onToggle }: ExtrasTabProps) => {
             </Stack>
           </Box>
         )}
+        {/* Selected (obligatory) services above stay in view; only the optional
+            list is folded until pressed (owner 13.10.2026). */}
         {optionalServices.length > 0 && (
-          <Typography
-            variant="body2"
-            fontWeight={700}
-            color={colors.black700}
-            sx={{ textTransform: 'uppercase', letterSpacing: 0.5, fontSize: 12, mt: 3, mb: 1 }}
-          >
-            {t('optionalServices')}
-          </Typography>
-        )}
-        {optionalServices.map((extra, index) => {
-          const { key, ...extraProps } = extra;
+          <Box mt={3}>
+            <CollapsibleBlock
+              title={t('optionalServices')}
+              open={open}
+              onToggle={onToggle}
+              dense
+              bodyPt={1}
+              heading={{
+                component: 'h3',
+                variant: 'body2',
+                fontWeight: 700,
+                color: colors.black700,
+                sx: { textTransform: 'uppercase', letterSpacing: 0.5, fontSize: 12 },
+              }}
+            >
+              {optionalServices.map((extra, index) => {
+                const { key, ...extraProps } = extra;
 
-          return (
-            <ExtrasCard
-              key={extra.id}
-              {...extraProps}
-              description={descriptionOf(obligatoryServices.length + index)}
-              yachtSlug={yacht.slug}
-              extraKey={key}
-            />
-          );
-        })}
+                return (
+                  <ExtrasCard
+                    key={extra.id}
+                    {...extraProps}
+                    description={descriptionOf(obligatoryServices.length + index)}
+                    yachtSlug={yacht.slug}
+                    extraKey={key}
+                  />
+                );
+              })}
+            </CollapsibleBlock>
+          </Box>
+        )}
       </Stack>
-    </CollapsibleBlock>
+    </Stack>
   );
 };
 
