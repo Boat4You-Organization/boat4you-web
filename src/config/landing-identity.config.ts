@@ -42,6 +42,18 @@ export interface LandingIdentity {
 
 export const LANDING_IDENTITIES: LandingIdentity[] = [
   {
+    // l-63 (NauSYS "Marina Kastela", no town) and l-1935 (MMK "Marina Kaštela |
+    // Kaštel Gomilica") are one marina (owner 13.10.2026: "to je isto"). The
+    // landings are indexed under the ASCII spelling; the backend rename of
+    // l-63 to the Croatian spelling (V9_77) must not move that URL, and both
+    // records' boats list together.
+    name: 'Marina Kastela',
+    dids: ['l-63', 'l-1935'],
+    kind: LocationType.MARINA,
+    countryCode: 'HR',
+    aliases: ['Marina Kaštela', 'Marina Kaštela | Kaštel Gomilica', 'Marina Kaštela, Kaštel Gomilica'],
+  },
+  {
     // r-3: NauSYS "Zadar", MMK "Zadar region". 25.9 sitemap and today's name.
     name: 'Zadar',
     dids: ['r-3'],
