@@ -4,6 +4,7 @@ import { Box, Stack, Typography } from '@mui/material';
 import { useLocale, useTranslations } from 'next-intl';
 
 import Checkbox from '@/components/Checkbox';
+import CollapsibleBlock from '@/components/CollapsibleBlock';
 import ExtrasCard from '@/components/ExtrasCard';
 import Extras from '@/components/SvgIcons/Extras';
 import { YachtModel } from '@/models/yacht.model';
@@ -16,9 +17,12 @@ import { useYachtStore } from '@/valtio/yacht/yacht.store';
 
 interface ExtrasTabProps {
   yacht: YachtModel;
+  /** Folded by default; the tabs bar opens it (BoatContentSection). */
+  open: boolean;
+  onToggle: () => void;
 }
 
-const ExtrasTab = ({ yacht }: ExtrasTabProps) => {
+const ExtrasTab = ({ yacht, open, onToggle }: ExtrasTabProps) => {
   const { selectedOffer, calculatedPrice } = useYachtStore();
   const t = useTranslations('yacht');
   const tServices = useTranslations('yacht.servicesList');
@@ -73,20 +77,17 @@ const ExtrasTab = ({ yacht }: ExtrasTabProps) => {
     yacht.securityDeposit > 0 ? formatPriceWithCurrency({ clientPriceEur: yacht.securityDeposit, locale }) : null;
 
   return (
-    <Stack component="section" direction="column">
-      <Typography
-        component="h2"
-        variant="h3"
-        fontWeight={700}
-        display="flex"
-        flexDirection="row"
-        alignItems="center"
-        gap={1}
-      >
-        <Extras variant="secondary" size={32} />
-        {t('extrasTitle')}
-      </Typography>
-      <Stack spacing={0} pt={3}>
+    <CollapsibleBlock
+      title={
+        <>
+          <Extras variant="secondary" size={32} />
+          {t('extrasTitle')}
+        </>
+      }
+      open={open}
+      onToggle={onToggle}
+    >
+      <Stack spacing={0}>
         {(obligatoryServices.length > 0 || securityDepositPrice) && (
           <Typography
             variant="body2"
@@ -203,7 +204,7 @@ const ExtrasTab = ({ yacht }: ExtrasTabProps) => {
           );
         })}
       </Stack>
-    </Stack>
+    </CollapsibleBlock>
   );
 };
 

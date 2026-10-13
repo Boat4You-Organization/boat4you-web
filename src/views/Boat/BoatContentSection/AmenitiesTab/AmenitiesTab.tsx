@@ -1,9 +1,10 @@
 /* eslint-disable react/no-array-index-key */
 import React from 'react';
 
-import { Box, Divider, Grid, List, ListItem, Stack, Typography } from '@mui/material';
+import { Box, Divider, Grid, List, ListItem, Typography } from '@mui/material';
 import { useTranslations } from 'next-intl';
 
+import CollapsibleBlock from '@/components/CollapsibleBlock';
 import Amenities from '@/components/SvgIcons/Amenities';
 import Check from '@/components/SvgIcons/Check';
 import {
@@ -19,6 +20,9 @@ import { presentAmenities } from '@/utils/static/amenities';
 
 interface AmenitiesTabProps {
   yacht: YachtModel;
+  /** Folded by default; the tabs bar opens it (BoatContentSection). */
+  open: boolean;
+  onToggle: () => void;
 }
 
 // Split a free-text amenities/toys block on newlines and drop empty lines.
@@ -30,10 +34,17 @@ const splitTextLines = (text: string | null | undefined): string[] =>
     .map(line => line.trim())
     .filter(line => line.length > 0);
 
-const AmenitiesTab = ({ yacht }: AmenitiesTabProps) => {
+const AmenitiesTab = ({ yacht, open, onToggle }: AmenitiesTabProps) => {
   const t = useTranslations('yacht');
   // Linked rows only (presentAmenities): the catalogue code's translation.
   const renderAmenityLabel = useAmenityLabel();
+  // The section heading (icon + text), the switch of the folded block.
+  const heading = (
+    <>
+      <Amenities variant="secondary" size={32} />
+      {t('amenities')}
+    </>
+  );
 
   // Bucket every amenity into one of the 9 modern categories. Rows whose
   // Equipment.category is a legacy bucket (SALOON_AND_CABINS,
@@ -158,25 +169,12 @@ const AmenitiesTab = ({ yacht }: AmenitiesTabProps) => {
     if (amenityItems.length === 0 && toyItems.length === 0) return null;
 
     return (
-      <Stack direction="column" spacing={3}>
-        <Typography
-          component="h2"
-          variant="h3"
-          fontWeight={700}
-          display="flex"
-          flexDirection="row"
-          alignItems="center"
-          gap={1}
-        >
-          <Amenities variant="secondary" size={32} />
-          {t('amenities')}
-        </Typography>
-
+      <CollapsibleBlock title={heading} open={open} onToggle={onToggle}>
         <Grid container spacing={{ xs: 3, md: 4 }} alignItems="flex-start">
           {renderCustomTextList(t('saloonAndCabins'), amenityItems, 'amenity')}
           {renderCustomTextList(t('entertainment'), toyItems, 'toy')}
         </Grid>
-      </Stack>
+      </CollapsibleBlock>
     );
   }
 
@@ -202,20 +200,7 @@ const AmenitiesTab = ({ yacht }: AmenitiesTabProps) => {
   const populatedRows = YACHT_EQUIPMENT_CATEGORY_TYPE_ARRAY.filter(({ type }) => (buckets[type] || []).length > 0);
 
   return (
-    <Stack direction="column" spacing={3}>
-      <Typography
-        component="h2"
-        variant="h3"
-        fontWeight={700}
-        display="flex"
-        flexDirection="row"
-        alignItems="center"
-        gap={1}
-      >
-        <Amenities variant="secondary" size={32} />
-        {t('amenities')}
-      </Typography>
-
+    <CollapsibleBlock title={heading} open={open} onToggle={onToggle}>
       <Box
         sx={{
           px: { xs: 0, md: 1 },
@@ -224,7 +209,7 @@ const AmenitiesTab = ({ yacht }: AmenitiesTabProps) => {
       >
         {populatedRows.map(({ type }, idx) => renderCategoryRow(type, buckets[type] || [], idx > 0))}
       </Box>
-    </Stack>
+    </CollapsibleBlock>
   );
 };
 

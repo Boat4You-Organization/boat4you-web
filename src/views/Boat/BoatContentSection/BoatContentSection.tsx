@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useContext, useEffect, useMemo, useRef } from 'react';
+import React, { useContext, useEffect, useMemo, useRef, useState } from 'react';
 
 import { Box, Container, Divider, Grid, Stack, Tab, Tabs } from '@mui/material';
 import { useTranslations } from 'next-intl';
@@ -68,6 +68,11 @@ const BoatContentSection = ({ yacht, yachtFaq, capacity, layoutImages = [] }: Bo
   }, []);
 
   const currentTabs = yacht.custom ? singleCustomBoatTabs : singleBoatTabs;
+  // Amenities and Extras are folded until pressed (owner 13.10.2026, every
+  // boat); choosing their tab opens them, so the scroll lands on content.
+  const [expanded, setExpanded] = useState<Record<string, boolean>>({});
+  const isFolded = (tabName: string) => tabName === 'ammenities' || tabName === 'extras';
+  const toggleSection = (tabName: string) => setExpanded(prev => ({ ...prev, [tabName]: !prev[tabName] }));
   const sectionIds = useMemo(() => singleBoatTabs.map((_, index) => `section-${index}`), []);
 
   const activeSectionId = useScrollSpy(sectionIds, 0.2);
@@ -127,6 +132,10 @@ const BoatContentSection = ({ yacht, yachtFaq, capacity, layoutImages = [] }: Bo
   };
 
   const handleTabChange = (_: React.SyntheticEvent, newValue: number) => {
+    const tabName = currentTabs[newValue];
+
+    if (tabName && isFolded(tabName)) setExpanded(prev => ({ ...prev, [tabName]: true }));
+
     scrollToSection(newValue);
   };
 
@@ -135,11 +144,11 @@ const BoatContentSection = ({ yacht, yachtFaq, capacity, layoutImages = [] }: Bo
       case 'details':
         return <DetailsTab yacht={yacht} capacity={capacity} />;
       case 'ammenities':
-        return <AmenitiesTab yacht={yacht} />;
+        return <AmenitiesTab yacht={yacht} open={!!expanded.ammenities} onToggle={() => toggleSection('ammenities')} />;
       case 'availability':
         return <AvailabilityTab yacht={yacht} />;
       case 'extras':
-        return <ExtrasTab yacht={yacht} />;
+        return <ExtrasTab yacht={yacht} open={!!expanded.extras} onToggle={() => toggleSection('extras')} />;
       case 'priceDetails':
         return <PriceDetailsTab yacht={yacht} />;
       case 'goodToKnow':

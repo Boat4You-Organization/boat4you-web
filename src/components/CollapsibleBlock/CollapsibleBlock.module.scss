@@ -1,0 +1,38 @@
+@use '@/styles/settings/variables' as *;
+@use '@/styles/utils/rem-calc' as *;
+
+// The whole heading row is the button: title left, chevron right, inherits
+// the h2 font so a folded section reads exactly like an open one.
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: rem-calc(4 0);
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  border-radius: rem-calc(8);
+
+  &:focus-visible {
+    outline: rem-calc(2) solid $blue-500;
+    outline-offset: rem-calc(2);
+  }
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  gap: rem-calc(8);
+  align-items: center;
+}
+
+.chevron {
+  flex-shrink: 0;
+  font-size: rem-calc(28);
+  transition: transform 0.2s ease;
+
+  &.open {
+    transform: rotate(180deg);
+  }
+}
