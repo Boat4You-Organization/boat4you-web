@@ -1,5 +1,16 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-10-13 — 🧹 Bez „fotografija istog modela"; 📂 Amenities i opcionalne usluge sklopljeni; 🗺️ karta marine po koordinatama/čistom imenu; 📐 kartice u grid prikazu poravnate — ✅ DEPLOYANO 13.10.2026 (`4661dcbec` 06:0x, `9b6a5736e` 06:1x, `ffa9525f2` 06:2x, `6e0841ecd` 06:4x UTC; zadnji live build `2ed2014e9` druge sesije sadrži sve), tag `live/2026-10-13b`
+
+Izvor: Mario 13.10. („OVO MI SE NE SVIDJA … makni same model slike"; „Amenities neka bude sakriven … isto i za optional services … kod svih plovila"; „ne sakrit sve extrase, samo optional services"; „Marina Kaštela … kada se otvori mapa ne vodi na marinu"; „napravi da mora biti sve u istoj ravnini, visini"; „marina kastela vs marina kastela, kastel gomilica, to je isto").
+
+- `4661dcbec`: sekcija „fotografije istog modela" uklonjena (klik je vodio na drugi brod, Back zbunjuje). Ostaje: tlocrt kao jedina slika prikazuje se jednom (galerija), bez bloka.
+- `9b6a5736e` + `ffa9525f2`: `CollapsibleBlock` (naslov = gumb sa strelicom, aria-expanded, MUI Collapse — sadržaj ostaje u HTML-u). Amenities sklopljen do pritiska; u Extras naslov i „odabrane usluge" (obvezne + polog) ostaju vidljivi, sklapaju se samo „opcionalne usluge". Klik na karticu Amenities/Extras u traci kartica otvara sekciju prije skrola. Svi brodovi.
+- `6e0841ecd`: `googleMapsQuery` — koordinate kad ih API pošalje (LocationDto lat/lon, backend ADMIN V9_77), inače ime bez „Marina | Grad" cijevi (Google je „Marina Kaštela | Kaštel Gomilica" čitao kao dva mjesta). BoatLocationModal prima lat/lon; hero, Availability, Wishlist i kartica (polazna ili one-way odredišna marina) ih prosljeđuju. Grid prikaz pretrage: CSS grid, svaka kartica subgrid od 6 redova (slika, naziv, marina, podaci, oprema, cijena) → redovi u istoj visini kroz red kartica; list prikaz i mobitel nepromijenjeni.
+- Nazivi marine (dva zapisa u bazi: location 63 „Marina Kastela" bez grada i 1935 „Marina Kaštela | Kaštel Gomilica"): podatkovni fix i popis duplikata radi ADMIN (backend).
+
+**Provjere (13.10.):** FIND US II bez sekcije same-model i bez bloka tlocrta; BELO: „Selected services" vidljive, „Optional services" sklopljene; grid pretrage uživo (1440 px): `display:grid`, 3 stupca, `grid-template-rows: subgrid`, vrhovi redova identični u sva 3 stupca u 2 reda; SEO regresija sva 4 deploya 0 novih FAIL; eslint 0, stylelint 0, lint hook prošao.
+
 ## 2026-10-13 — 📖 Chat widget: linkovi na blog vodiče ispod odgovora (`994d5574d`, grana `feat/chat-blog-links`) — ⏳ NIJE DEPLOYANO (čeka Mariov „da")
 
 Izvor: Mario 13.10.: „neka chatbot šalje klijente i na blogove … imate blog koji smo napravili baš o tome". Backend (boat4you-backend `feat/chat-security-guard`, alat `show_blog_posts`) dodaje u payload poruke `blogs: [{title, url:"/blog/<slug>"}]` uz kartice brodova; widget ih prikazuje kao kartice-linkove (📖 + naslov, nova kartica preglednika). Prikazuje se samo `/blog/<slug>` s tekstualnim naslovom (React tekst, `next/link`).
