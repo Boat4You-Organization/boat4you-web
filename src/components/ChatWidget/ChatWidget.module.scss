@@ -190,6 +190,33 @@
   color: #2856ff;
 }
 
+.blogLinks {
+  display: flex;
+  flex-direction: column;
+  gap: rem-calc(6);
+  margin-top: rem-calc(8);
+}
+
+.blogLink {
+  display: flex;
+  gap: rem-calc(8);
+  align-items: flex-start;
+  padding: rem-calc(8 10);
+  background: #fff;
+  border: 1px solid #e4e8f8;
+  border-radius: rem-calc(12);
+  font-size: rem-calc(13);
+  font-weight: 600;
+  line-height: 1.35;
+  color: #2856ff;
+  text-decoration: none;
+  transition: border-color 0.15s ease;
+
+  &:hover {
+    border-color: #2856ff;
+  }
+}
+
 .inputRow {
   display: flex;
   gap: rem-calc(8);

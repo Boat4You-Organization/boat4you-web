@@ -21,6 +21,14 @@ interface ChatMessage {
   payload: string | null;
 }
 
+/** A boat4you blog guide the assistant recommends; built by the backend from the published posts (13.10.2026). */
+interface BlogLink {
+  title: string;
+  url: string;
+}
+
+const BLOG_PATH = /^\/blog\/[a-z0-9-]+$/;
+
 interface YachtCard {
   name: string;
   slug: string;
@@ -321,6 +329,23 @@ const ChatWidget = () => {
     }
   };
 
+  // Only our own /blog/<slug> paths with a text title become links.
+  const blogsOf = (m: ChatMessage): BlogLink[] => {
+    if (!m.payload) return [];
+
+    try {
+      const { blogs } = JSON.parse(m.payload) as { blogs?: unknown };
+
+      if (!Array.isArray(blogs)) return [];
+
+      return blogs.filter(
+        (b): b is BlogLink => typeof b?.title === 'string' && typeof b?.url === 'string' && BLOG_PATH.test(b.url)
+      );
+    } catch {
+      return [];
+    }
+  };
+
   return (
     <>
       {!open && (
@@ -417,6 +442,16 @@ const ChatWidget = () => {
                               </p>
                               <p className={styles.cardPrice}>€{c.totalPriceEur.toLocaleString('de-DE')}</p>
                             </div>
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                    {blogsOf(m).length > 0 && (
+                      <div className={styles.blogLinks}>
+                        {blogsOf(m).map(b => (
+                          <Link key={b.url} href={b.url} className={styles.blogLink} target="_blank">
+                            <span aria-hidden>📖</span>
+                            {b.title}
                           </Link>
                         ))}
                       </div>
