@@ -11,12 +11,16 @@ Izvor: Mario 13.10. („OVO MI SE NE SVIDJA … makni same model slike"; „Amen
 
 **Provjere (13.10.):** FIND US II bez sekcije same-model i bez bloka tlocrta; BELO: „Selected services" vidljive, „Optional services" sklopljene; grid pretrage uživo (1440 px): `display:grid`, 3 stupca, `grid-template-rows: subgrid`, vrhovi redova identični u sva 3 stupca u 2 reda; SEO regresija sva 4 deploya 0 novih FAIL; eslint 0, stylelint 0, lint hook prošao.
 
-## 2026-10-13 — 📖 Chat widget: linkovi na blog vodiče ispod odgovora (`994d5574d`, grana `feat/chat-blog-links`) — ⏳ NIJE DEPLOYANO (čeka Mariov „da")
+## 2026-10-13 — 📖 Chat widget: linkovi na blog vodiče ispod odgovora (`7b9376a23`) — ✅ DEPLOYANO 13.10.2026 ~06:46 UTC (`2ed2014e9`, dpl=`2ed2014e9411-mv6b9ml2`, tag `live/2026-10-13b`)
 
 Izvor: Mario 13.10.: „neka chatbot šalje klijente i na blogove … imate blog koji smo napravili baš o tome". Backend (boat4you-backend `feat/chat-security-guard`, alat `show_blog_posts`) dodaje u payload poruke `blogs: [{title, url:"/blog/<slug>"}]` uz kartice brodova; widget ih prikazuje kao kartice-linkove (📖 + naslov, nova kartica preglednika). Prikazuje se samo `/blog/<slug>` s tekstualnim naslovom (React tekst, `next/link`).
 
-- **Deploy PRIJE backenda** (stari backend ne šalje `blogs` → widget ne prikazuje ništa novo). Ako backend ide prvi, bot kaže „link je ispod", a link se ne vidi.
-- Provjereno: eslint 0, stylelint 0, prettier čist na `ChatWidget.tsx` / `.module.scss`; tsc u worktreeu ima 1.683 postojeće greške tipova prijevoda (`never`, simlinkani node_modules) — nijedna na izmijenjenim linijama. Lokalni `next build` namjerno NIJE pokrenut (puni prod API); **vizualno nije provjereno** — nakon deploya: pitati IRIS „7 days from Split route?" → ispod odgovora kartica „7-Day Itinerary from Split" koja otvara /blog/7-day-itinerary-from-split-croatia.
+- Deployano PRIJE backenda (stari backend ne šalje `blogs` → widget ne prikazuje ništa novo).
+- Provjereno prije: eslint 0, stylelint 0, prettier čist; samostalni `tsc` daje 1.683 greške tipova prijevoda jer mu fale tipovi koje generira tek `next build` (`.next/types`) — build ih ima i prošao je (131 s, `cpus: 1`).
+- **Deploy** `b4y_web_deploy.sh` iz worktreea (`B4Y_REPO=…/wt-chat-blogs`, rebasiran na tada živi `6e0841ecd`, pa je `main` fast-forwardan na `2ed2014e9` prije builda): swap, deployment id `2ed2014e9411-mv6b9ml2` na `/`, `/contact-us`, `/search`; warm-up 200.
+- **Provjera uživo:** chunk widgeta (`b4y_chat_token`) sadrži `blog\/[a-z0-9-]+$`; u pregledniku (testna sesija „Marko Provjera", token poslije obrisan) panel prikazuje kartice „📖 7-Day Sailing Itinerary from Split | Realistic Week" i „📖 Sailing License Requirements 2026 | Charter Yacht Guide" s `href="/blog/<slug>"`, `target="_blank"`; backend (06:53 UTC) ih šalje.
+- SEO regresija (Stage B, quick, 54 stranice): 1 novi red **T13** na `/es/itineraries/ionian/lefkas-kefalonia-zakynthos-14-days` (engleski tekst rute na ES stranici, 7,3 %) — stranica itinerara, NE ovaj commit (widget nema teksta u `<main>`); quick uzorak (54) drukčiji od punog (118). Report: `_seo-audit-2026-10-13/regression/064801-B-boat4you/summary.md`.
+- ⏳ Kozmetika za iduće: naslovi kartica su SEO `<title>` („… | Realistic Week"), ljepši je naslov članka (H1 / naslovnica); isti članak se zna ponoviti u idućem odgovoru.
 
 ## 2026-10-13 — 🛡️ Chat widget: napomena o pohrani + zaključano stanje; 📷 fotografije istog modela za brod bez vlastitih — ✅ DEPLOYANO 13.10.2026 05:31 UTC (`c4652c7a7`) i 06:05 UTC (`9c9d046ce`, deployment id `9c9d046ce635-mv691dq0`), tag `live/2026-10-13`
 
