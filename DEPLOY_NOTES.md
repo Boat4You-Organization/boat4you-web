@@ -1,5 +1,12 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-10-13 — 📄 Opis broda u svijetlom panelu s „Read more / Read less"; isti panel na „Good to know" — ✅ DEPLOYANO 13.10.2026 09:2x UTC (`ce51ba656`, deployment id `ce51ba656e4f-mv6h3f4s`), tag `live/2026-10-13f`
+
+Izvor: Mario 13.10. („Vidi kako su napravili dio di je tekst … pozadinu napravi i kod nas tako i napravi da se vidi samo dio našeg teksta i da ima read more i read less, istu pozadinu napravi i na good to know"), uzor croatia-yachting-charter.com (siva pozadina #f2f2f2 iza opisa).
+
+- `ReadMorePanel`: sivi zaobljeni panel ($black-100), od tableta veći odmaci; s `collapsible` tijelo je skraćeno na ~7 redaka s prijelazom u boju panela i gumbom „Read more"/„Read less" (aria-expanded) — gumb i prijelaz samo kad tekst stvarno prelazi visinu (ResizeObserver). Cijeli tekst ostaje u DOM-u (Google ga čita).
+- DetailsTab: SEO opis (i opis custom broda) u panelu; GoodToKnowTab: stavke u istom panelu bez sklapanja. `common.readLess` ×9 jezika (readMore je postojao).
+
 ## 2026-10-13 — 🗜️ Kompaktne kartice u grid prikazu (bez reda opreme, „Available" i gumba; marina ispod naziva) — ✅ DEPLOYANO 13.10.2026 08:5x UTC (`a79c245e5`, deployment id `a79c245e5f1b-mv6ggbiy`), tag `live/2026-10-13e`
 
 Izvor: Mario 13.10. („previše rašireno, previše veliko, vidi kako je konkurent to napravio croatia-yachting-charter.com … makni available, makni boat details, skupi marinu bliže imenu, makni ove značajke").
