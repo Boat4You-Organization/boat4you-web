@@ -1,5 +1,12 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-10-13 — 🗜️ Kompaktne kartice u grid prikazu (bez reda opreme, „Available" i gumba; marina ispod naziva) — ✅ DEPLOYANO 13.10.2026 08:5x UTC (`a79c245e5`, deployment id `a79c245e5f1b-mv6ggbiy`), tag `live/2026-10-13e`
+
+Izvor: Mario 13.10. („previše rašireno, previše veliko, vidi kako je konkurent to napravio croatia-yachting-charter.com … makni available, makni boat details, skupi marinu bliže imenu, makni ove značajke").
+
+- Grid prikaz (pretraga grid, „You might also like", itinerari, deals): bez reda s 3 istaknute značajke, bez „Available"/„On request" bedža i bez gumba „Boat details" (cijela kartica je link); crveno „pre-reserved" upozorenje ostaje; bez rezerviranih visina ispod naziva i marine (subgrid poravnava redove); blok s cijenom uži i desno poravnat; subgrid je sada 5 redova (slika, naziv, marina, podaci, cijena).
+- List prikaz pretrage nepromijenjen (bedž, gumb, oprema ostaju).
+
 ## 2026-10-13 — 🏷️ Kartice: samo ime marine („Marina Kaštela"); 📐 „You might also like", itinerary i deals kartice u poravnatoj mreži — ✅ DEPLOYANO 13.10.2026 08:0x UTC (`cbc629263`, deployment id `cbc6292633b6-mv6df3a0`), tag `live/2026-10-13d`
 
 Izvor: Mario 13.10. („Marina Kaštela, Kaštel Gomilica i Marina Kastela su iste marine, trebaju biti oboje pod Marina Kastela i tako se prikazat. Isto tako You might also like plovila trebaju biti iste veličine, istih dimenzija, isto izgledat").
