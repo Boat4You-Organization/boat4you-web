@@ -6,6 +6,7 @@ import { useLocale, useTranslations } from 'next-intl';
 
 import CapacityText from '@/components/CapacityText';
 import { ACCOMMODATION_ROW_KEYS, CAPACITY_ROW_ICONS } from '@/components/CapacityText/capacityRowIcons';
+import ReadMorePanel from '@/components/ReadMorePanel';
 import { Beam, Dimensions, Fuel, WaterTank } from '@/components/SvgIcons/BoatFeatures';
 import Calendar from '@/components/SvgIcons/Calendar';
 import Description from '@/components/SvgIcons/Description';
@@ -257,105 +258,111 @@ const DetailsTab = ({ yacht, capacity: resolvedCapacity }: DetailsTabProps) => {
           // are bolded so they stand out both to readers and search-engine
           // parsers. Translations use <b>…</b> markers and `t.rich()`
           // renders them through a <strong> handler to keep semantic HTML.
-          <Stack direction="column" spacing={2}>
-            {cabins && yacht.buildYear && locationLabel && yacht.model ? (
-              <Typography variant="body1" color={colors.black500}>
-                {t.rich(
-                  `yacht.descIntroV${descVariant(1)}` as never,
-                  {
-                    cabins,
-                    vesselType: vesselTypeLabel,
-                    vesselTypeCap,
-                    model: yacht.model,
-                    name: displayName,
-                    year: String(yacht.buildYear),
-                    location: locationLabel,
-                    b: bold,
-                  } as never
-                )}
-              </Typography>
-            ) : (
-              // Short intro that survives missing model / year / base — each
-              // part is an ICU select on the sentinel 'none', so a missing
-              // value drops its clause instead of printing "built in ." .
-              <Typography variant="body1" color={colors.black500}>
-                {t.rich(
-                  'yacht.descIntroShort' as never,
-                  {
-                    name: displayName,
-                    vesselType: vesselTypeLabel,
-                    model: yacht.model || 'none',
-                    year: yacht.buildYear ? String(yacht.buildYear) : 'none',
-                    location: locationLabel || 'none',
-                    b: bold,
-                  } as never
-                )}
-              </Typography>
-            )}
-            {accommodation.length > 0 && (
-              <Typography variant="body1" color={colors.black500}>
-                {accommodation.map((part, index) => (
-                  <React.Fragment key={part.key}>
-                    {index > 0 && ' '}
-                    {t.rich(`yacht.${part.key}` as never, { ...part.values, name: displayName, b: bold } as never)}
-                  </React.Fragment>
-                ))}
-              </Typography>
-            )}
-            {description && (
-              <Typography variant="body1" color={colors.black500}>
-                {description}
-              </Typography>
-            )}
-            {lengthValue && beamValue && (yacht.fuelTank || yacht.waterTank) && (
-              <Typography variant="body1" color={colors.black500}>
-                {t.rich(
-                  (engineRow ? `yacht.descSpecsV${descVariant(3)}` : `yacht.descSpecsShortV${descVariant(3)}`) as never,
-                  {
-                    name: displayName,
-                    length: lengthValue,
-                    beam: beamValue,
-                    engine: engineRow?.value ?? '',
-                    fuel: String(yacht.fuelTank ?? 0),
-                    water: String(yacht.waterTank ?? 0),
-                    b: (chunks: React.ReactNode) => <strong>{chunks}</strong>,
-                    // The partner's own engine label stays English (lang="en").
-                    engineLabel: (chunks: React.ReactNode) =>
-                      engineLang ? <span lang={engineLang}>{chunks}</span> : chunks,
-                  } as never
-                )}
-              </Typography>
-            )}
-            {yacht.location?.name && (
-              <Typography variant="body1" color={colors.black500}>
-                {t.rich(
-                  (countryName ? `yacht.descRegionV${descVariant(4)}` : 'yacht.descSailingRegionNoCountry') as never,
-                  {
-                    location: baseName,
-                    country: countryName ?? '',
-                    b: (chunks: React.ReactNode) => <strong>{chunks}</strong>,
-                  } as never
-                )}
-              </Typography>
-            )}
-            <Typography variant="body1" color={colors.black500}>
-              {t.rich(
-                // Booking copy ("book online", "real-time prices") would be
-                // wrong for a boat booked by inquiry (no bookable offer, or an
-                // inquiry-only agency) — ask for dates.
-                (isBookedByInquiry(yacht) ? 'yacht.descCtaInquiry' : `yacht.descCtaV${descVariant(5)}`) as never,
-                {
-                  name: displayName,
-                  b: (chunks: React.ReactNode) => <strong>{chunks}</strong>,
-                } as never
+          <ReadMorePanel>
+            <Stack direction="column" spacing={2}>
+              {cabins && yacht.buildYear && locationLabel && yacht.model ? (
+                <Typography variant="body1" color={colors.black500}>
+                  {t.rich(
+                    `yacht.descIntroV${descVariant(1)}` as never,
+                    {
+                      cabins,
+                      vesselType: vesselTypeLabel,
+                      vesselTypeCap,
+                      model: yacht.model,
+                      name: displayName,
+                      year: String(yacht.buildYear),
+                      location: locationLabel,
+                      b: bold,
+                    } as never
+                  )}
+                </Typography>
+              ) : (
+                // Short intro that survives missing model / year / base — each
+                // part is an ICU select on the sentinel 'none', so a missing
+                // value drops its clause instead of printing "built in ." .
+                <Typography variant="body1" color={colors.black500}>
+                  {t.rich(
+                    'yacht.descIntroShort' as never,
+                    {
+                      name: displayName,
+                      vesselType: vesselTypeLabel,
+                      model: yacht.model || 'none',
+                      year: yacht.buildYear ? String(yacht.buildYear) : 'none',
+                      location: locationLabel || 'none',
+                      b: bold,
+                    } as never
+                  )}
+                </Typography>
               )}
-            </Typography>
-          </Stack>
+              {accommodation.length > 0 && (
+                <Typography variant="body1" color={colors.black500}>
+                  {accommodation.map((part, index) => (
+                    <React.Fragment key={part.key}>
+                      {index > 0 && ' '}
+                      {t.rich(`yacht.${part.key}` as never, { ...part.values, name: displayName, b: bold } as never)}
+                    </React.Fragment>
+                  ))}
+                </Typography>
+              )}
+              {description && (
+                <Typography variant="body1" color={colors.black500}>
+                  {description}
+                </Typography>
+              )}
+              {lengthValue && beamValue && (yacht.fuelTank || yacht.waterTank) && (
+                <Typography variant="body1" color={colors.black500}>
+                  {t.rich(
+                    (engineRow
+                      ? `yacht.descSpecsV${descVariant(3)}`
+                      : `yacht.descSpecsShortV${descVariant(3)}`) as never,
+                    {
+                      name: displayName,
+                      length: lengthValue,
+                      beam: beamValue,
+                      engine: engineRow?.value ?? '',
+                      fuel: String(yacht.fuelTank ?? 0),
+                      water: String(yacht.waterTank ?? 0),
+                      b: (chunks: React.ReactNode) => <strong>{chunks}</strong>,
+                      // The partner's own engine label stays English (lang="en").
+                      engineLabel: (chunks: React.ReactNode) =>
+                        engineLang ? <span lang={engineLang}>{chunks}</span> : chunks,
+                    } as never
+                  )}
+                </Typography>
+              )}
+              {yacht.location?.name && (
+                <Typography variant="body1" color={colors.black500}>
+                  {t.rich(
+                    (countryName ? `yacht.descRegionV${descVariant(4)}` : 'yacht.descSailingRegionNoCountry') as never,
+                    {
+                      location: baseName,
+                      country: countryName ?? '',
+                      b: (chunks: React.ReactNode) => <strong>{chunks}</strong>,
+                    } as never
+                  )}
+                </Typography>
+              )}
+              <Typography variant="body1" color={colors.black500}>
+                {t.rich(
+                  // Booking copy ("book online", "real-time prices") would be
+                  // wrong for a boat booked by inquiry (no bookable offer, or an
+                  // inquiry-only agency) — ask for dates.
+                  (isBookedByInquiry(yacht) ? 'yacht.descCtaInquiry' : `yacht.descCtaV${descVariant(5)}`) as never,
+                  {
+                    name: displayName,
+                    b: (chunks: React.ReactNode) => <strong>{chunks}</strong>,
+                  } as never
+                )}
+              </Typography>
+            </Stack>
+          </ReadMorePanel>
         )}
         {yacht.custom && yacht.description && (
-          <Typography variant="body1" color={colors.black500}>
-            {yacht.description}
-          </Typography>
+          <ReadMorePanel>
+            <Typography variant="body1" color={colors.black500}>
+              {yacht.description}
+            </Typography>
+          </ReadMorePanel>
         )}
         {/* priceDescription was here previously — moved to AmenitiesTab so
             the High/Mid/Low season pricing block sits below the amenities

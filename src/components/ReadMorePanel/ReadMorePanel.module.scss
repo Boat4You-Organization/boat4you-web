@@ -1,0 +1,58 @@
+@use '@/styles/settings/variables' as *;
+@use '@/styles/utils/rem-calc' as *;
+@use '@/styles/mixins/breakpoints' as *;
+
+// The light panel behind the boat page prose (competitor parity, owner
+// 13.10.2026): soft grey, rounded, roomier from tablet up.
+.panel {
+  padding: rem-calc(20);
+  background-color: $black-100;
+  border-radius: rem-calc(12);
+
+  @include media('md') {
+    padding: rem-calc(28 32);
+  }
+}
+
+.body {
+  position: relative;
+
+  // Folded: the first lines, fading out into the panel colour.
+  &.folded {
+    overflow: hidden;
+
+    &::after {
+      position: absolute;
+      inset: auto 0 0;
+      height: rem-calc(64);
+      pointer-events: none;
+      content: '';
+      background: linear-gradient(to bottom, rgba($black-100, 0), $black-100);
+    }
+  }
+}
+
+.toggle {
+  display: inline-flex;
+  gap: rem-calc(4);
+  align-items: center;
+  margin-top: rem-calc(12);
+  font-size: rem-calc(15);
+  font-weight: 700;
+  color: $blue-500;
+  border-radius: rem-calc(6);
+
+  &:focus-visible {
+    outline: rem-calc(2) solid $blue-500;
+    outline-offset: rem-calc(2);
+  }
+}
+
+.chevron {
+  font-size: rem-calc(20);
+  transition: transform 0.2s ease;
+
+  &.open {
+    transform: rotate(180deg);
+  }
+}
