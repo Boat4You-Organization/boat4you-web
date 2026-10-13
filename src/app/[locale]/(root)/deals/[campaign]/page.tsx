@@ -1,9 +1,10 @@
-import { Box, Button, Container, Grid, Typography } from '@mui/material';
+import { Box, Button, Container, Typography } from '@mui/material';
 import { Metadata } from 'next';
 import { Locale } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 
+import BoatCardGrid from '@/components/BoatCardGrid';
 import { StaticBoatListingItemCard } from '@/components/BoatListingItemCard';
 import Layout from '@/components/Layout';
 import PromoBanner, { DEALS_LIST_ID } from '@/components/PromoBanner';
@@ -152,17 +153,15 @@ const DealsPage = async ({ params }: DealsPageParams) => {
             {t('landing.noBoats')}
           </Typography>
         ) : (
-          <Grid container columnSpacing={2} rowSpacing={3}>
+          <BoatCardGrid>
             {/* The static card (plain /boat/<slug> link, as on the itinerary
                 pages): the search card reads useSearchParams, which bails a
                 statically rendered page out to a 500 without a Suspense
                 boundary — and the deals URL carries no dates anyway. */}
             {boats.map(yacht => (
-              <Grid key={yacht.id} size={{ xs: 12, md: 4 }}>
-                <StaticBoatListingItemCard isGridView {...yacht} user={null} />
-              </Grid>
+              <StaticBoatListingItemCard key={yacht.id} isGridView alignRows {...yacht} user={null} />
             ))}
-          </Grid>
+          </BoatCardGrid>
         )}
 
         <Box display="flex" justifyContent="center" my={{ xs: 4, md: 6 }}>

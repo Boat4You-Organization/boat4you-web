@@ -1,6 +1,7 @@
-import { Box, Container, Grid, Typography } from '@mui/material';
+import { Container, Typography } from '@mui/material';
 import { getTranslations } from 'next-intl/server';
 
+import BoatCardGrid from '@/components/BoatCardGrid';
 import BoatListingItemCard from '@/components/BoatListingItemCard';
 import { Currency, UserModel } from '@/models/user.model';
 import { MeasurementInfo, MeasurementUnit } from '@/models/yacht-feature.model';
@@ -197,9 +198,7 @@ const RelatedBoats = async ({ yacht, user, locale, currency, startDate, endDate 
 
     if (pages <= 1 || remainingMs <= 0) return first.content ?? [];
 
-    const rest = await Promise.allSettled(
-      Array.from({ length: pages - 1 }, (_, i) => readPage(i + 2, remainingMs))
-    );
+    const rest = await Promise.allSettled(Array.from({ length: pages - 1 }, (_, i) => readPage(i + 2, remainingMs)));
 
     return [
       ...(first.content ?? []),
@@ -265,15 +264,11 @@ const RelatedBoats = async ({ yacht, user, locale, currency, startDate, endDate 
       <Typography component="h2" variant="h3" fontWeight={700} sx={{ mb: { xs: 2, sm: 3 } }}>
         {t('relatedHeading')}
       </Typography>
-      <Grid container spacing={3}>
+      <BoatCardGrid>
         {related.map(boat => (
-          <Grid key={boat.id} size={{ xs: 12, sm: 6, md: 4 }}>
-            <Box sx={{ height: '100%' }}>
-              <BoatListingItemCard {...boat} isGridView user={user} />
-            </Box>
-          </Grid>
+          <BoatListingItemCard key={boat.id} {...boat} isGridView alignRows user={user} />
         ))}
-      </Grid>
+      </BoatCardGrid>
     </Container>
   );
 };

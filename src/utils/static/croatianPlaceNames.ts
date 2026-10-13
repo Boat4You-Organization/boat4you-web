@@ -52,6 +52,17 @@ export const displayPlaceName = (name: string): string =>
  * boat meta description already uses (live check 8.10.2026, F6), with the
  * diacritics restored. Map look-ups and links keep the catalogue name.
  */
+/**
+ * A boat's base as the listing cards name it: the marina alone ("Marina
+ * Kaštela"), not "Marina Kaštela, Kaštel Gomilica" (owner 13.10.2026: both
+ * Kaštela records "under Marina Kaštela"). The town the partner appends after
+ * the pipe adds nothing beside a card photo, and no active marina shares its
+ * name with a marina in another town (catalogue check 13.10.2026). The boat
+ * page keeps the full form (displayBaseName).
+ */
+export const displayMarinaName = (name: string | null | undefined): string =>
+  displayPlaceName(((name ?? '').split('|')[0] ?? '').trim());
+
 export const displayBaseName = (name: string | null | undefined): string =>
   displayPlaceName(
     (name ?? '')

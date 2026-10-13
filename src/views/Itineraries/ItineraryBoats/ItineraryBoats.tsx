@@ -1,6 +1,7 @@
-import { Box, Container, Grid, Stack, Typography } from '@mui/material';
+import { Box, Container, Stack, Typography } from '@mui/material';
 import { getTranslations } from 'next-intl/server';
 
+import BoatCardGrid from '@/components/BoatCardGrid';
 import { StaticBoatListingItemCard } from '@/components/BoatListingItemCard';
 import colors from '@/styles/themes/colors';
 import { boatTypePlural } from '@/utils/server/catalogueHubs';
@@ -66,15 +67,11 @@ const ItineraryBoats = async ({ startingPoint, fallbacks, locale }: ItineraryBoa
           {seeAllLabel} →
         </Box>
       </Stack>
-      <Grid container spacing={3}>
+      <BoatCardGrid>
         {data.boats.map(boat => (
-          <Grid key={boat.id} size={{ xs: 12, sm: 6, md: 4 }}>
-            <Box sx={{ height: '100%' }}>
-              <StaticBoatListingItemCard {...boat} isGridView user={null} />
-            </Box>
-          </Grid>
+          <StaticBoatListingItemCard key={boat.id} {...boat} isGridView alignRows user={null} />
         ))}
-      </Grid>
+      </BoatCardGrid>
       {data.typeHubs.length > 0 && (
         <Box sx={{ mt: { xs: 4, md: 5 } }}>
           <Typography component="h3" variant="h4" fontWeight={700} color={colors.blue950}>

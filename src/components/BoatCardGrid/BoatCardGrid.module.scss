@@ -1,0 +1,19 @@
+@use '@/styles/utils/rem-calc' as *;
+@use '@/styles/mixins/breakpoints' as *;
+
+// One column on a phone, two on a tablet, three from md up; the cards span
+// six subgrid rows from md up (BoatListingItemCard .alignedItem).
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  column-gap: rem-calc(24);
+  row-gap: rem-calc(24);
+
+  @include media('sm') {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @include media('md') {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

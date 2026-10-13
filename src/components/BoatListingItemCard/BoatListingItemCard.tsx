@@ -40,7 +40,7 @@ import colors from '@/styles/themes/colors';
 import useBreakpoint from '@/utils/hooks/useBreakpoint';
 import useCapacityFmt from '@/utils/hooks/useCapacityFmt';
 import { canonicalEquipmentCode } from '@/utils/static/amenities';
-import { displayBaseName } from '@/utils/static/croatianPlaceNames';
+import { displayMarinaName } from '@/utils/static/croatianPlaceNames';
 import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
 import { getBoatImageUrl } from '@/utils/static/imageUtils';
 import { hasListingPrice, listingPriceDays } from '@/utils/static/listingPrice';
@@ -496,7 +496,7 @@ const BoatListingItemCardView = ({
                       aria-label={t('common.openInMap')}
                     >
                       {/* "Marina, Town" with its diacritics (R32, F6); openMapFor keeps the catalogue name. */}
-                      {displayBaseName(location.name)}
+                      {displayMarinaName(location.name)}
                       <OpenInNew sx={{ fontSize: { xs: 14, md: 12 } }} />
                     </Box>
                     {locationTo?.name && (
@@ -534,14 +534,14 @@ const BoatListingItemCardView = ({
                           }}
                           aria-label={t('common.openInMap')}
                         >
-                          {displayBaseName(locationTo.name)}
+                          {displayMarinaName(locationTo.name)}
                           <OpenInNew sx={{ fontSize: { xs: 14, md: 12 } }} />
                         </Box>
                       </>
                     )}
                   </Typography>
                 ) : (
-                  <Typography variant="body1">{displayBaseName(location.name)}</Typography>
+                  <Typography variant="body1">{displayMarinaName(location.name)}</Typography>
                 )}
               </Stack>
             )}
