@@ -200,7 +200,7 @@ describe('splitLayoutImages / withLayoutImagesApart', () => {
     assert.equal(apart.yacht.yachtImages.find(i => i.mainImage)?.id, 12);
   });
 
-  test('only layouts: the hero keeps showing them (no photo to show), the block lists them', () => {
+  test('only layouts: the hero keeps showing them (no photo to show), no block (owner 13.10.2026)', () => {
     const images = [
       { id: 20, position: 1, mainImage: false, layout: true },
       { id: 21, position: 0, mainImage: true, type: 'layout' },
@@ -216,7 +216,9 @@ describe('splitLayoutImages / withLayoutImagesApart', () => {
     const boat = yacht(images);
 
     assert.equal(withLayoutImagesApart(boat).yacht, boat);
-    assert.equal(withLayoutImagesApart(boat).layoutImages.length, 2);
+    // The gallery already shows the drawing; a block would repeat the boat's
+    // only image (owner 13.10.2026, Lagoon 43 FIND US II).
+    assert.equal(withLayoutImagesApart(boat).layoutImages.length, 0);
   });
 });
 

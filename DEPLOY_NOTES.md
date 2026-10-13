@@ -1,5 +1,15 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-10-13 — 🛡️ Chat widget: napomena o pohrani + zaključano stanje; 📷 fotografije istog modela za brod bez vlastitih — ✅ DEPLOYANO 13.10.2026 05:31 UTC (`c4652c7a7`) i 06:05 UTC (`9c9d046ce`, deployment id `9c9d046ce635-mv691dq0`), tag `live/2026-10-13`
+
+Izvor: Mario 10.10. (sondiranje IRIS-a 4.10. s IP 31.22.91.227: „mora prestati komunikaciju ili reći da razgovor preuzima live agent … mora biti napisano da se svi razgovori memoriraju") i 13.10. („GRESKA SAMO LAYOUT TU, DI SU SLIKE BRODA" — Lagoon 43 FIND US II, partner objavljuje samo tlocrt; „1,2,3 odradi odmah").
+
+- Chat widget (`c4652c7a7`): `chatWidget.recordingNotice` ispod zaglavlja, uvijek vidljiva, 9 jezika; status `LOCKED` ili HTTP 423 na slanje → red za unos zamijenjen porukom `lockedNotice` (agent uživo preuzima); 400 `invalid_name` → `nameInvalid` ispod polja (polje 40 znakova, kao pravilo na backendu); 429 → tekst vraćen u polje + `rateLimited`; odbijeno slanje briše optimistični balon. Backend čuvar (423/LOCKED/400, validacija imena, zaključavanje) ide zasebno iz boat4you-ws (sesija chat-guard), ugovor je ovaj. Prikaz poruka ostaje čisti tekst — nikad markdown/HTML u chatu.
+- Fotografije istog modela (`9c9d046ce`): za brod bez ijedne prave fotografije (samo tlocrt ili ništa; 12 + 67 aktivnih brodova 13.10.) `sameModelPhotos.ts` nalazi drugi brod istog modela s ≥ 4 prave fotografije (flota modela iz kataloga, 4 kandidata, detalj keširan 1 dan) i ispod heroja prikazuje sekciju „Fotografije istog modela" (9 jezika) s napomenom da je drugo plovilo i linkom na njega; nikad u galeriji broda. Izvan 12 promoviranih država ili bez takvog broda stranica je kao prije.
+- Tlocrt kao jedina slika: `withLayoutImagesApart` više ne daje blok tlocrta (galerija ga već prikazuje) — dedupe koji je Mario primijetio.
+
+**Provjere (13.10.):** uživo FIND US II en/hr: sekcija same-model (8 fotki), bez bloka tlocrta; Lagoon 55 The Moon: blok tlocrta ostaje, bez sekcije; `/` i `/hr`: napomena o pohrani u HTML-u; SEO regresija oba deploya 0 novih FAIL; `yarn test:layout` 20/20 (slučaj „samo tlocrt" ažuriran na novo pravilo), `yarn test:pdf` 5/5, eslint 0 grešaka. Popis 79 brodova bez prave fotografije po agenciji: infra repo `docs/yachts-without-photos-2026-10-13.csv`.
+
 ## 2026-10-09 — 📐 Tlocrt plovila u svom bloku iznad „Sadržaja", izbačen iz fotografija — ✅ DEPLOYANO 9.10.2026 15:23 UTC (`5214e4803`), aktivno od backenda 17:52 UTC (polje `layout`); provjereno uživo 12663 + 847/3186/6009/14281
 
 Izvor: Mario 9.10.2026 („moram pretraživat slike da nađem layout plovila … stavi poviše amenities da stoji samostalno samo layout tu i izbaci ga iz slika"). Samo web, bez env promjena. Kapacitet, oprema i njihove poruke nisu dirani.
