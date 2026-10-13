@@ -29,7 +29,13 @@ const WishlistItem = ({ yacht }: WishlistItemProps) => {
   return (
     <>
       {yacht.location?.name && (
-        <BoatLocationModal open={isMapOpen} onClose={toggleMap} locationName={yacht.location.name} />
+        <BoatLocationModal
+          open={isMapOpen}
+          onClose={toggleMap}
+          locationName={yacht.location.name}
+          lat={yacht.location.lat}
+          lon={yacht.location.lon}
+        />
       )}
       <Link href={`/boat/${yacht.slug}?${queryParams}`} className={styles.containerWrapper}>
         <Card classes={{ root: styles.root }} className={styles.container}>

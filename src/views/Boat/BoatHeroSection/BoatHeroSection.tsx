@@ -67,7 +67,15 @@ const BoatHeroSection = ({ yacht, layoutImages }: BoatHeroSectionProps) => {
   return (
     <>
       <BoatShareModal open={isOpen} onOpen={toggeIsOpen} onClose={toggeIsOpen} yacht={yacht} />
-      {mapMarinaName && <BoatLocationModal open={isMapOpen} onClose={closeMap} locationName={mapMarinaName} />}
+      {mapMarinaName && (
+        <BoatLocationModal
+          open={isMapOpen}
+          onClose={closeMap}
+          locationName={mapMarinaName}
+          lat={yacht.location?.lat}
+          lon={yacht.location?.lon}
+        />
+      )}
       <Container component="section" maxWidth="xl" disableGutters className={styles.container}>
         {/* Mobile order flips via CSS (title below the photo, Boataround-style,
             Mario 20.7.2026) — single H1 in the DOM either way. */}

@@ -35,7 +35,7 @@ import FavoriteButton from '@/components/FavoriteButton';
 import FlagIcon from '@/components/FlagIcon';
 import { Link } from '@/i18n/navigation';
 import { UserModel, UserRoleName } from '@/models/user.model';
-import { MatchKind, OfferStatus, YachtModelShortInfo } from '@/models/yacht.model';
+import { Location, MatchKind, OfferStatus, YachtModelShortInfo } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
 import useBreakpoint from '@/utils/hooks/useBreakpoint';
 import useCapacityFmt from '@/utils/hooks/useCapacityFmt';
@@ -71,6 +71,12 @@ const cleanModelName = (raw: string): string =>
 
 interface BoatListingItemCardProps extends YachtModelShortInfo {
   isGridView: boolean;
+  /**
+   * Grid view in a CSS grid parent (BoatsSection): the card becomes a subgrid
+   * of six rows — photo, name, marina, specs, highlights, price — so the rows
+   * line up across the row of cards whatever wraps (owner 13.10.2026).
+   */
+  alignRows?: boolean;
   user: UserModel | null;
   isSelected?: boolean;
   /** Above-the-fold card: its photo is the page's LCP on phones, so it must
@@ -105,6 +111,7 @@ const BoatListingItemCardView = ({
   offerStatus,
   custom,
   isGridView,
+  alignRows = false,
   mainImageId,
   modelName,
   user,
@@ -131,10 +138,12 @@ const BoatListingItemCardView = ({
   // Track WHICH marina the map modal shows, so a one-way card can open either
   // the pickup or the drop-off. null = closed. (Replaces the single-location
   // toggle, which could only ever show `location`.)
-  const [mapMarinaName, setMapMarinaName] = useState<string | null>(null);
-  const isMapOpen = mapMarinaName !== null;
-  const closeMap = () => setMapMarinaName(null);
-  const openMapFor = (marinaName: string) => setMapMarinaName(marinaName);
+  // The marina the map shows (pickup or one-way drop-off), with its
+  // coordinates when the API sends them (BoatLocationModal).
+  const [mapMarina, setMapMarina] = useState<Location | null>(null);
+  const isMapOpen = mapMarina !== null;
+  const closeMap = () => setMapMarina(null);
+  const openMapFor = (marina: Location) => setMapMarina(marina);
 
   const isAdmin = roleGuard(user?.roles || [], [UserRoleName.SYSTEM_ADMIN]);
   // Cabins · Berths · Max. people as the partner sends them (no WC, no crew
@@ -287,12 +296,25 @@ const BoatListingItemCardView = ({
 
   return (
     <>
-      {mapMarinaName && <BoatLocationModal open={isMapOpen} onClose={closeMap} locationName={mapMarinaName} />}
-      <Link href={boatDetailHref} target="_blank" rel="noopener noreferrer">
+      {mapMarina && (
+        <BoatLocationModal
+          open={isMapOpen}
+          onClose={closeMap}
+          locationName={mapMarina.name}
+          lat={mapMarina.lat}
+          lon={mapMarina.lon}
+        />
+      )}
+      <Link
+        href={boatDetailHref}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={cx({ [styles.alignedItem]: alignRows })}
+      >
         <Card
           elevation={0}
           classes={{ root: styles.root }}
-          className={cx(styles.container, { [styles.gridView]: isGridView })}
+          className={cx(styles.container, { [styles.gridView]: isGridView, [styles.alignedCard]: alignRows })}
         >
           <CardMedia className={cx(styles.imageWrapper, { [styles.gridView]: isGridView })}>
             <Image
@@ -391,7 +413,7 @@ const BoatListingItemCardView = ({
             )}
           </CardMedia>
           {/* Single content column — info on top, price + CTA pushed to bottom-right */}
-          <CardContent className={styles.content}>
+          <CardContent className={cx(styles.content, { [styles.alignedContent]: alignRows })}>
             <Stack direction="row" alignItems="center" justifyContent="space-between">
               <Typography
                 variant="h3"
@@ -403,6 +425,8 @@ const BoatListingItemCardView = ({
               {isAdmin && !isGridView && !isMobile && <Checkbox checked={isSelected} onClick={handleCheckboxClick} />}
             </Stack>
 
+            {/* Aligned rows: a card without a marina keeps the row (BoatsSection grid). */}
+            {!location && alignRows && <Box aria-hidden="true" />}
             {location && (
               <Stack
                 direction="row"
@@ -452,13 +476,13 @@ const BoatListingItemCardView = ({
                       onClick={e => {
                         e.preventDefault();
                         e.stopPropagation();
-                        openMapFor(location.name);
+                        openMapFor(location);
                       }}
                       onKeyDown={e => {
                         if (e.key === 'Enter' || e.key === ' ') {
                           e.preventDefault();
                           e.stopPropagation();
-                          openMapFor(location.name);
+                          openMapFor(location);
                         }
                       }}
                       sx={{
@@ -491,13 +515,13 @@ const BoatListingItemCardView = ({
                           onClick={e => {
                             e.preventDefault();
                             e.stopPropagation();
-                            openMapFor(locationTo.name);
+                            openMapFor(locationTo);
                           }}
                           onKeyDown={e => {
                             if (e.key === 'Enter' || e.key === ' ') {
                               e.preventDefault();
                               e.stopPropagation();
-                              openMapFor(locationTo.name);
+                              openMapFor(locationTo);
                             }
                           }}
                           sx={{

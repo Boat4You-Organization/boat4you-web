@@ -18,3 +18,15 @@
     }
   }
 }
+
+// Grid view: three cards a row from tablet up, each spanning six subgrid rows
+// (BoatListingItemCard .alignedItem); phones stack them.
+.alignedGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: rem-calc(24) rem-calc(16);
+
+  @include media('md') {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

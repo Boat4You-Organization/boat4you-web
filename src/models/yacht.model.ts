@@ -178,6 +178,10 @@ export type Location = {
   id?: string;
   name: string;
   countryCode: string;
+  /** Marina coordinates (LocationDto lat/lon, backend 13.10.2026+) — the
+   *  map pin; absent on an older backend, the map then searches the name. */
+  lat?: number | null;
+  lon?: number | null;
 };
 
 export interface YachtImage {

@@ -313,6 +313,39 @@ const BoatsSection = ({
     resetData();
   }, []);
 
+  // Grid view: a CSS grid whose cards are row subgrids, so photo, name,
+  // marina, specs, highlights and price sit at the same height across a row
+  // of cards (owner 13.10.2026); list view keeps the MUI grid.
+  const cards = isGridView ? (
+    <Box className={styles.alignedGrid}>
+      {content?.map((yacht, index) => (
+        <BoatListingItemCard
+          key={`${yacht.id}-${index + 1}`}
+          isGridView
+          alignRows
+          {...yacht}
+          user={user}
+          isSelected={selectedYachtIds.includes(yacht.id)}
+          imagePriority={LCP_CARD_PRIORITY[index]}
+        />
+      ))}
+    </Box>
+  ) : (
+    <MuiGrid container columnSpacing={2} rowSpacing={3}>
+      {content?.map((yacht, index) => (
+        <MuiGrid key={`${yacht.id}-${index + 1}`} size={12}>
+          <BoatListingItemCard
+            isGridView={false}
+            {...yacht}
+            user={user}
+            isSelected={selectedYachtIds.includes(yacht.id)}
+            imagePriority={LCP_CARD_PRIORITY[index]}
+          />
+        </MuiGrid>
+      ))}
+    </MuiGrid>
+  );
+
   return (
     <>
       <AdminInquiryModal
@@ -443,19 +476,7 @@ const BoatsSection = ({
           {isEmpty ? (
             <ListEmptyState title={tCommon('noExactMatches')} description={tCommon('noExactMatchesDescription')} />
           ) : (
-            <MuiGrid container columnSpacing={2} rowSpacing={3}>
-              {content?.map((yacht, index) => (
-                <MuiGrid key={`${yacht.id}-${index + 1}`} size={{ xs: 12, md: isGridView ? 4 : 12 }}>
-                  <BoatListingItemCard
-                    isGridView={isGridView}
-                    {...yacht}
-                    user={user}
-                    isSelected={selectedYachtIds.includes(yacht.id)}
-                    imagePriority={LCP_CARD_PRIORITY[index]}
-                  />
-                </MuiGrid>
-              ))}
-            </MuiGrid>
+            cards
           )}
         </Stack>
         {!isEmpty && (

@@ -170,3 +170,39 @@
     }
   }
 }
+
+// Grid view inside a CSS grid parent (BoatsSection .alignedGrid): the card is
+// a subgrid of six rows — photo, name, marina, specs, highlights, price — so
+// every row lines up across the cards of a row whatever wraps (owner
+// 13.10.2026). Phones keep the flex card above (one column, nothing to align).
+.alignedItem {
+  @include media('md') {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 6;
+  }
+}
+
+.root.container.alignedCard {
+  @include media('md') {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: 1 / -1;
+    height: auto;
+
+    .imageWrapper.gridView {
+      grid-row: 1;
+    }
+
+    .content.alignedContent {
+      display: grid;
+      grid-template-rows: subgrid;
+      grid-row: 2 / -1;
+      align-content: start;
+
+      .priceBlock {
+        align-self: end;
+      }
+    }
+  }
+}

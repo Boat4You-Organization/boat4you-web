@@ -148,7 +148,13 @@ const AvailabilityTab = ({ yacht }: AvailabilityTabProps) => {
             onClick={yacht.location?.name ? toggleMap : undefined}
           />
           {yacht.location?.name && (
-            <BoatLocationModal open={isMapOpen} onClose={toggleMap} locationName={yacht.location.name} />
+            <BoatLocationModal
+              open={isMapOpen}
+              onClose={toggleMap}
+              locationName={yacht.location.name}
+              lat={yacht.location.lat}
+              lon={yacht.location.lon}
+            />
           )}
         </Grid>
       </Stack>
