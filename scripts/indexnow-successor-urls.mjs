@@ -89,10 +89,34 @@ const equalsIgnoreCase = (a, b) => {
 export const toSlug = input =>
   ktTrim(String(input).toLowerCase().replace(NOT_SLUG_CHAR, '')).replace(JAVA_SPACES, '-').replace(/-+/g, '-');
 
+// R31 (backend wave 2): a name that repeats the model is left out of the slug,
+// as on the page label ("Gulet" / "Gulet" / "Gulet" -> gulet-18992, not
+// gulet-gulet-18992). nameCore / nameRepeatsModel are a copy of
+// src/utils/static/toTitleCase.ts.
+const VESSEL_PREFIX_FOLDED = /^(?:m s|m y|s y|m v|s v|msy|ms|my|sy|mv|sv)\s+/;
+
+const nameCore = value =>
+  (value ?? '')
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/\p{M}/gu, '')
+    .replace(/[^\p{L}\p{N}]+/gu, ' ')
+    .trim()
+    .replace(VESSEL_PREFIX_FOLDED, '');
+
+/** True when the name is the model's words, or its last words (case, punctuation, a vessel-type prefix ignored). */
+export const nameRepeatsModel = (model, name) => {
+  const modelCore = nameCore(model);
+  const ownName = nameCore(name);
+
+  return !!modelCore && !!ownName && (modelCore === ownName || modelCore.endsWith(` ${ownName}`));
+};
+
 /**
  * SlugUtils.toSlugWithId: manufacturer, model and boat name, without the
  * manufacturer when the model already starts with it ("Lagoon" + "Lagoon 42"),
- * then "-<id>"; just the id when all three are blank.
+ * without the name when it repeats the model (R31), then "-<id>"; just the id
+ * when all three are blank.
  */
 export const toSlugWithId = (manufacturerName, modelName, yachtName, yachtId) => {
   const manufacturer = ktTrim(manufacturerName ?? '');
@@ -100,9 +124,11 @@ export const toSlugWithId = (manufacturerName, modelName, yachtName, yachtId) =>
   const modelHasManufacturer =
     (!isBlank(manufacturer) && model.toLowerCase().startsWith(`${manufacturer.toLowerCase()} `)) ||
     equalsIgnoreCase(model, manufacturer);
-  const parts = [modelHasManufacturer ? null : manufacturerName, modelName, yachtName].filter(
-    part => part != null && !isBlank(part)
-  );
+  const parts = [
+    modelHasManufacturer ? null : manufacturerName,
+    modelName,
+    nameRepeatsModel(modelName, yachtName) ? null : yachtName,
+  ].filter(part => part != null && !isBlank(part));
   const slugPart = parts.length > 0 ? toSlug(parts.join('-')) : '';
 
   return slugPart ? `${slugPart}-${yachtId}` : String(yachtId);

@@ -78,6 +78,27 @@ describe('toSlugWithId = backend SlugUtils.toSlugWithId', () => {
     assert.equal(toSlugWithId('Ω', 'Ψ', '', 7), '--7');
   });
 
+  test('R31: a name that repeats the model is left out (Gulet | Gulet -> gulet-18992)', () => {
+    assert.equal(toSlugWithId('Gulet', 'Gulet', 'Gulet', 18992), 'gulet-18992');
+    assert.equal(toSlugWithId('Gulet', 'gulet', 'GULET ', 18992), 'gulet-18992');
+    assert.equal(toSlugWithId(null, 'MY Custom Anthea', 'Anthea', 9), 'my-custom-anthea-9');
+    assert.equal(toSlugWithId(null, 'MS Custom Aurum Sky', 'M/S Aurum Sky', 10), 'ms-custom-aurum-sky-10');
+    assert.equal(toSlugWithId('Lagoon', 'Lagoon 42', 'My Lagoon', 11), 'lagoon-42-my-lagoon-11');
+    assert.equal(toSlugWithId('Gulet', 'Gulet', 'Pacha', 11765), 'gulet-pacha-11765');
+  });
+
+  test('R31: a "Boat4You" fleet label keeps the whole name in the slug', () => {
+    assert.equal(
+      toSlugWithId('Leopard', 'Leopard 42', 'Boat4You 424/4/4 Premium', 12001),
+      'leopard-42-boat4you-42444-premium-12001'
+    );
+    assert.equal(
+      toSlugWithId('Robertson & Caine', 'Sunsail 424', 'Boat4You 424/4/4 Premium', 12002),
+      'robertson-caine-sunsail-424-boat4you-42444-premium-12002'
+    );
+    assert.equal(toSlugWithId('Leopard', 'Leopard 42', 'Boat4You', 12003), 'leopard-42-boat4you-12003');
+  });
+
   test("Java's \\s: a no-break space is removed, not turned into a hyphen", () => {
     assert.equal(toSlugWithId(null, 'Lagoon 42', 'Sea\u00a0Ya', 8), 'lagoon-42-seaya-8');
   });
