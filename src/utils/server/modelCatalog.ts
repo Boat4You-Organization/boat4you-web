@@ -369,6 +369,9 @@ const fleetUrl = (model: CatalogModel, page: number): string => {
     currency: 'EUR',
     size: String(FLEET_PAGE_SIZE),
     page: String(page),
+    // The model fleet gates the model pages and sitemap-models.xml: the
+    // backend's listing price floor must not drop a page or a URL.
+    sitemap: 'true',
   });
 
   return `${apiBase()}/public/yachts?${query.toString()}`;

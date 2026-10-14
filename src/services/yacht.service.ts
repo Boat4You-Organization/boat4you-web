@@ -153,7 +153,9 @@ export const FLEET_REVALIDATE_SECONDS = 21600;
 export async function fetchFleetChunk(
   searchParams: YachtSearchParams
 ): Promise<PaginatedResponse<YachtModelShortInfo>> {
-  const queryParams = createYachtQueryParams({ ...searchParams, currency: Currency.EUR });
+  // `sitemap: true`: the directory lists every boat — the backend's listing
+  // price floor must not shrink it.
+  const queryParams = createYachtQueryParams({ ...searchParams, currency: Currency.EUR, sitemap: true });
   const url = `${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/yachts${queryParams}`;
 
   // Retried (fetchWithRetry), because throwing is the right contract but a

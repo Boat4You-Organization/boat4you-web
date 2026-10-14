@@ -111,6 +111,12 @@ export interface YachtSearchParams {
   /** Sitemap-only — yacht ids in [idFrom, idTo), with `sortBy: 'id'` (yachtSitemapShards.ts). */
   idFrom?: number;
   idTo?: number;
+  /**
+   * Sitemap / fleet-directory reads only — `sitemap=true` exempts the read from
+   * the backend's listing price floor, so no boat URL drops out of the
+   * sitemaps or /fleet (owner rule 7.10.2026). Never set on a customer listing.
+   */
+  sitemap?: boolean;
   /** `week` — an undated search prices each boat by its cheapest bookable week (searchLanding.ts). */
   priceBasis?: 'week';
   currentDate?: string;

@@ -36,7 +36,9 @@ export const SITEMAP_COUNTRY_CODES = Array.from(PROMOTED_COUNTRY_CODES);
  */
 export async function fetchSitemapCatalogueTop(revalidate: number): Promise<{ maxId: number; total: number }> {
   const data = await fetchYachts(
-    { locations: [], page: 1, size: 1, sortBy: 'idDesc', countryCodes: SITEMAP_COUNTRY_CODES },
+    // No id range here, so `sitemap: true` keeps the backend's listing price
+    // floor from lowering maxId (and with it the shard count).
+    { locations: [], page: 1, size: 1, sortBy: 'idDesc', countryCodes: SITEMAP_COUNTRY_CODES, sitemap: true },
     Currency.EUR,
     'en',
     { revalidate }
