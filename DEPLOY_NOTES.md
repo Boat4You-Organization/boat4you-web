@@ -1,5 +1,14 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-10-14 — 🏷️ Extras bez cijene: oznaka po načinu plaćanja (ON_SITE → „On request, paid in the marina") — ✅ DEPLOYANO 14.10.2026 09:1x UTC (`6524798c2`, deployment id `6524798c27e4-mv7w2wnp`), tag `live/2026-10-14`
+
+Izvor: Mario 14.10. („sredi" za pravilo „samo brodovi s pravom cijenom", odluka D6 od 27.9.: obvezni 0 € = Included, neobvezni 0 € = na upit, plaća se u marini). Web preduvjet za backend prekidač `EXTRAS_ZERO_OPTIONAL_ON_SITE` (jar J1, grana `feat/real-price-search`, V9_82); dok je prekidač OFF backend šalje INCLUDED kao i danas pa se ništa ne mijenja na stranici.
+
+- `unpricedExtraLabelKey`: INCLUDED → `paidIncluded`, **ON_SITE → `onRequestPaidAtMarina`** (novi `common` ključ ×9 jezika), ostalo → `priceOnRequest`; nikad „0 €". Sva pozivna mjesta (ExtrasCard, BoatCalendarForm, PaymentPoliciesCard, PriceDetailsContent, PaymentTab) nepromijenjena; PaymentTab čita pohranjeni `paymentType` rezervacije (null → INCLUDED), pa stare rezervacije zadržavaju oznake.
+- Testovi `yarn test:price` 10/10 (3 nova), eslint 0, tsc 0; build iz worktreea `wt-labels` (`B4Y_REPO`), ne iz lokalnog maina (ADMIN-ovi nepushani commiti); Turbopack ne prihvaća symlink `node_modules` izvan projekta → APFS klon (`cp -Rc`).
+
+**Provjere (14.10.):** uživo `dpl=6524798c27e4-mv7w2wnp`; SEO regresija 0 novih FAIL (42 poznata, 23 WARN, 2 XPASS). Sisteri ×6 isti dan: Extras.tsx oznaka Included / On request, paid in the marina / Price on request (+ `max-w-[50%]` na mobitelu), wizard bez „0 €".
+
 ## 2026-10-13 — 📍 7 pinova landinga za marine s dva zapisa (preduvjet backend V9_78 „spoji duple marine") — ✅ DEPLOYANO 13.10.2026 09:53 UTC (`a9590e20f`, deployment id `a9590e20f7be-mv6i45yn`), tag `live/2026-10-13h`
 
 Commit ADMIN sesije (`landing-identity.config.ts`): Marina Lav - Podstrana (l-72 + l-1423), Lavrion Main Port, Preveza Main Port, Skiathos, Adaköy Marina, Marina Admiral, Skopea Marina — ime = ASCII URL, dids unija oba zapisa, stari oblici imena kao 308 aliasi. URL-ovi landinga ostaju isti i nakon što backend spoji zapise.
