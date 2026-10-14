@@ -1,5 +1,13 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-10-14 — 🗺️ `sitemap=true` na sitemap i fleet-hub dohvatima (izuzeće od backend price floora) — ✅ DEPLOYANO 14.10.2026 10:1x UTC (`d4c503a54`, deployment id `d4c503a54925-mv7xy8pb`), tag `live/2026-10-14b`
+
+Backend J1 (14.10.) uvodi `SEARCH_PRICE_FLOOR` (brodovi < 300 €/tj ispadaju iz listinga/countova/faceta); izuzeti su samo zahtjevi s `idFrom`/`idTo` ili `sitemap=true`, da sitemapovi i fleet hubovi ne izgube URL-ove (Mario 7.10.). Stari backend ignorira nepoznati parametar.
+
+- `fetchSitemapCatalogueTop` (sortBy=idDesc, maxId za broj shardova) → `sitemap: true` (novi `YachtSearchParams.sitemap`); `fetchFleetChunk` (/fleet) uvijek `sitemap=true`; `modelCatalog.fleetUrl` (model/brand stranice + sitemap-models.xml, jedan zajednički dohvat) `sitemap=true`. Yacht shardovi već šalju `idFrom`.
+- Namjerno BEZ izuzeća (floor će ih smanjiti): `/search` i landinzi, deals, itinerary brodovi, RelatedBoats, `fleetTotalForDid` (landing gate ≥ 10 brodova → landing ispod praga ispada iz sitemap-locations/categories — to su landing URL-ovi, ne brodovi), siteStats.
+- Provjere: eslint 0; tsc ima 20 pre-existing grešaka na origin/main (message-key tipovi u FAQSection/SeoTextSection/buildMetadata/BuilderIntro/LandingPageIndex/placeText), ni jedna u promijenjenim datotekama; SEO regresija 0 novih FAIL (37 poznatih, 18 WARN); build iz worktreea `wt-sitemap` (`B4Y_REPO`).
+
 ## 2026-10-14 — 🏷️ Extras bez cijene: oznaka po načinu plaćanja (ON_SITE → „On request, paid in the marina") — ✅ DEPLOYANO 14.10.2026 09:1x UTC (`6524798c2`, deployment id `6524798c27e4-mv7w2wnp`), tag `live/2026-10-14`
 
 Izvor: Mario 14.10. („sredi" za pravilo „samo brodovi s pravom cijenom", odluka D6 od 27.9.: obvezni 0 € = Included, neobvezni 0 € = na upit, plaća se u marini). Web preduvjet za backend prekidač `EXTRAS_ZERO_OPTIONAL_ON_SITE` (jar J1, grana `feat/real-price-search`, V9_82); dok je prekidač OFF backend šalje INCLUDED kao i danas pa se ništa ne mijenja na stranici.
