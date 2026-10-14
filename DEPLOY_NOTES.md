@@ -1,5 +1,13 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-10-14 — 🔤 Emoji „tofu“ kvadratići → inline SVG ikone (trip PWA: vrijeme po WMO kodu, itinerar, tabovi, uloge, share, poklon; ChatWidget, AI hint, standard offers) — ✅ DEPLOYANO 14.10.2026 12:4x UTC (`1335345e4`, deployment id `1335345e43ee-mv83j0pj`), tag `live/2026-10-14c`
+
+Mario 14.10. (screenshot trip aplikacije): na uređaju bez emoji fonta Chrome je umjesto 🌤 (U+1F324) u vremenskoj prognozi i 🗺 (U+1F5FA) u naslovu „Suggested itinerary“ crtao kvadratić s hex kodom (☁ iz osnovnog bloka radi). Zamjena emoji iz dopunskog bloka SVG ikonama (`src/components/SvgIcons/UiEmojiIcons.tsx`: currentColor, 1.2em, aria-hidden / aria-label kad nose značenje):
+
+- TripHub: WMO kod → IconSun/SunCloud/PartlyCloudy/Cloud/Fog/Drizzle/Rain/Showers/Snow/Thunder (snijeg 71–86 sada ima ikonu; nepoznat kod → SunCloud „Weather“), itinerar 🗺 → IconMap, tabovi 📄/💬, install 📲, 🌊, 🎁 (Tripadvisor), 📸, 📞 (SOS/112), 🔔; 👋 u pozdravu uklonjen.
+- TripSocial: 👑 → IconCrown („Trip leader“), 🧭 → IconCompass, 📤 → IconShareOut, 📅/📷 → Calendar/Camera. `trip/not-found` 🎁 → IconGift; ChatWidget 📖 → IconBook; AiHintStrip 💡 → postojeći Bulp; AvailabilityStandardOffers 😀 uklonjen. BMP simboli (⚓ ⛵ ✓ ★ ✕ ♥) ostaju.
+- Provjere: eslint 0 (hook prošao), tsc samo pre-existing greške izvan promijenjenih datoteka; pregled svih 24 ikona u pregledniku; SEO regresija 0 novih FAIL (37 poznatih, 18 WARN); build iz worktreea `wt-icons` (`B4Y_REPO`).
+
 ## 2026-10-14 — 🗺️ `sitemap=true` na sitemap i fleet-hub dohvatima (izuzeće od backend price floora) — ✅ DEPLOYANO 14.10.2026 10:1x UTC (`d4c503a54`, deployment id `d4c503a54925-mv7xy8pb`), tag `live/2026-10-14b`
 
 Backend J1 (14.10.) uvodi `SEARCH_PRICE_FLOOR` (brodovi < 300 €/tj ispadaju iz listinga/countova/faceta); izuzeti su samo zahtjevi s `idFrom`/`idTo` ili `sitemap=true`, da sitemapovi i fleet hubovi ne izgube URL-ove (Mario 7.10.). Stari backend ignorira nepoznati parametar.
