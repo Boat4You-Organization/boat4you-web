@@ -147,7 +147,7 @@ const AvailabilityStandardOffers = ({ yachtSlug }: AvailabilityStandardOffersPro
     <Stack direction="column" spacing={3} padding={4} className={styles.container}>
       <Stack direction="row" justifyContent="space-between" alignItems={{ xs: 'flex-start', md: 'center' }} spacing={2}>
         <Typography variant="h4" component="h3">
-          {t('tooShortOfStay')} 😀
+          {t('tooShortOfStay')}
         </Typography>
         <Box className={styles.arrowButtonsContainer}>
           <IconButton

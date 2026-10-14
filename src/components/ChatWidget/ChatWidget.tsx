@@ -5,6 +5,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import Link from 'next/link';
 
+import { IconBook } from '@/components/SvgIcons/UiEmojiIcons';
 import useCapacityFmt from '@/utils/hooks/useCapacityFmt';
 import { getBoatImageUrl } from '@/utils/static/imageUtils';
 import { capacityChips, fromYacht } from '@/utils/static/yachtCapacity';
@@ -450,7 +451,7 @@ const ChatWidget = () => {
                       <div className={styles.blogLinks}>
                         {blogsOf(m).map(b => (
                           <Link key={b.url} href={b.url} className={styles.blogLink} target="_blank">
-                            <span aria-hidden>📖</span>
+                            <IconBook style={{ marginTop: '0.1em' }} />
                             {b.title}
                           </Link>
                         ))}

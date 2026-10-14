@@ -1,9 +1,11 @@
 'use client';
 
 /* eslint-disable @next/next/no-img-element */
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { type ReactNode, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
 import QRCode from 'qrcode';
+
+import { IconCalendar, IconCamera, IconCompass, IconCrown, IconShareOut } from '@/components/SvgIcons/UiEmojiIcons';
 
 import type { TripDto } from './TripHub';
 
@@ -52,9 +54,9 @@ interface TripSocialProps {
   ownerCredentials: TripOwnerCredentials | null;
 }
 
-const ROLE_BADGES: Record<string, string> = {
-  OWNER: '👑',
-  SKIPPER: '🧭',
+const ROLE_BADGES: Record<string, ReactNode> = {
+  OWNER: <IconCrown label="Trip leader" />,
+  SKIPPER: <IconCompass label="Skipper" />,
   CONCIERGE: '⚓',
   GUEST: '⛵',
 };
@@ -540,7 +542,13 @@ const TripSocial = ({ trip, token, apiUrl, ownerCredentials }: TripSocialProps) 
                     or payments.
                   </div>
                   <button type="button" onClick={shareInvite} style={{ ...BTN_BLUE, padding: '10px' }}>
-                    {copied ? 'Link copied ✓' : '📤 Share the trip link'}
+                    {copied ? (
+                      'Link copied ✓'
+                    ) : (
+                      <>
+                        <IconShareOut /> Share the trip link
+                      </>
+                    )}
                   </button>
                 </div>
               </div>
@@ -761,7 +769,7 @@ const TripSocial = ({ trip, token, apiUrl, ownerCredentials }: TripSocialProps) 
                   {zipping ? 'Preparing your download…' : '⬇ Download all photos'}
                 </button>
                 <div style={{ ...SUB, fontSize: 12 }}>
-                  📅 Save your photos by{' '}
+                  <IconCalendar /> Save your photos by{' '}
                   <b style={{ color: '#0f172a' }}>
                     {photoDeletionAt.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
                   </b>{' '}
@@ -784,7 +792,13 @@ const TripSocial = ({ trip, token, apiUrl, ownerCredentials }: TripSocialProps) 
                   disabled={uploading}
                   style={{ ...BTN_BLUE, background: '#f3d300', color: '#442704', opacity: uploading ? 0.6 : 1 }}
                 >
-                  {uploading ? 'Uploading…' : '📷 Add a photo'}
+                  {uploading ? (
+                    'Uploading…'
+                  ) : (
+                    <>
+                      <IconCamera /> Add a photo
+                    </>
+                  )}
                 </button>
                 {uploadError && <div style={{ color: '#b32424', fontSize: 12.5 }}>{uploadError}</div>}
                 <label

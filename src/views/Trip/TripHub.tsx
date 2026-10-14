@@ -1,9 +1,30 @@
 'use client';
 
 /* eslint-disable @next/next/no-img-element */
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { type ReactNode, useCallback, useEffect, useMemo, useState } from 'react';
 
 import LogoWithoutText from '@/components/SvgIcons/LogoWithoutText';
+import {
+  IconBell,
+  IconCamera,
+  IconChat,
+  IconCloud,
+  IconDocument,
+  IconDrizzle,
+  IconFog,
+  IconGift,
+  IconInstallPhone,
+  IconMap,
+  IconPartlyCloudy,
+  IconPhone,
+  IconRain,
+  IconShowers,
+  IconSnow,
+  IconSun,
+  IconSunCloud,
+  IconThunder,
+  IconWaves,
+} from '@/components/SvgIcons/UiEmojiIcons';
 import { areaForMarina, suggestedRoutesForArea } from '@/helper/itineraryMatch';
 import type { CapacityDto } from '@/utils/static/yachtCapacity';
 
@@ -92,25 +113,40 @@ const DOC_LABELS: Record<string, string> = {
   PREFERENCE_LIST: 'Preference list',
 };
 
-const WMO_ICONS: Record<number, string> = {
-  0: '☀️',
-  1: '🌤',
-  2: '⛅',
-  3: '☁️',
-  45: '🌫',
-  48: '🌫',
-  51: '🌦',
-  53: '🌦',
-  55: '🌧',
-  61: '🌧',
-  63: '🌧',
-  65: '🌧',
-  80: '🌦',
-  81: '🌧',
-  82: '⛈',
-  95: '⛈',
-  96: '⛈',
-  99: '⛈',
+/** WMO weather code → inline SVG (emoji rendered as tofu on devices without an emoji font). */
+type WeatherIcon = (p: { label?: string }) => ReactNode;
+
+const WMO_ICONS: Record<number, [WeatherIcon, string]> = {
+  0: [IconSun, 'Clear sky'],
+  1: [IconSunCloud, 'Mainly clear'],
+  2: [IconPartlyCloudy, 'Partly cloudy'],
+  3: [IconCloud, 'Overcast'],
+  45: [IconFog, 'Fog'],
+  48: [IconFog, 'Fog'],
+  51: [IconDrizzle, 'Light drizzle'],
+  53: [IconDrizzle, 'Drizzle'],
+  55: [IconDrizzle, 'Dense drizzle'],
+  61: [IconRain, 'Light rain'],
+  63: [IconRain, 'Rain'],
+  65: [IconRain, 'Heavy rain'],
+  71: [IconSnow, 'Light snow'],
+  73: [IconSnow, 'Snow'],
+  75: [IconSnow, 'Heavy snow'],
+  77: [IconSnow, 'Snow grains'],
+  80: [IconShowers, 'Light rain showers'],
+  81: [IconRain, 'Rain showers'],
+  82: [IconThunder, 'Violent rain showers'],
+  85: [IconSnow, 'Snow showers'],
+  86: [IconSnow, 'Heavy snow showers'],
+  95: [IconThunder, 'Thunderstorm'],
+  96: [IconThunder, 'Thunderstorm with hail'],
+  99: [IconThunder, 'Thunderstorm with hail'],
+};
+
+const WeatherGlyph = ({ code }: { code: number }) => {
+  const [Icon, label] = WMO_ICONS[code] ?? [IconSunCloud, 'Weather'];
+
+  return <Icon label={label} />;
 };
 
 interface ForecastDay {
@@ -142,10 +178,12 @@ const INSTALL_DISMISS_KEY = 'b4y-trip-install-dismissed';
 
 type TabId = 'trip' | 'documents' | 'chat' | 'more';
 
-const TABS: { id: TabId; label: string; icon: string }[] = [
+const TAB_ICON_STYLE = { display: 'block' } as const;
+
+const TABS: { id: TabId; label: string; icon: ReactNode }[] = [
   { id: 'trip', label: 'Trip', icon: '⛵' },
-  { id: 'documents', label: 'Documents', icon: '📄' },
-  { id: 'chat', label: 'Chat', icon: '💬' },
+  { id: 'documents', label: 'Documents', icon: <IconDocument size="1em" style={TAB_ICON_STYLE} /> },
+  { id: 'chat', label: 'Chat', icon: <IconChat size="1em" style={TAB_ICON_STYLE} /> },
   { id: 'more', label: 'More', icon: '☰' },
 ];
 
@@ -383,10 +421,10 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment, ownerCredentials, yachtCap
   if (cancelled) heroBackground = 'linear-gradient(160deg,#4b5563,#6b7280)';
   else if (finished) heroBackground = 'linear-gradient(160deg,#0a3d2e 0%,#16815f 60%,#3aa87c 100%)';
 
-  let greeting = 'Welcome aboard 👋';
+  let greeting = 'Welcome aboard';
 
   if (finished) greeting = `Your voyage ✓ · ${fmtDate(trip.dateFrom)} – ${fmtDate(trip.dateTo)}`;
-  else if (trip.ownerFirstName) greeting = `Welcome back, ${trip.ownerFirstName} 👋`;
+  else if (trip.ownerFirstName) greeting = `Welcome back, ${trip.ownerFirstName}`;
 
   /* ------------ styles (inline; standalone page, no site CSS) ------------ */
   const S = {
@@ -470,7 +508,9 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment, ownerCredentials, yachtCap
             ✕
           </button>
           <div style={{ display: 'flex', gap: 10, alignItems: 'center', paddingRight: 26 }}>
-            <span style={{ fontSize: 26 }}>📲</span>
+            <span style={{ fontSize: 26, lineHeight: 1 }}>
+              <IconInstallPhone size="1em" style={{ display: 'block' }} />
+            </span>
             <div style={{ fontSize: 12.5, lineHeight: 1.35, fontWeight: 600 }}>
               Add this trip to your home screen to get a heads-up about your charter and an alert the moment we add your
               documents.
@@ -492,7 +532,13 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment, ownerCredentials, yachtCap
               cursor: 'pointer',
             }}
           >
-            {installEvent ? '📲 Add to home screen' : 'How do I add it?'}
+            {installEvent ? (
+              <>
+                <IconInstallPhone /> Add to home screen
+              </>
+            ) : (
+              'How do I add it?'
+            )}
           </button>
           {iosHintOpen && !installEvent && (
             <div
@@ -667,7 +713,7 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment, ownerCredentials, yachtCap
                       onClick={() => sendEvent('SITE_CLICK', 'next_adventure')}
                       style={S.btnBlue}
                     >
-                      🌊 Find your next adventure →
+                      <IconWaves /> Find your next adventure →
                     </a>
                     <div
                       style={{
@@ -678,7 +724,7 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment, ownerCredentials, yachtCap
                       }}
                     >
                       <div style={{ fontWeight: 800, fontSize: 14 }}>
-                        🎁 Review us on Tripadvisor → get a €50 voucher
+                        <IconGift /> Review us on Tripadvisor → get a €50 voucher
                       </div>
                       <div style={{ fontSize: 12.5, lineHeight: 1.6, marginTop: 3 }}>
                         Share your experience, then{' '}
@@ -714,8 +760,8 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment, ownerCredentials, yachtCap
                         onClick={() => setTab('chat')}
                         style={{ ...S.card, ...S.sub, textAlign: 'left', width: '100%', cursor: 'pointer' }}
                       >
-                        📸 Any photos your crew shared sail away <b>10 days after the charter</b> — open the Chat tab to
-                        download the ZIP while they&apos;re still aboard.
+                        <IconCamera /> Any photos your crew shared sail away <b>10 days after the charter</b> — open the
+                        Chat tab to download the ZIP while they&apos;re still aboard.
                       </button>
                     )}
                     <div style={{ ...S.card, ...S.sub }}>
@@ -766,7 +812,9 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment, ownerCredentials, yachtCap
                           <span style={{ width: 42, fontWeight: 700 }}>
                             {new Date(day.date).toLocaleDateString('en-GB', { weekday: 'short' })}
                           </span>
-                          <span style={{ fontSize: 17 }}>{WMO_ICONS[day.code] ?? '🌤'}</span>
+                          <span style={{ fontSize: 17, lineHeight: 1 }}>
+                            <WeatherGlyph code={day.code} />
+                          </span>
                           <span style={{ marginLeft: 'auto', fontWeight: 800, fontVariantNumeric: 'tabular-nums' }}>
                             {day.tMax}°
                           </span>
@@ -784,7 +832,9 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment, ownerCredentials, yachtCap
 
                 {!finished && itineraryAreaId && suggestedRoutes.length > 0 && (
                   <>
-                    <div style={S.h2}>Suggested itinerary 🗺</div>
+                    <div style={S.h2}>
+                      Suggested itinerary <IconMap />
+                    </div>
                     <div style={{ ...S.card, display: 'flex', flexDirection: 'column', gap: 9 }}>
                       {suggestedRoutes.map(route => (
                         <a
@@ -863,7 +913,7 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment, ownerCredentials, yachtCap
                         textDecoration: 'none',
                       }}
                     >
-                      📞 {sos.number} · {sos.label}
+                      <IconPhone /> {sos.number} · {sos.label}
                     </a>
                   ))}
                   <a
@@ -879,7 +929,7 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment, ownerCredentials, yachtCap
                       textDecoration: 'none',
                     }}
                   >
-                    📞 112 · All emergencies (EU)
+                    <IconPhone /> 112 · All emergencies (EU)
                   </a>
                   {trip.agencyPhone && (
                     <a
@@ -929,8 +979,8 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment, ownerCredentials, yachtCap
                   </>
                 ) : (
                   <div style={{ ...S.card, ...S.sub, fontSize: 12.5, textAlign: 'center', padding: '22px 15px' }}>
-                    📄 Your travel documents — crew list, boarding pass and base info — appear here as your charter
-                    approaches. We&apos;ll let you know the moment they&apos;re ready.
+                    <IconDocument /> Your travel documents — crew list, boarding pass and base info — appear here as
+                    your charter approaches. We&apos;ll let you know the moment they&apos;re ready.
                   </div>
                 )}
               </>
@@ -950,7 +1000,7 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment, ownerCredentials, yachtCap
                     <div style={{ ...S.card, display: 'flex', flexDirection: 'column', gap: 8 }}>
                       {pushState === 'subscribed' && (
                         <div style={{ fontWeight: 800, fontSize: 14, color: '#16815f' }}>
-                          🔔 Reminders are on for this phone
+                          <IconBell /> Reminders are on for this phone
                         </div>
                       )}
                       {pushState === 'denied' && (
@@ -972,7 +1022,7 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment, ownerCredentials, yachtCap
                             opacity: pushState === 'subscribing' ? 0.6 : 1,
                           }}
                         >
-                          🔔 Get trip reminders
+                          <IconBell /> Get trip reminders
                         </button>
                       )}
                       <div style={{ ...S.sub, fontSize: 12 }}>

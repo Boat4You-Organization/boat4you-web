@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 
 import LogoWithoutText from '@/components/SvgIcons/LogoWithoutText';
+import { IconGift } from '@/components/SvgIcons/UiEmojiIcons';
 
 /**
  * Farewell page for dead trip links (expired / removed tokens). Installed
@@ -116,7 +117,7 @@ const TripNotFound = () => (
         }}
       >
         <div style={{ fontWeight: 800, fontSize: 14, marginBottom: 3 }}>
-          <span aria-hidden="true">🎁</span> €50 for your next adventure
+          <IconGift /> €50 for your next adventure
         </div>
         Leave a review on Tripadvisor, then{' '}
         <a href={VOUCHER_MAILTO} style={{ color: '#16815f', fontWeight: 700 }}>

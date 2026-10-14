@@ -5,6 +5,7 @@ import React from 'react';
 import { Box, ButtonBase, Stack } from '@mui/material';
 import { useTranslations } from 'next-intl';
 
+import Bulp from '@/components/SvgIcons/Bulp';
 import { searchV2, searchV2Type } from '@/styles/themes/searchV2';
 
 interface AiHintStripProps {
@@ -50,8 +51,8 @@ const AiHintStrip = ({ filterLabel, delta, onRelax }: AiHintStripProps) => {
         mb: '18px',
       }}
     >
-      <Box component="span" sx={{ fontSize: 16 }}>
-        💡
+      <Box component="span" sx={{ fontSize: 16, lineHeight: 1, display: 'inline-flex' }} aria-hidden>
+        <Bulp size="1.2em" />
       </Box>
       <Box component="span" sx={{ color: '#4a3a12', flex: 1 }}>
         {t.rich('relaxTip', { filter: filterLabel, count: delta, b: renderStrong, em: renderEm })}
