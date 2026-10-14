@@ -18,7 +18,9 @@ registerHooks({
     nextResolve(specifier.startsWith('@/') ? `${SRC}${specifier.slice(2)}.ts` : specifier, context),
 });
 
-const { formatPriceWithCurrency, isPositivePrice } = await import('../src/utils/static/formatPriceCurrency.ts');
+const { formatPriceWithCurrency, isPositivePrice, unpricedExtraLabelKey } =
+  // eslint-disable-next-line import/extensions -- Node runs the .ts source directly
+  await import('../src/utils/static/formatPriceCurrency.ts');
 
 const NBSP = '\u{A0}';
 const NNBSP = '\u{202F}';
@@ -90,5 +92,23 @@ describe('isPositivePrice', () => {
     assert.equal(isPositivePrice(0.004, { cents: 'auto' }), false);
     assert.equal(isPositivePrice(0, { cents: 'auto' }), false);
     assert.equal(isPositivePrice(undefined, { cents: 'auto' }), false);
+  });
+});
+
+describe('unpricedExtraLabelKey', () => {
+  test('an unpriced INCLUDED extra reads "Included"', () => {
+    assert.equal(unpricedExtraLabelKey('INCLUDED'), 'paidIncluded');
+  });
+
+  test('an unpriced ON_SITE extra reads "On request, paid in the marina"', () => {
+    assert.equal(unpricedExtraLabelKey('ON_SITE'), 'onRequestPaidAtMarina');
+  });
+
+  test('any other or missing paymentType reads "Price on request"', () => {
+    assert.equal(unpricedExtraLabelKey('WITH_BOOKING'), 'priceOnRequest');
+    assert.equal(unpricedExtraLabelKey('ADVANCE_TO_OPERATOR'), 'priceOnRequest');
+    assert.equal(unpricedExtraLabelKey(null), 'priceOnRequest');
+    assert.equal(unpricedExtraLabelKey(undefined), 'priceOnRequest');
+    assert.equal(unpricedExtraLabelKey('UNKNOWN'), 'priceOnRequest');
   });
 });

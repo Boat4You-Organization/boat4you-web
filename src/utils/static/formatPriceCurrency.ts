@@ -79,10 +79,18 @@ export const isPositivePrice = (amount?: number | null, options?: { cents?: Pric
   (options?.cents === 'auto' ? toCents(Number(amount)) > 0 : Math.round(Number(amount)) > 0);
 
 /**
- * `common` key for an extra without a price above 0. The backend marks such
- * an extra INCLUDED (free with the charter, e.g. unlimited Wi-Fi) and it reads
- * "Included"; an unpriced extra without that mark reads "Price on request".
- * Never "0 €" (27.9.2026).
+ * `common` key for an extra without a price above 0. An INCLUDED extra (free
+ * with the charter, e.g. unlimited Wi-Fi) reads "Included"; an ON_SITE one
+ * (optional, priced by the operator and paid in the marina) reads "On request,
+ * paid in the marina"; anything else reads "Price on request". Never "0 €"
+ * (27.9.2026, ON_SITE 14.10.2026).
  */
-export const unpricedExtraLabelKey = (paymentType?: string | null): 'paidIncluded' | 'priceOnRequest' =>
-  paymentType === ExtraPaymentType.INCLUDED ? 'paidIncluded' : 'priceOnRequest';
+export const unpricedExtraLabelKey = (
+  paymentType?: string | null
+): 'paidIncluded' | 'onRequestPaidAtMarina' | 'priceOnRequest' => {
+  if (paymentType === ExtraPaymentType.INCLUDED) return 'paidIncluded';
+
+  if (paymentType === ExtraPaymentType.ON_SITE) return 'onRequestPaidAtMarina';
+
+  return 'priceOnRequest';
+};
