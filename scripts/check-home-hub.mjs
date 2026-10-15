@@ -25,19 +25,18 @@
  *   4. the same keyword rule for every landing heading the templates can
  *      build: each place of `landing.in` × no boat type / each boat type
  *      (`common.*ForRental`), as landingCopy.ts builds it — the override
- *      when there is one, else the lead or default template — h1 (= the
- *      <title>) and meta description. A place × boat type whose default
- *      heading names a head term needs a `landing.override` entry.
- *      PENDING (Mario): the yacht rule on the sailing / motor / luxury motor
- *      yacht and the no-boat-type headings ("Sailing yacht charter in
- *      Croatia", DE "Yachtcharter und Bootsverleih in Kroatien") predates
- *      the hub and waits for the owner's call (review 1.10.2026, finding 2;
- *      the hub links 8 of those landings and the 3 price guides "Yacht
- *      charter prices in Croatia/Greece/Italy") — reported, not failed.
+ *      when there is one (`landing.override.<place>.<TYPE>`, or `.NONE` for
+ *      no boat type), else the lead or default template — h1 (= the
+ *      <title>) and meta description. A heading that names a head term
+ *      needs a `landing.override.<place>.<TYPE|NONE>` entry; an override key
+ *      must be a boat type of `common.*ForRental` or NONE, with h1 and
+ *      metaDesc. Owner decision 15.10.2026: the yacht rule applies to every
+ *      boat type and to the no-boat-type heading (override `NONE`).
  * The patterns run a self-test first (known bad / known good strings).
  *
  * The config is read by transpiling the .ts file with TypeScript (it holds
- * type-only imports, so it evaluates on its own).
+ * type-only imports, so it evaluates on its own). Imported (not run), the
+ * file exports landingHeadings for scripts/landingCopy.test.mjs.
  */
 import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
 import path from 'node:path';
@@ -158,10 +157,8 @@ const forbiddenIn = text => {
 // Landing headings (landingCopy.ts templates)
 // ---------------------------------------------------------------------------
 
-const YACHT_RULE = FORBIDDEN[1].label;
-
-/** Boat types whose yacht-rule headings wait for Mario's decision (null = no boat type). */
-const PENDING_YACHT_TYPES = new Set([null, 'SAILING_YACHT', 'MOTOR_YACHT', 'LUXURY_MOTOR_YACHT']);
+/** `landing.override.<place>` key of the page without a boat type (landingCopy.ts NO_BOAT_TYPE). */
+const NO_BOAT_TYPE = 'NONE';
 
 const fill = (template, values) => template.replace(/\{(\w+)\}/g, (match, name) => values[name] ?? match);
 
@@ -172,25 +169,34 @@ const vesselTypeOf = key =>
     .replace(/([A-Z])/g, '_$1')
     .toUpperCase();
 
-/**
- * Every heading the landing templates build for a place of `landing.in`, as
- * landingCopy.ts does: no boat type (lead or default template), and each
- * boat type of `common.*ForRental` (override, else lead or default template).
- */
-const landingHeadings = (landing, common) => {
-  const rentalLabels = Object.entries(common)
+/** [vessel type, rental label] for every `common.*ForRental` label. */
+const rentalLabelsOf = common =>
+  Object.entries(common)
     .filter(([key, value]) => key.endsWith('ForRental') && typeof value === 'string')
     .map(([key, label]) => [vesselTypeOf(key), label]);
 
+/**
+ * Every heading the landing templates build for a place of `landing.in`, as
+ * landingCopy.ts does: no boat type and each boat type of `common.*ForRental`,
+ * each one the override (`NONE` / the type), else the lead or default template.
+ * The place name (lead template) as placeText.ts reads it: home.json
+ * `destinationsSection.destinations`, else `landing.names`.
+ */
+const landingHeadings = (landing, common, home = {}) => {
+  const rentalLabels = rentalLabelsOf(common);
+
   return Object.entries(landing.in ?? {}).flatMap(([place, where]) => {
     const lead = landing.lead?.[place];
-    const name = landing.names?.[place] ?? place;
-    const untyped = {
-      place,
-      boatType: null,
-      h1: lead ? fill(landing.leadH1NoBoatType, { lead, where }) : fill(landing.h1NoBoatType, { where }),
-      metaDesc: fill(landing.metaDescNoBoatType, { where }),
-    };
+    const name = home.destinationsSection?.destinations?.[place] || landing.names?.[place] || place;
+    const untypedOverride = landing.override?.[place]?.[NO_BOAT_TYPE];
+    const untyped = untypedOverride
+      ? { place, boatType: null, h1: untypedOverride.h1, metaDesc: untypedOverride.metaDesc }
+      : {
+          place,
+          boatType: null,
+          h1: lead ? fill(landing.leadH1NoBoatType, { lead, where }) : fill(landing.h1NoBoatType, { where }),
+          metaDesc: fill(landing.metaDescNoBoatType, { where }),
+        };
     const typed = rentalLabels.map(([boatType, label]) => {
       const override = landing.override?.[place]?.[boatType];
 
@@ -417,7 +423,6 @@ const main = async () => {
 
   // Landing headings: the overrides and every heading the templates build.
   let headings = 0;
-  let pending = 0;
 
   locales.forEach(locale => {
     const file = path.join(MESSAGES_DIR, locale, 'landing.json');
@@ -425,34 +430,40 @@ const main = async () => {
 
     if (!existsSync(file) || !existsSync(commonFile)) return;
 
+    const homeFile = path.join(MESSAGES_DIR, locale, 'home.json');
     const landing = JSON.parse(readFileSync(file, 'utf8'));
     const common = JSON.parse(readFileSync(commonFile, 'utf8'));
+    const home = existsSync(homeFile) ? JSON.parse(readFileSync(homeFile, 'utf8')) : {};
+    const overrideKeys = new Set([NO_BOAT_TYPE, ...rentalLabelsOf(common).map(([boatType]) => boatType)]);
     const errors = new Set(
-      leaves(landing.override ?? {}).flatMap(([key, value]) =>
-        typeof value === 'string'
-          ? forbiddenIn(value).map(label => `forbidden head term (${label}) in override.${key}: "${value}"`)
-          : []
+      Object.entries(landing.override ?? {}).flatMap(([place, byType]) =>
+        Object.entries(byType ?? {}).flatMap(([key, entry]) => [
+          ...(overrideKeys.has(key) ? [] : [`unknown key override.${place}.${key} — a boat type or ${NO_BOAT_TYPE}`]),
+          ...['h1', 'metaDesc']
+            .filter(field => typeof entry?.[field] !== 'string' || !entry[field].trim())
+            .map(field => `missing or empty: override.${place}.${key}.${field}`),
+        ])
       )
     );
 
-    landingHeadings(landing, common).forEach(({ place, boatType, h1, metaDesc }) => {
+    leaves(landing.override ?? {}).forEach(([key, value]) => {
+      if (typeof value !== 'string') return;
+
+      forbiddenIn(value).forEach(label => errors.add(`forbidden head term (${label}) in override.${key}: "${value}"`));
+    });
+
+    landingHeadings(landing, common, home).forEach(({ place, boatType, h1, metaDesc }) => {
       headings += 1;
 
       [
         ['h1', h1],
         ['metaDesc', metaDesc],
       ].forEach(([field, text]) => {
-        const labels = forbiddenIn(text);
+        const labels = typeof text === 'string' ? forbiddenIn(text) : [];
 
         if (!labels.length) return;
 
-        if (labels.every(label => label === YACHT_RULE) && PENDING_YACHT_TYPES.has(boatType)) {
-          pending += 1;
-
-          return;
-        }
-
-        const fix = boatType ? `add override.${place}.${boatType}` : 'change the template';
+        const fix = `add override.${place}.${boatType ?? NO_BOAT_TYPE}`;
 
         errors.add(
           `forbidden head term (${labels.join(', ')}) in the ${field} of ${place} × ${boatType ?? 'no boat type'}: "${text}" — ${fix}`
@@ -474,15 +485,15 @@ const main = async () => {
   console.log(
     `✓ home hub: ${tabs.length} tabs, ${ids.length} links, ${locales.length} locales (${locales.join(', ')}) — complete, unique, no sister head terms (anchors, ${headings} landing headings)`
   );
-
-  if (pending) {
-    console.log(
-      `  pending (Mario): ${pending} yacht-type / no-boat-type landing title or meta texts with "yacht charter + Croatia/Greece/Italy/Spain/Türkiye" (review 1.10.2026, finding 2)`
-    );
-  }
 };
 
-main().catch(error => {
-  console.error(error);
-  process.exit(1);
-});
+// Runs as a script; skipped only when imported (scripts/landingCopy.test.mjs) —
+// `import.meta.main` is false then (Node >= 24.2), undefined on an older Node.
+if (import.meta.main !== false) {
+  main().catch(error => {
+    console.error(error);
+    process.exit(1);
+  });
+}
+
+export { landingHeadings };

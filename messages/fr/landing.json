@@ -11,6 +11,18 @@
   },
   "override": {
     "croatia": {
+      "NONE": {
+        "h1": "Yachts et bateaux à louer en Croatie",
+        "metaDesc": "Louez un yacht, un voilier ou un catamaran en Croatie. Des milliers de bateaux, prix transparents, réservation sécurisée, support 24/7."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Yachts à moteur à louer en Croatie",
+        "metaDesc": "Louez un yacht à moteur en Croatie. Comparez les prix, vraies photos, réservation instantanée. Paiement sécurisé et support 24/7."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Yachts à moteur de luxe à louer en Croatie",
+        "metaDesc": "Louez un yacht à moteur de luxe en Croatie. Comparez les prix, vraies photos, réservation instantanée. Paiement sécurisé et support 24/7."
+      },
       "CATAMARAN": {
         "h1": "Catamarans à louer en Croatie",
         "metaDesc": "Louez un catamaran en Croatie. Comparez les prix, vraies photos, réservation instantanée. Paiement sécurisé et support 24/7."
@@ -21,6 +33,18 @@
       }
     },
     "greece": {
+      "NONE": {
+        "h1": "Yachts et bateaux à louer en Grèce",
+        "metaDesc": "Louez un yacht, un voilier ou un catamaran en Grèce. Des milliers de bateaux, prix transparents, réservation sécurisée, support 24/7."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Yachts à moteur à louer en Grèce",
+        "metaDesc": "Louez un yacht à moteur en Grèce. Comparez les prix, vraies photos, réservation instantanée. Paiement sécurisé et support 24/7."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Yachts à moteur de luxe à louer en Grèce",
+        "metaDesc": "Louez un yacht à moteur de luxe en Grèce. Comparez les prix, vraies photos, réservation instantanée. Paiement sécurisé et support 24/7."
+      },
       "CATAMARAN": {
         "h1": "Catamarans à louer en Grèce",
         "metaDesc": "Louez un catamaran en Grèce. Comparez les prix, vraies photos, réservation instantanée. Paiement sécurisé et support 24/7."
@@ -31,6 +55,18 @@
       }
     },
     "italy": {
+      "NONE": {
+        "h1": "Yachts et bateaux à louer en Italie",
+        "metaDesc": "Louez un yacht, un voilier ou un catamaran en Italie. Des milliers de bateaux, prix transparents, réservation sécurisée, support 24/7."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Yachts à moteur à louer en Italie",
+        "metaDesc": "Louez un yacht à moteur en Italie. Comparez les prix, vraies photos, réservation instantanée. Paiement sécurisé et support 24/7."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Yachts à moteur de luxe à louer en Italie",
+        "metaDesc": "Louez un yacht à moteur de luxe en Italie. Comparez les prix, vraies photos, réservation instantanée. Paiement sécurisé et support 24/7."
+      },
       "CATAMARAN": {
         "h1": "Catamarans à louer en Italie",
         "metaDesc": "Louez un catamaran en Italie. Comparez les prix, vraies photos, réservation instantanée. Paiement sécurisé et support 24/7."
@@ -71,6 +107,18 @@
       }
     },
     "italianAdriatic": {
+      "NONE": {
+        "h1": "Yachts et bateaux à louer sur l'Adriatique italienne",
+        "metaDesc": "Louez un yacht, un voilier ou un catamaran sur l'Adriatique italienne. Des milliers de bateaux, prix transparents, réservation sécurisée, support 24/7."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Yachts à moteur à louer sur l'Adriatique italienne",
+        "metaDesc": "Louez un yacht à moteur sur l'Adriatique italienne. Comparez les prix, vraies photos, réservation instantanée. Paiement sécurisé et support 24/7."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Yachts à moteur de luxe à louer sur l'Adriatique italienne",
+        "metaDesc": "Louez un yacht à moteur de luxe sur l'Adriatique italienne. Comparez les prix, vraies photos, réservation instantanée. Paiement sécurisé et support 24/7."
+      },
       "CATAMARAN": {
         "h1": "Catamarans à louer sur l'Adriatique italienne",
         "metaDesc": "Louez un catamaran sur l'Adriatique italienne. Comparez les prix, vraies photos, réservation instantanée. Paiement sécurisé et support 24/7."
@@ -81,6 +129,18 @@
       }
     },
     "northernGreeceAegean": {
+      "NONE": {
+        "h1": "Yachts et bateaux à louer en Grèce du Nord et en mer Égée",
+        "metaDesc": "Louez un yacht, un voilier ou un catamaran en Grèce du Nord et en mer Égée. Des milliers de bateaux, prix transparents, réservation sécurisée, support 24/7."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Yachts à moteur à louer en Grèce du Nord et en mer Égée",
+        "metaDesc": "Louez un yacht à moteur en Grèce du Nord et en mer Égée. Comparez les prix, vraies photos, réservation instantanée. Paiement sécurisé et support 24/7."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Yachts à moteur de luxe à louer en Grèce du Nord et en mer Égée",
+        "metaDesc": "Louez un yacht à moteur de luxe en Grèce du Nord et en mer Égée. Comparez les prix, vraies photos, réservation instantanée. Paiement sécurisé et support 24/7."
+      },
       "CATAMARAN": {
         "h1": "Catamarans à louer en Grèce du Nord et en mer Égée",
         "metaDesc": "Louez un catamaran en Grèce du Nord et en mer Égée. Comparez les prix, vraies photos, réservation instantanée. Paiement sécurisé et support 24/7."
@@ -118,6 +178,34 @@
       "POWER_CATAMARAN": {
         "h1": "Catamarans à moteur à louer dans les Caraïbes",
         "metaDesc": "Louez un catamaran à moteur dans les Caraïbes. Comparez les prix, vraies photos, réservation instantanée. Paiement sécurisé et support 24/7."
+      }
+    },
+    "spain": {
+      "NONE": {
+        "h1": "Yachts et bateaux à louer en Espagne",
+        "metaDesc": "Louez un yacht, un voilier ou un catamaran en Espagne. Des milliers de bateaux, prix transparents, réservation sécurisée, support 24/7."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Yachts à moteur à louer en Espagne",
+        "metaDesc": "Louez un yacht à moteur en Espagne. Comparez les prix, vraies photos, réservation instantanée. Paiement sécurisé et support 24/7."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Yachts à moteur de luxe à louer en Espagne",
+        "metaDesc": "Louez un yacht à moteur de luxe en Espagne. Comparez les prix, vraies photos, réservation instantanée. Paiement sécurisé et support 24/7."
+      }
+    },
+    "türkiye": {
+      "NONE": {
+        "h1": "Yachts et bateaux à louer en Turquie",
+        "metaDesc": "Louez un yacht, un voilier ou un catamaran en Turquie. Des milliers de bateaux, prix transparents, réservation sécurisée, support 24/7."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Yachts à moteur à louer en Turquie",
+        "metaDesc": "Louez un yacht à moteur en Turquie. Comparez les prix, vraies photos, réservation instantanée. Paiement sécurisé et support 24/7."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Yachts à moteur de luxe à louer en Turquie",
+        "metaDesc": "Louez un yacht à moteur de luxe en Turquie. Comparez les prix, vraies photos, réservation instantanée. Paiement sécurisé et support 24/7."
       }
     }
   },

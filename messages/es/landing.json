@@ -1,7 +1,7 @@
 {
   "h1WithBoatType": "Alquiler de {boatType} {where}",
   "h1NoBoatType": "Alquiler de yates y barcos {where}",
-  "metaDescWithBoatType": "Alquila un {boatType} {where}. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7.",
+  "metaDescWithBoatType": "Alquila tu {boatType} {where}. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7.",
   "metaDescNoBoatType": "Alquiler de yates y barcos {where}. Miles de barcos, precios transparentes, reserva segura, soporte 24/7.",
   "leadH1WithBoatType": "Alquiler de {boatType} {lead} – {name}",
   "leadH1NoBoatType": "Alquiler de yates {lead} – alquiler de barcos {where}",
@@ -11,6 +11,18 @@
   },
   "override": {
     "croatia": {
+      "NONE": {
+        "h1": "Yates y barcos de alquiler en Croacia",
+        "metaDesc": "Alquila un yate o un barco en Croacia entre miles de embarcaciones. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Yates a motor de alquiler en Croacia",
+        "metaDesc": "Alquila un yate a motor en Croacia y recorre la costa a tu ritmo. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Yates a motor de lujo de alquiler en Croacia",
+        "metaDesc": "Alquila un yate a motor de lujo en Croacia. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
+      },
       "CATAMARAN": {
         "h1": "Catamaranes de alquiler en Croacia",
         "metaDesc": "Alquila un catamarán en Croacia. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
@@ -21,6 +33,18 @@
       }
     },
     "greece": {
+      "NONE": {
+        "h1": "Yates y barcos de alquiler en Grecia",
+        "metaDesc": "Alquila un yate o un barco en Grecia entre miles de embarcaciones. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Yates a motor de alquiler en Grecia",
+        "metaDesc": "Alquila un yate a motor en Grecia y recorre la costa a tu ritmo. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Yates a motor de lujo de alquiler en Grecia",
+        "metaDesc": "Alquila un yate a motor de lujo en Grecia. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
+      },
       "CATAMARAN": {
         "h1": "Catamaranes de alquiler en Grecia",
         "metaDesc": "Alquila un catamarán en Grecia. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
@@ -31,6 +55,18 @@
       }
     },
     "italy": {
+      "NONE": {
+        "h1": "Yates y barcos de alquiler en Italia",
+        "metaDesc": "Alquila un yate o un barco en Italia entre miles de embarcaciones. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Yates a motor de alquiler en Italia",
+        "metaDesc": "Alquila un yate a motor en Italia y recorre la costa a tu ritmo. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Yates a motor de lujo de alquiler en Italia",
+        "metaDesc": "Alquila un yate a motor de lujo en Italia. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
+      },
       "CATAMARAN": {
         "h1": "Catamaranes de alquiler en Italia",
         "metaDesc": "Alquila un catamarán en Italia. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
@@ -71,6 +107,18 @@
       }
     },
     "italianAdriatic": {
+      "NONE": {
+        "h1": "Yates y barcos de alquiler en el Adriático italiano",
+        "metaDesc": "Alquila un yate o un barco en el Adriático italiano. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Yates a motor de alquiler en el Adriático italiano",
+        "metaDesc": "Alquila un yate a motor en el Adriático italiano y recorre la costa a tu ritmo. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Yates a motor de lujo de alquiler en el Adriático italiano",
+        "metaDesc": "Alquila un yate a motor de lujo en el Adriático italiano. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
+      },
       "CATAMARAN": {
         "h1": "Catamaranes de alquiler en el Adriático italiano",
         "metaDesc": "Alquila un catamarán en el Adriático italiano. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
@@ -81,6 +129,18 @@
       }
     },
     "northernGreeceAegean": {
+      "NONE": {
+        "h1": "Yates y barcos de alquiler en el norte de Grecia y el Egeo",
+        "metaDesc": "Alquila un yate o un barco en el norte de Grecia y el Egeo. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Yates a motor de alquiler en el norte de Grecia y el Egeo",
+        "metaDesc": "Alquila un yate a motor en el norte de Grecia y el Egeo. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Yates a motor de lujo de alquiler en el norte de Grecia y el Egeo",
+        "metaDesc": "Alquila un yate a motor de lujo en el norte de Grecia y el Egeo. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
+      },
       "CATAMARAN": {
         "h1": "Catamaranes de alquiler en el norte de Grecia y el Egeo",
         "metaDesc": "Alquila un catamarán en el norte de Grecia y el Egeo. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
@@ -118,6 +178,34 @@
       "POWER_CATAMARAN": {
         "h1": "Catamaranes a motor de alquiler en el Caribe",
         "metaDesc": "Alquila un catamarán a motor en el Caribe. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
+      }
+    },
+    "spain": {
+      "NONE": {
+        "h1": "Yates y barcos de alquiler en España",
+        "metaDesc": "Alquila un yate o un barco en España entre miles de embarcaciones. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Yates a motor de alquiler en España",
+        "metaDesc": "Alquila un yate a motor en España y recorre la costa a tu ritmo. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Yates a motor de lujo de alquiler en España",
+        "metaDesc": "Alquila un yate a motor de lujo en España. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
+      }
+    },
+    "türkiye": {
+      "NONE": {
+        "h1": "Yates y barcos de alquiler en Turquía",
+        "metaDesc": "Alquila un yate o un barco en Turquía entre miles de embarcaciones. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Yates a motor de alquiler en Turquía",
+        "metaDesc": "Alquila un yate a motor en Turquía y recorre la costa a tu ritmo. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Yates a motor de lujo de alquiler en Turquía",
+        "metaDesc": "Alquila un yate a motor de lujo en Turquía. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
       }
     }
   },

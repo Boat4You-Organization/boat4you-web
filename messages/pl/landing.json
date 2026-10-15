@@ -11,6 +11,22 @@
   },
   "override": {
     "croatia": {
+      "NONE": {
+        "h1": "Jachty i łodzie na wynajem w Chorwacji",
+        "metaDesc": "Wynajmij jacht lub łódź w Chorwacji. Tysiące jednostek, porównanie cen, prawdziwe zdjęcia, bezpieczna rezerwacja i wsparcie 24/7."
+      },
+      "SAILING_YACHT": {
+        "h1": "Jachty żaglowe na wynajem w Chorwacji",
+        "metaDesc": "Wynajmij jacht żaglowy w Chorwacji. Porównaj ceny, prawdziwe zdjęcia, rezerwacja natychmiastowa. Bezpieczna płatność i wsparcie 24/7."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Jachty motorowe na wynajem w Chorwacji",
+        "metaDesc": "Wynajmij jacht motorowy w Chorwacji. Porównaj ceny, prawdziwe zdjęcia, rezerwacja natychmiastowa. Bezpieczna płatność i wsparcie 24/7."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Luksusowe jachty motorowe na wynajem w Chorwacji",
+        "metaDesc": "Wynajmij luksusowy jacht motorowy w Chorwacji. Porównaj ceny, prawdziwe zdjęcia, rezerwacja natychmiastowa. Bezpieczna płatność i wsparcie 24/7."
+      },
       "CATAMARAN": {
         "h1": "Wynajem katamaranów w Chorwacji",
         "metaDesc": "Wynajmij katamaran w Chorwacji. Porównaj ceny, prawdziwe zdjęcia, rezerwacja natychmiastowa. Bezpieczna płatność i wsparcie 24/7."
@@ -21,6 +37,22 @@
       }
     },
     "greece": {
+      "NONE": {
+        "h1": "Jachty i łodzie na wynajem w Grecji",
+        "metaDesc": "Wynajmij jacht lub łódź w Grecji. Tysiące jednostek, porównanie cen, prawdziwe zdjęcia, bezpieczna rezerwacja i wsparcie 24/7."
+      },
+      "SAILING_YACHT": {
+        "h1": "Jachty żaglowe na wynajem w Grecji",
+        "metaDesc": "Wynajmij jacht żaglowy w Grecji. Porównaj ceny, prawdziwe zdjęcia, rezerwacja natychmiastowa. Bezpieczna płatność i wsparcie 24/7."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Jachty motorowe na wynajem w Grecji",
+        "metaDesc": "Wynajmij jacht motorowy w Grecji. Porównaj ceny, prawdziwe zdjęcia, rezerwacja natychmiastowa. Bezpieczna płatność i wsparcie 24/7."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Luksusowe jachty motorowe na wynajem w Grecji",
+        "metaDesc": "Wynajmij luksusowy jacht motorowy w Grecji. Porównaj ceny, prawdziwe zdjęcia, rezerwacja natychmiastowa. Bezpieczna płatność i wsparcie 24/7."
+      },
       "CATAMARAN": {
         "h1": "Wynajem katamaranów w Grecji",
         "metaDesc": "Wynajmij katamaran w Grecji. Porównaj ceny, prawdziwe zdjęcia, rezerwacja natychmiastowa. Bezpieczna płatność i wsparcie 24/7."
@@ -31,6 +63,22 @@
       }
     },
     "italy": {
+      "NONE": {
+        "h1": "Jachty i łodzie na wynajem we Włoszech",
+        "metaDesc": "Wynajmij jacht lub łódź we Włoszech. Tysiące jednostek, porównanie cen, prawdziwe zdjęcia, bezpieczna rezerwacja i wsparcie 24/7."
+      },
+      "SAILING_YACHT": {
+        "h1": "Jachty żaglowe na wynajem we Włoszech",
+        "metaDesc": "Wynajmij jacht żaglowy we Włoszech. Porównaj ceny, prawdziwe zdjęcia, rezerwacja natychmiastowa. Bezpieczna płatność i wsparcie 24/7."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Jachty motorowe na wynajem we Włoszech",
+        "metaDesc": "Wynajmij jacht motorowy we Włoszech. Porównaj ceny, prawdziwe zdjęcia, rezerwacja natychmiastowa. Bezpieczna płatność i wsparcie 24/7."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Luksusowe jachty motorowe na wynajem we Włoszech",
+        "metaDesc": "Wynajmij luksusowy jacht motorowy we Włoszech. Porównaj ceny, prawdziwe zdjęcia, rezerwacja natychmiastowa. Bezpieczna płatność i wsparcie 24/7."
+      },
       "CATAMARAN": {
         "h1": "Wynajem katamaranów we Włoszech",
         "metaDesc": "Wynajmij katamaran we Włoszech. Porównaj ceny, prawdziwe zdjęcia, rezerwacja natychmiastowa. Bezpieczna płatność i wsparcie 24/7."
@@ -71,6 +119,22 @@
       }
     },
     "italianAdriatic": {
+      "NONE": {
+        "h1": "Jachty i łodzie na wynajem na włoskim Adriatyku",
+        "metaDesc": "Wynajmij jacht lub łódź na włoskim Adriatyku. Tysiące jednostek, porównanie cen, prawdziwe zdjęcia, bezpieczna rezerwacja i wsparcie 24/7."
+      },
+      "SAILING_YACHT": {
+        "h1": "Jachty żaglowe na wynajem na włoskim Adriatyku",
+        "metaDesc": "Wynajmij jacht żaglowy na włoskim Adriatyku. Porównaj ceny, prawdziwe zdjęcia, rezerwacja natychmiastowa. Bezpieczna płatność i wsparcie 24/7."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Jachty motorowe na wynajem na włoskim Adriatyku",
+        "metaDesc": "Wynajmij jacht motorowy na włoskim Adriatyku. Porównaj ceny, prawdziwe zdjęcia, rezerwacja natychmiastowa. Bezpieczna płatność i wsparcie 24/7."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Luksusowe jachty motorowe na wynajem na włoskim Adriatyku",
+        "metaDesc": "Wynajmij luksusowy jacht motorowy na włoskim Adriatyku. Porównaj ceny, prawdziwe zdjęcia, rezerwacja natychmiastowa. Bezpieczna płatność i wsparcie 24/7."
+      },
       "CATAMARAN": {
         "h1": "Wynajem katamaranów na włoskim Adriatyku",
         "metaDesc": "Wynajmij katamaran na włoskim Adriatyku. Porównaj ceny, prawdziwe zdjęcia, rezerwacja natychmiastowa. Bezpieczna płatność i wsparcie 24/7."
@@ -81,6 +145,22 @@
       }
     },
     "northernGreeceAegean": {
+      "NONE": {
+        "h1": "Jachty i łodzie na wynajem w północnej Grecji i na Morzu Egejskim",
+        "metaDesc": "Wynajmij jacht lub łódź w północnej Grecji i na Morzu Egejskim. Tysiące jednostek, porównanie cen, prawdziwe zdjęcia, bezpieczna rezerwacja i wsparcie 24/7."
+      },
+      "SAILING_YACHT": {
+        "h1": "Jachty żaglowe na wynajem w północnej Grecji i na Morzu Egejskim",
+        "metaDesc": "Wynajmij jacht żaglowy w północnej Grecji i na Morzu Egejskim. Porównaj ceny, prawdziwe zdjęcia, rezerwacja od ręki. Bezpieczna płatność i wsparcie 24/7."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Jachty motorowe na wynajem w północnej Grecji i na Morzu Egejskim",
+        "metaDesc": "Wynajmij jacht motorowy w północnej Grecji i na Morzu Egejskim. Porównaj ceny, prawdziwe zdjęcia, rezerwacja od ręki. Bezpieczna płatność i wsparcie 24/7."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Luksusowe jachty motorowe w północnej Grecji i na Morzu Egejskim",
+        "metaDesc": "Luksusowe jachty motorowe w północnej Grecji i na Morzu Egejskim. Porównaj ceny, prawdziwe zdjęcia, rezerwacja od ręki. Bezpieczna płatność i wsparcie 24/7."
+      },
       "CATAMARAN": {
         "h1": "Wynajem katamaranów w północnej Grecji i na Morzu Egejskim",
         "metaDesc": "Wynajmij katamaran w północnej Grecji i na Morzu Egejskim. Porównaj ceny, prawdziwe zdjęcia, rezerwacja natychmiastowa. Bezpieczna płatność i wsparcie 24/7."
@@ -118,6 +198,42 @@
       "POWER_CATAMARAN": {
         "h1": "Wynajem katamaranów motorowych na Karaibach",
         "metaDesc": "Wynajmij katamaran motorowy na Karaibach. Porównaj ceny, prawdziwe zdjęcia, rezerwacja natychmiastowa. Bezpieczna płatność i wsparcie 24/7."
+      }
+    },
+    "spain": {
+      "NONE": {
+        "h1": "Jachty i łodzie na wynajem w Hiszpanii",
+        "metaDesc": "Wynajmij jacht lub łódź w Hiszpanii. Tysiące jednostek, porównanie cen, prawdziwe zdjęcia, bezpieczna rezerwacja i wsparcie 24/7."
+      },
+      "SAILING_YACHT": {
+        "h1": "Jachty żaglowe na wynajem w Hiszpanii",
+        "metaDesc": "Wynajmij jacht żaglowy w Hiszpanii. Porównaj ceny, prawdziwe zdjęcia, rezerwacja natychmiastowa. Bezpieczna płatność i wsparcie 24/7."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Jachty motorowe na wynajem w Hiszpanii",
+        "metaDesc": "Wynajmij jacht motorowy w Hiszpanii. Porównaj ceny, prawdziwe zdjęcia, rezerwacja natychmiastowa. Bezpieczna płatność i wsparcie 24/7."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Luksusowe jachty motorowe na wynajem w Hiszpanii",
+        "metaDesc": "Wynajmij luksusowy jacht motorowy w Hiszpanii. Porównaj ceny, prawdziwe zdjęcia, rezerwacja natychmiastowa. Bezpieczna płatność i wsparcie 24/7."
+      }
+    },
+    "türkiye": {
+      "NONE": {
+        "h1": "Jachty i łodzie na wynajem w Turcji",
+        "metaDesc": "Wynajmij jacht lub łódź w Turcji. Tysiące jednostek, porównanie cen, prawdziwe zdjęcia, bezpieczna rezerwacja i wsparcie 24/7."
+      },
+      "SAILING_YACHT": {
+        "h1": "Jachty żaglowe na wynajem w Turcji",
+        "metaDesc": "Wynajmij jacht żaglowy w Turcji. Porównaj ceny, prawdziwe zdjęcia, rezerwacja natychmiastowa. Bezpieczna płatność i wsparcie 24/7."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Jachty motorowe na wynajem w Turcji",
+        "metaDesc": "Wynajmij jacht motorowy w Turcji. Porównaj ceny, prawdziwe zdjęcia, rezerwacja natychmiastowa. Bezpieczna płatność i wsparcie 24/7."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Luksusowe jachty motorowe na wynajem w Turcji",
+        "metaDesc": "Wynajmij luksusowy jacht motorowy w Turcji. Porównaj ceny, prawdziwe zdjęcia, rezerwacja natychmiastowa. Bezpieczna płatność i wsparcie 24/7."
       }
     }
   },

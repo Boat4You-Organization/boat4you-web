@@ -25,7 +25,7 @@
     "test:successor": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test scripts/yachtSuccessor.test.mjs scripts/indexnow-successor-urls.test.mjs",
     "test:capacity": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test scripts/yachtCapacity.test.mjs scripts/yachtCapacity.render.test.mjs",
     "test:boat-seo": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test scripts/boatPageSeo.test.mjs",
-    "test:landing-pages": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test scripts/landingPagination.test.mjs scripts/pagination.render.test.mjs scripts/landingRegionLinks.test.mjs",
+    "test:landing-pages": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test scripts/landingPagination.test.mjs scripts/pagination.render.test.mjs scripts/landingRegionLinks.test.mjs scripts/landingCopy.test.mjs",
     "test:equipment": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test scripts/equipment.test.mjs",
     "test:polish": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test scripts/seoA11yPolish.test.mjs scripts/seoA11yPolish2.test.mjs scripts/seoA11yPolish3.test.mjs scripts/seoA11yPolish4.test.mjs scripts/seoA11yPolish5.test.mjs",
     "test:gulet": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test scripts/guletCrewed.test.mjs",

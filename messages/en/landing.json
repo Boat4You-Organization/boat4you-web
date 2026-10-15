@@ -11,6 +11,22 @@
   },
   "override": {
     "croatia": {
+      "NONE": {
+        "h1": "Yacht and boat rental in Croatia",
+        "metaDesc": "Yacht and boat rental in Croatia. Compare thousands of yachts and boats, transparent pricing, secure booking, 24/7 support."
+      },
+      "SAILING_YACHT": {
+        "h1": "Sailing yacht rental in Croatia",
+        "metaDesc": "Rent a sailing yacht in Croatia for your holiday. Compare prices, real photos, instant booking. Secure payment and 24/7 expert support."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Motor yacht rental in Croatia",
+        "metaDesc": "Rent a motor yacht in Croatia for speed and comfort. Compare prices, real photos, instant booking. Secure payment and 24/7 expert support."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Luxury motor yacht rental in Croatia",
+        "metaDesc": "Rent a luxury motor yacht in Croatia for a stylish escape. Compare prices, real photos, instant booking. Secure payment and 24/7 expert support."
+      },
       "CATAMARAN": {
         "h1": "Catamaran rental in Croatia",
         "metaDesc": "Rent a catamaran in Croatia. Compare prices, real photos, instant booking. Secure payment and 24/7 expert support."
@@ -21,6 +37,22 @@
       }
     },
     "greece": {
+      "NONE": {
+        "h1": "Yacht and boat rental in Greece",
+        "metaDesc": "Yacht and boat rental in Greece. Compare thousands of yachts and boats, transparent pricing, secure booking, 24/7 support."
+      },
+      "SAILING_YACHT": {
+        "h1": "Sailing yacht rental in Greece",
+        "metaDesc": "Rent a sailing yacht in Greece for your holiday. Compare prices, real photos, instant booking. Secure payment and 24/7 expert support."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Motor yacht rental in Greece",
+        "metaDesc": "Rent a motor yacht in Greece for speed and comfort. Compare prices, real photos, instant booking. Secure payment and 24/7 expert support."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Luxury motor yacht rental in Greece",
+        "metaDesc": "Rent a luxury motor yacht in Greece for a stylish escape. Compare prices, real photos, instant booking. Secure payment and 24/7 expert support."
+      },
       "CATAMARAN": {
         "h1": "Catamaran rental in Greece",
         "metaDesc": "Rent a catamaran in Greece. Compare prices, real photos, instant booking. Secure payment and 24/7 expert support."
@@ -31,6 +63,22 @@
       }
     },
     "italy": {
+      "NONE": {
+        "h1": "Yacht and boat rental in Italy",
+        "metaDesc": "Yacht and boat rental in Italy. Compare thousands of yachts and boats, transparent pricing, secure booking, 24/7 support."
+      },
+      "SAILING_YACHT": {
+        "h1": "Sailing yacht rental in Italy",
+        "metaDesc": "Rent a sailing yacht in Italy for your holiday. Compare prices, real photos, instant booking. Secure payment and 24/7 expert support."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Motor yacht rental in Italy",
+        "metaDesc": "Rent a motor yacht in Italy for speed and comfort. Compare prices, real photos, instant booking. Secure payment and 24/7 expert support."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Luxury motor yacht rental in Italy",
+        "metaDesc": "Rent a luxury motor yacht in Italy for a stylish escape. Compare prices, real photos, instant booking. Secure payment and 24/7 expert support."
+      },
       "CATAMARAN": {
         "h1": "Catamaran rental in Italy",
         "metaDesc": "Rent a catamaran in Italy. Compare prices, real photos, instant booking. Secure payment and 24/7 expert support."
@@ -71,6 +119,22 @@
       }
     },
     "italianAdriatic": {
+      "NONE": {
+        "h1": "Yacht and boat rental on the Italian Adriatic",
+        "metaDesc": "Yacht and boat rental on the Italian Adriatic. Compare thousands of yachts and boats, transparent pricing, secure booking, 24/7 support."
+      },
+      "SAILING_YACHT": {
+        "h1": "Sailing yacht rental on the Italian Adriatic",
+        "metaDesc": "Rent a sailing yacht on the Italian Adriatic for your holiday. Compare prices, real photos, instant booking. Secure payment and 24/7 expert support."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Motor yacht rental on the Italian Adriatic",
+        "metaDesc": "Rent a motor yacht on the Italian Adriatic for speed and comfort. Compare prices, real photos, instant booking. Secure payment and 24/7 expert support."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Luxury motor yacht rental on the Italian Adriatic",
+        "metaDesc": "Rent a luxury motor yacht on the Italian Adriatic for a stylish escape. Compare prices, real photos, instant booking. Secure payment and 24/7 expert support."
+      },
       "CATAMARAN": {
         "h1": "Catamaran rental on the Italian Adriatic",
         "metaDesc": "Rent a catamaran on the Italian Adriatic. Compare prices, real photos, instant booking. Secure payment and 24/7 expert support."
@@ -81,6 +145,22 @@
       }
     },
     "northernGreeceAegean": {
+      "NONE": {
+        "h1": "Yacht and boat rental in Northern Greece and the Aegean",
+        "metaDesc": "Yacht and boat rental in Northern Greece and the Aegean. Compare thousands of yachts and boats, transparent pricing, secure booking, 24/7 support."
+      },
+      "SAILING_YACHT": {
+        "h1": "Sailing yacht rental in Northern Greece and the Aegean",
+        "metaDesc": "Rent a sailing yacht in Northern Greece and the Aegean for your holiday. Compare prices, real photos, instant booking. Secure payment and 24/7 expert support."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Motor yacht rental in Northern Greece and the Aegean",
+        "metaDesc": "Rent a motor yacht in Northern Greece and the Aegean for speed and comfort. Compare prices, real photos, instant booking. Secure payment and 24/7 expert support."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Luxury motor yacht rental in Northern Greece and the Aegean",
+        "metaDesc": "Rent a luxury motor yacht in Northern Greece and the Aegean. Compare prices, real photos, instant booking. Secure payment and 24/7 expert support."
+      },
       "CATAMARAN": {
         "h1": "Catamaran rental in Northern Greece and the Aegean",
         "metaDesc": "Rent a catamaran in Northern Greece and the Aegean. Compare prices, real photos, instant booking. Secure payment and 24/7 expert support."
@@ -118,6 +198,42 @@
       "POWER_CATAMARAN": {
         "h1": "Power catamaran rental in the Caribbean",
         "metaDesc": "Rent a power catamaran in the Caribbean. Compare prices, real photos, instant booking. Secure payment and 24/7 expert support."
+      }
+    },
+    "spain": {
+      "NONE": {
+        "h1": "Yacht and boat rental in Spain",
+        "metaDesc": "Yacht and boat rental in Spain. Compare thousands of yachts and boats, transparent pricing, secure booking, 24/7 support."
+      },
+      "SAILING_YACHT": {
+        "h1": "Sailing yacht rental in Spain",
+        "metaDesc": "Rent a sailing yacht in Spain for your holiday. Compare prices, real photos, instant booking. Secure payment and 24/7 expert support."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Motor yacht rental in Spain",
+        "metaDesc": "Rent a motor yacht in Spain for speed and comfort. Compare prices, real photos, instant booking. Secure payment and 24/7 expert support."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Luxury motor yacht rental in Spain",
+        "metaDesc": "Rent a luxury motor yacht in Spain for a stylish escape. Compare prices, real photos, instant booking. Secure payment and 24/7 expert support."
+      }
+    },
+    "türkiye": {
+      "NONE": {
+        "h1": "Yacht and boat rental in Türkiye",
+        "metaDesc": "Yacht and boat rental in Türkiye. Compare thousands of yachts and boats, transparent pricing, secure booking, 24/7 support."
+      },
+      "SAILING_YACHT": {
+        "h1": "Sailing yacht rental in Türkiye",
+        "metaDesc": "Rent a sailing yacht in Türkiye for your holiday. Compare prices, real photos, instant booking. Secure payment and 24/7 expert support."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Motor yacht rental in Türkiye",
+        "metaDesc": "Rent a motor yacht in Türkiye for speed and comfort. Compare prices, real photos, instant booking. Secure payment and 24/7 expert support."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Luxury motor yacht rental in Türkiye",
+        "metaDesc": "Rent a luxury motor yacht in Türkiye for a stylish escape. Compare prices, real photos, instant booking. Secure payment and 24/7 expert support."
       }
     }
   },

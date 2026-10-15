@@ -11,6 +11,18 @@
   },
   "override": {
     "croatia": {
+      "NONE": {
+        "h1": "Jahte i brodovi za najam u Hrvatskoj",
+        "metaDesc": "Unajmite jedrilicu, katamaran ili motornu jahtu u Hrvatskoj. Tisuće jahti, transparentne cijene, sigurna rezervacija, podrška 24/7."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Motorne jahte za najam u Hrvatskoj",
+        "metaDesc": "Unajmite motornu jahtu u Hrvatskoj i plovite svojim tempom. Usporedite cijene, prave slike, instant rezervacija. Sigurno plaćanje i podrška 24/7."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Luksuzne motorne jahte za najam u Hrvatskoj",
+        "metaDesc": "Unajmite luksuznu motornu jahtu u Hrvatskoj za vrhunski odmor na moru. Usporedite cijene, prave slike, instant rezervacija. Sigurno plaćanje i podrška 24/7."
+      },
       "CATAMARAN": {
         "h1": "Najam katamarana u Hrvatskoj",
         "metaDesc": "Unajmite katamaran u Hrvatskoj. Usporedite cijene, prave slike, instant rezervacija. Sigurno plaćanje i podrška 24/7."
@@ -21,6 +33,18 @@
       }
     },
     "greece": {
+      "NONE": {
+        "h1": "Jahte i brodovi za najam u Grčkoj",
+        "metaDesc": "Unajmite jedrilicu, katamaran ili motornu jahtu u Grčkoj. Tisuće jahti, transparentne cijene, sigurna rezervacija, podrška 24/7."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Motorne jahte za najam u Grčkoj",
+        "metaDesc": "Unajmite motornu jahtu u Grčkoj i plovite svojim tempom. Usporedite cijene, prave slike, instant rezervacija. Sigurno plaćanje i podrška 24/7."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Luksuzne motorne jahte za najam u Grčkoj",
+        "metaDesc": "Unajmite luksuznu motornu jahtu u Grčkoj za vrhunski odmor na moru. Usporedite cijene, prave slike, instant rezervacija. Sigurno plaćanje i podrška 24/7."
+      },
       "CATAMARAN": {
         "h1": "Najam katamarana u Grčkoj",
         "metaDesc": "Unajmite katamaran u Grčkoj. Usporedite cijene, prave slike, instant rezervacija. Sigurno plaćanje i podrška 24/7."
@@ -31,6 +55,18 @@
       }
     },
     "italy": {
+      "NONE": {
+        "h1": "Jahte i brodovi za najam u Italiji",
+        "metaDesc": "Unajmite jedrilicu, katamaran ili motornu jahtu u Italiji. Tisuće jahti, transparentne cijene, sigurna rezervacija, podrška 24/7."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Motorne jahte za najam u Italiji",
+        "metaDesc": "Unajmite motornu jahtu u Italiji i plovite svojim tempom. Usporedite cijene, prave slike, instant rezervacija. Sigurno plaćanje i podrška 24/7."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Luksuzne motorne jahte za najam u Italiji",
+        "metaDesc": "Unajmite luksuznu motornu jahtu u Italiji za vrhunski odmor na moru. Usporedite cijene, prave slike, instant rezervacija. Sigurno plaćanje i podrška 24/7."
+      },
       "CATAMARAN": {
         "h1": "Najam katamarana u Italiji",
         "metaDesc": "Unajmite katamaran u Italiji. Usporedite cijene, prave slike, instant rezervacija. Sigurno plaćanje i podrška 24/7."
@@ -71,6 +107,14 @@
       }
     },
     "italianAdriatic": {
+      "NONE": {
+        "h1": "Jahte i brodovi za najam na talijanskom Jadranu",
+        "metaDesc": "Unajmite jedrilicu, katamaran ili motornu jahtu na talijanskom Jadranu. Tisuće jahti, transparentne cijene, sigurna rezervacija, podrška 24/7."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Motorne jahte za najam na talijanskom Jadranu",
+        "metaDesc": "Unajmite motornu jahtu na talijanskom Jadranu. Usporedite cijene, prave slike, instant rezervacija. Sigurno plaćanje i podrška 24/7."
+      },
       "CATAMARAN": {
         "h1": "Najam katamarana na talijanskom Jadranu",
         "metaDesc": "Unajmite katamaran na talijanskom Jadranu. Usporedite cijene, prave slike, instant rezervacija. Sigurno plaćanje i podrška 24/7."
@@ -81,6 +125,18 @@
       }
     },
     "northernGreeceAegean": {
+      "NONE": {
+        "h1": "Jahte i brodovi za najam u sjevernoj Grčkoj i Egeju",
+        "metaDesc": "Unajmite jedrilicu, katamaran ili motornu jahtu u sjevernoj Grčkoj i Egeju. Tisuće jahti, transparentne cijene, sigurna rezervacija, podrška 24/7."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Motorne jahte za najam u sjevernoj Grčkoj i Egeju",
+        "metaDesc": "Unajmite motornu jahtu u sjevernoj Grčkoj i Egeju. Usporedite cijene, prave slike, instant rezervacija. Sigurno plaćanje i podrška 24/7."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Luksuzne motorne jahte za najam u sjevernoj Grčkoj i Egeju",
+        "metaDesc": "Unajmite luksuznu motornu jahtu u sjevernoj Grčkoj i Egeju. Usporedite cijene, prave slike, instant rezervacija. Sigurno plaćanje i podrška 24/7."
+      },
       "CATAMARAN": {
         "h1": "Najam katamarana u sjevernoj Grčkoj i Egeju",
         "metaDesc": "Unajmite katamaran u sjevernoj Grčkoj i Egeju. Usporedite cijene, prave slike, instant rezervacija. Sigurno plaćanje i podrška 24/7."
@@ -118,6 +174,34 @@
       "POWER_CATAMARAN": {
         "h1": "Najam motornih katamarana na Karibima",
         "metaDesc": "Unajmite motorni katamaran na Karibima. Usporedite cijene, prave slike, instant rezervacija. Sigurno plaćanje i podrška 24/7."
+      }
+    },
+    "spain": {
+      "NONE": {
+        "h1": "Jahte i brodovi za najam u Španjolskoj",
+        "metaDesc": "Unajmite jedrilicu, katamaran ili motornu jahtu u Španjolskoj. Tisuće jahti, transparentne cijene, sigurna rezervacija, podrška 24/7."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Motorne jahte za najam u Španjolskoj",
+        "metaDesc": "Unajmite motornu jahtu u Španjolskoj i plovite svojim tempom. Usporedite cijene, prave slike, instant rezervacija. Sigurno plaćanje i podrška 24/7."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Luksuzne motorne jahte za najam u Španjolskoj",
+        "metaDesc": "Unajmite luksuznu motornu jahtu u Španjolskoj za vrhunski odmor na moru. Usporedite cijene, prave slike, instant rezervacija. Sigurno plaćanje i podrška 24/7."
+      }
+    },
+    "türkiye": {
+      "NONE": {
+        "h1": "Jahte i brodovi za najam u Turskoj",
+        "metaDesc": "Unajmite jedrilicu, katamaran ili motornu jahtu u Turskoj. Tisuće jahti, transparentne cijene, sigurna rezervacija, podrška 24/7."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Motorne jahte za najam u Turskoj",
+        "metaDesc": "Unajmite motornu jahtu u Turskoj i plovite svojim tempom. Usporedite cijene, prave slike, instant rezervacija. Sigurno plaćanje i podrška 24/7."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Luksuzne motorne jahte za najam u Turskoj",
+        "metaDesc": "Unajmite luksuznu motornu jahtu u Turskoj za vrhunski odmor na moru. Usporedite cijene, prave slike, instant rezervacija. Sigurno plaćanje i podrška 24/7."
       }
     }
   },

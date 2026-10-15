@@ -1,7 +1,7 @@
 {
   "h1WithBoatType": "Charter di {boatType} {where}",
   "h1NoBoatType": "Noleggio yacht e barche {where}",
-  "metaDescWithBoatType": "Noleggia un {boatType} {where}. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7.",
+  "metaDescWithBoatType": "Noleggio {boatType} {where}. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7.",
   "metaDescNoBoatType": "Noleggio yacht e barche {where}. Migliaia di barche, prezzi trasparenti, prenotazione sicura, supporto 24/7.",
   "leadH1WithBoatType": "Charter di {boatType} {lead} – {name}",
   "leadH1NoBoatType": "Noleggio yacht {lead} – noleggio barche {where}",
@@ -11,6 +11,22 @@
   },
   "override": {
     "croatia": {
+      "NONE": {
+        "h1": "Yacht e barche a noleggio in Croazia",
+        "metaDesc": "Noleggia uno yacht o una barca in Croazia tra migliaia di imbarcazioni. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
+      },
+      "SAILING_YACHT": {
+        "h1": "Yacht a vela a noleggio in Croazia",
+        "metaDesc": "Noleggia uno yacht a vela in Croazia e veleggia di baia in baia. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Yacht a motore a noleggio in Croazia",
+        "metaDesc": "Noleggia uno yacht a motore in Croazia e scopri la costa al tuo ritmo. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Yacht a motore di lusso a noleggio in Croazia",
+        "metaDesc": "Noleggia uno yacht a motore di lusso in Croazia e naviga con stile. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
+      },
       "CATAMARAN": {
         "h1": "Affitto catamarani in Croazia",
         "metaDesc": "Affitta un catamarano in Croazia. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
@@ -21,6 +37,22 @@
       }
     },
     "greece": {
+      "NONE": {
+        "h1": "Yacht e barche a noleggio in Grecia",
+        "metaDesc": "Noleggia uno yacht o una barca in Grecia tra migliaia di imbarcazioni. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
+      },
+      "SAILING_YACHT": {
+        "h1": "Yacht a vela a noleggio in Grecia",
+        "metaDesc": "Noleggia uno yacht a vela in Grecia e veleggia di baia in baia. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Yacht a motore a noleggio in Grecia",
+        "metaDesc": "Noleggia uno yacht a motore in Grecia e scopri la costa al tuo ritmo. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Yacht a motore di lusso a noleggio in Grecia",
+        "metaDesc": "Noleggia uno yacht a motore di lusso in Grecia e naviga con stile. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
+      },
       "CATAMARAN": {
         "h1": "Affitto catamarani in Grecia",
         "metaDesc": "Affitta un catamarano in Grecia. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
@@ -31,6 +63,22 @@
       }
     },
     "italy": {
+      "NONE": {
+        "h1": "Yacht e barche a noleggio in Italia",
+        "metaDesc": "Noleggia uno yacht o una barca in Italia tra migliaia di imbarcazioni. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
+      },
+      "SAILING_YACHT": {
+        "h1": "Yacht a vela a noleggio in Italia",
+        "metaDesc": "Noleggia uno yacht a vela in Italia e veleggia di baia in baia. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Yacht a motore a noleggio in Italia",
+        "metaDesc": "Noleggia uno yacht a motore in Italia e scopri la costa al tuo ritmo. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Yacht a motore di lusso a noleggio in Italia",
+        "metaDesc": "Noleggia uno yacht a motore di lusso in Italia e naviga con stile. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
+      },
       "CATAMARAN": {
         "h1": "Affitto catamarani in Italia",
         "metaDesc": "Affitta un catamarano in Italia. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
@@ -71,6 +119,22 @@
       }
     },
     "italianAdriatic": {
+      "NONE": {
+        "h1": "Yacht e barche a noleggio sull'Adriatico italiano",
+        "metaDesc": "Noleggia uno yacht o una barca sull'Adriatico italiano. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
+      },
+      "SAILING_YACHT": {
+        "h1": "Yacht a vela a noleggio sull'Adriatico italiano",
+        "metaDesc": "Noleggia uno yacht a vela sull'Adriatico italiano e prendi il largo. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Yacht a motore a noleggio sull'Adriatico italiano",
+        "metaDesc": "Noleggia uno yacht a motore sull'Adriatico italiano e scopri la costa. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Yacht a motore di lusso a noleggio sull'Adriatico italiano",
+        "metaDesc": "Noleggia uno yacht a motore di lusso sull'Adriatico italiano. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
+      },
       "CATAMARAN": {
         "h1": "Affitto catamarani sull'Adriatico italiano",
         "metaDesc": "Affitta un catamarano sull'Adriatico italiano. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
@@ -81,6 +145,22 @@
       }
     },
     "northernGreeceAegean": {
+      "NONE": {
+        "h1": "Yacht e barche a noleggio nella Grecia settentrionale e nell'Egeo",
+        "metaDesc": "Noleggia uno yacht o una barca nella Grecia settentrionale e nell'Egeo. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
+      },
+      "SAILING_YACHT": {
+        "h1": "Yacht a vela a noleggio nella Grecia settentrionale e nell'Egeo",
+        "metaDesc": "Noleggia uno yacht a vela nella Grecia settentrionale e nell'Egeo. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Yacht a motore a noleggio nella Grecia settentrionale e nell'Egeo",
+        "metaDesc": "Noleggia uno yacht a motore nella Grecia settentrionale e nell'Egeo. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Yacht di lusso a noleggio nella Grecia settentrionale e nell'Egeo",
+        "metaDesc": "Noleggia uno yacht di lusso nella Grecia settentrionale e nell'Egeo. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
+      },
       "CATAMARAN": {
         "h1": "Affitto catamarani nella Grecia settentrionale e nell'Egeo",
         "metaDesc": "Affitta un catamarano nella Grecia settentrionale e nell'Egeo. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
@@ -118,6 +198,42 @@
       "POWER_CATAMARAN": {
         "h1": "Affitto catamarani a motore ai Caraibi",
         "metaDesc": "Affitta un catamarano a motore ai Caraibi. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
+      }
+    },
+    "spain": {
+      "NONE": {
+        "h1": "Yacht e barche a noleggio in Spagna",
+        "metaDesc": "Noleggia uno yacht o una barca in Spagna tra migliaia di imbarcazioni. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
+      },
+      "SAILING_YACHT": {
+        "h1": "Yacht a vela a noleggio in Spagna",
+        "metaDesc": "Noleggia uno yacht a vela in Spagna e veleggia di baia in baia. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Yacht a motore a noleggio in Spagna",
+        "metaDesc": "Noleggia uno yacht a motore in Spagna e scopri la costa al tuo ritmo. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Yacht a motore di lusso a noleggio in Spagna",
+        "metaDesc": "Noleggia uno yacht a motore di lusso in Spagna e naviga con stile. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
+      }
+    },
+    "türkiye": {
+      "NONE": {
+        "h1": "Yacht e barche a noleggio in Turchia",
+        "metaDesc": "Noleggia uno yacht o una barca in Turchia tra migliaia di imbarcazioni. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
+      },
+      "SAILING_YACHT": {
+        "h1": "Yacht a vela a noleggio in Turchia",
+        "metaDesc": "Noleggia uno yacht a vela in Turchia e veleggia di baia in baia. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Yacht a motore a noleggio in Turchia",
+        "metaDesc": "Noleggia uno yacht a motore in Turchia e scopri la costa al tuo ritmo. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Yacht a motore di lusso a noleggio in Turchia",
+        "metaDesc": "Noleggia uno yacht a motore di lusso in Turchia e naviga con stile. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
       }
     }
   },

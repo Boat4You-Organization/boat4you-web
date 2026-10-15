@@ -11,6 +11,22 @@
   },
   "override": {
     "croatia": {
+      "NONE": {
+        "h1": "Jachten en boten huren in Kroatië",
+        "metaDesc": "Huur een jacht of boot in Kroatië, van zeiljacht en catamaran tot motorjacht. Duizenden jachten, transparante prijzen, veilig boeken, 24/7 ondersteuning."
+      },
+      "SAILING_YACHT": {
+        "h1": "Zeiljacht huren in Kroatië",
+        "metaDesc": "Huur een zeiljacht in Kroatië, met of zonder schipper. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Motorjacht huren in Kroatië",
+        "metaDesc": "Huur een motorjacht in Kroatië en bereik snel de mooiste baaien. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Luxe motorjacht huren in Kroatië",
+        "metaDesc": "Huur een luxe motorjacht in Kroatië voor een exclusieve vaarvakantie. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
+      },
       "CATAMARAN": {
         "h1": "Catamaran huren in Kroatië",
         "metaDesc": "Huur een catamaran in Kroatië. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
@@ -21,6 +37,22 @@
       }
     },
     "greece": {
+      "NONE": {
+        "h1": "Jachten en boten huren in Griekenland",
+        "metaDesc": "Huur een jacht of boot in Griekenland, van zeiljacht en catamaran tot motorjacht. Duizenden jachten, transparante prijzen, veilig boeken, 24/7 ondersteuning."
+      },
+      "SAILING_YACHT": {
+        "h1": "Zeiljacht huren in Griekenland",
+        "metaDesc": "Huur een zeiljacht in Griekenland, met of zonder schipper. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Motorjacht huren in Griekenland",
+        "metaDesc": "Huur een motorjacht in Griekenland en bereik snel de mooiste baaien. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Luxe motorjacht huren in Griekenland",
+        "metaDesc": "Huur een luxe motorjacht in Griekenland voor een exclusieve vaarvakantie. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
+      },
       "CATAMARAN": {
         "h1": "Catamaran huren in Griekenland",
         "metaDesc": "Huur een catamaran in Griekenland. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
@@ -31,6 +63,22 @@
       }
     },
     "italy": {
+      "NONE": {
+        "h1": "Jachten en boten huren in Italië",
+        "metaDesc": "Huur een jacht of boot in Italië, van zeiljacht en catamaran tot motorjacht. Duizenden jachten, transparante prijzen, veilig boeken, 24/7 ondersteuning."
+      },
+      "SAILING_YACHT": {
+        "h1": "Zeiljacht huren in Italië",
+        "metaDesc": "Huur een zeiljacht in Italië, met of zonder schipper. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Motorjacht huren in Italië",
+        "metaDesc": "Huur een motorjacht in Italië en bereik snel de mooiste baaien. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Luxe motorjacht huren in Italië",
+        "metaDesc": "Huur een luxe motorjacht in Italië voor een exclusieve vaarvakantie. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
+      },
       "CATAMARAN": {
         "h1": "Catamaran huren in Italië",
         "metaDesc": "Huur een catamaran in Italië. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
@@ -71,6 +119,18 @@
       }
     },
     "italianAdriatic": {
+      "SAILING_YACHT": {
+        "h1": "Zeiljacht huren aan de Italiaanse Adriatische kust",
+        "metaDesc": "Huur een zeiljacht aan de Italiaanse Adriatische kust. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Motorjacht huren aan de Italiaanse Adriatische kust",
+        "metaDesc": "Huur een motorjacht aan de Italiaanse Adriatische kust. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Luxe motorjacht huren aan de Italiaanse Adriatische kust",
+        "metaDesc": "Huur een luxe motorjacht aan de Italiaanse Adriatische kust. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
+      },
       "CATAMARAN": {
         "h1": "Catamaran huren aan de Italiaanse Adriatische kust",
         "metaDesc": "Huur een catamaran aan de Italiaanse Adriatische kust. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
@@ -81,6 +141,18 @@
       }
     },
     "northernGreeceAegean": {
+      "SAILING_YACHT": {
+        "h1": "Zeiljacht huren in Noord-Griekenland en de Egeïsche Zee",
+        "metaDesc": "Huur een zeiljacht in Noord-Griekenland en de Egeïsche Zee. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Motorjacht huren in Noord-Griekenland en de Egeïsche Zee",
+        "metaDesc": "Huur een motorjacht in Noord-Griekenland en de Egeïsche Zee. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Luxe motorjacht huren in Noord-Griekenland en de Egeïsche Zee",
+        "metaDesc": "Huur een luxe motorjacht in Noord-Griekenland en de Egeïsche Zee. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
+      },
       "CATAMARAN": {
         "h1": "Catamaran huren in Noord-Griekenland en de Egeïsche Zee",
         "metaDesc": "Huur een catamaran in Noord-Griekenland en de Egeïsche Zee. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
@@ -118,6 +190,42 @@
       "POWER_CATAMARAN": {
         "h1": "Power catamaran huren in het Caribisch gebied",
         "metaDesc": "Huur een power catamaran in het Caribisch gebied. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
+      }
+    },
+    "spain": {
+      "NONE": {
+        "h1": "Jachten en boten huren in Spanje",
+        "metaDesc": "Huur een jacht of boot in Spanje, van zeiljacht en catamaran tot motorjacht. Duizenden jachten, transparante prijzen, veilig boeken, 24/7 ondersteuning."
+      },
+      "SAILING_YACHT": {
+        "h1": "Zeiljacht huren in Spanje",
+        "metaDesc": "Huur een zeiljacht in Spanje, met of zonder schipper. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Motorjacht huren in Spanje",
+        "metaDesc": "Huur een motorjacht in Spanje en bereik snel de mooiste baaien. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Luxe motorjacht huren in Spanje",
+        "metaDesc": "Huur een luxe motorjacht in Spanje voor een exclusieve vaarvakantie. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
+      }
+    },
+    "türkiye": {
+      "NONE": {
+        "h1": "Jachten en boten huren in Turkije",
+        "metaDesc": "Huur een jacht of boot in Turkije, van zeiljacht en catamaran tot motorjacht. Duizenden jachten, transparante prijzen, veilig boeken, 24/7 ondersteuning."
+      },
+      "SAILING_YACHT": {
+        "h1": "Zeiljacht huren in Turkije",
+        "metaDesc": "Huur een zeiljacht in Turkije, met of zonder schipper. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Motorjacht huren in Turkije",
+        "metaDesc": "Huur een motorjacht in Turkije en bereik snel de mooiste baaien. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Luxe motorjacht huren in Turkije",
+        "metaDesc": "Huur een luxe motorjacht in Turkije voor een exclusieve vaarvakantie. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
       }
     }
   },

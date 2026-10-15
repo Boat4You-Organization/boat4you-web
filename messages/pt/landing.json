@@ -11,6 +11,22 @@
   },
   "override": {
     "croatia": {
+      "NONE": {
+        "h1": "Iates e barcos para alugar na Croácia",
+        "metaDesc": "Milhares de iates e barcos para alugar na Croácia. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
+      },
+      "SAILING_YACHT": {
+        "h1": "Iates à vela para alugar na Croácia",
+        "metaDesc": "Escolha um iate à vela na Croácia e navegue ao seu ritmo. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Iates a motor para alugar na Croácia",
+        "metaDesc": "Encontre o iate a motor ideal na Croácia e explore a costa com conforto. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Iates a motor de luxo para alugar na Croácia",
+        "metaDesc": "Descubra um iate a motor de luxo na Croácia e navegue com todo o conforto. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
+      },
       "CATAMARAN": {
         "h1": "Catamarãs para alugar na Croácia",
         "metaDesc": "Alugue um catamarã na Croácia. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
@@ -21,6 +37,22 @@
       }
     },
     "greece": {
+      "NONE": {
+        "h1": "Iates e barcos para alugar na Grécia",
+        "metaDesc": "Milhares de iates e barcos para alugar na Grécia. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
+      },
+      "SAILING_YACHT": {
+        "h1": "Iates à vela para alugar na Grécia",
+        "metaDesc": "Escolha um iate à vela na Grécia e navegue ao seu ritmo. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Iates a motor para alugar na Grécia",
+        "metaDesc": "Encontre o iate a motor ideal na Grécia e explore a costa com conforto. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Iates a motor de luxo para alugar na Grécia",
+        "metaDesc": "Descubra um iate a motor de luxo na Grécia e navegue com todo o conforto. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
+      },
       "CATAMARAN": {
         "h1": "Catamarãs para alugar na Grécia",
         "metaDesc": "Alugue um catamarã na Grécia. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
@@ -31,6 +63,22 @@
       }
     },
     "italy": {
+      "NONE": {
+        "h1": "Iates e barcos para alugar em Itália",
+        "metaDesc": "Milhares de iates e barcos para alugar em Itália. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
+      },
+      "SAILING_YACHT": {
+        "h1": "Iates à vela para alugar em Itália",
+        "metaDesc": "Escolha um iate à vela em Itália e navegue ao seu ritmo. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Iates a motor para alugar em Itália",
+        "metaDesc": "Encontre o iate a motor ideal em Itália e explore a costa com conforto. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Iates a motor de luxo para alugar em Itália",
+        "metaDesc": "Descubra um iate a motor de luxo em Itália e navegue com todo o conforto. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
+      },
       "CATAMARAN": {
         "h1": "Catamarãs para alugar em Itália",
         "metaDesc": "Alugue um catamarã em Itália. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
@@ -71,6 +119,22 @@
       }
     },
     "italianAdriatic": {
+      "NONE": {
+        "h1": "Iates e barcos para alugar no Adriático italiano",
+        "metaDesc": "Iates e barcos para alugar no Adriático italiano. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
+      },
+      "SAILING_YACHT": {
+        "h1": "Iates à vela para alugar no Adriático italiano",
+        "metaDesc": "Escolha um iate à vela no Adriático italiano e navegue ao seu ritmo. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Iates a motor para alugar no Adriático italiano",
+        "metaDesc": "Encontre o iate a motor ideal no Adriático italiano e explore a costa. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Iates a motor de luxo para alugar no Adriático italiano",
+        "metaDesc": "Descubra um iate a motor de luxo no Adriático italiano. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
+      },
       "CATAMARAN": {
         "h1": "Catamarãs para alugar no Adriático italiano",
         "metaDesc": "Alugue um catamarã no Adriático italiano. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
@@ -81,6 +145,22 @@
       }
     },
     "northernGreeceAegean": {
+      "NONE": {
+        "h1": "Iates e barcos para alugar no norte da Grécia e no Egeu",
+        "metaDesc": "Iates e barcos para alugar no norte da Grécia e no Egeu. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
+      },
+      "SAILING_YACHT": {
+        "h1": "Iates à vela para alugar no norte da Grécia e no Egeu",
+        "metaDesc": "Escolha um iate à vela no norte da Grécia e no Egeu e navegue ao seu ritmo. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Iates a motor para alugar no norte da Grécia e no Egeu",
+        "metaDesc": "Encontre o iate a motor ideal no norte da Grécia e no Egeu e explore a costa. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Iates a motor de luxo para alugar no norte da Grécia e no Egeu",
+        "metaDesc": "Descubra um iate a motor de luxo no norte da Grécia e no Egeu. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
+      },
       "CATAMARAN": {
         "h1": "Catamarãs para alugar no norte da Grécia e no Egeu",
         "metaDesc": "Alugue um catamarã no norte da Grécia e no Egeu. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
@@ -118,6 +198,42 @@
       "POWER_CATAMARAN": {
         "h1": "Catamarãs a motor para alugar no Caribe",
         "metaDesc": "Alugue um catamarã a motor no Caribe. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
+      }
+    },
+    "spain": {
+      "NONE": {
+        "h1": "Iates e barcos para alugar em Espanha",
+        "metaDesc": "Milhares de iates e barcos para alugar em Espanha. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
+      },
+      "SAILING_YACHT": {
+        "h1": "Iates à vela para alugar em Espanha",
+        "metaDesc": "Escolha um iate à vela em Espanha e navegue ao seu ritmo. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Iates a motor para alugar em Espanha",
+        "metaDesc": "Encontre o iate a motor ideal em Espanha e explore a costa com conforto. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Iates a motor de luxo para alugar em Espanha",
+        "metaDesc": "Descubra um iate a motor de luxo em Espanha e navegue com todo o conforto. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
+      }
+    },
+    "türkiye": {
+      "NONE": {
+        "h1": "Iates e barcos para alugar na Turquia",
+        "metaDesc": "Milhares de iates e barcos para alugar na Turquia. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
+      },
+      "SAILING_YACHT": {
+        "h1": "Iates à vela para alugar na Turquia",
+        "metaDesc": "Escolha um iate à vela na Turquia e navegue ao seu ritmo. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Iates a motor para alugar na Turquia",
+        "metaDesc": "Encontre o iate a motor ideal na Turquia e explore a costa com conforto. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Iates a motor de luxo para alugar na Turquia",
+        "metaDesc": "Descubra um iate a motor de luxo na Turquia e navegue com todo o conforto. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
       }
     }
   },

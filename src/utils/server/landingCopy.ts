@@ -21,13 +21,22 @@ import { resolveSearchLanding, splitSearchParam, uniqueCaseInsensitive } from '@
  *   - a place with a `landing.lead` (Split Region, owner decision 25.9.2026)
  *     leads with that keyword: "Yacht charter Split – boat rental in the
  *     Split Region";
- *   - `landing.override` (every locale) replaces a phrase another site of the
- *     group owns: "Catamaran charter Croatia" is catamaran-croatia-charter.com's
- *     keyword, so the boat4you page reads "Catamaran rental in Croatia" (also
- *     catamarans and power catamarans in Greece, Italy, the BVI, Martinique,
- *     the Bahamas, Grenada, the Caribbean, Northern Greece and the Italian
- *     Adriatic; `yarn check:home-hub` builds every place × boat type heading
- *     and fails on a sister head term without an override);
+ *   - `landing.override[place][boatType]` (every locale) replaces a phrase
+ *     another site of the group owns: "Catamaran charter Croatia" is
+ *     catamaran-croatia-charter.com's keyword, so the boat4you page reads
+ *     "Catamaran rental in Croatia" (also catamarans and power catamarans in
+ *     Greece, Italy, the BVI, Martinique, the Bahamas, Grenada, the Caribbean,
+ *     Northern Greece and the Italian Adriatic);
+ *   - `landing.override[place].NONE` does the same for the place's page
+ *     without a boat type (also what a filter of several boat types shows):
+ *     "Yacht charter {Croatia/Greece/Italy/Spain/Türkiye}" is
+ *     europe-yachts.com's head term (owner decision 15.10.2026), so the
+ *     boat4you page names the rental instead;
+ *   - precedence for one place: override (typed or NONE) > lead > default
+ *     template — a place with a lead AND a NONE override shows the override;
+ *     `yarn check:home-hub` builds the heading of every place × no boat type
+ *     / each boat type the same way and fails on a sister head term without
+ *     an override;
  *   - boat type only → the type label; neither → the generic search copy.
  *
  * `h1` is null when the page keeps its own heading (no destination).
@@ -39,6 +48,11 @@ export interface LandingCopy {
 }
 
 type Override = { h1: string; metaDesc: string };
+
+/** `landing.override[place]` key of the page without a boat type (scripts/check-home-hub.mjs reads the same key). */
+const NO_BOAT_TYPE = 'NONE';
+
+type PlaceOverrides = Partial<Record<VesselType | typeof NO_BOAT_TYPE, Override>>;
 
 /** Rental-context label: genitive in HR/PL ("Najam katamarana"), the
  *  nominative elsewhere (common.json `*ForRental`). */
@@ -73,8 +87,9 @@ const copyForPlaces = async (
   const where = places.map(p => p.where).join(` ${tCommon('and')} `);
   const single = places.length === 1 ? places[0] : null;
   const lead = single?.key ? (tLanding.raw('lead' as never) as Record<string, string>)[single.key] : undefined;
-  const overrides = tLanding.raw('override' as never) as Record<string, Partial<Record<VesselType, Override>>>;
-  const override = single?.key && singleBoatType ? overrides[single.key]?.[singleBoatType] : undefined;
+  const overrides = tLanding.raw('override' as never) as Record<string, PlaceOverrides | undefined>;
+  // Same precedence on every path: override > lead > default template.
+  const override = single?.key ? overrides[single.key]?.[singleBoatType ?? NO_BOAT_TYPE] : undefined;
 
   if (override) return { title: override.h1, description: override.metaDesc, h1: override.h1 };
 
@@ -127,9 +142,9 @@ export const getLandingCopy = async (locale: string, params: AllSearchParams): P
 };
 
 /**
- * H1 of the landing of one catalogue place [× one boat type], built from the
- * same templates as that page (lead, override, `landing.h1*`): the anchor
- * text other pages link the landing by, so a link never names a page
+ * H1 of the landing of one catalogue place [× one boat type], built by the
+ * same code as that page (override incl. NONE, lead, `landing.h1*`): the
+ * anchor text other pages link the landing by, so a link never names a page
  * differently from its own heading.
  */
 export const landingHeading = async (locale: string, name: string, boatType: VesselType | null): Promise<string> =>

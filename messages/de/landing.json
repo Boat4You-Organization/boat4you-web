@@ -11,6 +11,22 @@
   },
   "override": {
     "croatia": {
+      "NONE": {
+        "h1": "Yachten und Boote mieten in Kroatien",
+        "metaDesc": "Ob Segelyacht, Katamaran oder Motoryacht: Mieten Sie Ihr Boot in Kroatien. Tausende Yachten, transparente Preise, sichere Buchung, 24/7-Support."
+      },
+      "SAILING_YACHT": {
+        "h1": "Segelyacht mieten in Kroatien",
+        "metaDesc": "Segelyacht in Kroatien mieten: Ihr Törn, Ihre Route. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Motoryacht mieten in Kroatien",
+        "metaDesc": "Motoryacht in Kroatien mieten: schnell von Bucht zu Bucht. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Luxus-Motoryacht mieten in Kroatien",
+        "metaDesc": "Luxus-Motoryacht in Kroatien mieten: Urlaub der Extraklasse. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
+      },
       "CATAMARAN": {
         "h1": "Katamaran mieten in Kroatien",
         "metaDesc": "Mieten Sie einen Katamaran in Kroatien. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
@@ -21,6 +37,22 @@
       }
     },
     "greece": {
+      "NONE": {
+        "h1": "Yachten und Boote mieten in Griechenland",
+        "metaDesc": "Ob Segelyacht, Katamaran oder Motoryacht: Mieten Sie Ihr Boot in Griechenland. Tausende Yachten, transparente Preise, sichere Buchung, 24/7-Support."
+      },
+      "SAILING_YACHT": {
+        "h1": "Segelyacht mieten in Griechenland",
+        "metaDesc": "Segelyacht in Griechenland mieten: Ihr Törn, Ihre Route. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Motoryacht mieten in Griechenland",
+        "metaDesc": "Motoryacht in Griechenland mieten: schnell von Bucht zu Bucht. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Luxus-Motoryacht mieten in Griechenland",
+        "metaDesc": "Luxus-Motoryacht in Griechenland mieten: Urlaub der Extraklasse. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
+      },
       "CATAMARAN": {
         "h1": "Katamaran mieten in Griechenland",
         "metaDesc": "Mieten Sie einen Katamaran in Griechenland. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
@@ -31,6 +63,22 @@
       }
     },
     "italy": {
+      "NONE": {
+        "h1": "Yachten und Boote mieten in Italien",
+        "metaDesc": "Ob Segelyacht, Katamaran oder Motoryacht: Mieten Sie Ihr Boot in Italien. Tausende Yachten, transparente Preise, sichere Buchung, 24/7-Support."
+      },
+      "SAILING_YACHT": {
+        "h1": "Segelyacht mieten in Italien",
+        "metaDesc": "Segelyacht in Italien mieten: Ihr Törn, Ihre Route. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Motoryacht mieten in Italien",
+        "metaDesc": "Motoryacht in Italien mieten: schnell von Bucht zu Bucht. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Luxus-Motoryacht mieten in Italien",
+        "metaDesc": "Luxus-Motoryacht in Italien mieten: Urlaub der Extraklasse. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
+      },
       "CATAMARAN": {
         "h1": "Katamaran mieten in Italien",
         "metaDesc": "Mieten Sie einen Katamaran in Italien. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
@@ -71,6 +119,22 @@
       }
     },
     "italianAdriatic": {
+      "NONE": {
+        "h1": "Yachten und Boote mieten an der italienischen Adria",
+        "metaDesc": "Ob Segelyacht, Katamaran oder Motoryacht: Mieten Sie Ihr Boot an der italienischen Adria. Tausende Yachten, transparente Preise, sichere Buchung, 24/7-Support."
+      },
+      "SAILING_YACHT": {
+        "h1": "Segelyacht mieten an der italienischen Adria",
+        "metaDesc": "Segelyacht an der italienischen Adria mieten: Ihr Törn, Ihre Route. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Motoryacht mieten an der italienischen Adria",
+        "metaDesc": "Motoryacht an der italienischen Adria mieten: schnell von Bucht zu Bucht. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Luxus-Motoryacht mieten an der italienischen Adria",
+        "metaDesc": "Luxus-Motoryacht an der italienischen Adria mieten: Urlaub der Extraklasse. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
+      },
       "CATAMARAN": {
         "h1": "Katamaran mieten an der italienischen Adria",
         "metaDesc": "Mieten Sie einen Katamaran an der italienischen Adria. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
@@ -81,6 +145,22 @@
       }
     },
     "northernGreeceAegean": {
+      "NONE": {
+        "h1": "Yachten und Boote mieten in Nordgriechenland und der Ägäis",
+        "metaDesc": "Ob Segelyacht, Katamaran oder Motoryacht: Mieten Sie Ihr Boot in Nordgriechenland und der Ägäis. Transparente Preise, sichere Buchung, 24/7-Support."
+      },
+      "SAILING_YACHT": {
+        "h1": "Segelyacht mieten in Nordgriechenland und der Ägäis",
+        "metaDesc": "Segelyacht in Nordgriechenland und der Ägäis mieten: Ihr Törn, Ihre Route. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Motoryacht mieten in Nordgriechenland und der Ägäis",
+        "metaDesc": "Motoryacht in Nordgriechenland und der Ägäis mieten: von Bucht zu Bucht. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Luxus-Motoryacht mieten in Nordgriechenland und der Ägäis",
+        "metaDesc": "Luxus-Motoryacht in Nordgriechenland und der Ägäis mieten. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
+      },
       "CATAMARAN": {
         "h1": "Katamaran mieten in Nordgriechenland und der Ägäis",
         "metaDesc": "Mieten Sie einen Katamaran in Nordgriechenland und der Ägäis. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
@@ -118,6 +198,42 @@
       "POWER_CATAMARAN": {
         "h1": "Motor-Katamaran mieten in der Karibik",
         "metaDesc": "Mieten Sie einen Motor-Katamaran in der Karibik. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
+      }
+    },
+    "spain": {
+      "NONE": {
+        "h1": "Yachten und Boote mieten in Spanien",
+        "metaDesc": "Ob Segelyacht, Katamaran oder Motoryacht: Mieten Sie Ihr Boot in Spanien. Tausende Yachten, transparente Preise, sichere Buchung, 24/7-Support."
+      },
+      "SAILING_YACHT": {
+        "h1": "Segelyacht mieten in Spanien",
+        "metaDesc": "Segelyacht in Spanien mieten: Ihr Törn, Ihre Route. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Motoryacht mieten in Spanien",
+        "metaDesc": "Motoryacht in Spanien mieten: schnell von Bucht zu Bucht. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Luxus-Motoryacht mieten in Spanien",
+        "metaDesc": "Luxus-Motoryacht in Spanien mieten: Urlaub der Extraklasse. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
+      }
+    },
+    "türkiye": {
+      "NONE": {
+        "h1": "Yachten und Boote mieten in der Türkei",
+        "metaDesc": "Ob Segelyacht, Katamaran oder Motoryacht: Mieten Sie Ihr Boot in der Türkei. Tausende Yachten, transparente Preise, sichere Buchung, 24/7-Support."
+      },
+      "SAILING_YACHT": {
+        "h1": "Segelyacht mieten in der Türkei",
+        "metaDesc": "Segelyacht in der Türkei mieten: Ihr Törn, Ihre Route. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
+      },
+      "MOTOR_YACHT": {
+        "h1": "Motoryacht mieten in der Türkei",
+        "metaDesc": "Motoryacht in der Türkei mieten: schnell von Bucht zu Bucht. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
+      },
+      "LUXURY_MOTOR_YACHT": {
+        "h1": "Luxus-Motoryacht mieten in der Türkei",
+        "metaDesc": "Luxus-Motoryacht in der Türkei mieten: Urlaub der Extraklasse. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
       }
     }
   },
