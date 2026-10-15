@@ -1,5 +1,13 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-10-15 — 🏷️ Naslov broda zadržava „Boat4You“ (bez „Boat4you“ i bez dvostrukog „| Boat4You“) — ✅ DEPLOYANO 15.10.2026 09:01 UTC (`62d40387a`, deployment id `62d40387aaf0-mv9avtxp`), tag `live/2026-10-15`
+
+Preduvjet za backend val 2 (V9_87, večeras 21:05–21:45 UTC): flotna imena postaju `Boat4You 424/4/4 Premium`, kurirani brodovi nazvani po agenciji (8477 Rhodes Yachting, 18924/18925 Active Cruises) samo `Boat4You`. Drugi pregled grane (15.10.) pokazao je da `toTitleCase` (42 poziva: title, H1, OG, meta, kartice, JSON-LD) ime savija u „Boat4you“, a `buildBoatTitle` onda dodaje „ | Boat4You“ drugi put — „Cyclades 39.3 Boat4you (2007) — Rhodes Charter | Boat4You“.
+
+- `toTitleCase.ts`: `caseWord` vraća „Boat4You“ za riječ `boat4you` u bilo kojem pisanju (`BRAND_WORD_RE`). `boatTitle.ts`: kad ime nosi brend, naslov ide bez sufiksa šablone (`absolute: true`). Sve ostalo nepromijenjeno; sisteri nisu pogođeni (token brišu prije savijanja).
+- Isti deploy nosi i `scripts/indexnow-successor-urls.mjs` R31 pravilo (`568e3cae4`, samo skripta — pokreće se tek nakon vala 2).
+- Testovi: `yarn test:boat-seo` 39/39 (novi blok „the house brand in a fleet name“), eslint 0 grešaka; deploy `b4y_web_deploy.sh` iz worktreea `wt-r31` (origin/main FF-an prije deploya), dpl potvrđen na /contact-us i /search, SEO regresija 0 novih FAIL (41 poznatih, 17 WARN). Lokalni `tsc` u svježem worktreeu javlja 1685 grešaka bez generiranih tipova (`next-env.d.ts`/`.next/types`) — artefakt worktreea, build prošao.
+
 ## 2026-10-14 — 🔤 Emoji „tofu“ kvadratići → inline SVG ikone (trip PWA: vrijeme po WMO kodu, itinerar, tabovi, uloge, share, poklon; ChatWidget, AI hint, standard offers) — ✅ DEPLOYANO 14.10.2026 12:4x UTC (`1335345e4`, deployment id `1335345e43ee-mv83j0pj`), tag `live/2026-10-14c`
 
 Mario 14.10. (screenshot trip aplikacije): na uređaju bez emoji fonta Chrome je umjesto 🌤 (U+1F324) u vremenskoj prognozi i 🗺 (U+1F5FA) u naslovu „Suggested itinerary“ crtao kvadratić s hex kodom (☁ iz osnovnog bloka radi). Zamjena emoji iz dopunskog bloka SVG ikonama (`src/components/SvgIcons/UiEmojiIcons.tsx`: currentColor, 1.2em, aria-hidden / aria-label kad nose značenje):
