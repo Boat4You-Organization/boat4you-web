@@ -114,8 +114,10 @@ export const buildBoatTitle = ({
   const yearPart = year ? ` (${year})` : '';
   const withTail = (head: string) => (tail ? `${head} — ${tail}` : head);
   const full = withTail(`${cleanModel}${namePart}${yearPart}`);
+  // A name that already carries the house brand ("Boat4You 424/4/4 Premium", V9_87) gets no " | Boat4You" suffix.
+  const brandInName = hasName && /\bboat4you\b/iu.test(cleanName);
 
-  if (fitsWithBrandSuffix(full)) return { title: full, absolute: false };
+  if (!brandInName && fitsWithBrandSuffix(full)) return { title: full, absolute: false };
 
   if (full.length <= TITLE_MAX) return { title: full, absolute: true };
 

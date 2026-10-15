@@ -32,9 +32,8 @@ import './tsLoader.mjs';
 const ROOT = fileURLToPath(new URL('../', import.meta.url));
 const readJson = path => JSON.parse(readFileSync(`${ROOT}${path}`, 'utf8'));
 
-const { weeklyOfferSummary, offerNights, cheapestBookableOffer, fromPriceOffer, isQuotedOffer } = await import(
-  '@/utils/static/weeklyOffers'
-);
+const { weeklyOfferSummary, offerNights, cheapestBookableOffer, fromPriceOffer, isQuotedOffer } =
+  await import('@/utils/static/weeklyOffers');
 const { freeCancellationReturnPolicy } = await import('@/utils/static/merchantReturnPolicy');
 const { buildBoatTitle } = await import('@/utils/static/boatTitle');
 const { rotateCandidates, ringKey } = await import('@/utils/static/relatedRotation');
@@ -277,6 +276,31 @@ describe('freeCancellationReturnPolicy', () => {
       applicableCountry: 'HR',
     });
     assert.equal('applicableCountry' in freeCancellationReturnPolicy(undefined), false);
+  });
+});
+
+describe('buildBoatTitle: the house brand in a fleet name (V9_87, 15.10.2026)', () => {
+  test('"Boat4You 454L Premium" keeps its spelling and gets no " | Boat4You" suffix', async () => {
+    const { toTitleCase } = await import('@/utils/static/toTitleCase');
+
+    assert.equal(toTitleCase('Boat4You 424/4/4 Premium'), 'Boat4You 424/4/4 Premium');
+    assert.equal(toTitleCase('BOAT4YOU 424/4/4 PREMIUM'), 'Boat4You 424/4/4 Premium');
+    assert.equal(toTitleCase('Boat4You'), 'Boat4You');
+
+    const { title, absolute } = buildBoatTitle({
+      model: 'Leopard 45',
+      name: 'Boat4You 424/4/4 Premium',
+      year: 2024,
+      tail: 'Gouvia Charter',
+    });
+
+    assert.equal(title, 'Leopard 45 Boat4You 424/4/4 Premium (2024) — Gouvia Charter');
+    assert.equal(absolute, true);
+
+    const bare = buildBoatTitle({ model: 'Cyclades 39.3', name: 'Boat4You', year: 2007, tail: 'Rhodes Charter' });
+
+    assert.equal(bare.title, 'Cyclades 39.3 Boat4You (2007) — Rhodes Charter');
+    assert.equal(bare.absolute, true);
   });
 });
 

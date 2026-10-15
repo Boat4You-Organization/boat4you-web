@@ -21,6 +21,7 @@
 //  - Apostrophes and dots: see APOSTROPHES_RE and the "." joiner below.
 // A real Roman numeral ("II", "IV", "XIX"), not merely a word spelt with the
 // letters M/D/C/L/X/V/I — "LILI" or "MIMI" must become "Lili" / "Mimi".
+const BRAND_WORD_RE = /^boat4you$/iu;
 const ROMAN_NUMERAL_RE = /^M{0,3}(?:CM|CD|D?C{0,3})(?:XC|XL|L?X{0,3})(?:IX|IV|V?I{0,3})$/;
 // A word with an apostrophe is cased segment by segment (live check
 // 9.10.2026: "I'm Alone" read "I'M Alone", "C's The Day" "C'S The Day",
@@ -138,6 +139,9 @@ const caseWord = (word: string, wordCase: WordCase): string => {
   if (lead) return lead + caseWord(word.slice(lead.length), wordCase);
 
   if (APOSTROPHES_RE.test(word)) return caseApostropheWord(word, wordCase);
+
+  // The house brand keeps its spelling: V9_87 (15.10.2026) names fleet boats "Boat4You 424/4/4 Premium".
+  if (BRAND_WORD_RE.test(word)) return 'Boat4You';
 
   const upper = word.toUpperCase();
 
