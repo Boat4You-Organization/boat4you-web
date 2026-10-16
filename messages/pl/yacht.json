@@ -335,7 +335,8 @@
     "pageOf": "{current} z {total}",
     "weeks": "{count, plural, one {# tydzień} few {# tygodnie} many {# tygodni} other {# tygodnia}}",
     "live": "Na żywo",
-    "weekAria": "Tydzień {from} – {to}, {price}, {status}"
+    "weekAria": "Tydzień {from} – {to}, {price}, {status}",
+    "allBookedNote": "Wszystkie opublikowane tygodnie są zarezerwowane — wyślij zapytanie o inne terminy."
   },
   "notAvailableShort": "Niedostępny w tych terminach",
   "readyToSail": "Gotowy do rejsu?",

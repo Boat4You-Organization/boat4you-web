@@ -335,7 +335,8 @@
     "pageOf": "{current} od {total}",
     "weeks": "{count, plural, one {# tjedan} few {# tjedna} other {# tjedana}}",
     "live": "Uživo",
-    "weekAria": "Tjedan {from} – {to}, {price}, {status}"
+    "weekAria": "Tjedan {from} – {to}, {price}, {status}",
+    "allBookedNote": "Svi su objavljeni tjedni rezervirani — pošaljite upit za druge termine."
   },
   "notAvailableShort": "Nije dostupno za ove datume",
   "readyToSail": "Spremni za plovidbu?",

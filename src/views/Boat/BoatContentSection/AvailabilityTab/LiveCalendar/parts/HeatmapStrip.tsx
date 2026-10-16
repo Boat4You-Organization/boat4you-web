@@ -38,7 +38,9 @@ const HeatmapStrip = ({ weeks, activeId, visibleRange, onCellClick, height = 56 
           const isService = w.status === 'service';
           // Both RESERVATION ('booked') and SERVICE ('service') are hard-blocked:
           // non-clickable. They differ only in their overlay so the user sees why.
-          const isBlocked = isBooked || isService;
+          // A boat with no bookable week locks every cell (16.10.2026): a live
+          // option is hatched like a reservation and keeps its amber dot.
+          const isBlocked = isBooked || isService || !!w.locked;
           const isOpt = w.status === 'option';
           const tier = w.tier ?? 0;
 
@@ -68,7 +70,7 @@ const HeatmapStrip = ({ weeks, activeId, visibleRange, onCellClick, height = 56 
                 overflow: 'hidden',
               }}
             >
-              {isBooked && (
+              {(isBooked || (isOpt && isBlocked)) && (
                 <Box
                   sx={{
                     position: 'absolute',

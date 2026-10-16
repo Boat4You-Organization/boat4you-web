@@ -36,6 +36,10 @@ export interface WeekData {
   currency?: string;
   /** Visual state — drives badge + heatmap cell. */
   status: WeekStatus;
+  /** Not selectable whatever the status: the boat has no bookable week, so
+   *  the calendar shows every published week reserved (owner rule 16.10.2026,
+   *  showsAllBookedCalendar) — a live option keeps its "Pre-reserved" pill. */
+  locked?: boolean;
   /** Optional pre-computed price tier (0..3). If absent, `withTiers` derives it. */
   tier?: 0 | 1 | 2 | 3;
   /** Raw backend offer references — passed through so click handlers can hand them to `calculatePriceForOffer`. */

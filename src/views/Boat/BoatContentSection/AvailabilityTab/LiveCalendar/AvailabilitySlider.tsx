@@ -12,8 +12,9 @@ import dayjs, { Dayjs } from 'dayjs';
 import weekOfYear from 'dayjs/plugin/weekOfYear';
 import { useLocale, useTranslations } from 'next-intl';
 
-import { getSingleYachtStandardOffers } from '@/actions/yacht.actions';
+import { YachtOffersParams, getSingleYachtStandardOffers } from '@/actions/yacht.actions';
 import AvailabilityCard from '@/components/AvailabilityCard';
+import InquiryOnlyPanel from '@/components/InquiryOnlyPanel';
 import { Currency } from '@/models/user.model';
 import { Status, YachtOfferModel } from '@/models/yacht-offer.model';
 import { YachtModel } from '@/models/yacht.model';
@@ -23,6 +24,7 @@ import DateTime from '@/utils/static/DateTime';
 import { useUserStore } from '@/valtio/user/user.store';
 import { setselectedOffer } from '@/valtio/yacht/yacht.actions';
 
+import AllBookedNote from './parts/AllBookedNote';
 import ArrowBtn from './parts/ArrowBtn';
 import HeatmapStrip from './parts/HeatmapStrip';
 import Legend from './parts/Legend';
@@ -42,6 +44,9 @@ dayjs.extend(weekOfYear);
 
 interface AvailabilitySliderProps {
   yacht: YachtModel;
+  /** The boat has no bookable week (showsAllBookedCalendar): every week is
+   *  shown reserved and none can be selected. */
+  allBooked?: boolean;
 }
 
 // ────────────────────────────────────────────────────────────────────────────
@@ -66,7 +71,10 @@ const mapStatus = (s: Status | undefined): WeekData['status'] => {
   return 'available';
 };
 
-const toWeek = (offer: YachtOfferModel, locale: string): WeekData => {
+// `allBooked` (owner rule 16.10.2026): the backend has no bookable week for
+// the boat, so none is selectable (`locked`) and a FREE row is shown reserved
+// — the web never decides on its own that a week can be booked.
+export const toWeek = (offer: YachtOfferModel, locale: string, allBooked = false): WeekData => {
   const from = dayjs(offer.dateFrom);
   const to = dayjs(offer.dateTo);
   // Use the currency-converted amounts from the partner price-info (the backend
@@ -91,17 +99,23 @@ const toWeek = (offer: YachtOfferModel, locale: string): WeekData => {
     price: finalPrice,
     regularPrice,
     currency: offer.clientPriceInfo?.currency,
-    status: mapStatus(offer.status as Status),
+    status: allBooked && offer.status === Status.FREE ? 'booked' : mapStatus(offer.status as Status),
+    locked: allBooked,
     raw: offer,
     dateFromIso: offer.dateFrom,
     dateToIso: offer.dateTo,
   };
 };
 
-const AvailabilitySlider = ({ yacht }: AvailabilitySliderProps) => {
+const AvailabilitySlider = ({ yacht, allBooked = false }: AvailabilitySliderProps) => {
   const locale = useLocale();
   const { isBelowLg } = useBreakpoint();
-  const [standardOffers, standardOffersAction] = useActionState(getSingleYachtStandardOffers, []);
+  // `null` until the first answer, so a boat with no bookable week can tell
+  // "no week came back" (inquiry panel) from "not asked yet".
+  const [standardOffers, standardOffersAction] = useActionState<YachtOfferModel[] | null, YachtOffersParams>(
+    getSingleYachtStandardOffers,
+    null
+  );
   // One card per week, best status wins (20.7.2026): route/product variant rows
   // can leave a week with a FREE row next to residual UNAVAILABLE siblings — the
   // week IS sellable, so a bookable variant must beat a blocked one. Real full
@@ -173,13 +187,13 @@ const AvailabilitySlider = ({ yacht }: AvailabilitySliderProps) => {
 
     return withTiers(
       fillTimeline(
-        published.map(offer => toWeek(offer, locale)),
+        published.map(offer => toWeek(offer, locale, allBooked)),
         horizonIso,
         WEEKS_PER_CHUNK,
         locale
       )
     );
-  }, [safeYachtOffers, locale]);
+  }, [safeYachtOffers, locale, allBooked]);
 
   const months = useMemo(() => deriveMonthAxis(weeks), [weeks]);
 
@@ -190,7 +204,8 @@ const AvailabilitySlider = ({ yacht }: AvailabilitySliderProps) => {
   const [selId, setSelId] = useState<string | undefined>(undefined);
 
   useEffect(() => {
-    if (!weeks.length || selId) return;
+    // Nothing to select on a boat with no bookable week.
+    if (!weeks.length || selId || allBooked) return;
 
     const search = new URLSearchParams(typeof window === 'undefined' ? '' : window.location.search);
     const start = search.get('startDate');
@@ -199,11 +214,11 @@ const AvailabilitySlider = ({ yacht }: AvailabilitySliderProps) => {
     const firstAvail = weeks.find(w => w.status !== 'booked' && w.status !== 'service');
 
     setSelId(urlMatch?.id ?? firstAvail?.id ?? weeks[0]?.id);
-  }, [weeks, selId]);
+  }, [weeks, selId, allBooked]);
 
   const handleSelect = useCallback(
     (w: WeekData) => {
-      if (w.status === 'booked' || w.status === 'service') return;
+      if (w.locked || w.status === 'booked' || w.status === 'service') return;
 
       setSelId(w.id);
 
@@ -226,12 +241,14 @@ const AvailabilitySlider = ({ yacht }: AvailabilitySliderProps) => {
     [setMultipleParams]
   );
 
-  if (!weeks.length) return null;
+  // A boat with no bookable week whose partner sent no week after all keeps
+  // the inquiry in the calendar's place, as before 16.10.2026.
+  if (!weeks.length) return allBooked && standardOffers !== null ? <InquiryOnlyPanel variant="inline" /> : null;
 
   return isBelowLg ? (
-    <AvailabilityMobile weeks={weeks} months={months} selId={selId} onSelect={handleSelect} />
+    <AvailabilityMobile weeks={weeks} months={months} selId={selId} onSelect={handleSelect} allBooked={allBooked} />
   ) : (
-    <AvailabilityDesktop weeks={weeks} months={months} selId={selId} onSelect={handleSelect} />
+    <AvailabilityDesktop weeks={weeks} months={months} selId={selId} onSelect={handleSelect} allBooked={allBooked} />
   );
 };
 
@@ -244,13 +261,15 @@ interface BranchProps {
   months: string[];
   selId: string | undefined;
   onSelect: (w: WeekData) => void;
+  /** Every week reserved: the note above the cards. */
+  allBooked?: boolean;
 }
 
 const VISIBLE_COUNT = 5;
 // WEEKS_PER_CHUNK (26 ≈ 6 months) now lives in tier-helpers so `fillTimeline`
 // can pad the tail to a full chunk width.
 
-const AvailabilityDesktop = ({ weeks, selId, onSelect }: BranchProps) => {
+export const AvailabilityDesktop = ({ weeks, selId, onSelect, allBooked }: BranchProps) => {
   const t = useTranslations('yacht.calendar');
   const locale = useLocale();
   const totalChunks = Math.max(1, Math.ceil(weeks.length / WEEKS_PER_CHUNK));
@@ -417,7 +436,12 @@ const AvailabilityDesktop = ({ weeks, selId, onSelect }: BranchProps) => {
         />
         <MonthAxis labels={chunkMonths} />
       </Box>
-      <Box sx={{ mt: '24px', display: 'flex', alignItems: 'stretch', gap: '12px' }}>
+      {allBooked && (
+        <Box sx={{ mt: '20px' }}>
+          <AllBookedNote />
+        </Box>
+      )}
+      <Box sx={{ mt: allBooked ? '16px' : '24px', display: 'flex', alignItems: 'stretch', gap: '12px' }}>
         <ArrowBtn dir="<" onClick={() => scroll(-1)} disabled={windowStart === 0} />
         <Box
           sx={{
@@ -444,7 +468,7 @@ const AvailabilityDesktop = ({ weeks, selId, onSelect }: BranchProps) => {
 
 type MobileProps = BranchProps;
 
-const AvailabilityMobile = ({ weeks, selId, onSelect }: MobileProps) => {
+export const AvailabilityMobile = ({ weeks, selId, onSelect, allBooked }: MobileProps) => {
   const t = useTranslations('yacht.calendar');
   const locale = useLocale();
   const totalChunks = Math.max(1, Math.ceil(weeks.length / WEEKS_PER_CHUNK));
@@ -702,6 +726,11 @@ const AvailabilityMobile = ({ weeks, selId, onSelect }: MobileProps) => {
             <Legend compact />
           </Box>
         </Box>
+        {allBooked && (
+          <Box sx={{ mt: '14px', px: '4px' }}>
+            <AllBookedNote compact />
+          </Box>
+        )}
       </Box>
       <Box
         ref={setScrollerEl}

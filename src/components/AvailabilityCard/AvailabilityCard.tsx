@@ -45,7 +45,8 @@ const AvailabilityCard = ({ w, selected, onClick, size = 'desktop' }: Availabili
   // Both RESERVATION ('booked') and SERVICE ('service') are hard-blocked: the
   // card is disabled (no click, grey price). The status pill text still
   // differentiates the two via statusLabel/statusColor (Reserved vs Unavailable).
-  const isBooked = w.status === 'booked' || w.status === 'service';
+  // So is every week of a boat with none bookable (`locked`, 16.10.2026).
+  const isBooked = w.status === 'booked' || w.status === 'service' || !!w.locked;
   const sc = statusColor(w.status);
   const compact = size !== 'desktop';
   // Narrow `w.regularPrice` (number | undefined) to a plain number so TS

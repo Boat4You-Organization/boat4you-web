@@ -17,7 +17,7 @@ import useToggleState from '@/utils/hooks/useToggleState';
 import DateTime from '@/utils/static/DateTime';
 import { displayBaseName } from '@/utils/static/croatianPlaceNames';
 import { isGulet } from '@/utils/static/guletCrewed';
-import { isInquiryOnlyBoat } from '@/utils/static/inquiryOnlyBoat';
+import { isInquiryOnlyBoat, showsAllBookedCalendar } from '@/utils/static/inquiryOnlyBoat';
 import { isHardBlocked } from '@/utils/static/offerStatusGate';
 import { useYachtStore } from '@/valtio/yacht/yacht.store';
 import GoodToKnowItem from '@/views/Boat/BoatContentSection/GoodToKnowItem';
@@ -55,9 +55,12 @@ const AvailabilityTab = ({ yacht }: AvailabilityTabProps) => {
         }
       : defaultValues;
 
-  // No bookable future offer: the calendar would only show empty or blocked
-  // weeks — the inquiry takes its place.
+  // No bookable future offer: no date selector and no offer card. The
+  // calendar stays while the partner publishes weeks, every one reserved
+  // (owner rule 16.10.2026, showsAllBookedCalendar); with none published the
+  // inquiry takes its place.
   const inquiryOnly = isInquiryOnlyBoat(yacht);
+  const allBooked = showsAllBookedCalendar(yacht);
   const displayAvailabilityDateSelector = !inquiryOnly && initialValues.startDate && initialValues.endDate;
 
   const handleSubmit = (formValues: BoatCalendarFormValues) => {
@@ -103,7 +106,11 @@ const AvailabilityTab = ({ yacht }: AvailabilityTabProps) => {
             </Form>
           )}
           <Stack sx={{ p: { xs: 2, md: 3 } }}>
-            {inquiryOnly ? <InquiryOnlyPanel variant="inline" /> : <LiveCalendar yacht={yacht} />}
+            {inquiryOnly && !allBooked ? (
+              <InquiryOnlyPanel variant="inline" />
+            ) : (
+              <LiveCalendar yacht={yacht} allBooked={allBooked} />
+            )}
           </Stack>
         </Stack>
         {displayAvailabilityDateSelector &&
