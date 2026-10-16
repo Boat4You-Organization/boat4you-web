@@ -7,6 +7,7 @@ import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
 import { isGulet } from '@/utils/static/guletCrewed';
 import { toTitleCase } from '@/utils/static/toTitleCase';
 import { Fmt, capacityRows, fromYacht } from '@/utils/static/yachtCapacity';
+import { withoutMarinaImages } from '@/utils/static/yachtLayout';
 
 import { styles } from './YachtPDF.styles';
 import { formatPdfNumber, pdfSafeText } from './pdfNumber';
@@ -363,7 +364,9 @@ const YachtPDF = ({
           <View style={styles.footTextWrap}>
             {/* eslint-disable-next-line jsx-a11y/anchor-is-valid -- react-pdf Link uses `src`, not a DOM anchor */}
             <Link src={pageUrl} style={styles.footTitleLink}>
-              <Text style={styles.footTitle}>See live availability & all {yacht.yachtImages.length} photos</Text>
+              <Text style={styles.footTitle}>
+                See live availability & all {withoutMarinaImages(yacht.yachtImages).length} photos
+              </Text>
             </Link>
             <Text style={styles.footSub}>
               Scan the code or click the yacht name — dates, pricing and{'\n'}

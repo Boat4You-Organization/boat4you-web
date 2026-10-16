@@ -18,6 +18,7 @@ import { countryDisplayName } from '@/utils/static/countryDisplayName';
 import { displayBaseName } from '@/utils/static/croatianPlaceNames';
 import { getBoatImageUrl } from '@/utils/static/imageUtils';
 import { toTitleCase, yachtLabel } from '@/utils/static/toTitleCase';
+import { yachtHeroImage } from '@/utils/static/yachtLayout';
 
 import styles from './BoatShareModal.module.scss';
 
@@ -34,7 +35,8 @@ const BoatShareModal = ({ open, onOpen, onClose, yacht }: BoatShareModalProps) =
   const locale = useLocale();
   const pathname = usePathname();
 
-  const mainImage = yacht.yachtImages.find(image => image.mainImage);
+  // The boat's hero, never a layout or a marina photo (yachtLayout.ts).
+  const mainImage = yachtHeroImage(yacht.yachtImages);
 
   const handleCopyLink = () => {
     copyToClipboard(window.location.toString(), tToast('linkCopied'));

@@ -9,6 +9,7 @@ import { YachtOfferModel } from '@/models/yacht-offer.model';
 import { YachtImage, YachtModel } from '@/models/yacht.model';
 import { toTitleCase } from '@/utils/static/toTitleCase';
 import { createFmt } from '@/utils/static/yachtCapacity';
+import { galleryImages, withoutMarinaImages, yachtHeroImage } from '@/utils/static/yachtLayout';
 
 interface UseYachtPdfDownloadProps {
   yacht: YachtModel;
@@ -101,8 +102,12 @@ const useYachtPdfDownload = ({
 
       const qrDataUrl = await QRCode.toDataURL(cleanUrl, { width: 300, margin: 1 });
 
-      const mainImageId = yacht.yachtImages.find(i => i.mainImage)?.id || yacht.yachtImages[0]?.id;
-      const galleryIds = yacht.yachtImages
+      // The boat's photos and its model's in gallery order, no marina photo
+      // (yachtLayout.ts); the cover is the hero (a boat with only a layout
+      // drawing keeps it on the cover, as in its gallery).
+      const photos = galleryImages(withoutMarinaImages(yacht.yachtImages));
+      const mainImageId = (yachtHeroImage(photos) ?? photos[0])?.id;
+      const galleryIds = photos
         .filter(i => i.id !== mainImageId)
         .slice(0, 4)
         .map(i => i.id);

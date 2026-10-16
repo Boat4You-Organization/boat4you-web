@@ -28,6 +28,7 @@ import useYachtPdfDownload from '@/utils/hooks/useYachtPdfDownload';
 import { countryDisplayName } from '@/utils/static/countryDisplayName';
 import { displayBaseName } from '@/utils/static/croatianPlaceNames';
 import { toTitleCase, yachtLabel } from '@/utils/static/toTitleCase';
+import { yachtHeroImage } from '@/utils/static/yachtLayout';
 import { useYachtStore } from '@/valtio/yacht/yacht.store';
 
 import styles from './BoatHeroSection.module.scss';
@@ -57,6 +58,8 @@ const BoatHeroSection = ({ yacht, layoutImages }: BoatHeroSectionProps) => {
   const dropOff = selectedOffer?.locationTo ?? null;
   const isOneWay = Boolean(pickup?.name && dropOff?.name && pickup.name !== dropOff.name);
   const heroLocation = isOneWay && pickup ? pickup : yacht.location;
+  // The favourite's picture: the boat's hero, never a layout or a marina photo (yachtLayout.ts).
+  const favoriteYacht = { ...yacht, mainImageId: yachtHeroImage(yacht.yachtImages)?.id || 0 };
 
   // Map modal shows whichever marina was clicked (pickup or drop-off).
   const [mapMarinaName, setMapMarinaName] = useState<string | null>(null);
@@ -169,10 +172,7 @@ const BoatHeroSection = ({ yacht, layoutImages }: BoatHeroSectionProps) => {
             <Button variant="containedInfo" startIcon={<Share />} onClick={toggeIsOpen} aria-label={t('share')}>
               {t('share')}
             </Button>
-            <FavoriteButton
-              yacht={{ ...yacht, mainImageId: yacht.yachtImages.find(el => el.mainImage)?.id || 0 }}
-              buttonText={t('save')}
-            />
+            <FavoriteButton yacht={favoriteYacht} buttonText={t('save')} />
           </Stack>
         </Stack>
         <Box className={styles.galleryWrap}>
@@ -196,11 +196,7 @@ const BoatHeroSection = ({ yacht, layoutImages }: BoatHeroSectionProps) => {
                 <Share size={18} fill={colors.black950} />
               </Icon>
             </IconButton>
-            <FavoriteButton
-              yacht={{ ...yacht, mainImageId: yacht.yachtImages.find(el => el.mainImage)?.id || 0 }}
-              color={colors.black950}
-              className={styles.imageActionBtn}
-            />
+            <FavoriteButton yacht={favoriteYacht} color={colors.black950} className={styles.imageActionBtn} />
           </Stack>
         </Box>
       </Container>

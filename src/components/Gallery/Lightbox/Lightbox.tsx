@@ -13,6 +13,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 import CarouselButton from '@/components/CarouselButton';
 import FavoriteButton from '@/components/FavoriteButton';
+import PhotoCredit from '@/components/Gallery/PhotoCredit';
+import { galleryPhotoAlt } from '@/components/Gallery/photoAlt';
 import ArrowLeft from '@/components/SvgIcons/ArrowLeft';
 import Logo from '@/components/SvgIcons/Logo';
 import Share from '@/components/SvgIcons/Share';
@@ -20,6 +22,7 @@ import { YachtImage, YachtModel } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
 import useToggleState from '@/utils/hooks/useToggleState';
 import { getBoatImageUrl } from '@/utils/static/imageUtils';
+import { galleryImages, marinaPhotoCredit, yachtHeroImage } from '@/utils/static/yachtLayout';
 import BoatShareModal from '@/views/Boat/BoatHeroSection/BoatShareModal';
 
 import styles from './Lightbox.module.scss';
@@ -33,6 +36,8 @@ interface LightboxProps {
   showShareAndFavorite?: boolean;
   /** The boat as the photos' alt text names it ("Lagoon 42 Masterpiece", yachtPhotoName.ts). */
   photoName: string;
+  /** The model as a model photo's alt text names it ("Lagoon 42", yachtModelPhotoName). */
+  modelPhotoName?: string;
   /** Alt text of image `index` when the images are not photos (the boat's layout, LayoutSection). */
   imageAlt?: (index: number) => string;
 }
@@ -45,6 +50,7 @@ const Lightbox = ({
   selectedImage,
   showShareAndFavorite = true,
   photoName,
+  modelPhotoName = 'Yacht',
   imageAlt,
 }: LightboxProps) => {
   const [isShareModalOpen, toggleShareModal] = useToggleState();
@@ -53,19 +59,17 @@ const Lightbox = ({
   const [currentSlide, setCurrentSlide] = useState(selectedImage);
   const t = useTranslations('common');
   // The same alt text as the gallery tiles: "Lagoon 42 Masterpiece — photo 3",
-  // not "Gallery image 236378" / "Thumbnail 236378" (live check 8.10.2026, F4).
-  const photoAlt = (index: number): string =>
-    imageAlt ? imageAlt(index) : t('photoAlt' as never, { label: photoName, n: String(index + 1) } as never);
+  // not "Gallery image 236378" / "Thumbnail 236378" (live check 8.10.2026, F4);
+  // a model photo names the model only, a marina photo the marina (photoAlt.ts).
+  const photoAlt = (image: YachtImage, index: number): string =>
+    imageAlt
+      ? imageAlt(index)
+      : galleryPhotoAlt(image, index, { boat: photoName, model: modelPhotoName }, (label, n) =>
+          t('photoAlt' as never, { label, n } as never)
+        );
 
-  const yachtImages = useMemo(
-    () =>
-      [...(images || yacht?.yachtImages || [])].sort((a, b) => {
-        if (a.mainImage !== b.mainImage) return a.mainImage ? -1 : 1;
-
-        return a.position - b.position;
-      }),
-    [images, yacht?.yachtImages]
-  );
+  // The gallery's order (yachtLayout.ts), so a tile opens its own photo.
+  const yachtImages = useMemo(() => galleryImages(images || yacht?.yachtImages), [images, yacht?.yachtImages]);
   const thumbnailSwiperRef = useRef<SwiperType | null>(null);
 
   const yachtWithMainImage = useMemo(() => {
@@ -73,7 +77,8 @@ const Lightbox = ({
 
     return {
       ...yacht,
-      mainImageId: yachtImages.find(el => el.mainImage)?.id || 0,
+      // The boat's hero, never a layout or a marina photo (yachtLayout.ts).
+      mainImageId: yachtHeroImage(yachtImages)?.id || 0,
     };
   }, [yacht, yachtImages]);
 
@@ -199,19 +204,24 @@ const Lightbox = ({
             mousewheel={{ forceToAxis: true, releaseOnEdges: true }}
             onSwiper={handleSwiper}
           >
-            {yachtImages.map((image, index) => (
-              <SwiperSlide key={image.id}>
-                <Box className={styles.imageWrapper}>
-                  <Image
-                    src={getBoatImageUrl(image.id, 1920)}
-                    alt={photoAlt(index)}
-                    fill
-                    sizes="100vw"
-                    className={styles.image}
-                  />
-                </Box>
-              </SwiperSlide>
-            ))}
+            {yachtImages.map((image, index) => {
+              const credit = marinaPhotoCredit(image);
+
+              return (
+                <SwiperSlide key={image.id}>
+                  <Box className={styles.imageWrapper}>
+                    <Image
+                      src={getBoatImageUrl(image.id, 1920)}
+                      alt={photoAlt(image, index)}
+                      fill
+                      sizes="100vw"
+                      className={styles.image}
+                    />
+                    {credit && <PhotoCredit credit={credit} placement="lightbox" />}
+                  </Box>
+                </SwiperSlide>
+              );
+            })}
           </Swiper>
           <Stack
             direction="row"
@@ -243,7 +253,7 @@ const Lightbox = ({
                       <Box className={styles.box}>
                         <Image
                           src={getBoatImageUrl(image.id, 256)}
-                          alt={photoAlt(index)}
+                          alt={photoAlt(image, index)}
                           fill
                           sizes="120px"
                           className={styles.thumbnailImage}

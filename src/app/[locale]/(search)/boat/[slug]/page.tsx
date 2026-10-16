@@ -37,7 +37,7 @@ import {
 import { ManufacturerLookup, yachtBrandName } from '@/utils/static/yachtBrand';
 import { CapacityFacts, capacityFacts, fromYacht } from '@/utils/static/yachtCapacity';
 import { buildYachtFaq, buildYachtFaqSchema } from '@/utils/static/yachtFaq';
-import { splitLayoutImages, withLayoutImagesApart } from '@/utils/static/yachtLayout';
+import { withLayoutImagesApart, yachtHeroImage } from '@/utils/static/yachtLayout';
 import { cleanModelName } from '@/utils/static/yachtModelKey';
 import { successorBoatPath } from '@/utils/static/yachtSuccessor';
 import BoatContentSection from '@/views/Boat/BoatContentSection';
@@ -60,12 +60,12 @@ import RelatedBoats from '@/views/Boat/RelatedBoats';
  * shared link showed our logo instead of the boat, and Google's Product
  * rich result did the same (found 2.8.2026). Build the URL from the id
  * instead. 1200px matches the OG recommendation and is a width Bunny
- * already caches for the listing cards. A photo, not the layout drawing:
- * the same main image as the page's hero (yachtLayout.ts).
+ * already caches for the listing cards. A photo of the boat (its own, else
+ * its model's), never the layout drawing or a marina photo (yachtLayout.ts,
+ * yachtHeroImage): a boat without one gets the site-wide asset.
  */
 const yachtShareImageUrl = (yacht: YachtModel): string | null => {
-  const images = splitLayoutImages(yacht.yachtImages).photos;
-  const imageId = images.find(i => i.mainImage)?.id ?? images[0]?.id;
+  const imageId = yachtHeroImage(yacht.yachtImages)?.id;
 
   if (!imageId) return null;
 

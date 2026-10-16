@@ -25,6 +25,7 @@ import useToggleState from '@/utils/hooks/useToggleState';
 import DateTime from '@/utils/static/DateTime';
 import { FormValidator } from '@/utils/static/FormValidator';
 import { isInquiryOnlyBoat } from '@/utils/static/inquiryOnlyBoat';
+import { yachtHeroImage } from '@/utils/static/yachtLayout';
 import { showToast } from '@/valtio/global/global.actions';
 import { useUserStore } from '@/valtio/user/user.store';
 
@@ -250,7 +251,7 @@ const BoatInquiryModal = ({
       }}
     >
       <YachtCard
-        mainImageId={yacht.yachtImages.filter(image => image.mainImage)[0]?.id ?? yacht.yachtImages[0]?.id}
+        mainImageId={yachtHeroImage(yacht.yachtImages)?.id ?? 0}
         model={yacht.model}
         name={yacht.name}
         locationCountryCode={yacht.location?.countryCode ?? ''}

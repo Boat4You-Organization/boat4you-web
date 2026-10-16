@@ -1,0 +1,51 @@
+@use '@/styles/settings/variables' as *;
+@use '@/styles/utils/rem-calc' as *;
+@use '@/styles/mixins/breakpoints' as *;
+
+// One line, never wider than the photo: a long marina name ends in "…".
+.credit {
+  position: absolute;
+  z-index: 1;
+  max-width: calc(100% - #{rem-calc(24)});
+  overflow: hidden;
+  padding: rem-calc(4 10);
+  border-radius: rem-calc(12);
+  background-color: rgb(255 255 255 / 88%);
+  color: $black-700;
+  font-size: rem-calc(12);
+  line-height: rem-calc(16);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  .link {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: rem-calc(2);
+
+    &:hover {
+      color: $blue-500;
+    }
+
+    &:focus-visible {
+      outline: rem-calc(2) solid $blue-500;
+      outline-offset: rem-calc(2);
+    }
+  }
+}
+
+// The tile's bottom right belongs to "Show all photos".
+.tile {
+  top: rem-calc(12);
+  left: rem-calc(12);
+}
+
+// Above the thumbnail strip, which covers the lowest part of the slide.
+.lightbox {
+  bottom: rem-calc(28);
+  left: 50%;
+  transform: translateX(-50%);
+
+  @include media(0, 'sm') {
+    bottom: rem-calc(16);
+  }
+}

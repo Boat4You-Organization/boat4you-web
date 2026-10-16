@@ -195,8 +195,18 @@ export interface YachtImage {
    * accepts `kind` / `type` "LAYOUT" in case the field ships under that name.
    */
   layout?: boolean | null;
+  /**
+   * PARTNER | LAYOUT | MODEL_SAMPLE | MARINA (backend 16.10.2026); absent
+   * means the partner's photo. Read only through yachtLayout.ts (imageKind).
+   */
   kind?: string | null;
   type?: string | null;
+  /** A marina photo's marina ("ACI Marina Split"): its caption and alt text. */
+  caption?: string | null;
+  /** A marina photo's credit as the API sends it ("Foto: ACI Marina Split"). */
+  credit?: string | null;
+  /** The page a marina photo comes from: the credit's link. */
+  sourceUrl?: string | null;
 }
 
 export interface YachtCustomDetails {

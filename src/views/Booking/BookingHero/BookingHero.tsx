@@ -18,6 +18,7 @@ import { displayBaseName } from '@/utils/static/croatianPlaceNames';
 import { getBoatImageUrl } from '@/utils/static/imageUtils';
 import { toTitleCase, yachtLabel } from '@/utils/static/toTitleCase';
 import { CardKey, ChipKey, capacityChips, cardChips, fromYacht } from '@/utils/static/yachtCapacity';
+import { isBoatPhoto } from '@/utils/static/yachtLayout';
 
 import styles from './BookingHero.module.scss';
 
@@ -69,8 +70,9 @@ const BookingHero = ({ reservationData }: BookingHeroProps) => {
 
   const [isMapOpen, toggleMap] = useToggleState();
 
-  // Thumbnail strip: up to 3 non-main images from the gallery.
-  const thumbnails = (yachtImages ?? []).filter(img => img && img.id !== mainImage?.id).slice(0, 3);
+  // Thumbnail strip: up to 3 other photos of the boat — no layout drawing, no
+  // marina photo (yachtLayout.ts).
+  const thumbnails = (yachtImages ?? []).filter(img => isBoatPhoto(img) && img.id !== mainImage?.id).slice(0, 3);
 
   // Stats row — only values we actually have: the year, then the partner's
   // cabins · berths · max. people (cardChips: "13 (12 + 1 crew)", never an
