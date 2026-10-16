@@ -72,9 +72,13 @@ const mapStatus = (s: Status | undefined): WeekData['status'] => {
 };
 
 // `allBooked` (owner rule 16.10.2026): the backend has no bookable week for
-// the boat, so none is selectable (`locked`) and a FREE row is shown reserved
-// — the web never decides on its own that a week can be booked.
+// the boat, so none is selectable (`locked`). A FREE row there — one the
+// 18-month /standard-offers adds beyond the year `yacht.offers` covers
+// (showsAllBookedCalendar) — is a placeholder price or a blocked agency's
+// week, neither reserved nor a real price: "Unavailable", no price. The web
+// never decides on its own that a week can be booked.
 export const toWeek = (offer: YachtOfferModel, locale: string, allBooked = false): WeekData => {
+  const unpriced = allBooked && offer.status === Status.FREE;
   const from = dayjs(offer.dateFrom);
   const to = dayjs(offer.dateTo);
   // Use the currency-converted amounts from the partner price-info (the backend
@@ -96,16 +100,73 @@ export const toWeek = (offer: YachtOfferModel, locale: string, allBooked = false
     from: weekLabel(from, locale),
     to: weekLabel(to, locale),
     fromMonth: monthLabel(from, locale),
-    price: finalPrice,
-    regularPrice,
+    price: unpriced ? 0 : finalPrice,
+    regularPrice: unpriced ? undefined : regularPrice,
     currency: offer.clientPriceInfo?.currency,
-    status: allBooked && offer.status === Status.FREE ? 'booked' : mapStatus(offer.status as Status),
+    status: unpriced ? 'service' : mapStatus(offer.status as Status),
     locked: allBooked,
     raw: offer,
     dateFromIso: offer.dateFrom,
     dateToIso: offer.dateTo,
   };
 };
+
+/**
+ * The calendar's weeks from the /standard-offers answer (`null` until it
+ * comes). One card per week, best status wins (20.7.2026): route/product
+ * variant rows can leave a week with a FREE row next to residual UNAVAILABLE
+ * siblings — the week IS sellable, so a bookable variant must beat a blocked
+ * one. Real full bookings flip every variant row, so nothing bookable
+ * survives to win here. Then the partner's published periods EXACTLY, in
+ * date order (Deploy 4 honest availability — any check-in day/length, never
+ * synthesised into fake bookings), the empty space BETWEEN them bridged into
+ * a continuous weekly timeline up to `horizonIso` (`fillTimeline`, Mario
+ * 24.6.2026: gaps become grey "Unavailable" fillers and the tail is padded so
+ * every chunk is the same width), and the price tiers.
+ */
+export const weeksFromOffers = (
+  standardOffers: YachtOfferModel[] | null,
+  locale: string,
+  allBooked: boolean,
+  horizonIso: string
+): WeekData[] => {
+  if (!Array.isArray(standardOffers)) return [];
+
+  const rank = (s: Status | undefined) => {
+    if (s === Status.FREE) return 0;
+
+    if (s === Status.OPTION) return 1;
+
+    return 2;
+  };
+  const byWeek = new Map<string, YachtOfferModel>();
+
+  standardOffers.forEach(o => {
+    const key = `${o.dateFrom}|${o.dateTo}`;
+    const prev = byWeek.get(key);
+
+    if (!prev || rank(o.status as Status) < rank(prev.status as Status)) byWeek.set(key, o);
+  });
+
+  const published = [...byWeek.values()].sort((a, b) => a.dateFrom.localeCompare(b.dateFrom));
+
+  return withTiers(
+    fillTimeline(
+      published.map(offer => toWeek(offer, locale, allBooked)),
+      horizonIso,
+      WEEKS_PER_CHUNK,
+      locale
+    )
+  );
+};
+
+/**
+ * Without a week to show: on a boat with no bookable week, once
+ * /standard-offers has answered (not while it is asked), the inquiry in the
+ * calendar's place, as before 16.10.2026; otherwise nothing.
+ */
+export const emptyCalendarFallback = (allBooked: boolean, standardOffers: YachtOfferModel[] | null): boolean =>
+  allBooked && standardOffers !== null;
 
 const AvailabilitySlider = ({ yacht, allBooked = false }: AvailabilitySliderProps) => {
   const locale = useLocale();
@@ -116,31 +177,6 @@ const AvailabilitySlider = ({ yacht, allBooked = false }: AvailabilitySliderProp
     getSingleYachtStandardOffers,
     null
   );
-  // One card per week, best status wins (20.7.2026): route/product variant rows
-  // can leave a week with a FREE row next to residual UNAVAILABLE siblings — the
-  // week IS sellable, so a bookable variant must beat a blocked one. Real full
-  // bookings flip every variant row, so nothing bookable survives to win here.
-  const safeYachtOffers = useMemo(() => {
-    if (!Array.isArray(standardOffers)) return [];
-
-    const rank = (s: Status | undefined) => {
-      if (s === Status.FREE) return 0;
-
-      if (s === Status.OPTION) return 1;
-
-      return 2;
-    };
-    const byWeek = new Map<string, YachtOfferModel>();
-
-    standardOffers.forEach(o => {
-      const key = `${o.dateFrom}|${o.dateTo}`;
-      const prev = byWeek.get(key);
-
-      if (!prev || rank(o.status as Status) < rank(prev.status as Status)) byWeek.set(key, o);
-    });
-
-    return [...byWeek.values()];
-  }, [standardOffers]);
   // boat4you selects a week by writing startDate/endDate to the URL — the
   // blue AvailabilityDateSelector + offer detail card react to those params
   // (same channel the legacy week-cards picker used). No valtio date actions
@@ -172,28 +208,21 @@ const AvailabilitySlider = ({ yacht, allBooked = false }: AvailabilitySliderProp
     fetchOffersForCurrentParams();
   }, [fetchOffersForCurrentParams]);
 
-  // Render the partner's published periods EXACTLY (Deploy 4 honest
-  // availability — any check-in day/length, never synthesised into fake
-  // bookings), then bridge the empty space BETWEEN them into a continuous
-  // weekly timeline via `fillTimeline` (Mario 24.6.2026): gaps become grey
-  // "Unavailable" fillers and the tail is padded so every chunk is the same
-  // width — no more 5-cell stub last page. Real offers are untouched.
-  const weeks = useMemo<WeekData[]>(() => {
-    const published = [...safeYachtOffers].sort((a, b) => a.dateFrom.localeCompare(b.dateFrom));
-    // 18-month horizon (matches the fetch window) so a sentinel far-future date
-    // in the partner data (e.g. a SERVICE block dated to 2098) can't push the
-    // calendar/chunk label decades out ("JUN 2026 → FEB 2099" bug, 25.6.2026).
-    const horizonIso = DateTime.formatFull(DateTime.now()?.add(18, 'month') as Dayjs);
-
-    return withTiers(
-      fillTimeline(
-        published.map(offer => toWeek(offer, locale, allBooked)),
-        horizonIso,
-        WEEKS_PER_CHUNK,
-        locale
-      )
-    );
-  }, [safeYachtOffers, locale, allBooked]);
+  // The partner's published periods as a continuous weekly timeline
+  // (weeksFromOffers). 18-month horizon (matches the fetch window) so a
+  // sentinel far-future date in the partner data (e.g. a SERVICE block dated
+  // to 2098) can't push the calendar/chunk label decades out ("JUN 2026 →
+  // FEB 2099" bug, 25.6.2026).
+  const weeks = useMemo<WeekData[]>(
+    () =>
+      weeksFromOffers(
+        standardOffers,
+        locale,
+        allBooked,
+        DateTime.formatFull(DateTime.now()?.add(18, 'month') as Dayjs)
+      ),
+    [standardOffers, locale, allBooked]
+  );
 
   const months = useMemo(() => deriveMonthAxis(weeks), [weeks]);
 
@@ -243,7 +272,9 @@ const AvailabilitySlider = ({ yacht, allBooked = false }: AvailabilitySliderProp
 
   // A boat with no bookable week whose partner sent no week after all keeps
   // the inquiry in the calendar's place, as before 16.10.2026.
-  if (!weeks.length) return allBooked && standardOffers !== null ? <InquiryOnlyPanel variant="inline" /> : null;
+  if (!weeks.length) {
+    return emptyCalendarFallback(allBooked, standardOffers) ? <InquiryOnlyPanel variant="inline" /> : null;
+  }
 
   return isBelowLg ? (
     <AvailabilityMobile weeks={weeks} months={months} selId={selId} onSelect={handleSelect} allBooked={allBooked} />

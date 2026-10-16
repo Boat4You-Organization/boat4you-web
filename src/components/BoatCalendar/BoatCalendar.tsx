@@ -12,7 +12,7 @@ import { BOAT_CALENDAR_FORM } from '@/config/form-names.config';
 import { YachtModel } from '@/models/yacht.model';
 import useQueryParams from '@/utils/hooks/useQueryParams';
 import DateTime from '@/utils/static/DateTime';
-import { isInquiryOnlyBoat } from '@/utils/static/inquiryOnlyBoat';
+import { isInquiryOnlyBoat, showsAllBookedCalendar } from '@/utils/static/inquiryOnlyBoat';
 
 import styles from './BoatCalendar.module.scss';
 import BoatCalendarForm from './BoatCalendarForm';
@@ -59,11 +59,12 @@ const BoatCalendar = ({ yacht, variant = 'inner' }: BoatCalendarProps) => {
   };
 
   // No bookable future offer: no dates, prices or Reserve here — only the
-  // inquiry, where the visitor picks any dates.
+  // inquiry, where the visitor picks any dates. Its text says every week is
+  // reserved when the calendar beside it shows them (owner rule 16.10.2026).
   if (isInquiryOnlyBoat(yacht)) {
     return (
       <Stack direction="column" className={styles.container}>
-        <InquiryOnlyPanel variant="sidebar" />
+        <InquiryOnlyPanel variant="sidebar" allBooked={showsAllBookedCalendar(yacht)} />
       </Stack>
     );
   }

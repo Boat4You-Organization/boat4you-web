@@ -37,8 +37,20 @@ export const isBookedByInquiry = (
  * stays in its place, as before; so it does when a week is FREE although the
  * backend calls none bookable (a placeholder price under the listing floor, a
  * blocked agency): that week is not reserved, and its price is not a real one.
- * The price, the booking box, the meta and the JSON-LD stay "on request"
- * (isBookedByInquiry) — the calendar shows prices, it quotes no "from".
+ * (`yacht.offers` covers today … today + 1 year; a FREE week the calendar's
+ * 18-month /standard-offers adds beyond it reads "Unavailable", no price —
+ * toWeek.) The price, the booking box, the meta and the JSON-LD stay "on
+ * request" (isBookedByInquiry) — the calendar shows prices, it quotes no
+ * "from". The sidebar box and the FAQ answer follow this one too, so none
+ * says "no dates or prices published" beside the calendar.
+ *
+ * Known limit (accepted 16.10.2026): with startDate/endDate in the URL the
+ * detail API sends only that period's offers, so a link dated to a week the
+ * partner has not published (an old or shared link, a favourite, an e-mail)
+ * shows the inquiry panel — consistently, in the block, the sidebar and the
+ * FAQ — where the undated page shows the calendar. Deciding it in the
+ * browser from /standard-offers would leave the sidebar and the FAQ (server)
+ * saying the opposite. The canonical (undated) page is the indexed one.
  */
 export const showsAllBookedCalendar = (
   yacht?: (Pick<YachtModel, 'hasBookableFutureOffer'> & Partial<Pick<YachtModel, 'offers'>>) | null

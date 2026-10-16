@@ -5,9 +5,10 @@
  * false) whose partner still publishes weeks keeps its availability calendar.
  * Dufour 360 GL Nada 12442 (live 16.10.2026: 14 published periods, every one
  * RESERVATION): the season strip hatched, every week card "Reserved" with its
- * price, none selectable, a line above the cards pointing to the inquiry. A
- * boat with no published week keeps the inquiry panel, as before; a bookable
- * boat's calendar is unchanged.
+ * price, none selectable, a line above the cards with the inquiry button; the
+ * sidebar box and the FAQ say every published week is reserved (not "no dates
+ * or prices published"). A boat with no published week keeps the inquiry
+ * panel, as before; a bookable boat's calendar is unchanged.
  *
  *   yarn test:calendar
  */
@@ -15,7 +16,7 @@ import { createElement } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 
 import { ThemeProvider } from '@mui/material/styles';
-import { NextIntlClientProvider } from 'next-intl';
+import { NextIntlClientProvider, createTranslator } from 'next-intl';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
 import { registerHooks } from 'node:module';
@@ -85,10 +86,12 @@ const hatchedCells = html => {
 
 const { setTestSearch } = await import('./stubs/next-navigation.mjs');
 const { isInquiryOnlyBoat, isBookedByInquiry, showsAllBookedCalendar } = await import('@/utils/static/inquiryOnlyBoat');
+const { buildYachtFaq } = await import('@/utils/static/yachtFaq');
 const { default: AvailabilityTab } = await import('@/views/Boat/BoatContentSection/AvailabilityTab/AvailabilityTab');
-const { AvailabilityDesktop, AvailabilityMobile, toWeek } =
+const { default: BoatCalendar } = await import('@/components/BoatCalendar/BoatCalendar');
+const { AvailabilityDesktop, AvailabilityMobile, emptyCalendarFallback, weeksFromOffers } =
   await import('@/views/Boat/BoatContentSection/AvailabilityTab/LiveCalendar/AvailabilitySlider');
-const { WEEKS_PER_CHUNK, fillTimeline, monthAxis, withTiers } =
+const { WEEKS_PER_CHUNK, monthAxis, weekPriceLabel } =
   await import('@/views/Boat/BoatContentSection/AvailabilityTab/LiveCalendar/parts/tier-helpers');
 
 const NADA = readJson('scripts/fixtures/nada-12442-offers-2026-10-16.json');
@@ -113,17 +116,10 @@ const boat = overrides => ({
 const nada = boat({});
 const freeWeek = { ...NADA.offers[3], id: 1, status: 'FREE' };
 
-// The calendar's own pipeline (AvailabilitySlider): the partner's weeks in
-// date order, the gaps filled to whole 26-week pages, price tiers.
-const weeksOf = (offers, allBooked, locale = 'en') =>
-  withTiers(
-    fillTimeline(
-      [...offers].sort((a, b) => a.dateFrom.localeCompare(b.dateFrom)).map(o => toWeek(o, locale, allBooked)),
-      HORIZON,
-      WEEKS_PER_CHUNK,
-      locale
-    )
-  );
+// The calendar's own pipeline (AvailabilitySlider.weeksFromOffers): one row
+// per week (best status), the partner's weeks in date order, the gaps filled
+// to whole 26-week pages, price tiers.
+const weeksOf = (offers, allBooked, locale = 'en') => weeksFromOffers(offers, locale, allBooked, HORIZON);
 const branch = (Component, weeks, allBooked, locale = 'en') =>
   render(
     createElement(Component, { weeks, months: monthAxis(weeks), selId: undefined, onSelect: () => {}, allBooked }),
@@ -162,6 +158,59 @@ describe('showsAllBookedCalendar: published weeks, none bookable', () => {
 
   test('the price stays on request everywhere else (hero, cards, meta, JSON-LD)', () => {
     assert.equal(isBookedByInquiry(nada), true);
+  });
+});
+
+describe('the sidebar box and the FAQ of a boat with every week reserved', () => {
+  const en = allMessages('en');
+  const NO_DATES = en.yacht.inquiryOnlyText.split('. ')[0];
+  const ALL_BOOKED = en.yacht.inquiryAllBookedText.split('. ')[0];
+  const sidebar = (yacht, locale = 'en') => render(createElement(BoatCalendar, { yacht }), locale);
+  const faqAnswer = (yacht, locale = 'en') => {
+    const t = createTranslator({ locale, messages: allMessages(locale) });
+
+    return buildYachtFaq(yacht, (key, values) => t(`yacht.${key}`, values), locale, undefined, null).at(-1).answer;
+  };
+
+  test('Nada: the box beside the calendar says every published week is reserved, with the inquiry', () => {
+    const html = sidebar(nada);
+
+    assert.equal(html.includes(NO_DATES), false);
+    assert.ok(html.includes(ALL_BOOKED));
+    assert.ok(html.includes('Send inquiry'));
+    assert.ok(html.includes('Price on request'));
+  });
+
+  test('no published week: the box says no dates or prices are published, as before', () => {
+    const html = sidebar(boat({ offers: [] }));
+
+    assert.ok(html.includes(NO_DATES));
+    assert.equal(html.includes(ALL_BOOKED), false);
+  });
+
+  test('Nada: the FAQ (and its FAQPage JSON-LD) answer says every week is reserved, not "no dates or prices"', () => {
+    const answer = faqAnswer(nada);
+
+    assert.equal(answer, en.yacht.faqBookAllBookedA.replace('{name}', 'Nada'));
+    assert.doesNotMatch(answer, /no dates or prices published/u);
+  });
+
+  test('no published week, or a FREE one: the FAQ answer stays "no dates or prices published"', () => {
+    assert.match(faqAnswer(boat({ offers: [] })), /no dates or prices published/u);
+    assert.match(faqAnswer(boat({ offers: [...NADA.offers, freeWeek] })), /no dates or prices published/u);
+  });
+
+  test('the box text and the FAQ answer in all 9 locales', () => {
+    LOCALES.forEach(locale => {
+      const { yacht } = allMessages(locale);
+
+      assert.ok(yacht.inquiryAllBookedText?.length > 40, locale);
+      assert.notEqual(yacht.inquiryAllBookedText, yacht.inquiryOnlyText, locale);
+      assert.ok(yacht.faqBookAllBookedA?.includes('{name}'), locale);
+      assert.ok(sidebar(nada, locale).includes(yacht.inquiryAllBookedText.split(/[.—:]/u)[0].trim()), locale);
+      assert.ok(faqAnswer(nada, locale).includes('Nada'), locale);
+      assert.notEqual(faqAnswer(nada, locale), faqAnswer(boat({ offers: [] }), locale), locale);
+    });
   });
 });
 
@@ -233,6 +282,9 @@ describe('the calendar of a boat with every week reserved (Nada 12442)', () => {
 
     assert.ok(html.includes(note));
     assert.ok(html.indexOf(note) < html.indexOf('role="button"'), 'the note sits above the cards');
+    // The inquiry button with the note, above the cards too.
+    assert.equal(count(html, />Send inquiry</gu), 1);
+    assert.ok(html.indexOf('>Send inquiry<') < html.indexOf('role="button"'));
     // The strip: every cell a disabled button; the 10 published weeks hatched.
     assert.equal(cells(html), WEEKS_PER_CHUNK);
     assert.equal(disabledCells(html), WEEKS_PER_CHUNK);
@@ -252,6 +304,7 @@ describe('the calendar of a boat with every week reserved (Nada 12442)', () => {
     const html = branch(AvailabilityMobile, weeks, true);
 
     assert.ok(html.includes('Every published week is reserved'));
+    assert.equal(count(html, />Send inquiry</gu), 1);
     assert.equal(count(html, /role="button" tabindex="0"/gu), 0);
     assert.equal(pills(html, 'Reserved'), 10);
     assert.equal(disabledCells(html), WEEKS_PER_CHUNK);
@@ -270,6 +323,35 @@ describe('the calendar of a boat with every week reserved (Nada 12442)', () => {
     assert.equal(disabledCells(html), WEEKS_PER_CHUNK);
     // Hatched like the reservations (its amber dot stays).
     assert.equal(hatchedCells(html), 10);
+  });
+
+  test('a FREE row beyond the year the page checks: "Unavailable", no price, not selectable', () => {
+    const [free] = weeksOf([{ ...NADA.standardOffers[0], status: 'FREE' }], true);
+
+    assert.equal(free.status, 'service');
+    assert.equal(free.price, 0);
+    assert.equal(free.regularPrice, undefined);
+    assert.equal(free.locked, true);
+    assert.equal(weekPriceLabel(free, 'en', 'Price on request'), '—');
+  });
+
+  test('one card per week, best status wins (a live option over its reserved twin), as in the slider', () => {
+    const twin = { ...NADA.standardOffers[0], id: 99, status: 'OPTION' };
+    const deduped = weeksOf([...NADA.standardOffers, twin], true).filter(w => !w.id.startsWith('gap|'));
+
+    assert.equal(deduped.length, 10);
+    assert.equal(deduped[0].id, '99');
+    assert.equal(deduped[0].status, 'option');
+    assert.equal(deduped[0].locked, true);
+  });
+
+  test('the slider without a week: the inquiry panel once the answer came, on a boat with none bookable', () => {
+    assert.equal(emptyCalendarFallback(true, null), false, 'still asking: nothing yet');
+    assert.equal(emptyCalendarFallback(true, []), true);
+    assert.equal(emptyCalendarFallback(false, []), false, 'a bookable boat: nothing, as before');
+    assert.equal(emptyCalendarFallback(false, null), false);
+    assert.deepEqual(weeksFromOffers(null, 'en', true, HORIZON), []);
+    assert.deepEqual(weeksFromOffers([], 'en', true, HORIZON), []);
   });
 
   test('the note in all 9 locales, in the calendar of each', () => {
@@ -294,6 +376,7 @@ describe('a bookable boat: the calendar is unchanged', () => {
     assert.equal(pills(html, 'Available'), 1);
     assert.equal(pills(html, 'Reserved'), 4);
     assert.equal(html.includes('Every published week is reserved'), false);
+    assert.equal(html.includes('>Send inquiry<'), false);
     // The free week's list price struck through, as before.
     assert.ok(html.includes('1,463 €'));
     assert.equal(disabledCells(html), WEEKS_PER_CHUNK - 1);

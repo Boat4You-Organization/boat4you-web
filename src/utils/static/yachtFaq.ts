@@ -3,7 +3,7 @@ import { shownGuestBerths } from '@/utils/static/capacityProse';
 import { displayBaseName } from '@/utils/static/croatianPlaceNames';
 import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
 import { offersBareboat } from '@/utils/static/guletCrewed';
-import { isBookedByInquiry, isInquiryOnlyBoat } from '@/utils/static/inquiryOnlyBoat';
+import { isBookedByInquiry, isInquiryOnlyBoat, showsAllBookedCalendar } from '@/utils/static/inquiryOnlyBoat';
 import { toTitleCase } from '@/utils/static/toTitleCase';
 import { todayIso, weeklyOfferSummary } from '@/utils/static/weeklyOffers';
 import { CapacityFacts, capacityFacts, fromYacht } from '@/utils/static/yachtCapacity';
@@ -126,8 +126,11 @@ export const buildYachtFaq = (
 
   // The inquiry answer of a boat without a bookable offer says no dates are
   // published; an inquiry-only agency's boat shows its free dates in the
-  // calendar, so its answer asks for dates from there.
-  const inquiryAnswer = isInquiryOnlyBoat(yacht) ? 'faqBookInquiryA' : 'faqBookAgencyInquiryA';
+  // calendar, so its answer asks for dates from there. A boat whose calendar
+  // shows every published week reserved (owner rule 16.10.2026) says so.
+  let inquiryAnswer = isInquiryOnlyBoat(yacht) ? 'faqBookInquiryA' : 'faqBookAgencyInquiryA';
+
+  if (showsAllBookedCalendar(yacht)) inquiryAnswer = 'faqBookAllBookedA';
 
   entries.push(
     inquiryOnly

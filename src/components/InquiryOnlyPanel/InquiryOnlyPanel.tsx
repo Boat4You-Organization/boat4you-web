@@ -10,6 +10,10 @@ interface InquiryOnlyPanelProps {
   /** `sidebar` — the booking box beside the content; `inline` — the
    *  availability section, where the calendar would be. */
   variant?: 'sidebar' | 'inline';
+  /** The boat's calendar shows every published week reserved
+   *  (showsAllBookedCalendar): the text says so instead of "no dates or
+   *  prices published". */
+  allBooked?: boolean;
 }
 
 /**
@@ -17,7 +21,7 @@ interface InquiryOnlyPanelProps {
  * the availability calendar and the Reserve button: "Price on request", why,
  * and the inquiry form — where the visitor picks any dates.
  */
-const InquiryOnlyPanel = ({ variant = 'sidebar' }: InquiryOnlyPanelProps) => {
+const InquiryOnlyPanel = ({ variant = 'sidebar', allBooked = false }: InquiryOnlyPanelProps) => {
   const t = useTranslations('yacht');
   const tCommon = useTranslations('common');
 
@@ -27,7 +31,7 @@ const InquiryOnlyPanel = ({ variant = 'sidebar' }: InquiryOnlyPanelProps) => {
         {tCommon('priceOnRequest')}
       </Typography>
       <Typography variant="body1" color={colors.black500}>
-        {t('inquiryOnlyText')}
+        {t(allBooked ? 'inquiryAllBookedText' : 'inquiryOnlyText')}
       </Typography>
       <Button size="large" fullWidth={variant === 'sidebar'} onClick={() => toggleBoatInquiryModalOpen(true)}>
         {tCommon('sendInquiry')}
