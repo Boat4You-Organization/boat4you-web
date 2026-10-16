@@ -28,7 +28,6 @@ import type { YachtImage } from '@/models/yacht.model';
 export type YachtImageKind = 'PARTNER' | 'LAYOUT' | 'MODEL_SAMPLE' | 'MARINA';
 
 type KindFields = Pick<YachtImage, 'layout' | 'kind' | 'type'>;
-
 type GalleryFields = Pick<YachtImage, 'layout' | 'kind' | 'type' | 'position' | 'mainImage'>;
 
 const hasTag = (image: KindFields, tag: string): boolean =>

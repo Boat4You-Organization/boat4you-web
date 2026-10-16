@@ -281,7 +281,6 @@ const ReservationHeroSection = ({ reservationDetails }: ReservationHeroSectionPr
         showShareAndFavorite={false}
         maxDisplayedImages={3}
         photoName={yachtLabel(modelName, toTitleCase(yachtName), ' ')}
-        modelPhotoName={modelName}
       />
     </Container>
   );

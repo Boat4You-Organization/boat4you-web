@@ -18,7 +18,7 @@ import { countryDisplayName } from '@/utils/static/countryDisplayName';
 import { displayBaseName } from '@/utils/static/croatianPlaceNames';
 import { getBoatImageUrl } from '@/utils/static/imageUtils';
 import { toTitleCase, yachtLabel } from '@/utils/static/toTitleCase';
-import { heroImage, isModelSampleImage } from '@/utils/static/yachtLayout';
+import { heroImage } from '@/utils/static/yachtLayout';
 
 import styles from './BoatShareModal.module.scss';
 
@@ -53,12 +53,7 @@ const BoatShareModal = ({ open, onOpen, onClose, yacht }: BoatShareModalProps) =
           <Box className={styles.imageWrapper}>
             <Image
               src={mainImage ? getBoatImageUrl(mainImage.id, 200) : DEFAULT_IMAGE}
-              // A photo of another boat of the same model names the model only.
-              alt={t('a11y.boatPhoto', {
-                label: isModelSampleImage(mainImage)
-                  ? yacht.model
-                  : yachtLabel(yacht.model, toTitleCase(yacht.name), ' '),
-              })}
+              alt={t('a11y.boatPhoto', { label: yachtLabel(yacht.model, toTitleCase(yacht.name), ' ') })}
               fill
               sizes="auto"
               className={styles.image}

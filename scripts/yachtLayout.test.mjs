@@ -20,8 +20,12 @@
  *     favourite and the booking picture are the boat's own photo, else its
  *     model's — never a layout or a marina photo; the gallery shows the boat's
  *     photos, the model's, the marina's last (caption · credit linked to the
- *     source); a model photo's alt names the model only, a marina photo's the
- *     marina; the PDF and its "all N photos" leave the marina out.
+ *     source), an empty first tile when it has nothing but marina photos; the
+ *     PDF and its "all N photos" leave the marina out;
+ *   - every picture's alt text names the boat (owner, 16.10.2026): "<boat> —
+ *     photo N" on its own and its model's photos, "<boat> — <marina>" on a
+ *     marina photo, "<boat> — Layout" on a drawing; the share card, the booking
+ *     hero and the My bookings cards "<boat>", a model photo too.
  *
  *   yarn test:layout
  */
@@ -85,7 +89,6 @@ const {
   withLayoutImagesApart,
   withoutMainImage,
 } = await import('@/utils/static/yachtLayout');
-const { yachtModelPhotoName } = await import('@/utils/static/yachtPhotoName');
 const { default: LayoutSection } = await import('@/views/Boat/BoatContentSection/LayoutSection');
 const { default: Gallery } = await import('@/components/Gallery');
 const { default: PhotoCredit } = await import('@/components/Gallery/PhotoCredit');
@@ -589,7 +592,7 @@ describe('image kinds: the gallery order and the hero', () => {
     assert.deepEqual(ids(images), [30, 10, 20, 11, 31, 12]);
   });
 
-  test('a marina photo never leads: no hero, and the gallery and lightbox show none when it would', () => {
+  test('a marina photo never leads: no hero; the gallery holds the first tile for the boat', () => {
     // The helper sorts them (the same code on all seven sites); the boat's picture is none.
     assert.deepEqual(ids(sortGalleryImages([marina(31, 2001), marina(30, 2000)])), [30, 31]);
     assert.equal(heroImage([marina(31, 2001), marina(30, 2000)]), undefined);
@@ -602,12 +605,16 @@ describe('image kinds: the gallery order and the hero', () => {
       [11, 40, 10, 20]
     );
 
-    ['src/components/Gallery/Gallery.tsx', 'src/components/Gallery/Lightbox/Lightbox.tsx'].forEach(path => {
-      const src = readSrc(path);
+    // The gallery: an empty first tile before a leading marina photo (as on the
+    // sisters); the lightbox: the same photos, the marina's included.
+    const gallery = readSrc('src/components/Gallery/Gallery.tsx');
 
-      assert.match(src, /const sorted = sortGalleryImages\(images \|\| yacht\?\.yachtImages\);/u, path);
-      assert.match(src, /sorted\[0\] && isMarinaImage\(sorted\[0\]\) \? \[\] : sorted/u, path);
-    });
+    assert.match(gallery, /const yachtImages = sortGalleryImages\(images \|\| yacht\?\.yachtImages\);/u);
+    assert.match(gallery, /const placeholderHero = isMarinaImage\(yachtImages\[0\]\);/u);
+    assert.match(
+      readSrc('src/components/Gallery/Lightbox/Lightbox.tsx'),
+      /useMemo\(\(\) => sortGalleryImages\(images \|\| yacht\?\.yachtImages\), \[images, yacht\?\.yachtImages\]\)/u
+    );
   });
 
   test('the hero: the boat’s own photo (main first, then the lowest position), else its model’s', () => {
@@ -793,65 +800,64 @@ describe('image kinds: the gallery', () => {
   const tiles = html =>
     imgTags(html).map(tag => [Number(/\/public\/image\/(\d+)/.exec(tag)?.[1]), /alt="([^"]*)"/.exec(tag)?.[1]]);
 
-  test('the boat’s photos, then the marina’s with the marina as alt text and its credit on the tile', () => {
+  test('the boat’s photos, then the marina’s: "<boat> — <marina>" as alt text, its credit on the tile', () => {
     const images = [marina(31, 2001), own(10, 1), marina(30, 2000), own(11, 0, true)];
     const html = render(createElement(Gallery, { yacht: withLayoutImagesApart(yacht(images)).yacht }));
 
     assert.deepEqual(tiles(html), [
       [11, 'Lagoon 55 The Moon - First Class — photo 1'],
       [10, 'Lagoon 55 The Moon - First Class — photo 2'],
-      [30, 'ACI Marina Split'],
-      [31, 'ACI Marina Split'],
+      [30, 'Lagoon 55 The Moon - First Class — ACI Marina Split'],
+      [31, 'Lagoon 55 The Moon - First Class — ACI Marina Split'],
     ]);
     // One caption line per marina tile, none on the boat's photos.
     assert.equal(html.match(/ACI Marina Split · <a /gu)?.length, 2);
     assert.equal(html.match(/rel="nofollow noopener"/gu)?.length, 2);
   });
 
-  test('model photos name the model only, never the boat', () => {
+  test('model photos carry the boat’s label like its own photos (owner 16.10.2026)', () => {
     const images = [layoutImage(40, 0), model(20, 1000, true), model(21, 1001), marina(30, 2000)];
     const html = render(createElement(Gallery, { yacht: withLayoutImagesApart(yacht(images)).yacht }));
 
     assert.deepEqual(tiles(html), [
-      [20, 'Lagoon 55 — photo 1'],
-      [21, 'Lagoon 55 — photo 2'],
-      [30, 'ACI Marina Split'],
+      [20, 'Lagoon 55 The Moon - First Class — photo 1'],
+      [21, 'Lagoon 55 The Moon - First Class — photo 2'],
+      [30, 'Lagoon 55 The Moon - First Class — ACI Marina Split'],
     ]);
-    assert.doesNotMatch(html, /The Moon/u);
 
     LOCALES.forEach(locale => {
       const localized = render(createElement(Gallery, { yacht: withLayoutImagesApart(yacht(images)).yacht }), locale);
       const template = readJson(`messages/${locale}/common.json`).photoAlt;
 
-      assert.equal(tiles(localized)[0][1], template.replace('{label}', 'Lagoon 55').replace('{n}', '1'), locale);
+      assert.equal(
+        tiles(localized)[0][1],
+        template.replace('{label}', 'Lagoon 55 The Moon - First Class').replace('{n}', '1'),
+        locale
+      );
+      assert.equal(tiles(localized)[2][1], 'Lagoon 55 The Moon - First Class — ACI Marina Split', locale);
     });
   });
 
-  test('My bookings (images only): a model photo names the model passed in, not "Yacht"', () => {
-    const images = [model(20, 1000, true), model(21, 1001)];
-    const html = render(
-      createElement(Gallery, {
-        images,
-        photoName: 'Lagoon 55 The Moon',
-        modelPhotoName: 'Lagoon 55',
-        maxDisplayedImages: 3,
-      })
-    );
+  test('My bookings (images only): every picture names the boat passed in, never "Yacht"', () => {
+    const images = [model(20, 1000, true), model(21, 1001), marina(30, 2000)];
+    const html = render(createElement(Gallery, { images, photoName: 'Lagoon 55 The Moon', maxDisplayedImages: 3 }));
 
     assert.deepEqual(tiles(html), [
-      [20, 'Lagoon 55 — photo 1'],
-      [21, 'Lagoon 55 — photo 2'],
+      [20, 'Lagoon 55 The Moon — photo 1'],
+      [21, 'Lagoon 55 The Moon — photo 2'],
+      [30, 'Lagoon 55 The Moon — ACI Marina Split'],
     ]);
-    assert.doesNotMatch(html, /The Moon|Yacht/u);
+    assert.doesNotMatch(html, /Yacht/u);
 
     const section = readSrc(
       'src/views/MyBookings/ReservationDetails/ReservationContent/ReservationHeroSection/ReservationHeroSection.tsx'
     );
 
-    assert.match(section, /<Gallery[\s\S]*?modelPhotoName=\{modelName\}/u);
+    assert.match(section, /<Gallery[\s\S]*?photoName=\{yachtLabel\(modelName, toTitleCase\(yachtName\), ' '\)\}/u);
+    assert.doesNotMatch(section, /modelPhotoName/u);
   });
 
-  test('a marina photo without a caption: its credit as the alt text, never an empty alt', () => {
+  test('a marina photo without a caption: the boat and its credit, else the boat alone — never an empty alt', () => {
     const html = render(
       createElement(Gallery, {
         yacht: yacht([
@@ -863,37 +869,65 @@ describe('image kinds: the gallery', () => {
     );
 
     assert.deepEqual(tiles(html).slice(1), [
-      [30, 'Foto: ACI Marina Split'],
-      [31, ''],
+      [30, 'Lagoon 55 The Moon - First Class — Foto: ACI Marina Split'],
+      [31, 'Lagoon 55 The Moon - First Class'],
     ]);
   });
 
-  test('nothing but marina photos: no tile (no marina photo as the boat’s picture)', () => {
+  test('nothing but marina photos: an empty first tile holds the boat’s place, the marina photos beside it', () => {
     const html = render(
-      createElement(Gallery, { yacht: withLayoutImagesApart(yacht([marina(30, 2000), marina(31, 2001)])).yacht })
+      createElement(Gallery, { yacht: withLayoutImagesApart(yacht([marina(31, 2001), marina(30, 2000)])).yacht })
     );
+    const firstTile = html.indexOf('data-index="0"');
 
-    assert.deepEqual(imgTags(html), []);
+    // The empty tile (an icon, no picture) comes first, then the marina photos.
+    assert.ok(firstTile >= 0 && firstTile < html.indexOf('<img '), html);
+    assert.match(html.slice(firstTile, html.indexOf('<img ')), /<svg[^>]*data-testid="ImageOutlinedIcon"/u);
+    assert.deepEqual(tiles(html), [
+      [30, 'Lagoon 55 The Moon - First Class — ACI Marina Split'],
+      [31, 'Lagoon 55 The Moon - First Class — ACI Marina Split'],
+    ]);
+    // A marina photo is never the page's LCP picture.
+    assert.ok(
+      imgTags(html).every(tag => !/fetchpriority|loading="eager"/iu.test(tag)),
+      html
+    );
+    // Five tiles at most: the empty one and four photos, the rest behind "Show all photos".
+    const many = [30, 31, 32, 33, 34].map((id, i) => marina(id, 2000 + i));
+    const full = render(createElement(Gallery, { yacht: withLayoutImagesApart(yacht(many)).yacht }));
+
+    assert.deepEqual(srcIds(full), [30, 31, 32, 33]);
+    assert.match(full, /Show all photos/u);
   });
 
-  test('the model name for the alt text: manufacturer and model, never the boat’s name', () => {
-    assert.equal(
-      yachtModelPhotoName({ manufacturerName: 'Lagoon', modelName: 'Lagoon 55', name: 'The Moon' }),
-      'Lagoon 55'
-    );
-    assert.equal(
-      yachtModelPhotoName({ manufacturerName: 'Fountaine Pajot', modelName: 'Elba 45', name: 'KARINA' }),
-      'Fountaine Pajot Elba 45'
-    );
-    assert.equal(yachtModelPhotoName({ manufacturerName: 'Bavaria', modelName: ' ', name: 'Anna' }), '');
-    assert.equal(yachtModelPhotoName(undefined), '');
+  test('a drawing in the gallery (no photo of the boat or its model): "<boat> — Layout" in every locale', () => {
+    const images = [marina(30, 2000), layoutImage(40, 0, true)];
+
+    LOCALES.forEach(locale => {
+      const html = render(createElement(Gallery, { yacht: withLayoutImagesApart(yacht(images)).yacht }), locale);
+      const { layoutTitle } = readJson(`messages/${locale}/common.json`);
+
+      assert.deepEqual(
+        tiles(html),
+        [
+          [40, `Lagoon 55 The Moon - First Class — ${layoutTitle}`],
+          [30, 'Lagoon 55 The Moon - First Class — ACI Marina Split'],
+        ],
+        locale
+      );
+      // The drawing takes the first tile itself: no empty one.
+      assert.doesNotMatch(html, /ImageOutlinedIcon/u, locale);
+    });
   });
 
   test('the lightbox: the gallery’s order, the same alt texts, the caption line on a marina photo', () => {
     const lightbox = readSrc('src/components/Gallery/Lightbox/Lightbox.tsx');
 
     assert.match(lightbox, /sortGalleryImages\(images \|\| yacht\?\.yachtImages\)/u);
-    assert.match(lightbox, /galleryPhotoAlt\(image, index, \{ boat: photoName, model: modelPhotoName \}/u);
+    assert.match(lightbox, /galleryPhotoAlt\(image, index, photoName, altWords\)/u);
+    assert.match(lightbox, /photo: \(label: string, n: string\) => t\('photoAlt' as never, \{ label, n \} as never\)/u);
+    assert.match(lightbox, /layout: t\('layoutTitle' as never\)/u);
+    assert.doesNotMatch(lightbox, /modelPhotoName|\? \[\] : sorted/u);
     assert.match(lightbox, /\{credit && <PhotoCredit credit=\{credit\} placement="lightbox" \/>\}/u);
     // A marina photo sits on the slide's bottom edge, under its caption line.
     assert.match(lightbox, /className=\{cx\(styles\.image, \{ \[styles\.imageBottom\]: Boolean\(credit\) \}\)\}/u);
@@ -958,30 +992,33 @@ describe('image kinds: share, favourite, inquiry and booking take the hero', () 
     assert.deepEqual(srcIds(bookingHero(images)), [10, 11, 20]);
   });
 
-  test('the booking hero: a model photo names the model only, never the boat', () => {
+  test('the booking hero: every picture names the boat, a model photo too', () => {
     // The boat's own photos with a model photo in the strip.
     assert.deepEqual(alts(bookingHero([own(10, 0, true), model(20, 1000)])), [
       [10, 'Lagoon 55 The Moon'],
-      [20, 'Lagoon 55'],
+      [20, 'Lagoon 55 The Moon'],
     ]);
 
-    // No photo of its own: the main picture and the strip are the model's.
-    const html = bookingHero([model(20, 1000, true), model(21, 1001), marina(30, 2000)]);
-
-    assert.deepEqual(alts(html), [
-      [20, 'Lagoon 55'],
-      [21, 'Lagoon 55'],
+    // No photo of its own: the main picture and the strip are the model's, named as the boat's.
+    assert.deepEqual(alts(bookingHero([model(20, 1000, true), model(21, 1001), marina(30, 2000)])), [
+      [20, 'Lagoon 55 The Moon'],
+      [21, 'Lagoon 55 The Moon'],
     ]);
-    // The boat's name stays in its title, never on a picture of another boat.
-    assert.ok(imgTags(html).every(tag => !tag.includes('The Moon')));
   });
 
-  test('the share card: a model photo names the model only', () => {
+  test('the share card and the My bookings cards name the boat, also on a model photo', () => {
     const share = readSrc('src/views/Boat/BoatHeroSection/BoatShareModal/BoatShareModal.tsx');
 
     assert.match(
       share,
-      /label: isModelSampleImage\(mainImage\)\s*\? yacht\.model\s*: yachtLabel\(yacht\.model, toTitleCase\(yacht\.name\), ' '\)/u
+      /alt=\{t\('a11y\.boatPhoto', \{ label: yachtLabel\(yacht\.model, toTitleCase\(yacht\.name\), ' '\) \}\)\}/u
+    );
+    assert.doesNotMatch(share, /isModelSampleImage/u);
+    [
+      'src/views/MyBookings/ActiveReservationsSection/ActiveReservationCard/ActiveReservationCard.tsx',
+      'src/views/MyBookings/PastReservationsSection/PastReservationCard/PastReservationCard.tsx',
+    ].forEach(path =>
+      assert.match(readSrc(path), /alt=\{yachtLabel\(modelName, toTitleCase\(yachtName\), ' '\)\}/u, path)
     );
   });
 });

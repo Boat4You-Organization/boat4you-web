@@ -22,7 +22,7 @@ import { YachtImage, YachtModel } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
 import useToggleState from '@/utils/hooks/useToggleState';
 import { getBoatImageUrl } from '@/utils/static/imageUtils';
-import { heroImage, isMarinaImage, marinaCaption, sortGalleryImages } from '@/utils/static/yachtLayout';
+import { heroImage, marinaCaption, sortGalleryImages } from '@/utils/static/yachtLayout';
 import BoatShareModal from '@/views/Boat/BoatHeroSection/BoatShareModal';
 
 import styles from './Lightbox.module.scss';
@@ -36,8 +36,6 @@ interface LightboxProps {
   showShareAndFavorite?: boolean;
   /** The boat as the photos' alt text names it ("Lagoon 42 Masterpiece", yachtPhotoName.ts). */
   photoName: string;
-  /** The model as a model photo's alt text names it ("Lagoon 42", yachtModelPhotoName). */
-  modelPhotoName?: string;
   /** Alt text of image `index` when the images are not photos (the boat's layout, LayoutSection). */
   imageAlt?: (index: number) => string;
 }
@@ -50,7 +48,6 @@ const Lightbox = ({
   selectedImage,
   showShareAndFavorite = true,
   photoName,
-  modelPhotoName = 'Yacht',
   imageAlt,
 }: LightboxProps) => {
   const [isShareModalOpen, toggleShareModal] = useToggleState();
@@ -60,21 +57,16 @@ const Lightbox = ({
   const t = useTranslations('common');
   // The same alt text as the gallery tiles: "Lagoon 42 Masterpiece — photo 3",
   // not "Gallery image 236378" / "Thumbnail 236378" (live check 8.10.2026, F4);
-  // a model photo names the model only, a marina photo the marina (photoAlt.ts).
+  // every picture names the boat, a marina photo the marina too (photoAlt.ts).
+  const altWords = {
+    photo: (label: string, n: string) => t('photoAlt' as never, { label, n } as never),
+    layout: t('layoutTitle' as never),
+  };
   const photoAlt = (image: YachtImage, index: number): string =>
-    imageAlt
-      ? imageAlt(index)
-      : galleryPhotoAlt(image, index, { boat: photoName, model: modelPhotoName }, (label, n) =>
-          t('photoAlt' as never, { label, n } as never)
-        );
+    imageAlt ? imageAlt(index) : galleryPhotoAlt(image, index, photoName, altWords);
 
-  // The gallery's order (yachtLayout.ts), so a tile opens its own photo; a
-  // marina photo never leads, as in the gallery (Gallery.tsx).
-  const yachtImages = useMemo(() => {
-    const sorted = sortGalleryImages(images || yacht?.yachtImages);
-
-    return sorted[0] && isMarinaImage(sorted[0]) ? [] : sorted;
-  }, [images, yacht?.yachtImages]);
+  // The gallery's order (yachtLayout.ts), so a tile opens its own photo.
+  const yachtImages = useMemo(() => sortGalleryImages(images || yacht?.yachtImages), [images, yacht?.yachtImages]);
   const thumbnailSwiperRef = useRef<SwiperType | null>(null);
 
   const yachtWithMainImage = useMemo(() => {

@@ -6,3 +6,7 @@ next-env.d.ts
 # across b4y, the 6 sisters and the admin (shasum-checked), tested by
 # scripts/yachtCapacity.test.mjs — never reformat or lint-fix it here.
 src/utils/static/yachtCapacity.ts
+# Shared gallery helper (photo kinds, layout split): a byte-identical copy
+# across b4y and the 6 sisters (shasum-checked), tested by
+# scripts/yachtLayout.test.mjs — never reformat or lint-fix it here.
+src/utils/static/yachtLayout.ts

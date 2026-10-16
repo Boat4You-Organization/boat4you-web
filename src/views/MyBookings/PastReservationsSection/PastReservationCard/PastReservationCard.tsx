@@ -65,7 +65,7 @@ const PastReservationCard = ({ reservation }: PastReservationCardProps) => {
         <CardMedia className={styles.media}>
           <Image
             src={getBoatImageUrl(yachtImage, 800)}
-            alt={yachtName}
+            alt={yachtLabel(modelName, toTitleCase(yachtName), ' ')}
             fill
             sizes="(max-width: 899px) 50vw, 50vw"
             style={{ objectFit: 'cover' }}

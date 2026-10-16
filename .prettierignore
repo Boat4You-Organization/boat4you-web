@@ -19,3 +19,6 @@ messages/**/*.json
 
 # Shared yacht capacity formatter: byte-identical across 8 repos (see .eslintignore)
 src/utils/static/yachtCapacity.ts
+
+# Shared gallery helper: byte-identical across b4y and the 6 sisters (see .eslintignore)
+src/utils/static/yachtLayout.ts

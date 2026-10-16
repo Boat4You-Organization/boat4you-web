@@ -2,6 +2,7 @@
 
 import { useCallback, useState } from 'react';
 
+import { ImageOutlined } from '@mui/icons-material';
 import { Box, Button, ImageList, ImageListItem, Stack } from '@mui/material';
 import cx from 'clsx';
 import { useTranslations } from 'next-intl';
@@ -10,10 +11,11 @@ import Image from 'next/image';
 
 import Photos from '@/components/SvgIcons/Photos';
 import { YachtImage, YachtModel } from '@/models/yacht.model';
+import colors from '@/styles/themes/colors';
 import useToggleState from '@/utils/hooks/useToggleState';
 import { getBoatImageUrl } from '@/utils/static/imageUtils';
 import { isMarinaImage, marinaCaption, sortGalleryImages } from '@/utils/static/yachtLayout';
-import { yachtModelPhotoName, yachtPhotoName } from '@/utils/static/yachtPhotoName';
+import { yachtPhotoName } from '@/utils/static/yachtPhotoName';
 
 import styles from './Gallery.module.scss';
 import PhotoCredit from './PhotoCredit';
@@ -30,8 +32,6 @@ interface GalleryProps {
   maxDisplayedImages?: number;
   /** The boat as the photos' alt text names it when only `images` are passed (My bookings). */
   photoName?: string;
-  /** The model as a model photo's alt text names it when only `images` are passed (My bookings). */
-  modelPhotoName?: string;
 }
 
 // A marina photo's caption and credit on its tile (PhotoCredit); nothing on any other photo.
@@ -41,36 +41,32 @@ const TileCredit = ({ image }: { image: YachtImage }) => {
   return credit ? <PhotoCredit credit={credit} placement="tile" /> : null;
 };
 
-const Gallery = ({
-  yacht,
-  images,
-  showShareAndFavorite = false,
-  maxDisplayedImages = 5,
-  photoName,
-  modelPhotoName,
-}: GalleryProps) => {
+const Gallery = ({ yacht, images, showShareAndFavorite = false, maxDisplayedImages = 5, photoName }: GalleryProps) => {
   const [isOpen, toggeIsOpen] = useToggleState();
   const [imageIndex, setImageIndex] = useState<number>(0);
   // Mounted from the first open on (and kept, so it can animate closed).
   const [lightboxMounted, setLightboxMounted] = useState(false);
   const t = useTranslations('common');
 
-  // "Fountaine Pajot Elba 45 Karina — photo 3" (yachtPhotoName.ts); a model
-  // photo names the model only, a marina photo the marina (photoAlt.ts).
+  // Every picture names the boat, "Fountaine Pajot Elba 45 Karina — photo 3"
+  // (yachtPhotoName.ts): its own photos, its model's, the marina's and a
+  // layout drawing alike (photoAlt.ts).
   const photoLabel = yachtPhotoName(yacht) || photoName || 'Yacht';
-  const modelPhotoLabel = yachtModelPhotoName(yacht) || modelPhotoName || 'Yacht';
-  const photoAlt = (image: YachtImage, index: number): string =>
-    galleryPhotoAlt(image, index, { boat: photoLabel, model: modelPhotoLabel }, (label, n) =>
-      t('photoAlt' as never, { label, n } as never)
-    );
+  const altWords = {
+    photo: (label: string, n: string) => t('photoAlt' as never, { label, n } as never),
+    layout: t('layoutTitle' as never),
+  };
+  const photoAlt = (image: YachtImage, index: number): string => galleryPhotoAlt(image, index, photoLabel, altWords);
 
   // The boat's photos, its model's, the marina's last (yachtLayout.ts). A
-  // marina photo never leads (the first tile is the boat's picture): a boat
-  // with nothing but marina photos shows none, like a boat without a picture.
-  const sorted = sortGalleryImages(images || yacht?.yachtImages);
-  const yachtImages = sorted[0] && isMarinaImage(sorted[0]) ? [] : sorted;
-  const displayedSlides = yachtImages.slice(0, maxDisplayedImages);
-  const isThreeImagesLayout = displayedSlides.length === 3;
+  // marina photo never takes the first tile (the boat's picture): a boat with
+  // nothing but marina photos gets an empty tile there, the marina's beside it.
+  const yachtImages = sortGalleryImages(images || yacht?.yachtImages);
+  const placeholderHero = isMarinaImage(yachtImages[0]);
+  const displayedSlides = yachtImages.slice(0, maxDisplayedImages - Number(placeholderHero));
+  const isThreeImagesLayout = displayedSlides.length + Number(placeholderHero) === 3;
+  // The photo on the first tile (none behind the empty one).
+  const leadIndex = placeholderHero ? -1 : 0;
 
   const handleImageClick = useCallback(
     (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
@@ -104,7 +100,6 @@ const Gallery = ({
           selectedImage={imageIndex}
           showShareAndFavorite={showShareAndFavorite}
           photoName={photoLabel}
-          modelPhotoName={modelPhotoLabel}
         />
       )}
       <Box position="relative" width="100%">
@@ -117,6 +112,23 @@ const Gallery = ({
           rowHeight="auto"
           gap={20}
         >
+          {placeholderHero && (
+            // The boat's place, empty (the theme's grey tile); a click opens
+            // the marina photos, the only tile a phone shows.
+            <ImageListItem
+              key="placeholder"
+              cols={1}
+              rows={1}
+              onClick={handleImageClick}
+              data-index={0}
+              component="div"
+              className={cx(styles.imageItem, styles.firstItem)}
+            >
+              <ImageOutlined
+                sx={{ position: 'absolute', inset: 0, m: 'auto', fontSize: 40, color: colors.black400, opacity: 0.5 }}
+              />
+            </ImageListItem>
+          )}
           {displayedSlides.map((image, index) => (
             <ImageListItem
               key={image.id}
@@ -126,7 +138,7 @@ const Gallery = ({
               data-index={index}
               component="div"
               className={cx(styles.imageItem, {
-                [styles.firstItem]: index === 0,
+                [styles.firstItem]: index === leadIndex,
               })}
             >
               <Image
@@ -138,15 +150,15 @@ const Gallery = ({
                 className={styles.image}
                 // The first photo is the boat page's LCP (painted at 8 s on
                 // slow 4G while lazy-loaded, audit B41).
-                preload={index === 0}
-                loading={index === 0 ? 'eager' : undefined}
-                fetchPriority={index === 0 ? 'high' : undefined}
+                preload={index === leadIndex}
+                loading={index === leadIndex ? 'eager' : undefined}
+                fetchPriority={index === leadIndex ? 'high' : undefined}
               />
               <TileCredit image={image} />
             </ImageListItem>
           ))}
         </ImageList>
-        {yachtImages.length > maxDisplayedImages && (
+        {yachtImages.length > displayedSlides.length && (
           <Stack position="absolute" bottom={12} right={12} zIndex={2}>
             <Button variant="outlinedSecondary" startIcon={<Photos size={24} />} onClick={handleButtonClick}>
               {t('showAllPhotos')}
