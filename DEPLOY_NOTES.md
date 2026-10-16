@@ -1,5 +1,11 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-10-16 — 🗣️ Bilješke kapaciteta v3 (native pregled hr/pl/nl) — ✅ DEPLOYANO 16.10.2026 10:08 UTC (`4b3b70eae`, deployment id `4b3b70eae55e-mvasouh1`), tag `live/2026-10-16c`
+
+Mario 15.10. („PROVJERI OVO PRIJE NEGO KRENEMO“) → native pregled svih 1.660 nizova po jeziku (hr 221 / pl 172 / nl 129 nota s greškom) → infra `capacity-contract-6-10/capacityNotes.json` v3 (977d4f1; 584 prijevoda u 431 noti; `work/build_v3.py` + `v3_changes.tsv`). Slices `src/utils/static/capacityNotes/<lang>.json` ×8 regenerirani istim `gen_slices.py` (584 promijenjene vrijednosti: hr 222, pl 174, nl 163, de/es/fr/it/pt 5 — HeadCabins/SK/SD/ext). Sustavno: hr „N skiperske“/„za skipera“, „+N u salonu“, „pramčani pik“ padež, „kupaonica/WC“, „po želji“; pl Kat. „osób“ umjesto „gości“, „poza kabinami“, „kabiny skippera“, WC srednji rod, ≤120 znakova, „dla załogi“; nl WC ostaje „WC“ (ugovor §7.5), „personen“ u Cat. notama, dinette/salon dosljedno, „één“. Backend čistač (cijene/doplate, OWN/1OWNER, motor u WC retku, ime broda) ide u večerašnji jar.
+
+- Provjere: build_v3 reproducira datoteku bajt za bajt, znakovi/brojevi očuvani u svih 13.104 vidljivih prijevoda, sanitizer skripta 0 nalaza; test:capacity prolazi; deploy `b4y_web_deploy.sh` iz worktreea `wt-capnotes`, SEO regresija 0 novih FAIL (33 poznatih, 22 WARN).
+
 ## 2026-10-16 — 🖼️ Galerija spremna za fotke modela i marine (`kind` polja API-ja) + alt tekst = plovilo na SVIM slikama — ✅ DEPLOYANO 16.10.2026 08:36 UTC (`4a3008bea`, deployment id `4a3008bea087-mvapek6h`), tag `live/2026-10-16b`
 
 Mario 16.10.: brodovi bez pravih fotki dobivaju fotke istog modela u galeriji „kao da ih je agencija učitala“; svaki brod 2–3 fotke polazne marine s potpisom „Foto: <marina>“ i linkom; „SLIKE TREBAJU SVE BITI S ALTERNATIV TEXTOM PLOVILA“. Backend šalje `yachtImages[].kind` (PARTNER|LAYOUT|MODEL_SAMPLE|MARINA), `caption`, `credit`, `sourceUrl` tek s prekidačem `GALLERY_EXTENDED` (večeras); do tada ovaj build renderira identično (bez `kind` = partnerska fotka).
