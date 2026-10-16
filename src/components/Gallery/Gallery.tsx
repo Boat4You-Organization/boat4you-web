@@ -12,7 +12,7 @@ import Photos from '@/components/SvgIcons/Photos';
 import { YachtImage, YachtModel } from '@/models/yacht.model';
 import useToggleState from '@/utils/hooks/useToggleState';
 import { getBoatImageUrl } from '@/utils/static/imageUtils';
-import { galleryImages, marinaPhotoCredit } from '@/utils/static/yachtLayout';
+import { isMarinaImage, marinaCaption, sortGalleryImages } from '@/utils/static/yachtLayout';
 import { yachtModelPhotoName, yachtPhotoName } from '@/utils/static/yachtPhotoName';
 
 import styles from './Gallery.module.scss';
@@ -30,16 +30,25 @@ interface GalleryProps {
   maxDisplayedImages?: number;
   /** The boat as the photos' alt text names it when only `images` are passed (My bookings). */
   photoName?: string;
+  /** The model as a model photo's alt text names it when only `images` are passed (My bookings). */
+  modelPhotoName?: string;
 }
 
 // A marina photo's caption and credit on its tile (PhotoCredit); nothing on any other photo.
 const TileCredit = ({ image }: { image: YachtImage }) => {
-  const credit = marinaPhotoCredit(image);
+  const credit = marinaCaption(image);
 
   return credit ? <PhotoCredit credit={credit} placement="tile" /> : null;
 };
 
-const Gallery = ({ yacht, images, showShareAndFavorite = false, maxDisplayedImages = 5, photoName }: GalleryProps) => {
+const Gallery = ({
+  yacht,
+  images,
+  showShareAndFavorite = false,
+  maxDisplayedImages = 5,
+  photoName,
+  modelPhotoName,
+}: GalleryProps) => {
   const [isOpen, toggeIsOpen] = useToggleState();
   const [imageIndex, setImageIndex] = useState<number>(0);
   // Mounted from the first open on (and kept, so it can animate closed).
@@ -49,14 +58,17 @@ const Gallery = ({ yacht, images, showShareAndFavorite = false, maxDisplayedImag
   // "Fountaine Pajot Elba 45 Karina — photo 3" (yachtPhotoName.ts); a model
   // photo names the model only, a marina photo the marina (photoAlt.ts).
   const photoLabel = yachtPhotoName(yacht) || photoName || 'Yacht';
-  const modelPhotoLabel = yachtModelPhotoName(yacht) || 'Yacht';
+  const modelPhotoLabel = yachtModelPhotoName(yacht) || modelPhotoName || 'Yacht';
   const photoAlt = (image: YachtImage, index: number): string =>
     galleryPhotoAlt(image, index, { boat: photoLabel, model: modelPhotoLabel }, (label, n) =>
       t('photoAlt' as never, { label, n } as never)
     );
 
-  // The boat's photos, its model's, the marina's last (yachtLayout.ts).
-  const yachtImages = galleryImages(images || yacht?.yachtImages);
+  // The boat's photos, its model's, the marina's last (yachtLayout.ts). A
+  // marina photo never leads (the first tile is the boat's picture): a boat
+  // with nothing but marina photos shows none, like a boat without a picture.
+  const sorted = sortGalleryImages(images || yacht?.yachtImages);
+  const yachtImages = sorted[0] && isMarinaImage(sorted[0]) ? [] : sorted;
   const displayedSlides = yachtImages.slice(0, maxDisplayedImages);
   const isThreeImagesLayout = displayedSlides.length === 3;
 

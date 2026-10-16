@@ -7,7 +7,7 @@ import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
 import { isGulet } from '@/utils/static/guletCrewed';
 import { toTitleCase } from '@/utils/static/toTitleCase';
 import { Fmt, capacityRows, fromYacht } from '@/utils/static/yachtCapacity';
-import { withoutMarinaImages } from '@/utils/static/yachtLayout';
+import { countGalleryPhotos } from '@/utils/static/yachtLayout';
 
 import { styles } from './YachtPDF.styles';
 import { formatPdfNumber, pdfSafeText } from './pdfNumber';
@@ -365,7 +365,7 @@ const YachtPDF = ({
             {/* eslint-disable-next-line jsx-a11y/anchor-is-valid -- react-pdf Link uses `src`, not a DOM anchor */}
             <Link src={pageUrl} style={styles.footTitleLink}>
               <Text style={styles.footTitle}>
-                See live availability & all {withoutMarinaImages(yacht.yachtImages).length} photos
+                See live availability & all {countGalleryPhotos(yacht.yachtImages)} photos
               </Text>
             </Link>
             <Text style={styles.footSub}>

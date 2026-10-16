@@ -22,7 +22,7 @@ import { YachtImage, YachtModel } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
 import useToggleState from '@/utils/hooks/useToggleState';
 import { getBoatImageUrl } from '@/utils/static/imageUtils';
-import { galleryImages, marinaPhotoCredit, yachtHeroImage } from '@/utils/static/yachtLayout';
+import { heroImage, isMarinaImage, marinaCaption, sortGalleryImages } from '@/utils/static/yachtLayout';
 import BoatShareModal from '@/views/Boat/BoatHeroSection/BoatShareModal';
 
 import styles from './Lightbox.module.scss';
@@ -68,8 +68,13 @@ const Lightbox = ({
           t('photoAlt' as never, { label, n } as never)
         );
 
-  // The gallery's order (yachtLayout.ts), so a tile opens its own photo.
-  const yachtImages = useMemo(() => galleryImages(images || yacht?.yachtImages), [images, yacht?.yachtImages]);
+  // The gallery's order (yachtLayout.ts), so a tile opens its own photo; a
+  // marina photo never leads, as in the gallery (Gallery.tsx).
+  const yachtImages = useMemo(() => {
+    const sorted = sortGalleryImages(images || yacht?.yachtImages);
+
+    return sorted[0] && isMarinaImage(sorted[0]) ? [] : sorted;
+  }, [images, yacht?.yachtImages]);
   const thumbnailSwiperRef = useRef<SwiperType | null>(null);
 
   const yachtWithMainImage = useMemo(() => {
@@ -78,7 +83,7 @@ const Lightbox = ({
     return {
       ...yacht,
       // The boat's hero, never a layout or a marina photo (yachtLayout.ts).
-      mainImageId: yachtHeroImage(yachtImages)?.id || 0,
+      mainImageId: heroImage(yachtImages)?.id || 0,
     };
   }, [yacht, yachtImages]);
 
@@ -205,7 +210,7 @@ const Lightbox = ({
             onSwiper={handleSwiper}
           >
             {yachtImages.map((image, index) => {
-              const credit = marinaPhotoCredit(image);
+              const credit = marinaCaption(image);
 
               return (
                 <SwiperSlide key={image.id}>
@@ -215,7 +220,9 @@ const Lightbox = ({
                       alt={photoAlt(image, index)}
                       fill
                       sizes="100vw"
-                      className={styles.image}
+                      // A marina photo sits on the slide's bottom edge, so its
+                      // caption line overlays the photo, not the white below it.
+                      className={cx(styles.image, { [styles.imageBottom]: Boolean(credit) })}
                     />
                     {credit && <PhotoCredit credit={credit} placement="lightbox" />}
                   </Box>

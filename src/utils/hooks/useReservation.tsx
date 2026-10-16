@@ -7,7 +7,7 @@ import { ReservationData } from '@/types/reservation.type';
 import DateTime from '@/utils/static/DateTime';
 import { clearDataFromLocalStorage, saveDataToLocalStorage } from '@/utils/static/localStorageUtils';
 import { clearDataFromSessionStorage } from '@/utils/static/sessionStorageUtils';
-import { yachtHeroImage } from '@/utils/static/yachtLayout';
+import { heroImage } from '@/utils/static/yachtLayout';
 import { useYachtStore } from '@/valtio/yacht/yacht.store';
 
 interface UseReservationProps {
@@ -39,7 +39,7 @@ export const useReservation = ({ yacht }: UseReservationProps) => {
   const { locationFrom } = selectedOffer ?? {};
   // The booking's picture: the boat's hero, never a layout or a marina photo
   // (yachtLayout.ts); none when the boat has no photo (the hero shows none).
-  const mainImage = yachtHeroImage(yachtImages);
+  const mainImage = heroImage(yachtImages);
 
   const handleReservation = useCallback(
     (customOfferId?: number) => {

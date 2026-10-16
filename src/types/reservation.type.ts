@@ -8,7 +8,7 @@ export type ReservationData = {
   name: string;
   agencyName: string;
   locationFrom: LocationFromTo;
-  /** The boat's hero (yachtLayout.ts, yachtHeroImage); absent when the boat has no photo. */
+  /** The boat's hero (yachtLayout.ts, heroImage); absent when the boat has no photo. */
   mainImage?: YachtImage;
   model: string;
   dateFrom: string;

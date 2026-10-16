@@ -68,6 +68,11 @@
         object-fit: contain;
         display: block;
       }
+
+      // A marina photo (PhotoCredit): drawn on the bottom edge, under its caption line.
+      .imageBottom {
+        object-position: center bottom;
+      }
     }
   }
 

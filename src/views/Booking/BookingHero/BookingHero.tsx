@@ -8,7 +8,7 @@ import Image from 'next/image';
 
 import BoatLocationModal from '@/components/BoatLocationModal';
 import FlagIcon from '@/components/FlagIcon';
-import { VESSEL_TYPE_LABEL_MAP } from '@/models/yacht.model';
+import { VESSEL_TYPE_LABEL_MAP, YachtImage } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
 import { ReservationData } from '@/types/reservation.type';
 import useCapacityFmt from '@/utils/hooks/useCapacityFmt';
@@ -18,7 +18,7 @@ import { displayBaseName } from '@/utils/static/croatianPlaceNames';
 import { getBoatImageUrl } from '@/utils/static/imageUtils';
 import { toTitleCase, yachtLabel } from '@/utils/static/toTitleCase';
 import { CardKey, ChipKey, capacityChips, cardChips, fromYacht } from '@/utils/static/yachtCapacity';
-import { isBoatPhoto } from '@/utils/static/yachtLayout';
+import { isLayoutImage, isMarinaImage, isModelSampleImage } from '@/utils/static/yachtLayout';
 
 import styles from './BookingHero.module.scss';
 
@@ -72,7 +72,12 @@ const BookingHero = ({ reservationData }: BookingHeroProps) => {
 
   // Thumbnail strip: up to 3 other photos of the boat — no layout drawing, no
   // marina photo (yachtLayout.ts).
-  const thumbnails = (yachtImages ?? []).filter(img => isBoatPhoto(img) && img.id !== mainImage?.id).slice(0, 3);
+  const thumbnails = (yachtImages ?? [])
+    .filter(img => !isLayoutImage(img) && !isMarinaImage(img) && img.id !== mainImage?.id)
+    .slice(0, 3);
+  // A photo of another boat of the same model names the model only, never this boat.
+  const boatAlt = yachtLabel(model, toTitleCase(name), ' ');
+  const altFor = (img?: YachtImage) => (isModelSampleImage(img) ? model : boatAlt);
 
   // Stats row — only values we actually have: the year, then the partner's
   // cabins · berths · max. people (cardChips: "13 (12 + 1 crew)", never an
@@ -109,7 +114,7 @@ const BookingHero = ({ reservationData }: BookingHeroProps) => {
                 <Box className={styles.mainImageWrapper}>
                   <Image
                     src={getBoatImageUrl(mainImage.id, 800)}
-                    alt={yachtLabel(model, toTitleCase(name), ' ')}
+                    alt={altFor(mainImage)}
                     fill
                     sizes="(max-width: 900px) 100vw, 450px"
                     className={styles.mainImage}
@@ -123,7 +128,7 @@ const BookingHero = ({ reservationData }: BookingHeroProps) => {
                     <Box key={img.id} className={styles.thumbWrapper}>
                       <Image
                         src={getBoatImageUrl(img.id, 256)}
-                        alt={yachtLabel(model, toTitleCase(name), ' ')}
+                        alt={altFor(img)}
                         fill
                         sizes="120px"
                         className={styles.thumbImage}

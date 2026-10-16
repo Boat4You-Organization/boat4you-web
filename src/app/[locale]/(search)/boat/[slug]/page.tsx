@@ -37,7 +37,7 @@ import {
 import { ManufacturerLookup, yachtBrandName } from '@/utils/static/yachtBrand';
 import { CapacityFacts, capacityFacts, fromYacht } from '@/utils/static/yachtCapacity';
 import { buildYachtFaq, buildYachtFaqSchema } from '@/utils/static/yachtFaq';
-import { withLayoutImagesApart, yachtHeroImage } from '@/utils/static/yachtLayout';
+import { heroImage, withLayoutImagesApart } from '@/utils/static/yachtLayout';
 import { cleanModelName } from '@/utils/static/yachtModelKey';
 import { successorBoatPath } from '@/utils/static/yachtSuccessor';
 import BoatContentSection from '@/views/Boat/BoatContentSection';
@@ -62,10 +62,10 @@ import RelatedBoats from '@/views/Boat/RelatedBoats';
  * instead. 1200px matches the OG recommendation and is a width Bunny
  * already caches for the listing cards. A photo of the boat (its own, else
  * its model's), never the layout drawing or a marina photo (yachtLayout.ts,
- * yachtHeroImage): a boat without one gets the site-wide asset.
+ * heroImage): a boat without one gets the site-wide asset.
  */
 const yachtShareImageUrl = (yacht: YachtModel): string | null => {
-  const imageId = yachtHeroImage(yacht.yachtImages)?.id;
+  const imageId = heroImage(yacht.yachtImages)?.id;
 
   if (!imageId) return null;
 

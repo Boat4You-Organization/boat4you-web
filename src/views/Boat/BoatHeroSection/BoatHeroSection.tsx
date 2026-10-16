@@ -28,7 +28,7 @@ import useYachtPdfDownload from '@/utils/hooks/useYachtPdfDownload';
 import { countryDisplayName } from '@/utils/static/countryDisplayName';
 import { displayBaseName } from '@/utils/static/croatianPlaceNames';
 import { toTitleCase, yachtLabel } from '@/utils/static/toTitleCase';
-import { yachtHeroImage } from '@/utils/static/yachtLayout';
+import { heroImage } from '@/utils/static/yachtLayout';
 import { useYachtStore } from '@/valtio/yacht/yacht.store';
 
 import styles from './BoatHeroSection.module.scss';
@@ -59,7 +59,7 @@ const BoatHeroSection = ({ yacht, layoutImages }: BoatHeroSectionProps) => {
   const isOneWay = Boolean(pickup?.name && dropOff?.name && pickup.name !== dropOff.name);
   const heroLocation = isOneWay && pickup ? pickup : yacht.location;
   // The favourite's picture: the boat's hero, never a layout or a marina photo (yachtLayout.ts).
-  const favoriteYacht = { ...yacht, mainImageId: yachtHeroImage(yacht.yachtImages)?.id || 0 };
+  const favoriteYacht = { ...yacht, mainImageId: heroImage(yacht.yachtImages)?.id || 0 };
 
   // Map modal shows whichever marina was clicked (pickup or drop-off).
   const [mapMarinaName, setMapMarinaName] = useState<string | null>(null);
