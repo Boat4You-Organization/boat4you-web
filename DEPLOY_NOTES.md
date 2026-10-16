@@ -1,5 +1,13 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-10-16 — 🖼️ Galerija spremna za fotke modela i marine (`kind` polja API-ja) + alt tekst = plovilo na SVIM slikama — ✅ DEPLOYANO 16.10.2026 08:36 UTC (`4a3008bea`, deployment id `4a3008bea087-mvapek6h`), tag `live/2026-10-16b`
+
+Mario 16.10.: brodovi bez pravih fotki dobivaju fotke istog modela u galeriji „kao da ih je agencija učitala“; svaki brod 2–3 fotke polazne marine s potpisom „Foto: <marina>“ i linkom; „SLIKE TREBAJU SVE BITI S ALTERNATIV TEXTOM PLOVILA“. Backend šalje `yachtImages[].kind` (PARTNER|LAYOUT|MODEL_SAMPLE|MARINA), `caption`, `credit`, `sourceUrl` tek s prekidačem `GALLERY_EXTENDED` (večeras); do tada ovaj build renderira identično (bez `kind` = partnerska fotka).
+
+- Helper `src/utils/static/yachtLayout.ts` = byte-identična kopija sa 6 sistera (sha256 82e433ea…), u `.eslintignore`/`.prettierignore` kao `yachtCapacity.ts` (b4y padding pravilo); redoslijed vlastite → model → tlocrt (kad nema drugog) → marina; `yachtHeroImage`/`heroImage` nikad marina ni tlocrt → og:image, Product JSON-LD, share, favoriti, inquiry kartica, booking (`ReservationData.mainImage` opcionalan), BookingHero sličice bez marina; Gallery + Lightbox isti sort; potpis marine (caption · credit, `rel="nofollow noopener"`) kao pill na tileu i u lightboxu; PDF: cover = hero, bez marina, brojač bez marina; brod samo s fotkama marine = prazan prvi tile.
+- Alt: `photoAlt.ts` — vlastite i model fotke „<brod> — photo N“ (common.photoAlt ×9), marina „<brod> — <caption|credit>“, tlocrt „<brod> — <common.layoutTitle>“; sličice (BookingHero, share, My Bookings kartice) = oznaka broda. Uživo Kanalu: „Bali Catamarans Bali 4.1 Kanalu — photo 1…“, „— Layout“.
+- Provjere: test:layout 51/51, pdf/boat-seo/gulet/capacity/successor/equipment prolaze, test:polish 104/106 (2 stara pada u nediranim datotekama), eslint 0 grešaka, lint hook; deploy `b4y_web_deploy.sh` iz worktreea `wt-gallery`, SEO regresija 0 novih FAIL (25 poznatih, 26 WARN).
+
 ## 2026-10-16 — 🏆 Brand tvrdnja „najveći i najpouzdaniji“ u footeru (nova) i About herou (9 jezika) + About bez doslovnih `**` oznaka — ✅ DEPLOYANO 16.10.2026 06:2x UTC (`cdd7ee205`, deployment id `cdd7ee205b39-mval04e1`), tag `live/2026-10-16`
 
 Mario 15./16.10. („mi to moramo na svim stranicama imat da smo largest i most reliable. Source: our clients!“), odobrena rečenica EN: „One of the largest and most reliable yacht charter companies — according to the clients who sail with us year after year.“ Namjerna, odobrena tvrdnja o tvrtki — ne ublažavati (memory feedback_broker_formulations_stay).
