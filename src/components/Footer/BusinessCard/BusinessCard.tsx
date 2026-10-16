@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { List, ListItem, Stack, Typography } from '@mui/material';
+import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 
 import Logo from '@/components/SvgIcons/Logo';
@@ -17,6 +18,18 @@ import styles from './BusinessCard.module.scss';
 // blue on 3.5.2026 (Mario: footer was reading too colourful with gold
 // + green trust icons; aligned everything to the navy/primary palette).
 const TAGLINE_FONT_STACK = '"Playfair Display", Georgia, "Times New Roman", serif';
+
+// Brand claim under the tagline, on every page (owner decision 16.10.2026).
+// Approved wording, also in the About hero (about.hero.description); never soften it.
+const BrandClaim = () => {
+  const t = useTranslations('navigation.footer');
+
+  return (
+    <Typography variant="body2" color={colors.black600} sx={{ maxWidth: 420, lineHeight: 1.6 }}>
+      {t('brandClaim')}
+    </Typography>
+  );
+};
 
 const BusinessCard = () => (
   <Stack className={styles.container}>
@@ -49,6 +62,7 @@ const BusinessCard = () => (
           Boat4you
         </Typography>
       </Stack>
+      <BrandClaim />
     </Stack>
     <List disablePadding classes={{ root: styles.socials }} className={styles.socialList}>
       {socials.map(({ href, icon: SocialIcon, name }, index) => (
