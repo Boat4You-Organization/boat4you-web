@@ -697,7 +697,7 @@
   },
   "(4+Salon+2 SK)": {
     "dims": ["cabins"],
-    "es": "(4+salón+2 SK)"
+    "es": "(4+salón+2 patrón)"
   },
   "(4D+1 skippers' cabin)": {
     "dims": ["cabins"],
@@ -725,7 +725,7 @@
   },
   "(4D+2SD+skipper cabin)": {
     "dims": ["cabins"],
-    "es": "(4 dobles+2SD+camarote del patrón)"
+    "es": "(4 dobles+2 con cama doble estrecha+camarote del patrón)"
   },
   "+2 peaks": {
     "dims": ["cabins"],
@@ -1597,7 +1597,7 @@
   },
   "+2 HeadCabins": {
     "dims": ["cabins"],
-    "es": "+2 HeadCabins"
+    "es": "+2 camarotes de proa"
   },
   "(5 cab + 1 crew)": {
     "dims": ["cabins"],
@@ -3269,7 +3269,7 @@
   },
   "(4 double + 1 single ext)": {
     "dims": ["cabins"],
-    "es": "(4 dobles + 1 individual ext)"
+    "es": "(4 dobles + 1 individual adicional)"
   },
   "(3 double, 2 bunk bed cabin)": {
     "dims": ["cabins"],
@@ -5557,7 +5557,7 @@
   },
   "(4 + 1 ext)": {
     "dims": ["heads"],
-    "es": "(4 + 1 ext)"
+    "es": "(4 + 1 adicional)"
   },
   "(4 en-suite + 1 skipper)": {
     "dims": ["heads"],
