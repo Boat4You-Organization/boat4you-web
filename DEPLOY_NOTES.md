@@ -1,5 +1,13 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-10-16 — 🏆 Brand tvrdnja „najveći i najpouzdaniji“ u footeru (nova) i About herou (9 jezika) + About bez doslovnih `**` oznaka — ✅ DEPLOYANO 16.10.2026 06:2x UTC (`cdd7ee205`, deployment id `cdd7ee205b39-mval04e1`), tag `live/2026-10-16`
+
+Mario 15./16.10. („mi to moramo na svim stranicama imat da smo largest i most reliable. Source: our clients!“), odobrena rečenica EN: „One of the largest and most reliable yacht charter companies — according to the clients who sail with us year after year.“ Namjerna, odobrena tvrdnja o tvrtki — ne ublažavati (memory feedback_broker_formulations_stay).
+
+- Footer: b4y nije imao blurb → novi ključ `navigation.footer.brandClaim` ×9 i mali `BrandClaim` pod taglineom u `src/components/Footer/BusinessCard/BusinessCard.tsx` (body2, black600, maxWidth 420); Footer je u Layout i StaticLayout = svaka stranica s footerom (4 stranice plaćanja/bookinga nemaju footer namjerno).
+- About: `about.hero.description` ×9 — tvrdnja kao druga rečenica iza uvodne s Boat4You; PL nakon pregleda „firm zajmujących się czarterem jachtów“ (ne „czarterujących“ = klijent u ugovoru). Usput ispravljeno pre-existing: de/fr/it/es/pt/hr imali doslovne markdown `**…**` oznake u istom odlomku (t.rich ih ne parsira, vidjele su se zvjezdice na /de/about-us) — uklonjene.
+- Provjere: JSON ×9, `yarn check:home-hub` ✓, pregled po jeziku (wf_01c98115-54a); deploy `b4y_web_deploy.sh` iz worktreea `wt-brand-claim`, SEO regresija no new failures: 0 new FAIL, 34 known open defect rows, 20 WARN rows; uživo: footer EN/DE, About EN/DE/PL s tvrdnjom, 0 zvjezdica. Footer vizualno provjeriti na desktopu i mobitelu nakon deploya.
+
 ## 2026-10-15 — 🏷️ Landinzi bez EY head-terma „yacht charter + Hrvatska/Grčka/Italija/Španjolska/Turska“ (278 naslova/meta ×9 jezika → rental/hire varijante) — ✅ DEPLOYANO 15.10.2026 13:5x UTC (`95c18484b`, deployment id `95c18484b7ad-mv9lataf`), tag `live/2026-10-15d`
 
 Pregled 1.10. nalaz 2, Mario 15.10. „SREDI“: naslovi/meta opisi landinga za jedrilice, motorne i luksuzne motorne jahte te stranice bez tipa plovila za croatia/greece/italy/spain/türkiye (+ northernGreeceAegean, italianAdriatic) koristili su „yacht charter + država“, glavnu ključnu riječ europe-yachts.com (pravilo 10.5./25.9.). Isto rješenje kao za katamarane („Catamaran rental in Croatia“).
