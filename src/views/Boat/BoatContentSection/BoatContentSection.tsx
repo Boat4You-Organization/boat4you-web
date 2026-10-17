@@ -8,7 +8,7 @@ import { useTranslations } from 'next-intl';
 import BoatCalendar from '@/components/BoatCalendar';
 import CircularProgress from '@/components/CircularProgress';
 import { OFFSET } from '@/config/constants.config';
-import { singleBoatTabs, singleCustomBoatTabs } from '@/config/tabs.config';
+import { singleBoatTabsFor } from '@/config/tabs.config';
 import { YachtImage, YachtModel } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
 import useScrollSpy from '@/utils/hooks/useScrollSpy';
@@ -67,13 +67,13 @@ const BoatContentSection = ({ yacht, yachtFaq, capacity, layoutImages = [] }: Bo
     clearDataFromSessionStorage('selectedInstallment');
   }, []);
 
-  const currentTabs = yacht.custom ? singleCustomBoatTabs : singleBoatTabs;
+  const currentTabs = singleBoatTabsFor(yacht);
   // Amenities and Extras are folded until pressed (owner 13.10.2026, every
   // boat); choosing their tab opens them, so the scroll lands on content.
   const [expanded, setExpanded] = useState<Record<string, boolean>>({});
   const isFolded = (tabName: string) => tabName === 'ammenities' || tabName === 'extras';
   const toggleSection = (tabName: string) => setExpanded(prev => ({ ...prev, [tabName]: !prev[tabName] }));
-  const sectionIds = useMemo(() => singleBoatTabs.map((_, index) => `section-${index}`), []);
+  const sectionIds = useMemo(() => currentTabs.map((_, index) => `section-${index}`), [currentTabs]);
 
   const activeSectionId = useScrollSpy(sectionIds, 0.2);
   const activeIndex = sectionIds.indexOf(activeSectionId);

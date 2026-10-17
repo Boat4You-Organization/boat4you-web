@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl';
 
 import Video from '@/components/SvgIcons/Video';
 import { YachtModel } from '@/models/yacht.model';
-import getYouTubeEmbedUrl from '@/utils/static/getYoutubeEmbedUrlUtils';
+import { getVideoEmbedUrl, yachtVideoUrl } from '@/utils/static/yachtMedia';
 import { yachtPhotoName } from '@/utils/static/yachtPhotoName';
 
 import styles from './VideoTab.module.scss';
@@ -14,15 +14,16 @@ interface VideoTabProps {
   yacht: YachtModel;
 }
 
-// Custom-yacht only — embeds the YouTube showreel the admin pasted into
-// customDetails.videoUrl. Lives in its own tab between Good to know and
-// FAQ so users can jump straight to the video instead of scrolling
-// through the description block. External yachts don't expose a video URL
-// so the tab is hidden via tabs.config.
+// Embeds the boat's video: our own, which the admin sets on any boat
+// (yacht.videoUrl, YouTube or Vimeo — owner 17.10.2026, gulet Allure), else
+// the custom boat's showreel (customDetails.videoUrl). Lives in its own tab
+// right before FAQ so users can jump straight to the video instead of
+// scrolling through the description block. A partner boat without a video
+// has no Video tab (tabs.config, singleBoatTabsFor).
 const VideoTab = ({ yacht }: VideoTabProps) => {
   const t = useTranslations('yacht');
   const tCommon = useTranslations('common');
-  const videoUrl = yacht.customDetails?.videoUrl;
+  const videoUrl = yachtVideoUrl(yacht);
 
   if (!videoUrl) return null;
 
@@ -47,8 +48,9 @@ const VideoTab = ({ yacht }: VideoTabProps) => {
       <Box className={styles.videoContainer}>
         <CardMedia
           component="iframe"
-          src={getYouTubeEmbedUrl(videoUrl)}
+          src={getVideoEmbedUrl(videoUrl)}
           title={videoTitle}
+          loading="lazy"
           allowFullScreen
           className={styles.media}
           sandbox="allow-scripts allow-same-origin allow-presentation"

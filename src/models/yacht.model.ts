@@ -399,6 +399,17 @@ export interface YachtModel
    * Absent on an older backend — read it only through isInquiryOnlyBoat().
    */
   hasBookableFutureOffer?: boolean | null;
+  /**
+   * Our own video of the boat (admin, 17.10.2026; any boat, not only a custom
+   * one): a YouTube or Vimeo link, else the custom boat's
+   * customDetails.videoUrl. Read only through yachtVideoUrl (yachtMedia.ts).
+   */
+  videoUrl?: string | null;
+  /**
+   * The crew-profile PDF on the API (".../public/yachts/{id}/crew-profile.pdf"),
+   * null when the boat has none. Read only through crewProfileHref (yachtMedia.ts).
+   */
+  crewProfileUrl?: string | null;
 }
 
 export interface YachtModelLocalStorage extends Pick<YachtModel, 'id' | 'name' | 'slug' | 'location' | 'model'> {

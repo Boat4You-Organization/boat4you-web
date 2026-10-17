@@ -20,6 +20,8 @@ import Image from 'next/image';
 import BoatLocationModal from '@/components/BoatLocationModal';
 import FavoriteButton from '@/components/FavoriteButton';
 import Gallery from '@/components/Gallery';
+import Crew from '@/components/SvgIcons/Crew';
+import Download from '@/components/SvgIcons/Download';
 import Share from '@/components/SvgIcons/Share';
 import { YachtImage, YachtModel } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
@@ -29,6 +31,7 @@ import { countryDisplayName } from '@/utils/static/countryDisplayName';
 import { displayBaseName } from '@/utils/static/croatianPlaceNames';
 import { toTitleCase, yachtLabel } from '@/utils/static/toTitleCase';
 import { heroImage } from '@/utils/static/yachtLayout';
+import { crewProfileHref } from '@/utils/static/yachtMedia';
 import { useYachtStore } from '@/valtio/yacht/yacht.store';
 
 import styles from './BoatHeroSection.module.scss';
@@ -60,6 +63,9 @@ const BoatHeroSection = ({ yacht, layoutImages }: BoatHeroSectionProps) => {
   const heroLocation = isOneWay && pickup ? pickup : yacht.location;
   // The favourite's picture: the boat's hero, never a layout or a marina photo (yachtLayout.ts).
   const favoriteYacht = { ...yacht, mainImageId: heroImage(yacht.yachtImages)?.id || 0 };
+  // The crew-profile PDF the admin uploaded (owner 17.10.2026, gulet Allure):
+  // an action of its own next to the brochure PDF, opened in a new tab.
+  const crewProfile = crewProfileHref(yacht);
 
   // Map modal shows whichever marina was clicked (pickup or drop-off).
   const [mapMarinaName, setMapMarinaName] = useState<string | null>(null);
@@ -159,7 +165,15 @@ const BoatHeroSection = ({ yacht, layoutImages }: BoatHeroSectionProps) => {
               </Stack>
             )}
           </Stack>
-          <Stack direction="row" spacing={2} className={styles.iconsDesktop}>
+          {/* Wraps instead of squeezing the title on a tablet when the crew-profile action makes four. */}
+          <Stack
+            direction="row"
+            spacing={2}
+            useFlexGap
+            flexWrap="wrap"
+            justifyContent="flex-end"
+            className={styles.iconsDesktop}
+          >
             <Button
               variant="containedInfo"
               startIcon={isDownloading ? <CircularProgress size={16} /> : <FileDownloadOutlined />}
@@ -169,6 +183,17 @@ const BoatHeroSection = ({ yacht, layoutImages }: BoatHeroSectionProps) => {
             >
               {t('pdfDownload')}
             </Button>
+            {crewProfile && (
+              <Button
+                variant="containedInfo"
+                href={crewProfile}
+                target="_blank"
+                rel="noopener"
+                startIcon={<Download size={18} />}
+              >
+                {t('crewProfilePdf')}
+              </Button>
+            )}
             <Button variant="containedInfo" startIcon={<Share />} onClick={toggeIsOpen} aria-label={t('share')}>
               {t('share')}
             </Button>
@@ -191,6 +216,18 @@ const BoatHeroSection = ({ yacht, layoutImages }: BoatHeroSectionProps) => {
                 <FileDownloadOutlined sx={{ fontSize: 20, color: colors.black950 }} />
               )}
             </IconButton>
+            {/* The crew's cap, not a second download arrow next to the brochure's. */}
+            {crewProfile && (
+              <IconButton
+                className={styles.imageActionBtn}
+                href={crewProfile}
+                target="_blank"
+                rel="noopener"
+                aria-label={t('crewProfilePdf')}
+              >
+                <Crew size={20} fill={colors.black950} />
+              </IconButton>
+            )}
             <IconButton className={styles.imageActionBtn} onClick={toggeIsOpen} aria-label={t('share')}>
               <Icon sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <Share size={18} fill={colors.black950} />

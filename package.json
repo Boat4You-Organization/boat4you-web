@@ -31,6 +31,7 @@
     "test:gulet": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test scripts/guletCrewed.test.mjs",
     "test:layout": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test scripts/yachtLayout.test.mjs",
     "test:calendar": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test scripts/calendarAllBooked.test.mjs",
+    "test:media": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test scripts/yachtMedia.test.mjs",
     "upgrade": "yarn upgrade"
   },
   "dependencies": {

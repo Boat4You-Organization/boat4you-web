@@ -1,0 +1,154 @@
+{
+  "_about": "api.boat4you.com 17.10.2026: GET /public/yachts/gulet-allure-11769 (before the own-media backend): offers and services left out, no agency.",
+  "yacht": {
+    "id": 11769,
+    "name": "Allure",
+    "slug": "gulet-allure-11769",
+    "buildYear": 2011,
+    "maxPersons": null,
+    "cabins": 7,
+    "wc": 7,
+    "berths": 14,
+    "enginePower": 380,
+    "fuelTank": 3000,
+    "waterTank": 10000,
+    "beam": 7.05,
+    "beamInfo": {
+      "unit": "FEET",
+      "amount": 23.13
+    },
+    "mainSailType": "UNKNOWN",
+    "length": 28.7,
+    "lengthInfo": {
+      "unit": "FEET",
+      "amount": 94.16
+    },
+    "model": "Gulet",
+    "location": {
+      "id": "l-715",
+      "name": "Port of Split / East Harbour | Split",
+      "countryCode": "HR",
+      "lat": 43.504888,
+      "lon": 16.441111
+    },
+    "yachtImages": [
+      {
+        "id": 200130,
+        "position": 0,
+        "mainImage": false,
+        "layout": true,
+        "kind": "LAYOUT"
+      },
+      {
+        "id": 200134,
+        "position": 0,
+        "mainImage": true,
+        "layout": false,
+        "kind": "PARTNER"
+      },
+      {
+        "id": 200179,
+        "position": 0,
+        "mainImage": false,
+        "layout": false,
+        "kind": "PARTNER"
+      }
+    ],
+    "sysDescription": null,
+    "locations": [],
+    "custom": false,
+    "amenities": [
+      {
+        "id": 120132,
+        "name": "Stand Up Paddle",
+        "equipment": {
+          "id": 51,
+          "labelCode": "stand-up-paddle",
+          "category": "ENTERTAINMENT",
+          "filterOrder": null
+        },
+        "highlight": false,
+        "quantity": null,
+        "comment": "2"
+      },
+      {
+        "id": 336577,
+        "name": "Kayak",
+        "equipment": {
+          "id": 46,
+          "labelCode": "kayak",
+          "category": "ENTERTAINMENT",
+          "filterOrder": null
+        },
+        "highlight": false,
+        "quantity": null,
+        "comment": null
+      },
+      {
+        "id": 120133,
+        "name": "Snorkel sets",
+        "equipment": {
+          "id": 50,
+          "labelCode": "snorkel-sets",
+          "category": "ENTERTAINMENT",
+          "filterOrder": 302
+        },
+        "highlight": false,
+        "quantity": null,
+        "comment": null
+      }
+    ],
+    "services": [],
+    "offers": [],
+    "modelName": "Gulet",
+    "manufacturerName": null,
+    "description": null,
+    "highlights": null,
+    "customDetails": null,
+    "securityDeposit": 0.0,
+    "insuredSecurityDeposit": null,
+    "depositCurrency": "EUR",
+    "crewNumber": 2,
+    "defaultCheckin": "17:00",
+    "defaultCheckout": "09:00",
+    "charterType": ["CREWED"],
+    "inquireOnly": false,
+    "vesselType": "GULET",
+    "listingCanonicalSlug": null,
+    "hasBookableFutureOffer": true,
+    "capacity": {
+      "cabins": {
+        "value": 7,
+        "note": null,
+        "split": null
+      },
+      "berths": {
+        "value": 14,
+        "note": null,
+        "split": null
+      },
+      "heads": {
+        "value": 7,
+        "note": null,
+        "split": null
+      },
+      "crewCabins": null,
+      "crewHeads": null,
+      "showers": null,
+      "crewShowers": null,
+      "maxPersons": null,
+      "recommendedPersons": null,
+      "crewNumber": 2
+    },
+    "rig": {
+      "mainsail": null,
+      "headsail": null,
+      "engine": {
+        "label": "380 HP",
+        "count": null,
+        "powerEach": null
+      },
+      "draught": null
+    }
+  }
+}

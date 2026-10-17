@@ -1,4 +1,5 @@
 import { GuletBoat, isGulet } from '@/utils/static/guletCrewed';
+import { MediaYacht, yachtVideoUrl } from '@/utils/static/yachtMedia';
 
 export const continentsTabs = ['europe', 'americas'] as const;
 
@@ -11,6 +12,16 @@ export const singleBoatTabs = ['details', 'ammenities', 'availability', 'extras'
 // users expect to see them under their own header rather than buried at
 // the bottom of the amenities list.
 export const singleCustomBoatTabs = ['details', 'ammenities', 'priceDetails', 'goodToKnow', 'video', 'faq'] as const;
+// A partner boat with a video of our own (yacht.videoUrl, owner 17.10.2026 —
+// gulet Allure) gets the Video tab too, right before FAQ as on a custom boat.
+export const singleBoatVideoTabs = ['details', 'ammenities', 'availability', 'extras', 'video', 'faq'] as const;
+
+/** The boat page's tabs, in tab-bar order. */
+export const singleBoatTabsFor = (yacht: MediaYacht & { custom?: boolean }) => {
+  if (yacht.custom) return singleCustomBoatTabs;
+
+  return yachtVideoUrl(yacht) ? singleBoatVideoTabs : singleBoatTabs;
+};
 
 // Cancellation sits near the BOTTOM (just above FAQ) on purpose — Mario rule
 // (2.7.2026): "glupo da stavljamo pri vrhu da klijentu dajemo za razmišljanje"

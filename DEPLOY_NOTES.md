@@ -1,5 +1,15 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-10-17 — 🎬 Vlastiti video (YouTube/Vimeo) + Crew profile (PDF) na bilo kojem brodu (Mario 17.10.: gulet Allure 11769) — ⏳ NIJE DEPLOYANO (grana `feat/own-media`)
+
+Ugovor s backendom: `GET /public/yachts/{slug}` šalje `videoUrl` (yacht.video_url, inače customDetails.videoUrl) i `crewProfileUrl` (apsolutni https URL na API, inače null); naše fotke dolaze kao `kind` PARTNER, galerija bez promjene.
+
+- Video: `yachtVideoUrl`/`getVideoEmbedUrl` (`src/utils/static/yachtMedia.ts`); partnerski brod s videom dobiva tab Video prije FAQ (`singleBoatTabsFor`, tabs.config); YouTube kao prije (youtube-nocookie), Vimeo `player.vimeo.com/video/<id>?dnt=1&title=0&byline=0&portrait=0` (hash nelistanog videa ostaje); iframe `loading="lazy"`, 16:9 na svim širinama (bila fiksna visina 537/424 px); scroll-spy sad prati sve tabove (custom brod: FAQ tab se prije nije označavao).
+- Crew profile: gumb „Crew profile (PDF)“ (`common.crewProfilePdf` ×9) odmah iza „PDF Download“ u traci naslova (ikona Download iz SvgIcons), na mobitelu okrugla ikona kape posade na fotki (aria-label); novi tab, `rel="noopener"`; samo https URL. Traka gumba se lomi u dva reda na tabletu (`flexWrap`), bez horizontalnog scrolla (provjereno 375/660/768/1280).
+- Bez VideoObject JSON-LD: Google traži `uploadDate` kojeg payload nema → stavka bi bila nevaljana u GSC.
+- Redoslijed deploya svejedno: bez polja u API-ju ništa se ne renderira (testirano na današnjem payloadu Allure).
+- Provjere: `yarn test:media` 17/17 (novi), test:layout 51/51, gulet 69/69, calendar 24/24, boat-seo 39/39, capacity 40/40, polish 104/106 (2 postojeća pada, datoteke netaknute); eslint 0 na promijenjenim datotekama.
+
 ## 2026-10-16 — 📅 Kalendar ostaje vidljiv kad je svaki objavljeni tjedan rezerviran (Mario 16.10.: „nema smisla da se miče cjenik ako nema slobodnih termina“) — ✅ DEPLOYANO 16.10.2026 12:21 UTC (`6ab9f5e0d`, deployment `6ab9f5e0d4fd-mvaxo72j`), tag `live/2026-10-16d`
 
 Do sada je brod s objavljenim ponudama bez slobodnog tjedna (`hasBookableFutureOffer=false`, npr. Nada 12442: 14 ponuda RESERVATION) umjesto LiveCalendara dobivao samo InquiryOnlyPanel. Sada `showsAllBookedCalendar(yacht)` (inquiryOnlyBoat.ts): backend kaže „ništa bukirabilno“ + brod ima ponude + nijedna FREE → LiveCalendar s `allBooked`: traka sezone šrafirana, kartice „Rezervirano“ (OPTION ostaje „Pod opcijom“) s partnerovom cijenom u postojećem sivom stilu, zaključane (bez odabira, date selectora i gumba), napomena `yacht.calendar.allBookedNote` iznad kartica (desktop + mobitel, 9 jezika), bočni okvir i FAQ/FAQPage s tekstom „svi objavljeni tjedni su rezervirani“ (`inquiryAllBookedText`, `faqBookAllBookedA`), gumb za upit iznad kartica. Brod bez ponuda = kao prije. Hero/kartice „od“, meta, JSON-LD Offer, mobilna traka = „na upit“, nepromijenjeno. Brod koji ipak ima FREE tjedan (ispod praga cijene ili blokirana agencija) ostaje samo upit.
