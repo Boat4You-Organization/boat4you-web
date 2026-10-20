@@ -31,7 +31,7 @@ Vessel mix tilts strongly toward catamarans (shallow draft is critical for the M
 
 Best season May–early July and September. The maestrale builds in mid-summer and can blow 6–7 Bft on exposed western anchorages — most of the eastern itinerary stays sheltered. July–August is the glamour season but Porto Cervo mooring fees can hit €600+/night for 50-ft boats, the Cala di Volpe restaurant minimum spend climbs to four figures, and the Maddalena buoys book out three weeks ahead. September drops rates 25–35% and the water stays 23–24 °C through the first half of October.
 
-Sardinian cuisine is a charter draw — fregola con arselle (clam couscous), pane carasau (the wafer-thin Sardinian shepherd bread), seadas (cheese-and-honey fried pastry), Cannonau red wine, Vermentino di Gallura white DOCG. Many of the standout restaurants are inland (the broker can pre-book the rental car for the shore-side day); the dock-side trattorie at La Maddalena port deliver simpler but consistently excellent fish dinners.`,
+Sardinian cuisine is a charter draw — fregola con arselle (clam couscous), pane carasau (the wafer-thin Sardinian shepherd bread), seadas (cheese-and-honey fried pastry), Cannonau red wine, Vermentino di Gallura white DOCG. Many of the standout restaurants are inland (your charter agent can pre-book the rental car for the shore-side day); the dock-side trattorie at La Maddalena port deliver simpler but consistently excellent fish dinners.`,
   routes: [olbiaRoute, olbiaLongRoute, portiscoRoute, portiscoLongRoute, sardiniaMaddalena14Route],
 };
 

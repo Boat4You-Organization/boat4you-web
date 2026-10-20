@@ -778,7 +778,7 @@ us, and we are here to help.
 ## Data Retention
 
 We keep different categories of data for different periods, in line with our
-legal obligations and the legitimate interests of running a charter brokerage:
+legal obligations and the legitimate interests of running a charter agency:
 
 - **Account profile** (name, email, phone, address): kept while your account
   is active. When you delete your account from the _My Profile_ page, your

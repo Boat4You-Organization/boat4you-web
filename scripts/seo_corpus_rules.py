@@ -3570,7 +3570,7 @@ EDITS = [
     ('nl', 'la-trinite-sur-mer-sailing-yacht-charter.html', 'bedrijfsfilosofie</a> om te begrijpen hoe </p>', 'bedrijfsfilosofie</a> om te begrijpen hoe Boat4You werkt.</p>'),
     ('pl', 'la-trinite-sur-mer-sailing-yacht-charter.html', 'filozofią firmy</a>, aby zrozumieć, jak.</p>', 'filozofią firmy</a>, aby zrozumieć, jak działa Boat4You.</p>'),
     ('hr', 'la-trinite-sur-mer-sailing-yacht-charter.html', 'filozofiju tvrtke</a> kako biste razumjeli kako </p>', 'filozofiju tvrtke</a> kako biste razumjeli kako Boat4You radi.</p>'),
-    ('en', 'italy-power-catamaran-charter.html', 'careful planning through brokers like </p>', 'careful planning through brokers like Boat4You is essential.</p>'),
+    ('en', 'italy-power-catamaran-charter.html', 'careful planning through brokers like </p>', 'careful planning through charter agencies like Boat4You is essential.</p>'),
     ('en', 'catamaran-charter-marina-benitses.html', 'sailors and companies (like ) deliberately', 'sailors and companies (like Boat4You) deliberately'),
     ('en', 'nikiti-chalkidiki-catamaran-charter.html', 'safety gear—is provided by.', 'safety gear—is provided by the charter company.'),
     ('en', 'sailing-yacht-charter-mandraki-port.html', 'many include quality equipment provided by.', 'many boats carry good snorkelling equipment.'),

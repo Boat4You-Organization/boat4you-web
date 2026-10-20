@@ -1089,7 +1089,7 @@ providing available contact information or records as needed).
   insurance policy's details. It's the Yacht Provider's duty to have
   appropriate insurance, and you may ask them for confirmation or what
   is covered. **Boat4You does not provide insurance to you** as a client
-  --- we are not an insurance company or broker.
+  --- we are not an insurer or an insurance intermediary.
 - **Personal/Travel Insurance:** We strongly recommend you obtain your
   own travel insurance or charter insurance. For example, travel
   insurance can cover trip cancellation, medical emergencies, personal

@@ -27,7 +27,7 @@ Longer 10–14 day routes head east along the Lycian Coast through Fethiye, Öl�
 
 The Lycian Coast offers Turkey's deepest archaeological sailing — more identifiable ancient harbour ruins, more rock-cut tombs, more visible submerged classical-period structures than any other Mediterranean charter ground. Crews more interested in culture than party-week beach scenes consistently rank the Lycian Coast their favourite. The added passage time is 15–35 NM legs (vs Göcek's 5–15 NM inner loop), so the 14-day format works better than trying to compress it into 7 days.
 
-Göcek itself sits inside a strict Special Environmental Protection Area — no jet-ski, no anchoring damage to seagrass, no fishing in marked zones — which keeps the inner Fethiye Bay anchorages in better shape than the Adriatic or Spanish equivalents at peak season. The protection authority occasionally inspects yachts at anchor; the broker briefs the captain on which bays have stricter enforcement.
+Göcek itself sits inside a strict Special Environmental Protection Area — no jet-ski, no anchoring damage to seagrass, no fishing in marked zones — which keeps the inner Fethiye Bay anchorages in better shape than the Adriatic or Spanish equivalents at peak season. The protection authority occasionally inspects yachts at anchor; your charter agent briefs the captain on which bays have stricter enforcement.
 
 Vessel mix is a strong gulet market (the Göcek–Fethiye one-way "Blue Cruise" is the most traditional Turkish charter format — 20–35 m wooden motor-sailers with full crew, all-inclusive pricing) plus a growing bareboat catamaran and sailing yacht segment from Skopea and D-Marin. Crewed luxury motor yachts run the Yalıkavak-Göcek long-haul corridor and the eastbound Lycian-Coast 14-day weeks.
 

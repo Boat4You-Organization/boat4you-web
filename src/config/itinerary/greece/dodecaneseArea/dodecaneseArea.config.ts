@@ -29,7 +29,7 @@ Vessel mix suits all formats equally — sailing yachts (Bavaria, Bénéteau, Je
 
 Best season May–early July and September. Rhodes and Kos airports both have direct EU flights all summer (Rhodes from London/Manchester/Berlin/Vienna/Stockholm/Milan/Rome, Kos slightly fewer routes), making Saturday-afternoon arrivals straightforward. October is still sailable but Rhodes's tourist crowds thin sharply after mid-September.
 
-Greek cruising-fee taxes (TEPAI) apply per yacht per day for all charters — the broker pre-pays them out of the APA, so they appear as a transparent line item on the charter accounting, not a surprise at check-out. Cross-border to Turkey requires transit log paperwork lodged 24 hours ahead at the port-of-entry checkpoint (Rhodes, Kos or Symi southbound; Bodrum northbound).`,
+Greek cruising-fee taxes (TEPAI) apply per yacht per day for all charters — your charter agent pre-pays them out of the APA, so they appear as a transparent line item on the charter accounting, not a surprise at check-out. Cross-border to Turkey requires transit log paperwork lodged 24 hours ahead at the port-of-entry checkpoint (Rhodes, Kos or Symi southbound; Bodrum northbound).`,
   routes: [kosRouteConfig, rhodesRouteConfig, kos14DaysRouteConfig, rhodes14DaysRouteConfig],
 };
 

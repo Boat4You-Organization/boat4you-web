@@ -13,7 +13,7 @@ const SITE_URL = meta.url;
 export const BROKER_AUTHOR = {
   '@type': 'Person' as const,
   name: 'Mario Kuzmanić',
-  jobTitle: 'Charter broker',
+  jobTitle: 'Charter agent',
   worksFor: {
     '@type': 'Organization' as const,
     name: meta.name,
