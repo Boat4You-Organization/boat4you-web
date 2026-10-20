@@ -1291,8 +1291,8 @@ nécessaire).
   les détails de chaque police d'assurance. Il est du devoir du
   Fournisseur de Yacht d'avoir une assurance appropriée, et vous pouvez
   lui demander une confirmation ou ce qui est couvert. **Boat4You ne vous
-  fournit pas d'assurance** en tant que client --- nous ne sommes ni une
-  compagnie d'assurance ni un courtier.
+  fournit pas d'assurance** en tant que client --- nous ne sommes ni un
+  assureur ni un intermédiaire d'assurance.
 - **Assurance Personnelle/Voyage :** Nous vous recommandons fortement
   d'obtenir votre propre assurance voyage ou assurance location. Par
   exemple, l'assurance voyage peut couvrir l'annulation de voyage, les

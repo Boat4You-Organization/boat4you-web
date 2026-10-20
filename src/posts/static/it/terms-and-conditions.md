@@ -1201,8 +1201,8 @@ i registri disponibili, se necessario).
   verifica i dettagli di ogni polizza assicurativa. È dovere del
   Fornitore di Yacht avere un'assicurazione appropriata e puoi chiedere
   loro conferma o cosa è coperto. **Boat4You non ti fornisce
-  un'assicurazione** come cliente - non siamo una compagnia di
-  assicurazioni o un _broker_.
+  un'assicurazione** come cliente - non siamo un
+  assicuratore né un intermediario assicurativo.
 - **Assicurazione Personale/di Viaggio:** Ti consigliamo vivamente di
   ottenere la tua assicurazione di viaggio o assicurazione charter. Ad
   esempio, l'assicurazione di viaggio può coprire l'annullamento del

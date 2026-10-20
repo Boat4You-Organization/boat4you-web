@@ -444,7 +444,7 @@ Kinder in den Yachturlaub mitzunehmen, kann ein wunderbares Familienabenteuer se
 
 Das Chartern mit Kindern ist absolut machbar und kann unglaublich lohnend sein. **Kinder zählen zur maximalen Kapazität des Bootes** wie Erwachsene (sogar ein Baby zählt im Seerecht als Person), stellen Sie also sicher, dass Ihr Boot für Ihre gesamte Familie und Crew dimensioniert ist.
 
-Bei **Boat4You** bieten wir Ihnen gerne **zusätzliche Beratung für Familien** – von der Bereitstellung kinderfreundlicher Lebensmittel bis hin zur Installation von Netzen durch die Basis oder der Vermittlung eines Skippers, der gut mit Kindern umgehen kann, wenn Sie sich für eine Crew entscheiden. Viele unserer Mitarbeiter sind selbst Eltern und sind mit ihren eigenen Kindern gesegelt, sodass wir Ratschläge aus erster Hand weitergeben können.
+Bei **Boat4You** bieten wir Ihnen gerne **zusätzliche Beratung für Familien** – von der Bereitstellung kinderfreundlicher Lebensmittel bis hin zur Installation von Netzen durch die Basis oder der Buchung eines Skippers, der gut mit Kindern umgehen kann, wenn Sie sich für eine Crew entscheiden. Viele unserer Mitarbeiter sind selbst Eltern und sind mit ihren eigenen Kindern gesegelt, sodass wir Ratschläge aus erster Hand weitergeben können.
 
 Kinder können sicher an Bord sein und gedeihen oft in der Bootsumgebung, vorausgesetzt, es gibt Schwimmwesten, Netze, Aufsicht und eine vernünftige Planung. Am Ende der Reise haben Ihre Kinder möglicherweise sogar mehr Energie als Sie – und sie werden lebenslange Erinnerungen an ihr "Piratenschiff"-Abenteuer haben!
 

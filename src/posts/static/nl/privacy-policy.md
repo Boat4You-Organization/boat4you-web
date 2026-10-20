@@ -899,7 +899,7 @@ helpen.
 We bewaren verschillende categorieën gegevens voor verschillende
 periodes, in lijn met onze wettelijke verplichtingen en de
 gerechtvaardigde belangen van het runnen van een
-charterbemiddelingsbedrijf:
+charterbureau:
 
 - **Accountprofiel** (naam, e-mail, telefoon, adres): bewaard zolang
   je account actief is. Wanneer je je account verwijdert vanaf de

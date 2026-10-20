@@ -203,7 +203,7 @@ Rado ćemo vam pomoći s bilo kakvim upitima -- bilo da je pomoć u razumijevanj
 
 ## Razdoblje čuvanja podataka
 
-Različite kategorije podataka čuvamo različito dugo, u skladu sa zakonskim obvezama i legitimnim interesima poslovanja charter posrednika:
+Različite kategorije podataka čuvamo različito dugo, u skladu sa zakonskim obvezama i legitimnim interesima poslovanja charter agencije:
 
 - **Profil računa** (ime, e-mail, telefon, adresa): čuva se dok je račun aktivan. Kada izbrišete račun preko stranice _Moj profil_, vaši osobni podaci anonimiziraju se u nekoliko minuta (ime → "Deleted User"; e-mail → anonimizirana adresa; telefon, adresa, grad, država → brišu se).
 - **Zapisi o rezervacijama** (rezervacije, faze plaćanja, datumi chartera, brojevi potvrda): čuvaju se **10 godina** nakon zadnjeg datuma rezervacije, radi računovodstvenih obveza i usklađivanja s partnerskim agencijama. Nakon brisanja računa ti zapisi ostaju u sustavu, ali više nisu povezani s vašim identitetom.

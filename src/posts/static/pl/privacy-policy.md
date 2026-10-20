@@ -829,8 +829,8 @@ ważna, a my jesteśmy tutaj, aby pomóc.
 ## Retencja Danych
 
 Przechowujemy różne kategorie danych przez różne okresy, zgodnie z naszymi
-obowiązkami prawnymi i uzasadnionymi interesami prowadzenia brokerstwa
-czarterowego:
+obowiązkami prawnymi i uzasadnionymi interesami prowadzenia agencji
+czarterowej:
 
 - **Profil konta** (imię, e-mail, telefon, adres): przechowywany dopóki
   Twoje konto jest aktywne. Gdy usuniesz konto ze strony _Mój Profil_,
