@@ -9,9 +9,13 @@
  *   - the rendered footer, in every locale, links europe-yachts.com exactly
  *     once, as "Europe Yachts" to https://www.europe-yachts.com/;
  *   - the Network list has no empty slot (every entry is a named link);
- *   - no other source file links europe-yachts.com (a header, sidebar or
- *     "our sites" block would put a second link on every page); the
- *     Organization JSON-LD names it as a sub-organization, which is not a link.
+ *   - no other source file names europe-yachts.com in code, in any form
+ *     (https://, protocol-relative //, a bare host in a constant), in
+ *     .ts/.tsx/.js/.jsx/.mjs/.cjs, JSON or Markdown (a header, sidebar or
+ *     "our sites" block would put a second link on every page). Comments do
+ *     not count. Three files may name it, each exactly as listed: the footer
+ *     config (the link), the Organization JSON-LD (a sub-organization url,
+ *     not a link) and the Google tag linker domain list (not a link).
  *
  *   yarn test:footer
  */
@@ -25,6 +29,7 @@ import { readFileSync, readdirSync } from 'node:fs';
 import { registerHooks } from 'node:module';
 import { describe, test } from 'node:test';
 import { fileURLToPath } from 'node:url';
+import ts from 'typescript';
 
 import './tsLoader.mjs';
 
@@ -147,9 +152,17 @@ describe('Footer: one brand link to europe-yachts.com', () => {
 });
 
 describe('Source: no second site-wide link to europe-yachts.com', () => {
-  // The Organization JSON-LD lists Europe Yachts Charter as a sub-organization
-  // (a url property, not an <a href>); the footer config is the one link.
-  const ALLOWED = new Set(['src/config/footerMenu.ts', 'src/utils/static/buildMetadata.ts']);
+  // The host in any form: https://, protocol-relative //, or bare (a constant
+  // a URL is built from); not a longer host such as europe-yachts.com.evil.
+  const HOST = /(?:^|[^a-z0-9.-])((?:[a-z0-9-]+\.)*europe-yachts\.com)\b/giu;
+  const SCRIPT = /\.[cm]?[jt]sx?$/u;
+
+  // Each file that may name it, with exactly the mentions it may carry.
+  const ALLOWED = new Map([
+    ['src/config/footerMenu.ts', ['www.europe-yachts.com']], // the one footer link
+    ['src/utils/static/buildMetadata.ts', ['www.europe-yachts.com']], // JSON-LD subOrganization url
+    ['src/config/crossDomainLinker.ts', ['europe-yachts.com']], // Google tag linker domains
+  ]);
 
   const sourceFiles = dir =>
     readdirSync(`${ROOT}${dir}`, { withFileTypes: true }).flatMap(entry => {
@@ -157,17 +170,37 @@ describe('Source: no second site-wide link to europe-yachts.com', () => {
 
       if (entry.isDirectory()) return sourceFiles(path);
 
-      return /\.(?:tsx?|json)$/u.test(entry.name) ? [path] : [];
+      return /\.(?:[cm]?[jt]sx?|json|mdx?)$/u.test(entry.name) ? [path] : [];
     });
 
-  test('only the footer config and the JSON-LD carry a europe-yachts.com URL', () => {
+  // Host mentions in the code of a file: comments are dropped by the
+  // TypeScript compiler (JSX kept as written), so a note about the site in a
+  // comment is not a link; JSON and Markdown are read as they are.
+  const mentions = path => {
+    const text = readFileSync(`${ROOT}${path}`, 'utf8');
+
+    if (!text.match(HOST)) return [];
+
+    const code = SCRIPT.test(path)
+      ? ts.transpileModule(text, {
+          fileName: path,
+          compilerOptions: { removeComments: true, jsx: ts.JsxEmit.Preserve, target: ts.ScriptTarget.ESNext },
+        }).outputText
+      : text;
+
+    return [...code.matchAll(HOST)].map(([, host]) => host.toLowerCase());
+  };
+
+  test('no file outside the three listed names europe-yachts.com', () => {
     const offenders = [...sourceFiles('src'), ...sourceFiles('messages')].filter(
-      path =>
-        !ALLOWED.has(path) &&
-        /https?:\/\/(?:[a-z0-9-]+\.)*europe-yachts\.com/iu.test(readFileSync(`${ROOT}${path}`, 'utf8'))
+      path => !ALLOWED.has(path) && mentions(path).length
     );
 
     assert.deepEqual(offenders, []);
+  });
+
+  test('each listed file names it exactly as listed', () => {
+    ALLOWED.forEach((expected, path) => assert.deepEqual(mentions(path), expected, path));
   });
 
   test('the JSON-LD names it, it does not link it', () => {

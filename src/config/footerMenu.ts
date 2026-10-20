@@ -69,7 +69,7 @@ const footerMenu: NavigationLink[] = [
     links: [
       {
         displayName: 'Europe Yachts',
-        href: 'https://www.europe-yachts.com',
+        href: 'https://www.europe-yachts.com/',
         target: '_blank',
       },
       {
