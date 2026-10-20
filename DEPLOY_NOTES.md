@@ -1,5 +1,11 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-10-20 — 🎬 Vlastiti mediji broda: video (YouTube/Vimeo) i gumb „Crew profile (PDF)“ — ✅ DEPLOYANO 20.10.2026 07:13 UTC (`d18b651df`, deployment `d18b651dfefb-mvgc79ut`), tag `live/2026-10-20`
+
+Mario 17.10. (gulet Allure 11769, MMK: naše fotke, Vimeo film https://vimeo.com/982130882, crew profile): VideoTab sada prihvaća i Vimeo (player.vimeo.com s dnt=1, title/byline/portrait 0) uz YouTube (youtube-nocookie), čita `yacht.videoUrl ?? customDetails.videoUrl`; nova akcija „Crew profile (PDF)“ uz Share/PDF kad API vrati `crewProfileUrl` (lokalizirano u 9 jezika, nova SVG ikona, otvara u novom tabu). Polja dolaze iz backend grane feat/own-media (V9_92, jar d107650d…) koja ide live u gate prozoru; do tada se ništa ne renderira. Naše fotke (source OWN) web ne razlikuje — prve su u galeriji s altom „Gulet Allure — photo N“. VideoObject JSON-LD izostavljen (Google traži uploadDate).
+
+- Provjere: test:media 21/21 (+4), test:layout 51, test:gulet 69, test:calendar 24, test:boat-seo 39, test:capacity 40; test:polish 104/106 (2 postojeća pada); eslint 0 na promijenjenim datotekama, hook na commitu; deploy `b4y_web_deploy.sh` iz worktreea `wt-media` (prvi pokušaj 07:05 pao na sudo lozinki nakon reboota — prethodni build ostao živ; drugi pokušaj uredan), build 104 s, deployment id = HEAD, www 200; SEO regresija report-only (log ~/.cache/boat4you-deploy/b4y_own_media_deploy2.log).
+
 ## 2026-10-17 — 🎬 Vlastiti video (YouTube/Vimeo) + Crew profile (PDF) na bilo kojem brodu (Mario 17.10.: gulet Allure 11769) — ⏳ NIJE DEPLOYANO (grana `feat/own-media`)
 
 Ugovor s backendom: `GET /public/yachts/{slug}` šalje `videoUrl` (yacht.video_url, inače customDetails.videoUrl) i `crewProfileUrl` (apsolutni https URL na API, inače null); naše fotke dolaze kao `kind` PARTNER, galerija bez promjene.
