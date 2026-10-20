@@ -1,5 +1,5 @@
 import { GuletBoat, isGulet } from '@/utils/static/guletCrewed';
-import { MediaYacht, yachtVideoUrl } from '@/utils/static/yachtMedia';
+import { MediaYacht, yachtVideoEmbedUrl } from '@/utils/static/yachtMedia';
 
 export const continentsTabs = ['europe', 'americas'] as const;
 
@@ -13,14 +13,15 @@ export const singleBoatTabs = ['details', 'ammenities', 'availability', 'extras'
 // the bottom of the amenities list.
 export const singleCustomBoatTabs = ['details', 'ammenities', 'priceDetails', 'goodToKnow', 'video', 'faq'] as const;
 // A partner boat with a video of our own (yacht.videoUrl, owner 17.10.2026 —
-// gulet Allure) gets the Video tab too, right before FAQ as on a custom boat.
+// gulet Allure) gets the Video tab too, right before FAQ as on a custom boat;
+// only when the video shows (a YouTube or Vimeo link, yachtVideoEmbedUrl).
 export const singleBoatVideoTabs = ['details', 'ammenities', 'availability', 'extras', 'video', 'faq'] as const;
 
 /** The boat page's tabs, in tab-bar order. */
 export const singleBoatTabsFor = (yacht: MediaYacht & { custom?: boolean }) => {
   if (yacht.custom) return singleCustomBoatTabs;
 
-  return yachtVideoUrl(yacht) ? singleBoatVideoTabs : singleBoatTabs;
+  return yachtVideoEmbedUrl(yacht) ? singleBoatVideoTabs : singleBoatTabs;
 };
 
 // Cancellation sits near the BOTTOM (just above FAQ) on purpose — Mario rule

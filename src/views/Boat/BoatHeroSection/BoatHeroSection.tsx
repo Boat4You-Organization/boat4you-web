@@ -165,12 +165,13 @@ const BoatHeroSection = ({ yacht, layoutImages }: BoatHeroSectionProps) => {
               </Stack>
             )}
           </Stack>
-          {/* Wraps instead of squeezing the title on a tablet when the crew-profile action makes four. */}
+          {/* Wraps instead of squeezing the title on a tablet when the crew-profile action makes four;
+              every other boat keeps the one-line strip. */}
           <Stack
             direction="row"
             spacing={2}
             useFlexGap
-            flexWrap="wrap"
+            flexWrap={crewProfile ? 'wrap' : 'nowrap'}
             justifyContent="flex-end"
             className={styles.iconsDesktop}
           >
@@ -188,7 +189,7 @@ const BoatHeroSection = ({ yacht, layoutImages }: BoatHeroSectionProps) => {
                 variant="containedInfo"
                 href={crewProfile}
                 target="_blank"
-                rel="noopener"
+                rel="noopener nofollow"
                 startIcon={<Download size={18} />}
               >
                 {t('crewProfilePdf')}
@@ -222,7 +223,7 @@ const BoatHeroSection = ({ yacht, layoutImages }: BoatHeroSectionProps) => {
                 className={styles.imageActionBtn}
                 href={crewProfile}
                 target="_blank"
-                rel="noopener"
+                rel="noopener nofollow"
                 aria-label={t('crewProfilePdf')}
               >
                 <Crew size={20} fill={colors.black950} />

@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl';
 
 import Video from '@/components/SvgIcons/Video';
 import { YachtModel } from '@/models/yacht.model';
-import { getVideoEmbedUrl, yachtVideoUrl } from '@/utils/static/yachtMedia';
+import { yachtVideoEmbedUrl } from '@/utils/static/yachtMedia';
 import { yachtPhotoName } from '@/utils/static/yachtPhotoName';
 
 import styles from './VideoTab.module.scss';
@@ -19,13 +19,14 @@ interface VideoTabProps {
 // the custom boat's showreel (customDetails.videoUrl). Lives in its own tab
 // right before FAQ so users can jump straight to the video instead of
 // scrolling through the description block. A partner boat without a video
-// has no Video tab (tabs.config, singleBoatTabsFor).
+// has no Video tab (tabs.config, singleBoatTabsFor); a link that is neither
+// YouTube nor Vimeo shows nothing (yachtVideoEmbedUrl).
 const VideoTab = ({ yacht }: VideoTabProps) => {
   const t = useTranslations('yacht');
   const tCommon = useTranslations('common');
-  const videoUrl = yachtVideoUrl(yacht);
+  const embedUrl = yachtVideoEmbedUrl(yacht);
 
-  if (!videoUrl) return null;
+  if (!embedUrl) return null;
 
   // Named like the gallery's photos ("Lagoon 42 Masterpiece — Vidéo"), not the
   // raw partner name plus an English word ("IDILA  video").
@@ -48,7 +49,7 @@ const VideoTab = ({ yacht }: VideoTabProps) => {
       <Box className={styles.videoContainer}>
         <CardMedia
           component="iframe"
-          src={getVideoEmbedUrl(videoUrl)}
+          src={embedUrl}
           title={videoTitle}
           loading="lazy"
           allowFullScreen

@@ -7,13 +7,14 @@
  * gallery needs nothing new.
  *
  *   - the video: a Video tab right before FAQ on a partner boat that has one
- *     (none without); YouTube through youtube-nocookie.com as before, Vimeo
- *     through Vimeo's player without tracking, lazy, 16:9, named
- *     "<boat> — Video" in the page's language;
+ *     (none without); YouTube through youtube-nocookie.com (every link form
+ *     the backend accepts), Vimeo through Vimeo's player without tracking,
+ *     lazy, 16:9, named "<boat> — Video" in the page's language; a link that
+ *     is neither shows no player and no tab (youtube.com refuses a frame);
  *   - the crew profile: "Crew profile (PDF)" next to the brochure PDF in the
  *     title row, a crew icon among the photo's round actions on a phone,
- *     opened in a new tab; nothing without one, nor for a link that is not
- *     https;
+ *     opened in a new tab, nofollow; nothing without one, nor for a link that
+ *     is not https;
  *   - no VideoObject JSON-LD: Google needs an uploadDate the payload does not
  *     carry (an item without it is invalid in Search Console).
  *
@@ -84,10 +85,10 @@ const allMessages = locale =>
 const { default: theme } = await import('@/styles/themes');
 const { singleBoatTabs, singleBoatTabsFor, singleBoatVideoTabs, singleCustomBoatTabs } =
   await import('@/config/tabs.config');
-const { default: getYouTubeEmbedUrl } = await import('@/utils/static/getYoutubeEmbedUrlUtils');
 const { withoutPartnerIds } = await import('@/utils/static/partnerIds');
 const { withLayoutImagesApart } = await import('@/utils/static/yachtLayout');
-const { crewProfileHref, getVideoEmbedUrl, yachtVideoUrl } = await import('@/utils/static/yachtMedia');
+const { crewProfileHref, getVideoEmbedUrl, yachtVideoEmbedUrl, yachtVideoUrl } =
+  await import('@/utils/static/yachtMedia');
 const { default: VideoTab } = await import('@/views/Boat/BoatContentSection/VideoTab/VideoTab');
 const { default: BoatContentSection } = await import('@/views/Boat/BoatContentSection/BoatContentSection');
 const { default: BoatHeroSection } = await import('@/views/Boat/BoatHeroSection/BoatHeroSection');
@@ -174,14 +175,63 @@ describe('yachtVideoUrl / getVideoEmbedUrl', () => {
     );
   });
 
-  test('YouTube exactly as before (youtube-nocookie.com); anything else untouched as before', () => {
-    [YOUTUBE, 'https://youtu.be/dQw4w9WgXcQ', 'https://www.youtube.com/embed/dQw4w9WgXcQ'].forEach(url => {
-      assert.equal(getVideoEmbedUrl(url), YOUTUBE_PLAYER, url);
-      assert.equal(getVideoEmbedUrl(url), getYouTubeEmbedUrl(url), url);
-    });
-    ['https://vimeo.com/channels/staffpicks/123', 'https://notvimeo.com/982130882'].forEach(url =>
-      assert.equal(getVideoEmbedUrl(url), getYouTubeEmbedUrl(url), url)
+  test('YouTube: every form the backend accepts (VideoUrlRules) → youtube-nocookie.com', () => {
+    [
+      YOUTUBE,
+      'https://youtu.be/dQw4w9WgXcQ',
+      'https://www.youtube.com/embed/dQw4w9WgXcQ',
+      // v anywhere in the query (VideoUrlRulesTest)
+      'https://youtube.com/watch?feature=share&v=dQw4w9WgXcQ&t=30s',
+      'https://www.youtube.com/watch?feature=shared&v=dQw4w9WgXcQ',
+      'https://www.youtube.com/watch?si=AbCdEf123&v=dQw4w9WgXcQ',
+      'http://www.youtube.com/watch?v=dQw4w9WgXcQ',
+      'https://youtu.be/dQw4w9WgXcQ?si=abc',
+      // the host in capitals, trailing slashes
+      'https://WWW.YouTube.com/watch?v=dQw4w9WgXcQ',
+      'HTTPS://YOUTU.BE/dQw4w9WgXcQ',
+      'https://www.youtube.com/embed/dQw4w9WgXcQ/',
+      'https://youtu.be/dQw4w9WgXcQ/',
+      // a custom boat's older links
+      'https://m.youtube.com/watch?v=dQw4w9WgXcQ',
+      'https://www.youtube.com/shorts/dQw4w9WgXcQ',
+      'https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?rel=0',
+      ` ${YOUTUBE} `,
+    ].forEach(url => assert.equal(getVideoEmbedUrl(url), YOUTUBE_PLAYER, url));
+  });
+
+  test('a custom boat’s Vimeo embed code (HTML entities in the query) still plays', () => {
+    assert.equal(
+      getVideoEmbedUrl(
+        'https://player.vimeo.com/video/844900328?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
+      ),
+      'https://player.vimeo.com/video/844900328?dnt=1&title=0&byline=0&portrait=0'
     );
+  });
+
+  test('neither YouTube nor Vimeo: no player (never the raw link as a frame)', () => {
+    [
+      '',
+      'not a url',
+      'https://vimeo.com/channels/staffpicks/123',
+      'https://notvimeo.com/982130882',
+      'https://www.youtube.com/watch?v=short',
+      'https://www.youtube.com/watch?list=PL123',
+      'https://www.youtube.com/@boat4you',
+      'https://youtu.be/',
+      'https://www.youtube.com/embed/dQw4w9WgXcQ/extra',
+      'https://youtube.com.evil.example/watch?v=dQw4w9WgXcQ',
+      'https://evil.example/youtube.com/watch?v=dQw4w9WgXcQ',
+      'data:text/html,https://youtu.be/dQw4w9WgXcQ',
+      'ftp://youtu.be/dQw4w9WgXcQ',
+      'https://example.com/tour.mp4',
+    ].forEach(url => assert.equal(getVideoEmbedUrl(url), null, url));
+  });
+
+  test('yachtVideoEmbedUrl: the boat’s video as a player URL, else none', () => {
+    assert.equal(yachtVideoEmbedUrl(allure), VIMEO_PLAYER);
+    assert.equal(yachtVideoEmbedUrl(idila), YOUTUBE_PLAYER);
+    assert.equal(yachtVideoEmbedUrl(allureToday), null);
+    assert.equal(yachtVideoEmbedUrl({ videoUrl: 'https://example.com/tour.mp4' }), null);
   });
 });
 
@@ -228,6 +278,8 @@ describe('the boat page’s tabs', () => {
     assert.equal(singleBoatTabsFor(allure), singleBoatVideoTabs);
     assert.equal(singleBoatTabsFor(allureToday), singleBoatTabs);
     assert.equal(singleBoatTabsFor(allureWithout), singleBoatTabs);
+    // A link that shows no player gets no tab either.
+    assert.equal(singleBoatTabsFor({ ...allure, videoUrl: 'https://example.com/tour.mp4' }), singleBoatTabs);
     assert.equal(singleBoatTabsFor(idila), singleCustomBoatTabs);
     assert.equal(singleBoatTabsFor({ ...idila, customDetails: {} }), singleCustomBoatTabs);
   });
@@ -281,8 +333,20 @@ describe('the video block (VideoTab)', () => {
     assert.equal(attr(iframe, 'sandbox'), 'allow-scripts allow-same-origin allow-presentation');
   });
 
-  test('no video: nothing at all', () => {
+  test('no video, or a link that is neither YouTube nor Vimeo: nothing at all', () => {
     assert.equal(render(createElement(VideoTab, { yacht: allureToday })), '');
+    assert.equal(
+      render(createElement(VideoTab, { yacht: { ...allure, videoUrl: 'https://example.com/tour.mp4' } })),
+      ''
+    );
+    assert.equal(
+      render(
+        createElement(VideoTab, {
+          yacht: { ...idila, customDetails: { videoUrl: 'https://www.youtube.com/@boat4you' } },
+        })
+      ),
+      ''
+    );
     assert.equal(render(createElement(VideoTab, { yacht: allureWithout })), '');
     assert.equal(render(createElement(VideoTab, { yacht: { ...idila, customDetails: {} } })), '');
   });
@@ -308,7 +372,8 @@ describe('the crew-profile action (BoatHeroSection)', () => {
       [desktop, phone].forEach(link => {
         assert.equal(attr(link, 'href'), CREW_PDF, locale);
         assert.equal(attr(link, 'target'), '_blank', locale);
-        assert.equal(attr(link, 'rel'), 'noopener', locale);
+        // A PDF on the API host, with the crew's names and photos: not a page to rank.
+        assert.equal(attr(link, 'rel'), 'noopener nofollow', locale);
       });
       // The labelled button: the download icon and the label.
       assert.ok(desktop.includes(DOWNLOAD_ICON), locale);
@@ -321,6 +386,21 @@ describe('the crew-profile action (BoatHeroSection)', () => {
       assert.ok(at(common.pdfDownload) < html.indexOf(desktop), locale);
       assert.ok(html.indexOf(desktop) < at(common.share), locale);
     });
+  });
+
+  test('the title row’s action strip wraps only with the crew profile (four actions); every other boat keeps one line', () => {
+    // The strip is the Stack right around "PDF Download"; its emotion rule carries the flex-wrap.
+    const stripWrap = yacht => {
+      const html = render(createElement(BoatHeroSection, { yacht }));
+      const before = html.slice(0, html.indexOf('PDF Download</button>'));
+      const strip = [...before.matchAll(/<div class="MuiStack-root (css-[\w-]+)/gu)].at(-1)[1];
+
+      return new RegExp(`\\.${strip}\\{[^}]*flex-wrap:([a-z]+)`, 'u').exec(html)?.[1];
+    };
+
+    assert.equal(stripWrap(allure), 'wrap');
+    assert.equal(stripWrap(allureToday), 'nowrap');
+    assert.equal(stripWrap(allureWithout), 'nowrap');
   });
 
   test('no crew profile (or a link that is not https): no action', () => {
