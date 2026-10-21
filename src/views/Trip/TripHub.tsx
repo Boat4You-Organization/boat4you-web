@@ -54,6 +54,8 @@ export interface TripDto {
     capacity?: CapacityDto | null;
     maxPersons?: number | null;
     crewNumber?: number | null;
+    /** The reservation's charter type (backend ReservationCharterRules; a gulet reads CREWED), so the crew chip shows; absent on an older backend. */
+    charterType?: string | null;
     lengthMeters: number | null;
     mainImageId: number | null;
     imageIds: number[];
