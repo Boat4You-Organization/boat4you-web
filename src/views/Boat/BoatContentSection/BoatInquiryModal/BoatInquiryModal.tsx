@@ -18,6 +18,7 @@ import Calendar from '@/components/SvgIcons/Calendar';
 import YachtCard from '@/components/YachtCard';
 import { BoatInquiryFormValues } from '@/config/form-models.config';
 import { BOAT_INQUIRY_FORM } from '@/config/form-names.config';
+import { trackInquiry } from '@/lib/trackInquiry';
 import { YachtModel } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
 import useQueryParams from '@/utils/hooks/useQueryParams';
@@ -183,6 +184,7 @@ const BoatInquiryModal = ({
 
     if (state.payload) {
       sent.current = true;
+      trackInquiry({ ref: `${yacht.id}-${Date.now()}` });
       showToast({ status: 'success', text: t('inquirySentSuccessfully') });
 
       // onClose toggles — never re-open a form the visitor already closed.
@@ -192,7 +194,7 @@ const BoatInquiryModal = ({
       setIsLocked(false);
       showToast({ status: 'error', text: state.message || t('inquirySentFailed') });
     }
-  }, [state, onClose, t]);
+  }, [state, onClose, t, yacht.id]);
 
   const handleSubmit = (formValues: BoatInquiryFormValues) => {
     if (submitLock.current) {
