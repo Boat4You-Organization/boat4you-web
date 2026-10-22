@@ -1,6 +1,6 @@
 # Boat4You (main) — Production Deploy Notes
 
-## 2026-10-22 — 🔎 GSC crawl budget: paginacija landinga ≥ 2 → `noindex, follow` + stari `?destinations=<Marina> | <Grad>` URL-ovi → 308 umjesto 404 — ⏳ NIJE DEPLOYANO – čeka Mariov DA (grana `fix/gsc-pagination-noindex-legacy-308`, worktree `wt-gsc-crawl`)
+## 2026-10-22 — 🔎 GSC crawl budget: paginacija landinga ≥ 2 → `noindex, follow` + stari `?destinations=<Marina> | <Grad>` URL-ovi → 308 umjesto 404 — ✅ DEPLOYANO 22.10.2026 12:33 UTC (`d7659c4f0`, deployment `d7659c4f01e4-mvjgsv7m`, tag `live/2026-10-22-crawl`; 1. pokušaj ABORT = reinstall node_modules zbog package.json byte-compare → infra fix bcd2fc8, 3. pokušaj `rm .next` race)
 
 Grana iz origin/main `e2dc13cbf`, 2 commita koda. GSC 22.10. (podaci do 16.10.): 240K „not indexed“ vs 52,9K indexed. U uzorku 1.000 URL-ova „Crawled – currently not indexed“ (148,9K) 51 % (~76K) su paginirane stranice landinga `/{locale}/search?destinations=…&boatTypes=…&page=N` (page 2–197, medijan 20; Kornati 221 od 447) koje su od audita 7.10. `index, follow` sa self-canonicalom — Google ih crawla i ne indeksira, dok 4.150 stranica brodova stoji u „Discovered – currently not indexed“ (crawl budget). Od 25,9K 404-ova 33 % (~8,5K) su stari search URL-ovi oblika `?destinations=Marina | Grad` (search forma prije did pickera), danas 404 + noindex jer `hasUnknownDestination` → notFound().
 
