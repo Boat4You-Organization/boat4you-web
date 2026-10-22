@@ -1,5 +1,13 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-10-22 — 🎨 Footer: wordmark „Boat4you“ plava → zlatna (Mario 22.10.: „promjeni boju iz plave, previše jednolično“) — ⏳ DEPLOY U TIJEKU
+
+Grana `fix/footer-wordmark-gold` iz origin/main `be64a675d`, jedan fajl: `src/components/Footer/BusinessCard/BusinessCard.tsx`.
+
+- „Endless blue“ ostaje navy (blue950); kurzivni „Boat4you“ ispod njega s `blue500` na `mandalay700` (#ab7801) — zlatna koju sajt već koristi za tekstualne akcente (yellow500 bedž na kartici broda, mandalay800/900 napomene u ReservationCTA); kontrast na bijelom 4,6:1. Logo i tagline bili su tri plave jedna ispod druge; trust ikone u dnu više nisu zelene (razlog za plavu 3.5.2026 je otpao). Povijest boje u komentaru komponente.
+- Provjera: lokalni dev (b4y-dev-prodapi :3010), computed color wordmarka rgb(171, 120, 1), tagline rgb(20, 24, 87), font Playfair Display.
+- Deploy: `B4Y_REPO=…/boat4you-web/boat4you-web-main b4y_web_deploy.sh` (dev server ugašen prije builda).
+
 ## 2026-10-20 — 🏷️ „broker“ → „charter agency“ na cijelom sajtu, 9 jezika + SEO korpus (Mario 20.10.: „ti odradi sve“, nakon EY) — ✅ DEPLOYANO 20.10.2026 19:12 UTC (`9c646b494`, deployment 9c646b494c62-mvh23o90), tag `live/2026-10-20-agency`
 
 Grana `fix/agency-wording` (worktree `wt-agency`) iz origin/main `2f6822e05`; workflow `sisters-broker-to-agency`. 3 commita: `a816dba4f` EN + kod (291 datoteka: `public/seo-content/en` 275 landinga / 348 pojava → 0, messages/en, 10 itinerary configa, JSON-LD `BROKER_AUTHOR.jobTitle` „Charter agent“, terms § 9.6 „insurer or an insurance intermediary“, privacy „running a charter agency“, `scripts/seo_corpus_rules.py` N5 fixer), `608839fb7` de/es/fr/hr/it/nl/pl/pt (2.330 datoteka, 2.909 redaka; hr „charter agencija / charter savjetnik“, nl „charterbureau / charteradviseur“, pl „agencja czarterowa / doradca czarterowy“), `9c646b494` review (nl „makelaersondersteuning“ → „chartersupport“, „Wij makelen“ → „Wij regelen“, pl „wsparcia czarterowego“, pt „Organizamos cada aluguer“, es/it/pt „Boat4You organiza/organizza“, de „für … zu finden“, Talamone „no yacht sales office“ ×9). Mijenjane SAMO vrijednosti stringova; ključevi, slugovi, URL-ovi, `@type` nepromijenjeni. Rječnik EN kao EY: tvrtka „charter agency“, ljudi „charter agents / our charter team“, „we broker“ → „we arrange“, konkurencija „charter resellers“, treće strane u marinama „insurance intermediaries / yacht sales offices / local charter companies“, osoblje partnera „our partners' base teams“; korpus R13/R14 „Boat4You kao broker“ (7.10.) time zamijenjen po Mariovoj odluci 20.10. Brand tvrdnja i superlativi netaknuti. Ostali pogoci „broker“: komentari u kodu, regex filteri, `BROKER_AUTHOR`, MYBA u faq.md, „Gulet Broker Yachting“ (deny-lista).

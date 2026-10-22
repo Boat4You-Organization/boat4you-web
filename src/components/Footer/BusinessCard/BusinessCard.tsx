@@ -11,12 +11,16 @@ import colors from '@/styles/themes/colors';
 import styles from './BusinessCard.module.scss';
 
 // Hero tagline directly under the logo. Two-line composition: navy
-// "Endless blue." + primary-blue italic "Boat4you." — matches the
-// brand mark used on the homepage hero.
+// "Endless blue." + gold italic "Boat4you." — the one warm accent in an
+// otherwise navy/blue footer.
 //
 // History: launched with gold italic on 28.4.2026 → flipped to primary
 // blue on 3.5.2026 (Mario: footer was reading too colourful with gold
-// + green trust icons; aligned everything to the navy/primary palette).
+// + green trust icons; aligned everything to the navy/primary palette)
+// → back to gold on 22.10.2026 (Mario: "previše jednolično" — logo,
+// tagline and wordmark were three blues; the trust icons are grey now).
+// mandalay700 is the gold the site already uses for text accents
+// (yellow500 badge, mandalay800/900 reservation notes): 4.6:1 on white.
 const TAGLINE_FONT_STACK = '"Playfair Display", Georgia, "Times New Roman", serif';
 
 // Brand claim under the tagline, on every page (owner decision 16.10.2026).
@@ -55,7 +59,7 @@ const BusinessCard = () => (
             fontWeight: 600,
             fontStyle: 'italic',
             lineHeight: 1.1,
-            color: colors.blue500,
+            color: colors.mandalay700,
             letterSpacing: '-0.01em',
           }}
         >
