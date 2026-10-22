@@ -187,6 +187,20 @@ describe('landingPagerPath — which requests link their pages', () => {
   });
 });
 
+describe('page n > 1 of a plain landing (search/page.tsx generateMetadata)', () => {
+  const page = readFileSync(`${ROOT}src/app/[locale]/(search)/search/page.tsx`, 'utf8');
+
+  test('keeps its own canonical (`…&page=n`) and its "– page n" title', () => {
+    assert.match(page, /const path = ownPage \? landingPageHref\(landingPath, landingPage\) : landingPath;/u);
+    assert.match(page, /pagedHeading\(locale, copy\.title, landingPageNumber\(params\.page\)\)/u);
+  });
+
+  test('is noindex, follow like every other page > 1 (GSC 16.10.2026: crawled, never indexed)', () => {
+    assert.match(page, /const noindex =\n\s+pageNum > 1 \|\|/u);
+    assert.doesNotMatch(page, /pageNum > 1 && !ownPage/u);
+  });
+});
+
 describe('landingCurrencyParam', () => {
   test('a known currency is kept, anything else is dropped', () => {
     assert.equal(landingCurrencyParam({ currency: 'USD' }), 'USD');

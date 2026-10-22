@@ -138,9 +138,14 @@ export async function generateMetadata({ params: paramsPromise, searchParams }: 
   // Page n > 1 of a plain destination landing (landingPagerPath — one place,
   // at most one boat type, no dates, filters or sort) is its own page since
   // audit 7.10.2026: the pager links it with <a href>, its canonical is itself
-  // (`…&page=n`, hreflang to page n in the other locales) and it is indexable
-  // under the landing's own gate below. It lists other boats than page 1, so
-  // a canonical to page 1 told Google to drop the only page linking them.
+  // (`…&page=n`, hreflang to page n in the other locales) and its title / H1
+  // read "– page n". It lists other boats than page 1, so a canonical to
+  // page 1 told Google to drop the only page linking them. Since 22.10.2026
+  // it is `noindex, follow` like every other page > 1 (below): GSC 16.10.2026
+  // showed ~76K such URLs (page 2–197, median 20) "Crawled – currently not
+  // indexed" — Google crawls them and indexes none, and that crawl was
+  // missing for the 4,150 boat pages left "Discovered – currently not
+  // indexed". The pager links stay, so the boats stay linked and crawled.
   // Never in a sitemap; a page past the last answers 404 (SearchPage).
   const landingPage = landingPagerPath(params, landing) ? landingPageNumber(params.page) : null;
   const ownPage = landingPage != null && landingPage > 1;
@@ -148,8 +153,9 @@ export async function generateMetadata({ params: paramsPromise, searchParams }: 
 
   // Index gating — keep crawl budget on the headline (destination ×
   // boat-type) URLs, drop the long tail.
-  //   * pagination beyond page 1 of anything but a plain landing (above):
-  //     noindex, canonical to page 1
+  //   * pagination beyond page 1: noindex, follow — a plain landing's page
+  //     keeps its own canonical and its pager links (above), anything else
+  //     canonicals to page 1
   //   * date-anchored URLs: noindex (calendar variants explode into
   //     millions of permutations, all collapsing to the same intent)
   // The canonical itself stays index-eligible because dates / page get
@@ -227,7 +233,7 @@ export async function generateMetadata({ params: paramsPromise, searchParams }: 
   if (typeOnly) alternateLocales = [];
 
   const noindex =
-    (pageNum > 1 && !ownPage) ||
+    pageNum > 1 ||
     hasDates ||
     uniqueRawDestinations.length > 1 ||
     boatTypes.length > 1 ||
