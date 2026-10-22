@@ -42,6 +42,23 @@ export interface SearchLanding {
 }
 
 /**
+ * The city of a legacy `<Marina> | <City>` destination value ("Split | Split",
+ * "Port of Split / West Harbour | Split") — the form the search URLs carried
+ * before the did-based picker, still in old links and in Google's crawl
+ * queue (GSC 16.10.2026: a third of the 25.9K 404s). Null for any other
+ * value, and for a city that could not carry a landing URL of its own.
+ */
+export const legacyPipeCity = (value: string): string | null => {
+  const separator = value.lastIndexOf(' | ');
+
+  if (separator < 0) return null;
+
+  const city = value.slice(separator + 3).trim();
+
+  return city && isLandingExpressible(city) ? city : null;
+};
+
+/**
  * Resolve a /search request's destinations to dids (see destinationDid.ts).
  * Runs per request — the URL is the state, so a filter change re-renders
  * the server component and re-resolves; the lookup lists behind it are
@@ -55,7 +72,21 @@ export const resolveSearchLanding = async (params: AllSearchParams): Promise<Sea
     return { destinations, hasOwnDid, resolved: [], did: [], labels: {} };
   }
 
-  const resolved = await resolveDestinationDids(destinations.join(','));
+  // A copy: resolveDestinationDids is React `cache`d, its array is shared.
+  const resolved = [...(await resolveDestinationDids(destinations.join(',')))];
+
+  // One legacy `<Marina> | <City>` value the catalogue does not know
+  // (22.10.2026): resolve the city instead, so landingRedirectPath 308s the
+  // URL to the city's canonical landing the way it redirects an alias or a
+  // casing variant, instead of the 404. Several values, or a city the
+  // catalogue does not know either, keep the 404 (hasUnknownDestination).
+  if (destinations.length === 1 && !resolved[0]) {
+    const city = legacyPipeCity(destinations[0]);
+    const [hit] = city ? await resolveDestinationDids(city) : [null];
+
+    if (hit && isLandingExpressible(hit.name)) resolved[0] = hit;
+  }
+
   const did = Array.from(new Set(resolved.flatMap(r => r?.dids ?? [])));
   const labels: Record<string, string> = {};
 
