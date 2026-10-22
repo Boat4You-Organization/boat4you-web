@@ -9,7 +9,11 @@
  *     <lastmod> in sitemap.xml;
  *   - messages/<locale>/landing.json — the new strings in all nine locales;
  *   - messages/<locale>/common.json pagination — the pager's accessible names
- *     (src/components/Pagination/Pagination.tsx), MUI's are English only.
+ *     (src/components/Pagination/Pagination.tsx), MUI's are English only;
+ *   - scripts/searchLandingLegacy.test.mjs (imported below, so it runs in this
+ *     file's process) — legacy `<Marina> | <City>` search URLs resolve to the
+ *     city and 308; it stubs destinationDid.ts for this process, which none
+ *     of the helpers tested here call.
  *
  *   yarn test:landing-pages
  */
@@ -19,6 +23,9 @@ import { registerHooks } from 'node:module';
 import { describe, test } from 'node:test';
 import { fileURLToPath } from 'node:url';
 
+// Not a yarn script of its own: the deploy installs node_modules on cusma1
+// whenever package.json differs from the live one, scripts included.
+import './searchLandingLegacy.test.mjs';
 import './tsLoader.mjs';
 
 // `server-only` throws outside a React server bundle; these modules are only

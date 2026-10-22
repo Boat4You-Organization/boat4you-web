@@ -9,7 +9,9 @@
  *     stays a 404.
  * The catalogue (destinationDid.ts, which reads the API) is stubbed.
  *
- *   yarn test:landing-pages
+ * Imported by scripts/landingPagination.test.mjs (yarn test:landing-pages);
+ * on its own:
+ *   node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test scripts/searchLandingLegacy.test.mjs
  */
 /* global globalThis */
 import assert from 'node:assert/strict';
