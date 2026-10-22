@@ -1,6 +1,6 @@
 # Boat4You (main) — Production Deploy Notes
 
-## 2026-10-22 — 🎨 Footer: wordmark „Boat4you“ plava → zlatna (Mario 22.10.: „promjeni boju iz plave, previše jednolično“) — ⏳ DEPLOY U TIJEKU
+## 2026-10-22 — 🎨 Footer: wordmark „Boat4you“ plava → zlatna (Mario 22.10.: „promjeni boju iz plave, previše jednolično“) — ✅ DEPLOYANO 22.10.2026 10:21 UTC (`47a649e1b`, deployment `47a649e1b7cb-mvjdmetb`), tag `live/2026-10-22-footer`
 
 Grana `fix/footer-wordmark-gold` iz origin/main `be64a675d`, jedan fajl: `src/components/Footer/BusinessCard/BusinessCard.tsx`.
 
