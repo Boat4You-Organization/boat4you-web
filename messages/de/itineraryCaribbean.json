@@ -1137,6 +1137,89 @@
           "mooringTip": "Lege deine Ankunft auf Tageslicht und prüfe das Rückgabefenster der Basis; viele wollen dich am frühen Nachmittag längsseits. Erreichst du Le Marin früh, anker vor Sainte-Anne für ein letztes Bad, statt in der Marina zu liegen."
         }
       }
+    },
+    "st-martin-route": {
+      "metaTitle": "7 Tage Katamarantörn St. Martin & St. Barth | Boat4You",
+      "metaDesc": "Die französische Karibik auf einem 7-tägigen Katamarancharter ab St. Martin entdecken: Marigot, Tintamarre, Île Fourchue, Gustavia, Philipsburg und mehr.",
+      "days": {
+        "1": {
+          "shortDescription": "Rund 8 Meilen nach Nordosten die französische Küste hinauf, von Marigot zur Anse Marcel. In der gut geschützten Hufeisenbucht ankern Sie auf Sand in 4–6 m; ein Mooringfeld gibt es nicht, doch bei den vorherrschenden Ostwinden hält der Anker ausgezeichnet. Ist eine Nordfront angesagt, sind die Liegeplätze der Marina Royale zurück in Marigot die Schlechtwetter-Alternative.",
+          "description": "Ihre Charter beginnt in Marigot, einem lebhaften Städtchen mit dem Flair der Côte d'Azur. Bummeln Sie über die bunten Märkte, stöbern Sie in Designerboutiquen oder genießen Sie vor dem Ablegen einen Café au Lait an der Marina. Dann geht es nach Nordosten zur Anse Marcel, einer geschützten Bucht inmitten grüner Hügel. Der Strand ist ruhig und ideal zum Schwimmen und Stand-up-Paddeln. An Land warten Luxusresorts und gehobene Restaurants — der perfekte Ort, um in Ihrem Katamaranurlaub anzukommen.",
+          "thingsToDo": [
+            "Am Samstagmorgen Kunsthandwerk und Rum auf dem Markt an Marigots Uferpromenade",
+            "Café au Lait bei Sarafina's vor dem Ablegen",
+            "Schwimmen und Stand-up-Paddeln vor dem geschützten Strand der Anse Marcel",
+            "Abendessen im La Belle Epoque in der Marina Royale"
+          ],
+          "mooringTip": "In der Anse Marcel wird nur geankert, auf Sand in 4–6 m, ein Mooringfeld gibt es nicht. Der Anker hält ausgezeichnet, und die Bucht ist gegen die vorherrschenden Ostwinde geschützt. Wer lieber in einer Marina übernachtet, mietet einen Liegeplatz in der Marina Royale in Marigot (2,5 €/Fuß, Landstrom nach EU-Standard mit 220 V)."
+        },
+        "2": {
+          "shortDescription": "Ein kurzer 3-Meilen-Sprung nach Südosten nach Tintamarre, einer kleinen unbewohnten Insel in der Réserve Naturelle. Geankert wird nur in der Westbucht, auf Sand in 4–6 m; Korallen- und Seegraszonen sind mit gelben Bojen markiert. Die Reservatsgebühr von 5 € pro Tag zahlen Sie über die App des SXM Marine Park. Schildkröten sind am geschützten Riff vor der Westküste garantiert.",
+          "description": "Nur ein kurzes Stück ist es bis Tintamarre, einer kleinen unbewohnten Insel, die sich wie ein echtes Robinson-Paradies anfühlt. Ankern Sie in türkisfarbenem Wasser und schnorcheln Sie zwischen Meeresschildkröten, Rochen und bunten Fischen. Der lange Sandstrand ist wie gemacht für ein Picknick, und auf den Pfaden im Inselinneren lassen sich Seevögel und eine besondere Pflanzenwelt entdecken. Ohne Hotels, Restaurants oder Läden bietet Tintamarre reine Abgeschiedenheit — ein Höhepunkt jedes Katamarancharters ab St. Martin.",
+          "thingsToDo": [
+            "Am geschützten Riff vor Tintamarres Westküste schnorcheln — Schildkröten garantiert",
+            "Strandpicknick auf dem langen Bogen aus weißem Sand",
+            "Auf dem markierten Rundweg im Inselinneren Seevögel beobachten",
+            "Zu den verlassenen Plantagenruinen aus den 1930er-Jahren am Südende wandern"
+          ],
+          "mooringTip": "Tintamarre ist eine Réserve Naturelle — Ankern auf Sand ist nur in der Westbucht in 4–6 m erlaubt; Korallen- und Seegraszonen sind mit gelben Bojen markiert. Die Reservatsgebühr von 5 € pro Tag wird über die App des SXM Marine Park bezahlt."
+        },
+        "3": {
+          "shortDescription": "Rund 12 Meilen nach Südosten zur Île Fourchue, einer unbewohnten Felseninsel im Meeresschutzgebiet von St. Barth. Festgemacht wird nur an Mooringbojen (20 € pro Nacht über die App des Schutzgebiets), insgesamt 12 Bojen — in der Saison vor 14:00 Uhr da sein. Vorher ausklarieren ist Pflicht: Klarieren Sie in Marigot oder an der Marina Royale aus St. Martin aus, bevor Sie ankommen, denn die Île Fourchue gehört zum Hoheitsgebiet von St. Barth.",
+          "description": "Weiter geht das Abenteuer zur Île Fourchue, einer schroffen, unbewohnten Insel zwischen St. Martin und St. Barth. Der Ankerplatz ist gut geschützt, und Mooringbojen liegen bereit. Gehen Sie für eine kurze Wanderung an Land — von den Hügeln der Insel reicht der Blick weit über das Karibische Meer, eines der besten Fotomotive der ganzen Reise. Auch zum Schnorcheln ist die Insel hervorragend, mit farbenprächtigen Korallengärten und einer Fülle an Meeresleben.",
+          "thingsToDo": [
+            "Über den Sattelgrat wandern, mit 360°-Rundblick über die Passage zwischen Anguilla und St. Barth",
+            "Im Korallengarten der Südbucht schnorcheln",
+            "Pflicht vorab: vor der Ankunft aus St. Martin ausklarieren (Marigot oder Marina Royale)",
+            "Sundowner im geschützten Hufeisen-Ankerplatz, an Land kein anderes Licht"
+          ],
+          "mooringTip": "Die Île Fourchue gehört zum Meeresschutzgebiet von St. Barth — hier gibt es nur Mooringbojen (20 € pro Nacht, bezahlt über die App des Schutzgebiets). Ankern ist verboten. Das Mooringfeld hat 12 Bojen; kommen Sie in der Saison vor 14:00 Uhr an."
+        },
+        "4": {
+          "shortDescription": "Rund 8 Meilen nach Süden in den Hafen von Gustavia auf St. Barthélemy. Gebührenpflichtige Mooringzone (60 € pro Nacht für Boote bis 45 Fuß) — melden Sie sich vorab auf UKW-Kanal 12 beim Hafenmeister; außerhalb des Hafens ankert man vor der Anse de Public auf Sand in 8–12 m. Einklariert wird innerhalb von 24 Stunden nach Ankunft in der Capitainerie; Shell Beach liegt nur ein paar Gehminuten vom Hafen entfernt.",
+          "description": "Segeln Sie südwärts nach St. Barthélemy, dem Juwel der französischen Karibik. Gehen Sie in Gustavia vor Anker, der schicken Hauptstadt der Insel, berühmt für Luxusboutiquen, feine Küche und ein lebhaftes Nachtleben. Den Nachmittag verbringen Sie zwischen den rot gedeckten Häusern, historischen Forts und zollfreien Geschäften von Gustavia. Abends speisen Sie auf Weltklasseniveau in einem Restaurant mit französisch-karibischer Fusionsküche oder genießen Cocktails in einer angesagten Strandbar. Wer Strände liebt, erreicht Shell Beach in wenigen Gehminuten vom Hafen.",
+          "thingsToDo": [
+            "Über Shell Beach mit seinem einzigartigen, muschelübersäten Ufer spazieren",
+            "Sundowner-Cocktails in der Bar Le Select, dem Original des „Cheeseburger in Paradise“",
+            "Den Hafen von Gustavia vom Aussichtspunkt am Fort Karl fotografieren",
+            "Abendessen im Bonito oder im Le Sereno auf der Seite von Saint-Jean"
+          ],
+          "mooringTip": "Der Hafen von Gustavia ist eine gebührenpflichtige Mooringzone (60 € pro Nacht für Boote bis 45 Fuß) — melden Sie sich vorab auf UKW-Kanal 12 beim Hafenmeister. Außerhalb des Hafens darf vor der Anse de Public auf Sand in 8–12 m geankert werden. Einklariert wird in der Capitainerie innerhalb von 24 Stunden nach Ankunft."
+        },
+        "5": {
+          "shortDescription": "Rund 14 Meilen nach Nordwesten über den Kanal zurück nach Philipsburg an der Great Bay auf Sint Maarten. Geankert wird auf Sand in 4–6 m; im Wellenschlag der Kreuzfahrtschiffe rollt die Bucht, doch der Anker hält gut. Einklariert wird nach Sint Maarten am Steg der Bobby's Marina (25 US$ pro Person für die Einreiseabfertigung). Ganz in der Nähe: die zollfreien Läden der Front Street und Planespotting am Maho Beach.",
+          "description": "Heute wechseln Sie auf die niederländische Seite von St. Martin und laufen in Philipsburg ein, der Hauptstadt von Sint Maarten. Die quirlige Stadt ist fürs Einkaufen bekannt: Die Front Street ist gesäumt von zollfreien Geschäften mit Schmuck, Elektronik und Mode. Entspannen Sie am Great Bay Beach oder genießen Sie Wassersport entlang der lebhaften Strandpromenade. Am Abend locken in Philipsburg Casinos, Beachclubs und Restaurants mit einer Mischung aus karibischen und internationalen Aromen.",
+          "thingsToDo": [
+            "Die zollfreien Läden der Front Street und das historische Gerichtsgebäude erkunden",
+            "Mittagessen am Boardwalk des Great Bay Beach",
+            "Planespotting am Maho Beach (15 Minuten mit Taxi oder Dinghy ab Simpson Bay)",
+            "Cocktails zum Sonnenuntergang im Bamboo Bernie's oder im Holland House Beach Hotel"
+          ],
+          "mooringTip": "In der Great Bay ankern Sie auf Sand in 4–6 m, offen nur gegen Dünung aus Süden. Einklariert wird nach Sint Maarten am Steg der Bobby's Marina (25 US$ pro Person für die Einreiseabfertigung). Der Anker hält gut, doch im Wellenschlag der Kreuzfahrtschiffe rollt die Bucht."
+        },
+        "6": {
+          "shortDescription": "Ein kurzer 6-Meilen-Schlag nach Nordwesten zurück auf die französische Seite in die Marigot Bay. Geankert wird auf Sand in 6–10 m, ein Mooringfeld gibt es nicht. In der Capitainerie von Marigot klarieren Sie wieder auf der französischen Seite ein (gebührenfrei, nur ein Meldeformular). Macht Dünung den offenen Ankerplatz unbrauchbar, bietet die Marina Royale Liegeplätze für 2,5 €/Fuß. An Land führt der Spaziergang hinauf zum Aussichtspunkt am Fort Louis.",
+          "description": "Segeln Sie zurück auf die französische Seite der Insel und ankern Sie wieder vor Marigot. Ihr letzter voller Tag steht ganz im Zeichen der französisch-karibischen Kultur: Bummeln Sie über die Märkte unter freiem Himmel, genießen Sie vom Fort Louis den Panoramablick oder gönnen Sie sich französisches Gebäck aus einer Boulangerie im Ort. Jetzt ist auch die richtige Zeit für Souvenirs — oder Sie entspannen einfach vor Anker bei einem Glas Wein, während die Sonne über der Marina untergeht.",
+          "thingsToDo": [
+            "Zum Fort Louis hinaufsteigen und den Panoramablick über den Hafen genießen",
+            "Markt am Mittwoch und Samstag mit Kunsthandwerk und karibischen Gewürzen",
+            "Croissant und Kaffee bei Sarafina's am Boulevard de Grand-Case",
+            "Sonnenuntergang im La Belle Plage direkt an der Marina"
+          ],
+          "mooringTip": "In der Marigot Bay ankern Sie auf Sand in 6–10 m, ein Mooringfeld gibt es nicht. Wieder eingeklariert wird auf der französischen Seite in der Capitainerie von Marigot (gebührenfrei, nur ein Meldeformular). Liegeplätze in der Marina Royale kosten 2,5 €/Fuß, falls Dünung den offenen Ankerplatz unbrauchbar macht."
+        },
+        "7": {
+          "shortDescription": "Letzter Vormittag an der Marina Royale. Laut üblichem Chartervertrag muss das Boot am Freitag bis 17:00 Uhr zur Abnahme längsseits liegen. Treibstoff und Wasser am Marinasteg auffüllen — an Übergabetagen ist der Tanksteg früh belegt. Wer One-Way nach St. Barth oder Anguilla weitersegelt, klariert vor der Übergabe beim Zoll aus.",
+          "description": "Genießen Sie am letzten Morgen ein ausgiebiges Frühstück an Bord, bevor der Check-out ansteht. Je nach Zeitplan bleibt vielleicht noch Zeit für einen letzten Bummel über die Märkte von Marigot oder ein Bad an einem der nahen Strände. Ein perfekter Abschluss für eine Woche unvergesslichen Segelns rund um St. Martin und St. Barth.",
+          "thingsToDo": [
+            "Letztes Morgenbad vor der Anse Marcel oder in der Marigot Bay",
+            "Treibstoff und Wasser am Tanksteg der Marina Royale auffüllen",
+            "Ein letztes Croissant an Land vor der Übergabe",
+            "Abnahme des Bootes mit der Charterfirma"
+          ],
+          "mooringTip": "Charterverträge verlangen in der Regel, dass das Boot am Freitag bis 17:00 Uhr längsseits in der Marina Royale liegt. Prüfen Sie die genaue Klausel in Ihrem Vertrag; an Übergabetagen ist der Tanksteg früh belegt. Wer die Reise One-Way fortsetzt, klariert vor der Übergabe beim Zoll aus."
+        }
+      }
     }
   },
   "areas": {
@@ -1163,6 +1246,12 @@
       "metaDesc": "Törns ab Le Marin: Anses d'Arlet, St-Pierre unter dem Vulkan und die Überfahrt zu St. Lucias Pitons — Segeln in der französischen Karibik.",
       "title": "Französische Bäckereien, Vulkanblicke, echte Passagen",
       "description": "Martinique ist die Karibik, die das Mittagessen ernst nimmt. Le Marin — die größte Charterbasis der Windwards — schickt Sie mit ordentlichen Baguettes an Bord hinaus, und die Westküste rollt sich in leichten Tagesetappen auf: Schildkröten, die unter dem Boot bei Grande Anse d'Arlet grasen, St-Pierre, das still unter dem Vulkan liegt, der es 1902 auslöschte, Rumbrennereien, die das Verkosten als Bildung begreifen. Dann kommt die Wahl: französisch und sanft bleiben, oder die zwanzig Meilen lange Kanalüberfahrt nach St. Lucia wagen, wo die Pitons direkt aus dem Meer aufragen und eine Mooring unter ihnen der beste Logenplatz der Karibik ist. Der Kanal ist ehrliches Passatsegeln — früh reffen, mit dem Morgen los. Beide Hälften der Woche verdienen ihren Platz."
+    },
+    "st-martin": {
+      "metaTitle": "Segeltörns St. Martin & Leeward-Dreieck | Boat4You",
+      "metaDesc": "Katamarancharter ab Marigot, Anse Marcel und Philipsburg auf St. Martin: Tintamarre, Île Fourchue, Gustavia (St. Barth) und One-Way-Törns nach Anguilla/Antigua.",
+      "title": "Zwei Flaggen, drei Inseln, kurze Tagestörns",
+      "description": "St. Martin ist das nördliche Tor zu den Leeward Islands und für Crews, die über den Atlantik nach SXM fliegen, eine der unkompliziertesten Charterbasen der Karibik. Die Insel teilt sich in eine französische (Saint-Martin) und eine niederländische Seite (Sint Maarten), und auf beiden liegen Charterbasen — Marigot und Anse Marcel an der französischen Nordküste, Philipsburg an der niederländischen Südküste. Verbunden sind sie über die Simpson Bay Lagoon mit ihren zwei Klappbrücken.\n\nDas Leeward-Dreieck aus St. Martin, St. Barth und Anguilla liegt von jeder Basis aus innerhalb eines Tagestörns. Ab Marigot führt die typische Woche über die Insel Tintamarre (ein geschütztes Naturreservat mit dem besten Schnorchelrevier der französischen Seite), die Île Fourchue (ein Ankerplatz zwischen unbewohnten Felsen auf halbem Weg nach St. Barth) und den Hafen von Gustavia auf St. Barth (zollfreies Einkaufen und die meistfotografierte Superyacht-Reihe der Karibik), bevor es entlang der Küste von Anguilla zurückgeht.\n\nDer Passat weht hier mit denselben verlässlichen Ostwinden von 15 bis 22 Knoten, die die ganze östliche Karibik prägen. Dank der kompakten Geografie ist St. Martin die einfachste Basis für kurze Charter von 4–5 Tagen, ein verlängertes Wochenende auf dem Wasser, und für One-Way-Törns — die meisten Charterfirmen bieten Überführungsetappen nach Antigua über St. Barth und Anguilla an oder südwärts über St. Kitts und Nevis bis zur Guadeloupe-Runde."
     }
   }
 }

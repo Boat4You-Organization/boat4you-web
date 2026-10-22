@@ -1137,6 +1137,89 @@
           "mooringTip": "Calculez votre arrivée de jour et vérifiez le créneau de retour de la base ; beaucoup veulent que vous soyez à quai en milieu d'après-midi. Si vous atteignez Le Marin tôt, mouillez au large de Sainte-Anne pour une dernière baignade plutôt que d'attendre dans la marina."
         }
       }
+    },
+    "st-martin-route": {
+      "metaTitle": "Catamaran 7 jours : Saint-Martin et Saint-Barth | Boat4You",
+      "metaDesc": "Sept jours en catamaran depuis Saint-Martin dans les Antilles françaises : Marigot, Tintamarre, l'île Fourchue, Gustavia, Philipsburg et d'autres escales.",
+      "days": {
+        "1": {
+          "shortDescription": "Environ 8 milles vers le nord-est en remontant la côte française, de Marigot à Anse Marcel. Mouillage sur sable par 4 à 6 m dans la baie en fer à cheval, bien protégée : pas de champ de corps-morts, mais une excellente tenue sous les alizés d'est dominants. Si un front de nord est annoncé, les places de la Marina Royale, à Marigot, sont la solution de repli par mauvais temps.",
+          "description": "La croisière commence à Marigot, petite ville animée aux airs de Côte d'Azur. Flânez dans ses marchés colorés, faites un tour dans les boutiques de créateurs ou prenez un café au lait au bord de la marina avant de larguer les amarres. Cap ensuite au nord-est vers Anse Marcel, une baie abritée au creux de collines verdoyantes. La plage y est calme, idéale pour la baignade et le paddle. À terre, hôtels de luxe et bonnes tables en font l'endroit parfait pour prendre vos marques et entrer dans le rythme de vos vacances en catamaran.",
+          "thingsToDo": [
+            "Marché du samedi matin sur le front de mer de Marigot : artisanat local et rhum",
+            "Café au lait chez Sarafina's avant le départ",
+            "Baignade et paddle devant la plage abritée d'Anse Marcel",
+            "Dîner à La Belle Epoque, à la Marina Royale"
+          ],
+          "mooringTip": "Anse Marcel se prend uniquement au mouillage, sur sable par 4 à 6 m : pas de champ de corps-morts. La tenue est excellente et la baie est protégée des alizés d'est dominants. Si vous préférez une nuit en marina, la Marina Royale, à Marigot, loue des places (2,5 €/pied, électricité 220 V aux normes européennes)."
+        },
+        "2": {
+          "shortDescription": "Courte étape de 3 milles au sud-est jusqu'à Tintamarre, petite île inhabitée de la Réserve naturelle. Mouillage sur sable par 4 à 6 m, dans la baie ouest uniquement ; les zones de corail et d'herbiers sont balisées par des bouées jaunes. Redevance de réserve de 5 €/jour, à régler via l'appli SXM Marine Park. Tortues garanties sur le récif protégé de la côte ouest.",
+          "description": "Une courte navigation vous mène à Tintamarre, petite île inhabitée qui a tout du vrai paradis de naufragé. Mouillez dans l'eau turquoise et partez en snorkeling parmi les tortues, les raies et les poissons multicolores. La longue plage de sable se prête au pique-nique, tandis que les sentiers de l'intérieur permettent d'observer oiseaux marins et flore singulière. Ni hôtel, ni restaurant, ni boutique : Tintamarre offre un isolement total, l'un des temps forts de toute croisière en catamaran à Saint-Martin.",
+          "thingsToDo": [
+            "Snorkeling sur le récif protégé de la côte ouest : tortues garanties",
+            "Pique-nique sur le long croissant de sable blanc",
+            "Suivre la boucle balisée de l'intérieur pour observer les oiseaux marins",
+            "Marcher jusqu'aux ruines de la plantation abandonnée des années 1930, à la pointe sud"
+          ],
+          "mooringTip": "Tintamarre fait partie de la Réserve naturelle : le mouillage sur sable n'y est autorisé que dans la baie ouest, par 4 à 6 m, et les zones de corail et d'herbiers sont balisées par des bouées jaunes. Redevance de réserve de 5 €/jour, à régler via l'appli SXM Marine Park."
+        },
+        "3": {
+          "shortDescription": "Environ 12 milles au sud-est jusqu'à l'île Fourchue, île rocheuse inhabitée de la réserve marine de Saint-Barth. Corps-morts uniquement (20 €/nuit via l'appli de la réserve), 12 bouées en tout : arrivez avant 14 h en saison. Formalités préalables obligatoires : l'île Fourchue relève de Saint-Barth, faites donc votre sortie de Saint-Martin à Marigot ou à la Marina Royale avant d'y arriver.",
+          "description": "L'aventure continue vers l'île Fourchue, île sauvage et inhabitée entre Saint-Martin et Saint-Barth. Le mouillage est bien protégé et équipé de corps-morts. Descendez à terre pour une courte randonnée : depuis les collines, la vue embrasse la mer des Caraïbes et offre l'une des plus belles photos du voyage. Le snorkeling y est tout aussi remarquable, avec des jardins de corail éclatants et une vie marine foisonnante.",
+          "thingsToDo": [
+            "Monter sur la crête du col pour un panorama à 360° sur le canal entre Anguilla et Saint-Barth",
+            "Snorkeling sur le jardin de corail de la baie sud",
+            "Formalités préalables : faire sa sortie de Saint-Martin (Marigot ou Marina Royale) avant d'arriver",
+            "Apéro au coucher du soleil dans le mouillage en fer à cheval, sans une lumière à terre"
+          ],
+          "mooringTip": "L'île Fourchue fait partie de la réserve marine de Saint-Barth : corps-morts uniquement (20 €/nuit, à régler via l'appli de la réserve), le mouillage sur ancre est interdit. Le champ compte 12 bouées ; en saison, arrivez avant 14 h."
+        },
+        "4": {
+          "shortDescription": "Environ 8 milles au sud jusqu'au port de Gustavia, à Saint-Barthélemy. Zone de corps-morts payants (60 €/nuit jusqu'à 45 pieds) : appelez la capitainerie en VHF 12 avant d'arriver. Hors du port, mouillage possible à l'Anse de Public, sur sable par 8 à 12 m. Faites vos formalités d'entrée à la capitainerie dans les 24 h suivant l'arrivée ; Shell Beach n'est qu'à quelques minutes à pied du port.",
+          "description": "Cap au sud vers Saint-Barthélemy, le joyau des Antilles françaises. Mouillez à Gustavia, la petite capitale chic de l'île, réputée pour ses boutiques de luxe, ses grandes tables et sa vie nocturne animée. Consacrez l'après-midi à ses maisons aux toits rouges, à ses forts historiques et à ses boutiques hors taxes. Le soir, offrez-vous un dîner d'exception dans un restaurant de cuisine fusion franco-caribéenne, ou un cocktail dans un bar de plage à la mode. Pour les amoureux de plage, Shell Beach n'est qu'à quelques minutes à pied du port.",
+          "thingsToDo": [
+            "Arpenter Shell Beach et son rivage unique tapissé de coquillages",
+            "Cocktails au coucher du soleil au bar Le Select, le Cheeseburger in Paradise d'origine",
+            "Photographier le port de Gustavia depuis le belvédère du fort Karl",
+            "Dîner chez Bonito ou au Sereno, côté Saint-Jean"
+          ],
+          "mooringTip": "Le port de Gustavia est une zone de corps-morts payants (60 €/nuit jusqu'à 45 pieds) : appelez la capitainerie en VHF 12 avant d'arriver. Le mouillage est autorisé hors du port, à l'Anse de Public, sur sable par 8 à 12 m. Formalités d'entrée à la capitainerie dans les 24 h suivant l'arrivée."
+        },
+        "5": {
+          "shortDescription": "Environ 14 milles au nord-ouest à travers le canal pour retrouver Sint Maarten et Philipsburg, sur Great Bay. Mouillage sur sable par 4 à 6 m ; le sillage des paquebots fait rouler la baie, mais la tenue est bonne. Formalités d'entrée à Sint Maarten au quai de Bobby's Marina (25 $ US par personne). Boutiques hors taxes de Front Street et spectacle des avions à Maho Beach, tout près.",
+          "description": "Aujourd'hui, cap sur la partie néerlandaise de l'île et Philipsburg, la capitale de Sint Maarten. La ville, très animée, est réputée pour son shopping : Front Street aligne les boutiques hors taxes de bijoux, d'électronique et de mode. Détendez-vous sur Great Bay Beach ou essayez les sports nautiques le long de la promenade du bord de mer. Le soir, Philipsburg a de quoi faire : casinos, beach clubs et restaurants aux saveurs mêlées, caribéennes et internationales.",
+          "thingsToDo": [
+            "Parcourir les boutiques hors taxes de Front Street et le vieux palais de justice",
+            "Déjeuner sur le Boardwalk de Great Bay Beach",
+            "Regarder atterrir les avions à Maho Beach (15 min en taxi ou en annexe depuis Simpson Bay)",
+            "Cocktails au coucher du soleil au Bamboo Bernie's ou au Holland House Beach Hotel"
+          ],
+          "mooringTip": "À Great Bay, mouillage sur sable par 4 à 6 m, exposé uniquement à la houle de sud. Formalités d'entrée à Sint Maarten au quai de Bobby's Marina (25 $ US par personne). La tenue est bonne, mais le sillage des paquebots fait rouler la baie."
+        },
+        "6": {
+          "shortDescription": "Courte navigation de 6 milles au nord-ouest pour retrouver la partie française et la baie de Marigot. Mouillage sur sable par 6 à 10 m, sans champ de corps-morts. Refaites vos formalités d'entrée côté français à la capitainerie de Marigot (gratuit, simple formulaire de déclaration). Places à la Marina Royale à 2,5 €/pied si un épisode de houle rend le mouillage ouvert intenable. À terre, la balade mène au point de vue du fort Louis.",
+          "description": "Retour vers la partie française de l'île et nouveau mouillage à Marigot. Consacrez votre dernière journée complète à la culture des Antilles françaises : flânez dans les marchés en plein air, montez au fort Louis pour le panorama ou laissez-vous tenter par les pâtisseries d'une boulangerie du coin. C'est aussi le bon moment pour les derniers souvenirs, ou simplement pour profiter du mouillage, un verre de vin à la main, pendant que le soleil se couche sur la marina.",
+          "thingsToDo": [
+            "Monter au fort Louis pour le panorama sur le port",
+            "Marché du mercredi et du samedi : artisanat local et épices caribéennes",
+            "Croissant et café chez Sarafina's, boulevard de Grand-Case",
+            "Coucher de soleil à La Belle Plage, sur le front de la marina"
+          ],
+          "mooringTip": "Baie de Marigot : mouillage sur sable par 6 à 10 m, sans champ de corps-morts. Refaites vos formalités d'entrée côté français à la capitainerie de Marigot (gratuit, simple formulaire de déclaration). Places à la Marina Royale à 2,5 €/pied si un épisode de houle rend le mouillage ouvert intenable."
+        },
+        "7": {
+          "shortDescription": "Dernière matinée à la Marina Royale. Selon le contrat de location type, le bateau doit être à quai le vendredi avant 17 h pour l'inspection. Refaites le plein de carburant et d'eau au ponton de la marina : le ponton carburant est pris d'assaut tôt les jours de restitution. Si vous poursuivez en aller simple vers Saint-Barth ou Anguilla, faites les formalités de sortie en douane avant la restitution.",
+          "description": "Pour cette dernière matinée, prenez le temps d'un petit-déjeuner tranquille à bord avant le check-out. Selon votre horaire, il vous restera peut-être le temps d'une dernière flânerie dans les marchés de Marigot ou d'une baignade sur une plage voisine. Une belle façon de conclure une semaine de navigation inoubliable entre Saint-Martin et Saint-Barth.",
+          "thingsToDo": [
+            "Dernière baignade matinale à Anse Marcel ou dans la baie de Marigot",
+            "Plein de carburant et d'eau au ponton de la Marina Royale",
+            "Un dernier croissant à terre avant la restitution",
+            "Inspection de restitution avec le loueur"
+          ],
+          "mooringTip": "Les contrats de location exigent en général que le bateau soit à quai à la Marina Royale le vendredi avant 17 h : vérifiez la clause exacte de votre contrat. Le ponton carburant est pris d'assaut tôt les jours de restitution. Si vous poursuivez la croisière en aller simple, faites les formalités de sortie en douane avant la restitution."
+        }
+      }
     }
   },
   "areas": {
@@ -1163,6 +1246,12 @@
       "metaDesc": "Des routes depuis Le Marin : Anses d'Arlet, St-Pierre sous le volcan et la traversée vers les Pitons de Sainte-Lucie — voile aux Antilles françaises.",
       "title": "Boulangeries françaises, vues sur le volcan, vraies traversées",
       "description": "La Martinique, c'est les Caraïbes qui prennent le déjeuner au sérieux. Le Marin — la plus grande base de charter des Îles du Vent — vous envoie en mer avec de vraies baguettes à bord, et la côte ouest se déroule en petites étapes faciles : les tortues qui broutent sous le bateau à Grande Anse d'Arlet, St-Pierre paisible au pied du volcan qui l'a effacée en 1902, des distilleries de rhum qui font de la dégustation une leçon. Vient ensuite le choix : rester en douceur côté français, ou faire les vingt milles de traversée du canal vers Sainte-Lucie, où les Pitons jaillissent tout droit de la mer et où un corps-mort à leur pied offre la meilleure place au premier rang des Caraïbes. Le canal, c'est de la vraie voile aux alizés — arisez tôt, partez avec le matin. Les deux moitiés de la semaine méritent leur place."
+    },
+    "st-martin": {
+      "metaTitle": "Itinéraires voile à Saint-Martin | Boat4You",
+      "metaDesc": "En catamaran depuis Marigot, Anse Marcel et Philipsburg : Tintamarre, l'île Fourchue, Gustavia à Saint-Barth et allers simples vers Anguilla ou Antigua.",
+      "title": "Une île, deux pays, et Saint-Barth à une journée de voile",
+      "description": "Porte d'entrée nord des îles Sous-le-Vent, qui forment la partie septentrionale de l'arc des Petites Antilles, Saint-Martin est aussi l'une des bases de charter les plus simples des Caraïbes pour les équipages qui arrivent par vol transatlantique à SXM. L'île est partagée entre une partie française (Saint-Martin) et une partie néerlandaise (Sint Maarten), et l'on trouve des bases des deux côtés : Marigot et Anse Marcel sur la côte nord, côté français, Philipsburg sur la côte sud, côté néerlandais, le lagon de Simpson Bay faisant le lien entre elles par deux ponts ouvrants.\n\nLe triangle des îles Sous-le-Vent — Saint-Martin, Saint-Barth et Anguilla — tient tout entier à une journée de voile de chacune des bases. Depuis Marigot, la semaine type passe par Tintamarre (réserve naturelle protégée, avec le meilleur snorkeling du côté français), l'île Fourchue (un mouillage au milieu de rochers inhabités, à mi-chemin de Saint-Barth) et le port de Gustavia à Saint-Barth (boutiques hors taxes et la rangée de superyachts la plus photographiée des Caraïbes), avant de revenir en longeant la côte d'Anguilla.\n\nLes alizés sont ici les mêmes que dans tout l'est des Caraïbes : un flux d'est fiable de 15 à 22 nœuds. Avec sa géographie compacte, Saint-Martin est la base la plus commode pour les courtes croisières de 4 à 5 jours, façon « long week-end », comme pour les traversées en aller simple : la plupart des loueurs assurent des étapes de repositionnement vers Antigua via Saint-Barth et Anguilla, ou vers le sud par Saint-Kitts-et-Nevis jusqu'à la boucle de la Guadeloupe."
     }
   }
 }

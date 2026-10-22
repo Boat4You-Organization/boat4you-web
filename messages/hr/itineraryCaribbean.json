@@ -1137,6 +1137,89 @@
           "mooringTip": "Tempirajte dolazak za dnevnog svjetla i provjerite termin povratka koji baza traži; mnoge žele da pristanete do sredine poslijepodneva. Ako stignete u Le Marin rano, usidrite se kod Sainte-Annea za posljednje kupanje umjesto da sjedite u marini."
         }
       }
+    },
+    "st-martin-route": {
+      "metaTitle": "7 dana katamaranom: St. Martin i St. Barth | Boat4You",
+      "metaDesc": "Otkrijte francuske Karibe na sedmodnevnom charteru katamarana sa St. Martina: Marigot, Tintamarre, Île Fourchue, Gustavia, Philipsburg i još mnogo toga.",
+      "days": {
+        "1": {
+          "shortDescription": "Oko 8 milja na sjeveroistok uz francusku obalu, od Marigota do Anse Marcela. Sidrite na pijesku na 4–6 m u dobro zaštićenoj potkovastoj uvali; polja bova nema, ali uz prevladavajuće istočnjake sidro drži izvrsno. Ako prognoza najavljuje sjevernu frontu, rezerva za loše vrijeme su vezovi u Marini Royale, natrag u Marigotu.",
+          "description": "Vaš charter počinje u Marigotu, živahnom gradiću s duhom Francuske rivijere. Prošećite šarenim tržnicama, zavirite u dizajnerske butike ili uz marinu popijte café au lait prije isplovljavanja. Zaplovite na sjeveroistok do Anse Marcela, zaklonjene uvale okružene zelenim brežuljcima. Plaža je mirna i idealna za kupanje i SUP. Na kopnu vas čekaju luksuzni resorti i vrhunski restorani, pa je ovo savršeno mjesto da se prepustite ritmu odmora na katamaranu.",
+          "thingsToDo": [
+            "Subotnja jutarnja tržnica na rivi u Marigotu, lokalne rukotvorine i rum",
+            "Café au lait u Sarafina’su prije isplovljavanja",
+            "Kupanje i SUP uz zaklonjenu plažu Anse Marcela",
+            "Večera u restoranu La Belle Epoque u Marini Royale"
+          ],
+          "mooringTip": "Anse Marcel je samo za sidrenje, na pijesku na 4–6 m, bez polja bova. Sidro drži izvrsno, a uvala je zaštićena od prevladavajućih istočnjaka. Želite li noć u marini, Marina Royale u Marigotu iznajmljuje vezove (2,5 € po stopi, struja 220 V po europskom standardu)."
+        },
+        "2": {
+          "shortDescription": "Kratak skok od 3 milje na jugoistok do Tintamarrea, malog nenaseljenog otoka u prirodnom rezervatu (Réserve Naturelle). Sidrite na pijesku na 4–6 m, i to samo u zapadnoj uvali; zone koralja i morske trave označene su žutim bovama. Naknada rezervata iznosi 5 € dnevno i plaća se kroz aplikaciju SXM Marine Park. Kornjače su na zaštićenom grebenu uz zapadnu obalu zajamčene.",
+          "description": "Kratka plovidba dovodi vas do Tintamarrea, malog nenaseljenog otoka koji djeluje kao pravi raj za brodolomnike. Usidrite se u tirkiznoj vodi i ronite s maskom među morskim kornjačama, ražama i šarenim ribama. Duga pješčana plaža kao stvorena je za piknik, a staze u unutrašnjosti otoka nude priliku da vidite morske ptice i neobičnu floru. Bez hotela, restorana i trgovina, Tintamarre je čista osama i vrhunac svakog charter putovanja katamaranom oko St. Martina.",
+          "thingsToDo": [
+            "Snorkeling na zaštićenom grebenu uz zapadnu obalu, kornjače zajamčene",
+            "Piknik na dugom polumjesecu bijelog pijeska",
+            "Označena kružna staza kroz unutrašnjost, uz promatranje morskih ptica",
+            "Šetnja do ruševina napuštene plantaže iz 1930-ih na južnom kraju"
+          ],
+          "mooringTip": "Tintamarre je prirodni rezervat (Réserve Naturelle): sidrenje na pijesku dopušteno je na 4–6 m, i to samo u zapadnoj uvali, a zone koralja i morske trave označene su žutim bovama. Naknada rezervata iznosi 5 € dnevno i plaća se kroz aplikaciju SXM Marine Park."
+        },
+        "3": {
+          "shortDescription": "Oko 12 milja na jugoistok do Île Fourchue, nenaseljenog stjenovitog otoka u morskom rezervatu St. Bartha. Samo bove (20 € po noći, plaćanje kroz aplikaciju rezervata), ukupno ih je 12, pa u sezoni stignite prije 14:00. Prije dolaska obavezna je odjava sa St. Martina u Marigotu ili Marini Royale, jer je Île Fourchue pod jurisdikcijom St. Bartha.",
+          "description": "Putovanje se nastavlja do Île Fourchue, divljeg nenaseljenog otoka između St. Martina i St. Bartha. Sidrište je dobro zaštićeno, a bove su na raspolaganju. Iskrcajte se na kratku šetnju: pogled s otočnih brežuljaka pruža se preko Karipskog mora i daje jedne od najljepših fotografija putovanja. Snorkeling je također izvrstan, uz živopisne koraljne vrtove i obilje morskog života.",
+          "thingsToDo": [
+            "Uspon na sedlasti greben zbog pogleda od 360° na kanal Anguilla – St. Barth",
+            "Snorkeling u koraljnom vrtu u južnoj uvali",
+            "Odjava sa St. Martina (Marigot ili Marina Royale) prije dolaska",
+            "Piće uz zalazak u zaštićenom potkovastom sidrištu, bez ijednog svjetla na kopnu"
+          ],
+          "mooringTip": "Île Fourchue dio je morskog rezervata St. Bartha, pa su dopuštene samo bove (20 € po noći, plaćanje kroz aplikaciju rezervata). Sidrenje je zabranjeno. Polje ima 12 bova; u sezoni stignite prije 14:00."
+        },
+        "4": {
+          "shortDescription": "Oko 8 milja na jug do luke Gustavia na otoku St. Barthélemy. Luka je zona plaćenog priveza (60 € po noći za brodove do 45 stopa), pa se lučkoj kapetaniji unaprijed javite na VHF 12; izvan luke može se sidriti kod Anse de Public, na pijesku na 8–12 m. Ulaznu prijavu obavite u Capitainerie u roku od 24 h od dolaska; do Shell Beacha je od luke kratka šetnja.",
+          "description": "Zaplovite na jug do otoka St. Barthélemy, dragulja francuskih Kariba. Pristanite u Gustaviji, otmjenom glavnom gradu otoka, poznatom po luksuznim butićima, vrhunskim restoranima i živom noćnom životu. Poslijepodne istražite zgrade crvenih krovova, povijesne utvrde i duty-free trgovine Gustavije. Navečer uživajte u večeri svjetske klase u restoranu francusko-karipske fuzijske kuhinje ili uz koktele u pomodnom plažnom baru. Ljubitelji plaža do Shell Beacha imaju tek kratku šetnju od luke.",
+          "thingsToDo": [
+            "Šetnja plažom Shell Beach, obalom neobično posutom školjkama",
+            "Kokteli uz zalazak u baru Le Select, izvornom mjestu „Cheeseburger in Paradise“",
+            "Fotografija luke Gustavia s vidikovca Fort Karl",
+            "Večera u restoranu Bonito ili Le Sereno na strani Saint-Jeana"
+          ],
+          "mooringTip": "Luka Gustavia zona je plaćenog priveza (60 € po noći za brodove do 45 stopa), pa se lučkoj kapetaniji unaprijed javite na VHF 12. Izvan luke sidrenje je dopušteno kod Anse de Public, na pijesku na 8–12 m. Ulaznu prijavu obavite u Capitainerie u roku od 24 h od dolaska."
+        },
+        "5": {
+          "shortDescription": "Oko 14 milja na sjeverozapad preko kanala natrag do Philipsburga na nizozemskom Sint Maartenu, u zaljevu Great Bay. Sidrite na pijesku na 4–6 m; uvala se ljulja od valova kruzera, ali sidro dobro drži. Ulaznu prijavu za Sint Maarten obavite na gatu Bobby’s Marina (25 USD po osobi). U blizini su duty-free trgovine u Front Streetu i promatranje aviona na plaži Maho.",
+          "description": "Danas prelazite na nizozemsku stranu St. Martina i stižete u Philipsburg, glavni grad Sint Maartena. Ovaj užurbani gradić poznat je po kupovini: Front Street prepun je duty-free trgovina s nakitom, elektronikom i modom. Opustite se na plaži Great Bay ili uživajte u vodenim sportovima duž živahnog drvenog šetališta. Za noćni život Philipsburg nudi kasina, beach klubove i restorane s mješavinom karipskih i međunarodnih okusa.",
+          "thingsToDo": [
+            "Šetnja duty-free trgovinama u Front Streetu i do povijesne zgrade suda",
+            "Ručak na šetalištu Boardwalk uz plažu Great Bay",
+            "Promatranje aviona na plaži Maho (15 minuta taksijem ili dinghyjem iz Simpson Baya)",
+            "Kokteli uz zalazak u baru Bamboo Bernie’s ili hotelu Holland House Beach"
+          ],
+          "mooringTip": "U Great Bayu sidrite na pijesku na 4–6 m; uvala je izložena samo južnom valu. Ulaznu prijavu za Sint Maarten obavite na gatu Bobby’s Marina (25 USD po osobi). Sidro dobro drži, ali uvala se ljulja od valova kruzera."
+        },
+        "6": {
+          "shortDescription": "Kratkih 6 milja na sjeverozapad natrag na francusku stranu, u zaljev Marigot. Sidrite na pijesku na 6–10 m, polja bova nema. Ponovnu prijavu na francuskoj strani obavite u lučkoj kapetaniji (capitainerie) u Marigotu, bez naknade, samo uz obrazac prijave. Ako val zatvori otvoreno sidrište, vezovi u Marini Royale stoje 2,5 € po stopi. Za šetnju u unutrašnjost tu je vidikovac Fort Louis.",
+          "description": "Vratite se na francusku stranu otoka i ponovno se usidrite kod Marigota. Posljednji puni dan posvetite francusko-karipskoj kulturi: lutajte tržnicama na otvorenom, popnite se do utvrde Fort Louis zbog panoramskog pogleda ili se počastite francuskim slasticama u lokalnoj boulangeriji. Ovo je i pravo vrijeme za kupnju suvenira ili za opuštanje na sidru uz čašu vina dok sunce zalazi iznad marine.",
+          "thingsToDo": [
+            "Uspon do utvrde Fort Louis zbog panoramskog pogleda na luku",
+            "Tržnica srijedom i subotom, lokalne rukotvorine i karipski začini",
+            "Croissant i kava u Sarafina’su na Boulevard de Grand-Case",
+            "Zalazak sunca kod La Belle Plage, na rivi uz marinu"
+          ],
+          "mooringTip": "U zaljevu Marigot sidrite na pijesku na 6–10 m, bez polja bova. Ponovnu prijavu na francuskoj strani obavite u lučkoj kapetaniji u Marigotu (bez naknade, samo obrazac prijave). Ako val zatvori otvoreno sidrište, vezovi u Marini Royale stoje 2,5 € po stopi."
+        },
+        "7": {
+          "shortDescription": "Posljednje jutro u Marini Royale. Po uobičajenom charter ugovoru brod mora biti vezan u marini do 17:00 u petak radi pregleda. Gorivo i vodu natočite na gatu marine, jer se na gatu za gorivo na dane predaje rano stvori red. Ako nastavljate jednosmjerno do St. Bartha ili Anguille, prije predaje broda obavite carinsku odjavu.",
+          "description": "Posljednje jutro uživajte u laganom doručku na brodu prije predaje. Ovisno o rasporedu, možda stignete još jednom prošetati tržnicama Marigota ili se okupati na nekoj od obližnjih plaža. Savršen je to završetak tjedna nezaboravnog jedrenja oko St. Martina i St. Bartha.",
+          "thingsToDo": [
+            "Posljednje jutarnje kupanje kod Anse Marcela ili u zaljevu Marigot",
+            "Gorivo i voda na gatu za gorivo u Marini Royale",
+            "Posljednji croissant na kopnu prije predaje broda",
+            "Primopredajni pregled broda s charter operaterom"
+          ],
+          "mooringTip": "Charter ugovori obično traže da brod bude vezan u Marini Royale do 17:00 u petak; provjerite točnu odredbu svog ugovora. Na gatu za gorivo na dane predaje rano se stvori red. Ako putovanje nastavljate jednosmjerno, prije predaje broda obavite carinsku odjavu."
+        }
+      }
     }
   },
   "areas": {
@@ -1163,6 +1246,12 @@
       "metaDesc": "Rute iz Le Marina: Anses d'Arlet, St-Pierre pod vulkanom i prijelaz do Pitonsa na St. Luciji — francusko karipsko jedrenje.",
       "title": "Francuske pekarnice, pogledi na vulkan, prave dionice",
       "description": "Martinique su Karibi koji ozbiljno shvaćaju ručak. Le Marin — najveća charter baza u Windwardsu — šalje vas s pravim baguetteima na brodu, a zapadna se obala odmotava u lakim dnevnim skokovima: kornjače pasu pod brodom na Grande Anse d'Arlet, St-Pierre mirno sjedi pod vulkanom koji ga je zbrisao 1902., destilerije ruma koje kušanje shvaćaju kao obrazovanje. Onda dolazi izbor: ostati francuski i blag, ili napraviti dvadeset milja dug prijelaz kanala do St. Lucije, gdje se Pitons dižu ravno iz mora, a bova pod njima najbolje je mjesto u prvom redu na Karibima. Kanal je iskreno jedrenje po pasatima — skratite jedra rano, krenite ujutro. Obje polovice tjedna zaslužuju svoje mjesto."
+    },
+    "st-martin": {
+      "metaTitle": "Jedriličarski itinerari za St. Martin | Boat4You",
+      "metaDesc": "Katamaranom iz Marigota, Anse Marcela i Philipsburga: Tintamarre, Île Fourchue, Gustavia na St. Barthu te jednosmjerno do Anguille ili Antigue.",
+      "title": "Pola francuski, pola nizozemski, St. Barth preko kanala",
+      "description": "St. Martin je sjeverna vrata Zavjetrinskih otoka i jedna od najlakših karipskih charter baza za posade koje preko Atlantika dolijeću u zračnu luku SXM. Otok je podijeljen na francusku (Saint-Martin) i nizozemsku stranu (Sint Maarten), a charter baze postoje na obje: Marigot i Anse Marcel na francuskoj sjevernoj obali, Philipsburg na nizozemskoj južnoj, dok ih laguna Simpson Bay povezuje kroz dva pokretna mosta.\n\nZavjetrinski trokut — St. Martin, St. Barth i Anguilla — iz svake je baze na dohvat jednodnevne plovidbe. Iz Marigota tipičan tjedan vodi preko otočića Tintamarre (zaštićenog prirodnog rezervata s najboljim snorkelingom na francuskoj strani), Île Fourchue (sidrišta među nenaseljenim stijenama na pola puta do St. Bartha) i luke Gustavia na St. Barthu (duty-free kupovina i najfotografiraniji niz superjahti na Karibima), pa natrag uz obalu Anguille.\n\nPasati su ovdje isti pouzdani istočnjaci od 15 do 22 čvora koji obilježavaju istočne Karibe. Zbijena geografija čini St. Martin najlakšom bazom za kratke chartere od 4–5 dana, takozvane „produžene vikende“, i za jednosmjerne prijelaze: većina operatera vozi premještanja brodova do Antigue preko St. Bartha i Anguille ili na jug, preko St. Kittsa i Nevisa, do kruga oko Guadeloupea."
     }
   }
 }

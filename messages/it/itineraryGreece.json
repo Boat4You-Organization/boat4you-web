@@ -4060,6 +4060,54 @@
           "mooringTip": "La banchina del paese è gratuita e vi prende di poppa, ma è esposta a sud e sud-ovest, quindi raddoppiate le cime di poppa se durante la notte si alza vento da sud. Siate sotto banchina entro le 18:00 di venerdì così da chiudere il check-out tecnico, poi dormite a bordo e lasciate la barca entro le 09:00 di sabato. L'aeroporto è a un quarto d'ora verso sud."
         }
       }
+    },
+    "lefkas-kefalonia-zakynthos-14-days": {
+      "metaTitle": "Ionio 14 giorni: Lefkas, Kefalonia e Zakynthos | Boat4You",
+      "metaDesc": "Due settimane a vela da Lefkas a Zakynthos via Kefalonia: Myrtos Beach, la grotta di Melissani, baie nascoste e la celebre bellezza delle isole Ionie.",
+      "days": {
+        "1": {
+          "description": "Da Lefkas scivoli sul blu dello Ionio fino a Meganisi, dove pendii color smeraldo abbracciano cale nascoste. A Spartochori, porticciolo da cartolina dove le barche danno fondo, i pescatori rammendano le reti all'ombra delle tamerici. Esplora in tender la grotta di Papanikolis, le cui sale piene d'eco offrirono riparo ai sommergibili durante la Seconda guerra mondiale, poi concediti un polpo all'aglio in una taverna sul mare mentre il sole scende oltre l'orizzonte. Cerca di dare fondo presto: il porticciolo è piccolo e si riempie in fretta."
+        },
+        "2": {
+          "description": "Segui le tracce di Odisseo fino a Ithaka e ormeggia a Vathy, una baia a ferro di cavallo cinta di cipressi. Nuota nelle acque cristalline della baia di Dexa oppure sali alla Scuola di Omero, dove le antiche pietre sussurrano storie di coraggio. La sera, un bicchiere di Robola nel cortile di una taverna: l'aria è carica di gelsomino, tra il tintinnio delle stoviglie e i profumi di una cucina tutta olio d'oliva."
+        },
+        "3": {
+          "description": "Scendi verso sud fino ad Assos, villaggio color pastello raccolto sotto un castello veneziano, su una penisola coperta di pini. Fai il bagno a Myrtos Beach, dove i ciottoli di marmo brillano come perle nella luce di mezzogiorno. Poi perditi tra i vicoli acciottolati di Assos: dalle taverne a conduzione familiare arriva il profumo del souvlaki alla griglia, e i gattini sonnecchiano sulle soglie."
+        },
+        "4": {
+          "description": "Giornata libera per goderti la quiete di Assos. Sali lungo il sentiero a picco sul mare fino ai resti del castello, con la vista aperta su tutto lo Ionio, oppure vai in barca alla spiaggia di Arginia, una cala isolata accessibile solo dal mare. Il segreto del posto: il caffè del pomeriggio al kafeneio, insieme agli abitanti e ai loro racconti sulle incursioni dei pirati."
+        },
+        "5": {
+          "description": "Fai rotta a ovest verso Lixouri, l'alter ego tranquillo di Argostoli. Attraversa la baia con il traghetto locale, poi goditi la spiaggia di Petani, dove le falesie si tuffano in un mare azzurro. A cena, la kreatopita, torta salata di maiale speziato, in una taverna affacciata sul porto acceso dal tramonto."
+        },
+        "6": {
+          "description": "Rotta su Zakynthos, l'isola della celebre spiaggia di Navagio, la baia del relitto. Arriva presto per evitare la folla e fai il bagno nell'acqua blu elettrico prima che arrivino le escursioni di mezzogiorno. Più tardi, esplora in kayak le grotte di Keri oppure assaggia il mandolato, dolce di miele e frutta secca, a Bochali, borgo d'altura con una vista che arriva fino all'infinito."
+        },
+        "7": {
+          "description": "Giornata libera per scoprire l'isola più a fondo. Unisciti a un'uscita in cerca di tartarughe nella baia di Laganas, spingiti fino alle sorgenti sulfuree di Xigia o assaggia lo stifado di coniglio cotto a fuoco lento a Meso Gerakari. Il consiglio in più: al tramonto, le scogliere di Kampi sono la prima fila dello Ionio per l'ora d'oro."
+        },
+        "8": {
+          "description": "Torna a Kefalonia e dai fondo a Sami. Fai il bagno ad Antisamos Beach, incorniciata da colline di un verde fitto, quasi da giungla, oppure esplora la grotta di Melissani, dove la luce del sole danza su un lago sotterraneo. A cena, barbounia (triglie) appena pescate in una taverna del porto, con un moscato della zona."
+        },
+        "9": {
+          "description": "Risali verso nord fino a Fiskardo, porto veneziano con ville color pastello allineate sul lungomare. Dopo una passeggiata all'ombra dei cipressi fino alla spiaggia di Emplisi, siediti a un tavolo sull'acqua per un bourdeto, il piccante stufato di pesce. Da non perdere: l'ultimo bicchiere della sera al ristorante Tassia, un'istituzione di Fiskardo."
+        },
+        "10": {
+          "description": "Attraversa verso il continente e dai fondo ad Astakos, porto tranquillo dove il tempo scorre al ritmo dei pescherecci. Passeggia lungo la banchina assaggiando la taramasalata montata con l'olio d'oliva del posto, poi guarda le stelle specchiarsi nell'acqua immobile del porto."
+        },
+        "11": {
+          "description": "Fuga a Kastos, un'isola dimenticata dal turismo di massa. Fai snorkeling nel blu profondo della Grotta Azzurra, sali ai mulini abbandonati e ordina la fasolada, zuppa di fagioli, alla taverna di Mama, dove la ricetta non cambia da cinquant'anni."
+        },
+        "12": {
+          "description": "Un breve salto ti porta a Kalamos, dove le pinete scendono fino alla costa rocciosa. Fai il bagno alla spiaggia di Asprogiali, cammina fino alle rovine del villaggio vecchio e assaggia il savoro in un ouzeri in riva al mare: pesce fritto croccante, insaporito con rosmarino e aceto."
+        },
+        "13": {
+          "description": "Invertita la rotta verso Lefkas, fermati all'isola di Skorpios, l'ex rifugio di Onassis, per un ultimo bagno in acque da miliardari. In una taverna della marina brinda al viaggio con ouzo e bakaliaros, il baccalà, mentre a D-Marin le drizze delle barche tintinnano nella brezza."
+        },
+        "14": {
+          "description": "Assapora un'ultima alba ionica a Lefkas Town, con i loukoumades grondanti di miele. Cerca al mercato i sandali di cuoio fatti a mano oppure percorri i ponti galleggianti sulla laguna. Lo Ionio non ti lascia mai andare davvero: riparti con i capelli striati di sale, la galleria del telefono piena di sogni turchesi e la promessa di tornare."
+        }
+      }
     }
   },
   "areas": {

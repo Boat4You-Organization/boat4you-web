@@ -1137,6 +1137,89 @@
           "mooringTip": "Plan je aankomst bij daglicht en controleer het terugbrengslot van de base; velen willen je langszij tegen het midden van de middag. Kom je vroeg in Le Marin, anker dan voor Sainte-Anne voor een laatste duik in plaats van in de jachthaven te blijven liggen."
         }
       }
+    },
+    "st-martin-route": {
+      "metaTitle": "7-daagse catamarantocht St Martin & St Barth | Boat4You",
+      "metaDesc": "Ontdek de Franse Caraïben op een 7-daagse catamarancharter vanuit St Martin, langs Marigot, Tintamarre, Île Fourchue, Gustavia, Philipsburg en meer.",
+      "days": {
+        "1": {
+          "shortDescription": "Zo'n 8 mijl noordoostwaarts langs de Franse kust, van Marigot naar Anse Marcel. Anker op zand in 4–6 m in de goed beschutte hoefijzerbaai: er is geen boeienveld, maar het anker houdt uitstekend bij de heersende oostenwind. Staat er een noordelijk front in de verwachting, dan is een ligplaats in Marina Royale, terug in Marigot, het alternatief voor slecht weer.",
+          "description": "Je charter begint in Marigot, een levendig stadje met een vleugje Franse Rivièra. Slenter over de kleurrijke markten, shop in designerboetieks of drink een café au lait bij de marina voordat je de trossen losgooit. Zeil dan noordoostwaarts naar Anse Marcel, een beschutte baai tussen groene heuvels. Het strand ligt er rustig bij en is ideaal om te zwemmen en te suppen. Aan wal vind je luxeresorts en verfijnde restaurants: de perfecte plek om te landen in je catamaranvakantie.",
+          "thingsToDo": [
+            "Zaterdagochtendmarkt aan de waterkant van Marigot voor lokaal handwerk en rum",
+            "Café au lait bij Sarafina's voor vertrek",
+            "Zwemmen en suppen bij het beschutte strand van Anse Marcel",
+            "Diner bij La Belle Epoque in Marina Royale"
+          ],
+          "mooringTip": "In Anse Marcel kun je alleen ankeren, op zand in 4–6 m; er is geen boeienveld. Het anker houdt uitstekend en de baai ligt beschut tegen de heersende oostenwind. Wil je liever een nacht in de marina, dan verhuurt Marina Royale in Marigot ligplaatsen (2,5 euro per voet, EU-walstroom van 220 V)."
+        },
+        "2": {
+          "shortDescription": "Een korte sprong van 3 mijl zuidoostwaarts naar Tintamarre, een klein onbewoond eiland in de Réserve Naturelle. Ankeren op zand in 4–6 m mag alleen in de westbaai; koraal- en zeegraszones zijn gemarkeerd met gele boeien. De reservaatbijdrage van 5 euro per dag betaal je via de SXM Marine Park-app. Op het beschermde rif langs de westkust zie je gegarandeerd schildpadden.",
+          "description": "Zeil een kort stukje naar Tintamarre, een klein onbewoond eiland dat aanvoelt als een echt schipbreukelingenparadijs. Ga voor anker in turquoise water en snorkel tussen zeeschildpadden, roggen en kleurige vissen. Het lange zandstrand is perfect voor een picknick, en over de paden landinwaarts spot je zeevogels en bijzondere flora. Zonder hotels, restaurants of winkels biedt Tintamarre pure afzondering, een hoogtepunt van elke catamarancharter rond St Martin.",
+          "thingsToDo": [
+            "Snorkel het beschermde rif langs de westkust van Tintamarre, schildpadden gegarandeerd",
+            "Strandpicknick op de lange boog van wit zand",
+            "Loop de gemarkeerde rondwandeling landinwaarts om zeevogels te spotten",
+            "Wandel naar de verlaten plantageruïnes uit de jaren 1930 aan de zuidpunt"
+          ],
+          "mooringTip": "Tintamarre is een Réserve Naturelle: ankeren op zand mag alleen in de westbaai, in 4–6 m; koraal- en zeegraszones zijn gemarkeerd met gele boeien. De reservaatbijdrage van 5 euro per dag betaal je via de SXM Marine Park-app."
+        },
+        "3": {
+          "shortDescription": "Zo'n 12 mijl zuidoostwaarts naar Île Fourchue, een onbewoond rotseiland in het zeereservaat van St Barths. Alleen boeien (20 euro per nacht via de reservaat-app), 12 in totaal, dus kom in het seizoen vóór 14:00 binnen. Uitklaren uit St Martin is verplicht voordat je aankomt, in Marigot of Marina Royale, want Île Fourchue valt onder St Barths.",
+          "description": "Vervolg je avontuur naar Île Fourchue, een ruig, onbewoond eiland tussen St Martin en St Barth. De ankerplaats is goed beschut en er liggen mooringboeien. Ga aan wal voor een korte wandeling: het uitzicht vanaf de heuvels reikt ver over de Caraïbische Zee en levert een van de mooiste foto's van de reis op. Ook het snorkelen is uitstekend, met kleurrijke koraaltuinen en een overvloed aan zeeleven.",
+          "thingsToDo": [
+            "Wandel over de zadelrug voor een 360°-uitzicht over het kanaal tussen Anguilla en St Barths",
+            "Snorkel de koraaltuin in de zuidbaai",
+            "Vooraf uitklaren uit St Martin (Marigot of Marina Royale) voordat je aankomt",
+            "Sundowner in de beschutte hoefijzerbaai, zonder enig ander licht aan wal"
+          ],
+          "mooringTip": "Île Fourchue hoort bij het zeereservaat van St Barths: alleen boeien (20 euro per nacht, te betalen via de reservaat-app). Ankeren is verboden. Het boeienveld telt 12 boeien; kom in het seizoen vóór 14:00 binnen."
+        },
+        "4": {
+          "shortDescription": "Zo'n 8 mijl zuidwaarts naar de haven van Gustavia op St Barthélemy. Dit is een betaalde mooringzone (60 euro per nacht tot en met 45 voet): roep vooraf de havenmeester op via VHF 12. Buiten de haven kun je ankeren bij Anse de Public, op zand in 8–12 m. Klaar binnen 24 uur na aankomst in bij de Capitainerie; Shell Beach ligt op korte loopafstand van de haven.",
+          "description": "Zeil zuidwaarts naar St Barthélemy, het juweel van de Franse Caraïben. Ga voor anker bij Gustavia, de chique hoofdstad van het eiland, bekend om zijn luxeboetieks, verfijnde restaurants en bruisende nachtleven. Verken 's middags de gebouwen met rode daken, de historische forten en de taxfreewinkels van Gustavia. Geniet 's avonds van een diner van wereldklasse in een Frans-Caribisch fusionrestaurant of nip aan een cocktail in een trendy strandbar. Strandliefhebbers lopen in een paar minuten van de haven naar Shell Beach.",
+          "thingsToDo": [
+            "Loop over Shell Beach, een bijzondere kust bezaaid met schelpen",
+            "Sundowner-cocktails in bar Le Select, het origineel achter Cheeseburger in Paradise",
+            "Fotografeer de haven van Gustavia vanaf het uitzichtpunt bij Fort Karl",
+            "Diner bij Bonito of Le Sereno aan de kant van Saint-Jean"
+          ],
+          "mooringTip": "De haven van Gustavia is een betaalde mooringzone (60 euro per nacht tot en met 45 voet): roep vooraf de havenmeester op via VHF 12. Buiten de haven mag je ankeren bij Anse de Public, op zand in 8–12 m. Klaar binnen 24 uur na aankomst in bij de Capitainerie."
+        },
+        "5": {
+          "shortDescription": "Zo'n 14 mijl noordwestwaarts over het kanaal terug naar Philipsburg op Sint Maarten, aan Great Bay. Anker op zand in 4–6 m; de baai rolt in het kielzog van de cruiseschepen, maar het anker houdt goed. Klaar Sint Maarten in aan de steiger van Bobby's Marina (US$25 per persoon om in te klaren). De taxfreewinkels van Front Street en het vliegtuigspotten op Maho Beach liggen dichtbij.",
+          "description": "Vandaag steek je over naar de Nederlandse kant van St Martin en kom je aan in Philipsburg, de hoofdstad van Sint Maarten. Deze bruisende stad staat bekend als winkelparadijs: Front Street is één lange rij taxfreezaken met sieraden, elektronica en mode. Ontspan op Great Bay Beach of ga watersporten langs de levendige boulevard. Voor het uitgaansleven heeft Philipsburg casino's, beachclubs en restaurants met een mix van Caribische en internationale smaken.",
+          "thingsToDo": [
+            "Slenter langs de taxfreewinkels van Front Street en het historische gerechtsgebouw",
+            "Lunch aan de Boardwalk op Great Bay Beach",
+            "Vliegtuigspotten op Maho Beach (15 minuten met de taxi of de bijboot vanaf Simpson Bay)",
+            "Cocktails bij zonsondergang bij Bamboo Bernie's of in het Holland House Beach Hotel"
+          ],
+          "mooringTip": "In Great Bay anker je op zand in 4–6 m; de baai ligt alleen open voor zuidelijke deining. Klaar Sint Maarten in aan de steiger van Bobby's Marina (US$25 per persoon om in te klaren). Het anker houdt goed, maar de baai rolt in het kielzog van de cruiseschepen."
+        },
+        "6": {
+          "shortDescription": "Een korte tocht van 6 mijl noordwestwaarts terug naar de Franse kant en Marigot Bay. Anker op zand in 6–10 m, er is geen boeienveld. Klaar opnieuw in voor de Franse kant bij de capitainerie van Marigot (gratis, alleen een aangifteformulier). Maakt deining de open ankerplaats onbruikbaar, dan kosten ligplaatsen in Marina Royale 2,5 euro per voet. De wandeling landinwaarts gaat naar het uitzichtpunt van Fort Louis.",
+          "description": "Zeil terug naar de Franse kant van het eiland en ga opnieuw voor anker bij Marigot. Besteed je laatste volle dag aan de Frans-Caribische cultuur: dwaal over de openluchtmarkten, klim naar Fort Louis voor het panorama of verwen jezelf met Frans gebak van een lokale boulangerie. Het is ook een mooi moment om souvenirs te kopen, of gewoon te ontspannen voor anker met een glas wijn terwijl de zon ondergaat boven de marina.",
+          "thingsToDo": [
+            "Klim naar Fort Louis voor een panorama over de haven",
+            "Markt op woensdag en zaterdag voor lokaal handwerk en Caribische specerijen",
+            "Croissant en koffie bij Sarafina's aan de Boulevard de Grand-Case",
+            "Zonsondergang bij La Belle Plage aan de marinakade"
+          ],
+          "mooringTip": "In Marigot Bay anker je op zand in 6–10 m; er is geen boeienveld. Klaar opnieuw in voor de Franse kant bij de capitainerie van Marigot (gratis, alleen een aangifteformulier). Maakt deining de open ankerplaats onbruikbaar, dan kosten ligplaatsen in Marina Royale 2,5 euro per voet."
+        },
+        "7": {
+          "shortDescription": "Laatste ochtend in Marina Royale. Volgens het gangbare chartercontract ligt de boot vrijdag uiterlijk om 17:00 langszij voor de inspectie. Tank brandstof en water bij aan de steiger van de marina; op overdrachtsdagen loopt de bunkersteiger al vroeg vol. Ga je verder op een enkele reis naar St Barths of Anguilla, klaar dan vóór de overdracht uit bij de douane.",
+          "description": "Geniet op je laatste ochtend van een ontspannen ontbijt aan boord voordat je uitcheckt. Afhankelijk van je planning is er misschien nog tijd voor een laatste wandeling over de markten van Marigot of een duik bij een van de stranden in de buurt. Het perfecte slot van een week onvergetelijk zeilen rond St Martin en St Barth.",
+          "thingsToDo": [
+            "Laatste ochtendduik bij Anse Marcel of in Marigot Bay",
+            "Brandstof en water bijtanken aan de bunkersteiger van Marina Royale",
+            "Een laatste croissant aan wal voor de overdracht",
+            "Overdrachtsinspectie met de charterbasis"
+          ],
+          "mooringTip": "Chartercontracten vragen meestal dat de boot vrijdag uiterlijk om 17:00 langszij ligt in Marina Royale. Controleer de precieze clausule; op overdrachtsdagen loopt de bunkersteiger al vroeg vol. Vaar je daarna door op een enkele reis, klaar dan vóór de overdracht uit bij de douane."
+        }
+      }
     }
   },
   "areas": {
@@ -1163,6 +1246,12 @@
       "metaDesc": "Routes vanuit Le Marin: Anses d'Arlet, St-Pierre onder de vulkaan en de oversteek naar de Pitons van St. Lucia — Frans-Caribisch zeilen.",
       "title": "Franse bakkerijen, vulkaanzichten, echte overtochten",
       "description": "Martinique is de Caraïben die de lunch serieus neemt. Le Marin — de grootste charterbasis van de Windwards — stuurt je met echte baguettes aan boord op pad, en de westkust rolt zich uit in makkelijke daghops: schildpadden die onder de boot grazen bij Grande Anse d'Arlet, St-Pierre dat stil ligt onder de vulkaan die het in 1902 wegvaagde, rumstokerijen die proeven als educatie behandelen. Dan komt de keuze: Frans en rustig blijven, of de kanaaloversteek van twintig mijl naar St. Lucia maken, waar de Pitons recht uit zee oprijzen en een boei eronder de beste eerste rang van de Caraïben is. Het kanaal is eerlijk passaatwindzeilen — reef op tijd, ga met de ochtend mee. Beide helften van de week verdienen hun plek."
+    },
+    "st-martin": {
+      "metaTitle": "Zeilroutes St. Martin & Leeward-driehoek | Boat4You",
+      "metaDesc": "Catamarancharters vanuit Marigot, Anse Marcel en Philipsburg: Tintamarre, Île Fourchue, Gustavia (St. Barths) en enkele reizen naar Anguilla of Antigua.",
+      "title": "Twee vlaggen op één eiland, St. Barths op een dagtocht",
+      "description": "St. Martin is de noordelijke toegangspoort tot de Leeward Islands, in het Nederlands de Bovenwindse Eilanden, en een van de makkelijkste charterbases in de Caraïben voor bemanningen die via SXM over de Atlantische Oceaan komen aanvliegen. Het eiland is verdeeld in een Franse kant (Saint-Martin) en een Nederlandse kant (Sint Maarten), en aan beide kanten liggen charterbases: Marigot en Anse Marcel aan de Franse noordkust, Philipsburg aan de Nederlandse zuidkust, met daartussen de Simpson Bay Lagoon en zijn twee beweegbare bruggen.\n\nDe Leeward-driehoek van St. Martin, St. Barths en Anguilla ligt vanaf elke basis binnen één dagtocht. Vanuit Marigot loopt de typische week via Tintamarre (een beschermd natuurreservaat met het beste snorkelwater van de Franse kant), Île Fourchue (een ankerplaats tussen onbewoonde rotsen, halverwege St. Barths) en de haven van Gustavia op St. Barths (taxfree winkelen en de meest gefotografeerde rij superjachten van de Caraïben), om dan langs de kust van Anguilla terug te keren.\n\nDe passaat is hier dezelfde betrouwbare oostenwind van 15-22 knopen die de hele oostelijke Caraïben bepaalt. Door de compacte ligging is St. Martin de makkelijkste basis voor korte charters van 4-5 dagen, een verlengd weekend op het water, en voor overtochten op enkele reis: de meeste charterbedrijven varen verplaatsingstochten naar Antigua via St. Barths en Anguilla, of zuidwaarts via St. Kitts en Nevis naar de ronde langs Guadeloupe."
     }
   }
 }

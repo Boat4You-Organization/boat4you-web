@@ -4060,6 +4060,54 @@
           "mooringTip": "El muelle del pueblo es gratuito y se amarra de popa, aunque queda expuesto al sur y al suroeste, así que dobla las estachas de popa si se levanta el sur durante la noche. Ponte al costado antes de las 18:00 del viernes para terminar la revisión técnica, luego duerme a bordo y deja el barco antes de las 09:00 del sábado. El aeropuerto está a un cuarto de hora al sur."
         }
       }
+    },
+    "lefkas-kefalonia-zakynthos-14-days": {
+      "metaTitle": "Lefkas, Kefalonia y Zakynthos en 14 días | Boat4You",
+      "metaDesc": "Chárter de 14 días desde Lefkas por Kefalonia hasta Zakynthos: playa de Myrtos, cueva de Melissani, calas escondidas y la célebre belleza del Jónico.",
+      "days": {
+        "1": {
+          "description": "Desde Lefkas, deslízate sobre el azul del Jónico hasta Meganisi, donde laderas color esmeralda abrazan calas secretas. En Spartochori, un puerto de postal donde echar el ancla, los pescadores remiendan sus redes a la sombra de los tamariscos. Entra con la auxiliar en la cueva de Papanikolis, cuyas galerías, llenas de eco, dieron refugio a submarinos durante la Segunda Guerra Mundial, y después date un festín de pulpo al ajo en una taberna junto al mar mientras el sol se hunde en el horizonte. Procura fondear temprano: este puertecito se llena enseguida."
+        },
+        "2": {
+          "description": "Sigue la estela de Odiseo hasta Ithaka y amarra en Vathy, una bahía en herradura rodeada de cipreses. Explora las aguas cristalinas de la bahía de Dexa o sube a la Escuela de Homero, donde las piedras antiguas susurran historias de valor. Al caer la tarde, pide una copa de Robola en el patio de una taberna, con el aire cargado de jazmín y del tintineo de los platos de una cocina regada con aceite de oliva."
+        },
+        "3": {
+          "description": "Navega al sur hasta Assos, un pueblo de fachadas pastel a los pies de un castillo veneciano, en una península cubierta de pinos. Báñate en la playa de Myrtos, donde los cantos de mármol brillan como perlas con la luz del mediodía. Después, piérdete por el empedrado de Assos, donde el olor a souvlaki a la brasa sale de los restaurantes familiares y los gatitos dormitan en los portales."
+        },
+        "4": {
+          "description": "Día libre para empaparte de la calma de Assos. Sube por el sendero del acantilado hasta las ruinas del castillo, con vistas panorámicas sobre el Jónico, o ve en barco hasta la playa de Arginia, una cala remota a la que solo se llega por mar. Secreto local: tómate el café de la tarde en el kafeneio con los vecinos y deja que te cuenten sus historias de ataques piratas."
+        },
+        "5": {
+          "description": "Navega al oeste hasta Lixouri, el contrapunto tranquilo de Argostoli. Cruza la bahía en el ferri local y relájate después en la playa de Petani, donde los acantilados se hunden en un mar de un azul intenso. Para cenar, kreatopita, una empanada de cerdo especiada, en una taberna con vistas al puerto bañado por la luz del atardecer."
+        },
+        "6": {
+          "description": "Navega hasta Zakynthos, hogar de la famosa playa de Navagio (la cala del Naufragio). Llega temprano para esquivar a las multitudes y báñate en sus aguas azul eléctrico antes de que aparezcan las excursiones del mediodía. Más tarde, recorre en kayak las cuevas de Keri o prueba el mandolato, un turrón de miel y frutos secos, en Bochali, un pueblo en lo alto de la colina con vistas que llegan hasta el infinito."
+        },
+        "7": {
+          "description": "Día libre para conocer la isla más a fondo. Sal en busca de tortugas por la bahía de Laganas, acércate a las fuentes sulfurosas de Xigia o pide un stifado de conejo guisado a fuego lento en Meso Gerakari. Consejo de experto: al atardecer, los acantilados de Kampi son la primera fila del Jónico para disfrutar de la hora dorada."
+        },
+        "8": {
+          "description": "Vuelve a Kefalonia y fondea en Sami. Báñate en la playa de Antisamos, enmarcada por colinas de vegetación selvática, o explora la cueva de Melissani, donde la luz del sol baila sobre un lago subterráneo. Para cenar, barbounia (salmonetes) recién pescados en una taberna del puerto, acompañados de un moscatel de la zona."
+        },
+        "9": {
+          "description": "Navega al norte hasta Fiskardo, un puerto veneciano con casonas en tonos pastel a lo largo del paseo marítimo. Pasea a la sombra de los cipreses hasta la playa de Emplisi y luego date un festín de bourdeto, un guiso de pescado picante, en una mesa junto al agua. Para terminar, la última copa en el restaurante Tassia, toda una institución en Fiskardo que no te puedes perder."
+        },
+        "10": {
+          "description": "Cruza a tierra firme y fondea en Astakos, un puerto tranquilo donde el tiempo avanza al ritmo de las barcas de pesca. Pasea por el muelle probando taramasalata batida con aceite de oliva de la zona y, ya de noche, contempla las estrellas reflejadas en el agua en calma del puerto."
+        },
+        "11": {
+          "description": "Escápate a Kastos, una isla que el turismo de masas nunca llegó a descubrir. Haz snorkel en el fondo añil de la Cueva Azul, sube hasta los molinos abandonados y pide la fasolada, una sopa de alubias, en la taberna Mama's, donde la receta no ha cambiado en cincuenta años."
+        },
+        "12": {
+          "description": "Kalamos queda a un salto, y allí los pinares bajan hasta una costa rocosa. Báñate en la playa de Asprogiali, camina hasta las ruinas del pueblo viejo y pide en un ouzeri de playa el pescado savoro, frito bien crujiente y aliñado con romero y vinagre."
+        },
+        "13": {
+          "description": "Pon rumbo de vuelta a Lefkas con una parada en la isla de Skorpios, el antiguo refugio de Onassis, para un último baño en aguas dignas de un multimillonario. Ya en D-Marin, brinda por el viaje con ouzo y bakaliaros (bacalao en salazón) en una taberna de la marina, mientras la jarcia de los veleros tintinea con la brisa."
+        },
+        "14": {
+          "description": "Saborea un último amanecer jónico en Lefkas Town con unos loukoumades empapados en miel. Busca sandalias de cuero hechas a mano en el mercado o recorre los puentes flotantes que cruzan la laguna. El Jónico nunca te deja marchar del todo, así que despídete con el pelo lleno de sal, la galería del móvil repleta de sueños turquesa y la promesa de volver."
+        }
+      }
     }
   },
   "areas": {

@@ -23,6 +23,12 @@
       "metaDesc": "Routes from Le Marin: Anses d'Arlet, St-Pierre under the volcano and the crossing to St. Lucia's Pitons — French Caribbean sailing.",
       "title": "French bakeries, volcano views, real passages",
       "description": "Martinique is the Caribbean that takes lunch seriously. Le Marin — the biggest charter base in the Windwards — sends you out with proper baguettes aboard, and the west coast unrolls in easy day-hops: turtles grazing under the boat at Grande Anse d'Arlet, St-Pierre sitting quietly beneath the volcano that erased it in 1902, rum distilleries that treat tasting as education. Then comes the choice: stay French and gentle, or make the twenty-mile channel crossing to St. Lucia, where the Pitons rise straight out of the sea and a mooring under them is the Caribbean's best front-row seat. The channel is honest trade-wind sailing — reef early, go with the morning. Both halves of the week earn their place."
+    },
+    "st-martin": {
+      "metaTitle": "St. Martin Yacht Charter Itineraries | Leeward Triangle Routes",
+      "metaDesc": "Explore St. Martin catamaran charters from Marigot, Anse Marcel and Philipsburg — Tintamarre, Île Fourchue, Gustavia (St. Barths) and onward Anguilla / Antigua one-way options.",
+      "title": "St. Martin area yacht charter itinerary",
+      "description": "St. Martin is the northern gateway to the Leeward Islands and one of the easiest Caribbean charter bases for crews flying transatlantic via SXM. The island is split between French (Saint-Martin) and Dutch (Sint Maarten) sides, and charter bases sit on both — Marigot and Anse Marcel on the French north coast, Philipsburg on the Dutch south coast, with Simpson Bay Lagoon connecting them via two opening bridges.\n\nThe Leeward triangle — St. Martin, St. Barths, and Anguilla — sits within a single day-sail of each base. From Marigot the typical week routes through Tintamarre Island (a protected nature reserve with the best snorkelling on the French side), Île Fourchue (anchorage among uninhabited rocks halfway to St. Barths), Gustavia harbour on St. Barths (duty-free shopping and the Caribbean's most photographed superyacht line-up), and back via the Anguilla coast.\n\nTrade winds here are the same reliable 15-22-knot easterlies that define the Eastern Caribbean. The compact geography makes St. Martin the easiest base for short 4-5 day \"long-weekend\" charters and for one-way crossings — most operators run repositioning legs to Antigua via St. Barths and Anguilla, or south through St. Kitts and Nevis to the Guadeloupe loop."
     }
   },
   "routes": {
@@ -1161,6 +1167,89 @@
             "Return the boat fuelled at Le Marin"
           ],
           "mooringTip": "Time your arrival for daylight and check the base's return slot; many want you alongside by mid-afternoon. If you reach Le Marin early, anchor off Sainte-Anne for a final swim rather than sitting in the marina."
+        }
+      }
+    },
+    "st-martin-route": {
+      "metaTitle": "7-Day St Martin Catamaran Charter Itinerary: St Barth & Beyond",
+      "metaDesc": "Discover the French Caribbean on a 7-day St Martin catamaran charter. Visit Marigot, Tintamarre, Île Fourchue, Gustavia, Philipsburg, and more",
+      "days": {
+        "1": {
+          "shortDescription": "About 8 NM north-east up the French coast from Marigot to Anse Marcel. Anchor on sand at 4–6 m in the well-protected horseshoe bay — no mooring field, but holding is excellent under prevailing easterlies. Marina Royale slips back in Marigot are the wet-weather alternative if a northerly front is forecast.",
+          "description": "Your charter begins in Marigot, a lively town with a French Riviera flair. Stroll through its colorful markets, shop at designer boutiques, or enjoy a café au lait by the marina before setting sail. Sail northeast to Anse Marcel, a sheltered bay surrounded by green hills. The beach here is calm and ideal for swimming and paddleboarding. Ashore, you’ll find luxury resorts and fine dining options, making it the perfect place to settle into your catamaran holiday.",
+          "thingsToDo": [
+            "Saturday morning market on Marigot waterfront for local crafts and rum",
+            "Café au lait at Sarafina’s before departure",
+            "Swim and SUP off Anse Marcel’s sheltered beach",
+            "Dinner at La Belle Epoque in Marina Royale"
+          ],
+          "mooringTip": "Anse Marcel is anchor-only on sand at 4–6 m, no mooring field. Excellent holding; bay protected from prevailing easterlies. Marina Royale in Marigot has slip rentals (€2.5/ft, EU 220 V power) if you prefer a marina overnight."
+        },
+        "2": {
+          "shortDescription": "Short 3 NM hop south-east to Tintamarre — a small uninhabited island in the Réserve Naturelle. Anchor on sand at 4–6 m on the west bay only; coral and seagrass zones marked with yellow buoys. €5/day reserve fee paid via the SXM Marine Park app. Turtles guaranteed on the protected west-shore reef.",
+          "description": "Sail a short distance to Tintamarre, a small uninhabited island that feels like a true castaway paradise. Anchor in turquoise waters and enjoy snorkeling among sea turtles, rays, and colorful fish. The long sandy beach is perfect for a picnic, while the island’s inland trails offer the chance to spot seabirds and unique flora. With no hotels, restaurants, or shops, Tintamarre offers pure seclusion—a highlight of any St Martin catamaran charter.",
+          "thingsToDo": [
+            "Snorkel the protected reef on Tintamarre’s west shore — turtles guaranteed",
+            "Beach picnic on the long white-sand crescent",
+            "Hike the marked inland loop for seabird-watching",
+            "Walk to the abandoned 1930s plantation ruins on the south end"
+          ],
+          "mooringTip": "Tintamarre is a Réserve Naturelle — anchoring on sand is allowed at 4–6 m on the west bay only; coral and seagrass zones marked with yellow buoys. €5/day reserve fee paid via the SXM Marine Park app."
+        },
+        "3": {
+          "shortDescription": "About 12 NM south-east to Île Fourchue — uninhabited rocky island in the St Barths Marine Reserve. Mooring-only (€20/night via reserve app), 12 buoys total — arrive before 14:00 in season. Pre-clearance required: clear out of St Martin at Marigot or Marina Royale before arriving (Île Fourchue is St Barths jurisdiction).",
+          "description": "Continue your adventure to Île Fourchue, a rugged, uninhabited island between St Martin and St Barth. The anchorage here is well-protected, with mooring balls available. Go ashore for a short hike—the views from the island’s hills stretch across the Caribbean Sea, making it one of the best photo opportunities of the trip. Snorkeling is also excellent, with vibrant coral gardens and an abundance of marine life.",
+          "thingsToDo": [
+            "Hike the saddle ridge for 360° views over the Anguilla / St Barths channel",
+            "Snorkel the coral garden on the south bay",
+            "Pre-clearance: clear out of St Martin (Marigot or Marina Royale) before arriving",
+            "Sundowner in the protected horseshoe anchorage with no other lights ashore"
+          ],
+          "mooringTip": "Île Fourchue is part of the St Barths Marine Reserve — moorings only (€20/night, paid via reserve app). Anchoring is forbidden. Mooring field has 12 buoys; arrive before 14:00 in season."
+        },
+        "4": {
+          "shortDescription": "About 8 NM south to Gustavia harbour on St Barthélemy. Paid-mooring zone (€60/night for ≤45 ft) — VHF 12 ahead to the harbour master; outside-harbour anchorage at Anse de Public on sand at 8–12 m. Clear in at the Capitainerie within 24 h of arrival; Shell Beach is a short walk from the harbour.",
+          "description": "Sail south to St Barthélemy, the jewel of the French Caribbean. Anchor in Gustavia, the island’s chic capital, famous for its luxury boutiques, fine dining, and lively nightlife. Spend the afternoon exploring Gustavia’s red-roofed buildings, historic forts, and duty-free shops. In the evening, enjoy world-class dining at a French-Caribbean fusion restaurant or sip cocktails at a trendy beach bar. For beach lovers, Shell Beach is just a short walk from the harbor.",
+          "thingsToDo": [
+            "Walk Shell Beach for the unique seashell-strewn shoreline",
+            "Sundowner cocktails at Le Select bar (the original Cheeseburger in Paradise)",
+            "Photo Gustavia harbour from the Fort Karl viewpoint",
+            "Dinner at Bonito or Le Sereno on the Saint-Jean side"
+          ],
+          "mooringTip": "Gustavia harbour is a paid mooring zone (€60/night for ≤45 ft) — VHF 12 ahead to the harbour master. Anchoring outside the harbour at Anse de Public is allowed at 8–12 m sand. Clear in at the Capitainerie within 24 h of arrival."
+        },
+        "5": {
+          "shortDescription": "About 14 NM north-west across the channel back to Sint Maarten’s Philipsburg on Great Bay. Anchor on sand at 4–6 m; bay rolls in cruise-ship wake but holding is good. Clear into Sint Maarten at Bobby’s Marina dock (US$25 per person inbound clearance). Front Street duty-free shops, Maho Beach plane-spotting nearby.",
+          "description": "Today you’ll cross to the Dutch side of St Martin, arriving in Philipsburg, the capital of Sint Maarten. This bustling town is known for its shopping—Front Street is lined with duty-free stores selling jewelry, electronics, and fashion. Relax on Great Bay Beach or enjoy water sports along the lively boardwalk. For nightlife, Philipsburg offers casinos, beach clubs, and restaurants serving a mix of Caribbean and international flavors.",
+          "thingsToDo": [
+            "Walk Front Street duty-free shops and the historic courthouse",
+            "Lunch at the Boardwalk on Great Bay Beach",
+            "Maho Beach plane-spotting (15-min taxi or dinghy ride from Simpson Bay)",
+            "Sunset cocktails at Bamboo Bernie’s or the Holland House Beach Hotel"
+          ],
+          "mooringTip": "Great Bay anchor on sand at 4–6 m, exposed to south swell only. Clear into Sint Maarten at the Bobby’s Marina dock (US$25 per person inbound clearance). Holding is good but the bay rolls in cruise-ship wake."
+        },
+        "6": {
+          "shortDescription": "Short 6 NM sail north-west back to the French side and Marigot Bay. Anchor on sand at 6–10 m, no mooring field. Re-clear into the French side at Marigot capitainerie (no fee, declaration form only). Marina Royale slips at €2.5/ft if a swell event closes the open anchorage. Fort Louis viewpoint is the inland walk.",
+          "description": "Sail back to the French side of the island and anchor again in Marigot. Spend your final full day enjoying French-Caribbean culture: wander through the open-air markets, visit Fort Louis for panoramic views, or indulge in French pastries at a local boulangerie. This is also a great time to shop for souvenirs or simply relax at anchor with a glass of wine as the sun sets over the marina.",
+          "thingsToDo": [
+            "Climb to Fort Louis for panoramic harbour views",
+            "Wednesday/Saturday market for local crafts and Caribbean spices",
+            "Croissant and coffee at Sarafina’s on Boulevard de Grand-Case",
+            "Sunset at La Belle Plage on the marina front"
+          ],
+          "mooringTip": "Marigot Bay anchor on sand at 6–10 m, no mooring field. Re-clear into French side at Marigot capitainerie (no fee, just declaration form). Marina Royale slips €2.5/ft if a swell event closes the open anchorage."
+        },
+        "7": {
+          "shortDescription": "Final morning at Marina Royale. Boat alongside by 17:00 Friday for inspection per typical charter contract. Top up fuel and water at the marina dock — the fuel dock fills early on hand-back days. Customs out-clearance before hand-back if continuing on a one-way to St Barths or Anguilla.",
+          "description": "On your final morning, enjoy a leisurely breakfast onboard before check-out. Depending on your schedule, you may have time for one last stroll through Marigot’s markets or a swim at the nearby beaches. It’s the perfect ending to a week of unforgettable sailing through St Martin and St Barth.",
+          "thingsToDo": [
+            "Final morning swim off Anse Marcel or Marigot Bay",
+            "Top up fuel and water at the Marina Royale fuel dock",
+            "Last croissant ashore before hand-back",
+            "Hand-back inspection with the charter operator"
+          ],
+          "mooringTip": "Charter contracts typically require boat alongside Marina Royale by 17:00 Friday. Confirm specific clause; fuel dock fills early on hand-back days. Customs out-clearance before hand-back if continuing the trip on a one-way."
         }
       }
     }

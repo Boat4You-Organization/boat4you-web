@@ -1137,6 +1137,89 @@
           "mooringTip": "Calcula tu llegada con luz de día y consulta el horario de devolución de la base; muchas te quieren atracado a media tarde. Si llegas pronto a Le Marin, fondea frente a Sainte-Anne para un último baño en vez de quedarte en la marina."
         }
       }
+    },
+    "st-martin-route": {
+      "metaTitle": "St Martin y St Barth en 7 días | Boat4You",
+      "metaDesc": "Descubre el Caribe francés en un chárter de catamarán de 7 días por St Martin: Marigot, Tintamarre, Île Fourchue, Gustavia, Philipsburg y mucho más.",
+      "days": {
+        "1": {
+          "shortDescription": "Unas 8 millas al noreste remontando la costa francesa, de Marigot a Anse Marcel. Fondea sobre arena en 4–6 m dentro de la bahía en herradura, muy bien abrigada: no hay campo de boyas, pero el agarre es excelente con los alisios dominantes del este. Si se anuncia un frente del norte, los amarres de la Marina Royale, de vuelta en Marigot, son la alternativa para el mal tiempo.",
+          "description": "Tu chárter empieza en Marigot, una localidad animada con aire de Riviera francesa. Pasea por sus mercados llenos de color, entra en sus boutiques de diseño o tómate un café au lait junto a la marina antes de soltar amarras. Después, rumbo noreste hasta Anse Marcel, una bahía abrigada entre colinas verdes. Su playa, de aguas tranquilas, es ideal para nadar y hacer paddle surf. En tierra esperan resorts de lujo y buenos restaurantes, así que es el sitio perfecto para entrar en el ritmo de tus vacaciones en catamarán.",
+          "thingsToDo": [
+            "Mercado del sábado por la mañana en el paseo marítimo de Marigot: artesanía local y ron",
+            "Café au lait en Sarafina’s antes de zarpar",
+            "Bañarse y hacer paddle surf en la playa abrigada de Anse Marcel",
+            "Cenar en La Belle Epoque, en la Marina Royale"
+          ],
+          "mooringTip": "En Anse Marcel solo se fondea, sobre arena en 4–6 m y sin campo de boyas. El agarre es excelente y la bahía queda protegida de los alisios dominantes del este. Si prefieres pasar la noche en marina, la Marina Royale, en Marigot, alquila amarres a 2,5 euros por pie, con toma de corriente europea de 220 V."
+        },
+        "2": {
+          "shortDescription": "Salto corto de 3 millas al sureste hasta Tintamarre, una pequeña isla deshabitada dentro de la Réserve Naturelle. Fondea sobre arena en 4–6 m y solo en la bahía oeste; las zonas de coral y de fanerógamas están balizadas con boyas amarillas. La tasa de la reserva, de 5 euros al día, se paga en la app del SXM Marine Park. Tortugas garantizadas en el arrecife protegido de la costa oeste.",
+          "description": "Una navegación corta te lleva a Tintamarre, una islita deshabitada que parece un auténtico paraíso de náufrago. Fondea en aguas turquesa y haz snorkel entre tortugas marinas, rayas y peces de colores. La larga playa de arena es perfecta para un pícnic, y los senderos del interior permiten avistar aves marinas y una flora singular. Sin hoteles, restaurantes ni tiendas, Tintamarre es aislamiento en estado puro y uno de los grandes momentos de cualquier chárter en catamarán por St Martin.",
+          "thingsToDo": [
+            "Snorkel en el arrecife protegido de la costa oeste de Tintamarre, con tortugas garantizadas",
+            "Pícnic en la larga media luna de arena blanca",
+            "Recorrer el circuito balizado del interior para avistar aves marinas",
+            "Caminar hasta las ruinas de la plantación abandonada de la década de 1930, en el extremo sur"
+          ],
+          "mooringTip": "Tintamarre es Réserve Naturelle: solo se permite fondear sobre arena en 4–6 m y únicamente en la bahía oeste; las zonas de coral y de fanerógamas están balizadas con boyas amarillas. La tasa de la reserva, de 5 euros al día, se paga en la app del SXM Marine Park."
+        },
+        "3": {
+          "shortDescription": "Unas 12 millas al sureste hasta Île Fourchue, una isla rocosa y deshabitada dentro de la Reserva Marina de St Barths. Solo boyas, 12 en total (20 euros la noche, a través de la app de la reserva): en temporada, llega antes de las 14:00. Hay que despachar antes de llegar: haz la salida de St Martin en Marigot o en la Marina Royale, porque Île Fourchue pertenece a la jurisdicción de St Barths.",
+          "description": "Sigue la aventura hasta Île Fourchue, una isla agreste y deshabitada entre St Martin y St Barth. El fondeadero está bien protegido y tiene boyas de amarre. Baja a tierra para una caminata corta: desde las colinas, la vista se abre sobre el mar Caribe y regala algunas de las mejores fotos del viaje. El snorkel también es excelente, con jardines de coral llenos de color y abundante vida marina.",
+          "thingsToDo": [
+            "Subir por la cresta del collado para ver en 360° el canal entre Anguilla y St Barths",
+            "Snorkel en el jardín de coral de la bahía sur",
+            "Despacho previo: hacer la salida de St Martin (Marigot o la Marina Royale) antes de llegar",
+            "Copa al atardecer en el abrigado fondeadero en herradura, sin una sola luz en tierra"
+          ],
+          "mooringTip": "Île Fourchue forma parte de la Reserva Marina de St Barths: solo boyas (20 euros la noche, que se pagan en la app de la reserva) y prohibido fondear. El campo tiene 12 boyas; en temporada, llega antes de las 14:00."
+        },
+        "4": {
+          "shortDescription": "Unas 8 millas al sur hasta el puerto de Gustavia, en St Barthélemy. Es zona de amarre de pago (60 euros la noche para barcos de hasta 45 pies): llama antes al capitán de puerto por VHF 12. Fuera del puerto se fondea en Anse de Public, sobre arena en 8–12 m. Haz la entrada en la Capitainerie en las 24 horas siguientes a la llegada; Shell Beach queda a un corto paseo del puerto.",
+          "description": "Rumbo sur hasta St Barthélemy, la joya del Caribe francés. Fondea en Gustavia, su elegante capital, famosa por las boutiques de lujo, la buena mesa y una vida nocturna animada. Dedica la tarde a recorrer sus edificios de tejados rojos, los fuertes históricos y las tiendas libres de impuestos. Por la noche, date una cena de primer nivel en un restaurante de fusión franco-caribeña o tómate unos cócteles en un chiringuito de moda. Y si lo tuyo es la playa, Shell Beach está a un corto paseo del puerto.",
+          "thingsToDo": [
+            "Pasear por Shell Beach, una orilla única alfombrada de conchas",
+            "Cócteles al atardecer en el bar Le Select (el Cheeseburger in Paradise original)",
+            "Fotografiar el puerto de Gustavia desde el mirador de Fort Karl",
+            "Cenar en Bonito o en Le Sereno, en el lado de Saint-Jean"
+          ],
+          "mooringTip": "El puerto de Gustavia es zona de amarre de pago (60 euros la noche para barcos de hasta 45 pies): llama antes al capitán de puerto por VHF 12. Fuera del puerto se permite fondear en Anse de Public, sobre arena en 8–12 m. Haz la entrada en la Capitainerie en las 24 horas siguientes a la llegada."
+        },
+        "5": {
+          "shortDescription": "Unas 14 millas al noroeste, cruzando el canal de vuelta a Sint Maarten, hasta Philipsburg, en Great Bay. Fondea sobre arena en 4–6 m; las estelas de los cruceros meten balance en la bahía, pero el agarre es bueno. Haz la entrada en Sint Maarten en el muelle de Bobby’s Marina (25 dólares estadounidenses por persona por el despacho de entrada). Cerca quedan las tiendas libres de impuestos de Front Street y Maho Beach, para ver pasar los aviones a ras de playa.",
+          "description": "Hoy cruzas al lado neerlandés de St Martin y llegas a Philipsburg, la capital de Sint Maarten. Esta ciudad bulliciosa es conocida por sus compras: Front Street está flanqueada de tiendas libres de impuestos con joyas, electrónica y moda. Relájate en Great Bay Beach o prueba los deportes acuáticos a lo largo de su animado paseo marítimo. Para la noche, Philipsburg ofrece casinos, clubs de playa y restaurantes con una mezcla de sabores caribeños e internacionales.",
+          "thingsToDo": [
+            "Recorrer las tiendas libres de impuestos de Front Street y el histórico juzgado",
+            "Comer en el Boardwalk de Great Bay Beach",
+            "Ver aterrizar los aviones en Maho Beach (15 minutos en taxi o en dinghy desde Simpson Bay)",
+            "Cócteles al atardecer en Bamboo Bernie’s o en el Holland House Beach Hotel"
+          ],
+          "mooringTip": "En Great Bay se fondea sobre arena en 4–6 m, y la bahía solo queda expuesta a la mar de fondo del sur. Haz la entrada en Sint Maarten en el muelle de Bobby’s Marina (25 dólares estadounidenses por persona por el despacho de entrada). El agarre es bueno, pero las estelas de los cruceros meten balance en la bahía."
+        },
+        "6": {
+          "shortDescription": "Navegación corta de 6 millas al noroeste, de vuelta al lado francés y a la bahía de Marigot. Fondea sobre arena en 6–10 m; no hay campo de boyas. Vuelve a hacer la entrada en el lado francés en la capitainerie de Marigot (sin tasa, solo un formulario de declaración). Si la mar de fondo cierra el fondeadero abierto, la Marina Royale tiene amarres a 2,5 euros por pie. Para estirar las piernas en tierra, sube al mirador de Fort Louis.",
+          "description": "Vuelve al lado francés de la isla y fondea de nuevo en Marigot. Dedica tu último día completo a la cultura franco-caribeña: recorre los mercados al aire libre, sube a Fort Louis por sus vistas panorámicas o date un capricho con la repostería de alguna boulangerie del pueblo. También es buen momento para comprar recuerdos o, simplemente, quedarte al ancla con una copa de vino mientras el sol se pone sobre la marina.",
+          "thingsToDo": [
+            "Subir a Fort Louis por sus vistas panorámicas del puerto",
+            "Mercado de los miércoles y sábados: artesanía local y especias caribeñas",
+            "Cruasán y café en Sarafina’s, en el Boulevard de Grand-Case",
+            "Atardecer en La Belle Plage, frente a la marina"
+          ],
+          "mooringTip": "En la bahía de Marigot se fondea sobre arena en 6–10 m, sin campo de boyas. Vuelve a hacer la entrada en el lado francés en la capitainerie de Marigot (sin tasa, basta con un formulario de declaración). Si la mar de fondo cierra el fondeadero abierto, la Marina Royale tiene amarres a 2,5 euros por pie."
+        },
+        "7": {
+          "shortDescription": "Última mañana en la Marina Royale. Según el contrato de chárter habitual, el barco debe estar amarrado antes de las 17:00 del viernes para la inspección. Reposta combustible y agua en el muelle de la marina: los días de entrega, en el surtidor hay cola desde temprano. Si sigues en una travesía de solo ida hacia St Barths o Anguilla, despacha la salida en aduanas antes de la entrega.",
+          "description": "En tu última mañana, disfruta de un desayuno sin prisas a bordo antes del check-out. Según tu horario, quizá te dé tiempo a un último paseo por los mercados de Marigot o a un baño en alguna playa cercana. Es el broche perfecto para una semana de navegación inolvidable por St Martin y St Barth.",
+          "thingsToDo": [
+            "Último baño de la mañana frente a Anse Marcel o en la bahía de Marigot",
+            "Repostar combustible y agua en el surtidor de la Marina Royale",
+            "Un último cruasán en tierra antes de la entrega",
+            "Inspección de entrega con la base de chárter"
+          ],
+          "mooringTip": "Los contratos de chárter suelen exigir el barco amarrado en la Marina Royale antes de las 17:00 del viernes; confirma la cláusula concreta del tuyo. Los días de entrega, en el surtidor hay cola desde temprano. Si continúas el viaje en una travesía de solo ida, despacha la salida en aduanas antes de la entrega."
+        }
+      }
     }
   },
   "areas": {
@@ -1163,6 +1246,12 @@
       "metaDesc": "Rutas desde Le Marin: Anses d'Arlet, St-Pierre al pie del volcán y la travesía a los Pitons de Santa Lucía — vela por el Caribe francés.",
       "title": "Panaderías francesas, vistas al volcán, travesías de verdad",
       "description": "Martinica es el Caribe que se toma en serio la comida. Le Marin —la mayor base de chárter de las Islas de Barlovento— te manda a navegar con auténticas baguettes a bordo, y la costa oeste se despliega en cómodos saltos de día: tortugas pastando bajo el barco en Grande Anse d'Arlet, St-Pierre reposando en silencio al pie del volcán que la borró en 1902, destilerías de ron que tratan la cata como una lección. Luego llega la elección: quedarte en lo francés y apacible, o hacer la travesía de veinte millas por el canal hasta Santa Lucía, donde los Pitons se alzan directamente desde el mar y una boya a sus pies es el mejor asiento de primera fila del Caribe. El canal es navegación de alisios honrada: riza pronto, sal con la mañana. Las dos mitades de la semana se ganan su sitio."
+    },
+    "st-martin": {
+      "metaTitle": "Itinerarios a Vela por St. Martin | Boat4You",
+      "metaDesc": "Catamarán por St. Martin desde Marigot, Anse Marcel y Philipsburg: Tintamarre, Île Fourchue, Gustavia (St. Barths) y travesías de ida a Anguilla o Antigua.",
+      "title": "Media isla francesa, media neerlandesa y todo a un día de vela",
+      "description": "St. Martin es la puerta norte de las Islas de Sotavento y una de las bases de chárter más cómodas del Caribe para las tripulaciones que llegan en vuelo transatlántico al aeropuerto de SXM. La isla se reparte entre un lado francés (Saint-Martin) y otro neerlandés (Sint Maarten), y hay bases de chárter en los dos: Marigot y Anse Marcel en la costa norte, la francesa, y Philipsburg en la costa sur, la neerlandesa, comunicadas por la laguna de Simpson Bay y sus dos puentes levadizos.\n\nEl triángulo de Sotavento, formado por St. Martin, St. Barths y Anguilla, queda a un solo día de navegación desde cualquiera de las bases. Desde Marigot, la semana típica pasa por la isla de Tintamarre, una reserva natural protegida con el mejor snorkel del lado francés; por Île Fourchue, un fondeadero entre rocas deshabitadas a medio camino de St. Barths, y por Gustavia, el puerto de esa isla, con compras libres de impuestos y la hilera de superyates más fotografiada del Caribe, antes de volver bordeando la costa de Anguilla.\n\nLos alisios son los mismos que definen todo el Caribe oriental: vientos fiables del este de 15 a 22 nudos. Con una geografía tan compacta, St. Martin es la base más sencilla para chárteres cortos de 4 o 5 días, de «puente largo», y para travesías de solo ida: la mayoría de los operadores organiza etapas de reposicionamiento hasta Antigua pasando por St. Barths y Anguilla, o hacia el sur por St. Kitts y Nevis hasta el circuito de Guadalupe."
     }
   }
 }

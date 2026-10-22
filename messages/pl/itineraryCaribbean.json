@@ -1137,6 +1137,89 @@
           "mooringTip": "Zaplanuj przybycie na czas dzienny i sprawdź okno zwrotu w bazie — wiele z nich chce cię przy nabrzeżu do wczesnego popołudnia. Jeśli dotrzesz do Le Marin wcześnie, zakotwicz przy Sainte-Anne na ostatnią kąpiel, zamiast tkwić w marinie."
         }
       }
+    },
+    "st-martin-route": {
+      "metaTitle": "7-dniowy czarter katamaranu: St Martin i St Barth | Boat4You",
+      "metaDesc": "Odkryj francuskie Karaiby na 7-dniowym czarterze katamaranu z St Martin: Marigot, Tintamarre, Île Fourchue, Gustavia, Philipsburg i wiele więcej.",
+      "days": {
+        "1": {
+          "shortDescription": "Około 8 mil na północny wschód wzdłuż francuskiego wybrzeża, z Marigot do Anse Marcel. Kotwiczysz na piasku w 4–6 m w dobrze osłoniętej, podkowiastej zatoce — pola boj tu nie ma, ale przy dominujących wiatrach ze wschodu kotwica trzyma znakomicie. Gdy prognoza zapowiada front z północy, alternatywą na złą pogodę są miejsca w Marina Royale, z powrotem w Marigot.",
+          "description": "Czarter zaczyna się w Marigot, tętniącym życiem miasteczku z klimatem francuskiej Riwiery. Zanim postawisz żagle, przejdź się po kolorowych targach, zajrzyj do butików projektantów albo wypij café au lait przy marinie. Potem kurs na północny wschód, do Anse Marcel, osłoniętej zatoki otoczonej zielonymi wzgórzami. Plaża jest tu spokojna, idealna do pływania i na deskę SUP. Na lądzie czekają luksusowe resorty i dobre restauracje, więc trudno o lepsze miejsce, by wejść w rytm wakacji na katamaranie.",
+          "thingsToDo": [
+            "Sobotni poranny targ na nabrzeżu Marigot: lokalne rękodzieło i rum",
+            "Café au lait w Sarafina's przed wypłynięciem",
+            "Kąpiel i SUP przy osłoniętej plaży Anse Marcel",
+            "Kolacja w La Belle Epoque w Marina Royale"
+          ],
+          "mooringTip": "W Anse Marcel stoi się wyłącznie na kotwicy, na piasku w 4–6 m — pola boj nie ma. Trzymanie jest znakomite, a zatoka osłonięta od dominujących wiatrów ze wschodu. Jeśli wolisz noc w marinie, Marina Royale w Marigot wynajmuje miejsca (2,5 euro za stopę, prąd 220 V w standardzie europejskim)."
+        },
+        "2": {
+          "shortDescription": "Krótki skok, 3 mile na południowy wschód, na Tintamarre — małą, bezludną wyspę w rezerwacie przyrody (Réserve Naturelle). Kotwiczyć można tylko na piasku w zatoce zachodniej, w 4–6 m; strefy koralowców i trawy morskiej oznaczono żółtymi bojami. Opłata rezerwatu wynosi 5 euro dziennie i płaci się ją w aplikacji SXM Marine Park. Na chronionej rafie przy zachodnim brzegu żółwie masz gwarantowane.",
+          "description": "Po krótkiej żegludze docierasz na Tintamarre, małą bezludną wyspę, która wygląda jak prawdziwy raj rozbitków. Rzuć kotwicę w turkusowej wodzie i zanurkuj z fajką wśród żółwi morskich, płaszczek i kolorowych ryb. Długa piaszczysta plaża aż prosi się o piknik, a ścieżki w głębi wyspy dają szansę wypatrzyć ptaki morskie i niezwykłą roślinność. Bez hoteli, restauracji i sklepów Tintamarre to czyste odosobnienie i jeden z najjaśniejszych punktów każdego czarteru katamaranu na St Martin.",
+          "thingsToDo": [
+            "Snorkeling na chronionej rafie przy zachodnim brzegu Tintamarre — żółwie gwarantowane",
+            "Piknik na długim łuku białego piasku",
+            "Oznakowana pętla w głębi wyspy i obserwacja ptaków morskich",
+            "Spacer do ruin opuszczonej plantacji z lat 30. XX wieku na południowym krańcu"
+          ],
+          "mooringTip": "Tintamarre to rezerwat przyrody (Réserve Naturelle) — kotwiczyć na piasku wolno tylko w zatoce zachodniej, w 4–6 m; strefy koralowców i trawy morskiej oznaczono żółtymi bojami. Opłata rezerwatu wynosi 5 euro dziennie i uiszcza się ją w aplikacji SXM Marine Park."
+        },
+        "3": {
+          "shortDescription": "Około 12 mil na południowy wschód, na Île Fourchue — bezludną, skalistą wyspę w rezerwacie morskim St Barths. Wyłącznie boje (20 euro za noc przez aplikację rezerwatu), łącznie 12 sztuk, więc w sezonie bądź na miejscu przed 14:00. Wymagana wcześniejsza odprawa: przed przypłynięciem odpraw się wyjściowo z St Martin w Marigot albo w Marina Royale (Île Fourchue podlega już jurysdykcji St Barths).",
+          "description": "Przygoda trwa dalej na Île Fourchue, surowej, bezludnej wyspie między St Martin a St Barth. Miejsce postoju jest tu dobrze osłonięte, a do dyspozycji są boje cumownicze. Zejdź na ląd na krótką wędrówkę: ze wzgórz wyspy widok sięga daleko nad Morze Karaibskie, a to jedno z najlepszych miejsc na zdjęcia w całym rejsie. Snorkeling też jest świetny, z barwnymi ogrodami koralowymi i mnóstwem morskiego życia.",
+          "thingsToDo": [
+            "Wejście na siodło grzbietu po widok 360° na kanał między Anguillą a St Barths",
+            "Snorkeling w ogrodzie koralowym w zatoce południowej",
+            "Wcześniejsza odprawa: przed przypłynięciem odpraw się wyjściowo z St Martin (Marigot lub Marina Royale)",
+            "Drink o zachodzie słońca w osłoniętej, podkowiastej zatoce, bez jednego światła na brzegu"
+          ],
+          "mooringTip": "Île Fourchue należy do rezerwatu morskiego St Barths — wyłącznie boje (20 euro za noc, płatne w aplikacji rezerwatu). Kotwiczenie jest zabronione. Pole cumownicze ma 12 boj; w sezonie przypłyń przed 14:00."
+        },
+        "4": {
+          "shortDescription": "Około 8 mil na południe, do portu Gustavia na St Barthélemy. To strefa płatnego cumowania (60 euro za noc dla jachtów do 45 stóp) — zawczasu wywołaj kapitanat portu na kanale 12 VHF; poza portem można kotwiczyć w Anse de Public, na piasku w 8–12 m. Odprawę wejściową załatw w Capitainerie w ciągu 24 godzin od przypłynięcia; z portu na Shell Beach jest krótki spacer.",
+          "description": "Kurs na południe, na St Barthélemy, perłę francuskich Karaibów. Zatrzymasz się w porcie Gustavia, eleganckiej stolicy wyspy, słynącej z luksusowych butików, wyśmienitych restauracji i żywego życia nocnego. Popołudnie spędź wśród budynków o czerwonych dachach, historycznych fortów i sklepów bez cła. Wieczorem kolacja na światowym poziomie w restauracji kuchni francusko-karaibskiej albo koktajle w modnym barze na plaży. Miłośnicy plaż dojdą z portu na Shell Beach krótkim spacerem.",
+          "thingsToDo": [
+            "Spacer po Shell Beach, niezwykłym brzegu usłanym muszlami",
+            "Koktajle o zachodzie w barze Le Select (oryginalny „Cheeseburger in Paradise”)",
+            "Zdjęcie portu Gustavia z punktu widokowego przy Fort Karl",
+            "Kolacja w Bonito albo Le Sereno po stronie Saint-Jean"
+          ],
+          "mooringTip": "Port Gustavia to strefa płatnego cumowania (60 euro za noc dla jachtów do 45 stóp) — zawczasu wywołaj kapitanat portu na kanale 12 VHF. Poza portem, w Anse de Public, wolno kotwiczyć na piasku w 8–12 m. Odprawę wejściową załatw w Capitainerie w ciągu 24 godzin od przypłynięcia."
+        },
+        "5": {
+          "shortDescription": "Około 14 mil na północny zachód przez kanał, z powrotem na Sint Maarten, do Philipsburga nad Great Bay. Kotwiczysz na piasku w 4–6 m; zatoka buja się na fali od statków wycieczkowych, ale trzymanie jest dobre. Odprawę wejściową na Sint Maarten załatwisz przy pomoście Bobby's Marina (25 dolarów amerykańskich od osoby). W pobliżu sklepy bez cła przy Front Street i lądujące samoloty nad Maho Beach.",
+          "description": "Dziś przepływasz na holenderską stronę St Martin, do Philipsburga, stolicy Sint Maarten. To gwarne miasteczko słynie z zakupów: wzdłuż Front Street ciągną się sklepy bez cła z biżuterią, elektroniką i modą. Odpocznij na Great Bay Beach albo spróbuj sportów wodnych wzdłuż tętniącej życiem promenady. Wieczorem Philipsburg kusi kasynami, klubami plażowymi i restauracjami, w których smaki karaibskie mieszają się z kuchnią z całego świata.",
+          "thingsToDo": [
+            "Spacer po Front Street wśród sklepów bez cła i obok zabytkowego gmachu sądu",
+            "Lunch na promenadzie Boardwalk przy Great Bay Beach",
+            "Podglądanie lądujących samolotów na Maho Beach (15 minut taksówką albo pontonem z Simpson Bay)",
+            "Koktajle o zachodzie w Bamboo Bernie's albo w Holland House Beach Hotel"
+          ],
+          "mooringTip": "W Great Bay kotwiczysz na piasku w 4–6 m; zatoka jest otwarta tylko na falę z południa. Odprawę wejściową na Sint Maarten załatwisz przy pomoście Bobby's Marina (25 dolarów amerykańskich od osoby). Trzymanie jest dobre, ale fala od statków wycieczkowych potrafi rozkołysać całą zatokę."
+        },
+        "6": {
+          "shortDescription": "Krótkie 6 mil na północny zachód, z powrotem na francuską stronę, do zatoki Marigot. Kotwica na piasku w 6–10 m, pola boj brak. Ponowną odprawę wejściową po stronie francuskiej załatwisz w kapitanacie (capitainerie) w Marigot — bez opłat, wystarczy formularz deklaracji. Jeśli fala zamknie otwarte kotwicowisko, zostają miejsca w Marina Royale po 2,5 euro za stopę. Na spacer w głąb lądu: punkt widokowy przy Fort Louis.",
+          "description": "Wracasz na francuską stronę wyspy i znów rzucasz kotwicę w Marigot. Ostatni pełny dzień poświęć francusko-karaibskiej kulturze: powłócz się po targach pod gołym niebem, wejdź do Fort Louis po panoramiczne widoki albo skuś się na francuskie wypieki w miejscowej boulangerie. To także dobry moment na zakup pamiątek albo po prostu na kieliszek wina na kotwicy, gdy słońce zachodzi nad mariną.",
+          "thingsToDo": [
+            "Wejście do Fort Louis po panoramę portu",
+            "Środowy lub sobotni targ: lokalne rękodzieło i karaibskie przyprawy",
+            "Croissant i kawa w Sarafina's przy Boulevard de Grand-Case",
+            "Zachód słońca w La Belle Plage przy marinie"
+          ],
+          "mooringTip": "W zatoce Marigot kotwiczysz na piasku w 6–10 m, pola boj nie ma. Ponowną odprawę wejściową po stronie francuskiej załatwisz w kapitanacie w Marigot — bez opłat, tylko formularz deklaracji. Gdy fala zamknie otwarte kotwicowisko, zostają miejsca w Marina Royale po 2,5 euro za stopę."
+        },
+        "7": {
+          "shortDescription": "Ostatni poranek w Marina Royale. Według typowej umowy czarterowej łódź musi stać przy kei do 17:00 w piątek, gotowa do kontroli. Uzupełnij paliwo i wodę przy pomoście mariny — w dni zdawania łodzi stacja paliw zapełnia się wcześnie. Jeśli płyniesz dalej w jedną stronę na St Barths lub Anguillę, przed zdaniem łodzi załatw odprawę celną wyjściową.",
+          "description": "Ostatniego ranka zjedz niespieszne śniadanie na pokładzie, zanim zdasz łódź. Jeśli czas pozwoli, zdążysz jeszcze na ostatni spacer po targach Marigot albo kąpiel na którejś z pobliskich plaż. To idealne zakończenie tygodnia niezapomnianej żeglugi po St Martin i St Barth.",
+          "thingsToDo": [
+            "Ostatnia poranna kąpiel przy Anse Marcel albo w zatoce Marigot",
+            "Paliwo i woda przy stacji paliw w Marina Royale",
+            "Ostatni croissant na lądzie przed zdaniem łodzi",
+            "Kontrola przy zdaniu łodzi z ekipą bazy czarterowej"
+          ],
+          "mooringTip": "Umowy czarterowe zwykle wymagają, by łódź stała przy kei w Marina Royale do 17:00 w piątek. Sprawdź dokładny zapis w swojej umowie; w dni zdawania łodzi stacja paliw zapełnia się wcześnie. Jeśli kontynuujesz rejs w jedną stronę, przed zdaniem łodzi załatw odprawę celną wyjściową."
+        }
+      }
     }
   },
   "areas": {
@@ -1163,6 +1246,12 @@
       "metaDesc": "Trasy z Le Marin: Anses d'Arlet, St-Pierre pod wulkanem i przejście do Pitonów na St. Lucia — francuska karaibska żegluga.",
       "title": "Francuskie piekarnie, widoki na wulkan, prawdziwe przejścia",
       "description": "Martynika to Karaiby, które poważnie traktują lunch. Le Marin — największa baza czarterowa na Windwardach — wysyła cię w morze z porządnymi bagietkami na pokładzie, a zachodnie wybrzeże rozwija się w łatwych dziennych skokach: żółwie pasące się pod łodzią przy Grande Anse d'Arlet, St-Pierre siedzące cicho pod wulkanem, który je zmiótł w 1902 roku, gorzelnie rumu, które traktują degustację jak edukację. Potem przychodzi wybór: zostać francuskim i łagodnym albo pokonać dwudziestomilowe przejście przez kanał do St. Lucia, gdzie Pitony wznoszą się prosto z morza, a boja pod nimi to najlepsze miejsce w pierwszym rzędzie na Karaibach. Kanał to uczciwa żegluga pasatowa — refuj wcześnie, płyń rankiem. Obie połowy tygodnia zarabiają na swoje miejsce."
+    },
+    "st-martin": {
+      "metaTitle": "Trasy żeglowne po St Martin | Boat4You",
+      "metaDesc": "Czarter katamaranu z Marigot, Anse Marcel lub Philipsburga: Tintamarre, Île Fourchue, Gustavia na St Barths i rejsy w jedną stronę na Anguillę lub Antiguę.",
+      "title": "St Martin – francusko-holenderska brama do Wysp Zawietrznych",
+      "description": "St Martin to północna brama do Wysp Zawietrznych (Leeward Islands) i jedna z najłatwiej dostępnych baz czarterowych na Karaibach dla załóg przylatujących zza Atlantyku na lotnisko SXM. Wyspa jest podzielona na część francuską (Saint-Martin) i holenderską (Sint Maarten), a bazy czarterowe działają po obu stronach: Marigot i Anse Marcel na francuskim wybrzeżu północnym, Philipsburg na holenderskim wybrzeżu południowym, a łączy je laguna Simpson Bay z dwoma otwieranymi mostami.\n\nTrójkąt Wysp Zawietrznych — St Martin, St Barths i Anguilla — mieści się w zasięgu jednego dnia żeglugi z każdej bazy. Z Marigot typowy tydzień prowadzi przez Tintamarre (chroniony rezerwat przyrody z najlepszym snorkelingiem po francuskiej stronie), Île Fourchue (postój wśród bezludnych skał w połowie drogi na St Barths) i port Gustavia na St Barths (zakupy bez cła i najczęściej fotografowany szereg superjachtów na Karaibach), a wraca wzdłuż wybrzeża Anguilli.\n\nPasaty wieją tu tak samo niezawodnie jak w całych wschodnich Karaibach: to stałe wschodnie wiatry o sile 15–22 węzłów. Dzięki zwartej geografii St Martin to najwygodniejsza baza na krótkie, 4–5-dniowe czartery w stylu „długiego weekendu” i na rejsy w jedną stronę — większość firm czarterowych organizuje przeprowadzenia jachtów na Antiguę przez St Barths i Anguillę albo na południe przez St Kitts i Nevis do pętli wokół Gwadelupy."
     }
   }
 }

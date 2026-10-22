@@ -1137,6 +1137,89 @@
           "mooringTip": "Calcola l'arrivo con la luce del giorno e controlla l'orario di riconsegna della base: molte ti vogliono in banchina entro metà pomeriggio. Se arrivi presto a Le Marin, ancora al largo di Sainte-Anne per un ultimo bagno invece di startene in marina."
         }
       }
+    },
+    "st-martin-route": {
+      "metaTitle": "St Martin 7 giorni in catamarano: St Barth e oltre | Boat4You",
+      "metaDesc": "Scopri i Caraibi francesi con un charter di 7 giorni in catamarano da St Martin: Marigot, Tintamarre, Île Fourchue, Gustavia, Philipsburg e molto altro.",
+      "days": {
+        "1": {
+          "shortDescription": "Circa 8 miglia verso nord-est lungo la costa francese, da Marigot ad Anse Marcel. Dai fondo su sabbia a 4–6 m nella baia a ferro di cavallo, ben riparata: non c'è campo gavitelli, ma con gli alisei dominanti da est la tenuta è eccellente. Se è previsto un fronte da nord, l'alternativa per il maltempo sono i posti barca di Marina Royale, di nuovo a Marigot.",
+          "description": "Il charter parte da Marigot, cittadina vivace con un'aria da Costa Azzurra. Passeggia tra i mercati colorati, curiosa nelle boutique firmate o prenditi un café au lait sul porto prima di mollare gli ormeggi. Poi rotta a nord-est verso Anse Marcel, una baia riparata tra colline verdi, con una spiaggia calma ideale per nuotare e fare paddleboard. A terra trovi resort di lusso e ottimi ristoranti: il posto giusto per entrare nel ritmo della vacanza in catamarano.",
+          "thingsToDo": [
+            "Mercato del sabato mattina sul lungomare di Marigot, tra artigianato e rum locali",
+            "Café au lait da Sarafina's prima di salpare",
+            "Bagno e SUP dalla spiaggia riparata di Anse Marcel",
+            "Cena a La Belle Epoque, a Marina Royale"
+          ],
+          "mooringTip": "Ad Anse Marcel si sta solo all'ancora, su sabbia a 4–6 m, senza campo gavitelli. La tenuta è eccellente e la baia è riparata dagli alisei dominanti da est. Se per la notte preferisci la marina, Marina Royale a Marigot affitta posti barca (€2,5 al piede, corrente europea a 220 V)."
+        },
+        "2": {
+          "shortDescription": "Breve salto di 3 miglia verso sud-est fino a Tintamarre, piccola isola disabitata dentro la Réserve Naturelle. Si dà fondo su sabbia a 4–6 m solo nella baia ovest; le zone di corallo e di prateria marina sono segnalate da boe gialle. La tariffa della riserva è di €5 al giorno e si paga con l'app SXM Marine Park. Tartarughe garantite sul reef protetto della costa ovest.",
+          "description": "Un breve tratto di mare ti porta a Tintamarre, isoletta disabitata che sembra un vero paradiso da naufraghi. Dai fondo in acque turchesi e fai snorkeling tra tartarughe marine, razze e pesci colorati. La lunga spiaggia di sabbia è perfetta per un picnic, mentre i sentieri dell'interno permettono di avvistare uccelli marini e una flora particolare. Niente hotel, ristoranti né negozi: Tintamarre è isolamento allo stato puro, uno dei momenti più belli di qualsiasi charter in catamarano a St Martin.",
+          "thingsToDo": [
+            "Snorkeling sul reef protetto della costa ovest, tartarughe garantite",
+            "Picnic sulla lunga mezzaluna di sabbia bianca",
+            "L'anello segnalato nell'interno per avvistare uccelli marini",
+            "A piedi fino alle rovine della piantagione abbandonata degli anni Trenta, sulla punta sud"
+          ],
+          "mooringTip": "Tintamarre è una Réserve Naturelle: si può ancorare su sabbia a 4–6 m solo nella baia ovest, mentre le zone di corallo e di prateria marina sono segnalate da boe gialle. La tariffa della riserva è di €5 al giorno, da pagare con l'app SXM Marine Park."
+        },
+        "3": {
+          "shortDescription": "Circa 12 miglia verso sud-est fino a Île Fourchue, isola rocciosa e disabitata dentro la riserva marina di St Barths. Solo gavitelli (€20 a notte tramite l'app della riserva), 12 in tutto: in stagione arriva prima delle 14:00. Le formalità vanno sbrigate in anticipo: Île Fourchue è sotto la giurisdizione di St Barths, quindi prima di arrivare fai l'uscita da St Martin a Marigot o a Marina Royale.",
+          "description": "Prosegui verso Île Fourchue, isola aspra e disabitata tra St Martin e St Barth. L'ancoraggio è ben riparato e ci sono gavitelli a disposizione. Scendi a terra per una breve camminata: dalle alture dell'isola lo sguardo spazia su tutto il Mar dei Caraibi, ed è qui che scatterai alcune delle foto più belle del viaggio. Anche lo snorkeling è eccellente, tra giardini di corallo vivaci e vita marina in abbondanza.",
+          "thingsToDo": [
+            "Camminata sul crinale della sella per un panorama a 360° sul canale tra Anguilla e St Barths",
+            "Snorkeling nel giardino di corallo della baia sud",
+            "Formalità in anticipo: uscita da St Martin (Marigot o Marina Royale) prima dell'arrivo",
+            "Aperitivo al tramonto nell'ancoraggio riparato a ferro di cavallo, senza una luce a terra"
+          ],
+          "mooringTip": "Île Fourchue fa parte della riserva marina di St Barths: solo gavitelli (€20 a notte, da pagare con l'app della riserva) e ancoraggio vietato. Il campo conta 12 gavitelli; in stagione arriva prima delle 14:00."
+        },
+        "4": {
+          "shortDescription": "Circa 8 miglia verso sud fino al porto di Gustavia, su St Barthélemy. È una zona di ormeggio a pagamento (€60 a notte fino a 45 piedi): chiama prima la capitaneria sul VHF 12. Fuori dal porto si può ancorare ad Anse de Public, su sabbia a 8–12 m. Le formalità d'ingresso si sbrigano alla Capitainerie entro 24 ore dall'arrivo; Shell Beach è a pochi passi dal porto.",
+          "description": "Rotta a sud verso St Barthélemy, il gioiello dei Caraibi francesi. Dai fondo a Gustavia, la chic capitale dell'isola, famosa per le boutique di lusso, l'alta cucina e la vita notturna vivace. Passa il pomeriggio tra le case dai tetti rossi, i forti storici e i negozi duty-free. La sera, una cena di altissimo livello in un ristorante di cucina fusion franco-caraibica oppure un cocktail in un beach bar alla moda. Per chi ama la spiaggia, Shell Beach è a due passi dal porto.",
+          "thingsToDo": [
+            "Passeggiata a Shell Beach, una riva unica tappezzata di conchiglie",
+            "Cocktail al tramonto al bar Le Select, il Cheeseburger in Paradise originale",
+            "Foto del porto di Gustavia dal belvedere di Fort Karl",
+            "Cena al Bonito o al Le Sereno, sul lato di Saint-Jean"
+          ],
+          "mooringTip": "Il porto di Gustavia è una zona di ormeggio a pagamento (€60 a notte fino a 45 piedi): chiama in anticipo la capitaneria sul VHF 12. Fuori dal porto si può ancorare ad Anse de Public, su sabbia a 8–12 m. Sbriga le formalità d'ingresso alla Capitainerie entro 24 ore dall'arrivo."
+        },
+        "5": {
+          "shortDescription": "Circa 14 miglia verso nord-ovest attraverso il canale, di ritorno su Sint Maarten, fino a Philipsburg su Great Bay. Dai fondo su sabbia a 4–6 m: la tenuta è buona, ma la baia rolla con la scia delle navi da crociera. L'ingresso a Sint Maarten si sbriga al pontile di Bobby's Marina (25 dollari USA a persona). Nei dintorni, i negozi duty-free di Front Street e gli aerei in atterraggio da guardare a Maho Beach.",
+          "description": "Oggi passi sul lato olandese di St Martin e arrivi a Philipsburg, capitale di Sint Maarten. È una città animata, nota soprattutto per lo shopping: Front Street è una fila di negozi duty-free di gioielli, elettronica e moda. Rilassati sulla spiaggia di Great Bay oppure prova gli sport acquatici lungo il vivace lungomare. La sera Philipsburg offre casinò, beach club e ristoranti con un mix di sapori caraibici e internazionali.",
+          "thingsToDo": [
+            "Passeggiata su Front Street tra i negozi duty-free e lo storico tribunale",
+            "Pranzo sul Boardwalk di Great Bay Beach",
+            "Gli aerei in atterraggio a Maho Beach (15 minuti di taxi o di tender da Simpson Bay)",
+            "Cocktail al tramonto da Bamboo Bernie's o all'Holland House Beach Hotel"
+          ],
+          "mooringTip": "A Great Bay si dà fondo su sabbia a 4–6 m; la baia è esposta solo all'onda da sud. L'ingresso a Sint Maarten si sbriga al pontile di Bobby's Marina (25 dollari USA a persona). La tenuta è buona, ma la baia rolla con la scia delle navi da crociera."
+        },
+        "6": {
+          "shortDescription": "Breve navigazione di 6 miglia verso nord-ovest per tornare sul lato francese, nella baia di Marigot. Dai fondo su sabbia a 6–10 m, senza campo gavitelli. Al rientro sul lato francese si ripetono le formalità alla capitainerie di Marigot (nessun costo, basta il modulo di dichiarazione). Se l'onda lunga rende impraticabile la rada aperta, i posti barca di Marina Royale costano €2,5 al piede. A terra, la camminata da fare è quella fino al belvedere di Fort Louis.",
+          "description": "Rientra sul lato francese dell'isola e dai fondo di nuovo a Marigot. Dedica l'ultima giornata piena alla cultura franco-caraibica: gira tra i mercati all'aperto, sali a Fort Louis per il panorama o concediti qualche pasticcino francese in una boulangerie del posto. È anche il momento giusto per i souvenir, oppure per rilassarti all'ancora con un bicchiere di vino mentre il sole tramonta sulla marina.",
+          "thingsToDo": [
+            "Salita a Fort Louis per il panorama sul porto",
+            "Mercato del mercoledì o del sabato, tra artigianato e spezie caraibiche",
+            "Croissant e caffè da Sarafina's, su Boulevard de Grand-Case",
+            "Tramonto a La Belle Plage, sul fronte della marina"
+          ],
+          "mooringTip": "Nella baia di Marigot si dà fondo su sabbia a 6–10 m, senza campo gavitelli. Al rientro sul lato francese si ripetono le formalità alla capitainerie di Marigot (nessun costo, solo il modulo di dichiarazione). Se l'onda lunga rende impraticabile la rada aperta, Marina Royale offre posti barca a €2,5 al piede."
+        },
+        "7": {
+          "shortDescription": "Ultima mattina a Marina Royale. Per il controllo di riconsegna la barca deve essere in banchina entro le 17:00 del venerdì, come prevede il tipico contratto di charter. Fai il pieno di carburante e acqua al pontile della marina: nei giorni di riconsegna il distributore si riempie presto. Se prosegui con una tratta di sola andata verso St Barths o Anguilla, sbriga l'uscita doganale prima della riconsegna.",
+          "description": "Nell'ultima mattina goditi una colazione senza fretta a bordo prima del check-out. A seconda degli orari, potrebbe restarti il tempo per un ultimo giro tra i mercati di Marigot o per un bagno in una delle spiagge vicine. È il finale perfetto per una settimana di navigazione indimenticabile tra St Martin e St Barth.",
+          "thingsToDo": [
+            "Ultimo bagno del mattino ad Anse Marcel o nella baia di Marigot",
+            "Pieno di carburante e acqua al distributore di Marina Royale",
+            "Un ultimo croissant a terra prima della riconsegna",
+            "Controllo di riconsegna con la base charter"
+          ],
+          "mooringTip": "Di norma i contratti di charter chiedono la barca in banchina a Marina Royale entro le 17:00 del venerdì: verifica la clausola del tuo contratto. Nei giorni di riconsegna il distributore si riempie presto. Se prosegui il viaggio con una tratta di sola andata, sbriga l'uscita doganale prima della riconsegna."
+        }
+      }
     }
   },
   "areas": {
@@ -1163,6 +1246,12 @@
       "metaDesc": "Rotte da Le Marin: Anses d'Arlet, St-Pierre ai piedi del vulcano e la traversata verso i Pitons di Santa Lucia — vela nei Caraibi francesi.",
       "title": "Panetterie francesi, vista sul vulcano, vere traversate",
       "description": "La Martinica è i Caraibi che prendono sul serio il pranzo. Le Marin — la più grande base charter delle Windward — ti manda fuori con vere baguette a bordo, e la costa ovest si srotola in comode tappe giornaliere: tartarughe che pascolano sotto la barca a Grande Anse d'Arlet, St-Pierre seduta in silenzio ai piedi del vulcano che la cancellò nel 1902, distillerie di rum che trattano la degustazione come una lezione. Poi arriva la scelta: restare in territorio francese e tranquillo, o fare la traversata di venti miglia del canale verso Santa Lucia, dove i Pitons si ergono dritti dal mare e un ormeggio ai loro piedi è il miglior posto in prima fila dei Caraibi. Il canale è onesta navigazione negli alisei — riduci vela per tempo, parti con la mattina. Entrambe le metà della settimana si guadagnano il loro posto."
+    },
+    "st-martin": {
+      "metaTitle": "Itinerari a Vela a St. Martin e nelle Leeward | Boat4You",
+      "metaDesc": "Rotte in catamarano da Marigot, Anse Marcel e Philipsburg: Tintamarre, Île Fourchue, Gustavia a St. Barths e tratte di sola andata verso Anguilla e Antigua.",
+      "title": "St. Martin, la porta d'ingresso delle Leeward",
+      "description": "St. Martin è la porta d'ingresso settentrionale delle Isole Sottovento, le Leeward Islands, e una delle basi charter più comode dei Caraibi per gli equipaggi che arrivano con un volo transatlantico su SXM. L'isola è divisa tra un lato francese (Saint-Martin) e uno olandese (Sint Maarten), e le basi charter stanno su entrambi: Marigot e Anse Marcel sulla costa nord francese, Philipsburg sulla costa sud olandese, collegate dalla laguna di Simpson Bay attraverso due ponti apribili.\n\nIl triangolo delle Leeward, cioè St. Martin, St. Barths e Anguilla, sta tutto entro una giornata di vela da ciascuna base. Da Marigot la settimana tipo tocca l'isola di Tintamarre (riserva naturale protetta, con lo snorkeling migliore del lato francese), Île Fourchue (un ancoraggio tra rocce disabitate a metà strada verso St. Barths) e il porto di Gustavia a St. Barths (shopping duty-free e la fila di superyacht più fotografata dei Caraibi), per poi rientrare lungo la costa di Anguilla.\n\nGli alisei sono gli stessi venti da est, affidabili sui 15–22 nodi, che caratterizzano tutti i Caraibi orientali. La geografia compatta fa di St. Martin la base più comoda per i charter brevi di 4–5 giorni, da weekend lungo, e per le traversate di sola andata: la maggior parte delle compagnie organizza trasferimenti verso Antigua via St. Barths e Anguilla, oppure verso sud attraverso St. Kitts e Nevis fino al giro della Guadalupa."
     }
   }
 }
