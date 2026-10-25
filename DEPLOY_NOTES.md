@@ -1,5 +1,17 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-10-25 — 🗓️ Stranica broda s datumima: cijena tjedna u server HTML-u (`initialWeekOffer` + serverski `calculate`) — ⏳ čeka deploy
+
+Mario 25.10. „da“ nakon ChatGPT analize: datirani link na brod (`/boat/<slug>?startDate=&endDate=`) imao je datume i extrase u server HTML-u, ali kutiju s cijenom tjedna („Total due now / Price for 7 days / Total price + datumi / Reserve“) tek nakon hidratacije — čitači bez JS-a nisu vidjeli cijenu broda za tjedan. Datirana TRAŽILICA je već bila kompletna na serveru (18 kartica + JSON-LD).
+
+- `src/utils/static/initialWeekOffer.ts` (+ `scripts/initialWeekOffer.test.mjs`, `test:week-offer`, 9 testova): ponuda = `offers[0]` samo kad su oba datuma u URL-u, brod nije inquiry-only i datumi ponude = datumi linka (detail API s `dateFrom/dateTo` vraća samo taj tjedan).
+- `boat/[slug]/page.tsx`: za tu ponudu server poziva isti `GET /public/yachts/{slug}/offer/{id}/calculate?selectedExtras=…&currency=` kao i browser (obvezni extrasi, valuta stranice), paralelno s ostalim lookupima, soft-fail (greška/prazno/8 s → null = ponašanje kao prije). Props `initialOffer`/`initialPrice` → `BoatContentSection` → `BoatCalendar` → `BoatCalendarForm` i `BoatMobileNavigation`.
+- `BoatContentSection`: mount effect sije `selectedOffer` + `calculatedPrice` + `priceSettled` iz servera i preskače samo taj jedan `calculate` (ref), otkazuje zaostali zahtjev; promjena datuma/valute/extrasa računa kao prije.
+- `BoatCalendarForm` / `BoatMobileNavigation`: dok store nema odgovor (server HTML, hidratacija) prikazuju serversku ponudu i cijenu — isti markup na serveru i u prvom klijentskom renderu, bez treperenja; gate (Reserve/Inquire/blocked), uvjeti redaka i tekstovi nepromijenjeni.
+- Nepokriveno: redovna cijena (16.550 €) nikad nije bila u kutiji za rezervaciju (samo u Availability kartici, i dalje klijentski). Jedan `calculate` poziv po datiranom pregledu seli s browsera na server (ukupno opterećenje isto). `package.json` dira samo `scripts` (deploy uspoređuje samo dependencies).
+- Provjera prije deploya (dev server, bez JS): datirana stranica = „Total due now 14,895 € · Price for 7 days · Total price 14,895 € 12 Jun 2027 - 19 Jun 2027 Reserve“; bez datuma = „Choose Dates“ kao prije; tjedan bez ponude = „Checking availability…“ kao prije. tsc 0, lint 0 grešaka (17 postojećih upozorenja), testovi week-offer 9/9, price 10/10, boat-seo 39/39, calendar 24/24.
+- Robots: `/boat/*?` ostaje Disallow (odluka 24.9.); ovo je za čitače koje korisnik sam pokrene i za sve bez JS-a. Sisteri ×6 imaju istu rupu — zasebna odluka.
+
 ## 2026-10-22 — 🌍 Itinerary prijevodi: `lefkas-kefalonia-zakynthos-14-days` (Jonsko) + `st-martin-route` (Karibi) u 9 jezika, `.confit.ts` → `.config.ts` — ✅ DEPLOYANO 25.10.2026 ~09:00 UTC (`4543cce00`, deployment `4543cce00272-mvnlaynt`, tag `live/2026-10-25-itineraries`; FR/DE stranice rute Lefkas 14 dana prikazuju prevedene dane, T13 u regresiji 0; 3 nova FAIL reda regresije = landing /search?destinations=valencia noindex + bez facts bloka — nije od ovog deploya, istražuje se)
 
 Grana iz origin/main `92f2387b2`. Uzrok: SEO regresija nakon deploya 22.10. 12:33 javila T13 (engleski u `<main>` na `/fr/itineraries/ionian/lefkas-kefalonia-zakynthos-14-days`). Od 145 ruta samo ove 2 nisu imale NIJEDAN unos u `messages/*/itinerary*.json`, pa su ne-EN stranice padale na engleski tekst iz configa (`resolveDayText` fallback).
