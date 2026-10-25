@@ -13,6 +13,7 @@ import ModalRoot from '@/components/ModalRoot';
 import Calendar from '@/components/SvgIcons/Calendar';
 import { BoatCalendarFormValues } from '@/config/form-models.config';
 import { BOAT_CALENDAR_FORM } from '@/config/form-names.config';
+import { PriceCalcDto, YachtOfferModel } from '@/models/yacht-offer.model';
 import { YachtModel } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
 import { PriceInfo } from '@/types/price-info.type';
@@ -50,6 +51,9 @@ interface BoatMobileNavigationProps {
   yacht: YachtModel;
   /** Null: nothing bookable carries a price — "Price on request". */
   fromPrice?: BoatFromPrice | null;
+  /** The week a dated link names and its price, from the server (initialWeekOffer.ts). */
+  initialOffer?: YachtOfferModel | null;
+  initialPrice?: PriceCalcDto | null;
 }
 
 const defaultValues: BoatCalendarFormValues = {
@@ -57,10 +61,24 @@ const defaultValues: BoatCalendarFormValues = {
   endDate: null,
 };
 
-const BoatMobileNavigation = ({ yacht, fromPrice = null }: BoatMobileNavigationProps) => {
+const BoatMobileNavigation = ({
+  yacht,
+  fromPrice = null,
+  initialOffer = null,
+  initialPrice = null,
+}: BoatMobileNavigationProps) => {
   const t = useTranslations('common');
   const tYacht = useTranslations('yacht');
-  const { calculatedPrice, selectedOffer, isCalculatingPrice, priceSettledFor } = useYachtStore();
+  const {
+    calculatedPrice: storePrice,
+    selectedOffer: storeOffer,
+    isCalculatingPrice,
+    priceSettledFor,
+  } = useYachtStore();
+  // Until the store has an answer, the server's week and price (mirror of BoatCalendarForm).
+  const selectedOffer = storeOffer ?? initialOffer;
+  const isServerPrice = !priceSettledFor && !!initialPrice && selectedOffer?.id === initialOffer?.id;
+  const calculatedPrice = isServerPrice ? initialPrice : storePrice;
   const { params, setMultipleParams } = useQueryParams();
   const [isModalOpen, toggleModal] = useToggleState();
   const [modalVariant, setModalVariant] = useState<'price' | 'dates' | null>(null);
@@ -92,7 +110,7 @@ const BoatMobileNavigation = ({ yacht, fromPrice = null }: BoatMobileNavigationP
   const gate = resolveGate(selectedOffer?.status, { custom: yacht.custom, inquireOnly: yacht.inquireOnly });
   const isSelectedOfferBlocked = gate === 'blocked';
   // The price of THIS boat + offer is known (mirror of BoatCalendarForm).
-  const isPriceSettled = priceSettledFor === priceSettledKey(yacht.slug, selectedOffer?.id);
+  const isPriceSettled = isServerPrice || priceSettledFor === priceSettledKey(yacht.slug, selectedOffer?.id);
   // A calculation without a total above 0 is no price — never "0 €".
   const isCalculatedPrice =
     isPriceSettled &&

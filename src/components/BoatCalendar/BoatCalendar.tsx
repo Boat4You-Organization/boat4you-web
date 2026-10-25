@@ -9,6 +9,7 @@ import Form from '@/components/Forms/Form';
 import InquiryOnlyPanel from '@/components/InquiryOnlyPanel';
 import { BoatCalendarFormValues } from '@/config/form-models.config';
 import { BOAT_CALENDAR_FORM } from '@/config/form-names.config';
+import { PriceCalcDto, YachtOfferModel } from '@/models/yacht-offer.model';
 import { YachtModel } from '@/models/yacht.model';
 import useQueryParams from '@/utils/hooks/useQueryParams';
 import DateTime from '@/utils/static/DateTime';
@@ -20,6 +21,9 @@ import BoatCalendarForm from './BoatCalendarForm';
 interface BoatCalendarProps {
   yacht: YachtModel;
   variant?: 'inner' | 'crewed';
+  /** The week a dated link names and its price, from the server (initialWeekOffer.ts). */
+  initialOffer?: YachtOfferModel | null;
+  initialPrice?: PriceCalcDto | null;
 }
 
 const defaultValues: BoatCalendarFormValues = {
@@ -27,7 +31,7 @@ const defaultValues: BoatCalendarFormValues = {
   endDate: null,
 };
 
-const BoatCalendar = ({ yacht, variant = 'inner' }: BoatCalendarProps) => {
+const BoatCalendar = ({ yacht, variant = 'inner', initialOffer = null, initialPrice = null }: BoatCalendarProps) => {
   const { params, setMultipleParams } = useQueryParams();
 
   const initialValues = useMemo(
@@ -72,7 +76,7 @@ const BoatCalendar = ({ yacht, variant = 'inner' }: BoatCalendarProps) => {
   return (
     <Stack direction="column" className={styles.container}>
       <Form defaultValues={initialValues} onSubmit={handleSubmit} id={BOAT_CALENDAR_FORM} resetDefaultValues>
-        <BoatCalendarForm yacht={yacht} variant={variant} />
+        <BoatCalendarForm yacht={yacht} variant={variant} initialOffer={initialOffer} initialPrice={initialPrice} />
       </Form>
     </Stack>
   );

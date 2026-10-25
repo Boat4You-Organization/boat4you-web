@@ -15,7 +15,9 @@ import { LocaleType } from '@/config/locales.config';
 import { meta } from '@/config/meta';
 import { routing } from '@/i18n/routing';
 import { Currency, UserModel } from '@/models/user.model';
+import { PriceCalcDto, YachtOfferModel } from '@/models/yacht-offer.model';
 import { CHARTER_TYPE_LABEL_MAP, CharterType, YachtModel } from '@/models/yacht.model';
+import { fetchSingleYachtPrice } from '@/services/yacht.service';
 import { boatHubs } from '@/utils/server/catalogueHubs';
 import { loadManufacturerLookup } from '@/utils/server/manufacturerLookup';
 import { resolveYachtCapacity, withResolvedNotes } from '@/utils/server/yachtCapacity';
@@ -23,6 +25,7 @@ import { BoatDescTranslate, buildBoatDescription } from '@/utils/static/boatMeta
 import { boatSeoName, buildBoatTitle, titleBoatName, titlePlace } from '@/utils/static/boatTitle';
 import { buildMetadata, localizedUrl } from '@/utils/static/buildMetadata';
 import { getBoatImageUrl } from '@/utils/static/imageUtils';
+import { initialWeekOffer } from '@/utils/static/initialWeekOffer';
 import { isBookedByInquiry } from '@/utils/static/inquiryOnlyBoat';
 import { serializeJsonLd } from '@/utils/static/jsonLd';
 import { freeCancellationReturnPolicy } from '@/utils/static/merchantReturnPolicy';
@@ -330,6 +333,42 @@ const redirectToSuccessorBoat = (locale: string, successorSlug: string | null): 
 const boatCurrency = (user: UserModel | null, searchParamsData: AllSearchParams): Currency =>
   user?.currency || (searchParamsData.currency as Currency) || Currency.EUR;
 
+const INITIAL_PRICE_TIMEOUT_MS = 8000;
+
+/**
+ * The price of the week a dated link names (initialWeekOffer) for the server
+ * HTML: the calculation the browser asks for (useYachtPriceCalculation), with
+ * the offer's obligatory extras, in the page's currency. Soft — an error, no
+ * answer within 8 s or an empty one leaves the price to the browser, as before.
+ */
+const initialWeekPrice = async (
+  yachtSlug: string,
+  offer: YachtOfferModel,
+  currency: Currency
+): Promise<PriceCalcDto | null> => {
+  let timer: ReturnType<typeof setTimeout> | undefined;
+
+  try {
+    const price = await Promise.race([
+      fetchSingleYachtPrice({
+        yachtSlug,
+        offerId: offer.id,
+        selectedExtrasKeys: offer.obligatoryExtrasKeys ?? [],
+        currency,
+      }),
+      new Promise<null>(resolve => {
+        timer = setTimeout(() => resolve(null), INITIAL_PRICE_TIMEOUT_MS);
+      }),
+    ]);
+
+    return price && Object.keys(price).length > 0 ? price : null;
+  } catch {
+    return null;
+  } finally {
+    clearTimeout(timer);
+  }
+};
+
 export async function generateMetadata({
   params,
   searchParams,
@@ -472,12 +511,16 @@ const BoatPage = async ({
 
   redirectToCanonicalBoat(locale, slug, yacht, requestQuery);
 
-  const [tBoatMeta, manufacturers, capacity] = await Promise.all([
+  // A dated link to a week the boat has: its price is in the server HTML too.
+  const initialOffer = initialWeekOffer(yacht, searchParamsData.startDate, searchParamsData.endDate);
+
+  const [tBoatMeta, manufacturers, capacity, initialPrice] = await Promise.all([
     getTranslations({ locale, namespace: 'metadata.boat' }),
     loadManufacturerLookup(),
     // The partner's capacity for this locale, note translations included —
     // resolved here so the client gets the data, not the note table.
     resolveYachtCapacity(yacht, locale),
+    initialOffer ? initialWeekPrice(yacht.slug, initialOffer, currency) : null,
   ]);
   const facts = capacityFacts(capacity);
   // What the client components get: the same yacht without the partner notes
@@ -597,7 +640,14 @@ const BoatPage = async ({
       )}
       <BoatTransitionProvider>
         <BoatHeroSection yacht={clientYacht} layoutImages={layoutImages} />
-        <BoatContentSection yacht={clientYacht} yachtFaq={yachtFaq} capacity={capacity} layoutImages={layoutImages} />
+        <BoatContentSection
+          yacht={clientYacht}
+          yachtFaq={yachtFaq}
+          capacity={capacity}
+          layoutImages={layoutImages}
+          initialOffer={initialOffer}
+          initialPrice={initialPrice}
+        />
         <BoatHubLinks hubs={hubs} boatName={boatName} locale={locale} />
         <ModelPageLink
           manufacturerName={yacht.manufacturerName}
@@ -626,7 +676,12 @@ const BoatPage = async ({
             areaLabel={await suggestedAreaLabel(locale, yacht.location?.name, yacht.location?.countryCode)}
           />
         </Container>
-        <BoatMobileNavigation yacht={clientYacht} fromPrice={fromPrice} />
+        <BoatMobileNavigation
+          yacht={clientYacht}
+          fromPrice={fromPrice}
+          initialOffer={initialOffer}
+          initialPrice={initialPrice}
+        />
       </BoatTransitionProvider>
     </Layout>
   );

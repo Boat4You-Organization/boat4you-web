@@ -9,6 +9,7 @@ import BoatCalendar from '@/components/BoatCalendar';
 import CircularProgress from '@/components/CircularProgress';
 import { OFFSET } from '@/config/constants.config';
 import { singleBoatTabsFor } from '@/config/tabs.config';
+import { PriceCalcDto, YachtOfferModel } from '@/models/yacht-offer.model';
 import { YachtImage, YachtModel } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
 import useScrollSpy from '@/utils/hooks/useScrollSpy';
@@ -49,14 +50,27 @@ interface BoatContentSectionProps {
   capacity?: Capacity;
   /** The boat's layout drawings, not in `yacht.yachtImages` (yachtLayout.ts): a block of their own above Amenities. */
   layoutImages?: YachtImage[];
+  /** The week a dated link names and its price, from the server (initialWeekOffer.ts); null otherwise. */
+  initialOffer?: YachtOfferModel | null;
+  initialPrice?: PriceCalcDto | null;
 }
 
-const BoatContentSection = ({ yacht, yachtFaq, capacity, layoutImages = [] }: BoatContentSectionProps) => {
+const BoatContentSection = ({
+  yacht,
+  yachtFaq,
+  capacity,
+  layoutImages = [],
+  initialOffer = null,
+  initialPrice = null,
+}: BoatContentSectionProps) => {
   const { selectedOffer, boatInquiryModalOpen } = useYachtStore();
   const { calculatePrice } = useYachtPriceCalculation();
   const boatTransition = useContext(BoatTransitionContext);
   const isPending = boatTransition?.isPending ?? false;
   const sectionRefs = useRef<(HTMLElement | null)[]>([]);
+  // The offer the server priced (initialPrice) until its first calculation is
+  // skipped: the same request would bring the same answer.
+  const serverPricedOfferId = useRef<number | null>(null);
   const t = useTranslations('common');
 
   useEffect(() => {
@@ -79,6 +93,8 @@ const BoatContentSection = ({ yacht, yachtFaq, capacity, layoutImages = [] }: Bo
   const activeIndex = sectionIds.indexOf(activeSectionId);
 
   useEffect(() => {
+    serverPricedOfferId.current = null;
+
     // An inquiry-only boat prices nothing — no offer to select or calculate
     // (the PDF brochure then reads "On request" too).
     if (isInquiryOnlyBoat(yacht)) {
@@ -93,22 +109,40 @@ const BoatContentSection = ({ yacht, yachtFaq, capacity, layoutImages = [] }: Bo
 
       if (yacht.offers.length > 0) {
         setselectedOffer(yacht.offers[0]);
+
+        // Priced on the server: the answer is known from the first paint, and
+        // no request still in flight for other dates may replace it.
+        if (initialPrice && initialOffer?.id === yacht.offers[0].id) {
+          serverPricedOfferId.current = initialOffer.id;
+          cancelPendingPriceCalculation();
+          setCalculatingPrice(false);
+          setCalculatedPrice(initialPrice);
+          setPriceSettled(yacht.slug, initialOffer.id);
+        }
       } else {
         setselectedOffer(null);
       }
     }
-  }, [yacht]);
+  }, [yacht, initialOffer, initialPrice]);
 
   useEffect(() => {
-    if (selectedOffer) {
+    if (selectedOffer && serverPricedOfferId.current === selectedOffer.id) {
+      // The server's price stands; one the first render still asked for
+      // (with the store's previous offer) must not replace it.
+      serverPricedOfferId.current = null;
+      cancelPendingPriceCalculation();
+      setCalculatingPrice(false);
+    } else if (selectedOffer) {
       const obligatoryExtrasKeys = selectedOffer.obligatoryExtrasKeys || [];
 
       calculatePrice(yacht.slug, obligatoryExtrasKeys);
-    } else {
+    } else if (serverPricedOfferId.current === null) {
       // No offer for these dates: nothing to ask, the answer is "not available".
       // A price request still in flight for the previous dates must not
       // overwrite that answer, and its cancelled `finally` no longer clears
-      // "calculating" — so it is cleared here (review 6.10.2026).
+      // "calculating" — so it is cleared here (review 6.10.2026). Not while a
+      // server-priced offer is on its way: this is the first render's empty
+      // store, the offer arrives with the next one.
       cancelPendingPriceCalculation();
       setCalculatingPrice(false);
       setCalculatedPrice(null);
@@ -254,7 +288,12 @@ const BoatContentSection = ({ yacht, yachtFaq, capacity, layoutImages = [] }: Bo
             }}
           >
             <Box pb={8} className={styles.calendarWrapper}>
-              <BoatCalendar variant={yacht.custom ? 'crewed' : 'inner'} yacht={yacht} />
+              <BoatCalendar
+                variant={yacht.custom ? 'crewed' : 'inner'}
+                yacht={yacht}
+                initialOffer={initialOffer}
+                initialPrice={initialPrice}
+              />
             </Box>
           </Grid>
         </Grid>

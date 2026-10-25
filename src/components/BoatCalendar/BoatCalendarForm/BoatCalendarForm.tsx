@@ -14,6 +14,7 @@ import FormDateInput from '@/components/Forms/FormDateInput';
 import Calendar from '@/components/SvgIcons/Calendar';
 import { BoatCalendarFormValues } from '@/config/form-models.config';
 import { ReservationStatus } from '@/models/reservation.model';
+import { PriceCalcDto, YachtOfferModel } from '@/models/yacht-offer.model';
 import { YachtServiceExtrasKey } from '@/models/yacht-service.model';
 import { YachtModel } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
@@ -33,16 +34,31 @@ import { priceSettledKey, useYachtStore } from '@/valtio/yacht/yacht.store';
 interface BoatCalendarFormProps {
   yacht: YachtModel;
   variant?: 'inner' | 'crewed';
+  /** The week a dated link names and its price, from the server (initialWeekOffer.ts). */
+  initialOffer?: YachtOfferModel | null;
+  initialPrice?: PriceCalcDto | null;
 }
 
-const BoatCalendarForm = ({ yacht, variant }: BoatCalendarFormProps) => {
+const BoatCalendarForm = ({ yacht, variant, initialOffer = null, initialPrice = null }: BoatCalendarFormProps) => {
   const locale = useLocale();
-  const { activeDate, calculatedPrice, isCalculatingPrice, selectedOffer, priceSettledFor } = useYachtStore();
+  const {
+    activeDate,
+    calculatedPrice: storePrice,
+    isCalculatingPrice,
+    selectedOffer: storeOffer,
+    priceSettledFor,
+  } = useYachtStore();
   const { setMultipleParams } = useQueryParams();
   const t = useTranslations('yacht');
   const tCommon = useTranslations('common');
   const tServices = useTranslations('yacht.servicesList');
   const { slug, inquireOnly } = yacht;
+  // Until the store has an answer (server HTML, hydration), the week a dated
+  // link names and its price as the server calculated them — the same in both,
+  // so the server HTML carries the week's price (initialWeekOffer.ts).
+  const selectedOffer = storeOffer ?? initialOffer;
+  const isServerPrice = !priceSettledFor && !!initialPrice && selectedOffer?.id === initialOffer?.id;
+  const calculatedPrice = isServerPrice ? initialPrice : storePrice;
   const { selectedExtrasInPrice, selectedExtrasAtBase, totalPriceEur, totalPriceInfo, clientPriceInfo } =
     calculatedPrice ?? {};
 
@@ -61,7 +77,7 @@ const BoatCalendarForm = ({ yacht, variant }: BoatCalendarFormProps) => {
   // The price of THIS boat + offer is known (calculated, failed, or no offer
   // for the dates). Before that — server HTML, hydration, the request itself,
   // another boat's or dates' leftover price — nothing is said about the dates.
-  const isPriceSettled = priceSettledFor === priceSettledKey(slug, selectedOffer?.id);
+  const isPriceSettled = isServerPrice || priceSettledFor === priceSettledKey(slug, selectedOffer?.id);
   // A calculation without a total above 0 is no price: "not available",
   // never "0 €" next to Reserve.
   const isCalculatedPrice =
