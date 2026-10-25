@@ -1,6 +1,6 @@
 # Boat4You (main) — Production Deploy Notes
 
-## 2026-10-25 — 🗓️ Stranica broda s datumima: cijena tjedna u server HTML-u (`initialWeekOffer` + serverski `calculate`) — ⏳ čeka deploy
+## 2026-10-25 — 🗓️ Stranica broda s datumima: cijena tjedna u server HTML-u (`initialWeekOffer` + serverski `calculate`) — ✅ LIVE 25.10.2026 ~16:25 UTC (75a0f4703, dpl 75a0f4703cfd-mvo15agg, tag live/2026-10-25-boat-week-price; SEO regresija 0 novih; 1. pokušaj iz worktreea pao: Turbopack ne prihvaća symlinkani node_modules → deploy iz glavnog checkouta)
 
 Mario 25.10. „da“ nakon ChatGPT analize: datirani link na brod (`/boat/<slug>?startDate=&endDate=`) imao je datume i extrase u server HTML-u, ali kutiju s cijenom tjedna („Total due now / Price for 7 days / Total price + datumi / Reserve“) tek nakon hidratacije — čitači bez JS-a nisu vidjeli cijenu broda za tjedan. Datirana TRAŽILICA je već bila kompletna na serveru (18 kartica + JSON-LD).
 
