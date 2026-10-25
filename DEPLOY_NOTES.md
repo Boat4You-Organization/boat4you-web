@@ -1,6 +1,6 @@
 # Boat4You (main) — Production Deploy Notes
 
-## 2026-10-22 — 🌍 Itinerary prijevodi: `lefkas-kefalonia-zakynthos-14-days` (Jonsko) + `st-martin-route` (Karibi) u 9 jezika, `.confit.ts` → `.config.ts` — ⏳ NIJE DEPLOYANO – čeka Mariov DA (grana `fix/itinerary-missing-route-messages`, worktree `wt-itin-i18n`, kod `ea1b64cd4`)
+## 2026-10-22 — 🌍 Itinerary prijevodi: `lefkas-kefalonia-zakynthos-14-days` (Jonsko) + `st-martin-route` (Karibi) u 9 jezika, `.confit.ts` → `.config.ts` — ✅ DEPLOYANO 25.10.2026 ~09:00 UTC (`4543cce00`, deployment `4543cce00272-mvnlaynt`, tag `live/2026-10-25-itineraries`; FR/DE stranice rute Lefkas 14 dana prikazuju prevedene dane, T13 u regresiji 0; 3 nova FAIL reda regresije = landing /search?destinations=valencia noindex + bez facts bloka — nije od ovog deploya, istražuje se)
 
 Grana iz origin/main `92f2387b2`. Uzrok: SEO regresija nakon deploya 22.10. 12:33 javila T13 (engleski u `<main>` na `/fr/itineraries/ionian/lefkas-kefalonia-zakynthos-14-days`). Od 145 ruta samo ove 2 nisu imale NIJEDAN unos u `messages/*/itinerary*.json`, pa su ne-EN stranice padale na engleski tekst iz configa (`resolveDayText` fallback).
 
