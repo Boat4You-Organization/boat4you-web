@@ -29,6 +29,7 @@ import ArrowBtn from './parts/ArrowBtn';
 import HeatmapStrip from './parts/HeatmapStrip';
 import Legend from './parts/Legend';
 import MonthAxis from './parts/MonthAxis';
+import WeekPriceList from './parts/WeekPriceList';
 import {
   WEEKS_PER_CHUNK,
   WeekData,
@@ -42,11 +43,24 @@ import { T } from './parts/tokens';
 
 dayjs.extend(weekOfYear);
 
+/** The calendar's first lookup, made by the boat page on the server: the server HTML and the first client render draw these weeks. */
+export interface InitialCalendar {
+  /** /standard-offers as the browser asks for it (18 months, the page currency), without the extras (nothing here reads them). */
+  offers: YachtOfferModel[];
+  /** The lookup's `dateFrom` (YYYY-MM-DD): the horizon counts from it, on the server and in the browser alike. */
+  from: string;
+  /** The page URL's `startDate` / `endDate` (a dated link): the week selected first. */
+  startDate?: string;
+  endDate?: string;
+}
+
 interface AvailabilitySliderProps {
   yacht: YachtModel;
   /** The boat has no bookable week (showsAllBookedCalendar): every week is
    *  shown reserved and none can be selected. */
   allBooked?: boolean;
+  /** Weeks looked up on the server (boat page); null → the browser loads them, as before. */
+  initial?: InitialCalendar | null;
 }
 
 // ────────────────────────────────────────────────────────────────────────────
@@ -168,15 +182,32 @@ export const weeksFromOffers = (
 export const emptyCalendarFallback = (allBooked: boolean, standardOffers: YachtOfferModel[] | null): boolean =>
   allBooked && standardOffers !== null;
 
-const AvailabilitySlider = ({ yacht, allBooked = false }: AvailabilitySliderProps) => {
+/** The week selected first: the linked period (`?startDate&endDate`), else the first open one, else the first. */
+const firstSelectedId = (weeks: WeekData[], start?: string | null, end?: string | null): string | undefined => {
+  const urlMatch = start && end ? weeks.find(w => w.dateFromIso === start && w.dateToIso === end) : null;
+  const firstAvail = weeks.find(w => w.status !== 'booked' && w.status !== 'service');
+
+  return urlMatch?.id ?? firstAvail?.id ?? weeks[0]?.id;
+};
+
+/** A page left open this long refreshes its weeks when the visitor comes back to it. */
+const REFRESH_AFTER_MS = 10 * 60 * 1000;
+
+const AvailabilitySlider = ({ yacht, allBooked = false, initial = null }: AvailabilitySliderProps) => {
   const locale = useLocale();
   const { isBelowLg } = useBreakpoint();
-  // `null` until the first answer, so a boat with no bookable week can tell
-  // "no week came back" (inquiry panel) from "not asked yet".
+  // The server's weeks (`initial`) when the boat page looked them up, so the
+  // server HTML carries every week (26.10.2026). Without them `null` until
+  // the first answer, so a boat with no bookable week can tell "no week came
+  // back" (inquiry panel) from "not asked yet".
   const [standardOffers, standardOffersAction] = useActionState<YachtOfferModel[] | null, YachtOffersParams>(
     getSingleYachtStandardOffers,
-    null
+    initial?.offers ?? null
   );
+  // A refresh that brings no week (the action's answer to an error) keeps the server's weeks.
+  const offers =
+    initial && !(Array.isArray(standardOffers) && standardOffers.length > 0) ? initial.offers : standardOffers;
+  const initialFrom = initial?.from;
   // boat4you selects a week by writing startDate/endDate to the URL — the
   // blue AvailabilityDateSelector + offer detail card react to those params
   // (same channel the legacy week-cards picker used). No valtio date actions
@@ -189,7 +220,9 @@ const AvailabilitySlider = ({ yacht, allBooked = false }: AvailabilitySliderProp
   const currency = user?.currency || (params.currency as Currency) || Currency.EUR;
 
   const fetchOffersForCurrentParams = useCallback(() => {
-    const startDate = DateTime.now();
+    // From the server lookup's day when there is one: the same weeks the page
+    // drew, whatever the browser's date (another time zone).
+    const startDate = initialFrom ? dayjs(initialFrom) : DateTime.now();
 
     startTransition(() => {
       standardOffersAction({
@@ -202,26 +235,56 @@ const AvailabilitySlider = ({ yacht, allBooked = false }: AvailabilitySliderProp
       });
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [yacht.slug, currency]);
+  }, [yacht.slug, currency, initialFrom]);
+
+  // The server's weeks are this very lookup's answer: no second one on load.
+  // The browser asks on load without them (an error or no answer within
+  // 8 s), as before, and again when the currency changes (chosen, or the
+  // signed-in user's arriving after load).
+  const lookup = `${yacht.slug}|${currency}`;
+  const askedFor = useRef<string | null>(initial ? lookup : null);
 
   useEffect(() => {
+    if (askedFor.current === lookup) return;
+
+    askedFor.current = lookup;
     fetchOffersForCurrentParams();
+  }, [lookup, fetchOffersForCurrentParams]);
+
+  // A page left open: back on it after 10 minutes, the weeks are looked up again.
+  useEffect(() => {
+    let loadedAt = Date.now();
+    const onReturn = () => {
+      if (document.visibilityState !== 'visible' || Date.now() - loadedAt < REFRESH_AFTER_MS) return;
+
+      loadedAt = Date.now();
+      fetchOffersForCurrentParams();
+    };
+
+    window.addEventListener('focus', onReturn);
+    document.addEventListener('visibilitychange', onReturn);
+
+    return () => {
+      window.removeEventListener('focus', onReturn);
+      document.removeEventListener('visibilitychange', onReturn);
+    };
   }, [fetchOffersForCurrentParams]);
 
   // The partner's published periods as a continuous weekly timeline
   // (weeksFromOffers). 18-month horizon (matches the fetch window) so a
   // sentinel far-future date in the partner data (e.g. a SERVICE block dated
   // to 2098) can't push the calendar/chunk label decades out ("JUN 2026 →
-  // FEB 2099" bug, 25.6.2026).
+  // FEB 2099" bug, 25.6.2026). From the server lookup's day when there is
+  // one: the server and the browser (another time zone) draw the same weeks.
   const weeks = useMemo<WeekData[]>(
     () =>
       weeksFromOffers(
-        standardOffers,
+        offers,
         locale,
         allBooked,
-        DateTime.formatFull(DateTime.now()?.add(18, 'month') as Dayjs)
+        DateTime.formatFull((initialFrom ? dayjs(initialFrom) : DateTime.now()).add(18, 'month'))
       ),
-    [standardOffers, locale, allBooked]
+    [offers, locale, allBooked, initialFrom]
   );
 
   const months = useMemo(() => deriveMonthAxis(weeks), [weeks]);
@@ -229,21 +292,30 @@ const AvailabilitySlider = ({ yacht, allBooked = false }: AvailabilitySliderProp
   // Selected week pointer. Initialised once weeks arrive — pick the URL
   // period (yacht-detail page sets it from `?startDate=…&endDate=…`) by
   // matching the dateFromIso/dateToIso, otherwise default to the first
-  // available row.
-  const [selId, setSelId] = useState<string | undefined>(undefined);
+  // available row. With the server's weeks it starts selected, from the
+  // page's URL dates (the same on the server and in the first client render).
+  const [selId, setSelId] = useState<string | undefined>(() =>
+    initial && !allBooked ? firstSelectedId(weeks, initial.startDate, initial.endDate) : undefined
+  );
 
   useEffect(() => {
     // Nothing to select on a boat with no bookable week.
     if (!weeks.length || selId || allBooked) return;
 
     const search = new URLSearchParams(typeof window === 'undefined' ? '' : window.location.search);
-    const start = search.get('startDate');
-    const end = search.get('endDate');
-    const urlMatch = start && end ? weeks.find(w => w.dateFromIso === start && w.dateToIso === end) : null;
-    const firstAvail = weeks.find(w => w.status !== 'booked' && w.status !== 'service');
 
-    setSelId(urlMatch?.id ?? firstAvail?.id ?? weeks[0]?.id);
+    setSelId(firstSelectedId(weeks, search.get('startDate'), search.get('endDate')));
   }, [weeks, selId, allBooked]);
+
+  // The breakpoint is known only in the browser: until mounted (the server
+  // HTML and the hydration render) both layouts are drawn and the stylesheet
+  // shows the one for the screen, so a phone never flashes the desktop grid.
+  // Then only that one, as before.
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const handleSelect = useCallback(
     (w: WeekData) => {
@@ -273,13 +345,35 @@ const AvailabilitySlider = ({ yacht, allBooked = false }: AvailabilitySliderProp
   // A boat with no bookable week whose partner sent no week after all keeps
   // the inquiry in the calendar's place, as before 16.10.2026.
   if (!weeks.length) {
-    return emptyCalendarFallback(allBooked, standardOffers) ? <InquiryOnlyPanel variant="inline" /> : null;
+    return emptyCalendarFallback(allBooked, offers) ? <InquiryOnlyPanel variant="inline" /> : null;
   }
 
-  return isBelowLg ? (
-    <AvailabilityMobile weeks={weeks} months={months} selId={selId} onSelect={handleSelect} allBooked={allBooked} />
-  ) : (
-    <AvailabilityDesktop weeks={weeks} months={months} selId={selId} onSelect={handleSelect} allBooked={allBooked} />
+  return (
+    <>
+      {(!mounted || isBelowLg) && (
+        <Box sx={mounted ? undefined : { display: { lg: 'none' } }}>
+          <AvailabilityMobile
+            weeks={weeks}
+            months={months}
+            selId={selId}
+            onSelect={handleSelect}
+            allBooked={allBooked}
+          />
+        </Box>
+      )}
+      {(!mounted || !isBelowLg) && (
+        <Box sx={mounted ? undefined : { display: { xs: 'none', lg: 'block' } }}>
+          <AvailabilityDesktop
+            weeks={weeks}
+            months={months}
+            selId={selId}
+            onSelect={handleSelect}
+            allBooked={allBooked}
+          />
+        </Box>
+      )}
+      <WeekPriceList weeks={weeks} />
+    </>
   );
 };
 
@@ -300,13 +394,21 @@ const VISIBLE_COUNT = 5;
 // WEEKS_PER_CHUNK (26 ≈ 6 months) now lives in tier-helpers so `fillTimeline`
 // can pad the tail to a full chunk width.
 
+/** The 6-month page holding the week `id` (the first page when there is none). */
+const chunkOf = (weeks: WeekData[], id: string | undefined): number => {
+  const idx = id ? weeks.findIndex(w => w.id === id) : -1;
+
+  return idx < 0 ? 0 : Math.floor(idx / WEEKS_PER_CHUNK);
+};
+
 export const AvailabilityDesktop = ({ weeks, selId, onSelect, allBooked }: BranchProps) => {
   const t = useTranslations('yacht.calendar');
   const locale = useLocale();
   const totalChunks = Math.max(1, Math.ceil(weeks.length / WEEKS_PER_CHUNK));
-  const [chunkIdx, setChunkIdx] = useState(0);
+  const [chunkIdx, setChunkIdx] = useState(() => chunkOf(weeks, selId));
 
-  // When selId changes from outside, snap to the chunk that contains it.
+  // When selId changes from outside, snap to the chunk that contains it — on
+  // a new selection only, not when the weeks refresh (live data, currency).
   useEffect(() => {
     if (!selId) return;
 
@@ -317,7 +419,8 @@ export const AvailabilityDesktop = ({ weeks, selId, onSelect, allBooked }: Branc
     const target = Math.floor(idx / WEEKS_PER_CHUNK);
 
     setChunkIdx(prev => (prev === target ? prev : target));
-  }, [selId, weeks]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selId]);
 
   const chunkStart = chunkIdx * WEEKS_PER_CHUNK;
   const chunkEnd = Math.min(weeks.length, chunkStart + WEEKS_PER_CHUNK);
@@ -333,7 +436,14 @@ export const AvailabilityDesktop = ({ weeks, selId, onSelect, allBooked }: Branc
   }, [chunkWeeks]);
 
   // Window pointer is RELATIVE to the current chunk (0..chunkWeeks.length-5).
-  const [windowStart, setWindowStart] = useState(0);
+  // Starts where the effect below would put it for the selected week.
+  const [windowStart, setWindowStart] = useState(() => {
+    const idxInChunk = chunkWeeks.findIndex(w => w.id === selId);
+
+    return idxInChunk < VISIBLE_COUNT
+      ? 0
+      : Math.max(0, Math.min(chunkWeeks.length - VISIBLE_COUNT, idxInChunk - Math.floor(VISIBLE_COUNT / 2)));
+  });
 
   // Reset window when chunk changes — start each new 6-month view from its
   // first card, then re-centre on selection within the chunk.
@@ -503,9 +613,10 @@ export const AvailabilityMobile = ({ weeks, selId, onSelect, allBooked }: Mobile
   const t = useTranslations('yacht.calendar');
   const locale = useLocale();
   const totalChunks = Math.max(1, Math.ceil(weeks.length / WEEKS_PER_CHUNK));
-  const [chunkIdx, setChunkIdx] = useState(0);
+  const [chunkIdx, setChunkIdx] = useState(() => chunkOf(weeks, selId));
 
-  // Snap chunk to whichever holds the selected week (initial mount + URL period).
+  // Snap chunk to whichever holds the selected week (initial mount + URL
+  // period) — on a new selection only, not when the weeks refresh.
   useEffect(() => {
     if (!selId) return;
 
@@ -516,7 +627,8 @@ export const AvailabilityMobile = ({ weeks, selId, onSelect, allBooked }: Mobile
     const target = Math.floor(idx / WEEKS_PER_CHUNK);
 
     setChunkIdx(prev => (prev === target ? prev : target));
-  }, [selId, weeks]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selId]);
 
   const chunkStart = chunkIdx * WEEKS_PER_CHUNK;
   const chunkEnd = Math.min(weeks.length, chunkStart + WEEKS_PER_CHUNK);
@@ -562,7 +674,9 @@ export const AvailabilityMobile = ({ weeks, selId, onSelect, allBooked }: Mobile
   };
 
   // On chunk change → reset to first card (or matching selId within chunk)
-  // AND scroll the strip to that position immediately (no animation).
+  // AND scroll the strip to that position immediately (no animation). Also
+  // once the strip is mounted: with the server's weeks the selection is there
+  // from the first render, before the strip element is known.
   useEffect(() => {
     const idxInChunk = selId ? chunkWeeks.findIndex(w => w.id === selId) : -1;
     const target = idxInChunk >= 0 ? idxInChunk : 0;
@@ -581,11 +695,12 @@ export const AvailabilityMobile = ({ weeks, selId, onSelect, allBooked }: Mobile
       });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [chunkIdx]);
+  }, [chunkIdx, scrollerEl]);
 
   // Re-sync active when selId flips (heatmap selection) — but only when the
   // selected week sits inside the current chunk (the chunkIdx effect above
-  // handles the cross-chunk case).
+  // handles the cross-chunk case). Not when the weeks refresh: the strip
+  // stays where the visitor swiped it.
   useEffect(() => {
     if (!selId) return;
 
@@ -595,7 +710,7 @@ export const AvailabilityMobile = ({ weeks, selId, onSelect, allBooked }: Mobile
 
     goToIdx(idxInChunk);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selId, chunkWeeks]);
+  }, [selId]);
 
   // Track user-driven scroll → active card (ignored during programmatic scroll).
   useEffect(() => {

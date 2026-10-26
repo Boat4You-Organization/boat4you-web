@@ -338,7 +338,8 @@
     "weeks": "{count, plural, one {# semana} other {# semanas}}",
     "live": "Ao vivo",
     "weekAria": "Semana de {from} a {to}, {price}, {status}",
-    "allBookedNote": "Todas as semanas publicadas estão reservadas — envie uma consulta para outras datas."
+    "allBookedNote": "Todas as semanas publicadas estão reservadas — envie uma consulta para outras datas.",
+    "pricesEveryWeek": "Preços de cada semana"
   },
   "notAvailableShort": "Indisponível nestas datas",
   "readyToSail": "Pronto para zarpar?",

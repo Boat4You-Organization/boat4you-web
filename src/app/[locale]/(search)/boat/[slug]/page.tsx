@@ -17,16 +17,17 @@ import { routing } from '@/i18n/routing';
 import { Currency, UserModel } from '@/models/user.model';
 import { PriceCalcDto, YachtOfferModel } from '@/models/yacht-offer.model';
 import { CHARTER_TYPE_LABEL_MAP, CharterType, YachtModel } from '@/models/yacht.model';
-import { fetchSingleYachtPrice } from '@/services/yacht.service';
+import { fetchSingleYachtPrice, fetchSingleYachtStandardOffers } from '@/services/yacht.service';
 import { boatHubs } from '@/utils/server/catalogueHubs';
 import { loadManufacturerLookup } from '@/utils/server/manufacturerLookup';
 import { resolveYachtCapacity, withResolvedNotes } from '@/utils/server/yachtCapacity';
+import DateTime from '@/utils/static/DateTime';
 import { BoatDescTranslate, buildBoatDescription } from '@/utils/static/boatMetaDescription';
 import { boatSeoName, buildBoatTitle, titleBoatName, titlePlace } from '@/utils/static/boatTitle';
 import { buildMetadata, localizedUrl } from '@/utils/static/buildMetadata';
 import { getBoatImageUrl } from '@/utils/static/imageUtils';
 import { initialWeekOffer } from '@/utils/static/initialWeekOffer';
-import { isBookedByInquiry } from '@/utils/static/inquiryOnlyBoat';
+import { isBookedByInquiry, isInquiryOnlyBoat, showsAllBookedCalendar } from '@/utils/static/inquiryOnlyBoat';
 import { serializeJsonLd } from '@/utils/static/jsonLd';
 import { freeCancellationReturnPolicy } from '@/utils/static/merchantReturnPolicy';
 import { toTitleCase, yachtLabel } from '@/utils/static/toTitleCase';
@@ -44,6 +45,7 @@ import { heroImage, withLayoutImagesApart } from '@/utils/static/yachtLayout';
 import { cleanModelName } from '@/utils/static/yachtModelKey';
 import { successorBoatPath } from '@/utils/static/yachtSuccessor';
 import BoatContentSection from '@/views/Boat/BoatContentSection';
+import type { InitialCalendar } from '@/views/Boat/BoatContentSection/AvailabilityTab/LiveCalendar/AvailabilitySlider';
 import BoatHeroSection from '@/views/Boat/BoatHeroSection';
 import BoatHubLinks from '@/views/Boat/BoatHubLinks';
 import BoatMobileNavigation from '@/views/Boat/BoatMobileNavigation';
@@ -335,6 +337,24 @@ const boatCurrency = (user: UserModel | null, searchParamsData: AllSearchParams)
 
 const INITIAL_PRICE_TIMEOUT_MS = 8000;
 
+/** The answer of a lookup for the server HTML, or null after an error or 8 s (the browser then does it, as before). */
+const withinInitialTimeout = async <T,>(lookup: Promise<T>): Promise<T | null> => {
+  let timer: ReturnType<typeof setTimeout> | undefined;
+
+  try {
+    return await Promise.race([
+      lookup,
+      new Promise<null>(resolve => {
+        timer = setTimeout(() => resolve(null), INITIAL_PRICE_TIMEOUT_MS);
+      }),
+    ]);
+  } catch {
+    return null;
+  } finally {
+    clearTimeout(timer);
+  }
+};
+
 /**
  * The price of the week a dated link names (initialWeekOffer) for the server
  * HTML: the calculation the browser asks for (useYachtPriceCalculation), with
@@ -346,27 +366,53 @@ const initialWeekPrice = async (
   offer: YachtOfferModel,
   currency: Currency
 ): Promise<PriceCalcDto | null> => {
-  let timer: ReturnType<typeof setTimeout> | undefined;
+  const price = await withinInitialTimeout(
+    fetchSingleYachtPrice({
+      yachtSlug,
+      offerId: offer.id,
+      selectedExtrasKeys: offer.obligatoryExtrasKeys ?? [],
+      currency,
+    })
+  );
 
-  try {
-    const price = await Promise.race([
-      fetchSingleYachtPrice({
-        yachtSlug,
-        offerId: offer.id,
-        selectedExtrasKeys: offer.obligatoryExtrasKeys ?? [],
-        currency,
-      }),
-      new Promise<null>(resolve => {
-        timer = setTimeout(() => resolve(null), INITIAL_PRICE_TIMEOUT_MS);
-      }),
-    ]);
+  return price && Object.keys(price).length > 0 ? price : null;
+};
 
-    return price && Object.keys(price).length > 0 ? price : null;
-  } catch {
-    return null;
-  } finally {
-    clearTimeout(timer);
-  }
+/**
+ * The availability calendar's weeks for the server HTML (AvailabilitySlider
+ * `initial`, owner 26.10.2026): the lookup the browser makes on its first
+ * load (18 months from today, the page currency), the same call, so a reader
+ * without JavaScript (AI assistants, crawlers) has every week's dates,
+ * status and price on the plain boat URL. Soft — an error, no answer within
+ * 8 s or no week leaves the calendar to the browser, as before.
+ */
+const initialCalendar = async (
+  yachtSlug: string,
+  currency: Currency,
+  startDate?: string,
+  endDate?: string
+): Promise<InitialCalendar | null> => {
+  const today = DateTime.now();
+  const from = DateTime.formatFull(today);
+  const offers = await withinInitialTimeout(
+    fetchSingleYachtStandardOffers({
+      yachtSlug,
+      dateFrom: from,
+      dateTo: DateTime.formatFull(today.add(18, 'month')),
+      currency,
+    })
+  );
+
+  return Array.isArray(offers) && offers.length > 0
+    ? {
+        // Without the extras and their descriptions (≈ 90 % of the answer):
+        // the calendar and a selected week read none of them.
+        offers: offers.map(offer => ({ ...offer, extras: [] })),
+        from,
+        startDate,
+        endDate,
+      }
+    : null;
 };
 
 export async function generateMetadata({
@@ -513,14 +559,18 @@ const BoatPage = async ({
 
   // A dated link to a week the boat has: its price is in the server HTML too.
   const initialOffer = initialWeekOffer(yacht, searchParamsData.startDate, searchParamsData.endDate);
+  // So are the availability calendar's weeks, where the page shows it
+  // (AvailabilityTab: a partner boat, bookable or with every week reserved).
+  const showsCalendar = !yacht.custom && (!isInquiryOnlyBoat(yacht) || showsAllBookedCalendar(yacht));
 
-  const [tBoatMeta, manufacturers, capacity, initialPrice] = await Promise.all([
+  const [tBoatMeta, manufacturers, capacity, initialPrice, calendarWeeks] = await Promise.all([
     getTranslations({ locale, namespace: 'metadata.boat' }),
     loadManufacturerLookup(),
     // The partner's capacity for this locale, note translations included —
     // resolved here so the client gets the data, not the note table.
     resolveYachtCapacity(yacht, locale),
     initialOffer ? initialWeekPrice(yacht.slug, initialOffer, currency) : null,
+    showsCalendar ? initialCalendar(yacht.slug, currency, searchParamsData.startDate, searchParamsData.endDate) : null,
   ]);
   const facts = capacityFacts(capacity);
   // What the client components get: the same yacht without the partner notes
@@ -647,6 +697,7 @@ const BoatPage = async ({
           layoutImages={layoutImages}
           initialOffer={initialOffer}
           initialPrice={initialPrice}
+          initialCalendar={calendarWeeks}
         />
         <BoatHubLinks hubs={hubs} boatName={boatName} locale={locale} />
         <ModelPageLink

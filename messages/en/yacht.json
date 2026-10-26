@@ -338,7 +338,8 @@
     "weeks": "{count, plural, one {# week} other {# weeks}}",
     "live": "Live",
     "weekAria": "Week {from} to {to}, {price}, {status}",
-    "allBookedNote": "Every published week is reserved — send an inquiry for other dates."
+    "allBookedNote": "Every published week is reserved — send an inquiry for other dates.",
+    "pricesEveryWeek": "Prices for every week"
   },
   "notAvailableShort": "Not available on these dates",
   "readyToSail": "Ready to sail?",

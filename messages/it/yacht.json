@@ -338,7 +338,8 @@
     "weeks": "{count, plural, one {# settimana} other {# settimane}}",
     "live": "Live",
     "weekAria": "Settimana dal {from} al {to}, {price}, {status}",
-    "allBookedNote": "Tutte le settimane pubblicate sono prenotate: invia una richiesta per altre date."
+    "allBookedNote": "Tutte le settimane pubblicate sono prenotate: invia una richiesta per altre date.",
+    "pricesEveryWeek": "Prezzi di ogni settimana"
   },
   "notAvailableShort": "Non disponibile in queste date",
   "readyToSail": "Pronti a salpare?",

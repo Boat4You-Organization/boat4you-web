@@ -25,9 +25,12 @@ import GoodToKnowItem from '@/views/Boat/BoatContentSection/GoodToKnowItem';
 import AvailabilityCard from './AvailabilityCard';
 import AvailabilityDateSelector from './AvailabilityDateSelector';
 import LiveCalendar from './LiveCalendar';
+import type { InitialCalendar } from './LiveCalendar/AvailabilitySlider';
 
 interface AvailabilityTabProps {
   yacht: YachtModel;
+  /** The calendar's weeks looked up on the server (boat page); null: the browser loads them. */
+  initialCalendar?: InitialCalendar | null;
 }
 
 const defaultValues: BoatCalendarFormValues = {
@@ -35,7 +38,7 @@ const defaultValues: BoatCalendarFormValues = {
   endDate: null,
 };
 
-const AvailabilityTab = ({ yacht }: AvailabilityTabProps) => {
+const AvailabilityTab = ({ yacht, initialCalendar = null }: AvailabilityTabProps) => {
   const { offersToDisplay, selectedOffer } = useYachtStore();
   const { params, setMultipleParams } = useQueryParams();
   const t = useTranslations('yacht');
@@ -109,7 +112,7 @@ const AvailabilityTab = ({ yacht }: AvailabilityTabProps) => {
             {inquiryOnly && !allBooked ? (
               <InquiryOnlyPanel variant="inline" />
             ) : (
-              <LiveCalendar yacht={yacht} allBooked={allBooked} />
+              <LiveCalendar yacht={yacht} allBooked={allBooked} initial={initialCalendar} />
             )}
           </Stack>
         </Stack>

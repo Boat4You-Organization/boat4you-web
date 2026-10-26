@@ -338,7 +338,8 @@
     "weeks": "{count, plural, one {# week} other {# weken}}",
     "live": "Live",
     "weekAria": "Week {from} tot {to}, {price}, {status}",
-    "allBookedNote": "Alle gepubliceerde weken zijn gereserveerd — stuur een aanvraag voor andere data."
+    "allBookedNote": "Alle gepubliceerde weken zijn gereserveerd — stuur een aanvraag voor andere data.",
+    "pricesEveryWeek": "Prijzen voor elke week"
   },
   "notAvailableShort": "Niet beschikbaar op deze data",
   "readyToSail": "Klaar om uit te varen?",

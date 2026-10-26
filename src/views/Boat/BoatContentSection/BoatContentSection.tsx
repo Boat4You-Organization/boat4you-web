@@ -33,6 +33,7 @@ import { BoatTransitionContext } from '@/views/Boat/BoatTransitionProvider';
 
 import AmenitiesTab from './AmenitiesTab';
 import AvailabilityTab from './AvailabilityTab';
+import type { InitialCalendar } from './AvailabilityTab/LiveCalendar/AvailabilitySlider';
 import styles from './BoatContentSection.module.scss';
 import BoatInquiryModal from './BoatInquiryModal';
 import DetailsTab from './DetailsTab';
@@ -53,6 +54,8 @@ interface BoatContentSectionProps {
   /** The week a dated link names and its price, from the server (initialWeekOffer.ts); null otherwise. */
   initialOffer?: YachtOfferModel | null;
   initialPrice?: PriceCalcDto | null;
+  /** The availability calendar's weeks, looked up on the server; null: the browser loads them. */
+  initialCalendar?: InitialCalendar | null;
 }
 
 const BoatContentSection = ({
@@ -62,6 +65,7 @@ const BoatContentSection = ({
   layoutImages = [],
   initialOffer = null,
   initialPrice = null,
+  initialCalendar = null,
 }: BoatContentSectionProps) => {
   const { selectedOffer, boatInquiryModalOpen } = useYachtStore();
   const { calculatePrice } = useYachtPriceCalculation();
@@ -180,7 +184,7 @@ const BoatContentSection = ({
       case 'ammenities':
         return <AmenitiesTab yacht={yacht} open={!!expanded.ammenities} onToggle={() => toggleSection('ammenities')} />;
       case 'availability':
-        return <AvailabilityTab yacht={yacht} />;
+        return <AvailabilityTab yacht={yacht} initialCalendar={initialCalendar} />;
       case 'extras':
         return <ExtrasTab yacht={yacht} open={!!expanded.extras} onToggle={() => toggleSection('extras')} />;
       case 'priceDetails':

@@ -53,7 +53,8 @@ registerHooks({
 });
 
 const ROOT = fileURLToPath(new URL('../', import.meta.url));
-const readJson = path => JSON.parse(readFileSync(`${ROOT}${path}`, 'utf8'));
+const readSrc = path => readFileSync(`${ROOT}${path}`, 'utf8');
+const readJson = path => JSON.parse(readSrc(path));
 const LOCALES = ['en', 'de', 'fr', 'it', 'es', 'pt', 'nl', 'pl', 'hr'];
 const allMessages = locale =>
   Object.fromEntries(
@@ -89,8 +90,15 @@ const { isInquiryOnlyBoat, isBookedByInquiry, showsAllBookedCalendar } = await i
 const { buildYachtFaq } = await import('@/utils/static/yachtFaq');
 const { default: AvailabilityTab } = await import('@/views/Boat/BoatContentSection/AvailabilityTab/AvailabilityTab');
 const { default: BoatCalendar } = await import('@/components/BoatCalendar/BoatCalendar');
-const { AvailabilityDesktop, AvailabilityMobile, emptyCalendarFallback, weeksFromOffers } =
-  await import('@/views/Boat/BoatContentSection/AvailabilityTab/LiveCalendar/AvailabilitySlider');
+const {
+  default: AvailabilitySlider,
+  AvailabilityDesktop,
+  AvailabilityMobile,
+  emptyCalendarFallback,
+  weeksFromOffers,
+} = await import('@/views/Boat/BoatContentSection/AvailabilityTab/LiveCalendar/AvailabilitySlider');
+const { default: WeekPriceList } =
+  await import('@/views/Boat/BoatContentSection/AvailabilityTab/LiveCalendar/parts/WeekPriceList');
 const { WEEKS_PER_CHUNK, monthAxis, weekPriceLabel } =
   await import('@/views/Boat/BoatContentSection/AvailabilityTab/LiveCalendar/parts/tier-helpers');
 
@@ -380,5 +388,134 @@ describe('a bookable boat: the calendar is unchanged', () => {
     // The free week's list price struck through, as before.
     assert.ok(html.includes('1,463 €'));
     assert.equal(disabledCells(html), WEEKS_PER_CHUNK - 1);
+  });
+});
+
+/**
+ * Owner 26.10.2026: an AI assistant (ChatGPT, Gemini, Grok) or a crawler asked
+ * "what does this boat cost the week of 7–14 August 2027" opens the plain boat
+ * URL and reads its server HTML — the calendar was drawn only in the browser.
+ * The boat page now looks the calendar's weeks up on the server (the same
+ * /standard-offers call, page currency, soft after 8 s) and the calendar
+ * draws them from the first render; under it a closed <details> lists every
+ * week as text: dates with the year, nights, status, the card's price.
+ */
+describe('the calendar weeks in the server HTML (26.10.2026)', () => {
+  const FROM = '2026-10-16'; // + 18 months = HORIZON
+  const bookable = NADA.standardOffers.map((o, i) => (i === 1 ? { ...o, status: 'FREE' } : o));
+  const initial = offers => ({ offers, from: FROM });
+  const slider = (props, locale = 'en') => render(createElement(AvailabilitySlider, { yacht: nada, ...props }), locale);
+  // The text a reader without JavaScript keeps: no styles, no tags, one space.
+  const text = html =>
+    html
+      .replace(/<style[^>]*>[\s\S]*?<\/style>/gu, ' ')
+      .replace(/<[^>]+>/gu, '')
+      .replace(/&amp;/gu, '&')
+      .replace(/\s+/gu, ' ');
+  const DAY = '(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun), \\d{1,2} [A-Z][a-z]{2} 20\\d\\d';
+  const rows = html => count(text(html), new RegExp(`${DAY} – ${DAY}`, 'gu'));
+
+  test('with the server weeks: the calendar and every week as a row with the year, in the server HTML', () => {
+    const html = slider({ initial: initial(bookable) });
+    const weeks = weeksOf(bookable, false);
+
+    assert.equal(weeks.length, WEEKS_PER_CHUNK);
+    assert.equal(rows(html), weeks.length);
+    // Both layouts until the browser knows the screen (the stylesheet shows one).
+    assert.equal(cells(html), 2 * WEEKS_PER_CHUNK);
+    assert.match(html, /<details[^>]*>(?:<style[^>]*>[^<]*<\/style>)?<summary[^>]*>Prices for every week<\/summary>/u);
+    const body = text(html);
+
+    // The free week: list price struck, the discount, the price; a reserved
+    // week keeps its price; a week without an offer the card's dash.
+    assert.ok(body.includes('Sat, 24 Oct 2026 – Sat, 31 Oct 2026 7 nights · Available 1,463 € −19% 1,181 €'));
+    assert.ok(body.includes('Sat, 17 Oct 2026 – Sat, 24 Oct 2026 7 nights · Reserved 1,181 €'));
+    assert.ok(body.includes('Sat, 26 Dec 2026 – Sat, 2 Jan 2027 7 nights · Unavailable —'));
+    assert.ok(body.includes('October 2026') && body.includes('January 2027'));
+    assert.doesNotMatch(body, /(?<![\d.,])0 €/u);
+  });
+
+  test('without them (an error or 8 s on the server): nothing until the browser answers, as before', () => {
+    assert.equal(slider({}), '');
+    assert.equal(slider({ initial: null }), '');
+  });
+
+  test('a boat with every week reserved: each week keeps its price, no list price, nothing selectable', () => {
+    const html = slider({ allBooked: true, initial: initial(NADA.standardOffers) });
+    const body = text(html);
+
+    assert.equal(rows(html), WEEKS_PER_CHUNK);
+    assert.ok(body.includes('Sat, 31 Oct 2026 – Sat, 7 Nov 2026 7 nights · Reserved 1,390 €'));
+    assert.equal(body.includes('1,463 €'), false);
+    assert.equal(body.includes('Price on request'), false);
+    assert.equal(count(html, /role="button" tabindex="0"/gu), 0);
+  });
+
+  test('the availability block hands the server weeks to the calendar', () => {
+    setTestSearch('');
+    const html = render(
+      createElement(AvailabilityTab, {
+        yacht: boat({ hasBookableFutureOffer: true, offers: [freeWeek] }),
+        initialCalendar: initial(bookable),
+      })
+    );
+
+    assert.equal(rows(html), WEEKS_PER_CHUNK);
+  });
+
+  test('the label and the rows in all 9 locales: translated, each date with its year, never "0 €"', () => {
+    const labels = LOCALES.map(locale => allMessages(locale).yacht.calendar.pricesEveryWeek);
+
+    labels.forEach((label, i) => assert.ok(typeof label === 'string' && label.length > 5, LOCALES[i]));
+    assert.equal(new Set(labels).size, LOCALES.length);
+    LOCALES.forEach((locale, i) => {
+      const html = render(createElement(WeekPriceList, { weeks: weeksOf(bookable, false, locale) }), locale);
+      const items = [...html.matchAll(/<li[^>]*>([\s\S]*?)<\/li>/gu)].map(([, item]) => text(item));
+
+      assert.ok(html.includes(`>${labels[i]}</summary>`), locale);
+      assert.equal(items.length, WEEKS_PER_CHUNK, locale);
+      items.forEach(item => assert.match(item, /202[67].*–.*202[67]/u, `${locale}: ${item}`));
+      assert.doesNotMatch(text(html), /(?<![\d.,])0 €/u, locale);
+    });
+  });
+
+  test('the list is real content: a closed <details>, never hidden', () => {
+    const LIST = readSrc('src/views/Boat/BoatContentSection/AvailabilityTab/LiveCalendar/parts/WeekPriceList.tsx');
+
+    assert.match(LIST, /<Box component="details" sx=\{\{ mt: '16px' \}\}>/u);
+    assert.doesNotMatch(LIST, /\bopen\b|hidden|display: ?'none'|visibility/u);
+    // The card's price: never "0 €", a booked week keeps it, the list price only where the card shows it.
+    assert.match(LIST, /weekPriceLabel\(w, locale, tCommon\('priceOnRequest'\)\)/u);
+    assert.match(LIST, /const showRegular = regular > 0 && w\.price > 0 && !isBooked;/u);
+  });
+
+  test('the boat page looks the weeks up beside its other lookups, where the calendar shows, and hands them down', () => {
+    const PAGE = readSrc('src/app/[locale]/(search)/boat/[slug]/page.tsx');
+    const SECTION = readSrc('src/views/Boat/BoatContentSection/BoatContentSection.tsx');
+    const TAB = readSrc('src/views/Boat/BoatContentSection/AvailabilityTab/AvailabilityTab.tsx');
+
+    assert.match(
+      PAGE,
+      /const showsCalendar = !yacht\.custom && \(!isInquiryOnlyBoat\(yacht\) \|\| showsAllBookedCalendar\(yacht\)\);/u
+    );
+    assert.match(
+      PAGE,
+      /initialPrice, calendarWeeks\] = await Promise\.all\(\[[\s\S]*showsCalendar \? initialCalendar\(yacht\.slug, currency, searchParamsData\.startDate, searchParamsData\.endDate\) : null,\s*\]\);/u
+    );
+    assert.match(PAGE, /fetchSingleYachtStandardOffers\(\{[\s\S]*?currency,\s*\}\)/u);
+    assert.match(PAGE, /offers: offers\.map\(offer => \(\{ \.\.\.offer, extras: \[\] \}\)\)/u);
+    assert.match(PAGE, /initialCalendar=\{calendarWeeks\}/u);
+    assert.match(SECTION, /<AvailabilityTab yacht=\{yacht\} initialCalendar=\{initialCalendar\} \/>/u);
+    assert.match(TAB, /<LiveCalendar yacht=\{yacht\} allBooked=\{allBooked\} initial=\{initialCalendar\} \/>/u);
+  });
+
+  test('the browser does not repeat the server lookup on load, asks from the server day, and again for another currency', () => {
+    const SLIDER = readSrc('src/views/Boat/BoatContentSection/AvailabilityTab/LiveCalendar/AvailabilitySlider.tsx');
+
+    assert.match(SLIDER, /getSingleYachtStandardOffers,\s*initial\?\.offers \?\? null/u);
+    assert.match(SLIDER, /const askedFor = useRef<string \| null>\(initial \? lookup : null\);/u);
+    assert.match(SLIDER, /const lookup = `\$\{yacht\.slug\}\|\$\{currency\}`;/u);
+    assert.match(SLIDER, /const startDate = initialFrom \? dayjs\(initialFrom\) : DateTime\.now\(\);/u);
+    assert.match(SLIDER, /<WeekPriceList weeks=\{weeks\} \/>/u);
   });
 });
