@@ -10,6 +10,7 @@ import { startTransition, useActionState, useCallback, useEffect, useMemo, useRe
 import { Box, Stack, Typography } from '@mui/material';
 import dayjs, { Dayjs } from 'dayjs';
 import weekOfYear from 'dayjs/plugin/weekOfYear';
+import weekYear from 'dayjs/plugin/weekYear';
 import { useLocale, useTranslations } from 'next-intl';
 
 import { YachtOffersParams, getSingleYachtStandardOffers } from '@/actions/yacht.actions';
@@ -42,6 +43,7 @@ import {
 import { T } from './parts/tokens';
 
 dayjs.extend(weekOfYear);
+dayjs.extend(weekYear);
 
 /** The calendar's first lookup, made by the boat page on the server: the server HTML and the first client render draw these weeks. */
 export interface InitialCalendar {
@@ -939,8 +941,9 @@ export const AvailabilityMobile = ({ weeks, selId, onSelect, allBooked }: Mobile
                   {d.week()}
                 </Box>
                 {' · '}
+                {/* The year of that week number: a week from Mon 28 Dec 2026 is "Week 1 · 2027". */}
                 <Box component="span" sx={{ color: T.faint }}>
-                  {d.format('YYYY')}
+                  {d.weekYear()}
                 </Box>
               </>
             );

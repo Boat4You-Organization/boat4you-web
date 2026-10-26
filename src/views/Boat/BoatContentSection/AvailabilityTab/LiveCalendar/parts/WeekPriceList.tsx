@@ -38,9 +38,13 @@ const monthWithYear = (iso: string, locale: string): string =>
  * finds the price of any upcoming week on the plain boat URL, not only of the
  * 6-month page the calendar shows.
  *
- * Outside English the dates go through Intl; a browser with another ICU may
- * write them slightly differently, so their text keeps the server's until
- * the weeks change (suppressHydrationWarning).
+ * A week without an offer (a gap fillTimeline drew, "Unavailable" on its
+ * card) reads only "Price on request": no status, as we know of no booking.
+ *
+ * The dates outside English and the prices go through Intl; a browser with
+ * another ICU may write them slightly differently ("Sept", a narrow space),
+ * so their text keeps the server's until the weeks change
+ * (suppressHydrationWarning).
  */
 const WeekPriceList = ({ weeks }: WeekPriceListProps) => {
   const t = useTranslations('yacht');
@@ -127,20 +131,31 @@ const WeekPriceList = ({ weeks }: WeekPriceListProps) => {
                       {`${dayWithYear(w.dateFromIso as string, locale)} – ${dayWithYear(w.dateToIso as string, locale)}`}
                     </Box>{' '}
                     <Box component="span" sx={{ color: T.muted, whiteSpace: 'nowrap' }}>
-                      {t('calendar.nights', { count: Math.max(1, to.diff(from, 'day')) })} ·{' '}
-                      <span style={{ color: statusColor(w.status).fg }}>{t(statusKey(w.status))}</span>
+                      {t('calendar.nights', { count: Math.max(1, to.diff(from, 'day')) })}
+                      {/* A week without an offer has no status to tell (it is not booked): only "Price on request". */}
+                      {!w.noOffer && (
+                        <>
+                          {' · '}
+                          <span style={{ color: statusColor(w.status).fg }}>{t(statusKey(w.status))}</span>
+                        </>
+                      )}
                     </Box>{' '}
                     <Box component="span" sx={{ ml: 'auto', whiteSpace: 'nowrap', fontFeatureSettings: '"tnum"' }}>
                       {showRegular && (
                         <>
-                          <s style={{ color: T.muted }}>{fmtPrice(regular, w.currency, locale)}</s>{' '}
+                          <s style={{ color: T.muted }} suppressHydrationWarning>
+                            {fmtPrice(regular, w.currency, locale)}
+                          </s>{' '}
                           <span style={{ color: T.amber, fontWeight: 700 }}>
                             {`−${Math.round(((regular - w.price) / regular) * 100)}%`}
                           </span>{' '}
                         </>
                       )}
-                      <span style={{ color: isBooked ? T.muted : T.greenDeep, fontWeight: 700 }}>
-                        {weekPriceLabel(w, locale, tCommon('priceOnRequest'))}
+                      <span
+                        style={{ color: isBooked ? T.muted : T.greenDeep, fontWeight: 700 }}
+                        suppressHydrationWarning
+                      >
+                        {w.noOffer ? tCommon('priceOnRequest') : weekPriceLabel(w, locale, tCommon('priceOnRequest'))}
                       </span>
                     </Box>
                   </Box>

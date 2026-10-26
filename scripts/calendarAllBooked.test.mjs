@@ -424,13 +424,14 @@ describe('the calendar weeks in the server HTML (26.10.2026)', () => {
     // Both layouts until the browser knows the screen (the stylesheet shows one).
     assert.equal(cells(html), 2 * WEEKS_PER_CHUNK);
     assert.match(html, /<details[^>]*>(?:<style[^>]*>[^<]*<\/style>)?<summary[^>]*>Prices for every week<\/summary>/u);
+
     const body = text(html);
 
     // The free week: list price struck, the discount, the price; a reserved
-    // week keeps its price; a week without an offer the card's dash.
+    // week keeps its price; a week without an offer only "Price on request".
     assert.ok(body.includes('Sat, 24 Oct 2026 – Sat, 31 Oct 2026 7 nights · Available 1,463 € −19% 1,181 €'));
     assert.ok(body.includes('Sat, 17 Oct 2026 – Sat, 24 Oct 2026 7 nights · Reserved 1,181 €'));
-    assert.ok(body.includes('Sat, 26 Dec 2026 – Sat, 2 Jan 2027 7 nights · Unavailable —'));
+    assert.ok(body.includes('Sat, 26 Dec 2026 – Sat, 2 Jan 2027 7 nights Price on request'));
     assert.ok(body.includes('October 2026') && body.includes('January 2027'));
     assert.doesNotMatch(body, /(?<![\d.,])0 €/u);
   });
@@ -447,12 +448,15 @@ describe('the calendar weeks in the server HTML (26.10.2026)', () => {
     assert.equal(rows(html), WEEKS_PER_CHUNK);
     assert.ok(body.includes('Sat, 31 Oct 2026 – Sat, 7 Nov 2026 7 nights · Reserved 1,390 €'));
     assert.equal(body.includes('1,463 €'), false);
-    assert.equal(body.includes('Price on request'), false);
+    // Only the 16 weeks after the last published one (no offer, no booking known).
+    assert.equal(count(body, /7 nights Price on request/gu), WEEKS_PER_CHUNK - 10);
+    assert.equal(count(body, /Price on request/gu), WEEKS_PER_CHUNK - 10);
     assert.equal(count(html, /role="button" tabindex="0"/gu), 0);
   });
 
   test('the availability block hands the server weeks to the calendar', () => {
     setTestSearch('');
+
     const html = render(
       createElement(AvailabilityTab, {
         yacht: boat({ hasBookableFutureOffer: true, offers: [freeWeek] }),
@@ -517,5 +521,126 @@ describe('the calendar weeks in the server HTML (26.10.2026)', () => {
     assert.match(SLIDER, /const lookup = `\$\{yacht\.slug\}\|\$\{currency\}`;/u);
     assert.match(SLIDER, /const startDate = initialFrom \? dayjs\(initialFrom\) : DateTime\.now\(\);/u);
     assert.match(SLIDER, /<WeekPriceList weeks=\{weeks\} \/>/u);
+  });
+});
+
+/**
+ * Reviews 26.10.2026 of the week list. (A) A week the partner published
+ * nothing for is drawn as an "Unavailable" card so the timeline flows; the
+ * list said "Unavailable —" and an AI assistant told a client the week is
+ * booked, when we simply have no data: the row reads only "Price on request",
+ * the card is unchanged. (B) A week across New Year prints the year of the
+ * date it sits next to. (C) Server-rendered Intl text keeps the server's in
+ * the first client render (suppressHydrationWarning on that element).
+ */
+describe('the week list and the cards across New Year (reviews 26.10.2026)', () => {
+  // The text a reader keeps, one space where an element ends.
+  const text = html =>
+    html
+      .replace(/<style[^>]*>[\s\S]*?<\/style>/gu, ' ')
+      .replace(/<[^>]+>/gu, ' ')
+      .replace(/&amp;/gu, '&')
+      .replace(/\s+/gu, ' ');
+  const items = html => [...html.matchAll(/<li[^>]*>([\s\S]*?)<\/li>/gu)].map(([, item]) => text(item).trim());
+  const offer = (id, dateFrom, dateTo, status, amount) => ({
+    id,
+    dateFrom,
+    dateTo,
+    status,
+    clientPriceInfo: amount ? { amount, currency: 'EUR' } : undefined,
+    listPriceInfo: amount ? { amount, currency: 'EUR' } : undefined,
+  });
+  // A reservation, a gap of two weeks, an option, a 3-week owner block (SERVICE), the tail.
+  const weeks = weeksOf(
+    [
+      offer(1, '2026-12-05', '2026-12-12', 'RESERVATION', 2100),
+      offer(2, '2026-12-26', '2027-01-02', 'OPTION', 2400),
+      offer(3, '2027-01-02', '2027-01-23', 'SERVICE'),
+    ],
+    false
+  );
+
+  test('(A) a week without an offer: only "Price on request" in the list, no status; a real offer keeps its status and price', () => {
+    const rows = items(render(createElement(WeekPriceList, { weeks })));
+
+    // One row per calendar week: the list stays aligned with the calendar.
+    assert.equal(rows.length, weeks.length);
+    assert.equal(rows[0], 'Sat, 5 Dec 2026 – Sat, 12 Dec 2026 7 nights · Reserved 2,100 €');
+    assert.equal(rows[1], 'Sat, 12 Dec 2026 – Sat, 19 Dec 2026 7 nights Price on request');
+    assert.equal(rows[2], 'Sat, 19 Dec 2026 – Sat, 26 Dec 2026 7 nights Price on request');
+    assert.equal(rows[3], 'Sat, 26 Dec 2026 – Sat, 2 Jan 2027 7 nights · Pre-reserved 2,400 €');
+    // The owner's block is a published period: its weeks stay "Unavailable".
+    assert.equal(rows[4], 'Sat, 2 Jan 2027 – Sat, 9 Jan 2027 7 nights · Unavailable —');
+    assert.equal(rows[6], 'Sat, 16 Jan 2027 – Sat, 23 Jan 2027 7 nights · Unavailable —');
+    assert.equal(rows[7], 'Sat, 23 Jan 2027 – Sat, 30 Jan 2027 7 nights Price on request');
+    assert.equal(weeks.filter(w => w.noOffer).length, rows.filter(r => r.endsWith('7 nights Price on request')).length);
+    rows.forEach(r => assert.doesNotMatch(r, /(?<![\d.,])0 €/u, r));
+  });
+
+  test('(A) the cards of those weeks are unchanged: "Unavailable", the dash, not selectable', () => {
+    const html = branch(AvailabilityMobile, weeks, false);
+    const gap = weeks[1];
+
+    assert.equal(gap.noOffer, true);
+    assert.equal(gap.status, 'service');
+    assert.equal(weekPriceLabel(gap, 'en', 'Price on request'), '—');
+    assert.equal(html.includes('Price on request'), false);
+    assert.ok(html.includes('aria-label="Week Dec 12 to Dec 19, —, Unavailable"'));
+    // The blocked weeks of a published offer carry its id, not the flag.
+    assert.deepEqual(
+      weeks.slice(4, 7).map(w => [w.id.startsWith('blk|3|'), w.noOffer]),
+      [
+        [true, false],
+        [true, false],
+        [true, false],
+      ]
+    );
+  });
+
+  test('(B) across New Year: the card prints the year of the end date, the list each date with its own year', () => {
+    const mobile = text(branch(AvailabilityMobile, weeks, false));
+
+    assert.ok(mobile.includes('Dec 26 ↓ 7 NIGHTS Jan 02 2027 · 7 nights'), mobile);
+    assert.ok(mobile.includes('Dec 19 ↓ 7 NIGHTS Dec 26 2026 · 7 nights'));
+    assert.equal(mobile.includes('Jan 02 2026'), false);
+    assert.ok(
+      items(render(createElement(WeekPriceList, { weeks })))[3].startsWith('Sat, 26 Dec 2026 – Sat, 2 Jan 2027')
+    );
+    // The 6-month page label: each end with its own year.
+    assert.ok(text(branch(AvailabilityDesktop, weeks, false)).includes('DEC 2026 → JUN 2027'));
+  });
+
+  test('(B) the phone strip names the week with the year of its number: a week from Mon 28 Dec 2026 is week 1 of 2027', () => {
+    // Weeks start on Monday (DateTime: en weekStart 1); week 1 holds 1 January.
+    const footer = (from, to) =>
+      text(branch(AvailabilityMobile, weeksOf([offer(9, from, to, 'FREE', 2000)], false), false)).match(
+        /Week \d+ · \d{4}/u
+      )?.[0];
+
+    assert.equal(footer('2026-12-28', '2027-01-04'), 'Week 1 · 2027');
+    assert.equal(footer('2026-12-26', '2027-01-02'), 'Week 52 · 2026');
+    assert.equal(footer('2027-01-02', '2027-01-09'), 'Week 1 · 2027');
+  });
+
+  test('(C) Intl prices and dates keep the server text in the first client render (suppressHydrationWarning)', () => {
+    const CARD = readSrc('src/components/AvailabilityCard/AvailabilityCard.tsx');
+    const LIST = readSrc('src/views/Boat/BoatContentSection/AvailabilityTab/LiveCalendar/parts/WeekPriceList.tsx');
+    const STRIP = readSrc('src/views/Boat/BoatContentSection/AvailabilityTab/LiveCalendar/parts/HeatmapStrip.tsx');
+
+    // The card's struck list price and its price.
+    assert.match(CARD, /<Typography\s+suppressHydrationWarning\s+sx=\{\{\s+fontSize: compact \? '14px' : '13px'/u);
+    assert.match(
+      CARD,
+      /<Typography\s+suppressHydrationWarning\s+sx=\{\{\s+fontSize: isAmount \? amountSize : textSize/u
+    );
+    // The list's dates, months and prices.
+    assert.equal(count(LIST, /(?<!\()suppressHydrationWarning(?!\))/gu), 4);
+    assert.match(LIST, /<s style=\{\{ color: T\.muted \}\} suppressHydrationWarning>\s*\{fmtPrice\(regular/u);
+    assert.match(
+      LIST,
+      /fontWeight: 700 \}\}\s+suppressHydrationWarning\s*>\s*\{w\.noOffer \? tCommon\('priceOnRequest'\)/u
+    );
+    // The heatmap cell's title and label carry the price.
+    assert.match(STRIP, /disabled=\{isBlocked\}[\s\S]{0,200}suppressHydrationWarning\s+title=/u);
   });
 });

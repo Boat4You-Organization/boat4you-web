@@ -50,6 +50,8 @@ const HeatmapStrip = ({ weeks, activeId, visibleRange, onCellClick, height = 56 
               key={w.id}
               onClick={() => !isBlocked && onCellClick(w, i)}
               disabled={isBlocked}
+              // The title and label carry the Intl price: the server's stay if the browser's ICU writes it otherwise.
+              suppressHydrationWarning
               title={`${w.from} → ${w.to} · ${weekPriceLabel(w, locale, tCommon('priceOnRequest'))} · ${t(statusKey(w.status))}`}
               aria-label={t('calendar.weekAria', {
                 from: w.from,

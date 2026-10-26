@@ -40,6 +40,10 @@ export interface WeekData {
    *  the calendar shows every published week reserved (owner rule 16.10.2026,
    *  showsAllBookedCalendar) — a live option keeps its "Pre-reserved" pill. */
   locked?: boolean;
+  /** No offer behind the week: a gap or tail cell fillTimeline drew so the
+   *  timeline flows (the card stays "Unavailable"); the week list says only
+   *  "Price on request" — we have no data, not a booking. */
+  noOffer?: boolean;
   /** Optional pre-computed price tier (0..3). If absent, `withTiers` derives it. */
   tier?: 0 | 1 | 2 | 3;
   /** Raw backend offer references — passed through so click handlers can hand them to `calculatePriceForOffer`. */
@@ -187,6 +191,8 @@ export const fillTimeline = (
       price: opts.price ?? 0,
       currency: opts.currency,
       status: opts.status ?? 'service',
+      // The weekly cells of a long blocked offer carry its id; the rest has no offer.
+      noOffer: !opts.id,
       dateFromIso: fromIso,
       dateToIso: to.format('YYYY-MM-DD'),
     };

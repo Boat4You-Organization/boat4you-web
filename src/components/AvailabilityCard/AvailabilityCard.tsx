@@ -42,6 +42,7 @@ const AvailabilityCard = ({ w, selected, onClick, size = 'desktop' }: Availabili
   // The partner's real period length (any check-in day / length is shown as
   // published) — the card used to print "7 NIGHTS" / "Per week" on every one.
   const nights = w.dateFromIso && w.dateToIso ? Math.max(1, dayjs(w.dateToIso).diff(dayjs(w.dateFromIso), 'day')) : 7;
+  const endIso = w.dateToIso ?? w.dateFromIso;
   // Both RESERVATION ('booked') and SERVICE ('service') are hard-blocked: the
   // card is disabled (no click, grey price). The status pill text still
   // differentiates the two via statusLabel/statusColor (Reserved vs Unavailable).
@@ -149,9 +150,10 @@ const AvailabilityCard = ({ w, selected, onClick, size = 'desktop' }: Availabili
         >
           {w.to}
         </Typography>
+        {/* The year of the end date it sits under: "Jan 02 / 2027 · 7 nights" for a week from Dec 26. */}
         {compact && (
           <Typography sx={{ fontSize: '12px', color: T.muted, mt: '6px' }}>
-            {w.dateFromIso ? dayjs(w.dateFromIso).format('YYYY') : ''} · {t('calendar.nights', { count: nights })}
+            {endIso ? dayjs(endIso).format('YYYY') : ''} · {t('calendar.nights', { count: nights })}
           </Typography>
         )}
       </Box>
@@ -185,7 +187,9 @@ const AvailabilityCard = ({ w, selected, onClick, size = 'desktop' }: Availabili
             gap={compact ? 1 : 0.75}
             sx={{ mt: compact ? '4px' : '4px', mb: compact ? '2px' : '2px' }}
           >
+            {/* Intl prices: a browser with another ICU may space them differently; the server's text stays. */}
             <Typography
+              suppressHydrationWarning
               sx={{
                 fontSize: compact ? '14px' : '13px',
                 fontWeight: 600,
@@ -211,6 +215,7 @@ const AvailabilityCard = ({ w, selected, onClick, size = 'desktop' }: Availabili
           </Stack>
         )}
         <Typography
+          suppressHydrationWarning
           sx={{
             fontSize: isAmount ? amountSize : textSize,
             fontWeight: 800,
