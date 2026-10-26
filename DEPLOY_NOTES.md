@@ -1,5 +1,14 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-10-26 — 📅 Stranica broda: svaki tjedan s cijenom u server HTML-u (LiveCalendar SSR + sklopljena lista „Prices for every week“) — ✅ LIVE 26.10.2026 13:58 UTC (9f4720625, dpl 9f47206256cd-mvpbagai, tag live/2026-10-26-week-list)
+
+Mario 26.10.: „važno da kad robot traži npr. First Glimpse 7.–14. 8. 2027. odmah vidi cijenu u tom tjednu“ — GPT/Grok/Gemini otvaraju samo običan link broda (alat odbija URL s `?`), a LiveCalendar se crtao samo JavaScriptom. Isto kao 6 sistera (CC 11:10/12:41, EY, CY, GR, IT, CB do 13:47 UTC; GPT je na CC-u pročitao Bon Vivant 7.–14. 8. 2027. = 14.835 € = API).
+
+- Server dohvaća `/standard-offers` 18 mj. (valuta stranice; soft-fail 8 s; bez cachea — 60 s cache odbačen: stale-while-revalidate + ključ s datumom = zastarjela dostupnost i ~1 GB/dan na disku), samo potrebna polja u klijent; kalendar kreće sa serverskim tjednima (bez dohvata pri učitavanju, bez snap-backa); dated link (`initialWeekOffer`, 25.10.) radi kao prije.
+- `WeekPriceList` = `<details>` zatvoren, sitan sivi redak; svaki tjedan: datumi s godinom, noći, status, precrtana cijena + popust, cijena; zauzeti tjedni (i unutar duže rezervacije/servisa) = Reserved/Unavailable kao prije; tjedni bez ikakve ponude = samo „On request“; godina tjedna preko Nove godine ispravna; `suppressHydrationWarning` samo na Intl tekst-čvorovima. Ključ ×9 jezika.
+- Provjera: port + neovisna recenzija + 2 kruga ispravaka s recenzijom; produkcija kao ChatGPT-User: First Glimpse 5.–12. 6. 2027. = 4,684 € = API, 0 × „0 €“.
+- SEO regresija: 1 × T6 „Catlante“ u naslovu Catlante 600 Iris (naslov nepromijenjen; Catlante = i brodogradilište) → infra allow; ponovni run 0 novih.
+
 ## 2026-10-25 — 🗓️ Stranica broda s datumima: cijena tjedna u server HTML-u (`initialWeekOffer` + serverski `calculate`) — ✅ LIVE 25.10.2026 ~16:25 UTC (75a0f4703, dpl 75a0f4703cfd-mvo15agg, tag live/2026-10-25-boat-week-price; SEO regresija 0 novih; 1. pokušaj iz worktreea pao: Turbopack ne prihvaća symlinkani node_modules → deploy iz glavnog checkouta)
 
 Mario 25.10. „da“ nakon ChatGPT analize: datirani link na brod (`/boat/<slug>?startDate=&endDate=`) imao je datume i extrase u server HTML-u, ali kutiju s cijenom tjedna („Total due now / Price for 7 days / Total price + datumi / Reserve“) tek nakon hidratacije — čitači bez JS-a nisu vidjeli cijenu broda za tjedan. Datirana TRAŽILICA je već bila kompletna na serveru (18 kartica + JSON-LD).
