@@ -165,6 +165,15 @@ export const weeksFromOffers = (
   });
 
   const published = [...byWeek.values()].sort((a, b) => a.dateFrom.localeCompare(b.dateFrom));
+  // A filler week (noOffer) with an offer of its exact dates, or one an offer
+  // other than FREE overlaps (inside a longer or shifted reservation, option
+  // or SERVICE), is no unpublished week: the list keeps its status and price.
+  const covered = ({ dateFromIso = '', dateToIso = '' }: WeekData) =>
+    standardOffers.some(
+      o =>
+        (o.dateFrom === dateFromIso && o.dateTo === dateToIso) ||
+        (o.status !== Status.FREE && o.dateFrom < dateToIso && o.dateTo > dateFromIso)
+    );
 
   return withTiers(
     fillTimeline(
@@ -172,7 +181,7 @@ export const weeksFromOffers = (
       horizonIso,
       WEEKS_PER_CHUNK,
       locale
-    )
+    ).map(w => (w.noOffer && covered(w) ? { ...w, noOffer: false } : w))
   );
 };
 

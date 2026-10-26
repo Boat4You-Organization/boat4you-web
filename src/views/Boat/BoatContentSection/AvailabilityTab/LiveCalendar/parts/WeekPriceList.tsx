@@ -39,7 +39,8 @@ const monthWithYear = (iso: string, locale: string): string =>
  * 6-month page the calendar shows.
  *
  * A week without an offer (a gap fillTimeline drew, "Unavailable" on its
- * card) reads only "Price on request": no status, as we know of no booking.
+ * card, inside no reservation, option or SERVICE) reads only "Price on
+ * request": no status, as we know of no booking.
  *
  * The dates outside English and the prices go through Intl; a browser with
  * another ICU may write them slightly differently ("Sept", a narrow space),

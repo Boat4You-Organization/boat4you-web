@@ -597,6 +597,51 @@ describe('the week list and the cards across New Year (reviews 26.10.2026)', () 
     );
   });
 
+  // The partner lists a 14-night reservation and, on its own, its first week;
+  // the timeline then draws a filler week inside the reservation.
+  const reserved14 = weeksOf(
+    [
+      offer(21, '2026-11-07', '2026-11-21', 'RESERVATION', 3200),
+      offer(22, '2026-11-07', '2026-11-14', 'RESERVATION', 1600),
+      offer(23, '2026-12-05', '2026-12-12', 'FREE', 1500),
+    ],
+    false
+  );
+  const rowOf = (list, from, to) =>
+    items(render(createElement(WeekPriceList, { weeks: list })))[
+      list.findIndex(w => w.id === `gap|${from}` && w.dateToIso === to)
+    ];
+
+  test('(A) a week inside a 14-night reservation is no unpublished week: the list keeps its status (as before A)', () => {
+    const inside = reserved14.find(w => w.id === 'gap|2026-11-14');
+
+    assert.equal(inside.noOffer, false);
+    assert.equal(inside.status, 'service');
+    assert.equal(
+      rowOf(reserved14, '2026-11-14', '2026-11-21'),
+      'Sat, 14 Nov 2026 – Sat, 21 Nov 2026 7 nights · Unavailable —'
+    );
+    // The reservation's own weeks: "Reserved" and its price.
+    assert.deepEqual(
+      reserved14.slice(0, 2).map(w => [w.dateFromIso, w.status, w.price, w.noOffer]),
+      [
+        ['2026-11-07', 'booked', 3200, false],
+        ['2026-11-14', 'booked', 3200, false],
+      ]
+    );
+  });
+
+  test('(A) a week no offer overlaps (the reservation ends on its first day) reads only "Price on request"', () => {
+    const open = reserved14.find(w => w.id === 'gap|2026-11-21');
+
+    assert.equal(open.noOffer, true);
+    assert.equal(
+      rowOf(reserved14, '2026-11-21', '2026-11-28'),
+      'Sat, 21 Nov 2026 – Sat, 28 Nov 2026 7 nights Price on request'
+    );
+    assert.equal(reserved14.find(w => w.id === 'gap|2026-11-28').noOffer, true);
+  });
+
   test('(B) across New Year: the card prints the year of the end date, the list each date with its own year', () => {
     const mobile = text(branch(AvailabilityMobile, weeks, false));
 
