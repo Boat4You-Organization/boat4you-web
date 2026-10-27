@@ -207,16 +207,30 @@ const Lightbox = ({
               return (
                 <SwiperSlide key={image.id}>
                   <Box className={styles.imageWrapper}>
-                    <Image
-                      src={getBoatImageUrl(image.id, 1920)}
-                      alt={photoAlt(image, index)}
-                      fill
-                      sizes="100vw"
-                      // A marina photo sits on the slide's bottom edge, so its
-                      // caption line overlays the photo, not the white below it.
-                      className={cx(styles.image, { [styles.imageBottom]: Boolean(credit) })}
-                    />
-                    {credit && <PhotoCredit credit={credit} placement="lightbox" />}
+                    {credit ? (
+                      // A marina photo stays centred like every other photo; the
+                      // frame shrinks to the photo, so its caption line sits on
+                      // the photo's own bottom edge, not on the white below it.
+                      <span className={styles.photoFrame}>
+                        <Image
+                          src={getBoatImageUrl(image.id, 1920)}
+                          alt={photoAlt(image, index)}
+                          width={1920}
+                          height={1080}
+                          sizes="100vw"
+                          className={styles.framedImage}
+                        />
+                        <PhotoCredit credit={credit} placement="lightbox" />
+                      </span>
+                    ) : (
+                      <Image
+                        src={getBoatImageUrl(image.id, 1920)}
+                        alt={photoAlt(image, index)}
+                        fill
+                        sizes="100vw"
+                        className={styles.image}
+                      />
+                    )}
                   </Box>
                 </SwiperSlide>
               );

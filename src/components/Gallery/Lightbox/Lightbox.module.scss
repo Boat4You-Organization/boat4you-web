@@ -61,6 +61,11 @@
       margin: auto;
       overflow: visible;
 
+      // Centres a marina photo's frame (a boat photo fills the slide itself).
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
       .image {
         margin-block: auto;
         height: 100%;
@@ -69,9 +74,22 @@
         display: block;
       }
 
-      // A marina photo (PhotoCredit): drawn on the bottom edge, under its caption line.
-      .imageBottom {
-        object-position: center bottom;
+      // A marina photo (PhotoCredit): the frame shrinks to the photo, so the
+      // caption line is placed on the photo itself.
+      .photoFrame {
+        position: relative;
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+        line-height: 0;
+      }
+
+      .framedImage {
+        display: block;
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: calc(100dvh - rem-calc(236));
       }
     }
   }
