@@ -1,5 +1,15 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-10-28 — 🔗 rel="nofollow" na svim linkovima između webova Boat4You Group — ✅ LIVE 28.10.2026 (`ac2276506`, dpl `ac22765065f2-mvs5ismt`, tag `live/2026-10-28-network-nofollow`)
+
+Mario 28.10.2026: test da li mreža linkova između 7 webova Boat4You Group (footer, gumbi „Book on boat4you“, Boat4You sekcija, linkovi u tekstu WordPress članaka) koči rangiranje. **Početak testa: 28.10.2026 13:32 UTC** (zadnji web live).
+
+- `src/utils/static/networkLinks.ts` (isti bajtovi na svih 7, sha `ab19ef2e…`): popis domena, `NETWORK_REL`, `nofollowNetworkLinks(Deep)`; vlastiti web (`NEXT_PUBLIC_BASE_URL`) i njegove poddomene ostaju follow.
+- `fetchAPI`: svaki WordPress odgovor kroz `nofollowNetworkLinksDeep`.
+- `test:footer-links` / `test:b4y-link` sada traže nofollow (bili follow po odlukama 8.10. i 20.10.); novi `yarn test:network-links`.
+- Provjera uživo (`nofollow-test/provjera-nofollow.sh`, SEO sesija): naslovnica i stranica broda follow=0 na svih 7.
+- Za vrijeme testa ne mijenjati naslovnice, footer ni indeks stranica brodova; ocjena nakon 8 tjedana ili prvog sljedećeg Google updatea (plan: SEO sesija, mreza-plan-linkovi-blogovi.md).
+
 ## 2026-10-27 — 🖼️ Galerija: fotografije marina centrirane u albumu, potpis na fotografiji — ✅ LIVE 27.10.2026 10:10 UTC (54dbcade8, dpl 54dbcade8d79-mvqilku4)
 
 Mario 27.10.: „u albumu nisu centrirane na sredini nego dolje, stavi ih na sredinu“. Lightbox je fotografiju marine (kind MARINA, PhotoCredit) crtao uz donji rub slajda (`object-position: center bottom`) da potpis „Foto: …“ padne na fotografiju. Sada: marina fotografija u okviru koji se skuplja na fotografiju (`.photoFrame` + `.framedImage`, width/height auto, max = slajd), okvir centriran flexom u `.imageWrapper`, potpis apsolutno na dnu okvira = na fotografiji. Fotografije brodova nepromijenjene (`fill` + contain). Samo b4y (sisteri nemaju taj kod).
