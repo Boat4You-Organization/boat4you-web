@@ -1,3 +1,5 @@
+import { nofollowNetworkLinksDeep } from '@/utils/static/networkLinks';
+
 const API_URL = `${process.env.NEXT_PUBLIC_WORDPRESS_API_URL}`;
 
 interface FetchApiOptions {
@@ -43,7 +45,8 @@ const fetchAPI = async <T extends {}>(
     throw new Error('Failed to fetch API');
   }
 
-  return json.data as T;
+  // Links to the sister sites in WordPress content get rel="nofollow" (28.10.2026).
+  return nofollowNetworkLinksDeep(json.data as T);
 };
 
 export default fetchAPI;

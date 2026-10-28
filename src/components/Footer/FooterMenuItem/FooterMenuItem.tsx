@@ -6,6 +6,7 @@ import { FooterSection } from '@/config/footerMenu';
 import { Link } from '@/i18n/navigation';
 import colors from '@/styles/themes/colors';
 import { NavigationLink } from '@/types/navigation-link';
+import { NETWORK_REL, isNetworkHref } from '@/utils/static/networkLinks';
 
 import styles from './FooterMenuItem.module.scss';
 
@@ -44,7 +45,10 @@ const FooterMenuItem = ({ title, links, isHorizontal = false }: FooterMenuItemPr
               <Link
                 href={href}
                 className={styles.link}
-                {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                // Sister sites are nofollow since 28.10.2026 (utils/static/networkLinks).
+                {...(isExternal
+                  ? { target: '_blank', rel: isNetworkHref(href) ? NETWORK_REL : 'noopener noreferrer' }
+                  : {})}
               >
                 {label && (
                   <Typography
