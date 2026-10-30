@@ -1,5 +1,18 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-10-30 — 🔗 Prijelaz sa sestrinskog sajta: jednokratni kod `cch` nestaje iz adrese prije Google taga — ✅ LIVE 30.10.2026 19:47 UTC (`f828c3a7c`, dpl `f828c3a7c3dc`, tag `live/2026-10-30-cc-handoff`)
+
+Mario 30.10.2026 („Pregled pa deploy“): preduvjet za `HANDOFF_TO_BOAT4YOU` u widgetu (završni pregled P3b, Important).
+
+- `src/config/ccHandoff.ts` + `layout.tsx`: `beforeInteractive` skripta `cc-handoff-strip` prije `gtag-consent-default` miče `?cch=` iz adrese (`history.replaceState`, ostali parametri i hash ostaju) i valjani token drži samo u memoriji stranice (`window.__b4yCcCch`) za widget.
+- `public/sw.js`: navigacija s `cch` ne ulazi u page cache.
+- Testovi: `yarn test:cc-handoff` 7/7.
+- Provjereno uživo: `dpl` = HEAD; skripta u HTML-u prije `gtag-consent-default`; `/en?cch=TEST…&utm_source=…` → adresa `/?utm_source=…`, 0 poziva na `/public/cc` bez pristanka.
+- Prvi pokušaj deploya 19:36 UTC pao na buildu (Turbopack odbija `node_modules` kao symlink u worktreeju), live nedirnut; drugi iz istog commita s pravom (APFS) kopijom `node_modules` prošao.
+- SEO regresija Stage B: 1 novi FAIL T6 „Sea Novels“ na uzorkovanoj stranici pretrage (es, Marina Paleros) = ime operatera u imenu broda iz kataloga (ista obitelj kao SM8/B20), nije od ove promjene (head skripta + SW).
+- ⏳ Sljedeće: widget s `HANDOFF_TO_BOAT4YOU = true` (infra `feat/cc-handoff-on`) ≥ 20 min nakon ovog deploya.
+- Rollback: prethodni `.next` (b4y_web_deploy.sh), `git revert f828c3a7c`. Ako se vraća samo ovo, prvo vratiti widget (`HANDOFF_TO_BOAT4YOU = false`), inače bi `cch` ostao u adresi i stigao u GA4.
+
 ## 2026-10-30 — 📞 Registracija: broj telefona obavezan — ✅ LIVE 30.10.2026 (`b172cef67`, dpl `b172cef677bc-mvvcfxt2`)
 
 Mario 30.10.2026 („3“): u adminu Users 12 od 32 korisnika bez telefona, 11 od njih broj nigdje nije upisao (read-only upit na cusma4). Obrazac za registraciju (SignUpModal, korak s podacima) sada ima obavezno polje „Phone number“ (isti PhoneInput i pravilo kao booking forma), `register()` šalje `phoneNumber` na `/auth/register` (backend ga već prima). Google/Facebook prijava nepromijenjena. SEO regression 0 new FAIL.
