@@ -1,5 +1,18 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-10-30 — 💬 Zajednički Contact Center widget umjesto starog ChatWidgeta (P3b) — ✅ LIVE 30.10.2026 18:40 UTC (`b20467056`, deployment id `b20467056bc9-mvvbczsb`, tag `live/2026-10-30-cc-widget`)
+
+Mario 30.10.2026: „boat4you … treba biti isti, i sve iste funkcije“. Plan `infra/docs/superpowers/plans/2026-10-30-p3b-boat4you-widget.md` (tablica pariteta: sve funkcije starog chata postoje u widgetu; redak kapaciteta dodan u widget `66a6685`).
+
+- `layout.tsx`: `next/script` loader (`data-site="boat4you"`) umjesto `<ChatWidget />`; stari `ChatWidget` i 20 tekstova `common.chatWidget` (9 jezika) uklonjeni. Consent Mode default provjerava verziju pristanka.
+- `CONSENT_VERSION` 1.0 → 1.1 (svi jednom ponovno vide banner; GA4/Ads kratko manje mjere).
+- Kolačići (9 jezika): tekstovi Essential/Analytics/GA kao na sestrama (hr, nl, pl prevedeni; nl u „je“ obliku), popis pohrane `b4y_chat_token` (nužno), `b4y_cc_v`, `b4y_cc_s`, `b4y_cc_cch` (analitika).
+- Politika privatnosti (9 `src/posts/static/*/privacy-policy.md`): odlomak „Chat s Iris i statistika posjeta“ (s jednokratnim kodom pri prijelazu sa sestrinskog sajta; es u „usted“ obliku kao ostatak teksta).
+- Mobilna traka stranice broda `data-cc-sticky-bottom`; widget `8aa015f` mjeri samo vidljivi dio i ponovno kad se traka pojavi ili poraste (završni pregled).
+- Provjereno uživo: HTML s loaderom i provjerom verzije, `dpl` = HEAD na /contact-us i /search; banner v1.1; nakon „Accept Only Necessary“ gumb „Open chat“, 0 poziva na `/public/cc` dok je chat zatvoren; panel „Iris · AI assistant · Boat4You“ s pitanjem za ime. SEO regresija Stage B: 0 novih FAIL (32 poznata, 14 WARN).
+- ⏳ `HANDOFF_TO_BOAT4YOU` ostaje isključen: `cch` bi stigao u GA4/Ads page_view i u page cache service workera prije nego ga widget makne (završni pregled, Important) — treba head skripta koja ga makne prije gtaga + SW ga preskače.
+- Rollback: prethodni `.next` (b4y_web_deploy.sh), `git revert` ovog commita.
+
 ## 2026-10-30 — ↪️ 17 starih URL-ova iz Bing Webmastera (404) → 308 na odgovarajuće landinge — ✅ LIVE 30.10.2026 (`239adde01`, dpl `239adde01c70-mvuwldya`)
 
 Mario 30.10.2026 (pregled Bing Webmastera): stari URL-ovi (`/catamaran-sailing-*`, `/sailing-*-catamaran-charters`, `/athens-area-…-charter.html`, `/testimonials`, `/news-tips-guides`) koje Bing još crawla kao 404 → `next.config.js` redirects() na indeksirani landing iste destinacije i tipa broda (`/search?destinations=…&boatTypes=…`), `/about-us`, `/blog`. Provjera: 1 hop, 200, index, canonical ispravan. SEO regression: 1 novi FAIL T6 „Catlante 600“ (brodogradilište na kartici povezanog broda, nije operater) = lažno pozitivan → popravljen checker (infra `d69138c`, allow-list `after`).
