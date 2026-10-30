@@ -53,6 +53,14 @@ Nós só implementamos _cookies_ não essenciais (_cookies_ analíticos e de pub
 
 **Escolhas do Utilizador para _Cookies_**: Além dos nossos controlos no _site_, você pode gerir os _cookies_ através das configurações do seu navegador _web_. A maioria dos navegadores permite que você exclua _cookies_ ou impeça que sejam definidos. Você também pode optar por não participar de certos rastreamentos de terceiros usando ferramentas como o _add-on_ do navegador de exclusão do Google Analytics ou definindo preferências diretamente em _sites_ de terceiros (por exemplo, Preferências de Anúncios do Facebook ou usando _sites_ de exclusão da indústria como YourOnlineChoices.eu para utilizadores europeus). Lembre-se de que optar por não receber _cookies_ de publicidade não significa que você não verá anúncios, apenas que eles serão menos relevantes para os seus interesses.
 
+## Chat com a Iris e estatísticas de visitas
+
+O nosso site tem um chat com a Iris, a nossa assistente de IA, e com a nossa equipa. A Iris é uma IA, e isso é sempre indicado junto das suas mensagens. As conversas são guardadas para lhe respondermos e melhorarmos o serviço.
+
+Com o seu consentimento de Análise, registamos também que páginas dos nossos sites visita, em que clica, como nos encontrou, o seu país (a partir do seu endereço IP) e o seu dispositivo e navegador, e associamos isto à sua conversa se nos escrever. Sem esse consentimento, registamos apenas as páginas que abre enquanto o chat está aberto (com o endereço IP e o navegador do pedido), para lhe podermos responder. Quando chega ao Boat4You a partir de um dos nossos sites irmãos com esse consentimento, um código de utilização única no endereço associa as duas visitas.
+
+Guardamos estes dados nos nossos próprios servidores na UE: visualizações de páginas e cliques durante 13 meses; visitas (origem, país, dispositivo e navegador), conversas e dados de contacto durante 24 meses; o endereço IP completo durante 90 dias. A base legal é o seu consentimento (art. 6.º, n.º 1, alínea a), do RGPD) e, para uma conversa que iniciou, o tratamento do seu pedido (art. 6.º, n.º 1, alínea b), do RGPD). Pode retirar o consentimento a qualquer momento nas Definições de cookies.
+
 ## Objetivo da Recolha dos Seus Dados
 
 Processamos os seus dados pessoais para fins específicos e lícitos. Em geral, usamos as informações que recolhemos para operar a nossa Plataforma, fornecer os nossos serviços a você, melhorar as nossas ofertas e cumprir os requisitos legais. Os principais objetivos para os quais a Boat4You processa dados pessoais são:

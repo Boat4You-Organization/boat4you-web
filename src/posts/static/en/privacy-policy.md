@@ -173,6 +173,14 @@ industry opt-out sites like YourOnlineChoices.eu for European users).
 Keep in mind that opting out of advertising cookies does not mean you
 will see no ads, only that they will be less relevant to your interests.
 
+## Chat with Iris and visit statistics
+
+Our website has a chat with Iris, our AI assistant, and with our team. Iris is an AI, and this is always shown next to her messages. Conversations are kept so we can answer you and improve the service.
+
+With your Analytics consent we also record which pages of our websites you visit, what you click, how you found us, your country (from your IP address) and your device and browser, and we link this to your chat if you write to us. Without that consent we only record the pages you open while the chat is open (with the IP address and browser of the request), so we can answer you. When you come to Boat4You from one of our sister sites with that consent, a one-time code in the address links the two visits.
+
+We keep this data on our own servers in the EU: page views and clicks for 13 months; visits (source, country, device and browser), conversations and contact details for 24 months; the full IP address for 90 days. The legal basis is your consent (Art. 6(1)(a) GDPR) and, for a conversation you started, handling your request (Art. 6(1)(b) GDPR). You can withdraw consent at any time in Cookies Settings.
+
 ## Purpose of Collecting Your Data
 
 We process your personal data for specific and lawful purposes. In

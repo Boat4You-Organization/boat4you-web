@@ -17,17 +17,43 @@
   },
   "necessary": {
     "title": "Nužni kolačići",
-    "description": "Ovi kolačići su neophodni za pravilno funkcioniranje naše web stranice i ne mogu se isključiti. Omogućuju osnovnu funkcionalnost kao što su sigurnost obrazaca, jezične postavke i osnovna navigacija stranicom. Možete blokirati ove kolačiće u svom pregledniku, ali neki dijelovi web stranice možda neće raditi pravilno. Ovi kolačići ne pohranjuju osobne podatke koji vas mogu identificirati."
+    "description": "Ovi kolačići i ova pohrana u pregledniku potrebni su za rad web-stranice i ne mogu se isključiti: sigurnost obrazaca, jezik, osnovna navigacija i chat koji ostaje otvoren između stranica. Kolačiće možete blokirati u pregledniku, ali tada neki dijelovi stranice možda neće raditi.",
+    "cookies": [
+      {
+        "name": "b4y_chat_token",
+        "domain": "www.boat4you.com",
+        "duration": "Dok ne obrišete podatke preglednika",
+        "description": "Drži vaš razgovor s Iris otvorenim između stranica. Nastaje kad započnete razgovor ili kad vam naš tim napiše poruku."
+      }
+    ]
   },
   "analytics": {
     "title": "Analitički kolačići",
-    "description": "Ovi kolačići nam pomažu razumjeti kako posjetitelji koriste našu web stranicu prikupljanjem anonimnih informacija o obrascima korištenja, popularnim stranicama i područjima za poboljšanje. Koristimo ove podatke za optimizaciju performansi naše platforme i poboljšanje korisničkog iskustva za korisnike koji traže brodove za najam.",
+    "description": "Uz vaš pristanak koristimo Google Analytics i vlastitu statistiku posjeta: koje stranice posjećujete, što kliknete, kako ste nas pronašli, vašu državu (iz IP adrese) te vaš uređaj i preglednik. Ako razgovarate s Iris ili našim timom, posjet povezujemo s razgovorom kako bismo vam brže pomogli. Pregledi stranica i klikovi čuvaju se na našim poslužiteljima u EU 13 mjeseci, podaci o posjetu 24 mjeseca, a puna IP adresa briše se nakon 90 dana. Izbor možete promijeniti bilo kada u Postavkama kolačića.",
     "cookies": [
       {
         "name": "_ga",
         "domain": "www.boat4you.hr",
         "duration": "400 dana",
-        "description": "Google Analytics kolačić koji razlikuje jedinstvene korisnike i prikuplja anonimne podatke o prometu na web stranici, interakcijama korisnika i trendovima kako bi nam pomogao poboljšati našu platformu za rezervaciju brodova i korisničko iskustvo."
+        "description": "Kolačić Google Analyticsa koji razlikuje posjete i prikuplja podatke o prometu i interakcijama na web-stranici kako bismo je mogli poboljšati."
+      },
+      {
+        "name": "b4y_cc_v",
+        "domain": "www.boat4you.com",
+        "duration": "Dok ne povučete pristanak",
+        "description": "ID posjetitelja za našu vlastitu statistiku posjeta. Samo uz pristanak za analitiku."
+      },
+      {
+        "name": "b4y_cc_s",
+        "domain": "www.boat4you.com",
+        "duration": "Do zatvaranja kartice",
+        "description": "Trenutni posjet, kako bi vas Iris pozdravila samo jednom. Samo uz pristanak za analitiku."
+      },
+      {
+        "name": "b4y_cc_cch",
+        "domain": "www.boat4you.com",
+        "duration": "Do zatvaranja kartice",
+        "description": "Jednokratni kod koji vaš posjet s jednog od naših sestrinskih sajtova povezuje s Boat4You. Samo uz pristanak za analitiku."
       }
     ]
   },

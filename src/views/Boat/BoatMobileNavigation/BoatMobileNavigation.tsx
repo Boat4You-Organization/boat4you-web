@@ -227,7 +227,7 @@ const BoatMobileNavigation = ({
 
   if (inquiryOnly) {
     return (
-      <Box className={revealed ? `${styles.container} ${styles.revealed}` : styles.container}>
+      <Box data-cc-sticky-bottom className={revealed ? `${styles.container} ${styles.revealed}` : styles.container}>
         <Stack direction="row" justifyContent="space-between" alignItems="center" gap={2}>
           <Typography variant="body1">{t('totalPrice')}</Typography>
           <Typography variant="h4" component="p" color={colors.green500}>
@@ -263,7 +263,10 @@ const BoatMobileNavigation = ({
 
         return (
           <>
-            <Box className={revealed ? `${styles.container} ${styles.revealed}` : styles.container}>
+            <Box
+              data-cc-sticky-bottom
+              className={revealed ? `${styles.container} ${styles.revealed}` : styles.container}
+            >
               {/* No dates chosen yet: a "from" price for a week — never a
                   period the visitor did not pick (the bar used to print
                   "today – today + 7" beside it, audit 29.9.2026, R24). */}

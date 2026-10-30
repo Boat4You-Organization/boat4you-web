@@ -213,6 +213,14 @@ les utilisateurs européens). Gardez à l'esprit que la désinscription des
 cookies publicitaires ne signifie pas que vous ne verrez aucune annonce,
 seulement qu'elles seront moins pertinentes pour vos intérêts.
 
+## Chat avec Iris et statistiques de visite
+
+Notre site propose un chat avec Iris, notre assistante IA, et avec notre équipe. Iris est une IA, et c'est toujours indiqué à côté de ses messages. Les conversations sont conservées pour vous répondre et améliorer le service.
+
+Avec votre consentement Analytics, nous enregistrons aussi les pages de nos sites que vous consultez, ce sur quoi vous cliquez, comment vous nous avez trouvés, votre pays (à partir de votre adresse IP) ainsi que votre appareil et votre navigateur, et nous associons ces informations à votre conversation si vous nous écrivez. Sans ce consentement, nous n'enregistrons que les pages ouvertes pendant que le chat est ouvert (avec l'adresse IP et le navigateur de la requête), afin de vous répondre. Lorsque vous arrivez sur Boat4You depuis l'un de nos sites partenaires avec ce consentement, un code à usage unique dans l'adresse relie les deux visites.
+
+Nous conservons ces données sur nos propres serveurs dans l'UE : les pages vues et les clics 13 mois ; les visites (source, pays, appareil et navigateur), les conversations et les coordonnées 24 mois ; l'adresse IP complète 90 jours. La base légale est votre consentement (art. 6, par. 1, point a) du RGPD) et, pour une conversation que vous avez commencée, le traitement de votre demande (art. 6, par. 1, point b) du RGPD). Vous pouvez retirer votre consentement à tout moment dans les Paramètres des cookies.
+
 ## Finalités de la Collecte de Vos Données
 
 Nous traitons vos données personnelles à des fins spécifiques et

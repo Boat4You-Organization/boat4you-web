@@ -53,6 +53,14 @@ Wir setzen nicht-essenzielle Cookies (Analyse- und Werbe-Cookies) nur dann ein, 
 
 **Benutzeroptionen für Cookies:** Zusätzlich zu unseren Kontrollfunktionen auf der Website können Sie Cookies über Ihre Webbrowser-Einstellungen verwalten. Die meisten Browser erlauben es Ihnen, Cookies zu löschen oder deren Setzung zu verhindern. Sie können sich auch von bestimmten Drittanbieter-Trackings abmelden, indem Sie Tools wie das Google Analytics Opt-out Browser Add-on verwenden oder Präferenzen direkt auf Drittanbieter-Websites festlegen (z. B. Facebook Ad-Präferenzen oder die Nutzung von Branchen-Opt-out-Seiten wie YourOnlineChoices.eu für europäische Benutzer). Beachten Sie, dass die Ablehnung von Werbe-Cookies nicht bedeutet, dass Sie keine Werbung sehen, sondern nur, dass diese weniger relevant für Ihre Interessen sein wird.
 
+## Chat mit Iris und Besuchsstatistik
+
+Auf unserer Website gibt es einen Chat mit Iris, unserer KI-Assistentin, und mit unserem Team. Iris ist eine KI, und das steht immer neben ihren Nachrichten. Gespräche werden gespeichert, damit wir Ihnen antworten und den Service verbessern können.
+
+Mit Ihrer Einwilligung zu Analytics erfassen wir außerdem, welche Seiten unserer Websites Sie besuchen, was Sie anklicken, wie Sie uns gefunden haben, Ihr Land (aus Ihrer IP-Adresse) sowie Ihr Gerät und Ihren Browser, und verknüpfen dies mit Ihrem Chat, wenn Sie uns schreiben. Ohne diese Einwilligung erfassen wir nur die Seiten, die Sie bei geöffnetem Chat aufrufen (mit der IP-Adresse und dem Browser der Anfrage), damit wir Ihnen antworten können. Wenn Sie mit dieser Einwilligung von einer unserer Schwesterseiten zu Boat4You wechseln, verknüpft ein einmaliger Code in der Adresse die beiden Besuche.
+
+Wir speichern diese Daten auf unseren eigenen Servern in der EU: Seitenaufrufe und Klicks 13 Monate; Besuche (Quelle, Land, Gerät und Browser), Gespräche und Kontaktdaten 24 Monate; die vollständige IP-Adresse 90 Tage. Rechtsgrundlage ist Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) und, für ein von Ihnen begonnenes Gespräch, die Bearbeitung Ihrer Anfrage (Art. 6 Abs. 1 lit. b DSGVO). Sie können Ihre Einwilligung jederzeit in den Cookie-Einstellungen widerrufen.
+
 ## Zweck der Erfassung Ihrer Daten
 
 Wir verarbeiten Ihre personenbezogenen Daten zu bestimmten und rechtmäßigen Zwecken. Im Allgemeinen verwenden wir die von uns erfassten Informationen, um unsere Plattform zu betreiben, Ihnen unsere Dienste bereitzustellen, unsere Angebote zu verbessern und gesetzliche Anforderungen zu erfüllen. Die Hauptzwecke, für die Boat4You personenbezogene Daten verarbeitet, sind:

@@ -17,17 +17,43 @@
   },
   "necessary": {
     "title": "Niezbędne pliki cookie",
-    "description": "Te pliki cookie są niezbędne do prawidłowego działania naszej strony i nie można ich wyłączyć. Umożliwiają podstawowe funkcje, takie jak bezpieczeństwo formularzy, ustawienia języka i podstawową nawigację. Możesz je zablokować w przeglądarce, ale niektóre części witryny mogą nie działać prawidłowo. Te pliki cookie nie przechowują danych umożliwiających identyfikację."
+    "description": "Te pliki cookie i ta pamięć przeglądarki są niezbędne do działania strony i nie można ich wyłączyć: bezpieczeństwo formularzy, język, podstawowa nawigacja oraz czat, który pozostaje otwarty między stronami. Możesz zablokować pliki cookie w przeglądarce, ale wtedy niektóre części strony mogą nie działać.",
+    "cookies": [
+      {
+        "name": "b4y_chat_token",
+        "domain": "www.boat4you.com",
+        "duration": "Do wyczyszczenia danych przeglądarki",
+        "description": "Utrzymuje Twoją rozmowę z Iris otwartą między stronami. Powstaje, gdy rozpoczynasz czat lub gdy nasz zespół do Ciebie napisze."
+      }
+    ]
   },
   "analytics": {
     "title": "Analityczne pliki cookie",
-    "description": "Te pliki cookie pomagają nam zrozumieć, jak odwiedzający korzystają z naszej witryny, zbierając anonimowe informacje o wzorcach użycia, popularnych stronach i obszarach do poprawy. Wykorzystujemy te dane do optymalizacji wydajności platformy i poprawy doświadczeń klientów szukających wynajmu łodzi.",
+    "description": "Za Twoją zgodą korzystamy z Google Analytics i własnych statystyk odwiedzin: które strony odwiedzasz, co klikasz, jak nas znaleziono, Twój kraj (na podstawie adresu IP) oraz Twoje urządzenie i przeglądarkę. Jeśli rozmawiasz z Iris lub naszym zespołem, łączymy Twoją wizytę z rozmową, aby szybciej Ci pomóc. Wyświetlenia stron i kliknięcia przechowujemy na naszych serwerach w UE przez 13 miesięcy, dane o wizycie przez 24 miesiące, a pełny adres IP usuwamy po 90 dniach. Swój wybór możesz w każdej chwili zmienić w Ustawieniach plików cookie.",
     "cookies": [
       {
         "name": "_ga",
         "domain": "www.boat4you.com",
         "duration": "400 dni",
-        "description": "Plik cookie Google Analytics, który rozróżnia unikalnych użytkowników i zbiera anonimowe dane o ruchu w witrynie, interakcjach użytkowników i trendach, aby pomóc nam ulepszać naszą platformę rezerwacji łodzi i doświadczenie użytkownika."
+        "description": "Plik cookie Google Analytics, który rozróżnia wizyty i zbiera dane o ruchu i interakcjach na stronie, abyśmy mogli ją ulepszać."
+      },
+      {
+        "name": "b4y_cc_v",
+        "domain": "www.boat4you.com",
+        "duration": "Do wycofania zgody",
+        "description": "Identyfikator odwiedzającego dla naszych własnych statystyk odwiedzin. Tylko za zgodą na analitykę."
+      },
+      {
+        "name": "b4y_cc_s",
+        "domain": "www.boat4you.com",
+        "duration": "Do zamknięcia karty",
+        "description": "Bieżąca wizyta, aby Iris przywitała Cię tylko raz. Tylko za zgodą na analitykę."
+      },
+      {
+        "name": "b4y_cc_cch",
+        "domain": "www.boat4you.com",
+        "duration": "Do zamknięcia karty",
+        "description": "Jednorazowy kod, który łączy Twoją wizytę z jednej z naszych siostrzanych stron z Boat4You. Tylko za zgodą na analitykę."
       }
     ]
   },

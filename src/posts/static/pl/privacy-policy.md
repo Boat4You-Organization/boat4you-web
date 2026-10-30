@@ -184,6 +184,14 @@ europejskich). Pamiętaj, że rezygnacja z reklamowych plików cookie nie
 oznacza, że nie zobaczysz reklam, jedynie to, że będą mniej dopasowane do
 Twoich zainteresowań.
 
+## Czat z Iris i statystyki odwiedzin
+
+Na naszej stronie działa czat z Iris, naszą asystentką AI, oraz z naszym zespołem. Iris jest AI i zawsze jest to zaznaczone przy jej wiadomościach. Rozmowy przechowujemy, aby móc Ci odpowiedzieć i ulepszać usługę.
+
+Za Twoją zgodą na analitykę rejestrujemy też, które strony naszych serwisów odwiedzasz, co klikasz, jak nas znaleziono, Twój kraj (na podstawie adresu IP) oraz Twoje urządzenie i przeglądarkę, i łączymy to z Twoją rozmową, jeśli do nas napiszesz. Bez tej zgody rejestrujemy tylko strony otwierane w czasie, gdy czat jest otwarty (z adresem IP i przeglądarką żądania), abyśmy mogli Ci odpowiedzieć. Gdy za tą zgodą przechodzisz do Boat4You z jednej z naszych siostrzanych stron, jednorazowy kod w adresie łączy obie wizyty.
+
+Dane te przechowujemy na własnych serwerach w UE: wyświetlenia stron i kliknięcia przez 13 miesięcy; wizyty (źródło, kraj, urządzenie i przeglądarka), rozmowy i dane kontaktowe przez 24 miesiące; pełny adres IP przez 90 dni. Podstawą prawną jest Twoja zgoda (art. 6 ust. 1 lit. a RODO), a w przypadku rozmowy rozpoczętej przez Ciebie realizacja Twojego żądania (art. 6 ust. 1 lit. b RODO). Zgodę możesz w każdej chwili wycofać w Ustawieniach plików cookie.
+
 ## Cel Zbierania Twoich Danych
 
 Przetwarzamy Twoje dane osobowe w określonych i zgodnych z prawem celach.

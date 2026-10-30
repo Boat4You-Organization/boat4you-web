@@ -53,6 +53,14 @@ Implementiramo neosnovne kolačiće (analitičke i oglašavačke kolačiće) **s
 
 **Korisnički izbori za kolačiće:** Osim naših kontrola na stranici, možete upravljati kolačićima kroz postavke vašeg web preglednika. Većina preglednika dopušta vam brisanje kolačića ili sprječavanje njihovog postavljanja. Također se možete odjaviti iz određenog praćenja trećih strana koristeći alate poput Google Analytics opt-out browser dodatka ili postavljanjem preferencija izravno na stranicama trećih strana (primjerice, Facebook Ad Preferences ili korištenjem industrijskih stranica za odjavu poput YourOnlineChoices.eu za europske korisnike). Imajte na umu da se odjava iz oglašavačkih kolačića ne znači da nećete vidjeti nikakve oglase, samo da će biti manje relevantni za vaše interese.
 
+## Chat s Iris i statistika posjeta
+
+Na našoj web-stranici radi chat s Iris, našom AI asistenticom, i s našim timom. Iris je AI i to uvijek piše uz njezine poruke. Razgovore čuvamo kako bismo vam mogli odgovoriti i poboljšati uslugu.
+
+Uz vaš pristanak za analitiku bilježimo i koje stranice naših web-stranica posjećujete, što kliknete, kako ste nas pronašli, vašu državu (iz IP adrese) te vaš uređaj i preglednik, i to povezujemo s vašim razgovorom ako nam pišete. Bez tog pristanka bilježimo samo stranice koje otvorite dok je chat otvoren (s IP adresom i preglednikom zahtjeva), kako bismo vam mogli odgovoriti. Kad uz taj pristanak dođete na Boat4You s jednog od naših sestrinskih sajtova, jednokratni kod u adresi povezuje ta dva posjeta.
+
+Ove podatke čuvamo na vlastitim poslužiteljima u EU: preglede stranica i klikove 13 mjeseci; posjete (izvor, država, uređaj i preglednik), razgovore i kontakt podatke 24 mjeseca; punu IP adresu 90 dana. Pravna osnova je vaš pristanak (čl. 6. st. 1. t. (a) GDPR-a), a za razgovor koji ste sami započeli obrada vašeg zahtjeva (čl. 6. st. 1. t. (b) GDPR-a). Pristanak možete povući bilo kada u Postavkama kolačića.
+
 ## Svrha prikupljanja vaših podataka
 
 Obrađujemo vaše osobne podatke za specifične i zakonite svrhe. Općenito, koristimo informacije koje prikupljamo za upravljanje našom Platformom, pružanje naših usluga vama, poboljšanje naših ponuda i poštovanje zakonskih zahtjeva. Glavne svrhe za koje Boat4You obrađuje osobne podatke su:

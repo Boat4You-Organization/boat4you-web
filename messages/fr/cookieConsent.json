@@ -17,17 +17,43 @@
   },
   "necessary": {
     "title": "Cookies Essentiels",
-    "description": "Ces cookies sont nécessaires au bon fonctionnement de notre site web et ne peuvent pas être désactivés. Ils permettent des fonctionnalités essentielles telles que la sécurité des formulaires, les paramètres de langue et la navigation de base sur le site web. Vous pouvez bloquer ces cookies dans votre navigateur, mais certaines parties du site web pourraient ne pas fonctionner correctement. Ces cookies ne stockent pas d'informations personnellement identifiables."
+    "description": "Ces cookies et ce stockage du navigateur sont nécessaires au fonctionnement du site et ne peuvent pas être désactivés : sécurité des formulaires, langue, navigation de base et conversation qui reste ouverte d'une page à l'autre. Vous pouvez bloquer les cookies dans votre navigateur, mais certaines parties du site risquent alors de ne pas fonctionner.",
+    "cookies": [
+      {
+        "name": "b4y_chat_token",
+        "domain": "www.boat4you.com",
+        "duration": "Jusqu'à l'effacement des données du navigateur",
+        "description": "Garde votre conversation avec Iris ouverte d'une page à l'autre. Créé lorsque vous commencez une conversation ou lorsque notre équipe vous écrit."
+      }
+    ]
   },
   "analytics": {
     "title": "Cookies Analytiques",
-    "description": "Ces cookies nous aident à comprendre comment les visiteurs interagissent avec notre site web en collectant des informations anonymes sur les modèles d'utilisation, les pages populaires et les domaines d'amélioration. Nous utilisons ces données pour optimiser les performances de notre plateforme et améliorer l'expérience utilisateur pour les clients à la recherche de locations de bateaux.",
+    "description": "Avec votre consentement, nous utilisons Google Analytics et nos propres statistiques de visite : les pages que vous consultez, ce sur quoi vous cliquez, comment vous nous avez trouvés, votre pays (à partir de votre adresse IP) ainsi que votre appareil et votre navigateur. Si vous discutez avec Iris ou notre équipe, nous associons votre visite à la conversation pour vous aider plus vite. Les pages vues et les clics sont conservés sur nos serveurs dans l'UE pendant 13 mois, les informations de visite pendant 24 mois, et l'adresse IP complète est supprimée après 90 jours. Vous pouvez modifier votre choix à tout moment dans les Paramètres des cookies.",
     "cookies": [
       {
         "name": "_ga",
         "domain": "www.boat4you.com",
         "duration": "400 jours",
-        "description": "Cookie Google Analytics qui distingue les utilisateurs uniques et collecte des données anonymes sur le trafic du site web, les interactions des utilisateurs et les tendances pour nous aider à améliorer notre plateforme de réservation de bateaux et l'expérience utilisateur."
+        "description": "Cookie Google Analytics qui distingue les visites et recueille des données sur le trafic et les interactions sur le site, pour nous aider à l'améliorer."
+      },
+      {
+        "name": "b4y_cc_v",
+        "domain": "www.boat4you.com",
+        "duration": "Jusqu'au retrait du consentement",
+        "description": "Identifiant de visiteur pour nos propres statistiques de visite. Uniquement avec le consentement Analytics."
+      },
+      {
+        "name": "b4y_cc_s",
+        "domain": "www.boat4you.com",
+        "duration": "Jusqu'à la fermeture de l'onglet",
+        "description": "La visite en cours, pour qu'Iris ne vous salue qu'une seule fois. Uniquement avec le consentement Analytics."
+      },
+      {
+        "name": "b4y_cc_cch",
+        "domain": "www.boat4you.com",
+        "duration": "Jusqu'à la fermeture de l'onglet",
+        "description": "Code à usage unique qui relie votre visite venant de l'un de nos sites partenaires à Boat4You. Uniquement avec le consentement Analytics."
       }
     ]
   },

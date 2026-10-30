@@ -8,7 +8,6 @@ import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server
 import { notFound } from 'next/navigation';
 import Script from 'next/script';
 
-import ChatWidget from '@/components/ChatWidget';
 import GoogleAnalyticsConsent from '@/components/GoogleAnalyticsConsent';
 import InstallPrompt from '@/components/InstallPrompt';
 import ServiceWorkerRegister from '@/components/ServiceWorkerRegister';
@@ -18,6 +17,7 @@ import { meta } from '@/config/meta';
 import { CLIENT_NAMESPACES, pickMessages } from '@/i18n/clientMessages';
 import { routing } from '@/i18n/routing';
 import '@/styles/index.scss';
+import { CONSENT_VERSION } from '@/types/cookie-consent.type';
 import { getSiteStatsWithin } from '@/utils/server/siteStats';
 import { buildAlternateLanguages, getLocalizedJsonLd, localizedUrl } from '@/utils/static/buildMetadata';
 
@@ -148,7 +148,7 @@ const RootLayout = async ({ children, params }: RootLayoutProps) => {
           id="gtag-consent-default"
           strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
-            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}var a='denied',m='denied';try{var c=document.cookie.match(/(?:^|; )boat4you_cookie_consent=([^;]*)/);if(c){var o=JSON.parse(decodeURIComponent(c[1]));if(o&&o.consentGiven){if(o.analytics)a='granted';if(o.marketing)m='granted';}}}catch(e){}gtag('consent','default',{analytics_storage:a,ad_storage:m,ad_user_data:m,ad_personalization:m,functionality_storage:'granted',security_storage:'granted'});${LINKER_SET_SNIPPET}`,
+            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}var a='denied',m='denied';try{var c=document.cookie.match(/(?:^|; )boat4you_cookie_consent=([^;]*)/);if(c){var o=JSON.parse(decodeURIComponent(c[1]));if(o&&o.consentGiven&&o.version===${JSON.stringify(CONSENT_VERSION)}){if(o.analytics)a='granted';if(o.marketing)m='granted';}}}catch(e){}gtag('consent','default',{analytics_storage:a,ad_storage:m,ad_user_data:m,ad_personalization:m,functionality_storage:'granted',security_storage:'granted'});${LINKER_SET_SNIPPET}`,
           }}
         />
         {/* Pre-resolve DNS + TLS to the two hosts every page fetches from
@@ -161,10 +161,18 @@ const RootLayout = async ({ children, params }: RootLayoutProps) => {
       </head>
       <body suppressHydrationWarning>
         <NextIntlClientProvider messages={messages}>
-          <Providers>
-            {children}
-            <ChatWidget />
-          </Providers>
+          <Providers>{children}</Providers>
+          {/* Contact Center widget (P3b, 30.10.2026): the same Iris chat as on the sister sites, in place of the old
+              ChatWidget; visit statistics only with the Analytics consent (the widget reads boat4you_cookie_consent
+              itself). A static loader from /cc-widget/, after the page is interactive. */}
+          <Script
+            id="b4y-cc"
+            src={process.env.NEXT_PUBLIC_CC_WIDGET_URL || 'https://www.boat4you.com/cc-widget/loader.js'}
+            strategy="afterInteractive"
+            data-site="boat4you"
+            data-locale={locale}
+            data-api={process.env.NEXT_PUBLIC_BOAT_WS_API_URL}
+          />
           {/* InstallPrompt uses useTranslations → must be INSIDE the provider. */}
           <InstallPrompt />
         </NextIntlClientProvider>

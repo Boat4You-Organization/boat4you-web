@@ -88,7 +88,8 @@ const CookieConsent = ({ showConsent }: CookieConsentProps) => {
       key: 'essential' as const,
       name: t('necessary.title'),
       description: t('necessary.description'),
-      cookies: [],
+      // the chat token of the Contact Center widget (browser storage, P3b)
+      cookies: t.raw('necessary.cookies') || [],
       required: true,
     },
     {

@@ -17,17 +17,43 @@
   },
   "necessary": {
     "title": "Notwendige Cookies",
-    "description": "Diese Cookies sind erforderlich, damit unsere Website ordnungsgemäß funktioniert, und können nicht deaktiviert werden. Sie ermöglichen wesentliche Funktionen wie Formularsicherheit, Spracheinstellungen und grundlegende Website-Navigation. Sie können diese Cookies in Ihrem Browser blockieren, aber einige Teile der Website funktionieren möglicherweise nicht ordnungsgemäß. Diese Cookies speichern keine persönlich identifizierbaren Informationen."
+    "description": "Diese Cookies und dieser Browserspeicher sind für den Betrieb der Website nötig und können nicht abgeschaltet werden: Formularsicherheit, Sprache, grundlegende Navigation und ein über mehrere Seiten offener Chat. Sie können Cookies in Ihrem Browser blockieren, dann funktionieren aber einige Teile der Website möglicherweise nicht.",
+    "cookies": [
+      {
+        "name": "b4y_chat_token",
+        "domain": "www.boat4you.com",
+        "duration": "Bis Sie Ihre Browserdaten löschen",
+        "description": "Hält Ihren Chat mit Iris über mehrere Seiten offen. Wird angelegt, wenn Sie einen Chat beginnen oder unser Team Ihnen schreibt."
+      }
+    ]
   },
   "analytics": {
     "title": "Analyse-Cookies",
-    "description": "Diese Cookies helfen uns zu verstehen, wie Besucher mit unserer Website interagieren, indem sie anonyme Informationen über Nutzungsmuster, beliebte Seiten und Verbesserungsbereiche sammeln. Wir verwenden diese Daten, um die Leistung unserer Plattform zu optimieren und die Benutzererfahrung für Kunden zu verbessern, die nach Bootsvermietungen suchen.",
+    "description": "Mit Ihrer Einwilligung nutzen wir Google Analytics und unsere eigene Besuchsstatistik: welche Seiten Sie besuchen, was Sie anklicken, wie Sie uns gefunden haben, Ihr Land (aus Ihrer IP-Adresse) sowie Ihr Gerät und Ihren Browser. Wenn Sie mit Iris oder unserem Team chatten, verknüpfen wir Ihren Besuch mit dem Chat, damit wir Ihnen schneller helfen können. Seitenaufrufe und Klicks werden 13 Monate auf unseren Servern in der EU gespeichert, Besuchsdaten 24 Monate, und die vollständige IP-Adresse wird nach 90 Tagen gelöscht. Sie können Ihre Wahl jederzeit in den Cookie-Einstellungen ändern.",
     "cookies": [
       {
         "name": "_ga",
         "domain": "www.boat4you.com",
         "duration": "400 Tage",
-        "description": "Google Analytics-Cookie, das eindeutige Benutzer unterscheidet und anonyme Daten über Website-Traffic, Benutzerinteraktionen und Trends sammelt, um uns bei der Verbesserung unserer Bootsbuchungsplattform und Benutzererfahrung zu helfen."
+        "description": "Google-Analytics-Cookie, das Besuche unterscheidet und Daten über Zugriffe und Interaktionen auf der Website erfasst, damit wir sie verbessern können."
+      },
+      {
+        "name": "b4y_cc_v",
+        "domain": "www.boat4you.com",
+        "duration": "Bis Sie die Einwilligung widerrufen",
+        "description": "Besucher-ID für unsere eigene Besuchsstatistik. Nur mit Einwilligung zu Analytics."
+      },
+      {
+        "name": "b4y_cc_s",
+        "domain": "www.boat4you.com",
+        "duration": "Bis Sie den Tab schließen",
+        "description": "Der aktuelle Besuch, damit Iris Sie nur einmal begrüßt. Nur mit Einwilligung zu Analytics."
+      },
+      {
+        "name": "b4y_cc_cch",
+        "domain": "www.boat4you.com",
+        "duration": "Bis Sie den Tab schließen",
+        "description": "Einmaliger Code, der Ihren Besuch von einer unserer Schwesterseiten mit Boat4You verknüpft. Nur mit Einwilligung zu Analytics."
       }
     ]
   },

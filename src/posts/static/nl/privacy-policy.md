@@ -189,6 +189,14 @@ gebruikers). Houd er rekening mee dat afmelden voor reclamecookies niet
 betekent dat je geen advertenties zult zien, alleen dat ze minder
 relevant zullen zijn voor je interesses.
 
+## Chat met Iris en bezoekstatistieken
+
+Onze website heeft een chat met Iris, onze AI-assistent, en met ons team. Iris is een AI, en dat staat altijd bij haar berichten. Gesprekken worden bewaard zodat we je kunnen antwoorden en onze dienstverlening kunnen verbeteren.
+
+Met jouw toestemming voor Analyse registreren we ook welke pagina's van onze websites je bezoekt, waarop je klikt, hoe je ons hebt gevonden, je land (op basis van je IP-adres) en je apparaat en browser, en we koppelen dit aan je chat als je ons schrijft. Zonder die toestemming registreren we alleen de pagina's die je opent terwijl de chat open is (met het IP-adres en de browser van het verzoek), zodat we je kunnen antwoorden. Als je met die toestemming vanaf een van onze zustersites naar Boat4You komt, koppelt een eenmalige code in het adres de twee bezoeken.
+
+We bewaren deze gegevens op onze eigen servers in de EU: paginaweergaven en klikken 13 maanden; bezoeken (herkomst, land, apparaat en browser), gesprekken en contactgegevens 24 maanden; het volledige IP-adres 90 dagen. De rechtsgrond is jouw toestemming (art. 6, lid 1, onder a, AVG) en, voor een gesprek dat je zelf bent begonnen, de afhandeling van je verzoek (art. 6, lid 1, onder b, AVG). Je kunt je toestemming op elk moment intrekken in de Cookie-instellingen.
+
 ## Doel van het Verzamelen van je Gegevens
 
 We verwerken je persoonsgegevens voor specifieke en wettige doeleinden.

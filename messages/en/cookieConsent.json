@@ -17,17 +17,43 @@
   },
   "necessary": {
     "title": "Essential Cookies",
-    "description": "These cookies are necessary for our website to function properly and cannot be switched off. They enable essential functionality like form security, language settings, and basic website navigation. You can block these cookies in your browser, but some parts of the website may not work properly. These cookies do not store personally identifiable information."
+    "description": "These cookies and this browser storage are needed for the website to work and cannot be switched off: form security, language, basic navigation and keeping your chat open across pages. You can block cookies in your browser, but some parts of the website may then not work.",
+    "cookies": [
+      {
+        "name": "b4y_chat_token",
+        "domain": "www.boat4you.com",
+        "duration": "Until you clear your browser data",
+        "description": "Keeps your chat with Iris open across pages. Created when you start a chat or when our team writes to you."
+      }
+    ]
   },
   "analytics": {
     "title": "Analytics Cookies",
-    "description": "These cookies help us understand how visitors interact with our website by collecting anonymous information about usage patterns, popular pages, and areas for improvement. We use this data to optimize our platform performance and enhance the user experience for customers searching for boat rentals.",
+    "description": "With your consent we use Google Analytics and our own visit statistics: which pages you visit, what you click, how you found us, your country (from your IP address) and your device and browser. If you chat with Iris or our team, we link your visit to the chat so we can help you faster. Page views and clicks are kept on our servers in the EU for 13 months, visit details for 24 months, and the full IP address is deleted after 90 days. You can change your choice at any time in Cookies Settings.",
     "cookies": [
       {
         "name": "_ga",
         "domain": "www.boat4you.com",
         "duration": "400 days",
-        "description": "Google Analytics cookie that distinguishes unique users and collects anonymous data about website traffic, user interactions, and trends to help us improve our boat booking platform and user experience."
+        "description": "Google Analytics cookie that tells visits apart and collects data about traffic and interactions on the website, to help us improve it."
+      },
+      {
+        "name": "b4y_cc_v",
+        "domain": "www.boat4you.com",
+        "duration": "Until you withdraw consent",
+        "description": "Visitor ID for our own visit statistics. Only with Analytics consent."
+      },
+      {
+        "name": "b4y_cc_s",
+        "domain": "www.boat4you.com",
+        "duration": "Until you close the tab",
+        "description": "The current visit, so that Iris greets you only once. Only with Analytics consent."
+      },
+      {
+        "name": "b4y_cc_cch",
+        "domain": "www.boat4you.com",
+        "duration": "Until you close the tab",
+        "description": "One-time code that links your visit from one of our sister sites to Boat4You. Only with Analytics consent."
       }
     ]
   },

@@ -17,17 +17,43 @@
   },
   "necessary": {
     "title": "Essentiële cookies",
-    "description": "Deze cookies zijn noodzakelijk voor de juiste werking van onze website en kunnen niet worden uitgeschakeld. Ze zorgen voor essentiële functionaliteit zoals formulierbeveiliging, taalinstellingen en basisnavigatie. Je kunt deze cookies in je browser blokkeren, maar dan werken sommige delen van de website mogelijk niet correct. Deze cookies bewaren geen persoonlijk identificeerbare informatie."
+    "description": "Deze cookies en deze browseropslag zijn nodig om de website te laten werken en kunnen niet worden uitgeschakeld: formulierbeveiliging, taal, basisnavigatie en een chat die open blijft tussen pagina's. Je kunt cookies in je browser blokkeren, maar dan werken sommige delen van de website mogelijk niet.",
+    "cookies": [
+      {
+        "name": "b4y_chat_token",
+        "domain": "www.boat4you.com",
+        "duration": "Totdat je je browsergegevens wist",
+        "description": "Houdt je chat met Iris open tussen pagina's. Wordt aangemaakt wanneer je een chat start of wanneer ons team je schrijft."
+      }
+    ]
   },
   "analytics": {
     "title": "Analytische cookies",
-    "description": "Deze cookies helpen ons te begrijpen hoe bezoekers onze website gebruiken door anonieme informatie te verzamelen over gebruikspatronen, populaire pagina's en verbeterpunten. We gebruiken deze gegevens om de prestaties van ons platform te optimaliseren en de gebruikerservaring voor klanten die naar bootverhuur zoeken te verbeteren.",
+    "description": "Met jouw toestemming gebruiken we Google Analytics en onze eigen bezoekstatistieken: welke pagina's je bezoekt, waarop je klikt, hoe je ons hebt gevonden, je land (op basis van je IP-adres) en je apparaat en browser. Als je chat met Iris of ons team, koppelen we je bezoek aan de chat zodat we je sneller kunnen helpen. Paginaweergaven en klikken worden 13 maanden bewaard op onze servers in de EU, bezoekgegevens 24 maanden, en het volledige IP-adres wordt na 90 dagen verwijderd. Je kunt je keuze op elk moment wijzigen in de Cookie-instellingen.",
     "cookies": [
       {
         "name": "_ga",
         "domain": "www.boat4you.com",
         "duration": "400 dagen",
-        "description": "Google Analytics-cookie die unieke gebruikers onderscheidt en anonieme gegevens verzamelt over websiteverkeer, gebruikersinteracties en trends om ons te helpen ons boekingsplatform en de gebruikerservaring te verbeteren."
+        "description": "Google Analytics-cookie die bezoeken van elkaar onderscheidt en gegevens verzamelt over verkeer en interacties op de website, zodat we die kunnen verbeteren."
+      },
+      {
+        "name": "b4y_cc_v",
+        "domain": "www.boat4you.com",
+        "duration": "Totdat je je toestemming intrekt",
+        "description": "Bezoekers-ID voor onze eigen bezoekstatistieken. Alleen met toestemming voor Analyse."
+      },
+      {
+        "name": "b4y_cc_s",
+        "domain": "www.boat4you.com",
+        "duration": "Totdat je het tabblad sluit",
+        "description": "Het huidige bezoek, zodat Iris je maar één keer begroet. Alleen met toestemming voor Analyse."
+      },
+      {
+        "name": "b4y_cc_cch",
+        "domain": "www.boat4you.com",
+        "duration": "Totdat je het tabblad sluit",
+        "description": "Eenmalige code die je bezoek vanaf een van onze zustersites koppelt aan Boat4You. Alleen met toestemming voor Analyse."
       }
     ]
   },

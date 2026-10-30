@@ -190,6 +190,14 @@ industriale come _YourOnlineChoices.eu_ per gli utenti europei). Tieni presente
 che la disattivazione dei _cookie_ pubblicitari non significa che non vedrai
 annunci, ma solo che saranno meno pertinenti ai tuoi interessi.
 
+## Chat con Iris e statistiche di visita
+
+Il nostro sito offre una chat con Iris, la nostra assistente IA, e con il nostro team. Iris è un'IA, ed è sempre indicato accanto ai suoi messaggi. Le conversazioni vengono conservate per risponderti e migliorare il servizio.
+
+Con il tuo consenso Analisi registriamo anche quali pagine dei nostri siti visiti, cosa clicchi, come ci hai trovato, il tuo paese (dal tuo indirizzo IP) e il tuo dispositivo e browser, e colleghiamo questi dati alla tua chat se ci scrivi. Senza questo consenso registriamo solo le pagine che apri mentre la chat è aperta (con l'indirizzo IP e il browser della richiesta), per poterti rispondere. Quando passi a Boat4You da uno dei nostri siti gemelli con questo consenso, un codice monouso nell'indirizzo collega le due visite.
+
+Conserviamo questi dati sui nostri server nell'UE: pagine viste e clic per 13 mesi; visite (provenienza, paese, dispositivo e browser), conversazioni e dati di contatto per 24 mesi; l'indirizzo IP completo per 90 giorni. La base giuridica è il tuo consenso (art. 6, par. 1, lett. a) GDPR) e, per una conversazione che hai iniziato, la gestione della tua richiesta (art. 6, par. 1, lett. b) GDPR). Puoi revocare il consenso in qualsiasi momento nelle Impostazioni cookie.
+
 ## Scopo della Raccolta dei Tuoi Dati
 
 Trattiamo i tuoi dati personali per scopi specifici e leciti. In generale,
