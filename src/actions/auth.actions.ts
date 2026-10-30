@@ -624,11 +624,12 @@ export async function register(state: any, formData: FormData): Promise<PayloadR
   const surname = formData.get('surname');
   const password = formData.get('password');
   const email = formData.get('email');
+  const phoneNumber = formData.get('phoneNumber') || undefined;
 
   try {
     const response = await fetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/auth/register`, {
       ...PUT_REQUEST_PARAMETERS,
-      body: JSON.stringify({ name, surname, password, email }),
+      body: JSON.stringify({ name, surname, password, email, phoneNumber }),
     });
 
     if (!response.ok) {

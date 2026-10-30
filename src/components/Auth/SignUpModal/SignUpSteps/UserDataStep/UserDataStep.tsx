@@ -5,6 +5,7 @@ import Link from 'next/link';
 
 import PasswordRequirements from '@/components/Auth/PasswordRequirements';
 import FormInput from '@/components/Forms/FormInput';
+import PhoneInput from '@/components/PhoneInput';
 import colors from '@/styles/themes/colors';
 import useToggleState from '@/utils/hooks/useToggleState';
 import { FormValidator, MIN_PASSWORD_LENGTH } from '@/utils/static/FormValidator';
@@ -47,6 +48,17 @@ const UserDataStep = () => {
         formLabel={t('surname')}
         placeholder={t('surname')}
         validate={FormValidator.withTranslation(t).isNotEmpty}
+      />
+      {/* Required since 30.10.2026 (Mario): 11 of 12 accounts without a phone had typed it nowhere,
+          so the admin user list could not show one. Same field and rule as the booking form. */}
+      <PhoneInput
+        name="phoneNumber"
+        formLabel={t('phoneNumber')}
+        placeholder={t('inputPhoneNumber')}
+        validate={FormValidator.all(
+          FormValidator.withTranslation(t).isNotEmpty,
+          FormValidator.withTranslation(t).isValidPhoneNumber
+        )}
       />
       <FormInput
         name="password"

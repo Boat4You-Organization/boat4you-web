@@ -20,6 +20,7 @@ export interface SignUpFormValues {
   email: string;
   name: string;
   surname: string;
+  phoneNumber: string;
   password: string;
   repeatPassword?: string;
 }

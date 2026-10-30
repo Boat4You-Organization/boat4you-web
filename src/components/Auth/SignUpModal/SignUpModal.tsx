@@ -31,6 +31,7 @@ const defaultValues: SignUpFormValues = {
   email: '',
   name: '',
   surname: '',
+  phoneNumber: '',
   password: '',
   repeatPassword: '',
 };
@@ -98,6 +99,7 @@ const SignUpModal = ({ isOpen, onOpen, onClose }: SignUpModalProps) => {
 
     formData.append('name', formValues.name);
     formData.append('surname', formValues.surname);
+    formData.append('phoneNumber', formValues.phoneNumber);
     formData.append('email', formValues.email);
     formData.append('password', formValues.password);
 
