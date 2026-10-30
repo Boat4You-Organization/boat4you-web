@@ -1,5 +1,9 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-10-30 — 📞 Registracija: broj telefona obavezan — ✅ LIVE 30.10.2026 (`b172cef67`, dpl `b172cef677bc-mvvcfxt2`)
+
+Mario 30.10.2026 („3“): u adminu Users 12 od 32 korisnika bez telefona, 11 od njih broj nigdje nije upisao (read-only upit na cusma4). Obrazac za registraciju (SignUpModal, korak s podacima) sada ima obavezno polje „Phone number“ (isti PhoneInput i pravilo kao booking forma), `register()` šalje `phoneNumber` na `/auth/register` (backend ga već prima). Google/Facebook prijava nepromijenjena. SEO regression 0 new FAIL.
+
 ## 2026-10-30 — 💬 Zajednički Contact Center widget umjesto starog ChatWidgeta (P3b) — ✅ LIVE 30.10.2026 18:40 UTC (`b20467056`, deployment id `b20467056bc9-mvvbczsb`, tag `live/2026-10-30-cc-widget`)
 
 Mario 30.10.2026: „boat4you … treba biti isti, i sve iste funkcije“. Plan `infra/docs/superpowers/plans/2026-10-30-p3b-boat4you-widget.md` (tablica pariteta: sve funkcije starog chata postoje u widgetu; redak kapaciteta dodan u widget `66a6685`).
