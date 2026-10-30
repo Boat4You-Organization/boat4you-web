@@ -1,5 +1,9 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-10-30 — ↪️ 17 starih URL-ova iz Bing Webmastera (404) → 308 na odgovarajuće landinge — ✅ LIVE 30.10.2026 (`239adde01`, dpl `239adde01c70-mvuwldya`)
+
+Mario 30.10.2026 (pregled Bing Webmastera): stari URL-ovi (`/catamaran-sailing-*`, `/sailing-*-catamaran-charters`, `/athens-area-…-charter.html`, `/testimonials`, `/news-tips-guides`) koje Bing još crawla kao 404 → `next.config.js` redirects() na indeksirani landing iste destinacije i tipa broda (`/search?destinations=…&boatTypes=…`), `/about-us`, `/blog`. Provjera: 1 hop, 200, index, canonical ispravan. SEO regression: 1 novi FAIL T6 „Catlante 600“ (brodogradilište na kartici povezanog broda, nije operater) = lažno pozitivan → popravljen checker (infra `d69138c`, allow-list `after`).
+
 ## 2026-10-28 — 🔗 rel="nofollow" na svim linkovima između webova Boat4You Group — ✅ LIVE 28.10.2026 (`ac2276506`, dpl `ac22765065f2-mvs5ismt`, tag `live/2026-10-28-network-nofollow`)
 
 Mario 28.10.2026: test da li mreža linkova između 7 webova Boat4You Group (footer, gumbi „Book on boat4you“, Boat4You sekcija, linkovi u tekstu WordPress članaka) koči rangiranje. **Početak testa: 28.10.2026 13:32 UTC** (zadnji web live).
