@@ -171,6 +171,85 @@ const nextConfig = {
         destination: '/blog/provisioning-a-charter-yacht-galley-and-food-guide',
         permanent: true,
       },
+      // Pre-2026 site URLs Bing Webmaster still crawls as 404 (Mario 30.10.2026),
+      // each sent to the indexed landing of the same area and boat type.
+      {
+        source: '/catamaran-sailing-amalfi-coast',
+        destination: '/search?destinations=campania&boatTypes=CATAMARAN',
+        permanent: true,
+      },
+      {
+        source: '/catamaran-sailing-ibiza',
+        destination: '/search?destinations=ibiza&boatTypes=CATAMARAN',
+        permanent: true,
+      },
+      {
+        source: '/catamaran-sailing-sukosan',
+        destination: '/search?destinations=d-marin%20dalmacija%20marina&boatTypes=CATAMARAN',
+        permanent: true,
+      },
+      {
+        source: '/catamaran-sailing-corfu',
+        destination: '/search?destinations=d-marin%20marina%20gouvia&boatTypes=CATAMARAN',
+        permanent: true,
+      },
+      {
+        source: '/catamaran-sailing-paros',
+        destination: '/search?destinations=paros&boatTypes=CATAMARAN',
+        permanent: true,
+      },
+      {
+        source: '/catamaran-sailing-dubrovnik',
+        destination: '/search?destinations=dubrovnik%20region&boatTypes=CATAMARAN',
+        permanent: true,
+      },
+      {
+        source: '/catamaran-sailing-sicily',
+        destination: '/search?destinations=sicily&boatTypes=CATAMARAN',
+        permanent: true,
+      },
+      {
+        source: '/catamaran-sailing-split',
+        destination: '/search?destinations=split%20region&boatTypes=CATAMARAN',
+        permanent: true,
+      },
+      {
+        source: '/catamaran-sailing-mallorca',
+        destination: '/search?destinations=mallorca&boatTypes=CATAMARAN',
+        permanent: true,
+      },
+      {
+        source: '/catamaran-sailing-pula',
+        destination: '/search?destinations=istria%20%2F%20kvarner&boatTypes=CATAMARAN',
+        permanent: true,
+      },
+      {
+        source: '/sailing-croatia-catamaran-charters',
+        destination: '/search?destinations=croatia&boatTypes=CATAMARAN',
+        permanent: true,
+      },
+      {
+        source: '/sailing-greece-catamaran-charters',
+        destination: '/search?destinations=greece&boatTypes=CATAMARAN',
+        permanent: true,
+      },
+      {
+        source: '/sailing-spain-catamaran-charters',
+        destination: '/search?destinations=spain&boatTypes=CATAMARAN',
+        permanent: true,
+      },
+      {
+        source: '/athens-area-saronic-peloponese-sailing-yacht-charter.html',
+        destination: '/search?destinations=athens%20%2F%20saronic%20gulf&boatTypes=SAILING_YACHT',
+        permanent: true,
+      },
+      {
+        source: '/athens-area-saronic-peloponese-power-catamaran-charter.html',
+        destination: '/search?destinations=athens%20%2F%20saronic%20gulf&boatTypes=POWER_CATAMARAN',
+        permanent: true,
+      },
+      { source: '/testimonials', destination: '/about-us', permanent: true },
+      { source: '/news-tips-guides', destination: '/blog', permanent: true },
     ];
   },
   // Next default gzip on. Nginx-level brotli (cusma1) handles modern UAs;
