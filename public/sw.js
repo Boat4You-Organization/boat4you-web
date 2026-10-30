@@ -72,9 +72,13 @@ self.addEventListener('fetch', event => {
     event.respondWith(
       fetch(request)
         .then(res => {
-          const copy = res.clone();
+          // A page whose request still carried the one-time Contact Center token (cch) is not stored: the token must
+          // not sit in the cache (src/config/ccHandoff.ts).
+          if (!url.searchParams.has('cch')) {
+            const copy = res.clone();
 
-          caches.open(PAGE_CACHE).then(cache => cache.put(request, copy));
+            caches.open(PAGE_CACHE).then(cache => cache.put(request, copy));
+          }
 
           return res;
         })

@@ -11,6 +11,7 @@ import Script from 'next/script';
 import GoogleAnalyticsConsent from '@/components/GoogleAnalyticsConsent';
 import InstallPrompt from '@/components/InstallPrompt';
 import ServiceWorkerRegister from '@/components/ServiceWorkerRegister';
+import { CCH_STRIP_SNIPPET } from '@/config/ccHandoff';
 import { LINKER_SET_SNIPPET } from '@/config/crossDomainLinker';
 import { LocaleType } from '@/config/locales.config';
 import { meta } from '@/config/meta';
@@ -144,6 +145,13 @@ const RootLayout = async ({ children, params }: RootLayoutProps) => {
             script, before gtag.js runs its first config: a visit arriving
             from a sister site with ?_gl= keeps its GA client id and Ads click
             (crossDomainLinker.ts). */}
+        {/* Contact Center handoff token from a sister site (cch): out of the address bar before the Google tag below
+            reads page_location; kept in page memory for the widget (src/config/ccHandoff.ts). */}
+        <Script
+          id="cc-handoff-strip"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{ __html: CCH_STRIP_SNIPPET }}
+        />
         <Script
           id="gtag-consent-default"
           strategy="beforeInteractive"
