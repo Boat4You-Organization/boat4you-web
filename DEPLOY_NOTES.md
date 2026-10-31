@@ -1,5 +1,9 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-10-31 — 🧰 Stranica broda: Amenities = prvi redovi otvoreni + „Read more“ (kao opis) — ⏳ čeka deploy
+
+Mario 31.10. („isto napravi i na boat4you“, uz istu promjenu na 6 sistera): Amenities je od 13.10. bio potpuno sklopljen (naslov = prekidač), pa ga ljudi nisu vidjeli. Sada `AmenitiesTab` ima uvijek vidljiv naslov i popis u `ReadMorePanel` (kao opis) s otvorenih ~280 px i „Read more“ / „Read less“; cijeli popis ostaje u HTML-u. `BoatContentSection`: Amenities više nije u `isFolded` (Extras ostaje sklopljen do klika, kao prije). Provjera nakon deploya: stranica broda → „Read more“ ispod Amenities.
+
 ## 2026-10-30 — 🔗 Prijelaz sa sestrinskog sajta: jednokratni kod `cch` nestaje iz adrese prije Google taga — ✅ LIVE 30.10.2026 19:47 UTC (`f828c3a7c`, dpl `f828c3a7c3dc`, tag `live/2026-10-30-cc-handoff`)
 
 Mario 30.10.2026 („Pregled pa deploy“): preduvjet za `HANDOFF_TO_BOAT4YOU` u widgetu (završni pregled P3b, Important).

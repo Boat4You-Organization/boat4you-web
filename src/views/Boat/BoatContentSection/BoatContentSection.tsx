@@ -86,10 +86,11 @@ const BoatContentSection = ({
   }, []);
 
   const currentTabs = singleBoatTabsFor(yacht);
-  // Amenities and Extras are folded until pressed (owner 13.10.2026, every
-  // boat); choosing their tab opens them, so the scroll lands on content.
+  // Extras is folded until pressed (owner 13.10.2026, every boat); choosing
+  // its tab opens it, so the scroll lands on content. Amenities shows its
+  // first rows with "Read more" instead (owner 31.10.2026).
   const [expanded, setExpanded] = useState<Record<string, boolean>>({});
-  const isFolded = (tabName: string) => tabName === 'ammenities' || tabName === 'extras';
+  const isFolded = (tabName: string) => tabName === 'extras';
   const toggleSection = (tabName: string) => setExpanded(prev => ({ ...prev, [tabName]: !prev[tabName] }));
   const sectionIds = useMemo(() => currentTabs.map((_, index) => `section-${index}`), [currentTabs]);
 
@@ -182,7 +183,7 @@ const BoatContentSection = ({
       case 'details':
         return <DetailsTab yacht={yacht} capacity={capacity} />;
       case 'ammenities':
-        return <AmenitiesTab yacht={yacht} open={!!expanded.ammenities} onToggle={() => toggleSection('ammenities')} />;
+        return <AmenitiesTab yacht={yacht} />;
       case 'availability':
         return <AvailabilityTab yacht={yacht} initialCalendar={initialCalendar} />;
       case 'extras':

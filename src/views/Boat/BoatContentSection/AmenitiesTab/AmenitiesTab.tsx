@@ -4,7 +4,7 @@ import React from 'react';
 import { Box, Divider, Grid, List, ListItem, Typography } from '@mui/material';
 import { useTranslations } from 'next-intl';
 
-import CollapsibleBlock from '@/components/CollapsibleBlock';
+import ReadMorePanel from '@/components/ReadMorePanel';
 import Amenities from '@/components/SvgIcons/Amenities';
 import Check from '@/components/SvgIcons/Check';
 import {
@@ -20,10 +20,12 @@ import { presentAmenities } from '@/utils/static/amenities';
 
 interface AmenitiesTabProps {
   yacht: YachtModel;
-  /** Folded by default; the tabs bar opens it (BoatContentSection). */
-  open: boolean;
-  onToggle: () => void;
 }
+
+// Height of the open part of the list while folded, in px: about the first
+// category and a half, then a fade and "Read more" (owner 31.10.2026: the
+// fully folded section was overlooked). The whole list stays in the DOM.
+const AMENITIES_PREVIEW_HEIGHT = 280;
 
 // Split a free-text amenities/toys block on newlines and drop empty lines.
 // Trims each line so the source text can use indented/aligned columns
@@ -34,16 +36,33 @@ const splitTextLines = (text: string | null | undefined): string[] =>
     .map(line => line.trim())
     .filter(line => line.length > 0);
 
-const AmenitiesTab = ({ yacht, open, onToggle }: AmenitiesTabProps) => {
+const AmenitiesTab = ({ yacht }: AmenitiesTabProps) => {
   const t = useTranslations('yacht');
   // Linked rows only (presentAmenities): the catalogue code's translation.
   const renderAmenityLabel = useAmenityLabel();
-  // The section heading (icon + text), the switch of the folded block.
+  // The section heading (icon + text).
   const heading = (
     <>
       <Amenities variant="secondary" size={32} />
       {t('amenities')}
     </>
+  );
+
+  // Heading always visible; the first rows open, the rest behind "Read more".
+  const section = (body: React.ReactNode) => (
+    <Box component="section">
+      <Typography
+        component="h2"
+        variant="h3"
+        fontWeight={700}
+        sx={{ display: 'flex', flexDirection: 'row', gap: 1, alignItems: 'center', py: 0.5 }}
+      >
+        {heading}
+      </Typography>
+      <Box pt={3}>
+        <ReadMorePanel collapsedHeight={AMENITIES_PREVIEW_HEIGHT}>{body}</ReadMorePanel>
+      </Box>
+    </Box>
   );
 
   // Bucket every amenity into one of the 9 modern categories. Rows whose
@@ -168,13 +187,11 @@ const AmenitiesTab = ({ yacht, open, onToggle }: AmenitiesTabProps) => {
 
     if (amenityItems.length === 0 && toyItems.length === 0) return null;
 
-    return (
-      <CollapsibleBlock title={heading} open={open} onToggle={onToggle}>
-        <Grid container spacing={{ xs: 3, md: 4 }} alignItems="flex-start">
-          {renderCustomTextList(t('saloonAndCabins'), amenityItems, 'amenity')}
-          {renderCustomTextList(t('entertainment'), toyItems, 'toy')}
-        </Grid>
-      </CollapsibleBlock>
+    return section(
+      <Grid container spacing={{ xs: 3, md: 4 }} alignItems="flex-start">
+        {renderCustomTextList(t('saloonAndCabins'), amenityItems, 'amenity')}
+        {renderCustomTextList(t('entertainment'), toyItems, 'toy')}
+      </Grid>
     );
   }
 
@@ -199,17 +216,15 @@ const AmenitiesTab = ({ yacht, open, onToggle }: AmenitiesTabProps) => {
 
   const populatedRows = YACHT_EQUIPMENT_CATEGORY_TYPE_ARRAY.filter(({ type }) => (buckets[type] || []).length > 0);
 
-  return (
-    <CollapsibleBlock title={heading} open={open} onToggle={onToggle}>
-      <Box
-        sx={{
-          px: { xs: 0, md: 1 },
-          py: { xs: 1, md: 2 },
-        }}
-      >
-        {populatedRows.map(({ type }, idx) => renderCategoryRow(type, buckets[type] || [], idx > 0))}
-      </Box>
-    </CollapsibleBlock>
+  return section(
+    <Box
+      sx={{
+        px: { xs: 0, md: 1 },
+        py: { xs: 1, md: 2 },
+      }}
+    >
+      {populatedRows.map(({ type }, idx) => renderCategoryRow(type, buckets[type] || [], idx > 0))}
+    </Box>
   );
 };
 
