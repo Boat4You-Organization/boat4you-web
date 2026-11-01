@@ -29,7 +29,7 @@
   },
   "analytics": {
     "title": "Analytics Cookies",
-    "description": "With your consent we use Google Analytics and our own visit statistics: which pages you visit, what you click, how you found us, your country (from your IP address) and your device and browser. If you chat with Iris or our team, we link your visit to the chat so we can help you faster. Page views and clicks are kept on our servers in the EU for 13 months, visit details for 24 months, and the full IP address is deleted after 90 days. With the same consent we may record some visits, meaning how the page changes as you scroll, click and move between pages, to find what is hard to use. What you type and your name, e-mail and phone are hidden in these recordings, and we delete them after 60 days. You can change your choice at any time in Cookies Settings.",
+    "description": "With your consent we use Google Analytics and our own visit statistics: which pages you visit, what you click, how you found us, your country (from your IP address) and your device and browser. If you chat with Iris or our team, we link your visit to the chat so we can help you faster. Page views and clicks are kept on our servers in the EU for 13 months, visit details for 24 months, and the full IP address is deleted after 90 days. With the same consent we may record your visits, meaning how the page changes as you scroll, click and move between pages, to find what is hard to use. What you type and your name, e-mail and phone are hidden in these recordings, and we delete them after 60 days. You can change your choice at any time in Cookies Settings.",
     "cookies": [
       {
         "name": "_ga",
