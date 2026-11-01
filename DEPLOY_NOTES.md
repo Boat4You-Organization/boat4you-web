@@ -1,6 +1,6 @@
 # Boat4You (main) — Production Deploy Notes
 
-## 2026-11-01 — 🧰 Amenities na bijeloj pozadini (bez sive kutije) — ⏳ čeka deploy
+## 2026-11-01 — 🧰 Amenities na bijeloj pozadini (bez sive kutije) — ✅ LIVE 1.11.2026 (deployment 9ef4a66b8ff6-mvxr28cn, SEO regresija 0 novih FAIL)
 
 Mario 1.11.: „na boat4you isto stavi bijelu pozadinu na amenities“ (kao 6 sistera 31.10.). `ReadMorePanel` dobiva `tone="plain"` (bez pozadine, paddinga i zaobljenja; fade u `$white`); `AmenitiesTab` ga koristi. Opis i „Good to know“ ostaju u sivoj kutiji.
 
