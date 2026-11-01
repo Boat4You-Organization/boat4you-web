@@ -60,7 +60,9 @@ const AmenitiesTab = ({ yacht }: AmenitiesTabProps) => {
         {heading}
       </Typography>
       <Box pt={3}>
-        <ReadMorePanel collapsedHeight={AMENITIES_PREVIEW_HEIGHT}>{body}</ReadMorePanel>
+        <ReadMorePanel tone="plain" collapsedHeight={AMENITIES_PREVIEW_HEIGHT}>
+          {body}
+        </ReadMorePanel>
       </Box>
     </Box>
   );

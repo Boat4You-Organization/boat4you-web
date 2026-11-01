@@ -15,6 +15,11 @@ interface ReadMorePanelProps {
   collapsible?: boolean;
   /** Height shown while folded, in px (about seven lines of body text). */
   collapsedHeight?: number;
+  /**
+   * `panel` (default): the soft grey box of the description. `plain`: no box,
+   * on the white page, fading into white (Amenities, owner 1.11.2026).
+   */
+  tone?: 'panel' | 'plain';
 }
 
 /**
@@ -24,7 +29,7 @@ interface ReadMorePanelProps {
  * less" switch; the whole text stays in the DOM, so search engines read it
  * all. Content that fits shows no switch and no fade.
  */
-const ReadMorePanel = ({ children, collapsible = true, collapsedHeight = 176 }: ReadMorePanelProps) => {
+const ReadMorePanel = ({ children, collapsible = true, collapsedHeight = 176, tone = 'panel' }: ReadMorePanelProps) => {
   const t = useTranslations('common');
   const bodyId = useId();
   const bodyRef = useRef<HTMLDivElement>(null);
@@ -53,7 +58,7 @@ const ReadMorePanel = ({ children, collapsible = true, collapsedHeight = 176 }: 
   const folded = collapsible && overflows && !open;
 
   return (
-    <Box className={styles.panel}>
+    <Box className={cx(styles.panel, { [styles.plain]: tone === 'plain' })}>
       <Box
         id={bodyId}
         ref={bodyRef}

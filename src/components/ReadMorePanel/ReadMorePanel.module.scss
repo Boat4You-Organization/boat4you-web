@@ -32,6 +32,22 @@
   }
 }
 
+// No box: the content sits on the white page and the fold fades into white
+// (Amenities, owner 1.11.2026).
+.plain {
+  padding: 0;
+  background-color: transparent;
+  border-radius: 0;
+
+  @include media('md') {
+    padding: 0;
+  }
+
+  .body.folded::after {
+    background: linear-gradient(to bottom, rgba($white, 0), $white);
+  }
+}
+
 .toggle {
   display: inline-flex;
   gap: rem-calc(4);

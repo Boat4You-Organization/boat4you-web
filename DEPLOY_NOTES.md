@@ -1,5 +1,9 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-11-01 — 🧰 Amenities na bijeloj pozadini (bez sive kutije) — ⏳ čeka deploy
+
+Mario 1.11.: „na boat4you isto stavi bijelu pozadinu na amenities“ (kao 6 sistera 31.10.). `ReadMorePanel` dobiva `tone="plain"` (bez pozadine, paddinga i zaobljenja; fade u `$white`); `AmenitiesTab` ga koristi. Opis i „Good to know“ ostaju u sivoj kutiji.
+
 ## 2026-10-31 — 🧰 Stranica broda: Amenities = prvi redovi otvoreni + „Read more“ (kao opis) — ✅ LIVE 31.10.2026 (sisteri bijela pozadina 14:09–16:06 UTC, boat4you 13:51 UTC; SEO regresija 0 novih FAIL)
 
 Mario 31.10. („isto napravi i na boat4you“, uz istu promjenu na 6 sistera): Amenities je od 13.10. bio potpuno sklopljen (naslov = prekidač), pa ga ljudi nisu vidjeli. Sada `AmenitiesTab` ima uvijek vidljiv naslov i popis u `ReadMorePanel` (kao opis) s otvorenih ~280 px i „Read more“ / „Read less“; cijeli popis ostaje u HTML-u. `BoatContentSection`: Amenities više nije u `isFolded` (Extras ostaje sklopljen do klika, kao prije). Provjera nakon deploya: stranica broda → „Read more“ ispod Amenities.
