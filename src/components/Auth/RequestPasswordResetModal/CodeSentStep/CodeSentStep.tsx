@@ -15,7 +15,7 @@ const CodeSentStep = ({ email }: { email: string }) => {
   return (
     <Stack alignItems="center" gap={2}>
       <ResetPasswordVector />
-      <Typography variant="body1" maxWidth={214}>
+      <Typography data-clarity-mask="true" variant="body1" maxWidth={214}>
         {t.rich('aCodeHasBeenSentToYourEmail', {
           strong,
           email,

@@ -121,7 +121,7 @@ const ConfirmAccountModal = ({ isOpen, onOpen, onClose }: ConfirmAccountModalPro
       <Typography variant="h3" fontWeight={700}>
         {t('enterVerificationCode')}
       </Typography>
-      <Typography variant="body1" mt={2}>
+      <Typography data-clarity-mask="true" variant="body1" mt={2}>
         {t('enterVerificationCodeDescription', { email: userEmail || '' })}
       </Typography>
       <Form defaultValues={initialValues} onSubmit={noop} style={{ display: 'flex', justifyContent: 'center' }}>

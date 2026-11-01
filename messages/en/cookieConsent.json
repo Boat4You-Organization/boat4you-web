@@ -29,7 +29,7 @@
   },
   "analytics": {
     "title": "Analytics Cookies",
-    "description": "With your consent we use Google Analytics and our own visit statistics: which pages you visit, what you click, how you found us, your country (from your IP address) and your device and browser. If you chat with Iris or our team, we link your visit to the chat so we can help you faster. Page views and clicks are kept on our servers in the EU for 13 months, visit details for 24 months, and the full IP address is deleted after 90 days. You can change your choice at any time in Cookies Settings.",
+    "description": "With your consent we use Google Analytics and our own visit statistics: which pages you visit, what you click, how you found us, your country (from your IP address) and your device and browser. If you chat with Iris or our team, we link your visit to the chat so we can help you faster. Page views and clicks are kept on our servers in the EU for 13 months, visit details for 24 months, and the full IP address is deleted after 90 days. With the same consent we may record some visits, meaning how the page changes as you scroll, click and move between pages, to find what is hard to use. What you type and your name, e-mail and phone are hidden in these recordings, and we delete them after 60 days. You can change your choice at any time in Cookies Settings.",
     "cookies": [
       {
         "name": "_ga",
@@ -54,6 +54,30 @@
         "domain": "www.boat4you.com",
         "duration": "Until you close the tab",
         "description": "One-time code that links your visit from one of our sister sites to Boat4You. Only with Analytics consent."
+      },
+      {
+        "name": "b4yr_u",
+        "domain": "boat4you.com",
+        "duration": "1 year",
+        "description": "Visitor ID for recordings, so that the pages of one visit are joined. Only with Analytics consent."
+      },
+      {
+        "name": "b4yr_s",
+        "domain": "boat4you.com",
+        "duration": "1 day",
+        "description": "The current recorded visit. Only with Analytics consent."
+      },
+      {
+        "name": "b4yr_t",
+        "domain": "www.boat4you.com",
+        "duration": "Until you close the tab",
+        "description": "Tells your open tabs apart in a recording. Only with Analytics consent."
+      },
+      {
+        "name": "b4yr_pick",
+        "domain": "www.boat4you.com",
+        "duration": "Until you close the tab",
+        "description": "Whether this tab is one of the recorded visits. Only with Analytics consent."
       }
     ]
   },

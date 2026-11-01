@@ -59,6 +59,7 @@ const ProfileDropdown = ({ user }: ProfileDropdownProps) => {
   return (
     <>
       <Button
+        data-clarity-mask="true"
         variant="outlinedSecondary"
         onClick={handleClick}
         classes={{ root: styles.buttonRoot }}

@@ -57,7 +57,8 @@ const NavigationMobileItem = ({
       onClick={href ? handleLinkClick : onClick}
     >
       <ListItemButton disableGutters className={styles.button}>
-        <Stack direction="row" alignItems="center" gap={1.5}>
+        {/* The visitor's own name stays out of session recordings (P6 R1.2). */}
+        <Stack direction="row" alignItems="center" gap={1.5} data-clarity-mask={isMyProfileLink ? 'true' : undefined}>
           {renderIcon()}
           <ListItemText primary={isMyProfileLink ? text : t(text as NavigationMobileItemTitle)} sx={{ margin: 0 }} />
         </Stack>

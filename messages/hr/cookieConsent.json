@@ -29,7 +29,7 @@
   },
   "analytics": {
     "title": "Analitički kolačići",
-    "description": "Uz vaš pristanak koristimo Google Analytics i vlastitu statistiku posjeta: koje stranice posjećujete, što kliknete, kako ste nas pronašli, vašu državu (iz IP adrese) te vaš uređaj i preglednik. Ako razgovarate s Iris ili našim timom, posjet povezujemo s razgovorom kako bismo vam brže pomogli. Pregledi stranica i klikovi čuvaju se na našim poslužiteljima u EU 13 mjeseci, podaci o posjetu 24 mjeseca, a puna IP adresa briše se nakon 90 dana. Izbor možete promijeniti bilo kada u Postavkama kolačića.",
+    "description": "Uz vaš pristanak koristimo Google Analytics i vlastitu statistiku posjeta: koje stranice posjećujete, što kliknete, kako ste nas pronašli, vašu državu (iz IP adrese) te vaš uređaj i preglednik. Ako razgovarate s Iris ili našim timom, posjet povezujemo s razgovorom kako bismo vam brže pomogli. Pregledi stranica i klikovi čuvaju se na našim poslužiteljima u EU 13 mjeseci, podaci o posjetu 24 mjeseca, a puna IP adresa briše se nakon 90 dana. Uz isti pristanak možemo snimiti neke posjete, odnosno kako se stranica mijenja dok listate, klikate i prelazite na druge stranice, kako bismo pronašli ono što je teško za korištenje. Ono što upisujete te vaše ime, e-mail i telefon skriveni su u tim snimkama, a snimke brišemo nakon 60 dana. Izbor možete promijeniti bilo kada u Postavkama kolačića.",
     "cookies": [
       {
         "name": "_ga",
@@ -54,6 +54,30 @@
         "domain": "www.boat4you.com",
         "duration": "Do zatvaranja kartice",
         "description": "Jednokratni kod koji vaš posjet s jednog od naših sestrinskih sajtova povezuje s Boat4You. Samo uz pristanak za analitiku."
+      },
+      {
+        "name": "b4yr_u",
+        "domain": "boat4you.com",
+        "duration": "1 godina",
+        "description": "ID posjetitelja za snimke, kako bi se stranice jednog posjeta povezale. Samo uz pristanak za analitiku."
+      },
+      {
+        "name": "b4yr_s",
+        "domain": "boat4you.com",
+        "duration": "1 dan",
+        "description": "Trenutni snimani posjet. Samo uz pristanak za analitiku."
+      },
+      {
+        "name": "b4yr_t",
+        "domain": "www.boat4you.com",
+        "duration": "Do zatvaranja kartice",
+        "description": "Razlikuje vaše otvorene kartice u snimci. Samo uz pristanak za analitiku."
+      },
+      {
+        "name": "b4yr_pick",
+        "domain": "www.boat4you.com",
+        "duration": "Do zatvaranja kartice",
+        "description": "Je li ova kartica jedan od snimanih posjeta. Samo uz pristanak za analitiku."
       }
     ]
   },

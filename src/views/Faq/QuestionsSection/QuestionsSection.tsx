@@ -55,6 +55,7 @@ const QuestionsSection = ({ user, faqGroups }: QuestionsSectionProps) => {
     <Container component="section" disableGutters className={styles.container}>
       <Stack gap={4} className={styles.titleWrapper}>
         <Typography
+          data-clarity-mask="true"
           variant="hero"
           component="h1"
           fontStyle="italic"

@@ -181,6 +181,8 @@ With your Analytics consent we also record which pages of our websites you visit
 
 We keep this data on our own servers in the EU: page views and clicks for 13 months; visits (source, country, device and browser), conversations and contact details for 24 months; the full IP address for 90 days. The legal basis is your consent (Art. 6(1)(a) GDPR) and, for a conversation you started, handling your request (Art. 6(1)(b) GDPR). You can withdraw consent at any time in Cookies Settings.
 
+With the same Analytics consent we may also record some visits: how the page looks and changes while you scroll, click and move between pages, so that we can see where our website is hard to use and fix it. What you type into forms and the chat, and your name, e-mail and phone shown on the page, are hidden in your browser before anything is sent, and payment, account and review pages are never recorded. Recordings go only to our own servers in the EU, are not shared with any other company and can be viewed only by our team. We delete the recordings after 60 days and the click and scroll data taken from them after 13 months, like the other visit statistics. The legal basis is your consent (Art. 6(1)(a) GDPR); you can withdraw it at any time in Cookies Settings, and recording then stops at once.
+
 ## Purpose of Collecting Your Data
 
 We process your personal data for specific and lawful purposes. In

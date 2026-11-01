@@ -254,7 +254,7 @@ const UnifiedPaymentStep = ({ reservationData }: UnifiedPaymentStepProps) => {
       <Typography variant="h3" mb={1.5}>
         {t('yourDetails')}
       </Typography>
-      <Box sx={{ border: cardBorder(false), borderRadius: 1.5, px: 2.5, py: 0.5, mb: 3 }}>
+      <Box data-clarity-mask="true" sx={{ border: cardBorder(false), borderRadius: 1.5, px: 2.5, py: 0.5, mb: 3 }}>
         {contact ? (
           [
             { label: t('firstName'), value: contact.name },
@@ -551,7 +551,7 @@ const UnifiedPaymentStep = ({ reservationData }: UnifiedPaymentStepProps) => {
               : t('payNowAmount', { amount: fmt(methodAdjustedAmount) })}
         </Button>
         {contact?.email && (
-          <Typography variant="body2" color={colors.black500}>
+          <Typography data-clarity-mask="true" variant="body2" color={colors.black500}>
             {t('confirmationWillBeSentTo', { email: contact.email })}
           </Typography>
         )}

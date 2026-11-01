@@ -29,7 +29,7 @@
   },
   "analytics": {
     "title": "Analityczne pliki cookie",
-    "description": "Za Twoją zgodą korzystamy z Google Analytics i własnych statystyk odwiedzin: które strony odwiedzasz, co klikasz, jak nas znaleziono, Twój kraj (na podstawie adresu IP) oraz Twoje urządzenie i przeglądarkę. Jeśli rozmawiasz z Iris lub naszym zespołem, łączymy Twoją wizytę z rozmową, aby szybciej Ci pomóc. Wyświetlenia stron i kliknięcia przechowujemy na naszych serwerach w UE przez 13 miesięcy, dane o wizycie przez 24 miesiące, a pełny adres IP usuwamy po 90 dniach. Swój wybór możesz w każdej chwili zmienić w Ustawieniach plików cookie.",
+    "description": "Za Twoją zgodą korzystamy z Google Analytics i własnych statystyk odwiedzin: które strony odwiedzasz, co klikasz, jak nas znaleziono, Twój kraj (na podstawie adresu IP) oraz Twoje urządzenie i przeglądarkę. Jeśli rozmawiasz z Iris lub naszym zespołem, łączymy Twoją wizytę z rozmową, aby szybciej Ci pomóc. Wyświetlenia stron i kliknięcia przechowujemy na naszych serwerach w UE przez 13 miesięcy, dane o wizycie przez 24 miesiące, a pełny adres IP usuwamy po 90 dniach. Za tą samą zgodą możemy nagrywać niektóre wizyty, czyli to, jak zmienia się strona, gdy przewijasz, klikasz i przechodzisz między stronami, aby znaleźć to, co jest trudne w obsłudze. To, co wpisujesz, oraz Twoje imię i nazwisko, e-mail i telefon są w tych nagraniach ukryte, a nagrania usuwamy po 60 dniach. Swój wybór możesz w każdej chwili zmienić w Ustawieniach plików cookie.",
     "cookies": [
       {
         "name": "_ga",
@@ -54,6 +54,30 @@
         "domain": "www.boat4you.com",
         "duration": "Do zamknięcia karty",
         "description": "Jednorazowy kod, który łączy Twoją wizytę z jednej z naszych siostrzanych stron z Boat4You. Tylko za zgodą na analitykę."
+      },
+      {
+        "name": "b4yr_u",
+        "domain": "boat4you.com",
+        "duration": "1 rok",
+        "description": "Identyfikator odwiedzającego dla nagrań, aby połączyć strony jednej wizyty. Tylko za zgodą na analitykę."
+      },
+      {
+        "name": "b4yr_s",
+        "domain": "boat4you.com",
+        "duration": "1 dzień",
+        "description": "Bieżąca nagrywana wizyta. Tylko za zgodą na analitykę."
+      },
+      {
+        "name": "b4yr_t",
+        "domain": "www.boat4you.com",
+        "duration": "Do zamknięcia karty",
+        "description": "Rozróżnia Twoje otwarte karty w nagraniu. Tylko za zgodą na analitykę."
+      },
+      {
+        "name": "b4yr_pick",
+        "domain": "www.boat4you.com",
+        "duration": "Do zamknięcia karty",
+        "description": "Czy ta karta należy do nagrywanych wizyt. Tylko za zgodą na analitykę."
       }
     ]
   },

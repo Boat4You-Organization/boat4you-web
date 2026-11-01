@@ -61,6 +61,8 @@ Uz vaš pristanak za analitiku bilježimo i koje stranice naših web-stranica po
 
 Ove podatke čuvamo na vlastitim poslužiteljima u EU: preglede stranica i klikove 13 mjeseci; posjete (izvor, država, uređaj i preglednik), razgovore i kontakt podatke 24 mjeseca; punu IP adresu 90 dana. Pravna osnova je vaš pristanak (čl. 6. st. 1. t. (a) GDPR-a), a za razgovor koji ste sami započeli obrada vašeg zahtjeva (čl. 6. st. 1. t. (b) GDPR-a). Pristanak možete povući bilo kada u Postavkama kolačića.
 
+Uz isti pristanak za analitiku možemo snimiti i neke posjete: kako stranica izgleda i kako se mijenja dok listate, klikate i prelazite na druge stranice, kako bismo vidjeli gdje je naša web-stranica teška za korištenje i to popravili. Ono što upisujete u obrasce i u chat te vaše ime, e-mail i telefon prikazani na stranici skrivaju se već u vašem pregledniku, prije nego što se išta pošalje, a stranice plaćanja, korisničkog računa i recenzija nikad se ne snimaju. Snimke idu samo na naše vlastite poslužitelje u EU, ne dijelimo ih ni s jednom drugom tvrtkom i može ih pregledavati samo naš tim. Snimke brišemo nakon 60 dana, a podatke o klikovima i listanju izvučene iz njih nakon 13 mjeseci, kao i ostalu statistiku posjeta. Pravna osnova je vaš pristanak (čl. 6. st. 1. t. (a) GDPR-a); možete ga povući bilo kada u Postavkama kolačića, i snimanje tada odmah prestaje.
+
 ## Svrha prikupljanja vaših podataka
 
 Obrađujemo vaše osobne podatke za specifične i zakonite svrhe. Općenito, koristimo informacije koje prikupljamo za upravljanje našom Platformom, pružanje naših usluga vama, poboljšanje naših ponuda i poštovanje zakonskih zahtjeva. Glavne svrhe za koje Boat4You obrađuje osobne podatke su:

@@ -29,7 +29,7 @@
   },
   "analytics": {
     "title": "Cookie Analitici",
-    "description": "Con il tuo consenso utilizziamo Google Analytics e le nostre statistiche di visita: quali pagine visiti, cosa clicchi, come ci hai trovato, il tuo paese (dal tuo indirizzo IP) e il tuo dispositivo e browser. Se chatti con Iris o con il nostro team, colleghiamo la tua visita alla chat per aiutarti più velocemente. Pagine viste e clic sono conservati sui nostri server nell'UE per 13 mesi, i dati della visita per 24 mesi, e l'indirizzo IP completo viene eliminato dopo 90 giorni. Puoi cambiare la tua scelta in qualsiasi momento nelle Impostazioni cookie.",
+    "description": "Con il tuo consenso utilizziamo Google Analytics e le nostre statistiche di visita: quali pagine visiti, cosa clicchi, come ci hai trovato, il tuo paese (dal tuo indirizzo IP) e il tuo dispositivo e browser. Se chatti con Iris o con il nostro team, colleghiamo la tua visita alla chat per aiutarti più velocemente. Pagine viste e clic sono conservati sui nostri server nell'UE per 13 mesi, i dati della visita per 24 mesi, e l'indirizzo IP completo viene eliminato dopo 90 giorni. Con lo stesso consenso possiamo registrare alcune visite, cioè come cambia la pagina mentre scorri, clicchi e passi da una pagina all'altra, per capire cosa è difficile da usare. Ciò che scrivi e il tuo nome, la tua e-mail e il tuo telefono sono nascosti in queste registrazioni, che eliminiamo dopo 60 giorni. Puoi cambiare la tua scelta in qualsiasi momento nelle Impostazioni cookie.",
     "cookies": [
       {
         "name": "_ga",
@@ -54,6 +54,30 @@
         "domain": "www.boat4you.com",
         "duration": "Fino alla chiusura della scheda",
         "description": "Codice monouso che collega la tua visita da uno dei nostri siti gemelli a Boat4You. Solo con il consenso Analisi."
+      },
+      {
+        "name": "b4yr_u",
+        "domain": "boat4you.com",
+        "duration": "1 anno",
+        "description": "ID visitatore per le registrazioni, per unire le pagine di una stessa visita. Solo con il consenso Analisi."
+      },
+      {
+        "name": "b4yr_s",
+        "domain": "boat4you.com",
+        "duration": "1 giorno",
+        "description": "La visita registrata in corso. Solo con il consenso Analisi."
+      },
+      {
+        "name": "b4yr_t",
+        "domain": "www.boat4you.com",
+        "duration": "Fino alla chiusura della scheda",
+        "description": "Distingue le tue schede aperte in una registrazione. Solo con il consenso Analisi."
+      },
+      {
+        "name": "b4yr_pick",
+        "domain": "www.boat4you.com",
+        "duration": "Fino alla chiusura della scheda",
+        "description": "Indica se questa scheda è una delle visite registrate. Solo con il consenso Analisi."
       }
     ]
   },

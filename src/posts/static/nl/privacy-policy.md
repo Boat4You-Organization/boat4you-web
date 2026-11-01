@@ -197,6 +197,8 @@ Met jouw toestemming voor Analyse registreren we ook welke pagina's van onze web
 
 We bewaren deze gegevens op onze eigen servers in de EU: paginaweergaven en klikken 13 maanden; bezoeken (herkomst, land, apparaat en browser), gesprekken en contactgegevens 24 maanden; het volledige IP-adres 90 dagen. De rechtsgrond is jouw toestemming (art. 6, lid 1, onder a, AVG) en, voor een gesprek dat je zelf bent begonnen, de afhandeling van je verzoek (art. 6, lid 1, onder b, AVG). Je kunt je toestemming op elk moment intrekken in de Cookie-instellingen.
 
+Met dezelfde toestemming voor Analyse kunnen we ook sommige bezoeken opnemen: hoe de pagina eruitziet en verandert terwijl je scrolt, klikt en naar andere pagina's gaat, zodat we zien waar onze website lastig te gebruiken is en dat kunnen verbeteren. Wat je in formulieren en in de chat typt, en je naam, e-mailadres en telefoonnummer die op de pagina staan, worden al in je browser verborgen voordat er iets wordt verzonden, en betaal-, account- en beoordelingspagina's worden nooit opgenomen. Opnames gaan alleen naar onze eigen servers in de EU, worden met geen enkel ander bedrijf gedeeld en zijn alleen voor ons team te bekijken. We verwijderen de opnames na 60 dagen en de klik- en scrollgegevens die eruit zijn gehaald na 13 maanden, net als de andere bezoekstatistieken. De rechtsgrond is jouw toestemming (art. 6, lid 1, onder a, AVG); je kunt die op elk moment intrekken in de Cookie-instellingen, en de opname stopt dan meteen.
+
 ## Doel van het Verzamelen van je Gegevens
 
 We verwerken je persoonsgegevens voor specifieke en wettige doeleinden.

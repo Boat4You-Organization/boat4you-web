@@ -29,7 +29,7 @@
   },
   "analytics": {
     "title": "Analyse-Cookies",
-    "description": "Mit Ihrer Einwilligung nutzen wir Google Analytics und unsere eigene Besuchsstatistik: welche Seiten Sie besuchen, was Sie anklicken, wie Sie uns gefunden haben, Ihr Land (aus Ihrer IP-Adresse) sowie Ihr Gerät und Ihren Browser. Wenn Sie mit Iris oder unserem Team chatten, verknüpfen wir Ihren Besuch mit dem Chat, damit wir Ihnen schneller helfen können. Seitenaufrufe und Klicks werden 13 Monate auf unseren Servern in der EU gespeichert, Besuchsdaten 24 Monate, und die vollständige IP-Adresse wird nach 90 Tagen gelöscht. Sie können Ihre Wahl jederzeit in den Cookie-Einstellungen ändern.",
+    "description": "Mit Ihrer Einwilligung nutzen wir Google Analytics und unsere eigene Besuchsstatistik: welche Seiten Sie besuchen, was Sie anklicken, wie Sie uns gefunden haben, Ihr Land (aus Ihrer IP-Adresse) sowie Ihr Gerät und Ihren Browser. Wenn Sie mit Iris oder unserem Team chatten, verknüpfen wir Ihren Besuch mit dem Chat, damit wir Ihnen schneller helfen können. Seitenaufrufe und Klicks werden 13 Monate auf unseren Servern in der EU gespeichert, Besuchsdaten 24 Monate, und die vollständige IP-Adresse wird nach 90 Tagen gelöscht. Mit derselben Einwilligung können wir einige Besuche aufzeichnen, also wie sich die Seite beim Scrollen, Klicken und Wechseln zwischen Seiten verändert, um herauszufinden, was schwer zu bedienen ist. Ihre Eingaben sowie Ihr Name, Ihre E-Mail-Adresse und Telefonnummer sind in diesen Aufzeichnungen verborgen, und wir löschen sie nach 60 Tagen. Sie können Ihre Wahl jederzeit in den Cookie-Einstellungen ändern.",
     "cookies": [
       {
         "name": "_ga",
@@ -54,6 +54,30 @@
         "domain": "www.boat4you.com",
         "duration": "Bis Sie den Tab schließen",
         "description": "Einmaliger Code, der Ihren Besuch von einer unserer Schwesterseiten mit Boat4You verknüpft. Nur mit Einwilligung zu Analytics."
+      },
+      {
+        "name": "b4yr_u",
+        "domain": "boat4you.com",
+        "duration": "1 Jahr",
+        "description": "Besucher-ID für Aufzeichnungen, damit die Seiten eines Besuchs zusammengehören. Nur mit Einwilligung zu Analytics."
+      },
+      {
+        "name": "b4yr_s",
+        "domain": "boat4you.com",
+        "duration": "1 Tag",
+        "description": "Der aktuelle aufgezeichnete Besuch. Nur mit Einwilligung zu Analytics."
+      },
+      {
+        "name": "b4yr_t",
+        "domain": "www.boat4you.com",
+        "duration": "Bis Sie den Tab schließen",
+        "description": "Unterscheidet Ihre geöffneten Tabs in einer Aufzeichnung. Nur mit Einwilligung zu Analytics."
+      },
+      {
+        "name": "b4yr_pick",
+        "domain": "www.boat4you.com",
+        "duration": "Bis Sie den Tab schließen",
+        "description": "Ob dieser Tab zu den aufgezeichneten Besuchen gehört. Nur mit Einwilligung zu Analytics."
       }
     ]
   },
