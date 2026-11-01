@@ -1,5 +1,16 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-11-01 — 🎥 Snimke posjeta (P6 R1.2): pristanak 1.2, tekstovi o snimkama, maske — ✅ LIVE 1.11.2026 12:12 UTC (deployment 26a28712b60e, SEO regresija 0 novih FAIL), tag `live/2026-11-01-cc-rec-consent`
+
+Mario 1.11.2026 („Da, nastavi R1“, „Da, deployaj R1“). Plan infra `docs/superpowers/plans/2026-10-30-p6-heatmape-snimke.md` (R1.2).
+
+- `CONSENT_VERSION` 1.1 → 1.2: svaki povratni posjetitelj jednom ponovno bira (GA4/Ads kratko manje mjere dok ne klikne). Widget još prihvaća 1.1 za praćenje i chat, snima samo uz 1.2.
+- Tekst Analitike (9 jezika): posjeti se mogu snimati (skrolanje, klikovi, promjene stranica), unos i ime/e-mail/telefon skriveni, brisanje nakon 60 dana. Popis pohrane: `b4yr_u` (1 godina), `b4yr_s` (1 dan) na boat4you.com, `b4yr_t` i `b4yr_pick` (do zatvaranja kartice).
+- Politika privatnosti (9 jezika), odlomak na kraju „Chat with Iris and visit statistics“: što se snima i skriva, samo naši poslužitelji u EU, samo tim, datoteke 60 dana, klikovi i skrolanje 13 mjeseci, povlačenje odmah zaustavlja.
+- `data-clarity-mask`: ime u zaglavlju i mobilnom izborniku, sažetak kontakta i „potvrda ide na“ u rezervaciji, pozdrav s imenom na FAQ-u, e-mail u prozorima prijave i potvrde računa.
+- Ništa se ne snima dok se snimanje ne uključi po sajtu u adminu (Kontakt centar → Snimanje).
+- Grana `feat/cc-rec-consent` prebačena na main s amenities izmjenom (`9ef4a66b8`), pa live nosi oboje.
+
 ## 2026-11-01 — 🧰 Amenities na bijeloj pozadini (bez sive kutije) — ✅ LIVE 1.11.2026 (deployment 9ef4a66b8ff6-mvxr28cn, SEO regresija 0 novih FAIL)
 
 Mario 1.11.: „na boat4you isto stavi bijelu pozadinu na amenities“ (kao 6 sistera 31.10.). `ReadMorePanel` dobiva `tone="plain"` (bez pozadine, paddinga i zaobljenja; fade u `$white`); `AmenitiesTab` ga koristi. Opis i „Good to know“ ostaju u sivoj kutiji.
