@@ -1,5 +1,9 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-11-03 — 🔤 Stranica broda: jedna tipografska skala — ✅ LIVE 3.11.2026 (`f623f1e64`, dpl f623f1e64e16-mw0tbos9, tag `live/2026-11-03-boat-type-scale`)
+
+Mario 3.11.: „deset različitih fontova na jednoj stranici". Izmjereno: 12 veličina (10–32 px) i 5 debljina ispod heroja; Boataround 7 veličina. Sada `src/views/Boat/boatType.ts`: naslov sekcije 22/700, podnaslov 16/600, tekst 14/400, oznaka 12/600, jedna cijena 20/700 po kartici; kalendar, kartica ponude, detalji, extras, good to know, FAQ (`AccordionMenu dense`) i rute. Zajedničke kartice popisa (You might also like) nisu dirane. Mjerenje uživo: 8 veličina, 18 kombinacija (bilo 12 / 29).
+
 ## 2026-11-03 — 🇨🇿 Seznam Webmaster: verifikacijska meta oznaka — ✅ LIVE 3.11.2026 (`0ec4310e3`, tag `live/2026-11-03-seznam`)
 
 Mario 3.11.: web dodan u Seznam Webmaster (račun europeyacht1@gmail.com, https://www…). `generateMetadata` → `verification.other['seznam-wmt']` (`nDCWzd8Z…`) daje `<meta name="seznam-wmt">` u `<head>`; Seznam vrijedi samo zadnju generiranu oznaku, pa je ne generirati ponovno. Provjera uživo: oznaka na naslovnici, u Seznamu status „správce“ (verificirano). Sitemap Seznam čita iz robots.txt; IndexNow (api.indexnow.org) već šalje izmjene i Seznamu. Deployano s main-a.
