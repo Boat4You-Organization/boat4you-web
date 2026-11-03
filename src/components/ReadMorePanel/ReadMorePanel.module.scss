@@ -3,10 +3,13 @@
 @use '@/styles/mixins/breakpoints' as *;
 
 // The light panel behind the boat page prose (competitor parity, owner
-// 13.10.2026): soft grey, rounded, roomier from tablet up.
+// 13.10.2026): soft grey, rounded, roomier from tablet up. Lighter than
+// $black-100 since 3.11.2026 (owner: too dark for the text).
+$panel-bg: #f7f7f7;
+
 .panel {
   padding: rem-calc(20);
-  background-color: $black-100;
+  background-color: $panel-bg;
   border-radius: rem-calc(12);
 
   @include media('md') {
@@ -27,7 +30,7 @@
       height: rem-calc(64);
       pointer-events: none;
       content: '';
-      background: linear-gradient(to bottom, rgba($black-100, 0), $black-100);
+      background: linear-gradient(to bottom, rgba($panel-bg, 0), $panel-bg);
     }
   }
 }
