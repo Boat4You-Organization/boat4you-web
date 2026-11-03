@@ -1,5 +1,13 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-11-03 — 🧾 Checkout otvara samo rezervaciju za koju je link (krivi datumi na /enter-your-details) — ✅ LIVE 3.11. 08:29 UTC (main `1ba0bdced`, dpl=1ba0bdced944-mw0f3376; SEO regresija bez novih grešaka; tag `live/2026-11-03-checkout-link`)
+
+Mario 2.11.: „Tu mi daje skroz krive datume“ (/enter-your-details/…?startDate=2027-08-07&endDate=2027-08-21).
+
+- **Uzrok:** `Booking.tsx` prikazivao je rezervaciju koju je stranica broda zadnju spremila u ovom pregledniku (localStorage `yachtReservation`, 24 h), bez obzira na link.
+- **Popravak:** rezervacija pamti `slug`; link s drugim brodom ili datumima vodi na stranicu broda za taj link (isti jezik i datumi). Link na checkout dobiva datume iz same rezervacije (`checkoutQuery`, review: na mobitelu URL zna kasniti za odabranim tjednom). Link bez spremljene rezervacije (nova kartica) → stranica broda umjesto `router.back()`. `yarn test:checkout-link` 10/10; pregled jednog Opus agenta (nalaz s mobitelom popravljen prije deploya).
+- **Provjera LIVE:** stara rezervacija 7.–14.8. + link 7.–21.8. → stranica broda 7.–21.8. (8.303 €, Reserve); Reserve → checkout 7.–21.8., 14 dana, 8.303 €.
+
 ## 2026-11-03 — 🔖 /favicon.ico u korijenu + link na ikonu od 192 px — ✅ LIVE 3.11.2026 (`79f26a909`, dpl 79f26a909a21-mw0eja40, tag `live/2026-11-03-favicon`)
 
 Bing traži ikonu na `/favicon.ico`, a tamo je bio 404 (ikone su u `/favicons/`), pa se favicon nije prikazivao u rezultatima. `public/favicon.ico` je ista datoteka kao `/favicons/favicon.ico`; `<head>` sada linka i postojeću ikonu od 192 px (tražilice traže barem 48 px). Provjera uživo: `/favicon.ico` 200 `image/x-icon`. SEO regresija: 1 novi FAIL (T6, „Ionian Catamarans“ u tekstu /search?destinations=ionian region), nije od ove izmjene (samo favicon + link), sadržaj pretrage.
