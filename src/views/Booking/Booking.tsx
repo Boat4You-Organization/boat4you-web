@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from 'react';
 
 import { Box, Container, Stack } from '@mui/material';
 import cx from 'clsx';
-import { useRouter } from 'next/navigation';
+import { useParams, usePathname, useRouter, useSearchParams } from 'next/navigation';
 
 import { previewPaymentPhases } from '@/actions/reservation.actions';
 import CircularProgress from '@/components/CircularProgress';
@@ -14,6 +14,7 @@ import { PaymentPhase } from '@/models/reservation.model';
 import { UserModel } from '@/models/user.model';
 import { ReservationData } from '@/types/reservation.type';
 import { AppliedVoucher } from '@/types/voucher.type';
+import { boatPageForCheckout, savedReservationMatchesLink } from '@/utils/static/checkoutLink';
 import { clearDataFromLocalStorage, getDataFromLocalStorage } from '@/utils/static/localStorageUtils';
 import { clearDataFromSessionStorage, getDataFromSessionStorage } from '@/utils/static/sessionStorageUtils';
 import { loadPaymentMethod, loadSelectedInstallment, setActiveStep } from '@/valtio/booking/booking.actions';
@@ -57,6 +58,9 @@ const Booking = ({ isAdmin, user, initialStep = 0, trustStats = null }: BookingP
   // Survives the /enter-your-details → /payment navigation via sessionStorage.
   const [appliedVoucher, setAppliedVoucher] = useState<AppliedVoucher | null>(null);
   const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const { slug } = useParams<{ slug?: string }>();
   const isInitialMount = useRef(true);
 
   const isLastStep = isAdmin ? false : activeStep === 2;
@@ -84,7 +88,25 @@ const Booking = ({ isAdmin, user, initialStep = 0, trustStats = null }: BookingP
     setAppliedVoucher(getDataFromSessionStorage<AppliedVoucher>('appliedVoucher'));
 
     if (!savedReservation) {
-      router.back();
+      // A checkout link opened in a new tab or another browser has nothing saved: on the details step the boat page
+      // for the link (router.back() did nothing in a fresh tab and the spinner never ended).
+      if (initialStep === 0) {
+        router.replace(boatPageForCheckout(pathname, searchParams.toString()));
+      } else {
+        router.back();
+      }
+
+      return;
+    }
+
+    // A link for another boat or other dates never opens this browser's saved reservation: the boat page for the
+    // link shows what is really bookable (2.11.2026).
+    if (
+      initialStep === 0 &&
+      !savedReservationMatchesLink(savedReservation, slug, searchParams.get('startDate'), searchParams.get('endDate'))
+    ) {
+      setReservationData(null);
+      router.replace(boatPageForCheckout(pathname, searchParams.toString()));
 
       return;
     }
@@ -141,7 +163,7 @@ const Booking = ({ isAdmin, user, initialStep = 0, trustStats = null }: BookingP
     }
 
     setIsLoading(false);
-  }, [router, initialStep]);
+  }, [router, initialStep, pathname, searchParams, slug]);
 
   // Pull partner-aware payment phases (with B4Y discount applied) so the
   // /enter-your-details Price breakdown shows the same schedule the customer

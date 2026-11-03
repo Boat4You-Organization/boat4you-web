@@ -5,6 +5,8 @@ import type { CapacityDto } from '@/utils/static/yachtCapacity';
 import { PriceInfo } from './price-info.type';
 
 export type ReservationData = {
+  /** The boat page's slug, so the checkout opens this reservation only from a link for the same boat (checkoutLink.ts). */
+  slug?: string;
   name: string;
   agencyName: string;
   locationFrom: LocationFromTo;
