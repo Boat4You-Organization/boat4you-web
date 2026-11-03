@@ -1,5 +1,9 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-11-03 — 🔖 /favicon.ico u korijenu + link na ikonu od 192 px — ✅ LIVE 3.11.2026 (`79f26a909`, dpl 79f26a909a21-mw0eja40, tag `live/2026-11-03-favicon`)
+
+Bing traži ikonu na `/favicon.ico`, a tamo je bio 404 (ikone su u `/favicons/`), pa se favicon nije prikazivao u rezultatima. `public/favicon.ico` je ista datoteka kao `/favicons/favicon.ico`; `<head>` sada linka i postojeću ikonu od 192 px (tražilice traže barem 48 px). Provjera uživo: `/favicon.ico` 200 `image/x-icon`. SEO regresija: 1 novi FAIL (T6, „Ionian Catamarans“ u tekstu /search?destinations=ionian region), nije od ove izmjene (samo favicon + link), sadržaj pretrage.
+
 ## 2026-11-01 — 🎥 Snimke posjeta (P6 R1.2): pristanak 1.2, tekstovi o snimkama, maske — ✅ LIVE 1.11.2026 12:12 UTC (deployment 26a28712b60e, SEO regresija 0 novih FAIL), tag `live/2026-11-01-cc-rec-consent`
 
 Mario 1.11.2026 („Da, nastavi R1“, „Da, deployaj R1“). Plan infra `docs/superpowers/plans/2026-10-30-p6-heatmape-snimke.md` (R1.2).
