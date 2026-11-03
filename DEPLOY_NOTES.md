@@ -1,5 +1,9 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-11-03 — 🎨 Stranica broda: svjetlija pozadina opisa — ✅ LIVE 3.11.2026 (`6f4528876`, dpl 6f4528876624-mw0tsr2x)
+
+Mario 3.11.: #efefef pretaman za tekst → #f7f7f7 (`ReadMorePanel.module.scss`, i prijelaz „Read more"). SEO regresija: 2 nova reda iz uzorka, oba podaci partnera, ne ova promjena — T11 ćirilica „Вт" u nazivu opreme (hr/boat/fountaine-pajot-lipari-41-my-way-5198) i T6 model „Moorings 5000" (= poznati B20, nl/boat/…-20131). B23/T9 XPASS: unos može van iz `seo_regression_expected.json`.
+
 ## 2026-11-03 — 🔤 Stranica broda: jedna tipografska skala — ✅ LIVE 3.11.2026 (`f623f1e64`, dpl f623f1e64e16-mw0tbos9, tag `live/2026-11-03-boat-type-scale`)
 
 Mario 3.11.: „deset različitih fontova na jednoj stranici". Izmjereno: 12 veličina (10–32 px) i 5 debljina ispod heroja; Boataround 7 veličina. Sada `src/views/Boat/boatType.ts`: naslov sekcije 22/700, podnaslov 16/600, tekst 14/400, oznaka 12/600, jedna cijena 20/700 po kartici; kalendar, kartica ponude, detalji, extras, good to know, FAQ (`AccordionMenu dense`) i rute. Zajedničke kartice popisa (You might also like) nisu dirane. Mjerenje uživo: 8 veličina, 18 kombinacija (bilo 12 / 29).
