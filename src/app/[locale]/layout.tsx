@@ -89,6 +89,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: L
     },
     verification: {
       google: 'tFIC79JuxjclDP3qaJy82tGjJETeJ5Zz_BeVNK_vYPQ',
+      other: {
+        'seznam-wmt': 'KWNIxjwUdzffJzXQoc21C8fxfUBTmm5v',
+      },
     },
   };
 }
