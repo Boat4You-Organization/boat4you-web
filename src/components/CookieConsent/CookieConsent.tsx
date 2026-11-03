@@ -110,7 +110,11 @@ const CookieConsent = ({ showConsent }: CookieConsentProps) => {
 
   return (
     <>
-      <Box className={cx(styles.container, { [styles.visible]: showConsent })}>
+      <Box
+        className={cx(styles.container, { [styles.visible]: showConsent })}
+        // The boat page's exit popup waits while the banner is up (lib/exitIntent.ts).
+        data-cookie-consent-open={showConsent || undefined}
+      >
         <Image
           src="/images/cookies.webp"
           // Decorative, beside the banner's own title (it read "cookies" on every locale).

@@ -13,7 +13,8 @@
  * - Phone / tablet (no hover): after real engagement (time on the page and
  *   half the page read), a fast scroll back up toward the address bar. The
  *   history stack is never touched, so the back button keeps working.
- * - Never over another open dialog (the inquiry sheet, the gallery …).
+ * - Never over another open dialog (the inquiry sheet, the gallery …) or the
+ *   cookie banner: it waits until the visitor has answered it.
  */
 
 const SHOWN_KEY = 'exitIntent:v1:shown:';
@@ -61,11 +62,16 @@ const rememberShown = (boatId: number | string): boolean =>
 
 const isBot = (): boolean => navigator.webdriver === true || BOT_UA.test(navigator.userAgent || '');
 
-/** Same test the Contact Center widget uses: another modal is already open. */
+/**
+ * Another modal is already open (the Contact Center widget's test), or the cookie banner is still up. Only what is
+ * shown counts: a closed keepMounted MUI drawer keeps its role="dialog" aria-modal paper in the DOM, hidden.
+ */
 const otherDialogOpen = (): boolean =>
-  !!document.querySelector(
-    '[role="dialog"][aria-modal="true"]:not([data-exit-intent]), .MuiModal-root:not(.MuiModal-hidden), [data-cc-dialog-open]'
-  );
+  Array.from(
+    document.querySelectorAll<HTMLElement>(
+      '[role="dialog"][aria-modal="true"]:not([data-exit-intent]), .MuiModal-root:not(.MuiModal-hidden), [data-cc-dialog-open], [data-cookie-consent-open]'
+    )
+  ).some(el => el.getClientRects().length > 0 && getComputedStyle(el).visibility !== 'hidden');
 
 /**
  * Starts watching for exit intent on a boat page; calls `onExit` at most once
