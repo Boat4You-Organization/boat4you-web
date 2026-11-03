@@ -74,6 +74,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: L
       shortcut: '/favicons/favicon.ico',
       apple: '/favicons/apple-touch-icon.png',
       other: [
+        // Bing and Google want an icon of at least 48 px (multiple of 48); the 192 px one already ships (3.11.2026).
+        { rel: 'icon', type: 'image/png', sizes: '192x192', url: '/favicons/android-chrome-192x192.png' },
         { rel: 'icon', type: 'image/png', sizes: '32x32', url: '/favicons/favicon-32x32.png' },
         { rel: 'icon', type: 'image/png', sizes: '16x16', url: '/favicons/favicon-16x16.png' },
         { rel: 'mask-icon', url: '/favicons/safari-pinned-tab.svg', color: '#000000' },
