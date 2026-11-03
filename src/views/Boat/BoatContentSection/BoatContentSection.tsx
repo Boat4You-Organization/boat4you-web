@@ -14,6 +14,7 @@ import { YachtImage, YachtModel } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
 import useScrollSpy from '@/utils/hooks/useScrollSpy';
 import { cancelPendingPriceCalculation, useYachtPriceCalculation } from '@/utils/hooks/useYachtPriceCalculation';
+import { BOAT_BOOKING_ANCHOR } from '@/utils/static/boatBooking';
 import { isInquiryOnlyBoat } from '@/utils/static/inquiryOnlyBoat';
 import { clearDataFromLocalStorage } from '@/utils/static/localStorageUtils';
 import { clearDataFromSessionStorage } from '@/utils/static/sessionStorageUtils';
@@ -292,7 +293,14 @@ const BoatContentSection = ({
               transition: 'opacity 0.2s ease',
             }}
           >
-            <Box pb={8} className={styles.calendarWrapper}>
+            {/* `#boat-booking`: the exit popup's "Reserve" lands here (utils/static/boatBooking.ts). */}
+            <Box
+              id={BOAT_BOOKING_ANCHOR}
+              tabIndex={-1}
+              pb={8}
+              className={styles.calendarWrapper}
+              sx={{ outline: 'none' }}
+            >
               <BoatCalendar
                 variant={yacht.custom ? 'crewed' : 'inner'}
                 yacht={yacht}

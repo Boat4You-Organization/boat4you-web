@@ -16,6 +16,7 @@
 //
 // `transaction_id` is the reservation id, so a refresh of the success page
 // cannot count the same booking twice.
+import { markInquirySent } from './exitIntent';
 
 type Gtag = (command: string, action: string, params?: Record<string, unknown>) => void;
 
@@ -29,6 +30,9 @@ export const trackPurchase = ({
   currency?: string;
 }): void => {
   if (typeof window === 'undefined') return;
+
+  // Before the gtag check: without analytics consent it still ends the exit popup.
+  markInquirySent();
 
   const { gtag } = window as unknown as { gtag?: Gtag };
 

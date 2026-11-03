@@ -46,6 +46,7 @@ import { cleanModelName } from '@/utils/static/yachtModelKey';
 import { successorBoatPath } from '@/utils/static/yachtSuccessor';
 import BoatContentSection from '@/views/Boat/BoatContentSection';
 import type { InitialCalendar } from '@/views/Boat/BoatContentSection/AvailabilityTab/LiveCalendar/AvailabilitySlider';
+import BoatExitIntent from '@/views/Boat/BoatExitIntent/BoatExitIntent';
 import BoatHeroSection from '@/views/Boat/BoatHeroSection';
 import BoatHubLinks from '@/views/Boat/BoatHubLinks';
 import BoatMobileNavigation from '@/views/Boat/BoatMobileNavigation';
@@ -732,6 +733,13 @@ const BoatPage = async ({
           fromPrice={fromPrice}
           initialOffer={initialOffer}
           initialPrice={initialPrice}
+        />
+        {/* Leaving without an inquiry or a reservation → one popup per boat (lib/exitIntent.ts). */}
+        <BoatExitIntent
+          boatId={yacht.id}
+          boatName={boatName}
+          imageUrl={yachtShareImageUrl(clientYacht)}
+          inquiryOnly={isInquiryOnlyBoat(yacht)}
         />
       </BoatTransitionProvider>
     </Layout>

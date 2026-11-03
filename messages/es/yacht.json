@@ -343,5 +343,14 @@
   },
   "notAvailableShort": "No disponible en estas fechas",
   "readyToSail": "¿Listo para zarpar?",
-  "checkingAvailability": "Comprobando disponibilidad…"
+  "checkingAvailability": "Comprobando disponibilidad…",
+  "exitIntent": {
+    "eyebrow": "Antes de irte",
+    "title": "No pierdas {name}",
+    "body": "Puede que otros clientes estén mirando las mismas fechas ahora mismo, y un barco libre hoy puede reservarlo otra persona mañana. Si te vas ahora, quizá este barco ya no te espere cuando vuelvas.",
+    "reassure": "Resérvalo online en pocos pasos o envíanos una consulta gratuita y sin compromiso si antes tienes preguntas.",
+    "reassureInquiry": "Envíanos una consulta gratuita y sin compromiso y comprobaremos las fechas por ti.",
+    "reserve": "Reservar este barco",
+    "inquiry": "Enviar consulta gratuita"
+  }
 }

@@ -343,5 +343,14 @@
   },
   "notAvailableShort": "Niet beschikbaar op deze data",
   "readyToSail": "Klaar om uit te varen?",
-  "checkingAvailability": "Beschikbaarheid wordt gecontroleerd…"
+  "checkingAvailability": "Beschikbaarheid wordt gecontroleerd…",
+  "exitIntent": {
+    "eyebrow": "Voordat u gaat",
+    "title": "Verlies {name} niet",
+    "body": "Andere klanten bekijken misschien op dit moment dezelfde data, en een boot die vandaag vrij is, kan morgen door iemand anders gereserveerd zijn. Als u nu weggaat, wacht deze boot misschien niet meer op u.",
+    "reassure": "Reserveer hem in een paar stappen online, of stuur ons een gratis, vrijblijvende aanvraag als u eerst vragen heeft.",
+    "reassureInquiry": "Stuur ons een gratis, vrijblijvende aanvraag en wij controleren de data voor u.",
+    "reserve": "Reserveer deze boot",
+    "inquiry": "Gratis aanvraag sturen"
+  }
 }

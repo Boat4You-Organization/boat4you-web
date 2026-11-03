@@ -343,5 +343,14 @@
   },
   "notAvailableShort": "An diesen Daten nicht verfügbar",
   "readyToSail": "Bereit zum Ablegen?",
-  "checkingAvailability": "Verfügbarkeit wird geprüft…"
+  "checkingAvailability": "Verfügbarkeit wird geprüft…",
+  "exitIntent": {
+    "eyebrow": "Bevor Sie gehen",
+    "title": "Verlieren Sie {name} nicht",
+    "body": "Andere Kunden schauen sich womöglich gerade dieselben Termine an, und ein Boot, das heute frei ist, kann morgen schon von jemand anderem reserviert sein. Wenn Sie jetzt gehen, wartet dieses Boot vielleicht nicht mehr auf Sie.",
+    "reassure": "Reservieren Sie es in wenigen Schritten online oder senden Sie uns eine kostenlose, unverbindliche Anfrage, wenn Sie vorher Fragen haben.",
+    "reassureInquiry": "Senden Sie uns eine kostenlose, unverbindliche Anfrage, und wir prüfen die Termine für Sie.",
+    "reserve": "Dieses Boot reservieren",
+    "inquiry": "Kostenlose Anfrage senden"
+  }
 }

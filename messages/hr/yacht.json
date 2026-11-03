@@ -343,5 +343,14 @@
   },
   "notAvailableShort": "Nije dostupno za ove datume",
   "readyToSail": "Spremni za plovidbu?",
-  "checkingAvailability": "Provjeravamo dostupnost…"
+  "checkingAvailability": "Provjeravamo dostupnost…",
+  "exitIntent": {
+    "eyebrow": "Prije nego što odete",
+    "title": "Nemojte izgubiti {name}",
+    "body": "Drugi klijenti možda upravo sada gledaju iste termine, a brod koji je danas slobodan sutra može rezervirati netko drugi. Ako sada odete, ovaj vas brod možda neće čekati kad se vratite.",
+    "reassure": "Rezervirajte ga online u nekoliko koraka ili nam pošaljite besplatan i neobvezujući upit ako prvo imate pitanja.",
+    "reassureInquiry": "Pošaljite nam besplatan i neobvezujući upit, a mi ćemo provjeriti termine za vas.",
+    "reserve": "Rezerviraj ovaj brod",
+    "inquiry": "Pošalji besplatan upit"
+  }
 }

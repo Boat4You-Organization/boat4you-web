@@ -15,6 +15,7 @@
 //
 // `transaction_id` lets Google Ads de-duplicate if the effect ever re-fires,
 // so one inquiry is never counted twice.
+import { markInquirySent } from './exitIntent';
 
 type Gtag = (command: string, action: string, params?: Record<string, unknown>) => void;
 
@@ -23,6 +24,9 @@ const GADS_CONVERSION_SEND_TO = 'AW-11060948992/2C4nCIW6tKQdEIDgopop';
 
 export const trackInquiry = ({ ref }: { ref?: string | number } = {}): void => {
   if (typeof window === 'undefined') return;
+
+  // Before the gtag check: without analytics consent it still ends the exit popup.
+  markInquirySent();
 
   const { gtag } = window as unknown as { gtag?: Gtag };
 

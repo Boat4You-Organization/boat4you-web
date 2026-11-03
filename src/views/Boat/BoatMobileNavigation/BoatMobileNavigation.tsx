@@ -21,6 +21,7 @@ import useQueryParams from '@/utils/hooks/useQueryParams';
 import { useReservation } from '@/utils/hooks/useReservation';
 import useToggleState from '@/utils/hooks/useToggleState';
 import DateTime from '@/utils/static/DateTime';
+import { OPEN_BOAT_BOOKING_EVENT } from '@/utils/static/boatBooking';
 import { formatPriceWithCurrency, isPositivePrice } from '@/utils/static/formatPriceCurrency';
 import { isInquiryOnlyBoat } from '@/utils/static/inquiryOnlyBoat';
 import { resolveGate } from '@/utils/static/offerStatusGate';
@@ -150,6 +151,33 @@ const BoatMobileNavigation = ({
     toggleModal();
     setModalVariant('dates');
   };
+
+  // The exit popup's "Reserve" (utils/static/boatBooking.ts): the chosen dates
+  // reserved when they can be (as the bar's Reserve), else the date picker;
+  // an inquiry-flow boat gets the inquiry form.
+  useEffect(() => {
+    const openBooking = () => {
+      if (inquiryOnly || isInquireFlow) {
+        toggleBoatInquiryModalOpen(true);
+
+        return;
+      }
+
+      if (params.startDate && params.endDate && !isSelectedOfferBlocked && isCalculatedPrice) {
+        handleReservation();
+
+        return;
+      }
+
+      if (!isModalOpen) toggleModal();
+
+      setModalVariant('dates');
+    };
+
+    window.addEventListener(OPEN_BOAT_BOOKING_EVENT, openBooking);
+
+    return () => window.removeEventListener(OPEN_BOAT_BOOKING_EVENT, openBooking);
+  });
 
   const handleModalClose = () => {
     toggleModal();

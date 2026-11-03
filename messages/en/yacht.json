@@ -343,5 +343,14 @@
   },
   "notAvailableShort": "Not available on these dates",
   "readyToSail": "Ready to sail?",
-  "checkingAvailability": "Checking availability…"
+  "checkingAvailability": "Checking availability…",
+  "exitIntent": {
+    "eyebrow": "Before you go",
+    "title": "Don't lose {name}",
+    "body": "Other clients may be looking at the same dates right now, and a boat that is free today can be reserved by someone else tomorrow. Leave now and this one might not be waiting when you come back.",
+    "reassure": "Reserve it online in a few steps, or send us a free, non-binding inquiry if you have questions first.",
+    "reassureInquiry": "Send us a free, non-binding inquiry and we will check the dates for you.",
+    "reserve": "Reserve this boat",
+    "inquiry": "Send a free inquiry"
+  }
 }

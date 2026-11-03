@@ -343,5 +343,14 @@
   },
   "notAvailableShort": "Niedostępny w tych terminach",
   "readyToSail": "Gotowy do rejsu?",
-  "checkingAvailability": "Sprawdzanie dostępności…"
+  "checkingAvailability": "Sprawdzanie dostępności…",
+  "exitIntent": {
+    "eyebrow": "Zanim wyjdziesz",
+    "title": "Nie strać {name}",
+    "body": "Inni klienci mogą właśnie teraz oglądać te same terminy, a łódź wolna dzisiaj jutro może zarezerwować ktoś inny. Jeśli teraz wyjdziesz, ta łódź może na Ciebie nie czekać, gdy wrócisz.",
+    "reassure": "Zarezerwuj ją online w kilku krokach albo wyślij nam bezpłatne, niezobowiązujące zapytanie, jeśli najpierw masz pytania.",
+    "reassureInquiry": "Wyślij nam bezpłatne, niezobowiązujące zapytanie, a my sprawdzimy dla Ciebie terminy.",
+    "reserve": "Zarezerwuj tę łódź",
+    "inquiry": "Wyślij bezpłatne zapytanie"
+  }
 }
