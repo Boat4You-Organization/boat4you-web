@@ -17,6 +17,7 @@ import { YachtModel } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
 import useAmenityLabel from '@/utils/hooks/useAmenityLabel';
 import { presentAmenities } from '@/utils/static/amenities';
+import boatType from '@/views/Boat/boatType';
 
 interface AmenitiesTabProps {
   yacht: YachtModel;
@@ -102,7 +103,7 @@ const AmenitiesTab = ({ yacht }: AmenitiesTabProps) => {
         {showDivider && <Divider sx={{ borderColor: colors.black100 }} />}
         <Grid container component="section" spacing={{ xs: 1.5, md: 3 }} py={2.5} alignItems="flex-start">
           <Grid size={{ xs: 12, md: 3 }}>
-            <Typography variant="body1" fontWeight={700} color={colors.black950}>
+            <Typography variant="body1" color={colors.black950} sx={boatType.subtitle}>
               {t(YACHT_EQUIPMENT_CATEGORY_TYPE_LABEL_MAP[category])}
             </Typography>
           </Grid>
@@ -161,7 +162,7 @@ const AmenitiesTab = ({ yacht }: AmenitiesTabProps) => {
 
     return (
       <Grid component="section" size={{ xs: 12, md: 6 }}>
-        <Typography variant="body1" fontWeight={700} color={colors.black950} pb={1.5}>
+        <Typography variant="body1" color={colors.black950} pb={1.5} sx={boatType.subtitle}>
           {label}
         </Typography>
         <List dense disablePadding>

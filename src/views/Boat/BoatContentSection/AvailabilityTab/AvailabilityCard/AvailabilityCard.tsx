@@ -14,6 +14,7 @@ import { displayBaseName } from '@/utils/static/croatianPlaceNames';
 import { formatPriceWithCurrency, isPositivePrice } from '@/utils/static/formatPriceCurrency';
 import { toTitleCase, yachtLabel } from '@/utils/static/toTitleCase';
 import { toggleBoatInquiryModalOpen } from '@/valtio/yacht/yacht.actions';
+import boatType from '@/views/Boat/boatType';
 
 interface AvailabilityCardProps {
   yacht: YachtModel;
@@ -74,13 +75,13 @@ const AvailabilityCard = ({ yacht, offer }: AvailabilityCardProps) => {
         alignItems={{ xs: 'flex-start', md: 'center' }}
         sx={{ backgroundColor: colors.blue50 }}
       >
-        <Typography variant="h3" fontWeight={700}>
+        <Typography variant="h3" sx={boatType.subtitle}>
           {yachtLabel(model, toTitleCase(name))}
           {/* One-way / multi-base fleets list the same week once per route —
               without the route label the variants look like duplicate cards
               (Mario 20.7.2026, Salina 48 Shamane: 7x7 base matrix). */}
           {offer.locationFrom?.name && (
-            <Typography component="span" display="block" variant="body2" color={colors.black600} fontWeight={500}>
+            <Typography component="span" display="block" variant="body2" color={colors.black600} sx={boatType.body}>
               {displayBaseName(offer.locationFrom.name)}
               {offer.locationTo?.name && offer.locationTo.name !== offer.locationFrom.name
                 ? ` → ${displayBaseName(offer.locationTo.name)}`
@@ -90,27 +91,31 @@ const AvailabilityCard = ({ yacht, offer }: AvailabilityCardProps) => {
         </Typography>
         <Stack alignItems={{ xs: 'flex-start', md: 'flex-end' }}>
           {hasPrice && (
-            <Typography variant="body2" color={colors.black600}>
+            <Typography variant="body2" color={colors.black600} sx={boatType.body}>
               {tCommon('priceForXDays', { days: String(days) })}
             </Typography>
           )}
           {showListPrice && (
-            <Typography variant="body2" color={colors.black950} fontWeight={800} sx={{ mt: 0.25 }}>
+            <Typography variant="body2" color={colors.black950} sx={{ ...boatType.bodyStrong, mt: 0.25 }}>
               − {discountPercent}%
             </Typography>
           )}
           <Stack direction="row" alignItems="baseline" gap={1} sx={{ mt: 0.25 }}>
             {showListPrice && (
-              <Typography variant="body2" color={colors.black500} sx={{ textDecoration: 'line-through' }}>
+              <Typography
+                variant="body2"
+                color={colors.black500}
+                sx={{ ...boatType.body, textDecoration: 'line-through' }}
+              >
                 {formattedListPrice}
               </Typography>
             )}
             {hasPrice ? (
-              <Typography variant="h3" component="p" fontWeight={700} color="success">
+              <Typography variant="h3" component="p" color="success" sx={boatType.price}>
                 {formattedTotal}
               </Typography>
             ) : (
-              <Typography component="p" fontWeight={700} color={colors.black700} sx={{ fontSize: 15 }}>
+              <Typography component="p" color={colors.black700} sx={boatType.bodyStrong}>
                 {tCommon('priceOnRequest')}
               </Typography>
             )}
@@ -120,7 +125,7 @@ const AvailabilityCard = ({ yacht, offer }: AvailabilityCardProps) => {
       <Stack padding={{ xs: 2, md: 3 }}>
         <Grid container spacing={3}>
           <Grid size={{ xs: 12, md: 6 }}>
-            <Typography variant="h4" fontWeight={700}>
+            <Typography variant="h4" sx={boatType.subtitle}>
               {t('paymentPolicies')}
             </Typography>
             <List sx={{ padding: 0, marginTop: 2 }}>
@@ -128,8 +133,10 @@ const AvailabilityCard = ({ yacht, offer }: AvailabilityCardProps) => {
                 <ListItem
                   key={`${index + 1}`}
                   sx={{
+                    ...boatType.body,
                     color: policy.textColor === 'success' ? colors.green500 : 'inherit',
-                    fontWeight: policy.textColor === 'success' ? 700 : 'normal',
+                    fontWeight:
+                      policy.textColor === 'success' ? boatType.bodyStrong.fontWeight : boatType.body.fontWeight,
                   }}
                 >
                   {tCommon(policy.titleKey)}{' '}
@@ -159,14 +166,14 @@ const AvailabilityCard = ({ yacht, offer }: AvailabilityCardProps) => {
             </List>
           </Grid>
           <Grid size={{ xs: 12, md: 6 }}>
-            <Typography variant="h4" fontWeight={700}>
+            <Typography variant="h4" sx={boatType.subtitle}>
               {t('priceIncludes')}
             </Typography>
             <List sx={{ padding: 0, marginTop: 2 }}>
               {presentAmenities(amenities)
                 .slice(0, 3)
                 .map(amenity => (
-                  <ListItem key={amenity.id}>
+                  <ListItem key={amenity.id} sx={boatType.body}>
                     <Check size={24} fill={colors.black300} />
                     {amenityLabel(amenity)}
                   </ListItem>
@@ -183,7 +190,7 @@ const AvailabilityCard = ({ yacht, offer }: AvailabilityCardProps) => {
           pt={3}
           borderTop={`1px solid ${colors.blue200}`}
         >
-          <Typography variant="h4" fontWeight={700}>
+          <Typography variant="h4" sx={boatType.subtitle}>
             {t('anyQuestions')}
           </Typography>
           <Button size="medium" color="secondary" onClick={toggleBoatInquiryModalOpen}>

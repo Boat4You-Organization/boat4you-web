@@ -95,9 +95,9 @@ const FAQTab = ({ yacht, yachtFaq }: FAQTabProps) => {
         {/* Per-yacht Q&A first (server-built, variant-rotated, mirrors the
             FAQPage JSON-LD) — the generic licence FAQ follows, except on a gulet. */}
         {yachtFaq && yachtFaq.length > 0 && (
-          <AccordionMenu accordionList={yachtFaq.map(f => ({ title: f.question, content: f.answer }))} />
+          <AccordionMenu dense accordionList={yachtFaq.map(f => ({ title: f.question, content: f.answer }))} />
         )}
-        {category && faqAction && <AccordionMenu accordionList={faqAction} />}
+        {category && faqAction && <AccordionMenu dense accordionList={faqAction} />}
       </Stack>
     </Stack>
   );

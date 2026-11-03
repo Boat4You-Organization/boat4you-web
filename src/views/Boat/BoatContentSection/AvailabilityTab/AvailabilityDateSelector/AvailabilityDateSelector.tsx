@@ -17,6 +17,7 @@ import { useYachtAvailability } from '@/utils/hooks/useYachtAvailability';
 import DateTime from '@/utils/static/DateTime';
 import { handleNextMonth, handlePrevMonth } from '@/valtio/yacht/yacht.actions';
 import { useYachtStore } from '@/valtio/yacht/yacht.store';
+import boatType from '@/views/Boat/boatType';
 
 import styles from './AvailabilityDateSelector.module.scss';
 
@@ -121,11 +122,17 @@ const AvailabilityDateSelector = ({ yacht, onSubmit }: AvailabilityDateSelectorP
             <Typography component="label" variant="body2" color={colors.blue300}>
               {t('startDate')}
             </Typography>
-            <Typography component="p" variant="h4" textTransform="capitalize" color={colors.white}>
+            <Typography
+              component="p"
+              variant="h4"
+              textTransform="capitalize"
+              color={colors.white}
+              sx={boatType.subtitle}
+            >
               {formStartDate ? DateTime.formatLong(formStartDate, locale) : '-'}
             </Typography>
             {(yacht.defaultCheckin || selectedOffer?.checkin) && (
-              <Typography variant="body2" color={colors.blue300} sx={{ fontSize: 12 }}>
+              <Typography variant="body2" color={colors.blue300} sx={boatType.small}>
                 {t('pickUpTime')}: {yacht.defaultCheckin || selectedOffer?.checkin}
               </Typography>
             )}
@@ -135,11 +142,17 @@ const AvailabilityDateSelector = ({ yacht, onSubmit }: AvailabilityDateSelectorP
             <Typography component="label" variant="body2" color={colors.blue300}>
               {t('endDate')}
             </Typography>
-            <Typography component="p" variant="h4" textTransform="capitalize" color={colors.white}>
+            <Typography
+              component="p"
+              variant="h4"
+              textTransform="capitalize"
+              color={colors.white}
+              sx={boatType.subtitle}
+            >
               {formEndDate ? DateTime.formatLong(formEndDate, locale) : '-'}
             </Typography>
             {(yacht.defaultCheckout || selectedOffer?.checkout) && (
-              <Typography variant="body2" color={colors.blue300} sx={{ fontSize: 12 }}>
+              <Typography variant="body2" color={colors.blue300} sx={boatType.small}>
                 {t('dropOffTime')}: {yacht.defaultCheckout || selectedOffer?.checkout}
               </Typography>
             )}

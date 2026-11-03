@@ -4,6 +4,7 @@ import { Box, Grid, Typography } from '@mui/material';
 import Link from 'next/link';
 
 import External from '@/components/SvgIcons/External';
+import boatType from '@/views/Boat/boatType';
 
 import styles from './GoodToKnowItem.module.scss';
 
@@ -25,7 +26,9 @@ const GoodToKnowItem = ({ title, value, link, onClick }: GoodToKnowItemProps) =>
           className={styles.link}
           sx={{ background: 'none', border: 0, p: 0, cursor: 'pointer', font: 'inherit' }}
         >
-          <Typography variant="body1">{value}</Typography>
+          <Typography variant="body1" sx={boatType.body}>
+            {value}
+          </Typography>
           <External />
         </Box>
       );
@@ -34,19 +37,25 @@ const GoodToKnowItem = ({ title, value, link, onClick }: GoodToKnowItemProps) =>
     if (link) {
       return (
         <Link href={link} target="_blank" className={styles.link}>
-          <Typography variant="body1">{value}</Typography>
+          <Typography variant="body1" sx={boatType.body}>
+            {value}
+          </Typography>
           <External />
         </Link>
       );
     }
 
-    return <Typography variant="body1">{value}</Typography>;
+    return (
+      <Typography variant="body1" sx={boatType.body}>
+        {value}
+      </Typography>
+    );
   };
 
   return (
     <Grid container size={{ xs: 12 }} spacing={1}>
       <Grid size={{ xs: 12, md: 6 }}>
-        <Typography variant="h4" component="h3" fontWeight={700}>
+        <Typography variant="h4" component="h3" sx={boatType.subtitle}>
           {title}
         </Typography>
       </Grid>

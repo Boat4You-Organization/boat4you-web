@@ -13,6 +13,7 @@ import { useYachtPriceCalculation } from '@/utils/hooks/useYachtPriceCalculation
 import { formatPriceWithCurrency, isPositivePrice, unpricedExtraLabelKey } from '@/utils/static/formatPriceCurrency';
 import { addExtra, removeExtra } from '@/valtio/yacht/yacht.actions';
 import { useYachtStore } from '@/valtio/yacht/yacht.store';
+import boatType from '@/views/Boat/boatType';
 
 import styles from './ExtrasCard.module.scss';
 
@@ -164,14 +165,17 @@ const ExtrasCard = ({
           id={labelId}
           component="h3"
           variant="body1"
-          fontWeight={700}
           color={colors.black950}
-          sx={{ wordBreak: 'break-word' }}
+          sx={{ ...boatType.subtitle, wordBreak: 'break-word' }}
         >
           {extras ? servicesT(extras.labelCode as YachtServiceExtrasKey) : name}
         </Typography>
         {description && (
-          <Typography variant="body2" color={colors.black500} sx={{ fontSize: 12, mt: 0.25, whiteSpace: 'pre-line' }}>
+          <Typography
+            variant="body2"
+            color={colors.black500}
+            sx={{ ...boatType.small, mt: 0.25, whiteSpace: 'pre-line' }}
+          >
             {description}
           </Typography>
         )}
@@ -181,18 +185,18 @@ const ExtrasCard = ({
           tall + the right column wide with empty space; Mario asked for one
           tidy line (less vertical scroll). */}
       <Stack direction="row" alignItems="baseline" gap={0.75} sx={{ flexShrink: 0, whiteSpace: 'nowrap' }}>
-        <Typography variant="body2" color={colors.black500} sx={{ fontSize: 12 }}>
+        <Typography variant="body2" color={colors.black500} sx={boatType.small}>
           {t(UNIT_LABEL_MAP[unit])}
         </Typography>
         <Box component="span" sx={{ color: colors.black300, fontSize: 12 }}>
           ·
         </Box>
         {isStartingPrice && hasPrice && (
-          <Typography variant="body2" color={colors.black500}>
+          <Typography variant="body2" color={colors.black500} sx={boatType.small}>
             {t('from')}
           </Typography>
         )}
-        <Typography color={colors.black950} component="p" variant="body1" fontWeight={700}>
+        <Typography color={colors.black950} component="p" variant="body1" sx={boatType.bodyStrong}>
           {displayPrice}
         </Typography>
       </Stack>

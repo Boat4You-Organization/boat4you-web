@@ -10,6 +10,7 @@ import { Link } from '@/i18n/navigation';
 import colors from '@/styles/themes/colors';
 import { displayPlaceName } from '@/utils/static/croatianPlaceNames';
 import { staticSrcSet } from '@/utils/static/staticImageSrcSet';
+import boatType from '@/views/Boat/boatType';
 
 /**
  * "Suggested itineraries" strip — shared by boat detail (full),
@@ -82,8 +83,8 @@ const SuggestedItineraries: FC<SuggestedItinerariesProps> = ({
         <Typography
           component="h2"
           sx={{
-            fontSize: compact ? { xs: 18, md: 20 } : { xs: 22, md: 26 },
-            fontWeight: 700,
+            fontSize: compact ? 20 : boatType.sectionTitle.fontSize,
+            fontWeight: boatType.sectionTitle.fontWeight,
             color: colors.blue950,
             lineHeight: 1.2,
             m: 0,
@@ -173,11 +174,8 @@ const SuggestedItineraries: FC<SuggestedItinerariesProps> = ({
                     px: 1.25,
                     py: 0.5,
                     borderRadius: 99,
-                    fontSize: 10,
-                    letterSpacing: '0.16em',
-                    textTransform: 'uppercase',
+                    ...boatType.label,
                     color: colors.blue950,
-                    fontWeight: 600,
                   }}
                 >
                   {t('hub.daysExact', { days })}
@@ -187,10 +185,8 @@ const SuggestedItineraries: FC<SuggestedItinerariesProps> = ({
                 <Typography
                   component="h3"
                   sx={{
-                    fontSize: compact ? 14 : 15,
-                    fontWeight: 700,
+                    ...boatType.subtitle,
                     color: colors.blue950,
-                    lineHeight: 1.4,
                     m: 0,
                     display: '-webkit-box',
                     WebkitLineClamp: 2,
@@ -205,7 +201,7 @@ const SuggestedItineraries: FC<SuggestedItinerariesProps> = ({
                     sx={{
                       mt: 1,
                       color: colors.black600,
-                      fontSize: 13,
+                      ...boatType.body,
                       lineHeight: 1.5,
                       display: '-webkit-box',
                       WebkitLineClamp: 2,
@@ -222,10 +218,7 @@ const SuggestedItineraries: FC<SuggestedItinerariesProps> = ({
                     display: 'block',
                     mt: 1.5,
                     color: colors.blue600,
-                    fontSize: 11,
-                    letterSpacing: '0.14em',
-                    textTransform: 'uppercase',
-                    fontWeight: 600,
+                    ...boatType.label,
                   }}
                 >
                   {t('area.seeDayByDay')} →

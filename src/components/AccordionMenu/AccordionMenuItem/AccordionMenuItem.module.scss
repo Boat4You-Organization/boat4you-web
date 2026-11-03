@@ -99,6 +99,25 @@
       }
     }
 
+    // The boat page (dense): answers in the page's 14 px body size.
+    &.dense .body {
+      p,
+      ul,
+      ol,
+      blockquote,
+      ul li,
+      ol li {
+        font-size: rem-calc(14);
+        line-height: 1.5;
+      }
+
+      a,
+      strong,
+      b {
+        font-weight: 600;
+      }
+    }
+
     &.expanded + &.expanded {
       border-top: transparent;
     }

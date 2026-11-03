@@ -13,6 +13,7 @@ import {
   weekPriceLabel,
 } from '@/views/Boat/BoatContentSection/AvailabilityTab/LiveCalendar/parts/tier-helpers';
 import { T } from '@/views/Boat/BoatContentSection/AvailabilityTab/LiveCalendar/parts/tokens';
+import boatType from '@/views/Boat/boatType';
 
 interface AvailabilityCardProps {
   /** Adapter-prepared week record (see `tier-helpers.WeekData`). */
@@ -58,9 +59,11 @@ const AvailabilityCard = ({ w, selected, onClick, size = 'desktop' }: Availabili
   const showRegular = regular > 0 && w.price > 0 && !isBooked;
   // An open week without a price says "Price on request" in a text size.
   const isAmount = isPositivePrice(w.price) || isBooked;
-  const amountSize = compact ? '32px' : '18px';
-  const textSize = compact ? '18px' : '13px';
-  const amountSpacing = compact ? '-1px' : '-0.5px';
+  // The page's type scale (boatType): the price 20 px, the dates 16 px, on
+  // the phone card as on the desktop one.
+  const amountSize = boatType.price.fontSize;
+  const textSize = boatType.bodyStrong.fontSize;
+  const amountSpacing = '-0.3px';
 
   return (
     <Box
@@ -92,9 +95,7 @@ const AvailabilityCard = ({ w, selected, onClick, size = 'desktop' }: Availabili
         <Box
           component="span"
           sx={{
-            fontSize: '10px',
-            fontWeight: 700,
-            letterSpacing: '0.5px',
+            ...boatType.label,
             color: sc.fg,
             background: sc.bg,
             padding: '3px 8px',
@@ -117,11 +118,10 @@ const AvailabilityCard = ({ w, selected, onClick, size = 'desktop' }: Availabili
       >
         <Typography
           sx={{
-            fontSize: compact ? '28px' : '17px',
+            ...boatType.subtitle,
             fontWeight: 700,
             color: T.ink,
-            letterSpacing: '-0.4px',
-            lineHeight: 1.1,
+            lineHeight: 1.2,
             whiteSpace: 'nowrap',
           }}
         >
@@ -129,22 +129,19 @@ const AvailabilityCard = ({ w, selected, onClick, size = 'desktop' }: Availabili
         </Typography>
         <Typography
           sx={{
-            fontSize: compact ? '11px' : '9px',
+            ...boatType.label,
             color: T.faint,
             margin: compact ? '4px 0' : '2px 0',
-            fontWeight: 700,
-            letterSpacing: '1.2px',
           }}
         >
           ↓ {t('calendar.nights', { count: nights }).toUpperCase()}
         </Typography>
         <Typography
           sx={{
-            fontSize: compact ? '28px' : '17px',
+            ...boatType.subtitle,
             fontWeight: 700,
             color: T.ink,
-            letterSpacing: '-0.4px',
-            lineHeight: 1.1,
+            lineHeight: 1.2,
             whiteSpace: 'nowrap',
           }}
         >
@@ -152,7 +149,7 @@ const AvailabilityCard = ({ w, selected, onClick, size = 'desktop' }: Availabili
         </Typography>
         {/* The year of the end date it sits under: "Jan 02 / 2027 · 7 nights" for a week from Dec 26. */}
         {compact && (
-          <Typography sx={{ fontSize: '12px', color: T.muted, mt: '6px' }}>
+          <Typography sx={{ ...boatType.small, color: T.muted, mt: '6px' }}>
             {endIso ? dayjs(endIso).format('YYYY') : ''} · {t('calendar.nights', { count: nights })}
           </Typography>
         )}
@@ -169,11 +166,8 @@ const AvailabilityCard = ({ w, selected, onClick, size = 'desktop' }: Availabili
         {!compact && (
           <Typography
             sx={{
-              fontSize: '9px',
-              fontWeight: 700,
+              ...boatType.label,
               color: T.muted,
-              letterSpacing: '0.7px',
-              textTransform: 'uppercase',
             }}
           >
             {nights === 7 ? t('calendar.perWeek') : t('calendar.forNights', { count: nights })}
@@ -191,8 +185,7 @@ const AvailabilityCard = ({ w, selected, onClick, size = 'desktop' }: Availabili
             <Typography
               suppressHydrationWarning
               sx={{
-                fontSize: compact ? '14px' : '13px',
-                fontWeight: 600,
+                ...boatType.body,
                 color: T.faint,
                 textDecoration: 'line-through',
                 fontFeatureSettings: '"tnum"',
@@ -203,10 +196,8 @@ const AvailabilityCard = ({ w, selected, onClick, size = 'desktop' }: Availabili
             <Box
               component="span"
               sx={{
-                fontSize: compact ? '11px' : '12px',
-                fontWeight: 800,
+                ...boatType.bodyStrong,
                 color: T.amber,
-                letterSpacing: '0.3px',
                 whiteSpace: 'nowrap',
               }}
             >
@@ -218,7 +209,7 @@ const AvailabilityCard = ({ w, selected, onClick, size = 'desktop' }: Availabili
           suppressHydrationWarning
           sx={{
             fontSize: isAmount ? amountSize : textSize,
-            fontWeight: 800,
+            fontWeight: isAmount ? boatType.price.fontWeight : boatType.bodyStrong.fontWeight,
             letterSpacing: isAmount ? amountSpacing : 0,
             color: isBooked ? T.faint : T.greenDeep,
             mt: compact ? 0 : '2px',

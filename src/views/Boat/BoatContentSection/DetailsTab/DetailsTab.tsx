@@ -21,6 +21,7 @@ import { isBookedByInquiry } from '@/utils/static/inquiryOnlyBoat';
 import { toTitleCase } from '@/utils/static/toTitleCase';
 import { Capacity, capacityFacts, capacityRows, fromYacht } from '@/utils/static/yachtCapacity';
 import { yachtVariant } from '@/utils/static/yachtFaq';
+import boatType from '@/views/Boat/boatType';
 
 interface DetailsTabProps {
   yacht: YachtModel;
@@ -202,7 +203,7 @@ const DetailsTab = ({ yacht, capacity: resolvedCapacity }: DetailsTabProps) => {
     >
       <Stack direction="row" alignItems="center" gap={1.25}>
         <Icon size={20} fill={colors.black500} />
-        <Typography variant="body2" color={colors.black600}>
+        <Typography variant="body2" color={colors.black600} sx={boatType.body}>
           {label}
         </Typography>
       </Stack>
@@ -215,15 +216,14 @@ const DetailsTab = ({ yacht, capacity: resolvedCapacity }: DetailsTabProps) => {
               borderRadius: 1,
               backgroundColor: colors.blue50,
               color: colors.blue500,
-              fontSize: 12,
-              fontWeight: 600,
+              ...boatType.label,
               whiteSpace: 'nowrap',
             }}
           >
             {badge}
           </Box>
         )}
-        <Typography variant="body2" fontWeight={700} color={colors.black950}>
+        <Typography variant="body2" color={colors.black950} sx={boatType.bodyStrong}>
           {value}
         </Typography>
       </Stack>
@@ -322,7 +322,9 @@ const DetailsTab = ({ yacht, capacity: resolvedCapacity }: DetailsTabProps) => {
                       engine: engineRow?.value ?? '',
                       fuel: String(yacht.fuelTank ?? 0),
                       water: String(yacht.waterTank ?? 0),
-                      b: (chunks: React.ReactNode) => <strong>{chunks}</strong>,
+                      b: (chunks: React.ReactNode) => (
+                        <strong style={{ fontWeight: boatType.bodyStrong.fontWeight }}>{chunks}</strong>
+                      ),
                       // The partner's own engine label stays English (lang="en").
                       engineLabel: (chunks: React.ReactNode) =>
                         engineLang ? <span lang={engineLang}>{chunks}</span> : chunks,
@@ -337,7 +339,9 @@ const DetailsTab = ({ yacht, capacity: resolvedCapacity }: DetailsTabProps) => {
                     {
                       location: baseName,
                       country: countryName ?? '',
-                      b: (chunks: React.ReactNode) => <strong>{chunks}</strong>,
+                      b: (chunks: React.ReactNode) => (
+                        <strong style={{ fontWeight: boatType.bodyStrong.fontWeight }}>{chunks}</strong>
+                      ),
                     } as never
                   )}
                 </Typography>
@@ -350,7 +354,9 @@ const DetailsTab = ({ yacht, capacity: resolvedCapacity }: DetailsTabProps) => {
                   (isBookedByInquiry(yacht) ? 'yacht.descCtaInquiry' : `yacht.descCtaV${descVariant(5)}`) as never,
                   {
                     name: displayName,
-                    b: (chunks: React.ReactNode) => <strong>{chunks}</strong>,
+                    b: (chunks: React.ReactNode) => (
+                      <strong style={{ fontWeight: boatType.bodyStrong.fontWeight }}>{chunks}</strong>
+                    ),
                   } as never
                 )}
               </Typography>
@@ -377,7 +383,7 @@ const DetailsTab = ({ yacht, capacity: resolvedCapacity }: DetailsTabProps) => {
             // 4+4 grid is grouped semantically (accommodation vs boat-self)
             // so the header tells users what they're looking at.
             <Stack direction="column" spacing={2} pt={1}>
-              <Typography component="h3" variant="h4" fontWeight={700}>
+              <Typography component="h3" variant="h4" sx={boatType.subtitle}>
                 {t('yacht.specifications')}
               </Typography>
               <Grid container columnSpacing={{ xs: 0, md: 8 }} rowSpacing={0}>

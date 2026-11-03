@@ -4,6 +4,7 @@ import { Box, Button, Stack, Typography } from '@mui/material';
 import { useTranslations } from 'next-intl';
 
 import { toggleBoatInquiryModalOpen } from '@/valtio/yacht/yacht.actions';
+import boatType from '@/views/Boat/boatType';
 
 import { T } from './tokens';
 
@@ -36,8 +37,7 @@ const AllBookedNote = ({ compact = false }: AllBookedNoteProps) => {
           alignItems: 'center',
           justifyContent: 'center',
           gap: '8px',
-          fontSize: compact ? '13px' : '14px',
-          fontWeight: 600,
+          ...boatType.bodyStrong,
           color: T.body,
           textAlign: 'center',
         }}

@@ -2,6 +2,8 @@
 
 import { Box } from '@mui/material';
 
+import boatType from '@/views/Boat/boatType';
+
 import { T } from './tokens';
 
 interface MonthAxisProps {
@@ -18,11 +20,8 @@ const MonthAxis = ({ labels }: MonthAxisProps) => (
           position: 'absolute',
           left: `${labels.length === 1 ? 50 : (i / (labels.length - 1)) * 100}%`,
           transform: 'translateX(-50%)',
-          fontSize: '10px',
-          fontWeight: 700,
+          ...boatType.label,
           color: T.faint,
-          letterSpacing: '1.4px',
-          textTransform: 'uppercase',
         }}
       >
         {m}

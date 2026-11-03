@@ -6,6 +6,8 @@ import { Box } from '@mui/material';
 import dayjs from 'dayjs';
 import { useLocale, useTranslations } from 'next-intl';
 
+import boatType from '@/views/Boat/boatType';
+
 import { WeekData, fmtPrice, statusColor, statusKey, weekPriceLabel } from './tier-helpers';
 import { T } from './tokens';
 
@@ -73,7 +75,7 @@ const WeekPriceList = ({ weeks }: WeekPriceListProps) => {
         sx={{
           cursor: 'pointer',
           userSelect: 'none',
-          fontSize: '11px',
+          ...boatType.small,
           color: `${T.navy}73`,
           transition: 'color .15s',
           '&:hover': { color: `${T.navy}B3` },
@@ -89,10 +91,7 @@ const WeekPriceList = ({ weeks }: WeekPriceListProps) => {
               suppressHydrationWarning
               sx={{
                 m: 0,
-                fontSize: '11px',
-                fontWeight: 700,
-                letterSpacing: '1.4px',
-                textTransform: 'uppercase',
+                ...boatType.label,
                 color: T.body,
               }}
             >
@@ -118,7 +117,7 @@ const WeekPriceList = ({ weeks }: WeekPriceListProps) => {
                       alignItems: 'baseline',
                       gap: '2px 12px',
                       py: '6px',
-                      fontSize: '13px',
+                      ...boatType.body,
                       color: T.navy,
                       borderTop: `1px solid ${T.hair}`,
                       '&:first-of-type': { borderTop: 0 },
@@ -127,7 +126,11 @@ const WeekPriceList = ({ weeks }: WeekPriceListProps) => {
                     <Box
                       component="span"
                       suppressHydrationWarning
-                      sx={{ flexBasis: { xs: '100%', sm: 'auto' }, minWidth: { sm: '15rem' }, fontWeight: 600 }}
+                      sx={{
+                        flexBasis: { xs: '100%', sm: 'auto' },
+                        minWidth: { sm: '15rem' },
+                        fontWeight: boatType.bodyStrong.fontWeight,
+                      }}
                     >
                       {`${dayWithYear(w.dateFromIso as string, locale)} – ${dayWithYear(w.dateToIso as string, locale)}`}
                     </Box>{' '}
@@ -147,13 +150,13 @@ const WeekPriceList = ({ weeks }: WeekPriceListProps) => {
                           <s style={{ color: T.muted }} suppressHydrationWarning>
                             {fmtPrice(regular, w.currency, locale)}
                           </s>{' '}
-                          <span style={{ color: T.amber, fontWeight: 700 }}>
+                          <span style={{ color: T.amber, fontWeight: boatType.bodyStrong.fontWeight }}>
                             {`−${Math.round(((regular - w.price) / regular) * 100)}%`}
                           </span>{' '}
                         </>
                       )}
                       <span
-                        style={{ color: isBooked ? T.muted : T.greenDeep, fontWeight: 700 }}
+                        style={{ color: isBooked ? T.muted : T.greenDeep, fontWeight: boatType.bodyStrong.fontWeight }}
                         suppressHydrationWarning
                       >
                         {w.noOffer ? tCommon('priceOnRequest') : weekPriceLabel(w, locale, tCommon('priceOnRequest'))}

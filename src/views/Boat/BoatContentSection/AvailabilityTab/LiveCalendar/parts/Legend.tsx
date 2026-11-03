@@ -3,6 +3,8 @@
 import { Box } from '@mui/material';
 import { useTranslations } from 'next-intl';
 
+import boatType from '@/views/Boat/boatType';
+
 import { tierBg } from './tier-helpers';
 import { T } from './tokens';
 
@@ -23,13 +25,13 @@ const Legend = ({ compact = false }: LegendProps) => {
       sx={{
         display: 'flex',
         gap: compact ? '10px' : '14px',
-        fontSize: '11px',
+        ...boatType.small,
         color: T.muted,
         alignItems: 'center',
         flexWrap: 'wrap',
       }}
     >
-      <Box component="span" sx={{ fontWeight: 700, letterSpacing: '0.6px', textTransform: 'uppercase' }}>
+      <Box component="span" sx={boatType.label}>
         {t('legendPrice')}
       </Box>
       <Box sx={{ display: 'flex', gap: '3px', alignItems: 'center' }}>

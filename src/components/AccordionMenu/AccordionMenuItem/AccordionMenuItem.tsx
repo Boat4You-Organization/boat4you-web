@@ -8,15 +8,24 @@ import cx from 'clsx';
 import ChevronDown from '@/components/SvgIcons/ChevronDown';
 import colors from '@/styles/themes/colors';
 import { Accordion as AccordionType } from '@/types/accordion.type';
+import boatType from '@/views/Boat/boatType';
 
 import styles from './AccordionMenuItem.module.scss';
 
 interface AccordionMenuItemProps
   extends Omit<AccordionProps, 'children' | 'title' | 'content' | 'variant'>, AccordionType {
   defaultExpanded?: boolean;
+  /** The boat page's smaller type (boatType): 16 px question, 14 px answer. */
+  dense?: boolean;
 }
 
-const AccordionMenuItem = ({ title, content, defaultExpanded = false, ...accordionProps }: AccordionMenuItemProps) => {
+const AccordionMenuItem = ({
+  title,
+  content,
+  defaultExpanded = false,
+  dense = false,
+  ...accordionProps
+}: AccordionMenuItemProps) => {
   const [expanded, handleChange] = useState(defaultExpanded);
 
   const handleToogle = () => {
@@ -27,7 +36,7 @@ const AccordionMenuItem = ({ title, content, defaultExpanded = false, ...accordi
     <Accordion
       {...accordionProps}
       classes={{ root: styles.root }}
-      className={cx(styles.container, { [styles.expanded]: expanded })}
+      className={cx(styles.container, { [styles.expanded]: expanded, [styles.dense]: dense })}
       expanded={expanded}
       onChange={handleToogle}
       component="section"
@@ -42,7 +51,13 @@ const AccordionMenuItem = ({ title, content, defaultExpanded = false, ...accordi
         {/* MUI v7 already wraps AccordionSummary in an <h3> (slots.heading),
             so the title itself must be phrasing content — an inner h3 made
             every question heading appear twice in the outline (audit B27). */}
-        <Typography variant="h4" component="span" fontWeight={700} color={colors.black950}>
+        <Typography
+          variant="h4"
+          component="span"
+          fontWeight={700}
+          color={colors.black950}
+          sx={dense ? boatType.subtitle : undefined}
+        >
           {title}
         </Typography>
       </AccordionSummary>

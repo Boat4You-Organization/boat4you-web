@@ -24,6 +24,7 @@ import useQueryParams from '@/utils/hooks/useQueryParams';
 import DateTime from '@/utils/static/DateTime';
 import { useUserStore } from '@/valtio/user/user.store';
 import { setselectedOffer } from '@/valtio/yacht/yacht.actions';
+import boatType from '@/views/Boat/boatType';
 
 import AllBookedNote from './parts/AllBookedNote';
 import ArrowBtn from './parts/ArrowBtn';
@@ -532,11 +533,8 @@ export const AvailabilityDesktop = ({ weeks, selId, onSelect, allBooked }: Branc
       >
         <Typography
           sx={{
-            fontSize: '13px',
-            fontWeight: 700,
-            letterSpacing: '1.4px',
+            ...boatType.label,
             color: T.muted,
-            textTransform: 'uppercase',
           }}
         >
           {t('seasonAtGlance')}
@@ -551,16 +549,15 @@ export const AvailabilityDesktop = ({ weeks, selId, onSelect, allBooked }: Branc
           sx={{
             flex: 1,
             textAlign: 'center',
-            fontSize: '13px',
-            fontWeight: 700,
-            letterSpacing: '1.2px',
+            ...boatType.bodyStrong,
+            letterSpacing: '0.06em',
             color: T.navy,
             textTransform: 'uppercase',
             fontFeatureSettings: '"tnum"',
           }}
         >
           {chunkLabel}
-          <Box component="span" sx={{ ml: '10px', color: T.faint, fontSize: '11px', letterSpacing: '0.8px' }}>
+          <Box component="span" sx={{ ml: '10px', color: T.faint, ...boatType.small }}>
             {t('pageOf', { current: String(chunkIdx + 1), total: String(totalChunks) })}
           </Box>
         </Typography>
@@ -790,9 +787,8 @@ export const AvailabilityMobile = ({ weeks, selId, onSelect, allBooked }: Mobile
             sx={{
               flex: 1,
               textAlign: 'center',
-              fontSize: '12px',
-              fontWeight: 700,
-              letterSpacing: '1px',
+              ...boatType.bodyStrong,
+              letterSpacing: '0.06em',
               textTransform: 'uppercase',
               color: T.navy,
               fontFeatureSettings: '"tnum"',
@@ -800,10 +796,7 @@ export const AvailabilityMobile = ({ weeks, selId, onSelect, allBooked }: Mobile
             }}
           >
             {chunkLabel}
-            <Box
-              component="span"
-              sx={{ display: 'block', mt: '2px', color: T.faint, fontSize: '10px', letterSpacing: '0.8px' }}
-            >
+            <Box component="span" sx={{ display: 'block', mt: '2px', color: T.faint, ...boatType.small }}>
               {t('pageOf', { current: String(chunkIdx + 1), total: String(totalChunks) })}
             </Box>
           </Box>
@@ -816,11 +809,7 @@ export const AvailabilityMobile = ({ weeks, selId, onSelect, allBooked }: Mobile
         </Stack>
 
         <Stack direction="row" alignItems="center" justifyContent="space-between" sx={{ padding: '0 4px 12px' }}>
-          <Box
-            sx={{ fontSize: '13px', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', color: T.muted }}
-          >
-            {t('weeks', { count: chunkWeeks.length })}
-          </Box>
+          <Box sx={{ ...boatType.label, color: T.muted }}>{t('weeks', { count: chunkWeeks.length })}</Box>
           <Stack
             direction="row"
             alignItems="center"
@@ -831,10 +820,7 @@ export const AvailabilityMobile = ({ weeks, selId, onSelect, allBooked }: Mobile
               borderRadius: '999px',
               background: T.greenSoft,
               color: T.greenDeep,
-              fontSize: '11px',
-              fontWeight: 700,
-              letterSpacing: '0.6px',
-              textTransform: 'uppercase',
+              ...boatType.label,
             }}
           >
             <Box
@@ -868,11 +854,7 @@ export const AvailabilityMobile = ({ weeks, selId, onSelect, allBooked }: Mobile
             }}
             height={36}
           />
-          <Stack
-            direction="row"
-            justifyContent="space-between"
-            sx={{ mt: '6px', fontSize: '10px', color: T.faint, fontWeight: 600, letterSpacing: '0.8px' }}
-          >
+          <Stack direction="row" justifyContent="space-between" sx={{ mt: '6px', ...boatType.label, color: T.faint }}>
             {chunkMonths.map(m => (
               <Box component="span" key={m}>
                 {m.toUpperCase()}
@@ -929,9 +911,8 @@ export const AvailabilityMobile = ({ weeks, selId, onSelect, allBooked }: Mobile
           sx={{
             flex: 1,
             textAlign: 'center',
-            fontSize: '13px',
+            ...boatType.body,
             color: T.muted,
-            fontWeight: 600,
             alignSelf: 'center',
             fontFeatureSettings: '"tnum"',
           }}
@@ -946,7 +927,7 @@ export const AvailabilityMobile = ({ weeks, selId, onSelect, allBooked }: Mobile
             return (
               <>
                 Week{' '}
-                <Box component="span" sx={{ color: T.navy, fontWeight: 700 }}>
+                <Box component="span" sx={{ color: T.navy, fontWeight: boatType.bodyStrong.fontWeight }}>
                   {d.week()}
                 </Box>
                 {' · '}

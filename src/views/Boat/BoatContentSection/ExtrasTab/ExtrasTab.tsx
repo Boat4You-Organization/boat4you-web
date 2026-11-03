@@ -14,6 +14,7 @@ import { oncePerPage } from '@/utils/static/partnerText';
 import { sortByObligatoryExtras } from '@/utils/static/sortUtils';
 import { setObligatoryExtras } from '@/valtio/yacht/yacht.actions';
 import { useYachtStore } from '@/valtio/yacht/yacht.store';
+import boatType from '@/views/Boat/boatType';
 
 interface ExtrasTabProps {
   yacht: YachtModel;
@@ -92,12 +93,7 @@ const ExtrasTab = ({ yacht, open, onToggle }: ExtrasTabProps) => {
       </Typography>
       <Stack spacing={0} pt={3}>
         {(obligatoryServices.length > 0 || securityDepositPrice) && (
-          <Typography
-            variant="body2"
-            fontWeight={700}
-            color={colors.black700}
-            sx={{ textTransform: 'uppercase', letterSpacing: 0.5, fontSize: 12, mb: 1 }}
-          >
+          <Typography component="h3" variant="body2" color={colors.black950} sx={{ ...boatType.subtitle, mb: 1 }}>
             {t('selectedServices')}
           </Typography>
         )}
@@ -153,13 +149,12 @@ const ExtrasTab = ({ yacht, open, onToggle }: ExtrasTabProps) => {
               <Typography
                 component="h3"
                 variant="body1"
-                fontWeight={700}
                 color={colors.black950}
-                sx={{ wordBreak: 'break-word' }}
+                sx={{ ...boatType.subtitle, wordBreak: 'break-word' }}
               >
                 {tServices('refundable-security-deposit')}
               </Typography>
-              <Typography variant="body2" color={colors.black500} sx={{ fontSize: 12, mt: 0.25 }}>
+              <Typography variant="body2" color={colors.black500} sx={{ ...boatType.small, mt: 0.25 }}>
                 {tCommon('refundableSecurityDepositDescription')}
               </Typography>
             </Box>
@@ -172,12 +167,11 @@ const ExtrasTab = ({ yacht, open, onToggle }: ExtrasTabProps) => {
                 color={colors.black950}
                 component="p"
                 variant="body1"
-                fontWeight={700}
-                sx={{ whiteSpace: 'nowrap' }}
+                sx={{ ...boatType.bodyStrong, whiteSpace: 'nowrap' }}
               >
                 {securityDepositPrice}
               </Typography>
-              <Typography variant="body2" color={colors.black500} sx={{ fontSize: 12, mt: 0.25 }}>
+              <Typography variant="body2" color={colors.black500} sx={{ ...boatType.small, mt: 0.25 }}>
                 {tCommon('extrasUnits.perBooking')}
               </Typography>
             </Stack>
@@ -196,9 +190,8 @@ const ExtrasTab = ({ yacht, open, onToggle }: ExtrasTabProps) => {
               heading={{
                 component: 'h3',
                 variant: 'body2',
-                fontWeight: 700,
-                color: colors.black700,
-                sx: { textTransform: 'uppercase', letterSpacing: 0.5, fontSize: 12 },
+                color: colors.black950,
+                sx: boatType.subtitle,
               }}
             >
               {optionalServices.map((extra, index) => {
