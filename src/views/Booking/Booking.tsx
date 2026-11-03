@@ -88,7 +88,13 @@ const Booking = ({ isAdmin, user, initialStep = 0, trustStats = null }: BookingP
     setAppliedVoucher(getDataFromSessionStorage<AppliedVoucher>('appliedVoucher'));
 
     if (!savedReservation) {
-      router.back();
+      // A checkout link opened in a new tab or another browser has nothing saved: on the details step the boat page
+      // for the link (router.back() did nothing in a fresh tab and the spinner never ended).
+      if (initialStep === 0) {
+        router.replace(boatPageForCheckout(pathname, searchParams.toString()));
+      } else {
+        router.back();
+      }
 
       return;
     }

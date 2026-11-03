@@ -5,6 +5,7 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import { YachtModel } from '@/models/yacht.model';
 import { ReservationData } from '@/types/reservation.type';
 import DateTime from '@/utils/static/DateTime';
+import { checkoutQuery } from '@/utils/static/checkoutLink';
 import { clearDataFromLocalStorage, saveDataToLocalStorage } from '@/utils/static/localStorageUtils';
 import { clearDataFromSessionStorage } from '@/utils/static/sessionStorageUtils';
 import { heroImage } from '@/utils/static/yachtLayout';
@@ -57,7 +58,8 @@ export const useReservation = ({ yacht }: UseReservationProps) => {
       clearDataFromSessionStorage('selectedPaymentMethod');
       clearDataFromSessionStorage('selectedInstallment');
 
-      const query = searchParams.toString();
+      // The link carries the dates being saved: the checkout opens only the reservation its link is for.
+      const query = checkoutQuery(searchParams.toString(), calculatedPrice?.dateFrom, calculatedPrice?.dateTo);
 
       const offerId = customOfferId || calculatedPrice?.offerId;
 

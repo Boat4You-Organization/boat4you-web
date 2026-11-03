@@ -8,7 +8,7 @@
 import assert from 'node:assert/strict';
 import { describe, test } from 'node:test';
 
-import { boatPageForCheckout, savedReservationMatchesLink } from '../src/utils/static/checkoutLink.ts';
+import { boatPageForCheckout, checkoutQuery, savedReservationMatchesLink } from '../src/utils/static/checkoutLink.ts';
 
 const saved = { slug: 'beneteau-oceanis-401-namaka-ekolu-19986', dateFrom: '2027-08-07', dateTo: '2027-08-14' };
 
@@ -44,5 +44,31 @@ describe('boatPageForCheckout', () => {
       '/de/boat/namaka-19986?startDate=2027-08-07&endDate=2027-08-21'
     );
     assert.equal(boatPageForCheckout('/enter-your-details/namaka-19986', ''), '/boat/namaka-19986');
+  });
+});
+
+describe('checkoutQuery', () => {
+  test('the checkout link carries the saved dates, whatever the boat page URL still says', () => {
+    // a week picked on a phone: the URL may still show the previous week when Reserve is tapped (review 3.11.2026)
+    assert.equal(
+      checkoutQuery('startDate=2027-07-31&endDate=2027-08-07&currency=EUR', '2027-08-07', '2027-08-14'),
+      'startDate=2027-08-07&endDate=2027-08-14&currency=EUR'
+    );
+    assert.equal(checkoutQuery('', '2027-08-07', '2027-08-21'), 'startDate=2027-08-07&endDate=2027-08-21');
+  });
+
+  test('without saved dates the boat page query goes as it is', () => {
+    assert.equal(checkoutQuery('currency=EUR', undefined, undefined), 'currency=EUR');
+  });
+
+  test('the link of a checkout always matches its own reservation', () => {
+    const q = new URLSearchParams(checkoutQuery('startDate=2027-07-31&endDate=2027-08-07', '2027-08-07', '2027-08-14'));
+    assert.equal(savedReservationMatchesLink(saved, saved.slug, q.get('startDate'), q.get('endDate')), true);
+  });
+});
+
+describe('damaged saved data', () => {
+  test('a saved reservation without dates never crashes and never matches a dated link', () => {
+    assert.equal(savedReservationMatchesLink({}, saved.slug, '2027-08-07', '2027-08-14'), false);
   });
 });
