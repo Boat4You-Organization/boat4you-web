@@ -1,5 +1,9 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-11-03 — 🇨🇿 Seznam Webmaster: verifikacijska meta oznaka — ✅ LIVE 3.11.2026 (`0ec4310e3`, tag `live/2026-11-03-seznam`)
+
+Mario 3.11.: web dodan u Seznam Webmaster (račun europeyacht1@gmail.com, https://www…). `generateMetadata` → `verification.other['seznam-wmt']` (`nDCWzd8Z…`) daje `<meta name="seznam-wmt">` u `<head>`; Seznam vrijedi samo zadnju generiranu oznaku, pa je ne generirati ponovno. Provjera uživo: oznaka na naslovnici, u Seznamu status „správce“ (verificirano). Sitemap Seznam čita iz robots.txt; IndexNow (api.indexnow.org) već šalje izmjene i Seznamu. Deployano s main-a.
+
 ## 2026-11-03 — 🧾 Checkout otvara samo rezervaciju za koju je link (krivi datumi na /enter-your-details) — ✅ LIVE 3.11. 08:29 UTC (main `1ba0bdced`, dpl=1ba0bdced944-mw0f3376; SEO regresija bez novih grešaka; tag `live/2026-11-03-checkout-link`)
 
 Mario 2.11.: „Tu mi daje skroz krive datume“ (/enter-your-details/…?startDate=2027-08-07&endDate=2027-08-21).
