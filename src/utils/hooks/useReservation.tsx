@@ -83,6 +83,7 @@ export const useReservation = ({ yacht }: UseReservationProps) => {
         selectedExtrasAtBase: calculatedPrice?.selectedExtrasAtBase ?? [],
         charterType,
         savedAt: new Date().toISOString(),
+        slug,
         checkin: yacht.defaultCheckin || selectedOffer?.checkin || null,
         checkout: yacht.defaultCheckout || selectedOffer?.checkout || null,
         vesselType,
