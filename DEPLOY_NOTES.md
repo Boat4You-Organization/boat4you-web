@@ -1,5 +1,21 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-11-04 — 🚪 Stranica broda: exit-intent popup (jedan po brodu, samo na namjeru zatvaranja stranice) — ✅ LIVE 4.11.2026 17:17 UTC (`ec8650824`, deployment id ec8650824661-mw2dfz4n, tag `live/2026-11-04-exit-intent`)
+
+**Što:** posjetitelj koji odlazi sa stranice broda bez upita ili rezervacije dobije JEDAN popup (fotografija i ime broda, zašto ga do sutra možda više nema, gumb(i) dalje). Mario 3.11. (sesija „Exit-intent popup na stranicama plovila ×7“, pokrenuta iz ADMIN-a), „da“ za deploy 4.11.
+
+**Pravila (ista na svih 7 sajtova, `src/lib/exitIntent.ts`):**
+
+- Pali se samo na namjeru zatvaranja stranice: desktop = miš izađe kroz gornji rub prozora (tabovi, adresna traka), tek nakon 8 s; mobitel/tablet = nakon 15 s i pola pročitane stranice, brzi scroll prema gore prema adresnoj traci. Povijest se ne dira, nema `beforeunload`: back i daljnja pretraga po sajtu ne pale ništa.
+- Najviše jednom po brodu po posjetitelju (localStorage `exitIntent:v1:shown:<id>`); nikad nakon poslanog upita ili rezervacije u posjetu (sessionStorage, `markInquirySent` iz `trackInquiry`/`trackPurchase` PRIJE provjere privole); nikad botu; nikad preko druge otvorene forme ili cookie bannera (čeka odluku o kolačićima, `data-cookie-consent-open`).
+- Esc, gumb X i fokus unutar dijaloga; širina 480 px (343 px na mobitelu).
+
+**Datoteke:** `src/lib/exitIntent.ts`, dijalog (`CCExitIntent.tsx`, na b4y `views/Boat/BoatExitIntent`), `page.tsx` broda, `CookieConsent.tsx` (marker), `trackInquiry.ts` (+ `trackPurchase.ts` na b4y), `utils/static/yachtInquiry.ts` (sisteri: CTA otvara/skrola do forme za upit; b4y `boatBooking.ts` + donja traka), prijevodi `messages/*/yacht.json` → `yacht.exitIntent.*`, tekst jedinstven po sajtu.
+
+**Deploy:** grana `feat/exit-intent` (worktree `wt-exit-intent`) + spojen origin/main 4.11. → ff push u main; jedan pregledni agent (Opus 5.5) prije pusha; lint 0 + tsc čist; deploy iz worktreea (HEAD == main).
+
+**Provjera uživo:** stranica broda nosi `dpl=ec8650824661-mw2dfz4n`, kod popupa u chunku `1qv9aktyph6cu.js`; /contact-us i /search točan dpl; SEO regresija 0 novih FAIL (33 poznata otvorena, 17 WARN). b4y: gumbi Rezerviraj (booking box) + Besplatan upit; na mobitelu Rezerviraj ide istim putem kao donja traka.
+
 ## 2026-11-04 — 📷 Galerija broda na mobitelu: traka strelica više ne guta dodire, dodir po fotografiji = sljedeća, klik uz fotografiju zatvara — ✅ LIVE 4.11.2026 10:22 UTC (`1da825210`, dpl 1da825210134-mw1ys9pj, grana `feat/lightbox-strip`); ✅ drugi korak LIVE 4.11.2026 ~10:50 UTC (`d3a7076bc`, dpl d3a7076bc4d4-mw1zacdg): okrugli X 44 px umjesto male strelice + prazna gornja traka zatvara galeriju; tag `live/2026-11-04-lightbox-taps`
 
 Mario 4.11. (Contact Center „What to fix“: `<div>` na stranici broda, 32 od 59 dodira mrtva, 54 %): „daj prijedlog kako da ovo sredimo“ → „sredi“ → „Da, deployaj“; dopuna: „ako se pretisne bilo što van galerije da se zatvori galerija“ i „strelicu u gornjem lijevom kutu napravit drugačije“.
