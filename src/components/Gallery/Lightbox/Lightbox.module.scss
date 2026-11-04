@@ -103,8 +103,22 @@
     max-width: rem-calc(1280);
     padding-inline: rem-calc(24);
 
+    // The strip spans the photo; only the arrows take the pointer, a tap between them reaches the photo (4.11.2026:
+    // 32 of 59 taps on it were dead on the Boat page).
+    pointer-events: none;
+
+    > * {
+      pointer-events: auto;
+    }
+
     @include media(0, 'sm') {
-      padding-inline: rem-calc(38);
+      padding-inline: rem-calc(16);
+
+      // Touch targets of at least 44 px.
+      > * {
+        width: rem-calc(44);
+        height: rem-calc(44);
+      }
     }
   }
 

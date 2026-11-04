@@ -26,6 +26,7 @@ import { heroImage, marinaCaption, sortGalleryImages } from '@/utils/static/yach
 import BoatShareModal from '@/views/Boat/BoatHeroSection/BoatShareModal';
 
 import styles from './Lightbox.module.scss';
+import { onContainedPhoto, tapAction } from './lightboxTap';
 
 interface LightboxProps {
   open: boolean;
@@ -80,6 +81,8 @@ const Lightbox = ({
   }, [yacht, yachtImages]);
 
   const swiperRef = useRef<SwiperType | null>(null);
+  // The pointer of the last press on a slide (lightboxTap): outside the photo closes, a touch tap on the photo shows the next.
+  const lastPointerType = useRef('');
 
   const handleSwiper = (swiper: SwiperType) => {
     swiperRef.current = swiper;
@@ -121,6 +124,23 @@ const Lightbox = ({
     if (!isBeginning) {
       swiperRef.current?.slidePrev();
     }
+  };
+
+  const handleSlideClick = (e: React.MouseEvent<HTMLElement>) => {
+    const target = e.target as HTMLElement;
+    const img = target.closest('img');
+    const onPhoto = img
+      ? onContainedPhoto(
+          img.getBoundingClientRect(),
+          { width: img.naturalWidth, height: img.naturalHeight },
+          e.clientX,
+          e.clientY
+        )
+      : Boolean(target.closest(`.${styles.photoFrame}`));
+    const action = tapAction(onPhoto, lastPointerType.current, isEnd);
+
+    if (action === 'close') onClose();
+    else if (action === 'next') handleSwiperNext();
   };
 
   useEffect(() => {
@@ -205,7 +225,14 @@ const Lightbox = ({
               const credit = marinaCaption(image);
 
               return (
-                <SwiperSlide key={image.id}>
+                <SwiperSlide
+                  key={image.id}
+                  // Swiper swallows the click after a drag, so onClick is a tap or a click, never the end of a swipe.
+                  onPointerDown={e => {
+                    lastPointerType.current = e.pointerType;
+                  }}
+                  onClick={handleSlideClick}
+                >
                   <Box className={styles.imageWrapper}>
                     {credit ? (
                       // A marina photo stays centred like every other photo; the
