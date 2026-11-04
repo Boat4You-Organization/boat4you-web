@@ -288,6 +288,15 @@ const nextConfig = {
     // tab (review 1.10.2026; Next issue vercel/next.js#97329). Off: prefetches
     // ask the server, as on 16.1. Next 16.1 only warns about the unknown key.
     optimisticRouting: false,
+    // Server Actions CSRF check (4.11.2026): bingbot renders a boat page it
+    // fetched from the apex host, so its price-calculation POST carries
+    // `Origin: https://boat4you.com`, follows the apex -> www 301 as a POST and
+    // reaches Next with `x-forwarded-host: www.boat4you.com` != origin: "Invalid
+    // Server Actions request", answered 5xx (hundreds a day across the sites).
+    // Our own two hosts are trusted either way; nothing else is added.
+    serverActions: {
+      allowedOrigins: ['boat4you.com', 'www.boat4you.com'],
+    },
   },
   sassOptions: {
     silenceDeprecations: ['legacy-js-api'],
