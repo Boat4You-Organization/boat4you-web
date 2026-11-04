@@ -1,5 +1,15 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-11-04 — 📷 Galerija broda na mobitelu: traka strelica više ne guta dodire, dodir po fotografiji = sljedeća, klik uz fotografiju zatvara — ✅ LIVE 4.11.2026 10:22 UTC (`1da825210`, dpl 1da825210134-mw1ys9pj, grana `feat/lightbox-strip`); ⏳ drugi korak (okrugli X umjesto strelice + prazna gornja traka zatvara, `a7849ae8a`) čeka „da“
+
+Mario 4.11. (Contact Center „What to fix“: `<div>` na stranici broda, 32 od 59 dodira mrtva, 54 %): „daj prijedlog kako da ovo sredimo“ → „sredi“ → „Da, deployaj“; dopuna: „ako se pretisne bilo što van galerije da se zatvori galerija“ i „strelicu u gornjem lijevom kutu napravit drugačije“.
+
+- **Uzrok:** `Lightbox.module.scss .navigation` = nevidljiv `Stack` preko cijele širine fotografije (42 px visok) s dvije strelice; na mobitelu dodir po fotografiji između strelica završi na traci i ne radi ništa (snimke 1.–3.11.: hashevi h6qq7foh / 743rk0h1x / 82h93ia3g = isti element na /en, /de, /pl).
+- **Popravak (`1da825210`):** traka `pointer-events: none`, strelice `auto` i na mobitelu 44×44 px uz rub (16 px); `lightboxTap.ts`: `tapAction` (izvan fotografije → zatvori; dodir prstom po fotografiji, ne zadnja → sljedeća; miš/olovka po fotografiji → ništa) + `onContainedPhoto` (geometrija `object-fit: contain`, letterbox/pillarbox nije fotografija; slika bez naturalnih dimenzija = fotografija); handler na `SwiperSlide` (Swiper guta klik nakon povlačenja, pa je klik uvijek tap). Test `yarn test:lightbox` 7/7.
+- **Provjere:** dev server (webpack) u mobilnom prikazu: dodir prstom 1 → 2, klik mišem po fotografiji ništa, klik u letterbox zatvara; live nakon deploya isto (dpl na /contact-us i /search OK); SEO regresija Stage B: 0 novih FAIL (21 poznatih, 9 WARN, 1 XPASS).
+- **Deploy:** `B4Y_REPO=…/wt-lightbox SEO_DEPTH=quick bash infra/deploy-scripts/b4y_web_deploy.sh` (worktree s pravim `node_modules`, `cp -a`). Rollback: `.next.prev` na cusma1 (prethodni `6f4528876`).
+- **Dalje:** sisteri imaju vlastitu galeriju — isti popravak tek ako se red pojavi u „What to fix“ njihovih sajtova; kroz tjedan dana provjeriti pada li `<div>` s popisa za boat4you.
+
 ## 2026-11-03 — 🎨 Stranica broda: svjetlija pozadina opisa — ✅ LIVE 3.11.2026 (`6f4528876`, dpl 6f4528876624-mw0tsr2x)
 
 Mario 3.11.: #efefef pretaman za tekst → #f7f7f7 (`ReadMorePanel.module.scss`, i prijelaz „Read more"). SEO regresija: 2 nova reda iz uzorka, oba podaci partnera, ne ova promjena — T11 ćirilica „Вт" u nazivu opreme (hr/boat/fountaine-pajot-lipari-41-my-way-5198) i T6 model „Moorings 5000" (= poznati B20, nl/boat/…-20131). B23/T9 XPASS: unos može van iz `seo_regression_expected.json`.
