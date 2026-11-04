@@ -30,6 +30,10 @@ const TOUCH_MIN_DEPTH = 0.5;
 const TOUCH_FLICK_VIEWPORTS = 1;
 /** … within this window. */
 const TOUCH_FLICK_MS = 700;
+/** A scroll counts only this long after the last touchmove: momentum scrolling runs on after the finger lifts. */
+const TOUCH_RECENT_MS = 1_500;
+/** A finger must travel this far before its touchmove counts as a drag (a tap wobbles less). */
+const TOUCH_DRAG_PX = 10;
 
 const BOT_UA =
   /bot|crawl|spider|slurp|headless|lighthouse|pagespeed|preview|facebookexternalhit|bingpreview|embedly|python|curl|wget|httpclient|phantom|selenium|puppeteer|playwright/i;
@@ -110,6 +114,25 @@ export const watchExitIntent = (boatId: number | string, onExit: () => void): ((
   } else {
     let maxDepth = 0;
     let samples: Array<{ at: number; y: number }> = [];
+    // Only a finger counts: a scroll the page makes itself (scrollTo after "Reserve", a smooth scroll to the
+    // inquiry form or to a section tab) is not someone leaving. A tap has no touchmove; a flick has many.
+    let lastTouchMoveAt = 0;
+    let touchStartY: number | null = null;
+
+    const onTouchStart = (event: TouchEvent) => {
+      const touch = event.touches.item(0);
+
+      touchStartY = touch ? touch.clientY : null;
+    };
+
+    // iOS fires touchmove for a tap that wobbles a few pixels: only a real drag stamps the time.
+    const onTouchMove = (event: TouchEvent) => {
+      const touch = event.touches.item(0);
+
+      if (touchStartY === null || !touch || Math.abs(touch.clientY - touchStartY) < TOUCH_DRAG_PX) return;
+
+      lastTouchMoveAt = Date.now();
+    };
 
     const onScroll = () => {
       const now = Date.now();
@@ -117,6 +140,12 @@ export const watchExitIntent = (boatId: number | string, onExit: () => void): ((
       const scrollable = document.documentElement.scrollHeight - window.innerHeight;
 
       if (scrollable > 0) maxDepth = Math.max(maxDepth, y / scrollable);
+
+      if (now - lastTouchMoveAt > TOUCH_RECENT_MS) {
+        samples = [];
+
+        return;
+      }
 
       samples = samples.filter(s => now - s.at <= TOUCH_FLICK_MS);
       samples.push({ at: now, y });
@@ -128,8 +157,14 @@ export const watchExitIntent = (boatId: number | string, onExit: () => void): ((
       if (highest - y >= window.innerHeight * TOUCH_FLICK_VIEWPORTS) fire();
     };
 
+    window.addEventListener('touchstart', onTouchStart, { passive: true });
+    window.addEventListener('touchmove', onTouchMove, { passive: true });
     window.addEventListener('scroll', onScroll, { passive: true });
-    cleanups.push(() => window.removeEventListener('scroll', onScroll));
+    cleanups.push(() => {
+      window.removeEventListener('touchstart', onTouchStart);
+      window.removeEventListener('touchmove', onTouchMove);
+      window.removeEventListener('scroll', onScroll);
+    });
   }
 
   return stop;
