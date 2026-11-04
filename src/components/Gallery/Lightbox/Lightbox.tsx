@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 
-import { ChevronLeft, ChevronRight } from '@mui/icons-material';
+import { ChevronLeft, ChevronRight, Close } from '@mui/icons-material';
 import { Box, Button, Container, Dialog, IconButton, Stack } from '@mui/material';
 import cx from 'clsx';
 import { useTranslations } from 'next-intl';
@@ -15,7 +15,6 @@ import CarouselButton from '@/components/CarouselButton';
 import FavoriteButton from '@/components/FavoriteButton';
 import PhotoCredit from '@/components/Gallery/PhotoCredit';
 import { galleryPhotoAlt } from '@/components/Gallery/photoAlt';
-import ArrowLeft from '@/components/SvgIcons/ArrowLeft';
 import Logo from '@/components/SvgIcons/Logo';
 import Share from '@/components/SvgIcons/Share';
 import { YachtImage, YachtModel } from '@/models/yacht.model';
@@ -26,6 +25,7 @@ import { heroImage, marinaCaption, sortGalleryImages } from '@/utils/static/yach
 import BoatShareModal from '@/views/Boat/BoatHeroSection/BoatShareModal';
 
 import styles from './Lightbox.module.scss';
+import { onContainedPhoto, tapAction } from './lightboxTap';
 
 interface LightboxProps {
   open: boolean;
@@ -80,6 +80,8 @@ const Lightbox = ({
   }, [yacht, yachtImages]);
 
   const swiperRef = useRef<SwiperType | null>(null);
+  // The pointer of the last press on a slide (lightboxTap): outside the photo closes, a touch tap on the photo shows the next.
+  const lastPointerType = useRef('');
 
   const handleSwiper = (swiper: SwiperType) => {
     swiperRef.current = swiper;
@@ -123,6 +125,23 @@ const Lightbox = ({
     }
   };
 
+  const handleSlideClick = (e: React.MouseEvent<HTMLElement>) => {
+    const target = e.target as HTMLElement;
+    const img = target.closest('img');
+    const onPhoto = img
+      ? onContainedPhoto(
+          img.getBoundingClientRect(),
+          { width: img.naturalWidth, height: img.naturalHeight },
+          e.clientX,
+          e.clientY
+        )
+      : Boolean(target.closest(`.${styles.photoFrame}`));
+    const action = tapAction(onPhoto, lastPointerType.current, isEnd);
+
+    if (action === 'close') onClose();
+    else if (action === 'next') handleSwiperNext();
+  };
+
   useEffect(() => {
     setCurrentSlide(selectedImage);
   }, [selectedImage]);
@@ -160,10 +179,17 @@ const Lightbox = ({
         }}
       >
         <Container maxWidth="xl" className={styles.container}>
-          <Box className={styles.headerWrapper}>
+          <Box
+            className={styles.headerWrapper}
+            // The empty part of the top bar closes the gallery too (4.11.2026, Mario: on a phone the small arrow was the
+            // only way back); its buttons and links keep their own job.
+            onClick={e => {
+              if (!(e.target as HTMLElement).closest('button, a')) onClose();
+            }}
+          >
             <Stack direction="row" justifyContent="space-between" alignItems="center" className={styles.header}>
-              <IconButton onClick={onClose} aria-label={t('closeGallery')}>
-                <ArrowLeft size={24} fill={colors.black950} />
+              <IconButton onClick={onClose} aria-label={t('closeGallery')} className={styles.closeButton}>
+                <Close fontSize="medium" />
               </IconButton>
               {showShareAndFavorite && (
                 <Link href="/" aria-label={t('home')}>
@@ -205,7 +231,14 @@ const Lightbox = ({
               const credit = marinaCaption(image);
 
               return (
-                <SwiperSlide key={image.id}>
+                <SwiperSlide
+                  key={image.id}
+                  // Swiper swallows the click after a drag, so onClick is a tap or a click, never the end of a swipe.
+                  onPointerDown={e => {
+                    lastPointerType.current = e.pointerType;
+                  }}
+                  onClick={handleSlideClick}
+                >
                   <Box className={styles.imageWrapper}>
                     {credit ? (
                       // A marina photo stays centred like every other photo; the
