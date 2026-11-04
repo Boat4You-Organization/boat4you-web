@@ -8,13 +8,16 @@ import { NextIntlClientProvider, useLocale } from 'next-intl';
 
 import theme from '@/styles/themes';
 import { reloadForNewDeployment } from '@/utils/static/deploymentSkew';
+import { reportErrorToRecorder } from '@/utils/static/recorderError';
 import ErrorPage from '@/views/ErrorPage';
 
 export default function Error({ error }: { error: Error & { digest?: string } }) {
   const locale = useLocale();
 
-  // A stale tab after a deploy: load the new build instead of an error page.
+  // The cause reaches the visit's recording in the Contact Center; a stale tab after a deploy loads the new build
+  // instead of an error page.
   useEffect(() => {
+    reportErrorToRecorder(error);
     reloadForNewDeployment(error);
   }, [error]);
 

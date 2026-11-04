@@ -10,6 +10,7 @@ import { usePathname } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import theme from '@/styles/themes';
 import { reloadForNewDeployment } from '@/utils/static/deploymentSkew';
+import { reportErrorToRecorder } from '@/utils/static/recorderError';
 import ErrorPage from '@/views/ErrorPage';
 
 export default function GlobalError({ error }: { error: Error & { digest?: string } }) {
@@ -19,7 +20,10 @@ export default function GlobalError({ error }: { error: Error & { digest?: strin
   const segment = pathname?.split('/')[1];
   const locale = hasLocale(routing.locales, segment) ? segment : routing.defaultLocale;
 
+  // The cause reaches the visit's recording in the Contact Center; a stale tab after a deploy loads the new build
+  // instead of an error page.
   useEffect(() => {
+    reportErrorToRecorder(error);
     reloadForNewDeployment(error);
   }, [error]);
 
