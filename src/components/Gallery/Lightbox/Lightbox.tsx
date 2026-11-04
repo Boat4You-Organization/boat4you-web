@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 
-import { ChevronLeft, ChevronRight } from '@mui/icons-material';
+import { ChevronLeft, ChevronRight, Close } from '@mui/icons-material';
 import { Box, Button, Container, Dialog, IconButton, Stack } from '@mui/material';
 import cx from 'clsx';
 import { useTranslations } from 'next-intl';
@@ -15,7 +15,6 @@ import CarouselButton from '@/components/CarouselButton';
 import FavoriteButton from '@/components/FavoriteButton';
 import PhotoCredit from '@/components/Gallery/PhotoCredit';
 import { galleryPhotoAlt } from '@/components/Gallery/photoAlt';
-import ArrowLeft from '@/components/SvgIcons/ArrowLeft';
 import Logo from '@/components/SvgIcons/Logo';
 import Share from '@/components/SvgIcons/Share';
 import { YachtImage, YachtModel } from '@/models/yacht.model';
@@ -180,10 +179,17 @@ const Lightbox = ({
         }}
       >
         <Container maxWidth="xl" className={styles.container}>
-          <Box className={styles.headerWrapper}>
+          <Box
+            className={styles.headerWrapper}
+            // The empty part of the top bar closes the gallery too (4.11.2026, Mario: on a phone the small arrow was the
+            // only way back); its buttons and links keep their own job.
+            onClick={e => {
+              if (!(e.target as HTMLElement).closest('button, a')) onClose();
+            }}
+          >
             <Stack direction="row" justifyContent="space-between" alignItems="center" className={styles.header}>
-              <IconButton onClick={onClose} aria-label={t('closeGallery')}>
-                <ArrowLeft size={24} fill={colors.black950} />
+              <IconButton onClick={onClose} aria-label={t('closeGallery')} className={styles.closeButton}>
+                <Close fontSize="medium" />
               </IconButton>
               {showShareAndFavorite && (
                 <Link href="/" aria-label={t('home')}>

@@ -23,6 +23,18 @@
       max-width: rem-calc(1280);
       padding-inline: rem-calc(24);
 
+      // A clear round X (44 px, like the arrows), not a small back arrow (4.11.2026).
+      .closeButton {
+        width: rem-calc(44);
+        height: rem-calc(44);
+        background-color: $black-100;
+        color: $black-900;
+
+        &:hover {
+          background-color: $black-200;
+        }
+      }
+
       @include media(0, 'sm') {
         padding-inline: rem-calc(16);
       }
