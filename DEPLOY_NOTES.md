@@ -1,5 +1,13 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-11-05 — 🔗 Footer + schema: Facebook link → facebook.com/boat4you.official — ✅ LIVE 5.11.2026 ~23:00 UTC (`e7c1191bf`, deployment id e7c1191bfd09-mw454xw0, tag `live/2026-11-05-fb-username`)
+
+**Što (Mario 5.11. „ažuriraj link i na stranici boat4you“):** nova stranica Boat4you dobila je korisničko ime `boat4you.official` (ime `boat4you` je tuđi profil, `boat4youcom` se oslobađa tek kad Facebook konačno obriše staru stranicu, ~5.12.2026). Footer ikona i Organization `sameAs` sada vode na `https://www.facebook.com/boat4you.official` umjesto `profile.php?id=61596356697045`.
+
+**Provjera:** live HTML naslovnice 7× `facebook.com/boat4you.official`, `dpl=e7c1191bfd09-mw454xw0`. SEO regresija Stage B: 2 nova T6 retka (ime operatera „Sea Novels“ u kartici broda na /fr i /es pretrazi Marina Paleros) — podaci kataloga, ista obitelj kao poznati B20, nije od ove promjene.
+
+**Dalje:** ~5.12.2026 prebaciti username na `boat4youcom` i ovdje promijeniti link (socials.config.ts + buildMetadata.ts sameAs).
+
 ## 2026-11-05 — 🔗 Footer + schema: Facebook link vodi na novu stranicu „Boat4you“ — ✅ LIVE 5.11.2026 ~22:07 UTC (`8fccd6054`, deployment id 8fccd60542f5-mw43ghg3, tag `live/2026-11-05-fb-page-link`)
 
 **Što (Mario 5.11. „boat4you ima krivi link pri dnu, to se treba ažurirat za novi facebook page“):** ikona Facebooka u footeru i `sameAs` u Organization shemi vodili su na `facebook.com/boat4youcom`. Ta je stranica obrisana 5.11.2026 (~15:50 UTC, zaglavljena u ograničenom poslovnom portfoliju), pa je link pokazivao „This content isn't available“. Oba mjesta sada vode na novu stranicu „Boat4you“ preko trajnog id-a: `https://www.facebook.com/profile.php?id=61596356697045` (stranica još nema korisničko ime; id link radi i nakon što ga dobije).
