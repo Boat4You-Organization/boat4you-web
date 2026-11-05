@@ -1,5 +1,15 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-11-05 — 📰 /press/privacy: izjava o privatnosti za novinare (PR modul) — ✅ LIVE 5.11.2026 ~18:58 UTC (`19ed4b58d`, deployment id 19ed4b58d255-mw3wh9ih, tag `live/2026-11-05-press-privacy`)
+
+**Što:** nova stranica `https://www.boat4you.com/press/privacy` — engleska izjava o privatnosti za novinare; link je u podnožju svakog pitcha s press@boat4you.com (backend `PR_PRIVACY_URL`). Voditelj obrade Cusmanich d.o.o. (MB 4026365, OIB 87394862517), isto kao `/privacy-policy`. Sadržaj: koje podatke držimo i odakle, svrha i pravna osnova (legitimni interes, uklj. objavu i link), plain text bez praćenja, Hetzner (EU) + vlastiti mail server, **Anthropic (Claude) kao obrađivač s prijenosom u SAD**, brisanje nakon 24 mj. (mjesečno), lista „ne kontaktiraj“, odjava „čim pročitamo odgovor, obično unutar 2 radna dana“, prava i nadzorna tijela (AZOP, ICO, OAIC, NZ).
+
+- `src/app/[locale]/(root)/press/privacy/page.tsx` (uzor `privacy-policy`; uvijek EN markdown, noindex/nofollow, canonical EN), `src/posts/static/en/press-privacy.md`, `src/utils/static/englishOnlyRoutes.ts` (`/press/privacy` uz `/blog/<slug>`: bez detekcije jezika, `/fr|de|hr…/press/privacy` → 308 na EN).
+- Pregled (Opus 5.5 high) + ponovni pregled: 0 blokera; tekst usklađen s modulom (C1–C2, I1–I4, N1–N3). Nije u sitemapu (noindex), deploy skripta nosi cijeli `src/posts/`.
+- Provjera LIVE: `/press/privacy` 200, `<meta name="robots" content="noindex, nofollow">`, canonical `/press/privacy`; `/fr/press/privacy` 308 → `/press/privacy`; `/`, `/privacy-policy` 200; SEO regresija Stage B: 0 novih FAIL.
+- **Mora biti istina prije prvog maila novinaru** (iz pregleda): Claude račun na komercijalnim uvjetima s DPA (inače „on our behalf“ ne stoji) + mehanizam prijenosa u SAD (pravnik); napisan LIA (stranica nudi sažetak na zahtjev); press@ se čita barem svaka 2 radna dana i odjave/bounce se označe u adminu; brisanje kopija u press@ sandučiću nakon 24 mj.; zapisan ručni postupak brisanja na zahtjev.
+- Rollback: prethodni deployment (`html.prev`/stari `.next` po b4y_web_ship_tail.sh) ili revert 3 commita; ništa drugo ne ovisi o stranici (slanje je isključeno, `PR_MAIL_ENABLED=false`).
+
 ## 2026-11-05 — 🧯 Stranica greške (error.tsx) javlja uhvaćenu grešku u snimku posjeta (Contact Center → Snimke, stupac Errors + marker u playeru) — ✅ LIVE 5.11.2026 09:42 UTC (`4b5915e5a`, build id build-TfctsWXpff2fKS, deployment id 4b5915e5a843-mw3cqohg, tag `live/2026-11-05-rec-error`)
 
 **Što:** snimka 7285 (Croatia Yachting naslovnica, 4.11. 19:29 UTC) prikazuje stranicu greške, a stupac Errors kaže 0: grešku koju uhvati Next error boundary (`error.tsx`) React 19 u produkciji samo ispiše u konzolu (`console.error`), recorder (clarity fork) sluša samo `window` `error` događaje, pa u snimci nema traga ni poruke ni `digesta`. Nađeno u sesiji „CC snimke 4.11.“, Mario „da“ za rješenje 5.11. ~07:40 UTC.
