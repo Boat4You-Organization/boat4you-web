@@ -1,5 +1,13 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-11-05 — 🤖 Bingbot „Invalid Server Actions request“ (503) na stranicama broda: apex host dopušten kao Origin Server Actiona — ✅ LIVE 5.11.2026 07:33 UTC (`b7305aee5`, deployment id b7305aee5650-mw3808wk, tag `live/2026-11-05-allowed-origins`)
+
+**Što:** bingbot renderira stranicu broda koju je dohvatio s apex hosta (`boat4you.com`), pa izračun cijene pri učitavanju (`useYachtPriceCalculation` → `getSingleYachtPrice`) POST-a s `Origin: https://boat4you.com`, slijedi 301 na www kao POST i Next ga odbija (`x-forwarded-host` www ≠ origin apex) → `⨯ Error: Invalid Server Actions request`, 503 u nginx logu. 4.11.: 105 × na b4y, ~900 × na svih 7 sajtova (nađeno u sesiji Contact Center snimke 4.11.). Bing vidi brod bez cijene i 503 u svom crawl logu.
+
+**Popravak:** `next.config.js` → `experimental.serverActions.allowedOrigins: ['boat4you.com', 'www.boat4you.com']` (Next 16.3.8, ključ je i dalje pod `experimental`). Samo vlastite domene; strani Origin i dalje odbijen. nginx netaknut (308 umjesto 301 ne bi mijenjao Origin). Isti commit na svih 7 sajtova; jedan pregledni agent (Opus 5.5) prije deploya, Mario „da“ 5.11.
+
+**Provjera uživo 07:36 UTC:** POST `/` s `Origin: https://boat4you.com` + `Next-Action` → 404 (nepoznata akcija = CSRF prošao; prije deploya 503), `Origin: https://evil.example` → 503 (i dalje odbijen). dpl točan na /contact-us i /search. SEO regresija Stage B: 1 novi FAIL T6 = ime broda „Sea Novels“ (Lagoon 42, Marina Paleros) na `/de/search?destinations=marina%20paleros&boatTypes=CATAMARAN` — podatak iz API-ja, klasa B20 (Mario 16.10.: nesigurni ostaju), nije iz ovog deploya; 1 XPASS. **Gotovo kad:** 24 h bez `Invalid Server Actions request` u journalu `nextapp` i bez bingbot POST 503 u nginx logu cusma1.
+
 ## 2026-11-04 — 🚪 Stranica broda: exit-intent popup (jedan po brodu, samo na namjeru zatvaranja stranice) — ✅ LIVE 4.11.2026 17:17 UTC (`ec8650824`, deployment id ec8650824661-mw2dfz4n, tag `live/2026-11-04-exit-intent`)
 
 **Što:** posjetitelj koji odlazi sa stranice broda bez upita ili rezervacije dobije JEDAN popup (fotografija i ime broda, zašto ga do sutra možda više nema, gumb(i) dalje). Mario 3.11. (sesija „Exit-intent popup na stranicama plovila ×7“, pokrenuta iz ADMIN-a), „da“ za deploy 4.11.
