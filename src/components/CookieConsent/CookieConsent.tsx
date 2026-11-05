@@ -116,13 +116,17 @@ const CookieConsent = ({ showConsent }: CookieConsentProps) => {
         data-cookie-consent-open={showConsent || undefined}
       >
         <Image
-          src="/images/cookies.webp"
+          // 386 x 260, twice the 193 x 130 box (15 KB). The 1214 x 817 original (83 KB) was sent as it is: the
+          // image loader resizes only yacht photos (utils/static/bunnyImageLoader.js), `quality` does nothing
+          // for a file from public/. Low fetch priority so the banner art never competes with the page's
+          // largest paint. A changed drawing gets a new file name: /images is cached for a day.
+          src="/images/cookies-386.webp"
           // Decorative, beside the banner's own title (it read "cookies" on every locale).
           alt=""
           width={193}
           height={130}
           className={styles.image}
-          quality={65}
+          fetchPriority="low"
         />
         <Typography component="p" variant="h3" fontWeight={800} fontStyle="italic" color={colors.blue500}>
           {t('title')}
