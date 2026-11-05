@@ -15,7 +15,7 @@ import { CCH_STRIP_SNIPPET } from '@/config/ccHandoff';
 import { LINKER_SET_SNIPPET } from '@/config/crossDomainLinker';
 import { LocaleType } from '@/config/locales.config';
 import { meta } from '@/config/meta';
-import { CLIENT_NAMESPACES, pickMessages } from '@/i18n/clientMessages';
+import { siteClientMessages } from '@/i18n/clientMessages';
 import { routing } from '@/i18n/routing';
 import '@/styles/index.scss';
 import { CONSENT_VERSION } from '@/types/cookie-consent.type';
@@ -120,10 +120,11 @@ const RootLayout = async ({ children, params }: RootLayoutProps) => {
 
   setRequestLocale(locale);
 
-  // Only client-consumed namespaces go to the browser (the full catalogue
-  // is 2.2 MB and was serialized into every page). Itinerary pages add the
-  // per-country itinerary namespace(s) they need (ItineraryMessages).
-  const messages = pickMessages(await getMessages(), CLIENT_NAMESPACES);
+  // Only the namespaces client components read all over the site go to the
+  // browser (the full catalogue is 2.2 MB and was serialized into every
+  // page). A page whose client components need more adds it itself
+  // (ExtraClientMessages, ItineraryMessages).
+  const messages = siteClientMessages(await getMessages());
   // Never block every page on the API: once cached this is instant; on a
   // cold cache or a slow API the JSON-LD uses its static description.
   const siteStats = await getSiteStatsWithin(SITE_STATS_LAYOUT_BUDGET_MS);

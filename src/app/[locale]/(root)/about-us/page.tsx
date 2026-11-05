@@ -4,6 +4,7 @@ import { getTranslations } from 'next-intl/server';
 import dynamic from 'next/dynamic';
 
 import { getYachtFleet } from '@/actions/yacht.actions';
+import ExtraClientMessages from '@/components/ExtraClientMessages';
 import Layout from '@/components/Layout';
 import { LocaleType } from '@/config/locales.config';
 import { getSiteStats } from '@/utils/server/siteStats';
@@ -32,14 +33,17 @@ const AboutUsPage = async () => {
   const [fleet, siteStats] = await Promise.all([getYachtFleet(), getSiteStats()]);
 
   return (
-    <Layout>
-      <HeroSection namespace="about" imageSrc="/images/howWeWork/hero.webp" />
-      <StatsSection catalogue={siteStats?.display} />
-      <WhoWeAreSection />
-      <WhyChooseUsSection />
-      <OurPromiseSection />
-      <OurFleetSection fleet={fleet} />
-    </Layout>
+    // The fleet slider is a client component and reads `about`, which is not in the site-wide client set.
+    <ExtraClientMessages namespaces={['about']}>
+      <Layout>
+        <HeroSection namespace="about" imageSrc="/images/howWeWork/hero.webp" />
+        <StatsSection catalogue={siteStats?.display} />
+        <WhoWeAreSection />
+        <WhyChooseUsSection />
+        <OurPromiseSection />
+        <OurFleetSection fleet={fleet} />
+      </Layout>
+    </ExtraClientMessages>
   );
 };
 

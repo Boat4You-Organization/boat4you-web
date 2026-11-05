@@ -3,6 +3,7 @@ import { Locale } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import dynamic from 'next/dynamic';
 
+import ExtraClientMessages from '@/components/ExtraClientMessages';
 import Layout from '@/components/Layout';
 import { whyChooseUs } from '@/config/howWeWork.config';
 import { LocaleType } from '@/config/locales.config';
@@ -29,15 +30,18 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: L
 }
 
 const ContactUsPage = () => (
-  <Layout>
-    <HeroSection namespace="contact" imageSrc="/images/howWeWork/hero.webp" />
-    <ContactSection />
-    <InternationalSupportSection />
-    <ContactExpectSection />
-    <WhyChooseUsSection translation="howWeWork" data={whyChooseUs} />
-    <RiskFreeCtaSection />
-    <FaqSection />
-  </Layout>
+  // The FAQ accordion is a client component and reads `howWeWork`, which is not in the site-wide client set.
+  <ExtraClientMessages namespaces={['howWeWork']}>
+    <Layout>
+      <HeroSection namespace="contact" imageSrc="/images/howWeWork/hero.webp" />
+      <ContactSection />
+      <InternationalSupportSection />
+      <ContactExpectSection />
+      <WhyChooseUsSection translation="howWeWork" data={whyChooseUs} />
+      <RiskFreeCtaSection />
+      <FaqSection />
+    </Layout>
+  </ExtraClientMessages>
 );
 
 export default ContactUsPage;
