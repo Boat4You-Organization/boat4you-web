@@ -1,5 +1,14 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-11-05 — 🔗 Footer + schema: Facebook link vodi na novu stranicu „Boat4you“ — ✅ LIVE 5.11.2026 ~22:07 UTC (`8fccd6054`, deployment id 8fccd60542f5-mw43ghg3, tag `live/2026-11-05-fb-page-link`)
+
+**Što (Mario 5.11. „boat4you ima krivi link pri dnu, to se treba ažurirat za novi facebook page“):** ikona Facebooka u footeru i `sameAs` u Organization shemi vodili su na `facebook.com/boat4youcom`. Ta je stranica obrisana 5.11.2026 (~15:50 UTC, zaglavljena u ograničenom poslovnom portfoliju), pa je link pokazivao „This content isn't available“. Oba mjesta sada vode na novu stranicu „Boat4you“ preko trajnog id-a: `https://www.facebook.com/profile.php?id=61596356697045` (stranica još nema korisničko ime; id link radi i nakon što ga dobije).
+
+- `src/config/socials.config.ts` (footer, `BusinessCard`), `src/utils/static/buildMetadata.ts` (`sameAs`). Oba mjesta se mijenjaju zajedno.
+- Provjera LIVE (`/` i `/de`): footer `<a href>` i `sameAs` = novi link, stari link 0 pojavljivanja, `dpl=8fccd60542f5-mw43ghg3`; SEO regresija Stage B: 0 novih FAIL.
+- Kad stranica dobije korisničko ime (staro `boat4youcom` se oslobađa ~30 dana nakon brisanja): zamijeniti id link imenom na oba mjesta. Nije hitno.
+- Rollback: revert `8fccd6054` + deploy (vratio bi mrtav link, pa nema razloga).
+
 ## 2026-11-05 — 📰 /press/privacy: izjava o privatnosti za novinare (PR modul) — ✅ LIVE 5.11.2026 ~18:58 UTC (`19ed4b58d`, deployment id 19ed4b58d255-mw3wh9ih, tag `live/2026-11-05-press-privacy`)
 
 **Što:** nova stranica `https://www.boat4you.com/press/privacy` — engleska izjava o privatnosti za novinare; link je u podnožju svakog pitcha s press@boat4you.com (backend `PR_PRIVACY_URL`). Voditelj obrade Cusmanich d.o.o. (MB 4026365, OIB 87394862517), isto kao `/privacy-policy`. Sadržaj: koje podatke držimo i odakle, svrha i pravna osnova (legitimni interes, uklj. objavu i link), plain text bez praćenja, Hetzner (EU) + vlastiti mail server, **Anthropic (Claude) kao obrađivač s prijenosom u SAD**, brisanje nakon 24 mj. (mjesečno), lista „ne kontaktiraj“, odjava „čim pročitamo odgovor, obično unutar 2 radna dana“, prava i nadzorna tijela (AZOP, ICO, OAIC, NZ).
