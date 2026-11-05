@@ -267,7 +267,8 @@ export const getLocalizedJsonLd = async (locale: LocaleType, stats?: EntityStats
         sameAs: [
           // Wikidata item (created 29.8.2026) — Knowledge Graph reconciliation.
           'https://www.wikidata.org/wiki/Q141206019',
-          'https://www.facebook.com/boat4youcom',
+          // Same page as the footer icon (config/socials.config.ts).
+          'https://www.facebook.com/profile.php?id=61596356697045',
           'https://www.instagram.com/boat4you_/',
           'https://www.linkedin.com/company/boat4you-com',
           'https://x.com/Boat4you_com',

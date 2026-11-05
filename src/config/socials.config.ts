@@ -15,7 +15,10 @@ export interface SocialLink {
 
 const socials: SocialLink[] = [
   {
-    href: 'https://www.facebook.com/boat4youcom',
+    // The "Boat4you" page (5.11.2026). The earlier page, facebook.com/boat4youcom, was deleted that day and
+    // its link went dead. The new page has no username yet, so the link uses the permanent page id, which keeps
+    // resolving after a username is set. Keep it in step with `sameAs` in utils/static/buildMetadata.ts.
+    href: 'https://www.facebook.com/profile.php?id=61596356697045',
     icon: Facebook,
     name: 'Facebook',
   },
