@@ -17,7 +17,7 @@ Only from sources where you or your publication made it public for professional 
 
 ## Why we use it, and on what legal basis
 
-To send you research and story ideas relevant to what you cover, to answer you, and to see whether our research was covered. We rely on our legitimate interest (GDPR Art. 6(1)(f)) in sharing our research with the press and in having our brands and studies covered and credited. We have weighed that interest against yours: we use only work contact details that you or your outlet published, we contact only journalists who cover the topic, and we email you one to one, at most once per study plus one follow-up. You can ask us for a summary of that assessment.
+To send you research and story ideas relevant to what you cover, to answer you, and to see whether our research was covered. We rely on our legitimate interest (GDPR Art. 6(1)(f)) in sharing our research with the press and in having our brands and studies covered and credited. We have weighed that interest against yours: we use only work contact details that you or your outlet published, we contact only journalists who cover the topic, and we email you one to one, never more than once about the same study (plus at most one follow-up). You can ask us for a summary of that assessment.
 
 ## How we email you
 
@@ -25,11 +25,11 @@ Plain text, one to one, with no tracking pixels and no link tracking. We make no
 
 ## Who we share it with
 
-We do not sell, rent or pass on your data to anyone for their own use. It is stored on our own servers in the European Union (hosted by Hetzner Online GmbH) and on our own mail server. We use Claude, an AI assistant made by Anthropic PBC, to help us find journalists who cover relevant topics and to draft our emails, so Anthropic processes your professional contact details on our behalf. Anthropic is based in the United States, so this involves a transfer of those details outside the EU.
+We do not sell, rent or pass on your data to anyone for their own use. It is stored on our own servers in the European Union (hosted by Hetzner Online GmbH) and on our own mail server. We use Claude, an AI assistant made by Anthropic PBC, to help us find journalists who cover relevant topics and to draft our emails, so Anthropic processes your professional contact details, our emails to you and our notes on your replies on our behalf. Anthropic is based in the United States, so this involves a transfer of those details outside the EU.
 
 ## How long we keep it
 
-We delete your contact record and our email history with you automatically once 24 months have passed since our last email to you (the clean-up runs monthly). Copies of our emails in the press@ mailbox are deleted on the same schedule. If you ask us to stop, or an email to you bounces, we keep only your email address on a do-not-contact list, indefinitely, so that we never email you again; we keep it on the basis of our legitimate interest in respecting your objection.
+We delete your contact record and our email history with you automatically once 24 months have passed since our last email to you (the clean-up runs monthly). Copies of our emails in the press@ mailbox are deleted on the same schedule. If you ask us to stop, or an email to you bounces, your email address (and the reason) goes on a do-not-contact list that we keep indefinitely, so that we never email you again; the rest of your record is deleted with the clean-up above. We keep that list on the basis of our legitimate interest in respecting your objection.
 
 ## Your rights
 
