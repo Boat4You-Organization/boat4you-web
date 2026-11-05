@@ -17,7 +17,7 @@ declare global {
 const MAX_LENGTH = 450;
 const WAIT_MS = 1000;
 const WAIT_TRIES = 60;
-const SERVER_BOILERPLATE = /^An error occurred in the Server Components render\b.*/s;
+const SERVER_BOILERPLATE = /^An error occurred in the Server Components render\b[\s\S]*/;
 const reported = new WeakSet<object>();
 
 /** A query string (search dates, tokens, filters), a fragment with parameters and an e-mail address (plain or URL-encoded;
