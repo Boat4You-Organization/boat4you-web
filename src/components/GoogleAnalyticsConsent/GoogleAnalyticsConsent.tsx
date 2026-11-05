@@ -2,7 +2,6 @@
 
 import { useCallback, useEffect } from 'react';
 
-import { GoogleAnalytics } from '@next/third-parties/google';
 import { usePathname } from 'next/navigation';
 import { useReportWebVitals } from 'next/web-vitals';
 
@@ -116,19 +115,46 @@ const reportWebVital = (metric: VitalsMetric, gaId: string): void => {
   });
 };
 
+/**
+ * A visit that carries a click or linker id in its address: a Google Ads click (gclid, gbraid, wbraid, gad_source),
+ * a visit handed over by a sister site (_gl, crossDomainLinker.ts) or another ad network's click id. gtag.js reads
+ * these from the address when it starts and keeps them for the whole visit, so for such a visit it has to start
+ * before the first in-app navigation rewrites the address.
+ */
+const CLICK_ID_IN_URL = /[?&](?:gclid|gbraid|wbraid|gad_source|_gl|dclid|msclkid|fbclid)=/;
+
+/** How long after the page has loaded the tag waits for an idle moment before it loads anyway. */
+const TAG_IDLE_TIMEOUT_MS = 3000;
+
+const TAG_SCRIPT_ID = 'b4y-gtag-js';
+
+/** `gtag('config', …)` sends a page view each time it runs, so the tag is configured once per document. */
+let tagConfigured = false;
+
 // Google Consent Mode v2.
 //
 // The denied-by-default consent state is set by an inline <head> script in the
 // layout that runs BEFORE gtag.js loads (see RootLayout). That ordering is what
-// keeps us compliant: the tag is loaded eagerly so Google can DETECT it, but in
-// `denied` state it sets NO cookies and tracks nothing — only anonymous,
-// cookieless consent signals — until the visitor accepts. After consent we flip
-// to `granted` here.
+// keeps us compliant: the tag is loaded without waiting for consent so Google
+// can DETECT it, but in `denied` state it sets NO cookies and tracks nothing —
+// only anonymous, cookieless consent signals — until the visitor accepts. After
+// consent we flip to `granted` here.
 //
 // Granular mapping (GDPR: separate purposes): analytics_storage follows the
 // ANALYTICS choice; ad_storage / ad_user_data / ad_personalization follow the
-// MARKETING choice. GA4 is loaded eagerly by <GoogleAnalytics>; the Google Ads
-// conversion id(s) are configured here.
+// MARKETING choice. GA4 and the Google Ads conversion id(s) are configured here.
+//
+// When gtag.js itself loads (6.11.2026, mobile speed): the GA4 tag and the two
+// Ads destinations are three scripts, about 520 KB and ~450 ms of main thread on
+// a phone, and next/script preloaded the first one in <head>, ahead of the page's
+// own resources. The commands are queued in dataLayer at once, as before; only
+// the script waits:
+// - a visit with a click or linker id in the address (CLICK_ID_IN_URL) loads it
+//   right after hydration, exactly as before, so ad attribution is untouched;
+// - every other visit loads it once the page has finished loading and the
+//   browser is idle (at most TAG_IDLE_TIMEOUT_MS later). A visitor who leaves
+//   before that is not counted as a page view.
+// Conversions (inquiry, begin checkout) fire long after either moment.
 export function GoogleAnalyticsConsent({ gaId, gAdsIds }: GoogleAnalyticsConsentProps) {
   const disabled = NO_ANALYTICS_PATH.test(usePathname() ?? '');
 
@@ -161,15 +187,61 @@ export function GoogleAnalyticsConsent({ gaId, gAdsIds }: GoogleAnalyticsConsent
     };
   }, []);
 
+  // Queue the tag's start-up commands (what @next/third-parties' <GoogleAnalytics> did inline) and the Ads
+  // destinations. `window.gtag` is the queueing stub from the layout's consent script.
   useEffect(() => {
     const gtag = getGtag();
 
-    if (disabled || !gaId || !gtag || !gAdsIds?.length) return;
+    if (disabled || !gaId || !gtag || tagConfigured) return;
 
-    gAdsIds.forEach(id => gtag('config', id));
+    tagConfigured = true;
+    gtag('js', new Date());
+    gtag('config', gaId);
+    gAdsIds?.forEach(id => gtag('config', id));
   }, [disabled, gaId, gAdsIds]);
 
-  if (!gaId || disabled) return null;
+  // Load gtag.js: at once for a visit with a click id, otherwise when the page is loaded and idle.
+  useEffect(() => {
+    if (disabled || !gaId || document.getElementById(TAG_SCRIPT_ID)) return undefined;
 
-  return <GoogleAnalytics gaId={gaId} />;
+    const load = (): void => {
+      if (document.getElementById(TAG_SCRIPT_ID)) return;
+
+      const script = document.createElement('script');
+
+      script.id = TAG_SCRIPT_ID;
+      script.async = true;
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(gaId)}`;
+      document.head.appendChild(script);
+    };
+
+    if (CLICK_ID_IN_URL.test(window.location.search)) {
+      load();
+
+      return undefined;
+    }
+
+    let idleId: number | undefined;
+    let timerId: number | undefined;
+    const whenIdle = (): void => {
+      if (typeof window.requestIdleCallback === 'function') {
+        idleId = window.requestIdleCallback(load, { timeout: TAG_IDLE_TIMEOUT_MS });
+      } else {
+        timerId = window.setTimeout(load, TAG_IDLE_TIMEOUT_MS);
+      }
+    };
+
+    if (document.readyState === 'complete') whenIdle();
+    else window.addEventListener('load', whenIdle, { once: true });
+
+    return () => {
+      window.removeEventListener('load', whenIdle);
+
+      if (idleId !== undefined) window.cancelIdleCallback(idleId);
+
+      if (timerId !== undefined) window.clearTimeout(timerId);
+    };
+  }, [disabled, gaId]);
+
+  return null;
 }
