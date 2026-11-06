@@ -8,6 +8,7 @@ import { useTranslations } from 'next-intl';
 import { continentsTabs } from '@/config/tabs.config';
 import { CountryCountModel } from '@/models/locations.model';
 import colors from '@/styles/themes/colors';
+import homeType from '@/views/Home/homeType';
 
 import styles from './AllDestinationsSection.module.scss';
 import DestinationsGrid from './DestinationsGrid';
@@ -87,15 +88,13 @@ const AllDestinationsSection = ({ countries }: AllDestinationsSectionProps) => {
       // Side gutter so the section is not edge-to-edge on mobile (Mario).
       sx={{ px: { xs: 2, md: 3 } }}
     >
-      <Typography variant="h1" component="h2" color={colors.blue950}>
+      <Typography variant="h1" component="h2" color={colors.blue950} sx={homeType.sectionTitle}>
         {t('allDestinationsSection.allOf')}{' '}
         <Typography
           variant="h1"
           component="span"
-          fontStyle="italic"
-          fontWeight={800}
           color={colors.blue500}
-          sx={{ pl: '0.1em', wordBreak: 'break-word' }}
+          sx={{ ...homeType.emphasis, pl: '0.1em', wordBreak: 'break-word' }}
         >
           {t('allDestinationsSection.ourDestinations')}
         </Typography>

@@ -1,6 +1,7 @@
 @use '@/styles/settings/variables' as *;
 @use '@/styles/utils/rem-calc' as *;
 @use '@/styles/mixins/breakpoints' as *;
+@use '@/views/Home/homeType' as type;
 
 // Overlay card (Jul-2026, Mario): mirrors DestinationCard — photo fills the
 // tile, name + count inside the image over a bottom scrim.
@@ -41,16 +42,11 @@
   }
 
   .title {
+    @include type.tile-title;
+
     margin: 0;
-    font-size: rem-calc(28);
-    font-weight: 800;
-    font-style: italic;
     color: #fff;
     text-shadow: 0 1px 8px rgb(10 14 46 / 45%);
-
-    @include media(0, 'md') {
-      font-size: rem-calc(18);
-    }
   }
 
   .count {

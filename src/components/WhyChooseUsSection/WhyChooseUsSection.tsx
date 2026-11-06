@@ -6,6 +6,7 @@ import WhyChooseUsItem from '@/components/WhyChooseUsItem';
 import { HowWeWorkItem } from '@/config/howWeWork.config';
 import { WhyChooseUsItem as WhyChooseUsItemType } from '@/config/whyChooseUs';
 import colors from '@/styles/themes/colors';
+import homeType from '@/views/Home/homeType';
 
 import styles from './WhyChooseUsSection.module.scss';
 
@@ -15,7 +16,7 @@ interface WhyChooseUsSectionProps {
 }
 
 const strong = (chunks: React.ReactNode) => (
-  <Typography variant="h1" component="span" fontStyle="italic" fontWeight={700} color={colors.blue500}>
+  <Typography variant="h1" component="span" color={colors.blue500} sx={homeType.emphasis}>
     {chunks}
   </Typography>
 );
@@ -32,7 +33,7 @@ const WhyChooseUsSection = ({ translation, data }: WhyChooseUsSectionProps) => {
       // Side gutter so the section is not edge-to-edge on mobile (Mario).
       sx={{ px: { xs: 2, md: 3 } }}
     >
-      <Typography variant="h1" component="h2" color={colors.blue950}>
+      <Typography variant="h1" component="h2" color={colors.blue950} sx={homeType.sectionTitle}>
         {t.rich('whyChooseUsSection.whyChoose', {
           strong,
         })}

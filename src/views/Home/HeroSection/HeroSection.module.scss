@@ -130,7 +130,8 @@ $hero-bg-mobile: url("data:image/svg+xml,%3Csvg width='393' height='424' viewBox
   align-items: center;
   gap: rem-calc(6);
   color: $white;
-  font-size: rem-calc(13);
+  // 12 on a phone like the trust pills beside it (home type scale, src/views/Home/_homeType.scss).
+  font-size: rem-calc(12);
   line-height: 1;
   text-decoration: none;
   opacity: 0.95;

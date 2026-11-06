@@ -1,5 +1,6 @@
 @use '@/styles/utils/rem-calc' as *;
 @use '@/styles/mixins/breakpoints' as *;
+@use '@/views/Home/homeType' as type;
 
 // Replicates MUI <Container maxWidth="xl" disableGutters>: full width capped at
 // 1280, centred, no gutters. Same vertical rhythm as AllDestinationsSection /
@@ -25,17 +26,17 @@
 
 // Was Typography variant="h1" (36px / weight 500) as <h2>, colour blue950.
 .title {
+  @include type.section-title;
+
   margin: 0;
-  font-size: rem-calc(36);
-  font-weight: 500;
   color: #141857;
 }
 
 // Was the nested Typography span: italic 800, blue500, slight left pad.
 .titleEmphasis {
+  @include type.emphasis;
+
   padding-left: 0.1em;
-  font-style: italic;
-  font-weight: 800;
   color: #2856ff;
   overflow-wrap: break-word;
 }
