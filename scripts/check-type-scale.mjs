@@ -20,6 +20,8 @@ const PATTERNS = [
   /fontSize\s*:\s*(\d+(?:\.\d+)?)\s*(?=[,}\n])/g,
   /fontSize=\{(\d+(?:\.\d+)?)\}/g,
 ];
+// rem / em sizes (`fontSize: '0.62rem'`, `font-size: 0.875rem`), counted at 16 px.
+const REM = [/font-size:\s*(\d*\.?\d+)r?em\b/g, /fontSize\s*:\s*['"](\d*\.?\d+)r?em['"]/g];
 // A responsive size, `fontSize: { xs: 18, md: 22 }` or the prop `fontSize={{ xs: 18, md: cond ? 36 : 62 }}`: every
 // number in the object is a size.
 const OBJ = /fontSize\s*(?::|=\{)\s*\{([^}]*)\}/g;
@@ -50,8 +52,9 @@ walk(join(ROOT, 'src')).forEach(path => {
     const values = PATTERNS.flatMap(re => [...line.matchAll(re)].map(m => Number(m[1])));
 
     [...line.matchAll(OBJ)].forEach(m => values.push(...[...m[1].matchAll(OBJ_VAL)].map(v => Number(v[1]))));
+    REM.forEach(re => [...line.matchAll(re)].forEach(m => values.push(Number(m[1]) * 16)));
     values
-      .filter(v => v >= 10 && v < 45 && !SCALE.has(v) && !(v === 20 && allows20(rel, line, selector)))
+      .filter(v => !SCALE.has(v) && !(v === 20 && allows20(rel, line, selector)))
       .forEach(v => offScale.push(`${rel}:${i + 1}: ${v}px`));
   });
 });

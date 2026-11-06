@@ -87,10 +87,10 @@ const YachtTypeGrid = ({ selected, onToggle, counts }: YachtTypeGridProps) => {
             <Box
               component="span"
               sx={{
-                fontSize: 9.5,
+                fontSize: 12,
                 opacity: 0.65,
                 fontVariantNumeric: 'tabular-nums',
-                minHeight: 12,
+                minHeight: 14,
               }}
             >
               {count != null ? number.format(count) : ' '}
