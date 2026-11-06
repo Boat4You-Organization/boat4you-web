@@ -194,7 +194,10 @@ const RootLayout = async ({ children, params }: RootLayoutProps) => {
       </body>
       <GoogleAnalyticsConsent
         gaId={process.env.NEXT_PUBLIC_BOAT_WS_GAID as string}
-        gAdsIds={['AW-17979079830', 'AW-11060948992']}
+        // Ads account 824-717-8276 (Google tag "EYC"): every conversion and the boat4you remarketing list.
+        // AW-17979079830 was removed 6.11.2026: no conversion was sent to it and no campaign or audience in the
+        // Ads accounts we can open uses it (Mario: "ako nam ne treba, makni ga").
+        gAdsIds={['AW-11060948992']}
       />
     </html>
   );

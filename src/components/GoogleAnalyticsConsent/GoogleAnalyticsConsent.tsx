@@ -145,7 +145,8 @@ let tagConfigured = false;
 // MARKETING choice. GA4 and the Google Ads conversion id(s) are configured here.
 //
 // When gtag.js itself loads (6.11.2026, mobile speed): the GA4 tag and the two
-// Ads destinations are three scripts, about 520 KB and ~450 ms of main thread on
+// Ads destinations of that day were three scripts (one Ads destination is left,
+// see the layout), about 520 KB and ~450 ms of main thread on
 // a phone, and next/script preloaded the first one in <head>, ahead of the page's
 // own resources. The commands are queued in dataLayer at once, as before; only
 // the script waits:
