@@ -125,7 +125,7 @@ const Gallery = ({ yacht, images, showShareAndFavorite = false, maxDisplayedImag
               className={cx(styles.imageItem, styles.firstItem)}
             >
               <ImageOutlined
-                sx={{ position: 'absolute', inset: 0, m: 'auto', fontSize: 40, color: colors.black400, opacity: 0.5 }}
+                sx={{ position: 'absolute', inset: 0, m: 'auto', fontSize: 36, color: colors.black400, opacity: 0.5 }}
               />
             </ImageListItem>
           )}

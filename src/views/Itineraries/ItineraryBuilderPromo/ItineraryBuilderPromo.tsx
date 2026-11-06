@@ -113,7 +113,7 @@ const ItineraryBuilderPromo = ({
           <Typography
             component="h2"
             sx={{
-              fontSize: { xs: 28, sm: 34, md: 40 },
+              fontSize: { xs: 28, sm: 36, md: 36 },
               fontWeight: 800,
               lineHeight: 1.12,
               color: colors.white,
@@ -126,7 +126,7 @@ const ItineraryBuilderPromo = ({
               {italic}
             </Box>
           </Typography>
-          <Typography sx={{ fontSize: { xs: 14, md: 15.5 }, lineHeight: 1.6, color: colors.blue100, maxWidth: 560 }}>
+          <Typography sx={{ fontSize: { xs: 14, md: 16 }, lineHeight: 1.6, color: colors.blue100, maxWidth: 560 }}>
             {lede}
           </Typography>
           <Stack
@@ -152,7 +152,7 @@ const ItineraryBuilderPromo = ({
             >
               {action}
             </Button>
-            <Typography component="span" sx={{ fontSize: 13, fontWeight: 600, color: colors.blue200 }}>
+            <Typography component="span" sx={{ fontSize: 14, fontWeight: 600, color: colors.blue200 }}>
               {eyebrow}
             </Typography>
           </Stack>

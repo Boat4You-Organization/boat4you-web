@@ -229,7 +229,7 @@ const CustomBuilder = () => {
                       borderRadius: '50%',
                       bgcolor: colors.blue600,
                       color: '#fff',
-                      fontSize: 13,
+                      fontSize: 14,
                       fontWeight: 700,
                       display: 'flex',
                       alignItems: 'center',
@@ -290,7 +290,7 @@ const CustomBuilder = () => {
                       {(blurbOf(sug.content) || blurbOf(stopContentRef(sug.stop.key))) && (
                         <Typography
                           sx={{
-                            fontSize: 12.5,
+                            fontSize: 12,
                             color: '#3c4257',
                             mt: 0.5,
                             display: '-webkit-box',
@@ -309,15 +309,15 @@ const CustomBuilder = () => {
             )}
 
             {!finished && suggestions.length === 0 && days.length > 0 && (
-              <Typography sx={{ fontSize: 13, color: '#b3261e' }}>{t('builder.deadEnd')}</Typography>
+              <Typography sx={{ fontSize: 14, color: '#b3261e' }}>{t('builder.deadEnd')}</Typography>
             )}
 
             {finished && (
               <Box sx={{ p: 2, bgcolor: '#eef7ee', borderRadius: 2, border: '1px solid #bfe3c0' }}>
-                <Typography sx={{ fontSize: 15, fontWeight: 700, color: '#15803d', mb: 0.5 }}>
+                <Typography sx={{ fontSize: 14, fontWeight: 700, color: '#15803d', mb: 0.5 }}>
                   {t('builder.done')}
                 </Typography>
-                <Typography sx={{ fontSize: 13, color: '#3c4257', mb: 1.5 }}>
+                <Typography sx={{ fontSize: 14, color: '#3c4257', mb: 1.5 }}>
                   {t('builder.doneSummary', { days: tripDays, nm: totalNm })}
                 </Typography>
                 <Button
@@ -350,14 +350,14 @@ const CustomBuilder = () => {
                     )}
                     <Box sx={{ p: 2 }}>
                       <Stack direction="row" alignItems="center" justifyContent="space-between" gap={1}>
-                        <Typography sx={{ fontSize: 15, fontWeight: 700, color: colors.blue950 }}>
+                        <Typography sx={{ fontSize: 14, fontWeight: 700, color: colors.blue950 }}>
                           {t('builder.dayN', { day: i + 1 })}: {i === 0 ? start.label : days[i - 1].stop.label} →{' '}
                           {d.stop.label}
                         </Typography>
                         <Chip size="small" label={`~${d.nm} NM`} sx={{ bgcolor: '#eef1fb', fontWeight: 600 }} />
                       </Stack>
                       {(longTextOf(d.stop.key, d.content) || dayBlurb(d)) && (
-                        <Typography sx={{ fontSize: 13.5, lineHeight: 1.6, color: '#3c4257', mt: 0.8 }}>
+                        <Typography sx={{ fontSize: 14, lineHeight: 1.6, color: '#3c4257', mt: 0.8 }}>
                           {longTextOf(d.stop.key, d.content) || dayBlurb(d)}
                         </Typography>
                       )}
@@ -390,7 +390,7 @@ const CustomBuilder = () => {
                 )}
                 <Box sx={{ p: 1.6 }}>
                   <Stack direction="row" alignItems="center" justifyContent="space-between" gap={1}>
-                    <Typography sx={{ fontSize: 15, fontWeight: 700, color: colors.blue950 }}>
+                    <Typography sx={{ fontSize: 14, fontWeight: 700, color: colors.blue950 }}>
                       {infoSug.stop.label}
                     </Typography>
                     <Chip size="small" label={`~${infoSug.nm} NM`} sx={{ bgcolor: '#eef1fb', fontWeight: 600 }} />
@@ -398,7 +398,7 @@ const CustomBuilder = () => {
                   {longTextOf(infoSug.stop.key, infoSug.content) && (
                     <Typography
                       sx={{
-                        fontSize: 12.5,
+                        fontSize: 12,
                         lineHeight: 1.5,
                         color: '#3c4257',
                         mt: 0.7,

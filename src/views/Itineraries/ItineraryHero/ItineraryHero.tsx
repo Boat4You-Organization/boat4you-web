@@ -65,14 +65,14 @@ const ItineraryHero = ({ kicker, eyebrow, title, italic, lede, image }: Itinerar
           {kicker}
         </Typography>
         {eyebrow && (
-          <Typography component="span" sx={{ fontSize: { xs: 13, md: 15 }, fontWeight: 600, color: colors.blue100 }}>
+          <Typography component="span" sx={{ fontSize: { xs: 14, md: 14 }, fontWeight: 600, color: colors.blue100 }}>
             {eyebrow}
           </Typography>
         )}
         <Typography
           component="h1"
           sx={{
-            fontSize: { xs: 32, sm: 42, md: 52 },
+            fontSize: { xs: 36, sm: 36, md: 62 },
             fontWeight: 800,
             lineHeight: 1.1,
             color: colors.white,
@@ -88,7 +88,7 @@ const ItineraryHero = ({ kicker, eyebrow, title, italic, lede, image }: Itinerar
           )}
         </Typography>
         {lede && (
-          <Typography sx={{ fontSize: { xs: 14.5, md: 16 }, lineHeight: 1.6, color: colors.blue50, mt: 0.5 }}>
+          <Typography sx={{ fontSize: { xs: 14, md: 16 }, lineHeight: 1.6, color: colors.blue50, mt: 0.5 }}>
             {lede}
           </Typography>
         )}

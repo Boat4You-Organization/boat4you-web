@@ -415,7 +415,7 @@ const FiltersSectionV2 = ({ catalogueData, catalogueFilters, isMobile, serverTot
             <Box sx={searchV2Type.numericBig}>
               {money(priceRange[0])} – {money(priceRange[1])}
             </Box>
-            <Box sx={{ fontSize: 11, color: searchV2.inkSoft }}>
+            <Box sx={{ fontSize: 12, color: searchV2.inkSoft }}>
               {distribution?.priceMedian != null
                 ? t('medianPrice', {
                     amount: money(Number(distribution.priceMedian)),
@@ -493,7 +493,7 @@ const FiltersSectionV2 = ({ catalogueData, catalogueFilters, isMobile, serverTot
         <FilterGroup title={t('length')}>
           <Box sx={{ ...searchV2Type.numericValue, mb: '6px' }}>
             {length[0]} – {length[1]} m
-            <Box component="span" sx={{ fontWeight: 400, color: searchV2.inkSoft, ml: '6px', fontSize: 11 }}>
+            <Box component="span" sx={{ fontWeight: 400, color: searchV2.inkSoft, ml: '6px', fontSize: 12 }}>
               ({Math.round(length[0] * 3.28)}–{Math.round(length[1] * 3.28)} ft)
             </Box>
           </Box>
@@ -642,7 +642,7 @@ const FiltersSectionV2 = ({ catalogueData, catalogueFilters, isMobile, serverTot
         <FilterGroup title={t('enginePower')}>
           <Box sx={{ ...searchV2Type.numericValue, mb: '6px' }}>
             {t('engineRangeHp', { min: number.format(engine[0]), max: number.format(engine[1]) })}
-            <Box component="span" sx={{ fontWeight: 400, color: searchV2.inkSoft, ml: '6px', fontSize: 11 }}>
+            <Box component="span" sx={{ fontWeight: 400, color: searchV2.inkSoft, ml: '6px', fontSize: 12 }}>
               ({number.format(Math.round(engine[0] * 0.745))}–{number.format(Math.round(engine[1] * 0.745))} kW)
             </Box>
           </Box>

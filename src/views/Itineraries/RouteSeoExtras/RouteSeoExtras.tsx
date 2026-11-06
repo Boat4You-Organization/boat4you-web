@@ -27,7 +27,7 @@ const StatPill = ({ kicker, value }: { kicker: string; value: string }) => (
   <Box>
     <Typography
       sx={{
-        fontSize: 10,
+        fontSize: 12,
         letterSpacing: '0.2em',
         textTransform: 'uppercase',
         color: colors.blue700,
@@ -37,7 +37,7 @@ const StatPill = ({ kicker, value }: { kicker: string; value: string }) => (
     >
       {kicker}
     </Typography>
-    <Typography sx={{ fontSize: { xs: 14, sm: 15 }, fontWeight: 700, color: colors.blue950, lineHeight: 1.3 }}>
+    <Typography sx={{ fontSize: { xs: 14, sm: 14 }, fontWeight: 700, color: colors.blue950, lineHeight: 1.3 }}>
       {value}
     </Typography>
   </Box>
@@ -111,7 +111,7 @@ const RouteSeoExtras = ({ route, sailingArea, itinerarySlug, onDaySelect, boatsS
           >
             <Typography
               sx={{
-                fontSize: 11,
+                fontSize: 12,
                 letterSpacing: '0.28em',
                 textTransform: 'uppercase',
                 color: colors.blue700,
@@ -123,7 +123,7 @@ const RouteSeoExtras = ({ route, sailingArea, itinerarySlug, onDaySelect, boatsS
             </Typography>
             <Typography
               component="h2"
-              sx={{ fontSize: { xs: 19, md: 22 }, fontWeight: 700, color: colors.blue950, lineHeight: 1.3, mb: 2.5 }}
+              sx={{ fontSize: { xs: 18, md: 22 }, fontWeight: 700, color: colors.blue950, lineHeight: 1.3, mb: 2.5 }}
             >
               {t('extras.atAGlanceHeading')}
             </Typography>
@@ -145,12 +145,12 @@ const RouteSeoExtras = ({ route, sailingArea, itinerarySlug, onDaySelect, boatsS
           <Box>
             <Typography
               component="h2"
-              sx={{ fontSize: { xs: 21, md: 25 }, fontWeight: 700, color: colors.blue950, lineHeight: 1.3, mb: 1.5 }}
+              sx={{ fontSize: { xs: 22, md: 22 }, fontWeight: 700, color: colors.blue950, lineHeight: 1.3, mb: 1.5 }}
             >
               {t('extras.summaryHeading')}
             </Typography>
             {onDaySelect && (
-              <Typography sx={{ color: colors.black600, fontSize: { xs: 13, sm: 14 }, lineHeight: 1.6, mb: 1.5 }}>
+              <Typography sx={{ color: colors.black600, fontSize: { xs: 14, sm: 14 }, lineHeight: 1.6, mb: 1.5 }}>
                 {t('extras.summaryHint')}
               </Typography>
             )}
@@ -170,7 +170,7 @@ const RouteSeoExtras = ({ route, sailingArea, itinerarySlug, onDaySelect, boatsS
                     <Typography
                       component="span"
                       sx={{
-                        fontSize: { xs: 12, sm: 13 },
+                        fontSize: { xs: 12, sm: 14 },
                         textTransform: 'uppercase',
                         letterSpacing: '0.14em',
                         fontWeight: 700,
@@ -183,7 +183,7 @@ const RouteSeoExtras = ({ route, sailingArea, itinerarySlug, onDaySelect, boatsS
                     <Typography
                       component="h3"
                       sx={{
-                        fontSize: { xs: 14, sm: 15 },
+                        fontSize: { xs: 14, sm: 14 },
                         fontWeight: 700,
                         color: colors.blue950,
                         m: 0,
@@ -231,7 +231,7 @@ const RouteSeoExtras = ({ route, sailingArea, itinerarySlug, onDaySelect, boatsS
           <Box>
             <Typography
               component="h2"
-              sx={{ fontSize: { xs: 19, md: 22 }, fontWeight: 700, color: colors.blue950, lineHeight: 1.3, mb: 2.5 }}
+              sx={{ fontSize: { xs: 18, md: 22 }, fontWeight: 700, color: colors.blue950, lineHeight: 1.3, mb: 2.5 }}
             >
               {t('extras.planHeading')}
             </Typography>
@@ -248,7 +248,7 @@ const RouteSeoExtras = ({ route, sailingArea, itinerarySlug, onDaySelect, boatsS
                     className="plan-card-title"
                     component="h3"
                     sx={{
-                      fontSize: { xs: 14, sm: 15 },
+                      fontSize: { xs: 14, sm: 14 },
                       fontWeight: 700,
                       color: colors.blue950,
                       lineHeight: 1.3,
@@ -258,7 +258,7 @@ const RouteSeoExtras = ({ route, sailingArea, itinerarySlug, onDaySelect, boatsS
                   >
                     {c.title}
                   </Typography>
-                  <Typography sx={{ color: colors.black600, fontSize: { xs: 12, sm: 13 }, lineHeight: 1.5, mt: 0.75 }}>
+                  <Typography sx={{ color: colors.black600, fontSize: { xs: 12, sm: 14 }, lineHeight: 1.5, mt: 0.75 }}>
                     {c.subtitle}
                   </Typography>
                 </Box>

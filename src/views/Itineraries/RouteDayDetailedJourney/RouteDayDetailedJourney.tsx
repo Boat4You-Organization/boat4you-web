@@ -125,7 +125,7 @@ const RouteDayDetailedJourney = ({ route }: Props) => {
           <Typography
             component="span"
             sx={{
-              fontSize: 11,
+              fontSize: 12,
               letterSpacing: '0.18em',
               textTransform: 'uppercase',
               color: colors.blue800,
@@ -136,11 +136,11 @@ const RouteDayDetailedJourney = ({ route }: Props) => {
           </Typography>
           <Typography
             component="h2"
-            sx={{ fontSize: { xs: 26, md: 36 }, fontWeight: 800, color: colors.blue950, lineHeight: 1.12, m: 0 }}
+            sx={{ fontSize: { xs: 28, md: 36 }, fontWeight: 800, color: colors.blue950, lineHeight: 1.12, m: 0 }}
           >
             {tUi('journey.heading')}
           </Typography>
-          <Typography sx={{ color: colors.black700, fontSize: { xs: 13.5, sm: 14.5 }, lineHeight: 1.6, mt: 0.5 }}>
+          <Typography sx={{ color: colors.black700, fontSize: { xs: 14, sm: 14 }, lineHeight: 1.6, mt: 0.5 }}>
             {tUi('journey.intro')}
           </Typography>
         </Stack>
@@ -172,7 +172,7 @@ const RouteDayDetailedJourney = ({ route }: Props) => {
                 backgroundColor: 'rgb(20 24 87 / 85%)',
                 px: 1.75,
                 py: 0.75,
-                fontSize: 11,
+                fontSize: 12,
                 fontWeight: 700,
                 textTransform: 'uppercase',
                 letterSpacing: '0.14em',
@@ -270,7 +270,7 @@ const RouteDayDetailedJourney = ({ route }: Props) => {
                         <Typography
                           component="span"
                           sx={{
-                            fontSize: 11,
+                            fontSize: 12,
                             fontWeight: 700,
                             textTransform: 'uppercase',
                             letterSpacing: '0.16em',
@@ -283,7 +283,7 @@ const RouteDayDetailedJourney = ({ route }: Props) => {
                       <Typography
                         component="h3"
                         sx={{
-                          fontSize: { xs: 19, md: 23 },
+                          fontSize: { xs: 18, md: 22 },
                           fontWeight: 700,
                           color: colors.blue950,
                           lineHeight: 1.3,
@@ -293,7 +293,7 @@ const RouteDayDetailedJourney = ({ route }: Props) => {
                       >
                         {day.routeFrom} → {day.routeTo}
                       </Typography>
-                      <Typography sx={{ fontSize: { xs: 14, sm: 15 }, lineHeight: 1.65, color: colors.black700 }}>
+                      <Typography sx={{ fontSize: { xs: 14, sm: 14 }, lineHeight: 1.65, color: colors.black700 }}>
                         {resolveDayText(route, day, 'description', day.description, t)}
                       </Typography>
 
@@ -302,7 +302,7 @@ const RouteDayDetailedJourney = ({ route }: Props) => {
                           <Typography
                             sx={{
                               mb: 1.25,
-                              fontSize: 11,
+                              fontSize: 12,
                               fontWeight: 700,
                               textTransform: 'uppercase',
                               letterSpacing: '0.12em',
@@ -323,7 +323,7 @@ const RouteDayDetailedJourney = ({ route }: Props) => {
                                   <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z" />
                                 </Box>
                                 <Typography
-                                  sx={{ fontSize: { xs: 13.5, sm: 14 }, lineHeight: 1.45, color: colors.black700 }}
+                                  sx={{ fontSize: { xs: 14, sm: 14 }, lineHeight: 1.45, color: colors.black700 }}
                                 >
                                   {item}
                                 </Typography>
@@ -358,7 +358,7 @@ const RouteDayDetailedJourney = ({ route }: Props) => {
                             <Typography
                               sx={{
                                 mb: 0.25,
-                                fontSize: 11,
+                                fontSize: 12,
                                 fontWeight: 700,
                                 textTransform: 'uppercase',
                                 letterSpacing: '0.12em',
@@ -367,9 +367,7 @@ const RouteDayDetailedJourney = ({ route }: Props) => {
                             >
                               {tUi('journey.mooringTip')}
                             </Typography>
-                            <Typography
-                              sx={{ fontSize: { xs: 13.5, sm: 14 }, lineHeight: 1.45, color: colors.black700 }}
-                            >
+                            <Typography sx={{ fontSize: { xs: 14, sm: 14 }, lineHeight: 1.45, color: colors.black700 }}>
                               {mooringTip}
                             </Typography>
                           </Box>

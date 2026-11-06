@@ -35,11 +35,11 @@ const ItineraryEndCta = ({ title, lede, action, to, secondaryAction, secondaryTo
     >
       <Typography
         component="h2"
-        sx={{ fontSize: { xs: 24, md: 32 }, fontWeight: 800, color: colors.blue950, lineHeight: 1.2, m: 0 }}
+        sx={{ fontSize: { xs: 22, md: 36 }, fontWeight: 800, color: colors.blue950, lineHeight: 1.2, m: 0 }}
       >
         {title}
       </Typography>
-      <Typography sx={{ fontSize: { xs: 14, md: 15.5 }, color: colors.black700, mt: 1.5, mx: 'auto', maxWidth: 640 }}>
+      <Typography sx={{ fontSize: { xs: 14, md: 16 }, color: colors.black700, mt: 1.5, mx: 'auto', maxWidth: 640 }}>
         {lede}
       </Typography>
       <Stack direction={{ xs: 'column', sm: 'row' }} gap={1.5} justifyContent="center" sx={{ mt: 3.5 }}>

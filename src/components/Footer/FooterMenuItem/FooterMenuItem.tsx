@@ -25,7 +25,7 @@ const FooterMenuItem = ({ title, links, isHorizontal = false }: FooterMenuItemPr
         textTransform="uppercase"
         color={colors.blue500}
         sx={{
-          fontSize: { xs: 12, md: 13 },
+          fontSize: { xs: 12, md: 14 },
           letterSpacing: '0.08em',
         }}
       >
@@ -60,7 +60,7 @@ const FooterMenuItem = ({ title, links, isHorizontal = false }: FooterMenuItemPr
                       display: 'inline-block',
                       lineHeight: 1.5,
                       // Match the rest of the site's body copy size.
-                      fontSize: { xs: 13, md: 14 },
+                      fontSize: { xs: 14, md: 14 },
                       // Inherit so the parent <a>:hover colour swap (in
                       // FooterMenuItem.module.scss) actually reaches us.
                       color: 'inherit',

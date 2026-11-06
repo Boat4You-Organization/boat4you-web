@@ -589,7 +589,7 @@ const ReservationCTA = ({ reservationDetails }: ReservationCTAProps) => {
                 sx={{
                   color: colors.black500,
                   textTransform: 'none',
-                  fontSize: 13,
+                  fontSize: 14,
                   fontWeight: 500,
                   '&:hover': { backgroundColor: 'transparent', color: colors.black700, textDecoration: 'underline' },
                 }}

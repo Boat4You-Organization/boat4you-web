@@ -360,7 +360,7 @@ const BoatListingItemCardView = ({
                   color: colors.yellow500,
                   border: `1px solid ${colors.yellow500}`,
                   fontWeight: 700,
-                  fontSize: 11,
+                  fontSize: 12,
                   whiteSpace: 'nowrap',
                   boxShadow: '0 2px 6px rgba(0,0,0,0.15)',
                   zIndex: 2,
@@ -381,7 +381,7 @@ const BoatListingItemCardView = ({
                   zIndex: 2,
                   backgroundColor: colors.red600,
                   color: colors.white,
-                  fontSize: 11,
+                  fontSize: 12,
                   fontWeight: 800,
                   letterSpacing: 0.6,
                   textTransform: 'uppercase',
@@ -555,7 +555,7 @@ const BoatListingItemCardView = ({
                 <Typography
                   variant="body2"
                   color={colors.black600}
-                  sx={{ fontSize: { xs: 11, md: 14 }, whiteSpace: 'nowrap' }}
+                  sx={{ fontSize: { xs: 12, md: 14 }, whiteSpace: 'nowrap' }}
                 >
                   {t('filters.year')}{' '}
                   <Box component="span" fontWeight={700} color={colors.black950}>
@@ -568,7 +568,7 @@ const BoatListingItemCardView = ({
                   key={chip.key}
                   variant="body2"
                   color={colors.black600}
-                  sx={{ fontSize: { xs: 11, md: 14 }, minWidth: 0 }}
+                  sx={{ fontSize: { xs: 12, md: 14 }, minWidth: 0 }}
                 >
                   {chip.label}{' '}
                   <Box component="span" fontWeight={700} color={colors.black950}>
@@ -603,7 +603,7 @@ const BoatListingItemCardView = ({
                     <AmenityIcon sx={{ fontSize: { xs: 14, md: 20 }, color: colors.black600 }} />
                     <Typography
                       color={colors.black600}
-                      sx={{ textAlign: 'center', lineHeight: 1.2, fontSize: { xs: 10, md: 11 } }}
+                      sx={{ textAlign: 'center', lineHeight: 1.2, fontSize: { xs: 12, md: 12 } }}
                     >
                       {label}
                     </Typography>
@@ -640,8 +640,8 @@ const BoatListingItemCardView = ({
                         whiteSpace: 'nowrap',
                       }}
                     >
-                      <AccessTime sx={{ fontSize: 11, color: colors.blue500 }} />
-                      <Typography color={colors.blue500} sx={{ fontSize: 11, fontWeight: 500, whiteSpace: 'nowrap' }}>
+                      <AccessTime sx={{ fontSize: 12, color: colors.blue500 }} />
+                      <Typography color={colors.blue500} sx={{ fontSize: 12, fontWeight: 500, whiteSpace: 'nowrap' }}>
                         {t('common.peopleAlsoInterested', { count: String(interestedCount) })}
                       </Typography>
                     </Stack>
@@ -655,7 +655,7 @@ const BoatListingItemCardView = ({
                   <Typography
                     variant="body2"
                     color={colors.black600}
-                    sx={isMobile ? { fontSize: 11, lineHeight: 1.3 } : undefined}
+                    sx={isMobile ? { fontSize: 12, lineHeight: 1.3 } : undefined}
                   >
                     {t('common.priceForXDays', { days: String(days) })}
                   </Typography>
@@ -696,7 +696,7 @@ const BoatListingItemCardView = ({
                       {formattedTotal}
                     </Typography>
                   ) : (
-                    <Typography component="p" fontWeight={700} color={colors.black700} sx={{ fontSize: 15 }}>
+                    <Typography component="p" fontWeight={700} color={colors.black700} sx={{ fontSize: 14 }}>
                       {t('common.priceOnRequest')}
                     </Typography>
                   )}
@@ -772,7 +772,7 @@ const BoatListingItemCardView = ({
                         whiteSpace: 'nowrap',
                       }}
                     >
-                      <AccessTime sx={{ fontSize: 13 }} />
+                      <AccessTime sx={{ fontSize: 14 }} />
                       {t('common.preReserved')}
                     </Stack>
                   )}

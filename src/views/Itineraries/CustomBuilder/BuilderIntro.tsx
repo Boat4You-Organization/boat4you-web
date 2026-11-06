@@ -21,17 +21,17 @@ const BuilderIntro = async () => {
   return (
     <Container maxWidth="xl" sx={{ px: { xs: 2, md: 3 }, pt: 4 }}>
       <Stack gap={1.2} sx={{ maxWidth: 880 }}>
-        <Typography sx={{ fontSize: { xs: 15, md: 16 }, lineHeight: 1.65, color: '#3c4257' }}>
+        <Typography sx={{ fontSize: { xs: 14, md: 16 }, lineHeight: 1.65, color: '#3c4257' }}>
           {t('builder.promoP1')}
         </Typography>
-        <Typography sx={{ fontSize: { xs: 15, md: 16 }, lineHeight: 1.65, color: '#3c4257' }}>
+        <Typography sx={{ fontSize: { xs: 14, md: 16 }, lineHeight: 1.65, color: '#3c4257' }}>
           {t('builder.promoP2')}
         </Typography>
       </Stack>
 
       <Typography
         component="h2"
-        sx={{ fontSize: { xs: 20, md: 24 }, fontWeight: 800, color: colors.blue950, mt: 4, mb: 2 }}
+        sx={{ fontSize: { xs: 18, md: 22 }, fontWeight: 800, color: colors.blue950, mt: 4, mb: 2 }}
       >
         {t('builder.howTitle')}
       </Typography>
@@ -45,7 +45,7 @@ const BuilderIntro = async () => {
                 borderRadius: '50%',
                 bgcolor: colors.blue600,
                 color: '#fff',
-                fontSize: 15,
+                fontSize: 14,
                 fontWeight: 700,
                 display: 'flex',
                 alignItems: 'center',
@@ -55,10 +55,8 @@ const BuilderIntro = async () => {
             >
               {i + 1}
             </Box>
-            <Typography sx={{ fontSize: 15.5, fontWeight: 700, color: colors.blue950, mb: 0.6 }}>
-              {step.title}
-            </Typography>
-            <Typography sx={{ fontSize: 13.5, lineHeight: 1.6, color: '#3c4257' }}>{step.text}</Typography>
+            <Typography sx={{ fontSize: 16, fontWeight: 700, color: colors.blue950, mb: 0.6 }}>{step.title}</Typography>
+            <Typography sx={{ fontSize: 14, lineHeight: 1.6, color: '#3c4257' }}>{step.text}</Typography>
           </Box>
         ))}
       </Stack>
@@ -75,7 +73,7 @@ const BuilderIntro = async () => {
             <Typography component="span" sx={{ color: colors.blue600, fontWeight: 800, fontSize: 14 }}>
               ✓
             </Typography>
-            <Typography component="span" sx={{ fontSize: 13, fontWeight: 600, color: colors.blue950 }}>
+            <Typography component="span" sx={{ fontSize: 14, fontWeight: 600, color: colors.blue950 }}>
               {highlight}
             </Typography>
           </Stack>

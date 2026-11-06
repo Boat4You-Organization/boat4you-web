@@ -43,7 +43,7 @@ const BusinessCard = () => (
         <Typography
           sx={{
             fontFamily: TAGLINE_FONT_STACK,
-            fontSize: { xs: 30, md: 38 },
+            fontSize: { xs: 28, md: 36 },
             fontWeight: 600,
             lineHeight: 1.1,
             color: colors.blue950,
@@ -55,7 +55,7 @@ const BusinessCard = () => (
         <Typography
           sx={{
             fontFamily: TAGLINE_FONT_STACK,
-            fontSize: { xs: 30, md: 38 },
+            fontSize: { xs: 28, md: 36 },
             fontWeight: 600,
             fontStyle: 'italic',
             lineHeight: 1.1,

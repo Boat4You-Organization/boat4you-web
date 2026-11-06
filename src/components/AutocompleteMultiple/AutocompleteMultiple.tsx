@@ -191,8 +191,8 @@ const AutocompleteMultiple = ({
             placeholder={placeholder}
             error={!!error}
             sx={{
-              '& .MuiInputBase-input': { fontSize: 13 },
-              '& .MuiInputBase-input::placeholder': { fontSize: 13 },
+              '& .MuiInputBase-input': { fontSize: 14 },
+              '& .MuiInputBase-input::placeholder': { fontSize: 14 },
             }}
           />
         )}

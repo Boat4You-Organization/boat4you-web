@@ -35,7 +35,7 @@ const btn: CSSProperties = {
   borderRadius: 10,
   padding: '8px 16px',
   fontWeight: 600,
-  fontSize: 13,
+  fontSize: 14,
   cursor: 'pointer',
 };
 
@@ -45,7 +45,7 @@ const close: CSSProperties = {
   border: 0,
   color: '#9aa7b4',
   cursor: 'pointer',
-  fontSize: 15,
+  fontSize: 14,
   lineHeight: 1,
   padding: 4,
 };

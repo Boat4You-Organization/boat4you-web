@@ -37,10 +37,10 @@ const TripAdvisorRating = () => {
         '&:hover': { opacity: 0.8 },
       }}
     >
-      <Box component="span" aria-hidden sx={{ color: '#ffb400', fontSize: 13, letterSpacing: '1.5px', lineHeight: 1 }}>
+      <Box component="span" aria-hidden sx={{ color: '#ffb400', fontSize: 14, letterSpacing: '1.5px', lineHeight: 1 }}>
         ★★★★★
       </Box>
-      <Typography component="span" variant="body2" fontWeight={700} fontSize={13} color={colors.black900}>
+      <Typography component="span" variant="body2" fontWeight={700} fontSize={14} color={colors.black900}>
         {rating}
       </Typography>
       <Typography component="span" variant="caption" fontSize={12} color={colors.black600}>

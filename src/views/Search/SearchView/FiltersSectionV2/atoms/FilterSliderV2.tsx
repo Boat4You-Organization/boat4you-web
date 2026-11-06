@@ -143,7 +143,7 @@ const FilterSliderV2 = ({
           justifyContent: 'space-between',
           color: searchV2.inkSoft,
           mt: '7px',
-          fontSize: 11,
+          fontSize: 12,
           fontWeight: 400,
           fontVariantNumeric: 'tabular-nums',
         }}

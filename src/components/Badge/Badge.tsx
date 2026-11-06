@@ -20,7 +20,7 @@ const Badge = ({ children, badgeContent, color }: BadgeProps) => (
           height: 12,
           padding: 0,
           borderRadius: '50%',
-          fontSize: 10,
+          fontSize: 12,
         },
       },
     }}

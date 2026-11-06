@@ -38,7 +38,8 @@
     "test:network-links": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --disable-warning=ExperimentalWarning --test scripts/network-links.test.mjs",
     "test:cc-handoff": "node --experimental-transform-types --disable-warning=ExperimentalWarning --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test scripts/ccHandoff.test.mjs",
     "test:recorder-error": "node --experimental-transform-types --disable-warning=ExperimentalWarning --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test scripts/recorderError.test.mjs",
-    "upgrade": "yarn upgrade"
+    "upgrade": "yarn upgrade",
+    "check:type-scale": "node scripts/check-type-scale.mjs"
   },
   "dependencies": {
     "@emotion/cache": "^11.14.0",

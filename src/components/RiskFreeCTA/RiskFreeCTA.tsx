@@ -48,7 +48,7 @@ const RiskFreeCTA = ({ searchPage, disableGutters }: RiskFreeCTAProps) => {
                   component="p"
                   variant="hero"
                   fontWeight={800}
-                  fontSize={{ xs: 20, md: searchPage ? 32 : 62 }}
+                  fontSize={{ xs: 18, md: searchPage ? 36 : 62 }}
                   fontStyle="italic"
                   color={colors.blue500}
                 >
@@ -58,7 +58,7 @@ const RiskFreeCTA = ({ searchPage, disableGutters }: RiskFreeCTAProps) => {
                   variant="body2"
                   color={colors.black500}
                   mt={{ xs: 0.5, md: 1.5 }}
-                  sx={{ fontSize: { xs: 11, md: 14 }, lineHeight: 1.35 }}
+                  sx={{ fontSize: { xs: 12, md: 14 }, lineHeight: 1.35 }}
                 >
                   {t('cancellingDescription')}
                 </Typography>
@@ -69,7 +69,7 @@ const RiskFreeCTA = ({ searchPage, disableGutters }: RiskFreeCTAProps) => {
                   sx={{
                     color: colors.blue500,
                     fontWeight: 800,
-                    fontSize: { xs: 13, md: 16 },
+                    fontSize: { xs: 14, md: 16 },
                   }}
                 >
                   {t('saveUpTo')}

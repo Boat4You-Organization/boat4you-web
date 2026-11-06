@@ -58,7 +58,7 @@ const RouteDetailSection = ({ route, activeDayId, onDaySelect }: Props) => {
         <Typography
           component="span"
           sx={{
-            fontSize: 11,
+            fontSize: 12,
             fontWeight: 700,
             letterSpacing: '0.18em',
             color: colors.blue800,
@@ -81,7 +81,7 @@ const RouteDetailSection = ({ route, activeDayId, onDaySelect }: Props) => {
         </Typography>
         <Typography
           sx={{
-            fontSize: { xs: 13.5, md: 14.5 },
+            fontSize: { xs: 14, md: 14 },
             lineHeight: 1.6,
             color: colors.black700,
             mt: 0.25,

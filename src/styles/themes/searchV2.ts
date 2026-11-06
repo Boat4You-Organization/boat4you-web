@@ -45,13 +45,13 @@ export const searchV2 = {
  */
 export const searchV2Type = {
   fontFamily: 'Raleway, -apple-system, BlinkMacSystemFont, sans-serif',
-  body: 13,
-  sectionLabel: { fontSize: 10.5, letterSpacing: '0.14em', textTransform: 'uppercase' as const, fontWeight: 700 },
-  groupTitle: { fontSize: 13, fontWeight: 700 },
-  countBadge: { fontSize: 10, fontWeight: 700 },
-  smallLabel: { fontSize: 11, fontWeight: 600 },
-  numericValue: { fontSize: 13, fontWeight: 600, fontVariantNumeric: 'tabular-nums' as const },
-  numericBig: { fontSize: 18, fontWeight: 800, fontVariantNumeric: 'tabular-nums' as const },
+  body: 14,
+  sectionLabel: { fontSize: 12, letterSpacing: '0.14em', textTransform: 'uppercase' as const, fontWeight: 700 },
+  groupTitle: { fontSize: 14, fontWeight: 700 },
+  countBadge: { fontSize: 12, fontWeight: 700 },
+  smallLabel: { fontSize: 12, fontWeight: 600 },
+  numericValue: { fontSize: 14, fontWeight: 600, fontVariantNumeric: 'tabular-nums' as const },
+  numericBig: { fontSize: 18, fontWeight: 700, fontVariantNumeric: 'tabular-nums' as const },
 } as const;
 
 /** Layout tokens. */

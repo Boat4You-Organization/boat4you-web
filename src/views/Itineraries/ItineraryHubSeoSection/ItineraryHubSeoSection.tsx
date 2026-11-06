@@ -28,14 +28,14 @@ const SectionH2 = ({ children }: { children: ReactNode }) => (
 const SectionH3 = ({ children }: { children: ReactNode }) => (
   <Typography
     component="h3"
-    sx={{ fontSize: { xs: 17, md: 19 }, fontWeight: 700, color: colors.blue950, lineHeight: 1.2, pt: 3, pb: 0.5 }}
+    sx={{ fontSize: { xs: 16, md: 18 }, fontWeight: 700, color: colors.blue950, lineHeight: 1.2, pt: 3, pb: 0.5 }}
   >
     {children}
   </Typography>
 );
 
 const Para = ({ children }: { children: ReactNode }) => (
-  <Typography sx={{ color: colors.black700, fontSize: { xs: 14.5, md: 15.5 }, lineHeight: 1.7, pb: 1.5 }}>
+  <Typography sx={{ color: colors.black700, fontSize: { xs: 14, md: 16 }, lineHeight: 1.7, pb: 1.5 }}>
     {children}
   </Typography>
 );
@@ -64,7 +64,7 @@ const ItineraryHubSeoSection = ({ countrySearchHrefs }: { countrySearchHrefs?: C
     gap: 1,
     color: colors.blue700,
     fontWeight: 700,
-    fontSize: { xs: 14, md: 15 },
+    fontSize: { xs: 14, md: 14 },
     background: 'none',
     border: 'none',
     cursor: 'pointer',

@@ -109,7 +109,7 @@ const FilterRangeSliderV2 = ({
         sx={{
           display: 'flex',
           justifyContent: 'space-between',
-          fontSize: 11,
+          fontSize: 12,
           color: searchV2.inkSoft,
           mt: '7px',
           fontVariantNumeric: 'tabular-nums',

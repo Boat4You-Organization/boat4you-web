@@ -42,7 +42,7 @@ const SearchInputV2 = ({ placeholder, value = '', onChange, disabled = false }: 
       sx={{
         width: '100%',
         padding: '9px 10px 9px 32px',
-        fontSize: 12.5,
+        fontSize: 12,
         border: `1px solid ${searchV2.lineStrong}`,
         borderRadius: '6px',
         background: disabled ? '#f0eee9' : '#fafaf7',

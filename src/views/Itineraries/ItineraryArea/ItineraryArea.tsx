@@ -102,7 +102,7 @@ const ItineraryArea: FC<ItineraryAreaProps> = ({ slug, areaLabel, countryLabel }
             <Typography
               component="span"
               sx={{
-                fontSize: 11,
+                fontSize: 12,
                 letterSpacing: '0.28em',
                 textTransform: 'uppercase',
                 color: colors.blue700,
@@ -115,14 +115,14 @@ const ItineraryArea: FC<ItineraryAreaProps> = ({ slug, areaLabel, countryLabel }
             </Typography>
             <Typography
               component="h2"
-              sx={{ fontSize: { xs: 28, md: 38 }, fontWeight: 800, color: colors.blue950, lineHeight: 1.1, mt: 1 }}
+              sx={{ fontSize: { xs: 28, md: 36 }, fontWeight: 800, color: colors.blue950, lineHeight: 1.1, mt: 1 }}
             >
               {t('area.pickTitle')}{' '}
               <Box component="span" sx={{ fontStyle: 'italic', fontWeight: 400 }}>
                 {t('area.pickTitleItalic', { area: areaLabel })}
               </Box>
             </Typography>
-            <Typography sx={{ mt: 1.5, color: colors.black600, fontSize: { xs: 14, md: 15 } }}>
+            <Typography sx={{ mt: 1.5, color: colors.black600, fontSize: { xs: 14, md: 14 } }}>
               {t('area.areaSubtitle', { country: countryLabel, area: areaLabel })}
             </Typography>
           </Box>
@@ -148,7 +148,7 @@ const ItineraryArea: FC<ItineraryAreaProps> = ({ slug, areaLabel, countryLabel }
           <Box sx={{ mb: { xs: 4, md: 5 } }}>
             <Typography
               sx={{
-                fontSize: 11,
+                fontSize: 12,
                 letterSpacing: '0.2em',
                 textTransform: 'uppercase',
                 color: colors.black600,
@@ -180,7 +180,7 @@ const ItineraryArea: FC<ItineraryAreaProps> = ({ slug, areaLabel, countryLabel }
                       borderRadius: 99,
                       px: 2.25,
                       py: 1,
-                      fontSize: { xs: 12, sm: 13 },
+                      fontSize: { xs: 12, sm: 14 },
                       fontWeight: 600,
                       cursor: 'pointer',
                       transition: 'border-color 150ms ease, background-color 150ms ease',
@@ -193,7 +193,7 @@ const ItineraryArea: FC<ItineraryAreaProps> = ({ slug, areaLabel, countryLabel }
                     <span>{label}</span>
                     <Box
                       component="span"
-                      sx={{ fontSize: 11, fontVariantNumeric: 'tabular-nums', opacity: isActive ? 0.75 : 0.5 }}
+                      sx={{ fontSize: 12, fontVariantNumeric: 'tabular-nums', opacity: isActive ? 0.75 : 0.5 }}
                     >
                       {count}
                     </Box>
@@ -265,7 +265,7 @@ const ItineraryArea: FC<ItineraryAreaProps> = ({ slug, areaLabel, countryLabel }
                       px: 1.5,
                       py: 0.75,
                       borderRadius: 99,
-                      fontSize: 10,
+                      fontSize: 12,
                       letterSpacing: '0.18em',
                       textTransform: 'uppercase',
                       color: colors.blue950,
@@ -280,7 +280,7 @@ const ItineraryArea: FC<ItineraryAreaProps> = ({ slug, areaLabel, countryLabel }
                     component="span"
                     sx={{
                       display: 'block',
-                      fontSize: 11,
+                      fontSize: 12,
                       letterSpacing: '0.2em',
                       textTransform: 'uppercase',
                       color: colors.blue700,
@@ -296,7 +296,7 @@ const ItineraryArea: FC<ItineraryAreaProps> = ({ slug, areaLabel, countryLabel }
                   <Typography
                     component="h3"
                     sx={{
-                      fontSize: { xs: 18, sm: 20 },
+                      fontSize: { xs: 18, sm: 22 },
                       fontWeight: 700,
                       color: colors.blue950,
                       lineHeight: 1.35,
@@ -310,7 +310,7 @@ const ItineraryArea: FC<ItineraryAreaProps> = ({ slug, areaLabel, countryLabel }
                       sx={{
                         mt: 1.5,
                         color: colors.black700,
-                        fontSize: { xs: 13.5, sm: 14.5 },
+                        fontSize: { xs: 14, sm: 14 },
                         lineHeight: 1.6,
                         display: '-webkit-box',
                         WebkitLineClamp: 3,
@@ -348,7 +348,7 @@ const ItineraryArea: FC<ItineraryAreaProps> = ({ slug, areaLabel, countryLabel }
             <Typography
               component="span"
               sx={{
-                fontSize: 11,
+                fontSize: 12,
                 letterSpacing: '0.28em',
                 textTransform: 'uppercase',
                 color: colors.blue700,
@@ -377,7 +377,7 @@ const ItineraryArea: FC<ItineraryAreaProps> = ({ slug, areaLabel, countryLabel }
               {paragraphs.map(para => (
                 <Typography
                   key={para.slice(0, 40)}
-                  sx={{ color: colors.black700, fontSize: { xs: 14.5, md: 16 }, lineHeight: 1.7 }}
+                  sx={{ color: colors.black700, fontSize: { xs: 14, md: 16 }, lineHeight: 1.7 }}
                 >
                   {para}
                 </Typography>

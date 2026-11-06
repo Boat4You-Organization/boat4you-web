@@ -37,7 +37,7 @@ const CheckV2 = ({ label, count, checked, onToggle }: CheckV2Props) => {
         justifyContent: 'space-between',
         py: '7px',
         cursor: 'pointer',
-        fontSize: 13,
+        fontSize: 14,
         userSelect: 'none',
       }}
     >
