@@ -1,5 +1,31 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-11-06 — ⚡ Brzina na mobitelu, prvi krug (hero, cookie slika, Google tag, prijevodi) + maknut drugi Google Ads tag — ✅ LIVE 6.11.2026 ~08:56 UTC (`5c4f72181`, deployment id 5c4f721813ae-mw4qmc91, tag `live/2026-11-06-mobile-speed-1`)
+
+**Što (zadatak 5.11. iz sesije „Analiza rangiranja“, Mario „da“ 6.11.; „pregledaj tagove googla … ako nam ne treba, makni ga“):**
+
+- `7dab49556` hero: dvije SVG pozadine naslovnice kao data URI u `HeroSection.module.scss` (bio poseban zahtjev otkriven tek nakon CSS-a).
+- `2f6cd4fae` cookie banner: `public/images/cookies-386.webp` (15 KB umjesto 83 KB), `fetchPriority="low"`.
+- `9aa854f2a` + `5c4f72181` Google tag: `GoogleAnalyticsConsent` bez `@next/third-parties`; naredbe u `dataLayer` odmah, `gtag.js` odmah samo uz click/linker/kampanjski id u adresi (gclid, gclsrc, gbraid, wbraid, gad*source, \_gl, dclid, msclkid, fbclid, utm*\*), inače nakon `load` + idle (max 3 s; Safari 300 ms). Bez preload linka u `<head>`. Mario prihvatio: posjet bez oglasa koji ode prije učitavanja se ne broji.
+- `16e5427b1` maknut **AW-17979079830**: nijedna konverzija nije išla na njega; sve kampanje i lista „boat4you remarketing“ su u 824-717-8276 (AW-11060948992). Nijedan Ads račun dostupan s Marijevih 4 prijava ga ne koristi (manager „europe yacht“ 825-171-9314 traži 2-Step, nije otvoren). Vraćanje = jedan redak u `src/app/[locale]/layout.tsx`.
+- `4f05667a8` prijevodi: `ExtraClientMessages` + `MergedMessages`; `about`, `howWeWork` van globalnog skupa, `itinerary` globalno samo `suggested|hub|area`. Poruke u svakoj stranici 116,9K → 95,4K znakova.
+
+**Pregled (Opus 5.5):** „go with changes“ — UTM/gclsrc i Safari kašnjenje ugrađeni (`5c4f72181`); ostalo čisto. Neobavezno kasnije: `@next/third-parties` iz package.json (nema korisnika).
+
+**Provjera LIVE:** deployment id na `/contact-us` i `/search`, legal markeri OK, SEO regresija Stage B 0 novih FAIL. HTML: 0 preload/`<script src>` za googletagmanager, AW-17979079830 0×, hero data URI u CSS-u, home 234 linka (hub na mjestu), `/about-us`, `/how-we-work`, `/contact-us`, `/itineraries/split`, `/de/about-us` bez sirovih ključeva. Preglednik (mobitel): `dataLayer` consent default → linker → consent update → js → config G-8B2LL2CCE9 → config AW-11060948992; gtag.js nakon `load`; cookie slika `cookies-386.webp` low; konzola bez grešaka.
+
+**Mjerenje (lokalni Lighthouse 13.6.0 mobilni, medijan 3; PSI API bio na 429), prije → poslije:**
+
+| Stranica                       | Ocjena  | LCP           | TBT          | Speed Index   | Bajtovi          |
+| ------------------------------ | ------- | ------------- | ------------ | ------------- | ---------------- |
+| `/`                            | 78 → 79 | 3,93 → 3,98 s | 380 → 360 ms | 3,05 → 1,67 s | 2.489 → 2.248 KB |
+| `/search?destinations=croatia` | 65 → 68 | 6,47 → 6,47 s | 394 → 352 ms | 3,87 → 2,93 s | 2.058 → 1.560 KB |
+| `/boat/custom-made-corsario-3` | 53 → 54 | 6,2 → 6,96 s  | 961 → 826 ms | 4,44 → 4,02 s | 2.735 → 2.502 KB |
+
+Glavni preostali trošak: chunk `2n_95vkrc_bfl.js` (0,7 s glavne niti na naslovnici, 2–3 s na pretrazi i brodu) → drugi krug (kartice pretrage, MUI, slika broda). ⚠️ Naslovnica poslije ima CLS 0,038 (prije 0) na `DestinationsSection` — ispod praga 0,1, istražiti.
+
+**Rollback:** `.next.prev` po `b4y_web_ship_tail.sh` ili revert `7dab49556..5c4f72181`.
+
 ## 2026-11-05 — 🔗 Footer + schema: Facebook link → facebook.com/boat4you.official — ✅ LIVE 5.11.2026 ~23:00 UTC (`e7c1191bf`, deployment id e7c1191bfd09-mw454xw0, tag `live/2026-11-05-fb-username`)
 
 **Što (Mario 5.11. „ažuriraj link i na stranici boat4you“):** nova stranica Boat4you dobila je korisničko ime `boat4you.official` (ime `boat4you` je tuđi profil, `boat4youcom` se oslobađa tek kad Facebook konačno obriše staru stranicu, ~5.12.2026). Footer ikona i Organization `sameAs` sada vode na `https://www.facebook.com/boat4you.official` umjesto `profile.php?id=61596356697045`.
