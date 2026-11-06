@@ -1,5 +1,16 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-11-06 — 🔤 Jedna tipografska skala na cijelom webu (naslovnica, pa sve javne stranice) — ✅ LIVE 6.11.2026: naslovnica 09:57 UTC (`196804847` + banner `1cd36993f`), cijeli web ~10:21 UTC (`2fa4cd43a`, deployment id 2fa4cd43a60f-mw4tmtij), zadnje dvije sitne veličine 10:50 UTC (`2bd1fadf6`, deployment id 2bd1fadf6d13-mw4uhtck); tag `live/2026-11-06-type-scale`
+
+**Što (Mario 6.11. „kao da ima 10 veličina fonta“, pa „da se proteže kroz cijeli web, ne treba nam 10 veličina fontova po pageu … pregledaj i ostale stranice“):** svaka javna stranica koristi samo veličine 12 14 16 18 22 28 36 62 (mobitel bez 62), težine 500 / 700 / 800 italic. 20 ostaje samo cijena na stranici broda i veličina ikona. Prije: ruta 19 veličina, area 16, /search 14, /itineraries 13, model / cijene / deals 9, naslovnica 22.
+
+- Skala: `src/styles/mixins/_type.scss` (SCSS mixini) i `src/styles/type.ts` (MUI); `src/views/Home/_homeType.scss` / `homeType.ts` samo re-exportaju. 161 vrijednost u 37 datoteka zaokružena na skalu + ručno: naslovi sekcija na stranicama modela i vodiča cijena 20 → 22/18, naslovi dana i ruta u itinerarima 20 → 22, uvod buildera 20 → 18, „Risk free booking“ 20/32 → 18/36, naslov bannera na /deals 56 → 62, brojač vrste broda u filteru 9,5 → 12, Storyset potpis u footeru 0.62rem → 12.
+- Promo banner „Early booking“: fiksne veličine sa skale po formatu umjesto clamp(); `.titleFit` i dalje smanjuje predugu riječ.
+- `yarn check:type-scale` pada na svaku veličinu izvan skale (SCSS, sx objekti, `fontSize={{ … }}`, rem/em) i od sada se vrti u pre-commit lintu. Ne provjerava (drugi krug, svaki tok s testom): Booking, MyBookings, Trip, Review, Profile, Auth, Payment, PDF-ove.
+- Provjera LIVE (svaki vidljivi tekst, bez headera/footera; 1440 i 375 px): naslovnica, /search, /blog, blog objava, /itineraries, area, ruta, brand, model, cijene, /fleet, /deals, about, how-we-work, contact, FAQ, stranica broda — samo veličine sa skale, 5–8 po stranici, bez vodoravnog klizanja. tsc 0, stylelint/eslint 0 grešaka.
+- SEO regresija Stage B: `2fa4cd43a` 0 novih FAIL; `1cd36993f` i `2bd1fadf6` po 1 T6: brod „Sea Novels“ (Lagoon 42, Marina Paleros) nosi ime charter agencije s popisa `operators.txt` (pt /search, de kartica srodnih brodova). Podaci, ne ova promjena; odluka o skrivanju imena čeka Marija.
+- Rollback: revert `2bd1fadf6` + `2fa4cd43a` (+ `1cd36993f` za naslovnicu) + deploy.
+
 ## 2026-11-06 — ⚡ Brzina na mobitelu, prvi krug (hero, cookie slika, Google tag, prijevodi) + maknut drugi Google Ads tag — ✅ LIVE 6.11.2026 ~08:56 UTC (`5c4f72181`, deployment id 5c4f721813ae-mw4qmc91, tag `live/2026-11-06-mobile-speed-1`)
 
 **Što (zadatak 5.11. iz sesije „Analiza rangiranja“, Mario „da“ 6.11.; „pregledaj tagove googla … ako nam ne treba, makni ga“):**
