@@ -116,15 +116,19 @@ const reportWebVital = (metric: VitalsMetric, gaId: string): void => {
 };
 
 /**
- * A visit that carries a click or linker id in its address: a Google Ads click (gclid, gbraid, wbraid, gad_source),
- * a visit handed over by a sister site (_gl, crossDomainLinker.ts) or another ad network's click id. gtag.js reads
- * these from the address when it starts and keeps them for the whole visit, so for such a visit it has to start
- * before the first in-app navigation rewrites the address.
+ * A visit that carries a click, linker or campaign id in its address: a Google Ads click (gclid, gclsrc, gbraid,
+ * wbraid, gad_source), a visit handed over by a sister site (_gl, crossDomainLinker.ts), another ad network's click
+ * id, or campaign tags (utm_*: social posts, e-mail, Bing without auto-tagging). gtag.js reads these from the address
+ * when it starts and keeps them for the whole visit, so for such a visit it has to start before the first in-app
+ * navigation rewrites the address.
  */
-const CLICK_ID_IN_URL = /[?&](?:gclid|gbraid|wbraid|gad_source|_gl|dclid|msclkid|fbclid)=/;
+const CLICK_ID_IN_URL = /[?&](?:gclid|gclsrc|gbraid|wbraid|gad_source|_gl|dclid|msclkid|fbclid|utm_[a-z]+)=/;
 
 /** How long after the page has loaded the tag waits for an idle moment before it loads anyway. */
 const TAG_IDLE_TIMEOUT_MS = 3000;
+
+/** Browsers without requestIdleCallback (Safari): a short pause after load instead of the full idle timeout. */
+const TAG_NO_IDLE_DELAY_MS = 300;
 
 const TAG_SCRIPT_ID = 'b4y-gtag-js';
 
@@ -150,11 +154,12 @@ let tagConfigured = false;
 // a phone, and next/script preloaded the first one in <head>, ahead of the page's
 // own resources. The commands are queued in dataLayer at once, as before; only
 // the script waits:
-// - a visit with a click or linker id in the address (CLICK_ID_IN_URL) loads it
-//   right after hydration, exactly as before, so ad attribution is untouched;
+// - a visit with a click, linker or campaign id in the address (CLICK_ID_IN_URL)
+//   loads it right after hydration, exactly as before, so attribution is untouched;
 // - every other visit loads it once the page has finished loading and the
-//   browser is idle (at most TAG_IDLE_TIMEOUT_MS later). A visitor who leaves
-//   before that is not counted as a page view.
+//   browser is idle (at most TAG_IDLE_TIMEOUT_MS later; TAG_NO_IDLE_DELAY_MS
+//   where there is no idle callback). A visitor who leaves before that is not
+//   counted as a page view (owner's decision, 6.11.2026).
 // Conversions (inquiry, begin checkout) fire long after either moment.
 export function GoogleAnalyticsConsent({ gaId, gAdsIds }: GoogleAnalyticsConsentProps) {
   const disabled = NO_ANALYTICS_PATH.test(usePathname() ?? '');
@@ -228,7 +233,7 @@ export function GoogleAnalyticsConsent({ gaId, gAdsIds }: GoogleAnalyticsConsent
       if (typeof window.requestIdleCallback === 'function') {
         idleId = window.requestIdleCallback(load, { timeout: TAG_IDLE_TIMEOUT_MS });
       } else {
-        timerId = window.setTimeout(load, TAG_IDLE_TIMEOUT_MS);
+        timerId = window.setTimeout(load, TAG_NO_IDLE_DELAY_MS);
       }
     };
 

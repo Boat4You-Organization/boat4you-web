@@ -142,8 +142,10 @@ const RootLayout = async ({ children, params }: RootLayoutProps) => {
     <html lang={locale} suppressHydrationWarning>
       <head>
         {/* Google Consent Mode v2 — set the denied-by-default consent state
-            BEFORE gtag.js loads (GoogleAnalyticsConsent loads it eagerly so
-            Google can detect the tag). Until the visitor accepts, the tag sets
+            BEFORE gtag.js loads (GoogleAnalyticsConsent loads it after hydration
+            for a visit with a click or campaign id, otherwise when the page is
+            idle, without waiting for consent, so Google can detect the tag).
+            Until the visitor accepts, the tag sets
             no cookies and tracks nothing; analytics_storage follows the
             analytics choice, ad_* follows marketing. A returning visitor who
             already consented starts granted (read synchronously from the
