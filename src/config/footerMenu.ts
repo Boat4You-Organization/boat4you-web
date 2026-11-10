@@ -83,8 +83,8 @@ export const footerNetwork: { name: string; href: string }[] = [
 
 // "Secure payments by Mollie" row (Mario 10.11.2026): the methods of our Mollie checkout — bookings take cards and
 // Apple Pay (Google Pay shows inside the card page), /pay adds Pay by Bank; no PayPal (backend
-// MollieBookingPaymentService / CustomPaymentService). Klarna is shown by Mario's decision (10.11.2026) while it is
-// being switched on in the checkout. Apple Pay, Google Pay and Klarna are Mollie's own method icons
+// MollieBookingPaymentService / CustomPaymentService). Klarna is live in the checkout from 10.11.2026 20:07 UTC (booking
+// + /pay; billing addresses in 12 euro-area countries). Apple Pay, Google Pay and Klarna are Mollie's own method icons
 // (api.mollie.com/v2/methods); Mollie has no card-brand icons, so Visa, Mastercard and American Express are the
 // official marks from Wikimedia Commons in the same 32x24 tile (Mario's choice; Amex added at his request).
 // All hosted in public/images/payments; brand names are not translated.
