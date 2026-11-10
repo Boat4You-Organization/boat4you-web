@@ -115,10 +115,11 @@ const Footer = () => {
       <div className={styles.bar}>
         <div className={cx(styles.inner, styles.barRow)}>
           {/* Impressum / company identity (audit C2): the legal entity behind the Boat4you brand, on every page.
-              Language-neutral registration data, so it isn't run through i18n. */}
+              The registration data is language-neutral; "All rights reserved" (in place of the brand name, Mario
+              10.11.2026) follows the page language, without its full stop inside the line. */}
           <p>
-            © {new Date().getFullYear()} boat4you · Cusmanich d.o.o. · Vrboran 37, 21000 Split, Croatia · OIB
-            87394862517
+            © {new Date().getFullYear()} {tCommon('allRightsReserved').replace(/\.$/, '')} · Cusmanich d.o.o. · Vrboran
+            37, 21000 Split, Croatia · OIB 87394862517
           </p>
           <ul className={styles.barLinks}>
             {/* Google "preferred source" deeplink: a signed-in reader can mark boat4you as a preferred source.
