@@ -18,7 +18,6 @@
       "blog": "Blog"
     },
     "payments": {
-      "securedBy": "Bezpieczne płatności przez {provider}",
       "methods": "Akceptowane metody płatności"
     },
     "network": {

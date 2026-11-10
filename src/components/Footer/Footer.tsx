@@ -83,9 +83,10 @@ const Footer = () => {
         ))}
       </div>
 
-      {/* Card payments go through Mollie (live 10.11.2026); the logos are the methods the checkout offers. */}
+      {/* Card payments go through Mollie (live 10.11.2026); the logos are the methods the checkout offers. Same
+          "Secure payment by Mollie" line as the payment steps (common.securePaymentByMollie). */}
       <div className={cx(styles.inner, styles.payments)}>
-        <p className={styles.label}>{t('payments.securedBy', { provider: 'Mollie' })}</p>
+        <p className={styles.label}>{tCommon('securePaymentByMollie')}</p>
         <ul className={styles.paymentLogos} aria-label={t('payments.methods')}>
           {footerPaymentMethods.map(({ name, src }) => (
             <li key={src}>
