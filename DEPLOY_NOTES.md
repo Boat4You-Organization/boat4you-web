@@ -1,6 +1,6 @@
 # Boat4You (main) — Production Deploy Notes
 
-## 2026-11-10 — 🦶 Footer prema dizajnu „Footer 1a“ — ⏳ NIJE DEPLOYANO (grana `feat/footer-design-1a`: `cd385b3b2` redizajn, `3eecfbe7a` razmak na stranici broda, `8bbba21d2` natpis Storyset ostaje)
+## 2026-11-10 — 🦶 Footer prema dizajnu „Footer 1a“ — ✅ LIVE 10.11.2026 (`3335f71a4`, deployment id 3335f71a48cb-mwatqjlz, tag `live/2026-11-10-footer-1a`; `cd385b3b2` redizajn, `3eecfbe7a` razmak na stranici broda, `8bbba21d2` natpis Storyset ostaje, `3335f71a4` nalazi pregleda)
 
 **Što (Mario 10.11.: „footer napravi prema dizajnu“, „pazi na linkove“, „makni Illustrations by Storyset“):** footer prema Claude Design izvozu `Boat4You Footer 1a (standalone).html`. Redom: traka povjerenja (TripAdvisor 4,9 / 5 i četiri obećanja), stupac brenda (logo, rečenica brenda, društvene mreže kao tekstualni linkovi), stupci Explore / Company / Legal (Legal nosi i gumb „Postavke kolačića“), red „Our network“, tamna traka s podacima tvrtke i zaslugama te veliki natpis „boat4you“ na dnu.
 
@@ -16,8 +16,9 @@
 **Akcije pred deploy:**
 
 - [x] **Storyset (Mario 10.11.: „ostavi storyset pa ćemo poslije napraviti novog lika“):** natpis „Illustrations by Storyset“ ostaje u tamnoj traci. Likovi promo bannera (`public/promo`, svih 11 kampanja) nastali su u Higgsfieldu iz Storyset lika „A day off“, a besplatna licenca traži natpis. Natpis se miče tek zajedno s novim likom (`ad7ca60f3` je revertiran u `8bbba21d2`).
-- [ ] Jedan neovisni pregled (agent) i Mariovo „da“ prije deploya.
-- [ ] Nakon deploya: footer na `/` i `/hr` (marker „Our network“ / „Naša mreža“), provjeriti 200 za sve linkove iz footera.
+- [x] Jedan neovisni pregled (agent) i Mariovo „da“ („sredi i objavi“, 10.11.).
+- [x] Provjera LIVE: novi footer i deployment id na svih 9 jezika; isti skup od 25 linkova i isti `rel` kao prije deploya; svih 90 internih URL-ova iz footera 200; SEO regresija Stage B 0 novih FAIL.
+- [ ] Kasnije: novi lik za promo bannere umjesto Storyset lika, tada maknuti natpis „Illustrations by Storyset“.
 
 ## 2026-11-10 — 🍪 Pristanak za kolačiće: prozor na sredini (kao index.hr / dnevnik.hr) — ✅ LIVE 10.11.2026 06:54 UTC (`16b1b9bb6` + `8f0a14797`, deployment id 8f0a14797a1d-mwabt55q, tag `live/2026-11-10-consent-notice`)
 
