@@ -1,5 +1,12 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-11-10 — 💳 Footer: Klarna logo u redu plaćanja — ✅ LIVE 10.11.2026 ~18:58 UTC (`1df16dab0`, deployment id 1df16dab09e7-mwb1w85t, tag `live/2026-11-10-footer-klarna`)
+
+**Što (Mario 10.11.: „amex je ukljucen, potvrdjeno, karmu stavi“, zatim „ja san tia da stavis karma logo u futter od boat4you prvo, pa ce mo poslje drugo radit“):** Mollieva ikona Klarne (`public/images/payments/klarna-payment-method.svg`, 32×24) iza Google Paya u `footerPaymentMethods`. Mario je svjesno odlučio prikazati Klarnu prije nego što je checkout nudi; Klarna plaćanje je na grani `feat/mollie-klarna` (Mollie sesija) i čeka njegovo „da“. Sisteri nisu dirani.
+
+- **Prije deploya:** živi `dpl` `b0fe63e8d` i Mollie `1e565dcff` su preci HEAD-a; commit pushan na origin/main prije deploya; Mollie sesija potvrdila da tada ne deploya b4y web.
+- **Provjera LIVE:** SVG 200 `image/svg+xml`; Klarna u footeru na svih 9 jezika s istim `dpl`; `/api/payments/card-status` i `create-checkout-session` 405 (rute postoje); `/pay/<pravi ključ>` 200 i `/de/pay` 200, krivi ključ 404, backend config 200 (Mollie sesija, 19:05 UTC); SEO Stage B 0 novih FAIL.
+
 ## 2026-11-10 — 💳 Klarna kao način plaćanja (booking + `/pay`) — ⏳ NIJE deployano (grana `feat/mollie-klarna`)
 
 **Što:** Klarna (preko Mollieja) kao treća opcija uz karticu i bankovni prijenos.
@@ -30,7 +37,7 @@
 **Otvoreno (Mario):**
 
 - [x] **American Express:** Mario potvrdio u Mollie dashboardu da je uključen (10.11.) — logotip ostaje.
-- [ ] **Klarna (Mario: „stavi“):** logotip pripremljen na grani `feat/footer-klarna` (`502942e2e`, Mollieva ikona), NIJE deployan: Klarna je aktivna na profilu, ali je checkout još ne nudi. Deploy tek kad Mollie sesija javi da je Klarna live na plaćanju (merge origin/main u granu, provjera živog `dpl`, pregled, deploy).
+- [x] **Klarna (Mario: „stavi“):** logotip LIVE 10.11. ~18:58 UTC (`1df16dab0`), Mariova odluka prije nego što checkout nudi Klarnu (vidi unos iznad).
 - [ ] **Google Pay:** uključen na profilu, ali još nije viđen na stvarnoj Mollie kartičnoj stranici. Kod prve prave uplate s Androida/Chromea provjeriti; ako se ne pojavljuje, maknuti logo.
 - [ ] Isti red na 6 sestrinskih sajtova (čeka Marija; ne prije kraja Mollie lanca deploya na cusma5).
 
