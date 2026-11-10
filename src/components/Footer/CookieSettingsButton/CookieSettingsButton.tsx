@@ -18,7 +18,7 @@ const CookieSettingsButton = ({ className }: { className?: string }) => {
   };
 
   return (
-    <button type="button" onClick={handleClick} className={className}>
+    <button type="button" aria-haspopup="dialog" onClick={handleClick} className={className}>
       {t('buttons.manage')}
     </button>
   );

@@ -13,6 +13,8 @@ const LogoWordmark = (props: SVGProps<SVGSVGElement>) => (
     xmlns="http://www.w3.org/2000/svg"
     aria-hidden="true"
     focusable="false"
+    width={103}
+    height={18}
     viewBox="34.98 5.84 102.95 17.93"
     preserveAspectRatio="xMidYMin meet"
     {...props}

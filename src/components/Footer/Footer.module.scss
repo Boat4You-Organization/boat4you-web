@@ -156,6 +156,10 @@ $lettering: #12345a;
   display: flex;
   flex-direction: column;
   gap: rem-calc(12);
+
+  // Long single words (de "Geschäftsbedingungen", 175 px) wrap inside a narrow column instead of running into the gutter.
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 .network {
@@ -192,7 +196,9 @@ $lettering: #12345a;
 .barLinks {
   display: flex;
   flex-wrap: wrap;
-  gap: rem-calc(6 20);
+
+  // 8 px between wrapped rows keeps the 12 px links 24 px apart (tap-target minimum).
+  gap: rem-calc(8 20);
 }
 
 // The big lettering: as wide as in the design (about 94 % of the screen, up to 1200 px), cut by its viewBox.

@@ -89,13 +89,14 @@ describe('nofollowNetworkLinks', () => {
 });
 
 describe('footer links to the sister sites', () => {
-  test('the "network" column lists only sister sites, and FooterMenuItem gives them NETWORK_REL', () => {
+  test('the "Our network" row lists only sister sites, and Footer gives them NETWORK_REL', () => {
     const config = fs.readFileSync(path.join(ROOT, 'src/config/footerMenu.ts'), 'utf8');
-    const network = config.slice(config.indexOf("title: 'network'"));
+    const network = config.slice(config.indexOf('export const footerNetwork'));
     const hrefs = [...network.matchAll(/href: '([^']+)'/g)].map(([, href]) => href);
     assert.equal(hrefs.length, 6, hrefs.join(', '));
     for (const href of hrefs) assert.ok(isNetworkHref(href, SELF), href);
-    const item = fs.readFileSync(path.join(ROOT, 'src/components/Footer/FooterMenuItem/FooterMenuItem.tsx'), 'utf8');
-    assert.match(item, /rel: isNetworkHref\(href\) \? NETWORK_REL : 'noopener noreferrer'/);
+    const footer = fs.readFileSync(path.join(ROOT, 'src/components/Footer/Footer.tsx'), 'utf8');
+    assert.match(footer, /const NETWORK_LINK = \{ target: '_blank', rel: NETWORK_REL \}/);
+    assert.match(footer, /footerNetwork\.map\([\s\S]*?\{\.\.\.NETWORK_LINK\}/);
   });
 });

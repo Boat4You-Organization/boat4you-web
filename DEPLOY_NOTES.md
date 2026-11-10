@@ -1,6 +1,6 @@
 # Boat4You (main) — Production Deploy Notes
 
-## 2026-11-10 — 🦶 Footer prema dizajnu „Footer 1a“ — ⏳ NIJE DEPLOYANO (grana `feat/footer-design-1a`: `cd385b3b2` redizajn, `ad7ca60f3` bez natpisa Storyset, zatim razmak na stranici broda i ova bilješka)
+## 2026-11-10 — 🦶 Footer prema dizajnu „Footer 1a“ — ⏳ NIJE DEPLOYANO (grana `feat/footer-design-1a`: `cd385b3b2` redizajn, `3eecfbe7a` razmak na stranici broda, `8bbba21d2` natpis Storyset ostaje)
 
 **Što (Mario 10.11.: „footer napravi prema dizajnu“, „pazi na linkove“, „makni Illustrations by Storyset“):** footer prema Claude Design izvozu `Boat4You Footer 1a (standalone).html`. Redom: traka povjerenja (TripAdvisor 4,9 / 5 i četiri obećanja), stupac brenda (logo, rečenica brenda, društvene mreže kao tekstualni linkovi), stupci Explore / Company / Legal (Legal nosi i gumb „Postavke kolačića“), red „Our network“, tamna traka s podacima tvrtke i zaslugama te veliki natpis „boat4you“ na dnu.
 
@@ -11,10 +11,11 @@
 - **Nema ga više (nije u dizajnu):** slogan „Endless blue / Boat4you“, zvjezdice uz TripAdvisor, ikone društvenih mreža (sada tekst), „All rights reserved.“, „Made with ♥ by AdriaPixel“ (sada „Made by AdriaPixel“) i okvir oko linka „preferred source“ (sada običan link).
 - **Obrisane neiskorištene komponente:** BusinessCard, FooterBottomBar, FooterMenuItem, TripAdvisorRating.
 - **Stranica broda na mobitelu:** razmak od 183 px ispod footera (mjesto za donju traku rezervacije, `Layout.tsx`) je u tamnoj boji footera, da ispod tamnog dna ne ostane bijela traka dok se donja traka ne pojavi.
+- **Pregled:** 1 neovisni agent (Opus): 0 blockera. Popravljeno: `yarn test:network-links` je čitao obrisani FooterMenuItem (sada provjerava `footerNetwork` i `NETWORK_LINK` u `Footer.tsx`), duge njemačke oznake u stupcu Legal lome se unutar stupca (`overflow-wrap`), razmak redova linkova u tamnoj traci 8 px (24 px za dodir), `aria-haspopup="dialog"` na gumbu za kolačiće, `width`/`height` na velikom natpisu. Ostavljeno: težina društvenih linkova 700 (pravilo sajta 500/700/800), neiskorišten `common.allRightsReserved` i varijanta `footer` u AssuranceBadges.
 
 **Akcije pred deploy:**
 
-- [ ] **Storyset, odluka čeka Marija:** likovi promo bannera (`public/promo`, svih 11 kampanja) nastali su u Higgsfieldu iz Storyset lika „A day off“ (rujanski je taj lik animiran, ostali su generirani s njim kao referencom). Besplatna licenca traži natpis. Bez natpisa treba premium licenca (Freepik/Storyset) ili novi likovi. Ako Mario ne želi ni jedno ni drugo, deploya se samo `cd385b3b2`, a `ad7ca60f3` se revertira.
+- [x] **Storyset (Mario 10.11.: „ostavi storyset pa ćemo poslije napraviti novog lika“):** natpis „Illustrations by Storyset“ ostaje u tamnoj traci. Likovi promo bannera (`public/promo`, svih 11 kampanja) nastali su u Higgsfieldu iz Storyset lika „A day off“, a besplatna licenca traži natpis. Natpis se miče tek zajedno s novim likom (`ad7ca60f3` je revertiran u `8bbba21d2`).
 - [ ] Jedan neovisni pregled (agent) i Mariovo „da“ prije deploya.
 - [ ] Nakon deploya: footer na `/` i `/hr` (marker „Our network“ / „Naša mreža“), provjeriti 200 za sve linkove iz footera.
 
