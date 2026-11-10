@@ -113,6 +113,13 @@ const Footer = () => {
                 {tCommon('googlePreferredSource')}
               </a>
             </li>
+            {/* Storyset free-licence attribution — REQUIRED while the promo-banner
+                character illustration is live (storyset.com licence terms). */}
+            <li>
+              <a href="https://storyset.com" {...EXTERNAL}>
+                Illustrations by Storyset
+              </a>
+            </li>
             {/* Agency credit (Mario 13.8.2026), brand credit, not localized. */}
             <li>
               <a href="https://adriapixel.com" {...EXTERNAL}>
