@@ -5,6 +5,7 @@
   "form": {
     "title": "Plaćanje karticom",
     "instruction": "Unesite iznos naveden na drugoj stranici ugovora (odjeljak Kreditna kartica) i broj potvrde rezervacije",
+    "about": "Ovo je sigurna stranica za plaćanje Boat4You, dio grupe Europe Yachts Charter. Boat4You obrađuje kartičnu uplatu za vaš ugovor o charteru, a na izvodu kartice pisat će Boat4You.",
     "labels": {
       "email": "E-pošta",
       "reference": "Broj potvrde rezervacije",

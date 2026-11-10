@@ -5,6 +5,7 @@
   "form": {
     "title": "Kartenzahlung",
     "instruction": "Bitte geben Sie den Betrag, der auf der zweiten Seite Ihres Vertrags (Abschnitt Kreditkarte) angegeben ist, und Ihre Buchungsbestätigungsnummer ein",
+    "about": "Dies ist die sichere Zahlungsseite von Boat4You, Teil der Europe Yachts Charter Gruppe. Boat4You wickelt die Kartenzahlung für Ihren Chartervertrag ab; auf Ihrer Kartenabrechnung erscheint Boat4You.",
     "labels": {
       "email": "E-Mail",
       "reference": "Buchungsbestätigungsnummer",

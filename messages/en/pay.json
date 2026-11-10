@@ -5,6 +5,7 @@
   "form": {
     "title": "Card payment",
     "instruction": "Please enter the amount stated on the second page of your contract (Credit card section) and your booking confirmation number",
+    "about": "This is the secure payment page of Boat4You, part of the Europe Yachts Charter group. Boat4You processes the card payment for your charter contract, and your card statement will show Boat4You.",
     "labels": {
       "email": "E-mail",
       "reference": "Booking confirmation number",

@@ -5,6 +5,7 @@
   "form": {
     "title": "Pago con tarjeta",
     "instruction": "Introduzca el importe indicado en la segunda página de su contrato (apartado Tarjeta de crédito) y su número de confirmación de reserva",
+    "about": "Esta es la página de pago segura de Boat4You, parte del grupo Europe Yachts Charter. Boat4You procesa el pago con tarjeta de su contrato de chárter y en el extracto de su tarjeta aparecerá Boat4You.",
     "labels": {
       "email": "Correo electrónico",
       "reference": "Número de confirmación de reserva",

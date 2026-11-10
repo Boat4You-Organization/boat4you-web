@@ -5,6 +5,7 @@
   "form": {
     "title": "Płatność kartą",
     "instruction": "Prosimy wpisać kwotę podaną na drugiej stronie umowy (sekcja Karta kredytowa) oraz numer potwierdzenia rezerwacji",
+    "about": "To bezpieczna strona płatności Boat4You, części grupy Europe Yachts Charter. Boat4You obsługuje płatność kartą za Twoją umowę czarteru, a na wyciągu z karty pojawi się Boat4You.",
     "labels": {
       "email": "E-mail",
       "reference": "Numer potwierdzenia rezerwacji",

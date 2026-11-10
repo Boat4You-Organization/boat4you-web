@@ -5,6 +5,7 @@
   "form": {
     "title": "Kaartbetaling",
     "instruction": "Vul het bedrag in dat op de tweede pagina van uw contract staat (onderdeel Creditcard) en uw boekingsbevestigingsnummer",
+    "about": "Dit is de beveiligde betaalpagina van Boat4You, onderdeel van de Europe Yachts Charter groep. Boat4You verwerkt de kaartbetaling voor je chartercontract; op je kaartafschrift staat Boat4You.",
     "labels": {
       "email": "E-mail",
       "reference": "Boekingsbevestigingsnummer",

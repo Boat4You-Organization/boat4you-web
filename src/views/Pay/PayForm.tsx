@@ -150,6 +150,7 @@ const PayForm = ({ linkKey, minAmountMinor, maxAmountMinor, initialReference, in
   return (
     <>
       <h1 className={styles.title}>{t('form.title')}</h1>
+      <p className={styles.text}>{t('form.about')}</p>
       <p className={styles.text}>{t('form.instruction')}</p>
       <Form<PayFormValues>
         defaultValues={{ email: '', reference: initialReference, amount: initialAmount }}
