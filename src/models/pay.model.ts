@@ -37,4 +37,5 @@ export const isPaymentRef = (value: unknown): value is string =>
   typeof value === 'string' && /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(value);
 
 /** Mollie hosted checkout origin the browser may be sent to (live and test mode alike). */
-export const PAY_CHECKOUT_ORIGINS: readonly string[] = ['https://www.mollie.com'];
+// pay.klarna.com: a live Klarna payment opens Klarna's own hosted page directly (Mollie's test mode stays on mollie.com).
+export const PAY_CHECKOUT_ORIGINS: readonly string[] = ['https://www.mollie.com', 'https://pay.klarna.com'];
