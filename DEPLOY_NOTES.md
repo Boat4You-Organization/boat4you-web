@@ -1,5 +1,18 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-11-10 — 🍪 Pristanak za kolačiće: prozor na sredini (kao index.hr / dnevnik.hr) — ✅ LIVE 10.11.2026 06:54 UTC (`16b1b9bb6` + `8f0a14797`, deployment id 8f0a14797a1d-mwabt55q, tag `live/2026-11-10-consent-notice`)
+
+**Što (Mario 9.–10.11.: u adminu puno manje posjeta nego u Analyticsu jer statistika broji samo pristanak za analitiku; „napravi kao oni“ za index.hr i dnevnik.hr, „stavi kao index i dnevnik botune“):** mala kartica u kutu zamijenjena je prozorom na sredini stranice preko blijedog vela: naslov „Vaša privatnost“, link na politiku privatnosti, tko obrađuje (mi i Google) i u koje svrhe, te dva jednaka četvrtasta gumba „Saznajte više →“ (sivi, otvara postojeće postavke s „Prihvati samo nužne“) i „Prihvati i zatvori“ (plavi). Odluka bez gumba za odbijanje na prvom ekranu je Mariova (rizik objašnjen 9.11.).
+
+- Prozor je u server HTML-u od prvog iscrtavanja; nova `cc-consent-flag` skripta u `<head>` (isti test kao `hasValidConsent`) i CSS skrivaju ga posjetitelju koji je već izabrao. `<noscript>` ga skriva bez JavaScripta.
+- Nakon izbora prozor nije u stranici (inače bi `[role=dialog][aria-modal=true]` zaustavio pozdrav Iris widgeta, nalaz pregleda).
+- Na /privacy-policy, /terms-and-conditions i /press/privacy stoji dolje bez vela. `data-nosnippet`. Fokus ulazi u prozor. Gumb „Postavke kolačića“ u footeru ga i dalje otvara.
+- Tekstovi na svih 9 jezika; stari `title`/`description` banera maknuti. Verzija pristanka ista: tko je već izabrao, ne pita se ponovno.
+- Pregled: 1 neovisni agent (Opus) — 1 blocker (Iris) + 1 važan (bez JS) + 6 manjih, popravljeno u `8f0a14797`.
+- Provjera LIVE: /contact-us, /privacy-policy, /hr nose prozor, flag skriptu i noscript. Lighthouse mobilni (medijan 3): naslovnica 79 (prije 79), /search 93 (prije 68), brod 55 (prije 54).
+- SEO regresija Stage B: 1 novi FAIL L1 = `/search?destinations=marina frapa dubrovnik&boatTypes=CATAMARAN` 0 kartica (ACI Marina Dubrovnik 18) — ponuda u bazi, ne ova promjena.
+- Rollback: revert `8f0a14797` + `16b1b9bb6` + deploy.
+
 ## 2026-11-06 — 🔤 Jedna tipografska skala na cijelom webu (naslovnica, pa sve javne stranice) — ✅ LIVE 6.11.2026: naslovnica 09:57 UTC (`196804847` + banner `1cd36993f`), cijeli web ~10:21 UTC (`2fa4cd43a`, deployment id 2fa4cd43a60f-mw4tmtij), zadnje dvije sitne veličine 10:50 UTC (`2bd1fadf6`, deployment id 2bd1fadf6d13-mw4uhtck); tag `live/2026-11-06-type-scale`
 
 **Što (Mario 6.11. „kao da ima 10 veličina fonta“, pa „da se proteže kroz cijeli web, ne treba nam 10 veličina fontova po pageu … pregledaj i ostale stranice“):** svaka javna stranica koristi samo veličine 12 14 16 18 22 28 36 62 (mobitel bez 62), težine 500 / 700 / 800 italic. 20 ostaje samo cijena na stranici broda i veličina ikona. Prije: ruta 19 veličina, area 16, /search 14, /itineraries 13, model / cijene / deals 9, naslovnica 22.
