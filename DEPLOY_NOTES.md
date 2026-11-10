@@ -7,7 +7,7 @@
 - **Prije deploya:** živi `dpl` `b0fe63e8d` i Mollie `1e565dcff` su preci HEAD-a; commit pushan na origin/main prije deploya; Mollie sesija potvrdila da tada ne deploya b4y web.
 - **Provjera LIVE:** SVG 200 `image/svg+xml`; Klarna u footeru na svih 9 jezika s istim `dpl`; `/api/payments/card-status` i `create-checkout-session` 405 (rute postoje); `/pay/<pravi ključ>` 200 i `/de/pay` 200, krivi ključ 404, backend config 200 (Mollie sesija, 19:05 UTC); SEO Stage B 0 novih FAIL.
 
-## 2026-11-10 — 💳 Klarna kao način plaćanja (booking + `/pay`) — ⏳ NIJE deployano (grana `feat/mollie-klarna`)
+## 2026-11-10 — 💳 Klarna kao način plaćanja (booking + `/pay`) — ✅ LIVE 10.11.2026 ~20:07 UTC (`1396bc092`, deployment id 1396bc092567-mwb44r0f, na `origin/main`; backend jar e20302a4, `MOLLIE_KLARNA_ENABLED=true`). Uživo je Klarna checkout na `https://pay.klarna.com` (ne mollie.com) → obje allow-liste preusmjeravanja ga dopuštaju (`usePaymentSubmit.tsx`, `pay.model.ts`). SEO Stage B prijavio 6 × 503 na /search: poklopilo se s restartom backenda 20:05, iste adrese nakon toga 200.
 
 **Što:** Klarna (preko Mollieja) kao treća opcija uz karticu i bankovni prijenos.
 
