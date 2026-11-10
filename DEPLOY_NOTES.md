@@ -11,7 +11,8 @@
 
 **Otvoreno (Mario):**
 
-- [ ] **American Express:** Mollie API ne pokazuje marke kartica; Mollie sesija Amex nije potvrdila. Provjeriti u Mollie dashboardu: Settings → Payment methods → Cards. Ako nije uključen: maknuti iz `footerPaymentMethods` (`src/config/footerMenu.ts`) i deploy.
+- [x] **American Express:** Mario potvrdio u Mollie dashboardu da je uključen (10.11.) — logotip ostaje.
+- [ ] **Klarna (Mario: „stavi“):** logotip pripremljen na grani `feat/footer-klarna` (`502942e2e`, Mollieva ikona), NIJE deployan: Klarna je aktivna na profilu, ali je checkout još ne nudi. Deploy tek kad Mollie sesija javi da je Klarna live na plaćanju (merge origin/main u granu, provjera živog `dpl`, pregled, deploy).
 - [ ] **Google Pay:** uključen na profilu, ali još nije viđen na stvarnoj Mollie kartičnoj stranici. Kod prve prave uplate s Androida/Chromea provjeriti; ako se ne pojavljuje, maknuti logo.
 - [ ] Isti red na 6 sestrinskih sajtova (čeka Marija; ne prije kraja Mollie lanca deploya na cusma5).
 
