@@ -10,7 +10,7 @@
 - Tekstovi na svih 9 jezika; stari `title`/`description` banera maknuti. Verzija pristanka ista: tko je već izabrao, ne pita se ponovno.
 - Pregled: 1 neovisni agent (Opus) — 1 blocker (Iris) + 1 važan (bez JS) + 6 manjih, popravljeno u `8f0a14797`.
 - Provjera LIVE: /contact-us, /privacy-policy, /hr nose prozor, flag skriptu i noscript. Lighthouse mobilni (medijan 3): naslovnica 79 (prije 79), /search 93 (prije 68), brod 55 (prije 54).
-- SEO regresija Stage B: 1 novi FAIL L1 = `/search?destinations=marina frapa dubrovnik&boatTypes=CATAMARAN` 0 kartica (ACI Marina Dubrovnik 18) — ponuda u bazi, ne ova promjena.
+- SEO regresija Stage B: 1 novi FAIL L1 = `/search?destinations=marina frapa dubrovnik&boatTypes=CATAMARAN` 0 kartica — kriva adresa u zlatnom popisu alata (Frapa je u Rogoznici; Mario 10.11.), prava `marina frapa` ima 18 katamarana; popis ispravljen u infra `5cf4e3e`. Ne ova promjena.
 - Rollback: revert `8f0a14797` + `16b1b9bb6` + deploy.
 
 ## 2026-11-06 — 🔤 Jedna tipografska skala na cijelom webu (naslovnica, pa sve javne stranice) — ✅ LIVE 6.11.2026: naslovnica 09:57 UTC (`196804847` + banner `1cd36993f`), cijeli web ~10:21 UTC (`2fa4cd43a`, deployment id 2fa4cd43a60f-mw4tmtij), zadnje dvije sitne veličine 10:50 UTC (`2bd1fadf6`, deployment id 2bd1fadf6d13-mw4uhtck); tag `live/2026-11-06-type-scale`
