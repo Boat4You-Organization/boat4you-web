@@ -4,6 +4,7 @@
 
 Mario 10.11.2026: sve kartice idu preko Mollieja, Stripe i Revolut se nigdje ne spominju. Backend: boat4you-backend `feat/mollie-payments` (DEPLOY_NOTES tamo, redoslijed i env).
 
+- **Jedna stranica za sve ugovore (Mario 10.11.):** ugovori svih 7 sajtova plaćaju se SAMO na `www.boat4you.com/pay/<ključ>` (Mollie profil je prijavljen za boat4you.com); sisteri nemaju `/pay`. Stranica počinje rečenicom da Boat4You (dio grupe Europe Yachts Charter) obrađuje uplatu i da će na izvodu kartice pisati Boat4You (9 jezika). Prozor za kolačiće se na `/pay` ne prikazuje (tamo nema analitike).
 - **`/pay/<ključ>`** (`src/app/[locale]/(simple)/pay/[key]/…`, `views/Pay`): ugovor, iznos, e-mail → Mollie checkout → `/success` ili `/failed`. Ključ iz `PAY_LINK_KEYS` (server env, zarezom odvojeni; isti kao `boat4you=` u backend `CUSTOM_PAYMENT_LINK_KEYS`); krivi ključ = 404. noindex, no-store, no-referrer, bez GA, bez Contact Center widgeta, sw.js je ne kešira. Iznos iznad 10.000 € → poruka „više uplata ili virman“.
 - **Booking:** `/api/payments/create-checkout-session` zove backend `/payments/card/…` (prekidač providera) i šalje jezik + IP posjetitelja; preusmjerava samo na `www.mollie.com` ili `checkout.stripe.com`. Stripe.js maknut (`useStripeCheckout` obrisan; paket `@stripe/stripe-js` ostao u package.json, nekorišten).
 - **`/payment-success?paymentRef=`**: pita status (`/api/payments/card-status`); plaćeno → potvrda + konverzija; nije dovršeno → `/payment-cancelled?reservationId=`; nepotvrđeno → „Potvrđujemo vašu uplatu“ (bez konverzije).
