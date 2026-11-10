@@ -31,7 +31,9 @@
     "amountInvalid": "Prosimy wpisać prawidłową kwotę z maksymalnie dwoma miejscami po przecinku, na przykład 1109,00.",
     "amountAmbiguous": "Prosimy wpisać kwotę bez separatora tysięcy, na przykład 50000 lub 50,00.",
     "amountTooLow": "Minimalna kwota to {min}.",
-    "amountTooHigh": "Płatność kartą jest możliwa do {max} za jedną płatność. Większą kwotę zapłać w kilku płatnościach lub przelewem bankowym."
+    "amountTooHigh": "Płatność kartą jest możliwa do {max} za jedną płatność. Większą kwotę zapłać w kilku płatnościach lub przelewem bankowym.",
+    "klarnaUnavailable": "Klarna nie jest dostępna dla tej płatności (kraj adresu rozliczeniowego lub kwota). Prosimy wybrać kartę, Apple Pay lub bank.",
+    "klarnaAddress": "Prosimy sprawdzić adres rozliczeniowy i spróbować ponownie."
   },
   "success": {
     "confirming": {
@@ -66,5 +68,13 @@
     "terms": "Regulaminu",
     "privacy": "Polityki prywatności",
     "received": "Płatności przyjmuje Cusmanich d.o.o. w imieniu i na rachunek Operatora."
+  },
+  "method": {
+    "title": "Metoda płatności",
+    "default": "Karta, Apple Pay lub bank",
+    "klarna": "Klarna",
+    "klarnaHint": "Zapłać później lub w ratach. To Klarna decyduje, jakie opcje zostaną zaproponowane.",
+    "klarnaOverLimit": "Klarna jest dostępna dla kwot do {max}, dlatego przywrócono płatność kartą, Apple Pay lub przez bank.",
+    "klarnaCountries": "Klarna jest dostępna dla adresów rozliczeniowych w następujących krajach: {countries}. W przypadku innego kraju prosimy wybrać kartę, Apple Pay lub bank."
   }
 }

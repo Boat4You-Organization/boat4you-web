@@ -469,7 +469,7 @@ Yacht Providers may also provide their own invoice or receipt at
 check-in, especially if local regulations require it.
 
 **6.6. Payment Processing and Security:** Boat4You uses reputable
-third-party payment processors to handle transactions (card payments, including Apple Pay and Google Pay, are processed by Mollie B.V., Amsterdam, the Netherlands). All transactions are encrypted and
+third-party payment processors to handle transactions (card payments, including Apple Pay and Google Pay, are processed by Mollie B.V., Amsterdam, the Netherlands). If you choose Klarna, the payment is also handled by Klarna Bank AB (publ), Stockholm, Sweden, which decides on the payment under its own terms. All transactions are encrypted and
 secure. However, you should also do your part: only make payments
 through the official Platform interface. **Boat4You will never ask you
 to pay by wire transfer to a personal bank account or in cash through

@@ -1,4 +1,5 @@
 /** Secret /pay/<key> page: card payment for a contract made outside the booking flow (backend custompayment). */
+import { KlarnaPayConfig } from '@/models/klarna.model';
 
 export type CustomPaymentStatus = 'PENDING' | 'COMPLETED' | 'FAILED' | 'CANCELLED' | 'NEEDS_REVIEW';
 
@@ -15,6 +16,8 @@ export interface PayConfig {
   enabled: boolean;
   minAmountMinor: number;
   maxAmountMinor: number;
+  /** Klarna countries and limit; null when Klarna is not offered on /pay. */
+  klarna: KlarnaPayConfig | null;
 }
 
 /** GET /public/payments/custom/orders/{ref} (the fields the page uses). */

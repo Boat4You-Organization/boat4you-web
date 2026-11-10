@@ -1,5 +1,23 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-11-10 — 💳 Klarna kao način plaćanja (booking + `/pay`) — ⏳ NIJE deployano (grana `feat/mollie-klarna`)
+
+**Što:** Klarna (preko Mollieja) kao treća opcija uz karticu i bankovni prijenos.
+
+- **Booking korak plaćanja (`UnifiedPaymentStep`) i „Pay now“ na /my-bookings (`PayNowModal`, i za kasnije rate):** opcija „Klarna“ (tekstualni znak, bez logotipa) s kratkim opisom, iznosom, Klarninom naknadom (`surchargePercent` iz backenda, cijeli euri kao kod kartice; redak se ne prikazuje kad je 0) i ukupnim iznosom. Prikazuje se samo kad `GET /public/payments/card/klarna` vrati 200 i iznos s naknadom ≤ `maxAmountMinor` (204, greška, timeout ili neispravan odgovor = nema opcije, korak plaćanja radi kao prije). Odabir otvara adresu za naplatu (ime, prezime, ulica i broj, poštanski broj, grad, država); države samo iz odgovora backenda čiji limit pokriva iznos, imena preko `Intl.DisplayNames`. Ime i prezime predispunjeni iz kontakta rezervacije / računa. Gumb za plaćanje onemogućen dok adresa nije ispravna.
+- **Slanje:** `usePaymentSubmit` → `/api/payments/create-checkout-session` → backend: adresa u TIJELU zahtjeva `{ "klarna": {…} }` (nikad u URL-u), ista ruta, isti query parametri, isti X-Forwarded-For i secured→public fallback. Kartica: zahtjev bajt-za-bajt isti kao prije. 422 / 8107 → lokalizirana poruka „odaberite karticu ili bankovni prijenos“.
+- **`/pay/<ključ>`:** izbor načina plaćanja iznad gumba („Kartica, Apple Pay ili banka“ = dosadašnje ponašanje, i „Klarna“ kad config nosi `klarna` i upisani iznos ≤ limit; ako iznos naraste preko limita, vraća se na zadano uz objašnjenje). Klarna traži istu adresu; `klarna` blok ide u POST `/public/payments/custom/orders`. 422 / 8107 i odbijena adresa imaju svoje poruke. noindex / no-store / bez analitike nepromijenjeno.
+- **Pravni tekstovi ×9 jezika:** Privacy Policy (Payment Processors) i Terms 6.6: Klarna kao neobavezan način plaćanja, koji se podaci prosljeđuju Mollieju i Klarna Bank AB (publ), Stockholm; Klarna odlučuje i može provjeravati identitet i kreditnu sposobnost po svojim uvjetima. Bez naknada i bez obećanja odobrenja. Footer NIJE diran (logotip je na `feat/footer-klarna`).
+- **Prijevodi:** `common.klarna.*` i `pay.method.*`, `pay.errors.klarnaUnavailable|klarnaAddress` na 9 jezika.
+
+**Ovisnosti:** backend grana `feat/mollie-klarna` (`GET /public/payments/card/klarna`, `klarna` tijelo na create-checkout-session, `klarna` u `/public/payments/custom/config` i `/orders`) i `MOLLIE_KLARNA_ENABLED=true` na API čvoru. Sa starim backendom ili isključenom zastavicom opcija Klarna se jednostavno ne pojavljuje (stari backend vraća 404 na `/card/klarna`, a config nema `klarna`).
+
+**Akcije pred deploy:**
+
+- [ ] Backend `feat/mollie-klarna` LIVE na oba čvora prije ili zajedno s webom; zastavica uključena tek kad se želi ponuditi.
+- [ ] Pregled (1 neovisni agent) i Mariovo „da“.
+- [ ] Nakon deploya: `/pay/<ključ>` s Klarnom do Mollie checkouta (test ključ ne postoji na produkciji, pa samo do preusmjeravanja), booking korak s 204 (nema opcije) i s 200.
+
 ## 2026-11-10 — 💳 Footer: red „Secure payment by Mollie“ s logotipima kartica — ✅ LIVE 10.11.2026 (`b0fe63e8d`, deployment id b0fe63e8d0a7-mwaw6na1, tag `live/2026-11-10-footer-payments`)
 
 **Što (Mario 10.11.: „mora biti negdje i Mollie kao payment provider i da se u footeru vidi da primamo sve kartice“, primjer konkurenta danielis-yachting.com; zatim „daj ubaci i American Express“):** red iznad „Our network“: natpis `common.securePaymentByMollie` (isti kao na koracima plaćanja, 9 jezika) i logotipi Visa, Mastercard, American Express, Apple Pay i Google Pay u sivim pločicama 32×24.

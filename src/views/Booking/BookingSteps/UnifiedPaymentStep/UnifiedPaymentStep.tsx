@@ -21,16 +21,25 @@ import { useLocale, useTranslations } from 'next-intl';
 import NextLink from 'next/link';
 
 import { getBankTransferFee, getCardSurchargePercentage } from '@/actions/settings.actions';
+import KlarnaPaymentOption from '@/components/Payment/KlarnaPaymentOption';
 import BankTransferIcon from '@/components/SvgIcons/Payment/BankTransfer';
 import CardBrands from '@/components/SvgIcons/Payment/CardBrands';
 import CreditCardIcon from '@/components/SvgIcons/Payment/CreditCard';
 import SecurePayement from '@/components/SvgIcons/WhyChooseUs/SecurePayment';
 import { bankDetails } from '@/config/bank-details.config';
 import { CARD_PAYMENT_MAX_EUR, PaymentMethod } from '@/config/paymentMethods.config';
+import {
+  EMPTY_KLARNA_BILLING,
+  KlarnaBilling,
+  isKlarnaOffered,
+  klarnaBillingErrors,
+  klarnaCountriesFor,
+} from '@/models/klarna.model';
 import { PaymentPhase as ApiPaymentPhase } from '@/models/reservation.model';
 import colors from '@/styles/themes/colors';
 import { ReservationData } from '@/types/reservation.type';
 import { AppliedVoucher } from '@/types/voucher.type';
+import { useKlarnaConfig } from '@/utils/hooks/useKlarnaConfig';
 import { usePaymentSubmit } from '@/utils/hooks/usePaymentSubmit';
 import { bankFeeShareForPhase } from '@/utils/static/bankTransferFee';
 import { freeCancellationEnd } from '@/utils/static/cancellationUtils';
@@ -115,13 +124,14 @@ const UnifiedPaymentStep = ({ reservationData }: UnifiedPaymentStepProps) => {
   // is a legitimate signal the user wants a new attempt.
   const idempotencyKey = useMemo(() => crypto.randomUUID(), []);
 
-  const { handleSubmit, isLoading } = usePaymentSubmit({
-    paymentMethod: selectedPaymentMethod,
-    reservationId: reservationId?.toString() ?? '',
-    payFullAmount,
-    paymentPhaseId: selectedPhase?.id,
-    idempotencyKey,
-  });
+  // Klarna billing address — prefilled with the booking contact's name; kept in memory only (personal data).
+  const [klarnaBilling, setKlarnaBilling] = useState<KlarnaBilling>(() => ({
+    ...EMPTY_KLARNA_BILLING,
+    givenName: contact?.name ?? '',
+    familyName: contact?.surname ?? '',
+  }));
+  // undefined while loading, null when Klarna is not offered (204, error, timeout).
+  const klarnaConfig = useKlarnaConfig();
 
   const [cardSurchargePercent, setCardSurchargePercent] = useState<number>(0);
   const [bankFee, setBankFee] = useState<number>(0);
@@ -155,16 +165,53 @@ const UnifiedPaymentStep = ({ reservationData }: UnifiedPaymentStepProps) => {
   const cardAllowed = cardAdjusted <= CARD_PAYMENT_MAX_EUR;
   const bankFeeShare = bankFeeShareForPhase(bankFee, paymentPhases.length, 0);
   const bankAdjusted = baseDueNow + bankFeeShare;
+  // Klarna: its own surcharge (may be 0), rounded to whole euros like the card surcharge. Offered only when the
+  // backend says so and the amount with the surcharge is within the overall and at least one country's limit.
+  const klarnaSurchargePercent = klarnaConfig?.surchargePercent ?? 0;
+  const klarnaFee = Math.round((baseDueNow * klarnaSurchargePercent) / 100);
+  const klarnaAdjusted = baseDueNow + klarnaFee;
+  const klarnaAmountMinor = Math.round(klarnaAdjusted * 100);
+  const klarnaAllowed = isKlarnaOffered(klarnaConfig, klarnaAmountMinor);
+  const klarnaCountries = useMemo(
+    () => klarnaCountriesFor(klarnaConfig, klarnaAmountMinor),
+    [klarnaConfig, klarnaAmountMinor]
+  );
+  const klarnaValid =
+    Object.keys(
+      klarnaBillingErrors(
+        klarnaBilling,
+        klarnaCountries.map(c => c.code)
+      )
+    ).length === 0;
 
   useEffect(() => {
+    const fallback = cardAllowed ? PaymentMethod.CREDIT_CARD : PaymentMethod.BANK_TRANSFER;
+
     if (!selectedPaymentMethod) {
-      setPaymentMethod(cardAllowed ? PaymentMethod.CREDIT_CARD : PaymentMethod.BANK_TRANSFER);
+      setPaymentMethod(fallback);
     } else if (!cardAllowed && selectedPaymentMethod === PaymentMethod.CREDIT_CARD) {
       setPaymentMethod(PaymentMethod.BANK_TRANSFER);
+    } else if (selectedPaymentMethod === PaymentMethod.KLARNA && klarnaConfig !== undefined && !klarnaAllowed) {
+      // Klarna restored from the session but not offered (any more) for this payment.
+      setPaymentMethod(fallback);
     }
-  }, [selectedPaymentMethod, cardAllowed]);
+  }, [selectedPaymentMethod, cardAllowed, klarnaConfig, klarnaAllowed]);
 
-  const methodAdjustedAmount = selectedPaymentMethod === PaymentMethod.BANK_TRANSFER ? bankAdjusted : cardAdjusted;
+  const methodAdjustedAmount =
+    selectedPaymentMethod === PaymentMethod.BANK_TRANSFER
+      ? bankAdjusted
+      : selectedPaymentMethod === PaymentMethod.KLARNA
+        ? klarnaAdjusted
+        : cardAdjusted;
+
+  const { handleSubmit, isLoading } = usePaymentSubmit({
+    paymentMethod: selectedPaymentMethod,
+    reservationId: reservationId?.toString() ?? '',
+    payFullAmount,
+    paymentPhaseId: selectedPhase?.id,
+    idempotencyKey,
+    klarnaBilling: selectedPaymentMethod === PaymentMethod.KLARNA && klarnaValid ? klarnaBilling : undefined,
+  });
 
   const dueNowDeadline = paymentPhases[0]?.deadline ?? dayjs();
   const dateFormatter = (d: dayjs.Dayjs) => d.locale(locale).format('D MMMM YYYY');
@@ -377,6 +424,22 @@ const UnifiedPaymentStep = ({ reservationData }: UnifiedPaymentStepProps) => {
           </Stack>
         </Box>
 
+        {/* Klarna — only when the backend offers it for this amount */}
+        {klarnaAllowed && (
+          <KlarnaPaymentOption
+            selected={selectedPaymentMethod === PaymentMethod.KLARNA}
+            onSelect={() => setPaymentMethod(PaymentMethod.KLARNA)}
+            amount={baseDueNow}
+            surchargePercent={klarnaSurchargePercent}
+            fee={klarnaFee}
+            total={klarnaAdjusted}
+            fmt={fmt}
+            billing={klarnaBilling}
+            onBillingChange={setKlarnaBilling}
+            countries={klarnaCountries}
+          />
+        )}
+
         {/* Bank transfer + inline details collapse (only expanded when picked) */}
         <Box
           sx={{
@@ -551,7 +614,9 @@ const UnifiedPaymentStep = ({ reservationData }: UnifiedPaymentStepProps) => {
         <Button
           size="large"
           onClick={handleSubmit}
-          disabled={isLoading || !selectedPaymentMethod}
+          disabled={
+            isLoading || !selectedPaymentMethod || (selectedPaymentMethod === PaymentMethod.KLARNA && !klarnaValid)
+          }
           sx={{ width: 260 }}
           startIcon={<SecurePayement size={24} />}
         >

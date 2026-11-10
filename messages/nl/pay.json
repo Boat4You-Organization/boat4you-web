@@ -31,7 +31,9 @@
     "amountInvalid": "Vul een geldig bedrag in met maximaal twee decimalen, bijvoorbeeld 1109,00.",
     "amountAmbiguous": "Vul het bedrag in zonder scheidingsteken voor duizendtallen, bijvoorbeeld 50000 of 50,00.",
     "amountTooLow": "Het minimumbedrag is {min}.",
-    "amountTooHigh": "Betalen met een kaart kan tot {max} per betaling. Betaal een hoger bedrag in meerdere betalingen of per bankoverschrijving."
+    "amountTooHigh": "Betalen met een kaart kan tot {max} per betaling. Betaal een hoger bedrag in meerdere betalingen of per bankoverschrijving.",
+    "klarnaUnavailable": "Klarna is niet beschikbaar voor deze betaling (land van het factuuradres of bedrag). Kies kaart, Apple Pay of bank.",
+    "klarnaAddress": "Controleer uw factuuradres en probeer het opnieuw."
   },
   "success": {
     "confirming": {
@@ -66,5 +68,13 @@
     "terms": "Algemene voorwaarden",
     "privacy": "Privacybeleid",
     "received": "Betalingen worden ontvangen door Cusmanich d.o.o. in naam en voor rekening van de Exploitant."
+  },
+  "method": {
+    "title": "Betaalmethode",
+    "default": "Kaart, Apple Pay of bank",
+    "klarna": "Klarna",
+    "klarnaHint": "Achteraf of in termijnen betalen. Klarna bepaalt welke mogelijkheden u worden aangeboden.",
+    "klarnaOverLimit": "Klarna is beschikbaar voor bedragen tot {max}, daarom is de betaalmethode weer kaart, Apple Pay of bank.",
+    "klarnaCountries": "Klarna is beschikbaar voor factuuradressen in de volgende landen: {countries}. Kies voor elk ander land kaart, Apple Pay of bank."
   }
 }

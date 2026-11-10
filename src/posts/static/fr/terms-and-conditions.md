@@ -549,7 +549,7 @@ reçu de paiement pour le total. Les Fournisseurs de Yachts peuvent
 l'enregistrement, en particulier si les réglementations locales l'exigent.
 
 **6.6. Traitement des Paiements et Sécurité :** Boat4You utilise des
-processeurs de paiement tiers réputés pour gérer les transactions (les paiements par carte, y compris Apple Pay et Google Pay, sont traités par Mollie B.V., Amsterdam, Pays-Bas). Toutes les
+processeurs de paiement tiers réputés pour gérer les transactions (les paiements par carte, y compris Apple Pay et Google Pay, sont traités par Mollie B.V., Amsterdam, Pays-Bas). Si vous choisissez Klarna, le paiement est également traité par Klarna Bank AB (publ), Stockholm, Suède, qui décide du paiement selon ses propres conditions. Toutes les
 transactions sont chiffrées et sécurisées. Cependant, vous devez
 également faire votre part : n'effectuez des paiements que via
 l'interface officielle de la Plateforme. **Boat4You ne vous demandera

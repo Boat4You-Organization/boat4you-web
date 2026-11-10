@@ -669,5 +669,28 @@
     "manualReview": "Die Agentur hat die Yacht Ihrer Reservierung geändert. Wir prüfen die neuen Angaben und melden uns in Kürze bei Ihnen — Sie müssen im Moment nichts tun.",
     "detected": "Bei Ihrer Reservierung wurde eine Änderung festgestellt. Unser Team prüft sie und meldet sich bei Ihnen, falls etwas Ihre Aufmerksamkeit erfordert.",
     "detectedOn": "Festgestellt am {date}"
+  },
+  "klarna": {
+    "name": "Klarna",
+    "description": "Später oder in Raten bezahlen mit Klarna. Klarna entscheidet, welche Möglichkeiten Ihnen angeboten werden.",
+    "fee": "Klarna-Zahlungsgebühr ({percent}%)",
+    "billingTitle": "Rechnungsadresse",
+    "labels": {
+      "givenName": "Vorname",
+      "familyName": "Nachname",
+      "streetAndNumber": "Straße und Hausnummer",
+      "postalCode": "Postleitzahl",
+      "city": "Ort",
+      "country": "Land",
+      "countryPlaceholder": "Land auswählen"
+    },
+    "errors": {
+      "required": "Erforderlich",
+      "tooLong": "Bitte höchstens {max} Zeichen eingeben.",
+      "country": "Bitte wählen Sie ein Land aus der Liste."
+    },
+    "countriesNote": "Klarna ist für Rechnungsadressen in folgenden Ländern verfügbar: {countries}. Für alle anderen Länder wählen Sie bitte Kartenzahlung oder Banküberweisung.",
+    "notAvailable": "Klarna ist für diese Zahlung nicht verfügbar (Land der Rechnungsadresse oder Betrag). Bitte wählen Sie Kartenzahlung oder Banküberweisung.",
+    "invalidAddress": "Bitte überprüfen Sie Ihre Rechnungsadresse und versuchen Sie es erneut."
   }
 }

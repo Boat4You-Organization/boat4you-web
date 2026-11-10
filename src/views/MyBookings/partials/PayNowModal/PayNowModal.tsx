@@ -10,17 +10,27 @@ import { useLocale, useTranslations } from 'next-intl';
 
 import { getBankTransferFee, getCardSurchargePercentage } from '@/actions/settings.actions';
 import ModalRoot from '@/components/ModalRoot';
+import KlarnaPaymentOption from '@/components/Payment/KlarnaPaymentOption';
 import BankTransferIcon from '@/components/SvgIcons/Payment/BankTransfer';
 import CreditCardIcon from '@/components/SvgIcons/Payment/CreditCard';
 import SecurePayement from '@/components/SvgIcons/WhyChooseUs/SecurePayment';
 import { bankDetails } from '@/config/bank-details.config';
 import { CARD_PAYMENT_MAX_EUR, PaymentMethod } from '@/config/paymentMethods.config';
+import {
+  EMPTY_KLARNA_BILLING,
+  KlarnaBilling,
+  isKlarnaOffered,
+  klarnaBillingErrors,
+  klarnaCountriesFor,
+} from '@/models/klarna.model';
 import { PaymentPhase } from '@/models/reservation.model';
 import colors from '@/styles/themes/colors';
+import { useKlarnaConfig } from '@/utils/hooks/useKlarnaConfig';
 import { usePaymentSubmit } from '@/utils/hooks/usePaymentSubmit';
 import { bankFeeShareForPhase } from '@/utils/static/bankTransferFee';
 import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
 import { showToast } from '@/valtio/global/global.actions';
+import { useUserStore } from '@/valtio/user/user.store';
 
 /**
  * Modal shown from /my-bookings when the customer clicks "Pay now". Matches
@@ -58,6 +68,26 @@ const PayNowModal = ({ isOpen, onClose, reservationId, reservationNumber, paymen
   const [paymentMethod, setPaymentMethod] = useState<PaymentMethod>(PaymentMethod.CREDIT_CARD);
   const [cardSurchargePercent, setCardSurchargePercent] = useState<number>(0);
   const [bankFee, setBankFee] = useState<number>(0);
+  const { user } = useUserStore();
+  // Klarna billing address — prefilled with the account holder's name; kept in memory only (personal data).
+  const [klarnaBilling, setKlarnaBilling] = useState<KlarnaBilling>(() => ({
+    ...EMPTY_KLARNA_BILLING,
+    givenName: user?.name ?? '',
+    familyName: user?.surname ?? '',
+  }));
+  // Loaded when the modal opens; undefined while loading, null when Klarna is not offered.
+  const klarnaConfig = useKlarnaConfig(isOpen);
+
+  // The account may load after the modal mounted: fill the name then, never over what the customer typed.
+  useEffect(() => {
+    if (!user) return;
+
+    setKlarnaBilling(prev => ({
+      ...prev,
+      givenName: prev.givenName || user.name || '',
+      familyName: prev.familyName || user.surname || '',
+    }));
+  }, [user]);
 
   // Unpaid = any phase without paidOn. If none are paid yet, this is all
   // phases; otherwise it's whatever remains after the admin / customer
@@ -143,7 +173,36 @@ const PayNowModal = ({ isOpen, onClose, reservationId, reservationNumber, paymen
   );
   const bankFeeShare = bankFeeShareForPhase(bankFee, paymentPhases.length, oldestUnpaidIndex);
   const bankAdjusted = baseDueNow + bankFeeShare;
-  const methodAdjustedAmount = paymentMethod === PaymentMethod.BANK_TRANSFER ? bankAdjusted : cardAdjusted;
+  // Klarna: its own surcharge (may be 0), whole euros like the card surcharge; offered only within its limits.
+  const klarnaSurchargePercent = klarnaConfig?.surchargePercent ?? 0;
+  const klarnaFee = Math.round((baseDueNow * klarnaSurchargePercent) / 100);
+  const klarnaAdjusted = baseDueNow + klarnaFee;
+  const klarnaAmountMinor = Math.round(klarnaAdjusted * 100);
+  const klarnaAllowed = isKlarnaOffered(klarnaConfig, klarnaAmountMinor);
+  const klarnaCountries = useMemo(
+    () => klarnaCountriesFor(klarnaConfig, klarnaAmountMinor),
+    [klarnaConfig, klarnaAmountMinor]
+  );
+  const klarnaValid =
+    Object.keys(
+      klarnaBillingErrors(
+        klarnaBilling,
+        klarnaCountries.map(c => c.code)
+      )
+    ).length === 0;
+
+  useEffect(() => {
+    if (paymentMethod === PaymentMethod.KLARNA && klarnaConfig !== undefined && !klarnaAllowed) {
+      setPaymentMethod(cardAllowed ? PaymentMethod.CREDIT_CARD : PaymentMethod.BANK_TRANSFER);
+    }
+  }, [paymentMethod, klarnaConfig, klarnaAllowed, cardAllowed]);
+
+  const methodAdjustedAmount =
+    paymentMethod === PaymentMethod.BANK_TRANSFER
+      ? bankAdjusted
+      : paymentMethod === PaymentMethod.KLARNA
+        ? klarnaAdjusted
+        : cardAdjusted;
 
   const dueNowDeadline = oldestUnpaid ? dayjs(oldestUnpaid.deadline) : dayjs();
   const dateFormatter = (d: dayjs.Dayjs) => d.locale(locale).format('D MMMM YYYY');
@@ -158,6 +217,7 @@ const PayNowModal = ({ isOpen, onClose, reservationId, reservationNumber, paymen
     // paymentPhaseId over payFullAmount when both are present.
     paymentPhaseId: oldestUnpaid?.id,
     idempotencyKey,
+    klarnaBilling: paymentMethod === PaymentMethod.KLARNA && klarnaValid ? klarnaBilling : undefined,
   });
 
   const cardBorder = (active: boolean) => (active ? `2px solid ${colors.blue500}` : `1px solid ${colors.black200}`);
@@ -337,6 +397,22 @@ const PayNowModal = ({ isOpen, onClose, reservationId, reservationNumber, paymen
           </Stack>
         </Box>
 
+        {/* Klarna — only when the backend offers it for this amount */}
+        {klarnaAllowed && (
+          <KlarnaPaymentOption
+            selected={paymentMethod === PaymentMethod.KLARNA}
+            onSelect={() => setPaymentMethod(PaymentMethod.KLARNA)}
+            amount={baseDueNow}
+            surchargePercent={klarnaSurchargePercent}
+            fee={klarnaFee}
+            total={klarnaAdjusted}
+            fmt={fmt}
+            billing={klarnaBilling}
+            onBillingChange={setKlarnaBilling}
+            countries={klarnaCountries}
+          />
+        )}
+
         {/* Bank transfer + inline details */}
         <Box
           sx={{
@@ -421,7 +497,7 @@ const PayNowModal = ({ isOpen, onClose, reservationId, reservationNumber, paymen
           <Button
             size="large"
             onClick={handleSubmit}
-            disabled={isLoading}
+            disabled={isLoading || (paymentMethod === PaymentMethod.KLARNA && !klarnaValid)}
             sx={{ width: 260 }}
             startIcon={<SecurePayement size={24} />}
           >

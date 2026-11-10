@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 
 import { POST_REQUEST_PARAMETERS } from '@/config/constants.config';
 import { ErrorModel } from '@/models/error.model';
+import { sanitizeKlarnaBilling } from '@/models/klarna.model';
 import { clientIp } from '@/utils/server/clientIp';
 import { authFetch, hasAuthToken } from '@/utils/static/authFetch';
 
@@ -20,6 +21,14 @@ export async function POST(request: NextRequest) {
 
     if (!reservationId) {
       return NextResponse.json({ error: 'Reservation ID is required' }, { status: 400 });
+    }
+
+    // Klarna: the billing address (personal data) goes to the backend in the request body, never in the URL.
+    // Without it the call is the card checkout exactly as before.
+    const klarna = body.klarna === undefined ? null : sanitizeKlarnaBilling(body.klarna);
+
+    if (body.klarna !== undefined && !klarna) {
+      return NextResponse.json({ error: 'Invalid billing address' }, { status: 400 });
     }
 
     const params = new URLSearchParams();
@@ -53,6 +62,7 @@ export async function POST(request: NextRequest) {
     const requestInit = {
       ...POST_REQUEST_PARAMETERS,
       headers: { ...POST_REQUEST_PARAMETERS.headers, ...(ip ? { 'X-Forwarded-For': ip } : {}) },
+      ...(klarna ? { body: JSON.stringify({ klarna }) } : {}),
     };
 
     let response = hasAuth ? await authFetch(securedUrl, requestInit) : await fetch(publicUrl, requestInit);
@@ -66,7 +76,11 @@ export async function POST(request: NextRequest) {
         .json()
         .catch(() => ({ message: `HTTP ${response.status}` }) as ErrorModel);
 
-      return NextResponse.json({ error: errorBody.message ?? `HTTP ${response.status}` }, { status: response.status });
+      // `code` lets the browser tell "Klarna not available" (8107) from other refusals.
+      return NextResponse.json(
+        { error: errorBody.message ?? `HTTP ${response.status}`, code: errorBody.code },
+        { status: response.status }
+      );
     }
 
     const responseData: CreateCheckoutSessionResponse = await response.json();

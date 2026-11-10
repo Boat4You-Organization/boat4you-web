@@ -10,11 +10,14 @@ export const CARD_PAYMENT_MAX_EUR = 10000;
 export enum PaymentMethod {
   CREDIT_CARD = 'CREDIT_CARD',
   BANK_TRANSFER = 'BANK_TRANSFER',
+  /** Klarna through Mollie — offered only when the backend says so (GET /public/payments/card/klarna). */
+  KLARNA = 'KLARNA',
 }
 
 export const PAYMENT_METHOD_LABEL_MAP = {
   [PaymentMethod.CREDIT_CARD]: 'creditCard',
   [PaymentMethod.BANK_TRANSFER]: 'bankTransfer',
+  [PaymentMethod.KLARNA]: 'klarna.name',
 } as const;
 
 export enum PaymentInstallment {

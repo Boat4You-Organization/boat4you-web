@@ -463,7 +463,7 @@ informazioni con determinate parti fidate nelle seguenti situazioni:
   utilizzare queste informazioni solo se necessario per fornire i loro
   servizi di pagamento. Ci assicuriamo che qualsiasi processore di
   pagamento che utilizziamo sia conforme agli standard di sicurezza
-  PCI-DSS. I pagamenti con carta (inclusi Apple Pay e Google Pay) sono elaborati da **Mollie B.V.**, Keizersgracht 126, 1015 CW Amsterdam, Paesi Bassi, istituto di pagamento autorizzato da De Nederlandsche Bank. I dati della carta si inseriscono sulla pagina di pagamento sicura di Mollie e non arrivano mai ai nostri server.
+  PCI-DSS. I pagamenti con carta (inclusi Apple Pay e Google Pay) sono elaborati da **Mollie B.V.**, Keizersgracht 126, 1015 CW Amsterdam, Paesi Bassi, istituto di pagamento autorizzato da De Nederlandsche Bank. I dati della carta si inseriscono sulla pagina di pagamento sicura di Mollie e non arrivano mai ai nostri server. Se si sceglie Klarna come metodo di pagamento facoltativo, nome, indirizzo di fatturazione, indirizzo e-mail e importo del pagamento vengono trasmessi a Mollie B.V. e a **Klarna Bank AB (publ)**, Sveavägen 46, 111 34 Stoccolma, Svezia. Klarna decide sul pagamento e può effettuare propri controlli di identità e di affidabilità creditizia secondo i propri termini e la propria informativa sulla privacy ([www.klarna.com](https://www.klarna.com)). La base giuridica è l'esecuzione del contratto (art. 6, par. 1, lett. b) GDPR).
 - **Fornitori di Servizi Tecnici e Amministrativi:** Ci avvaliamo di altre
   aziende o individui per svolgere funzioni per nostro conto. Gli esempi
   includono fornitori di _hosting_ di siti web, archiviazione dati _cloud_

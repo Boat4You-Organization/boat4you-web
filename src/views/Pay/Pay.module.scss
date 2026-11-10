@@ -144,3 +144,60 @@
     font-size: rem-calc(36);
   }
 }
+
+// Payment method (default Mollie page or Klarna) above the Pay button.
+.methods {
+  margin: 0;
+  padding: 0;
+  border: 0;
+
+  :global(.MuiFormControlLabel-label) {
+    font-size: rem-calc(16);
+  }
+
+  :global(.MuiFormControlLabel-root) {
+    align-items: flex-start;
+    margin-bottom: rem-calc(4);
+  }
+
+  :global(.MuiRadio-root) {
+    padding-top: rem-calc(6);
+  }
+}
+
+.methodsLegend {
+  margin-bottom: rem-calc(8);
+  padding: 0;
+  color: $blue-950;
+  font-size: rem-calc(18);
+  font-weight: 700;
+}
+
+.methodLabel {
+  display: flex;
+  flex-direction: column;
+  padding-top: rem-calc(8);
+}
+
+.methodHint,
+.methodNotice {
+  color: $black-600;
+  font-size: rem-calc(16);
+  line-height: 1.5;
+}
+
+.methodNotice {
+  margin: 0;
+}
+
+.klarna {
+  margin-top: rem-calc(16);
+  padding: rem-calc(16);
+  border: 1px solid $black-100;
+  border-radius: rem-calc(8);
+
+  // The billing form's own labels, hints and errors at the page's 16px minimum.
+  :global(.MuiTypography-body2) {
+    font-size: rem-calc(16);
+  }
+}

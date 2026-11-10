@@ -57,6 +57,7 @@ const PayPage = async ({ params, searchParams }: PayPageProps) => {
         maxAmountMinor={config.config.maxAmountMinor}
         initialReference={isPayReference(reference) ? reference : ''}
         initialAmount={parseAmountToMinor(amount) === null ? '' : amount}
+        klarna={config.config.klarna}
       />
       <PayLegal />
     </main>

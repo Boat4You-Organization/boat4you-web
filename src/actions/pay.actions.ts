@@ -2,6 +2,12 @@
 
 import { routing } from '@/i18n/routing';
 import {
+  KLARNA_UNAVAILABLE_CODE,
+  KlarnaBilling,
+  parseKlarnaPayConfig,
+  sanitizeKlarnaBilling,
+} from '@/models/klarna.model';
+import {
   CUSTOM_PAYMENT_STATUSES,
   PayConfig,
   PaymentStatusInfo,
@@ -23,7 +29,15 @@ const API = `${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/payments/custom`;
 const TIMEOUT_MS = 5000;
 const CREATE_TIMEOUT_MS = 20000;
 
-export type PayFailureReason = 'validation' | 'notFound' | 'rateLimited' | 'unavailable' | 'provider' | 'error';
+export type PayFailureReason =
+  | 'validation'
+  | 'notFound'
+  | 'rateLimited'
+  | 'unavailable'
+  | 'provider'
+  | 'error'
+  | 'klarnaUnavailable'
+  | 'klarnaAddress';
 
 /** Form fields the backend can reject (its `amountMinor` is the form's `amount`). */
 export type PayFormField = 'email' | 'reference' | 'amount';
@@ -42,6 +56,8 @@ export interface CreateCustomPaymentInput {
   amountMinor: number;
   email: string;
   locale: string;
+  /** Billing address when the payer chose Klarna (the payer e-mail stays `email`). */
+  klarna?: KlarnaBilling;
 }
 
 const failureReason = (status: number): PayFailureReason => {
@@ -103,11 +119,16 @@ export async function getPayConfig(linkKey: string): Promise<PayConfigResult> {
 
     if (!response.ok) return { ok: false, reason: failureReason(response.status) };
 
-    const { enabled, minAmountMinor, maxAmountMinor } = (await response.json()) as Partial<PayConfig>;
+    const { enabled, minAmountMinor, maxAmountMinor, klarna } = (await response.json()) as Partial<
+      Omit<PayConfig, 'klarna'>
+    > & { klarna?: unknown };
 
     if (!isMinorAmount(minAmountMinor) || !isMinorAmount(maxAmountMinor)) return { ok: false, reason: 'error' };
 
-    return { ok: true, config: { enabled: enabled === true, minAmountMinor, maxAmountMinor } };
+    return {
+      ok: true,
+      config: { enabled: enabled === true, minAmountMinor, maxAmountMinor, klarna: parseKlarnaPayConfig(klarna) },
+    };
   } catch {
     return { ok: false, reason: 'error' };
   }
@@ -129,6 +150,11 @@ export async function createCustomPayment(input: CreateCustomPaymentInput): Prom
 
   if (fields.length) return { ok: false, reason: 'validation', fields };
 
+  // Klarna: billing address in the body only (personal data, never in a URL).
+  const klarna = input.klarna === undefined ? null : sanitizeKlarnaBilling(input.klarna);
+
+  if (input.klarna !== undefined && !klarna) return { ok: false, reason: 'klarnaAddress' };
+
   try {
     const response = await fetch(`${API}/orders`, {
       method: 'POST',
@@ -142,6 +168,7 @@ export async function createCustomPayment(input: CreateCustomPaymentInput): Prom
         locale,
         site: SITE,
         linkKey: input.linkKey,
+        ...(klarna ? { klarna } : {}),
       }),
       // Creating the Mollie payment is part of this call; the backend's own
       // client allows 15 s, so this waits a little longer than that.
@@ -158,8 +185,18 @@ export async function createCustomPayment(input: CreateCustomPaymentInput): Prom
 
     if (response.status === 400) {
       const json = (await response.json().catch(() => null)) as { message?: string } | null;
+      const rejected = rejectedFields(json?.message);
 
-      return { ok: false, reason: 'validation', fields: rejectedFields(json?.message) };
+      // A refused billing field (klarna.*) is not a field of the form itself.
+      if (klarna && !rejected.length) return { ok: false, reason: 'klarnaAddress' };
+
+      return { ok: false, reason: 'validation', fields: rejected };
+    }
+
+    if (response.status === 422) {
+      const json = (await response.json().catch(() => null)) as { code?: unknown } | null;
+
+      if (json?.code === KLARNA_UNAVAILABLE_CODE) return { ok: false, reason: 'klarnaUnavailable' };
     }
 
     return { ok: false, reason: failureReason(response.status) };

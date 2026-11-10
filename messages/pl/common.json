@@ -681,5 +681,28 @@
     "manualReview": "Agencja zmieniła jacht w Twojej rezerwacji. Sprawdzamy nowe szczegóły i wkrótce się z Tobą skontaktujemy — na razie nie musisz nic robić.",
     "detected": "W Twojej rezerwacji wykryto zmianę. Nasz zespół ją sprawdza i skontaktuje się z Tobą, jeśli coś będzie wymagać Twojej uwagi.",
     "detectedOn": "Data wykrycia: {date}"
+  },
+  "klarna": {
+    "name": "Klarna",
+    "description": "Zapłać później lub w ratach z Klarną. To Klarna decyduje, jakie opcje zostaną zaproponowane.",
+    "fee": "Opłata za płatność Klarna ({percent}%)",
+    "billingTitle": "Adres rozliczeniowy",
+    "labels": {
+      "givenName": "Imię",
+      "familyName": "Nazwisko",
+      "streetAndNumber": "Ulica i numer domu",
+      "postalCode": "Kod pocztowy",
+      "city": "Miejscowość",
+      "country": "Kraj",
+      "countryPlaceholder": "Wybierz kraj"
+    },
+    "errors": {
+      "required": "Wymagane",
+      "tooLong": "Prosimy wpisać najwyżej {max} znaków.",
+      "country": "Prosimy wybrać kraj z listy."
+    },
+    "countriesNote": "Klarna jest dostępna dla adresów rozliczeniowych w następujących krajach: {countries}. W przypadku innego kraju prosimy wybrać płatność kartą lub przelew bankowy.",
+    "notAvailable": "Klarna nie jest dostępna dla tej płatności (kraj adresu rozliczeniowego lub kwota). Prosimy wybrać płatność kartą lub przelew bankowy.",
+    "invalidAddress": "Prosimy sprawdzić adres rozliczeniowy i spróbować ponownie."
   }
 }

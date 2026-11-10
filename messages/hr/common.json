@@ -681,5 +681,28 @@
     "manualReview": "Agencija je promijenila jahtu u vašoj rezervaciji. Provjeravamo nove podatke i uskoro ćemo vam se javiti — trenutačno ne trebate ništa poduzimati.",
     "detected": "U vašoj rezervaciji otkrivena je promjena. Naš tim je provjerava i javit će vam se ako nešto bude zahtijevalo vašu pažnju.",
     "detectedOn": "Datum otkrivanja: {date}"
+  },
+  "klarna": {
+    "name": "Klarna",
+    "description": "Platite kasnije ili u obrocima putem Klarne. Klarna odlučuje koje će vam mogućnosti ponuditi.",
+    "fee": "Naknada za plaćanje Klarnom ({percent}%)",
+    "billingTitle": "Adresa za naplatu",
+    "labels": {
+      "givenName": "Ime",
+      "familyName": "Prezime",
+      "streetAndNumber": "Ulica i kućni broj",
+      "postalCode": "Poštanski broj",
+      "city": "Grad",
+      "country": "Država",
+      "countryPlaceholder": "Odaberite državu"
+    },
+    "errors": {
+      "required": "Obavezno",
+      "tooLong": "Unesite najviše {max} znakova.",
+      "country": "Odaberite državu s popisa."
+    },
+    "countriesNote": "Klarna je dostupna za adrese za naplatu u sljedećim državama: {countries}. Za ostale države odaberite plaćanje karticom ili bankovni prijenos.",
+    "notAvailable": "Klarna nije dostupna za ovo plaćanje (država adrese za naplatu ili iznos). Odaberite plaćanje karticom ili bankovni prijenos.",
+    "invalidAddress": "Provjerite adresu za naplatu i pokušajte ponovno."
   }
 }

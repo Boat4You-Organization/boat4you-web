@@ -669,5 +669,28 @@
     "manualReview": "L'agence a changé le yacht de votre réservation. Nous vérifions les nouvelles informations et vous contacterons très bientôt — aucune action n'est requise de votre part pour le moment.",
     "detected": "Une modification a été détectée sur votre réservation. Notre équipe l'examine et vous contactera si quelque chose nécessite votre attention.",
     "detectedOn": "Détecté le {date}"
+  },
+  "klarna": {
+    "name": "Klarna",
+    "description": "Payez plus tard ou en plusieurs fois avec Klarna. Klarna décide des options qui vous sont proposées.",
+    "fee": "Frais de paiement Klarna ({percent}%)",
+    "billingTitle": "Adresse de facturation",
+    "labels": {
+      "givenName": "Prénom",
+      "familyName": "Nom",
+      "streetAndNumber": "Rue et numéro",
+      "postalCode": "Code postal",
+      "city": "Ville",
+      "country": "Pays",
+      "countryPlaceholder": "Choisissez un pays"
+    },
+    "errors": {
+      "required": "Requis",
+      "tooLong": "Veuillez saisir {max} caractères au maximum.",
+      "country": "Veuillez choisir un pays dans la liste."
+    },
+    "countriesNote": "Klarna est disponible pour les adresses de facturation dans les pays suivants : {countries}. Pour tout autre pays, veuillez choisir le paiement par carte ou le virement bancaire.",
+    "notAvailable": "Klarna n'est pas disponible pour ce paiement (pays de facturation ou montant). Veuillez choisir le paiement par carte ou le virement bancaire.",
+    "invalidAddress": "Veuillez vérifier votre adresse de facturation et réessayer."
   }
 }

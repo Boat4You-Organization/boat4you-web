@@ -1,9 +1,10 @@
 import { useState } from 'react';
 
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
 
 import { PaymentMethod } from '@/config/paymentMethods.config';
+import { KLARNA_UNAVAILABLE_CODE, KlarnaBilling, trimKlarnaBilling } from '@/models/klarna.model';
 import { getDataFromSessionStorage } from '@/utils/static/sessionStorageUtils';
 import { showToast } from '@/valtio/global/global.actions';
 import { useUserStore } from '@/valtio/user/user.store';
@@ -39,6 +40,8 @@ interface UsePaymentSubmitParams {
   paymentPhaseId?: number;
   /** Idempotency key generated once per /payment page mount (a double click returns the same checkout). */
   idempotencyKey?: string;
+  /** Billing address for a Klarna checkout (only read when paymentMethod is KLARNA). Sent in the body, never a URL. */
+  klarnaBilling?: KlarnaBilling;
 }
 
 export const usePaymentSubmit = ({
@@ -47,8 +50,10 @@ export const usePaymentSubmit = ({
   payFullAmount,
   paymentPhaseId,
   idempotencyKey,
+  klarnaBilling,
 }: UsePaymentSubmitParams) => {
   const [isLoading, setIsLoading] = useState(false);
+  const t = useTranslations('common');
   const router = useRouter();
   const locale = useLocale();
   const { user } = useUserStore();
@@ -83,23 +88,35 @@ export const usePaymentSubmit = ({
       return;
     }
 
+    const isKlarna = paymentMethod === PaymentMethod.KLARNA;
+
+    // Klarna needs its billing address; the step keeps the button disabled until it is complete.
+    if (isKlarna && !klarnaBilling) return;
+
     setIsLoading(true);
 
     try {
       const response = await fetch('/api/payments/create-checkout-session', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
+        // Card: exactly the request as before. Klarna: the same plus the billing address in the body.
         body: JSON.stringify({
           reservationId,
           payFullAmount,
           paymentPhaseId,
           idempotencyKey,
           locale,
+          ...(isKlarna && klarnaBilling ? { klarna: trimKlarnaBilling(klarnaBilling) } : {}),
         }),
       });
 
       if (!response.ok) {
-        const errorData = await response.json();
+        const errorData = await response.json().catch(() => ({}));
+
+        // Klarna refused for this country or amount (or switched off): ask for another method.
+        if (errorData.code === KLARNA_UNAVAILABLE_CODE) throw new Error(t('klarna.notAvailable'));
+
+        if (isKlarna && response.status === 400) throw new Error(t('klarna.invalidAddress'));
 
         throw new Error(errorData.error || 'Failed to create checkout session');
       }

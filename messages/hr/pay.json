@@ -31,7 +31,9 @@
     "amountInvalid": "Unesite valjan iznos s najviše dvije decimale, npr. 1109,00.",
     "amountAmbiguous": "Unesite iznos bez razdjelnika tisućica, npr. 50000 ili 50,00.",
     "amountTooLow": "Najmanji iznos je {min}.",
-    "amountTooHigh": "Kartično plaćanje moguće je do {max} po uplati. Veći iznos platite u više uplata ili bankovnim prijenosom."
+    "amountTooHigh": "Kartično plaćanje moguće je do {max} po uplati. Veći iznos platite u više uplata ili bankovnim prijenosom.",
+    "klarnaUnavailable": "Klarna nije dostupna za ovo plaćanje (država adrese za naplatu ili iznos). Odaberite karticu, Apple Pay ili banku.",
+    "klarnaAddress": "Provjerite adresu za naplatu i pokušajte ponovno."
   },
   "success": {
     "confirming": {
@@ -66,5 +68,13 @@
     "terms": "Uvjete korištenja",
     "privacy": "Pravila privatnosti",
     "received": "Plaćanja zaprima Cusmanich d.o.o. u ime i za račun Operatera."
+  },
+  "method": {
+    "title": "Način plaćanja",
+    "default": "Kartica, Apple Pay ili banka",
+    "klarna": "Klarna",
+    "klarnaHint": "Platite kasnije ili u obrocima. Klarna odlučuje koje će vam mogućnosti ponuditi.",
+    "klarnaOverLimit": "Klarna je dostupna za iznose do {max}, pa je način plaćanja vraćen na karticu, Apple Pay ili banku.",
+    "klarnaCountries": "Klarna je dostupna za adrese za naplatu u sljedećim državama: {countries}. Za ostale države odaberite karticu, Apple Pay ili banku."
   }
 }

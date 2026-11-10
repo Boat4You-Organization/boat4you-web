@@ -480,7 +480,7 @@ in de volgende situaties:
   verwerken. Ze zijn bevoegd deze informatie alleen te gebruiken
   zoals nodig voor het leveren van hun betaaldiensten. We zorgen
   ervoor dat elke betalingsverwerker die we gebruiken voldoet aan
-  de PCI-DSS beveiligingsnormen. Kaartbetalingen (inclusief Apple Pay en Google Pay) worden verwerkt door **Mollie B.V.**, Keizersgracht 126, 1015 CW Amsterdam, Nederland, een door De Nederlandsche Bank vergunde betaalinstelling. Je voert je kaartgegevens in op de beveiligde betaalpagina van Mollie; ze komen nooit op onze servers terecht.
+  de PCI-DSS beveiligingsnormen. Kaartbetalingen (inclusief Apple Pay en Google Pay) worden verwerkt door **Mollie B.V.**, Keizersgracht 126, 1015 CW Amsterdam, Nederland, een door De Nederlandsche Bank vergunde betaalinstelling. Je voert je kaartgegevens in op de beveiligde betaalpagina van Mollie; ze komen nooit op onze servers terecht. Als je Klarna kiest als optionele betaalmethode, worden je naam, factuuradres, e-mailadres en het te betalen bedrag doorgegeven aan Mollie B.V. en aan **Klarna Bank AB (publ)**, Sveavägen 46, 111 34 Stockholm, Zweden. Klarna beslist over de betaling en kan volgens haar eigen voorwaarden en privacyverklaring ([www.klarna.com](https://www.klarna.com)) eigen identiteits- en kredietcontroles uitvoeren. De rechtsgrond is de uitvoering van de overeenkomst (art. 6, lid 1, onder b, AVG).
 - **Technische en Administratieve Dienstverleners:** We zetten andere
   bedrijven of personen in om functies namens ons uit te voeren.
   Voorbeelden zijn websitehostingproviders, cloudgegevensopslag

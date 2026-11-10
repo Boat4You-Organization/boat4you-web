@@ -3,13 +3,22 @@
 import { useEffect, useState, useTransition } from 'react';
 import { UseFormReturn, useWatch } from 'react-hook-form';
 
-import { Alert, Button } from '@mui/material';
+import { Alert, Button, FormControlLabel, Radio, RadioGroup } from '@mui/material';
 import { useLocale, useTranslations } from 'next-intl';
 
 import { CreateCustomPaymentResult, PayFormField, createCustomPayment } from '@/actions/pay.actions';
 import Form from '@/components/Forms/Form';
 import FormInput from '@/components/Forms/FormInput';
+import KlarnaBillingForm from '@/components/Payment/KlarnaBillingForm';
 import { Link } from '@/i18n/navigation';
+import {
+  EMPTY_KLARNA_BILLING,
+  KlarnaBilling,
+  KlarnaPayConfig,
+  isKlarnaOffered,
+  klarnaBillingErrors,
+  klarnaCountriesFor,
+} from '@/models/klarna.model';
 import { PAY_CHECKOUT_ORIGINS, isPayReference } from '@/models/pay.model';
 import { FormValidator } from '@/utils/static/FormValidator';
 import { formatEur, isAmountAmbiguous, parseAmountToMinor } from '@/utils/static/payAmount';
@@ -30,7 +39,11 @@ interface PayFormProps {
   /** Prefill from ?ref=&amount= (already checked against the field rules). */
   initialReference: string;
   initialAmount: string;
+  /** Klarna countries and limit from the config; null = Klarna not offered. */
+  klarna: KlarnaPayConfig | null;
 }
+
+type PayMethod = 'default' | 'klarna';
 
 const isCheckoutUrl = (url: string): boolean => {
   try {
@@ -54,6 +67,92 @@ const AmountPreview = () => {
   );
 };
 
+interface PayMethodChoiceProps {
+  klarna: KlarnaPayConfig;
+  method: PayMethod;
+  onMethodChange: (method: PayMethod) => void;
+  billing: KlarnaBilling;
+  onBillingChange: (next: KlarnaBilling) => void;
+  showAllErrors: boolean;
+}
+
+/**
+ * Payment method above the Pay button: the default Mollie page (cards, Apple Pay, bank) or Klarna. Klarna is
+ * offered while the entered amount is within its limit; when the amount grows past it, the choice falls back to
+ * the default and says why.
+ */
+const PayMethodChoice = ({
+  klarna,
+  method,
+  onMethodChange,
+  billing,
+  onBillingChange,
+  showAllErrors,
+}: PayMethodChoiceProps) => {
+  const t = useTranslations('pay');
+  const locale = useLocale();
+  const amount = useWatch<PayFormValues, 'amount'>({ name: 'amount' });
+  const amountMinor = parseAmountToMinor(amount ?? '');
+  const offered = amountMinor !== null && isKlarnaOffered(klarna, amountMinor);
+  const [notice, setNotice] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (method === 'klarna' && amountMinor !== null && !isKlarnaOffered(klarna, amountMinor)) {
+      onMethodChange('default');
+      setNotice(t('method.klarnaOverLimit', { max: formatEur(klarna.maxAmountMinor, locale) }));
+    }
+  }, [method, amountMinor, klarna, onMethodChange, t, locale]);
+
+  if (!offered && method !== 'klarna') {
+    return notice ? (
+      <p className={styles.methodNotice} role="status">
+        {notice}
+      </p>
+    ) : null;
+  }
+
+  return (
+    <fieldset className={styles.methods}>
+      <legend className={styles.methodsLegend}>{t('method.title')}</legend>
+      <RadioGroup
+        value={method}
+        onChange={(_, value) => {
+          setNotice(null);
+          onMethodChange(value as PayMethod);
+        }}
+      >
+        <FormControlLabel value="default" control={<Radio />} label={t('method.default')} />
+        <FormControlLabel
+          value="klarna"
+          control={<Radio />}
+          label={
+            <span className={styles.methodLabel}>
+              <span>{t('method.klarna')}</span>
+              <span className={styles.methodHint}>{t('method.klarnaHint')}</span>
+            </span>
+          }
+        />
+      </RadioGroup>
+      {notice && (
+        <p className={styles.methodNotice} role="status">
+          {notice}
+        </p>
+      )}
+      {method === 'klarna' && (
+        <div className={styles.klarna}>
+          <KlarnaBillingForm
+            value={billing}
+            onChange={onBillingChange}
+            countries={klarnaCountriesFor(klarna, amountMinor ?? 0)}
+            showAllErrors={showAllErrors}
+            note={countryList => t('method.klarnaCountries', { countries: countryList })}
+          />
+        </div>
+      )}
+    </fieldset>
+  );
+};
+
 /**
  * Card payment for a contract made outside the booking flow, as on the old
  * Stripe payment link: e-mail, booking confirmation number, amount, Pay. The
@@ -61,7 +160,14 @@ const AmountPreview = () => {
  * checkout. No terms checkbox and no second step (Mario): the legal line above
  * the button states the acceptance and the request carries acceptTerms.
  */
-const PayForm = ({ linkKey, minAmountMinor, maxAmountMinor, initialReference, initialAmount }: PayFormProps) => {
+const PayForm = ({
+  linkKey,
+  minAmountMinor,
+  maxAmountMinor,
+  initialReference,
+  initialAmount,
+  klarna,
+}: PayFormProps) => {
   const t = useTranslations('pay');
   const tCommon = useTranslations('common');
   const locale = useLocale();
@@ -70,6 +176,9 @@ const PayForm = ({ linkKey, minAmountMinor, maxAmountMinor, initialReference, in
   const [isRedirecting, setIsRedirecting] = useState(false);
   const [isPending, startTransition] = useTransition();
   const busy = isPending || isRedirecting;
+  const [method, setMethod] = useState<PayMethod>('default');
+  const [billing, setBilling] = useState<KlarnaBilling>(EMPTY_KLARNA_BILLING);
+  const [showBillingErrors, setShowBillingErrors] = useState(false);
 
   // Back from Mollie's checkout restores this page from the back/forward
   // cache with the button still on "Processing…": unlock it.
@@ -119,6 +228,18 @@ const PayForm = ({ linkKey, minAmountMinor, maxAmountMinor, initialReference, in
 
     if (amountMinor === null || busy) return;
 
+    const useKlarna = method === 'klarna' && !!klarna;
+
+    if (useKlarna) {
+      const countries = klarnaCountriesFor(klarna, amountMinor).map(c => c.code);
+
+      if (Object.keys(klarnaBillingErrors(billing, countries)).length) {
+        setShowBillingErrors(true);
+
+        return;
+      }
+    }
+
     setFailure(null);
     startTransition(async () => {
       const result = await createCustomPayment({
@@ -127,6 +248,7 @@ const PayForm = ({ linkKey, minAmountMinor, maxAmountMinor, initialReference, in
         amountMinor,
         email: values.email.trim(),
         locale,
+        ...(useKlarna ? { klarna: billing } : {}),
       }).catch((): CreateCustomPaymentResult => ({ ok: false, reason: 'error' }));
 
       if (result.ok) {
@@ -190,6 +312,16 @@ const PayForm = ({ linkKey, minAmountMinor, maxAmountMinor, initialReference, in
           }}
         />
         <AmountPreview />
+        {klarna && (
+          <PayMethodChoice
+            klarna={klarna}
+            method={method}
+            onMethodChange={setMethod}
+            billing={billing}
+            onBillingChange={setBilling}
+            showAllErrors={showBillingErrors}
+          />
+        )}
         {failure && (
           <Alert severity="error" role="alert">
             {failure}
@@ -205,7 +337,15 @@ const PayForm = ({ linkKey, minAmountMinor, maxAmountMinor, initialReference, in
             {t('legal.privacy')}
           </Link>
         </p>
-        <Button type="submit" variant="contained" size="large" fullWidth disabled={busy}>
+        <Button
+          type="submit"
+          variant="contained"
+          size="large"
+          fullWidth
+          disabled={busy}
+          // The form's own fields are checked before the submit handler runs: show the billing errors at once too.
+          onClick={() => method === 'klarna' && setShowBillingErrors(true)}
+        >
           {busy ? tCommon('processing') : t('form.pay')}
         </Button>
         <p className={styles.trust}>{t('form.securedBy')}</p>

@@ -523,7 +523,7 @@ parties de confiance dans les situations suivantes :
   traiter le paiement. Ils sont autorisés à utiliser ces informations
   uniquement si nécessaire pour fournir leurs services de paiement. Nous
   nous assurons que tout processeur de paiement que nous utilisons est
-  conforme aux normes de sécurité PCI-DSS. Les paiements par carte (y compris Apple Pay et Google Pay) sont traités par **Mollie B.V.**, Keizersgracht 126, 1015 CW Amsterdam, Pays-Bas, établissement de paiement agréé par De Nederlandsche Bank. Vous saisissez vos données de carte sur la page de paiement sécurisée de Mollie ; elles ne parviennent jamais à nos serveurs.
+  conforme aux normes de sécurité PCI-DSS. Les paiements par carte (y compris Apple Pay et Google Pay) sont traités par **Mollie B.V.**, Keizersgracht 126, 1015 CW Amsterdam, Pays-Bas, établissement de paiement agréé par De Nederlandsche Bank. Vous saisissez vos données de carte sur la page de paiement sécurisée de Mollie ; elles ne parviennent jamais à nos serveurs. Si vous choisissez Klarna comme moyen de paiement optionnel, vos nom, adresse de facturation, adresse e-mail et le montant du paiement sont transmis à Mollie B.V. et à **Klarna Bank AB (publ)**, Sveavägen 46, 111 34 Stockholm, Suède. Klarna décide du paiement et peut effectuer ses propres vérifications d'identité et de solvabilité selon ses propres conditions et sa politique de confidentialité ([www.klarna.com](https://www.klarna.com)). La base juridique est l'exécution du contrat (art. 6, paragraphe 1, point b), du RGPD).
 - **Prestataires de Services Techniques et Administratifs :** Nous
   employons d'autres sociétés ou individus pour exécuter des fonctions en
   notre nom. Les exemples incluent les fournisseurs d'hébergement de

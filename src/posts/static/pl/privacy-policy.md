@@ -455,7 +455,7 @@ Twoje informacje niektórym zaufanym stronom w następujących sytuacjach:
   aby przetworzyć płatność. Są upoważnieni do wykorzystania tych
   informacji wyłącznie w zakresie niezbędnym do świadczenia ich usług
   płatniczych. Zapewniamy, że każdy procesor płatności, którego używamy,
-  jest zgodny ze standardami bezpieczeństwa PCI-DSS. Płatności kartą (w tym Apple Pay i Google Pay) obsługuje **Mollie B.V.**, Keizersgracht 126, 1015 CW Amsterdam, Holandia, instytucja płatnicza z zezwoleniem De Nederlandsche Bank. Dane karty wprowadzasz na bezpiecznej stronie płatności Mollie i nigdy nie trafiają one na nasze serwery.
+  jest zgodny ze standardami bezpieczeństwa PCI-DSS. Płatności kartą (w tym Apple Pay i Google Pay) obsługuje **Mollie B.V.**, Keizersgracht 126, 1015 CW Amsterdam, Holandia, instytucja płatnicza z zezwoleniem De Nederlandsche Bank. Dane karty wprowadzasz na bezpiecznej stronie płatności Mollie i nigdy nie trafiają one na nasze serwery. Jeśli wybierzesz Klarnę jako opcjonalną metodę płatności, Twoje imię i nazwisko, adres rozliczeniowy, adres e-mail i kwota płatności są przekazywane do Mollie B.V. oraz do **Klarna Bank AB (publ)**, Sveavägen 46, 111 34 Sztokholm, Szwecja. Klarna decyduje o płatności i może przeprowadzić własną weryfikację tożsamości i zdolności kredytowej na podstawie własnego regulaminu i informacji o prywatności ([www.klarna.com](https://www.klarna.com)). Podstawą prawną jest wykonanie umowy (art. 6 ust. 1 lit. b RODO).
 - **Dostawcy Usług Technicznych i Administracyjnych:** Zatrudniamy inne
   firmy lub osoby do wykonywania funkcji w naszym imieniu. Przykłady
   obejmują dostawców hostingu witryny, przechowywania danych w chmurze

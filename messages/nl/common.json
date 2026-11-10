@@ -669,5 +669,28 @@
     "manualReview": "Het verhuurbedrijf heeft het jacht van je reservering gewijzigd. We controleren de nieuwe gegevens en nemen binnenkort contact met je op — je hoeft nu niets te doen.",
     "detected": "Er is een wijziging in je reservering vastgesteld. Ons team bekijkt deze en neemt contact met je op als er iets je aandacht vraagt.",
     "detectedOn": "Vastgesteld op {date}"
+  },
+  "klarna": {
+    "name": "Klarna",
+    "description": "Achteraf of in termijnen betalen met Klarna. Klarna bepaalt welke mogelijkheden u worden aangeboden.",
+    "fee": "Klarna-betaalkosten ({percent}%)",
+    "billingTitle": "Factuuradres",
+    "labels": {
+      "givenName": "Voornaam",
+      "familyName": "Achternaam",
+      "streetAndNumber": "Straat en huisnummer",
+      "postalCode": "Postcode",
+      "city": "Plaats",
+      "country": "Land",
+      "countryPlaceholder": "Kies een land"
+    },
+    "errors": {
+      "required": "Verplicht",
+      "tooLong": "Gebruik maximaal {max} tekens.",
+      "country": "Kies een land uit de lijst."
+    },
+    "countriesNote": "Klarna is beschikbaar voor factuuradressen in de volgende landen: {countries}. Kies voor elk ander land betalen met kaart of bankoverschrijving.",
+    "notAvailable": "Klarna is niet beschikbaar voor deze betaling (land van het factuuradres of bedrag). Kies betalen met kaart of bankoverschrijving.",
+    "invalidAddress": "Controleer uw factuuradres en probeer het opnieuw."
   }
 }
