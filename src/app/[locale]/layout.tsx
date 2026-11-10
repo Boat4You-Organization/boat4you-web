@@ -176,6 +176,8 @@ const RootLayout = async ({ children, params }: RootLayoutProps) => {
             __html: `try{var c=document.cookie.match(/(?:^|; )${CONSENT_COOKIE_NAME}=([^;]*)/);if(c){var o=JSON.parse(decodeURIComponent(c[1]));if(o&&typeof o.essential==='boolean'&&typeof o.analytics==='boolean'&&typeof o.marketing==='boolean'&&o.consentGiven===true&&o.version===${JSON.stringify(CONSENT_VERSION)}&&typeof o.timestamp==='number'&&Date.now()-o.timestamp<=${CONSENT_DURATION})document.documentElement.setAttribute('data-cc-consent','')}}catch(e){}`,
           }}
         />
+        {/* JavaScript off: the consent notice in the server HTML could not be answered, so it is hidden. */}
+        <noscript dangerouslySetInnerHTML={{ __html: '<style>[data-cc-notice]{display:none!important}</style>' }} />
         {/* Pre-resolve DNS + TLS to the two hosts every page fetches from
             (backend API + Bunny image CDN). PSI flags "Avoid multiple
             page redirects" + TTFB win on cold-cache mobile. preconnect is

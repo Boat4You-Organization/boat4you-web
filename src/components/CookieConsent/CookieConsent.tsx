@@ -1,14 +1,14 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import { Box, Button, Typography } from '@mui/material';
 import cx from 'clsx';
 import { useTranslations } from 'next-intl';
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 import ModalRoot from '@/components/ModalRoot';
+import { Link } from '@/i18n/navigation';
 import { setCookieConsent } from '@/lib/cookie-consent';
 import { CookieSettings, CookieSettingsConfigArray } from '@/types/cookie.type';
 import useToggleState from '@/utils/hooks/useToggleState';
@@ -44,6 +44,12 @@ const CookieConsent = ({ showConsent, beforeHydration = false }: CookieConsentPr
   const [isProcessing, setIsProcessing] = useState(false);
   const t = useTranslations('cookieConsent');
   const docked = READABLE_PATH.test(usePathname() ?? '');
+  const noticeRef = useRef<HTMLDivElement>(null);
+
+  // Keyboard and screen-reader users land in the notice when it appears (review 10.11.2026).
+  useEffect(() => {
+    if (showConsent && !showSettings && !docked) noticeRef.current?.focus({ preventScroll: true });
+  }, [showConsent, showSettings, docked]);
 
   const handleAcceptAll = () => {
     setIsProcessing(true);
@@ -119,59 +125,67 @@ const CookieConsent = ({ showConsent, beforeHydration = false }: CookieConsentPr
       {/* The consent notice (Mario 10.11.2026, "kao index.hr i dnevnik.hr"): a dialog in the middle of the page over a
           pale veil, the purposes listed, "Learn more" (the settings dialog, with "Accept only necessary") and "Accept
           and close". It steps aside while the settings dialog is open. */}
-      <Box
-        className={cx(styles.container, {
-          [styles.visible]: showConsent && !showSettings,
-          [styles.beforeHydration]: beforeHydration,
-          [styles.docked]: docked,
-        })}
-        // The boat page's exit popup waits while the banner is up (lib/exitIntent.ts).
-        data-cookie-consent-open={showConsent || undefined}
-        // Never quoted in a search result snippet: the notice is in the HTML of every page.
-        data-nosnippet=""
-      >
-        <div
-          className={styles.notice}
-          role="dialog"
-          aria-modal={!docked}
-          aria-labelledby="cc-consent-title"
-          aria-describedby="cc-consent-text"
+      {/* Only in the page while it is shown (and in the server HTML): the Iris widget treats any
+          [role=dialog][aria-modal=true] as an open site dialog and would never greet (review 10.11.2026). */}
+      {(showConsent || beforeHydration) && (
+        <Box
+          className={cx(styles.container, {
+            [styles.visible]: showConsent && !showSettings,
+            [styles.beforeHydration]: beforeHydration,
+            [styles.docked]: docked,
+          })}
+          // The boat page's exit popup waits while the banner is up (lib/exitIntent.ts).
+          data-cookie-consent-open={showConsent || undefined}
+          // Never quoted in a search result snippet: the notice is in the HTML of every page.
+          data-nosnippet=""
+          // The layout's <noscript> style hides it when JavaScript is off: it could not be answered.
+          data-cc-notice=""
         >
-          <Typography id="cc-consent-title" component="p" className={styles.title}>
-            {t('notice.title')}
-          </Typography>
-          <Typography variant="body2" className={styles.text}>
-            {t.rich('notice.policy', { link: renderPrivacyLink })}
-          </Typography>
-          <Typography id="cc-consent-text" variant="body2" className={styles.text}>
-            {t('notice.text')}
-          </Typography>
-          <Typography component="p" className={styles.purposesTitle}>
-            {t('notice.purposesTitle')}
-          </Typography>
-          <Typography component="p" className={styles.purposes}>
-            {t('notice.purposes')}
-          </Typography>
-          <div className={styles.actions}>
-            <Button
-              variant="outlined"
-              className={cx(styles.button, styles.learnMore)}
-              onClick={toggleShowSettings}
-              disabled={isProcessing}
-            >
-              {t('notice.learnMore')}
-            </Button>
-            <Button
-              variant="contained"
-              className={cx(styles.button, styles.accept)}
-              onClick={handleAcceptAll}
-              disabled={isProcessing}
-            >
-              {t('notice.accept')}
-            </Button>
+          <div
+            ref={noticeRef}
+            className={styles.notice}
+            role="dialog"
+            aria-modal={!docked}
+            aria-labelledby="cc-consent-title"
+            aria-describedby="cc-consent-text"
+            tabIndex={-1}
+          >
+            <Typography id="cc-consent-title" component="p" className={styles.title}>
+              {t('notice.title')}
+            </Typography>
+            <Typography variant="body2" className={styles.text}>
+              {t.rich('notice.policy', { link: renderPrivacyLink })}
+            </Typography>
+            <Typography id="cc-consent-text" variant="body2" className={styles.text}>
+              {t('notice.text')}
+            </Typography>
+            <Typography component="p" className={styles.purposesTitle}>
+              {t('notice.purposesTitle')}
+            </Typography>
+            <Typography component="p" className={styles.purposes}>
+              {t('notice.purposes')}
+            </Typography>
+            <div className={styles.actions}>
+              <Button
+                variant="outlined"
+                className={cx(styles.button, styles.learnMore)}
+                onClick={toggleShowSettings}
+                disabled={isProcessing}
+              >
+                {t('notice.learnMore')}
+              </Button>
+              <Button
+                variant="contained"
+                className={cx(styles.button, styles.accept)}
+                onClick={handleAcceptAll}
+                disabled={isProcessing}
+              >
+                {t('notice.accept')}
+              </Button>
+            </div>
           </div>
-        </div>
-      </Box>
+        </Box>
+      )}
       <ModalRoot
         open={showSettings}
         onClose={toggleShowSettings}

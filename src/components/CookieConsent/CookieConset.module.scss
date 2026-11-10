@@ -15,6 +15,16 @@
   border-radius: rem-calc(8);
   box-shadow: rem-calc(0 8 40 0) rgb(0 0 0 / 12%);
 
+  // Focused by the component when it appears; no ring around the whole box.
+  &:focus {
+    outline: none;
+  }
+
+  // Browsers without dvh (Chrome < 108, Safari < 15.4) would ignore the max-height above.
+  @supports not (height: 100dvh) {
+    max-height: calc(100vh - #{rem-calc(32)});
+  }
+
   @include media(0, 'md') {
     padding: rem-calc(20) rem-calc(16) rem-calc(16);
   }
@@ -55,6 +65,10 @@
       max-height: 50dvh;
       pointer-events: auto;
       box-shadow: rem-calc(0 0 74 0) rgb(0 0 0 / 15%);
+
+      @supports not (height: 100dvh) {
+        max-height: 50vh;
+      }
     }
   }
 }
