@@ -2,14 +2,13 @@ import { NextRequest, NextResponse } from 'next/server';
 
 import { POST_REQUEST_PARAMETERS } from '@/config/constants.config';
 import { ErrorModel } from '@/models/error.model';
+import { clientIp } from '@/utils/server/clientIp';
 import { authFetch, hasAuthToken } from '@/utils/static/authFetch';
 
 interface CreateCheckoutSessionResponse {
-  /** Stripe-hosted Checkout URL. Populated when the backend runs the new DTO
-   *  (`CheckoutSessionDto.redirectUrl`). Older builds won't include this. */
+  /** Hosted checkout URL of the card provider (Mollie; Stripe only behind the backend switch). */
   redirectUrl?: string;
-  /** Always present — Stripe session id the frontend can use with Stripe.js
-   *  `redirectToCheckout({sessionId})` when a direct URL isn't available. */
+  /** Provider reference of the checkout (Mollie payment id / Stripe session id). */
   sessionIdOrOrderCode?: string;
   status?: string;
 }
@@ -17,7 +16,7 @@ interface CreateCheckoutSessionResponse {
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { reservationId, payFullAmount, paymentPhaseId, idempotencyKey } = body;
+    const { reservationId, payFullAmount, paymentPhaseId, idempotencyKey, locale } = body;
 
     if (!reservationId) {
       return NextResponse.json({ error: 'Reservation ID is required' }, { status: 400 });
@@ -31,21 +30,30 @@ export async function POST(request: NextRequest) {
       params.append('payFullAmount', payFullAmount.toString());
     }
 
-    // Stripe Idempotency-Key — forward to the backend which passes it to
-    // `Session.create(params, RequestOptions)`. Double-clicking "Pay now" then
-    // returns the same Session instead of creating two.
+    // Idempotency key — forwarded to the backend, which passes it to the card provider. Double-clicking "Pay now"
+    // then returns the same checkout instead of creating two.
     if (idempotencyKey) {
       params.append('idempotencyKey', idempotencyKey);
     }
 
+    // The web locale: the provider sends the payer back to the success / cancel page in this language.
+    if (typeof locale === 'string' && /^[a-z]{2}$/.test(locale)) {
+      params.append('locale', locale);
+    }
+
     // Logged-in customers hit /secured/ via authFetch (which transparently
-    // refreshes a stale access token) so the Stripe session is attributable
+    // refreshes a stale access token) so the card checkout is attributable
     // to their user id. Guests — and anyone whose refresh has also expired —
     // fall through to the public mirror.
     const hasAuth = await hasAuthToken();
-    const securedUrl = `${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/secured/payments/stripe/create-checkout-session/${reservationId}?${params.toString()}`;
-    const publicUrl = `${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/payments/stripe/create-checkout-session/${reservationId}?${params.toString()}`;
-    const requestInit = { ...POST_REQUEST_PARAMETERS };
+    const securedUrl = `${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/secured/payments/card/create-checkout-session/${reservationId}?${params.toString()}`;
+    const publicUrl = `${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/payments/card/create-checkout-session/${reservationId}?${params.toString()}`;
+    // The visitor's IP: the backend rate-limits guest card checkouts per client IP.
+    const ip = await clientIp();
+    const requestInit = {
+      ...POST_REQUEST_PARAMETERS,
+      headers: { ...POST_REQUEST_PARAMETERS.headers, ...(ip ? { 'X-Forwarded-For': ip } : {}) },
+    };
 
     let response = hasAuth ? await authFetch(securedUrl, requestInit) : await fetch(publicUrl, requestInit);
 
@@ -54,7 +62,9 @@ export async function POST(request: NextRequest) {
     }
 
     if (!response.ok) {
-      const errorBody: ErrorModel = await response.json().catch(() => ({ message: `HTTP ${response.status}` }) as ErrorModel);
+      const errorBody: ErrorModel = await response
+        .json()
+        .catch(() => ({ message: `HTTP ${response.status}` }) as ErrorModel);
 
       return NextResponse.json({ error: errorBody.message ?? `HTTP ${response.status}` }, { status: response.status });
     }

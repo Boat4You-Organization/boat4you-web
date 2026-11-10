@@ -20,6 +20,21 @@
 - [x] Provjera LIVE: novi footer i deployment id na svih 9 jezika; isti skup od 25 linkova i isti `rel` kao prije deploya; svih 90 internih URL-ova iz footera 200; SEO regresija Stage B 0 novih FAIL.
 - [ ] Kasnije: novi lik za promo bannere umjesto Storyset lika, tada maknuti natpis „Illustrations by Storyset“.
 
+## 2026-11-10 — 💳 Mollie: tajna `/pay/<ključ>` stranica + kartično plaćanje rezervacija preko Mollieja, limit kartice 10.000 € — ⏳ NIJE DEPLOYANO (grana `feat/mollie-payments`, čeka Mariovo „da“; backend PRVI)
+
+Mario 10.11.2026: sve kartice idu preko Mollieja, Stripe i Revolut se nigdje ne spominju. Backend: boat4you-backend `feat/mollie-payments` (DEPLOY_NOTES tamo, redoslijed i env).
+
+- **Jedna stranica za sve ugovore (Mario 10.11.):** ugovori svih 7 sajtova plaćaju se SAMO na `www.boat4you.com/pay/<ključ>` (Mollie profil je prijavljen za boat4you.com); sisteri nemaju `/pay`. Stranica počinje rečenicom da Boat4You (dio grupe Europe Yachts Charter) obrađuje uplatu i da će na izvodu kartice pisati Boat4You (9 jezika). Prozor za kolačiće se na `/pay` ne prikazuje (tamo nema analitike).
+- **`/pay/<ključ>`** (`src/app/[locale]/(simple)/pay/[key]/…`, `views/Pay`): ugovor, iznos, e-mail → Mollie checkout → `/success` ili `/failed`. Ključ iz `PAY_LINK_KEYS` (server env, zarezom odvojeni; isti kao `boat4you=` u backend `CUSTOM_PAYMENT_LINK_KEYS`); krivi ključ = 404. noindex, no-store, no-referrer, bez GA, bez Contact Center widgeta, sw.js je ne kešira. Iznos iznad 10.000 € → poruka „više uplata ili virman“.
+- **Booking:** `/api/payments/create-checkout-session` zove backend `/payments/card/…` (prekidač providera) i šalje jezik + IP posjetitelja; preusmjerava samo na `www.mollie.com` ili `checkout.stripe.com`. Stripe.js maknut (`useStripeCheckout` obrisan; paket `@stripe/stripe-js` ostao u package.json, nekorišten).
+- **`/payment-success?paymentRef=`**: pita status (`/api/payments/card-status`); plaćeno → potvrda + konverzija; nije dovršeno → `/payment-cancelled?reservationId=`; nepotvrđeno → „Potvrđujemo vašu uplatu“ (bez konverzije).
+- **Limit kartice:** iznos s dodatkom > 10.000 € → kartica onemogućena, ostaje virman (korak plaćanja i „Pay now“ modal), 9 jezika (`CARD_PAYMENT_MAX_EUR`).
+- **Tekstovi:** „Powered by Stripe“ → „Secure payment by Mollie“ (9 jezika); Privacy Policy i Terms 6.6 (9 jezika) navode Mollie B.V., Amsterdam.
+- **Env cusma1:** `PAY_LINK_KEYS=<ključ>`; `NEXT_PUBLIC_STRIPE_KEY` više ne treba.
+- Provjera lokalno (Mollie test, lokalni backend): `/pay` forma bez widgeta i gtaga; rata rezervacije plaćena; nedovršeno → cancelled. `yarn lint` 0 grešaka. `next build` NIJE pokrenut lokalno (puni prod API) → build na deployu, tsconfig ES2017 (bez regex `s`).
+- Pregled: 1 neovisni agent (Opus), nalazi ispravljeni u `2d75ded1d`.
+- Rollback: prethodni build; backend prekidač `PAYMENT_CARD_PROVIDER=stripe` radi i s ovim webom.
+
 ## 2026-11-10 — 🍪 Pristanak za kolačiće: prozor na sredini (kao index.hr / dnevnik.hr) — ✅ LIVE 10.11.2026 06:54 UTC (`16b1b9bb6` + `8f0a14797`, deployment id 8f0a14797a1d-mwabt55q, tag `live/2026-11-10-consent-notice`)
 
 **Što (Mario 9.–10.11.: u adminu puno manje posjeta nego u Analyticsu jer statistika broji samo pristanak za analitiku; „napravi kao oni“ za index.hr i dnevnik.hr, „stavi kao index i dnevnik botune“):** mala kartica u kutu zamijenjena je prozorom na sredini stranice preko blijedog vela: naslov „Vaša privatnost“, link na politiku privatnosti, tko obrađuje (mi i Google) i u koje svrhe, te dva jednaka četvrtasta gumba „Saznajte više →“ (sivi, otvara postojeće postavke s „Prihvati samo nužne“) i „Prihvati i zatvori“ (plavi). Odluka bez gumba za odbijanje na prvom ekranu je Mariova (rizik objašnjen 9.11.).

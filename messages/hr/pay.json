@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "title": "Plaćanje karticom"
+  },
+  "form": {
+    "title": "Plaćanje karticom",
+    "instruction": "Unesite iznos naveden na drugoj stranici ugovora (odjeljak Kreditna kartica) i broj potvrde rezervacije",
+    "about": "Ovo je sigurna stranica za plaćanje Boat4You, dio grupe Europe Yachts Charter. Boat4You obrađuje kartičnu uplatu za vaš ugovor o charteru, a na izvodu kartice pisat će Boat4You.",
+    "labels": {
+      "email": "E-pošta",
+      "reference": "Broj potvrde rezervacije",
+      "amount": "Iznos (EUR)"
+    },
+    "hints": {
+      "email": "Na ovu adresu poslat ćemo potvrdu o plaćanju.",
+      "reference": "Kako je navedeno u ugovoru, npr. 100116/2027.",
+      "amount": "U eurima, kako je navedeno u ugovoru, npr. 1109,00."
+    },
+    "youWillPay": "Platit ćete {amount}",
+    "pay": "Plati",
+    "securedBy": "Kartice · Apple Pay · Google Pay · Pay by Bank · sigurno plaćanje putem Mollieja"
+  },
+  "errors": {
+    "validation": "Provjerite unesene podatke i pokušajte ponovno.",
+    "notFound": "Ova poveznica za plaćanje nije valjana. Upotrijebite poveznicu iz ugovora.",
+    "rateLimited": "Previše pokušaja. Pričekajte nekoliko minuta i pokušajte ponovno.",
+    "unavailable": "Plaćanje karticom privremeno nije dostupno. Pokušajte ponovno kasnije.",
+    "provider": "Stranicu za sigurno plaćanje nije bilo moguće otvoriti. Pokušajte ponovno za nekoliko minuta.",
+    "error": "Došlo je do pogreške. Pokušajte ponovno.",
+    "reference": "Unesite broj potvrde rezervacije iz ugovora (od 3 do 64 znaka: slova, brojke, razmaci i / - _ .).",
+    "amountInvalid": "Unesite valjan iznos s najviše dvije decimale, npr. 1109,00.",
+    "amountAmbiguous": "Unesite iznos bez razdjelnika tisućica, npr. 50000 ili 50,00.",
+    "amountTooLow": "Najmanji iznos je {min}.",
+    "amountTooHigh": "Kartično plaćanje moguće je do {max} po uplati. Veći iznos platite u više uplata ili bankovnim prijenosom."
+  },
+  "success": {
+    "confirming": {
+      "title": "Potvrđujemo Vaše plaćanje",
+      "text": "To obično traje nekoliko sekundi. Molimo ne zatvarajte ovu stranicu."
+    },
+    "confirmed": {
+      "title": "Hvala, Vaša je uplata zaprimljena",
+      "text": "Potvrdu o plaćanju poslali smo na Vašu adresu e-pošte."
+    },
+    "review": {
+      "title": "Vaša se uplata provjerava",
+      "text": "Naš tim mora kratko provjeriti Vašu uplatu. Potvrdit ćemo je e-poštom."
+    },
+    "weWillEmail": {
+      "title": "Vaša se uplata obrađuje",
+      "text": "Potvrda traje malo dulje nego obično. Poslat ćemo Vam e-poruku čim uplata bude potvrđena pa možete zatvoriti ovu stranicu."
+    },
+    "amount": "Plaćeni iznos"
+  },
+  "failed": {
+    "title": "Plaćanje nije dovršeno",
+    "text": "Pokušajte ponovno ili upotrijebite drugu karticu. Ako Vam treba pomoć, pišite nam na info@boat4you.com.",
+    "tryAgain": "Pokušaj ponovno"
+  },
+  "unavailable": {
+    "title": "Plaćanje karticom trenutačno nije dostupno",
+    "text": "Pokušajte ponovno kasnije. Ako ste već platili, potvrdu ćete primiti e-poštom. Ako Vam treba pomoć, pišite nam na info@boat4you.com."
+  },
+  "legal": {
+    "byPaying": "Plaćanjem prihvaćate",
+    "terms": "Uvjete korištenja",
+    "privacy": "Pravila privatnosti",
+    "received": "Plaćanja zaprima Cusmanich d.o.o. u ime i za račun Operatera."
+  }
+}

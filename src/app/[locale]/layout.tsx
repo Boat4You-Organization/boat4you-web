@@ -8,6 +8,7 @@ import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server
 import { notFound } from 'next/navigation';
 import Script from 'next/script';
 
+import ContactCenterWidget from '@/components/ContactCenterWidget/ContactCenterWidget';
 import GoogleAnalyticsConsent from '@/components/GoogleAnalyticsConsent';
 import InstallPrompt from '@/components/InstallPrompt';
 import ServiceWorkerRegister from '@/components/ServiceWorkerRegister';
@@ -189,17 +190,8 @@ const RootLayout = async ({ children, params }: RootLayoutProps) => {
       <body suppressHydrationWarning>
         <NextIntlClientProvider messages={messages}>
           <Providers>{children}</Providers>
-          {/* Contact Center widget (P3b, 30.10.2026): the same Iris chat as on the sister sites, in place of the old
-              ChatWidget; visit statistics only with the Analytics consent (the widget reads boat4you_cookie_consent
-              itself). A static loader from /cc-widget/, after the page is interactive. */}
-          <Script
-            id="b4y-cc"
-            src={process.env.NEXT_PUBLIC_CC_WIDGET_URL || 'https://www.boat4you.com/cc-widget/loader.js'}
-            strategy="afterInteractive"
-            data-site="boat4you"
-            data-locale={locale}
-            data-api={process.env.NEXT_PUBLIC_BOAT_WS_API_URL}
-          />
+          {/* Contact Center widget (Iris chat); never on secret-link pages (/pay/<key>, /review/<token>). */}
+          <ContactCenterWidget locale={locale} />
           {/* InstallPrompt uses useTranslations → must be INSIDE the provider. */}
           <InstallPrompt />
         </NextIntlClientProvider>

@@ -63,5 +63,8 @@ export const ITINERARY_NAMESPACES = [
 /** Review form copy — only the /review segment needs it client-side. */
 export const REVIEW_NAMESPACES = ['review'] as const satisfies readonly (keyof Messages)[];
 
+/** Card payment form copy — only the secret /pay/<key> segment needs it client-side. */
+export const PAY_NAMESPACES = ['pay'] as const satisfies readonly (keyof Messages)[];
+
 export const pickMessages = (messages: Messages, keys: readonly (keyof Messages)[]): Partial<Messages> =>
   Object.fromEntries(keys.map(key => [key, messages[key]])) as Partial<Messages>;

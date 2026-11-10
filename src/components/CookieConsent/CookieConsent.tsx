@@ -22,6 +22,13 @@ import CookieModalContent from './CookieModalContent';
  */
 const READABLE_PATH = /^(?:\/[a-z]{2})?\/(?:privacy-policy|terms-and-conditions|press\/privacy)(?:\/|$)/;
 
+/**
+ * The secret card payment page (/pay/<key>): no analytics, ads or recordings run there (GoogleAnalyticsConsent,
+ * ContactCenterWidget), so there is nothing to ask consent for and the notice must not stand between a client and the
+ * payment. The visitor is asked on the first ordinary page instead.
+ */
+const NO_NOTICE_PATH = /^(?:\/[a-z]{2})?\/pay(?:\/|$)/;
+
 const renderPrivacyLink = (chunks: React.ReactNode) => (
   <Link href="/privacy-policy" target="_blank" className={styles.link}>
     {chunks}
@@ -43,7 +50,9 @@ const CookieConsent = ({ showConsent, beforeHydration = false }: CookieConsentPr
   const [showSettings, toggleShowSettings] = useToggleState();
   const [isProcessing, setIsProcessing] = useState(false);
   const t = useTranslations('cookieConsent');
-  const docked = READABLE_PATH.test(usePathname() ?? '');
+  const pathname = usePathname() ?? '';
+  const docked = READABLE_PATH.test(pathname);
+  const noNotice = NO_NOTICE_PATH.test(pathname);
   const noticeRef = useRef<HTMLDivElement>(null);
 
   // Keyboard and screen-reader users land in the notice when it appears (review 10.11.2026).
@@ -127,7 +136,7 @@ const CookieConsent = ({ showConsent, beforeHydration = false }: CookieConsentPr
           and close". It steps aside while the settings dialog is open. */}
       {/* Only in the page while it is shown (and in the server HTML): the Iris widget treats any
           [role=dialog][aria-modal=true] as an open site dialog and would never greet (review 10.11.2026). */}
-      {(showConsent || beforeHydration) && (
+      {(showConsent || beforeHydration) && !noNotice && (
         <Box
           className={cx(styles.container, {
             [styles.visible]: showConsent && !showSettings,

@@ -3,8 +3,9 @@ import { NextRequest, NextResponse } from 'next/server';
 
 import { AuthKeys, POST_REQUEST_PARAMETERS } from './config/constants.config';
 import { routing } from './i18n/routing';
-import { GEO_COUNTRY_COOKIE_NAME, normalizeCountryCode } from './utils/static/geoCountryCookie';
 import { isEnglishOnlyPath } from './utils/static/englishOnlyRoutes';
+import { GEO_COUNTRY_COOKIE_NAME, normalizeCountryCode } from './utils/static/geoCountryCookie';
+import { PRIVATE_LINK_PATH } from './utils/static/privateLinkPath';
 
 const intlMiddleware = createIntlMiddleware(routing);
 // `/enter-your-details`, `/payment`, `/payment-pending`, `/payment-success` and
@@ -66,9 +67,15 @@ function withCacheHeaders(req: NextRequest, response: NextResponse): NextRespons
   response.headers.append('Vary', hasLocalePrefix ? 'Cookie' : 'Cookie, Accept-Language');
 
   const hasOwnCookie =
-    req.cookies.has(LOCALE_COOKIE_NAME) || req.cookies.has(AuthKeys.ACCESS_TOKEN) || req.cookies.has(AuthKeys.REFRESH_TOKEN);
+    req.cookies.has(LOCALE_COOKIE_NAME) ||
+    req.cookies.has(AuthKeys.ACCESS_TOKEN) ||
+    req.cookies.has(AuthKeys.REFRESH_TOKEN);
 
-  if (isRedirect || hasOwnCookie) {
+  if (PRIVATE_LINK_PATH.test(req.nextUrl.pathname)) {
+    // Secret-link pages (/pay/<key>, /review/<token>) keep next.config's
+    // no-store whatever cookies the request carries.
+    response.headers.set('Cache-Control', 'private, no-store');
+  } else if (isRedirect || hasOwnCookie) {
     // Overrides next.config's public rule for this response (the router
     // applies middleware headers after the config headers).
     response.headers.set('Cache-Control', 'private, max-age=0');

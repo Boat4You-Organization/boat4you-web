@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 import { useReportWebVitals } from 'next/web-vitals';
 
 import { shouldShowAnalytics, shouldShowMarketing } from '@/lib/cookie-consent';
+import { PRIVATE_LINK_PATH } from '@/utils/static/privateLinkPath';
 
 interface GoogleAnalyticsConsentProps {
   gaId: string;
@@ -18,13 +19,13 @@ const getGtag = (): GtagFn | undefined =>
   typeof window === 'undefined' ? undefined : (window as unknown as { gtag?: GtagFn }).gtag;
 
 /**
- * Pages whose URL is a secret (the e-mailed review magic link, which also
- * carries ?rating=). gtag.js is not loaded there at all: GA's page_view sends
+ * Pages whose URL is a secret (PRIVATE_LINK_PATH: the review magic link, the
+ * card payment link). gtag.js is not loaded there at all: GA's page_view sends
  * page_location = location.href, and even consent-denied cookieless pings
- * carry it. Entry is always a full page load from the e-mail, so skipping
- * the loader keeps the token out of every analytics hit.
+ * carry it. Entry is always a full page load from the e-mail or the
+ * contract, so skipping the loader keeps the token out of every analytics hit.
  */
-const NO_ANALYTICS_PATH = /^(?:\/[a-z]{2})?\/review(?:\/|$)/;
+const NO_ANALYTICS_PATH = PRIVATE_LINK_PATH;
 
 /** The part of a web-vitals metric used here (next/web-vitals hands the
  *  library's Metric). */

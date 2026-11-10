@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "title": "Kartenzahlung"
+  },
+  "form": {
+    "title": "Kartenzahlung",
+    "instruction": "Bitte geben Sie den Betrag, der auf der zweiten Seite Ihres Vertrags (Abschnitt Kreditkarte) angegeben ist, und Ihre Buchungsbestätigungsnummer ein",
+    "about": "Dies ist die sichere Zahlungsseite von Boat4You, Teil der Europe Yachts Charter Gruppe. Boat4You wickelt die Kartenzahlung für Ihren Chartervertrag ab; auf Ihrer Kartenabrechnung erscheint Boat4You.",
+    "labels": {
+      "email": "E-Mail",
+      "reference": "Buchungsbestätigungsnummer",
+      "amount": "Betrag (EUR)"
+    },
+    "hints": {
+      "email": "An diese Adresse senden wir die Zahlungsbestätigung.",
+      "reference": "Wie in Ihrem Vertrag angegeben, zum Beispiel 100116/2027.",
+      "amount": "In Euro, wie in Ihrem Vertrag angegeben, zum Beispiel 1109,00."
+    },
+    "youWillPay": "Sie zahlen {amount}",
+    "pay": "Bezahlen",
+    "securedBy": "Karten · Apple Pay · Google Pay · Pay by Bank · sichere Zahlung über Mollie"
+  },
+  "errors": {
+    "validation": "Bitte überprüfen Sie Ihre Angaben und versuchen Sie es erneut.",
+    "notFound": "Dieser Zahlungslink ist ungültig. Bitte verwenden Sie den Link aus Ihrem Vertrag.",
+    "rateLimited": "Zu viele Versuche. Bitte warten Sie einige Minuten und versuchen Sie es dann erneut.",
+    "unavailable": "Die Kartenzahlung ist vorübergehend nicht verfügbar. Bitte versuchen Sie es später erneut.",
+    "provider": "Die sichere Zahlungsseite konnte nicht geöffnet werden. Bitte versuchen Sie es in einigen Minuten erneut.",
+    "error": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.",
+    "reference": "Bitte geben Sie die Buchungsbestätigungsnummer aus Ihrem Vertrag ein (3 bis 64 Zeichen: Buchstaben, Ziffern, Leerzeichen und / - _ .).",
+    "amountInvalid": "Bitte geben Sie einen gültigen Betrag mit höchstens zwei Nachkommastellen ein, zum Beispiel 1109,00.",
+    "amountAmbiguous": "Bitte geben Sie den Betrag ohne Tausendertrennzeichen ein, zum Beispiel 50000 oder 50,00.",
+    "amountTooLow": "Der Mindestbetrag beträgt {min}.",
+    "amountTooHigh": "Kartenzahlungen sind bis {max} pro Zahlung möglich. Einen höheren Betrag zahlen Sie bitte in mehreren Zahlungen oder per Banküberweisung."
+  },
+  "success": {
+    "confirming": {
+      "title": "Wir bestätigen Ihre Zahlung",
+      "text": "Das dauert in der Regel nur wenige Sekunden. Bitte lassen Sie diese Seite geöffnet."
+    },
+    "confirmed": {
+      "title": "Vielen Dank, Ihre Zahlung ist eingegangen",
+      "text": "Wir haben Ihnen eine Zahlungsbestätigung an Ihre E-Mail-Adresse gesendet."
+    },
+    "review": {
+      "title": "Ihre Zahlung wird geprüft",
+      "text": "Unser Team muss Ihre Zahlung kurz prüfen. Wir bestätigen sie Ihnen per E-Mail."
+    },
+    "weWillEmail": {
+      "title": "Ihre Zahlung wird bearbeitet",
+      "text": "Die Bestätigung dauert etwas länger als üblich. Sobald Ihre Zahlung bestätigt ist, erhalten Sie eine E-Mail von uns – Sie können diese Seite also schließen."
+    },
+    "amount": "Gezahlter Betrag"
+  },
+  "failed": {
+    "title": "Die Zahlung wurde nicht abgeschlossen",
+    "text": "Bitte versuchen Sie es erneut oder verwenden Sie eine andere Karte. Wenn Sie Hilfe benötigen, schreiben Sie uns an info@boat4you.com.",
+    "tryAgain": "Erneut versuchen"
+  },
+  "unavailable": {
+    "title": "Die Kartenzahlung ist derzeit nicht verfügbar",
+    "text": "Bitte versuchen Sie es später erneut. Wenn Sie bereits bezahlt haben, erhalten Sie eine Bestätigung per E-Mail. Wenn Sie Hilfe benötigen, schreiben Sie uns an info@boat4you.com."
+  },
+  "legal": {
+    "byPaying": "Mit der Zahlung akzeptieren Sie die",
+    "terms": "Geschäftsbedingungen",
+    "privacy": "Datenschutzerklärung",
+    "received": "Zahlungen werden von der Cusmanich d.o.o. im Namen und für Rechnung des Betreibers entgegengenommen."
+  }
+}

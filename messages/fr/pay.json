@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "title": "Paiement par carte"
+  },
+  "form": {
+    "title": "Paiement par carte",
+    "instruction": "Veuillez saisir le montant indiqué à la deuxième page de votre contrat (rubrique Carte de crédit) ainsi que votre numéro de confirmation de réservation",
+    "about": "Vous êtes sur la page de paiement sécurisée de Boat4You, membre du groupe Europe Yachts Charter. Boat4You traite le paiement par carte de votre contrat de location ; votre relevé de carte indiquera Boat4You.",
+    "labels": {
+      "email": "E-mail",
+      "reference": "Numéro de confirmation de réservation",
+      "amount": "Montant (EUR)"
+    },
+    "hints": {
+      "email": "Nous enverrons la confirmation de paiement à cette adresse.",
+      "reference": "Tel qu'indiqué dans votre contrat, par exemple 100116/2027.",
+      "amount": "En euros, tel qu'indiqué dans votre contrat, par exemple 1109,00."
+    },
+    "youWillPay": "Vous allez payer {amount}",
+    "pay": "Payer",
+    "securedBy": "Cartes · Apple Pay · Google Pay · Pay by Bank · paiement sécurisé par Mollie"
+  },
+  "errors": {
+    "validation": "Veuillez vérifier les informations saisies et réessayer.",
+    "notFound": "Ce lien de paiement n'est pas valide. Veuillez utiliser le lien figurant dans votre contrat.",
+    "rateLimited": "Trop de tentatives. Veuillez patienter quelques minutes, puis réessayer.",
+    "unavailable": "Le paiement par carte est temporairement indisponible. Veuillez réessayer plus tard.",
+    "provider": "La page de paiement sécurisé n'a pas pu s'ouvrir. Veuillez réessayer dans quelques minutes.",
+    "error": "Une erreur s'est produite. Veuillez réessayer.",
+    "reference": "Veuillez saisir le numéro de confirmation de réservation figurant dans votre contrat (3 à 64 caractères : lettres, chiffres, espaces et / - _ .).",
+    "amountInvalid": "Veuillez saisir un montant valide avec deux décimales au maximum, par exemple 1109,00.",
+    "amountAmbiguous": "Veuillez saisir le montant sans séparateur de milliers, par exemple 50000 ou 50,00.",
+    "amountTooLow": "Le montant minimum est de {min}.",
+    "amountTooHigh": "Le paiement par carte est possible jusqu'à {max} par paiement. Réglez un montant plus élevé en plusieurs paiements ou par virement bancaire."
+  },
+  "success": {
+    "confirming": {
+      "title": "Nous confirmons votre paiement",
+      "text": "Cela ne prend généralement que quelques secondes. Veuillez garder cette page ouverte."
+    },
+    "confirmed": {
+      "title": "Merci, votre paiement a bien été reçu",
+      "text": "Nous vous avons envoyé une confirmation de paiement par e-mail."
+    },
+    "review": {
+      "title": "Votre paiement est en cours de vérification",
+      "text": "Notre équipe doit vérifier brièvement votre paiement. Nous vous le confirmerons par e-mail."
+    },
+    "weWillEmail": {
+      "title": "Votre paiement est en cours de traitement",
+      "text": "La confirmation prend un peu plus de temps que d'habitude. Nous vous enverrons un e-mail dès que votre paiement sera confirmé ; vous pouvez donc fermer cette page."
+    },
+    "amount": "Montant payé"
+  },
+  "failed": {
+    "title": "Le paiement n'a pas abouti",
+    "text": "Veuillez réessayer ou utiliser une autre carte. Si vous avez besoin d'aide, écrivez-nous à info@boat4you.com.",
+    "tryAgain": "Réessayer"
+  },
+  "unavailable": {
+    "title": "Le paiement par carte n'est pas disponible pour le moment",
+    "text": "Veuillez réessayer plus tard. Si vous avez déjà payé, vous recevrez une confirmation par e-mail. Si vous avez besoin d'aide, écrivez-nous à info@boat4you.com."
+  },
+  "legal": {
+    "byPaying": "En payant, vous acceptez les",
+    "terms": "Conditions générales",
+    "privacy": "Politique de confidentialité",
+    "received": "Les paiements sont encaissés par Cusmanich d.o.o. au nom et pour le compte de l'Opérateur."
+  }
+}

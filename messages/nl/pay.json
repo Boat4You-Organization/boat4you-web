@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "title": "Kaartbetaling"
+  },
+  "form": {
+    "title": "Kaartbetaling",
+    "instruction": "Vul het bedrag in dat op de tweede pagina van uw contract staat (onderdeel Creditcard) en uw boekingsbevestigingsnummer",
+    "about": "Dit is de beveiligde betaalpagina van Boat4You, onderdeel van de Europe Yachts Charter groep. Boat4You verwerkt de kaartbetaling voor je chartercontract; op je kaartafschrift staat Boat4You.",
+    "labels": {
+      "email": "E-mail",
+      "reference": "Boekingsbevestigingsnummer",
+      "amount": "Bedrag (EUR)"
+    },
+    "hints": {
+      "email": "We sturen de betalingsbevestiging naar dit adres.",
+      "reference": "Zoals vermeld in uw contract, bijvoorbeeld 100116/2027.",
+      "amount": "In euro, zoals vermeld in uw contract, bijvoorbeeld 1109,00."
+    },
+    "youWillPay": "U betaalt {amount}",
+    "pay": "Betalen",
+    "securedBy": "Kaarten · Apple Pay · Google Pay · Pay by Bank · veilig betalen via Mollie"
+  },
+  "errors": {
+    "validation": "Controleer de ingevulde gegevens en probeer het opnieuw.",
+    "notFound": "Deze betaallink is niet geldig. Gebruik de link in uw contract.",
+    "rateLimited": "Te veel pogingen. Wacht een paar minuten en probeer het opnieuw.",
+    "unavailable": "Betalen met kaart is tijdelijk niet mogelijk. Probeer het later opnieuw.",
+    "provider": "De beveiligde betaalpagina kon niet worden geopend. Probeer het over een paar minuten opnieuw.",
+    "error": "Er is iets misgegaan. Probeer het opnieuw.",
+    "reference": "Vul het boekingsbevestigingsnummer uit uw contract in (3 tot 64 tekens: letters, cijfers, spaties en / - _ .).",
+    "amountInvalid": "Vul een geldig bedrag in met maximaal twee decimalen, bijvoorbeeld 1109,00.",
+    "amountAmbiguous": "Vul het bedrag in zonder scheidingsteken voor duizendtallen, bijvoorbeeld 50000 of 50,00.",
+    "amountTooLow": "Het minimumbedrag is {min}.",
+    "amountTooHigh": "Betalen met een kaart kan tot {max} per betaling. Betaal een hoger bedrag in meerdere betalingen of per bankoverschrijving."
+  },
+  "success": {
+    "confirming": {
+      "title": "We bevestigen uw betaling",
+      "text": "Dit duurt meestal enkele seconden. Houd deze pagina open."
+    },
+    "confirmed": {
+      "title": "Bedankt, uw betaling is ontvangen",
+      "text": "We hebben een betalingsbevestiging naar uw e-mailadres gestuurd."
+    },
+    "review": {
+      "title": "Uw betaling wordt gecontroleerd",
+      "text": "Ons team moet uw betaling even controleren. We bevestigen deze per e-mail."
+    },
+    "weWillEmail": {
+      "title": "Uw betaling wordt verwerkt",
+      "text": "De bevestiging duurt iets langer dan gebruikelijk. We sturen u een e-mail zodra uw betaling is bevestigd, dus u kunt deze pagina sluiten."
+    },
+    "amount": "Betaald bedrag"
+  },
+  "failed": {
+    "title": "De betaling is niet voltooid",
+    "text": "Probeer het opnieuw of gebruik een andere kaart. Hebt u hulp nodig? Schrijf ons via info@boat4you.com.",
+    "tryAgain": "Opnieuw proberen"
+  },
+  "unavailable": {
+    "title": "Betalen met kaart is op dit moment niet mogelijk",
+    "text": "Probeer het later opnieuw. Als u al hebt betaald, ontvangt u een bevestiging per e-mail. Hebt u hulp nodig? Schrijf ons via info@boat4you.com."
+  },
+  "legal": {
+    "byPaying": "Door te betalen gaat u akkoord met de",
+    "terms": "Algemene voorwaarden",
+    "privacy": "Privacybeleid",
+    "received": "Betalingen worden ontvangen door Cusmanich d.o.o. in naam en voor rekening van de Exploitant."
+  }
+}

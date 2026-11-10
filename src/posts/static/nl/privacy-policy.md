@@ -480,7 +480,7 @@ in de volgende situaties:
   verwerken. Ze zijn bevoegd deze informatie alleen te gebruiken
   zoals nodig voor het leveren van hun betaaldiensten. We zorgen
   ervoor dat elke betalingsverwerker die we gebruiken voldoet aan
-  de PCI-DSS beveiligingsnormen.
+  de PCI-DSS beveiligingsnormen. Kaartbetalingen (inclusief Apple Pay en Google Pay) worden verwerkt door **Mollie B.V.**, Keizersgracht 126, 1015 CW Amsterdam, Nederland, een door De Nederlandsche Bank vergunde betaalinstelling. Je voert je kaartgegevens in op de beveiligde betaalpagina van Mollie; ze komen nooit op onze servers terecht.
 - **Technische en Administratieve Dienstverleners:** We zetten andere
   bedrijven of personen in om functies namens ons uit te voeren.
   Voorbeelden zijn websitehostingproviders, cloudgegevensopslag
@@ -922,7 +922,7 @@ charterbureau:
   en partner-agency reconciliatie. Na accountverwijdering blijven
   deze records in ons systeem, maar ze zijn niet langer gekoppeld
   aan jouw identiteit.
-- **Betaalmetadata** (Stripe-betaalintentie-ID's, banktransfer-
+- **Betaalmetadata** (ID's van kaartbetalingen bij Mollie, banktransfer-
   referenties): bewaard gedurende **7 jaar** naast de boeking, zoals
   vereist door financieel recht.
 - **Authenticatie-artefacten** (JWT-tokens, refresh-tokens, wachtwoord-

@@ -14,7 +14,7 @@ import BankTransferIcon from '@/components/SvgIcons/Payment/BankTransfer';
 import CreditCardIcon from '@/components/SvgIcons/Payment/CreditCard';
 import SecurePayement from '@/components/SvgIcons/WhyChooseUs/SecurePayment';
 import { bankDetails } from '@/config/bank-details.config';
-import { PaymentMethod } from '@/config/paymentMethods.config';
+import { CARD_PAYMENT_MAX_EUR, PaymentMethod } from '@/config/paymentMethods.config';
 import { PaymentPhase } from '@/models/reservation.model';
 import colors from '@/styles/themes/colors';
 import { usePaymentSubmit } from '@/utils/hooks/usePaymentSubmit';
@@ -97,7 +97,7 @@ const PayNowModal = ({ isOpen, onClose, reservationId, reservationNumber, paymen
   }, [isOpen]);
 
   // One idempotency key per modal open — protects against double-clicks
-  // producing duplicate Stripe Sessions.
+  // producing duplicate card checkouts.
   const idempotencyKey = useMemo(() => crypto.randomUUID(), [isOpen]);
 
   // Auto-scroll the bank transfer details into view once the user picks
@@ -126,6 +126,13 @@ const PayNowModal = ({ isOpen, onClose, reservationId, reservationNumber, paymen
   // same split the wire emails use.
   const cardFee = Math.round((baseDueNow * cardSurchargePercent) / 100);
   const cardAdjusted = baseDueNow + cardFee;
+  // Above the card provider's limit per payment: bank transfer only.
+  const cardAllowed = cardAdjusted <= CARD_PAYMENT_MAX_EUR;
+
+  useEffect(() => {
+    if (!cardAllowed && paymentMethod === PaymentMethod.CREDIT_CARD) setPaymentMethod(PaymentMethod.BANK_TRANSFER);
+  }, [cardAllowed, paymentMethod]);
+
   const sortedAllPhases = useMemo(
     () => [...paymentPhases].sort((a, b) => (a.deadline > b.deadline ? 1 : -1)),
     [paymentPhases]
@@ -266,19 +273,21 @@ const PayNowModal = ({ isOpen, onClose, reservationId, reservationNumber, paymen
       <Stack direction="row" alignItems="baseline" justifyContent="space-between" mb={1.5}>
         <Typography variant="h3">{t('howWouldYouLikeToPay')}</Typography>
         <Typography variant="body2" color={colors.black500}>
-          {t('poweredByStripe')}
+          {t('securePaymentByMollie')}
         </Typography>
       </Stack>
 
       <Stack gap={1.5} mb={3}>
         {/* Online payment / Credit card */}
         <Box
-          onClick={() => setPaymentMethod(PaymentMethod.CREDIT_CARD)}
+          onClick={() => cardAllowed && setPaymentMethod(PaymentMethod.CREDIT_CARD)}
+          aria-disabled={!cardAllowed}
           sx={{
             border: cardBorder(paymentMethod === PaymentMethod.CREDIT_CARD),
             borderRadius: 1.5,
             p: 2,
-            cursor: 'pointer',
+            cursor: cardAllowed ? 'pointer' : 'not-allowed',
+            opacity: cardAllowed ? 1 : 0.6,
             transition: 'border-color 0.15s',
           }}
         >
@@ -286,6 +295,7 @@ const PayNowModal = ({ isOpen, onClose, reservationId, reservationNumber, paymen
             <Radio
               checked={paymentMethod === PaymentMethod.CREDIT_CARD}
               onChange={() => setPaymentMethod(PaymentMethod.CREDIT_CARD)}
+              disabled={!cardAllowed}
               sx={{ p: 0 }}
             />
             <CreditCardIcon />
@@ -319,6 +329,11 @@ const PayNowModal = ({ isOpen, onClose, reservationId, reservationNumber, paymen
                 {fmt(cardAdjusted)}
               </Typography>
             </Stack>
+            {!cardAllowed && (
+              <Typography variant="body2" color={colors.black700} mt={0.5}>
+                {t('cardLimitBankTransferOnly', { limit: fmt(CARD_PAYMENT_MAX_EUR) })}
+              </Typography>
+            )}
           </Stack>
         </Box>
 

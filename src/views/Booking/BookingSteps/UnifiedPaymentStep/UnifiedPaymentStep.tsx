@@ -26,7 +26,7 @@ import CardBrands from '@/components/SvgIcons/Payment/CardBrands';
 import CreditCardIcon from '@/components/SvgIcons/Payment/CreditCard';
 import SecurePayement from '@/components/SvgIcons/WhyChooseUs/SecurePayment';
 import { bankDetails } from '@/config/bank-details.config';
-import { PaymentMethod } from '@/config/paymentMethods.config';
+import { CARD_PAYMENT_MAX_EUR, PaymentMethod } from '@/config/paymentMethods.config';
 import { PaymentPhase as ApiPaymentPhase } from '@/models/reservation.model';
 import colors from '@/styles/themes/colors';
 import { ReservationData } from '@/types/reservation.type';
@@ -109,9 +109,8 @@ const UnifiedPaymentStep = ({ reservationData }: UnifiedPaymentStepProps) => {
   const selectedPhase = paymentPhases[0];
   const payFullAmount = paymentPhases.length === 1;
 
-  // One idempotency key per /payment page mount. Passed to Stripe on
-  // Session.create so a double-click returns the same Session (Stripe
-  // dedupes for 24 h on this key) instead of spawning a second checkout.
+  // One idempotency key per /payment page mount. Passed to the card provider
+  // so a double-click returns the same checkout instead of spawning a second one.
   // Refreshing the page starts a fresh key — that's deliberate; a refresh
   // is a legitimate signal the user wants a new attempt.
   const idempotencyKey = useMemo(() => crypto.randomUUID(), []);
@@ -123,12 +122,6 @@ const UnifiedPaymentStep = ({ reservationData }: UnifiedPaymentStepProps) => {
     paymentPhaseId: selectedPhase?.id,
     idempotencyKey,
   });
-
-  useEffect(() => {
-    if (!selectedPaymentMethod) {
-      setPaymentMethod(PaymentMethod.CREDIT_CARD);
-    }
-  }, [selectedPaymentMethod]);
 
   const [cardSurchargePercent, setCardSurchargePercent] = useState<number>(0);
   const [bankFee, setBankFee] = useState<number>(0);
@@ -158,8 +151,18 @@ const UnifiedPaymentStep = ({ reservationData }: UnifiedPaymentStepProps) => {
   // always pays phase #0 (see selectedPhase above).
   const cardFee = Math.round((baseDueNow * cardSurchargePercent) / 100);
   const cardAdjusted = baseDueNow + cardFee;
+  // Above the card provider's limit per payment: bank transfer only.
+  const cardAllowed = cardAdjusted <= CARD_PAYMENT_MAX_EUR;
   const bankFeeShare = bankFeeShareForPhase(bankFee, paymentPhases.length, 0);
   const bankAdjusted = baseDueNow + bankFeeShare;
+
+  useEffect(() => {
+    if (!selectedPaymentMethod) {
+      setPaymentMethod(cardAllowed ? PaymentMethod.CREDIT_CARD : PaymentMethod.BANK_TRANSFER);
+    } else if (!cardAllowed && selectedPaymentMethod === PaymentMethod.CREDIT_CARD) {
+      setPaymentMethod(PaymentMethod.BANK_TRANSFER);
+    }
+  }, [selectedPaymentMethod, cardAllowed]);
 
   const methodAdjustedAmount = selectedPaymentMethod === PaymentMethod.BANK_TRANSFER ? bankAdjusted : cardAdjusted;
 
@@ -296,19 +299,21 @@ const UnifiedPaymentStep = ({ reservationData }: UnifiedPaymentStepProps) => {
       <Stack direction="row" alignItems="baseline" justifyContent="space-between" mb={1.5}>
         <Typography variant="h3">{t('howWouldYouLikeToPay')}</Typography>
         <Typography variant="body2" color={colors.black500}>
-          {t('poweredByStripe')}
+          {t('securePaymentByMollie')}
         </Typography>
       </Stack>
 
       <Stack gap={1.5} mb={3}>
         {/* Online payments / Credit card */}
         <Box
-          onClick={() => setPaymentMethod(PaymentMethod.CREDIT_CARD)}
+          onClick={() => cardAllowed && setPaymentMethod(PaymentMethod.CREDIT_CARD)}
+          aria-disabled={!cardAllowed}
           sx={{
             border: cardBorder(selectedPaymentMethod === PaymentMethod.CREDIT_CARD),
             borderRadius: 1.5,
             p: 2,
-            cursor: 'pointer',
+            cursor: cardAllowed ? 'pointer' : 'not-allowed',
+            opacity: cardAllowed ? 1 : 0.6,
             transition: 'border-color 0.15s',
           }}
         >
@@ -316,6 +321,7 @@ const UnifiedPaymentStep = ({ reservationData }: UnifiedPaymentStepProps) => {
             <Radio
               checked={selectedPaymentMethod === PaymentMethod.CREDIT_CARD}
               onChange={() => setPaymentMethod(PaymentMethod.CREDIT_CARD)}
+              disabled={!cardAllowed}
               sx={{ p: 0 }}
             />
             <CreditCardIcon />
@@ -323,7 +329,7 @@ const UnifiedPaymentStep = ({ reservationData }: UnifiedPaymentStepProps) => {
               {t('onlinePaymentsCreditCard')}
             </Typography>
             {/* Brand acceptance marks — stronger trust cue than the
-                "Powered by Stripe" caption alone. Three badges don't fit
+                "Secure payment by Mollie" caption alone. Three badges don't fit
                 next to the title on a phone: the row wraps and the marks
                 shrink slightly so they sit right-aligned on their own line. */}
             <Box
@@ -363,6 +369,11 @@ const UnifiedPaymentStep = ({ reservationData }: UnifiedPaymentStepProps) => {
                 {fmt(cardAdjusted)}
               </Typography>
             </Stack>
+            {!cardAllowed && (
+              <Typography variant="body2" color={colors.black700} mt={0.5}>
+                {t('cardLimitBankTransferOnly', { limit: fmt(CARD_PAYMENT_MAX_EUR) })}
+              </Typography>
+            )}
           </Stack>
         </Box>
 

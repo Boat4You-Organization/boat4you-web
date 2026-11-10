@@ -19,6 +19,9 @@ const VERSION = 'b4y-v2';
 const STATIC_CACHE = `${VERSION}-static`;
 const PAGE_CACHE = `${VERSION}-pages`;
 const PRECACHE = ['/offline.html', '/manifest.webmanifest'];
+// Secret-link pages (/pay/<key>, /review/<token>; copy of PRIVATE_LINK_PATH in
+// src/utils/static/privateLinkPath.ts) are private, no-store: never kept here.
+const PRIVATE_LINK_PATH = /^(?:\/[a-z]{2})?\/(?:review|pay)(?:\/|$)/;
 
 self.addEventListener('install', event => {
   event.waitUntil(
@@ -72,6 +75,8 @@ self.addEventListener('fetch', event => {
     event.respondWith(
       fetch(request)
         .then(res => {
+          if (PRIVATE_LINK_PATH.test(url.pathname)) return res;
+
           // A page whose request still carried the one-time Contact Center token (cch) is not stored: the token must
           // not sit in the cache (src/config/ccHandoff.ts).
           if (!url.searchParams.has('cch')) {

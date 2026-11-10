@@ -514,7 +514,7 @@ _check-in_, soprattutto se le normative locali lo richiedono.
 
 **6.6. Elaborazione e Sicurezza dei Pagamenti:** Boat4You utilizza
 processori di pagamento di terze parti affidabili per gestire le transazioni
-(come _gateway_ di carte di credito o _PayPal_, ecc.). Tutte le transazioni
+(i pagamenti con carta, inclusi Apple Pay e Google Pay, sono elaborati da Mollie B.V., Amsterdam, Paesi Bassi). Tutte le transazioni
 sono crittografate e sicure. Tuttavia, anche tu dovresti fare la tua parte:
 effettua i pagamenti solo tramite l'interfaccia ufficiale della Piattaforma.
 **Boat4You non ti chiederà mai di pagare tramite bonifico bancario su un
