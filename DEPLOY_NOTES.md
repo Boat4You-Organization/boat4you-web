@@ -1,6 +1,6 @@
 # Boat4You (main) — Production Deploy Notes
 
-## 2026-11-10 — 🦶 Footer prema dizajnu „Footer 1a“ — ✅ LIVE 10.11.2026 (`3335f71a4`, deployment id 3335f71a48cb-mwatqjlz, tag `live/2026-11-10-footer-1a`; `cd385b3b2` redizajn, `3eecfbe7a` razmak na stranici broda, `8bbba21d2` natpis Storyset ostaje, `3335f71a4` nalazi pregleda)
+## 2026-11-10 — 🦶 Footer prema dizajnu „Footer 1a“ — ✅ LIVE 10.11.2026 ~15:23 UTC zajedno s Mollie (`2bf404561`, deployment id 2bf4045617d6-mwau6k2f, tag `live/2026-11-10-footer-1a-mollie`; prvi deploy `3335f71a4` tag `live/2026-11-10-footer-1a`; `cd385b3b2` redizajn, `3eecfbe7a` razmak na stranici broda, `8bbba21d2` natpis Storyset ostaje, `3335f71a4` nalazi pregleda)
 
 **Što (Mario 10.11.: „footer napravi prema dizajnu“, „pazi na linkove“, „makni Illustrations by Storyset“):** footer prema Claude Design izvozu `Boat4You Footer 1a (standalone).html`. Redom: traka povjerenja (TripAdvisor 4,9 / 5 i četiri obećanja), stupac brenda (logo, rečenica brenda, društvene mreže kao tekstualni linkovi), stupci Explore / Company / Legal (Legal nosi i gumb „Postavke kolačića“), red „Our network“, tamna traka s podacima tvrtke i zaslugama te veliki natpis „boat4you“ na dnu.
 
@@ -12,6 +12,8 @@
 - **Obrisane neiskorištene komponente:** BusinessCard, FooterBottomBar, FooterMenuItem, TripAdvisorRating.
 - **Stranica broda na mobitelu:** razmak od 183 px ispod footera (mjesto za donju traku rezervacije, `Layout.tsx`) je u tamnoj boji footera, da ispod tamnog dna ne ostane bijela traka dok se donja traka ne pojavi.
 - **Pregled:** 1 neovisni agent (Opus): 0 blockera. Popravljeno: `yarn test:network-links` je čitao obrisani FooterMenuItem (sada provjerava `footerNetwork` i `NETWORK_LINK` u `Footer.tsx`), duge njemačke oznake u stupcu Legal lome se unutar stupca (`overflow-wrap`), razmak redova linkova u tamnoj traci 8 px (24 px za dodir), `aria-haspopup="dialog"` na gumbu za kolačiće, `width`/`height` na velikom natpisu. Ostavljeno: težina društvenih linkova 700 (pravilo sajta 500/700/800), neiskorišten `common.allRightsReserved` i varijanta `footer` u AssuranceBadges.
+
+**⚠️ Incident 10.11. ~15:10–15:23 UTC (Mollie skinut s live weba):** prvi deploy footera (`3335f71a4`, 15:10 UTC) izgrađen je s grane `feat/footer-design-1a` grananom od `d91996bfa`. Mollie sesija je u 14:10 UTC deployala `1e565dcff` (Mollie, `/pay`, kartice), a na origin/main ga je pushala tek nakon mog `git fetch` prije deploya. Moj build je zato vratio web na verziju bez Mollieja: ~13 min nema rute `/api/payments/card-status`, `/pay/<ključ>` 404, kartična plaćanja nisu radila. Popravak: merge origin/main u granu (`2bf404561`) i deploy u 15:23 UTC; provjereno uživo: `/api/payments/card-status` 405 (ruta postoji), footer „Naša mreža“ na `/hr`, SEO Stage B 0 novih FAIL. **Pouka:** prije deploya b4y weba provjeriti živi deployment id (`dpl=` na `/contact-us`) i da HEAD sadrži taj commit (`git merge-base --is-ancestor <živi sha> HEAD`), ne samo origin/main.
 
 **Akcije pred deploy:**
 
