@@ -10,20 +10,23 @@
   },
   "footer": {
     "brandClaim": "One of the largest and most reliable yacht charter companies — according to the clients who sail with us year after year.",
+    "explore": {
+      "title": "Explore",
+      "fleet": "Fleet",
+      "yachtModels": "Yacht models",
+      "priceGuides": "Yacht charter prices",
+      "blog": "Blog"
+    },
     "network": {
-      "title": "Network"
+      "title": "Our network"
     },
     "company": {
       "title": "Company",
       "destinations": "Destinations",
       "aboutUs": "About Us",
       "faq": "FAQ",
-      "blog": "Blog",
       "contact": "Contact",
-      "howWeWork": "How We Work",
-      "fleet": "Fleet",
-      "yachtModels": "Yacht models",
-      "priceGuides": "Yacht charter prices"
+      "howWeWork": "How We Work"
     },
     "legal": {
       "title": "Legal",

@@ -280,8 +280,8 @@ export const getLocalizedJsonLd = async (locale: LocaleType, stats?: EntityStats
         // the Service/TravelAgency `provider` @id back to this node and counts
         // the rating on both entities. Self-serving org ratings never render
         // stars anyway, so the markup carried zero Google benefit. The visible
-        // TripAdvisor signal stays in the hero + footer (TripAdvisorRating
-        // component) — content, not structured data.
+        // TripAdvisor signal stays in the hero + footer trust strip
+        // (config/tripadvisor) — content, not structured data.
       },
       {
         '@type': ['Service', 'TravelAgency'],

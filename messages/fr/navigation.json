@@ -10,20 +10,23 @@
   },
   "footer": {
     "brandClaim": "L'une des plus grandes et des plus fiables sociétés de location de yachts – selon les clients qui naviguent avec nous, année après année.",
+    "explore": {
+      "title": "Découvrir",
+      "fleet": "Flotte",
+      "yachtModels": "Modèles de bateaux",
+      "priceGuides": "Prix de location de yachts",
+      "blog": "Blog"
+    },
     "network": {
-      "title": "Réseau"
+      "title": "Notre réseau"
     },
     "company": {
       "title": "Entreprise",
       "destinations": "Destinations",
       "aboutUs": "À propos",
       "faq": "FAQ",
-      "blog": "Blog",
       "contact": "Contact",
-      "howWeWork": "Comment nous fonctionnons",
-      "fleet": "Flotte",
-      "yachtModels": "Modèles de bateaux",
-      "priceGuides": "Prix de location de yachts"
+      "howWeWork": "Comment nous fonctionnons"
     },
     "legal": {
       "title": "Mentions Légales",

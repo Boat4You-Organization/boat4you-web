@@ -19,10 +19,9 @@
   }
 }
 
-// Footer variant — sits in-line with the copyright in FooterBottomBar.
-// No chrome of its own (no border, no padding, no margin) so the row
-// reads as a horizontal continuation of the copyright. Wraps to its own
-// row on mobile via the parent's flex-wrap.
+// Footer variant — no chrome of its own (no border, no padding, no margin).
+// Not used since the footer redesign of 10.11.2026: the footer trust strip
+// renders the same four common.assurance* labels as plain text.
 .footerRow {
   display: flex;
   flex-wrap: wrap;

@@ -10,20 +10,23 @@
   },
   "footer": {
     "brandClaim": "Jedna od najvećih i najpouzdanijih tvrtki za charter jahti – tako kažu klijenti koji s nama plove iz godine u godinu.",
+    "explore": {
+      "title": "Istražite",
+      "fleet": "Flota",
+      "yachtModels": "Modeli plovila",
+      "priceGuides": "Cijene najma jahti",
+      "blog": "Blog"
+    },
     "network": {
-      "title": "Mreža"
+      "title": "Naša mreža"
     },
     "company": {
       "title": "Tvrtka",
       "destinations": "Destinacije",
       "aboutUs": "O nama",
       "faq": "FAQ",
-      "blog": "Blog",
       "contact": "Kontakt",
-      "howWeWork": "Kako radimo",
-      "fleet": "Flota",
-      "yachtModels": "Modeli plovila",
-      "priceGuides": "Cijene najma jahti"
+      "howWeWork": "Kako radimo"
     },
     "legal": {
       "title": "Pravno",

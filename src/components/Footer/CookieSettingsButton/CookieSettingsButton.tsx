@@ -1,18 +1,16 @@
 'use client';
 
-import { Typography } from '@mui/material';
 import { useTranslations } from 'next-intl';
-
-import colors from '@/styles/themes/colors';
 
 /**
  * Footer "Cookie settings" link — re-opens the consent banner so visitors can
  * withdraw or change cookie consent at any time (GDPR Art. 7(3): withdrawing
  * consent must be as easy as giving it). Dispatches an event the
  * CookieConsentController listens for. Reuses the banner's existing
- * "Cookies Settings" label, so no new translations are needed.
+ * "Cookies Settings" label, so no new translations are needed. A button styled
+ * by the footer (className) to read as a link in the Legal column.
  */
-const CookieSettingsButton = () => {
+const CookieSettingsButton = ({ className }: { className?: string }) => {
   const t = useTranslations('cookieConsent');
 
   const handleClick = () => {
@@ -20,23 +18,9 @@ const CookieSettingsButton = () => {
   };
 
   return (
-    <Typography
-      component="button"
-      type="button"
-      onClick={handleClick}
-      variant="body2"
-      color={colors.black600}
-      sx={{
-        background: 'none',
-        border: 'none',
-        padding: 0,
-        cursor: 'pointer',
-        textDecoration: 'underline',
-        font: 'inherit',
-      }}
-    >
+    <button type="button" onClick={handleClick} className={className}>
       {t('buttons.manage')}
-    </Typography>
+    </button>
   );
 };
 

@@ -10,20 +10,23 @@
   },
   "footer": {
     "brandClaim": "Uma das maiores e mais confiáveis empresas de charter de iates — é o que dizem os clientes que navegam conosco ano após ano.",
+    "explore": {
+      "title": "Explorar",
+      "fleet": "Frota",
+      "yachtModels": "Modelos de barcos",
+      "priceGuides": "Preços de aluguer de iates",
+      "blog": "Blog"
+    },
     "network": {
-      "title": "Rede"
+      "title": "Nossa rede"
     },
     "company": {
       "title": "Empresa",
       "destinations": "Destinos",
       "aboutUs": "Sobre Nós",
       "faq": "FAQ",
-      "blog": "Blog",
       "contact": "Contato",
-      "howWeWork": "Como Trabalhamos",
-      "fleet": "Frota",
-      "yachtModels": "Modelos de barcos",
-      "priceGuides": "Preços de aluguer de iates"
+      "howWeWork": "Como Trabalhamos"
     },
     "legal": {
       "title": "Legal",

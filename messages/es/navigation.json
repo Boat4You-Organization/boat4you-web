@@ -10,20 +10,23 @@
   },
   "footer": {
     "brandClaim": "Una de las mayores y más fiables empresas de alquiler de yates: así lo dicen los clientes que navegan con nosotros año tras año.",
+    "explore": {
+      "title": "Explorar",
+      "fleet": "Flota",
+      "yachtModels": "Modelos de barcos",
+      "priceGuides": "Precios de alquiler de yates",
+      "blog": "Blog"
+    },
     "network": {
-      "title": "Red"
+      "title": "Nuestra red"
     },
     "company": {
       "title": "Empresa",
       "destinations": "Destinos",
       "aboutUs": "Sobre Nosotros",
       "faq": "FAQ",
-      "blog": "Blog",
       "contact": "Contacto",
-      "howWeWork": "Cómo Trabajamos",
-      "fleet": "Flota",
-      "yachtModels": "Modelos de barcos",
-      "priceGuides": "Precios de alquiler de yates"
+      "howWeWork": "Cómo Trabajamos"
     },
     "legal": {
       "title": "Legal",

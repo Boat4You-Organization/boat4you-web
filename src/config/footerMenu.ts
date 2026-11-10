@@ -1,18 +1,13 @@
 import { NavigationLink } from '@/types/navigation-link';
 
-export type FooterSection = 'network' | 'company' | 'legal';
+export type FooterSection = 'explore' | 'company' | 'legal';
 
-// Order: company, legal, network — network last (rightmost on desktop)
-// per Mario's preference. Sister-site URLs are www.* on purpose to
-// match canonical hosts and avoid SEO duplicate-content flags.
+// Footer link columns (Mario's design "Footer 1a", 10.11.2026): Explore, Company, Legal. Labels are
+// `navigation.footer.<section>.<text>`. The Legal column also carries the cookie-settings button (Footer.tsx).
 const footerMenu: NavigationLink[] = [
   {
-    title: 'company',
+    title: 'explore',
     links: [
-      {
-        text: 'aboutUs',
-        href: '/about-us',
-      },
       // Sitewide entry point into the crawlable /fleet directory. /search
       // renders zero boats on a parameter-free request (the only request
       // Googlebot makes), so without this link the catalogue had a sitemap
@@ -34,16 +29,25 @@ const footerMenu: NavigationLink[] = [
         href: '/yacht-charter-prices',
       },
       {
+        text: 'blog',
+        href: '/blog',
+      },
+    ],
+  },
+  {
+    title: 'company',
+    links: [
+      {
+        text: 'aboutUs',
+        href: '/about-us',
+      },
+      {
         text: 'howWeWork',
         href: '/how-we-work',
       },
       {
         text: 'faq',
         href: '/faq',
-      },
-      {
-        text: 'blog',
-        href: '/blog',
       },
       {
         text: 'contact',
@@ -64,41 +68,17 @@ const footerMenu: NavigationLink[] = [
       },
     ],
   },
-  {
-    title: 'network',
-    links: [
-      {
-        displayName: 'Europe Yachts',
-        href: 'https://www.europe-yachts.com',
-        target: '_blank',
-      },
-      {
-        displayName: 'Catamaran Croatia',
-        href: 'https://www.catamaran-croatia-charter.com',
-        target: '_blank',
-      },
-      {
-        displayName: 'Catamaran Greece',
-        href: 'https://www.catamaran-charter-greece.com',
-        target: '_blank',
-      },
-      {
-        displayName: 'Catamaran Italy',
-        href: 'https://www.catamarancharteritaly.com/',
-        target: '_blank',
-      },
-      {
-        displayName: 'Catamaran Caribbean',
-        href: 'https://www.catamaran-charter-caribbean.com',
-        target: '_blank',
-      },
-      {
-        displayName: 'Yacht Charter Croatia',
-        href: 'https://www.croatia-yachting.com',
-        target: '_blank',
-      },
-    ],
-  },
+];
+
+// "Our network" row. Brand names, not translated. Sister-site URLs are www.* on
+// purpose to match canonical hosts; every link is nofollow (utils/static/networkLinks).
+export const footerNetwork: { name: string; href: string }[] = [
+  { name: 'Europe Yachts', href: 'https://www.europe-yachts.com' },
+  { name: 'Catamaran Croatia', href: 'https://www.catamaran-croatia-charter.com' },
+  { name: 'Catamaran Greece', href: 'https://www.catamaran-charter-greece.com' },
+  { name: 'Catamaran Italy', href: 'https://www.catamarancharteritaly.com/' },
+  { name: 'Catamaran Caribbean', href: 'https://www.catamaran-charter-caribbean.com' },
+  { name: 'Yacht Charter Croatia', href: 'https://www.croatia-yachting.com' },
 ];
 
 export default footerMenu;

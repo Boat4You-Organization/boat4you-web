@@ -10,20 +10,23 @@
   },
   "footer": {
     "brandClaim": "Een van de grootste en betrouwbaarste jachtcharterbedrijven – volgens de klanten die jaar in, jaar uit met ons varen.",
+    "explore": {
+      "title": "Ontdekken",
+      "fleet": "Vloot",
+      "yachtModels": "Bootmodellen",
+      "priceGuides": "Prijzen jachtcharter",
+      "blog": "Blog"
+    },
     "network": {
-      "title": "Netwerk"
+      "title": "Ons netwerk"
     },
     "company": {
       "title": "Bedrijf",
       "destinations": "Bestemmingen",
       "aboutUs": "Over ons",
       "faq": "FAQ",
-      "blog": "Blog",
       "contact": "Contact",
-      "howWeWork": "Hoe wij werken",
-      "fleet": "Vloot",
-      "yachtModels": "Bootmodellen",
-      "priceGuides": "Prijzen jachtcharter"
+      "howWeWork": "Hoe wij werken"
     },
     "legal": {
       "title": "Juridisch",

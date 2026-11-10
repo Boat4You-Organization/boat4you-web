@@ -10,20 +10,23 @@
   },
   "footer": {
     "brandClaim": "Eines der größten und zuverlässigsten Yachtcharter-Unternehmen – das sagen die Kunden, die Jahr für Jahr mit uns segeln.",
+    "explore": {
+      "title": "Entdecken",
+      "fleet": "Flotte",
+      "yachtModels": "Yachtmodelle",
+      "priceGuides": "Yachtcharter-Preise",
+      "blog": "Blog"
+    },
     "network": {
-      "title": "Netzwerk"
+      "title": "Unser Netzwerk"
     },
     "company": {
       "title": "Unternehmen",
       "destinations": "Reiseziele",
       "aboutUs": "Über uns",
       "faq": "FAQ",
-      "blog": "Blog",
       "contact": "Kontakt",
-      "howWeWork": "Wie wir arbeiten",
-      "fleet": "Flotte",
-      "yachtModels": "Yachtmodelle",
-      "priceGuides": "Yachtcharter-Preise"
+      "howWeWork": "Wie wir arbeiten"
     },
     "legal": {
       "title": "Rechtliches",

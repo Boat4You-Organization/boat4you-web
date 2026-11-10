@@ -10,20 +10,23 @@
   },
   "footer": {
     "brandClaim": "Jedna z największych i najbardziej rzetelnych firm zajmujących się czarterem jachtów – tak mówią klienci, którzy pływają z nami rok w rok.",
+    "explore": {
+      "title": "Odkrywaj",
+      "fleet": "Flota",
+      "yachtModels": "Modele jachtów",
+      "priceGuides": "Ceny czarteru jachtów",
+      "blog": "Blog"
+    },
     "network": {
-      "title": "Sieć"
+      "title": "Nasza sieć"
     },
     "company": {
       "title": "Firma",
       "destinations": "Destynacje",
       "aboutUs": "O nas",
       "faq": "FAQ",
-      "blog": "Blog",
       "contact": "Kontakt",
-      "howWeWork": "Jak pracujemy",
-      "fleet": "Flota",
-      "yachtModels": "Modele jachtów",
-      "priceGuides": "Ceny czarteru jachtów"
+      "howWeWork": "Jak pracujemy"
     },
     "legal": {
       "title": "Informacje prawne",
