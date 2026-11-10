@@ -30,7 +30,7 @@
     "amountInvalid": "Inserisca un importo valido con al massimo due decimali, ad esempio 1109,00.",
     "amountAmbiguous": "Inserisca l'importo senza separatore delle migliaia, ad esempio 50000 o 50,00.",
     "amountTooLow": "L'importo minimo è {min}.",
-    "amountTooHigh": "Il pagamento con carta è possibile fino a {max} per pagamento. Paga un importo maggiore in più pagamenti o con bonifico bancario."
+    "amountTooHigh": "Il pagamento con carta è possibile fino a {max} per pagamento. Paghi un importo maggiore in più pagamenti o con bonifico bancario."
   },
   "success": {
     "confirming": {
