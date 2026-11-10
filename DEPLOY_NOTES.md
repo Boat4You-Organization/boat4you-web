@@ -1,5 +1,20 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-11-10 — 💳 Footer: red „Secure payment by Mollie“ s logotipima kartica — ✅ LIVE 10.11.2026 (`b0fe63e8d`, deployment id b0fe63e8d0a7-mwaw6na1, tag `live/2026-11-10-footer-payments`)
+
+**Što (Mario 10.11.: „mora biti negdje i Mollie kao payment provider i da se u footeru vidi da primamo sve kartice“, primjer konkurenta danielis-yachting.com; zatim „daj ubaci i American Express“):** red iznad „Our network“: natpis `common.securePaymentByMollie` (isti kao na koracima plaćanja, 9 jezika) i logotipi Visa, Mastercard, American Express, Apple Pay i Google Pay u sivim pločicama 32×24.
+
+- **Što se stvarno nudi (Mollie Methods API live + backend):** booking = creditcard + applepay (Google Pay unutar kartične stranice), `/pay` = + paybybank. Klarna je aktivna na profilu, ali se ne šalje; PayPal nije aktivan. Zato nema logotipa Klarne, PayPala ni Pay by Bank.
+- **Logotipi:** Apple Pay i Google Pay = Mollieve ikone iz API-ja. Mollie nema ikone marki kartica, pa su Visa, Mastercard i Amex službeni znakovi s Wikimedia Commonsa (Mariov izbor) u istoj pločici. Datoteke `public/images/payments/*-payment-method.svg` (ASCII imena); izmjena slike = novo ime (keš `/images`).
+- **Pregled:** 1 neovisni agent (Opus), 0 blockera. Popravljeno: natpis koristi postojeći prijevod umjesto novog, Amex znak smanjen na razmak ostalih. Ostavljeno za kasnije: `SvgIcons/Payment/CardBrands.tsx` na koraku plaćanja crta vlastite (starije) verzije kartica.
+- **Provjera LIVE:** 5 slika 200 `image/svg+xml`; red na svih 9 jezika; isti skup od 25 linkova kao prije; `/api/payments/card-status` 405 (Mollie ruta postoji); SEO Stage B 0 novih FAIL. Prije deploya: živi `dpl` (`2bf404561`) je predak HEAD-a.
+
+**Otvoreno (Mario):**
+
+- [ ] **American Express:** Mollie API ne pokazuje marke kartica; Mollie sesija Amex nije potvrdila. Provjeriti u Mollie dashboardu: Settings → Payment methods → Cards. Ako nije uključen: maknuti iz `footerPaymentMethods` (`src/config/footerMenu.ts`) i deploy.
+- [ ] **Google Pay:** uključen na profilu, ali još nije viđen na stvarnoj Mollie kartičnoj stranici. Kod prve prave uplate s Androida/Chromea provjeriti; ako se ne pojavljuje, maknuti logo.
+- [ ] Isti red na 6 sestrinskih sajtova (čeka Marija; ne prije kraja Mollie lanca deploya na cusma5).
+
 ## 2026-11-10 — 🦶 Footer prema dizajnu „Footer 1a“ — ✅ LIVE 10.11.2026 ~15:23 UTC zajedno s Mollie (`2bf404561`, deployment id 2bf4045617d6-mwau6k2f, tag `live/2026-11-10-footer-1a-mollie`; prvi deploy `3335f71a4` tag `live/2026-11-10-footer-1a`; `cd385b3b2` redizajn, `3eecfbe7a` razmak na stranici broda, `8bbba21d2` natpis Storyset ostaje, `3335f71a4` nalazi pregleda)
 
 **Što (Mario 10.11.: „footer napravi prema dizajnu“, „pazi na linkove“, „makni Illustrations by Storyset“):** footer prema Claude Design izvozu `Boat4You Footer 1a (standalone).html`. Redom: traka povjerenja (TripAdvisor 4,9 / 5 i četiri obećanja), stupac brenda (logo, rečenica brenda, društvene mreže kao tekstualni linkovi), stupci Explore / Company / Legal (Legal nosi i gumb „Postavke kolačića“), red „Our network“, tamna traka s podacima tvrtke i zaslugama te veliki natpis „boat4you“ na dnu.
