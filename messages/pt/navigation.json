@@ -17,6 +17,10 @@
       "priceGuides": "Preços de aluguer de iates",
       "blog": "Blog"
     },
+    "payments": {
+      "securedBy": "Pagamentos seguros com {provider}",
+      "methods": "Métodos de pagamento que aceitamos"
+    },
     "network": {
       "title": "Nossa rede"
     },

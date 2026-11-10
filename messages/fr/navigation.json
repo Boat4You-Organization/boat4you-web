@@ -17,6 +17,10 @@
       "priceGuides": "Prix de location de yachts",
       "blog": "Blog"
     },
+    "payments": {
+      "securedBy": "Paiements sécurisés par {provider}",
+      "methods": "Moyens de paiement acceptés"
+    },
     "network": {
       "title": "Notre réseau"
     },

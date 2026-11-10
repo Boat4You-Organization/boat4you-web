@@ -17,6 +17,10 @@
       "priceGuides": "Cijene najma jahti",
       "blog": "Blog"
     },
+    "payments": {
+      "securedBy": "Sigurno plaćanje preko servisa {provider}",
+      "methods": "Prihvaćeni načini plaćanja"
+    },
     "network": {
       "title": "Naša mreža"
     },

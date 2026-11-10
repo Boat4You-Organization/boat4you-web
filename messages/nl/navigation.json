@@ -17,6 +17,10 @@
       "priceGuides": "Prijzen jachtcharter",
       "blog": "Blog"
     },
+    "payments": {
+      "securedBy": "Veilig betalen via {provider}",
+      "methods": "Geaccepteerde betaalmethoden"
+    },
     "network": {
       "title": "Ons netwerk"
     },

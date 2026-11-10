@@ -162,6 +162,25 @@ $lettering: #12345a;
   hyphens: auto;
 }
 
+.payments {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: rem-calc(12 24);
+  padding-block: rem-calc(18);
+  border-top: rem-calc(1) solid $rule;
+}
+
+.paymentLogos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: rem-calc(8);
+
+  img {
+    display: block;
+  }
+}
+
 .network {
   display: flex;
   flex-wrap: wrap;

@@ -17,6 +17,10 @@
       "priceGuides": "Ceny czarteru jachtów",
       "blog": "Blog"
     },
+    "payments": {
+      "securedBy": "Bezpieczne płatności przez {provider}",
+      "methods": "Akceptowane metody płatności"
+    },
     "network": {
       "title": "Nasza sieć"
     },

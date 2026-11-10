@@ -17,6 +17,10 @@
       "priceGuides": "Yacht charter prices",
       "blog": "Blog"
     },
+    "payments": {
+      "securedBy": "Secure payments by {provider}",
+      "methods": "Accepted payment methods"
+    },
     "network": {
       "title": "Our network"
     },

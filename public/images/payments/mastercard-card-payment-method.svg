@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="24" viewBox="0 0 32 24">
+<!-- Mastercard symbol (Wikimedia Commons, File:Mastercard_2019_logo.svg), in a 32x24 tile like Mollie's payment-method icons -->
+<clipPath id="clip"><rect width="32" height="24" rx="4" fill="#fff"/></clipPath><rect width="32" height="24" rx="4" fill="#fff" stroke="#E6E6E6" stroke-width="2" clip-path="url(#clip)"/>
+<g transform="translate(6 5.82) scale(0.02)"><path fill="#EB001B" d="m308,0a309,309 0 1,0 2,0z"/><path fill="#F79E1B" d="m690,0a309,309 0 1,0 2,0z"/><path fill="#FF5F00" d="m500,66a309,309 0 0,0 0,486 309,309 0 0,0 0-486"/></g>
+</svg>

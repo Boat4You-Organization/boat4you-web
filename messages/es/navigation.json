@@ -17,6 +17,10 @@
       "priceGuides": "Precios de alquiler de yates",
       "blog": "Blog"
     },
+    "payments": {
+      "securedBy": "Pagos seguros con {provider}",
+      "methods": "Métodos de pago aceptados"
+    },
     "network": {
       "title": "Nuestra red"
     },

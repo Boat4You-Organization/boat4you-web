@@ -4,7 +4,7 @@ import { useLocale, useTranslations } from 'next-intl';
 import CookieSettingsButton from '@/components/Footer/CookieSettingsButton';
 import Logo from '@/components/SvgIcons/Logo';
 import LogoWordmark from '@/components/SvgIcons/LogoWordmark';
-import footerMenu, { FooterSection, footerNetwork } from '@/config/footerMenu';
+import footerMenu, { FooterSection, footerNetwork, footerPaymentMethods } from '@/config/footerMenu';
 import socials from '@/config/socials.config';
 import { TRIPADVISOR_RATING, TRIPADVISOR_REVIEW_COUNT, TRIPADVISOR_URL } from '@/config/tripadvisor';
 import { Link } from '@/i18n/navigation';
@@ -81,6 +81,20 @@ const Footer = () => {
             </ul>
           </div>
         ))}
+      </div>
+
+      {/* Card payments go through Mollie (live 10.11.2026); the logos are the methods the checkout offers. */}
+      <div className={cx(styles.inner, styles.payments)}>
+        <p className={styles.label}>{t('payments.securedBy', { provider: 'Mollie' })}</p>
+        <ul className={styles.paymentLogos} aria-label={t('payments.methods')}>
+          {footerPaymentMethods.map(({ name, src }) => (
+            <li key={src}>
+              {/* A 3 KB static SVG tile: next/image adds nothing here. */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={src} alt={name} width={40} height={30} loading="lazy" decoding="async" />
+            </li>
+          ))}
+        </ul>
       </div>
 
       <div className={cx(styles.inner, styles.network)}>

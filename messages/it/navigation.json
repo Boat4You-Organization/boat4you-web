@@ -17,6 +17,10 @@
       "priceGuides": "Prezzi del noleggio yacht",
       "blog": "Blog"
     },
+    "payments": {
+      "securedBy": "Pagamenti sicuri con {provider}",
+      "methods": "Metodi di pagamento accettati"
+    },
     "network": {
       "title": "La nostra rete"
     },
