@@ -1,6 +1,12 @@
 import BankTransfer from '@/components/SvgIcons/Payment/BankTransfer';
 import CreditCard from '@/components/SvgIcons/Payment/CreditCard';
 
+/**
+ * The card provider's limit per payment (Mollie, 10,000 EUR — surcharge included). Above it the card option is
+ * shown disabled and the booking is paid by bank transfer; the backend refuses such a card checkout (422, 8106).
+ */
+export const CARD_PAYMENT_MAX_EUR = 10000;
+
 export enum PaymentMethod {
   CREDIT_CARD = 'CREDIT_CARD',
   BANK_TRANSFER = 'BANK_TRANSFER',

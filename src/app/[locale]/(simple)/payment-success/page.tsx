@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Box, Button, Stack, Typography } from '@mui/material';
 import { useLocale, useTranslations } from 'next-intl';
 import Link from 'next/link';
-import { useSearchParams } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 
 import { getReservationDetails } from '@/actions/reservation.actions';
 import Layout from '@/components/Layout';
@@ -28,8 +28,53 @@ interface BookingContact {
   specialRequest: string;
 }
 
+type CardStatus = 'PAYMENT_SUCCESS' | 'PAYMENT_PENDING' | 'PAYMENT_NOT_COMPLETED' | 'UNKNOWN';
+
+/** Waits between the status checks of a card checkout: 0 s, 2 s, 3 s, 5 s (~10 s in all). */
+const STATUS_DELAYS_MS = [0, 2000, 3000, 5000];
+
+/**
+ * The card provider (Mollie) sends the payer back here after the checkout — also when the card was declined or the
+ * payer used the checkout's back link. `?paymentRef=` is our checkout token: ask the backend (which asks Mollie)
+ * until the payment is paid or clearly not completed; PENDING after the last check is shown as success without the
+ * purchase conversion. No paymentRef = the old Stripe success URL, which Stripe only used after a payment.
+ */
+const askCardStatus = async (paymentRef: string): Promise<CardStatus> => {
+  try {
+    const response = await fetch('/api/payments/card-status', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ paymentRef }),
+      cache: 'no-store',
+    });
+    const data = (await response.json()) as { status?: CardStatus };
+
+    return data.status ?? 'UNKNOWN';
+  } catch {
+    return 'UNKNOWN';
+  }
+};
+
+const wait = (ms: number) =>
+  new Promise<void>(resolve => {
+    setTimeout(resolve, ms);
+  });
+
+const cardStatus = async (paymentRef: string, attempt = 0): Promise<CardStatus> => {
+  if (STATUS_DELAYS_MS[attempt]) await wait(STATUS_DELAYS_MS[attempt]);
+
+  const status = await askCardStatus(paymentRef);
+
+  if (status === 'PAYMENT_SUCCESS' || status === 'PAYMENT_NOT_COMPLETED' || attempt + 1 >= STATUS_DELAYS_MS.length) {
+    return status;
+  }
+
+  return cardStatus(paymentRef, attempt + 1);
+};
+
 const PaymentSuccessPage = () => {
   const searchParams = useSearchParams();
+  const router = useRouter();
   const t = useTranslations('common');
   const locale = useLocale();
 
@@ -60,10 +105,25 @@ const PaymentSuccessPage = () => {
         return;
       }
 
+      const paymentRef = searchParams.get('paymentRef');
+      let paid = true;
+
+      if (paymentRef) {
+        const status = await cardStatus(paymentRef);
+
+        if (status === 'PAYMENT_NOT_COMPLETED') {
+          router.replace(`/${locale}/payment-cancelled?reservationId=${encodeURIComponent(String(id))}`);
+
+          return;
+        }
+
+        paid = status === 'PAYMENT_SUCCESS';
+      }
+
       // Payment went through and the reservation exists → this is the sale.
       // Guarded by the ref so a refresh cannot count the booking twice.
       const firePurchase = (amount?: number) => {
-        if (purchaseTracked.current) return;
+        if (!paid || purchaseTracked.current) return;
 
         purchaseTracked.current = true;
         trackPurchase({ ref: id, value: amount });
@@ -100,7 +160,7 @@ const PaymentSuccessPage = () => {
     };
 
     fetchReservation();
-  }, [searchParams]);
+  }, [searchParams, router, locale]);
 
   if (isLoading) {
     return <LoadingSection size={64} />;

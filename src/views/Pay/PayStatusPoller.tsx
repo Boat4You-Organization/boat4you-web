@@ -24,10 +24,10 @@ const DELAYS_MS = [3000, 5000, 8000];
 type PollState = { kind: 'pending' } | { kind: 'settled'; info: PaymentStatusInfo } | { kind: 'timedOut' };
 
 /**
- * Revolut sends the payer back right after a successful payment, usually
+ * Mollie sends the payer back right after the checkout, usually
  * before its webhook has reached the backend, so the first status read can
  * still be PENDING. Every check asks the backend, which looks the order up
- * at Revolut itself (at most every 10 s per payment).
+ * at Mollie itself (at most every 10 s per payment).
  */
 const PayStatusPoller = ({ linkKey, paymentRef }: PayStatusPollerProps) => {
   const t = useTranslations('pay');

@@ -1,12 +1,12 @@
 import { useState } from 'react';
 
-import { loadStripe } from '@stripe/stripe-js';
+import { useLocale } from 'next-intl';
 import { useRouter } from 'next/navigation';
 
 import { PaymentMethod } from '@/config/paymentMethods.config';
+import { getDataFromSessionStorage } from '@/utils/static/sessionStorageUtils';
 import { showToast } from '@/valtio/global/global.actions';
 import { useUserStore } from '@/valtio/user/user.store';
-import { getDataFromSessionStorage } from '@/utils/static/sessionStorageUtils';
 
 interface BookingContact {
   name: string;
@@ -16,15 +16,28 @@ interface BookingContact {
   specialRequest: string;
 }
 
-// Initialize once at module scope so the loader script is fetched a single time.
-const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_KEY || '');
+/**
+ * Hosted card checkouts the browser may be sent to: Mollie (the card provider) and Stripe (kept behind the backend
+ * switch as an emergency fallback). Anything else is never opened.
+ */
+const CARD_CHECKOUT_ORIGINS = ['https://www.mollie.com', 'https://checkout.stripe.com'];
+
+const isCardCheckoutUrl = (url: unknown): url is string => {
+  if (typeof url !== 'string') return false;
+
+  try {
+    return CARD_CHECKOUT_ORIGINS.includes(new URL(url).origin);
+  } catch {
+    return false;
+  }
+};
 
 interface UsePaymentSubmitParams {
   paymentMethod: string;
   reservationId: string;
   payFullAmount?: boolean;
   paymentPhaseId?: number;
-  /** Stripe idempotency key generated once per /payment page mount. */
+  /** Idempotency key generated once per /payment page mount (a double click returns the same checkout). */
   idempotencyKey?: string;
 }
 
@@ -37,6 +50,7 @@ export const usePaymentSubmit = ({
 }: UsePaymentSubmitParams) => {
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
+  const locale = useLocale();
   const { user } = useUserStore();
 
   const handleSubmit = async () => {
@@ -80,6 +94,7 @@ export const usePaymentSubmit = ({
           payFullAmount,
           paymentPhaseId,
           idempotencyKey,
+          locale,
         }),
       });
 
@@ -91,36 +106,14 @@ export const usePaymentSubmit = ({
 
       const data = await response.json();
 
-      // Primary path: backend already returns the full Stripe Checkout URL.
-      // Works with the updated `CheckoutSessionDto.redirectUrl` field.
-      if (typeof data.redirectUrl === 'string' && data.redirectUrl.startsWith('http')) {
+      // The backend returns the provider's hosted checkout URL (Mollie; Stripe only behind the backend switch).
+      if (isCardCheckoutUrl(data.redirectUrl)) {
         window.location.href = data.redirectUrl;
 
         return;
       }
 
-      // Fallback: older backend builds only return `sessionIdOrOrderCode`
-      // (the Stripe session id). Use @stripe/stripe-js to perform the
-      // redirect client-side — this requires NEXT_PUBLIC_STRIPE_KEY.
-      const sessionId: string | undefined = data.sessionIdOrOrderCode;
-
-      if (sessionId && sessionId.startsWith('cs_')) {
-        const stripe = await stripePromise;
-
-        if (!stripe) {
-          throw new Error('Stripe.js failed to initialize. Check NEXT_PUBLIC_STRIPE_KEY.');
-        }
-
-        const { error } = await stripe.redirectToCheckout({ sessionId });
-
-        if (error) {
-          throw new Error(error.message || 'Stripe redirect failed');
-        }
-
-        return;
-      }
-
-      throw new Error('Payment provider did not return a checkout URL. Check backend logs / Stripe configuration.');
+      throw new Error("We couldn't start the card payment. Please try again in a moment.");
     } catch (error) {
       showToast({
         status: 'error',

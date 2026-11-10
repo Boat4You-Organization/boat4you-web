@@ -57,7 +57,7 @@ const AmountPreview = () => {
 /**
  * Card payment for a contract made outside the booking flow, as on the old
  * Stripe payment link: e-mail, booking confirmation number, amount, Pay. The
- * backend creates a Revolut order and the browser goes to Revolut's hosted
+ * backend creates a Mollie payment and the browser goes to Mollie's hosted
  * checkout. No terms checkbox and no second step (Mario): the legal line above
  * the button states the acceptance and the request carries acceptTerms.
  */
@@ -71,7 +71,7 @@ const PayForm = ({ linkKey, minAmountMinor, maxAmountMinor, initialReference, in
   const [isPending, startTransition] = useTransition();
   const busy = isPending || isRedirecting;
 
-  // Back from Revolut's checkout restores this page from the back/forward
+  // Back from Mollie's checkout restores this page from the back/forward
   // cache with the button still on "Processing…": unlock it.
   useEffect(() => {
     const onShow = (event: PageTransitionEvent) => {

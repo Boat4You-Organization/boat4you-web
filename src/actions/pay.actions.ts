@@ -143,7 +143,7 @@ export async function createCustomPayment(input: CreateCustomPaymentInput): Prom
         site: SITE,
         linkKey: input.linkKey,
       }),
-      // Creating the Revolut order is part of this call; the backend's own
+      // Creating the Mollie payment is part of this call; the backend's own
       // client allows 15 s, so this waits a little longer than that.
       signal: AbortSignal.timeout(CREATE_TIMEOUT_MS),
     });

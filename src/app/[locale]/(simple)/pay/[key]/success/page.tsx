@@ -13,7 +13,7 @@ import PayMessage from '@/views/Pay/PayMessage';
 import PayStatusPoller from '@/views/Pay/PayStatusPoller';
 
 /**
- * Where Revolut's hosted checkout sends the payer after a successful payment
+ * Where Mollie's hosted checkout sends the payer back (after a payment — or without one: the status decides)
  * (?ref=<payment token>). The page shows what the backend has recorded — it
  * never assumes success from the redirect alone — and tracks nothing (no
  * purchase event: these are contract payments, not web bookings).

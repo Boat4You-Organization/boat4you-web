@@ -33,8 +33,5 @@ export const isPayReference = (value: string): boolean => PAY_REFERENCE_PATTERN.
 export const isPaymentRef = (value: unknown): value is string =>
   typeof value === 'string' && /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(value);
 
-/** Revolut hosted checkout origins the browser may be sent to (prod, sandbox). */
-export const PAY_CHECKOUT_ORIGINS: readonly string[] = [
-  'https://checkout.revolut.com',
-  'https://sandbox-checkout.revolut.com',
-];
+/** Mollie hosted checkout origin the browser may be sent to (live and test mode alike). */
+export const PAY_CHECKOUT_ORIGINS: readonly string[] = ['https://www.mollie.com'];

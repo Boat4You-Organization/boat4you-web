@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 
 import { useTranslations } from 'next-intl';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 
 import { getReservationDetails } from '@/actions/reservation.actions';
 import Layout from '@/components/Layout';
@@ -24,6 +24,7 @@ const PaymentCancelledPage = () => {
   const [reservationId, setReservationId] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
   const router = useRouter();
+  const searchParams = useSearchParams();
   const t = useTranslations('common');
 
   const handleMyReservationsClick = () => {
@@ -31,14 +32,17 @@ const PaymentCancelledPage = () => {
   };
 
   useEffect(() => {
-    const id = getDataFromSessionStorage<string>('reservationId');
+    // Session first (same tab as the booking); the card provider's cancel URL also carries ?reservationId=.
+    const fromUrl = searchParams.get('reservationId');
+    const id =
+      getDataFromSessionStorage<string>('reservationId') ?? (fromUrl && /^\d+$/.test(fromUrl) ? fromUrl : null);
 
     setReservationId(id);
 
     if (!id) {
       setLoading(false);
     }
-  }, []);
+  }, [searchParams]);
 
   useEffect(() => {
     if (reservationId === null) {
@@ -90,7 +94,7 @@ const PaymentCancelledPage = () => {
     return <ErrorPage />;
   }
 
-  // The cancel_url from Stripe is identical for first-instalment and
+  // The card provider's cancel URL is identical for first-instalment and
   // subsequent-instalment payments, but the user-facing message must NOT be.
   // If any phase is already paidOn, the reservation is already confirmed —
   // showing the "Pre-Reserved, you have 48h" warning would be alarming and

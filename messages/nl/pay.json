@@ -17,7 +17,7 @@
     },
     "youWillPay": "U betaalt {amount}",
     "pay": "Betalen",
-    "securedBy": "Kaarten · Apple Pay · Google Pay · Revolut Pay · veilig betalen via Revolut"
+    "securedBy": "Kaarten · Apple Pay · Google Pay · Pay by Bank · veilig betalen via Mollie"
   },
   "errors": {
     "validation": "Controleer de ingevulde gegevens en probeer het opnieuw.",
@@ -30,7 +30,7 @@
     "amountInvalid": "Vul een geldig bedrag in met maximaal twee decimalen, bijvoorbeeld 1109,00.",
     "amountAmbiguous": "Vul het bedrag in zonder scheidingsteken voor duizendtallen, bijvoorbeeld 50000 of 50,00.",
     "amountTooLow": "Het minimumbedrag is {min}.",
-    "amountTooHigh": "Het maximumbedrag is {max}."
+    "amountTooHigh": "Betalen met een kaart kan tot {max} per betaling. Betaal een hoger bedrag in meerdere betalingen of per bankoverschrijving."
   },
   "success": {
     "confirming": {

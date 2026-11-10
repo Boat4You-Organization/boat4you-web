@@ -17,7 +17,7 @@
     },
     "youWillPay": "Platit ćete {amount}",
     "pay": "Plati",
-    "securedBy": "Kartice · Apple Pay · Google Pay · Revolut Pay · sigurno plaćanje putem Revoluta"
+    "securedBy": "Kartice · Apple Pay · Google Pay · Pay by Bank · sigurno plaćanje putem Mollieja"
   },
   "errors": {
     "validation": "Provjerite unesene podatke i pokušajte ponovno.",
@@ -30,7 +30,7 @@
     "amountInvalid": "Unesite valjan iznos s najviše dvije decimale, npr. 1109,00.",
     "amountAmbiguous": "Unesite iznos bez razdjelnika tisućica, npr. 50000 ili 50,00.",
     "amountTooLow": "Najmanji iznos je {min}.",
-    "amountTooHigh": "Najveći iznos je {max}."
+    "amountTooHigh": "Kartično plaćanje moguće je do {max} po uplati. Veći iznos platite u više uplata ili bankovnim prijenosom."
   },
   "success": {
     "confirming": {

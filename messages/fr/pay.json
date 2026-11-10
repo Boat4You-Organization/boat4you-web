@@ -17,7 +17,7 @@
     },
     "youWillPay": "Vous allez payer {amount}",
     "pay": "Payer",
-    "securedBy": "Cartes · Apple Pay · Google Pay · Revolut Pay · paiement sécurisé par Revolut"
+    "securedBy": "Cartes · Apple Pay · Google Pay · Pay by Bank · paiement sécurisé par Mollie"
   },
   "errors": {
     "validation": "Veuillez vérifier les informations saisies et réessayer.",
@@ -30,7 +30,7 @@
     "amountInvalid": "Veuillez saisir un montant valide avec deux décimales au maximum, par exemple 1109,00.",
     "amountAmbiguous": "Veuillez saisir le montant sans séparateur de milliers, par exemple 50000 ou 50,00.",
     "amountTooLow": "Le montant minimum est de {min}.",
-    "amountTooHigh": "Le montant maximum est de {max}."
+    "amountTooHigh": "Le paiement par carte est possible jusqu'à {max} par paiement. Réglez un montant plus élevé en plusieurs paiements ou par virement bancaire."
   },
   "success": {
     "confirming": {
