@@ -465,6 +465,8 @@
   "dueNow": "Sofort fällig",
   "paymentByDate": "Zahlung bis {date}",
   "howWouldYouLikeToPay": "Wie möchten Sie bezahlen?",
+  "paymentBeingConfirmedTitle": "Wir bestätigen Ihre Zahlung",
+  "paymentBeingConfirmedText": "Das dauert in der Regel ein bis zwei Minuten. Sobald Ihre Zahlung bestätigt ist, senden wir Ihnen die Buchungsbestätigung per E-Mail. Falls die Zahlung nicht durchgegangen ist, können Sie in Ihrer Buchung erneut bezahlen.",
   "securePaymentByMollie": "Sichere Zahlung über Mollie",
   "cardLimitBankTransferOnly": "Kartenzahlungen sind bis {limit} pro Zahlung möglich. Bitte überweisen Sie diesen Betrag per Banküberweisung.",
   "todayYouPay": "Heute zahlen Sie {amount} ({percent}% des Gesamtpreises).",

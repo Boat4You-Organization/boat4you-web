@@ -465,6 +465,8 @@
   "dueNow": "À payer maintenant",
   "paymentByDate": "Paiement avant le {date}",
   "howWouldYouLikeToPay": "Comment souhaitez-vous payer ?",
+  "paymentBeingConfirmedTitle": "Nous confirmons votre paiement",
+  "paymentBeingConfirmedText": "Cela prend généralement une à deux minutes. Nous vous enverrons la confirmation de réservation par e-mail dès que votre paiement sera confirmé. Si le paiement n'a pas abouti, vous pouvez payer à nouveau depuis votre réservation.",
   "securePaymentByMollie": "Paiement sécurisé par Mollie",
   "cardLimitBankTransferOnly": "Le paiement par carte est possible jusqu'à {limit} par paiement. Merci de régler ce montant par virement bancaire.",
   "todayYouPay": "Aujourd'hui, vous payez {amount} ({percent}% du prix total).",

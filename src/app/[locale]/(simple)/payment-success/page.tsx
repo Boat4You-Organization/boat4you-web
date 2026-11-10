@@ -12,6 +12,7 @@ import Layout from '@/components/Layout';
 import LoadingSection from '@/components/LoadingSection';
 import ReservationOverview from '@/components/ReservationOverview';
 import Check from '@/components/SvgIcons/Check';
+import Information from '@/components/SvgIcons/Information';
 import { trackPurchase } from '@/lib/trackPurchase';
 import { ReservationDetails } from '@/models/reservation.model';
 import colors from '@/styles/themes/colors';
@@ -36,8 +37,9 @@ const STATUS_DELAYS_MS = [0, 2000, 3000, 5000];
 /**
  * The card provider (Mollie) sends the payer back here after the checkout — also when the card was declined or the
  * payer used the checkout's back link. `?paymentRef=` is our checkout token: ask the backend (which asks Mollie)
- * until the payment is paid or clearly not completed; PENDING after the last check is shown as success without the
- * purchase conversion. No paymentRef = the old Stripe success URL, which Stripe only used after a payment.
+ * until the payment is paid or clearly not completed. Still PENDING / UNKNOWN after the last check: a neutral "we are
+ * confirming your payment" page — never the booking-confirmed copy, never the purchase conversion. No paymentRef =
+ * the old Stripe success URL, which Stripe only used after a payment.
  */
 const askCardStatus = async (paymentRef: string): Promise<CardStatus> => {
   try {
@@ -84,6 +86,8 @@ const PaymentSuccessPage = () => {
   const [reservationId, setReservationId] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
+  // false = the card provider has not confirmed the payment yet (see cardStatus above).
+  const [paymentConfirmed, setPaymentConfirmed] = useState(true);
   // The success page can re-run its effect (or the customer can refresh it);
   // the purchase conversion must go out exactly once per reservation.
   const purchaseTracked = useRef(false);
@@ -118,6 +122,7 @@ const PaymentSuccessPage = () => {
         }
 
         paid = status === 'PAYMENT_SUCCESS';
+        setPaymentConfirmed(paid);
       }
 
       // Payment went through and the reservation exists → this is the sale.
@@ -267,9 +272,9 @@ const PaymentSuccessPage = () => {
   return (
     <Layout showFooter={false}>
       <ReservationOverview
-        title={t('yourBookingIsConfirmed')}
-        description={thankYouLine}
-        descriptionIcon={Check}
+        title={paymentConfirmed ? t('yourBookingIsConfirmed') : t('paymentBeingConfirmedTitle')}
+        description={paymentConfirmed ? thankYouLine : t('paymentBeingConfirmedText')}
+        descriptionIcon={paymentConfirmed ? Check : Information}
         reservationData={overviewData}
         // For guests the primary next step is setting a password (rendered as
         // the "Create your account" CTA below this card). We intentionally

@@ -506,6 +506,8 @@
   "dueNow": "Nu verschuldigd",
   "paymentByDate": "Betaling vóór {date}",
   "howWouldYouLikeToPay": "Hoe wil je betalen?",
+  "paymentBeingConfirmedTitle": "We bevestigen je betaling",
+  "paymentBeingConfirmedText": "Dit duurt meestal een à twee minuten. Zodra je betaling is bevestigd, sturen we je de boekingsbevestiging per e-mail. Is de betaling niet gelukt, dan kun je opnieuw betalen vanuit je boeking.",
   "securePaymentByMollie": "Veilig betalen via Mollie",
   "cardLimitBankTransferOnly": "Betalen met een kaart kan tot {limit} per betaling. Betaal dit bedrag alstublieft per bankoverschrijving.",
   "todayYouPay": "Vandaag betaal je {amount} ({percent}% van de totaalprijs).",

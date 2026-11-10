@@ -506,6 +506,8 @@
   "dueNow": "Należne teraz",
   "paymentByDate": "Płatność do {date}",
   "howWouldYouLikeToPay": "Jak chcesz zapłacić?",
+  "paymentBeingConfirmedTitle": "Potwierdzamy Twoją płatność",
+  "paymentBeingConfirmedText": "Zwykle trwa to minutę lub dwie. Potwierdzenie rezerwacji wyślemy e-mailem, gdy tylko płatność zostanie potwierdzona. Jeśli płatność się nie powiodła, możesz zapłacić ponownie w swojej rezerwacji.",
   "securePaymentByMollie": "Bezpieczna płatność przez Mollie",
   "cardLimitBankTransferOnly": "Płatność kartą jest możliwa do {limit} za jedną płatność. Prosimy zapłacić tę kwotę przelewem bankowym.",
   "todayYouPay": "Dzisiaj płacisz {amount} ({percent}% ceny całkowitej).",

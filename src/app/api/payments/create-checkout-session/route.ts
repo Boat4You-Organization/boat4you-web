@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 
 import { POST_REQUEST_PARAMETERS } from '@/config/constants.config';
 import { ErrorModel } from '@/models/error.model';
+import { clientIp } from '@/utils/server/clientIp';
 import { authFetch, hasAuthToken } from '@/utils/static/authFetch';
 
 interface CreateCheckoutSessionResponse {
@@ -47,7 +48,12 @@ export async function POST(request: NextRequest) {
     const hasAuth = await hasAuthToken();
     const securedUrl = `${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/secured/payments/card/create-checkout-session/${reservationId}?${params.toString()}`;
     const publicUrl = `${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/payments/card/create-checkout-session/${reservationId}?${params.toString()}`;
-    const requestInit = { ...POST_REQUEST_PARAMETERS };
+    // The visitor's IP: the backend rate-limits guest card checkouts per client IP.
+    const ip = await clientIp();
+    const requestInit = {
+      ...POST_REQUEST_PARAMETERS,
+      headers: { ...POST_REQUEST_PARAMETERS.headers, ...(ip ? { 'X-Forwarded-For': ip } : {}) },
+    };
 
     let response = hasAuth ? await authFetch(securedUrl, requestInit) : await fetch(publicUrl, requestInit);
 

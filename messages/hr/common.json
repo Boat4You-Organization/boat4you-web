@@ -470,6 +470,8 @@
   "dueNow": "Plaćanje sada",
   "paymentByDate": "Plaćanje do {date}",
   "howWouldYouLikeToPay": "Kako želite platiti?",
+  "paymentBeingConfirmedTitle": "Potvrđujemo vašu uplatu",
+  "paymentBeingConfirmedText": "Obično traje minutu ili dvije. Potvrdu rezervacije poslat ćemo vam e-mailom čim uplata bude potvrđena. Ako uplata nije prošla, možete ponovno platiti iz svoje rezervacije.",
   "securePaymentByMollie": "Sigurno plaćanje putem Mollieja",
   "cardLimitBankTransferOnly": "Kartično plaćanje moguće je do {limit} po uplati. Molimo uplatite ovaj iznos bankovnim prijenosom.",
   "todayYouPay": "Danas plaćate {amount} ({percent}% ukupne cijene).",

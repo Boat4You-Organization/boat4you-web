@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 
 import { POST_REQUEST_PARAMETERS } from '@/config/constants.config';
+import { clientIp } from '@/utils/server/clientIp';
 
 /** Our checkout token (`?paymentRef=` of the success page) — anything else never reaches the backend. */
 const PAYMENT_REF = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
@@ -18,9 +19,15 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ status: 'UNKNOWN' }, { status: 400 });
     }
 
+    const ip = await clientIp();
     const response = await fetch(
       `${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/payments/card/checkPaymentStatus/${paymentRef}`,
-      { ...POST_REQUEST_PARAMETERS, cache: 'no-store', signal: AbortSignal.timeout(8000) }
+      {
+        ...POST_REQUEST_PARAMETERS,
+        headers: { ...POST_REQUEST_PARAMETERS.headers, ...(ip ? { 'X-Forwarded-For': ip } : {}) },
+        cache: 'no-store',
+        signal: AbortSignal.timeout(8000),
+      }
     );
 
     if (!response.ok) return NextResponse.json({ status: 'UNKNOWN' });
