@@ -427,7 +427,7 @@ information with certain trusted parties in the following situations:
   address, and transaction amount) in order to process the payment. They
   are authorized to use this information only as needed to provide their
   payment services. We ensure any payment processor we use is compliant
-  with PCI-DSS security standards.
+  with PCI-DSS security standards. Card payments (including Apple Pay and Google Pay) are processed by **Mollie B.V.**, Keizersgracht 126, 1015 CW Amsterdam, the Netherlands, a payment institution licensed by De Nederlandsche Bank. You enter your card details on Mollie's secure payment page; they never reach our servers.
 - **Technical and Administrative Service Providers:** We employ other
   companies or individuals to perform functions on our behalf. Examples
   include website hosting providers, cloud data storage (servers), IT
@@ -799,7 +799,7 @@ legal obligations and the legitimate interests of running a charter agency:
   to satisfy accounting and partner-agency reconciliation obligations. After
   account deletion these records remain in our system, but they are no
   longer linked to your identity.
-- **Payment metadata** (Stripe payment intent IDs, bank transfer references):
+- **Payment metadata** (card payment IDs from Mollie, bank transfer references):
   kept for **7 years** alongside the booking, as required by financial law.
 - **Authentication artefacts** (JWT tokens, refresh tokens, password reset
   codes): purged immediately when you delete your account, when you log out,

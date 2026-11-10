@@ -463,7 +463,7 @@ informazioni con determinate parti fidate nelle seguenti situazioni:
   utilizzare queste informazioni solo se necessario per fornire i loro
   servizi di pagamento. Ci assicuriamo che qualsiasi processore di
   pagamento che utilizziamo sia conforme agli standard di sicurezza
-  PCI-DSS.
+  PCI-DSS. I pagamenti con carta (inclusi Apple Pay e Google Pay) sono elaborati da **Mollie B.V.**, Keizersgracht 126, 1015 CW Amsterdam, Paesi Bassi, istituto di pagamento autorizzato da De Nederlandsche Bank. I dati della carta si inseriscono sulla pagina di pagamento sicura di Mollie e non arrivano mai ai nostri server.
 - **Fornitori di Servizi Tecnici e Amministrativi:** Ci avvaliamo di altre
   aziende o individui per svolgere funzioni per nostro conto. Gli esempi
   includono fornitori di _hosting_ di siti web, archiviazione dati _cloud_

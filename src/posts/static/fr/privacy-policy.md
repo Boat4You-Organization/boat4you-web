@@ -523,7 +523,7 @@ parties de confiance dans les situations suivantes :
   traiter le paiement. Ils sont autorisés à utiliser ces informations
   uniquement si nécessaire pour fournir leurs services de paiement. Nous
   nous assurons que tout processeur de paiement que nous utilisons est
-  conforme aux normes de sécurité PCI-DSS.
+  conforme aux normes de sécurité PCI-DSS. Les paiements par carte (y compris Apple Pay et Google Pay) sont traités par **Mollie B.V.**, Keizersgracht 126, 1015 CW Amsterdam, Pays-Bas, établissement de paiement agréé par De Nederlandsche Bank. Vous saisissez vos données de carte sur la page de paiement sécurisée de Mollie ; elles ne parviennent jamais à nos serveurs.
 - **Prestataires de Services Techniques et Administratifs :** Nous
   employons d'autres sociétés ou individus pour exécuter des fonctions en
   notre nom. Les exemples incluent les fournisseurs d'hébergement de
