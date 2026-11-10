@@ -2,26 +2,39 @@
 
 import { useState } from 'react';
 
-import { Box, Button, Stack, Typography } from '@mui/material';
+import { Box, Button, Typography } from '@mui/material';
 import cx from 'clsx';
 import { useTranslations } from 'next-intl';
-import Image from 'next/image';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 import ModalRoot from '@/components/ModalRoot';
-import Settings from '@/components/SvgIcons/Settings';
 import { setCookieConsent } from '@/lib/cookie-consent';
-import colors from '@/styles/themes/colors';
 import { CookieSettings, CookieSettingsConfigArray } from '@/types/cookie.type';
 import useToggleState from '@/utils/hooks/useToggleState';
 
 import styles from './CookieConset.module.scss';
 import CookieModalContent from './CookieModalContent';
 
+/**
+ * The pages the notice links to (privacy policy, terms): there the notice sits at the bottom without the veil, so the
+ * visitor can read what they are asked to agree to.
+ */
+const READABLE_PATH = /^(?:\/[a-z]{2})?\/(?:privacy-policy|terms-and-conditions|press\/privacy)(?:\/|$)/;
+
+const renderPrivacyLink = (chunks: React.ReactNode) => (
+  <Link href="/privacy-policy" target="_blank" className={styles.link}>
+    {chunks}
+  </Link>
+);
+
 interface CookieConsentProps {
   showConsent: boolean;
+  /** Server HTML / first render: shown unless <html data-cc-consent> (CookieConsentController). */
+  beforeHydration?: boolean;
 }
 
-const CookieConsent = ({ showConsent }: CookieConsentProps) => {
+const CookieConsent = ({ showConsent, beforeHydration = false }: CookieConsentProps) => {
   const [settings, setSettings] = useState<CookieSettings>({
     essential: true,
     analytics: false,
@@ -30,6 +43,7 @@ const CookieConsent = ({ showConsent }: CookieConsentProps) => {
   const [showSettings, toggleShowSettings] = useToggleState();
   const [isProcessing, setIsProcessing] = useState(false);
   const t = useTranslations('cookieConsent');
+  const docked = READABLE_PATH.test(usePathname() ?? '');
 
   const handleAcceptAll = () => {
     setIsProcessing(true);
@@ -62,14 +76,6 @@ const CookieConsent = ({ showConsent }: CookieConsentProps) => {
       consentGiven: true,
     });
     setIsProcessing(false);
-  };
-
-  const handleManageOrSave = () => {
-    if (showSettings) {
-      handleSave();
-    } else {
-      toggleShowSettings();
-    }
   };
 
   const handleToggle = (settingKey: keyof CookieSettings) => (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -110,48 +116,61 @@ const CookieConsent = ({ showConsent }: CookieConsentProps) => {
 
   return (
     <>
+      {/* The consent notice (Mario 10.11.2026, "kao index.hr i dnevnik.hr"): a dialog in the middle of the page over a
+          pale veil, the purposes listed, "Learn more" (the settings dialog, with "Accept only necessary") and "Accept
+          and close". It steps aside while the settings dialog is open. */}
       <Box
-        className={cx(styles.container, { [styles.visible]: showConsent })}
+        className={cx(styles.container, {
+          [styles.visible]: showConsent && !showSettings,
+          [styles.beforeHydration]: beforeHydration,
+          [styles.docked]: docked,
+        })}
         // The boat page's exit popup waits while the banner is up (lib/exitIntent.ts).
         data-cookie-consent-open={showConsent || undefined}
+        // Never quoted in a search result snippet: the notice is in the HTML of every page.
+        data-nosnippet=""
       >
-        <Image
-          // 386 x 260, twice the 193 x 130 box (15 KB). The 1214 x 817 original (83 KB) was sent as it is: the
-          // image loader resizes only yacht photos (utils/static/bunnyImageLoader.js), `quality` does nothing
-          // for a file from public/. Low fetch priority so the banner art never competes with the page's
-          // largest paint. A changed drawing gets a new file name: /images is cached for a day.
-          src="/images/cookies-386.webp"
-          // Decorative, beside the banner's own title (it read "cookies" on every locale).
-          alt=""
-          width={193}
-          height={130}
-          className={styles.image}
-          fetchPriority="low"
-        />
-        <Typography component="p" variant="h3" fontWeight={800} fontStyle="italic" color={colors.blue500}>
-          {t('title')}
-        </Typography>
-        <Typography variant="body1" color={colors.black500} className={styles.text}>
-          {t('description')}
-        </Typography>
-        <Stack direction="column" mt={4} gap={1.5} width="100%">
-          <Button size="large" onClick={handleAcceptAll} disabled={isProcessing} fullWidth>
-            {t('buttons.accept')}
-          </Button>
-          <Button size="large" color="secondary" onClick={handleRejectAll} disabled={isProcessing} fullWidth>
-            {t('buttons.reject')}
-          </Button>
-          <Button
-            size="large"
-            variant="outlinedSecondary"
-            onClick={handleManageOrSave}
-            disabled={isProcessing}
-            fullWidth
-            startIcon={<Settings size={20} />}
-          >
-            {t('buttons.manage')}
-          </Button>
-        </Stack>
+        <div
+          className={styles.notice}
+          role="dialog"
+          aria-modal={!docked}
+          aria-labelledby="cc-consent-title"
+          aria-describedby="cc-consent-text"
+        >
+          <Typography id="cc-consent-title" component="p" className={styles.title}>
+            {t('notice.title')}
+          </Typography>
+          <Typography variant="body2" className={styles.text}>
+            {t.rich('notice.policy', { link: renderPrivacyLink })}
+          </Typography>
+          <Typography id="cc-consent-text" variant="body2" className={styles.text}>
+            {t('notice.text')}
+          </Typography>
+          <Typography component="p" className={styles.purposesTitle}>
+            {t('notice.purposesTitle')}
+          </Typography>
+          <Typography component="p" className={styles.purposes}>
+            {t('notice.purposes')}
+          </Typography>
+          <div className={styles.actions}>
+            <Button
+              variant="outlined"
+              className={cx(styles.button, styles.learnMore)}
+              onClick={toggleShowSettings}
+              disabled={isProcessing}
+            >
+              {t('notice.learnMore')}
+            </Button>
+            <Button
+              variant="contained"
+              className={cx(styles.button, styles.accept)}
+              onClick={handleAcceptAll}
+              disabled={isProcessing}
+            >
+              {t('notice.accept')}
+            </Button>
+          </div>
+        </div>
       </Box>
       <ModalRoot
         open={showSettings}

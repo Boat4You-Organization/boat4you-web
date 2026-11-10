@@ -1,6 +1,13 @@
 {
-  "title": "Cookies",
-  "description": "Usamos cookies para tornar a sua experiência ainda melhor!",
+  "notice": {
+    "title": "A sua privacidade",
+    "policy": "Saiba mais sobre a forma como protegemos os seus dados pessoais e utilizamos cookies na nossa <link>Política de Privacidade</link>.",
+    "text": "Com o seu consentimento, nós e a Google utilizamos cookies e tecnologias semelhantes para armazenar e aceder a informações no seu dispositivo e para tratar dados pessoais, como a sua visita a este site, o seu endereço IP e identificadores de cookies. Pode retirar o seu consentimento a qualquer momento em «Saber mais» ou através de «Definições de Cookies», no fundo de cada página.",
+    "purposesTitle": "Nós e a Google tratamos dados para:",
+    "purposes": "Análise do site e estatísticas de visitas, Gravações de visitas para melhorar o site, Medição de anúncios e remarketing, Armazenamento e acesso a informações no seu dispositivo",
+    "learnMore": "Saber mais →",
+    "accept": "Aceitar e fechar"
+  },
   "mainTitle": "Política de Cookies",
   "mainDescription": "Utilizamos cookies para melhorar a sua experiência na plataforma Boat4You, analisar como utiliza o nosso website e melhorar o nosso sistema de reserva de barcos. Estes cookies ajudam-nos a fornecer conteúdo personalizado e garantir que a nossa plataforma funciona de forma ideal para as suas necessidades de reserva. Recolhemos cookies essenciais para a funcionalidade da plataforma, dados analíticos para melhorar a experiência do utilizador e preferências para personalizar o seu painel. Saiba mais na nossa <link>Política de Privacidade</link>.",
   "buttons": {

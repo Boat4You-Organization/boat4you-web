@@ -2,37 +2,146 @@
 @use '@/styles/utils/rem-calc' as *;
 @use '@/styles/mixins/breakpoints' as *;
 
+// The consent notice (Mario 10.11.2026, as on index.hr and dnevnik.hr): a pale veil over the whole page and the
+// notice in its middle, so that the visitor answers it instead of scrolling past a corner card.
+.notice {
+  width: 100%;
+  max-width: rem-calc(600);
+  max-height: calc(100dvh - #{rem-calc(32)});
+  overflow-y: auto;
+  padding: rem-calc(32) rem-calc(28) rem-calc(28);
+  background-color: $white;
+  border: 1px solid $blue-500;
+  border-radius: rem-calc(8);
+  box-shadow: rem-calc(0 8 40 0) rgb(0 0 0 / 12%);
+
+  @include media(0, 'md') {
+    padding: rem-calc(20) rem-calc(16) rem-calc(16);
+  }
+}
+
 .container {
   position: fixed;
-  bottom: rem-calc(24);
-  right: rem-calc(24);
+  inset: 0;
   z-index: 1300;
-  background-color: $white;
-  box-shadow: rem-calc(0 0 74 0) rgb(0 0 0 / 10%);
-  border-radius: rem-calc(16);
-  padding: rem-calc(16);
   display: none;
-  flex-direction: column;
   align-items: center;
-
-  .text {
-    max-width: rem-calc(273);
-    text-align: center;
-
-    @include media(0, 'md') {
-      max-width: 100%;
-    }
-  }
+  justify-content: center;
+  padding: rem-calc(16);
+  background-color: rgb(255 255 255 / 72%);
 
   &.visible {
     display: flex;
   }
 
+  // Server HTML / first render (CookieConsentController): on screen from the first paint, unless the layout's
+  // cc-consent-flag script found a valid consent.
+  &.beforeHydration {
+    display: flex;
+
+    :global(html[data-cc-consent]) & {
+      display: none;
+    }
+  }
+
+  // Privacy policy, terms: no veil, the notice at the bottom, the page readable and usable.
+  &.docked {
+    inset: auto 0 0;
+    align-items: flex-end;
+    background-color: transparent;
+    pointer-events: none;
+
+    .notice {
+      max-height: 50dvh;
+      pointer-events: auto;
+      box-shadow: rem-calc(0 0 74 0) rgb(0 0 0 / 15%);
+    }
+  }
+}
+
+// Nested under .notice (two classes): above MUI Typography's own font size and colour.
+.notice .title {
+  margin-bottom: rem-calc(12);
+  font-size: rem-calc(28);
+  font-style: italic;
+  font-weight: 800;
+  line-height: 1.2;
+  color: $blue-500;
+}
+
+.notice .text {
+  margin-bottom: rem-calc(12);
+  color: $black-700;
+  line-height: 1.55;
+}
+
+.notice .link {
+  color: $blue-500;
+  text-decoration: underline;
+}
+
+.notice .purposesTitle {
+  margin-top: rem-calc(4);
+  font-size: rem-calc(14);
+  font-weight: 700;
+  color: $black-950;
+}
+
+.notice .purposes {
+  font-size: rem-calc(14);
+  font-weight: 600;
+  line-height: 1.5;
+  color: $blue-900;
+}
+
+// The two buttons as on index.hr and dnevnik.hr (Mario 10.11.2026): side by side, the same size, square corners,
+// bold text; "Learn more" light grey, "Accept and close" filled in the site's colour.
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: rem-calc(10);
+  justify-content: center;
+  margin-top: rem-calc(28);
+}
+
+// Doubled classes: above the MUI theme's own button styles.
+.button.button {
+  flex: 0 1 rem-calc(200);
+  min-width: rem-calc(150);
+  min-height: rem-calc(40);
+  padding: rem-calc(8) rem-calc(16);
+  border-radius: 0;
+  box-shadow: none;
+  font-size: rem-calc(16);
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: none;
+
+  // Phone: still side by side, sharing the width (a long label wraps inside its button).
   @include media(0, 'md') {
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: $white;
-    border-radius: rem-calc(16) rem-calc(16) 0 0;
+    flex: 1 1 0;
+    min-width: 0;
+  }
+}
+
+.learnMore.learnMore {
+  color: $black-950;
+  background-color: $black-100;
+  border: 1px solid $black-300;
+
+  &:hover {
+    background-color: $black-200;
+    border-color: $black-400;
+  }
+}
+
+.accept.accept {
+  color: $white;
+  background-color: $blue-500;
+  border: 1px solid $blue-500;
+
+  &:hover {
+    background-color: $blue-600;
+    border-color: $blue-600;
   }
 }

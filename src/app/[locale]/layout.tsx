@@ -18,7 +18,7 @@ import { meta } from '@/config/meta';
 import { siteClientMessages } from '@/i18n/clientMessages';
 import { routing } from '@/i18n/routing';
 import '@/styles/index.scss';
-import { CONSENT_VERSION } from '@/types/cookie-consent.type';
+import { CONSENT_COOKIE_NAME, CONSENT_DURATION, CONSENT_VERSION } from '@/types/cookie-consent.type';
 import { getSiteStatsWithin } from '@/utils/server/siteStats';
 import { buildAlternateLanguages, getLocalizedJsonLd, localizedUrl } from '@/utils/static/buildMetadata';
 
@@ -165,6 +165,15 @@ const RootLayout = async ({ children, params }: RootLayoutProps) => {
           strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}var a='denied',m='denied';try{var c=document.cookie.match(/(?:^|; )boat4you_cookie_consent=([^;]*)/);if(c){var o=JSON.parse(decodeURIComponent(c[1]));if(o&&o.consentGiven&&o.version===${JSON.stringify(CONSENT_VERSION)}){if(o.analytics)a='granted';if(o.marketing)m='granted';}}}catch(e){}gtag('consent','default',{analytics_storage:a,ad_storage:m,ad_user_data:m,ad_personalization:m,functionality_storage:'granted',security_storage:'granted'});${LINKER_SET_SNIPPET}`,
+          }}
+        />
+        {/* <html data-cc-consent> for a visitor with a valid consent (the same test as hasValidConsent), before the
+            first paint: the consent notice is in the server HTML and CSS hides it under this attribute
+            (CookieConset.module.scss, .beforeHydration), so a returning visitor never sees it flash. */}
+        <script
+          id="cc-consent-flag"
+          dangerouslySetInnerHTML={{
+            __html: `try{var c=document.cookie.match(/(?:^|; )${CONSENT_COOKIE_NAME}=([^;]*)/);if(c){var o=JSON.parse(decodeURIComponent(c[1]));if(o&&typeof o.essential==='boolean'&&typeof o.analytics==='boolean'&&typeof o.marketing==='boolean'&&o.consentGiven===true&&o.version===${JSON.stringify(CONSENT_VERSION)}&&typeof o.timestamp==='number'&&Date.now()-o.timestamp<=${CONSENT_DURATION})document.documentElement.setAttribute('data-cc-consent','')}}catch(e){}`,
           }}
         />
         {/* Pre-resolve DNS + TLS to the two hosts every page fetches from

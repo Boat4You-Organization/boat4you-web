@@ -1,6 +1,13 @@
 {
-  "title": "Kolačići",
-  "description": "Koristimo kolačiće kako bismo poboljšali vaše iskustvo!",
+  "notice": {
+    "title": "Vaša privatnost",
+    "policy": "Više o tome kako štitimo vaše osobne podatke i koristimo kolačiće pročitajte u našim <link>Pravilima privatnosti</link>.",
+    "text": "Uz vaš pristanak, mi i Google koristimo kolačiće i slične tehnologije za pohranu i pristup podacima na vašem uređaju te za obradu osobnih podataka kao što su vaš posjet ovoj web stranici, vaša IP adresa i identifikatori kolačića. Pristanak možete povući u bilo kojem trenutku putem „Saznajte više“ ili „Postavke kolačića“ na dnu svake stranice.",
+    "purposesTitle": "Mi i Google obrađujemo podatke za:",
+    "purposes": "Analitiku web stranice i statistiku posjeta, Snimke posjeta radi poboljšanja stranice, Mjerenje oglasa i remarketing, Pohranu i/ili pristup podacima na uređaju",
+    "learnMore": "Saznajte više →",
+    "accept": "Prihvati i zatvori"
+  },
   "mainTitle": "Pravila o kolačićima",
   "mainDescription": "Koristimo kolačiće kako bismo poboljšali vaše iskustvo na Boat4You platformi, analizirali korištenje naše web stranice i unaprijedili naš sustav za rezervaciju brodova. Ovi kolačići nam pomažu u pružanju personaliziranog sadržaja i osiguravaju da naša platforma radi optimalno za vaše potrebe. Prikupljamo nužne kolačiće za funkcionalnost platforme, analitičke podatke za poboljšanje korisničkog iskustva, te postavke za personalizaciju vašeg prikaza. Saznajte više o našoj <link>Politici privatnosti</link>.",
   "buttons": {

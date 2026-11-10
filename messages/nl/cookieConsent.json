@@ -1,6 +1,13 @@
 {
-  "title": "Cookies",
-  "description": "We gebruiken cookies om je ervaring nog beter te maken!",
+  "notice": {
+    "title": "Jouw privacy",
+    "policy": "Lees in ons <link>Privacybeleid</link> meer over hoe we je persoonsgegevens beschermen en cookies gebruiken.",
+    "text": "Met jouw toestemming gebruiken wij en Google cookies en vergelijkbare technologieën om informatie op je apparaat op te slaan en te lezen en om persoonsgegevens te verwerken, zoals je bezoek aan deze website, je IP-adres en cookie-ID’s. Je kunt je toestemming op elk moment intrekken via ‘Meer informatie’ of via ‘Cookie-instellingen’ onderaan elke pagina.",
+    "purposesTitle": "Wij en Google verwerken gegevens voor:",
+    "purposes": "Websiteanalyse en bezoekstatistieken, Opnames van bezoeken om de website te verbeteren, Advertentiemeting en remarketing, Opslaan van en toegang tot informatie op je apparaat",
+    "learnMore": "Meer informatie →",
+    "accept": "Accepteren en sluiten"
+  },
   "mainTitle": "Cookiebeleid",
   "mainDescription": "We gebruiken cookies om je ervaring op het Boat4You-platform te verbeteren, te analyseren hoe je onze website gebruikt en ons boekingssysteem voor boten te verbeteren. Deze cookies helpen ons gepersonaliseerde inhoud te leveren en zorgen ervoor dat ons platform optimaal werkt voor jouw boekingsbehoeften. We verzamelen essentiële cookies voor de werking van het platform, analytische gegevens om de gebruikerservaring te verbeteren en voorkeuren om je dashboard te personaliseren. Lees meer in ons <link>Privacybeleid</link>.",
   "buttons": {

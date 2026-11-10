@@ -37,7 +37,10 @@ const CookieConsentController = () => {
     };
   }, []);
 
-  if (!isLoaded) return null;
+  // Server HTML and the first client render: the notice is there from the first paint (appearing only after
+  // hydration, seconds later on a phone, it would become the page's LCP element); a visitor who has already chosen
+  // does not see it, through the layout's cc-consent-flag script and CSS (CookieConset.module.scss, .beforeHydration).
+  if (!isLoaded) return <CookieConsent showConsent={false} beforeHydration />;
 
   return <CookieConsent showConsent={showConsent} />;
 };

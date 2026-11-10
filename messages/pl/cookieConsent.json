@@ -1,6 +1,13 @@
 {
-  "title": "Pliki cookie",
-  "description": "Używamy plików cookie, aby poprawić Twoje doświadczenie!",
+  "notice": {
+    "title": "Twoja prywatność",
+    "policy": "Więcej o tym, jak chronimy Twoje dane osobowe i używamy plików cookie, przeczytasz w naszej <link>Polityce prywatności</link>.",
+    "text": "Za Twoją zgodą my i Google używamy plików cookie i podobnych technologii do przechowywania informacji na Twoim urządzeniu i uzyskiwania do nich dostępu oraz do przetwarzania danych osobowych, takich jak Twoja wizyta na tej stronie, adres IP i identyfikatory plików cookie. Zgodę możesz w każdej chwili wycofać w „Dowiedz się więcej” lub przez „Ustawienia plików cookie” na dole każdej strony.",
+    "purposesTitle": "My i Google przetwarzamy dane w celu:",
+    "purposes": "Analityki strony i statystyk odwiedzin, Nagrań wizyt w celu ulepszenia strony, Pomiaru reklam i remarketingu, Przechowywania informacji na urządzeniu i uzyskiwania do nich dostępu",
+    "learnMore": "Dowiedz się więcej →",
+    "accept": "Zaakceptuj i zamknij"
+  },
   "mainTitle": "Polityka plików cookie",
   "mainDescription": "Używamy plików cookie, aby poprawić Twoje doświadczenie na platformie Boat4You, analizować sposób korzystania z naszej witryny i ulepszać nasz system rezerwacji łodzi. Te pliki cookie pomagają nam dostarczać spersonalizowane treści i zapewniają optymalne działanie naszej platformy. Zbieramy niezbędne pliki cookie do funkcjonowania platformy, dane analityczne w celu poprawy doświadczenia użytkownika oraz preferencje do personalizacji Twojego pulpitu. Dowiedz się więcej w naszej <link>Polityce prywatności</link>.",
   "buttons": {
