@@ -2,7 +2,7 @@
 
 ## 2026-11-10 — 💳 Footer: Klarna logo u redu plaćanja — ✅ LIVE 10.11.2026 ~18:58 UTC (`1df16dab0`, deployment id 1df16dab09e7-mwb1w85t, tag `live/2026-11-10-footer-klarna`)
 
-**Što (Mario 10.11.: „amex je ukljucen, potvrdjeno, karmu stavi“, zatim „ja san tia da stavis karma logo u futter od boat4you prvo, pa ce mo poslje drugo radit“):** Mollieva ikona Klarne (`public/images/payments/klarna-payment-method.svg`, 32×24) iza Google Paya u `footerPaymentMethods`. Mario je svjesno odlučio prikazati Klarnu prije nego što je checkout nudi; Klarna plaćanje je na grani `feat/mollie-klarna` (Mollie sesija) i čeka njegovo „da“. Sisteri nisu dirani.
+**Što (Mario 10.11.: „amex je ukljucen, potvrdjeno, karmu stavi“, zatim „ja san tia da stavis karma logo u futter od boat4you prvo, pa ce mo poslje drugo radit“):** Mollieva ikona Klarne (`public/images/payments/klarna-payment-method.svg`, 32×24) iza Google Paya u `footerPaymentMethods`. Mario je svjesno odlučio prikazati Klarnu prije nego što je checkout nudi; Klarna je od 20:07 UTC uživo i na plaćanju (booking + `/pay`, web `1396bc092`, backend `e20302a4`; adrese naplate u 12 država eurozone), pa logo sad odgovara checkoutu. Sisteri nisu dirani.
 
 - **Prije deploya:** živi `dpl` `b0fe63e8d` i Mollie `1e565dcff` su preci HEAD-a; commit pushan na origin/main prije deploya; Mollie sesija potvrdila da tada ne deploya b4y web.
 - **Provjera LIVE:** SVG 200 `image/svg+xml`; Klarna u footeru na svih 9 jezika s istim `dpl`; `/api/payments/card-status` i `create-checkout-session` 405 (rute postoje); `/pay/<pravi ključ>` 200 i `/de/pay` 200, krivi ključ 404, backend config 200 (Mollie sesija, 19:05 UTC); SEO Stage B 0 novih FAIL.
