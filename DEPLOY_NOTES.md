@@ -1,5 +1,23 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-11-10 — 🦶 Footer prema dizajnu „Footer 1a“ — ⏳ NIJE DEPLOYANO (grana `feat/footer-design-1a`: `cd385b3b2` redizajn, `ad7ca60f3` bez natpisa Storyset, zatim razmak na stranici broda i ova bilješka)
+
+**Što (Mario 10.11.: „footer napravi prema dizajnu“, „pazi na linkove“, „makni Illustrations by Storyset“):** footer prema Claude Design izvozu `Boat4You Footer 1a (standalone).html`. Redom: traka povjerenja (TripAdvisor 4,9 / 5 i četiri obećanja), stupac brenda (logo, rečenica brenda, društvene mreže kao tekstualni linkovi), stupci Explore / Company / Legal (Legal nosi i gumb „Postavke kolačića“), red „Our network“, tamna traka s podacima tvrtke i zaslugama te veliki natpis „boat4you“ na dnu.
+
+- **Linkovi:** isti skup kao na live footeru (25 linkova i gumb za kolačiće) na svih 9 jezika, uspoređeno s www.boat4you.com. Lokalno svih 90 internih URL-ova (10 ruta × 9 jezika) vraća 200. Sestrinski sajtovi i dalje imaju `nofollow` (NETWORK_REL), a `rel`/`target` su isti kao live. `socials.config.ts` i `sameAs` nisu mijenjani.
+- **Tekst:** postojeći prijevodi. Novi su samo `footer.explore.title` i „Our network“ (`footer.network.title`) na 9 jezika; četiri oznake iz Explore preseljene iz `footer.company` u `footer.explore`.
+- **Tipografija:** veličine na skali (15 → 16, 13 → 12), font sajta (Raleway) umjesto Schibsted Groteska iz dizajna. Veliki natpis je SVG s putanjom iz loga (`LogoWordmark`), pa nema veličine fonta izvan skale.
+- **Raspored:** desktop kao u dizajnu (brend i 3 stupca u redu). Tablet: brend u svom redu, ispod 3 stupca. Mobitel: Explore i Company jedan do drugog, Legal ispod. Širina sadržaja jednaka je headeru (1280).
+- **Nema ga više (nije u dizajnu):** slogan „Endless blue / Boat4you“, zvjezdice uz TripAdvisor, ikone društvenih mreža (sada tekst), „All rights reserved.“, „Made with ♥ by AdriaPixel“ (sada „Made by AdriaPixel“) i okvir oko linka „preferred source“ (sada običan link).
+- **Obrisane neiskorištene komponente:** BusinessCard, FooterBottomBar, FooterMenuItem, TripAdvisorRating.
+- **Stranica broda na mobitelu:** razmak od 183 px ispod footera (mjesto za donju traku rezervacije, `Layout.tsx`) je u tamnoj boji footera, da ispod tamnog dna ne ostane bijela traka dok se donja traka ne pojavi.
+
+**Akcije pred deploy:**
+
+- [ ] **Storyset, odluka čeka Marija:** likovi promo bannera (`public/promo`, svih 11 kampanja) nastali su u Higgsfieldu iz Storyset lika „A day off“ (rujanski je taj lik animiran, ostali su generirani s njim kao referencom). Besplatna licenca traži natpis. Bez natpisa treba premium licenca (Freepik/Storyset) ili novi likovi. Ako Mario ne želi ni jedno ni drugo, deploya se samo `cd385b3b2`, a `ad7ca60f3` se revertira.
+- [ ] Jedan neovisni pregled (agent) i Mariovo „da“ prije deploya.
+- [ ] Nakon deploya: footer na `/` i `/hr` (marker „Our network“ / „Naša mreža“), provjeriti 200 za sve linkove iz footera.
+
 ## 2026-11-10 — 🍪 Pristanak za kolačiće: prozor na sredini (kao index.hr / dnevnik.hr) — ✅ LIVE 10.11.2026 06:54 UTC (`16b1b9bb6` + `8f0a14797`, deployment id 8f0a14797a1d-mwabt55q, tag `live/2026-11-10-consent-notice`)
 
 **Što (Mario 9.–10.11.: u adminu puno manje posjeta nego u Analyticsu jer statistika broji samo pristanak za analitiku; „napravi kao oni“ za index.hr i dnevnik.hr, „stavi kao index i dnevnik botune“):** mala kartica u kutu zamijenjena je prozorom na sredini stranice preko blijedog vela: naslov „Vaša privatnost“, link na politiku privatnosti, tko obrađuje (mi i Google) i u koje svrhe, te dva jednaka četvrtasta gumba „Saznajte više →“ (sivi, otvara postojeće postavke s „Prihvati samo nužne“) i „Prihvati i zatvori“ (plavi). Odluka bez gumba za odbijanje na prvom ekranu je Mariova (rizik objašnjen 9.11.).

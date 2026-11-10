@@ -16,7 +16,8 @@ const Layout = ({ isBoat = false, children, showFooter = true }: LayoutProps) =>
   <>
     <main className={cx(styles.main, { [styles.showFooter]: !showFooter })}>{children}</main>
     {showFooter && <Footer />}
-    {isBoat && <Box sx={{ height: { xs: '183px', sm: '0px' } }} />}
+    {/* Room for the boat page's fixed booking bar on phones, in the footer's navy (Footer.module.scss $ink). */}
+    {isBoat && <Box sx={{ height: { xs: '183px', sm: '0px' }, bgcolor: '#0a2540' }} />}
   </>
 );
 
