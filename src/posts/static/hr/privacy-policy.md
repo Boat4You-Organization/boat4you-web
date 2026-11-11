@@ -63,6 +63,18 @@ Ove podatke čuvamo na vlastitim poslužiteljima u EU: preglede stranica i kliko
 
 Uz isti pristanak za analitiku možemo snimati i vaše posjete: kako stranica izgleda i kako se mijenja dok listate, klikate i prelazite na druge stranice, kako bismo vidjeli gdje je naša web-stranica teška za korištenje i to popravili. Ono što upisujete u obrasce i u chat te vaše ime, e-mail i telefon prikazani na stranici skrivaju se već u vašem pregledniku, prije nego što se išta pošalje, a stranice plaćanja, korisničkog računa i recenzija nikad se ne snimaju. Snimke idu samo na naše vlastite poslužitelje u EU, ne dijelimo ih ni s jednom drugom tvrtkom i može ih pregledavati samo naš tim. Snimke brišemo nakon 60 dana, a podatke o klikovima i listanju izvučene iz njih nakon 13 mjeseci, kao i ostalu statistiku posjeta. Pravna osnova je vaš pristanak (čl. 6. st. 1. t. (a) GDPR-a); možete ga povući bilo kada u Postavkama kolačića, i snimanje tada odmah prestaje.
 
+## Telefonski pozivi Nike, naše AI asistentice
+
+Ako na obrascu za upit označite da pristajete na poziv, Nika, AI asistentica Boat4You grupe, može vas nazvati u vezi tog upita: ubrzo nakon slanja, da potvrdi detalje, i još jednom nakon što vam pošaljemo ponudu. Nika je umjetna inteligencija; to kaže na početku svakog poziva, kao i da se poziv snima. Bez vaše privole takve pozive ne upućujemo, a na upit odgovaramo jednako.
+
+Pozivi se snimaju i zapisuju kako bi naš tim pripremio ponudu i provjerio kvalitetu usluge. Ako Niki kažete da ne želite snimanje, poziv završava, snimka se briše, a nazvat će vas član našeg tima. Ako kažete da vas više ne zovemo, vaš broj označavamo i Nika ga više ne zove.
+
+Za ove pozive koristimo dva izvršitelja obrade: ElevenLabs (glasovna AI: prepoznavanje govora, glas asistentice i razgovor) i Twilio (telefonska veza). Oni primaju vaš broj telefona, ime, podatke iz upita i sadržaj poziva. Oba su u SAD-u; prijenos se temelji na standardnim ugovornim klauzulama Europske komisije.
+
+Snimku čuvamo 30 dana, a zapis razgovora i bilješke o pozivu koliko i sam upit (24 mjeseca), na vlastitim poslužiteljima u EU. ElevenLabs svoju kopiju briše najkasnije nakon 30 dana.
+
+Pravna osnova je vaša privola (čl. 6. st. 1. t. (a) GDPR-a). Možete je povući u bilo kojem trenutku: recite to Niki tijekom poziva ili nam pišite na adresu iz odjeljka „Kontaktirajte nas“.
+
 ## Svrha prikupljanja vaših podataka
 
 Obrađujemo vaše osobne podatke za specifične i zakonite svrhe. Općenito, koristimo informacije koje prikupljamo za upravljanje našom Platformom, pružanje naših usluga vama, poboljšanje naših ponuda i poštovanje zakonskih zahtjeva. Glavne svrhe za koje Boat4You obrađuje osobne podatke su:

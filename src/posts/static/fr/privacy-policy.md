@@ -223,6 +223,18 @@ Nous conservons ces données sur nos propres serveurs dans l'UE : les pages vues
 
 Avec le même consentement Analytics, nous pouvons également enregistrer vos visites : l'apparence de la page et ses changements pendant que vous faites défiler, cliquez et passez d'une page à l'autre, afin de voir où notre site est difficile à utiliser et de le corriger. Ce que vous saisissez dans les formulaires et dans le chat, ainsi que vos nom, adresse e-mail et téléphone affichés sur la page, sont masqués dans votre navigateur avant tout envoi, et les pages de paiement, de compte et d'avis ne sont jamais enregistrées. Les enregistrements sont envoyés uniquement à nos propres serveurs dans l'UE, ne sont partagés avec aucune autre entreprise et ne peuvent être consultés que par notre équipe. Nous supprimons les enregistrements après 60 jours et les données de clics et de défilement qui en sont tirées après 13 mois, comme les autres statistiques de visite. La base légale est votre consentement (art. 6, par. 1, point a) du RGPD) ; vous pouvez le retirer à tout moment dans les Paramètres des cookies, et l'enregistrement s'arrête alors immédiatement.
 
+## Appels de Nika, notre assistante IA
+
+Si vous cochez la case d'un formulaire de demande pour accepter un appel, Nika, l'assistante IA du groupe Boat4You, peut vous appeler au sujet de cette demande : peu après son envoi, pour confirmer les détails, puis une nouvelle fois après que nous vous avons envoyé une offre. Nika est une intelligence artificielle ; elle le dit au début de chaque appel, et précise que l'appel est enregistré. Sans votre consentement, nous ne passons pas ces appels, et nous répondons à votre demande de la même manière.
+
+Les appels sont enregistrés et transcrits afin que notre équipe puisse préparer votre offre et contrôler la qualité du service. Si vous dites à Nika que vous ne souhaitez pas que l'appel soit enregistré, l'appel prend fin, l'enregistrement est supprimé et un membre de notre équipe vous appellera à la place. Si vous demandez que l'on ne vous appelle plus, nous marquons votre numéro et Nika ne l'appelle plus.
+
+Pour ces appels, nous recourons à deux sous-traitants : ElevenLabs (IA vocale : reconnaissance de la parole, voix de l'assistante et conversation) et Twilio (connexion téléphonique). Ils reçoivent votre numéro de téléphone, votre nom, les détails de votre demande et le contenu de l'appel. Tous deux sont situés aux États-Unis ; le transfert repose sur les Clauses Contractuelles Types de la Commission européenne.
+
+Nous conservons l'enregistrement 30 jours, et la transcription ainsi que les notes d'appel aussi longtemps que la demande elle-même (24 mois), sur nos propres serveurs dans l'UE. ElevenLabs supprime sa copie au plus tard après 30 jours.
+
+La base légale est votre consentement (art. 6, par. 1, point a) du RGPD). Vous pouvez le retirer à tout moment : dites-le à Nika pendant l'appel ou écrivez-nous à l'adresse indiquée dans la section « Nous Contacter ».
+
 ## Finalités de la Collecte de Vos Données
 
 Nous traitons vos données personnelles à des fins spécifiques et

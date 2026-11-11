@@ -194,6 +194,18 @@ Dane te przechowujemy na własnych serwerach w UE: wyświetlenia stron i klikni�
 
 Za tą samą zgodą na analitykę możemy też nagrywać Twoje wizyty: jak wygląda i zmienia się strona, gdy przewijasz, klikasz i przechodzisz między stronami, abyśmy widzieli, gdzie nasza strona jest trudna w obsłudze, i mogli to poprawić. To, co wpisujesz w formularzach i na czacie, oraz Twoje imię i nazwisko, e-mail i telefon widoczne na stronie są ukrywane już w Twojej przeglądarce, zanim cokolwiek zostanie wysłane, a strony płatności, konta i opinii nigdy nie są nagrywane. Nagrania trafiają wyłącznie na nasze własne serwery w UE, nie udostępniamy ich żadnej innej firmie i może je oglądać tylko nasz zespół. Nagrania usuwamy po 60 dniach, a wyciągnięte z nich dane o kliknięciach i przewijaniu po 13 miesiącach, tak jak pozostałe statystyki odwiedzin. Podstawą prawną jest Twoja zgoda (art. 6 ust. 1 lit. a RODO); możesz ją w każdej chwili wycofać w Ustawieniach plików cookie, a nagrywanie natychmiast się wtedy zatrzymuje.
 
+## Rozmowy telefoniczne z Niką, naszą asystentką AI
+
+Jeśli w formularzu zapytania zaznaczysz pole zgody na rozmowę, Nika, asystentka AI grupy Boat4You, może zadzwonić do Ciebie w sprawie tego zapytania: wkrótce po jego wysłaniu, aby potwierdzić szczegóły, i jeszcze raz po tym, jak wyślemy Ci ofertę. Nika jest sztuczną inteligencją; mówi o tym na początku każdej rozmowy, a także o tym, że rozmowa jest nagrywana. Bez Twojej zgody nie wykonujemy takich połączeń, a na Twoje zapytanie odpowiadamy tak samo.
+
+Rozmowy są nagrywane i transkrybowane, aby nasz zespół mógł przygotować Twoją ofertę i sprawdzać jakość obsługi. Jeśli powiesz Nice, że nie chcesz, aby rozmowa była nagrywana, rozmowa się kończy, nagranie zostaje usunięte, a zamiast niej zadzwoni do Ciebie członek naszego zespołu. Jeśli poprosisz, abyśmy więcej nie dzwonili, oznaczamy Twój numer i Nika już na niego nie dzwoni.
+
+Przy tych rozmowach korzystamy z dwóch podmiotów przetwarzających: ElevenLabs (głosowa AI: rozpoznawanie mowy, głos asystentki i prowadzenie rozmowy) oraz Twilio (połączenie telefoniczne). Otrzymują one Twój numer telefonu, imię i nazwisko, szczegóły zapytania oraz treść rozmowy. Oba podmioty mają siedzibę w Stanach Zjednoczonych; przekazywanie danych odbywa się na podstawie Standardowych Klauzul Umownych Komisji Europejskiej.
+
+Nagranie przechowujemy przez 30 dni, a transkrypcję i notatki z rozmowy tak długo jak samo zapytanie (24 miesiące), na własnych serwerach w UE. ElevenLabs usuwa swoją kopię najpóźniej po 30 dniach.
+
+Podstawą prawną jest Twoja zgoda (art. 6 ust. 1 lit. a RODO). Możesz ją w każdej chwili wycofać: powiedz o tym Nice w trakcie rozmowy lub napisz do nas na adres podany w sekcji Kontakt.
+
 ## Cel Zbierania Twoich Danych
 
 Przetwarzamy Twoje dane osobowe w określonych i zgodnych z prawem celach.

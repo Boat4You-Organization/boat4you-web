@@ -63,6 +63,18 @@ Wir speichern diese Daten auf unseren eigenen Servern in der EU: Seitenaufrufe u
 
 Mit derselben Einwilligung zu Analytics können wir außerdem Ihre Besuche aufzeichnen: wie die Seite aussieht und sich verändert, während Sie scrollen, klicken und zwischen Seiten wechseln, damit wir sehen, wo unsere Website schwer zu bedienen ist, und das beheben können. Ihre Eingaben in Formularen und im Chat sowie Ihr Name, Ihre E-Mail-Adresse und Telefonnummer, wenn sie auf der Seite angezeigt werden, werden bereits in Ihrem Browser verborgen, bevor etwas gesendet wird; Zahlungs-, Konto- und Bewertungsseiten werden nie aufgezeichnet. Aufzeichnungen gehen nur an unsere eigenen Server in der EU, werden an kein anderes Unternehmen weitergegeben und können nur von unserem Team angesehen werden. Wir löschen die Aufzeichnungen nach 60 Tagen und die daraus gewonnenen Klick- und Scrolldaten nach 13 Monaten, wie die übrige Besuchsstatistik. Rechtsgrundlage ist Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO); Sie können sie jederzeit in den Cookie-Einstellungen widerrufen, und die Aufzeichnung endet dann sofort.
 
+## Anrufe von Nika, unserer KI-Assistentin
+
+Wenn Sie in einem Anfrageformular das Kästchen ankreuzen und damit einem Anruf zustimmen, darf Nika, die KI-Assistentin der Boat4You-Gruppe, Sie zu dieser Anfrage anrufen: kurz nachdem Sie sie gesendet haben, um die Details zu bestätigen, und noch einmal, nachdem wir Ihnen ein Angebot geschickt haben. Nika ist eine künstliche Intelligenz; das sagt sie zu Beginn jedes Anrufs, ebenso dass der Anruf aufgezeichnet wird. Ohne Ihre Einwilligung führen wir solche Anrufe nicht durch, und wir beantworten Ihre Anfrage trotzdem genauso.
+
+Anrufe werden aufgezeichnet und transkribiert, damit unser Team Ihr Angebot vorbereiten und die Qualität des Service prüfen kann. Wenn Sie Nika sagen, dass Sie nicht aufgezeichnet werden möchten, wird der Anruf beendet, die Aufzeichnung gelöscht und stattdessen ruft Sie jemand aus unserem Team an. Wenn Sie darum bitten, nicht mehr angerufen zu werden, markieren wir Ihre Nummer und Nika ruft sie nicht mehr an.
+
+Für diese Anrufe setzen wir zwei Auftragsverarbeiter ein: ElevenLabs (Sprach-KI: Spracherkennung, die Stimme der Assistentin und das Gespräch) und Twilio (die Telefonverbindung). Sie erhalten Ihre Telefonnummer, Ihren Namen, die Angaben aus Ihrer Anfrage und den Inhalt des Anrufs. Beide haben ihren Sitz in den Vereinigten Staaten; die Übermittlung beruht auf den Standardvertragsklauseln der Europäischen Kommission.
+
+Wir speichern die Aufzeichnung 30 Tage und das Transkript sowie die Gesprächsnotizen so lange wie die Anfrage selbst (24 Monate), auf unseren eigenen Servern in der EU. ElevenLabs löscht seine Kopie spätestens nach 30 Tagen.
+
+Rechtsgrundlage ist Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Sie können sie jederzeit widerrufen: Sagen Sie es Nika während des Anrufs oder schreiben Sie uns an die Adresse im Abschnitt „Kontakt“.
+
 ## Zweck der Erfassung Ihrer Daten
 
 Wir verarbeiten Ihre personenbezogenen Daten zu bestimmten und rechtmäßigen Zwecken. Im Allgemeinen verwenden wir die von uns erfassten Informationen, um unsere Plattform zu betreiben, Ihnen unsere Dienste bereitzustellen, unsere Angebote zu verbessern und gesetzliche Anforderungen zu erfüllen. Die Hauptzwecke, für die Boat4You personenbezogene Daten verarbeitet, sind:

@@ -63,6 +63,18 @@ Guardamos estes dados nos nossos próprios servidores na UE: visualizações de 
 
 Com o mesmo consentimento de Análise, podemos também gravar as suas visitas: o aspeto da página e as suas mudanças enquanto percorre, clica e passa de uma página para outra, para vermos onde o nosso site é difícil de utilizar e o corrigirmos. O que escreve nos formulários e no chat, e o seu nome, e-mail e telefone apresentados na página, ficam ocultos no seu navegador antes de qualquer envio, e as páginas de pagamento, de conta e de avaliações nunca são gravadas. As gravações vão apenas para os nossos próprios servidores na UE, não são partilhadas com nenhuma outra empresa e só a nossa equipa as pode ver. Eliminamos as gravações após 60 dias e os dados de cliques e deslocamento delas retirados após 13 meses, tal como as restantes estatísticas de visitas. A base legal é o seu consentimento (art. 6.º, n.º 1, alínea a), do RGPD); pode retirá-lo a qualquer momento nas Definições de cookies, e a gravação para de imediato.
 
+## Chamadas da Nika, a nossa assistente de IA
+
+Se assinalar a caixa num formulário de consulta para aceitar uma chamada, a Nika, a assistente de IA do grupo Boat4You, pode telefonar-lhe sobre essa consulta: pouco depois de a enviar, para confirmar os detalhes, e mais uma vez depois de lhe enviarmos uma oferta. A Nika é uma inteligência artificial; di-lo no início de cada chamada, assim como que a chamada é gravada. Sem o seu consentimento não fazemos estas chamadas, e respondemos à sua consulta da mesma forma.
+
+As chamadas são gravadas e transcritas para que a nossa equipa possa preparar a sua oferta e verificar a qualidade do serviço. Se disser à Nika que não quer que a chamada seja gravada, a chamada termina, a gravação é eliminada e, em vez dela, telefona-lhe um membro da nossa equipa. Se pedir que não lhe voltemos a telefonar, assinalamos o seu número e a Nika não volta a ligar para ele.
+
+Para estas chamadas recorremos a dois subcontratantes: ElevenLabs (IA de voz: reconhecimento de fala, a voz da assistente e a conversa) e Twilio (a ligação telefónica). Recebem o seu número de telefone, o seu nome, os dados da sua consulta e o conteúdo da chamada. Ambos estão nos Estados Unidos; a transferência baseia-se nas Cláusulas Contratuais Padrão da Comissão Europeia.
+
+Conservamos a gravação durante 30 dias, e a transcrição e as notas da chamada durante o mesmo tempo que a própria consulta (24 meses), nos nossos próprios servidores na UE. A ElevenLabs elimina a sua cópia no máximo após 30 dias.
+
+A base legal é o seu consentimento (art. 6.º, n.º 1, alínea a), do RGPD). Pode retirá-lo a qualquer momento: diga-o à Nika durante a chamada ou escreva-nos para o endereço indicado na secção Contacte-nos.
+
 ## Objetivo da Recolha dos Seus Dados
 
 Processamos os seus dados pessoais para fins específicos e lícitos. Em geral, usamos as informações que recolhemos para operar a nossa Plataforma, fornecer os nossos serviços a você, melhorar as nossas ofertas e cumprir os requisitos legais. Os principais objetivos para os quais a Boat4You processa dados pessoais são:

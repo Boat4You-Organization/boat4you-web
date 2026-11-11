@@ -199,6 +199,18 @@ We bewaren deze gegevens op onze eigen servers in de EU: paginaweergaven en klik
 
 Met dezelfde toestemming voor Analyse kunnen we ook je bezoeken opnemen: hoe de pagina eruitziet en verandert terwijl je scrolt, klikt en naar andere pagina's gaat, zodat we zien waar onze website lastig te gebruiken is en dat kunnen verbeteren. Wat je in formulieren en in de chat typt, en je naam, e-mailadres en telefoonnummer die op de pagina staan, worden al in je browser verborgen voordat er iets wordt verzonden, en betaal-, account- en beoordelingspagina's worden nooit opgenomen. Opnames gaan alleen naar onze eigen servers in de EU, worden met geen enkel ander bedrijf gedeeld en zijn alleen voor ons team te bekijken. We verwijderen de opnames na 60 dagen en de klik- en scrollgegevens die eruit zijn gehaald na 13 maanden, net als de andere bezoekstatistieken. De rechtsgrond is jouw toestemming (art. 6, lid 1, onder a, AVG); je kunt die op elk moment intrekken in de Cookie-instellingen, en de opname stopt dan meteen.
 
+## Telefoongesprekken met Nika, onze AI-assistente
+
+Als u op een aanvraagformulier het vakje aanvinkt om in te stemmen met een telefoongesprek, mag Nika, de AI-assistente van de Boat4You-groep, u over die aanvraag bellen: kort nadat u de aanvraag hebt verstuurd, om de details te bevestigen, en nog een keer nadat we u een offerte hebben gestuurd. Nika is een kunstmatige intelligentie; dat zegt ze aan het begin van elk gesprek, en ook dat het gesprek wordt opgenomen. Zonder uw toestemming voeren we zulke gesprekken niet, en we beantwoorden uw aanvraag net zo goed.
+
+Gesprekken worden opgenomen en getranscribeerd zodat ons team uw offerte kan voorbereiden en de kwaliteit van de service kan controleren. Als u Nika zegt dat u niet wilt dat het gesprek wordt opgenomen, wordt het gesprek beëindigd, wordt de opname verwijderd en belt een medewerker van ons team u in plaats daarvan. Als u vraagt om niet meer gebeld te worden, markeren we uw nummer en belt Nika het niet meer.
+
+Voor deze gesprekken gebruiken we twee verwerkers: ElevenLabs (spraak-AI: spraakherkenning, de stem van de assistente en het gesprek) en Twilio (de telefoonverbinding). Zij ontvangen uw telefoonnummer, uw naam, de gegevens van uw aanvraag en de inhoud van het gesprek. Beide zijn gevestigd in de Verenigde Staten; de overdracht is gebaseerd op de Standaard Contractuele Bepalingen van de Europese Commissie.
+
+We bewaren de opname 30 dagen, en de transcriptie en gespreksnotities even lang als de aanvraag zelf (24 maanden), op onze eigen servers in de EU. ElevenLabs verwijdert zijn kopie uiterlijk na 30 dagen.
+
+De rechtsgrond is uw toestemming (art. 6, lid 1, onder a, AVG). U kunt die op elk moment intrekken: zeg het tegen Nika tijdens het gesprek of schrijf ons op het adres in de sectie Contact.
+
 ## Doel van het Verzamelen van je Gegevens
 
 We verwerken je persoonsgegevens voor specifieke en wettige doeleinden.

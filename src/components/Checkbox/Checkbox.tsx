@@ -4,7 +4,7 @@ import CheckboxChecked from '@/components/SvgIcons/Checkbox/CheckboxChecked';
 import CheckboxUnchecked from '@/components/SvgIcons/Checkbox/CheckboxUnchecked';
 
 interface CustomCheckboxProps extends MuiCheckboxProps {
-  label?: string;
+  label?: React.ReactNode;
 }
 
 const Checkbox = ({ value, checked, onChange, label, ...props }: CustomCheckboxProps) => (

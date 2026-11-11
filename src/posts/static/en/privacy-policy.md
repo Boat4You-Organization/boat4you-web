@@ -183,6 +183,18 @@ We keep this data on our own servers in the EU: page views and clicks for 13 mon
 
 With the same Analytics consent we may also record your visits: how the page looks and changes while you scroll, click and move between pages, so that we can see where our website is hard to use and fix it. What you type into forms and the chat, and your name, e-mail and phone shown on the page, are hidden in your browser before anything is sent, and payment, account and review pages are never recorded. Recordings go only to our own servers in the EU, are not shared with any other company and can be viewed only by our team. We delete the recordings after 60 days and the click and scroll data taken from them after 13 months, like the other visit statistics. The legal basis is your consent (Art. 6(1)(a) GDPR); you can withdraw it at any time in Cookies Settings, and recording then stops at once.
 
+## Phone calls from Nika, our AI assistant
+
+If you tick the box on an inquiry form to agree to a call, Nika, the AI assistant of the Boat4You group, may phone you about that inquiry: shortly after you send it, to confirm the details, and once more after we send you an offer. Nika is an artificial intelligence; she says so at the start of every call, and that the call is recorded. Without your consent we do not make such calls, and we answer your inquiry just the same.
+
+Calls are recorded and transcribed so that our team can prepare your offer and check the quality of the service. If you tell Nika that you do not want to be recorded, the call ends, the recording is deleted and a member of our team will call you instead. If you ask not to be called again, we mark your number and Nika does not call it again.
+
+For these calls we use two processors: ElevenLabs (voice AI: speech recognition, the assistant's voice and the conversation) and Twilio (the telephone connection). They receive your phone number, your name, the details of your inquiry and the content of the call. Both are in the United States; the transfer is based on the European Commission's Standard Contractual Clauses.
+
+We keep the recording for 30 days, and the transcript and call notes for as long as the inquiry itself (24 months), on our own servers in the EU. ElevenLabs deletes its copy after 30 days at the latest.
+
+The legal basis is your consent (Art. 6(1)(a) GDPR). You can withdraw it at any time: tell Nika during the call or write to us at the address in the Contact Us section.
+
 ## Purpose of Collecting Your Data
 
 We process your personal data for specific and lawful purposes. In

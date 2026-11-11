@@ -200,6 +200,18 @@ Conserviamo questi dati sui nostri server nell'UE: pagine viste e clic per 13 me
 
 Con lo stesso consenso Analisi possiamo anche registrare le tue visite: come appare e cambia la pagina mentre scorri, clicchi e passi da una pagina all'altra, così da vedere dove il nostro sito è difficile da usare e correggerlo. Ciò che scrivi nei moduli e nella chat, e il tuo nome, la tua e-mail e il tuo telefono mostrati sulla pagina, vengono nascosti nel tuo browser prima di qualsiasi invio, e le pagine di pagamento, dell'account e delle recensioni non vengono mai registrate. Le registrazioni vanno solo ai nostri server nell'UE, non sono condivise con nessun'altra azienda e possono essere viste solo dal nostro team. Eliminiamo le registrazioni dopo 60 giorni e i dati di clic e scorrimento ricavati da esse dopo 13 mesi, come le altre statistiche di visita. La base giuridica è il tuo consenso (art. 6, par. 1, lett. a) GDPR); puoi revocarlo in qualsiasi momento nelle Impostazioni cookie, e la registrazione si interrompe subito.
 
+## Chiamate di Nika, la nostra assistente IA
+
+Se in un modulo di richiesta spunta la casella per acconsentire a una chiamata, Nika, l'assistente IA del gruppo Boat4You, può chiamarla in merito a quella richiesta: poco dopo l'invio, per confermare i dettagli, e un'altra volta dopo che le abbiamo inviato un'offerta. Nika è un'intelligenza artificiale; lo dice all'inizio di ogni chiamata, insieme al fatto che la chiamata viene registrata. Senza il suo consenso non effettuiamo queste chiamate, e rispondiamo comunque alla sua richiesta allo stesso modo.
+
+Le chiamate vengono registrate e trascritte affinché il nostro team possa preparare la sua offerta e verificare la qualità del servizio. Se dice a Nika che non desidera che la chiamata venga registrata, la chiamata termina, la registrazione viene cancellata e la chiamerà invece un membro del nostro team. Se chiede di non ricevere altre chiamate, contrassegniamo il suo numero e Nika non lo chiama più.
+
+Per queste chiamate ci avvaliamo di due responsabili del trattamento: ElevenLabs (IA vocale: riconoscimento del parlato, la voce dell'assistente e la conversazione) e Twilio (il collegamento telefonico). Ricevono il suo numero di telefono, il suo nome, i dettagli della sua richiesta e il contenuto della chiamata. Entrambi hanno sede negli Stati Uniti; il trasferimento si basa sulle Clausole Contrattuali Standard della Commissione Europea.
+
+Conserviamo la registrazione per 30 giorni, e la trascrizione e le note della chiamata per lo stesso periodo della richiesta (24 mesi), sui nostri server nell'UE. ElevenLabs cancella la propria copia al più tardi dopo 30 giorni.
+
+La base giuridica è il suo consenso (art. 6, par. 1, lett. a) GDPR). Può revocarlo in qualsiasi momento: lo dica a Nika durante la chiamata oppure ci scriva all'indirizzo indicato nella sezione Contattaci.
+
 ## Scopo della Raccolta dei Tuoi Dati
 
 Trattiamo i tuoi dati personali per scopi specifici e leciti. In generale,

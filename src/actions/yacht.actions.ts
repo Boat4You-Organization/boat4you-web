@@ -16,6 +16,7 @@ import { fetchWithRetry } from '@/utils/server/fetchWithRetry';
 import { guardInquiry, inquiryFingerprint } from '@/utils/server/inquiryGuard';
 import { withSafePartnerText } from '@/utils/server/partnerYacht';
 import { authFetch } from '@/utils/static/authFetch';
+import { CALL_SITE, callConsentFields } from '@/utils/static/callConsent';
 import { getBoatImageBaseUrl } from '@/utils/static/imageUtils';
 import { isOperatorName } from '@/utils/static/operatorNames';
 import { withoutPartnerIds } from '@/utils/static/partnerIds';
@@ -351,6 +352,11 @@ export async function sendYachtInquiry(state: any, formData: FormData): Promise<
     email: formData.get('email'),
     phone: formData.get('phone'),
     message: formData.get('message'),
+    // AI call center (backend InquiryDto): where the inquiry came from, its
+    // language and the optional consent to Nika's call. No consent, no call.
+    site: CALL_SITE,
+    locale: String(formData.get('locale') || '').slice(0, 5) || undefined,
+    ...callConsentFields(formData.get('contactConsent') === 'true'),
   };
 
   const ip = await requestIp();

@@ -1,13 +1,14 @@
 'use client';
 
-import { MouseEvent, startTransition, useActionState, useEffect, useRef, useState } from 'react';
-import { useFormContext } from 'react-hook-form';
+import { MouseEvent, ReactNode, startTransition, useActionState, useEffect, useRef, useState } from 'react';
+import { Controller, useFormContext } from 'react-hook-form';
 
 import { Divider, InputAdornment, Stack, Typography } from '@mui/material';
 import dayjs, { Dayjs } from 'dayjs';
 import { useLocale, useTranslations } from 'next-intl';
 
 import { sendYachtInquiry } from '@/actions/yacht.actions';
+import Checkbox from '@/components/Checkbox';
 import DateRangePicker from '@/components/DateRangePicker';
 import Form from '@/components/Forms/Form';
 import FormDateInput from '@/components/Forms/FormDateInput';
@@ -18,6 +19,7 @@ import Calendar from '@/components/SvgIcons/Calendar';
 import YachtCard from '@/components/YachtCard';
 import { BoatInquiryFormValues } from '@/config/form-models.config';
 import { BOAT_INQUIRY_FORM } from '@/config/form-names.config';
+import { Link } from '@/i18n/navigation';
 import { trackInquiry } from '@/lib/trackInquiry';
 import { YachtModel } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
@@ -110,6 +112,41 @@ const InquiryDateFields = () => {
   );
 };
 
+// Hoisted so the `t.rich` tag handler is a stable reference across renders.
+const privacyLink = (chunks: ReactNode) => (
+  <Link href="/privacy-policy" target="_blank" style={{ textDecoration: 'underline' }}>
+    {chunks}
+  </Link>
+);
+
+/**
+ * Optional consent to a phone call from Nika, the AI assistant (AI call
+ * center). Unticked, the inquiry is sent as before and nobody is called.
+ */
+const CallConsentField = () => {
+  const t = useTranslations('common');
+  const { control } = useFormContext<BoatInquiryFormValues>();
+
+  return (
+    <Controller
+      name="contactConsent"
+      control={control}
+      render={({ field }) => (
+        <Checkbox
+          checked={Boolean(field.value)}
+          onChange={event => field.onChange(event.target.checked)}
+          label={
+            <Typography variant="body2" component="span">
+              {t.rich('callConsent', { privacy: privacyLink })}
+            </Typography>
+          }
+          sx={{ alignSelf: 'flex-start', mt: '-9px' }}
+        />
+      )}
+    />
+  );
+};
+
 const BoatInquiryModal = ({
   isOpen,
   onOpen,
@@ -148,6 +185,7 @@ const BoatInquiryModal = ({
     email: initialContact?.email || user?.email || '',
     phone: initialContact?.phone ?? '',
     message: '',
+    contactConsent: false,
   };
 
   // One inquiry per submit (27.9.2026: one visitor's inquiry reached the
@@ -216,6 +254,8 @@ const BoatInquiryModal = ({
     Object.entries(updatedFormValues).forEach(([key, value]) => {
       formData.append(key, String(value));
     });
+    // The language the visitor reads the site in: the AI call center speaks it.
+    formData.append('locale', locale);
 
     startTransition(() => {
       action(formData);
@@ -311,6 +351,9 @@ const BoatInquiryModal = ({
             multiline
             validate={validator.isNotEmpty}
           />
+        </Stack>
+        <Stack mt={3}>
+          <CallConsentField />
         </Stack>
       </Form>
     </ModalRoot>
