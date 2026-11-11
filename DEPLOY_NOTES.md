@@ -8,7 +8,7 @@
 
 **Provjereno:** lint hook 0 grešaka; neovisni Opus pregled (našao upravo ovaj bloker u backend promjeni); uživo: dpl na `/contact-us` i `/search`, pravni markeri en + de, stranica broda en i hr prikazuje 3 slična broda. **Nije provjereno:** lokalni build u pregledniku prije deploya (lokalni build opterećuje produkcijski API).
 
-**SEO Stage B (quick): 1 novi pad, nije od ovog deploya:** T6 na `/es/search?destinations=marina%20paleros&boatTypes=CATAMARAN`: kartica „Lagoon 42 | Sea Novels“ (ime plovila jednako imenu charter kompanije; podaci partnera, ista vrsta kao poznati B20). Izvještaj: `_seo-audit-2026-11-11/regression/181901-B-boat4you/summary.md`. Čeka Mariovu odluku (preimenovati prikaz ili dodati u očekivane).
+**SEO Stage B (quick): 1 novi pad, nije od ovog deploya:** T6 na `/es/search?destinations=marina%20paleros&boatTypes=CATAMARAN`: kartica „Lagoon 42 | Sea Novels“ (ime plovila jednako imenu charter kompanije; podaci partnera, ista vrsta kao poznati B20). Izvještaj: `_seo-audit-2026-11-11/regression/181901-B-boat4you/summary.md`. Mario 11.11.: „ostavi sea novels“ — ime ostaje; u `seo_regression_expected.json` još nije dodano, pa ga provjera i dalje javlja.
 
 ## 2026-11-11 — 💳 Stripe uklonjen, kartična naplata je samo Mollie — ✅ LIVE 11.11.2026 17:24 UTC (`feed5b39e`, deployment id feed5b39ecfd-mwcdorak, tag `live/2026-11-11-no-stripe`; backend bez Stripea `c82b89d6` LIVE na cusma2 17:02 UTC)
 
