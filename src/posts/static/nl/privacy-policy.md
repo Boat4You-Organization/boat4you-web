@@ -201,15 +201,15 @@ Met dezelfde toestemming voor Analyse kunnen we ook je bezoeken opnemen: hoe de 
 
 ## Telefoongesprekken met Nika, onze AI-assistente
 
-Als u een aanvraag verstuurt, gaat u ermee akkoord dat we daarover contact met u opnemen per e-mail, bericht of telefoon. U kunt ook gebeld worden door Nika, de AI-assistente van de Boat4You-groep: kort nadat u de aanvraag hebt verstuurd, om de details te bevestigen, en nog een keer nadat we u een offerte hebben gestuurd. Nika is een kunstmatige intelligentie; dat zegt ze aan het begin van elk gesprek, en ook dat het gesprek wordt opgenomen. Wilt u niet gebeld worden, zeg het dan tegen Nika of schrijf ons, dan antwoorden we u per e-mail.
+Als je een aanvraag verstuurt, ga je ermee akkoord dat we daarover contact met je opnemen per e-mail, bericht of telefoon. Je kunt ook gebeld worden door Nika, de AI-assistente van de Boat4You-groep: kort nadat je de aanvraag hebt verstuurd, om de details te bevestigen, en nog een keer nadat we je een offerte hebben gestuurd. Nika is een kunstmatige intelligentie; dat zegt ze aan het begin van elk gesprek, en ook dat het gesprek wordt opgenomen. Wil je niet gebeld worden, zeg het dan tegen Nika of schrijf ons, dan antwoorden we je per e-mail.
 
-Gesprekken worden opgenomen en getranscribeerd zodat ons team uw offerte kan voorbereiden en de kwaliteit van de service kan controleren. Als u Nika zegt dat u niet wilt dat het gesprek wordt opgenomen, wordt het gesprek beëindigd, wordt de opname verwijderd en belt een medewerker van ons team u in plaats daarvan. Als u vraagt om niet meer gebeld te worden, markeren we uw nummer en belt Nika het niet meer.
+Gesprekken worden opgenomen en getranscribeerd zodat ons team je offerte kan voorbereiden en de kwaliteit van de service kan controleren. Als je Nika zegt dat je niet wilt dat het gesprek wordt opgenomen, wordt het gesprek beëindigd, wordt de opname verwijderd en belt een medewerker van ons team je in plaats daarvan. Als je vraagt om niet meer gebeld te worden, markeren we je nummer en belt Nika het niet meer.
 
-Voor deze gesprekken gebruiken we twee verwerkers: ElevenLabs (spraak-AI: spraakherkenning, de stem van de assistente en het gesprek) en Twilio (de telefoonverbinding). Zij ontvangen uw telefoonnummer, uw naam, de gegevens van uw aanvraag en de inhoud van het gesprek. Beide zijn gevestigd in de Verenigde Staten; de overdracht is gebaseerd op de Standaard Contractuele Bepalingen van de Europese Commissie.
+Voor deze gesprekken gebruiken we twee verwerkers: ElevenLabs (spraak-AI: spraakherkenning, de stem van de assistente en het gesprek) en Twilio (de telefoonverbinding). Zij ontvangen je telefoonnummer, je naam, de gegevens van je aanvraag en de inhoud van het gesprek. Beide zijn gevestigd in de Verenigde Staten; de overdracht is gebaseerd op de Standaard Contractuele Bepalingen van de Europese Commissie.
 
 We bewaren de opname 30 dagen, en de transcriptie en gespreksnotities even lang als de aanvraag zelf (24 maanden), op onze eigen servers in de EU. ElevenLabs verwijdert zijn kopie uiterlijk na 30 dagen.
 
-De rechtsgrond is uw toestemming (art. 6, lid 1, onder a, AVG). U kunt die op elk moment intrekken: zeg het tegen Nika tijdens het gesprek of schrijf ons op het adres in de sectie Contact.
+De rechtsgrond is je toestemming (art. 6, lid 1, onder a, AVG). Je kunt die op elk moment intrekken: zeg het tegen Nika tijdens het gesprek of schrijf ons op het adres in de sectie Contact.
 
 ## Doel van het Verzamelen van je Gegevens
 

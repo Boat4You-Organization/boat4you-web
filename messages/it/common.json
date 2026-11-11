@@ -285,8 +285,8 @@
     "short": "Accetto che mi contattiate in merito a questa richiesta; i miei dati servono solo a questo.",
     "more": "Più dettagli",
     "less": "Meno dettagli",
-    "details": "Rispondiamo via e-mail, messaggio o telefono. La chiamata può arrivare da Nika, l'assistente IA di Boat4You; le chiamate vengono registrate e trascritte. Usiamo i suoi dati solo per rispondere a questa richiesta e non la inseriamo mai in liste di marketing. <privacy>Informativa sulla Privacy</privacy>",
-    "required": "La preghiamo di spuntare la casella, così potremo contattarla in merito alla sua richiesta."
+    "details": "Rispondiamo via e-mail, messaggio o telefono. La chiamata può arrivare da Nika, l'assistente IA di Boat4You; le chiamate vengono registrate e trascritte. Usiamo i tuoi dati solo per rispondere a questa richiesta e non ti inseriamo mai in liste di marketing. <privacy>Informativa sulla Privacy</privacy>",
+    "required": "Ti preghiamo di spuntare la casella, così potremo contattarti in merito alla tua richiesta."
   },
   "inquirySentSuccessfully": "Richiesta inviata con successo",
   "inquirySentFailed": "Invio richiesta fallito",
