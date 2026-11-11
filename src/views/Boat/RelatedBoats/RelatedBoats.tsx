@@ -116,25 +116,6 @@ const yachtLengthFt = (info: MeasurementInfo | null | undefined, metric: number 
   return null;
 };
 
-/**
- * The ±5 ft window as the API's `minLength` / `maxLength`. The API reads
- * them in the request language's unit — feet for `en`, metres for every
- * other locale (checked 7.10.2026: `hr` read 40–50 as metres) — so whole
- * units, rounded outwards; the exact ±5 ft rule is applied to the rows
- * afterwards (a boat without a length no longer fills a slot of a boat with
- * one). Null (no length filter) when the boat's own length is unknown.
- */
-const apiLengthWindow = (lengthFt: number | null, inFeet: boolean): { minLength: number; maxLength: number } | null => {
-  if (lengthFt == null) return null;
-
-  const unit = inFeet ? 1 : M_PER_FT;
-
-  return {
-    minLength: Math.max(0, Math.floor((lengthFt - TOLERANCE_FT) * unit)),
-    maxLength: Math.ceil((lengthFt + TOLERANCE_FT) * unit),
-  };
-};
-
 interface RelatedBoatsProps {
   yacht: YachtModel;
   user: UserModel | null;
@@ -171,7 +152,11 @@ const RelatedBoats = async ({ yacht, user, locale, currency, startDate, endDate 
     timeoutMs: number
   ): Promise<YachtModelShortInfo[] | null> => {
     const cached = !poolPeriod;
-    const lengthWindow = apiLengthWindow(currentLenFt, cached || locale === 'en');
+    // No minLength / maxLength on the request (11.11.2026): the backend's length unit
+    // changes from "feet on en, metres elsewhere" to metres everywhere, and this pool
+    // asks in `en` on every locale. Without a length window the pool is right on both
+    // backends; the ±5 ft rule below (pick) still keeps only similar sizes. Once the
+    // metres backend is live, a metre window can come back to shrink the pool.
     const readPage = (page: number, singleAttemptMs: number) =>
       fetchYachts(
         {
@@ -180,7 +165,6 @@ const RelatedBoats = async ({ yacht, user, locale, currency, startDate, endDate 
           size: POOL_PAGE_SIZE,
           page,
           ...(boatTypes ? { boatTypes } : {}),
-          ...(lengthWindow ?? {}),
           ...(poolPeriod ?? { priceBasis: 'week' as const }),
         },
         currency,
