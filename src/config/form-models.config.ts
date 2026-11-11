@@ -146,7 +146,7 @@ export interface BoatInquiryFormValues {
   email: string;
   phone: string;
   message: string;
-  /** Optional: the visitor agrees to a phone call from Nika, the AI assistant (AI call center, text version in callConsent.ts). */
+  /** Required to send: we may contact the visitor about the inquiry, a call from Nika (AI assistant) included; text version in callConsent.ts. */
   contactConsent: boolean;
 }
 

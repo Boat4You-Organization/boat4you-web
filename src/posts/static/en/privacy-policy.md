@@ -185,7 +185,7 @@ With the same Analytics consent we may also record your visits: how the page loo
 
 ## Phone calls from Nika, our AI assistant
 
-If you tick the box on an inquiry form to agree to a call, Nika, the AI assistant of the Boat4You group, may phone you about that inquiry: shortly after you send it, to confirm the details, and once more after we send you an offer. Nika is an artificial intelligence; she says so at the start of every call, and that the call is recorded. Without your consent we do not make such calls, and we answer your inquiry just the same.
+When you send an inquiry, you agree that we contact you about it by e-mail, message or phone. The call may come from Nika, the AI assistant of the Boat4You group: shortly after you send the inquiry, to confirm the details, and once more after we send you an offer. Nika is an artificial intelligence; she says so at the start of every call, and that the call is recorded. If you do not want a call, tell Nika or write to us and we will answer by e-mail.
 
 Calls are recorded and transcribed so that our team can prepare your offer and check the quality of the service. If you tell Nika that you do not want to be recorded, the call ends, the recording is deleted and a member of our team will call you instead. If you ask not to be called again, we mark your number and Nika does not call it again.
 

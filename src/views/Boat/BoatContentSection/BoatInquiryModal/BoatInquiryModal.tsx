@@ -3,7 +3,7 @@
 import { MouseEvent, ReactNode, startTransition, useActionState, useEffect, useRef, useState } from 'react';
 import { Controller, useFormContext } from 'react-hook-form';
 
-import { Divider, InputAdornment, Stack, Typography } from '@mui/material';
+import { Button, Divider, FormHelperText, InputAdornment, Stack, Typography } from '@mui/material';
 import dayjs, { Dayjs } from 'dayjs';
 import { useLocale, useTranslations } from 'next-intl';
 
@@ -120,28 +120,53 @@ const privacyLink = (chunks: ReactNode) => (
 );
 
 /**
- * Optional consent to a phone call from Nika, the AI assistant (AI call
- * center). Unticked, the inquiry is sent as before and nobody is called.
+ * The consent every inquiry needs before it can be sent: we may contact the
+ * visitor about it and use their details only for that. "More details" opens
+ * what that contact can be (e-mail, message, phone, a call from Nika, the AI
+ * assistant, which is recorded).
  */
 const CallConsentField = () => {
   const t = useTranslations('common');
   const { control } = useFormContext<BoatInquiryFormValues>();
+  const [showDetails, toggleDetails] = useToggleState();
 
   return (
     <Controller
       name="contactConsent"
       control={control}
-      render={({ field }) => (
-        <Checkbox
-          checked={Boolean(field.value)}
-          onChange={event => field.onChange(event.target.checked)}
-          label={
-            <Typography variant="body2" component="span">
-              {t.rich('callConsent', { privacy: privacyLink })}
+      rules={{ validate: value => Boolean(value) || t('callConsent.required') }}
+      render={({ field, fieldState }) => (
+        <Stack alignItems="flex-start">
+          <Checkbox
+            checked={Boolean(field.value)}
+            onChange={event => field.onChange(event.target.checked)}
+            label={
+              <Typography variant="body2" component="span">
+                {t('callConsent.short')} *
+              </Typography>
+            }
+            sx={{ alignSelf: 'flex-start', mt: '-9px' }}
+          />
+          <Button
+            variant="text"
+            size="small"
+            onClick={() => toggleDetails()}
+            aria-expanded={showDetails}
+            sx={{ ml: 4 }}
+          >
+            {showDetails ? t('callConsent.less') : t('callConsent.more')}
+          </Button>
+          {showDetails && (
+            <Typography variant="body2" sx={{ ml: 5, mt: 1 }}>
+              {t.rich('callConsent.details', { privacy: privacyLink })}
             </Typography>
-          }
-          sx={{ alignSelf: 'flex-start', mt: '-9px' }}
-        />
+          )}
+          {fieldState.error && (
+            <FormHelperText error sx={{ ml: 5 }}>
+              {fieldState.error.message}
+            </FormHelperText>
+          )}
+        </Stack>
       )}
     />
   );

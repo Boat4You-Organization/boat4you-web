@@ -65,7 +65,7 @@ Con el mismo consentimiento de Analítica también podemos grabar tus visitas: c
 
 ## Llamadas de Nika, nuestra asistente de IA
 
-Si en un formulario de consulta marca la casilla para aceptar una llamada, Nika, la asistente de IA del grupo Boat4You, puede llamarle en relación con esa consulta: poco después de que la envíe, para confirmar los detalles, y una vez más después de que le enviemos una oferta. Nika es una inteligencia artificial; lo dice al comienzo de cada llamada, y también que la llamada se graba. Sin su consentimiento no realizamos este tipo de llamadas, y respondemos a su consulta igualmente.
+Al enviar una consulta, acepta que le contactemos sobre ella por correo electrónico, mensaje o teléfono. La llamada puede ser de Nika, la asistente de IA del grupo Boat4You: poco después de que envíe la consulta, para confirmar los detalles, y una vez más después de que le enviemos una oferta. Nika es una inteligencia artificial; lo dice al comienzo de cada llamada, y también que la llamada se graba. Si no desea recibir una llamada, dígaselo a Nika o escríbanos y le responderemos por correo electrónico.
 
 Las llamadas se graban y se transcriben para que nuestro equipo pueda preparar su oferta y comprobar la calidad del servicio. Si le dice a Nika que no quiere que se grabe la llamada, la llamada termina, la grabación se elimina y en su lugar le llamará un miembro de nuestro equipo. Si pide que no le volvamos a llamar, marcamos su número y Nika no vuelve a llamarlo.
 

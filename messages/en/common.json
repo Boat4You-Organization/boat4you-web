@@ -333,7 +333,13 @@
   "paidNow": "Paid now",
   "paidAtMarina": "Paid at marina",
   "sendInquiry": "Send inquiry",
-  "callConsent": "I agree that Nika, the AI assistant of Boat4You, may call me about this inquiry. Calls are recorded and transcribed. <privacy>Privacy Policy</privacy>",
+  "callConsent": {
+    "short": "I agree to be contacted about this inquiry; my details are used only for that.",
+    "more": "More details",
+    "less": "Fewer details",
+    "details": "We reply by e-mail, message or phone. The call may come from Nika, the AI assistant of Boat4You; calls are recorded and transcribed. We use your details only to answer this inquiry and never add you to marketing lists. <privacy>Privacy Policy</privacy>",
+    "required": "Please tick the box so we can contact you about your inquiry."
+  },
   "inquirySentSuccessfully": "Inquiry sent successfully",
   "inquirySentFailed": "Inquiry failed",
   "sendOffer": "Send offer",

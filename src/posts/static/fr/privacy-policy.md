@@ -225,7 +225,7 @@ Avec le même consentement Analytics, nous pouvons également enregistrer vos vi
 
 ## Appels de Nika, notre assistante IA
 
-Si vous cochez la case d'un formulaire de demande pour accepter un appel, Nika, l'assistante IA du groupe Boat4You, peut vous appeler au sujet de cette demande : peu après son envoi, pour confirmer les détails, puis une nouvelle fois après que nous vous avons envoyé une offre. Nika est une intelligence artificielle ; elle le dit au début de chaque appel, et précise que l'appel est enregistré. Sans votre consentement, nous ne passons pas ces appels, et nous répondons à votre demande de la même manière.
+Lorsque vous envoyez une demande, vous acceptez que nous vous contactions à son sujet par e-mail, message ou téléphone. L'appel peut venir de Nika, l'assistante IA du groupe Boat4You : peu après l'envoi de la demande, pour confirmer les détails, puis une nouvelle fois après que nous vous avons envoyé une offre. Nika est une intelligence artificielle ; elle le dit au début de chaque appel, et précise que l'appel est enregistré. Si vous ne souhaitez pas d'appel, dites-le à Nika ou écrivez-nous, et nous vous répondrons par e-mail.
 
 Les appels sont enregistrés et transcrits afin que notre équipe puisse préparer votre offre et contrôler la qualité du service. Si vous dites à Nika que vous ne souhaitez pas que l'appel soit enregistré, l'appel prend fin, l'enregistrement est supprimé et un membre de notre équipe vous appellera à la place. Si vous demandez que l'on ne vous appelle plus, nous marquons votre numéro et Nika ne l'appelle plus.
 

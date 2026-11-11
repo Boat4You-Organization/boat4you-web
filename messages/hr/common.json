@@ -285,7 +285,13 @@
   "paidNow": "Plati sada",
   "paidAtMarina": "Plati u marini",
   "sendInquiry": "Pošaljite upit",
-  "callConsent": "Slažem se da me u vezi ovog upita nazove Nika, AI asistentica Boat4You. Pozivi se snimaju i zapisuju. <privacy>Politika privatnosti</privacy>",
+  "callConsent": {
+    "short": "Slažem se da me kontaktirate u vezi ovog upita; moje podatke koristite samo za to.",
+    "more": "Više detalja",
+    "less": "Manje detalja",
+    "details": "Javit ćemo vam se e-poštom, porukom ili telefonom. Može vas nazvati i Nika, AI asistentica Boat4You; pozivi se snimaju i zapisuju. Vaše podatke koristimo samo za odgovor na ovaj upit i ne dodajemo vas na marketinške liste. <privacy>Politika privatnosti</privacy>",
+    "required": "Označite kvačicu kako bismo vas mogli kontaktirati u vezi upita."
+  },
   "inquirySentSuccessfully": "Upit je uspješno poslan",
   "inquirySentFailed": "Upit nije poslan",
   "sendOffer": "Pošalji ponudu",

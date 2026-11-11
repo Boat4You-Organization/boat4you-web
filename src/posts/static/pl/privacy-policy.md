@@ -196,7 +196,7 @@ Za tą samą zgodą na analitykę możemy też nagrywać Twoje wizyty: jak wygl�
 
 ## Rozmowy telefoniczne z Niką, naszą asystentką AI
 
-Jeśli w formularzu zapytania zaznaczysz pole zgody na rozmowę, Nika, asystentka AI grupy Boat4You, może zadzwonić do Ciebie w sprawie tego zapytania: wkrótce po jego wysłaniu, aby potwierdzić szczegóły, i jeszcze raz po tym, jak wyślemy Ci ofertę. Nika jest sztuczną inteligencją; mówi o tym na początku każdej rozmowy, a także o tym, że rozmowa jest nagrywana. Bez Twojej zgody nie wykonujemy takich połączeń, a na Twoje zapytanie odpowiadamy tak samo.
+Wysyłając zapytanie, zgadzasz się, abyśmy kontaktowali się z Tobą w jego sprawie e-mailem, wiadomością lub telefonicznie. Może do Ciebie zadzwonić Nika, asystentka AI grupy Boat4You: wkrótce po wysłaniu zapytania, aby potwierdzić szczegóły, i jeszcze raz po tym, jak wyślemy Ci ofertę. Nika jest sztuczną inteligencją; mówi o tym na początku każdej rozmowy, a także o tym, że rozmowa jest nagrywana. Jeśli nie chcesz rozmowy telefonicznej, powiedz o tym Nice lub napisz do nas, a odpowiemy Ci e-mailem.
 
 Rozmowy są nagrywane i transkrybowane, aby nasz zespół mógł przygotować Twoją ofertę i sprawdzać jakość obsługi. Jeśli powiesz Nice, że nie chcesz, aby rozmowa była nagrywana, rozmowa się kończy, nagranie zostaje usunięte, a zamiast niej zadzwoni do Ciebie członek naszego zespołu. Jeśli poprosisz, abyśmy więcej nie dzwonili, oznaczamy Twój numer i Nika już na niego nie dzwoni.
 

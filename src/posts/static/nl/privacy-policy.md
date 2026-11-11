@@ -201,7 +201,7 @@ Met dezelfde toestemming voor Analyse kunnen we ook je bezoeken opnemen: hoe de 
 
 ## Telefoongesprekken met Nika, onze AI-assistente
 
-Als u op een aanvraagformulier het vakje aanvinkt om in te stemmen met een telefoongesprek, mag Nika, de AI-assistente van de Boat4You-groep, u over die aanvraag bellen: kort nadat u de aanvraag hebt verstuurd, om de details te bevestigen, en nog een keer nadat we u een offerte hebben gestuurd. Nika is een kunstmatige intelligentie; dat zegt ze aan het begin van elk gesprek, en ook dat het gesprek wordt opgenomen. Zonder uw toestemming voeren we zulke gesprekken niet, en we beantwoorden uw aanvraag net zo goed.
+Als u een aanvraag verstuurt, gaat u ermee akkoord dat we daarover contact met u opnemen per e-mail, bericht of telefoon. U kunt ook gebeld worden door Nika, de AI-assistente van de Boat4You-groep: kort nadat u de aanvraag hebt verstuurd, om de details te bevestigen, en nog een keer nadat we u een offerte hebben gestuurd. Nika is een kunstmatige intelligentie; dat zegt ze aan het begin van elk gesprek, en ook dat het gesprek wordt opgenomen. Wilt u niet gebeld worden, zeg het dan tegen Nika of schrijf ons, dan antwoorden we u per e-mail.
 
 Gesprekken worden opgenomen en getranscribeerd zodat ons team uw offerte kan voorbereiden en de kwaliteit van de service kan controleren. Als u Nika zegt dat u niet wilt dat het gesprek wordt opgenomen, wordt het gesprek beëindigd, wordt de opname verwijderd en belt een medewerker van ons team u in plaats daarvan. Als u vraagt om niet meer gebeld te worden, markeren we uw nummer en belt Nika het niet meer.
 

@@ -65,7 +65,7 @@ Uz isti pristanak za analitiku možemo snimati i vaše posjete: kako stranica iz
 
 ## Telefonski pozivi Nike, naše AI asistentice
 
-Ako na obrascu za upit označite da pristajete na poziv, Nika, AI asistentica Boat4You grupe, može vas nazvati u vezi tog upita: ubrzo nakon slanja, da potvrdi detalje, i još jednom nakon što vam pošaljemo ponudu. Nika je umjetna inteligencija; to kaže na početku svakog poziva, kao i da se poziv snima. Bez vaše privole takve pozive ne upućujemo, a na upit odgovaramo jednako.
+Kad pošaljete upit, pristajete da vas u vezi tog upita kontaktiramo e-poštom, porukom ili telefonom. Može vas nazvati i Nika, AI asistentica Boat4You grupe: ubrzo nakon slanja, da potvrdi detalje, i još jednom nakon što vam pošaljemo ponudu. Nika je umjetna inteligencija; to kaže na početku svakog poziva, kao i da se poziv snima. Ako ne želite poziv, recite to Niki ili nam pišite i odgovorit ćemo vam e-poštom.
 
 Pozivi se snimaju i zapisuju kako bi naš tim pripremio ponudu i provjerio kvalitetu usluge. Ako Niki kažete da ne želite snimanje, poziv završava, snimka se briše, a nazvat će vas član našeg tima. Ako kažete da vas više ne zovemo, vaš broj označavamo i Nika ga više ne zove.
 

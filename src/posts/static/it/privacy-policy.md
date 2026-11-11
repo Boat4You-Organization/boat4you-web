@@ -202,7 +202,7 @@ Con lo stesso consenso Analisi possiamo anche registrare le tue visite: come app
 
 ## Chiamate di Nika, la nostra assistente IA
 
-Se in un modulo di richiesta spunta la casella per acconsentire a una chiamata, Nika, l'assistente IA del gruppo Boat4You, può chiamarla in merito a quella richiesta: poco dopo l'invio, per confermare i dettagli, e un'altra volta dopo che le abbiamo inviato un'offerta. Nika è un'intelligenza artificiale; lo dice all'inizio di ogni chiamata, insieme al fatto che la chiamata viene registrata. Senza il suo consenso non effettuiamo queste chiamate, e rispondiamo comunque alla sua richiesta allo stesso modo.
+Quando invia una richiesta, accetta che la contattiamo al riguardo via e-mail, messaggio o telefono. La chiamata può arrivare da Nika, l'assistente IA del gruppo Boat4You: poco dopo l'invio della richiesta, per confermare i dettagli, e un'altra volta dopo che le abbiamo inviato un'offerta. Nika è un'intelligenza artificiale; lo dice all'inizio di ogni chiamata, insieme al fatto che la chiamata viene registrata. Se preferisce non ricevere chiamate, lo dica a Nika oppure ci scriva e le risponderemo via e-mail.
 
 Le chiamate vengono registrate e trascritte affinché il nostro team possa preparare la sua offerta e verificare la qualità del servizio. Se dice a Nika che non desidera che la chiamata venga registrata, la chiamata termina, la registrazione viene cancellata e la chiamerà invece un membro del nostro team. Se chiede di non ricevere altre chiamate, contrassegniamo il suo numero e Nika non lo chiama più.
 

@@ -321,7 +321,13 @@
   "paidNow": "Płacone teraz",
   "paidAtMarina": "Płacone w marinie",
   "sendInquiry": "Wyślij zapytanie",
-  "callConsent": "Wyrażam zgodę na to, aby Nika, asystentka AI Boat4You, zadzwoniła do mnie w sprawie tego zapytania. Rozmowy są nagrywane i transkrybowane. <privacy>Polityka prywatności</privacy>",
+  "callConsent": {
+    "short": "Zgadzam się na kontakt w sprawie tego zapytania; moje dane zostaną wykorzystane wyłącznie w tym celu.",
+    "more": "Więcej szczegółów",
+    "less": "Mniej szczegółów",
+    "details": "Odpowiadamy e-mailem, wiadomością lub telefonicznie. Może do Ciebie zadzwonić Nika, asystentka AI Boat4You; rozmowy są nagrywane i transkrybowane. Twoje dane wykorzystujemy wyłącznie do odpowiedzi na to zapytanie i nigdy nie dodajemy Cię do list marketingowych. <privacy>Polityka prywatności</privacy>",
+    "required": "Zaznacz pole, abyśmy mogli skontaktować się z Tobą w sprawie Twojego zapytania."
+  },
   "inquirySentSuccessfully": "Zapytanie wysłane pomyślnie",
   "inquirySentFailed": "Zapytanie nie zostało wysłane",
   "sendOffer": "Wyślij ofertę",

@@ -353,7 +353,7 @@ export async function sendYachtInquiry(state: any, formData: FormData): Promise<
     phone: formData.get('phone'),
     message: formData.get('message'),
     // AI call center (backend InquiryDto): where the inquiry came from, its
-    // language and the optional consent to Nika's call. No consent, no call.
+    // language and the contact consent the form requires. No consent, no call.
     site: CALL_SITE,
     locale: String(formData.get('locale') || '').slice(0, 5) || undefined,
     ...callConsentFields(formData.get('contactConsent') === 'true'),

@@ -65,7 +65,7 @@ Mit derselben Einwilligung zu Analytics können wir außerdem Ihre Besuche aufze
 
 ## Anrufe von Nika, unserer KI-Assistentin
 
-Wenn Sie in einem Anfrageformular das Kästchen ankreuzen und damit einem Anruf zustimmen, darf Nika, die KI-Assistentin der Boat4You-Gruppe, Sie zu dieser Anfrage anrufen: kurz nachdem Sie sie gesendet haben, um die Details zu bestätigen, und noch einmal, nachdem wir Ihnen ein Angebot geschickt haben. Nika ist eine künstliche Intelligenz; das sagt sie zu Beginn jedes Anrufs, ebenso dass der Anruf aufgezeichnet wird. Ohne Ihre Einwilligung führen wir solche Anrufe nicht durch, und wir beantworten Ihre Anfrage trotzdem genauso.
+Wenn Sie eine Anfrage senden, sind Sie damit einverstanden, dass wir Sie dazu per E-Mail, Nachricht oder Telefon kontaktieren. Der Anruf kann auch von Nika kommen, der KI-Assistentin der Boat4You-Gruppe: kurz nachdem Sie die Anfrage gesendet haben, um die Details zu bestätigen, und noch einmal, nachdem wir Ihnen ein Angebot geschickt haben. Nika ist eine künstliche Intelligenz; das sagt sie zu Beginn jedes Anrufs, ebenso dass der Anruf aufgezeichnet wird. Wenn Sie keinen Anruf wünschen, sagen Sie es Nika oder schreiben Sie uns, und wir antworten Ihnen per E-Mail.
 
 Anrufe werden aufgezeichnet und transkribiert, damit unser Team Ihr Angebot vorbereiten und die Qualität des Service prüfen kann. Wenn Sie Nika sagen, dass Sie nicht aufgezeichnet werden möchten, wird der Anruf beendet, die Aufzeichnung gelöscht und stattdessen ruft Sie jemand aus unserem Team an. Wenn Sie darum bitten, nicht mehr angerufen zu werden, markieren wir Ihre Nummer und Nika ruft sie nicht mehr an.
 
