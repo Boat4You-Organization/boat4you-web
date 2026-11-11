@@ -1,5 +1,11 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-11-11 — 📞 Upit: talijanski i nizozemski tekst privole i odjeljka o Niki u „tu“ / „je“ — ✅ LIVE 11.11.2026 ~19:14 UTC (`b1f3d1990`, deployment id b1f3d1990bb8-mwchs20z, tag `live/2026-11-11-calls-forms-2`)
+
+**Što (Mario 11.11. „sredi sve otvoreno“):** tekst kvačice privole (`common.callConsent`) i odjeljak „Telefonski pozivi Nike“ u politici privatnosti obraćali su se formalno (Lei, u), a ostatak stranice na ta dva jezika neformalno. Samo tekst, bez promjene koda. Build nosi i dva deploya drugih sesija s `main` (Stripe uklonjen, slični brodovi).
+
+**Provjereno:** lint 0 grešaka; uživo: dpl na `/contact-us` i `/search`, novi tekst na `/it/privacy-policy` i `/nl/privacy-policy`, SEO Stage B bez novih padova. Testni upit s boat4you.com viđen je u adminu (Call centar → Upiti) nakon prvog deploya istog dana.
+
 ## 2026-11-11 — 📏 „Slični brodovi“ bez dužine u API pozivu — ✅ LIVE 11.11.2026 18:13 UTC (`d3ac8d64f`, deployment id d3ac8d64f880-mwcfqugr, tag `live/2026-11-11-related-boats-no-length`)
 
 **Zašto:** backend mijenja filter dužine (`minLength` / `maxLength`) iz „stope na `en`, metri na ostalim jezicima“ u **metre na svim jezicima** (backend grana `fix/length-filter-meters`; klizač dužine na svih 7 sajtova radi u metrima, pa je na engleskom „do 20 m“ davao 0 plovila). Sekcija „Slični brodovi“ na stranici broda pita API pod `en` na svim jezicima i slala je prozor ±5 ft u stopama, pa bi nakon backend promjene ostala prazna.
