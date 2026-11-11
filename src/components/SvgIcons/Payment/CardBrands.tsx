@@ -3,7 +3,7 @@ import { SVGProps } from 'react';
 /**
  * Visa + Mastercard + American Express acceptance marks shown next to the
  * "Online payments / Credit card" option — a visual trust cue stronger than
- * the "Powered by Stripe" caption alone. Simplified brand marks (VISA
+ * a text caption alone. Simplified brand marks (VISA
  * wordmark, Mastercard interlocking circles, Amex blue box) drawn inline so
  * no external asset request is needed.
  */

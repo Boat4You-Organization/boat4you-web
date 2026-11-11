@@ -164,14 +164,14 @@ const DetailsStep = ({
       saveDataToSessionStorage('reservationId', state.payload.id);
 
       // Customer-facing booking number (e.g. "100176/2026") — shown in bank
-      // transfer payment reference, emails, and Stripe checkout instead of the
+      // transfer payment reference, emails, and the card checkout instead of the
       // internal numeric id.
       if (state.payload.reservationNumber) {
         saveDataToSessionStorage('reservationNumber', state.payload.reservationNumber);
       }
 
       // Persist the backend-computed payment phases so /payment can render the
-      // real schedule (matches what Stripe / bank transfer will charge) instead
+      // real schedule (matches what the card / bank transfer will charge) instead
       // of falling back to a client-side approximation.
       if (state.payload.paymentPhases?.length) {
         saveDataToSessionStorage('paymentPhases', state.payload.paymentPhases);
@@ -461,7 +461,7 @@ const DetailsStep = ({
             />
             {/* Loyalty voucher — collapsed link → code input → green applied chip.
                 Applied BEFORE the reservation exists so the backend can absorb
-                the discount into the first installment (Stripe + wire emails). */}
+                the discount into the first installment (card charge + wire emails). */}
             <Box>
               {!appliedVoucher && !voucherOpen && (
                 <Box

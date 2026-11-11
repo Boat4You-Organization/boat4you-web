@@ -86,7 +86,7 @@ const UnifiedPaymentStep = ({ reservationData }: UnifiedPaymentStepProps) => {
   const reservationExpiresAt = getDataFromSessionStorage<string>('reservationExpiresAt');
   // Loyalty voucher applied in DetailsStep. Display-only here: the backend
   // already absorbed it into phase[0], so every amount on this screen (and
-  // what Stripe charges) is correct without further math — do NOT subtract
+  // what the card is charged) is correct without further math — do NOT subtract
   // it again.
   const appliedVoucher = getDataFromSessionStorage<AppliedVoucher>('appliedVoucher');
   // Customer-facing booking number for bank transfer reference / notices.
@@ -95,7 +95,7 @@ const UnifiedPaymentStep = ({ reservationData }: UnifiedPaymentStepProps) => {
   const paymentReference = reservationNumber ?? (reservationId != null ? String(reservationId) : '');
   const apiPhases = getDataFromSessionStorage<ApiPaymentPhase[]>('paymentPhases');
 
-  // Prefer backend-computed phases (carry DB ids Stripe metadata hangs off of),
+  // Prefer backend-computed phases (carry the DB ids the card payment refers to),
   // fall back to the client-side mirror util if the session cache is missing.
   const paymentPhases: DisplayPhase[] = useMemo(() => {
     if (apiPhases && apiPhases.length > 0) {
@@ -154,8 +154,8 @@ const UnifiedPaymentStep = ({ reservationData }: UnifiedPaymentStepProps) => {
 
   const baseDueNow = selectedPhase?.amount ?? 0;
   // Whole-euro fees (no cents) — mirrors the backend exactly:
-  // card: StripePaymentService rounds the surcharge HALF_UP to whole EUR before
-  // charging, so Math.round here always displays the amount Stripe collects;
+  // card: the backend rounds the surcharge HALF_UP to whole EUR before
+  // charging, so Math.round here always displays the amount the card is charged;
   // bank: this phase's share of the fixed per-reservation fee (32 across 2
   // installments → 16 per wire), same split the wire emails use. This screen
   // always pays phase #0 (see selectedPhase above).

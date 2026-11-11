@@ -37,7 +37,6 @@ export interface PaymentPhase {
   deadline: string;
   amount: number;
   paidOn: string;
-  stripePaymentIntentId: string;
 }
 
 export interface ReservationShortInfo {

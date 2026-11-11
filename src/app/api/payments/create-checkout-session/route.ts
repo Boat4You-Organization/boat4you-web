@@ -7,9 +7,9 @@ import { clientIp } from '@/utils/server/clientIp';
 import { authFetch, hasAuthToken } from '@/utils/static/authFetch';
 
 interface CreateCheckoutSessionResponse {
-  /** Hosted checkout URL of the card provider (Mollie; Stripe only behind the backend switch). */
+  /** Hosted checkout URL of the card provider (Mollie). */
   redirectUrl?: string;
-  /** Provider reference of the checkout (Mollie payment id / Stripe session id). */
+  /** Provider reference of the checkout (Mollie payment id). */
   sessionIdOrOrderCode?: string;
   status?: string;
 }

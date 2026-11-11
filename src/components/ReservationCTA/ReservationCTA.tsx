@@ -55,8 +55,8 @@ const ReservationCTA = ({ reservationDetails }: ReservationCTAProps) => {
   const [surchargePercentage, setSurchargePercentage] = useState<number>(0);
 
   // Fetch the card-payment surcharge so we can warn the user it gets added
-  // to the displayed amount at Stripe checkout time (backend applies +% on
-  // StripePaymentService.initiatePayment).
+  // to the displayed amount at card checkout time (the backend applies +%
+  // when it creates the checkout).
   useEffect(() => {
     let cancelled = false;
 
@@ -92,7 +92,7 @@ const ReservationCTA = ({ reservationDetails }: ReservationCTAProps) => {
     // The modal itself adapts: pre-reservation (status=OPTION) shows the
     // yellow "Complete the reservation" warning, post-confirmation (any
     // paid phase) shows the blue "partial paid" notice. Going straight to
-    // Stripe used to lock the customer into card on subsequent instalments
+    // the card checkout used to lock the customer into card on subsequent instalments
     // even if they paid the first one by bank transfer.
     togglePayNowModal();
   };

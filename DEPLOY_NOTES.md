@@ -1,5 +1,28 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-11-11 — 📏 „Slični brodovi“ bez dužine u API pozivu — ✅ LIVE 11.11.2026 18:13 UTC (`d3ac8d64f`, deployment id d3ac8d64f880-mwcfqugr, tag `live/2026-11-11-related-boats-no-length`)
+
+**Zašto:** backend mijenja filter dužine (`minLength` / `maxLength`) iz „stope na `en`, metri na ostalim jezicima“ u **metre na svim jezicima** (backend grana `fix/length-filter-meters`; klizač dužine na svih 7 sajtova radi u metrima, pa je na engleskom „do 20 m“ davao 0 plovila). Sekcija „Slični brodovi“ na stranici broda pita API pod `en` na svim jezicima i slala je prozor ±5 ft u stopama, pa bi nakon backend promjene ostala prazna.
+
+**Što:** `src/views/Boat/RelatedBoats/RelatedBoats.tsx` više ne šalje `minLength` / `maxLength`; pravilo ±5 ft i dalje primjenjuje `pick()` nad dohvaćenim plovilima (isti tip, ista marina, do 500). Ispravno i sa starim i s novim backendom, pa redoslijed deploya nije bitan. Kad je backend s metrima uživo, prozor u metrima se može vratiti da smanji dohvat.
+
+**Provjereno:** lint hook 0 grešaka; neovisni Opus pregled (našao upravo ovaj bloker u backend promjeni); uživo: dpl na `/contact-us` i `/search`, pravni markeri en + de, stranica broda en i hr prikazuje 3 slična broda. **Nije provjereno:** lokalni build u pregledniku prije deploya (lokalni build opterećuje produkcijski API).
+
+**SEO Stage B (quick): 1 novi pad, nije od ovog deploya:** T6 na `/es/search?destinations=marina%20paleros&boatTypes=CATAMARAN`: kartica „Lagoon 42 | Sea Novels“ (ime plovila jednako imenu charter kompanije; podaci partnera, ista vrsta kao poznati B20). Izvještaj: `_seo-audit-2026-11-11/regression/181901-B-boat4you/summary.md`. Mario 11.11.: „ostavi sea novels“ — ime ostaje; u `seo_regression_expected.json` još nije dodano, pa ga provjera i dalje javlja.
+
+## 2026-11-11 — 💳 Stripe uklonjen, kartična naplata je samo Mollie — ✅ LIVE 11.11.2026 17:24 UTC (`feed5b39e`, deployment id feed5b39ecfd-mwcdorak, tag `live/2026-11-11-no-stripe`; backend bez Stripea `c82b89d6` LIVE na cusma2 17:02 UTC)
+
+**Što (Mario 11.11.: „samo ostavi mollie“ → „Da, ukloni“):**
+
+- Paket `@stripe/stripe-js` (nije se uvozio nigdje) van iz `package.json` / `yarn.lock` → deploy je instalirao novi `node_modules` na cusma1 (60 s, stari u `node_modules.prev`).
+- `https://checkout.stripe.com` van s popisa adresa na koje web smije poslati kupca na naplatu (`usePaymentSubmit.tsx`); ostaju Mollie i Klarna.
+- **Jedina promjena ponašanja:** `/payment-success` bez `?paymentRef=` (tako se vraćao samo Stripe) više NE prikazuje „rezervacija potvrđena“ i NE šalje konverziju kupnje, nego neutralnu poruku „potvrđujemo vašu uplatu“. Mollie uvijek vraća kupca s `paymentRef`, pa za prave uplate nema promjene.
+- Komentari i model rate više ne spominju Stripe; `NEXT_PUBLIC_STRIPE_KEY` van iz CI workflowa (u `.env` na cusma1 je još naveden, kod ga ne čita).
+
+**Provjereno:** eslint 0 grešaka; neovisni Opus pregled bez nalaza na webu (jedini put do `/payment-success` je Mollie `redirectUrl` s `paymentRef`); uživo: dpl na `/contact-us` i `/search`, početna / kontakt / pretraga / `/de` 200, pravni markeri en + de, SEO Stage B bez novih padova; API `/public/payments/custom/config` i Klarna ponuda 200. **Nije provjereno:** stvarna kartična naplata do kraja (prava uplata).
+
+**Nedirano:** šest sister stranica ima samo tipsko polje `'Stripe Payment Intent ID'` u `src/models/reservation.model.ts` (nigdje se ne čita).
+
 ## 2026-11-11 — 📞 Upit: obavezna privola za kontakt + podaci za AI call centar — ✅ LIVE 11.11.2026 ~16:10 UTC (`39cc318ab`, deployment id 39cc318ab631-mwcbjepb, tag `live/2026-11-11-calls-forms`)
 
 **Što (AI call centar, faza 3; Mario 11.11.):** modal upita (`BoatInquiryModal`) ima obaveznu kvačicu s kratkim tekstom privole („slažem se da me kontaktirate u vezi ovog upita; podaci samo za to“) i „Više detalja“ (e-pošta, poruka, telefon, poziv Nike, snimanje, poveznica na politiku). Bez kvačice forma javlja grešku i ne šalje. `sendYachtInquiry` uz upit šalje `site=boat4you`, `locale`, `contactConsent`, `consentTextVersion=calls-consent-v1` (`src/utils/static/callConsent.ts`). Politika privatnosti: novi odjeljak „Telefonski pozivi Nike“ iza odjeljka o Iris, 9 jezika.
