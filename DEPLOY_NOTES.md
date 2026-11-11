@@ -1,5 +1,15 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-11-11 — 📏 „Slični brodovi“ bez dužine u API pozivu — ✅ LIVE 11.11.2026 18:13 UTC (`d3ac8d64f`, deployment id d3ac8d64f880-mwcfqugr, tag `live/2026-11-11-related-boats-no-length`)
+
+**Zašto:** backend mijenja filter dužine (`minLength` / `maxLength`) iz „stope na `en`, metri na ostalim jezicima“ u **metre na svim jezicima** (backend grana `fix/length-filter-meters`; klizač dužine na svih 7 sajtova radi u metrima, pa je na engleskom „do 20 m“ davao 0 plovila). Sekcija „Slični brodovi“ na stranici broda pita API pod `en` na svim jezicima i slala je prozor ±5 ft u stopama, pa bi nakon backend promjene ostala prazna.
+
+**Što:** `src/views/Boat/RelatedBoats/RelatedBoats.tsx` više ne šalje `minLength` / `maxLength`; pravilo ±5 ft i dalje primjenjuje `pick()` nad dohvaćenim plovilima (isti tip, ista marina, do 500). Ispravno i sa starim i s novim backendom, pa redoslijed deploya nije bitan. Kad je backend s metrima uživo, prozor u metrima se može vratiti da smanji dohvat.
+
+**Provjereno:** lint hook 0 grešaka; neovisni Opus pregled (našao upravo ovaj bloker u backend promjeni); uživo: dpl na `/contact-us` i `/search`, pravni markeri en + de, stranica broda en i hr prikazuje 3 slična broda. **Nije provjereno:** lokalni build u pregledniku prije deploya (lokalni build opterećuje produkcijski API).
+
+**SEO Stage B (quick): 1 novi pad, nije od ovog deploya:** T6 na `/es/search?destinations=marina%20paleros&boatTypes=CATAMARAN`: kartica „Lagoon 42 | Sea Novels“ (ime plovila jednako imenu charter kompanije; podaci partnera, ista vrsta kao poznati B20). Izvještaj: `_seo-audit-2026-11-11/regression/181901-B-boat4you/summary.md`. Čeka Mariovu odluku (preimenovati prikaz ili dodati u očekivane).
+
 ## 2026-11-11 — 💳 Stripe uklonjen, kartična naplata je samo Mollie — ✅ LIVE 11.11.2026 17:24 UTC (`feed5b39e`, deployment id feed5b39ecfd-mwcdorak, tag `live/2026-11-11-no-stripe`; backend bez Stripea `c82b89d6` LIVE na cusma2 17:02 UTC)
 
 **Što (Mario 11.11.: „samo ostavi mollie“ → „Da, ukloni“):**
