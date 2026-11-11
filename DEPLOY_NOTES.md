@@ -1,5 +1,18 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-11-11 — 💳 Stripe uklonjen, kartična naplata je samo Mollie — ✅ LIVE 11.11.2026 17:24 UTC (`feed5b39e`, deployment id feed5b39ecfd-mwcdorak, tag `live/2026-11-11-no-stripe`; backend bez Stripea `c82b89d6` LIVE na cusma2 17:02 UTC)
+
+**Što (Mario 11.11.: „samo ostavi mollie“ → „Da, ukloni“):**
+
+- Paket `@stripe/stripe-js` (nije se uvozio nigdje) van iz `package.json` / `yarn.lock` → deploy je instalirao novi `node_modules` na cusma1 (60 s, stari u `node_modules.prev`).
+- `https://checkout.stripe.com` van s popisa adresa na koje web smije poslati kupca na naplatu (`usePaymentSubmit.tsx`); ostaju Mollie i Klarna.
+- **Jedina promjena ponašanja:** `/payment-success` bez `?paymentRef=` (tako se vraćao samo Stripe) više NE prikazuje „rezervacija potvrđena“ i NE šalje konverziju kupnje, nego neutralnu poruku „potvrđujemo vašu uplatu“. Mollie uvijek vraća kupca s `paymentRef`, pa za prave uplate nema promjene.
+- Komentari i model rate više ne spominju Stripe; `NEXT_PUBLIC_STRIPE_KEY` van iz CI workflowa (u `.env` na cusma1 je još naveden, kod ga ne čita).
+
+**Provjereno:** eslint 0 grešaka; neovisni Opus pregled bez nalaza na webu (jedini put do `/payment-success` je Mollie `redirectUrl` s `paymentRef`); uživo: dpl na `/contact-us` i `/search`, početna / kontakt / pretraga / `/de` 200, pravni markeri en + de, SEO Stage B bez novih padova; API `/public/payments/custom/config` i Klarna ponuda 200. **Nije provjereno:** stvarna kartična naplata do kraja (prava uplata).
+
+**Nedirano:** šest sister stranica ima samo tipsko polje `'Stripe Payment Intent ID'` u `src/models/reservation.model.ts` (nigdje se ne čita).
+
 ## 2026-11-11 — 📞 Upit: obavezna privola za kontakt + podaci za AI call centar — ✅ LIVE 11.11.2026 ~16:10 UTC (`39cc318ab`, deployment id 39cc318ab631-mwcbjepb, tag `live/2026-11-11-calls-forms`)
 
 **Što (AI call centar, faza 3; Mario 11.11.):** modal upita (`BoatInquiryModal`) ima obaveznu kvačicu s kratkim tekstom privole („slažem se da me kontaktirate u vezi ovog upita; podaci samo za to“) i „Više detalja“ (e-pošta, poruka, telefon, poziv Nike, snimanje, poveznica na politiku). Bez kvačice forma javlja grešku i ne šalje. `sendYachtInquiry` uz upit šalje `site=boat4you`, `locale`, `contactConsent`, `consentTextVersion=calls-consent-v1` (`src/utils/static/callConsent.ts`). Politika privatnosti: novi odjeljak „Telefonski pozivi Nike“ iza odjeljka o Iris, 9 jezika.
