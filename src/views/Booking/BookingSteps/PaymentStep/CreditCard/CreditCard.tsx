@@ -84,7 +84,7 @@ const CreditCard = ({
               {t('baseAmount')}
             </Typography>
             <Typography variant="body2">
-              {formatPriceWithCurrency({ clientPriceEur: baseAmountEur!, locale })}
+              {formatPriceWithCurrency({ clientPriceEur: baseAmountEur!, locale, cents: 'auto' })}
             </Typography>
           </Stack>
           <Stack direction="row" justifyContent="space-between" alignItems="baseline" mt={0.5}>
@@ -101,7 +101,7 @@ const CreditCard = ({
               {t('totalToPay')}
             </Typography>
             <Typography variant="body1" fontWeight={700} color={colors.blue500}>
-              {formatPriceWithCurrency({ clientPriceEur: totalAmountEur!, locale })}
+              {formatPriceWithCurrency({ clientPriceEur: totalAmountEur!, locale, cents: 'auto' })}
             </Typography>
           </Stack>
         </Box>

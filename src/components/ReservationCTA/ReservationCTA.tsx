@@ -188,6 +188,7 @@ const ReservationCTA = ({ reservationDetails }: ReservationCTAProps) => {
                               {formatPriceWithCurrency({
                                 clientPriceEur: phase.amount,
                                 locale,
+                                cents: 'auto',
                               })}
                             </Typography>
                           </Stack>
@@ -224,6 +225,7 @@ const ReservationCTA = ({ reservationDetails }: ReservationCTAProps) => {
                         }
                       : undefined,
                     locale,
+                    cents: 'auto',
                   })}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">

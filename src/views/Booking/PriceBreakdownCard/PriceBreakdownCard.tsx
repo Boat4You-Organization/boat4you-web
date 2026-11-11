@@ -222,6 +222,7 @@ const PriceBreakdownCard = ({
                       }
                     : undefined,
                   locale,
+                  cents: 'auto',
                 });
                 const dateStr = DateTime.formatLongWithoutDay(phase.deadline, locale);
 

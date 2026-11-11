@@ -155,6 +155,7 @@ const BookingReviewModal = ({
                                 }
                               : undefined,
                           locale,
+                          cents: 'auto',
                         })}
                       </Typography>
                       <Typography className={styles.phaseDeadline}>

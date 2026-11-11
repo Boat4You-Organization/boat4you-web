@@ -8,8 +8,10 @@ interface PriceInfo {
 
 /**
  * `'auto'` = two decimals only when the price has cents, for extras and fees
- * (a tourist tax of 1.33 € per person per night, 9.31 € for the week). Every
- * other price stays whole (boat totals, instalments, deposits).
+ * (a tourist tax of 1.33 € per person per night, 9.31 € for the week) and for
+ * instalments and the amount paid now (charged to the cent: 2,677.60 € must
+ * not read 2,678 €; 11.11.2026). Every other price stays whole (boat totals,
+ * deposits).
  *
  * The cents are judged on the partner's own EUR price when there is one, so a
  * whole 300 € extra converted to 336.12 $ still reads "336 $" (no sudden cents

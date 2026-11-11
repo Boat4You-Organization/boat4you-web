@@ -206,7 +206,8 @@ const PayNowModal = ({ isOpen, onClose, reservationId, reservationNumber, paymen
 
   const dueNowDeadline = oldestUnpaid ? dayjs(oldestUnpaid.deadline) : dayjs();
   const dateFormatter = (d: dayjs.Dayjs) => d.locale(locale).format('D MMMM YYYY');
-  const fmt = (eur: number) => formatPriceWithCurrency({ clientPriceEur: eur, locale });
+  // Exact amounts: an instalment with cents (2,677.60 €) is shown with its cents, as it is charged.
+  const fmt = (eur: number) => formatPriceWithCurrency({ clientPriceEur: eur, locale, cents: 'auto' });
 
   const { handleSubmit, isLoading } = usePaymentSubmit({
     paymentMethod,

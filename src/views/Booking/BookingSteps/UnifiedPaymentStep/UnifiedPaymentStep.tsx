@@ -215,7 +215,8 @@ const UnifiedPaymentStep = ({ reservationData }: UnifiedPaymentStepProps) => {
 
   const dueNowDeadline = paymentPhases[0]?.deadline ?? dayjs();
   const dateFormatter = (d: dayjs.Dayjs) => d.locale(locale).format('D MMMM YYYY');
-  const fmt = (eur: number) => formatPriceWithCurrency({ clientPriceEur: eur, locale });
+  // Exact amounts: an instalment with cents (2,677.60 €) is shown with its cents, as it is charged.
+  const fmt = (eur: number) => formatPriceWithCurrency({ clientPriceEur: eur, locale, cents: 'auto' });
 
   // Free-cancellation trust tick — the partner option expiry
   // (reservationExpiresAt) when the option exists (Mario 2.7.2026: free
