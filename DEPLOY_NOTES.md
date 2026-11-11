@@ -1,5 +1,15 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-11-11 — 💶 Rate i iznos „plati sada“ s centima — ✅ LIVE 11.11.2026 12:26 UTC (`f6d416b7b`, deployment id f6d416b7bbce-mwc34zed, na `origin/main`)
+
+**Što (Mario 11.11., stavka 7):** prozor „Pay now“ (my-bookings), korak plaćanja u bookingu i popisi rata prikazivali su ratu zaokruženu na cijele eure (2.678 €), a kartica se tereti točan iznos (2.677,60 €). Sada svi prolaze kroz `formatPriceWithCurrency({ cents: 'auto' })`: iznos s centima piše se s centima, cijeli iznos ostaje cijeli. Ukupna cijena broda i depozit ostaju cijeli. Doplata za karticu/Klarnu i dalje je cijeli euro (backend `CardChargeCalculator.surcharge`), aritmetika nije dirana.
+
+**Datoteke:** `PayNowModal`, `UnifiedPaymentStep`, `PaymentStep/CreditCard` (trenutno se ne renderira), `ReservationCTA` (raspored rata + „upcoming payment“), `BookingReviewModal`, `PriceBreakdownCard`, `Trip/TripHub` („Next installment“, nalaz pregleda), komentar u `formatPriceCurrency.ts`.
+
+**Provjereno:** tsc 0, eslint 0 grešaka, `yarn test:price` 10/10, neovisni Opus pregled (bez blokada), deploy skripta: dpl na `/contact-us` i `/search`, pravni markeri, SEO Stage B bez novih padova; `/`, `/de`, `/search`, `/hr/search`, `/pay/<ključ>` 200. **Nije provjereno u pregledniku:** sam prozor „Pay now“ (traži prijavljenu rezervaciju s neplaćenom ratom koja ima cente).
+
+**Napomena:** prvi pokušaj deploya (12:17 UTC) stao je na prvom `sudo` na cusma1, bez ikakve promjene (u `/tmp/.aud_pw1` bila je lozinka drugog poslužitelja; ssh na cusma1 prolazi ključem pa proba prijave to ne otkriva — sudo provjeriti s `sudo -S true`).
+
 ## 2026-11-10 — 💳 Footer: Klarna logo u redu plaćanja — ✅ LIVE 10.11.2026 ~18:58 UTC (`1df16dab0`, deployment id 1df16dab09e7-mwb1w85t, tag `live/2026-11-10-footer-klarna`)
 
 **Što (Mario 10.11.: „amex je ukljucen, potvrdjeno, karmu stavi“, zatim „ja san tia da stavis karma logo u futter od boat4you prvo, pa ce mo poslje drugo radit“):** Mollieva ikona Klarne (`public/images/payments/klarna-payment-method.svg`, 32×24) iza Google Paya u `footerPaymentMethods`. Mario je svjesno odlučio prikazati Klarnu prije nego što je checkout nudi; Klarna je od 20:07 UTC uživo i na plaćanju (booking + `/pay`, web `1396bc092`, backend `e20302a4`; adrese naplate u 12 država eurozone), pa logo sad odgovara checkoutu. Sisteri nisu dirani.
