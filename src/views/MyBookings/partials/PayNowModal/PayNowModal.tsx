@@ -38,7 +38,7 @@ import { useUserStore } from '@/valtio/user/user.store';
  *   • Two radio cards — Online payment (card) / Bank transfer
  *   • Each card shows amount + method fee + total-to-pay breakdown
  *   • Bank transfer card expands into copy-able account details
- *   • "Pay now €XX,YY" button posts to Stripe checkout for card,
+ *   • "Pay now €XX,YY" button opens the card checkout (Mollie) for card,
  *     or bank-redirect (existing usePaymentSubmit flow) for bank
  *
  * Two behavioural differences vs UnifiedPaymentStep:
@@ -149,8 +149,8 @@ const PayNowModal = ({ isOpen, onClose, reservationId, reservationNumber, paymen
 
   const baseDueNow = oldestUnpaid?.amount ?? 0;
   // Whole-euro fees (no cents) — mirrors the backend exactly:
-  // card: StripePaymentService rounds the surcharge HALF_UP to whole EUR, so
-  // Math.round always displays the amount Stripe collects; bank: THIS phase's
+  // card: the backend rounds the surcharge HALF_UP to whole EUR, so
+  // Math.round always displays the amount the card is charged; bank: THIS phase's
   // share of the fixed per-reservation fee (32 across 2 installments → 16 per
   // wire) — indexed by the phase's position in the deadline-sorted schedule,
   // same split the wire emails use.
@@ -214,7 +214,7 @@ const PayNowModal = ({ isOpen, onClose, reservationId, reservationNumber, paymen
     reservationId: reservationId != null ? String(reservationId) : '',
     payFullAmount,
     // Pin to the next-due unpaid phase — mirrors the UnifiedPaymentStep
-    // behaviour on the booking flow. Backend StripePaymentService honours
+    // behaviour on the booking flow. The backend honours
     // paymentPhaseId over payFullAmount when both are present.
     paymentPhaseId: oldestUnpaid?.id,
     idempotencyKey,
@@ -489,7 +489,7 @@ const PayNowModal = ({ isOpen, onClose, reservationId, reservationNumber, paymen
           customer needs, no DB action is required (the unpaid phase already
           exists, payment is reconciled when funds arrive). The button is
           still shown for:
-            • CREDIT_CARD (always, since clicking opens Stripe checkout), and
+            • CREDIT_CARD (always, since clicking opens the card checkout), and
             • BANK_TRANSFER on a fresh OPTION (clicking marks the reservation
               and triggers the confirmation email — without that click the
               option would expire). */}

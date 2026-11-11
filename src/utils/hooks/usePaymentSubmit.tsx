@@ -18,11 +18,11 @@ interface BookingContact {
 }
 
 /**
- * Hosted card checkouts the browser may be sent to: Mollie (the card provider) and Stripe (kept behind the backend
- * switch as an emergency fallback). Anything else is never opened.
+ * Hosted card checkouts the browser may be sent to: Mollie (the card provider) and Klarna's own page. Anything else
+ * is never opened.
  */
 // pay.klarna.com: a live Klarna payment opens Klarna's own hosted page directly (Mollie's test mode stays on mollie.com).
-const CARD_CHECKOUT_ORIGINS = ['https://www.mollie.com', 'https://pay.klarna.com', 'https://checkout.stripe.com'];
+const CARD_CHECKOUT_ORIGINS = ['https://www.mollie.com', 'https://pay.klarna.com'];
 
 const isCardCheckoutUrl = (url: unknown): url is string => {
   if (typeof url !== 'string') return false;
@@ -124,7 +124,7 @@ export const usePaymentSubmit = ({
 
       const data = await response.json();
 
-      // The backend returns the provider's hosted checkout URL (Mollie; Stripe only behind the backend switch).
+      // The backend returns the provider's hosted checkout URL (Mollie).
       if (isCardCheckoutUrl(data.redirectUrl)) {
         window.location.href = data.redirectUrl;
 

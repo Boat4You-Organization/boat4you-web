@@ -154,8 +154,8 @@ const PayMethodChoice = ({
 };
 
 /**
- * Card payment for a contract made outside the booking flow, as on the old
- * Stripe payment link: e-mail, booking confirmation number, amount, Pay. The
+ * Card payment for a contract made outside the booking flow: e-mail, booking
+ * confirmation number, amount, Pay. The
  * backend creates a Mollie payment and the browser goes to Mollie's hosted
  * checkout. No terms checkbox and no second step (Mario): the legal line above
  * the button states the acceptance and the request carries acceptTerms.

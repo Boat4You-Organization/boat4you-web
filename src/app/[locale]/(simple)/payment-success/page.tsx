@@ -38,8 +38,8 @@ const STATUS_DELAYS_MS = [0, 2000, 3000, 5000];
  * The card provider (Mollie) sends the payer back here after the checkout — also when the card was declined or the
  * payer used the checkout's back link. `?paymentRef=` is our checkout token: ask the backend (which asks Mollie)
  * until the payment is paid or clearly not completed. Still PENDING / UNKNOWN after the last check: a neutral "we are
- * confirming your payment" page — never the booking-confirmed copy, never the purchase conversion. No paymentRef =
- * the old Stripe success URL, which Stripe only used after a payment.
+ * confirming your payment" page — never the booking-confirmed copy, never the purchase conversion. The same without
+ * a paymentRef: nothing sends a payer here without one, so such a visit proves no payment.
  */
 const askCardStatus = async (paymentRef: string): Promise<CardStatus> => {
   try {
@@ -110,9 +110,11 @@ const PaymentSuccessPage = () => {
       }
 
       const paymentRef = searchParams.get('paymentRef');
-      let paid = true;
+      let paid = false;
 
-      if (paymentRef) {
+      if (!paymentRef) {
+        setPaymentConfirmed(false);
+      } else {
         const status = await cardStatus(paymentRef);
 
         if (status === 'PAYMENT_NOT_COMPLETED') {
