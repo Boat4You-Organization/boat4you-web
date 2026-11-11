@@ -1,5 +1,13 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-11-11 — 📞 Upit: obavezna privola za kontakt + podaci za AI call centar — ✅ LIVE 11.11.2026 ~16:10 UTC (`39cc318ab`, deployment id 39cc318ab631-mwcbjepb, tag `live/2026-11-11-calls-forms`)
+
+**Što (AI call centar, faza 3; Mario 11.11.):** modal upita (`BoatInquiryModal`) ima obaveznu kvačicu s kratkim tekstom privole („slažem se da me kontaktirate u vezi ovog upita; podaci samo za to“) i „Više detalja“ (e-pošta, poruka, telefon, poziv Nike, snimanje, poveznica na politiku). Bez kvačice forma javlja grešku i ne šalje. `sendYachtInquiry` uz upit šalje `site=boat4you`, `locale`, `contactConsent`, `consentTextVersion=calls-consent-v1` (`src/utils/static/callConsent.ts`). Politika privatnosti: novi odjeljak „Telefonski pozivi Nike“ iza odjeljka o Iris, 9 jezika.
+
+**Provjereno:** lint 0 grešaka, `next build`; lokalno protiv backend jara s `origin/main` nad praznom bazom: upit s kvačicom → redak `site=boat4you`, jezik stranice, `contact_consent=true`, `phone_e164`; prazna forma → greška uz kvačicu. Uživo: dpl na `/contact-us` i `/search`, odjeljak o Niki na `/privacy-policy` (en, hr, de), tekst privole u HTML-u stranice broda, SEO Stage B bez novih padova. **Nije provjereno:** pravi upit uživo (redak u adminu Call centar → Upiti); neovisni pregled koda nije rađen.
+
+**Napomena:** pozivi su i dalje isključeni (`calls.enabled=false`); backend za svaki upit s privolom i čitljivim brojem već sada planira poziv (red SCHEDULED), koji se ne bira dok su pozivi isključeni.
+
 ## 2026-11-11 — 💶 Rate i iznos „plati sada“ s centima — ✅ LIVE 11.11.2026 12:26 UTC (`f6d416b7b`, deployment id f6d416b7bbce-mwc34zed, na `origin/main`)
 
 **Što (Mario 11.11., stavka 7):** prozor „Pay now“ (my-bookings), korak plaćanja u bookingu i popisi rata prikazivali su ratu zaokruženu na cijele eure (2.678 €), a kartica se tereti točan iznos (2.677,60 €). Sada svi prolaze kroz `formatPriceWithCurrency({ cents: 'auto' })`: iznos s centima piše se s centima, cijeli iznos ostaje cijeli. Ukupna cijena broda i depozit ostaju cijeli. Doplata za karticu/Klarnu i dalje je cijeli euro (backend `CardChargeCalculator.surcharge`), aritmetika nije dirana.
