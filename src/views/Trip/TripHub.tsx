@@ -26,6 +26,7 @@ import {
   IconWaves,
 } from '@/components/SvgIcons/UiEmojiIcons';
 import { areaForMarina, suggestedRoutesForArea } from '@/helper/itineraryMatch';
+import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
 import type { CapacityDto } from '@/utils/static/yachtCapacity';
 
 import TripSocial, { TripOwnerCredentials } from './TripSocial';
@@ -795,7 +796,12 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment, ownerCredentials, yachtCap
                       style={{ ...S.card, display: 'block', textDecoration: 'none', color: 'inherit' }}
                     >
                       <div style={{ fontWeight: 800, fontSize: 14 }}>
-                        Next installment: {Math.round(ownerPayment.nextAmountEur).toLocaleString('en-GB')} €
+                        Next installment:{' '}
+                        {formatPriceWithCurrency({
+                          clientPriceEur: ownerPayment.nextAmountEur,
+                          locale: 'en-GB',
+                          cents: 'auto',
+                        })}
                       </div>
                       <div style={S.sub}>
                         {ownerPayment.nextDeadline ? `Due by ${fmtDate(ownerPayment.nextDeadline)} · ` : ''}
