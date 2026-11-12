@@ -19,7 +19,7 @@
   },
   "listCta": {
     "title": "Hai trovato la rotta che fa per te?",
-    "lede": "Ogni itinerario parte da una marina piena di barche prenotabili online — scegli la tua settimana, confronta i prezzi in tempo reale e prenota con cancellazione gratuita.",
+    "lede": "Ogni itinerario parte da una marina piena di barche prenotabili online — scegli la tua settimana, confronta i prezzi in tempo reale e prenota con cancellazione gratuita se lo fai più di 14 giorni prima.",
     "action": "Trova la tua barca"
   },
   "areaHero": {
@@ -44,7 +44,7 @@
   },
   "routeCta": {
     "title": "Naviga questa rotta con il tuo charter",
-    "lede": "Controlla la disponibilità dalla marina di partenza, confronta le barche e assicurati la tua settimana online — cancellazione gratuita inclusa.",
+    "lede": "Controlla la disponibilità dalla marina di partenza, confronta le barche e assicurati la tua settimana online — cancellazione gratuita se prenoti più di 14 giorni prima.",
     "action": "Vedi le barche da {start}",
     "secondaryAction": "Tutte le barche"
   },

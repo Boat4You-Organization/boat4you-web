@@ -85,5 +85,5 @@
   "boatLink": "Svi brodovi {model} ({count, number})",
   "faqHeading": "Često postavljana pitanja",
   "faqCancelQ": "Mogu li otkazati najam broda {name}?",
-  "faqCancelA": "Da. Svaku rezervaciju možete besplatno otkazati u roku od 72 sata od trenutka rezervacije; nakon toga vrijede uvjeti otkazivanja navedeni na stranici broda."
+  "faqCancelA": "Da. Svaku rezervaciju napravljenu više od 14 dana prije početka najma možete besplatno otkazati u roku od 72 sata od trenutka rezervacije; nakon toga vrijede uvjeti otkazivanja navedeni na stranici broda."
 }

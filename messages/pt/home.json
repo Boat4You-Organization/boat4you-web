@@ -109,7 +109,7 @@
     "riskFreeBooking": "Reserva sem risco",
     "save15Now": "Economize 15% agora",
     "saveUpTo": "Poupe até 47%",
-    "cancellingDescription": "Qualquer reserva pode ser cancelada gratuitamente até 72 horas após a reserva, com reembolso integral. Depois, valem as condições do operador, mostradas antes do pagamento."
+    "cancellingDescription": "Qualquer reserva feita com mais de 14 dias de antecedência pode ser cancelada gratuitamente até 72 horas após a reserva, com reembolso integral. Depois, valem as condições do operador, mostradas antes do pagamento."
   },
   "blogSection": {
     "readAboutYour": "Ideias para suas próximas ",
@@ -178,7 +178,7 @@
       },
       {
         "q": "Posso cancelar a minha reserva?",
-        "a": "As condições de cancelamento variam consoante o iate – os termos exatos são apresentados em cada página de oferta antes do pagamento. Nas 72 horas seguintes à reserva pode cancelar gratuitamente com reembolso total; depois aplicam-se as condições do operador, por isso recomendamos um seguro de viagem que cubra o cancelamento. A caução reembolsável é sempre devolvida, salvo se o iate apresentar danos."
+        "a": "As condições de cancelamento variam consoante o iate – os termos exatos são apresentados em cada página de oferta antes do pagamento. Se reservar com mais de 14 dias de antecedência, nas 72 horas seguintes à reserva pode cancelar gratuitamente com reembolso total; depois aplicam-se as condições do operador, por isso recomendamos um seguro de viagem que cubra o cancelamento. A caução reembolsável é sempre devolvida, salvo se o iate apresentar danos."
       }
     ],
     "preTitle": "Perguntas ",

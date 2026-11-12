@@ -19,7 +19,7 @@
   },
   "listCta": {
     "title": "Eine Route gefunden, die Ihnen gefällt?",
-    "lede": "Jede Reiseroute beginnt in einer Marina voller online buchbarer Boote — wählen Sie Ihre Woche, vergleichen Sie aktuelle Preise und reservieren Sie mit kostenloser Stornierung.",
+    "lede": "Jede Reiseroute beginnt in einer Marina voller online buchbarer Boote — wählen Sie Ihre Woche, vergleichen Sie aktuelle Preise und reservieren Sie mit kostenloser Stornierung bei Buchung mehr als 14 Tage im Voraus.",
     "action": "Finden Sie Ihr Boot"
   },
   "areaHero": {
@@ -44,7 +44,7 @@
   },
   "routeCta": {
     "title": "Segeln Sie diese Route auf Ihrem eigenen Charter",
-    "lede": "Prüfen Sie die Verfügbarkeit ab der Abfahrtsmarina, vergleichen Sie Boote und sichern Sie sich Ihre Woche online — kostenlose Stornierung inklusive.",
+    "lede": "Prüfen Sie die Verfügbarkeit ab der Abfahrtsmarina, vergleichen Sie Boote und sichern Sie sich Ihre Woche online — kostenlose Stornierung bei Buchung mehr als 14 Tage im Voraus.",
     "action": "Boote ab {start} ansehen",
     "secondaryAction": "Alle Boote ansehen"
   },

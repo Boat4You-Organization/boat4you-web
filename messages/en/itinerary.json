@@ -19,7 +19,7 @@
   },
   "listCta": {
     "title": "Found a route you like?",
-    "lede": "Every itinerary starts at a marina full of boats you can book online — pick your week, compare live prices and reserve with free cancellation.",
+    "lede": "Every itinerary starts at a marina full of boats you can book online — pick your week, compare live prices and reserve with free cancellation when you book more than 14 days ahead.",
     "action": "Find your boat"
   },
   "areaHero": {
@@ -44,7 +44,7 @@
   },
   "routeCta": {
     "title": "Sail this route on your own charter",
-    "lede": "Check live availability from the departure marina, compare boats and secure your week online — free cancellation included.",
+    "lede": "Check live availability from the departure marina, compare boats and secure your week online — free cancellation when you book more than 14 days ahead.",
     "action": "See boats from {start}",
     "secondaryAction": "Browse all boats"
   },

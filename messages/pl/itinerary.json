@@ -19,7 +19,7 @@
   },
   "listCta": {
     "title": "Znalazłeś trasę dla siebie?",
-    "lede": "Każda trasa zaczyna się w marinie pełnej jachtów do rezerwacji online — wybierz tydzień, porównaj aktualne ceny i zarezerwuj z bezpłatnym anulowaniem.",
+    "lede": "Każda trasa zaczyna się w marinie pełnej jachtów do rezerwacji online — wybierz tydzień, porównaj aktualne ceny i zarezerwuj z bezpłatnym anulowaniem, jeśli robisz to ponad 14 dni wcześniej.",
     "action": "Znajdź swój jacht"
   },
   "areaHero": {
@@ -44,7 +44,7 @@
   },
   "routeCta": {
     "title": "Przepłyń tę trasę własnym czarterem",
-    "lede": "Sprawdź dostępność z mariny startowej, porównaj jachty i zarezerwuj swój tydzień online — z bezpłatnym anulowaniem.",
+    "lede": "Sprawdź dostępność z mariny startowej, porównaj jachty i zarezerwuj swój tydzień online — z bezpłatnym anulowaniem przy rezerwacji ponad 14 dni wcześniej.",
     "action": "Jachty z portu {start}",
     "secondaryAction": "Wszystkie jachty"
   },

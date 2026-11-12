@@ -85,5 +85,5 @@
   "boatLink": "Wszystkie jachty {model} ({count, number})",
   "faqHeading": "Najczęściej zadawane pytania",
   "faqCancelQ": "Czy mogę anulować czarter {name}?",
-  "faqCancelA": "Tak. Każdą rezerwację można bezpłatnie anulować w ciągu 72 godzin od jej dokonania; później obowiązują warunki anulowania podane na stronie jachtu."
+  "faqCancelA": "Tak. Każdą rezerwację dokonaną ponad 14 dni przed rozpoczęciem czarteru można bezpłatnie anulować w ciągu 72 godzin od jej dokonania; później obowiązują warunki anulowania podane na stronie jachtu."
 }

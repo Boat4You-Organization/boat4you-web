@@ -109,7 +109,7 @@
     "riskFreeBooking": "Reserva sin riesgo",
     "save15Now": "Ahorra 15% ahora",
     "saveUpTo": "Ahorra hasta el 47%",
-    "cancellingDescription": "Cualquier reserva puede cancelarse gratis en las 72 horas siguientes a la reserva, con reembolso completo. Después se aplican las condiciones del operador, que ves antes de pagar."
+    "cancellingDescription": "Cualquier reserva hecha con más de 14 días de antelación puede cancelarse gratis en las 72 horas siguientes a la reserva, con reembolso completo. Después se aplican las condiciones del operador, que ves antes de pagar."
   },
   "blogSection": {
     "readAboutYour": "Ideas para tus próximas ",
@@ -178,7 +178,7 @@
       },
       {
         "q": "¿Puedo cancelar mi reserva?",
-        "a": "Las condiciones de cancelación varían según el yate y se muestran en cada ficha de oferta antes del pago. Durante las 72 horas siguientes a la reserva puedes cancelar gratis con reembolso íntegro; después se aplican las condiciones del operador, por lo que te recomendamos un seguro de viaje que cubra la cancelación. La fianza reembolsable se devuelve siempre que el yate no presente daños."
+        "a": "Las condiciones de cancelación varían según el yate y se muestran en cada ficha de oferta antes del pago. Si reservas con más de 14 días de antelación, durante las 72 horas siguientes a la reserva puedes cancelar gratis con reembolso íntegro; después se aplican las condiciones del operador, por lo que te recomendamos un seguro de viaje que cubra la cancelación. La fianza reembolsable se devuelve siempre que el yate no presente daños."
       }
     ],
     "preTitle": "Preguntas ",

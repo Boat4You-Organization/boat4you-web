@@ -85,5 +85,5 @@
   "boatLink": "Alle Boote vom Typ {model} ({count, number})",
   "faqHeading": "Häufig gestellte Fragen",
   "faqCancelQ": "Kann ich einen Charter mit einer {name} stornieren?",
-  "faqCancelA": "Ja. Jede Buchung lässt sich innerhalb von 72 Stunden ab dem Zeitpunkt der Buchung kostenlos stornieren; danach gelten die Stornobedingungen auf der Seite des Bootes."
+  "faqCancelA": "Ja. Jede Buchung mehr als 14 Tage vor Charterbeginn lässt sich innerhalb von 72 Stunden ab dem Zeitpunkt der Buchung kostenlos stornieren; danach gelten die Stornobedingungen auf der Seite des Bootes."
 }

@@ -109,7 +109,7 @@
     "riskFreeBooking": "Réservation sans risque",
     "save15Now": "Économisez 15% maintenant",
     "saveUpTo": "Économisez jusqu'à 47%",
-    "cancellingDescription": "Toute réservation peut être annulée gratuitement dans les 72 heures suivant la réservation, avec remboursement intégral. Ensuite, les conditions de l'opérateur, affichées avant le paiement, s'appliquent."
+    "cancellingDescription": "Toute réservation effectuée plus de 14 jours avant le départ peut être annulée gratuitement dans les 72 heures suivant la réservation, avec remboursement intégral. Ensuite, les conditions de l'opérateur, affichées avant le paiement, s'appliquent."
   },
   "blogSection": {
     "readAboutYour": "Idées pour vos prochaines ",
@@ -178,7 +178,7 @@
       },
       {
         "q": "Puis-je annuler ma réservation ?",
-        "a": "Les conditions d'annulation varient d'un yacht à l'autre – chaque fiche d'offre indique les modalités précises avant le paiement. Dans les 72 heures suivant la réservation, vous pouvez annuler gratuitement avec un remboursement intégral ; ensuite, les conditions de l'opérateur s'appliquent, c'est pourquoi nous recommandons une assurance voyage couvrant l'annulation. La caution remboursable est toujours restituée, sauf si le yacht présente des dommages."
+        "a": "Les conditions d'annulation varient d'un yacht à l'autre – chaque fiche d'offre indique les modalités précises avant le paiement. Si vous réservez plus de 14 jours avant le départ, vous pouvez, dans les 72 heures suivant la réservation, annuler gratuitement avec un remboursement intégral ; ensuite, les conditions de l'opérateur s'appliquent, c'est pourquoi nous recommandons une assurance voyage couvrant l'annulation. La caution remboursable est toujours restituée, sauf si le yacht présente des dommages."
       }
     ],
     "preTitle": "Questions ",

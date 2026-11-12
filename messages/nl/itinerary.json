@@ -19,7 +19,7 @@
   },
   "listCta": {
     "title": "Een route gevonden die je aanspreekt?",
-    "lede": "Elke route begint in een jachthaven vol online boekbare boten — kies je week, vergelijk actuele prijzen en reserveer met gratis annulering.",
+    "lede": "Elke route begint in een jachthaven vol online boekbare boten — kies je week, vergelijk actuele prijzen en reserveer met gratis annulering als je meer dan 14 dagen vooruit boekt.",
     "action": "Vind jouw boot"
   },
   "areaHero": {
@@ -44,7 +44,7 @@
   },
   "routeCta": {
     "title": "Vaar deze route met je eigen charter",
-    "lede": "Controleer de beschikbaarheid vanuit de vertrekjachthaven, vergelijk boten en leg je week online vast — inclusief gratis annulering.",
+    "lede": "Controleer de beschikbaarheid vanuit de vertrekjachthaven, vergelijk boten en leg je week online vast — met gratis annulering als je meer dan 14 dagen vooruit boekt.",
     "action": "Bekijk boten vanuit {start}",
     "secondaryAction": "Alle boten bekijken"
   },

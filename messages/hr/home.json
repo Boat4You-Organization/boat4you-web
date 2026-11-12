@@ -109,7 +109,7 @@
     "riskFreeBooking": "Sigurno rezerviranje",
     "save15Now": "Uštedite 15% sada",
     "saveUpTo": "Uštedite do 47%",
-    "cancellingDescription": "Svaku rezervaciju možete besplatno otkazati u roku od 72 sata od rezervacije, uz puni povrat novca. Nakon toga vrijede uvjeti operatera, prikazani prije plaćanja."
+    "cancellingDescription": "Svaku rezervaciju napravljenu više od 14 dana prije početka najma možete besplatno otkazati u roku od 72 sata od rezervacije, uz puni povrat novca. Nakon toga vrijede uvjeti operatera, prikazani prije plaćanja."
   },
   "blogSection": {
     "readAboutYour": "Ideje za vaše sljedeće ",
@@ -178,7 +178,7 @@
       },
       {
         "q": "Mogu li otkazati rezervaciju?",
-        "a": "Uvjeti otkazivanja razlikuju se ovisno o jahti – točni uvjeti prikazani su na stranici ponude prije plaćanja. U roku od 72 sata od rezervacije možete besplatno otkazati uz puni povrat novca; nakon toga vrijede uvjeti operatera, pa preporučujemo putno osiguranje koje pokriva otkaz putovanja. Povratni depozit (kaucija) uvijek se vraća, osim ako je jahta oštećena."
+        "a": "Uvjeti otkazivanja razlikuju se ovisno o jahti – točni uvjeti prikazani su na stranici ponude prije plaćanja. Ako rezervirate više od 14 dana prije početka najma, u roku od 72 sata od rezervacije možete besplatno otkazati uz puni povrat novca; nakon toga vrijede uvjeti operatera, pa preporučujemo putno osiguranje koje pokriva otkaz putovanja. Povratni depozit (kaucija) uvijek se vraća, osim ako je jahta oštećena."
       }
     ],
     "preTitle": "Često postavljana ",

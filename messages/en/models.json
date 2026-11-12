@@ -85,5 +85,5 @@
   "boatLink": "All {model} boats ({count, number})",
   "faqHeading": "Frequently asked questions",
   "faqCancelQ": "Can I cancel a {name} charter?",
-  "faqCancelA": "Yes. Every booking can be cancelled free of charge within 72 hours of the moment it is made; after that, the cancellation policy shown on the boat’s page applies."
+  "faqCancelA": "Yes. Every booking made more than 14 days before the charter can be cancelled free of charge within 72 hours of the moment it is made; after that, the cancellation policy shown on the boat’s page applies."
 }

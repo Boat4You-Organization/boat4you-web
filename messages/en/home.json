@@ -109,7 +109,7 @@
     "riskFreeBooking": "Risk free booking",
     "save15Now": "Save 15% now",
     "saveUpTo": "Save up to 47%",
-    "cancellingDescription": "Every booking can be cancelled free of charge within 72 hours of booking, with a full refund. After that, the operator's terms shown before you pay apply."
+    "cancellingDescription": "Every booking made more than 14 days before the charter can be cancelled free of charge within 72 hours of booking, with a full refund. After that, the operator's terms shown before you pay apply."
   },
   "blogSection": {
     "readAboutYour": "Ideas for your next ",
@@ -178,7 +178,7 @@
       },
       {
         "q": "Can I cancel my booking?",
-        "a": "Cancellation policies vary by yacht — every offer page shows the exact terms before you pay. Within 72 hours of booking you can cancel free of charge with a full refund; after that the operator's terms apply, so we recommend travel insurance that covers trip cancellation. Refundable security deposit is always returned unless the yacht is damaged."
+        "a": "Cancellation policies vary by yacht — every offer page shows the exact terms before you pay. If you book more than 14 days before the charter, within 72 hours of booking you can cancel free of charge with a full refund; after that the operator's terms apply, so we recommend travel insurance that covers trip cancellation. Refundable security deposit is always returned unless the yacht is damaged."
       }
     ],
     "preTitle": "Frequently ",

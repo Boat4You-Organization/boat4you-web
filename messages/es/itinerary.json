@@ -19,7 +19,7 @@
   },
   "listCta": {
     "title": "¿Has encontrado una ruta que te gusta?",
-    "lede": "Cada itinerario empieza en un puerto lleno de barcos reservables online — elige tu semana, compara precios en tiempo real y reserva con cancelación gratuita.",
+    "lede": "Cada itinerario empieza en un puerto lleno de barcos reservables online — elige tu semana, compara precios en tiempo real y reserva con cancelación gratuita si lo haces con más de 14 días de antelación.",
     "action": "Encuentra tu barco"
   },
   "areaHero": {
@@ -44,7 +44,7 @@
   },
   "routeCta": {
     "title": "Navega esta ruta en tu propio chárter",
-    "lede": "Comprueba la disponibilidad desde el puerto de salida, compara barcos y asegura tu semana online — con cancelación gratuita incluida.",
+    "lede": "Comprueba la disponibilidad desde el puerto de salida, compara barcos y asegura tu semana online — con cancelación gratuita si reservas con más de 14 días de antelación.",
     "action": "Ver barcos desde {start}",
     "secondaryAction": "Ver todos los barcos"
   },

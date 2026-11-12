@@ -19,7 +19,7 @@
   },
   "listCta": {
     "title": "Une route vous a séduit ?",
-    "lede": "Chaque itinéraire démarre dans une marina pleine de bateaux réservables en ligne — choisissez votre semaine, comparez les prix en direct et réservez avec annulation gratuite.",
+    "lede": "Chaque itinéraire démarre dans une marina pleine de bateaux réservables en ligne — choisissez votre semaine, comparez les prix en direct et réservez avec annulation gratuite si vous vous y prenez plus de 14 jours à l'avance.",
     "action": "Trouvez votre bateau"
   },
   "areaHero": {
@@ -44,7 +44,7 @@
   },
   "routeCta": {
     "title": "Naviguez cette route sur votre propre location",
-    "lede": "Vérifiez la disponibilité depuis la marina de départ, comparez les bateaux et réservez votre semaine en ligne — annulation gratuite incluse.",
+    "lede": "Vérifiez la disponibilité depuis la marina de départ, comparez les bateaux et réservez votre semaine en ligne — annulation gratuite pour toute réservation plus de 14 jours à l'avance.",
     "action": "Voir les bateaux depuis {start}",
     "secondaryAction": "Voir tous les bateaux"
   },

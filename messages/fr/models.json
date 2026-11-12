@@ -85,5 +85,5 @@
   "boatLink": "Tous les {model} ({count, number})",
   "faqHeading": "Questions fréquentes",
   "faqCancelQ": "Puis-je annuler une location de {name} ?",
-  "faqCancelA": "Oui. Toute réservation peut être annulée gratuitement dans les 72 heures suivant le moment où elle est faite ; ensuite, les conditions d’annulation indiquées sur la page du bateau s’appliquent."
+  "faqCancelA": "Oui. Toute réservation effectuée plus de 14 jours avant le départ peut être annulée gratuitement dans les 72 heures suivant le moment où elle est faite ; ensuite, les conditions d’annulation indiquées sur la page du bateau s’appliquent."
 }

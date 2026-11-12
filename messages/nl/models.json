@@ -85,5 +85,5 @@
   "boatLink": "Alle {model} boten ({count, number})",
   "faqHeading": "Veelgestelde vragen",
   "faqCancelQ": "Kan ik een huur van een {name} annuleren?",
-  "faqCancelA": "Ja. Elke boeking kan binnen 72 uur na het moment van boeken kosteloos worden geannuleerd; daarna gelden de annuleringsvoorwaarden op de pagina van de boot."
+  "faqCancelA": "Ja. Elke boeking die meer dan 14 dagen voor de charter is gemaakt, kan binnen 72 uur na het moment van boeken kosteloos worden geannuleerd; daarna gelden de annuleringsvoorwaarden op de pagina van de boot."
 }

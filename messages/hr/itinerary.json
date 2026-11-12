@@ -19,7 +19,7 @@
   },
   "listCta": {
     "title": "Pronašli ste rutu koja vam se sviđa?",
-    "lede": "Svaki itinerar počinje u marini punoj plovila koja možete rezervirati online — odaberite tjedan, usporedite aktualne cijene i rezervirajte uz besplatno otkazivanje.",
+    "lede": "Svaki itinerar počinje u marini punoj plovila koja možete rezervirati online — odaberite tjedan, usporedite aktualne cijene i rezervirajte uz besplatno otkazivanje za rezervacije napravljene više od 14 dana unaprijed.",
     "action": "Pronađite svoje plovilo"
   },
   "areaHero": {
@@ -44,7 +44,7 @@
   },
   "routeCta": {
     "title": "Zaplovite ovom rutom na vlastitom charteru",
-    "lede": "Provjerite raspoloživost iz polazne marine, usporedite plovila i osigurajte svoj tjedan online — uz besplatno otkazivanje.",
+    "lede": "Provjerite raspoloživost iz polazne marine, usporedite plovila i osigurajte svoj tjedan online — uz besplatno otkazivanje za rezervacije više od 14 dana unaprijed.",
     "action": "Plovila iz polazišta {start}",
     "secondaryAction": "Sva plovila"
   },

@@ -85,5 +85,5 @@
   "boatLink": "Tutte le barche {model} ({count, number})",
   "faqHeading": "Domande frequenti",
   "faqCancelQ": "Posso annullare il noleggio di un {name}?",
-  "faqCancelA": "Sì. Ogni prenotazione si può annullare gratuitamente entro 72 ore dal momento in cui viene effettuata; dopo, valgono le condizioni di cancellazione indicate nella pagina della barca."
+  "faqCancelA": "Sì. Ogni prenotazione effettuata più di 14 giorni prima della partenza si può annullare gratuitamente entro 72 ore dal momento in cui viene effettuata; dopo, valgono le condizioni di cancellazione indicate nella pagina della barca."
 }

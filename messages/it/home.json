@@ -109,7 +109,7 @@
     "riskFreeBooking": "Prenotazione senza rischi",
     "save15Now": "Risparmia il 15% ora",
     "saveUpTo": "Risparmia fino al 47%",
-    "cancellingDescription": "Ogni prenotazione può essere cancellata gratuitamente entro 72 ore dalla prenotazione, con rimborso completo. Dopo valgono le condizioni dell'operatore, mostrate prima del pagamento."
+    "cancellingDescription": "Ogni prenotazione effettuata più di 14 giorni prima della partenza può essere cancellata gratuitamente entro 72 ore dalla prenotazione, con rimborso completo. Dopo valgono le condizioni dell'operatore, mostrate prima del pagamento."
   },
   "blogSection": {
     "readAboutYour": "Idee per la tua prossima ",
@@ -178,7 +178,7 @@
       },
       {
         "q": "Posso cancellare la prenotazione?",
-        "a": "Le condizioni di cancellazione variano a seconda dello yacht – i termini esatti sono indicati nella scheda di ogni offerta prima del pagamento. Entro 72 ore dalla prenotazione puoi cancellare gratuitamente con rimborso completo; dopo si applicano le condizioni dell'operatore, per questo consigliamo un'assicurazione di viaggio che copra l'annullamento. Il deposito cauzionale rimborsabile viene sempre restituito, salvo che lo yacht presenti danni."
+        "a": "Le condizioni di cancellazione variano a seconda dello yacht – i termini esatti sono indicati nella scheda di ogni offerta prima del pagamento. Se prenoti più di 14 giorni prima della partenza, entro 72 ore dalla prenotazione puoi cancellare gratuitamente con rimborso completo; dopo si applicano le condizioni dell'operatore, per questo consigliamo un'assicurazione di viaggio che copra l'annullamento. Il deposito cauzionale rimborsabile viene sempre restituito, salvo che lo yacht presenti danni."
       }
     ],
     "preTitle": "Domande ",

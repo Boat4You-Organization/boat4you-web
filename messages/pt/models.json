@@ -85,5 +85,5 @@
   "boatLink": "Todos os barcos {model} ({count, number})",
   "faqHeading": "Perguntas frequentes",
   "faqCancelQ": "Posso cancelar o aluguer de um {name}?",
-  "faqCancelA": "Sim. Qualquer reserva pode ser cancelada gratuitamente nas 72 horas seguintes ao momento em que é feita; depois disso aplica-se a política de cancelamento indicada na página do barco."
+  "faqCancelA": "Sim. Qualquer reserva feita com mais de 14 dias de antecedência pode ser cancelada gratuitamente nas 72 horas seguintes ao momento em que é feita; depois disso aplica-se a política de cancelamento indicada na página do barco."
 }
