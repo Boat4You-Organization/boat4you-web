@@ -34,6 +34,7 @@
     "test:gulet": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test scripts/guletCrewed.test.mjs",
     "test:layout": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test scripts/yachtLayout.test.mjs",
     "test:calendar": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test scripts/calendarAllBooked.test.mjs",
+    "test:free-cancellation": "node --experimental-transform-types --disable-warning=ExperimentalWarning --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test scripts/freeCancellationEligibility.test.mjs",
     "test:media": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test scripts/yachtMedia.test.mjs",
     "test:week-offer": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test scripts/initialWeekOffer.test.mjs",
     "test:network-links": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --disable-warning=ExperimentalWarning --test scripts/network-links.test.mjs",

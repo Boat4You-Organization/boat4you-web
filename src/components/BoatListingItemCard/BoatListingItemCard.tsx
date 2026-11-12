@@ -43,6 +43,7 @@ import useCapacityFmt from '@/utils/hooks/useCapacityFmt';
 import { canonicalEquipmentCode } from '@/utils/static/amenities';
 import { displayMarinaName } from '@/utils/static/croatianPlaceNames';
 import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
+import { offersFreeCancellation } from '@/utils/static/freeCancellationEligibility';
 import { getBoatImageUrl } from '@/utils/static/imageUtils';
 import { hasListingPrice, listingPriceDays } from '@/utils/static/listingPrice';
 import { roleGuard } from '@/utils/static/roleGuard';
@@ -268,8 +269,11 @@ const BoatListingItemCardView = ({
   // "72 h free cancellation" under the price, as on the six sister sites'
   // cards (12.11.2026). Only where the boat can be booked online for the
   // period the card shows: it has a price, is not an inquiry-only (custom)
-  // boat and is not pre-reserved.
-  const showFreeCancellation = hasPrice && !custom && isAvailable;
+  // boat and is not pre-reserved. And not for a period that starts within two
+  // weeks (owner rule 12.11.2026, offersFreeCancellation): the card's price is
+  // the price of the offer week offerDateFrom–offerDateTo, on a dated and an
+  // undated listing alike.
+  const showFreeCancellation = hasPrice && !custom && isAvailable && offersFreeCancellation(offerDateFrom);
 
   // Highlight yachts under active or waiting option as a "SPECIAL PROMOTION"
   // (competitor-style promo ribbon on the image) — these are the ones most
