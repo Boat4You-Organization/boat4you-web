@@ -1,3 +1,5 @@
+import { offersFreeCancellation } from '@/utils/static/freeCancellationEligibility';
+
 /**
  * The offer's `hasMerchantReturnPolicy`, in schema.org terms of what the page
  * promises (7.10.2026): free cancellation within 72 hours of booking — a
@@ -14,16 +16,32 @@ export const FREE_CANCELLATION_DAYS = 3;
 
 export interface MerchantReturnPolicyLd {
   '@type': 'MerchantReturnPolicy';
-  returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow';
-  merchantReturnDays: number;
-  returnFees: 'https://schema.org/FreeReturn';
+  returnPolicyCategory:
+    | 'https://schema.org/MerchantReturnFiniteReturnWindow'
+    | 'https://schema.org/MerchantReturnNotPermitted';
+  merchantReturnDays?: number;
+  returnFees?: 'https://schema.org/FreeReturn';
   applicableCountry?: string;
 }
 
-export const freeCancellationReturnPolicy = (country?: string | null): MerchantReturnPolicyLd => ({
+/**
+ * `dateFrom` is the first day of the one dated offer the policy is declared
+ * for (a /search listing row, priced for its offer week). A week that starts
+ * within 14 days has no free cancellation (freeCancellationEligibility.ts,
+ * 12.11.2026), so it declares "returns not permitted". The boat page's
+ * AggregateOffer spans the whole season and passes no date.
+ */
+export const freeCancellationReturnPolicy = (
+  country?: string | null,
+  dateFrom?: string | null
+): MerchantReturnPolicyLd => ({
   '@type': 'MerchantReturnPolicy',
-  returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
-  merchantReturnDays: FREE_CANCELLATION_DAYS,
-  returnFees: 'https://schema.org/FreeReturn',
+  ...(offersFreeCancellation(dateFrom)
+    ? {
+        returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
+        merchantReturnDays: FREE_CANCELLATION_DAYS,
+        returnFees: 'https://schema.org/FreeReturn',
+      }
+    : { returnPolicyCategory: 'https://schema.org/MerchantReturnNotPermitted' }),
   ...(country ? { applicableCountry: country } : {}),
 });

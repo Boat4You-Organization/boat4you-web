@@ -84,6 +84,12 @@ describe('offersFreeCancellation', () => {
 
     assert.equal(offersFreeCancellation(new Date(before + 5 * DAY_MS).toISOString().slice(0, 10), before), true);
   });
+
+  test('the rule applies from its first moment on', () => {
+    const since = FREE_CANCELLATION_RULE_SINCE;
+
+    assert.equal(offersFreeCancellation(new Date(since + 5 * DAY_MS).toISOString().slice(0, 10), since), false);
+  });
 });
 
 describe('generateCancellationTimeline', () => {
@@ -112,6 +118,42 @@ describe('generateCancellationTimeline', () => {
     assert.match(timeline[0].text, /^Free cancellation within 72 hours of booking/);
     assert.ok(timeline.length >= 3);
     assert.equal(timeline.at(-1).text, 'Yacht Pick-up');
+  });
+
+  test('a booking more than 14 days ahead still gets the partner option as its free window', () => {
+    const optionExpiry = new Date(BOOKED + 2 * DAY_MS).toISOString();
+    const timeline = generateCancellationTimeline(day(30), undefined, 'en', optionExpiry, bookedAt);
+
+    assert.match(timeline[0].text, /^Cancel and reschedule for free before/);
+  });
+
+  test('My Bookings values: a creation time without a zone and a charter date with a time', () => {
+    const createdAt = new Date(BOOKED).toISOString().slice(0, 19);
+
+    assert.match(
+      generateCancellationTimeline(`${day(7)}T17:00:00`, undefined, 'en', null, createdAt)[0].text,
+      /^No free cancellation/
+    );
+    assert.match(
+      generateCancellationTimeline(`${day(30)}T17:00:00`, undefined, 'en', null, createdAt)[0].text,
+      /^Free cancellation within 72 hours of booking/
+    );
+  });
+
+  test('the checkout passes no booking moment: it is now', () => {
+    const now = Date.now();
+    const inAWeek = new Date(now + 7 * DAY_MS).toISOString().slice(0, 10);
+    const first = generateCancellationTimeline(inAWeek, undefined, 'en')[0].text;
+
+    // Before the rule's first moment (a build made ahead of the deploy) the old promise still shows.
+    assert.match(
+      first,
+      now >= FREE_CANCELLATION_RULE_SINCE ? /^No free cancellation/ : /^Free cancellation within 72 hours/
+    );
+    assert.match(
+      generateCancellationTimeline(new Date(now + 60 * DAY_MS).toISOString().slice(0, 10), undefined, 'en')[0].text,
+      /^Free cancellation within 72 hours of booking/
+    );
   });
 
   test('a booking made before the rule keeps its 72-hour window in My Bookings', () => {

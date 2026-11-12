@@ -386,7 +386,8 @@ function buildSearchProductsLd(
         },
         ...(country ? { shippingDestination: { '@type': 'DefinedRegion', addressCountry: country } } : {}),
       },
-      hasMerchantReturnPolicy: freeCancellationReturnPolicy(country),
+      // …unless the row's offer week starts within 14 days: no free cancellation then (12.11.2026).
+      hasMerchantReturnPolicy: freeCancellationReturnPolicy(country, y.offerDateFrom),
     };
 
     return {

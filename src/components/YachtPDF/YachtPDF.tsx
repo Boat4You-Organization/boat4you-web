@@ -4,6 +4,7 @@ import { YachtOfferModel } from '@/models/yacht-offer.model';
 import { YachtModel } from '@/models/yacht.model';
 import { presentAmenityLabels } from '@/utils/static/amenities';
 import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
+import { offersFreeCancellation } from '@/utils/static/freeCancellationEligibility';
 import { isGulet } from '@/utils/static/guletCrewed';
 import { toTitleCase } from '@/utils/static/toTitleCase';
 import { Fmt, capacityRows, fromYacht } from '@/utils/static/yachtCapacity';
@@ -231,7 +232,8 @@ const YachtPDF = ({
           <View style={styles.priceAmountWrap}>
             <Text style={styles.priceAmount}>{priceOf(offer)}</Text>
             <Text style={styles.pricePer}>total for the period · {isCrewed ? 'crewed' : 'bareboat'} charter</Text>
-            {!yacht.inquireOnly && isFree && (
+            {/* Not for selected dates that start within 14 days (owner rule 12.11.2026). */}
+            {!yacht.inquireOnly && isFree && offersFreeCancellation(offer.dateFrom) && (
               <Text style={styles.pricePer}>✓ Free cancellation within 72 h of booking</Text>
             )}
           </View>
