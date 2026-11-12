@@ -1,6 +1,6 @@
 # Conditions Générales - Boat4You
 
-_Dernière mise à jour : \[17.06.2025\]_
+_Dernière mise à jour : \[12.11.2026\]_
 
 ## 1. Introduction et Portée Légale
 

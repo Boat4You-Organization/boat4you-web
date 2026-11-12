@@ -10,11 +10,13 @@
 export const FREE_CANCELLATION_MIN_DAYS_AHEAD = 14;
 
 /**
- * The moment the rule came into force (the deploy that also changed Terms
- * 7.1). A booking made before it keeps the 72 hours it was promised, so My
- * Bookings never rewrites the terms of an existing reservation.
+ * The moment the rule came into force: 12.11.2026 10:30 UTC, a few minutes
+ * after the deploy that also changed Terms 7.1 went live (~10:12 UTC). A
+ * booking made before it — on the old build or on the new one — keeps the 72
+ * hours it was promised, so My Bookings never rewrites the terms of an
+ * existing reservation. Never move it earlier than that deploy.
  */
-export const FREE_CANCELLATION_RULE_SINCE = Date.parse('2026-11-12T00:00:00Z');
+export const FREE_CANCELLATION_RULE_SINCE = Date.parse('2026-11-12T10:30:00Z');
 
 const DAY_MS = 24 * 60 * 60 * 1000;
 

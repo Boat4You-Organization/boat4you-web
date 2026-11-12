@@ -1,6 +1,6 @@
 # Boat4You Uvjeti i odredbe
 
-_Zadnje ažuriranje: [17.06.2025]_
+_Zadnje ažuriranje: [12.11.2026]_
 
 ## 1. Uvod i pravni okvir
 

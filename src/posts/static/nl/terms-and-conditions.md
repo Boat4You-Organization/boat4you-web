@@ -1,6 +1,6 @@
 # **Boat4You** Algemene Voorwaarden
 
-_Laatst bijgewerkt: \[17.06.2025\]_
+_Laatst bijgewerkt: \[12.11.2026\]_
 
 ## 1. Introductie en Juridische Reikwijdte
 

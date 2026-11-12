@@ -1,6 +1,6 @@
 # Termini e Condizioni Boat4You
 
-_Ultimo aggiornamento: \[17.06.2025\]_
+_Ultimo aggiornamento: \[12.11.2026\]_
 
 ## 1. Introduzione e Ambito Legale
 

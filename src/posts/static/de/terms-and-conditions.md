@@ -1,6 +1,6 @@
 # Boat4You Allgemeine Geschäftsbedingungen
 
-_Zuletzt aktualisiert: [17.06.2025]_
+_Zuletzt aktualisiert: [12.11.2026]_
 
 ## 1. Einleitung und Geltungsbereich
 

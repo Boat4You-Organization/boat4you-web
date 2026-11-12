@@ -1,6 +1,6 @@
 # **Boat4You** Regulamin
 
-_Ostatnia aktualizacja: \[17.06.2025\]_
+_Ostatnia aktualizacja: \[12.11.2026\]_
 
 ## 1. Wprowadzenie i Zakres Prawny
 
