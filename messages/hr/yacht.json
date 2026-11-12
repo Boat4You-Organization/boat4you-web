@@ -225,7 +225,7 @@
   "priceWithoutVat": "20% cijene bez PDV-a",
   "localCurrency": "Lokalna valuta, Euro",
   "standardSailingLicence": "Standardna dozvola za upravljanje brodicom, VHF dozvola",
-  "cancellationPolicyDescription": "Besplatno otkazivanje unutar 72 sata od rezervacije. Nakon toga vrijede uvjeti otkazivanja ponude za najam, navedeni u planu plaćanja i otkazivanja.",
+  "cancellationPolicyDescription": "Besplatno otkazivanje unutar 72 sata od rezervacije, ako rezervirate više od 14 dana prije početka najma. Nakon tih 72 sata, kao i za svaku rezervaciju bliže početku najma, vrijede uvjeti otkazivanja ponude za najam, navedeni u planu plaćanja i otkazivanja.",
   "videoTitle": "Video prezentacija",
   "descSailingRegion": "<b>{location}</b> je jedno od najtraženijih polazišta za najam jahte u <b>{country}</b> — startna točka za skrivene uvale, sunčane otoke i gradove zaštićene UNESCO-om duž obale. Bez obzira planirate li vikend plovidbu ili dvotjednu avanturu obilaska otoka, ovo je idealna baza za vaš sljedeći jedriličarski odmor.",
   "descSailingRegionNoCountry": "<b>{location}</b> je jedno od najpopularnijih polazišta za najam jahte u regiji — startna točka za skrivene uvale, sunčane otoke i priobalne gradove. Bez obzira planirate li vikend plovidbu ili dvotjednu avanturu obilaska otoka, ovo je idealna baza za vaš sljedeći jedriličarski odmor.",

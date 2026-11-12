@@ -225,7 +225,7 @@
   "priceWithoutVat": "Precio sin IVA 20%",
   "localCurrency": "Moneda local, Euro",
   "standardSailingLicence": "Licencia náutica estándar, licencia VHF",
-  "cancellationPolicyDescription": "Cancelación gratuita en las 72 horas posteriores a la reserva. Después, se aplican las condiciones de cancelación de la oferta de chárter, según se indican en tu calendario de pagos y cancelación.",
+  "cancellationPolicyDescription": "Cancelación gratuita en las 72 horas posteriores a la reserva, si reservas con más de 14 días de antelación al inicio del chárter. Pasadas esas 72 horas, y en cualquier reserva hecha con menos antelación, se aplican las condiciones de cancelación de la oferta de chárter, según se indican en tu calendario de pagos y cancelación.",
   "videoTitle": "Vídeo de presentación",
   "descSailingRegion": "<b>{location}</b> es uno de los puertos de alquiler de yates más populares en <b>{country}</b> — punto de partida para calas escondidas, islas soleadas y pueblos costeros protegidos por la UNESCO. Base ideal para navegaciones de fin de semana o aventuras de dos semanas entre islas.",
   "descSailingRegionNoCountry": "<b>{location}</b> es uno de los puertos de alquiler de yates más populares de la región — punto de partida para calas escondidas, islas soleadas y pueblos costeros. Base ideal para navegaciones de fin de semana o aventuras de dos semanas entre islas.",

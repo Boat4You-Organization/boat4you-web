@@ -123,6 +123,7 @@
   "cancellationFee50Percent": "La commissione di cancellazione è del 50% se cancelli dopo {date}.",
   "cancelAndRescheduleForFreeBefore": "Cancella e riprogramma gratuitamente prima del {date}.",
   "freeCancellation72hUntil": "Cancellazione gratuita entro 72 ore dalla prenotazione — fino al {date}.",
+  "noFreeCancellationWithin14Days": "Nessuna cancellazione gratuita: il noleggio inizia entro 14 giorni dalla prenotazione. La commissione di cancellazione è del 100% dal momento della prenotazione.",
   "yachtPickup": "Ritiro Yacht",
   "thisIsARareFind": "Questa è una scoperta rara",
   "yourTrip": "Il Tuo Viaggio",

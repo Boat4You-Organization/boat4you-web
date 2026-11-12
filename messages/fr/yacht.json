@@ -225,7 +225,7 @@
   "priceWithoutVat": "Prix sans TVA 20%",
   "localCurrency": "Devise locale, Euro",
   "standardSailingLicence": "Permis de navigation standard, licence VHF",
-  "cancellationPolicyDescription": "Annulation gratuite dans les 72 heures suivant la réservation. Ensuite, les conditions d'annulation de l'offre de location s'appliquent, telles qu'indiquées dans votre échéancier de paiement et d'annulation.",
+  "cancellationPolicyDescription": "Annulation gratuite dans les 72 heures suivant la réservation, si vous réservez plus de 14 jours avant le début de la location. Passé ce délai, ainsi que pour toute réservation plus proche du départ, les conditions d'annulation de l'offre de location s'appliquent, telles qu'indiquées dans votre échéancier de paiement et d'annulation.",
   "videoTitle": "Vidéo de présentation",
   "descSailingRegion": "<b>{location}</b> est l'un des ports de location de yachts les plus populaires de <b>{country}</b> — point de départ pour criques cachées, îles ensoleillées et villes côtières classées UNESCO. Base idéale pour une sortie de week-end ou une aventure de deux semaines d'île en île.",
   "descSailingRegionNoCountry": "<b>{location}</b> est l'un des ports de location de yachts les plus populaires de la région — point de départ pour criques cachées, îles ensoleillées et villes côtières. Base idéale pour une sortie de week-end ou une aventure de deux semaines d'île en île.",

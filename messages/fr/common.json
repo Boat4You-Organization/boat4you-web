@@ -123,6 +123,7 @@
   "cancellationFee50Percent": "Les frais d'annulation sont de 50% si vous annulez après le {date}.",
   "cancelAndRescheduleForFreeBefore": "Annulez et reprogrammez gratuitement avant le {date}.",
   "freeCancellation72hUntil": "Annulation gratuite dans les 72 heures suivant la réservation — jusqu’au {date}.",
+  "noFreeCancellationWithin14Days": "Pas d'annulation gratuite : la location commence dans les 14 jours suivant la réservation. Les frais d'annulation sont de 100% dès la réservation.",
   "yachtPickup": "Prise en charge du yacht",
   "thisIsARareFind": "C'est une trouvaille rare",
   "yourTrip": "Votre voyage",

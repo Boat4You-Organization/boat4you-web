@@ -123,6 +123,7 @@
   "cancellationFee50Percent": "La tarifa de cancelación es del 50% si cancelas después del {date}.",
   "cancelAndRescheduleForFreeBefore": "Cancela y reprograma gratis antes del {date}.",
   "freeCancellation72hUntil": "Cancelación gratuita en las 72 horas posteriores a la reserva: hasta el {date}.",
+  "noFreeCancellationWithin14Days": "Sin cancelación gratuita: el chárter empieza en los 14 días posteriores a la reserva. La tarifa de cancelación es del 100% desde el momento de la reserva.",
   "yachtPickup": "Recogida de Yacht",
   "thisIsARareFind": "Este es un hallazgo raro",
   "yourTrip": "Tu Viaje",

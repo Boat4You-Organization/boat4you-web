@@ -155,6 +155,7 @@
   "cancellationFee50Percent": "Annuleringskosten zijn 50% als je na {date} annuleert.",
   "cancelAndRescheduleForFreeBefore": "Gratis annuleren en omboeken vóór {date}.",
   "freeCancellation72hUntil": "Gratis annuleren binnen 72 uur na de boeking — tot {date}.",
+  "noFreeCancellationWithin14Days": "Geen gratis annulering: de charter begint binnen 14 dagen na de boeking. De annuleringskosten zijn 100% vanaf het moment van boeken.",
   "yachtPickup": "Jacht ophalen",
   "thisIsARareFind": "Dit is een zeldzame vondst",
   "yourTrip": "Je reis",

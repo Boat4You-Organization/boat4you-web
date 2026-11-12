@@ -2,6 +2,7 @@ import dayjs from 'dayjs';
 import isSameOrAfter from 'dayjs/plugin/isSameOrAfter';
 
 import DateTime from '@/utils/static/DateTime';
+import { offersFreeCancellation } from '@/utils/static/freeCancellationEligibility';
 
 dayjs.extend(isSameOrAfter);
 
@@ -92,12 +93,17 @@ const formatDateTime = (date: dayjs.Dayjs, locale?: string): string =>
 
 /**
  * The cancellation timeline shown on the checkout sidebar, the booking
- * conditions modal and My Bookings. Its first milestone is always the free
- * window (audit 29.9.2026, R04: the checkout used to print "Cancellation fee
- * is 100% if you cancel after <today>" for a charter within 44 days, beside a
- * boat page promising 72 hours of free cancellation). The fee legs start
- * where the free window closes and follow the offer's schedule: 50 % up to
- * 44 days before pick-up, 100 % from then on.
+ * conditions modal and My Bookings. Its first milestone is the free window
+ * (audit 29.9.2026, R04: the checkout used to print "Cancellation fee is 100%
+ * if you cancel after <today>" for a charter within 44 days, beside a boat
+ * page promising 72 hours of free cancellation). The fee legs start where the
+ * free window closes and follow the offer's schedule: 50 % up to 44 days
+ * before pick-up, 100 % from then on.
+ *
+ * A booking made 14 days or less before the charter has no free window
+ * (owner rule 12.11.2026, offersFreeCancellation; Terms 7.1) — not the
+ * partner option's either: its first milestone says so and that the fee is
+ * 100 % from the booking moment.
  */
 export const generateCancellationTimeline = (
   dateFrom: string,
@@ -119,6 +125,25 @@ export const generateCancellationTimeline = (
   const timeline: CancellationTimelineItem[] = [];
 
   const label = (date: dayjs.Dayjs) => DateTime.formatWithMonthName(date, locale);
+
+  const pickUp: CancellationTimelineItem = {
+    date: label(reservationStartDate),
+    text: t ? t('yachtPickup') : 'Yacht Pick-up',
+    active: today.isSameOrAfter(reservationStartDate),
+  };
+
+  if (!offersFreeCancellation(dateFrom, booked.valueOf())) {
+    return [
+      {
+        date: label(booked),
+        text: t
+          ? t('noFreeCancellationWithin14Days')
+          : 'No free cancellation: the charter starts within 14 days of booking. The cancellation fee is 100% from the moment of booking.',
+        active: today.isSameOrAfter(booked),
+      },
+      pickUp,
+    ];
+  }
 
   let freeText: string;
 
@@ -165,11 +190,7 @@ export const generateCancellationTimeline = (
     }
   }
 
-  timeline.push({
-    date: label(reservationStartDate),
-    text: t ? t('yachtPickup') : 'Yacht Pick-up',
-    active: today.isSameOrAfter(reservationStartDate),
-  });
+  timeline.push(pickUp);
 
   return timeline;
 };

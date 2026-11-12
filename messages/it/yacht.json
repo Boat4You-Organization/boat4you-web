@@ -225,7 +225,7 @@
   "priceWithoutVat": "Prezzo senza IVA 20%",
   "localCurrency": "Valuta locale, Euro",
   "standardSailingLicence": "Patente nautica standard, patente VHF",
-  "cancellationPolicyDescription": "Cancellazione gratuita entro 72 ore dalla prenotazione. Successivamente si applicano le condizioni di cancellazione dell'offerta di noleggio, indicate nel piano di pagamento e cancellazione.",
+  "cancellationPolicyDescription": "Cancellazione gratuita entro 72 ore dalla prenotazione, se prenoti più di 14 giorni prima dell'inizio del noleggio. Trascorse le 72 ore, e per ogni prenotazione più vicina alla partenza, si applicano le condizioni di cancellazione dell'offerta di noleggio, indicate nel piano di pagamento e cancellazione.",
   "videoTitle": "Video di presentazione",
   "descSailingRegion": "<b>{location}</b> è uno dei porti di noleggio yacht più popolari in <b>{country}</b> — punto di partenza per calette nascoste, isole soleggiate e città costiere protette dall'UNESCO. Base ideale per una veleggiata di fine settimana o un'avventura di due settimane tra le isole.",
   "descSailingRegionNoCountry": "<b>{location}</b> è uno dei porti di noleggio yacht più popolari della regione — punto di partenza per calette nascoste, isole soleggiate e città costiere. Base ideale per una veleggiata di fine settimana o un'avventura di due settimane tra le isole.",

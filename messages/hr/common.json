@@ -123,6 +123,7 @@
   "cancellationFee50Percent": "Naknada za otkazivanje je 50% ako otkažete nakon {date}.",
   "cancelAndRescheduleForFreeBefore": "Otkažite i promijenite termin besplatno prije {date}.",
   "freeCancellation72hUntil": "Besplatno otkazivanje unutar 72 sata od rezervacije — do {date}.",
+  "noFreeCancellationWithin14Days": "Bez besplatnog otkazivanja: najam počinje unutar 14 dana od rezervacije. Naknada za otkazivanje je 100% od trenutka rezervacije.",
   "yachtPickup": "Preuzimanje jahte",
   "thisIsARareFind": "Ovo je rijetka ponuda",
   "yourTrip": "Vaše putovanje",

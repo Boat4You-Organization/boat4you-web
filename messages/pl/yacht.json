@@ -225,7 +225,7 @@
   "priceWithoutVat": "Cena bez 20% VAT",
   "localCurrency": "Waluta lokalna, euro",
   "standardSailingLicence": "Standardowa licencja żeglarska, licencja VHF",
-  "cancellationPolicyDescription": "Bezpłatne anulowanie w ciągu 72 godzin od rezerwacji. Później obowiązują warunki anulowania danej oferty czarteru, podane w harmonogramie płatności i anulowania.",
+  "cancellationPolicyDescription": "Bezpłatne anulowanie w ciągu 72 godzin od rezerwacji, jeśli rezerwujesz ponad 14 dni przed rozpoczęciem czarteru. Po upływie 72 godzin oraz przy każdej rezerwacji bliższej terminowi czarteru obowiązują warunki anulowania danej oferty czarteru, podane w harmonogramie płatności i anulowania.",
   "videoTitle": "Wideo prezentacja",
   "descSailingRegion": "<b>{location}</b> to jedno z najpopularniejszych centrów czarteru jachtów w <b>{country}</b> — punkt wyjścia do odkrywania ukrytych zatok, słonecznych wysp i miasteczek przybrzeżnych wpisanych na listę UNESCO. Niezależnie od tego, czy planujesz weekendowy rejs, czy dwutygodniową przygodę po wyspach, jest to idealna baza dla Twoich kolejnych wakacji żeglarskich.",
   "descSailingRegionNoCountry": "<b>{location}</b> to jedno z najpopularniejszych centrów czarteru jachtów w regionie — punkt wyjścia do odkrywania ukrytych zatok, słonecznych wysp i miasteczek przybrzeżnych. Niezależnie od tego, czy planujesz weekendowy rejs, czy dwutygodniową przygodę po wyspach, jest to idealna baza dla Twoich kolejnych wakacji żeglarskich.",

@@ -155,6 +155,7 @@
   "cancellationFee50Percent": "Opłata za anulowanie wynosi 50%, jeśli anulujesz po {date}.",
   "cancelAndRescheduleForFreeBefore": "Anuluj i zmień termin bezpłatnie przed {date}.",
   "freeCancellation72hUntil": "Bezpłatne anulowanie w ciągu 72 godzin od rezerwacji — do {date}.",
+  "noFreeCancellationWithin14Days": "Brak bezpłatnego anulowania: czarter rozpoczyna się w ciągu 14 dni od rezerwacji. Opłata za anulowanie wynosi 100% od momentu rezerwacji.",
   "yachtPickup": "Odbiór jachtu",
   "thisIsARareFind": "To rzadka okazja",
   "yourTrip": "Twoja podróż",

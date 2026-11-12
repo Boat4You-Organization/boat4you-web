@@ -225,7 +225,7 @@
   "priceWithoutVat": "20% preço sem IVA",
   "localCurrency": "Moeda local, Euro",
   "standardSailingLicence": "Licença de navegação padrão, licença VHF",
-  "cancellationPolicyDescription": "Cancelamento gratuito até 72 horas após a reserva. Depois disso, aplicam-se as condições de cancelamento da oferta de charter, conforme indicado no seu plano de pagamentos e cancelamento.",
+  "cancellationPolicyDescription": "Cancelamento gratuito até 72 horas após a reserva, se reservar com mais de 14 dias de antecedência em relação ao início do charter. Depois dessas 72 horas, e em qualquer reserva feita mais perto do início, aplicam-se as condições de cancelamento da oferta de charter, conforme indicado no seu plano de pagamentos e cancelamento.",
   "videoTitle": "Vídeo Apresentação",
   "descSailingRegion": "<b>{location}</b> é um dos portos de aluguel de iates mais populares em <b>{country}</b> — ponto de partida para enseadas escondidas, ilhas ensolaradas e cidades costeiras protegidas pela UNESCO. Base ideal para uma navegação de fim de semana ou uma aventura de duas semanas entre ilhas.",
   "descSailingRegionNoCountry": "<b>{location}</b> é um dos portos de aluguel de iates mais populares da região — ponto de partida para enseadas escondidas, ilhas ensolaradas e cidades costeiras. Base ideal para uma navegação de fim de semana ou uma aventura de duas semanas entre ilhas.",

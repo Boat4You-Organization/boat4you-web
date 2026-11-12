@@ -12,6 +12,7 @@ import useAmenityLabel from '@/utils/hooks/useAmenityLabel';
 import { presentAmenities } from '@/utils/static/amenities';
 import { displayBaseName } from '@/utils/static/croatianPlaceNames';
 import { formatPriceWithCurrency, isPositivePrice } from '@/utils/static/formatPriceCurrency';
+import { offersFreeCancellation } from '@/utils/static/freeCancellationEligibility';
 import { toTitleCase, yachtLabel } from '@/utils/static/toTitleCase';
 import { toggleBoatInquiryModalOpen } from '@/valtio/yacht/yacht.actions';
 import boatType from '@/views/Boat/boatType';
@@ -24,6 +25,11 @@ interface AvailabilityCardProps {
 const AvailabilityCard = ({ yacht, offer }: AvailabilityCardProps) => {
   const { name, model, amenities } = yacht;
   const { clientPricePerDayEur, clientPriceEur, clientPriceInfo, listPriceEur, listPriceInfo, numberOfDays } = offer;
+  // No "free cancellation within 72 hours" line for an offer week that starts
+  // within 14 days (owner rule 12.11.2026, offersFreeCancellation).
+  const paymentPolicies = offersFreeCancellation(offer.dateFrom)
+    ? availabilityCardConfig.paymentPolicies
+    : availabilityCardConfig.paymentPolicies.filter(policy => policy.titleKey !== 'freeCancellationWithin72Hours');
   const tCommon = useTranslations('common');
   const t = useTranslations('yacht');
   const amenityLabel = useAmenityLabel();
@@ -129,7 +135,7 @@ const AvailabilityCard = ({ yacht, offer }: AvailabilityCardProps) => {
               {t('paymentPolicies')}
             </Typography>
             <List sx={{ padding: 0, marginTop: 2 }}>
-              {availabilityCardConfig.paymentPolicies.map((policy: PolicyItem, index: number) => (
+              {paymentPolicies.map((policy: PolicyItem, index: number) => (
                 <ListItem
                   key={`${index + 1}`}
                   sx={{

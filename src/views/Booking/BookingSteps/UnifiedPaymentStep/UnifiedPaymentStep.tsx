@@ -44,6 +44,7 @@ import { usePaymentSubmit } from '@/utils/hooks/usePaymentSubmit';
 import { bankFeeShareForPhase } from '@/utils/static/bankTransferFee';
 import { freeCancellationEnd } from '@/utils/static/cancellationUtils';
 import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
+import { offersFreeCancellation } from '@/utils/static/freeCancellationEligibility';
 import { calculatePaymentPhases as calculateClientPhases } from '@/utils/static/paymentPhases';
 import { getDataFromSessionStorage } from '@/utils/static/sessionStorageUtils';
 import { setPaymentMethod } from '@/valtio/booking/booking.actions';
@@ -223,8 +224,12 @@ const UnifiedPaymentStep = ({ reservationData }: UnifiedPaymentStepProps) => {
   // exactly as long as our option lasts), otherwise the 72 hours from the
   // booking moment that the boat page promises. One helper feeds this tick,
   // the sidebar CancellationCard and the conditions modal, so the three
-  // surfaces always name the same date (audit 29.9.2026, R04).
-  const freeCancellationUntil = dateFormatter(freeCancellationEnd(reservationExpiresAt));
+  // surfaces always name the same date (audit 29.9.2026, R04). No tick for a
+  // booking made 14 days or less before the charter: it has no free window
+  // (owner rule 12.11.2026), and the timeline beside it says so.
+  const freeCancellationUntil = offersFreeCancellation(reservationData.dateFrom)
+    ? dateFormatter(freeCancellationEnd(reservationExpiresAt))
+    : null;
 
   const cardBorder = (active: boolean) => (active ? `2px solid ${colors.blue500}` : `1px solid ${colors.black200}`);
 
@@ -633,8 +638,8 @@ const UnifiedPaymentStep = ({ reservationData }: UnifiedPaymentStepProps) => {
           </Typography>
         )}
         {/* Trust row — same green-tick language as BookingHero. The
-            free-cancellation tick is CONDITIONAL (charter 45+ days away)
-            and carries the exact date, mirroring the CancellationCard
+            free-cancellation tick is CONDITIONAL (charter more than 14 days
+            away) and carries the exact date, mirroring the CancellationCard
             timeline so the two can never contradict each other. */}
         <Stack direction="row" flexWrap="wrap" columnGap={2} rowGap={0.5} justifyContent="flex-end">
           {freeCancellationUntil && (

@@ -123,6 +123,7 @@
   "cancellationFee50Percent": "A taxa de cancelamento é 50% se você cancelar após {date}.",
   "cancelAndRescheduleForFreeBefore": "Cancele e reagende gratuitamente antes de {date}.",
   "freeCancellation72hUntil": "Cancelamento gratuito até 72 horas após a reserva — até {date}.",
+  "noFreeCancellationWithin14Days": "Sem cancelamento gratuito: o charter começa nos 14 dias seguintes à reserva. A taxa de cancelamento é de 100% desde o momento da reserva.",
   "yachtPickup": "Retirada do Iate",
   "thisIsARareFind": "Esta é uma descoberta rara",
   "yourTrip": "Sua Viagem",

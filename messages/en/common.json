@@ -167,6 +167,7 @@
   "cancellationFee50Percent": "Cancellation fee is 50% if you cancel after {date}.",
   "cancelAndRescheduleForFreeBefore": "Cancel and reschedule for free before {date}.",
   "freeCancellation72hUntil": "Free cancellation within 72 hours of booking — until {date}.",
+  "noFreeCancellationWithin14Days": "No free cancellation: the charter starts within 14 days of booking. The cancellation fee is 100% from the moment of booking.",
   "yachtPickup": "Yacht Pick-up",
   "thisIsARareFind": "This is a rare find",
   "yourTrip": "Your Trip",
