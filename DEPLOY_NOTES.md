@@ -1,5 +1,19 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-11-12 — 🏷️ „72 h besplatan otkaz“ na kartici plovila — ✅ LIVE 12.11.2026 ~09:02 UTC (`423ed711c`, deployment id 423ed711cbb5-mwdbihu5, tag `live/2026-11-12-card-free-cancellation`)
+
+**Zašto (Mario 12.11. „Da, ugradi“ → „Da, deploy“):** b4y je bila jedina od 7 stranica čija kartica plovila nije nosila obećanje koje već daju stranica broda, FAQ i uvjeti 7.1; svih 6 sestara ga ima ispod cijene. Nalaz iz usporedbe s Boataroundom (`boataround-analiza-proizvoda.md` u korijenu boat4you-delivery, točka 10).
+
+**Što:** `src/components/BoatListingItemCard/BoatListingItemCard.tsx`: zelena kvačica i kratki tekst ispod cijene (lista i mreža), tooltip je puna rečenica `common.freeCancellationWithin72Hours`. Prikazuje se samo kad brod ima cijenu, nije „On request“ (custom) i status je „Available“. Novi ključ `common.freeCancellation72h` ×9 jezika, kratki oblici jer je stupac kartice na 375 px širok 178 px (it „Cancellazione gratuita 72 h“, de „72 h kostenlos stornieren“…); nerazdvojni razmak između broja i jedinice je u JSON-u zapisan kao escape. Bez backenda, bez novih env varijabli.
+
+**Provjereno:** lint hook 0 grešaka, tsc 0, `check:type-scale` OK. Lokalno (dev, živi API): 375 px svih 9 jezika u jednom redu, 360 px (pt) dva ujednačena reda, 768 i 1440 px lista i mreža. Uživo: dpl na `/contact-us` i `/search`, pravni markeri en + de, `/search?destinations=croatia` na svih 9 jezika 18 kartica / 18 oznaka, pretraga 5.–12.6.2027. 15 oznaka + 3 „Pre-reserved“ bez oznake, Chrome 1919 px hr: 18 oznaka u jednom redu unutar kartice. **Nije viđeno uživo:** kartica „On request“ / „Price on request“, itinerari, `/deals`, mobitel na produkciji (mjereno samo lokalno).
+
+**SEO Stage B (standard): 2 nova pada, nijedan od ovog deploya:** (1) T6 „Lagoon 42 | Sea Novels“ na `/nl/search?destinations=marina%20paleros&boatTypes=CATAMARAN`: poznato, Mario 11.11. „ostavi sea novels“, nije u `seo_regression_expected.json`. (2) K3 `/search?destinations=kornati&boatTypes=SAILING_YACHT`: stranica je u 09:10:10 UTC, tijekom zagrijavanja nakon zamjene, vratila 503 pa ju je provjera uzela kao noindex; u 09:12 UTC 200, `index, follow`, 18 kartica. Izvještaj: `_seo-audit-2026-11-12/regression/090751-B-boat4you/summary.md`.
+
+**Postojeće greške kartice nađene pri pregledu (nisu dirane, čekaju odluku):** mreža na ~1024 px: kartice s čipom „N people are also interested“ imaju cijenu (i novu oznaku) odrezanu desno; mobitel it/pt: čip je širi od stupca, početak mu je pod fotografijom. Boja oznake je postojeća `green500`, kontrast oko 3,6:1.
+
+**Rollback:** `.next.prev` na cusma1 = `b1f3d1990` (naredba je u logu deploya), ili revert `423ed711c` + redeploy.
+
 ## 2026-11-11 — 📞 Upit: talijanski i nizozemski tekst privole i odjeljka o Niki u „tu“ / „je“ — ✅ LIVE 11.11.2026 ~19:14 UTC (`b1f3d1990`, deployment id b1f3d1990bb8-mwchs20z, tag `live/2026-11-11-calls-forms-2`)
 
 **Što (Mario 11.11. „sredi sve otvoreno“):** tekst kvačice privole (`common.callConsent`) i odjeljak „Telefonski pozivi Nike“ u politici privatnosti obraćali su se formalno (Lei, u), a ostatak stranice na ta dva jezika neformalno. Samo tekst, bez promjene koda. Build nosi i dva deploya drugih sesija s `main` (Stripe uklonjen, slični brodovi).
