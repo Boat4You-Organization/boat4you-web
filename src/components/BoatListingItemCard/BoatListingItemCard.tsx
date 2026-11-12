@@ -10,6 +10,7 @@ import {
   AutoMode,
   BeachAccess,
   Bolt,
+  Check,
   DirectionsBoat,
   GpsFixed,
   Kitchen,
@@ -263,6 +264,12 @@ const BoatListingItemCardView = ({
   const resolvedStatus: OfferStatus = offerStatus ?? (isOption ? OfferStatus.OPTION : OfferStatus.FREE);
 
   const isAvailable = availableStatuses.includes(resolvedStatus);
+
+  // "72 h free cancellation" under the price, as on the six sister sites'
+  // cards (12.11.2026). Only where the boat can be booked online for the
+  // period the card shows: it has a price, is not an inquiry-only (custom)
+  // boat and is not pre-reserved.
+  const showFreeCancellation = hasPrice && !custom && isAvailable;
 
   // Highlight yachts under active or waiting option as a "SPECIAL PROMOTION"
   // (competitor-style promo ribbon on the image) — these are the ones most
@@ -702,6 +709,34 @@ const BoatListingItemCardView = ({
                   )}
                 </Stack>
               </Stack>
+              {/* The short form of the boat page's promise; the tooltip gives it in
+                full ("within 72 hours of booking" — counted from the booking moment,
+                never "before check-in"). A child of the price block itself, not of
+                the stack above: a long social-proof chip makes that stack wider
+                than a phone's content column, and the label would follow it under
+                the photo. The nine labels fit one line in the column at 375 px
+                (178 px); on a narrower phone they wrap in two even lines, and the
+                no-break space in each label keeps "72 h" together. The tick is
+                inline, so it stays beside the first word when the label wraps. */}
+              {showFreeCancellation && (
+                <Typography
+                  component="span"
+                  title={t('common.freeCancellationWithin72Hours')}
+                  sx={{
+                    // Closer to the price than to the button below (desktop block gap is 8 px).
+                    mt: isMobile ? 0 : -0.5,
+                    color: colors.green500,
+                    fontSize: 12,
+                    fontWeight: 700,
+                    lineHeight: 1.2,
+                    textAlign: 'right',
+                    textWrap: 'balance',
+                  }}
+                >
+                  <Check sx={{ fontSize: 14, mr: 0.5, verticalAlign: 'text-bottom' }} />
+                  {t('common.freeCancellation72h')}
+                </Typography>
+              )}
               {(!isGridView || (!custom && !isAvailable)) && (
                 <Stack
                   direction="row"
