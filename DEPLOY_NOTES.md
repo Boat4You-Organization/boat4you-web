@@ -1,5 +1,34 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-11-12 — ⏳ Besplatan otkaz 72 h ne vrijedi za rezervaciju 14 dana ili manje prije chartera — ČEKA odobrenje tekstova i deploy (grana `feat/free-cancel-14-days`, `dcc271ac6`)
+
+**Zašto (Mario 12.11.):** kod last minute rezervacije klijent plaća puni iznos, novac odmah ide charter kompaniji i ona brod ne uzima natrag; 72 h i dalje vrijedi za sve ostale. „Da, ugradi sve“ = kartica, stranica broda, naplata, My Bookings i uvjeti 7.1.
+
+**Što je na grani (samo b4y web, bez backenda):**
+
+- `src/utils/static/freeCancellationEligibility.ts`: `offersFreeCancellation(dateFrom, bookedAt)`; obećanje vrijedi samo kad je prvi dan chartera više od 14 dana nakon trenutka rezervacije; rezervacija napravljena prije `FREE_CANCELLATION_RULE_SINCE` zadržava 72 h.
+- Kartica plovila (oznaka), stranica broda (redak u „Payment policies“ po ponudi), PDF ponude, vremenska crta otkaza u naplati i My Bookings (prvi korak „No free cancellation… 100% from the moment of booking“, novi ključ `common.noFreeCancellationWithin14Days` ×9), kvačica „Free cancellation until“ na plaćanju, JSON-LD redaka na `/search` (`MerchantReturnNotPermitted` za tjedan unutar 14 dana).
+- Tekstovi ×9 jezika: `yacht.cancellationPolicyDescription` i uvjeti 7.1 (naslov točke nepromijenjen, pa pravni marker deploy skripte ostaje).
+- `yarn test:free-cancellation` (15 testova), `yarn test:boat-seo` prolazi.
+
+**PRIJE DEPLOYA (redom):**
+
+- [ ] Mario odobrio tekstove (7.1, redak vremenske crte, rečenica „Cancellation policy“).
+- [ ] `FREE_CANCELLATION_RULE_SINCE` postaviti na trenutak deploya (UTC, ne raniji od zamjene builda na serveru). Sada je `2026-11-12T00:00:00Z` radi lokalne provjere; s tom vrijednošću bi rezervacija napravljena prije deploya, a unutar 14 dana od chartera, u My Bookings izgubila prikaz 72 h koji joj je obećan.
+- [ ] „Last updated“ u `src/posts/static/*/terms-and-conditions.md` (redak 3, 9 jezika, sada 17.06.2025) na datum deploya, ako Mario potvrdi; uvjeti sami obećavaju novi datum kod bitne izmjene.
+- [ ] Živi `dpl=` predak HEAD-a, merge `origin/main`, pa `B4Y_REPO=…/wt-card-cancel bash infra/deploy-scripts/b4y_web_deploy.sh`.
+- [ ] Nakon deploya uživo: pretraga s datumom unutar 14 dana (bez oznake), stranica broda s tim datumom (bez retka), prvi korak naplate za taj datum BEZ slanja obrasca (vremenska crta), `/terms-and-conditions` en + hr.
+
+**Provjereno lokalno:** pretrage 14.–21.11. i 21.–28.11. 0 oznaka od 18, 28.11.–5.12. 18 od 18; stranica broda 14.–21.11. bez retka, 5.–12.6.2027. s retkom; JSON-LD 20 × NotPermitted / 20 × FiniteReturnWindow; lint, tsc 0. Neovisni Opus pregled 12.11.: 1 bloker (datum pravila, gore), PDF, JSON-LD i poljski tekst popravljeni.
+
+**Nije provjereno:** naplata i My Bookings u pregledniku (lokalno ih blokira CORS prema produkcijskom API-ju, a do plaćanja bi nastala prava opcija kod partnera); pokriva ih test vremenske crte.
+
+**Poznato, nije riješeno:**
+
+- My Bookings čita `createdAt` bez vremenske zone kao lokalno vrijeme preglednika; uz granicu od 14 dana odgovor se može okrenuti za klijenta u dalekoj zoni. Treba znati zonu servera ili da backend šalje pomak.
+- ISR stranice s karticama (`/deals`, itinerari) mogu oko 00:00 UTC kratko imati hydration upozorenje za karticu čiji tjedan baš prelazi granicu; sadržaj se sam ispravi.
+- Opći tekstovi i dalje kažu „svaka rezervacija“: početna, kontakt, FAQ modela, meta opis last-minute akcije (`promo.json`, prioritet), Iris prompt (backend), e-mail earlyBooking2027; svih 6 sestara. Drugi krug.
+
 ## 2026-11-12 — 🏷️ „72 h besplatan otkaz“ na kartici plovila — ✅ LIVE 12.11.2026 ~09:02 UTC (`423ed711c`, deployment id 423ed711cbb5-mwdbihu5, tag `live/2026-11-12-card-free-cancellation`)
 
 **Zašto (Mario 12.11. „Da, ugradi“ → „Da, deploy“):** b4y je bila jedina od 7 stranica čija kartica plovila nije nosila obećanje koje već daju stranica broda, FAQ i uvjeti 7.1; svih 6 sestara ga ima ispod cijene. Nalaz iz usporedbe s Boataroundom (`boataround-analiza-proizvoda.md` u korijenu boat4you-delivery, točka 10).
