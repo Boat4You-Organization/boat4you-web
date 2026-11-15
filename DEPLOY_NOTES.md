@@ -1,5 +1,36 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-11-15 — YouTube u blogu: sličica + play (youtube-nocookie tek na klik) + VideoObject — ✅ LIVE 15.11.2026 ~13:55 UTC (`a2de8d36b`, deployment id a2de8d36b4df-mwhw58q9, tag `live/2026-11-15-blog-video`)
+
+**Zašto:** Mario 15.11. želi na webu HTZ-ov promotivni film s Johnom Malkovichem (YouTube `S2Uqg1va_pI` + nastavak `eQSMz3IkKAY`). YouTube iframe zalijepljen u WordPress učitao bi player (~1 MB) i YouTube kolačiće prije pristanka.
+
+**Što:**
+
+- `src/utils/static/blogVideo.ts` (novo): placeholder `<div class="b4y-video" data-yt data-title data-description data-upload data-duration data-credit>` i svaki `youtube(-nocookie).com/embed/ID` iframe → fasada: sličica `/yt-thumb/ID.jpg` + gumb. Playlist i live ugradnje ostaju; `?start=` se čuva.
+- `SingleBlogContent.tsx`: klik na gumb → iframe `youtube-nocookie.com/embed/ID?autoplay=1`.
+- `next.config.js`: rewrite `/yt-thumb/:id([A-Za-z0-9_-]{11}).jpg` → `i.ytimg.com/vi/:id/hqdefault.jpg`. Preglednik ne kontaktira Google prije klika; `.jpg` drži put izvan matchera proxyja za jezike.
+- `blogJsonLd.ts`: `BlogPosting.video` (VideoObject) za placeholdere s datumom objave; goli iframe ga ne dobiva.
+- `blog/[slug]/page.tsx`: BlogPosting i FAQ JSON-LD sada idu kroz `serializeJsonLd`. Pregled je dokazao da `&lt;/script&gt;` u atributu dekodiran u JSON-LD izlazi iz `<script>`.
+- `yarn test:blog-video` (13).
+
+**Pregled:** 1 Opus agent, SHIP AFTER FIXES → svi popravci u `a2de8d36b`:
+
+- XSS kroz JSON-LD;
+- RangeError na `&#99999999;`;
+- playlist i live;
+- sličica s vlastite domene;
+- parsiranje atributa;
+- provjera datuma;
+- klik samo na gumb;
+- boja potpisa;
+- dvostruki razmak.
+
+**Provjereno uživo (13:58 UTC):** dpl `a2de8d36b4df` na `/contact-us` i `/search?destinations=croatia`; `/yt-thumb/S2Uqg1va_pI.jpg` 200 image/jpeg (23 KB); `/yt-thumb/x.jpg` 404. SEO Stage B: 0 novih FAIL (`_seo-audit-2026-11-15/regression/135530-B-boat4you/summary.md`).
+
+**Prvi post:** WP 17694 `/blog/croatia-i-hear-its-beautiful-john-malkovich-film`, objavljuje BLOGOVI nakon ovog deploya.
+
+**Rollback:** `.next.prev` na cusma1 = `3a36f93a6` (naredba u `_seo-audit-2026-11-15/b4y-blog-video-deploy.log`).
+
 ## 2026-11-15 — SEO faza 1 (analiza 15.11.) — ✅ LIVE 15.11.2026 ~09:49 UTC (`3a36f93a6`, deployment id 3a36f93a6d4e-mwhnbzzp, tag `live/2026-11-15-seo-audit`)
 
 **Zašto:** Mario 15.11. „ajde sredit boat4you“ prema analizi `_seo-audit-2026-11-15/boat4you-SEO-analiza-15-11-2026.md` (faza 1 = brzi popravci bez promjene dizajna).
