@@ -639,7 +639,7 @@
   "bookingFailedTitle": "Nie udało się dokończyć Twojej rezerwacji",
   "bookingFailedExternal": "Rezerwacja nie została dokończona i nie pobraliśmy żadnej płatności. Nasz zespół został powiadomiony i wkrótce się z Tobą skontaktuje — możesz też od razu wysłać nam zapytanie, a zajmiemy się rezerwacją mailowo.",
   "bookingFailedReference": "Numer referencyjny: {code}",
-  "tripadvisorReviews": "{count, plural, one {# opinia} few {# opinie} many {# opinii} other {# opinii}} w serwisie TripAdvisor o Europe Yachts Charter, naszej agencji w Splicie",
+  "tripadvisorReviews": "{count, plural, one {# opinia} few {# opinie} many {# opinii} other {# opinii}} w serwisie TripAdvisor o Europe Yachts Charter",
   "tripadvisorAria": "Ocena {rating} na 5 na podstawie {count, plural, one {# opinii} few {# opinii} many {# opinii} other {# opinii}} w serwisie TripAdvisor o Europe Yachts Charter, naszej agencji w Splicie",
   "boatsAvailableByType": {
     "CATAMARAN": "{count, plural, one {# dostępny katamaran} few {# dostępne katamarany} many {# dostępnych katamaranów} other {# dostępnych katamaranów}}",

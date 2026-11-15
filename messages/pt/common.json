@@ -639,7 +639,7 @@
   "bookingFailedTitle": "Não foi possível concluir a sua reserva",
   "bookingFailedExternal": "A sua reserva não foi concluída e não lhe foi cobrado nada. A nossa equipa já foi notificada e entrará em contacto consigo em breve — também nos pode enviar já o seu pedido e tratamos da reserva por e-mail.",
   "bookingFailedReference": "Referência: {code}",
-  "tripadvisorReviews": "{count, plural, one {# avaliação} other {# avaliações}} no TripAdvisor da Europe Yachts Charter, a nossa agência em Split",
+  "tripadvisorReviews": "{count, plural, one {# avaliação} other {# avaliações}} no TripAdvisor da Europe Yachts Charter",
   "tripadvisorAria": "Classificação de {rating} em 5 com base em {count, plural, one {# avaliação} other {# avaliações}} no TripAdvisor da Europe Yachts Charter, a nossa agência em Split",
   "closeGallery": "Fechar a galeria",
   "goBack": "Voltar",

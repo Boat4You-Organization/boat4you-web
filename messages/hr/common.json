@@ -639,7 +639,7 @@
   "bookingFailedTitle": "Nismo uspjeli dovršiti vašu rezervaciju",
   "bookingFailedExternal": "Rezervacija nije dovršena i ništa vam nije naplaćeno. Naš tim je obaviješten i uskoro će vas kontaktirati — možete nam upit poslati i odmah pa ćemo rezervaciju dogovoriti e-poštom.",
   "bookingFailedReference": "Referenca: {code}",
-  "tripadvisorReviews": "{count, plural, one {# recenzija} few {# recenzije} other {# recenzija}} na TripAdvisoru za Europe Yachts Charter, našu agenciju u Splitu",
+  "tripadvisorReviews": "{count, plural, one {# recenzija} few {# recenzije} other {# recenzija}} na TripAdvisoru za Europe Yachts Charter",
   "tripadvisorAria": "Ocjena {rating} od 5 prema {count, plural, one {# recenziji} few {# recenzije} other {# recenzija}} na TripAdvisoru za Europe Yachts Charter, našu agenciju u Splitu",
   "boatsAvailableByType": {
     "CATAMARAN": "{count, plural, one {# dostupan katamaran} few {# dostupna katamarana} other {# dostupnih katamarana}}",

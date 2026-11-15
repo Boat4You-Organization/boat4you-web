@@ -12,6 +12,9 @@ import { manufacturerPath, yachtsIndexPath } from '@/utils/static/yachtModelKey'
 // own six-hour snapshot on top, so llms.txt could lag the pages by a whole
 // stats cycle ("54 countries" here while the site said 53, audit B34). The
 // landing gate and the model fleets below are Data Cache reads as well.
+// force-dynamic (15.11.2026 review): a static llms.txt is pre-rendered by `next build`, which would pull the
+// whole model catalogue from the production API during the build (same reason as sitemap-models.xml).
+export const dynamic = 'force-dynamic';
 export const revalidate = 60;
 
 const numberFormat = new Intl.NumberFormat('en-US');
@@ -96,8 +99,8 @@ Boat4You lets travellers search live availability and prices from verified chart
 
 - A boat's price is the charter fee for the whole period you pick (most charters run Saturday to Saturday), shown as one total, not per day.
 - Boat4You charges no booking fee.
-- Not in the charter fee: the obligatory extras each charter company sets (for example transit log, final cleaning or bed linen, usually paid at the base), the refundable security deposit (blocked on a card at check-in), a skipper if you need one, fuel, mooring fees outside the home marina and per-person taxes. Each boat page lists its obligatory extras and the deposit, and the booking form shows them again before you pay.
-- Payment is by card (also Apple Pay and Google Pay), bank payment or Klarna, processed by Mollie; the charter fee is usually split into instalments. Klarna, where it is offered, adds a payment fee that is shown before you pay.
+- Not in the charter fee: the obligatory extras each charter company sets (for example transit log, final cleaning or bed linen, usually paid at the base), the refundable security deposit (usually blocked on a card at check-in), a skipper if you need one, fuel, mooring fees outside the home marina and per-person taxes. Each boat page lists its obligatory extras and the deposit, and the booking form shows them again before you pay.
+- Payment is by card (also Apple Pay and Google Pay) or Klarna through Mollie, or by bank transfer; the charter fee is usually split into instalments. Some payment methods may carry a payment fee, shown for each method before you pay.
 
 ## Cancellation
 
@@ -105,7 +108,7 @@ Boat4You lets travellers search live availability and prices from verified chart
 
 ## Licences
 
-- A bareboat charter needs at least one person on board with a sailing licence recognised in the country of charter (for example an ICC, RYA Day Skipper or an equivalent national licence) and a VHF radio licence. Without one you can book the same boat with a professional skipper.
+- A bareboat charter needs at least one person on board with a sailing licence recognised in the country of charter (for example an ICC, RYA Day Skipper or an equivalent national licence) and, in some countries (for example Croatia and Greece), a VHF radio licence. Without one you can book the same boat with a professional skipper.
 - [Sailing licence guide by country](${baseUrl}${LICENCE_GUIDE_PATH})
 
 ${section('Destinations', destinations)}## Price guides
