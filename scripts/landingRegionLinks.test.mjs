@@ -133,7 +133,7 @@ const { curatedFileFor } = await import('@/utils/server/curatedSeoContent');
 const { landingCrumbs, landingNav } = await import('@/utils/server/landingNav');
 const { placeText } = await import('@/utils/server/placeText');
 const { slugifyDestination } = await import('@/utils/static/curatedSeoSlug');
-const { buildSearchLandingPath } = await import('@/utils/static/searchLandingPath');
+const { buildDestinationHref, buildSearchLandingPath } = await import('@/utils/static/searchLandingPath');
 
 const index = await requireDestinationIndex();
 
@@ -259,6 +259,27 @@ describe('itinerariesFor: the itinerary areas of every row of the place', () => 
         buildSearchLandingPath('Cyclades'),
         buildSearchLandingPath('Olympic Marina'),
       ]
+    );
+  });
+});
+
+describe('links: an alias of a pinned landing links the landing, not its redirect', () => {
+  test('the home BVI card ("Virgin Islands (British)", c-242) links the British Virgin Islands landing', () => {
+    assert.equal(
+      buildDestinationHref('Virgin Islands (British)', 'c-242'),
+      buildSearchLandingPath('British Virgin Islands')
+    );
+  });
+
+  test('a comma alias gets the pinned landing too; other names are unchanged', () => {
+    assert.equal(
+      buildDestinationHref('Marina Kaštela, Kaštel Gomilica', 'l-1'),
+      buildSearchLandingPath('Marina Kastela')
+    );
+    assert.equal(buildDestinationHref('Croatia', 'c-54'), buildSearchLandingPath('Croatia'));
+    assert.equal(
+      buildDestinationHref('Marina Spinut, Split', 'l-2'),
+      '/search?destinations=Marina%20Spinut%2C%20Split&did=l-2'
     );
   });
 });

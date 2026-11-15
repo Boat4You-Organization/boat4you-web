@@ -73,8 +73,14 @@ export async function getManufacturers(
  *      `{ id: count }` — already covers the entire indexable catalogue
  *   2. `/public/catalogue/manufacturers?size=3000` → id + name lookup
  *   3. Sort by count desc, drop entries we couldn't name and placeholder
- *      makers, fold a brand's rows into its /yachts hub tile (when it has
- *      one), slice top N
+ *      makers, fold a brand's rows into its /yachts hub tile, drop brands
+ *      without a hub, slice top N
+ *
+ * Only brands with a /yachts hub (indexable) make a tile (audit 15.11.2026,
+ * K6): the other tiles linked `/search?mfid=…`, which is noindex — 17 of
+ * the 24 home links went to pages Google may not index. When the model
+ * catalogue is not available within its budget (cold start), every tile
+ * keeps the filtered search (nofollow) rather than the block disappearing.
  *
  * Cached 1 hour — manufacturer counts move slowly; refreshing on every
  * home-page hit would burn the distribution endpoint unnecessarily.
@@ -110,6 +116,7 @@ export async function getTopManufacturers(limit = 24): Promise<ManufacturerCount
     // + "Lagoon-Bénéteau") fold into one tile. Never waits on a cold
     // catalogue: without it every tile keeps the filtered search.
     const brandHubs = await brandHubsWithin(1500);
+    const hubsKnown = Object.keys(brandHubs).length > 0;
     const seenHubs = new Set<string>();
 
     return (
@@ -122,7 +129,7 @@ export async function getTopManufacturers(limit = 24): Promise<ManufacturerCount
           const slug = slugifyName(canonicalManufacturer(m.name) ?? '');
           const hub = slug ? brandHubs[slug] : undefined;
 
-          if (!slug || !hub) return [m];
+          if (!slug || !hub) return hubsKnown ? [] : [m];
 
           if (seenHubs.has(slug)) return [];
 

@@ -19,10 +19,12 @@ interface ManufacturersSectionProps {
  * hydration. Visual gabarit unchanged — same container shape, h1-variant title
  * and grid as before (mirrors FAQSection's de-MUI conversion).
  *
- * A brand with a /yachts brand hub links the hub (indexable, its models and
- * counts). Other brands deep-link into `/search?mfid=` for visitors; that URL
- * is noindex and canonicalises to bare `/search`, so those links carry
- * rel="nofollow" (audit 25.9.2026). The /yachts index closes the block.
+ * Every tile links a /yachts brand hub (indexable, its models and counts);
+ * brands without one are left out (getTopManufacturers, audit 15.11.2026).
+ * Only when the model catalogue is not available do the tiles deep-link into
+ * `/search?mfid=`, which is noindex and canonicalises to bare `/search`, so
+ * those links carry rel="nofollow" (audit 25.9.2026). The /yachts index
+ * closes the block.
  */
 const ManufacturersSection = ({ manufacturers }: ManufacturersSectionProps) => {
   const t = useTranslations('home');

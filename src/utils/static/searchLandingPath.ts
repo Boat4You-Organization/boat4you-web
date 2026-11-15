@@ -1,3 +1,5 @@
+import { LANDING_IDENTITIES } from '@/config/landing-identity.config';
+
 /**
  * ONE canonical form for the destination landing pages:
  *
@@ -59,14 +61,6 @@ export const buildDidHref = (name: string, did: string, boatType?: string | null
 };
 
 /**
- * Internal link to a known catalogue location: the canonical landing form
- * when the name can carry it, otherwise the did form (noindex, but it lands
- * on the right boats).
- */
-export const buildDestinationHref = (name: string, did: string, boatType?: string | null): string =>
-  isLandingExpressible(name) ? buildSearchLandingPath(name, boatType) : buildDidHref(name, did, boatType);
-
-/**
  * Case-, diacritics- and punctuation-insensitive key for matching a URL
  * destination value against catalogue names ("Istria / Kvarner" ≡
  * "istria/kvarner", "Marina Kaštela" ≡ "marina kastela"). đ and ł do not
@@ -81,3 +75,36 @@ export const normalizeDestinationName = (value?: string | null): string =>
     .replace(/\p{M}/gu, '')
     .replace(/[^a-z0-9]+/g, ' ')
     .trim();
+
+let aliasToLandingName: Map<string, string> | undefined;
+
+/**
+ * The pinned landing name for a catalogue alias ("Virgin Islands (British)"
+ * → "British Virgin Islands", landing-identity.config.ts), else the name
+ * itself. /search answers an alias with a 308 to the pinned landing
+ * (landingRedirectPath), so a link built from the alias pointed at a
+ * redirect (audit 15.11.2026, K6: the home BVI card).
+ */
+export const canonicalLandingName = (name: string): string => {
+  aliasToLandingName ??= new Map(
+    LANDING_IDENTITIES.flatMap(landing =>
+      landing.aliases.map(alias => [normalizeDestinationName(alias), landing.name] as const)
+    )
+  );
+
+  return aliasToLandingName.get(normalizeDestinationName(name)) ?? name;
+};
+
+/**
+ * Internal link to a known catalogue location: the canonical landing form
+ * when the name can carry it, otherwise the did form (noindex, but it lands
+ * on the right boats). An alias of a pinned landing links the landing's own
+ * name, the URL /search would redirect it to.
+ */
+export const buildDestinationHref = (name: string, did: string, boatType?: string | null): string => {
+  const landingName = canonicalLandingName(name);
+
+  return isLandingExpressible(landingName)
+    ? buildSearchLandingPath(landingName, boatType)
+    : buildDidHref(name, did, boatType);
+};
