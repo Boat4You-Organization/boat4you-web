@@ -406,6 +406,23 @@ export const loadModelFleet = cache(async (model: CatalogModel): Promise<ModelFl
   return { total, boats };
 });
 
+/**
+ * The /yachts pages that render: every model page whose live fleet passes
+ * MIN_LANDING_FLEET, and the brand hubs with at least two of them. The
+ * model sitemap and llms.txt list exactly these. Throws like
+ * loadModelCatalog.
+ */
+export const loadLiveModelPages = async (): Promise<{ models: CatalogModel[]; brands: CatalogBrand[] }> => {
+  const catalog = await loadModelCatalog();
+  const live = await mapWithLimit(catalog.models, 2, async model =>
+    (await loadModelFleet(model)).total >= MIN_LANDING_FLEET ? model : null
+  );
+  const models = live.filter((m): m is CatalogModel => !!m);
+  const brands = catalog.brands.filter(brand => models.filter(m => m.brandSlug === brand.brandSlug).length >= 2);
+
+  return { models, brands };
+};
+
 interface YachtDetailSpecs {
   berths?: number | null;
   wc?: number | null;

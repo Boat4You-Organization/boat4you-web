@@ -1,6 +1,5 @@
 import { routing } from '@/i18n/routing';
-import { MIN_LANDING_FLEET, mapWithLimit } from '@/utils/server/landingGate';
-import { loadModelCatalog, loadModelFleet } from '@/utils/server/modelCatalog';
+import { loadLiveModelPages } from '@/utils/server/modelCatalog';
 import { manufacturerPath, yachtsIndexPath } from '@/utils/static/yachtModelKey';
 
 // Not prerendered at build time (the catalogue build reads a ~14 s
@@ -25,22 +24,13 @@ export async function GET() {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
 
   try {
-    const catalog = await loadModelCatalog();
-    const live = await mapWithLimit(catalog.models, 2, async model => {
-      const fleet = await loadModelFleet(model);
-
-      return fleet.total >= MIN_LANDING_FLEET ? model : null;
-    });
-    const models = live.filter((m): m is NonNullable<typeof m> => !!m);
+    const { models, brands } = await loadLiveModelPages();
 
     // No model above the fleet floor means the fleet queries failed, not that
     // the catalogue has no models: never answer an empty <urlset> (B08).
     if (!models.length) throw new Error('sitemap-models: no model page passed the fleet check');
 
-    const liveBrands = catalog.brands
-      .map(brand => ({ brand, count: models.filter(m => m.brandSlug === brand.brandSlug).length }))
-      .filter(({ count }) => count >= 2)
-      .map(({ brand }) => manufacturerPath(brand.brandSlug));
+    const liveBrands = brands.map(brand => manufacturerPath(brand.brandSlug));
     const paths = [yachtsIndexPath(), ...liveBrands, ...models.map(m => m.path)];
 
     const urls = paths
