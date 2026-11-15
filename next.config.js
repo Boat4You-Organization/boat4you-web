@@ -78,6 +78,13 @@ const nextConfig = {
         source: '/pdf-image/:imageId',
         destination: 'https://boat4you.b-cdn.net/public/image/:imageId',
       },
+      // YouTube thumbnails of the blog's click-to-load videos (utils/static/blogVideo.ts, 15.11.2026), fetched by
+      // our server so the visitor's browser contacts no Google host before pressing play. The `.jpg` keeps the path
+      // out of the locale proxy's matcher (src/proxy.ts skips paths with a dot).
+      {
+        source: '/yt-thumb/:id([A-Za-z0-9_-]{11}).jpg',
+        destination: 'https://i.ytimg.com/vi/:id/hqdefault.jpg',
+      },
     ];
   },
   async redirects() {

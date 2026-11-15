@@ -168,7 +168,7 @@ const SingleBlogPage = async ({ params }: { params: Promise<{ slug: string; loca
       <script
         type="application/ld+json"
         // eslint-disable-next-line react/no-danger
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingLd) }}
+        dangerouslySetInnerHTML={{ __html: serializeJsonLd(blogPostingLd) }}
       />
       <script
         type="application/ld+json"
@@ -179,7 +179,7 @@ const SingleBlogPage = async ({ params }: { params: Promise<{ slug: string; loca
         <script
           type="application/ld+json"
           // eslint-disable-next-line react/no-danger
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+          dangerouslySetInnerHTML={{ __html: serializeJsonLd(faqLd) }}
         />
       )}
       <SingleBlogContent {...blog.post} content={content} />

@@ -14,6 +14,7 @@ import {
   buildBlogVideoObjects,
   nocookieEmbedUrl,
 } from '../src/utils/static/blogVideo.ts';
+import { serializeJsonLd } from '../src/utils/static/jsonLd.ts';
 
 const PLACEHOLDER =
   '<p>Intro</p><div class="b4y-video" data-yt="S2Uqg1va_pI" data-title="Croatia | I Hear It&#8217;s Beautiful ft. John Malkovich" ' +
@@ -29,7 +30,8 @@ describe('blogVideoFacades', () => {
       html,
       /<button type="button" class="b4y-yt__play" aria-label="Play video: Croatia \| I Hear It&#8217;s/
     );
-    assert.match(html, /src="https:\/\/i\.ytimg\.com\/vi\/S2Uqg1va_pI\/hqdefault\.jpg"/);
+    assert.match(html, /src="\/yt-thumb\/S2Uqg1va_pI\.jpg"/);
+    assert.doesNotMatch(html, /ytimg/);
     assert.match(html, /<p class="b4y-yt__credit">Video: Croatian National Tourist Board<\/p>/);
     assert.match(html, /^<p>Intro<\/p>.*<p>Outro<\/p>$/s);
     assert.doesNotMatch(html, /<iframe|b4y-video/);
@@ -98,4 +100,59 @@ test('the player URL is youtube-nocookie with autoplay', () => {
     nocookieEmbedUrl('S2Uqg1va_pI'),
     'https://www.youtube-nocookie.com/embed/S2Uqg1va_pI?autoplay=1&rel=0&playsinline=1'
   );
+  assert.equal(
+    nocookieEmbedUrl('S2Uqg1va_pI', 42),
+    'https://www.youtube-nocookie.com/embed/S2Uqg1va_pI?autoplay=1&rel=0&playsinline=1&start=42'
+  );
+});
+
+describe('review fixes 15.11.', () => {
+  test('an entity-encoded </script> in a title is escaped in the page JSON-LD', () => {
+    const html = blogVideoFacades(
+      '<div class="b4y-video" data-yt="S2Uqg1va_pI" data-title="x&lt;/script&gt;&lt;img src=x onerror=alert(1)&gt;" data-upload="2026-06-13"></div>'
+    );
+    const [video] = buildBlogVideoObjects(html);
+
+    assert.equal(video.name, 'x</script><img src=x onerror=alert(1)>');
+    assert.doesNotMatch(serializeJsonLd({ video: [video] }), /<\/script/i);
+  });
+
+  test('a mistyped numeric entity does not throw', () => {
+    const html = blogVideoFacades(
+      '<div class="b4y-video" data-yt="S2Uqg1va_pI" data-title="a &#99999999; b &#xD800;" data-upload="2026-06-13"></div>'
+    );
+
+    assert.equal(buildBlogVideoObjects(html)[0].name, 'a &#99999999; b &#xD800;');
+  });
+
+  test('playlist and live embeds are left as they are; start is kept', () => {
+    const playlist = '<iframe src="https://www.youtube.com/embed/videoseries?list=PL123" title="p"></iframe>';
+    const live = '<iframe src="https://www.youtube.com/embed/live_stream?channel=UC1" title="l"></iframe>';
+
+    assert.equal(blogVideoFacades(playlist), playlist);
+    assert.equal(blogVideoFacades(live), live);
+    assert.match(
+      blogVideoFacades('<iframe src="https://www.youtube.com/embed/S2Uqg1va_pI?start=95" title="s"></iframe>'),
+      /data-yt-start="95"/
+    );
+  });
+
+  test('an impossible upload date gives no VideoObject', () => {
+    const html = blogVideoFacades(
+      '<div class="b4y-video" data-yt="S2Uqg1va_pI" data-title="t" data-upload="2026-13-45"></div>'
+    );
+
+    assert.deepEqual(buildBlogVideoObjects(html), []);
+  });
+
+  test('data-yt inside another attribute value is ignored; class must be the exact token', () => {
+    const html = blogVideoFacades(
+      '<div class="b4y-video" title="see data-yt=\'aaaaaaaaaaa\'" data-yt="S2Uqg1va_pI" data-title="t"></div>'
+    );
+
+    assert.match(html, /data-yt-id="S2Uqg1va_pI"/);
+    const wrapper = '<div class="b4y-video-wrapper" data-yt="S2Uqg1va_pI"></div>';
+
+    assert.equal(blogVideoFacades(wrapper), wrapper);
+  });
 });

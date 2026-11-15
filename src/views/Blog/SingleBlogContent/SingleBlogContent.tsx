@@ -39,7 +39,8 @@ const SingleBlogContent = ({ slug, title, date, categories, featuredImage, conte
     if (!body) return undefined;
 
     const play = (event: MouseEvent): void => {
-      const facade = (event.target as Element | null)?.closest?.('.b4y-yt');
+      // Only the play button (not the credit line under it).
+      const facade = (event.target as Element | null)?.closest?.('.b4y-yt__play')?.closest('.b4y-yt');
       const id = facade?.getAttribute('data-yt-id');
 
       if (!facade || !id || !/^[\w-]{11}$/u.test(id) || facade.querySelector('iframe')) return;
@@ -48,7 +49,7 @@ const SingleBlogContent = ({ slug, title, date, categories, featuredImage, conte
 
       const iframe = document.createElement('iframe');
 
-      iframe.src = nocookieEmbedUrl(id);
+      iframe.src = nocookieEmbedUrl(id, Number(facade.getAttribute('data-yt-start')) || undefined);
       iframe.title = facade.getAttribute('data-yt-title') || 'Video';
       iframe.allow =
         'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
