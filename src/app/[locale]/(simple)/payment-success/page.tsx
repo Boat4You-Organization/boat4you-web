@@ -2,9 +2,8 @@
 
 import { useEffect, useRef, useState } from 'react';
 
-import { Box, Button, Stack, Typography } from '@mui/material';
+import { Box, Stack, Typography } from '@mui/material';
 import { useLocale, useTranslations } from 'next-intl';
-import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 
 import { getReservationDetails } from '@/actions/reservation.actions';
@@ -207,13 +206,6 @@ const PaymentSuccessPage = () => {
         } as unknown as ReservationDetails);
 
   const isGuest = !reservationData || Object.keys(reservationData).length === 0;
-  // Carry the email + invite context forward into the signup flow. Guest users
-  // land on /signup with their email pre-filled; once the invite email lands
-  // and they click the link it merges with the flow they started here.
-  const signupHref = contact?.email
-    ? `/${locale}/signup?email=${encodeURIComponent(contact.email)}${reservationId ? `&reservationId=${reservationId}` : ''}`
-    : `/${locale}/signup`;
-
   // Prominent "next step" card for guests. Placed between the reservation
   // overview and the contact-support block so it's the first thing the eye
   // hits after "Your yacht has been confirmed" — user has explicitly signaled
@@ -242,24 +234,10 @@ const PaymentSuccessPage = () => {
             {t('createAccountToManageBooking')}
           </Typography>
           <Typography variant="body1" sx={{ color: 'rgba(255,255,255,0.9)' }}>
-            {t('createAccountDescription', { email: contact?.email ?? '' })}
+            {/* The password is set only through the link e-mailed to the guest (15.11.2026, guest takeover fix). */}
+            {t('guestPasswordLinkSent', { email: contact?.email ?? '' })}
           </Typography>
         </Box>
-        <Button
-          component={Link}
-          href={signupHref}
-          size="large"
-          sx={{
-            width: { xs: '100%', md: 280 },
-            flexShrink: 0,
-            backgroundColor: colors.white,
-            color: colors.blue500,
-            fontWeight: 700,
-            '&:hover': { backgroundColor: colors.blue50 },
-          }}
-        >
-          {t('createYourPassword')}
-        </Button>
       </Stack>
     </Box>
   ) : null;

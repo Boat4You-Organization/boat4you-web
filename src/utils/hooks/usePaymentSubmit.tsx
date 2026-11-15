@@ -5,17 +5,8 @@ import { useRouter } from 'next/navigation';
 
 import { PaymentMethod } from '@/config/paymentMethods.config';
 import { KLARNA_UNAVAILABLE_CODE, KlarnaBilling, trimKlarnaBilling } from '@/models/klarna.model';
-import { getDataFromSessionStorage } from '@/utils/static/sessionStorageUtils';
 import { showToast } from '@/valtio/global/global.actions';
 import { useUserStore } from '@/valtio/user/user.store';
-
-interface BookingContact {
-  name: string;
-  surname: string;
-  email: string;
-  phoneNumber: string;
-  specialRequest: string;
-}
 
 /**
  * Hosted card checkouts the browser may be sent to: Mollie (the card provider) and Klarna's own page. Anything else
@@ -68,23 +59,15 @@ export const usePaymentSubmit = ({
       //
       //   • Logged-in customer → /my-bookings (they can see the pending row
       //     and re-open the reference number any time).
-      //   • Guest → /signup?email=…&reservationId=… so they immediately set
-      //     a password and turn their PENDING account into REGISTERED. Same
-      //     flow the payment-success page uses for card guests.
+      //   • Guest → /signup?booking=1, which tells them to open the password
+      //     link e-mailed to them (the only way to set it, 15.11.2026).
       if (user) {
         router.replace('/my-bookings');
 
         return;
       }
 
-      const contact = getDataFromSessionStorage<BookingContact>('bookingContact');
-      const email = contact?.email ?? '';
-      const query = new URLSearchParams({
-        email,
-        reservationId: reservationId.toString(),
-      }).toString();
-
-      router.replace(`/signup?${query}`);
+      router.replace('/signup?booking=1');
 
       return;
     }

@@ -154,36 +154,3 @@ export async function signUpUser(
     return { payload: null, message: 'An unexpected error occurred while signing up user' };
   }
 }
-
-// Guest password setup after a successful booking — replaces the invite-code
-// flow when a guest has just finished paying and wants to create an account.
-// The reservation id + email pair proves ownership of the booking (the email
-// must match the one on the reservation, case-insensitive).
-export async function setPasswordForReservation(params: {
-  reservationId: number;
-  email: string;
-  password: string;
-}): Promise<PayloadResponse<boolean>> {
-  try {
-    const response = await fetch(
-      `${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/users/set-password-for-reservation`,
-      {
-        ...POST_REQUEST_PARAMETERS,
-        body: JSON.stringify(params),
-      }
-    );
-
-    if (!response.ok) {
-      const body: ErrorModel = await response.json();
-
-      return { payload: false, message: body.message };
-    }
-
-    return { payload: true };
-  } catch (error) {
-    return {
-      payload: false,
-      message: 'An unexpected error occurred while setting your password',
-    };
-  }
-}

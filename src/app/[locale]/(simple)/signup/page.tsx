@@ -5,22 +5,13 @@ const SignUp = dynamic(() => import('@/views/SignUp'));
 interface PageProps {
   searchParams: Promise<{
     inviteCode?: string;
-    /** Guest-booking mode: the reservation id returned at booking time. */
-    reservationId?: string;
-    /** Guest-booking mode: email used for the reservation, pre-filled in the
-     *  form so the user sees which account they're claiming. */
-    email?: string;
+    /** "1" for a guest straight from a booking: told to open the password link e-mailed to them. */
+    booking?: string;
   }>;
 }
 
 export default async function SignUpPage({ searchParams }: PageProps) {
-  const { inviteCode, reservationId, email } = await searchParams;
+  const { inviteCode, booking } = await searchParams;
 
-  return (
-    <SignUp
-      inviteCode={inviteCode}
-      reservationId={reservationId ? Number(reservationId) : undefined}
-      email={email}
-    />
-  );
+  return <SignUp inviteCode={inviteCode} fromBooking={booking === '1'} />;
 }
