@@ -29,7 +29,6 @@ import { getBoatImageUrl } from '@/utils/static/imageUtils';
 import { initialWeekOffer } from '@/utils/static/initialWeekOffer';
 import { isBookedByInquiry, isInquiryOnlyBoat, showsAllBookedCalendar } from '@/utils/static/inquiryOnlyBoat';
 import { serializeJsonLd } from '@/utils/static/jsonLd';
-import { freeCancellationReturnPolicy } from '@/utils/static/merchantReturnPolicy';
 import { toTitleCase, yachtLabel } from '@/utils/static/toTitleCase';
 import {
   WeeklyOfferSummary,
@@ -210,10 +209,12 @@ function buildYachtProductSchema(
 
   // A yacht charter isn't a shipped/returnable physical good, but Google's
   // Merchant-listing enhancement still asks for these on the offer. Declare
-  // them accurately: no shipping cost (nothing ships), and the return policy
-  // is the page's promise — free cancellation within 72 hours of booking
-  // (merchantReturnPolicy.ts; it said "returns not permitted" until
-  // 7.10.2026). Clears the two non-critical Search Console warnings.
+  // them accurately: no shipping cost (nothing ships). No return policy on
+  // this offer: it spans the whole season, and the 72-hour free
+  // cancellation holds only for a booking made more than 14 days before the
+  // charter (freeCancellationEligibility.ts), which schema.org cannot say —
+  // a flat "3 days, free return" promised it for every week (audit
+  // 15.11.2026, K4). Dated offers (/search rows) still declare it per week.
   const offerShippingDetails = {
     '@type': 'OfferShippingDetails',
     shippingRate: { '@type': 'MonetaryAmount', value: 0, currency: 'EUR' },
@@ -227,7 +228,6 @@ function buildYachtProductSchema(
     },
     ...(country ? { shippingDestination: { '@type': 'DefinedRegion', addressCountry: country } } : {}),
   };
-  const merchantReturnPolicy = freeCancellationReturnPolicy(country);
 
   // Build a non-empty `additionalProperty` array — Google validates each
   // entry has a numeric/string value, so we filter undefined fields out.
@@ -276,7 +276,6 @@ function buildYachtProductSchema(
             availability: weekly.bookable ? 'https://schema.org/InStock' : 'https://schema.org/SoldOut',
             url,
             shippingDetails: offerShippingDetails,
-            hasMerchantReturnPolicy: merchantReturnPolicy,
           },
         }
       : {}),

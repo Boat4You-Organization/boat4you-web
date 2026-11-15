@@ -80,6 +80,28 @@ function sanitizeBlogContentHeadings(html: string, title?: string): string {
   return out;
 }
 
+/**
+ * Some WordPress bodies carry their own `<script type="application/ld+json">`
+ * Article block (pasted with the post). The page already emits one
+ * BlogPosting for the post (blogJsonLd.ts), so those posts described the same
+ * article twice, with zone-less dates (audit 15.11.2026: 41 of 63 posts).
+ * Drop an embedded Article / BlogPosting / NewsArticle block, and the
+ * paragraph left empty around it; any other embedded JSON-LD stays.
+ */
+const EMBEDDED_LD = /(<p>\s*)?<script\b[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>(\s*<\/p>)?/gi;
+const ARTICLE_TYPE = /["']@type["']\s*:\s*["'](?:Article|BlogPosting|NewsArticle)["']/;
+
+export function stripEmbeddedArticleLd(html: string): string {
+  if (typeof html !== 'string' || !html) return html;
+
+  return html.replace(EMBEDDED_LD, (match, open: string | undefined, json: string, close: string | undefined) => {
+    if (!ARTICLE_TYPE.test(json)) return match;
+
+    // Keep a wrapping paragraph's tags unless the block was all it held.
+    return open && close ? '' : `${open ?? ''}${close ?? ''}`;
+  });
+}
+
 export async function getRankMathSEO(url: string): Promise<RankMathSEOData | null> {
   try {
     const baseUrl = process.env.NEXT_PUBLIC_WORDPRESS_API_URL?.replace('/graphql', '');
@@ -218,7 +240,7 @@ export const getBlog = cache(
     // Strip the duplicate-title <h1> from the body so the template title is the
     // page's only H1 (fixes the double-H1 SEO fault on blog posts).
     if (result?.post?.content) {
-      result.post.content = sanitizeBlogContentHeadings(result.post.content, result.post.title);
+      result.post.content = stripEmbeddedArticleLd(sanitizeBlogContentHeadings(result.post.content, result.post.title));
     }
 
     return result;

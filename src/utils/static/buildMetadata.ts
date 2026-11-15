@@ -78,6 +78,21 @@ export const buildAlternateLanguages = (path: string, locales: readonly string[]
       : []),
   ]);
 
+const localeToLanguageTag: Record<string, string> = {
+  en: 'en-US',
+  de: 'de-DE',
+  fr: 'fr-FR',
+  es: 'es-ES',
+  hr: 'hr-HR',
+  it: 'it-IT',
+  pt: 'pt-PT',
+  pl: 'pl-PL',
+  nl: 'nl-NL',
+};
+
+/** og:locale value of a site locale ("de" → "de_DE"). */
+export const ogLocale = (locale: string): string => (localeToLanguageTag[locale] || 'en-US').replace('-', '_');
+
 export const buildMetadata = ({
   locale,
   title,
@@ -127,6 +142,8 @@ export const buildMetadata = ({
     openGraph: {
       type: 'website',
       url: fullUrl,
+      locale: ogLocale(locale),
+      siteName: meta.name,
       title,
       description: metaDescription,
       images: [
@@ -144,18 +161,6 @@ export const buildMetadata = ({
       images: [ogImage],
     },
   };
-};
-
-const localeToLanguageTag: Record<string, string> = {
-  en: 'en-US',
-  de: 'de-DE',
-  fr: 'fr-FR',
-  es: 'es-ES',
-  hr: 'hr-HR',
-  it: 'it-IT',
-  pt: 'pt-PT',
-  pl: 'pl-PL',
-  nl: 'nl-NL',
 };
 
 /** Catalogue size for the entity description (src/utils/server/siteStats.ts `display`). */
@@ -179,7 +184,9 @@ export const getLocalizedJsonLd = async (locale: LocaleType, stats?: EntityStats
       {
         '@type': 'WebSite',
         '@id': `${meta.url}/#website`,
-        name: t(meta.title),
+        // The site's name, not the home page title (audit 15.11.2026: it was
+        // "Yacht Charter & Boat Rental Worldwide | Boat4You").
+        name: meta.name,
         url: meta.url,
         description: entityDescription,
         image: `${meta.url}/meta/og-image.png`,

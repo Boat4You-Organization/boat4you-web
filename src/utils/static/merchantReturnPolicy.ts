@@ -28,8 +28,9 @@ export interface MerchantReturnPolicyLd {
  * `dateFrom` is the first day of the one dated offer the policy is declared
  * for (a /search listing row, priced for its offer week). A week that starts
  * within 14 days has no free cancellation (freeCancellationEligibility.ts,
- * 12.11.2026), so it declares "returns not permitted". The boat page's
- * AggregateOffer spans the whole season and passes no date.
+ * 12.11.2026), so it declares "returns not permitted". Without a date the
+ * promise stands; the boat page's season-wide AggregateOffer therefore
+ * declares no policy at all (audit 15.11.2026, K4).
  */
 export const freeCancellationReturnPolicy = (
   country?: string | null,

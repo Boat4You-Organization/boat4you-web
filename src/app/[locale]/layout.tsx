@@ -21,7 +21,7 @@ import { routing } from '@/i18n/routing';
 import '@/styles/index.scss';
 import { CONSENT_COOKIE_NAME, CONSENT_DURATION, CONSENT_VERSION } from '@/types/cookie-consent.type';
 import { getSiteStatsWithin } from '@/utils/server/siteStats';
-import { buildAlternateLanguages, getLocalizedJsonLd, localizedUrl } from '@/utils/static/buildMetadata';
+import { buildAlternateLanguages, getLocalizedJsonLd, localizedUrl, ogLocale } from '@/utils/static/buildMetadata';
 
 import Providers from './providers';
 
@@ -60,6 +60,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: L
     openGraph: {
       type: 'website',
       url: homeUrl,
+      locale: ogLocale(locale),
+      siteName: meta.name,
       title: { default: t(meta.title), template: t(meta.titleTemplate) },
       description,
       images: [{ url: `${meta.url}/meta/og-image.png`, width: 1200, height: 630, alt: meta.name }],

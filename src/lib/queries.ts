@@ -76,6 +76,8 @@ query GetBlog($id: ID!, $pageSize: Int!) {
     title
     date
     modified
+    dateGmt
+    modifiedGmt
     categories {
       nodes {
         id

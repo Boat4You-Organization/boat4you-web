@@ -17,6 +17,7 @@ import { buildBlogBreadcrumbLd, buildBlogPostingLd, extractFaqLd } from '@/utils
 import { buildMetadata, localizedUrl } from '@/utils/static/buildMetadata';
 import { decodeHtmlEntities } from '@/utils/static/decodeHtmlEntities';
 import { serializeJsonLd } from '@/utils/static/jsonLd';
+import { wpGmtLastmod } from '@/utils/static/sitemapLastmod';
 import { stripBrandSuffix } from '@/utils/static/stripBrandSuffix';
 import RelatedBlogSection from '@/views/Blog/RelatedBlogSection';
 
@@ -118,7 +119,7 @@ export async function generateMetadata({
       ...baseMetadata.openGraph,
       url: canonical,
       type: 'article',
-      publishedTime: post.date,
+      publishedTime: wpGmtLastmod(post.dateGmt) ?? post.date,
       title: stripBrand(seo?.og_title || seo?.title || postTitle),
       description: seo?.og_description || seo?.description || description,
     },

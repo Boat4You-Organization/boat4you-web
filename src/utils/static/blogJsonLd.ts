@@ -2,6 +2,7 @@ import { LocaleType } from '@/config/locales.config';
 import { routing } from '@/i18n/routing';
 import { Blog } from '@/types/blog.type';
 import { decodeHtmlEntities } from '@/utils/static/decodeHtmlEntities';
+import { wpGmtLastmod } from '@/utils/static/sitemapLastmod';
 
 import { localizedUrl } from './buildMetadata';
 
@@ -33,8 +34,10 @@ export const buildBlogPostingLd = (post: Blog) => {
     headline: decodeHtmlEntities(post.title),
     description,
     image: post.featuredImage?.sourceUrl ? [post.featuredImage.sourceUrl] : undefined,
-    datePublished: post.date,
-    dateModified: post.modified || post.date,
+    // WordPress GMT stamps as UTC ("…Z"): `date` / `modified` are the site's
+    // local time without a zone (audit 15.11.2026).
+    datePublished: wpGmtLastmod(post.dateGmt) ?? post.date,
+    dateModified: wpGmtLastmod(post.modifiedGmt) ?? wpGmtLastmod(post.dateGmt) ?? post.modified ?? post.date,
     inLanguage: routing.defaultLocale,
     articleSection: post.categories?.nodes?.map(c => c.name),
     author: { '@type': 'Organization', name: 'Boat4You', url: 'https://www.boat4you.com' },
