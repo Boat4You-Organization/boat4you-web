@@ -84,6 +84,10 @@
       "POWER_CATAMARAN": {
         "h1": "Najam motornih katamarana na Britanskim Djevičanskim otocima",
         "metaDesc": "Unajmite motorni katamaran na Britanskim Djevičanskim otocima. Usporedite cijene, prave slike, instant rezervacija. Sigurno plaćanje i podrška 24/7."
+      },
+      "NONE": {
+        "h1": "Najam jahti na Britanskim Djevičanskim otocima",
+        "metaDesc": "Najam jahti na Britanskim Djevičanskim otocima: usporedite dostupne brodove i tjedne cijene u stvarnom vremenu te rezervirajte online uz sigurno plaćanje."
       }
     },
     "virginIslandsBritish": {
@@ -94,6 +98,10 @@
       "POWER_CATAMARAN": {
         "h1": "Najam motornih katamarana na Britanskim Djevičanskim otocima",
         "metaDesc": "Unajmite motorni katamaran na Britanskim Djevičanskim otocima. Usporedite cijene, prave slike, instant rezervacija. Sigurno plaćanje i podrška 24/7."
+      },
+      "NONE": {
+        "h1": "Najam jahti na Britanskim Djevičanskim otocima",
+        "metaDesc": "Najam jahti na Britanskim Djevičanskim otocima: usporedite dostupne brodove i tjedne cijene u stvarnom vremenu te rezervirajte online uz sigurno plaćanje."
       }
     },
     "martinique": {
@@ -104,6 +112,10 @@
       "POWER_CATAMARAN": {
         "h1": "Najam motornih katamarana na Martiniku",
         "metaDesc": "Unajmite motorni katamaran na Martiniku. Usporedite cijene, prave slike, instant rezervacija. Sigurno plaćanje i podrška 24/7."
+      },
+      "NONE": {
+        "h1": "Najam jahti na Martiniku",
+        "metaDesc": "Najam jahti na Martiniku: usporedite dostupne brodove i tjedne cijene u stvarnom vremenu te rezervirajte online uz sigurno plaćanje."
       }
     },
     "italianAdriatic": {
@@ -154,6 +166,10 @@
       "POWER_CATAMARAN": {
         "h1": "Najam motornih katamarana na Bahamima",
         "metaDesc": "Unajmite motorni katamaran na Bahamima. Usporedite cijene, prave slike, instant rezervacija. Sigurno plaćanje i podrška 24/7."
+      },
+      "NONE": {
+        "h1": "Najam jahti na Bahamima",
+        "metaDesc": "Najam jahti na Bahamima: usporedite dostupne brodove i tjedne cijene u stvarnom vremenu te rezervirajte online uz sigurno plaćanje."
       }
     },
     "grenada": {
@@ -164,6 +180,10 @@
       "POWER_CATAMARAN": {
         "h1": "Najam motornih katamarana na Grenadi",
         "metaDesc": "Unajmite motorni katamaran na Grenadi. Usporedite cijene, prave slike, instant rezervacija. Sigurno plaćanje i podrška 24/7."
+      },
+      "NONE": {
+        "h1": "Najam jahti na Grenadi",
+        "metaDesc": "Najam jahti na Grenadi: usporedite dostupne brodove i tjedne cijene u stvarnom vremenu te rezervirajte online uz sigurno plaćanje."
       }
     },
     "caribbean": {
@@ -202,6 +222,24 @@
       "LUXURY_MOTOR_YACHT": {
         "h1": "Luksuzne motorne jahte za najam u Turskoj",
         "metaDesc": "Unajmite luksuznu motornu jahtu u Turskoj za vrhunski odmor na moru. Usporedite cijene, prave slike, instant rezervacija. Sigurno plaćanje i podrška 24/7."
+      }
+    },
+    "france": {
+      "NONE": {
+        "h1": "Najam jahti u Francuskoj",
+        "metaDesc": "Najam jahti u Francuskoj: usporedite dostupne brodove i tjedne cijene u stvarnom vremenu te rezervirajte online uz sigurno plaćanje."
+      }
+    },
+    "montenegro": {
+      "NONE": {
+        "h1": "Najam jahti u Crnoj Gori",
+        "metaDesc": "Najam jahti u Crnoj Gori: usporedite dostupne brodove i tjedne cijene u stvarnom vremenu te rezervirajte online uz sigurno plaćanje."
+      }
+    },
+    "seychelles": {
+      "NONE": {
+        "h1": "Najam jahti na Sejšelima",
+        "metaDesc": "Najam jahti na Sejšelima: usporedite dostupne brodove i tjedne cijene u stvarnom vremenu te rezervirajte online uz sigurno plaćanje."
       }
     }
   },

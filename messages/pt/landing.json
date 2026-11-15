@@ -96,6 +96,10 @@
       "POWER_CATAMARAN": {
         "h1": "Catamarãs a motor para alugar nas Ilhas Virgens Britânicas",
         "metaDesc": "Alugue um catamarã a motor nas Ilhas Virgens Britânicas. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
+      },
+      "NONE": {
+        "h1": "Aluguer de iates nas Ilhas Virgens Britânicas",
+        "metaDesc": "Aluguer de iates nas Ilhas Virgens Britânicas: compare os barcos disponíveis e os preços semanais em tempo real e reserve online com pagamento seguro."
       }
     },
     "virginIslandsBritish": {
@@ -106,6 +110,10 @@
       "POWER_CATAMARAN": {
         "h1": "Catamarãs a motor para alugar nas Ilhas Virgens Britânicas",
         "metaDesc": "Alugue um catamarã a motor nas Ilhas Virgens Britânicas. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
+      },
+      "NONE": {
+        "h1": "Aluguer de iates nas Ilhas Virgens Britânicas",
+        "metaDesc": "Aluguer de iates nas Ilhas Virgens Britânicas: compare os barcos disponíveis e os preços semanais em tempo real e reserve online com pagamento seguro."
       }
     },
     "martinique": {
@@ -116,6 +124,10 @@
       "POWER_CATAMARAN": {
         "h1": "Catamarãs a motor para alugar na Martinica",
         "metaDesc": "Alugue um catamarã a motor na Martinica. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
+      },
+      "NONE": {
+        "h1": "Aluguer de iates na Martinica",
+        "metaDesc": "Aluguer de iates na Martinica: compare os barcos disponíveis e os preços semanais em tempo real e reserve online com pagamento seguro."
       }
     },
     "italianAdriatic": {
@@ -178,6 +190,10 @@
       "POWER_CATAMARAN": {
         "h1": "Catamarãs a motor para alugar nas Bahamas",
         "metaDesc": "Alugue um catamarã a motor nas Bahamas. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
+      },
+      "NONE": {
+        "h1": "Aluguer de iates nas Bahamas",
+        "metaDesc": "Aluguer de iates nas Bahamas: compare os barcos disponíveis e os preços semanais em tempo real e reserve online com pagamento seguro."
       }
     },
     "grenada": {
@@ -188,6 +204,10 @@
       "POWER_CATAMARAN": {
         "h1": "Catamarãs a motor para alugar em Granada",
         "metaDesc": "Alugue um catamarã a motor em Granada. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
+      },
+      "NONE": {
+        "h1": "Aluguer de iates em Granada",
+        "metaDesc": "Aluguer de iates em Granada: compare os barcos disponíveis e os preços semanais em tempo real e reserve online com pagamento seguro."
       }
     },
     "caribbean": {
@@ -234,6 +254,24 @@
       "LUXURY_MOTOR_YACHT": {
         "h1": "Iates a motor de luxo para alugar na Turquia",
         "metaDesc": "Descubra um iate a motor de luxo na Turquia e navegue com todo o conforto. Compare preços, fotos reais, reserva imediata. Pagamento seguro e suporte 24/7."
+      }
+    },
+    "france": {
+      "NONE": {
+        "h1": "Aluguer de iates em França",
+        "metaDesc": "Aluguer de iates em França: compare os barcos disponíveis e os preços semanais em tempo real e reserve online com pagamento seguro."
+      }
+    },
+    "montenegro": {
+      "NONE": {
+        "h1": "Aluguer de iates no Montenegro",
+        "metaDesc": "Aluguer de iates no Montenegro: compare os barcos disponíveis e os preços semanais em tempo real e reserve online com pagamento seguro."
+      }
+    },
+    "seychelles": {
+      "NONE": {
+        "h1": "Aluguer de iates nas Seychelles",
+        "metaDesc": "Aluguer de iates nas Seychelles: compare os barcos disponíveis e os preços semanais em tempo real e reserve online com pagamento seguro."
       }
     }
   },

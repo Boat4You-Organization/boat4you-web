@@ -31,7 +31,11 @@ import { resolveSearchLanding, splitSearchParam, uniqueCaseInsensitive } from '@
  *     without a boat type (also what a filter of several boat types shows):
  *     "Yacht charter {Croatia/Greece/Italy/Spain/Türkiye}" is
  *     europe-yachts.com's head term (owner decision 15.10.2026), so the
- *     boat4you page names the rental instead;
+ *     boat4you page names the rental instead; the countries no sister
+ *     site claims "yacht charter" for (France, Montenegro, the Seychelles,
+ *     the BVI, the Bahamas, Grenada, Martinique) use the same NONE entry to
+ *     lead with that term instead: "Yacht charter France & boat rental",
+ *     "Yachtcharter Frankreich & Bootsverleih" (audit 15.11.2026, K5);
  *   - precedence for one place: override (typed or NONE) > lead > default
  *     template — a place with a lead AND a NONE override shows the override;
  *     `yarn check:home-hub` builds the heading of every place × no boat type

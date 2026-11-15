@@ -96,6 +96,10 @@
       "POWER_CATAMARAN": {
         "h1": "Affitto catamarani a motore nelle Isole Vergini Britanniche",
         "metaDesc": "Affitta un catamarano a motore nelle Isole Vergini Britanniche. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
+      },
+      "NONE": {
+        "h1": "Noleggio yacht nelle Isole Vergini Britanniche",
+        "metaDesc": "Noleggio yacht nelle Isole Vergini Britanniche: confronta le barche disponibili e i prezzi settimanali aggiornati, poi prenota online con pagamento sicuro."
       }
     },
     "virginIslandsBritish": {
@@ -106,6 +110,10 @@
       "POWER_CATAMARAN": {
         "h1": "Affitto catamarani a motore nelle Isole Vergini Britanniche",
         "metaDesc": "Affitta un catamarano a motore nelle Isole Vergini Britanniche. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
+      },
+      "NONE": {
+        "h1": "Noleggio yacht nelle Isole Vergini Britanniche",
+        "metaDesc": "Noleggio yacht nelle Isole Vergini Britanniche: confronta le barche disponibili e i prezzi settimanali aggiornati, poi prenota online con pagamento sicuro."
       }
     },
     "martinique": {
@@ -116,6 +124,10 @@
       "POWER_CATAMARAN": {
         "h1": "Affitto catamarani a motore in Martinica",
         "metaDesc": "Affitta un catamarano a motore in Martinica. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
+      },
+      "NONE": {
+        "h1": "Noleggio yacht in Martinica",
+        "metaDesc": "Noleggio yacht in Martinica: confronta le barche disponibili e i prezzi settimanali aggiornati, poi prenota online con pagamento sicuro."
       }
     },
     "italianAdriatic": {
@@ -178,6 +190,10 @@
       "POWER_CATAMARAN": {
         "h1": "Affitto catamarani a motore alle Bahamas",
         "metaDesc": "Affitta un catamarano a motore alle Bahamas. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
+      },
+      "NONE": {
+        "h1": "Noleggio yacht alle Bahamas",
+        "metaDesc": "Noleggio yacht alle Bahamas: confronta le barche disponibili e i prezzi settimanali aggiornati, poi prenota online con pagamento sicuro."
       }
     },
     "grenada": {
@@ -188,6 +204,10 @@
       "POWER_CATAMARAN": {
         "h1": "Affitto catamarani a motore a Grenada",
         "metaDesc": "Affitta un catamarano a motore a Grenada. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
+      },
+      "NONE": {
+        "h1": "Noleggio yacht a Grenada",
+        "metaDesc": "Noleggio yacht a Grenada: confronta le barche disponibili e i prezzi settimanali aggiornati, poi prenota online con pagamento sicuro."
       }
     },
     "caribbean": {
@@ -234,6 +254,24 @@
       "LUXURY_MOTOR_YACHT": {
         "h1": "Yacht a motore di lusso a noleggio in Turchia",
         "metaDesc": "Noleggia uno yacht a motore di lusso in Turchia e naviga con stile. Confronta prezzi, foto reali, prenotazione immediata. Pagamento sicuro e supporto 24/7."
+      }
+    },
+    "france": {
+      "NONE": {
+        "h1": "Noleggio yacht in Francia",
+        "metaDesc": "Noleggio yacht in Francia: confronta le barche disponibili e i prezzi settimanali aggiornati, poi prenota online con pagamento sicuro."
+      }
+    },
+    "montenegro": {
+      "NONE": {
+        "h1": "Noleggio yacht in Montenegro",
+        "metaDesc": "Noleggio yacht in Montenegro: confronta le barche disponibili e i prezzi settimanali aggiornati, poi prenota online con pagamento sicuro."
+      }
+    },
+    "seychelles": {
+      "NONE": {
+        "h1": "Noleggio yacht alle Seychelles",
+        "metaDesc": "Noleggio yacht alle Seychelles: confronta le barche disponibili e i prezzi settimanali aggiornati, poi prenota online con pagamento sicuro."
       }
     }
   },

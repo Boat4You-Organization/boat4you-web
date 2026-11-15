@@ -84,6 +84,10 @@
       "POWER_CATAMARAN": {
         "h1": "Catamarans à moteur à louer aux Îles Vierges britanniques",
         "metaDesc": "Louez un catamaran à moteur aux Îles Vierges britanniques. Comparez les prix, vraies photos, réservation instantanée. Paiement sécurisé et support 24/7."
+      },
+      "NONE": {
+        "h1": "Location de yacht aux Îles Vierges britanniques",
+        "metaDesc": "Location de yacht aux Îles Vierges britanniques : comparez les bateaux disponibles et leurs prix à la semaine en temps réel, puis réservez en ligne."
       }
     },
     "virginIslandsBritish": {
@@ -94,6 +98,10 @@
       "POWER_CATAMARAN": {
         "h1": "Catamarans à moteur à louer aux Îles Vierges britanniques",
         "metaDesc": "Louez un catamaran à moteur aux Îles Vierges britanniques. Comparez les prix, vraies photos, réservation instantanée. Paiement sécurisé et support 24/7."
+      },
+      "NONE": {
+        "h1": "Location de yacht aux Îles Vierges britanniques",
+        "metaDesc": "Location de yacht aux Îles Vierges britanniques : comparez les bateaux disponibles et leurs prix à la semaine en temps réel, puis réservez en ligne."
       }
     },
     "martinique": {
@@ -104,6 +112,10 @@
       "POWER_CATAMARAN": {
         "h1": "Catamarans à moteur à louer en Martinique",
         "metaDesc": "Louez un catamaran à moteur en Martinique. Comparez les prix, vraies photos, réservation instantanée. Paiement sécurisé et support 24/7."
+      },
+      "NONE": {
+        "h1": "Location de yacht en Martinique",
+        "metaDesc": "Location de yacht en Martinique : comparez les bateaux disponibles et leurs prix à la semaine en temps réel, puis réservez en ligne."
       }
     },
     "italianAdriatic": {
@@ -158,6 +170,10 @@
       "POWER_CATAMARAN": {
         "h1": "Catamarans à moteur à louer aux Bahamas",
         "metaDesc": "Louez un catamaran à moteur aux Bahamas. Comparez les prix, vraies photos, réservation instantanée. Paiement sécurisé et support 24/7."
+      },
+      "NONE": {
+        "h1": "Location de yacht aux Bahamas",
+        "metaDesc": "Location de yacht aux Bahamas : comparez les bateaux disponibles et leurs prix à la semaine en temps réel, puis réservez en ligne."
       }
     },
     "grenada": {
@@ -168,6 +184,10 @@
       "POWER_CATAMARAN": {
         "h1": "Catamarans à moteur à louer à la Grenade",
         "metaDesc": "Louez un catamaran à moteur à la Grenade. Comparez les prix, vraies photos, réservation instantanée. Paiement sécurisé et support 24/7."
+      },
+      "NONE": {
+        "h1": "Location de yacht à la Grenade",
+        "metaDesc": "Location de yacht à la Grenade : comparez les bateaux disponibles et leurs prix à la semaine en temps réel, puis réservez en ligne."
       }
     },
     "caribbean": {
@@ -206,6 +226,24 @@
       "LUXURY_MOTOR_YACHT": {
         "h1": "Yachts à moteur de luxe à louer en Turquie",
         "metaDesc": "Louez un yacht à moteur de luxe en Turquie. Comparez les prix, vraies photos, réservation instantanée. Paiement sécurisé et support 24/7."
+      }
+    },
+    "france": {
+      "NONE": {
+        "h1": "Location de yacht en France",
+        "metaDesc": "Location de yacht en France : comparez les bateaux disponibles et leurs prix à la semaine en temps réel, puis réservez en ligne."
+      }
+    },
+    "montenegro": {
+      "NONE": {
+        "h1": "Location de yacht au Monténégro",
+        "metaDesc": "Location de yacht au Monténégro : comparez les bateaux disponibles et leurs prix à la semaine en temps réel, puis réservez en ligne."
+      }
+    },
+    "seychelles": {
+      "NONE": {
+        "h1": "Location de yacht aux Seychelles",
+        "metaDesc": "Location de yacht aux Seychelles : comparez les bateaux disponibles et leurs prix à la semaine en temps réel, puis réservez en ligne."
       }
     }
   },

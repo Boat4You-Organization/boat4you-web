@@ -96,6 +96,10 @@
       "POWER_CATAMARAN": {
         "h1": "Motor-Katamaran mieten auf den Britischen Jungferninseln",
         "metaDesc": "Mieten Sie einen Motor-Katamaran auf den Britischen Jungferninseln. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
+      },
+      "NONE": {
+        "h1": "Yachtcharter Britische Jungferninseln (BVI)",
+        "metaDesc": "Yachtcharter Britische Jungferninseln mit Boat4You: verfügbare Boote und aktuelle Wochenpreise vergleichen, dann online buchen – sichere Zahlung, 24/7-Support."
       }
     },
     "virginIslandsBritish": {
@@ -106,6 +110,10 @@
       "POWER_CATAMARAN": {
         "h1": "Motor-Katamaran mieten auf den Britischen Jungferninseln",
         "metaDesc": "Mieten Sie einen Motor-Katamaran auf den Britischen Jungferninseln. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
+      },
+      "NONE": {
+        "h1": "Yachtcharter Britische Jungferninseln (BVI)",
+        "metaDesc": "Yachtcharter Britische Jungferninseln mit Boat4You: verfügbare Boote und aktuelle Wochenpreise vergleichen, dann online buchen – sichere Zahlung, 24/7-Support."
       }
     },
     "martinique": {
@@ -116,6 +124,10 @@
       "POWER_CATAMARAN": {
         "h1": "Motor-Katamaran mieten auf Martinique",
         "metaDesc": "Mieten Sie einen Motor-Katamaran auf Martinique. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
+      },
+      "NONE": {
+        "h1": "Yachtcharter Martinique & Bootsverleih",
+        "metaDesc": "Yachtcharter Martinique mit Boat4You: verfügbare Boote und aktuelle Wochenpreise vergleichen, dann online buchen – sichere Zahlung, 24/7-Support."
       }
     },
     "italianAdriatic": {
@@ -178,6 +190,10 @@
       "POWER_CATAMARAN": {
         "h1": "Motor-Katamaran mieten auf den Bahamas",
         "metaDesc": "Mieten Sie einen Motor-Katamaran auf den Bahamas. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
+      },
+      "NONE": {
+        "h1": "Yachtcharter Bahamas & Bootsverleih",
+        "metaDesc": "Yachtcharter Bahamas mit Boat4You: verfügbare Boote und aktuelle Wochenpreise vergleichen, dann online buchen – sichere Zahlung, 24/7-Support."
       }
     },
     "grenada": {
@@ -188,6 +204,10 @@
       "POWER_CATAMARAN": {
         "h1": "Motor-Katamaran mieten auf Grenada",
         "metaDesc": "Mieten Sie einen Motor-Katamaran auf Grenada. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
+      },
+      "NONE": {
+        "h1": "Yachtcharter Grenada & Bootsverleih",
+        "metaDesc": "Yachtcharter Grenada mit Boat4You: verfügbare Boote und aktuelle Wochenpreise vergleichen, dann online buchen – sichere Zahlung, 24/7-Support."
       }
     },
     "caribbean": {
@@ -234,6 +254,24 @@
       "LUXURY_MOTOR_YACHT": {
         "h1": "Luxus-Motoryacht mieten in der Türkei",
         "metaDesc": "Luxus-Motoryacht in der Türkei mieten: Urlaub der Extraklasse. Preise vergleichen, echte Fotos, Sofortbuchung. Sicheres Bezahlen und 24/7-Support."
+      }
+    },
+    "france": {
+      "NONE": {
+        "h1": "Yachtcharter Frankreich & Bootsverleih",
+        "metaDesc": "Yachtcharter Frankreich mit Boat4You: verfügbare Boote und aktuelle Wochenpreise vergleichen, dann online buchen – sichere Zahlung, 24/7-Support."
+      }
+    },
+    "montenegro": {
+      "NONE": {
+        "h1": "Yachtcharter Montenegro & Bootsverleih",
+        "metaDesc": "Yachtcharter Montenegro mit Boat4You: verfügbare Boote und aktuelle Wochenpreise vergleichen, dann online buchen – sichere Zahlung, 24/7-Support."
+      }
+    },
+    "seychelles": {
+      "NONE": {
+        "h1": "Yachtcharter Seychellen & Bootsverleih",
+        "metaDesc": "Yachtcharter Seychellen mit Boat4You: verfügbare Boote und aktuelle Wochenpreise vergleichen, dann online buchen – sichere Zahlung, 24/7-Support."
       }
     }
   },

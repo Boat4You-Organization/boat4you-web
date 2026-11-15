@@ -96,6 +96,10 @@
       "POWER_CATAMARAN": {
         "h1": "Power catamaran huren op de Britse Maagdeneilanden",
         "metaDesc": "Huur een power catamaran op de Britse Maagdeneilanden. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
+      },
+      "NONE": {
+        "h1": "Jachtcharter Britse Maagdeneilanden (BVI)",
+        "metaDesc": "Jachtcharter Britse Maagdeneilanden bij Boat4You: vergelijk beschikbare boten en actuele weekprijzen en boek online met veilige betaling en 24/7 ondersteuning."
       }
     },
     "virginIslandsBritish": {
@@ -106,6 +110,10 @@
       "POWER_CATAMARAN": {
         "h1": "Power catamaran huren op de Britse Maagdeneilanden",
         "metaDesc": "Huur een power catamaran op de Britse Maagdeneilanden. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
+      },
+      "NONE": {
+        "h1": "Jachtcharter Britse Maagdeneilanden (BVI)",
+        "metaDesc": "Jachtcharter Britse Maagdeneilanden bij Boat4You: vergelijk beschikbare boten en actuele weekprijzen en boek online met veilige betaling en 24/7 ondersteuning."
       }
     },
     "martinique": {
@@ -116,6 +124,10 @@
       "POWER_CATAMARAN": {
         "h1": "Power catamaran huren op Martinique",
         "metaDesc": "Huur een power catamaran op Martinique. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
+      },
+      "NONE": {
+        "h1": "Jachtcharter Martinique & bootverhuur",
+        "metaDesc": "Jachtcharter Martinique bij Boat4You: vergelijk beschikbare boten en actuele weekprijzen en boek online met veilige betaling en 24/7 ondersteuning."
       }
     },
     "italianAdriatic": {
@@ -170,6 +182,10 @@
       "POWER_CATAMARAN": {
         "h1": "Power catamaran huren op de Bahama's",
         "metaDesc": "Huur een power catamaran op de Bahama's. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
+      },
+      "NONE": {
+        "h1": "Jachtcharter Bahama's & bootverhuur",
+        "metaDesc": "Jachtcharter Bahama's bij Boat4You: vergelijk beschikbare boten en actuele weekprijzen en boek online met veilige betaling en 24/7 ondersteuning."
       }
     },
     "grenada": {
@@ -180,6 +196,10 @@
       "POWER_CATAMARAN": {
         "h1": "Power catamaran huren op Grenada",
         "metaDesc": "Huur een power catamaran op Grenada. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
+      },
+      "NONE": {
+        "h1": "Jachtcharter Grenada & bootverhuur",
+        "metaDesc": "Jachtcharter Grenada bij Boat4You: vergelijk beschikbare boten en actuele weekprijzen en boek online met veilige betaling en 24/7 ondersteuning."
       }
     },
     "caribbean": {
@@ -226,6 +246,24 @@
       "LUXURY_MOTOR_YACHT": {
         "h1": "Luxe motorjacht huren in Turkije",
         "metaDesc": "Huur een luxe motorjacht in Turkije voor een exclusieve vaarvakantie. Vergelijk prijzen, echte foto's, direct boeken. Veilig betalen en 24/7 ondersteuning."
+      }
+    },
+    "france": {
+      "NONE": {
+        "h1": "Jachtcharter Frankrijk & bootverhuur",
+        "metaDesc": "Jachtcharter Frankrijk bij Boat4You: vergelijk beschikbare boten en actuele weekprijzen en boek online met veilige betaling en 24/7 ondersteuning."
+      }
+    },
+    "montenegro": {
+      "NONE": {
+        "h1": "Jachtcharter Montenegro & bootverhuur",
+        "metaDesc": "Jachtcharter Montenegro bij Boat4You: vergelijk beschikbare boten en actuele weekprijzen en boek online met veilige betaling en 24/7 ondersteuning."
+      }
+    },
+    "seychelles": {
+      "NONE": {
+        "h1": "Jachtcharter Seychellen & bootverhuur",
+        "metaDesc": "Jachtcharter Seychellen bij Boat4You: vergelijk beschikbare boten en actuele weekprijzen en boek online met veilige betaling en 24/7 ondersteuning."
       }
     }
   },

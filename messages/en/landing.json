@@ -96,6 +96,10 @@
       "POWER_CATAMARAN": {
         "h1": "Power catamaran rental in the British Virgin Islands",
         "metaDesc": "Rent a power catamaran in the British Virgin Islands. Compare prices, real photos, instant booking. Secure payment and 24/7 expert support."
+      },
+      "NONE": {
+        "h1": "Yacht charter British Virgin Islands (BVI)",
+        "metaDesc": "Yacht charter British Virgin Islands with Boat4You: compare available boats and live weekly prices, then book online with secure payment and 24/7 support."
       }
     },
     "virginIslandsBritish": {
@@ -106,6 +110,10 @@
       "POWER_CATAMARAN": {
         "h1": "Power catamaran rental in the British Virgin Islands",
         "metaDesc": "Rent a power catamaran in the British Virgin Islands. Compare prices, real photos, instant booking. Secure payment and 24/7 expert support."
+      },
+      "NONE": {
+        "h1": "Yacht charter British Virgin Islands (BVI)",
+        "metaDesc": "Yacht charter British Virgin Islands with Boat4You: compare available boats and live weekly prices, then book online with secure payment and 24/7 support."
       }
     },
     "martinique": {
@@ -116,6 +124,10 @@
       "POWER_CATAMARAN": {
         "h1": "Power catamaran rental in Martinique",
         "metaDesc": "Rent a power catamaran in Martinique. Compare prices, real photos, instant booking. Secure payment and 24/7 expert support."
+      },
+      "NONE": {
+        "h1": "Yacht charter Martinique & boat rental",
+        "metaDesc": "Yacht charter Martinique with Boat4You: compare available boats and live weekly prices, then book online with secure payment and 24/7 support."
       }
     },
     "italianAdriatic": {
@@ -178,6 +190,10 @@
       "POWER_CATAMARAN": {
         "h1": "Power catamaran rental in the Bahamas",
         "metaDesc": "Rent a power catamaran in the Bahamas. Compare prices, real photos, instant booking. Secure payment and 24/7 expert support."
+      },
+      "NONE": {
+        "h1": "Yacht charter Bahamas & boat rental",
+        "metaDesc": "Yacht charter Bahamas with Boat4You: compare available boats and live weekly prices, then book online with secure payment and 24/7 support."
       }
     },
     "grenada": {
@@ -188,6 +204,10 @@
       "POWER_CATAMARAN": {
         "h1": "Power catamaran rental in Grenada",
         "metaDesc": "Rent a power catamaran in Grenada. Compare prices, real photos, instant booking. Secure payment and 24/7 expert support."
+      },
+      "NONE": {
+        "h1": "Yacht charter Grenada & boat rental",
+        "metaDesc": "Yacht charter Grenada with Boat4You: compare available boats and live weekly prices, then book online with secure payment and 24/7 support."
       }
     },
     "caribbean": {
@@ -234,6 +254,24 @@
       "LUXURY_MOTOR_YACHT": {
         "h1": "Luxury motor yacht rental in Türkiye",
         "metaDesc": "Rent a luxury motor yacht in Türkiye for a stylish escape. Compare prices, real photos, instant booking. Secure payment and 24/7 expert support."
+      }
+    },
+    "france": {
+      "NONE": {
+        "h1": "Yacht charter France & boat rental",
+        "metaDesc": "Yacht charter France with Boat4You: compare available boats and live weekly prices, then book online with secure payment and 24/7 support."
+      }
+    },
+    "montenegro": {
+      "NONE": {
+        "h1": "Yacht charter Montenegro & boat rental",
+        "metaDesc": "Yacht charter Montenegro with Boat4You: compare available boats and live weekly prices, then book online with secure payment and 24/7 support."
+      }
+    },
+    "seychelles": {
+      "NONE": {
+        "h1": "Yacht charter Seychelles & boat rental",
+        "metaDesc": "Yacht charter Seychelles with Boat4You: compare available boats and live weekly prices, then book online with secure payment and 24/7 support."
       }
     }
   },

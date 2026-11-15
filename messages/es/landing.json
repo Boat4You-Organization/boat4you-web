@@ -84,6 +84,10 @@
       "POWER_CATAMARAN": {
         "h1": "Catamaranes a motor de alquiler en las Islas Vírgenes Británicas",
         "metaDesc": "Alquila un catamarán a motor en las Islas Vírgenes Británicas. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
+      },
+      "NONE": {
+        "h1": "Alquiler de yates en Islas Vírgenes Británicas",
+        "metaDesc": "Alquiler de yates en las Islas Vírgenes Británicas: compara los barcos disponibles y sus precios semanales en directo, y reserva online con pago seguro."
       }
     },
     "virginIslandsBritish": {
@@ -94,6 +98,10 @@
       "POWER_CATAMARAN": {
         "h1": "Catamaranes a motor de alquiler en las Islas Vírgenes Británicas",
         "metaDesc": "Alquila un catamarán a motor en las Islas Vírgenes Británicas. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
+      },
+      "NONE": {
+        "h1": "Alquiler de yates en Islas Vírgenes Británicas",
+        "metaDesc": "Alquiler de yates en las Islas Vírgenes Británicas: compara los barcos disponibles y sus precios semanales en directo, y reserva online con pago seguro."
       }
     },
     "martinique": {
@@ -104,6 +112,10 @@
       "POWER_CATAMARAN": {
         "h1": "Catamaranes a motor de alquiler en Martinica",
         "metaDesc": "Alquila un catamarán a motor en Martinica. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
+      },
+      "NONE": {
+        "h1": "Alquiler de yates en Martinica",
+        "metaDesc": "Alquiler de yates en Martinica: compara los barcos disponibles y sus precios semanales en directo, y reserva online con pago seguro."
       }
     },
     "italianAdriatic": {
@@ -158,6 +170,10 @@
       "POWER_CATAMARAN": {
         "h1": "Catamaranes a motor de alquiler en las Bahamas",
         "metaDesc": "Alquila un catamarán a motor en las Bahamas. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
+      },
+      "NONE": {
+        "h1": "Alquiler de yates en las Bahamas",
+        "metaDesc": "Alquiler de yates en las Bahamas: compara los barcos disponibles y sus precios semanales en directo, y reserva online con pago seguro."
       }
     },
     "grenada": {
@@ -168,6 +184,10 @@
       "POWER_CATAMARAN": {
         "h1": "Catamaranes a motor de alquiler en Granada",
         "metaDesc": "Alquila un catamarán a motor en Granada. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
+      },
+      "NONE": {
+        "h1": "Alquiler de yates en Granada",
+        "metaDesc": "Alquiler de yates en Granada: compara los barcos disponibles y sus precios semanales en directo, y reserva online con pago seguro."
       }
     },
     "caribbean": {
@@ -206,6 +226,24 @@
       "LUXURY_MOTOR_YACHT": {
         "h1": "Yates a motor de lujo de alquiler en Turquía",
         "metaDesc": "Alquila un yate a motor de lujo en Turquía. Compara precios, fotos reales, reserva al instante. Pago seguro y soporte 24/7."
+      }
+    },
+    "france": {
+      "NONE": {
+        "h1": "Alquiler de yates en Francia",
+        "metaDesc": "Alquiler de yates en Francia: compara los barcos disponibles y sus precios semanales en directo, y reserva online con pago seguro."
+      }
+    },
+    "montenegro": {
+      "NONE": {
+        "h1": "Alquiler de yates en Montenegro",
+        "metaDesc": "Alquiler de yates en Montenegro: compara los barcos disponibles y sus precios semanales en directo, y reserva online con pago seguro."
+      }
+    },
+    "seychelles": {
+      "NONE": {
+        "h1": "Alquiler de yates en las Seychelles",
+        "metaDesc": "Alquiler de yates en las Seychelles: compara los barcos disponibles y sus precios semanales en directo, y reserva online con pago seguro."
       }
     }
   },

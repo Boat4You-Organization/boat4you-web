@@ -96,6 +96,10 @@
       "POWER_CATAMARAN": {
         "h1": "Wynajem katamaranów motorowych na Brytyjskich Wyspach Dziewiczych",
         "metaDesc": "Wynajmij katamaran motorowy na Brytyjskich Wyspach Dziewiczych. Porównaj ceny, prawdziwe zdjęcia, rezerwacja natychmiastowa. Bezpieczna płatność i wsparcie 24/7."
+      },
+      "NONE": {
+        "h1": "Czarter jachtów BVI – Brytyjskie Wyspy Dziewicze",
+        "metaDesc": "Czarter jachtów na Brytyjskich Wyspach Dziewiczych: porównaj dostępne łodzie i aktualne ceny tygodniowe, a potem zarezerwuj online z bezpieczną płatnością."
       }
     },
     "virginIslandsBritish": {
@@ -106,6 +110,10 @@
       "POWER_CATAMARAN": {
         "h1": "Wynajem katamaranów motorowych na Brytyjskich Wyspach Dziewiczych",
         "metaDesc": "Wynajmij katamaran motorowy na Brytyjskich Wyspach Dziewiczych. Porównaj ceny, prawdziwe zdjęcia, rezerwacja natychmiastowa. Bezpieczna płatność i wsparcie 24/7."
+      },
+      "NONE": {
+        "h1": "Czarter jachtów BVI – Brytyjskie Wyspy Dziewicze",
+        "metaDesc": "Czarter jachtów na Brytyjskich Wyspach Dziewiczych: porównaj dostępne łodzie i aktualne ceny tygodniowe, a potem zarezerwuj online z bezpieczną płatnością."
       }
     },
     "martinique": {
@@ -116,6 +124,10 @@
       "POWER_CATAMARAN": {
         "h1": "Wynajem katamaranów motorowych na Martynice",
         "metaDesc": "Wynajmij katamaran motorowy na Martynice. Porównaj ceny, prawdziwe zdjęcia, rezerwacja natychmiastowa. Bezpieczna płatność i wsparcie 24/7."
+      },
+      "NONE": {
+        "h1": "Czarter jachtów na Martynice",
+        "metaDesc": "Czarter jachtów na Martynice: porównaj dostępne łodzie i aktualne ceny tygodniowe, a potem zarezerwuj online z bezpieczną płatnością."
       }
     },
     "italianAdriatic": {
@@ -178,6 +190,10 @@
       "POWER_CATAMARAN": {
         "h1": "Wynajem katamaranów motorowych na Bahamach",
         "metaDesc": "Wynajmij katamaran motorowy na Bahamach. Porównaj ceny, prawdziwe zdjęcia, rezerwacja natychmiastowa. Bezpieczna płatność i wsparcie 24/7."
+      },
+      "NONE": {
+        "h1": "Czarter jachtów na Bahamach",
+        "metaDesc": "Czarter jachtów na Bahamach: porównaj dostępne łodzie i aktualne ceny tygodniowe, a potem zarezerwuj online z bezpieczną płatnością."
       }
     },
     "grenada": {
@@ -188,6 +204,10 @@
       "POWER_CATAMARAN": {
         "h1": "Wynajem katamaranów motorowych na Grenadzie",
         "metaDesc": "Wynajmij katamaran motorowy na Grenadzie. Porównaj ceny, prawdziwe zdjęcia, rezerwacja natychmiastowa. Bezpieczna płatność i wsparcie 24/7."
+      },
+      "NONE": {
+        "h1": "Czarter jachtów na Grenadzie",
+        "metaDesc": "Czarter jachtów na Grenadzie: porównaj dostępne łodzie i aktualne ceny tygodniowe, a potem zarezerwuj online z bezpieczną płatnością."
       }
     },
     "caribbean": {
@@ -234,6 +254,24 @@
       "LUXURY_MOTOR_YACHT": {
         "h1": "Luksusowe jachty motorowe na wynajem w Turcji",
         "metaDesc": "Wynajmij luksusowy jacht motorowy w Turcji. Porównaj ceny, prawdziwe zdjęcia, rezerwacja natychmiastowa. Bezpieczna płatność i wsparcie 24/7."
+      }
+    },
+    "france": {
+      "NONE": {
+        "h1": "Czarter jachtów we Francji",
+        "metaDesc": "Czarter jachtów we Francji: porównaj dostępne łodzie i aktualne ceny tygodniowe, a potem zarezerwuj online z bezpieczną płatnością."
+      }
+    },
+    "montenegro": {
+      "NONE": {
+        "h1": "Czarter jachtów w Czarnogórze",
+        "metaDesc": "Czarter jachtów w Czarnogórze: porównaj dostępne łodzie i aktualne ceny tygodniowe, a potem zarezerwuj online z bezpieczną płatnością."
+      }
+    },
+    "seychelles": {
+      "NONE": {
+        "h1": "Czarter jachtów na Seszelach",
+        "metaDesc": "Czarter jachtów na Seszelach: porównaj dostępne łodzie i aktualne ceny tygodniowe, a potem zarezerwuj online z bezpieczną płatnością."
       }
     }
   },
