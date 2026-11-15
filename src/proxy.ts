@@ -124,6 +124,25 @@ function englishOnlyResponse(req: NextRequest): NextResponse {
   return NextResponse.rewrite(url, { request: { headers } });
 }
 
+/**
+ * `/en` and `/en/…` (the default locale's prefix, which `as-needed` never
+ * shows) redirect to the un-prefixed URL. next-intl answers that with a 307,
+ * a temporary redirect, although it never changes (audit 15.11.2026): make
+ * it a 308 so the prefixed URLs consolidate onto the canonical ones. Every
+ * other redirect of the middleware (locale detection) stays temporary.
+ */
+const DEFAULT_LOCALE_PREFIX = new RegExp(`^/${routing.defaultLocale}(?=/|$)`);
+
+function permanentDefaultLocaleRedirect(req: NextRequest, response: NextResponse): NextResponse {
+  if (response.status !== 307 || !DEFAULT_LOCALE_PREFIX.test(req.nextUrl.pathname)) return response;
+
+  return new NextResponse(null, { status: 308, headers: response.headers });
+}
+
+function localeResponse(req: NextRequest): NextResponse {
+  return permanentDefaultLocaleRedirect(req, intlMiddleware(req) || NextResponse.next());
+}
+
 export async function proxy(req: NextRequest) {
   const { pathname } = req.nextUrl;
   const pathnameWithoutLocale = pathname.replace(/^\/[a-z]{2}(?=\/|$)/, '') || '/';
@@ -140,7 +159,7 @@ export async function proxy(req: NextRequest) {
     const newAccessToken = await refreshAccessToken(refreshToken);
 
     if (newAccessToken) {
-      const response = intlMiddleware(req) || NextResponse.next();
+      const response = localeResponse(req);
 
       response.cookies.set(AuthKeys.ACCESS_TOKEN, newAccessToken, {
         httpOnly: true,
@@ -166,7 +185,7 @@ export async function proxy(req: NextRequest) {
     return withGeoCountryCookie(req, englishOnlyResponse(req));
   }
 
-  return withGeoCountryCookie(req, intlMiddleware(req) || NextResponse.next());
+  return withGeoCountryCookie(req, localeResponse(req));
 }
 
 export const config = {

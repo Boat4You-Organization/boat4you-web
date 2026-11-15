@@ -27,6 +27,9 @@ const protectedPaths = [
  */
 const boatQueryPattern = '/boat/*?';
 
+// No `host`: `Host:` is a Yandex-only directive, not part of the robots.txt
+// standard (RFC 9309); the canonical host is the one every canonical tag and
+// sitemap URL already names (audit 15.11.2026).
 export default function robots(): MetadataRoute.Robots {
   const disallow = routing.locales.flatMap(locale => {
     const prefix = locale === routing.defaultLocale ? '' : `/${locale}`;
@@ -42,7 +45,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow,
       },
     ],
-    host: process.env.NEXT_PUBLIC_BASE_URL,
     sitemap: `${process.env.NEXT_PUBLIC_BASE_URL}/sitemap.xml`,
   };
 }
