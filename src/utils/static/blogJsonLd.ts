@@ -1,6 +1,7 @@
 import { LocaleType } from '@/config/locales.config';
 import { routing } from '@/i18n/routing';
 import { Blog } from '@/types/blog.type';
+import { buildBlogVideoObjects } from '@/utils/static/blogVideo';
 import { decodeHtmlEntities } from '@/utils/static/decodeHtmlEntities';
 import { wpGmtLastmod } from '@/utils/static/sitemapLastmod';
 
@@ -26,6 +27,8 @@ const stripTags = (html: string): string =>
 export const buildBlogPostingLd = (post: Blog) => {
   const url = localizedUrl(routing.defaultLocale as LocaleType, `/blog/${post.slug}`);
   const description = stripTags(post.content).slice(0, 300);
+  // Embedded YouTube videos with an upload date (the editor's b4y-video placeholder), 15.11.2026.
+  const videos = buildBlogVideoObjects(post.content);
 
   return {
     '@context': 'https://schema.org',
@@ -40,6 +43,7 @@ export const buildBlogPostingLd = (post: Blog) => {
     dateModified: wpGmtLastmod(post.modifiedGmt) ?? wpGmtLastmod(post.dateGmt) ?? post.modified ?? post.date,
     inLanguage: routing.defaultLocale,
     articleSection: post.categories?.nodes?.map(c => c.name),
+    ...(videos.length ? { video: videos } : {}),
     author: { '@type': 'Organization', name: 'Boat4You', url: 'https://www.boat4you.com' },
     // Same @id as the site-wide Organization node — one KG entity.
     publisher: {

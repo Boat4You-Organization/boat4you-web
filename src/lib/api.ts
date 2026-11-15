@@ -2,6 +2,7 @@ import { cache } from 'react';
 
 import { RankMathSEOData } from '@/types/blog.type';
 import { CursorConnectionUtils } from '@/utils/static/CursorConnectionUtils';
+import { blogVideoFacades } from '@/utils/static/blogVideo';
 import { decodeHtmlEntities } from '@/utils/static/decodeHtmlEntities';
 
 import fetchAPI from './fetchApi';
@@ -240,7 +241,11 @@ export const getBlog = cache(
     // Strip the duplicate-title <h1> from the body so the template title is the
     // page's only H1 (fixes the double-H1 SEO fault on blog posts).
     if (result?.post?.content) {
-      result.post.content = stripEmbeddedArticleLd(sanitizeBlogContentHeadings(result.post.content, result.post.title));
+      // YouTube embeds become click-to-load facades (no player, no YouTube cookies until the visitor presses play;
+      // utils/static/blogVideo.ts, 15.11.2026).
+      result.post.content = blogVideoFacades(
+        stripEmbeddedArticleLd(sanitizeBlogContentHeadings(result.post.content, result.post.title))
+      );
     }
 
     return result;

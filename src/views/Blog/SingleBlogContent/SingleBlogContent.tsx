@@ -1,6 +1,8 @@
 'use client';
 
 /* eslint-disable react/no-danger */
+import { useEffect, useRef } from 'react';
+
 import { Box, Container, IconButton, Stack, Typography } from '@mui/material';
 import clsx from 'clsx';
 import dayjs from 'dayjs';
@@ -16,6 +18,7 @@ import { meta } from '@/config/meta';
 import colors from '@/styles/themes/colors';
 import { Blog } from '@/types/blog.type';
 import DateTime from '@/utils/static/DateTime';
+import { nocookieEmbedUrl } from '@/utils/static/blogVideo';
 import copyToClipboard from '@/utils/static/copyToClipboard';
 
 import styles from './SingleBlogContent.module.scss';
@@ -25,6 +28,41 @@ const SingleBlogContent = ({ slug, title, date, categories, featuredImage, conte
   const url = `${meta.url}/blog/${slug}`;
   const t = useTranslations('common');
   const locale = useLocale();
+
+  const bodyRef = useRef<HTMLDivElement>(null);
+
+  // Click-to-load YouTube (utils/static/blogVideo.ts): the facade's play button swaps itself for the
+  // youtube-nocookie player, so nothing from YouTube loads or sets cookies before the visitor asks for it.
+  useEffect(() => {
+    const body = bodyRef.current;
+
+    if (!body) return undefined;
+
+    const play = (event: MouseEvent): void => {
+      const facade = (event.target as Element | null)?.closest?.('.b4y-yt');
+      const id = facade?.getAttribute('data-yt-id');
+
+      if (!facade || !id || !/^[\w-]{11}$/u.test(id) || facade.querySelector('iframe')) return;
+
+      event.preventDefault();
+
+      const iframe = document.createElement('iframe');
+
+      iframe.src = nocookieEmbedUrl(id);
+      iframe.title = facade.getAttribute('data-yt-title') || 'Video';
+      iframe.allow =
+        'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+      iframe.allowFullscreen = true;
+      iframe.className = 'b4y-yt__frame';
+      facade.querySelector('.b4y-yt__play')?.replaceWith(iframe);
+      iframe.focus();
+    };
+
+    body.addEventListener('click', play);
+
+    return () => body.removeEventListener('click', play);
+  }, [content]);
 
   const handleCopyLink = () => {
     copyToClipboard(window.location.toString(), 'Link copied to clipboard');
@@ -81,7 +119,7 @@ const SingleBlogContent = ({ slug, title, date, categories, featuredImage, conte
           />
         </Box>
       </Stack>
-      <div dangerouslySetInnerHTML={{ __html: content }} className={styles.body} />
+      <div ref={bodyRef} dangerouslySetInnerHTML={{ __html: content }} className={styles.body} />
       {/* Google "preferred source" nudge right where the reader finishes the
           article, ahead of the itinerary / related-post strips. Same 846px
           column as the body so it reads as the article's closing block. */}
