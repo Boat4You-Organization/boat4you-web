@@ -1,5 +1,29 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-11-15 — SEO faza 1 (analiza 15.11.) — ✅ LIVE 15.11.2026 ~09:49 UTC (`3a36f93a6`, deployment id 3a36f93a6d4e-mwhnbzzp, tag `live/2026-11-15-seo-audit`)
+
+**Zašto:** Mario 15.11. „ajde sredit boat4you“ prema analizi `_seo-audit-2026-11-15/boat4you-SEO-analiza-15-11-2026.md` (faza 1 = brzi popravci bez promjene dizajna).
+
+**Što je na grani `seo/audit-15-11` (10 commitova, baza `40099bfa6` = tadašnji live):**
+
+- Tekst ×9 jezika: bez obećanja „hidden fees / final price“ (no booking fees, extras se vide prije plaćanja); TripAdvisor oznaka imenuje profil koji linka (Europe Yachts Charter), vidljivi tekst skraćen, aria-label ostaje duži; H1 bloga, naslov FAQ-a i About.
+- Stranice država bez sestrinog head terma: naslov počinje s „Yacht charter {Country}“ (9 jezika); GR/IT/ES/TR NISU dirani (EY vlasništvo, pravilo 15.10.).
+- llms.txt: istinite činjenice o cijeni, otkazu, plaćanju (Mollie: kartica, Apple/Google Pay, Klarna; bankovna uplata; moguća naknada po načinu plaćanja), polog, dozvole (ICC/RYA + VHF u HR/GR); `force-dynamic` + revalidate 60 (ne vuče katalog iz API-ja tijekom builda).
+- Naslovna: kartice proizvođača vode samo na indeksabilne /yachts hubove; alias destinacije linkaju landing, ne 308.
+- Schema: WebSite name „Boat4You“, og:locale, jedan BlogPosting s UTC datumima, bez općenite politike povrata na ponudama stranice broda (GSC može prijaviti ne-kritično upozorenje).
+- Routing: `/en` = 308 na `/`, robots.txt bez Host, `/deals` = 307 na aktualnu kampanju (sada `/deals/early-booking`).
+- Naslovi stranica brodova ≤60 znakova (brand sufiks prvi otpada, mjesto ostaje).
+
+**Provjereno uživo (09:50–10:05 UTC):** dpl `3a36f93a6d4e` na `/contact-us`; llms.txt s novim recima o plaćanju, pologu i VHF-u; `/en` → 308 `/`; `/deals` → 307 `/deals/early-booking`; `/search?destinations=croatia` naslov „Yacht and boat rental in Croatia | Boat4You“, canonical sam na sebe, `index, follow`.
+
+**SEO Stage B:** 0 novih FAIL, 24 poznata otvorena (XFAIL), 18 WARN, 1 XPASS (T6 — slaba proba, ne znači popravak). Izvještaj: `_seo-audit-2026-11-15/regression/094911-B-boat4you/summary.md`.
+
+**Provjereno prije deploya:** test:boat-seo, test:landing-pages, check:home-hub, check:type-scale, lint; neovisni Opus pregled („SHIP AFTER FIXES“), popravci u `3a36f93a6`.
+
+**Rollback:** `.next.prev` na cusma1 = `40099bfa6` (naredba u `_seo-audit-2026-11-15/b4y-deploy-15-11.log`).
+
+**Otvoreno (čeka Marija):** K4 Product schema na listinzima; H1 naslovne; naslovi GR/IT/ES/TR vs EY pravilo; naknade plaćanja vs „No booking fees“. Faza 2: K1 čišćenje tvrdnji na landinzima, K3 noindex malih kategorija.
+
 ## 2026-11-12 — ⛔ Besplatan otkaz 72 h ne vrijedi za rezervaciju 14 dana ili manje prije chartera — ✅ LIVE 12.11.2026 10:09:45 UTC (`56d1b622a`, deployment id 56d1b622ae7c-mwddwivl, tag `live/2026-11-12-free-cancel-14-days`); pravilo vrijedi od 10:30 UTC
 
 **Zašto (Mario 12.11.):** kod last minute rezervacije klijent plaća puni iznos, novac odmah ide charter kompaniji i ona brod ne uzima natrag; 72 h i dalje vrijedi za sve ostale. „Da, ugradi sve“ = kartica, stranica broda, naplata, My Bookings i uvjeti 7.1.
