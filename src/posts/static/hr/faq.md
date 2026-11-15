@@ -28,7 +28,7 @@ Kad odlučite potvrditi rezervaciju, potrebno je uplatiti akontaciju (obično 30
 
 Nakon prve uplate, jahta je službeno rezervirana za vas, a dobit ćete ugovor ili potvrdu rezervacije sa svim detaljima. Naš tim će vas zatim uputiti u sljedeće korake, poput dostave podataka o posadi (ako imate skipera ili posadu) ili dogovora dodatnih usluga.
 
-**Boat4You** se ponosi transparentnošću – nema skrivenih troškova, a sve preostale iznose i rokove jasno ćemo vam navesti (obično je konačna uplata nekoliko tjedana prije početka čartera). Ako imate pitanja, naša korisnička podrška uvijek je dostupna.
+**Boat4You** se ponosi transparentnošću – nema naknade za rezervaciju, obvezne dodatke i polog vidite prije plaćanja, a sve preostale iznose i rokove jasno ćemo vam navesti (obično je konačna uplata nekoliko tjedana prije početka čartera). Ako imate pitanja, naša korisnička podrška uvijek je dostupna.
 
 **Nakon rezervacije**: Poslat ćemo vam paket dobrodošlice s informacijama o bazi/marini, popisom stvari koje trebate ponijeti i obrascima koje treba ispuniti (poput liste posade s podacima putnika, što je zakonski obavezno). Ako ste rezervirali čarter sa skiperom ili posadom, u pravilu ćemo vas unaprijed povezati s njima kako biste mogli dogovoriti itinerar, nabavku namirnica i posebne želje.
 
@@ -144,7 +144,7 @@ Apsolutno. Sigurnost plaćanja i vaš mir su nam izuzetno važni. Kada rezervira
 
 **Dokumentacija**: Svaka uplata koju izvršite potvrđena je pisanim putem. Dobit ćete račun ili potvrdu. Osim toga, potpisujete čarterski ugovor koji propisuje što se događa s vašim novcem (uvjeti povrata itd.). U tom ugovoru postoje zakonske zaštite za vas kao čarterera.
 
-**Transparentnost**: Poslujemo s potpunom transparentnošću u vezi troškova i uplata. Nema skrivenih naknada niti iznenadnih zahtjeva za novcem. Mnogi klijenti cijene što ih obavještavamo o svakom koraku – primljen depozit, podsjetnik na preostali iznos itd.
+**Transparentnost**: Poslujemo s potpunom transparentnošću u vezi troškova i uplata. Nema naknade za rezervaciju, a obvezne dodatke koji se plaćaju u bazi i polog vidite prije plaćanja. Mnogi klijenti cijene što ih obavještavamo o svakom koraku – primljen depozit, podsjetnik na preostali iznos itd.
 
 Također, preporučujemo (iako nije obavezno) razmisliti o **putnom osiguranju ili osiguranju od otkaza putovanja** koje pokriva vaše uplate za čarter. To je dodatni sloj zaštite – npr. ako nepredviđeni događaj (kao medicinska hitna situacija) prisili otkazivanje izvan uvjeta za povrat, osiguranje može nadoknaditi vaš novac.
 
@@ -168,7 +168,7 @@ Ako na našoj stranici vidite cijenu npr. za 45ft jedrilicu "od 3.000 €/tjedan
 
 **Zašto naknade nisu uključene od početka?** Daje fleksibilnost. Ne svi trebaju skipera ili posadu – mnogi čartereri su DIY nautičari. Neki žele jednog člana posade, drugi tri. Cijene su modularne: osnovna cijena jahte + izbor dodataka (skiper, hostesa itd.).
 
-Skiper/posada su odvojeni od osnovne cijene čartera u većini slučajeva. Izuzetak je kad posebno odaberete čarter koji se reklamira kao crewed. **Boat4You** uvijek pojašnjava što je uključeno. Nema skrivenih troškova.
+Skiper/posada su odvojeni od osnovne cijene čartera u većini slučajeva. Izuzetak je kad posebno odaberete čarter koji se reklamira kao crewed. **Boat4You** uvijek pojašnjava što je uključeno.
 
 ## Što je sigurnosni depozit i kako funkcionira?
 

@@ -68,7 +68,7 @@
     "items": {
       "competitivePricing": {
         "title": "Precios Competitivos",
-        "description": "Mejores tarifas sin tarifas ocultas. Calidad premium a precios inmejorables."
+        "description": "Las mejores tarifas, sin gastos de reserva. Los extras obligatorios se indican antes de pagar."
       },
       "wideSelection": {
         "title": "Amplia Selección",
@@ -187,7 +187,7 @@
   "seoSection": {
     "preTitle": "Alquiler de yates,",
     "emphasizedTitle": "sin complicaciones",
-    "intro": "Un alquiler de yates convierte unas vacaciones en una travesía: tu propio barco, tu propia ruta y un fondeadero nuevo siempre que te apetezca. boat4you reúne miles de yates de alquiler de todo el mundo en un solo buscador, con disponibilidad en tiempo real y precios finales, para que lo que ves sea exactamente lo que pagas. Compara veleros, catamaranes, yates a motor y goletas, consulta fotos reales y listas de equipamiento, y reserva la semana que quieras sin interminables correos de ida y vuelta.",
+    "intro": "Un alquiler de yates convierte unas vacaciones en una travesía: tu propio barco, tu propia ruta y un fondeadero nuevo siempre que te apetezca. boat4you reúne miles de yates de alquiler de todo el mundo en un solo buscador, con disponibilidad y precios en tiempo real, y los extras obligatorios y la fianza indicados antes de pagar. Compara veleros, catamaranes, yates a motor y goletas, consulta fotos reales y listas de equipamiento, y reserva la semana que quieras sin interminables correos de ida y vuelta.",
     "blocks": [
       {
         "heading": "Sin patrón, con patrón o con tripulación completa",

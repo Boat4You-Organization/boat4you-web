@@ -28,7 +28,7 @@ Nadat je klaar bent om te bevestigen, dien je een aanbetaling te voldoen (doorga
 
 Zodra de eerste betaling is ontvangen, is het jacht officieel voor jou geboekt en ontvang je een chartercontract of boekingsbevestiging met alle details. Ons team zal je vervolgens begeleiden bij eventuele volgende stappen, zoals het verstrekken van bemanninginformatie (voor charters met schipper of bemanning) en het regelen van eventuele extra's die je nodig hebt.
 
-**Boat4You** is trots op transparantie – er zijn geen verborgen kosten, en we informeren je duidelijk over elk resterend openstaand bedrag en de vervaldata (meestal is het definitieve saldo enkele weken voor aanvang van de charter verschuldigd). Als je op enig moment vragen hebt, staat onze klantenservice klaar om je te helpen. We willen dat je je zelfverzekerd en enthousiast voelt, niet verward, over je boeking!
+**Boat4You** is trots op transparantie – er zijn geen boekingskosten, de verplichte extra's en de borg zie je vóór je betaalt, en we informeren je duidelijk over elk resterend openstaand bedrag en de vervaldata (meestal is het definitieve saldo enkele weken voor aanvang van de charter verschuldigd). Als je op enig moment vragen hebt, staat onze klantenservice klaar om je te helpen. We willen dat je je zelfverzekerd en enthousiast voelt, niet verward, over je boeking!
 
 **Na de boeking**: We sturen je een welkomstpakket met informatie over de basisjachthaven, een checklist van wat je moet inpakken, en formulieren om in te vullen (zoals een bemanninglijst met passagiersgegevens, wat vereist is voor de charter). Als je een charter met schipper of bemanning hebt geboekt, stellen we je doorgaans van tevoren voor aan je schipper of bemanning. Je kunt je route, proviand en eventuele speciale verzoeken rechtstreeks met hen bespreken.
 
@@ -204,7 +204,7 @@ Absoluut. Wij nemen betalingsbeveiliging en je gemoedsrust zeer serieus. Wanneer
 
 **Documentatie**: Elke betaling die je doet, wordt schriftelijk bevestigd. Je ontvangt een factuur of ontvangstbewijs. Bovendien onderteken je een chartercontract waarin wordt bepaald wat er met je geld gebeurt (zoals restitutievoorwaarden, etc.). Er zijn wettelijke waarborgen in dat contract voor jou als charteraar.
 
-**Transparantie**: Wij werken met volledige transparantie over kosten en betalingen. Er zijn geen verborgen kosten die later opduiken, en geen plotselinge contante eisen. Veel klanten waarderen het dat we hen bij elke stap op de hoogte houden – aanbetaling ontvangen, herinnering voor het resterende saldo, etc.
+**Transparantie**: Wij werken met volledige transparantie over kosten en betalingen. Er zijn geen boekingskosten, en de verplichte extra's die je in de basis betaalt en de borg zie je vóór je betaalt. Veel klanten waarderen het dat we hen bij elke stap op de hoogte houden – aanbetaling ontvangen, herinnering voor het resterende saldo, etc.
 
 Verder raden we je aan (hoewel het optioneel is) om een **reisverzekering of annuleringsverzekering** te overwegen die je charterbetalingen dekt. Dit is een extra beschermingslaag – bijvoorbeeld, als een onvoorziene gebeurtenis (zoals een medisch noodgeval) je dwingt te annuleren buiten het restitutievenster, kan je reisverzekering je vergoeden.
 

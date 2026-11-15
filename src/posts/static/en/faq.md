@@ -28,7 +28,7 @@ After you're ready to confirm, you will need to pay a booking deposit (typically
 
 Once the first payment is received, the yacht is officially booked for you and you'll receive a charter contract or booking confirmation with all the details. Our team will then guide you through any next steps, such as providing crew information (for skippered or crewed charters) and arranging any extras you need.
 
-**Boat4You** prides itself on transparency – there are no hidden costs, and we'll clearly inform you of any remaining balance due and the due dates (usually the final balance is due a few weeks before the charter starts). If at any point you have questions, our customer support is available to help. We want you to feel confident and excited, not confused, about your booking!
+**Boat4You** prides itself on transparency – there are no booking fees, the obligatory extras and the security deposit are listed before you pay, and we'll clearly inform you of any remaining balance due and the due dates (usually the final balance is due a few weeks before the charter starts). If at any point you have questions, our customer support is available to help. We want you to feel confident and excited, not confused, about your booking!
 
 **After booking**: We'll send you a welcome package with information about the base marina, a checklist of what to pack, and forms to fill out (such as a crew list with passenger details, which is required for the charter). If you've booked a skippered or crewed charter, we typically introduce you to your skipper or crew ahead of time. You can discuss your itinerary, provisioning, and any special requests directly with them.
 
@@ -204,7 +204,7 @@ Absolutely. We take payment security and your peace of mind very seriously. When
 
 **Documentation**: Every payment you make is confirmed in writing. You'll have an invoice or receipt. Additionally, you sign a charter contract that stipulates what happens with your money (like refund conditions, etc.). There are legal safeguards in that contract for you as the charterer.
 
-**Transparency**: We operate with full transparency on costs and payments. There are no hidden fees creeping in later, and no sudden cash demands. Many clients appreciate that we keep them informed at each step – deposit received, balance due reminder, etc.
+**Transparency**: We operate with full transparency on costs and payments. There are no booking fees, and the obligatory extras paid at the base and the security deposit are listed before you pay. Many clients appreciate that we keep them informed at each step – deposit received, balance due reminder, etc.
 
 Furthermore, we recommend (though it's optional) that you consider taking out **travel insurance or trip cancellation insurance** that covers your charter payments. This is an extra layer of protection – for instance, if an unforeseen event (like a medical emergency) forces you to cancel outside of the refund window, your travel insurance could reimburse you.
 

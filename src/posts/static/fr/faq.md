@@ -28,7 +28,7 @@ Une fois que vous êtes prêt à confirmer, vous devrez payer un **acompte de r�
 
 Une fois le premier paiement reçu, le yacht est officiellement réservé pour vous et vous recevrez un contrat de location ou une confirmation de réservation avec tous les détails. Notre équipe vous guidera ensuite à travers les étapes suivantes, telles que la fourniture des informations sur l'équipage (pour les locations avec skipper ou équipage) et l'organisation de tous les extras dont vous avez besoin.
 
-**Boat4You** est fier de sa **transparence** – il n'y a pas de coûts cachés, et nous vous informerons clairement de tout solde restant dû et des dates d'échéance (généralement, le solde final est dû quelques semaines avant le début de la location). Si à tout moment vous avez des questions, notre support client est disponible pour vous aider. Nous voulons que vous vous sentiez confiant et enthousiaste, pas confus, à propos de votre réservation !
+**Boat4You** est fier de sa **transparence** – il n'y a pas de frais de réservation, les extras obligatoires et la caution sont indiqués avant le paiement, et nous vous informerons clairement de tout solde restant dû et des dates d'échéance (généralement, le solde final est dû quelques semaines avant le début de la location). Si à tout moment vous avez des questions, notre support client est disponible pour vous aider. Nous voulons que vous vous sentiez confiant et enthousiaste, pas confus, à propos de votre réservation !
 
 **Après la réservation** : Nous vous enverrons un **forfait de bienvenue** avec des informations sur le port de plaisance de base, une liste de contrôle de ce qu'il faut emporter et des formulaires à remplir (comme une liste d'équipage avec les détails des passagers, qui est requise pour la location). Si vous avez réservé une location avec skipper ou équipage, nous vous présenterons généralement votre skipper ou équipage à l'avance. Vous pourrez discuter de votre itinéraire, de l'avitaillement et de toute demande spéciale directement avec eux.
 
@@ -204,7 +204,7 @@ Absolument. Nous prenons très au sérieux la sécurité des paiements et votre 
 
 **Documentation** : Chaque paiement que vous effectuez est confirmé par écrit. Vous aurez une facture ou un reçu. De plus, vous signez un contrat de location qui stipule ce qui se passe avec votre argent (comme les conditions de remboursement, etc.). Il y a des garanties légales dans ce contrat pour vous en tant que locataire.
 
-**Transparence** : Nous opérons en toute transparence sur les coûts et les paiements. Il n'y a pas de frais cachés qui s'infiltrent plus tard, et pas de demandes d'argent soudaines. De nombreux clients apprécient que nous les tenions informés à chaque étape – acompte reçu, rappel du solde dû, etc.
+**Transparence** : Nous opérons en toute transparence sur les coûts et les paiements. Il n'y a pas de frais de réservation, et les extras obligatoires réglés à la base ainsi que la caution sont indiqués avant le paiement. De nombreux clients apprécient que nous les tenions informés à chaque étape – acompte reçu, rappel du solde dû, etc.
 
 De plus, nous vous recommandons (bien que ce soit facultatif) d'envisager de souscrire une **assurance voyage ou une assurance annulation de voyage** qui couvre vos paiements de location. C'est une couche de protection supplémentaire – par exemple, si un événement imprévu (comme une urgence médicale) vous oblige à annuler en dehors de la fenêtre de remboursement, votre assurance voyage pourrait vous rembourser.
 

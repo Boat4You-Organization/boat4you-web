@@ -68,7 +68,7 @@
     "items": {
       "competitivePricing": {
         "title": "Konkurentne cijene",
-        "description": "Najbolje cijene bez skrivenih troškova. Vrhunska kvaliteta po nenadmašnim cijenama."
+        "description": "Najbolje cijene bez naknade za rezervaciju. Obvezne dodatke vidite prije plaćanja."
       },
       "wideSelection": {
         "title": "Širok izbor",
@@ -201,7 +201,7 @@
     ],
     "closing": "Spremni za polazak? Odaberite destinaciju iznad, usporedite stvarne cijene za svoje datume i rezervirajte jahtu online u nekoliko minuta — uz sigurno plaćanje i podršku koja se doista javlja.",
     "emphasizedTitle": "jednostavniji nego ikad",
-    "intro": "Najam jahte pretvara odmor u putovanje: vlastiti brod, vlastita ruta i novo sidrište kad god ga poželite. boat4you okuplja tisuće jahti za čarter iz cijelog svijeta u jednoj tražilici — s dostupnošću u stvarnom vremenu i konačnim cijenama, pa ono što vidite doista i plaćate. Usporedite jedrilice, katamarane, motorne jahte i gulete jedne uz druge, pregledajte stvarne fotografije i popise opreme te rezervirajte tjedan koji želite bez beskrajnog dopisivanja e-mailom.",
+    "intro": "Najam jahte pretvara odmor u putovanje: vlastiti brod, vlastita ruta i novo sidrište kad god ga poželite. boat4you okuplja tisuće jahti za čarter iz cijelog svijeta u jednoj tražilici — s dostupnošću i cijenama u stvarnom vremenu, a obvezne dodatke i polog vidite prije plaćanja. Usporedite jedrilice, katamarane, motorne jahte i gulete jedne uz druge, pregledajte stvarne fotografije i popise opreme te rezervirajte tjedan koji želite bez beskrajnog dopisivanja e-mailom.",
     "links": {
       "sailing": "Najam jedrilica",
       "catamaran": "Najam katamarana",

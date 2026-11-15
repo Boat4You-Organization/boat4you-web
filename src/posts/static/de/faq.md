@@ -28,7 +28,7 @@ Sobald Sie zur Bestätigung bereit sind, müssen Sie eine Buchungsanzahlung (typ
 
 Sobald die erste Zahlung eingegangen ist, ist die Yacht offiziell für Sie gebucht und Sie erhalten einen Chartervertrag oder eine Buchungsbestätigung mit allen Details. Unser Team wird Sie dann durch alle weiteren Schritte führen, wie z. B. die Bereitstellung von Crew-Informationen (für Skipper- oder Crew-Charter) und die Organisation aller Extras, die Sie benötigen.
 
-**Boat4You** ist stolz auf seine Transparenz – es gibt keine versteckten Kosten, und wir werden Sie klar über den fälligen Restbetrag und die Fälligkeitstermine informieren (normalerweise ist der Restbetrag einige Wochen vor Charterbeginn fällig). Sollten Sie zu irgendeinem Zeitpunkt Fragen haben, steht Ihnen unser Kundensupport zur Verfügung. Wir möchten, dass Sie sich sicher und aufgeregt und nicht verwirrt bezüglich Ihrer Buchung fühlen!
+**Boat4You** ist stolz auf seine Transparenz – es gibt keine Buchungsgebühren, Pflichtextras und Kaution sehen Sie vor der Zahlung, und wir werden Sie klar über den fälligen Restbetrag und die Fälligkeitstermine informieren (normalerweise ist der Restbetrag einige Wochen vor Charterbeginn fällig). Sollten Sie zu irgendeinem Zeitpunkt Fragen haben, steht Ihnen unser Kundensupport zur Verfügung. Wir möchten, dass Sie sich sicher und aufgeregt und nicht verwirrt bezüglich Ihrer Buchung fühlen!
 
 **Nach der Buchung**: Wir senden Ihnen ein Willkommenspaket mit Informationen über die Basis-Marina, einer Packliste und Formularen zum Ausfüllen (wie z. B. einer Crew-Liste mit Passagierdetails, die für den Charter erforderlich ist). Wenn Sie einen Skipper- oder Crew-Charter gebucht haben, stellen wir Ihnen Ihren Skipper oder Ihre Crew in der Regel im Voraus vor. Sie können Ihre Reiseroute, Proviantierung und alle Sonderwünsche direkt mit ihnen besprechen.
 
@@ -204,7 +204,7 @@ Absolut. Wir nehmen die Zahlungssicherheit und Ihre Ruhe sehr ernst. Wenn Sie be
 
 **Dokumentation**: Jede von Ihnen getätigte Zahlung wird schriftlich bestätigt. Sie erhalten eine Rechnung oder Quittung. Zusätzlich unterzeichnen Sie einen Chartervertrag, der festlegt, was mit Ihrem Geld geschieht (wie Rückerstattungsbedingungen usw.). Dieser Vertrag enthält rechtliche Schutzmaßnahmen für Sie als Charterer.
 
-**Transparenz**: Wir arbeiten mit voller Transparenz in Bezug auf Kosten und Zahlungen. Es schleichen sich später keine versteckten Gebühren ein und es gibt keine plötzlichen Barforderungen. Viele Kunden schätzen, dass wir sie bei jedem Schritt auf dem Laufenden halten – Anzahlung erhalten, Erinnerung an den Restbetrag usw.
+**Transparenz**: Wir arbeiten mit voller Transparenz in Bezug auf Kosten und Zahlungen. Es gibt keine Buchungsgebühren, und die an der Basis fälligen Pflichtextras sowie die Kaution sehen Sie vor der Zahlung. Viele Kunden schätzen, dass wir sie bei jedem Schritt auf dem Laufenden halten – Anzahlung erhalten, Erinnerung an den Restbetrag usw.
 
 Darüber hinaus empfehlen wir (obwohl es optional ist), eine **Reiseversicherung oder eine Reiserücktrittsversicherung** in Betracht zu ziehen, die Ihre Charterzahlungen abdeckt. Dies ist eine zusätzliche Schutzschicht – wenn Sie beispielsweise ein unvorhergesehenes Ereignis (wie ein medizinischer Notfall) außerhalb des Rückerstattungsfensters zur Stornierung zwingt, könnte Ihre Reiseversicherung Ihnen die Kosten erstatten.
 

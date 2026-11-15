@@ -28,7 +28,7 @@ Gdy będziesz gotowy do potwierdzenia, będziesz musiał wpłacić zaliczkę (za
 
 Po otrzymaniu pierwszej wpłaty jacht jest oficjalnie zarezerwowany dla Ciebie, a Ty otrzymasz umowę czarterową lub potwierdzenie rezerwacji ze wszystkimi szczegółami. Nasz zespół następnie poprowadzi Cię przez kolejne kroki, takie jak dostarczenie informacji o załodze (w przypadku czarterów ze skipperem lub załogą) i zorganizowanie wszelkich potrzebnych dodatków.
 
-**Boat4You** szczyci się przejrzystością – nie ma ukrytych kosztów, a my jasno poinformujemy Cię o wszelkich pozostałych należnościach i terminach płatności (zazwyczaj ostateczna kwota jest płatna na kilka tygodni przed rozpoczęciem czarteru). Jeśli w dowolnym momencie będziesz mieć pytania, nasza obsługa klienta jest do Twojej dyspozycji. Chcemy, abyś czuł się pewnie i podekscytowany, a nie zdezorientowany, swoją rezerwacją!
+**Boat4You** szczyci się przejrzystością – nie ma opłat rezerwacyjnych, obowiązkowe dodatki i kaucję widzisz przed płatnością, a my jasno poinformujemy Cię o wszelkich pozostałych należnościach i terminach płatności (zazwyczaj ostateczna kwota jest płatna na kilka tygodni przed rozpoczęciem czarteru). Jeśli w dowolnym momencie będziesz mieć pytania, nasza obsługa klienta jest do Twojej dyspozycji. Chcemy, abyś czuł się pewnie i podekscytowany, a nie zdezorientowany, swoją rezerwacją!
 
 **Po rezerwacji**: Wyślemy Ci pakiet powitalny z informacjami o marinie bazowej, listą rzeczy do spakowania i formularzami do wypełnienia (takimi jak lista załogi z danymi pasażerów, która jest wymagana do czarteru). Jeśli zarezerwowałeś czarter ze skipperem lub załogą, zazwyczaj przedstawiamy Ci skippera lub załogę z wyprzedzeniem. Możesz omówić z nimi swój plan podróży, zaopatrzenie i wszelkie specjalne prośby.
 
@@ -204,7 +204,7 @@ Absolutnie. Bezpieczeństwo płatności i Twój spokój są dla nas bardzo ważn
 
 **Dokumentacja**: Każda dokonana przez Ciebie płatność jest potwierdzana pisemnie. Otrzymasz fakturę lub paragon. Dodatkowo podpisujesz umowę czarterową, która określa, co dzieje się z Twoimi pieniędzmi (np. warunki zwrotu itp.). Umowa ta zawiera zabezpieczenia prawne dla Ciebie jako czarterującego.
 
-**Przejrzystość**: Działamy z pełną przejrzystością kosztów i płatności. Nie ma ukrytych opłat pojawiających się później ani nagłych żądań gotówki. Wielu klientów docenia to, że informujemy ich na każdym kroku – otrzymanie depozytu, przypomnienie o pozostałej kwocie itp.
+**Przejrzystość**: Działamy z pełną przejrzystością kosztów i płatności. Nie ma opłat rezerwacyjnych, a obowiązkowe dodatki opłacane w bazie i kaucję widzisz przed płatnością. Wielu klientów docenia to, że informujemy ich na każdym kroku – otrzymanie depozytu, przypomnienie o pozostałej kwocie itp.
 
 Ponadto zalecamy (choć jest to opcjonalne), aby rozważyć wykupienie **ubezpieczenia podróżnego lub ubezpieczenia od anulowania podróży**, które obejmuje Twoje płatności za czarter. Jest to dodatkowa warstwa ochrony – na przykład, jeśli nieprzewidziane zdarzenie (takie jak nagły wypadek medyczny) zmusza Cię do anulowania rezerwacji poza okresem zwrotu, ubezpieczenie podróżne może Ci zwrócić koszty.
 

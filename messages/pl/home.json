@@ -68,7 +68,7 @@
     "items": {
       "competitivePricing": {
         "title": "Konkurencyjne ceny",
-        "description": "Najlepsze stawki bez ukrytych opłat. Najwyższa jakość w niezrównanych cenach."
+        "description": "Najlepsze stawki bez opłat rezerwacyjnych. Obowiązkowe dodatki widzisz przed płatnością."
       },
       "wideSelection": {
         "title": "Szeroki wybór",
@@ -187,7 +187,7 @@
   "seoSection": {
     "preTitle": "Czarter jachtów,",
     "emphasizedTitle": "prostszy niż myślisz",
-    "intro": "Czarter jachtu zamienia zwykły urlop w prawdziwy rejs: własna łódź, własna trasa i nowa zatoka do zakotwiczenia, kiedy tylko przyjdzie Ci ochota. boat4you zbiera tysiące jachtów czarterowych z całego świata w jednej wyszukiwarce — z dostępnością w czasie rzeczywistym i ostatecznymi cenami, więc płacisz dokładnie tyle, ile widzisz. Porównuj jachty żaglowe, katamarany, jachty motorowe i gulety obok siebie, oglądaj prawdziwe zdjęcia i listy wyposażenia, a wybrany tydzień rezerwuj bez niekończącej się wymiany e-maili.",
+    "intro": "Czarter jachtu zamienia zwykły urlop w prawdziwy rejs: własna łódź, własna trasa i nowa zatoka do zakotwiczenia, kiedy tylko przyjdzie Ci ochota. boat4you zbiera tysiące jachtów czarterowych z całego świata w jednej wyszukiwarce — z dostępnością i cenami w czasie rzeczywistym, a obowiązkowe dodatki i kaucję widzisz przed płatnością. Porównuj jachty żaglowe, katamarany, jachty motorowe i gulety obok siebie, oglądaj prawdziwe zdjęcia i listy wyposażenia, a wybrany tydzień rezerwuj bez niekończącej się wymiany e-maili.",
     "blocks": [
       {
         "heading": "Bareboat, ze skipperem czy z pełną załogą",

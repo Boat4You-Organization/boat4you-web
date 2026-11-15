@@ -88,8 +88,8 @@ guiá-lo através de quaisquer próximos passos, como fornecer informações
 sobre a tripulação (para _charters_ com _skipper_ ou tripulados) e
 organizar quaisquer extras de que você precise.
 
-A **Boat4You** se orgulha da transparência – não há custos ocultos, e
-nós o informaremos claramente de qualquer saldo restante devido e as
+A **Boat4You** se orgulha da transparência – não há taxas de reserva, os extras obrigatórios e a caução
+são indicados antes de pagar, e nós o informaremos claramente de qualquer saldo restante devido e as
 datas de vencimento (geralmente o saldo final é devido algumas semanas
 antes do início do _charter_). Se a qualquer momento você tiver
 perguntas, o nosso suporte ao cliente está disponível para ajudar.
@@ -570,7 +570,7 @@ Absolutamente. Levamos a segurança do pagamento e a sua tranquilidade muito a s
 
 **Documentação**: Cada pagamento que você faz é confirmado por escrito. Você terá uma fatura ou recibo. Além disso, você assina um contrato de charter que estipula o que acontece com seu dinheiro (como condições de reembolso, etc.). Há salvaguardas legais nesse contrato para você como afretador.
 
-**Transparência**: Operamos com total transparência em custos e pagamentos. Não há taxas ocultas ou exigências súbitas de dinheiro. Muitos clientes apreciam que os mantemos informados a cada passo – depósito recebido, lembrete de saldo devido, etc.
+**Transparência**: Operamos com total transparência em custos e pagamentos. Não há taxas de reserva, e os extras obrigatórios pagos na base, bem como a caução, são indicados antes de pagar. Muitos clientes apreciam que os mantemos informados a cada passo – depósito recebido, lembrete de saldo devido, etc.
 
 Além disso, recomendamos (embora seja opcional) que você considere contratar um **seguro de viagem ou seguro de cancelamento de viagem** que cubra seus pagamentos de charter. Esta é uma camada extra de proteção – por exemplo, se um evento imprevisto (como uma emergência médica) o forçar a cancelar fora da janela de reembolso, seu seguro de viagem poderá reembolsá-lo.
 

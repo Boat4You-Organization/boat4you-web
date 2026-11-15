@@ -28,7 +28,7 @@ Dopo che sei pronto a confermare, dovrai pagare un deposito di prenotazione (in 
 
 Una volta ricevuto il primo pagamento, lo yacht è ufficialmente prenotato per te e riceverai un contratto di noleggio o una conferma di prenotazione con tutti i dettagli. Il nostro team ti guiderà quindi attraverso i passaggi successivi, come fornire le informazioni sull'equipaggio (per i charter con skipper o equipaggio) e organizzare eventuali extra di cui hai bisogno.
 
-**Boat4You** è orgogliosa della sua trasparenza – non ci sono costi nascosti e ti informeremo chiaramente di qualsiasi saldo residuo dovuto e delle scadenze (di solito il saldo finale è dovuto alcune settimane prima dell'inizio del charter). Se in qualsiasi momento hai domande, il nostro supporto clienti è disponibile per aiutarti. Vogliamo che tu ti senta sicuro ed entusiasta, non confuso, riguardo alla tua prenotazione!
+**Boat4You** è orgogliosa della sua trasparenza – non ci sono commissioni di prenotazione, gli extra obbligatori e la cauzione sono indicati prima del pagamento e ti informeremo chiaramente di qualsiasi saldo residuo dovuto e delle scadenze (di solito il saldo finale è dovuto alcune settimane prima dell'inizio del charter). Se in qualsiasi momento hai domande, il nostro supporto clienti è disponibile per aiutarti. Vogliamo che tu ti senta sicuro ed entusiasta, non confuso, riguardo alla tua prenotazione!
 
 **Dopo la prenotazione**: Ti invieremo un pacchetto di benvenuto con informazioni sulla marina di base, una lista di controllo su cosa mettere in valigia e moduli da compilare (come la lista dell'equipaggio con i dettagli dei passeggeri, richiesta per il charter). Se hai prenotato un charter con skipper o equipaggio, di solito ti presentiamo in anticipo il tuo skipper o equipaggio. Potrai discutere direttamente con loro il tuo itinerario, l'approvvigionamento e qualsiasi richiesta speciale.
 
@@ -204,7 +204,7 @@ Assolutamente. Prendiamo molto sul serio la sicurezza dei pagamenti e la tua tra
 
 **Documentazione**: Ogni pagamento che effettui è confermato per iscritto. Avrai una fattura o una ricevuta. Inoltre, firmi un contratto di charter che stabilisce cosa succede al tuo denaro (come le condizioni di rimborso, ecc.). Ci sono garanzie legali in quel contratto per te in quanto noleggiatore.
 
-**Trasparenza**: Operiamo con piena trasparenza su costi e pagamenti. Non ci sono commissioni nascoste che spuntano in seguito e nessuna richiesta improvvisa di contanti. Molti clienti apprezzano il fatto che li teniamo informati ad ogni passaggio – deposito ricevuto, promemoria del saldo dovuto, ecc.
+**Trasparenza**: Operiamo con piena trasparenza su costi e pagamenti. Non ci sono commissioni di prenotazione, e gli extra obbligatori da saldare in base e la cauzione sono indicati prima del pagamento. Molti clienti apprezzano il fatto che li teniamo informati ad ogni passaggio – deposito ricevuto, promemoria del saldo dovuto, ecc.
 
 Inoltre, ti consigliamo (anche se è facoltativo) di prendere in considerazione un'**assicurazione di viaggio o un'assicurazione annullamento viaggio** che copra i pagamenti del tuo charter. Questo è un ulteriore livello di protezione – ad esempio, se un evento imprevisto (come un'emergenza medica) ti costringe ad annullare al di fuori della finestra di rimborso, la tua assicurazione di viaggio potrebbe rimborsarti.
 

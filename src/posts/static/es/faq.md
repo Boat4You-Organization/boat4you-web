@@ -28,7 +28,7 @@ Cuando esté listo para confirmar, deberá pagar un depósito de reserva (genera
 
 Una vez recibido el primer pago, el yate queda oficialmente reservado para usted y recibirá un contrato de chárter o una confirmación de reserva con todos los detalles. Nuestro equipo le guiará a través de los siguientes pasos, como proporcionar información de la tripulación (para chárteres con patrón o tripulados) y organizar cualquier extra que necesite.
 
-**Boat4You** se enorgullece de su transparencia – no hay costos ocultos, y le informaremos claramente sobre cualquier saldo restante y las fechas de vencimiento (generalmente, el saldo final vence unas semanas antes del inicio del chárter). Si en algún momento tiene preguntas, nuestro soporte al cliente está disponible para ayudarle. Queremos que se sienta seguro y emocionado, no confundido, con su reserva.
+**Boat4You** se enorgullece de su transparencia – no hay gastos de reserva, los extras obligatorios y la fianza se indican antes de pagar, y le informaremos claramente sobre cualquier saldo restante y las fechas de vencimiento (generalmente, el saldo final vence unas semanas antes del inicio del chárter). Si en algún momento tiene preguntas, nuestro soporte al cliente está disponible para ayudarle. Queremos que se sienta seguro y emocionado, no confundido, con su reserva.
 
 **Después de la reserva**: Le enviaremos un paquete de bienvenida con información sobre el puerto base (marina), una lista de verificación de qué empacar y formularios para completar (como una lista de tripulación con los detalles de los pasajeros, que es requerida para el chárter). Si ha reservado un chárter con patrón o tripulado, generalmente le presentaremos a su patrón o tripulación con anticipación. Podrá discutir con ellos directamente su itinerario, el aprovisionamiento y cualquier solicitud especial.
 
@@ -204,7 +204,7 @@ Absolutamente. Nos tomamos muy en serio la seguridad de los pagos y su tranquili
 
 **Documentación**: Cada pago que realiza se confirma por escrito. Tendrá una factura o recibo. Además, usted firma un contrato de chárter que estipula qué sucede con su dinero (como condiciones de reembolso, etc.). Hay salvaguardas legales en ese contrato para usted como fletador.
 
-**Transparencia**: Operamos con total transparencia en costos y pagos. No hay tarifas ocultas que aparezcan más tarde, ni demandas repentinas de efectivo. Muchos clientes aprecian que los mantengamos informados en cada paso – depósito recibido, recordatorio de saldo pendiente, etc.
+**Transparencia**: Operamos con total transparencia en costos y pagos. No hay gastos de reserva, y los extras obligatorios que se pagan en la base y la fianza se indican antes de pagar. Muchos clientes aprecian que los mantengamos informados en cada paso – depósito recibido, recordatorio de saldo pendiente, etc.
 
 Además, recomendamos (aunque es opcional) que considere contratar un **seguro de viaje o un seguro de cancelación de viaje** que cubra sus pagos de chárter. Esta es una capa adicional de protección – por ejemplo, si un evento imprevisto (como una emergencia médica) le obliga a cancelar fuera de la ventana de reembolso, su seguro de viaje podría reembolsarle.
 
