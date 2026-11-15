@@ -78,22 +78,30 @@ const BlogsSection = ({ initial }: { initial?: InitialBlogList }) => {
               </Grid>
             ))}
           </Grid>
-          {/* Google "preferred source" nudge — once per listing, under the
-              grid and above Load More so it never interleaves with the cards. */}
-          <Box mb="22px">
-            <GooglePreferredSourceCard />
-          </Box>
+          {/* Load More first, right under the cards, and as a filled primary button (Mario 15.11.2026: it sat under
+              the preferred-source card and read as a pale secondary link). */}
           {hasNextPage && (
-            <Stack direction="column" justifyContent="center" alignItems="center" mb="22px">
+            <Stack direction="column" justifyContent="center" alignItems="center" mb={{ xs: 4, md: 5 }}>
               {isLoadingMore ? (
                 <CircularProgress />
               ) : (
-                <Button color="secondary" size="large" onClick={handlePageChange} disabled={isLoadingMore}>
+                <Button
+                  variant="contained"
+                  color="primary"
+                  size="large"
+                  onClick={handlePageChange}
+                  disabled={isLoadingMore}
+                  sx={{ minWidth: { xs: '100%', sm: 280 }, py: 1.75, fontWeight: 700 }}
+                >
                   {t('ctaButton')}
                 </Button>
               )}
             </Stack>
           )}
+          {/* Google "preferred source" nudge — once per listing, after the list and its Load More. */}
+          <Box mb="22px">
+            <GooglePreferredSourceCard />
+          </Box>
         </>
       )}
     </Container>
