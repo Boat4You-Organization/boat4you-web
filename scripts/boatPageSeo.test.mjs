@@ -333,7 +333,7 @@ describe('buildBoatTitle: the name without quotes', () => {
     });
   });
 
-  test('a name repeating the model is left out; long titles still fit 70 characters', () => {
+  test('a name repeating the model is left out; long titles fit 60 characters', () => {
     assert.equal(
       buildBoatTitle({ model: 'Bavaria Cruiser 40', name: 'Bavaria Cruiser 40', year: 2010, tail: 'Split Charter' })
         .title,
@@ -347,9 +347,34 @@ describe('buildBoatTitle: the name without quotes', () => {
       tail: 'Castellammare di Stabia Charter',
     });
 
-    assert.ok(long.title.length <= 70, long.title);
+    assert.ok(long.title.length <= 60, long.title);
     assert.doesNotMatch(long.title, /'/);
-    assert.match(long.title, /^Fountaine Pajot Saona 47 Very/);
+    // Model and place leave no room for the name (60 since 15.11.2026).
+    assert.match(long.title, /^Fountaine Pajot Saona 47 — Castellammare di Stabia Charter$/);
+  });
+
+  test('60 characters (audit 15.11.2026): the brand suffix goes first, the place stays', () => {
+    // 49 characters: fits with " | Boat4You" (60).
+    const short = buildBoatTitle({ model: 'Bavaria Cruiser 46', name: 'Adriana', year: 2019, tail: 'Split Charter' });
+
+    assert.equal(short.title, 'Bavaria Cruiser 46 Adriana (2019) — Split Charter');
+    assert.equal(short.absolute, false);
+
+    // 58 characters: no suffix, still the whole name, year and place.
+    const mid = buildBoatTitle({ model: 'Lagoon 46', name: 'Blue Horizon', year: 2023, tail: 'Yachtcharter Sukošan' });
+
+    assert.equal(mid.title, 'Lagoon 46 Blue Horizon (2023) — Yachtcharter Sukošan');
+    assert.equal(mid.absolute, true);
+
+    // Name and place too long together: the model and the place, never a cut place.
+    const tight = buildBoatTitle({
+      model: 'Fountaine Pajot Saona 47',
+      name: 'Libertà',
+      year: 2021,
+      tail: 'Castellammare di Stabia Charter',
+    });
+
+    assert.equal(tight.title, 'Fountaine Pajot Saona 47 — Castellammare di Stabia Charter');
   });
 });
 

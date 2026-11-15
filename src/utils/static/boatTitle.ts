@@ -1,15 +1,17 @@
-import { TITLE_MAX, cutAtWord, fitsWithBrandSuffix } from '@/utils/static/metaLength';
+import { BRAND_SUFFIX_LENGTH, cutAtWord } from '@/utils/static/metaLength';
 import { nameRepeatsModel } from '@/utils/static/toTitleCase';
 
 /**
- * <title> of a boat page within the 70-character SERP window (audit
- * 26.9.2026, B42: 1,348 of 1,798 boat titles were longer; the longest, 156,
- * carried the partner's equipment list — "Libertà - Luxury Catamaran, A/c,
- * Generator, Water Maker, Solar Panel"). The H1 keeps the full partner name.
+ * <title> of a boat page within 60 characters (audit 26.9.2026, B42: 1,348
+ * of 1,798 boat titles were over 70, the longest, 156, carrying the
+ * partner's equipment list — "Libertà - Luxury Catamaran, A/c, Generator,
+ * Water Maker, Solar Panel"; audit 15.11.2026, S4: 44 % still over 60, which
+ * Google cuts on mobile). The H1 keeps the full partner name.
  *
  *   "{model} {name} ({year}) — {tail}" + " | Boat4You" when it fits;
  *   else without the brand suffix; else without the year; else the name cut
- *   at a word boundary.
+ *   at a word boundary; else the model and the place without the name; else
+ *   cut at a word boundary. The place (tail) goes last.
  *
  * The name follows the model without quotes (7.10.2026): "Lagoon 42
  * Masterpiece", the words people search for, not "Lagoon 42 'Masterpiece'".
@@ -57,6 +59,9 @@ export const titlePlace = (locationName?: string | null): string => {
 
   return raw.split(',')[0].trim();
 };
+
+/** Longest boat page <title>, the " | Boat4You" suffix included when it is shown. */
+export const BOAT_TITLE_MAX = 60;
 
 export interface BoatTitle {
   title: string;
@@ -117,17 +122,21 @@ export const buildBoatTitle = ({
   // A name that already carries the house brand ("Boat4You 424/4/4 Premium", V9_87) gets no " | Boat4You" suffix.
   const brandInName = hasName && /\bboat4you\b/iu.test(cleanName);
 
-  if (!brandInName && fitsWithBrandSuffix(full)) return { title: full, absolute: false };
+  if (!brandInName && full.length + BRAND_SUFFIX_LENGTH <= BOAT_TITLE_MAX) return { title: full, absolute: false };
 
-  if (full.length <= TITLE_MAX) return { title: full, absolute: true };
+  if (full.length <= BOAT_TITLE_MAX) return { title: full, absolute: true };
 
   const noYear = withTail(`${cleanModel}${namePart}`);
 
-  if (noYear.length <= TITLE_MAX) return { title: noYear, absolute: true };
+  if (noYear.length <= BOAT_TITLE_MAX) return { title: noYear, absolute: true };
 
-  const room = TITLE_MAX - withTail(`${cleanModel} `).length;
+  const room = BOAT_TITLE_MAX - withTail(`${cleanModel} `).length;
 
   if (hasName && room >= 8) return { title: withTail(`${cleanModel} ${cutAtWord(cleanName, room)}`), absolute: true };
 
-  return { title: cutAtWord(noYear, TITLE_MAX), absolute: true };
+  const modelOnly = withTail(cleanModel);
+
+  if (hasName && modelOnly.length <= BOAT_TITLE_MAX) return { title: modelOnly, absolute: true };
+
+  return { title: cutAtWord(noYear, BOAT_TITLE_MAX), absolute: true };
 };
