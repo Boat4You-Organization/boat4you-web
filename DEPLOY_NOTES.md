@@ -1,5 +1,17 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-11-15 — Blog lista: „Load More“ odmah ispod kartica kao puni plavi gumb, „Like our guides“ iza njega — ✅ LIVE 15.11.2026 ~15:05 UTC (`d7fd41e09`, deployment id d7fd41e09ce1-mwhymi7h, tag `live/2026-11-15-blog-load-more`)
+
+**Zašto:** Mario 15.11.: „load more mora biti poviše like our guide i mora biti primjetniji“.
+
+**Što:** `src/views/Blog/BlogsSection/BlogsSection.tsx`:
+
+- „Load More“ je odmah ispod mreže članaka, prije kartice Google „preferred source“;
+- `variant="contained" color="primary" size="large"`, min. širina 280 px (na mobitelu puna širina), podebljan tekst.
+  Tekst gumba (`common.blog.ctaButton` ×9) nije mijenjan.
+
+**Provjereno uživo (15:08 UTC):** dpl `d7fd41e09ce1`; na `/blog` gumb je u HTML-u prije „Like our guides“ i ima klasu `MuiButton-containedPrimary`. SEO Stage B: 0 novih FAIL (`_seo-audit-2026-11-15/regression/150503-B-boat4you/summary.md`).
+
 ## 2026-11-15 — YouTube u blogu: sličica + play (youtube-nocookie tek na klik) + VideoObject — ✅ LIVE 15.11.2026 ~13:55 UTC (`a2de8d36b`, deployment id a2de8d36b4df-mwhw58q9, tag `live/2026-11-15-blog-video`)
 
 **Zašto:** Mario 15.11. želi na webu HTZ-ov promotivni film s Johnom Malkovichem (YouTube `S2Uqg1va_pI` + nastavak `eQSMz3IkKAY`). YouTube iframe zalijepljen u WordPress učitao bi player (~1 MB) i YouTube kolačiće prije pristanka.
