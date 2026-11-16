@@ -1,5 +1,25 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-11-16 — One-way naknade pod „Optional services“ samo informativno — ✅ LIVE 16.11.2026 ~09:05 UTC (`5f8c56d40`, deployment id 5f8c56d40bf3-mwj0x88i, tag `live/2026-11-16-oneway-fee-info`)
+
+**Zašto:** Mario 16.11., Prestige M48 18077: one-way naknade (Tivat, Dubrovnik, Split, Zadar → Rogoznica) bile su pod „Selected services“ kao obavezne. Backend ih je izbacio iz obaveznih (`live/2026-11-16-oneway-fee`). Mario: „one way opcije trebaju biti pod optional services“, informativno.
+
+**Što:**
+
+- Backend ih šalje odvojeno, u `oneWayFees` (ne u `services`).
+- `ExtrasTab` ih prikazuje pod „Optional services“ preko `ExtrasCard infoOnly`: bez kvačice, ne mogu se odabrati, s napomenom `common.oneWayFeeInfo` ×9 („Only for a one-way charter, when the boat is returned to another marina.“).
+- Naknada koju odabrana one-way ponuda stvarno naplaćuje ide pod „Selected services“, označena i zaključana.
+- `partnerYacht.ts` filtrira i `oneWayFees` (nalaz pregleda: imena operatera nikad javno).
+
+**Provjereno uživo:** 18077, 21.–28.11.:
+
+- Selected = Charter pack 680 €, pristojba, depozit;
+- Optional = 4 one-way naknade bez checkboxa, s napomenom.
+
+SEO Stage B: 0 novih FAIL. Neovisni pregled (Opus): 1 nalaz (filtar), popravljen.
+
+**Sestre:** novo polje ignoriraju i one-way naknade uopće ne prikazuju. Prikaz na ×6 sestara dolazi zasebno: današnji limit za deployeve na cusma5 je potrošen.
+
 ## 2026-11-16 — Gost postavlja lozinku samo linkom iz e-maila (sigurnost) — ✅ LIVE 16.11.2026 ~06:10 UTC (`b75dae3d5`, deployment id b75dae3d51f6-mwiuyvfz, tag `live/2026-11-16-guest-setpw`)
 
 **Zašto:** sigurnosni audit 15.11. (HIGH): stranica za prijavu postavljala je lozinku gosta samo uz broj rezervacije i e-mail. Backend je zatvorio taj endpoint (410, `live/2026-11-16-guest-setpw` u backendu). Mario: račun je zatvoren dok gost ne postavi lozinku linkom iz e-maila; obnova lozinke mora raditi besprijekorno.
