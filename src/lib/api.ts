@@ -15,6 +15,7 @@ import {
   GetBlogsResult,
   GetUnwrapedBlogAndRelatedBlogsResult,
 } from './queries';
+import { sanitizeWpHtml } from './sanitizeWpHtml';
 
 // The blog content + images live on WordPress (wp.boat4you.com). We never want
 // that origin to reach the browser or Google — every image src / content link /
@@ -50,7 +51,7 @@ function swapWpHost<T>(value: T): T {
  * Drop a leading body <h1> that duplicates the title, and demote any other stray
  * <h1> in the body to <h2>, so the template <h1> stays the single page H1.
  */
-function sanitizeBlogContentHeadings(html: string, title?: string): string {
+export function sanitizeBlogContentHeadings(html: string, title?: string): string {
   if (typeof html !== 'string' || !html) return html;
 
   const norm = (s: string) =>
@@ -58,6 +59,9 @@ function sanitizeBlogContentHeadings(html: string, title?: string): string {
       .replace(/<[^>]+>/g, '')
       .replace(/&amp;/gi, '&')
       .replace(/&#?[a-z0-9]+;/gi, ' ')
+      // Letters and digits only: the title comes with entities (&#8217;), the sanitised body with the characters
+      // themselves (’), 16.11.2026.
+      .replace(/[^\p{L}\p{N}]+/gu, ' ')
       .replace(/\s+/g, ' ')
       .trim()
       .toLowerCase();
@@ -243,8 +247,10 @@ export const getBlog = cache(
     if (result?.post?.content) {
       // YouTube embeds become click-to-load facades (no player, no YouTube cookies until the visitor presses play;
       // utils/static/blogVideo.ts, 15.11.2026).
+      // The WordPress HTML goes through the allowlist (lib/sanitizeWpHtml.ts, security audit 15.11.2026) right after
+      // the embedded Article JSON-LD is cut out with the paragraph around it.
       result.post.content = blogVideoFacades(
-        stripEmbeddedArticleLd(sanitizeBlogContentHeadings(result.post.content, result.post.title))
+        sanitizeBlogContentHeadings(sanitizeWpHtml(stripEmbeddedArticleLd(result.post.content)), result.post.title)
       );
     }
 
