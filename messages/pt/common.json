@@ -383,6 +383,7 @@
   "reservationCreated": "Reserva criada com sucesso",
   "reservationCreationFailed": "Falha na criação da reserva",
   "processing": "Processando...",
+  "oneWayFeeInfo": "Apenas para um charter só de ida, quando o barco é devolvido noutra marina.",
   "usuallyBooked": "Geralmente reservado",
   "youHaveNoUpcomingReservations": "Você não tem reservas próximas.",
   "youHaveNoPastReservations": "Você não tem reservas anteriores.",

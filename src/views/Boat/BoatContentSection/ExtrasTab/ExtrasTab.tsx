@@ -61,12 +61,16 @@ const ExtrasTab = ({ yacht, open, onToggle }: ExtrasTabProps) => {
       .filter(extra => extra.obligatory)
       .map(extra => extra.key)
   );
-  const obligatoryServices = sortedServices.filter(
-    s => s.obligatory || obligatoryKeys.includes(s.key) || dynamicObligatoryKeys.has(s.key)
-  );
-  const optionalServices = sortedServices.filter(
-    s => !s.obligatory && !obligatoryKeys.includes(s.key) && !dynamicObligatoryKeys.has(s.key)
-  );
+  // One-way fees (16.11.2026) come apart from `services`: the one the selected one-way offer charges joins the
+  // selected services (checked, locked); the rest are listed under "Optional services" for information only.
+  const oneWayFees = (yacht.oneWayFees ?? []).filter(s => !supersededKeys.has(s.key));
+  const isCharged = (key: string) => obligatoryKeys.includes(key) || dynamicObligatoryKeys.has(key);
+  const oneWayInfo = oneWayFees.filter(s => !isCharged(s.key));
+  const obligatoryServices = [
+    ...sortedServices.filter(s => s.obligatory || isCharged(s.key)),
+    ...oneWayFees.filter(s => isCharged(s.key)),
+  ];
+  const optionalServices = sortedServices.filter(s => !s.obligatory && !isCharged(s.key));
 
   // Partner descriptions (already filtered on the server, partnerText.ts)
   // once per page, on the first row that carries them: partners paste the
@@ -179,7 +183,7 @@ const ExtrasTab = ({ yacht, open, onToggle }: ExtrasTabProps) => {
         )}
         {/* Selected (obligatory) services above stay in view; only the optional
             list is folded until pressed (owner 13.10.2026). */}
-        {optionalServices.length > 0 && (
+        {(optionalServices.length > 0 || oneWayInfo.length > 0) && (
           <Box mt={3}>
             <CollapsibleBlock
               title={t('optionalServices')}
@@ -204,6 +208,20 @@ const ExtrasTab = ({ yacht, open, onToggle }: ExtrasTabProps) => {
                     description={descriptionOf(obligatoryServices.length + index)}
                     yachtSlug={yacht.slug}
                     extraKey={key}
+                  />
+                );
+              })}
+              {oneWayInfo.map(extra => {
+                const { key, ...extraProps } = extra;
+
+                return (
+                  <ExtrasCard
+                    key={extra.id}
+                    {...extraProps}
+                    description={null}
+                    yachtSlug={yacht.slug}
+                    extraKey={key}
+                    infoOnly
                   />
                 );
               })}

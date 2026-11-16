@@ -383,6 +383,7 @@
   "reservationCreated": "Reservierung erfolgreich erstellt",
   "reservationCreationFailed": "Reservierungserstellung fehlgeschlagen",
   "processing": "Verarbeitung läuft...",
+  "oneWayFeeInfo": "Nur bei einem Einweg-Charter, wenn das Boot in einer anderen Marina zurückgegeben wird.",
   "usuallyBooked": "Normalerweise gebucht",
   "youHaveNoUpcomingReservations": "Sie haben keine bevorstehenden Reservierungen.",
   "youHaveNoPastReservations": "Sie haben keine vergangenen Reservierungen.",

@@ -388,6 +388,7 @@
   "reservationCreated": "Rezervacija uspješno kreirana",
   "reservationCreationFailed": "Greška pri kreiranju rezervacije",
   "processing": "Obrada...",
+  "oneWayFeeInfo": "Samo za one-way najam, kad se brod vraća u drugu marinu.",
   "usuallyBooked": "Obično rezervirano",
   "youHaveNoUpcomingReservations": "Nemate nadolazeće rezervacije.",
   "youHaveNoPastReservations": "Nemate prošle rezervacije.",

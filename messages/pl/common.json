@@ -424,6 +424,7 @@
   "reservationCreated": "Rezerwacja utworzona pomyślnie",
   "reservationCreationFailed": "Tworzenie rezerwacji nie powiodło się",
   "processing": "Przetwarzanie...",
+  "oneWayFeeInfo": "Tylko przy czarterze w jedną stronę, gdy łódź jest zwracana w innej marinie.",
   "usuallyBooked": "Zwykle rezerwowane",
   "youHaveNoUpcomingReservations": "Nie masz nadchodzących rezerwacji.",
   "youHaveNoPastReservations": "Nie masz poprzednich rezerwacji.",

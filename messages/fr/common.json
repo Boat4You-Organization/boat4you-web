@@ -383,6 +383,7 @@
   "reservationCreated": "Réservation créée avec succès",
   "reservationCreationFailed": "Échec de la création de la réservation",
   "processing": "Traitement en cours...",
+  "oneWayFeeInfo": "Uniquement pour une location aller simple, lorsque le bateau est rendu dans une autre marina.",
   "usuallyBooked": "Généralement réservé",
   "youHaveNoUpcomingReservations": "Vous n'avez aucune réservation à venir.",
   "youHaveNoPastReservations": "Vous n'avez aucune réservation passée.",

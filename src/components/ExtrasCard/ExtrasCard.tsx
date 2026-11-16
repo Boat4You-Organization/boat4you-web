@@ -20,6 +20,8 @@ import styles from './ExtrasCard.module.scss';
 interface ExtrasCardProps extends Omit<YachtServiceModel, 'key'> {
   yachtSlug: string;
   extraKey: string;
+  /** A one-way fee shown for information only (16.11.2026): no checkbox, not selectable, with a note. */
+  infoOnly?: boolean;
 }
 
 const ExtrasCard = ({
@@ -34,6 +36,7 @@ const ExtrasCard = ({
   obligatory,
   description,
   paymentType,
+  infoOnly = false,
 }: ExtrasCardProps) => {
   const { selectedOffer, selectedExtrasKeys, calculatedPrice } = useYachtStore();
   const { calculatePrice } = useYachtPriceCalculation();
@@ -62,7 +65,7 @@ const ExtrasCard = ({
   const isObligatoryExtras =
     selectedOffer?.obligatoryExtrasKeys.includes(extraKey) || obligatory === true || isDynamicallyObligatory;
   const isSelected = selectedExtrasKeys.includes(extraKey);
-  const isDisabled = isObligatoryExtras || !selectedOffer;
+  const isDisabled = infoOnly || isObligatoryExtras || !selectedOffer;
 
   // No "0 €" (27.9.2026): an extra without a price above 0 reads "Included"
   // (backend INCLUDED) or "Price on request".
@@ -77,7 +80,7 @@ const ExtrasCard = ({
     : t(unpricedExtraLabelKey(paymentType));
 
   const handleToggle = async () => {
-    if (isObligatoryExtras) {
+    if (infoOnly || isObligatoryExtras) {
       return;
     }
 
@@ -151,14 +154,17 @@ const ExtrasCard = ({
         borderRadius: 1.5,
       }}
     >
-      <Box ref={checkboxContainerRef} sx={{ flexShrink: 0, mt: '-2px' /* visual centering vs title */ }}>
-        <Checkbox
-          checked={isChecked}
-          value={isChecked}
-          onChange={handleCheckboxChange}
-          disabled={isDisabled}
-          slotProps={{ input: { 'aria-labelledby': labelId } }}
-        />
+      {/* One-way fee: information, nothing to tick; the empty box keeps the title in line with the others. */}
+      <Box ref={checkboxContainerRef} sx={{ flexShrink: 0, mt: '-2px' /* visual centering vs title */, minWidth: 24 }}>
+        {!infoOnly && (
+          <Checkbox
+            checked={isChecked}
+            value={isChecked}
+            onChange={handleCheckboxChange}
+            disabled={isDisabled}
+            slotProps={{ input: { 'aria-labelledby': labelId } }}
+          />
+        )}
       </Box>
       <Box sx={{ flex: 1, minWidth: 0 }}>
         <Typography
@@ -177,6 +183,11 @@ const ExtrasCard = ({
             sx={{ ...boatType.small, mt: 0.25, whiteSpace: 'pre-line' }}
           >
             {description}
+          </Typography>
+        )}
+        {infoOnly && (
+          <Typography variant="body2" color={colors.black500} sx={{ ...boatType.small, mt: 0.25 }}>
+            {t('oneWayFeeInfo')}
           </Typography>
         )}
       </Box>

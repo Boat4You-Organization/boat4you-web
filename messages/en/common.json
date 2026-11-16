@@ -436,6 +436,7 @@
   "reservationCreated": "Reservation created successfully",
   "reservationCreationFailed": "Reservation creation failed",
   "processing": "Processing...",
+  "oneWayFeeInfo": "Only for a one-way charter, when the boat is returned to another marina.",
   "usuallyBooked": "Usually booked",
   "youHaveNoUpcomingReservations": "You have no upcoming reservations.",
   "youHaveNoPastReservations": "You have no past reservations.",

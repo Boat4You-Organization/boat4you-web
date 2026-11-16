@@ -365,6 +365,8 @@ export interface YachtModel
   custom: boolean;
   amenities: YachtAmenitiesModel[];
   services: YachtServiceModel[];
+  /** One-way fees, for information only (16.11.2026): never in `services`; charged only by a one-way offer. */
+  oneWayFees?: YachtServiceModel[];
   offers: YachtOfferModel[];
   manufacturerName: string;
   description: string;
