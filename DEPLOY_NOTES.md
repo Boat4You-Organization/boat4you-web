@@ -1,5 +1,11 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-11-16 — Uklonjena razvojna ruta `/api/admin/trigger-nausys-sync` (sigurnost) — ✅ LIVE 16.11.2026 (`3ed72057a`, tag `live/2026-11-16-rm-nausys-dev-route`)
+
+**Zašto:** sigurnosni audit 15.11. (LOW). Zaostala razvojna ruta (njezin komentar: „Safe to remove once the post-deploy backfill is done“) pokretala je NauSys sync ponuda (~30–40 min opterećenja) adminovim kolačićem na običan GET. Svaka stranica treće strane mogla ju je okinuti iz adminova preglednika (SameSite=Lax kolačići idu uz top-level GET). Ništa je nije koristilo; admin panel ima svoje kontrole za sync.
+
+**Provjereno uživo:** ruta prije 403, nakon deploya 404.
+
 ## 2026-11-16 — One-way naknade pod „Optional services“ samo informativno — ✅ LIVE 16.11.2026 ~09:05 UTC (`5f8c56d40`, deployment id 5f8c56d40bf3-mwj0x88i, tag `live/2026-11-16-oneway-fee-info`)
 
 **Zašto:** Mario 16.11., Prestige M48 18077: one-way naknade (Tivat, Dubrovnik, Split, Zadar → Rogoznica) bile su pod „Selected services“ kao obavezne. Backend ih je izbacio iz obaveznih (`live/2026-11-16-oneway-fee`). Mario: „one way opcije trebaju biti pod optional services“, informativno.
