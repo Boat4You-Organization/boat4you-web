@@ -152,6 +152,7 @@ const ExtrasCard = ({
         px: 2,
         py: 1.5,
         borderRadius: 1.5,
+        ...(infoOnly ? { cursor: 'default' } : {}),
       }}
     >
       {/* One-way fee: information, nothing to tick; the empty box keeps the title in line with the others. */}

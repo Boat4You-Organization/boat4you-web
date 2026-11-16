@@ -41,6 +41,7 @@ export const withSafePartnerText = (yacht: YachtModel): YachtModel => {
           sysDescription: safeText(yacht.sysDescription),
         }),
     services: Array.isArray(yacht.services) ? yacht.services.map(safeService) : yacht.services,
+    oneWayFees: Array.isArray(yacht.oneWayFees) ? yacht.oneWayFees.map(safeService) : yacht.oneWayFees,
     offers: Array.isArray(yacht.offers)
       ? yacht.offers.map(offer => ({
           ...offer,
