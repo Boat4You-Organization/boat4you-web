@@ -51,4 +51,32 @@ describe('sanitizeWpHtml', () => {
   test('empty input is returned as it is', () => {
     assert.equal(sanitizeWpHtml(''), '');
   });
+
+  test('review 16-11: ids that shadow page globals go, anchors stay', () => {
+    assert.equal(
+      sanitizeWpHtml('<p id="__next_f">x</p><h2 id="route">Route</h2><p id="dataLayer">y</p>'),
+      '<p>x</p><h2 id="route">Route</h2><p>y</p>'
+    );
+  });
+
+  test('review 16-11: any new-tab target gets noopener, own frames do not', () => {
+    assert.match(
+      sanitizeWpHtml('<a href="https://a.example" target="foo">a</a>'),
+      /target="_blank" rel="noopener noreferrer"/
+    );
+    assert.match(
+      sanitizeWpHtml('<a href="https://a.example" target=" _BLANK">a</a>'),
+      /target="_blank" rel="noopener noreferrer"/
+    );
+    assert.equal(sanitizeWpHtml('<a href="#top" target="_self">t</a>'), '<a href="#top" target="_self">t</a>');
+  });
+
+  test('review 16-11: only a YouTube embed of one video stays, without allow/referrerpolicy', () => {
+    const embed = sanitizeWpHtml(
+      '<iframe src="https://www.youtube.com/embed/S2Uqg1va_pI?start=5" allow="camera; microphone" referrerpolicy="unsafe-url"></iframe>'
+    );
+    assert.equal(embed, '<iframe src="https://www.youtube.com/embed/S2Uqg1va_pI?start=5"></iframe>');
+    assert.equal(sanitizeWpHtml('<iframe src="https://www.youtube.com/redirect?q=https://evil.example"></iframe>'), '');
+    assert.equal(sanitizeWpHtml('<iframe src="https://www.youtube.com/embed/videoseries?list=PL1"></iframe>'), '');
+  });
 });

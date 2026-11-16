@@ -12,6 +12,28 @@ import sanitizeHtml from 'sanitize-html';
  * styles (the only scripts in posts are the Article JSON-LD that stripEmbeddedArticleLd removes anyway), event
  * handlers, javascript:/data: links, forms, embeds and iframes from anywhere else.
  */
+const YOUTUBE_EMBED =
+  /^https:\/\/(?:www\.)?youtube(?:-nocookie)?\.com\/embed\/(?!videoseries|live_stream)[\w-]{11}(?:[?#][^"'<>\s]*)?$/u;
+
+/**
+ * An id from a post must not shadow a global the page's scripts read (DOM clobbering, review 16.11.2026):
+ * id="__next_f" stopped Next.js from hydrating the page (consent buttons, chat, video play). Ids starting with "_"
+ * and the tag managers' globals are dropped; heading anchors such as id="route" stay.
+ */
+const RESERVED_IDS = new Set(['datalayer', 'gtag', 'google_tag_manager', 'fbq', 'clarity', 'next', 'webpackchunk_n_e']);
+
+const withoutClobberingId = (attribs: Record<string, string>): Record<string, string> => {
+  const id = attribs.id?.trim();
+
+  if (id === undefined || !(id.startsWith('_') || RESERVED_IDS.has(id.toLowerCase()))) return attribs;
+
+  const rest = { ...attribs };
+
+  delete rest.id;
+
+  return rest;
+};
+
 const OPTIONS = {
   allowedTags: [
     'p',
@@ -88,7 +110,8 @@ const OPTIONS = {
     colgroup: ['span'],
     ol: ['start', 'reversed', 'type'],
     time: ['datetime'],
-    iframe: ['src', 'title', 'width', 'height', 'allow', 'allowfullscreen', 'frameborder', 'loading', 'referrerpolicy'],
+    // No allow= / referrerpolicy= (review 16.11.2026: camera, microphone, unsafe-url): the facade replaces it anyway.
+    iframe: ['src', 'title', 'width', 'height', 'allowfullscreen', 'frameborder', 'loading'],
   },
   allowedSchemes: ['http', 'https', 'mailto', 'tel'],
   allowedSchemesByTag: { img: ['http', 'https'], source: ['http', 'https'], iframe: ['https'] },
@@ -97,17 +120,26 @@ const OPTIONS = {
   allowIframeRelativeUrls: false,
   // Unknown tags lose the tag and keep their text; script, style and the like lose their content too.
   disallowedTagsMode: 'discard' as const,
+  // A YouTube iframe only as an embed of one video (blogVideoFacades turns it into the click-to-load facade); another
+  // YouTube path (/redirect, playlists) is dropped (review 16.11.2026).
+  exclusiveFilter: (frame: { tag: string; attribs: Record<string, string> }) =>
+    frame.tag === 'iframe' && !YOUTUBE_EMBED.test(frame.attribs.src ?? ''),
   transformTags: {
-    // A link opening a new tab must not hand window.opener to the other site.
+    '*': (tagName: string, attribs: Record<string, string>) => ({ tagName, attribs: withoutClobberingId(attribs) }),
+    // A link opening another tab or window must not hand window.opener to the other site (any target but the page's
+    // own frames, review 16.11.2026: a named target gets no implicit noopener).
     a: (tagName: string, attribs: Record<string, string>) => {
-      if (attribs.target !== '_blank') return { tagName, attribs };
+      const clean = withoutClobberingId(attribs);
+      const target = (clean.target ?? '').trim().toLowerCase();
 
-      const rel = new Set((attribs.rel ?? '').split(/\s+/).filter(Boolean));
+      if (!target || ['_self', '_top', '_parent'].includes(target)) return { tagName, attribs: clean };
+
+      const rel = new Set((clean.rel ?? '').split(/\s+/).filter(Boolean));
 
       rel.add('noopener');
       rel.add('noreferrer');
 
-      return { tagName, attribs: { ...attribs, rel: [...rel].join(' ') } };
+      return { tagName, attribs: { ...clean, target: '_blank', rel: [...rel].join(' ') } };
     },
   },
 };

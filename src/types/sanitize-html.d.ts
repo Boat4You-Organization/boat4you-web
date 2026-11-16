@@ -18,6 +18,7 @@ declare module 'sanitize-html' {
     allowedIframeHostnames?: string[];
     allowIframeRelativeUrls?: boolean;
     disallowedTagsMode?: 'discard' | 'escape' | 'recursiveEscape' | 'completelyDiscard';
+    exclusiveFilter?: (frame: { tag: string; attribs: Attributes; text: string }) => boolean;
     transformTags?: Record<string, string | ((tagName: string, attribs: Attributes) => Transformed)>;
   }
 
