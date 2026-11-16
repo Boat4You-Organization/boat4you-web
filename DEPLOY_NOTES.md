@@ -1,5 +1,22 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-11-16 — Gost postavlja lozinku samo linkom iz e-maila (sigurnost) — ✅ LIVE 16.11.2026 ~06:10 UTC (`b75dae3d5`, deployment id b75dae3d51f6-mwiuyvfz, tag `live/2026-11-16-guest-setpw`)
+
+**Zašto:** sigurnosni audit 15.11. (HIGH): stranica za prijavu postavljala je lozinku gosta samo uz broj rezervacije i e-mail. Backend je zatvorio taj endpoint (410, `live/2026-11-16-guest-setpw` u backendu). Mario: račun je zatvoren dok gost ne postavi lozinku linkom iz e-maila; obnova lozinke mora raditi besprijekorno.
+
+**Što:**
+
+- `/signup?booking=1` (gost nakon bankovnog prijenosa, bez e-maila u URL-u) prikazuje „Check your email“ i nema formu. Forma postoji samo s `inviteCode` iz e-maila.
+- `payment-success`: nema više gumba „Create your password“. Kartica kaže da je link poslan na adresu rezervacije; adresa dolazi iz sessionStorage-a, ne iz URL-a.
+- Istekli link ili e-mail nije stigao: oba ekrana upućuju na „Forgot password?“.
+- Akcija `setPasswordForReservation` je uklonjena. Novi ključevi ×9: `guestPasswordLinkSentTitle`, `guestPasswordLinkSent`, `guestPasswordLinkSentNoEmail`, `passwordLinkExpiredUseReset`.
+
+**Provjereno uživo:**
+
+- `/signup?booking=1`: „Check your email“ + „Forgot password?“, bez `type="password"`.
+- `/hr/signup?inviteCode=abc`: poruka o nevažećem linku + „Zaboravili ste lozinku?“.
+- SEO Stage B: 1 FAIL, C1: na naslovnici kartica Španjolske ima 349 brodova, a H2 na stranici države 337 (naslovnica broji pri buildu, stranica uživo). Promjena brojeva u podacima, nije vezano uz ovaj deploy (`_seo-audit-2026-11-16/regression/060953-B-boat4you/summary.md`).
+
 ## 2026-11-15 — Blog lista: „Load More“ odmah ispod kartica kao puni plavi gumb, „Like our guides“ iza njega — ✅ LIVE 15.11.2026 ~15:05 UTC (`d7fd41e09`, deployment id d7fd41e09ce1-mwhymi7h, tag `live/2026-11-15-blog-load-more`)
 
 **Zašto:** Mario 15.11.: „load more mora biti poviše like our guide i mora biti primjetniji“.
