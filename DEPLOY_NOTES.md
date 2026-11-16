@@ -1,5 +1,30 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-11-16 — HTML iz WordPressa kroz popis dopuštenih oznaka (sanitize-html) + dvostruki naslov u 17 objava — ✅ LIVE (`8ba9332ae`, deployment id 8ba9332aefc8-mwjq1pm8, tag `live/2026-11-16-sanitize-wp-html`)
+
+**Zašto:** sigurnosni audit 15.11. (MEDIUM). Tijelo bloga se renderiralo `dangerouslySetInnerHTML` točno kako ga WordPress pošalje, pa bi se skripta ili `onclick` dodan preko WP računa ili dodatka izvršio na www.boat4you.com. Nova ovisnost uz Marijevo „da“: `sanitize-html` 2.18.1 (npm, MIT, 14.10.2026; samo na serveru). Deploy je instalirao novi `node_modules` na cusma1.
+
+**Što:**
+
+- `src/lib/sanitizeWpHtml.ts`: popis dopuštenih oznaka. Pokriva ono što objave koriste, uobičajeni Gutenberg tekst, video placeholder i YouTube embed.
+- Uklanja: skripte, stilove, handlere, `javascript:` i `data:` linkove, obrasce, ostale iframeove, `id`-ove koji bi zasjenili globalne varijable stranice (`__next_f`, `dataLayer`…).
+- Novi tab: `target` dobiva `rel="noopener noreferrer"`.
+- Jedini ulaz WP HTML-a je `getBlog`. Privatnost, uvjeti i FAQ dolaze iz našeg markdowna.
+- Usput: dvostruki naslov u 17 od 65 objava. Usporedba naslova sada gleda samo slova i brojke, jer `&#038;` u naslovu nikad nije odgovarao `&amp;` u tijelu, pa se naslov ponavljao kao H2.
+
+**Provjereno:**
+
+- Svih 65 objava kroz staru i novu obradu: isti tekst, slike, linkovi, tablice, popisi i citati; razlika je samo 17 uklonjenih dvostrukih naslova.
+- Testovi: `test:sanitize-wp` 8/8, `test:blog-video` 13/13.
+- Neovisni pregled (Opus): oko 65 napadačkih ulaza, nijedan ne izvršava skriptu; 3 manja nalaza popravljena.
+- Uživo:
+  - Hvar vodič: jedan H1, naslov se ne ponavlja;
+  - Croatia vodič: 3 tablice;
+  - Malkovich: 2 video facade.
+- SEO Stage B: 0 novih FAIL.
+
+**Sestre ×6:** isti problem, popravak još nije napravljen (limit deployeva na cusma5).
+
 ## 2026-11-16 — Uklonjena razvojna ruta `/api/admin/trigger-nausys-sync` (sigurnost) — ✅ LIVE 16.11.2026 (`3ed72057a`, tag `live/2026-11-16-rm-nausys-dev-route`)
 
 **Zašto:** sigurnosni audit 15.11. (LOW). Zaostala razvojna ruta (njezin komentar: „Safe to remove once the post-deploy backfill is done“) pokretala je NauSys sync ponuda (~30–40 min opterećenja) adminovim kolačićem na običan GET. Svaka stranica treće strane mogla ju je okinuti iz adminova preglednika (SameSite=Lax kolačići idu uz top-level GET). Ništa je nije koristilo; admin panel ima svoje kontrole za sync.
