@@ -18,7 +18,8 @@
     },
     "youWillPay": "Vous allez payer {amount}",
     "pay": "Payer",
-    "securedBy": "Cartes · Apple Pay · Google Pay · Pay by Bank · paiement sécurisé par Mollie"
+    "securedBy": "Cartes · Apple Pay · Google Pay · Pay by Bank · paiement sécurisé par Mollie",
+    "payAmount": "Payer {amount}"
   },
   "errors": {
     "validation": "Veuillez vérifier les informations saisies et réessayer.",
@@ -76,5 +77,19 @@
     "klarnaHint": "Payez plus tard ou en plusieurs fois. Klarna décide des options qui vous sont proposées.",
     "klarnaOverLimit": "Klarna est disponible pour les montants jusqu'à {max} ; le mode de paiement est donc revenu à carte, Apple Pay ou banque.",
     "klarnaCountries": "Klarna est disponible pour les adresses de facturation dans les pays suivants : {countries}. Pour tout autre pays, veuillez choisir carte, Apple Pay ou banque."
+  },
+  "slip": {
+    "brand": "Paiement sécurisé Boat4You",
+    "title": "Payez votre location",
+    "youPay": "Vous payez",
+    "waiting": "Le montant de votre contrat s'affiche ici",
+    "to": "Bénéficiaire",
+    "safe": "Vous saisissez votre carte uniquement sur la page sécurisée de Mollie. Boat4You ne voit jamais vos données de carte.",
+    "bank": "Paiement par virement"
+  },
+  "steps": {
+    "one": "Saisissez votre e-mail, le numéro de confirmation de réservation et le montant.",
+    "two": "Payez sur la page sécurisée de Mollie.",
+    "three": "La confirmation de paiement arrive par e-mail."
   }
 }

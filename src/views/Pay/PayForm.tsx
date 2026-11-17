@@ -25,6 +25,7 @@ import { formatEur, isAmountAmbiguous, parseAmountToMinor } from '@/utils/static
 import { showToast } from '@/valtio/global/global.actions';
 
 import styles from './Pay.module.scss';
+import PayLegal from './PayLegal';
 
 interface PayFormValues {
   email: string;
@@ -53,18 +54,48 @@ const isCheckoutUrl = (url: string): boolean => {
   }
 };
 
-/** Live "You will pay EUR 1,109.00" under the amount field. */
-const AmountPreview = () => {
+/**
+ * The live payment slip on the navy panel: the amount, the booking number and who is paid, written out while the
+ * customer types (17.11.2026 redesign). Announced politely to screen readers; the amount field points at it.
+ */
+const PaySlip = () => {
+  const t = useTranslations('pay');
+  const locale = useLocale();
+  const amount = useWatch<PayFormValues, 'amount'>({ name: 'amount' });
+  const reference = useWatch<PayFormValues, 'reference'>({ name: 'reference' });
+  const minor = parseAmountToMinor(amount ?? '');
+  const booking = (reference ?? '').trim();
+
+  return (
+    <div className={styles.slip} id="pay-amount-preview" aria-live="polite">
+      <p className={styles.slipLabel}>{t('slip.youPay')}</p>
+      {minor ? (
+        <p className={styles.slipAmount}>{formatEur(minor, locale)}</p>
+      ) : (
+        <p className={styles.slipWaiting}>{t('slip.waiting')}</p>
+      )}
+      <dl className={styles.slipRows}>
+        <div>
+          <dt>{t('form.labels.reference')}</dt>
+          <dd>{isPayReference(booking) ? booking : '\u2013'}</dd>
+        </div>
+        <div>
+          <dt>{t('slip.to')}</dt>
+          <dd>Boat4You</dd>
+        </div>
+      </dl>
+    </div>
+  );
+};
+
+/** "Pay €1,109.00" once the amount is valid, plain "Pay" before. */
+const PayButtonLabel = () => {
   const t = useTranslations('pay');
   const locale = useLocale();
   const amount = useWatch<PayFormValues, 'amount'>({ name: 'amount' });
   const minor = parseAmountToMinor(amount ?? '');
 
-  return (
-    <p id="pay-amount-preview" className={styles.preview} aria-live="polite">
-      {minor ? t('form.youWillPay', { amount: formatEur(minor, locale) }) : null}
-    </p>
-  );
+  return minor ? t('form.payAmount', { amount: formatEur(minor, locale) }) : t('form.pay');
 };
 
 interface PayMethodChoiceProps {
@@ -270,87 +301,112 @@ const PayForm = ({
   };
 
   return (
-    <>
-      <h1 className={styles.title}>{t('form.title')}</h1>
-      <p className={styles.text}>{t('form.about')}</p>
-      <p className={styles.text}>{t('form.instruction')}</p>
-      <Form<PayFormValues>
-        defaultValues={{ email: '', reference: initialReference, amount: initialAmount }}
-        onSubmit={handleSubmit}
-        className={styles.form}
-        noValidate
-      >
-        <FormInput
-          name="email"
-          type="email"
-          formLabel={t('form.labels.email')}
-          helperText={t('form.hints.email')}
-          validate={FormValidator.all(validator.isNotEmpty, validator.isValidEmail)}
-          slotProps={{ htmlInput: { autoComplete: 'email', inputMode: 'email', maxLength: 254 } }}
-        />
-        <FormInput
-          name="reference"
-          formLabel={t('form.labels.reference')}
-          helperText={t('form.hints.reference')}
-          validate={FormValidator.all(validator.isNotEmpty, validateReference)}
-          slotProps={{ htmlInput: { autoComplete: 'off', maxLength: 64 } }}
-        />
-        <FormInput
-          name="amount"
-          type="text"
-          formLabel={t('form.labels.amount')}
-          helperText={t('form.hints.amount')}
-          validate={validateAmount}
-          slotProps={{
-            htmlInput: {
-              autoComplete: 'off',
-              inputMode: 'decimal',
-              maxLength: 10,
-              // MUI's own helper-text id plus the live "You will pay" line.
-              'aria-describedby': 'amount-helper-text pay-amount-preview',
-            },
-          }}
-        />
-        <AmountPreview />
-        {klarna && (
-          <PayMethodChoice
-            klarna={klarna}
-            method={method}
-            onMethodChange={setMethod}
-            billing={billing}
-            onBillingChange={setBilling}
-            showAllErrors={showBillingErrors}
+    <Form<PayFormValues>
+      defaultValues={{ email: '', reference: initialReference, amount: initialAmount }}
+      onSubmit={handleSubmit}
+      className={styles.checkout}
+      noValidate
+    >
+      <aside className={styles.panel}>
+        <div className={styles.head}>
+          <p className={styles.brand}>{t('slip.brand')}</p>
+          <h1 className={styles.title}>{t('slip.title')}</h1>
+          <p className={styles.about}>{t('form.about')}</p>
+          <PaySlip />
+          <p className={styles.safe}>{t('slip.safe')}</p>
+        </div>
+        <div className={styles.foot}>
+          <ol className={styles.steps}>
+            <li>{t('steps.one')}</li>
+            <li>{t('steps.two')}</li>
+            <li>{t('steps.three')}</li>
+          </ol>
+          <PayLegal />
+        </div>
+      </aside>
+      <div className={styles.card}>
+        <p className={styles.lead}>{t('form.instruction')}</p>
+        <div className={styles.form}>
+          <FormInput
+            name="email"
+            type="email"
+            formLabel={t('form.labels.email')}
+            helperText={t('form.hints.email')}
+            validate={FormValidator.all(validator.isNotEmpty, validator.isValidEmail)}
+            slotProps={{ htmlInput: { autoComplete: 'email', inputMode: 'email', maxLength: 254 } }}
           />
-        )}
-        {failure && (
-          <Alert severity="error" role="alert">
-            {failure}
-          </Alert>
-        )}
-        <p className={styles.terms}>
-          {t('legal.byPaying')}{' '}
-          <Link href="/terms-and-conditions" prefetch={false} target="_blank" rel="noopener noreferrer">
-            {t('legal.terms')}
-          </Link>
-          {' · '}
-          <Link href="/privacy-policy" prefetch={false} target="_blank" rel="noopener noreferrer">
-            {t('legal.privacy')}
-          </Link>
-        </p>
-        <Button
-          type="submit"
-          variant="contained"
-          size="large"
-          fullWidth
-          disabled={busy}
-          // The form's own fields are checked before the submit handler runs: show the billing errors at once too.
-          onClick={() => method === 'klarna' && setShowBillingErrors(true)}
-        >
-          {busy ? tCommon('processing') : t('form.pay')}
-        </Button>
-        <p className={styles.trust}>{t('form.securedBy')}</p>
-      </Form>
-    </>
+          <FormInput
+            name="reference"
+            formLabel={t('form.labels.reference')}
+            helperText={t('form.hints.reference')}
+            validate={FormValidator.all(validator.isNotEmpty, validateReference)}
+            slotProps={{ htmlInput: { autoComplete: 'off', maxLength: 64 } }}
+          />
+          <FormInput
+            name="amount"
+            type="text"
+            formLabel={t('form.labels.amount')}
+            helperText={t('form.hints.amount')}
+            validate={validateAmount}
+            slotProps={{
+              htmlInput: {
+                autoComplete: 'off',
+                inputMode: 'decimal',
+                maxLength: 10,
+                // MUI's own helper-text id plus the live slip ("You pay …").
+                'aria-describedby': 'amount-helper-text pay-amount-preview',
+              },
+            }}
+          />
+          {klarna && (
+            <PayMethodChoice
+              klarna={klarna}
+              method={method}
+              onMethodChange={setMethod}
+              billing={billing}
+              onBillingChange={setBilling}
+              showAllErrors={showBillingErrors}
+            />
+          )}
+          {failure && (
+            <Alert severity="error" role="alert">
+              {failure}
+            </Alert>
+          )}
+          <Button
+            type="submit"
+            variant="contained"
+            size="large"
+            fullWidth
+            disabled={busy}
+            className={styles.pay}
+            // The form's own fields are checked before the submit handler runs: show the billing errors at once too.
+            onClick={() => method === 'klarna' && setShowBillingErrors(true)}
+          >
+            {busy ? tCommon('processing') : <PayButtonLabel />}
+          </Button>
+          <p className={styles.terms}>
+            {t('legal.byPaying')}{' '}
+            <span className={styles.termsLinks}>
+              <Link href="/terms-and-conditions" prefetch={false} target="_blank" rel="noopener noreferrer">
+                {t('legal.terms')}
+              </Link>
+              <Link href="/privacy-policy" prefetch={false} target="_blank" rel="noopener noreferrer">
+                {t('legal.privacy')}
+              </Link>
+            </span>
+          </p>
+          <ul className={styles.ways} aria-label={t('method.title')}>
+            <li>Visa</li>
+            <li>Mastercard</li>
+            <li>Apple Pay</li>
+            <li>Google Pay</li>
+            <li>{t('slip.bank')}</li>
+            {klarna && <li>Klarna</li>}
+          </ul>
+        </div>
+      </div>
+    </Form>
   );
 };
 

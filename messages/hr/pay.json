@@ -18,7 +18,8 @@
     },
     "youWillPay": "Platit ćete {amount}",
     "pay": "Plati",
-    "securedBy": "Kartice · Apple Pay · Google Pay · Pay by Bank · sigurno plaćanje putem Mollieja"
+    "securedBy": "Kartice · Apple Pay · Google Pay · Pay by Bank · sigurno plaćanje putem Mollieja",
+    "payAmount": "Plati {amount}"
   },
   "errors": {
     "validation": "Provjerite unesene podatke i pokušajte ponovno.",
@@ -76,5 +77,19 @@
     "klarnaHint": "Platite kasnije ili u obrocima. Klarna odlučuje koje će vam mogućnosti ponuditi.",
     "klarnaOverLimit": "Klarna je dostupna za iznose do {max}, pa je način plaćanja vraćen na karticu, Apple Pay ili banku.",
     "klarnaCountries": "Klarna je dostupna za adrese za naplatu u sljedećim državama: {countries}. Za ostale države odaberite karticu, Apple Pay ili banku."
+  },
+  "slip": {
+    "brand": "Boat4You sigurno plaćanje",
+    "title": "Platite svoj charter",
+    "youPay": "Plaćate",
+    "waiting": "Ovdje se prikazuje iznos iz vašeg ugovora",
+    "to": "Primatelj",
+    "safe": "Karticu unosite samo na sigurnoj stranici Molliea. Boat4You nikad ne vidi podatke vaše kartice.",
+    "bank": "Plaćanje putem banke"
+  },
+  "steps": {
+    "one": "Upišite e-mail, broj potvrde rezervacije i iznos.",
+    "two": "Platite na sigurnoj stranici Molliea.",
+    "three": "Potvrda uplate stiže e-mailom."
   }
 }

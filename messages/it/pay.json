@@ -18,7 +18,8 @@
     },
     "youWillPay": "Pagherà {amount}",
     "pay": "Paga",
-    "securedBy": "Carte · Apple Pay · Google Pay · Pay by Bank · pagamento sicuro tramite Mollie"
+    "securedBy": "Carte · Apple Pay · Google Pay · Pay by Bank · pagamento sicuro tramite Mollie",
+    "payAmount": "Paga {amount}"
   },
   "errors": {
     "validation": "Controlli i dati inseriti e riprovi.",
@@ -76,5 +77,19 @@
     "klarnaHint": "Paghi più tardi o a rate. È Klarna a decidere quali opzioni Le vengono proposte.",
     "klarnaOverLimit": "Klarna è disponibile per importi fino a {max}, quindi il metodo di pagamento è tornato a carta, Apple Pay o banca.",
     "klarnaCountries": "Klarna è disponibile per indirizzi di fatturazione nei seguenti paesi: {countries}. Per qualsiasi altro paese, scelga carta, Apple Pay o banca."
+  },
+  "slip": {
+    "brand": "Pagamento sicuro Boat4You",
+    "title": "Paga il tuo charter",
+    "youPay": "Paghi",
+    "waiting": "Qui compare l'importo del tuo contratto",
+    "to": "Beneficiario",
+    "safe": "Inserisci la carta solo sulla pagina sicura di Mollie. Boat4You non vede mai i dati della tua carta.",
+    "bank": "Pagamento tramite banca"
+  },
+  "steps": {
+    "one": "Inserisci e-mail, numero di conferma della prenotazione e importo.",
+    "two": "Paga sulla pagina sicura di Mollie.",
+    "three": "La conferma del pagamento arriva via e-mail."
   }
 }

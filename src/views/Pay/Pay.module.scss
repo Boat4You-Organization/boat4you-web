@@ -1,147 +1,295 @@
 @use '@/styles/settings/variables' as *;
 @use '@/styles/utils/rem-calc' as *;
 
-// Mobile-first, one column like the review page. The simple header is fixed
-// (~73px), so the page clears it with top padding.
+// The contract payment page (17.11.2026 redesign, Mario: "super moderan, atraktivan"). One idea carries it: a live
+// payment slip on a navy panel (the brand's deepest blue, depth contours of a sea chart behind it) that writes out
+// the amount, the booking number and who is paid while the customer types. The form sits next to it on a white card;
+// on a phone the slip comes first, then the form, then how it works.
+$navy: $blue-950;
+$chart-lines: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='520' height='520' viewBox='0 0 520 520' fill='none' stroke='%23ffffff' stroke-width='1.2'%3E%3Cpath d='M418 92c44 38 70 96 62 158s-52 118-112 148-134 30-190-6S86 290 92 222s54-126 118-150 164-18 208 20Z' opacity='.10'/%3E%3Cpath d='M396 128c34 30 54 76 48 124s-40 92-88 116-106 24-150-4-72-82-68-136 42-100 92-118 132-12 166 18Z' opacity='.13'/%3E%3Cpath d='M372 166c24 22 38 54 34 88s-28 64-62 80-74 18-106-2-52-58-48-96 30-70 66-84 92-8 116 14Z' opacity='.16'/%3E%3Cpath d='M346 204c16 14 24 34 22 56s-18 40-40 50-48 12-68 0-32-36-30-60 18-44 42-52 58-8 74 6Z' opacity='.2'/%3E%3Cpath d='M318 240c8 8 12 18 10 30s-10 20-22 26-26 6-36-2-16-20-14-32 10-22 22-26 32-4 40 4Z' opacity='.26'/%3E%3C/svg%3E");
+
+// The simple header is fixed (~73px): the page clears it with top padding.
 .page {
-  max-width: rem-calc(560);
+  min-height: 100dvh;
+  padding: rem-calc(88) rem-calc(16) rem-calc(56);
+  background-color: $blue-50;
+
+  // Raleway's default figures are old-style ("Boat4You", amounts, the OIB): lining ones on this page.
+  font-variant-numeric: lining-nums;
+}
+
+// ------------------------------------------------------------------ form page: slip + card
+
+.checkout {
+  display: flex;
+  flex-direction: column;
+  gap: rem-calc(16);
+  max-width: rem-calc(1040);
   margin: 0 auto;
-  padding: rem-calc(96) rem-calc(16) rem-calc(64);
+}
+
+// Phone: the panel's two halves are laid out as separate blocks around the card.
+.panel {
+  display: contents;
+}
+
+.head {
+  order: 1;
+  padding: rem-calc(28) rem-calc(22) rem-calc(24);
+  border-radius: rem-calc(22);
+  background-color: $navy;
+  background-image: $chart-lines;
+  background-repeat: no-repeat;
+  background-position: right rem-calc(-190) top rem-calc(-170);
+  color: $white;
+}
+
+.card {
+  order: 2;
+  padding: rem-calc(24) rem-calc(20) rem-calc(22);
+  border-radius: rem-calc(22);
+  background-color: $white;
+  box-shadow: 0 rem-calc(18) rem-calc(48) rgba($navy, 0.1);
+}
+
+.foot {
+  order: 3;
+  padding: rem-calc(8) rem-calc(6) 0;
+  color: $black-800;
+}
+
+.brand {
+  margin: 0;
+  color: rgba($white, 0.78);
+  font-size: rem-calc(16);
+  font-weight: 600;
 }
 
 .title {
-  margin: 0;
-  color: $blue-950;
+  margin: rem-calc(8) 0 0;
   font-size: rem-calc(28);
   font-weight: 800;
-  line-height: 1.25;
+  line-height: 1.12;
+  letter-spacing: -0.01em;
 }
 
-.text {
-  margin: rem-calc(10) 0 0;
-  color: $black-800;
+.about {
+  max-width: 34em;
+  margin: rem-calc(12) 0 0;
+  color: rgba($white, 0.82);
   font-size: rem-calc(16);
   line-height: 1.6;
+}
+
+// The live slip.
+.slip {
+  margin: rem-calc(22) 0 0;
+  padding: rem-calc(18) rem-calc(18) rem-calc(16);
+  border: 1px solid rgba($white, 0.22);
+  border-radius: rem-calc(16);
+  background-color: rgba($white, 0.08);
+}
+
+.slipLabel {
+  margin: 0;
+  color: rgba($white, 0.78);
+  font-size: rem-calc(16);
+}
+
+.slipAmount {
+  min-height: 1.15em;
+  margin: rem-calc(2) 0 0;
+
+  // The largest type on the page (site scale: 36), above the 28px title.
+  font-size: rem-calc(36);
+  font-weight: 800;
+  line-height: 1.15;
+
+  // Raleway's default figures are old-style: an amount needs lining, equal-width ones.
+  font-variant-numeric: lining-nums tabular-nums;
+  overflow-wrap: anywhere;
+}
+
+.slipWaiting {
+  // As tall as one line of the amount, so the slip does not jump when the amount appears.
+  display: flex;
+  align-items: center;
+  min-height: rem-calc(41);
+  margin: rem-calc(2) 0 0;
+  color: rgba($white, 0.55);
+  font-size: rem-calc(16);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.slipRows {
+  display: flex;
+  flex-direction: column;
+  gap: rem-calc(8);
+  margin: rem-calc(14) 0 0;
+  padding-top: rem-calc(14);
+  border-top: 1px dashed rgba($white, 0.3);
+
+  div {
+    display: flex;
+    justify-content: space-between;
+    gap: rem-calc(16);
+  }
+
+  dt {
+    flex: 1 1 0;
+    min-width: 0;
+    color: rgba($white, 0.72);
+    font-size: rem-calc(16);
+  }
+
+  // The value keeps its line ("100116/2027" must not break in the middle); only a very long one wraps.
+  dd {
+    flex: 0 1 auto;
+    max-width: 62%;
+    margin: 0;
+    font-size: rem-calc(16);
+    font-weight: 700;
+    font-variant-numeric: lining-nums;
+    text-align: right;
+    overflow-wrap: break-word;
+  }
+}
+
+.safe {
+  margin: rem-calc(16) 0 0;
+  color: rgba($white, 0.82);
+  font-size: rem-calc(16);
+  line-height: 1.55;
+}
+
+// How it works: a real sequence, so it is numbered.
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: rem-calc(12);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: step;
+
+  li {
+    display: flex;
+    gap: rem-calc(12);
+    align-items: flex-start;
+    font-size: rem-calc(16);
+    line-height: 1.5;
+    counter-increment: step;
+  }
+
+  li::before {
+    content: counter(step);
+    display: grid;
+    flex: 0 0 rem-calc(28);
+    place-items: center;
+    height: rem-calc(28);
+    border-radius: 50%;
+    background-color: $blue-100;
+    color: $navy;
+    font-size: rem-calc(16);
+    font-weight: 800;
+    font-variant-numeric: lining-nums;
+  }
+}
+
+.legal {
+  display: flex;
+  flex-direction: column;
+  gap: rem-calc(4);
+  margin-top: rem-calc(20);
+  padding-top: rem-calc(16);
+  border-top: 1px solid rgba($navy, 0.14);
+
+  p {
+    margin: 0;
+    color: $black-600;
+    font-size: rem-calc(16);
+    line-height: 1.55;
+    font-variant-numeric: lining-nums;
+  }
+}
+
+.lead {
+  margin: 0 0 rem-calc(18);
+  color: $black-900;
+  font-size: rem-calc(18);
+  font-weight: 600;
+  line-height: 1.5;
 }
 
 .form {
   display: flex;
   flex-direction: column;
-  gap: rem-calc(20);
-  margin-top: rem-calc(24);
+  gap: rem-calc(18);
 
   // Inputs stay at 16px on every device (no zoom on focus on phones).
   input {
     font-size: rem-calc(16);
+    font-variant-numeric: lining-nums;
   }
 
-  // Field hints/errors (MUI caption, 12px) and the error alert (body2, 14px)
-  // at the page's 16px minimum.
+  :global(.MuiOutlinedInput-root) {
+    border-radius: rem-calc(12);
+  }
+
+  // Field hints/errors (MUI caption, 12px) and the error alert (body2, 14px) at the page's 16px minimum.
   :global(.MuiFormHelperText-root),
   :global(.MuiAlert-message) {
     font-size: rem-calc(16);
   }
 }
 
-.preview {
-  min-height: 1.6em;
-  margin: rem-calc(-8) 0 0;
-  color: $blue-950;
+.pay:global(.MuiButton-root) {
+  min-height: rem-calc(58);
+  border-radius: rem-calc(14);
   font-size: rem-calc(18);
-  font-weight: 700;
+  font-weight: 800;
+  font-variant-numeric: lining-nums tabular-nums;
+  text-transform: none;
+  box-shadow: 0 rem-calc(10) rem-calc(24) rgba($blue-500, 0.32);
 }
 
-.terms,
-.trust,
-.legal p {
+.terms {
   margin: 0;
   color: $black-600;
   font-size: rem-calc(16);
   line-height: 1.6;
+
+  a {
+    color: $blue-700;
+    text-decoration: underline;
+  }
 }
 
-.terms a {
-  color: $blue-700;
-  text-decoration: underline;
+.termsLinks {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0 rem-calc(14);
 }
 
-.trust {
-  text-align: center;
-}
-
-.legal {
+// Ways to pay: plain word marks, no logos to load.
+.ways {
   display: flex;
-  flex-direction: column;
-  gap: rem-calc(6);
-  margin-top: rem-calc(32);
-  padding-top: rem-calc(16);
+  flex-wrap: wrap;
+  gap: rem-calc(8);
+  margin: 0;
+  padding: rem-calc(16) 0 0;
   border-top: 1px solid $black-100;
-}
+  list-style: none;
 
-.message {
-  padding: rem-calc(20) 0;
-}
-
-.spinner {
-  margin-top: rem-calc(20);
-}
-
-.facts {
-  display: flex;
-  flex-direction: column;
-  gap: rem-calc(6);
-  margin: rem-calc(20) 0 0;
-  padding: rem-calc(14);
-  border: 1px solid $blue-100;
-  border-radius: rem-calc(12);
-  background-color: $blue-50;
-  font-size: rem-calc(16);
-
-  div {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0 rem-calc(6);
-  }
-
-  dt {
-    color: $black-600;
-  }
-
-  dt::after {
-    content: ':';
-  }
-
-  dd {
-    margin: 0;
-    color: $black-900;
+  li {
+    padding: rem-calc(5) rem-calc(12);
+    border: 1px solid $blue-100;
+    border-radius: rem-calc(999);
+    background-color: $blue-50;
+    color: $navy;
+    font-size: rem-calc(16);
     font-weight: 700;
-    overflow-wrap: anywhere;
-  }
-}
-
-.button {
-  display: inline-block;
-  margin-top: rem-calc(20);
-  padding: rem-calc(12) rem-calc(24);
-  border-radius: rem-calc(10);
-  background-color: $blue-500;
-  color: $white;
-  font-size: rem-calc(16);
-  font-weight: 700;
-  text-decoration: none;
-
-  &:hover {
-    background-color: $blue-700;
-  }
-}
-
-@media (width >= 600px) {
-  .page {
-    padding: rem-calc(120) rem-calc(24) rem-calc(80);
-  }
-
-  .title {
-    font-size: rem-calc(36);
   }
 }
 
@@ -168,7 +316,7 @@
 .methodsLegend {
   margin-bottom: rem-calc(8);
   padding: 0;
-  color: $blue-950;
+  color: $navy;
   font-size: rem-calc(18);
   font-weight: 700;
 }
@@ -194,10 +342,172 @@
   margin-top: rem-calc(16);
   padding: rem-calc(16);
   border: 1px solid $black-100;
-  border-radius: rem-calc(8);
+  border-radius: rem-calc(12);
 
   // The billing form's own labels, hints and errors at the page's 16px minimum.
   :global(.MuiTypography-body2) {
     font-size: rem-calc(16);
+  }
+}
+
+// ------------------------------------------------------------------ message pages (paid, confirming, failed, unavailable)
+
+.message {
+  max-width: rem-calc(560);
+  margin: rem-calc(8) auto 0;
+  padding: rem-calc(30) rem-calc(22) rem-calc(28);
+  border-top: rem-calc(6) solid $navy;
+  border-radius: rem-calc(22);
+  background-color: $white;
+  box-shadow: 0 rem-calc(18) rem-calc(48) rgba($navy, 0.1);
+
+  .title {
+    margin: 0;
+    color: $navy;
+    font-size: rem-calc(28);
+  }
+}
+
+.text {
+  margin: rem-calc(12) 0 0;
+  color: $black-800;
+  font-size: rem-calc(16);
+  line-height: 1.6;
+}
+
+.spinner {
+  margin-top: rem-calc(20);
+}
+
+.facts {
+  display: flex;
+  flex-direction: column;
+  gap: rem-calc(10);
+  margin: rem-calc(22) 0 0;
+  padding: rem-calc(16) rem-calc(18);
+  border-radius: rem-calc(16);
+  background-color: $navy;
+  color: $white;
+  font-size: rem-calc(16);
+
+  div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0 rem-calc(16);
+  }
+
+  dt {
+    color: rgba($white, 0.75);
+  }
+
+  dd {
+    margin: 0;
+    font-weight: 800;
+    font-variant-numeric: lining-nums tabular-nums;
+    overflow-wrap: anywhere;
+  }
+}
+
+.button {
+  display: inline-block;
+  margin-top: rem-calc(22);
+  padding: rem-calc(14) rem-calc(26);
+  border-radius: rem-calc(14);
+  background-color: $blue-500;
+  color: $white;
+  font-size: rem-calc(18);
+  font-weight: 800;
+  text-decoration: none;
+
+  &:hover {
+    background-color: $blue-700;
+  }
+
+  &:focus-visible {
+    outline: rem-calc(3) solid $blue-100;
+    outline-offset: rem-calc(2);
+  }
+}
+
+@media (width >= 600px) {
+  .page {
+    padding: rem-calc(112) rem-calc(24) rem-calc(72);
+  }
+
+  .head {
+    padding: rem-calc(36) rem-calc(34) rem-calc(30);
+  }
+
+  .card {
+    padding: rem-calc(32) rem-calc(32) rem-calc(28);
+  }
+
+  .message {
+    padding: rem-calc(40) rem-calc(40) rem-calc(36);
+
+    .title {
+      font-size: rem-calc(28);
+    }
+  }
+}
+
+// Desktop: the slip panel on the left as one navy block (title, slip, how it works), the form card on the right.
+@media (width >= 960px) {
+  .checkout {
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+    gap: rem-calc(24);
+    align-items: start;
+  }
+
+  .panel {
+    position: sticky;
+    top: rem-calc(104);
+    display: flex;
+    flex-direction: column;
+    gap: rem-calc(26);
+    padding: rem-calc(40) rem-calc(38) rem-calc(34);
+    border-radius: rem-calc(26);
+    background-color: $navy;
+    background-image: $chart-lines;
+    background-repeat: no-repeat;
+    background-position: right rem-calc(-170) top rem-calc(-150);
+    color: $white;
+  }
+
+  .head {
+    padding: 0;
+    border-radius: 0;
+    background: none;
+  }
+
+  .foot {
+    padding: 0;
+    color: rgba($white, 0.88);
+  }
+
+  .steps li::before {
+    background-color: rgba($white, 0.16);
+    color: $white;
+  }
+
+  .legal {
+    border-top-color: rgba($white, 0.22);
+
+    p {
+      color: rgba($white, 0.72);
+    }
+  }
+
+  .card {
+    padding: rem-calc(40) rem-calc(40) rem-calc(34);
+    border-radius: rem-calc(26);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .slipAmount {
+    transition: opacity 0.2s ease;
   }
 }

@@ -9,7 +9,6 @@ import { isPayLinkKey } from '@/utils/server/payLinkKey';
 import { parseAmountToMinor } from '@/utils/static/payAmount';
 import styles from '@/views/Pay/Pay.module.scss';
 import PayForm from '@/views/Pay/PayForm';
-import PayLegal from '@/views/Pay/PayLegal';
 import PayMessage from '@/views/Pay/PayMessage';
 
 /** Card payment form behind the secret contract link (see layout.tsx). Rendered per request. */
@@ -59,7 +58,6 @@ const PayPage = async ({ params, searchParams }: PayPageProps) => {
         initialAmount={parseAmountToMinor(amount) === null ? '' : amount}
         klarna={config.config.klarna}
       />
-      <PayLegal />
     </main>
   );
 };
