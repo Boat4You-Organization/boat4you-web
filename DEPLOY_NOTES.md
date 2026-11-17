@@ -1,5 +1,25 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-11-17 — Stranica plaćanja po ugovoru (`/pay/<ključ>`): novi dizajn s „uplatnicom uživo“ — ✅ LIVE (`a5c0e6046`, deployment id a5c0e6046c98-mwkfu1s7, tag `live/2026-11-17-pay-redesign`)
+
+**Zašto:** Mario 17.11.: stranica je izgledala zastarjelo i „palila upitnike“. Kupac na nju dolazi s ugovora platiti velik iznos, pa odmah mora vidjeti kome plaća, koliko i što slijedi.
+
+**Što:**
+
+- Tamnoplavi panel (konture pomorske karte u inline SVG-u, bez slika) s uplatnicom koja ispisuje iznos, broj potvrde i primatelja dok kupac tipka.
+- Gumb nosi iznos („Pay EUR 1,109.00“).
+- Tri koraka, napomena da se kartica unosi samo kod Molliea, načini plaćanja i podaci o primatelju.
+- Desktop: uplatnica lijevo (sticky), forma desno. Mobitel: uplatnica, forma, koraci.
+- Stranice uspjeha, potvrđivanja, neuspjeha i nedostupnosti su u istom stilu.
+- Logika forme, validacija, Klarna i zahtjev nisu mijenjani.
+- 11 novih tekstova ×9 jezika (`pay.slip.*`, `pay.steps.*`, `pay.form.payAmount`). Sve veličine slova su na ljestvici sajta.
+
+**Provjereno:**
+
+- Lokalno na 1280 i 375 px, EN i HR: nema vodoravnog pomicanja; prazan e-mail daje „Obavezno“ i ništa se ne šalje.
+- Uživo: stranica 200, novi tekstovi su prisutni, i dalje noindex.
+- SEO Stage B: 0 novih FAIL.
+
 ## 2026-11-17 — Naš Ionian tekst više ne sadrži ime charter tvrtke — ✅ LIVE (`b131bb0fd`, deployment id b131bb0fd984-mwkchmsj, tag `live/2026-11-17-ionian-copy`)
 
 **Zašto:** SEO Stage B 17.11. (T6). Ova dva teksta sadrže „Ionian Catamarans“, ime charter tvrtke s popisa operatera; vlasnikovo pravilo je da se tko upravlja brodom nikad ne prikazuje:
