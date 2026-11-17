@@ -1,5 +1,21 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-11-17 — Unslop: mirnija tipografija i bez emoji ikona (isti paket kao 6 sestara) — ✅ LIVE 17.11.2026 ~12:38 UTC (`65c0a39c9`, deployment id 65c0a39c9fe4-mwkocf80, BUILD_ID build-TfctsWXpff2fKS, tag `live/2026-11-17-unslop`)
+
+**Zašto:** Mario 17.11. „imaš skill unslop, prođi s njime sve web stranice“, zatim „nastavi, sve moraš odradit“. Sestre su live istog dana (CC, GR, IT, CB, EY, CY).
+
+**Što:**
+
+- Težine su najviše 600; Raleway ostaje jedina obitelj. Naglasak u heroju je 600 italic, a preload je sada `Raleway-SemiBoldItalic.woff2` (prije ExtraBoldItalic).
+- Labeli koji su bili u verzalu preko stila (itinerari, plaćanje, booking hero, sidebar pretrage, statistika u Trip appu) sada su u sentence caseu, bez širokog trackinga, najmanje 12 px. Polje za vaučer kod zadržava verzal.
+- `boatType.label` je u sentence caseu, a cijena je 600: ista skala kao na sestrama.
+- Bez hover zooma na karticama ruta, huba i prijedloga te na thumbnailima u booking heroju. Tranzicije na PhoneInputu su imenovane.
+- U Trip appu ⚓ i ⛵ zamijenjeni su linijskim SVG ikonama (`IconAnchor`, `IconSailboat` u UiEmojiIcons). Zaglavlje trip 404 stranice ima punu boju umjesto zelenog gradijenta.
+
+**Nije dirano:** tekst i SEO, social-proof chip i badgevi na kartici, PromoBanner (Mario: „banner ostavi kako je“), mjeseci u kalendaru (verzal iz koda, kao na sestrama), footer.
+
+**Provjereno:** eslint 0 grešaka, tsc bez sintaksnih grešaka. Preostale tsc greške su tipovi prijevoda u worktreeu bez generiranih d.json.ts; check:type-scale i check:home-hub prolaze. Lokalno nema horizontalnog scrolla na 375, 768 i 1440 px. Hero 600 italic je učitan i preloadan. Deploy skripta: dpl na /contact-us i /search OK, legal markeri EN/DE OK. Uživo / /search /boat/beneteau-oceanis-401-northern-light-4428 /itineraries /de /about-us vraćaju 200 s novim dpl. SEO Stage B: 0 novih FAIL (`SEO-analize/_seo-audit-2026-11-17/regression/124101-B-boat4you/summary.md`).
+
 ## 2026-11-17 — Stranica plaćanja `/pay/<ključ>`: plava ploča kao tekuće staklo (Liquid Glass), stranica bijela — ✅ LIVE (`0c1e6cbe5`, deployment id 0c1e6cbe5532-mwklqlm8, tag `live/2026-11-17-pay-redesign`)
 
 **Zašto:** Mario 17.11.: Appleov Liquid Glass „mi se puno sviđa“; „lijeva neka ostane plava ali liquid glass“, „ne pozadinu cijelog, ostavi je bijelu okolo“. Dopustio Higgsfield.
