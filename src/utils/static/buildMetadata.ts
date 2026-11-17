@@ -111,7 +111,7 @@ export const buildMetadata = ({
   const metaTitle = titleAbsolute ?? (fitsWithBrandSuffix(title) ? null : title);
   const metaDescription = fitDescription(description);
   const hasCustomImage = Boolean(image?.src);
-  const ogImage = image?.src || `${meta.url}/meta/og-image.png`;
+  const ogImage = image?.src || `${meta.url}/meta/welcome-to-boat4you-three-charter-boats-1200x630.jpg`;
   // Dimensions are only ever declared when they're true: the site-wide asset
   // is a known 1200x630, a caller may pass its own, and everything else (WP
   // featured images, partner yacht photos) ships without them so Facebook
@@ -189,7 +189,10 @@ export const getLocalizedJsonLd = async (locale: LocaleType, stats?: EntityStats
         name: meta.name,
         url: meta.url,
         description: entityDescription,
-        image: `${meta.url}/meta/og-image.png`,
+        image: [
+          `${meta.url}/meta/welcome-to-boat4you-three-charter-boats-1200x1200.jpg`,
+          `${meta.url}/meta/welcome-to-boat4you-three-charter-boats-1200x630.jpg`,
+        ],
         inLanguage: localeToLanguageTag[locale] || 'en-US',
         // Sitelinks Searchbox eligibility — when a user searches the brand
         // ("Boat4You") on Google, this lets the SERP render a small search

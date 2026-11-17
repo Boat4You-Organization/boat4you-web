@@ -64,13 +64,20 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: L
       siteName: meta.name,
       title: { default: t(meta.title), template: t(meta.titleTemplate) },
       description,
-      images: [{ url: `${meta.url}/meta/og-image.png`, width: 1200, height: 630, alt: meta.name }],
+      images: [
+        {
+          url: `${meta.url}/meta/welcome-to-boat4you-three-charter-boats-1200x630.jpg`,
+          width: 1200,
+          height: 630,
+          alt: meta.name,
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title: { default: t(meta.title), template: t(meta.titleTemplate) },
       description,
-      images: [`${meta.url}/meta/og-image.png`],
+      images: [`${meta.url}/meta/welcome-to-boat4you-three-charter-boats-1200x630.jpg`],
     },
     icons: {
       icon: '/favicons/favicon.ico',
