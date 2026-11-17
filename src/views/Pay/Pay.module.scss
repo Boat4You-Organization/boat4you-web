@@ -1,44 +1,62 @@
 @use '@/styles/settings/variables' as *;
 @use '@/styles/utils/rem-calc' as *;
 
-// The contract payment page (17.11.2026 redesign, Mario: "super moderan, atraktivan"). One idea carries it: a live
-// payment slip on a navy panel (the brand's deepest blue, depth contours of a sea chart behind it) that writes out
-// the amount, the booking number and who is paid while the customer types. The form sits next to it on a white card;
-// on a phone the slip comes first, then the form, then how it works.
+// The contract payment page (17.11.2026, Mario: "super moderan, atraktivan", then "apple je napravio glossi ... to mi
+// je super"). Liquid Glass: the page is a deep-sea backdrop in the brand blues (light pooling in it, depth contours of a
+// sea chart), and everything on it is a pane of glass that blurs and saturates what lies behind: a dark pane with the
+// live payment slip, a light frosted pane with the form. Rims catch the light, controls are capsules.
 $navy: $blue-950;
 $chart-lines: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='520' height='520' viewBox='0 0 520 520' fill='none' stroke='%23ffffff' stroke-width='1.2'%3E%3Cpath d='M418 92c44 38 70 96 62 158s-52 118-112 148-134 30-190-6S86 290 92 222s54-126 118-150 164-18 208 20Z' opacity='.10'/%3E%3Cpath d='M396 128c34 30 54 76 48 124s-40 92-88 116-106 24-150-4-72-82-68-136 42-100 92-118 132-12 166 18Z' opacity='.13'/%3E%3Cpath d='M372 166c24 22 38 54 34 88s-28 64-62 80-74 18-106-2-52-58-48-96 30-70 66-84 92-8 116 14Z' opacity='.16'/%3E%3Cpath d='M346 204c16 14 24 34 22 56s-18 40-40 50-48 12-68 0-32-36-30-60 18-44 42-52 58-8 74 6Z' opacity='.2'/%3E%3Cpath d='M318 240c8 8 12 18 10 30s-10 20-22 26-26 6-36-2-16-20-14-32 10-22 22-26 32-4 40 4Z' opacity='.26'/%3E%3C/svg%3E");
 
-// Glossy navy (Mario 17.11.2026: "napravi da bude glosi"): the brand blues from light to deep, light catching the
-// top-left corner, and a curved highlight across the top like polished gelcoat. The chart contours sit under the
-// highlight. White text keeps its contrast: the highlight stays under 20 %.
-@mixin gloss($chart-x, $chart-y) {
+// Dark glass: navy-tinted, so white text keeps its contrast whatever the backdrop does behind it.
+@mixin glass-dark {
+  border: 1px solid rgba($white, 0.26);
+  background-color: rgba($navy, 0.52);
+  background-image: linear-gradient(155deg, rgba($white, 0.2) 0%, rgba($white, 0.04) 38%, rgba($white, 0) 100%);
+  box-shadow:
+    inset 0 1px 0 rgba($white, 0.5),
+    inset 0 -1px 0 rgba($white, 0.1),
+    0 rem-calc(24) rem-calc(56) rgba($navy, 0.42);
+  backdrop-filter: blur(28px) saturate(180%);
+}
+
+// Light frosted glass: mostly white (dark text stays readable), the backdrop only tints it.
+@mixin glass-light {
+  border: 1px solid rgba($white, 0.7);
+  background-color: rgba($white, 0.86);
+  background-image: linear-gradient(155deg, rgba($white, 0.7) 0%, rgba($white, 0) 46%);
+  box-shadow:
+    inset 0 1px 0 $white,
+    0 rem-calc(24) rem-calc(56) rgba($navy, 0.38);
+  backdrop-filter: blur(32px) saturate(180%);
+}
+
+// A solid glossy navy block for where there is nothing behind to blur (the facts on the white message card).
+@mixin gloss {
   background-color: $navy;
   background-image:
     radial-gradient(ellipse 135% 64% at 50% -20%, rgba($white, 0.19) 0%, rgba($white, 0.07) 49%, rgba($white, 0) 50%),
-    radial-gradient(circle at 0% 0%, rgba($blue-500, 0.62) 0%, rgba($blue-500, 0) 60%), $chart-lines,
-    linear-gradient(165deg, $blue-900 0%, $navy 72%);
-  background-repeat: no-repeat;
-  background-position:
-    0 0,
-    0 0,
-    right $chart-x top $chart-y,
-    0 0;
-  background-size:
-    100% 100%,
-    100% 100%,
-    auto,
-    100% 100%;
-  box-shadow:
-    inset 0 1px 0 rgba($white, 0.42),
-    inset 0 -1px 0 rgba(#000, 0.28),
-    0 rem-calc(24) rem-calc(48) rgba($navy, 0.32);
+    linear-gradient(165deg, $blue-800 0%, $navy 72%);
+  box-shadow: inset 0 1px 0 rgba($white, 0.42);
 }
 
 // The simple header is fixed (~73px): the page clears it with top padding.
 .page {
   min-height: 100dvh;
   padding: rem-calc(88) rem-calc(16) rem-calc(56);
-  background-color: $blue-50;
+  background-color: $blue-900;
+  background-image:
+    radial-gradient(circle at 8% 6%, rgba($blue-300, 0.7) 0%, rgba($blue-300, 0) 36%),
+    radial-gradient(circle at 96% 34%, rgba($blue-400, 0.75) 0%, rgba($blue-400, 0) 40%),
+    radial-gradient(circle at 40% 104%, rgba($blue-500, 0.9) 0%, rgba($blue-500, 0) 48%), $chart-lines,
+    linear-gradient(160deg, $blue-700 0%, $blue-900 52%, $navy 100%);
+  background-repeat: no-repeat;
+  background-position:
+    0 0,
+    0 0,
+    0 0,
+    right rem-calc(-140) top rem-calc(20),
+    0 0;
 
   // Raleway's default figures are old-style ("Boat4You", amounts, the OIB): lining ones on this page.
   font-variant-numeric: lining-nums;
@@ -54,7 +72,7 @@ $chart-lines: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' 
   margin: 0 auto;
 }
 
-// Phone: the panel's two halves are laid out as separate blocks around the card.
+// Phone: the panel's two halves are laid out as separate panes around the card.
 .panel {
   display: contents;
 }
@@ -62,24 +80,27 @@ $chart-lines: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' 
 .head {
   order: 1;
   padding: rem-calc(28) rem-calc(22) rem-calc(24);
-  border-radius: rem-calc(22);
+  border-radius: rem-calc(28);
   color: $white;
 
-  @include gloss(rem-calc(-190), rem-calc(-170));
+  @include glass-dark;
 }
 
 .card {
   order: 2;
   padding: rem-calc(24) rem-calc(20) rem-calc(22);
-  border-radius: rem-calc(22);
-  background-color: $white;
-  box-shadow: 0 rem-calc(18) rem-calc(48) rgba($navy, 0.1);
+  border-radius: rem-calc(28);
+
+  @include glass-light;
 }
 
 .foot {
   order: 3;
-  padding: rem-calc(8) rem-calc(6) 0;
-  color: $black-800;
+  padding: rem-calc(24) rem-calc(22);
+  border-radius: rem-calc(28);
+  color: rgba($white, 0.92);
+
+  @include glass-dark;
 }
 
 .brand {
@@ -109,15 +130,14 @@ $chart-lines: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' 
 .slip {
   margin: rem-calc(22) 0 0;
   padding: rem-calc(18) rem-calc(18) rem-calc(16);
-  border: 1px solid rgba($white, 0.3);
-  border-radius: rem-calc(16);
+  border: 1px solid rgba($white, 0.32);
+  border-radius: rem-calc(22);
 
-  // Glass on the gloss: lighter at the top edge, a hairline highlight, a soft shadow under it.
-  background-image: linear-gradient(180deg, rgba($white, 0.18) 0%, rgba($white, 0.06) 100%);
+  // A lighter pane lying on the dark one: brighter rim on top, a soft shadow under it.
+  background-image: linear-gradient(160deg, rgba($white, 0.24) 0%, rgba($white, 0.07) 100%);
   box-shadow:
-    inset 0 1px 0 rgba($white, 0.45),
-    0 rem-calc(12) rem-calc(28) rgba(#000, 0.22);
-  backdrop-filter: blur(8px);
+    inset 0 1px 0 rgba($white, 0.55),
+    0 rem-calc(12) rem-calc(28) rgba($navy, 0.3);
 }
 
 .slipLabel {
@@ -158,7 +178,7 @@ $chart-lines: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' 
   gap: rem-calc(8);
   margin: rem-calc(14) 0 0;
   padding-top: rem-calc(14);
-  border-top: 1px dashed rgba($white, 0.3);
+  border-top: 1px solid rgba($white, 0.24);
 
   div {
     display: flex;
@@ -219,8 +239,9 @@ $chart-lines: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' 
     place-items: center;
     height: rem-calc(28);
     border-radius: 50%;
-    background-color: $blue-100;
-    color: $navy;
+    border: 1px solid rgba($white, 0.3);
+    background-color: rgba($white, 0.16);
+    color: $white;
     font-size: rem-calc(16);
     font-weight: 800;
     font-variant-numeric: lining-nums;
@@ -233,11 +254,11 @@ $chart-lines: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' 
   gap: rem-calc(4);
   margin-top: rem-calc(20);
   padding-top: rem-calc(16);
-  border-top: 1px solid rgba($navy, 0.14);
+  border-top: 1px solid rgba($white, 0.22);
 
   p {
     margin: 0;
-    color: $black-600;
+    color: rgba($white, 0.76);
     font-size: rem-calc(16);
     line-height: 1.55;
     font-variant-numeric: lining-nums;
@@ -264,7 +285,8 @@ $chart-lines: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' 
   }
 
   :global(.MuiOutlinedInput-root) {
-    border-radius: rem-calc(12);
+    border-radius: rem-calc(16);
+    background-color: rgba($white, 0.72);
   }
 
   // Field hints/errors (MUI caption, 12px) and the error alert (body2, 14px) at the page's 16px minimum.
@@ -274,24 +296,24 @@ $chart-lines: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' 
   }
 }
 
+// The pay button: a capsule of blue glass.
 .pay:global(.MuiButton-root) {
   min-height: rem-calc(58);
-  border-radius: rem-calc(14);
+  border-radius: rem-calc(999);
   font-size: rem-calc(18);
   font-weight: 800;
   font-variant-numeric: lining-nums tabular-nums;
   text-transform: none;
-  box-shadow: 0 rem-calc(10) rem-calc(24) rgba($blue-500, 0.32);
 }
 
-// The same gloss on the button while it can be pressed.
 .pay:global(.MuiButton-root):not(:global(.Mui-disabled)) {
   background-image:
-    linear-gradient(180deg, rgba($white, 0.26) 0%, rgba($white, 0.08) 49%, rgba($white, 0) 50%),
+    linear-gradient(180deg, rgba($white, 0.3) 0%, rgba($white, 0.08) 49%, rgba($white, 0) 50%),
     linear-gradient(180deg, $blue-500 0%, $blue-700 100%);
   box-shadow:
-    inset 0 1px 0 rgba($white, 0.5),
-    0 rem-calc(10) rem-calc(24) rgba($blue-500, 0.36);
+    inset 0 1px 0 rgba($white, 0.6),
+    inset 0 -1px 0 rgba($navy, 0.3),
+    0 rem-calc(12) rem-calc(26) rgba($blue-600, 0.42);
 }
 
 .terms {
@@ -319,42 +341,71 @@ $chart-lines: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' 
   gap: rem-calc(8);
   margin: 0;
   padding: rem-calc(16) 0 0;
-  border-top: 1px solid $black-100;
+  border-top: 1px solid rgba($navy, 0.1);
   list-style: none;
 
   li {
-    padding: rem-calc(5) rem-calc(12);
-    border: 1px solid $blue-100;
+    padding: rem-calc(5) rem-calc(14);
+    border: 1px solid rgba($white, 0.9);
     border-radius: rem-calc(999);
-    background-color: $blue-50;
+    background-color: rgba($blue-100, 0.6);
+    box-shadow: inset 0 1px 0 $white;
     color: $navy;
     font-size: rem-calc(16);
     font-weight: 700;
   }
 }
 
-// Payment method (default Mollie page or Klarna) above the Pay button.
+// Payment method (default Mollie page or Klarna) above the Pay button: two cards to pick from, the picked one lit.
 .methods {
   margin: 0;
   padding: 0;
   border: 0;
 
-  :global(.MuiFormControlLabel-label) {
-    font-size: rem-calc(16);
+  :global(.MuiFormGroup-root) {
+    gap: rem-calc(10);
   }
 
   :global(.MuiFormControlLabel-root) {
     align-items: flex-start;
-    margin-bottom: rem-calc(4);
+    margin: 0;
+    padding: rem-calc(6) rem-calc(16) rem-calc(10) rem-calc(6);
+    border: 1px solid rgba($navy, 0.16);
+    border-radius: rem-calc(18);
+    background-color: rgba($white, 0.6);
+    cursor: pointer;
   }
 
-  :global(.MuiRadio-root) {
-    padding-top: rem-calc(6);
+  :global(.MuiFormControlLabel-root):hover {
+    border-color: $blue-400;
+  }
+
+  :global(.MuiFormControlLabel-root):has(input:checked) {
+    border-color: $blue-500;
+    background-color: $white;
+    box-shadow:
+      0 0 0 1px $blue-500,
+      0 rem-calc(8) rem-calc(20) rgba($blue-500, 0.18);
+  }
+
+  :global(.MuiFormControlLabel-root):has(input:focus-visible) {
+    outline: rem-calc(3) solid $blue-200;
+    outline-offset: rem-calc(2);
+  }
+
+  // The label's first line sits level with the radio (9px padding around a 24px icon).
+  :global(.MuiFormControlLabel-label) {
+    flex: 1 1 auto;
+    padding-top: rem-calc(9);
+    color: $navy;
+    font-size: rem-calc(16);
+    font-weight: 700;
+    line-height: 1.5;
   }
 }
 
 .methodsLegend {
-  margin-bottom: rem-calc(8);
+  margin-bottom: rem-calc(10);
   padding: 0;
   color: $navy;
   font-size: rem-calc(18);
@@ -364,25 +415,27 @@ $chart-lines: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' 
 .methodLabel {
   display: flex;
   flex-direction: column;
-  padding-top: rem-calc(8);
+  gap: rem-calc(2);
 }
 
 .methodHint,
 .methodNotice {
   color: $black-600;
   font-size: rem-calc(16);
+  font-weight: 400;
   line-height: 1.5;
 }
 
 .methodNotice {
-  margin: 0;
+  margin: rem-calc(10) 0 0;
 }
 
 .klarna {
   margin-top: rem-calc(16);
   padding: rem-calc(16);
-  border: 1px solid $black-100;
-  border-radius: rem-calc(12);
+  border: 1px solid rgba($navy, 0.14);
+  border-radius: rem-calc(18);
+  background-color: rgba($white, 0.6);
 
   // The billing form's own labels, hints and errors at the page's 16px minimum.
   :global(.MuiTypography-body2) {
@@ -396,10 +449,9 @@ $chart-lines: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' 
   max-width: rem-calc(560);
   margin: rem-calc(8) auto 0;
   padding: rem-calc(30) rem-calc(22) rem-calc(28);
-  border-top: rem-calc(6) solid $navy;
-  border-radius: rem-calc(22);
-  background-color: $white;
-  box-shadow: 0 rem-calc(18) rem-calc(48) rgba($navy, 0.1);
+  border-radius: rem-calc(28);
+
+  @include glass-light;
 
   .title {
     margin: 0;
@@ -425,11 +477,11 @@ $chart-lines: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' 
   gap: rem-calc(10);
   margin: rem-calc(22) 0 0;
   padding: rem-calc(16) rem-calc(18);
-  border-radius: rem-calc(16);
+  border-radius: rem-calc(20);
   color: $white;
   font-size: rem-calc(16);
 
-  @include gloss(rem-calc(-260), rem-calc(-230));
+  @include gloss;
 
   div {
     display: flex;
@@ -454,8 +506,12 @@ $chart-lines: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' 
   display: inline-block;
   margin-top: rem-calc(22);
   padding: rem-calc(14) rem-calc(26);
-  border-radius: rem-calc(14);
+  border-radius: rem-calc(999);
   background-color: $blue-500;
+  background-image: linear-gradient(180deg, rgba($white, 0.28) 0%, rgba($white, 0.06) 49%, rgba($white, 0) 50%);
+  box-shadow:
+    inset 0 1px 0 rgba($white, 0.6),
+    0 rem-calc(10) rem-calc(22) rgba($blue-600, 0.36);
   color: $white;
   font-size: rem-calc(18);
   font-weight: 800;
@@ -493,7 +549,7 @@ $chart-lines: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' 
   }
 }
 
-// Desktop: the slip panel on the left as one navy block (title, slip, how it works), the form card on the right.
+// Desktop: one dark pane on the left (title, slip, how it works), the light form pane on the right.
 @media (width >= 960px) {
   .checkout {
     display: grid;
@@ -512,42 +568,28 @@ $chart-lines: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' 
     justify-content: space-between;
     gap: rem-calc(26);
     padding: rem-calc(40) rem-calc(38) rem-calc(34);
-    border-radius: rem-calc(26);
+    border-radius: rem-calc(34);
     color: $white;
 
-    @include gloss(rem-calc(-170), rem-calc(-150));
+    @include glass-dark;
   }
 
-  .head {
+  // Inside the one pane the two halves are plain blocks.
+  .head,
+  .foot {
     padding: 0;
+    border: 0;
     border-radius: 0;
     background: none;
     box-shadow: none;
-  }
-
-  .foot {
-    padding: 0;
-    color: rgba($white, 0.88);
-  }
-
-  .steps li::before {
-    background-color: rgba($white, 0.16);
-    color: $white;
-  }
-
-  .legal {
-    border-top-color: rgba($white, 0.22);
-
-    p {
-      color: rgba($white, 0.72);
-    }
+    backdrop-filter: none;
   }
 
   .card {
     display: flex;
     flex-direction: column;
     padding: rem-calc(40) rem-calc(40) rem-calc(34);
-    border-radius: rem-calc(26);
+    border-radius: rem-calc(34);
   }
 
   // When the slip side is the taller one, the form fills the card and the ways to pay sit at its bottom edge.
