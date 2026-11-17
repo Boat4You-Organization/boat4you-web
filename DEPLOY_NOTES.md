@@ -1,5 +1,15 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-11-17 — Prijava, registracija i reset lozinke šalju IP posjetitelja — ✅ LIVE (`ab99d0f04`, deployment id ab99d0f04f3f-mwkas488, tag `live/2026-11-17-auth-client-ip`)
+
+**Zašto:** Fable sigurnosni pregled 17.11. (nalaz 1). Akcije prijave zovu API sa servera bez `X-Forwarded-For`. Backendovi limiti po IP-u (prijava 10/min, reset 3/min, registracija) zato su sve posjetitelje www.boat4you.com brojali kao jednog: desetak zahtjeva u minuti od bilo koga blokiralo bi prijavu svim kupcima.
+
+**Što:** svih 11 POST/PUT poziva u `src/actions/auth.actions.ts` šalje IP posjetitelja (`utils/server/clientIp`). Backend mu vjeruje samo s naših web servera.
+
+**Provjereno:** lint i tipovi; neovisni pregled (Opus) bez nalaza za ovaj commit. Pregled je našao i dva backend pravila koja nisu radila (popravljena, backend `live/2026-11-17-auth-ratelimit`).
+
+**SEO Stage B:** 2 nova FAIL-a T6 (ime operatera „Ionian Catamarans“, „Sea Novels“ na dvije stranice pretrage). Dolaze iz podataka partnera, nisu od ovog deploya; otvoreno.
+
 ## 2026-11-16 — HTML iz WordPressa kroz popis dopuštenih oznaka (sanitize-html) + dvostruki naslov u 17 objava — ✅ LIVE (`8ba9332ae`, deployment id 8ba9332aefc8-mwjq1pm8, tag `live/2026-11-16-sanitize-wp-html`)
 
 **Zašto:** sigurnosni audit 15.11. (MEDIUM). Tijelo bloga se renderiralo `dangerouslySetInnerHTML` točno kako ga WordPress pošalje, pa bi se skripta ili `onclick` dodan preko WP računa ili dodatka izvršio na www.boat4you.com. Nova ovisnost uz Marijevo „da“: `sanitize-html` 2.18.1 (npm, MIT, 14.10.2026; samo na serveru). Deploy je instalirao novi `node_modules` na cusma1.
