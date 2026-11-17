@@ -1,5 +1,17 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-11-17 — Stranica plaćanja `/pay/<ključ>`: bijela pozadina, sjajna tamnoplava ploča, kartice za način plaćanja, cijela stranica u jednom ekranu — ✅ LIVE (`e917e3011`, deployment id e917e3011c18-mwkkoi2m, tag `live/2026-11-17-pay-redesign`)
+
+**Zašto:** Mario 17.11., redom: „napravi da bude glosi“, izbor načina plaćanja „grozno“, Apple Liquid Glass „to mi je super“, zatim „stavi bijelu pozadinu, previše plavo“ i „da nema scroll na stranici desktop“.
+
+**Što (samo `src/views/Pay/Pay.module.scss`, forma i logika iste):**
+
+- `06d5dde02` sjajna ploča i gumb; `94fdcda29` Liquid Glass na plavoj pozadini (uživo 11:30–12:00) + izbor načina plaćanja kao dvije kartice (odabrana ima plavi rub); `e917e3011` konačno: bijela stranica, lijevo sjajna tamnoplava ploča s uplatnicom, desno bijela kartica.
+- Računalo (≥960 px): stranica stane u jedan ekran. Broj rezervacije i iznos jedno do drugoga, dva načina plaćanja jedno do drugoga, oznake kartica se skrivaju kad je izbor načina plaćanja vidljiv. Ispod 740 px visine skrivaju se i tri koraka.
+- Scroll ostaje kad kupac izabere Klarnu (otvara se obrazac s adresom).
+
+**Provjera:** lokalno 1440×780 i 1366×700 (prazno i s iznosom) bez scrolla, 375 px bez vodoravnog pomicanja; uživo `dpl=e917e3011c18`, nova pravila u živom CSS-u. SEO regresija: 0 novih FAIL.
+
 ## 2026-11-17 — Stranica plaćanja po ugovoru (`/pay/<ključ>`): novi dizajn s „uplatnicom uživo“ — ✅ LIVE (`a5c0e6046`, deployment id a5c0e6046c98-mwkfu1s7, tag `live/2026-11-17-pay-redesign`)
 
 **Zašto:** Mario 17.11.: stranica je izgledala zastarjelo i „palila upitnike“. Kupac na nju dolazi s ugovora platiti velik iznos, pa odmah mora vidjeti kome plaća, koliko i što slijedi.
